@@ -178,7 +178,7 @@ ms.openlocfilehash: 3360b18bd1d5d6dde6078c7d695349e0224ef794
                                                 <h3><a href="/dotnet/articles/csharp">C# 가이드</a></h3>
                                                 <p><a href="/dotnet/articles/csharp/getting-started">시작</a></p>
                                                 <p><a href="/dotnet/articles/csharp/tour-of-csharp">C 둘러보기#</a></p>
-                                                <p><a href="/dotnet/articles/csharp/language-reference">C++ 언어 참조</a></p>
+                                                <p><a href="/dotnet/articles/csharp/language-reference">C# 언어 참조</a></p>
                                             </div>
                                         </div>
                                     </div>
