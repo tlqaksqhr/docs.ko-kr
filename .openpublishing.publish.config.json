@@ -18,12 +18,7 @@
     }
   ],
   "notification_subscribers": [],
-<<<<<<< HEAD
-  "git_repository_url_open_to_public_contributors": "https://github.com/dotnet/docs.ko-kr",
-  "git_repository_branch_open_to_public_contributors": "live",
-=======
   "git_repository_url_open_to_public_contributors": "https://github.com/dotnet/core-docs",
->>>>>>> refs/remotes/origin/master
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
   "dependent_repositories": [
@@ -45,15 +40,11 @@
     {
       "path_to_root": "_repo.en-us",
       "url": "https://github.com/dotnet/docs",
-<<<<<<< HEAD
-      "branch": "live"
-=======
       "branch": "live",
       "branch_mapping": {
         "live": "live",
         "master": "master"
       }
->>>>>>> refs/remotes/origin/master
     }
   ],
   "need_generate_pdf_url_template": false,
@@ -62,8 +53,4 @@
       "template_folder": "_themes.pdf"
     }
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> refs/remotes/origin/master
