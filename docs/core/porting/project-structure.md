@@ -12,7 +12,7 @@ ms.devlang: dotnet
 ms.assetid: 3af62252-1dfa-4336-8d2f-5cfdb57d7724
 translationtype: Human Translation
 ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: ca63b25bb5f5e98167aaa8b74a7204fcd77b3523
+ms.openlocfilehash: 7a3f972debee1e90deda57e5604214ff4756da4a
 
 ---
 
@@ -33,13 +33,13 @@ ms.openlocfilehash: ca63b25bb5f5e98167aaa8b74a7204fcd77b3523
   * 동일한 솔루션 파일의 서로 다른 프로젝트 형식 간에 .NET Core 라이브러리를 공유할 수 없습니다. 이를 지원하려면 [이식 가능한 클래스 라이브러리를 만드는 것](#support-pcl)이 더 낫습니다.
   * MSBuild 대상 및 작업에서 지원하는 프로젝트 빌드나 로드 수정이 허용되지 않습니다. 이를 지원하려면 [이식 가능한 클래스 라이브러리를 만드는 것](#support-pcl)이 더 낫습니다.
 
-* [**기존 프로젝트와 새로운 .NET Core 프로젝트를 별도로 유지**][option-xproj-folder]
+* <a name="support-vs"></a>[**기존 프로젝트와 새로운 .NET Core 프로젝트를 별도로 유지**][option-xproj-folder]
   
   *좋은 점:*
   * Visual Studio 2015가 없는 개발자/참가자의 경우 업그레이드하지 않고 기존 프로젝트에 대한 개발을 계속 지원할 수 있습니다.
   * 기존 프로젝트에서 코드 변동이 필요하지 않으므로 새 버그가 발생할 가능성이 줄어듭니다.
 
-* [**기존 프로젝트를 유지하고 .NET Core를 대상으로 하는 PCL(이식 가능한 클래스 라이브러리) 만들기**][option-pcl]
+* <a name="support-pcl"></a>[**기존 프로젝트를 유지하고 .NET Core를 대상으로 하는 PCL(이식 가능한 클래스 라이브러리) 만들기**][option-pcl]
 
   *좋은 점:*
   * 동일한 솔루션의 전체 .NET Framework를 대상으로 하는 데스크톱 및/또는 웹 프로젝트에서 .NET Core 라이브러리를 참조합니다.
@@ -58,7 +58,7 @@ ms.openlocfilehash: ca63b25bb5f5e98167aaa8b74a7204fcd77b3523
 
 아래에서 설명하는 기존 프로젝트의 제약 조건 및 복잡성에 따라 이 리포지토리에 대한 .NET Core의 지원을 추가하는 여러 가지 방법이 있습니다.
 
-## <a name="replace-existing-projects-with-a-multitargeted-net-core-project-xproj"></a>기존 프로젝트를 멀티 타기팅 .NET Core 프로젝트(xproj)와 교체
+## <a name="replace-existing-projects-with-a-multi-targeted-net-core-project-xproj"></a>기존 프로젝트를 멀티 타기팅 .NET Core 프로젝트(xproj)와 교체
 
 기존 `*.csproj` 파일을 제거하고 여러 프레임워크를 대상으로 하는 단일 `*.xproj` 파일을 만들도록 리포지토리를 재구성할 수 있습니다.  서로 다른 프레임워크에 대해 단일 프로젝트를 컴파일할 수 있으므로 이는 좋은 옵션입니다.  또한 대상 프레임워크에 대해 서로 다른 컴파일 옵션, 종속성 등을 처리할 수도 있습니다.
 
@@ -125,6 +125,6 @@ project.json 및 xproj로의 이전에 대한 자세한 지침은 [.NET Core 이
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

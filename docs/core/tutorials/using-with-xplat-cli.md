@@ -11,24 +11,24 @@ ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: be988f09-7349-43b0-97fb-3a703d4587ce
 translationtype: Human Translation
-ms.sourcegitcommit: aeb199a9aeb1584570ad2a2942e2f22c75a59616
-ms.openlocfilehash: aafa0c110dc3a2820f7e050d70b9450af1db35d8
+ms.sourcegitcommit: 37e14d5cdf1593f6a8b1ecee9d9828647b023548
+ms.openlocfilehash: 5493ccb77e62d20d5101728ef8ab1744ea697fb8
 
 ---
 
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>명령줄을 사용하여 Windows/Linux/macOS에서 .NET Core 시작
 
-이 가이드에서는 .NET Core CLI 도구를 사용하여 플랫폼 간 콘솔 앱을 빌드하는 방법을 보여 줍니다.  가장 기본적인 콘솔 앱으로 시작하여 테스트를 비롯한 여러 프로젝트로 확장됩니다. 이러한 기능을 단계별로 추가하며, 이미 확인하고 빌드한 것 위에서 빌드하게 됩니다.
+이 가이드에서는 .NET Core CLI 도구를 사용하여 플랫폼 간 기본 콘솔 앱을 빌드하는 방법을 보여 줍니다.
 
 .NET Core CLI 도구 집합에 익숙하지 않은 경우 [.NET Core SDK 개요](../sdk.md)를 읽어 보세요.
 
 ## <a name="prerequisites"></a>필수 조건
 
-시작하기 전에 [최신 .NET Core CLI 도구](https://www.microsoft.com/net/core)를 가지고 있는지 확인합니다.  텍스트 편집기도 필요합니다.
+시작하기 전에 [최신 .NET Core CLI 도구](https://www.microsoft.com/net/core)를 가지고 있는지 확인합니다. 텍스트 편집기도 필요합니다.
 
 ## <a name="hello-console-app"></a>Hello, 콘솔 앱!
 
-먼저, 원하는 이름의 폴더로 이동하거나 폴더를 새로 만듭니다.  "Hello"는 샘플 코드에 대해 선택한 이름으로, [여기](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/Hello)서 찾을 수 있습니다.
+원하는 이름의 폴더로 이동하거나 폴더를 새로 만듭니다. "Hello"는 샘플 코드에 대해 선택한 이름으로, [여기](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/Hello)서 찾을 수 있습니다.
 
 명령 프롬프트를 열고 다음을 입력합니다.
 
@@ -97,7 +97,7 @@ Hello, World!
 
 또한 [`dotnet build`](../tools/dotnet-build.md)를 실행하여 빌드 콘솔 응용 프로그램을 실행하지 않고 코드를 컴파일할 수도 있습니다.
 
-### <a name="building-a-selfcontained-application"></a>자체 포함 응용 프로그램 빌드
+### <a name="building-a-self-contained-application"></a>자체 포함 응용 프로그램 빌드
 
 이식 가능한 응용 프로그램 대신 자체 포함 응용 프로그램을 컴파일해 보겠습니다. 서로 다른 응용 프로그램 유형 및 이들의 배포 방법을 알아보려면 [.NET Core의 이식성 유형](../deploying/index.md)에 대해 읽어볼 수 있습니다.
 
@@ -647,6 +647,6 @@ SUMMARY: Total: 1 targets, Passed: 1, Failed: 0.
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

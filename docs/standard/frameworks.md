@@ -1,6 +1,6 @@
 ---
-title: "프레임워크"
-description: "프레임워크"
+title: "프레임워크 및 대상"
+description: ".NET 코드를 작성할 때 프레임워크 대상의 개념에 대해 설명합니다."
 keywords: .NET, .NET Core
 author: richlander
 manager: wpickett
@@ -11,12 +11,12 @@ ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 6ef56a2e-593d-497b-925a-1e25bb6df2e6
 translationtype: Human Translation
-ms.sourcegitcommit: 246d381246e78a27b7097d6b8126f421b52014de
-ms.openlocfilehash: 5b87ddfcfc66ebc05e2e559517180f93813a0806
+ms.sourcegitcommit: 38561c2d25c6950d166bf706f4306c867e683b04
+ms.openlocfilehash: 82ba6f4abe200dc48158eac1ad3e3609feeda2c9
 
 ---
 
-# <a name="frameworks"></a>프레임워크
+# <a name="frameworks-and-targets"></a>프레임워크 및 대상
 
 .NET 에코시스템에는 프레임워크의 개념이 있습니다. 프레임워크는 특정 플랫폼을 대상으로 지정하는 데 사용할 수 있는 API를 정의합니다. .NET Framework 4.6도 이러한 플랫폼 중 하나입니다. 프레임워크는 Visual Studio와 기타 IDE 및 편집기에서 올바른 API 집합을 제공하는 데 사용됩니다. 또한 NuGet에서 NuGet 패키지의 생성 및 소비 둘 다에 사용되어 대상으로 지정할 프레임워크에 적합한 패키지(및 기본 자산)를 생성 및 사용하도록 합니다. 프레임워크는 .NET 에코시스템의 주요 통화 중 하나로 간주될 수 있습니다. 이 개념의 목적은 사용자와 고객에게 @System.MissingMethodException이 표시되는 것을 방지하고 런타임에 친구들을 돕기 위해 정확성을 보장하는 것입니다.
 
@@ -61,6 +61,6 @@ ms.openlocfilehash: 5b87ddfcfc66ebc05e2e559517180f93813a0806
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

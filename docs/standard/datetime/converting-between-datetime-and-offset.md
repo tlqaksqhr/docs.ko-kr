@@ -12,7 +12,7 @@ ms.devlang: dotnet
 ms.assetid: fab3af5b-5d0f-4384-a40a-1b5d99b30dd1
 translationtype: Human Translation
 ms.sourcegitcommit: c40c28da09e8a122b542463c197196c82c81dd19
-ms.openlocfilehash: 312ac8cb7e901c4ceeff2e428620c2c4c615ca3d
+ms.openlocfilehash: 99ec9d8c433025bbc5122fe3ea364fe84f33a1f8
 
 ---
 
@@ -417,7 +417,7 @@ Console.WriteLine("{0} converted to {1} {2}", _
 '       11/4/2007 4:00:00 AM -05:00 converted to 11/4/2007 1:00:00 AM Local
 ```
 
-## <a name="a-generalpurpose-conversion-method"></a>범용 변환 메서드
+## <a name="a-general-purpose-conversion-method"></a>범용 변환 메서드
 
 다음 예제에서는 [DateTimeOffset](xref:System.DateTimeOffset) 값을 [DateTime](xref:System.DateTime) 값으로 변환하는 `ConvertFromDateTimeOffset`이라는 메서드를 정의합니다. 이 메서드는 자체의 오프셋에 기반하여 [DateTimeOffset](xref:System.DateTimeOffset) 값이 UTC 시간, 현지 시간 또는 다른 시간대 중 어느 것인지 결정하고 이에 따라 반환된 날짜 및 시간 값의 [Kind](xref:System.DateTime.Kind) 속성을 정의합니다. 
 
@@ -444,7 +444,7 @@ Function ConvertFromDateTimeOffset(dateTime As DateTimeOffset) As Date
    End If
 ```
 
-다음 예제에서는 `ConvertFromDateTimeOffset` 메서드를 호출하여 UTC 시간, 현지 시간 및 미국 중부 표준시 시간을 나타내는 [DateTimeOffset](xref:System.DateTimeOffset) 값을 변환합니다. 
+다음 예제에서는 `ConvertFromDateTimeOffset` 메서드를 호출하여 UTC 시간, 현지 시간 및 미국 중부 표준시 시간을 나타내는 [DateTimeOffset](xref:System.DateTimeOffset) 값을 변환합니다.
 
 ```csharp
 DateTime timeComponent = new DateTime(2008, 6, 19, 7, 0, 0);
@@ -532,6 +532,6 @@ Console.WriteLine("{0} converted to {1} {2}", _
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 
