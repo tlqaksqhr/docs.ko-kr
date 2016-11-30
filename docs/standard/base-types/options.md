@@ -215,7 +215,7 @@ End If
  
 [RegexOptions.None](xref:System.Text.RegularExpressions.RegexOptions.None) 옵션은 정규식 엔진의 기본 동작을 나타내므로 메서드 호출에 명시적으로 지정되는 경우가 드뭅니다. 대신 생성자 또는 정적 패턴 일치 메서드가 options 매개 변수 없이 호출됩니다.
 
-## <a name="caseinsensitive-matching"></a>대/소문자를 구분하지 않는 일치
+## <a name="case-insensitive-matching"></a>대/소문자를 구분하지 않는 일치
 
 [RegexOptions.IgnoreCase](xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase) 옵션 또는 **i** 인라인 옵션은 대/소문자를 구분하지 않는 일치를 제공합니다. 기본적으로 현재 문화권의 대/소문자 사용 규칙이 사용됩니다.
 
@@ -543,7 +543,7 @@ End Class
 '    Joe: 164
 ```
 
-## <a name="singleline-mode"></a>한 줄 모드
+## <a name="single-line-mode"></a>한 줄 모드
 
 [RegexOptions.Singleline](xref:System.Text.RegularExpressions.RegexOptions.Singleline) 옵션 또는 s 인라인 옵션은 정규식 엔진이 입력 문자열이 한 줄로 구성된 것처럼 입력 문자열을 처리하도록 합니다. 이 옵션은 마침표(**.**) 언어 요소가 줄 바꿈 문자 **\n** 또는 \u000A를 제외한 모든 문자와 일치하는 대신 모든 문자와 일치하도록 해당 언어 요소의 동작을 변경하여 그렇게 합니다.
 
@@ -1233,7 +1233,7 @@ End Module
 '       Instead, it is a nonsensical paragraph.
 ```
 
-## <a name="righttoleft-mode"></a>오른쪽에서 왼쪽 모드
+## <a name="right-to-left-mode"></a>오른쪽에서 왼쪽 모드
 
 기본적으로 정규식 엔진은 왼쪽에서 오른쪽으로 검색합니다. [RegexOptions.RightToLeft](xref:System.Text.RegularExpressions.RegexOptions.RightToLeft) 옵션을 사용하여 검색 방향을 반대로 할 수 있습니다. 검색은 자동으로 문자열의 마지막 문자 위치에서 시작됩니다. 시작 위치 매개 변수를 포함한 패턴 일치 메서드의 경우(예: [Regex.Match(String, Int32)](xref:System.Text.RegularExpressions.Regex.Match(System.String,System.Int32))) 시작 위치는 검색이 시작될 가장 오른쪽 문자 위치의 인덱스입니다. 
 
