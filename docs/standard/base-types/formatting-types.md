@@ -4,11 +4,10 @@ description: "서식 지정 형식"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: cf497639-9f91-45cb-836f-998d1cea2f43
 translationtype: Human Translation
@@ -666,7 +665,7 @@ End Module
 [열거형 서식 문자열](enumeration-format.md) | 열거형 값의 문자열 표현을 만드는 데 사용되는 표준 형식 문자열에 대해 설명합니다.
 [Guid.ToString(String)](xref:System.Guid.ToString(System.String)) | [Guid](xref:System.Guid) 값의 표준 형식 문자열에 대해 설명합니다.
 
-## <a name="culturesensitive-formatting-with-format-providers-and-the-iformatprovider-interface"></a>형식 공급자 및 IFormatProvider 인터페이스를 사용하여 문화권 구분 서식 지정
+## <a name="culture-sensitive-formatting-with-format-providers-and-the-iformatprovider-interface"></a>형식 공급자 및 IFormatProvider 인터페이스를 사용하여 문화권 구분 서식 지정
 
 형식 지정자를 사용하여 개체의 형식 지정을 사용자 지정할 수 있기는 하지만 의미 있는 개체의 문자열 표현을 만들려면 추가 형식 지정 정보가 필요한 경우가 종종 있습니다. 예를 들어, C" 표준 형식 문자열이나 "$ #,#.00" 같은 사용자 지정 형식 문자열을 사용하여 숫자의 형식을 통화 값으로 지정하려면 최소한 올바른 통화 기호, 그룹 구분 기호 및 소수 구분 기호에 대한 정보를 형식 지정된 문자열에 포함할 수 있어야 합니다. .NET에서는 이러한 추가 형식 지정 정보를 [IFormatProvider](xref:System.IFormatProvider) 인터페이스를 통해 사용할 수 있습니다. 이러한 인터페이스는 숫자 형식과 날짜 및 시간 형식의 `ToString` 메서드에 대한 하나 이상의 오버로드에 매개 변수로 제공됩니다. [IFormatProvider](xref:System.IFormatProvider) 구현은 문화권별 형식 지정을 지원하기 위해 .NET에서 사용됩니다. 다음 예제에서는 서로 다른 문화권을 나타내는 세 [IFormatProvider](xref:System.IFormatProvider) 개체를 사용하여 형식을 지정할 때 개체의 문자열 표현이 어떻게 바뀌는지 보여 줍니다.
 
@@ -730,7 +729,7 @@ End Module
 
 사용자 고유의 형식 공급자를 구현하여 이러한 클래스 중 하나를 대체할 수도 있습니다. 그러나 `GetFormat` 메서드에 형식 지정 정보를 제공해야 하는 경우에는 구현된 형식 공급자의 `ToString` 메서드에서 위의 표에 나와 있는 형식의 개체를 반환해야 합니다.
 
-### <a name="culturesensitive-formatting-of-numeric-values"></a>숫자 값의 문화권 구분 서식 지정
+### <a name="culture-sensitive-formatting-of-numeric-values"></a>숫자 값의 문화권 구분 서식 지정
 
 기본적으로 숫자 값의 형식은 문화권을 구분합니다. 형식 지정 메서드를 호출할 때 문화권을 지정하지 않으면 현재 스레드 문화권의 형식 규칙이 사용됩니다. 이는 현재 스레드 문화권을 4번 변경한 후 [Decimal.ToString(String)](xref:System.Decimal.ToString(System.String)) 메서드를 호출하는 다음 예제에 나와 있습니다. 각각의 경우 결과 문자열은 현재 문화권의 형식 규칙을 반영합니다. 이는 `ToString` 및 `ToString(String)` 메서드가 각 숫자 형식의 `ToString(String, IFormatProvider)` 메서드에 대한 호출을 래핑하기 때문입니다. 
 
@@ -856,7 +855,7 @@ End Module
 '       fr:    1 043,630
 ```
 
-### <a name="culturesensitive-formatting-of-date-and-time-values"></a>날짜 및 시간 값의 문화권 구분 서식 지정
+### <a name="culture-sensitive-formatting-of-date-and-time-values"></a>날짜 및 시간 값의 문화권 구분 서식 지정
 
 기본적으로 날짜 및 시간 값의 형식은 문화권을 구분합니다. 형식 지정 메서드를 호출할 때 문화권을 지정하지 않으면 현재 스레드 문화권의 형식 규칙이 사용됩니다. 이는 현재 스레드 문화권을 4번 변경한 후 [DateTime.ToString(String)](xref:System.DateTime.ToString(System.String)) 메서드를 호출하는 다음 예제에 나와 있습니다. 각각의 경우 결과 문자열은 현재 문화권의 형식 규칙을 반영합니다. 이는 [DateTime.ToString()](xref:System.DateTime.ToString), [DateTime.ToString(String)](xref:System.DateTime.ToString(System.String)), [DateTimeOffset.ToString()](xref:System.DateTimeOffset.ToString(System.String)) 및 [DateTimeOffset.ToString(String)](xref:System.DateTimeOffset.ToString(System.String)) 메서드가 [DateTime.ToString(String, IFormatProvider)](xref:System.DateTime.ToString(System.String,System.IFormatProvider)) 및 [DateTimeOffset.ToString(String, IFormatProvider)](xref:System.DateTimeOffset.ToString(System.String,System.IFormatProvider)) 메서드 호출을 래핑하기 때문입니다.
 

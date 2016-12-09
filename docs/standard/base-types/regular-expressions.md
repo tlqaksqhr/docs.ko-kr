@@ -3,11 +3,11 @@ title: ".NET에서의 정규식"
 description: ".NET에서의 정규식"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 07/26/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: d1a640cf-09ca-48f7-800c-a627a6d549c9
 translationtype: Human Translation
@@ -150,7 +150,7 @@ End Module
 
 입력 문자열에 부분 문자열 "this? This"가 포함되어 있습니다. 그러나 문장 부호가 중간에 있어 이는 중복으로 식별되지 않습니다.
 
-### <a name="example-3-dynamically-building-a-culturesensitive-regular-expression"></a>예제 3: 동적으로 문화권 구분 정규식 작성
+### <a name="example-3-dynamically-building-a-culture-sensitive-regular-expression"></a>예제 3: 동적으로 문화권 구분 정규식 작성
 
 다음 예제에서는 정규식이 .NET의 전역화 기능에서 제공하는 유연성과 결합되었을 때의 성능을 설명합니다. 이 예제에서는 [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo) 개체를 사용하여 시스템의 현재 문화권의 통화 값 서식을 확인합니다. 그런 다음 해당 정보를 사용하여 텍스트에서 통화 값을 추출하는 정규식을 동적으로 구성합니다. 각 일치 항목에 대해 숫자 문자열만 포함된 하위 그룹을 추출하여 [Decimal](xref:System.Decimal) 값으로 변환하고 누계를 계산합니다. 
 

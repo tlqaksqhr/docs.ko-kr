@@ -4,11 +4,10 @@ description: "정규식에 대한 모범 사례"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/26/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 096fd614-91bf-4296-be24-12f62b062294
 translationtype: Human Translation
@@ -686,7 +685,7 @@ End Module
 **(?<**=_subexpression_**)** | 너비가 0인 긍정 lookbehind입니다. *subexpression*이 입력 문자열과 일치하는지 확인하기 위해 현재 위치의 뒷부분을 확인합니다.
 **(?<!**_subexpression_**)** | 너비가 0인 부정 lookbehind입니다. *subexpression*이 입력 문자열과 일치하지 않는지 확인하기 위해 현재 위치의 뒷부분을 확인합니다.
  
-## <a name="use-timeout-values"></a>시간 제한 값 사용
+## <a name="use-time-out-values"></a>시간 제한 값 사용
 
 정규식이 정규식 패턴과 거의 일치하는 입력을 처리할 경우 정규식 성능에 크게 영향을 주는 과도한 역추적이 사용되는 경우로 볼 수 있습니다. 거의 일치하는 입력에 대해 정규식 역추적 및 테스트 사용을 신중하게 고려하는 것은 물론 과도한 역추적으로 발생할 영향을 최소화하려면 항상 시간 제한 값을 설정해야 합니다.
 

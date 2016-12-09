@@ -3,11 +3,11 @@ title: ".NET Core의 숫자"
 description: ".NET Core의 숫자"
 keywords: .NET, .NET Core
 author: rpetrusha
-manager: wpickett
+ms.author: ronpet
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6b8696be-55f5-4b66-98f3-69ff827c2c49
 translationtype: Human Translation
@@ -39,7 +39,7 @@ ms.openlocfilehash: 2930bf6879df3cd16cbd0221ae6dfcba9b41de2e
      
 부호 없는 정수 형식은 CLS와 호환되지 않습니다. 자세한 내용은 [.NET 공용 형식 시스템 및 공용 언어 사양](common-type-system.md)을 참조하세요.
 
-## <a name="floatingpoint-types"></a>부동 소수점 형식
+## <a name="floating-point-types"></a>부동 소수점 형식
 
 .NET Core에는 다음 표에 나열된 세 가지 기본 부동 소수점 형식이 포함되어 있습니다. 
 
@@ -61,7 +61,7 @@ ms.openlocfilehash: 2930bf6879df3cd16cbd0221ae6dfcba9b41de2e
 
 [System.Numerics.Complex](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Complex) 형식은 실수 부분과 허수 부분이 포함된 숫자인 복소수를 나타냅니다. 이 형식은 산술, 비교, 같음, 명시적 변환 및 암시적 변환 연산자의 표준 집합과 수치, 대수 및 삼각 메서드를 지원합니다. 
 
-## <a name="simdenabled-vector-types"></a>SIMD 사용 벡터 형식
+## <a name="simd-enabled-vector-types"></a>SIMD 사용 벡터 형식
 
 `System.Numerics` 네임스페이스에는 .NET Core를 위한 SIMD 사용 벡터 형식 집합이 있습니다. SIMD를 통해 일부 연산을 하드웨어 수준에서 병렬화할 수 있습니다. 이 덕분에 벡터를 통해 계산을 수행하는 수치, 공학용 및 그래픽 앱의 성능이 훨씬 향상됩니다. 
 

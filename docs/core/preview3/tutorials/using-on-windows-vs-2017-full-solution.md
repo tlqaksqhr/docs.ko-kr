@@ -3,11 +3,10 @@ title: "Visual Studio 2017을 사용하여 Windows에서 완전한 .NET Core 솔
 description: "Visual Studio 2017을 사용하여 Windows에서 완전한 .NET Core 솔루션 구축"
 keywords: .NET, .NET Core
 author: bleroy
-manager: wpickett
+ms.author: mairaw
 ms.date: 11/16/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: d743134a-08a3-4ff6-aab7-49f71f0568c3
 translationtype: Human Translation
@@ -26,9 +25,9 @@ Visual Studio 2017은 .NET Core 응용 프로그램 개발을 위해 필요한 �
 
 [필수 조건 페이지](../windows-prerequisites.md)의 지침에 따라 환경을 업데이트합니다.
 
-# <a name="a-solution-using-only-net-core-projects"></a>.NET Core 프로젝트만을 사용하는 솔루션
+## <a name="a-solution-using-only-net-core-projects"></a>.NET Core 프로젝트만을 사용하는 솔루션
 
-## <a name="writing-the-library"></a>라이브러리 작성
+### <a name="writing-the-library"></a>라이브러리 작성
 
 1. Visual Studio에서 **파일**, **새로 만들기**, **프로젝트**를 선택합니다. **새 프로젝트** 대화 상자에서 **Visual C#** 노드를 확장하고 **.NET Core** 노드를 선택한 다음 **클래스 라이브러리(.NET 표준)**를 선택합니다. 
 

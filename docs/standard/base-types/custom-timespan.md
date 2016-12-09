@@ -4,11 +4,10 @@ description: "사용자 지정 TimeSpan 형식 문자열"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/25/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: e79745eb-6ebd-4e62-85c4-4f2830c27285
 translationtype: Human Translation
@@ -219,7 +218,7 @@ Console.WriteLine(ts3.ToString("d\.hh\:mm\:ss"))
 '       3.04:03:17
 ```
 
-## <a name="the-dddddddddd-custom-format-specifiers"></a>"dd"-"dddddddd" 사용자 지정 서식 지정자
+## <a name="the-dd-dddddddd-custom-format-specifiers"></a>"dd"-"dddddddd" 사용자 지정 서식 지정자
 
 "dd", "ddd", "dddd", "ddddd", "dddddd", "ddddddd" 및 "dddddddd" 사용자 지정 형식 지정자는 시간 간격의 전체 일 수를 나타내는 [TimeSpan.Days](xref:System.TimeSpan.Days) 속성 값을 출력합니다. 
 

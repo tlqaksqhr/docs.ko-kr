@@ -2,12 +2,12 @@
 title: ".NET Core SDK 및 CI(연속 통합)의 도구 사용"
 description: ".NET Core SDK 및 CI(연속 통합)의 도구 사용"
 keywords: .NET, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 5fb15297-a276-417f-8c4f-267281357769
 translationtype: Human Translation

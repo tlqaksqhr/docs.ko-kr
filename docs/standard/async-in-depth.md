@@ -3,11 +3,11 @@ title: "비동기에 대한 자세한 설명"
 description: ".NET에서 비동기 코드가 작동하는 방식에 대한 자세한 설명"
 keywords: ".NET, .NET Core, .NET 표준"
 author: cartermp
-manager: wpickett
+ms.author: wiwagn
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
 translationtype: Human Translation
@@ -35,7 +35,7 @@ ms.openlocfilehash: c8ff0f81054feddb4ee7042926c817de525034f9
 
 [TAP(태스크 기반 비동기 패턴) 문서](https://msdn.microsoft.com/library/hh873175.aspx)에서 태스크 및 태스크를 조작하는 다양한 방법에 대해 자세히 알아볼 수 있습니다.
 
-## <a name="deeper-dive-into-tasks-for-an-iobound-operation"></a>I/O 바인딩된 작업에 대한 태스크 심층 분석
+## <a name="deeper-dive-into-tasks-for-an-io-bound-operation"></a>I/O 바인딩된 작업에 대한 태스크 심층 분석
 
 다음 섹션에서는 일반적인 비동기 I/O 호출에서 발생하는 결과에 대해 대략적으로 설명합니다. 몇 가지 예부터 살펴보겠습니다.
 
@@ -117,7 +117,7 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 
 또한 UI 스레드에 작업을 디스패치하는 경우(예: UI 업데이트) `async` 메서드를 사용하면 간단하며 추가 작업(예: 스레드로부터 안전한 대리자 호출)이 필요하지 않습니다.
 
-## <a name="deeper-dive-into-task-and-taskt-for-a-cpubound-operation"></a>CPU 바인딩된 작업에 대한 Task 및 Task<T> 심층 분석
+## <a name="deeper-dive-into-task-and-taskt-for-a-cpu-bound-operation"></a>CPU 바인딩된 작업에 대한 Task 및 Task<T> 심층 분석
 
 CPU 바인딩된 `async` 코드는 I/O 바인딩된 `async` 코드와 약간 다릅니다.  CPU에서 작업이 수행되기 때문에 스레드를 계산 전용으로 지정할 방법이 없습니다.  `async` 및 `await`를 사용하면 깔끔하게 백그라운드 스레드를 조작하고 비동기 메서드 호출자를 응답 가능한 상태로 유지할 수 있습니다.  이 경우 공유 데이터는 보호되지 않습니다.  공유 데이터를 사용하는 경우 적절한 동기화 전략을 적용해야 합니다.
 

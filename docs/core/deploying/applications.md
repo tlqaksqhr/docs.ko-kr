@@ -2,12 +2,9 @@
 title: ".NET Core 응용 프로그램 배포"
 description: ".NET Core 응용 프로그램 배포"
 keywords: .NET, .NET Core
-author: dotnet-bot
-manager: wpickett
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 1db00fb1-d947-480d-8d7d-7152e67b0585
 translationtype: Human Translation

@@ -3,11 +3,10 @@ title: ".NET Core로 이식 - 타사 종속성 분석"
 description: ".NET Core로 이식 - 타사 종속성 분석"
 keywords: .NET, .NET Core
 author: cartermp
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: b446e9e0-72f6-48f6-92c6-70ad0ce3f86a
 translationtype: Human Translation
@@ -16,7 +15,7 @@ ms.openlocfilehash: 7e4e96183484d102d102eeab97191f8be9b9be8a
 
 ---
 
-# <a name="porting-to-net-core-analyzing-your-thirdparty-party-dependencies"></a>.NET Core로 이식 - 타사 종속성 분석
+# <a name="porting-to-net-core---analyzing-your-third-party-party-dependencies"></a>.NET Core로 이식 - 타사 종속성 분석
 
 이식 프로세스의 첫 번째 단계는 타사 종속성을 이해하는 것입니다.  .NET Core에서 아직 실행되지 않는 것이 무엇인지를 파악하고 이에 대한 대체 계획을 개발해야 합니다.
 

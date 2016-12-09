@@ -4,11 +4,10 @@ description: "정규식의 문자 클래스"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/29/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c7a9305f-7144-4fe8-80e8-a727bf7d223f
 translationtype: Human Translation
@@ -550,7 +549,7 @@ End Module
 '       'nn' found in 'stunned' at position 3.
 ```
 
-## <a name="nonword-character-w"></a>단어가 아닌 문자: \W
+## <a name="non-word-character-w"></a>단어가 아닌 문자: \W
 
 **\W**는 단어가 아닌 문자를 찾습니다. **\W** 언어 요소는 다음 문자 클래스와 같습니다.
 
@@ -679,7 +678,7 @@ End Module
 
 두 번째 캡처링 그룹의 `Group` 개체가 단일 캡처된 비단어 문자만 포함하기 때문에 예제에서는 `CaptureCollection` 속성에 의해 반환되는 `Group.Captures` 개체에서 모든 캡처된 비단어 문자를 검색합니다.
 
-## <a name="whitespace-character-s"></a>공백 문자: \s
+## <a name="white-space-character-s"></a>공백 문자: \s
 
 **\s**는 공백 문자를 찾습니다. 다음 표에 나열된 이스케이프 시퀀스 및 유니코드 범주와 동일합니다. 
 
@@ -746,7 +745,7 @@ End Module
 '       leaves
 ```
 
-## <a name="nonwhitespace-character-s"></a>공백이 아닌 문자: \S
+## <a name="non-white-space-character-s"></a>공백이 아닌 문자: \S
 
 **\S**는 공백 문자가 아닌 문자를 찾습니다. `[^\f\n\r\t\v\x85\p{Z}]` 정규식 패턴과 같거나, 공백 문자를 찾는 **\s**와 같은 정규식 패턴의 반대입니다. 자세한 내용은 이전 섹션인 "공백 문자: \s"를 참조하세요.
 
@@ -922,7 +921,7 @@ End Module
 '       01 999-9999: match failed
 ```
 
-## <a name="nondigit-character-d"></a>숫자가 아닌 문자: \D
+## <a name="non-digit-character-d"></a>숫자가 아닌 문자: \D
 
 **\D**는 숫자가 아닌 문자를 찾습니다. `\P{Nd}` 정규식 패턴과 동일합니다.
 
@@ -1142,7 +1141,7 @@ FF00 - FFEF | **IsHalfwidthandFullwidthForms**
 FFF0 - FFFF | **IsSpecials**
  
 <a name="character-class-subtraction"></a>
-## <a name="character-class-subtraction-basegroup-excludedgroup"></a>문자 클래스 빼기: [base_group - [excluded_group]]
+## <a name="character-class-subtraction-basegroup---excludedgroup"></a>문자 클래스 빼기: [base_group - [excluded_group]]
 
 문자 클래스는 문자 집합을 정의합니다. 문자 클래스 빼기는 한 문자 클래스에서 다른 문자 클래스의 문자를 제외한 결과로 문자 집합을 생성합니다. 
 

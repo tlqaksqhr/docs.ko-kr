@@ -2,12 +2,10 @@
 title: "CLI 도구를 사용하여 .NET Core 콘솔 앱 작성: 고급 단계별 가이드"
 description: "CLI 도구를 사용하여 .NET Core 콘솔 앱 작성: 고급 단계별 가이드"
 keywords: .NET, .NET Core
-author: dotnet-bot
-manager: wpickett
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: dab9e2f9-9088-4089-b990-fbc3d8dcd611
 translationtype: Human Translation

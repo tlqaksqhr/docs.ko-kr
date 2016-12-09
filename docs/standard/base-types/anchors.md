@@ -4,11 +4,10 @@ description: "정규식의 앵커"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/28/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 96dff1be-3005-4ba5-af1b-323182a26085
 translationtype: Human Translation
@@ -835,7 +834,7 @@ End Module
 `\w*` | 0개 이상의 단어 문자를 찾습니다.
 `\b` | 단어 경계에서 일치 항목 찾기를 끝냅니다.
  
-## <a name="nonword-boundary-b"></a>비단어 경계: \B
+## <a name="non-word-boundary-b"></a>비단어 경계: \B
 
 **\B** 앵커는 단어 경계에서 일치 항목 찾기를 수행하지 않도록 지정합니다. **\b** 앵커와 반대 작업을 수행합니다.
 

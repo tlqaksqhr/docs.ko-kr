@@ -3,12 +3,11 @@ title: ".NET 아키텍처 구성 요소"
 description: ".NET 표준 라이브러리, .NET 런타임 및 도구와 같은 주요 .NET 아키텍처 구성 요소를 설명합니다."
 keywords: ".NET, .NET 표준 라이브러리, .NET 표준, .NET Core, .NET Framework, Xamarin, MSBuild, C#, F#, VB, 컴파일러"
 author: cartermp
-manager: wpickett
-ms.author: cartermp
+ms.author: mairaw
 ms.date: 11/16/2016
 ms.topic: article
 ms.prod: .net
-ms.technology: .net-core-technologies
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2e38e9d9-8284-46ee-a15f-199adc4f26f4
 translationtype: Human Translation

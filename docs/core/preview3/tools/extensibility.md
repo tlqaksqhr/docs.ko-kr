@@ -2,12 +2,12 @@
 title: ".NET Core CLI 확장성 모델"
 description: ".NET Core CLI 확장성 모델"
 keywords: "CLI, 확장성, 사용자 지정 명령, .NET Core"
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 11/13/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 1bebd25a-120f-48d3-8c25-c89965afcbcd
 translationtype: Human Translation

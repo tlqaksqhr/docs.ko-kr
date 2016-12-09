@@ -4,11 +4,10 @@ description: "표준 날짜 및 시간 서식 문자열"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/25/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: be239871-10cc-4949-b548-200bb260630a
 translationtype: Human Translation
@@ -376,7 +375,7 @@ Console.WriteLine(date1.ToString("m", _
 ' Displays 10 April
 ```
 
-## <a name="the-roundtrip-o-o-format-specifier"></a>라운드트립("O", "o") 서식 지정자
+## <a name="the-round-trip-o-o-format-specifier"></a>라운드트립("O", "o") 서식 지정자
 
 "O" 또는 "o" 표준 서식 지정자는 표준 시간대 정보를 유지하는 패턴을 사용하여 사용자 지정 날짜 및 시간 서식 문자열을 나타내고 ISO 8601을 준수하는 결과 문자열을 생략합니다. [DateTime](xref:System.DateTime) 값의 경우 이 서식 지정자는 [DateTime.Kind](xref:System.DateTime.Kind) 속성과 함께 날짜 및 시간 값을 텍스트로 유지합니다. 서식이 지정된 문자열은 스타일 매개 변수가 [DateTimeStyles.RoundtripKind](xref:System.Globalization.DateTimeStyles.RoundtripKind)로 설정된 경우 [DateTime.Parse(String, IFormatProvider, DateTimeStyles)](xref:System.DateTime.Parse(System.String,System.IFormatProvider,System.Globalization.DateTimeStyles)) 또는 [DateTime.ParseExact](xref:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.DateTimeStyles)) 메서드를 사용하여 다시 구문 분석될 수 있습니다. 
 

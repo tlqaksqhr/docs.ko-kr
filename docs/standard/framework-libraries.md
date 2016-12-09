@@ -3,11 +3,11 @@ title: "프레임워크 라이브러리"
 description: "프레임워크 라이브러리"
 keywords: .NET, .NET Core
 author: richlander
-manager: wpickett
+ms.author: ronpet
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
 translationtype: Human Translation
@@ -58,7 +58,7 @@ BCL은 가장 기본적인 형식과 유틸리티 기능을 제공하며 다른 
 *   [XDocument](https://msdn.microsoft.com/library/system.xml.linq.xdocument.aspx) - XML 문서를 로드하고 LINQ를 사용하여 쿼리하기 위한 API입니다.
 *   [StreamReader](https://msdn.microsoft.com/library/system.io.streamreader.aspx) - 파일을 읽기 위한 API입니다. ([StreamWriter](https://msdn.microsoft.com/library/system.io.stringwriter.aspx)) 파일을 쓰는 데 사용할 수 있습니다.
 
-## <a name="appmodel-apis"></a>앱 모델 API
+## <a name="app-model-apis"></a>앱 모델 API
 
 여러 회사에서 제공하는, .NET에 사용할 수 있는 많은 앱 모델이 있습니다.
 

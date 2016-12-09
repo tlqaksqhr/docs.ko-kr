@@ -3,11 +3,10 @@ title: "Windows에서 .NET Core와 함께 MSTest 사용"
 description: "Windows에서 Visual Studio 2015를 사용하여 .NET Core와 함께 MSTest를 사용하는 방법"
 keywords: MSTest, .NET, .NET Core
 author: ncarandini
-manager: wpickett
+ms.author: wiwagn
 ms.date: 08/18/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: ed447641-3e85-4e50-b7ed-004630048a3e
 translationtype: Human Translation

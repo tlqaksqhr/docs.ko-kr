@@ -3,11 +3,11 @@ title: ".NET에서 날짜 및 시간 문자열 구문 분석"
 description: ".NET에서 날짜 및 시간 문자열 구문 분석"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 07/29/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: e61514cd-5329-4eb8-b122-482fffb54ab7
 translationtype: Human Translation

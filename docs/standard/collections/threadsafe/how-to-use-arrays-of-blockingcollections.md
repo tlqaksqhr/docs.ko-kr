@@ -3,11 +3,11 @@ title: "방법: 파이프라인에서 차단 컬렉션 배열 사용"
 description: "방법: 파이프라인에서 차단 컬렉션 배열 사용"
 keywords: .NET, .NET Core
 author: mairaw
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 278a6566-09ba-4022-8802-e160e75b86af
 translationtype: Human Translation

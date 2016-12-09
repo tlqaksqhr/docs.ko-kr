@@ -2,12 +2,12 @@
 title: "dotnet-run 명령 | .NET Core SDK"
 description: "dotnet-run 명령은 소스 코드에서 응용 프로그램을 실행하는 편리한 옵션을 제공합니다."
 keywords: "dotnet-run, CLI, CLI 명령, .NET Core"
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/07/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 495ff50b-cb30-4d30-8f20-beb3d5e7c31f
 translationtype: Human Translation

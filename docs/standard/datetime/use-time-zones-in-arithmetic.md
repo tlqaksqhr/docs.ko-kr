@@ -3,11 +3,11 @@ title: "방법: 날짜 및 시간 산술 연산의 표준 시간대 사용"
 description: "날짜 및 시간 산술 연산의 표준 시간대를 사용하는 방법"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 08/16/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 26870cdc-1709-4978-831b-ff2a2f24856f
 translationtype: Human Translation

@@ -3,12 +3,11 @@ title: ".NET 시작하기"
 description: ".NET을 시작하는 데 필요한 다양한 문서를 언어 및 플랫폼 측면에서 나열합니다."
 keywords: ".NET, 시작하기, C#, F#, Visual Basic"
 author: cartermp
-manager: wpickett
-ms.author: phcart
+ms.author: mairaw
 ms.date: 11/16/2016
 ms.topic: article
 ms.prod: .net
-ms.technology: .net-core-technologies
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
 translationtype: Human Translation

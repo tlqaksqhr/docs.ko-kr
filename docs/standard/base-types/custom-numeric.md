@@ -4,11 +4,10 @@ description: "사용자 지정 숫자 형식 문자열"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/25/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 7b1c16ee-956f-4e9c-8502-c3dd6598c51d
 translationtype: Human Translation
@@ -598,11 +597,11 @@ Console.WriteLine(String.Format("{0:" + fmt3 + "}", zeroValue))
 
 ## <a name="notes"></a>노트
 
-### <a name="floatingpoint-infinities-and-nan"></a>부동 소수점 무한대 및 NaN
+### <a name="floating-point-infinities-and-nan"></a>부동 소수점 무한대 및 NaN
 
 형식 문자열에 관계없이 [Single](xref:System.Single) 또는 [Double](xref:System.Double) 부동 소수점 형식의 값이 양의 무한대, 음의 무한대 또는 NaN(Not a Number)이면 형식이 지정된 문자열은 각각 현재 적용 가능한 [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo) 개체에서 지정하는 해당 [PositiveInfinitySymbol](xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol), [NegativeInfinitySymbol](xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol) 또는 [NaNSymbol](xref:System.Globalization.NumberFormatInfo.NaNSymbol) 속성의 값입니다. 
 
-### <a name="rounding-and-fixedpoint-format-strings"></a>반올림 및 고정 소수점 서식 문자열
+### <a name="rounding-and-fixed-point-format-strings"></a>반올림 및 고정 소수점 서식 문자열
 
 고정 소수점 서식 문자열, 즉 과학적 표기법 서식 문자가 들어 있지 않은 서식 문자열의 경우 소수점 오른쪽에 있는 10진수 자리 표시자와 같은 개수의 소수 자릿수만큼 숫자가 반올림됩니다. 서식 문자열에 소수점이 없으면 숫자는 가장 근접한 정수로 반올림됩니다. 숫자의 자릿수가 소수점 왼쪽의 10진수 자리 표시자보다 많으면, 초과 숫자가 결과 문자열의 첫째 10진수 자리 표시자 바로 앞에 복사됩니다.
 

@@ -2,12 +2,9 @@
 title: ".NET Core로 이식 - NuGet 패키지"
 description: ".NET Core로 이식 - NuGet 패키지"
 keywords: .NET, .NET Core
-author: cartermp
-manager: wpickett
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 4d823e71-19ac-4419-953e-b47aa58f5538
 translationtype: Human Translation

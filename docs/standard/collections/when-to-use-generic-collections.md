@@ -3,11 +3,11 @@ title: "제네릭 컬렉션 사용 기준"
 description: "제네릭 컬렉션 사용 기준"
 keywords: .NET, .NET Core
 author: mairaw
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 971e08bd-b63f-4832-9e61-9f65cbedd352
 translationtype: Human Translation
