@@ -86,6 +86,7 @@ RID를 사용하려면 어떤 RID가 있는지를 알아야 합니다. 새 RID�
 ## <a name="linux-rids"></a>Linux RID
 
 * Red Hat Enterprise Linux
+    * `rhel.7-x64`
     * `rhel.7.0-x64`
     * `rhel.7.1-x64`
     * `rhel.7.2-x64`
