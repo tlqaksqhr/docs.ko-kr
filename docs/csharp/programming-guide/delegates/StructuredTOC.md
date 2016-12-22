@@ -1,0 +1,5 @@
+# [Delegates](TocOutOfQuery)
+## [대리자 사용(C# 프로그래밍 가이드)](using-delegates.md)
+## [명명된 메서드와 무명 메서드의 대리자 비교(C# 프로그래밍 가이드)](delegates-with-named-vs-anonymous-methods.md)
+## [How to: Combine Delegates (Multicast Delegates)](TocOutOfQuery)
+## [방법: 대리자 선언, 인스턴스화 및 사용(C# 프로그래밍 가이드)](how-to-declare-instantiate-and-use-a-delegate.md)
