@@ -1,0 +1,6 @@
+# [방법: 바이트 배열을 정수로 변환(C# 프로그래밍 가이드)](how-to-convert-a-byte-array-to-an-int.md)
+# [방법: AS 및 IS 연산자를 사용한 안전한 캐스팅(C# 프로그래밍 가이드)](how-to-safely-cast-by-using-as-and-is-operators.md)
+# [방법: 16진수 문자열과 숫자 형식 간 변환(C# 프로그래밍 가이드)](how-to-convert-between-hexadecimal-strings-and-numeric-types.md)
+# [연습: 동적 개체 만들기 및 사용(C# 및 Visual Basic)](walkthrough-creating-and-using-dynamic-objects.md)
+# [캐스팅 및 형식 변환(C# 프로그래밍 가이드)](casting-and-type-conversions.md)
+# [방법: 문자열을 숫자로 변환(C# 프로그래밍 가이드)](how-to-convert-a-string-to-a-number.md)

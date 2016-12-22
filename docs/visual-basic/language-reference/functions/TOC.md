@@ -1,0 +1,5 @@
+# [문자열 함수(Visual Basic)](string-functions.md)
+# [CType 함수(Visual Basic)](ctype-function.md)
+# [Type Conversion Functions (Visual Basic)](type-conversion-functions.md)
+# [함수(Visual Basic)](index.md)
+# [수학 함수(Visual Basic)](math-functions.md)

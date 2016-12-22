@@ -1,0 +1,5 @@
+# [방법: 폼의 클라이언트 영역 인쇄(Visual Basic)](how-to-print-the-client-area-of-a-form.md)
+# [Deploying Applications That Reference the PrintForm Component (Visual Basic)](deploying-applications-that-reference-the-printform-component.md)
+# [Adding Printable Reports to Visual Studio Applications](adding-printable-reports-to-visual-studio-applications.md)
+# [Printing and Reporting (Visual Basic)](printing-and-reporting.md)
+# [PrintForm Component (Visual Basic)](printform-component.md)

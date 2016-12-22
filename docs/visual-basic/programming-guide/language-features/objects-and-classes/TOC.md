@@ -1,0 +1,8 @@
+# [Object Lifetime: How Objects Are Created and Destroyed (Visual Basic)](object-lifetime-how-objects-are-created-and-destroyed.md)
+# [Inheritance Basics (Visual Basic)](inheritance-basics.md)
+# [Objects and Classes in Visual Basic](index.md)
+# [Overloaded Properties and Methods (Visual Basic)](overloaded-properties-and-methods.md)
+# [방법: 익명 형식 선언에서 속성 이름 및 형식 유추(Visual Basic)](how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+# [Anonymous Types (Visual Basic)](anonymous-types.md)
+# [How to: Declare an Object by Using an Object Initializer (Visual Basic)](how-to-declare-an-object-by-using-an-object-initializer.md)
+# [Walkthrough: Defining Classes (Visual Basic)](walkthrough-defining-classes.md)
