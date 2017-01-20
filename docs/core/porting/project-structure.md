@@ -3,16 +3,15 @@ title: ".NET Framework 및 .NET Core를 지원하도록 프로젝트 구성"
 description: ".NET Framework 및 .NET Core를 지원하도록 프로젝트 구성"
 keywords: .NET, .NET Core
 author: conniey
-manager: wpickett
+ms.author: mairaw
 ms.date: 07/18/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 3af62252-1dfa-4336-8d2f-5cfdb57d7724
 translationtype: Human Translation
-ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: 7a3f972debee1e90deda57e5604214ff4756da4a
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: ed2fdad2a784f4e4ce1f8a660b5bb151935fd2d4
 
 ---
 
@@ -69,7 +68,7 @@ ms.openlocfilehash: 7a3f972debee1e90deda57e5604214ff4756da4a
 주목할 변경 사항은 다음과 같습니다.
 * 추가: `global.json`
 * `packages.config` 및 `*.csproj`를 다음으로 교체: `project.json` 및 `*.xproj`
-* 기존 .NET Framework 및 기타에 대한 빌드를 지원하도록 [Car의 project.json][example-xproj-projectjson] 및 [테스트 프로젝트][example-xproj-projectjson-test]에서 변경된 사항
+* 기존 .NET Framework 및 기타에 대한 빌드를 지원하도록 [Car의 project.json][example-xproj-projectjson] 및 해당 [테스트 프로젝트][example-xproj-projectjson-test]에서 변경된 사항
 
 ## <a name="create-a-portable-class-library-pcl-to-target-net-core"></a>.NET Core를 대상으로 하는 PCL(이식 가능한 클래스 라이브러리) 만들기
 
@@ -89,7 +88,7 @@ ms.openlocfilehash: 7a3f972debee1e90deda57e5604214ff4756da4a
 
 이전 프레임워크를 대상으로 하는 기존 프로젝트가 있는 경우, 이러한 프로젝트는 그대로 두고 이후 프레임워크를 대상으로 하는 .NET Core를 사용할 수 있습니다.
 
-![다른 폴더에 기존 PCL이 있는 .NET Core 프로젝트][example-xproj-different-folder]
+![다른 폴더에 기존 PCL가 있는 .NET Core 프로젝트][example-xproj-different-folder]
 
 [**소스 코드**][example-xproj-different-code]
 
@@ -106,7 +105,7 @@ project.json 및 xproj로의 이전에 대한 자세한 지침은 [.NET Core 이
 [example-initial-project]: media/project-structure/project.png "기존 프로젝트"
 [example-initial-project-code]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library/
 
-[example-xproj]: media/project-structure/project.xproj.png "다중 프레임워크를 대상으로 하는 xproj 만들기"
+[example-xproj]: media/project-structure/project.xproj.png "여러 프레임워크를 대상으로 하는 xproj 만들기"
 [example-xproj-code]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-xproj/
 [example-xproj-projectjson]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-xproj/src/Car/project.json
 [example-xproj-projectjson-test]: https://github.com/dotnet/docs/tree/master/samples/framework/libraries/migrate-library-xproj/tests/Car.Tests/project.json
@@ -125,6 +124,6 @@ project.json 및 xproj로의 이전에 대한 자세한 지침은 [.NET Core 이
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

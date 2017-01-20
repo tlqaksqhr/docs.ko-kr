@@ -1,4 +1,4 @@
-# <a name="using-the-cli-preview3-folder-and-sub-folders"></a>cli-preview3 폴더와 하위 폴더 사용
+# <a name="using-the-preview3-folder-and-sub-folders"></a>preview3 폴더와 하위 폴더 사용
 
 이 폴더는 도구 폴더에 맞는 최상위 노드이지만 NET Core 도구 Preview 3 릴리스에 대한 델타가 포함되어 있습니다.
 
@@ -37,6 +37,6 @@
 시나리오가 적용되는 시점에서는 각 현재 릴리스를 주 [문서](../docs) 폴더로 병합하고, TOC 노드를 병합하고, 별도의 문서 집합으로 게시할 수 있습니다. 수정은 LTS 파일 버전과 파일의 현재 릴리스 모두에 병합해야 할 수 있지만 해당 변경 내용을 비교적 쉽게 찾을 수 있어야 합니다.
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

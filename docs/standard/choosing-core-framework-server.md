@@ -3,17 +3,16 @@ title: "서버 앱에 대해 .NET Core와 .NET Framework 중에 선택"
 description: ".NET에서 서버 앱을 구축할 때 고려해야 할 .NET 버전에 대한 가이드입니다."
 keywords: .NET, .NET Core, .NET Framework
 author: cartermp
-manager: wpickett
-ms.author: phcart
+ms.author: mairaw
 ms.date: 11/16/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 155553e4-89a2-418d-be88-4e75f6c3cc69
 translationtype: Human Translation
-ms.sourcegitcommit: d6ce9e3dd3c1189f35d147d140bb45095b3d77a5
-ms.openlocfilehash: a0563f7437711ddbee309803e97ab653aa160337
+ms.sourcegitcommit: 572bec82e08d6b47a188e51964c8c2f440fa471c
+ms.openlocfilehash: e23514daacb34739b26b7a31afea2ccb30296e79
 
 ---
 
@@ -50,13 +49,13 @@ ms.openlocfilehash: a0563f7437711ddbee309803e97ab653aa160337
 
 동적으로 확장 가능하고 독립적인 여러 상태 저장 또는 상태 비저장 마이크로 서비스로 구성된 마이크로 서비스 중심의 시스템을 수용하는 경우 .NET Core가 가장 적합한 대상입니다. .NET Core는 간단하며, API 화면을 마이크로 서비스의 범위로 최소화할 수 있습니다. 마이크로 서비스 아키텍처를 사용하면 서비스 경계를 벗어나 여러 기술을 융합할 수 있습니다. 이를 통해 .NET Framework, Java, Ruby 또는 다른 모놀리식 기술로 개발된 서비스나 다른 마이크로 서비스와 결합하여 사용되는 새로운 마이크로 서비스에 .NET Core를 점진적으로 적용할 수 있습니다.
 
-사용할 수 있는 인프라 플랫폼은 많습니다. 크고 복잡한 마이크로 서비스 시스템의 경우 [Azure Service Fabric](https://azure.microsoft.com/en-us/services/service-fabric/)을 사용할 수 있습니다. 상태 비저장 마이크로 서비스의 경우 [Azure App Service](https://azure.microsoft.com/en-us/services/app-service/)와 같은 다른 제품을 사용할 수도 있습니다. 또한 Docker를 바탕으로 하는 마이크로 서비스 대안의 경우 다음에 설명된 대로 모든 종류의 마이크로 서비스 접근 방식과 맞습니다. 이러한 모든 플랫폼은 .NET Core를 지원하므로 마이크로 서비스를 호스팅하는 데 적합합니다.
+사용할 수 있는 인프라 플랫폼은 많습니다. 크고 복잡한 마이크로 서비스 시스템의 경우 [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)을 사용할 수 있습니다. 상태 비저장 마이크로 서비스의 경우 [Azure App Service](https://azure.microsoft.com/services/app-service/)와 같은 다른 제품을 사용할 수도 있습니다. 또한 Docker를 바탕으로 하는 마이크로 서비스 대안의 경우 다음에 설명된 대로 모든 종류의 마이크로 서비스 접근 방식과 맞습니다. 이러한 모든 플랫폼은 .NET Core를 지원하므로 마이크로 서비스를 호스팅하는 데 적합합니다.
 
 ### <a name="containers"></a>컨테이너
 
 컨테이너는 아키텍처 패턴을 따르는 웹앱 또는 서비스를 컨테이너화하는 데 사용할 수 있지만 일반적으로 마이크로 서비스 아키텍처와 연계하여 사용됩니다. Windows 컨테이너에 .NET Framework를 사용할 수 있지만 .NET Core의 모듈화된 간단한 특성은 컨테이너에 적합합니다.  컨테이너를 만들고 배포할 때 해당 이미지의 크기가 .NET Framework보다 .NET Core를 사용할 때 훨씬 작습니다.  플랫폼 간 사용되므로 예를 들어 서버 앱을 Linux Docker 컨테이너에 배포할 수 있습니다.
 
-그런 다음 고유한 Linux 또는 Windows 인프라에서 Docker 컨테이너를 호스트하거나, 컨테이너 기반 응용 프로그램을 클라우드에서 관리, 오케스트레이션, 확장할 수 있는 [Azure Container Service](https://azure.microsoft.com/en-us/services/container-service/)와 같은 클라우드 서비스를 사용할 수 있습니다.
+그런 다음 고유한 Linux 또는 Windows 인프라에서 Docker 컨테이너를 호스트하거나, 컨테이너 기반 응용 프로그램을 클라우드에서 관리, 오케스트레이션, 확장할 수 있는 [Azure Container Service](https://azure.microsoft.com/services/container-service/)와 같은 클라우드 서비스를 사용할 수 있습니다.
 
 ### <a name="a-need-for-high-performance-and-scalable-systems"></a>고성능 및 확장 가능한 시스템에 대한 요구 사항
 
@@ -110,6 +109,7 @@ ms.openlocfilehash: a0563f7437711ddbee309803e97ab653aa160337
 * [.NET 구성 요소 개요](components.md)
 
 
-<!--HONumber=Nov16_HO3-->
+
+<!--HONumber=Jan17_HO3-->
 
 
