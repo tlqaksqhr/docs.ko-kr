@@ -3,11 +3,11 @@ title: "방법: BlockingCollection에서 개별적으로 항목 추가 및 가�
 description: "방법: BlockingCollection에서 개별적으로 항목 추가 및 가져오기"
 keywords: .NET, .NET Core
 author: mairaw
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2b9d39ab-0993-4453-b021-b04870098bf7
 translationtype: Human Translation

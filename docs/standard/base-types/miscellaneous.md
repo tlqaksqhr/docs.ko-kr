@@ -4,16 +4,15 @@ description: "정규식의 기타 구문"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/29/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 478901dc-db6c-4d90-9d3b-f5cfdca2cbf5
 translationtype: Human Translation
 ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 477332f4009790727686aa3d91e35509e3766903
+ms.openlocfilehash: 4205d2a318849a7b24ac0f1fd65f7e8a23ec7f55
 
 ---
 
@@ -228,7 +227,7 @@ End Module
 '       Group 1: Dreaded
 ```
 
-## <a name="endofline-comment"></a>줄의 끝 주석
+## <a name="end-of-line-comment"></a>줄의 끝 주석
 
 숫자 기호(**#**)는 정규식 패턴의 끝에 있는 이스케이프되지 않은 # 문자에서 시작하고 줄의 끝까지 계속되는 x-mode 주석을 표시합니다. 이 구문을 사용하려면 인라인 옵션을 통해 **x** 옵션을 사용하거나, [Regex](xref:System.Text.RegularExpressions.Regex) 개체를 인스턴스화하거나 정적 [Regex](xref:System.Text.RegularExpressions.Regex) 메서드를 호출할 때 [RegexOptions.IgnorePatternWhitespace](xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace) 값을 *option* 매개 변수에 제공해야 합니다. 
 
@@ -298,6 +297,6 @@ End Module
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

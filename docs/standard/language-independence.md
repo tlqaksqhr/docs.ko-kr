@@ -4,20 +4,19 @@ description: "언어 독립성 및 언어 독립적 구성 요소"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/22/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
 translationtype: Human Translation
 ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 47a407d1c1e768a027aaca63ee7a668e992467b2
+ms.openlocfilehash: 1458cfdb81c53b7eab384c1b7f3e65c7ad7d8098
 
 ---
 
-# <a name="language-independence-and-languageindependent-components"></a>언어 독립성 및 언어 독립적 구성 요소
+# <a name="language-independence-and-language-independent-components"></a>언어 독립성 및 언어 독립적 구성 요소
 
 .NET 플랫폼은 언어 독립적입니다. 즉, 개발자는 C#, F#, Visual Basic 등의 .NET 플랫폼을 대상으로 하는 많은 언어 중 하나로 개발할 수 있습니다. 원래 작성된 언어를 모르거나 원래의 언어 규칙을 따르지 않고도 .NET 플랫폼용으로 개발된 클래스 라이브러리의 형식과 멤버에 액세스할 수 있습니다. 구성 요소 개발자인 경우 해당 언어와 관계없이 모든 .NET 앱에서 구성 요소에 액세스할 수 있습니다.
 
@@ -2816,7 +2815,7 @@ End Class
 
 라이브러리가 아닌 응용 프로그램을 개발하는 경우(다른 응용 프로그램 개발자가 사용할 수 있는 형식 또는 멤버를 노출하지 않으려는 경우) 응용 프로그램이 사용하는 프로그램 요소의 CLS 규격은 해당 언어가 지원하지 않는 경우에만 관련됩니다. 이 경우에 CLS 규격이 아닌 요소를 사용하려고 하면 언어 컴파일러에서 오류가 발생합니다. 
 
-## <a name="crosslanguage-interoperability"></a>언어 간 상호 운용성
+## <a name="cross-language-interoperability"></a>언어 간 상호 운용성
 
 언어 독립성은 여러 가지 의미를 가질 수 있습니다. 한 가지 의미는 한 언어로 작성된 형식을 다른 언어로 작성된 앱에서 원활하게 사용할 수 있다는 것입니다. 이 문서의 핵심이기도 한 두 번째 의미는 여러 언어로 작성된 코드를 단일 .NET Framework 어셈블리로 결합하는 것입니다. 
 
@@ -2956,6 +2955,6 @@ csc example.cs /r:UtilityLib.dll
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

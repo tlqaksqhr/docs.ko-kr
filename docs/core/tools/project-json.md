@@ -4,16 +4,15 @@ description: "project.json 참조"
 keywords: .NET, .NET Core, project.json
 author: aL3891
 ms.author: mairaw
-manager: wpickett
-ms.date: 09/30/2016
+ms.date: 12/21/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 3aef32bd-ee2a-4e24-80f8-a2b615e0336d
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: f870dc601a1df5dd663cd165bc19f70df9aa57f4
+ms.sourcegitcommit: 4023c5ec72055fee78863a43b60989e1eb34fb22
+ms.openlocfilehash: 68b152cda54b5356dce48f4a8330b2ecb9c9d2e0
 
 ---
 
@@ -509,7 +508,7 @@ NuGet 패키지에도 사용되는 프로젝트의 [Semver](http://semver.org/sp
 
 무시할 경고의 목록.
 
-예를 들면 다음과 같습니다.
+예:
 
 ```json
 {
@@ -519,7 +518,7 @@ NuGet 패키지에도 사용되는 프로젝트의 [Semver](http://semver.org/sp
 }
 ```
 
-다음 경고를 무시합니다. `The variable 'var' is assigned but its value is never used` 및 `The variable 'var' is assigned but its value is never used`
+`The variable 'var' is declared but never used` 및 `The variable 'var' is assigned but its value is never used` 경고를 무시합니다.
 
 ### <a name="additionalarguments"></a>additionalArguments
 형식: String[]
@@ -1656,6 +1655,6 @@ DLL 파일 래핑에 사용됩니다. 이 DLL이 포함된 패키지를 생성�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 

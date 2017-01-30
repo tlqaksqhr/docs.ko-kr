@@ -3,16 +3,16 @@ title: ".NET의 예외 처리 및 Throw"
 description: ".NET에서 예외를 사용하는 방법 이해"
 keywords: .NET, .NET Core
 author: mairaw
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bf116df6-0042-46bf-be13-b69864816210
 translationtype: Human Translation
 ms.sourcegitcommit: 9584699ad7e745ae3cb059b1bb8327301c9a3286
-ms.openlocfilehash: 0c73fb0a12092877ff5b54221f4a80693d1d1152
+ms.openlocfilehash: 5271b63a47aa2fcc81cd9c8b1ffd22e618829412
 
 ---
 
@@ -26,7 +26,7 @@ ms.openlocfilehash: 0c73fb0a12092877ff5b54221f4a80693d1d1152
 
 .NET에서 예외는 [System.Exception](xref:System.Exception) 클래스에서 상속받은 개체입니다. 예외는 문제가 발생한 코드 영역에서 throw됩니다. 예외는 응용 프로그램에서 해당 예외를 처리하거나 프로그램이 종료될 때까지 스택으로 전달됩니다.
 
-## <a name="exceptions-vs-traditional-errorhandling-methods"></a>예외 및 일반적인 오류 처리 방법
+## <a name="exceptions-vs-traditional-error-handling-methods"></a>예외 및 일반적인 오류 처리 방법
 
 일반적으로 언어 오류 처리 모델은 오류를 감지하고 해당 오류 처리기를 찾는 언어 고유의 방식에 의존하거나 운영 체제에서 제공하는 오류 처리 메커니즘에 의존했습니다. .NET에서 예외 처리를 구현하는 방법에는 다음과 같은 이점이 있습니다.
 
@@ -247,7 +247,7 @@ public class ProcessFile
 }
 ```
 
-## <a name="how-to-create-userdefined-exceptions"></a>사용자 정의 예외를 만드는 방법
+## <a name="how-to-create-user-defined-exceptions"></a>사용자 정의 예외를 만드는 방법
 
 .NET에서는 기본 클래스 @System.Exception.에서 최종적으로 파생되는 예외 클래스의 계층 구조를 제공합니다. 그러나 사용자 요구를 충족하는 미리 정의된 예외가 없는 경우 @System.Exception 클래스에서 파생하여 사용자 고유의 예외 클래스를 만들 수 있습니다.
 
@@ -509,6 +509,6 @@ catch (Exception ex)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

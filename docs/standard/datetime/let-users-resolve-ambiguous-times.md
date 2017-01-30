@@ -3,16 +3,16 @@ title: "방법: 사용자의 모호한 시간 확인 작업 허용"
 description: "사용자가 모호한 시간을 확인하도록 허용하는 방법"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 08/15/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: d6858a5c-02ab-4367-9e08-fa22c051c38d
 translationtype: Human Translation
 ms.sourcegitcommit: c40c28da09e8a122b542463c197196c82c81dd19
-ms.openlocfilehash: 889bc6dc85ca475b5adaf9ab6d15dfcabffe1370
+ms.openlocfilehash: c54a3e742ea436c31fd238d5ecb5be98cbc6c6af
 
 ---
 
@@ -168,6 +168,6 @@ End Function
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

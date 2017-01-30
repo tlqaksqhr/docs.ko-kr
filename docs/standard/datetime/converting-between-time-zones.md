@@ -13,7 +13,7 @@ ms.devlang: dotnet
 ms.assetid: bf8f74e6-e7f2-4c2a-a04c-57db0e28dd36
 translationtype: Human Translation
 ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 051a4891336470e79bda9d7b9bb1be4e2c9187b8
+ms.openlocfilehash: c2baa48c3b79dfbc5d39652cc57fe015a2313d6e
 
 ---
 
@@ -330,7 +330,7 @@ Public Function ReturnTimeOnServer(clientString As String) As DateTimeOffset
 End Function
 ```
 
-UTC보다 다섯 시간 빠른 표준 시간대의 날짜 및 시간을 나타내는 "9/1/2007 5:32:07 -05:00" 문자열이 메서드에 전달되는 경우 이 메서드에서는 미국 태평양 표준 시간대에 있는 서버에 9/1/2007 3:32:07 AM -07:00을 반환합니다.
+UTC보다 다섯 시간 빠른 표준 시간대의 날짜 및 시간을 나타내는 "9/1/2007 5:32:07 -05:00" 문자열이 메서드에 전달되는 경우 이 메서드에서는 미국 태평양 표준 시간대에 있는 서버에 대해 9/1/2007 3:32:07 AM -07:00을 반환합니다.
 
 또한 [TimeZoneInfo](xref:System.TimeZoneInfo) 클래스에는 [System.DateTimeOffset](xref:System.DateTimeOffset) 값으로 표준 시간대 변환을 수행하기 위해 오버로드되는 [TimeZoneInfo.ConvertTime(DateTimeOffset, TimeZoneInfo)](xref:System.TimeZoneInfo.ConvertTime(System.DateTimeOffset,System.TimeZoneInfo)) 메서드가 포함됩니다. 이 메서드의 매개 변수는 [System.DateTimeOffset](xref:System.DateTimeOffset) 값 및 변환된 시간이 속하는 표준 시간대에 대한 참조입니다. 이 메서드를 호출하면 [System.DateTimeOffset](xref:System.DateTimeOffset) 값을 반환합니다. 예를 들어 이전 예제의 `ReturnTimeOnServer` 메서드를 다음과 같이 다시 작성하면 [ConvertTime(DateTimeOffset, TimeZoneInfo)](xref:System.TimeZoneInfo.ConvertTime(System.DateTimeOffset,System.TimeZoneInfo)) 메서드를 호출할 수 있습니다.
 
@@ -380,6 +380,6 @@ End Function
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

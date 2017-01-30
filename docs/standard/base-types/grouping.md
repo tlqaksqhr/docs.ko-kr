@@ -4,16 +4,15 @@ description: "정규식의 그룹화 구문"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/29/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: e0bf3718-e64b-460b-b73d-66678cec6093
 translationtype: Human Translation
 ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: d27c8c68ea49f150fa0ae5c5c8b437c8c42c9c90
+ms.openlocfilehash: 6aa304f5c4ed400faddd3869006cdd011aa06466
 
 ---
 
@@ -613,7 +612,7 @@ Next
 '    'decidedly ' found at index 9. 
 ```
 
-## <a name="zerowidth-positive-lookahead-assertions"></a>너비가 0인 긍정 lookahead 어설션
+## <a name="zero-width-positive-lookahead-assertions"></a>너비가 0인 긍정 lookahead 어설션
 
 다음 그룹화 구문은 너비가 0인 긍정 lookahead 어설션을 정의합니다.
 
@@ -692,7 +691,7 @@ End Module
 `\w+` | 하나 이상의 단어 문자를 찾습니다.
 `(?=\sis\b)` | 단어 문자 뒤에 공백 문자와 문자열 "is"(단어 경계에서 끝남)가 오는지 여부를 확인합니다. 그럴 경우 찾기가 성공합니다.
 
-## <a name="zerowidth-negative-lookahead-assertions"></a>너비가 0인 부정 lookahead 어설션
+## <a name="zero-width-negative-lookahead-assertions"></a>너비가 0인 부정 lookahead 어설션
 
 다음 그룹화 구문은 너비가 0인 부정 lookahead 어설션을 정의합니다.
 
@@ -806,7 +805,7 @@ End Module
 `\b` | 단어 경계에서 일치 항목 찾기를 끝냅니다.
 `\p{P})` | 다음 문자가 문장 부호 기호(예: 마침표 또는 쉼표)가 아닌 경우 찾기가 성공합니다.
  
-## <a name="zerowidth-positive-lookbehind-assertions"></a>너비가 0인 긍정 lookbehind 어설션
+## <a name="zero-width-positive-lookbehind-assertions"></a>너비가 0인 긍정 lookbehind 어설션
 
 다음 그룹화 구문은 너비가 0인 긍정 lookbehind 어설션을 정의합니다.
 
@@ -866,7 +865,7 @@ End Module
  
 너비가 0인 긍정 lookbehind 어설션은 캡처된 그룹의 마지막 문자(하나 또는 여러 개)가 해당 그룹의 정규식 패턴과 일치하는 문자의 하위 집합이어야 하는 경우 역추적을 제한하는 데도 사용됩니다. 예를 들어, 그룹이 모든 연속 단어 문자를 캡처하는 경우 너비가 0인 긍정 lookbehind 어설션을 사용하여 마지막 문자가 사전순이 되도록 할 수 있습니다. 
 
-## <a name="zerowidth-negative-lookbehind-assertions"></a>너비가 0인 부정 lookbehind 어설션
+## <a name="zero-width-negative-lookbehind-assertions"></a>너비가 0인 부정 lookbehind 어설션
 
 다음 그룹화 구문은 너비가 0인 부정 lookbehind 어설션을 정의합니다.
 
@@ -1164,6 +1163,6 @@ End Module
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

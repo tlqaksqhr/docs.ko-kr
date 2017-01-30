@@ -3,16 +3,15 @@ title: ".NET Core 응용 프로그램 배포"
 description: ".NET Core 응용 프로그램 배포"
 keywords: ".NET, .NET Core, .NET Core 배포"
 author: rpetrusha
-manager: wpickett
+ms.author: ronpet
 ms.date: 09/08/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
 translationtype: Human Translation
 ms.sourcegitcommit: 663f4102b82512e64ab39d8046c7298a7cf37de7
-ms.openlocfilehash: 96eb2cc7ca948b3e372fa1363b1741624d791d27
+ms.openlocfilehash: 5509f09b3f7957049194ea7af9952bb6b5ec7539
 
 ---
 
@@ -24,11 +23,11 @@ ms.openlocfilehash: 96eb2cc7ca948b3e372fa1363b1741624d791d27
 
 - 자체 포함 배포. FDD와 달리 SCD(자체 포함 배포)에서는 대상 시스템에 표시하기 위해 공유 구성 요소를 사용하지 않습니다. .NET Core 라이브러리 및 .NET Core 런타임을 비롯한 모든 구성 요소가 응용 프로그램과 함께 포함되며 다른 .NET Core 응용 프로그램에서 격리됩니다. SCD에는 플랫폼별.NET Core 호스트의 이름이 변경된 버전인 실행 파일(예: Windows 플랫폼에서 `app`이라는 응용 프로그램에 대한 `app.exe`)과 실제 응용 프로그램인 .dll 파일(예: `app.dll`)이 포함됩니다.
 
-## <a name="frameworkdependent-deployments-fdd"></a>프레임워크 종속 배포(FDD) ##
+## <a name="framework-dependent-deployments-fdd"></a>프레임워크 종속 배포(FDD) ##
 
 FDD에서는 앱과 타사 종속성만 배포합니다. 앱에서 대상 시스템에 있는 .NET Core의 버전을 사용하므로 .NET Core를 배포할 필요가 없습니다. 이 배포는 .NET Core 앱의 기본 배포 모델입니다.
 
-### <a name="why-create-a-frameworkdependent-deployment"></a>프레임워크 종속 배포를 만드는 이유 ###
+### <a name="why-create-a-framework-dependent-deployment"></a>프레임워크 종속 배포를 만드는 이유 ###
 
 FDD 배포에는 다음과 같은 여러 가지 장점이 있습니다.
 
@@ -44,7 +43,7 @@ FDD 배포에는 다음과 같은 여러 가지 장점이 있습니다.
 
 - .NET Core 런타임 및 라이브러리가 향후 릴리스에서 사용자 모르게 변경될 수 있습니다. 드문 경우지만 이로 인해 앱의 동작이 변경될 수 있습니다.
 
-### <a name="deploying-a-frameworkdependent-deployment"></a>프레임워크 종속 배포 ###
+### <a name="deploying-a-framework-dependent-deployment"></a>프레임워크 종속 배포 ###
 
 타사 종속성이 없는 프레임워크 종속 배포에는 앱의 빌드, 테스트 및 게시만 포함됩니다. C#으로 작성된 간단한 예제에서는 이 프로세스를 보여 줍니다. 이 예제에서는 명령줄에서 [dotnet 유틸리티](../tools/dotnet.md)를 사용하지만 Visual Studio나 Visual Studio Code와 같은 개발 환경을 사용하여 예제를 컴파일, 테스트 및 게시할 수도 있습니다.
 
@@ -101,7 +100,7 @@ FDD 배포에는 다음과 같은 여러 가지 장점이 있습니다.
 
 설치 관리자는 응용 프로그램 이진 외에도 공유 프레임워크 설치 관리자를 번들로 제공하거나 응용 프로그램 설치의 일부로 필수 조건을 확인해야 합니다.  공유 프레임워크 설치는 시스템 수준이므로 관리자/루트 액세스 권한이 필요합니다.
 
-### <a name="deploying-a-frameworkdependent-deployment-with-thirdparty-dependencies"></a>타사 종속성이 있는 프레임워크 종속 배포 ###
+### <a name="deploying-a-framework-dependent-deployment-with-third-party-dependencies"></a>타사 종속성이 있는 프레임워크 종속 배포 ###
 
 하나 이상의 타사 종속성이 있는 프레임워크 종속 배포에는 `dotnet restore` 명령을 실행하기 전에 세 가지 추가 단계가 포함됩니다.
 
@@ -121,11 +120,11 @@ FDD 배포에는 다음과 같은 여러 가지 장점이 있습니다.
 
 타사 종속성이 있는 프레임워크 종속 배포는 타사 종속성만큼만 이식 가능합니다. 예를 들어 타사 라이브러리에서 macOS를 지원하는 경우 Windows 시스템에 앱을 이식할 수 없습니다. 이러한 현상은 타사 종속성 자체가 네이티브 코드에 종속된 경우에 발생할 수 있습니다. 좋은 예로 Kestrel 서버가 있습니다. 이런 종류의 타사 종속성이 있는 응용 프로그램에 대해 FDD를 만들면 게시된 출력에는 기본 종속성에서 지원하고 NuGet 패키지에 있는 각 [RID(런타임 식별자)](../rid-catalog.md#what-are-rids)에 대한 폴더가 포함됩니다.
 
-## <a name="selfcontained-deployments-scd"></a>자체 포함 배포(SCD) ##
+## <a name="self-contained-deployments-scd"></a>자체 포함 배포(SCD) ##
 
 자체 포함 배포에서는 앱과 타사 종속성뿐만 아니라 앱을 빌드하는 데 사용한 .NET Core의 버전도 배포합니다. 그러나 SCD 만들기에서는 [.NET Core의 기본 종속성](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) 자체를 다양한 플랫폼(예: macOS의 OpenSSL)에 포함하지 않으므로 응용 프로그램을 실행하기 전에 설치할 필요가 없습니다. 
 
-### <a name="why-deploy-a-selfcontained-deployment"></a>자체 포함 배포를 배포하는 이유 ###
+### <a name="why-deploy-a-self-contained-deployment"></a>자체 포함 배포를 배포하는 이유 ###
 
 자체 포함 배포를 배포하면 다음과 같은 두 가지 주요 장점이 있습니다.
 
@@ -141,7 +140,7 @@ FDD 배포에는 다음과 같은 여러 가지 장점이 있습니다.
 
 - 다양한 자체 포함 .NET Core 앱을 시스템에 배포하면 각 앱에서 .NET Core 파일을 중복하므로 엄청나게 많은 디스크 공간을 사용합니다.
 
-### <a name="a-namesimpleselfa-deploying-a-simple-selfcontained-deployment"></a>간단한 자체 포함 배포 ###
+### <a name="a-namesimpleselfa-deploying-a-simple-self-contained-deployment"></a><a name="simpleSelf"></a> 간단한 자체 포함 배포 ###
 
 타사 종속성이 없는 자체 포함 배포에는 프로젝트 만들기, project.json 파일 수정, 앱 빌드, 테스트 및 수정이 포함됩니다.  C#으로 작성된 간단한 예제에서는 이 프로세스를 보여 줍니다. 이 예제에서는 명령줄에서 `dotnet` 유틸리티를 사용하지만 Visual Studio나 Visual Studio Code와 같은 개발 환경을 사용하여 예제를 컴파일, 테스트 및 게시할 수도 있습니다.
 
@@ -262,7 +261,7 @@ FDD 배포에는 다음과 같은 여러 가지 장점이 있습니다.
 }
 ```
 
-### <a name="deploying-a-selfcontained-deployment-with-thirdparty-dependencies"></a>타사 종속성이 있는 자체 포함 배포 ###
+### <a name="deploying-a-self-contained-deployment-with-third-party-dependencies"></a>타사 종속성이 있는 자체 포함 배포 ###
 
 하나 이상의 타사 종속성이 있는 자체 포함 배포에는 타사 종속성 추가가 포함됩니다.
 
@@ -304,7 +303,7 @@ FDD 배포에는 다음과 같은 여러 가지 장점이 있습니다.
 
 타사 라이브러리가 있는 자체 포함 배포는 해당 라이브러리에서 지원하는 플랫폼에만 배포할 수 있습니다. 이 배포는 기본 종속성과 함께 타사 종속성이 있는 프레임워크 종속 배포와 유사합니다. 
 
-### <a name="deploying-a-selfcontained-deployment-with-a-smaller-footprint"></a>공간이 더 작은 자체 포함 배포 ###
+### <a name="deploying-a-self-contained-deployment-with-a-smaller-footprint"></a>공간이 더 작은 자체 포함 배포 ###
 
 대상 시스템에서 적절한 저장소 공간의 가용성이 문제가 될 경우 일부 시스템 구성 요소를 제외하여 앱의 전체 공간을 줄일 수 있습니다. 이렇게 하려면 앱에서 project.json 파일에 포함하는 .NET Core 구성 요소를 명시적으로 정의합니다.
 

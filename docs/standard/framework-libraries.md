@@ -3,16 +3,16 @@ title: "프레임워크 라이브러리"
 description: "프레임워크 라이브러리"
 keywords: .NET, .NET Core
 author: richlander
-manager: wpickett
+ms.author: ronpet
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
 translationtype: Human Translation
-ms.sourcegitcommit: 093b852fe1ed2307ebce914381fe47388b435c95
-ms.openlocfilehash: 7283ed099cefa4b0e137869724f8e87dda0d451a
+ms.sourcegitcommit: 9df468c7225dbf1e3317ea34bd8b2285361a69f4
+ms.openlocfilehash: f14e6552b2f59694f5cf877ee8ab76ffa026f18f
 
 ---
 
@@ -30,15 +30,15 @@ BCL은 가장 기본적인 형식과 유틸리티 기능을 제공하며 다른 
 
 .NET에는 모든 프로그램에서 사용되는(다양한 수준으로) 기본 형식 집합이 있습니다. 이러한 형식은 숫자, 문자열, 바이트, 임의 개체 등의 데이터를 포함합니다. C# 언어에는 이 형식의 키워드가 있습니다. 이러한 형식의 샘플 집합 및 일치하는 C# 키워드가 아래에 나와 있습니다.
 
-*   [System.Object](https://msdn.microsoft.com/library/system.object.aspx)([object](https://msdn.microsoft.com/library/9kkx3h3c.aspx)) - CLR 형식 시스템의 궁극적인 기본 클래스입니다. 형식 계층 구조의 루트입니다.
-*   [System.Int16](https://msdn.microsoft.com/library/system.int16.aspx)([short](https://msdn.microsoft.com/library/ybs77ex4.aspx)) - 16비트 부호 있는 정수 형식입니다. 부호 없는 [UInt16](https://msdn.microsoft.com/library/system.uint16.aspx)도 있습니다.
-*   [System.Int32](https://msdn.microsoft.com/library/system.int32.aspx)([int](https://msdn.microsoft.com/library/5kzh1b5w.aspx)) - 32비트 부호 있는 정수 형식입니다. 부호 없는 [UInt32](https://msdn.microsoft.com/library/x0sksh43.aspx)도 있습니다.
-*   [System.Single](https://msdn.microsoft.com/library/system.single.aspx)([float](https://msdn.microsoft.com/library/b1e65aza.aspx)) - 32비트 부동 소수점 형식입니다.
-*   [System.Decimal](https://msdn.microsoft.com/library/system.decimal.aspx)([decimal](https://msdn.microsoft.com/library/364x0z75.aspx)) - 128비트 10진수 형식입니다.
-*   [System.Byte](https://msdn.microsoft.com/library/system.byte.aspx)([byte](https://msdn.microsoft.com/library/5bdb6693.aspx)) - 1바이트의 메모리를 나타내는 부호 없는 8비트 정수입니다.
-*   [System.Boolean](https://msdn.microsoft.com/library/system.boolean.aspx)([bool](https://msdn.microsoft.com/library/c8f5xwh7.aspx)) - 'true' 또는 'false'를 나타내는 부울 형식입니다.
-*   [System.Char](https://msdn.microsoft.com/library/system.char.aspx)([char](https://msdn.microsoft.com/library/x9h8tsay.aspx)) - 유니코드 문자를 나타내는 16비트 숫자 형식입니다.
-*   [System.String](https://msdn.microsoft.com/library/system.string.aspx)([string](https://msdn.microsoft.com/library/362314fe.aspx)) - 일련의 문자를 나타냅니다. `char[]`와 다르지만 `string`의 각 개별 `char`를 인덱싱할 수 있습니다.
+* [System.Object](https://msdn.microsoft.com/library/system.object.aspx)([object](https://msdn.microsoft.com/library/9kkx3h3c.aspx)) - CLR 형식 시스템의 궁극적인 기본 클래스입니다. 형식 계층 구조의 루트입니다.
+* [System.Int16](https://msdn.microsoft.com/library/system.int16.aspx)([short](https://msdn.microsoft.com/library/ybs77ex4.aspx)) - 16비트 부호 있는 정수 형식입니다. 부호 없는 [UInt16](https://msdn.microsoft.com/library/system.uint16.aspx)도 있습니다.
+* [System.Int32](https://msdn.microsoft.com/library/system.int32.aspx)([int](https://msdn.microsoft.com/library/5kzh1b5w.aspx)) - 32비트 부호 있는 정수 형식입니다. 부호 없는 [UInt32](https://msdn.microsoft.com/library/x0sksh43.aspx)도 있습니다.
+* [System.Single](https://msdn.microsoft.com/library/system.single.aspx)([float](https://msdn.microsoft.com/library/b1e65aza.aspx)) - 32비트 부동 소수점 형식입니다.
+* [System.Decimal](https://msdn.microsoft.com/library/system.decimal.aspx)([decimal](https://msdn.microsoft.com/library/364x0z75.aspx)) - 128비트 10진수 형식입니다.
+* [System.Byte](https://msdn.microsoft.com/library/system.byte.aspx)([byte](https://msdn.microsoft.com/library/5bdb6693.aspx)) - 1바이트의 메모리를 나타내는 부호 없는 8비트 정수입니다.
+* [System.Boolean](https://msdn.microsoft.com/library/system.boolean.aspx)([bool](https://msdn.microsoft.com/library/c8f5xwh7.aspx)) - 'true' 또는 'false'를 나타내는 부울 형식입니다.
+* [System.Char](https://msdn.microsoft.com/library/system.char.aspx)([char](https://msdn.microsoft.com/library/x9h8tsay.aspx)) - 유니코드 문자를 나타내는 16비트 숫자 형식입니다.
+* [System.String](https://msdn.microsoft.com/library/system.string.aspx)([string](https://msdn.microsoft.com/library/362314fe.aspx)) - 일련의 문자를 나타냅니다. `char[]`와 다르지만 `string`의 각 개별 `char`를 인덱싱할 수 있습니다.
 
 ## <a name="data-structures"></a>데이터 구조
 
@@ -58,7 +58,7 @@ BCL은 가장 기본적인 형식과 유틸리티 기능을 제공하며 다른 
 *   [XDocument](https://msdn.microsoft.com/library/system.xml.linq.xdocument.aspx) - XML 문서를 로드하고 LINQ를 사용하여 쿼리하기 위한 API입니다.
 *   [StreamReader](https://msdn.microsoft.com/library/system.io.streamreader.aspx) - 파일을 읽기 위한 API입니다. ([StreamWriter](https://msdn.microsoft.com/library/system.io.stringwriter.aspx)) 파일을 쓰는 데 사용할 수 있습니다.
 
-## <a name="appmodel-apis"></a>앱 모델 API
+## <a name="app-model-apis"></a>앱 모델 API
 
 여러 회사에서 제공하는, .NET에 사용할 수 있는 많은 앱 모델이 있습니다.
 
@@ -66,6 +66,6 @@ BCL은 가장 기본적인 형식과 유틸리티 기능을 제공하며 다른 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 

@@ -3,16 +3,16 @@ title: ".NET Core Docker 이미지 작성"
 description: "Docker 이미지 및 .NET Core 이해"
 keywords: .NET, .NET Core, Docker
 author: spboyer
-manager: wpickett
+ms.author: shboyer
 ms.date: 08/29/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 translationtype: Human Translation
 ms.sourcegitcommit: 1cb9e19ec9c9c0764244aeec5f62b812cbd91aef
-ms.openlocfilehash: be658d2c660aff736eceffe23757c13154e78582
+ms.openlocfilehash: 8cc784c267e9ca85ae110f8c92e0191f6fee6596
 
 ---
  
@@ -112,7 +112,7 @@ cd api
 dotnet restore
 ```
 
-`dotnet run`을 사용하고 **http://localhost:5000/api/values**로 이동하여 응용 프로그램을 테스트합니다.
+`dotnet run`을 사용하고 **http://localhost:5000/api/values** 로 이동하여 응용 프로그램을 테스트합니다.
 
 ```javascript
 [
@@ -223,6 +223,6 @@ Docker 생성기를 사용하여 Web API 응용 프로그램에 필요한 파일
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO3-->
 
 

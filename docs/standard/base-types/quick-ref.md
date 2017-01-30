@@ -4,20 +4,19 @@ description: "정규식 언어 - 빠른 참조"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/28/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 8c5dee8c-7bc7-4e6e-aff1-986965c4d98e
 translationtype: Human Translation
 ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: ff1eef78985f9b5b428f3b696fb267b59f3cb283
+ms.openlocfilehash: f4319de43043605da63f469b59a5dfdb28badc8e
 
 ---
 
-# <a name="regular-expression-language-quick-reference"></a>정규식 언어 - 빠른 참조
+# <a name="regular-expression-language---quick-reference"></a>정규식 언어 - 빠른 참조
 
 정규식은 정규식 엔진이 입력 텍스트에서 찾으려고 하는 패턴입니다. 패턴은 하나 이상의 문자 리터럴, 연산자 또는 구문으로 구성됩니다. 간략하게 살펴보려면 [.NET에서의 정규식](regular-expressions.md)을 참조하세요. 
 
@@ -224,6 +223,6 @@ __(?(__*expression*__)__*yes*__&#124;__*no*__)__ | *expression*으로 지정한 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

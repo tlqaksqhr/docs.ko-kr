@@ -3,20 +3,20 @@ title: "방법: 양력이 아닌 달력의 날짜 표시"
 description: "양력이 아닌 달력의 날짜를 표시하는 방법"
 keywords: .NET, .NET Core
 author: stevehoag
-manager: wpickett
+ms.author: shoag
 ms.date: 07/26/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 93f06e1d-544b-4ccc-a0b2-95cd674852cb
 translationtype: Human Translation
 ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: 783b51f3145d8b11e79b99cfdc4baefe127306e3
+ms.openlocfilehash: 85c9d450be48c553ea3a1f1a0f16c298941fa325
 
 ---
 
-# <a name="how-to-display-dates-in-nongregorian-calendars"></a>방법: 양력이 아닌 달력의 날짜 표시
+# <a name="how-to-display-dates-in-non-gregorian-calendars"></a>방법: 양력이 아닌 달력의 날짜 표시
 
 [DateTime](xref:System.DateTime) 및 [DateTimeOffset](xref:System.DateTimeOffset) 형식은 양력을 기본 달력으로 사용합니다. 즉, 날짜 및 시간 값의 `ToString` 메서드를 호출하면 해당 날짜 및 시간이 다른 달력을 사용하여 생성된 경우에도 해당 날짜 및 시간의 문자열 표현을 양력 달력으로 표시합니다. 이 내용은 두 가지 방법을 사용하여 페르시아력으로 날짜 및 시간 값을 만들지만 [ToString](xref:System.DateTime.ToString) 메서드를 호출할 때 해당 날짜 및 시간 값을 여전히 양력으로 표시하는 다음 예제에 설명되어 있습니다. 이 예제에서는 특정 달력의 날짜를 표시하기 위해 자주 사용되지만 잘못된 두 가지 방법을 보여 줍니다.
 
@@ -334,6 +334,6 @@ End Class
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

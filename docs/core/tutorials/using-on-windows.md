@@ -3,16 +3,15 @@ title: "Windows에서 .NET Core 시작"
 description: "Visual Studio 2015를 사용하여 Windows에서 .NET Core 시작"
 keywords: .NET, .NET Core
 author: bleroy
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: d743134a-08a3-4ff6-aab7-49f71f0568c3
 translationtype: Human Translation
 ms.sourcegitcommit: 54da8aebd64e86c064214074bc261f72c3b0aedc
-ms.openlocfilehash: 299d479ce74a0e1f41ff42a0e6619f4964788194
+ms.openlocfilehash: bf7bf944ebbf3c53ee6206f86e1a168111b54378
 
 ---
 
@@ -276,6 +275,6 @@ PCL에서 원래 대상으로 지정한 모든 대상을 포함하는 .NET 표�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

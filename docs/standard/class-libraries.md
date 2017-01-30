@@ -3,16 +3,16 @@ title: ".NET 클래스 라이브러리"
 description: ".NET 클래스 라이브러리"
 keywords: .NET, .NET Core
 author: richlander
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
 translationtype: Human Translation
 ms.sourcegitcommit: 62fdb3e60b206728d86220076867eb8fd68af82e
-ms.openlocfilehash: 8ed35197078e43f096931adb18c454004f83cccf
+ms.openlocfilehash: eee8fcaff41db5821e4b6aa61875d6a4bcd80b10
 
 ---
 
@@ -26,7 +26,7 @@ ms.openlocfilehash: 8ed35197078e43f096931adb18c454004f83cccf
 *   **이식 가능** 클래스 라이브러리는 API 하위 집합에 액세스할 수 있으며 여러 플랫폼을 대상으로 하는 앱과 라이브러리에서 사용할 수 있습니다.
 *   **.NET Core** 클래스 라이브러리는 플랫폼별 및 이식 가능한 라이브러리 개념을 두 가지의 장점을 제공하는 하나의 모델로 통합합니다.
 
-## <a name="platformspecific-class-libraries"></a>플랫폼별 클래스 라이브러리
+## <a name="platform-specific-class-libraries"></a>플랫폼별 클래스 라이브러리
 
 플랫폼별 라이브러리는 단일 .NET 플랫폼(예: Windows의 .NET Framework)에 바인딩되어 있으므로 알려진 실행 환경에 종속될 수 있습니다. 이러한 환경은 알려진 API 집합(.NET 및 OS API)을 표시하며 필요한 상태(예: Windows 레지스트리)를 유지 관리하고 표시합니다.
 
@@ -64,6 +64,6 @@ ms.openlocfilehash: 8ed35197078e43f096931adb18c454004f83cccf
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

@@ -2,17 +2,17 @@
 title: ".NET Core SDK 개요"
 description: ".NET Core SDK 개요"
 keywords: .NET, .NET Core
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 26bc9822-e42b-48ec-b0d6-499dc604add7
 translationtype: Human Translation
 ms.sourcegitcommit: b7dbb80c16ca0d08ff6fe4c4f3a7b221f64c6608
-ms.openlocfilehash: a1808cdc0efb9087ffbda0a1631cd08e6bde0b3f
+ms.openlocfilehash: f444cb6f8b102faba3fca702e592cf74d0ad192c
 
 ---
 
@@ -35,11 +35,9 @@ ms.openlocfilehash: a1808cdc0efb9087ffbda0a1631cd08e6bde0b3f
 
 반면 설치 스크립트를 사용할 경우에는 관리 권한이 필요하지 않습니다. 그러나 컴퓨터에 필수 구성 요소도 설치되지 않습니다. 모든 필수 구성 요소를 수동으로 설치해야 합니다. 스크립트는 대개 빌드 서버를 설정하거나 관리자 권한 없이 도구를 설치할 경우 사용됩니다(위의 필수 구성 요소 주의 사항 참조). 자세한 내용은 [스크립트 참조 설치 항목](tools/dotnet-install-script.md)에서 확인할 수 있습니다. CI 빌드 서버에 SDK를 설치하는 방법에 관심이 있는 경우 [CI 서버와 SDK](tools/using-ci-with-cli.md) 문서를 살펴볼 수 있습니다. 
 
-기본적으로 SDK는 "SxS”(병렬) 방식으로 설치됩니다. 즉, 특정 시간에 CLI 도구의 여러 버전이 단일 컴퓨터에 공존할 수 있습니다. 그러나 사용되는 올바른 버전에 대해서는 .NET Core 명령줄 도구 항목의 [드라이버 섹션](tools/index.md#driver)에 자세히 설명되어 있습니다. 
+기본적으로 SDK는 "SxS”(병렬) 방식으로 설치됩니다. 즉, 특정 시간에 CLI 도구의 여러 버전이 단일 컴퓨터에 공존할 수 있습니다. 그러나 사용되는 올바른 버전에 대해서는 .NET Core 명령줄 도구 항목의 [드라이버 섹션](tools/index.md#driver)에 자세히 설명되어 있습니다.
 
 
-
-
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

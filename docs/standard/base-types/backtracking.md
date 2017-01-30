@@ -4,16 +4,15 @@ description: "정규식의 역추적"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/28/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 8a3e6298-26b7-4c99-bd97-c9892f6c9418
 translationtype: Human Translation
 ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 00e324803cf5c57eab1cc71eb819949247131479
+ms.openlocfilehash: 649dfd6752f0589eb396b00e7d0b5184bb65d488
 
 ---
 
@@ -236,7 +235,7 @@ End Module
 
 역추적을 사용하면 강력하고 유연한 정규식을 만들 수 있습니다. 하지만 이전 단원에 설명한 것처럼 이러한 장점 외에도 성능이 매우 크게 저하될 수 있음에 유의해야 합니다. 과도한 역추적을 방지하려면 [Regex](xref:System.Text.RegularExpressions.Regex) 개체를 인스턴스화하거나 정적 정규식 일치 메서드를 호출할 때 시간 제한 간격을 정의해야 합니다. 이에 대해서는 다음 섹션에서 설명합니다. 그 밖에도, .NET Core에서는 역추적을 제한하거나 억제하고, 성능 상의 제약이 거의 없거나 전혀 없이 복잡한 정규식을 지원하는 세 가지 정규식 언어 요소인 [역추적하지 않는 하위 식](#nonbacktracking-subexpression), [lookbehind 어설션](#lookbehind-assertions) 및 [lookahead 어설션](#lookahead-assertions)을 지원합니다. 각 언어 요소에 대한 자세한 내용은 [정규식의 그룹화 구문](grouping.md)을 참조하세요.
 
-### <a name="defining-a-timeout-interval"></a>시간 제한 간격 정의
+### <a name="defining-a-time-out-interval"></a>시간 제한 간격 정의
 
 정규식 엔진이 시도를 포기하고 [RegexMatchTimeoutException](xref:System.Text.RegularExpressions.RegexMatchTimeoutException) 예외를 throw하기 전에 단일 일치 항목을 검색할 가장 긴 간격을 나타내는 시간 제한 값을 설정할 수 있습니다. 인스턴스 정규식에 대한 `Regex(String, RegexOptions, TimeSpan)` 생성자에 [TimeSpan](xref:System.TimeSpan) 값을 제공하여 시간 제한 간격을 지정합니다. 또한 각 정적 패턴 일치 메서드에는 [TimeSpan](xref:System.TimeSpan) 값이 시간 제한 값을 지정할 수 있는 [Regex.Regex(String, RegexOptions, TimeSpan)] 매개 변수로 설정된 오버로드가 있습니다. 기본적으로 시간 제한 간격은 [Regex.InfiniteMatchTimeout](xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout)으로 설정되며, 정규식 엔진이 시간을 초과하지 않습니다. 
 
@@ -687,6 +686,6 @@ End Module
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

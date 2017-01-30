@@ -4,23 +4,22 @@ description: ".NET Core CLI 도구 및 공유 런타임을 설치하는 dotnet-i
 keywords: "dotnet-install, dotnet-install 스크립트, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-manager: wpickett
 ms.date: 10/12/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 59b9c456-2bfd-4adc-8202-a1c6a0a6c787
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 30e969c55d08b3ac276c6e7786fa96985dbb0a6b
+ms.sourcegitcommit: ae23d83d5ca03d1a9a248e375bc092e0d9d0cde0
+ms.openlocfilehash: d6a420fa29107952020ddfa58ce0256fd8829890
 
 ---
 
-#<a name="dotnetinstall-scripts-reference"></a>dotnet-install 스크립트 참조
+#<a name="dotnet-install-scripts-reference"></a>dotnet-install 스크립트 참조
 
 ## <a name="name"></a>이름
-dotnet-install.ps1 | dotnet-install.sh - CLI(명령줄 인터페이스) 도구 및 공유 런타임을 설치하는 데 사용되는 스크립트
+`dotnet-install.ps1` | `dotnet-install.sh` - CLI(명령줄 인터페이스) 도구 및 공유 런타임을 설치하는 데 사용되는 스크립트입니다.
 
 ## <a name="synopsis"></a>개요
 Windows:
@@ -64,7 +63,7 @@ macOS/Linux:
 
 `-InstallDir [DIR]`
 
-설치할 경로입니다. 디렉터리가 없을 경우 만듭니다. 기본값은 *%LocalAppData%\.dotnet*입니다.
+설치할 경로입니다. 디렉터리가 없을 경우 만듭니다. 기본값은 *%LocalAppData%\Microsoft\dotnet*입니다.
 
 `-Debug`
 
@@ -127,6 +126,6 @@ macOS/Linux:
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 

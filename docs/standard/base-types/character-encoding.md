@@ -4,16 +4,15 @@ description: ".NET의 문자 인코딩"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/26/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bce54e41-e9dc-493a-8988-1cbadc340fe8
 translationtype: Human Translation
 ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 6080f5fa12a2391dd138828e0afc2219f1e3a11b
+ms.openlocfilehash: e72540726bdd1b3624064c7388e58d80320c5831
 
 ---
 
@@ -592,7 +591,7 @@ End Module
 > [!IMPORTANT]
 > 인코딩 작업의 가장 일반적인 문제는 유니코드 문자를 특정 코드 페이지 인코딩에 매핑할 수 없는 경우에 발생합니다. 디코딩 작업의 가장 일반적인 문제는 잘못된 바이트 시퀀스를 유효한 유니코드 문자로 변환할 수 없는 경우에 발생합니다. 이러한 이유로 특정 인코딩 개체에서 사용하는 대체(fallback) 전략을 알고 있어야 합니다. 가능하면 개체를 인스턴스화할 때 인코딩 개체에서 사용할 대체(fallback) 전략을 지정해야 합니다.
  
-### <a name="bestfit-fallback"></a>최적 대체(fallback)
+### <a name="best-fit-fallback"></a>최적 대체(fallback)
 
 대상 인코딩에 문자와 정확히 일치하는 항목이 없을 경우 인코더가 유사한 문자에 매핑하려고 시도할 수 있습니다. 최적 대체(fallback)는 주로 디코딩 문제가 아니라 인코딩 문제입니다. 성공적으로 유니코드에 매핑할 수 없는 문자가 포함된 코드 페이지는 거의 없습니다. 최적 대체(fallback)는 [Encoding.GetEncoding(Int32)](xref:System.Text.Encoding.GetEncoding(System.Int32)) 및 [Encoding.GetEncoding(String)](xref:System.Text.Encoding.GetEncoding(System.String)) 오버로드를 통해 검색된 코드 페이지 및 더블바이트 문자 집합 인코딩의 기본값입니다.
 
@@ -1506,6 +1505,6 @@ End Module
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

@@ -3,16 +3,15 @@ title: "MSBuild를 사용하여 .NET Core 프로젝트 빌드"
 description: "MSBuild를 사용하여 .NET Core 프로젝트 빌드"
 keywords: .NET, .NET Core
 author: dsplaisted
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 13c66464-4f14-4db6-aa8b-06f25e7ba894
 translationtype: Human Translation
-ms.sourcegitcommit: a04755da6417bb28bad5f28a18ead9feeba2d957
-ms.openlocfilehash: 5d37e78be88828d6c82777f96b6334903aecbe53
+ms.sourcegitcommit: 098cb31bb79e47ebb2ad2e8c2f56d2d5d6da4079
+ms.openlocfilehash: 6a992d985948a22da58db8317bc04d2f1828fc05
 
 ---
 
@@ -21,13 +20,16 @@ ms.openlocfilehash: 5d37e78be88828d6c82777f96b6334903aecbe53
 .NET Core 도구는 [project.json에서 MSBuild 기반 프로젝트로 이동](https://blogs.msdn.microsoft.com/dotnet/2016/05/23/changes-to-project-json/)하고 있습니다.
 MSBuild를 사용하는 .NET Core 도구의 첫 번째 버전이 Visual Studio의 다음 버전과 함께 출시될 것으로 예상합니다.  그러나 지금은 .NET Core용 MSBuild 프로젝트를 사용할 수 있으며, 이 페이지에서 그 방법을 보여 줍니다.
 
-오늘날 *새* 프로젝트에서 .NET Core를 대상으로 하는 대부분의 사용자는 다음과 같은 이유 때문에 project.json의 기본 도구 환경을 사용하는 것이 좋습니다.
+다음과 같은 이유로 *project.json*으로 기본 도구를 사용하여 .NET Core를 대상으로 하는 새 프로젝트를 권장합니다.
 
-- MSBuild는 project.json의 많은 장점을 아직 지원하지 않습니다.
+- MSBuild는 *project.json*의 많은 기능을 아직 지원하지 않습니다.
 - 많은 ASP.NET 기반 도구가 현재 MSBuild 프로젝트와 작동하지 않습니다.
-- MSBuild를 사용하는 .NET Core 도구가 릴리스되면 project.json에서 MSBuild 프로젝트로 자동으로 변환될 수 있을 것입니다. 
+- MSBuild 기반 .NET Core 도구가 릴리스되면 자동으로 *project.json*을 MSBuild 기반으로 변환합니다.
 
-이미 MSBuild를 사용하며 .NET Core로 이식하려는 기존 프로젝트에 대해 .NET Core를 대상으로 지정하기 위해 MSBuild를 사용할 수 있습니다. 또는 project.json 프로젝트에 대해 잘 지원되지 않는 시나리오의 경우 빌드에서 MSBuild 확장성을 사용할 수 있습니다.
+다음 경우에 MSBuild를 사용하는 것이 좋습니다.
+
+ - .NET Core로 이식 중인 MSBuild를 사용하는 기존 프로젝트
+ - *project.json*에서 완벽하게 지원되지 않는 MSBuild의 확장성을 사용하는 프로젝트
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -130,6 +132,6 @@ Visual Studio에서 프로젝트를 만드는 것으로 시작한 다음 이를 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 

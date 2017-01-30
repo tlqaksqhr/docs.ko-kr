@@ -4,16 +4,15 @@ description: "정규식 동작 정보"
 keywords: .NET, .NET Core
 author: stevehoag
 ms.author: shoag
-manager: wpickett
 ms.date: 07/28/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6f11047f-45a4-4caf-a259-18abe08cc0d2
 translationtype: Human Translation
 ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: b217b59874ceafbb0e5e410878cc434974c5a863
+ms.openlocfilehash: fa0513a5b450742995bd86fca495ba9904e7361b
 
 ---
 
@@ -480,7 +479,7 @@ End Module
 
 역추적하지 않는 하위 식에 대한 자세한 내용은 [정규식의 그룹화 구문](grouping.md)을 참조하세요.
 
-### <a name="righttoleft-matching"></a>오른쪽에서 왼쪽 찾기
+### <a name="right-to-left-matching"></a>오른쪽에서 왼쪽 찾기
 
 오른쪽에서 왼쪽 찾기는 [RegexOptions.RightToLeft](xref:System.Text.RegularExpressions.RegexOptions.RightToLeft) 옵션을 [Regex](xref:System.Text.RegularExpressions.Regex) 클래스 생성자 또는 고정 인스턴스 일치 메서드에 제공하여 지정됩니다. 이 기능은 왼쪽에서 오른쪽이 아닌 오른쪽에서 왼쪽으로 찾는 경우에 유용하고 패턴의 왼쪽이 아닌 패턴의 오른쪽 부분에서 찾기를 시작하는 경우 효율적입니다. 다음 예제와 같이 오른쪽에서 왼쪽 찾기를 사용하면 탐욕적 수량자의 동작을 변경할 수 있습니다. 예제에서는 숫자로 끝나는 문장에 대해 두 개의 검색을 수행합니다. 오른쪽에서 왼쪽 검색이 6자리 모두와 일치하는 반면 탐욕적 수량자를 사용하는 왼쪽에서 오른쪽 검색 `+`은 문장에서 6자리 중 하나와 일치합니다. 정규식 패턴에 대한 설명은 이 섹션 앞부분의 게으른 수량자를 보여 주는 예제를 참조하세요.
 
@@ -641,6 +640,6 @@ End Module
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

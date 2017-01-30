@@ -4,16 +4,14 @@ description: "패키지, 메타패키지 및 프레임워크"
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
-manager: wpickett
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
 translationtype: Human Translation
 ms.sourcegitcommit: cb2e83b35b5a4aae14c89bcbdf26b064885a477a
-ms.openlocfilehash: af6c83755068cc311b59c1a337898c177cc6d537
+ms.openlocfilehash: 6b5bb7042fdaa453966a4fc576291b3c90ee5410
 
 ---
 
@@ -126,7 +124,7 @@ ms.openlocfilehash: af6c83755068cc311b59c1a337898c177cc6d537
 
 `.NETStandard,Version=1.3` 프레임워크는 패키지 기반 프레임워크로서, API를 정의하고 노출하는 프레임워크를 대상으로 하는 패키지에 의존합니다.
 
-## <a name="packagebased-frameworks"></a>패키지 기반 프레임워크
+## <a name="package-based-frameworks"></a>패키지 기반 프레임워크
 
 프레임워크와 패키지 간에 양방향 관계가 있습니다. 첫 번째 부분은 특정 프레임워크(예: `netstandard1.3`)에 사용 가능한 API를 정의하는 것입니다. `netstandard1.3`(또는 `netstandard1.0`과 같은 호환되는 프레임워크)을 대상으로 하는 패키지는 `netstandard1.3`에 사용 가능한 API를 정의합니다. 순환 정의처럼 들릴 수 있지만 그렇지 않습니다. "패키지 기반" 덕분에 프레임워크의 API 정의는 패키지에서 옵니다. 프레임워크 자체는 API를 정의하지 않습니다.
 
@@ -188,6 +186,6 @@ project.json의 프레임워크 및 메타패키지 참조는 일치하지 않�
 다른 `netstandard` 라이브러리에서 종속성을 충족하는 경우 `Microsoft.NETCore.App`에서 제공하는 추가 라이브러리 대부분은 또한 `netstandard`를 대상으로 합니다. 즉, `netstandard` 라이브러리 역시 해당 패키지를 종속성으로 참조할 수 있습니다. 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 
