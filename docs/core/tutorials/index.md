@@ -3,16 +3,15 @@ title: ".NET Core 자습서"
 description: ".NET Core 자습서"
 keywords: .NET, .NET Core
 author: richlander
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/24/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
 translationtype: Human Translation
-ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: 9ab2f607e8ec5a24712ced5eec688894ca8ae394
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 1829b32f1a5f92c5ee065c3107750621681ac82c
 
 ---
 
@@ -27,9 +26,9 @@ ms.openlocfilehash: 9ab2f607e8ec5a24712ced5eec688894ca8ae394
 - [.NET Core 1.0에 대한 패키지 종속성 버전을 관리하는 방법](managing-package-dependency-versions.md)
 - [MSBuild를 사용하여 .NET Core 프로젝트 빌드](target-dotnetcore-with-msbuild.md)
 
-ASP.NET Core 웹 응용 프로그램 개발에 대한 자습서는 [ASP.NET Core 설명서](https://docs.asp.net)를 참조하세요.
+ASP.NET Core 웹 응용 프로그램 개발에 대한 자습서는 [ASP.NET Core 설명서](https://docs.microsoft.com/aspnet/core/)를 참조하세요.
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 
