@@ -1,22 +1,25 @@
 ---
-title: ".NET Core CLI 확장성 모델"
+title: ".NET Core CLI 확장성 모델 | Microsoft 문서"
 description: ".NET Core CLI 확장성 모델"
 keywords: "CLI, 확장성, 사용자 지정 명령, .NET Core"
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 1bebd25a-120f-48d3-8c25-c89965afcbcd
 translationtype: Human Translation
-ms.sourcegitcommit: aeb199a9aeb1584570ad2a2942e2f22c75a59616
-ms.openlocfilehash: ea16d4b841f5c93da222df56db36d6fb70ea35f9
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 48f06f0af3768f7129e0a2b3a89bbdc7795959dc
 
 ---
 
 # <a name="net-core-cli-extensibility-model"></a>.NET Core CLI 확장성 모델 
+
+> [!WARNING]
+> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. Visual Studio 2017 RC - .NET Core Tools Preview 4 버전의 경우 [.NET Core CLI 확장성 모델(Tooling Preview 4)](../preview3/tools/extensibility.md) 항목을 참조하세요.
 
 ## <a name="overview"></a>개요
 이 문서에서는 CLI 도구를 확장하는 주요 방법 및 각 방법을 구동하는 시나리오에 대해 설명합니다. 도구를 사용하는 방법에 대해 간략하게 설명할 뿐만 아니라 두 종류의 도구를 빌드하는 방법에 대한 간단한 메모를 제공합니다. 
@@ -29,14 +32,14 @@ CLI 도구는 다음과 같은 두 가지 주요 방법으로 확장할 수 있�
 
 위에서 간략하게 설명한 두 가지 확장성 메커니즘은 둘 다를 사용하거나 하나만 사용할 수 있습니다. 선택하는 방법은 확장을 통해 달성하려는 목표에 따라 크게 달라집니다.
 
-## <a name="perproject-based-extensibility"></a>프로젝트 단위 기반 확장성
+## <a name="per-project-based-extensibility"></a>프로젝트 단위 기반 확장성
 프로젝트 단위 도구는 NuGet 패키지로 배포되는 [이식 가능한 콘솔 응용 프로그램](../deploying/index.md)입니다. 도구는 해당 도구를 참조하고 도구가 복원되는 프로젝트의 컨텍스트에서만 사용할 수 있습니다. 프로젝트 컨텍스트 외부(예: 프로젝트를 포함하는 디렉터리 외부)에서 호출하면 명령을 찾을 수 없기 때문에 실패합니다.
 
 이러한 도구는 빌드 서버에도 완벽한데, `project.json` 외부의 항목이 필요하지 않기 때문입니다. 빌드 프로세스에서는 빌드하는 프로젝트에 대해 복원을 실행하므로 도구를 사용할 수 있습니다. F#과 같은 언어 프로젝트도 이 범주에 속합니다. 결국 각 프로젝트는 하나의 특정 언어로만 작성할 수 있습니다. 
 
 마지막으로 이 확장성 모델에서는 프로젝트의 빌드된 출력에 액세스해야 하는 도구를 만들 수 있습니다. 예를 들어 [ASP.NET](https://www.asp.net/) MVC 응용 프로그램의 다양한 Razor 보기 도구는 이 범주에 속합니다. 
 
-### <a name="consuming-perproject-tools"></a>프로젝트 단위 도구 사용
+### <a name="consuming-per-project-tools"></a>프로젝트 단위 도구 사용
 이러한 도구를 사용하려면 `tools` 노드를 `project.json`에 추가해야 합니다. `tools` 노드 내에서는 도구가 상주하는 패키지를 참조합니다. `dotnet restore`를 실행하면 도구 및 해당 종속성이 복원됩니다. 
 
 프로젝트의 빌드 출력을 로드하여 실행해야 하는 도구의 경우 일반적으로 프로젝트 파일의 일반 종속성 아래에 나열되는 다른 종속성이 있습니다. 즉, 프로젝트의 코드를 로드하는 도구에는 다음과 같은 두 가지 구성 요소가 있습니다. 
@@ -101,7 +104,7 @@ CLI 도구는 다음과 같은 두 가지 주요 방법으로 확장할 수 있�
 * [프레임워크별 종속성의 구현](https://github.com/dotnet/cli/tree/rel/1.0.0-preview2/TestAssets/TestPackages/dotnet-desktop-and-portable)
 
 
-### <a name="pathbased-extensibility"></a>PATH 기반 확장성
+### <a name="path-based-extensibility"></a>PATH 기반 확장성
 일반적으로 PATH 기반 확장성은 개념적으로 둘 이상의 프로젝트를 포함하는 도구가 필요한 개발 컴퓨터에 사용됩니다. 이 확장 메커니즘의 주요 단점은 도구가 있는 컴퓨터에 연결되어 있다는 점입니다. 따라서 다른 컴퓨터에서 필요한 경우에는 배포해야 합니다.
 
 CLI 도구 집합 확장성의 이 패턴은 매우 간단합니다. [.NET Core CLI 개요](index.md)에서 설명한 대로 `dotnet` 드라이버는 `dotnet-<command>` 규칙에 따라 명명된 모든 명령을 실행할 수 있습니다. 기본 해결 논리에서는 여러 위치를 먼저 검색하고 마지막으로 시스템 PATH를 검색합니다. 요청한 명령이 시스템 PATH에 있고 호출할 수 있는 이진인 경우 `dotnet` 드라이버에서 호출합니다. 
@@ -132,6 +135,6 @@ MacOS에서는 이 스크립트를 `dotnet-clean`으로 저장하고 `chmod +x d
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 

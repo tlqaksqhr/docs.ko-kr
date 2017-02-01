@@ -1,24 +1,27 @@
 ---
-title: "dotnet-restore 명령 | .NET Core SDK"
+title: "dotnet-restore 명령 | Microsoft 문서"
 description: "dotnet restore 명령을 사용하여 종속성 및 프로젝트 관련 도구를 복원하는 방법을 알아봅니다."
 keywords: "dotnet-restore, CLI, CLI 명령, .NET Core"
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/07/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 60489b25-38de-47e6-bed1-59d9f42e2d46
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: 3c6c651aebfac0c27f340021d7779d37aa8bfe38
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 46349d28388c1a04c0cb4b5222ed0d0a868e2762
 
 ---
 
-#<a name="dotnetrestore"></a>dotnet-restore
+#<a name="dotnet-restore"></a>dotnet-restore
 
-## <a name="name"></a>Name
+> [!WARNING]
+> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. Visual Studio 2017 RC - .NET Core Tools Preview 4 버전의 경우 [dotnet-restore(Tooling Preview 4)](../preview3/tools/dotnet-restore.md) 항목을 참조하세요.
+
+## <a name="name"></a>이름
 
 `dotnet-restore` - 프로젝트의 종속성 및 도구를 복원합니다.
 
@@ -111,6 +114,6 @@ NuGet이 레거시 리포지토리에서 RID(런타임 식별자)를 유추하�
 `dotnet restore --verbosity Error`
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 

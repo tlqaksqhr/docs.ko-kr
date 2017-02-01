@@ -1,5 +1,5 @@
 ---
-title: "dotnet-publish 명령 | .NET Core SDK"
+title: "dotnet-publish 명령 | Microsoft 문서"
 description: "dotnet-publish 명령은 .NET Core 프로젝트를 디렉터리에 게시합니다."
 keywords: "dotnet-publish, CLI, CLI 명령, .NET Core"
 author: blackdwarf
@@ -9,16 +9,19 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 8a7e1c52-5c57-4bf5-abad-727450ebeefd
+ms.assetid: f2ef275a-7c5e-430a-8c30-65f52af62771
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: e480c32faa22859de74e06f3a199fba1c0720c46
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 83a706dd9fb2ee00b21426543e58621f9737a14d
 
 ---
 
-#<a name="dotnet-publish"></a>dotnet-publish
+#<a name="dotnet-publish-tooling-preview-4"></a>dotnet-publish(Tooling Preview 4)
 
-## <a name="name"></a>Name
+> [!WARNING]
+> 이 항목은 Visual Studio 2017 RC - .NET Core Tools Preview 4에 적용됩니다. .NET Core Tools Preview 2 버전의 경우 [dotnet-publish](../../tools/dotnet-publish.md) 항목을 참조하세요.
+
+## <a name="name"></a>이름
 
 `dotnet-publish` - 응용 프로그램 및 모든 종속성을 폴더로 압축하여 게시할 준비를 합니다.
 
@@ -94,6 +97,6 @@ ms.openlocfilehash: e480c32faa22859de74e06f3a199fba1c0720c46
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

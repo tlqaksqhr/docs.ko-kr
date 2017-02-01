@@ -1,24 +1,27 @@
 ---
-title: "dotnet-restore 명령 | .NET Core SDK"
+title: "dotnet-restore 명령 | Microsoft 문서"
 description: "dotnet restore 명령을 사용하여 종속성 및 프로젝트 관련 도구를 복원하는 방법을 알아봅니다."
 keywords: "dotnet-restore, CLI, CLI 명령, .NET Core"
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/07/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 60489b25-38de-47e6-bed1-59d9f42e2d46
+ms.assetid: fd7a5769-afbe-4838-bbaf-3ae0cfcbb914
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 6fb08a8765ad720b51e796aa0991087413d02e44
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: b2dbd39583b58c5d977d88edfc4770f6d9855ec1
 
 ---
 
-#<a name="dotnet-restore"></a>dotnet-restore
+#<a name="dotnet-restore-tooling-preview-4"></a>dotnet-restore(Tooling Preview 4)
 
-## <a name="name"></a>Name
+> [!WARNING]
+> 이 항목은 Visual Studio 2017 RC - .NET Core Tools Preview 4에 적용됩니다. .NET Core Tools Preview 2 버전의 경우 [dotnet-restore](../../tools/dotnet-restore.md) 항목을 참조하세요.
+
+## <a name="name"></a>이름
 
 `dotnet-restore` - 프로젝트의 종속성 및 도구를 복원합니다.
 
@@ -84,7 +87,7 @@ P2P 참조를 사용하여 프로젝트를 복원할 경우 참조를 복원하�
 
 지정된 경로에 있는 `app1` 프로젝트에 대한 종속성 및 도구를 복원합니다.
 
-`dotnet restore ~/projects/app1/app1.csproj``
+`dotnet restore ~/projects/app1/app1.csproj`
     
 대체 소스로 제공된 파일 경로를 사용하여 현재 디렉터리에 있는 프로젝트에 대한 종속성 및 도구를 복원합니다.
 
@@ -100,6 +103,6 @@ P2P 참조를 사용하여 프로젝트를 복원할 경우 참조를 복원하�
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

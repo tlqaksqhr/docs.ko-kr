@@ -1,6 +1,6 @@
 ---
-title: ".NET Core 명령줄(SDK Preview 3)을 사용하여 프로젝트 구성 및 테스트"
-description: ".NET Core 명령줄(SDK Preview 3)을 사용하여 프로젝트 구성 및 테스트"
+title: ".NET Core 명령줄을 사용하여 프로젝트 구성 및 테스트(SDK Preview 4) | Microsoft 문서"
+description: ".NET Core 명령줄을 사용하여 프로젝트 구성 및 테스트(SDK Preview 4)"
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: mairaw
@@ -9,16 +9,19 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: be988f09-7349-43b0-97fb-3a703d4587ce
+ms.assetid: 52ff1be3-d92e-4477-9c84-8c1771e87ab5
 translationtype: Human Translation
-ms.sourcegitcommit: 07b62bd7163193eff8dc8f61fda7a45a924bba2b
-ms.openlocfilehash: 0a3122a3c10838b74801bcc910070745cb9bf0d5
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: f3d5ebbac45726e320e5b886dbb6b81259bea36c
 
 ---
 
-# <a name="organizing-and-testing-projects-with-the-net-core-command-line-sdk-preview-3"></a>.NET Core 명령줄(SDK Preview 3)을 사용하여 프로젝트 구성 및 테스트
+# <a name="organizing-and-testing-projects-with-the-net-core-command-line-sdk-preview-4"></a>.NET Core 명령줄을 사용하여 프로젝트 구성 및 테스트(SDK Preview 4)
 
-이 자습서에서는 [명령줄(SDK Preview 3)을 사용하여 Windows/Linux/macOS에서 .NET Core 시작](./using-with-xplat-cli-msbuild.md)에 따라 간단한 "hello world" 시나리오 이상의 방법을 보여 주며, 잘 구성된 고급 응용 프로그램을 위한 방법을 안내합니다.
+> [!WARNING]
+> 이 항목은 Visual Studio 2017 RC - .NET Core Tools Preview 4에 적용됩니다. .NET Core Tools Preview 2 버전의 경우 [명령줄을 사용하여 Windows/Linux/macOS에서 .NET Core 시작](../../tutorials/using-with-xplat-cli.md) 항목을 참조하세요.
+
+이 자습서에서는 [명령줄을 사용하여 Windows/Linux/macOS에서 .NET Core 시작(SDK Preview 4)](./using-with-xplat-cli-msbuild.md)에 따라 간단한 "hello world" 시나리오 이상의 방법을 보여 주며, 잘 구성된 고급 응용 프로그램을 위한 방법을 안내합니다.
 
 ## <a name="using-folders-to-organize-code"></a>폴더를 사용하여 코드 구성
 
@@ -322,6 +325,6 @@ SUMMARY: Total: 1 targets, Passed: 1, Failed: 0.
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "dotnet 명령 | .NET Core SDK"
+title: "dotnet 명령 | Microsoft 문서"
 description: "dotnet 명령(.NET Core CLI 도구에 대한 일반 드라이버) 및 사용법에 대해 알아봅니다."
 keywords: "dotnet, CLI, CLI 명령, .NET Core"
 author: blackdwarf
@@ -9,14 +9,17 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 93015521-2127-4fe9-8fce-ca79bcc4ff49
+ms.assetid: 256e468e-eaaa-4715-b5fb-8cbddcf80e69
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: bbc13c8cca82e660f0f8ccf7d88c0340d9c06e68
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 328b2f974d048427a182a7190d74b5bb22c3c13b
 
 ---
 
-#<a name="dotnet-command"></a>dotnet 명령
+#<a name="dotnet-command-tooling-preview-4"></a>dotnet 명령(Tooling Preview 4)
+
+> [!WARNING]
+> 이 항목은 Visual Studio 2017 RC - .NET Core Tools Preview 4에 적용됩니다. .NET Core Tools Preview 2 버전의 경우 [dotnet 명령](../../tools/dotnet.md) 항목을 참조하세요.
 
 ## <a name="name"></a>이름
 
@@ -70,9 +73,9 @@ CLI 도구의 버전을 출력합니다.
 * [dotnet-pack](dotnet-pack.md)
    * 코드의 NuGet 패키지를 만듭니다.
 * [dotnet-migrate](dotnet-migrate.md)
-   * 유효한 Preview 2 프로젝트를 Preview 3 프로젝트로 마이그레이션
+   * 유효한 Preview 2 프로젝트를 Preview 4 프로젝트로 마이그레이션합니다.
 * [dotnet-msbuild](dotnet-msbuild.md)
-   * MSBuild 명령줄에 대한 액세스를 제공합니다.
+   * MSBuild 명령줄에 대한 액세스 권한을 제공합니다.
 
 ## <a name="examples"></a>예제
 
@@ -107,6 +110,6 @@ CLI 도구의 버전을 출력합니다.
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

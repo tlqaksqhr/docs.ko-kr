@@ -1,5 +1,5 @@
 ---
-title: ".NET Core CLI 확장성 모델"
+title: ".NET Core CLI 확장성 모델 | Microsoft 문서"
 description: ".NET Core CLI 확장성 모델"
 keywords: "CLI, 확장성, 사용자 지정 명령, .NET Core"
 author: blackdwarf
@@ -9,20 +9,23 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 1bebd25a-120f-48d3-8c25-c89965afcbcd
+ms.assetid: fffc3400-aeb9-4c07-9fea-83bc8dbdcbf3
 translationtype: Human Translation
-ms.sourcegitcommit: 1474b2869510d650b7ee69c88ec6b5a9d04a9b75
-ms.openlocfilehash: c13349c34af944d5a55d57161246f865274cc888
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 7df8b8bd4ae96a344b279a2673906962beaf29a4
 
 ---
 
-# <a name="net-core-cli-extensibility-model"></a>.NET Core CLI 확장성 모델 
+# <a name="net-core-cli-extensibility-model-tooling-preview-4"></a>.NET Core CLI 확장성 모델(Tooling Preview 4)
+
+> [!WARNING]
+> 이 항목은 Visual Studio 2017 RC - .NET Core Tools Preview 4에 적용됩니다. .NET Core Tools Preview 2 버전의 경우 [.NET Core CLI 확장성 모델](../../tools/dotnet-test.md) 항목을 참조하세요.
 
 ## <a name="overview"></a>개요
 이 문서에서는 CLI 도구를 확장하는 주요 방법 및 각 방법을 구동하는 시나리오에 대해 설명합니다. 도구를 사용하는 방법에 대해 간략하게 설명할 뿐만 아니라 두 종류의 도구를 빌드하는 방법에 대한 간단한 메모를 제공합니다. 
 
 ## <a name="how-to-extend-cli-tools"></a>CLI 도구를 확장하는 방법
-Preview 3 CLI 도구는 세 가지 주요 방법으로 확장할 수 있습니다.
+Preview 4 CLI 도구는 세 가지 주요 방법으로 확장할 수 있습니다.
 
 1. 프로젝트 단위로 NuGet 패키지 사용
 2. 사용자 지정 대상을 사용하여 NuGet 패키지 사용  
@@ -40,7 +43,7 @@ Preview 3 CLI 도구는 세 가지 주요 방법으로 확장할 수 있습니�
 ### <a name="consuming-per-project-tools"></a>프로젝트 단위 도구 사용
 이러한 도구를 사용하려면 사용할 도구 각각에 대한 `<DotNetCliToolReference>` 요소를 프로젝트 파일에 추가해야 합니다. `<DotNetCliToolReference>` 요소 내에서는 도구가 상주하는 패키지를 참조하고 필요한 버전을 지정합니다. `dotnet restore`를 실행하면 도구 및 해당 종속성이 복원됩니다. 
 
-프로젝트의 빌드 출력을 로드하여 실행해야 하는 도구의 경우 일반적으로 프로젝트 파일의 일반 종속성 아래에 나열되는 다른 종속성이 있습니다. CLI의 Preview 3 버전에서는 빌드 엔진으로 MSBuild를 사용하기 때문에 전반적인 빌드 프로세스에서 포함될 수 있는 방식으로 이러한 도구 부분을 사용자 지정 MSBuild 대상 및 작업으로 작성하는 것이 좋습니다. 또한 빌드를 통해 생성된 데이터를 모두 쉽게 가져올 수 있습니다(예: 출력 파일 위치, 빌드 중인 현재 구성 등). Preview 3에서 이 정보는 모두 어떤 대상에서도 읽을 수 있는 MSBuild 속성 집합이 됩니다. 이 문서의 뒷부분에 나오는 NuGet을 사용하여 사용자 지정 대상을 추가하는 방법을 살펴보겠습니다. 
+프로젝트의 빌드 출력을 로드하여 실행해야 하는 도구의 경우 일반적으로 프로젝트 파일의 일반 종속성 아래에 나열되는 다른 종속성이 있습니다. CLI의 Preview 4 버전에서는 빌드 엔진으로 MSBuild를 사용하기 때문에 전반적인 빌드 프로세스에서 포함될 수 있는 방식으로 이러한 도구 부분을 사용자 지정 MSBuild 대상 및 작업으로 작성하는 것이 좋습니다. 또한 빌드를 통해 생성된 데이터를 모두 쉽게 가져올 수 있습니다(예: 출력 파일 위치, 빌드 중인 현재 구성 등). Preview 4에서 이 정보는 모두 어떤 대상에서도 읽을 수 있는 MSBuild 속성 집합이 됩니다. 이 문서의 뒷부분에 나오는 NuGet을 사용하여 사용자 지정 대상을 추가하는 방법을 살펴보겠습니다. 
 
 간단한 도구를 추가하는 예제를 검토해 보겠습니다. 간단한 프로젝트에 도구만 추가합니다. 다음은 NuGet 패키지에서 지정된 API를 검색할 수 있는 `dotnet-api-search`라는 예제 명령이 지정된 경우 해당 도구를 사용하는 콘솔 응용 프로그램의 프로젝트 파일입니다.
 
@@ -83,12 +86,12 @@ Preview 3 CLI 도구는 세 가지 주요 방법으로 확장할 수 있습니�
 ### <a name="building-tools"></a>도구 빌드
 앞에서 설명한 대로 도구는 단순히 이식 가능한 콘솔 응용 프로그램입니다. 모든 콘솔 응용 프로그램을 빌드하는 것처럼 도구도 빌드합니다. 도구를 빌드한 후에는 [`dotnet pack`](dotnet-pack.md) 명령을 사용하여 코드, 종속성에 대한 정보 등을 포함하는 NuGet 패키지(nupkg)를 만듭니다. 패키지 이름은 작성자가 원하는 대로 지정할 수 있지만 응용 프로그램 내부 실제 도구 이진은 `dotnet-<command>`의 규칙을 준수해야 `dotnet`을 호출할 수 있습니다. 
 
-Preview 3 비트에서 `dotnet pack` 명령은 도구를 실행하는 데 필요한 `runtimeconfig.json` 파일을 압축하지 않습니다. 이 파일을 패키징하는 방법에는 두 가지 옵션이 있습니다.
+Preview 4 비트에서 `dotnet pack` 명령은 도구를 실행하는 데 필요한 `runtimeconfig.json` 파일을 압축하지 않습니다. 이 파일을 패키징하는 방법에는 두 가지 옵션이 있습니다.
 
-1. `nuspec` 파일을 만들어 Preview 3 CLI에서 새로 사용할 수 있는 `dotnet nuget pack` 명령으로 파일 포함
+1. `nuspec` 파일을 만들고 Preview 4 CLI에서 새로 제공되는 `dotnet nuget pack` 명령을 사용하여 파일 포함
 2. 프로젝트 파일의 `<ItemGroup>`에서 새로운 `<Content>` 요소를 사용하여 파일을 수동으로 포함
 
-nuspec 파일을 사용하는 것은 이 문서의 범위를 벗어나지만 [공식 NuGet 문서](https://docs.nuget.org/ndocs/create-packages/creating-a-package#the-role-and-structure-of-the--nuspec-file)에서 유용한 정보를 다양하게 확인할 수 있습니다. 두 번째 방식을 선택하는 경우 `csproj` 파일 예제와 아래와 같이 구성하는 방식을 확인할 수 있습니다.
+nuspec 파일을 사용하는 것은 이 문서의 범위를 벗어나지만 [공식 NuGet 문서](https://docs.microsoft.com/nuget/create-packages/creating-a-package#the-role-and-structure-of-the-nuspec-file)에서 유용한 정보를 다양하게 확인할 수 있습니다. 두 번째 방식을 선택하는 경우 `csproj` 파일 예제와 아래와 같이 구성하는 방식을 확인할 수 있습니다.
 
 ```xml
   <ItemGroup>
@@ -108,7 +111,7 @@ nuspec 파일을 사용하는 것은 이 문서의 범위를 벗어나지만 [�
 보다 풍부한 예제 및 다양한 조합은 [.NET Core CLI 리포지토리](https://github.com/dotnet/cli/tree/rel/1.0.0-preview2/TestAssets/TestProjects)에서 확인할 수 있습니다. 동일한 리포지토리에서 [사용된 도구의 구현](https://github.com/dotnet/cli/tree/rel/1.0.0-preview2/TestAssets/TestPackages)도 확인할 수 있습니다. 
 
 ### <a name="custom-targets"></a>사용자 지정 대상
-NuGet에서는 현재 잠시 동안 사용자 지정 MSBuild 대상 및 속성 파일을 패키지할 수 있으며, [NuGet 설명서 사이트](https://docs.nuget.org/ndocs/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package)에서 이에 대한 공식 설명서를 확인할 수 있습니다. CLI에서 MSBuild를 사용하는 것으로 변환됨에 따라 확장성에 대한 동일한 메커니즘이 .NET Core 프로젝트에 적용됩니다. 빌드 프로세스를 확장하거나 빌드 프로세스에서 생성된 파일과 같은 아티팩트에 액세스하거나 빌드 호출 시 구성을 검사하려는 경우 이 유형의 확장성을 사용하게 됩니다. 
+NuGet에서는 현재 잠시 동안 사용자 지정 MSBuild 대상 및 속성 파일을 패키지할 수 있으며, [NuGet 설명서 사이트](https://docs.microsoft.com/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package)에서 이에 대한 공식 설명서를 확인할 수 있습니다. CLI에서 MSBuild를 사용하는 것으로 변환됨에 따라 확장성에 대한 동일한 메커니즘이 .NET Core 프로젝트에 적용됩니다. 빌드 프로세스를 확장하거나 빌드 프로세스에서 생성된 파일과 같은 아티팩트에 액세스하거나 빌드 호출 시 구성을 검사하려는 경우 이 유형의 확장성을 사용하게 됩니다. 
 
 참조를 위해 아래 샘플 대상의 프로젝트 파일이 표시됩니다. 다음은 패키지할 항목을 지정하라는 `dotnet pack` 명령에 대해 새로운 `csproj` 구문을 사용하여 대상 파일과 어셈블리를 패키지 내부의 `build` 폴더에 배치하는 방법을 보여 줍니다. 아래의 `<ItemGroup>`에는 "dotnet 팩 지침"으로 설정된 `Label` 속성이 있습니다. 
 

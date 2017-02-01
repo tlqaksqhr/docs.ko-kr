@@ -1,23 +1,24 @@
 ---
-title: "Visual Studio 2017을 사용하여 Windows에서 .NET Core 시작"
+title: "Visual Studio 2017을 사용하여 Windows에서 .NET Core 시작 | Microsoft 문서"
 description: "Visual Studio 2017을 사용하여 Windows에서 .NET Core 시작"
 keywords: .NET, .NET Core
 author: bleroy
 ms.author: mairaw
-ms.date: 11/16/2016
+ms.date: 01/18/2016
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
-ms.assetid: d743134a-08a3-4ff6-aab7-49f71f0568c3
+ms.assetid: 613c65d0-f773-41b8-ba0e-83f6a82a0b30
 translationtype: Human Translation
-ms.sourcegitcommit: 71eab6216e116b99927dfeaa8ce3cf70bcc08a5e
-ms.openlocfilehash: 4437f44523bcc4e8517de5b6be42a63439f817d7
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: e40ee8ff1d1aa26689d0c2730a417162e5a9b447
 
 ---
 
-# <a name="getting-started-with-net-core-on-windows-using-visual-studio-2017"></a>Visual Studio 2017을 사용하여 Windows에서 .NET Core 시작
+# <a name="getting-started-with-net-core-on-windows-using-visual-studio-2017-tooling-preview-4"></a>Visual Studio 2017을 사용하여 Windows에서 .NET Core 시작(Tooling Preview 4)
 
-작성자: [Bertrand Le Roy](https://github.com/bleroy) 및 [Phillip Carter](https://github.com/cartermp)
+> [!WARNING]
+> 이 항목은 Visual Studio 2017 RC - .NET Core Tools Preview 4에 적용됩니다. Visual Studio 2015 - .NET Core Tools Preview 2 버전의 경우 [Visual Studio 2015를 사용하여 Windows에서 .NET Core 시작](../../tutorials/using-on-windows.md) 항목을 참조하세요.
 
 Visual Studio 2017은 .NET Core 응용 프로그램 개발을 위해 필요한 모든 기능을 갖춘 개발 환경을 제공합니다. 이 문서의 절차에서는 Visual Studio와 .NET Core를 사용하여 매우 간단한 콘솔 응용 프로그램을 빌드하는 데 필요한 단계를 설명합니다.
 
@@ -31,7 +32,7 @@ Visual Studio 2017은 .NET Core 응용 프로그램 개발을 위해 필요한 �
 
 1. Visual Studio를 열고 **파일** 메뉴에서 **새로 만들기**, **프로젝트**를 선택합니다.
 
-2. **새 프로젝트** 대화 상자의 **템플릿** 목록에서 **Visual C#** 노드를 확장하고 **.NET Core**를 선택합니다. **콘솔 앱(.NET Core)**, **단위 테스트 프로젝트(.NET Core)**, **클래스 라이브러리(.NET Core)** 및 **ASP.NET Core 웹 응용 프로그램(.NET Core)**에 대한 3~4개의 프로젝트 템플릿이 표시됩니다. **콘솔 앱(.NET Core)**을 선택하고, 프로젝트의 이름을 입력하고, 위치를 선택한 다음 [확인]을 클릭합니다.
+2. **새 프로젝트** 대화 상자의 **템플릿** 목록에서 **Visual C#** 노드를 확장하고 **.NET Core**를 선택합니다. **콘솔 앱(.NET Core)**, **클래스 라이브러리(.NET 표준)**, **xUnit 테스트 프로젝트(.NET Core)**, **클래스 라이브러리(.NET Core)** 및 **ASP.NET Core 웹 응용 프로그램(.NET Core)**에 대한&5;개의 프로젝트 템플릿이 표시됩니다. **콘솔 앱(.NET Core)**을 선택하고, 프로젝트의 이름을 입력하고, 위치를 선택한 다음 [확인]을 클릭합니다.
 
   ![새 프로젝트: 콘솔 앱](media/new-project-console-app.png)
 
@@ -43,12 +44,12 @@ Visual Studio 2017은 .NET Core 응용 프로그램 개발을 위해 필요한 �
 
 즐거운 코딩을 경험하시기 바랍니다!
 
-## <a name="what-to-do-next"></a>다음에 수행할 작업
+## <a name="next-steps"></a>다음 단계
 
 이 간단한 소개를 마치고 나면 재사용 가능한 라이브러리 및 테스트로 고급 솔루션을 구축하는 방법이 궁금해질 수도 있습니다. [Visual Studio 2017을 사용하여 Windows에서 완전한 .NET Core 솔루션 구축](using-on-windows-vs-2017-full-solution.md) 항목에서는 이 방법에 대해 설명합니다.
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

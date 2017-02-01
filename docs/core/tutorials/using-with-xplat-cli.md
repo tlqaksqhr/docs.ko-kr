@@ -11,12 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: be988f09-7349-43b0-97fb-3a703d4587ce
 translationtype: Human Translation
-ms.sourcegitcommit: 37e14d5cdf1593f6a8b1ecee9d9828647b023548
-ms.openlocfilehash: 5493ccb77e62d20d5101728ef8ab1744ea697fb8
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: a5a5039c5043f46772110d6750d04f14a3f43c86
 
 ---
 
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>명령줄을 사용하여 Windows/Linux/macOS에서 .NET Core 시작
+
+> [!WARNING]
+> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. .NET Core Tools Preview 4 버전의 경우 [명령줄을 사용하여 Windows/Linux/macOS에서 .NET Core 시작(Tooling Preview 4)](../preview3/tutorials/using-with-xplat-cli-msbuild.md) 항목을 참조하세요.
 
 이 가이드에서는 .NET Core CLI 도구를 사용하여 플랫폼 간 기본 콘솔 앱을 빌드하는 방법을 보여 줍니다.
 
@@ -647,6 +650,6 @@ SUMMARY: Total: 1 targets, Passed: 1, Failed: 0.
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

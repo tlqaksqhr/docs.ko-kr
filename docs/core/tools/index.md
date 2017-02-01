@@ -1,23 +1,25 @@
 ---
-title: ".NET Core CLI(명령줄 인터페이스) 도구"
+title: ".NET Core CLI(명령줄 인터페이스) 도구 | Microsoft 문서"
 description: "CLI(명령줄 인터페이스)의 개념 및 주요 기능에 대한 개요"
 keywords: "CLI, CLI 도구, .NET, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-manager: wpickett
 ms.date: 10/06/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: b70e9ac0-c8be-49f7-9332-95ab93e0e7bc
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 3a3326f96cf69d0ac466e52107597d80c2790b62
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 257fb74d0c07b0f203fa07edc08829b21b48bab6
 
 ---
 
-# <a name="net-core-commandline-interface-tools"></a>.NET Core 명령줄 인터페이스 도구
+# <a name="net-core-command-line-interface-tools"></a>.NET Core 명령줄 인터페이스 도구
+
+> [!WARNING]
+> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. Visual Studio 2017 RC - .NET Core Tools Preview 4 버전의 경우 [.NET Core 명령줄 인터페이스 도구(Tooling Preview 4)](../preview3/tools/index.md) 항목을 참조하세요.
 
 .NET Core CLI(명령줄 인터페이스)는 .NET Core 응용 프로그램 개발에 사용되는 새로운 기본 플랫폼 간 도구 체인입니다. IDE(통합 개발 환경), 편집기 및 빌드 Orchestrator와 같은 기타 상위 수준 도구의 기반이 될 수 있는 주 계층이기 때문에 "기본"입니다. 
 
@@ -99,6 +101,6 @@ CLI의 가장 중요한 기능에 대한 간략한 개요입니다. 자세한 �
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "dotnet-nuget-delete 명령 |.NET Core SDK"
+title: "dotnet-nuget-delete 명령 | Microsoft 문서"
 description: "dotnet-nuget-delete 명령은 서버에서 패키지를 삭제하거나 목록에서 제거합니다."
 keywords: "dotnet-nuget-delete, CLI, CLI 명령, .NET Core"
 author: karann-msft
@@ -11,8 +11,8 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 6ddffde4-c789-4e90-990e-d35f6a6565d4
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: a338f91d33347d48eefe572ea61da5d58d5c639a
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 787b1427b1064943570cbc361042ab2f20d11088
 
 ---
 
@@ -62,7 +62,7 @@ ms.openlocfilehash: a338f91d33347d48eefe572ea61da5d58d5c639a
 `--config-file <FILE>`
 
 이 명령에서 특별히 사용되는 NuGet 구성 파일로 표준 구성 파일 검색 및 연결 프로세스에서 찾은 다른 구성 파일을 대체합니다. 절대 경로나 상대 경로일 수 있습니다.
-구성 파일에 대한 자세한 내용은 [NuGet 동작 구성](https://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior)을 참조하세요. 
+구성 파일에 대한 자세한 내용은 [NuGet 동작 구성](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior)을 참조하세요.
 
 ## <a name="examples"></a>예제
 
@@ -84,6 +84,6 @@ MyPackage 패키지 버전 1.0 삭제:
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

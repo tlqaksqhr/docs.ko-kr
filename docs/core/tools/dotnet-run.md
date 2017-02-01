@@ -1,26 +1,29 @@
 ---
-title: "dotnet-run 명령 | .NET Core SDK"
+title: "dotnet-run 명령 | Microsoft 문서"
 description: "dotnet-run 명령은 소스 코드에서 응용 프로그램을 실행하는 편리한 옵션을 제공합니다."
 keywords: "dotnet-run, CLI, CLI 명령, .NET Core"
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/07/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 495ff50b-cb30-4d30-8f20-beb3d5e7c31f
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: 18731d9fcc190371d908779a69a81114e0685aba
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: fed8b914a06d75a48c10997a21db217ba8a13e38
 
 ---
 
-#<a name="dotnetrun"></a>dotnet-run
+#<a name="dotnet-run"></a>dotnet-run
+
+> [!WARNING]
+> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. Visual Studio 2017 RC - .NET Core Tools Preview 4 버전의 경우 [dotnet-run(Tooling Preview 4)](../preview3/tools/dotnet-run.md) 항목을 참조하세요.
 
 ## <a name="name"></a>이름 
 
-dotnet-run -- 명시적 컴파일이나 시작 명령을 사용하지 않고 소스 코드를 '현재 위치'에서 실행합니다.
+`dotnet-run` - 명시적 컴파일이나 시작 명령을 사용하지 않고 소스 코드를 '현재 위치'에서 실행합니다.
 
 ## <a name="synopsis"></a>개요
 
@@ -77,6 +80,6 @@ dotnet-run -- 명시적 컴파일이나 시작 명령을 사용하지 않고 소
 `dotnet run --configuration Release -- --help`
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 

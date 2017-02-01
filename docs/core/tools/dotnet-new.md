@@ -1,25 +1,28 @@
 ---
-title: "dotnet-new 명령 | .NET Core"
+title: "dotnet-new 명령 | Microsoft 문서"
 description: "dotnet-new 명령은 현재 디렉터리에 새 .NET Core 프로젝트를 만듭니다."
 keywords: "dotnet-new, CLI, CLI 명령, .NET Core"
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/12/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 263c3d05-3a47-46a6-8023-3ca16b488410
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: 29ccc12ff893d316c816d22da862f90bfc9334ff
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 967ef46ba7c4125bee1727f35d38798ef73689e5
 
 ---
 
-#<a name="dotnetnew"></a>dotnet-new
+#<a name="dotnet-new"></a>dotnet-new
+
+> [!WARNING]
+> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. Visual Studio 2017 RC - .NET Core Tools Preview 4 버전의 경우 [dotnet-new(Tooling Preview 4)](../preview3/tools/dotnet-new.md) 항목을 참조하세요.
 
 ## <a name="name"></a>이름
-dotnet-new -- 현재 디렉터리에 새 .NET Core 프로젝트를 만듭니다.
+`dotnet-new` - 현재 디렉터리에 새 .NET Core 프로젝트를 만듭니다.
 
 ## <a name="synopsis"></a>개요
 `dotnet new [--help] [--type] [--lang]`
@@ -63,6 +66,6 @@ dotnet-new -- 현재 디렉터리에 새 .NET Core 프로젝트를 만듭니다.
 `dotnet new -t web`
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 
