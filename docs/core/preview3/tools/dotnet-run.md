@@ -1,5 +1,5 @@
 ---
-title: "dotnet-run 명령 | .NET Core SDK"
+title: "dotnet-run 명령 | Microsoft 문서"
 description: "dotnet-run 명령은 소스 코드에서 응용 프로그램을 실행하는 편리한 옵션을 제공합니다."
 keywords: "dotnet-run, CLI, CLI 명령, .NET Core"
 author: blackdwarf
@@ -9,14 +9,17 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 495ff50b-cb30-4d30-8f20-beb3d5e7c31f
+ms.assetid: 40d4e60f-9900-4a48-b03c-0bae06792d91
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 6f95125640e7341426c3a019771a6b8595d10e73
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 066fbcd9f342233fb12599a84211675ba5b95860
 
 ---
 
-#<a name="dotnet-run"></a>dotnet-run
+#<a name="dotnet-run-tooling-preview-4"></a>dotnet-run(Tooling Preview 4)
+
+> [!WARNING]
+> 이 항목은 Visual Studio 2017 RC - .NET Core Tools Preview 4에 적용됩니다. .NET Core Tools Preview 2 버전의 경우 [dotnet-run](../../tools/dotnet-run.md) 항목을 참조하세요.
 
 ## <a name="name"></a>이름 
 
@@ -77,6 +80,6 @@ dotnet-run -- 명시적 컴파일이나 시작 명령을 사용하지 않고 소
 `dotnet run --configuration Release -- --help`
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

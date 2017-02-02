@@ -1,5 +1,5 @@
 ---
-title: "dotnet-pack 명령 | .NET Core SDK"
+title: "dotnet-pack 명령 | Microsoft 문서"
 description: "dotnet-pack 명령은 .NET Core 프로젝트에 대한 NuGet 패키지를 만듭니다."
 keywords: "dotnet-pack, CLI, CLI 명령, .NET Core"
 author: blackdwarf
@@ -9,16 +9,19 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 8b4b8cef-f56c-4a10-aa01-fde8bfaae53e
+ms.assetid: 8dbbb3f7-b817-4161-a6c8-a3489d05e051
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 5aca8db50bf80606ff94562a6014c396b0ef770e
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 03fab8ad488f4001929524298e52cafeffc45e7f
 
 ---
 
-#<a name="dotnet-pack"></a>dotnet-pack
+#<a name="dotnet-pack-tooling-preview-4"></a>dotnet-pack(Tooling Preview 4)
 
-## <a name="name"></a>Name
+> [!WARNING]
+> 이 항목은 Visual Studio 2017 RC - .NET Core Tools Preview 4에 적용됩니다. .NET Core Tools Preview 2 버전의 경우 [dotnet-pack](../../tools/dotnet-pack.md) 항목을 참조하세요.
+
+## <a name="name"></a>이름
 
 `dotnet-pack` - 코드를 NuGet 패키지로 압축합니다.
 
@@ -32,9 +35,9 @@ ms.openlocfilehash: 5aca8db50bf80606ff94562a6014c396b0ef770e
 
 ## <a name="description"></a>설명
 
-`dotnet pack` 명령은 프로젝트를 빌드하고 NuGet 패키지를 만듭니다. 이 명령의 결과가 nuget 패키지가 발생합니다. `--include-symbols` 옵션이 있는 경우 디버그 기호를 포함하는 다른 패키지가 생성됩니다. 
+`dotnet pack` 명령은 프로젝트를 빌드하고 NuGet 패키지를 만듭니다. 이 명령의 결과가 NuGet 패키지입니다. `--include-symbols` 옵션이 있는 경우 디버그 기호를 포함하는 다른 패키지가 생성됩니다. 
 
-압축할 프로젝트의 NuGet 종속성은 nuspec 파일에 추가되므로 패키지를 설치할 때 확인할 수 있습니다. 프로젝트 간 참조는 프로젝트 내에서 패키지되지 않습니다. 현재 프로젝트 간 종속성이 있는 경우 프로젝트당 패키지가 있어야 합니다.
+압축할 프로젝트의 NuGet 종속성은 `nuspec` 파일에 추가되므로 패키지를 설치할 때 확인할 수 있습니다. 프로젝트 간 참조는 프로젝트 내에서 패키지되지 않습니다. 현재 프로젝트 간 종속성이 있는 경우 프로젝트당 패키지가 있어야 합니다.
 
 `dotnet pack`은 기본적으로 프로젝트를 먼저 빌드합니다. 이렇게 하지 않으려면 `--no-build` 옵션을 전달합니다. 예를 들어 이 옵션은 코드가 이미 빌드된 CI(연속 통합) 빌드 시나리오에서 유용할 수 있습니다. 
 
@@ -58,7 +61,7 @@ ms.openlocfilehash: 5aca8db50bf80606ff94562a6014c396b0ef770e
 
 `--include-source`
 
-nuget 패키지에 소스 파일을 포함합니다. 소스 파일은 nupkg의 `src` 폴더에 있습니다. 
+NuGet 패키지에 소스 파일을 포함합니다. 소스 파일은 `nupkg`의 `src` 폴더에 있습니다. 
 
 `--include-symbols`
 
@@ -95,7 +98,6 @@ app1 프로젝트를 압축합니다.
 `dotnet pack --version-suffix "ci-1234"`
 
 
-
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

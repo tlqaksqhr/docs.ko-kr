@@ -10,8 +10,8 @@ ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
 translationtype: Human Translation
-ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: 17023a076df7b99a26a20ddc7b78984dd170d001
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: f44193d8f7bc9f67acb8b04966e02beca18a0653
 
 ---
 
@@ -21,7 +21,7 @@ ms.openlocfilehash: 17023a076df7b99a26a20ddc7b78984dd170d001
 
 F# 프로그래밍 언어를 학습하는 데 유용한 리소스는 [F# Foundation 사이트](http://fsharp.org/learn.html)에서 확인할 수 있습니다. 
 
-ASP.NET Core를 학습하는 데 유용한 리소스는 [ASP.NET 사이트](https://docs.asp.net/en/latest/tutorials/index.html)에서 확인할 수 있습니다.
+ASP.NET Core를 학습하는 데 유용한 리소스는 [ASP.NET 사이트](https://docs.microsoft.com/aspnet/core/tutorials/)에서 확인할 수 있습니다.
 
 또한 온라인 실습을 사용하여 C#을 살펴보려는 경우 이러한 [대화형 자습서](http://go.microsoft.com/fwlink/?LinkId=817234)를 시도해 보세요.
 
@@ -98,6 +98,6 @@ ASP.NET Core를 학습하는 데 유용한 리소스는 [ASP.NET 사이트](http
 이 자습서에서는 Windows 컨테이너에 기존 콘솔 응용 프로그램을 배포하는 방법을 보여 줍니다. 빌드할 코드의 완성된 버전은 [GitHub의 core-docs 리포지토리](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator)에 있습니다.
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

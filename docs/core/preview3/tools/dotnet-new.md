@@ -1,22 +1,25 @@
 ---
-title: "dotnet-new 명령 | .NET Core"
+title: "dotnet-new 명령 | Microsoft 문서"
 description: "dotnet-new 명령은 현재 디렉터리에 새 .NET Core 프로젝트를 만듭니다."
 keywords: "dotnet-new, CLI, CLI 명령, .NET Core"
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/12/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 263c3d05-3a47-46a6-8023-3ca16b488410
+ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 49f0a5e9b385c09a31cc463a77a74894b4304792
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: d4ca76f3de38b5d05868292d5c4bb8e3b0c7fdf2
 
 ---
 
-#<a name="dotnet-new"></a>dotnet-new
+#<a name="dotnet-new-tooling-preview-4"></a>dotnet-new(Tooling Preview 4)
+
+> [!WARNING]
+> 이 항목은 Visual Studio 2017 RC - .NET Core Tools Preview 4에 적용됩니다. .NET Core Tools Preview 2 버전의 경우 [dotnet-new](../../tools/dotnet-new.md) 항목을 참조하세요.
 
 ## <a name="name"></a>이름
 dotnet-new -- 현재 디렉터리에 새 .NET Core 프로젝트를 만듭니다.
@@ -40,9 +43,9 @@ dotnet-new -- 현재 디렉터리에 새 .NET Core 프로젝트를 만듭니다.
 
 명령에 대한 간단한 도움말을 출력합니다.  
 
-`-l|--lang <C#|F#>`
+`-l|--lang C#`
 
-프로젝트의 언어입니다. 기본값은 `C#`입니다. 다른 유효한 값은 `csharp`, `fsharp`, `cs` 및 `fs`입니다.
+프로젝트의 언어입니다. 기본값은 `C#`입니다. 다른 유효한 값은 `csharp` 및 `cs`입니다.
 
 `-t|--type`
 
@@ -54,15 +57,11 @@ dotnet-new -- 현재 디렉터리에 새 .NET Core 프로젝트를 만듭니다.
 
 `dotnet new` 또는 `dotnet new --lang c#` 
    
-현재 디렉터리에 F# 콘솔 응용 프로그램 프로젝트를 만듭니다.
-
-`dotnet new --lang f#`
-  
 현재 디렉터리에 새 ASP.NET Core C# 응용 프로그램 프로젝트를 만듭니다.
 
 `dotnet new -t web`
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

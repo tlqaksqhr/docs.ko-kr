@@ -1,24 +1,27 @@
 ---
-title: "dotnet-test 명령 | .NET Core SDK"
+title: "dotnet-test 명령 | Microsoft 문서"
 description: "`dotnet test` 명령은 지정된 프로젝트에서 단위 테스트를 실행하는 데 사용됩니다."
 keywords: "dotnet-test, CLI, CLI 명령, .NET Core"
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/07/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 3a0fa917-eb0a-4d7e-9217-d06e65455675
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: b12861f0ce3c40bf4db51994ea5d4a92b8ef0162
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: a53cedb48e57dce7672a5bba2c0ea908cbeb70f4
 
 ---
 
-#<a name="dotnettest"></a>dotnet-test
+#<a name="dotnet-test"></a>dotnet-test
 
-## <a name="name"></a>Name
+> [!WARNING]
+> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. Visual Studio 2017 RC - .NET Core Tools Preview 4 버전의 경우 [dotnet-test(Tooling Preview 4)](../preview3/tools/dotnet-test.md) 항목을 참조하세요.
+
+## <a name="name"></a>이름
 
 `dotnet-test` - 구성된 Test Runner를 사용하여 단위 테스트를 실행합니다.
 
@@ -132,6 +135,6 @@ test1 프로젝트에서 테스트를 실행합니다.
 [RID(런타임 식별자) 카탈로그](../rid-catalog.md)
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 

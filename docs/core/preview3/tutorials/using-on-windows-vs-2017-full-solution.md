@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio 2017을 사용하여 Windows에서 완전한 .NET Core 솔루션 구축"
+title: "Visual Studio 2017을 사용하여 Windows에서 완전한 .NET Core 솔루션 구축 | Microsoft 문서"
 description: "Visual Studio 2017을 사용하여 Windows에서 완전한 .NET Core 솔루션 구축"
 keywords: .NET, .NET Core
 author: bleroy
@@ -8,16 +8,17 @@ ms.date: 11/16/2016
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
-ms.assetid: d743134a-08a3-4ff6-aab7-49f71f0568c3
+ms.assetid: ba7e082c-a7c8-431e-a342-f67734b660f6
 translationtype: Human Translation
-ms.sourcegitcommit: 07b62bd7163193eff8dc8f61fda7a45a924bba2b
-ms.openlocfilehash: 9e65979d2f41e39e89109c2c5480acaebbef757f
+ms.sourcegitcommit: 82dfcb532ce6c14e93c5baedb61b619cc18e69f1
+ms.openlocfilehash: 02c48cd7e2fc551b82bb7afa53a3dd228e02dca1
 
 ---
 
-# <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017"></a>Visual Studio 2017을 사용하여 Windows에서 완전한 .NET Core 솔루션 구축
+# <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017-tooling-preview-4"></a>Visual Studio 2017을 사용하여 Windows에서 완전한 .NET Core 솔루션 구축(Tooling Preview 4)
 
-작성자: [Bertrand Le Roy](https://github.com/bleroy) 및 [Phillip Carter](https://github.com/cartermp)
+> [!WARNING]
+> 이 항목은 Visual Studio 2017 RC - .NET Core Tools Preview 4에 적용됩니다. .NET Core Tools Preview 2 버전의 경우 [Visual Studio 2015를 사용하여 Windows에서 .NET Core 시작](../../tutorials/using-on-windows.md) 항목을 참조하세요.
 
 Visual Studio 2017은 .NET Core 응용 프로그램 개발을 위해 필요한 모든 기능을 갖춘 개발 환경을 제공합니다. 이 문서의 절차에서는 재사용 가능한 라이브러리, 테스트 및 타사 라이브러리 사용을 비롯하여 일반적인 .NET Core 솔루션을 빌드하는 데 필요한 단계를 설명합니다. 
 
@@ -66,7 +67,7 @@ Visual Studio 2017은 .NET Core 응용 프로그램 개발을 위해 필요한 �
 
 ### <a name="writing-the-console-app"></a>콘솔 앱 작성
 
-1. 솔루션 탐색기에서 솔루션의 상황에 맞는 메뉴를 열고 새 **콘솔 앱(.NET Core)** 프로젝트를 추가합니다. 이름을 "App"으로 지정하고 위치를 `Golden\src`로 설정합니다.
+1. 솔루션 탐색기에서 솔루션의 상황에 맞는 메뉴를 열고 새 **콘솔 앱(.NET Core)** 프로젝트를 추가합니다. "App"으로 이름을 지정합니다.
 
 2. **App** 프로젝트에서 **종속성** 노드의 상황에 맞는 메뉴를 열고 **추가**, **참조**를 선택합니다. 
 
@@ -74,7 +75,7 @@ Visual Studio 2017은 .NET Core 응용 프로그램 개발을 위해 필요한 �
 
 6. **앱** 노드의 상황에 맞는 메뉴를 열고 **시작 프로젝트로 설정**을 선택합니다. F5 또는 CTRL + F5 키를 눌러 콘솔 앱이 시작됩니다.
 
-7. `Program.cs` 파일을 열고 `using Library;` 지시문을 파일의 상단에 추가한 다음 `Console.WriteLine($"The answer is {new Thing().Get(42)}");`을 `Main` 메서드에 추가합니다.
+7. `Program.cs` 파일을 열고 `using Library;` 지시문을 파일의 상단에 추가한 다음 `Console.WriteLine($"The answer is {new Thing().Get(42)}.");`을 `Main` 메서드에 추가합니다.
 
 8. 방금 추가한 줄 뒤에 중단점을 설정합니다.
 
@@ -84,6 +85,6 @@ Visual Studio 2017은 .NET Core 응용 프로그램 개발을 위해 필요한 �
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

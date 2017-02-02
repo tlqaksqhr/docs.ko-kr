@@ -9,20 +9,20 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 59b9c456-2bfd-4adc-8202-a1c6a0a6c787
+ms.assetid: b64e7e6f-ffb4-4fc8-b43b-5731c89479c2
 translationtype: Human Translation
 ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 4ef9e076e3afb4cf5c96c627dc102da1ff2c8ce0
+ms.openlocfilehash: 9f241774dd8977bbb26b5143d9f5d094af1ce05d
 
 ---
 
-#<a name="dotnet-install-scripts-reference"></a>dotnet-install 스크립트 참조
+#<a name="dotnet-install-scripts-reference-tooling-preview-4"></a>dotnet-install 스크립트 참조(Tooling Preview 4)
 
 > [!WARNING]
-> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. Visual Studio 2017 RC - .NET Core Tools Preview 4 버전의 경우 [dotnet-install 스크립트 참조(Tooling Preview 4)](../preview3/tools/dotnet-install-script.md) 항목을 참조하세요.
+> 이 항목은 Visual Studio 2017 RC - .NET Core Tools Preview 4에 적용됩니다. .NET Core Tools Preview 2 버전의 경우 [dotnet-install 스크립트 참조](../../tools/dotnet-install-script.md) 항목을 참조하세요.
 
 ## <a name="name"></a>이름
-`dotnet-install.ps1` | `dotnet-install.sh` - CLI(명령줄 인터페이스) 도구 및 공유 런타임을 설치하는 데 사용되는 스크립트입니다.
+dotnet-install.ps1 | dotnet-install.sh - CLI(명령줄 인터페이스) 도구 및 공유 런타임을 설치하는 데 사용되는 스크립트
 
 ## <a name="synopsis"></a>개요
 Windows:
@@ -66,7 +66,7 @@ macOS/Linux:
 
 `-InstallDir [DIR]`
 
-설치할 경로입니다. 디렉터리가 없을 경우 만듭니다. 기본값은 *%LocalAppData%\Microsoft\dotnet*입니다.
+설치할 경로입니다. 디렉터리가 없을 경우 만듭니다. 기본값은 *%LocalAppData%\.dotnet*입니다.
 
 `-Debug`
 

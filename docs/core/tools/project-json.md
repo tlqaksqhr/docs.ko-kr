@@ -1,5 +1,5 @@
 ---
-title: "project.json 참조"
+title: "project.json 참조 | Microsoft 문서"
 description: "project.json 참조"
 keywords: .NET, .NET Core, project.json
 author: aL3891
@@ -11,12 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 3aef32bd-ee2a-4e24-80f8-a2b615e0336d
 translationtype: Human Translation
-ms.sourcegitcommit: 4023c5ec72055fee78863a43b60989e1eb34fb22
-ms.openlocfilehash: 68b152cda54b5356dce48f4a8330b2ecb9c9d2e0
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: a1a27c6653d61ab612b76a4522dffdf82afecafc
 
 ---
 
 # <a name="projectjson-reference"></a>project.json 참조
+
+> [!WARNING]
+> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. Visual Studio 2017 RC - .NET Core Tools Preview 4 설명서의 경우 [.NET Core 명령줄 인터페이스 도구(Tooling Preview 4)](../preview3/tools/index.md) 섹션을 참조하세요.
 
 project.json 파일은 프로젝트 메타데이터, 컴파일 정보 및 종속성을 정의하기 위해 .NET Core 프로젝트에 사용됩니다. 이 참조 항목에는 project.json 파일에서 정의할 수 있는 모든 속성의 목록이 표시됩니다.
 
@@ -322,7 +325,7 @@ NuGet 패키지에도 사용되는 프로젝트의 [Semver](http://semver.org/sp
 형식: Object
 
 프로젝트의 패키지 종속성을 정의하는 개체. 이 개체의 각 키는 패키지의 이름이며 각 값은 버전 관리 정보를 포함합니다.
-자세한 내용은 NuGet 설명서 사이트의 [종속성 확인](https://docs.nuget.org/ndocs/consume-packages/dependency-resolution#dependency-resolution-in-nuget-3-x)을 참조하세요.
+자세한 내용은 NuGet 설명서 사이트의 [종속성 확인](https://docs.microsoft.com/nuget/consume-packages/dependency-resolution#dependency-resolution-in-nuget-3x)을 참조하세요.
 
 예:
 
@@ -344,7 +347,7 @@ NuGet 패키지에도 사용되는 프로젝트의 [Semver](http://semver.org/sp
 ### <a name="version"></a>버전
 형식: String
 
-종속성의 버전 또는 버전 범위를 지정합니다. \* 와일드카드를 사용하여 [부동 종속성 버전](https://docs.nuget.org/ndocs/consume-packages/dependency-resolution#floating-versions)을 지정합니다.
+종속성의 버전 또는 버전 범위를 지정합니다. \* 와일드카드를 사용하여 [부동 종속성 버전](https://docs.microsoft.com/nuget/consume-packages/dependency-resolution#floating-versions)을 지정합니다.
 
 예:
 
@@ -1643,7 +1646,7 @@ DLL 파일 래핑에 사용됩니다. 이 DLL이 포함된 패키지를 생성�
 ## <a name="usersecretsid"></a>userSecretsId
 형식: String
 
-개발 시 사용할 사용자 암호 식별자를 지정합니다. 자세한 내용은 [Safe storage of app secrets during development(개발하는 동안 앱 암호의 안전한 저장소)](https://docs.asp.net/en/latest/security/app-secrets.html)를 참조하세요.
+개발 시 사용할 사용자 암호 식별자를 지정합니다. 자세한 내용은 [Safe storage of app secrets during development(개발하는 동안 앱 암호의 안전한 저장소)](https://docs.microsoft.com/aspnet/core/security/app-secrets)를 참조하세요.
 
 예:
 

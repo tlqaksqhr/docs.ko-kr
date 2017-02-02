@@ -1,24 +1,27 @@
 ---
-title: "dotnet-publish 명령 | .NET Core SDK"
+title: "dotnet-publish 명령 | Microsoft 문서"
 description: "dotnet-publish 명령은 .NET Core 프로젝트를 디렉터리에 게시합니다."
 keywords: "dotnet-publish, CLI, CLI 명령, .NET Core"
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/07/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 8a7e1c52-5c57-4bf5-abad-727450ebeefd
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: 2b00a2c6da73c2252997b63aca8fc475cac8999f
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: f9fb64a90bdbd2096d4752279b1670fad8e8703f
 
 ---
 
-#<a name="dotnetpublish"></a>dotnet-publish
+#<a name="dotnet-publish"></a>dotnet-publish
 
-## <a name="name"></a>Name
+> [!WARNING]
+> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. Visual Studio 2017 RC - .NET Core Tools Preview 4 버전의 경우 [dotnet-publish(Tooling Preview 4)](../preview3/tools/dotnet-publish.md) 항목을 참조하세요.
+
+## <a name="name"></a>이름
 
 `dotnet-publish` - 응용 프로그램 및 모든 종속성을 폴더로 압축하여 게시할 준비를 합니다.
 
@@ -102,6 +105,6 @@ project.json 파일의 버전 필드에서 `*`를 대체할 항목을 정의합�
 * [RID(런타임 식별자) 카탈로그](../rid-catalog.md)
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 

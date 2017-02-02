@@ -1,5 +1,5 @@
 ---
-title: "dotnet-nuget-push 명령 | .NET Core SDK"
+title: "dotnet-nuget-push 명령 | Microsoft 문서"
 description: "dotnet-nuget-push 명령은 서버에 패키지를 푸시하고 게시합니다."
 keywords: "dotnet-nuget-push, CLI, CLI 명령, .NET Core"
 author: karann-msft
@@ -11,8 +11,8 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: f54d9adf-94f8-41cc-bb52-42f7ca3be6ff
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 04369a7f478cc77b6351f2fbee05d4e4ec8b19fb
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: dcc89fd24e23e624c4bcf90a8200b4e655af6dd6
 
 ---
 
@@ -31,7 +31,7 @@ ms.openlocfilehash: 04369a7f478cc77b6351f2fbee05d4e4ec8b19fb
 
 ## <a name="description"></a>설명
 
-`dotnet nuget push` 명령은 서버에 패키지를 푸시하고 게시합니다. push 명령은 시스템의 NuGet 구성 파일에 있는 서버 및 자격 증명 정보 또는 구성 파일 체인을 사용합니다. 구성 파일에 대한 자세한 내용은 [NuGet 동작 구성](https://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior)을 참조하세요. NuGet의 기본 구성은 *%AppData%\NuGet\NuGet.config*(Windows) 또는 *$HOME/.local/share*(Linux/macOS)를 로드한 다음 드라이브의 루트에서 시작되고 현재 디렉터리에서 끝나는 *nuget.config* 또는 *.nuget\nuget.config*를 로드하여 가져올 수 있습니다.
+`dotnet nuget push` 명령은 서버에 패키지를 푸시하고 게시합니다. push 명령은 시스템의 NuGet 구성 파일에 있는 서버 및 자격 증명 정보 또는 구성 파일 체인을 사용합니다. 구성 파일에 대한 자세한 내용은 [NuGet 동작 구성](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior)을 참조하세요. NuGet의 기본 구성은 *%AppData%\NuGet\NuGet.config*(Windows) 또는 *$HOME/.local/share*(Linux/macOS)를 로드한 다음 드라이브의 루트에서 시작되고 현재 디렉터리에서 끝나는 *nuget.config* 또는 *.nuget\nuget.config*를 로드하여 가져올 수 있습니다.
 
 ## <a name="options"></a>옵션
 
@@ -74,7 +74,7 @@ ms.openlocfilehash: 04369a7f478cc77b6351f2fbee05d4e4ec8b19fb
 `--config-file <FILE>`
 
 이 명령에서 특별히 사용되는 NuGet 구성 파일로 표준 구성 파일 검색 및 연결 프로세스에서 찾은 다른 구성 파일을 대체합니다. 절대 경로나 상대 경로일 수 있습니다.
-구성 파일에 대한 자세한 내용은 [NuGet 동작 구성](https://docs.nuget.org/ndocs/consume-packages/configuring-nuget-behavior)을 참조하세요. 
+구성 파일에 대한 자세한 내용은 [NuGet 동작 구성](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior)을 참조하세요. 
 
 `--verbosity <LEVEL>`
 
@@ -116,6 +116,6 @@ ms.openlocfilehash: 04369a7f478cc77b6351f2fbee05d4e4ec8b19fb
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

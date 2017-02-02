@@ -1,22 +1,25 @@
 ---
-title: "dotnet 명령 | .NET Core SDK"
+title: "dotnet 명령 | Microsoft 문서"
 description: "dotnet 명령(.NET Core CLI 도구에 대한 일반 드라이버) 및 사용법에 대해 알아봅니다."
 keywords: "dotnet, CLI, CLI 명령, .NET Core"
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/07/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 93015521-2127-4fe9-8fce-ca79bcc4ff49
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: 77c37ac3d4d0ba9ad1feac539debe40b0ee31161
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: b88f9fb2e5be34c0a4f50cda7d66bbe8bf18de6d
 
 ---
 
 #<a name="dotnet-command"></a>dotnet 명령
+
+> [!WARNING]
+> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. Visual Studio 2017 RC - .NET Core Tools Preview 4 버전의 경우 [dotnet 명령(Tooling Preview 4)](../preview3/tools/dotnet.md) 항목을 참조하세요.
 
 ## <a name="name"></a>이름
 
@@ -84,7 +87,9 @@ CLI 도구의 버전을 출력합니다.
 
 `dotnet build`
 
-`myapp.dll`이라는 이식 가능한 앱을 실행합니다. `dotnet myapp.dll`
+`myapp.dll`이라는 이식 가능한 앱을 실행합니다.
+
+`dotnet myapp.dll`
 
 ## <a name="environment"></a>환경 
 
@@ -101,6 +106,6 @@ CLI 도구의 버전을 출력합니다.
 .NET Core 도구 사용에 대한 데이터를 수집하여 Microsoft에 전송할지 여부를 지정합니다. `true`이면 원격 분석 기능을 옵트아웃(opt out)하고(값 true, 1 또는 yes 허용), 그렇지 않은 경우에는 `false`(값 false, 0 또는 no 허용)입니다. 설정하지 않으면 `false`로 기본 설정됩니다. 즉, 원격 분석 기능이 설정되어 있습니다.
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 

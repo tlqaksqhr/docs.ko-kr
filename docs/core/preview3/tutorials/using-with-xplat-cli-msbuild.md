@@ -1,5 +1,5 @@
 ---
-title: "명령줄(SDK Preview 3)을 사용하여 Windows/Linux/macOS에서 .NET Core 시작"
+title: "명령줄을 사용하여 Windows/Linux/macOS에서 .NET Core 시작(SDK Preview 4) | Microsoft 문서"
 description: "CLI(명령줄 인터페이스)를 사용하여 Windows, Linux 또는 macOS에서 .NET Core 시작"
 keywords: .NET, .NET Core
 author: cartermp
@@ -9,22 +9,25 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: be988f09-7349-43b0-97fb-3a703d4587ce
+ms.assetid: 41632e63-d5c6-4427-a09e-51dc1116d45f
 translationtype: Human Translation
-ms.sourcegitcommit: ab71aab99505f211fe4adc86957eda4707761f1c
-ms.openlocfilehash: 01b17021e79bcdb2dc69f97b709f4aa63dbab9aa
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: e84012937be6ede9170dde7ff88575d2f4fa1052
 
 ---
 
-# <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line-sdk-preview-3"></a>명령줄(SDK Preview 3)을 사용하여 Windows/Linux/macOS에서 .NET Core 시작
+# <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line-tooling-preview-4"></a>명령줄을 사용하여 Windows/Linux/macOS에서 .NET Core 시작(Tooling Preview 4)
+
+> [!WARNING]
+> 이 항목은 Visual Studio 2017 RC - .NET Core Tools Preview 4에 적용됩니다. .NET Core Tools Preview 2 버전의 경우 [명령줄을 사용하여 Windows/Linux/macOS에서 .NET Core 시작](../../tutorials/using-with-xplat-cli.md) 항목을 참조하세요.
 
 이 가이드에서는 .NET Core CLI 도구를 사용하여 플랫폼 간 콘솔 앱을 빌드하는 방법을 보여 줍니다.  가장 기본적인 콘솔 앱으로 시작하여 테스트를 비롯한 여러 프로젝트로 확장됩니다. 이러한 기능을 단계별로 추가하며, 이미 확인하고 빌드한 것 위에서 빌드하게 됩니다.
 
 .NET Core CLI 도구 집합에 익숙하지 않은 경우 [.NET Core SDK 개요](../tools/dotnet.md)를 읽어 보세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>필수 조건
 
-시작하기 전에 [.NET Core CLI 도구 Preview 3 이상](https://github.com/dotnet/core/blob/master/release-notes/preview3-download.md)이 있는지 확인합니다.  텍스트 편집기도 필요합니다.
+시작하기 전에 [.NET Core CLI 도구 Preview 4 이상](https://github.com/dotnet/core/blob/master/release-notes/preview3-download.md)이 있는지 확인합니다.  텍스트 편집기도 필요합니다.
 
 ## <a name="hello-console-app"></a>Hello, 콘솔 앱!
 
@@ -314,10 +317,10 @@ $ dotnet run
  
 이 가이드가 기본적인 사항에서 단위 테스트가 포함된 다중 프로젝트 시스템에 이르기까지 .NET Core 콘솔 앱을 만드는 방법을 배우는 데 도움이 되었길 바랍니다.  다음 단계는 자신만의 멋진 콘솔 앱을 만드는 것입니다.
  
-흥미로운 고급 콘솔 앱의 예제를 보려면 [.NET Core 명령줄(SDK Preview 3)을 사용하여 프로젝트 구성 및 테스트](using-with-xplat-cli-msbuild-folders.md) 자습서를 참조하세요.
+흥미로운 고급 콘솔 앱의 예제를 보려면 [.NET Core 명령줄을 사용하여 프로젝트 구성 및 테스트(SDK Preview 4)](using-with-xplat-cli-msbuild-folders.md) 자습서를 참조하세요.
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

@@ -1,22 +1,25 @@
 ---
-title: "dotnet-build 명령 | .NET Core SDK"
+title: "dotnet-build 명령 | Microsoft 문서"
 description: "dotnet-build 명령은 프로젝트와 모든 종속성을 빌드합니다."
 keywords: "dotnet-build, CLI, CLI 명령, .NET Core"
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/13/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 70285a83-4103-4617-be8b-d0e1e9a4a91d
+ms.assetid: 5e1a2bc4-a919-4a86-8f33-a9b218b1fcb3
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: 04c4d77b31bf4a1bdb425d837c490440e7312e57
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: d2eeeccd6b3bdf82ba02fea6ce89785ef19d4116
 
 ---
 
-#<a name="dotnet-build"></a>dotnet-build
+#<a name="dotnet-build-tooling-preview-4"></a>dotnet-build(Tooling Preview 4)
+
+> [!WARNING]
+> 이 항목은 Visual Studio 2017 RC - .NET Core Tools Preview 4에 적용됩니다. .NET Core Tools Preview 2 버전의 경우 [dotnet-build](../../tools/dotnet-build.md) 항목을 참조하세요.
 
 ## <a name="name"></a>이름 
 dotnet-build -- 프로젝트 및 모든 종속성을 빌드합니다. 
@@ -31,7 +34,7 @@ dotnet-build -- 프로젝트 및 모든 종속성을 빌드합니다.
 ## <a name="description"></a>설명
 
 `dotnet build` 명령은 소스 프로젝트의 여러 소스 파일과 해당 종속성을 이진으로 빌드합니다. 기본적으로 결과 이진은 IL(중간 언어)이며 DLL 확장명을 갖습니다. 
-`dotnet build`는 또한 호스트에서 응용 프로그램을 실행하는 데 필요한 항목을 간략하게 설명하는 `\*.deps` 파일을 삭제합니다.  
+`dotnet build`는 또한 호스트에서 응용 프로그램을 실행하는 데 필요한 항목을 간략하게 설명하는 `*.deps` 파일을 삭제합니다.  
 
 빌드하려면 자산 파일(응용 프로그램의 종속성을 모두 나열하는 파일)이 있어야 합니다. 즉, 코드를 빌드하기 전에 [`dotnet restore`](dotnet-restore.md)를 실행해야 합니다.
 
@@ -100,6 +103,6 @@ dotnet-build -- 프로젝트 및 모든 종속성을 빌드합니다.
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 

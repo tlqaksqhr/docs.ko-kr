@@ -11,8 +11,8 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
 translationtype: Human Translation
-ms.sourcegitcommit: 0013cf5604bfd1e8a16e5ca15577ac81fce49612
-ms.openlocfilehash: 905c3706717a03f468e3dd5717c049e83f211e67
+ms.sourcegitcommit: 4bd90ac423134c67eb35836d417b09053c98f586
+ms.openlocfilehash: 7f761c4fc24b8d22d8d1f8116745ebb3f6583378
 
 ---
 
@@ -26,7 +26,7 @@ ms.openlocfilehash: 905c3706717a03f468e3dd5717c049e83f211e67
 
 관리 코드는 C#, Visual Basic, F# 등 .NET 플랫폼에서 실행할 수 있는 고급 언어 중 하나로 작성됩니다. 이러한 언어로 작성된 코드를 해당 컴파일러로 컴파일할 때는 기계어 코드가 생성되지 않습니다. **중간 언어** 코드가 생성되며, 런타임에서 이 코드를 컴파일하고 실행합니다. 단, C++는 이 규칙의 유일한 예외이며 Windows에서 실행되는 관리되지 않는 네이티브 이진 파일을 생성할 수도 있습니다.
 
-## <a name="intermediate-language-execution"></a>중간 언어 및 실행
+## <a name="intermediate-language--execution"></a>중간 언어 및 실행
 
 "중간 언어"(또는 줄여서 IL)란? 고급 .NET 언어로 작성된 코드를 컴파일하여 생성된 결과입니다. 이러한 언어 중 하나로 작성된 코드를 컴파일하면 IL로 작성된 이진 파일을 얻게 됩니다. IL은 런타임에서 실행되는 모든 특정 언어에 독립적입니다. 필요한 경우 읽을 수 있는 별도의 사양도 있습니다.
 
@@ -48,6 +48,6 @@ ms.openlocfilehash: 905c3706717a03f468e3dd5717c049e83f211e67
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

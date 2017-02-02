@@ -1,25 +1,28 @@
 ---
-title: "dotnet-build 명령 | .NET Core SDK"
+title: "dotnet-build 명령 | Microsoft 문서"
 description: "dotnet-build 명령은 프로젝트와 모든 종속성을 빌드합니다."
 keywords: "dotnet-build, CLI, CLI 명령, .NET Core"
-author: mairaw
-manager: wpickett
+author: blackdwarf
+ms.author: mairaw
 ms.date: 10/13/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 70285a83-4103-4617-be8b-d0e1e9a4a91d
 translationtype: Human Translation
-ms.sourcegitcommit: c6ee3f5663d0a3f62914e8de474cca4d15340c9d
-ms.openlocfilehash: 344f8154c63bbb3c5ce6840bc7c7b1659950c223
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: 3cb552590bf45ec73d84cc902a505b3048301b9f
 
 ---
 
-#<a name="dotnetbuild"></a>dotnet-build
+#<a name="dotnet-build"></a>dotnet-build
+
+> [!WARNING]
+> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. Visual Studio 2017 RC - .NET Core Tools Preview 4 버전의 경우 [dotnet-build(Tooling Preview 4)](../preview3/tools/dotnet-build.md) 항목을 참조하세요.
 
 ## <a name="name"></a>이름 
-dotnet-build -- 프로젝트 및 모든 종속성을 빌드합니다. 
+`dotnet-build` - 프로젝트 및 모든 종속성을 빌드합니다. 
 
 ## <a name="synopsis"></a>개요
 
@@ -76,11 +79,11 @@ dotnet-build -- 프로젝트 및 모든 종속성을 빌드합니다.
 
 빌드할 구성을 정의합니다.  생략하면 `Debug`로 기본 설정됩니다.
 
-`-r|--runtime [RUNTIME_IDENTIFIER]`
+`-r|--runtime <RUNTIME_IDENTIFIER>`
 
 빌드할 대상 런타임입니다. 사용할 수 있는 RID(런타임 식별자) 목록은 [RID 카탈로그](../rid-catalog.md)를 참조하세요. 
 
-`--version-suffix [VERSION_SUFFIX]`
+`--version-suffix <VERSION_SUFFIX>`
 
 [project.json](project-json.md#version) 파일의 버전 필드에서 `*`를 대체할 항목을 정의합니다. 형식은 NuGet의 버전 지침을 따릅니다. 
 
@@ -111,6 +114,6 @@ dotnet-build -- 프로젝트 및 모든 종속성을 빌드합니다.
 `dotnet build --runtime ubuntu.16.04-x64`
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO3-->
 
 

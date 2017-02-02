@@ -1,22 +1,24 @@
 ---
-title: ".NET Core 응용 프로그램 배포"
+title: ".NET Core 응용 프로그램 배포 | Microsoft 문서"
 description: ".NET Core 응용 프로그램 배포"
 keywords: ".NET, .NET Core, .NET Core 배포"
 author: rpetrusha
-manager: wpickett
+ms.author: ronpet
 ms.date: 11/13/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
 translationtype: Human Translation
-ms.sourcegitcommit: 1a84c694945fe0c77468eb77274ab46618bccae6
-ms.openlocfilehash: d99d1a68fd6d1daf68670d6d73c07fe1009d92d9
+ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
+ms.openlocfilehash: a22431b63a0bde8739e33c39fa24380baaa7be54
 
 ---
 
-# <a name="net-core-application-deployment"></a>.NET Core 응용 프로그램 배포 #
+# <a name="net-core-application-deployment-net-core-tools-preview-4"></a>.NET Core 응용 프로그램 배포(.NET Core Tools Preview 4)
+
+> [!WARNING]
+> 이 항목은 Visual Studio 2017 RC - .NET Core Tools Preview 4에 적용됩니다. .NET Core Tools Preview 2 설명서의 경우 [.NET Core 응용 프로그램 배포](../../deploying/index.md) 항목을 참조하세요.
 
 .NET Core 응용 프로그램에 대해 두 가지 유형을 배포를 만들 수 있습니다. 
 
@@ -122,7 +124,7 @@ FDD 배포에는 다음과 같은 여러 가지 장점이 있습니다.
       </ItemGroup>
     ```
 
-위의 예제에서는 SDK 종속성이 그대로 유지됩니다. 이 종속성은 명령줄 도구가 작동하는 데 필요한 대상을 모두 복원하는 데 필요하므로 정상적인 현상입니다.  
+ 위의 예제에서는 SDK 종속성이 그대로 유지됩니다. 이 종속성은 명령줄 도구가 작동하는 데 필요한 대상을 모두 복원하는 데 필요하므로 정상적인 현상입니다.  
 
 2. 타사 종속성을 포함하는 NuGet 패키지를 아직 다운로드하지 않은 경우 다운로드합니다. 패키지를 다운로드하려면 종속성을 추가한 후 `dotnet restore` 명령을 실행합니다. 종속성은 게시 시간에 로컬 NuGet 캐시에서 확인되므로 시스템에서 사용할 수 있어야 합니다.
 
@@ -190,7 +192,7 @@ FDD 배포에는 다음과 같은 여러 가지 장점이 있습니다.
     }
     ```
 
-3. `csproj` 파일의 `<PropertyGroup>` 섹션에서 앱의 대상 플랫폼을 정의하는 `<RuntimeIdentifiers>` 태그를 만들고 대상으로 지정한 각 플랫폼의 런타임 식별자를 지정합니다. 런타임 식별자 목록은 [런타임 식별자 카탈로그](../../rid-catalog.md)를 참조하세요. 예를 들어 다음 `runtimes` 섹션은 앱이 64비트 Windows 10 운영 체제 및 64비트 OS X 버전 10.11 운영 체제에서 실행됨을 나타냅니다.
+3. `csproj` 파일의 `<PropertyGroup>` 섹션에서 앱의 대상 플랫폼을 정의하는 `<RuntimeIdentifiers>` 태그를 만들고 대상으로 지정한 각 플랫폼의 런타임 식별자를 지정합니다. 런타임 식별자 목록은 [런타임 식별자 카탈로그](../../rid-catalog.md)를 참조하세요. 예를 들어 다음 예에서는 앱이 64비트 Windows 10 운영 체제 및 64비트 OS X 버전 10.11 운영 체제에서 실행됨을 나타냅니다.
 
     ```xml
         <PropertyGroup>
@@ -320,16 +322,14 @@ RID를 구분하려면 세미콜론도 추가해야 합니다. 또한 `<RuntimeI
 
 공간이 더 작은 자체 포함 배포를 만들려면 자체 포함 배포를 만드는 처음 두 단계를 수행하여 시작합니다. `dotnet new` 명령을 실행하고 C# 소스 코드를 앱에 추가했으면 다음을 수행합니다.
 
-1. `csproj` 파일을 열고 `frameworks` 섹션을 다음으로 바꿉니다.
+1. `csproj` 파일을 열고 `<TargetFramework>` 요소를 다음으로 바꿉니다.
 
     ```xml
-    <PropertyGroup>
       <TargetFramework>netstandard1.6</TargetFramework>
-  </PropertyGroup>
   ```
 .NET Core CLR, .NET Core 라이브러리 및 여러 가지 기타 시스템 구성 요소를 포함하는 전체 `netcoreapp1.0` 프레임워크를 사용하는 대신 앱이 .NET 표준 라이브러리를 사용함을 나타냅니다.
 
-2. `dependencies` 섹션을 다음으로 바꿉니다.
+2. 패키지 참조를 포함하는 `<ItemGroup>`을 다음으로 바꿉니다.
 
     ```xml
     <ItemGroup>
@@ -360,7 +360,7 @@ RID를 구분하려면 세미콜론도 추가해야 합니다. 또한 `<RuntimeI
     ```
     
 
-전체 샘플 `csproj` 파일은 이 섹션의 뒷부분에 나옵니다.
+ 전체 샘플 `csproj` 파일은 이 섹션의 뒷부분에 나옵니다.
 
 4. `dotnet restore` 명령을 실행하여 프로젝트에 지정된 종속성을 복원합니다.
 
@@ -390,7 +390,7 @@ RID를 구분하려면 세미콜론도 추가해야 합니다. 또한 `<RuntimeI
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.0</TargetFramework>
+    <TargetFramework>netstandard1.6</TargetFramework>
     <VersionPrefix>1.0.0</VersionPrefix>
     <DebugType>Portable</DebugType>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
@@ -422,6 +422,6 @@ RID를 구분하려면 세미콜론도 추가해야 합니다. 또한 `<RuntimeI
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 
