@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 5e1a2bc4-a919-4a86-8f33-a9b218b1fcb3
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: d2eeeccd6b3bdf82ba02fea6ce89785ef19d4116
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: c2c0ae3711c866268c4e8c066b4213e110e771b9
 
 ---
 
-#<a name="dotnet-build-tooling-preview-4"></a>dotnet-build(Tooling Preview 4)
+#<a name="dotnet-build-net-core-tools-rc4"></a>dotnet-build(.NET Core 도구 RC4)
 
 > [!WARNING]
-> 이 항목은 Visual Studio 2017 RC - .NET Core Tools Preview 4에 적용됩니다. .NET Core Tools Preview 2 버전의 경우 [dotnet-build](../../tools/dotnet-build.md) 항목을 참조하세요.
+> 이 항목은 .NET Core 도구 RC4에 적용됩니다. .NET Core Tools Preview 2 버전의 경우 [dotnet-build](../../tools/dotnet-build.md) 항목을 참조하세요.
 
 ## <a name="name"></a>이름 
 dotnet-build -- 프로젝트 및 모든 종속성을 빌드합니다. 
@@ -103,6 +103,6 @@ dotnet-build -- 프로젝트 및 모든 종속성을 빌드합니다.
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

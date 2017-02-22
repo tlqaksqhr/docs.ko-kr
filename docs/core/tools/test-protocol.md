@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 88cba792-3640-41de-b55d-00f575e9d5e2
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 3315c8b0d2033643d81a7b14f31d6e8aed6a15b1
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 83555650a5a3ce9ed28d329aa82f5ead75e2d9cb
 
 ---
 
 #<a name="net-core-cli-test-communication-protocol"></a>.NET Core CLI 테스트 통신 프로토콜
 
 > [!WARNING]
-> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. Visual Studio 2017 RC - .NET Core Tools Preview 4 설명서의 경우 [.NET Core 명령줄 인터페이스 도구(Tooling Preview 4)](../preview3/tools/index.md) 섹션을 참조하세요.
+> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. .NET Core 도구 RC4 설명서의 경우 [.NET Core 명령줄 인터페이스 도구(.NET Core 도구 RC4)](../preview3/tools/index.md) 섹션을 참조하세요.
 
 ## <a name="introduction"></a>소개
 포트를 dotnet 테스트로 전달할 때마다 디자인 타임에서 명령이 실행됩니다. 즉, `dotnet test`는 TCP를 사용하여 해당 포트에 연결한 후 설정된 메시지 집합을 해당 포트에 연결된 다른 것과 교환합니다. 이 경우 Runner 역시 `dotnet test`가 통신에 사용할 새 포트를 수신합니다. Runner 역시 `dotnet test`와의 통신에 TCP를 사용하는 이유는, 디자인 모드에서는 결과를 콘솔에만 출력하는 것으로 충분하지 않기 때문입니다. 명령은 또한 테스트 실행 결과를 포함하는 어댑터 구조 메시지를 전송해야 합니다.
@@ -54,6 +54,6 @@ ms.openlocfilehash: 3315c8b0d2033643d81a7b14f31d6e8aed6a15b1
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

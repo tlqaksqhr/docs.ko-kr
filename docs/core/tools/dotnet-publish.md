@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 8a7e1c52-5c57-4bf5-abad-727450ebeefd
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: f9fb64a90bdbd2096d4752279b1670fad8e8703f
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 1cf1611ab83874ad44855521d21040d102206338
 
 ---
 
 #<a name="dotnet-publish"></a>dotnet-publish
 
 > [!WARNING]
-> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. Visual Studio 2017 RC - .NET Core Tools Preview 4 버전의 경우 [dotnet-publish(Tooling Preview 4)](../preview3/tools/dotnet-publish.md) 항목을 참조하세요.
+> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. .NET Core 도구 RC4 버전의 경우 [dotnet-publish(.NET Core 도구 RC4)](../preview3/tools/dotnet-publish.md) 항목을 참조하세요.
 
 ## <a name="name"></a>이름
 
@@ -105,6 +105,6 @@ project.json 파일의 버전 필드에서 `*`를 대체할 항목을 정의합�
 * [RID(런타임 식별자) 카탈로그](../rid-catalog.md)
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

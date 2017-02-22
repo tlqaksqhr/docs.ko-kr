@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 3aef32bd-ee2a-4e24-80f8-a2b615e0336d
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: a1a27c6653d61ab612b76a4522dffdf82afecafc
+ms.sourcegitcommit: 8fba5c76375763abf90e2e17d3bcc9d0039089f0
+ms.openlocfilehash: 2cdb43a9095217498c12c97548e4aa632b13a59c
 
 ---
 
 # <a name="projectjson-reference"></a>project.json 참조
 
 > [!WARNING]
-> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. Visual Studio 2017 RC - .NET Core Tools Preview 4 설명서의 경우 [.NET Core 명령줄 인터페이스 도구(Tooling Preview 4)](../preview3/tools/index.md) 섹션을 참조하세요.
+> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. .NET Core 도구 RC4 설명서의 경우 [.NET Core 명령줄 인터페이스 도구(.NET Core 도구 RC4)](../preview3/tools/index.md) 섹션을 참조하세요.
 
 project.json 파일은 프로젝트 메타데이터, 컴파일 정보 및 종속성을 정의하기 위해 .NET Core 프로젝트에 사용됩니다. 이 참조 항목에는 project.json 파일에서 정의할 수 있는 모든 속성의 목록이 표시됩니다.
 
@@ -1658,6 +1658,6 @@ DLL 파일 래핑에 사용됩니다. 이 DLL이 포함된 패키지를 생성�
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO3-->
 
 

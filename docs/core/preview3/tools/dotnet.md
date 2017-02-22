@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 256e468e-eaaa-4715-b5fb-8cbddcf80e69
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 328b2f974d048427a182a7190d74b5bb22c3c13b
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: c80b5e7e26366b5253816e81a8203f90690eec1e
 
 ---
 
-#<a name="dotnet-command-tooling-preview-4"></a>dotnet 명령(Tooling Preview 4)
+#<a name="dotnet-command-net-core-tools-rc4"></a>dotnet 명령(.NET Core 도구 RC4)
 
 > [!WARNING]
-> 이 항목은 Visual Studio 2017 RC - .NET Core Tools Preview 4에 적용됩니다. .NET Core Tools Preview 2 버전의 경우 [dotnet 명령](../../tools/dotnet.md) 항목을 참조하세요.
+> 이 항목은 .NET Core 도구 RC4에 적용됩니다. .NET Core Tools Preview 2 버전의 경우 [dotnet 명령](../../tools/dotnet.md) 항목을 참조하세요.
 
 ## <a name="name"></a>이름
 
@@ -73,7 +73,7 @@ CLI 도구의 버전을 출력합니다.
 * [dotnet-pack](dotnet-pack.md)
    * 코드의 NuGet 패키지를 만듭니다.
 * [dotnet-migrate](dotnet-migrate.md)
-   * 유효한 Preview 2 프로젝트를 Preview 4 프로젝트로 마이그레이션합니다.
+   * 유효한 Preview 2 프로젝트를 RC4 프로젝트로 마이그레이션합니다.
 * [dotnet-msbuild](dotnet-msbuild.md)
    * MSBuild 명령줄에 대한 액세스 권한을 제공합니다.
 
@@ -110,6 +110,6 @@ CLI 도구의 버전을 출력합니다.
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

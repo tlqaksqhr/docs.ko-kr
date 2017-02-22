@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: b64e7e6f-ffb4-4fc8-b43b-5731c89479c2
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 9f241774dd8977bbb26b5143d9f5d094af1ce05d
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 0063ac1220a1f01eef6e7300b0907518863ee01e
 
 ---
 
-#<a name="dotnet-install-scripts-reference-tooling-preview-4"></a>dotnet-install 스크립트 참조(Tooling Preview 4)
+#<a name="dotnet-install-scripts-reference-net-core-tools-rc4"></a>dotnet-install 스크립트 참조(.NET Core 도구 RC4)
 
 > [!WARNING]
-> 이 항목은 Visual Studio 2017 RC - .NET Core Tools Preview 4에 적용됩니다. .NET Core Tools Preview 2 버전의 경우 [dotnet-install 스크립트 참조](../../tools/dotnet-install-script.md) 항목을 참조하세요.
+> 이 항목은 .NET Core 도구 RC4에 적용됩니다. .NET Core Tools Preview 2 버전의 경우 [dotnet-install 스크립트 참조](../../tools/dotnet-install-script.md) 항목을 참조하세요.
 
 ## <a name="name"></a>이름
 dotnet-install.ps1 | dotnet-install.sh - CLI(명령줄 인터페이스) 도구 및 공유 런타임을 설치하는 데 사용되는 스크립트
@@ -129,6 +129,6 @@ macOS/Linux:
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

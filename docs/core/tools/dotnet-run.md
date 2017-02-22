@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 495ff50b-cb30-4d30-8f20-beb3d5e7c31f
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: fed8b914a06d75a48c10997a21db217ba8a13e38
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 2e14cd14bc3d5ed86c841e46dc80c2649f239a82
 
 ---
 
 #<a name="dotnet-run"></a>dotnet-run
 
 > [!WARNING]
-> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. Visual Studio 2017 RC - .NET Core Tools Preview 4 버전의 경우 [dotnet-run(Tooling Preview 4)](../preview3/tools/dotnet-run.md) 항목을 참조하세요.
+> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. .NET Core 도구 RC4 버전의 경우 [dotnet-run(.NET Core 도구 RC4)](../preview3/tools/dotnet-run.md) 항목을 참조하세요.
 
 ## <a name="name"></a>이름 
 
@@ -80,6 +80,6 @@ ms.openlocfilehash: fed8b914a06d75a48c10997a21db217ba8a13e38
 `dotnet run --configuration Release -- --help`
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

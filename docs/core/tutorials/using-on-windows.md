@@ -10,15 +10,15 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d743134a-08a3-4ff6-aab7-49f71f0568c3
 translationtype: Human Translation
-ms.sourcegitcommit: a8019c9fc25ef458aa555743e61cd83a3beb11ed
-ms.openlocfilehash: 446ada6d325a81f9c0078e4771866d99af341aed
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 29019587d2d847c5184d07024fa763c8af805d50
 
 ---
 
 # <a name="getting-started-with-net-core-on-windows-using-visual-studio-2015"></a>Visual Studio 2015를 사용하여 Windows에서 .NET Core 시작
 
 > [!WARNING]
-> 이 항목은 Visual Studio 2015 - .NET Core Tools Preview 2에 적용됩니다. Visual Studio 2017 RC - .NET Core Tools Preview 4 버전의 경우 [Visual Studio 2017을 사용하여 Windows에서 .NET Core 시작](../preview3/tutorials/using-on-windows-vs-2017.md) 항목을 참조하세요.
+> 이 항목은 Visual Studio 2015 - .NET Core Tools Preview 2에 적용됩니다. .NET Core 도구 RC4 버전의 경우 [Visual Studio 2017을 사용하여 Windows에서 .NET Core 시작](../preview3/tutorials/using-on-windows-vs-2017.md) 항목을 참조하세요.
 
 Visual Studio 2015는 .NET Core 응용 프로그램 개발을 위해 필요한 모든 기능을 갖춘 개발 환경을 제공합니다. 이 문서의 절차에서는 Visual Studio 사용하여 일반적인 .NET Core 솔루션 또는 .NET Core 구성 요소가 포함된 솔루션을 빌드하는 데 필요한 단계를 설명합니다. 최신 .NET Core 버전용으로 명시적으로 빌드되지 않은 타사 라이브러리의 테스트 및 사용도 시나리오에 포함됩니다. 
 
@@ -229,11 +229,11 @@ Visual Studio 2015는 .NET Core 응용 프로그램 개발을 위해 필요한 �
 -------------------------------------
 이식 가능한 클래스 라이브러리 도구는 .NET 표준을 대상으로 지정하도록 PCL을 자동으로 수정할 수 있습니다. 
 
-1.  "속성" 노드를 두 번 클릭하여 프로젝트 속성 페이지를 엽니다.
+1.    "속성" 노드를 두 번 클릭하여 프로젝트 속성 페이지를 엽니다.
 
-2.  "대상 지정 헤더"에서 ".NET 플랫폼 표준을 대상으로 지정" 하이퍼링크를 클릭합니다.
+2.    "대상 지정 헤더"에서 ".NET 플랫폼 표준을 대상으로 지정" 하이퍼링크를 클릭합니다.
 
-3.  확인 메시지가 표시되면 "예"를 클릭합니다.
+3.    확인 메시지가 표시되면 "예"를 클릭합니다.
 
 PCL에서 원래 대상으로 지정한 모든 대상을 포함하는 .NET 표준 버전이 자동으로 선택됩니다. 프로젝트 속성 페이지에서 .NET 표준 드롭다운을 사용하여 .NET 표준의 다른 버전을 대상으로 지정할 수 있습니다.
  
@@ -241,17 +241,17 @@ PCL에서 원래 대상으로 지정한 모든 대상을 포함하는 .NET 표�
 
 ### <a name="manually-edit-projectjson-to-target-net-standard-from-an-existing-portable-class-library"></a>기존의 이식 가능한 클래스 라이브러리에서 .NET 표준을 대상으로 지정하도록 project.json을 수동으로 편집
 
-1.  project.json의 "supports" 요소에 "dnxcore50"이 포함된 경우 이를 제거합니다.
+1.    project.json의 "supports" 요소에 "dnxcore50"이 포함된 경우 이를 제거합니다.
 
-2.  "Microsoft.NETCore"에 대한 종속성을 제거합니다.
+2.    "Microsoft.NETCore"에 대한 종속성을 제거합니다.
 
-3.  "Microsoft.NETCore.Portable.Compatibility" 버전 "1.0.0"에 대한 종속성을 버전 "1.0.1"로 수정합니다.
+3.    "Microsoft.NETCore.Portable.Compatibility" 버전 "1.0.0"에 대한 종속성을 버전 "1.0.1"로 수정합니다.
 
-4.  "NETStandard.Library" 버전 "1.6.0"에 대한 종속성을 추가합니다.
+4.    "NETStandard.Library" 버전 "1.6.0"에 대한 종속성을 추가합니다.
 
-5.  "frameworks" 요소에서 "dotnet" 프레임워크(및 그 안의 "imports" 요소)를 제거합니다.
+5.    "frameworks" 요소에서 "dotnet" 프레임워크(및 그 안의 "imports" 요소)를 제거합니다.
 
-6.  frameworks 요소에 ` "netstandard1.x” : { } `를 추가합니다. 여기서 x는 대상으로 지정할 .NET 표준의 버전으로 교체됩니다.
+6.    frameworks 요소에 ` "netstandard1.x” : { } `를 추가합니다. 여기서 x는 대상으로 지정할 .NET 표준의 버전으로 교체됩니다.
 
 ### <a name="example-projectjson"></a>project.json 예제
 
@@ -276,6 +276,6 @@ PCL에서 원래 대상으로 지정한 모든 대상을 포함하는 .NET 표�
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

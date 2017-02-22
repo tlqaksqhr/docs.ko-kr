@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: be988f09-7349-43b0-97fb-3a703d4587ce
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: a5a5039c5043f46772110d6750d04f14a3f43c86
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 8f0ad79eafde695b956e89f48073dba2651b51cb
 
 ---
 
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>명령줄을 사용하여 Windows/Linux/macOS에서 .NET Core 시작
 
 > [!WARNING]
-> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. .NET Core Tools Preview 4 버전의 경우 [명령줄을 사용하여 Windows/Linux/macOS에서 .NET Core 시작(Tooling Preview 4)](../preview3/tutorials/using-with-xplat-cli-msbuild.md) 항목을 참조하세요.
+> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. .NET Core 도구 RC4 버전의 경우 [명령줄을 사용하여 Windows/Linux/macOS에서 .NET Core 시작(.NET Core 도구 RC4)](../preview3/tutorials/using-with-xplat-cli-msbuild.md) 항목을 참조하세요.
 
 이 가이드에서는 .NET Core CLI 도구를 사용하여 플랫폼 간 기본 콘솔 앱을 빌드하는 방법을 보여 줍니다.
 
@@ -615,7 +615,7 @@ public class PetTests
     {
         string expected = "Meow!";
         string actual = new Cat().TalkToOwner();
-        
+           
         Assert.Equal(expected, actual);
     }
 }
@@ -650,6 +650,6 @@ SUMMARY: Total: 1 targets, Passed: 1, Failed: 0.
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

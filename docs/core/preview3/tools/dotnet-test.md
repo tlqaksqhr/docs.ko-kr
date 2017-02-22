@@ -4,22 +4,22 @@ description: "`dotnet test` 명령은 지정된 프로젝트에서 단위 테스
 keywords: "dotnet-test, CLI, CLI 명령, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 10/07/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 4bf0aef4-148a-41c6-bb95-0a9e1af8762e
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: fb4627f5f8754ff3432d92e20dff2684a92fbeb5
+ms.sourcegitcommit: 02f39bc959a56ab0fc2cfa57ce13f300a8a46107
+ms.openlocfilehash: 204ebdb5a945dcd0c9277f1d95c113e829303b32
 
 ---
 
-#<a name="dotnet-test-tooling-preview-4"></a>dotnet-test(Tooling Preview 4)
+#<a name="dotnet-test-net-core-tools-rc4"></a>dotnet-test(.NET Core 도구 RC4)
 
 > [!WARNING]
-> 이 항목은 Visual Studio 2017 RC - .NET Core Tools Preview 4에 적용됩니다. .NET Core Tools Preview 2 버전의 경우 [dotnet-test](../../tools/dotnet-test.md) 항목을 참조하세요.
+> 이 항목은 .NET Core 도구 RC4에 적용됩니다. .NET Core Tools Preview 2 버전의 경우 [dotnet-test](../../tools/dotnet-test.md) 항목을 참조하세요.
 
 ## <a name="name"></a>이름
 
@@ -28,10 +28,10 @@ ms.openlocfilehash: fb4627f5f8754ff3432d92e20dff2684a92fbeb5
 ## <a name="synopsis"></a>개요
 
 `dotnet test [project] [--help] 
-    [--settings] [--listTests] [--testCaseFilter] 
-    [--testAdapterPath] [--logger] 
-    [--configuration] [--output] [--framework] [--diag]
-    [--no-build]`  
+    [--settings] [--list-tests] [--filter] 
+    [--test-adapter-path] [--logger] 
+    [--configuration] [--framework] [--output] [--diag]
+    [--no-build] [--verbosity]`
 
 ## <a name="description"></a>설명
 
@@ -39,42 +39,7 @@ ms.openlocfilehash: fb4627f5f8754ff3432d92e20dff2684a92fbeb5
 
 테스트 프로젝트에서는 Test Runner도 지정해야 합니다. 다음의 예제 프로젝트 파일에서 볼 수 있듯이 일반적인 `<PackageReference>` 요소를 사용하여 지정합니다.
 
-```xml
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
-
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.0</TargetFramework>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Include="**\*.cs" />
-    <EmbeddedResource Include="**\*.resx" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NETCore.App">
-      <Version>1.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.NET.Sdk">
-      <Version>1.0.0-alpha-20161104-2</Version>
-      <PrivateAssets>All</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.NET.Test.Sdk">
-      <Version>15.0.0-preview-20161024-02</Version>
-    </PackageReference>
-    <PackageReference Include="xunit">
-      <Version>2.2.0-beta3-build3402</Version>
-    </PackageReference>
-    <PackageReference Include="xunit.runner.visualstudio">
-      <Version>2.2.0-beta4-build1188</Version>
-    </PackageReference>
-  </ItemGroup>
-
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-</Project>
-```
+[!code-xml[XUnit 기본 템플릿](../../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
 ## <a name="options"></a>옵션
 
@@ -86,49 +51,49 @@ ms.openlocfilehash: fb4627f5f8754ff3432d92e20dff2684a92fbeb5
 
 명령에 대한 간단한 도움말을 출력합니다.
 
-`-s | --settings <SETTINGS_FILE>`
+`-s|--settings <SETTINGS_FILE>`
 
 테스트를 실행할 때 사용할 설정입니다. 
 
-`-lt | --listTests`
+`-t|--list-tests`
 
 현재 프로젝트에서 검색된 테스트를 모두 나열합니다. 
 
-`-tcf | --testCaseFilter <EXPRESSION>`
+`--filter <EXPRESSION>`
 
-지정된 식을 사용하여 현재 프로젝트의 테스트를 필터링합니다. 
+지정된 식을 사용하여 현재 프로젝트의 테스트를 필터링합니다. 필터링 지원에 대한 자세한 내용 [Running selective unit tests in Visual Studio using TestCaseFilter](https://aka.ms/vstest-filtering)(TestCaseFilter를 사용하여 Visual Studio에서 선택적 단위 테스트 실행)를 참조하세요.
 
-`-tap | --testAdapterPath <TEST_ADAPTER_PATH>`
+`-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
-이 테스트 실행에 지정된 경로에서 사용자 지정 테스트 어댑터를 사용합니다. 
+테스트 실행에 지정된 경로에서 사용자 지정 테스트 어댑터를 사용합니다. 
 
-`--logger <LOGGER>`
+`-l|--logger <LoggerUri/FriendlyName>`
 
 테스트 결과에 대해 로거를 지정합니다. 
 
 `-c|--configuration <Debug|Release>`
 
-빌드할 구성입니다. 기본값은 `Release`입니다. 
+빌드할 구성입니다. 기본값은 `Debug`이지만 프로젝트의 구성으로 이 기본 SDK 설정이 재정의될 수 있습니다.
 
-`-o|--output [OUTPUT_DIRECTORY]`
-
-실행할 이진 파일을 찾을 디렉터리입니다.
-
-`-f|--framework [FRAMEWORK]`
+`-f|--framework <FRAMEWORK>`
 
 특정 프레임워크에 대한 테스트 이진 파일을 찾습니다.
 
-`-r|--runtime [RUNTIME_IDENTIFIER]`
+`-o|--output <OUTPUT_DIRECTORY>`
 
-지정된 런타임에 대한 테스트 이진 파일을 찾습니다.
+실행할 이진 파일을 찾을 디렉터리입니다.
+
+`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
+
+테스트 플랫폼에 대한 진단 모드를 사용하도록 설정하고 지정된 파일에 진단 메시지를 기록합니다. 
 
 `--no-build` 
 
-텍스트 프로젝트를 실행하기 전에 빌드하지 않습니다. 
+텍스트 프로젝트를 실행하기 전에 빌드하지 않습니다.
 
-`-d | --diag <DIAGNOSTICS_FILE>`
+`-v|--verbosity [quiet|minimal|normal|diagnostic]`
 
-테스트 플랫폼에 대한 진단 모드를 사용하도록 설정하고 지정된 파일에 진단 메시지를 기록합니다. 
+명령의 세부 정보 표시 수준을 설정합니다. 세부 정보 표시 수준은 q[uiet], m[inimal], n[ormal], d[etailed] 및 diag[nostic]로 지정할 수 있습니다. 
 
 ## <a name="examples"></a>예제
 
@@ -148,6 +113,6 @@ test1 프로젝트에서 테스트를 실행합니다.
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

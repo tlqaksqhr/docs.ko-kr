@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 70285a83-4103-4617-be8b-d0e1e9a4a91d
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 3cb552590bf45ec73d84cc902a505b3048301b9f
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: bb64da75a2e7bc2d379bc1685b4187493792db78
 
 ---
 
 #<a name="dotnet-build"></a>dotnet-build
 
 > [!WARNING]
-> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. Visual Studio 2017 RC - .NET Core Tools Preview 4 버전의 경우 [dotnet-build(Tooling Preview 4)](../preview3/tools/dotnet-build.md) 항목을 참조하세요.
+> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. .NET Core 도구 RC4 버전의 경우 [dotnet-build(.NET Core 도구 RC4)](../preview3/tools/dotnet-build.md) 항목을 참조하세요.
 
 ## <a name="name"></a>이름 
 `dotnet-build` - 프로젝트 및 모든 종속성을 빌드합니다. 
@@ -114,6 +114,6 @@ ms.openlocfilehash: 3cb552590bf45ec73d84cc902a505b3048301b9f
 `dotnet build --runtime ubuntu.16.04-x64`
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

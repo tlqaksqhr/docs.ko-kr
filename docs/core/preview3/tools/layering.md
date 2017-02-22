@@ -1,6 +1,6 @@
 ---
-title: ".NET Core 명령줄 도구 Preview 4 아키텍처 | Microsoft 문서"
-description: "Preview 4를 통해 전체.NET Core 도구를 계층화하는 방법에 대한 특정 변경 내용을 설명합니다."
+title: ".NET Core 명령줄 도구 RC4 아키텍처 | Microsoft 문서"
+description: "RC4를 통해 전체 .NET Core 도구를 계층화하는 방법이 일부 변경됩니다."
 keywords: "CLI, 확장성, 사용자 지정 명령, .NET Core"
 author: blackdwarf
 ms.date: 11/12/2016
@@ -10,19 +10,19 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 7fff0f61-ac23-42f0-9661-72a7240a4456
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 261af1368f9966d8f485ab9ba252f15da31e05b2
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 305d046c698ca9f7ebb5ac56387cfef00145393e
 
 ---
 
-# <a name="high-level-overview-of-changes-in-cli-preview-4"></a>CLI Preview 4의 변경 사항에 대한 심화 설명
+# <a name="high-level-overview-of-changes-in-cli-rc4"></a>CLI RC4의 변경 사항에 대한 개괄적 설명
 
 [!INCLUDE[preview-warning](../../../includes/warning.md)]
 
 이 문서에서는 `project.json`에서 MSBuild 및 `csproj` 프로젝트 시스템으로 이동으로 인해 발생하는 높은 수준의 변경 내용에 대해 설명합니다. 모두 구동 상태로 도구를 계층화하는 새로운 방법과, 사용할 수 있는 새로운 부분, 전체적인 상황에서의 현재 위치에 대해 간략하게 설명합니다. 이 문서를 읽고 나면 MSBuild 및 `csproj`로 이동한 후 .NET Core 도구를 구성하는 모든 부분에 대해 잘 이해하게 됩니다. 
 
 ## <a name="moving-away-from-projectjson"></a>project.json로부터의 이동
-.NET Core용 Preview 4 도구에서의 가장 큰 변화는 프로젝트 시스템이 [project.json에서 csproj로 이동](https://blogs.msdn.microsoft.com/dotnet/2016/05/23/changes-to-project-json/)한 점입니다. 명령줄 도구의 Preview 4 버전은 project.json에 대한 어떤 지원도 포함되지 않은 .NET Core 명령줄 도구의 첫 번째 릴리스입니다. 즉, project.json 기반 응용 프로그램 및 라이브러리를 빌드, 실행 또는 게시하는 데 사용할 수 없습니다. 이 버전의 도구를 사용하려면 기존 프로젝트를 마이그레이션하거나 새 프로젝트를 시작해야 합니다. 
+.NET Core용 RC4 도구에서의 가장 큰 변화는 프로젝트 시스템이 [project.json에서 csproj로 이동](https://blogs.msdn.microsoft.com/dotnet/2016/05/23/changes-to-project-json/)한 점입니다. 명령줄 도구의 RC4 버전은 .NET Core 명령줄 도구 중 project.json에 대한 어떤 지원도 포함하지 않은 첫 번째 릴리스입니다. 즉, project.json 기반 응용 프로그램 및 라이브러리를 빌드, 실행 또는 게시하는 데 사용할 수 없습니다. 이 버전의 도구를 사용하려면 기존 프로젝트를 마이그레이션하거나 새 프로젝트를 시작해야 합니다. 
 
 이러한 흐름에 포함되어 project.json 프로젝트를 빌드하기 위해 개발된 사용자 지정 빌드 엔진이 전문적이고 완전한 기능의 빌드 엔진인 [MSBuild](https://github.com/Microsoft/msbuild)로 바뀌었습니다. MSBuild는.NET 커뮤니티에서 잘 알려진 엔진으로 플랫폼의 첫 번째 릴리스 이후 핵심 기술로 부상하였습니다. 물론 .NET Core 응용 프로그램을 구축해야 하므로 MSBuild는 .NET Core로 이식되었으며, .NET Core에서 실행하는 모든 플랫폼에서 사용할 수 있습니다. NET Core의 주요 기능 중 하나는 플랫폼 간 개발 스택에 대한 것으로 이 이동으로 인해 이 기능이 없어지진 않습니다.
 
@@ -40,7 +40,7 @@ ms.openlocfilehash: 261af1368f9966d8f485ab9ba252f15da31e05b2
 
 새 프로젝트 시스템으로의 이전으로 이전 다이어그램이 다음과 같이 변경됩니다. 
 
-![Preview 4 도구에 대한 상위 수준 아키텍처](media/p3-arch.png)
+![RC4 도구에 대한 상위 수준 아키텍처](media/p3-arch.png)
 
 주요 차이점은 CLI가 더 이상 기본 계층이 아니라는 점입니다. 이 역할은 이제 "공유된 SDK 구성 요소"에 의해 채워집니다. 이 공유된 SDK 구성 요소는 코드 컴파일, 게시, NuGet 패키지 압축 등을 담당하는 대상 및 관련 작업 집합입니다. SDK 자체는 오픈 소스이며 [SDK 리포지토리](https://github.com/dotnet/sdk)의 GitHub에서 사용할 수 있습니다. 
 
@@ -49,7 +49,7 @@ ms.openlocfilehash: 261af1368f9966d8f485ab9ba252f15da31e05b2
 
 이제 모든 도구 집합은 CLI를 비롯하여 공유된 SDK 구성 요소와 대상을 사용합니다. 예를 들어 Visual Studio의 다음 버전에서 NET Core 프로젝트용 종속성 복원을 위해 `dotnet restore` 명령을 호출하지 않는다면, 직접 "복원" 대상을 사용합니다. 이는 MSBuild 대상이므로, 원시 MSBuild를 사용하여 [dotnet msbuild](dotnet-msbuild.md) 명령을 통해 실행할 수도 있습니다. 
 
-### <a name="preview-4-cli-commands"></a>Preview 4 CLI 명령
+### <a name="rc4-cli-commands"></a>RC4 CLI 명령
 공유된 SDK 구성 요소는 대부분의 기존 CLI 명령들이 MSBuild 작업 및 대상으로 다시 구현되었음을 의미합니다. CLI 명령 및 도구 집합의 경우 어떤 의미가 있을까요? 
 
 사용 관점으로 보면 CLI를 사용하는 방식은 변경되지 않습니다. CLI에는 Preview 2 릴리스에 있는 핵심 명령이 아직 있습니다.
@@ -62,7 +62,7 @@ ms.openlocfilehash: 261af1368f9966d8f485ab9ba252f15da31e05b2
 * `test`
 * `pack` 
 
-이러한 명령은 여전히 사용자가 예상하는 대로 수행됩니다(프로젝트 새로 구동, 빌드, 게시, 압축 등). 대부분의 옵션은 변경되지 않고 그대로 있습니다. 변경 사항에 대해 살펴보려면 이 사이트의 Preview 4 설명서 또는 명령의 도움말 화면(`dotent <command> --help` 사용)에서 참조할 수 있습니다. 
+이러한 명령은 여전히 사용자가 예상하는 대로 수행됩니다(프로젝트 새로 구동, 빌드, 게시, 압축 등). 대부분의 옵션은 변경되지 않고 그대로 있습니다. 이 사이트의 RC4 설명서 또는 명령의 도움말 화면(`dotent <command> --help` 사용)을 참조하여 변경 사항에 대해 살펴볼 수 있습니다. 
 
 실행 관점에서 CLI 명령은 매개 변수를 사용하고 "원시" MSBuild에 대한 호출을 생성하여 필요한 속성을 설정하고 원하는 대상을 실행합니다. 이해를 돕기 위해 다음 명령을 고려해 보세요. 
 
@@ -75,9 +75,9 @@ ms.openlocfilehash: 261af1368f9966d8f485ab9ba252f15da31e05b2
 이 규칙에서 주목할 만한 예외는 `new` 및 `run` 명령으로 MSBuild 대상으로 구현되지 않았습니다. 
 
 ## <a name="conclusion"></a>결론 
-이 문서에서는 Preview 4에서 제공되는 전반적인 CLI 도구 아키텍처 및 기능에서 발생하는 높은 수준의 변경에 대해 개괄적으로 살펴보았습니다. 또한 Preview 4에서 CLI 명령이 기술적인 관점에서 작동하는 방식에 대해 살펴보았을 뿐만 아니라 공유된 SDK 구성 요소의 개념도 소개했습니다.
+이 문서에서는 RC4에서 제공되는 전반적인 CLI 도구 아키텍처 및 기능에서 변경된 내용을 개괄적으로 살펴보았습니다. 또한 RC4에서 CLI 명령이 작동하는 방식을 기술적인 관점에서 설명했을 뿐만 아니라 공유 SDK 구성 요소의 개념도 소개했습니다.
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

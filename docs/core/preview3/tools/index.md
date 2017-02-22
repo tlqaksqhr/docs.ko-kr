@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 7c5eee9f-d873-4224-8f5f-ed83df329a59
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 524504bd05fd15bdd6afd686c9e5d8edd1c4cc0f
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: bcb9e39ed400ad93ae9b38890caa6c579f4a1594
 
 ---
 
-# <a name="net-core-command-line-interface-tools-tooling-preview-4"></a>.NET Core 명령줄 인터페이스 도구(Tooling Preview 4)
+# <a name="net-core-command-line-interface-tools-net-core-tools-rc4"></a>.NET Core 명령줄 인터페이스 도구(.NET Core 도구 RC4)
 
 > [!WARNING]
-> 이 항목은 Visual Studio 2017 RC - .NET Core Tools Preview 4에 적용됩니다. .NET Core Tools Preview 2 버전의 경우 [.NET Core 명령줄 인터페이스 도구](../../tools/index.md) 항목을 참조하세요.
+> 이 항목은 .NET Core 도구 RC4에 적용됩니다. .NET Core Tools Preview 2 버전의 경우 [.NET Core 명령줄 인터페이스 도구](../../tools/index.md) 항목을 참조하세요.
 
 .NET Core CLI(명령줄 인터페이스)는 .NET Core 응용 프로그램 개발에 사용되는 새로운 기본 플랫폼 간 도구 체인입니다. IDE(통합 개발 환경), 편집기 및 빌드 Orchestrator와 같은 기타 상위 수준 도구의 기반이 될 수 있는 주 계층이기 때문에 "기본"입니다. 
 
@@ -89,7 +89,7 @@ CLI에서는 다음과 같은 두 가지 주요 방법으로 응용 프로그램
 
 이 두 가지 방법에 대한 자세한 내용은 [.NET Core 응용 프로그램 배포](../deploying/index.md) 항목을 참조하세요. 
 
-## <a name="migration-from-preview-4projectjson"></a>Preview 4/project.json에서 마이그레이션
+## <a name="migration-from-rc4projectjson"></a>RC4/project.json에서 마이그레이션
 Preview 2 도구 및 project.json 프로젝트를 사용한 경우 [dotnet migrate](dotnet-migrate.md) 명령 문서를 참조하여 명령과 프로젝트를 마이그레이션하는 방법을 살펴볼 수 있습니다. 
 
 > [!NOTE]
@@ -105,6 +105,6 @@ CLI의 가장 중요한 기능에 대한 간략한 개요입니다. 자세한 �
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 
