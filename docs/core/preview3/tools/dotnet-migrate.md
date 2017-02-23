@@ -90,7 +90,7 @@ RC4부터 `dotnet migrate` 명령은 유효한 Preview 2 `project.json` 파일�
 
 `dotnet migrate path/to/global.json`
 
-현재 프로젝트만 프로젝트 종속성으로 마이그레이션하고 특정 SDK 버전을 사용합니다.
+현재 프로젝트만 마이그레이션하고 프로젝트 간 종속성은 마이그레이션하지 않으며, 특정 SDK 버전을 사용합니다.
 
 `dotnet migrate -s -v 1.0.0-preview4`
 
