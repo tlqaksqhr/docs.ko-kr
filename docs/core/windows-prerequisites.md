@@ -10,8 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
 translationtype: Human Translation
-ms.sourcegitcommit: c81b3b4785bff3bf8963e0ba1b917a5f797099ff
+ms.sourcegitcommit: a8019c9fc25ef458aa555743e61cd83a3beb11ed
 ms.openlocfilehash: b5c088da7d1155414a08995ae0d72154af891190
+ms.lasthandoff: 02/28/2017
 
 ---
 
@@ -94,9 +95,4 @@ Visual Studio 2015를 사용하여 만든 프로젝트는 기본적으로 projec
 [릴리스 정보](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes)에서 Visual Studio 2017 RC의 변경 내용에 대해 자세히 알아볼 수 있습니다.
 
 [sdk]: https://go.microsoft.com/fwlink/?LinkID=827546
-
-
-
-<!--HONumber=Jan17_HO3-->
-
 

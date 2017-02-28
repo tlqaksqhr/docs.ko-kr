@@ -12,6 +12,7 @@ ms.assetid: 916251e3-87f9-4eee-81ec-94076215e6fa
 translationtype: Human Translation
 ms.sourcegitcommit: 62fdb3e60b206728d86220076867eb8fd68af82e
 ms.openlocfilehash: 77d49a1df361823c3f8f676923960d4bef2eeb08
+ms.lasthandoff: 11/16/2016
 
 ---
 
@@ -155,9 +156,4 @@ ms.openlocfilehash: 77d49a1df361823c3f8f676923960d4bef2eeb08
 ```
 
 이제 `NETStandard.Library` 메타패키지에 의존하는 경우 공간을 덜 차지하게 되었습니다.
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 
