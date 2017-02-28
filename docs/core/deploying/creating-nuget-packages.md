@@ -3,16 +3,17 @@ title: "플랫폼 간 도구로 NuGet 패키지 만들기"
 description: "플랫폼 간 도구로 NuGet 패키지 만들기"
 keywords: .NET, .NET Core, NuGet
 author: cartermp
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 2f0415c1-110b-433d-87c1-ae3d543a8844
 translationtype: Human Translation
 ms.sourcegitcommit: 300a0304e316cfa265634a3faf74c81c7a8a5e08
-ms.openlocfilehash: 82b82dc2387834b9a4d0351c2c12da6e7595eb6c
+ms.openlocfilehash: d863587fbfee2bf713f8566a3e5b294d49ae50e9
+ms.lasthandoff: 11/16/2016
 
 ---
 
@@ -64,9 +65,4 @@ SuperAwesomeLibrary.1.0.0.symbols.nupkg
 ## <a name="dont-confuse-dotnet-pack-with-dotnet-publish"></a>`dotnet pack`을 다음과 혼동하지 마세요.`dotnet publish`
 
 어떤 지점에서도 `dotnet publish` 명령은 관련되지 않습니다.  `dotnet publish` 명령은 동일한 번들에 있는 모든 종속성과 함께 응용 프로그램을 배포하기 위한 것이며 NuGet을 통해 배포하고 사용할 NuGet 패키지를 생성하기 위한 것이 아닙니다.
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 
