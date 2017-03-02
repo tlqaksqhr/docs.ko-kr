@@ -13,6 +13,7 @@ ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
 translationtype: Human Translation
 ms.sourcegitcommit: 3aeaba5c8cf800c652941b5e6c2bc9f072849893
 ms.openlocfilehash: 36041eda54290484741c375ae776b7bf1a74d7a1
+ms.lasthandoff: 11/16/2016
 
 ---
 
@@ -273,7 +274,7 @@ namespace PInvokeSamples {
 
 ```cs
 [DllImport("somenativelibrary.dll"]
-static extern int MethodA([MarshalAs(UnmanagedType.LPStr) string parameter);
+static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 
 ```
 
@@ -350,9 +351,4 @@ public class StatClass {
 *   [PInvoke.net wiki](http://www.pinvoke.net)는 일반적인 Win32 API 및 호출 방법에 대한 정보가 포함된 우수한 Wiki입니다.
 *   [MSDN의 P/Invoke](https://msdn.microsoft.com/library/zbz07712.aspx)
 *   [P/Invoke에 대한 Mono 설명서](http://www.mono-project.com/docs/advanced/pinvoke/)
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 
