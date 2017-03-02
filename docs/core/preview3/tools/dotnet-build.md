@@ -13,6 +13,7 @@ ms.assetid: 5e1a2bc4-a919-4a86-8f33-a9b218b1fcb3
 translationtype: Human Translation
 ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
 ms.openlocfilehash: c2c0ae3711c866268c4e8c066b4213e110e771b9
+ms.lasthandoff: 02/10/2017
 
 ---
 
@@ -53,7 +54,7 @@ dotnet-build -- 프로젝트 및 모든 종속성을 빌드합니다.
 
 `-h|--help`
 
-명령에 대한 간단한 도움말을 출력합니다.  
+명령에 대한 간단한 도움말을 출력합니다.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
@@ -69,11 +70,11 @@ dotnet-build -- 프로젝트 및 모든 종속성을 빌드합니다.
 
 `-r|--runtime [RUNTIME_IDENTIFIER]`
 
-빌드할 대상 런타임입니다. 사용할 수 있는 RID(런타임 식별자) 목록은 [RID 카탈로그](../../rid-catalog.md)를 참조하세요. 
+빌드할 대상 런타임입니다. 사용할 수 있는 RID(런타임 식별자) 목록은 [RID 카탈로그](../../rid-catalog.md)를 참조하세요.
 
 `--version-suffix [VERSION_SUFFIX]`
 
-프로젝트 파일의 버전 필드에서 `*`를 대체할 항목을 정의합니다. 형식은 NuGet의 버전 지침을 따릅니다. 
+프로젝트 파일의 버전 필드에서 `*`를 대체할 항목을 정의합니다. 형식은 NuGet의 버전 지침을 따릅니다.
 
 `--build-profile`
 
@@ -100,9 +101,4 @@ dotnet-build -- 프로젝트 및 모든 종속성을 빌드합니다.
 특정 런타임(이 예제의 경우 Ubuntu 16.04)에 대한 프로젝트 및 해당 종속성을 빌드합니다.
 
 `dotnet build --runtime ubuntu.16.04-x64`
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 
