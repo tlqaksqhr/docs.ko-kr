@@ -3,16 +3,16 @@ title: ".NET Core 1.0에 대한 패키지 종속성 버전을 관리하는 방�
 description: ".NET Core 1.0에 대한 패키지 종속성 버전을 관리하는 방법"
 keywords: .NET, .NET Core
 author: cartermp
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 4424a947-bdf9-4775-8d48-dc350a4e0aee
 translationtype: Human Translation
-ms.sourcegitcommit: dd32f1dd4d17ab1bb01b5578237cc950b147898c
-ms.openlocfilehash: 77e1f5484c0f55ae3989dbbea9bdbf2fb58f7926
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: cf6c9757ab451f88c80fedb2dfebf7f5e320f365
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -72,7 +72,7 @@ ms.openlocfilehash: 77e1f5484c0f55ae3989dbbea9bdbf2fb58f7926
 
 그렇다면 다른 종속성을 1.0으로 고정해야 합니다.  이 문서 뒤에 나오는 올바른 패키지 버전 및 빌드 번호를 참조하세요.
 
-### <a name="a-note-on-using-a-splat-string-when-versioning"></a>버전 관리 시 스플랫 문자열(\*) 참고 사항
+### <a name="a-note-on-using-a-splat-string--when-versioning"></a>버전 관리 시 스플랫 문자열(\*) 참고 사항
 
 스플랫(\*) 문자열을 사용하는 버전 관리 패턴을 다음과 같이 조정했을 수 있습니다. `"System.Collections":"4.0.11-*"`
 
@@ -85,9 +85,4 @@ ms.openlocfilehash: 77e1f5484c0f55ae3989dbbea9bdbf2fb58f7926
 [모든 런타임 패키지 및 1.0에 대한 해당 버전을 나열합니다](https://github.com/dotnet/versions/blob/master/build-info/dotnet/coreclr/release/1.0.0/LKG_Packages.txt).
 
 [모든 .NET Core 응용 프로그램 패키지 및 1.0에 대한 해당 버전을 나열합니다](https://github.com/dotnet/versions/blob/master/build-info/dotnet/core-setup/release/1.0.0/Latest_Packages.txt).
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

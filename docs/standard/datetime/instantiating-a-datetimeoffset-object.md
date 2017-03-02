@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 476fe67b-6be4-4435-88ab-ced37304f1d1
 translationtype: Human Translation
-ms.sourcegitcommit: c40c28da09e8a122b542463c197196c82c81dd19
-ms.openlocfilehash: 3b6e2cc973b9587cc9950ecd6898b8a321a01036
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 26be324eb5d58b94a71e89aba213f107cf8dfd1e
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -50,7 +51,7 @@ Console.WriteLine(literalDate.ToString())
 
 ## <a name="datetimeoffset-constructors"></a>DateTimeOffset 생성자
 
-[System.DateTimeOffset](xref:System.DateTimeOffset) 형식은 5개의 생성자를 정의합니다. 이중 3개의 생성자는 UTC의 날짜 및 시간 오프셋을 정의하는 [System.TimeSpan](xref:System.TimeSpan) 형식의 추가 매개 변수를 사용하는 [DateTime](xref:System.DateTime) 생성자에 해당합니다. 개별 날짜 및 시간 구성 요소 값을 기반으로 [DateTimeOffset](xref:System.DateTimeOffset) 값을 정의할 수 있습니다. 예를 들어 다음 코드는 이러한 세 가지 생성자를 사용하여 2008년 7월 1일 오전 12시 05분 +01:00과 동일한 값을 가진 [DateTimeOffset](xref:System.DateTimeOffset) 개체를 인스턴트화합니다.
+[System.DateTimeOffset](xref:System.DateTimeOffset) 형식은&5;개의 생성자를 정의합니다. 이중&3;개의 생성자는 UTC의 날짜 및 시간 오프셋을 정의하는 [System.TimeSpan](xref:System.TimeSpan) 형식의 추가 매개 변수를 사용하는 [DateTime](xref:System.DateTime) 생성자에 해당합니다. 개별 날짜 및 시간 구성 요소 값을 기반으로 [DateTimeOffset](xref:System.DateTimeOffset) 값을 정의할 수 있습니다. 예를 들어 다음 코드는 이러한 세 가지 생성자를 사용하여 2008년 7월 1일 오전 12시 05분 +01:00과 동일한 값을 가진 [DateTimeOffset](xref:System.DateTimeOffset) 개체를 인스턴트화합니다.
 
 ```csharp
 DateTimeOffset dateAndTime;
@@ -363,7 +364,7 @@ Console.WriteLine(targetTime)
 
 ## <a name="parsing-the-string-representation-of-a-date-and-time"></a>날짜 및 시간의 문자열 표현 구문 분석
 
-[System.DateTimeOffset](xref:System.DateTimeOffset) 형식은 날짜 및 시간 문자열 표현을 [DateTimeOffset](xref:System.DateTimeOffset) 값으로 변환할 수 있게 하는 4개의 메서드를 제공합니다.
+[System.DateTimeOffset](xref:System.DateTimeOffset) 형식은 날짜 및 시간 문자열 표현을 [DateTimeOffset](xref:System.DateTimeOffset) 값으로 변환할 수 있게 하는&4;개의 메서드를 제공합니다.
 
 * [구문 분석](xref:System.DateTimeOffset.Parse(System.String)), 날짜 및 시간의 문자열 표현을 [DateTimeOffset](xref:System.DateTimeOffset) 값으로 변환하려고 시도하고 변환에 실패하는 경우 예외를 throw합니다.
 
@@ -373,7 +374,7 @@ Console.WriteLine(targetTime)
 
 * [TryParseExact](xref:System.DateTimeOffset.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.DateTimeStyles,System.DateTimeOffset@)), 지정된 형식인 날짜 및 시간의 문자열 표현을 [DateTimeOffset](xref:System.DateTimeOffset) 값으로 변환하려고 합니다. 변환에 실패하는 경우 메서드가 `false`을 반환합니다.
 
-다음 예제에서는 [DateTimeOffset](xref:System.DateTimeOffset) 값을 인스턴스화하는 이러한 4개의 문자열 변환 메서드 각각에 대한 호출을 설명합니다.
+다음 예제에서는 [DateTimeOffset](xref:System.DateTimeOffset) 값을 인스턴스화하는 이러한&4;개의 문자열 변환 메서드 각각에 대한 호출을 설명합니다.
 
 ```csharp
 string timeString; 
@@ -482,10 +483,5 @@ End If
 ## <a name="see-also"></a>참고 항목
 
 [날짜, 시간 및 표준 시간대](index.md)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

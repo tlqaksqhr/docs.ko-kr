@@ -3,16 +3,16 @@ title: ".NET Core의 단위 테스트"
 description: ".NET Core의 단위 테스트"
 keywords: .NET, .NET Core
 author: ardalis
-manager: wpickett
+ms.author: wiwagn
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
 translationtype: Human Translation
-ms.sourcegitcommit: 352d4a1fe96b701ebf9e0d60d006cfb9ed77977c
-ms.openlocfilehash: e055475200c55c2e2f890ac63b8b258aeacfae75
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 76ab06edfed3cb124ac79f0d5d0c3480c0a5f170
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -37,9 +37,4 @@ ms.openlocfilehash: e055475200c55c2e2f890ac63b8b258aeacfae75
 [xunit 및 .NET CLI를 사용하여 단위 테스트 만들기 연습](unit-testing-with-dotnet-test.md)을 사용해 보세요.
 
 XUnit 팀은 [.NET Core 및 Visual Studio에서 xunit을 사용하는 방법](http://xunit.github.io/docs/getting-started-dotnet-core.html)을 보여 주는 자습서를 작성했습니다.
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: d1a640cf-09ca-48f7-800c-a627a6d549c9
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: 1fc1edd64c330fe579f389750432665ed982976e
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: ac26821819b22aa3ea47e6945bb5c8575dcd9807
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -289,10 +290,10 @@ End Module
 `[-+]?` | 0개 이상의 더하기 기호 또는 빼기 기호를 찾습니다.
 `([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)` | 이 식을 둘러싼 바깥쪽 괄호는 이 식을 캡처링 그룹 또는 하위 식으로 정의합니다. 일치 항목을 찾은 경우 일치하는 문자열의 이 부분에 대한 정보는 [Match.Groups](xref:System.Text.RegularExpressions.Match.Groups) 속성에서 반환하는 [GroupCollection](xref:System.Text.RegularExpressions.GroupCollection) 개체의 두 번째 [Group](xref:System.Text.RegularExpressions.Group) 개체에서 검색할 수 있습니다. (컬렉션의 첫 번째 요소는 전체 일치를 나타냅니다.)
 `[0-9]{0,3}` | 10진수 0-9를 0~3개 찾습니다.
-`(,[0-9]{3})*` | 그룹 구분 기호 하나 다음에 세 개의 10진수가 있는 0개 이상의 일치 항목을 찾습니다.
+`(,[0-9]{3})*` | 그룹 구분 기호 하나 다음에 세 개의&10;진수가 있는&0;개 이상의 일치 항목을 찾습니다.
 `\.` | 단일 소수 구분 기호를 찾습니다.
-`[0-9]+` | 하나 이상의 10진수를 찾습니다.
-`(\.[0-9]+)?` | 소수 구분 기호 다음에 하나 이상의 10진수가 있는 0개 이상의 일치 항목을 찾습니다.
+`[0-9]+` | 하나 이상의&10;진수를 찾습니다.
+`(\.[0-9]+)?` | 소수 구분 기호 다음에 하나 이상의&10;진수가 있는&0;개 이상의 일치 항목을 찾습니다.
 
 ## <a name="related-topics"></a>관련 항목
 
@@ -309,10 +310,5 @@ End Module
 [System.Text.RegularExpressions](xref:System.Text.RegularExpressions)
 
 [System.Text.RegularExpressions.Regex](xref:System.Text.RegularExpressions.Regex)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

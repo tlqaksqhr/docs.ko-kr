@@ -11,12 +11,13 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
 translationtype: Human Translation
-ms.sourcegitcommit: 9cf6022fc910bc5418c03c0fa81d9432d85be3b0
-ms.openlocfilehash: f655c141a0c86da7905091c138b7ec4324cad07a
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 58c0d68b6840a07c9e5eb1848b3531181f14e973
+ms.lasthandoff: 03/02/2017
 
 ---
 
-# <a name="common-type-system-common-language-specification"></a>공용 형식 시스템 및 공용 언어 사양
+# <a name="common-type-system--common-language-specification"></a>공용 형식 시스템 및 공용 언어 사양
 
 두 용어는 .NET 환경에서 자유롭게 사용되지만, 실제로 .NET 플랫폼에서 어떻게 다중 언어 개발을 사용할 수 있고 어떻게 작동하는지 이해하는 데 중요합니다.
 
@@ -59,9 +60,4 @@ CLS는 CTS의 하위 집합입니다. 즉, CLS 규칙이 더 엄격한 경우가
 
 *   [공용 형식 시스템](https://msdn.microsoft.com/library/zcx1eb1e.aspx)
 *   [공용 언어 사양](https://msdn.microsoft.com/library/12a7a7h3.aspx)
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

@@ -3,16 +3,16 @@ title: ".NET Core 버전 관리"
 description: ".NET Core 버전 관리"
 keywords: .NET, .NET Core
 author: richlander
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
 translationtype: Human Translation
-ms.sourcegitcommit: bb15293c569fa92f1acf6315c5fe7f2cd9cb6f68
-ms.openlocfilehash: 3db91c84c887645bd3054fab70841657aa045c54
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 636c86fed9952542a256c075eb9e388b70cff174
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -158,9 +158,4 @@ GitHub의 .NET Core 리포지토리에는 매일 많은 라이브러리의 새�
   }
 }
 ```
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

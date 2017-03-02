@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: d2462fb4-6d61-44ab-8466-73f1f06c3058
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: 72e0c9401406dcac4eb693b056b88a531f2a0748
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 578b70412e876001f4462e2409739acf3609097b
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -72,7 +73,7 @@ End Module
 `(?<proto>\w+)` | 하나 이상의 단어 문자를 찾습니다. 이 그룹의 이름을 proto로 지정합니다.
 `://` | 콜론과 두 개의 슬래시 기호를 찾습니다.
 `[^/]+?` | 슬래시 기호 이외의 문자를 한 번 이상(가능한 적게) 찾습니다.
-`(?<port>:\d+)?` | 하나 이상의 숫자 문자 앞에 나오는 콜론을 0번 또는 한 번 찾습니다. 이 그룹의 이름을 port로 지정합니다.
+`(?<port>:\d+)?` | 하나 이상의 숫자 문자 앞에 나오는 콜론을&0;번 또는 한 번 찾습니다. 이 그룹의 이름을 port로 지정합니다.
 `/` | 슬래시 기호를 찾습니다.
  
 [Match.Result](xref:System.Text.RegularExpressions.Match.Result(System.String)) 메서드는 정규식 패턴에 캡처된 두 개의 명명된 그룹 값을 연결하는 `${proto}${port}` 대체 시퀀스를 확장합니다. 이 메서드는 [Match.Groups](xref:System.Text.RegularExpressions.Match.Groups) 속성에 반환된 컬렉션 개체에서 검색된 문자열을 명시적으로 연결하는 편리한 대체 방법입니다.
@@ -92,9 +93,4 @@ Console.WriteLine(m.Groups("proto").Value + m.Groups("port").Value)
 [.NET 정규식](regular-expressions.md)
 
 [정규식 예제](regex-examples.md)
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

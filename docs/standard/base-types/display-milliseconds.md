@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 78599e33-1c3f-4335-b320-751e35906338
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: 9bcec8a610ed0fd47d168e23fb1454067e2d3fac
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 7a110cf28ac8de558cd1460c61a650fc8a80e51a
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -131,7 +132,7 @@ End Module
 '    Modified full date time pattern: Wednesday, July 16, 2008 8:32:45.126 AM
 ```
 
-`fff` 형식 패턴에서는 밀리초 값의 뒤에 0이 포함됩니다. `FFF` 형식 패턴에서는 표시되지 않습니다. 다음 예제에서 차이점을 보여 줍니다.
+`fff` 형식 패턴에서는 밀리초 값의 뒤에&0;이 포함됩니다. `FFF` 형식 패턴에서는 표시되지 않습니다. 다음 예제에서 차이점을 보여 줍니다.
 
 ```csharp
 DateTime dateValue = new DateTime(2008, 7, 16, 8, 32, 45, 180); 
@@ -153,7 +154,7 @@ Console.WriteLine(dateValue.ToString("FFF"))
 
 날짜 및 시간의 밀리초 구성 요소를 포함하는 전체 사용자 지정 형식 지정자를 정의할 때 발생하는 문제는 응용 프로그램의 현재 문화권에서 사용되는 시간 요소의 정렬과 일치하지 않는 하드 코드된 형식이 정의될 수 있다는 것입니다. 더 나은 방법은 현재 문화권의 [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo) 개체에서 정의된 날짜 및 시간 표시 패턴 중 하나를 검색한 후 밀리초를 포함하도록 수정하는 것입니다. 이 방법도 예제에서 보여 줍니다. [DateTimeFormatInfo.FullDateTimePattern](xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern) 속성에서 현재 문화권의 전체 날짜 및 시간 패턴을 검색한 다음 초 패턴 뒤에 사용자 지정 패턴 `.ffff`를 삽입합니다. 예제에서는 정규식을 사용하여 이 작업을 단일 메서드 호출에서 수행합니다.
 
-사용자 지정 형식 지정자를 사용하여 밀리초가 아닌 초의 소수 자릿수를 표시할 수도 있습니다. 예를 들어 `f` 또는 `F` 사용자 지정 형식 지정자는 1/10초, `ff` 또는 `FF` 사용자 지정 형식 지정자는 1/100초, `ffff` 또는 `FFFF` 사용자 지정 형식 지정자는 1/10000초를 표시합니다. 반환된 문자열에서 밀리초의 소수 자릿수가 반올림되지 않고 잘립니다. 이 형식 지정자는 다음 예제에서 사용됩니다.
+사용자 지정 형식 지정자를 사용하여 밀리초가 아닌 초의 소수 자릿수를 표시할 수도 있습니다. 예를 들어 `f` 또는 `F` 사용자 지정 형식 지정자는&1;/10초, `ff` 또는 `FF` 사용자 지정 형식 지정자는&1;/100초, `ffff` 또는 `FFFF` 사용자 지정 형식 지정자는&1;/10000초를 표시합니다. 반환된 문자열에서 밀리초의 소수 자릿수가 반올림되지 않고 잘립니다. 이 형식 지정자는 다음 예제에서 사용됩니다.
 
 ```csharp
 DateTime dateValue = new DateTime(2008, 7, 16, 8, 32, 45, 180); 
@@ -178,17 +179,12 @@ Console.WriteLine("{0} seconds", dateValue.ToString("s.ffff"))
 ```
 
 > [!NOTE]
-> 1/10000초, 1/100000초 등 1초의 매우 작은 소수 단위를 표시할 수 있습니다. 그러나 이러한 값은 의미가 없을 수 있습니다. 날짜 및 시간 값의 자릿수는 시스템 시계의 정밀도에 따라 달라집니다.
+> 1/10000초,&1;/100000초 등&1;초의 매우 작은 소수 단위를 표시할 수 있습니다. 그러나 이러한 값은 의미가 없을 수 있습니다. 날짜 및 시간 값의 자릿수는 시스템 시계의 정밀도에 따라 달라집니다.
 
 ## <a name="see-also"></a>참고 항목
 
 [System.Globalization.DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo)
 
 [사용자 지정 날짜 및 시간 서식 문자열](custom-datetime.md)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

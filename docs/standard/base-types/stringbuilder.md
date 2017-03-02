@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: f4f5d1c7-d84d-4867-810f-2708cd6de0da
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: 2c42a4ac5fcd889eedea27b54b249f48c4848c88
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 076e10e095b50cc96187f2ec13ade2365d83dad3
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -147,7 +148,7 @@ Console.WriteLine(MyStringBuilder)
 
 ### <a name="remove"></a>제거
 
-[StringBuilder.Remove](xref:System.Text.StringBuilder.Remove(System.Int32,System.Int32)) 메서드를 사용하여 지정된 0부터 시작하는 인덱스를 기준으로 현재 [StringBuilder](xref:System.Text.StringBuilder) 개체에서 지정된 수의 문자를 제거할 수 있습니다. 다음 예에서는 [Remove](xref:System.Text.StringBuilder.Remove(System.Int32,System.Int32)) 메서드를 사용하여 [StringBuilder](xref:System.Text.StringBuilder) 개체를 단축합니다.
+[StringBuilder.Remove](xref:System.Text.StringBuilder.Remove(System.Int32,System.Int32)) 메서드를 사용하여 지정된&0;부터 시작하는 인덱스를 기준으로 현재 [StringBuilder](xref:System.Text.StringBuilder) 개체에서 지정된 수의 문자를 제거할 수 있습니다. 다음 예에서는 [Remove](xref:System.Text.StringBuilder.Remove(System.Int32,System.Int32)) 메서드를 사용하여 [StringBuilder](xref:System.Text.StringBuilder) 개체를 단축합니다.
 
 ```csharp
 StringBuilder MyStringBuilder = new StringBuilder("Hello World!");
@@ -251,9 +252,4 @@ End Module
 [기본적인 문자열 작업](basic-string-operations.md)
 
 [형식 서식 지정](formatting-types.md)
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

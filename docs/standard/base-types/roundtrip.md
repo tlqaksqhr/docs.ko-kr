@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 15690f18-1bb9-4bb8-bc11-0b737e2f0859
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: b4bf747faff171e4a90a897e5f7ef442012e7699
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 79c4da0cc6b4436fcbd5b345e23b387f2ad933d1
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -95,7 +96,7 @@ Console.WriteLine("Read {0} ({2}) from {1}.", restoredDate.ToString(), _
 '    Read 6/12/2008 6:45:15 PM (Local) from .\DateFile.txt.
 ```
 
-[DateTime](xref:System.DateTime) 값을 라운드트립할 경우 이 기술은 모든 현지 시간 및 범용 시간을 성공적으로 유지합니다. 예를 들어 로컬 [DateTime](xref:System.DateTime) 값이 미국에 있는 시스템에 저장되는 경우입니다. 태평양 표준 시간대는 미국에 있는 시스템에서 복원됩니다. 중앙 표준 시간대인 복원된 날짜 및 시간은 원래 시간보다 2시간이 늦어지며 이것은 두 표준 시간대 사이의 시간 차이를 반영합니다. 그러나 이 기술은 지정되지 않은 시간에 대해 반드시 정확하지는 않습니다. [Kind](xref:System.DateTime.Kind) 속성이 [지정되지 않음](xref:System.DateTimeKind.Unspecified)인 모든 [DateTime](xref:System.DateTime) 값은 현지 시간인 것처럼 처리됩니다. 그렇지 않은 경우 [DateTime](xref:System.DateTime)은 올바른 시점을 성공적으로 식별하지 않습니다. 이 제한에 대한 해결책은 저장 및 복원 작업의 표준 시간대와 날짜 및 시간 값을 밀접하게 연결하는 것입니다.
+[DateTime](xref:System.DateTime) 값을 라운드트립할 경우 이 기술은 모든 현지 시간 및 범용 시간을 성공적으로 유지합니다. 예를 들어 로컬 [DateTime](xref:System.DateTime) 값이 미국에 있는 시스템에 저장되는 경우입니다. 태평양 표준 시간대는 미국에 있는 시스템에서 복원됩니다. 중앙 표준 시간대인 복원된 날짜 및 시간은 원래 시간보다&2;시간이 늦어지며 이것은 두 표준 시간대 사이의 시간 차이를 반영합니다. 그러나 이 기술은 지정되지 않은 시간에 대해 반드시 정확하지는 않습니다. [Kind](xref:System.DateTime.Kind) 속성이 [지정되지 않음](xref:System.DateTimeKind.Unspecified)인 모든 [DateTime](xref:System.DateTime) 값은 현지 시간인 것처럼 처리됩니다. 그렇지 않은 경우 [DateTime](xref:System.DateTime)은 올바른 시점을 성공적으로 식별하지 않습니다. 이 제한에 대한 해결책은 저장 및 복원 작업의 표준 시간대와 날짜 및 시간 값을 밀접하게 연결하는 것입니다.
 
 ## <a name="to-round-trip-a-datetimeoffset-value"></a>DateTimeOffset 값을 라운드트립하려면
 
@@ -175,10 +176,5 @@ Console.WriteLine("Read {0} from {1}.", restoredDateOff.ToString(), fileName)
 [서식 지정 작업 수행](performing-formatting-operations.md)
 
 [표준 날짜 및 시간 서식 문자열](standard-datetime.md)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

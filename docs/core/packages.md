@@ -10,8 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
 translationtype: Human Translation
-ms.sourcegitcommit: cb2e83b35b5a4aae14c89bcbdf26b064885a477a
-ms.openlocfilehash: 6b5bb7042fdaa453966a4fc576291b3c90ee5410
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 2396b2794e88673afc1973b5bdd1e82c28fe5a13
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -145,7 +146,7 @@ ms.openlocfilehash: 6b5bb7042fdaa453966a4fc576291b3c90ee5410
 
 .NET 표준(TFM: `netstandard`) 프레임워크는 [.NET 표준 라이브러리](../standard/library.md)에 의해 정의되고 그 위에 빌드되는 API를 나타냅니다. 여러 런타임에서 실행되도록 만들어진 라이브러리는 이 프레임워크를 대상으로 하며, .NET Core, .NET Framework 및 Mono/Xamarin 같은 .NET 표준 호환 런타임에서 지원됩니다. 이러한 각 런타임은 구현하는 API에 따라 .NET 표준 버전 집합을 지원합니다. 
 
-`NETStandard.Library` 메타패키지는 `netstandard` 프레임워크를 대상으로 합니다. `netstandard`를 대상으로 하는 가장 일반적인 방법은 이 메타패키지를 참조하는 것입니다. 이 메타패키지는 최대 40개의 .NET 라이브러리 및 .NET 표준 라이브러리를 정의하는 관련 API를 설명하고 액세스할 수 있도록 합니다. 추가 API에 대한 액세스를 얻기 위해 `netstandard`를 대상으로 하는 추가 패키지를 참조할 수 있습니다.
+`NETStandard.Library` 메타패키지는 `netstandard` 프레임워크를 대상으로 합니다. `netstandard`를 대상으로 하는 가장 일반적인 방법은 이 메타패키지를 참조하는 것입니다. 이 메타패키지는 최대&40;개의 .NET 라이브러리 및 .NET 표준 라이브러리를 정의하는 관련 API를 설명하고 액세스할 수 있도록 합니다. 추가 API에 대한 액세스를 얻기 위해 `netstandard`를 대상으로 하는 추가 패키지를 참조할 수 있습니다.
 
 지정된 [NETStandard.Library 버전](versions/index.md)은 `netstandard`의 최고 노출 버전과 일치합니다(클로저를 통해). project.json의 프레임워크 참조는 기본 패키지에서 올바른 자산을 선택하는 데 사용됩니다. 이 경우 예를 들면 `netstandard1.4` 또는 `net46`과 반대로 `netstandard1.6` 자산이 필요합니다. 
 
@@ -181,11 +182,6 @@ project.json의 프레임워크 및 메타패키지 참조는 일치하지 않�
 
 .NET Core 응용 프로그램(TFM: `netcoreapp`) 프레임워크는 .NET Core 배포와 함께 제공되는 패키지 및 관련 API, 그리고 콘솔 응용 프로그램 모델을 나타냅니다. .NET Core 앱은 콘솔 응용 프로그램 모델을 대상으로 하기 때문에 이 프레임워크를 사용해야 하며, .NET Core에서만 실행되도록 만들어진 라이브러리도 마찬가지입니다. 이 프레임워크를 사용하면 앱과 라이브러리의 실행이 .NET Core로만 제한됩니다. 
 
-`Microsoft.NETCore.App` 메타패키지는 `netcoreapp` 프레임워크를 대상으로 합니다. 최대 60개 라이브러리, `NETStandard.Library` 패키지에서 제공하는 최대 40개 및 추가 20개에 대한 액세스를 제공합니다. 추가 API에 대한 액세스 권한을 얻기 위해 `netcoreapp` 또는 호환 프레임워크(예: `netstandard`)를 대상으로 하는 추가 라이브러리를 참조할 수 있습니다. 
+`Microsoft.NETCore.App` 메타패키지는 `netcoreapp` 프레임워크를 대상으로 합니다. 최대&60;개 라이브러리, `NETStandard.Library` 패키지에서 제공하는 최대&40;개 및 추가&20;개에 대한 액세스를 제공합니다. 추가 API에 대한 액세스 권한을 얻기 위해 `netcoreapp` 또는 호환 프레임워크(예: `netstandard`)를 대상으로 하는 추가 라이브러리를 참조할 수 있습니다. 
 
 다른 `netstandard` 라이브러리에서 종속성을 충족하는 경우 `Microsoft.NETCore.App`에서 제공하는 추가 라이브러리 대부분은 또한 `netstandard`를 대상으로 합니다. 즉, `netstandard` 라이브러리 역시 해당 패키지를 종속성으로 참조할 수 있습니다. 
-
-
-<!--HONumber=Nov16_HO3-->
-
-

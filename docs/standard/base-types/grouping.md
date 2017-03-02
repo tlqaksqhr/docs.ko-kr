@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: e0bf3718-e64b-460b-b73d-66678cec6093
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 6aa304f5c4ed400faddd3869006cdd011aa06466
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 05fcdadee5d932a53941386f97971c24cc912fd8
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -37,10 +38,10 @@ ms.openlocfilehash: 6aa304f5c4ed400faddd3869006cdd011aa06466
 [균형 조정 그룹 정의](#balancing-group-definitions) | 캡처 중
 [비 캡처링 그룹](#noncapturing-groups) | 비 캡처링
 [그룹 옵션](#group-options) | 비 캡처링
-[너비가 0인 긍정 Lookahead 어설션](#zero-width-positive-lookahead-assertions) | 비 캡처링
-[너비가 0인 부정 Lookahead 어설션](#zero-width-negative-lookahead-assertions) | 비 캡처링
-[너비가 0인 긍정 Lookbehind 어설션](#zero-width-positive-lookbehind-assertions) | 비 캡처링
-[너비가 0인 부정 Lookbehind 어설션](#zero-width-negative-lookbehind-assertions) | 비 캡처링
+[너비가&0;인 긍정 Lookahead 어설션](#zero-width-positive-lookahead-assertions) | 비 캡처링
+[너비가&0;인 부정 Lookahead 어설션](#zero-width-negative-lookahead-assertions) | 비 캡처링
+[너비가&0;인 긍정 Lookbehind 어설션](#zero-width-positive-lookbehind-assertions) | 비 캡처링
+[너비가&0;인 부정 Lookbehind 어설션](#zero-width-negative-lookbehind-assertions) | 비 캡처링
 [역추적하지 않는 하위 식](#nonbacktracking-subexpressions) | 비 캡처링
 
 그룹 및 정규식 개체 모델에 대한 자세한 내용은 [그룹화 구문 및 정규식 개체](#grouping-constructs-and-regular-expression-objects)를 참조하세요. 
@@ -51,12 +52,12 @@ ms.openlocfilehash: 6aa304f5c4ed400faddd3869006cdd011aa06466
 
 **(**_subexpression_**)**
 
-여기서 *subexpression*은 임의의 유효한 정규식 패턴입니다. 괄호를 사용하는 캡처는 정규식에서 여는 괄호의 순서에 따라 왼쪽에서 오른쪽으로 자동으로 번호(1부터 시작)가 매겨집니다. 번호가 0인 캡처는 전체 정규식 패턴에 의해 일치되는 텍스트입니다.
+여기서 *subexpression*은 임의의 유효한 정규식 패턴입니다. 괄호를 사용하는 캡처는 정규식에서 여는 괄호의 순서에 따라 왼쪽에서 오른쪽으로 자동으로 번호(1부터 시작)가 매겨집니다. 번호가&0;인 캡처는 전체 정규식 패턴에 의해 일치되는 텍스트입니다.
 
 > [!NOTE]
 > 기본적으로 (subexpression) 언어 요소는 일치하는 하위 식을 캡처합니다. 그러나 정규식 패턴 일치 메서드의 RegexOptions 매개 변수가 RegexOptions.ExplicitCapture 플래그를 포함하거나, n 옵션이 이 하위 식에 적용된 경우(이 항목의 뒷부분에 있는 그룹 옵션 참조) 일치하는 하위 식이 캡처되지 않습니다.
  
-캡처된 그룹에는 다음과 같은 4가지 방법으로 액세스할 수 있습니다.
+캡처된 그룹에는 다음과 같은&4;가지 방법으로 액세스할 수 있습니다.
 
 * 정규식 내의 역참조 구문을 사용합니다. 일치하는 하위 식은 **\**_number_ 구문을 통해 동일한 정규식에서 참조됩니다. 여기서 *number*는 캡처된 하위 식의 서수입니다.
 
@@ -64,7 +65,7 @@ ms.openlocfilehash: 6aa304f5c4ed400faddd3869006cdd011aa06466
 
 * [Regex.Replace](xref:System.Text.RegularExpressions.Regex.Replace(System.String,System.String)) 또는 [Match.Result](xref:System.Text.RegularExpressions.Match.Result(System.String)) 메서드 호출에서 **$**_number_ 바꾸기 시퀀스를 사용합니다. 여기서 *number*는 캡처된 하위 식의 서수입니다.
 
-* 프로그래밍 방식으로 [Match.Groups](xref:System.Text.RegularExpressions.Match.Groups) 속성에서 반환하는 [GroupCollection](xref:System.Text.RegularExpressions.GroupCollection) 개체를 사용합니다. 컬렉션에서 위치 0에 있는 멤버는 전체 정규식 일치를 나타냅니다. 각 후속 멤버는 일치하는 하위 식을 나타냅니다. 자세한 내용은 [그룹화 구문 및 정규식 개체](#grouping-constructs-and-regular-expression-objects) 섹션을 참조하세요.
+* 프로그래밍 방식으로 [Match.Groups](xref:System.Text.RegularExpressions.Match.Groups) 속성에서 반환하는 [GroupCollection](xref:System.Text.RegularExpressions.GroupCollection) 개체를 사용합니다. 컬렉션에서 위치&0;에 있는 멤버는 전체 정규식 일치를 나타냅니다. 각 후속 멤버는 일치하는 하위 식을 나타냅니다. 자세한 내용은 [그룹화 구문 및 정규식 개체](#grouping-constructs-and-regular-expression-objects) 섹션을 참조하세요.
 
 다음 예제에서는 텍스트에서 중복된 단어를 식별하는 정규식을 보여 줍니다. 정규식 패턴의 두 캡처링 그룹은 중복된 단어의 두 인스턴스를 나타냅니다. 두 번째 인스턴스는 입력 문자열의 해당 시작 위치를 보고하기 위해 캡처됩니다.
 
@@ -150,7 +151,7 @@ End Module
 
 * [Regex.Replace](xref:System.Text.RegularExpressions.Regex.Replace(System.String,System.String)) 또는 [Match.Result](xref:System.Text.RegularExpressions.Match.Result(System.String)) 메서드 호출에서 **$**_number_ 바꾸기 시퀀스를 사용합니다. 여기서 *number*는 캡처된 하위 식의 서수입니다.
 
-* 프로그래밍 방식으로 [Match.Groups](xref:System.Text.RegularExpressions.Match.Groups) 속성에서 반환하는 [GroupCollection](xref:System.Text.RegularExpressions.GroupCollection) 개체를 사용합니다. 컬렉션에서 위치 0에 있는 멤버는 전체 정규식 일치를 나타냅니다. 각 후속 멤버는 일치하는 하위 식을 나타냅니다. 명명된 캡처된 그룹은 캡처된 그룹의 번호를 매긴 후 컬렉션에 저장됩니다.
+* 프로그래밍 방식으로 [Match.Groups](xref:System.Text.RegularExpressions.Match.Groups) 속성에서 반환하는 [GroupCollection](xref:System.Text.RegularExpressions.GroupCollection) 개체를 사용합니다. 컬렉션에서 위치&0;에 있는 멤버는 전체 정규식 일치를 나타냅니다. 각 후속 멤버는 일치하는 하위 식을 나타냅니다. 명명된 캡처된 그룹은 캡처된 그룹의 번호를 매긴 후 컬렉션에 저장됩니다.
 
 * 프로그래밍 방식으로 하위 식 이름을 [GroupCollection](xref:System.Text.RegularExpressions.GroupCollection) 개체의 인덱서(C#의 경우) 또는 해당 Item 속성(Visual Basic의 경우)에 제공합니다.
 
@@ -226,7 +227,7 @@ End Module
  
 정규식에서 그룹 이름을 반복할 수 있습니다. 예를 들어 다음 예제와 같이 둘 이상의 그룹에 `digit`라는 이름을 지정할 수 있습니다. 중복된 이름의 경우 [Group](xref:System.Text.RegularExpressions.Group) 개체의 값은 입력 문자열에서 마지막으로 성공한 캡처에 의해 결정됩니다. 또한 그룹 이름이 중복되지 않은 경우와 마찬가지로 [CaptureCollection](xref:System.Text.RegularExpressions.CaptureCollection)에 각 캡처에 대한 정보가 채워집니다. 
 
-다음 예제에서 `\D+(?<digit>\d+)\D+(?<digit>\d+)?` 정규식에는 `digit`라는 그룹 발생이 두 개 포함됩니다. 첫 번째 `digit` 그룹은 하나 이상의 숫자 문자를 캡처합니다. 두 번째 `digit` 그룹은 하나 이상 숫자 문자의 0개 또는 1개 발생을 캡처합니다. 예제의 출력에 표시된 것처럼 두 번째 캡처링 그룹이 텍스트와 일치하면 해당 텍스트의 값이 [Group](xref:System.Text.RegularExpressions.Group) 개체의 값을 정의합니다. 두 번째 캡처링 그룹이 입력 문자열과 일치하지 않으면 마지막으로 성공한 일치의 값이 [Group](xref:System.Text.RegularExpressions.Group) 개체의 값을 정의합니다. 
+다음 예제에서 `\D+(?<digit>\d+)\D+(?<digit>\d+)?` 정규식에는 `digit`라는 그룹 발생이 두 개 포함됩니다. 첫 번째 `digit` 그룹은 하나 이상의 숫자 문자를 캡처합니다. 두 번째 `digit` 그룹은 하나 이상 숫자 문자의&0;개 또는&1;개 발생을 캡처합니다. 예제의 출력에 표시된 것처럼 두 번째 캡처링 그룹이 텍스트와 일치하면 해당 텍스트의 값이 [Group](xref:System.Text.RegularExpressions.Group) 개체의 값을 정의합니다. 두 번째 캡처링 그룹이 입력 문자열과 일치하지 않으면 마지막으로 성공한 일치의 값이 [Group](xref:System.Text.RegularExpressions.Group) 개체의 값을 정의합니다. 
 
 ```csharp
 using System;
@@ -309,10 +310,10 @@ End Module
 
 패턴 | 설명
 ------- | -----------
-`\D+` | 하나 이상의 10진수가 아닌 문자를 찾습니다. 
-`(?<digit>\d+)` | 하나 이상의 10진수 문자를 찾습니다. 명명된 그룹 `digit`에 일치를 할당합니다. 
-`\D+` | 하나 이상의 10진수가 아닌 문자를 찾습니다. 
-`(?<digit>\d+)?` | 하나 이상 10진수 문자의 0개 또는 1개 발생을 찾습니다. 명명된 그룹 `digit`에 일치를 할당합니다.
+`\D+` | 하나 이상의&10;진수가 아닌 문자를 찾습니다. 
+`(?<digit>\d+)` | 하나 이상의&10;진수 문자를 찾습니다. 명명된 그룹 `digit`에 일치를 할당합니다. 
+`\D+` | 하나 이상의&10;진수가 아닌 문자를 찾습니다. 
+`(?<digit>\d+)?` | 하나 이상&10;진수 문자의&0;개 또는&1;개 발생을 찾습니다. 명명된 그룹 `digit`에 일치를 할당합니다.
  
 ## <a name="balancing-group-definitions"></a>균형 조정 그룹 정의
 
@@ -335,7 +336,7 @@ End Module
 > [!NOTE]
 > 다음 예제에서 중첩된 구문의 적절한 여는 문자와 닫는 문자를 사용하도록 정규식을 수정하고 나면 이러한 정규식을 사용하여 가장 많이 중첩된 구문(예: 여러 중첩 메서드 호출을 포함하는 프로그램 코드 줄 또는 수학식)을 처리할 수 있습니다. 
  
-다음 예제에서는 균형 조정 그룹 정의를 사용하여 입력 문자열에서 왼쪽 및 오른쪽 꺾쇠괄호(<>)를 찾습니다. 이 예제에서는 일치하는 꺾쇠괄호 쌍을 추적하는 데 스택처럼 사용되는 두 개의 명명된 그룹 `Open` 및 `Close`를 정의합니다. 캡처된 각 왼쪽 꺾쇠괄호는 `Open` 그룹의 캡처 컬렉션에 푸시되고, 캡처된 각 오른쪽 꺾쇠괄호는 `Close` 그룹의 캡처 컬렉션에 푸시됩니다. 균형 조정 그룹 정의는 각 왼쪽 꺾쇠괄호에 대해 일치하는 오른쪽 꺾쇠괄호가 있도록 보장합니다. 일치하는 오른쪽 꺾쇠괄호가 없는 경우 최종 하위 패턴 `(?(Open)(?!))`는 `Open` 그룹이 비어 있지 않은 경우(및 따라서 모든 중첩된 구문이 닫히지 않은 경우)에만 평가됩니다. 최종 하위 패턴이 평가되면 찾기가 실패하는데, `(?!)` 하위 패턴이 항상 실패하는 너비가 0인 부정 lookahead 어설션이기 때문입니다. 
+다음 예제에서는 균형 조정 그룹 정의를 사용하여 입력 문자열에서 왼쪽 및 오른쪽 꺾쇠괄호(<>)를 찾습니다. 이 예제에서는 일치하는 꺾쇠괄호 쌍을 추적하는 데 스택처럼 사용되는 두 개의 명명된 그룹 `Open` 및 `Close`를 정의합니다. 캡처된 각 왼쪽 꺾쇠괄호는 `Open` 그룹의 캡처 컬렉션에 푸시되고, 캡처된 각 오른쪽 꺾쇠괄호는 `Close` 그룹의 캡처 컬렉션에 푸시됩니다. 균형 조정 그룹 정의는 각 왼쪽 꺾쇠괄호에 대해 일치하는 오른쪽 꺾쇠괄호가 있도록 보장합니다. 일치하는 오른쪽 꺾쇠괄호가 없는 경우 최종 하위 패턴 `(?(Open)(?!))`는 `Open` 그룹이 비어 있지 않은 경우(및 따라서 모든 중첩된 구문이 닫히지 않은 경우)에만 평가됩니다. 최종 하위 패턴이 평가되면 찾기가 실패하는데, `(?!)` 하위 패턴이 항상 실패하는 너비가&0;인 부정 lookahead 어설션이기 때문입니다. 
 
 ```csharp
 using System;
@@ -463,18 +464,18 @@ End Module
 패턴 | 설명
 ------- | -----------
 `^` | 문자열의 시작 부분에서 시작합니다.
-`[^<>]*` | 왼쪽 또는 오른쪽 꺾쇠괄호가 아닌 0개 이상의 문자를 찾습니다.
+`[^<>]*` | 왼쪽 또는 오른쪽 꺾쇠괄호가 아닌&0;개 이상의 문자를 찾습니다.
 `(?'Open'<)` | 왼쪽 꺾쇠괄호를 찾아 `Open`이라는 그룹에 할당합니다.
-`[^<>]*` | 왼쪽 또는 오른쪽 꺾쇠괄호가 아닌 0개 이상의 문자를 찾습니다.
-`((?'Open'<)[^<>]*) +` | 하나 이상의 왼쪽 꺾쇠괄호 다음에 왼쪽 또는 오른쪽 꺾쇠괄호가 아닌 0개 이상의 문자가 있는 일치 항목을 찾습니다. 이 그룹은 두 번째 캡처링 그룹입니다.
+`[^<>]*` | 왼쪽 또는 오른쪽 꺾쇠괄호가 아닌&0;개 이상의 문자를 찾습니다.
+`((?'Open'<)[^<>]*) +` | 하나 이상의 왼쪽 꺾쇠괄호 다음에 왼쪽 또는 오른쪽 꺾쇠괄호가 아닌&0;개 이상의 문자가 있는 일치 항목을 찾습니다. 이 그룹은 두 번째 캡처링 그룹입니다.
 `(?'Close-Open'>)` | 오른쪽 꺾쇠괄호를 찾고 `Open` 그룹과 현재 그룹 간의 부분 문자열을 `Close` 그룹에 할당한 다음 `Open` 그룹의 정의를 삭제합니다.
-`[^<>]*` | 왼쪽 및 오른쪽 꺾쇠 괄호가 아닌 문자를 0번 이상 찾습니다. 
-`((?'Close-Open'>)[^<>]*)+` | 하나 이상의 오른쪽 꺾쇠괄호 다음에 왼쪽 및 오른쪽 꺾쇠괄호가 아닌 0개 이상의 문자가 있는 일치 항목을 찾습니다. 오른쪽 꺾쇠 괄호를 찾을 때 `Open` 그룹과 현재 그룹 간의 부분 문자열을 `Close` 그룹에 할당하고 `Open` 그룹의 정의를 삭제합니다. 이 그룹은 세 번째 캡처링 그룹입니다.
-`(((?'Open'<)[^<>]*)+((?'Close-Open'>)[^<>]*)+)*` | 하나 이상의 왼쪽 꺾쇠괄호가 있고, 다음에 0개 이상의 꺾쇠괄호가 아닌 문자가 있고, 다음에 하나 이상의 오른쪽 꺾쇠괄호가 있고, 다음에 0개 이상의 꺾쇠괄호가 아닌 문자가 있는 패턴을 0개 이상 찾습니다. 오른쪽 꺾쇠괄호를 찾을 때 `Open` 그룹의 정의를 삭제하고 `Open` 그룹과 현재 그룹 간의 부분 문자열을 `Close` 그룹에 할당합니다. 이 그룹은 첫 번째 캡처링 그룹입니다.
-`(?(Open)(?!))` | `Open` 그룹이 있는 경우 빈 문자열을 찾을 수 있으면 찾기를 중단하되, 문자열에서 정규식 엔진의 위치를 앞으로 이동하지 마세요. 이는 너비가 0인 부정 lookahead 어설션입니다. 입력 문자열에는 항상 암시적으로 빈 문자열이 있기 때문에 이 찾기는 항상 실패합니다. 이 찾기의 실패는 꺾쇠괄호의 짝이 맞지 않음을 의미합니다. 
+`[^<>]*` | 왼쪽 및 오른쪽 꺾쇠 괄호가 아닌 문자를&0;번 이상 찾습니다. 
+`((?'Close-Open'>)[^<>]*)+` | 하나 이상의 오른쪽 꺾쇠괄호 다음에 왼쪽 및 오른쪽 꺾쇠괄호가 아닌&0;개 이상의 문자가 있는 일치 항목을 찾습니다. 오른쪽 꺾쇠 괄호를 찾을 때 `Open` 그룹과 현재 그룹 간의 부분 문자열을 `Close` 그룹에 할당하고 `Open` 그룹의 정의를 삭제합니다. 이 그룹은 세 번째 캡처링 그룹입니다.
+`(((?'Open'<)[^<>]*)+((?'Close-Open'>)[^<>]*)+)*` | 하나 이상의 왼쪽 꺾쇠괄호가 있고, 다음에&0;개 이상의 꺾쇠괄호가 아닌 문자가 있고, 다음에 하나 이상의 오른쪽 꺾쇠괄호가 있고, 다음에&0;개 이상의 꺾쇠괄호가 아닌 문자가 있는 패턴을&0;개 이상 찾습니다. 오른쪽 꺾쇠괄호를 찾을 때 `Open` 그룹의 정의를 삭제하고 `Open` 그룹과 현재 그룹 간의 부분 문자열을 `Close` 그룹에 할당합니다. 이 그룹은 첫 번째 캡처링 그룹입니다.
+`(?(Open)(?!))` | `Open` 그룹이 있는 경우 빈 문자열을 찾을 수 있으면 찾기를 중단하되, 문자열에서 정규식 엔진의 위치를 앞으로 이동하지 마세요. 이는 너비가&0;인 부정 lookahead 어설션입니다. 입력 문자열에는 항상 암시적으로 빈 문자열이 있기 때문에 이 찾기는 항상 실패합니다. 이 찾기의 실패는 꺾쇠괄호의 짝이 맞지 않음을 의미합니다. 
 `$` | 입력 문자열의 끝 부분을 찾습니다.
  
-최종 하위 식 `(?(Open)(?!))`는 입력 문자열의 중첩 구문이 짝이 올바르게 맞는지 여부를 나타냅니다(예: 각 왼쪽 꺾쇠괄호가 오른쪽 꺾쇠괄호와 일치하는지 여부). 최종 하위 식에서는 유효한 캡처된 그룹을 기준으로 조건부 일치를 사용합니다. 자세한 내용은 [정규식의 교체 구문](alternation.md)을 참조하세요. `Open` 그룹이 정의되어 있는 경우 정규식 엔진은 입력 문자열에서 하위 식 `(?!)`를 찾으려고 시도합니다. `Open` 그룹은 중첩 구문이 짝이 맞지 않는 경우에만 정의해야 합니다. 따라서 입력 문자열에서 찾을 패턴은 항상 찾기가 실패하도록 만드는 패턴이어야 합니다. 이 경우 `(?!)`는 항상 실패하는 너비가 0인 부정 lookahead 어설션인데, 입력 문자열의 다음 위치에는 항상 암시적으로 빈 문자열이 있기 때문입니다.
+최종 하위 식 `(?(Open)(?!))`는 입력 문자열의 중첩 구문이 짝이 올바르게 맞는지 여부를 나타냅니다(예: 각 왼쪽 꺾쇠괄호가 오른쪽 꺾쇠괄호와 일치하는지 여부). 최종 하위 식에서는 유효한 캡처된 그룹을 기준으로 조건부 일치를 사용합니다. 자세한 내용은 [정규식의 교체 구문](alternation.md)을 참조하세요. `Open` 그룹이 정의되어 있는 경우 정규식 엔진은 입력 문자열에서 하위 식 `(?!)`를 찾으려고 시도합니다. `Open` 그룹은 중첩 구문이 짝이 맞지 않는 경우에만 정의해야 합니다. 따라서 입력 문자열에서 찾을 패턴은 항상 찾기가 실패하도록 만드는 패턴이어야 합니다. 이 경우 `(?!)`는 항상 실패하는 너비가&0;인 부정 lookahead 어설션인데, 입력 문자열의 다음 위치에는 항상 암시적으로 빈 문자열이 있기 때문입니다.
 
 이 예제에서 정규식 엔진은 다음 테이블에 표시된 것처럼 입력 문자열 "<abc><mno<xyz>>"를 평가합니다.
 
@@ -565,7 +566,7 @@ End Module
 `\b` | 단어 경계에서 일치 항목 찾기를 시작합니다.
 `(?:\w+)` | 하나 이상의 단어 문자를 찾습니다. 일치하는 텍스트를 캡처된 그룹에 할당하지 않습니다.
 `\W*` | 0개 이상의 단어가 아닌 문자를 찾습니다.
-`(?:\b(?:\w+)\W*)+` | 단어 경계에서 시작하는 하나 이상의 단어 문자 뒤에 0개 이상의 단어가 아닌 문자가 한 번 이상 나타나는 패턴을 찾습니다. 일치하는 텍스트를 캡처된 그룹에 할당하지 않습니다.
+`(?:\b(?:\w+)\W*)+` | 단어 경계에서 시작하는 하나 이상의 단어 문자 뒤에&0;개 이상의 단어가 아닌 문자가 한 번 이상 나타나는 패턴을 찾습니다. 일치하는 텍스트를 캡처된 그룹에 할당하지 않습니다.
 `\.` | 마침표를 찾습니다.
  
 ## <a name="group-options"></a>그룹 옵션
@@ -612,17 +613,17 @@ Next
 '    'decidedly ' found at index 9. 
 ```
 
-## <a name="zero-width-positive-lookahead-assertions"></a>너비가 0인 긍정 lookahead 어설션
+## <a name="zero-width-positive-lookahead-assertions"></a>너비가&0;인 긍정 lookahead 어설션
 
-다음 그룹화 구문은 너비가 0인 긍정 lookahead 어설션을 정의합니다.
+다음 그룹화 구문은 너비가&0;인 긍정 lookahead 어설션을 정의합니다.
 
 **(?**=*subexpression*__)__
 
-여기서 *subexpression*은 임의의 정규식 패턴입니다. 찾기가 성공하려면 일치하는 부분 문자열이 일치 결과에 포함되지 않더라도 입력 문자열이 *subexpression*의 정규식 패턴과 일치해야 합니다. 너비가 0인 긍정 lookahead 어설션은 역추적하지 않습니다.
+여기서 *subexpression*은 임의의 정규식 패턴입니다. 찾기가 성공하려면 일치하는 부분 문자열이 일치 결과에 포함되지 않더라도 입력 문자열이 *subexpression*의 정규식 패턴과 일치해야 합니다. 너비가&0;인 긍정 lookahead 어설션은 역추적하지 않습니다.
 
-일반적으로 너비가 0인 긍정 lookahead 어설션은 정규식 패턴의 끝 부분에서 찾을 수 있으며, 일치가 발생하도록 문자열의 끝 부분에 있어야 하지만 일치에 포함되어서는 안 되는 부분 문자열을 정의합니다. 또한 이 어설션은 과도한 역추적을 방지하는 데 유용합니다. 너비가 0인 긍정 lookahead 어설션을 사용하여, 특정 캡처된 그룹이 해당 캡처된 그룹에 대해 정의된 패턴의 하위 집합과 일치하는 텍스트로 시작하도록 할 수 있습니다. 예를 들어, 캡처링 그룹이 연속 단어 문자와 일치하는 경우 너비가 0인 긍정 lookahead 어설션을 사용하여 첫 번째 문자가 대문자 영문자가 되도록 할 수 있습니다.
+일반적으로 너비가&0;인 긍정 lookahead 어설션은 정규식 패턴의 끝 부분에서 찾을 수 있으며, 일치가 발생하도록 문자열의 끝 부분에 있어야 하지만 일치에 포함되어서는 안 되는 부분 문자열을 정의합니다. 또한 이 어설션은 과도한 역추적을 방지하는 데 유용합니다. 너비가&0;인 긍정 lookahead 어설션을 사용하여, 특정 캡처된 그룹이 해당 캡처된 그룹에 대해 정의된 패턴의 하위 집합과 일치하는 텍스트로 시작하도록 할 수 있습니다. 예를 들어, 캡처링 그룹이 연속 단어 문자와 일치하는 경우 너비가&0;인 긍정 lookahead 어설션을 사용하여 첫 번째 문자가 대문자 영문자가 되도록 할 수 있습니다.
 
-다음 예제에서는 너비가 0인 긍정 lookahead 어설션을 사용하여 입력 문자열에서 동사 "is" 앞에 오는 단어를 찾습니다. 
+다음 예제에서는 너비가&0;인 긍정 lookahead 어설션을 사용하여 입력 문자열에서 동사 "is" 앞에 오는 단어를 찾습니다. 
 
 ```csharp
 using System;
@@ -691,17 +692,17 @@ End Module
 `\w+` | 하나 이상의 단어 문자를 찾습니다.
 `(?=\sis\b)` | 단어 문자 뒤에 공백 문자와 문자열 "is"(단어 경계에서 끝남)가 오는지 여부를 확인합니다. 그럴 경우 찾기가 성공합니다.
 
-## <a name="zero-width-negative-lookahead-assertions"></a>너비가 0인 부정 lookahead 어설션
+## <a name="zero-width-negative-lookahead-assertions"></a>너비가&0;인 부정 lookahead 어설션
 
-다음 그룹화 구문은 너비가 0인 부정 lookahead 어설션을 정의합니다.
+다음 그룹화 구문은 너비가&0;인 부정 lookahead 어설션을 정의합니다.
 
 **(?!**_subexpression_**)**
 
 여기서 *subexpression*은 임의의 정규식 패턴입니다. 찾기가 성공하려면 일치하는 문자열이 일치 결과에 포함되지 않더라도 입력 문자열이 *subexpression*의 정규식 패턴과 일치해서는 안 됩니다. 
 
-너비가 0인 부정 lookahead 어설션은 일반적으로 정규식의 시작 부분이나 끝 부분에 사용됩니다. 정규식의 시작 부분에서 이 어설션은 정규식의 시작 부분이 유사하지만 더 일반적인 찾으려는 패턴을 정의할 때 일치해서는 안 되는 특정 패턴을 정의할 수 있습니다. 이 경우 이 어설션은 흔히 역추적을 제한하는 데 사용됩니다. 정규식의 끝 부분에서 이 어설션은 일치의 끝 부분에서 발생할 수 없는 하위 식을 정의할 수 있습니다. 
+너비가&0;인 부정 lookahead 어설션은 일반적으로 정규식의 시작 부분이나 끝 부분에 사용됩니다. 정규식의 시작 부분에서 이 어설션은 정규식의 시작 부분이 유사하지만 더 일반적인 찾으려는 패턴을 정의할 때 일치해서는 안 되는 특정 패턴을 정의할 수 있습니다. 이 경우 이 어설션은 흔히 역추적을 제한하는 데 사용됩니다. 정규식의 끝 부분에서 이 어설션은 일치의 끝 부분에서 발생할 수 없는 하위 식을 정의할 수 있습니다. 
 
-다음 예제에서는 "un"으로 시작하지 않는 단어를 찾기 위해 정규식의 시작 부분에서 너비가 0인 lookahead 어설션을 사용하는 정규식을 정의합니다. 
+다음 예제에서는 "un"으로 시작하지 않는 단어를 찾기 위해 정규식의 시작 부분에서 너비가&0;인 lookahead 어설션을 사용하는 정규식을 정의합니다. 
 
 ```csharp
 using System;
@@ -752,7 +753,7 @@ End Module
 `\w+` | 하나 이상의 단어 문자를 찾습니다.
 `\b` | 단어 경계에서 일치 항목 찾기를 끝냅니다.
  
-다음 예제에서는 문장 부호 문자로 끝나지 않는 단어를 찾기 위해 정규식의 끝 부분에서 너비가 0인 lookahead 어설션을 사용하는 정규식을 정의합니다.
+다음 예제에서는 문장 부호 문자로 끝나지 않는 단어를 찾기 위해 정규식의 끝 부분에서 너비가&0;인 lookahead 어설션을 사용하는 정규식을 정의합니다.
 
 ```csharp
 using System;
@@ -805,17 +806,17 @@ End Module
 `\b` | 단어 경계에서 일치 항목 찾기를 끝냅니다.
 `\p{P})` | 다음 문자가 문장 부호 기호(예: 마침표 또는 쉼표)가 아닌 경우 찾기가 성공합니다.
  
-## <a name="zero-width-positive-lookbehind-assertions"></a>너비가 0인 긍정 lookbehind 어설션
+## <a name="zero-width-positive-lookbehind-assertions"></a>너비가&0;인 긍정 lookbehind 어설션
 
-다음 그룹화 구문은 너비가 0인 긍정 lookbehind 어설션을 정의합니다.
+다음 그룹화 구문은 너비가&0;인 긍정 lookbehind 어설션을 정의합니다.
 
 **(?<=**_subexpression_**)**
 
-여기서 *subexpression*은 임의의 정규식 패턴입니다. 찾기가 성공하려면 이 일치 결과에 포함되지 않더라도 *subexpression*이 입력 문자열의 현재 위치 왼쪽에서 발생해야 합니다. 너비가 0인 긍정 lookbehind 어설션은 역추적하지 않습니다.
+여기서 *subexpression*은 임의의 정규식 패턴입니다. 찾기가 성공하려면 이 일치 결과에 포함되지 않더라도 *subexpression*이 입력 문자열의 현재 위치 왼쪽에서 발생해야 합니다. 너비가&0;인 긍정 lookbehind 어설션은 역추적하지 않습니다.
 
-너비가 0인 긍정 lookbehind 어설션은 일반적으로 정규식의 시작 부분에 사용됩니다. 이 어설션이 정의하는 패턴은 이 패턴이 일치 결과에 포함되지 않더라도 일치에 대한 사전 조건입니다. 
+너비가&0;인 긍정 lookbehind 어설션은 일반적으로 정규식의 시작 부분에 사용됩니다. 이 어설션이 정의하는 패턴은 이 패턴이 일치 결과에 포함되지 않더라도 일치에 대한 사전 조건입니다. 
 
-예를 들어, 다음 예제에서는 21세기 연도의 마지막 두 자리를 찾습니다(즉, 숫자 "20"이 일치하는 문자열 앞에 와야 함).
+예를 들어, 다음 예제에서는&21;세기 연도의 마지막 두 자리를 찾습니다(즉, 숫자 "20"이 일치하는 문자열 앞에 와야 함).
 
 ```csharp
 using System;
@@ -859,21 +860,21 @@ End Module
 
 패턴 | 설명
 ------- | -----------
-`\d{2}` | 두 개의 10진수를 찾습니다.
-`{?<=\b20)` | 단어 경계에서 두 개의 10진수 앞에 10진수 "20"이 있는 경우 일치 항목 찾기를 계속합니다.
+`\d{2}` | 두 개의&10;진수를 찾습니다.
+`{?<=\b20)` | 단어 경계에서 두 개의&10;진수 앞에&10;진수 "20"이 있는 경우 일치 항목 찾기를 계속합니다.
 `\b` | 단어 경계에서 일치 항목 찾기를 끝냅니다.
  
-너비가 0인 긍정 lookbehind 어설션은 캡처된 그룹의 마지막 문자(하나 또는 여러 개)가 해당 그룹의 정규식 패턴과 일치하는 문자의 하위 집합이어야 하는 경우 역추적을 제한하는 데도 사용됩니다. 예를 들어, 그룹이 모든 연속 단어 문자를 캡처하는 경우 너비가 0인 긍정 lookbehind 어설션을 사용하여 마지막 문자가 사전순이 되도록 할 수 있습니다. 
+너비가&0;인 긍정 lookbehind 어설션은 캡처된 그룹의 마지막 문자(하나 또는 여러 개)가 해당 그룹의 정규식 패턴과 일치하는 문자의 하위 집합이어야 하는 경우 역추적을 제한하는 데도 사용됩니다. 예를 들어, 그룹이 모든 연속 단어 문자를 캡처하는 경우 너비가&0;인 긍정 lookbehind 어설션을 사용하여 마지막 문자가 사전순이 되도록 할 수 있습니다. 
 
-## <a name="zero-width-negative-lookbehind-assertions"></a>너비가 0인 부정 lookbehind 어설션
+## <a name="zero-width-negative-lookbehind-assertions"></a>너비가&0;인 부정 lookbehind 어설션
 
-다음 그룹화 구문은 너비가 0인 부정 lookbehind 어설션을 정의합니다.
+다음 그룹화 구문은 너비가&0;인 부정 lookbehind 어설션을 정의합니다.
 
 **(?<!**_subexpression_**)**
 
 여기서 *subexpression*은 임의의 정규식 패턴입니다. 찾기가 성공하려면 *subexpression*이 입력 문자열의 현재 위치 왼쪽에서 발생해서는 안 됩니다. 그러나 하위 식과 일치하지 않는 모든 부분 문자열은 일치 결과에 포함되지 않습니다.
 
-너비가 0인 부정 lookbehind 어설션은 일반적으로 정규식의 시작 부분에 사용됩니다. 이 어설션이 정의하는 패턴은 뒤에 오는 문자열에서 일치가 불가능하도록 합니다. 또한 이 어설션은 캡처된 그룹의 마지막 문자(하나 또는 여러 개)가 해당 그룹의 정규식 패턴과 일치하는 하나 이상의 문자가 아니어야 하는 경우 역추적을 제한하는 데도 사용됩니다. 예를 들어, 그룹이 모든 연속 단어 문자를 캡처하는 경우 너비가 0인 긍정 lookbehind 어설션을 사용하여 마지막 문자가 밑줄(_)이 아니도록 할 수 있습니다.
+너비가&0;인 부정 lookbehind 어설션은 일반적으로 정규식의 시작 부분에 사용됩니다. 이 어설션이 정의하는 패턴은 뒤에 오는 문자열에서 일치가 불가능하도록 합니다. 또한 이 어설션은 캡처된 그룹의 마지막 문자(하나 또는 여러 개)가 해당 그룹의 정규식 패턴과 일치하는 하나 이상의 문자가 아니어야 하는 경우 역추적을 제한하는 데도 사용됩니다. 예를 들어, 그룹이 모든 연속 단어 문자를 캡처하는 경우 너비가&0;인 긍정 lookbehind 어설션을 사용하여 마지막 문자가 밑줄(_)이 아니도록 할 수 있습니다.
 
 다음 예제에서는 주말이 아닌 평일인 날짜를 찾습니다(즉, 토요일 및 일요일이 아님). 
 
@@ -938,8 +939,8 @@ End Module
 ------- | -----------
 `\b` | 단어 경계에서 일치 항목 찾기를 시작합니다.
 `\w+` | 하나 이상의 단어 문자 다음에 공백 문자가 있는 일치 항목을 찾습니다.
-`\d{1,2},` | 한 개 또는 두 개의 10진수 다음에 공백 문자 하나와 쉼표 하나가 있는 일치 항목을 찾습니다.
-`\d{4}\b` | 네 개의 10진수를 찾고 단어 경계에서 일치 항목 찾기를 끝냅니다.
+`\d{1,2},` | 한 개 또는 두 개의&10;진수 다음에 공백 문자 하나와 쉼표 하나가 있는 일치 항목을 찾습니다.
+`\d{4}\b` | 네 개의&10;진수를 찾고 단어 경계에서 일치 항목 찾기를 끝냅니다.
 `(?<!(Saturday|Sunday) )` | 일치 항목 앞에 문자열 "Saturday" 또는 "Sunday"가 아닌 문자열이 있고 해당 문자열 뒤에 공백이 하나 있으면 찾기가 성공한 것입니다.
 
 ## <a name="nonbacktracking-subexpressions"></a>역추적하지 않는 하위 식
@@ -1058,11 +1059,11 @@ End Module
 
 정규식 캡처링 그룹과 일치하는 부분 문자열은 [System.Text.RegularExpressions.Group](xref:System.Text.RegularExpressions.Group) 개체로 표현됩니다. 이 개체는 [Match.Groups](xref:System.Text.RegularExpressions.Match.Groups) 속성에서 반환하는 [System.Text.RegularExpressions.GroupCollection](xref:System.Text.RegularExpressions.GroupCollection) 개체에서 검색할 수 있습니다. [GroupCollection](xref:System.Text.RegularExpressions.GroupCollection) 개체는 다음과 같이 채워집니다.
 
-* 컬렉션의 첫 번째 [Group](xref:System.Text.RegularExpressions.Group) 개체(인덱스 0에 있는 개체)는 전체 일치를 나타냅니다.
+* 컬렉션의 첫 번째 [Group](xref:System.Text.RegularExpressions.Group) 개체(인덱스&0;에 있는 개체)는 전체 일치를 나타냅니다.
 
 * 다음 [Group](xref:System.Text.RegularExpressions.Group) 개체 집합은 명명되지 않은(번호가 매겨진) 캡처링 그룹을 나타냅니다. 이러한 그룹은 정규식에서 정의된 순서로 왼쪽에서 오른쪽으로 나타납니다. 이러한 그룹의 인덱스 값 범위는 1에서 컬렉션에 있는 명명되지 않은 캡처링 그룹 수까지입니다. (특정 그룹의 인덱스는 번호가 매겨진 해당 역참조와 같습니다. 역참조에 대한 자세한 내용은 [정규식의 역참조 구문](backreference.md)을 참조하세요.
 
-* 최종 [Group](xref:System.Text.RegularExpressions.Group) 개체 집합은 명명된 캡처링 그룹을 나타냅니다. 이러한 그룹은 정규식에서 정의된 순서로 왼쪽에서 오른쪽으로 나타납니다. 명명된 첫 번째 캡처링 그룹의 인덱스 값은 명명되지 않은 마지막 캡처링 그룹의 인덱스보다 1 큽니다. 정규식에 명명되지 않은 캡처링 그룹이 없는 경우 명명된 첫 번째 캡처링 그룹의 인덱스 값은 1입니다. 
+* 최종 [Group](xref:System.Text.RegularExpressions.Group) 개체 집합은 명명된 캡처링 그룹을 나타냅니다. 이러한 그룹은 정규식에서 정의된 순서로 왼쪽에서 오른쪽으로 나타납니다. 명명된 첫 번째 캡처링 그룹의 인덱스 값은 명명되지 않은 마지막 캡처링 그룹의 인덱스보다&1; 큽니다. 정규식에 명명되지 않은 캡처링 그룹이 없는 경우 명명된 첫 번째 캡처링 그룹의 인덱스 값은&1;입니다. 
 
 
 캡처링 그룹에 수량자를 적용하는 경우 해당 [Group](xref:System.Text.RegularExpressions.Group) 개체의 [Capture.Value](xref:System.Text.RegularExpressions.Capture.Value), [Capture.Index](xref:System.Text.RegularExpressions.Capture.Index) 및 [Capture.Length](xref:System.Text.RegularExpressions.Capture.Length) 속성은 캡처링 그룹에 의해 캡처된 마지막 부분 문자열을 반영합니다. [Group.Captures](xref:System.Text.RegularExpressions.Group.Captures) 속성에서 반환하는 [CaptureCollection](xref:System.Text.RegularExpressions.CaptureCollection) 개체의 수량자를 포함하는 그룹에 의해 캡처된 부분 문자열의 전체 집합을 검색할 수 있습니다.
@@ -1160,9 +1161,4 @@ End Module
 [정규식 언어 - 빠른 참조](quick-ref.md)
 
 [정규식의 역추적](backtracking.md)
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

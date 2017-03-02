@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
 translationtype: Human Translation
-ms.sourcegitcommit: 30175813af95911c8ab4f2f0e39c40bed49a23b3
-ms.openlocfilehash: e6212a63e74f2d1525e87480b092861be9f92379
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: ec5619e164be44205060d790ba1dc66e261faf92
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -39,9 +40,4 @@ ECMA 335 II.25.1 런타임 파일 형식 구조의 어셈블리 헤더입니다.
 ## <a name="processing-the-assemblies"></a>어셈블리 처리
 
 어셈블리를 처리할 도구 또는 API를 작성할 수 있습니다. 어셈블리 정보를 사용하면 런타임에 프로그래밍 방식으로 결정을 내리고, 어셈블리를 다시 작성하고, 편집기에서 API IntelliSense를 제공하고, 설명서를 생성할 수 있습니다. [System.Reflection](https://msdn.microsoft.com/library/system.reflection.aspx) 및 [Mono.Cecil](http://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/)은 이러한 용도에 자주 사용되는 도구의 좋은 예입니다.
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

@@ -11,14 +11,15 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 4d581898-99bc-42c3-816c-d8238f45096f
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: 9f5b60a75bf4b92b88d249be2f95f312ddb6909c
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 804884f75eb30764c0b8aaf2c8cd115029811157
+ms.lasthandoff: 03/02/2017
 
 ---
 
 # <a name="enumeration-format-strings"></a>열거형 형식 문자열
 
-[Enum.ToString](xref:System.Enum.ToString) 메서드를 사용하여 열거형 멤버의 숫자, 16진수 또는 문자열 값을 나타내는 새 문자열 개체를 만들 수 있습니다. 이 메서드는 열거형 형식 문자열 중 하나를 사용하여 반환할 값을 지정합니다.
+[Enum.ToString](xref:System.Enum.ToString) 메서드를 사용하여 열거형 멤버의 숫자,&16;진수 또는 문자열 값을 나타내는 새 문자열 개체를 만들 수 있습니다. 이 메서드는 열거형 형식 문자열 중 하나를 사용하여 반환할 값을 지정합니다.
 
 다음 섹션에서는 열거형 형식 문자열과 반환되는 값을 보여 줍니다. 이러한 형식 지정자는 대/소문자를 구분하지 않습니다.
 
@@ -78,7 +79,7 @@ Console.WriteLine(attributes.ToString("D"))                  ' Displays 34
 
 ## <a name="the-x-or-x-format-strings"></a>X 또는 x 형식 문자열
 
-X 또는 x 형식 문자열은 열거형 항목을 16진수 값으로 표시합니다. 필요에 따라 값 앞에 0을 추가하여 값의 길이가 최소 8자리가 되도록 합니다. 다음 예제에서는 X 형식 지정자를 보여 줍니다.
+X 또는 x 형식 문자열은 열거형 항목을&16;진수 값으로 표시합니다. 필요에 따라 값 앞에&0;을 추가하여 값의 길이가 최소&8;자리가 되도록 합니다. 다음 예제에서는 X 형식 지정자를 보여 줍니다.
 
 ```csharp
 Console.WriteLine(ConsoleColor.Cyan.ToString("X"));   // Displays 0000000B
@@ -157,10 +158,5 @@ Console.WriteLine("The value of myColor is 0x{0}.", _
 ## <a name="see-also"></a>참고 항목
 
 [형식 서식 지정](formatting-types.md)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

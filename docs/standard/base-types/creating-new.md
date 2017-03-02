@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 639397c7-e694-43e0-845b-1681c62bd9fd
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: 29a0ca2d58bb6ae037a97c84a53ce388da2dbeae
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 793b5bc4b26967104459fa2559c6127bb82f3a9d
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -114,7 +115,7 @@ Console.WriteLine(String.Join(" ", words))
 
 ### <a name="insert"></a>Insert
 
-`String.Insert` 메서드는 다른 문자열의 지정된 위치에 문자열을 삽입하여 새 문자열을 만듭니다. 이 메서드는 0부터 시작하는 인덱스를 사용합니다. 다음 예제에서는 `MyString`의 다섯 번째 인덱스 위치에 문자열을 삽입하고 이 값으로 새 문자열을 만듭니다.
+`String.Insert` 메서드는 다른 문자열의 지정된 위치에 문자열을 삽입하여 새 문자열을 만듭니다. 이 메서드는&0;부터 시작하는 인덱스를 사용합니다. 다음 예제에서는 `MyString`의 다섯 번째 인덱스 위치에 문자열을 삽입하고 이 값으로 새 문자열을 만듭니다.
 
 ```csharp
 string sentence = "Once a time.";   
@@ -131,7 +132,7 @@ Dim sentence As String = "Once a time."
 
 ### <a name="copyto"></a>CopyTo
 
-`String.CopyTo` 메서드는 문자열의 일부를 문자 배열에 복사합니다. 기존 문자열의 시작 인덱스와 복사할 문자 수를 둘 다 지정할 수 있습니다. 이 메서드는 소스 인덱스, 문자 배열, 대상 인덱스 및 복사할 문자 수를 사용합니다. 모든 인덱스는 0부터 시작합니다.
+`String.CopyTo` 메서드는 문자열의 일부를 문자 배열에 복사합니다. 기존 문자열의 시작 인덱스와 복사할 문자 수를 둘 다 지정할 수 있습니다. 이 메서드는 소스 인덱스, 문자 배열, 대상 인덱스 및 복사할 문자 수를 사용합니다. 모든 인덱스는&0;부터 시작합니다.
 
 다음 예제에서는 `CopyTo` 메서드를 사용하여 문자열 개체에서 "Hello" 단어의 문자를 문자 배열의 첫 번째 인덱스 위치에 복사합니다.
 
@@ -162,10 +163,5 @@ Console.WriteLine("The new character array: {0}", New String(charArray))
 [기본적인 문자열 작업](basic-string-operations.md)
 
 [복합 서식 지정](composite-format.md)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

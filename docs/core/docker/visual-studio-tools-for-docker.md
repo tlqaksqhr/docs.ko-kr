@@ -11,8 +11,9 @@ ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 1f3b9a68-4dea-4b60-8cb3-f46164eedbbf
 translationtype: Human Translation
-ms.sourcegitcommit: 03193513706967a46f74bccdba08a56946dd67df
-ms.openlocfilehash: 274402bbd254e97d88771675daf07995983914aa
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: d3ea05484650d64284affa70c7377df929e44bfc
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -123,9 +124,4 @@ microsoft/aspnetcore       1.0.1               189ad4312ce7        5 days ago   
 ```
 
 **dev** 이미지에 비해 프로덕션 또는 릴리스 이미지의 크기가 더 작을 수 있다고 예상할 수도 있지만, 볼륨 매핑을 사용하여 디버거와 응용 프로그램은 실제로 컨테이너 내에서가 아니라 로컬 컴퓨터에서 실행되었습니다. **최신** 이미지는 호스트 컴퓨터에서 응용 프로그램을 실행하기 위해 필요한 전체 응용 프로그램 코드를 패키지했으므로, 델타가 응용 프로그램 코드의 크기입니다.
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

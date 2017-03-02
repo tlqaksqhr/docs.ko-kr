@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 9e70255a-c02a-4046-86b7-10c84bab2d38
 translationtype: Human Translation
-ms.sourcegitcommit: cfe65fcba1b3fdc09ffcac704a760d8ce29ea60b
-ms.openlocfilehash: a6ebc7bfcd42b93505a2e5c2c460f4f2cbe618a0
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 30e53c38bd58e15668e01f2af79defb0a0918192
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -34,7 +35,7 @@ ms.openlocfilehash: a6ebc7bfcd42b93505a2e5c2c460f4f2cbe618a0
     
 * **컬렉션의 내용을 배열에 복사하는 기능**
 
-   `CopyTo` 메서드를 사용하면 모든 컬렉션을 배열에 복사할 수 있습니다. 그러나 새 배열의 요소 순서는 열거자가 요소를 반환하는 시퀀스를 기준으로 합니다. 결과 배열은 항상 1차원이며 하한은 0입니다.
+   `CopyTo` 메서드를 사용하면 모든 컬렉션을 배열에 복사할 수 있습니다. 그러나 새 배열의 요소 순서는 열거자가 요소를 반환하는 시퀀스를 기준으로 합니다. 결과 배열은 항상&1;차원이며 하한은&0;입니다.
     
 또한 다수의 컬렉션 클래스에는 다음 기능도 포함되어 있습니다.
 
@@ -48,7 +49,7 @@ ms.openlocfilehash: a6ebc7bfcd42b93505a2e5c2c460f4f2cbe618a0
     
 *   **일관된 하한**
 
-   컬렉션의 하한은 첫 번째 요소의 인덱스입니다. [System.Collections](https://docs.microsoft.com/dotnet/core/api/System.Collections) 네임스페이스의 모든 인덱싱된 컬렉션은 하한이 0입니다. 즉, 0부터 인덱싱됩니다. 기본적으로 [Array](https://docs.microsoft.com/dotnet/core/api/System.Array)의 하한은 0이지만 `Array.CreateInstance`를 사용하여 `Array` 클래스의 인스턴스를 만들 때 다른 하한을 정의할 수 있습니다.
+   컬렉션의 하한은 첫 번째 요소의 인덱스입니다. [System.Collections](https://docs.microsoft.com/dotnet/core/api/System.Collections) 네임스페이스의 모든 인덱싱된 컬렉션은 하한이 0입니다. 즉, 0부터 인덱싱됩니다. 기본적으로 [Array](https://docs.microsoft.com/dotnet/core/api/System.Array)의 하한은&0;이지만 `Array.CreateInstance`를 사용하여 `Array` 클래스의 인스턴스를 만들 때 다른 하한을 정의할 수 있습니다.
 
 *   **여러 스레드로부터의 액세스를 위한 동기화**([System.Collections](https://docs.microsoft.com/dotnet/core/api/System.Collections) 클래스에만 해당됨).
 
@@ -95,9 +96,4 @@ LIFO(후입 선출) 방식으로 데이터 사용 | [System.Collections.Generic.
 
 [System.Linq](https://docs.microsoft.com/dotnet/core/api/System.Linq)
   
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

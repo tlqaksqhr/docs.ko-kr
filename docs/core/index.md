@@ -3,16 +3,16 @@ title: .NET Core
 description: .NET Core
 keywords: .NET, .NET Core
 author: richlander
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: f2b312cb-f80c-4b0d-9101-93908f06a6fa
 translationtype: Human Translation
-ms.sourcegitcommit: 8ada0e4c57febd4068be69330e7f9633517ce7ff
-ms.openlocfilehash: 8b6b38aa7f59002dcfbb229ce6522df67b611028
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 26210b19de4f7bf70c085735771b0175945f38d4
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -152,9 +152,4 @@ Windows 및 Unix 구현은 크기가 비슷합니다. CoreFX는 [Microsoft.Win32
 - **플랫폼** -- Mono는 여러 플랫폼 및 CPU를 지원합니다.
 - **오픈 소스** -- Mono와 .NET Core 둘 다 MIT 라이선스를 사용하며 .NET Foundation 프로젝트입니다.
 - **포커스** -- 최근 몇 년 간 Mono의 주요 포커스는 모바일 플랫폼인 반면 .NET Core의 포커스는 클라우드 워크로드입니다.
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

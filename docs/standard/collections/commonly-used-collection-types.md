@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 55861611-1e40-4cc2-9ec5-0b2df4ba6c0c
 translationtype: Human Translation
-ms.sourcegitcommit: d4e7ef84480aa9f735fb8d1ff03c9e8a61127c83
-ms.openlocfilehash: 6cadcd91810f08900b58e402240e8a469fad2018
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: f44b8a87bf263032b991fc1bbc70712136910106
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -24,7 +25,7 @@ ms.openlocfilehash: 6cadcd91810f08900b58e402240e8a469fad2018
 
 강력한 형식을 지정하려면 제네릭 컬렉션을 사용하는 것이 가장 좋습니다. 그러나 사용 중인 언어에서 제네릭을 지원하지 않는 경우에는 강력한 형식이 지정되는 컬렉션 클래스를 만들기 위해 확장 가능한 [`CollectionBase`](https://docs.microsoft.com/dotnet/core/api/System.Collections.CollectionBase), [`ReadOnlyCollectionBase`](https://docs.microsoft.com/dotnet/core/api/System.Collections.ReadOnlyCollectionBase), [`DictionaryBase`](https://docs.microsoft.com/dotnet/core/api/System.Collections.DictionaryBase) 등의 추상 기본 컬렉션이 [`System.Collections`](https://docs.microsoft.com/dotnet/core/api/System.Collections) 네임스페이스에 포함되어 있습니다. 다중 스레드 컬렉션에 효율적으로 액세스하려면 [`System.Collections.Concurrent`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent) 네임 스페이스에서 제네릭 컬렉션을 사용해야 합니다.
 
-컬렉션은 요소 저장/정렬 방식과 검색/비교 수행 방식에 따라 달라질 수 있습니다. [`Queue`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Queue) 클래스와 [`Queue<T>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Queue-1) 제네릭 클래스는 FIFO(선입 선출) 목록을 제공하는 반면 [`Stack`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Stack) 클래스와 [`Stack<T>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Stack-1) 제네릭 클래스는 LIFO(후입 선출) 목록을 제공합니다. [`SortedList`](https://docs.microsoft.com/dotnet/core/api/System.Collections.SortedList) 클래스와 [`SortedList<TKey, TValue>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.SortedList-2) 제네릭 클래스는 정렬된 버전의 [`Hashtable`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Hashtable) 클래스와 [`Dictionary<TKey, TValue>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Dictionary-2) 제네릭 클래스를 제공합니다. `Hashtable` 또는 `Dictionary<TKey, TValue>` 요소는 요소 키를 통해 액세스할 수 있지만 `SortedList` 또는 [`KeyedCollection<TKey, TItem>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.ObjectModel.KeyedCollection-2) 요소는 요소 키나 인덱스를 통해 액세스할 수 있습니다. 컬렉션의 인덱스는 모두 0부터 시작됩니다(0부터 시작하지 않는 배열을 허용하는 [`Array`](https://docs.microsoft.com/dotnet/core/api/System.Array) 제외).
+컬렉션은 요소 저장/정렬 방식과 검색/비교 수행 방식에 따라 달라질 수 있습니다. [`Queue`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Queue) 클래스와 [`Queue<T>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Queue-1) 제네릭 클래스는 FIFO(선입 선출) 목록을 제공하는 반면 [`Stack`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Stack) 클래스와 [`Stack<T>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Stack-1) 제네릭 클래스는 LIFO(후입 선출) 목록을 제공합니다. [`SortedList`](https://docs.microsoft.com/dotnet/core/api/System.Collections.SortedList) 클래스와 [`SortedList<TKey, TValue>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.SortedList-2) 제네릭 클래스는 정렬된 버전의 [`Hashtable`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Hashtable) 클래스와 [`Dictionary<TKey, TValue>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Dictionary-2) 제네릭 클래스를 제공합니다. `Hashtable` 또는 `Dictionary<TKey, TValue>` 요소는 요소 키를 통해 액세스할 수 있지만 `SortedList` 또는 [`KeyedCollection<TKey, TItem>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.ObjectModel.KeyedCollection-2) 요소는 요소 키나 인덱스를 통해 액세스할 수 있습니다. 컬렉션의 인덱스는 모두&0;부터 시작됩니다(0부터 시작하지 않는 배열을 허용하는 [`Array`](https://docs.microsoft.com/dotnet/core/api/System.Array) 제외).
 
 개체 형식이 [`IEnumerable`](https://docs.microsoft.com/dotnet/core/api/System.Collections.IEnumerable) 또는 [`IEnumerable<T>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IEnumerable-1)를 구현하는 경우에는 LINQ to Objects 기능을 사용하여 LINQ 쿼리를 통해 메모리 내 개체에 액세스할 수 있습니다. LINQ 쿼리는 데이터 액세스를 위한 일반 패턴을 제공하고, 일반적으로 표준 foreach 루프에 비해 간결하고 쉽게 읽을 수 있으며, 필터링, 순서 지정 및 그룹화 기능을 제공합니다. 또한 LINQ 쿼리를 통해 성능을 향상시킬 수도 있습니다.
 
@@ -55,9 +56,4 @@ ms.openlocfilehash: 6cadcd91810f08900b58e402240e8a469fad2018
 [`System.Collections.Generic.IDictionary<TKey, TValue>`](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IDictionary-2)
 
 [`System.Linq`](https://docs.microsoft.com/dotnet/core/api/System.Linq)
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 
