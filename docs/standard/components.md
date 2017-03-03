@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2e38e9d9-8284-46ee-a15f-199adc4f26f4
 translationtype: Human Translation
-ms.sourcegitcommit: 254e89abefd28419bd2f36a047e4df939f7ff8da
-ms.openlocfilehash: d0cd8f44876038167db23e7fd1e5a893460f3d73
+ms.sourcegitcommit: 7741df222250f3746abb1e3c359bd9e89e6a732c
+ms.openlocfilehash: e93764ff4d3391110c79f73a34512bd073ce0499
+ms.lasthandoff: 01/18/2017
 
 ---
 
@@ -80,10 +81,6 @@ Mono에 대한 자세한 내용은 [Mono 설명서](http://www.mono-project.com/
 * [.NET Core 가이드](../core/index.md)
 * [.NET Framework 가이드](../framework/index.md)
 * [C# 가이드](../csharp/index.md)
-* [F# 가이드](../csharp/index.md)
-* [VB.NET 가이드](../csharp/index.md)
-
-
-<!--HONumber=Nov16_HO3-->
-
+* [F# 가이드](../fsharp/index.md)
+* [VB.NET 가이드](../visual-basic/index.md)
 
