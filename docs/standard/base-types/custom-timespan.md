@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: e79745eb-6ebd-4e62-85c4-4f2830c27285
 translationtype: Human Translation
-ms.sourcegitcommit: b828bb1d6c8fb750ad9ef34f8a7a1b7d2574f4c6
-ms.openlocfilehash: 9b891c51f78b44bf0f20476930492fad7ad923a7
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: bec60437d4345decaf38f2bbb9434922ac889683
+ms.lasthandoff: 03/03/2017
 
 ---
 
@@ -151,34 +152,34 @@ End Module
 형식 지정자 | 설명 | 예제
 ---------------- | ----------- | --------
 "d", "%d" | 시간 간격의 전체 일 수입니다. | `new TimeSpan(6, 14, 32, 17, 685):` `%d --> "6"`;  `d\.hh\:mm --> "6.14:32"`
-"dd", "dddddddd" | 시간 간격의 전체 일 수로, 필요에 따라 앞에 0으로 채워집니다. | `new TimeSpan(6, 14, 32, 17, 685):` `ddd --> "006"`; `dd\.hh\:mm --> "06.14:32"`
-"h", "%h" | 일 수로 계산되지 않은 시간 간격의 전체 시간 수입니다. 한 자리 시간의 경우 앞에 0이 없습니다. | `new TimeSpan(6, 14, 32, 17, 685):` `%h --> "14"`; `hh\:mm --> "14:32"`
-"hh" | 일 수로 계산되지 않은 시간 간격의 전체 시간 수입니다. 한 자리 시간의 경우 앞에 0이 있습니다. | `new TimeSpan(6, 14, 32, 17, 685):` `hh --> "14"`  `new TimeSpan(6, 8, 32, 17, 685):` `hh --> 08`
-"m", "%m" | 시간 또는 일 수로 계산되지 않은 시간 간격의 전체 분 수입니다. 한 자리 분의 경우 앞에 0이 없습니다. | `new TimeSpan(6, 14, 8, 17, 685):` `%m --> "8"`; `h\:m --> "14:8"`
-"mm" | 시간 또는 일 수로 계산되지 않은 시간 간격의 전체 분 수입니다. 한 자리 분의 경우 앞에 0이 있습니다. | `new TimeSpan(6, 14, 8, 17, 685):` `mm --> "08"` `new TimeSpan(6, 8, 5, 17, 685):` `d\.hh\:mm\:ss --> 6.08:05:17`
-"s", "%s" | 시간, 일 또는 분 수로 계산되지 않은 시간 간격의 전체 초 수입니다. 한 자리 초의 경우 앞에 0이 없습니다. | `TimeSpan.FromSeconds(12.965):` `%s --> 12`; `s\.fff --> 12.965`
-"ss" | 시간, 일 또는 분 수로 계산되지 않은 시간 간격의 전체 초 수입니다. 한 자리 초의 경우 앞에 0이 있습니다. | `TimeSpan.FromSeconds(6.965):` `ss --> 06`; `ss\.fff --> 06.965`
-"f", "%f" | 시간 간격의 1/10초입니다. | `TimeSpan.FromSeconds(6.895):` `f --> 8`; `ss\.f --> 06.8`
-"ff" | 시간 간격의 1/100초입니다. | `TimeSpan.FromSeconds(6.895):` `ff --> 89`; `ss\.ff --> 06.89`
+"dd", "dddddddd" | 시간 간격의 전체 일 수로, 필요에 따라 앞에&0;으로 채워집니다. | `new TimeSpan(6, 14, 32, 17, 685):` `ddd --> "006"`; `dd\.hh\:mm --> "06.14:32"`
+"h", "%h" | 일 수로 계산되지 않은 시간 간격의 전체 시간 수입니다. 한 자리 시간의 경우 앞에&0;이 없습니다. | `new TimeSpan(6, 14, 32, 17, 685):` `%h --> "14"`; `hh\:mm --> "14:32"`
+"hh" | 일 수로 계산되지 않은 시간 간격의 전체 시간 수입니다. 한 자리 시간의 경우 앞에&0;이 있습니다. | `new TimeSpan(6, 14, 32, 17, 685):` `hh --> "14"`  `new TimeSpan(6, 8, 32, 17, 685):` `hh --> 08`
+"m", "%m" | 시간 또는 일 수로 계산되지 않은 시간 간격의 전체 분 수입니다. 한 자리 분의 경우 앞에&0;이 없습니다. | `new TimeSpan(6, 14, 8, 17, 685):` `%m --> "8"`; `h\:m --> "14:8"`
+"mm" | 시간 또는 일 수로 계산되지 않은 시간 간격의 전체 분 수입니다. 한 자리 분의 경우 앞에&0;이 있습니다. | `new TimeSpan(6, 14, 8, 17, 685):` `mm --> "08"` `new TimeSpan(6, 8, 5, 17, 685):` `d\.hh\:mm\:ss --> 6.08:05:17`
+"s", "%s" | 시간, 일 또는 분 수로 계산되지 않은 시간 간격의 전체 초 수입니다. 한 자리 초의 경우 앞에&0;이 없습니다. | `TimeSpan.FromSeconds(12.965):` `%s --> 12`; `s\.fff --> 12.965`
+"ss" | 시간, 일 또는 분 수로 계산되지 않은 시간 간격의 전체 초 수입니다. 한 자리 초의 경우 앞에&0;이 있습니다. | `TimeSpan.FromSeconds(6.965):` `ss --> 06`; `ss\.fff --> 06.965`
+"f", "%f" | 시간 간격의&1;/10초입니다. | `TimeSpan.FromSeconds(6.895):` `f --> 8`; `ss\.f --> 06.8`
+"ff" | 시간 간격의&1;/100초입니다. | `TimeSpan.FromSeconds(6.895):` `ff --> 89`; `ss\.ff --> 06.89`
 "fff" | 시간 간격의 밀리초입니다. | `TimeSpan.FromSeconds(6.895):` `fff --> 895`; `ss\.fff --> 06.895`
-"ffff" | 시간 간격의 1/10000초입니다. | `TimeSpan.Parse("0:0:6.8954321"):` `ffff --> 8954`; `ss\.ffff --> 06.8954`
-"fffff" | 시간 간격의 1/100000초입니다. | `TimeSpan.Parse("0:0:6.8954321"):` `ffff --> 89543`; `ss\.ffff --> 06.89543`
-"ffffff" | 시간 간격의 1/1000000초입니다. | `TimeSpan.Parse("0:0:6.8954321"):` `ffff --> 895432`; `ss\.ffff --> 06.895432`
-"fffffff" | 시간 간격의 1/10000000초(또는 소수 자릿수 틱)입니다. | `TimeSpan.Parse("0:0:6.8954321"):` `ffff --> 8954321`; `ss\.ffff --> 06.8954321`
-"F", "%F" | 시간 간격의 1/10초입니다. 이 자릿수가 0이면 아무 것도 표시되지 않습니다. | `TimeSpan.Parse("00:00:06.32"):` `%F: 3`  `TimeSpan.Parse("0:0:3.091"):` `ss\.F: 03.`
-"FF" | 시간 간격의 1/100초입니다. 뒤에 오는 소수 자릿수 0이나 연속 두 자리 0은 포함되지 않습니다. |  `TimeSpan.Parse("00:00:06.3291791"):` `FFFFFF: 32`  `TimeSpan.Parse("0:0:3.1900000"):` `ss\.FFFFFF: 03.1`
-"FFF" | 시간 간격의 밀리초입니다. 뒤에 오는 소수 자릿수 0은 포함되지 않습니다. |  `TimeSpan.Parse("00:00:06.3291791"):` `FFFFFF: 329`  `TimeSpan.Parse("0:0:3.1900000"):` `ss\.FFFFFF: 03.1`
-"FFFF" | 시간 간격의 1/10000초입니다. 뒤에 오는 소수 자릿수 0은 포함되지 않습니다. |  `TimeSpan.Parse("00:00:06.3291791"):` `FFFFFF: 3291`  `TimeSpan.Parse("0:0:3.1900000"):` `ss\.FFFFFF: 03.1`
-"FFFFF" | 시간 간격의 1/100000초입니다. 뒤에 오는 소수 자릿수 0은 포함되지 않습니다. | `TimeSpan.Parse("00:00:06.3291791"):` `FFFFFF: 32917`  `TimeSpan.Parse("0:0:3.1900000"):` `ss\.FFFFFF: 03.1`
-"FFFFFF" | 시간 간격의 1/1000000초입니다. 뒤에 오는 소수 자릿수 0은 표시되지 않습니다. | `TimeSpan.Parse("00:00:06.3291791"):` `FFFFFF: 329179`  `TimeSpan.Parse("0:0:3.1900000"):` `ss\.FFFFFF: 03.1`
-"FFFFFFF" | 시간 간격의 1/10000000초입니다. 뒤에 오는 소수 자릿수 0이나 연속 일곱 자리 0은 표시되지 않습니다. | `TimeSpan.Parse("00:00:06.3291791"):` `FFFFFF: 3291791`  `TimeSpan.Parse("0:0:3.1900000"):` `ss\.FFFFFF: 03.19`
+"ffff" | 시간 간격의&1;/10000초입니다. | `TimeSpan.Parse("0:0:6.8954321"):` `ffff --> 8954`; `ss\.ffff --> 06.8954`
+"fffff" | 시간 간격의&1;/100000초입니다. | `TimeSpan.Parse("0:0:6.8954321"):` `ffff --> 89543`; `ss\.ffff --> 06.89543`
+"ffffff" | 시간 간격의&1;/1000000초입니다. | `TimeSpan.Parse("0:0:6.8954321"):` `ffff --> 895432`; `ss\.ffff --> 06.895432`
+"fffffff" | 시간 간격의&1;/10000000초(또는 소수 자릿수 틱)입니다. | `TimeSpan.Parse("0:0:6.8954321"):` `ffff --> 8954321`; `ss\.ffff --> 06.8954321`
+"F", "%F" | 시간 간격의&1;/10초입니다. 이 자릿수가&0;이면 아무 것도 표시되지 않습니다. | `TimeSpan.Parse("00:00:06.32"):` `%F: 3`  `TimeSpan.Parse("0:0:3.091"):` `ss\.F: 03.`
+"FF" | 시간 간격의&1;/100초입니다. 뒤에 오는 소수 자릿수&0;이나 연속 두 자리&0;은 포함되지 않습니다. |  `TimeSpan.Parse("00:00:06.3291791"):` `FFFFFF: 32`  `TimeSpan.Parse("0:0:3.1900000"):` `ss\.FFFFFF: 03.1`
+"FFF" | 시간 간격의 밀리초입니다. 뒤에 오는 소수 자릿수&0;은 포함되지 않습니다. |  `TimeSpan.Parse("00:00:06.3291791"):` `FFFFFF: 329`  `TimeSpan.Parse("0:0:3.1900000"):` `ss\.FFFFFF: 03.1`
+"FFFF" | 시간 간격의&1;/10000초입니다. 뒤에 오는 소수 자릿수&0;은 포함되지 않습니다. |  `TimeSpan.Parse("00:00:06.3291791"):` `FFFFFF: 3291`  `TimeSpan.Parse("0:0:3.1900000"):` `ss\.FFFFFF: 03.1`
+"FFFFF" | 시간 간격의&1;/100000초입니다. 뒤에 오는 소수 자릿수&0;은 포함되지 않습니다. | `TimeSpan.Parse("00:00:06.3291791"):` `FFFFFF: 32917`  `TimeSpan.Parse("0:0:3.1900000"):` `ss\.FFFFFF: 03.1`
+"FFFFFF" | 시간 간격의&1;/1000000초입니다. 뒤에 오는 소수 자릿수&0;은 표시되지 않습니다. | `TimeSpan.Parse("00:00:06.3291791"):` `FFFFFF: 329179`  `TimeSpan.Parse("0:0:3.1900000"):` `ss\.FFFFFF: 03.1`
+"FFFFFFF" | 시간 간격의&1;/10000000초입니다. 뒤에 오는 소수 자릿수&0;이나 연속 일곱 자리&0;은 표시되지 않습니다. | `TimeSpan.Parse("00:00:06.3291791"):` `FFFFFF: 3291791`  `TimeSpan.Parse("0:0:3.1900000"):` `ss\.FFFFFF: 03.19`
 'string' | 리터럴 문자열 구분 기호 | `new TimeSpan(14, 32, 17):` `hh':'mm':'ss --> "14:32:17"`
 \ | 이스케이프 문자입니다. | `new TimeSpan(14, 32, 17):` `hh\:mm\:ss --> "14:32:17"`
 기타 문자 | 이스케이프되지 않은 다른 모든 문자는 사용자 지정 형식 지정자로 해석됩니다. | `new TimeSpan(14, 32, 17):` `hh\:mm\:ss --> "14:32:17"`
 
 ## <a name="the-d-custom-format-specifier"></a>"d" 사용자 지정 형식 지정자
 
-"d" 사용자 지정 형식 지정자는 시간 간격의 전체 일 수를 나타내는 [TimeSpan.Days](xref:System.TimeSpan.Days) 속성 값을 출력합니다. 값이 두 자리 이상인 경우에도 [TimeSpan](xref:System.TimeSpan) 값에 전체 일 수를 출력합니다. [TimeSpan.Days](xref:System.TimeSpan.Days) 속성 값이 0이면 지정자는 "0"을 출력합니다.
+"d" 사용자 지정 형식 지정자는 시간 간격의 전체 일 수를 나타내는 [TimeSpan.Days](xref:System.TimeSpan.Days) 속성 값을 출력합니다. 값이 두 자리 이상인 경우에도 [TimeSpan](xref:System.TimeSpan) 값에 전체 일 수를 출력합니다. [TimeSpan.Days](xref:System.TimeSpan.Days) 속성 값이&0;이면 지정자는 "0"을 출력합니다.
 
 "d" 사용자 지정 형식 지정자만 단독으로 사용하는 경우 표준 형식 문자열로 잘못 해석되지 않도록 "%d"를 지정합니다. 다음 예제에서 이에 대해 설명합니다.
 
@@ -222,7 +223,7 @@ Console.WriteLine(ts3.ToString("d\.hh\:mm\:ss"))
 
 "dd", "ddd", "dddd", "ddddd", "dddddd", "ddddddd" 및 "dddddddd" 사용자 지정 형식 지정자는 시간 간격의 전체 일 수를 나타내는 [TimeSpan.Days](xref:System.TimeSpan.Days) 속성 값을 출력합니다. 
 
-출력 문자열에는 형식 지정자에 "d" 문자 수로 지정된 최소 자릿수가 포함되며 필요에 따라 앞에 0으로 채워집니다. 일 수의 자릿수가 형식 지정자의 "d" 문자 수를 초과할 경우 전체 일 수가 결과 문자열에 출력됩니다.
+출력 문자열에는 형식 지정자에 "d" 문자 수로 지정된 최소 자릿수가 포함되며 필요에 따라 앞에&0;으로 채워집니다. 일 수의 자릿수가 형식 지정자의 "d" 문자 수를 초과할 경우 전체 일 수가 결과 문자열에 출력됩니다.
 
 다음 예제에서는 이 형식 지정자를 사용하여 두 [TimeSpan](xref:System.TimeSpan) 값의 문자열 표현을 나타냅니다. 첫 번째 시간 간격의 일 구성 요소 값은 0입니다. 두 번째 시간 간격의 일 구성 요소 값은 365입니다.
 
@@ -673,11 +674,11 @@ Console.WriteLine(interval2.ToString("ss\.fff"))
 
 ## <a name="the-f-custom-format-specifier"></a>"f" 사용자 지정 형식 지정자
 
-"f" 사용자 지정 형식 지정자는 시간 간격의 1/10초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. [TimeSpan.ParseExact](xref:System.TimeSpan.ParseExact(System.String,System.String,System.IFormatProvider)) 또는 [TimeSpan.TryParseExact](xref:System.TimeSpan.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@)) 메서드를 호출하는 구문 분석 작업에서 입력 문자열에는 정확히 소수 한 자리가 포함되어야 합니다. 
+"f" 사용자 지정 형식 지정자는 시간 간격의&1;/10초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. [TimeSpan.ParseExact](xref:System.TimeSpan.ParseExact(System.String,System.String,System.IFormatProvider)) 또는 [TimeSpan.TryParseExact](xref:System.TimeSpan.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@)) 메서드를 호출하는 구문 분석 작업에서 입력 문자열에는 정확히 소수 한 자리가 포함되어야 합니다. 
 
 "f" 사용자 지정 형식 지정자만 단독으로 사용하는 경우 표준 형식 문자열로 잘못 해석되지 않도록 "%f"를 지정합니다.
 
-다음 예제에서는 "f" 사용자 지정 형식 지정자를 사용하여 [TimeSpan](xref:System.TimeSpan) 값에 1/10초를 표시합니다. "f"가 먼저 유일한 형식 지정자로 사용된 다음 사용자 지정 형식 문자열에서 "s" 지정자와 함께 사용됩니다.
+다음 예제에서는 "f" 사용자 지정 형식 지정자를 사용하여 [TimeSpan](xref:System.TimeSpan) 값에&1;/10초를 표시합니다. "f"가 먼저 유일한 형식 지정자로 사용된 다음 사용자 지정 형식 문자열에서 "s" 지정자와 함께 사용됩니다.
 
 ```csharp
 TimeSpan ts = new TimeSpan(1003498765432);
@@ -751,9 +752,9 @@ Next
 
 ## <a name="the-ff-custom-format-specifier"></a>"ff" 사용자 지정 형식 지정자
 
-"ff" 사용자 지정 형식 지정자는 시간 간격의 1/100초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. [TimeSpan.ParseExact](xref:System.TimeSpan.ParseExact(System.String,System.String,System.IFormatProvider)) 또는 [TimeSpan.TryParseExact](xref:System.TimeSpan.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@)) 메서드를 호출하는 구문 분석 작업에서 입력 문자열에는 정확히 소수 두 자리가 포함되어야 합니다. 
+"ff" 사용자 지정 형식 지정자는 시간 간격의&1;/100초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. [TimeSpan.ParseExact](xref:System.TimeSpan.ParseExact(System.String,System.String,System.IFormatProvider)) 또는 [TimeSpan.TryParseExact](xref:System.TimeSpan.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@)) 메서드를 호출하는 구문 분석 작업에서 입력 문자열에는 정확히 소수 두 자리가 포함되어야 합니다. 
 
-다음 예제에서는 "ff" 사용자 지정 형식 지정자를 사용하여 [TimeSpan](xref:System.TimeSpan) 값에 1/100초를 표시합니다. "ff"가 먼저 유일한 형식 지정자로 사용된 다음 사용자 지정 형식 문자열에서 "s" 지정자와 함께 사용됩니다.
+다음 예제에서는 "ff" 사용자 지정 형식 지정자를 사용하여 [TimeSpan](xref:System.TimeSpan) 값에&1;/100초를 표시합니다. "ff"가 먼저 유일한 형식 지정자로 사용된 다음 사용자 지정 형식 문자열에서 "s" 지정자와 함께 사용됩니다.
 
 ```csharp
 TimeSpan ts = new TimeSpan(1003498765432);
@@ -902,9 +903,9 @@ Next
 ```
 
 ## <a name="the-ffff-custom-format-specifier"></a>"ffff" 사용자 지정 형식 지정자
-"ffff" 사용자 지정 형식 지정자(네 개의 "f" 문자 포함)는 시간 간격의 1/10000초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. [TimeSpan.ParseExact](xref:System.TimeSpan.ParseExact(System.String,System.String,System.IFormatProvider)) 또는 [TimeSpan.TryParseExact](xref:System.TimeSpan.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@)) 메서드를 호출하는 구문 분석 작업에서 입력 문자열에는 정확히 소수 네 자리가 포함되어야 합니다. 
+"ffff" 사용자 지정 형식 지정자(네 개의 "f" 문자 포함)는 시간 간격의&1;/10000초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. [TimeSpan.ParseExact](xref:System.TimeSpan.ParseExact(System.String,System.String,System.IFormatProvider)) 또는 [TimeSpan.TryParseExact](xref:System.TimeSpan.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@)) 메서드를 호출하는 구문 분석 작업에서 입력 문자열에는 정확히 소수 네 자리가 포함되어야 합니다. 
 
-다음 예제에서는 "ffff" 사용자 지정 형식 지정자를 사용하여 [TimeSpan](xref:System.TimeSpan) 값에 1/10000초를 표시합니다. "ffff"가 먼저 유일한 형식 지정자로 사용된 다음 사용자 지정 형식 문자열에서 "s" 지정자와 함께 사용됩니다.
+다음 예제에서는 "ffff" 사용자 지정 형식 지정자를 사용하여 [TimeSpan](xref:System.TimeSpan) 값에&1;/10000초를 표시합니다. "ffff"가 먼저 유일한 형식 지정자로 사용된 다음 사용자 지정 형식 문자열에서 "s" 지정자와 함께 사용됩니다.
 
 ```csharp
 TimeSpan ts = new TimeSpan(1003498765432);
@@ -977,9 +978,9 @@ Next
 ```
 
 ## <a name="the-fffff-custom-format-specifier"></a>"fffff" 사용자 지정 형식 지정자
-"fffff" 사용자 지정 형식 지정자(다섯 개의 "f" 문자 포함)는 시간 간격의 1/100000초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. [TimeSpan.ParseExact](xref:System.TimeSpan.ParseExact(System.String,System.String,System.IFormatProvider)) 또는 [TimeSpan.TryParseExact](xref:System.TimeSpan.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@)) 메서드를 호출하는 구문 분석 작업에서 입력 문자열에는 정확히 소수 다섯 자리가 포함되어야 합니다. 
+"fffff" 사용자 지정 형식 지정자(다섯 개의 "f" 문자 포함)는 시간 간격의&1;/100000초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. [TimeSpan.ParseExact](xref:System.TimeSpan.ParseExact(System.String,System.String,System.IFormatProvider)) 또는 [TimeSpan.TryParseExact](xref:System.TimeSpan.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@)) 메서드를 호출하는 구문 분석 작업에서 입력 문자열에는 정확히 소수 다섯 자리가 포함되어야 합니다. 
 
-다음 예제에서는 "fffff" 사용자 지정 형식 지정자를 사용하여 [TimeSpan](xref:System.TimeSpan) 값에 1/100000초를 표시합니다. "fffff"가 먼저 유일한 형식 지정자로 사용된 다음 사용자 지정 형식 문자열에서 "s" 지정자와 함께 사용됩니다.
+다음 예제에서는 "fffff" 사용자 지정 형식 지정자를 사용하여 [TimeSpan](xref:System.TimeSpan) 값에&1;/100000초를 표시합니다. "fffff"가 먼저 유일한 형식 지정자로 사용된 다음 사용자 지정 형식 문자열에서 "s" 지정자와 함께 사용됩니다.
 
 ```csharp
 TimeSpan ts = new TimeSpan(1003498765432);
@@ -1053,9 +1054,9 @@ Next
 
 ## <a name="the-ffffff-custom-format-specifier"></a>"ffffff" 사용자 지정 형식 지정자
 
-"ffffff" 사용자 지정 형식 지정자(여섯 개의 "f" 문자 포함)는 시간 간격의 1/1000000초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. [TimeSpan.ParseExact](xref:System.TimeSpan.ParseExact(System.String,System.String,System.IFormatProvider)) 또는 [TimeSpan.TryParseExact](xref:System.TimeSpan.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@)) 메서드를 호출하는 구문 분석 작업에서 입력 문자열에는 정확히 소수 여섯 자리가 포함되어야 합니다. 
+"ffffff" 사용자 지정 형식 지정자(여섯 개의 "f" 문자 포함)는 시간 간격의&1;/1000000초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. [TimeSpan.ParseExact](xref:System.TimeSpan.ParseExact(System.String,System.String,System.IFormatProvider)) 또는 [TimeSpan.TryParseExact](xref:System.TimeSpan.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@)) 메서드를 호출하는 구문 분석 작업에서 입력 문자열에는 정확히 소수 여섯 자리가 포함되어야 합니다. 
 
-다음 예제에서는 "ffffff" 사용자 지정 형식 지정자를 사용하여 [TimeSpan](xref:System.TimeSpan) 값에 1/1000000초를 표시합니다. 먼저 유일한 형식 지정자로 사용된 다음 사용자 지정 형식 문자열에서 "s" 지정자와 함께 사용됩니다.
+다음 예제에서는 "ffffff" 사용자 지정 형식 지정자를 사용하여 [TimeSpan](xref:System.TimeSpan) 값에&1;/1000000초를 표시합니다. 먼저 유일한 형식 지정자로 사용된 다음 사용자 지정 형식 문자열에서 "s" 지정자와 함께 사용됩니다.
 
 ```csharp
 TimeSpan ts = new TimeSpan(1003498765432);
@@ -1129,7 +1130,7 @@ Next
 
 ## <a name="the-fffffff-custom-format-specifier"></a>"fffffff" 사용자 지정 형식 지정자
 
-"fffffff" 사용자 지정 형식 지정자(일곱 개의 "f" 문자 포함)는 시간 간격의 1/10000000초(또는 소수 자릿수 틱)를 출력합니다. [TimeSpan.ParseExact](xref:System.TimeSpan.ParseExact(System.String,System.String,System.IFormatProvider)) 또는 [TimeSpan.TryParseExact](xref:System.TimeSpan.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@)) 메서드를 호출하는 구문 분석 작업에서 입력 문자열에는 정확히 소수 일곱 자리가 포함되어야 합니다. 
+"fffffff" 사용자 지정 형식 지정자(일곱 개의 "f" 문자 포함)는 시간 간격의&1;/10000000초(또는 소수 자릿수 틱)를 출력합니다. [TimeSpan.ParseExact](xref:System.TimeSpan.ParseExact(System.String,System.String,System.IFormatProvider)) 또는 [TimeSpan.TryParseExact](xref:System.TimeSpan.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@)) 메서드를 호출하는 구문 분석 작업에서 입력 문자열에는 정확히 소수 일곱 자리가 포함되어야 합니다. 
 
 다음 예제에서는 "fffffff" 사용자 지정 형식 지정자를 사용하여 [TimeSpan](xref:System.TimeSpan) 값에 소수 자릿수 틱을 표시합니다. 먼저 유일한 형식 지정자로 사용된 다음 사용자 지정 형식 문자열에서 "s" 지정자와 함께 사용됩니다.
 
@@ -1205,11 +1206,11 @@ Next
 
 ## <a name="the-f-custom-format-specifier"></a>"F" 사용자 지정 형식 지정자
 
-"F" 사용자 지정 형식 지정자는 시간 간격의 1/10초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. 시간 간격의 1/10초 값이 0이면 결과 문자열에 포함되지 않습니다. [TimeSpan.ParseExact](xref:System.TimeSpan.ParseExact(System.String,System.String,System.IFormatProvider)) 또는 [TimeSpan.TryParseExact](xref:System.TimeSpan.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@)) 메서드를 호출하는 구문 분석 작업에서 1/10초 숫자 표시는 선택 사항입니다.
+"F" 사용자 지정 형식 지정자는 시간 간격의&1;/10초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. 시간 간격의&1;/10초 값이&0;이면 결과 문자열에 포함되지 않습니다. [TimeSpan.ParseExact](xref:System.TimeSpan.ParseExact(System.String,System.String,System.IFormatProvider)) 또는 [TimeSpan.TryParseExact](xref:System.TimeSpan.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@)) 메서드를 호출하는 구문 분석 작업에서&1;/10초 숫자 표시는 선택 사항입니다.
 
 "F" 사용자 지정 형식 지정자만 단독으로 사용하는 경우 표준 형식 문자열로 잘못 해석되지 않도록 "%F"를 지정합니다.
 
-다음 예제에서는 "F" 사용자 지정 형식 지정자를 사용하여 [TimeSpan](xref:System.TimeSpan) 값에 1/10초를 표시합니다. 또한 구문 분석 작업에서 이 사용자 지정 형식 지정자를 사용합니다.
+다음 예제에서는 "F" 사용자 지정 형식 지정자를 사용하여 [TimeSpan](xref:System.TimeSpan) 값에&1;/10초를 표시합니다. 또한 구문 분석 작업에서 이 사용자 지정 형식 지정자를 사용합니다.
 
 ```csharp
 Console.WriteLine("Formatting:");
@@ -1278,9 +1279,9 @@ Next
 
 ## <a name="the-ff-custom-format-specifier"></a>"FF" 사용자 지정 형식 지정자
 
-"FF" 사용자 지정 형식 지정자는 시간 간격의 1/100초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. 뒤에 오는 소수 자릿수 0이 있는 경우 결과 문자열에 포함되지 않습니다. [TimeSpan.ParseExact](xref:System.TimeSpan.ParseExact(System.String,System.String,System.IFormatProvider)) 또는 [TimeSpan.TryParseExact](xref:System.TimeSpan.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@)) 메서드를 호출하는 구문 분석 작업에서 1/10초 및 1/100초 숫자 표시는 선택 사항입니다.
+"FF" 사용자 지정 형식 지정자는 시간 간격의&1;/100초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. 뒤에 오는 소수 자릿수&0;이 있는 경우 결과 문자열에 포함되지 않습니다. [TimeSpan.ParseExact](xref:System.TimeSpan.ParseExact(System.String,System.String,System.IFormatProvider)) 또는 [TimeSpan.TryParseExact](xref:System.TimeSpan.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@)) 메서드를 호출하는 구문 분석 작업에서&1;/10초 및&1;/100초 숫자 표시는 선택 사항입니다.
 
-다음 예제에서는 "FF" 사용자 지정 형식 지정자를 사용하여 [TimeSpan](xref:System.TimeSpan) 값에 1/100초를 표시합니다. 또한 구문 분석 작업에서 이 사용자 지정 형식 지정자를 사용합니다.
+다음 예제에서는 "FF" 사용자 지정 형식 지정자를 사용하여 [TimeSpan](xref:System.TimeSpan) 값에&1;/100초를 표시합니다. 또한 구문 분석 작업에서 이 사용자 지정 형식 지정자를 사용합니다.
 
 ```csharp
 Console.WriteLine("Formatting:");
@@ -1349,9 +1350,9 @@ Next
 
 ## <a name="the-fff-custom-format-specifier"></a>"FFF" 사용자 지정 형식 지정자
 
-"FFF" 사용자 지정 형식 지정자(세 개의 "F" 문자 포함)는 시간 간격의 밀리초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. 뒤에 오는 소수 자릿수 0이 있는 경우 결과 문자열에 포함되지 않습니다. [TimeSpan.ParseExact](xref:System.TimeSpan.ParseExact(System.String,System.String,System.IFormatProvider)) 또는 [TimeSpan.TryParseExact](xref:System.TimeSpan.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@)) 메서드를 호출하는 구문 분석 작업에서 1/10초, 1/100초 및 1/1000초 숫자 표시는 선택 사항입니다.
+"FFF" 사용자 지정 형식 지정자(세 개의 "F" 문자 포함)는 시간 간격의 밀리초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. 뒤에 오는 소수 자릿수&0;이 있는 경우 결과 문자열에 포함되지 않습니다. [TimeSpan.ParseExact](xref:System.TimeSpan.ParseExact(System.String,System.String,System.IFormatProvider)) 또는 [TimeSpan.TryParseExact](xref:System.TimeSpan.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@)) 메서드를 호출하는 구문 분석 작업에서&1;/10초,&1;/100초 및&1;/1000초 숫자 표시는 선택 사항입니다.
 
-다음 예제에서는 "FFF" 사용자 지정 형식 지정자를 사용하여 [TimeSpan](xref:System.TimeSpan) 값에 1/1000초를 표시합니다. 또한 구문 분석 작업에서 이 사용자 지정 형식 지정자를 사용합니다.
+다음 예제에서는 "FFF" 사용자 지정 형식 지정자를 사용하여 [TimeSpan](xref:System.TimeSpan) 값에&1;/1000초를 표시합니다. 또한 구문 분석 작업에서 이 사용자 지정 형식 지정자를 사용합니다.
 
 ```csharp
 Console.WriteLine("Formatting:");
@@ -1420,9 +1421,9 @@ Next
 
 ## <a name="the-ffff-custom-format-specifier"></a>"FFFF" 사용자 지정 형식 지정자
 
-"FFFF" 사용자 지정 형식 지정자(네 개의 "F" 문자 포함)는 시간 간격의 1/10000초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. 뒤에 오는 소수 자릿수 0이 있는 경우 결과 문자열에 포함되지 않습니다. [TimeSpan.ParseExact](xref:System.TimeSpan.ParseExact(System.String,System.String,System.IFormatProvider)) 또는 [TimeSpan.TryParseExact](xref:System.TimeSpan.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@)) 메서드를 호출하는 구문 분석 작업에서 1/10초, 1/100초, 1/1000초 및 1/10000초 숫자 표시는 선택 사항입니다.
+"FFFF" 사용자 지정 형식 지정자(네 개의 "F" 문자 포함)는 시간 간격의&1;/10000초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. 뒤에 오는 소수 자릿수&0;이 있는 경우 결과 문자열에 포함되지 않습니다. [TimeSpan.ParseExact](xref:System.TimeSpan.ParseExact(System.String,System.String,System.IFormatProvider)) 또는 [TimeSpan.TryParseExact](xref:System.TimeSpan.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@)) 메서드를 호출하는 구문 분석 작업에서&1;/10초,&1;/100초,&1;/1000초 및&1;/10000초 숫자 표시는 선택 사항입니다.
 
-다음 예제에서는 "FFFF" 사용자 지정 형식 지정자를 사용하여 [TimeSpan](xref:System.TimeSpan) 값에 1/10000초를 표시합니다. 또한 구문 분석 작업에서 "FFFF" 사용자 지정 형식 지정자를 사용합니다.
+다음 예제에서는 "FFFF" 사용자 지정 형식 지정자를 사용하여 [TimeSpan](xref:System.TimeSpan) 값에&1;/10000초를 표시합니다. 또한 구문 분석 작업에서 "FFFF" 사용자 지정 형식 지정자를 사용합니다.
 
 ```csharp
 Console.WriteLine("Formatting:");
@@ -1491,9 +1492,9 @@ Next
 
 ## <a name="the-fffff-custom-format-specifier"></a>"FFFFF" 사용자 지정 형식 지정자
 
-"FFFFF" 사용자 지정 형식 지정자(다섯 개의 "F" 문자 포함)는 시간 간격의 1/100000초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. 뒤에 오는 소수 자릿수 0이 있는 경우 결과 문자열에 포함되지 않습니다. [TimeSpan.ParseExact](xref:System.TimeSpan.ParseExact(System.String,System.String,System.IFormatProvider)) 또는 [TimeSpan.TryParseExact](xref:System.TimeSpan.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@)) 메서드를 호출하는 구문 분석 작업에서 1/10초, 1/100초, 1/1000초, 1/10000초 및 1/100000초 숫자 표시는 선택 사항입니다.
+"FFFFF" 사용자 지정 형식 지정자(다섯 개의 "F" 문자 포함)는 시간 간격의&1;/100000초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. 뒤에 오는 소수 자릿수&0;이 있는 경우 결과 문자열에 포함되지 않습니다. [TimeSpan.ParseExact](xref:System.TimeSpan.ParseExact(System.String,System.String,System.IFormatProvider)) 또는 [TimeSpan.TryParseExact](xref:System.TimeSpan.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@)) 메서드를 호출하는 구문 분석 작업에서&1;/10초,&1;/100초,&1;/1000초,&1;/10000초 및&1;/100000초 숫자 표시는 선택 사항입니다.
 
-다음 예제에서는 "FFFFF" 사용자 지정 형식 지정자를 사용하여 [TimeSpan](xref:System.TimeSpan) 값에 1/100000초를 표시합니다. 또한 구문 분석 작업에서 "FFFFF" 사용자 지정 형식 지정자를 사용합니다.
+다음 예제에서는 "FFFFF" 사용자 지정 형식 지정자를 사용하여 [TimeSpan](xref:System.TimeSpan) 값에&1;/100000초를 표시합니다. 또한 구문 분석 작업에서 "FFFFF" 사용자 지정 형식 지정자를 사용합니다.
 
 ```csharp
 Console.WriteLine("Formatting:");
@@ -1562,9 +1563,9 @@ Next
 
 ## <a name="the-ffffff-custom-format-specifier"></a>"FFFFFF" 사용자 지정 형식 지정자
 
-"FFFFFF" 사용자 지정 형식 지정자(여섯 개의 "F" 문자 포함)는 시간 간격의 1/1000000초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. 뒤에 오는 소수 자릿수 0이 있는 경우 결과 문자열에 포함되지 않습니다. [TimeSpan.ParseExact](xref:System.TimeSpan.ParseExact(System.String,System.String,System.IFormatProvider)) 또는 [TimeSpan.TryParseExact](xref:System.TimeSpan.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@)) 메서드를 호출하는 구문 분석 작업에서 1/10초, 1/100초, 1/1000초, 1/10000초, 1/100000초 및 1/1000000초 숫자 표시는 선택 사항입니다.
+"FFFFFF" 사용자 지정 형식 지정자(여섯 개의 "F" 문자 포함)는 시간 간격의&1;/1000000초를 출력합니다. 형식 지정 작업에서 나머지 소수 자릿수는 잘립니다. 뒤에 오는 소수 자릿수&0;이 있는 경우 결과 문자열에 포함되지 않습니다. [TimeSpan.ParseExact](xref:System.TimeSpan.ParseExact(System.String,System.String,System.IFormatProvider)) 또는 [TimeSpan.TryParseExact](xref:System.TimeSpan.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@)) 메서드를 호출하는 구문 분석 작업에서&1;/10초,&1;/100초,&1;/1000초,&1;/10000초,&1;/100000초 및&1;/1000000초 숫자 표시는 선택 사항입니다.
 
-다음 예제에서는 "FFFFFF" 사용자 지정 형식 지정자를 사용하여 [TimeSpan](xref:System.TimeSpan) 값에 1/1000000초를 표시합니다. 또한 구문 분석 작업에서 이 사용자 지정 형식 지정자를 사용합니다.
+다음 예제에서는 "FFFFFF" 사용자 지정 형식 지정자를 사용하여 [TimeSpan](xref:System.TimeSpan) 값에&1;/1000000초를 표시합니다. 또한 구문 분석 작업에서 이 사용자 지정 형식 지정자를 사용합니다.
 
 ```csharp
 Console.WriteLine("Formatting:");
@@ -1633,9 +1634,9 @@ Next
 
 ## <a name="the-fffffff-custom-format-specifier"></a>"FFFFFFF" 사용자 지정 형식 지정자
 
-"FFFFFFF" 사용자 지정 형식 지정자(일곱 개의 "F" 문자 포함)는 시간 간격의 1/10000000초(또는 소수 자릿수 틱)를 출력합니다. 뒤에 오는 소수 자릿수 0이 있는 경우 결과 문자열에 포함되지 않습니다. [TimeSpan.ParseExact](xref:System.TimeSpan.ParseExact(System.String,System.String,System.IFormatProvider)) 또는 [TimeSpan.TryParseExact](xref:System.TimeSpan.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@)) 메서드를 호출하는 구문 분석 작업에서 입력 문자열의 소수 일곱 자리 표시는 선택 사항입니다.
+"FFFFFFF" 사용자 지정 형식 지정자(일곱 개의 "F" 문자 포함)는 시간 간격의&1;/10000000초(또는 소수 자릿수 틱)를 출력합니다. 뒤에 오는 소수 자릿수&0;이 있는 경우 결과 문자열에 포함되지 않습니다. [TimeSpan.ParseExact](xref:System.TimeSpan.ParseExact(System.String,System.String,System.IFormatProvider)) 또는 [TimeSpan.TryParseExact](xref:System.TimeSpan.TryParseExact(System.String,System.String,System.IFormatProvider,System.Globalization.TimeSpanStyles,System.TimeSpan@)) 메서드를 호출하는 구문 분석 작업에서 입력 문자열의 소수 일곱 자리 표시는 선택 사항입니다.
 
-다음 예제에서는 "FFFFFFF" 사용자 지정 형식 지정자를 사용하여 [TimeSpan](xref:System.TimeSpan) 값에 1초의 소수 자릿수 부분을 표시합니다. 또한 구문 분석 작업에서 이 사용자 지정 형식 지정자를 사용합니다.
+다음 예제에서는 "FFFFFFF" 사용자 지정 형식 지정자를 사용하여 [TimeSpan](xref:System.TimeSpan) 값에&1;초의 소수 자릿수 부분을 표시합니다. 또한 구문 분석 작업에서 이 사용자 지정 형식 지정자를 사용합니다.
 
 ```csharp
 Console.WriteLine("Formatting:");
@@ -1710,7 +1711,7 @@ Next
 
 * 작은따옴표(리터럴 문자열 구분 기호)로 묶습니다. 
 
-* 이스케이프 문자로 해석되는 백슬래시("\")를 앞에 추가합니다. 즉, C#에서는 서식 문자열이 @-quoted,여야 하거나 리터럴 문자 앞에 백슬래시를 추가해야 합니다.
+* 이스케이프 문자로 해석되는 백슬래시("\")를 앞에 추가합니다. 즉, C#에서는 서식 문자열이 @-quoted여야 하거나 리터럴 문자 앞에 백슬래시를 추가해야 합니다.
 
   경우에 따라 조건부 논리를 사용하여 서식 문자열에 이스케이프된 리터럴을 포함해야 할 수 있습니다. 다음 예제에서는 조건부 논리를 사용하여 음수 시간 간격에 대해 부호 기호를 포함합니다. 
   
@@ -1748,7 +1749,7 @@ End Module
 '       Interval: -1291.10:54
 ```
   
-.NET에서는 시간 간격의 구분 기호에 대한 문법을 정의하지 않습니다. 즉, 일과 시간, 시간과 분, 분과 초, 초와 1초의 소수 자릿수 간 구분 기호를 형식 문자열에서 모두 문자 리터럴로 처리해야 합니다.
+.NET에서는 시간 간격의 구분 기호에 대한 문법을 정의하지 않습니다. 즉, 일과 시간, 시간과 분, 분과 초, 초와&1;초의 소수 자릿수 간 구분 기호를 형식 문자열에서 모두 문자 리터럴로 처리해야 합니다.
 
 다음 예제에서는 이스케이프 문자와 작은따옴표를 둘 다 사용하여 출력 문자열에서 "분" 단어가 포함된 사용자 지정 형식 문자열을 정의합니다. 
 
@@ -1783,10 +1784,5 @@ Console.WriteLine(interval.ToString(fmt))
 [형식 서식 지정](formatting-types.md)
 
 [표준 TimeSpan 서식 문자열](standard-timespan.md)  
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 
