@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 8103c0a6-61d3-40dd-a3e9-2a32ba6a4c05
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: 066c721e66192658ae841721c90c194686a0730d
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: c741ae793d491f691a355df6ad064b81d609c7e5
+ms.lasthandoff: 03/03/2017
 
 ---
 
@@ -33,10 +34,5 @@ ms.openlocfilehash: 066c721e66192658ae841721c90c194686a0730d
 [.NET에서 형식 변환](type-conversion.md) - 형식을 변환하는 방법에 대해 설명합니다.
 
 [.NET에서 기본 형식 사용](index.md) - .NET 기본 형식에서 수행할 수 있는 일반적인 작업에 대해 설명합니다.
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

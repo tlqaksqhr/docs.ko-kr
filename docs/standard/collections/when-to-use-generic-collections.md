@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 971e08bd-b63f-4832-9e61-9f65cbedd352
 translationtype: Human Translation
-ms.sourcegitcommit: b828bb1d6c8fb750ad9ef34f8a7a1b7d2574f4c6
-ms.openlocfilehash: c7e89a2139ca217a52be0fb9796772879c64e355
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: bde317c165981775330e1d0d8261d355e2401bc9
+ms.lasthandoff: 03/03/2017
 
 ---
 
@@ -63,9 +64,4 @@ LINQ to Objects 기능을 사용하면 개체 형식이 [System.Collections.IEnu
 [컬렉션 및 데이터 구조](index.md) 
 
 [일반적으로 사용되는 컬렉션 형식](commonly-used-collection-types.md)
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

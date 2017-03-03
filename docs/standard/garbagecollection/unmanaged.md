@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 8c97c3e2-8619-47ce-ae29-d6a3140bfa83
 translationtype: Human Translation
-ms.sourcegitcommit: 213ce098bcc2b5e31c55e759d895254d5ca33caa
-ms.openlocfilehash: c0600eb27c27261f6496fb45310514f7f716b3b3
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 43ad8829de51775b23d1e00d9b4e2a4f4b240e94
+ms.lasthandoff: 03/03/2017
 
 ---
 
@@ -47,9 +48,4 @@ ms.openlocfilehash: c0600eb27c27261f6496fb45310514f7f716b3b3
 [Object.Finalize](xref:System.Object.Finalize) - 관리되지 않는 리소스가 `Dispose` 메서드에 의해 해제되지 않은 경우 개체 종료 기능을 제공합니다. 
 
 [GC.SuppressFinalize](xref:System.GC#System_GC_SuppressFinalize_System_Object_) - 종료를 표시하지 않습니다. 이 메서드는 종료자가 실행되지 않도록 방지하기 위해 통상 `Dispose` 메서드에서 호출됩니다. 
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 
