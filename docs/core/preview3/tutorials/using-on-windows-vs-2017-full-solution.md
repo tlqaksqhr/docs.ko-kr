@@ -10,15 +10,15 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: ba7e082c-a7c8-431e-a342-f67734b660f6
 translationtype: Human Translation
-ms.sourcegitcommit: 82dfcb532ce6c14e93c5baedb61b619cc18e69f1
-ms.openlocfilehash: 02c48cd7e2fc551b82bb7afa53a3dd228e02dca1
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 04f5264eaaa16be299e0d72f587ee232a5e61ca9
 
 ---
 
-# <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017-tooling-preview-4"></a>Visual Studio 2017을 사용하여 Windows에서 완전한 .NET Core 솔루션 구축(Tooling Preview 4)
+# <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017-net-core-tools-rc4"></a>Visual Studio 2017을 사용하여 Windows에서 완전한 .NET Core 솔루션 구축(.NET Core 도구 RC4)
 
 > [!WARNING]
-> 이 항목은 Visual Studio 2017 RC - .NET Core Tools Preview 4에 적용됩니다. .NET Core Tools Preview 2 버전의 경우 [Visual Studio 2015를 사용하여 Windows에서 .NET Core 시작](../../tutorials/using-on-windows.md) 항목을 참조하세요.
+> 이 항목은 .NET Core 도구 RC4에 적용됩니다. .NET Core Tools Preview 2 버전의 경우 [Visual Studio 2015를 사용하여 Windows에서 .NET Core 시작](../../tutorials/using-on-windows.md) 항목을 참조하세요.
 
 Visual Studio 2017은 .NET Core 응용 프로그램 개발을 위해 필요한 모든 기능을 갖춘 개발 환경을 제공합니다. 이 문서의 절차에서는 재사용 가능한 라이브러리, 테스트 및 타사 라이브러리 사용을 비롯하여 일반적인 .NET Core 솔루션을 빌드하는 데 필요한 단계를 설명합니다. 
 
@@ -85,6 +85,6 @@ Visual Studio 2017은 .NET Core 응용 프로그램 개발을 위해 필요한 �
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

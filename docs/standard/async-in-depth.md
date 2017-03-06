@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
 translationtype: Human Translation
-ms.sourcegitcommit: de0dab146fc811e895dc32f98f877db5e757f82b
-ms.openlocfilehash: c8ff0f81054feddb4ee7042926c817de525034f9
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 4c66c1dc6fb1d51eb2a7d6566fbf62b5f19b556b
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -44,7 +45,7 @@ ms.openlocfilehash: c8ff0f81054feddb4ee7042926c817de525034f9
 ```csharp
 public Task<string> GetHtmlAsync()
 {
-    // Execution is synchronous here
+     // Execution is synchronous here
     var client = new HttpClient();
     
     return client.GetStringAsync("http://www.dotnetfoundation.org");
@@ -146,8 +147,3 @@ public async Task<int> CalculateResult(InputData data)
 ### <a name="why-does-async-help-here"></a>이때 비동기가 왜 도움이 될까요?
 
 `async` 및 `await`는 응답성이 필요할 때 CPU 바인딩된 작업을 관리하는 모범 사례입니다. CPU 바인딩된 작업에 비동기를 사용하는 여러 가지 패턴이 있습니다. 비동기 사용 시 작은 비용이 발생하며 타이트 루프에는 권장되지 않습니다.  이 새로운 기능과 관련된 코드 작성 방법은 사용자가 결정할 사항입니다.
-
-
-<!--HONumber=Nov16_HO3-->
-
-

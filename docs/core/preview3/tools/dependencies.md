@@ -1,6 +1,6 @@
 ---
-title: ".NET Core Preview 4 도구에서 종속성 관리 | Microsoft 문서"
-description: "Preview 4를 통해 종속성을 관리하는 방식에 대한 변경 내용 설명"
+title: ".NET Core 도구에서 종속성 관리 | Microsoft 문서"
+description: ".NET Core 도구로 종속성을 관리하는 방법을 설명합니다."
 keywords: "CLI, 확장성, 사용자 지정 명령, .NET Core"
 author: blackdwarf
 ms.author: mairaw
@@ -11,12 +11,12 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 74b87cdb-a244-4c13-908c-539118bfeef9
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: ad36f5ff8c1d74f1dd6b82ff620f85833d4dfb3e
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: cef45d986eb9c4a84a03ee942c29a327c23cabf3
 
 ---
 
-# <a name="managing-dependencies-in-net-core-preview-4-tooling"></a>.NET Core Preview 4 도구에서 종속성 관리
+# <a name="managing-dependencies-in-net-core-rc4-tooling"></a>.NET Core RC4 도구에서 종속성 관리
 
 [!INCLUDE[preview-warning](../../../includes/warning.md)]
 
@@ -28,9 +28,7 @@ ms.openlocfilehash: ad36f5ff8c1d74f1dd6b82ff620f85833d4dfb3e
 `<PackageReference>`의 기본 구조는 다음과 같습니다.
 
 ```xml
-<PackageReference Include="PACKAGE_ID">
-    <Version>PACKAGE_VERSION</Version>
-</PackageReference>
+<PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" />
 ```
 
 MSBuild에 익숙한 경우 이미 존재하는 다른 참조 형식에 익숙할 것입니다. 키는 프로젝트에 추가할 패키지 ID를 지정하는 `Include` 문입니다. `<Version>` 자식 요소는 가져올 버전을 지정합니다. 버전은 [NuGet 버전 규칙](https://docs.microsoft.com/nuget/create-packages/dependency-versions#version-ranges)에 따라 지정됩니다.
@@ -41,9 +39,7 @@ MSBuild에 익숙한 경우 이미 존재하는 다른 참조 형식에 익숙�
 특정 대상에만 사용할 수 있는 종속성을 추가하려면 다음 예와 같은 조건을 사용하여 수행합니다.
 
 ```xml
-<PackageReference Include="PACKAGE_ID" Condition="'$(TargetFramework)' == 'netcoreapp1.0'">
-    <Version>PACKAGE_VERSION</Version>
-</PackageReference>
+<PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp1.0'" />
 ```
 
 위의 예는 지정된 대상에 대해 빌드가 발생한 경우에만 종속성이 유효하다는 것을 의미합니다. 조건에서 `$(TargetFramework)`는 프로젝트에 설정 되는 MSBuild 속성입니다. 가장 일반적인.NET Core 응용 프로그램의 경우 이 작업을 수행하지 않아도 됩니다. 
@@ -56,42 +52,22 @@ MSBuild에 익숙한 경우 이미 존재하는 다른 참조 형식에 익숙�
 이 예제에서는 `dotnet new`에서 삭제된 기본 템플릿을 사용해보겠습니다. 이는 간단한 콘솔 응용 프로그램입니다. 프로젝트를 열면 먼저 이미 기존 `<PackageReference>`에 `<ItemGroup>`이 있음을 확인할 수 있습니다. 그리고 다음을 추가합니다.
 
 ```xml
-<PackageReference Include="Newtonsoft.Json">
-    <Version>9.0.1</Version>
-</PackageReference>
+<PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
 ```
 이렇게 되면 프로젝트를 저장하고 `dotnet restore` 명령을 실행하여 종속성을 설치합니다. 
 
 전체 프로젝트는 다음과 같습니다.
 
 ```xml
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
-  
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp1.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="**\*.cs" />
-    <EmbeddedResource Include="**\*.resx" />
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
   </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NETCore.App">
-      <Version>1.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Newtonsoft.Json">
-        <Version>9.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.NET.Sdk">
-      <Version>1.0.0-alpha-20161104-2</Version>
-      <PrivateAssets>All</PrivateAssets>
-    </PackageReference>
-  </ItemGroup>
-  
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
 ```
 
@@ -99,6 +75,6 @@ MSBuild에 익숙한 경우 이미 존재하는 다른 참조 형식에 익숙�
 프로젝트 파일에서 종속성을 제거하는 작업은 프로젝트 파일에서 `<PackageReference>`를 단순히 제거하는 것입니다.
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

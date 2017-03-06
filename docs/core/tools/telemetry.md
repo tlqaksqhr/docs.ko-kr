@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: f2b312bb-f80b-4b0d-9101-93908f06a6fa
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 7557d25271bad25854a315c79cf427727e3b0e32
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: f19efabc4330682ebfe6e38384086e2338cd6264
 
 ---
 
 # <a name="net-core-tools-telemetry"></a>.NET Core 도구 원격 분석
 
 > [!WARNING]
-> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. Visual Studio 2017 RC - .NET Core Tools Preview 4 버전의 경우 [.NET Core 도구 원격 분석(Tooling Preview 4)](../preview3/tools/telemetry.md) 항목을 참조하세요.
+> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. .NET Core 도구 RC4 버전의 경우 [.NET Core 도구 원격 분석(.NET Core 도구 RC4)](../preview3/tools/telemetry.md) 항목을 참조하세요.
 
 .NET Core 도구에는 사용 정보를 수집하는 [원격 분석 기능](https://github.com/dotnet/cli/pull/2145)이 포함되어 있습니다. .NET 팀이 개선을 위해 도구 사용 방법을 이해하는 것이 중요합니다.
 
@@ -108,6 +108,6 @@ a minute to complete and will only happen once.
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 263c3d05-3a47-46a6-8023-3ca16b488410
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 967ef46ba7c4125bee1727f35d38798ef73689e5
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: a49fe94ca8f678c614fb7f58767693c73e34c737
 
 ---
 
 #<a name="dotnet-new"></a>dotnet-new
 
 > [!WARNING]
-> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. Visual Studio 2017 RC - .NET Core Tools Preview 4 버전의 경우 [dotnet-new(Tooling Preview 4)](../preview3/tools/dotnet-new.md) 항목을 참조하세요.
+> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. .NET Core 도구 RC4 버전의 경우 [dotnet-new(.NET Core 도구 RC4)](../preview3/tools/dotnet-new.md) 항목을 참조하세요.
 
 ## <a name="name"></a>이름
 `dotnet-new` - 현재 디렉터리에 새 .NET Core 프로젝트를 만듭니다.
@@ -66,6 +66,6 @@ ms.openlocfilehash: 967ef46ba7c4125bee1727f35d38798ef73689e5
 `dotnet new -t web`
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

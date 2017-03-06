@@ -11,17 +11,17 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 96102f96-d403-4385-8ef6-5d80e406eb0c
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 97a9ee85025c15e21d4a7cbdce31d35d3894e7d6
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: b814bfc79c2fcd0fd15b9494c18c6d0443a70fb1
 
 ---
 
-# <a name="globaljson-reference-tooling-preview-4"></a>global.json 참조(Tooling Preview 4)
+# <a name="globaljson-reference-net-core-tools-rc4"></a>global.json 참조(.NET Core 도구 RC4)
 
 > [!WARNING]
-> 이 항목은 Visual Studio 2017 RC - .NET Core Tools Preview 4에 적용됩니다. .NET Core Tools Preview 2 버전의 경우 [global.json 참조](../../tools/global-json.md) 항목을 참조하세요.
+> 이 항목은 .NET Core 도구 RC4에 적용됩니다. .NET Core Tools Preview 2 버전의 경우 [global.json 참조](../../tools/global-json.md) 항목을 참조하세요.
 
-global.json 파일은 여전히 .NET Core 명령줄 Preview 4에 있습니다. 그러나 이 파일은 기본적으로 이전 릴리스에서처럼 솔루션의 메타데이터를 정의하는 것이 아니라 `sdk` 속성을 통해 사용되는 CLI 버전 선택을 허용하기 위해 주로 사용됩니다. 
+global.json 파일은 여전히 .NET Core 명령줄 RC4에 있습니다. 그러나 이 파일은 기본적으로 이전 릴리스에서처럼 솔루션의 메타데이터를 정의하는 것이 아니라 `sdk` 속성을 통해 사용되는 CLI 버전 선택을 허용하기 위해 주로 사용됩니다. 
 
 이 참조에서는 위의 사실을 반영합니다. 
 
@@ -46,6 +46,6 @@ SDK에 대한 정보를 지정합니다.
 ```
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dd84ee8-9f0f-4054-9537-155857a460cd
 translationtype: Human Translation
-ms.sourcegitcommit: c40c28da09e8a122b542463c197196c82c81dd19
-ms.openlocfilehash: f8a603bab32afd0b8e7d13c9c5755e3f14a9d2bd
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: aeb1928be32584ee4b6acf7c9a4f4330daedc590
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -58,7 +59,7 @@ ms.openlocfilehash: f8a603bab32afd0b8e7d13c9c5755e3f14a9d2bd
 
 * SQL 데이터베이스와 같이 .NET Framework 외부의 소스에서 날짜 및 시간 정보를 검색합니다. 일반적으로 이러한 소스에는 [DateTime](xref:System.DateTime) 구조체와 호환되는 간단한 형식의 날짜 및 시간 정보가 저장되어 있습니다.
 
-* 날짜 및 시간 산술 연산을 수행하지만 일반적인 결과와 관련이 있습니다. 예를 들어 특정 날짜와 시간에 6개월을 더하는 더하기 연산에서 일광 절약 시간제에 맞게 결과를 조정하는지 여부는 대체로 중요하지 않습니다.
+* 날짜 및 시간 산술 연산을 수행하지만 일반적인 결과와 관련이 있습니다. 예를 들어 특정 날짜와 시간에&6;개월을 더하는 더하기 연산에서 일광 절약 시간제에 맞게 결과를 조정하는지 여부는 대체로 중요하지 않습니다.
 
 특정 [DateTime](xref:System.DateTime) 값이 UTC를 나타내지 않는 경우 해당 날짜 및 시간 값은 대체로 모호하거나 이식성이 제한됩니다. 예를 들어 현지 시간을 나타내는 [DateTime](xref:System.DateTime) 값은 해당 현지 표준 시간대에 이식할 수 있습니다. 즉 다른 시스템에서 동일한 표준 시간대의 값을 역직렬화하는 경우에도 해당 값에서 계속 단일 시점을 명확히 식별합니다. 현지 표준 시간대 외부에서는 해당 [DateTime](xref:System.DateTime) 값이 여러 가지로 해석될 수 있습니다. 값의 [Kind](xref:System.DateTime.Kind) 속성이 [DateTimeKind.Unspecified](xref:System.DateTimeKind.Unspecified)이면 이식하기가 더 어려워집니다. 이제는 동일한 표준 시간대뿐만 아니라 처음 직렬화된 시스템에서도 모호할 수 있습니다. [DateTime](xref:System.DateTime) 값이 UTC를 나타내는 경우에만 값이 사용되는 시스템이나 표준 시간대에 관계없이 시간의 단일 시점을 명확히 식별합니다.
 
@@ -354,8 +355,3 @@ End Module
 ## <a name="see-also"></a>참고 항목
 
 [날짜, 시간 및 표준 시간대](index.md)
-
-
-<!--HONumber=Nov16_HO3-->
-
-

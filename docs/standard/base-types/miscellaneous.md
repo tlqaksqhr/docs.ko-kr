@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 478901dc-db6c-4d90-9d3b-f5cfdca2cbf5
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 4205d2a318849a7b24ac0f1fd65f7e8a23ec7f55
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 6b8e39902dc735cac72864024033fe5cc14fb55a
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -238,9 +239,9 @@ End Module
 패턴 | 설명
 ------- | ----------- 
 `\{` | 여는 중괄호를 찾습니다.
-`\d+` | 하나 이상의 10진수 숫자가 일치하는지 확인합니다.
-`(,-*\d+)*` | 선택적 빼기 기호, 하나 이상의 10진수 앞에 나오는 쉼표를 0번 또는 한 번 찾습니다.
-`(\:\w{1,4}?)*` | 1-4개(최대한 적은 개수)의 공백 문자 앞에 나오는 콜론을 0번 또는 한 번 찾습니다.
+`\d+` | 하나 이상의&10;진수 숫자가 일치하는지 확인합니다.
+`(,-*\d+)*` | 선택적 빼기 기호, 하나 이상의&10;진수 앞에 나오는 쉼표를&0;번 또는 한 번 찾습니다.
+`(\:\w{1,4}?)*` | 1-4개(최대한 적은 개수)의 공백 문자 앞에 나오는 콜론을&0;번 또는 한 번 찾습니다.
 `(?#case insensitive comparison)` | 인라인 주석입니다. 패턴 일치 동작에 영향을 주지 않습니다.
 `\}` | 닫는 중괄호를 찾습니다.
 `(?x)` | 줄의 끝 주석이 인식되도록 패턴 공백 무시 옵션을 사용하도록 설정합니다.
@@ -293,10 +294,5 @@ End Module
 ## <a name="see-also"></a>참고 항목
 
 [정규식 언어 - 빠른 참조](quick-ref.md)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

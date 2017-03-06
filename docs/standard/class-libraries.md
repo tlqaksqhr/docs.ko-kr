@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
 translationtype: Human Translation
-ms.sourcegitcommit: 62fdb3e60b206728d86220076867eb8fd68af82e
-ms.openlocfilehash: eee8fcaff41db5821e4b6aa61875d6a4bcd80b10
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 028fd4961c97e31ea9f213b832c723b2ce2cf27c
+ms.lasthandoff: 03/03/2017
 
 ---
 
@@ -61,9 +62,4 @@ ms.openlocfilehash: eee8fcaff41db5821e4b6aa61875d6a4bcd80b10
 ### <a name="mono-class-libraries"></a>Mono 클래스 라이브러리
 
 위에서 설명한 세 가지 형식의 라이브러리를 포함하여 클래스 라이브러리는 Mono에서 지원됩니다. Mono는 Microsoft .NET Framework의 플랫폼 간 구현으로 간주되는 경우가 많습니다(맞음). 부분적으로 이는 플랫폼별 .NET Framework 라이브러리를 수정하거나 컴파일하지 않고 Mono 런타임에서 실행할 수 있기 때문이었습니다. 이 특성은 이식 가능한 클래스 라이브러리를 만들기 전에 구현되었으므로 한 방향으로만 작동한다는 제약에도 불구하고 .NET Framework와 Mono 간에 이진 이식성을 사용하는 것이 당연했습니다.
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

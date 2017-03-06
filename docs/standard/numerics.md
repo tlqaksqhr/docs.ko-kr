@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 6b8696be-55f5-4b66-98f3-69ff827c2c49
 translationtype: Human Translation
-ms.sourcegitcommit: d5c7a18af16b4f3416e84b6cf86f0f78f28948da
-ms.openlocfilehash: 2930bf6879df3cd16cbd0221ae6dfcba9b41de2e
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 8e2aad830bdaccad6e8184fa462dd0d3157fd6c9
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -22,7 +23,7 @@ ms.openlocfilehash: 2930bf6879df3cd16cbd0221ae6dfcba9b41de2e
 
 ## <a name="integral-types"></a>정수 계열 형식 표
 
-.NET Core에서는 길이 범위가 1~8바이트인 부호 있는 정수와 부호 없는 정수를 둘 다 지원합니다. 다음 표에서는 정수 계열 형식 및 해당 크기 목록을 제공하고 부호가 있는지 여부를 표시하고 해당 범위를 문서화합니다. 모든 정수는 값 형식입니다. 
+.NET Core에서는 길이 범위가&1;~8바이트인 부호 있는 정수와 부호 없는 정수를 둘 다 지원합니다. 다음 표에서는 정수 계열 형식 및 해당 크기 목록을 제공하고 부호가 있는지 여부를 표시하고 해당 범위를 문서화합니다. 모든 정수는 값 형식입니다. 
 
 형식 | 부호 있음/부호 없음 | 크기(바이트) | 최소값 | 최대값
 ---- | --------------- | ------------ | ------------- | -------------
@@ -49,7 +50,7 @@ ms.openlocfilehash: 2930bf6879df3cd16cbd0221ae6dfcba9b41de2e
 [System.Single](https://docs.microsoft.com/dotnet/core/api/System.Single) | 4 | -3.402823e38 | 3.402823e38
 [System.Decimal](https://docs.microsoft.com/dotnet/core/api/System.Decimal) | 16 | -79,228,162,514,264,337,593,543,950,335 | 79,228,162,514,264,337,593,543,950,335
    
-각 부동 소수점 형식은 산술, 비교, 같음, 명시적 변환 및 암시적 변환 연산자의 표준 집합을 지원합니다. 각 형식에는 같음 비교 및 상대 비교를 수행하고, 부동 소수점 수의 문자열 표시를 변환하고, 부동 소수점 수를 해당 문자열 표시로 변환하는 메서드가 포함됩니다. 일부 추가적인 수치, 대수 및 삼각 연산은 `Math` 클래스에서 제공됩니다. `BitConverter` 클래스를 사용하여 `Double` 및 `Single` 값의 개별 비트를 사용할 수도 있습니다. `Decimal` 구조체에는 10진수 값의 개별 비트를 사용하기 위한 고유한 메서드인 `Decimal.GetBits` 및 `Decimal.Decimal(Int32())`와 몇몇 추가적인 수치 연산을 수행하기 위한 고유한 메서드 집합이 있습니다. 
+각 부동 소수점 형식은 산술, 비교, 같음, 명시적 변환 및 암시적 변환 연산자의 표준 집합을 지원합니다. 각 형식에는 같음 비교 및 상대 비교를 수행하고, 부동 소수점 수의 문자열 표시를 변환하고, 부동 소수점 수를 해당 문자열 표시로 변환하는 메서드가 포함됩니다. 일부 추가적인 수치, 대수 및 삼각 연산은 `Math` 클래스에서 제공됩니다. `BitConverter` 클래스를 사용하여 `Double` 및 `Single` 값의 개별 비트를 사용할 수도 있습니다. `Decimal` 구조체에는&10;진수 값의 개별 비트를 사용하기 위한 고유한 메서드인 `Decimal.GetBits` 및 `Decimal.Decimal(Int32())`와 몇몇 추가적인 수치 연산을 수행하기 위한 고유한 메서드 집합이 있습니다. 
 
 `Double` 및 `Single` 형식은 기본적으로 정확하지 않은 값(태양계에서 두 별 사이의 거리) 및 정밀도가 높고 반올림 오류가 적을 필요 없는 응용 프로그램에 사용해야 합니다. 정밀도가 더 높아야 하고 반올림 오류가 없어야 하는 경우 `Decimal` 형식을 사용해야 합니다.
 
@@ -74,9 +75,4 @@ ms.openlocfilehash: 2930bf6879df3cd16cbd0221ae6dfcba9b41de2e
 * 두 행렬 형식 [System.Numerics.Matrix3x2](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Matrix3x2)(3x2 행렬을 나타냄) 및 [System.Numerics.Matrix4x4](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Matrix4x4)(4x4 행렬을 나타냄) 
 
 * [System.Numerics.Plane](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Plane) 형식(3차원 평면을 나타냄) 및 [System.Numerics.Quaternion](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Quaternion) 형식(3차원 물리적 회전을 인코드하는 데 사용되는 벡터를 나타냄)
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

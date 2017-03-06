@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2db2c3e6-953e-4913-8168-d707c437f2df
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: a2a9fe356a0b2e9cf9415714bc01b77ea86229fc
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: af32095fa5f11ec7eba5924c969fbd6ab179cbd4
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -129,7 +130,7 @@ RegexOptions 멤버 | 인라인 문자 | 효과
 > 생성자 또는 메서드 호출의 options 매개 변수에 지정된 정규식 옵션이 정규식 패턴에 인라인으로 지정된 옵션과 충돌하는 경우 인라인 옵션이 사용됩니다.
  
 
-다음 5개의 정규식 옵션은 *options* 매개 변수와 인라인으로 모두 설정할 수 있습니다.
+다음&5;개의 정규식 옵션은 *options* 매개 변수와 인라인으로 모두 설정할 수 있습니다.
 
 * [RegexOptions.IgnoreCase](xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase)
 
@@ -141,7 +142,7 @@ RegexOptions 멤버 | 인라인 문자 | 효과
 
 * [RegexOptions.IgnorePatternWhitespace](xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace)
 
-다음 5개의 정규식 옵션은 *options* 매개 변수를 사용하여 설정할 수 있지만 인라인으로는 설정할 수 없습니다.
+다음&5;개의 정규식 옵션은 *options* 매개 변수를 사용하여 설정할 수 있지만 인라인으로는 설정할 수 없습니다.
 
 * [RegexOptions.None](xref:System.Text.RegularExpressions.RegexOptions.None)
 
@@ -459,8 +460,8 @@ End Class
 `^` | 줄의 시작 부분에서 시작합니다.
 `(\w+)` | 하나 이상의 단어 문자를 찾습니다. 이 그룹은 첫 번째 캡처링 그룹입니다.
 `\s` | 공백 문자를 찾습니다.
-`(\d+)` | 하나 이상의 10진수 숫자가 일치하는지 확인합니다. 이 그룹은 두 번째 캡처링 그룹입니다.
-`\r?` | 0개 또는 1개의 캐리지 리턴 문자를 찾습니다.
+`(\d+)` | 하나 이상의&10;진수 숫자가 일치하는지 확인합니다. 이 그룹은 두 번째 캡처링 그룹입니다.
+`\r?` | 0개 또는&1;개의 캐리지 리턴 문자를 찾습니다.
 `$` | 줄의 끝 부분에서 끝납니다.
  
 다음 예제는 인라인 옵션**(?m)**을 사용하여 여러 줄 옵션을 설정한다는 점을 제외하고는 이전 예제와 동일합니다.
@@ -906,11 +907,11 @@ End Module
 패턴 | 설명
 ------- | ----------- 
 `\b` | 단어 경계에서 시작합니다.
-`\(?` | 0개 또는 1개의 여는 괄호("(")를 찾습니다.
-`(?>\w+),?` | 하나 이상의 단어 문자 다음에 0개 또는 1개의 쉼표가 있는 일치 항목을 찾습니다. 단어 문자를 찾을 때 역추적하지 않습니다.
+`\(?` | 0개 또는&1;개의 여는 괄호("(")를 찾습니다.
+`(?>\w+),?` | 하나 이상의 단어 문자 다음에&0;개 또는&1;개의 쉼표가 있는 일치 항목을 찾습니다. 단어 문자를 찾을 때 역추적하지 않습니다.
 `\s?` | 0회 이상 나오는 공백 문자를 찾습니다.
-`((\w+),?\s?)+` | 하나 이상의 단어 문자 다음에 0개 또는 1개의 쉼표 및 0개 또는 1개의 공백 문자가 한 번 이상 나타나는 조합을 찾습니다.
-`[\.!?]\)?` | 세 가지 문장 부호 기호 다음에 0개 또는 1개의 닫는 괄호(")")가 있는 모든 일치 항목을 찾습니다.
+`((\w+),?\s?)+` | 하나 이상의 단어 문자 다음에&0;개 또는&1;개의 쉼표 및&0;개 또는&1;개의 공백 문자가 한 번 이상 나타나는 조합을 찾습니다.
+`[\.!?]\)?` | 세 가지 문장 부호 기호 다음에&0;개 또는&1;개의 닫는 괄호(")")가 있는 모든 일치 항목을 찾습니다.
  
 또한 **(?n)** 인라인 요소를 사용하여 자동 캡처를 억제할 수 있습니다. 다음 예제에서는 [RegexOptions.ExplicitCapture](xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture) 옵션 대신 **(?n)** 인라인 요소를 사용하도록 이전 정규식 패턴을 수정합니다.
 
@@ -1331,11 +1332,11 @@ End Module
 
 패턴 | 설명
 ------- | ----------- 
-`(?<=\d{1,2}\s)` | 일치 항목의 시작 부분 앞에는 한 개 또는 두 개의 10진수와 그 뒤에 공백이 하나 있어야 합니다.
+`(?<=\d{1,2}\s)` | 일치 항목의 시작 부분 앞에는 한 개 또는 두 개의&10;진수와 그 뒤에 공백이 하나 있어야 합니다.
 `\w+` | 하나 이상의 단어 문자를 찾습니다.
-`,?` | 0개 또는 1개의 쉼표 문자를 찾습니다.
+`,?` | 0개 또는&1;개의 쉼표 문자를 찾습니다.
 `\s` | 공백 문자를 찾습니다.
-`\d{4}` | 네 개의 10진수를 찾습니다.
+`\d{4}` | 네 개의&10;진수를 찾습니다.
  
 ## <a name="ecmascript-matching-behavior"></a>ECMAScript 일치 동작
 
@@ -1346,7 +1347,7 @@ End Module
  
 [RegexOptions.ECMAScript](xref:System.Text.RegularExpressions.RegexOptions.ECMAScript) 옵션은 [RegexOptions.IgnoreCase](xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase) 및 [RegexOptions.Multiline](xref:System.Text.RegularExpressions.RegexOptions.Multiline) 옵션과 결합해야만 사용할 수 있습니다. 정규식에 다른 옵션을 사용하면 [ArgumentOutOfRangeException](xref:System.ArgumentOutOfRangeException)이 발생합니다.
 
-ECMAScript의 동작과 정식 정규식의 동작은 문자 클래스 구문, 자신을 참조하는 캡처링 그룹 및 8진수 대 역참조 해석의 세 가지 영역에서 다릅니다. 
+ECMAScript의 동작과 정식 정규식의 동작은 문자 클래스 구문, 자신을 참조하는 캡처링 그룹 및&8;진수 대 역참조 해석의 세 가지 영역에서 다릅니다. 
 
 * 문자 클래스 구문. 정식 정규식은 유니코드를 지원하는 반면 ECMAScript는 지원하지 않으므로, ECMAScript의 문자 클래스의 구문이 더 제한되어 있으며 일부 문자 클래스 언어 요소는 다른 의미를 지닙니다. 예를 들어, ECMAScript는 유니코드 범주 또는 블록 요소 *\p* 및 **\P**와 같은 언어 요소를 지원하지 않습니다. 마찬가지로, 단어 문자와 일치하는 **\w** 요소는 ECMAScript를 사용할 경우 **[a-zA-Z_0-9]** 문자 클래스와 동일하고 정식 동작을 사용할 경우 **[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]**과 동일합니다. 자세한 내용은 [정규식의 문자 클래스](classes.md)를 참조하세요.
 
@@ -1662,10 +1663,5 @@ Thread.CurrentThread.CurrentCulture = defaultCulture
 ## <a name="see-also"></a>참고 항목
 
 [정규식 언어 - 빠른 참조](quick-ref.md)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

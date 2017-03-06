@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bce54e41-e9dc-493a-8988-1cbadc340fe8
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: e72540726bdd1b3624064c7388e58d80320c5831
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: a8f42fa6a37f8de6f13186ea2ac17b2b2ced1601
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -64,9 +65,9 @@ ms.openlocfilehash: e72540726bdd1b3624064c7388e58d80320c5831
 
 인코딩 | 클래스 | 설명 | 장점/단점
 -------- | ----- | ----------- | ------------------------ 
-ASCII | [ASCIIEncoding](xref:System.Text.ASCIIEncoding) | 바이트의 하위 7비트를 사용하여 제한된 범위의 문자를 인코딩합니다. | 이 인코딩은 U+0000에서 U+007F 사이의 문자 값만 지원하므로 대부분의 경우 국제화된 응용 프로그램에는 적합하지 않습니다.
-UTF-7 | [UTF7Encoding](xref:System.Text.UTF7Encoding) | 7비트 ASCII 문자 시퀀스로 문자를 나타냅니다. 비 ASCII 유니코드 문자는 ASCII 문자의 이스케이프 시퀀스로 표시됩니다. | UTF-7은 전자 메일 및 뉴스 그룹 프로토콜과 같은 프로토콜을 지원합니다. 그러나 UTF-7은 특별히 안전하거나 강력하지 않습니다. 경우에 따라 1비트를 변경해도 전체 UTF-7 문자열의 해석이 완전히 바뀔 수 있습니다. 다른 UTF-7 문자열이 동일한 텍스트를 인코딩할 수도 있습니다. 비 ASCII 문자를 포함하는 시퀀스의 경우 UTF-7에서 UTF-8보다 많은 공간이 필요하며 인코딩/디코딩 속도가 느려집니다. 따라서 가능하면 UTF-7 대신 UTF-8을 사용해야 합니다.
-UTF-8 | [UTF8Encoding](xref:System.Text.UTF8Encoding) | 각 유니코드 코드 포인트를 1-4바이트의 시퀀스로 나타냅니다. | UTF-8은 8비트 데이터 크기를 지원하며 기존의 많은 운영 체제에서 제대로 작동합니다. ASCII 문자 범위의 경우 UTF-8은 ASCII 인코딩과 동일하며 광범위한 문자 집합을 허용합니다. 그러나 CJK(중국어-일본어-한국어) 스크립트의 경우 UTF-8에서 각 문자에 대해 3바이트를 요구할 수 있으며 데이터 크기가 UTF-16보다 커질 수 있습니다. 때로는 HTML 태그와 같은 ASCII 데이터의 양이 CJK 범위의 크기 증가와 관련이 있습니다.
+ASCII | [ASCIIEncoding](xref:System.Text.ASCIIEncoding) | 바이트의 하위&7;비트를 사용하여 제한된 범위의 문자를 인코딩합니다. | 이 인코딩은 U+0000에서 U+007F 사이의 문자 값만 지원하므로 대부분의 경우 국제화된 응용 프로그램에는 적합하지 않습니다.
+UTF-7 | [UTF7Encoding](xref:System.Text.UTF7Encoding) | 7비트 ASCII 문자 시퀀스로 문자를 나타냅니다. 비 ASCII 유니코드 문자는 ASCII 문자의 이스케이프 시퀀스로 표시됩니다. | UTF-7은 전자 메일 및 뉴스 그룹 프로토콜과 같은 프로토콜을 지원합니다. 그러나 UTF-7은 특별히 안전하거나 강력하지 않습니다. 경우에 따라&1;비트를 변경해도 전체 UTF-7 문자열의 해석이 완전히 바뀔 수 있습니다. 다른 UTF-7 문자열이 동일한 텍스트를 인코딩할 수도 있습니다. 비 ASCII 문자를 포함하는 시퀀스의 경우 UTF-7에서 UTF-8보다 많은 공간이 필요하며 인코딩/디코딩 속도가 느려집니다. 따라서 가능하면 UTF-7 대신 UTF-8을 사용해야 합니다.
+UTF-8 | [UTF8Encoding](xref:System.Text.UTF8Encoding) | 각 유니코드 코드 포인트를&1;-4바이트의 시퀀스로 나타냅니다. | UTF-8은 8비트 데이터 크기를 지원하며 기존의 많은 운영 체제에서 제대로 작동합니다. ASCII 문자 범위의 경우 UTF-8은 ASCII 인코딩과 동일하며 광범위한 문자 집합을 허용합니다. 그러나 CJK(중국어-일본어-한국어) 스크립트의 경우 UTF-8에서 각 문자에 대해&3;바이트를 요구할 수 있으며 데이터 크기가 UTF-16보다 커질 수 있습니다. 때로는 HTML 태그와 같은 ASCII 데이터의 양이 CJK 범위의 크기 증가와 관련이 있습니다.
 UTF-16 | [UnicodeEncoding](xref:System.Text.UnicodeEncoding) | 각 유니코드 코드 포인트를 한두 개의 16비트 정수 시퀀스로 나타냅니다. 가장 일반적인 유니코드 문자에는 UTF-16 코드 포인트 한 개만 있으면 됩니다. 단, 유니코드 보조 문자(U+10000 이상)에는 UTF-16 서로게이트 코드 포인트 두 개가 필요합니다. little-endian 및 big-endian 바이트 순서가 둘 다 지원됩니다. | UTF-16 인코딩은 공용 언어 런타임에서 Char 및 String 값을 나타내는 데 사용되며 Windows 운영 체제에서 WCHAR 값을 나타내는 데 사용됩니다.
 UTF-32 | [UTF32Encoding](xref:System.Text.UTF32Encoding) | 각 유니코드 코드 포인트를 32비트 정수 한 개로 나타냅니다. little-endian 및 big-endian 바이트 순서가 둘 다 지원됩니다. | UTF-32 인코딩은 인코딩된 공간이 너무 중요한 운영 체제에서 응용 프로그램이 UTF-16 인코딩의 서로게이트 코드 포인트 동작을 방지하려는 경우에 사용됩니다. 디스플레이에 렌더링되는 단일 문자 모양은 여전히 둘 이상의 UTF-32 문자로 인코딩될 수 있습니다.
 
@@ -371,7 +372,7 @@ End Module
 
 특정 인코딩에 대한 [Encoder](xref:System.Text.Encoder) 개체는 해당 인코딩의 [Encoding.GetEncoder](xref:System.Text.Encoding.GetEncoder) 속성에서 사용할 수 있습니다. 특정 인코딩에 대한 [Decoder](xref:System.Text.Decoder) 개체는 해당 인코딩의 [Encoding.GetDecoder](xref:System.Text.Encoding.GetDecoder) 속성에서 사용할 수 있습니다. 디코딩 작업의 경우 [Decoder](xref:System.Text.Decoder)에서 파생된 클래스에 [Decoder.GetChars](xref:System.Text.Decoder.GetChars(System.Byte[],System.Int32,System.Int32,System.Char[],System.Int32)) 메서드가 포함되어 있지만 [Encoding.GetString](xref:System.Text.Encoding.GetString(System.Byte[]))에 해당하는 메서드가 없습니다.
 
-다음 예제에서는 유니코드 바이트 배열 디코드에 [Encoding.GetChars](xref:System.Text.Encoding.GetChars(System.Byte[])) 및 [Decoder.GetChars](xref:System.Text.Decoder.GetChars(System.Byte[],System.Int32,System.Int32,System.Char[],System.Int32)) 메서드를 사용할 경우의 차이점을 보여 줍니다. 이 예제에서는 일부 유니코드 문자를 포함하는 문자열을 파일로 인코딩한 다음 두 개의 디코딩 메서드를 사용하여 한 번에 10바이트씩 디코딩합니다. 10번째 및 11번째 바이트에서 서로게이트 쌍이 발생하기 때문에 별도 메서드 호출에서 디코딩됩니다. 출력에서 볼 수 있듯이 [Encoding.GetChars](xref:System.Text.Encoding.GetChars(System.Byte[])) 메서드는 바이트를 올바르게 디코드할 수 없으며, 대신 U+FFFD(REPLACEMENT CHARACTER)로 바꿉니다. 반면, [Decoder.GetChars](xref:System.Text.Decoder.GetChars(System.Byte[],System.Int32,System.Int32,System.Char[],System.Int32)) 메서드는 바이트 배열을 성공적으로 디코드하여 원래 문자열을 가져올 수 있습니다.
+다음 예제에서는 유니코드 바이트 배열 디코드에 [Encoding.GetChars](xref:System.Text.Encoding.GetChars(System.Byte[])) 및 [Decoder.GetChars](xref:System.Text.Decoder.GetChars(System.Byte[],System.Int32,System.Int32,System.Char[],System.Int32)) 메서드를 사용할 경우의 차이점을 보여 줍니다. 이 예제에서는 일부 유니코드 문자를 포함하는 문자열을 파일로 인코딩한 다음 두 개의 디코딩 메서드를 사용하여 한 번에&10;바이트씩 디코딩합니다. 10번째 및&11;번째 바이트에서 서로게이트 쌍이 발생하기 때문에 별도 메서드 호출에서 디코딩됩니다. 출력에서 볼 수 있듯이 [Encoding.GetChars](xref:System.Text.Encoding.GetChars(System.Byte[])) 메서드는 바이트를 올바르게 디코드할 수 없으며, 대신 U+FFFD(REPLACEMENT CHARACTER)로 바꿉니다. 반면, [Decoder.GetChars](xref:System.Text.Decoder.GetChars(System.Byte[],System.Int32,System.Int32,System.Char[],System.Int32)) 메서드는 바이트 배열을 성공적으로 디코드하여 원래 문자열을 가져올 수 있습니다.
 
 ```csharp
 using System;
@@ -601,7 +602,7 @@ End Module
 
 최적 전략은 코드 페이지마다 다르며 자세히 문서화되지 않습니다. 예를 들어 일부 코드 페이지에서는 전자 라틴 문자가 더 일반적인 반자 라틴 문자에 매핑됩니다. 다른 코드 페이지에서는 이 매핑이 수행되지 않습니다. 적극적인 최적 전략에서도 일부 인코딩의 일부 문자는 상상할 수 있는 최적 항목이 없습니다. 예를 들어 중국어 표의 문자에는 코드 페이지 1252에 적합한 매핑이 없습니다. 이 경우 대체 문자열이 사용됩니다. 기본적으로 이 문자열은 단일 QUESTION MARK(U+003F)입니다.
 
-다음 예제에서는 코드 페이지 1252(서유럽 언어에 대한 Windows 코드 페이지)를 사용하여 최적 매핑과 해당 결점을 보여 줍니다. [Encoding.GetEncoding(Int32](xref:System.Text.Encoding.GetEncoding(System.Int32)) 메서드는 코드 페이지 1252에 대한 인코딩 개체를 검색하는 데 사용됩니다. 기본적으로 지원하지 않는 유니코드 문자에 대해 최적 매핑을 사용합니다. 이 예제에서는 CIRCLED LATIN CAPITAL LETTER S(U+24C8), SUPERSCRIPT FIVE(U+2075) 및 INFINITY(U+221E)라는 3개의 비 ASCII 문자가 공백으로 구분되어 포함된 문자열을 인스턴스화합니다. 예제의 출력에서 볼 수 있듯이, 문자열을 인코딩할 때 공백이 아닌 원래 문자 3자가 QUESTION MARK(U+003F), DIGIT FIVE(U+0035) 및 DIGIT EIGHT(U+0038)으로 대체됩니다. DIGIT EIGHT은 지원되지 않는 INFINITY 문자에 대한 특히 부적절한 대체이고, QUESTION MARK는 원래 문자에 사용할 수 있는 매핑이 없음을 나타냅니다.
+다음 예제에서는 코드 페이지 1252(서유럽 언어에 대한 Windows 코드 페이지)를 사용하여 최적 매핑과 해당 결점을 보여 줍니다. [Encoding.GetEncoding(Int32](xref:System.Text.Encoding.GetEncoding(System.Int32)) 메서드는 코드 페이지 1252에 대한 인코딩 개체를 검색하는 데 사용됩니다. 기본적으로 지원하지 않는 유니코드 문자에 대해 최적 매핑을 사용합니다. 이 예제에서는 CIRCLED LATIN CAPITAL LETTER S(U+24C8), SUPERSCRIPT FIVE(U+2075) 및 INFINITY(U+221E)라는&3;개의 비 ASCII 문자가 공백으로 구분되어 포함된 문자열을 인스턴스화합니다. 예제의 출력에서 볼 수 있듯이, 문자열을 인코딩할 때 공백이 아닌 원래 문자&3;자가 QUESTION MARK(U+003F), DIGIT FIVE(U+0035) 및 DIGIT EIGHT(U+0038)으로 대체됩니다. DIGIT EIGHT은 지원되지 않는 INFINITY 문자에 대한 특히 부적절한 대체이고, QUESTION MARK는 원래 문자에 사용할 수 있는 매핑이 없음을 나타냅니다.
 
 ```csharp
 using System;
@@ -784,7 +785,7 @@ End Module
 
 ### <a name="replacement-fallback"></a>교체 대체(fallback)
 
-대상 구성표에 문자와 정확히 일치하는 항목이 없고 매핑할 수 있는 적절한 문자가 없는 경우 응용 프로그램에서 대체 문자 또는 문자열을 지정할 수 있습니다. 이는 유니코드 디코더의 기본 동작으로, 디코딩할 수 없는 모든 2바이트 시퀀스를 REPLACEMENT_CHARACTER(U+FFFD)로 대체합니다. [ASCIIEncoding](xref:System.Text.ASCIIEncoding) 클래스의 기본 동작이기도 하며, 인코드 또는 디코드할 수 없는 각 문자를 물음표로 대체합니다. 다음 예제에서는 이전 예제의 유니코드 문자열에 대한 문자 대체를 보여 줍니다. 출력에서 볼 수 있듯이, ASCII 바이트 값으로 디코딩할 수 없는 각 문자는 물음표의 ASCII 코드인 0x3F로 대체됩니다.
+대상 구성표에 문자와 정확히 일치하는 항목이 없고 매핑할 수 있는 적절한 문자가 없는 경우 응용 프로그램에서 대체 문자 또는 문자열을 지정할 수 있습니다. 이는 유니코드 디코더의 기본 동작으로, 디코딩할 수 없는 모든&2;바이트 시퀀스를 REPLACEMENT_CHARACTER(U+FFFD)로 대체합니다. [ASCIIEncoding](xref:System.Text.ASCIIEncoding) 클래스의 기본 동작이기도 하며, 인코드 또는 디코드할 수 없는 각 문자를 물음표로 대체합니다. 다음 예제에서는 이전 예제의 유니코드 문자열에 대한 문자 대체를 보여 줍니다. 출력에서 볼 수 있듯이, ASCII 바이트 값으로 디코딩할 수 없는 각 문자는 물음표의 ASCII 코드인 0x3F로 대체됩니다.
 
 ```csharp
 using System;
@@ -1144,7 +1145,7 @@ End Module
 
 인코더 또는 디코더에 대한 사용자 지정 대체(fallback) 솔루션을 만드는 경우 다음과 같은 멤버를 구현해야 합니다.
 
-* 최적, 교체 또는 예외 대체(fallback)가 단일 문자를 대체하기 위해 반환할 수 있는 최대 문자 수를 반환하는 [EncoderFallback.MaxCharCount](xref:System.Text.EncoderFallback.MaxCharCount) 또는 [DecoderFallback.MaxCharCount](xref:System.Text.DecoderFallback.MaxCharCount) 속성. 사용자 지정 예외 대체(fallback)의 경우 해당 값은 0입니다. 
+* 최적, 교체 또는 예외 대체(fallback)가 단일 문자를 대체하기 위해 반환할 수 있는 최대 문자 수를 반환하는 [EncoderFallback.MaxCharCount](xref:System.Text.EncoderFallback.MaxCharCount) 또는 [DecoderFallback.MaxCharCount](xref:System.Text.DecoderFallback.MaxCharCount) 속성. 사용자 지정 예외 대체(fallback)의 경우 해당 값은&0;입니다. 
 
 * 사용자 지정 [EncoderFallbackBuffer](xref:System.Text.EncoderFallbackBuffer) 또는 [DecoderFallbackBuffer](xref:System.Text.DecoderFallbackBuffer) 구현을 반환하는 [EncoderFallback.CreateFallbackBuffer](xref:System.Text.EncoderFallback.CreateFallbackBuffer) 또는 [DecoderFallback.CreateFallbackBuffer](xref:System.Text.DecoderFallback.CreateFallbackBuffer) 메서드. 메서드는 성공적으로 인코딩할 수 없는 첫 번째 문자를 발견할 때 인코더에 의해 호출되거나 성공적으로 디코딩할 수 없는 첫 번째 바이트를 발견할 때 디코더에 의해 호출됩니다.
 
@@ -1403,7 +1404,7 @@ Public Class CustomMapperFallbackBuffer : Inherits EncoderFallbackBuffer
 End Class
 ```
 
-다음 코드는 `CustomMapper` 개체를 인스턴스화하고 해당 인스턴스를 [Encoding.GetEncoding(String, EncoderFallback, DecoderFallback)](xref:System.Text.Encoding.GetEncoding(System.String,System.Text.EncoderFallback,System.Text.DecoderFallback)) 메서드에 전달합니다. 출력은 최적 대체(fallback) 구현에서 원래 문자열에 있는 3자의 비 ASCII 문자를 성공적으로 처리했음을 나타냅니다.
+다음 코드는 `CustomMapper` 개체를 인스턴스화하고 해당 인스턴스를 [Encoding.GetEncoding(String, EncoderFallback, DecoderFallback)](xref:System.Text.Encoding.GetEncoding(System.String,System.Text.EncoderFallback,System.Text.DecoderFallback)) 메서드에 전달합니다. 출력은 최적 대체(fallback) 구현에서 원래 문자열에 있는&3;자의 비 ASCII 문자를 성공적으로 처리했음을 나타냅니다.
 
 ```csharp
 using System;
@@ -1501,10 +1502,5 @@ End Module
 
 
 
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

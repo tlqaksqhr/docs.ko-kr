@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 5fb15297-a276-417f-8c4f-267281357769
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: dc68271dcca6a64bbcbeb487050e809fae40c8aa
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 0363bdfcb75f51789393e1459d23fcb644c7fb11
 
 ---
 
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>.NET Core SDK 및 CI(연속 통합)의 도구 사용
 
 > [!WARNING]
-> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. Visual Studio 2017 RC - .NET Core Tools Preview 4 버전의 경우 [.NET Core SDK 및 CI(연속 통합)의 도구 사용(Tooling Preview 4)](../preview3/tools/using-ci-with-cli.md) 항목을 참조하세요.
+> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. .NET Core 도구 RC4 버전의 경우 [.NET Core SDK 및 CI(연속 통합)의 도구 사용(.NET Core 도구 RC4)](../preview3/tools/using-ci-with-cli.md) 항목을 참조하세요.
 
 ## <a name="overview"></a>개요
 이 문서는 .NET Core SDK 및 빌드 서버의 도구를 사용하는 방법의 개요를 제공합니다. 일반적으로 CI 빌드 서버에서는 어떤 방식으로든 설치를 자동화하고자 합니다. 자동화에서는 가능한 한 관리자 권한을 요구하지 않는 것이 바람직합니다. 
@@ -93,6 +93,6 @@ install:
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

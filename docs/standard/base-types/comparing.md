@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 920ee5e8-3d61-4941-b5af-fc50eaee427c
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: 2ad585bd5475cf39aeae5dadc9ce3864c501a205
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 47ee37886fa2662a89730e9d52ee04987e37da2f
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -168,7 +169,7 @@ Console.WriteLine(string1.EndsWith("Hello"))
 
 ## <a name="indexof-and-lastindexof"></a>IndexOf 및 LastIndexOf
 
-[String.IndexOf](xref:System.String.IndexOf(System.Char)) 메서드를 사용하여 문자열 내에서 특정 문자의 첫 번째 발생 위치를 확인합니다. 이 대/소문자 구분 메서드는 문자열의 시작 부분에서 계산을 시작하고 0부터 시작하는 인덱스를 사용하여 전달된 문자의 위치를 반환합니다. 문자를 찾을 수 없는 경우 -1 값이 반환됩니다.
+[String.IndexOf](xref:System.String.IndexOf(System.Char)) 메서드를 사용하여 문자열 내에서 특정 문자의 첫 번째 발생 위치를 확인합니다. 이 대/소문자 구분 메서드는 문자열의 시작 부분에서 계산을 시작하고&0;부터 시작하는 인덱스를 사용하여 전달된 문자의 위치를 반환합니다. 문자를 찾을 수 없는 경우 -1 값이 반환됩니다.
 
 다음 예제에서는 `IndexOf` 메서드를 사용하여 문자열에서 '`l`' 문자의 첫 번째 발생을 검색합니다.
 
@@ -184,7 +185,7 @@ Console.WriteLine(string1.IndexOf("l"))
 
 이 예제에서는 콘솔에 `2`을 표시합니다.
 
-[String.LastIndexOf](xref:System.String.LastIndexOf(System.Char)) 메서드는 문자열 내에서 특정 문자의 마지막 발생 위치를 반환한다는 점을 제외하고 `String.IndexOf` 메서드와 비슷합니다. 대/소문자를 구분하며 0부터 시작하는 인덱스를 사용합니다. 
+[String.LastIndexOf](xref:System.String.LastIndexOf(System.Char)) 메서드는 문자열 내에서 특정 문자의 마지막 발생 위치를 반환한다는 점을 제외하고 `String.IndexOf` 메서드와 비슷합니다. 대/소문자를 구분하며&0;부터 시작하는 인덱스를 사용합니다. 
 
 다음 예제에서는 `LastIndexOf` 메서드를 사용하여 문자열에서 '`l`' 문자의 마지막 발생을 검색합니다.
 
@@ -216,10 +217,5 @@ Console.WriteLine(string1.LastIndexOf("l"))
 
 
 
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

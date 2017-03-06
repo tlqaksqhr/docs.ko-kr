@@ -4,21 +4,21 @@ description: ".NET Core 응용 프로그램 배포"
 keywords: ".NET, .NET Core, .NET Core 배포"
 author: rpetrusha
 ms.author: ronpet
-ms.date: 11/13/2016
+ms.date: 07/02/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: a22431b63a0bde8739e33c39fa24380baaa7be54
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 8917a7639f042cb25a469ee9ba7fb7cd582c3821
 
 ---
 
-# <a name="net-core-application-deployment-net-core-tools-preview-4"></a>.NET Core 응용 프로그램 배포(.NET Core Tools Preview 4)
+# <a name="net-core-application-deployment-net-core-tools-rc4"></a>.NET Core 응용 프로그램 배포(.NET Core 도구 RC4)
 
 > [!WARNING]
-> 이 항목은 Visual Studio 2017 RC - .NET Core Tools Preview 4에 적용됩니다. .NET Core Tools Preview 2 설명서의 경우 [.NET Core 응용 프로그램 배포](../../deploying/index.md) 항목을 참조하세요.
+> 이 항목은 .NET Core 도구 RC4에 적용됩니다. .NET Core Tools Preview 2 설명서의 경우 [.NET Core 응용 프로그램 배포](../../deploying/index.md) 항목을 참조하세요.
 
 .NET Core 응용 프로그램에 대해 두 가지 유형을 배포를 만들 수 있습니다. 
 
@@ -111,16 +111,7 @@ FDD 배포에는 다음과 같은 여러 가지 장점이 있습니다.
 
     ```xml
       <ItemGroup>
-        <PackageReference Include="Microsoft.NETCore.App">
-          <Version>1.0.1</Version>
-        </PackageReference>
-        <PackageReference Include="Newtonsoft.Json">
-          <Version>9.0.1</Version>
-        </PackageReference>
-        <PackageReference Include="Microsoft.NET.Sdk">
-          <Version>1.0.0-alpha-20161102-2</Version>
-          <PrivateAssets>All</PrivateAssets>
-        </PackageReference>
+        <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
       </ItemGroup>
     ```
 
@@ -203,15 +194,7 @@ RID를 구분하려면 세미콜론도 추가해야 합니다. 또한 `<RuntimeI
 
 4. `dotnet restore` 명령을 실행하여 프로젝트에 지정된 종속성을 복원합니다.
 
-5. 각 대상 플랫폼에서 `dotnet build` 명령을 사용하여 앱의 디버그 빌드를 만듭니다. 빌드하려는 런타임 식별자를 지정하지 않으면 `dotnet build` 명령은 현재 시스템의 런타임 ID에 대한 빌드만 만듭니다. 다음 명령을 사용하여 두 대상 플랫폼에 대한 앱을 빌드할 수 있습니다.
-
-    ```console
-    dotnet build -r win10-x64
-    dotnet build -r osx.10.11-x64
-    ```
-각 플랫폼에 대한 앱의 디버그 빌드는 프로젝트의 `.\bin\Debug\netcoreapp1.0\<runtime_identifier>` 하위 디렉터리에 있습니다.
-
-6. 프로그램을 디버그하고 테스트한 후에는 다음과 같이 두 대상 플랫폼에 `dotnet publish` 명령을 사용하여 각 대상 플랫폼에 대해 앱과 함께 배포할 파일을 만들 수 있습니다.
+5. 프로그램을 디버그하고 테스트한 후에는 다음과 같이 두 대상 플랫폼에 `dotnet publish` 명령을 사용하여 각 대상 플랫폼에 대해 앱과 함께 배포할 파일을 만들 수 있습니다.
 
    ```console
    dotnet publish -c release -r win10-x64
@@ -219,15 +202,14 @@ RID를 구분하려면 세미콜론도 추가해야 합니다. 또한 `<RuntimeI
    ```
 그러면 각 대상 플랫폼에 대해 앱의 디버그가 아닌 릴리스 버전이 만들어집니다. 결과 파일은 프로젝트 `.\bin\release\netcoreapp1.0\<runtime_identifier>` 하위 디렉터리의 하위 디렉터리에 있는 `publish`라는 하위 디렉터리에 배치됩니다. 각 하위 디렉터리에는 앱을 시작하는 데 필요한 전체 파일 집합(앱 파일 및 모든 .NET Core 파일)이 포함됩니다.
 
-7. 게시 프로세스에서는 응용 프로그램의 파일과 함께 앱에 대한 디버깅 정보를 포함하는 프로그램 데이터베이스(.pdb) 파일을 내보냅니다. 이 파일은 기본적으로 디버깅 예외에 유용하며 응용 프로그램의 파일과 함께 패키지하지 않도록 선택할 수 있습니다.
+6. 게시 프로세스에서는 응용 프로그램의 파일과 함께 앱에 대한 디버깅 정보를 포함하는 프로그램 데이터베이스(.pdb) 파일을 내보냅니다. 이 파일은 기본적으로 디버깅 예외에 유용하며 응용 프로그램의 파일과 함께 패키지하지 않도록 선택할 수 있습니다.
 
 게시된 파일은 원하는 방식으로 배포할 수 있습니다. 예를 들어 zip 파일로 패키지하거나, 간단한 `copy` 명령을 사용하여 선택한 설치 패키지와 함께 배포할 수 있습니다. 
 
 다음은 이 프로젝트에 대한 전체 `csproj` 파일입니다.
 
 ```xml
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp1.0</TargetFramework>
@@ -235,24 +217,6 @@ RID를 구분하려면 세미콜론도 추가해야 합니다. 또한 `<RuntimeI
     <DebugType>Portable</DebugType>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="**\*.cs" />
-    <EmbeddedResource Include="**\*.resx" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NETCore.App">
-      <Version>1.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Newtonsoft.Json">
-      <Version>9.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.NET.Sdk">
-      <Version>1.0.0-alpha-20161102-2</Version>
-      <PrivateAssets>All</PrivateAssets>
-    </PackageReference>
-  </ItemGroup>
-
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
 ```
 
@@ -265,16 +229,7 @@ RID를 구분하려면 세미콜론도 추가해야 합니다. 또한 `<RuntimeI
 
     ```xml
       <ItemGroup>
-        <PackageReference Include="Microsoft.NETCore.App">
-          <Version>1.0.1</Version>
-        </PackageReference>
-        <PackageReference Include="Microsoft.NET.Sdk">
-          <Version>1.0.0-alpha-20161102-2</Version>
-          <PrivateAssets>All</PrivateAssets>
-        </PackageReference>
-        <PackageReference Include="Newtonsoft.Json">
-          <Version>9.0.1</Version>
-        </PackageReference>
+        <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
       </ItemGroup>
     ```
 2. 타사 종속성을 포함하는 NuGet 패키지를 시스템에 아직 다운로드하지 않은 경우 다운로드합니다. 앱에서 종속성을 사용할 수 있도록 하려면 종속성을 추가한 후 `dotnet restore` 명령을 실행합니다. 종속성은 게시 시간에 로컬 NuGet 캐시에서 확인되므로 시스템에서 사용할 수 있어야 합니다.
@@ -282,8 +237,7 @@ RID를 구분하려면 세미콜론도 추가해야 합니다. 또한 `<RuntimeI
 다음은 이 프로젝트에 대한 전체 csproj 파일입니다.
 
 ```xml
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp1.0</TargetFramework>
@@ -292,23 +246,8 @@ RID를 구분하려면 세미콜론도 추가해야 합니다. 또한 `<RuntimeI
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="**\*.cs" />
-    <EmbeddedResource Include="**\*.resx" />
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NETCore.App">
-      <Version>1.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Newtonsoft.Json">
-      <Version>9.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.NET.Sdk">
-      <Version>1.0.0-alpha-20161102-2</Version>
-      <PrivateAssets>All</PrivateAssets>
-    </PackageReference>
-  </ItemGroup>
-
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
 ```
 
@@ -331,23 +270,12 @@ RID를 구분하려면 세미콜론도 추가해야 합니다. 또한 `<RuntimeI
 
 2. 패키지 참조를 포함하는 `<ItemGroup>`을 다음으로 바꿉니다.
 
-    ```xml
-    <ItemGroup>
-      <PackageReference Include="NETSTandard.Library">
-        <Version>1.6.0</Version>
-      </PackageReference>
-      <PackageReference Include="Microsoft.NETCore.Runtime.CoreCLR">
-        <Version>1.0.2</Version>
-      </PackageReference>
-      <PackageReference Include="Microsoft.NETCore.DotNetHostPolicy">
-        <Version>1.0.1</Version>
-      </PackageReference>
-      <PackageReference Include="Microsoft.NET.Sdk">
-        <Version>1.0.0-alpha-20161102-2</Version>
-        <PrivateAssets>All</PrivateAssets>
-      </PackageReference>
-    </ItemGroup>
-  ```
+  ```xml
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.Runtime.CoreCLR" Version="1.0.2" />
+    <PackageReference Include="Microsoft.NETCore.DotNetHostPolicy" Version="1.0.1" />
+  </ItemGroup>
+```
 
    앱에서 사용하는 시스템 구성 요소를 정의합니다. 앱과 함께 패키지되는 시스템 구성 요소에는 .NET 표준 라이브러리, .NET Core 런타임 및 .NET Core 호스트가 포함됩니다. 그러면 공간이 더 작은 자체 포함 배포가 생성됩니다.
 
@@ -364,14 +292,7 @@ RID를 구분하려면 세미콜론도 추가해야 합니다. 또한 `<RuntimeI
 
 4. `dotnet restore` 명령을 실행하여 프로젝트에 지정된 종속성을 복원합니다.
 
-5. 각 대상 플랫폼에서 `dotnet build` 명령을 사용하여 앱의 디버그 빌드를 만듭니다. 빌드하려는 런타임 식별자를 지정하지 않으면 `dotnet build` 명령은 현재 시스템의 런타임 ID에 대한 빌드만 만듭니다. 다음 명령을 사용하여 두 대상 플랫폼에 대한 앱을 빌드할 수 있습니다.
-
-    ```console
-    dotnet build -r win10-x64
-    dotnet build -r osx.10.11-x64
-    ```
-
-6. 프로그램을 디버그하고 테스트한 후에는 다음과 같이 두 대상 플랫폼에 `dotnet publish` 명령을 사용하여 각 대상 플랫폼에 대해 앱과 함께 배포할 파일을 만들 수 있습니다.
+5. 프로그램을 디버그하고 테스트한 후에는 다음과 같이 두 대상 플랫폼에 `dotnet publish` 명령을 사용하여 각 대상 플랫폼에 대해 앱과 함께 배포할 파일을 만들 수 있습니다.
 
    ```console
    dotnet publish -c release -r win10-x64
@@ -379,15 +300,14 @@ RID를 구분하려면 세미콜론도 추가해야 합니다. 또한 `<RuntimeI
    ```
 그러면 각 대상 플랫폼에 대해 앱의 디버그가 아닌 릴리스 버전이 만들어집니다. 결과 파일은 프로젝트 `.\bin\release\netstandard1.6\<runtime_identifier>` 하위 디렉터리의 하위 디렉터리에 있는 `publish`라는 하위 디렉터리에 배치됩니다. 각 하위 디렉터리에는 앱을 시작하는 데 필요한 전체 파일 집합(앱 파일 및 모든 .NET Core 파일)이 포함됩니다.
 
-7. 게시 프로세스에서는 응용 프로그램의 파일과 함께 앱에 대한 디버깅 정보를 포함하는 프로그램 데이터베이스(.pdb) 파일을 내보냅니다. 이 파일은 기본적으로 디버깅 예외에 유용하며 응용 프로그램의 파일과 함께 패키지하지 않도록 선택할 수 있습니다.
+6. 게시 프로세스에서는 응용 프로그램의 파일과 함께 앱에 대한 디버깅 정보를 포함하는 프로그램 데이터베이스(.pdb) 파일을 내보냅니다. 이 파일은 기본적으로 디버깅 예외에 유용하며 응용 프로그램의 파일과 함께 패키지하지 않도록 선택할 수 있습니다.
 
 게시된 파일은 원하는 방식으로 배포할 수 있습니다. 예를 들어 zip 파일로 패키지하거나, 간단한 `copy` 명령을 사용하여 선택한 설치 패키지와 함께 배포할 수 있습니다. 
 
 다음은 이 프로젝트에 대한 전체 `csproj` 파일입니다.
 
 ```xml
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netstandard1.6</TargetFramework>
@@ -396,32 +316,15 @@ RID를 구분하려면 세미콜론도 추가해야 합니다. 또한 `<RuntimeI
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="**\*.cs" />
-    <EmbeddedResource Include="**\*.resx" />
+    <PackageReference Include="Microsoft.NETCore.Runtime.CoreCLR" Version="1.0.2" />
+    <PackageReference Include="Microsoft.NETCore.DotNetHostPolicy" Version="1.0.1" />
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="NETSTandard.Library">
-      <Version>1.6.0</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.NETCore.Runtime.CoreCLR">
-      <Version>1.0.2</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.NETCore.DotNetHostPolicy">
-      <Version>1.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.NET.Sdk">
-      <Version>1.0.0-alpha-20161102-2</Version>
-      <PrivateAssets>All</PrivateAssets>
-    </PackageReference>
-  </ItemGroup>
-
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
 ```
 
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

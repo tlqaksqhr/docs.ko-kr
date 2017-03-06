@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 1bebd25a-120f-48d3-8c25-c89965afcbcd
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 48f06f0af3768f7129e0a2b3a89bbdc7795959dc
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 0a136e69e103994a69084b09f481489880d5df42
 
 ---
 
 # <a name="net-core-cli-extensibility-model"></a>.NET Core CLI 확장성 모델 
 
 > [!WARNING]
-> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. Visual Studio 2017 RC - .NET Core Tools Preview 4 버전의 경우 [.NET Core CLI 확장성 모델(Tooling Preview 4)](../preview3/tools/extensibility.md) 항목을 참조하세요.
+> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. .NET Core 도구 RC4 버전의 경우 [.NET Core CLI 확장성 모델(.NET Core 도구 RC4)](../preview3/tools/extensibility.md) 항목을 참조하세요.
 
 ## <a name="overview"></a>개요
 이 문서에서는 CLI 도구를 확장하는 주요 방법 및 각 방법을 구동하는 시나리오에 대해 설명합니다. 도구를 사용하는 방법에 대해 간략하게 설명할 뿐만 아니라 두 종류의 도구를 빌드하는 방법에 대한 간단한 메모를 제공합니다. 
@@ -135,6 +135,6 @@ MacOS에서는 이 스크립트를 `dotnet-clean`으로 저장하고 `chmod +x d
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

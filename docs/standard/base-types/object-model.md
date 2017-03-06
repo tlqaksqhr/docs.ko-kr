@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a1e611ec-c6a2-48c6-9c52-0ed845787621
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: becfe2624ad1ee1d03707ef48c780f518eb8eb28
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 4e8744c6c7a42c3803bf9716a3ae271b7284be3d
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -109,11 +110,11 @@ End Module
 패턴 | 설명
 ------- | ----------- 
 `^` | 입력 문자열의 시작 부분을 찾습니다.
-`\d{3}` | 세 개의 10진수를 찾습니다.
+`\d{3}` | 세 개의&10;진수를 찾습니다.
 `-` | 하이픈을 찾습니다.
-`\d{2}` | 두 개의 10진수를 찾습니다.
+`\d{2}` | 두 개의&10;진수를 찾습니다.
 `-` | 하이픈을 찾습니다.
-`\d{4}` | 네 개의 10진수를 찾습니다.
+`\d{4}` | 네 개의&10;진수를 찾습니다.
 `$` | 입력 문자열의 끝 부분을 찾습니다.
  
 ### <a name="extracting-a-single-match-or-the-first-match"></a>단일 일치 항목 또는 첫 번째 일치 항목 추출
@@ -218,7 +219,7 @@ End Module
 
 ### <a name="replacing-a-matched-substring"></a>일치하는 부분 문자열 바꾸기
 
-[Regex.Replace](xref:System.Text.RegularExpressions.Regex.Replace(System.String,System.String)) 메서드는 정규식 패턴과 일치하는 각 부분 문자열을 지정된 문자열 또는 정규식 패턴으로 바꾸고, 바뀐 내용이 포함된 전체 입력 문자열을 반환합니다. 예를 들어, 다음 코드는 문자열에서 10진수 앞에 미국 통화 기호를 추가합니다.
+[Regex.Replace](xref:System.Text.RegularExpressions.Regex.Replace(System.String,System.String)) 메서드는 정규식 패턴과 일치하는 각 부분 문자열을 지정된 문자열 또는 정규식 패턴으로 바꾸고, 바뀐 내용이 포함된 전체 입력 문자열을 반환합니다. 예를 들어, 다음 코드는 문자열에서&10;진수 앞에 미국 통화 기호를 추가합니다.
 
 ```csharp
 using System;
@@ -258,9 +259,9 @@ End Module
 패턴 | 설명
 ------- | ----------- 
 `\b` | 단어 경계에서 일치 항목 찾기를 시작합니다.
-`\d+` | 하나 이상의 10진수 숫자가 일치하는지 확인합니다.
+`\d+` | 하나 이상의&10;진수 숫자가 일치하는지 확인합니다.
 `\.` | 마침표를 찾습니다.
-`\d{2}` | 두 개의 10진수를 찾습니다.
+`\d{2}` | 두 개의&10;진수를 찾습니다.
 `\b` | 단어 경계에서 일치 항목 찾기를 끝냅니다.
  
 바꾸기 패턴 `$$$&`는 다음 테이블과 같이 해석됩니다.
@@ -326,7 +327,7 @@ End Module
 패턴 | 설명
 ------- | -----------
 `\b` | 단어 경계에서 일치 항목 찾기를 시작합니다.
-`\d{1,2}` | 한 개 또는 두 개의 10진수를 찾습니다.
+`\d{1,2}` | 한 개 또는 두 개의&10;진수를 찾습니다.
 `\.` | 마침표를 찾습니다.
 `\s` | 공백 문자를 찾습니다.
  
@@ -336,7 +337,7 @@ End Module
 
 ### <a name="the-match-collection"></a>Match 컬렉션
 
-[Regex.Matches](xref:System.Text.RegularExpressions.Regex.Matches(System.String)) 메서드는 정규식 엔진이 입력 문자열에서 찾은 모든 일치 항목(입력 문자열에서 나타나는 순서대로)을 나타내는 [Match](xref:System.Text.RegularExpressions.Match) 개체가 포함된 [MatchCollection](xref:System.Text.RegularExpressions.MatchCollection) 개체를 반환합니다. 일치가 없는 경우 메서드는 멤버 없이 [Match](xref:System.Text.RegularExpressions.Match) 개체를 포함하는 [MatchCollection](xref:System.Text.RegularExpressions.MatchCollection) 개체를 반환합니다. [MatchCollection](xref:System.Text.RegularExpressions.MatchCollection) `Item` 속성을 사용하여 인덱스(0에서 [MatchCollection.Count](xref:System.Text.RegularExpressions.MatchCollection.Count) 속성 값보다 1 작은 값까지)별로 컬렉션의 개별 멤버에 액세스할 수 있습니다. 'Item`은 컬렉션의 인덱서(C#의 경우)이면서 기본 속성(Visual Basic의 경우)입니다.
+[Regex.Matches](xref:System.Text.RegularExpressions.Regex.Matches(System.String)) 메서드는 정규식 엔진이 입력 문자열에서 찾은 모든 일치 항목(입력 문자열에서 나타나는 순서대로)을 나타내는 [Match](xref:System.Text.RegularExpressions.Match) 개체가 포함된 [MatchCollection](xref:System.Text.RegularExpressions.MatchCollection) 개체를 반환합니다. 일치가 없는 경우 메서드는 멤버 없이 [Match](xref:System.Text.RegularExpressions.Match) 개체를 포함하는 [MatchCollection](xref:System.Text.RegularExpressions.MatchCollection) 개체를 반환합니다. [MatchCollection](xref:System.Text.RegularExpressions.MatchCollection) `Item` 속성을 사용하여 인덱스(0에서 [MatchCollection.Count](xref:System.Text.RegularExpressions.MatchCollection.Count) 속성 값보다&1; 작은 값까지)별로 컬렉션의 개별 멤버에 액세스할 수 있습니다. 'Item`은 컬렉션의 인덱서(C#의 경우)이면서 기본 속성(Visual Basic의 경우)입니다.
 
 기본적으로 [Regex.Matches](xref:System.Text.RegularExpressions.Regex.Matches(System.String)) 메서드에 대한 호출에서는 지연 평가를 사용하여 [MatchCollection](xref:System.Text.RegularExpressions.MatchCollection) 개체를 채웁니다. 완전히 채워진 컬렉션이 필요한 속성(예: [MatchCollection.Count](xref:System.Text.RegularExpressions.MatchCollection.Count) 및 `Item` 속성)에 액세스할 경우 성능이 저하될 수 있습니다. 따라서 [MatchCollection.GetEnumerator](xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator) 메서드에서 반환하는 [IEnumerator](xref:System.Collections.IEnumerator) 개체를 사용하여 컬렉션에 액세스하는 것이 좋습니다. 개별 언어는 컬렉션의 IEnumerator](xref:System.Collections.IEnumerator) 인터페이스를 래핑하는 C#의 `foreach` 및 Visual basic의 `For Each'와 같은 구조를 제공합니다.
 
@@ -415,7 +416,7 @@ End Module
 
 [Match](xref:System.Text.RegularExpressions.Match) 클래스는 단일 정규식 일치의 결과를 나타냅니다. 다음과 같은 두 가지 방법으로 [Match](xref:System.Text.RegularExpressions.Match) 개체에 액세스할 수 있습니다.
 
-* Regex.Matches 메서드에서 반환하는 [MatchCollection](xref:System.Text.RegularExpressions.MatchCollection) 개체에서 해당 개체를 검색합니다. 개별 [Match](xref:System.Text.RegularExpressions.Match) 개체를 검색하려면 `foreach`(C#의 경우) 또는 `For Each...Next`(Visual Basic의 경우) 생성자를 사용하여 컬렉션을 반복하거나 [MatchCollection](xref:System.Text.RegularExpressions.MatchCollection) `Item` 속성을 사용하여 인덱스 또는 이름으로 특정 [Match](xref:System.Text.RegularExpressions.Match) 개체를 검색합니다. 또한 인덱스(0에서 컬렉션의 개체 수보다 1 작은 값까지)로 컬렉션을 반복하여 컬렉션에서 개별 [Match](xref:System.Text.RegularExpressions.Match) 개체를 검색할 수 있습니다. 그러나 이 메서드는 [MatchCollection.Count](xref:System.Text.RegularExpressions.MatchCollection.Count) 속성에 액세스하므로 지연 평가를 사용하지 않습니다. 
+* Regex.Matches 메서드에서 반환하는 [MatchCollection](xref:System.Text.RegularExpressions.MatchCollection) 개체에서 해당 개체를 검색합니다. 개별 [Match](xref:System.Text.RegularExpressions.Match) 개체를 검색하려면 `foreach`(C#의 경우) 또는 `For Each...Next`(Visual Basic의 경우) 생성자를 사용하여 컬렉션을 반복하거나 [MatchCollection](xref:System.Text.RegularExpressions.MatchCollection) `Item` 속성을 사용하여 인덱스 또는 이름으로 특정 [Match](xref:System.Text.RegularExpressions.Match) 개체를 검색합니다. 또한 인덱스(0에서 컬렉션의 개체 수보다&1; 작은 값까지)로 컬렉션을 반복하여 컬렉션에서 개별 [Match](xref:System.Text.RegularExpressions.Match) 개체를 검색할 수 있습니다. 그러나 이 메서드는 [MatchCollection.Count](xref:System.Text.RegularExpressions.MatchCollection.Count) 속성에 액세스하므로 지연 평가를 사용하지 않습니다. 
 
   다음 예제에서는 `foreach` 생성자를 사용하여 컬렉션을 반복함으로써 [MatchCollection](xref:System.Text.RegularExpressions.MatchCollection) 개체에서 개별 [Match](xref:System.Text.RegularExpressions.Match) 개체를 검색합니다. 정규식은 단순히 입력 문자열에서 문자열 "abc"를 찾습니다.
 
@@ -517,7 +518,7 @@ End Module
 
 이러한 개체에 대한 자세한 내용은 이 항목 뒷부분의 [그룹 컬렉션](#the-group-collection) 및 [캡처 컬렉션](#the-capture-collection) 섹션을 참조하세요.
 
-[Match](xref:System.Text.RegularExpressions.Match) 클래스의 두 추가 속성은 일치 항목에 대한 정보를 제공합니다. `Match.Value` 속성은 입력 문자열에서 정규식 패턴과 일치하는 부분 문자열을 반환합니다. `Match.Index` 속성은 입력 문자열에서 일치하는 문자열의 0부터 시작하는 시작 위치를 반환합니다.
+[Match](xref:System.Text.RegularExpressions.Match) 클래스의 두 추가 속성은 일치 항목에 대한 정보를 제공합니다. `Match.Value` 속성은 입력 문자열에서 정규식 패턴과 일치하는 부분 문자열을 반환합니다. `Match.Index` 속성은 입력 문자열에서 일치하는 문자열의&0;부터 시작하는 시작 위치를 반환합니다.
 
 또한 [Match](xref:System.Text.RegularExpressions.Match) 클래스에는 두 개의 패턴 일치 메서드가 포함되어 있습니다.
 
@@ -573,10 +574,10 @@ End Module
 패턴 | 설명
 ------- | -----------
 `\b` | 단어 경계에서 일치 항목 찾기를 시작합니다.
-`\d+` | 하나 이상의 10진수 숫자가 일치하는지 확인합니다.
-`(,\d{3})*` | 쉼표 하나 다음에 세 개의 10진수가 있는 0개 이상의 일치 항목을 찾습니다.
+`\d+` | 하나 이상의&10;진수 숫자가 일치하는지 확인합니다.
+`(,\d{3})*` | 쉼표 하나 다음에 세 개의&10;진수가 있는&0;개 이상의 일치 항목을 찾습니다.
 `\.` | 소수점 문자를 찾습니다.
-`\d{2} | 두 개의 10진수를 찾습니다.
+`\d{2} | 두 개의&10;진수를 찾습니다.
 `\b` | 단어 경계에서 일치 항목 찾기를 끝냅니다.
  
 바꾸기 패턴 **$$ $&**는 일치하는 부분 문자열이 달러(**$**) 기호(`$$` 패턴), 공백 하나 및 일치 항목 값(`$&` 패턴)으로 바뀌어야 함을 나타냅니다.
@@ -651,10 +652,10 @@ End Module
 `\b` | 단어 경계에서 일치 항목 찾기를 시작합니다.
 `(\w+)` | 하나 이상의 단어 문자를 찾습니다. 이 그룹은 첫 번째 캡처링 그룹입니다.
 `\s` | 공백 문자를 찾습니다.
-`(\d{1,2})` | 한 개 또는 두 개의 10진수를 찾습니다. 이 그룹은 두 번째 캡처링 그룹입니다.
+`(\d{1,2})` | 한 개 또는 두 개의&10;진수를 찾습니다. 이 그룹은 두 번째 캡처링 그룹입니다.
 `,` | 쉼표 하나를 찾습니다.
 `\s` | 공백 문자를 찾습니다.
-`(\d{4})` | 네 개의 10진수를 찾습니다. 이 그룹은 세 번째 캡처링 그룹입니다.
+`(\d{4})` | 네 개의&10;진수를 찾습니다. 이 그룹은 세 번째 캡처링 그룹입니다.
 `\b` | 단어 경계에서 일치 항목 찾기를 끝냅니다.
  
 ## <a name="the-captured-group"></a>캡처된 그룹
@@ -756,7 +757,7 @@ Console.WriteLine(m.Groups("value").Value)
   `Value` | [String.Empty](xref:System.String.Empty) 
   `Length` | 0
  
-  다음 예제에서 이에 대해 설명합니다. 정규식 패턴 `aaa(bbb)*ccc`에서 첫 번째 캡처링 그룹(부분 문자열 "bbb")은 0번 이상 일치할 수 있습니다. 입력 문자열 "aaaccc"가 패턴과 일치하므로 캡처링 그룹은 일치 항목이 없습니다.
+  다음 예제에서 이에 대해 설명합니다. 정규식 패턴 `aaa(bbb)*ccc`에서 첫 번째 캡처링 그룹(부분 문자열 "bbb")은&0;번 이상 일치할 수 있습니다. 입력 문자열 "aaaccc"가 패턴과 일치하므로 캡처링 그룹은 일치 항목이 없습니다.
 
   ```csharp
   using System;
@@ -1102,8 +1103,8 @@ End Module
 패턴 | 설명
 ------- | -----------
 `\w+` | 하나 이상의 단어 문자를 찾습니다.
-`(\s\w+)*` | 공백 문자 다음에 하나 이상의 단어 문자가 있는 0개 이상의 일치 항목을 찾습니다. 이 패턴에서는 여러 단어로 된 도시 이름을 찾습니다. 이 그룹은 세 번째 캡처링 그룹입니다.
-`(\w+(\s\w+)*)` | 하나 이상의 단어 문자 다음에 0개 이상의 공백 문자 및 하나 이상의 단어 문자가 있는 일치 항목을 찾습니다. 이 그룹은 두 번째 캡처링 그룹입니다.
+`(\s\w+)*` | 공백 문자 다음에 하나 이상의 단어 문자가 있는&0;개 이상의 일치 항목을 찾습니다. 이 패턴에서는 여러 단어로 된 도시 이름을 찾습니다. 이 그룹은 세 번째 캡처링 그룹입니다.
+`(\w+(\s\w+)*)` | 하나 이상의 단어 문자 다음에&0;개 이상의 공백 문자 및 하나 이상의 단어 문자가 있는 일치 항목을 찾습니다. 이 그룹은 두 번째 캡처링 그룹입니다.
 `,` | 쉼표 하나를 찾습니다.
 `(\d+)` | 하나 이상의 숫자를 찾습니다. 이 그룹은 네 번째 캡처링 그룹입니다.
 `;` | 세미콜론을 하나 찾습니다.
@@ -1116,10 +1117,5 @@ End Module
 [.NET 정규식](regular-expressions.md)
 
 [정규식 언어 - 빠른 참조](quick-ref.md)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 93015521-2127-4fe9-8fce-ca79bcc4ff49
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: b88f9fb2e5be34c0a4f50cda7d66bbe8bf18de6d
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: a6a4bc5dad16bb1455fd8f7bc6a5c3609a06b88a
 
 ---
 
 #<a name="dotnet-command"></a>dotnet 명령
 
 > [!WARNING]
-> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. Visual Studio 2017 RC - .NET Core Tools Preview 4 버전의 경우 [dotnet 명령(Tooling Preview 4)](../preview3/tools/dotnet.md) 항목을 참조하세요.
+> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. .NET Core 도구 RC4 버전의 경우 [dotnet 명령(.NET Core 도구 RC4)](../preview3/tools/dotnet.md) 항목을 참조하세요.
 
 ## <a name="name"></a>이름
 
@@ -106,6 +106,6 @@ CLI 도구의 버전을 출력합니다.
 .NET Core 도구 사용에 대한 데이터를 수집하여 Microsoft에 전송할지 여부를 지정합니다. `true`이면 원격 분석 기능을 옵트아웃(opt out)하고(값 true, 1 또는 yes 허용), 그렇지 않은 경우에는 `false`(값 false, 0 또는 no 허용)입니다. 설정하지 않으면 `false`로 기본 설정됩니다. 즉, 원격 분석 기능이 설정되어 있습니다.
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

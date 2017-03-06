@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 3a0fa917-eb0a-4d7e-9217-d06e65455675
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: a53cedb48e57dce7672a5bba2c0ea908cbeb70f4
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 871a6f736272309f6fae74b06f437c7271df2321
 
 ---
 
 #<a name="dotnet-test"></a>dotnet-test
 
 > [!WARNING]
-> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. Visual Studio 2017 RC - .NET Core Tools Preview 4 버전의 경우 [dotnet-test(Tooling Preview 4)](../preview3/tools/dotnet-test.md) 항목을 참조하세요.
+> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. .NET Core 도구 RC4 버전의 경우 [dotnet-test(.NET Core 도구 RC4)](../preview3/tools/dotnet-test.md) 항목을 참조하세요.
 
 ## <a name="name"></a>이름
 
@@ -135,6 +135,6 @@ test1 프로젝트에서 테스트를 실행합니다.
 [RID(런타임 식별자) 카탈로그](../rid-catalog.md)
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

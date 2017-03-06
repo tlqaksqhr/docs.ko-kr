@@ -10,12 +10,15 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
 translationtype: Human Translation
-ms.sourcegitcommit: 663f4102b82512e64ab39d8046c7298a7cf37de7
-ms.openlocfilehash: 5509f09b3f7957049194ea7af9952bb6b5ec7539
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 694502a105224543063cfc08e9310dc02c1d2319
 
 ---
 
 # <a name="net-core-application-deployment"></a>.NET Core 응용 프로그램 배포 #
+
+> [!WARNING]
+> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. .NET Core 도구 RC4 버전의 경우 [.NET Core 응용 프로그램 배포(.NET Core 도구 RC4)](../preview3/deploying/index.md) 항목을 참조하세요.
 
 .NET Core 응용 프로그램에 대해 두 가지 유형을 배포를 만들 수 있습니다. 
 
@@ -391,6 +394,6 @@ FDD 배포에는 다음과 같은 여러 가지 장점이 있습니다.
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

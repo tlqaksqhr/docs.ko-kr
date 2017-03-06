@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2b9d39ab-0993-4453-b021-b04870098bf7
 translationtype: Human Translation
-ms.sourcegitcommit: b828bb1d6c8fb750ad9ef34f8a7a1b7d2574f4c6
-ms.openlocfilehash: 2475ccb7409285a80a92abc378023944b9e263fe
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: e560eb44f783aaa50ec335df4f3171090d238f32
+ms.lasthandoff: 03/03/2017
 
 ---
 
@@ -221,9 +222,4 @@ class ProgramWithCancellation
 [System.Collections.Concurrent](https://docs.microsoft.com/dotnet/core/api/System.Collections.Concurrent)
 
 [BlockingCollection 개요](blockingcollection-overview.md)
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

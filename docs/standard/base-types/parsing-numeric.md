@@ -11,14 +11,15 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: e393430a-731a-49fa-83de-ff7ed52d5704
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 209d24d32eb3b235ff2fde2ef11ffd0ee4e930cf
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 85cd57d33b03f7a2105ee3f770b2f8bcc0a57ee4
+ms.lasthandoff: 03/02/2017
 
 ---
 
 # <a name="parsing-numeric-strings-in-net"></a>.NET에서 숫자 문자열 구문 분석
 
-모든 숫자 형식에는 두 개의 정적 구문 분석 메서드인 `Parse` 및 `TryParse`가 있습니다. 이를 사용하여 숫자의 문자열 표현을 숫자 형식으로 변환할 수 있습니다. 이러한 메서드를 사용하면 [표준 숫자 서식 문자열](standard-numeric.md) 및 [사용자 지정 숫자 서식 문자열](custom-numeric.md)에서 설명하는 서식 문자열을 사용하여 생성된 문자열을 구문 분석할 수 있습니다. 기본적으로 `Parse` 및 `TryParse` 메서드는 정수 소수 자릿수를 포함하는 문자열을 정수 값으로 변환할 수 있습니다. 정수 및 소수 10진수 숫자, 그룹 구분 기호 및 소수 구분 기호를 포함하는 문자열을 부동 소수점 값으로 성공적으로 변환할 수 있습니다. 작업에 실패하면 `Parse` 메서드는 예외를 throw하지만 `TryParse` 메서드는 `false`를 반환합니다.
+모든 숫자 형식에는 두 개의 정적 구문 분석 메서드인 `Parse` 및 `TryParse`가 있습니다. 이를 사용하여 숫자의 문자열 표현을 숫자 형식으로 변환할 수 있습니다. 이러한 메서드를 사용하면 [표준 숫자 서식 문자열](standard-numeric.md) 및 [사용자 지정 숫자 서식 문자열](custom-numeric.md)에서 설명하는 서식 문자열을 사용하여 생성된 문자열을 구문 분석할 수 있습니다. 기본적으로 `Parse` 및 `TryParse` 메서드는 정수 소수 자릿수를 포함하는 문자열을 정수 값으로 변환할 수 있습니다. 정수 및 소수&10;진수 숫자, 그룹 구분 기호 및 소수 구분 기호를 포함하는 문자열을 부동 소수점 값으로 성공적으로 변환할 수 있습니다. 작업에 실패하면 `Parse` 메서드는 예외를 throw하지만 `TryParse` 메서드는 `false`를 반환합니다.
 
 ## <a name="parsing-and-format-providers"></a>구문 분석 및 서식 공급자
 
@@ -141,7 +142,7 @@ End Module
 
 ## <a name="parsing-and-numberstyles-values"></a>구문 분석 및 NumberStyles 값
 
-구문 분석 작업이 처리할 수 있는 스타일 요소(예: 공백, 그룹 구분 기호 및 소수 구분 기호)는 [NumberStyles](xref:System.Globalization.NumberStyles) 열거형 값에서 정의됩니다. 기본적으로 정수 값을 나타내는 문자열은 숫자, 선행 및 후행 공백 및 선행 기호만을 허용하는 [NumberStyles.Integer](xref:System.Globalization.NumberStyles.Integer) 값을 사용하여 구문 분석됩니다. 부동 소수점 값을 나타내는 문자열은 [NumberStyles.Float](xref:System.Globalization.NumberStyles.Float) 및 [NumberStyles.AllowThousands](xref:System.Globalization.NumberStyles.AllowThousands) 값의 조합을 사용하여 구문 분석됩니다. 이 복합 스타일은 선행 및 후행 공백, 선행 기호, 소수 구분 기호, 그룹 구분 기호 및 지수와 함께 10진수 숫자를 허용합니다. 구문 분석 작업이 성공하기 위해 [NumberStyles](xref:System.Globalization.NumberStyles) 형식의 매개 변수를 포함하는 `Parse` 또는 `TryParse` 메서드의 오버로드를 호출하고 하나 이상의 [NumberStyles](xref:System.Globalization.NumberStyles) 플래그를 설정하여 문자열에 나타날 수 있는 스타일 요소를 제어할 수 있습니다. 
+구문 분석 작업이 처리할 수 있는 스타일 요소(예: 공백, 그룹 구분 기호 및 소수 구분 기호)는 [NumberStyles](xref:System.Globalization.NumberStyles) 열거형 값에서 정의됩니다. 기본적으로 정수 값을 나타내는 문자열은 숫자, 선행 및 후행 공백 및 선행 기호만을 허용하는 [NumberStyles.Integer](xref:System.Globalization.NumberStyles.Integer) 값을 사용하여 구문 분석됩니다. 부동 소수점 값을 나타내는 문자열은 [NumberStyles.Float](xref:System.Globalization.NumberStyles.Float) 및 [NumberStyles.AllowThousands](xref:System.Globalization.NumberStyles.AllowThousands) 값의 조합을 사용하여 구문 분석됩니다. 이 복합 스타일은 선행 및 후행 공백, 선행 기호, 소수 구분 기호, 그룹 구분 기호 및 지수와 함께&10;진수 숫자를 허용합니다. 구문 분석 작업이 성공하기 위해 [NumberStyles](xref:System.Globalization.NumberStyles) 형식의 매개 변수를 포함하는 `Parse` 또는 `TryParse` 메서드의 오버로드를 호출하고 하나 이상의 [NumberStyles](xref:System.Globalization.NumberStyles) 플래그를 설정하여 문자열에 나타날 수 있는 스타일 요소를 제어할 수 있습니다. 
 
 예를 들어 그룹 구분 기호를 포함하는 문자열은 [Int32.Parse(String)](xref:System.Int32.Parse(System.String)) 메서드를 사용하여 [Int32](xref:System.Int32) 값으로 변환할 수 없지만, 다음 예제에서 설명하는 것처럼 [NumberStyles.AllowThousands](xref:System.Globalization.NumberStyles.AllowThousands) 플래그를 사용할 경우 변환이 성공합니다.
 
@@ -209,7 +210,7 @@ End Module
 NumberStyles 값 | 구문 분석할 문자열에 미치는 영향
 ------------------ | --------------------------------- 
 [NumberStyles.None](xref:System.Globalization.NumberStyles.None) | 숫자만 허용됩니다.
-[NumberStyles.AllowDecimalPoint](xref:System.Globalization.NumberStyles.AllowDecimalPoint) | 소수 구분 기호 및 소수 자릿수가 허용됩니다. 정수 값의 경우 소수 자릿수로 0만 허용됩니다. [NumberFormatInfo.NumberDecimalSeparator](xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator) 또는 [NumberFormatInfo.CurrencyDecimalSeparator](xref:System.Globalization.NumberFormatInfo.CurrencyDecimalSeparator) 속성에 의해 유효한 소수 구분 기호가 결정됩니다.
+[NumberStyles.AllowDecimalPoint](xref:System.Globalization.NumberStyles.AllowDecimalPoint) | 소수 구분 기호 및 소수 자릿수가 허용됩니다. 정수 값의 경우 소수 자릿수로&0;만 허용됩니다. [NumberFormatInfo.NumberDecimalSeparator](xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator) 또는 [NumberFormatInfo.CurrencyDecimalSeparator](xref:System.Globalization.NumberFormatInfo.CurrencyDecimalSeparator) 속성에 의해 유효한 소수 구분 기호가 결정됩니다.
 [NumberStyles.AllowExponent](xref:System.Globalization.NumberStyles.AllowExponent) | 지수 표기법을 나타내기 위해 "e" 또는 "E" 문자를 사용할 수 있습니다.
 [NumberStyles.AllowLeadingWhite](xref:System.Globalization.NumberStyles.AllowLeadingWhite) | 선행 공백이 허용됩니다.
 [NumberStyles.AllowTrailingWhite](xref:System.Globalization.NumberStyles.AllowTrailingWhite) | 후행 공백이 허용됩니다.
@@ -218,7 +219,7 @@ NumberStyles 값 | 구문 분석할 문자열에 미치는 영향
 [NumberStyles.AllowParentheses](xref:System.Globalization.NumberStyles.AllowParentheses) | 괄호는 음수 값을 나타내는 데 사용될 수 있습니다.
 [NumberStyles.AllowThousands](xref:System.Globalization.NumberStyles.AllowThousands) | 그룹 구분 기호가 허용됩니다. 그룹 구분 기호는 [NumberFormatInfo.NumberGroupSeparator](xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator) 또는 [NumberFormatInfo.CurrencyGroupSeparator](xref:System.Globalization.NumberFormatInfo.CurrencyGroupSeparator) 속성에서 결정합니다.
 [NumberStyles.AllowCurrencySymbol](xref:System.Globalization.NumberStyles.AllowCurrencySymbol) | 통화 기호가 허용됩니다. 통화 기호는 [NumberFormatInfo.CurrencySymbol](xref:System.Globalization.NumberFormatInfo.CurrencySymbol) 속성에서 정의합니다.
-[NumberStyles.AllowHexSpecifier](xref:System.Globalization.NumberStyles.AllowHexSpecifier) | 구문 분석될 문자열은 16진수 숫자로 해석됩니다. 16진수인 0-9, A-F 및 a-f를 포함할 수 있습니다. 이 플래그는 정수 값을 구문 분석하는 데 사용할 수 있습니다.
+[NumberStyles.AllowHexSpecifier](xref:System.Globalization.NumberStyles.AllowHexSpecifier) | 구문 분석될 문자열은&16;진수 숫자로 해석됩니다. 16진수인 0-9, A-F 및 a-f를 포함할 수 있습니다. 이 플래그는 정수 값을 구문 분석하는 데 사용할 수 있습니다.
  
 또한 [NumberStyles](xref:System.Globalization.NumberStyles) 열거형은 다중 [NumberStyles](xref:System.Globalization.NumberStyles) 플래그를 포함하는 다음과 같은 복합 스타일을 제공합니다. 
 
@@ -324,10 +325,5 @@ End Module
 [.NET에서 문자열 구문 분석](parsing-strings.md)
 
 [.NET의 서식 지정 형식](formatting-types.md)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

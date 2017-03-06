@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: d602f260-e7cf-49c8-a37f-731f40e4a538
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: 16f38150f26b477de5685d2d3b0ef18afb94c236
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: a27f78bc3c0753a7c5bc752bb6391839bfc21e75
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -47,7 +48,7 @@ ms.openlocfilehash: 16f38150f26b477de5685d2d3b0ef18afb94c236
 
 ## <a name="narrowing-conversions"></a>축소 변환
 
-[Single](xref:System.Single) 또는 [Double](xref:System.Double)로의 축소 변환에서는 정보 손실이 발생할 수 있습니다. 대상 형식이 소스 크기를 제대로 표시할 수 없는 경우 결과 형식이 상수 `PositiveInfinity` 또는 `NegativeInfinity`로 설정됩니다. `PositiveInfinity`는 양수를 0으로 나눈 결과이며 [Single](xref:System.Single) 또는 [Double](xref:System.Double) 값이 `MaxValue` 필드 값을 초과하는 경우에도 반환됩니다. `NegativeInfinity`는 음수를 0으로 나눈 결과이며 [Single](xref:System.Single) 또는 [Double](xref:System.Double) 값이 `MinValue` 필드 값보다 작은 경우에도 반환됩니다. [Double](xref:System.Double)에서 [Single](xref:System.Single)로 변환하면 `PositiveInfinity` 또는 `NegativeInfinity`가 발생할 수 있습니다.
+[Single](xref:System.Single) 또는 [Double](xref:System.Double)로의 축소 변환에서는 정보 손실이 발생할 수 있습니다. 대상 형식이 소스 크기를 제대로 표시할 수 없는 경우 결과 형식이 상수 `PositiveInfinity` 또는 `NegativeInfinity`로 설정됩니다. `PositiveInfinity`는 양수를&0;으로 나눈 결과이며 [Single](xref:System.Single) 또는 [Double](xref:System.Double) 값이 `MaxValue` 필드 값을 초과하는 경우에도 반환됩니다. `NegativeInfinity`는 음수를&0;으로 나눈 결과이며 [Single](xref:System.Single) 또는 [Double](xref:System.Double) 값이 `MinValue` 필드 값보다 작은 경우에도 반환됩니다. [Double](xref:System.Double)에서 [Single](xref:System.Single)로 변환하면 `PositiveInfinity` 또는 `NegativeInfinity`가 발생할 수 있습니다.
 
 축소 변환 시 다른 데이터 형식에 대한 정보 손실도 발생할 수 있습니다. 그러나 변환 중인 형식의 값이 대상 형식의 `MaxValue` 및 `MinValue` 필드에 지정된 범위를 벗어나면 [OverflowException](xref:System.OverflowException)이 throw되며, 런타임에서 변환을 검사하여 대상 형식의 값이 해당 `MaxValue` 또는 `MinValue`를 초과하지 않는지 확인합니다. [System.Convert](xref:System.Convert) 클래스로 수행하는 변환은 항상 이런 방식으로 검사됩니다.
 
@@ -72,10 +73,5 @@ ms.openlocfilehash: 16f38150f26b477de5685d2d3b0ef18afb94c236
 [System.Convert](xref:System.Convert)
 
 [형식 변환](type-conversion.md)
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

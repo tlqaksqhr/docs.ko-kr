@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 0a60fca7-e082-48d4-9dda-30b0d3e67ec7
 translationtype: Human Translation
-ms.sourcegitcommit: cfe65fcba1b3fdc09ffcac704a760d8ce29ea60b
-ms.openlocfilehash: 38f5a970738103bd96c9570f4d6e8ee540af6ee1
+ms.sourcegitcommit: 763433b00ae7d01cfa0c7fa250f51d23a95f6f15
+ms.openlocfilehash: d174d0cb910035340fb317521f3ad930d16853c2
+ms.lasthandoff: 01/18/2017
 
 ---
 
@@ -70,7 +71,7 @@ ms.openlocfilehash: 38f5a970738103bd96c9570f4d6e8ee540af6ee1
     
 ## <a name="linq-to-objects"></a>LINQ to Objects
 
-개발자가 LINQ to Objects를 사용하면 개체 형식이 [System.Collections.IEnumerable](https://docs.microsoft.com/dotnet/core/api/System.Collections.IEnumerable) 또는 [System.Collections.Generic.IEnumerable&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IEnumerable-1)을 구현하는 경우 LINQ 쿼리를 통해 메모리 내 개체에 액세스할 수 있습니다. LINQ 쿼리는 데이터 액세스를 위한 일반 패턴을 제공하고, 일반적으로 표준 foreach 루프에 비해 간결하고 쉽게 읽을 수 있으며, 필터링, 순서 지정 및 그룹화 기능을 제공합니다. 자세한 내용은 [LINQ(언어 통합 쿼리)](../../csharp/linq.md)를 참조하세요.
+개발자가 LINQ to Objects를 사용하면 개체 형식이 [System.Collections.IEnumerable](https://docs.microsoft.com/dotnet/core/api/System.Collections.IEnumerable) 또는 [System.Collections.Generic.IEnumerable&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IEnumerable-1)을 구현하는 경우 LINQ 쿼리를 통해 메모리 내 개체에 액세스할 수 있습니다. LINQ 쿼리는 데이터 액세스를 위한 일반 패턴을 제공하고, 일반적으로 표준 foreach 루프에 비해 간결하고 쉽게 읽을 수 있으며, 필터링, 순서 지정 및 그룹화 기능을 제공합니다. 자세한 내용은 [LINQ(언어 통합 쿼리)](../../csharp/linq/index.md)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 
@@ -81,9 +82,4 @@ ms.openlocfilehash: 38f5a970738103bd96c9570f4d6e8ee540af6ee1
 [System.Collections.Generic](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic)
 
 [스레드로부터 안전한 컬렉션](threadsafe/index.md)
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

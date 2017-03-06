@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fd7a5769-afbe-4838-bbaf-3ae0cfcbb914
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: b2dbd39583b58c5d977d88edfc4770f6d9855ec1
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: 594956488dee39903feba44e10d6bb81801412a4
 
 ---
 
-#<a name="dotnet-restore-tooling-preview-4"></a>dotnet-restore(Tooling Preview 4)
+#<a name="dotnet-restore-net-core-tools-rc4"></a>dotnet-restore(.NET Core 도구 RC4)
 
 > [!WARNING]
-> 이 항목은 Visual Studio 2017 RC - .NET Core Tools Preview 4에 적용됩니다. .NET Core Tools Preview 2 버전의 경우 [dotnet-restore](../../tools/dotnet-restore.md) 항목을 참조하세요.
+> 이 항목은 .NET Core 도구 RC4에 적용됩니다. .NET Core Tools Preview 2 버전의 경우 [dotnet-restore](../../tools/dotnet-restore.md) 항목을 참조하세요.
 
 ## <a name="name"></a>이름
 
@@ -103,6 +103,6 @@ P2P 참조를 사용하여 프로젝트를 복원할 경우 참조를 복원하�
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

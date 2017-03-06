@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: e1ac9659-425f-4486-a376-c12ca942ead8
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: e8c8123f2c46e506990375172d1be642653d4996
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: a6b0ad546a8a121ad5ea4642c11842a8dccf7055
 
 ---
 
 # <a name="globaljson-reference"></a>global.json 참조
 
 > [!WARNING]
-> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. Visual Studio 2017 RC - .NET Core Tools Preview 4 버전의 경우 [global.json 참조(Tooling Preview 4)](../preview3/tools/global-json.md) 항목을 참조하세요.
+> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. .NET Core 도구 RC4 버전의 경우 [global.json 참조(.NET Core 도구 RC4)](../preview3/tools/global-json.md) 항목을 참조하세요.
 
 global.json 파일은 .NET Core 프로젝트에서 솔루션 메타데이터를 정의하는 데 사용됩니다. 이 파일은 [dotnet-restore](dotnet-restore.md) 명령을 호출하여 .NET Core 프로젝트의 종속성을 복원할 때 사용됩니다.
 이 참조 항목에는 global.json 파일에서 정의할 수 있는 속성의 목록이 표시됩니다.
@@ -71,6 +71,6 @@ SDK에 대한 정보를 지정합니다.
 
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

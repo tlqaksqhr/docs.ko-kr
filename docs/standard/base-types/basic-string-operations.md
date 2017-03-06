@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 9658098d-de60-4868-ba5b-0c278748a90f
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: 7031210ec1fdc42d52dddf25bdf0c0e0d0d934fc
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: b8bdbeccd226c412e725200fcaf81ec568afc5bc
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -42,10 +43,5 @@ ms.openlocfilehash: 7031210ec1fdc42d52dddf25bdf0c0e0d0d934fc
 
 [형식 서식 지정](formatting-types.md) - 문자열 형식 지정자를 사용하여 문자열 형식을 지정하는 방법을 설명합니다.
 
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 1458cfdb81c53b7eab384c1b7f3e65c7ad7d8098
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: e36eab49717e6a5872c5812fce160d61eee50a4f
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -158,7 +159,7 @@ CLS 규격의 규칙은 다음 표에 나와 있습니다. 규칙 텍스트는 [
 -------- | --- | ---- | -----------
 접근성 | [멤버 접근성](#member-accessibility) | `family-or-assembly` 액세스 가능성을 갖는 다른 어셈블리에서 상속된 메서드를 재정의하는 경우를 제외하고는, 상속된 메서드를 재정의할 때 액세스 가능성이 변경되어서는 안 됩니다. 이 경우, 재정의는 `family` 액세스 가능성을 가져야 합니다. | 10
 접근성 | [멤버 접근성](#member-accessibility) | 형식과 멤버의 표시 유형 및 접근성은 해당 멤버가 표시되고 액세스 가능한 경우 모든 멤버의 시그니처에 있는 해당 형식이 표시되고 액세스 가능해야 합니다. 예를 들어 어셈블리 외부에 표시되는 공용 메서드는 어셈블리 내부에서만 표시되는 형식의 인수를 가질 수 없습니다. 해당 멤버가 표시되고 액세스 가능한 경우 모든 멤버의 시그니처에 사용된 인스턴스화된 제네릭 형식을 구성하는 형식의 표시 유형과 액세스 가능성은 표시되고 액세스 가능해야 합니다. 예를 들어 어셈블리 외부에 표시되는 멤버의 시그니처에 있는 인스턴스화된 제네릭 형식은 어셈블리 내부에서만 표시되는 형식의 제네릭 인수를 가질 수 없습니다. | 12
-배열 | [배열](#arrays) | 배열에는 CLS 규격 형식의 요소가 있어야 하며 배열의 모든 차원은 하한이 0이어야 합니다. 항목은 배열이며 이 배열의 요소 형식은 오버로드 간에 구분되어야 합니다. 오버로드가 2개 이상의 배열 형식에 기반하는 경우 요소 형식은 명명된 형식이어야 합니다. | 16
+배열 | [배열](#arrays) | 배열에는 CLS 규격 형식의 요소가 있어야 하며 배열의 모든 차원은 하한이&0;이어야 합니다. 항목은 배열이며 이 배열의 요소 형식은 오버로드 간에 구분되어야 합니다. 오버로드가&2;개 이상의 배열 형식에 기반하는 경우 요소 형식은 명명된 형식이어야 합니다. | 16
 특성 | [특성](#attributes) | 특성은 [System.Attribute](xref:System.Attribute) 형식 또는 이 형식에서 상속받는 형식입니다. | 41
 특성 | [특성](#attributes) | CLS에서는 사용자 지정 특성 인코딩의 하위 집합만을 허용합니다. 이러한 인코딩에 표시되는 형식은(Partition IV 참조) [System.Type](xref:System.Type), [System.String](xref:System.String), [System.Char](xref:System.Char), [System.Boolean](xref:System.Boolean), [System.Byte](xref:System.Byte), [System.Int16](xref:System.Int16), [System.Int32](xref:System.Int32), [System.Int64](xref:System.Int64), [System.Single](xref:System.Single), [System.Double](xref:System.Double) 및 CLS 규격 기본 정수 형식을 기반으로 하는 열거형 형식뿐입니다. | 34
 특성 | [특성](#attributes) | CLS에서는 공개적으로 표시되는 필수 한정자(`modreq`)를 허용하지 않지만, CLS에서 인식할 수 없는 선택적 한정자(`modopt`, Partition II 참조)는 허용합니다. | 35
@@ -328,7 +329,7 @@ CLS 규격 형식 | 설명
 [Double](xref:System.Double) | 배정밀도 부동 소수점 값
 [Boolean](xref:System.Boolean) | true 또는 false 값 형식 
 [Char](xref:System.Char) | UTF-16으로 인코딩된 코드 단위
-[Decimal](xref:System.Decimal) | 비 부동 소수점 10진수
+[Decimal](xref:System.Decimal) | 비 부동 소수점&10;진수
 [IntPtr](xref:System.IntPtr) | 플랫폼 정의 크기의 포인터 또는 핸들
 [String](xref:System.String) | 0개 또는 하나 이상의 Char 개체 컬렉션 
  
@@ -373,7 +374,7 @@ CLS 규격 형식 | 설명
 
 형식이 CLS 규격이 아닌 경우 *isCompliant* 매개 변수를 `false` 값으로 지정하여 [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 특성을 적용해야 합니다. 자세한 내용은 [CLSCompliantAttribute 특성](#the-clscompliantattribute-attribute) 섹션을 참조하세요.  
 
-다음 예제에서는 메서드 시그니처와 제네릭 형식 인스턴스화의 CLS 규격 문제를 보여 줍니다. `InvoiceItem` 클래스를 [UInt32](xref:System.UInt32) 형식의 속성, [Nullable(Of UInt32)](xref:System.Nullable%601) 형식의 속성, `UInt32` 및 `Nullable(Of UInt32)` 형식의 매개 변수가 있는 생성자로 정의합니다. 이 예제를 컴파일하려고 할 때 4개의 컴파일러 경고가 표시됩니다.
+다음 예제에서는 메서드 시그니처와 제네릭 형식 인스턴스화의 CLS 규격 문제를 보여 줍니다. `InvoiceItem` 클래스를 [UInt32](xref:System.UInt32) 형식의 속성, [Nullable(Of UInt32)](xref:System.Nullable%601) 형식의 속성, `UInt32` 및 `Nullable(Of UInt32)` 형식의 매개 변수가 있는 생성자로 정의합니다. 이 예제를 컴파일하려고 할 때&4;개의 컴파일러 경고가 표시됩니다.
 
 ```csharp
 using System;
@@ -615,7 +616,7 @@ public class person
 
 * 식별자의 첫 문자로는 유니코드 대문자, 소문자, 제목 대/소문자, 한정자 문자, 기타 문자 또는 문자 숫자가 올 수 있습니다. 유니코드 문자 범주에 대한 자세한 내용은 [System.Globalization.UnicodeCategory](xref:System.Globalization.UnicodeCategory) 열거형을 참조하세요. 
 
-* 연속되는 문자는 첫 번째 문자로서 가능한 모든 범주의 문자가 올 수 있으며 간격 없음 표시, 간격 결합 기호, 10진수, 연결 문장 부호 및 형식 지정 코드를 포함할 수 있습니다. 
+* 연속되는 문자는 첫 번째 문자로서 가능한 모든 범주의 문자가 올 수 있으며 간격 없음 표시, 간격 결합 기호,&10;진수, 연결 문장 부호 및 형식 지정 코드를 포함할 수 있습니다. 
 
 단일 문자를 다중 UTF-16 인코딩 코드 단위로 표시할 수 있으므로 식별자를 비교하기 전에 형식 지정 코드를 필터링하고 식별자를 유니코드 정규화 형식 C로 변환해야 합니다. 유니코드 정규화 형식 C에서 동일한 코드 단위를 만드는 문자 시퀀스는 CLS 규격이 아닙니다. 다음 예제에서는 ANGSTROM SIGN(U+212B) 문자로 구성된 `Å`라는 속성과 LATIN CAPITAL LETTER A WITH RING ABOVE(U+00C5) 문자로 구성된 두 번째 `Å`라는 속성을 정의합니다. C# 컴파일러는 소스 코드에 CLS 비규격으로 플래그를 지정합니다.
 
@@ -687,7 +688,7 @@ End Class
 
 * 이름이 같은 메서드, 속성 및 이벤트인 경우 반환 형식 이외의 차이점이 있어야 합니다. 
 
-다음 예제에서는 멤버 이름이 해당 범위 내에서 고유해야 한다는 요구 사항을 보여 줍니다. `Converter`이라는 4개 멤버를 포함하는 `Conversion`라는 클래스를 정의합니다. 세 가지는 메서드이고 한 가지는 속성입니다. `Int64` 매개 변수가 포함된 메서드의 이름은 고유하지만, `Int32` 매개 변수가 포함된 두 메서드의 이름은 반환 값이 멤버 시그니처의 일부로 간주되지 않으므로 고유하지 않습니다. 속성은 오버로드된 메서드와 동일한 이름을 가질 수 없으므로 `Conversion` 속성 또한 이 요구 사항을 위반합니다. 
+다음 예제에서는 멤버 이름이 해당 범위 내에서 고유해야 한다는 요구 사항을 보여 줍니다. `Converter`이라는&4;개 멤버를 포함하는 `Conversion`라는 클래스를 정의합니다. 세 가지는 메서드이고 한 가지는 속성입니다. `Int64` 매개 변수가 포함된 메서드의 이름은 고유하지만, `Int32` 매개 변수가 포함된 두 메서드의 이름은 반환 값이 멤버 시그니처의 일부로 간주되지 않으므로 고유하지 않습니다. 속성은 오버로드된 메서드와 동일한 이름을 가질 수 없으므로 `Conversion` 속성 또한 이 요구 사항을 위반합니다. 
 
 ```csharp
 using System;
@@ -781,7 +782,7 @@ Public Class [case]
 End Class
 ```
 
-다음 C# 예제에서는 `case` 기호를 사용하여 언어 키워드에서 식별자를 구분하여 @ 클래스를 인스턴스화할 수 있습니다. 이 기호가 없으면 C# 컴파일러에서는 "형식이 필요합니다" 및 "식의 'case' 항이 잘못되었습니다"라는 두 개의 오류 메시지가 표시됩니다. 
+다음 C# 예제에서는 @ 기호를 사용하여 언어 키워드에서 식별자를 구분하여 `case` 클래스를 인스턴스화할 수 있습니다. 이 기호가 없으면 C# 컴파일러에서는 "형식이 필요합니다" 및 "식의 'case' 항이 잘못되었습니다"라는 두 개의 오류 메시지가 표시됩니다. 
 
 ```csharp
 using System;
@@ -953,7 +954,7 @@ End Structure
 
 CLS 규격 배열은 다음 규칙을 따릅니다. 
 
-* 배열의 모든 크기는 하한이 0이어야 합니다. 다음 예제에서는 하한이 1인 CLS 비규격 배열을 만듭니다. [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 특성이 있음에도 불구하고 `Numbers.GetTenPrimes` 메서드에서 반환된 배열이 CLS 규격이 아님을 컴파일러에서 감지하지 못합니다. 
+* 배열의 모든 크기는 하한이&0;이어야 합니다. 다음 예제에서는 하한이&1;인 CLS 비규격 배열을 만듭니다. [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) 특성이 있음에도 불구하고 `Numbers.GetTenPrimes` 메서드에서 반환된 배열이 CLS 규격이 아님을 컴파일러에서 감지하지 못합니다. 
 
   ```csharp
   [assembly: CLSCompliant(true)]
@@ -2951,10 +2952,5 @@ C#으로 컴파일하려면 vbc에서 csc로 컴파일러의 이름을 변경하
 ```
 csc example.cs /r:UtilityLib.dll
 ```
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

@@ -3,16 +3,17 @@ title: "플랫폼 간 도구로 라이브러리 개발"
 description: "플랫폼 간 도구로 라이브러리 개발"
 keywords: .NET, .NET Core
 author: cartermp
-manager: wpickett
+ms.author: mairaw
 ms.date: 06/20/2016
 ms.topic: article
 ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
 translationtype: Human Translation
-ms.sourcegitcommit: 0882a5ca2f7814e2fd168dce40705d11b199f102
-ms.openlocfilehash: caf72bec4a5d3276d1fdeafc4fa3816e5f00c296
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 7f419e1fc2c9f442b08e19ede4e84f9cf6843a94
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -485,7 +486,7 @@ let result =
 * **AwesomeLibrary.CSharp** - C에서 사용하기 위한 공용 API가 포함된 프로젝트#
 * **AwesomeLibrary.FSharp** - F에서 사용하기 위한 공용 API가 포함된 프로젝트#
 
-### <a name="projecttoproject-referencing"></a>프로젝트 간 참조
+### <a name="project-to-project-referencing"></a>프로젝트 간 참조
 
 프로젝트를 참조하는 가장 좋은 방법은 다음을 수행하는 것입니다.
 
@@ -576,9 +577,4 @@ $ dotnet test
 ```
 
 됐습니다!
-
-
-
-<!--HONumber=Nov16_HO1-->
-
 

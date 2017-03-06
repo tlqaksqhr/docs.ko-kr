@@ -11,15 +11,16 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 5e1a2bc4-a919-4a86-8f33-a9b218b1fcb3
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: d2eeeccd6b3bdf82ba02fea6ce89785ef19d4116
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: c2c0ae3711c866268c4e8c066b4213e110e771b9
+ms.lasthandoff: 02/10/2017
 
 ---
 
-#<a name="dotnet-build-tooling-preview-4"></a>dotnet-build(Tooling Preview 4)
+#<a name="dotnet-build-net-core-tools-rc4"></a>dotnet-build(.NET Core 도구 RC4)
 
 > [!WARNING]
-> 이 항목은 Visual Studio 2017 RC - .NET Core Tools Preview 4에 적용됩니다. .NET Core Tools Preview 2 버전의 경우 [dotnet-build](../../tools/dotnet-build.md) 항목을 참조하세요.
+> 이 항목은 .NET Core 도구 RC4에 적용됩니다. .NET Core Tools Preview 2 버전의 경우 [dotnet-build](../../tools/dotnet-build.md) 항목을 참조하세요.
 
 ## <a name="name"></a>이름 
 dotnet-build -- 프로젝트 및 모든 종속성을 빌드합니다. 
@@ -53,7 +54,7 @@ dotnet-build -- 프로젝트 및 모든 종속성을 빌드합니다.
 
 `-h|--help`
 
-명령에 대한 간단한 도움말을 출력합니다.  
+명령에 대한 간단한 도움말을 출력합니다.
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
@@ -69,11 +70,11 @@ dotnet-build -- 프로젝트 및 모든 종속성을 빌드합니다.
 
 `-r|--runtime [RUNTIME_IDENTIFIER]`
 
-빌드할 대상 런타임입니다. 사용할 수 있는 RID(런타임 식별자) 목록은 [RID 카탈로그](../../rid-catalog.md)를 참조하세요. 
+빌드할 대상 런타임입니다. 사용할 수 있는 RID(런타임 식별자) 목록은 [RID 카탈로그](../../rid-catalog.md)를 참조하세요.
 
 `--version-suffix [VERSION_SUFFIX]`
 
-프로젝트 파일의 버전 필드에서 `*`를 대체할 항목을 정의합니다. 형식은 NuGet의 버전 지침을 따릅니다. 
+프로젝트 파일의 버전 필드에서 `*`를 대체할 항목을 정의합니다. 형식은 NuGet의 버전 지침을 따릅니다.
 
 `--build-profile`
 
@@ -100,9 +101,4 @@ dotnet-build -- 프로젝트 및 모든 종속성을 빌드합니다.
 특정 런타임(이 예제의 경우 Ubuntu 16.04)에 대한 프로젝트 및 해당 종속성을 빌드합니다.
 
 `dotnet build --runtime ubuntu.16.04-x64`
-
-
-
-<!--HONumber=Jan17_HO3-->
-
 

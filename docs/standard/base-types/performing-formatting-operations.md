@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 982f0b64-7e69-4bbe-a688-0117f86a603c
 translationtype: Human Translation
-ms.sourcegitcommit: fb00da6505c9edb6a49d2003ae9bcb8e74c11d6c
-ms.openlocfilehash: 7cc5f4e68cb944a2684c58af866afe1edd66d43b
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: e464c4014ce315c88d5c281f6fd0d0299b640716
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -20,7 +21,7 @@ ms.openlocfilehash: 7cc5f4e68cb944a2684c58af866afe1edd66d43b
 
 다음 항목은 특정 서식 지정 작업을 수행하기 위한 단계별 지침을 제공합니다.
 
-* [방법: 숫자 앞에 0으로 채우기](pad-number.md)
+* [방법: 숫자 앞에&0;으로 채우기](pad-number.md)
 
 * [방법: 사용자 지정 숫자 서식 공급자 정의 및 사용](define-custom.md)
 
@@ -35,9 +36,4 @@ ms.openlocfilehash: 7cc5f4e68cb944a2684c58af866afe1edd66d43b
 ## <a name="see-also"></a>참고 항목
 
 [형식 서식 지정](formatting-types.md)
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

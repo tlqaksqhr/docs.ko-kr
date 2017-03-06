@@ -11,15 +11,15 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 60489b25-38de-47e6-bed1-59d9f42e2d46
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: 46349d28388c1a04c0cb4b5222ed0d0a868e2762
+ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
+ms.openlocfilehash: df8174aa3252568d7112305af07e6399d96ca32f
 
 ---
 
 #<a name="dotnet-restore"></a>dotnet-restore
 
 > [!WARNING]
-> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. Visual Studio 2017 RC - .NET Core Tools Preview 4 버전의 경우 [dotnet-restore(Tooling Preview 4)](../preview3/tools/dotnet-restore.md) 항목을 참조하세요.
+> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. .NET Core 도구 RC4 버전의 경우 [dotnet-restore(.NET Core 도구 RC4)](../preview3/tools/dotnet-restore.md) 항목을 참조하세요.
 
 ## <a name="name"></a>이름
 
@@ -114,6 +114,6 @@ NuGet이 레거시 리포지토리에서 RID(런타임 식별자)를 유추하�
 `dotnet restore --verbosity Error`
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

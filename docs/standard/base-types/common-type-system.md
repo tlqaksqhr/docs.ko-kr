@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: b5482a1d-7bdc-40fe-aa45-10df930ceb5b
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 35098ce238af88229fddf2adc7cf762848781ebc
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 6be672acc84a76106e25b82574acad16beb4a8ac
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -532,8 +533,3 @@ virtual | 메서드, 속성 및 이벤트 | 메서드는 파생된 형식에서 
 ## <a name="see-also"></a>참고 항목
 
 [.NET Framework의 형식 변환](type-conversion.md)
-
-
-<!--HONumber=Nov16_HO3-->
-
-

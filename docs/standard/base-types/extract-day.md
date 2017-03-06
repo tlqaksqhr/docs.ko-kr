@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 88a8f8b9-f5c9-4503-b968-84468b52bb8e
 translationtype: Human Translation
-ms.sourcegitcommit: b828bb1d6c8fb750ad9ef34f8a7a1b7d2574f4c6
-ms.openlocfilehash: 298d2faf847b8518eb5852c55972409e4e3cf29c
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 1b9d1d497524e62e5758c9be7be7b586a421a258
+ms.lasthandoff: 03/03/2017
 
 ---
 
@@ -339,7 +340,7 @@ End Module
 
 개별 언어는 .NET에서 제공하는 기능과 중복되거나 이러한 기능을 보완하는 기능을 제공할 수 있습니다. 예를 들어, Visual Basic에는 다음과 같은 두 가지 함수가 포함되어 있습니다.
 
-* `Weekday`: 특정 날짜의 요일을 나타내는 숫자를 반환합니다. 이 함수는 요일의 첫날 서수 값을 1로 간주하는 반면, [Datetime.DayOfWeek](xref:System.DateTime.DayOfWeek) 속성은 0으로 간주합니다.
+* `Weekday`: 특정 날짜의 요일을 나타내는 숫자를 반환합니다. 이 함수는 요일의 첫날 서수 값을&1;로 간주하는 반면, [Datetime.DayOfWeek](xref:System.DateTime.DayOfWeek) 속성은&0;으로 간주합니다.
 
 * `WeekdayName`: 현재 문화권에서 특정 요일 숫자에 해당하는 요일 이름을 반환합니다.
 
@@ -475,9 +476,4 @@ End Module
 
 [사용자 지정 날짜 및 시간 서식 문자열](custom-datetime.md)
     
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

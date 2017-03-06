@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 589ac5ec-8365-4a0d-bc38-72183718110c
 translationtype: Human Translation
-ms.sourcegitcommit: c40c28da09e8a122b542463c197196c82c81dd19
-ms.openlocfilehash: bb5cda188b6970c23e41faf82990034c3cf144ab
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: b872cc4c2b799ddafc9df263795d860754d1ec17
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -87,7 +88,7 @@ Module DateManipulation
 End Module
 ```
 
-[DateTime.CompareTo(DateTime, DateTime)](xref:System.DateTime.Compare(System.DateTime,System.DateTime)) 메서드는 현지 시간이 UTC 시간보다 빠르거나 느리다고 보고하고, 빼기 연산은 미국에 있는 시스템의 UTC와 현지 시간 간 차이를 나타냅니다. 태평양 표준 시간대는 7시간입니다. 하지만 이러한 두 개의 값은 시간에서 단일 지점의 다양한 표현을 제공하기 때문에 이 경우에 이 시간 간격이 UTC에서 현지 표준 시간대 오프셋을 발생시키는 것이 명확합니다. 
+[DateTime.CompareTo(DateTime, DateTime)](xref:System.DateTime.Compare(System.DateTime,System.DateTime)) 메서드는 현지 시간이 UTC 시간보다 빠르거나 느리다고 보고하고, 빼기 연산은 미국에 있는 시스템의 UTC와 현지 시간 간 차이를 나타냅니다. 태평양 표준 시간대는&7;시간입니다. 하지만 이러한 두 개의 값은 시간에서 단일 지점의 다양한 표현을 제공하기 때문에 이 경우에 이 시간 간격이 UTC에서 현지 표준 시간대 오프셋을 발생시키는 것이 명확합니다. 
 
 보다 일반적으로 해당 결과의 해석에 영향을 줄 수 있지만 [DateTimeKind](xref:System.DateTimeKind) 속성은 [DateTime](xref:System.DateTime) 비교 및 산술 연산 메서드에서 반환되는 결과에 영향을 주지 않습니다(시간에서 두 개의 동일한 지점을 비교하면 알 수 있듯이). 예:
 
@@ -315,10 +316,5 @@ End Module
 
 [방법: 날짜 및 시간 산술 연산의 표준 시간대 사용](use-time-zones-in-arithmetic.md)
 
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 

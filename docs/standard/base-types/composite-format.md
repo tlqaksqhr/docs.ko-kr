@@ -11,8 +11,8 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a01efc8f-c242-4535-bd32-acd0032d9590
 translationtype: Human Translation
-ms.sourcegitcommit: b20713600d7c3ddc31be5885733a1e8910ede8c6
-ms.openlocfilehash: 15c549f5df0b6de8164e05f50855006996a47fac
+ms.sourcegitcommit: 90ade65e167770bdbcbbf79707fe48e6fbc030c0
+ms.openlocfilehash: 5b61b4736880d57f02070150d8613d860505b268
 
 ---
 
@@ -24,7 +24,7 @@ ms.openlocfilehash: 15c549f5df0b6de8164e05f50855006996a47fac
 
 * [String.Format](xref:System.String.Format(System.IFormatProvider,System.String,System.Object)) - 형식이 지정된 결과 문자열을 반환합니다. 
 
-* [StringBuilder.AppendFormat](xref:System.Text.StringBuilder.AppendFormat(System.IFormatProvider, System.String, System.Object) - 형식이 지정된 결과 문자열을 [StringBuilder](xref:System.Text.StringBuilder) 개체에 추가합니다.
+* [StringBuilder.AppendFormat](xref:System.Text.StringBuilder.AppendFormat(System.IFormatProvider,System.String,System.Object)) - 형식이 지정된 결과 문자열을 [StringBuilder](xref:System.Text.StringBuilder) 개체에 추가합니다.
 
 * 콘솔에 형식이 지정된 결과 문자열을 표시하는 [Console](xref:System.Console) `WriteLine` 메서드의 오버로드.  
 
@@ -38,9 +38,9 @@ ms.openlocfilehash: 15c549f5df0b6de8164e05f50855006996a47fac
 
 ## <a name="composite-format-string"></a>합성 서식 문자열
 
-합성 서식 문자열과 개체 목록은 합성 서식 지정 기능을 지원하는 메서드의 인수로 사용됩니다. 합성 서식 문자열은 0개 이상의 고정 텍스트가 하나 이상의 서식 항목과 결합된 형태로 구성됩니다. 고정 텍스트는 사용자가 선택하는 임의의 문자열이고, 각 서식 항목은 목록의 개체나 boxed 구조체에 해당합니다. 합성 서식 지정 기능은 각 서식 항목을 목록에 있는 해당 개체의 문자열 표현으로 바꿔 새로운 결과 문자열을 반환합니다.
+합성 서식 문자열과 개체 목록은 합성 서식 지정 기능을 지원하는 메서드의 인수로 사용됩니다. 합성 서식 문자열은&0;개 이상의 고정 텍스트가 하나 이상의 서식 항목과 결합된 형태로 구성됩니다. 고정 텍스트는 사용자가 선택하는 임의의 문자열이고, 각 서식 항목은 목록의 개체나 boxed 구조체에 해당합니다. 합성 서식 지정 기능은 각 서식 항목을 목록에 있는 해당 개체의 문자열 표현으로 바꿔 새로운 결과 문자열을 반환합니다.
 
-다음과 같은 [Format](xref:System.String.Format(System.String.Format(System.IFormatProvider,System.String,System.Object)) 코드 조각을 가정해봅니다.
+다음은 이 기능을 보여 주는 [Format](xref:System.String.Format(System.IFormatProvider,System.String,System.Object)) 코드 조각입니다.
 
 ```csharp
 string name = "Fred";
@@ -64,7 +64,7 @@ __{__*index*[,*alignment*][:*formatString*]__}__
  
 ### <a name="index-component"></a>Index 구성 요소
 
-매개 변수 지정자라고도 하는 필수 *index* 구성 요소는 0부터 시작하는 숫자로, 개체 목록에서 해당하는 항목을 식별합니다. 즉, 매개 변수 지정자가 0인 서식 항목은 목록에 있는 첫째 개체의 서식을 지정하고 매개 변수 지정자가 1인 서식 항목은 목록에 있는 둘째 개체의 서식을 지정하는 식으로 적용됩니다. 다음 예제에는 10보다 작은 소수를 나타내고 0부터 3까지 번호가 매겨진 4개의 매개 변수 지정자가 포함되어 있습니다. 
+매개 변수 지정자라고도 하는 필수 *index* 구성 요소는 0부터 시작하는 숫자로, 개체 목록에서 해당하는 항목을 식별합니다. 즉, 매개 변수 지정자가 0인 서식 항목은 목록에 있는 첫째 개체의 서식을 지정하고 매개 변수 지정자가 1인 서식 항목은 목록에 있는 둘째 개체의 서식을 지정하는 식으로 적용됩니다. 다음 예제에는&10;보다 작은 소수를 나타내고&0;부터&3;까지 번호가 매겨진&4;개의 매개 변수 지정자가 포함되어 있습니다. 
 
 ```csharp
 string primes;
@@ -84,7 +84,7 @@ Console.WriteLine(primes)
 '      Prime numbers less than 10: 2, 3, 5, 7
 ```
 
-동일한 매개 변수 지정자를 지정하여 여러 서식 항목이 개체 목록의 동일한 요소를 참조하도록 할 수 있습니다. 예를 들어 다음 예제와 같이 복합 형식 문자열을 "0x{0:X} {0:E} {0:N}"과 같이 지정하여 동일한 숫자 값을 16진수, 지수 및 숫자 형식으로 지정할 수 있습니다. 
+동일한 매개 변수 지정자를 지정하여 여러 서식 항목이 개체 목록의 동일한 요소를 참조하도록 할 수 있습니다. 예를 들어 다음 예제와 같이 복합 형식 문자열을 "0x{0:X} {0:E} {0:N}"과 같이 지정하여 동일한 숫자 값을&16;진수, 지수 및 숫자 형식으로 지정할 수 있습니다. 
 
 ```csharp
 string multiple = String.Format("0x{0:X} {0:E} {0:N}",
@@ -108,7 +108,7 @@ Console.WriteLine(multiple)
 
 선택적인 *alignment* 구성 요소는 기본 형식의 필드 너비를 나타내는 부호 있는 정수입니다. *alignment* 값이 형식이 지정된 문자열보다 작으면 *alignment*는 무시되고 형식이 지정된 문자열의 길이가 필드 너비로 사용됩니다. *alignment*가 양수이면 필드에서 형식이 지정된 데이터가 오른쪽 맞춤되고 *alignment*가 음수이면 왼쪽 맞춤됩니다. 채우기가 필요하면 공백이 사용됩니다. *alignment*를 지정하는 경우 쉼표가 필요합니다.
 
-다음 예제에서는 두 배열, 즉 직원의 이름을 포함하는 배열과 2주 동안의 작업 시간을 포함하는 배열을 정의합니다. 복합 형식 문자열은 20자 필드에 이름을 왼쪽 맞춤하고 5자 필드에 해당 시간을 오른쪽 맞춤합니다. 소수 1자리로 시간 형식을 지정하기 위해 "N1" 표준 형식 문자열도 사용됩니다. 
+다음 예제에서는 두 배열, 즉 직원의 이름을 포함하는 배열과&2;주 동안의 작업 시간을 포함하는 배열을 정의합니다. 복합 형식 문자열은 20자 필드에 이름을 왼쪽 맞춤하고 5자 필드에 해당 시간을 오른쪽 맞춤합니다. 소수&1;자리로 시간 형식을 지정하기 위해 "N1" 표준 형식 문자열도 사용됩니다. 
 
 ```csharp
 using System;
@@ -183,15 +183,15 @@ End Module
 
 ### <a name="escaping-braces"></a>이스케이프 중괄호
 
-여는 중괄호와 닫는 중괄호는 서식 항목의 시작과 끝으로 해석됩니다. 따라서 리터럴 여는 중괄호나 닫는 중괄호를 표시하려면 이스케이프 시퀀스를 사용해야 합니다. 고정 텍스트에서 여는 중괄호 2개("{{")를 사용하면 여는 중괄호 1개("{")가, 닫는 중괄호 2개("}}")를 사용하면 닫는 중괄호 1개("}")가 표시됩니다. 서식 항목에서 중괄호는 나타나는 순서대로 해석됩니다. 중첩 중괄호 해석은 지원되지 않습니다. 
+여는 중괄호와 닫는 중괄호는 서식 항목의 시작과 끝으로 해석됩니다. 따라서 리터럴 여는 중괄호나 닫는 중괄호를 표시하려면 이스케이프 시퀀스를 사용해야 합니다. 고정 텍스트에서 여는 중괄호&2;개("{{")를 사용하면 여는 중괄호&1;개("{")가, 닫는 중괄호&2;개("}}")를 사용하면 닫는 중괄호&1;개("}")가 표시됩니다. 서식 항목에서 중괄호는 나타나는 순서대로 해석됩니다. 중첩 중괄호 해석은 지원되지 않습니다. 
 
-이스케이프된 중괄호가 해석되는 방식에 따라 예기치 않은 결과가 나올 수도 있습니다. 예를 들어 여는 중괄호, 10진수로 서식 지정된 숫자 값 및 닫는 중괄호를 표시하기 위해 서식 항목 "{{{0:D}}}"를 사용했다고 가정해 봅시다. 그러나 이 서식 항목은 다음과 같이 해석됩니다. 
+이스케이프된 중괄호가 해석되는 방식에 따라 예기치 않은 결과가 나올 수도 있습니다. 예를 들어 여는 중괄호,&10;진수로 서식 지정된 숫자 값 및 닫는 중괄호를 표시하기 위해 서식 항목 "{{{0:D}}}"를 사용했다고 가정해 봅시다. 그러나 이 서식 항목은 다음과 같이 해석됩니다. 
 
-1. 맨 처음 여는 중괄호 2개("{{")는 이스케이프되어 여는 중괄호 1개가 됩니다. 
+1. 맨 처음 여는 중괄호&2;개("{{")는 이스케이프되어 여는 중괄호&1;개가 됩니다. 
 
-2. 그 다음 3개의 문자("{0:")는 서식 항목의 시작으로 해석됩니다.
+2. 그 다음&3;개의 문자("{0:")는 서식 항목의 시작으로 해석됩니다.
 
-3. 다음 문자("D")는 10진 표준 숫자 서식 지정자로 해석되지만, 그 다음 이스케이프된 중괄호 2개("}}")는 중괄호 1개로 인식됩니다. 결과 문자열("D}")은 표준 숫자 서식 지정자가 아니므로 리터럴 문자열 "D}"를 표시하는 사용자 지정 서식 문자열로 해석됩니다. 
+3. 다음 문자("D")는&10;진 표준 숫자 서식 지정자로 해석되지만, 그 다음 이스케이프된 중괄호&2;개("}}")는 중괄호&1;개로 인식됩니다. 결과 문자열("D}")은 표준 숫자 서식 지정자가 아니므로 리터럴 문자열 "D}"를 표시하는 사용자 지정 서식 문자열로 해석됩니다. 
 
 4. 마지막 중괄호("}")는 서식 항목의 끝으로 해석됩니다. 
 
@@ -229,9 +229,9 @@ Console.WriteLine(output)
 
 3. 값이 [IFormattable](xref:System.IFormattable) 인터페이스를 구현하는 경우 인터페이스의 [ToString(String,IFormatProvider)](xref:System.IFormattable.ToString(System.String,System.IFormatProvider)) 메서드가 호출됩니다. *formatString* 값(형식 항목에 있는 경우) 또는 `null`(없는 경우)이 메서드에 전달됩니다. [IFormatProvider](xref:System.IFormatProvider) 인수는 다음과 같이 결정됩니다.
 
-    *   숫자 값의 경우, null이 아닌 [IFormatProvider](xref:System.IFormatProvider) 인수가 있는 복합 형식 지정 메서드를 호출하면 런타임이 해당 [IFormatProvider.GetFormat](xref:System.IFormatProvider.GetFormat(System.Type)) 메서드에서 [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo) 개체를 요청합니다. 값을 제공할 수 없거나, 인수 값이 `null`이거나, 복합 형식 지정 메서드에 [IFormatProvider](xref:System.IFormatProvider) 매개 변수가 없는 경우 현재 스레드 문화권에 대한 [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo 개체가 사용됩니다. 
+    *   숫자 값의 경우, null이 아닌 [IFormatProvider](xref:System.IFormatProvider) 인수가 있는 복합 형식 지정 메서드를 호출하면 런타임이 해당 [IFormatProvider.GetFormat](xref:System.IFormatProvider.GetFormat(System.Type)) 메서드에서 [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo) 개체를 요청합니다. 값을 제공할 수 없거나, 인수 값이 `null`이거나, 복합 형식 지정 메서드에 [IFormatProvider](xref:System.IFormatProvider) 매개 변수가 없는 경우 현재 스레드 문화권에 대한 [NumberFormatInfo](xref:System.Globalization.NumberFormatInfo) 개체가 사용됩니다. 
     
-    * 날짜 및 시간 값의 경우, null이 아닌 [IFormatProvider](xref:System.IFormatProvider) 인수가 있는 복합 형식 지정 메서드를 호출하면 런타임이 해당 [IFormatProvider.GetFormat](xref:System.IFormatProvider._GetFormat(System.Type) 메서드에서 [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo) 개체를 요청합니다. 값을 제공할 수 없거나, 인수 값이 `null`이거나, 복합 형식 지정 메서드에 [IFormatProvider](xref:System.IFormatProvider) 매개 변수가 없는 경우 현재 스레드 문화권에 대한 [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo) 개체가 사용됩니다. 
+    * 날짜 및 시간 값의 경우, null이 아닌 [IFormatProvider](xref:System.IFormatProvider) 인수가 있는 복합 형식 지정 메서드를 호출하면 런타임이 해당 [IFormatProvider.GetFormat](xref:System.IFormatProvider.GetFormat(System.Type)) 메서드에서 [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo) 개체를 요청합니다. 값을 제공할 수 없거나, 인수 값이 `null`이거나, 복합 형식 지정 메서드에 [IFormatProvider](xref:System.IFormatProvider) 매개 변수가 없는 경우 현재 스레드 문화권에 대한 [DateTimeFormatInfo](xref:System.Globalization.DateTimeFormatInfo) 개체가 사용됩니다. 
     
     * 다른 개체 형식의 경우 [IFormatProvider](xref:System.IFormatProvider) 인수로 복합 형식 지정을 호출하면 해당 값([IFormatProvider](xref:System.IFormatProvider) 개체가 제공되지 않은 경우 `null` 포함)이 [IFormattable.ToString](xref:System.IFormattable.ToString(System.String,System.IFormatProvider)) 구현에 직접 전달됩니다. 그러지 않으면 현재 스레드 문화권을 나타내는 [CultureInfo](xref:System.Globalization.CultureInfo) 개체가 [IFormattable.ToString](xref:System.IFormattable.ToString(System.String,System.IFormatProvider)) 구현에 전달됩니다. 
     
@@ -253,7 +253,7 @@ Dim FormatString1 As String = String.Format("{0:dddd MMMM}", DateTime.Now)
 Dim FormatString2 As String = DateTime.Now.ToString("dddd MMMM")
 ```
 
-오늘이 5월의 목요일이라고 가정할 때 앞의 예제에서 두 문자열의 값은 미국 영어 문화권에서 `Thursday May` 입니다.
+오늘이&5;월의 목요일이라고 가정할 때 앞의 예제에서 두 문자열의 값은 미국 영어 문화권에서 `Thursday May` 입니다.
 
 [Console.WriteLine](xref:System.Console.WriteLine)은 [String.Format](xref:System.String.Format(System.IFormatProvider,System.String,System.Object))과 동일한 기능을 표시합니다. 두 메서드 간의 유일한 차이점은 [String.Format](xref:System.String.Format(System.IFormatProvider,System.String,System.Object))은 결과를 문자열로 반환하는 반면 [Console.WriteLine](xref:System.Console.WriteLine)은 [Console](xref:System.Console) 개체와 연결된 출력 스트림에 결과를 쓴다는 것입니다. 다음 예제에서는 [Console.WriteLine](xref:System.Console.WriteLine) 메서드를 사용하여 `MyInt` 값의 형식을 통화 값으로 지정합니다.
 
@@ -376,6 +376,6 @@ Console.WriteLine(FormatPrice)
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Feb17_HO1-->
 
 

@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
 translationtype: Human Translation
-ms.sourcegitcommit: 254e89abefd28419bd2f36a047e4df939f7ff8da
-ms.openlocfilehash: 8eb9274def2683fae20765cbf701b706293744fc
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: be44dce8181be45f6d73fcf498a873fb94aa56a6
+ms.lasthandoff: 03/02/2017
 
 ---
 
@@ -79,10 +80,5 @@ C#, F# 및 Visual Basic은 .NET 플랫폼을 대상으로 하고 사용하는 �
 ------------
 
 .NET은 해당 기능을 간략하게 설명하며 새 구현을 만드는 데 사용할 수 있는 개방형 [ECMA 표준](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)을 통해 지정됩니다. 다른 .NET 구현도 있으며, Mono와 Unity가 Microsoft 구현보다 가장 많이 사용됩니다.
-
-
-
-
-<!--HONumber=Nov16_HO3-->
 
 
