@@ -4,22 +4,20 @@ description: "CLI(명령줄 인터페이스)의 개념 및 주요 기능에 대�
 keywords: "CLI, CLI 도구, .NET, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 10/06/2016
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: b70e9ac0-c8be-49f7-9332-95ab93e0e7bc
+ms.assetid: 7c5eee9f-d873-4224-8f5f-ed83df329a59
 translationtype: Human Translation
-ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
-ms.openlocfilehash: 1d7a3d90c6ba9079fe5d36b9c9922928d6a6f137
+ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
+ms.openlocfilehash: 4e3137d8506342662d145481d5e9fde1d53b9ba3
+ms.lasthandoff: 03/07/2017
 
 ---
 
-# <a name="net-core-command-line-interface-tools"></a>.NET Core 명령줄 인터페이스 도구
-
-> [!WARNING]
-> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. .NET Core 도구 RC4 버전의 경우 [.NET Core 명령줄 인터페이스 도구(.NET Core 도구 RC4)](../preview3/tools/index.md) 항목을 참조하세요.
+# <a name="net-core-command-line-interface-tools-net-core-sdk-10-tools"></a>.NET Core 명령줄 인터페이스 도구(.NET Core SDK 1.0 도구)
 
 .NET Core CLI(명령줄 인터페이스)는 .NET Core 응용 프로그램 개발에 사용되는 새로운 기본 플랫폼 간 도구 체인입니다. IDE(통합 개발 환경), 편집기 및 빌드 Orchestrator와 같은 기타 상위 수준 도구의 기반이 될 수 있는 주 계층이기 때문에 "기본"입니다. 
 
@@ -38,6 +36,7 @@ ms.openlocfilehash: 1d7a3d90c6ba9079fe5d36b9c9922928d6a6f137
 다음은 기본적으로 설치되는 명령입니다.
 
 * [new](dotnet-new.md)
+* [migrate](dotnet-migrate.md)
 * [restore](dotnet-restore.md)
 * [run](dotnet-run.md)
 * [build](dotnet-build.md)
@@ -52,7 +51,7 @@ ms.openlocfilehash: 1d7a3d90c6ba9079fe5d36b9c9922928d6a6f137
 자세한 정보를 검토하기 전에 CLI를 사용한 작업이 10,000피트 보기에서 어떻게 표시되는지 살펴보겠습니다. 다음 예제에서는 CLI 표준 설치에서 여러 가지 명령을 활용하여 간단한 새 콘솔 응용 프로그램을 초기화하고 종속성을 복원한 다음 응용 프로그램을 빌드하여 실행합니다. 
 
 ```console
-dotnet new
+dotnet new console
 dotnet restore
 dotnet build --output /stuff
 dotnet /stuff/new.dll
@@ -88,8 +87,11 @@ CLI에서는 다음과 같은 두 가지 주요 방법으로 응용 프로그램
 
 이 두 가지 방법에 대한 자세한 내용은 [.NET Core 응용 프로그램 배포](../deploying/index.md) 항목을 참조하세요. 
 
-## <a name="migration-from-dnx"></a>DNX에서 마이그레이션
-.NET Core 1.0 RC1에서 DNX를 사용하는 경우 이러한 도구에 발생되는 내용 및 이러한 새 도구가 DNX 도구에 연결되는 방법이 궁금할 수 있습니다. 즉, DNX 도구가 .NET Core CLI 도구로 대체되었습니다. 기존 프로젝트가 있거나 명령이 매핑되는 방법이 궁금한 경우 [DNX에서 CLI로 마이그레이션](../migrating-from-dnx.md) 항목을 사용하여 자세한 정보를 확인할 수 있습니다. 
+## <a name="migration-from-projectjson"></a>project.json에서 마이그레이션
+Preview 2 도구 및 *project.json* 프로젝트를 사용한 경우 [dotnet migrate](dotnet-migrate.md) 명령 문서를 참조하여 명령과 프로젝트를 마이그레이션하는 방법을 살펴볼 수 있습니다. 
+
+> [!NOTE]
+> `dotnet migrate` 명령은 현재 Preview 2 이전 *project.json* 파일을 마이그레이션하지 않습니다. 
 
 ## <a name="extensibility"></a>확장성
 워크플로에서 사용할 수 있는 일부 도구는 핵심 CLI 도구의 일부가 아닐 수 있습니다. 그러나 .NET Core CLI에는 프로젝트에 맞게 추가 도구를 지정할 수 있는 확장성 모델이 있습니다. 자세한 내용은 [.NET Core CLI 확장성 모델](extensibility.md) 항목에서 확인할 수 있습니다.
@@ -98,9 +100,4 @@ CLI에서는 다음과 같은 두 가지 주요 방법으로 응용 프로그램
 CLI의 가장 중요한 기능에 대한 간략한 개요입니다. 자세한 내용은 이 사이트의 참조 및 개념 항목을 사용하여 확인할 수 있습니다. 다음과 같은 기타 리소스도 사용할 수 있습니다.
 * [dotnet/CLI](https://github.com/dotnet/cli/) GitHub 리포지토리
 * [시작 지침](https://aka.ms/dotnetcoregs/)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 
