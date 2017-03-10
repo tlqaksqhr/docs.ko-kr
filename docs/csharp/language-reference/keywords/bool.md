@@ -1,0 +1,58 @@
+---
+title: "bool(C# 참조) | Microsoft Docs"
+ms.date: "2015-07-20"
+ms.prod: ".net"
+ms.technology: 
+  - "devlang-csharp"
+ms.topic: "article"
+f1_keywords: 
+  - "bool_CSharpKeyword"
+  - "bool"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "bool 키워드[C#]"
+ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
+caps.latest.revision: 30
+author: "BillWagner"
+ms.author: "wiwagn"
+caps.handback.revision: 30
+---
+# bool(C# 참조)
+`bool` 키워드는 <xref:System.Boolean?displayProperty=fullName>의 별칭입니다.  이 키워드는 Boolean 값 [true](../../../csharp/language-reference/keywords/true.md) 및 [false](../../../csharp/language-reference/keywords/false.md)를 저장하는 변수를 선언하는 데 사용됩니다.  
+  
+> [!NOTE]
+>  `null` 값도 가질 수 있는 부울 변수가 필요한 경우 `bool?`를 사용하십시오.  자세한 내용은 [nullable 형식](../../../csharp/programming-guide/nullable-types/index.md)를 참조하십시오.  
+  
+## 리터럴  
+ `bool` 변수에 부울 값을 할당할 수 있으며  `bool`로 계산되는 식을 `bool` 변수에 할당할 수도 있습니다.  
+  
+ [!code-cs[csrefKeywordsTypes#1](../../../csharp/language-reference/keywords/codesnippet/csharp/bool_1.cs)]  
+  
+ `bool` 변수의 기본값은 `false`입니다.  `bool?` 변수의 기본값은 `null`입니다.  
+  
+## 변환  
+ C\+\+에서는 `bool` 형식의 값을 `int` 형식의 값으로 변환할 수 있습니다. 즉, `false`는 0과 같고 `true`는 0이 아닌 값과 같습니다.  C\#에서는 `bool` 형식과 다른 형식 간의 변환이 없습니다.  예를 들어 다음 `if` 문은 C\#에서 유효하지 않습니다.  
+  
+ [!code-cs[csrefKeywordsTypes#2](../../../csharp/language-reference/keywords/codesnippet/csharp/bool_2.cs)]  
+  
+ `int` 형식의 변수를 테스트하려면 다음과 같이 이 변수를 명시적으로 특정 값\(예: 0\)과 비교해야 합니다.  
+  
+ [!code-cs[csrefKeywordsTypes#3](../../../csharp/language-reference/keywords/codesnippet/csharp/bool_3.cs)]  
+  
+## 예제  
+ 이 예제에서는 키보드로 문자를 입력한 후 입력한 문자가 영문자인지를 검사합니다.  입력한 문자가 영문자이면 대\/소문자를 검사합니다.  이러한 검사를 수행하는 데는 <xref:System.Char.IsLetter%2A> 및 <xref:System.Char.IsLower%2A>가 사용되며 이 둘은 모두 `bool` 형식을 반환합니다.  
+  
+ [!code-cs[csrefKeywordsTypes#4](../../../csharp/language-reference/keywords/codesnippet/csharp/bool_4.cs)]  
+  
+## C\# 언어 사양  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+  
+## 참고 항목  
+ [C\# 참조](../../../csharp/language-reference/index.md)   
+ [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
+ [C\# 키워드](../../../csharp/language-reference/keywords/index.md)   
+ [정수 계열 형식 표](../../../csharp/language-reference/keywords/integral-types-table.md)   
+ [기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)   
+ [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
+ [명시적 숫자 변환 표](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
