@@ -1,0 +1,6 @@
+# [XML Axis Properties (Visual Basic)](xml-axis-properties.md)
+## [XML Attribute Axis Property](TocOutOfQuery)
+## [XML Child Axis Property (Visual Basic)](xml-child-axis-property.md)
+## [XML Descendant Axis Property](TocOutOfQuery)
+## [Extension Indexer Property](TocOutOfQuery)
+## [XML Value Property (Visual Basic)](xml-value-property.md)

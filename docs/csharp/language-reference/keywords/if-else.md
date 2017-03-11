@@ -1,0 +1,84 @@
+---
+title: "if-else(C# 참조) | Microsoft Docs"
+ms.date: "2015-07-20"
+ms.prod: ".net"
+ms.technology: 
+  - "devlang-csharp"
+ms.topic: "article"
+f1_keywords: 
+  - "if_CSharpKeyword"
+  - "else"
+  - "else_CSharpKeyword"
+  - "if"
+dev_langs: 
+  - "CSharp"
+helpviewer_keywords: 
+  - "else 키워드[C#]"
+  - "if 키워드[C#]"
+ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
+caps.latest.revision: 32
+author: "BillWagner"
+ms.author: "wiwagn"
+caps.handback.revision: 32
+---
+# if-else(C# 참조)
+`if` 문은 `Boolean` 식의 값에 따라 실행할 문을 식별합니다. 다음 예제에서는 `Boolean` 변수 `result` 가 `true`로 설정된 다음 `if` 문에서 확인됩니다. 출력은 `The condition is true`입니다.  
+  
+ [!code-cs[csrefKeywordsSelection#1](../../../csharp/language-reference/keywords/codesnippet/csharp/if-else_1.cs)]  
+  
+ 콘솔 앱의 `Main` 메서드에 배치하여 이 항목의 예제를 실행할 수 있습니다.  
+  
+ C\#의 `if` 문은 다음 예제와 같이 두 가지 형식을 사용할 수 있습니다.  
+  
+```c#  
+  
+// if-else statement if (condition) { then-statement; } else { else-statement; } // Next statement in the program. // if statement without an else if (condition) { then-statement; } // Next statement in the program.  
+```  
+  
+ `if-else` 문에서 `condition`이 true로 평가되는 경우 `then-statement`가 실행됩니다.`condition`이 false이면 `else-statement`가 실행됩니다.`condition`이 true인 동시에 false일 수는 없으므로 `if-else` 문의 `then-statement` 및 `else-statement`를 둘 다 실행할 수는 없습니다.`then-statement` 또는 `else-statement`가 실행된 후 제어가 `if` 문 뒤의 다음 문으로 전송됩니다.  
+  
+ `else` 문을 포함하지 않는 `if` 문에서 `condition`이 true이면 `then-statement`가 실행됩니다.`condition`이 false이면 제어가 `if` 문 뒤의 다음 문으로 전송됩니다.  
+  
+ `then-statement` 및 `else-statement`는 둘 다 단일 문이나 중괄호\(`{}`\)로 묶인 여러 문으로 구성될 수 있습니다. 단일 문의 경우 중괄호는 선택 사항이지만 권장됩니다.  
+  
+ `then-statement` 및 `else-statement`의 문은 원래 `if` 문 내부에 중첩된 다른 `if` 문을 포함하여 모든 종류일 수 있습니다. 중첩된 `if` 문에서 각 `else` 절은 해당 `else`가 없는 마지막 `if`에 속합니다. 다음 예제에서 `m > 10` 및 `n > 20`이 둘 다 true이면 `Result1`이 나타납니다.`m > 10`이 true이지만 `n > 20`이 false이면 `Result2`가 나타납니다.  
+  
+ [!code-cs[csrefKeywordsSelection#2](../../../csharp/language-reference/keywords/codesnippet/csharp/if-else_2.cs)]  
+  
+ `(m > 10)`이 false일 때 `Result2`를 대신 표시하려는 경우 다음 예제와 같이 중괄호로 중첩된 `if` 문의 시작 및 끝을 설정하여 해당 연결을 지정할 수 있습니다.  
+  
+ [!code-cs[csrefKeywordsSelection#3](../../../csharp/language-reference/keywords/codesnippet/csharp/if-else_3.cs)]  
+  
+ 조건 `(m > 10)`이 false이면 `Result2`가 나타납니다.  
+  
+## 예제  
+ 다음 예제에서는 키보드에서 문자 하나를 입력하며, 프로그램이 중첩된 `if` 문을 사용하여 입력 문자가 영문자인지 여부를 확인합니다. 입력 문자가 영문자이면 프로그램에서 입력 문자가 소문자인지 대문자인지를 확인합니다. 각 경우에 대한 메시지가 나타납니다.  
+  
+ [!code-cs[csrefKeywordsSelection#4](../../../csharp/language-reference/keywords/codesnippet/csharp/if-else_4.cs)]  
+  
+## 예제  
+ 다음 부분 코드와 같이 `if` 문을 else 블록 안에 중첩할 수도 있습니다. 예제에서는 `if` 문을 else 블록 2개와 then 블록 1개 안에 중첩합니다. 주석은 각 블록에서 true 또는 false인 조건을 지정합니다.  
+  
+ [!code-cs[csrefKeywordsSelection#5](../../../csharp/language-reference/keywords/codesnippet/csharp/if-else_5.cs)]  
+  
+## 예제  
+ 다음 예제에서는 입력 문자가 소문자, 대문자 또는 숫자인지를 확인합니다. 세 가지 조건이 모두 false이면 문자는 영숫자 문자가 아닙니다. 예제에서는 각 경우에 대한 메시지가 표시됩니다.  
+  
+ [!code-cs[csrefKeywordsSelection#6](../../../csharp/language-reference/keywords/codesnippet/csharp/if-else_6.cs)]  
+  
+ else 블록 또는 then 블록의 문이 유효한 모든 문일 수 있는 것과 마찬가지로 유효한 모든 부울 식을 조건에 대해 사용할 수 있습니다.[&&](../../../csharp/language-reference/operators/conditional-and-operator.md), [&](../../../csharp/language-reference/operators/and-operator.md), [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md), [&#124;](../../../csharp/language-reference/operators/or-operator.md) 및 [\!](../../../csharp/language-reference/operators/logical-negation-operator.md)와 같은 논리 연산자를 사용하여 복합 조건을 만들 수 있습니다. 다음 코드는 예제를 보여 줍니다.  
+  
+```c#  
+// NOT bool result = true; if (!result) { Console.WriteLine("The condition is true (result is false)."); } else { Console.WriteLine("The condition is false (result is true)."); } // Short-circuit AND int m = 9; int n = 7; int p = 5; if (m >= n && m >= p) { Console.WriteLine("Nothing is larger than m."); } // AND and NOT if (m >= n && !(p > m)) { Console.WriteLine("Nothing is larger than m."); } // Short-circuit OR if (m > n || m > p) { Console.WriteLine("m isn't the smallest."); } // NOT and OR m = 4; if (!(m >= n || m >= p)) { Console.WriteLine("Now m is the smallest."); } // Output: // The condition is false (result is true). // Nothing is larger than m. // Nothing is larger than m. // m isn't the smallest. // Now m is the smallest.  
+```  
+  
+## C\# 언어 사양  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+  
+## 참고 항목  
+ [C\# 참조](../../../csharp/language-reference/index.md)   
+ [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
+ [C\# 키워드](../../../csharp/language-reference/keywords/index.md)   
+ [?: 연산자](../../../csharp/language-reference/operators/conditional-operator.md)   
+ [if\-else 문 \(C\+\+\)](/visual-cpp/cpp/if-else-statement-cpp)   
+ [switch](../../../csharp/language-reference/keywords/switch.md)
