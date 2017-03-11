@@ -1,7 +1,0 @@
-# [함수(Visual Basic)](index.md)
-## [Conversion Functions (Visual Basic)](conversion-functions.md)
-## [수학 함수(Visual Basic)](math-functions.md)
-## [문자열 함수(Visual Basic)](string-functions.md)
-## [Type Conversion Functions (Visual Basic)](type-conversion-functions.md)
-### [Return Values for the CStr Function (Visual Basic)](return-values-for-the-cstr-function.md)
-## [CType 함수(Visual Basic)](ctype-function.md)

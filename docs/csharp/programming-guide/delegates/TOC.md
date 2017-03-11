@@ -1,5 +1,0 @@
-# [대리자 사용](using-delegates.md)
-# [명명된 메서드와 익명 메서드의 대리자 비교](delegates-with-named-vs-anonymous-methods.md)
-# [대리자](index.md)
-# [방법: 대리자 선언, 인스턴스화 및 사용](how-to-declare-instantiate-and-use-a-delegate.md)
-# [방법: 대리자 조합(멀티캐스트 대리자)](how-to-combine-delegates-multicast-delegates.md)
