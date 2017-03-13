@@ -46,7 +46,7 @@ RaiseEvent eventname[( argumentlist )]
   
  이벤트가 발생한 모듈 내에 이벤트가 선언되지 않는 경우 오류가 발생합니다.  다음 코드 조각에서는 이벤트가 발생한 이벤트 선언과 프로시저에 대해 설명합니다.  
   
- [!code-vb[VbVbalrEvents#37](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#37)]  
+ [!code-vb[VbVbalrEvents#37](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_1.vb)]  
   
  모듈 내에서 명시적으로 선언되지 않은 이벤트를 발생시킬 때는 `RaiseEvent`를 사용할 수 없습니다.  예를 들어, 모든 폼은 <xref:System.Windows.Forms.Form?displayProperty=fullName>에서 <xref:System.Windows.Forms.Control.Click> 이벤트를 상속하므로 파생된 폼에서 `RaiseEvent`를 사용하여 이벤트를 발생시킬 수 없습니다.  폼 모듈 내에 `Click` 이벤트를 선언하는 경우 폼 자체의 <xref:System.Windows.Forms.Control.Click> 이벤트는 숨겨집니다.  이때 폼의 <xref:System.Windows.Forms.Control.Click> 이벤트를 호출하려면 <xref:System.Windows.Forms.Control.OnClick%2A> 메서드를 호출합니다.  
   
@@ -71,12 +71,12 @@ RaiseEvent eventname[( argumentlist )]
   
  `WithEvents` 변수를 `Form1` 클래스의 선언 섹션에 추가합니다.  
   
- [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#14)]  
+ [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_2.vb)]  
   
 ## 예제  
  `Form1` 코드에 다음 코드를 추가합니다.  `Form_Load` 또는 `Button_Click` 등과 같이 있을 수 있는 모든 중복 프로시저를 바꿉니다.  
   
- [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#15)]  
+ [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/raiseevent-statement_3.vb)]  
   
  F5 키를 눌러 이 예제를 실행하고 **Start** 단추를 클릭합니다.  첫 번째 텍스트 상자에 카운트다운이 시작됩니다.  전체 시간\(10초\)이 경과하면 첫 번째 텍스트 상자에 "Done"이 표시됩니다.  
   

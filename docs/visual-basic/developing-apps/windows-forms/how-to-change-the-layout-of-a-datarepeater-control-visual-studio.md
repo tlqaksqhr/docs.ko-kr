@@ -38,16 +38,16 @@ caps.handback.revision: 10
   
 1.  단추 또는 메뉴 `Click` 이벤트 처리기에 다음 코드를 추가합니다.  
   
-     [!code-cs[VbPowerPacksDataRepeaterLayout#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/VbPowerPacksDataRepeaterLayoutCS/VbPowerPacksDataRepeaterLayout.cs#1)]
-     [!code-vb[VbPowerPacksDataRepeaterLayout#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/VbPowerPacksDataRepeaterLayout/VbPowerPacksDataRepeaterLayout.vb#1)]  
+     [!code-cs[VbPowerPacksDataRepeaterLayout#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-change-the-layout-of-a-datarepeater-control-visual-studio_1.cs)]
+     [!code-vb[VbPowerPacksDataRepeaterLayout#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-change-the-layout-of-a-datarepeater-control-visual-studio_1.vb)]  
   
 2.  대부분의 경우 예제 단원에 표시된 코드와 유사한 코드를 추가하여 새 방향에 맞게 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A>의 크기를 조정하고 컨트롤을 다시 정렬하려고 합니다.  
   
 ## 예제  
  다음 예제에서는 이벤트 처리기에서 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.LayoutStyleChanged> 이벤트에 응답하는 방법을 보여 줍니다.  이 예제를 실행하려면 폼에 `DataRepeater1`이라는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 컨트롤이 있고 해당 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemTemplate%2A>에 `TextBox1` 및 `TextBox2`라는 두 개의 <xref:System.Windows.Forms.TextBox> 컨트롤이 있어야 합니다.  
   
- [!code-cs[VbPowerPacksDataRepeaterLayout#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/VbPowerPacksDataRepeaterLayoutCS/VbPowerPacksDataRepeaterLayout.cs#2)]
- [!code-vb[VbPowerPacksDataRepeaterLayout#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/VbPowerPacksDataRepeaterLayout/VbPowerPacksDataRepeaterLayout.vb#2)]  
+ [!code-cs[VbPowerPacksDataRepeaterLayout#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-change-the-layout-of-a-datarepeater-control-visual-studio_2.cs)]
+ [!code-vb[VbPowerPacksDataRepeaterLayout#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-change-the-layout-of-a-datarepeater-control-visual-studio_2.vb)]  
   
 ## 참고 항목  
  <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>   

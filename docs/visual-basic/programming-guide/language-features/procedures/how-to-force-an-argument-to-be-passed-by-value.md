@@ -44,9 +44,9 @@ caps.handback.revision: 16
 ## 예제  
  다음 예제에서는 `ByRef` 매개 변수 선언을 재정의합니다.  `ByVal`로 처리하는 호출에서는 중첩 괄호를 사용함을 유의하십시오.  
   
- [!code-vb[VbVbcnProcedures#39](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-force-an-argument_1.vb)]  
+ [!code-vb[VbVbcnProcedures#39](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#40](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-force-an-argument_2.vb)]  
+ [!code-vb[VbVbcnProcedures#40](./codesnippet/VisualBasic/how-to-force-an-argument-to-be-passed-by-value_2.vb)]  
   
  인수 목록 내에서 `str`를 추가 괄호로 묶으면 `setNewString` 프로시저는 호출 코드에서 해당 값을 변경할 수 없으며 `MsgBox`에는 "Cannot be replaced if passed ByVal"이 표시됩니다.  `str`를 추가 괄호로 묶지 않으면 프로시저가 해당 값을 변경할 수 있으며 `MsgBox`에는 "This is a new value for the inString argument."가 표시됩니다.  
   

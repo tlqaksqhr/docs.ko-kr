@@ -41,7 +41,7 @@ x = x + y
  `+=` 연산자를 사용하여 이벤트에 대한 응답으로 호출되는 메서드를 지정할 수도 있습니다. 이러한 메서드를 이벤트 처리기라고 합니다.  이 컨텍스트에서 `+=` 연산자 사용을 *이벤트 구독*이라고 합니다.  자세한 내용은 [방법: 이벤트 구독 및 구독 취소](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)를 참조하십시오.  및 [대리자](../../../csharp/programming-guide/delegates/index.md)를 참조하십시오.  
   
 ## 예제  
- [!code-cs[csRefOperators#35](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#35)]  
+ [!code-cs[csRefOperators#35](../../../csharp/language-reference/operators/codesnippet/CSharp/addition-assignment-operator_1.cs)]  
   
 ## 참고 항목  
  [C\# 참조](../../../csharp/language-reference/index.md)   

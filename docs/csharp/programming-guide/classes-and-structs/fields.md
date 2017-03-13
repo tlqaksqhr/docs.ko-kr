@@ -26,15 +26,15 @@ caps.handback.revision: 29
   
  필드는 필드의 액세스 수준을 지정하고 필드의 형식과 필드의 이름을 차례로 사용하여 클래스 블록에서 선언됩니다.  예를 들면 다음과 같습니다.  
   
- [!code-cs[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/fields_1.cs)]  
+ [!code-cs[csProgGuideObjects#61](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_1.cs)]  
   
  개체의 필드에 액세스하려면 `objectname.fieldname`과 같이 개체 이름 뒤에 마침표와 필드 이름을 추가합니다.  예를 들면 다음과 같습니다.  
   
- [!code-cs[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/fields_2.cs)]  
+ [!code-cs[csProgGuideObjects#62](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_2.cs)]  
   
  필드를 선언할 때 대입 연산자를 사용하여 필드의 초기 값을 지정할 수 있습니다.  예를 들어 `day` 필드에 `"Monday"`을 자동으로 할당하려면 다음 예제와 같이 `day`를 선언합니다.  
   
- [!code-cs[csProgGuideObjects#63](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/fields_3.cs)]  
+ [!code-cs[csProgGuideObjects#63](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/fields_3.cs)]  
   
  필드는 개체 인스턴스의 생성자를 호출하기 직전에 초기화됩니다.  생성자가 필드의 값을 할당하는 경우 필드 선언 도중 지정된 모든 값을 덮어씁니다.  자세한 내용은 [생성자 사용](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)를 참조하십시오.  
   

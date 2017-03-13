@@ -67,7 +67,7 @@ caps.handback.revision: 14
  다음 예제에서는 [Static](../../../../visual-basic/language-reference/modifiers/static.md) 키워드를 사용하여 변수를 선언합니다.  [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md)에서 `Static`과 같은 한정자를 사용하는 경우에는 `Dim` 키워드를 사용하지 않아도 됩니다.  
   
 ### 코드  
- [!code-vb[VbVbalrKeywords#13](../../../../visual-basic/language-reference/codesnippet/visualbasic/lifetime_1.vb)]  
+ [!code-vb[VbVbalrKeywords#13](../../../../visual-basic/language-reference/codesnippet/VisualBasic/lifetime_1.vb)]  
   
 ### 설명  
  위 예제에서 변수 `applesSold`는 `runningTotal` 프로시저가 호출 코드로 돌아간 후에도 계속해서 존재합니다.  다음에 `runningTotal`이 호출될 때 `applesSold`는 이전에 계산된 값을 유지합니다.  

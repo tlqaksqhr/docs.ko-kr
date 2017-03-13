@@ -32,14 +32,14 @@ caps.handback.revision: 19
   
 1.  `My.Computer.FileSystem.SpecialDirectories.MyDocuments` 속성을 사용하여 경로를 지정합니다.  
   
-     [!code-vb[VbFileIOWrite#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-write-text-to-fil_1_1.vb)]  
+     [!code-vb[VbFileIOWrite#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files-in-the-my-documents-directory_1.vb)]  
   
 2.  `WriteAllText` 메서드를 사용하여 지정된 파일에 텍스트를 씁니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#14](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-write-text-to-fil_1_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#14](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files-in-the-my-documents-directory_2.vb)]  
   
 ## 예제  
- [!code-vb[VbFileIOWrite#2](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-write-text-to-fil_1_3.vb)]  
+ [!code-vb[VbFileIOWrite#2](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files-in-the-my-documents-directory_3.vb)]  
   
 ## 코드 컴파일  
  `test.txt`를 쓰고자 하는 파일의 이름으로 바꿉니다.  

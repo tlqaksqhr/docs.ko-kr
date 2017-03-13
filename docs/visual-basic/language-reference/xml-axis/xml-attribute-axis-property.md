@@ -74,7 +74,7 @@ object.@<attribute>
 ## 예제  
  다음 예제에서는 `phone`이라는 XML 요소의 컬렉션에서 `type`이라는 XML 특성의 값을 가져오는 방법을 보여 줍니다.  
   
- [!code-vb[VbXMLSamples#12](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-attribute-axis-prope_1.vb)]  
+ [!code-vb[VbXMLSamples#12](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_1.vb)]  
   
  이 코드가 표시하는 텍스트는 다음과 같습니다.  
   
@@ -89,7 +89,7 @@ object.@<attribute>
 ## 예제  
  다음 예제에서는 XML 요소에 대한 특성을 XML의 일부로 선언적으로 그리고 <xref:System.Xml.Linq.XElement> 개체의 인스턴스에 특성을 추가하여 동적으로 만드는 방법을 모두 보여 줍니다.  `type` 특성은 선언적으로 생성되며 `owne` 특성은 동적으로 생성됩니다.  
   
- [!code-vb[VbXMLSamples#44](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-attribute-axis-prope_2.vb)]  
+ [!code-vb[VbXMLSamples#44](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_2.vb)]  
   
  이 코드가 표시하는 텍스트는 다음과 같습니다.  
   
@@ -100,7 +100,7 @@ object.@<attribute>
 ## 예제  
  다음 예제에서는 꺾쇠 괄호 구문을 사용하여 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]에서 유효한 식별자가 아닌 `number-type`이라는 XML 특성의 값을 가져옵니다.  
   
- [!code-vb[VbXMLSamples#13](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-attribute-axis-prope_3.vb)]  
+ [!code-vb[VbXMLSamples#13](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_3.vb)]  
   
  이 코드가 표시하는 텍스트는 다음과 같습니다.  
   
@@ -109,7 +109,7 @@ object.@<attribute>
 ## 예제  
  다음 예제에서는 `ns`를 XML 네임스페이스 접두사로 선언합니다.  그런 다음 네임스페이스의 접두사를 사용하여 XML 리터럴을 만들고 정규화된 이름인 "`ns:name`"을 사용하여 첫 번째 자식 노드에 액세스합니다.  
   
- [!code-vb[VbXMLSamples#14](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-attribute-axis-prope_4.vb)]  
+ [!code-vb[VbXMLSamples#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-attribute-axis-property_4.vb)]  
   
  이 코드가 표시하는 텍스트는 다음과 같습니다.  
   

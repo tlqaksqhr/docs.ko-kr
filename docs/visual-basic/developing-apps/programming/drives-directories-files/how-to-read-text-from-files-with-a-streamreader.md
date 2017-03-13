@@ -30,7 +30,7 @@ caps.handback.revision: 18
   
 -   `OpenTextFileReader` 메서드를 사용하여 파일을 지정하고 <xref:System.IO.TextReader>를 엽니다.  이 예제에서는 `testfile.txt`라는 파일을 열어서 한 줄을 읽은 다음 메시지 상자에 표시합니다.  
   
-     [!code-vb[VbFileIORead#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-read-text-from-fi_1.vb)]  
+     [!code-vb[VbFileIORead#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-text-from-files-with-a-streamreader_1.vb)]  
   
 ## 강력한 프로그래밍  
  읽는 파일은 텍스트 파일이어야 합니다.  

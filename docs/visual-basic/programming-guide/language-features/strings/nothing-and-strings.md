@@ -26,7 +26,7 @@ caps.handback.revision: 8
 ## Visual Basic 런타임 및 .NET Framework  
  다음 예제를 참조하십시오.  
   
- [!code-vb[VbVbalrStrings#47](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/nothing-and-strings_1.vb)]  
+ [!code-vb[VbVbalrStrings#47](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/nothing-and-strings_1.vb)]  
   
  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 런타임에서는 일반적으로 `Nothing`을 빈 문자열\(""\)로 평가합니다.  그러나 [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)]에서는 Nothing을 빈 문자열로 평가하지 않으므로 `Nothing`에 대해 문자열 연산을 수행할 때마다 예외가 throw됩니다.  
   

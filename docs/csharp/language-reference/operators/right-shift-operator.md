@@ -31,7 +31,7 @@ caps.handback.revision: 15
  사용자 정의 형식으로 `>>` 연산자를 오버로드할 수 있습니다. 이 경우, 첫째 피연산자의 형식은 사용자 정의 형식이어야 하며 둘째 피연산자의 형식은 [int](../../../csharp/language-reference/keywords/int.md)여야 합니다.  자세한 내용은 [연산자](../../../csharp/language-reference/keywords/operator.md)를 참조하십시오.  이항 연산자가 오버로드되면 해당 대입 연산자도 암시적으로 오버로드됩니다.  
   
 ## 예제  
- [!code-cs[csRefOperators#26](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#26)]  
+ [!code-cs[csRefOperators#26](../../../csharp/language-reference/operators/codesnippet/CSharp/right-shift-operator_1.cs)]  
   
 ## 참고 항목  
  [C\# 참조](../../../csharp/language-reference/index.md)   

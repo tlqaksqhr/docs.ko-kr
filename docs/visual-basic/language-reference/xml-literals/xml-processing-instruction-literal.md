@@ -66,7 +66,7 @@ caps.handback.revision: 19
 ## 예제  
  다음 예제에서는 XML 문서의 스타일시트를 식별하는 처리 명령을 만듭니다.  
   
- [!code-vb[VbXMLSamples#28](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-processing-instructi_1.vb)]  
+ [!code-vb[VbXMLSamples#28](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-processing-instruction-literal_1.vb)]  
   
 ## 참고 항목  
  <xref:System.Xml.Linq.XProcessingInstruction>   

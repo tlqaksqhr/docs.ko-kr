@@ -78,13 +78,13 @@ LINQ\(통합 언어 쿼리\)를 사용하면 손쉽게 데이터베이스 정보
   
      다음 코드를 `Load` 이벤트에 추가하여 데이터 컨텍스트의 속성으로 노출된 테이블을 쿼리합니다.  쿼리는 결과를 필터링하여 `London`에 있는 고객만 반환합니다.  
   
-     [!code-vb[VbLINQToSQLHowTos#11](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form5.vb#11)]  
+     [!code-vb[VbLINQToSQLHowTos#11](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-filter-query-results-by-using-linq_1.vb)]  
   
 4.  F5 키를 눌러 프로젝트를 실행하고 결과를 봅니다.  
   
 5.  다음은 사용자가 시도할 수 있는 기타 필터입니다.  
   
-     [!code-vb[VbLINQToSQLHowTos#12](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form5.vb#12)]  
+     [!code-vb[VbLINQToSQLHowTos#12](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-filter-query-results-by-using-linq_2.vb)]  
   
 ## 참고 항목  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   

@@ -45,7 +45,7 @@ caps.handback.revision: 22
 ## 예제  
  다음 예제는 `Static`의 사용을 보여 줍니다.  
   
- [!code-vb[VbVbalrKeywords#5](../../../visual-basic/language-reference/codesnippet/visualbasic/static_1.vb)]  
+ [!code-vb[VbVbalrKeywords#5](../../../visual-basic/language-reference/codesnippet/VisualBasic/static_1.vb)]  
   
  `Static` 변수 `totalSales`는 0으로 한 번만 초기화됩니다.  `updateSales`를 입력할 때마다 `totalSales`에는 가장 최근에 계산된 값이 유지됩니다.  
   

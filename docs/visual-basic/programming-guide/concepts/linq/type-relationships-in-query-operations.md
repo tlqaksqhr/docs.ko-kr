@@ -38,7 +38,7 @@ LINQ 쿼리의 구성 요소
   
  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]은 *암시적 형식 지정*으로도 알려진 지역 형식 유추를 구현하여 강력한 형식 지정을 편리하게 만듭니다.  이 기능은 이전 예제에 사용되었으며 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 샘플 및 설명서에도 사용되고 있습니다.  Visual Basic에서의 지역 형식 유추는 `As` 절 없이 `Dim` 문을 사용하여 간단하게 수행됩니다.  다음 예제에서 `city`는 문자열로 강력하게 형식이 지정됩니다.  
   
- [!code-vb[VbLINQTypeRels#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/type-relationships-in-qu_1.vb)]  
+ [!code-vb[VbLINQTypeRels#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_1.vb)]  
   
 > [!NOTE]
 >  `Option Infer`가 `On`으로 설정된 경우에만 지역 형식 유추가 작동합니다.  자세한 내용은 [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md)을 참조하십시오.  
@@ -47,16 +47,16 @@ LINQ 쿼리의 구성 요소
   
  데이터 소스에서 반환되는 형식과 일치하지 않는 범위 변수에 대해 명시적 형식을 지정해야 할 수도 있습니다.  범위 변수의 형식은 `As` 절을 사용하여 지정할 수 있습니다.  그러나 이 변환이 [축소 변환](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)이고 `Option Strict`가 `On`으로 설정되어 있으면 오류가 발생하게 됩니다.  따라서 데이터 소스에서 검색한 값에 대해 변환을 수행하는 것이 좋습니다.  데이터 소스에서 검색한 값은 <xref:System.Linq.Enumerable.Cast%2A> 메서드를 사용하여 명시적 범위 변수 형식으로 변환할 수 있습니다.  또한 `Select` 절에서 선택된 값을 범위 변수의 형식과 다른 명시적 형식으로 캐스팅할 수도 있습니다.  다음 코드에서 이러한 사항을 확인할 수 있습니다.  
   
- [!code-vb[VbLINQTypeRels#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/type-relationships-in-qu_2.vb)]  
+ [!code-vb[VbLINQTypeRels#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_2.vb)]  
   
 ## 소스 데이터의 전체 요소를 반환하는 쿼리  
  다음 예제에서는 소스 데이터에서 선택된 요소의 시퀀스를 반환하는 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 쿼리 작업을 보여 줍니다.  소스인 `names`에는 문자열의 배열이 포함되어 있으며 쿼리 출력은 문자 M으로 시작하는 문자열이 포함된 시퀀스입니다.  
   
- [!code-vb[VbLINQTypeRels#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/type-relationships-in-qu_3.vb)]  
+ [!code-vb[VbLINQTypeRels#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_3.vb)]  
   
  이는 다음 코드와 동일하지만 작성하기가 훨씬 쉽고 간단합니다.  Visual Basic에서는 쿼리에서 지역 형식 유추에 의존하는 스타일이 선호됩니다.  
   
- [!code-vb[VbLINQTypeRels#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/type-relationships-in-qu_4.vb)]  
+ [!code-vb[VbLINQTypeRels#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/type-relationships-in-query-operations_4.vb)]  
   
  형식이 암시적으로 결정되는지 또는 명시적으로 결정되는지에 관계없이 앞의 코드 예제 모두에 다음 관계가 있습니다.  
   

@@ -128,7 +128,7 @@ caps.handback.revision: 32
 ## <a name="example"></a>예제  
  다음 예제에서는 두 개의 중첩 된 빈 요소가 포함 된 간단한 XML 요소를 만드는 방법을 보여 줍니다.  
   
- [!code-vb[VbXMLSamples#20](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-element-literal_1.vb)]  
+ [!code-vb[VbXMLSamples#20](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-element-literal_1.vb)]  
   
  다음 텍스트를 표시합니다. 공지 리터럴 빈 요소의 구조를 유지 합니다.  
   
@@ -142,7 +142,7 @@ caps.handback.revision: 32
 ## <a name="example"></a>예제  
  다음 예제에서는 포함된 식을 사용 하 여 요소 이름을 지정 하 고 속성을 작성 하는 방법을 보여 줍니다.  
   
- [!code-vb[VbXMLSamples#21](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-element-literal_2.vb)]  
+ [!code-vb[VbXMLSamples#21](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-element-literal_2.vb)]  
   
  이 코드의 텍스트는 다음과 같습니다.  
   
@@ -153,7 +153,7 @@ caps.handback.revision: 32
 ## <a name="example"></a>예제  
  다음 예제에서는 `ns`를 XML 네임스페이스 접두사로 선언한 다음 그런 다음 XML 리터럴을 만드는 데 네임 스페이스의 접두사 값을 사용 하 고 요소의 최종 폼이 표시 됩니다.  
   
- [!code-vb[VbXMLSamples#22](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-element-literal_3.vb)]  
+ [!code-vb[VbXMLSamples#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-element-literal_3.vb)]  
   
  이 코드의 텍스트는 다음과 같습니다.  
   

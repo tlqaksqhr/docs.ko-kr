@@ -29,19 +29,19 @@ caps.handback.revision: 7
 ## My.Application, My.Computer 및 My.User  
  다음 예제에서는 `My`를 사용하여 정보를 검색하는 방법을 보여 줍니다.  
   
- [!code-vb[VbVbcnMy#1](../../../visual-basic/developing-apps/development-with-my/codesnippet/visualbasic/performing-tasks-with-my_1.vb)]  
+ [!code-vb[VbVbcnMy#1](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_1.vb)]  
   
- [!code-vb[VbVbcnMy#2](../../../visual-basic/developing-apps/development-with-my/codesnippet/visualbasic/performing-tasks-with-my_2.vb)]  
+ [!code-vb[VbVbcnMy#2](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_2.vb)]  
   
  정보 검색은 물론 이러한 3개의 개체를 통해 노출된 멤버를 사용하면 해당 개체와 관련된 메서드를 실행할 수 있습니다.  예를 들어, 다양한 메서드에 액세스하여 파일을 조작하거나 `My.Computer`를 통해 레지스트리를 업데이트할 수 있습니다.  
   
  파일, 디렉터리 및 드라이브를 조작하는 다양한 메서드와 특성이 포함된 `My`를 사용하면 파일 I\/O가 훨씬 쉽고 빨라집니다.  <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> 개체를 사용하면 구분되거나 너비가 고정된 필드가 있는 구조화된 대용량 파일에서 읽을 수 있습니다.  이 예제에서는 `TextFieldParser` `reader`를 열고 이 개체를 사용하여 `C:\TestFolder1\test1.txt`에서 읽습니다.  
   
- [!code-vb[VbVbalrTextFieldParser#23](../../../visual-basic/developing-apps/development-with-my/codesnippet/visualbasic/performing-tasks-with-my_3.vb)]  
+ [!code-vb[VbVbalrTextFieldParser#23](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_3.vb)]  
   
  `My.Application`을 사용하면 응용 프로그램에 대한 culture를 변경할 수 있습니다.  다음 예제에서는 이 메서드를 호출하는 방법을 보여 줍니다.  
   
- [!code-vb[VbVbcnMy#3](../../../visual-basic/developing-apps/development-with-my/codesnippet/visualbasic/performing-tasks-with-my_4.vb)]  
+ [!code-vb[VbVbcnMy#3](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/performing-tasks-with-my-application-my-computer-and-my-user_4.vb)]  
   
 ## 참고 항목  
  <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>   

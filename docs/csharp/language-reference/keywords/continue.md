@@ -24,7 +24,7 @@ caps.handback.revision: 20
 ## 예제  
  이 예제에서는 카운터가 1부터 10까지 세도록 초기화됩니다.  사용 하 여는 `continue` 문 식과 함께에서 `(i < 9)`, 문 사이 `continue` 와 끝의 `for` 본문 생략 됩니다.  
   
- [!code-cs[csrefKeywordsJump#3](../../../csharp/language-reference/keywords/codesnippet/csharp/continue_1.cs)]  
+ [!code-cs[csrefKeywordsJump#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/continue_1.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

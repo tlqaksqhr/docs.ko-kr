@@ -25,7 +25,7 @@ caps.handback.revision: 25
   
  다음 예제는 형식 `dynamic`의 변수를 형식 `object`의 변수와 대조합니다.  컴파일 시간에 각 변수 형식을 확인하려면 `WriteLine` 문에서 `dyn` 또는 `obj` 위에 마우스 포인터를 올려 놓습니다.  IntelliSense는 `dyn`에 대해 **동적**을, `obj`에 대해 **개체**를 보여줍니다.  
   
- [!code-cs[csrefKeywordsTypes#21](../../../csharp/language-reference/keywords/codesnippet/csharp/dynamic_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_1.cs)]  
   
  `WriteLine` 문은 `dyn` 및 `obj`의 런타임 형식을 표시합니다.  이 시점에서는 모두 동일한 형식 정수입니다.  다음 출력이 생성됩니다.  
   
@@ -48,20 +48,20 @@ obj = obj + 3;
   
 -   선언에서 속성, 필드, 인덱서, 매개 변수, 반환 값, 지역 변수 또는 형식 제약 조건의 입력으로 사용합니다.  다음 클래스 정의는 여러 다른 선언에서 `dynamic`을 사용합니다.  
   
-     [!code-cs[csrefKeywordsTypes#22](../../../csharp/language-reference/keywords/codesnippet/csharp/dynamic_2.cs)]  
+     [!code-cs[csrefKeywordsTypes#22](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_2.cs)]  
   
 -   명시적 형식 변환에서 변환의 대상 형식으로 사용합니다.  
   
-     [!code-cs[csrefKeywordsTypes#23](../../../csharp/language-reference/keywords/codesnippet/csharp/dynamic_3.cs)]  
+     [!code-cs[csrefKeywordsTypes#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_3.cs)]  
   
 -   모든 컨텍스트에서 형식은 `is` 연산자 또는 `as` 연산자의 오른쪽에 있는 것 같은 값 또는 생성된 형식의 일부로 `typeof`에 대한 인수로 사용됩니다.  예를 들어, `dynamic`을 다음 식에 사용할 수 있습니다.  
   
-     [!code-cs[csrefKeywordsTypes#24](../../../csharp/language-reference/keywords/codesnippet/csharp/dynamic_4.cs)]  
+     [!code-cs[csrefKeywordsTypes#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_4.cs)]  
   
 ## 예제  
  다음 예제의 여러 선언에서 `dynamic`을 사용합니다.  `Main` 메서드는 또한 컴파일 타임 형식 검사를 런타임 형식 검사와 대조합니다.  
   
- [!code-cs[csrefKeywordsTypes#25](../../../csharp/language-reference/keywords/codesnippet/csharp/dynamic_5.cs)]  
+ [!code-cs[csrefKeywordsTypes#25](../../../csharp/language-reference/keywords/codesnippet/CSharp/dynamic_5.cs)]  
   
  자세한 내용과 예제를 보려면 [유형 동적 사용](../../../csharp/programming-guide/types/using-type-dynamic.md)을 참조하십시오.  
   

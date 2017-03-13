@@ -46,7 +46,7 @@ caps.handback.revision: 17
 ## 예제  
  다음 예제에서는 `TryCast`의 사용 방법을 보여 줍니다.  
   
- [!code-vb[VbVbalrKeywords#6](../../../visual-basic/language-reference/codesnippet/visualbasic/trycast-operator_1.vb)]  
+ [!code-vb[VbVbalrKeywords#6](../../../visual-basic/language-reference/codesnippet/VisualBasic/trycast-operator_1.vb)]  
   
 ## 참고 항목  
  [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)   

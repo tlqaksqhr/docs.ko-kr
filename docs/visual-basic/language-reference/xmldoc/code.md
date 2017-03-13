@@ -41,7 +41,7 @@ caps.handback.revision: 10
 ## 예제  
  다음 예제에서는 \<code\> 태그를 사용하여 `ID` 필드 사용에 대한 예제 코드를 포함합니다.  
   
- [!code-vb[VbVbcnXmlDocComments#2](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/code_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#2](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/code_1.vb)]  
   
 ## 참고 항목  
  [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

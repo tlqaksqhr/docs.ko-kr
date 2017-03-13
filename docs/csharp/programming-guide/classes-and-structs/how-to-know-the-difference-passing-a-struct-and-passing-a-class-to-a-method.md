@@ -27,7 +27,7 @@ caps.handback.revision: 25
  다음 예제에서는 출력 차이 보여 줍니다.  값은 `willIChange`필드클래스인스턴스의메서드를 호출 하 여 변경`ClassTaker` 는메서드주소가매개 변수에서클래스인스턴스의 지정 된필드를 사용 하기 때문에.    `willIChange`메서드호출에서구조체의필드메서드를 호출 하 여 변경 된`StructTaker`인수값은구조체자체 복사본을 해당 주소 않은 복사본이 있기 때문에.    `StructTaker`손실의 복사본 및 복사 되었을 때 변경 내용을 호출을 `StructTaker` 완료 됩니다.  
   
 ## 예제  
- [!code-cs[csProgGuideObjects#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-know-the-differen_1.cs)]  
+ [!code-cs[csProgGuideObjects#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method_1.cs)]  
   
 ## 참고 항목  
  [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   

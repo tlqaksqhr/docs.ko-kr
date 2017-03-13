@@ -27,7 +27,7 @@ caps.handback.revision: 14
 이 예제에서는 user32.dll에서 `MessageBox` 함수를 정의하여 호출한 다음 문자열을 전달합니다.  
   
 ## 예제  
- [!code-vb[VbVbalrInterop#1](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#1)]  
+ [!code-vb[VbVbalrInterop#1](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/how-to-call-windows-apis_1.vb)]  
   
 ## 코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  

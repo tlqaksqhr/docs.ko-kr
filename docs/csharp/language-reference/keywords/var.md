@@ -31,7 +31,7 @@ int i = 10; //explicitly typed
 ## 예제  
  다음 예제에서는 두 개의 쿼리 식을 보여 줍니다.  첫 번째 식에서 `var`의 사용은 허용되나 쿼리 결과의 형식이 `IEnumerable<string>`로 명확하게 지정되기 때문에 필요한 것은 아닙니다.  그러나 두 번째 식에서는 결과가 익명 형식의 컬렉션이고 형식의 이름이 컴파일러 자체 이외에는 액세스할 수 없으므로 `var`를 사용해야 합니다.  예제 \#2에서 `foreach` 반복 변수 `item`은 암시적으로도 형식화되어야 합니다.  
   
- [!code-cs[csrefKeywordsTypes#18](../../../csharp/language-reference/keywords/codesnippet/csharp/var_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#18](../../../csharp/language-reference/keywords/codesnippet/CSharp/var_1.cs)]  
   
 ## 참고 항목  
  [C\# 참조](../../../csharp/language-reference/index.md)   

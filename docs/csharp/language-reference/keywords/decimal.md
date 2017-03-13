@@ -82,12 +82,12 @@ Console.WriteLine((double)dec + dub);
   
  이 예제에서는 같은 식에 `decimal`과 [int](../../../csharp/language-reference/keywords/int.md)가 혼합되어 있습니다.  계산 결과는 `decimal` 형식입니다.  
   
- [!code-cs[csrefKeywordsTypes#6](../../../csharp/language-reference/keywords/codesnippet/csharp/decimal_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/decimal_1.cs)]  
   
 ## 예제  
  이 예제에서는 통화 서식 문자열을 사용하여 출력 서식을 지정합니다.  `x`는 소수 자릿수가 $0.99를 초과하기 때문에 반올림됩니다.  최대 자릿수를 나타내는 변수 `y`는 올바른 서식으로 정확하게 표시됩니다.  
   
- [!code-cs[csrefKeywordsTypes#7](../../../csharp/language-reference/keywords/codesnippet/csharp/decimal_2.cs)]  
+ [!code-cs[csrefKeywordsTypes#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/decimal_2.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

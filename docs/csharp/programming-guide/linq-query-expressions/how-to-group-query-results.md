@@ -20,44 +20,44 @@ caps.handback.revision: 19
 ## 예제  
  이 항목의 모든 예제에서는 다음 도우미 클래스와 데이터 소스가 사용됩니다.  
   
- [!code-cs[csProgGuideLINQ#15](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#15)]  
+ [!code-cs[csProgGuideLINQ#15](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-group-query-results_1.cs)]  
   
 ## 예제  
  다음 예제에서는 요소의 단일 속성을 그룹 키로 사용하여 소스 요소를 그룹화하는 방법을 보여 줍니다.  이 경우 키는 학생의 성 `string`입니다.  또한 부분 문자열을 키에 사용할 수도 있습니다.  그룹화 작업은 형식에 대해 기본 같음 비교자를 사용합니다.  
   
  다음 메서드를 `StudentClass` 클래스에 붙여 넣습니다.  `Main` 메서드의 호출 문을 `sc.GroupBySingleProperty()`로 변경합니다.  
   
- [!code-cs[csProgGuideLINQ#17](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#17)]  
+ [!code-cs[csProgGuideLINQ#17](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-group-query-results_2.cs)]  
   
 ## 예제  
  다음 예제에서는 개체의 속성이 아닌 항목을 그룹 키에 사용하여 소스 요소를 그룹화하는 방법을 보여 줍니다.  이 예제에서 키는 학생의 성 중에서 첫 번째 문자입니다.  
   
  다음 메서드를 `StudentClass` 클래스에 붙여 넣습니다.  `Main` 메서드의 호출 문을 `sc.GroupBySubstring()`로 변경합니다.  
   
- [!code-cs[csProgGuideLINQ#18](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#18)]  
+ [!code-cs[csProgGuideLINQ#18](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-group-query-results_3.cs)]  
   
 ## 예제  
  다음 예제에서는 숫자 범위를 그룹 키로 사용하여 소스 요소를 그룹화하는 방법을 보여 줍니다.  쿼리는 이름 및 성과 학생이 속한 백분위수 범위만 포함한 익명 형식으로 결과를 반환합니다.  결과를 표시하기 위해 완전한 `Student` 개체를 사용할 필요가 없으므로 익명 형식이 사용됩니다.  `GetPercentile`은 학생의 평균 점수에 기초하여 백분위수를 계산하는 도우미 함수입니다.  이 메서드는 0에서 10 사이의 정수를 반환합니다.  
   
- [!code-cs[csProgGuideLINQ#50](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#50)]  
+ [!code-cs[csProgGuideLINQ#50](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-group-query-results_4.cs)]  
   
  다음 메서드를 `StudentClass` 클래스에 붙여 넣습니다.  `Main` 메서드의 호출 문을 `sc.GroupByRange()`로 변경합니다.  
   
- [!code-cs[csProgGuideLINQ#19](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#19)]  
+ [!code-cs[csProgGuideLINQ#19](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-group-query-results_5.cs)]  
   
 ## 예제  
  다음 예제에서는 부울 비교 식을 사용하여 소스 요소를 그룹화하는 방법을 보여 줍니다.  이 예제에서 부울 식은 학생의 평균 시험 점수가 75점을 넘는지 확인합니다.  위의 예제와 같이 완전한 소스 요소가 필요하지 않으므로 결과는 익명 형식으로 반환됩니다.  익명 형식의 속성은 `Key` 멤버의 속성이 되고 쿼리 실행 시에 이름으로 액세스할 수 있습니다.  
   
  다음 메서드를 `StudentClass` 클래스에 붙여 넣습니다.  `Main` 메서드의 호출 문을 `sc.GroupByBoolean()`로 변경합니다.  
   
- [!code-cs[csProgGuideLINQ#20](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#20)]  
+ [!code-cs[csProgGuideLINQ#20](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-group-query-results_6.cs)]  
   
 ## 예제  
  다음 예제에서는 익명 형식을 사용하여 여러 값이 포함된 키를 캡슐화하는 방법을 보여 줍니다.  이 예제에서 첫 번째 키 값은 학생의 성 중에서 첫 번째 문자입니다.  두 번째 키 값은 학생이 첫 번째 시험에서 85점이 넘는 점수를 받았는지 여부를 지정하는 부울입니다.  키의 임의 속성으로 그룹을 정렬할 수 있습니다.  
   
  다음 메서드를 `StudentClass` 클래스에 붙여 넣습니다.  `Main` 메서드의 호출 문을 `sc.GroupByCompositeKey()`로 변경합니다.  
   
- [!code-cs[csProgGuideLINQ#21](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#21)]  
+ [!code-cs[csProgGuideLINQ#21](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-group-query-results_7.cs)]  
   
 ## 코드 컴파일  
  테스트하려는 각 메서드를 복사하여 `StudentClass` 클래스에 붙여 넣습니다.  메서드에 대한 호출 문을 `Main` 메서드에 추가하고 F5 키를 누릅니다.  

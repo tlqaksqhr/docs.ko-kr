@@ -22,7 +22,7 @@ caps.handback.revision: 17
  `-` 연산자를 사용하면 멀티캐스트 대리자에서 구성 요소 대리자를 제거할 수 있습니다.  
   
 ## 예제  
- [!code-cs[csProgGuideDelegates#11](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#11)]  
+ [!code-cs[csProgGuideDelegates#11](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-combine-delegates-multicast-delegates_1.cs)]  
   
 ## 참고 항목  
  <xref:System.MulticastDelegate>   

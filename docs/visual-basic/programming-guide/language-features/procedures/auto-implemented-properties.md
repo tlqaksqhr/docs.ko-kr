@@ -30,15 +30,15 @@ caps.handback.revision: 20
   
  자동 구현 속성을 사용하면 기본값을 포함한 속성을 한 줄에 선언할 수 있습니다.  다음 예제에서는 3개의 속성 선언을 보여 줍니다.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#1](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/auto-implemented-propert_1_1.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#1](./codesnippet/VisualBasic/auto-implemented-properties_1.vb)]  
   
  자동 구현 속성은 해당 속성 값이 전용 필드에 저장되는 속성과 동일합니다.  다음 코드 예제에서는 자동 구현 속성을 보여 줍니다.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#5](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/auto-implemented-propert_1_2.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#5](./codesnippet/VisualBasic/auto-implemented-properties_2.vb)]  
   
  다음 코드 예제에서는 앞의 자동 구현 속성 예제에 해당하는 코드를 보여 줍니다.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#2](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/auto-implemented-propert_1_3.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#2](./codesnippet/VisualBasic/auto-implemented-properties_3.vb)]  
   
  다음 코드에서는 읽기 전용 속성 구현을 보여 줍니다.  
   
@@ -73,7 +73,7 @@ End Class
 ## 자동 구현 속성 초기화  
  필드를 초기화하는 데 사용할 수 있는 모든 식이 자동 구현 속성을 초기화하는 데 유효합니다.  자동 구현 속성을 초기화하면 식이 계산되어 속성에 대한 `Set` 프로시저에 전달됩니다.  다음 코드 예제에서는 초기 값이 포함된 일부 자동 구현 속성을 보여 줍니다.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#3](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/auto-implemented-propert_1_4.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#3](./codesnippet/VisualBasic/auto-implemented-properties_4.vb)]  
   
  `Interface`의 멤버이거나 `MustOverride`로 표시된 자동 구현 속성은 초기화할 수 없습니다.  
   
@@ -81,7 +81,7 @@ End Class
   
  자동 구현 속성을 배열로 선언하는 경우 명시적 배열 범위를 지정할 수 없습니다.  그러나 다음 예에서와 같이 배열 이니셜라이저를 사용하여 값을 제공할 수 있습니다.  
   
- [!code-vb[VbVbalrAutoImplementedProperties#4](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/auto-implemented-propert_1_5.vb)]  
+ [!code-vb[VbVbalrAutoImplementedProperties#4](./codesnippet/VisualBasic/auto-implemented-properties_5.vb)]  
   
 ## 표준 구문이 요구되는 속성 정의  
  자동 구현 속성은 편리하며 많은 프로그래밍 시나리오를 지원합니다.  그러나 자동 구현 속성을 사용할 수 없고 그 대신 표준, 즉 *확장된* 속성 구문을 사용해야 하는 경우가 있습니다.  

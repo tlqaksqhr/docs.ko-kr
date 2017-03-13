@@ -19,19 +19,19 @@ caps.handback.revision: 27
 # 네임스페이스(C# 프로그래밍 가이드)
 네임스페이스는 C\# 프로그래밍에서 다음과 같은 두 가지 방식으로 중요하게 사용됩니다.  첫 번째로, .NET Framework에서는 네임스페이스를 사용하여 많은 클래스를 다음과 같이 조직화합니다.  
   
- [!code-cs[csProgGuide#22](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/progGuide.cs#22)]  
+ [!code-cs[csProgGuide#22](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_1.cs)]  
   
  `System`은 네임스페이스이고 `Console`은 이 네임스페이스에 있는 클래스입니다.  전체 이름을 사용할 필요가 없도록 다음 예제와 같이 `using` 키워드를 사용할 수 있습니다.  
   
- [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/using.cs#1)]  
+ [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_2.cs)]  
   
- [!code-cs[csProgGuide#25](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/progGuide.cs#25)]  
+ [!code-cs[csProgGuide#25](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_3.cs)]  
   
  자세한 내용은 [using 지시문](../../../csharp/language-reference/keywords/using-directive.md)를 참조하십시오.  
   
  두 번째로, 사용자 자신의 네임스페이스를 선언하면 큰 프로그래밍 프로젝트에서 클래스 및 메서드 이름의 범위를 쉽게 제어할 수 있습니다.  네임스페이스를 정의하려면 다음 예제와 같이 [namespace](../../../csharp/language-reference/keywords/namespace.md) 키워드를 사용합니다.  
   
- [!code-cs[csProgGuideNamespaces#6](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces.cs#6)]  
+ [!code-cs[csProgGuideNamespaces#6](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/index_4.cs)]  
   
 ## 네임스페이스 개요  
  네임스페이스에는 다음과 같은 속성이 있습니다.  

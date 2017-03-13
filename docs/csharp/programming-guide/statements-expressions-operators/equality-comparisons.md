@@ -21,7 +21,7 @@ caps.handback.revision: 14
 ## 참조 일치  
  참조 일치는 두 개체 참조가 동일한 내부 개체를 참조함을 의미합니다.  이러한 일치는 다음 예제에서와 같이 간단한 할당을 통해 발생할 수 있습니다.  
   
- [!code-cs[csProgGuideStatements#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/equality-comparisons_1.cs)]  
+ [!code-cs[csProgGuideStatements#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/equality-comparisons_1.cs)]  
   
  이 코드에서는 두 개체가 만들어지고 대입문 이후 두 참조에서 동일한 개체를 참조합니다.  따라서 두 참조는 참조 일치를 갖습니다.  두 참조가 동일한 개체를 참조하는지 여부를 확인하려면 <xref:System.Object.ReferenceEquals%2A> 메서드를 사용합니다.  
   

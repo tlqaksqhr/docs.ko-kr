@@ -31,7 +31,7 @@ caps.handback.revision: 23
   
  각 Nullable 형식은 제네릭 <xref:System.Nullable%601> 구조체에서 생성됩니다.  작업 관련 작업을 추적하는 데이터베이스가 있다고 가정할 때  다음 예제에서는 Nullable `Boolean` 형식을 생성하고 해당 형식의 변수를 선언합니다.  다음 세 가지 방법으로 선언을 작성할 수 있습니다.  
   
- [!code-vb[VbVbalrNullableValue#1](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/visualbasic/nullable-value-types_1.vb)]  
+ [!code-vb[VbVbalrNullableValue#1](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_1.vb)]  
   
  `ridesBusToWork` 변수에는 `True` 값이나 `False` 값을 지정할 수 있으며 값을 지정하지 않을 수도 있습니다.  초기 기본값은 값 없음이며 이 경우 이 사람에 대한 정보를 아직 얻지 못했음을 의미할 수 있습니다.  반대로 `False`는 정보를 얻었지만 이 사람이 버스로 통근하지 않음을 의미할 수 있습니다.  
   
@@ -45,18 +45,18 @@ caps.handback.revision: 23
 ### 기본값  
  변수를 Nullable 형식으로 선언하면 해당 <xref:System.Nullable%601.HasValue%2A> 속성에 기본값 `False`가 지정됩니다.  즉, 기본적으로 변수에는 내부 값 형식의 기본값 대신 정의된 값이 없습니다.  다음 예제에서는 `Integer` 형식의 기본값이 0임에도 불구하고 `numberOfChildren` 변수에 기본적으로 정의된 값이 없습니다.  
   
- [!code-vb[VbVbalrNullableValue#2](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/visualbasic/nullable-value-types_2.vb)]  
+ [!code-vb[VbVbalrNullableValue#2](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_2.vb)]  
   
  Null 값은 정의되지 않은 값이나 알 수 없는 값을 나타내는 데 유용합니다.  `numberOfChildren`을 `Integer`로 선언하면 해당 정보를 현재 사용할 수 없음을 나타낼 수 있는 값이 없게 됩니다.  
   
 ### 값 저장  
  Nullable 형식의 변수나 속성에 일반적인 방법으로 값을 저장합니다.  다음 예제에서는 앞의 예제에서 선언한 `numberOfChildren` 변수에 값을 할당합니다.  
   
- [!code-vb[VbVbalrNullableValue#3](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/visualbasic/nullable-value-types_3.vb)]  
+ [!code-vb[VbVbalrNullableValue#3](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_3.vb)]  
   
  Nullable 형식의 변수나 속성이 정의된 값을 포함하는 경우 값이 할당되지 않은 초기 상태로 이러한 변수나 속성을 되돌릴 수 있습니다.  다음 예와 같이 변수나 속성을 `Nothing`으로 설정하여 이를 수행할 수 있습니다.  
   
- [!code-vb[VbVbalrNullableValue#4](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/visualbasic/nullable-value-types_4.vb)]  
+ [!code-vb[VbVbalrNullableValue#4](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_4.vb)]  
   
 > [!NOTE]
 >  Nullable 형식의 변수에 `Nothing`을 할당할 수 있지만 등호\(\=\)를 사용하여 `Nothing`에 대해 이 변수를 테스트할 수는 없습니다.  등호\(\=\)를 사용하는 비교, `someVar = Nothing`은 항상 `Nothing`이 됩니다.  `False`에 대해 변수의 <xref:System.Nullable%601.HasValue%2A> 속성을 테스트하거나 `Is` 또는 `IsNot` 연산자를 사용하여 테스트할 수 있습니다.  
@@ -64,7 +64,7 @@ caps.handback.revision: 23
 ### 값 검색  
  Nullable 형식의 변수 값을 검색하려면 먼저 해당 <xref:System.Nullable%601.HasValue%2A> 속성을 테스트하여 값이 있는지 확인해야 합니다.  <xref:System.Nullable%601.HasValue%2A>가 `False`일 때 값을 읽으려고 하면 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]에서 <xref:System.InvalidOperationException> 예외를 throw합니다.  다음 예제에서는 이전 예제의 `numberOfChildren` 변수를 읽는 권장 방법을 보여 줍니다.  
   
- [!code-vb[VbVbalrNullableValue#5](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/visualbasic/nullable-value-types_5.vb)]  
+ [!code-vb[VbVbalrNullableValue#5](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_5.vb)]  
   
 ## Nullable 형식 비교  
  Nullable `Boolean` 변수를 부울 식에 사용하는 경우 결과는 `True`, `False` 또는 `Nothing`일 수 있습니다.  아래에는 `And` 및 `Or`의 참 테이블이 나와 있습니다.  `b1` 및 `b2`에 세 개의 값을 사용할 수 있으므로 총 9개 조합을 평가해야 합니다.  
@@ -83,7 +83,7 @@ caps.handback.revision: 23
   
  부울 변수나 식의 값이 `Nothing`인 경우 `true` 도 아니고 `false`도 아닙니다.  다음 예제를 살펴보십시오.  
   
- [!code-vb[VbVbalrNullableValue#6](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/visualbasic/nullable-value-types_6.vb)]  
+ [!code-vb[VbVbalrNullableValue#6](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_6.vb)]  
   
  이 예제에서 `b1 And b2`는 `Nothing`이 됩니다.  따라서 각 `If` 문에서 `Else` 절이 실행되며 출력은 다음과 같습니다.  
   
@@ -97,11 +97,11 @@ caps.handback.revision: 23
 ## 전파  
  산술, 비교, 시프트 또는 형식 연산의 피연산자 중 하나 또는 둘 다가 Nullable이면 연산 결과도 Nullable입니다.  두 피연산자에 모두 `Nothing`이 아닌 값이 있는 경우 둘 다 Nullable 형식이 아닌 것처럼 피연산자의 내부 값에 연산이 수행됩니다.  다음 예제에서 `compare1` 및 `sum1` 변수는 암시적으로 형식화되어 있습니다.  변수 위에 마우스 포인터를 놓고 컴파일러에서 두 변수에 대해 Nullable 형식을 유추하는지 확인합니다.  
   
- [!code-vb[VbVbalrNullableValue#7](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/visualbasic/nullable-value-types_7.vb)]  
+ [!code-vb[VbVbalrNullableValue#7](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_7.vb)]  
   
  피연산자 중 하나 또는 둘 다에 `Nothing` 값이 있는 경우 결과는 `Nothing`이 됩니다.  
   
- [!code-vb[VbVbalrNullableValue#8](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/visualbasic/nullable-value-types_8.vb)]  
+ [!code-vb[VbVbalrNullableValue#8](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/nullable-value-types_8.vb)]  
   
 ## 데이터에 Nullable 형식 사용  
  데이터베이스는 Nullable 형식 사용이 가장 중요한 위치 중 하나입니다.  현재 일부 데이터베이스 개체는 Nullable 형식을 지원하지 않지만 디자이너에서 생성한 테이블 어댑터는 Null 허용 형식을 지원합니다.  [TableAdapter 개요](/visual-studio/data-tools/tableadapter-overview)의 "TableAdapter의 Null 허용 형식 지원"을 참조하십시오.  

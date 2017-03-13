@@ -64,7 +64,7 @@ caps.handback.revision: 45
   
  예를 들어 `String`과 같은 특정 데이터 형식에서 작동하는 큐 클래스를 만들어 사용할 수 있습니다. 이러한 클래스는 다음과 같이 <xref:System.Collections.Generic.Queue%601?displayProperty=fullName>에서 선언할 수 있습니다.  
   
- [!code-vb[VbVbalrDataTypes#1](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-types_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#1](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_1.vb)]  
   
  이제 `stringQ`를 사용하여 `String` 값으로만 작업할 수 있습니다.`stringQ`는 `Object` 값에 일반화되는 것이 아니라 `String`에 한정되므로 런타임에 바인딩 또는 형식 변환이 없습니다. 이를 통해 실행 시간을 절약하고 런타임 오류를 줄일 수 있습니다.  
   
@@ -73,15 +73,15 @@ caps.handback.revision: 45
 ## 제네릭 클래스의 예  
  다음 예에서는 제네릭 클래스의 기본 정의를 보여 줍니다.  
   
- [!code-vb[VbVbalrDataTypes#2](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-types_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#2](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_2.vb)]  
   
  앞의 기본 정의에서 `t`은 *형식 매개 변수*, 즉 클래스를 선언할 때 제공하는 데이터 형식에 대한 자리 표시자입니다. 코드의 다른 곳에서 `t`에 대한 다양한 데이터 형식을 제공하여 여러 버전의 `classHolder`를 선언할 수 있습니다. 다음 예제에서는 이러한 선언 두 가지를  보여 줍니다.  
   
- [!code-vb[VbVbalrDataTypes#3](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-types_3.vb)]  
+ [!code-vb[VbVbalrDataTypes#3](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_3.vb)]  
   
  위의 문에서는 특정 형식이 형식 매개 변수를 대체하는 *생성된 클래스*를 선언합니다. 이 대체는 생성된 클래스 내에서 코드 전체로 전파됩니다. 다음 예에서는 `integerClass`의 `processNewItem` 프로시저 모습을 보여 줍니다.  
   
- [!code-vb[VbVbalrDataTypes#4](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-types_4.vb)]  
+ [!code-vb[VbVbalrDataTypes#4](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_4.vb)]  
   
  자세한 예제는 [방법: 다른 데이터 형식에 동일한 기능을 제공할 수 있는 클래스 정의](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)를 참조하십시오.  
   
@@ -119,7 +119,7 @@ caps.handback.revision: 45
 ### 제약 조건의 예  
  다음 예에서는 형식 인수가 <xref:System.IComparable>을 구현해야 한다는 제약 조건을 가진 클래스의 기본 정의를 보여 줍니다.  
   
- [!code-vb[VbVbalrDataTypes#5](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-types_5.vb)]  
+ [!code-vb[VbVbalrDataTypes#5](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_5.vb)]  
   
  이후의 코드에서 <xref:System.IComparable>을 구현하지 않는 형식을 제공하여 `itemManager`에서 클래스를 생성하려고 시도하면 컴파일러가 오류를 표시합니다.  
   
@@ -141,7 +141,7 @@ caps.handback.revision: 45
 ### 다중 제약 조건의 예  
  다음 예제에서는 형식 매개 변수에 제약 조건 목록이 있는 제네릭 클래스의 기본 정의를 보여 줍니다. 이 클래스의 인스턴스를 만드는 코드에서 형식 인수는 <xref:System.IComparable> 및 <xref:System.IDisposable> 인터페이스를 모두 구현해야 하고, 참조 형식어야 하며, 액세스 가능한 매개 변수 없는 생성자를 노출해야 합니다.  
   
- [!code-vb[VbVbalrDataTypes#6](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-types_6.vb)]  
+ [!code-vb[VbVbalrDataTypes#6](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_6.vb)]  
   
 ## 중요 용어  
  제네릭 형식에서는 다음의 용어를 사용합니다.  

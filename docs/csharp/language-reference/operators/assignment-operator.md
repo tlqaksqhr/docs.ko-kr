@@ -24,7 +24,7 @@ caps.handback.revision: 14
  대입 연산자\(\=\)는 오버로드할 수 없습니다.  그러나 형식에 대한 암시적 변환 연산자를 정의하여 이러한 형식에서 할당 연산자를 사용할 수 있습니다.  자세한 내용은 [변환 연산자 사용](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md)를 참조하십시오.  
   
 ## 예제  
- [!code-cs[csRefOperators#49](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#49)]  
+ [!code-cs[csRefOperators#49](../../../csharp/language-reference/operators/codesnippet/CSharp/assignment-operator_1.cs)]  
   
 ## 참고 항목  
  [C\# 참조](../../../csharp/language-reference/index.md)   

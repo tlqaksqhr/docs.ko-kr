@@ -44,7 +44,7 @@ caps.handback.revision: 29
   
 -   배열에 있는 요소의 수를 유지하는 `foreach` 루프  
   
- [!code-cs[csrefKeywordsIteration#4](../../../csharp/language-reference/keywords/codesnippet/csharp/foreach-in_1.cs)]  
+ [!code-cs[csrefKeywordsIteration#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/foreach-in_1.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

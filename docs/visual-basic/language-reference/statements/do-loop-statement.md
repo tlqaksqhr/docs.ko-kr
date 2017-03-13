@@ -98,22 +98,22 @@ Loop { While | Until } condition
 ## 예제  
  다음 예에서 루프의 문은 `index` 변수가 10보다 커질 때까지 계속 실행됩니다.  루프의 끝에 `Until` 절이 있습니다.  
   
- [!code-vb[VbVbalrStatements#131](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/do-loop-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#131](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/do-loop-statement_1.vb)]  
   
 ## 예제  
  다음 예제에서는 `Until` 절 대신 `While` 절을 사용하며 루프의 끝 부분이 아닌 시작 부분에서 `condition`을 테스트합니다.  
   
- [!code-vb[VbVbalrStatements#132](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/do-loop-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#132](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/do-loop-statement_2.vb)]  
   
 ## 예제  
  다음 예에서는 `index` 변수가 100보다 클 때 `condition`이 루프를 정지합니다.  하지만 루프에 `If` 문을 사용하면 인덱스 변수가 10보다 커질 때 `Exit Do` 문이 루프를 중단합니다.  
   
- [!code-vb[VbVbalrStatements#133](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/do-loop-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#133](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/do-loop-statement_3.vb)]  
   
 ## 예제  
  다음 예제에서는 텍스트 파일의 모든 줄을 읽습니다.  <xref:System.IO.File.OpenText%2A> 메서드는 파일을 열고 문자를 읽는 <xref:System.IO.StreamReader>를 반환합니다.  `Do...Loop` 조건에서 `StreamReader`의 <xref:System.IO.StreamReader.Peek%2A> 메서드는 추가 문자가 있는지 여부를 판단합니다.  
   
- [!code-vb[VbVbalrStatements#134](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/do-loop-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#134](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/do-loop-statement_4.vb)]  
   
 ## 참고 항목  
  [Loop Structures](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   

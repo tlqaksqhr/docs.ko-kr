@@ -42,7 +42,7 @@ x | y
 ## 예제  
  다음 예제에서는 표현식을 사용 하 `||` 에서 첫째 피연산자만 계산 합니다.  사용 하는 식 `|`두 피연산자를 모두 계산합니다.  두 번째 예제에서는 두 피연산자를 모두 계산 하는 경우 런타임 예외를 발생 합니다.  
   
- [!code-cs[csRefOperators#52](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#52)]  
+ [!code-cs[csRefOperators#52](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-or-operator_1.cs)]  
   
 ## 참고 항목  
  [C\# 참조](../../../csharp/language-reference/index.md)   

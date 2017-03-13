@@ -34,7 +34,7 @@ caps.handback.revision: 18
 ## 예제  
  이 예제에서는 `Nickname` 사용자 설정의 값을 변경합니다.  
   
- [!code-vb[VbVbalrMyResources#7](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#7)]  
+ [!code-vb[VbVbalrMyResources#7](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/how-to-change-user-settings_1.vb)]  
   
  이 예제가 동작하려면 응용 프로그램에 형식이 `String`인 `Nickname` 사용자 설정이 있어야 합니다.  
   

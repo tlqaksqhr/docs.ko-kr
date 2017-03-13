@@ -49,11 +49,11 @@ From element [ As type ] In collection [ _ ]
   
  쿼리에서 여러 `From` 절을 지정하여 조인할 여러 컬렉션을 식별할 수 있습니다.  여러 컬렉션을 지정하는 경우 각 컬렉션을 독립적으로 반복할 수도 있고 컬렉션이 서로 연관된 경우 조인할 수도 있습니다.  컬렉션을 `Select` 절을 사용하여 암시적으로 조인하거나 `Join` 또는 `Group Join` 절을 사용하여 명시적으로 조인할 수 있습니다.  또는 하나의 `From` 절에서 관련된 여러 범위 변수와 컬렉션을 각각 쉼표로 구분하여 지정할 수 있습니다.  다음 코드 예제에서는 `From` 절에 대한 두 구문 옵션을 보여 줍니다.  
   
- [!code-vb[VbSimpleQuerySamples#21](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#21)]  
+ [!code-vb[VbSimpleQuerySamples#21](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_1.vb)]  
   
  `From` 절에서는 쿼리의 범위를 정의하며 이는 `For` 루프의 범위와 유사합니다.  따라서 쿼리 범위에서 각 `element` 범위 변수에는 고유한 이름이 있어야 합니다.  쿼리에 여러 `From` 절을 지정할 수 있으므로 이후의 `From` 절에서 해당 `From` 절의 범위 변수를 참조하거나 이전 `From` 절의 범위 변수를 참조할 수 있습니다.  예를 들어 다음 예제에서는 두 번째 절의 컬렉션이 첫 번째 절의 범위 변수 속성을 기반으로 하는 중첩된 `From` 절을 보여 줍니다.  
   
- [!code-vb[VbSimpleQuerySamples#22](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#22)]  
+ [!code-vb[VbSimpleQuerySamples#22](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_2.vb)]  
   
  각 `From` 절 다음에 다른 쿼리 절 조합을 추가하여 쿼리 조건을 더 구체화할 수 있습니다.  쿼리 조건을 구체화하는 방법은 다음과 같습니다.  
   
@@ -76,7 +76,7 @@ From element [ As type ] In collection [ _ ]
 ## 예제  
  다음 쿼리 식에서는 `From` 절을 사용하여 `customers` 컬렉션의 각 `Customer` 개체에 대해 범위 변수 `cust`를 선언합니다.  `Where` 절은 범위 변수를 사용하여 지정한 지역의 고객으로 출력을 제한합니다.  `For Each` 루프는 각 고객의 회사 이름을 쿼리 결과에 표시합니다.  
   
- [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#23)]  
+ [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_3.vb)]  
   
 ## 참고 항목  
  [Queries](../../../visual-basic/language-reference/queries/queries.md)   

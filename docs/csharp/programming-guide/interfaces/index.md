@@ -23,7 +23,7 @@ caps.handback.revision: 45
   
  다음 예제와 같이 [interface](../../../csharp/language-reference/keywords/interface.md) 키워드를 사용하여 인터페이스를 정의합니다.  
   
- [!code-cs[csProgGuideInheritance#47](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/index_1.cs)]  
+ [!code-cs[csProgGuideInheritance#47](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_1.cs)]  
   
  <xref:System.IEquatable%601> 인터페이스를 구현하는 모든 클래스나 구조체에는 인터페이스에서 지정한 서명과 일치하는 <xref:System.IEquatable%601.Equals%2A> 메서드에 대한 정의가 포함되어 있어야 합니다.  따라서 `IEquatable<T>`을 구현하는 클래스를 계산하여 클래스의 인스턴스에서 동일한 클래스의 다른 인스턴스와 동일한지 여부를 확인할 수 있는 `Equals` 메서드를 포함할 수 있습니다.  
   
@@ -39,7 +39,7 @@ caps.handback.revision: 45
   
  다음 예제에서는 IEquatable\<T\> 인터페이스의 구현을 보여 줍니다.  구현 클래스 `Car`는 <xref:System.IEquatable%601.Equals%2A> 메서드의 구현을 제공해야 합니다.  
   
- [!code-cs[csProgGuideInheritance#48](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/index_2.cs)]  
+ [!code-cs[csProgGuideInheritance#48](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_2.cs)]  
   
  클래스의 속성 및 인덱서는 인터페이스에 정의된 속성이나 인덱서에 대해 추가 접근자를 정의할 수 있습니다.  예를 들어 인터페이스는 [get](../../../csharp/language-reference/keywords/get.md) 접근자가 있는 속성을 선언할 수 있습니다.  인터페이스를 구현하는 클래스는 `get` 및 [set](../../../csharp/language-reference/keywords/set.md) 접근자를 둘 다 사용하는 동일한 속성을 선언할 수 있습니다.  그러나 속성 또는 인덱서에서 명시적 구현을 사용하는 경우에는 접근자가 일치해야 합니다.  명시적 구현에 대한 자세한 내용은 [명시적 인터페이스 구현](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md) 및 [인터페이스 속성](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)을 참조하세요.  
   

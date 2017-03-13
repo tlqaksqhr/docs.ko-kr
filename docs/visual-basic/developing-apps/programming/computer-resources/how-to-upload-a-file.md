@@ -31,19 +31,19 @@ caps.handback.revision: 22
   
 -   `UploadFile` 메서드를 사용하여 소스 파일의 위치와 대상 디렉터리 위치를 문자열 또는 URI\(Uniform Resource Identifier\)로 지정하여 파일을 업로드합니다. 이 예제에서는 `Order.txt` 파일을 `http://www.cohowinery.com/uploads.aspx`에 업로드합니다.  
   
-     [!code-vb[VbResourceTasks#6](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-upload-a-file_1.vb)]  
+     [!code-vb[VbResourceTasks#6](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-upload-a-file_1.vb)]  
   
 ### 파일을 업로드하고 작업 진행률을 표시하려면  
   
 -   `UploadFile` 메서드를 사용하여 소스 파일의 위치와 대상 디렉터리 위치를 문자열 또는 URI로 지정하여 파일을 업로드합니다.  이 예제에서는 사용자 이름이나 암호를 지정하지 않고 `Order.txt` 파일을 `http://www.cohowinery.com/uploads.aspx`에 업로드하고, 업로드 진행률을 표시하며, 시간 제한 간격을 500밀리초로 지정합니다.  
   
-     [!code-vb[VbResourceTasks#7](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-upload-a-file_2.vb)]  
+     [!code-vb[VbResourceTasks#7](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-upload-a-file_2.vb)]  
   
 ### 사용자 이름과 암호를 지정하여 파일을 업로드하려면  
   
 -   `UploadFile` 메서드를 사용하여 소스 파일의 위치와 대상 디렉터리 위치를 문자열 또는 URI로 지정하고 사용자 이름과 암호를 지정하여 파일을 업로드합니다.  이 예제에서는 사용자 이름 `anonymous`와 빈 암호를 지정하여 `Order.txt` 파일을 `http://www.cohowinery.com/uploads.aspx`에 업로드합니다.  
   
-     [!code-vb[VbResourceTasks#8](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-upload-a-file_3.vb)]  
+     [!code-vb[VbResourceTasks#8](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-upload-a-file_3.vb)]  
   
 ## 강력한 프로그래밍  
  다음 조건에서 예외가 throw될 수 있습니다.  

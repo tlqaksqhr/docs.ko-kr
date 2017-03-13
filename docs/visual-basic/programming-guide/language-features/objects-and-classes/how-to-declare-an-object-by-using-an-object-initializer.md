@@ -30,7 +30,7 @@ caps.handback.revision: 20
   
  다음 절차에서는 세 가지 방식으로 `Student` 클래스의 인스턴스를 만드는 방법을 보여 줍니다.  클래스에는 이름, 성, 학년 속성 등이 포함됩니다.  세 가지 선언 각각은 `First` 속성이 "Michael"로 설정된 `Student`의 새 인스턴스를 만들고 `Last` 속성은 "Tucker"로 설정되며 다른 모든 멤버는 해당 기본값으로 설정됩니다.  절차에서 각 선언의 결과는 다음 예제와 동일하며 개체 이니셜라이저를 사용하지 않습니다.  
   
- [!code-vb[VbVbalrObjectInit#20](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/visualbasic/how-to-declare-an-object_1.vb)]  
+ [!code-vb[VbVbalrObjectInit#20](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_1.vb)]  
   
  `Student` 클래스의 구현은 [How to: Create a List of Items](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)를 참조하십시오.  해당 항목에서 코드를 복사하여 클래스를 설정하고 작업할 `Student` 개체의 목록을 만들 수 있습니다.  
   
@@ -46,7 +46,7 @@ caps.handback.revision: 20
   
 3.  초기화 목록에 초기화할 각 속성을 포함하고 초기 값을 해당 속성에 할당합니다.  속성 이름은 마침표 뒤에 옵니다.  
   
-     [!code-vb[VbVbalrObjectInit#21](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/visualbasic/how-to-declare-an-object_2.vb)]  
+     [!code-vb[VbVbalrObjectInit#21](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_2.vb)]  
   
      하나 이상의 클래스 멤버를 초기화할 수 있습니다.  
   
@@ -60,11 +60,11 @@ caps.handback.revision: 20
   
 6.  `With`를 입력한 다음 개체 이니셜라이저를 입력하여 새 인스턴스의 하나 이상의 멤버를 초기화합니다.  
   
-     [!code-vb[VbVbalrObjectInit#22](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/visualbasic/how-to-declare-an-object_3.vb)]  
+     [!code-vb[VbVbalrObjectInit#22](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_3.vb)]  
   
 7.  `As Student`를 생략하여 이전 단계에서 정의를 단순화할 수 있습니다.  이 작업을 수행하는 경우 컴파일러는 지역 형식 유추를 사용하여 `student3`이 `Student`의 인스턴스인지 확인합니다.  
   
-     [!code-vb[VbVbalrObjectInit#23](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/visualbasic/how-to-declare-an-object_4.vb)]  
+     [!code-vb[VbVbalrObjectInit#23](../../../../visual-basic/programming-guide/language-features/objects-and-classes/codesnippet/VisualBasic/how-to-declare-an-object-by-using-an-object-initializer_4.vb)]  
   
      자세한 내용은 [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)를 참조하십시오.  
   

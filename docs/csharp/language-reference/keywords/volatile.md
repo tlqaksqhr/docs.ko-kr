@@ -42,12 +42,12 @@ caps.handback.revision: 29
 ## 예제  
  다음 예제에서는 공용 필드 변수를 `volatile`로 선언하는 방법을 보여 줍니다.  
   
- [!code-cs[csrefKeywordsModifiers#24](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#24)]  
+ [!code-cs[csrefKeywordsModifiers#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_1.cs)]  
   
 ## 예제  
  다음 예제에서는 보조 또는 작업자 스레드를 만들고 기본 스레드와 함께 이 스레드를 병렬로 사용하여 작업 처리를 수행하는 방법을 보여 줍니다.  다중 스레딩에 대한 배경 정보는 [Threading](../Topic/Managed%20Threading.md) 및 [스레딩](../Topic/Threading%20\(C%23%20and%20Visual%20Basic\).md)을 참조하십시오.  
   
- [!code-cs[csProgGuideThreading#1](../../../csharp/language-reference/keywords/codesnippet/csharp/volatile_2.cs)]  
+ [!code-cs[csProgGuideThreading#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_2.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

@@ -23,7 +23,7 @@ caps.handback.revision: 7
 ## 예제  
  다음 예제에서 `Grades` 열거형은 학생이 클래스에서 받을 수 있는 문자 등급을 나타냅니다.  `Passing`이라는 확장 메서드가 `Grades` 형식에 추가되어 이제 형식의 각 인스턴스는 통과 등급을 나타낼지 여부를 "알 수 있습니다".  
   
- [!code-cs[csProgGuideExtensionMethods#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-create-a-new-meth_1.cs)]  
+ [!code-cs[csProgGuideExtensionMethods#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-create-a-new-method-for-an-enumeration_1.cs)]  
   
  `Extensions` 클래스는 동적으로 업데이트된 정적 변수도 포함하고 확장 메서드의 반환 값이 변수의 현재 값을 반영합니다.  즉, 내부적으로는 확장 메서드가 정의된 정적 클래스에서 직접 호출됩니다.  
   

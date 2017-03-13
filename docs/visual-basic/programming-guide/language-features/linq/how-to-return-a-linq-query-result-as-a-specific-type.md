@@ -72,7 +72,7 @@ LINQ\(통합 언어 쿼리\)를 사용하면 손쉽게 데이터베이스 정보
   
 3.  Form1 클래스의 `End Class` 문 뒤에 다음 코드를 추가하고 `CustomerInfo` 형식을 만들어 이 샘플에 대한 쿼리 결과를 저장합니다.  
   
-     [!code-vb[VbLINQToSQLHowTos#16](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form8.vb#16)]  
+     [!code-vb[VbLINQToSQLHowTos#16](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-return-a-linq-query-result-as-a-specific-type_1.vb)]  
   
 4.  O\/R 디자이너에 테이블을 추가한 경우 디자이너는 <xref:System.Data.Linq.DataContext> 개체를 프로젝트에 추가한 것입니다.  이 개체에는 해당 테이블에 액세스하고 각 테이블에 대한 개별 개체와 컬렉션에 액세스하기 위해 가져야 하는 코드가 포함됩니다.  프로젝트에 대한 <xref:System.Data.Linq.DataContext> 개체의 이름은 .dbml 파일 이름을 기반으로 지정됩니다.  이 프로젝트에서 <xref:System.Data.Linq.DataContext> 개체의 이름은 `northwindDataContext`입니다.  
   
@@ -80,7 +80,7 @@ LINQ\(통합 언어 쿼리\)를 사용하면 손쉽게 데이터베이스 정보
   
      Form1 클래스의 `Load` 이벤트에서 다음 코드를 추가하여 데이터 컨텍스트의 속성으로 노출된 테이블을 쿼리합니다.  쿼리의 `Select` 절은 쿼리 결과의 각 항목에 대해 익명 형식 대신 새 `CustomerInfo` 형식을 만듭니다.  
   
-     [!code-vb[VbLINQToSQLHowTos#15](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form8.vb#15)]  
+     [!code-vb[VbLINQToSQLHowTos#15](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-return-a-linq-query-result-as-a-specific-type_2.vb)]  
   
 5.  F5 키를 눌러 프로젝트를 실행하고 결과를 봅니다.  
   

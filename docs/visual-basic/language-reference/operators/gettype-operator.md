@@ -64,7 +64,7 @@ GetType(typename)
 ## 예제  
  다음 예제에서는 사용 중인 `GetType` 연산자를 보여 줍니다.  
   
- [!code-vb[VbVbalrOperators#26](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/gettype-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#26](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/gettype-operator_1.vb)]  
   
 ## 참고 항목  
  [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   

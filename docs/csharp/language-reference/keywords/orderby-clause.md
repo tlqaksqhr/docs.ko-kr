@@ -25,12 +25,12 @@ caps.handback.revision: 17
 ## 예제  
  다음 예제에서 첫 번째 쿼리는 사전순으로 A부터 시작하는 단어를 정렬하고 두 번째 쿼리에서는 동일한 단어를 내림차순으로 정렬합니다.  `ascending` 키워드는 기본 정렬 값이므로 생략할 수 있습니다.  
   
- [!code-cs[cscsrefQueryKeywords#20](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Orderby.cs#20)]  
+ [!code-cs[cscsrefQueryKeywords#20](../../../csharp/language-reference/keywords/codesnippet/CSharp/orderby-clause_1.cs)]  
   
 ## 예제  
  다음 예제에서는 학생의 성을 기준으로 기본 정렬을 수행한 다음 이름 순으로 두 번째 정렬을 수행합니다.  
   
- [!code-cs[cscsrefQueryKeywords#22](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Orderby.cs#22)]  
+ [!code-cs[cscsrefQueryKeywords#22](../../../csharp/language-reference/keywords/codesnippet/CSharp/orderby-clause_2.cs)]  
   
 ## 설명  
  컴파일 타임에 `orderby` 절은 <xref:System.Linq.Enumerable.OrderBy%2A> 메서드를 호출하여 변환됩니다.  `orderby` 절의 여러 키는 <xref:System.Linq.Enumerable.ThenBy%2A> 메서드 호출을 변환합니다.  

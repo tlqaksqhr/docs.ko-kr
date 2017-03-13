@@ -37,7 +37,7 @@ caps.handback.revision: 48
 ## 예제  
  다음 예제에서는 `ProgrammingGuide` 네임스페이스의 최상위에 세 가지 멤버가 있는 `MyCustomClass`를 정의합니다.  `MyCustomClass`의 인스턴스\(개체\)는 `Program` 클래스의 `Main` 메서드에서 생성되고 개체의 메서드와 속성은 점 표기를 사용하여 액세스됩니다.  
   
- [!code-cs[csProgGuideObjects#88](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/index_1.cs)]  
+ [!code-cs[csProgGuideObjects#88](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_1.cs)]  
   
 ## 캡슐화  
  *캡슐화*는 개체 지향 프로그래밍의 첫 번째 기둥 또는 원칙으로도 불립니다.  캡슐화 원칙에 따르면 클래스 또는 구조체에서는 클래스 또는 구조체 외부 코드에서 각 멤버로의 액세스 가능성을 지정할 수 있습니다.  클래스 또는 어셈블리 외부에서 사용할 목적이 아닌 메서드 및 변수는 코딩 오류 또는 악의적인 이용의 가능성을 방지하기 위해 숨길 수 있습니다.  

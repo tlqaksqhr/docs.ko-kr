@@ -67,7 +67,7 @@ caps.handback.revision: 18
   
  다음 예제에서와 같이 단일 식 또는 문에서 여러 가지 연산자를 사용하여 작업을 수행할 수 있습니다.  
   
- [!code-vb[VbVbalrOperators#56](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/index_1.vb)]  
+ [!code-vb[VbVbalrOperators#56](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/index_1.vb)]  
   
  위 예제에서 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]은 할당 연산자\(`=`\)의 오른쪽에 있는 식에서 연산을 수행한 다음 결과 값을 왼쪽에 있는 `x` 변수에 할당합니다.  식에 사용할 수 있는 연산자 수에는 제한이 없지만 결과를 예측하기 위해 [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md)를 알아 두는 것이 필요합니다.  
   

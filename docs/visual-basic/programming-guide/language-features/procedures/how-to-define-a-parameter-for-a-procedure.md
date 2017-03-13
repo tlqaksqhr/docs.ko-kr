@@ -45,7 +45,7 @@ caps.handback.revision: 15
   
      다음 예제에서는 세 개의 매개 변수를 가진 `Sub` 프로시저의 개요를 정의합니다.  처음 두 개는 필수적 요소이고 세 번째는 선택적 요소입니다.  매개 변수 목록에서 매개 변수 선언은 쉼표로 구분됩니다.  
   
-     [!code-vb[VbVbcnProcedures#33](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-define-a-paramete_1.vb)]  
+     [!code-vb[VbVbcnProcedures#33](./codesnippet/VisualBasic/how-to-define-a-parameter-for-a-procedure_1.vb)]  
   
      첫 번째 매개 변수는  `customer`  개체를 받아들이고 인수는 [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)로 전달되기 때문에 `updateCustomer`는 `c`에 전달된 변수를 직접 업데이트할 수 있습니다.  마지막 두 인수는 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)로 전달되므로 프로시저에서 이러한 인수의 값을 변경할 수 없습니다.  
   

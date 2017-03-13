@@ -48,7 +48,7 @@ RemoveHandler event, AddressOf eventhandler
 >  사용자 지정 이벤트의 경우 `RemoveHandler` 문은 이벤트의 `RemoveHandler` 접근자를 호출합니다.  사용자 지정 이벤트에 대한 자세한 내용은 [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md)을 참조하십시오.  
   
 ## 예제  
- [!code-vb[VbVbalrEvents#17](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#17)]  
+ [!code-vb[VbVbalrEvents#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/removehandler-statement_1.vb)]  
   
 ## 참고 항목  
  [AddHandler Statement](../../../visual-basic/language-reference/statements/addhandler-statement.md)   

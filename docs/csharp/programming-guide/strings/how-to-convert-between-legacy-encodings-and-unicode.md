@@ -22,7 +22,7 @@ C\#에서 메모리의 모든 문자열은 유니코드\(UTF\-16\)로 인코딩�
 ## 예제  
  다음 예제에서는 8비트 ASCII로 인코딩된 텍스트 파일의 소스 텍스트를 Windows 코드 페이지 737에 따라 해석하는 방법을 보여 줍니다.  
   
- [!code-cs[csProgGuideStrings#34](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#34)]  
+ [!code-cs[csProgGuideStrings#34](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-convert-between-legacy-encodings-and-unicode_1.cs)]  
   
 ## 참고 항목  
  [문자열](../../../csharp/programming-guide/strings/index.md)

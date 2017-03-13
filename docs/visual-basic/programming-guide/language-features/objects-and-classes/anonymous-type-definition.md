@@ -26,7 +26,7 @@ caps.handback.revision: 21
 ## 컴파일러 생성 코드  
  `product`의 다음 정의에 대해서 컴파일러에서는 `Name`, `Price` 및 `OnHand` 속성을 포함하는 새 클래스 정의를 만듭니다.  
   
- [!code-vb[VbVbalrAnonymousTypes#25](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/anonymous-type-definition_1.vb)]  
+ [!code-vb[VbVbalrAnonymousTypes#25](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_1.vb)]  
   
  클래스 정의에는 다음과 유사한 속성 정의가 포함되어 있습니다.  키 속성에 대한 `Set` 메서드는 없습니다.  키 속성의 값은 읽기 전용입니다.  
   
@@ -75,13 +75,13 @@ End Class
   
      예를 들어 다음 예제에서 `Equals`는 `employee01` 및 `employee08`에 대해 `True`만 반환합니다.  각 줄 앞의 주석은 새 인스턴스가 `employee01`과 일치하지 않는 이유를 설명합니다.  
   
-     [!code-vb[VbVbalrAnonymousTypes#24](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/anonymous-type-definition_2.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#24](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_2.vb)]  
   
 -   `GetHashcode`에서는 고유한 GetHashCode 알고리즘을 제공합니다.  알고리즘에서는 키 속성만을 사용하여 해시 코드를 계산합니다.  
   
 -   `ToString`에서는 다음 예제와 같이 연결된 속성 값의 문자열을 반환합니다.  키 속성 및 키가 아닌 속성 모두 포함됩니다.  
   
-     [!code-vb[VbVbalrAnonymousTypes#29](../../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/anonymous-type-definition_3.vb)]  
+     [!code-vb[VbVbalrAnonymousTypes#29](../../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/anonymous-type-definition_3.vb)]  
   
  명시적으로 명명된 익명 형식 속성은 이러한 생성된 메서드와 충돌하지 않습니다.  즉, `.Equals`, `.GetHashCode` 또는 `.ToString`을 사용하여 속성의 이름을 지정할 수 없습니다.  
   

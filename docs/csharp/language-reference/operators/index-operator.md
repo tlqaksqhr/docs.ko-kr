@@ -26,11 +26,11 @@ caps.handback.revision: 20
 ## 설명  
  다음 예에서 볼 수 있는 것처럼 배열 형식은 `[]` 앞에 있는 형식입니다.  
   
- [!code-cs[csRefOperators#43](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#43)]  
+ [!code-cs[csRefOperators#43](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_1.cs)]  
   
  다음 예에서 볼 수 있는 것처럼 배열 요소에 액세스하려면 원하는 요소의 인덱스를 대괄호로 묶습니다.  
   
- [!code-cs[csRefOperators#44](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#44)]  
+ [!code-cs[csRefOperators#44](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_2.cs)]  
   
  배열 인덱스가 범위를 벗어나면 예외가 throw됩니다.  
   
@@ -38,15 +38,15 @@ caps.handback.revision: 20
   
  예를 들어, .NET Framework에서는 임의 형식의 키와 값을 연결하는 `Hashtable` 형식을 정의합니다.  
   
- [!code-cs[csRefOperators#45](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#45)]  
+ [!code-cs[csRefOperators#45](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_3.cs)]  
   
  또한 대괄호는 [특성](../Topic/Attributes%20\(C%23%20and%20Visual%20Basic\).md)을 지정하기 위해서도 사용합니다.  
   
- [!code-cs[csRefOperators#46](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#46)]  
+ [!code-cs[csRefOperators#46](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_4.cs)]  
   
  대괄호를 포인터의 인덱스 참조에 사용할 수 있습니다.  
   
- [!code-cs[csRefOperators#47](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#47)]  
+ [!code-cs[csRefOperators#47](../../../csharp/language-reference/operators/codesnippet/CSharp/index-operator_5.cs)]  
   
  범위 검사는 수행하지 않습니다.  
   

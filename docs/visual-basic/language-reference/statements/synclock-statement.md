@@ -89,13 +89,13 @@ End SyncLock
  `simpleMessageList` 클래스에서 모든 해당 인스턴스 간의 단일 메시지 목록을 공유하는 경우 `messagesList` 및 `messagesLast` 변수가 `Shared`로 선언됩니다.  이 경우 모든 인스턴스에서 단일 잠금 개체가 사용되기 때문에 `messagesLock` 변수도 `Shared`로 선언되어야 합니다.  
   
 ### 코드  
- [!code-vb[VbVbalrThreading#1](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/synclock-statement_1.vb)]  
+ [!code-vb[VbVbalrThreading#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_1.vb)]  
   
 ### 설명  
  다음 예제에서는 스레드와 `SyncLock`를 사용합니다.  `SyncLock` 문이 있으면 문 블록이 임계 영역이 되고 `balance`는 음수가 되지 않습니다.  `SyncLock` 및 `End SyncLock` 문을 주석 처리하여 `SyncLock` 키워드를 생략하는 효과를 볼 수 있습니다.  
   
 ### 코드  
- [!code-vb[VbVbalrThreading#21](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/synclock-statement_2.vb)]  
+ [!code-vb[VbVbalrThreading#21](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_2.vb)]  
   
 ### 설명  
   

@@ -23,7 +23,7 @@ caps.handback.revision: 33
   
  다음 예제에서는 1차원, 다차원 및 가변 배열을 만듭니다.  
   
- [!code-cs[csProgGuideArrays#1](../../../csharp/programming-guide/arrays/codesnippet/csharp/index_1.cs)]  
+ [!code-cs[csProgGuideArrays#1](../../../csharp/programming-guide/arrays/codesnippet/CSharp/index_1.cs)]  
   
 ## 배열 개요  
  배열에는 다음과 같은 속성이 있습니다.  

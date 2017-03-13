@@ -35,20 +35,20 @@ caps.handback.revision: 21
   
  다음 예제에서는 `My.Computer.Audio.Play` 메서드는 소리를 재생 합니다.  `AudioPlayMode.WaitToComplete`이 지정된 경우 `My.Computer.Audio.Play`는 호출 코드를 계속 실행하기 전에 소리 재생이 완료될 때까지 기다립니다.  이 예제를 사용 하는 경우 파일 이름을 컴퓨터에 있는.wav 사운드 파일을 참조 하도록 확인 해야  
   
- [!code-vb[VbVbalrMyComputer#15](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class1.vb#15)]  
+ [!code-vb[VbVbalrMyComputer#15](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_1.vb)]  
   
  다음 예제에서는 `My.Computer.Audio.Play` 메서드는 소리를 재생 합니다.  이 예제를 사용 하는 경우 응용 프로그램 리소스 폭포 라는 이름의.wav 사운드 파일을 포함 해야 합니다.  
   
- [!code-vb[VbVbalrMyComputer#16](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class1.vb#16)]  
+ [!code-vb[VbVbalrMyComputer#16](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_2.vb)]  
   
 ## 소리 반복 재생  
  다음 예제에서는 `My.Computer.Audio.Play` 메서드는 백그라운드에서 지정한 사운드 재생 때 `PlayMode.BackgroundLoop` 지정 됩니다.  이 예제를 사용 하는 경우 파일 이름을 컴퓨터에 있는.wav 사운드 파일을 참조 하도록 해야 합니다.  
   
- [!code-vb[VbVbalrMyComputer#11](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class1.vb#11)]  
+ [!code-vb[VbVbalrMyComputer#11](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_3.vb)]  
   
  다음 예제에서는 `My.Computer.Audio.Play` 메서드는 백그라운드에서 지정한 사운드 재생 때 `PlayMode.BackgroundLoop` 지정 됩니다.  이 예제를 사용 하는 경우 응용 프로그램 리소스 폭포 라는 이름의.wav 사운드 파일을 포함 해야 합니다.  
   
- [!code-vb[VbVbalrMyComputer#12](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class1.vb#12)]  
+ [!code-vb[VbVbalrMyComputer#12](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_4.vb)]  
   
  앞의 코드 예제는 IntelliSense 코드 조각으로 사용할 수도 있습니다.  이 코드 조각은 코드 조각 선택기의 **Windows Forms 응용 프로그램 \> 사운드**에 있습니다.  자세한 내용은 [코드 조각](/visual-studio/ide/code-snippets)를 참조하십시오.  
   
@@ -61,7 +61,7 @@ caps.handback.revision: 21
   
  다음 예제에서는 백그라운드에서 재생 되는 소리를 중지 합니다.  
   
- [!code-vb[VbVbalrMyComputer#18](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class1.vb#18)]  
+ [!code-vb[VbVbalrMyComputer#18](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_5.vb)]  
   
  앞의 코드 예제는 IntelliSense 코드 조각으로 사용할 수도 있습니다.  이 코드 조각은 코드 조각 선택기의 **Windows Forms 응용 프로그램 \> 사운드**에 있습니다.  자세한 내용은 [코드 조각](/visual-studio/ide/code-snippets)를 참조하십시오.  
   
@@ -72,7 +72,7 @@ caps.handback.revision: 21
   
  다음 예제는 `My.Computer.Audio.PlaySystemSound` 시스템 소리를 재생 하는 방법.  
   
- [!code-vb[VbVbalrMyComputer#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class1.vb#17)]  
+ [!code-vb[VbVbalrMyComputer#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/playing-sounds_6.vb)]  
   
 ## 참고 항목  
  <xref:Microsoft.VisualBasic.Devices.Audio>   

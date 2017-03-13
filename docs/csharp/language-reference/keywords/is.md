@@ -38,7 +38,7 @@ if (obj is MyObject)
  무명 메서드는 `is` 연산자의 왼쪽에 사용할 수 없습니다.  이 예외에는 람다 식이 포함됩니다.  
   
 ## 예제  
- [!code-cs[csrefKeywordsOperator#4](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#4)]  
+ [!code-cs[csrefKeywordsOperator#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/is_1.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

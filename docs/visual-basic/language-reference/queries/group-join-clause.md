@@ -62,7 +62,7 @@ Group Join element [As type] In collection _
 ## 예제  
  다음 코드 예제에서는 `Group Join` 절을 사용하여 두 개의 컬렉션을 조인합니다.  
   
- [!code-vb[VbSimpleQuerySamples#14](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#14)]  
+ [!code-vb[VbSimpleQuerySamples#14](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/group-join-clause_1.vb)]  
   
 ## 참고 항목  
  [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   

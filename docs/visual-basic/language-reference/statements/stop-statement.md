@@ -47,7 +47,7 @@ Stop
 ## 예제  
  다음 예제에서는 `Stop` 문을 사용하여 `For...Next` 루프를 통해 반복되는 실행을 일시 중지합니다.  
   
- [!code-vb[VbVbalrStatements#56](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/stop-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#56](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/stop-statement_1.vb)]  
   
 ## 참고 항목  
  [End Statement](../../../visual-basic/language-reference/statements/end-statement.md)

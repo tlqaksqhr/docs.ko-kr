@@ -61,29 +61,29 @@ caps.handback.revision: 22
 ## 예제  
  예제 명명 된 문자열 리소스에는 폼의 제목을 `Form1Title` 응용 프로그램 리소스 파일에서입니다.  이때 작업을 응용 프로그램 이라는 문자열이 있어야 합니다 `Form1Title` 리소스 파일에서입니다.  자세한 내용은 [How to: Add or Remove Resources](http://msdn.microsoft.com/ko-kr/7b77bc06-3952-4799-b029-def3f8f7f88d)를 참조하십시오.  
   
- [!code-vb[VbVbalrMyResources#1](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#1)]  
+ [!code-vb[VbVbalrMyResources#1](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_1.vb)]  
   
 ## 예제  
  이 예제에서는 응용 프로그램의 리소스 파일에 저장된 `Form1Icon`이라는 아이콘에 폼의 아이콘을 설정합니다.  이 때, 응용 프로그램 이라는 아이콘이 있어야 `Form1Icon` 리소스 파일에서입니다.  
   
- [!code-vb[VbVbalrMyResources#2](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#2)]  
+ [!code-vb[VbVbalrMyResources#2](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_2.vb)]  
   
 ## 예제  
  이 예제에서는 폼의 배경 이미지 라는 이미지 리소스를 설정 하는 `Form1Background`, 응용 프로그램 리소스 파일에 있는.  이 예제에서는 작업을 이라는 이미지 리소스는 응용 프로그램이 있어야 합니다 `Form1Background` 리소스 파일에서입니다.  
   
- [!code-vb[VbVbalrMyResources#3](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#3)]  
+ [!code-vb[VbVbalrMyResources#3](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_3.vb)]  
   
 ## 예제  
  라는 이름의 오디오 리소스로 저장 된 소리를 재생 하는이 예제 `Form1Greeting` 응용 프로그램의 리소스 파일.  이때 작업을 응용 프로그램 이라는 오디오 리소스가 있어야 합니다 `Form1Greeting` 리소스 파일에서입니다.  `My.Computer.Audio.Play` 메서드는 Windows Forms 응용 프로그램에만 사용할 수 있습니다.  
   
- [!code-vb[VbVbalrMyResources#4](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#4)]  
+ [!code-vb[VbVbalrMyResources#4](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_4.vb)]  
   
 ## 예제  
  이 예제에서는 응용 프로그램의 문자열 리소스의 프랑스어 culture 버전을 검색합니다.  자원 인 `Message`.  문화권을 변경 하는 `My.Resources` 개체를 사용 하 여,이 예제를 사용 하 여 <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.ChangeUICulture%2A>.  
   
  이 예제에서는 작업을 이라는 문자열은 응용 프로그램이 있어야 합니다 `Message` 에서 해당 리소스 파일과 응용 프로그램 Resources.fr FR.resx 리소스 파일의 프랑스어 culture 버전 있어야 합니다.  자세한 내용은 [How to: Add or Remove Resources](http://msdn.microsoft.com/ko-kr/7b77bc06-3952-4799-b029-def3f8f7f88d)를 참조하십시오.  응용 프로그램에 리소스 파일의 프랑스어 culture 버전 없는 경우는 `My.Resource` 개체 기본 culture 리소스 파일에서 리소스를 검색 합니다.  
   
- [!code-vb[VbVbalrMyResources#10](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#10)]  
+ [!code-vb[VbVbalrMyResources#10](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-resources-object_5.vb)]  
   
 ## 참고 항목  
  [How to: Add or Remove Resources](http://msdn.microsoft.com/ko-kr/7b77bc06-3952-4799-b029-def3f8f7f88d)   

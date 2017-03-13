@@ -36,11 +36,11 @@ caps.handback.revision: 31
   
  Nullable이 아닌 값 형식의 변수인 경우 할당 `Nothing` 하 여 기본 값으로 선언 된 형식에 대 한 설정입니다.  해당 형식이 변수 멤버를 포함하면 변수 멤버도 모두 기본값으로 설정합니다.  다음 예제에서는 스칼라 형식에 대한 이 작업을 보여 줍니다.  
   
- [!code-vb[VbVbalrKeywords#7](../../visual-basic/language-reference/codesnippet/visualbasic/nothing_1.vb)]  
+ [!code-vb[VbVbalrKeywords#7](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_1.vb)]  
   
  변수가 참조 형식인 경우 할당 `Nothing` 변수를 설정는 `null` 참조 변수 형식입니다.  설정 되는 변수는 `null` 참조 개체와 관련 된 수 없습니다.  다음 예제에서는 이 작업을 보여 줍니다.  
   
- [!code-vb[VbVbalrKeywords#8](../../visual-basic/language-reference/codesnippet/visualbasic/nothing_2.vb)]  
+ [!code-vb[VbVbalrKeywords#8](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_2.vb)]  
   
  변수는 참조 \(또는 nullable 값 입력 여부\) 확인할 때 `null`를 사용 하지 않는 `= Nothing` 또는 `<> Nothing`.  Always use `Is Nothing` or `IsNot Nothing`.  
   
@@ -48,7 +48,7 @@ caps.handback.revision: 31
   
  다음 예제에서는 `Is` 및 `IsNot` 연산자를 사용하는 비교를 보여 줍니다.  
   
- [!code-vb[VbVbalrKeywords#9](../../visual-basic/language-reference/codesnippet/visualbasic/nothing_3.vb)]  
+ [!code-vb[VbVbalrKeywords#9](../../visual-basic/language-reference/codesnippet/VisualBasic/nothing_3.vb)]  
   
  `As` 절을 사용하지 않고 변수를 선언하고 해당 변수를 `Nothing`으로 설정하면 변수의 형식은 `Object`입니다.  이 예제는 `Dim something = Nothing`입니다.  이 경우 컴파일 타임 오류가 발생 하면 `Option Strict` 설정 되어 및 `Option Infer` 꺼져 있습니다.  
   

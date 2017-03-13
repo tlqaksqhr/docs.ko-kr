@@ -34,8 +34,8 @@ caps.handback.revision: 11
   
 5.  <xref:System.Windows.Forms.Button> 컨트롤을 두 번 클릭하여 코드 편집기를 열고 `SearchButton_Click` 이벤트 처리기에 다음 코드를 추가합니다.  
   
-     [!code-vb[VbPowerPacksDataRepeaterSearch#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/VbPowerPacksDataRepeaterSearch/DataRepeaterSearch.vb#1)]
-     [!code-cs[VbPowerPacksDataRepeaterSearch#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/DataRepeaterSearchCS/DataRepeaterSearch.cs#1)]  
+     [!code-vb[VbPowerPacksDataRepeaterSearch#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-search-data-in-a-datarepeater-control-visual-studio_1.vb)]
+     [!code-cs[VbPowerPacksDataRepeaterSearch#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-search-data-in-a-datarepeater-control-visual-studio_1.cs)]  
   
      *ProductsBindingSource*를 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>에 대한 <xref:System.Windows.Forms.BindingSource> 이름으로 바꾸고 *ProductID*를 검색할 필드 이름으로 바꿉니다.  
   

@@ -24,7 +24,7 @@ caps.handback.revision: 17
  이 예제에서는 공백, 쉼표, 마침표, 콜론 및 탭을 사용하며, 모두 이러한 구분 문자를 포함하는 배열로 <xref:System.String.Split%2A>에 전달됩니다.  대상 문자열 문장의 각 단어는 결과 문자열 배열과 별도로 표시됩니다.  
   
 ## 예제  
- [!code-cs[csProgGuideStrings#16](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#16)]  
+ [!code-cs[csProgGuideStrings#16](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-parse-strings-using-string-split_1.cs)]  
   
 ## 예제  
  기본적으로 String.Split는 두 구분 문자가 대상 문자열에 연속적으로 표시되는 경우 빈 문자열을 반환합니다.  선택적 StringSplitOptions.RemoveEmptyEntries 매개 변수를 전달하여 출력에서 빈 문자열을 모두 제외할 수 있습니다.  

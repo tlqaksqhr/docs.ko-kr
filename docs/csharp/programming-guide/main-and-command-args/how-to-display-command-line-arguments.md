@@ -30,7 +30,7 @@ caps.handback.revision: 19
 ## 예제  
  이 예제에서는 명령줄 응용 프로그램에 전달되는 명령줄 인수를 표시합니다.  위 표의 첫 번째 항목에 대한 출력이 표시됩니다.  
   
- [!code-cs[csProgGuideMain#9](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/how-to-display-command-l_1.cs)]  
+ [!code-cs[csProgGuideMain#9](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/how-to-display-command-line-arguments_1.cs)]  
   
 ## 참고 항목  
  [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   

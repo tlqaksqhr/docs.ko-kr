@@ -41,7 +41,7 @@ caps.handback.revision: 19
   
  `location`이 <xref:System.Windows.Forms.Form>을 상속하는 클래스이면 컴파일러에서 클래스에 `Main` 프로시저가 없는 경우 응용 프로그램을 시작하는 기본 `Main` 프로시저를 제공합니다.  이를 통해 개발 환경에서 작성된 명령줄에서 코드를 컴파일할 수 있습니다.  
   
- [!code-vb[VbVbalrCompiler#16](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/main_1.vb)]  
+ [!code-vb[VbVbalrCompiler#16](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/main_1.vb)]  
   
 ### Visual Studio 통합 개발 환경에서 \/main을 설정하려면  
   

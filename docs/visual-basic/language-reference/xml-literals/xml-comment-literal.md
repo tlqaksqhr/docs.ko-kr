@@ -62,7 +62,7 @@ caps.handback.revision: 19
 ## 예제  
  다음 예제에서는 "This is a comment" 텍스트를 포함하는 XML 주석을 만듭니다.  
   
- [!code-vb[VbXMLSamples#9](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-comment-literal_1.vb)]  
+ [!code-vb[VbXMLSamples#9](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-comment-literal_1.vb)]  
   
 ## 참고 항목  
  <xref:System.Xml.Linq.XComment>   

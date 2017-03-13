@@ -50,9 +50,9 @@ caps.handback.revision: 21
   
  다음 예제는 오버로드 확인 프로세스를 보여 줍니다.  
   
- [!code-vb[VbVbcnProcedures#62](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/overload-resolution_1.vb)]  
+ [!code-vb[VbVbcnProcedures#62](./codesnippet/VisualBasic/overload-resolution_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#63](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/overload-resolution_2.vb)]  
+ [!code-vb[VbVbcnProcedures#63](./codesnippet/VisualBasic/overload-resolution_2.vb)]  
   
  첫 번째 호출에서는 첫 번째 인수\(`Short`\)가 해당 매개 변수의 형식\(`Byte`\)으로 축소되므로 컴파일러에서 첫 번째 오버로드를 제거합니다.  그런 다음 두 번째 오버로드의 각 인수 형식\(`Short`와 `Single`\)이 세 번째 오버로드의 해당 형식\(`Integer`와 `Single`\)으로 확대되므로 세 번째 오버로드를 제거합니다.  두 번째 오버로드는 덜 확대해도 되므로 컴파일러에서 이 오버로드를 호출에 사용합니다.  
   

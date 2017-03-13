@@ -54,7 +54,7 @@ int i = 0;
 ## 예제  
  다음 예제에서는 `new` 연산자를 사용하여 `struct` 개체 및 클래스 개체를 만들어 초기화한 다음 값을 대입합니다.  그러면 기본값과 할당된 값이 표시됩니다.  
   
- [!code-cs[csrefKeywordsOperator#7](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#7)]  
+ [!code-cs[csrefKeywordsOperator#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-operator_1.cs)]  
   
  이 예제에서 문자열의 기본값은 `null`입니다.  따라서 값이 표시되지 않습니다.  
   

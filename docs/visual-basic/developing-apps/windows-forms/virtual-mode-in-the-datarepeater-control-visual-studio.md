@@ -49,33 +49,33 @@ caps.handback.revision: 13
   
 3.  각 컨트롤에 대한 값을 제공하는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValueNeeded> 이벤트에 대한 처리기를 구현합니다.  새 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>이 뷰로 스크롤될 때 이 이벤트가 발생합니다.  코드는 `Employees`라는 데이터 소스에 대한 다음 예제와 유사합니다.  
   
-     [!code-vb[VbPowerPacksDataRepeaterVirtualMode#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/VbPowerPacksDataRepeaterVirtualMode/VbPowerPacksDataRepeaterVirtualMode.vb#1)]
-     [!code-cs[VbPowerPacksDataRepeaterVirtualMode#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/VbPowerPacksDataRepeaterVirtualModeCS/VbPowerPacksDataRepeaterVirtualMode.cs#1)]  
+     [!code-vb[VbPowerPacksDataRepeaterVirtualMode#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_1.vb)]
+     [!code-cs[VbPowerPacksDataRepeaterVirtualMode#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_1.cs)]  
   
 4.  데이터를 저장하는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed> 이벤트 처리기를 구현합니다.  사용자가 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeaterItem>의 자식 컨트롤에 대한 변경 내용을 커밋할 때 이 이벤트가 발생합니다.  코드는 `Employees`라는 데이터 소스에 대한 다음 예제와 유사합니다.  
   
-     [!code-vb[VbPowerPacksDataRepeaterVirtualMode#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/VbPowerPacksDataRepeaterVirtualMode/VbPowerPacksDataRepeaterVirtualMode.vb#2)]
-     [!code-cs[VbPowerPacksDataRepeaterVirtualMode#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/VbPowerPacksDataRepeaterVirtualModeCS/VbPowerPacksDataRepeaterVirtualMode.cs#2)]  
+     [!code-vb[VbPowerPacksDataRepeaterVirtualMode#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_2.vb)]
+     [!code-cs[VbPowerPacksDataRepeaterVirtualMode#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_2.cs)]  
   
 5.  각 자식 컨트롤의 <xref:System.Windows.Forms.Control.KeyDown> 이벤트 처리기를 구현하고 Esc 키를 모니터링합니다.  <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed> 이벤트가 발생하지 않도록 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.CancelEdit%2A> 메서드를 호출합니다.  코드는 다음 예제와 같습니다.  
   
-     [!code-vb[VbPowerPacksDataRepeaterVirtualMode#3](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/VbPowerPacksDataRepeaterVirtualMode/VbPowerPacksDataRepeaterVirtualMode.vb#3)]
-     [!code-cs[VbPowerPacksDataRepeaterVirtualMode#3](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/VbPowerPacksDataRepeaterVirtualModeCS/VbPowerPacksDataRepeaterVirtualMode.cs#3)]  
+     [!code-vb[VbPowerPacksDataRepeaterVirtualMode#3](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_3.vb)]
+     [!code-cs[VbPowerPacksDataRepeaterVirtualMode#3](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_3.cs)]  
   
 6.  <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.NewItemNeeded> 이벤트 처리기를 구현합니다.  사용자가 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 컨트롤에 새 항목을 추가하면 이 이벤트가 발생합니다.  코드는 `Employees`라는 데이터 소스에 대한 다음 예제와 유사합니다.  
   
-     [!code-vb[VbPowerPacksDataRepeaterVirtualMode#4](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/VbPowerPacksDataRepeaterVirtualMode/VbPowerPacksDataRepeaterVirtualMode.vb#4)]
-     [!code-cs[VbPowerPacksDataRepeaterVirtualMode#4](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/VbPowerPacksDataRepeaterVirtualModeCS/VbPowerPacksDataRepeaterVirtualMode.cs#4)]  
+     [!code-vb[VbPowerPacksDataRepeaterVirtualMode#4](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_4.vb)]
+     [!code-cs[VbPowerPacksDataRepeaterVirtualMode#4](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_4.cs)]  
   
 7.  <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemsRemoved> 이벤트 처리기를 구현합니다.  이 이벤트는 사용자가 기존 항목을 삭제할 때 발생합니다.  코드는 `Employees`라는 데이터 소스에 대한 다음 예제와 유사합니다.  
   
-     [!code-vb[VbPowerPacksDataRepeaterVirtualMode#5](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/VbPowerPacksDataRepeaterVirtualMode/VbPowerPacksDataRepeaterVirtualMode.vb#5)]
-     [!code-cs[VbPowerPacksDataRepeaterVirtualMode#5](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/VbPowerPacksDataRepeaterVirtualModeCS/VbPowerPacksDataRepeaterVirtualMode.cs#5)]  
+     [!code-vb[VbPowerPacksDataRepeaterVirtualMode#5](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_5.vb)]
+     [!code-cs[VbPowerPacksDataRepeaterVirtualMode#5](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_5.cs)]  
   
 8.  컨트롤 수준 유효성 검사의 경우 자식 컨트롤의 <xref:System.Windows.Forms.Control.Validating> 이벤트에 대한 처리기를 구현할 수 있습니다.  코드는 다음 예제와 같습니다.  
   
-     [!code-vb[VbPowerPacksDataRepeaterVirtualMode#6](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/VbPowerPacksDataRepeaterVirtualMode/VbPowerPacksDataRepeaterVirtualMode.vb#6)]
-     [!code-cs[VbPowerPacksDataRepeaterVirtualMode#6](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/VbPowerPacksDataRepeaterVirtualModeCS/VbPowerPacksDataRepeaterVirtualMode.cs#6)]  
+     [!code-vb[VbPowerPacksDataRepeaterVirtualMode#6](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/virtual-mode-in-the-datarepeater-control-visual-studio_6.vb)]
+     [!code-cs[VbPowerPacksDataRepeaterVirtualMode#6](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/virtual-mode-in-the-datarepeater-control-visual-studio_6.cs)]  
   
 ## 참고 항목  
  <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemValuePushed>   

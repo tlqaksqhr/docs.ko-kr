@@ -23,7 +23,7 @@ caps.handback.revision: 15
 다음 예제에서는 연산자 오버로드를 사용하여 복잡한 더하기를 정의하는 복잡한 수 클래스 `Complex`를 만드는 방법을 보여 줍니다.  프로그램에서는 `ToString` 메서드를 재정의하여 수의 실제 부분과 가상 부분 및 더하기 결과를 표시합니다.  
   
 ## 예제  
- [!code-cs[csProgGuideStatements#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-use-operator-over_1.cs)]  
+ [!code-cs[csProgGuideStatements#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-operator-overloading-to-create-a-complex-number-class_1.cs)]  
   
 ## 참고 항목  
  [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   

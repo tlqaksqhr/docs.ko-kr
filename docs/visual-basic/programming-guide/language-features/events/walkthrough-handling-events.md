@@ -34,7 +34,7 @@ caps.handback.revision: 18
   
 1.  `Form1`에 다음과 같은 코드를 입력합니다.  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Form1.vb#4)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_1.vb)]  
   
      `WithEvents` 키워드는 변수 `mWidget`을 사용하여 개체의 이벤트를 처리하도록 지정합니다.  개체의 종류를 지정하려면 개체가 만들어지는 클래스의 이름을 제공합니다.  
   
@@ -56,13 +56,13 @@ caps.handback.revision: 18
   
 3.  `mWidget_PercentDone` 이벤트 처리기에 다음 코드를 추가합니다.  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Form1.vb#5)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_2.vb)]  
   
      `PercentDone` 이벤트가 발생할 때마다 이벤트 프로시저는 `Label` 컨트롤에 완료율을 표시합니다.  `DoEvents` 메서드를 사용하면 레이블을 다시 그릴 수 있으며 **Cancel** 단추를 클릭할 수도 있습니다.  
   
 4.  `Button2_Click` 이벤트 처리기에 다음 코드를 추가합니다.  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Form1.vb#6)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_3.vb)]  
   
  `LongTask`가 실행되는 동안 **Cancel** 단추를 클릭하면 `DoEvents` 문을 통해 이벤트가 처리되는 즉시 `Button2_Click` 이벤트가 실행됩니다.  클래스 수준 변수 `mblnCancel`이 `True`로 설정되고 `mWidget_PercentDone` 이벤트에서 해당 변수를 테스트한 다음 `ByRef Cancel` 인수를 `True`로 설정합니다.  
   
@@ -79,7 +79,7 @@ caps.handback.revision: 18
   
 3.  다음 코드를 `Form1_Load` 이벤트 프로시저에 추가하여 `Widget`을 만듭니다.  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Form1.vb#7)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_4.vb)]  
   
  이 코드가 실행되면 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]에서는 `Widget` 개체를 만들고 `mWidget`과 연관된 이벤트 프로시저에 해당 이벤트를 연결합니다.  이 때부터 `Widget`이 해당 `PercentDone` 이벤트를 발생시킬 때마다 `mWidget_PercentDone` 이벤트 프로시저가 실행됩니다.  
   
@@ -87,7 +87,7 @@ caps.handback.revision: 18
   
 -   `Button1_Click` 이벤트 처리기에 다음 코드를 추가합니다.  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Form1.vb#8)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_5.vb)]  
   
  `LongTask` 메서드를 호출하기 전에 완료율을 표시하는 레이블을 초기화해야 하며 해당 메서드를 취소하는 클래스 수준의 `Boolean` 플래그를 `False`로 설정해야 합니다.  
   
@@ -116,7 +116,7 @@ caps.handback.revision: 18
   
 -   `Button1_Click` 프로시저에서 `mWidget.LongTask(12.2, 0.33)` 바로 앞에 다음 코드 줄을 추가합니다.  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#9](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Form1.vb#9)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#9](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_6.vb)]  
   
  해당 단추를 클릭할 때마다 위의 코드에서 새 `Widget`을 만듭니다.  `LongTask` 메서드가 완료되는 즉시 `Widget`에 대한 참조가 해제되고 `Widget`은 소멸됩니다.  
   

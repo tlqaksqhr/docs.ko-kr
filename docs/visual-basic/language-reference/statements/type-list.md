@@ -90,17 +90,17 @@ caps.handback.revision: 33
 ## 예제  
  다음 예제에서는 새 항목을 사전에 추가하는 기본 함수를 비롯하여 제네릭 사전 클래스의 기본 정의를 보여 줍니다.  
   
- [!code-vb[VbVbalrStatements#3](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/type-list_1.vb)]  
+ [!code-vb[VbVbalrStatements#3](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_1.vb)]  
   
 ## 예제  
  `dictionary`가 제네릭이기 때문에 사전을 사용하는 코드는 서로 다른 데이터 형식에 적용되지만 기능이 동일한 다양한 개체를 만들 수 있습니다.  다음 예제에서는 `String` 항목과 `Integer` 키를 사용하여 `dictionary` 개체를 만드는 코드 줄을 보여 줍니다.  
   
- [!code-vb[VbVbalrStatements#4](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/type-list_2.vb)]  
+ [!code-vb[VbVbalrStatements#4](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_2.vb)]  
   
 ## 예제  
  다음 예제에서는 앞의 예제에서 생성한 것과 동일한 기본 정의를 보여 줍니다.  
   
- [!code-vb[VbVbalrStatements#5](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/type-list_3.vb)]  
+ [!code-vb[VbVbalrStatements#5](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/type-list_3.vb)]  
   
 ## 참고 항목  
  [Of](../../../visual-basic/language-reference/statements/of-clause.md)   

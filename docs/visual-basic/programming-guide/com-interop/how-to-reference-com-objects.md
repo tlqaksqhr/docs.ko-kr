@@ -39,7 +39,7 @@ caps.handback.revision: 13
   
 3.  Interop 어셈블리에 대한 액세스를 단순화하려면 COM 개체를 사용할 클래스나 모듈 맨 위에 `Imports` 문을 추가합니다.  예를 들어 다음 코드 예제에서는 `Microsoft InkEdit Control 1.0` 라이브러리에서 참조되는 개체를 위해 `INKEDLib` 네임스페이스를 가져옵니다.  
   
-     [!code-vb[VbVbalrInterop#40](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#40)]  
+     [!code-vb[VbVbalrInterop#40](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/how-to-reference-com-objects_1.vb)]  
   
 ### Tlbimp를 사용하여 interop 어셈블리를 만들려면  
   

@@ -19,7 +19,7 @@ caps.handback.revision: 21
 # 방법: ToString 메서드 재정의(C# 프로그래밍 가이드)
 C\#의 모든 클래스나 구조체는 <xref:System.Object> 클래스를 암시적으로 상속합니다.  따라서 C\#의 모든 개체는 해당 개체에 대한 문자열 표현을 반환하는 <xref:System.Object.ToString%2A> 메서드를 가집니다.  예를 들어, `int` 형식의 모든 변수에는 그 내용을 문자열로 반환하는 데 사용할 수 있는 `ToString` 메서드가 있습니다.  
   
- [!code-cs[csProgGuideInheritance#37](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-override-the-tost_1.cs)]  
+ [!code-cs[csProgGuideInheritance#37](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_1.cs)]  
   
  사용자 지정 클래스나 구조체를 만들 때 클라이언트 코드에 해당 형식에 대한 정보를 제공하려면 <xref:System.Object.ToString%2A> 메서드를 재정의해야 합니다.  
   
@@ -40,11 +40,11 @@ C\#의 모든 클래스나 구조체는 <xref:System.Object> 클래스를 암시
   
      다음 예제에서는 클래스의 이름뿐 아니라 클래스의 특정 인스턴스와 관련된 데이터도 반환합니다.  
   
-     [!code-cs[csProgGuideInheritance#36](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-override-the-tost_2.cs)]  
+     [!code-cs[csProgGuideInheritance#36](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_2.cs)]  
   
      다음 코드 예제와 같이 `ToString` 메서드를 테스트할 수 있습니다.  
   
-     [!code-cs[csProgGuideInheritance#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-override-the-tost_3.cs)]  
+     [!code-cs[csProgGuideInheritance#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_3.cs)]  
   
 ## 참고 항목  
  <xref:System.IFormattable>   

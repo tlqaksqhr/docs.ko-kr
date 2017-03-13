@@ -32,13 +32,13 @@ caps.handback.revision: 21
   
 -   대상 파일과 위치를 지정하여 `CopyFile` 메서드를 사용합니다.  다음 예제에서는 이름이 `test2.txt`인 `test.txt`의 복사본을 만듭니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#51](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-create-a-copy-of-_0_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#51](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-copy-of-a-file-in-the-same-directory_1.vb)]  
   
 ### 같은 폴더에서 파일의 복사본을 만들고 기존 파일을 덮어쓰려면  
   
 -   대상 파일과 위치를 지정하고 `overwrite`를 `True`로 설정하여 `CopyFile` 메서드를 사용합니다.  다음 예제에서는 `test2.txt`라는 `test.txt`의 복사본을 만들고 이 이름과 같은 기존 파일은 모두 덮어씁니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#52](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-create-a-copy-of-_0_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#52](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-copy-of-a-file-in-the-same-directory_2.vb)]  
   
 ## 강력한 프로그래밍  
  다음 조건에서 예외가 throw될 수 있습니다.  

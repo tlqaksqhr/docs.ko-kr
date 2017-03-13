@@ -68,7 +68,7 @@ Mid( _
 ## 예제  
  다음 예제에서는 `Mid` 문을 사용하여 문자열 변수에 있는 지정한 수의 문자를 다른 문자열의 문자로 바꿉니다.  
   
- [!code-vb[VbVbalrStrings#5](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/mid-statement_1.vb)]  
+ [!code-vb[VbVbalrStrings#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/mid-statement_1.vb)]  
   
 ## 요구 사항  
  **네임스페이스:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  

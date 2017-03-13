@@ -27,14 +27,14 @@ caps.handback.revision: 18
   
  다음은 인터페이스 인덱서 접근자의 예제입니다.  
   
- [!code-cs[csProgGuideIndexers#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/indexers-in-interfaces_1.cs)]  
+ [!code-cs[csProgGuideIndexers#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/indexers-in-interfaces_1.cs)]  
   
  인덱서의 시그니처는 같은 인터페이스에 선언된 다른 모든 인덱서의 시그니처와 달라야 합니다.  
   
 ## 예제  
  다음 예제는 인터페이스 인덱서의 구현 방법을 보여 줍니다.  
   
- [!code-cs[csProgGuideIndexers#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/indexers-in-interfaces_2.cs)]  
+ [!code-cs[csProgGuideIndexers#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/indexers-in-interfaces_2.cs)]  
   
  위 예제에서 인터페이스 멤버의 정규화된 이름을 사용하여 명시적 인터페이스 멤버를 구현할 수 있습니다.  예를 들면 다음과 같습니다.  
   

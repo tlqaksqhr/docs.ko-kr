@@ -48,7 +48,7 @@ Take count
 ## 예제  
  다음 코드 예제에서는 `Take` 절을 `Skip` 절과 함께 사용하여 페이지의 쿼리에서 데이터를 반환합니다.  GetCustomers 함수는 `Skip` 절을 사용하여 제공된 시작 인덱스 값까지 목록에서 고객을 건너뛰고 `Take` 절을 사용하여 해당 인덱스 값에서 시작하는 고객의 페이지를 반환합니다.  
   
- [!code-vb[VbSimpleQuerySamples#1](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#1)]  
+ [!code-vb[VbSimpleQuerySamples#1](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/take-clause_1.vb)]  
   
 ## 참고 항목  
  [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   

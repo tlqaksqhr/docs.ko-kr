@@ -68,7 +68,7 @@ result = TypeOf objectexpression IsNot typename
 ## 예제  
  다음 예제에서는 `TypeOf`...`Is` 식을 사용하여 데이터 형식이 다양한 두 개체 참조 변수의 형식 호환성을 테스트합니다.  
   
- [!code-vb[VbVbalrOperators#39](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/typeof-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#39](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/typeof-operator_1.vb)]  
   
  `refInteger` 변수에 `Integer`의 런타임 형식이 있습니다.  이 변수는 `Integer`와 호환되지만 `Double`과는 호환되지 않습니다.  `refForm` 변수에 <xref:System.Windows.Forms.Form>의 런타임 형식이 있습니다.  이 변수는 해당 형식이기 때문에 <xref:System.Windows.Forms.Form>과 호환되고, <xref:System.Windows.Forms.Form>이 <xref:System.Windows.Forms.Control>에서 상속되기 때문에 <xref:System.Windows.Forms.Control>과 호환되며, <xref:System.Windows.Forms.Form>이 <xref:System.ComponentModel.IComponent>를 구현하는 <xref:System.ComponentModel.Component>에서 상속되기 때문에 <xref:System.ComponentModel.IComponent>와 호환됩니다.  그러나 `refForm`은 <xref:System.Windows.Forms.Label>과 호환되지 않습니다.  
   

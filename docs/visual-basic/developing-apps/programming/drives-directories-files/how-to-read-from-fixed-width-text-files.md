@@ -33,24 +33,24 @@ caps.handback.revision: 24
   
 1.  새 `TextFieldParser`를 만듭니다.  다음 코드에서는 `Reader`라는 이름의 `TextFieldParser`를 만들고 `test.log` 파일을 엽니다.  
   
-     [!code-vb[VbFileIORead#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-read-from-fixed-w_1.vb)]  
+     [!code-vb[VbFileIORead#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-fixed-width-text-files_1.vb)]  
   
 2.  `TextFieldType` 속성을 `FixedWidth`로 정의하고 너비와 형식을 지정합니다.  다음 코드에서는 첫 번째 텍스트 열은 5자, 두 번째는 10자, 세 번째는 11자 그리고 네 번째는 가변 너비로 각각 정의합니다.  
   
-     [!code-vb[VbFileIORead#10](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-read-from-fixed-w_2.vb)]  
+     [!code-vb[VbFileIORead#10](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-fixed-width-text-files_2.vb)]  
   
 3.  파일의 필드를 순환하며 검색합니다.  손상된 줄이 있으면 오류가 보고되고 구문 분석은 계속됩니다.  
   
-     [!code-vb[VbFileIORead#11](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-read-from-fixed-w_3.vb)]  
+     [!code-vb[VbFileIORead#11](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-fixed-width-text-files_3.vb)]  
   
 4.  `While` 및 `Using` 블록을 `End While` 및 `End Using`으로 닫습니다.  
   
-     [!code-vb[VbFileIORead#12](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-read-from-fixed-w_4.vb)]  
+     [!code-vb[VbFileIORead#12](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-fixed-width-text-files_4.vb)]  
   
 ## 예제  
  이 예제에서는 `test.log` 파일을 읽습니다.  
   
- [!code-vb[VbFileIORead#13](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-read-from-fixed-w_5.vb)]  
+ [!code-vb[VbFileIORead#13](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-fixed-width-text-files_5.vb)]  
   
 ## 강력한 프로그래밍  
  다음 조건에서 예외가 발생할 수 있습니다.  

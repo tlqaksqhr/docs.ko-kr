@@ -22,7 +22,7 @@ C\# 3.0 이상에서는 속성 접근자에 추가적인 논리가 필요하지 
 ## 예제  
  다음 예제에서는 일부 자동 구현 속성이 있는 간단한 클래스를 보여 줍니다.  
   
- [!code-cs[csProgGuideLINQ#28](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#28)]  
+ [!code-cs[csProgGuideLINQ#28](../../../csharp/programming-guide/arrays/codesnippet/CSharp/auto-implemented-properties_1.cs)]  
   
  C\# 6 이상 버전에서는 필드와 유사하게 자동 구현 속성을 초기화할 수 있습니다.  
   

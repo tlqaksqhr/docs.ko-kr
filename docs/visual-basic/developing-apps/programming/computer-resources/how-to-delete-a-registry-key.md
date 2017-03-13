@@ -36,7 +36,7 @@ caps.handback.revision: 28
   
 -   `DeleteSubKey` 메서드를 사용하여 레지스트리 키를 삭제합니다.  이 예제에서는 CurrentUser 하이브의 Software\/TestApp 키를 삭제합니다.  코드의 이 키를 적절한 문자열로 변경하거나 사용자가 지정한 정보에 맞게 변경할 수 있습니다.  
   
-     [!code-vb[VbResourceTasks#19](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-delete-a-registry_1.vb)]  
+     [!code-vb[VbResourceTasks#19](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-delete-a-registry-key_1.vb)]  
   
 ## 강력한 프로그래밍  
  `DeleteSubKey` 메서드는 키\/값 쌍이 없을 경우 빈 문자열을 반환합니다.  

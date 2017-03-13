@@ -35,7 +35,7 @@ XML 리터럴을 포함 식과 결합하여 런타임에 생성된 내용을 포
   
 -   다음 예제에서는 `contactName` 변수에 포함된 텍스트를 여는 이름 요소와 닫는 이름 요소 사이에 삽입하는 방법을 보여 줍니다.  
   
-     [!code-vb[VbXMLSamples#39](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-embed-expressions_1.vb)]  
+     [!code-vb[VbXMLSamples#39](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_1.vb)]  
   
      이 예제의 결과는 다음과 같습니다.  
   
@@ -49,7 +49,7 @@ XML 리터럴을 포함 식과 결합하여 런타임에 생성된 내용을 포
   
 -   다음 예제에서는 `phoneType` 변수에 포함된 텍스트를 `type` 특성의 값으로 삽입하는 방법을 보여 줍니다.  
   
-     [!code-vb[VbXMLSamples#40](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-embed-expressions_2.vb)]  
+     [!code-vb[VbXMLSamples#40](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_2.vb)]  
   
      이 예제의 결과는 다음과 같습니다.  
   
@@ -65,7 +65,7 @@ XML 리터럴을 포함 식과 결합하여 런타임에 생성된 내용을 포
   
      이 방법을 사용하여 요소를 만들 때 해당 요소를 \<\/\> 태그로 닫아야 합니다.  
   
-     [!code-vb[VbXMLSamples#41](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-embed-expressions_3.vb)]  
+     [!code-vb[VbXMLSamples#41](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_3.vb)]  
   
      이 예제의 결과는 다음과 같습니다.  
   

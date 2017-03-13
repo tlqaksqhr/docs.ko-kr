@@ -27,7 +27,7 @@ caps.handback.revision: 12
 ## Visual Basic 언어 및 .NET Framework  
  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 메서드는 해당 언어의 고유 함수로 사용되며  코드에서 한정자 없이 사용될 수 있습니다.  다음 예제에서는 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 문자열 조작 명령의 일반적인 사용 예를 보여 줍니다.  
   
- [!code-vb[VbVbalrStrings#44](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/types-of-string-manipula_1.vb)]  
+ [!code-vb[VbVbalrStrings#44](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/types-of-string-manipulation-methods_1.vb)]  
   
  위의 예제에서 `Mid` 함수는 `aString`에 대해 직접 연산을 수행하여 값을 `bString`에 할당합니다.  
   
@@ -39,14 +39,14 @@ caps.handback.revision: 12
 #### 공유 메서드  
  공유 메서드는 `String` 클래스 자체에서 생기고 클래스의 인스턴스로 작업할 필요가 없는 메서드입니다.  이 메서드는 `String` 클래스의 인스턴스 대신 클래스\(`String`\)의 이름을 사용하여 한정할 수 있습니다.  예를 들면 다음과 같습니다.  
   
- [!code-vb[VbVbalrStrings#45](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/types-of-string-manipula_2.vb)]  
+ [!code-vb[VbVbalrStrings#45](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/types-of-string-manipulation-methods_2.vb)]  
   
  앞의 예제에서는 <xref:System.String.Copy%2A?displayProperty=fullName> 메서드는 정적 메서드이며 할당된 식에 사용되고 결과 값을 `bString`에 할당합니다.  
   
 #### 인스턴스 메서드  
  이와 반대로 인스턴스 메서드는 `String`의 특정 인스턴스에서 생기고 인스턴스 이름을 사용하여 한정해야 합니다.  예를 들면 다음과 같습니다.  
   
- [!code-vb[VbVbalrStrings#46](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/types-of-string-manipula_3.vb)]  
+ [!code-vb[VbVbalrStrings#46](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/types-of-string-manipulation-methods_3.vb)]  
   
  위의 예제에서 <xref:System.String.Substring%2A?displayProperty=fullName> 메서드는 `String` 인스턴스\(`aString`\)의 메서드이며  `aString`에 대해 연산을 수행하여 해당 값을 `bString`에 할당합니다.  
   

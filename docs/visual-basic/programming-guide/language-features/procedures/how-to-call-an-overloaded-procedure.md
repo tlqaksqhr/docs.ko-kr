@@ -37,9 +37,9 @@ caps.handback.revision: 12
   
      다음 예제에서는 [How to: Define Multiple Versions of a Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-define-multiple-versions-of-a-procedure.md)에 선언된 `post` 프로시저를 호출합니다.  고객 식별 정보를 받아 해당 데이터가 `String`인지 아니면 `Integer`인지 확인한 다음 어느 경우이든 모두 같은 프로시저를 호출합니다.  
   
-     [!code-vb[VbVbcnProcedures#56](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-an-overloade_1.vb)]  
+     [!code-vb[VbVbcnProcedures#56](./codesnippet/VisualBasic/how-to-call-an-overloaded-procedure_1.vb)]  
   
-     [!code-vb[VbVbcnProcedures#57](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-an-overloade_2.vb)]  
+     [!code-vb[VbVbcnProcedures#57](./codesnippet/VisualBasic/how-to-call-an-overloaded-procedure_2.vb)]  
   
 ## 참고 항목  
  [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

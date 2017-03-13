@@ -33,7 +33,7 @@ caps.handback.revision: 15
 ## 예제  
  다음 코드에서는 `sourcePath`에서 지정하는 디렉터리를 `destinationPath`에서 지정하는 디렉터리로 복사합니다.  이 코드에서는 또한 작업이 끝날 때까지 남은 추정 시간을 보여 주는 표준 대화 상자도 제공합니다.  
   
- [!code-cs[csFilesandFolders#11](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#11)]  
+ [!code-cs[csFilesandFolders#11](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-provide-a-progress-dialog-box-for-file-operations_1.cs)]  
   
 ## 참고 항목  
  [파일 시스템 및 레지스트리](../../../csharp/programming-guide/file-system/file-system-and-the-registry.md)

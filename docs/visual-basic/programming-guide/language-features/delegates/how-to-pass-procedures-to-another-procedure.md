@@ -32,25 +32,25 @@ caps.handback.revision: 9
   
 1.  `MathOperator`라는 대리자를 만듭니다.  
   
-     [!code-vb[VbVbalrDelegates#1](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-pass-procedures-t_1.vb)]  
+     [!code-vb[VbVbalrDelegates#1](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_1.vb)]  
   
 2.  시그니처가 일치하도록 매개 변수 및 반환 값이 `MathOperator`와 일치하는 `AddNumbers`라는 프로시저를 만듭니다.  
   
-     [!code-vb[VbVbalrDelegates#2](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-pass-procedures-t_2.vb)]  
+     [!code-vb[VbVbalrDelegates#2](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_2.vb)]  
   
 3.  `MathOperator`와 시그니처가 일치하는 `SubtractNumbers`라는 프로시저를 만듭니다.  
   
-     [!code-vb[VbVbalrDelegates#3](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-pass-procedures-t_3.vb)]  
+     [!code-vb[VbVbalrDelegates#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_3.vb)]  
   
 4.  대리자를 매개 변수로 사용하는 `DelegateTest`라는 프로시저를 만듭니다.  
   
      이 프로시저에서는 `AddNumbers` 또는 `SubtractNumbers`에 대한 참조를 사용할 수 있습니다. 이는 두 프로시저의 시그니처가 `MathOperator` 시그니처와 일치하기 때문입니다.  
   
-     [!code-vb[VbVbalrDelegates#4](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-pass-procedures-t_4.vb)]  
+     [!code-vb[VbVbalrDelegates#4](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_4.vb)]  
   
 5.  한 번은 `AddNumbers`에 대한 대리자를 매개 변수로 사용하고 또 한 번은 `SubtractNumbers`에 대한 대리자를 매개 변수로 사용하여 `DelegateTest`를 호출하는 `Test`라는 프로시저를 만듭니다.  
   
-     [!code-vb[VbVbalrDelegates#5](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-pass-procedures-t_5.vb)]  
+     [!code-vb[VbVbalrDelegates#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_5.vb)]  
   
      `Test`를 호출하면 먼저 `5`와 `3`에 대해 `AddNumbers`를 실행한 결과인 8이 표시되고,  그런 다음 `9`와 `3`에 대해 `SubtractNumbers`를 실행한 결과인 6이 표시됩니다.  
   

@@ -91,7 +91,7 @@ End Event
 ## 설명  
  이벤트가 선언된 다음 `RaiseEvent` 문을 사용하여 이벤트를 발생시킵니다.  일반적인 이벤트는 다음 코드 조각에 표시된 대로 선언하고 발생시킬 수 있습니다.  
   
- [!code-vb[VbVbalrEvents#13](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#13)]  
+ [!code-vb[VbVbalrEvents#13](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_1.vb)]  
   
 > [!NOTE]
 >  프로시저의 인수를 선언할 때처럼 이벤트 인수를 선언할 수 있습니다. 단, 이벤트에 명령된 인수, `ParamArray` 인수 또는 `Optional` 인수가 없는 경우는 예외입니다.  이벤트에는 반환 값이 없습니다.  
@@ -115,11 +115,11 @@ End Event
   
  `Form1` 클래스의 선언 섹션에 `WithEvents` 변수를 추가합니다.  
   
- [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#14)]  
+ [!code-vb[VbVbalrEvents#14](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_2.vb)]  
   
  `Form1`에 대한 코드에 다음 코드를 추가합니다.  `Form_Load` 또는 `Button_Click`과 같이 있을 수 있는 모든 중복 프로시저를 대체합니다.  
   
- [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#15)]  
+ [!code-vb[VbVbalrEvents#15](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/event-statement_3.vb)]  
   
  F5 키를 눌러 이전 예제를 실행하고 **시작**이라는 단추를 클릭합니다.  첫 번째 텍스트 상자에서 초를 카운트 다운하기 시작합니다.  전체 시간\(10초\)이 경과되면 첫 번째 텍스트 상자에 "Done"이 표시됩니다.  
   

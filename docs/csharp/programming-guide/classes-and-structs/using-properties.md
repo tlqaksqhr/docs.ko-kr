@@ -26,7 +26,7 @@ caps.handback.revision: 24
   
  클래스 블록에서 필드의 액세스 수준을 지정하고 속성의 형식, 속성의 이름을 차례로 지정한 다음 `get` 접근자 및\/또는 `set` 접근자를 선언하는 코드 블록을 추가하여 속성을 선언할 수 있습니다.  예를 들면 다음과 같습니다.  
   
- [!code-cs[csProgGuideProperties#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_1.cs)]  
+ [!code-cs[csProgGuideProperties#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_1.cs)]  
   
  이 예제에서 `Month`는 속성으로 선언되며 `set` 접근자는 `Month` 값이 1에서 12 사이의 숫자로 설정되는지 확인할 수 있습니다.  `Month` 속성은 실제 값을 추적하기 위해 전용 필드를 사용합니다.  속성 데이터의 실제 위치를 일반적으로 속성의 "지원 저장소"라고 합니다. 속성의 지원 저장소로는 대개 전용 필드가 사용됩니다.  이 필드는 속성을 호출한 경우에만 변경할 수 있도록 전용으로 표시됩니다.  공용 및 전용 액세스 제한 사항에 대한 자세한 내용은 [액세스 한정자](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)를 참조하십시오.  
   
@@ -35,32 +35,32 @@ caps.handback.revision: 24
 ## get 접근자  
  `get` 접근자의 본문은 메서드의 본문과 비슷하며  속성 형식의 값을 반환해야 합니다.  `get` 접근자를 실행하는 것은 필드 값을 읽는 것과 같습니다.  예를 들어, 최적화 기능을 활성화한 상태로 `get` 접근자에서 private 변수를 반환하는 경우 메서드 호출 오버헤드가 발생하지 않도록 `get` 접근자 메서드에 대한 호출이 컴파일러에서 인라인됩니다.  그러나 가상 `get` 접근자 메서드는 인라인될 수 없습니다. 런타임에 실제로 호출할 수 있는 메서드에 대한 정보가 컴파일 단계에서 컴파일러에 제공되지 않기 때문입니다.  다음은 전용 필드인 `name`의 값을 반환하는 `get` 접근자입니다.  
   
- [!code-cs[csProgGuideProperties#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_2.cs)]  
+ [!code-cs[csProgGuideProperties#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_2.cs)]  
   
  할당 대상인 경우를 제외하고 속성을 참조하면 속성 값을 읽기 위해 `get` 접근자가 호출됩니다.  예를 들면 다음과 같습니다.  
   
- [!code-cs[csProgGuideProperties#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_3.cs)]  
+ [!code-cs[csProgGuideProperties#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_3.cs)]  
   
  `get` 접근자는 [return](../../../csharp/language-reference/keywords/return.md) 또는 [throw](../../../csharp/language-reference/keywords/throw.md) 문으로 끝나야 합니다. 제어는 접근자 본문에서 끝날 수 없습니다.  
   
  `get` 접근자를 사용하여 개체의 상태를 변경하는 것은 잘못된 프로그래밍 습관입니다.  예를 들어, 다음 접근자에서는 `number` 필드에 액세스할 때마다 개체의 상태가 바뀌는 의도하지 않은 동작이 발생합니다.  
   
- [!code-cs[csProgGuideProperties#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_4.cs)]  
+ [!code-cs[csProgGuideProperties#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_4.cs)]  
   
  `get` 접근자는 필드 값을 반환하거나 필드 값을 계산하여 그 결과를 반환하는 데 사용됩니다.  예를 들면 다음과 같습니다.  
   
- [!code-cs[csProgGuideProperties#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_5.cs)]  
+ [!code-cs[csProgGuideProperties#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_5.cs)]  
   
  위 코드 세그먼트에서 `Name` 속성에 값을 할당하지 않으면 NA 값이 반환됩니다.  
   
 ## set 접근자  
  `set` 접근자는 반환 형식이 [void](../../../csharp/language-reference/keywords/void.md)인 메서드와 비슷합니다.  이 접근자는 해당 형식이 속성의 형식과 같은 `value`라는 암시적 매개 변수를 사용합니다.  다음 예제에서는 `Name` 속성에 `set` 접근자를 추가합니다.  
   
- [!code-cs[csProgGuideProperties#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_6.cs)]  
+ [!code-cs[csProgGuideProperties#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_6.cs)]  
   
  속성에 값을 할당하면 새 값을 제공하는 인수를 사용하여 `set` 접근자가 호출됩니다.  예를 들면 다음과 같습니다.  
   
- [!code-cs[csProgGuideProperties#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_7.cs)]  
+ [!code-cs[csProgGuideProperties#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_7.cs)]  
   
  `set` 접근자의 지역 변수 선언에서 암시적 매개 변수 이름\(`value`\)을 사용하면 오류가 발생합니다.  
   
@@ -79,29 +79,29 @@ caps.handback.revision: 24
 ## 예제  
  다음 예제에서는 인스턴스, 정적 및 읽기 전용 속성을 보여 줍니다.  키보드에서 직원 이름을 입력 받고, `NumberOfEmployees` 변수의 값을 1만큼 증가시킨 다음 직원 이름과 번호를 표시합니다.  
   
- [!code-cs[csProgGuideProperties#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_8.cs)]  
+ [!code-cs[csProgGuideProperties#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_8.cs)]  
   
 ## 예제  
  다음 예제에서는 파생 클래스에 기본 클래스의 속성과 동일한 이름의 속성이 있어서 숨겨진 기본 클래스의 속성에 액세스하는 방법을 보여 줍니다.  
   
- [!code-cs[csProgGuideProperties#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_9.cs)]  
+ [!code-cs[csProgGuideProperties#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_9.cs)]  
   
  위 예제의 주요 사항은 다음과 같습니다.  
   
 -   파생 클래스의 `Name` 속성은 기본 클래스의 `Name` 속성을 숨깁니다.  이 경우 다음과 같이 `new` 한정자가 파생 클래스의 속성 선언에 사용됩니다.  
   
-     [!code-cs[csProgGuideProperties#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_10.cs)]  
+     [!code-cs[csProgGuideProperties#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_10.cs)]  
   
 -   `(Employee)` 캐스팅은 기본 클래스의 숨겨진 속성에 액세스하는 데 사용됩니다.  
   
-     [!code-cs[csProgGuideProperties#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_11.cs)]  
+     [!code-cs[csProgGuideProperties#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_11.cs)]  
   
      멤버 숨기기에 대한 자세한 내용은 [new 한정자](../../../csharp/language-reference/keywords/new-modifier.md)를 참조하십시오.  
   
 ## 예제  
  다음 예제의 `Cube` 클래스와 `Square`는 `Shape` 추상 클래스를 구현하고 `Area` 추상 속성을 재정의합니다.  속성에서 [override](../../../csharp/language-reference/keywords/override.md) 한정자를 사용한 방법에 주의하십시오.  프로그램에서는 측면 길이 값을 입력 받아 정사각형과 입방체의 면적을 계산합니다.  또한 면적을 입력 받아 그에 대응하는 정사각형과 입방체의 측면 길이 값을 계산합니다.  
   
- [!code-cs[csProgGuideProperties#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-properties_12.cs)]  
+ [!code-cs[csProgGuideProperties#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_12.cs)]  
   
 ## 참고 항목  
  [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   

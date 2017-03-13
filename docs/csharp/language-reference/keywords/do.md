@@ -24,7 +24,7 @@ caps.handback.revision: 22
 ## 예제  
  다음 예제의 `do-while` 루프 문은 `x` 변수가 5보다 작은 동안에만 실행합니다.  
   
- [!code-cs[csrefKeywordsIteration#1](../../../csharp/language-reference/keywords/codesnippet/csharp/do_1.cs)]  
+ [!code-cs[csrefKeywordsIteration#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/do_1.cs)]  
   
  `do-while` 루프는 [while](../../../csharp/language-reference/keywords/while.md) 문과 달리 조건식이 계산되기 전에 한 번 실행됩니다.  
   

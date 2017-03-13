@@ -32,14 +32,14 @@ caps.handback.revision: 16
 ## LINQ 쿼리의 IEnumerable\<T\> 변수  
  [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 쿼리 변수는 <xref:System.Collections.Generic.IEnumerable%601> 형식으로 지정되거나 <xref:System.Linq.IQueryable%601>과 같은 파생 형식입니다.  형식이 `IEnumerable<Customer>`로 지정된 쿼리 변수가 표시되는 경우 해당 쿼리가 실행될 때 0개 이상의 `Customer` 개체 시퀀스를 생성한다는 것을 의미할 뿐입니다.  
   
- [!code-cs[csLINQGettingStarted#34](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#34)]  
+ [!code-cs[csLINQGettingStarted#34](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/linq-and-generic-types_1.cs)]  
   
  자세한 내용은 [Type Relationships in LINQ Query Operations](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)를 참조하십시오.  
   
 ## 컴파일러에서 제네릭 형식 선언 처리  
  원하는 경우 [var](../../../../csharp/language-reference/keywords/var.md) 키워드를 사용하여 제네릭 구문을 피할 수 있습니다.  `var` 키워드는 `from` 절에 지정된 데이터 소스를 검사하여 쿼리 변수의 형식을 추론하도록 컴파일러에 지시합니다.  다음 예제에서는 이전 예제와 동일하게 컴파일된 코드를 생성합니다.  
   
- [!code-cs[csLINQGettingStarted#35](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#35)]  
+ [!code-cs[csLINQGettingStarted#35](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/linq-and-generic-types_2.cs)]  
   
  변수 형식이 확실하거나 그룹 쿼리에 의해 생성되는 경우처럼 중첩된 제네릭 형식을 명시적으로 지정하는 것이 중요하지 않은 경우 `var` 키워드가 유용합니다.  일반적으로 `var`을 사용하면 다른 사용자가 코드를 읽기가 더 복잡해집니다.  자세한 내용은 [암시적으로 형식화한 지역 변수](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)를 참조하십시오.  
   

@@ -97,7 +97,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) 
 ## 예제  
  다음 예제에서는 클래스 `sampleClass`의 정의를 두 개의 선언으로 분할합니다\(여기서 각 선언은 서로 다른 `Sub` 프로시저를 정의함\).  
   
- [!code-vb[VbVbalrKeywords#3](../../../visual-basic/language-reference/codesnippet/visualbasic/partial_1.vb)]  
+ [!code-vb[VbVbalrKeywords#3](../../../visual-basic/language-reference/codesnippet/VisualBasic/partial_1.vb)]  
   
  앞의 예제에서 두 개의 부분 정의는 동일한 소스 파일에 있거나 두 개의 서로 다른 소스 파일에 있을 수 있습니다.  
   

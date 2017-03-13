@@ -53,8 +53,8 @@ caps.handback.revision: 9
   
 12. `BindingNavigatorDeleteItem_EnabledChanged` 이벤트 처리기에 다음 코드를 추가합니다.  
   
-     [!code-cs[VbPowerPacksDataRepeaterDisableAddDelete#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/DisableAddDeleteCS/DisableAddDelete.cs#1)]
-     [!code-vb[VbPowerPacksDataRepeaterDisableAddDelete#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/vbpowerpacksdatarepeaterdisableadddelete/form1.vb#1)]  
+     [!code-cs[VbPowerPacksDataRepeaterDisableAddDelete#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio_1.cs)]
+     [!code-vb[VbPowerPacksDataRepeaterDisableAddDelete#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio_1.vb)]  
   
     > [!NOTE]
     >  <xref:System.Windows.Forms.BindingSource>로 인해 현재 레코드가 변경될 때마다 **DeleteItem** 단추가 활성화되므로 이 단계를 수행해야 합니다.  
@@ -65,13 +65,13 @@ caps.handback.revision: 9
   
 2.  `Form_Load` 이벤트에 다음 코드를 추가합니다.  
   
-     [!code-cs[VbPowerPacksDataRepeaterDisableAddDelete#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/DisableAddDeleteCS/DisableAddDelete.cs#2)]
-     [!code-vb[VbPowerPacksDataRepeaterDisableAddDelete#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/vbpowerpacksdatarepeaterdisableadddelete/form1.vb#2)]  
+     [!code-cs[VbPowerPacksDataRepeaterDisableAddDelete#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio_2.cs)]
+     [!code-vb[VbPowerPacksDataRepeaterDisableAddDelete#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio_2.vb)]  
   
 3.  `BindingNavigatorDeleteItem_EnabledChanged` 이벤트 처리기에 다음 코드를 추가합니다.  
   
-     [!code-cs[VbPowerPacksDataRepeaterDisableAddDelete#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/DisableAddDeleteCS/DisableAddDelete.cs#1)]
-     [!code-vb[VbPowerPacksDataRepeaterDisableAddDelete#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/vbpowerpacksdatarepeaterdisableadddelete/form1.vb#1)]  
+     [!code-cs[VbPowerPacksDataRepeaterDisableAddDelete#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio_1.cs)]
+     [!code-vb[VbPowerPacksDataRepeaterDisableAddDelete#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio_1.vb)]  
   
     > [!NOTE]
     >  <xref:System.Windows.Forms.BindingSource>로 인해 현재 레코드가 변경될 때마다 **DeleteItem** 단추가 활성화되므로 이 단계를 수행해야 합니다.  

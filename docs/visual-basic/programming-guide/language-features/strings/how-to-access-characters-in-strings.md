@@ -27,7 +27,7 @@ caps.handback.revision: 8
 ## 예제  
  문자열 내의 문자 관련 데이터 및 문자열 내에서 해당 문자의 위치를 알고 있으면 유용할 때가 있습니다.  문자열은 문자의 배열\(`Char` 인스턴스\)로 간주할 수 있으며 <xref:System.String.Chars%2A> 속성을 사용하여 해당 문자의 인덱스를 참조하면 특정 문자를 검색할 수 있습니다.  
   
- [!code-vb[VbVbalrStrings#49](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-access-characters_1.vb)]  
+ [!code-vb[VbVbalrStrings#49](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-access-characters-in-strings_1.vb)]  
   
  <xref:System.String.Chars%2A> 속성의 `index` 매개 변수는 0에서 시작합니다.  
   

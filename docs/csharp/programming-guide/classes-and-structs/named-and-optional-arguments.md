@@ -55,7 +55,7 @@ caps.handback.revision: 43
 ## 예제  
  다음 코드에는 이 단원의 예제가 구현되어 있습니다.  
   
- [!code-cs[csProgGuideNamedAndOptional#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/program.cs#1)]  
+ [!code-cs[csProgGuideNamedAndOptional#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_1.cs)]  
   
 ## 선택적 인수  
  메서드, 생성자, 인덱서 또는 대리자의 정의에서 해당 매개 변수가 필수적인지 선택적인지 지정할 수 있습니다.  호출할 경우 모든 필수적 매개 변수에 대한 인수는 항상 제공해야 하지만 선택적 매개 변수에 대한 인수는 생략할 수 있습니다.  
@@ -70,7 +70,7 @@ caps.handback.revision: 43
   
  선택적 매개 변수는 매개 변수 목록의 끝에, 즉 모든 필수적 매개 변수 뒤에 정의됩니다.  호출자가 첫 번째 선택적 매개 변수 뒤에 있는 선택적 매개 변수에 대해 인수를 제공한 경우 이 매개 변수 앞에 있는 모든 선택적 매개 변수에 대해서도 인수를 제공해야 합니다.  인수 목록에서 쉼표와 쉼표 사이에 공백만 남겨 두는 방법은 지원되지 않습니다.  예를 들어, 다음 코드에서 `ExampleMethod` 인스턴스 메서드는 필수 매개 변수 1개와 선택적 매개 변수 2개를 갖도록 정의됩니다.  
   
- [!code-cs[csProgGuideNamedAndOptional#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/optional.cs#15)]  
+ [!code-cs[csProgGuideNamedAndOptional#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_2.cs)]  
   
  `ExampleMethod`에 대한 다음 코드에서는 두 번째 매개 변수가 아니라 세 번째 매개 변수에 인수가 제공되기 때문에 컴파일러 오류가 발생합니다.  
   
@@ -91,7 +91,7 @@ ExampleMethod의 선택적 매개 변수
 ## 예제  
  다음 예제에서 `ExampleClass`의 생성자에는 하나의 매개 변수가 있고 이 매개 변수는 선택적입니다.  인스턴스 메서드 `ExampleMethod`에는 필수적 매개 변수로 `required` 하나가 있고, 선택적 매개 변수로 `optionalstr` 및 `optionalint` 두 개가 있습니다.  `Main`의 코드에서는 생성자 및 메서드를 호출할 수 있는 여러 방법을 보여 줍니다.  
   
- [!code-cs[csProgGuideNamedAndOptional#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/optional.cs#2)]  
+ [!code-cs[csProgGuideNamedAndOptional#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_3.cs)]  
   
 ## COM 인터페이스  
  명명된 인수 및 선택적 인수 외에 동적 개체에 대한 지원 및 기타 개선 기능을 사용하면 Office Automation API 같은 COM API와의 상호 운용성이 대폭 향상됩니다.  
@@ -103,11 +103,11 @@ AutoFormat 매개 변수
   
  C\# 3.0 및 이전 버전에서 인수는 다음 예제와 같이 각 매개 변수에 대해 필요합니다.  
   
- [!code-cs[csProgGuideNamedAndOptional#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/namedandoptcom.cs#3)]  
+ [!code-cs[csProgGuideNamedAndOptional#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_4.cs)]  
   
  그러나 C\# 4.0에 도입된 명명된 인수 및 선택적 인수를 사용하면 `AutoFormat` 호출을 대폭 단순화할 수 있습니다.  명명된 인수 및 선택적 인수를 사용할 경우 기본값을 변경하지 않을 선택적 매개 변수에 대해서는 인수를 생략할 수 있습니다.  다음 호출에서는 매개 변수 7개 중 하나에 대해서만 값이 지정됩니다.  
   
- [!code-cs[csProgGuideNamedAndOptional#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/namedandoptcom.cs#13)]  
+ [!code-cs[csProgGuideNamedAndOptional#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_5.cs)]  
   
  자세한 내용 및 예제를 보려면 [방법: Office 프로그래밍에 명명된 인수와 선택적 인수 사용](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md) 및 [방법: Visual C\# 기능을 사용하여 Office Interop 개체에 액세스](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)를 참조하십시오.  
   

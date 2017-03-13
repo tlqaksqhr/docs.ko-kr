@@ -29,7 +29,7 @@ caps.handback.revision: 9
 ## 예제  
  다음 예제에서는 <xref:System.Text.Encoding.Unicode%2A?displayProperty=fullName> 인코딩 클래스의 <xref:System.Text.Encoding.GetString%2A> 메서드를 사용하여 바이트 배열의 모든 바이트를 문자열로 변환합니다.  
   
- [!code-vb[VbVbalrStrings#72](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-convert-an-array-_1.vb)]  
+ [!code-vb[VbVbalrStrings#72](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-an-array-of-bytes-into-a-string_1.vb)]  
   
  다음과 같은 몇 가지 인코딩 옵션을 사용하여 바이트 배열을 문자열로 변환할 수 있습니다.  
   

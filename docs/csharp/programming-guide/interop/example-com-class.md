@@ -38,7 +38,7 @@ caps.handback.revision: 17
  클래스는 클래스 인터페이스를 구현합니다. 클래스는 여러 인터페이스를 구현할 수 있지만 구현된 첫 번째 인터페이스가 기본 클래스 인터페이스가 됩니다.  여기에서 COM에 노출되는 메서드 및 속성을 구현합니다.  이 메서드와 속성은 public으로 표시되어야 하며 클래스 인터페이스에 있는 선언과 일치해야 합니다.  여기에서는 클래스에 의해 발생되는 이벤트도 선언합니다.  이 메서드와 속성은 public으로 표시되어야 하며 이벤트 인터페이스에 있는 선언과 일치해야 합니다.  
   
 ## 예제  
- [!code-cs[csProgGuideInterop#8](../../../csharp/programming-guide/interop/codesnippet/csharp/example-com-class_1.cs)]  
+ [!code-cs[csProgGuideInterop#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/example-com-class_1.cs)]  
   
 ## 참고 항목  
  [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   

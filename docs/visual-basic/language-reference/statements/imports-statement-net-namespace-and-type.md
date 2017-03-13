@@ -84,28 +84,28 @@ Imports [ aliasname = ] namespace.element
   
  이 코드는 파일 맨 위에 `Imports` 문이 없습니다.  따라서 `DirectoryInfo`, <xref:System.Text.StringBuilder> 및 <xref:Microsoft.VisualBasic.ControlChars.CrLf> 참조는 네임스페이스를 사용하여 정규화되었습니다.  
   
- [!code-vb[VbVbalrStatements#152](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/imports-statement-net-na_1.vb)]  
+ [!code-vb[VbVbalrStatements#152](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_1.vb)]  
   
 ## 예제  
  다음 예제에는 참조된 네임스페이스에 대한 `Imports` 문이 포함되어 있습니다.  따라서 형식은 네임스페이스를 사용하여 정규화하지 않아도 됩니다.  
   
- [!code-vb[VbVbalrStatements#153](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/imports-statement-net-na_2.vb)]  
+ [!code-vb[VbVbalrStatements#153](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_2.vb)]  
   
- [!code-vb[VbVbalrStatements#154](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/imports-statement-net-na_3.vb)]  
+ [!code-vb[VbVbalrStatements#154](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_3.vb)]  
   
 ## 예제  
  다음 예제에는 참조된 네임스페이스에 대한 별칭을 생성하는 `Imports` 문이 포함되어 있습니다.  형식이 별칭으로 정규화되었습니다.  
   
- [!code-vb[VbVbalrStatements#155](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/imports-statement-net-na_4.vb)]  
+ [!code-vb[VbVbalrStatements#155](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_4.vb)]  
   
- [!code-vb[VbVbalrStatements#156](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/imports-statement-net-na_5.vb)]  
+ [!code-vb[VbVbalrStatements#156](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_5.vb)]  
   
 ## 예제  
  다음 예제에는 참조된 형식에 대한 별칭을 만드는 `Imports` 문이 포함되어 있습니다.  형식을 지정하는 데 별칭이 사용되었습니다.  
   
- [!code-vb[VbVbalrStatements#157](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/imports-statement-net-na_6.vb)]  
+ [!code-vb[VbVbalrStatements#157](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_6.vb)]  
   
- [!code-vb[VbVbalrStatements#158](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/imports-statement-net-na_7.vb)]  
+ [!code-vb[VbVbalrStatements#158](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/imports-statement-net-namespace-and-type_7.vb)]  
   
 ## 참고 항목  
  [Namespace Statement](../../../visual-basic/language-reference/statements/namespace-statement.md)   

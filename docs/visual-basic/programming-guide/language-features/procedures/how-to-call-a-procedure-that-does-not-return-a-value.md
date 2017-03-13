@@ -35,7 +35,7 @@ caps.handback.revision: 17
   
      다음 예제에서는 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> 함수를 호출하여 응용 프로그램 창을 활성화합니다.  <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>는 창 제목을 단독 인수로 사용합니다.  그리고 호출 코드에 값을 반환하지 않습니다.  메모장 프로세스를 실행하고 있지 않을 경우 이 예제는 <xref:System.ArgumentException>을 throw합니다.  `Shell` 프로시저에서는 응용 프로그램이 지정된 경로에 있는 것으로 간주합니다.  
   
-     [!code-vb[VbVbalrCatRef#11](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-a-procedure-_1_1.vb)]  
+     [!code-vb[VbVbalrCatRef#11](./codesnippet/VisualBasic/how-to-call-a-procedure-that-does-not-return-a-value_1.vb)]  
   
 ## 참고 항목  
  <xref:Microsoft.VisualBasic.Interaction.Shell%2A>   

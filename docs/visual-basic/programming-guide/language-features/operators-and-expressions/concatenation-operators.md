@@ -32,7 +32,7 @@ caps.handback.revision: 17
   
  이러한 연산자는 다음 예제에 나와 있는 것처럼 `String` 변수도 연결할 수 있습니다.  
   
- [!code-vb[VbVbalrOperators#76](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/concatenation-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#76](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/concatenation-operators_1.vb)]  
   
 ## 두 연결 연산자의 차이점  
  [\+ Operator](../../../../visual-basic/language-reference/operators/addition-operator.md)는 기본적으로 두 숫자를 더하는 데 사용됩니다.  그러나 숫자 피연산자와 문자열 피연산자를 연결할 수도 있습니다.  `+` 연산자에는 수행할 작업\(덧셈, 연결, 컴파일러 오류 생성, 런타임 <xref:System.InvalidCastException> throw\)을 결정하는 복잡한 규칙 집합이 있습니다.  

@@ -53,7 +53,7 @@ Visual Basic의 조건부 컴파일러 상수를 정의합니다.
 ## 예제  
  다음 예제에서는 `#Const` 지시문을 사용합니다.  
   
- [!code-vb[VbVbalrConditionalComp#3](../../../visual-basic/language-reference/directives/codesnippet/visualbasic/const-directive_1.vb)]  
+ [!code-vb[VbVbalrConditionalComp#3](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/const-directive_1.vb)]  
   
 ## 참고 항목  
  [\/define](../../../visual-basic/reference/command-line-compiler/define.md)   

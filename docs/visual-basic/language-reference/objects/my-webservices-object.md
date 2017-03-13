@@ -49,7 +49,7 @@ caps.handback.revision: 17
 ## 예제  
  이 예제에서는 `TemperatureConverter` XML Web services의 `FahrenheitToCelsius` 메서드를 호출하고 결과를 반환합니다.  
   
- [!code-vb[VbVbalrMyWebService#1](../../../visual-basic/language-reference/objects/codesnippet/visualbasic/VbVbalrMyWebService/Form1.vb#1)]  
+ [!code-vb[VbVbalrMyWebService#1](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-webservices-object_1.vb)]  
   
  이 예제를 실행하려면 프로젝트가 `Converter`라는 웹 서비스를 참조해야 하고 해당 웹 서비스가 `ConvertTemperature` 메서드를 노출해야 합니다.  자세한 내용은 [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)를 참조하십시오.  
   

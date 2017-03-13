@@ -30,7 +30,7 @@ caps.handback.revision: 16
   
 -   찾을 디렉터리의 이름과 경로를 지정하여 `GetDirectories` 메서드를 사용합니다.  다음 예제에서는 디렉터리 구조에서 이름에 "Logs"라는 단어가 포함된 모든 디렉터리를 반환하고 이를 `ListBox1`에 추가합니다.  
   
-     [!code-vb[VbVbcnFileAccess#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-find-subdirectori_1.vb)]  
+     [!code-vb[VbVbcnFileAccess#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-find-subdirectories-with-a-specific-pattern_1.vb)]  
   
 ## 강력한 프로그래밍  
  다음 조건에서 예외가 발생할 수 있습니다.  

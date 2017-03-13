@@ -46,11 +46,11 @@ caps.handback.revision: 13
   
 3.  `My.Settings` 개체를 속성 표에 대해 선택된 개체로 설정합니다.  
   
-     [!code-vb[VbVbalrMyResources#11](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#11)]  
+     [!code-vb[VbVbalrMyResources#11](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/how-to-create-property-grids-for-user-settings_1.vb)]  
   
 4.  사용자 설정만 표시되도록 속성 표를 구성합니다.  
   
-     [!code-vb[VbVbalrMyResources#12](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#12)]  
+     [!code-vb[VbVbalrMyResources#12](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/how-to-create-property-grids-for-user-settings_2.vb)]  
   
     > [!NOTE]
     >  응용 프로그램 범위 설정만 표시 하려면 사용 하는 <xref:System.Configuration.ApplicationScopedSettingAttribute> 특성 대신 <xref:System.Configuration.UserScopedSettingAttribute>.  

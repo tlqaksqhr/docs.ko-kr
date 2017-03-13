@@ -31,7 +31,7 @@ caps.handback.revision: 16
   
 -   파일 경로와 이름 및 쓸 바이트를 지정하여 `WriteAllBytes` 메서드를 사용합니다.  이 예제에서는 데이터 배열인 `CustomerData`를 `CollectedData.dat`라는 파일에 추가합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#27](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-write-to-binary-f_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#27](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-to-binary-files_1.vb)]  
   
 ## 강력한 프로그래밍  
  다음 조건에서 예외가 발생합니다.  

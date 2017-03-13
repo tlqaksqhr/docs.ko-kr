@@ -46,19 +46,19 @@ caps.handback.revision: 22
   
 -   `DownloadFile` 메서드를 사용하여 대상 파일의 위치를 문자열이나 URI로 지정하고 파일을 저장할 위치를 지정하여 파일을 다운로드합니다.  이 예제에서는 `http://www.cohowinery.com/downloads`에서 `WineList.txt` 파일을 다운로드하여 `C:\Documents and Settings\All Users\Documents`에 저장합니다.  
   
-     [!code-vb[VbResourceTasks#9](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-download-a-file_1.vb)]  
+     [!code-vb[VbResourceTasks#9](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-download-a-file_1.vb)]  
   
 ### 시간 제한 간격을 지정하여 파일을 다운로드하려면  
   
 -   `DownloadFile` 메서드를 사용하여 대상 파일의 위치를 문자열이나 URI로 지정하고, 파일을 저장할 위치를 지정하고, 시간 제한 간격을 밀리초 단위\(기본값: 1000\)로 지정하여 파일을 다운로드합니다.  이 예제에서는 `http://www.cohowinery.com/downloads`에서 `WineList.txt` 파일을 다운로드하여 `C:\Documents and Settings\All Users\Documents`에 저장하며 시간 제한 간격을 500밀리초로 지정합니다.  
   
-     [!code-vb[VbResourceTasks#10](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-download-a-file_2.vb)]  
+     [!code-vb[VbResourceTasks#10](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-download-a-file_2.vb)]  
   
 ### 사용자 이름과 암호를 지정하여 파일을 다운로드하려면  
   
 -   `DownLoadFile` 메서드를 사용하여 대상 파일의 위치를 문자열이나 URI로 지정하고 파일을 저장할 위치, 사용자 이름 및 암호를 지정하여 파일을 다운로드합니다.  이 예제에서는 사용자 이름 `anonymous`와 빈 암호를 사용하여 `http://www.cohowinery.com/downloads`에서 `WineList.txt` 파일을 다운로드하여 `C:\Documents and Settings\All Users\Documents`에 저장합니다.  
   
-     [!code-vb[VbResourceTasks#11](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-download-a-file_3.vb)]  
+     [!code-vb[VbResourceTasks#11](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-download-a-file_3.vb)]  
   
     > [!IMPORTANT]
     >  `DownLoadFile` 메서드에서 사용하는 FTP 프로토콜은 암호 등의 정보를 일반 텍스트로 보내므로 중요한 정보를 전송할 때는 사용하지 말아야 합니다.  

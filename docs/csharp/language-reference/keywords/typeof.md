@@ -43,12 +43,12 @@ string s = method.ReturnType.GetInterface
 ```  
   
 ## 예제  
- [!code-cs[csrefKeywordsOperator#12](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#12)]  
+ [!code-cs[csrefKeywordsOperator#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/typeof_1.cs)]  
   
 ## 예제  
  이 샘플에서는 숫자 계산의 결과를 포함하는 데 사용되는 형식을 확인하기 위해 <xref:System.Object.GetType%2A> 메서드를 사용합니다.  이 형식은 계산 결과를 저장하는 데 필요한 요구 사항에 따라 달라집니다.  
   
- [!code-cs[csrefKeywordsOperator#13](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#13)]  
+ [!code-cs[csrefKeywordsOperator#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/typeof_2.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

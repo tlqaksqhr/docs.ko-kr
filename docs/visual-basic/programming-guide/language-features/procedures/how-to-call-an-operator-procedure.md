@@ -53,7 +53,7 @@ caps.handback.revision: 16
 ## 예제  
  다음 예제에서는 두 <xref:System.TimeSpan> 구조체를 만들어 함께 추가한 다음 결과를 세 번째 <xref:System.TimeSpan> 구조체에 저장합니다.  <xref:System.TimeSpan> 구조체는 여러 표준 연산자를 오버로드하도록 연산자 프로시저를 정의합니다.  
   
- [!code-vb[VbVbcnProcedures#29](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-an-operator-_1.vb)]  
+ [!code-vb[VbVbcnProcedures#29](./codesnippet/VisualBasic/how-to-call-an-operator-procedure_1.vb)]  
   
  <xref:System.TimeSpan>은 표준 `+` 연산자를 오버로드하기 때문에 이전 예제에서는 `combinedSpan` 값을 계산할 때 연산자 프로시저를 호출합니다.  
   

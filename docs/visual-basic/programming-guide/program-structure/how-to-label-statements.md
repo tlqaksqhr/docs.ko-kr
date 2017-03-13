@@ -41,7 +41,7 @@ caps.handback.revision: 18
   
      예를 들어, 다음 코드 줄에는 각각 `Jump`와 `120`이라는 레이블이 사용되었습니다.  
   
-     [!code-vb[VbVbalrStatements#708](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/how-to-label-statements_1.vb)]  
+     [!code-vb[VbVbalrStatements#708](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/how-to-label-statements_1.vb)]  
   
 ## 참고 항목  
  [Statements](../../../visual-basic/programming-guide/language-features/statements.md)   

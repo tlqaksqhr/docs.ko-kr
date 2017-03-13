@@ -43,7 +43,7 @@ Erase arraylist
 ## 예제  
  다음 예제에서는 `Erase` 문을 사용하여 두 배열을 지우고 해당 메모리를 비웁니다. 각각 1000개 및 100개의 저장소 요소입니다.  그런 다음 `ReDim` 문이 새 배열 인스턴스를 3차원 배열에 할당합니다.  
   
- [!code-vb[VbVbalrStatements#19](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/erase-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#19](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/erase-statement_1.vb)]  
   
 ## 참고 항목  
  [Nothing](../../../visual-basic/language-reference/nothing.md)   

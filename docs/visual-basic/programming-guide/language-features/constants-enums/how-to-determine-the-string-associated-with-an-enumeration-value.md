@@ -29,7 +29,7 @@ caps.handback.revision: 12
   
 -   <xref:System.Enum.GetNames%2A> 메서드를 사용하여 열거형 멤버와 연결된 문자열을 검색합니다.  이 예제에서는 열거형 `flavorEnum`을 선언한 다음 <xref:System.Enum.GetNames%2A> 메서드를 사용하여 각 멤버에 연결된 문자열을 표시합니다.  
   
-     [!code-vb[VbEnumsTask#2](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#2)]  
+     [!code-vb[VbEnumsTask#2](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-determine-the-string-associated-with-an-enumeration-value_1.vb)]  
   
 ## 참고 항목  
  <xref:System.Enum.GetValues%2A>   

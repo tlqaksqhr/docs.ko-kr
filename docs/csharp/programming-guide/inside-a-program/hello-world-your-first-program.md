@@ -44,7 +44,7 @@ caps.handback.revision: 39
   
 6.  Program.cs의 내용을 다음 코드로 바꿉니다.  
   
-     [!code-cs[csProgGuide#21](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/progGuide.cs#21)]  
+     [!code-cs[csProgGuide#21](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_1.cs)]  
   
 7.  F5 키를 선택하여 프로젝트를 실행합니다.  `Hello World!` 줄을 포함하는 명령 프롬프트 창이 나타납니다.  
   
@@ -53,11 +53,11 @@ caps.handback.revision: 39
 ## 설명  
  첫째 행에 주석이 있습니다.  `//` 문자는 행의 나머지 부분을 주석으로 변환합니다.  
   
- [!code-cs[csProgGuide#32](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/progGuide.cs#32)]  
+ [!code-cs[csProgGuide#32](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_2.cs)]  
   
  또한 다음 예제와 같이 `/*`와 `*/` 문자 사이에 텍스트를 포함시켜 텍스트 블록을 주석으로 만들 수 있습니다.  다음 예제에서 이를 확인할 수 있습니다.  
   
- [!code-cs[csProgGuide#33](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/progGuide.cs#33)]  
+ [!code-cs[csProgGuide#33](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_3.cs)]  
   
 ## Main 메서드  
  C\# 콘솔 응용 프로그램에는 시작과 끝을 제어하는 `Main` 메서드가 있어야 합니다.  `Main` 메서드에서는 개체를 생성하고 다른 메서드를 실행합니다.  
@@ -66,19 +66,19 @@ caps.handback.revision: 39
   
 -   `void`를 반환합니다.  
   
-     [!code-cs[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/hello-world-your-first-p_4.cs)]  
+     [!code-cs[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_4.cs)]  
   
 -   또는 정수를 반환할 수 있습니다.  
   
-     [!code-cs[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/hello-world-your-first-p_5.cs)]  
+     [!code-cs[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_5.cs)]  
   
 -   반환 형식 중 하나에서 인수를 취할 수 있습니다.  
   
-     [!code-cs[csProgGuideMain#19](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/hello-world-your-first-p_6.cs)]  
+     [!code-cs[csProgGuideMain#19](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_6.cs)]  
   
      또는  
   
-     [!code-cs[csProgGuideMain#18](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/hello-world-your-first-p_7.cs)]  
+     [!code-cs[csProgGuideMain#18](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_7.cs)]  
   
  `Main` 메서드 `args`의 매개 변수는 프로그램을 호출하는 데 사용되는 명령줄 인수를 포함하는 `string` 배열입니다.  C\+\+와 달리 이 배열에는 실행 파일\(.exe\)의 이름이 포함되지 않습니다.  
   
@@ -89,9 +89,9 @@ caps.handback.revision: 39
 ## 입력 및 출력  
  C\# 프로그램에서는 일반적으로 .NET Framework의 런타임 라이브러리가 제공하는 입출력 서비스를 사용합니다.  `System.Console.WriteLine("Hello World!");` 문에서는 <xref:System.Console.WriteLine%2A> 메서드를 사용합니다.  이 런타임 라이브러리에서 <xref:System.Console> 클래스의 출력 방법 중 하나입니다.  이 메서드에서는 문자열 매개 변수를 표준 출력 스트림에 표시한 다음 줄 바꿈을 합니다.  다른 <xref:System.Console> 메서드는 다양한 입출력 작업에 사용할 수 있습니다.  프로그램 시작 부분에 `using System;` 지시문을 포함하면 <xref:System> 클래스와 메서드를 정규화하지 않고 직접 사용할 수 있습니다.  예를 들어, `System.Console.WriteLine` 대신 `Console.WriteLine`을 호출할 수 있습니다.  
   
- [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/using.cs#1)]  
+ [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_8.cs)]  
   
- [!code-cs[csProgGuide#23](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/progGuide.cs#23)]  
+ [!code-cs[csProgGuide#23](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_9.cs)]  
   
  입출력 메서드에 대한 자세한 내용은 <xref:System.IO>를 참조하십시오.  
   

@@ -32,7 +32,7 @@ caps.handback.revision: 19
   
 -   `CopyDirectory` 메서드를 사용하면서 소스 및 대상 디렉터리 이름을 지정합니다.  다음 예제에서는 `TestDirectory1` 디렉터리를 `TestDirectory2`로 복사하며 기존 파일은 덮어씁니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#16](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-copy-a-directory-_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#16](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-a-directory-to-another-directory_1.vb)]  
   
      이 코드 예제는 IntelliSense 코드 조각으로도 사용할 수 있습니다.  이 코드 조각은 코드 조각 선택기의 **파일 시스템 \- 드라이브, 폴더 및 파일 처리**에 있습니다.  자세한 내용은 [코드 조각](/visual-studio/ide/code-snippets)를 참조하십시오.  
   

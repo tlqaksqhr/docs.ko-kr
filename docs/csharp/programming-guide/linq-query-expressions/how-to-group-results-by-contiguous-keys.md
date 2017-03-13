@@ -35,7 +35,7 @@ caps.handback.revision: 11
 ## 예제  
  다음 예제에서는 확장 메서드와 해당 메서드를 사용하는 클라이언트 코드를 모두 보여 줍니다.  
   
- [!code-cs[cscsrefContiguousGroups#1](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/how-to-group-results-by-_1.cs)]  
+ [!code-cs[cscsrefContiguousGroups#1](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-group-results-by-contiguous-keys_1.cs)]  
   
  프로젝트에서 확장 메서드를 사용하려면 `MyExtensions` 정적 클래스를 새 소스 코드 파일이나 기존 소스 코드 파일에 복사하고 필요한 경우 적절한 네임스페이스에 대한 `using` 지시문을 추가합니다.  
   

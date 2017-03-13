@@ -36,7 +36,7 @@ caps.handback.revision: 13
 ## 예제  
  이 파일에서는 `double` 형식의 `Area` 속성을 포함하는 `Shape` 클래스를 선언합니다.  
   
- [!code-cs[csProgGuideInheritance#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-define-abstract-p_1.cs)]  
+ [!code-cs[csProgGuideInheritance#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_1.cs)]  
   
 -   속성에 대한 한정자는 속성 선언 자체에 배치됩니다.  예를 들면 다음과 같습니다.  
   
@@ -49,12 +49,12 @@ caps.handback.revision: 13
 ## 예제  
  다음 코드에서는 `Shape`의 서브클래스 세 개를 보여 주고 이 서브클래스에서 `Area` 속성을 재정의하여 자체 구현을 제공하는 방법을 보여 줍니다.  
   
- [!code-cs[csProgGuideInheritance#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-define-abstract-p_2.cs)]  
+ [!code-cs[csProgGuideInheritance#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_2.cs)]  
   
 ## 예제  
  다음은 여러 `Shape` 파생 개체를 만들고 해당 면적을 출력하는 테스트 프로그램 코드입니다.  
   
- [!code-cs[csProgGuideInheritance#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-define-abstract-p_3.cs)]  
+ [!code-cs[csProgGuideInheritance#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_3.cs)]  
   
 ## 참고 항목  
  [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   

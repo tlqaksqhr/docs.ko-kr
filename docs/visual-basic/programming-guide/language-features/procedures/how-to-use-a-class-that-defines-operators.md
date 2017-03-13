@@ -35,9 +35,9 @@ caps.handback.revision: 21
 ## 예제  
  다음 예제에서는 SQL 문자열과 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 문자열 사이의 양방향 변환 연산자\([CType 함수](../../../../visual-basic/language-reference/functions/ctype-function.md)\)를 정의하는 SQL 구조체 <xref:System.Data.SqlTypes.SqlString>에 액세스합니다.  `CType(`*SQL string expression*, `String)`을 사용하여 SQL 문자열을 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 문자열로 변환하고 `CType(`*Visual Basic string expression*, <xref:System.Data.SqlTypes.SqlString>`)`을 사용하여 반대 방향으로 변환합니다.  
   
- [!code-vb[VbVbcnProcedures#30](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-use-a-class-that-_1.vb)]  
+ [!code-vb[VbVbcnProcedures#30](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#31](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-use-a-class-that-_2.vb)]  
+ [!code-vb[VbVbcnProcedures#31](./codesnippet/VisualBasic/how-to-use-a-class-that-defines-operators_2.vb)]  
   
  <xref:System.Data.SqlTypes.SqlString> 구조체는 `String`을 <xref:System.Data.SqlTypes.SqlString>으로, <xref:System.Data.SqlTypes.SqlString>을 `String`으로 변환하는 변환 연산자\([CType 함수](../../../../visual-basic/language-reference/functions/ctype-function.md)\)를 정의합니다.  `title`을 `jobTitle`에 할당하는 문에서는 첫 번째 연산자를 사용하고, <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 함수 호출에서는 두 번째 연산자를 사용합니다.  
   

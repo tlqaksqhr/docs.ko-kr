@@ -24,7 +24,7 @@ caps.handback.revision: 6
 ## 예제  
  다음 예제에서는 `join` 절에서 `on`을 사용하는 방법을 보여 줍니다.  
   
- [!code-cs[csrefKeywordsContextual#12](../../../csharp/language-reference/keywords/codesnippet/csharp/on_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/on_1.cs)]  
   
 ## 참고 항목  
  [C\# 참조](../../../csharp/language-reference/index.md)   

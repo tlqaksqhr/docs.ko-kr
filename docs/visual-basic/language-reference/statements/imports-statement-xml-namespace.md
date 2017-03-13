@@ -56,7 +56,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## 예제  
  다음 예제에서는 기본 XML 네임스페이스와 `ns` 접두사로 식별되는 XML 네임스페이스를 가져옵니다.  그런 다음 두 가지 네임스페이스를 모두 사용하는 XML 리터럴을 만듭니다.  
   
- [!code-vb[VbXMLSamples#45](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/imports-statement-xml-na_1.vb)]  
+ [!code-vb[VbXMLSamples#45](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_1.vb)]  
   
  이 코드가 표시하는 텍스트는 다음과 같습니다.  
   
@@ -72,7 +72,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## 예제  
  다음 예제에서는 XML 네임스페이스 접두사인 `ns`를 가져옵니다.  그런 다음 네임스페이스 접두사를 사용하는 XML 리터럴을 만들고 요소의 최종 폼을 표시합니다.  
   
- [!code-vb[VbXMLSamples#22](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/imports-statement-xml-na_2.vb)]  
+ [!code-vb[VbXMLSamples#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_2.vb)]  
   
  이 코드가 표시하는 텍스트는 다음과 같습니다.  
   
@@ -90,7 +90,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## 예제  
  다음 예제에서는 XML 네임스페이스 접두사인 `ns`를 가져옵니다.  그런 다음 네임스페이스의 접두사를 사용하여 XML 리터럴을 만들고 정규화된 이름인 `ns:name`을 사용하여 첫 번째 자식 노드에 액세스합니다.  
   
- [!code-vb[VbXMLSamples#19](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/imports-statement-xml-na_3.vb)]  
+ [!code-vb[VbXMLSamples#19](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_3.vb)]  
   
  이 코드가 표시하는 텍스트는 다음과 같습니다.  
   

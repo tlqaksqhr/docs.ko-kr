@@ -31,7 +31,7 @@ caps.handback.revision: 17
 ## 예제  
   
 ### 코드  
- [!code-vb[VbVbcnRegEx#1](../../../../visual-basic/programming-guide/language-features/strings/codesnippet/visualbasic/walkthrough-validating-t_1.vb)]  
+ [!code-vb[VbVbcnRegEx#1](../../../../visual-basic/programming-guide/language-features/strings/codesnippet/VisualBasic/walkthrough-validating-that-passwords-are-complex_1.vb)]  
   
 ## 코드 컴파일  
  해당 암호를 포함하는 문자열을 전달하여 이 메서드를 호출합니다.  

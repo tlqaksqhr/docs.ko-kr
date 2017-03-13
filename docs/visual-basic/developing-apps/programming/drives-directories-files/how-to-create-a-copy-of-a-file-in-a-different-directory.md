@@ -30,7 +30,7 @@ caps.handback.revision: 17
   
 -   파일을 복사하려면 `CopyFile` 메서드를 사용하면서 소스 파일 및 대상 디렉터리를 지정합니다.  `overwrite` 매개 변수를 사용하면 기존 파일을 덮어쓸지 여부를 지정할 수 있습니다.  다음 코드 예제에서는 `CopyFile`의 사용 방법을 보여 줍니다.  
   
-     [!code-vb[VbFileIOMisc#24](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-create-a-copy-of-_1_1.vb)]  
+     [!code-vb[VbFileIOMisc#24](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-create-a-copy-of-a-file-in-a-different-directory_1.vb)]  
   
 ## 강력한 프로그래밍  
  다음 조건에서 예외가 throw될 수 있습니다.  

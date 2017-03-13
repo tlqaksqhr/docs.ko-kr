@@ -37,14 +37,14 @@ caps.handback.revision: 27
   
  예를 들어 [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]는 <xref:System.Windows.Forms?displayProperty=fullName> 네임스페이스에서 <xref:System.Windows.Forms.ListBox> 클래스를 정의합니다. 다음 코드 조각은 이 클래스의 정규화된 이름을 사용하여 변수를 선언하는 방법을 보여 줍니다.  
   
- [!code-vb[VbVbalrApplication#6](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/namespaces_1.vb)]  
+ [!code-vb[VbVbalrApplication#6](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_1.vb)]  
   
 ## 이름 충돌 방지  
  [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] 네임스페이스는 클래스 라이브러리의 개발자가 또 다른 라이브러리에서 유사한 이름을 사용하여 방해를 받는 *네임스페이스 공해*라고도 하는 문제를 해결합니다. 기존 구성 요소와의 이러한 충돌을 *이름 충돌*이라고도 합니다.  
   
  예를 들어 `ListBox`라는 새 클래스를 만드는 경우, 프로젝트 내부에서 한정자 없이 사용할 수 있습니다. 그러나 [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox> 클래스를 같은 프로젝트에서 사용하려는 경우, 참조를 고유하게 지정하기 위해 정규화된 참조를 사용해야 합니다. 참조가 고유하지 않으면 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]에서 이름이 모호하다는 오류를 표시합니다. 다음 코드 예제에서는 이러한 개체를 선언하는 방법을 보여 줍니다.  
   
- [!code-vb[VbVbalrApplication#7](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/namespaces_2.vb)]  
+ [!code-vb[VbVbalrApplication#7](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_2.vb)]  
   
  다음 그림에서는 `ListBox`라는 이름의 개체를 포함하는 두 개의 네임스페이스 계층 구조를 보여 줍니다.  
   
@@ -57,17 +57,17 @@ caps.handback.revision: 27
 ## 정규화된 이름  
  정규화된 이름은 개체가 정의된 네임스페이스의 이름으로 접두사가 지정된 개체 참조입니다. 클래스에 대한 참조를 만들고\(**프로젝트** 메뉴에서 **참조 추가** 선택\) 코드에서 개체에 대해 정규화된 이름을 사용하면 다른 프로젝트에 정의된 개체를 사용할 수 있습니다. 다음 코드 조각은 다른 프로젝트의 네임스페이스에서 개체에 대해 정규화된 이름을 사용하는 방법을 보여 줍니다.  
   
- [!code-vb[VbVbalrApplication#8](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/namespaces_3.vb)]  
+ [!code-vb[VbVbalrApplication#8](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_3.vb)]  
   
  어떤 개체가 사용되고 있는지를 컴파일러가 확인할 수 있도록 해주기 때문에 정규화된 이름은 이름 충돌을 방지합니다. 그러나 이름 자체가 길고 복잡할 수 있습니다. 이를 해결하려면 `Imports` 문을 사용하여 *별칭*을 정의할 수 있습니다. 별칭이란 정규화된 이름 대신 사용할 수 있는 약식 이름을 말합니다. 예를 들어 다음 코드 예제에서는 정규화된 이름 두 개의 별칭을 만들고 이러한 별칭을 사용하여 두 개체를 정의합니다.  
   
- [!code-vb[VbVbalrApplication#9](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/namespaces_4.vb)]  
+ [!code-vb[VbVbalrApplication#9](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_4.vb)]  
   
- [!code-vb[VbVbalrApplication#10](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/namespaces_5.vb)]  
+ [!code-vb[VbVbalrApplication#10](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_5.vb)]  
   
  별칭 없이 `Imports` 문을 사용하는 경우, 한정자 없이 해당 네임스페이스의 모든 이름\(프로젝트에서 고유하다면\)을 사용할 수 있습니다. 같은 이름의 여러 항목을 포함하는 네임스페이스에 대한 `Imports` 문이 프로젝트에 포함된 경우, 반드시 이름을 정규화하여 사용해야 합니다. 예를 들어 프로젝트에 다음 두 개의 `Imports` 문이 포함되어 있다고 가정해 보겠습니다.  
   
- [!code-vb[VbVbalrApplication#11](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/namespaces_6.vb)]  
+ [!code-vb[VbVbalrApplication#11](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_6.vb)]  
   
  이름을 정규화하지 않고 `Class1`을 사용하려고 시도하면 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]은 `Class1` 이름이 모호하다는 오류 메시지를 표시합니다.  
   
@@ -114,7 +114,7 @@ End Namespace
   
  다음 예제에서는 `Global` 키워드를 사용하여 프로젝트에 대한 루트 네임스페이스에서 네임스페이스를 선언합니다.  
   
- [!code-vb[VbVbalrApplication#22](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/namespaces_7.vb)]  
+ [!code-vb[VbVbalrApplication#22](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_7.vb)]  
   
  네임스페이스 선언에서 `Global`은 다른 네임스페이스에 중첩할 수 없습니다.  
   
@@ -126,7 +126,7 @@ End Namespace
   
  `Global` 키워드가 네임스페이스 선언에 없는 경우 `Global.System.Text.StringBuilder`를 지정하지 않은 채 <xref:System.Text.StringBuilder>에 액세스할 수 없습니다.`ConsoleApplication1`이라는 프로젝트에서는 `Global` 키워드가 사용되지 않은 경우 `System.Text`에 대한 참조가 `ConsoleApplication1.System.Text`에 액세스할 수 있습니다.  
   
- [!code-vb[VbVbalrApplication#21](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/namespaces_8.vb)]  
+ [!code-vb[VbVbalrApplication#21](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/namespaces_8.vb)]  
   
 ## 참고 항목  
  <xref:System.Windows.Forms.ListBox>   

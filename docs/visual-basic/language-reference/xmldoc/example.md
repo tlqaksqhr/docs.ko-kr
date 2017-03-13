@@ -42,7 +42,7 @@ caps.handback.revision: 9
 ## 예제  
  다음 예제에서는 `<example>` 태그를 사용하여 `ID` 필드 사용에 대한 예제를 포함합니다.  
   
- [!code-vb[VbVbcnXmlDocComments#2](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/example_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#2](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/example_1.vb)]  
   
 ## 참고 항목  
  [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

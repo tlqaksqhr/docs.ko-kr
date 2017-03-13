@@ -57,13 +57,13 @@ caps.handback.revision: 26
 ## 예제  
  다음 예제에서는 정의 하 고이 함수를 호출 `calcSum`.  `ParamArray` 매개 변수에 대 한 한정자 `args` 함수가 가변 개수의 인수를 받아들일 수 있습니다.  
   
- [!code-vb[VbVbalrStatements#26](../../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/parameter-arrays_1.vb)]  
+ [!code-vb[VbVbalrStatements#26](../../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/parameter-arrays_1.vb)]  
   
  다음 예제에서는 매개 변수 배열이 있는 프로시저를 정의하고 매개 변수 배열에 전달되는 모든 배열 요소의 값을 출력합니다.  
   
- [!code-vb[VbVbcnProcedures#48](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/parameter-arrays_2.vb)]  
+ [!code-vb[VbVbcnProcedures#48](./codesnippet/VisualBasic/parameter-arrays_2.vb)]  
   
- [!code-vb[VbVbcnProcedures#49](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/parameter-arrays_3.vb)]  
+ [!code-vb[VbVbcnProcedures#49](./codesnippet/VisualBasic/parameter-arrays_3.vb)]  
   
 ## 참고 항목  
  <xref:Microsoft.VisualBasic.Information.UBound%2A>   

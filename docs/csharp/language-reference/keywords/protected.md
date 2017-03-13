@@ -24,7 +24,7 @@ caps.handback.revision: 20
 ## 예제  
  기본 클래스의 보호된 멤버를 파생 클래스에서 액세스할 수 있는 경우는 해당 파생 클래스 형식을 통해 액세스하는 경우뿐입니다.  예를 들어, 다음의 코드 세그먼트를 참조하십시오.  
   
- [!code-cs[csrefKeywordsModifiers#11](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#11)]  
+ [!code-cs[csrefKeywordsModifiers#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/protected_1.cs)]  
   
  `a.x = 10` 문은 클래스 B의 인스턴스가 아니라 정적 메서드인 Main 내에서 만들어지므로 오류를 생성합니다.  
   
@@ -33,7 +33,7 @@ caps.handback.revision: 20
 ## 예제  
  이 예제의 경우 `DerivedPoint` 클래스는 `Point`에서 파생됩니다.  따라서 파생된 클래스에서 기본 클래스의 보호된 멤버에 직접 액세스할 수 있습니다.  
   
- [!code-cs[csrefKeywordsModifiers#12](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#12)]  
+ [!code-cs[csrefKeywordsModifiers#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/protected_2.cs)]  
   
  `x` 및 `y`의 액세스 수준을 [private](../../../csharp/language-reference/keywords/private.md)으로 변경하면 컴파일러가 오류 메시지를 생성합니다.  
   

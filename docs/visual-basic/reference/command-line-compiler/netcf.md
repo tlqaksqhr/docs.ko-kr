@@ -45,15 +45,15 @@ caps.handback.revision: 18
   
 -   프로그램 실행을 종료하는 [End \<keyword\> Statement](../../../visual-basic/language-reference/statements/end-keyword-statement.md) 키워드를 사용할 수 없습니다.  다음 프로그램은 `/netcf` 없이 컴파일되고 실행되지만, `/netcf`를 사용하면 컴파일 타임에 오류가 발생합니다.  
   
-     [!code-vb[VbVbalrCompiler#34](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/netcf_1.vb)]  
+     [!code-vb[VbVbalrCompiler#34](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_1.vb)]  
   
 -   모든 형식에서 런타임에 바인딩을 사용할 수 없습니다.  런타임에 바인딩 시나리오가 발견되면 컴파일 타임 오류가 생성됩니다.  다음 프로그램은 `/netcf` 없이 컴파일되고 실행되지만, `/netcf`를 사용하면 컴파일 타임에 오류가 발생합니다.  
   
-     [!code-vb[VbVbalrCompiler#35](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/netcf_2.vb)]  
+     [!code-vb[VbVbalrCompiler#35](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_2.vb)]  
   
 -   [Auto](../../../visual-basic/language-reference/modifiers/auto.md), [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md) 및 [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md) 한정자를 사용할 수 없습니다.  [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) 문의 구문도 `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`로 수정됩니다.  다음 코드에서는 컴파일할 때 `/netcf`를 사용한 결과를 보여 줍니다.  
   
-     [!code-vb[VbVbalrCompiler#36](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/netcf_3.vb)]  
+     [!code-vb[VbVbalrCompiler#36](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_3.vb)]  
   
 -   [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]에서 제거된 Visual Basic 6.0 키워드를 사용하면 `/netcf`를 사용할 때 다른 오류가 생성됩니다.  이 경우 다음 키워드에 대한 오류 메시지가 영향을 받습니다.  
   

@@ -45,7 +45,7 @@ caps.handback.revision: 19
   
      다음 예제에서는 이벤트와 이벤트를 발생시키는 클래스를 참조하는 `WithEvents` 변수를 정의합니다.  이벤트 처리 `Sub` 프로시저는 `Handles` 절을 사용하여 자신이 처리하는 클래스와 이벤트를 지정합니다.  
   
-     [!code-vb[VbVbcnProcedures#4](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-an-event-han_1.vb)]  
+     [!code-vb[VbVbcnProcedures#4](./codesnippet/VisualBasic/how-to-call-an-event-handler_1.vb)]  
   
 ### AddHandler를 사용하여 이벤트 처리기를 호출하려면  
   
@@ -57,7 +57,7 @@ caps.handback.revision: 19
   
      다음 예제에서는 폼의 <xref:System.Windows.Forms.Form.Closing> 이벤트를 처리하기 위해 `Sub` 프로시저를 정의합니다.  그런 다음 [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md)을 사용하여 `catchClose` 프로시저를 <xref:System.Windows.Forms.Form.Closing>에 대한 이벤트 처리기로 연결합니다.  
   
-     [!code-vb[VbVbcnProcedures#5](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-an-event-han_2.vb)]  
+     [!code-vb[VbVbcnProcedures#5](./codesnippet/VisualBasic/how-to-call-an-event-handler_2.vb)]  
   
      [RemoveHandler Statement](../../../../visual-basic/language-reference/statements/removehandler-statement.md)을 실행하여 이벤트에서 이벤트 처리기를 분리할 수 있습니다.  
   

@@ -20,7 +20,7 @@ caps.handback.revision: 19
 다음 샘플에 나와 있는 형식의 기본 개요를 제공 합니다.  
   
 ## <a name="example"></a>예제  
- [!code-cs[csProgGuideDocComments#15](../../../csharp/programming-guide/xmldoc/codesnippet/csharp/how-to-use-the-xml-docum_1.cs)]  
+ [!code-cs[csProgGuideDocComments#15](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/how-to-use-the-xml-documentation-features_1.cs)]  
   
  **이.xml 파일 앞의 코드 예제를 사용 하 여 생성 되었습니다.**  
 **\<? xml 버전 = "1.0"?>**  

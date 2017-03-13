@@ -28,12 +28,12 @@ caps.handback.revision: 22
 ## 예제  
  다음 예제에서는 [switch](../../../csharp/language-reference/keywords/switch.md) 문에서 `goto`를 사용하는 방법을 보여 줍니다.  
   
- [!code-cs[csrefKeywordsJump#4](../../../csharp/language-reference/keywords/codesnippet/csharp/goto_1.cs)]  
+ [!code-cs[csrefKeywordsJump#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/goto_1.cs)]  
   
 ## 예제  
  아래 예제에서는 `goto`를 사용하여 중첩된 루프를 중단하는 방법을 설명합니다.  
   
- [!code-cs[csrefKeywordsJump#5](../../../csharp/language-reference/keywords/codesnippet/csharp/goto_2.cs)]  
+ [!code-cs[csrefKeywordsJump#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/goto_2.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

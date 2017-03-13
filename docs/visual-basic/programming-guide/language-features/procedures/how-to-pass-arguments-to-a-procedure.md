@@ -48,7 +48,7 @@ caps.handback.revision: 14
   
      다음 예제에서는 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 함수를 호출합니다.  
   
-     [!code-vb[VbVbcnProcedures#34](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-pass-arguments-to_1.vb)]  
+     [!code-vb[VbVbcnProcedures#34](./codesnippet/VisualBasic/how-to-pass-arguments-to-a-procedure_1.vb)]  
   
      이전 예제에서는 표시할 메시지 문자열인 첫 번째 필수 인수를 제공합니다.  메시지 상자에 표시할 단추를 지정하는 두 번째 매개 변수\(선택적 요소\)에 대한 인수를 생략합니다.  호출에서 값을 제공하지 않기 때문에 `MsgBox`는 기본값 `MsgBoxStyle.OKOnly`를 사용합니다. 이 경우 **확인** 단추만 표시됩니다.  
   

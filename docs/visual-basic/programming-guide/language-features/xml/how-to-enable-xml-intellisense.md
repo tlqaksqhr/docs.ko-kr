@@ -84,11 +84,11 @@ Visual Basic의 XML IntelliSense는 XML 스키마에 정의된 요소에 대한 
   
 2.  다음 예제와 같이 코드 파일의 시작 부분에 대상 XML 네임스페이스에 대한 `Imports` 문을 추가합니다.  
   
-     [!code-vb[VbXMLSamples#1](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-enable-xml-intell_1.vb)]  
+     [!code-vb[VbXMLSamples#1](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-enable-xml-intellisense_1.vb)]  
   
      XML 네임스페이스를 기본 네임스페이스, 즉 네임스페이스 접두사가 없는 XML 요소 및 특성에 적용되는 네임스페이스로 가져오려면 대상 기본 XML 네임스페이스에 대한 `Imports` 문을 추가합니다.  네임스페이스 접두사는 지정하지 마십시오.  다음은 `Imports` 문의 예입니다.  
   
-     [!code-vb[VbXmlSamples#50](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-enable-xml-intell_2.vb)]  
+     [!code-vb[VbXmlSamples#50](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-enable-xml-intellisense_2.vb)]  
   
 #### 프로젝트의 모든 파일에 대해 XML 네임스페이스를 가져오려면  
   

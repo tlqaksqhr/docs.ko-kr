@@ -45,24 +45,24 @@ caps.handback.revision: 17
   
 2.  예상 형식과 오류가 보고될 때 사용되는 형식을 정의합니다.  각 배열의 마지막 항목이 \-1이므로 마지막 필드는 가변 너비 필드로 간주됩니다.  이는 배열의 마지막 항목이 0보다 작거나 같을 때 발생합니다.  
   
-     [!code-vb[VbFileIORead#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-read-from-text-fi_0_1.vb)]  
+     [!code-vb[VbFileIORead#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_1.vb)]  
   
 3.  너비와 형식을 정의하여 새 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> 개체를 만듭니다.  
   
-     [!code-vb[VbFileIORead#5](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-read-from-text-fi_0_2.vb)]  
+     [!code-vb[VbFileIORead#5](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_2.vb)]  
   
 4.  행을 순환하며 검색하여 읽기 전에 형식을 테스트합니다.  
   
-     [!code-vb[VbFileIORead#6](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-read-from-text-fi_0_3.vb)]  
+     [!code-vb[VbFileIORead#6](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_3.vb)]  
   
 5.  콘솔에 오류를 씁니다.  
   
-     [!code-vb[VbFileIORead#7](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-read-from-text-fi_0_4.vb)]  
+     [!code-vb[VbFileIORead#7](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_4.vb)]  
   
 ## 예제  
  다음은 `testfile.txt` 파일에서 읽는 전체 예제입니다.  
   
- [!code-vb[VbFileIORead#8](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-read-from-text-fi_0_5.vb)]  
+ [!code-vb[VbFileIORead#8](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_5.vb)]  
   
 ## 강력한 프로그래밍  
  다음 조건에서 예외가 발생할 수 있습니다.  

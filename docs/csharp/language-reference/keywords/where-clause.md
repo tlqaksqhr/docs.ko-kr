@@ -24,17 +24,17 @@ caps.handback.revision: 16
 ## 예제  
  다음 예제에서 `where` 절은 5미만의 숫자만 필터링합니다.  `where` 절을 제거하면 데이터 소스에서 모든 숫자가 반환됩니다.  여기서 `num < 5` 식은 각 요소에 적용되는 조건자입니다.  
   
- [!code-cs[cscsrefQueryKeywords#5](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Where.cs#5)]  
+ [!code-cs[cscsrefQueryKeywords#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_1.cs)]  
   
 ## 예제  
  `where` 절 하나에는 [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) 및 [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) 연산자를 사용하여 조건자를 필요한 만큼 지정할 수 있습니다.  다음 예제에서는 쿼리에 조건자 두 개를 지정하여 5미만의 짝수만 선택합니다.  
   
- [!code-cs[cscsrefQueryKeywords#6](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Where.cs#6)]  
+ [!code-cs[cscsrefQueryKeywords#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_2.cs)]  
   
 ## 예제  
  `where` 절에는 Boolean 값을 반환하는 메서드를 하나 이상 포함할 수 있습니다.  다음 예제에서는 `where` 절에 메서드를 사용하여 범위 변수의 현재 값이 짝수인지 홀수인지 결정합니다.  
   
- [!code-cs[cscsrefQueryKeywords#7](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Where.cs#7)]  
+ [!code-cs[cscsrefQueryKeywords#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-clause_3.cs)]  
   
 ## 설명  
  `where` 절은 필터링 메커니즘으로,  쿼리 식의 모든 위치에 사용할 수 있지만 첫 번째 또는 마지막 절은 될 수 없습니다.  `where` 절은 소스 요소 필터링을 그룹화 전에 할지, 그룹화 후에 할지에 따라 [group](../../../csharp/language-reference/keywords/group-clause.md) 절 앞이나 뒤에 올 수 있습니다.  

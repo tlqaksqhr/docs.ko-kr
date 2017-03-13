@@ -59,7 +59,7 @@ object(index)
 ## 예제  
  다음 예제에서는 확장 인덱서를 사용하여 <xref:System.Xml.Linq.XElement> 개체의 컬렉션에 있는 두 번째 자식 노드에 액세스하는 방법을 보여 줍니다.  컬렉션은 `contact` 개체에서 `phone`이라는 모든 자식 요소를 가져오는 자식 축 속성을 사용하여 액세스합니다.  
   
- [!code-vb[VbXMLSamples#24](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/extension-indexer-property_1.vb)]  
+ [!code-vb[VbXMLSamples#24](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/extension-indexer-property_1.vb)]  
   
  이 코드가 표시하는 텍스트는 다음과 같습니다.  
   

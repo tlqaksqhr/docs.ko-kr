@@ -55,12 +55,12 @@ caps.handback.revision: 14
 ## 예제  
  다음 예제에서는 공변\(covariant\) 제네릭 인터페이스를 선언, 확장 및 구현하는 방법을 보여 줍니다.  또한 공변\(covariant\) 인터페이스를 구현하는 클래스의 암시적 변환을 사용하는 방법도 보여 줍니다.  
   
- [!code-vb[vbVarianceKeywords#3](../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/out-generic-modifier_1.vb)]  
+ [!code-vb[vbVarianceKeywords#3](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/out-generic-modifier_1.vb)]  
   
 ## 예제  
  다음 예제에서는 공변\(covariant\) 제네릭 대리자를 선언, 인스턴스화 및 호출하는 방법을 보여 줍니다.  또한 대리자 형식을 암시적으로 변환하는 방법도 보여 줍니다.  
   
- [!code-vb[vbVarianceKeywords#4](../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/out-generic-modifier_2.vb)]  
+ [!code-vb[vbVarianceKeywords#4](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/out-generic-modifier_2.vb)]  
   
 ## 참고 항목  
  [제네릭 인터페이스의 가변성](../Topic/Variance%20in%20Generic%20Interfaces%20\(C%23%20and%20Visual%20Basic\).md)   

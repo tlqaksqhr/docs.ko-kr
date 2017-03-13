@@ -44,7 +44,7 @@ caps.handback.revision: 13
 ## 예제  
  다음 예제에서는 `<remarks>` 태그를 사용하여 `UpdateRecord` 메서드의 기능을 설명합니다.  
   
- [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/remarks_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/remarks_1.vb)]  
   
 ## 참고 항목  
  [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

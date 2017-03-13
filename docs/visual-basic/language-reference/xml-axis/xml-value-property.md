@@ -60,7 +60,7 @@ object.Value
 ## 예제  
  다음 예제에서는 <xref:System.Xml.Linq.XElement.Value%2A> 속성을 사용하여 <xref:System.Xml.Linq.XElement> 개체의 컬렉션에 있는 첫 번째 노드에 액세스하는 방법을 보여 줍니다.  이 예제에서는 자식 축 속성을 사용하여 `contact` 개체에 있는 `phone`이라는 모든 자식 노드의 컬렉션을 가져옵니다.  
   
- [!code-vb[VbXMLSamples#15](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-value-property_1.vb)]  
+ [!code-vb[VbXMLSamples#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_1.vb)]  
   
  이 코드가 표시하는 텍스트는 다음과 같습니다.  
   
@@ -69,7 +69,7 @@ object.Value
 ## 예제  
  다음 예제에서는 <xref:System.Xml.Linq.XAttribute> 개체의 컬렉션에서 XML 특성 값을 가져오는 방법을 보여 줍니다.  이 예제에서는 특성 축 속성을 사용하여 모든 `phone` 요소의 `type` 특성 값을 표시합니다.  
   
- [!code-vb[VbXMLSamples#16](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-value-property_2.vb)]  
+ [!code-vb[VbXMLSamples#16](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_2.vb)]  
   
  이 코드가 표시하는 텍스트는 다음과 같습니다.  
   

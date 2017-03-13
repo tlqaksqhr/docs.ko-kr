@@ -30,19 +30,19 @@ caps.handback.revision: 24
   
 -   `DeleteFile` 메서드를 사용하여 파일을 삭제합니다.  다음 코드에서는 `test.txt`라는 이름의 파일을 삭제하는 방법을 보여 줍니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#22](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-delete-a-file_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#22](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-delete-a-file_1.vb)]  
   
 ### 텍스트 파일을 삭제하고 사용자에게 파일을 삭제할 것인지 확인하려면  
   
 -   `DeleteFile` 메서드를 사용하여 `showUI`를 `AllDialogs`로 설정하여 파일을 삭제합니다.  다음 코드에서는 `test.txt`라는 파일을 삭제하고 사용자에게 파일을 삭제할 것인지 확인하는 방법을 보여 줍니다.  
   
-     [!code-vb[VbFileIOMisc#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-delete-a-file_2.vb)]  
+     [!code-vb[VbFileIOMisc#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-delete-a-file_2.vb)]  
   
 ### 텍스트 파일을 삭제하고 휴지통으로 보내려면  
   
 -   `DeleteFile` 메서드를 사용하여 `recycle` 매개 변수에 `SendToRecycleBin`을 지정하여 파일을 삭제합니다.  다음 코드에서는 `test.txt`라는 파일을 삭제하고 **휴지통**으로 보내는 방법을 보여 줍니다.  
   
-     [!code-vb[VbFileIOMisc#10](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-delete-a-file_3.vb)]  
+     [!code-vb[VbFileIOMisc#10](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-delete-a-file_3.vb)]  
   
 ## 강력한 프로그래밍  
  다음 조건에서 예외가 발생할 수 있습니다.  

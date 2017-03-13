@@ -43,15 +43,15 @@ caps.handback.revision: 9
   
  다음 예제와 같이 값을 비교하는 식은 `If...Then` 구문에서 가장 일반적으로 사용됩니다.  
   
- [!code-vb[VbVbalrOperators#84](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/value-comparisons_1.vb)]  
+ [!code-vb[VbVbalrOperators#84](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_1.vb)]  
   
  `=` 기호는 할당 연산자뿐만 아니라 비교 연산자입니다.  다음 예제와 같이 비교 연산자로 사용되는 경우에는 왼쪽의 값이 오른쪽의 값과 같은지 여부를 확인합니다.  
   
- [!code-vb[VbVbalrOperators#85](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/value-comparisons_2.vb)]  
+ [!code-vb[VbVbalrOperators#85](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_2.vb)]  
   
  또한 `If`, `While`, `Loop` 또는 `ElseIf` 문과 같이 `Boolean` 값이 필요한 모든 경우 또는 `Boolean` 변수에 값을 할당하거나 전달하는 경우 비교 식을 사용할 수 있습니다.  다음 예제에서는 비교 식에서 반환된 값이 `Boolean` 변수에 할당됩니다.  
   
- [!code-vb[VbVbalrOperators#86](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/value-comparisons_3.vb)]  
+ [!code-vb[VbVbalrOperators#86](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/value-comparisons_3.vb)]  
   
 ## 참고 항목  
  [Boolean Expressions](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)   

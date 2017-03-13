@@ -93,7 +93,7 @@ End Set
 ## 예제  
  다음 예제에서는 `Set` 문을 사용하여 속성 값을 설정합니다.  
   
- [!code-vb[VbVbalrStatements#55](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/set-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#55](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/set-statement_1.vb)]  
   
 ## 참고 항목  
  [Get Statement](../../../visual-basic/language-reference/statements/get-statement.md)   

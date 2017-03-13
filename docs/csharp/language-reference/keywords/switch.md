@@ -28,7 +28,7 @@ caps.handback.revision: 47
   
  `switch` 문에는 스위치 섹션이 하나 이상 포함됩니다.  각 스위치 섹션에는 하나 이상의 *case 레이블* 및 하나 이상의 문이 있습니다.  다음 예제에서는 세 개의 스위치 섹션이 있는 간단한 `switch` 문을 보여 줍니다.  각 스위치 섹션에는 `case 1`과 같은 하나의 case 레이블과 두 개의 문이 있습니다.  
   
- [!code-cs[csrefKeywordsSelection#7](../../../csharp/language-reference/keywords/codesnippet/csharp/switch_1.cs)]  
+ [!code-cs[csrefKeywordsSelection#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/switch_1.cs)]  
   
 ## 설명  
  각 case 레이블은 상수 값을 지정합니다.  switch 문은 case 레이블과 *switch 식*의 값\(위의 예제에서 `caseSwitch`\)이 일치하는 스위치 섹션으로 제어를 보냅니다.  일치하는 값이 들어 있는 case 레이블이 없는 경우 `default` 섹션\(있는 경우\)으로 제어를 보냅니다.  `default` 섹션이 없으면 어떠한 작업도 수행되지 않으며 `switch` 문 외부로 제어를 보냅니다.  이전 예제에서는 `case 1`이 `caseSwitch` 값과 일치하기 때문에 첫 번째 스위치 섹션의 문이 실행됩니다.  
@@ -63,12 +63,12 @@ case 4:
 ## 예제  
  다음 예제에서는 `switch` 문의 요구 사항과 기능을 보여 줍니다.  
   
- [!code-cs[csrefKeywordsSelection#9](../../../csharp/language-reference/keywords/codesnippet/csharp/switch_2.cs)]  
+ [!code-cs[csrefKeywordsSelection#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/switch_2.cs)]  
   
 ## 예제  
  마지막 예제에서는 문자열 변수 `str` 및 문자열 case 레이블이 실행 흐름을 제어합니다.  
   
- [!code-cs[csrefKeywordsSelection#8](../../../csharp/language-reference/keywords/codesnippet/csharp/switch_3.cs)]  
+ [!code-cs[csrefKeywordsSelection#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/switch_3.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

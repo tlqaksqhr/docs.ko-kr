@@ -82,7 +82,7 @@ LINQ\(통합 언어 쿼리\)를 사용하면 손쉽게 데이터베이스 정보
   
      다음 코드를 `Load` 이벤트에 추가하여 <xref:System.Data.Linq.DataContext>의 속성으로 노출된 테이블을 쿼리하고 결과의 개수, 합 및 평균을 계산합니다.  샘플에서는 `Aggregate` 절을 사용하여 단일 결과를 쿼리하고 `Group By` 절을 사용하여 그룹화된 결과의 평균을 표시합니다.  
   
-     [!code-vb[VbLINQToSQLHowTos#13](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form6.vb#13)]  
+     [!code-vb[VbLINQToSQLHowTos#13](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-count-sum-or-average-data-by-using-linq_1.vb)]  
   
 4.  F5 키를 눌러 프로젝트를 실행하고 결과를 봅니다.  
   

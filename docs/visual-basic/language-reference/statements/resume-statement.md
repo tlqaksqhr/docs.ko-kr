@@ -63,7 +63,7 @@ Resume [ Next | line ]
 ## 예제  
  다음 예제에서는 `Resume` 문을 사용하여 프로시저에서 오류 처리를 중지하고 오류를 일으킨 문에서 실행을 다시 시작합니다.  `Resume` 문의 사용법을 설명하기 위해 오류 번호 55가 생성됩니다.  
   
- [!code-vb[VbVbalrErrorHandling#16](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/resume-statement_1.vb)]  
+ [!code-vb[VbVbalrErrorHandling#16](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/resume-statement_1.vb)]  
   
 ## 요구 사항  
  **네임스페이스:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  

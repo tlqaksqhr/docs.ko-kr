@@ -26,9 +26,9 @@ caps.handback.revision: 30
   
  **파일 열기** 대화 상자는 확장명이 .wav인 파일만 표시하기 위해 다음과 같은 필터 설정을 사용하여 필터링됩니다.  
   
- [!code-cs[csProgGuideInterop#5](../../../csharp/programming-guide/interop/codesnippet/csharp/how-to-use-platform-invo_1.cs)]  
+ [!code-cs[csProgGuideInterop#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-platform-invoke-to-play-a-wave-file_1.cs)]  
   
- [!code-cs[csProgGuideInterop#3](../../../csharp/programming-guide/interop/codesnippet/csharp/how-to-use-platform-invo_2.cs)]  
+ [!code-cs[csProgGuideInterop#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-platform-invoke-to-play-a-wave-file_2.cs)]  
   
 ## 코드 컴파일  
   
@@ -40,7 +40,7 @@ caps.handback.revision: 30
   
 3.  다음 코드를 복사하여 `Form1.Designer.cs` 파일의 `InitializeComponent()` 메서드에서 기존 코드 뒤에 붙여넣습니다.  
   
-     [!code-cs[csProgGuideInterop#4](../../../csharp/programming-guide/interop/codesnippet/csharp/how-to-use-platform-invo_3.cs)]  
+     [!code-cs[csProgGuideInterop#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-platform-invoke-to-play-a-wave-file_3.cs)]  
   
 4.  코드를 컴파일하고 실행합니다.  
   

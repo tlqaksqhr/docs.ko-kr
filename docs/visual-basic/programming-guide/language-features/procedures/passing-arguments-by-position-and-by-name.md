@@ -45,28 +45,28 @@ caps.handback.revision: 13
   
  예를 들어, 다음 `Sub` 프로시저는 세 개의 인수를 받습니다.  
   
- [!code-vb[VbVbcnProcedures#41](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/passing-arguments-by-pos_1.vb)]  
+ [!code-vb[VbVbcnProcedures#41](./codesnippet/VisualBasic/passing-arguments-by-position-and-by-name_1.vb)]  
   
  이 프로시저를 호출할 경우 위치나 이름으로, 또는 둘을 혼합 사용하여 인수를 제공할 수 있습니다.  
   
 ## 위치로 인수 전달  
  다음 예제에서처럼 쉼표로 구분한 위치로 인수를 전달하여 `studentInfo` 프로시저를 호출할 수 있습니다.  
   
- [!code-vb[VbVbcnProcedures#42](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/passing-arguments-by-pos_2.vb)]  
+ [!code-vb[VbVbcnProcedures#42](./codesnippet/VisualBasic/passing-arguments-by-position-and-by-name_2.vb)]  
   
  위치 인수 목록에서 선택적 인수를 생략하는 경우 쉼표를 사용하여 그 위치를 남겨두어야 합니다.  다음 예제에서는 `age` 인수 없이`studentInfo`를 호출합니다.  
   
- [!code-vb[VbVbcnProcedures#43](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/passing-arguments-by-pos_3.vb)]  
+ [!code-vb[VbVbcnProcedures#43](./codesnippet/VisualBasic/passing-arguments-by-position-and-by-name_3.vb)]  
   
 ## 이름으로 인수 전달  
  또한 다음 예제에서처럼 쉼표로 구분한 이름으로 인수를 전달하여 `studentInfo`  프로시저를 호출할 수 있습니다.  
   
- [!code-vb[VbVbcnProcedures#44](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/passing-arguments-by-pos_4.vb)]  
+ [!code-vb[VbVbcnProcedures#44](./codesnippet/VisualBasic/passing-arguments-by-position-and-by-name_4.vb)]  
   
 ## 위치 및 이름을 함께 사용하여 인수 전달  
  다음 예제에서처럼, 하나의 프로시저 호출에서 위치와 이름을 모두 사용하여 인수를 제공할 수 있습니다.  
   
- [!code-vb[VbVbcnProcedures#45](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/passing-arguments-by-pos_5.vb)]  
+ [!code-vb[VbVbcnProcedures#45](./codesnippet/VisualBasic/passing-arguments-by-position-and-by-name_5.vb)]  
   
  위 예제에서는 `birth`가 이름으로 전달되므로 생략된 `age` 인수의 위치를 쉼표로 남겨두지 않아도 됩니다.  
   

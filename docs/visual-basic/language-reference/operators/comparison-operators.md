@@ -155,7 +155,7 @@ result = string Like pattern
 ## 예제  
  다음 예제에서는 관계 비교 연산자를 사용하여 식을 비교하는 여러 가지 방법을 보여 줍니다.  관계 비교 연산자는 식이 `True`인지 여부를 나타내는 `Boolean` 결과를 반환합니다.  `>` 및 `<` 연산자를 문자열에 적용하면 해당 문자열이 표준 사전순으로 비교됩니다.  이 순서는 로캘 설정에 따라 달라질 수 있습니다.  정렬 순서의 대\/소문자 구분 여부는[Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)설정에 따라 결정됩니다.  
   
- [!code-vb[VbVbalrOperators#1](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/comparison-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#1](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_1.vb)]  
   
  위 예제에서 첫 번째 비교는 `False`를 반환하고 나머지 비교는 `True`를 반환합니다.  
   

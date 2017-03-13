@@ -79,7 +79,7 @@ caps.handback.revision: 30
 ## 예제  
  다음 예제에서는 클래스의 필드, 생성자 및 메서드 선언을 보여 줍니다.  또한 개체를 인스턴스화하는 것과 인스턴스 데이터를 출력하는 것을 보여 줍니다.  이 예제에서는 두 개의 클래스를 선언합니다. 첫째 클래스인 `Child` 클래스에는 두 개의 private 필드\(`name` 및 `age`\)와 두 개의 public 메서드가 있습니다.  두 번째 클래스인 `StringTest`는 `Main`을 포함하는 데 사용됩니다.  
   
- [!code-cs[csrefKeywordsTypes#5](../../../csharp/language-reference/keywords/codesnippet/csharp/class_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/class_1.cs)]  
   
 ## 설명  
  앞의 예제에서 private 필드\(`name` 및 `age`\)는 `Child` 클래스의 public 메서드를 통해서만 액세스할 수 있습니다.  예를 들어 다음과 같은 문을 사용하면 `Main` 메서드에서 자식의 이름을 출력할 수 없습니다.  

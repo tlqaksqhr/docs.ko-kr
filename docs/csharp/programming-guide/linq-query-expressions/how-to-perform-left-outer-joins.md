@@ -15,7 +15,7 @@ caps.handback.revision: 23
 > [!NOTE]
 >  기본값은 참조 형식에 대 한 `null`. 따라서 예제 각각의 각 요소에 액세스 하기 전에 null 참조를 확인 합니다. `Pet` 컬렉션입니다.  
   
- [!code-cs[CsLINQProgJoining#7](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#7)]  
+ [!code-cs[CsLINQProgJoining#7](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-left-outer-joins_1.cs)]  
   
 ## 코드 컴파일  
   

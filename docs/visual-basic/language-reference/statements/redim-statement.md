@@ -96,7 +96,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
 ## 예제  
  다음 예제에서는 배열의 기존 데이터를 손실하지 않고 동적 배열의 마지막 차원 크기를 늘린 다음 데이터를 부분적으로 손실하며 크기를 줄입니다.  마지막으로 크기를 원래 값으로 다시 줄이고 모든 배열 요소를 다시 초기화합니다.  
   
- [!code-vb[VbVbalrStatements#52](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/redim-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#52](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/redim-statement_1.vb)]  
   
  `Dim` 문은 차원이 세 개인 새 배열을 만듭니다.  각 차원은 범위 10으로 선언되므로 각 차원의 배열 인덱스는 0에서 10까지의 범위일 수 있습니다.  다음 설명에서는 세 개의 차원이 계층, 행 및 열로 지칭됩니다.  
   

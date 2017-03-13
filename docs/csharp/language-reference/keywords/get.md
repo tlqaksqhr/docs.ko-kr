@@ -23,11 +23,11 @@ caps.handback.revision: 11
   
  다음은 `Seconds`라는 속성의 `get` 접근자 예제입니다.  
   
- [!code-cs[csrefKeywordsContextual#1](../../../csharp/language-reference/keywords/codesnippet/csharp/get_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/get_1.cs)]  
   
  다음은 자동으로 구현된 속성의 `get` 접근자에 대한 예제입니다.  
   
- [!code-cs[csrefKeywordsContextual#2](../../../csharp/language-reference/keywords/codesnippet/csharp/get_2.cs)]  
+ [!code-cs[csrefKeywordsContextual#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/get_2.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

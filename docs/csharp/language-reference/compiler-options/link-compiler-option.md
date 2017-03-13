@@ -65,18 +65,18 @@ caps.handback.revision: 13
 ### 제네릭 인터페이스  
  interop 어셈블리에서 포함된 제네릭 인터페이스는 사용할 수 없습니다.  다음 예제에서 이를 확인할 수 있습니다.  
   
- [!code-cs[VbLinkCompilerCS#1](../../../csharp/language-reference/compiler-options/codesnippet/csharp/vblinkcompilercs/program.cs#1)]  
+ [!code-cs[VbLinkCompilerCS#1](../../../csharp/language-reference/compiler-options/codesnippet/CSharp/link-compiler-option_1.cs)]  
   
 ### 제네릭 매개 변수가 있는 형식  
  interop 어셈블리에서 포함된 형식이 외부 어셈블리에서 온 경우 해당 형식의 제네릭 매개 변수를 가지는 형식은 사용할 수 없습니다.  이러한 제한은 인터페이스에 적용되지 않습니다.  예를 들어 <xref:Microsoft.Office.Interop.Excel> 어셈블리에 정의된 <xref:Microsoft.Office.Interop.Excel.Range> 인터페이스를 생각해 볼 수 있습니다.  라이브러리에서 <xref:Microsoft.Office.Interop.Excel> 어셈블리의 interop 형식을 포함한 후 <xref:Microsoft.Office.Interop.Excel.Range> 인터페이스 형식의 매개 변수가 있는 제네릭 형식을 반환하는 메서드를 노출하는 경우 해당 메서드는 다음 코드 예제에서와 같이 제네릭 인터페이스를 반환해야 합니다.  
   
- [!code-cs[VbLinkCompilerCS#2](../../../csharp/language-reference/compiler-options/codesnippet/csharp/vblinkcompilercs/utility.cs#2)]  
-[!code-cs[VbLinkCompilerCS#3](../../../csharp/language-reference/compiler-options/codesnippet/csharp/vblinkcompilercs/utility.cs#3)]  
-[!code-cs[VbLinkCompilerCS#4](../../../csharp/language-reference/compiler-options/codesnippet/csharp/vblinkcompilercs/utility.cs#4)]  
+ [!code-cs[VbLinkCompilerCS#2](../../../csharp/language-reference/compiler-options/codesnippet/CSharp/link-compiler-option_2.cs)]  
+[!code-cs[VbLinkCompilerCS#3](../../../csharp/language-reference/compiler-options/codesnippet/CSharp/link-compiler-option_3.cs)]  
+[!code-cs[VbLinkCompilerCS#4](../../../csharp/language-reference/compiler-options/codesnippet/CSharp/link-compiler-option_4.cs)]  
   
  다음 예제에서 클라이언트 코드는 오류 없이 <xref:System.Collections.IList> 제네릭 인터페이스를 반환하는 메서드를 호출할 수 있습니다.  
   
- [!code-cs[VbLinkCompilerCS#5](../../../csharp/language-reference/compiler-options/codesnippet/csharp/vblinkcompilercs/program.cs#5)]  
+ [!code-cs[VbLinkCompilerCS#5](../../../csharp/language-reference/compiler-options/codesnippet/CSharp/link-compiler-option_5.cs)]  
   
 ## 예제  
  다음 코드에서는 소스 파일 `OfficeApp.cs`를 컴파일하고 `COMData1.dll` 및 `COMData2.dll`의 어셈블리를 참조하여 `OfficeApp.exe`를 생성합니다.  

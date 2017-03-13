@@ -30,7 +30,7 @@ caps.handback.revision: 15
   
      [!INCLUDE[csprcs](../../../csharp/includes/csprcs-md.md)]에서 자동으로 빈 이벤트 처리기 메서드가 만들어져 코드에 추가됩니다.  또는 사용자가 직접 **코드** 뷰에서 코드를 추가할 수 있습니다.  예를 들어, 다음 코드 줄에서는 `Form` 클래스에서 `Load` 이벤트를 발생시킬 때 호출되는 이벤트 처리기 메서드를 선언합니다.  
   
-     [!code-cs[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/csharp/how-to-subscribe-to-and-_1.cs)]  
+     [!code-cs[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-subscribe-to-and-unsubscribe-from-events_1.cs)]  
   
      이벤트를 구독하는 데 필요한 코드 줄은 프로젝트의 Form1.Designer.cs 파일에 있는 `InitializeComponent` 메서드에서도 자동으로 생성됩니다.  이 코드 줄은 다음과 같습니다.  
   

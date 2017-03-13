@@ -16,7 +16,7 @@ caps.handback.revision: 13
  쿼리 결과를 저장하는 경우 다음의 예제와 같이 새 변수에 반환된 컬렉션 개체를 할당하는 것이 좋습니다.  
   
 ## 예제  
- [!code-cs[csProgGuideLINQ#25](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#25)]  
+ [!code-cs[csProgGuideLINQ#25](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-store-the-results-of-a-query-in-memory_1.cs)]  
   
 ## 코드 컴파일  
   

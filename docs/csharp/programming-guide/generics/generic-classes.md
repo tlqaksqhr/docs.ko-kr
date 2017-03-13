@@ -43,27 +43,27 @@ caps.handback.revision: 30
   
  형식 매개 변수와 제약 조건에 대한 규칙은 제네릭 클래스 동작에서 특히 상속과 멤버 액세스 가능성에 대해 몇 가지 영향을 줍니다.  계속하려면 몇 가지 용어를 이해하고 있어야 합니다.  `Node<T>,` 제네릭 클래스의 경우 클라이언트 코드에서는 형식 인수를 지정하여 폐쇄형 생성 형식\(`Node<int>`\)을 만드는 방법으로 클래스를 참조하거나,  제네릭 기본 클래스를 지정하는 경우와 같이 형식 매개 변수를 지정하지 않고 개방형 생성 형식\(`Node<T>`\)을 만드는 방법으로 클래스를 참조할 수 있습니다.  제네릭 클래스는 구체적인 클래스, 폐쇄형 구성 클래스 또는 개방형 구성 기본 클래스에서 상속할 수 있습니다.  
   
- [!code-cs[csProgGuideGenerics#16](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-classes_1.cs)]  
+ [!code-cs[csProgGuideGenerics#16](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_1.cs)]  
   
  제네릭이 아닌 구체적인 클래스는 폐쇄형 생성 기본 클래스에서는 상속할 수 있지만 개방형 생성 클래스 또는 형식 매개 변수에서는 상속할 수 없습니다. 이는 런타임에 클라이언트 코드에서 기본 클래스를 인스턴스화할 때 필요한 형식 인수를 제공할 수 없기 때문입니다.  
   
- [!code-cs[csProgGuideGenerics#17](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-classes_2.cs)]  
+ [!code-cs[csProgGuideGenerics#17](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_2.cs)]  
   
  개방형 생성 형식에서 상속하는 제네릭 클래스에서는 다음 코드와 같이 상속하는 클래스에서 공유하지 않는 모든 기본 클래스 형식 매개 변수에 대해 형식 인수를 제공해야 합니다.  
   
- [!code-cs[csProgGuideGenerics#18](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-classes_3.cs)]  
+ [!code-cs[csProgGuideGenerics#18](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_3.cs)]  
   
  개방형 생성 형식에서 상속하는 제네릭 클래스에서는 기본 형식에 대한 제약 조건을 포함하거나 암시하는 제약 조건을 지정해야 합니다.  
   
- [!code-cs[csProgGuideGenerics#19](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-classes_4.cs)]  
+ [!code-cs[csProgGuideGenerics#19](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_4.cs)]  
   
  제네릭 형식은 다음과 같이 여러 형식 매개 변수 및 제약 조건을 사용할 수 있습니다.  
   
- [!code-cs[csProgGuideGenerics#20](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-classes_5.cs)]  
+ [!code-cs[csProgGuideGenerics#20](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_5.cs)]  
   
  개방형 생성 형식 및 폐쇄형 생성 형식은 메서드 매개 변수로 사용될 수 있습니다.  
   
- [!code-cs[csProgGuideGenerics#21](../../../csharp/programming-guide/generics/codesnippet/csharp/generic-classes_6.cs)]  
+ [!code-cs[csProgGuideGenerics#21](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-classes_6.cs)]  
   
  제네릭 클래스에서 인터페이스를 구현하면 이 클래스의 모든 인스턴스를 해당 인터페이스에 캐스팅할 수 있습니다.  
   

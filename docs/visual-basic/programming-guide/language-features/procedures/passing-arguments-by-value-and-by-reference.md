@@ -75,7 +75,7 @@ caps.handback.revision: 23
  다음 예제에서는 인수를 값으로 전달해야 하는 경우와 참조로 전달해야 하는 경우를 보여 줍니다.  `Calculate` 프로시저에는 `ByVal` 매개 변수와 `ByRef` 매개 변수가 모두 있습니다.  이율인 `rate`와 금액 합계인 `debt`가 지정되면 프로시저는 `debt`의 원래 값에 이율을 적용한 결과인 `debt`의 새 값을 계산합니다.  `debt`가 `ByRef` 매개 변수이므로 새 합계는 `debt`에 해당하는 호출 코드의 인수 값에 반영됩니다.  `rate` 매개 변수는 `Calculate`에서 해당 값을 변경하지 않아야 하므로 `ByVal` 매개 변수입니다.  
   
 ### 코드  
- [!code-vb[VbVbcnProcedures#74](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/passing-arguments-by-val_1.vb)]  
+ [!code-vb[VbVbcnProcedures#74](./codesnippet/VisualBasic/passing-arguments-by-value-and-by-reference_1.vb)]  
   
 ## 참고 항목  
  [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

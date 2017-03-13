@@ -30,11 +30,11 @@ caps.handback.revision: 11
   
 1.  사용하고자 하는 특정 형식의 매개 변수를 선언합니다. 예를 들면 다음과 같습니다.  
   
-     [!code-vb[VbVbalrStatements#95](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/as-any-is-not-supported-_1.vb)]  
+     [!code-vb[VbVbalrStatements#95](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/as-any-is-not-supported-in-declare-statements_1.vb)]  
   
 2.  <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성을 사용하여, 호출할 프로시저에 `Void*`가 필요할 때 `As Any`를 지정합니다.  
   
-     [!code-vb[VbVbalrStatements#96](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/as-any-is-not-supported-_2.vb)]  
+     [!code-vb[VbVbalrStatements#96](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/as-any-is-not-supported-in-declare-statements_2.vb)]  
   
 ## 참고 항목  
  <xref:System.Runtime.InteropServices.MarshalAsAttribute>   

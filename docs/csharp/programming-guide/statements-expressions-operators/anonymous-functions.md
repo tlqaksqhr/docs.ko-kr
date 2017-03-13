@@ -34,7 +34,7 @@ caps.handback.revision: 14
   
  다음 예제에서는 C\# 1.0부터 C\# 3.0까지 대리자 생성의 발전 과정을 보여 줍니다.  
   
- [!code-cs[csProgGuideLINQ#65](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#65)]  
+ [!code-cs[csProgGuideLINQ#65](../../../csharp/programming-guide/arrays/codesnippet/CSharp/anonymous-functions_1.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

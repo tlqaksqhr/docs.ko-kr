@@ -30,7 +30,7 @@ caps.handback.revision: 19
   
 -   예를 들어, 비슷한 이름으로 숨겨진 멤버를 지정하는 방법은 다음과 같습니다.  
   
- [!code-cs[csrefKeywordsAccess#4](../../../csharp/language-reference/keywords/codesnippet/csharp/this_1.cs)]  
+ [!code-cs[csrefKeywordsAccess#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/this_1.cs)]  
   
 -   개체를 다른 메서드의 매개 변수로 전달하는 방법은 다음과 같습니다.  
   
@@ -40,14 +40,14 @@ caps.handback.revision: 19
   
 -   인덱서를 선언하는 방법은 다음과 같습니다.  
   
- [!code-cs[csrefKeywordsAccess#5](../../../csharp/language-reference/keywords/codesnippet/csharp/this_2.cs)]  
+ [!code-cs[csrefKeywordsAccess#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/this_2.cs)]  
   
  클래스 수준에서 작성되고 개체의 일부로 포함되지 않는 정적 멤버 함수에는 `this` 포인터가 없습니다.  정적 메서드에서 `this`를 참조하려고 하면 오류가 발생합니다.  
   
 ## 예제  
  이 예제에서 `this`는 비슷한 이름으로 숨겨진 `Employee` 클래스 멤버\(`name`, `alias`\)를 한정하는 데 사용됩니다.  또한 다른 클래스에 속한 `CalcTax` 메서드로 개체를 전달하는 데 사용됩니다.  
   
- [!code-cs[csrefKeywordsAccess#3](../../../csharp/language-reference/keywords/codesnippet/csharp/this_3.cs)]  
+ [!code-cs[csrefKeywordsAccess#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/this_3.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

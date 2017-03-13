@@ -38,7 +38,7 @@ caps.handback.revision: 11
 ## 형식 유추  
  형식 인수를 전혀 제공하지 않고 제네릭 프로시저를 호출할 수 있습니다.  이러한 방식으로 제네릭 프로시저를 호출하는 경우 컴파일러가 프로시저의 형식 인수에 전달할 적합한 데이터 형식을 결정하려고 시도합니다.  이를 *형식 유추*라고 합니다.  다음 코드에서는 컴파일러가 `String` 형식을 `t` 형식 매개 변수로 전달해야 하는 것으로 유추하는 호출을 보여 줍니다.  
   
- [!code-vb[VbVbalrDataTypes#15](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-procedures_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#15](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_1.vb)]  
   
  컴파일러가 호출 컨텍스트에서 형식 인수를 유추할 수 없는 경우 오류를 보고합니다.  예를 들어, 배열 차수가 일치하지 않는 경우 이 오류가 발생합니다.  예를 들어, 일반 매개 변수를 형식 매개 변수의 배열로 정의하는 것으로 가정합니다.  다른 차수\(차원 수\)의 배열을 제공하여 제네릭 프로시저를 호출하는 경우 차수가 일치하지 않으면 형식을 유추할 수 없습니다.  다음 코드에서는 1차원 배열을 예상하는 프로시저에 2차원 배열을 전달하는 호출을 보여 줍니다.  
   
@@ -64,14 +64,14 @@ caps.handback.revision: 11
  다음 예제에서는 배열에서 특정 요소를 찾는 제네릭 `Function` 프로시저를 정의합니다.  여기에서는 하나의 형식 매개 변수를 정의하고 이 매개 변수를 사용하여 매개 변수 목록에 두 매개 변수를 만듭니다.  
   
 ### 코드  
- [!code-vb[VbVbalrDataTypes#14](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-procedures_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#14](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_2.vb)]  
   
 ### 설명  
  앞의 예제에서는 `searchArray`의 각 요소에 대해 `searchValue`를 비교할 수 있는 기능이 필요합니다.  이 예제에서는 이 기능을 사용하기 위해 `T` 형식 매개 변수가 <xref:System.IComparable%601> 인터페이스를 구현하도록 제한합니다.  `T`에 제공된 형식 인수는 `=` 연산자를 지원하지 않을 수 있으므로 이 코드는 `=` 연산자 대신 <xref:System.IComparable%601.CompareTo%2A> 메서드를 사용합니다.  
   
  다음 코드를 사용하여 `findElement` 프로시저를 테스트할 수 있습니다.  
   
- [!code-vb[VbVbalrDataTypes#13](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/generic-procedures_3.vb)]  
+ [!code-vb[VbVbalrDataTypes#13](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-procedures_3.vb)]  
   
  앞에서 `MsgBox`를 호출하면 각각 "0", "1" 및 "\-1"이 표시됩니다.  
   

@@ -31,11 +31,11 @@ private fixed char name[30];
   
  예를 들어, C\# 2.0 이전에는 다음 `struct`는 8 바이트 크기가 됩니다.  `pathName` 배열은 힙에 할당된 배열 참조입니다.  
   
- [!code-cs[csProgGuidePointers#19](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#19)]  
+ [!code-cs[csProgGuidePointers#19](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/fixed-size-buffers_1.cs)]  
   
  C\# 2.0부터 `struct`에 포함된 배열을 포함할 수 있습니다.  다음 예제에서는 `fixedBuffer` 배열의 크기가 고정되어 있습니다.  배열의 요소에 액세스하려면 `fixed` 문을 사용하여 첫 번째 요소에 대한 포인터를 설정합니다.  `fixed` 문은 `fixedBuffer`의 인스턴스를 메모리의 특정 위치에 고정합니다.  
   
- [!code-cs[csProgGuidePointers#20](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#20)]  
+ [!code-cs[csProgGuidePointers#20](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/fixed-size-buffers_2.cs)]  
   
  128 요소 `char` 배열의 크기는 256바이트입니다.  고정 크기 [char](../../../csharp/language-reference/keywords/char.md) 버퍼에는 인코딩과 상관없이 문자 당 항상 2바이트가 사용됩니다.  이는 `CharSet = CharSet.Auto` 또는 `CharSet = CharSet.Ansi`를 사용하여 char 버퍼를 API 메서드나 구조체로 마샬링하는 경우에도 마찬가지입니다.  자세한 내용은 <xref:System.Runtime.InteropServices.CharSet>를 참조하십시오.  
   

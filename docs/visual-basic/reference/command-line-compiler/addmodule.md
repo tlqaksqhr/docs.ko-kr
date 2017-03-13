@@ -49,11 +49,11 @@ caps.handback.revision: 14
 ## 예제  
  다음 코드에서는 모듈을 만듭니다.  
   
- [!code-vb[VbVbalrCompiler#47](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/addmodule_1.vb)]  
+ [!code-vb[VbVbalrCompiler#47](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/addmodule_1.vb)]  
   
  다음 코드에서는 모듈의 형식을 가져옵니다.  
   
- [!code-vb[VbVbalrCompiler#48](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/addmodule_2.vb)]  
+ [!code-vb[VbVbalrCompiler#48](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/addmodule_2.vb)]  
   
  `t1` 을 실행하면 `802`가 출력됩니다.  
   

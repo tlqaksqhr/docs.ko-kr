@@ -51,7 +51,7 @@ caps.handback.revision: 15
 ## 예제  
  다음 예제에서는 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Interaction.Environ%2A>를 호출하여 운영 체제 환경 변수의 값을 가져옵니다.  첫째 줄에서는 `Environ`을 식에서 호출하고 둘째 줄에서는 이를 대입문에서 호출합니다.  `Environ`에서는 변수 이름이 유일한 인수로 사용되며,  변수의 값이 호출 코드로 반환됩니다.  
   
- [!code-vb[VbVbcnProcedures#7](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-call-a-procedure-_0_1.vb)]  
+ [!code-vb[VbVbcnProcedures#7](./codesnippet/VisualBasic/how-to-call-a-procedure-that-returns-a-value_1.vb)]  
   
 ## 참고 항목  
  [Function 프로시저](../../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)   

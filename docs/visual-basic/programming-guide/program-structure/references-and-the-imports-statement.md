@@ -45,15 +45,15 @@ caps.handback.revision: 12
 ## Imports 문에서의 별칭 사용  
  `Imports` 문을 사용하면 참조의 정규화된 이름을 명시적으로 입력할 필요가 없기 때문에 클래스의 메서드에 더 쉽게 액세스할 수 있습니다.  별칭을 사용하면 네임스페이스의 한 부분에 보다 익숙한 이름을 할당할 수 있습니다.  예를 들어, 단일 텍스트가 여러 줄에 표시되도록 하는 캐리지 리턴\/줄 바꿈 시퀀스는 <xref:Microsoft.VisualBasic?displayProperty=fullName> 네임스페이스에 있는 <xref:Microsoft.VisualBasic.ControlChars> 모듈의 일부입니다.  이 상수를 별칭 없이 프로그램에서 사용하려면 다음 코드를 입력해야 합니다.  
   
- [!code-vb[VbVbalrApplication#3](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/references-and-the-impor_1.vb)]  
+ [!code-vb[VbVbalrApplication#3](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_1.vb)]  
   
  `Imports` 문은 반드시 모듈의 `Option` 문 바로 다음에 위치해야 합니다.  다음 코드 조각에서는 별칭을 <xref:Microsoft.VisualBasic.ControlChars?displayProperty=fullName> 모듈로 가져와서 할당하는 방법을 보여 줍니다.  
   
- [!code-vb[VbVbalrApplication#4](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/references-and-the-impor_2.vb)]  
+ [!code-vb[VbVbalrApplication#4](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_2.vb)]  
   
  이렇게 하면 네임스페이스에 대한 참조가 더욱 짧아집니다.  
   
- [!code-vb[VbVbalrApplication#5](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/references-and-the-impor_3.vb)]  
+ [!code-vb[VbVbalrApplication#5](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/references-and-the-imports-statement_3.vb)]  
   
  `Imports` 문에 별칭 이름을 지정하지 않은 경우 가져온 네임스페이스 내에 정의된 요소들을 한정자 없이 모듈에서 사용할 수 있습니다.  그러나 별칭 이름을 지정한 경우에는 이 이름을 해당 네임스페이스 내에 포함된 이름에 대한 한정자로 사용해야 합니다.  
   

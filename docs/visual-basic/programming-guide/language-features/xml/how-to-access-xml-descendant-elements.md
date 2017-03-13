@@ -28,7 +28,7 @@ caps.handback.revision: 19
 이 예제에서는 하위 항목 축 속성을 사용하여 지정된 이름이 있는 XML 요소 아래에 포함된 모든 XML 요소에 액세스하는 방법을 보여 줍니다.  특히 `Value` 속성을 사용하여 `name` 하위 항목 축 속성에서 반환하는 컬렉션의 첫 번째 요소 값을 가져옵니다.  `name` 하위 항목 축 속성은 `contacts` 개체에 포함된 `name`이라는 모든 요소를 가져옵니다.  또한 이 예제에서는 `phone` 하위 항목 축 속성을 사용하여 `contacts` 개체에 포함된 `phone`이라는 모든 하위 항목에 액세스합니다.  
   
 ## 예제  
- [!code-vb[VbXMLSamples#31](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-access-xml-descen_1.vb)]  
+ [!code-vb[VbXMLSamples#31](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-access-xml-descendant-elements_1.vb)]  
   
 ## 코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  

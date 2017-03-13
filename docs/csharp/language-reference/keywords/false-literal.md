@@ -19,7 +19,7 @@ caps.handback.revision: 15
 부울 값 false를 나타냅니다.  
   
 ## 예제  
- [!code-cs[csrefKeywordsOperator#3](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#3)]  
+ [!code-cs[csrefKeywordsOperator#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/false-literal_1.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

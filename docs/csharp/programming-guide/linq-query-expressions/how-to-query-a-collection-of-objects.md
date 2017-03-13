@@ -10,7 +10,7 @@ caps.handback.revision: 8
 ## 예제  
  다음 쿼리에서는 첫 번째 시험에서 점수가 90점 이상인 학생을 반환합니다.  
   
- [!code-cs[csProgGuideLINQ#15](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#15)]  
+ [!code-cs[csProgGuideLINQ#15](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-query-a-collection-of-objects_1.cs)]  
   
  이 쿼리는 테스트할 수 있도록 의도적으로 간단하게 만들었습니다.  예를 들어 `where` 절에서 자세한 조건자를 사용해 보거나 `orderby` 절을 사용하여 결과를 정렬할 수 있습니다.  
   

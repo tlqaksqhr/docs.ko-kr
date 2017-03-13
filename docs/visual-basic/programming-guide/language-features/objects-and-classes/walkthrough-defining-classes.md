@@ -48,28 +48,28 @@ caps.handback.revision: 21
   
 5.  새 클래스의 이름을 `UserNameInfo.vb`로 지정한 다음 **추가**를 클릭하여 새 클래스에 대한 코드를 표시합니다.  
   
-     [!code-vb[VbVbalrOOP#5](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#5)]  
+     [!code-vb[VbVbalrOOP#5](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_1.vb)]  
   
     > [!NOTE]
     >  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] **코드 편집기**에서 새 클래스 이름 다음에 `Class` 키워드를 입력하여 시작 폼에 클래스를 추가할 수 있습니다.  **코드 편집기**에서 작업하면 해당 `End Class` 문이 자동으로 제공됩니다.  
   
 6.  `Class` 문과 `End Class` 문 사이에 다음 코드를 추가하여 클래스에 대한 전용 필드를 정의합니다.  
   
-     [!code-vb[VbVbalrOOP#7](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#7)]  
+     [!code-vb[VbVbalrOOP#7](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_2.vb)]  
   
      필드를 `Private`로 선언하면 해당 필드는 클래스 내에서만 사용될 수 있습니다.  `Public`과 같이 보다 많은 액세스를 제공하는 액세스 한정자를 사용하면 클래스 외부에서 필드를 사용할 수 있도록 할 수 있습니다.  자세한 내용은 [Access Levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)을 참조하십시오.  
   
 7.  다음 코드를 추가하여 클래스의 속성을 정의합니다.  
   
-     [!code-vb[VbVbalrOOP#8](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#8)]  
+     [!code-vb[VbVbalrOOP#8](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_3.vb)]  
   
 8.  다음 코드를 추가하여 클래스의 메서드를 정의합니다.  
   
-     [!code-vb[VbVbalrOOP#9](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#9)]  
+     [!code-vb[VbVbalrOOP#9](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_4.vb)]  
   
 9. `Sub New` 프로시저를 추가하여 새 클래스에 대한 매개 변수가 있는 생성자를 정의합니다.  
   
-     [!code-vb[VbVbalrOOP#10](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#10)]  
+     [!code-vb[VbVbalrOOP#10](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_5.vb)]  
   
      `Sub New` 생성자는 이 클래스를 기반으로 개체가 만들어질 때 자동으로 호출됩니다.  이 생성자는 사용자 이름을 사용하는 필드의 값을 설정합니다.  
   
@@ -79,7 +79,7 @@ caps.handback.revision: 21
   
 2.  기본 폼에 단추를 추가하고 두 번 클릭하여 `Button1_Click` 이벤트 처리기의 코드를 표시합니다.  다음 코드를 추가하여 테스트 프로시저를 호출합니다.  
   
-     [!code-vb[VbVbalrOOP#12](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#12)]  
+     [!code-vb[VbVbalrOOP#12](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-defining-classes_6.vb)]  
   
 ### 응용 프로그램을 실행하려면  
   

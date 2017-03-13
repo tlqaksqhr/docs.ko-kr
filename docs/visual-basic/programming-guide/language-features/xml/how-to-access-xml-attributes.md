@@ -28,7 +28,7 @@ caps.handback.revision: 18
 이 예제에서는 특성 축 속성을 사용하여 XML 요소의 XML 특성에 이름으로 액세스하는 방법을 보여 줍니다.  특히 `type` 특성 축 속성을 사용하여 `phone` 개체의 `type`이라는 특성에 액세스합니다.  
   
 ## 예제  
- [!code-vb[VbXMLSamples#11](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-access-xml-attrib_1.vb)]  
+ [!code-vb[VbXMLSamples#11](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-access-xml-attributes_1.vb)]  
   
 ## 참고 항목  
  <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=fullName>   

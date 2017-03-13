@@ -24,7 +24,7 @@ caps.handback.revision: 16
 ## 예제  
  이 예제에서 `year` 필드는 클래스 생성자에서 값이 할당된 경우라도 `ChangeYear` 메서드로 값을 변경할 수 없습니다.  
   
- [!code-cs[csrefKeywordsModifiers#14](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#14)]  
+ [!code-cs[csrefKeywordsModifiers#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/readonly_1.cs)]  
   
  다음 경우에만 `readonly` 필드에 값을 대입할 수 있습니다.  
   
@@ -44,7 +44,7 @@ public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
 ```  
   
 ## 예제  
- [!code-cs[csrefKeywordsModifiers#15](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#15)]  
+ [!code-cs[csrefKeywordsModifiers#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/readonly_2.cs)]  
   
  앞의 예제에서 다음과 같은 문을 사용하면  
   

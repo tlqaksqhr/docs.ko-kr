@@ -19,7 +19,7 @@ caps.handback.revision: 23
 # 제네릭(C# 프로그래밍 가이드)
 제네릭이 2.0 버전의 C\# 언어와 CLR\(공용 언어 런타임\)에 추가되었습니다.  제네릭을 통해 .NET Framework에 형식 매개 변수라는 개념이 처음 소개되었습니다. 형식 매개 변수를 사용하면 클라이언트 코드에서 클래스나 메서드를 선언하고 인스턴스화할 때까지 하나 이상의 형식 지정을 연기하는 클래스와 메서드를 디자인할 수 있습니다.  예를 들어, 다음과 같이 제네릭 형식 매개 변수 T를 사용하면 런타임 캐스트나 boxing 작업에 따른 비용이나 위험을 초래하지 않은 채 다른 클라이언트 코드에서 사용 가능한 단일 클래스를 작성할 수 있습니다.  
   
- [!code-cs[csProgGuideGenerics#1](../../../csharp/programming-guide/generics/codesnippet/csharp/index_1.cs)]  
+ [!code-cs[csProgGuideGenerics#1](../../../csharp/programming-guide/generics/codesnippet/CSharp/index_1.cs)]  
   
 ## 제네릭 개요  
   

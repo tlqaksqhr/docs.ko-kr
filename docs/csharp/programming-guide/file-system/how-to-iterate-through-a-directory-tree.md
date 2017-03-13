@@ -44,14 +44,14 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
   
  처리되는 특정한 예외와 각 파일이나 폴더에 수행되는 특정 작업은 예제로만 제공됩니다.  따라서 해당 요구 사항에 맞게 이 코드를 수정해야 합니다.  자세한 내용은 코드의 주석을 참조하십시오.  
   
- [!code-cs[csFilesandFolders#1](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#1)]  
+ [!code-cs[csFilesandFolders#1](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_1.cs)]  
   
 ## 예제  
  다음 예제에서는 재귀를 사용하지 않고 디렉터리 트리에서 파일 및 폴더를 반복하는 방법을 보여 줍니다.  이 방법에서는 LIFO\(후입선출\) 스택인 제네릭 <xref:System.Collections.Generic.Stack%601> 컬렉션 형식을 사용합니다.  
   
  처리되는 특정한 예외와 각 파일이나 폴더에 수행되는 특정 작업은 예제로만 제공됩니다.  따라서 해당 요구 사항에 맞게 이 코드를 수정해야 합니다.  자세한 내용은 코드의 주석을 참조하십시오.  
   
- [!code-cs[csFilesandFolders#2](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#2)]  
+ [!code-cs[csFilesandFolders#2](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_2.cs)]  
   
  응용 프로그램에 폴더를 열 수 있는 권한이 있는지 확인하기 위해 모든 폴더를 테스트하는 작업은 시간이 너무 많이 걸립니다.  따라서 이 코드 예제에서는 작업의 해당 부분을 `try/catch` 블록으로 묶기만 했습니다.  폴더에 대한 액세스가 거부된 경우 권한을 상승시키고 다시 액세스할 수 있도록 `catch` 블록을 수정할 수 있습니다.  일반적으로 응용 프로그램을 알 수 없는 상태로 두지 않고 처리할 수 있는 예외만 catch합니다.  
   

@@ -24,7 +24,7 @@ caps.handback.revision: 7
 ## 예제  
  다음 예제에서는 `global` 컨텍스트 키워드를 사용하여 클래스 `TestApp`가 전역 네임스페이스에서 정의되도록 지정하는 방법을 보여 줍니다.  
   
- [!code-cs[csrefKeywordsContextual#13](../../../csharp/language-reference/keywords/codesnippet/csharp/global_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/global_1.cs)]  
   
 ## 참고 항목  
  [네임스페이스](../../../csharp/programming-guide/namespaces/index.md)

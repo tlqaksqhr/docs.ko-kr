@@ -55,7 +55,7 @@ classify = (input > 0) ? "positive" : "negative";
  조건 연산자는 오버로드할 수 없습니다.  
   
 ## 예제  
- [!code-cs[csRefOperators#41](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#41)]  
+ [!code-cs[csRefOperators#41](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-operator_1.cs)]  
   
 ## 참고 항목  
  [C\# 참조](../../../csharp/language-reference/index.md)   

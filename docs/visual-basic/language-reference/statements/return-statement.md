@@ -52,7 +52,7 @@ Return expression
 ## 예제  
  다음 예제에서는 프로시저가 더 이상 필요하지 않을 때 `Return` 문을 여러 번 사용하여 해당 호출 코드로 돌아갑니다.  
   
- [!code-vb[VbVbalrStatements#53](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/return-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#53](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/return-statement_1.vb)]  
   
 ## 참고 항목  
  [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md)   

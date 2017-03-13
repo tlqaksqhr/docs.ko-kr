@@ -36,7 +36,7 @@ caps.handback.revision: 19
   
  [!CODE [VbVbalrStatements#49](../CodeSnippet/VS_Snippets_VBCSharp/VbVbalrStatements#49)]  
   
- [!code-vb[VbVbalrVariables#2](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/visualbasic/troubleshooting-variables_2.vb)]  
+ [!code-vb[VbVbalrVariables#2](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/VisualBasic/troubleshooting-variables_1.vb)]  
   
  이 예제에서 `p`는 <xref:System.Object> 클래스 자체의 멤버만 사용할 수 있으므로 `Left` 속성을 포함하지 않습니다. 반면, <xref:System.Windows.Forms.Label> 형식으로 선언된 `q`는 <xref:System.Windows.Forms> 네임스페이스에 있는 <xref:System.Windows.Forms.Label> 클래스의 모든 메서드와 속성을 사용할 수 있습니다.  
   

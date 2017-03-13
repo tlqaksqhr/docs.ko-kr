@@ -19,17 +19,17 @@ caps.handback.revision: 9
 # out 매개 변수 한정자(C# 참조)
 `out` 키워드는 인수를 참조로 전달하는 데 사용됩니다.  이는 [ref](../../../csharp/language-reference/keywords/ref.md) 키워드와 비슷하지만 `ref`의 경우 변수를 전달하기 전에 초기화해야 한다는 점에서 차이가 있습니다.  `out` 매개 변수를 사용하려면 메서드 정의와 호출하는 메서드에서 모두 `out` 키워드를 명시적으로 사용해야 합니다.  예를 들면 다음과 같습니다.  
   
- [!code-cs[csrefKeywordsMethodParams#1](../../../csharp/language-reference/keywords/codesnippet/csharp/out-parameter-modifier_1.cs)]  
+ [!code-cs[csrefKeywordsMethodParams#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/out-parameter-modifier_1.cs)]  
   
  `out` 인수로 전달되는 변수는 이를 전달하기 전에 초기화할 필요가 없지만 호출되는 메서드는 메서드 반환 이전에 값을 할당해야 합니다.  
   
  `ref` 및 `out` 키워드는 다른 런타임 동작을 가져오지만 컴파일 타임에 메서드 시그니처의 일부로 간주되지 않습니다.  따라서 한 메서드는 `ref` 인수를 사용하고 다른 메서드는 `out` 인수를 사용하는 것이 유일한 차이점인 경우 메서드를 오버로드할 수 없습니다.  예를 들어, 다음 코드는 컴파일되지 않습니다.  
   
- [!code-cs[csrefKeywordsMethodParams#2](../../../csharp/language-reference/keywords/codesnippet/csharp/out-parameter-modifier_2.cs)]  
+ [!code-cs[csrefKeywordsMethodParams#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/out-parameter-modifier_2.cs)]  
   
  그러나 한 메서드가 `ref` 또는 `out` 인수를 사용하고 다른 메서드는 두 인수 중 어느 것도 사용하지 않는 경우 다음과 같이 오버로드할 수 있습니다.  
   
- [!code-cs[csrefKeywordsMethodParams#3](../../../csharp/language-reference/keywords/codesnippet/csharp/out-parameter-modifier_3.cs)]  
+ [!code-cs[csrefKeywordsMethodParams#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/out-parameter-modifier_3.cs)]  
   
  속성은 변수가 아니므로 `out` 매개 변수로 전달할 수 없습니다.  
   
@@ -44,7 +44,7 @@ caps.handback.revision: 9
 ## 예제  
  메서드에서 값을 여러 개 반환해야 하는 경우 `out` 메서드를 선언하는 것이 좋습니다.  다음 예제에서는 `out`을 사용하여 한 번의 메서드 호출로 변수 세 개를 반환합니다.  세 번째 인수에는 null이 할당됩니다.  이렇게 하면 메서드에서 값을 선택적으로 반환할 수 있습니다.  
   
- [!code-cs[csrefKeywordsMethodParams#4](../../../csharp/language-reference/keywords/codesnippet/csharp/out-parameter-modifier_4.cs)]  
+ [!code-cs[csrefKeywordsMethodParams#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/out-parameter-modifier_4.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

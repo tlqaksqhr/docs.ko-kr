@@ -55,7 +55,7 @@ caps.handback.revision: 16
   
 -   `Event` 키워드를 사용하여 `Widget` 클래스에서 이벤트를 선언합니다.  `Widget`의 `PercentDone` 이벤트에서 볼 수 있는 것처럼 이벤트에 `ByVal` 및 `ByRef` 인수를 사용할 수 있습니다.  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Widget.vb#1)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_1.vb)]  
   
  호출하는 개체가 `PercentDone` 이벤트를 받으면 `Percent` 인수에는 완료된 작업의 백분율이 포함됩니다.  `Cancel` 인수를 `True`로 설정하여 이벤트를 발생시킨 메서드를 취소할 수 있습니다.  
   
@@ -68,11 +68,11 @@ caps.handback.revision: 16
   
 1.  이 클래스가 사용하는 `Timer` 속성에 간단하게 액세스하려면 클래스 모듈의 선언 부분 맨 위, 즉 `Class Widget` 문 위에 `Imports` 문을 추가합니다.  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Widget.vb#2)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_2.vb)]  
   
 2.  `Widget` 클래스에 다음 코드를 추가합니다.  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](../../../../visual-basic/programming-guide/language-features/events/codesnippet/visualbasic/VbEventWalkthrough/Widget.vb#3)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_3.vb)]  
   
  응용 프로그램에서 `LongTask` 메서드를 호출하는 경우 `Widget` 클래스는 `MinimumInterval`\(초\)마다 `PercentDone` 이벤트를 발생시킵니다.  해당 이벤트가 반환되면 `LongTask`는 `Cancel` 인수가 `True`로 설정되었는지 확인합니다.  
   

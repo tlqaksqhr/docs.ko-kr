@@ -68,7 +68,7 @@ caps.handback.revision: 12
 ## 예제  
  다음 예제에서는 `<list>` 태그를 사용하여 설명 섹션에 글머리 기호 목록을 정의합니다.  
   
- [!code-vb[VbVbcnXmlDocComments#5](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/list_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#5](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/list_1.vb)]  
   
 ## 참고 항목  
  [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

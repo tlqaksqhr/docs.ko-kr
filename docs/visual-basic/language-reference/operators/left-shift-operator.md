@@ -65,7 +65,7 @@ result = pattern << amount
 ## 예제  
  다음 예제에서는 `<<` 연산자를 사용하여 정수 값에 대해 산술 왼쪽 시프트 연산을 수행합니다.  결과의 데이터 형식은 항상 이동되는 식의 데이터 형식과 동일합니다.  
   
- [!code-vb[VbVbalrOperators#12](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/left-shift-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#12](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/left-shift-operator_1.vb)]  
   
  위 예제의 결과는 다음과 같습니다.  
   

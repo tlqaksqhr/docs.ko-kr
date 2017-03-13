@@ -86,17 +86,17 @@ End Namespace
 ## 예제  
  다음 예제에서는 네임스페이스 내에서 다른 네임스페이스 하나가 중첩되는 두 개의 네임스페이스를 선언합니다.  
   
- [!code-vb[VbVbalrStatements#43](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/namespace-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#43](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_1.vb)]  
   
 ## 예제  
  다음 예제에서는 한 줄에 여러 개의 중첩된 네임스페이스를 선언하며 앞의 예제와 동일합니다.  
   
- [!code-vb[VbVbalrStatements#41](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/namespace-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#41](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_2.vb)]  
   
 ## 예제  
  다음 예제에서는 앞의 예제에서 정의한 클래스에 액세스합니다.  
   
- [!code-vb[VbVbalrStatements#42](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/namespace-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#42](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_3.vb)]  
   
 ## 예제  
  다음 예제에서는 새 제네릭 목록 클래스의 구조를 정의하여 <xref:System.Collections.Generic?displayProperty=fullName> 네임스페이스에 추가합니다.  

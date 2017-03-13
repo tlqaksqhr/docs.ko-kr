@@ -52,7 +52,7 @@ variableorproperty = value
 ## 예제  
  다음 예제에서는 할당 연산자를 보여 줍니다.  오른쪽의 값이 왼쪽의 변수에 할당됩니다.  
   
- [!code-vb[VbVbalrOperators#9](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/assignment-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#9](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/assignment-operator_1.vb)]  
   
 ## 참고 항목  
  [&\= Operator](../../../visual-basic/language-reference/operators/and-assignment-operator.md)   

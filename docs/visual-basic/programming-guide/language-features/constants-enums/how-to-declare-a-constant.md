@@ -52,7 +52,7 @@ caps.handback.revision: 20
   
 -   다음 예제와 같이 액세스 지정자, `Const` 키워드 및 식을 포함하는 선언을 작성합니다.  
   
-     [!code-vb[VbEnumsTask#8](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#8)]  
+     [!code-vb[VbEnumsTask#8](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_1.vb)]  
   
      [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)가 `Off`이고 [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)가 `On`인 경우 데이터 형식\(`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`, `Double`, `Integer`, `Long`, `Short`, `Single` 또는 `String`\)을 지정하여 명시적으로 상수를 선언해야 합니다.  
   
@@ -62,7 +62,7 @@ caps.handback.revision: 20
   
 -   다음 예제와 같이 `As` 키워드와 명시적 데이터 형식을 포함하는 선언을 작성합니다.  
   
-     [!code-vb[VbEnumsTask#9](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#9)]  
+     [!code-vb[VbEnumsTask#9](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-a-constant_2.vb)]  
   
      상수를 한 줄에 하나만 선언하면 코드를 읽기가 쉬워지기는 하지만, 한 줄에 여러 상수를 선언할 수도 있습니다.  한 줄에 여러 개의 상수를 선언하는 경우에는 각 상수의 액세스 수준\(`Public`, `Private`, `Friend`, `Protected` 또는 `Protected Friend`\)이 모두 동일해야 합니다.  
   

@@ -85,7 +85,7 @@ expression1 / expression2
 ## 예제  
  다음 예제에서는 `/` 연산자를 사용하여 부동 소수점 나누기를 수행합니다.  결과는 두 피연산자의 몫입니다.  
   
- [!code-vb[VbVbalrOperators#16](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/floating-point-division-_1_1.vb)]  
+ [!code-vb[VbVbalrOperators#16](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/floating-point-division-operator_1.vb)]  
   
  위 예제의 식에서는 2.5와 3.333333 값이 반환됩니다.  두 피연산자가 모두 정수 상수지만 결과는 항상 부동 소수점\(`Double`\)입니다.  
   

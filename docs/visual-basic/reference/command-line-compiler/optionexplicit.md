@@ -50,7 +50,7 @@ caps.handback.revision: 16
 ## 예제  
  다음 코드는 `/optionexplicit-`가 사용된 경우에 컴파일합니다.  
   
- [!code-vb[VbVbalrCompiler#5](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/optionexplicit_1.vb)]  
+ [!code-vb[VbVbalrCompiler#5](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/optionexplicit_1.vb)]  
   
 ## 참고 항목  
  [Visual Basic Command\-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)   

@@ -36,13 +36,13 @@ caps.handback.revision: 18
   
 -   <xref:System.IO.FileInfo> 개체의 <xref:System.IO.FileInfo.DirectoryName%2A> 및 <xref:System.IO.FileInfo.Name%2A> 속성을 사용하여 파일의 이름과 경로를 확인합니다. 이 예제에서는 이름과 경로를 확인하고 이를 표시합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#54](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-parse-file-paths_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#54](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-parse-file-paths_1.vb)]  
   
 ### 파일의 이름과 디렉터리를 결합하여 전체 경로를 만들려면  
   
 -   디렉터리와 이름을 제공하여 `CombinePath` 메서드를 사용합니다. 이 예제에서는 이전 예제에서 만들어진 문자열 `folderPath`와 `fileName`을 가져와서 이를 결합한 다음 결과를 표시합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#55](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-parse-file-paths_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#55](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-parse-file-paths_2.vb)]  
   
 ## 참고 항목  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>   

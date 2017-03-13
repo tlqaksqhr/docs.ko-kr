@@ -45,7 +45,7 @@ throw될 수 있는 예외를 지정합니다.
 ## 예제  
  다음 예제에서는 `<exception>` 태그를 사용하여 `IntDivide` 함수에서 throw될 수 있는 예외를 설명합니다.  
   
- [!code-vb[VbVbcnXmlDocComments#3](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/exception_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#3](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/exception_1.vb)]  
   
 ## 참고 항목  
  [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

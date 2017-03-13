@@ -34,11 +34,11 @@ caps.handback.revision: 23
   
  `New` 절은 선언문이나 할당문에 사용할 수 있습니다.  문이 실행되면 지정한 클래스의 해당 생성자를 호출하고 제공한 인수를 전달합니다.  다음 예제에서는 두 개의 생성자, 즉 매개 변수가 없는 생성자와 문자열 매개 변수가 있는 생성자를 가진 `Customer` 클래스의 인스턴스를 만들어 이 작업을 보여 줍니다.  
   
- [!code-vb[VbVbalrKeywords#11](../../../visual-basic/language-reference/codesnippet/visualbasic/new-operator_1.vb)]  
+ [!code-vb[VbVbalrKeywords#11](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_1.vb)]  
   
  배열은 클래스이므로 `New`를 사용하면 다음 예제에 나오는 것처럼 새 배열 인스턴스가 만들어질 수 있습니다.  
   
- [!code-vb[VbVbalrKeywords#12](../../../visual-basic/language-reference/codesnippet/visualbasic/new-operator_2.vb)]  
+ [!code-vb[VbVbalrKeywords#12](../../../visual-basic/language-reference/codesnippet/VisualBasic/new-operator_2.vb)]  
   
  CLR\(공용 언어 런타임\)에서는 새 인스턴스를 만드는 데 충분한 메모리가 없을 경우 <xref:System.OutOfMemoryException> 오류를 throw합니다.  
   

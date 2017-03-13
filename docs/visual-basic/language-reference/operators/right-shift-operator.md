@@ -69,7 +69,7 @@ result = pattern >> amount
 ## 예제  
  다음 예제에서는 `>>` 연산자를 사용하여 정수 값에 대한 산술 오른쪽 시프트 연산을 수행합니다.  결과의 데이터 형식은 항상 이동되는 식의 데이터 형식과 동일합니다.  
   
- [!code-vb[VbVbalrOperators#14](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/right-shift-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/right-shift-operator_1.vb)]  
   
  이전 예제의 결과는 다음과 같습니다.  
   
@@ -87,7 +87,7 @@ result = pattern >> amount
   
  다음 예제에서는 음수 값의 산술 시프트를 보여 줍니다.  
   
- [!code-vb[VbVbalrOperators#55](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/right-shift-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#55](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/right-shift-operator_2.vb)]  
   
  이전 예제의 결과는 다음과 같습니다.  
   

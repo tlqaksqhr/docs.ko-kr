@@ -76,12 +76,12 @@ caps.handback.revision: 24
 ## 여러 버전의 프로시저  
  고객의 잔고에 대한 트랜잭션을 게시하는 `Sub` 프로시저를 작성하고 이름 또는 계정 번호로 고객을 참조하려는 경우를 예로 들면,  다음과 같이 두 개의 다른 `Sub` 프로시저를 사용하면 됩니다.  
   
- [!code-vb[VbVbcnProcedures#73](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/procedure-overloading_1.vb)]  
+ [!code-vb[VbVbcnProcedures#73](./codesnippet/VisualBasic/procedure-overloading_1.vb)]  
   
 ### 오버로드된 버전  
  그러나 이와 달리 하나의 프로시저 이름을 오버로드하는 방법도 사용할 수 있습니다.  다음과 같이 [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) 키워드를 사용하여 각 매개 변수 목록에 대한 프로시저 버전을 정의할 수 있습니다.  
   
- [!code-vb[VbVbcnProcedures#72](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/procedure-overloading_2.vb)]  
+ [!code-vb[VbVbcnProcedures#72](./codesnippet/VisualBasic/procedure-overloading_2.vb)]  
   
 #### 추가 오버로드  
  거래액을 `Decimal` 또는 `Single`로 받아들이려면 `post`를 추가로 오버로드하면 됩니다.  앞의 예제에서 각 오버로드에 대해 이 작업을 수행한다면 이름은 같지만 네 개의 시그니처가 서로 다른 `Sub` 프로시저가 네 개 만들어집니다.  
@@ -89,9 +89,9 @@ caps.handback.revision: 24
 ## 오버로딩의 장점  
  프로시저를 오버로드하면 호출할 때 여러 인수를 사용할 수 있습니다.  앞의 예제에서 선언한 `post` 프로시저를 사용하려면 호출 코드에서 `String` 또는 `Integer`로 고객 ID를 가져온 다음 각각의 경우에 동일한 프로시저를 호출하면 됩니다.  다음 예제는 이러한 과정을 보여 줍니다.  
   
- [!code-vb[VbVbcnProcedures#56](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/procedure-overloading_3.vb)]  
+ [!code-vb[VbVbcnProcedures#56](./codesnippet/VisualBasic/procedure-overloading_3.vb)]  
   
- [!code-vb[VbVbcnProcedures#57](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/procedure-overloading_4.vb)]  
+ [!code-vb[VbVbcnProcedures#57](./codesnippet/VisualBasic/procedure-overloading_4.vb)]  
   
 ## 참고 항목  
  [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

@@ -54,7 +54,7 @@ Windows API는 Windows 운영 체제의 일부인 DLL\(동적 연결 라이브�
   
 4.  DLL을 사용할 클래스나 모듈에 다음 `Declare` 함수를 추가합니다.  
   
-     [!code-vb[VbVbalrInterop#9](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#9)]  
+     [!code-vb[VbVbalrInterop#9](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_1.vb)]  
   
 ### Declare 문을 구성하는 요소  
  `Declare` 문에는 다음과 같은 요소가 포함됩니다.  
@@ -88,7 +88,7 @@ Windows API는 Windows 운영 체제의 일부인 DLL\(동적 연결 라이브�
   
 3.  해당하는 `Const` 문을 클래스나 모듈에 추가하여 응용 프로그램에서 이러한 상수를 사용할 수 있도록 만듭니다.  예를 들면 다음과 같습니다.  
   
-     [!code-vb[VbVbalrInterop#11](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#11)]  
+     [!code-vb[VbVbalrInterop#11](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_2.vb)]  
   
 ###### DLL 프로시저를 호출하려면  
   
@@ -96,7 +96,7 @@ Windows API는 Windows 운영 체제의 일부인 DLL\(동적 연결 라이브�
   
 2.  추가한 단추에 대한 `Click` 이벤트 처리기에 코드를 추가하여 프로시저를 호출하고 적절한 인수를 제공합니다.  
   
-     [!code-vb[VbVbalrInterop#12](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#12)]  
+     [!code-vb[VbVbalrInterop#12](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_3.vb)]  
   
 3.  F5 키를 눌러 프로젝트를 실행합니다.  **Yes**와 **No**의 두 응답 단추가 있는 메시지 상자가 표시됩니다.  둘 중 하나를 선택하십시오.  
   
@@ -109,11 +109,11 @@ Windows API는 Windows 운영 체제의 일부인 DLL\(동적 연결 라이브�
   
 2.  `MarshalAs` 특성에 쉽게 액세스할 수 있도록 하려면 다음 예제와 같이 `Imports` 문을 해당 클래스 또는 모듈 코드의 맨 위에 추가합니다.  
   
-     [!code-vb[VbVbalrInterop#13](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#13)]  
+     [!code-vb[VbVbalrInterop#13](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_4.vb)]  
   
 3.  가져온 함수에 대한 함수 프로토타입을 사용 중인 클래스나 모듈에 추가하고 `MarshalAs` 특성을 매개 변수 또는 반환 값에 적용합니다.  다음 예제에서 `void*` 형식을 예상하는 API 호출은 `AsAny`로 마샬링됩니다.  
   
-     [!code-vb[VbVbalrInterop#14](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#14)]  
+     [!code-vb[VbVbalrInterop#14](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_5.vb)]  
   
 ## DllImport를 사용한 API 호출  
  `DllImport` 특성은 형식 라이브러리 없이 DLL에서 함수를 호출하는 두 번째 방법을 제공합니다.  `DllImport`는 함수의 호출 방법을 보다 잘 제어할 수 있는 것 외에는 `Declare` 문과 거의 동일합니다.  
@@ -132,23 +132,23 @@ Windows API는 Windows 운영 체제의 일부인 DLL\(동적 연결 라이브�
   
 5.  `DllImport`에 쉽게 액세스할 수 있도록 하려면, 시작 폼 클래스 코드의 맨 위에 `Imports` 문을 추가합니다.  
   
-     [!code-vb[VbVbalrInterop#13](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#13)]  
+     [!code-vb[VbVbalrInterop#13](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_4.vb)]  
   
 6.  폼에 대한 `End Class` 문 앞에 빈 함수를 선언하고 함수 이름을 `MoveFile`로 지정합니다.  
   
 7.  `Public` 및 `Shared` 한정자를 함수 선언에 적용하고 Windows API 함수가 사용하는 인수를 기반으로 `MoveFile`에 대한 매개 변수를 설정합니다.  
   
-     [!code-vb[VbVbalrInterop#16](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#16)]  
+     [!code-vb[VbVbalrInterop#16](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_6.vb)]  
   
      함수에는 임의의 올바른 프로시저 이름이 포함될 수 있고 `DllImport` 특성은 DLL에서의 이름을 지정합니다.  또한 함수가 매개 변수 및 반환 값에 대한 상호 운용성 마샬링을 처리하므로 사용자는 API가 사용하는 데이터 형식과 비슷한 Visual Studio 데이터 형식을 선택할 수 있습니다.  
   
 8.  `DllImport` 특성을 빈 함수에 적용합니다.  첫 번째 매개 변수는 호출하는 함수를 포함하는 DLL의 이름과 위치입니다.  Windows 시스템 디렉터리에 있는 파일의 경로는 지정하지 않아도 됩니다.  두 번째 매개 변수는 Windows API에서 함수의 이름을 지정하는 명명된 인수입니다.  이 예제에서 `DllImport` 특성은 `MoveFile`에 대한 호출이 KERNEL32.DLL의 `MoveFileW`로 전달되도록 합니다.  `MoveFileW` 메서드는 파일을 `src` 경로에서 `dst` 경로로 복사합니다.  
   
-     [!code-vb[VbVbalrInterop#17](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#17)]  
+     [!code-vb[VbVbalrInterop#17](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_7.vb)]  
   
 9. `Button2_Click` 이벤트 처리기에 코드를 추가하여 함수를 호출합니다.  
   
-     [!code-vb[VbVbalrInterop#18](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#18)]  
+     [!code-vb[VbVbalrInterop#18](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-calling-windows-apis_8.vb)]  
   
 10. Test.txt라는 이름으로 파일을 만들어 하드 드라이브의 C:\\Tmp 디렉터리에 저장합니다.  필요하면 Tmp 디렉터리를 만드십시오.  
   

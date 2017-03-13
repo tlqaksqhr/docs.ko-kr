@@ -38,33 +38,33 @@ caps.handback.revision: 18
   
 1.  작성 된 `Simple3Des` 암호화 및 해독 메서드를 캡슐화 하는 클래스입니다.  
   
-     [!code-vb[VbVbalrStrings#38](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_1.vb)]  
+     [!code-vb[VbVbalrStrings#38](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_1.vb)]  
   
 2.  암호화 네임 스페이스 가져오기를 추가 포함 된 파일을 시작 하는 `Simple3Des` 클래스입니다.  
   
-     [!code-vb[VbVbalrStrings#77](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_2.vb)]  
+     [!code-vb[VbVbalrStrings#77](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_2.vb)]  
   
 3.  에 `Simple3Des` 클래스에서 3DES 암호화 서비스 공급자를 저장할 전용 필드를 추가 합니다.  
   
-     [!code-vb[VbVbalrStrings#39](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_3.vb)]  
+     [!code-vb[VbVbalrStrings#39](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_3.vb)]  
   
 4.  지정된 키의 해시로부터 지정된 길이의 바이트 배열을 만드는 전용 메서드를 추가합니다.  
   
-     [!code-vb[VbVbalrStrings#41](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_4.vb)]  
+     [!code-vb[VbVbalrStrings#41](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_4.vb)]  
   
 5.  3DES 암호화 서비스 공급자를 초기화할 생성자를 추가합니다.  
   
      `key` 매개 변수는 `EncryptData` 및 `DecryptData` 메서드를 제어합니다.  
   
-     [!code-vb[VbVbalrStrings#40](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_5.vb)]  
+     [!code-vb[VbVbalrStrings#40](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_5.vb)]  
   
 6.  문자열을 암호화하는 공용 메서드를 추가합니다.  
   
-     [!code-vb[VbVbalrStrings#42](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_6.vb)]  
+     [!code-vb[VbVbalrStrings#42](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_6.vb)]  
   
 7.  문자열을 해독하는 공용 메서드를 추가합니다.  
   
-     [!code-vb[VbVbalrStrings#43](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_7.vb)]  
+     [!code-vb[VbVbalrStrings#43](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_7.vb)]  
   
      래퍼 클래스를 사용하여 사용자 자산을 보호할 수 있습니다.  이 예제에서는 래퍼 클래스를 사용하여 개인 사용자 데이터를 공개적으로 액세스 가능한 텍스트 파일에 안전하게 저장합니다.  
   
@@ -72,11 +72,11 @@ caps.handback.revision: 18
   
 1.  개별 클래스에서 래퍼의 `EncryptData` 메서드를 사용하여 문자열을 암호화한 다음 사용자의 내 문서 폴더에 쓰는 메서드를 추가합니다.  
   
-     [!code-vb[VbVbalrStrings#78](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_8.vb)]  
+     [!code-vb[VbVbalrStrings#78](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_8.vb)]  
   
 2.  사용자의 내 문서 폴더에서 암호화된 문자열을 읽은 다음 래퍼의 `DecryptData` 메서드를 사용하여 해독하는 메서드를 추가합니다.  
   
-     [!code-vb[VbVbalrStrings#79](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/walkthrough-encrypting-a_9.vb)]  
+     [!code-vb[VbVbalrStrings#79](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/walkthrough-encrypting-and-decrypting-strings_9.vb)]  
   
 3.  `TestEncoding` 및 `TestDecoding` 메서드를 호출하는 사용자 인터페이스 코드를 추가합니다.  
   

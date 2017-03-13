@@ -66,14 +66,14 @@ result = expression1 AndAlso expression2
 ## 예제  
  다음 예제에서는 `AndAlso` 연산자를 사용하여 두 식의 논리곱 연산을 수행합니다.  결과는 결합된 전체 식이 true인지 여부를 나타내는 `Boolean` 값입니다.  첫째 식이 `False`이면 둘째 식은 계산되지 않습니다.  
   
- [!code-vb[VbVbalrOperators#24](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/andalso-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#24](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/andalso-operator_1.vb)]  
   
  위 예제의 결과는 각각 `True`, `False` 및 `False`가 됩니다.  `secondCheck` 계산에서는 첫째 식이 이미 `False`이므로 둘째 식은 계산되지 않습니다.  그러나 `thirdCheck` 계산에서는 둘째 식이 계산됩니다.  
   
 ## 예제  
  다음 예제에서는 배열 요소들 중에서 지정된 값을 검색하는 `Function` 프로시저를 보여 줍니다.  배열이 비어 있거나 배열 길이가 초과된 경우 `While` 문은 검색 결과에 대해 배열 요소를 테스트하지 않습니다.  
   
- [!code-vb[VbVbalrOperators#25](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/andalso-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#25](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/andalso-operator_2.vb)]  
   
 ## 참고 항목  
  [Logical\/Bitwise Operators](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)   

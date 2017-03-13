@@ -52,7 +52,7 @@ caps.handback.revision: 19
 ## 예제  
  다음 예제에서는 `Object` 변수 쌍을 테스트하여 두 변수가 동일한 클래스 인스턴스를 가리키는지 확인합니다.  
   
- [!code-vb[VbVbalrKeywords#14](../../../../visual-basic/language-reference/codesnippet/visualbasic/how-to-determine-whether_1_1.vb)]  
+ [!code-vb[VbVbalrKeywords#14](../../../../visual-basic/language-reference/codesnippet/VisualBasic/how-to-determine-whether-two-objects-are-identical_1.vb)]  
   
  위 예제의 결과는 다음과 같습니다.  
   

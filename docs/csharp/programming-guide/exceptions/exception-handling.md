@@ -21,11 +21,11 @@ caps.handback.revision: 24
   
  다음 예제는 `try-catch` 문, `try-finally` 문 및 `try-catch-finally` 문을 보여 줍니다.  
   
- [!code-cs[csProgGuideExceptions#6](../../../csharp/programming-guide/exceptions/codesnippet/csharp/exception-handling_1.cs)]  
+ [!code-cs[csProgGuideExceptions#6](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_1.cs)]  
   
- [!code-cs[csProgGuideExceptions#7](../../../csharp/programming-guide/exceptions/codesnippet/csharp/exception-handling_2.cs)]  
+ [!code-cs[csProgGuideExceptions#7](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_2.cs)]  
   
- [!code-cs[csProgGuideExceptions#8](../../../csharp/programming-guide/exceptions/codesnippet/csharp/exception-handling_3.cs)]  
+ [!code-cs[csProgGuideExceptions#8](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_3.cs)]  
   
  `catch` 또는 `finally` 블록이 없는 `try` 블록으로 인해 컴파일러 오류가 발생합니다.  
   
@@ -40,11 +40,11 @@ caps.handback.revision: 24
   
 -   더 구체적인 새 예외를 만들고 throw할 수 있는 경우입니다.  
   
-     [!code-cs[csProgGuideExceptions#9](../../../csharp/programming-guide/exceptions/codesnippet/csharp/exception-handling_4.cs)]  
+     [!code-cs[csProgGuideExceptions#9](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_4.cs)]  
   
 -   추가 처리를 위해 전달하기 전에 예외를 부분적으로 처리합니다.  다음 예제에서 `catch` 블록은 예제를 다시 throw하기 전에 오류 로그에 항목을 추가하는 데 사용됩니다.  
   
-     [!code-cs[csProgGuideExceptions#10](../../../csharp/programming-guide/exceptions/codesnippet/csharp/exception-handling_5.cs)]  
+     [!code-cs[csProgGuideExceptions#10](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_5.cs)]  
   
 ## finally 블록  
  `finally` 블록에서는 `try` 블록에서 수행되는 작업을 정리할 수 있습니다.  `finally` 블록이 있는 경우 이 블록은 `try` 및 일치하는 모든 `catch` 블록을 실행한 후에 마지막으로 실행됩니다.  `finally` 블록은 예외가 throw되었는지 여부나 예외 형식이 일치하는 `catch` 블록을 찾았는지 여부와 상관없이 항상 실행됩니다.  
@@ -53,7 +53,7 @@ caps.handback.revision: 24
   
  다음 예제에서 `finally` 블록은 `try` 블록에 열려 있는 파일을 닫는 데 사용됩니다.  파일을 닫기 전에 파일 핸들의 상태를 검사합니다.  `try` 블록에서 파일을 열 수 없는 경우 파일 핸들에는 `null` 값이 여전히 있으며 `finally` 블록을 닫기 위한 시도를 하지 않습니다.  또는 `try` 블록에서 파일이 성공적으로 열린 경우 `finally` 블록은 열린 파일을 닫습니다.  
   
- [!code-cs[csProgGuideExceptions#11](../../../csharp/programming-guide/exceptions/codesnippet/csharp/exception-handling_6.cs)]  
+ [!code-cs[csProgGuideExceptions#11](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exception-handling_6.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

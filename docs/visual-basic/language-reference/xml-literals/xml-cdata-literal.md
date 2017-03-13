@@ -62,7 +62,7 @@ caps.handback.revision: 16
 ## 예제  
  다음 예제에서는 "리터럴 \<XML\> 태그를 포함할 수 있음" 텍스트가 포함된 CDATA 섹션을 만듭니다.  
   
- [!code-vb[VbXMLSamples#23](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-cdata-literal_1.vb)]  
+ [!code-vb[VbXMLSamples#23](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-cdata-literal_1.vb)]  
   
 ## 참고 항목  
  <xref:System.Xml.Linq.XCData>   

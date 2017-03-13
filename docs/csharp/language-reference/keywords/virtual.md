@@ -37,7 +37,7 @@ public virtual double Area()
   
  `virtual` 한정자는 `static`, `abstract, private` 또는 `override` 한정자와 함께 사용할 수 없습니다.  다음 예제에서는 가상 속성을 보여 줍니다.  
   
- [!code-cs[csrefKeywordsModifiers#26](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#26)]  
+ [!code-cs[csrefKeywordsModifiers#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/virtual_1.cs)]  
   
  가상 속성은 추상 메서드와 비슷하게 작동하지만 선언 및 호출 구문에 차이가 있습니다.  
   
@@ -56,7 +56,7 @@ public Cylinder(double r, double h): base(r, h) {}
   
  다음 프로그램을 계산 하 고 적절 한 구현을 호출 하 여 각 그림에 대 한 적절 한 영역을 표시를 `Area()` 메서드와 연결 된 개체에 따라 방법을.  
   
- [!code-cs[csrefKeywordsModifiers#23](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#23)]  
+ [!code-cs[csrefKeywordsModifiers#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/virtual_2.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

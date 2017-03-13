@@ -24,7 +24,7 @@ caps.handback.revision: 39
 ## 예제  
  다음 예제에서 값을 `i` 콘솔에 작성 하 고 루프를 반복할 때마다 1 씩 증가 합니다.  
   
- [!code-cs[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/csharp/for_1.cs)]  
+ [!code-cs[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_1.cs)]  
   
  `for` 문 앞의 예제에서 다음 작업을 수행 합니다.  
   
@@ -101,11 +101,11 @@ for (initializer; condition; iterator)
   
  다음 덜 일반적인 선택 사항 몇 가지 예제: 이니셜라이저 섹션에서 외부 루프 변수에 값을 할당, 호출의 `Console.WriteLine` 메서드의 이니셜라이저 및 반복기 섹션 및 반복기 섹션에서 두 변수의 값을 변경 합니다.  
   
- [!code-cs[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/csharp/for_2.cs)]  
+ [!code-cs[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_2.cs)]  
   
  모두 정의 하는 식의 `for` 문에서 선택적 요소입니다.  예를 들어 다음 문은 무한 루프를 만듭니다.  
   
- [!code-cs[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/csharp/for_3.cs)]  
+ [!code-cs[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_3.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

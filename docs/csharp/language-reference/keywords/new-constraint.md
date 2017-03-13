@@ -21,12 +21,12 @@ caps.handback.revision: 20
 ## 예제  
  다음 예제에서와 같이 제네릭 클래스로 형식의 새 인스턴스를 만들 때 형식 매개 변수에 `new` 제약 조건을 적용합니다.  
   
- [!code-cs[csrefKeywordsOperator#5](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#5)]  
+ [!code-cs[csrefKeywordsOperator#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-constraint_1.cs)]  
   
 ## 예제  
  다른 제약 조건과 함께 `new()` 제약 조건을 사용하는 경우 이 제약 조건은 마지막에 지정해야 합니다.  
   
- [!code-cs[csrefKeywordsOperator#6](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#6)]  
+ [!code-cs[csrefKeywordsOperator#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-constraint_2.cs)]  
   
  자세한 내용은 [형식 매개 변수에 대한 제약 조건](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)를 참조하십시오.  
   

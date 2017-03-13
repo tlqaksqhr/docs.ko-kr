@@ -32,7 +32,7 @@ caps.handback.revision: 11
   
 -   두 변수를 피연산자로 사용하는 [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md)나 [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md)를 사용합니다.  
   
-     [!code-vb[VbVbalrOperators#69](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-test-whether-two-_1.vb)]  
+     [!code-vb[VbVbalrOperators#69](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-test-whether-two-objects-are-the-same_1.vb)]  
   
  두 개체가 동일한 인스턴스를 참조하는지 여부에 따라 특별한 조치가 필요할 수 있습니다.  앞의 예제에서는 `c` 컨트롤을 `f` 폼의 활성 컨트롤과 비교합니다.  활성 컨트롤이 없는 경우 또는 `c`와 동일하지 않은 컨트롤 인스턴스가 하나 있는 경우 `If` 문은 실패하고 프로시저는 더 이상 처리하지 않고 반환합니다.  
   

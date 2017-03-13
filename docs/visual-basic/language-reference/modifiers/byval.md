@@ -41,7 +41,7 @@ caps.handback.revision: 14
 ## 예제  
  다음 예제에서는 `ByVal` 매개 변수 전달 메커니즘을 참조 형식 인수와 함께 사용하는 방법을 보여 줍니다.  이 예제에서 인수는 `Class1` 클래스의 인스턴스인 `c1`입니다.  `ByVal`을 사용하면 프로시저의 코드에서 참조 인수 `c1`의 내부 값을 변경할 수 없도록 차단하지만 `c1`의 액세스 가능 필드와 속성은 보호되지 않습니다.  
   
- [!code-vb[VbVbalrKeywords#10](../../../visual-basic/language-reference/codesnippet/visualbasic/byval_1.vb)]  
+ [!code-vb[VbVbalrKeywords#10](../../../visual-basic/language-reference/codesnippet/VisualBasic/byval_1.vb)]  
   
 ## 참고 항목  
  [키워드](../../../visual-basic/language-reference/keywords/index.md)   

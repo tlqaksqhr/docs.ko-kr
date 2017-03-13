@@ -33,15 +33,15 @@ caps.handback.revision: 19
 ## Const 문 사용법  
  `Const` 문은 수치 또는 날짜\/시간 값을 나타낼 수 있습니다.  
   
- [!code-vb[VbEnumsTask#10](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#10)]  
+ [!code-vb[VbEnumsTask#10](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_1.vb)]  
   
  `String` 상수를 정의할 수도 있습니다.  
   
- [!code-vb[VbEnumsTask#13](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#13)]  
+ [!code-vb[VbEnumsTask#13](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_2.vb)]  
   
  등호\(`=`\)의 오른쪽에 있는 식은 종종 숫자 또는 리터럴 문자열이지만 결과 값이 숫자나 문자열인 식이 될 수도 있습니다\(식에 함수 호출이 포함될 수는 없음\).  이전에 정의한 상수로 상수를 정의할 수도 있습니다.  
   
- [!code-vb[VbEnumsTask#15](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#15)]  
+ [!code-vb[VbEnumsTask#15](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_3.vb)]  
   
 ## 사용자 정의 상수의 범위  
  `Const` 문의 범위는 동일한 위치에 선언된 변수의 범위와 같습니다.  다음과 같은 방법으로 상수의 범위를 지정할 수 있습니다.  
@@ -59,8 +59,8 @@ caps.handback.revision: 19
 ### 순환 참조 방지  
  다른 상수에 의해 상수를 정의할 수 있으므로 둘 이상의 상수 사이에 실수로 *주기* 또는 순환 참조를 만들 수 있습니다.  주기는 다음 예제와 같이 각각 서로에 의해 정의되는 둘 이상의 공용 상수를 사용하는 경우 일어납니다.  
   
- [!code-vb[VbEnumsTask#16](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#16)]  
-[!code-vb[VbEnumsTask#17](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#17)]  
+ [!code-vb[VbEnumsTask#16](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_4.vb)]  
+[!code-vb[VbEnumsTask#17](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/user-defined-constants_5.vb)]  
   
  주기가 발생하면 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]에서 컴파일러 오류를 생성합니다.  
   

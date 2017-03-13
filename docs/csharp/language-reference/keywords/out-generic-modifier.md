@@ -30,7 +30,7 @@ caps.handback.revision: 15
 ## 예제  
  다음 예제에서는 공변\(covariant\) 제네릭 인터페이스를 선언, 확장 및 구현하는 방법을 보여 줍니다.  또한 공변\(covariant\) 인터페이스를 구현하는 클래스의 암시적 변환을 사용하는 방법도 보여 줍니다.  
   
- [!code-cs[csVarianceKeywords#3](../../../csharp/language-reference/keywords/codesnippet/csharp/out-generic-modifier_1.cs)]  
+ [!code-cs[csVarianceKeywords#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/out-generic-modifier_1.cs)]  
   
  제네릭 인터페이스에서 다음 조건을 충족하는 경우 형식 매개 변수를 공변\(covariant\)으로 선언할 수 있습니다.  
   
@@ -44,7 +44,7 @@ caps.handback.revision: 15
 ## 예제  
  다음 예제에서는 공변\(covariant\) 제네릭 대리자를 선언, 인스턴스화 및 호출하는 방법을 보여 줍니다.  대리자 형식을 암시적으로 변환하는 방법도 보여 줍니다.  
   
- [!code-cs[csVarianceKeywords#4](../../../csharp/language-reference/keywords/codesnippet/csharp/out-generic-modifier_2.cs)]  
+ [!code-cs[csVarianceKeywords#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/out-generic-modifier_2.cs)]  
   
  메서드 반환 형식으로만 사용되고 메서드 인수로는 사용되지 않는 형식의 경우 제네릭 대리자에서 해당 형식을 공변\(covariant\)으로 선언할 수 있습니다.  
   

@@ -27,7 +27,7 @@ caps.handback.revision: 9
 ## 예제  
  다음 예제에서는 <xref:System.Text.StringBuilder> 클래스의 인스턴스를 만들고 1,000개의 문자열을 이 인스턴스에 추가한 다음 결과 문자열을 반환합니다.  
   
- [!code-vb[VbVbalrStrings#70](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-create-strings-us_1.vb)]  
+ [!code-vb[VbVbalrStrings#70](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-create-strings-using-a-stringbuilder_1.vb)]  
   
 ## 참고 항목  
  [StringBuilder 클래스 사용](../Topic/Using%20the%20StringBuilder%20Class%20in%20the%20.NET%20Framework.md)   

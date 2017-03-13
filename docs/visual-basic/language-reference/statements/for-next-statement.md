@@ -75,11 +75,11 @@ Next [ counter ]
   
  다음 예제에서는 `index` 변수 값을 1로 시작 하 고 종료 한 후의 값은 루프의 각 반복에 증가 `index` 5에 도달 합니다.  
   
- [!code-vb[VbVbalrStatements#111](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#111](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_1.vb)]  
   
  다음 예제에서는 `number` 변수 2를 시작 하 고 종료 한 후의 값은 루프의 각 반복에서 0.25 줄어듭니다 `number` 0에 도달 합니다.  `Step` 인수를 `-.25` 값 0.25는 루프의 각 반복에 의해 줄어듭니다.  
   
- [!code-vb[VbVbalrStatements#112](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#112](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_2.vb)]  
   
 > [!TIP]
 >  A [While...End While Statement](../../../visual-basic/language-reference/statements/while-end-while-statement.md) 또는 [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md) 때 미리 문은 루프의 실행 횟수 모르는 잘 작동 합니다.  그러나 루프 실행 횟수를 아는 경우에는 `For`...`Next` 루프가 더 유용합니다.  루프를 처음 입력할 때 반복 횟수를 결정합니다.  
@@ -87,7 +87,7 @@ Next [ counter ]
 ## 루프 중첩  
  한 루프를 다른 루프 내에 배치하여 `For` 루프를 서로 중첩할 수 있습니다.  다음 예제에서는 단계 값이 다른 중첩된 `For`...`Next` 구조를 보여 줍니다.  외부 루프는 루프가 반복될 때마다 문자열을 생성합니다.  내부 루프는 루프가 반복될 때마다 루프 카운터를 감소시킵니다.  
   
- [!code-vb[VbVbalrStatements#113](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#113](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_3.vb)]  
   
  루프를 중첩 하는 경우 각 루프에는 고유 해야 합니다 `counter` 변수입니다.  
   
@@ -100,7 +100,7 @@ Next [ counter ]
   
  다음 예제에서는 `Continue For` 및 `Exit For` 문을 사용하는 방법을 보여 줍니다.  
   
- [!code-vb[VbVbalrStatements#115](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#115](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_4.vb)]  
   
  `For`…`Next` 루프에 임의 수의 `Exit For` 문을 배치할 수 있습니다.  중첩된 `For`…`Next` 루프 내에 `Exit For`를 사용하면 Exit For는 가장 안쪽의 루프를 끝내고 중첩 수준이 그 다음으로 높은 루프에 제어를 전달합니다.  
   
@@ -168,17 +168,17 @@ Next [ counter ]
 ## 예제  
  다음 예제에서는 제네릭 목록에서 모든 요소를 제거합니다.  대신에 [For Each...Next 문](../../../visual-basic/language-reference/statements/for-each-next-statement.md)을 보여 주는 예제는 `For`...`Next` 내림차순으로 반복 되는 문입니다.  때문에이 기술을 사용 하는 예제는 `removeAt` 방법을 사용 하면 요소 제거 요소 후 낮은 인덱스 값을 가져야 합니다.  
   
- [!code-vb[VbVbalrStatements#114](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_5.vb)]  
+ [!code-vb[VbVbalrStatements#114](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_5.vb)]  
   
 ## 예제  
  다음 예제에서는 열거형을 사용 하 여 선언 된 반복은 [Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md).  
   
- [!code-vb[VbVbalrStatements#116](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_6.vb)]  
+ [!code-vb[VbVbalrStatements#116](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_6.vb)]  
   
 ## 예제  
  다음 예제에서는 문 매개 변수가 `+`, `-`, `>=` 및 `<=` 연산자에 대한 연산자 오버로드가 있는 클래스를 사용합니다.  
   
- [!code-vb[VbVbalrStatements#117](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-next-statement_7.vb)]  
+ [!code-vb[VbVbalrStatements#117](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-next-statement_7.vb)]  
   
 ## 참고 항목  
  <xref:System.Collections.Generic.List%601>   

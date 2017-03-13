@@ -59,7 +59,7 @@ result = expression1 & expression2
 ## 예제  
  다음 예제에서는 `&` 연산자를 사용하여 문자열을 연결합니다.  결과는 두 문자열 피연산자의 연결을 나타내는 문자열 값입니다.  
   
- [!code-vb[VbVbalrOperators#2](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/concatenation-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#2](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/concatenation-operator_1.vb)]  
   
 ## 참고 항목  
  [&\= Operator](../../../visual-basic/language-reference/operators/and-assignment-operator.md)   

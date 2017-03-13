@@ -22,7 +22,7 @@ caps.handback.revision: 22
 프로그램으로 컴퓨터에 폴더를 만들고, 하위 폴더를 만들고, 하위 폴더에 특정 파일을 만든 다음, 해당 파일에 데이터를 쓸 수 있습니다.  
   
 ## 예제  
- [!code-cs[csFilesandFolders#10](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#10)]  
+ [!code-cs[csFilesandFolders#10](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-create-a-file-or-folder_1.cs)]  
   
  폴더가 이미 있을 경우 <xref:System.IO.Directory.CreateDirectory%2A>는 아무 작업도 수행하지 않으며 예외가 throw되지 않습니다.  그러나 <xref:System.IO.File.Create%2A?displayProperty=fullName>이 기존 파일을 새 파일로 바꿉니다.  예제는 기존 파일이 대체되지 않도록 `if`\-`else` 문을 사용합니다.  
   

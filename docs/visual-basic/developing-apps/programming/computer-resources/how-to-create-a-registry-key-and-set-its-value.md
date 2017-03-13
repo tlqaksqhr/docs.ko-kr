@@ -36,22 +36,22 @@ caps.handback.revision: 30
   
 -   `CreateSubKey` 메서드에 키를 배치할 상위 하이브와 키 이름을 지정합니다.   `Subkey`  매개 변수는 대\/소문자를 구분하지 않습니다.  이 예제에서는 HKEY\_CURRENT\_USER 아래에 `MyTestKey` 레지스트리 키를 만듭니다.  
   
-     [!code-vb[VbResourceTasks#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-create-a-registry_1.vb)]  
+     [!code-vb[VbResourceTasks#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_1.vb)]  
   
 #### 레지스트리 키를 만들고 키 값을 설정하려면  
   
 1.  `CreateSubkey` 메서드에 키를 배치할 상위 하이브와 키 이름을 지정합니다.  이 예제에서는 HKEY\_CURRENT\_USER 아래에 `MyTestKey` 레지스트리 키를 만듭니다.  
   
-     [!code-vb[VbResourceTasks#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-create-a-registry_1.vb)]  
+     [!code-vb[VbResourceTasks#17](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_1.vb)]  
   
 2.  `SetValue` 메서드를 사용하여 값을 설정합니다.  이 예제에서는 문자열 값을 설정합니다. 이때   즉, "MyTestKeyValue"가 "This is a test value"로 설정됩니다.  
   
-     [!code-vb[VbResourceTasks#14](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-create-a-registry_2.vb)]  
+     [!code-vb[VbResourceTasks#14](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_2.vb)]  
   
 ## 예제  
  이 예제에서는 HKEY\_CURRENT\_USER 아래에 레지스트리 키 `MyTestKey`를 만든 다음 문자열 값 `MyTestKeyValue`를 `This is a test value`로 설정합니다.  
   
- [!code-vb[VbResourceTasks#15](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/how-to-create-a-registry_3.vb)]  
+ [!code-vb[VbResourceTasks#15](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-create-a-registry-key-and-set-its-value_3.vb)]  
   
 ## 강력한 프로그래밍  
  키를 넣을 적합한 위치를 찾으려면 레지스트리 구조를 살펴 봅니다.  예를 들어, 현재 사용자의 HKEY\_CURRENT\_USER\\Software 키를 열고 회사 이름을 갖는 키를 만들 수 있습니다.  그런 다음 해당 레지스트리 값을 회사 키에 추가하면 됩니다.  

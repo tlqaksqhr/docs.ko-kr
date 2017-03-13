@@ -23,11 +23,11 @@ caps.handback.revision: 24
   
  `fixed` 문은 관리되는 변수에 대한 포인터를 설정하고 문 실행 중에 해당 변수를 "고정"합니다.  `fixed`가 없으면 가비지 수집 시 변수가 예기치 않게 재배치될 수 있기 때문에 이동 가능한 관리되는 변수의 포인터는 거의 사용되지 않습니다.  C\# 컴파일러에서만 `fixed` 문에 관리되는 변수에 대한 포인터를 할당할 수 있습니다.  
   
- [!code-cs[csrefKeywordsFixedLock#1](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefFixedLock/csrefKeywordsFixedLock.cs#1)]  
+ [!code-cs[csrefKeywordsFixedLock#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/fixed-statement_1.cs)]  
   
  배열, 문자열, 고정 크기 버퍼 또는 변수 주소를 사용하여 포인터를 초기화할 수 있습니다.  다음 예제는 변수 주소, 배열 및 문자열의 사용 방법을 보여 줍니다.  고정 크기 버퍼에 대한 자세한 내용은 [고정 크기 버퍼](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md)를 참조하십시오.  
   
- [!code-cs[csrefKeywordsFixedLock#2](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefFixedLock/csrefKeywordsFixedLock.cs#2)]  
+ [!code-cs[csrefKeywordsFixedLock#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/fixed-statement_2.cs)]  
   
  포인터가 모두 같은 형식이라면 아래와 같이 여러 포인터를 초기화할 수 있습니다.  
   
@@ -37,7 +37,7 @@ fixed (byte* ps = srcarray, pd = dstarray) {...}
   
  서로 다른 형식의 포인터를 초기화하려면 다음 예제와 같이 `fixed` 문을 중첩하기만 하면 됩니다.  
   
- [!code-cs[csrefKeywordsFixedLock#3](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefFixedLock/csrefKeywordsFixedLock.cs#3)]  
+ [!code-cs[csrefKeywordsFixedLock#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/fixed-statement_3.cs)]  
   
  문의 코드가 실행된 후에는 고정된 모든 변수의 고정이 해제되어 가비지 수집 대상이 됩니다.  따라서 `fixed` 문 외부에서 이러한 변수를 참조해서는 안 됩니다.  
   
@@ -47,7 +47,7 @@ fixed (byte* ps = srcarray, pd = dstarray) {...}
  unsafe 모드에서는 스택에 메모리를 할당할 수 있습니다. 이러한 스택은 가비지 수집의 대상이 아니므로 고정할 필요가 없습니다.  자세한 내용은 [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)을 참조하십시오.  
   
 ## 예제  
- [!code-cs[csrefKeywordsFixedLock#4](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefFixedLock/csrefKeywordsFixedLock.cs#4)]  
+ [!code-cs[csrefKeywordsFixedLock#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/fixed-statement_4.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

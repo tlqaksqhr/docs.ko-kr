@@ -25,7 +25,7 @@ caps.handback.revision: 19
  사용자 정의 형식으로 `^` 연산자를 오버로드할 수 있습니다\([operator](../../../csharp/language-reference/keywords/operator.md) 참조\).  정수 계열 형식에 대한 연산은 일반적으로 열거형에서 허용됩니다.  
   
 ## 예제  
- [!code-cs[csRefOperators#30](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#30)]  
+ [!code-cs[csRefOperators#30](../../../csharp/language-reference/operators/codesnippet/CSharp/xor-operator_1.cs)]  
   
  이전 예제의 `0xf8 ^ 0x3f` 계산은 각각 16진수 값 F8과 3F에 해당하는 다음 두 이진 값의 비트 배타적 논리합\(Exclusive\-OR\)을 수행합니다.  
   

@@ -34,7 +34,7 @@ caps.handback.revision: 23
   
 -   <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A?displayProperty=fullName> 메서드 오버로드 중 하나를 사용하고 `directory` 매개 변수에서 검색할 디렉터리의 이름과 경로를 제공합니다.  다음 예에서는 디렉터리의 모든 파일을 반환하여  `ListBox1`에 추가합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#32](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-get-the-collectio_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#32](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-get-the-collection-of-files-in-a-directory_1.vb)]  
   
 ## 강력한 프로그래밍  
  다음 조건에서 예외가 발생합니다.  

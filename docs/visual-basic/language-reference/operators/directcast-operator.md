@@ -46,7 +46,7 @@ caps.handback.revision: 23
 ## 예제  
  다음 예제에서는 런타임에서 `DirectCast`의 두 가지 사용\(실패 및 성공\)을 보여 줍니다.  
   
- [!code-vb[VbVbalrKeywords#1](../../../visual-basic/language-reference/codesnippet/visualbasic/directcast-operator_1.vb)]  
+ [!code-vb[VbVbalrKeywords#1](../../../visual-basic/language-reference/codesnippet/VisualBasic/directcast-operator_1.vb)]  
   
  앞의 예제에서 `q`의 런타임 형식은 `Double`입니다.  `Double`을 `Integer`로 변환할 수 있기 때문에 `CType`이 성공합니다.  그러나 변환이 존재하더라도 `Double`의 런타임 형식은 `Integer`와 상속 관계가 없기 때문에 첫 번째 `DirectCast`가 런타임에 실패합니다.  두 번째 `DirectCast`는 <xref:System.Windows.Forms.Form> 형식에서 <xref:System.Windows.Forms.Form>이 상속하는 <xref:System.Windows.Forms.Control> 형식으로 변환되기 때문에 성공합니다.  
   

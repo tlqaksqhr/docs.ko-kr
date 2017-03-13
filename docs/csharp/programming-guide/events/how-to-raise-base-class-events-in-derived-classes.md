@@ -24,7 +24,7 @@ caps.handback.revision: 24
 >  기본 클래스에 가상 이벤트를 선언하고 파생 클래스에서 이를 재정의하지 마십시오.  C\#컴파일러핸들이 정확 하 게 수행 하며 파생 된이벤트에 대 한 구독자를기본 클래스이벤트에 실제로 가입 하는 것인지 예측할 수 없습니다.  
   
 ## 예제  
- [!code-cs[csProgGuideEvents#1](../../../csharp/programming-guide/events/codesnippet/csharp/how-to-raise-base-class-_1.cs)]  
+ [!code-cs[csProgGuideEvents#1](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-raise-base-class-events-in-derived-classes_1.cs)]  
   
 ## 참고 항목  
  [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   

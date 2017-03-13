@@ -141,14 +141,14 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 ## 예제  
  다음 예제에서는 현재 사용자 이름을 반환하는 `Function` 프로시저에 대한 외부 참조를 선언합니다.  그런 다음 `GetUserNameA` 외부 프로시저를 `getUser` 프로시저의 일부로 호출합니다.  
   
- [!code-vb[VbVbalrStatements#15](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/declare-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#15](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_1.vb)]  
   
 ## 예제  
  <xref:System.Runtime.InteropServices.DllImportAttribute>를 통해 비관리 코드에서 함수를 사용할 수도 있습니다.  다음 예제에서는 `Declare` 문을 사용하지 않고 가져온 함수를 선언합니다.  
   
- [!code-vb[VbVbalrStatements#16](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/declare-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#16](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_2.vb)]  
   
- [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/declare-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_3.vb)]  
   
 ## 참고 항목  
  <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>   

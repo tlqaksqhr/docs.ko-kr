@@ -78,17 +78,17 @@ End While
 ## 예제  
  다음 예에서 루프의 문은 `index` 변수가 10보다 커질 때까지 계속 실행됩니다.  
   
- [!code-vb[VbVbalrStatements#171](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/while-end-while-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#171](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_1.vb)]  
   
 ## 예제  
  다음 예제에서는 `Continue While` 및 `Exit While` 문을 사용하는 방법을 보여 줍니다.  
   
- [!code-vb[VbVbalrStatements#172](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/while-end-while-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#172](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_2.vb)]  
   
 ## 예제  
  다음 예제에서는 텍스트 파일의 모든 줄을 읽습니다.  <xref:System.IO.File.OpenText%2A> 메서드는 파일을 열고 문자를 읽는 <xref:System.IO.StreamReader>를 반환합니다.  에 `While` 조건을 <xref:System.IO.StreamReader.Peek%2A> 메서드는 `StreamReader` 파일 추가 문자가 포함 되어 있는지 여부를 결정.  
   
- [!code-vb[VbVbalrStatements#173](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/while-end-while-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#173](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/while-end-while-statement_3.vb)]  
   
 ## 참고 항목  
  [Loop Structures](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   

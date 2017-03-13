@@ -82,11 +82,11 @@ caps.handback.revision: 17
 ### 선언과 호출에 대한 설명  
  다음 구조체는 부호 있는 128비트 정수 값을 상위 및 하위 구성 부분으로 저장합니다.  `+` 연산자를 정의하여 두 개의 `veryLong` 값을 추가하고 결과 `veryLong` 값을 생성합니다.  
   
- [!code-vb[VbVbcnProcedures#23](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/operator-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#23](./codesnippet/VisualBasic/operator-procedures_1.vb)]  
   
  다음 예제에서는 `veryLong`에 정의된 일반적인 `+` 연산자 호출을 보여 줍니다.  
   
- [!code-vb[VbVbcnProcedures#24](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/operator-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#24](./codesnippet/VisualBasic/operator-procedures_2.vb)]  
   
  자세한 내용과 예제는 [Operator Overloading in Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703)를 참조하십시오.  
   

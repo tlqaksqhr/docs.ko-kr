@@ -38,7 +38,7 @@ x = x ^ y
  ^\= 연산자는 직접 오버로드될 수 없지만 사용자 정의 형식으로 [^ 연산자](../../../csharp/language-reference/operators/xor-operator.md)를 오버로드할 수 있습니다\([operator](../../../csharp/language-reference/keywords/operator.md) 참조\).  
   
 ## 예제  
- [!code-cs[csRefOperators#23](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#23)]  
+ [!code-cs[csRefOperators#23](../../../csharp/language-reference/operators/codesnippet/CSharp/xor-assignment-operator_1.cs)]  
   
 ## 참고 항목  
  [C\# 참조](../../../csharp/language-reference/index.md)   

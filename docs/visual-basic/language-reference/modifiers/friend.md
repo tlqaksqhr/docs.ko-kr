@@ -46,7 +46,7 @@ caps.handback.revision: 25
 ## 예제  
  다음 클래스는 `Friend` 한정자를 사용하여 동일한 어셈블리 내의 다른 프로그래밍 요소가 특정 멤버에 액세스할 수 있도록 합니다.  
   
- [!code-vb[VbVbalrAccessModifiers#1](../../../visual-basic/language-reference/modifiers/codesnippet/visualbasic/friend_1.vb)]  
+ [!code-vb[VbVbalrAccessModifiers#1](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/friend_1.vb)]  
   
 ## 용도  
  사용할 수 있는 `Friend` 이러한 컨텍스트 한정자:  

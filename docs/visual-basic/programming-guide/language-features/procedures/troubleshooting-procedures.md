@@ -50,7 +50,7 @@ caps.handback.revision: 17
   
  **해결 방법:** 반환될 배열 요소를 수정하려면 내부 배열을 지역 변수로 정의합니다.  다음 예제에서는 오류 없이 컴파일합니다.  
   
- [!code-vb[VbVbcnProcedures#66](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#66](./codesnippet/VisualBasic/troubleshooting-procedures_1.vb)]  
   
 ## 프로시저 호출에 의해 인수가 수정되지 않음  
  프로시저에서 호출 코드의 내부 인수로 사용하는 프로그래밍 요소를 변경하려면 해당 인수를 참조로 전달해야 합니다.  프로시저는 해당 인수를 값으로 전달하더라도 참조 형식 인수의 요소에 액세스할 수 있습니다.  
@@ -61,13 +61,13 @@ caps.handback.revision: 17
   
  다음 예제에서는 배열 변수를 값으로 받아 해당 요소를 변경하는 두 프로시저를 정의합니다.  `increase` 프로시저는 각 요소에 1을 더합니다.  `replace` 프로시저는 매개 변수 `a()`에 새 배열을 할당한 다음 각 요소에 1을 더합니다.  그러나 `a()`가 `ByVal`로 선언되기 때문에 다시 할당해도 호출 코드의 내부 배열 변수는 영향을 받지 않습니다.  
   
- [!code-vb[VbVbcnProcedures#35](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/troubleshooting-procedures_2.vb)]  
   
- [!code-vb[VbVbcnProcedures#38](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_3.vb)]  
+ [!code-vb[VbVbcnProcedures#38](./codesnippet/VisualBasic/troubleshooting-procedures_3.vb)]  
   
  다음 예제에서는 `increase` 및 `replace`를 호출합니다.  
   
- [!code-vb[VbVbcnProcedures#37](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_4.vb)]  
+ [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/troubleshooting-procedures_4.vb)]  
   
  첫 번째 `MsgBox` 호출에서는 "After increase\(n\): 11, 21, 31, 41"이 표시됩니다.  `n`이 참조 형식이기 때문에 `ByVal`로 전달되더라도`increase`가 해당 멤버를 변경할 수 있습니다.  
   
@@ -75,7 +75,7 @@ caps.handback.revision: 17
   
  **해결 방법:** 내부 변수 요소를 자동으로 수정하려면 해당 요소를 참조로 전달해야 합니다.  다음 예제에서는 `replace` 선언을 변경하여 배열을 호출 코드의 다른 배열로 바꾸는 방법을 보여 줍니다.  
   
- [!code-vb[VbVbcnProcedures#64](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_5.vb)]  
+ [!code-vb[VbVbcnProcedures#64](./codesnippet/VisualBasic/troubleshooting-procedures_5.vb)]  
   
 ## 오버로드를 정의할 수 없음  
  프로시저의 오버로드된 버전을 정의하려면 이름은 같지만 시그니처를 다르게 사용해야 합니다.  컴파일러에서 시그니처가 동일한 선언과 오버로드를 구별할 수 없는 경우 오류가 생성됩니다.  
@@ -117,9 +117,9 @@ caps.handback.revision: 17
   
  다음 예제는 오버로드 확인 프로세스를 보여 줍니다.  
   
- [!code-vb[VbVbcnProcedures#62](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_6.vb)]  
+ [!code-vb[VbVbcnProcedures#62](./codesnippet/VisualBasic/troubleshooting-procedures_6.vb)]  
   
- [!code-vb[VbVbcnProcedures#63](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_7.vb)]  
+ [!code-vb[VbVbcnProcedures#63](./codesnippet/VisualBasic/troubleshooting-procedures_7.vb)]  
   
  첫 번째 호출에서는 첫 번째 인수\(`Short`\)가 해당 매개 변수의 형식\(`Byte`\)으로 축소되므로 컴파일러에서 첫 번째 오버로드를 제거합니다.  그런 다음 두 번째 오버로드의 각 인수 형식\(`Short`와 `Single`\)이 세 번째 오버로드의 해당 형식\(`Integer`와 `Single`\)으로 확대되므로 세 번째 오버로드를 제거합니다.  두 번째 오버로드는 덜 확대해도 되므로 컴파일러에서 이 오버로드를 호출에 사용합니다.  
   
@@ -127,7 +127,7 @@ caps.handback.revision: 17
   
  **해결 방법:** 오버로드된 프로시저를 명확하게 호출하려면 [CType 함수](../../../../visual-basic/language-reference/functions/ctype-function.md)를 사용하여 인수 데이터 형식을 매개 변수 형식에 일치시킵니다.  다음 예제에서는 두 번째 오버로드를 확인하게 하는 `z` 호출을 보여 줍니다.  
   
- [!code-vb[VbVbcnProcedures#65](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/troubleshooting-procedures_8.vb)]  
+ [!code-vb[VbVbcnProcedures#65](./codesnippet/VisualBasic/troubleshooting-procedures_8.vb)]  
   
 ### Optional 및 ParamArray 인수를 사용하여 오버로드 확인  
  마지막 매개 변수가 각각 [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) 및 [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)로 선언된다는 점만 제외하고 프로시저에서 두 오버로드의 시그니처가 같은 경우 컴파일러는 가장 유사한 경우를 기준으로 프로시저에 대한 호출을 확인합니다.  자세한 내용은 [Overload Resolution](../../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)을 참조하십시오.  

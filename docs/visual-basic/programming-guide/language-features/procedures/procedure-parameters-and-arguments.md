@@ -53,7 +53,7 @@ caps.handback.revision: 21
 ## 매개 변수 데이터 형식  
  매개 변수 선언에서 `As` 절을 사용하여 해당 데이터 형식을 정의합니다.  예를 들어, 다음 함수에서는 문자열과 정수를 받아들입니다.  
   
- [!code-vb[VbVbcnProcedures#32](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/procedure-parameters-and_1.vb)]  
+ [!code-vb[VbVbcnProcedures#32](./codesnippet/VisualBasic/procedure-parameters-and-arguments_1.vb)]  
   
  형식 검사 스위치\([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)\)가 `Off`이면 `As` 절을 생략할 수 있습니다. 단, 매개 변수 중 어느 하나라도 이 절을 사용하면 모든 매개 변수에서 이 절을 사용해야 합니다.  형식 검사가 `On`이면 모든 프로시저 매개 변수에 `As` 절을 사용해야 합니다.  
   

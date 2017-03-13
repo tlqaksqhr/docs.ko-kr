@@ -23,7 +23,7 @@ caps.handback.revision: 10
 ## 예제  
  다음 예제에서는 예외가 throw될 위험 없이 `is` 및 `as` 연산자를 사용하여 참조 형식에서 다른 형식으로 캐스트하는 방법을 보여 줍니다.  또한 이 예제에서는 null 허용 값 형식과 함께 `as` 연산자를 사용하는 방법을 보여 줍니다.  
   
- [!code-cs[csProgGuideTypes#40](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/how-to-safely-cast-by-us_1.cs)]  
+ [!code-cs[csProgGuideTypes#40](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-safely-cast-by-using-as-and-is-operators_1.cs)]  
   
 ## 참고 항목  
  [형식](../../../csharp/programming-guide/types/index.md)   

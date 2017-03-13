@@ -34,7 +34,7 @@ caps.handback.revision: 32
   
 -   [using 지시문](../../../csharp/language-reference/keywords/using-directive.md)이 포함되지 않는 간단한 예제에서 네임스페이스 한정자를 사용합니다.  프로젝트에서 네임스페이스를 기본적으로 가져오는 경우에는 해당 네임스페이스의 이름을 정규화하지 않아도 됩니다.  정규화된 이름은 한 줄에 표시하기가 너무 길면 다음 예제에 나와 있는 것처럼 점\(.\)으로 분할할 수 있습니다.  
   
-     [!code-cs[csProgGuideCodingConventions#1](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/coding conventions examples/program.cs#1)]  
+     [!code-cs[csProgGuideCodingConventions#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_1.cs)]  
   
 -   다른 지침에 맞도록 조정하기 위해 Visual Studio 디자이너 도구를 사용하여 만든 개체 이름을 변경할 필요는 없습니다.  
   
@@ -53,7 +53,7 @@ caps.handback.revision: 32
   
 -   다음 코드에 나와 있는 것처럼 괄호를 사용하여 식의 절을 명확하게 구분합니다.  
   
-     [!code-cs[csProgGuideCodingConventions#2](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/coding conventions examples/program.cs#2)]  
+     [!code-cs[csProgGuideCodingConventions#2](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_2.cs)]  
   
 ## 주석 규칙  
   
@@ -65,7 +65,7 @@ caps.handback.revision: 32
   
 -   다음 코드에 나와 있는 것처럼 주석 구분 기호\(\/\/\)와 주석 텍스트 사이에 공백을 하나 삽입합니다.  
   
-     [!code-cs[csProgGuideCodingConventions#3](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/coding conventions examples/program.cs#3)]  
+     [!code-cs[csProgGuideCodingConventions#3](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_3.cs)]  
   
 -   서식이 지정된 별표 블록으로 주석을 묶지 않습니다.  
   
@@ -76,25 +76,25 @@ caps.handback.revision: 32
   
 -   다음 코드에 나와 있는 것처럼 `+` 연산자를 사용하여 짧은 문자열을 연결합니다.  
   
-     [!code-cs[csProgGuideCodingConventions#6](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/coding conventions examples/program.cs#6)]  
+     [!code-cs[csProgGuideCodingConventions#6](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_4.cs)]  
   
 -   특히 많은 양의 텍스트를 사용할 때 문자열을 루프에 추가하려면 <xref:System.Text.StringBuilder> 개체를 사용합니다.  
   
-     [!code-cs[csProgGuideCodingConventions#7](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/coding conventions examples/program.cs#7)]  
+     [!code-cs[csProgGuideCodingConventions#7](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_5.cs)]  
   
 ### 암시적으로 형식화한 지역 변수  
   
 -   할당 오른쪽에서 변수 형식이 명확하거나 정확한 형식이 중요하지 않으면 지역 변수에 대해 [암시적 형식](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)을 사용합니다.  
   
-     [!code-cs[csProgGuideCodingConventions#8](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/coding conventions examples/program.cs#8)]  
+     [!code-cs[csProgGuideCodingConventions#8](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_6.cs)]  
   
 -   할당 오른쪽에서 변수 형식이 명확하지 않으면 [var](../../../csharp/language-reference/keywords/var.md)을 사용하지 않습니다.  
   
-     [!code-cs[csProgGuideCodingConventions#9](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/coding conventions examples/program.cs#9)]  
+     [!code-cs[csProgGuideCodingConventions#9](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_7.cs)]  
   
 -   변수 이름을 사용하여 변수 형식을 지정하지 않습니다.  이렇게 하면 형식이 올바르게 지정되지 않을 수 있습니다.  
   
-     [!code-cs[csProgGuideCodingConventions#10](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/coding conventions examples/program.cs#10)]  
+     [!code-cs[csProgGuideCodingConventions#10](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_8.cs)]  
   
 -   `var`dynamic 대신 [을 사용하지 않습니다.](../../../csharp/language-reference/keywords/dynamic.md)  
   
@@ -102,11 +102,11 @@ caps.handback.revision: 32
   
      다음 예제에서는 `for` 문에서 암시적 형식을 사용합니다.  
   
-     [!code-cs[csProgGuideCodingConventions#11](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/coding conventions examples/program.cs#11)]  
+     [!code-cs[csProgGuideCodingConventions#11](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_9.cs)]  
   
      다음 예제에서는 `foreach` 문에서 암시적 형식을 사용합니다.  
   
-     [!code-cs[csProgGuideCodingConventions#12](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/coding conventions examples/program.cs#12)]  
+     [!code-cs[csProgGuideCodingConventions#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_10.cs)]  
   
 ### 부호 없는 데이터 형식  
   
@@ -116,53 +116,53 @@ caps.handback.revision: 32
   
 -   선언 줄에서 배열을 초기화할 때는 간결한 구문을 사용합니다.  
   
-     [!code-cs[csProgGuideCodingConventions#13](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/coding conventions examples/program.cs#13)]  
+     [!code-cs[csProgGuideCodingConventions#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_11.cs)]  
   
 ### 대리자  
   
 -   대리자 형식의 인스턴스를 만들려면 간결한 구문을 사용합니다.  
   
-     [!code-cs[csProgGuideCodingConventions#14](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/coding conventions examples/program.cs#14)]  
+     [!code-cs[csProgGuideCodingConventions#14](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_12.cs)]  
   
-     [!code-cs[csProgGuideCodingConventions#15](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/coding conventions examples/program.cs#15)]  
+     [!code-cs[csProgGuideCodingConventions#15](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_13.cs)]  
   
 ### 예외 처리의 try\-catch 및 using 문  
   
 -   대부분의 예외 처리에서는 [try\-catch](../../../csharp/language-reference/keywords/try-catch.md) 문을 사용합니다.  
   
-     [!code-cs[csProgGuideCodingConventions#16](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/coding conventions examples/program.cs#16)]  
+     [!code-cs[csProgGuideCodingConventions#16](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_14.cs)]  
   
 -   C\# [using 문](../../../csharp/language-reference/keywords/using-statement.md)을 사용하면 코드를 간소화할 수 있습니다.  [try\-finally](../../../csharp/language-reference/keywords/try-finally.md) 블록의 코드가 `finally` 메서드 호출뿐인 <xref:System.IDisposable.Dispose%2A> 문이 있는 경우에는 `using` 문을 대신 사용합니다.  
   
-     [!code-cs[csProgGuideCodingConventions#17](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/coding conventions examples/program.cs#17)]  
+     [!code-cs[csProgGuideCodingConventions#17](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_15.cs)]  
   
 ### && 및 &#124;&#124; 연산자  
   
 -   예외를 방지하고 불필요한 비교를 건너뛰어 성능을 개선하려면 비교를 수행할 때 다음 코드에 나와 있는 것처럼 [&&](../../../csharp/language-reference/operators/conditional-and-operator.md)를 [&](../../../csharp/language-reference/operators/and-operator.md) 대신 사용하고 [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md)를                                       [&#124;](../../../csharp/language-reference/operators/or-operator.md) 대신 사용합니다.  
   
-     [!code-cs[csProgGuideCodingConventions#18](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/coding conventions examples/program.cs#18)]  
+     [!code-cs[csProgGuideCodingConventions#18](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_16.cs)]  
   
 ### New 연산자  
   
 -   다음 선언에 나와 있는 것처럼 암시적 형식이 포함된 간결한 형태의 개체 인스턴스화를 사용합니다.  
   
-     [!code-cs[csProgGuideCodingConventions#19](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/coding conventions examples/program.cs#19)]  
+     [!code-cs[csProgGuideCodingConventions#19](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_17.cs)]  
   
      위의 줄은 다음 선언과 동일합니다.  
   
-     [!code-cs[csProgGuideCodingConventions#20](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/coding conventions examples/program.cs#20)]  
+     [!code-cs[csProgGuideCodingConventions#20](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_18.cs)]  
   
 -   개체를 간편하게 만들려면 개체 이니셜라이저를 사용합니다.  
   
-     [!code-cs[csProgGuideCodingConventions#21](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/coding conventions examples/program.cs#21)]  
+     [!code-cs[csProgGuideCodingConventions#21](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_19.cs)]  
   
 ### 이벤트 처리  
   
 -   나중에 제거할 필요가 없는 이벤트 처리기를 정의하는 경우 람다 식을 사용합니다.  
   
-     [!code-cs[csProgGuideCodingConventions#22](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/coding conventions examples/program.cs#22)]  
+     [!code-cs[csProgGuideCodingConventions#22](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_20.cs)]  
   
-     [!code-cs[csProgGuideCodingConventions#23](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/coding conventions examples/program.cs#23)]  
+     [!code-cs[csProgGuideCodingConventions#23](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_21.cs)]  
   
 ### 정적 멤버  
   
@@ -172,29 +172,29 @@ caps.handback.revision: 32
   
 -   쿼리 변수에 의미 있는 이름을 사용합니다.  다음 예제에서는 Seattle 거주 고객에 대해 `seattleCustomers`를 사용합니다.  
   
-     [!code-cs[csProgGuideCodingConventions#25](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/coding conventions examples/program.cs#25)]  
+     [!code-cs[csProgGuideCodingConventions#25](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_22.cs)]  
   
 -   별칭을 사용하여 익명 형식의 속성 이름 대\/소문자를 올바르게 표시합니다\(파스칼식 대\/소문자 사용\).  
   
-     [!code-cs[csProgGuideCodingConventions#26](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/coding conventions examples/program.cs#26)]  
+     [!code-cs[csProgGuideCodingConventions#26](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_23.cs)]  
   
 -   결과의 속성 이름이 모호하면 속성 이름을 바꿉니다.  예를 들어 쿼리에서 고객 이름과 배포자 ID를 반환하는 경우 결과에서 이러한 정보를 `Name` 및 `ID`로 유지하는 대신 `Name`은 고객의 이름이고 `ID`는 배포자의 ID임을 명확하게 나타내도록 이름을 바꿉니다.  
   
-     [!code-cs[csProgGuideCodingConventions#27](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/coding conventions examples/program.cs#27)]  
+     [!code-cs[csProgGuideCodingConventions#27](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_24.cs)]  
   
 -   쿼리 변수 및 범위 변수의 선언에서 암시적 형식을 사용합니다.  
   
-     [!code-cs[csProgGuideCodingConventions#25](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/coding conventions examples/program.cs#25)]  
+     [!code-cs[csProgGuideCodingConventions#25](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_22.cs)]  
   
 -   위의 예제에 나와 있는 것처럼 [from](../../../csharp/language-reference/keywords/from-clause.md) 절 아래의 쿼리 절을 정렬합니다.  
   
 -   뒷부분의 쿼리 절이 필터링을 통해 범위가 좁아진 데이터 집합에 대해 작동하도록 다른 쿼리 절 앞에 [where](../../../csharp/language-reference/keywords/where-clause.md) 절을 사용합니다.  
   
-     [!code-cs[csProgGuideCodingConventions#29](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/coding conventions examples/program.cs#29)]  
+     [!code-cs[csProgGuideCodingConventions#29](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_25.cs)]  
   
 -   내부 컬렉션에 액세스하려면 `from`join 절 대신 여러 [절을 사용합니다.](../../../csharp/language-reference/keywords/join-clause.md) 예를 들어 `Student` 개체 컬렉션이 각각 테스트 점수 컬렉션을 포함하는 경우  다음 쿼리를 실행하면 90점보다 높은 각 점수와 해당 점수를 받은 학생의 성이 반환됩니다.  
   
-     [!code-cs[csProgGuideCodingConventions#30](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/coding conventions examples/program.cs#30)]  
+     [!code-cs[csProgGuideCodingConventions#30](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/coding-conventions_26.cs)]  
   
 ## 보안  
  [보안 코딩 지침](../Topic/Secure%20Coding%20Guidelines.md)의 지침을 따르세요.  

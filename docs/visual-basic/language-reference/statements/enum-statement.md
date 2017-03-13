@@ -146,37 +146,37 @@ End Enum
 ## <a name="example"></a>예제  
  다음 예제를 사용 하는 방법을 보여 줍니다는 `Enum` 문입니다. 멤버 라고는 `EggSizeEnum.Medium`, 아니라 `Medium`합니다.  
   
- [!code-vb[VbEnumsTask#41](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class1.vb#41)]  
+ [!code-vb[VbEnumsTask#41](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_1.vb)]  
   
 ## <a name="example"></a>예제  
  다음 예제에서 메서드는 외부는 `Egg` 클래스입니다. 따라서 `EggSizeEnum` 으로 정규화 된 `Egg.EggSizeEnum`합니다.  
   
- [!code-vb[VbEnumsTask#42](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class1.vb#42)]  
+ [!code-vb[VbEnumsTask#42](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_2.vb)]  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 `Enum` 명명 된 상수 값을 관련된 집합을 정의 합니다. 이 경우 값은 색 데이터베이스에 대 한 데이터 입력 폼을 설계할 수 있습니다.  
   
- [!code-vb[VbEnumsTask#30](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#30)]  
+ [!code-vb[VbEnumsTask#30](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_3.vb)]  
   
 ## <a name="example"></a>예제  
  다음 예에서는 양수 및 음수를 포함 하는 값을 보여 줍니다.  
   
- [!code-vb[VbEnumsTask#31](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#31)]  
+ [!code-vb[VbEnumsTask#31](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_4.vb)]  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 `As` 절 지정을 사용 하는 `datatype` 열거형.  
   
- [!code-vb[VbEnumsTask#6](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#6)]  
+ [!code-vb[VbEnumsTask#6](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_5.vb)]  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 열거형을 비트를 사용 하는 방법을 보여 줍니다. 여러 값의 비트 열거형 인스턴스에 할당할 수 있습니다.  `Enum` 선언는 <xref:System.FlagsAttribute> 열거형 플래그 집합으로 처리할 수 있음을 나타내는 특성입니다.  
   
- [!code-vb[VbEnumsTask#61](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class1.vb#61)]  
+ [!code-vb[VbEnumsTask#61](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_6.vb)]  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 열거형을 반복합니다. 사용 하 여는 <xref:System.Enum.GetNames%2A> 열거형의 멤버 이름의 배열을 검색 하는 메서드 및 <xref:System.Enum.GetValues%2A> 멤버 값의 배열을 검색 하 합니다.  
   
- [!code-vb[VbEnumsTask#51](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class1.vb#51)]  
+ [!code-vb[VbEnumsTask#51](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enum-statement_7.vb)]  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Enum>   

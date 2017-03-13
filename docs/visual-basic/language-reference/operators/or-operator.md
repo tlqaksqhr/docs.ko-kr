@@ -86,14 +86,14 @@ result = expression1 Or expression2
 ## <a name="example"></a>예제  
  다음 예제에서는 `Or` 두 식에 포함 논리합 연산을 수행 하는 연산자입니다. 결과는 `Boolean` 값을 나타내는 두 식 중 하나 인지 `True`합니다.  
   
- [!code-vb[VbVbalrOperators#35](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/or-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#35](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/or-operator_1.vb)]  
   
  앞 예제의 결과는 `True`, `True`, 및 `False`, 각각.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 `Or` 두 숫자 식의 개별 비트를 포괄 논리 분리를 수행 하는 연산자입니다. 피연산자의 해당 비트 중 하나가 1로 설정 된 경우 결과 패턴의 비트가 설정 됩니다.  
   
- [!code-vb[VbVbalrOperators#36](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/or-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#36](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/or-operator_2.vb)]  
   
  앞의 예제는 각각 10, 14, 14의 결과 생성합니다.  
   

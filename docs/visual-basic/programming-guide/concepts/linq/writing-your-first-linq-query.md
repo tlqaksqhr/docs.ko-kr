@@ -46,7 +46,7 @@ caps.handback.revision: 54
 > [!NOTE]
 >  에 [프로젝트 디자이너, 컴파일 페이지\(Visual Basic\)](/visual-studio/ide/reference/compile-page-project-designer-visual-basic), 되도록  **Option infer** 로 설정 된  **의**.  
   
- [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_1.vb)]  
+ [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
   
  출력  
   
@@ -59,7 +59,7 @@ caps.handback.revision: 54
   
  소스 데이터가 이미 구현 하지 않는 경우 <xref:System.Collections.Generic.IEnumerable%601>, [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 공급자를 필요로 하는 기능을 구현 하는  *표준 쿼리 연산자* 해당 데이터 원본에 대 한.  예를 들어 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)]은 다음 예제와 같이 XML 문서를 쿼리 가능한 <xref:System.Xml.Linq.XElement> 형식으로 로드하는 작업을 처리합니다.  표준 쿼리 연산자에 대한 자세한 내용은 [Standard Query Operators Overview](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)를 참조하십시오.  
   
- [!code-vb[VbLINQFirstQuery#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_2.vb)]  
+ [!code-vb[VbLINQFirstQuery#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_2.vb)]  
   
  [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)]에서는 먼저 개체 관계형 매핑을 디자인 타임에 수동으로 만들거나 [O\/R 디자이너\(개체 관계형 디자이너\)](/visual-studio/data-tools/linq-to-sql-tools-in-visual-studio2)를 사용하여 만듭니다.  사용자가 개체에 대한 쿼리를 작성하고 런타임에 [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)]은 데이터베이스와의 통신을 처리합니다.  다음 예제에서 `customers`는 데이터베이스의 특정 테이블을 나타내고 <xref:System.Data.Linq.Table%601>은 제네릭 <xref:System.Linq.IQueryable%601>을 지원합니다.  
   
@@ -74,7 +74,7 @@ caps.handback.revision: 54
   
  다음 예제에서 쿼리를 실행하면 정수 배열 `numbers`의 모든 짝수가 반환됩니다.  
   
- [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_1.vb)]  
+ [!code-vb[VbLINQFirstQuery#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_1.vb)]  
   
  쿼리 식에는 세 개의 절인 `From`, `Where` 및 `Select`가 포함되어 있습니다.  각 쿼리 식 절의 특정 기능과 용도에 대해서는 [기본 쿼리 작업\(Visual Basic\)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)에서 설명합니다.  자세한 내용은 [Queries](../../../../visual-basic/language-reference/queries/queries.md)을 참조하십시오.  [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)]에서는 쿼리 정의를 변수에 저장한 후 나중에 실행하는 경우가 많습니다.  쿼리 변수 같이 `evensQuery` 이전 예에서 쿼리 가능한 형식 이어야 합니다. 종류를 `evensQuery` 는 `IEnumerable(Of Integer)`, 로컬 형식 유추를 사용 하 여 컴파일러에 의해 할당 된.  
   
@@ -86,13 +86,13 @@ caps.handback.revision: 54
 ### 지연된 실행  
  일반적인 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 쿼리는 앞의 예제에서 `evensQuery`를 정의하는 쿼리와 유사합니다.  쿼리를 만들지만 즉시 실행하지는 않습니다.  대신 쿼리 정의가 쿼리 변수 `evensQuery`에 저장됩니다.  나중에 쿼리를 실행할 때는 일반적으로 값 시퀀스를 반환하는 `For Each` 루프를 사용하거나 `Count` 또는 `Max`와 같은 표준 쿼리 연산자를 적용합니다.  이 프로세스를 *지연된 실행*이라고 합니다.  
   
- [!code-vb[VbLINQFirstQuery#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_3.vb)]  
+ [!code-vb[VbLINQFirstQuery#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_3.vb)]  
   
  값 시퀀스의 경우 `For Each` 루프\(앞의 예제에서 `number`\)에 반복 변수를 사용하여 검색된 데이터에 액세스합니다.  쿼리 변수 `evensQuery`는 쿼리 결과가 아니라 쿼리 정의를 저장하므로 쿼리 변수를 두 번 이상 사용하여 언제든지 쿼리를 실행할 수 있습니다.  예를 들어 별개의 응용 프로그램에 의해 계속 업데이트되는 데이터베이스가 응용 프로그램에 있다고 가정해 봅니다.  해당 데이터베이스에서 데이터를 검색하는 쿼리를 만든 후 `For Each` 루프를 사용하여 반복해서 쿼리를 실행하고 매번 가장 최근 데이터를 검색할 수 있습니다.  
   
  다음 예제에서는 지연된 실행의 작동 방식을 보여 줍니다.  앞의 예제와 같이 `For Each` 루프를 사용하여 `evensQuery2`를 정의하고 실행하면 데이터 소스 `numbers`의 일부 요소가 변경됩니다.  그런 다음 두 번째 `For Each` 루프에서 다시 `evensQuery2`를 실행합니다.  두 번째에는 `For Each` 루프가 `numbers`의 새 값을 사용하여 쿼리를 다시 실행하므로 결과가 다릅니다.  
   
- [!code-vb[VbLINQFirstQuery#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_4.vb)]  
+ [!code-vb[VbLINQFirstQuery#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_4.vb)]  
   
  출력  
   
@@ -109,15 +109,15 @@ caps.handback.revision: 54
   
  다음 쿼리는 정수 배열의 짝수 개수를 반환합니다.  쿼리 정의가 저장되지 않으며 `numEvens`는 간단한 `Integer`입니다.  
   
- [!code-vb[VbLINQFirstQuery#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_5.vb)]  
+ [!code-vb[VbLINQFirstQuery#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_5.vb)]  
   
  `Aggregate` 메서드를 사용하면 동일한 결과를 얻을 수 있습니다.  
   
- [!code-vb[VbLINQFirstQuery#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_6.vb)]  
+ [!code-vb[VbLINQFirstQuery#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_6.vb)]  
   
  다음 코드와 같이 쿼리\(즉시 실행\) 또는 쿼리 변수\(지연된 실행\)에서 `ToList` 또는 `ToArray` 메서드를 호출하여 쿼리 실행을 강제할 수도 있습니다.  
   
- [!code-vb[VbLINQFirstQuery#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/writing-your-first-linq-_7.vb)]  
+ [!code-vb[VbLINQFirstQuery#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/writing-your-first-linq-query_7.vb)]  
   
  앞의 예제에서 `evensQuery3`은 쿼리 변수이지만 `evensList`는 목록이고 `evensArray`는 배열입니다.  
   

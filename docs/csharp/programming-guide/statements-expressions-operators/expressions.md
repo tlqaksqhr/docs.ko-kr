@@ -42,13 +42,13 @@ System.Convert.ToInt32("35")
 ## 리터럴 및 단순한 이름  
  식에서 가장 간단한 두 가지 형식은 리터럴과 단순한 이름입니다.  리터럴은 이름이 없는 상수 값입니다.  예를 들어 다음 코드 예제에서 `5`와 `"Hello World"`는 모두 리터럴 값입니다.  
   
- [!code-cs[csProgGuideStatements#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/expressions_1.cs)]  
+ [!code-cs[csProgGuideStatements#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_1.cs)]  
   
  리터럴에 대한 자세한 내용은 [형식](../../../csharp/language-reference/keywords/types.md)을 참조하십시오.  
   
  앞의 예제에서 `i`와 `s`는 모두 지역 변수를 식별하는 단순한 이름입니다.  이러한 변수가 식에서 사용될 때 변수 이름은 현재 메모리의 변수 위치에 저장되어 있는 값으로 계산됩니다.  다음 예제에서 이를 확인할 수 있습니다.  
   
- [!code-cs[csProgGuideStatements#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/expressions_2.cs)]  
+ [!code-cs[csProgGuideStatements#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/expressions_2.cs)]  
   
 ## 호출 식  
  다음 코드 예제에서 `DoWork`에 대한 호출이 호출 식입니다.  

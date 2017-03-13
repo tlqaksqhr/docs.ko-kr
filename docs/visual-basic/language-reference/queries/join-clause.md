@@ -67,12 +67,12 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 ## 예제  
  다음 코드 예제에서는 암시적 조인을 수행하여 주문이 있는 고객의 목록을 결합합니다.  
   
- [!code-vb[VbSimpleQuerySamples#13](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#13)]  
+ [!code-vb[VbSimpleQuerySamples#13](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_1.vb)]  
   
 ## 예제  
  다음 코드 예제에서는 `Join` 절을 사용하여 두 개의 컬렉션을 조인합니다.  
   
- [!code-vb[VbSimpleQuerySamples#12](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples2.vb#12)]  
+ [!code-vb[VbSimpleQuerySamples#12](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_2.vb)]  
   
  이 예제는 다음과 유사한 출력을 생성합니다.  
   
@@ -85,7 +85,7 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 ## 예제  
  다음 코드 예제에서는 두 개의 키 열과 함께 `Join` 절을 사용하여 두 개의 컬렉션을 조인합니다.  
   
- [!code-vb[VbSimpleQuerySamples#17](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples3.vb#17)]  
+ [!code-vb[VbSimpleQuerySamples#17](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_3.vb)]  
   
  이 예제는 다음과 유사한 출력을 생성합니다.  
   

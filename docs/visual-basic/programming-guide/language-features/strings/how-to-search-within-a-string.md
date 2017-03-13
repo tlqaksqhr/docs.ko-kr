@@ -26,7 +26,7 @@ caps.handback.revision: 16
 이 예제에서는 <xref:System.String> 개체의 <xref:System.String.IndexOf%2A> 메서드를 호출하여 해당 부분 문자열이 처음 나타나는 위치의 인덱스를 보고합니다.  
   
 ## 예제  
- [!code-vb[VbVbalrStrings#71](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-search-within-a-s_1.vb)]  
+ [!code-vb[VbVbalrStrings#71](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-search-within-a-string_1.vb)]  
   
 ## 코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  

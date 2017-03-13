@@ -31,7 +31,7 @@ caps.handback.revision: 11
   
 -   다음 예제에서처럼 `#Region` 문과 `#End Region` 문 사이에 코드 섹션을 놓습니다.  
   
-     [!code-vb[VbVbalrConditionalComp#6](../../../visual-basic/language-reference/directives/codesnippet/visualbasic/how-to-collapse-and-hide_1.vb)]  
+     [!code-vb[VbVbalrConditionalComp#6](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/how-to-collapse-and-hide-sections-of-code_1.vb)]  
   
      `#Region` 블록은 한 코드 파일에서 여러 번 사용할 수 있습니다. 즉, 차례로 축소할 수 있는 사용자 고유의 프로시저 및 클래스 블록을 정의할 수 있습니다.  또한 `#Region` 블록은 다른 `#Region` 블록에 중첩될 수 있습니다.  
   

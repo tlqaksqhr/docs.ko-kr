@@ -28,7 +28,7 @@ caps.handback.revision: 15
   
  `#If...Then...#Else` 지시문을 사용하여 조건부로 컴파일할 코드 블록을 나타냅니다.  예를 들어, 동일한 소스 코드를 사용하여 프랑스어 및 독일어 버전의 동일한 응용 프로그램을 만들려면 미리 정의된 상수 `FrenchVersion`과 `GermanVersion`을 사용하여 플랫폼별 코드 세그먼트를 `#If...Then` 문에 포함합니다.  다음 예제는 그 방법을 보여 줍니다.  
   
- [!code-vb[VbVbalrConditionalComp#5](../../../visual-basic/language-reference/directives/codesnippet/visualbasic/conditional-compilation_1.vb)]  
+ [!code-vb[VbVbalrConditionalComp#5](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/conditional-compilation_1.vb)]  
   
  컴파일 타임에 `FrenchVersion` 조건부 컴파일 상수 값을 `True`로 설정하면 프랑스어 버전의 조건부 코드가 컴파일되고  `GermanVersion` 상수 값을 `True`로 설정하면 독일어 버전이 컴파일됩니다.  `True`로 설정된 상수 값이 없으면 마지막 `Else` 블록의 코드가 실행됩니다.  
   

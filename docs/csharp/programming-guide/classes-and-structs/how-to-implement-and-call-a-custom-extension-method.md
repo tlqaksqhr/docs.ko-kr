@@ -37,7 +37,7 @@ caps.handback.revision: 15
 ## 예제  
  다음 예제에서는 `CustomExtensions.StringExtension` 클래스에 `WordCount`라는 확장 메서드를 구현합니다.  이 메서드는 첫 번째 메서드 매개 변수로 지정된 <xref:System.String> 클래스에서 작동합니다.  `CustomExtensions` 네임스페이스를 응용 프로그램 네임스페이스로 가져오고 `Main` 메서드 내부에서 메서드가 호출됩니다.  
   
- [!code-cs[csProgGuideExtensionMethods#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-implement-and-cal_1.cs)]  
+ [!code-cs[csProgGuideExtensionMethods#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-and-call-a-custom-extension-method_1.cs)]  
   
 ## 코드 컴파일  
  이 코드를 실행하려면 [!INCLUDE[vs_current_short](../../../csharp/programming-guide/classes-and-structs/includes/vs-current-short-md.md)]에서 만들어진 Visual C\# 콘솔 응용 프로그램 프로젝트에 코드를 복사하여 붙여넣습니다.  기본적으로 이 프로젝트는 [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]의 버전 3.5를 대상으로 하며 System.Core.dll에 대한 참조와 System.Linq에 대한 `using` 지시문이 있습니다.  프로젝트에서 이러한 요구 사항 중 하나 이상이 누락된 경우 수동으로 추가할 수 있습니다.  자세한 내용은 [How to: Create a LINQ Project](../Topic/How%20to:%20Create%20a%20LINQ%20Project.md)를 참조하십시오.  

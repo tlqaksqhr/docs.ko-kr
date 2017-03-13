@@ -50,7 +50,7 @@ caps.handback.revision: 28
   
  다음 예제에서는 두 `Double` 값에 대한 올바르지 않은 비교와 올바른 비교를 보여 줍니다.  
   
- [!code-vb[VbVbalrDataTypes#10](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/troubleshooting-data-types_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#10](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_1.vb)]  
   
  앞의 예제에서는 <xref:System.Double> 구조체의 <xref:System.Double.ToString%2A> 메서드를 사용하므로 `CStr` 키워드를 사용할 때보다 더 정확하게 지정할 수 있습니다.  기본값은 15자리지만 "G17" 형식에서는 기본값이 17자리로 확대됩니다.  
   
@@ -66,7 +66,7 @@ caps.handback.revision: 28
   
  다음 예제에서는 부동 소수점 피연산자의 잠재적인 부정확성에 대해 설명합니다.  
   
- [!code-vb[VbVbalrDataTypes#11](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/troubleshooting-data-types_2.vb)]  
+ [!code-vb[VbVbalrDataTypes#11](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_2.vb)]  
   
  앞의 예제에서는 <xref:System.Double> 구조체의 <xref:System.Double.ToString%2A> 메서드를 사용하므로 `CStr` 키워드를 사용할 때보다 더 정확하게 지정할 수 있습니다.  기본값은 15자리지만 "G17" 형식에서는 기본값이 17자리로 확대됩니다.  
   
@@ -103,7 +103,7 @@ caps.handback.revision: 28
   
  [!CODE [VbVbalrStatements#49](../CodeSnippet/VS_Snippets_VBCSharp/VbVbalrStatements#49)]  
   
- [!code-vb[VbVbalrDataTypes#12](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/troubleshooting-data-types_4.vb)]  
+ [!code-vb[VbVbalrDataTypes#12](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/troubleshooting-data-types_3.vb)]  
   
  축소 변환은 런타임에서 실패할 수 있기 때문에 항상 위험이 따릅니다.  예를 들어, `String` 값에 두 개 이상의 문자가 포함되어 있는 경우 `String`을 `Char`로 변환할 수 없습니다.  따라서 `C` 형식 문자를 사용하도록 프로그래밍하는 것이 더 좋습니다.  
   

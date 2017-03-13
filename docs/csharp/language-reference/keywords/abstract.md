@@ -24,7 +24,7 @@ caps.handback.revision: 24
 ## 예제  
  이 예제에서 `Square` 클래스는 `ShapesClass`에서 파생되므로 `Area`의 구현을 제공해야 합니다.  
   
- [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#1)]  
+ [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_1.cs)]  
   
  추상 클래스에는 다음과 같은 특징이 있습니다.  
   
@@ -66,12 +66,12 @@ caps.handback.revision: 24
   
  인터페이스를 구현하는 추상 클래스는 인터페이스 메서드를 추상 메서드에 매핑할 수도 있습니다.  예를 들면 다음과 같습니다.  
   
- [!code-cs[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#2)]  
+ [!code-cs[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_2.cs)]  
   
 ## 예제  
  다음 예제에서 `DerivedClass` 클래스는 추상 클래스 `BaseClass`에서 파생되었습니다.  이 추상 클래스에는 추상 메서드 `AbstractMethod`와 두 개의 추상 속성 `X` 및 `Y`가 포함되어 있습니다.  
   
- [!code-cs[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#3)]  
+ [!code-cs[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_3.cs)]  
   
  앞의 예제에서 다음과 같은 문으로 추상 클래스를 인스턴스화하려고 하면  
   

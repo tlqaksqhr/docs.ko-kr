@@ -81,12 +81,12 @@ End With
 ## 예제  
  다음 예제에서는 각 `With` 블록이 단일 개체에 대해 일련의 문을 실행합니다.  
   
- [!code-vb[VbVbalrWithStatement#2](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/vbwpfapp/mainwindow.xaml.vb#2)]  
+ [!code-vb[VbVbalrWithStatement#2](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/with-end-with-statement_1.vb)]  
   
 ## 예제  
  다음 예제에서는 `With…End With` 문을 중첩시킵니다.  중첩된 `With` 문 내에서 구문은 내부 개체를 참조합니다.  
   
- [!code-vb[VbVbalrWithStatement#1](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/vbwpfapp/mainwindow.xaml.vb#1)]  
+ [!code-vb[VbVbalrWithStatement#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/with-end-with-statement_2.vb)]  
   
 ## 참고 항목  
  <xref:System.Collections.Generic.List%601>   

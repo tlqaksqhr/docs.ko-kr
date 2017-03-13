@@ -81,7 +81,7 @@ LINQ\(통합 언어 쿼리\)를 사용하면 손쉽게 데이터베이스 정보
   
      다음 코드를 `Load` 이벤트에 추가합니다.  이 코드는 데이터 컨텍스트의 속성으로 노출된 테이블을 쿼리하고 결과의 최소값과 최대값을 결정합니다.  샘플에서는 `Aggregate` 절을 사용하여 단일 결과를 쿼리하고 `Group By` 절을 사용하여 그룹화된 결과의 평균을 표시합니다.  
   
-     [!code-vb[VbLINQToSQLHowTos#14](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form7.vb#14)]  
+     [!code-vb[VbLINQToSQLHowTos#14](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-find-the-minimum-or-maximum-value-in-a-query-result_1.vb)]  
   
 4.  F5 키를 눌러 프로젝트를 실행하고 결과를 봅니다.  
   

@@ -49,7 +49,7 @@ caps.handback.revision: 13
 ## 예제  
  코드는 다음 두 가지 예를 보여 줍니다. 여기서는 `Call` 키워드 프로시저를 호출할 필요가 없습니다.  두 예제 모두 식 이라는 식별자로 시작 되지 않습니다.  
   
- [!code-vb[VbVbalrStatements#97](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/call-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#97](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/call-statement_1.vb)]  
   
 ## 참고 항목  
  [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md)   

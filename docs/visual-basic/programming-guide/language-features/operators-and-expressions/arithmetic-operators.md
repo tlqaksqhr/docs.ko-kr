@@ -35,29 +35,29 @@ caps.handback.revision: 20
 ## 산술 연산  
  다음 예제와 같이 식에서 [\+ Operator](../../../../visual-basic/language-reference/operators/addition-operator.md)를 사용하여 두 값을 서로 더하거나 [\- Operator](../../../../visual-basic/language-reference/operators/subtraction-operator.md)를 사용하여 한 값에서 다른 값을 뺄 수 있습니다.  
   
- [!code-vb[VbVbalrOperators#57](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/arithmetic-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#57](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_1.vb)]  
   
  다음 예제에서와 같이 부정 연산에서도 [\- Operator](../../../../visual-basic/language-reference/operators/subtraction-operator.md)를 사용하지만 피연산자는 하나만 사용됩니다.  
   
- [!code-vb[VbVbalrOperators#58](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/arithmetic-operators_2.vb)]  
+ [!code-vb[VbVbalrOperators#58](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_2.vb)]  
   
  다음 예제에서와 같이 곱하기 연산에는 [\* Operator](../../../../visual-basic/language-reference/operators/multiplication-operator.md)를, 나누기 연산에는 [\/ Operator](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md)를 사용합니다.  
   
- [!code-vb[VbVbalrOperators#59](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/arithmetic-operators_3.vb)]  
+ [!code-vb[VbVbalrOperators#59](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_3.vb)]  
   
  다음 예제에서와 같이 지수 연산에서는 [^ Operator](../../../../visual-basic/language-reference/operators/exponentiation-operator.md)를 사용합니다.  
   
- [!code-vb[VbVbalrOperators#60](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/arithmetic-operators_4.vb)]  
+ [!code-vb[VbVbalrOperators#60](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_4.vb)]  
   
  정수 나누기는 [\\ Operator](../../../../visual-basic/language-reference/operators/integer-division-operator.md)를 사용하여 실행됩니다.  정수 나누기는 몫을 반환합니다. 즉, 이 몫은 나머지에 관계없이 제수를 피제수로 나눌 수 있는 횟수를 나타내는 정수입니다.  제수 및 피제수 모두 이 연산자에 대한 정수 계열 형식\(`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`\)이어야 합니다.  다른 모든 형식은 먼저 정수 계열 형식으로 변환해야 합니다.  다음 예제에서는 정수 나누기를 보여 줍니다.  
   
- [!code-vb[VbVbalrOperators#61](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/arithmetic-operators_5.vb)]  
+ [!code-vb[VbVbalrOperators#61](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_5.vb)]  
   
  나머지 연산은 [Mod 연산자](../../../../visual-basic/language-reference/operators/mod-operator.md)를 사용하여 수행됩니다.  이 연산자는 제수를 피제수로 나눈 후 나머지를 반환합니다.  제수와 피제수가 모두 정수 계열 형식이면 반환된 값도 정수이고  제수와 피제수가 부동 소수점 형식이면 반환된 값도 부동 소수점입니다.  다음 예제에서는 이 동작에 대해 설명합니다.  
   
- [!code-vb[VbVbalrOperators#62](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/arithmetic-operators_6.vb)]  
+ [!code-vb[VbVbalrOperators#62](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_6.vb)]  
   
- [!code-vb[VbVbalrOperators#63](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/arithmetic-operators_7.vb)]  
+ [!code-vb[VbVbalrOperators#63](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_7.vb)]  
   
 ### 0으로 나누기 수행  
  0으로 나누기의 결과는 관련된 데이터 형식에 따라 달라집니다.  정수 계열\(`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`\)을 0으로 나누면 [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)]에서 <xref:System.DivideByZeroException> 예외를 throw합니다.  `Decimal` 또는 `Single` 데이터 형식에 대해 나누기 연산을 수행해도 [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)]에서 <xref:System.DivideByZeroException> 예외를 throw합니다.  
@@ -90,7 +90,7 @@ caps.handback.revision: 20
   
  다음 예제에서는 `Integer` 값을 왼쪽 및 오른쪽으로 시프트합니다.  
   
- [!code-vb[VbVbalrOperators#64](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/arithmetic-operators_8.vb)]  
+ [!code-vb[VbVbalrOperators#64](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/arithmetic-operators_8.vb)]  
   
  산술 시프트 연산에서는 오버플로 예외가 생성되지 않습니다.  
   

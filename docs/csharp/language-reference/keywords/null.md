@@ -23,7 +23,7 @@ caps.handback.revision: 17
   
  다음 예제에서는 null 키워드의 몇 가지 동작을 보여 줍니다.  
   
- [!code-cs[csrefKeywordsLiteral#1](../../../csharp/language-reference/keywords/codesnippet/csharp/null_1.cs)]  
+ [!code-cs[csrefKeywordsLiteral#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/null_1.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

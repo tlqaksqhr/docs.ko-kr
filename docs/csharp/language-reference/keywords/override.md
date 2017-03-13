@@ -24,7 +24,7 @@ caps.handback.revision: 26
 ## 예제  
  이 예제에서 `Area`는 추상 `ShapesClass`에서 상속되므로 `Square` 클래스는 `Area`의 재정의된 구현을 제공해야 합니다.  
   
- [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#1)]  
+ [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/override_1.cs)]  
   
  `override` 메서드는 기본 클래스에서 상속된 멤버를 새로 구현합니다.  `override` 선언에 의해 재정의된 메서드를 재정의된 기본 메서드라고 합니다.  재정의된 기본 메서드의 시그니처는 `override` 메서드의 시그니처와 같아야 합니다.  상속에 대한 자세한 내용은 [상속](../../../csharp/programming-guide/classes-and-structs/inheritance.md)을 참조하십시오.  
   
@@ -41,7 +41,7 @@ caps.handback.revision: 26
 ## 예제  
  이 예제에서는 `Employee`라는 기본 클래스와 `SalesEmployee`라는 파생 클래스를 정의합니다.  `SalesEmployee` 클래스는 추가 속성 `salesbonus`를 포함하며 이를 고려하여 `CalculatePay` 메서드를 재정의합니다.  
   
- [!code-cs[csrefKeywordsModifiers#9](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#9)]  
+ [!code-cs[csrefKeywordsModifiers#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/override_2.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

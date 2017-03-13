@@ -28,7 +28,7 @@ caps.handback.revision: 26
   
  다음 예제에서는 부분 클래스의 두 부분에서 정의된 부분 메서드를 보여 줍니다.  
   
- [!code-cs[csrefKeywordsContextual#9](../../../csharp/language-reference/keywords/codesnippet/csharp/partial-method_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/partial-method_1.cs)]  
   
  자세한 내용은 [Partial 클래스 및 메서드](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)을 참조하십시오.  
   

@@ -34,7 +34,7 @@ caps.handback.revision: 11
   
  클래스의 모든 이벤트에서는 `Events` 필드를 사용하여 각 이벤트를 처리하는 메서드를 추적합니다.  
   
- [!code-vb[VbVbalrEvents#22](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#22)]  
+ [!code-vb[VbVbalrEvents#22](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-custom-events-to-conserve-memory_1.vb)]  
   
 ## 참고 항목  
  <xref:System.ComponentModel.EventHandlerList>   

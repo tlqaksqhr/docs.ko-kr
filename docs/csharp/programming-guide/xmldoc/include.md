@@ -47,7 +47,7 @@ caps.handback.revision: 19
 ## 예제  
  아래 예제는 여러 개의 파일로 구성됩니다.  \<include\>를 사용하는 첫째 파일은 아래와 같습니다.  
   
- [!code-cs[csProgGuideDocComments#5](../../../csharp/programming-guide/xmldoc/codesnippet/csharp/include_1.cs)]  
+ [!code-cs[csProgGuideDocComments#5](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/include_1.cs)]  
   
  두 번째 파일 xml\_include\_tag.doc에는 다음 문서 주석이 있습니다.  
   

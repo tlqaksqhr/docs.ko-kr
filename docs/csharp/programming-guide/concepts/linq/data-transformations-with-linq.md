@@ -40,11 +40,11 @@ caps.handback.revision: 15
 ## 여러 입력을 하나의 출력 시퀀스로 결합  
  [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 쿼리를 사용하여 둘 이상의 입력 시퀀스의 요소를 포함하는 출력 시퀀스를 만들 수 있습니다.  다음 예제에서는 두 개의 메모리 내 데이터 구조를 결합하는 방법을 보여 주지만, XML이나 SQL 또는 DataSet 소스의 데이터를 결합하는 경우에도 동일한 원칙을 적용할 수 있습니다.  다음 두 개의 클래스 형식이 있다고 가정합니다.  
   
- [!code-cs[CsLINQGettingStarted#7](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#7)]  
+ [!code-cs[CsLINQGettingStarted#7](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_1.cs)]  
   
  다음 예제에서는 쿼리를 보여 줍니다.  
   
- [!code-cs[CSLinqGettingStarted#8](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#8)]  
+ [!code-cs[CSLinqGettingStarted#8](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_2.cs)]  
   
  자세한 내용은 [join 절](../../../../csharp/language-reference/keywords/join-clause.md) 및 [select 절](../../../../csharp/language-reference/keywords/select-clause.md)을 참조하십시오.  
   
@@ -70,7 +70,7 @@ caps.handback.revision: 15
 ## 메모리 내부 개체를 XML로 변환  
  [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 쿼리를 사용하면 메모리 내부 데이터 구조, SQL 데이터베이스, [!INCLUDE[vstecado](../../../../csharp/programming-guide/concepts/linq/includes/vstecado-md.md)] 데이터 집합 및 XML 스트림 또는 문서 간에 데이터를 쉽게 변환할 수 있습니다.  다음 예제에서는 메모리 내부 데이터 구조의 개체를 XML 요소로 변환합니다.  
   
- [!code-cs[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#9)]  
+ [!code-cs[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]  
   
  이 코드는 다음과 같은 XML 출력을 생성합니다.  
   
@@ -102,7 +102,7 @@ caps.handback.revision: 15
 > [!NOTE]
 >  쿼리가 다른 도메인으로 변환되는 경우 쿼리 식에서 메서드를 호출할 수 없습니다.  예를 들어 SQL Server에 해당 컨텍스트가 없으므로 [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq-md.md)]에서 일반 C\# 메서드를 호출할 수는 없습니다.  그러나 저장 프로시저를 메서드에 매핑하고 호출할 수 있습니다.  자세한 내용은 [저장 프로시저](../Topic/Stored%20Procedures.md)을 참조하십시오.  
   
- [!code-cs[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#10)]  
+ [!code-cs[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_4.cs)]  
   
 ## 참고 항목  
  [LINQ \(Language\-Integrated Query\)](../Topic/LINQ%20\(Language-Integrated%20Query\).md)   

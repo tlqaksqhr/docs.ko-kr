@@ -71,28 +71,28 @@ caps.handback.revision: 30
   
 3.  다음 상수를 `ComClass1`에 추가합니다.  이러한 상수는 COM 개체가 가져야 하는 GUID\(Globally Unique Identifier\) 상수를 저장합니다.  
   
-     [!code-vb[VbVbalrInterop#2](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#2)]  
+     [!code-vb[VbVbalrInterop#2](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_1.vb)]  
   
 4.  **도구** 메뉴에서 **GUID 만들기**를 클릭합니다.  **GUID 만들기** 대화 상자에서 **레지스트리 형식**을 클릭한 다음 **복사**를 클릭합니다.  **끝내기**를 클릭합니다.  
   
 5.  `ClassId`에 대한 빈 문자열을 GUID로 바꾸고 선행 및 후행 중괄호를 제거합니다.  예를 들어, Guidgen에 의해 제공된 GUID가 `"{2C8B0AEE-02C9-486e-B809-C780A11530FE}"`일 경우 코드는 다음과 같아야 합니다.  
   
-     [!code-vb[VbVbalrInterop#3](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#3)]  
+     [!code-vb[VbVbalrInterop#3](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_2.vb)]  
   
 6.  다음 예제에 나온 것처럼 `InterfaceId` 및 `EventsId` 상수에 대한 이전 단계를 반복합니다.  
   
-     [!code-vb[VbVbalrInterop#4](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#4)]  
+     [!code-vb[VbVbalrInterop#4](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_3.vb)]  
   
     > [!NOTE]
     >  GUID가 새 것이며 고유한지 확인합니다. 그렇지 않을 경우 COM 구성 요소가 다른 COM 구성 요소와 충돌할 수 있습니다.  
   
 7.  다음 예제와 같이 `ComClass` 특성을 `ComClass1`에 추가하여 클래스 ID, 인터페이스 ID 및 이벤트 ID에 대한 GUID를 지정합니다.  
   
-     [!code-vb[VbVbalrInterop#5](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#5)]  
+     [!code-vb[VbVbalrInterop#5](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_4.vb)]  
   
 8.  COM 클래스에는 매개 변수 없는 `Public Sub New()` 생성자가 있어야 합니다. 그렇지 않으면 클래스가 올바르게 등록되지 않습니다.  매개 변수 없는 생성자를 클래스에 추가합니다.  
   
-     [!code-vb[VbVbalrInterop#6](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#6)]  
+     [!code-vb[VbVbalrInterop#6](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-creating-com-objects_5.vb)]  
   
 9. 속성, 메서드 및 이벤트를 클래스에 추가하고 클래스를 `End Class` 문으로 종료합니다.  **빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.  [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]에서 어셈블리를 빌드하고 운영 체제에 COM 개체를 등록합니다.  
   

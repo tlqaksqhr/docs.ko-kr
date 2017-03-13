@@ -25,7 +25,7 @@ caps.handback.revision: 23
  이 네 예제에서는 모두 파일에 문자열 리터럴을 쓰지만 대개는 <xref:System.String.Format%2A> 메서드를 사용합니다. 이 메서드는 필드에서 값을 오른쪽 또는 왼쪽 맞춤으로 정렬하고 안쪽 여백을 포함하거나 포함하지 않는 등 다양한 형식의 값을 쓰기 위한 많은 컨트롤을 포함합니다.  C\# [문자열 보간](../../../csharp/language-reference/keywords/interpolated-strings.md) 기능을 사용할 수도 있습니다.  
   
 ## 예제  
- [!code-cs[csFilesandFolders#3](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#3)]  
+ [!code-cs[csFilesandFolders#3](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-write-to-a-text-file_1.cs)]  
   
  이 네 예제에서는 모두 파일에 문자열 리터럴을 쓰지만 대개는 <xref:System.String.Format%2A> 메서드를 사용합니다. 이 메서드는 필드에서 값을 오른쪽 또는 왼쪽 맞춤으로 정렬하고 안쪽 여백을 포함하거나 포함하지 않는 등 다양한 형식의 값을 쓰기 위한 많은 컨트롤을 포함합니다.  C\# [문자열 보간](../../../csharp/language-reference/keywords/interpolated-strings.md) 기능을 사용할 수도 있습니다.  
   

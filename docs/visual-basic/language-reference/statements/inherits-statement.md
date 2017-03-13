@@ -63,12 +63,12 @@ Inherits basetypenames
 ## 예제  
  다음 예제에서는 `Inherits` 문을 사용하여 `thisClass`라는 클래스가 `anotherClass`라는 기본 클래스의 모든 멤버를 상속하는 방법을 보여 줍니다.  
   
- [!code-vb[VbVbalrStatements#37](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/inherits-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#37](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/inherits-statement_1.vb)]  
   
 ## 예제  
  다음 예제에서는 여러 인스턴스의 상속을 보여 줍니다.  
   
- [!code-vb[VbVbalrStatements#38](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/inherits-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#38](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/inherits-statement_2.vb)]  
   
  `thisInterface`라는 인터페이스는 이제 <xref:System.IComparable>, <xref:System.IDisposable> 및 <xref:System.IFormattable> 인터페이스의 모든 정의를 포함합니다. 상속된 멤버는 두 개체의 형식 관련 비교를 각각 제공하여 할당된 리소스를 해제하고 개체의 값을 `String`으로 나타냅니다.  `thisInterface`를 구현하는 클래스는 모든 기본 인터페이스의 모든 멤버를 구현해야 합니다.  
   

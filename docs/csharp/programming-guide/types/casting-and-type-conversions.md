@@ -41,7 +41,7 @@ i = "Hello"; // Error: "Cannot implicitly convert type 'string' to 'int'"
 ## 암시적 변환  
  기본 제공 숫자 형식의 경우 저장되는 값을 자르거나 반올림하지 않고 변수에 저장할 수 있으면 암시적 변환을 수행할 수 있습니다.  예를 들어, [long](../../../csharp/language-reference/keywords/long.md)\(8바이트 정수\) 형식의 변수에는 [int](../../../csharp/language-reference/keywords/int.md)\(32비트 컴퓨터에서 4바이트\)에 저장할 수 있는 모든 값을 저장할 수 있습니다.  다음 예제의 경우 컴파일러에서는 우변에 있는 값을 `bigNum`에 할당하기 전에 암시적으로 `long` 형식으로 변환합니다.  
   
- [!code-cs[csProgGuideTypes#34](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/casting-and-type-convers_1.cs)]  
+ [!code-cs[csProgGuideTypes#34](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_1.cs)]  
   
  암시적 숫자 변환의 전체 목록은 [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)를 참조하십시오.  
   
@@ -55,7 +55,7 @@ Base b = d; // Always OK.
 ## 명시적 변환  
  하지만 정보가 손실될 위험이 없이 변환을 수행할 수 없는 경우에는 컴파일러에서 *캐스트*라는 명시적 변환을 수행하도록 합니다.  캐스트는 컴파일러에게 변환을 수행하는 의도와 데이터 손실이 발생할 수 있다는 것을 인식하고 있다는 명시적으로 알리는 방법입니다.  캐스팅을 수행하려면 변환할 값이나 변수 앞에 캐스팅하려는 형식을 괄호로 둘러쌉니다.  다음 프로그램에서는 [double](../../../csharp/language-reference/keywords/double.md)을 [int](../../../csharp/language-reference/keywords/int.md)로 캐스팅합니다.  캐스팅하지 않으면 프로그램이 컴파일되지 않습니다.  
   
- [!code-cs[csProgGuideTypes#2](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/casting-and-type-convers_2.cs)]  
+ [!code-cs[csProgGuideTypes#2](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_2.cs)]  
   
  허용되는 명시적 숫자 변환의 목록은 [명시적 숫자 변환 표](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)를 참조하십시오.  
   
@@ -80,7 +80,7 @@ Giraffe g2 = (Giraffe) a;
 ## 런타임의 형식 변환 예외  
  일부 참조 형식 변환에서는 컴파일러가 캐스트의 유효성 여부를 확인하지 못합니다.  따라서 올바르게 컴파일된 캐스트 작업이 런타임에 실패할 수 있습니다.  다음 예제에서 볼 수 있는 것처럼, 런타임에 실패하는 형식 캐스트는 <xref:System.InvalidCastException>을 throw하게 됩니다.  
   
- [!code-cs[csProgGuideTypes#41](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/casting-and-type-convers_3.cs)]  
+ [!code-cs[csProgGuideTypes#41](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_3.cs)]  
   
  C\#은 캐스팅을 실제로 수행하기 전에 호환성을 테스트할 수 있도록 [is](../../../csharp/language-reference/keywords/is.md) 및 [as](../../../csharp/language-reference/keywords/as.md) 연산자를 제공합니다.  자세한 내용은 [방법: AS 및 IS 연산자를 사용한 안전한 캐스팅](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)를 참조하십시오.  
   

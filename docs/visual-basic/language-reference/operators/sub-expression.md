@@ -63,7 +63,7 @@ End Sub
 ## 예제  
  다음 예제는 콘솔에 값을 쓰는 람다 식입니다.  다음 예제에서는 한 줄과 여러 줄로 구성된 서브루틴에 대한 람다 식 구문을 보여 줍니다.  추가 예제는 [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)를 참조하십시오.  
   
- [!code-vb[VbVbalrLambdas#15](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#15)]  
+ [!code-vb[VbVbalrLambdas#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/sub-expression_1.vb)]  
   
 ## 참고 항목  
  [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md)   

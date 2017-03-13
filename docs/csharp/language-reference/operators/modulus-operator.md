@@ -25,7 +25,7 @@ caps.handback.revision: 15
  사용자 정의 형식으로 `%` 연산자를 오버로드할 수 있습니다\([operator](../../../csharp/language-reference/keywords/operator.md) 참조\).  이항 연산자가 오버로드되면 해당 대입 연산자도 암시적으로 오버로드됩니다.  
   
 ## 예제  
- [!code-cs[csRefOperators#9](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#9)]  
+ [!code-cs[csRefOperators#9](../../../csharp/language-reference/operators/codesnippet/CSharp/modulus-operator_1.cs)]  
   
 ## 설명  
  double 형식과 관련된 반올림 오류에 주의하십시오.  

@@ -44,11 +44,11 @@ caps.handback.revision: 17
   
  `SquareRoot`라는 새 함수를 가지는 `MathClass` 클래스를 포함하는 어셈블리에 대한 참조를 추가한다고 가정합니다.  
   
- [!code-vb[VbVbalrOOP#53](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#53)]  
+ [!code-vb[VbVbalrOOP#53](../../../../visual-basic/misc/codesnippet/VisualBasic/calling-a-property-or-method-using-a-string-name_1.vb)]  
   
  응용 프로그램에서 텍스트 상자 컨트롤을 사용하여 호출되는 메서드 및 해당 인수를 제어할 수 있습니다.  예를 들어, `TextBox1`에 계산할 식이 있고 `TextBox2`는 함수의 이름이 들어갈 입력란인 경우 다음 코드를 사용하여 `TextBox1`의 식에서 `SquareRoot` 함수를 호출할 수 있습니다.  
   
- [!code-vb[VbVbalrOOP#54](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#54)]  
+ [!code-vb[VbVbalrOOP#54](../../../../visual-basic/misc/codesnippet/VisualBasic/calling-a-property-or-method-using-a-string-name_2.vb)]  
   
  `TextBox1`에 "64"를 입력하고 `TextBox2`에 "SquareRoot"를 입력한 다음 `CallMath` 프로시저를 호출하면 `TextBox1`에 있는 숫자의 제곱근이 계산됩니다.  예제의 코드는 계산할 식이 포함된 문자열을 필수 인수로 사용하는 `SquareRoot` 함수를 호출하고 `TextBox1`에서 64의 제곱근인 "8"을 반환합니다.  물론 사용자가 `TextBox2`에 잘못된 값을 입력하거나 문자열에 메서드 이름 대신 속성 이름이 포함되어 있거나 메서드가 추가적인 필수 인수를 가지고 있으면 런타임 오류가 발생합니다.  `CallByName`을 사용할 때 이러한 오류나 기타 오류가 발생할 것으로 예상되면 오류 처리 코드를 추가해야 합니다.  
   

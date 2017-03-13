@@ -76,14 +76,14 @@ LINQ\(통합 언어 쿼리\)를 사용하면 손쉽게 데이터베이스 정보
   
      다음 코드를 `Load` 이벤트에 추가하여 데이터 컨텍스트의 속성으로 노출된 테이블을 쿼리합니다.  
   
-     [!code-vb[VbLINQToSQLHowTos#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form2.vb#3)]  
+     [!code-vb[VbLINQToSQLHowTos#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-query-a-database-by-using-linq_1.vb)]  
   
 4.  F5 키를 눌러 프로젝트를 실행하고 결과를 봅니다.  
   
 5.  다음은 사용자가 시도할 수 있는 몇 가지 추가 쿼리입니다.  
   
-     [!code-vb[VbLINQToSQLHowTos#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form2.vb#4)]  
-    [!code-vb[VbLINQToSQLHowTos#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form2.vb#5)]  
+     [!code-vb[VbLINQToSQLHowTos#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-query-a-database-by-using-linq_2.vb)]  
+    [!code-vb[VbLINQToSQLHowTos#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-query-a-database-by-using-linq_3.vb)]  
   
 ## 참고 항목  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   

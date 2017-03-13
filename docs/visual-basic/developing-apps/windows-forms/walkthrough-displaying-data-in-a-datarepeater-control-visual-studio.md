@@ -158,13 +158,13 @@ caps.handback.revision: 12
   
 5.  <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> 이벤트 처리기에서 `BackColor`를 대체하는 다음 코드를 추가합니다.  
   
-     [!code-cs[VbPowerPacksDataRepeaterWalkthrough#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/DataRepeaterAppCS/DataRepeaterWalkthrough.cs#1)]
-     [!code-vb[VbPowerPacksDataRepeaterWalkthrough#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/DataRepeaterApp/DataRepeaterWalkthrough.vb#1)]  
+     [!code-cs[VbPowerPacksDataRepeaterWalkthrough#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_1.cs)]
+     [!code-vb[VbPowerPacksDataRepeaterWalkthrough#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_1.vb)]  
   
 6.  <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> 이벤트 처리기에서 조건에 따라 레이블의 `ForeColor`를 변경하는 다음 코드를 추가합니다.  
   
-     [!code-cs[VbPowerPacksDataRepeaterWalkthrough#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/DataRepeaterAppCS/DataRepeaterWalkthrough.cs#2)]
-     [!code-vb[VbPowerPacksDataRepeaterWalkthrough#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/DataRepeaterApp/DataRepeaterWalkthrough.vb#2)]  
+     [!code-cs[VbPowerPacksDataRepeaterWalkthrough#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_2.cs)]
+     [!code-vb[VbPowerPacksDataRepeaterWalkthrough#2](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_2.vb)]  
   
 7.  F5 키를 눌러 응용 프로그램을 실행하고 사용자 지정 항목을 확인합니다.  
   
@@ -177,15 +177,15 @@ caps.handback.revision: 12
   
 2.  `Form_Load` 이벤트에 다음 코드를 추가합니다.  
   
-     [!code-cs[VbPowerPacksDataRepeaterWalkthrough#3](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/DataRepeaterAppCS/DataRepeaterWalkthrough.cs#3)]
-     [!code-vb[VbPowerPacksDataRepeaterWalkthrough#3](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/DataRepeaterApp/DataRepeaterWalkthrough.vb#3)]  
+     [!code-cs[VbPowerPacksDataRepeaterWalkthrough#3](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_3.cs)]
+     [!code-vb[VbPowerPacksDataRepeaterWalkthrough#3](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_3.vb)]  
   
 3.  클래스 이름 드롭다운 목록에서 **BindingNavigatorDeleteItem**을 클릭합니다. 메서드 이름 드롭다운 목록에서 **EnabledChanged**를 클릭합니다.  
   
 4.  다음 코드를 `BindingNavigatorDeleteItem_EnabledChanged` 이벤트 처리기에 추가합니다.  
   
-     [!code-cs[VbPowerPacksDataRepeaterWalkthrough#4](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/DataRepeaterAppCS/DataRepeaterWalkthrough.cs#4)]
-     [!code-vb[VbPowerPacksDataRepeaterWalkthrough#4](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/DataRepeaterApp/DataRepeaterWalkthrough.vb#4)]  
+     [!code-cs[VbPowerPacksDataRepeaterWalkthrough#4](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_4.cs)]
+     [!code-vb[VbPowerPacksDataRepeaterWalkthrough#4](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_4.vb)]  
   
     > [!NOTE]
     >  <xref:System.Windows.Forms.BindingSource>로 인해 현재 레코드가 변경될 때마다 **DeleteItem** 단추가 활성화되므로 이 단계를 수행해야 합니다.  
@@ -209,8 +209,8 @@ caps.handback.revision: 12
   
 5.  <xref:System.Windows.Forms.Button> 컨트롤을 두 번 클릭하여 코드 편집기를 열고 `SearchButton_Click` 이벤트 처리기에 다음 코드를 추가합니다.  
   
-     [!code-cs[VbPowerPacksDataRepeaterWalkthrough#5](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/DataRepeaterAppCS/DataRepeaterWalkthrough.cs#5)]
-     [!code-vb[VbPowerPacksDataRepeaterWalkthrough#5](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/DataRepeaterApp/DataRepeaterWalkthrough.vb#5)]  
+     [!code-cs[VbPowerPacksDataRepeaterWalkthrough#5](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_5.cs)]
+     [!code-vb[VbPowerPacksDataRepeaterWalkthrough#5](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio_5.vb)]  
   
 6.  F5 키를 눌러 응용 프로그램을 실행합니다.**SearchTextBox**에 고객 ID를 입력하고 **Search** 단추를 클릭합니다.  
   

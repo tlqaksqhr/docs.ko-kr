@@ -98,12 +98,12 @@ Const constantlist
 ## 예제  
  다음 예제에서는 `Const` 문을 사용하여 리터럴 값 대신 사용할 상수를 선언합니다.  
   
- [!code-vb[VbVbalrStatements#13](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/const-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#13](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/const-statement_1.vb)]  
   
 ## 예제  
  `Object` 데이터 형식이 있는 상수를 정의하면 Visual Basic 컴파일러에서 `Object` 대신 `initializer`의 형식을 제공합니다.  이 예제에서 `naturalLogBase` 상수는 `Decimal` 런타임 형식을 가집니다.  
   
- [!code-vb[VbVbalrStatements#87](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/const-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#87](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/const-statement_2.vb)]  
   
  앞의 예제에서는 `CStr`를 사용하여 <xref:System.Type>을 `String`으로 변환할 수 없으므로 [GetType Operator](../../../visual-basic/language-reference/operators/gettype-operator.md)에서 반환된 <xref:System.Type> 개체에 <xref:System.Type.ToString%2A> 메서드를 사용합니다.  
   

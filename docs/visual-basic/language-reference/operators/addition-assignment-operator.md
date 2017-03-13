@@ -60,9 +60,9 @@ variableorproperty += expression
 ## 예제  
  다음 예제에서는 `+=` 연산자를 사용하여 변수의 값을 다른 변수의 값에 결합합니다.  첫 번째 부분에서는 `+=`을 숫자 변수와 함께 사용하여 값을 다른 값에 더합니다.  두 번째 부분에서는 `+=`을 `String` 변수와 함께 사용하여 값을 다른 값에 연결합니다.  두 경우 모두 결과를 첫째 변수에 할당합니다.  
   
- [!code-vb[VbVbalrOperators#7](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/addition-assignment-oper_1_1.vb)]  
+ [!code-vb[VbVbalrOperators#7](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-assignment-operator_1.vb)]  
   
- [!code-vb[VbVbalrOperators#8](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/addition-assignment-oper_1_2.vb)]  
+ [!code-vb[VbVbalrOperators#8](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-assignment-operator_2.vb)]  
   
  `num1`의 값은 13이 되고 `str1`의 값은 "103"이 됩니다.  
   

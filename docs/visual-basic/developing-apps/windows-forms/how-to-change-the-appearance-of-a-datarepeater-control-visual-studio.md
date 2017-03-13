@@ -38,14 +38,14 @@ caps.handback.revision: 12
   
 2.  <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DrawItem> 이벤트 처리기에서 속성을 설정하는 다음 코드를 추가합니다.  
   
-     [!code-cs[VbPowerPacksDataRepeaterAppearance#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/VbPowerPacksDataRepeaterAppearanceCS/VbPowerPacksDataRepeaterAppearance.cs#1)]
-     [!code-vb[VbPowerPacksDataRepeaterAppearance#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/VbPowerPacksDataRepeaterAppearance/VbPowerPacksDataRepeaterAppearance.vb#1)]  
+     [!code-cs[VbPowerPacksDataRepeaterAppearance#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_1.cs)]
+     [!code-vb[VbPowerPacksDataRepeaterAppearance#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_1.vb)]  
   
 ## 예제  
  일반적으로 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 컨트롤은 행을 다른 색으로 표시하거나 조건에 따라 필드의 색을 변경하는 등의 방식으로 사용자 지정할 수 있습니다.  다음 예제에서는 사용자 지정 작업을 수행하는 방법을 보여 줍니다.  이 예제에서는 Northwind 데이터베이스의 Products 테이블에 바인딩된 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 컨트롤이 있는 것으로 가정합니다.  
   
- [!code-vb[VbPowerPacksDataRepeaterAlternateBackColor#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/VbPowerPacksDataRepeaterAlternateBackColor/AlternateBackColor.vb#1)]
- [!code-cs[VbPowerPacksDataRepeaterAlternateBackColor#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/VbPwrPacksDataRepeaterAltBColorCS/AlternateBackColor.cs#1)]  
+ [!code-vb[VbPowerPacksDataRepeaterAlternateBackColor#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_2.vb)]
+ [!code-cs[VbPowerPacksDataRepeaterAlternateBackColor#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio_2.cs)]  
   
  이러한 사용자 지정 작업 모두의 경우 조건의 양쪽에 대한 속성을 설정하는 코드를 제공해야 합니다.  `Else` 조건을 지정하지 않으면 런타임에 예기치 않은 결과가 표시됩니다.  
   

@@ -29,7 +29,7 @@ caps.handback.revision: 35
   
 -   클래스 정의를 분할하려면 다음과 같이 [partial](../../../csharp/language-reference/keywords/partial-type.md) 키워드 한정자를 사용합니다.  
   
- [!code-cs[csProgGuideObjects#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_1.cs)]  
+ [!code-cs[csProgGuideObjects#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_1.cs)]  
   
  `partial` 키워드는 클래스, 구조체 또는 인터페이스의 다른 부분을 네임스페이스 안에서 정의할 수 있음을 나타냅니다.  모든 부분에 `partial` 키워드를 사용해야 합니다.  최종 형식을 생성하려면 컴파일할 때 모든 부분을 사용할 수 있어야 합니다.  모든 부분은 `public`, `private` 등과 같이 액세스 가능성이 동일해야 합니다.  
   
@@ -42,15 +42,15 @@ caps.handback.revision: 35
   
  다음 예제에서는 중첩 형식을 포함하는 형식 자체가 partial이 아니어도 중첩 형식이 partial이 될 수 있음을 보여 줍니다.  
   
- [!code-cs[csProgGuideObjects#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_2.cs)]  
+ [!code-cs[csProgGuideObjects#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_2.cs)]  
   
  컴파일 타임에 부분 형식\(Partial Type\) 정의의 특성이 병합됩니다.  예를 들어, 다음 선언을 참조하십시오.  
   
- [!code-cs[csProgGuideObjects#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_3.cs)]  
+ [!code-cs[csProgGuideObjects#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_3.cs)]  
   
  이러한 선언은 다음 선언과 같습니다.  
   
- [!code-cs[csProgGuideObjects#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_4.cs)]  
+ [!code-cs[csProgGuideObjects#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_4.cs)]  
   
  다음은 모든 부분 형식\(Partial Type\) 정의에서 병합됩니다.  
   
@@ -66,24 +66,24 @@ caps.handback.revision: 35
   
  예를 들어, 다음 선언을 참조하십시오.  
   
- [!code-cs[csProgGuideObjects#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_5.cs)]  
+ [!code-cs[csProgGuideObjects#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_5.cs)]  
   
  이러한 선언은 다음 선언과 같습니다.  
   
- [!code-cs[csProgGuideObjects#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_6.cs)]  
+ [!code-cs[csProgGuideObjects#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_6.cs)]  
   
 ### 제한  
  partial 클래스 정의를 사용하여 작업할 때는 다음과 같은 몇 가지 규칙을 따라야 합니다.  
   
 -   동일한 형식의 일부를 의미하는 모든 부분 형식\(Partial Type\) 정의는 `partial`을 사용하여 한정해야 합니다.  예를 들어, 다음 클래스 선언에서는 오류가 발생합니다.  
   
-     [!code-cs[csProgGuideObjects#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_7.cs)]  
+     [!code-cs[csProgGuideObjects#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_7.cs)]  
   
 -   `partial` 한정자는 `class`, `struct` 또는 `interface` 키워드 바로 앞에만 사용할 수 있습니다.  
   
 -   다음 예제와 같이 중첩된 부분 형식\(Partial Type\)은 부분 형식\(Partial Type\) 정의에 사용할 수 있습니다.  
   
-     [!code-cs[csProgGuideObjects#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_8.cs)]  
+     [!code-cs[csProgGuideObjects#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_8.cs)]  
   
 -   동일한 형식의 일부를 의미하는 모든 부분 형식\(Partial Type\) 정의는 동일한 어셈블리와 동일한 모듈\(.exe 또는 .dll 파일\)에서 정의해야 합니다.  partial 정의는 여러 모듈에 분산될 수 없습니다.  
   
@@ -117,7 +117,7 @@ caps.handback.revision: 35
  다음 예제에서는 `CoOrds` 클래스의 필드와 생성자를 partial 클래스 정의 하나에서 선언하고 `PrintCoOrds` 멤버를 다른 partial 클래스 정의에서 선언합니다.  
   
 ### 코드  
- [!code-cs[csProgGuideObjects#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_9.cs)]  
+ [!code-cs[csProgGuideObjects#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_9.cs)]  
   
 ## 예제 2  
   
@@ -125,7 +125,7 @@ caps.handback.revision: 35
  다음 예제에서는 partial 구조체와 인터페이스를 개발하는 방법을 보여 줍니다.  
   
 ### 코드  
- [!code-cs[csProgGuideObjects#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/partial-classes-and-meth_10.cs)]  
+ [!code-cs[csProgGuideObjects#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_10.cs)]  
   
 ## 부분 메서드\(Partial Method\)  
  partial 클래스 또는 구조체는 부분 메서드\(Partial Method\)를 포함할 수 있습니다.  클래스의 한 부분에는 메서드 시그니처가 포함됩니다.  같은 부분이나 다른 부분에 선택적 구현을 정의할 수 있습니다.  구현을 정의하지 않으면 컴파일할 때 메서드 및 메서드에 대한 모든 호출이 제거됩니다.  

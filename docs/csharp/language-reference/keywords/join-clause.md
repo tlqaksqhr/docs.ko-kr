@@ -33,14 +33,14 @@ caps.handback.revision: 29
 ## 내부 조인  
  다음 예제에서는 단순한 내부 동등 조인을 보여 줍니다.  이 쿼리는 "제품 이름\/범주" 쌍의 기본 시퀀스를 생성합니다.  동일한 범주 문자열이 여러 요소에 나타납니다.  `categories`의 요소에 일치하는 `products`가 없을 경우 해당 범주는 결과에 표시되지 않습니다.  
   
- [!code-cs[cscsrefQueryKeywords#24](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Join.cs#24)]  
+ [!code-cs[cscsrefQueryKeywords#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_1.cs)]  
   
  자세한 내용은 [방법: 내부 조인 수행](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)를 참조하십시오.  
   
 ## Group Join  
  `into` 식이 있는 `join` 절을 그룹 조인이라고 합니다.  
   
- [!code-cs[cscsrefQueryKeywords#25](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Join.cs#25)]  
+ [!code-cs[cscsrefQueryKeywords#25](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_2.cs)]  
   
  그룹 조인은 왼쪽 소스 시퀀스의 요소를 오른쪽 소스 시퀀스에 있는 하나 이상의 일치하는 요소와 연결하는 계층적 결과를 생성합니다.  그룹 조인은 동등한 관계형 용어가 없으며 기본적으로 개체 배열의 시퀀스입니다.  
   
@@ -50,14 +50,14 @@ caps.handback.revision: 29
   
  물론 그룹 조인의 결과를 다른 하위 쿼리의 생성기로 사용할 수도 있습니다.  
   
- [!code-cs[cscsrefQueryKeywords#26](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Join.cs#26)]  
+ [!code-cs[cscsrefQueryKeywords#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_3.cs)]  
   
  자세한 내용은 [방법: 그룹화 조인 수행](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)를 참조하십시오.  
   
 ## 왼쪽 우선 외부 조인  
  왼쪽 우선 외부 조인에서는 오른쪽 시퀀스에 일치하는 요소가 없는 경우에도 왼쪽 소스 시퀀스의 모든 요소가 반환됩니다.  [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)]에서 왼쪽 우선 외부 조인을 수행하려면 `DefaultIfEmpty` 메서드를 그룹 조인과 함께 사용하여 왼쪽 요소에 일치 항목이 없을 경우 생성할 기본 오른쪽 요소를 지정합니다.  `null`을 참조 형식의 기본값으로 사용하거나 사용자 정의 기본 형식을 지정할 수 있습니다.  다음 예제에서는 사용자 정의 기본 형식이 표시됩니다.  
   
- [!code-cs[cscsrefQueryKeywords#27](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Join.cs#27)]  
+ [!code-cs[cscsrefQueryKeywords#27](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_4.cs)]  
   
  자세한 내용은 [방법: 왼쪽 우선 외부 조인 수행](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)를 참조하십시오.  
   
@@ -78,7 +78,7 @@ caps.handback.revision: 29
 ## 예제  
  다음 예제에서는 일치하는 동일한 키를 사용하여 동일한 데이터 소스에서 수행한 내부 조인, 그룹 조인 및 왼쪽 우선 외부 조인의 결과를 비교합니다.  콘솔 표시의 결과를 명확하게 지정하기 위해 이러한 예제에 일부 다른 코드가 추가됩니다.  
   
- [!code-cs[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Join.cs#23)]  
+ [!code-cs[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_5.cs)]  
   
 ## 설명  
  뒤에 `into`가 없는 `join` 절은 <xref:System.Linq.Enumerable.Join%2A> 메서드 호출로 변환됩니다.  뒤에 `into`가 있는 `join` 절은 <xref:System.Linq.Enumerable.GroupJoin%2A> 메서드 호출로 변환됩니다.  

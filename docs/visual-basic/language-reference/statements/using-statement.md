@@ -117,7 +117,7 @@ End Try
   
  때문에 <xref:System.IO.TextWriter> 및 <xref:System.IO.TextReader> 클래스 구현에서 <xref:System.IDisposable> 인터페이스를 코드 사용할 수 있는 `Using` 파일이 닫힌 이후에 쓰기가 제대로 및 읽기 작업을 확인 하는 문을.  
   
- [!code-vb[VbVbalrStatements#50](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/using-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#50](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/using-statement_1.vb)]  
   
 ## 참고 항목  
  <xref:System.IDisposable>   

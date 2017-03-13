@@ -46,13 +46,13 @@ caps.handback.revision: 18
 ## 예제  
  다음 예제에서는 [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) 매개 변수를 사용하여 정의한 프로시저를 보여 준 다음 오버로드된 프로시저의 해당 집합을 보여 줍니다.  
   
- [!code-vb[VbVbcnProcedures#69](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-overload-a-proced_0_1.vb)]  
+ [!code-vb[VbVbcnProcedures#69](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#70](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-overload-a-proced_0_2.vb)]  
+ [!code-vb[VbVbcnProcedures#70](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_2.vb)]  
   
  매개 변수 배열에 1차원 배열을 사용하는 매개 변수 목록으로는 그러한 프로시저를 오버로드할 수 없습니다.  그러나 다른 암시적 오버로드의 시그니처를 사용할 수는 있습니다.  다음은 이에 대한 선언입니다.  
   
- [!code-vb[VbVbcnProcedures#71](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-overload-a-proced_0_3.vb)]  
+ [!code-vb[VbVbcnProcedures#71](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters_3.vb)]  
   
  오버로드된 버전의 코드에서는 호출 코드에서 `ParamArray` 매개 변수에 하나 이상의 값을 제공했는지 여부나 제공했다면 몇 개를 제공했는지를 테스트하지 않아도 됩니다.  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]에서는 호출 인수 목록과 일치하는 버전으로 제어가 전달됩니다.  
   

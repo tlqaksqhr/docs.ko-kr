@@ -30,7 +30,7 @@ caps.handback.revision: 27
   
  다음 예제에서 `numbers`는 데이터 소스이고 `num`은 범위 변수입니다.  [var](../../../csharp/language-reference/keywords/var.md) 키워드가 사용되어도 두 변수는 모두 강력한 형식입니다.  
   
- [!code-cs[cscsrefQueryKeywords#1](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/From.cs#1)]  
+ [!code-cs[cscsrefQueryKeywords#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_1.cs)]  
   
 ## 범위 변수  
  컴파일러는 데이터 소스가 <xref:System.Collections.Generic.IEnumerable%601>을 구현할 경우 범위 변수의 형식을 유추합니다.  예를 들어, 소스의 형식이 `IEnumerable<Customer>`일 경우 범위 변수는 `Customer`로 유추됩니다.  소스가 <xref:System.Collections.ArrayList>와 같은 제네릭이 아닌 `IEnumerable` 형식일 경우에만 형식을 명시적으로 지정하면 됩니다.  자세한 내용은 [How to: Query an ArrayList with LINQ](../Topic/How%20to:%20Query%20an%20ArrayList%20with%20LINQ.md)를 참조하십시오.  
@@ -42,14 +42,14 @@ caps.handback.revision: 27
 ## 복합 from 절  
  경우에 따라 소스 시퀀스의 각 요소 자체가 시퀀스이거나 시퀀스를 포함할 수 있습니다.  예를 들어, 시퀀스의 각 학생 개체에 테스트 점수 목록이 포함된 `IEnumerable<Student>`가 데이터 소스일 수 있습니다.  각 `Student` 요소 내의 내부 목록에 액세스하려면 복합 `from` 절을 사용합니다.  이 기술은 중첩된 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 문을 사용하는 것과 같습니다.  [where](../../../csharp/language-reference/keywords/partial-method.md) 또는 [orderby](../../../csharp/language-reference/keywords/orderby-clause.md) 절을 둘 중 하나의 `from` 절에 추가하여 결과를 필터링할 수 있습니다.  다음 예제에서는 테스트 점수를 나타내는 정수의 내부 `List`를 각각 포함하는 `Student` 개체의 시퀀스를 보여 줍니다.  내부 목록에 액세스하려면 복합 `from` 절을 사용합니다.  필요한 경우 두 개의 `from` 절 사이에 다른 절을 삽입할 수 있습니다.  
   
- [!code-cs[cscsrefQueryKeywords#2](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/From.cs#2)]  
+ [!code-cs[cscsrefQueryKeywords#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_2.cs)]  
   
 ## 여러 from 절을 사용하여 조인 수행  
  복합 `from` 절은 단일 데이터 소스의 내부 컬렉션에 액세스하는 데 사용됩니다.  그러나 독립 데이터 소스의 추가 쿼리를 생성하는 여러 `from` 절이 쿼리에 포함될 수도 있습니다.  이 기술을 사용하면 [join 절](../../../csharp/language-reference/keywords/join-clause.md)로 수행할 수 없는 특정 유형의 조인 작업을 수행할 수 있습니다.  
   
  다음 예제에서는 두 개의 `from` 절을 사용하여 두 데이터 소스의 완전한 크로스 조인을 구성하는 방법을 보여 줍니다.  
   
- [!code-cs[cscsrefQueryKeywords#3](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/From.cs#3)]  
+ [!code-cs[cscsrefQueryKeywords#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/from-clause_3.cs)]  
   
  여러 `from` 절을 사용하는 조인 작업에 대한 자세한 내용은 [방법: 사용자 지정 조인 작업 수행](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)을 참조하십시오.  
   

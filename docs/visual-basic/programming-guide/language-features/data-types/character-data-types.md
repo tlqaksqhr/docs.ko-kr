@@ -32,7 +32,7 @@ caps.handback.revision: 23
 ## Char 형식  
  `Char` 데이터 형식은 단일 2바이트\(16비트\) 유니코드 문자입니다.  변수가 항상 정확히 한 문자만 포함하는 경우 변수를 `Char`로 선언합니다.  예를 들면 다음과 같습니다.  
   
- [!code-vb[VbVbalrCharTypes#1](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/visualbasic/character-data-types_1.vb)]  
+ [!code-vb[VbVbalrCharTypes#1](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/character-data-types_1.vb)]  
   
  `Char` 또는 `String` 변수에 사용할 수 있는 각 값은 유니코드 문자 집합의 *코드 포인트*\(문자 코드\)입니다.  유니코드 문자에는 기본 ASCII 문자 집합, 그 밖의 다양한 영문자, 악센트 부호, 통화 기호, 분수, 분음 부호 및 수학\/기술 기호가 포함됩니다.  
   
@@ -44,7 +44,7 @@ caps.handback.revision: 23
 ## String 형식  
  `String` 데이터 형식은 0개 이상의 2바이트\(16비트\) 유니코드 문자 시퀀스입니다.  변수가 문자를 무한대로 포함할 수 있으면 변수를 `String`으로 선언합니다.  예를 들면 다음과 같습니다.  
   
- [!code-vb[VbVbalrCharTypes#2](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/visualbasic/character-data-types_2.vb)]  
+ [!code-vb[VbVbalrCharTypes#2](../../../../visual-basic/programming-guide/language-features/data-types/codesnippet/VisualBasic/character-data-types_2.vb)]  
   
  자세한 내용은 [String Data Type](../../../../visual-basic/language-reference/data-types/string-data-type.md)을 참조하십시오.  
   

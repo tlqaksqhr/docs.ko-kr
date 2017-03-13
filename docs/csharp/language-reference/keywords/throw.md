@@ -36,7 +36,7 @@ throw new MyException();
 ## 예제  
  아래 예제는 `throw` 문을 사용하여 예외를 throw하는 방법을 보여 줍니다.  
   
- [!code-cs[csrefKeywordsExceptions#5](../../../csharp/language-reference/keywords/codesnippet/csharp/throw_1.cs)]  
+ [!code-cs[csrefKeywordsExceptions#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/throw_1.cs)]  
   
 ## 코드 예제  
  [try\-catch](../../../csharp/language-reference/keywords/try-catch.md) 및 [방법: 명시적으로 예외 Throw](../Topic/How%20to:%20Explicitly%20Throw%20Exceptions.md)에서 예제를 참조하십시오.  

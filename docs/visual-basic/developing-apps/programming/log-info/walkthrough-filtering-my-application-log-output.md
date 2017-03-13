@@ -36,7 +36,7 @@ caps.handback.revision: 22
   
 3.  에 <xref:System.Windows.Forms.Control.Click> Button1에 대 한 이벤트 처리기에 다음 코드를 추가 합니다.  
   
-     [!code-vb[VbVbcnMyApplicationLogFiltering#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/visualbasic/VbVbcnMyApplicationLogFiltering/Form1.vb#1)]  
+     [!code-vb[VbVbcnMyApplicationLogFiltering#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-filtering-my-application-log-output_1.vb)]  
   
 4.  디버거에서 응용 프로그램을 실행 합니다.  
   

@@ -33,7 +33,7 @@ class SampleClass
 ## 예제  
  다음 예제에는 두 개의 클래스 `PointTest` 및 `MainClass`가 선언되어 있습니다.  `PointTest`의 public 멤버인 `x` 및 `y`에는 `MainClass`에서 직접 액세스할 수 있습니다.  
   
- [!code-cs[csrefKeywordsModifiers#13](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#13)]  
+ [!code-cs[csrefKeywordsModifiers#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/public_1.cs)]  
   
  `public` 액세스 수준을 [private](../../../csharp/language-reference/keywords/private.md) 또는 [protected](../../../csharp/language-reference/keywords/protected.md)로 변경하면 다음과 같은 오류 메시지가 나타납니다.  
   

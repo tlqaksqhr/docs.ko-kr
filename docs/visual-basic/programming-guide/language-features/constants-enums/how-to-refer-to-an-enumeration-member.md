@@ -32,7 +32,7 @@ caps.handback.revision: 13
   
 -   열거형을 사용하여 멤버 이름을 한정합니다.  예를 들어, 다음 예제에서는 `FirstDayOfWeek` 열거형의 `Saturday` 멤버를 `DayValue` 변수에 할당합니다.  
   
-     [!code-vb[VbEnumsTask#19](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#19)]  
+     [!code-vb[VbEnumsTask#19](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-refer-to-an-enumeration-member_1.vb)]  
   
 ## 참고 항목  
  [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)   

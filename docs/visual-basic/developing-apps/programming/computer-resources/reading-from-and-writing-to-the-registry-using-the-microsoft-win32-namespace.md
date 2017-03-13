@@ -42,11 +42,11 @@ caps.handback.revision: 20
 ## <a name="reading-a-value-from-the-registry"></a>레지스트리에서 값 읽기  
  다음 코드는 HKEY_CURRENT_USER에서 문자열을 읽는 방법을 보여 줍니다.  
   
- [!code-vb[VbResourceTasks#20](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/reading-from-and-writing_1.vb)]  
+ [!code-vb[VbResourceTasks#20](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace_1.vb)]  
   
  다음 코드는 문자열을 읽고, 늘리고, HKEY_CURRENT_USER에 씁니다.  
   
- [!code-vb[VbResourceTasks#21](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/reading-from-and-writing_2.vb)]  
+ [!code-vb[VbResourceTasks#21](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace_2.vb)]  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.SystemException>   

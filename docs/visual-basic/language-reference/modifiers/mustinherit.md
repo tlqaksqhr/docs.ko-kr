@@ -43,7 +43,7 @@ caps.handback.revision: 15
 ## 예제  
  다음은 강제 상속과 강제 재정의에 대한 예입니다.  기본 클래스 `shape`는 `acrossLine` 변수를 정의합니다.  `circle` 및 `square` 클래스는 `shape`에서 파생됩니다.  이러한 클래스는 `acrossLine`의 정의를 상속하지만 각 도형 유형에 대한 계산이 다르기 때문에 `area` 함수를 정의해야 합니다.  
   
- [!code-vb[VbVbalrKeywords#2](../../../visual-basic/language-reference/codesnippet/visualbasic/mustinherit_1.vb)]  
+ [!code-vb[VbVbalrKeywords#2](../../../visual-basic/language-reference/codesnippet/VisualBasic/mustinherit_1.vb)]  
   
  `shape1` 및 `shape2`를 `shape` 형식으로 선언할 수 있습니다.  그러나 `area` 함수 기능이 없고 `MustInherit` 표시가 있기 때문에 `shape`에서는 개체를 만들 수 없습니다.  
   

@@ -9,7 +9,7 @@ C\# 언어에서는 프로그램 실행 중에 발생하는 예기치 않은 상
   
  이 예제의 메서드에서는 0으로 나누기 여부를 테스트하고 오류를 catch합니다.  예외를 처리하지 않는다면 이 프로그램은 **DivideByZeroException was unhandled** 오류 메시지와 함께 종료됩니다.  
   
- [!code-cs[csProgGuideExceptions#18](../../../csharp/programming-guide/exceptions/codesnippet/csharp/exceptions-and-exception_1.cs)]  
+ [!code-cs[csProgGuideExceptions#18](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/exceptions-and-exception-handling_1.cs)]  
   
 ## 예외 개요  
  예외에는 다음과 같은 속성이 있습니다.  

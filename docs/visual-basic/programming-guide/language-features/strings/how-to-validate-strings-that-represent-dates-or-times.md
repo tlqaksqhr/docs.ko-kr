@@ -25,7 +25,7 @@ caps.handback.revision: 11
 다음 코드 예제에서는 문자열이 유효한 날짜나 시간을 표시하는지 여부를 나타내는 `Boolean` 값을 설정합니다.  
   
 ## 예제  
- [!code-vb[VbVbcnRegEx#2](../../../../visual-basic/programming-guide/language-features/strings/codesnippet/visualbasic/how-to-validate-strings-_1.vb)]  
+ [!code-vb[VbVbcnRegEx#2](../../../../visual-basic/programming-guide/language-features/strings/codesnippet/VisualBasic/how-to-validate-strings-that-represent-dates-or-times_1.vb)]  
   
 ## 코드 컴파일  
  `("01/01/03")` 및 `"9:30 PM"`을 유효성 검사를 수행할 날짜와 시간으로 바꿉니다.  문자열을 하드 코드된 문자열, `String` 변수 또는 `InputBox`와 같은 문자열을 반환하는 메서드로 바꿀 수 있습니다.  

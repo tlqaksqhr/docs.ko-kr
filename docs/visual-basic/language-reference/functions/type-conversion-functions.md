@@ -178,73 +178,73 @@ CUShort(expression)
 ## CBool 예제  
  다음 예제에서는 `CBool` 함수를 사용하여 식을 `Boolean` 값으로 변환합니다.  `CBool`은 식의 계산 결과가 0이 아니면 `True`를 반환하고, 0이면 `False`를 반환합니다.  
   
- [!code-vb[VbVbalrFunctions#1](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_1.vb)]  
+ [!code-vb[VbVbalrFunctions#1](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_1.vb)]  
   
 ## CByte 예제  
  다음 예제에서는 `CByte` 함수를 사용하여 식을 `Byte`로 변환합니다.  
   
- [!code-vb[VbVbalrFunctions#2](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_2.vb)]  
+ [!code-vb[VbVbalrFunctions#2](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_2.vb)]  
   
 ## CChar 예제  
  다음 예제에서는 `CChar` 함수를 사용하여 `String` 식의 첫 번째 문자를 `Char` 형식으로 변환합니다.  
   
- [!code-vb[VbVbalrFunctions#3](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_3.vb)]  
+ [!code-vb[VbVbalrFunctions#3](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_3.vb)]  
   
  `CChar`에 대한 입력 인수는 `Char` 또는 `String` 데이터 형식이어야 합니다.  `CChar`는 숫자 데이터 형식을 허용하지 않기 때문에 `CChar`를 사용하여 숫자를 문자로 변환할 수 없습니다.  다음 예제에서는 코드 포인트\(문자 코드\)를 나타내는 숫자를 구하여 해당 문자로 변환합니다.  <xref:Microsoft.VisualBasic.Interaction.InputBox%2A> 함수를 사용하여 숫자 문자열을 구하고 `CInt`를 사용하여 문자열을 `Integer` 형식으로 변환하고, `ChrW`를 사용하여 숫자를 `Char` 형식으로 변환합니다.  
   
- [!code-vb[VbVbalrFunctions#4](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_4.vb)]  
+ [!code-vb[VbVbalrFunctions#4](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_4.vb)]  
   
 ## CDate 예제  
  다음 예제에서는 `CDate` 함수를 사용하여 문자열을 `Date` 값으로 변환합니다.  일반적으로 다음 예제와 같이 날짜와 시간을 문자열로 하드 코딩하는 것은 좋지 않습니다.  대신 \#Feb 12, 1969\#, \#4:45:23 PM\# 등과 같은 날짜 리터럴과 시간 리터럴을 사용하십시오.  
   
- [!code-vb[VbVbalrFunctions#5](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_5.vb)]  
+ [!code-vb[VbVbalrFunctions#5](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_5.vb)]  
   
 ## CDbl 예제  
- [!code-vb[VbVbalrFunctions#6](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_6.vb)]  
+ [!code-vb[VbVbalrFunctions#6](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_6.vb)]  
   
 ## CDec 예제  
  다음 예제에서는 `CDec` 함수를 사용하여 숫자 값을 `Decimal`로 변환합니다.  
   
- [!code-vb[VbVbalrFunctions#7](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_7.vb)]  
+ [!code-vb[VbVbalrFunctions#7](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_7.vb)]  
   
 ## CInt 예제  
  다음 예제에서는 `CInt` 함수를 사용하여 값을 `Integer`로 변환합니다.  
   
- [!code-vb[VbVbalrFunctions#8](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_8.vb)]  
+ [!code-vb[VbVbalrFunctions#8](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_8.vb)]  
   
 ## CLng 예제  
  다음 예제에서는 `CLng` 함수를 사용하여 값을 `Long`으로 변환합니다.  
   
- [!code-vb[VbVbalrFunctions#9](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_9.vb)]  
+ [!code-vb[VbVbalrFunctions#9](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_9.vb)]  
   
 ## CObj 예제  
  다음 예제에서는 `CObj` 함수를 사용하여 숫자 값을 `Object`로 변환합니다.  `Object` 변수 자체에는 할당된 `Double` 값을 가리키는 4바이트 포인터만 들어 있습니다.  
   
- [!code-vb[VbVbalrFunctions#10](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_10.vb)]  
+ [!code-vb[VbVbalrFunctions#10](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_10.vb)]  
   
 ## CSByte 예제  
  다음 예제에서는 `CSByte` 함수를 사용하여 숫자 값을 `SByte`로 변환합니다.  
   
- [!code-vb[VbVbalrFunctions#11](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_11.vb)]  
+ [!code-vb[VbVbalrFunctions#11](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_11.vb)]  
   
 ## CShort 예제  
  다음 예제에서는 `CShort` 함수를 사용하여 숫자 값을 `Short`으로 변환합니다.  
   
- [!code-vb[VbVbalrFunctions#12](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_12.vb)]  
+ [!code-vb[VbVbalrFunctions#12](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_12.vb)]  
   
 ## CSng 예제  
  다음 예제에서는 `CSng` 함수를 사용하여 값을 `Single`로 변환합니다.  
   
- [!code-vb[VbVbalrFunctions#13](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_13.vb)]  
+ [!code-vb[VbVbalrFunctions#13](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_13.vb)]  
   
 ## CStr 예제  
  다음 예제에서는 `CStr` 함수를 사용하여 숫자 값을 `String`으로 변환합니다.  
   
- [!code-vb[VbVbalrFunctions#14](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_14.vb)]  
+ [!code-vb[VbVbalrFunctions#14](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_14.vb)]  
   
  다음 예제에서는 `CStr` 함수를 사용하여 `Date` 값을 `String` 값으로 변환합니다.  
   
- [!code-vb[VbVbalrFunctions#15](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_15.vb)]  
+ [!code-vb[VbVbalrFunctions#15](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_15.vb)]  
   
  `CStr`은 항상 현재 로캘에 대한 표준 short 형식으로 `Date` 값을 렌더링합니다\(예: "6\/15\/2003 4:35:47 PM"\).  그러나 `CStr`는 날짜와 시간에 대한 *기본값*인 1\/1\/0001 및 00:00:00을 표시하지 않습니다.  
   
@@ -253,17 +253,17 @@ CUShort(expression)
 ## CUInt 예제  
  다음 예제에서는 `CUInt` 함수를 사용하여 숫자 값을 `UInteger`로 변환합니다.  
   
- [!code-vb[VbVbalrFunctions#16](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_16.vb)]  
+ [!code-vb[VbVbalrFunctions#16](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_16.vb)]  
   
 ## CULng 예제  
  다음 예제에서는 `CULng` 함수를 사용하여 숫자 값을 `ULong`으로 변환합니다.  
   
- [!code-vb[VbVbalrFunctions#17](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_17.vb)]  
+ [!code-vb[VbVbalrFunctions#17](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_17.vb)]  
   
 ## CUShort 예제  
  다음 예제에서는 `CUShort` 함수를 사용하여 숫자 값을 `UShort`으로 변환합니다.  
   
- [!code-vb[VbVbalrFunctions#18](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/type-conversion-functions_18.vb)]  
+ [!code-vb[VbVbalrFunctions#18](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/type-conversion-functions_18.vb)]  
   
 ## 참고 항목  
  <xref:Microsoft.VisualBasic.Strings.Asc%2A>   

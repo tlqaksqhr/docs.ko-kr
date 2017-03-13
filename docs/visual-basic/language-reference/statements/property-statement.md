@@ -198,22 +198,22 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   **값을 반환 합니다.** 값을 반환 하는 `Get` 프로시저, 속성 이름에 값을 할당 하거나 포함 한 `Return` 문입니다. 다음 예제에서는 속성 이름에 반환 값을 할당 `quoteForTheDay` 다음 사용 하 여는 `Exit Property` 문을 반환 합니다.  
   
-     [!code-vb[VbVbalrStatements#27](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/property-statement_1.vb)]  
+     [!code-vb[VbVbalrStatements#27](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_1.vb)]  
   
-     [!code-vb[VbVbalrStatements#28](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/property-statement_2.vb)]  
+     [!code-vb[VbVbalrStatements#28](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_2.vb)]  
   
      사용 하는 경우 `Exit Property` 값을 할당 하지 않고 `name`,  `Get` 프로시저 속성의 데이터 형식에 대 한 기본 값을 반환 합니다.  
   
       `Return` 문을 동시에 할당 된 `Get` 프로시저 반환 값의 절차를 종료 합니다. 다음 예제에서는이 보여 줍니다.  
   
-     [!code-vb[VbVbalrStatements#27](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/property-statement_1.vb)]  
+     [!code-vb[VbVbalrStatements#27](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_1.vb)]  
   
-     [!code-vb[VbVbalrStatements#29](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/property-statement_3.vb)]  
+     [!code-vb[VbVbalrStatements#29](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_3.vb)]  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 클래스에서 속성을 선언 합니다.  
   
- [!code-vb[VbVbalrStatements#51](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/property-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#51](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/property-statement_4.vb)]  
   
 ## <a name="see-also"></a>참고 항목  
  [자동 구현 속성](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)   

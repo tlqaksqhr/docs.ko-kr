@@ -15,7 +15,7 @@ caps.handback.revision: 22
   
 4.  `Program` 클래스를 다음 코드로 바꿉니다.  
   
-     [!code-cs[csProgGuideLINQ#26](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#26)]  
+     [!code-cs[csProgGuideLINQ#26](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-dynamically-specify-predicate-filters-at-runtime_1.cs)]  
   
 5.  `DynamicPredicates` 클래스의 `Main` 메서드에서 `ids` 선언 아래에 다음 줄을 추가합니다.  
   
@@ -56,7 +56,7 @@ caps.handback.revision: 22
   
 2.  다음 메서드를 복사하여 `DynamicPredicates` 클래스에 붙여 넣습니다.  
   
-     [!code-cs[csProgGuideLINQ#27](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#27)]  
+     [!code-cs[csProgGuideLINQ#27](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-dynamically-specify-predicate-filters-at-runtime_2.cs)]  
   
 3.  **명령줄 인수** 창에서 이전 절차의 ID 번호를 1부터 4까지의 정수로 바꿉니다.  
   

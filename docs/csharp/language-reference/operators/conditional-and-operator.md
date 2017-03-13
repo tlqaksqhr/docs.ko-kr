@@ -41,7 +41,7 @@ x & y
 ## 예제  
  다음 예제에서는 조건식에 두 번째 `if` 문이 평가 되는 첫 번째 피연산자가 피연산자를 반환 하기 때문에 `false`.  
   
- [!code-cs[csRefOperators#48](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#48)]  
+ [!code-cs[csRefOperators#48](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-and-operator_1.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

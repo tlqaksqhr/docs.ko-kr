@@ -22,11 +22,11 @@ C\#에서 *연산자*는 식 또는 문에서 하나 이상의 *피연산자*에
   
  다음 C\# 문에는 단항 연산자 하나와 피연산자 하나가 들어 있습니다. 증가 연산자 `++`는 피연산자 `y`의 값을 수정합니다.  
   
- [!code-cs[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/operators_1.cs)]  
+ [!code-cs[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]  
   
  다음 C\# 문에는 이항 연산자가 두 개 있습니다. 각 연산자는 피연산자를 두 개씩 사용합니다. 할당 연산자 `=`에는 정수 변수 `y`와 식 `2 + 3`이 피연산자로 사용됩니다. 식 `2 + 3` 자체는 더하기 연산자와 두 개의 피연산자, `2` 및 `3`으로 구성됩니다.  
   
- [!code-cs[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/operators_2.cs)]  
+ [!code-cs[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
   
 ## 연산자, 평가, 및 연산자 우선 순위  
  피연산자는 모든 길이의 코드로 구성된 유효한 식이 될 수 있으며 모든 개수의 하위 식으로 구성될 수 있습니다. 여러 연산자를 포함하는 식에서 연산자가 적용되는 순서는 *operator precedence*, *associativity* 및 괄호로 결정됩니다.  

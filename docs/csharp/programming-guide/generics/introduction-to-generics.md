@@ -28,11 +28,11 @@ caps.handback.revision: 32
   
  중첩 `Node` 클래스에서도 T를 사용할 수 있습니다.  `GenericList<int>`와 같이 `GenericList<T>`를 구체적 형식을 사용하여 인스턴스화하면 모든 `T`가 `int`로 대체됩니다.  
   
- [!code-cs[csProgGuideGenerics#2](../../../csharp/programming-guide/generics/codesnippet/csharp/introduction-to-generics_1.cs)]  
+ [!code-cs[csProgGuideGenerics#2](../../../csharp/programming-guide/generics/codesnippet/CSharp/introduction-to-generics_1.cs)]  
   
  다음 코드 예제에서는 클라이언트 코드에서 제네릭 `GenericList<T>` 클래스를 사용하여 정수 목록을 만드는 방법을 보여 줍니다.  형식 매개 변수를 변경하는 간단한 방법으로 다음 코드를 문자열이나 기타 사용자 지정 형식의 목록을 만들도록 쉽게 변경할 수 있습니다.  
   
- [!code-cs[csProgGuideGenerics#3](../../../csharp/programming-guide/generics/codesnippet/csharp/introduction-to-generics_2.cs)]  
+ [!code-cs[csProgGuideGenerics#3](../../../csharp/programming-guide/generics/codesnippet/CSharp/introduction-to-generics_2.cs)]  
   
 ## 참고 항목  
  <xref:System.Collections.Generic>   

@@ -108,11 +108,11 @@ End Property
 ### 선언과 호출에 대한 설명  
  다음 속성은 전체 이름\(fullname\)을 두 부분, 즉 이름\(firstname\)과 성\(lastname\)으로 저장합니다.  호출 코드에서 `fullName`을 만나면 `Get` 프로시저는 두 부분으로 된 이름을 결합하여 전체 이름\(fullname\)을 반환합니다.  호출 코드에서 전체 이름\(fullname\)을 새로 지정하면 `Set` 프로시저가 이 이름을 두 부분으로 나눕니다.  공백이 없으면 전체 이름\(fullname\)이 이름\(firstname\)으로 저장됩니다.  
   
- [!code-vb[VbVbcnProcedures#8](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/property-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#8](./codesnippet/VisualBasic/property-procedures_1.vb)]  
   
  다음 예제에서는 `fullName`의 property 프로시저를 호출하는 일반적인 방법을 보여 줍니다.  
   
- [!code-vb[VbVbcnProcedures#9](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/property-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#9](./codesnippet/VisualBasic/property-procedures_2.vb)]  
   
 ## 참고 항목  
  [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

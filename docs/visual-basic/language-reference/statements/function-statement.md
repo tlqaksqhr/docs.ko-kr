@@ -201,11 +201,11 @@ End Function
   
   `Return` 문은 동시에 반환 값을 할당 하 고 다음 예제와 같이 함수를 종료 합니다.  
   
- [!code-vb[VbVbalrStatements#24](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/function-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#24](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_1.vb)]  
   
  함수 이름에 반환 값을 할당 하는 다음 예제에서는 `myFunction` 다음 사용 하 여는 `Exit Function` 문을 반환 합니다.  
   
- [!code-vb[VbVbalrStatements#23](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/function-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#23](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_2.vb)]  
   
   `Exit Function` 및 `Return` 문을 사용 하면 즉시 종료 한 `Function` 프로시저입니다. 개수에 관계 없이 `Exit Function` 및 `Return` 문을 프로시저에서 아무 곳 이나 나타날 수 있으며 혼합할 수 `Exit Function` 및 `Return` 문입니다.  
   
@@ -248,19 +248,19 @@ End Function
 ## <a name="example"></a>예제  
  다음 예제에서는 `Function` 이름, 매개 변수, 및의 본문을 형성 하는 코드를 선언 하는 문에 `Function` 프로시저입니다.  `ParamArray` 한정자를 사용 하면 여러 개의 인수를 수락 하는 함수입니다.  
   
- [!code-vb[VbVbalrStatements#25](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/function-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#25](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_3.vb)]  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 앞의 예제에서 선언한 함수를 호출 합니다.  
   
- [!code-vb[VbVbalrStatements#26](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/function-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#26](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/function-statement_4.vb)]  
   
 ## <a name="example"></a>예제  
  다음 예에서 `DelayAsync` 는 `Async``Function` 의 반환 형식이 있는 <xref:System.Threading.Tasks.Task%601>합니다. `DelayAsync`에는 정수를 반환하는 `Return` 문이 포함됩니다. 따라서 함수 선언의 `DelayAsync` 반환 형식이 있어야 하며 `Task(Of Integer)`합니다. 반환 형식이 이기 `Task(Of Integer)`, 평가 `Await` 식 `DoSomethingAsync` 정수를 생성 합니다. 이 문에서이 확인할: `Dim result As Integer = Await delayTask`합니다.  
   
   `startButton_Click` 프로시저의 한 예로 `Async Sub` 프로시저입니다. 때문에 `DoSomethingAsync` 는 `Async` 함수, 작업에 대 한 호출에 대 한 `DoSomethingAsync` 다음 문 에서처럼 대기할 수 해야: `Await DoSomethingAsync()`합니다.  `startButton_Click``Sub` 으로 프로시저를 정의 해야는 `Async` 한정자 되었기 때문에 `Await` 식입니다.  
   
- [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/visualbasic/asyncfunctionvb/mainwindow.xaml.vb#1)]  
+ [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/function-statement_5.vb)]  
   
 ## <a name="see-also"></a>참고 항목  
  [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)   

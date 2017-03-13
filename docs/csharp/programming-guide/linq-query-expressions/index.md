@@ -9,7 +9,7 @@ caps.handback.revision: 21
   
  다음 예제에서는 전체 쿼리 작업을 보여 줍니다.  전체 작업에는 데이터 소스 만들기, 쿼리 식 정의 및 `foreach` 문으로 쿼리 실행이 포함됩니다.  
   
- [!code-cs[csProgGuideLINQ#11](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#11)]  
+ [!code-cs[csProgGuideLINQ#11](../../../csharp/programming-guide/arrays/codesnippet/CSharp/index_1.cs)]  
   
  C\#의 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)] 기본 사항에 대한 자세한 내용은 [Getting Started with LINQ in C\#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)을 참조하십시오.  
   

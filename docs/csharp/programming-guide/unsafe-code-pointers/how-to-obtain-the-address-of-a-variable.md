@@ -34,9 +34,9 @@ int* p = &number; //address-of operator &
 ## 예제  
  이 예제에서는 `int`에 대한 포인터인 `p`가 선언되고 `number`라는 정수 변수의 주소가 대입됩니다.  \*p에 값을 대입하면 `number` 변수가 초기화됩니다.  이 대입문을 주석 처리하면 `number` 변수의 초기화가 제거되지만 컴파일 타임 오류는 발생하지 않습니다.  [멤버 액세스](../../../csharp/programming-guide/unsafe-code-pointers/how-to-access-a-member-with-a-pointer.md) 연산자 `->`를 사용하면 포인터에 저장된 주소를 가져와서 표시할 수 있습니다.  
   
- [!code-cs[csProgGuidePointers#7](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers2.cs#7)]  
+ [!code-cs[csProgGuidePointers#7](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-obtain-the-address-of-a-variable_1.cs)]  
   
- [!code-cs[csProgGuidePointers#8](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#8)]  
+ [!code-cs[csProgGuidePointers#8](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-obtain-the-address-of-a-variable_2.cs)]  
   
 ## 참고 항목  
  [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   

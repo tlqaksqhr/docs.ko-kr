@@ -33,7 +33,7 @@ caps.handback.revision: 27
 ## 값 할당  
  다음 예제에서처럼 대입문을 사용하여 계산을 수행하고 해당 결과를 변수에 할당합니다.  
   
- [!code-vb[VbVbalrVariables#1](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/visualbasic/index_1.vb)]  
+ [!code-vb[VbVbalrVariables#1](../../../../visual-basic/programming-guide/language-features/variables/codesnippet/VisualBasic/index_1.vb)]  
   
 > [!NOTE]
 >  이 예제에 사용된 등호\(`=`\)는 같음 연산자가 아닌 할당 연산자이며  변수 `applesSold`에 값을 할당합니다.  

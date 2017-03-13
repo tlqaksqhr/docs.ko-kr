@@ -24,17 +24,17 @@ caps.handback.revision: 21
 ## 예제  
  이 예제에서는 조건문에 1부터 100까지 세는 카운터가 있지만 `break` 문 때문에 네 번 센 다음 루프가 종료됩니다.  
   
- [!code-cs[csrefKeywordsJump#1](../../../csharp/language-reference/keywords/codesnippet/csharp/break_1.cs)]  
+ [!code-cs[csrefKeywordsJump#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/break_1.cs)]  
   
 ## 예제  
  이 예제에서는 `break` 문을 사용하여 내부 중첩 루프를 중단하고 외부 루프에 컨트롤을 반환합니다.  
   
- [!code-cs[csrefKeywordsJump#7](../../../csharp/language-reference/keywords/codesnippet/csharp/break_2.cs)]  
+ [!code-cs[csrefKeywordsJump#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/break_2.cs)]  
   
 ## 예제  
  이 예제에서는 [switch](../../../csharp/language-reference/keywords/switch.md) 문에서 `break`를 사용하는 것을 보여 줍니다.  
   
- [!code-cs[csrefKeywordsJump#2](../../../csharp/language-reference/keywords/codesnippet/csharp/break_3.cs)]  
+ [!code-cs[csrefKeywordsJump#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/break_3.cs)]  
   
  `4`를 입력하면 다음과 같이 출력됩니다.  
   

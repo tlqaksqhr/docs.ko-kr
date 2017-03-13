@@ -23,17 +23,17 @@ caps.handback.revision: 13
 ## 예제  
  다음 예제에서는 파일 및 디렉터리를 복사하는 방법을 보여 줍니다.  
   
- [!code-cs[csFilesandFolders#7](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#7)]  
+ [!code-cs[csFilesandFolders#7](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-copy-delete-and-move-files-and-folders_1.cs)]  
   
 ## 예제  
  다음 예제에서는 파일 및 디렉터리를 이동하는 방법을 보여 줍니다.  
   
- [!code-cs[csFilesandFolders#8](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#8)]  
+ [!code-cs[csFilesandFolders#8](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-copy-delete-and-move-files-and-folders_2.cs)]  
   
 ## 예제  
  다음 예제에서는 파일 및 디렉터리를 삭제하는 방법을 보여 줍니다.  
   
- [!code-cs[csFilesandFolders#9](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#9)]  
+ [!code-cs[csFilesandFolders#9](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-copy-delete-and-move-files-and-folders_3.cs)]  
   
 ## 참고 항목  
  <xref:System.IO?displayProperty=fullName>   

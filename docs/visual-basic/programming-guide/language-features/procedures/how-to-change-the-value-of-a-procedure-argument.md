@@ -66,11 +66,11 @@ caps.handback.revision: 16
 ## 예제  
  다음 예제에서는 배열 변수를 받아 그 요소로 작업하는 두 개의 프로시저를 보여 줍니다.  `increase` 프로시저는 각 요소에 1만 더합니다.  `replace` 프로시저는 `a()` 매개 변수에 새 배열을 할당한 다음 각 요소에 1씩 더합니다.  
   
- [!code-vb[VbVbcnProcedures#35](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-change-the-value-_1.vb)]  
+ [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/how-to-change-the-value-of-a-procedure-argument_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#36](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-change-the-value-_2.vb)]  
+ [!code-vb[VbVbcnProcedures#36](./codesnippet/VisualBasic/how-to-change-the-value-of-a-procedure-argument_2.vb)]  
   
- [!code-vb[VbVbcnProcedures#37](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-change-the-value-_3.vb)]  
+ [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/how-to-change-the-value-of-a-procedure-argument_3.vb)]  
   
  첫 번째 `MsgBox` 호출에서는 "After increase\(n\): 11, 21, 31, 41"이 표시됩니다.   `n` 배열이 참조 형식이기 때문에 전달 메커니즘이 `ByVal`인 경우에도 `replace`에서 해당 멤버를 변경할 수 있습니다.  
   

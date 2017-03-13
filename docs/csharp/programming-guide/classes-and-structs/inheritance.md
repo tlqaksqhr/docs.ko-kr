@@ -37,7 +37,7 @@ caps.handback.revision: 38
   
  다음 예제에서는 이전 그림에서 설명한 클래스 관계가 C\#에서 어떻게 표현되는지 보여 줍니다.  이 예제에서는 `WorkItem`이 가상 메서드 <xref:System.Object.ToString%2A?displayProperty=fullName>을 재정의하는 방법 및 `ChangeRequest` 클래스가 해당 메서드의 `WorkItem` 구현을 상속하는 방법도 보여 줍니다.  
   
- [!code-cs[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/inheritance_1.cs)]  
+ [!code-cs[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
   
 ## 추상 및 가상 메서드  
  기본 클래스가 메서드를 [virtual](../../../csharp/language-reference/keywords/virtual.md)로 선언하면 파생 클래스는 자체 구현으로 이 메서드를 [override](../../../csharp/language-reference/keywords/override.md)할 수 있습니다.  기본 클래스가 멤버를 [abstract](../../../csharp/language-reference/keywords/abstract.md)로 선언하는 경우 해당 클래스를 직접 상속하는 비추상 클래스는 이 메서드를 재정의해야 합니다.  파생 클래스가 추상 클래스이면 추상 멤버를 구현하지 않고 상속합니다.  추상 및 가상 멤버는 개체 지향 프로그래밍의 두 번째 주요 특징인 다형성의 기반이 됩니다.  자세한 내용은 [다형성](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)를 참조하십시오.  

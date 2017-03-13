@@ -38,7 +38,7 @@ Distinct
 ## 예제  
  다음 쿼리 식은 고객 목록과 고객 주문 목록을 조인합니다.  `Distinct` 절은 고유한 고객 이름과 주문 날짜의 목록을 반환하기 위해 포함됩니다.  
   
- [!code-vb[VbSimpleQuerySamples#20](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#20)]  
+ [!code-vb[VbSimpleQuerySamples#20](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/distinct-clause_1.vb)]  
   
 ## 참고 항목  
  [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   

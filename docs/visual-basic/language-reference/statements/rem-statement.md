@@ -53,7 +53,7 @@ REM comment
 ## 예제  
  다음 예제에서는 프로그램에 설명 주석을 포함할 때 사용하는 `REM` 문을 보여 줍니다.  또한 `REM` 대신 작은따옴표\(`'`\)를 사용하는 방법도 보여 줍니다.  
   
- [!code-vb[VbVbalrStatements#6](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/rem-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#6](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/rem-statement_1.vb)]  
   
 ## 참고 항목  
  [Comments in Code](../../../visual-basic/programming-guide/program-structure/comments-in-code.md)   

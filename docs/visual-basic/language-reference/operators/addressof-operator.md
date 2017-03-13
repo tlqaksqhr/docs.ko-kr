@@ -45,12 +45,12 @@ AddressOf procedurename
 ## 예제  
  다음 예제에서는 `AddressOf` 연산자를 사용하여 단추의 `Click` 이벤트를 처리할 대리자를 지정합니다.  
   
- [!code-vb[VbVbalrDelegates#8](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/addressof-operator_1.vb)]  
+ [!code-vb[VbVbalrDelegates#8](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addressof-operator_1.vb)]  
   
 ## 예제  
  다음 예제에서는 `AddressOf` 연산자를 사용하여 스레드에 대한 시작 함수를 지정합니다.  
   
- [!code-vb[VbVbalrDelegates#9](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/addressof-operator_2.vb)]  
+ [!code-vb[VbVbalrDelegates#9](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addressof-operator_2.vb)]  
   
 ## 참고 항목  
  [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)   

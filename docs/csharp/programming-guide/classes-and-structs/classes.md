@@ -24,7 +24,7 @@ caps.handback.revision: 40
 ## 클래스 선언  
  다음 예제와 같이 클래스는 [class](../../../csharp/language-reference/keywords/class.md) 키워드를 사용하여 선언합니다.  
   
- [!code-cs[csProgGuideObjects#79](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/classes_1.cs)]  
+ [!code-cs[csProgGuideObjects#79](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_1.cs)]  
   
  `class` 키워드는 액세스 수준 뒤에 사용합니다.  이 경우에는 [public](../../../csharp/language-reference/keywords/public.md)을 사용했기 때문에 모든 사용자가 이 클래스에서 개체를 만들 수 있습니다.  클래스의 이름은 `class` 키워드 뒤에 사용합니다.  정의의 나머지 부분인 클래스 본문에서는 동작과 데이터를 정의합니다.  클래스의 필드, 속성, 메서드 및 이벤트를 통칭하여 *클래스 멤버*라고 합니다.  
   
@@ -33,22 +33,22 @@ caps.handback.revision: 40
   
  개체는 다음과 같이 [new](../../../csharp/language-reference/keywords/new.md) 키워드 뒤에 개체의 기반으로 사용할 클래스의 이름을 추가하여 만들 수 있습니다.  
   
- [!code-cs[csProgGuideObjects#80](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/classes_2.cs)]  
+ [!code-cs[csProgGuideObjects#80](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_2.cs)]  
   
  클래스의 인스턴스가 만들어지면 개체에 대한 참조가 프로그래머에게 다시 전달됩니다.  위의 예제에서 `object1`은 `Customer`를 기반으로 하는 개체에 대한 참조입니다.  이 참조는 새 개체를 가리키지만 개체 데이터 자체를 포함하지는 않습니다.  사실 개체를 전혀 만들지 않고도 개체 참조를 만들 수 있습니다.  
   
- [!code-cs[csProgGuideObjects#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/classes_3.cs)]  
+ [!code-cs[csProgGuideObjects#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_3.cs)]  
   
  이와 같이 개체를 참조하지 않는 개체 참조는 만들지 않는 것이 좋습니다. 이러한 참조를 통해 개체에 액세스하려고 하면 런타임에 오류가 발생하기 때문입니다.  그러나 다음과 같이 새 개체를 만들거나 이러한 참조를 기존 개체에 할당하여 참조가 개체를 가리키도록 할 수 있습니다.  
   
- [!code-cs[csProgGuideObjects#82](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/classes_4.cs)]  
+ [!code-cs[csProgGuideObjects#82](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_4.cs)]  
   
  이 코드에서는 모두 동일한 개체를 가리키는 두 개의 개체 참조를 만듭니다.  따라서 `object3`을 통해 개체에 대해 변경한 내용은 모두 이후에 `object4`를 사용할 때 반영됩니다.  클래스를 기반으로 하는 개체는 참조를 통해 참조되기 때문에 클래스를 참조 형식이라고 합니다.  
   
 ## 클래스 상속  
  상속은 *파생*을 통해 이루어집니다. 즉, 클래스는 데이터와 동작을 상속할 *기본 클래스*를 사용하여 선언합니다.  기본 클래스는 다음과 같이 파생 클래스 이름 뒤에 콜론과 기본 클래스의 이름을 추가하여 지정합니다.  
   
- [!code-cs[csProgGuideObjects#83](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/classes_5.cs)]  
+ [!code-cs[csProgGuideObjects#83](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_5.cs)]  
   
  클래스에서 기본 클래스를 선언하면 생성자를 제외한 기본 클래스의 모든 멤버가 상속됩니다.  
   
@@ -62,7 +62,7 @@ caps.handback.revision: 40
  다음 예제에서는 단일 필드, 메서드 및 생성자라는 특별한 메서드가 포함된 공용 클래스를 정의합니다.  자세한 내용은 [생성자](../../../csharp/programming-guide/classes-and-structs/constructors.md)을 참조하십시오.  그런 다음 `new` 키워드를 사용하여 클래스를 인스턴스화합니다.  
   
 ## 예제  
- [!code-cs[csProgGuideObjects#84](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/classes_6.cs)]  
+ [!code-cs[csProgGuideObjects#84](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_6.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

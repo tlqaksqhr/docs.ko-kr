@@ -26,12 +26,12 @@ caps.handback.revision: 20
 ## 예제  
  다음 예제에서는 개체 이니셜라이저를 사용하여 새 `StudentName` 형식을 초기화하는 방법을 보여 줍니다.  
   
- [!code-cs[csProgGuideLINQ#35](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#35)]  
+ [!code-cs[csProgGuideLINQ#35](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-objects-by-using-an-object-initializer_1.cs)]  
   
 ## 예제  
  다음 예제에서는 컬렉션 이니셜라이저를 사용하여 컬렉션의 `StudentName` 형식을 초기화하는 방법을 보여 줍니다.  컬렉션 이니셜라이저는 일련의 쉼표로 구분된 개체 이니셜라이저입니다.  
   
- [!code-cs[csProgGuideLINQ#36](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#36)]  
+ [!code-cs[csProgGuideLINQ#36](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-objects-by-using-an-object-initializer_2.cs)]  
   
 ## 코드 컴파일  
  이 코드를 실행하려면 [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)]에서 만들어진 Visual C\# 콘솔 응용 프로그램 프로젝트에 클래스를 복사하여 붙여넣습니다.  자세한 내용은 [How to: Create a LINQ Project](../Topic/How%20to:%20Create%20a%20LINQ%20Project.md)을 참조하십시오.  

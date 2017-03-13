@@ -67,32 +67,32 @@ caps.handback.revision: 18
   
 2.  응용 프로그램에서는 <xref:System.IO> 네임스페이스를 참조하므로 코드 맨 앞에서 `Public Class Form1`로 시작하는 폼 클래스 정의 앞에 다음 문을 추가합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#35](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#35](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_1.vb)]  
   
      파일에 쓰기 전에 <xref:System.IO.StreamWriter> 클래스의 인스턴스를 만들어야 합니다.  
   
 3.  **보기** 메뉴에서 **디자이너**를 선택하여 **Windows Forms 디자이너**로 돌아갑니다.  `Submit` 단추를 두 번 클릭하여 단추에 대한 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기를 만든 후 다음 코드를 추가합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#36](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#36](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_2.vb)]  
   
 > [!NOTE]
 >  Visual Studio IDE\(통합 개발 환경\)는 코드 편집기로 되돌아가고 삽입 지점은 코드를 추가할 이벤트 처리기 내에 놓이게 됩니다.  
   
 1.  파일에 쓰려면 <xref:System.IO.StreamWriter> 클래스의 <xref:System.IO.StreamWriter.Write%2A> 메서드를 사용합니다.  `Dim fw As StreamWriter` 바로 뒤에 다음 코드를 추가합니다.  파일이 아직 없으면 자동으로 만들어지므로 파일이 없을 경우 예외가 throw될 것을 걱정할 필요는 없습니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#37](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_3.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#37](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_3.vb)]  
   
 2.  사용자가 빈 항목을 전송할 수 없도록 `Dim ReadString As String` 바로 뒤에 다음 코드를 추가합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#38](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_4.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#38](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_4.vb)]  
   
 3.  이 파일은 일기이므로 사용자는 각 항목에 날짜를 지정하고자 할 것입니다.  `fw = New StreamWriter("C:\MyDiary.txt", True)` 뒤에 다음 코드를 삽입하여 변수 `Today`를 현재 날짜로 설정합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#39](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_5.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#39](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_5.vb)]  
   
 4.  마지막으로 <xref:System.Windows.Forms.TextBox>를 지우는 코드를 추가합니다.  다음 코드를 `Clear` 단추의 <xref:System.Windows.Forms.Control.Click> 이벤트에 추가합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#40](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_6.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#40](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_6.vb)]  
   
 ## 일기에 표시 기능 추가  
  이 단원에서는 최근 항목을 `DisplayEntry` <xref:System.Windows.Forms.TextBox>에 표시하는 기능을 추가합니다.  다양한 항목을 표시하여 사용자가 `DisplayEntry` <xref:System.Windows.Forms.TextBox>에 표시할 항목을 선택할 수 있도록 하는 <xref:System.Windows.Forms.ComboBox>를 추가할 수도 있습니다.  <xref:System.IO.StreamReader> 클래스의 인스턴스는 `MyDiary.txt`를 읽습니다.  <xref:System.IO.StreamWriter> 클래스와 마찬가지로 <xref:System.IO.StreamReader>는 텍스트 파일에 사용하기 위한 것입니다.  
@@ -110,7 +110,7 @@ caps.handback.revision: 18
   
 1.  `PickEntries` <xref:System.Windows.Forms.ComboBox>는 사용자가 각 항목을 전송한 날자를 표시하는 데 사용되므로 사용자는 특정 날짜에서 항목을 선택할 수 있습니다.  `GetEntries` 단추에 대한 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기를 만들고 다음 코드를 추가합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#41](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_7.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#41](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_7.vb)]  
   
 2.  코드를 테스트하려면 F5 키를 눌러 응용 프로그램을 컴파일한 다음 **Get Entries**를 클릭합니다.  <xref:System.Windows.Forms.ComboBox>의 드롭다운 화살표를 클릭하여 항목 날짜를 표시합니다.  
   
@@ -118,7 +118,7 @@ caps.handback.revision: 18
   
 1.  `Display` 단추에 대한 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기를 만들고 다음 코드를 추가합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#42](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_8.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#42](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_8.vb)]  
   
 2.  코드를 테스트하려면 F5 키를 눌러 응용 프로그램을 컴파일한 후 항목을 전송합니다.  **Get Entries**를 클릭하고 <xref:System.Windows.Forms.ComboBox>에서 항목을 선택한 다음 **Display**를 클릭합니다.  선택한 항목의 내용이 `DisplayEntry` <xref:System.Windows.Forms.TextBox>에 나타납니다.  
   
@@ -137,23 +137,23 @@ caps.handback.revision: 18
   
 1.  다음 코드를 `Display` 단추의 <xref:System.Windows.Forms.Control.Click> 이벤트에서 `DisplayEntry.Text = ReadString` 바로 다음에 추가합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#43](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_9.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#43](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_9.vb)]  
   
 2.  `DeleteEntry` 단추에 대한 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기를 만들고 다음 코드를 추가합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#44](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_10.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#44](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_10.vb)]  
   
 3.  사용자가 항목을 표시하면 `EditEntry` 단추를 사용할 수 있게 됩니다.  다음 코드를 `Display` 단추의 <xref:System.Windows.Forms.Control.Click> 이벤트에서 `DisplayEntry.Text = ReadString` 바로 다음에 추가합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#45](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_11.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#45](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_11.vb)]  
   
 4.  `EditEntry` 단추에 대한 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기를 만들고 다음 코드를 추가합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#46](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_12.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#46](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_12.vb)]  
   
 5.  `SubmitEdit` 단추에 대한 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기를 만들고 다음 코드를 추가합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#47](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_1_13.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#47](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-by-using-net-framework-methods_13.vb)]  
   
  코드를 테스트하려면 F5 키를 눌러 응용 프로그램을 컴파일합니다.  **Get Entries**를 클릭하고 항목을 선택한 다음 **Display**를 클릭합니다.  `DisplayEntry` <xref:System.Windows.Forms.TextBox>에 항목이 나타납니다.  **Edit Entry**를 클릭합니다.  `Entry` <xref:System.Windows.Forms.TextBox>에 항목이 나타납니다.  `Entry` <xref:System.Windows.Forms.TextBox>의 항목을 편집하고 **Submit Edit**를 클릭합니다.  `MyDiary.txt` 파일을 열어 수정한 내용을 확인합니다.  이제 항목을 선택하고 **Delete Entry**를 클릭합니다.  <xref:System.Windows.Forms.MessageBox>에서 확인을 요청하면 **OK**를 클릭합니다.  응용 프로그램을 닫고 `MyDiary.txt`를 열어 해당 항목이 삭제되었는지 확인합니다.  
   

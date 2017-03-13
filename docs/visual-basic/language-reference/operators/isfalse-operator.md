@@ -35,7 +35,7 @@ caps.handback.revision: 14
 ## 예제  
  다음 코드 예제에서는 `IsFalse`와 `IsTrue` 연산자에 대한 정의를 포함하는 구조체의 윤곽을 정의합니다.  
   
- [!code-vb[VbVbalrOperators#28](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/isfalse-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#28](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/isfalse-operator_1.vb)]  
   
 ## 참고 항목  
  [IsTrue Operator](../../../visual-basic/language-reference/operators/istrue-operator.md)   

@@ -10,7 +10,7 @@ caps.handback.revision: 11
 ## 예제  
  다음 예제에서 첫 번째 메서드는 쿼리를 반환 값으로 반환하고 두 번째 메서드는 쿼리를 `out` 매개 변수로 반환합니다.  두 경우 모두 반환되는 것은 쿼리 결과가 아니라 쿼리 자체입니다.  
   
- [!code-cs[csProgGuideLINQ#80](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#80)]  
+ [!code-cs[csProgGuideLINQ#80](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-return-a-query-from-a-method_1.cs)]  
   
 ## 코드 컴파일  
   

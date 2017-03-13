@@ -111,7 +111,7 @@ End Structure
 ## 예제  
  다음 예제에서는 `Structure` 문을 사용하여 직원과 관련된 데이터 집합을 정의합니다.  데이터 항목의 민감도를 반영하기 위해 `Public`, `Friend` 및 `Private` 멤버도 사용합니다.  또한 프로시저, 속성 및 이벤트 멤버를 보여 줍니다.  
   
- [!code-vb[VbVbalrStatements#57](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/structure-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#57](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/structure-statement_1.vb)]  
   
 ## 참고 항목  
  [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md)   

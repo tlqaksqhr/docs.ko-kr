@@ -75,11 +75,11 @@ caps.handback.revision: 21
 ### 선언과 호출에 대한 설명  
  다음 `Sub` 프로시저는 응용 프로그램에서 수행하려는 작업을 컴퓨터 사용자에게 알려 주고 타임스탬프도 표시합니다.  이 코드를 모든 작업의 시작 부분에 복제하는 대신 응용 프로그램의 여러 위치에서 `tellOperator`를 호출합니다.  각 호출은 막 시작하려는 작업을 식별하는  `task`  인수의 문자열을 전달합니다.  
   
- [!code-vb[VbVbcnProcedures#2](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/sub-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#2](./codesnippet/VisualBasic/sub-procedures_1.vb)]  
   
  다음 예제에서는 일반적인 `tellOperator` 호출을 보여 줍니다.  
   
- [!code-vb[VbVbcnProcedures#3](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/sub-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#3](./codesnippet/VisualBasic/sub-procedures_2.vb)]  
   
 ## 참고 항목  
  [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

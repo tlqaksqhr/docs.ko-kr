@@ -18,7 +18,7 @@ caps.handback.revision: 21
 # C# 프로그램의 일반적인 구조(C# 프로그래밍 가이드)
 C\# 프로그램은 하나 이상의 파일로 구성됩니다.  각 파일은 0개 이상의 네임스페이스를 포함할 수 있습니다.  네임스페이스에는 다른 네임스페이스와 함께 클래스, 구조체, 인터페이스, 열거형 및 대리자와 같은 형식이 포함됩니다.  다음은 이러한 요소를 모두 포함하는 C\# 프로그램의 기본 구조입니다.  
   
- [!code-cs[csProgGuide#34](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/class2.cs#34)]  
+ [!code-cs[csProgGuide#34](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/general-structure-of-a-csharp-program_1.cs)]  
   
 ## 관련 단원  
  자세한 내용은 다음을 참조하십시오.  

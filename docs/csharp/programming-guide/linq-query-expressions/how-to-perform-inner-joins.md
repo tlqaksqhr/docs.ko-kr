@@ -20,7 +20,7 @@ caps.handback.revision: 25
 ## 간단한 키 조인 예제  
  다음 예제에서는 두 사용자 정의 형식\(`Person` 및 `Pet`\)의 개체를 포함하는 두 컬렉션을 만듭니다.  이 쿼리에서는 C\#의 `join` 절을 사용하여 `Owner`가 해당 `Person`인 `Pet` 개체와 `Person` 개체가 일치하는지 확인합니다.  C\#의 `select` 절은 결과 개체의 표시 모양을 정의합니다.  이 예제에서 결과 개체는 소유자의 이름과 애완 동물의 이름으로 구성된 익명 형식입니다.  
   
- [!code-cs[CsLINQProgJoining#1](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#1)]  
+ [!code-cs[CsLINQProgJoining#1](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-inner-joins_1.cs)]  
   
  `Person`에 일치하는 `Pet.Owner`를 갖는 `Pet` 개체가 없으므로 `LastName`이 "Huff"인 `Person` 개체는 결과 집합에 나타나지 않습니다.  
   
@@ -31,7 +31,7 @@ caps.handback.revision: 25
   
  다음 예제에서는 `Employee` 개체의 목록과 `Student` 개체의 목록을 사용하여 학생이기도 한 직원을 확인할 수 있습니다.  이러한 형식에는 모두 <xref:System.String> 형식의 `FirstName`과 `LastName` 속성이 있습니다.  각 목록의 요소로부터 조인 키를 만드는 함수는 각 요소의 `FirstName` 및 `LastName` 속성으로 구성된 익명 형식을 반환합니다.  조인 작업은 이러한 복합 키가 같은지 비교하여 각 목록에서 이름과 성이 모두 일치하는 개체의 쌍을 반환합니다.  
   
- [!code-cs[CsLINQProgJoining#2](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#2)]  
+ [!code-cs[CsLINQProgJoining#2](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-inner-joins_2.cs)]  
   
 ## 예제  
   
@@ -44,7 +44,7 @@ caps.handback.revision: 25
   
  C\#의 두 번째 `join` 절은 `Person` 형식의 `Owner` 속성 및 해당 동물의 이름 첫글자로 구성된 복합 키를 기준으로 첫 번째 조인으로 반환된 익명 형식을 제공된 개 목록의 `Dog` 개체와 연관시킵니다.  일치하는 각 쌍에서 `Cat.Name` 및 `Dog.Name` 속성을 포함하는 익명 형식의 시퀀스를 반환합니다.  이 조인은 내부 조인이므로 두 번째 데이터 소스에 일치하는 항목이 있는 첫 번째 데이터 소스의 해당 개체만 반환됩니다.  
   
- [!code-cs[CsLINQProgJoining#3](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#3)]  
+ [!code-cs[CsLINQProgJoining#3](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-inner-joins_3.cs)]  
   
 ## 예제  
   
@@ -57,7 +57,7 @@ caps.handback.revision: 25
   
  `query1`의 결과는 내부 조인을 수행하기 위해 C\#의 `into` 절을 사용하지 않고 `join` 절을 사용하여 얻은 결과 집합과 동일합니다.  `query2` 변수에서는 이와 동일한 쿼리를 보여 줍니다.  
   
- [!code-cs[CsLINQProgJoining#4](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#4)]  
+ [!code-cs[CsLINQProgJoining#4](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-inner-joins_4.cs)]  
   
 ## 코드 컴파일  
   

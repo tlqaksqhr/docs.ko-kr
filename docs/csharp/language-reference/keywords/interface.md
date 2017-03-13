@@ -23,7 +23,7 @@ caps.handback.revision: 29
  자세한 내용과 예제를 보려면 [인터페이스](../../../csharp/programming-guide/interfaces/index.md)을 참조하십시오.  
   
 ## 예제  
- [!code-cs[csrefKeywordsTypes#14](../../../csharp/language-reference/keywords/codesnippet/csharp/interface_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/interface_1.cs)]  
   
  인터페이스는 네임스페이스 또는 클래스의 멤버가 될 수 있으며 다음 멤버의 시그니처를 포함할 수 있습니다.  
   
@@ -46,7 +46,7 @@ caps.handback.revision: 29
 ## 예제  
  다음 예제에서는 인터페이스 구현 방법을 보여 줍니다.  이 예제에서 인터페이스에는 속성 선언이 포함되고 클래스에는 구현이 포함됩니다.  `IPoint`를 구현하는 클래스 인스턴스에 정수 속성 `x` 및 `y`가 있습니다.  
   
- [!code-cs[csrefKeywordsTypes#15](../../../csharp/language-reference/keywords/codesnippet/csharp/interface_2.cs)]  
+ [!code-cs[csrefKeywordsTypes#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/interface_2.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

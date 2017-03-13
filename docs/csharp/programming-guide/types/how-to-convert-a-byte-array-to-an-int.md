@@ -38,7 +38,7 @@ caps.handback.revision: 18
 > [!NOTE]
 >  출력은 컴퓨터 아키텍처의 endianess에 따라 달라질 수 있습니다.  
   
- [!code-cs[csProgGuideTypes#22](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/how-to-convert-a-byte-ar_1.cs)]  
+ [!code-cs[csProgGuideTypes#22](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_1.cs)]  
   
 ## 예제  
  다음 예제에서는 <xref:System.BitConverter> 클래스의 <xref:System.BitConverter.GetBytes%28System.Int32%29> 메서드를 호출하여 `int`를 바이트 배열로 변환합니다.  
@@ -46,7 +46,7 @@ caps.handback.revision: 18
 > [!NOTE]
 >  출력은 컴퓨터 아키텍처의 endianess에 따라 달라질 수 있습니다.  
   
- [!code-cs[csProgGuideTypes#23](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/how-to-convert-a-byte-ar_2.cs)]  
+ [!code-cs[csProgGuideTypes#23](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_2.cs)]  
   
 ## 참고 항목  
  <xref:System.BitConverter>   

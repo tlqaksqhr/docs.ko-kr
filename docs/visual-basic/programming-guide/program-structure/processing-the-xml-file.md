@@ -49,7 +49,7 @@ caps.handback.revision: 16
 ## 예제  
  다음 코드에서는 클래스와 해당 멤버의 ID 문자열이 생성되는 방식을 보여 줍니다.  
   
- [!code-vb[VbVbcnXmlDocComments#10](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/processing-the-xml-file_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#10](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/processing-the-xml-file_1.vb)]  
   
 ## 참고 항목  
  [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md)   

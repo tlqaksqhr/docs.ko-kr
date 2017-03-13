@@ -44,7 +44,7 @@ caps.handback.revision: 14
 ## 예제  
  다음 예제에는 두 가지 XML 요소인 외부 요소와 내부 요소가 있습니다.  두 요소의 텍스트 내용에 공백이 포함되어 있습니다.  외부 요소에는 공백과 XML 요소만 포함되어 있기 때문에 외부 요소의 공백은 유효하지 않습니다.  내부 요소에는 공백과 텍스트가 포함되어 있기 때문에 내부 요소의 공백은 유효합니다.  
   
- [!code-vb[VbXMLSamples#29](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/white-space-in-xml-liter_1.vb)]  
+ [!code-vb[VbXMLSamples#29](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/white-space-in-xml-literals_1.vb)]  
   
  이 코드를 실행하면 표시되는 텍스트는 다음과 같습니다.  
   

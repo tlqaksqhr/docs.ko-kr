@@ -24,11 +24,11 @@ caps.handback.revision: 22
   
 1.  캐스팅 또는 형식 변환을 지정합니다.  
   
-     [!code-cs[csRefOperators#1](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#1)]  
+     [!code-cs[csRefOperators#1](../../../csharp/language-reference/operators/codesnippet/CSharp/invocation-operator_1.cs)]  
   
 2.  메서드 또는 대리자 호출.  
   
-     [!code-cs[csRefOperators#2](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#2)]  
+     [!code-cs[csRefOperators#2](../../../csharp/language-reference/operators/codesnippet/CSharp/invocation-operator_2.cs)]  
   
 ## 설명  
  캐스트는 한 형식에서 다른 형식으로의 변환 연산자를 명시적으로 호출합니다. 따라서 해당하는 변환 연산자가 정의되어 있지 않으면 캐스팅할 수 없습니다.  변환 연산자 정의에 대해서는 [explicit](../../../csharp/language-reference/keywords/explicit.md) 및 [implicit](../../../csharp/language-reference/keywords/implicit.md)를 참조하십시오.  

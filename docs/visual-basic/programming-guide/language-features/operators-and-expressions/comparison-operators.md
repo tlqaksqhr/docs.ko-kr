@@ -70,17 +70,17 @@ caps.handback.revision: 13
 ## 개체 비교  
  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]에서는 [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) 및 [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md)를 사용하여 두 개체 참조 변수를 비교합니다.  이러한 연산자 중 하나를 사용하여 두 참조 변수가 동일한 개체 인스턴스를 참조하는지를 확인할 수 있습니다.  다음은 이에 대한 예입니다.  
   
- [!code-vb[VbVbalrOperators#65](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/comparison-operators_1.vb)]  
+ [!code-vb[VbVbalrOperators#65](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_1.vb)]  
   
  앞의 예제에서 두 변수가 모두 동일한 인스턴스를 참조하므로 `x Is y`는 `True`로 계산됩니다.  이 결과를 다음 예제와 대조해 보십시오.  
   
- [!code-vb[VbVbalrOperators#66](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/comparison-operators_2.vb)]  
+ [!code-vb[VbVbalrOperators#66](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_2.vb)]  
   
  앞의 예제에서 두 변수가 동일한 형식 개체를 참조하지만 서로 다른 형식의 인스턴스를 참조하기 때문에 `x Is y`는 `False`로 계산됩니다.  
   
  동일한 인스턴스를 가리키지 않는 두 개체에 대해 테스트하려면 `IsNot` 연산자를 사용하여 `Not`과 `Is`가 문법적으로 어색하게 조합되지 않게 합니다.  다음은 이에 대한 예입니다.  
   
- [!code-vb[VbVbalrOperators#67](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/comparison-operators_3.vb)]  
+ [!code-vb[VbVbalrOperators#67](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_3.vb)]  
   
  앞의 예제에서 `If a IsNot b`는 `If Not a Is b`와 동일합니다.  
   
@@ -91,7 +91,7 @@ caps.handback.revision: 13
   
  `typename`이 인터페이스 형식을 지정하는 경우 개체가 인터페이스 형식을 구현하면 `TypeOf`...`Is` 식에서 `True`를 반환합니다.  `typename`이 클래스 형식인 경우 해당 개체가 지정된 클래스의 인스턴스이거나 지정된 클래스에서 파생되는 클래스의 인스턴스이면 식에서 `True`를 반환합니다.  다음은 이에 대한 예입니다.  
   
- [!code-vb[VbVbalrOperators#68](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/comparison-operators_4.vb)]  
+ [!code-vb[VbVbalrOperators#68](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/comparison-operators_4.vb)]  
   
  앞의 예제에서 `x`의 형식이 `Button`이고 `Control`에서 상속되므로 `TypeOf x Is Control` 식은 `True`로 계산됩니다.  
   

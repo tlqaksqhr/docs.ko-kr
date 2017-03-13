@@ -30,7 +30,7 @@ caps.handback.revision: 18
  사용자 정의 형식으로 `~`  연산자를 오버로드할 수 있습니다.  자세한 내용은 [연산자](../../../csharp/language-reference/keywords/operator.md)를 참조하십시오.  정수 계열 형식에 대한 연산은 일반적으로 열거형에서 허용됩니다.  
   
 ## 예제  
- [!code-cs[csRefOperators#25](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#25)]  
+ [!code-cs[csRefOperators#25](../../../csharp/language-reference/operators/codesnippet/CSharp/bitwise-complement-operator_1.cs)]  
   
 ## 참고 항목  
  [C\# 참조](../../../csharp/language-reference/index.md)   

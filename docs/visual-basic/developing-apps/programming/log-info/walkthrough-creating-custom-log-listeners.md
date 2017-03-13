@@ -31,7 +31,7 @@ caps.handback.revision: 19
   
 -   응용 프로그램에서, <xref:System.Diagnostics.TraceListener>에서 상속하는 `SimpleListener`라는 이름의 클래스를 만듭니다.  
   
-     [!code-vb[VbVbalrMyApplicationLog#16](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/visualbasic/VbVbalrMyApplicationLog/Form1.vb#16)]  
+     [!code-vb[VbVbalrMyApplicationLog#16](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-creating-custom-log-listeners_1.vb)]  
   
      기본 클래스에 필요한 <xref:System.Diagnostics.TraceListener.Write%2A> 및 <xref:System.Diagnostics.TraceListener.WriteLine%2A> 메서드는 `MsgBox`를 호출하여 입력을 표시합니다.  
   
@@ -75,7 +75,7 @@ caps.handback.revision: 19
   
 -   다음 코드에서는 `SimpleListener`의 강력한 이름 형식의 이름을 확인하는 방법을 보여 줍니다.  
   
-     [!code-vb[VbVbalrMyApplicationLog#17](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/visualbasic/VbVbalrMyApplicationLog/Form1.vb#17)]  
+     [!code-vb[VbVbalrMyApplicationLog#17](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-creating-custom-log-listeners_2.vb)]  
   
      형식의 강력한 이름은 프로젝트에 따라 달라집니다.  
   

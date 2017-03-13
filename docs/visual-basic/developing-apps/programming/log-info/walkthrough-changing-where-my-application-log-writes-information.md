@@ -184,7 +184,7 @@ caps.handback.revision: 20
   
 2.  이 코드 예제에서는 정규화된 형식\(이 경우 "System.Diagnostics.FileLogTraceListener"\)에 대한 강력한 이름이 지정된 형식 이름을 확인하는 방법을 보여 줍니다.  
   
-     [!code-vb[VbVbalrMyApplicationLog#15](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/visualbasic/VbVbalrMyApplicationLog/Form1.vb#15)]  
+     [!code-vb[VbVbalrMyApplicationLog#15](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/walkthrough-changing-where-my-application-log-writes-information_1.vb)]  
   
      출력은 다음과 같으며, 위의 "수신기를 추가하려면" 절차에서처럼 이 출력을 사용하여 강력한 이름의 형식을 고유하게 참조할 수 있습니다.  
   

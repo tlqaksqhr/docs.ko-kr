@@ -75,17 +75,17 @@ Exit { Do | For | Function | Property | Select | Sub | Try | Whil
 ## 예제  
  다음 예에서는 `index` 변수가 100보다 클 때 루프 조건은 루프를 정지합니다.  하지만 루프에 `If` 문을 사용하면 인덱스 변수가 10보다 커질 때 `Exit Do` 문이 루프를 중단합니다.  
   
- [!code-vb[VbVbalrStatements#133](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/exit-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#133](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/exit-statement_1.vb)]  
   
 ## 예제  
  다음 예제에서는 함수 이름 `myFunction`에 반환 값을 할당한 다음 `Exit Function` 문을 사용하여 함수에서 반환합니다.  
   
- [!code-vb[VbVbalrStatements#23](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/exit-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#23](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/exit-statement_2.vb)]  
   
 ## 예제  
  다음 예제에서는 [Return Statement](../../../visual-basic/language-reference/statements/return-statement.md)를 사용하여 반환 값을 지정하고 함수를 종료하는 방법을 보여줍니다.  
   
- [!code-vb[VbVbalrStatements#24](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/exit-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#24](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/exit-statement_3.vb)]  
   
 ## 참고 항목  
  [Continue Statement](../../../visual-basic/language-reference/statements/continue-statement.md)   

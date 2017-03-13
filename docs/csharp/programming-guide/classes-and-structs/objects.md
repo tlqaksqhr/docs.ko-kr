@@ -27,11 +27,11 @@ caps.handback.revision: 26
   
  클래스의 인스턴스는 [new 연산자](../../../csharp/language-reference/keywords/new-operator.md)를 사용하여 생성됩니다.  다음 예제에서 `Person`은 형식이고 `person1` 및 `person 2`는 해당 형식의 인스턴스 또는 개체입니다.  
   
- [!code-cs[csProgGuideStatements#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/objects_1.cs)]  
+ [!code-cs[csProgGuideStatements#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_1.cs)]  
   
  구조체는 값 형식이므로 구조체 개체의 변수는 전체 개체의 복사본을 유지합니다.  다음 예제와 같이 `new` 연산자를 사용하여 구조체의 인스턴스를 만들 수 있지만 이 연산자가 반드시 필요한 것은 아닙니다.  
   
- [!code-cs[csProgGuideStatements#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/objects_2.cs)]  
+ [!code-cs[csProgGuideStatements#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_2.cs)]  
   
  `p1` 및 `p2`에 대한 메모리는 스레드 스택에 할당됩니다.  이 메모리는 해당 구조체가 선언된 형식 또는 메서드와 함께 회수됩니다.  이것이 구조체가 할당 시 복사되는 이유 중 하나입니다.  이와 달리 클래스 인스턴스용으로 할당된 메모리는 개체에 대한 모든 참조가 범위를 벗어나면 공용 언어 런타임에 의해 자동으로 회수\(가비지 수집\)됩니다.  하지만 C\+\+에서와 같이 클래스 개체를 명확하게 삭제할 수는 없습니다.  [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]의 가비지 수집에 대한 자세한 내용은 [Garbage Collection](../Topic/Garbage%20Collection.md)을 참조하십시오.  
   
@@ -45,7 +45,7 @@ caps.handback.revision: 26
   
 -   두 구조체 인스턴스의 인스턴스 필드가 동일한 값을 갖는지 확인하려면 <xref:System.ValueType.Equals%2A?displayProperty=fullName> 메서드를 사용합니다.  모든 구조체는 <xref:System.ValueType?displayProperty=fullName>에서 암시적으로 상속되므로 다음 예제와 같이 개체에서 직접 이 메서드를 호출합니다.  
   
- [!code-cs[csProgGuideStatements#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/objects_3.cs)]  
+ [!code-cs[csProgGuideStatements#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_3.cs)]  
   
  구조체에서 필드의 내용을 확인할 수 있어야 하므로 `Equals`의 <xref:System.ValueType?displayProperty=fullName> 구현에서는 리플렉션을 사용합니다.  고유한 구조체를 만들 때 해당 형식과 관련된 효율적인 동일성 비교 알고리즘을 제공하려면 `Equals` 메서드를 재정의합니다.  
   

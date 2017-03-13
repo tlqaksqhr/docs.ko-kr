@@ -29,7 +29,7 @@ caps.handback.revision: 17
 >  이 예제에서 사용 되는 파일에서 만들어진 [방법: 텍스트 파일에 쓰기](../../../csharp/programming-guide/file-system/how-to-write-to-a-text-file.md).  
   
 ## 예제  
- [!code-cs[csFilesandFolders#4](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#4)]  
+ [!code-cs[csFilesandFolders#4](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-read-from-a-text-file_1.cs)]  
   
 ## 코드 컴파일  
  코드를 복사 하 여 C\# 콘솔 응용 프로그램에 붙여넣습니다.  

@@ -51,7 +51,7 @@ caps.handback.revision: 11
 ## 예제  
  다음 예제에서는 `<include>` 태그를 사용하여 `commentFile.xml`이라는 파일에서 멤버 설명서 주석을 가져옵니다.  
   
- [!code-vb[VbVbcnXmlDocComments#4](../../../visual-basic/language-reference/xmldoc/codesnippet/visualbasic/include_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#4](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/include_1.vb)]  
   
  `commentFile.xml`의 형식은 다음과 같습니다.  
   

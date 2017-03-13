@@ -78,7 +78,7 @@ LINQ\(통합 언어 쿼리\)를 사용하면 손쉽게 데이터베이스 정보
   
      노출된 테이블을 데이터 컨텍스트의 속성으로 쿼리하고 결과를 정렬하는 `Load` 이벤트에 다음 코드를 추가합니다.  쿼리는 고객 주문 번호를 기준으로 결과를 내림차순으로 정렬합니다.  같은 주문 번호를 갖는 고객은 회사 이름을 기준으로 오름차순\(기본값\)으로 정렬됩니다.  
   
-     [!code-vb[VbLINQToSQLHowTos#10](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/StoredProcedureHowTo/Form4.vb#10)]  
+     [!code-vb[VbLINQToSQLHowTos#10](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-sort-query-results-by-using-linq_1.vb)]  
   
 4.  F5 키를 눌러 프로젝트를 실행하고 결과를 봅니다.  
   

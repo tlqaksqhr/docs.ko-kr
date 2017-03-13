@@ -29,12 +29,12 @@ caps.handback.revision: 20
 ## 예제  
  다음 코드는 명시적 변환 연산자의 예입니다.  이 연산자는 <xref:System.Byte> 형식을 `Digit`라는 값 형식으로 변환합니다.  모든 바이트를 숫자로 변환할 수 있는 것은 아니므로 이 변환은 명시적입니다. 즉, `Main` 메서드에서와 같이 캐스트를 사용해야 합니다.  
   
- [!code-cs[csProgGuideStatements#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-conversion-operators_1.cs)]  
+ [!code-cs[csProgGuideStatements#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-conversion-operators_1.cs)]  
   
 ## 예제  
  이 예제에서는 암시적 변환 연산자를 보여 줍니다. 이를 위해 이전 예제에서 수행한 작업을 실행 취소하는 변환 연산자를 정의합니다. 이 예제에서는 `Digit`이라는 값 클래스를 정수 계열 <xref:System.Byte> 형식으로 변환합니다.  모든 숫자를 <xref:System.Byte>로 변환할 수 있으므로 사용자에게 변환 사실을 명시적으로 알릴 필요가 없습니다.  
   
- [!code-cs[csProgGuideStatements#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-conversion-operators_2.cs)]  
+ [!code-cs[csProgGuideStatements#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-conversion-operators_2.cs)]  
   
 ## 참고 항목  
  [C\# 참조](../../../csharp/language-reference/index.md)   

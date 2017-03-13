@@ -70,7 +70,7 @@ Microsoft는 이 항목의 지침을 따르는 샘플과 설명서를 개발합�
   
 -   주석 구분 기호\('\)와 주석 텍스트 사이에 공백 하나를 삽입합니다.  
   
-     [!code-vb[VbVbalrGuidelines#2](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/VBProject/Class1.vb#2)]  
+     [!code-vb[VbVbalrGuidelines#2](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_1.vb)]  
   
 -   주석을 서식이 지정된 별표 블록으로 둘러싸지 마십시오.  
   
@@ -78,7 +78,7 @@ Microsoft는 이 항목의 지침을 따르는 샘플과 설명서를 개발합�
   
 -   `Main` 메서드를 사용할 때는 새 콘솔 응용 프로그램에 대해 기본 구조를 사용하고 명령줄 인수에 대해 `My`를 사용합니다.  
   
-     [!code-vb[VbVbalrGuidelines#3](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/VBProject/Class1.vb#3)]  
+     [!code-vb[VbVbalrGuidelines#3](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_2.vb)]  
   
 ## 언어 지침  
   
@@ -86,16 +86,16 @@ Microsoft는 이 항목의 지침을 따르는 샘플과 설명서를 개발합�
   
 -   문자열을 연결하려면, 앰퍼샌드\(&\)를 사용합니다.  
   
-     [!code-vb[VbVbalrGuidelines#4](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/VBProject/Class1.vb#4)]  
+     [!code-vb[VbVbalrGuidelines#4](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_3.vb)]  
   
 -   루프에 문자열을 추가하려면 <xref:System.Text.StringBuilder> 개체를 사용합니다.  
   
-     [!code-vb[VbVbalrGuidelines#5](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/VBProject/Class1.vb#5)]  
+     [!code-vb[VbVbalrGuidelines#5](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_4.vb)]  
   
 ### 이벤트 처리기의 완화된 대리자  
  인수\(개체 및 EventArg\)를 이벤트 처리기로 명시적으로 한정하지 마십시오.  이벤트에 전달된 이벤트 인수를 사용하지 않는 경우\(예: Object, EventArgs와 같은 전달자\) 완화된 대리자를 사용하여 코드에서 이벤트 인수를 생략합니다.  
   
- [!code-vb[VbVbalrGuidelines#7](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/VBProject/Class1.vb#7)]  
+ [!code-vb[VbVbalrGuidelines#7](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_5.vb)]  
   
 ### 부호 없는 데이터 형식  
   
@@ -105,32 +105,32 @@ Microsoft는 이 항목의 지침을 따르는 샘플과 설명서를 개발합�
   
 -   선언 줄에서 배열을 초기화할 때는 간단한 구문을 사용합니다.  예를 들어 다음 구문을 사용합니다.  
   
-     [!code-vb[VbVbalrGuidelines#8](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/VBProject/Class1.vb#8)]  
+     [!code-vb[VbVbalrGuidelines#8](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_6.vb)]  
   
      다음 구문을 사용하지 마십시오.  
   
-     [!code-vb[VbVbalrGuidelines#9](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/VBProject/Class1.vb#9)]  
+     [!code-vb[VbVbalrGuidelines#9](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_7.vb)]  
   
 -   변수 대신 형식에 배열 지정자를 삽입합니다.  예를 들어 다음 구문을 사용합니다.  
   
-     [!code-vb[VbVbalrGuidelines#11](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/VBProject/Class1.vb#11)]  
+     [!code-vb[VbVbalrGuidelines#11](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_8.vb)]  
   
      다음 구문을 사용하지 마십시오.  
   
-     [!code-vb[VbVbalrGuidelines#10](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/VBProject/Class1.vb#10)]  
+     [!code-vb[VbVbalrGuidelines#10](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_9.vb)]  
   
 -   기본 데이터 형식의 배열을 선언하고 초기화할 때 {} 구문을 사용합니다.  예를 들어 다음 구문을 사용합니다.  
   
-     [!code-vb[VbVbalrGuidelines#12](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/VBProject/Class1.vb#12)]  
+     [!code-vb[VbVbalrGuidelines#12](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_10.vb)]  
   
      다음 구문을 사용하지 마십시오.  
   
-     [!code-vb[VbVbalrGuidelines#13](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/VBProject/Class1.vb#13)]  
+     [!code-vb[VbVbalrGuidelines#13](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_11.vb)]  
   
 ### With 키워드 사용  
  한 개체에 대해 여러 호출을 하는 경우에는 `With` 키워드를 사용합니다.  
   
- [!code-vb[VbVbalrGuidelines#15](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/VBProject/Class1.vb#15)]  
+ [!code-vb[VbVbalrGuidelines#15](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_12.vb)]  
   
 ### 예외 처리를 사용할 때 Try...Catch 및 Using 문 사용  
  `On Error Goto`를 사용하지 마십시오.  
@@ -142,29 +142,29 @@ Microsoft는 이 항목의 지침을 따르는 샘플과 설명서를 개발합�
   
 -   간단한 인스턴스를 사용합니다.  예를 들어 다음 구문을 사용합니다.  
   
-     [!code-vb[VbVbalrGuidelines#21](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/VBProject/Class1.vb#21)]  
+     [!code-vb[VbVbalrGuidelines#21](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_13.vb)]  
   
      앞의 줄은 다음과 동일합니다.  
   
-     [!code-vb[VbVbalrGuidelines#22](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/VBProject/Class1.vb#22)]  
+     [!code-vb[VbVbalrGuidelines#22](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_14.vb)]  
   
 -   매개 변수 없는 생성자 대신 새 개체에 대해 개체 이니셜라이저를 사용합니다.  
   
-     [!code-vb[VbVbalrGuidelines#23](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/VBProject/Class1.vb#23)]  
+     [!code-vb[VbVbalrGuidelines#23](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_15.vb)]  
   
 ### 이벤트 처리  
   
 -   `AddHandler` 대신 `Handles`를 사용합니다.  
   
-     [!code-vb[VbVbalrGuidelines#24](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/VBProject/Class1.vb#24)]  
+     [!code-vb[VbVbalrGuidelines#24](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_16.vb)]  
   
 -   `AddressOf`를 사용하고 대리자를 명시적으로 인스턴스화하지 않습니다.  
   
-     [!code-vb[VbVbalrGuidelines#25](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/VBProject/Class1.vb#25)]  
+     [!code-vb[VbVbalrGuidelines#25](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_17.vb)]  
   
 -   이벤트를 정의할 때는 간단한 구문을 사용하고 컴파일러에서 대리자를 정의하도록 합니다.  
   
-     [!code-vb[VbVbalrGuidelines#26](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/VBProject/Class1.vb#26)]  
+     [!code-vb[VbVbalrGuidelines#26](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_18.vb)]  
   
 -   `RaiseEvent` 메서드를 호출하기 전에 이벤트가 `Nothing`\(null\)인지 확인하지 마십시오.  `RaiseEvent`는 이벤트를 발생시키기 전에 `Nothing`을 확인합니다.  
   
@@ -182,37 +182,37 @@ Microsoft는 이 항목의 지침을 따르는 샘플과 설명서를 개발합�
   
 -   `Add` 메서드와 같은 API 호출을 사용하는 대신 포함 식을 사용하여 값을 포함하고 기존 값에서 XML을 만듭니다.  
   
-     [!code-vb[VbVbalrGuidelines#27](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/VBProject/Class1.vb#27)]  
+     [!code-vb[VbVbalrGuidelines#27](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_19.vb)]  
   
 ### LINQ 쿼리  
   
 -   쿼리 변수에 의미 있는 이름을 사용합니다.  
   
-     [!code-vb[VbVbalrGuidelines#28](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/VBProject/Class1.vb#28)]  
+     [!code-vb[VbVbalrGuidelines#28](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_20.vb)]  
   
 -   쿼리의 요소에 이름을 제공하여 익명 형식의 속성 이름이 파스칼식 대\/소문자에 따라 올바로 대문자로 표시되도록 합니다.  
   
-     [!code-vb[VbVbalrGuidelines#29](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/VBProject/Class1.vb#29)]  
+     [!code-vb[VbVbalrGuidelines#29](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_21.vb)]  
   
 -   결과의 속성 이름이 모호한 경우 속성 이름을 바꿉니다.  예를 들어 쿼리에서 고객 이름과 주문 ID를 반환하는 경우 결과에서 `Name` 및 `ID`로 남겨두지 않고 다음과 같이 이름을 바꿉니다.  
   
-     [!code-vb[VbVbalrGuidelines#30](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/VBProject/Class1.vb#30)]  
+     [!code-vb[VbVbalrGuidelines#30](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_22.vb)]  
   
 -   쿼리 변수 및 범위 변수의 선언에서 형식 유추를 사용합니다.  
   
-     [!code-vb[VbVbalrGuidelines#31](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/VBProject/Class1.vb#31)]  
+     [!code-vb[VbVbalrGuidelines#31](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_23.vb)]  
   
 -   쿼리 절을 `From` 문 아래에 정렬합니다.  
   
-     [!code-vb[VbVbalrGuidelines#32](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/VBProject/Class1.vb#32)]  
+     [!code-vb[VbVbalrGuidelines#32](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_24.vb)]  
   
 -   다른 쿼리 절 앞에 `Where` 절을 사용하여 나중 쿼리 절이 필터링된 데이터 집합에 대해 실행되게 합니다.  
   
-     [!code-vb[VbVbalrGuidelines#33](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/VBProject/Class1.vb#33)]  
+     [!code-vb[VbVbalrGuidelines#33](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_25.vb)]  
   
 -   `Join` 절을 사용하여 조인 작업을 암시적으로 정의하는 대신 `Where` 절을 사용하여 조인 작업을 명시적으로 정의합니다.  
   
-     [!code-vb[VbVbalrGuidelines#34](../../../visual-basic/programming-guide/program-structure/codesnippet/visualbasic/VBProject/Class1.vb#34)]  
+     [!code-vb[VbVbalrGuidelines#34](../../../visual-basic/programming-guide/program-structure/codesnippet/VisualBasic/coding-conventions_26.vb)]  
   
 ## 참고 항목  
  [보안 코딩 지침](../Topic/Secure%20Coding%20Guidelines.md)

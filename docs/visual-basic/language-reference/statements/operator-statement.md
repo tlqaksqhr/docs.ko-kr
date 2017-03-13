@@ -176,7 +176,7 @@ End Operator
 ## 예제  
  다음 코드 예제에서는 `Operator` 문을 사용하여 `And`, `Or`, `IsFalse` 및 `IsTrue` 연산자에 대한 연산자 프로시저를 포함하는 구조체를 개략적으로 정의합니다.  `And`와 `Or`는 형식이 `abc`이고 반환 형식이 `abc`인 두 개의 피연산자를 사용합니다.  `IsFalse`와 `IsTrue`는 형식이 `abc`이고 반환 형식이 `Boolean`인 단일 피연산자를 사용합니다.  이러한 정의를 사용하면 호출 코드에서 `And`, `AndAlso`, `Or` 및 `OrElse`를 `abc` 형식 피연산자와 함께 사용할 수 있습니다.  
   
- [!code-vb[VbVbalrStatements#44](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/operator-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#44](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/operator-statement_1.vb)]  
   
 ## 참고 항목  
  [IsFalse Operator](../../../visual-basic/language-reference/operators/isfalse-operator.md)   

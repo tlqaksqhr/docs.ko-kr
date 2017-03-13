@@ -71,7 +71,7 @@ End Function
 ## 예제  
  다음 예제에서는 인수는 위치로 전달 인수를 이름으로 전달 하 고 프로시저를 호출 하는 방법을 보여 줍니다.  프로시저는 두 개의 선택적 매개 변수가 있습니다.  
   
- [!code-vb[VbVbalrKeywords#21](../../../visual-basic/language-reference/codesnippet/visualbasic/optional_1.vb)]  
+ [!code-vb[VbVbalrKeywords#21](../../../visual-basic/language-reference/codesnippet/VisualBasic/optional_1.vb)]  
   
 ## 참고 항목  
  [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md)   

@@ -37,9 +37,9 @@ p--;
 ## 예제  
  이 예제에서는 포인터를 `int`의 크기만큼 증가시키면서 배열의 요소를 차례로 표시합니다.  포인터가 증가할 때마다 배열 요소의 내용 및 주소가 표시됩니다.  
   
- [!code-cs[csProgGuidePointers#3](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers2.cs#3)]  
+ [!code-cs[csProgGuidePointers#3](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-increment-and-decrement-pointers_1.cs)]  
   
- [!code-cs[csProgGuidePointers#13](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#13)]  
+ [!code-cs[csProgGuidePointers#13](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-increment-and-decrement-pointers_2.cs)]  
   
   **Value:0 @ Address:12860272**  
 **Value:1 @ Address:12860276**  

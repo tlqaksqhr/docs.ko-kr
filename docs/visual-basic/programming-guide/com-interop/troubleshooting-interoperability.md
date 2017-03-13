@@ -66,11 +66,11 @@ COM과 [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnsho
 ##  <a name="vbconinteroperabilitymarshalinganchor6"></a> .NET Framework 클래스의 인스턴스 만들기  
  일반적으로 클래스 이름을 지정한 `New` 문을 사용하여 [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)] 클래스의 인스턴스를 만듭니다.  COM 클래스를 interop 어셈블리로 표시하는 것이 `New` 문을 인터페이스와 함께 사용할 수 있는 유일한 경우입니다.  `Inherits` 문과 함께 COM 클래스를 사용하는 경우를 제외하고는 클래스와 같은 방법으로 인터페이스를 사용할 수 있습니다.  다음 코드에서는 Microsoft ActiveX Data Objects 2.8 라이브러리 COM 개체에 대한 참조가 포함된 프로젝트에서 `Command` 개체를 만드는 방법을 보여 줍니다.  
   
- [!code-vb[VbVbalrInterop#20](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#20)]  
+ [!code-vb[VbVbalrInterop#20](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_1.vb)]  
   
  그러나 COM 클래스를 파생 클래스에 대한 기본으로 사용하는 경우에는 다음 코드와 같이 COM 클래스를 나타내는 interop 클래스를 사용해야 합니다.  
   
- [!code-vb[VbVbalrInterop#21](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#21)]  
+ [!code-vb[VbVbalrInterop#21](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_2.vb)]  
   
 > [!NOTE]
 >  Interop 어셈블리는 COM 클래스를 나타내는 인터페이스를 암시적으로 구현합니다.  이러한 인터페이스를 `Implements` 문으로 구현하려고 하면 오류가 발생합니다.  
@@ -90,19 +90,19 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
  [!INCLUDE[vbprvblong](../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong-md.md)]에서는 COM 개체의 메서드를 사용하기 전에 먼저 COM 개체의 인스턴스를 만들어야 합니다.  [!INCLUDE[vbprvblong](../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong-md.md)]에서 이러한 메서드를 사용하려면 원하는 클래스의 변수를 선언한 다음 new 키워드를 사용하여 개체 변수에 개체를 할당합니다.  해당 클래스의 인스턴스를 하나만 만들려는 경우에는 `Shared` 키워드를 사용할 수 있습니다.  
   
- [!code-vb[VbVbalrInterop#23](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#23)]  
+ [!code-vb[VbVbalrInterop#23](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_3.vb)]  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor9"></a> 이벤트 처리기에서 처리되지 않은 오류  
  일반적인 상호 운용성 문제에는 COM 개체에 의해 발생된 이벤트를 처리하는 이벤트 처리기의 오류가 포함됩니다.  특별히 `On Error` 또는 `Try...Catch...Finally` 문을 사용하여 오류를 검사하지 않으면 이러한 오류는 무시됩니다.  예를 들어, 다음은 Microsoft ActiveX Data Objects 2.8 라이브러리 COM 개체에 대한 참조가 포함된 [!INCLUDE[vbprvblong](../../../visual-basic/developing-apps/customizing-extending-my/includes/vbprvblong-md.md)] 프로젝트에서 가져온 예입니다.  
   
- [!code-vb[VbVbalrInterop#24](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#24)]  
+ [!code-vb[VbVbalrInterop#24](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_4.vb)]  
   
  이 예제에서는 예상한 대로 오류가 발생합니다.  그러나 같은 예제를 `Try...Catch...Finally` 블록 없이 사용하면 `OnError Resume Next` 문을 사용한 것처럼 오류가 무시됩니다.  오류를 처리하지 않을 경우 0으로 나누기는 아무런 경고 없이 실패합니다.  왜냐하면 이러한 오류는 처리되지 않은 예외 오류를 발생시키지 않기 때문입니다. 따라서 COM 개체의 이벤트를 처리하는 이벤트 처리기에서는 어떤 형태로든 예외를 처리해 주어야 합니다.  
   
 ### COM interop 오류 이해  
  오류 처리를 사용하지 않을 경우 interop 호출은 종종 정보가 거의 제공되지 않는 오류를 생성합니다.  되도록이면 문제가 발생할 경우 보다 많은 정보를 제공할 수 있도록 구조적 오류 처리를 사용하는 것이 좋습니다.  이는 응용 프로그램을 디버깅할 때 특히 유용할 수 있습니다.  예를 들면 다음과 같습니다.  
   
- [!code-vb[VbVbalrInterop#25](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#25)]  
+ [!code-vb[VbVbalrInterop#25](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_5.vb)]  
   
  예외 개체의 내용을 검사하여 오류 설명, HRESULT 및 COM 오류의 소스 등의 정보를 찾을 수 있습니다.  
   
@@ -122,11 +122,11 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
  호출되는 프로시저에 대한 액세스 권한이 있으면 `ReadOnly` 속성을 받아들이는 매개 변수를 선언할 때 `ByVal` 키워드를 사용하여 이 오류를 방지할 수 있습니다.  예를 들면 다음과 같습니다.  
   
- [!code-vb[VbVbalrInterop#26](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#26)]  
+ [!code-vb[VbVbalrInterop#26](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_6.vb)]  
   
  호출되는 프로시저의 소스 코드에 대한 액세스 권한이 없으면 호출하는 프로시저 주위에 대괄호를 추가하여 속성이 값으로 전달되도록 할 수 있습니다.  예를 들어, Microsoft ActiveX Data Objects 2.8 라이브러리 COM 개체에 대한 참조가 포함된 프로젝트에서 다음을 사용할 수 있습니다.  
   
- [!code-vb[VbVbalrInterop#27](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#27)]  
+ [!code-vb[VbVbalrInterop#27](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/troubleshooting-interoperability_7.vb)]  
   
 ##  <a name="vbconinteroperabilitymarshalinganchor12"></a> Interop을 노출하는 어셈블리 배포  
  COM 인터페이스를 노출하는 어셈블리를 배포하는 데는 몇 가지 주의할 점이 있습니다.  예를 들어, 서로 다른 응용 프로그램에서 같은 COM 어셈블리를 참조하는 경우 문제가 발생할 수 있습니다.  이러한 상황은 새 버전의 어셈블리를 설치했는데 다른 응용 프로그램에서 이전 버전의 어셈블리를 계속 사용하고 있는 경우 흔히 발생합니다.  DLL을 공유하는 어셈블리를 제거하면 다른 어셈블리에서 해당 DLL을 사용하지 못할 수도 있습니다.  

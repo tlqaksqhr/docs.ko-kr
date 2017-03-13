@@ -27,7 +27,7 @@ caps.handback.revision: 13
   
 -   특정 디렉터리에 있는 각 파일에서 텍스트를 읽으려면 `ReadAllText` 메서드를 사용합니다.  다음 코드에서는 디렉터리와 파일을 지정한 다음 `ReadAllText`를 사용하여 텍스트를 `patients`라는 이름의 문자열로 읽어옵니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#15](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-retrieve-the-cont_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#15](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-retrieve-the-contents-of-the-my-documents-directory_1.vb)]  
   
 ## 참고 항목  
  <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>   

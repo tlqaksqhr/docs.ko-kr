@@ -30,7 +30,7 @@ caps.handback.revision: 22
   
  예를 들어 포함 식과 리터럴 텍스트 콘텐츠를 결합하여 XML 요소 리터럴을 만들 수 있습니다.  
   
- [!code-vb[VbXMLSamples#27](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_1.vb)]  
+ [!code-vb[VbXMLSamples#27](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_1.vb)]  
   
  `isbnNumber`에 정수 12345가 포함되고 `modifiedDate`에 날짜 3\/5\/2006이 포함된 경우 이 코드가 실행될 때 `book`의 값이 다음과 같습니다.  
   
@@ -55,27 +55,27 @@ caps.handback.revision: 22
   
 -   XML 요소 이름에 있는 포함 식의 예제  
   
-     [!code-vb[VbXMLSamples#32](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_2.vb)]  
+     [!code-vb[VbXMLSamples#32](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_2.vb)]  
   
 -   XML 요소 콘텐츠에 있는 포함 식의 예제  
   
-     [!code-vb[VbXMLSamples#33](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_3.vb)]  
+     [!code-vb[VbXMLSamples#33](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_3.vb)]  
   
 -   XML 요소 특성 이름에 있는 포함 식의 예제  
   
-     [!code-vb[VbXMLSamples#34](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_4.vb)]  
+     [!code-vb[VbXMLSamples#34](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_4.vb)]  
   
 -   XML 요소 특성 값에 있는 포함 식의 예제  
   
-     [!code-vb[VbXMLSamples#35](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_5.vb)]  
+     [!code-vb[VbXMLSamples#35](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_5.vb)]  
   
 -   XML 요소 특성에 있는 포함 식의 예제  
   
-     [!code-vb[VbXMLSamples#36](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_6.vb)]  
+     [!code-vb[VbXMLSamples#36](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_6.vb)]  
   
 -   XML 문서 루트 요소에 있는 포함 식의 예제  
   
-     [!code-vb[VbXMLSamples#37](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/embedded-expressions-in-_7.vb)]  
+     [!code-vb[VbXMLSamples#37](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/embedded-expressions-in-xml_7.vb)]  
   
  `Option Strict`를 사용하면 컴파일러가 각 포함 식의 형식이 필요한 형식으로 확장되는지를 확인합니다.  유일한 예외는 코드가 실행될 때 확인되는 XML 문서 루트 요소의 경우입니다.  `Option Strict` 없이 컴파일하면 `Object` 형식의 식을 포함할 수 있으며 해당 형식이 런타임에 확인됩니다.  
   

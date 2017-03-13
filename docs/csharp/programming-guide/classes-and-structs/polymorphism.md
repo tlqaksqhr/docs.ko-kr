@@ -31,7 +31,7 @@ caps.handback.revision: 31
   
  먼저, `Shape`라는 기본 클래스를 만들고 `Rectangle`, `Circle` 및 `Triangle`과 같은 파생 클래스를 만듭니다.  `Shape` 클래스에 `Draw`라는 가상 메서드를 제공하고, 각 파생 클래스에서 이를 재정의하여 클래스가 나타내는 특정 도형을 그립니다.  `List<Shape>` 개체를 만들고 이 개체에 Circle, Triangle 및 Rectangle을 추가합니다.  그리기 화면을 업데이트하려면 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 루프를 사용하여 목록을 반복하고 목록의 각 `Shape` 개체에 대해 `Draw` 메서드를 호출합니다.  목록의 각 개체에 선언된 형식 `Shape`가 있더라도 이는 호출될 런타임 형식\(각 파생 클래스에 있는 메서드의 재정의된 버전\)입니다.  
   
- [!code-cs[csProgGuideInheritance#50](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/polymorphism_1.cs)]  
+ [!code-cs[csProgGuideInheritance#50](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_1.cs)]  
   
  C\#에서 모든 형식은 사용자 정의 형식을 포함한 모든 형식이 <xref:System.Object>에서 파생되므로 다형 형식입니다.  
   
@@ -48,42 +48,42 @@ caps.handback.revision: 31
   
  파생 클래스는 기본 클래스 멤버가 [virtual](../../../csharp/language-reference/keywords/virtual.md) 또는 [abstract](../../../csharp/language-reference/keywords/abstract.md)로 선언된 경우에만 기본 클래스 멤버를 재정의할 수 있습니다.  파생 멤버는 [override](../../../csharp/language-reference/keywords/override.md) 키워드를 사용하여 멤버가 가상 호출에 참여하도록 되어 있음을 명시적으로 나타내야 합니다.  다음 코드는 예제를 제공합니다.  
   
- [!code-cs[csProgGuideInheritance#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/polymorphism_2.cs)]  
+ [!code-cs[csProgGuideInheritance#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_2.cs)]  
   
  필드는 가상일 수 없습니다. 메서드, 속성, 이벤트 및 인덱서만 가상일 수 있습니다.  파생 클래스가 가상 멤버를 재정의하면 해당 멤버는 해당 클래스의 인스턴스가 기본 클래스의 인스턴스로 액세스되는 경우에도 호출됩니다.  다음 코드는 예제를 제공합니다.  
   
- [!code-cs[csProgGuideInheritance#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/polymorphism_3.cs)]  
+ [!code-cs[csProgGuideInheritance#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_3.cs)]  
   
  가상 메서드 및 속성을 통해 파생 클래스는 메서드의 기본 클래스 구현을 사용할 필요 없이 기본 클래스를 확장할 수 있습니다.  자세한 내용은 [Override 및 New 키워드를 사용하여 버전 관리](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)을 참조하십시오.  인터페이스는 구현이 파생 클래스에 남겨진 메서드 또는 메서드 집합을 정의하는 또 다른 방법을 제공합니다.  자세한 내용은 [인터페이스](../../../csharp/programming-guide/interfaces/index.md)을 참조하십시오.  
   
 ### 새 멤버로 기본 클래스 멤버 숨기기  
  파생 멤버가 기본 클래스의 멤버와 동일한 이름을 갖되 가상 호출에는 참여하지 않도록 하려면 [new](../../../csharp/language-reference/keywords/new.md) 키워드를 사용하면 됩니다.  `new` 키워드는 바꿀 클래스 멤버의 반환 형식 앞에 배치됩니다.  다음 코드는 예제를 제공합니다.  
   
- [!code-cs[csProgGuideInheritance#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/polymorphism_4.cs)]  
+ [!code-cs[csProgGuideInheritance#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_4.cs)]  
   
  숨겨진 기본 클래스 멤버는 파생 클래스의 인스턴스를 기본 클래스의 인스턴스로 캐스팅하여 클라이언트 코드에서 계속 액세스할 수 있습니다.  예를 들면 다음과 같습니다.  
   
- [!code-cs[csProgGuideInheritance#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/polymorphism_5.cs)]  
+ [!code-cs[csProgGuideInheritance#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_5.cs)]  
   
 ### 파생 클래스가 가상 멤버를 재정의하지 못하도록 설정  
  가상 멤버는 가상 멤버와 원래 가상 멤버를 선언한 클래스 간에 선언된 클래스 수와 관계없이 무기한 가상으로 유지됩니다.  클래스 A가 가상 멤버를 선언하고, 클래스 B가 A에서 파생되며, 클래스 C가 B에서 파생되면 클래스 C는 클래스 B가 해당 멤버에 대한 재정의를 선언했는지 여부와 관계없이 가상 멤버를 상속하며, 가상 멤버를 재정의할 수 있습니다.  다음 코드는 예제를 제공합니다.  
   
- [!code-cs[csProgGuideInheritance#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/polymorphism_6.cs)]  
+ [!code-cs[csProgGuideInheritance#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_6.cs)]  
   
  파생 클래스는 재정의를 [sealed](../../../csharp/language-reference/keywords/sealed.md)로 선언하여 가상 상속을 중지할 수 있습니다.  이렇게 하려면 클래스 멤버 선언에서 `override` 키워드 앞에 `sealed` 키워드를 배치해야 합니다.  다음 코드는 예제를 제공합니다.  
   
- [!code-cs[csProgGuideInheritance#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/polymorphism_7.cs)]  
+ [!code-cs[csProgGuideInheritance#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_7.cs)]  
   
  앞의 예제에서 `DoWork` 메서드는 C에서 파생된 모든 클래스에 대해 더 이상 가상이 아닙니다.  그러나 이 메서드는 C의 인스턴스가 형식 B 또는 형식 A로 캐스팅되더라도 여전히 C의 인스턴스에 대해서는 가상입니다.  sealed 메서드는 다음 예제에 표시된 것처럼 `new` 키워드를 사용하여 파생 클래스로 바꿀 수 있습니다.  
   
- [!code-cs[csProgGuideInheritance#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/polymorphism_8.cs)]  
+ [!code-cs[csProgGuideInheritance#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_8.cs)]  
   
  이 경우 형식 D 변수를 사용하여 D에 대해 `DoWork`을 호출하면 새 `DoWork`가 호출됩니다.  형식 C, B 또는 A 변수를 사용하여 D의 인스턴스에 액세스하면 `DoWork`에 대한 호출에서 가상 상속의 규칙을 따라 해당 호출을 클래스 C에 대한 `DoWork`의 구현으로 라우팅합니다.  
   
 ### 파생 클래스에서 기본 클래스 가상 멤버 액세스  
  메서드 또는 속성을 바꾸었거나 재정의한 파생 클래스는 계속해서 base 키워드를 사용하여 기본 클래스에 대한 메서드 또는 속성에 액세스할 수 있습니다.  다음 코드는 예제를 제공합니다.  
   
- [!code-cs[csProgGuideInheritance#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/polymorphism_9.cs)]  
+ [!code-cs[csProgGuideInheritance#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_9.cs)]  
   
  자세한 내용은 [base](../../../csharp/language-reference/keywords/base.md)를 참조하세요.  
   

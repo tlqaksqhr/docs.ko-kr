@@ -31,7 +31,7 @@ select student.ID;
 ## 예제  
  다음 예제에서는 익명 형식을 사용하여 지정된 조건과 일치하는 각 소스 개체의 속성 하위 집합만 반환하는 방법을 보여 줍니다.  
   
- [!code-cs[csProgGuideLINQ#31](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#31)]  
+ [!code-cs[csProgGuideLINQ#31](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-return-subsets-of-element-properties-in-a-query_1.cs)]  
   
  익명 형식은 이름이 지정되지 않은 경우 해당 속성에 대한 소스 요소의 이름을 사용합니다.  익명 형식의 속성에 새 이름을 부여하려면 다음과 같이 `select` 문을 작성하십시오.  
   

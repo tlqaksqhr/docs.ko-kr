@@ -102,7 +102,7 @@ End Module
 -   **한정자.** 한 프로젝트에 여러 모듈을 사용할 수 있으며 둘 이상의 모듈에서 같은 이름으로 멤버를 선언할 수 있습니다.  그러나 참조가 해당 모듈 외부의 것인 경우 적절한 모듈 이름으로 이러한 멤버에 대한 모든 참조를 한정해야 합니다.  자세한 내용은 [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)을 참조하십시오.  
   
 ## 예제  
- [!code-vb[VbVbalrStatements#69](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/module-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#69](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/module-statement_1.vb)]  
   
 ## 참고 항목  
  [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md)   

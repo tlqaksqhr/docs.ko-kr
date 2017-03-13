@@ -46,8 +46,8 @@ dataRepeater1.Top = productsBindingNavigator.Height;
   
  기본 복제가 완료된 후 발생하는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemCloned> 이벤트에서 누락된 속성을 복원하여 이와 같은 문제를 해결할 수 있습니다.  다음 예제에서는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemCloned> 이벤트 처리기에서 <xref:System.Windows.Forms.ListBox> 컨트롤의 <xref:System.Windows.Forms.ListBox.Items%2A> 컬렉션을 복원하는 방법을 보여 줍니다.  
   
- [!code-cs[VbPowerPacksDataRepeaterItemCloned#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/DataRepeaterItemClonedCS/ItemCloned.cs#1)]
- [!code-vb[VbPowerPacksDataRepeaterItemCloned#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/DataRepeaterItemCloned/ItemCloned.vb#1)]  
+ [!code-cs[VbPowerPacksDataRepeaterItemCloned#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/troubleshooting-the-datarepeater-control-visual-studio_1.cs)]
+ [!code-vb[VbPowerPacksDataRepeaterItemCloned#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/troubleshooting-the-datarepeater-control-visual-studio_1.vb)]  
   
 ## 항목 머리글에 선택 기호가 없는 경우  
  <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 컨트롤에서 항목 머리글의 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.SelectionColor%2A> 속성을 변경할 때 일부 색 선택 사항으로 인해 선택 기호가 표시되지 않을 수 있습니다.  <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.ItemHeaderSize%2A> 속성을 변경하면 선택 기호가 표시되지 않을 수도 있습니다.  

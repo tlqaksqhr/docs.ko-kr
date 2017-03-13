@@ -38,8 +38,8 @@ Visual Basic에서는 컬렉션 간의 공통 값을 기준으로 여러 컬렉�
   
 2.  이 항목의 샘플은 `Person` 및 `Pet` 형식과 다음 코드 예제의 데이터를 사용합니다.  Visual Basic에서 만든 `Module1` 모듈에 이 코드를 복사합니다.  
   
-     [!code-vb[VbLINQHowTos#1](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/VbLINQHowTos/Module1.vb#1)]  
-    [!code-vb[VbLINQHowTos#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/VbLINQHowTos/Module1.vb#2)]  
+     [!code-vb[VbLINQHowTos#1](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_1.vb)]  
+    [!code-vb[VbLINQHowTos#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_2.vb)]  
   
 ## Join 절을 사용하여 내부 조인 수행  
  INNER JOIN은 두 컬렉션의 데이터를 결합합니다.  지정된 키 값이 일치하는 항목이 포함됩니다.  어느 한 컬렉션에 일치하는 항목이 없는 다른 쪽 컬렉션의 항목은 제외됩니다.  
@@ -54,7 +54,7 @@ Visual Basic에서는 컬렉션 간의 공통 값을 기준으로 여러 컬렉�
   
 1.  다음 코드를 사용자 프로젝트의 `Module1` 모듈에 추가하여 암시적 내부 조인과 명시적 내부 조인의 예를 살펴 보십시오.  
   
-     [!code-vb[VbLINQHowTos#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/VbLINQHowTos/Module1.vb#4)]  
+     [!code-vb[VbLINQHowTos#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_3.vb)]  
   
 ## Group Join 절을 사용하여 왼쪽 우선 외부 조인 수행  
  LEFT OUTER JOIN에는 조인의 왼쪽 컬렉션의 항목은 모두 포함하고 오른쪽 컬렉션의 값 중에서는 일치하는 값만 포함합니다.  조인의 왼쪽 컬렉션에 일치하는 항목이 없는 오른쪽 컬렉션의 항목은 쿼리 결과에서 제외됩니다.  
@@ -67,7 +67,7 @@ Visual Basic에서는 컬렉션 간의 공통 값을 기준으로 여러 컬렉�
   
 1.  다음 코드를 사용자 프로젝트의 `Module1` 모듈에 추가하여 그룹화된 왼쪽 우선 외부 조인 및 그룹화되지 않은 왼쪽 우선 외부 조인의 예를 살펴 보십시오.  
   
-     [!code-vb[VbLINQHowTos#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/VbLINQHowTos/Module1.vb#3)]  
+     [!code-vb[VbLINQHowTos#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_4.vb)]  
   
 ## 복합 키를 사용하여 조인 수행  
  `Join` 또는 `Group Join` 절에 `And` 키워드를 사용하여 컬렉션의 일치하는 값이 조인될 때 사용할 여러 개의 키 필드를 식별할 수 있습니다.  `And` 키워드는 모든 지정된 키 필드가 조인될 항목에 대해 일치해야 함을 지정합니다.  
@@ -76,7 +76,7 @@ Visual Basic에서는 컬렉션 간의 공통 값을 기준으로 여러 컬렉�
   
 1.  다음 코드를 사용자 프로젝트의 `Module1` 모듈에 추가하여 복합 키를 사용하는 조인의 예를 살펴 보십시오.  
   
-     [!code-vb[VbLINQHowTos#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/VbLINQHowTos/Module1.vb#5)]  
+     [!code-vb[VbLINQHowTos#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_5.vb)]  
   
 ## 코드 실행  
   
@@ -84,7 +84,7 @@ Visual Basic에서는 컬렉션 간의 공통 값을 기준으로 여러 컬렉�
   
 1.  프로젝트에 있는 `Module1` 모듈의 `Sub Main`을 다음 코드로 대체하여 이 항목의 예제를 실행합니다.  
   
-     [!code-vb[VbLINQHowTos#6](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/VbLINQHowTos/Module1.vb#6)]  
+     [!code-vb[VbLINQHowTos#6](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_6.vb)]  
   
 2.  F5 키를 눌러 예제를 실행합니다.  
   

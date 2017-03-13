@@ -6,7 +6,7 @@ caps.handback.revision: 12
 다음 예제에서는 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)] 쿼리 식에서 중첩 그룹을 만드는 방법을 보여 줍니다.  학년이나 등급에 따라 만들어진 각 그룹은 개인의 이름에 기초한 그룹으로 더 세분화됩니다.  
   
 ## 예제  
- [!code-cs[csProgGuideLINQ#24](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#24)]  
+ [!code-cs[csProgGuideLINQ#24](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-create-a-nested-group_1.cs)]  
   
  중첩 그룹의 내부 요소를 반복하려면 세 개의 중첩 `foreach` 루프가 필요합니다.  
   

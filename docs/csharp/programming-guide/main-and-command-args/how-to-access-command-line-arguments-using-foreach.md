@@ -24,9 +24,9 @@ caps.handback.revision: 15
 ## 예제  
  이 예제에서는 `foreach`를 사용하여 명령줄 인수를 인쇄하는 방법을 보여 줍니다.  
   
- [!code-cs[csProgGuideMain#10](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/how-to-access-command-li_1.cs)]  
+ [!code-cs[csProgGuideMain#10](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/how-to-access-command-line-arguments-using-foreach_1.cs)]  
   
- [!code-cs[csProgGuideMain#11](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/how-to-access-command-li_2.cs)]  
+ [!code-cs[csProgGuideMain#11](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/how-to-access-command-line-arguments-using-foreach_2.cs)]  
   
 ## 참고 항목  
  <xref:System.Array>   

@@ -31,7 +31,7 @@ caps.handback.revision: 11
   
  다음 예제에서는 `Alias` 키워드를 사용하여 advapi32.dll의 함수 이름인 `GetUserNameA`를 제공합니다. 이 예제에서는 대신 함수 이름으로 `getUserName`이 사용됩니다.  `getUserName` 함수는 현재 사용자의 이름을 표시하는 하위 `getUser`에서 호출됩니다.  
   
- [!code-vb[VbVbalrStatements#15](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/alias-clause_1.vb)]  
+ [!code-vb[VbVbalrStatements#15](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/alias-clause_1.vb)]  
   
 ## 참고 항목  
  [키워드](../../../visual-basic/language-reference/keywords/index.md)

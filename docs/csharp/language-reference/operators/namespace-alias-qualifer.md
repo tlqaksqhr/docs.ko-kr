@@ -22,7 +22,7 @@ caps.handback.revision: 21
 # :: 연산자(C# 참조)
 네임스페이스 별칭 한정자\(`::`\)는 식별자를 조회하는 데 사용됩니다.  이는 다음 예제에서와 같이 항상 두 개의 식별자 사이에 옵니다.  
   
- [!code-cs[csRefOperators#27](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#27)]  
+ [!code-cs[csRefOperators#27](../../../csharp/language-reference/operators/codesnippet/CSharp/namespace-alias-qualifer_1.cs)]  
   
 ## 설명  
  네임스페이스 별칭 한정자는 `global`일 수 있습니다.  이 경우 별칭이 지정된 네임스페이스가 아니라 전역 네임스페이스에서 조회가 실행됩니다.  

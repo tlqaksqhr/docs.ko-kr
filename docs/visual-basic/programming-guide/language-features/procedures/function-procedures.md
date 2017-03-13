@@ -101,11 +101,11 @@ End Function
 ### 선언과 호출에 대한 설명  
  다음 `Function` 프로시저는 직각 삼각형의 두 변의 값을 사용하여 가장 긴 변\(빗변\)의 길이를 계산합니다.  
   
- [!code-vb[VbVbcnProcedures#1](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/function-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/function-procedures_1.vb)]  
   
  다음 예제에서는 일반적인 `hypotenuse` 호출을 보여 줍니다.  
   
- [!code-vb[VbVbcnProcedures#6](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/function-procedures_2.vb)]  
+ [!code-vb[VbVbcnProcedures#6](./codesnippet/VisualBasic/function-procedures_2.vb)]  
   
 ## 참고 항목  
  [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

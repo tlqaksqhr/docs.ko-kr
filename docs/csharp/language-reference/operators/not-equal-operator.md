@@ -28,7 +28,7 @@ caps.handback.revision: 14
  사용자 정의 값 형식으로 `!=` 연산자를 오버로드할 수 있습니다\([operator](../../../csharp/language-reference/keywords/operator.md) 참조\).  사용자 정의 참조 형식으로도 오버로드할 수 있지만, 기본적으로 `!=` 연산자는 미리 정의된 형식과 사용자 정의 참조 형식 모두에 대해 위에서 설명한 것처럼 동작합니다.  `!=` 연산자를 오버로드할 경우에는 [\=\=](../../../csharp/language-reference/operators/equality-comparison-operator.md) 연산자도 오버로드해야 합니다.  정수 계열 형식에 대한 연산은 일반적으로 열거형에서 허용됩니다.  
   
 ## 예제  
- [!code-cs[csRefOperators#33](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#33)]  
+ [!code-cs[csRefOperators#33](../../../csharp/language-reference/operators/codesnippet/CSharp/not-equal-operator_1.cs)]  
   
 ## 참고 항목  
  [C\# 참조](../../../csharp/language-reference/index.md)   

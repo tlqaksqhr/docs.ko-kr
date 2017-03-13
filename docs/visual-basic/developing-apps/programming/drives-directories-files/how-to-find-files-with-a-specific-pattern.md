@@ -34,7 +34,7 @@ caps.handback.revision: 23
   
 -   `GetFiles` 메서드를 사용하면서 검색할 디렉터리의 이름과 경로를 지정하고 패턴을 지정합니다.  다음 예제에서는 디렉터리에서 확장명이 `.dll`인 모든 파일을 찾아서 `ListBox1`에 추가합니다.  
   
-     [!code-vb[VbFileIOMisc#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-find-files-with-a_1.vb)]  
+     [!code-vb[VbFileIOMisc#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-find-files-with-a-specific-pattern_1.vb)]  
   
 ## .NET Framework 보안  
  다음 조건에서 예외가 발생할 수 있습니다.  

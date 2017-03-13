@@ -27,23 +27,23 @@ caps.handback.revision: 30
 ## 리터럴  
  `bool` 변수에 부울 값을 할당할 수 있으며  `bool`로 계산되는 식을 `bool` 변수에 할당할 수도 있습니다.  
   
- [!code-cs[csrefKeywordsTypes#1](../../../csharp/language-reference/keywords/codesnippet/csharp/bool_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/bool_1.cs)]  
   
  `bool` 변수의 기본값은 `false`입니다.  `bool?` 변수의 기본값은 `null`입니다.  
   
 ## 변환  
  C\+\+에서는 `bool` 형식의 값을 `int` 형식의 값으로 변환할 수 있습니다. 즉, `false`는 0과 같고 `true`는 0이 아닌 값과 같습니다.  C\#에서는 `bool` 형식과 다른 형식 간의 변환이 없습니다.  예를 들어 다음 `if` 문은 C\#에서 유효하지 않습니다.  
   
- [!code-cs[csrefKeywordsTypes#2](../../../csharp/language-reference/keywords/codesnippet/csharp/bool_2.cs)]  
+ [!code-cs[csrefKeywordsTypes#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/bool_2.cs)]  
   
  `int` 형식의 변수를 테스트하려면 다음과 같이 이 변수를 명시적으로 특정 값\(예: 0\)과 비교해야 합니다.  
   
- [!code-cs[csrefKeywordsTypes#3](../../../csharp/language-reference/keywords/codesnippet/csharp/bool_3.cs)]  
+ [!code-cs[csrefKeywordsTypes#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/bool_3.cs)]  
   
 ## 예제  
  이 예제에서는 키보드로 문자를 입력한 후 입력한 문자가 영문자인지를 검사합니다.  입력한 문자가 영문자이면 대\/소문자를 검사합니다.  이러한 검사를 수행하는 데는 <xref:System.Char.IsLetter%2A> 및 <xref:System.Char.IsLower%2A>가 사용되며 이 둘은 모두 `bool` 형식을 반환합니다.  
   
- [!code-cs[csrefKeywordsTypes#4](../../../csharp/language-reference/keywords/codesnippet/csharp/bool_4.cs)]  
+ [!code-cs[csrefKeywordsTypes#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/bool_4.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

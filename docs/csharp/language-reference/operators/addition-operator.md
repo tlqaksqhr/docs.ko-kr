@@ -32,7 +32,7 @@ caps.handback.revision: 19
  사용자 정의 형식으로 단항 `+` 연산자와 이항 `+` 연산자를 오버로드할 수 있습니다.  정수 계열 형식에 대한 연산은 일반적으로 열거형에서 허용됩니다.  자세한 내용은 [operator](../../../csharp/language-reference/keywords/operator.md)를 참조하십시오.  
   
 ## 예제  
- [!code-cs[csRefOperators#28](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#28)]  
+ [!code-cs[csRefOperators#28](../../../csharp/language-reference/operators/codesnippet/CSharp/addition-operator_1.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

@@ -71,7 +71,7 @@ caps.handback.revision: 27
 ## 예제  
  다음 예제에서는 `Delegate` 문을 사용하여 두 수에 대한 연산을 수행하고 하나의 숫자를 반환하는 대리자를 선언합니다.  `DelegateTest` 메서드는 이 형식의 대리자 인스턴스를 사용하고 이를 통해 숫자 쌍에 대한 연산을 수행합니다.  
   
- [!code-vb[VbVbalrDelegates#14](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/delegate-statement_1.vb)]  
+ [!code-vb[VbVbalrDelegates#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegate-statement_1.vb)]  
   
 ## 참고 항목  
  [AddressOf Operator](../../../visual-basic/language-reference/operators/addressof-operator.md)   

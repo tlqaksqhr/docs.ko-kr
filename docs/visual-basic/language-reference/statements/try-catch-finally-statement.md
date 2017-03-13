@@ -123,7 +123,7 @@ End Try
   
  발생 가능성이 높은 조건을 검사하기 위해 항상 `Try…Catch` 문을 사용할 필요는 없습니다.  다음 예제에서는 파일을 열기 전에 파일이 있는지 여부를 검사합니다.  이는 <xref:System.IO.File.OpenText%2A> 메서드에서 throw한 예외를 catch할 필요성을 줄여 줍니다.  
   
- [!code-vb[VbVbalrStatements#94](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/try-catch-finally-statem_1.vb)]  
+ [!code-vb[VbVbalrStatements#94](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_1.vb)]  
   
  `Catch` 블록의 코드가 스레드 보안 또는 적절한 메시지를 통해 사용자에게 예외를 올바르게 보고하는지 확인하십시오.  그렇지 않으면 예외를 알지 못할 수 있습니다.  
   
@@ -148,31 +148,31 @@ End Try
 ## 부분 신뢰 상황  
  네트워크 공유에 호스팅되는 응용 프로그램과 같은 부분 신뢰 상태에서 `Try...Catch...Finally`는 해당 호출이 포함된 메서드가 호출되기 전에 발생하는 보안 예외를 catch하지 않습니다.  다음 예제를 서버 공유에서 실행하면 "Sub System.Security.SecurityException: 요청하지 못했습니다."라는 오류가 발생합니다. 보안 예외에 대한 자세한 내용은 <xref:System.Security.SecurityException> 클래스를 참조하십시오.  
   
- [!code-vb[VbVbalrStatements#85](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/try-catch-finally-statem_2.vb)]  
+ [!code-vb[VbVbalrStatements#85](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_2.vb)]  
   
  이러한 부분 신뢰 상태에서는 `Process.Start` 문을 별도의 `Sub`에 두어야 합니다.  이렇게 하면 첫 번째 `Sub`를 호출하지 못하며  `Process.Start`를 포함하는 `Sub`가 시작되고 보안 예외가 생성되기 전에 `Try...Catch`에서 이를 catch할 수 있습니다.  
   
 ## 예제  
  다음 예제에서는 `Try...Catch...Finally` 문의 구조를 보여 줍니다.  
   
- [!code-vb[VbVbalrStatements#86](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/try-catch-finally-statem_3.vb)]  
+ [!code-vb[VbVbalrStatements#86](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_3.vb)]  
   
 ## 예제  
  다음 예제에서는 `CreateException` 메서드가 `NullReferenceException`을 throw합니다.  예외를 발생시키는 코드가 `Try` 블록에 없습니다.  따라서 `CreateException` 메서드는 예외를 처리하지 않습니다.  `CreateException` 메서드에 대한 호출이 `Try` 블록에 있으므로 `RunSample` 메서드는 예외를 처리하지 않습니다.  
   
  예제에는 몇 가지 예외 형식에 대한 `Catch` 문이 가장 구체적인 형식부터 가장 일반적인 형식의 순서로 포함되어 있습니다.  
   
- [!code-vb[VbVbalrStatements#91](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/try-catch-finally-statem_4.vb)]  
+ [!code-vb[VbVbalrStatements#91](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_4.vb)]  
   
 ## 예제  
  다음 예제에서는 조건식에서 필터링하기 위해 `Catch When`을 사용하는 방법을 보여 줍니다.  조건식이 `True`인 경우 `Catch` 블록의 코드가 실행됩니다.  
   
- [!code-vb[VbVbalrStatements#92](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/try-catch-finally-statem_5.vb)]  
+ [!code-vb[VbVbalrStatements#92](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_5.vb)]  
   
 ## 예제  
  다음 예제에는 `Try` 블록에 포함된 `Try…Catch` 문이 있습니다.  내부의 `Catch` 블록은 그 `InnerException` 속성이 원래 예외로 설정된 예외를 throw합니다.  외부 `Catch` 블록은 자체 예외와 내부 예외를 보고합니다.  
   
- [!code-vb[VbVbalrStatements#93](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/try-catch-finally-statem_6.vb)]  
+ [!code-vb[VbVbalrStatements#93](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/try-catch-finally-statement_6.vb)]  
   
 ## 예제  
  다음 예제에서는 예외를 처리에 대 한 비동기 메서드를 보여 줍니다.  비동기 작업에 적용 되는 예외를 catch 하는 `Await` 식이 `Try` 호출자 및 예외 블록에서 메일이 `Catch` 블록.  
@@ -181,14 +181,14 @@ End Try
   
  주석 표시는 `Throw New OperationCancelledException` 줄 비동기 프로세스를 취소 한 경우를 보여 줍니다.  예외에 `Catch` 블록과 작업 `IsCanceled` 속성을 설정 `True`.  그러나이 예제에 적용 되지 않는 어떤 조건 `IsFaulted` 설정 `True` 및 `IsCanceled` 설정 `False`.  
   
- [!code-vb[csAsyncExceptions#1](../../../csharp/language-reference/keywords/codesnippet/visualbasic/try-catch-finally-statem_7.vb)]  
+ [!code-vb[csAsyncExceptions#1](../../../csharp/language-reference/keywords/codesnippet/VisualBasic/try-catch-finally-statement_7.vb)]  
   
 ## 예제  
  다음 예제에서는 예외 처리를 여러 작업에 여러 예외 발생할 수 있습니다 위치를 보여 줍니다.  `Try` 블록이 있습니다는 `Await` 작업에 대 한 식을 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> 반환 합니다.  세 하에서 작업 하는 경우 작업이 완료 된 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> 적용 완료 됩니다.  
   
  각각의 세 가지 작업 중에 예외가 발생합니다.  `Catch` 블록 반복에서 발견 되는 예외를 통해의 `Exception.InnerExceptions` 작업의 속성은 `Task.WhenAll` 반환.  
   
- [!code-vb[csAsyncExceptions#3](../../../csharp/language-reference/keywords/codesnippet/visualbasic/try-catch-finally-statem_8.vb)]  
+ [!code-vb[csAsyncExceptions#3](../../../csharp/language-reference/keywords/codesnippet/VisualBasic/try-catch-finally-statement_8.vb)]  
   
 ## 참고 항목  
  <xref:Microsoft.VisualBasic.Information.Err%2A>   

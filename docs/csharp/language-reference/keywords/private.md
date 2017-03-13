@@ -38,7 +38,7 @@ class Employee
 ## 예제  
  이 예제에서 `Employee` 클래스에는 `name`과 `salary`라는 두 개의 전용 데이터 멤버가 포함되어 있습니다.  이들은 private 멤버이므로 멤버 메서드를 사용해야만 액세스할 수 있습니다.  private 멤버에 대한 액세스를 제어할 수 있도록 `GetName` 및 `Salary`라는 public 메서드가 추가됩니다.  `name` 멤버에는 public 메서드를 사용하여 액세스하고, `salary` 멤버에는 public 읽기 전용 속성을 통해 액세스합니다.  자세한 내용은 [속성](../../../csharp/programming-guide/classes-and-structs/properties.md)를 참조하십시오.  
   
- [!code-cs[csrefKeywordsModifiers#10](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#10)]  
+ [!code-cs[csrefKeywordsModifiers#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/private_1.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

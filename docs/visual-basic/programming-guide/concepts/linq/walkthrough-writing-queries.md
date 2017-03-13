@@ -66,11 +66,11 @@ caps.handback.revision: 68
   
 1.  프로젝트의 `Main` 메서드에서 다음과 같이 표시된 위치를 찾습니다.  
   
-     [!code-vb[VbLINQWalkthrough#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_1.vb)]  
+     [!code-vb[VbLINQWalkthrough#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_1.vb)]  
   
      다음 코드를 복사하여 붙여넣습니다.  
   
-     [!code-vb[VbLINQWalkthrough#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_2.vb)]  
+     [!code-vb[VbLINQWalkthrough#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_2.vb)]  
   
 2.  코드에서 `studentQuery` 위에 마우스 포인터를 놓고 컴파일러에서 할당한 형식이 `IEnumerable(Of Student)`인지 확인합니다.  
   
@@ -81,7 +81,7 @@ caps.handback.revision: 68
   
 1.  프로젝트의 쿼리 아래에 다음 `For Each` 루프를 추가합니다.  
   
-     [!code-vb[VbLINQWalkthrough#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_3.vb)]  
+     [!code-vb[VbLINQWalkthrough#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_3.vb)]  
   
 2.  루프 컨트롤 변수 `studentRecord` 위로 마우스 포인터를 이동하여 해당 데이터 형식을 표시합니다.  `studentQuery`가 `Student` 인스턴스의 컬렉션을 반환하므로 `studentRecord`의 형식은 `Student`로 유추됩니다.  
   
@@ -112,7 +112,7 @@ caps.handback.revision: 68
   
 1.  이 섹션의 코드를 추가하여 쿼리 식에 로컬 식별자를 제공합니다.  로컬 식별자는 중간 결과를 보유합니다.  다음 예제에서 `name`은 학생의 이름과 성 연결을 보유하는 식별자입니다.  로컬 식별자는 편의상 사용할 수도 있고 여러 번 계산해야 하는 식의 결과를 저장하여 성능을 향상시킬 수도 있습니다.  
   
-     [!code-vb[VbLINQWalkthrough#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_4.vb)]  
+     [!code-vb[VbLINQWalkthrough#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_4.vb)]  
   
 2.  Ctrl\+F5를 눌러 응용 프로그램을 빌드하고 실행합니다.  콘솔 창의 결과를 확인합니다.  
   
@@ -120,7 +120,7 @@ caps.handback.revision: 68
   
 1.  이 섹션의 쿼리와 `For Each` 루프를 추가하여 해당 요소가 소스의 요소와 다른 시퀀스를 생성하는 쿼리를 만듭니다.  다음 예제에서 소스는 `Student` 개체의 컬렉션이지만 각 개체의 한 멤버, 즉 성이 Garcia인 학생의 이름만 반환됩니다.  `currentStudent.First`가 문자열이므로 `studentQuery3`에 의해 반환된 시퀀스의 데이터 형식은 문자열 시퀀스인 `IEnumerable(Of String)`입니다.  앞에 예제와 같이 `studentQuery3`의 데이터 형식 할당은 컴파일러에서 로컬 형식 유추를 사용하여 결정합니다.  
   
-     [!code-vb[VbLINQWalkthrough#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_5.vb)]  
+     [!code-vb[VbLINQWalkthrough#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_5.vb)]  
   
 2.  코드에서 `studentQuery3` 위에 마우스 포인터를 놓고 할당된 형식이 `IEnumerable(Of String)`인지 확인합니다.  
   
@@ -132,14 +132,14 @@ caps.handback.revision: 68
   
      다음 예제는 등수에 따라 1등에서 10등 사이에 있는 상급생의 이름과 등수를 반환하는 쿼리를 만듭니다.  이 예제에서 `Select` 절이 익명 형식의 인스턴스를 반환하고 사용할 수 있는 이름이 익명 형식에 없으므로 `studentQuery4`의 형식이 유추되어야 합니다.  
   
-     [!code-vb[VbLINQWalkthrough#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_6.vb)]  
+     [!code-vb[VbLINQWalkthrough#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_6.vb)]  
   
 2.  Ctrl\+F5를 눌러 응용 프로그램을 빌드하고 실행합니다.  콘솔 창의 결과를 확인합니다.  
   
 ## 추가 예제  
  이제 기본 사항을 이해했으므로 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 쿼리의 유연성과 강력한 기능을 보여 주는 다음 목록의 추가 예제를 볼 수 있습니다.  각 예제에는 해당 예제의 기능에 대한 간략한 설명이 앞에 옵니다.  유추 된 형식은 보려면 각 쿼리에 대 한 쿼리 결과 변수 위에 마우스 포인터를 놓습니다. 사용 된 `For Each` 결과 생성 하는 루프.  
   
- [!code-vb[VbLINQWalkthrough#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/walkthrough-writing-quer_1_7.vb)]  
+ [!code-vb[VbLINQWalkthrough#7](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/walkthrough-writing-queries_7.vb)]  
   
 ## 추가 정보  
  쿼리를 다루는 데 필요한 기본적인 개념을 숙지했다면 이제 각자 원하는 특정 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 공급자 형식에 대한 설명서와 샘플을 읽어도 좋습니다.  

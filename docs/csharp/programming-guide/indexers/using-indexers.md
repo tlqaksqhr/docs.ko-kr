@@ -56,7 +56,7 @@ public int this [int index]   // Indexer declaration
  예를 들어, `Console.Write` 문에서 인덱서의 액세스를 계산할 경우에는 [get](../../../csharp/language-reference/keywords/get.md) 접근자가 호출됩니다.  따라서 `get` 접근자가 없으면 컴파일 타임 오류가 발생합니다.  
   
 ### 코드  
- [!code-cs[csProgGuideIndexers#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-indexers_1.cs)]  
+ [!code-cs[csProgGuideIndexers#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_1.cs)]  
   
 ## 다른 값을 사용한 인덱싱  
  C\#에서는 인덱스 형식이 정수로만 제한되지 않습니다.  예를 들어, 인덱서와 함께 문자열을 사용하는 것이 유용할 수 있습니다.  이러한 인덱서는 컬렉션에서 문자열을 검색하고 적절한 값을 반환하여 구현할 수 있습니다.  접근자로 오버로드할 수 있으므로 문자열과 정수 버전의 인덱스 형식은 함께 사용될 수 있습니다.  
@@ -67,7 +67,7 @@ public int this [int index]   // Indexer declaration
  이 예제에서는 요일을 저장하는 클래스를 선언합니다.  문자열과 요일 이름을 가져오고 상응하는 정수를 반환하는 `get` 접근자를 선언합니다.  예를 들어, 일요일은 0을 반환하고 월요일은 1을 반환하는 방식입니다.  
   
 ### 코드  
- [!code-cs[csProgGuideIndexers#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/using-indexers_2.cs)]  
+ [!code-cs[csProgGuideIndexers#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-indexers_2.cs)]  
   
 ## 강력한 프로그래밍  
  인덱서의 보안과 안전성을 향상시키는 데는 크게 두 가지 방법이 있습니다.  

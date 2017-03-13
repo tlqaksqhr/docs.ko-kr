@@ -28,11 +28,11 @@ caps.handback.revision: 8
 ## 예제  
  다음 예제에서는 컬렉션 이니셜라이저를 사용하여 `Employee` 형식의 개체를 추가할 수 있도록 확장 메서드를 제네릭 <xref:System.Collections.Generic.List%601> 형식에 추가하는 방법을 보여 줍니다.  확장 메서드를 통해 약식 컬렉션 이니셜라이저 구문을 사용할 수 있습니다.  
   
- [!code-vb[VbVbalrCollectionInitializersHowTo1#1](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/how-to-create-an-add-ext_1.vb)]  
+ [!code-vb[VbVbalrCollectionInitializersHowTo1#1](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/VisualBasic/how-to-create-an-add-extension-method-used-by-a-collection-initializer_1.vb)]  
   
- [!code-vb[VbVbalrCollectionInitializersHowTo1#2](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/how-to-create-an-add-ext_2.vb)]  
+ [!code-vb[VbVbalrCollectionInitializersHowTo1#2](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/VisualBasic/how-to-create-an-add-extension-method-used-by-a-collection-initializer_2.vb)]  
   
- [!code-vb[VbVbalrCollectionInitializersHowTo1#3](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/how-to-create-an-add-ext_3.vb)]  
+ [!code-vb[VbVbalrCollectionInitializersHowTo1#3](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/VisualBasic/how-to-create-an-add-extension-method-used-by-a-collection-initializer_3.vb)]  
   
 ## 참고 항목  
  [Collection Initializers](../../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)   

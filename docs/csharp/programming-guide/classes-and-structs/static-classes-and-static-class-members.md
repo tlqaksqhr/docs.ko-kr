@@ -63,7 +63,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 ## 예제  
  다음은 온도를 섭씨에서 화씨로 또는 화씨에서 섭씨로 변환하는 메서드 두 개가 들어 있는 정적 클래스의 예제입니다.  
   
- [!code-cs[csProgGuideObjects#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/static-classes-and-stati_1.cs)]  
+ [!code-cs[csProgGuideObjects#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_1.cs)]  
   
 ## 정적 멤버  
  비정적 클래스는 정적 메서드, 필드, 속성 또는 이벤트를 포함할 수 있습니다.  클래스의 인스턴스를 만들지 않은 경우에도 클래스의 정적 멤버를 호출할 수 있습니다.  정적 멤버는 언제나 인스턴스 이름이 아니라 클래스 이름을 사용하여 액세스됩니다.  클래스의 인스턴스가 몇 개 만들어졌는지에 관계없이 정적 멤버는 하나만 존재합니다.  정적 메서드 및 속성은 포함하는 형식의 비정적 필드 및 이벤트에 액세스할 수 없으며 메서드 매개 변수로 명시적으로 전달되지 않는 한 어떤 개체의 인스턴스 변수에도 액세스할 수 없습니다.  
@@ -78,11 +78,11 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  정적 클래스 멤버는 다음과 같이 멤버의 반환 형식 앞에 `static` 키워드를 사용하여 선언합니다.  
   
- [!code-cs[csProgGuideObjects#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/static-classes-and-stati_2.cs)]  
+ [!code-cs[csProgGuideObjects#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_2.cs)]  
   
  정적 멤버는 처음 액세스되기 전에 초기화되고 정적 생성자가 있으면 이 생성자를 호출하기 전에 초기화됩니다.  정적 클래스 멤버에 액세스하려면 다음 예제에서와 같이 변수 이름 대신 클래스 이름을 사용하여 멤버의 위치를 지정해야 합니다.  
   
- [!code-cs[csProgGuideObjects#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/static-classes-and-stati_3.cs)]  
+ [!code-cs[csProgGuideObjects#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_3.cs)]  
   
  클래스에 정적 필드가 있으면 클래스가 로드될 때 해당 필드를 초기화하는 정적 생성자를 제공하십시오.  
   

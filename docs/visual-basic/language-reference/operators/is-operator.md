@@ -55,7 +55,7 @@ result = object1 Is object2
 ## 예제  
  다음 예제에서는 `Is` 연산자를 사용하여 개체 참조 쌍을 비교합니다.  두 개체가 동일한지 여부를 나타내는 `Boolean` 값이 결과에 할당됩니다.  
   
- [!code-vb[VbVbalrOperators#27](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/is-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#27](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/is-operator_1.vb)]  
   
  위 예제에 나오는 것처럼 `Is` 연산자를 사용하여 초기 바인딩 및 런타임에 바인딩 개체를 모두 테스트할 수 있습니다.  
   

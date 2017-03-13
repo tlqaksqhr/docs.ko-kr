@@ -30,7 +30,7 @@ caps.handback.revision: 19
   
  [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)가 `Off`이고 [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)가 `On`인 경우 모든 상수를 데이터 형식을 사용하여 명시적으로 선언해야 합니다.  다음 예제에서는 `MyByte`의 데이터 형식이 `Byte` 데이터 형식으로 명시적으로 선언되었습니다.  
   
- [!code-vb[VbVbalrConstants#1](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/visualbasic/constant-and-literal-dat_1.vb)]  
+ [!code-vb[VbVbalrConstants#1](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_1.vb)]  
   
  `Option Infer`가 `On`이거나 `Option Strict`가 `Off`인 경우 `As` 절로 데이터 형식을 지정하지 않고 상수를 선언할 수 있습니다.  컴파일러는 식의 형식에서 상수 형식을 확인합니다.  숫자 정수 리터럴은 기본적으로 `Integer` 데이터 형식으로 캐스팅됩니다.  부동 소수점 숫자의 기본 데이터 형식은 `Double`이고 `True` 및 `False` 키워드는 `Boolean` 상수를 지정합니다.  
   
@@ -48,11 +48,11 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
   
  위 예제가 제대로 실행되도록 하려면 리터럴에 형식 문자 `D`를 추가하여 `Decimal` 형식으로 표시되도록 하십시오.  
   
- [!code-vb[VbVbalrConstants#2](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/visualbasic/constant-and-literal-dat_2.vb)]  
+ [!code-vb[VbVbalrConstants#2](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_2.vb)]  
   
  다음 예제는 형식 문자와 묶기 문자의 올바른 사용법을 보여 줍니다.  
   
- [!code-vb[VbVbalrConstants#3](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/visualbasic/constant-and-literal-dat_3.vb)]  
+ [!code-vb[VbVbalrConstants#3](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_3.vb)]  
   
  다음 표에서는 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]에서 사용할 수 있는 묶기 문자와 형식 문자를 보여 줍니다.  
   

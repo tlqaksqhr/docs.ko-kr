@@ -35,11 +35,11 @@ caps.handback.revision: 12
   
      다음 `Function` 프로시저에서는 직각 삼각형의 가장 긴 변\(빗변\)의 길이를 계산하여 그 값을 호출 코드로 반환합니다.  
   
-     [!code-vb[VbVbcnProcedures#1](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-return-a-value-fr_1.vb)]  
+     [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-return-a-value-from-a-procedure_1.vb)]  
   
      다음 예제에서는 `hypotenuse`를 호출하여 반환된 값을 저장하는 일반적인 방법을 보여 줍니다.  
   
-     [!code-vb[VbVbcnProcedures#6](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-return-a-value-fr_2.vb)]  
+     [!code-vb[VbVbcnProcedures#6](./codesnippet/VisualBasic/how-to-return-a-value-from-a-procedure_2.vb)]  
   
 ### Exit Function 또는 End Function을 사용하여 값을 반환하려면  
   

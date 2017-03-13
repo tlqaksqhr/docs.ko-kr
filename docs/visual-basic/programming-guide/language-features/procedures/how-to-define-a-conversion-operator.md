@@ -35,11 +35,11 @@ caps.handback.revision: 14
 ## 예제  
  다음 예제에서는  `digit`  및 `Byte` 구조체 간에 변환 연산자를 정의합니다.  
   
- [!code-vb[VbVbcnProcedures#27](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-define-a-conversi_1.vb)]  
+ [!code-vb[VbVbcnProcedures#27](./codesnippet/VisualBasic/how-to-define-a-conversion-operator_1.vb)]  
   
  다음 코드를 사용하여 `digit` 구조체를 테스트할 수 있습니다.  
   
- [!code-vb[VbVbcnProcedures#28](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-define-a-conversi_2.vb)]  
+ [!code-vb[VbVbcnProcedures#28](./codesnippet/VisualBasic/how-to-define-a-conversion-operator_2.vb)]  
   
 ## 참고 항목  
  [Operator Procedures](../../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)   

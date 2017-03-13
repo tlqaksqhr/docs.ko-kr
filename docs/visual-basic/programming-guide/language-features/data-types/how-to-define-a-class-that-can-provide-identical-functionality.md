@@ -73,7 +73,7 @@ caps.handback.revision: 29
   
      다음 예에서는 매우 간단한 목록을 관리하는 클래스를 정의합니다. 내부 배열 `items`에 목록을 저장하며 코드를 사용하여 목록 요소의 데이터 형식을 선언할 수 있습니다. 매개 변수를 사용하는 생성자를 사용하면 코드로 `items`의 상한을 설정할 수 있습니다. 기본 생성자는 이 상한을 9\(총 10개 항목\)로 설정합니다.  
   
-     [!code-vb[VbVbalrDataTypes#7](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/how-to-define-a-class-th_1.vb)]  
+     [!code-vb[VbVbalrDataTypes#7](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_1.vb)]  
   
      `Integer` 값 목록을 저장할 클래스, `String` 값 목록을 저장할 클래스, `Date` 값을 저장할 클래스를 `simpleList`로부터 선언할 수 있습니다. 목록 요소의 데이터 형식을 제외하고 이러한 모든 클래스에서 만들어진 개체는 동일하게 동작합니다.  
   
@@ -81,7 +81,7 @@ caps.handback.revision: 29
   
      다음 코드로 클래스 `simpleList`를 테스트할 수 있습니다.  
   
-     [!code-vb[VbVbalrDataTypes#8](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/how-to-define-a-class-th_2.vb)]  
+     [!code-vb[VbVbalrDataTypes#8](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-define-a-class-that-can-provide-identical-functionality_2.vb)]  
   
 ## 참고 항목  
  [데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   

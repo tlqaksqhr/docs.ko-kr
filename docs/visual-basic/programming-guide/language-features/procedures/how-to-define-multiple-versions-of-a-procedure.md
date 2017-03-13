@@ -42,7 +42,7 @@ caps.handback.revision: 14
 ## 예제  
  다음 예제에서는 고객의 잔액에 대해 트랜잭션을 게시하도록 `Sub` 프로시저를 정의합니다.  이 예제에서는 `Overloads` 키워드를 사용하여 두 버전의 프로시저를 정의합니다. 하나는 고객을 이름으로 수락하고 다른 하나는 계정 번호로 수락합니다.  
   
- [!code-vb[VbVbcnProcedures#72](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-define-multiple-v_1.vb)]  
+ [!code-vb[VbVbcnProcedures#72](./codesnippet/VisualBasic/how-to-define-multiple-versions-of-a-procedure_1.vb)]  
   
  호출 코드는 고객 ID를 `String` 또는 `Integer`로 얻은 다음 어떠한 경우에든 동일한 호출 문을 사용할 수 있습니다.  
   

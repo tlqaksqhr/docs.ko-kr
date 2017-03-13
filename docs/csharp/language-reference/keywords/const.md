@@ -52,12 +52,12 @@ public const int c2 = c1 + 100;
 >  [readonly](../../../csharp/language-reference/keywords/readonly.md) 키워드는 `const` 키워드와 다릅니다.  `const` 필드는 필드 선언에서만 초기화될 수 있습니다.  `readonly` 필드는 선언이나 생성자에서 초기화될 수 있습니다.  따라서 `readonly` 필드는 사용된 생성자에 따라 다른 값을 가질 수 있습니다.  또한 `const` 필드가 컴파일 타임 상수라고 하더라도 `readonly` 필드는 다음 줄에서와 같이 런타임 상수에 사용될 수 있습니다. `public static readonly uint l1 = (uint)DateTime.Now.Ticks;`  
   
 ## 예제  
- [!code-cs[csrefKeywordsModifiers#5](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#5)]  
+ [!code-cs[csrefKeywordsModifiers#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/const_1.cs)]  
   
 ## 예제  
  이 예제에서는 상수를 로컬 변수로 사용하는 방법을 보여 줍니다.  
   
- [!code-cs[csrefKeywordsModifiers#6](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#6)]  
+ [!code-cs[csrefKeywordsModifiers#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/const_2.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

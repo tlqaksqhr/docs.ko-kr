@@ -27,7 +27,7 @@ caps.handback.revision: 15
 이 예제에서는 `Shell` 함수를 사용하여 계산기 응용 프로그램을 시작한 다음 `My.Computer.Keyboard.SendKeys` 메서드를 사용하여 키 입력을 전송하여 두 숫자를 곱합니다.  
   
 ## 예제  
- [!code-vb[VbVbalrMyComputer#25](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class2.vb#25)]  
+ [!code-vb[VbVbalrMyComputer#25](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-start-an-application-and-send-it-keystrokes_1.vb)]  
   
 ## 강력한 프로그래밍  
  요청한 프로세스 식별자를 가진 응용 프로그램을 찾을 수 없으면 <xref:System.ArgumentException> 예외가 발생합니다.  

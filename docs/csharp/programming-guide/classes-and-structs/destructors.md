@@ -34,7 +34,7 @@ caps.handback.revision: 24
   
  예를 들어, `Car` 클래스에 대한 소멸자 선언은 다음과 같습니다.  
   
- [!code-cs[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/destructors_1.cs)]  
+ [!code-cs[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_1.cs)]  
   
  소멸자는 개체의 기본 클래스에서 암시적으로 <xref:System.Object.Finalize%2A>를 호출합니다.  따라서 위의 소멸자 코드는 암시적으로 다음과 같은 코드로 변환됩니다.  
   
@@ -78,7 +78,7 @@ protected override void Finalize()
 ## 예제  
  다음 예제에서는 상속 체인을 만드는 세 개의 클래스를 생성합니다.  `First` 클래스가 기본 클래스이고 `Second` 클래스는 `First`에서 파생되며 `Third`는 `Second`에서 파생됩니다.  세 클래스에는 모두 소멸자가 있습니다.  `Main()`에서 최대 파생 클래스의 인스턴스가 만들어집니다.  프로그램을 실행하면 세 클래스의 소멸자가 최대 파생 클래스부터 최소 파생 클래스까지 순서대로 자동 호출됩니다.  
   
- [!code-cs[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/destructors_2.cs)]  
+ [!code-cs[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

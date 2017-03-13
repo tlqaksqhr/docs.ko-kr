@@ -70,9 +70,9 @@ Option Explicit { On | Off }
 ## 예제  
  다음 예제에서는 `Option Explicit` 문을 사용하여 모든 변수를 명시적으로 강제 선언합니다.  선언되지 않은 변수를 사용하는 경우 컴파일 타임 오류가 발생합니다.  
   
- [!code-vb[VbVbalrStatements#47](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/option-explicit-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#47](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-explicit-statement_1.vb)]  
   
- [!code-vb[VbVbalrStatements#48](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/option-explicit-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#48](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-explicit-statement_2.vb)]  
   
 ## 참고 항목  
  [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md)   

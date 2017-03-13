@@ -30,7 +30,7 @@ caps.handback.revision: 8
 ## 예제  
  다음 예제에서는 <xref:System.Text.Encoding.Unicode%2A?displayProperty=fullName> 인코딩 클래스의 <xref:System.Text.Encoding.GetBytes%2A> 메서드를 사용하여 문자열을 바이트 배열로 변환합니다.  
   
- [!code-vb[VbVbalrStrings#74](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-convert-strings-i_1.vb)]  
+ [!code-vb[VbVbalrStrings#74](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-strings-into-an-array-of-bytes_1.vb)]  
   
  다음과 같은 몇 가지 인코딩 옵션을 사용하여 문자열을 바이트 배열로 변환할 수 있습니다.  
   

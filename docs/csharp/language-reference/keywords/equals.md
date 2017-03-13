@@ -24,7 +24,7 @@ caps.handback.revision: 6
 ## 예제  
  다음 예제에서는 `join` 절에서 `equals` 키워드를 사용하는 방법을 보여 줍니다.  
   
- [!code-cs[csrefKeywordsContextual#12](../../../csharp/language-reference/keywords/codesnippet/csharp/equals_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/equals_1.cs)]  
   
 ## 참고 항목  
  [LINQ 쿼리 식](../../../csharp/programming-guide/linq-query-expressions/index.md)

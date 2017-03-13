@@ -48,7 +48,7 @@ Let variable = expression [, ...]
 ## 예제  
  다음 코드 예제에서는 `Let` 절을 사용하여 제품의 10% 할인을 계산합니다.  
   
- [!code-vb[VbSimpleQuerySamples#16](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#16)]  
+ [!code-vb[VbSimpleQuerySamples#16](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/let-clause_1.vb)]  
   
 ## 참고 항목  
  [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   

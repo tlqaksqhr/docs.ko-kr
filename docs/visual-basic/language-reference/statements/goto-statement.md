@@ -68,7 +68,7 @@ Try 구문에서의 올바른 분기 및 잘못된 분기
 ## 예제  
  다음 예제에서는 `GoTo` 문을 사용하여 프로시저의 줄 레이블로 분기합니다.  
   
- [!code-vb[VbVbalrStatements#31](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/goto-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#31](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/goto-statement_1.vb)]  
   
 ## 참고 항목  
  [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md)   

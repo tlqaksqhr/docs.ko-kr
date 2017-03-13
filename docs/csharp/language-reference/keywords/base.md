@@ -37,14 +37,14 @@ caps.handback.revision: 14
 ## 예제  
  아래 예제에서 기본 클래스인 `Person`과 파생 클래스인 `Employee` 모두에 `Getinfo` 메서드가 있습니다.  `base` 키워드를 사용하면 파생 클래스에서 기본 클래스의 `Getinfo` 메서드를 호출할 수 있습니다.  
   
- [!code-cs[csrefKeywordsAccess#1](../../../csharp/language-reference/keywords/codesnippet/csharp/base_1.cs)]  
+ [!code-cs[csrefKeywordsAccess#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/base_1.cs)]  
   
  다른 예제를 보려면 [new](../../../csharp/language-reference/keywords/new.md), [virtual](../../../csharp/language-reference/keywords/virtual.md) 및 [override](../../../csharp/language-reference/keywords/override.md)를 참조하십시오.  
   
 ## 예제  
  아래 예제에서는 파생 클래스의 인스턴스를 만들 때 기본 클래스 생성자를 지정하는 방법을 보여 줍니다.  
   
- [!code-cs[csrefKeywordsAccess#2](../../../csharp/language-reference/keywords/codesnippet/csharp/base_2.cs)]  
+ [!code-cs[csrefKeywordsAccess#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/base_2.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

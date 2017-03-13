@@ -23,12 +23,12 @@ caps.handback.revision: 21
   
  이 예제에서 다음 코드 세그먼트는 `Tokens` 클래스를 사용하여 "This is a sample sentence." 문장에 대해 ' ' 및 '\-'을 구분 기호로 사용하여 문장을 여러 토큰으로 분리합니다.  그런 다음 `foreach` 문을 사용하여 토큰을 표시합니다.  
   
- [!code-cs[csProgGuideCollections#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-access-a-collecti_1.cs)]  
+ [!code-cs[csProgGuideCollections#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-access-a-collection-class-with-foreach_1.cs)]  
   
 ## 예제  
  내부적으로 `Tokens` 클래스에는 토큰을 저장하기 위한 배열이 사용됩니다.  배열은 <xref:System.Collections.IEnumerator> 및 <xref:System.Collections.IEnumerable>을 구현하기 때문에 이 코드 예제에서는 `Tokens` 클래스에서 메서드를 정의하는 대신 배열의 열거형 메서드\(<xref:System.Collections.IEnumerable.GetEnumerator%2A>, <xref:System.Collections.IEnumerator.MoveNext%2A>, <xref:System.Collections.IEnumerator.Reset%2A> 및 <xref:System.Collections.IEnumerator.Current%2A>\)가 사용될 수 있었습니다.  메서드 정의는 메서드의 정의 방식 및 각 메서드의 역할을 명확히 나타내기 위해 예제에 포함되었습니다.  
   
- [!code-cs[csProgGuideCollections#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-access-a-collecti_2.cs)]  
+ [!code-cs[csProgGuideCollections#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-access-a-collection-class-with-foreach_2.cs)]  
   
  C\#에서는 컬렉션 클래스가 `foreach`와의 호환을 위해 <xref:System.Collections.IEnumerable> 및 <xref:System.Collections.IEnumerator>를 구현할 필요가 없습니다.  필수 요소인 <xref:System.Collections.IEnumerable.GetEnumerator%2A>, <xref:System.Collections.IEnumerator.MoveNext%2A>, <xref:System.Collections.IEnumerator.Reset%2A> 및 <xref:System.Collections.IEnumerator.Current%2A> 멤버가 클래스에 있기만 하면 `foreach`를 사용할 수 있습니다.  인터페이스를 생략하면 `Current`의 반환 형식을 <xref:System.Object>보다 구체적으로 정의할 수 있는 이점이 있습니다.  이러한 이점은 형식 안전성을 제공합니다.  
   

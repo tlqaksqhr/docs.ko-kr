@@ -31,7 +31,7 @@ caps.handback.revision: 13
   
  다음 프로시저에서는 재귀를 사용하여 원래 인수의 계승을 구합니다.  
   
- [!code-vb[VbVbcnProcedures#51](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/recursive-procedures_1.vb)]  
+ [!code-vb[VbVbcnProcedures#51](./codesnippet/VisualBasic/recursive-procedures_1.vb)]  
   
 ## 재귀 프로시저에 관한 고려 사항  
  **제한 조건**.  재귀를 종료할 수 있는 조건을 하나 이상 테스트하도록 재귀 프로시저를 디자인해야 하며, 적당한 횟수의 재귀 호출에도 그러한 조건이 만족되지 않는 경우도 처리해야 합니다.  오류 없이 만족될 수 있는 조건이 하나라도 없으면 프로시저가 무한 루프를 실행하게 될 위험이 많습니다.  

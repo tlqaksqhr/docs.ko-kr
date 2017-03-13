@@ -77,7 +77,7 @@ class Program
  다음 예제에서는 `using` 네임스페이스에 대한 별칭을 정의 및 사용하는 방법을 보여 줍니다.  
   
 ### 코드  
- [!code-cs[csrefKeywordsNamespace#8](../../../csharp/language-reference/keywords/codesnippet/csharp/using-directive_1.cs)]  
+ [!code-cs[csrefKeywordsNamespace#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_1.cs)]  
   
 ### 메모  
  using alias 지시문의 오른쪽에는 공개 제네릭 형식이 포함될 수 없습니다.  예를 들어 List\<T\>에 대한 using alias를 만들 수 없지만 List\<int\>에 대한 using alias를 만들 수 있습니다.  
@@ -88,7 +88,7 @@ class Program
  다음 예제에서는 클래스에 대한 `using` 지시문 및 `using` 별칭을 정의하는 방법을 보여 줍니다.  
   
 ### 코드  
- [!code-cs[csrefKeywordsNamespace#9](../../../csharp/language-reference/keywords/codesnippet/csharp/using-directive_2.cs)]  
+ [!code-cs[csrefKeywordsNamespace#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-directive_2.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

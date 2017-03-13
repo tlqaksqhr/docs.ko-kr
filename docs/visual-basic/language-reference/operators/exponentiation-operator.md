@@ -65,7 +65,7 @@ number ^ exponent
 ## 예제  
  다음 예제에서는 `^` 연산자를 사용하여 숫자를 지수만큼 거듭제곱합니다.  즉, 첫째 피연산자가 둘째 피연산자의 승수로 거듭제곱됩니다.  
   
- [!code-vb[VbVbalrOperators#20](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/exponentiation-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#20](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/exponentiation-operator_1.vb)]  
   
  위 예제의 결과는 다음과 같습니다.  
   

@@ -58,7 +58,7 @@ float x = 3.5F;
 ## 예제  
  다음 예제에서는 수학 식에 [int](../../../csharp/language-reference/keywords/int.md), [short](../../../csharp/language-reference/keywords/short.md) 및 `float`가 포함되고 결과는 `float`가 됩니다.  `float`는 <xref:System.Single?displayProperty=fullName> 형식의 별칭이라는 것을 기억하십시오. 이 식에 [double](../../../csharp/language-reference/keywords/double.md) 형식은 없습니다.  
   
- [!code-cs[csrefKeywordsTypes#13](../../../csharp/language-reference/keywords/codesnippet/csharp/float_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/float_1.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

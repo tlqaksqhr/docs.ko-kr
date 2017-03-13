@@ -38,7 +38,7 @@ caps.handback.revision: 15
  [\/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)로 컴파일하여 문서 주석을 파일로 저장합니다.  컴파일러에서 생성한 파일을 기반으로 최종 문서를 만들려면 사용자 지정 도구를 만들거나 [Sandcastle](http://go.microsoft.com/fwlink/?LinkId=124061)과 같은 도구를 사용하면 됩니다.  
   
 ## 예제  
- [!code-cs[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/csharp/summary_1.cs)]  
+ [!code-cs[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_1.cs)]  
   
  앞의 예제는 다음과 같은 XML 파일을 만듭니다.  
   
@@ -68,7 +68,7 @@ caps.handback.revision: 15
 ## 예제  
  다음 예제에서는 제네릭 형식에 대한 `cref` 참조를 만드는 방법을 보여 줍니다.  
   
- [!code-cs[csProgGuideDocComments#11](../../../csharp/programming-guide/xmldoc/codesnippet/csharp/summary_2.cs)]  
+ [!code-cs[csProgGuideDocComments#11](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/summary_2.cs)]  
   
  앞의 예제는 다음과 같은 XML 파일을 만듭니다.  
   

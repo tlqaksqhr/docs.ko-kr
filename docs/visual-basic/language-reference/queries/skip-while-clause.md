@@ -49,7 +49,7 @@ Skip While expression
 ## 예제  
  다음 코드 예제에서는 `Skip While` 절을 사용하여 United States의 첫 번째 고객을 찾을 때까지 결과를 건너뜁니다.  
   
- [!code-vb[VbSimpleQuerySamples#3](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#3)]  
+ [!code-vb[VbSimpleQuerySamples#3](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/skip-while-clause_1.vb)]  
   
 ## 참고 항목  
  [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   

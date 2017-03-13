@@ -37,7 +37,7 @@ These characters are from the extended ASCII character set (Windows code page 12
   
 ```  
   
- [!code-cs[csProgGuideStrings#33](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#33)]  
+ [!code-cs[csProgGuideStrings#33](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-convert-rtf-to-plain-text_1.cs)]  
   
  RTF 문자는 8비트로 인코딩됩니다.  그러나 사용자가 지정한 코드 페이지의 확장 ASCII 문자와 유니코드 문자를 지정할 수 있습니다.  <xref:System.Windows.Forms.RichTextBox.Text%2A?displayProperty=fullName> 속성은 [string](../../../csharp/language-reference/keywords/string.md) 형식이므로 문자는 유니코드 UTF\-16으로 인코딩됩니다.  소스 RTF 문서의 모든 확장 ASCII 문자와 유니코드 문자는 텍스트 출력에서 올바르게 인코딩됩니다.  
   

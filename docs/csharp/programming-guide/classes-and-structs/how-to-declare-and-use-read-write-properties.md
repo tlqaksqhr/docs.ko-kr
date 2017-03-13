@@ -25,26 +25,26 @@ caps.handback.revision: 19
  이 샘플에서는 문자열인 `Name` 및 정수인 `Age`라는 두 속성이 있는 `Person` 클래스를 보여 줍니다.  두 속성은 모두 `get` 및 `set` 접근자를 제공하므로 이는 모두 읽기\/쓰기 속성으로 간주됩니다.  
   
 ## 예제  
- [!code-cs[csProgGuideObjects#33](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-declare-and-use-r_1.cs)]  
+ [!code-cs[csProgGuideObjects#33](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-declare-and-use-read-write-properties_1.cs)]  
   
 ## 강력한 프로그래밍  
  위 예제에서 `Name`과 `Age` 속성은 [public](../../../csharp/language-reference/keywords/public.md)이며 `get` 및 `set` 접근자를 모두 포함합니다.  이렇게 하면 임의의 개체가 이들 속성을 읽고 쓸 수 있습니다.  그러나 때로는 이러한 접근자 중 하나를 제외해야 할 수도 있습니다.  예를 들어, `set` 접근자를 생략하면 속성을 읽기 전용으로 만들 수 있습니다.  
   
- [!code-cs[csProgGuideObjects#87](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-declare-and-use-r_2.cs)]  
+ [!code-cs[csProgGuideObjects#87](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-declare-and-use-read-write-properties_2.cs)]  
   
  또는 접근자 하나만 공용으로 노출시키고 다른 접근자는 전용 또는 보호된 상태로 만들 수 있습니다.  자세한 내용은 [비대칭 접근자 액세스 가능성](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)을 참조하십시오.  
   
  일단 속성이 선언되면 클래스의 필드처럼 사용할 수 있습니다.  다음 문에서와 같이 속성 값을 구하고 설정할 때 기본 구문을 사용할 수 있습니다.  
   
- [!code-cs[csProgGuideObjects#35](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-declare-and-use-r_3.cs)]  
+ [!code-cs[csProgGuideObjects#35](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-declare-and-use-read-write-properties_3.cs)]  
   
  속성의 `set` 메서드에서 특수한 `value` 변수를 사용할 수 있습니다.  이 변수에는 사용자가 지정한 값이 포함됩니다. 예를 들어 다음과 같습니다.  
   
- [!code-cs[csProgGuideObjects#36](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-declare-and-use-r_4.cs)]  
+ [!code-cs[csProgGuideObjects#36](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-declare-and-use-read-write-properties_4.cs)]  
   
  `Person` 개체의 `Age` 속성을 증분하는 데 필요한 clean 구문에 주의하십시오.  
   
- [!code-cs[csProgGuideObjects#37](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-declare-and-use-r_5.cs)]  
+ [!code-cs[csProgGuideObjects#37](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-declare-and-use-read-write-properties_5.cs)]  
   
  속성을 모델링할 때 `set` 및 `get` 메서드를 각각 사용한 경우에는 다음과 같은 코드를 사용해도 결과가 동일합니다.  
   
@@ -54,7 +54,7 @@ person.SetAge(person.GetAge() + 1);
   
  다음 예제에서는 `ToString` 메서드를 재정의합니다.  
   
- [!code-cs[csProgGuideObjects#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-declare-and-use-r_6.cs)]  
+ [!code-cs[csProgGuideObjects#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-declare-and-use-read-write-properties_6.cs)]  
   
  `ToString`은 프로그램에서 명시적으로 사용되지 않으며  `WriteLine` 호출에서 기본적으로 호출됩니다.  
   

@@ -33,7 +33,7 @@ caps.handback.revision: 13
   
      다음 코드 예제에서는 <xref:System.Xml.Linq.XDocument.Load%28System.String%29> 메서드를 사용하여 <xref:System.Xml.Linq.XDocument> 개체를 텍스트 파일의 XML로 채우는 방법을 보여 줍니다.  
   
-     [!code-vb[VbXMLSamples#43](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-load-xml-from-a-f_1.vb)]  
+     [!code-vb[VbXMLSamples#43](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-load-xml-from-a-file-string-or-stream_1.vb)]  
   
 ### 문자열에서 XML을 로드하려면  
   
@@ -41,7 +41,7 @@ caps.handback.revision: 13
   
      다음 코드 예제에서는 <xref:System.Xml.Linq.XDocument.Parse%28System.String%29?displayProperty=fullName> 메서드를 사용하여 <xref:System.Xml.Linq.XDocument> 개체를 문자열의 XML로 채우는 방법을 보여 줍니다.  
   
-     [!code-vb[VbXMLSamples#47](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-load-xml-from-a-f_2.vb)]  
+     [!code-vb[VbXMLSamples#47](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-load-xml-from-a-file-string-or-stream_2.vb)]  
   
 ### 스트림에서 XML을 로드하려면  
   
@@ -49,7 +49,7 @@ caps.handback.revision: 13
   
  다음 코드 예제에서는 <xref:System.Xml.Linq.XNode.ReadFrom%2A> 메서드를 사용하여 <xref:System.Xml.Linq.XDocument> 개체를 XML 스트림의 XML로 채우는 방법을 보여 줍니다.  
   
- [!code-vb[VbXMLSamples#46](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-load-xml-from-a-f_3.vb)]  
+ [!code-vb[VbXMLSamples#46](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-load-xml-from-a-file-string-or-stream_3.vb)]  
   
 ## 참고 항목  
  <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>   

@@ -62,7 +62,7 @@ caps.handback.revision: 21
   
  사용자 고유의 접근자를 제공하면 두 이벤트를 클래스의 동일한 이벤트가 나타낼지 각기 다른 이벤트가 나타낼지를 지정할 수 있습니다.  예를 들어, 인터페이스 사양에 따라 다른 시간에 이벤트를 발생시켜야 하는 경우에는 클래스에 있는 별도의 구현에 각 이벤트를 연결할 수 있습니다.  다음 예제에서는 구독자가 `IShape` 또는 `IDrawingObject`에 대한 모양 참조를 캐스팅하여 수신할 `OnDraw` 이벤트를 결정합니다.  
   
- [!code-cs[csProgGuideEvents#10](../../../csharp/programming-guide/events/codesnippet/csharp/how-to-implement-interfa_1.cs)]  
+ [!code-cs[csProgGuideEvents#10](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-implement-interface-events_1.cs)]  
   
 ## 참고 항목  
  [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   

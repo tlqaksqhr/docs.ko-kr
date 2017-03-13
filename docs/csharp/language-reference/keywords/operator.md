@@ -24,7 +24,7 @@ caps.handback.revision: 19
 ## 예제  
  아래 예제는 매우 간단한 분수 클래스입니다.  이 클래스는 \+ 및 \* 연산자를 오버로드하여 분수 더하기와 곱하기를 수행하고 Fraction 형식을 Double 형식으로 변환하는 변환 연산자도 제공합니다.  
   
- [!code-cs[csrefKeywordsConversion#6](../../../csharp/language-reference/keywords/codesnippet/csharp/operator_1.cs)]  
+ [!code-cs[csrefKeywordsConversion#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/operator_1.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

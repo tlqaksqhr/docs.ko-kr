@@ -29,7 +29,7 @@ caps.handback.revision: 21
   
 1.  반환 문자열을 초기화합니다.  
   
-     [!code-vb[VbVbalrMyComputer#38](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class2.vb#38)]  
+     [!code-vb[VbVbalrMyComputer#38](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_1.vb)]  
   
 2.  문자열을 제공하는 직렬 포트를 확인합니다.  이 예제에서는 `COM1`으로 가정합니다.  
   
@@ -37,30 +37,30 @@ caps.handback.revision: 21
   
      `Try...Catch...Finally` 블록을 사용하면 예외가 생성되는 경우에도 응용 프로그램에서 직렬 포트를 닫을 수 있습니다.  직렬 포트를 조작하는 모든 코드는 이 블록 안에 있어야 합니다.  
   
-     [!code-vb[VbVbalrMyComputer#39](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class2.vb#39)]  
+     [!code-vb[VbVbalrMyComputer#39](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_2.vb)]  
   
 4.  더 이상의 줄이 없을 때까지 텍스트 줄을 읽는 `Do` 루프를 만듭니다.  
   
-     [!code-vb[VbVbalrMyComputer#40](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class2.vb#40)]  
+     [!code-vb[VbVbalrMyComputer#40](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_3.vb)]  
   
 5.  <xref:System.IO.Ports.SerialPort.ReadLine%2A> 메서드를 사용하여 직렬 포트에서 다음 텍스트 줄을 읽습니다.  
   
-     [!code-vb[VbVbalrMyComputer#41](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class2.vb#41)]  
+     [!code-vb[VbVbalrMyComputer#41](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_4.vb)]  
   
 6.  `If` 문을 사용하여 <xref:System.IO.Ports.SerialPort.ReadLine%2A> 메서드가 더 이상 텍스트가 없음을 의미하는 `Nothing`을 반환하는지 확인합니다.  `Nothing`을 반환하면 `Do` 루프를 종료합니다.  
   
-     [!code-vb[VbVbalrMyComputer#42](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class2.vb#42)]  
+     [!code-vb[VbVbalrMyComputer#42](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_5.vb)]  
   
 7.  `If` 문에 `Else` 블록을 추가하여 문자열을 실제로 읽은 경우의 대\/소문자를 처리합니다.  이 블록에서는 직렬 포트의 문자열을 반환 문자열에 추가합니다.  
   
-     [!code-vb[VbVbalrMyComputer#43](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class2.vb#43)]  
+     [!code-vb[VbVbalrMyComputer#43](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_6.vb)]  
   
 8.  문자열을 반환합니다.  
   
-     [!code-vb[VbVbalrMyComputer#44](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class2.vb#44)]  
+     [!code-vb[VbVbalrMyComputer#44](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_7.vb)]  
   
 ## 예제  
- [!code-vb[VbVbalrMyComputer#37](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class2.vb#37)]  
+ [!code-vb[VbVbalrMyComputer#37](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_8.vb)]  
   
  이 코드 예제는 IntelliSense 코드 조각으로도 사용할 수 있습니다.  이 코드 조각은 코드 조각 선택기의 **연결 및 네트워킹**에 있습니다.  자세한 내용은 [코드 조각](/visual-studio/ide/code-snippets)를 참조하십시오.  
   

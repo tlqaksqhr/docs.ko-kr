@@ -45,7 +45,7 @@ Continue { Do | For | While }
 ## 예제  
  다음 코드 예제에서는 `Continue While` 문을 사용하여 제수가 0인 경우 배열의 다음 열으로 건너뜁니다.  `Continue While`은 `For` 루프 내부에 있으며  `While col < lastcol` 문으로 이동합니다. 즉, `For` 루프를 포함하고 있는 가장 안쪽의 `While` 루프의 다음 반복으로 이동합니다.  
   
- [!code-vb[VbVbalrStatements#14](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/continue-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#14](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/continue-statement_1.vb)]  
   
 ## 참고 항목  
  [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md)   

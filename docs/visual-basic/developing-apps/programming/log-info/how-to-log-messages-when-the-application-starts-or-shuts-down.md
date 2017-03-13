@@ -48,7 +48,7 @@ caps.handback.revision: 16
   
 3.  `Startup` 이벤트 처리기에 `My.Application.Log.WriteEntry` 메서드를 추가합니다.  
   
-     [!code-vb[VbVbalrMyApplicationLog#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/visualbasic/VbVbalrMyApplicationLog/MyEventsFake.vb#1)]  
+     [!code-vb[VbVbalrMyApplicationLog#1](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-messages-when-the-application-starts-or-shuts-down_1.vb)]  
   
 ### 응용 프로그램이 종료될 때 메시지를 기록하려면  
   
@@ -60,12 +60,12 @@ caps.handback.revision: 16
   
 3.  `Shutdown` 이벤트 처리기에 `My.Application.Log.WriteEntry` 메서드를 추가합니다.  
   
-     [!code-vb[VbVbalrMyApplicationLog#2](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/visualbasic/VbVbalrMyApplicationLog/MyEventsFake.vb#2)]  
+     [!code-vb[VbVbalrMyApplicationLog#2](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-messages-when-the-application-starts-or-shuts-down_2.vb)]  
   
 ## 예제  
  **프로젝트 디자이너**를 사용하여 코드 편집기에서 응용 프로그램 이벤트에 액세스할 수 있습니다. 자세한 내용은 [프로젝트 디자이너, 응용 프로그램 페이지\(Visual Basic\)](/visual-studio/ide/reference/application-page-project-designer-visual-basic)을 참조하세요.  
   
- [!code-vb[VbVbalrMyApplicationLog#3](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/visualbasic/VbVbalrMyApplicationLog/MyEventsFake.vb#3)]  
+ [!code-vb[VbVbalrMyApplicationLog#3](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-messages-when-the-application-starts-or-shuts-down_3.vb)]  
   
 ## 참고 항목  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   

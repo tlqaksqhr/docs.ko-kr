@@ -147,19 +147,19 @@ Option Strict { On | Off }
 ## 예제  
  다음 예제는 축소 변환인 암시적 형식 변환에 의해 발생한 컴파일 타임 오류를 보여 줍니다.  이 오류 범주는 **컴파일 페이지**의 **암시적 변환**에 해당합니다.  
   
- [!code-vb[VbVbalrStatements#161](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/option-strict-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#161](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_1.vb)]  
   
 ## 예제  
  다음 예제에서는 런타임에 바인딩하여 발생한 컴파일 타임 오류를 보여 줍니다.  이 오류 범주는 **컴파일 페이지**에서 **런타임 바인딩; 호출이 실패할 수 있음** 조건에 해당합니다.  
   
- [!code-vb[VbVbalrStatements#162](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/option-strict-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#162](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_2.vb)]  
   
 ## 예제  
  다음 예제는 `Object`의 암시적 형식으로 선언한 변수에 의해 발생한 오류를 보여 줍니다.  이 오류 범주는 **컴파일 페이지**의 **암시적 형식; 개체로 간주**에 해당합니다.  
   
- [!code-vb[VbVbalrStatements#163](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/option-strict-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#163](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_3.vb)]  
   
- [!code-vb[VbVbalrStatements#164](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/option-strict-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#164](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_4.vb)]  
   
 ## 참고 항목  
  [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)   

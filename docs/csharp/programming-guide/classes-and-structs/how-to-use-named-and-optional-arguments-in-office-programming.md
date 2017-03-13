@@ -58,23 +58,23 @@ caps.handback.revision: 34
   
 2.  코드 파일의 맨 위에 다음 `using` 지시문을 추가합니다.  
   
-     [!code-cs[csProgGuideNamedAndOptional#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/wordprogram.cs#4)]  
+     [!code-cs[csProgGuideNamedAndOptional#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_1.cs)]  
   
 ### Word 문서에 텍스트를 표시하려면  
   
 1.  Program.cs의 `Program` 클래스에서 다음 메서드를 추가하여 Word 응용 프로그램 및 Word 문서를 만듭니다.  [Add](http://go.microsoft.com/fwlink/?LinkId=145381) 메서드에는 선택적 매개 변수가 4개 있습니다.  이 예제에서는 각 매개 변수의 기본값이 사용됩니다.  따라서, 메서드 호출문에서 인수가 전혀 필요하지 않습니다.  
   
-     [!code-cs[csProgGuideNamedAndOptional#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/wordprogram.cs#6)]  
+     [!code-cs[csProgGuideNamedAndOptional#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_2.cs)]  
   
 2.  메서드 끝부분에 다음 코드를 추가하여 문서에서 텍스트를 표시할 위치 및 표시할 텍스트를 정의합니다.  
   
-     [!code-cs[csProgGuideNamedAndOptional#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/wordprogram.cs#7)]  
+     [!code-cs[csProgGuideNamedAndOptional#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_3.cs)]  
   
 ### 응용 프로그램을 실행하려면  
   
 1.  다음 문을 Main에 추가합니다.  
   
-     [!code-cs[csProgGuideNamedAndOptional#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/wordprogram.cs#8)]  
+     [!code-cs[csProgGuideNamedAndOptional#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_4.cs)]  
   
 2.  Ctrl\+F5를 눌러 프로젝트를 실행합니다.  지정된 텍스트를 포함하는 Word 문서가 나타납니다.  
   
@@ -87,11 +87,11 @@ ConvertToTable 매개 변수
   
      명명된 인수와 선택적 인수를 사용하면 변경할 매개 변수에 대해서만 값을 지정할 수 있습니다.  `DisplayInWord` 메서드의 끝부분에 다음 코드를 추가하여 간단한 표를 만듭니다.  이 인수는 `range`의 텍스트 문자열에 있는 쉼표로 표의 셀이 구분되도록 지정합니다.  
   
-     [!code-cs[csProgGuideNamedAndOptional#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/wordprogram.cs#9)]  
+     [!code-cs[csProgGuideNamedAndOptional#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_5.cs)]  
   
      이전 버전의 C\#에서 `ConvertToTable`을 호출하려면 다음 코드와 같이 각 매개 변수에 대한 참조 인수가 필요합니다.  
   
-     [!code-cs[csProgGuideNamedAndOptional#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/wordprogram.cs#14)]  
+     [!code-cs[csProgGuideNamedAndOptional#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_6.cs)]  
   
 2.  Ctrl\+F5를 눌러 프로젝트를 실행합니다.  
   
@@ -99,16 +99,16 @@ ConvertToTable 매개 변수
   
 1.  표에 열 1개와 행 3개가 있도록 변경하려면 `DisplayInWord`에서 마지막 줄을 다음 문으로 바꾼 다음 Ctrl\+F5를 누릅니다.  
   
-     [!code-cs[csProgGuideNamedAndOptional#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/wordprogram.cs#10)]  
+     [!code-cs[csProgGuideNamedAndOptional#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_7.cs)]  
   
 2.  미리 정의된 서식을 표에 지정하려면 `DisplayInWord`에서 마지막 줄을 다음 문으로 바꾼 다음 Ctrl\+F5를 누릅니다.  서식은 [WdTableFormat](http://go.microsoft.com/fwlink/?LinkId=145382) 상수 중 하나일 수 있습니다.  
   
-     [!code-cs[csProgGuideNamedAndOptional#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/wordprogram.cs#11)]  
+     [!code-cs[csProgGuideNamedAndOptional#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_8.cs)]  
   
 ## 예제  
  다음 코드에는 전체 예제가 포함되어 있습니다.  
   
- [!code-cs[csProgGuideNamedAndOptional#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/namedandoptionalsnippets/wordprogram.cs#12)]  
+ [!code-cs[csProgGuideNamedAndOptional#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_9.cs)]  
   
 ## 참고 항목  
  [명명된 인수 및 선택적 인수](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)

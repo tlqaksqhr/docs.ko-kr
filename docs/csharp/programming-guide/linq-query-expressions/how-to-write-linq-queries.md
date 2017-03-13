@@ -21,7 +21,7 @@ caps.handback.revision: 25
 ## 쿼리 구문  
  대부분의 쿼리를 작성하는 데 권장되는 방법은 *쿼리 구문*을 사용하여 *쿼리 식*을 만드는 것입니다.  다음 예제에서는 세 개의 쿼리 식을 보여 줍니다.  첫 번째 쿼리 식에서는 `where` 절이 있는 조건을 적용하여 결과를 필터링하거나 제한하는 방법을 보여 줍니다.  소스 시퀀스에서 값이 7보다 크거나 3보다 작은 요소를 모두 반환합니다.  두 번째 식에서는 반환된 결과의 순서를 지정하는 방법을 보여 줍니다.  세 번째 식에서는 키에 따라 결과를 그룹화하는 방법을 보여 줍니다.  이 쿼리는 단어의 첫 번째 문자를 기준으로 두 개의 그룹을 반환합니다.  
   
- [!code-cs[csProgGuideLINQ#5](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#5)]  
+ [!code-cs[csProgGuideLINQ#5](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-write-linq-queries_1.cs)]  
   
  쿼리 형식은 <xref:System.Collections.Generic.IEnumerable%601>입니다.  이러한 쿼리는 모두 다음 예제와 같이 `var`를 사용하여 작성할 수 있습니다.  
   
@@ -34,25 +34,25 @@ caps.handback.revision: 25
 ## 메서드 구문  
  일부 쿼리 작업은 메서드 호출로 표시되어야 합니다.  가장 일반적인 이러한 메서드는 <xref:System.Linq.Enumerable.Sum%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, <xref:System.Linq.Enumerable.Average%2A> 등과 같은 singleton 숫자 값을 반환하는 메서드입니다.  이러한 메서드는 단일 값만 나타내며 추가 쿼리 작업에 대해 소스로 사용할 수 없으므로 항상 모든 쿼리에서 마지막으로 호출되어야 합니다.  다음 예제에서는 쿼리 식에서 메서드를 호출하는 방법을 보여 줍니다.  
   
- [!code-cs[csProgGuideLINQ#6](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#6)]  
+ [!code-cs[csProgGuideLINQ#6](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-write-linq-queries_2.cs)]  
   
 ## 예제  
  메서드에 매개 변수가 있으면 매개 변수가 다음 예제와 같이 [람다](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) 식 형식으로 제공됩니다.  
   
- [!code-cs[csProgGuideLINQ#7](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#7)]  
+ [!code-cs[csProgGuideLINQ#7](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-write-linq-queries_3.cs)]  
   
  앞의 쿼리에서 쿼리 \#4만 즉시 실행됩니다.  이는 쿼리가 단일 값을 반환하고 제네릭 <xref:System.Collections.Generic.IEnumerable%601> 컬렉션이 아니기 때문입니다.  이 메서드 자체는 값을 계산하기 위해 `foreach`를 사용해야 합니다.  
   
  앞의 각 쿼리는 다음 예제와 같이 [var](../../../csharp/language-reference/keywords/var.md)를 통한 암시적 형식 지정을 사용하여 작성할 수 있습니다.  
   
- [!code-cs[csProgGuideLINQ#8](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#8)]  
+ [!code-cs[csProgGuideLINQ#8](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-write-linq-queries_4.cs)]  
   
 ## 예제  
   
 ## 혼합 쿼리와 메서드 구문  
  이 예제에서는 쿼리 절의 결과로 메서드 구문을 사용하는 방법을 보여 줍니다.  쿼리 식을 괄호로 묶은 다음 도트 연산자를 적용하고 메서드를 호출합니다.  다음 예제에서는 쿼리 \#7에서 값이 3과 7 사이인 숫자의 수를 반환합니다.  그러나 일반적으로 두 번째 변수를 사용하여 메서드 호출의 결과를 저장하는 것이 좋습니다.  이 경우 쿼리가 쿼리 결과와 혼동될 가능성은 낮습니다.  
   
- [!code-cs[csProgGuideLINQ#9](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#9)]  
+ [!code-cs[csProgGuideLINQ#9](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-write-linq-queries_5.cs)]  
   
  쿼리 \#7에서는 컬렉션이 아닌 단일 값을 반환하기 때문에 쿼리가 즉시 실행됩니다.  
   

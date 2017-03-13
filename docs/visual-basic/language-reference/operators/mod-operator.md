@@ -80,12 +80,12 @@ number1 Mod number2
 ## 예제  
  다음 예제에서는 `Mod` 연산자를 사용하여 두 숫자를 나누고 나머지만 반환합니다.  두 숫자 중 어느 하나가 부동 소수점 숫자인 경우, 결과는 나머지를 나타내는 부동 소수점 숫자입니다.  
   
- [!code-vb[VbVbalrOperators#31](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/mod-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#31](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_1.vb)]  
   
 ## 예제  
  다음 예제에서는 부동 소수점 피연산자의 잠재적인 부정확성에 대해 설명합니다.  첫 번째 문에서 피연산자는 `Double`이고 0.2는 저장된 값이 0.20000000000000001인 무한 반복되는 이진 소수입니다.  두 번째 문에서 리터럴 형식 문자 `D`는 두 피연산자를 모두 `Decimal`로 강제하며 0.2는 정확한 표시를 가집니다.  
   
- [!code-vb[VbVbalrOperators#32](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/mod-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#32](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_2.vb)]  
   
 ## 참고 항목  
  <xref:Microsoft.VisualBasic.Conversion.Int%2A>   

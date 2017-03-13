@@ -24,7 +24,7 @@ caps.handback.revision: 16
 ## 예제  
  다음 예제에서는 `object` 형식 변수에서 임의의 데이터 형식 값을 수용하는 방법과 `object` 형식 변수가 .NET Framework에서 <xref:System.Object> 메서드를 사용하는 방법에 대해 보여 줍니다.  
   
- [!code-cs[csrefKeywordsTypes#16](../../../csharp/language-reference/keywords/codesnippet/csharp/object_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#16](../../../csharp/language-reference/keywords/codesnippet/CSharp/object_1.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

@@ -19,7 +19,7 @@ caps.handback.revision: 16
 각 이벤트에 대해 필드를 할당하는 대신 사전을 사용하여 이벤트 인스턴스를 저장하는 방법으로 많은 이벤트를 노출할 때 `accessor-declarations`를 사용할 수 있습니다.  이 방법은 많은 이벤트를 사용할 수 있지만 대부분의 이벤트가 구현되지 않을 것으로 예상할 때만 유용합니다.  
   
 ## 예제  
- [!code-cs[csProgGuideEvents#9](../../../csharp/programming-guide/events/codesnippet/csharp/how-to-use-a-dictionary-_1.cs)]  
+ [!code-cs[csProgGuideEvents#9](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-use-a-dictionary-to-store-event-instances_1.cs)]  
   
 ## 참고 항목  
  [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   

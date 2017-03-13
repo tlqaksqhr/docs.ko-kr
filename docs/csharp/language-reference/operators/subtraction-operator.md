@@ -31,7 +31,7 @@ caps.handback.revision: 19
  사용자 정의 형식으로 단항 `-` 연산자와 이항 `-` 연산자를 오버로드할 수 있습니다.  자세한 내용은 [operator](../../../csharp/language-reference/keywords/operator.md)를 참조하십시오.  
   
 ## 예제  
- [!code-cs[csRefOperators#40](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#40)]  
+ [!code-cs[csRefOperators#40](../../../csharp/language-reference/operators/codesnippet/CSharp/subtraction-operator_1.cs)]  
   
 ## 참고 항목  
  [C\# 참조](../../../csharp/language-reference/index.md)   

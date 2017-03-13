@@ -34,20 +34,20 @@ caps.handback.revision: 15
   
 1.  `GetFiles` 메서드를 사용하여 파일 목록을 반환합니다. 이 예제에서는 지정된 디렉터리에 있는 .rtf 파일을 모두 반환합니다.  
   
-     [!code-vb[VbFileIOMisc#36](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-copy-files-with-a_1.vb)]  
+     [!code-vb[VbFileIOMisc#36](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-files-with-a-specific-pattern-to-a-directory_1.vb)]  
   
 2.  `CopyFile` 메서드를 사용하여 파일을 복사합니다. 이 예제에서는 `testdirectory`라는 디렉터리로 파일을 복사합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#88](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-copy-files-with-a_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#88](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-files-with-a-specific-pattern-to-a-directory_2.vb)]  
   
 3.  `Next` 문으로 `For` 문을 닫습니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#89](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-copy-files-with-a_3.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#89](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-files-with-a-specific-pattern-to-a-directory_3.vb)]  
   
 ## 예제  
  위 코드 조각의 완전한 형식인 다음 예제에서는 지정된 디렉터리의 모든 .rtf 파일을 `testdirectory`라는 이름의 디렉터리로 복사합니다.  
   
- [!code-vb[VbFileIOMisc#37](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-copy-files-with-a_4.vb)]  
+ [!code-vb[VbFileIOMisc#37](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-files-with-a-specific-pattern-to-a-directory_4.vb)]  
   
 ## .NET Framework 보안  
  다음 조건에서 예외가 발생합니다.  

@@ -8,7 +8,7 @@ caps.handback.revision: 6
 ## 예제  
  이 쿼리는 그룹 조인을 만든 후 범위 내에 있는 category 요소를 기준으로 그룹을 정렬합니다.  익명 형식 이니셜라이저 안에서는 하위 쿼리가 제품 시퀀스에서 일치하는 모든 요소의 순서를 정렬합니다.  
   
- [!code-cs[csProgGuideLINQ#81](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#81)]  
+ [!code-cs[csProgGuideLINQ#81](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-order-the-results-of-a-join-clause_1.cs)]  
   
 ## 코드 컴파일  
   

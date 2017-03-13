@@ -29,10 +29,10 @@ caps.handback.revision: 14
  사용자 정의 형식으로 이항 `*` 연산자를 오버로드할 수 있습니다\([operator](../../../csharp/language-reference/keywords/operator.md) 참조\).  이항 연산자가 오버로드되면 해당 대입 연산자도 암시적으로 오버로드됩니다.  
   
 ## 예제  
- [!code-cs[csRefOperators#50](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#50)]  
+ [!code-cs[csRefOperators#50](../../../csharp/language-reference/operators/codesnippet/CSharp/multiplication-operator_1.cs)]  
   
 ## 예제  
- [!code-cs[csRefOperators#51](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#51)]  
+ [!code-cs[csRefOperators#51](../../../csharp/language-reference/operators/codesnippet/CSharp/multiplication-operator_2.cs)]  
   
 ## 참고 항목  
  [C\# 참조](../../../csharp/language-reference/index.md)   

@@ -30,7 +30,7 @@ caps.handback.revision: 12
 ## 예제  
  이 예제에서는 `Nickname` 설정의 값을 표시합니다.  
   
- [!code-vb[VbVbalrMyResources#14](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#14)]  
+ [!code-vb[VbVbalrMyResources#14](../../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/how-to-read-application-settings_1.vb)]  
   
  이 예제가 동작하려면 응용 프로그램에 형식이 `String`인 `Nickname` 설정이 있어야 합니다.  자세한 내용은 [응용 프로그램 설정 관리\(.NET\)](/visual-studio/ide/managing-application-settings-dotnet)을 참조하십시오.  
   

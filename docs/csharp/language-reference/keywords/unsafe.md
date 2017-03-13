@@ -51,7 +51,7 @@ unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}
  안전하지 않은 코드를 컴파일하려면 컴파일러 옵션 [\/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md)를 지정해야 합니다.  안전하지 않은 코드는 공용 언어 런타임으로 확인할 수 없습니다.  
   
 ## 예제  
- [!code-cs[csrefKeywordsModifiers#22](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#22)]  
+ [!code-cs[csrefKeywordsModifiers#22](../../../csharp/language-reference/keywords/codesnippet/CSharp/unsafe_1.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

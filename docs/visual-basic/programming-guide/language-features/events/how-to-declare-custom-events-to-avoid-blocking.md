@@ -34,7 +34,7 @@ caps.handback.revision: 12
   
  코드가 `Click` 이벤트를 발생시키면 `RaiseEvent` 접근자는 <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A> 메서드를 사용하여 모든 이벤트 처리기 대리자를 호출합니다.  이 메서드는 작업자 스레드의 각 처리기를 호출하고 즉시 반환하므로 처리기가 서로 차단할 수 없습니다.  
   
- [!code-vb[VbVbalrEvents#27](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#27)]  
+ [!code-vb[VbVbalrEvents#27](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-declare-custom-events-to-avoid-blocking_1.vb)]  
   
 ## 참고 항목  
  <xref:System.Collections.ArrayList>   

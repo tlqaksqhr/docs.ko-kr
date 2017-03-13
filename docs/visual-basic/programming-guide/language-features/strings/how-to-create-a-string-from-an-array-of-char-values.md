@@ -25,7 +25,7 @@ caps.handback.revision: 10
 이 예제에서는 개별 문자로부터 "abcd"라는 문자열을 만듭니다.  
   
 ## 예제  
- [!code-vb[VbVbalrStrings#61](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-create-a-string-f_1.vb)]  
+ [!code-vb[VbVbalrStrings#61](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-create-a-string-from-an-array-of-char-values_1.vb)]  
   
 ## 코드 컴파일  
  이 메서드에 특별히 필요한 사항은 없습니다.  

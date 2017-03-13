@@ -103,7 +103,7 @@ Console.WriteLine(a);
  C\#의 문자열에 대한 자세한 내용은 [문자열](../../../csharp/programming-guide/strings/index.md)을 참조하십시오.  
   
 ## 예제  
- [!code-cs[csrefKeywordsTypes#17](../../../csharp/language-reference/keywords/codesnippet/csharp/string_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/string_1.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

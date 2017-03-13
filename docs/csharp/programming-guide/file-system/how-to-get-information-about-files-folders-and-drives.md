@@ -41,7 +41,7 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
 ## 예제  
  다음 예제에서는 파일 및 폴더 정보에 액세스하는 여러 가지 방법을 보여 줍니다.  
   
- [!code-cs[csFilesandFolders#6](../../../csharp/programming-guide/file-system/codesnippet/csharp/csFilesFolders/FileIteration.cs#6)]  
+ [!code-cs[csFilesandFolders#6](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-get-information-about-files-folders-and-drives_1.cs)]  
   
 ## 강력한 프로그래밍  
  사용자가 지정한 경로 문자열을 처리할 때 다음과 같은 예외 상황을 처리해야 합니다.  

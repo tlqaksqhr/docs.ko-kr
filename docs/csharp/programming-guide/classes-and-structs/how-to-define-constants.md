@@ -27,7 +27,7 @@ caps.handback.revision: 7
  비정수 상수를 정의하는 방법 중 하나는 이름이 `Constants`인 단일 정적 클래스로 그룹화하는 것입니다.  다음 예제와 같이 상수에 대한 모든 참조는 클래스 이름으로 시작되어야 합니다.  
   
 ## 예제  
- [!code-cs[csProgGuideObjects#89](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-define-constants_1.cs)]  
+ [!code-cs[csProgGuideObjects#89](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-constants_1.cs)]  
   
  클래스 이름 한정자를 사용하면 상수를 사용하는 사용자에게 그것이 상수 이고 상수를 수정할 수 없음을 이해하는데 도움이 됩니다.  
   

@@ -32,7 +32,7 @@ caps.handback.revision: 11
   
      다음 코드 예제에서는 XML 문서에 있는 모든 \<Price\> 요소의 값을 업데이트합니다.  
   
-     [!code-vb[VbXmlSamples2#4](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/visualbasic/VbXmlSamples2/Module2.vb#4)]  
+     [!code-vb[VbXmlSamples2#4](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_1.vb)]  
   
      다음은 샘플 소스 XML과 이 코드 예제에서 수정된 XML입니다.  
   
@@ -75,7 +75,7 @@ caps.handback.revision: 11
   
 1.  XML 리터럴에 특성을 추가하려면 먼저 XML 리터럴에 대한 참조를 가져옵니다.  그런 다음 XML 특성 축 속성을 새로 추가하여 특성을 추가할 수 있습니다.  또한 <xref:System.Xml.Linq.XContainer.Add%2A> 메서드를 사용하여 새 <xref:System.Xml.Linq.XAttribute> 개체를 XML 리터럴에 추가할 수 있습니다.  다음 예제에서는 두 옵션에 대해 설명합니다.  
   
-     [!code-vb[VbXmlSamples2#5](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/visualbasic/VbXmlSamples2/Module2.vb#5)]  
+     [!code-vb[VbXmlSamples2#5](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_2.vb)]  
   
      다음은 샘플 소스 XML과 이 코드 예제에서 수정된 XML입니다.  
   
@@ -121,7 +121,7 @@ caps.handback.revision: 11
   
      다음 예제에서는 이러한 기술 각각에 대한 예를 보여 줍니다.  
   
-     [!code-vb[VbXmlSamples2#6](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/visualbasic/VbXmlSamples2/Module2.vb#6)]  
+     [!code-vb[VbXmlSamples2#6](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_3.vb)]  
   
      다음은 샘플 소스 XML과 이 코드 예제에서 수정된 XML입니다.  
   
@@ -165,7 +165,7 @@ caps.handback.revision: 11
   
 1.  XML 리터럴에서 요소나 특성을 제거하려면 다음 예제에 표시된 대로 요소나 특성에 대한 참조를 가져오고 `Remove` 메서드를 호출합니다.  
   
-     [!code-vb[VbXmlSamples2#7](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/visualbasic/VbXmlSamples2/Module2.vb#7)]  
+     [!code-vb[VbXmlSamples2#7](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_4.vb)]  
   
      다음은 샘플 소스 XML과 이 코드 예제에서 수정된 XML입니다.  
   
@@ -213,7 +213,7 @@ caps.handback.revision: 11
   
      다음 코드 예제에서는 모든 \<Description\> 요소를 \<Abstract\> 요소로 바꿉니다.  \<Description\> <xref:System.Xml.Linq.XElement> 개체의 <xref:System.Xml.Linq.XContainer.Nodes%2A> 속성을 사용하여 \<Description\> 요소의 내용을 새 \<Abstract\> 요소에서 유지할 수 있습니다.  
   
-     [!code-vb[VbXmlSamples2#8](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/visualbasic/VbXmlSamples2/Module2.vb#8)]  
+     [!code-vb[VbXmlSamples2#8](../../../../visual-basic/programming-guide/language-features/xml/codesnippet/VisualBasic/how-to-modify-xml-literals_5.vb)]  
   
      다음은 샘플 소스 XML과 이 코드 예제에서 수정된 XML입니다.  
   

@@ -27,17 +27,17 @@ caps.handback.revision: 10
   
  `where` 절에는 인터페이스 제약 조건 외에 기본 클래스 제약 조건도 포함될 수 있습니다. 이 제약 조건은 지정된 클래스를 기본 클래스로 갖거나 지정된 클래스 자체인 형식만 해당 제네릭 형식의 형식 인수로 사용할 수 있도록 제한합니다.  이러한 제약 조건을 사용할 경우에는 해당 형식 매개 변수에 대한 다른 모든 제약 조건 앞에 사용해야 합니다.  
   
- [!code-cs[csrefKeywordsContextual#6](../../../csharp/language-reference/keywords/codesnippet/csharp/where-generic-type-const_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_1.cs)]  
   
  `where` 절에는 생성자 제약 조건도 포함될 수 있습니다.  new 연산자를 사용하여 형식 매개 변수의 인스턴스를 만들 수 있지만, 이렇게 하려면 형식 매개 변수를 생성자 제약 조건 `new()`로 제한해야 합니다.  [new\(\) 제약 조건](../../../csharp/language-reference/keywords/new-constraint.md)을 사용하면 컴파일러에서는 제공된 모든 형식 인수가 액세스 가능하고 매개 변수 없는\(또는 기본\) 생성자를 가져야 한다는 것을 알 수 있습니다.  예를 들면 다음과 같습니다.  
   
- [!code-cs[csrefKeywordsContextual#7](../../../csharp/language-reference/keywords/codesnippet/csharp/where-generic-type-const_2.cs)]  
+ [!code-cs[csrefKeywordsContextual#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_2.cs)]  
   
  `new()` 제약 조건은 `where` 절의 마지막에 나와 있습니다.  
   
  형식 매개 변수가 여러 개이면 다음 예제와 같이 `where` 절을 각 형식 매개 변수마다 하나씩 사용합니다.  
   
- [!code-cs[csrefKeywordsContextual#8](../../../csharp/language-reference/keywords/codesnippet/csharp/where-generic-type-const_3.cs)]  
+ [!code-cs[csrefKeywordsContextual#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_3.cs)]  
   
  다음과 같이 제네릭 메서드의 형식 매개 변수에 제약 조건을 연결할 수도 있습니다.  
   

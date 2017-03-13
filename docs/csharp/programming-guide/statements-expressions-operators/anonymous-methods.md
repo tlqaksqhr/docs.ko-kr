@@ -22,15 +22,15 @@ caps.handback.revision: 31
   
  무명 메서드를 만드는 것은 본질적으로 코드 블록을 대리자 매개 변수로 전달하기 위한 방법입니다.  두 가지 예를 들겠습니다.  
   
- [!code-cs[csProgGuideDelegates#6](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#6)]  
+ [!code-cs[csProgGuideDelegates#6](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_1.cs)]  
   
- [!code-cs[csProgGuideDelegates#5](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#5)]  
+ [!code-cs[csProgGuideDelegates#5](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_2.cs)]  
   
  무명 메서드를 사용하면 별도의 메서드를 만들 필요가 없으므로 대리자를 인스턴스화하는 데 따르는 코딩 오버헤드를 줄일 수 있습니다.  
   
  예를 들어 메서드를 만드는 것이 불필요한 오버헤드가 되는 상황에서는 대리자 대신 코드 블록을 지정하는 것이 유용합니다.  새로운 스레드를 시작할 때가 좋은 예입니다.  다음 클래스는 스레드를 만들고 스레드에서 실행할 코드도 포함하므로 대리자를 위한 추가 메서드를 만들 필요가 없습니다.  
   
- [!code-cs[csProgGuideDelegates#7](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#7)]  
+ [!code-cs[csProgGuideDelegates#7](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_3.cs)]  
   
 ## 설명  
  무명 메서드의 매개 변수 범위는 *무명 메서드 블록*입니다.  
@@ -39,7 +39,7 @@ caps.handback.revision: 31
   
  지역 변수 및 매개 변수의 범위에 무명 메서드 선언이 포함되는 경우 이러한 변수를 무명 메서드의 *외부* 변수라고 합니다.  예를 들어, 다음 코드 단편에서 `n`은 외부 변수입니다.  
   
- [!code-cs[csProgGuideDelegates#8](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#8)]  
+ [!code-cs[csProgGuideDelegates#8](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_4.cs)]  
   
  외부 변수에 `n` 라고  *캡처* 대리자를 만들 때.  무명 메서드를 참조 하는 대리자가 가비지 수집의 대상이 될 때까지 지역 변수와 달리 캡처된 변수의 수명은 확장 합니다.  
   
@@ -58,7 +58,7 @@ caps.handback.revision: 31
   
  각각의 경우에서 대리자가 호출되면 메시지가 표시됩니다.  
   
- [!code-cs[csProgGuideDelegates#4](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#4)]  
+ [!code-cs[csProgGuideDelegates#4](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_5.cs)]  
   
 ## 참고 항목  
  [C\# 참조](../../../csharp/language-reference/index.md)   

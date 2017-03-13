@@ -36,7 +36,7 @@ caps.handback.revision: 32
   
  다음 예제에서는 형식 및 멤버에 대한 액세스 한정자를 지정하는 방법을 보여 줍니다.  
   
- [!code-cs[csProgGuideObjects#72](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/access-modifiers_1.cs)]  
+ [!code-cs[csProgGuideObjects#72](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_1.cs)]  
   
  모든 컨텍스트의 모든 형식 또는 멤버에서 모든 액세스 한정자를 사용할 수 있는 것은 아닙니다. 일부 경우에는 멤버를 포함하는 형식의 액세스 가능성에 의해 형식 멤버의 액세스 가능성이 제한됩니다.  다음 단원에서는 액세스 가능성에 대해 자세히 설명합니다.  
   
@@ -62,7 +62,7 @@ caps.handback.revision: 32
   
  클래스나 구조체 멤버의 액세스 수준을 설정하려면 다음 예제와 같이 멤버 선언에 적절한 키워드를 추가합니다.  
   
- [!code-cs[csProgGuideObjects#73](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/access-modifiers_2.cs)]  
+ [!code-cs[csProgGuideObjects#73](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_2.cs)]  
   
 > [!NOTE]
 >  보호된 내부 액세스 가능성 수준은 protected AND internal이 아니라 protected OR internal을 나타냅니다.  즉, 보호되는 내부 멤버는 파생 클래스를 포함하여 동일한 어셈블리의 모든 클래스에서 액세스할 수 있습니다.  동일한 어셈블리의 파생 클래스에서만 액세스할 수 있도록 제한하려면 클래스 자체를 internal로 선언하고 클래스의 멤버를 protected로 선언합니다.  

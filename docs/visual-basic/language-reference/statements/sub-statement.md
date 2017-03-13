@@ -225,14 +225,14 @@ End Sub
 ## <a name="example"></a>예제  
  사용 하 여 다음 예제는 `Sub` 이름, 매개 변수, 및의 본문을 형성 하는 코드를 정의 하는 문에 `Sub` 프로시저입니다.  
   
- [!code-vb[VbVbalrStatements#58](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/sub-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#58](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/sub-statement_1.vb)]  
   
 ## <a name="example"></a>예제  
  다음 예에서 `DelayAsync` 는는 `Async``Function` 의 반환 형식이 있는 <xref:System.Threading.Tasks.Task%601>합니다. `DelayAsync`에는 정수를 반환하는 `Return` 문이 포함됩니다. 따라서 함수 선언의 `DelayAsync` 의 반환 형식이 있어야 `Task(Of Integer)`합니다. 반환 형식이 이기 `Task(Of Integer)`, 의 평가 `Await` 식 `DoSomethingAsync` 정수, 다음 문 에서처럼 생성: `Dim result As Integer = Await delayTask`합니다.  
   
   `startButton_Click` 프로시저의 한 예로 `Async Sub` 프로시저입니다. 때문에 `DoSomethingAsync` 는 `Async` 함수, 작업에 대 한 호출에 대 한 `DoSomethingAsync` 다음 문 에서처럼 대기 해야 합니다: `Await DoSomethingAsync()`합니다.  `startButton_Click``Sub` 으로 프로시저를 정의 해야는 `Async` 한정자 되었기 때문에 `Await` 식입니다.  
   
- [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/visualbasic/asyncfunctionvb/mainwindow.xaml.vb#1)]  
+ [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/sub-statement_2.vb)]  
   
 ## <a name="see-also"></a>참고 항목  
  [Implements 문](../../../visual-basic/language-reference/statements/implements-statement.md)   

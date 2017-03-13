@@ -62,7 +62,7 @@ rootElement
 ## 예제  
  다음 예제에서는 XML 선언, 처리 명령, 주석 및 다른 요소를 포함하는 요소가 있는 XML 문서를 만듭니다.  
   
- [!code-vb[VbXMLSamples#30](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-document-literal_1.vb)]  
+ [!code-vb[VbXMLSamples#30](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-document-literal_1.vb)]  
   
 ## 참고 항목  
  <xref:System.Xml.Linq.XElement>   

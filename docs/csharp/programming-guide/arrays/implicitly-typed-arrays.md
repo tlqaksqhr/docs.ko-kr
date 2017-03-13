@@ -24,14 +24,14 @@ caps.handback.revision: 13
   
  다음 예제에서는 암시적으로 형식화된 배열을 만드는 방법을 보여 줍니다.  
   
- [!code-cs[csProgGuideLINQ#37](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#37)]  
+ [!code-cs[csProgGuideLINQ#37](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-arrays_1.cs)]  
   
  앞의 예제에서 암시적으로 형식화된 배열과 함께 대괄호는 초기화 문의 왼쪽에 사용되지 않습니다.  또한 가변 배열은 1차원 배열처럼 `new []`를 사용하여 초기화됩니다.  
   
 ## 개체 이니셜라이저에서 암시적으로 형식화된 배열  
  배열을 포함하는 익명 형식을 만들어야 하는 경우 배열은 형식의 개체 이니셜라이저에서 암시적으로 형식화되어야 합니다.  다음 예제에서 `contacts`는 `PhoneNumbers`라는 이름의 배열을 포함하는 각 익명 형식의 암시적으로 형식화된 배열입니다.  `var` 키워드는 개체 이니셜라이저 내부에서 사용되지 않습니다.  
   
- [!code-cs[csProgGuideLINQ#38](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#38)]  
+ [!code-cs[csProgGuideLINQ#38](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-arrays_2.cs)]  
   
 ## 참고 항목  
  [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   

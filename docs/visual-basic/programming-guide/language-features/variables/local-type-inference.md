@@ -32,7 +32,7 @@ caps.handback.revision: 43
 
 Visual Basic 컴파일러는 *형식 유추*를 사용하여 `As` 절 없이 선언된 지역 변수의 데이터 형식을 결정합니다.  컴파일러는 초기화 식의 형식에서 변수 형식을 유추합니다.  따라서 다음 예제와 같이 형식을 명시하지 않고 변수를 선언할 수 있습니다. 선언 결과로 `num1`과 `num2`는 모두 정수로 강력하게 형식화되어 있습니다.  
   
- [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/local-type-inference_1.vb)]  
+ [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_1.vb)]  
   
 > [!NOTE]
 >  앞의 예제에서 `num2`를 `Integer` 형식으로 만들지 않으려면 `Dim num3 As Object = 3` 또는 `Dim num4 As Double = 3` 같은 선언을 사용하여 다른 형식을 지정하면 됩니다.  
@@ -47,23 +47,23 @@ Visual Basic 컴파일러는 *형식 유추*를 사용하여 `As` 절 없이 선
 ## 예제  
  형식 유추는 `As` 절 없이 선언된 지역 변수가 초기화될 때 발생합니다.  컴파일러는 할당된 초기 값의 형식을 변수의 형식으로 사용합니다.  예를 들어, 다음 코드 줄은 각각 `String` 형식의 변수를 선언합니다.  
   
- [!code-vb[VbVbalrTypeInference#2](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/local-type-inference_2.vb)]  
+ [!code-vb[VbVbalrTypeInference#2](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_2.vb)]  
   
  다음 코드에서는 정수 배열을 만들기 위한 두 가지의 동일한 방법을 보여 줍니다.  
   
- [!code-vb[VbVbalrTypeInference#3](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/local-type-inference_3.vb)]  
+ [!code-vb[VbVbalrTypeInference#3](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_3.vb)]  
   
  형식 유추를 사용하여 편리하게 루프 제어 변수의 형식을 결정할 수 있습니다.  다음 코드에서 컴파일러는 앞의 예제의 `someNumbers2`가 정수 배열이므로 `number`가 `Integer`라고 유추합니다.  
   
- [!code-vb[VbVbalrTypeInference#4](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/local-type-inference_4.vb)]  
+ [!code-vb[VbVbalrTypeInference#4](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_4.vb)]  
   
  지역 형식 유추는 다음 예제와 같이 `Using` 문에서 리소스 이름의 형식을 설정하는 데 사용될 수 있습니다.  
   
- [!code-vb[VbVbalrTypeInference#7](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/local-type-inference_5.vb)]  
+ [!code-vb[VbVbalrTypeInference#7](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_5.vb)]  
   
  변수의 형식은 다음 예제와 같이 함수의 반환 값에서 유추될 수도 있습니다.  `Process.GetProcesses`가 프로세스 배열을 반환하므로 `pList1`과 `pList2`는 모두 프로세스 배열입니다.  
   
- [!code-vb[VbVbalrTypeInference#5](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/local-type-inference_6.vb)]  
+ [!code-vb[VbVbalrTypeInference#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_6.vb)]  
   
 ## Option Infer  
  `Option Infer`특정 파일에서 지역 형식 유추가 허용 되는지 여부를 지정할 수 있습니다.  옵션을 허용하거나 차단하려면 파일의 시작 부분에 다음 문 중 하나를 입력합니다.  

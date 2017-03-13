@@ -35,18 +35,18 @@ caps.handback.revision: 9
   
      예를 들어, `Custom Event`가 `Custom Event Test(ByVal sender As Object, ByVal i As Integer)`에서 정의되면 해당하는 대리자는 다음과 같습니다.  
   
-     [!code-vb[VbVbalrEventError#18](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/custom-modifier-is-not-v_1.vb)]  
+     [!code-vb[VbVbalrEventError#18](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types_1.vb)]  
   
 2.  사용자 지정 이벤트의 매개 변수 목록을 대리자 형식을 지정하는 `As` 절로 바꿉니다.  
   
      이렇게 수행하려면 `Custom Event` 선언을 다음과 같이 다시 쓸 수 있습니다.  
   
-     [!code-vb[VbVbalrEventError#19](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/custom-modifier-is-not-v_2.vb)]  
+     [!code-vb[VbVbalrEventError#19](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types_2.vb)]  
   
 ## 예제  
  이 예제에서는 `Custom Event`를 선언하고 대리자 형식과 함께 필요한 `As` 절을 지정합니다.  
   
- [!code-vb[VbVbalrEventError#2](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/custom-modifier-is-not-v_3.vb)]  
+ [!code-vb[VbVbalrEventError#2](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types_3.vb)]  
   
 ## 참고 항목  
  [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md)   

@@ -47,7 +47,7 @@ Take While expression
 ## 예제  
  다음 코드 예제에서는 `Take While` 절을 사용하여 순서 없이 첫 번째 고객을 찾을 때까지 결과를 검색합니다.  
   
- [!code-vb[VbSimpleQuerySamples#2](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#2)]  
+ [!code-vb[VbSimpleQuerySamples#2](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/take-while-clause_1.vb)]  
   
 ## 참고 항목  
  [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   

@@ -21,17 +21,17 @@ caps.handback.revision: 16
 ## 예제  
  다음 예제에서는 지정된 문자열에서 부분 문자열을 바꾸거나 제거하는 다양한 방법을 보여 줍니다.  
   
- [!code-cs[csProgGuideStrings#28](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#28)]  
+ [!code-cs[csProgGuideStrings#28](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-modify-string-contents_1.cs)]  
   
 ## 예제  
  배열 표기법을 사용하여 문자열의 개별 문자에 액세스하려면 <xref:System.Text.StringBuilder> 개체를 사용합니다. 이 개체를 사용하면 `[]` 연산자를 오버로드하여 개체의 내부 문자 버퍼에 액세스할 수 있습니다.  <xref:System.String.ToCharArray%2A> 메서드를 사용하면 문자열을 문자 배열로 변환할 수도 있습니다.  다음 예제에서는 `ToCharArray`를 사용하여 배열을 만듭니다.  그런 다음 이 배열의 요소 일부를 수정합니다.  계속해서, 문자 배열을 입력 매개 변수로 사용하는 문자열 생성자가 호출되어 새 문자열이 만들어집니다.  
   
- [!code-cs[csProgGuideStrings#24](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#24)]  
+ [!code-cs[csProgGuideStrings#24](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-modify-string-contents_2.cs)]  
   
 ## 예제  
  다음 예제에서는 C 스타일의 문자 배열과 유사한 방식으로 안전하지 않은 코드를 사용하여 문자열을 내부적으로 수정해야 하는 매우 드문 경우를 보여 줍니다.  이 예제에서는 fixed 키워드를 사용하여 개별 문자에 "내부적으로" 액세스하는 방법을 보여 줍니다.  또한 C\# 컴파일러가 내부적으로 문자열을 저장하는 방식 때문에 문자열에 대한 안전하지 않은 작업에서 발생할 수 있는 부작용에 대해서도 설명합니다.  일반적으로 반드시 필요한 경우가 아니라면 이 방법을 사용해서는 안 됩니다.  
   
- [!code-cs[csProgGuideStrings#29](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#29)]  
+ [!code-cs[csProgGuideStrings#29](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-modify-string-contents_3.cs)]  
   
 ## 참고 항목  
  [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   

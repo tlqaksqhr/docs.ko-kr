@@ -48,12 +48,12 @@ caps.handback.revision: 11
 ## 예제  
  다음 예제에서는 반복기 함수를 보여 줍니다.  반복기 함수는 `Yield` 문 안에  [For…다음](../../../visual-basic/language-reference/statements/for-next-statement.md) 루프.  반복할 때마다는  [For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md) 문의 본문에 `Main` 에 대 한 호출을 만듭니다는 `Power` 반복기 함수.  반복기 함수를 호출할 때마다 계속 해 서 다음을 실행 하는 `Yield` 다음 반복의 과정에서 발생 하는 문의 `For…Next` 루프.  
   
- [!code-vb[VbVbalrStatements#98](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/iterator_1.vb)]  
+ [!code-vb[VbVbalrStatements#98](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/iterator_1.vb)]  
   
 ## 예제  
  다음 예제는 `Get` 되는 반복기 접근자입니다.  `Iterator` 한정자는 속성 선언에서입니다.  
   
- [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/iterator_2.vb)]  
+ [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/iterator_2.vb)]  
   
  다른 예제를 보려면 [반복기](../Topic/Iterators%20\(C%23%20and%20Visual%20Basic\).md)를 참조하십시오.  
   

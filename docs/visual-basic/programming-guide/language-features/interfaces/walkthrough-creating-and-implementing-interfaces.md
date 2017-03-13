@@ -45,7 +45,7 @@ caps.handback.revision: 22
   
 5.  `Interface` 및 `End Interface` 문 사이에 다음 코드를 삽입하여 인터페이스에 대한 속성, 메서드 및 이벤트를 정의합니다.  
   
-     [!code-vb[VbVbalrOOP#98](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#98)]  
+     [!code-vb[VbVbalrOOP#98](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_1.vb)]  
   
 ## 구현  
  여기서 인터페이스 멤버를 선언하는 데 사용된 구문은 클래스 멤버를 선언하는 데 사용되는 구문과 다릅니다.  이러한 차이는 인터페이스는 구현 코드를 포함할 수 없기 때문에 생기는 것입니다.  
@@ -54,13 +54,13 @@ caps.handback.revision: 22
   
 1.  `End Interface` 및 `End Module` 문 사이에 다음 문을 추가한 다음 Enter 키를 눌러 이름이 `ImplementationClass`인 클래스를 `Module1`에 추가합니다.  
   
-     [!code-vb[VbVbalrOOP#99](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#99)]  
+     [!code-vb[VbVbalrOOP#99](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_2.vb)]  
   
      통합 개발 환경에서 작업하는 경우, Enter 키를 누르면 **코드 편집기**에서 짝이 되는 `End Class` 문이 삽입됩니다.  
   
 2.  다음 `Implements` 문을 `ImplementationClass`에 추가하여 해당 클래스가 구현하는 인터페이스의 이름을 지정합니다.  
   
-     [!code-vb[VbVbalrOOP#100](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#100)]  
+     [!code-vb[VbVbalrOOP#100](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_3.vb)]  
   
      `Implements` 문이 클래스나 구조체의 맨 위에 다른 항목들과 별도로 나열되면 해당 클래스나 구조체가 인터페이스를 구현한다는 것을 뜻합니다.  
   
@@ -68,25 +68,25 @@ caps.handback.revision: 22
   
 3.  통합 개발 환경에서 작업하는 경우가 아니라면 `MyInterface` 인터페이스의 모든 멤버를 직접 구현해야 합니다.  `ImplementationClass`에 다음 코드를 추가하여 `Event1`, `Method1` 및 `Prop1`을 구현합니다.  
   
-     [!code-vb[VbVbalrOOP#101](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#101)]  
+     [!code-vb[VbVbalrOOP#101](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_4.vb)]  
   
      `Implements` 문에는 인터페이스 이름과 구현될 인터페이스 멤버의 이름이 지정됩니다.  
   
 4.  속성 값이 저장된 클래스에 전용 필드를 추가하여 `Prop1`의 정의를 완료합니다.  
   
-     [!code-vb[VbVbalrOOP#102](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#102)]  
+     [!code-vb[VbVbalrOOP#102](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_5.vb)]  
   
      property get 접근자로부터 `pval`의 값을 반환합니다.  
   
-     [!code-vb[VbVbalrOOP#103](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#103)]  
+     [!code-vb[VbVbalrOOP#103](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_6.vb)]  
   
      property set 접근자에서 `pval`의 값을 설정합니다.  
   
-     [!code-vb[VbVbalrOOP#104](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#104)]  
+     [!code-vb[VbVbalrOOP#104](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_7.vb)]  
   
 5.  다음 코드를 추가하여 `Method1`의 정의를 완료합니다.  
   
-     [!code-vb[VbVbalrOOP#105](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#105)]  
+     [!code-vb[VbVbalrOOP#105](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_8.vb)]  
   
 #### 인터페이스의 구현을 테스트하려면  
   
@@ -94,23 +94,23 @@ caps.handback.revision: 22
   
 2.  `Form1` 클래스에 다음 `testInstance` 필드를 추가합니다.  
   
-     [!code-vb[VbVbalrOOP#120](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#120)]  
+     [!code-vb[VbVbalrOOP#120](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_9.vb)]  
   
      `testInstance`를 `WithEvents`로 선언하면 `Form1` 클래스에서 해당 이벤트를 처리할 수 있습니다.  
   
 3.  다음 이벤트 처리기를 `Form1` 클래스에 추가하여 `testInstance`로 인해 발생하는 이벤트를 처리합니다.  
   
-     [!code-vb[VbVbalrOOP#106](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#106)]  
+     [!code-vb[VbVbalrOOP#106](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_10.vb)]  
   
 4.  `Test`라는 서브루틴을 `Form1` 클래스에 추가하여 구현 클래스를 테스트합니다.  
   
-     [!code-vb[VbVbalrOOP#107](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#107)]  
+     [!code-vb[VbVbalrOOP#107](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_11.vb)]  
   
      `Test` 프로시저는 `MyInterface`를 구현하는 클래스의 인스턴스를 만들고, 이 인스턴스를 `testInstance` 필드에 할당하고, 속성을 설정하고, 인터페이스를 통해 메서드를 실행합니다.  
   
 5.  시작 폼의 `Form1 Load` 프로시저에서 `Test` 프로시저를 호출하는 코드를 추가합니다.  
   
-     [!code-vb[VbVbalrOOP#108](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#108)]  
+     [!code-vb[VbVbalrOOP#108](../../../../visual-basic/misc/codesnippet/VisualBasic/walkthrough-creating-and-implementing-interfaces_12.vb)]  
   
 6.  F5 키를 눌러 `Test` 프로시저를 실행합니다.  메시지 "Prop1 was set to 9"이 표시됩니다.  확인을 클릭하면 메시지 "The X parameter for Method1 is 5"가 표시되고,  다시 확인을 클릭하면 "The event handler caught the event" 메시지가 표시됩니다.  
   

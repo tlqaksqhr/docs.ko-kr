@@ -23,12 +23,12 @@ caps.handback.revision: 13
   
  두 번째 메서드는 범주 ID가 왼쪽의 범주 목록에 나열된 모든 제품의 시퀀스를 생성합니다.  임시 배열을 만들기 위한 `let` 절과 `Contains` 메서드의 사용을 확인합니다.  또한 쿼리 전에 배열을 만들고 첫 번째 `from` 절을 제거할 수도 있습니다.  
   
- [!code-cs[csProgGuideLINQ#64](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#64)]  
+ [!code-cs[csProgGuideLINQ#64](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-perform-custom-join-operations_1.cs)]  
   
 ## 예제  
  다음 예제에서는 쿼리가 내부\(오른쪽\) 시퀀스의 경우 조인 절 자체 전에 가져올 수 없는 일치하는 키를 기반으로 두 개의 시퀀스를 조인해야 합니다.  `join` 절을 사용하여 이 조인을 수행하면 각 요소에 대해 `Split` 메서드가 호출되어야 합니다.  여러 개의 `from` 절을 사용하면 쿼리가 반복 메서드 호출의 오버헤드를 방지할 수 있습니다.  그러나 `join`이 최적화되므로 이 특별한 경우에서는 여러 개의 `from` 절을 사용하는 것보다 속도가 더 빠를 수 있습니다.  결과는 주로 메서드 호출의 비용에 따라 달라집니다.  
   
- [!code-cs[csProgGuideLINQ#13](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#13)]  
+ [!code-cs[csProgGuideLINQ#13](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-perform-custom-join-operations_2.cs)]  
   
 ## 코드 컴파일  
   

@@ -47,11 +47,11 @@ caps.handback.revision: 17
   
      다음 예제에서는 선택적 매개 변수와 함께 정의된 프로시저, 두 개의 오버로드된 프로시저의 동등한 집합, 유효한 오버로드된 버전과 유효하지 않은 오버로드된 버전의 예를 보여 줍니다.  
   
-     [!code-vb[VbVbcnProcedures#59](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-overload-a-proced_1_1.vb)]  
+     [!code-vb[VbVbcnProcedures#59](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-optional-parameters_1.vb)]  
   
-     [!code-vb[VbVbcnProcedures#60](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-overload-a-proced_1_2.vb)]  
+     [!code-vb[VbVbcnProcedures#60](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-optional-parameters_2.vb)]  
   
-     [!code-vb[VbVbcnProcedures#61](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-overload-a-proced_1_3.vb)]  
+     [!code-vb[VbVbcnProcedures#61](./codesnippet/VisualBasic/how-to-overload-a-procedure-that-takes-optional-parameters_3.vb)]  
   
 ## 여러 선택적 매개 변수  
  둘 이상의 선택적 매개 변수를 가진 프로시저의 경우 일반적으로 세 개 이상의 오버로드된 버전이 필요합니다.  예를 들어, 두 개의 선택적 매개 변수가 존재하고 호출 코드가 매개 변수를 서로 독립적으로 제공하거나 생략할 수 있는 경우 네 개의 오버로드된 버전\(제공된 인수의 가능한 각 조합별로 하나씩\)이 필요합니다.  

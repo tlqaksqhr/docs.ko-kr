@@ -46,12 +46,12 @@ Where condition
 ## 예제  
  다음 쿼리 식에서는 `From` 절을 사용하여 `customers` 컬렉션의 각 `Customer` 개체에 대해 범위 변수 `cust`를 선언합니다.  `Where` 절은 범위 변수를 사용하여 지정한 지역의 고객으로 출력을 제한합니다.  `For Each` 루프는 각 고객의 회사 이름을 쿼리 결과에 표시합니다.  
   
- [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#23)]  
+ [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/where-clause_1.vb)]  
   
 ## 예제  
  다음 예제를 사용 하 여 `And` 및 `Or` 의 논리 연산자는 `Where` 절.  
   
- [!code-vb[VbSimpleQuerySamples#31](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#31)]  
+ [!code-vb[VbSimpleQuerySamples#31](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/where-clause_2.vb)]  
   
 ## 참고 항목  
  [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   

@@ -58,7 +58,7 @@ int intSize = sizeof(int);
  구조체를 포함한 다른 모든 형식의 경우에는 안전하지 않은 코드 블록에서만 `sizeof` 연산자를 사용할 수 있습니다.  <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=fullName> 메서드를 사용할 수 있지만 이 메서드가 반환하는 값이 `sizeof`가 반환하는 값과 항상 같지는 않습니다.  <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=fullName>는 형식이 마샬링된 후의 크기를 반환하지만, `sizeof`는 패딩을 포함하여 공용 언어 런타임에서 할당된 크기를 반환합니다.  
   
 ## 예제  
- [!code-cs[csrefKeywordsOperator#11](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#11)]  
+ [!code-cs[csrefKeywordsOperator#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/sizeof_1.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

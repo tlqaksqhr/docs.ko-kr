@@ -30,7 +30,7 @@ caps.handback.revision: 27
 ## 리터럴  
  `char` 형식의 상수는 문자 리터럴, 16진수 이스케이프 시퀀스 또는 유니코드 표현으로 작성할 수 있습니다.  또한 정수 계열 문자 코드를 변환할 수 있습니다.  다음 예제에서는 `char` 변수 네 개를 동일한 문자 `X`로 초기화합니다.  
   
- [!code-cs[csrefKeywordsTypes#19](../../../csharp/language-reference/keywords/codesnippet/csharp/char_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#19](../../../csharp/language-reference/keywords/codesnippet/CSharp/char_1.cs)]  
   
 ## 변환  
  `char` 형식은 [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) 또는 [decimal](../../../csharp/language-reference/keywords/decimal.md)로 암시적으로 변환할 수 있습니다.  그러나 다른 형식에서 `char` 형식으로의 암시적 변환은 없습니다.  

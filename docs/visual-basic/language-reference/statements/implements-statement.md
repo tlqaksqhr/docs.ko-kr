@@ -54,14 +54,14 @@ Implements interfacename.interfacemember [, ...]
 ## 예제  
  다음 예제에서는 `Implements` 문을 사용하여 인터페이스의 멤버를 구현하는 방법을 보여 줍니다.  또한 이벤트, 속성 및 프로시저를 사용하여 `ICustomerInfo`라는 인터페이스를 정의합니다.  `customerInfo` 클래스는 인터페이스에 정의된 모든 멤버를 구현합니다.  
   
- [!code-vb[VbVbalrStatements#33](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/implements-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#33](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_1.vb)]  
   
  `customerInfo` 클래스는 개별 소스 코드 줄에서 `Implements` 문을 사용하여 `ICustomerInfo` 인터페이스의 모든 멤버를 구현하는 클래스를 나타냅니다.  그러면 클래스의 각 멤버는 멤버 선언 과정에서 `Implements` 키워드를 사용하여 해당 인터페이스 멤버를 구현함을 나타냅니다.  
   
 ## 예제  
  다음 두 프로시저는 이전 예제에서 구현된 인터페이스를 사용하는 방법을 보여 줍니다.  구현을 테스트하려면 해당 프로젝트에 이러한 프로시저를 추가하고 `testImplements` 프로시저를 호출합니다.  
   
- [!code-vb[VbVbalrStatements#34](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/implements-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#34](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/implements-statement_2.vb)]  
   
 ## 참고 항목  
  [Implements](../../../visual-basic/language-reference/statements/implements-clause.md)   

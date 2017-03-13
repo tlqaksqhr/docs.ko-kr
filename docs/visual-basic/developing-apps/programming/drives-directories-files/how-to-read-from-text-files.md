@@ -36,13 +36,13 @@ caps.handback.revision: 27
   
 -   `My.Computer.FileSystem` 개체의 `ReadAllText` 메서드에 경로를 지정하여 텍스트 파일의 내용을 문자열로 읽어옵니다.  다음 예제에서는 test.txt의 내용을 문자열로 읽어온 다음 그 내용을 메시지 상자에 표시합니다.  
   
-     [!code-vb[VbFileIORead#2](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-read-from-text-fi_1_1.vb)]  
+     [!code-vb[VbFileIORead#2](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files_1.vb)]  
   
 ### 인코딩된 텍스트 파일을 읽으려면  
   
 -   `My.Computer.FileSystem` 개체의 `ReadAllText` 메서드에 경로와 파일 인코딩 형식을 지정하여 텍스트 파일의 내용을 문자열로 읽어옵니다.  다음 예제에서는 UTF32 파일인 test.txt의 내용을 문자열로 읽어온 다음 그 내용을 메시지 상자에 표시합니다.  
   
-     [!code-vb[VbFileIORead#3](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-read-from-text-fi_1_2.vb)]  
+     [!code-vb[VbFileIORead#3](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files_2.vb)]  
   
 ## 강력한 프로그래밍  
  다음 조건에서 예외가 발생합니다.  

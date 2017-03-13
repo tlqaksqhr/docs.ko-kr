@@ -35,19 +35,19 @@ caps.handback.revision: 52
   
  다음 예제에서는 인수를 점증적으로 늘리고 값을 반환하는 람다 식입니다.  다음 예제에서는 한 줄과 여러 줄로 구성된 함수에 대한 람다 식 구문을 보여 줍니다.  
   
- [!code-vb[VbVbalrLambdas#14](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#14)]  
+ [!code-vb[VbVbalrLambdas#14](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_1.vb)]  
   
  다음 예제는 콘솔에 값을 쓰는 람다 식입니다.  다음 예제에서는 한 줄과 여러 줄로 구성된 서브루틴에 대한 람다 식 구문을 보여 줍니다.  
   
- [!code-vb[VbVbalrLambdas#15](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#15)]  
+ [!code-vb[VbVbalrLambdas#15](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_2.vb)]  
   
  앞의 예제에서는 변수 이름에 람다 식이 할당되었습니다.  변수를 참조할 때마다 람다 식이 호출됩니다.  다음 예제와 같이 람다 식을 동시에 선언하고 호출할 수도 있습니다.  
   
- [!code-vb[VbVbalrLambdas#3](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#3)]  
+ [!code-vb[VbVbalrLambdas#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_3.vb)]  
   
  람다 식은 이 항목의 뒷부분에 있는 [컨텍스트](#context) 단원의 예제와 같이 함수 호출의 값으로 반환될 수도 있고, 다음 예제와 같이 대리자 형식을 사용하는 매개 변수에 인수로 전달될 수도 있습니다.  
   
- [!code-vb[VbVbalrLambdas#8](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class2.vb#8)]  
+ [!code-vb[VbVbalrLambdas#8](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_4.vb)]  
   
 ## 람다 식 구문  
  람다 식의 구문은 표준 함수 또는 서브루틴의 구문과 유사합니다.  차이점은 다음과 같습니다.  
@@ -125,7 +125,7 @@ End Class
   
  포함하는 범위에 있는 지역 변수 및 매개 변수에 대한 액세스는 해당 범위의 수명 이후에도 유지될 수 있습니다.  람다 식에서 유추하는 대리자를 가비지 수집에 사용할 수 없는 한 원래 환경의 변수에 계속 액세스할 수 있습니다.  다음 예제에서 변수 `target`은 람다 식 `playTheGame`을 정의하는 메서드 `makeTheGame`의 지역 변수입니다.  `Main`에서 `takeAGuess`에 할당되는 반환된 람다 식은 지역 변수 `target`에 여전히 액세스할 수 있습니다.  
   
- [!code-vb[VbVbalrLambdas#12](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class6.vb#12)]  
+ [!code-vb[VbVbalrLambdas#12](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_5.vb)]  
   
  다음 예제에서는 중첩된 람다 식의 광범위한 액세스 권한을 보여 줍니다.  반환된 람다 식이 `Main`에서 `aDel`로 실행될 때는 다음 요소에 액세스합니다.  
   
@@ -139,16 +139,16 @@ End Class
   
 -   반환된 람다 식이 중첩된 람다 식의 매개 변수: `level2`  
   
- [!code-vb[VbVbalrLambdas#9](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class3.vb#9)]  
+ [!code-vb[VbVbalrLambdas#9](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_6.vb)]  
   
 ## 대리자 형식으로 변환  
  람다 식은 호환되는 대리자 형식으로 암시적으로 변환될 수 있습니다.  호환성을 위한 일반적인 요구 사항에 대한 자세한 내용은 [Relaxed Delegate Conversion](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)을 참조하십시오.  예를 들어, 다음 코드 예제에서는 암시적으로 `Func(Of Integer, Boolean)` 또는 일치하는 대리자 시그니처로 변환되는 람다 식을 보여 줍니다.  
   
- [!code-vb[VbVbalrLambdas#16](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#16)]  
+ [!code-vb[VbVbalrLambdas#16](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_7.vb)]  
   
  다음 코드 예제에서는 암시적으로 `Sub(Of Double, String, Double)` 또는 일치하는 대리자 시그니처로 변환되는 람다 식을 보여 줍니다.  
   
- [!code-vb[VbVbalrLambdas#23](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/class7.vb#23)]  
+ [!code-vb[VbVbalrLambdas#23](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_8.vb)]  
   
  람다 식을 대리자에 할당하거나 프로시저에 인수로 전달할 때 매개 변수 이름만 지정하고 해당 데이터 형식은 생략하여 대리자에서 형식을 가져오도록 할 수 있습니다.  
   
@@ -156,11 +156,11 @@ End Class
   
 -   다음 예제에서는 nullable 인수에 할당된 값이 있으면 `True`를 반환하고 해당 값이 `Nothing`이면 `False`를 반환하는 람다 식을 정의합니다.  
   
-     [!code-vb[VbVbalrLambdas#4](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#4)]  
+     [!code-vb[VbVbalrLambdas#4](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_9.vb)]  
   
 -   다음 예제에서는 배열에 있는 마지막 요소의 인덱스를 반환하는 람다 식을 정의합니다.  
   
-     [!code-vb[VbVbalrLambdas#5](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#5)]  
+     [!code-vb[VbVbalrLambdas#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/lambda-expressions_10.vb)]  
   
 ## 참고 항목  
  [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

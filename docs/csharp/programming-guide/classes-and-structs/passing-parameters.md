@@ -24,7 +24,7 @@ C\#에서는 인수를 값이나 참조로 매개 변수에 전달할 수 있습
   
  다음 예제에서는 값과 참조 매개 변수 간의 차이점을 보여 줍니다.  
   
- [!code-cs[csProgGuideParameters#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/passing-parameters_1.cs)]  
+ [!code-cs[csProgGuideParameters#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/passing-parameters_1.cs)]  
   
  자세한 내용은 다음 항목을 참조하십시오.  
   

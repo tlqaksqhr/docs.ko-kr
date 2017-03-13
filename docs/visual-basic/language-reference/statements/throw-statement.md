@@ -52,7 +52,7 @@ Throw [ expression ]
 ## 예제  
  다음 코드에서는 `Throw` 문을 사용하여 예외를 throw합니다.  
   
- [!code-vb[VbVbalrStatements#84](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/throw-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#84](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/throw-statement_1.vb)]  
   
 ## 요구 사항  
  **네임스페이스:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  

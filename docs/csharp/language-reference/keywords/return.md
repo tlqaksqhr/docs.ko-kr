@@ -27,7 +27,7 @@ caps.handback.revision: 18
 ## 예제  
  아래 예제에서 `A()` 메서드는 [double](../../../csharp/language-reference/keywords/double.md) 값으로 `Area` 변수를 반환합니다.  
   
- [!code-cs[csrefKeywordsJump#6](../../../csharp/language-reference/keywords/codesnippet/csharp/return_1.cs)]  
+ [!code-cs[csrefKeywordsJump#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/return_1.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

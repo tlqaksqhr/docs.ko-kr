@@ -26,7 +26,7 @@ caps.handback.revision: 28
 ## 예제  
  다음 예제에서는 <xref:System.EventHandler>를 내부 대리자 형식으로 사용하는 이벤트를 선언하고 발생시키는 방법을 보여 줍니다.  제네릭 <xref:System.EventHandler%601> 대리자 형식을 사용하는 방법과 이벤트를 구독하고 이벤트 처리기 메서드를 만드는 방법도 보여 주는 전체 코드 예제는 [방법: .NET Framework 지침을 따르는 이벤트 게시](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)를 참조하십시오.  
   
- [!code-cs[csrefKeywordsModifiers#7](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#7)]  
+ [!code-cs[csrefKeywordsModifiers#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/event_1.cs)]  
   
  이벤트는 해당 이벤트가 선언된 클래스나 구조체\(게시자 클래스\)에서만 호출할 수 있는 특수한 종류의 멀티캐스트 대리자입니다.  다른 클래스나 구조체가 이벤트를 구독할 경우 해당 이벤트 처리기 메서드는 게시자 클래스에서 이벤트를 발생시킬 때 호출됩니다.  자세한 내용 및 코드 예제를 보려면 [이벤트](../../../csharp/programming-guide/events/index.md) 및 [대리자](../../../csharp/programming-guide/delegates/index.md)를 참조하십시오.  
   

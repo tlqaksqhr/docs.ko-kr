@@ -22,7 +22,7 @@ caps.handback.revision: 28
 # namespace(C# 참조)
 `namespace` 키워드를 사용 하 여 관련된 개체 집합이 포함 된 범위를 선언 합니다.  네임 스페이스 코드 요소를 구성 하 고 전역적으로 고유한 형식을 만들 수 있습니다.  
   
- [!code-cs[csrefKeywordsNamespace#1](../../../csharp/language-reference/keywords/codesnippet/csharp/namespace_1.cs)]  
+ [!code-cs[csrefKeywordsNamespace#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_1.cs)]  
   
 ## 설명  
  네임스페이스 내에서 아래와 같은 형식을 하나 이상 선언할 수 있습니다.  
@@ -45,12 +45,12 @@ caps.handback.revision: 28
   
  두 개 이상의 선언에서 네임스페이스를 정의할 수 있습니다.  예를 들어, 다음 예제에서는 두 클래스를 모두 `MyCompany` 네임스페이스의 일부로 정의합니다.  
   
- [!code-cs[csrefKeywordsNamespace#2](../../../csharp/language-reference/keywords/codesnippet/csharp/namespace_2.cs)]  
+ [!code-cs[csrefKeywordsNamespace#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_2.cs)]  
   
 ## 예제  
  아래 예제에서는 중첩된 네임스페이스에서 정적 메서드를 호출하는 방법을 보여 줍니다.  
   
- [!code-cs[csrefKeywordsNamespace#3](../../../csharp/language-reference/keywords/codesnippet/csharp/namespace_3.cs)]  
+ [!code-cs[csrefKeywordsNamespace#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_3.cs)]  
   
 ## 자세한 내용  
  네임스페이스 사용에 대한 자세한 내용은 다음 항목을 참조하십시오.  

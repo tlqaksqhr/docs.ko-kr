@@ -23,7 +23,7 @@ caps.handback.revision: 23
   
  unchecked 컨텍스트에서 식의 결과가 대상 형식의 범위를 벗어나는 경우 오버플로에 플래그가 지정되지 않습니다.  예를 들어, 다음 예제의 계산은 `unchecked` 블록이나 식에서 수행되므로 결과가 정수로서는 너무 크다는 사실이 무시되고 `int1`에 값 \-2,147,483,639이 할당됩니다.  
   
- [!code-cs[csrefKeywordsChecked#5](../../../csharp/language-reference/keywords/codesnippet/csharp/unchecked_1.cs)]  
+ [!code-cs[csrefKeywordsChecked#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/unchecked_1.cs)]  
   
  `unchecked` 환경을 제거하면 컴파일 오류가 발생합니다.  식의 모든 조건은 상수이기 때문에 컴파일 타임에 오버플로를 검색할 수 있습니다.  
   
@@ -34,7 +34,7 @@ caps.handback.revision: 23
 ## 예제  
  이 샘플에서는 `unchecked` 키워드를 사용하는 방법을 보여 줍니다.  
   
- [!code-cs[csrefKeywordsChecked#2](../../../csharp/language-reference/keywords/codesnippet/csharp/unchecked_2.cs)]  
+ [!code-cs[csrefKeywordsChecked#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/unchecked_2.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

@@ -47,7 +47,7 @@ GetXmlNamespace(xmlNamespacePrefix)
 ## 예제  
  다음 예제에서는 `ns`를 XML 네임스페이스 접두사로 가져옵니다.  그런 다음 네임스페이스의 접두사를 사용하여 XML 리터럴을 만들고 정규화된 이름이 `ns:phone`인 첫 번째 자식 노드에 액세스합니다.  그런 다음 해당 자식 노드를 `GetXmlNamespace` 연산자를 사용하여 정규화된 이름을 생성하는 `ShowName` 서브루틴으로 전달합니다.  그런 다음 `ShowName` 서브루틴에서는 정규화된 이름을 <xref:System.Xml.Linq.XNode.Ancestors%2A> 메서드로 전달하여 부모 `ns:contact` 노드를 가져옵니다.  
   
- [!code-vb[VbXMLSamples#38](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/getxmlnamespace-operator_1.vb)]  
+ [!code-vb[VbXMLSamples#38](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/getxmlnamespace-operator_1.vb)]  
   
  `TestGetXmlNamespace.RunSample()`을 호출하면 다음 텍스트가 포함된 메시지 상자가 표시됩니다.  
   

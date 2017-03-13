@@ -25,7 +25,7 @@ caps.handback.revision: 21
  예외를 다시 throw하는 것에 대한 자세한 내용 및 예제는 [try\-catch](../../../csharp/language-reference/keywords/try-catch.md) 및 [예외 throw](../Topic/How%20to:%20Explicitly%20Throw%20Exceptions.md)를 참조하십시오.  에 대 한 자세한 내용은 `finally` 블록에서 참조 하십시오  [try\-finally](../../../csharp/language-reference/keywords/try-finally.md).  
   
 ## 예제  
- [!code-cs[csrefKeywordsExceptions#1](../../../csharp/language-reference/keywords/codesnippet/csharp/try-catch-finally_1.cs)]  
+ [!code-cs[csrefKeywordsExceptions#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch-finally_1.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

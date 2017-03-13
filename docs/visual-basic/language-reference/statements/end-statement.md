@@ -58,7 +58,7 @@ End
 ## 예제  
  다음 예제에서는 사용자가 요청할 경우 `End` 문을 사용하여 코드 실행을 종료합니다.  
   
- [!code-vb[VbVersHelp60Controls#64](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVersHelp60Controls/Form1.vb#64)]  
+ [!code-vb[VbVersHelp60Controls#64](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/end-statement_1.vb)]  
   
 ## 스마트 장치 개발자 참고 사항  
  이 문은 지원되지 않습니다.  

@@ -36,7 +36,7 @@ private static extern void AVIFileInit();
 ## 예제  
  **예제 1.** 다음 예제에서는 프로그램이 사용자로부터 문자열을 수신하여 메시지 상자에 표시합니다.  이 프로그램은 User32.dll 라이브러리에서 가져온 `MessageBox` 메서드를 사용합니다.  
   
- [!code-cs[csrefKeywordsModifiers#8](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#8)]  
+ [!code-cs[csrefKeywordsModifiers#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/extern_1.cs)]  
   
 ## 예제  
  **예제 2.** 이 예제는 C 라이브러리\(네이티브 DLL\)로 호출되는 C\# 프로그램을 보여줍니다.  

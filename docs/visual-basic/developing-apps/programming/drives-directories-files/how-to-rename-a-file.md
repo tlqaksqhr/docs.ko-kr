@@ -28,7 +28,7 @@ caps.handback.revision: 21
   
 -   파일 이름을 바꾸려면 `My.Computer.FileSystem.RenameFile` 메서드를 사용합니다.  이 예제에서는 `Test.txt`라는 파일의 이름을 `SecondTest.txt`로 바꿉니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-rename-a-file_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-rename-a-file_1.vb)]  
   
  이 코드 예제는 IntelliSense 코드 조각으로도 사용할 수 있습니다.  이 코드 조각은 코드 조각 선택기의 **파일 시스템 \- 드라이브, 폴더 및 파일 처리**에 있습니다.  자세한 내용은 [코드 조각](/visual-studio/ide/code-snippets)를 참조하십시오.  
   

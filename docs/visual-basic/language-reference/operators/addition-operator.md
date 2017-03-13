@@ -101,23 +101,23 @@ caps.handback.revision: 26
 ## 예제  
  다음 예제에서는 `+` 연산자를 사용하여 숫자를 더합니다.  피연산자가 모두 숫자인 경우 Visual Basic에서는 산술 결과를 계산합니다.  산술 결과는 두 피연산자의 합계로 표시됩니다.  
   
- [!code-vb[VbVbalrOperators#6](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/addition-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#6](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_1.vb)]  
   
  또한 `+` 연산자를 사용하여 문자열을 연결할 수도 있습니다.  피연산자가 모두 문자열인 경우 Visual Basic에서는 두 문자열을 연결합니다.  연결 결과는 두 피연산자의 내용을 서로 연결한 단일 문자열로 표시됩니다.  
   
  피연산자가 혼합 형식인 경우 결과는 [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)의 설정에 따라 다릅니다.  다음 예제에서는 `Option Strict`가 `On`으로 설정된 경우의 결과를 보여 줍니다.  
   
- [!code-vb[VbVbalrOperators#53](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/addition-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#53](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_2.vb)]  
   
- [!code-vb[VbVbalrOperators#50](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/addition-operator_3.vb)]  
-[!code-vb[VbVbalrOperators#51](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/addition-operator_4.vb)]  
+ [!code-vb[VbVbalrOperators#50](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_3.vb)]  
+[!code-vb[VbVbalrOperators#51](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_4.vb)]  
   
  다음 예제에서는 `Option Strict`가 `Off`로 설정된 경우의 결과를 보여 줍니다.  
   
- [!code-vb[VbVbalrOperators#54](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/addition-operator_5.vb)]  
+ [!code-vb[VbVbalrOperators#54](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_5.vb)]  
   
- [!code-vb[VbVbalrOperators#50](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/addition-operator_3.vb)]  
-[!code-vb[VbVbalrOperators#52](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/addition-operator_6.vb)]  
+ [!code-vb[VbVbalrOperators#50](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_3.vb)]  
+[!code-vb[VbVbalrOperators#52](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_6.vb)]  
   
  모호성을 제거하려면 연결에 `+` 대신 `&` 연산자를 사용해야 합니다.  
   

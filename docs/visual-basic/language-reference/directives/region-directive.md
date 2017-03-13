@@ -49,7 +49,7 @@ Visual Basic 파일에서 코드 섹션을 축소하고 숨깁니다.
 ## 예제  
  이 예제에서는 `#Region` 지시문을 사용합니다.  
   
- [!code-vb[VbVbalrConditionalComp#4](../../../visual-basic/language-reference/directives/codesnippet/visualbasic/region-directive_1.vb)]  
+ [!code-vb[VbVbalrConditionalComp#4](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/region-directive_1.vb)]  
   
 ## 참고 항목  
  [\#If...Then...\#Else Directives](../../../visual-basic/language-reference/directives/if-then-else-directives.md)   

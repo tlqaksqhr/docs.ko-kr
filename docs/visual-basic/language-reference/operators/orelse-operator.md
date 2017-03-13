@@ -66,14 +66,14 @@ result = expression1 OrElse expression2
 ## 예제  
  다음 예제에서는 `OrElse` 연산자를 사용하여 두 식의 논리합 연산을 수행합니다.  결과는 두 식 중 하나가 True인지 여부를 나타내는 `Boolean` 값입니다.  첫째 식이 `True`이면 둘째 식은 계산되지 않습니다.  
   
- [!code-vb[VbVbalrOperators#37](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/orelse-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#37](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/orelse-operator_1.vb)]  
   
  위 예제의 결과는 각각 `True`, `True`, `False`가 됩니다.  `firstCheck` 계산에서 첫째 식이 `True`이므로 둘째 식은 계산되지 않습니다.  그러나 `secondCheck` 계산에서는 둘째 식이 계산됩니다.  
   
 ## 예제  
  다음 예제에서는 두 개의 프로시저 호출을 포함하는 `If`...`Then` 문을 보여 줍니다.  첫째 호출은 `True`를 반환하고 둘째 프로시저는 호출되지 않습니다.  이러한 방식은 코드의 이 섹션을 실행할 때 항상 수행되어야 할 중요한 작업을 둘째 프로시저가 수행하는 경우에 예기치 않은 동작을 발생시킬 수 있습니다.  
   
- [!code-vb[VbVbalrOperators#38](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/orelse-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#38](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/orelse-operator_2.vb)]  
   
 ## 참고 항목  
  [Logical\/Bitwise Operators](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)   

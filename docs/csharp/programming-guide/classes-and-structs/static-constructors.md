@@ -19,7 +19,7 @@ caps.handback.revision: 23
 # 정적 생성자(C# 프로그래밍 가이드)
 정적 생성자는 [정적](../../../csharp/language-reference/keywords/static.md) 데이터를 초기화하거나 한 번만 수행하면 되는 특정 작업을 수행하는 데 사용됩니다.  이 생성자는 첫 번째 인스턴스가 만들어지기 전이나 정적 멤버가 참조되기 전에 자동으로 호출됩니다.  
   
- [!code-cs[csProgGuideObjects#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/static-constructors_1.cs)]  
+ [!code-cs[csProgGuideObjects#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-constructors_1.cs)]  
   
  정적 생성자에는 다음과 같은 속성이 있습니다.  
   
@@ -40,7 +40,7 @@ caps.handback.revision: 23
 ## 예제  
  이 예제에서 `Bus` 클래스에는 정적 생성자가 있습니다.  `Bus`의 첫 번째 인스턴스를 만들면\(`bus1`\) 정적 생성자가 호출되어 클래스를 초기화합니다.  샘플 출력에서는 `Bus`의 두 인스턴스를 만들어도 정적 생성자가 한 번만 실행되며, 인스턴스 생성자가 실행되기 전에 정적 생성자가 실행되는지 확인합니다.  
   
- [!code-cs[csProgGuideObjects#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/static-constructors_2.cs)]  
+ [!code-cs[csProgGuideObjects#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-constructors_2.cs)]  
   
 ## 참고 항목  
  [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   

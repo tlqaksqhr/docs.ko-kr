@@ -67,7 +67,7 @@ object...<descendant>
 ## 예제  
  다음 예제에서는 `contacts` 개체의 `name`이라는 첫 번째 하위 항목 노드의 값과 `phone`이라는 모든 하위 항목 노드의 값에 액세스하는 방법을 보여 줍니다.  
   
- [!code-vb[VbXMLSamples#25](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-descendant-axis-prop_1.vb)]  
+ [!code-vb[VbXMLSamples#25](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-descendant-axis-property_1.vb)]  
   
  이 코드가 표시하는 텍스트는 다음과 같습니다.  
   
@@ -78,7 +78,7 @@ object...<descendant>
 ## 예제  
  다음 예제에서는 `ns`를 XML 네임스페이스 접두사로 선언합니다.  그런 다음 네임스페이스의 접두사를 사용하여 XML 리터럴을 만들고 정규화된 이름인 `ns:name`을 사용하여 첫 번째 자식 노드의 값에 액세스합니다.  
   
- [!code-vb[VbXMLSamples#26](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-descendant-axis-prop_2.vb)]  
+ [!code-vb[VbXMLSamples#26](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-descendant-axis-property_2.vb)]  
   
  이 코드가 표시하는 텍스트는 다음과 같습니다.  
   

@@ -80,16 +80,16 @@ End Get
   
      다음 예제에서는 읽기 전용 속성 `quoteForTheDay`가 전용 변수 `quoteValue`에 저장된 값을 반환할 수 있는 두 가지 방법을 보여 줍니다.  
   
-     [!code-vb[VbVbalrStatements#27](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/get-statement_1.vb)]  
+     [!code-vb[VbVbalrStatements#27](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/get-statement_1.vb)]  
   
-     [!code-vb[VbVbalrStatements#28](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/get-statement_2.vb)]  
+     [!code-vb[VbVbalrStatements#28](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/get-statement_2.vb)]  
   
-     [!code-vb[VbVbalrStatements#29](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/get-statement_3.vb)]  
+     [!code-vb[VbVbalrStatements#29](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/get-statement_3.vb)]  
   
 ## 예제  
  다음 예제에서는 `Get` 문을 사용하여 속성 값을 반환합니다.  
   
- [!code-vb[VbVbalrStatements#30](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/get-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#30](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/get-statement_4.vb)]  
   
 ## 참고 항목  
  [Set Statement](../../../visual-basic/language-reference/statements/set-statement.md)   

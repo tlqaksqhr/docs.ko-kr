@@ -26,32 +26,32 @@ caps.handback.revision: 26
   
  예를 들어, 다음과 같은 줄을 포함할 수 있습니다.  
   
- [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/using.cs#1)]  
+ [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/using-namespaces_1.cs)]  
   
  이 경우 프로그램 시작 단계에서 다음과 같은 코드를 사용할 수 있습니다.  
   
- [!code-cs[csProgGuide#31](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/progGuide.cs#31)]  
+ [!code-cs[csProgGuide#31](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/using-namespaces_2.cs)]  
   
  using 지시문이 없으면 동일한 결과를 얻기 위해 다음 코드를 사용해야 합니다.  
   
- [!code-cs[csProgGuide#30](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/csProgGuide/progGuide.cs#30)]  
+ [!code-cs[csProgGuide#30](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/using-namespaces_3.cs)]  
   
 ## 네임스페이스 별칭  
  [using 지시문](../../../csharp/language-reference/keywords/using-directive.md)을 사용하여 [네임스페이스](../../../csharp/language-reference/keywords/namespace.md)의 별칭을 만들 수도 있습니다.  예를 들어, 중첩된 네임스페이스가 들어 있는 이전에 작성된 네임스페이스를 사용하는 경우 다음 예제와 같이 특정 네임스페이스를 간단하게 참조할 수 있도록 별칭을 선언할 수 있습니다.  
   
- [!code-cs[csProgGuideNamespaces#7](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces2.cs#7)]  
+ [!code-cs[csProgGuideNamespaces#7](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_4.cs)]  
   
 ## 네임스페이스를 사용하여 범위 제어  
  `namespace` 키워드는 범위를 선언하는 데 사용됩니다.  프로젝트 내에서 범위를 만들면 코드를 쉽게 구성할 수 있고 전역적으로 고유한 형식을 만들 수 있습니다.  다음 예제에서는 `SampleClass`라는 클래스를 두 네임스페이스에 정의하며, 네임스페이스 하나는 다른 네임스페이스 내에 중첩되어 있습니다.  [. 연산자](../../../csharp/language-reference/operators/member-access-operator.md)는 호출되는 메서드를 구분하는 데 사용됩니다.  
   
- [!code-cs[csProgGuideNamespaces#8](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces.cs#8)]  
+ [!code-cs[csProgGuideNamespaces#8](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_5.cs)]  
   
 ## 정규화된 이름  
  네임스페이스와 형식은 고유한 이름을 갖습니다. 이 이름은 논리 계층 구조를 나타내는 정규화된 이름으로 표시됩니다.  예를 들어, `A.B` 문은 `A`가 네임스페이스나 형식의 이름이고 `B`가 그 안에 중첩되어 있음을 의미합니다.  
   
  다음 예제에는 중첩된 클래스 및 네임스페이스가 있습니다.  정규화된 이름은 각 엔터티 다음에 나오는 주석에 표시되어 있습니다.  
   
- [!code-cs[csProgGuideNamespaces#9](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces.cs#9)]  
+ [!code-cs[csProgGuideNamespaces#9](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_6.cs)]  
   
  다음은 위 코드 세그먼트의 요소에 대한 설명입니다.  
   
@@ -65,27 +65,27 @@ caps.handback.revision: 26
   
  위의 코드 세그먼트를 사용하여 다음과 같이 `N1.N2` 네임스페이스에 새 클래스 멤버 `C3`을 추가할 수 있습니다.  
   
- [!code-cs[csProgGuideNamespaces#10](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces.cs#10)]  
+ [!code-cs[csProgGuideNamespaces#10](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_7.cs)]  
   
  일반적으로 `::`을 사용하여 네임스페이스 별칭을 참조하거나 `global::`을 사용하여 전역 네임스페이스를 참조하고 `.`을 사용하여 형식이나 멤버를 한정합니다.  
   
  네임스페이스 대신 형식을 참조하는 별칭과 함께 `::`을 사용하면 오류가 발생합니다.  예를 들면 다음과 같습니다.  
   
- [!code-cs[csProgGuideNamespaces#11](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces2.cs#11)]  
+ [!code-cs[csProgGuideNamespaces#11](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_8.cs)]  
   
- [!code-cs[csProgGuideNamespaces#12](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces2.cs#12)]  
+ [!code-cs[csProgGuideNamespaces#12](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_9.cs)]  
   
  `global`이라는 단어는 미리 정의된 별칭이 아니라는 점에 주의해야 합니다. 따라서 `global.X`에는 특별한 의미가 없습니다.  이는 `::`과 함께 사용할 때만 특별한 의미를 갖습니다.  
   
  `global::`은 항상 전역 네임스페이스를 참조하며 별칭이 아니므로 global이라는 별칭을 정의하면 컴파일러 경고 CS0440이 발생합니다.  예를 들어, 다음과 같은 줄을 사용하면 경고가 발생합니다.  
   
- [!code-cs[csProgGuideNamespaces#13](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces2.cs#13)]  
+ [!code-cs[csProgGuideNamespaces#13](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_10.cs)]  
   
  의도하지 않은 추가 형식이 사용되지 않도록 방지하기 위해서는 `::`을 별칭과 함께 사용하는 것이 좋습니다.  예를 들어, 다음과 같은 예제를 생각해 볼 수 있습니다.  
   
- [!code-cs[csProgGuideNamespaces#14](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces.cs#14)]  
+ [!code-cs[csProgGuideNamespaces#14](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_11.cs)]  
   
- [!code-cs[csProgGuideNamespaces#15](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces.cs#15)]  
+ [!code-cs[csProgGuideNamespaces#15](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_12.cs)]  
   
  이 예제는 작동은 하지만 `Alias`라는 형식을 추가로 도입하면 `Alias.`가 해당 형식에 대신 바인딩됩니다.  `Alias::Exception`을 사용하면 `Alias`가 형식으로 잘못 인식되지 않고 네임스페이스 별칭으로 취급되도록 할 수 있습니다.  
   

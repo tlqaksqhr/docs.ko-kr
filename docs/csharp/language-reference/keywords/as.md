@@ -22,7 +22,7 @@ caps.handback.revision: 24
 # as(C# 참조)
 사용할 수 있는 `as` 특정 형식의 호환 되는 참조 형식 간에 변환 수행 하는 연산자 또는  [nullable 형식](../../../csharp/programming-guide/nullable-types/index.md)을.  다음 코드에서는 이러한 예제를 보여 줍니다.  
   
- [!code-cs[csrefKeywordsOperator#1](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#1)]  
+ [!code-cs[csrefKeywordsOperator#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/as_1.cs)]  
   
 ## 설명  
  `as` 연산자는 캐스트 연산과 비슷합니다.  그러나 변환이 불가능 한 경우 `as` 반환 `null` 예외를 발생 시키는 대신 합니다.  다음 예제를 참조하십시오.  
@@ -40,7 +40,7 @@ expression is type ? (type)expression : (type)null
  이때의 `as` 참조 변환, nullable 변환 및 boxing 변환 연산자를 수행 합니다.  `as` 연산자 대신 캐스트 식을 사용 하 여 이루어져야 합니다 사용자 정의 변환과 같은 다른 변환을 수행할 수 없습니다.  
   
 ## 예제  
- [!code-cs[csrefKeywordsOperator#2](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#2)]  
+ [!code-cs[csrefKeywordsOperator#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/as_2.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

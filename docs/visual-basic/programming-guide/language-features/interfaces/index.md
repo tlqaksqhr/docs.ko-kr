@@ -46,7 +46,7 @@ caps.handback.revision: 11
   
  예를 들어 다음 코드는 하나의 함수, 하나의 속성, 하나의 이벤트가 있는 인터페이스를 정의합니다.  
   
- [!code-vb[VbVbalrOOP#17](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#17)]  
+ [!code-vb[VbVbalrOOP#17](../../../../visual-basic/misc/codesnippet/VisualBasic/index_1.vb)]  
   
 ## 인터페이스 구현  
  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 예약어인 `Implements`는 두 가지 방법으로 사용됩니다.   `Implements` 문은 클래스 또는 구조체가 인터페이스를 구현한다는 것을 나타냅니다.  `Implements` 키워드는 클래스 멤버 또는 구조체 멤버가 특정 인터페이스 멤버를 구현한다는 것을 나타냅니다.  
@@ -59,7 +59,7 @@ caps.handback.revision: 11
   
  예를 들어 다음 코드에서는 인터페이스의 메서드를 구현하는 `Sub1`이라는 서브루틴을 선언하는 방법을 보여 줍니다.  
   
- [!code-vb[VbVbalrOOP#69](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#69)]  
+ [!code-vb[VbVbalrOOP#69](../../../../visual-basic/misc/codesnippet/VisualBasic/index_2.vb)]  
   
  구현 멤버의 매개 변수 형식 및 반환 형식은 인터페이스의 인터페이스 속성 또는 멤버 선언과 일치해야 합니다.  인터페이스의 요소를 구현하는 가장 일반적인 방법은 이전 예제와 같이 인터페이스와 이름이 같은 멤버를 사용하는 것입니다.  
   
@@ -67,7 +67,7 @@ caps.handback.revision: 11
   
  `Implements`를 사용하여 다음 예제와 같이 인터페이스에서 정의된 여러 메서드를 구현하는 단일 메서드를 작성할 수도 있습니다.  
   
- [!code-vb[VbVbalrOOP#70](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#70)]  
+ [!code-vb[VbVbalrOOP#70](../../../../visual-basic/misc/codesnippet/VisualBasic/index_3.vb)]  
   
  전용 멤버를 사용하여 인터페이스 멤버를 구현할 수 있습니다.  전용 멤버가 인터페이스의 멤버를 구현하는 경우 이 멤버는 클래스에 대한 개체 변수에 대해 직접 사용할 수 없더라도 인터페이스를 통해 사용할 수 있게 됩니다.  
   
@@ -76,15 +76,15 @@ caps.handback.revision: 11
   
  다음 예제에서는 두 인터페이스를 정의합니다.  두 번째 인터페이스인 `Interface2`는 `Interface1`을 상속하며 추가 속성 및 메서드를 정의합니다.  
   
- [!code-vb[VbVbalrOOP#39](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#39)]  
+ [!code-vb[VbVbalrOOP#39](../../../../visual-basic/misc/codesnippet/VisualBasic/index_4.vb)]  
   
  다음 예제에서는 이전 예제에서 정의된 인터페이스인 `Interface1`을 구현합니다.  
   
- [!code-vb[VbVbalrOOP#40](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#40)]  
+ [!code-vb[VbVbalrOOP#40](../../../../visual-basic/misc/codesnippet/VisualBasic/index_5.vb)]  
   
  마지막 예제에서는 `Interface1`에서 상속된 메서드를 포함하여 `Interface2`를 구현합니다.  
   
- [!code-vb[VbVbalrOOP#41](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#41)]  
+ [!code-vb[VbVbalrOOP#41](../../../../visual-basic/misc/codesnippet/VisualBasic/index_6.vb)]  
   
  읽기\/쓰기 속성을 사용하여 읽기 전용 속성을 구현할 수 있습니다\(즉, 구현 클래스에서 읽기 전용으로 선언할 필요가 없음\).  인터페이스를 선언하면 최소한 이 인터페이스가 선언하는 멤버가 구현됩니다. 하지만 속성을 쓰기 가능하도록 허용하는 등, 더 많은 기능을 제공할 수 있습니다.  
   

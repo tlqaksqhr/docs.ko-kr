@@ -44,7 +44,7 @@ caps.handback.revision: 18
 ## 예제  
  다음 예제에서 `b`는 `Byte` 변수입니다.  예제의 문에서는 이 변수의 범위와 비트 시프트 연산자가 적용되는 방법을 보여 줍니다.  
   
- [!code-vb[VbVbalrDataTypes#16](../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/byte-data-type_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#16](../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/byte-data-type_1.vb)]  
   
 ## 참고 항목  
  <xref:System.Byte?displayProperty=fullName>   

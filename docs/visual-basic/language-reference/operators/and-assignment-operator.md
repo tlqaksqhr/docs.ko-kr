@@ -51,7 +51,7 @@ variableorproperty &= expression
 ## 예제  
  다음 예제에서는 `&=` 연산자를 사용하여 두 `String` 변수를 연결하고 결과를 첫 번째 변수에 할당합니다.  
   
- [!code-vb[VbVbalrOperators#3](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/and-assignment-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#3](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/and-assignment-operator_1.vb)]  
   
 ## 참고 항목  
  [& Operator](../../../visual-basic/language-reference/operators/concatenation-operator.md)   

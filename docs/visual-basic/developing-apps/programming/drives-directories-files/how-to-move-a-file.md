@@ -27,13 +27,13 @@ caps.handback.revision: 20
   
 -   `MoveFile` 메서드를 사용하여 소스 파일과 대상 파일의 위치 및 파일 이름을 지정하여 파일을 이동합니다. 이 예제에서는 이름이 `test.txt`인 파일을 `TestDir1`에서 `TestDir2`로 이동합니다. 여기서는 대상 파일 이름이 소스 파일 이름과 동일하더라도 대상 파일 이름을 지정했습니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#24](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-move-a-file_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#24](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-move-a-file_1.vb)]  
   
 ### 파일을 이동하고 이름을 바꾸려면  
   
 -   `MoveFile` 메서드를 사용하여 소스 파일 이름과 위치, 대상 위치 및 대상 위치에서의 새 이름을 지정하여 파일을 이동합니다. 이 예제에서는 이름이 `test.txt`인 파일을 `TestDir1`에서 `TestDir2`로 이동하고 이름을 `nexttest.txt`로 바꿉니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#25](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-move-a-file_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#25](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-move-a-file_2.vb)]  
   
 ## 강력한 프로그래밍  
  다음 조건에서 예외가 발생합니다.  

@@ -31,7 +31,7 @@ caps.handback.revision: 18
  사용자 정의 형식으로 `<<` 연산자를 오버로드할 수 있습니다\([operator](../../../csharp/language-reference/keywords/operator.md) 참조\). 이 경우, 첫째 피연산자의 형식은 사용자 정의 형식이어야 하며 둘째 피연산자의 형식은 `int`여야 합니다.  이항 연산자가 오버로드되면 해당 대입 연산자도 암시적으로 오버로드됩니다.  
   
 ## 예제  
- [!code-cs[csRefOperators#14](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#14)]  
+ [!code-cs[csRefOperators#14](../../../csharp/language-reference/operators/codesnippet/CSharp/left-shift-operator_1.cs)]  
   
 ## 설명  
  1과 33은 하위 5비트가 같기 때문에 `i<<1`과 `i<<33` 의 결과는 같습니다.  

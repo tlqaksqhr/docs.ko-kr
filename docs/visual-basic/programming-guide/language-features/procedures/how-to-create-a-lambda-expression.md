@@ -36,15 +36,15 @@ caps.handback.revision: 27
   
 3.  매개 변수 목록 다음에 단일 식을 함수의 본문으로 입력합니다.  식에서 계산하는 값은 함수에서 반환된 값입니다.  `As` 절을 사용하여 반환 데이터 형식을 지정하지 마십시오.  
   
-     [!code-vb[VbVbalrLambdas#1](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#1)]  
+     [!code-vb[VbVbalrLambdas#1](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_1.vb)]  
   
      정수 인수를 전달하여 람다 식을 호출합니다.  
   
-     [!code-vb[VbVbalrLambdas#2](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#2)]  
+     [!code-vb[VbVbalrLambdas#2](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_2.vb)]  
   
 4.  또는 다음 예제에 의해 같은 결과가 나올 수 있습니다.  
   
-     [!code-vb[VbVbalrLambdas#3](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#3)]  
+     [!code-vb[VbVbalrLambdas#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_3.vb)]  
   
 ### 한 줄로 된 람다 식 서브루틴을 만들려면  
   
@@ -58,11 +58,11 @@ caps.handback.revision: 27
   
 3.  매개 변수 목록 다음에 단일 문을 서브루틴의 본문으로 입력합니다.  
   
-     [!code-vb[VbVbalrLambdas#17](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#17)]  
+     [!code-vb[VbVbalrLambdas#17](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_4.vb)]  
   
      문자열 인수를 전달하여 람다 식을 호출합니다.  
   
-     [!code-vb[VbVbalrLambdas#18](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#18)]  
+     [!code-vb[VbVbalrLambdas#18](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_5.vb)]  
   
 ### 여러 줄로 된 람다 식 함수를 만들려면  
   
@@ -78,11 +78,11 @@ caps.handback.revision: 27
   
 4.  함수 본문 내에 식을 만들고 값을 반환할 다음 코드를 추가합니다.  `As` 절을 사용하여 반환 데이터 형식을 지정하지 마십시오.  
   
-     [!code-vb[VbVbalrLambdas#19](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#19)]  
+     [!code-vb[VbVbalrLambdas#19](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_6.vb)]  
   
      정수 인수를 전달하여 람다 식을 호출합니다.  
   
-     [!code-vb[VbVbalrLambdas#20](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#20)]  
+     [!code-vb[VbVbalrLambdas#20](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_7.vb)]  
   
 ### 여러 줄로 된 람다 식 서브루틴을 만들려면  
   
@@ -98,20 +98,20 @@ caps.handback.revision: 27
   
 4.  함수 본문 내에 서브루틴 호출 시 실행할 다음 코드를 추가합니다.  
   
-     [!code-vb[VbVbalrLambdas#21](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#21)]  
+     [!code-vb[VbVbalrLambdas#21](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_8.vb)]  
   
      문자열 인수를 전달하여 람다 식을 호출합니다.  
   
-     [!code-vb[VbVbalrLambdas#22](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#22)]  
+     [!code-vb[VbVbalrLambdas#22](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_9.vb)]  
   
 ## 예제  
  람다 식의 일반적인 사용은 형식이 `Delegate`인 매개 변수에 대해 인수로 전달될 수 있는 함수를 정의하는 것입니다.  다음 예제에서 <xref:System.Diagnostics.Process.GetProcesses%2A> 메서드는 로컬 컴퓨터에서 실행되는 프로세스의 배열을 반환합니다.  <xref:System.Linq.Enumerable> 클래스의 <xref:System.Linq.Enumerable.Where%2A> 메서드에는 `Boolean` 대리자가 인수로 필요합니다.  이 예제의 람다 식이 해당 용도로 사용됩니다.  하나의 스레드만 있는 각 프로세스에 대해 `True`를 반환하고 `filteredList`에서 선택됩니다.  
   
- [!code-vb[VbVbalrLambdas#10](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class4.vb#10)]  
+ [!code-vb[VbVbalrLambdas#10](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_10.vb)]  
   
  앞의 예제는 [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext-md.md)] 구문으로 작성된 다음 코드와 동일합니다.  
   
- [!code-vb[VbVbalrLambdas#11](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class5.vb#11)]  
+ [!code-vb[VbVbalrLambdas#11](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_11.vb)]  
   
 ## 참고 항목  
  <xref:System.Linq.Enumerable>   

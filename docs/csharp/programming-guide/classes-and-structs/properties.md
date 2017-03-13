@@ -24,7 +24,7 @@ caps.handback.revision: 38
  이 예제에서 `TimePeriod` 클래스는 기간을 저장합니다.  내부적으로 이 클래스는 초 단위로 시간을 저장하지만, `Hours`라는 속성을 사용하여 클라이언트에서 시간 단위로 시간을 지정할 수 있습니다.  `Hours` 속성에 대한 접근자는 시간과 초 사이의 변환을 수행합니다.  
   
 ## 예제  
- [!code-cs[csProgGuideProperties#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/properties_1.cs)]  
+ [!code-cs[csProgGuideProperties#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/properties_1.cs)]  
   
 ## 식 본문 정의  
  일반적으로 식의 결과와 함께 바로 반환되는 속성이 있습니다.  `=>`를 사용하여 이러한 속성을 정의하기 위한 구문 바로 가기는 다음과 같습니다.  

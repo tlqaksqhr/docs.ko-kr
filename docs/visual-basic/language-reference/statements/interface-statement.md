@@ -104,7 +104,7 @@ End Interface
   
      클래스 인스턴스를 변수에 할당하는 경우 해당 멤버의 액세스 수준은 변수의 데이터 형식이 기본 인터페이스인지 구현 클래스인지에 따라 달라질 수 있습니다.  다음은 이에 대한 예입니다.  
   
-     [!code-vb[VbVbalrStatements#39](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/interface-statement_1.vb)]  
+     [!code-vb[VbVbalrStatements#39](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/interface-statement_1.vb)]  
   
      `varAsInterface`를 통해 클래스 멤버에 액세스하는 경우 해당 클래스 멤버는 모두 공용 액세스 권한을 가집니다.  그러나 `varAsClass`를 통해 멤버에 액세스하는 경우에는 `Sub` 프로시저 `doSomething`이 전용 액세스 권한을 가집니다.  
   
@@ -117,7 +117,7 @@ End Interface
 ## 예제  
  다음 예제에서는 `Interface` 문을 사용하여 `thisInterface` 인터페이스를 정의합니다. 이 인터페이스는 `Property` 문 및 `Function` 문으로 구현되어야 합니다.  
   
- [!code-vb[VbVbalrStatements#40](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/interface-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#40](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/interface-statement_2.vb)]  
   
  `Property` 및 `Function` 문은 인터페이스 내에서 `End Property` 및 `End Function`으로 끝나는 블록을 정의하지 않습니다.  인터페이스는 해당 멤버의 시그니처만 정의합니다.  전체 `Property` 및 `Function` 블록은 `thisInterface`를 구현하는 클래스에 표시됩니다.  
   

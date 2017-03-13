@@ -60,7 +60,7 @@ caps.handback.revision: 27
 ## 예제  
  다음 `Function` 프로시저는 직각 삼각형의 두 변의 값을 사용하여 가장 긴 변\(빗변\)의 길이를 계산합니다.  
   
- [!code-vb[VbVbcnProcedures#1](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-create-a-procedure_1.vb)]  
+ [!code-vb[VbVbcnProcedures#1](./codesnippet/VisualBasic/how-to-create-a-procedure_1.vb)]  
   
 ## 참고 항목  
  [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   

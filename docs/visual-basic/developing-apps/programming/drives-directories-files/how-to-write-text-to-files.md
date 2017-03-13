@@ -32,7 +32,7 @@ caps.handback.revision: 19
   
 -   파일에 텍스트를 쓰려면 `WriteAllText` 메서드를 사용하면서 쓸 파일 및 텍스트를 지정합니다.  이 예제에서는 `"This is new text."`라는 줄을 `test.txt` 파일에 쓰면서 텍스트를 파일의 기존 텍스트에 추가합니다.  
   
-     [!code-vb[VbFileIOWrite#3](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-write-text-to-files_1.vb)]  
+     [!code-vb[VbFileIOWrite#3](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files_1.vb)]  
   
 #### 파일에 일련의 문자열을 쓰려면  
   
@@ -40,7 +40,7 @@ caps.handback.revision: 19
   
      이 예제에서는 `Documents and Settings` 디렉터리에 있는 파일의 이름을 `FileList.txt`에 쓰고 가독성을 높이기 위해 각 이름 사이에 캐리지 리턴을 삽입합니다.  
   
-     [!code-vb[VbFileIOWrite#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-write-text-to-files_2.vb)]  
+     [!code-vb[VbFileIOWrite#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files_2.vb)]  
   
 ## 강력한 프로그래밍  
  다음 조건에서 예외가 발생할 수 있습니다.  

@@ -68,7 +68,7 @@ number1 * number2
 ## 예제  
  다음 예제에서는 `*` 연산자를 사용하여 두 숫자를 곱합니다.  결과는 두 피연산자의 곱입니다.  
   
- [!code-vb[VbVbalrOperators#4](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/multiplication-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#4](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/multiplication-operator_1.vb)]  
   
 ## 참고 항목  
  [\*\= Operator](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)   

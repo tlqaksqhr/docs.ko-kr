@@ -26,7 +26,7 @@ caps.handback.revision: 11
 이 예제에서는 XML 네임스페이스 접두사 `ns`를 가져오는 방법과 XML 리터럴 및 XML 축 속성에서 이것을 사용하는 방법을 보여 줍니다.  
   
 ## 예제  
- [!code-vb[VbXMLSamples#8](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-declare-and-use-x_1.vb)]  
+ [!code-vb[VbXMLSamples#8](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-declare-and-use-xml-namespace-prefixes_1.vb)]  
   
 ## 코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  

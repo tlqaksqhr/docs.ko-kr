@@ -62,7 +62,7 @@ caps.handback.revision: 18
 ## 예제  
  다음 예제에서는 <xref:System.Runtime.InteropServices.DllImportAttribute> 특성을 `Function` 프로시저의 기본 정의에 적용합니다.  
   
- [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/attribute-list_1.vb)]  
+ [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/attribute-list_1.vb)]  
   
  <xref:System.Runtime.InteropServices.DllImportAttribute>는 특성 사용 프로시저가 관리되지 않는 DLL\(동적 연결 라이브러리\)의 진입점을 표시함을 나타냅니다.  이 특성은 DLL 이름을 위치 인수로, 다른 정보를 변수 이니셜라이저로 제공합니다.  
   

@@ -55,8 +55,8 @@ caps.handback.revision: 15
   
 4.  `Event` 프로시저에 다음 코드를 추가합니다.  
   
-     [!code-cs[VbPowerpacksShape#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/csharp/VbPowerpacksShapeCS/VbPowerpacksShape.cs#1)]
-     [!code-vb[VbPowerpacksShape#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/visualbasic/VbPowerpacksShape/VbPowerpacksShape.vb#1)]  
+     [!code-cs[VbPowerpacksShape#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/CSharp/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls_1.cs)]
+     [!code-vb[VbPowerpacksShape#1](../../../visual-basic/developing-apps/windows-forms/codesnippet/VisualBasic/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls_1.vb)]  
   
 ## 도형 사용자 지정  
  기본 설정을 사용하는 경우 <xref:Microsoft.VisualBasic.PowerPacks.OvalShape> 및 <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape> 컨트롤은 너비가 1픽셀이고 배경이 투명한 검은색 실선 테두리로 표시됩니다.  속성을 설정하여 테두리의 너비, 스타일 및 색을 변경할 수 있습니다.  추가 속성을 사용하면 도형의 배경을 단색, 패턴, 그라데이션 채우기 또는 이미지로 변경할 수 있습니다.  

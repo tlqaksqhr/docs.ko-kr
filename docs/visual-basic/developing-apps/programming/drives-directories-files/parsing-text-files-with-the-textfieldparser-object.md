@@ -28,11 +28,11 @@ caps.handback.revision: 20
 ## 서로 다른 형식의 텍스트 파일 구문 분석  
  텍스트 파일에는 쉼표 또는 탭 공백 등과 같은 문자로 구분된 다양한 너비의 필드가 있을 수 있습니다.  이 경우에는 `SetDelimiters` 메서드를 사용하여 탭으로 구분된 텍스트 파일을 정의하는 다음 예제에서처럼 `TextFieldType`과 구분 기호를 정의합니다.  
   
- [!code-vb[VbVbalrTextFieldParser#21](../../../../visual-basic/developing-apps/development-with-my/codesnippet/visualbasic/parsing-text-files-with-_1.vb)]  
+ [!code-vb[VbVbalrTextFieldParser#21](../../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/parsing-text-files-with-the-textfieldparser-object_1.vb)]  
   
  필드 너비가 고정된 텍스트 파일도 있을 수 있습니다.  이러한 경우에는 다음 예제처럼 `TextFieldType`을 `FixedWidth`로 정의하고 각 필드의 너비를 정의해야 합니다.  이 예제에서는 `SetFieldWidths` 메서드를 사용하여 텍스트의 열을 정의합니다. 즉, 첫 번째 열의 너비는 5자, 두 번째 열은 10자, 세 번째 열은 11자 그리고 네 번째 열은 가변 너비로 정의합니다.  
   
- [!code-vb[VbVbalrTextFieldParser#22](../../../../visual-basic/developing-apps/development-with-my/codesnippet/visualbasic/parsing-text-files-with-_2.vb)]  
+ [!code-vb[VbVbalrTextFieldParser#22](../../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/parsing-text-files-with-the-textfieldparser-object_2.vb)]  
   
  형식이 정의되면 파일을 순환하며 `ReadFields` 메서드를 사용하여 각 줄을 차례로 처리할 수 있습니다.  
   

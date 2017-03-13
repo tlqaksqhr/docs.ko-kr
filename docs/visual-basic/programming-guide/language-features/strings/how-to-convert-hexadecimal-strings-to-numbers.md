@@ -33,7 +33,7 @@ caps.handback.revision: 9
   
      <xref:System.Convert.ToInt32%2A> 메서드의 첫 번째 인수는 변환할 문자열입니다.  두 번째 인수는 숫자의 기수를 나타냅니다. 16진수의 기수는 16입니다.  
   
-     [!code-vb[VbVbalrStrings#62](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-to-convert-hexadecim_1.vb)]  
+     [!code-vb[VbVbalrStrings#62](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-hexadecimal-strings-to-numbers_1.vb)]  
   
 ## 참고 항목  
  <xref:Microsoft.VisualBasic.Conversion.Hex%2A>   

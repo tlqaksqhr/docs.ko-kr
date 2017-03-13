@@ -66,7 +66,7 @@ caps.handback.revision: 47
 ##  <a name="BKMK_ArrayElements"></a> 1차원 배열의 배열 요소  
  다음 예제에서는 초등학교 각 학년의 학생 수를 보유하는 배열 변수를 선언합니다.  
   
- [!code-vb[VbVbalrArrays#2](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_1.vb)]  
+ [!code-vb[VbVbalrArrays#2](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_1.vb)]  
   
  앞의 예제에서 `students` 배열은 7개 요소를 포함합니다. 요소의 인덱스 범위는 0부터 6까지입니다. 이 배열은 사용하는 것이 7개의 변수를 선언하는 것보다 더 간단합니다.  
   
@@ -81,7 +81,7 @@ caps.handback.revision: 47
   
  다음 예제에서는 `students` 배열의 첫 번째, 두 번째 및 마지막 요소를 참조하는 방법을 보여 줍니다.  
   
- [!code-vb[VbVbalrArrays#3](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_2.vb)]  
+ [!code-vb[VbVbalrArrays#3](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_2.vb)]  
   
  인덱스 없이 배열 변수 이름만 사용하여 배열 전체를 참조할 수 있습니다.  
   
@@ -90,55 +90,55 @@ caps.handback.revision: 47
 ##  <a name="BKMK_CreatingAnArray"></a> 배열 만들기  
  여러 가지 방법으로 배열의 크기를 정의할 수 있습니다. 다음 예제와 같이 배열을 선언할 때 크기를 제공할 수 있습니다.  
   
- [!code-vb[VbVbalrArrays#12](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_3.vb)]  
+ [!code-vb[VbVbalrArrays#12](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_3.vb)]  
   
  다음 예제와 같이 배열을 만들 때 `New` 절을 사용하여 배열의 크기를 제공할 수도 있습니다.  
   
- [!code-vb[VbVbalrArrays#11](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_4.vb)]  
+ [!code-vb[VbVbalrArrays#11](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_4.vb)]  
   
  기존 배열이 있는 경우 `Redim` 문을 사용하여 해당 크기를 다시 정의할 수 있습니다.`Redim` 문이 배열에 있는 값을 유지하도록 지정하거나 빈 배열을 만들도록 지정할 수 있습니다. 다음 예제에서는 `Redim` 문을 사용하여 기존 배열의 크기를 수정하는 여러 가지 방법을 보여 줍니다.  
   
- [!code-vb[VbVbalrArrays#13](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_5.vb)]  
+ [!code-vb[VbVbalrArrays#13](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_5.vb)]  
   
  자세한 내용은 [ReDim Statement](../../../../visual-basic/language-reference/statements/redim-statement.md)을 참조하세요.  
   
 ##  <a name="BKMK_StoringValues"></a> 배열에 값 저장  
  `Integer` 형식의 인덱스를 사용하여 배열의 각 위치에 액세스할 수 있습니다. 괄호로 묶인 해당 인덱스를 통해 각 배열 위치를 참조하여 배열에 값을 저장하고 검색할 수 있습니다. 다차원 배열에 대한 인덱스는 쉼표\(,\)로 구분됩니다. 각 배열 차원에 대해 하나의 인덱스가 필요합니다. 다음 예제는 배열에 값을 저장하는 몇 가지 문을 보여 줍니다.  
   
- [!code-vb[VbVbalrArrays#5](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_6.vb)]  
+ [!code-vb[VbVbalrArrays#5](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_6.vb)]  
   
  다음 예제는 배열에서 값을 가져오는 몇 가지 문을 보여 줍니다.  
   
- [!code-vb[VbVbalrArrays#6](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_7.vb)]  
+ [!code-vb[VbVbalrArrays#6](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_7.vb)]  
   
 ##  <a name="BKMK_Populating"></a> 배열을 초기 값으로 채우기  
  배열 리터럴을 사용하여 초기 값 집합을 포함하는 배열을 만들 수 있습니다. 배열 리터럴은 중괄호\(`{}`\)로 묶인 쉼표로 구분된 값 목록으로 구성됩니다.  
   
  배열 리터럴을 사용하여 배열을 만드는 경우 배열 형식을 제공하거나 형식 유추를 사용하여 배열 형식을 결정할 수 있습니다. 다음 코드에서는 두 가지 옵션을 모두 보여 줍니다.  
   
- [!code-vb[VbVbalrCollectionInitializers#3](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_8.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#3](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_8.vb)]  
   
  형식 유추를 사용하는 경우 배열 리터럴에 대해 제공된 값 목록의 기준 형식에 의해 배열 형식이 결정됩니다. 기준 형식은 배열 리터럴의 다른 모든 형식이 확장될 수 있는 고유 형식입니다. 이 고유 형식을 확인할 수 없는 경우 기준 형식은 배열의 다른 모든 형식이 축소될 수 있는 고유 형식입니다. 이러한 고유 형식을 모두 확인할 수 없는 경우 기준 형식은 `Object`입니다. 예를 들어 배열 리터럴에 제공된 값 목록이 `Integer`, `Long` 및 `Double` 형식의 값을 포함하는 경우 결과 배열은 `Double` 형식입니다.`Integer` 및 `Long`은 둘 다 `Double`로만 확장됩니다. 따라서 기준 형식은 `Double`입니다. 자세한 내용은 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)을 참조하세요. 이러한 유추 규칙은 클래스 멤버에서 정의된 지역 변수인 배열에 대해 유추된 형식에 적용됩니다. 클래스 수준 변수를 만들 때 배열 리터럴을 사용할 수 있지만 클래스 수준에서 형식 유추를 사용할 수는 없습니다. 따라서 클래스 수준에서 지정된 배열 리터럴은 배열 리터럴에 대해 제공된 값을 `Object` 형식으로 유추합니다.  
   
  배열 리터럴을 사용하여 만든 배열의 요소 형식을 명시적으로 지정할 수 있습니다. 이 경우 배열 리터럴의 값이 배열 요소의 형식으로 확장되어야 합니다. 다음 코드 예제는 정수 목록에서 `Double` 형식의 배열을 만듭니다.  
   
- [!code-vb[VbVbalrCollectionInitializers#4](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_9.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#4](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_9.vb)]  
   
 ###  <a name="BKMK_NestedArrayLiterals"></a> 중첩된 배열 리터럴  
  중첩된 배열 리터럴을 사용하여 다차원 배열을 만들 수 있습니다. 중첩된 배열 리터럴에는 결과 배열과 일치하는 차원 및 차원 수 또는 차수가 있어야 합니다. 다음 코드 예제는 배열 리터럴을 사용하여 정수의 2차원 배열을 만듭니다.  
   
- [!code-vb[VbVbalrCollectionInitializers#7](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_10.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#7](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_10.vb)]  
   
  이전 예제에서 중첩된 배열 리터럴의 요소 수가 일치하지 않으면 오류가 발생합니다. 배열 변수를 2차원 이외의 배열로 명시적으로 선언한 경우에도 오류가 발생합니다.  
   
 > [!NOTE]
 >  내부 배열 리터럴을 괄호로 묶어 여러 차원의 중첩된 배열 리터럴을 제공하면 오류를 방지할 수 있습니다. 다음 코드와 같이 괄호는 배열 리터럴 식이 계산되도록 강제하며, 결과 값이 외부 배열 리터럴과 함께 사용됩니다.  
   
- [!code-vb[VbVbalrCollectionInitializers#11](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_11.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#11](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_11.vb)]  
   
  중첩된 배열 리터럴을 사용하여 다차원 배열을 만드는 경우 형식 유추를 사용할 수 있습니다. 형식 유추를 사용하는 경우 유추된 형식은 중첩 수준의 모든 배열 리터럴에 있는 모든 값에 대한 기준 형식입니다. 다음 코드 예제는 `Integer` 및 `Double` 형식의 값에서 `Double` 형식의 2차원 배열을 만듭니다.  
   
- [!code-vb[VbVbalrCollectionInitializers#8](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/visualbasic/index_12.vb)]  
+ [!code-vb[VbVbalrCollectionInitializers#8](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_12.vb)]  
   
  추가 예제는 [How to: Initialize an Array Variable in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)를 참조하세요.  
   
@@ -147,19 +147,19 @@ caps.handback.revision: 47
   
  다음 예제에서는 [For...Next 문](../../../../visual-basic/language-reference/statements/for-next-statement.md)을 사용하여 1차원 배열을 반복합니다.<xref:System.Array.GetUpperBound%2A> 메서드는 인덱스가 가질 수 있는 가장 높은 값을 반환합니다. 가장 낮은 인덱스 값은 항상 0입니다.  
   
- [!code-vb[VbVbalrArrays#41](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_13.vb)]  
+ [!code-vb[VbVbalrArrays#41](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_13.vb)]  
   
  다음 예제에서는 `For...Next` 문을 사용하여 다차원 배열을 반복합니다.<xref:System.Array.GetUpperBound%2A> 메서드에는 차원을 지정하는 매개 변수가 있습니다.`GetUpperBound(0)`는 첫 번째 차원에 대한 높은 인덱스 값을 반환하고 `GetUpperBound(1)`는 두 번째 차원에 대한 높은 인덱스 값을 반환합니다.  
   
- [!code-vb[VbVbalrArrays#42](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_14.vb)]  
+ [!code-vb[VbVbalrArrays#42](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_14.vb)]  
   
  다음 예제에서는 [For Each...Next 문](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)을 사용하여 1차원 배열을 반복합니다.  
   
- [!code-vb[VbVbalrArrays#43](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_15.vb)]  
+ [!code-vb[VbVbalrArrays#43](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_15.vb)]  
   
  다음 예제에서는 `For Each...Next` 문을 사용하여 다차원 배열을 반복합니다. 그러나 이전 예제와 같이 중첩된 `For…Next` 문을 `For Each…Next` 문 대신 사용하면 다차원 배열의 요소를 보다 효과적으로 제어할 수 있습니다.  
   
- [!code-vb[VbVbalrArrays#44](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_16.vb)]  
+ [!code-vb[VbVbalrArrays#44](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_16.vb)]  
   
 ##  <a name="BKMK_ReturnValues"></a> 반환 값 및 매개 변수로 사용되는 배열  
  `Function` 프로시저에서 배열을 반환하려면 배열 데이터 형식 및 차원 수를 [Function Statement](../../../../visual-basic/language-reference/statements/function-statement.md)의 반환 형식으로 지정합니다. 함수 내에서 동일한 데이터 형식 및 차원 수의 지역 배열 변수를 선언합니다.[Return Statement](../../../../visual-basic/language-reference/statements/return-statement.md)에 지역 배열 변수를 괄호 없이 포함합니다.  
@@ -168,23 +168,23 @@ caps.handback.revision: 47
   
  다음 예제에서 `GetNumbers` 함수는 `Integer()`를 반환합니다. 이 배열 형식은 `Integer` 형식의 1차원 배열입니다.`ShowNumbers` 프로시저는 `Integer()` 인수를 사용합니다.  
   
- [!code-vb[VbVbalrArrays#51](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_17.vb)]  
+ [!code-vb[VbVbalrArrays#51](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_17.vb)]  
   
  다음 예제에서 `GetNumbersMultiDim` 함수는 `Integer(,)`를 반환합니다. 이 배열 형식은 `Integer` 형식의 2차원 배열입니다.`ShowNumbersMultiDim` 프로시저는 `Integer(,)` 인수를 사용합니다.  
   
- [!code-vb[VbVbalrArrays#52](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_18.vb)]  
+ [!code-vb[VbVbalrArrays#52](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_18.vb)]  
   
 ##  <a name="BKMK_JaggedArrays"></a> 가변 배열  
  다른 배열을 요소로 포함하는 배열을 배열의 배열 또는 가변 배열이라고 합니다. 가변 배열 및 가변 배열의 각 요소에는 하나 이상의 차원이 있을 수 있습니다. 응용 프로그램의 데이터 구조가 2차원 배열이지만 사각형이 아닌 경우도 있습니다.  
   
  다음 예제에는 각 요소가 일 배열인 월 배열이 있습니다. 각 월의 일수가 서로 다르기 때문에 요소는 사각형 2차원 배열을 만들지 않습니다. 따라서 다차원 배열 대신 가변 배열이 사용됩니다.  
   
- [!code-vb[VbVbalrArrays#21](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_19.vb)]  
+ [!code-vb[VbVbalrArrays#21](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_19.vb)]  
   
 ##  <a name="BKMK_ZeroLength"></a> 길이가 0인 배열  
  요소를 포함하지 않는 배열을 길이가 0인 배열이라고도 합니다. 길이가 0인 배열을 저장하는 변수에는 `Nothing` 값이 없습니다. 요소가 없는 배열을 만들려면 다음 예제와 같이 배열의 차원 중 하나를 \-1로 선언합니다.  
   
- [!code-vb[VbVbalrArrays#14](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_20.vb)]  
+ [!code-vb[VbVbalrArrays#14](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_20.vb)]  
   
  다음과 같은 경우 길이가 0인 배열을 만들어야 할 수도 있습니다.  
   
@@ -233,7 +233,7 @@ Dim prices(3, 4, 5) As Long
   
  다음 예제에서는 `TypeName` 함수를 호출하여 배열 형식과 배열의 요소 형식을 확인합니다. 배열 형식은 `Integer(,)`이고 배열의 요소는 `Integer` 형식입니다.  
   
- [!code-vb[VbVbalrArrays#15](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_21.vb)]  
+ [!code-vb[VbVbalrArrays#15](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_21.vb)]  
   
 ##  <a name="BKMK_Collections"></a> 배열의 대안으로 사용되는 컬렉션  
  배열은 고정된 개수의 강력한 형식 개체를 만들고 작업하는 데 가장 유용합니다. 컬렉션은 개체 그룹에 대해 작업하는 보다 유연한 방법을 제공합니다. 배열과 달리, 응용 프로그램의 요구가 변경됨에 따라 작업하는 개체 그룹이 동적으로 확장되거나 축소될 수 있습니다.  
@@ -249,7 +249,7 @@ Dim prices(3, 4, 5) As Long
 ### 예제  
  다음 예제에서는 [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)] 제네릭 클래스 <xref:System.Collections.Generic.List%601?displayProperty=fullName>을 사용하여 `Customer` 개체의 목록 컬렉션을 만듭니다.  
   
- [!code-vb[VbVbalrArrays#1](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/visualbasic/index_22.vb)]  
+ [!code-vb[VbVbalrArrays#1](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_22.vb)]  
   
  `CustomerFile` 컬렉션의 선언은 `Customer` 형식의 요소만 포함될 수 있도록 지정합니다. 또한 200개 요소의 초기 용량을 제공합니다.`AddNewCustomer` 프로시저는 새 요소의 유효성을 확인하고 컬렉션에 추가합니다.`PrintCustomers` 프로시저는 `For Each` 루프를 사용하여 컬렉션을 트래버스하고 해당 요소를 표시합니다.  
   

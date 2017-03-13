@@ -61,31 +61,31 @@ Aggregate element [As type] In collection _
 |||  
 |-|-|  
 |Function|설명|  
-|`All`|컬렉션의 모든 요소가 지정된 조건을 충족하는 경우 `true`를 반환하고, 그렇지 않으면 `false`를 반환합니다.  예를 들면 다음과 같습니다.<br /><br /> [!code-vb[VbSimpleQuerySamples#5](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#5)]|  
-|`Any`|지정된 조건을 충족하는 요소가 컬렉션에 하나라도 있는 경우 `true`를 반환하고, 그렇지 않으면 `false`를 반환합니다.  예를 들면 다음과 같습니다.<br /><br /> [!code-vb[VbSimpleQuerySamples#6](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#6)]|  
-|`Average`|컬렉션에서 모든 요소의 평균을 계산하거나 컬렉션에 있는 모든 요소에 대해 제공된 식을 계산합니다.  예를 들면 다음과 같습니다.<br /><br /> [!code-vb[VbSimpleQuerySamples#7](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#7)]|  
-|`Count`|컬렉션에 있는 요소의 수를 계산합니다.  선택적인 `Boolean` 식을 제공하여 컬렉션에 있는 요소 중 조건을 충족하는 요소의 수만 계산할 수 있습니다.  예를 들면 다음과 같습니다.<br /><br /> [!code-vb[VbSimpleQuerySamples#8](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#8)]|  
+|`All`|컬렉션의 모든 요소가 지정된 조건을 충족하는 경우 `true`를 반환하고, 그렇지 않으면 `false`를 반환합니다.  예를 들면 다음과 같습니다.<br /><br /> [!code-vb[VbSimpleQuerySamples#5](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_1.vb)]|  
+|`Any`|지정된 조건을 충족하는 요소가 컬렉션에 하나라도 있는 경우 `true`를 반환하고, 그렇지 않으면 `false`를 반환합니다.  예를 들면 다음과 같습니다.<br /><br /> [!code-vb[VbSimpleQuerySamples#6](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_2.vb)]|  
+|`Average`|컬렉션에서 모든 요소의 평균을 계산하거나 컬렉션에 있는 모든 요소에 대해 제공된 식을 계산합니다.  예를 들면 다음과 같습니다.<br /><br /> [!code-vb[VbSimpleQuerySamples#7](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_3.vb)]|  
+|`Count`|컬렉션에 있는 요소의 수를 계산합니다.  선택적인 `Boolean` 식을 제공하여 컬렉션에 있는 요소 중 조건을 충족하는 요소의 수만 계산할 수 있습니다.  예를 들면 다음과 같습니다.<br /><br /> [!code-vb[VbSimpleQuerySamples#8](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_4.vb)]|  
 |`Group`|`Group By` 또는 `Group Join` 절의 결과로 그룹화된 쿼리 결과를 참조합니다.  `Group` 함수는 `Group By` 또는 `Group Join` 절의 `Into` 절에서만 유효합니다.  자세한 내용 및 예제를 보려면 [Group By 절](../../../visual-basic/language-reference/queries/group-by-clause.md) 및 [Group Join Clause](../../../visual-basic/language-reference/queries/group-join-clause.md)를 참조하십시오.|  
 |`LongCount`|컬렉션에 있는 요소의 수를 계산합니다.  선택적인 `Boolean` 식을 제공하여 컬렉션에 있는 요소 중 조건을 충족하는 요소의 수만 계산할 수 있습니다.  결과를 `Long`으로 반환합니다.  예제를 보려면 `Count` 집계 함수를 참조하십시오.|  
-|`Max`|컬렉션에서 최대값을 계산하거나 컬렉션의 모든 요소에 대해 제공된 식을 계산합니다.  예를 들면 다음과 같습니다.<br /><br /> [!code-vb[VbSimpleQuerySamples#9](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#9)]|  
-|`Min`|컬렉션에서 최소값을 계산하거나 컬렉션의 모든 요소에 대해 제공된 식을 계산합니다.  예를 들면 다음과 같습니다.<br /><br /> [!code-vb[VbSimpleQuerySamples#10](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#10)]|  
-|`Sum`|컬렉션에서 모든 요소의 합계를 계산하거나 컬렉션에 있는 모든 요소에 대해 제공된 식을 계산합니다.  예를 들면 다음과 같습니다.<br /><br /> [!code-vb[VbSimpleQuerySamples#15](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#15)]|  
+|`Max`|컬렉션에서 최대값을 계산하거나 컬렉션의 모든 요소에 대해 제공된 식을 계산합니다.  예를 들면 다음과 같습니다.<br /><br /> [!code-vb[VbSimpleQuerySamples#9](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_5.vb)]|  
+|`Min`|컬렉션에서 최소값을 계산하거나 컬렉션의 모든 요소에 대해 제공된 식을 계산합니다.  예를 들면 다음과 같습니다.<br /><br /> [!code-vb[VbSimpleQuerySamples#10](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_6.vb)]|  
+|`Sum`|컬렉션에서 모든 요소의 합계를 계산하거나 컬렉션에 있는 모든 요소에 대해 제공된 식을 계산합니다.  예를 들면 다음과 같습니다.<br /><br /> [!code-vb[VbSimpleQuerySamples#15](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_7.vb)]|  
   
 ## 예제  
  다음 코드 예제는 `Aggregate` 절을 사용하여 집계 함수를 쿼리 결과에 적용하는 방법을 보여 줍니다.  
   
- [!code-vb[VbSimpleQuerySamples#4](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#4)]  
+ [!code-vb[VbSimpleQuerySamples#4](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_8.vb)]  
   
 ## 사용자 정의 집계 함수 만들기  
  확장 메서드를 <xref:System.Collections.Generic.IEnumerable%601> 형식에 추가함으로써 사용자 지정 집계 함수를 쿼리 식에 포함할 수 있습니다.  그러면 사용자 지정 메서드가 집계 함수를 참조한 열거 가능한 컬렉션에서 계산 또는 작업을 수행할 수 있습니다.  확장 메서드에 대한 자세한 내용은 [확장 메서드](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)를 참조하십시오.  
   
  예를 들어 다음 코드 예제는 숫자 컬렉션의 중간 값을 계산하는 사용자 지정 집계 함수를 보여 줍니다.  `Median` 확장 메서드의 오버로드가 두 개 있습니다.  첫 번째 오버로드는 입력으로서 `IEnumerable(Of Double)` 형식의 컬렉션을 받아들입니다.  `Median` 집계 함수가 `Double` 형식의 쿼리 필드에 대해 호출될 경우에는 이 메서드가 호출되지 않습니다.  `Median` 메서드의 두 번째 오버로드는 모든 제네릭 형식을 전달받을 수 있습니다.  `Median` 메서드의 제네릭 오버로드는 `Func(Of T, Double)` 람다 식을 참조하는 두 번째 매개 변수를 사용하는데 이 식은 컬렉션에 있는 형식에 대한 값을 `Double` 형식의 해당 값으로 변환합니다.  그런 다음 중간 값의 계산을 `Median` 메서드의 다른 오버로드에 위임합니다.  람다 식에 대한 자세한 내용은 [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)을 참조하십시오.  
   
- [!code-vb[VbSimpleQuerySamples#18](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/UserDefinedAggregates.vb#18)]  
+ [!code-vb[VbSimpleQuerySamples#18](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_9.vb)]  
   
  다음 코드 예제에서는 `Integer` 형식의 컬렉션과 `Double` 형식의 컬렉션에 `Median` 집계 함수를 호출하는 간단한 쿼리를 보여 줍니다.  `Double` 형식의 컬렉션에 `Median` 집계 함수를 호출하는 쿼리는 입력으로서 `Double` 형식의 컬렉션을 받아들이는 `Median` 메서드의 오버로드를 호출합니다.  `Integer` 형식의 컬렉션에 `Median` 집계 함수를 호출하는 쿼리는 `Median` 메서드의 제네릭 오버로드를 호출합니다.  
   
- [!code-vb[VbSimpleQuerySamples#19](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/UserDefinedAggregates.vb#19)]  
+ [!code-vb[VbSimpleQuerySamples#19](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/aggregate-clause_10.vb)]  
   
 ## 참고 항목  
  [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   

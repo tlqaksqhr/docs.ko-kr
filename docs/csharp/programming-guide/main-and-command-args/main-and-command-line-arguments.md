@@ -7,7 +7,7 @@ C\# 콘솔 응용 프로그램이나 Windows 응용 프로그램의 진입점은
   
  C\# 프로그램에는 진입점이 하나만 있을 수 있습니다.  `Main` 메서드가 있는 클래스가 두 개 이상 있는 경우 **\/main** 컴파일러 옵션을 통해 진입점으로 사용할 `Main` 메서드를 지정하여 프로그램을 컴파일해야 합니다.  자세한 내용은 [\/main \(Specify Location of Main Method\)](../../../csharp/language-reference/compiler-options/main-compiler-option.md)을 참조하십시오.  
   
- [!code-cs[csProgGuideMain#17](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/main-and-command-line-ar_1.cs)]  
+ [!code-cs[csProgGuideMain#17](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-and-command-line-arguments_1.cs)]  
   
 ## 개요  
   

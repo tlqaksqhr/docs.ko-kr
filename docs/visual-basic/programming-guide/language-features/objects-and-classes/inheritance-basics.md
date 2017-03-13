@@ -71,14 +71,14 @@ caps.handback.revision: 23
   
  다음 예제에서는 기본 클래스 `Payroll`과 파생 클래스 `BonusPayroll`을 정의하며 이 클래스는 상속된 메서드 `PayEmployee`를 재정의합니다.  `RunPayroll` 프로시저는 `Payroll` 개체와 `BonusPayroll` 개체를 만든 다음 두 개체의 `PayEmployee` 메서드를 실행하는 함수 `Pay`에 전달합니다.  
   
- [!code-vb[VbVbalrOOP#28](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#28)]  
+ [!code-vb[VbVbalrOOP#28](../../../../visual-basic/misc/codesnippet/VisualBasic/inheritance-basics_1.vb)]  
   
 ## MyBase 키워드  
  `MyBase` 키워드는 현재 클래스 인스턴스의 기본 클래스를 참조하는 개체 변수처럼 동작합니다.  `MyBase`는 파생 클래스에서 재정의되거나 숨겨진 기본 클래스 멤버에 액세스하는 데 많이 사용됩니다.  특히 `MyBase.New`는 파생 클래스 생성자에서 명시적으로 기본 클래스 생성자를 호출하는 데 사용됩니다.  
   
  예를 들어, 기본 클래스에서 상속된 메서드를 재정의하는 파생 클래스를 디자인하고 있다고 가정합니다.  재정의된 메서드는 다음 코드 부분에서와 같이 기본 클래스의 메서드를 호출하고 반환 값을 수정할 수 있습니다.  
   
- [!code-vb[VbVbalrOOP#109](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#109)]  
+ [!code-vb[VbVbalrOOP#109](../../../../visual-basic/misc/codesnippet/VisualBasic/inheritance-basics_2.vb)]  
   
  다음은 `MyBase` 사용 시 적용되는 제한 사항에 대한 설명입니다.  
   

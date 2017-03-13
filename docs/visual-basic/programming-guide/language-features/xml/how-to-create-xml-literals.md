@@ -30,7 +30,7 @@ XML 리터럴을 사용하여 코드에서 직접 XML 문서, 조각 또는 요�
   
 -   실제 XML 구문과 같은 XML 리터럴 구문을 사용하여 XML 인라인을 만듭니다.  
   
-     [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-create-xml-literals_1.vb)]  
+     [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_1.vb)]  
   
      코드를 실행합니다.  이 코드는 다음과 같이 출력됩니다.  
   
@@ -48,7 +48,7 @@ XML 리터럴을 사용하여 코드에서 직접 XML 문서, 조각 또는 요�
   
 -   XML 문서 인라인을 만듭니다.  다음 코드에서는 리터럴 구문, XML 선언, 처리 명령, 주석 및 다른 요소를 포함하는 요소가 있는 XML 문서를 만듭니다.  
   
-     [!code-vb[VbXMLSamples#30](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-create-xml-literals_2.vb)]  
+     [!code-vb[VbXMLSamples#30](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_2.vb)]  
   
      코드를 실행합니다.  이 코드는 다음과 같이 출력됩니다.  
   

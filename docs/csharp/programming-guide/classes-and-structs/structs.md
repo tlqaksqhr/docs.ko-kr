@@ -19,7 +19,7 @@ caps.handback.revision: 31
 # 구조체(C# 프로그래밍 가이드)
 구조체는 다음 예제와 같이 [struct](../../../csharp/language-reference/keywords/struct.md) 키워드를 사용하여 정의합니다.  
   
- [!code-cs[csProgGuideObjects#39](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/structs_1.cs)]  
+ [!code-cs[csProgGuideObjects#39](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/structs_1.cs)]  
   
  구조체는 클래스와 동일한 구문을 대부분 공유하지만 클래스보다 제한적입니다.  
   

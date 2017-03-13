@@ -23,7 +23,7 @@ caps.handback.revision: 17
 ## 예제  
  이 예제에는 최상위 형식인 `T1`과 두 개의 중첩 클래스 `M1` 및 `M2`가 있습니다.  각 클래스는 서로 다른 액세스 가능성이 선언된 필드를 포함하고 있습니다.  `Main` 메서드에서 각 문 뒤에 붙은 주석은 각 멤버의 액세스 가능 도메인을 나타냅니다.  액세스할 수 없는 멤버를 참조하려는 문은 주석으로 처리되어 있습니다.  액세스할 수 없는 멤버를 참조하려고 할 때 발생하는 컴파일러 오류를 보려면 주석을 한 번에 하나씩 제거하십시오.  
   
- [!code-cs[csrefKeywordsModifiers#4](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#4)]  
+ [!code-cs[csrefKeywordsModifiers#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/accessibility-domain_1.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

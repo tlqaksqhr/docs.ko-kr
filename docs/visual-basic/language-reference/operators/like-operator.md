@@ -109,7 +109,7 @@ result = string Like pattern
 ## 예제  
  다음 예제에서는 `Like` 연산자를 사용하여 문자열과 다양한 패턴을 비교합니다.  결과는 각 문자열이 패턴을 충족하는지 나타내는 `Boolean` 변수입니다.  
   
- [!code-vb[VbVbalrOperators#30](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/like-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#30](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/like-operator_1.vb)]  
   
 ## 참고 항목  
  <xref:Microsoft.VisualBasic.Strings.InStr%2A>   

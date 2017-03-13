@@ -21,7 +21,7 @@ C\# 2.0 이상에서 하한이 0인 1차원 배열은 자동으로 <xref:System.
   
  다음 코드 예제에서는 <xref:System.Collections.Generic.IList%601> 입력 매개 변수를 사용하는 단일 제네릭 메서드에서 목록과 배열\(이 경우 정수 배열\) 모두를 통해 반복하는 방법을 보여 줍니다.  
   
- [!code-cs[csProgGuideGenerics#35](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-and-arrays_1.cs)]  
+ [!code-cs[csProgGuideGenerics#35](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-and-arrays_1.cs)]  
   
 ## 참고 항목  
  <xref:System.Collections.Generic>   

@@ -46,17 +46,17 @@ Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]
 ## 예제  
  다음 쿼리 식은 `From` 절을 사용하여 `books` 컬렉션에 대해 `book` 범위 변수를 선언합니다.  `Order By` 절은 가격을 기준으로 쿼리 결과를 오름차순\(기본값\)으로 정렬합니다.  동일한 가격의 책은 제목을 기준으로 오름차순으로 정렬됩니다.  `Select` 절은 쿼리에 의해 반환되는 값으로 `Title` 및 `Price` 속성을 선택합니다.  
   
- [!code-vb[VbSimpleQuerySamples#24](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#24)]  
+ [!code-vb[VbSimpleQuerySamples#24](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_1.vb)]  
   
 ## 예제  
  다음 쿼리 식은 `Order By` 절을 사용하여 가격 기준으로 쿼리 결과를 내림차순으로 정렬합니다.  동일한 가격의 책은 제목을 기준으로 오름차순으로 정렬됩니다.  
   
- [!code-vb[VbSimpleQuerySamples#25](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#25)]  
+ [!code-vb[VbSimpleQuerySamples#25](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_2.vb)]  
   
 ## 예제  
  다음 쿼리 식은 `Select` 절을 사용하여 책 제목, 가격, 출판 날짜 및 저자를 선택합니다.  그런 다음 새 범위에 대한 범위 변수의 `Title`, `Price`, `PublishDate` 및 `Author` 필드를 채웁니다.  `Order By` 절은 저자 이름, 책 제목 그리고 마지막으로 가격을 기준으로 새 범위 변수의 순서를 지정합니다.  각 열은 기본 순서\(오름차순\)으로 정렬됩니다.  
   
- [!code-vb[VbSimpleQuerySamples#26](../../../visual-basic/language-reference/queries/codesnippet/visualbasic/VbSimpleQuerySamples/QuerySamples1.vb#26)]  
+ [!code-vb[VbSimpleQuerySamples#26](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/order-by-clause_3.vb)]  
   
 ## 참고 항목  
  [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   

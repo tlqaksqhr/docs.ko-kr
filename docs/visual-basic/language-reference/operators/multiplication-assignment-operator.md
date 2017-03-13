@@ -53,7 +53,7 @@ variableorproperty *= expression
 ## 예제  
  다음 예제에서는 `*=` 연산자를 사용하여 첫째 `Integer` 변수의 값에 둘째 변수의 값을 곱하고 결과를 첫째 변수에 할당합니다.  
   
- [!code-vb[VbVbalrOperators#5](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/multiplication-assignmen_1_1.vb)]  
+ [!code-vb[VbVbalrOperators#5](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/multiplication-assignment-operator_1.vb)]  
   
 ## 참고 항목  
  [\* Operator](../../../visual-basic/language-reference/operators/multiplication-operator.md)   

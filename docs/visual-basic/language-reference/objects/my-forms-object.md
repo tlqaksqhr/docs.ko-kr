@@ -53,7 +53,7 @@ caps.handback.revision: 22
 ## 예제  
  이 예제에서는 기본 `SidebarMenu` 폼의 제목을 변경합니다.  
   
- [!code-vb[VbVbalrMyForms#2](../../../visual-basic/language-reference/objects/codesnippet/visualbasic/my-forms-object_1.vb)]  
+ [!code-vb[VbVbalrMyForms#2](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-forms-object_1.vb)]  
   
  이 예제를 실행하려면 프로젝트에 `SidebarMenu`라는 폼이 있어야 합니다.  자세한 내용은 [How to: Add Windows Forms to a Project](http://msdn.microsoft.com/ko-kr/3d7bb25f-fd90-47cf-9378-fa0d764686c1)를 참조하십시오.  
   

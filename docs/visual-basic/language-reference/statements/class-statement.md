@@ -114,7 +114,7 @@ End Class
 ## 예제  
  다음 예제에서는 `Class` 문을 사용하여 클래스와 여러 멤버를 정의합니다.  
   
- [!code-vb[VbVbalrStatements#62](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/class-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#62](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/class-statement_1.vb)]  
   
 ## 참고 항목  
  [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   

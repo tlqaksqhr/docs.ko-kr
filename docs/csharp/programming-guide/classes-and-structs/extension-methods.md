@@ -24,13 +24,13 @@ caps.handback.revision: 35
   
  다음 예제에서는 정수 배열에서 표준 쿼리 연산자 `OrderBy`를 호출하는 방법을 보여 줍니다.  괄호 안의 식은 람다 식입니다.  많은 표준 쿼리 연산자가 람다 식을 매개 변수로 사용하지만 확장 메서드에 대한 요구 사항은 아닙니다.  자세한 내용은 [람다 식](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)을 참조하십시오.  
   
- [!code-cs[csProgGuideExtensionMethods#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/extension-methods_1.cs)]  
+ [!code-cs[csProgGuideExtensionMethods#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_1.cs)]  
   
  확장 메서드는 정적 메서드로 정의되지만 인스턴스 메서드 구문을 사용하여 호출됩니다.  확장 메서드의 첫 번째 매개 변수는 메서드가 작동하는 형식을 지정하며 매개 변수 앞에 [this](../../../csharp/language-reference/keywords/this.md) 한정자가 있습니다.  확장 메서드는 `using` 지시문을 사용하여 명시적으로 네임스페이스를 소스 코드로 가져오는 경우에만 범위에 있습니다.  
   
  다음 예제에서는 <xref:System.String?displayProperty=fullName> 클래스에 대해 정의된 확장 메서드를 보여 줍니다.  이 확장 메서드는 제네릭이 아닌 비중첩 정적 클래스 내부에서 정의됩니다.  
   
- [!code-cs[csProgGuideExtensionMethods#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/extension-methods_2.cs)]  
+ [!code-cs[csProgGuideExtensionMethods#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_2.cs)]  
   
  `using` 지시문을 사용하여 `WordCount` 확장 메서드를 범위로 가져올 수 있습니다.  
   
@@ -70,7 +70,7 @@ using System.Linq;
   
  일치하는 시그니처를 가진 인스턴스 메서드를 찾을 수 없으면 컴파일러는 일치하는 확장 메서드\(있는 경우\)에 바인딩합니다.  
   
- [!code-cs[csProgGuideExtensionMethods#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/extension-methods_3.cs)]  
+ [!code-cs[csProgGuideExtensionMethods#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/extension-methods_3.cs)]  
   
 ## 일반 지침  
  일반적으로 반드시 필요한 경우에만 드물게 확장 메서드를 구현하는 것이 좋습니다.  가능하면 기존 형식을 확장해야 하는 클라이언트 코드는 기존 형식에서 파생된 새 형식을 만들어 이 작업을 수행해야 합니다.  자세한 내용은 [상속](../../../csharp/programming-guide/classes-and-structs/inheritance.md)을 참조하십시오.  

@@ -18,16 +18,16 @@ caps.handback.revision: 27
 # 명령줄 인수(C# 프로그래밍 가이드)
 다음 방법 중 하나로 메서드를 정의하여 인수를 `Main` 메서드에 보낼 수 있습니다.  
   
- [!code-cs[csProgGuideMain#2](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/command-line-arguments_1.cs)]  
+ [!code-cs[csProgGuideMain#2](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_1.cs)]  
   
- [!code-cs[csProgGuideMain#3](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/command-line-arguments_2.cs)]  
+ [!code-cs[csProgGuideMain#3](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_2.cs)]  
   
 > [!NOTE]
 >  Windows Forms 응용 프로그램의 `Main` 메서드에서 명령줄 인수를 사용하려면 program.cs에서 `Main` 시그니처를 직접 수정해야 합니다.  Windows Forms 디자이너에서 생성된 코드에서는 입력 매개 변수가 없는 상태로 `Main`을 만듭니다.  또한 <xref:System.Environment.CommandLine%2A?displayProperty=fullName> 또는 <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=fullName>를 사용하여 콘솔 또는 Windows 응용 프로그램에서 언제든지 명령줄 인수에 액세스할 수 있습니다.  
   
  `Main` 메서드의 매개 변수는 명령줄 인수를 나타내는 <xref:System.String> 배열입니다.  일반적으로 다음 예제와 같이 `Length` 속성을 테스트하여 인수가 있는지 확인합니다.  
   
- [!code-cs[csProgGuideMain#4](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/command-line-arguments_3.cs)]  
+ [!code-cs[csProgGuideMain#4](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_3.cs)]  
   
  또한 <xref:System.Convert> 클래스나 `Parse` 메서드를 사용하여 문자열 인수를 숫자 형식으로 변환할 수 있습니다.  예를 들어 다음 문에서는 <xref:System.Int64.Parse%2A> 메서드를 사용하여 `string`을 `long` 숫자로 변환합니다.  
   
@@ -56,7 +56,7 @@ long num = Convert.ToInt64(s);
   
 1.  모든 텍스트 편집기에 다음 코드를 붙여 넣고 해당 파일을 이름이 `Factorial.cs`인 텍스트 파일로 저장합니다.  
   
-     [!code-cs[csProgGuideMain#16](../../../csharp/programming-guide/inside-a-program/codesnippet/csharp/command-line-arguments_4.cs)]  
+     [!code-cs[csProgGuideMain#16](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_4.cs)]  
   
 2.  **시작** 화면 또는 **시작** 메뉴에서 Visual Studio **개발자 명령 프롬프트** 창을 연 다음 방금 만든 파일이 포함되어 있는 폴더로 이동합니다.  
   

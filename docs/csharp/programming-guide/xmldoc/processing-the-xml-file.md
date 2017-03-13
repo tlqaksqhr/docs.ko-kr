@@ -82,7 +82,7 @@ caps.handback.revision: 16
 ## 예제  
  아래 예제는 클래스와 해당 멤버의 ID 문자열이 생성되는 방식을 보여 줍니다.  
   
- [!code-cs[csProgGuidePointers#21](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#21)]  
+ [!code-cs[csProgGuidePointers#21](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/processing-the-xml-file_1.cs)]  
   
 ## 참고 항목  
  [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   

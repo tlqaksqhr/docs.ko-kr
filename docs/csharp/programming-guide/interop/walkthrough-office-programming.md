@@ -65,8 +65,8 @@ caps.handback.revision: 46
   
 2.  다음 `Imports` 문\(Visual Basic\) 또는 `using` 지시문\(C\#\)이 없으면 코드 파일 맨 위에 추가합니다.  
   
-     [!code-cs[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/csharp/officewalkthroughcs/thisaddin.cs#1)]
-     [!code-vb[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/visualbasic/officewalkthroughsnippets - vb/thisaddin.vb#1)]  
+     [!code-cs[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_1.cs)]
+     [!code-vb[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_1.vb)]  
   
 ### 은행 계좌 목록을 만들려면  
   
@@ -74,20 +74,20 @@ caps.handback.revision: 46
   
 2.  `Account` 클래스 정의를 다음 코드로 바꿉니다.  클래스 정의는 Visual Studio 2010의 Visual Basic에서 새롭게 제공되는 *자동 구현 속성*을 사용합니다.  자세한 내용은 [Auto\-Implemented Properties](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)을 참조하세요.  
   
-     [!code-cs[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/csharp/officewalkthroughcs/account.cs#2)]
-     [!code-vb[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/visualbasic/officewalkthroughsnippets - vb/account.vb#2)]  
+     [!code-cs[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_2.cs)]
+     [!code-vb[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_2.vb)]  
   
 3.  계좌 2개가 포함된 `bankAccounts` 목록을 만들려면 ThisAddIn.vb 또는 ThisAddIn.cs의 `ThisAddIn_Startup` 메서드에 다음 코드를 추가합니다.  목록 선언은 Visual Studio 2010의 Visual Basic에서 새롭게 제공되는 *컬렉션 이니셜라이저*를 사용합니다.  자세한 내용은 [Collection Initializers](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)을 참조하세요.  
   
-     [!code-cs[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/csharp/officewalkthroughcs/thisaddin.cs#3)]
-     [!code-vb[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/visualbasic/officewalkthroughsnippets - vb/thisaddin.vb#3)]  
+     [!code-cs[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_3.cs)]
+     [!code-vb[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_3.vb)]  
   
 ### 데이터를 Excel로 내보내려면  
   
 1.  같은 파일에서 `ThisAddIn` 클래스에 다음 메서드를 추가합니다.  이 메서드는 Excel 통합 문서를 설정하고 데이터를 해당 통합 문서로 내보냅니다.  
   
-     [!code-cs[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/csharp/officewalkthroughcs/thisaddin.cs#4)]
-     [!code-vb[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/visualbasic/officewalkthroughsnippets - vb/thisaddin.vb#4)]  
+     [!code-cs[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_4.cs)]
+     [!code-vb[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_4.vb)]  
   
      이 메서드에는 두 가지 새로운 C\# 기능이 사용됩니다.  Visual Basic에서는 이 두 기능이 모두 이미 포함되어 있습니다.  
   
@@ -97,11 +97,11 @@ caps.handback.revision: 46
   
     -   [Range](http://go.microsoft.com/fwlink/?LinkId=210911) 개체의 `Range` 및 `Offset` 속성은 *인덱싱된 속성* 기능을 사용합니다.  이 기능을 사용하면 다음과 같은 일반적인 C\# 구문을 통해 COM 형식에서 이러한 속성을 사용할 수 있습니다.  또한 인덱싱된 속성에서는 `Range` 개체의 `Value` 속성을 사용할 수 있으므로 `Value2` 속성을 사용할 필요가 없습니다.  `Value` 속성은 인덱싱된 속성이지만 인덱스는 선택 사항입니다.  다음 예제에서는 선택적 인수와 인덱싱된 속성이 함께 사용됩니다.  
   
-         [!code-cs[csOfficeWalkthrough#5](../../../csharp/programming-guide/interop/codesnippet/csharp/officewalkthroughcs/thisaddin.cs#5)]  
+         [!code-cs[csOfficeWalkthrough#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_5.cs)]  
   
          이전 버전의 언어에서는 다음과 같은 특수 구문을 사용해야 했습니다.  
   
-         [!code-cs[csOfficeWalkthrough#6](../../../csharp/programming-guide/interop/codesnippet/csharp/officewalkthroughcs/thisaddin.cs#6)]  
+         [!code-cs[csOfficeWalkthrough#6](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_6.cs)]  
   
          인덱싱된 속성을 직접 만들 수는 없습니다.  이 기능은 기존 인덱싱된 속성의 사용만을 지원합니다.  
   
@@ -109,14 +109,14 @@ caps.handback.revision: 46
   
 2.  열 너비를 콘텐츠에 맞게 조정하려면 `DisplayInExcel` 끝에 다음 코드를 추가합니다.  
   
-     [!code-cs[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/csharp/officewalkthroughcs/thisaddin.cs#7)]
-     [!code-vb[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/visualbasic/officewalkthroughsnippets - vb/thisaddin.vb#7)]  
+     [!code-cs[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_7.cs)]
+     [!code-vb[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_7.vb)]  
   
      여기서 추가하는 코드는 C\# 2010의 또 다른 새 기능, 즉 Office 등의 COM 호스트에서 반환되는 `Object` 값을 [dynamic](../../../csharp/language-reference/keywords/dynamic.md) 형식인 것처럼 처리하는 기능을 보여 줍니다.  [\/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) 컴파일러 옵션을 통해 어셈블리를 참조할 때 **Interop 형식 포함**을 기본값인 `True` 또는 그와 동일한 값으로 설정하면 이 작업이 자동으로 수행됩니다.  `dynamic` 형식을 사용하면 Visual Basic의 기존 기능인 런타임에 바인딩을 사용할 수 있으며, Visual C\# 2008 이하 버전 언어에서 필요했던 명시적 캐스팅을 사용할 필요가 없습니다.  
   
      예를 들어 `excelApp.Columns[1]`은 `Object`를 반환하며 `AutoFit`은 Excel [Range](http://go.microsoft.com/fwlink/?LinkId=210911) 메서드입니다.  `dynamic`을 사용하지 않는 경우에는 `AutoFit` 메서드를 호출하기 전에 `excelApp.Columns[1]`에서 반환하는 개체를 `Range` 인스턴스로 캐스팅해야 합니다.  
   
-     [!code-cs[csOfficeWalkthrough#8](../../../csharp/programming-guide/interop/codesnippet/csharp/officewalkthroughcs/thisaddin.cs#8)]  
+     [!code-cs[csOfficeWalkthrough#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_8.cs)]  
   
      Interop 형식 포함에 대한 자세한 내용은 이 항목 뒷부분의 "PIA 참조를 찾으려면" 및 "PIA 종속성을 복원하려면" 절차를 참조하세요.  `dynamic`에 대한 자세한 내용은 [동적](../../../csharp/language-reference/keywords/dynamic.md) 또는 [유형 동적 사용](../../../csharp/programming-guide/types/using-type-dynamic.md)을 참조하세요.  
   
@@ -124,8 +124,8 @@ caps.handback.revision: 46
   
 1.  `ThisAddIn_StartUp` 메서드의 끝에 다음 코드를 추가합니다.  `DisplayInExcel` 호출에는 두 개의 인수가 포함됩니다.  첫 번째 인수는 처리할 계좌 목록의 이름이고,  두 번째 인수는 데이터 처리 방법을 정의하는 여러 줄 람다 식입니다.  각 계좌의 `ID` 및 `balance` 값은 인접 셀에 표시되며 잔액이 0보다 작으면 행은 빨간색으로 표시됩니다.  여러 줄 람다 식은 Visual Basic 2010의 새로운 기능입니다.  자세한 내용은 [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)을 참조하세요.  
   
-     [!code-cs[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/csharp/officewalkthroughcs/thisaddin.cs#9)]
-     [!code-vb[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/visualbasic/officewalkthroughsnippets - vb/thisaddin.vb#9)]  
+     [!code-cs[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_9.cs)]
+     [!code-vb[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_9.vb)]  
   
 2.  F5 키를 눌러 프로그램을 실행합니다.  그러면 계좌의 데이터가 포함된 Excel 워크시트가 표시됩니다.  
   
@@ -133,12 +133,12 @@ caps.handback.revision: 46
   
 1.  `ThisAddIn_StartUp` 메서드 끝에 다음 코드를 추가하여 Excel 통합 문서에 대한 링크가 포함된 Word 문서를 만듭니다.  
   
-     [!code-cs[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/csharp/officewalkthroughcs/thisaddin.cs#10)]
-     [!code-vb[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/visualbasic/officewalkthroughsnippets - vb/thisaddin.vb#10)]  
+     [!code-cs[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_10.cs)]
+     [!code-vb[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_10.vb)]  
   
      이 코드는 COM 프로그래밍에서 `ref` 키워드를 생략하는 기능, 명명된 인수, 선택적 인수 등 다양한 C\#의 새로운 기능을 보여 줍니다.  Visual Basic에는 이러한 기능이 이미 포함되어 있습니다.  [PasteSpecial](http://go.microsoft.com/fwlink/?LinkId=147099) 메서드에는 모두 선택적 참조 매개 변수로 정의되는 7개 매개 변수가 있습니다.  Visual C\# 2010 이전 버전에서는 전송할 의미 있는 값이 없더라도 7개 매개 변수에 대해 인수로 사용할 개체 변수를 정의해야 했습니다.  명명된 인수와 선택적 인수를 사용하면 액세스할 매개 변수를 이름으로 지정하고 해당 매개 변수에만 인수를 보낼 수 있습니다.  이 예제에서는 클립보드에 통합 문서 링크를 만들어야 하고\(`Link` 매개 변수\) Word 문서에 링크를 아이콘으로 표시하도록\(`DisplayAsIcon` 매개 변수\) 지정하는 인수를 전송합니다.  Visual C\# 2010에서는 이러한 인수의 `ref` 키워드를 생략할 수도 있습니다.  Visual C\# 2008의 다음 코드 세그먼트를 Visual C\# 2010에서는 맨 아래의 코드 줄 하나로 대체할 수 있습니다.  
   
-     [!code-cs[csOfficeWalkthrough#11](../../../csharp/programming-guide/interop/codesnippet/csharp/officewalkthroughcs/thisaddin.cs#11)]  
+     [!code-cs[csOfficeWalkthrough#11](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_11.cs)]  
   
 ### 응용 프로그램을 실행하려면  
   

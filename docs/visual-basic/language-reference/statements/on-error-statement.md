@@ -85,7 +85,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## Throw 문  
  `Err.Raise` 메서드로 인해 오류가 발생하면 <xref:System.Exception> 클래스의 새로 생성된 인스턴스에 `Exception` 속성이 설정됩니다.  파생 예외 형식의 예외 발생에 대해 언어에서 `Throw` 문을 사용할 수 있습니다.  이 문은 throw될 예외 인스턴스인 단일 매개 변수를 갖습니다.  다음 예제는 기존의 예외 처리 지원 기능과 이 기능들을 사용하는 방법을 보여 줍니다.  
   
- [!code-vb[VbVbalrErrorHandling#17](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/on-error-statement_1.vb)]  
+ [!code-vb[VbVbalrErrorHandling#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_1.vb)]  
   
  `On Error GoTo` 문은 예외 클래스와 관계없이 모든 오류를 포착합니다.  
   
@@ -103,7 +103,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
   
  오류가 발생하지 않은 경우에 오류 처리 코드가 실행되지 않도록 하려면 다음과 같이 오류 처리 루틴 바로 앞에 `Exit Sub`, `Exit Function` 또는 `Exit Property` 문을 넣습니다.  
   
- [!code-vb[VbVbalrErrorHandling#18](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/on-error-statement_2.vb)]  
+ [!code-vb[VbVbalrErrorHandling#18](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_2.vb)]  
   
  여기에서 오류 처리 코드가 `Exit Sub` 문 다음과 `End Sub` 문 앞에 나오므로 프로시저 흐름과 구분할 수 있습니다.  오류 처리 코드는 프로시저의 어느 위치에나 배치할 수 있습니다.  
   
@@ -112,7 +112,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
   
  다른 개체들에 액세스하는 개체를 만들 경우 해당 개체가 다시 전달하는 모든 처리되지 않은 오류를 처리해야 합니다.  이러한 오류를 처리할 수 없는 경우 `Err.Number`의 오류 코드를 사용자 오류 중 하나로 매핑한 후 사용자 개체 호출자에게 다시 전달합니다.  오류 코드를 `VbObjectError` 상수에 추가하여 오류를 지정해야 합니다.  예를 들어, 오류 코드가 1052이면 다음과 같이 할당합니다.  
   
- [!code-vb[VbVbalrErrorHandling#19](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/on-error-statement_3.vb)]  
+ [!code-vb[VbVbalrErrorHandling#19](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_3.vb)]  
   
 > [!CAUTION]
 >  Windows DLL\(동적 연결 라이브러리\)을 호출하는 동안 발생한 시스템 오류는 예외를 발생시키지 않으며 Visual Basic 오류 잡기를 사용하여 포착할 수 없습니다.  DLL 함수를 호출할 때는 각 반환 값을 검사하여 API 사양에 따라 성공 또는 실패를 확인하고 실패일 경우 `Err` 개체의 `LastDLLError` 속성에 있는 값을 확인합니다.  
@@ -120,7 +120,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## 예제  
  다음 예제에서는 먼저 `On Error GoTo` 문을 사용하여 프로시저 내에서의 오류 처리 루틴 위치를 지정합니다.  예를 들어, 0으로 나누려고 시도하면 오류 번호 6이 생성됩니다.  오류는 오류 처리 루틴에서 처리되고 컨트롤은 오류를 일으킨 문으로 돌아갑니다.  `On Error GoTo 0` 문은 오류 잡기를 해제합니다.  그런 다음 `On Error Resume Next` 문을 사용하여 오류 잡기를 늦춰 뒤에 나오는 문에 의해 생성되는 오류 컨텍스트가 파악되도록 합니다.  오류가 처리된 후 `Err.Clear`를 사용하여 `Err` 개체의 속성을 지웁니다.  
   
- [!code-vb[VbVbalrErrorHandling#20](../../../visual-basic/language-reference/statements/codesnippet/visualbasic/on-error-statement_4.vb)]  
+ [!code-vb[VbVbalrErrorHandling#20](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/on-error-statement_4.vb)]  
   
 ## 요구 사항  
  **네임스페이스:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  

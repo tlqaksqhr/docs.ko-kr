@@ -35,7 +35,7 @@ LINQ\(Language\-Integrated Query\)는 쿼리 기능을 [!INCLUDE[vbprvb](../../.
   
  예를 들어 다음 코드 예제에서는 컬렉션에서 고객의 목록을 반환하고 고객의 위치를 기준으로 고객을 그룹화하는 LINQ 쿼리를 보여 줍니다.  
   
- [!code-vb[VbVbalrIntroToLINQ#1](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_1.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#1](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_1.vb)]  
   
  이 항목에서는 다음 영역에 대한 정보를 제공합니다.  
   
@@ -62,7 +62,7 @@ LINQ\(Language\-Integrated Query\)는 쿼리 기능을 [!INCLUDE[vbprvb](../../.
 ##  <a name="RunningtheExamples"></a> 예제 실행  
  소개 및 "LINQ 쿼리의 구조" 섹션의 예제를 실행하려면 고객과 주문의 목록을 반환하는 다음 코드를 포함합니다.  
   
- [!code-vb[VbVbalrIntroToLINQ#31](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_2.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#31](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_2.vb)]  
   
 ##  <a name="LINQProviders"></a> LINQ 공급자  
  *LINQ 공급자*는 쿼리할 데이터 소스에 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] LINQ 쿼리를 매핑합니다.  LINQ 쿼리를 작성하는 경우 공급자는 해당 쿼리를 가져와서 데이터 소스가 실행할 수 있을 명령으로 변환합니다.  또한 공급자는 소스의 데이터를 쿼리 결과를 구성하는 개체로 변환합니다.  마지막으로 공급자는 데이터 소스에 업데이트를 보낼 때 개체를 데이터로 변환합니다.  
@@ -82,23 +82,23 @@ LINQ\(Language\-Integrated Query\)는 쿼리 기능을 [!INCLUDE[vbprvb](../../.
   
  쿼리 식은 `From` 절로 시작됩니다.  이 절은 쿼리의 소스 데이터와 소스 데이터의 각 요소를 개별적으로 참조하는 데 사용되는 변수를 식별합니다.  이러한 변수를 *범위 변수* 또는 *반복 변수*라고 합니다.  `From` 절은 `From` 절이 선택 사항인 `Aggregate` 쿼리를 제외한 쿼리에 필수적입니다.  쿼리의 범위와 소스가 `From` 또는 `Aggregate` 절에서 식별된 후 쿼리 절의 조합을 포함하여 쿼리를 구체화할 수 있습니다.  쿼리 절에 대한 자세한 내용은 이 항목의 뒷부분에 있는 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] LINQ 쿼리 연산자를 참조하세요.  예를 들어 다음 쿼리는 고객 데이터의 소스 컬렉션을 `customers` 변수로 식별하고 `cust`라는 반복 변수를 식별합니다.  
   
- [!code-vb[VbVbalrIntroToLINQ#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_3.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_3.vb)]  
   
  이 예제는 그 자체로 유효한 쿼리이지만 쿼리는 쿼리 절을 더 추가하여 결과를 구체화할 때 훨씬 더 강력해집니다.  예를 들어 `Where` 절을 추가하여 하나 이상의 값을 기준으로 결과를 필터링할 수 있습니다.  쿼리 식은 코드 한 줄입니다. 추가 쿼리 절을 쿼리의 끝에 추가하기만 하면 됩니다.  밑줄\(\_\) 줄 연속 문자를 사용하여 여러 줄의 텍스트로 쿼리를 분할하는 방법으로 가독성을 높일 수 있습니다.  다음 코드 예제에서는 `Where` 절이 포함된 쿼리의 예를 보여 줍니다.  
   
- [!code-vb[VbVbalrIntroToLINQ#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_4.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_4.vb)]  
   
  다른 강력한 쿼리 절은 데이터 소스에서 선택된 필드만 반환하는 데 사용할 수 있는 `Select` 절입니다.  LINQ 쿼리는 강력한 형식의 개체로 구성된 열거 가능한 컬렉션을 반환합니다.  쿼리는 무명 형식 또는 명명된 형식의 컬렉션을 반환할 수 있습니다.  `Select` 절을 사용하여 데이터 소스에서 단일 필드만 반환할 수 있습니다.  이렇게 하는 경우 반환된 컬렉션의 형식은 단일 필드의 형식입니다.  또한 `Select` 절을 사용하여 데이터 소스에서 여러 필드를 반환할 수도 있습니다.  이렇게 하는 경우 반환된 컬렉션의 형식은 새로운 무명 형식입니다.  또한 쿼리가 반환하는 필드를 지정된 명명된 형식의 필드와 일치시킬 수도 있습니다.  다음 코드 예제에서는 데이터 소스의 선택된 필드에서 제공된 데이터로 채워진 멤버가 있는 무명 형식의 컬렉션을 반환하는 쿼리 식을 보여 줍니다.  
   
- [!code-vb[VbVbalrIntroToLINQ#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_5.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_5.vb)]  
   
  LINQ 쿼리를 사용하여 여러 데이터 소스를 결합하고 단일 결과를 반환할 수도 있습니다.  이 작업은 하나 이상의 `From` 절을 사용하거나 `Join` 또는 `Group Join` 쿼리 절을 사용하여 수행할 수 있습니다.  다음 코드 예제에서는 고객 및 주문 데이터를 결합하고 고객 및 주문 데이터가 포함된 무명 형식의 컬렉션을 반환하는 쿼리 식을 보여 줍니다.  
   
- [!code-vb[VbVbalrIntroToLINQ#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_6.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#5](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_6.vb)]  
   
  `Group Join` 절을 사용하여 고객 개체의 컬렉션이 포함된 계층적 쿼리 결과를 만들 수 있습니다.  각 고객 개체에는 해당 고객에 대한 모든 주문의 컬렉션이 포함된 속성이 있습니다.  다음 코드 예제에서는 계층적 결과로 고객 및 주문 데이터를 결합하고 무명 형식의 컬렉션을 반환하는 쿼리 식을 보여 줍니다.  쿼리는 고객에 대한 주문 데이터의 컬렉션을 포함하는 `CustomerOrders` 속성이 포함된 형식을 반환합니다.  또한 해당 고객에 대한 모든 주문의 총계 합이 포함된 `OrderTotal` 속성도 포함합니다.  이 쿼리는 LEFT OUTER JOIN과 동일합니다.  
   
- [!code-vb[VbVbalrIntroToLINQ#6](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_7.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#6](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_7.vb)]  
   
  강력한 쿼리 식을 만드는 데 사용할 수 있는 몇 가지 추가 LINQ 쿼리 연산자가 있습니다.  이 항목의 다음 섹션에서는 쿼리 식에 포함할 수 있는 다양한 쿼리 절에 대해 설명합니다.  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 쿼리 절에 대한 자세한 내용은 [Queries](../../../../visual-basic/language-reference/queries/queries.md)를 참조하세요.  
   
@@ -108,26 +108,26 @@ LINQ\(Language\-Integrated Query\)는 쿼리 기능을 [!INCLUDE[vbprvb](../../.
 |||  
 |-|-|  
 |용어|정의|  
-|[From Clause](../../../../visual-basic/language-reference/queries/from-clause.md)|`From` 절이나 `Aggregate` 절은 쿼리를 시작하는 데 필요합니다.  `From` 절은 쿼리의 소스 컬렉션과 반복 변수를 지정합니다.  예:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#7](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_8.vb)]|  
-|[Select Clause](../../../../visual-basic/language-reference/queries/select-clause.md)|선택 사항입니다.  쿼리의 반복 변수 집합을 선언합니다.  예:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#8](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_9.vb)]<br /><br /> `Select` 절이 지정되지 않은 경우 쿼리의 반복 변수는 `From` 또는 `Aggregate` 절에서 지정된 반복 변수로 구성됩니다.|  
-|[Where Clause](../../../../visual-basic/language-reference/queries/where-clause.md)|선택 사항입니다.  쿼리의 필터링 조건을 지정합니다.  예:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#9](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_10.vb)]|  
-|[Order By Clause](../../../../visual-basic/language-reference/queries/order-by-clause.md)|선택 사항입니다.  쿼리의 열에 대한 정렬 순서를 지정합니다.  예:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#10](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_11.vb)]|  
-|[Join Clause](../../../../visual-basic/language-reference/queries/join-clause.md)|선택 사항입니다.  두 컬렉션을 단일 컬렉션으로 결합합니다.  예:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#11](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_12.vb)]|  
-|[Group By 절](../../../../visual-basic/language-reference/queries/group-by-clause.md)|선택 사항입니다.  쿼리 결과의 요소를 그룹화합니다.  각 그룹에 집계 함수를 적용하는 데 사용할 수 있습니다.  예:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#12](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_13.vb)]|  
-|[Group Join Clause](../../../../visual-basic/language-reference/queries/group-join-clause.md)|선택 사항입니다.  두 컬렉션을 단일 계층 구조 컬렉션으로 결합합니다.  예:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#13](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_14.vb)]|  
-|[Aggregate Clause](../../../../visual-basic/language-reference/queries/aggregate-clause.md)|`From` 절이나 `Aggregate` 절은 쿼리를 시작하는 데 필요합니다.  `Aggregate` 절은 하나 이상의 집계 함수를 컬렉션에 적용합니다.  예를 들어 `Aggregate` 절을 사용하여 쿼리가 반환하는 모든 요소의 합계를 계산할 수 있습니다.<br /><br /> [!code-vb[VbVbalrIntroToLINQ#14](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_15.vb)]<br /><br /> 또한 `Aggregate` 절을 사용하여 쿼리를 수정할 수 있습니다.  예를 들어 `Aggregate` 절을 사용하여 관련된 쿼리 컬렉션에 대한 계산을 수행할 수 있습니다.<br /><br /> [!code-vb[VbVbalrIntroToLINQ#15](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_16.vb)]|  
-|[Let Clause](../../../../visual-basic/language-reference/queries/let-clause.md)|선택 사항입니다.  값을 계산하고 쿼리의 새 변수에 할당합니다.  예:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#16](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_17.vb)]|  
-|[Distinct Clause](../../../../visual-basic/language-reference/queries/distinct-clause.md)|선택 사항입니다.  현재 반복 변수의 값을 제한하여 쿼리 결과에서 중복 값을 제거합니다.  예:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#17](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_18.vb)]|  
-|[Skip Clause](../../../../visual-basic/language-reference/queries/skip-clause.md)|선택 사항입니다.  컬렉션에서 지정된 수의 요소를 무시하고 나머지 요소를 반환합니다.  예:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#18](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_19.vb)]|  
-|[Skip While Clause](../../../../visual-basic/language-reference/queries/skip-while-clause.md)|선택 사항입니다.  지정된 조건이 `true`이면 컬렉션에 있는 요소를 무시하고 나머지 요소를 반환합니다.  예:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#19](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_20.vb)]|  
-|[Take Clause](../../../../visual-basic/language-reference/queries/take-clause.md)|선택 사항입니다.  컬렉션의 시작 위치에서 지정된 수의 연속 요소를 반환합니다.  예:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#20](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_21.vb)]|  
-|[Take While Clause](../../../../visual-basic/language-reference/queries/take-while-clause.md)|선택 사항입니다.  지정된 조건이 `true`이면 컬렉션의 요소를 포함하고 나머지 요소를 무시합니다.  예:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#21](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_22.vb)]|  
+|[From Clause](../../../../visual-basic/language-reference/queries/from-clause.md)|`From` 절이나 `Aggregate` 절은 쿼리를 시작하는 데 필요합니다.  `From` 절은 쿼리의 소스 컬렉션과 반복 변수를 지정합니다.  예:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#7](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_8.vb)]|  
+|[Select Clause](../../../../visual-basic/language-reference/queries/select-clause.md)|선택 사항입니다.  쿼리의 반복 변수 집합을 선언합니다.  예:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#8](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_9.vb)]<br /><br /> `Select` 절이 지정되지 않은 경우 쿼리의 반복 변수는 `From` 또는 `Aggregate` 절에서 지정된 반복 변수로 구성됩니다.|  
+|[Where Clause](../../../../visual-basic/language-reference/queries/where-clause.md)|선택 사항입니다.  쿼리의 필터링 조건을 지정합니다.  예:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#9](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_10.vb)]|  
+|[Order By Clause](../../../../visual-basic/language-reference/queries/order-by-clause.md)|선택 사항입니다.  쿼리의 열에 대한 정렬 순서를 지정합니다.  예:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#10](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_11.vb)]|  
+|[Join Clause](../../../../visual-basic/language-reference/queries/join-clause.md)|선택 사항입니다.  두 컬렉션을 단일 컬렉션으로 결합합니다.  예:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#11](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_12.vb)]|  
+|[Group By 절](../../../../visual-basic/language-reference/queries/group-by-clause.md)|선택 사항입니다.  쿼리 결과의 요소를 그룹화합니다.  각 그룹에 집계 함수를 적용하는 데 사용할 수 있습니다.  예:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#12](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_13.vb)]|  
+|[Group Join Clause](../../../../visual-basic/language-reference/queries/group-join-clause.md)|선택 사항입니다.  두 컬렉션을 단일 계층 구조 컬렉션으로 결합합니다.  예:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#13](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_14.vb)]|  
+|[Aggregate Clause](../../../../visual-basic/language-reference/queries/aggregate-clause.md)|`From` 절이나 `Aggregate` 절은 쿼리를 시작하는 데 필요합니다.  `Aggregate` 절은 하나 이상의 집계 함수를 컬렉션에 적용합니다.  예를 들어 `Aggregate` 절을 사용하여 쿼리가 반환하는 모든 요소의 합계를 계산할 수 있습니다.<br /><br /> [!code-vb[VbVbalrIntroToLINQ#14](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_15.vb)]<br /><br /> 또한 `Aggregate` 절을 사용하여 쿼리를 수정할 수 있습니다.  예를 들어 `Aggregate` 절을 사용하여 관련된 쿼리 컬렉션에 대한 계산을 수행할 수 있습니다.<br /><br /> [!code-vb[VbVbalrIntroToLINQ#15](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_16.vb)]|  
+|[Let Clause](../../../../visual-basic/language-reference/queries/let-clause.md)|선택 사항입니다.  값을 계산하고 쿼리의 새 변수에 할당합니다.  예:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#16](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_17.vb)]|  
+|[Distinct Clause](../../../../visual-basic/language-reference/queries/distinct-clause.md)|선택 사항입니다.  현재 반복 변수의 값을 제한하여 쿼리 결과에서 중복 값을 제거합니다.  예:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#17](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_18.vb)]|  
+|[Skip Clause](../../../../visual-basic/language-reference/queries/skip-clause.md)|선택 사항입니다.  컬렉션에서 지정된 수의 요소를 무시하고 나머지 요소를 반환합니다.  예:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#18](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_19.vb)]|  
+|[Skip While Clause](../../../../visual-basic/language-reference/queries/skip-while-clause.md)|선택 사항입니다.  지정된 조건이 `true`이면 컬렉션에 있는 요소를 무시하고 나머지 요소를 반환합니다.  예:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#19](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_20.vb)]|  
+|[Take Clause](../../../../visual-basic/language-reference/queries/take-clause.md)|선택 사항입니다.  컬렉션의 시작 위치에서 지정된 수의 연속 요소를 반환합니다.  예:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#20](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_21.vb)]|  
+|[Take While Clause](../../../../visual-basic/language-reference/queries/take-while-clause.md)|선택 사항입니다.  지정된 조건이 `true`이면 컬렉션의 요소를 포함하고 나머지 요소를 무시합니다.  예:<br /><br /> [!code-vb[VbVbalrIntroToLINQ#21](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_22.vb)]|  
   
  [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 쿼리 절에 대한 자세한 내용은 [Queries](../../../../visual-basic/language-reference/queries/queries.md)를 참조하세요.  
   
  LINQ에서 제공하는 열거 가능 형식과 쿼리 가능 형식의 멤버를 호출하여 추가 LINQ 쿼리 기능을 사용할 수 있습니다.  쿼리 식의 결과에 대해 특정 쿼리 연산자를 호출하여 이러한 추가 기능을 사용할 수 있습니다.  예를 들어 다음 코드 예제에서는 <xref:System.Linq.Enumerable.Union%2A> 메서드를 사용하여 두 쿼리의 결과를 하나의 쿼리 결과로 결합합니다.  이 예제에서는 <xref:System.Linq.Enumerable.ToList%2A> 메서드를 사용하여 쿼리 결과를 제네릭 목록으로 반환합니다.  
   
- [!code-vb[VbVbalrIntroToLINQ#22](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/visualbasic/introduction-to-linq_23.vb)]  
+ [!code-vb[VbVbalrIntroToLINQ#22](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_23.vb)]  
   
  추가 LINQ 기능에 대한 자세한 내용은 [Standard Query Operators Overview](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)를 참조하세요.  
   
@@ -165,7 +165,7 @@ LINQ\(Language\-Integrated Query\)는 쿼리 기능을 [!INCLUDE[vbprvb](../../.
   
  다음 코드 예제에서는 XML 요소를 만들고 하위 요소와 특성에 액세스한 다음 LINQ를 사용하여 요소의 콘텐츠를 쿼리하는 방법을 보여 줍니다.  
   
- [!code-vb[VbXmlSamples#8](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/introduction-to-linq_24.vb)]  
+ [!code-vb[VbXmlSamples#8](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/introduction-to-linq_24.vb)]  
   
  자세한 내용은 [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)을 참조하세요.  
   

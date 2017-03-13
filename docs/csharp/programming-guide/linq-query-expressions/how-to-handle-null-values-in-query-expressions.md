@@ -8,14 +8,14 @@ caps.handback.revision: 6
 ## 예제  
  다음 예제와 같이 null 참조 예외가 발생하지 않도록 코드를 작성할 수 있습니다.  
   
- [!code-cs[csProgGuideLINQ#82](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#82)]  
+ [!code-cs[csProgGuideLINQ#82](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-handle-null-values-in-query-expressions_1.cs)]  
   
  위의 예제에서 `where` 절은 범주 시퀀스에서 null 요소를 모두 필터링하여 제외합니다.  이 기술은 조인 절의 null 검사 기능과는 관계없습니다.  이 예제에서 null을 사용하는 조건 식은 `Products.CategoryID`가 `int?` 형식\(`Nullable<int>`의 축약형\)이기 때문에 제대로 작동합니다.  
   
 ## 예제  
  조인 절에서 비교 키 중 하나만 nullable 값 형식인 경우에는 쿼리 식에서 다른 키를 nullable 형식으로 캐스팅할 수 있습니다.  다음 예제에서는 `EmployeeID` 열에 `int?` 형식의 값이 들어 있다고 가정합니다.  
   
- [!code-cs[csProgGuideLINQ#83](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#83)]  
+ [!code-cs[csProgGuideLINQ#83](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-handle-null-values-in-query-expressions_2.cs)]  
   
 ## 참고 항목  
  <xref:System.Nullable%601>   

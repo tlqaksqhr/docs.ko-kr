@@ -33,7 +33,7 @@ caps.handback.revision: 11
   
 -   상속된 이벤트 처리기에는 [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md) 절을 사용할 수 없습니다.  기본 클래스의 메서드가 이미 해당 이벤트에 연결되어 있고 그에 따라 실행됩니다.  상속된 메서드에서 `Handles` 절을 제거하십시오.  
   
-     [!code-vb[VbVbalrEvents#32](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/VbVbalrEvents/Class1.vb#32)]  
+     [!code-vb[VbVbalrEvents#32](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/troubleshooting-inherited-event-handlers_1.vb)]  
   
 -   상속된 메서드에 `Handles` 키워드가 없는 경우에는 코드에 [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md) 또는 동일한 이벤트를 처리하는 추가 메서드가 있는지 확인하십시오.  
   

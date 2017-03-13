@@ -89,7 +89,7 @@ End Select
 ## 예제  
  다음 예제에서는 `Select Case` 구문을 사용하여 변수 `number`의 값에 해당하는 줄을 씁니다.  두 번째 `Case` 문에는 `number`의 현재 값과 일치하는 값이 들어 있으므로 "Between 6 and 8, inclusive"를 쓰는 문이 실행됩니다.  
   
- [!code-vb[VbVbalrStatements#54](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/select-case-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#54](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/select-case-statement_1.vb)]  
   
 ## 참고 항목  
  <xref:Microsoft.VisualBasic.Interaction.Choose%2A>   

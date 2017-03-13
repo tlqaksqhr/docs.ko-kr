@@ -28,7 +28,7 @@ caps.handback.revision: 27
 ## 예제  
  연습에서 작업하는 경우 연습에서 만든 프로젝트의 Module1.vb 파일에 이 코드를 사용할 수 있습니다.  `Main` 메서드에서 \* \* \*로 표시된 줄을 연습에서 제공되는 쿼리 및 쿼리 실행으로 바꾸면 됩니다.  
   
- [!code-vb[VbLINQHowToCreateList#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/visualbasic/how-to-create-a-list-of-_1.vb)]  
+ [!code-vb[VbLINQHowToCreateList#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/how-to-create-a-list-of-items_1.vb)]  
   
 ## 참고 항목  
  [비디오 방법: Visual Basic에서 쿼리 작성 \(영문\)](http://msdn.microsoft.com/library/bb820884.aspx)   

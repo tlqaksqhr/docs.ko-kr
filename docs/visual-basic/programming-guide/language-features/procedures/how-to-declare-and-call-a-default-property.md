@@ -41,43 +41,43 @@ caps.handback.revision: 23
   
 3.  속성에 대한 매개 변수를 적어도 하나 이상 지정합니다.  적어도 하나 이상의 인수를 갖지 않는 기본 속성은 정의할 수 없습니다.  
   
-     [!code-vb[VbVbcnProcedures#17](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-and-call-_1.vb)]  
+     [!code-vb[VbVbcnProcedures#17](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_1.vb)]  
   
 ### 기본 속성을 호출하려면  
   
 1.  포함하는 클래스 또는 구조체 형식의 변수를 선언합니다.  
   
-     [!code-vb[VbVbcnProcedures#16](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-and-call-_2.vb)]  
+     [!code-vb[VbVbcnProcedures#16](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_2.vb)]  
   
 2.  일반적으로 속성 이름을 포함하는 식에는 변수 이름만 사용합니다.  
   
-     [!code-vb[VbVbcnProcedures#21](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-and-call-_3.vb)]  
+     [!code-vb[VbVbcnProcedures#21](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_3.vb)]  
   
 3.  변수 이름 다음에 인수 목록을 괄호로 묶어 지정합니다.  기본 속성은 적어도 하나 이상의 인수를 가져야 합니다.  
   
-     [!code-vb[VbVbcnProcedures#20](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-and-call-_4.vb)]  
+     [!code-vb[VbVbcnProcedures#20](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_4.vb)]  
   
 4.  기본 속성 값을 검색하려면 식에서 인수 목록과 함께 변수 이름을 사용하거나 대입문에서 등호\(`=`\) 기호 다음에 변수 이름을 사용합니다.  
   
-     [!code-vb[VbVbcnProcedures#15](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-and-call-_5.vb)]  
+     [!code-vb[VbVbcnProcedures#15](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_5.vb)]  
   
 5.  기본 속성 값을 설정하려면 대입문의 왼쪽에서 변수 이름과 함께 인수 목록을 사용합니다.  
   
-     [!code-vb[VbVbcnProcedures#14](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-and-call-_6.vb)]  
+     [!code-vb[VbVbcnProcedures#14](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_6.vb)]  
   
 6.  다른 속성에 액세스할 때와 마찬가지로 항상 기본 속성 이름을 변수 이름과 함께 지정할 수 있습니다.  
   
-     [!code-vb[VbVbcnProcedures#19](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-and-call-_7.vb)]  
+     [!code-vb[VbVbcnProcedures#19](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_7.vb)]  
   
 ## 예제  
  다음 예제에서는 클래스에서 기본 속성을 선언합니다.  
   
- [!code-vb[VbVbcnProcedures#12](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-and-call-_8.vb)]  
+ [!code-vb[VbVbcnProcedures#12](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_8.vb)]  
   
 ## 예제  
  다음 예제에서는 기본 속성 `myProperty`를 `class1` 클래스에서 호출하는 방법을 보여 줍니다.  세 개의 대입문은 값을 `myProperty`에 저장하고 <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 호출은 이러한 값을 읽습니다.  
   
- [!code-vb[VbVbcnProcedures#13](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-and-call-_9.vb)]  
+ [!code-vb[VbVbcnProcedures#13](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_9.vb)]  
   
  기본 속성이 사용되는 가장 일반적인 경우는 다양한 컬렉션 클래스의 <xref:Microsoft.VisualBasic.Collection.Item%2A> 속성입니다.  
   

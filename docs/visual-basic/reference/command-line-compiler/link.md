@@ -74,18 +74,18 @@ caps.handback.revision: 27
 ### 제네릭 인터페이스  
  interop 어셈블리에서 포함된 제네릭 인터페이스는 사용할 수 없습니다.  다음 예제에서 이를 확인할 수 있습니다.  
   
- [!code-vb[VbLinkCompiler#1](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/vblinkcompiler/module1.vb#1)]  
+ [!code-vb[VbLinkCompiler#1](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_1.vb)]  
   
 ### 제네릭 매개 변수가 있는 형식  
  interop 어셈블리에서 포함된 형식이 외부 어셈블리에서 온 경우 해당 형식의 제네릭 매개 변수를 가지는 형식은 사용할 수 없습니다.  이러한 제한은 인터페이스에 적용되지 않습니다.  예를 들어 <xref:Microsoft.Office.Interop.Excel> 어셈블리에 정의된 <xref:Microsoft.Office.Interop.Excel.Range> 인터페이스를 생각해 볼 수 있습니다.  라이브러리에서 <xref:Microsoft.Office.Interop.Excel> 어셈블리의 interop 형식을 포함한 후 <xref:Microsoft.Office.Interop.Excel.Range> 인터페이스 형식의 매개 변수가 있는 제네릭 형식을 반환하는 메서드를 노출하는 경우 해당 메서드는 다음 코드 예제에서와 같이 제네릭 인터페이스를 반환해야 합니다.  
   
- [!code-vb[VbLinkCompiler#2](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/vblinkcompiler/utility.vb#2)]  
-[!code-vb[VbLinkCompiler#3](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/vblinkcompiler/utility.vb#3)]  
-[!code-vb[VbLinkCompiler#4](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/vblinkcompiler/utility.vb#4)]  
+ [!code-vb[VbLinkCompiler#2](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_2.vb)]  
+[!code-vb[VbLinkCompiler#3](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_3.vb)]  
+[!code-vb[VbLinkCompiler#4](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_4.vb)]  
   
  다음 예제에서 클라이언트 코드는 오류 없이 <xref:System.Collections.IList> 제네릭 인터페이스를 반환하는 메서드를 호출할 수 있습니다.  
   
- [!code-vb[VbLinkCompiler#5](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/vblinkcompiler/module1.vb#5)]  
+ [!code-vb[VbLinkCompiler#5](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/link_5.vb)]  
   
 ## 예제  
  다음 코드에서는 소스 파일 `OfficeApp.vb` 및 `COMData1.dll`과 `COMData2.dll`의 참조 어셈블리를 컴파일하여 `OfficeApp.exe`를 생성합니다.  

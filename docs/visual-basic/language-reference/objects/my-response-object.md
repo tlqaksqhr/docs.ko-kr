@@ -32,7 +32,7 @@ caps.handback.revision: 9
 ## 예제  
  다음 예제에서는 `My.Request` 개체에서 헤더 컬렉션을 가져오고 `My.Response` 개체를 사용하여 ASP.NET 페이지에 씁니다.  
   
- [!code-vb[VbVbalrMyWeb#1](../../../visual-basic/language-reference/objects/codesnippet/visualbasic/my-response-object_1.aspx)]  
+ [!code-vb[VbVbalrMyWeb#1](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-response-object_1.aspx)]  
   
 ## 참고 항목  
  <xref:System.Web.HttpResponse>   

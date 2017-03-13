@@ -62,7 +62,7 @@ public delegate void EventHandler(object sender, EventArgs e);
 ## 예제  
  다음 예제에서는 사용자 지정 EventArgs 클래스를 사용하고 이벤트 형식으로 <xref:System.EventHandler%601>을 사용하여 앞에서 설명한 단계를 보여 줍니다.  
   
- [!code-cs[csProgGuideEvents#2](../../../csharp/programming-guide/events/codesnippet/csharp/how-to-publish-events-th_1.cs)]  
+ [!code-cs[csProgGuideEvents#2](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-publish-events-that-conform-to-net-framework-guidelines_1.cs)]  
   
 ## 참고 항목  
  <xref:System.Delegate>   

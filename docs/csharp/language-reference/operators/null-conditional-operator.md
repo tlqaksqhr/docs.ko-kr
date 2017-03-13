@@ -30,7 +30,7 @@ caps.handback.revision: 17
  ?? 연산자의 결과는 두 인수가 상수인 경우에도 상수가 될 수 없습니다.  
   
 ## 예제  
- [!code-cs[csRefOperators#53](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#53)]  
+ [!code-cs[csRefOperators#53](../../../csharp/language-reference/operators/codesnippet/CSharp/null-conditional-operator_1.cs)]  
   
 ## 참고 항목  
  [C\# 참조](../../../csharp/language-reference/index.md)   

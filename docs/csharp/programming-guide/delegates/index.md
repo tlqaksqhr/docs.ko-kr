@@ -21,7 +21,7 @@ caps.handback.revision: 30
   
  대리자는 메서드를 다른 메서드에 인수로 전달하는 데 사용됩니다.  이벤트 처리기는 대리자를 통해 호출되는 메서드라고 할 수 있습니다.  사용자 지정 메서드를 만들면 Windows 컨트롤 같은 클래스가 특정 이벤트가 발생했을 때 해당 메서드를 호출할 수 있습니다.  다음 예제에서는 대리자 선언을 보여 줍니다.  
   
- [!code-cs[csProgGuideDelegates#20](../../../csharp/programming-guide/delegates/codesnippet/csharp/csrefDelegates/Delegates.cs#20)]  
+ [!code-cs[csProgGuideDelegates#20](../../../csharp/programming-guide/delegates/codesnippet/CSharp/index_1.cs)]  
   
  액세스 가능한 클래스 또는 대리자 형식과 일치하는 구조의 모든 메서드는 대리자에 할당할 수 있습니다.  메서드는 정적 메서드이거나 인스턴스 메서드일 수 있습니다.  메서드를 대리자에 할당하면 프로그래밍 방식으로 메서드 호출을 변경하고 기존 클래스에 새 코드를 삽입할 수 있습니다.  
   

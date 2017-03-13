@@ -39,7 +39,7 @@ caps.handback.revision: 16
   
 3.  다른 속성 프로시저에는 액세스 수준을 지정하지 않습니다.  해당 프로시저에 `Property` 문에서 액세스 수준이 선언된 것으로 가정합니다.  속성 프로시저 중 하나에 대해서만 액세스를 제한할 수 있습니다.  
   
-     [!code-vb[VbVbcnProcedures#10](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-declare-a-propert_1.vb)]  
+     [!code-vb[VbVbcnProcedures#10](./codesnippet/VisualBasic/how-to-declare-a-property-with-mixed-access-levels_1.vb)]  
   
      위 예제에서 `Get` 프로시저에는 속성 자체와 동일한 `Protected` 액세스가 지정되지만, `Set` 프로시저에는 `Private` 액세스가 지정됩니다.  `employee`에서 파생된 클래스는 `salary` 값을 읽을 수 있지만 값 설정은 `employee` 클래스만이 할 수 있습니다.  
   

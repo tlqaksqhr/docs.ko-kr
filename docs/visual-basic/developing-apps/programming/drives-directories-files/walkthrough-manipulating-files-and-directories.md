@@ -66,13 +66,13 @@ caps.handback.revision: 49
   
 2.  `Click` 이벤트 처리기에 다음 코드를 추가합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#103](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#103](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_1.vb)]  
   
      `FolderBrowserDialog1.ShowDialog` 호출을 통해 **폴더 찾아보기** 대화 상자가 열립니다.  사용자가 **확인**을 클릭하면 <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> 속성이 `ListFiles` 메서드에 인수로 보내지며, 이 속성은 다음 단계에서 추가됩니다.  
   
 3.  다음 `ListFiles` 메서드를 추가합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#104](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#104](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_2.vb)]  
   
      이 코드는 먼저 **ListBox**를 지웁니다.  
   
@@ -92,7 +92,7 @@ caps.handback.revision: 49
   
 2.  `Click` 이벤트 처리기에 다음 코드를 추가합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#105](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_3.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#105](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_3.vb)]  
   
      이 코드는 `ListBox`에서 항목이 선택되어 있는지 확인합니다.  그런 다음 `ListBox`에서 파일 경로 항목을 가져옵니다.  <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A> 메서드를 사용하여 파일이 여전히 존재하는지 여부를 확인합니다.  
   
@@ -100,7 +100,7 @@ caps.handback.revision: 49
   
 3.  다음 `GetTextForOutput` 메서드를 추가합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#107](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_4.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#107](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_4.vb)]  
   
      이 코드는 <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> 메서드를 사용하여 파일 매개 변수를 가져옵니다.  파일 매개 변수가 <xref:System.Text.StringBuilder>에 추가됩니다.  
   
@@ -116,7 +116,7 @@ caps.handback.revision: 49
   
 1.  다음 코드를 `examineButton_Click` 이벤트 처리기의 끝에 추가합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#106](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_5.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#106](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_5.vb)]  
   
      해당 코드는 로그 파일을 선택한 파일의 디렉터리와 동일한 디렉터리에 두도록 로그 파일 경로를 설정합니다.  로그 엔트리의 텍스트는 현재 날짜 및 시간과 함께 파일 정보로 설정됩니다.  
   
@@ -132,7 +132,7 @@ caps.handback.revision: 49
   
 2.  이벤트 처리기에 다음 코드를 추가합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#102](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_6.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#102](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_6.vb)]  
   
      이 코드는 폴더 브라우저의 기본 디렉터리를 현재 디렉터리로 설정합니다.  
   
@@ -144,7 +144,7 @@ caps.handback.revision: 49
   
 1.  다음 `SetEnabled` 메서드를 추가합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#108](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_7.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#108](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_7.vb)]  
   
      `SetEnabled` 메서드는 `ListBox`에서 항목이 선택되어 있는지 여부에 따라 컨트롤을 사용하거나 사용하지 않도록 설정합니다.  
   
@@ -161,12 +161,12 @@ caps.handback.revision: 49
 ## My.Computer.FileSystem을 사용하는 전체 예제  
  다음은 전체 예제입니다.  
   
- [!code-vb[VbVbcnMyFileSystem#101](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_8.vb)]  
+ [!code-vb[VbVbcnMyFileSystem#101](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_8.vb)]  
   
 ## System.IO를 사용하는 전체 예제  
  다음과 같은 예제에서는 `My.Computer.FileSystem` 개체를 사용하는 대신 <xref:System.IO> 네임스페이스의 클래스를 사용합니다.  
   
- [!code-vb[VbVbcnMyFileSystem#111](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/walkthrough-manipulating_0_9.vb)]  
+ [!code-vb[VbVbcnMyFileSystem#111](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_9.vb)]  
   
 ## 참고 항목  
  <xref:System.IO>   

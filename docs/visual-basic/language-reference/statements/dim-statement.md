@@ -309,19 +309,19 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 ## <a name="example"></a>예제  
  다음 예제에서는 변수를 사용 하 여 선언 된 `Dim` 다양 한 옵션을 사용 하 여 문을 합니다.  
   
- [!code-vb[VbVbalrStatements#141](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/dim-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#141](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_1.vb)]  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 1에서 30 사이의 소수를 나열 합니다. 지역 변수의 범위는 코드 주석에 설명 되어 있습니다.  
   
- [!code-vb[VbVbalrStatements#142](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/dim-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#142](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_2.vb)]  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 `speedValue` 변수는 클래스 수준에서 선언 됩니다.  `Private` 키워드는 변수를 선언 하는 데 사용 됩니다. 모든 프로시저에서 변수를 액세스할 수는 `Car` 클래스입니다.  
   
- [!code-vb[VbVbalrStatements#144](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/dim-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#144](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_3.vb)]  
   
- [!code-vb[VbVbalrStatements#145](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/dim-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#145](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_4.vb)]  
   
 ## <a name="see-also"></a>참고 항목  
  [Const 문](../../../visual-basic/language-reference/statements/const-statement.md)   

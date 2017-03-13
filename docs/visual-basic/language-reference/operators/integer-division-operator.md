@@ -73,7 +73,7 @@ expression1 \ expression2
 ## 예제  
  다음 예제에서는 `\` 연산자를 사용하여 정수 나누기 연산을 수행합니다.  결과는 두 피연산자의 정수 몫을 나타내는 정수입니다. 이때 나머지는 버립니다.  
   
- [!code-vb[VbVbalrOperators#18](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/integer-division-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#18](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/integer-division-operator_1.vb)]  
   
  위 예제의 식에서는 2, 3, 33, \-22 값이 각각 반환됩니다.  
   

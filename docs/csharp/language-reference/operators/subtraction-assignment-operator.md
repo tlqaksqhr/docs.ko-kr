@@ -39,7 +39,7 @@ x = x / y
  `/=` 연산자는 직접 오버로드될 수 없지만, 사용자 정의 형식으로 [\/ 연산자](../../../csharp/language-reference/operators/division-operator.md)를 오버로드할 수 있습니다\([operator](../../../csharp/language-reference/keywords/operator.md) 참조\).  모든 복합 대입 연산자에서 이항 연산자를 오버로드하면 동일한 복합 대입도 암시적으로 오버로드됩니다.  
   
 ## 예제  
- [!code-cs[csRefOperators#5](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#5)]  
+ [!code-cs[csRefOperators#5](../../../csharp/language-reference/operators/codesnippet/CSharp/subtraction-assignment-operator_1.cs)]  
   
 ## 참고 항목  
  [C\# 참조](../../../csharp/language-reference/index.md)   

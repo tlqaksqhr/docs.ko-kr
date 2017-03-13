@@ -23,27 +23,27 @@ caps.handback.revision: 13
   
  다음 예제에서는 이 사용자 지정 특성을 사용합니다.  
   
- [!code-cs[csProgGuideGenerics#48](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-and-attributes_1.cs)]  
+ [!code-cs[csProgGuideGenerics#48](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-and-attributes_1.cs)]  
   
  특성은 열려 있는 제네릭 형식을 참조할 수 있습니다.  
   
- [!code-cs[csProgGuideGenerics#49](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-and-attributes_2.cs)]  
+ [!code-cs[csProgGuideGenerics#49](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-and-attributes_2.cs)]  
   
  적절한 수의 쉼표를 사용하여 여러 형식 매개 변수를 지정합니다.  이 예제에서 `GenericClass2`에는 두 개의 형식 매개 변수가 있습니다.  
   
- [!code-cs[csProgGuideGenerics#50](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-and-attributes_3.cs)]  
+ [!code-cs[csProgGuideGenerics#50](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-and-attributes_3.cs)]  
   
  특성은 생성된 닫혀 있는 제네릭 형식을 참조할 수 있습니다.  
   
- [!code-cs[csProgGuideGenerics#51](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-and-attributes_4.cs)]  
+ [!code-cs[csProgGuideGenerics#51](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-and-attributes_4.cs)]  
   
  특성에서 제네릭 형식 매개 변수를 참조하면 컴파일 타임 오류가 발생합니다.  
   
- [!code-cs[csProgGuideGenerics#52](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-and-attributes_5.cs)]  
+ [!code-cs[csProgGuideGenerics#52](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-and-attributes_5.cs)]  
   
  제네릭 형식은 <xref:System.Attribute>에서 상속할 수 없습니다.  
   
- [!code-cs[csProgGuideGenerics#53](../../../csharp/programming-guide/generics/codesnippet/csharp/generics-and-attributes_6.cs)]  
+ [!code-cs[csProgGuideGenerics#53](../../../csharp/programming-guide/generics/codesnippet/CSharp/generics-and-attributes_6.cs)]  
   
  <xref:System.Reflection> 메서드를 사용하면 런타임에 제네릭 형식이나 형식 매개 변수에 대한 정보를 얻을 수 있습니다.  자세한 내용은 [제네릭 및 리플렉션](../../../csharp/programming-guide/generics/generics-and-reflection.md)를 참조하십시오.  
   

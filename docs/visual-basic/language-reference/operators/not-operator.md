@@ -73,14 +73,14 @@ result = Not expression
 ## 예제  
  다음 예제에서는 `Not` 연산자를 사용하여 `Boolean` 식의 논리 부정 연산을 수행합니다.  결과는 식의 값을 반대로 나타내는 `Boolean` 값입니다.  
   
- [!code-vb[VbVbalrOperators#33](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/not-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#33](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/not-operator_1.vb)]  
   
  위 예제의 결과는 각각 `False` 및 `True`가 됩니다.  
   
 ## 예제  
  다음 예제에서는 `Not` 연산자를 사용하여 숫자 식의 개별 비트에 대한 논리 부정 연산을 수행합니다.  결과 패턴의 비트는 부호 비트를 포함하여 피연산자 패턴에 있는 해당 비트의 반대로 설정됩니다.  
   
- [!code-vb[VbVbalrOperators#34](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/not-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#34](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/not-operator_2.vb)]  
   
  위 예제의 결과는 각각 \-11, \-9 및 \-7이 됩니다.  
   

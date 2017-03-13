@@ -76,7 +76,7 @@ Dim l, m As Long, x, y As Single
 ## 지역 형식 유추  
  *형식 유추*는 `As` 절 없이 선언된 지역 변수의 데이터 형식을 결정하는 데 사용됩니다.  컴파일러는 초기화 식의 형식에서 변수 형식을 유추합니다.  이를 통해 형식을 명시적으로 선언하지 않고 변수를 선언할 수 있습니다.  다음 코드 예제에서 `num1`과 `num2`는 모두 정수로 강력하게 형식화되어 있습니다.  
   
- [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/variable-declaration_1.vb)]  
+ [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/variable-declaration_1.vb)]  
   
  지역 형식 유추를 사용하려면 `Option Infer`를 `On`으로 설정해야 합니다.  자세한 내용은 [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) 및 [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md)을 참조하십시오.  
   

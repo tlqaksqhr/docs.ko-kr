@@ -27,7 +27,7 @@ caps.handback.revision: 28
 ## 표준 쿼리 연산자 확장 메서드  
  다음 예제에서는 간단한 *쿼리 식* 및 *메서드 기반 쿼리*로 작성된 의미가 같은 쿼리를 보여 줍니다.  
   
- [!code-cs[csLINQGettingStarted#22](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#22)]  
+ [!code-cs[csLINQGettingStarted#22](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/query-syntax-and-method-syntax-in-linq_1.cs)]  
   
  두 예제의 출력은 동일합니다.  쿼리 변수의 형식이 두 경우 모두에서 <xref:System.Collections.Generic.IEnumerable%601>로 동일하다는 것을 알 수 있습니다.  
   

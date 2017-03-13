@@ -29,7 +29,7 @@ caps.handback.revision: 20
   
 -   배열을 선언한 후 다른 변수를 전달하는 것과 마찬가지로 해당 배열을 전달하기 전에 <xref:System.Enum.GetValues%2A> 메서드를 사용하여 열거형을 해당 배열로 변환합니다.  다음 예제에서는 열거형 <xref:Microsoft.VisualBasic.FirstDayOfWeek>의 각 멤버가 열거형을 반복할 때 이를 표시합니다.  
   
-     [!code-vb[VbEnumsTask#7](../../../../visual-basic/language-reference/statements/codesnippet/visualbasic/WindowsApplication1/Class2.vb#7)]  
+     [!code-vb[VbEnumsTask#7](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-iterate-through-an-enumeration_1.vb)]  
   
 ## 참고 항목  
  [Enumerations Overview](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)   

@@ -41,7 +41,7 @@ Console.WriteLine(v.Amount + v.Message);
   
  익명 형식에 멤버 이름을 지정하지 않으면 컴파일러가 익명 형식 멤버에 해당 멤버를 초기화하는 데 사용된 속성과 동일한 이름을 제공합니다.  앞의 예제에 표시된 것처럼, 식으로 초기화되는 속성의 이름을 제공해야 합니다.  다음 예제에서 익명 형식의 속성 이름은 `Color` 및 `Price`입니다.  
   
- [!code-cs[csRef30Features#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/anonymous-types_1.cs)]  
+ [!code-cs[csRef30Features#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/anonymous-types_1.cs)]  
   
  일반적으로 익명 형식을 사용하여 변수를 초기화할 때는 [var](../../../csharp/language-reference/keywords/var.md)을 사용하여 변수를 암시적으로 형식화된 지역 변수로 선언합니다.  컴파일러만 익명 형식의 기본 이름에 액세스할 수 있으므로 변수 선언에는 형식 이름을 지정할 수 없습니다.  `var`에 대한 자세한 내용은 [암시적으로 형식화한 지역 변수](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)을 참조하십시오.  
   

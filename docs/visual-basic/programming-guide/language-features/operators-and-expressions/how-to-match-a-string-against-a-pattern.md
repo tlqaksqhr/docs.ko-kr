@@ -42,7 +42,7 @@ caps.handback.revision: 8
   
      다음 예제에서는 `myString`이 단일 문자 `H`로 구성되는지 여부를 테스트합니다.  
   
-     [!code-vb[VbVbalrOperators#70](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-match-a-string-ag_1.vb)]  
+     [!code-vb[VbVbalrOperators#70](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_1.vb)]  
   
 ### 와일드카드 문자에서 문자열 식의 문자를 검색하려면  
   
@@ -50,7 +50,7 @@ caps.handback.revision: 8
   
      다음 예제에서는 `myString`이 단일 문자 `W` 뒤에 정확하게 두 개의 문자만 있는 값으로 구성되는지 여부를 테스트합니다.  
   
-     [!code-vb[VbVbalrOperators#71](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-match-a-string-ag_2.vb)]  
+     [!code-vb[VbVbalrOperators#71](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_2.vb)]  
   
 ### 문자 목록에서 문자열 식의 문자를 검색하려면  
   
@@ -58,7 +58,7 @@ caps.handback.revision: 8
   
      다음 예제에서는 `myString`에서 유효 문자 뒤에 `A`, `C` 또는 `E` 문자가 정확히 하나만 오는지 여부를 테스트합니다.  
   
-     [!code-vb[VbVbalrOperators#72](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-match-a-string-ag_3.vb)]  
+     [!code-vb[VbVbalrOperators#72](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_3.vb)]  
   
      이 때 대\/소문자도 일치해야 합니다.  
   
@@ -68,7 +68,7 @@ caps.handback.revision: 8
   
      다음 예제에서는 `myString`에서 `num` 문자 뒤에 `i`, `j`, `k`, `l`, `m` 또는 `n` 문자가 정확히 하나만 오는지 여부를 테스트합니다.  
   
-     [!code-vb[VbVbalrOperators#73](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-match-a-string-ag_4.vb)]  
+     [!code-vb[VbVbalrOperators#73](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_4.vb)]  
   
      이 때 대\/소문자도 일치해야 합니다.  
   
@@ -85,7 +85,7 @@ caps.handback.revision: 8
   
      다음 예제에서는 일곱 자리 전화 번호 `phoneNum`에서 정확히 세 자리의 숫자 뒤에 공백, 하이픈\(`–`\) 또는 마침표\(`.`\)가 오거나 아무 문자도 오지 않고 그 뒤에 정확히 네 자리의 숫자가 오는지를 테스트합니다.  
   
-     [!code-vb[VbVbalrOperators#74](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-match-a-string-ag_5.vb)]  
+     [!code-vb[VbVbalrOperators#74](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-match-a-string-against-a-pattern_5.vb)]  
   
 ## 참고 항목  
  [Comparison Operators](../../../../visual-basic/language-reference/operators/comparison-operators.md)   

@@ -23,7 +23,7 @@ caps.handback.revision: 29
   
  다음 예제에서는 제네릭 클래스를 정의하고 값을 할당하고 검색하는 방법으로 간단한 [get](../../../csharp/language-reference/keywords/get.md) 및 [set](../../../csharp/language-reference/keywords/set.md) 접근자 메서드를 제공합니다.  `Program` 클래스는 이 클래스의 인스턴스를 만들어 문자열을 저장합니다.  
   
- [!code-cs[csProgGuideIndexers#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/index_1.cs)]  
+ [!code-cs[csProgGuideIndexers#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/index_1.cs)]  
   
 > [!NOTE]
 >  추가 예제는 [관련 단원](../../../csharp/programming-guide/indexers/index.md#BKMK_RelatedSections)을 참조하세요.  

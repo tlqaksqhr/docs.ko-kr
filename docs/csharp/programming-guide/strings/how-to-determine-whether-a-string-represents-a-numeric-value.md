@@ -34,7 +34,7 @@ bool result = int.TryParse(s, out i); //i now = 108
 ## 예제  
  다음 예제에서는 `long`, `byte` 및 `decimal` 값의 문자열 표현을 사용하여 `TryParse`를 사용하는 방법을 보여 줍니다.  
   
- [!code-cs[csProgGuideStrings#14](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#14)]  
+ [!code-cs[csProgGuideStrings#14](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-determine-whether-a-string-represents-a-numeric-value_1.cs)]  
   
 ## 강력한 프로그래밍  
  또한 기본 숫자 형식에서는 문자열이 유효한 숫자가 아닌 경우 예외를 throw하는 정적 메서드 `Parse`를 구현합니다.  숫자가 유효하지 않은 경우 false를 반환하기 때문에 일반적으로 `TryParse`를 사용하는 것이 더 효과적입니다.  

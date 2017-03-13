@@ -58,7 +58,7 @@ caps.handback.revision: 15
 ## 예제  
  다음 코드는 두 조건부 컴파일러 상수를 정의한 다음 사용합니다.  
   
- [!code-vb[VbVbalrCompiler#45](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/define_1.vb)]  
+ [!code-vb[VbVbalrCompiler#45](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/define_1.vb)]  
   
 ## 참고 항목  
  [Visual Basic Command\-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)   

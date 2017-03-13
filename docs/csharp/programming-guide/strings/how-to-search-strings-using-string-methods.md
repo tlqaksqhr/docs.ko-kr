@@ -22,7 +22,7 @@ caps.handback.revision: 8
 ## 예제  
  다음 예제에서는 <xref:System.String.IndexOf%2A>, <xref:System.String.LastIndexOf%2A>, <xref:System.String.StartsWith%2A> 및 <xref:System.String.EndsWith%2A> 메서드를 사용하여 문자열을 검색합니다.  
   
- [!code-cs[csProgGuideStrings#21](../../../csharp/programming-guide/strings/codesnippet/csharp/CSRefStrings/Strings.cs#21)]  
+ [!code-cs[csProgGuideStrings#21](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-search-strings-using-string-methods_1.cs)]  
   
 ## 참고 항목  
  [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   

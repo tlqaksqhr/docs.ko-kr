@@ -29,11 +29,11 @@ caps.handback.revision: 25
 ## 예제  
  아래 예제에서는 잘못된 변환문이 `System.InvalidCastException` 예외를 발생시킵니다.  예외는 처리되지 않습니다.  
   
- [!code-cs[csrefKeywordsExceptions#4](../../../csharp/language-reference/keywords/codesnippet/csharp/try-finally_1.cs)]  
+ [!code-cs[csrefKeywordsExceptions#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-finally_1.cs)]  
   
  다음 예에서 `TryCast` 메서드 예외는 메서드에서 호출 스택까지 catch됩니다.  
   
- [!code-cs[csrefKeywordsExceptions#6](../../../csharp/language-reference/keywords/codesnippet/csharp/try-finally_2.cs)]  
+ [!code-cs[csrefKeywordsExceptions#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-finally_2.cs)]  
   
  `finally`에 대한 자세한 내용은 [try\-catch\-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)를 참조하십시오.  
   

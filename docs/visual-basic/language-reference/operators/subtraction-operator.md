@@ -72,7 +72,7 @@ caps.handback.revision: 14
 ## 예제  
  다음 예제에서는 `–` 연산자를 사용하여 두 식의 차를 계산하여 반환한 다음 숫자를 부정합니다.  
   
- [!code-vb[VbVbalrOperators#10](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/subtraction-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#10](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/subtraction-operator_1.vb)]  
   
  이러한 문을 실행한 후 `binaryResult`에는 124.45가 포함되고 `unaryResult`에는 –334.90이 포함됩니다.  
   

@@ -24,7 +24,7 @@ caps.handback.revision: 6
 ## 예제  
  다음 예제에서는 성의 첫 글자에 따라 학생을 그룹화하도록 지정하기 위해 `group` 절에서 `by` 컨텍스트 키워드를 사용하는 방법을 보여 줍니다.  
   
- [!code-cs[csrefKeywordsContextual#10](../../../csharp/language-reference/keywords/codesnippet/csharp/by_1.cs)]  
+ [!code-cs[csrefKeywordsContextual#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/by_1.cs)]  
   
 ## 참고 항목  
  [LINQ 쿼리 식](../../../csharp/programming-guide/linq-query-expressions/index.md)

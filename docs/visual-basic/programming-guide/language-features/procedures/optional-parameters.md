@@ -57,12 +57,12 @@ sub name(argument 1, , , argument 4)
   
  `MsgBox`에 대한 첫 번째 호출에서 `MsgBox`에서 정의하는 순서대로 세 개의 인수를 모두 제공합니다.  두 번째 호출에서는 필수적 인수만 지정합니다.  세 번째와 네 번째 호출에서는 첫 번째 인수와 세 번째 인수를 지정합니다.  세 번째 호출에서는 위치로 인수를 지정하고, 네 번째 호출에서는 이름으로 인수를 지정합니다.  
   
- [!code-vb[VbVbcnProcedures#47](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/optional-parameters_1.vb)]  
+ [!code-vb[VbVbcnProcedures#47](./codesnippet/VisualBasic/optional-parameters_1.vb)]  
   
 ## 선택적 인수의 존재 여부 확인  
  프로시저는 지정된 인수가 생략되었는지 또는 호출 코드가 명시적으로 기본값을 제공했는지 여부를 런타임에서 감지할 수 없습니다.  이를 알아보려면 특이한 값을 기본값으로 설정하면 됩니다.  다음 예제에서는 선택적 매개 변수 `office`를 정의하고 기본값  `QJZ`를 테스트하여 호출에서 해당 매개 변수가 생략되었는지 확인합니다.  
   
- [!code-vb[VbVbcnProcedures#46](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/optional-parameters_2.vb)]  
+ [!code-vb[VbVbcnProcedures#46](./codesnippet/VisualBasic/optional-parameters_2.vb)]  
   
  선택적 매개 변수가 `String`과 같은 참조 형식일 경우 `Nothing`이 그 인수에 예상된 값이 아니면 이 값을 기본값으로 사용할 수 있습니다.  
   

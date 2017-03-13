@@ -10,14 +10,14 @@ caps.handback.revision: 15
 ## 예제  
  다음 예제에서는 예외 처리 코드를 쿼리 식 외부로 이동하는 방법을 보여 줍니다.  이러한 작업은 메서드가 쿼리에 대한 지역 변수에 종속되지 않는 경우에만 가능합니다.  
   
- [!code-cs[csProgGuideLINQ#10](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#10)]  
+ [!code-cs[csProgGuideLINQ#10](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-handle-exceptions-in-query-expressions_1.cs)]  
   
 ## 예제  
  경우에 따라 쿼리 내에서 throw되는 예외에 대한 가장 좋은 응답은 쿼리 실행을 즉시 중지하는 것입니다.  다음 예제에서는 쿼리 본문 내부에서 throw되는 예외를 처리하는 방법을 보여 줍니다.  `SomeMethodThatMightThrow`에서 쿼리 실행을 중지하는 예외를 발생시킬 수 있다고 가정합니다.  
   
  `try` 블록에서는 쿼리 자체가 아니라 `foreach` 루프를 포함합니다.  이는 쿼리가 실제로 실행되는 지점에 `foreach` 루프가 있기 때문입니다.  자세한 내용은 [Introduction to LINQ Queries \(C\#\)](../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)를 참조하십시오.  
   
- [!code-cs[csProgGuideLINQ#12](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#12)]  
+ [!code-cs[csProgGuideLINQ#12](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-handle-exceptions-in-query-expressions_2.cs)]  
   
 ## 코드 컴파일  
   

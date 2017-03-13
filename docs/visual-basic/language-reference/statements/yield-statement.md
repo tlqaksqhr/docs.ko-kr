@@ -91,12 +91,12 @@ Next
   
  반복기 메서드 반환 형식이 <xref:System.Collections.Generic.IEnumerable%601>, 반복기 인터페이스 형식입니다.  반복기 메서드 호출 되 면 숫자의 거듭제곱이 들어 있는 열거 가능한 개체를 반환 합니다.  
   
- [!code-vb[VbVbalrStatements#98](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/yield-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#98](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/yield-statement_1.vb)]  
   
 ## 예제  
  다음 예제는 `Get` 접근자는 반복기입니다.  속성 선언에 포함 된 `Iterator` 한정자입니다.  
   
- [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/yield-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/yield-statement_2.vb)]  
   
  다른 예제를 보려면 [반복기](../Topic/Iterators%20\(C%23%20and%20Visual%20Basic\).md)를 참조하십시오.  
   

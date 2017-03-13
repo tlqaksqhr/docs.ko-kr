@@ -22,7 +22,7 @@ caps.handback.revision: 19
   
  null 허용 부울을 사용하면 `a != b` 식은 두 값 중 하나 이상이 null일 수 있으므로 `!(a == b)`과 반드시 일치하지는 않습니다.  식의 null 값을 올바르게 식별하려면 `true` 및 `false` 연산자를 개별적으로 오버로드해야 합니다.  다음 예제에서는 `true` 및 `false` 연산자를 오버로드하여 사용하는 방법을 보여 줍니다.  
   
- [!code-cs[csrefKeywordsOperator#16](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsOperator/csrefKeywordsOperators.cs#16)]  
+ [!code-cs[csrefKeywordsOperator#16](../../../csharp/language-reference/keywords/codesnippet/CSharp/true-operator_1.cs)]  
   
  `true` 및 `false` 연산자를 오버로드하는 형식은 [if](../../../csharp/language-reference/keywords/if-else.md), [do](../../../csharp/language-reference/keywords/do.md), [while](../../../csharp/language-reference/keywords/while.md) 및 [for](../../../csharp/language-reference/keywords/for.md) 문과 [조건식](../../../csharp/language-reference/operators/conditional-operator.md)에서 제어식에 사용할 수 있습니다.  
   

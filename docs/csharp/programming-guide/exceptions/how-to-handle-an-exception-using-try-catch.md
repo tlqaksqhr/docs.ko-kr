@@ -23,7 +23,7 @@ caps.handback.revision: 14
 ## 예제  
  다음 예제에서 <xref:System.IndexOutOfRangeException>은 가장 적절한 예외가 아닙니다. 이 오류는 호출자가 전달한 `index` 인수 때문에 발생한 것이므로 해당 메서드에는 <xref:System.ArgumentOutOfRangeException>이 보다 적절합니다.  
   
- [!code-cs[csProgGuideExceptions#5](../../../csharp/programming-guide/exceptions/codesnippet/csharp/how-to-handle-an-excepti_1.cs)]  
+ [!code-cs[csProgGuideExceptions#5](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/how-to-handle-an-exception-using-try-catch_1.cs)]  
   
 ## 설명  
  예외가 발생한 코드는 `try` 블록으로 묶여 있습니다.  예외가 발생할 때 `IndexOutOfRangeException`을 처리하기 위한 `catch` 문이 바로 다음에 추가되어 있습니다.  `catch` 블록에서는 `IndexOutOfRangeException`을 처리하고 보다 적합한 `ArgumentOutOfRangeException` 예외를 대신 throw합니다.  호출자에 가능한 한 많은 정보를 제공하려면 원래 예외를 새 예외의 <xref:System.Exception.InnerException%2A>으로 지정하는 것이 좋습니다.  <xref:System.Exception.InnerException%2A> 속성은 [읽기 전용](../../../csharp/language-reference/keywords/readonly.md)이므로 새 예외의 생성자에서 이 속성을 할당해야 합니다.  

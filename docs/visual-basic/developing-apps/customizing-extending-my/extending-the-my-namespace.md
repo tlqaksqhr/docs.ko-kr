@@ -47,7 +47,7 @@ Visual Basic의 `My` 네임스페이스는 .NET Framework의 강력한 기능을
   
  예를 들어 응용 프로그램을 실행하는 사용자의 현재 보안 컨텍스트에 액세스하기 위해 `My.User` 개체를 자주 사용한다고 가정해 보겠습니다.  하지만 회사에서는 사용자 지정된 사용자 개체를 사용하여 회사 내 사용자에 대한 추가적인 정보와 기능을 노출합니다.  이 경우 다음 예제에서처럼 `My.User.CurrentPrincipal` 속성의 기본값을 사용자 지정 Principal 개체의 인스턴스로 바꿀 수 있습니다.  
   
- [!code-vb[VbVbcnExtendingMy#1](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/visualbasic/extending-the-my-namespace_1.vb)]  
+ [!code-vb[VbVbcnExtendingMy#1](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_1.vb)]  
   
  `My.User` 개체에 `CurrentPrincipal` 속성을 설정하면 응용 프로그램 실행에 사용되는 ID가 변경됩니다.  그러면 `My.User` 개체는 새로 지정된 사용자에 대한 정보를 반환합니다.  
   
@@ -56,7 +56,7 @@ Visual Basic의 `My` 네임스페이스는 .NET Framework의 강력한 기능을
   
  예를 들어 다음 예제에서는 `My.Computer` 개체에 `DnsServerIPAddresses`라는 속성을 추가합니다.  
   
- [!code-vb[VbVbcnExtendingMy#2](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/visualbasic/extending-the-my-namespace_2.vb)]  
+ [!code-vb[VbVbcnExtendingMy#2](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_2.vb)]  
   
 ##  <a name="addingcustom"></a> My 네임스페이스에 사용자 지정 개체 추가  
  `My` 네임스페이스는 다양한 일반적인 프로그래밍 작업에 대한 솔루션을 제공하지만 `My` 네임스페이스로 해결되지 않는 작업이 있을 수 있습니다.  예를 들어 응용 프로그램이 사용자 데이터를 위해 사용자 지정 디렉터리 서비스에 액세스하거나 Visual Basic과 함께 기본적으로 설치되지 않는 어셈블리를 사용해야 할 수 있습니다.  `My` 네임스페이스를 확장하여 각각의 환경에서 일반적으로 수행되는 작업에 대한 사용자 지정 솔루션을 포함할 수 있습니다.  응용 프로그램의 요구 사항이 늘어남에 따라 `My` 네임스페이스를 확장하여 새 멤버를 추가할 수 있습니다.  또한 `My` 네임스페이스 확장을 Visual Basic 템플릿 형태로 다른 개발자에게 배포할 수 있습니다.  
@@ -64,20 +64,20 @@ Visual Basic의 `My` 네임스페이스는 .NET Framework의 강력한 기능을
 ###  <a name="addingtonamespace"></a> My 네임스페이스에 멤버 추가  
  `My` 네임스페이스는 다른 네임스페이스와 비슷한 특징을 가지고 있기 때문에 모듈을 추가하고 `My`의 `Namespace`를 지정하여 최상위 속성을 추가할 수 있습니다.  다음 예제에서처럼 `HideModuleName` 특성으로 모듈에 주석을 지정합니다.  `HideModuleName` 특성을 사용하면 IntelliSense에서 `My` 네임스페이스의 멤버를 표시할 때 모듈 이름이 표시되지 않습니다.  
   
- [!code-vb[VbVbcnExtendingMy#3](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/visualbasic/extending-the-my-namespace_3.vb)]  
+ [!code-vb[VbVbcnExtendingMy#3](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_3.vb)]  
   
  `My` 네임스페이스에 멤버를 추가하려면 모듈에 필요한 속성을 추가해야 합니다.  `My` 네임스페이스에 추가된 각 속성에 대해 `ThreadSafeObjectProvider(Of T)` 형식의 private 필드를 추가합니다. 여기서 형식은 사용자 지정 속성에서 반환된 형식입니다.  이 필드는 `GetInstance` 메서드 호출을 통해 속성에서 반환되는, 스레드로부터 안전한 개체 인스턴스를 만드는 데 사용됩니다.  따라서 확장된 속성에 액세스하는 각 스레드는 반환된 형식의 자체 인스턴스를 수신합니다.  다음 예제에서는 `SampleExtension` 형식의 `SampleExtension`이라는 속성을 `My` 네임스페이스에 추가합니다.  
   
- [!code-vb[VbVbcnExtendingMy#4](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/visualbasic/extending-the-my-namespace_4.vb)]  
+ [!code-vb[VbVbcnExtendingMy#4](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_4.vb)]  
   
 ##  <a name="addingevents"></a> 사용자 지정 My 개체에 이벤트 추가  
  `My.Application` 개체를 사용하여 `My` 네임스페이스의 `MyApplication` partial 클래스를 확장하여 사용자 지정 `My` 개체에 대한 이벤트를 노출할 수 있습니다.  Windows 기반 프로젝트의 경우 **솔루션 탐색기**에서 프로젝트에 대한 **내 프로젝트** 노드를 두 번 클릭할 수 있습니다.  Visual Basic **프로젝트 디자이너**에서는 `Application` 탭을 클릭한 다음 `View Application Events` 단추를 클릭합니다.  그러면 이름이 ApplicationEvents.vb인 새 파일이 만들어집니다.  이 파일에는 `MyApplication` 클래스를 확장하는 다음과 같은 코드가 들어 있습니다.  
   
- [!code-vb[VbVbcnExtendingMy#5](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/visualbasic/extending-the-my-namespace_5.vb)]  
+ [!code-vb[VbVbcnExtendingMy#5](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_5.vb)]  
   
  `MyApplication` 클래스에 사용자 지정 이벤트 처리기를 추가하여 사용자 지정 `My` 개체에 대한 이벤트 처리기를 추가할 수 있습니다.  사용자 지정 이벤트를 사용하면 이벤트 처리기가 추가 또는 제거되거나 이벤트가 발생했을 때 실행되는 코드를 추가할 수 있습니다.  사용자 지정 이벤트에 대한 `AddHandler` 코드는 사용자가 이벤트 처리를 위해 코드를 추가한 경우에만 실행됩니다.  예를 들어 이전 단원에서 설명한 `SampleExtension` 개체에 사용자 지정 이벤트 처리기를 추가하려고 하는 `Load` 이벤트가 있다고 가정해 보겠습니다.  다음 코드 예제에서는 `My.SampleExtension.Load` 이벤트가 발생할 때 호출될 `SampleExtensionLoad`라는 사용자 지정 이벤트 처리기를 보여 줍니다.  새 `My.SampleExtensionLoad` 이벤트를 처리하기 위한 코드가 추가되면 이 사용자 지정 이벤트 코드의 `AddHandler` 부분이 실행됩니다.  `MyApplication_SampleExtensionLoad` 메서드는 `My.SampleExtensionLoad` 이벤트를 처리하는 이벤트 처리기의 예제를 보여 주기 위해 코드 예제에 포함되었습니다.  `SampleExtensionLoad` 이벤트는 ApplicationEvents.vb 파일을 편집할 때 코드 편집기 위에 있는 왼쪽 드롭다운 목록에서 **내 응용 프로그램 이벤트** 옵션을 선택한 경우에 사용할 수 있습니다.  
   
- [!code-vb[VbVbcnExtendingMy#6](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/visualbasic/extending-the-my-namespace_6.vb)]  
+ [!code-vb[VbVbcnExtendingMy#6](../../../visual-basic/developing-apps/customizing-extending-my/codesnippet/VisualBasic/extending-the-my-namespace_6.vb)]  
   
 ##  <a name="design"></a> 디자인 지침  
  `My` 네임스페이스에 대한 확장을 개발할 때 다음 지침을 사용하면 확장 구성 요소의 유지 관리 비용을 최소화할 수 있습니다.  

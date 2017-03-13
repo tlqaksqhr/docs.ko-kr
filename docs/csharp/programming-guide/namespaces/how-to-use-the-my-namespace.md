@@ -31,16 +31,16 @@ caps.handback.revision: 12
   
      또한 프로그램 시작 부분의 `using` 섹션에 다음 줄을 추가해야 합니다.  
   
-     [!code-cs[csProgGuideNamespaces#18](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces3.cs#18)]  
+     [!code-cs[csProgGuideNamespaces#18](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-my-namespace_1.cs)]  
   
 ## 예제  
  다음 예제에서는 `MyServices` 네임스페이스에 있는 여러 정적 메서드를 호출합니다.  이 코드를 컴파일하려면 프로젝트에 Microsoft.VisualBasic.DLL에 대한 참조를 추가해야 합니다.  
   
- [!code-cs[csProgGuideNamespaces#19](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces3.cs#19)]  
+ [!code-cs[csProgGuideNamespaces#19](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-my-namespace_2.cs)]  
   
  C\# 응용 프로그램에서 `MyServices` 네임스페이스에 있는 모든 클래스를 호출할 수 있는 것은 아닙니다. 예를 들어 <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> 클래스는 호환되지 않습니다.  이 경우에는 VisualBasic.dll에도 포함된 <xref:Microsoft.VisualBasic.FileIO.FileSystem>에 있는 정적 메서드를 대신 사용할 수 있습니다.  그러한 메서드 중 하나를 사용하여 디렉터리를 복제하는 방법의 예는 다음과 같습니다.  
   
- [!code-cs[csProgGuideNamespaces#20](../../../csharp/programming-guide/namespaces/codesnippet/csharp/Namespaces/Namespaces3.cs#20)]  
+ [!code-cs[csProgGuideNamespaces#20](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/how-to-use-the-my-namespace_3.cs)]  
   
 ## 참고 항목  
  [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   

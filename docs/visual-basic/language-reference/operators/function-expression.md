@@ -67,19 +67,19 @@ End Function
 ## 예제  
  다음 예제에서는 간단한 람다 식을 만드는 두 가지 방법을 보여 줍니다.  첫 방법에서는 `Dim`을 사용하여 함수의 이름을 제공합니다.  함수를 호출하려면 매개 변수에 대한 값을 전달합니다.  
   
- [!code-vb[VbVbalrLambdas#1](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#1)]  
+ [!code-vb[VbVbalrLambdas#1](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_1.vb)]  
   
- [!code-vb[VbVbalrLambdas#2](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#2)]  
+ [!code-vb[VbVbalrLambdas#2](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_2.vb)]  
   
 ## 예제  
  또는 함수를 동시에 선언하고 실행할 수 있습니다.  
   
- [!code-vb[VbVbalrLambdas#3](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#3)]  
+ [!code-vb[VbVbalrLambdas#3](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_3.vb)]  
   
 ## 예제  
  다음 예제에서는 인수를 점증적으로 늘리고 값을 반환하는 람다 식입니다.  다음 예제에서는 한 줄과 여러 줄로 구성된 함수에 대한 람다 식 구문을 보여 줍니다.  추가 예제는 [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)를 참조하십시오.  
   
- [!code-vb[VbVbalrLambdas#14](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/vbvbalrlambdas/Class1.vb#14)]  
+ [!code-vb[VbVbalrLambdas#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_4.vb)]  
   
 ## 예제  
  람다 식은 [!INCLUDE[vbteclinqext](../../../csharp/getting-started/includes/vbteclinqext-md.md)]의 여러 쿼리 연산자의 기반이 되며 메서드 기반 쿼리에서 명시적으로 사용할 수 있습니다.  다음 예제에서는 일반적인 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)] 쿼리와 이 쿼리를 메서드 형식으로 변환한 코드를 보여 줍니다.  

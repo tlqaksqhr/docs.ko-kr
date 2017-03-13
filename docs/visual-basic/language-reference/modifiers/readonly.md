@@ -60,7 +60,7 @@ caps.handback.revision: 15
 ## 예제  
  다음 예제에서는 직원이 고용된 날짜에 대해 `ReadOnly` 속성을 정의합니다.  클래스는 내부적으로 속성 값을 `Private` 변수로 저장하며 클래스 안의 코드에서만 해당 값을 변경할 수 있습니다.  그러나 속성이 `Public`이므로 클래스에 액세스할 수 있는 모든 코드에서 속성을 읽을 수 있습니다.  
   
- [!code-vb[VbVbalrKeywords#4](../../../visual-basic/language-reference/codesnippet/visualbasic/readonly_1.vb)]  
+ [!code-vb[VbVbalrKeywords#4](../../../visual-basic/language-reference/codesnippet/VisualBasic/readonly_1.vb)]  
   
  `ReadOnly` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.  
   

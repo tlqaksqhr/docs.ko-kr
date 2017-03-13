@@ -29,7 +29,7 @@ caps.handback.revision: 15
   
 2.  범위 변수 `word`에서 `ToLower`를 한번만 호출하기 위해 쿼리하려면  `let`을 사용하지 않고 `where` 절의 각 조건자에서 `ToLower`를 호출해야 합니다.  
   
- [!code-cs[cscsrefQueryKeywords#28](../../../csharp/language-reference/keywords/codesnippet/csharp/csquerykeywords/Let.cs#28)]  
+ [!code-cs[cscsrefQueryKeywords#28](../../../csharp/language-reference/keywords/codesnippet/CSharp/let-clause_1.cs)]  
   
 ## 참고 항목  
  [C\# 참조](../../../csharp/language-reference/index.md)   

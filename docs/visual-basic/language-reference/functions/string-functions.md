@@ -58,27 +58,27 @@ caps.handback.revision: 8
 ## 예제  
  다음 예제에서는 `UCase` 함수를 사용하여 대문자 문자열을 반환합니다.  
   
- [!code-vb[VbVbalrStrings#31](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/string-functions_1.vb)]  
+ [!code-vb[VbVbalrStrings#31](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_1.vb)]  
   
 ## 예제  
  이 예제에서는 문자열 변수에서 `LTrim` 함수를 사용하여 선행 공백을 제거하고 `RTrim` 함수를 사용하여 후행 공백을 제거하며  `Trim` 함수를 사용하여 양쪽 공백을 모두 제거합니다.  
   
- [!code-vb[VbVbalrStrings#25](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/string-functions_2.vb)]  
+ [!code-vb[VbVbalrStrings#25](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_2.vb)]  
   
 ## 예제  
  다음 예제에서는 문자열에서 `Mid` 함수를 사용하여 지정한 수의 문자열을 반환합니다.  
   
- [!code-vb[VbVbalrStrings#17](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/string-functions_3.vb)]  
+ [!code-vb[VbVbalrStrings#17](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_3.vb)]  
   
 ## 예제  
  다음 예제에서는 `Len` 함수를 사용하여 문자열의 문자 개수를 반환합니다.  
   
- [!code-vb[VbVbalrStrings#33](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/string-functions_4.vb)]  
+ [!code-vb[VbVbalrStrings#33](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_4.vb)]  
   
 ## 예제  
  다음 예제에서는 `InStr` 함수를 사용하여 한 문자열 안에 다른 문자열이 처음으로 나타나는 위치를 반환합니다.  
   
- [!code-vb[VbVbalrStrings#8](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/string-functions_5.vb)]  
+ [!code-vb[VbVbalrStrings#8](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_5.vb)]  
   
 ## 예제  
  다음 예제에서는 `String` 형식과 사용자 정의 형식을 모두 사용하여 값의 형식을 지정하는 `Format` 함수의 다양한 사용 방법을 보여 줍니다.  날짜 구분 기호\(`/`\), 시간 구분 기호\(`:`\), AM\/PM 표시기\(`t` 및 `tt`\)의 경우 시스템에 실제로 표시되는 출력 형식은 코드에서 사용하는 로캘 설정에 따라 달라집니다.  개발 환경에 시간과 날짜가 표시되는 경우 코드 로캘의 간단한 시간 형식과 날짜 형식이 사용됩니다.  
@@ -86,7 +86,7 @@ caps.handback.revision: 8
 > [!NOTE]
 >  24시간 형식을 사용하는 로캘의 경우에는 AM\/PM 표시기\(`t`와 `tt`\)에 아무것도 표시되지 않습니다.  
   
- [!code-vb[VbVbalrStrings#27](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/string-functions_6.vb)]  
+ [!code-vb[VbVbalrStrings#27](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-functions_6.vb)]  
   
 ## 참고 항목  
  [키워드](../../../visual-basic/language-reference/keywords/index.md)   

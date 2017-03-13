@@ -38,11 +38,11 @@ caps.handback.revision: 14
 ## 예제  
  다음 예제에서는 배열 변수를 받아 그 요소로 작업하는 두 개의 프로시저를 보여 줍니다.  `increase` 프로시저는 각 요소에 1만 더합니다.  `replace` 프로시저는 `a()` 매개 변수에 새 배열을 할당한 다음 각 요소에 1씩 더합니다.  그러나 다시 할당해도 호출 코드의 내부 배열 변수는 영향을 받지 않습니다.  
   
- [!code-vb[VbVbcnProcedures#35](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-protect-a-procedu_1.vb)]  
+ [!code-vb[VbVbcnProcedures#35](./codesnippet/VisualBasic/how-to-protect-a-procedure-argument-against-value-changes_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#38](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-protect-a-procedu_2.vb)]  
+ [!code-vb[VbVbcnProcedures#38](./codesnippet/VisualBasic/how-to-protect-a-procedure-argument-against-value-changes_2.vb)]  
   
- [!code-vb[VbVbcnProcedures#37](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-protect-a-procedu_3.vb)]  
+ [!code-vb[VbVbcnProcedures#37](./codesnippet/VisualBasic/how-to-protect-a-procedure-argument-against-value-changes_3.vb)]  
   
  첫 번째 `MsgBox` 호출에서는 "After increase\(n\): 11, 21, 31, 41"이 표시됩니다.   `n` 배열이 참조 형식이기 때문에 전달 메커니즘이 `ByVal`인 경우에도 `replace`에서 해당 멤버를 변경할 수 있습니다.  
   

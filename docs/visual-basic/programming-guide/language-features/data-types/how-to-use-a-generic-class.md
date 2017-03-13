@@ -52,7 +52,7 @@ caps.handback.revision: 24
   
      다음 예에서는 동일한 클래스(<xref:System.Collections.Generic.Queue%601?displayProperty=fullName>)를 사용하여 서로 다른 데이터 형식의 항목을 포함하는 두 개의 큐 개체를 만듭니다. 각 큐의 끝에 항목을 추가한 다음 각 큐의 앞부분부터 항목을 제거하고 표시합니다.  
   
-     [!code-vb[VbVbalrDataTypes#9](../../../../visual-basic/language-reference/data-types/codesnippet/visualbasic/how-to-use-a-generic-class_1.vb)]  
+     [!code-vb[VbVbalrDataTypes#9](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-use-a-generic-class_1.vb)]  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   

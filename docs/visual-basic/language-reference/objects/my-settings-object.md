@@ -64,7 +64,7 @@ caps.handback.revision: 16
 ## <a name="example"></a>예제  
  값을 표시 하는이 예제는 `Nickname` 설정 합니다.  
   
- [!code-vb[VbVbalrMyResources#14](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/visualbasic/VbVbalrMyResources2/Form1.vb#14)]  
+ [!code-vb[VbVbalrMyResources#14](../../../visual-basic/developing-apps/programming/app-settings/codesnippet/VisualBasic/my-settings-object_1.vb)]  
   
  이 예제가 작동 하려면 응용 프로그램 있어야는 `Nickname` 유형의 설정 `String`합니다.  
   

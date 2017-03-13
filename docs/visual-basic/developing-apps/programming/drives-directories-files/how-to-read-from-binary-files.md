@@ -30,11 +30,11 @@ caps.handback.revision: 16
   
 -   파일의 내용을 바이트 배열로 반환하는 `ReadAllBytes` 메서드를 사용합니다.  이 예제에서는 `C:/Documents and Settings/selfportrait.jpg` 파일을 읽습니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#78](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-read-from-binary-_1.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#78](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-binary-files_1.vb)]  
   
 -   큰 이진 파일의 경우 <xref:System.IO.FileStream> 개체의 <xref:System.IO.FileStream.Read%2A> 메서드를 사용하여 한 번에 지정된 양만큼만 파일을 읽을 수 있습니다.  각 읽기 작업에 대해 메모리에 로드되는 파일의 양을 제한할 수 있습니다.  다음 코드 예제에서는 파일을 복사하고 호출자가 읽기 작업당 메모리로 읽어오는 파일의 양을 지정할 수 있도록 합니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#91](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-read-from-binary-_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#91](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-binary-files_2.vb)]  
   
 ## 강력한 프로그래밍  
  다음 조건에서 예외가 throw될 수 있습니다.  

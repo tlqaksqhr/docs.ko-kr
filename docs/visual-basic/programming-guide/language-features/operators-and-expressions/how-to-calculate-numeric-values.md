@@ -52,7 +52,7 @@ caps.handback.revision: 13
   
 -   다음 예제에서와 같이 할당문을 사용하여 숫자 식으로 나타내는 값을 변수에 할당할 수 있습니다.  
   
-     [!code-vb[VbVbalrOperators#82](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-calculate-numeric_1.vb)]  
+     [!code-vb[VbVbalrOperators#82](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_1.vb)]  
   
      위 예제에서 같음 연산자\(`=`\)의 오른쪽에 있는 식의 값이 왼쪽에 있는 변수 `j`에 할당되므로 `j`는 276으로 계산됩니다.  
   
@@ -65,7 +65,7 @@ caps.handback.revision: 13
   
 -   가장 먼저 수행하려는 연산을 괄호로 묶습니다.  다음 예제에서는 동일한 연산자와 피연산자를 사용한 서로 다른 두 가지 결과를 보여 줍니다.  
   
-     [!code-vb[VbVbalrOperators#83](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/how-to-calculate-numeric_2.vb)]  
+     [!code-vb[VbVbalrOperators#83](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-calculate-numeric-values_2.vb)]  
   
      위 예제에서는 `(67 + i)`의 괄호가 일반 우선 순위를 무시하기 때문에 `j`에 대한 계산에서 더하기 연산자\(`+`\)가 가장 먼저 수행되므로 `j`에 할당되는 값은 276\(4x69\)입니다.  `k`에 대한 계산에서는 일반 우선 순위\(`*`를 `+`보다 먼저 수행\)에 따라 연산자를 수행하므로 `k`에 할당되는 값은 270\(268\+2\)입니다.  
   

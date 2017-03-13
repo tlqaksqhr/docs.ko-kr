@@ -62,7 +62,7 @@ caps.handback.revision: 30
   
 -   `Student` 클래스와 학생의 초기화된 목록을 프로젝트의 `Program` 클래스에 추가합니다.  
   
-     [!code-cs[CsLinqGettingStarted#11](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#11)]  
+     [!code-cs[CsLinqGettingStarted#11](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_1.cs)]  
   
 #### 새 학생을 학생 목록에 추가하려면  
   
@@ -76,7 +76,7 @@ caps.handback.revision: 30
   
      또한 쿼리의 범위 변수인 `student`가 소스의 각 `Student`에 대한 참조로 사용되어 각 개체에 대한 멤버 액세스를 제공한다는 것에 주의합니다.  
   
- [!code-cs[CsLINQGettingStarted#12](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#12)]  
+ [!code-cs[CsLINQGettingStarted#12](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_2.cs)]  
   
 ## 쿼리 실행  
   
@@ -90,7 +90,7 @@ caps.handback.revision: 30
   
 2.  이 코드를 추가한 후 Ctrl \+ F5를 눌러 응용 프로그램을 빌드 및 실행하여 **콘솔** 창에서 결과를 봅니다.  
   
- [!code-cs[CsLINQGettingStarted#13](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#13)]  
+ [!code-cs[CsLINQGettingStarted#13](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_3.cs)]  
   
 #### 다른 필터 조건을 추가하려면  
   
@@ -130,11 +130,11 @@ caps.handback.revision: 30
   
 1.  그룹화는 쿼리 식의 강력한 기능입니다.  group 절이 있는 쿼리는 그룹 시퀀스를 생성하고 각 그룹 자체는 `Key`와 해당 그룹의 모든 멤버로 구성된 시퀀스를 포함합니다.  다음 새 쿼리는 성의 첫 글자를 키로 사용하여 학생을 그룹화합니다.  
   
-     [!code-cs[CsLINQGettingStarted#14](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#14)]  
+     [!code-cs[CsLINQGettingStarted#14](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_4.cs)]  
   
 2.  이제 쿼리 형식이 변경되었다는 것에 주의합니다.  `char` 형식을 키로 포함하고 시퀀스와 `Student` 개체 시퀀스를 포함하는 그룹 시퀀스가 생성됩니다.  쿼리 형식이 변경되었으므로 다음 코드에서는 또한 `foreach` 실행 루프가 변경됩니다.  
   
-     [!code-cs[CsLINQGettingStarted#15](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#15)]  
+     [!code-cs[CsLINQGettingStarted#15](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_5.cs)]  
   
 3.  Ctrl \+ F5를 눌러 응용 프로그램을 실행하고 **콘솔** 창에서 결과를 봅니다.  
   
@@ -144,7 +144,7 @@ caps.handback.revision: 30
   
 1.  `IGroupings`의 `IEnumerables`에 대한 코드를 명시적으로 작성하는 작업은 금방 지루해질 수 있습니다.  `var`를 사용하면 동일한 쿼리와 `foreach` 루프를 훨씬 더 편리하게 작성할 수 있습니다.  `var` 키워드는 개체의 형식을 변경하지 않으며 단순히 형식을 유추할 것을 컴파일러에 지시합니다.  형식을 변경 `studentQuery` 및 반복 변수 `group` 에 `var` 및 쿼리를 다시 실행 합니다.  이 경우 내부 `foreach` 루프에서 반복 변수의 형식은 여전히 `Student`로 지정되며 쿼리가 이전과 동일하게 작동합니다.  `s` 반복 변수를 `var`로 변경하고 쿼리를 다시 실행하면  동일한 결과가 나타나는 것을 볼 수 있습니다.  
   
-     [!code-cs[CsLINQGettingStarted#16](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#16)]  
+     [!code-cs[CsLINQGettingStarted#16](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_6.cs)]  
   
      [var](../../../../csharp/language-reference/keywords/var.md)에 대한 자세한 내용은 [암시적으로 형식화한 지역 변수](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)을 참조하십시오.  
   
@@ -152,7 +152,7 @@ caps.handback.revision: 30
   
 1.  앞의 쿼리를 실행하면 그룹은 사전순으로 되어 있지 않습니다.  그룹에 이 순서를 지정하려면 `group` 절 뒤에 `orderby` 절을 제공해야 합니다.  그러나 `orderby` 절을 사용하려면 먼저 `group` 절에 의해 만들어진 그룹에 대한 참조로 사용되는 식별자가 필요합니다.  다음과 같이 `into` 키워드를 사용하여 이 식별자를 제공합니다.  
   
-     [!code-cs[csLINQGettingStarted#17](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#17)]  
+     [!code-cs[csLINQGettingStarted#17](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_7.cs)]  
   
      이 쿼리를 실행하면 그룹은 이제 사전순으로 정렬됩니다.  
   
@@ -160,7 +160,7 @@ caps.handback.revision: 30
   
 1.  `let` 키워드를 사용하여 쿼리 식의 임의 식 결과에 대한 식별자를 제공할 수 있습니다.  이 식별자는 다음 예제와 같이 편의상 제공될 수도 있고 여러 번 계산할 필요가 없도록 식 결과를 저장하여 성능을 향상시킬 수도 있습니다.  
   
-     [!code-cs[csLINQGettingStarted#18](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#18)]  
+     [!code-cs[csLINQGettingStarted#18](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_8.cs)]  
   
      자세한 내용은 [let 절](../../../../csharp/language-reference/keywords/let-clause.md)을 참조하십시오.  
   
@@ -168,17 +168,17 @@ caps.handback.revision: 30
   
 1.  [Query Syntax and Method Syntax in LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)에 설명된 것처럼 일부 쿼리 작업은 메서드 구문에 의해서만 표현될 수 있습니다.  다음 코드는 소스 시퀀스에서 각 `Student`의 총 점수를 계산한 다음 해당 쿼리의 결과에서 `Average()` 메서드를 호출하여 클래스의 평균 점수를 계산합니다.  쿼리 식을 묶은 괄호에 주의합니다.  
   
-     [!code-cs[csLINQGettingStarted#19](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#19)]  
+     [!code-cs[csLINQGettingStarted#19](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_9.cs)]  
   
 #### Select 절에서 변환 또는 프로젝션하려면  
   
 1.  쿼리에서는 소스 시퀀스의 요소와 다른 요소를 가진 시퀀스를 생성하는 것이 매우 일반적입니다.  이전 쿼리 또는 실행 루프를 삭제하거나 주석으로 처리하고 다음 코드로 바꿉니다.  쿼리는 `Students`가 아니라 문자열 시퀀스를 반환하며 `foreach` 루프에서 이 사실이 반영됩니다.  
   
-     [!code-cs[csLINQGettingStarted#20](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#20)]  
+     [!code-cs[csLINQGettingStarted#20](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_10.cs)]  
   
 2.  이 연습의 앞부분에 있는 코드는 평균 클래스 점수가 약 334라는 것을 나타냈습니다.  클래스 평균보다 총 점수가 높은 `Students`의 시퀀스를 생성하려면 해당 `Student ID`와 함께 익명 형식을 `select` 문에서 사용할 수 있습니다.  
   
-     [!code-cs[csLINQGettingStarted#21](../../../../csharp/programming-guide/concepts/linq/codesnippet/csharp/GettingStarted/Class1.cs#21)]  
+     [!code-cs[csLINQGettingStarted#21](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_11.cs)]  
   
 ## 다음 단계  
  C\#에서 쿼리를 사용하는 기본적인 측면에 익숙해진 후에는 원하는 특정 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq-md.md)] 공급자 형식에 대한 설명서와 샘플을 읽을 수 있습니다.  

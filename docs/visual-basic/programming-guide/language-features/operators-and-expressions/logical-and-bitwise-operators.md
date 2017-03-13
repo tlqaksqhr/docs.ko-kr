@@ -43,7 +43,7 @@ caps.handback.revision: 22
 ## 단항 논리 연산자  
  [Not Operator](../../../../visual-basic/language-reference/operators/not-operator.md)는 `Boolean` 식에 대해 논리 *부정*을 수행하며  해당 피연산자의 반대 논리를 생성합니다.  식이 `True`인 경우 `Not`은 `False`를 반환하고 식이 `False`인 경우 `Not`은 `True`를 반환합니다.  다음은 이에 대한 예입니다.  
   
- [!code-vb[VbVbalrOperators#77](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/logical-and-bitwise-oper_1.vb)]  
+ [!code-vb[VbVbalrOperators#77](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_1.vb)]  
   
 ## 이항 논리 연산자  
  [And Operator](../../../../visual-basic/language-reference/operators/and-operator.md)는 두 `Boolean` 식에 대해 *논리곱*을 수행합니다.  두 식이 모두 `True`인 경우 `And`는 `True`를 반환합니다.  식 중 하나라도 `False`인 경우 `And`는 `False`를 반환합니다.  
@@ -54,7 +54,7 @@ caps.handback.revision: 22
   
  다음 예제에서는 `And`, `Or` 및 `Xor` 연산자를 보여 줍니다.  
   
- [!code-vb[VbVbalrOperators#78](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/logical-and-bitwise-oper_2.vb)]  
+ [!code-vb[VbVbalrOperators#78](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_2.vb)]  
   
 ## 단락\(short circuit\) 논리 연산  
  [AndAlso Operator](../../../../visual-basic/language-reference/operators/andalso-operator.md)는 두 `Boolean` 식에 대해 논리곱을 수행한다는 점에서 `And` 연산자와 매우 유사합니다.  두 연산자의 주요 차이점은 `AndAlso`가 *단락\(short circuit\)* 동작을 나타낸다는 것입니다.  `AndAlso` 식의 첫 번째 식이 `False`인 경우 최종 결과를 변경할 수 없으므로 두 번째 식을 계산하지 않고 `AndAlso`는 `False`를 반환합니다.  
@@ -66,18 +66,18 @@ caps.handback.revision: 22
   
  다음 예제에서는 `And` 및 `Or` 연산자와 단락\(short circuit\) 연산자의 차이점을 보여 줍니다.  
   
- [!code-vb[VbVbalrOperators#81](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/logical-and-bitwise-oper_3.vb)]  
+ [!code-vb[VbVbalrOperators#81](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_3.vb)]  
   
- [!code-vb[VbVbalrOperators#80](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/logical-and-bitwise-oper_4.vb)]  
+ [!code-vb[VbVbalrOperators#80](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_4.vb)]  
   
- [!code-vb[VbVbalrOperators#79](../../../../visual-basic/language-reference/operators/codesnippet/visualbasic/logical-and-bitwise-oper_5.vb)]  
+ [!code-vb[VbVbalrOperators#79](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/logical-and-bitwise-operators_5.vb)]  
   
  위 예제에서는 호출이 단락\(short circuit\)되는 경우 `checkIfValid()` 내 일부 중요한 코드가 실행되지 않습니다.  `And`가 단락\(short circuit\)하지 않으므로 `12 > 45`가 `False`를 반환하더라도 첫 번째 `If` 문은 `checkIfValid()`를 호출합니다.  `12 > 45`가 `False`를 반환하면 `AndAlso`가 두 번째 식을 단락\(short circuit\)하므로 두 번째 `If` 문은 `checkIfValid()`를 호출하지 않습니다.  `Or`가 단락\(short circuit\)하지 않으므로 `12 < 45`가 `True`를 반환하더라도 세 번째 `If` 문은 `checkIfValid()`를 호출합니다.  `12 < 45`가 `True`를 반환하면 `OrElse`가 두 번째 식을 단락\(short circuit\)하므로 네 번째 `If` 문은 `checkIfValid()`를 호출하지 않습니다.  
   
 ## 비트 연산  
  비트 연산은 두 정수 계열 값을 이진\(2진법\) 형식으로 계산합니다.  또한 해당 위치의 비트를 비교한 다음 이 비교를 기반으로 값을 할당합니다.  다음 예제에서는 `And` 연산자를 보여 줍니다.  
   
- [!code-vb[VbVbalrConcepts#2](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/visualbasic/logical-and-bitwise-oper_6.vb)]  
+ [!code-vb[VbVbalrConcepts#2](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/VisualBasic/logical-and-bitwise-operators_6.vb)]  
   
  위 예제에서 `x` 값을 1로 설정하는 이유는 다음과  같습니다.  
   

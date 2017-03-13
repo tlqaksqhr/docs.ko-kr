@@ -33,7 +33,7 @@ caps.handback.revision: 20
   
  일반적으로 사용자는 사용 가능한 포트 목록에서 응용 프로그램이 사용할 직렬 포트를 선택합니다.  이 예제에서 직렬 포트 이름은 <xref:System.Windows.Forms.ListBox> 컨트롤에 저장됩니다.  자세한 내용은 [ListBox 컨트롤](../Topic/ListBox%20Control%20\(Windows%20Forms\).md)을 참조하십시오.  
   
- [!code-vb[VbVbalrMyComputer#45](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class2.vb#45)]  
+ [!code-vb[VbVbalrMyComputer#45](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-show-available-serial-ports_1.vb)]  
   
  이 코드 예제는 IntelliSense 코드 조각으로도 사용할 수 있습니다.  이 코드 조각은 코드 조각 선택기의 **연결 및 네트워킹**에 있습니다.  자세한 내용은 [코드 조각](/visual-studio/ide/code-snippets)를 참조하십시오.  
   

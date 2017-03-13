@@ -38,9 +38,9 @@ caps.handback.revision: 17
 ## 예제  
  다음 예제에서는 `int`에 대한 포인터를 `byte`에 대한 포인터로 변환합니다.  포인터는 변수의 선두 주소 바이트를 가리키게 됩니다.  결과 포인터를 `int`의 크기인 4바이트까지 연속적으로 증가시키면 변수의 나머지 바이트를 표시할 수 있습니다.  
   
- [!code-cs[csProgGuidePointers#3](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers2.cs#3)]  
+ [!code-cs[csProgGuidePointers#3](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/pointer-conversions_1.cs)]  
   
- [!code-cs[csProgGuidePointers#4](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#4)]  
+ [!code-cs[csProgGuidePointers#4](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/pointer-conversions_2.cs)]  
   
 ## 참고 항목  
  [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   

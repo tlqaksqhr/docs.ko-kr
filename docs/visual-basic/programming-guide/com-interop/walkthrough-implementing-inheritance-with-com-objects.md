@@ -103,15 +103,15 @@ caps.handback.revision: 16
   
 6.  다음 코드를 `MathClass`의 맨 위에 추가하여 COM 클래스에서 상속합니다.  
   
-     [!code-vb[VbVbalrInterop#31](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#31)]  
+     [!code-vb[VbVbalrInterop#31](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_1.vb)]  
   
 7.  다음 코드를 `MathClass`에 추가하여 기본 클래스의 공용 메서드를 오버로드합니다.  
   
-     [!code-vb[VbVbalrInterop#32](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#32)]  
+     [!code-vb[VbVbalrInterop#32](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_2.vb)]  
   
 8.  다음 코드를 `MathClass`에 추가하여 상속된 클래스를 확장합니다.  
   
-     [!code-vb[VbVbalrInterop#33](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#33)]  
+     [!code-vb[VbVbalrInterop#33](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_3.vb)]  
   
  새 클래스는 COM 개체에 있는 기본 클래스의 속성을 상속하고 메서드를 오버로드한 다음 새 메서드를 정의하여 클래스를 확장합니다.  
   
@@ -121,7 +121,7 @@ caps.handback.revision: 16
   
 2.  단추의 `Click` 이벤트 처리기 프로시저에서 다음 코드를 추가하여 `MathClass`의 인스턴스를 만들고 오버로드된 메서드를 호출합니다.  
   
-     [!code-vb[VbVbalrInterop#34](../../../visual-basic/programming-guide/com-interop/codesnippet/visualbasic/vbvbalrinterop/Class1.vb#34)]  
+     [!code-vb[VbVbalrInterop#34](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_4.vb)]  
   
 3.  F5 키를 눌러 프로젝트를 실행합니다.  
   

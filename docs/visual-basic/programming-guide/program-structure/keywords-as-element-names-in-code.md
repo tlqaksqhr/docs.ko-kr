@@ -26,7 +26,7 @@ caps.handback.revision: 11
 
 변수, 클래스 또는 멤버 등의 일부 프로그램 요소는 제한된 키워드와 같은 이름을 가질 수 있습니다.  예를 들면, 이름이 `Loop`인 변수를 만들 수 있습니다.  그러나 이 변수를 같은 이름의 제한된 `Loop` 키워드와 구별하려면 다음 예제와 같이 이 변수 이름 앞에 전체 한정 문자열을 포함하거나 변수 이름을 대괄호\(`[ ]`\)로 묶어야 합니다.  
   
- [!code-vb[VbVbcnConventions#8](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/keywords-as-element-name_1.vb)]  
+ [!code-vb[VbVbcnConventions#8](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/keywords-as-element-names-in-code_1.vb)]  
   
  그렇지 않으면 Visual Basic에서는 내장 `Loop` 키워드를 사용한 것으로 간주하고 다음 예제와 같은 오류를 발생시킵니다.  
   

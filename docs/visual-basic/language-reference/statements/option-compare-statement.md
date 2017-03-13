@@ -89,12 +89,12 @@ Option Compare { Binary | Text }
 ## 예제  
  다음 예제에서는 `Option Compare` 문을 사용하여 이진 비교를 기본 문자열 비교 방법으로 설정합니다.  이 코드를 사용하려면 `Option Compare Binary` 문의 주석 처리를 제거하여 소스 파일 맨 위에 삽입합니다.  
   
- [!code-vb[VbVbalrStatements#45](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/option-compare-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#45](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-compare-statement_1.vb)]  
   
 ## 예제  
  다음 예제에서는 `Option Compare` 문을 사용하여 대\/소문자 미구분 텍스트 정렬 순서를 기본 문자열 비교 방법으로 설정합니다.  이 코드를 사용하려면 `Option Compare Text` 문의 주석 처리를 제거하여 소스 파일 맨 위에 삽입합니다.  
   
- [!code-vb[VbVbalrStatements#46](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/option-compare-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#46](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-compare-statement_2.vb)]  
   
 ## 참고 항목  
  <xref:Microsoft.VisualBasic.Strings.InStr%2A>   

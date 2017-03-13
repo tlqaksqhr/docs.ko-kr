@@ -39,11 +39,11 @@ caps.handback.revision: 15
 ## 예제  
  다음 예제에서는 `height`라는 구조체에 대한 `+` 연산자를 정의합니다.  이 구조체는 피트와 인치로 측정된 높이를 사용합니다.  1*인치*는 2.54센티미터이고 1*피트*는 12인치입니다.  정규화된 값\(인치 \< 12.0\)을 유지하기 위해 생성자는 *modulo* 12 산술 연산을 수행합니다.  `+` 연산자는 생성자를 사용하여 정규화된 값을 생성합니다.  
   
- [!code-vb[VbVbcnProcedures#25](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-define-an-operator_1.vb)]  
+ [!code-vb[VbVbcnProcedures#25](./codesnippet/VisualBasic/how-to-define-an-operator_1.vb)]  
   
  다음 코드를 사용하여  `height`  구조체를 테스트할 수 있습니다.  
   
- [!code-vb[VbVbcnProcedures#26](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/how-to-define-an-operator_2.vb)]  
+ [!code-vb[VbVbcnProcedures#26](./codesnippet/VisualBasic/how-to-define-an-operator_2.vb)]  
   
  자세한 내용과 예제는 [Operator Overloading in Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703)를 참조하십시오.  
   

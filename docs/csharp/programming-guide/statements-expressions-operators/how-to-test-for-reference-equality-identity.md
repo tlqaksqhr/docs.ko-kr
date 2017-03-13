@@ -24,7 +24,7 @@ caps.handback.revision: 13
  또한 이 예제에서는 <xref:System.Object.ReferenceEquals%2A?displayProperty=fullName> 가 값 형식에 대해 항상 `false` 를 반환하는 이유와 문자열 일치를 확인하는 데  <xref:System.Object.ReferenceEquals%2A> 를 사용하면 안 되는 이유를 보여 줍니다.  
   
 ## 예제  
- [!code-cs[csProgGuideObjects#90](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-test-for-referenc_1.cs)]  
+ [!code-cs[csProgGuideObjects#90](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-test-for-reference-equality-identity_1.cs)]  
   
  공통적인 기본 클래스인 <xref:System.Object?displayProperty=fullName>의 `Equals` 구현에서도 참조 일치 검사를 수행하지만 클래스에서 이 메서드를 재정의할 경우 예기치 않은 결과가 발생할 수도 있으므로 이 메서드는 사용하지 않는 것이 가장 좋은 방법입니다.  같은 기준이 `==` 및 `!=` 연산자에도 적용됩니다.  \=\= 및 `!=` 연산자가 참조 형식에 대해 작동할 경우 기본적으로 참조 일치 검사를 수행하게 됩니다.  그러나 파생 클래스에서 이러한 연산자를 오버로드하여 값 일치 검사를 수행할 수 있습니다.  오류 발생 가능성을 최소화하려면 두 개체가 참조 일치 관계에 있는지 여부를 확인해야 하는 경우에 항상 <xref:System.Object.ReferenceEquals%2A>를 사용하는 것이 가장 좋은 방법입니다.  
   

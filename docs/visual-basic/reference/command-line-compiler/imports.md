@@ -50,7 +50,7 @@ caps.handback.revision: 15
 ## 예제  
  다음 코드는 `/imports:system`이 지정된 경우에 컴파일됩니다.  
   
- [!code-vb[VbVbalrCompiler#21](../../../visual-basic/reference/command-line-compiler/codesnippet/visualbasic/imports_1.vb)]  
+ [!code-vb[VbVbalrCompiler#21](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/imports_1.vb)]  
   
 ## 참고 항목  
  [Visual Basic Command\-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)   

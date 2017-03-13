@@ -87,14 +87,14 @@ result = expression1 Xor expression2
 ## 예제  
  다음 예제에서는 `Xor` 연산자를 사용하여 두 식의 배타적 논리합 연산을 수행합니다.  결과는 두 식 중 하나가 `True`인지 여부를 나타내는 `Boolean` 값입니다.  
   
- [!code-vb[VbVbalrOperators#40](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xor-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#40](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xor-operator_1.vb)]  
   
  위 예제의 결과는 각각 `False`, `True` 및 `False`가 됩니다.  
   
 ## 예제  
  다음 예제에서는 `Xor` 연산자를 사용하여 두 숫자 식의 개별 비트에 대한 배타적 논리합 연산을 수행합니다.  피연산자의 해당 비트 중 하나만 1로 설정되면 결과 패턴의 비트도 설정됩니다.  
   
- [!code-vb[VbVbalrOperators#41](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xor-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#41](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xor-operator_2.vb)]  
   
  위 예제의 결과는 각각 2, 12 및 14가 됩니다.  
   

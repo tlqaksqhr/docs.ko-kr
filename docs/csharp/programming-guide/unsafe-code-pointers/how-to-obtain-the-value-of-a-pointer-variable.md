@@ -32,9 +32,9 @@ caps.handback.revision: 17
 ## 예제  
  다음 예제에서는 서로 다른 형식의 포인터를 사용하여 `char` 형식의 변수에 액세스합니다.  `theChar`의 주소는 실행할 때마다 달라집니다. 변수에 할당되는 실제 주소가 변경될 수 있기 때문입니다.  
   
- [!code-cs[csProgGuidePointers#5](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers2.cs#5)]  
+ [!code-cs[csProgGuidePointers#5](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-obtain-the-value-of-a-pointer-variable_1.cs)]  
   
- [!code-cs[csProgGuidePointers#6](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/csharp/Pointers/Pointers.cs#6)]  
+ [!code-cs[csProgGuidePointers#6](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-obtain-the-value-of-a-pointer-variable_2.cs)]  
   
   **Value of theChar \= Z**   
 **Address of theChar \= 12F718**  

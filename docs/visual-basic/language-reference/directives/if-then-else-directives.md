@@ -73,7 +73,7 @@ caps.handback.revision: 14
 ## 예제  
  다음 예제에서는 `#If...Then...#Else` 구문을 사용하여 특정 문의 컴파일 여부를 결정합니다.  
   
- [!code-vb[VbVbalrConditionalComp#1](../../../visual-basic/language-reference/directives/codesnippet/visualbasic/if-then-else-directives_1.vb)]  
+ [!code-vb[VbVbalrConditionalComp#1](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/if-then-else-directives_1.vb)]  
   
 ## 참고 항목  
  [\#Const Directive](../../../visual-basic/language-reference/directives/const-directive.md)   

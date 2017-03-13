@@ -17,14 +17,14 @@ caps.handback.revision: 23
 ### 그룹 조인 예제  
  다음 예제에서는 `Pet.Owner` 속성과 일치하는 `Person`을 기반으로 `Person` 및 `Pet` 형식의 개체에 대한 그룹 조인을 수행합니다.  각 일치 항목에 대해 요소 쌍을 생성하는 비그룹 조인과 달리 그룹 조인은 첫 번째 컬렉션의 각 요소\(이 예제에서는 `Person` 개체\)에 대해 하나의 결과 개체만 생성합니다.  두 번째 컬렉션의 해당 요소\(이 예제에서는 `Pet` 개체\)는 컬렉션으로 그룹화됩니다.  마지막으로 결과 선택기 함수는 `Person.FirstName` 및 `Pet` 개체의 컬렉션으로 구성된 각 일치 항목에 대해 익명 형식을 만듭니다.  
   
- [!code-cs[CsLINQProgJoining#5](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#5)]  
+ [!code-cs[CsLINQProgJoining#5](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-grouped-joins_1.cs)]  
   
 ## 예제  
   
 ### XML을 만들기 위한 그룹 조인 예제  
  그룹 조인은 [!INCLUDE[sqltecxlinq](../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)]을 사용하여 XML을 만드는 데 이상적입니다.  다음 예제는 결과 선택기 함수에서 익명 형식을 만드는 대신에 조인된 개체를 나타내는 XML 요소를 만든다는 점을 제외하고 위의 예제와 비슷합니다.  [!INCLUDE[sqltecxlinq](../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq-md.md)]에 대한 자세한 내용은 [LINQ to XML](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)을 참조하십시오.  
   
- [!code-cs[CsLINQProgJoining#6](../../../csharp/programming-guide/linq-query-expressions/codesnippet/csharp/Joins/joins.cs#6)]  
+ [!code-cs[CsLINQProgJoining#6](../../../csharp/programming-guide/linq-query-expressions/codesnippet/CSharp/how-to-perform-grouped-joins_2.cs)]  
   
 ## 코드 컴파일  
   

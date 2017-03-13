@@ -74,17 +74,17 @@ int x = (int)Days.Sun;
 ## 예제  
  다음 예제에서는 열거형 `Days`를 선언합니다. 두 개의 열거자를 명시적으로 정수로 변환하여 정수 변수에 대입합니다.  
   
- [!code-cs[csrefKeywordsTypes#10](../../../csharp/language-reference/keywords/codesnippet/csharp/enum_1.cs)]  
+ [!code-cs[csrefKeywordsTypes#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_1.cs)]  
   
 ## 예제  
  다음 예제에서는 base\-type 옵션을 사용하여 멤버가 `long` 형식인 `enum`을 선언합니다. 열거형의 기본 형식이 `long`인 경우에도 캐스트를 사용하여 열거형 멤버를 `long` 형식으로 명시적으로 변환해야 합니다.  
   
- [!code-cs[csrefKeywordsTypes#11](../../../csharp/language-reference/keywords/codesnippet/csharp/enum_2.cs)]  
+ [!code-cs[csrefKeywordsTypes#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_2.cs)]  
   
 ## 예제  
  다음 코드 예제에서는 `enum` 선언에 <xref:System.FlagsAttribute?displayProperty=fullName> 특성을 사용하는 방법과 그 결과를 보여 줍니다.  
   
- [!code-cs[csrefKeywordsTypes#12](../../../csharp/language-reference/keywords/codesnippet/csharp/enum_3.cs)]  
+ [!code-cs[csrefKeywordsTypes#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_3.cs)]  
   
 ## 설명  
  `Flags`를 제거하면 예에 다음 값이 표시됩니다.  

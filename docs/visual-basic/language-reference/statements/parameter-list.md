@@ -92,7 +92,7 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
 ## 예제  
  다음 예제에서는 두 매개 변수를 정의하는 `Function` 프로시저를 보여 줍니다.  
   
- [!code-vb[VbVbalrStatements#2](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/parameter-list_1.vb)]  
+ [!code-vb[VbVbalrStatements#2](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/parameter-list_1.vb)]  
   
 ## 참고 항목  
  <xref:System.Runtime.InteropServices.DllImportAttribute>   

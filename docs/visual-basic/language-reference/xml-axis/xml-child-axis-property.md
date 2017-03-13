@@ -59,7 +59,7 @@ object.<child>
 ## 예제  
  다음 예제에서는 `contact` 개체에서 이름이 `phone`인 자식 노드에 액세스하는 방법을 보여 줍니다.  
   
- [!code-vb[VbXMLSamples#17](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-child-axis-property_1.vb)]  
+ [!code-vb[VbXMLSamples#17](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-child-axis-property_1.vb)]  
   
  이 코드의 텍스트는 다음과 같습니다.  
   
@@ -68,7 +68,7 @@ object.<child>
 ## 예제  
  다음 예제에서는 `contacts` 개체의 `contact` 자식 축 속성에서 반환된 모음에서 이름이 `phone`인 자식 노드에 액세스하는 방법을 보여 줍니다.  
   
- [!code-vb[VbXMLSamples#18](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-child-axis-property_2.vb)]  
+ [!code-vb[VbXMLSamples#18](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-child-axis-property_2.vb)]  
   
  이 코드의 텍스트는 다음과 같습니다.  
   
@@ -77,7 +77,7 @@ object.<child>
 ## 예제  
  다음 예제에서는 `ns`를 XML 네임스페이스 접두사로 선언한 다음  네임스페이스의 접두사를 사용하여 XML 리터럴을 만들고 정규화된 이름 `ns:name`을 가진 첫 번째 자식 노드에 액세스합니다.  
   
- [!code-vb[VbXMLSamples#19](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/xml-child-axis-property_3.vb)]  
+ [!code-vb[VbXMLSamples#19](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-child-axis-property_3.vb)]  
   
  이 코드의 텍스트는 다음과 같습니다.  
   

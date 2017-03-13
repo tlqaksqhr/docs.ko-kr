@@ -53,7 +53,7 @@ caps.handback.revision: 20
   
  날짜를 문화권의 문자열로 변환하려면 <xref:System.Globalization.CultureInfo> 개체를 날짜 개체의 <xref:System.DateTime.ToString%28System.IFormatProvider%29> 메서드에 전달합니다.  예를 들어, 다음 코드에서는 응용 프로그램의 문화권 설정에 관계없이 "07\/04\/2005 00:00:00"이 표시됩니다.  
   
- [!code-vb[VbVbalrConcepts#1](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/visualbasic/how-culture-affects-stri_1.vb)]  
+ [!code-vb[VbVbalrConcepts#1](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/codesnippet/VisualBasic/how-culture-affects-strings_1.vb)]  
   
 > [!NOTE]
 >  날짜 리터럴은 항상 영어 문화권에 따라 해석됩니다.  
@@ -69,11 +69,11 @@ caps.handback.revision: 20
   
  `StrComp` 함수는 정렬 순서를 기반으로 하는 두 비교 문자열 간의 관계를 나타내는 정수를 반환합니다.  양수 결과 값은 첫째 문자열이 둘째 문자열보다 크다는 것을 나타냅니다.  음수 결과 값은 첫째 문자열이 작다는 것을 나타내고 0은 두 문자열이 같음을 나타냅니다.  
   
- [!code-vb[VbVbalrStrings#22](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-culture-affects-stri_2.vb)]  
+ [!code-vb[VbVbalrStrings#22](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_2.vb)]  
   
  또한 [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort-md.md)]에서는 `StrComp` 함수에 해당하는 <xref:System.String.Compare%2A?displayProperty=fullName> 메서드를 사용할 수 있습니다.  이것은 기본 문자열 클래스의 오버로드된 정적 메서드입니다.  다음 예제에서는 이 메서드가 사용되는 방법을 보여 줍니다.  
   
- [!code-vb[VbVbalrStrings#48](../../../../visual-basic/language-reference/functions/codesnippet/visualbasic/how-culture-affects-stri_3.vb)]  
+ [!code-vb[VbVbalrStrings#48](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-culture-affects-strings_3.vb)]  
   
  비교를 수행하는 방법을 보다 세밀하게 제어하려는 경우 <xref:System.String.Compare%2A> 메서드의 추가 오버로드를 사용할 수 있습니다.  <xref:System.String.Compare%2A?displayProperty=fullName> 메서드에는 `comparisonType` 인수를 사용하여 수행할 비교 형식을 지정할 수 있습니다.  
   

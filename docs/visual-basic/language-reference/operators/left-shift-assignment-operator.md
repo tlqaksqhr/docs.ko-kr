@@ -56,7 +56,7 @@ variableorproperty <<= amount
 ## 예제  
  다음 예제에서는 `<<=` 연산자를 사용하여 `Integer` 변수의 비트 패턴을 지정된 양만큼 왼쪽으로 이동하고 결과를 변수에 할당합니다.  
   
- [!code-vb[VbVbalrOperators#13](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/left-shift-assignment-op_1_1.vb)]  
+ [!code-vb[VbVbalrOperators#13](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/left-shift-assignment-operator_1.vb)]  
   
 ## 참고 항목  
  [\<\< Operator](../../../visual-basic/language-reference/operators/left-shift-operator.md)   

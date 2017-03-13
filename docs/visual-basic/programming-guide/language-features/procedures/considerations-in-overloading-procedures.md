@@ -94,11 +94,11 @@ caps.handback.revision: 26
 ## 선택적 매개 변수의 암시적 오버로드  
  [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) 매개 변수가 있는 프로시저는 오버로드된 두 개의 프로시저\(선택적 매개 변수가 있는 것과 없는 것\)와 같습니다.  둘 중 하나에 해당하는 매개 변수 목록을 사용하는 이러한 프로시저는 오버로드할 수 없습니다.  다음은 이에 대한 선언입니다.  
   
- [!code-vb[VbVbcnProcedures#58](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/considerations-in-overlo_1.vb)]  
+ [!code-vb[VbVbcnProcedures#58](./codesnippet/VisualBasic/considerations-in-overloading-procedures_1.vb)]  
   
- [!code-vb[VbVbcnProcedures#60](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/considerations-in-overlo_2.vb)]  
+ [!code-vb[VbVbcnProcedures#60](./codesnippet/VisualBasic/considerations-in-overloading-procedures_2.vb)]  
   
- [!code-vb[VbVbcnProcedures#61](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/considerations-in-overlo_3.vb)]  
+ [!code-vb[VbVbcnProcedures#61](./codesnippet/VisualBasic/considerations-in-overloading-procedures_3.vb)]  
   
  선택적 매개 변수가 둘 이상인 프로시저에는 앞 예제와 유사한 논리로 인해 발생한 암시적 오버로드 집합이 존재합니다.  
   
@@ -113,13 +113,13 @@ caps.handback.revision: 26
   
  다음 선언은 이러한 암시적 오버로드를 보여 줍니다.  
   
- [!code-vb[VbVbcnProcedures#68](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/considerations-in-overlo_4.vb)]  
+ [!code-vb[VbVbcnProcedures#68](./codesnippet/VisualBasic/considerations-in-overloading-procedures_4.vb)]  
   
- [!code-vb[VbVbcnProcedures#70](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/considerations-in-overlo_5.vb)]  
+ [!code-vb[VbVbcnProcedures#70](./codesnippet/VisualBasic/considerations-in-overloading-procedures_5.vb)]  
   
  매개 변수 배열에 1차원 배열을 사용하는 매개 변수 목록으로는 그러한 프로시저를 오버로드할 수 없습니다.  그러나 다른 암시적 오버로드의 시그니처를 사용할 수는 있습니다.  다음은 이에 대한 선언입니다.  
   
- [!code-vb[VbVbcnProcedures#71](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/considerations-in-overlo_6.vb)]  
+ [!code-vb[VbVbcnProcedures#71](./codesnippet/VisualBasic/considerations-in-overloading-procedures_6.vb)]  
   
 ## 오버로딩을 대체하는 관대한 형식의 프로그래밍  
  호출 코드에서 매개 변수에 서로 다른 데이터 형식을 전달할 수 있도록 하려면 대안은 관대 한 형식의 프로그래밍입니다.  [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) 또는 [\/optionstrict](../../../../visual-basic/reference/command-line-compiler/optionstrict.md) 컴파일러 옵션을 사용하여 형식 검사 스위치를 `Off`로 설정할 수 있습니다.  그런 다음에는 매개 변수의 데이터 형식을 선언할 필요가 없습니다.  그러나 오버로딩에 비해 무형식 프로그래밍은 다음과 같은 단점을 가지고 있습니다.  

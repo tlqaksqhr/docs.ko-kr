@@ -65,15 +65,15 @@ End Sub
 ## 예제  
  Product.Designer.vb라는 파일에서 `Quantity` 속성이 있는 `Product` 클래스를 정의합니다.  
   
- [!code-vb[VbVbalrPartialMeths#4](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/partial-methods_1.vb)]  
+ [!code-vb[VbVbalrPartialMeths#4](./codesnippet/VisualBasic/partial-methods_1.vb)]  
   
  Product.vb라는 파일에서 `QuantityChanged`에 대한 구현을 제공합니다.  
   
- [!code-vb[VbVbalrPartialMeths#5](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/partial-methods_2.vb)]  
+ [!code-vb[VbVbalrPartialMeths#5](./codesnippet/VisualBasic/partial-methods_2.vb)]  
   
  마지막으로 프로젝트의 Main 메서드에서 `Product` 인스턴스를 선언하고 해당 `Quantity` 속성에 대해 초기 값을 제공합니다.  
   
- [!code-vb[VbVbalrPartialMeths#6](../../../../visual-basic/programming-guide/language-features/procedures/codesnippet/visualbasic/partial-methods_3.vb)]  
+ [!code-vb[VbVbalrPartialMeths#6](./codesnippet/VisualBasic/partial-methods_3.vb)]  
   
  이 메시지를 표시하는 메시지 상자가 나타나야 합니다.  
   

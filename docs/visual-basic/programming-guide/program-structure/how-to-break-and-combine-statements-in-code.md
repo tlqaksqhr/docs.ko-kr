@@ -49,7 +49,7 @@ caps.handback.revision: 21
   
      다음 예제에서는 마지막 줄을 제외한 모든 줄의 끝에 줄 연속 문자를 사용하여 문을 네 줄로 분리합니다.  
   
-     [!code-vb[VbVbcnConventions#20](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/how-to-break-and-combine_1.vb)]  
+     [!code-vb[VbVbcnConventions#20](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/how-to-break-and-combine-statements-in-code_1.vb)]  
   
      이 시퀀스를 사용하면 온라인상에서나 인쇄 시 코드를 쉽게 읽을 수 있습니다.  
   
@@ -65,7 +65,7 @@ caps.handback.revision: 21
   
 -   다음 예제와 같이 각 문을 콜론\(`:`\)으로 구분합니다.  
   
-     [!code-vb[VbVbcnConventions#10](../../../visual-basic/programming-guide/language-features/codesnippet/visualbasic/how-to-break-and-combine_2.vb)]  
+     [!code-vb[VbVbcnConventions#10](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/how-to-break-and-combine-statements-in-code_2.vb)]  
   
 ## 참고 항목  
  [프로그램 구조 및 코드 규칙](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)   

@@ -23,7 +23,7 @@ caps.handback.revision: 26
 # 접근자 액세스 가능성 제한(C# 프로그래밍 가이드)
 속성이나 인덱서의 [get](../../../csharp/language-reference/keywords/get.md) 및 [set](../../../csharp/language-reference/keywords/set.md) 부분을 *접근자*라고 합니다.  기본적으로 이러한 접근자의 표시 여부\(액세스 수준\)는 이 접근자가 속한 속성이나 인덱서의 경우와 동일합니다.  자세한 내용은 [액세스 가능성 수준](../../../csharp/language-reference/keywords/accessibility-levels.md)을 참조하십시오.  그러나 때로는 이러한 접근자 중 하나에 대한 액세스를 제한해야 할 수도 있습니다.  일반적인 예로는 `set` 접근자의 액세스 가능성을 제한한 채 `get` 접근자를 계속 공용으로 액세스할 수 있도록 유지하는 경우를 들 수 있습니다.  예를 들면 다음과 같습니다.  
   
- [!code-cs[csProgGuideIndexers#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/restricting-accessor-acc_1.cs)]  
+ [!code-cs[csProgGuideIndexers#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_1.cs)]  
   
  이 예제에서 `Name`이라는 속성은 `get` 및 `set` 접근자를 정의합니다.  `get` 접근자는 속성 자체와 동일한 수준\(이 경우 `public`\)으로 액세스 가능성이 설정되는 반면, `set` 접근자는 이 접근자 자체에 [protected](../../../csharp/language-reference/keywords/protected.md) 액세스 한정자를 적용하여 액세스가 명시적으로 제한됩니다.  
   
@@ -41,12 +41,12 @@ caps.handback.revision: 26
 ## 재정의 접근자에 대한 액세스 한정자  
  속성이나 인덱서를 재정의하는 경우 재정의 코드에서는 재정의된 접근자에 액세스할 수 있어야 합니다.  또한 속성과 인덱서 모두의 액세스 수준 및 접근자의 액세스 수준은 상응하는 재정의된 속성과 인덱서 및 접근자의 액세스 수준과 일치해야 합니다.  예를 들면 다음과 같습니다.  
   
- [!code-cs[csProgGuideIndexers#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/restricting-accessor-acc_2.cs)]  
+ [!code-cs[csProgGuideIndexers#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_2.cs)]  
   
 ## 인터페이스 구현  
  접근자를 사용하여 인터페이스를 구현하는 경우 접근자에는 액세스 한정자가 없을 수 있습니다.  그러나 `get` 같은 접근자 하나를 사용하여 인터페이스를 구현하는 경우에는 다음 예제에서와 같이 다른 접근자에 액세스 한정자가 있을 수 있습니다.  
   
- [!code-cs[csProgGuideIndexers#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/restricting-accessor-acc_3.cs)]  
+ [!code-cs[csProgGuideIndexers#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_3.cs)]  
   
 ## 접근자 액세스 가능 도메인  
  접근자에 대해 액세스 한정자를 사용하는 경우 접근자의 [액세스 가능 도메인](../../../csharp/language-reference/keywords/accessibility-domain.md)은 이 한정자를 통해 결정됩니다.  
@@ -58,7 +58,7 @@ caps.handback.revision: 26
   
  이 예제에서는 `DerivedClass`에서 `Name` 속성의 `set` 접근자에 대한 `private` 또는 `protected` 같은 제한적 액세스 한정자로 접근자에 대한 액세스를 막고 여기에 할당하는 경우 오류를 생성하는 방법도 보여 줍니다.  
   
- [!code-cs[csProgGuideIndexers#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/restricting-accessor-acc_4.cs)]  
+ [!code-cs[csProgGuideIndexers#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_4.cs)]  
   
 ## 설명  
  `new private string Id` 선언을 `new public string Id`로 바꾸는 경우 출력은 다음과 같습니다.  

@@ -25,15 +25,15 @@ boxing은 [값 형식](../../../csharp/language-reference/keywords/value-types.m
   
  다음 예제에서는 정수 변수 `i`를 *boxing*하고 개체 `o`에 할당합니다.  
   
- [!code-cs[csProgGuideTypes#14](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_1.cs)]  
+ [!code-cs[csProgGuideTypes#14](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_1.cs)]  
   
  그런 다음 `o` 개체를 unboxing하고 정수 변수 `i`에 할당할 수 있습니다.  
   
- [!code-cs[csProgGuideTypes#15](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_2.cs)]  
+ [!code-cs[csProgGuideTypes#15](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_2.cs)]  
   
  다음 예제에서는 C\#에서 boxing이 사용되는 방법을 보여 줍니다.  
   
- [!code-cs[csProgGuideTypes#47](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_3.cs)]  
+ [!code-cs[csProgGuideTypes#47](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_3.cs)]  
   
 ## 성능  
  단순 할당에서는 boxing과 unboxing을 수행하는 데 많은 계산 과정이 필요합니다.  값 형식을 boxing할 때는 새로운 개체를 할당하고 생성해야 합니다.  정도는 약간 덜하지만 unboxing에 필요한 캐스트에도 상당한 계산 과정이 필요합니다.  자세한 내용은 [성능](../Topic/.NET%20Performance%20Tips.md)을 참조하십시오.  
@@ -43,11 +43,11 @@ boxing은 [값 형식](../../../csharp/language-reference/keywords/value-types.m
   
  다음과 같이 값 형식 변수를 선언합니다.  
   
- [!code-cs[csProgGuideTypes#17](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_4.cs)]  
+ [!code-cs[csProgGuideTypes#17](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_4.cs)]  
   
  다음 문에서는 변수 `i`에 암시적으로 boxing 연산을 적용합니다.  
   
- [!code-cs[csProgGuideTypes#18](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_5.cs)]  
+ [!code-cs[csProgGuideTypes#18](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_5.cs)]  
   
  이 문의 결과로 힙에 있는 `int` 형식의 값을 참조하는 `o` 개체 참조가 스택에 생성됩니다.  이 값은 변수`i`에 할당된 값 형식 값의 복사본입니다.  다음 그림에서는 두 변수 `i` 및 `o`의 차이점을 보여 줍니다.  
   
@@ -56,13 +56,13 @@ boxing 변환
   
  다음 예제에서와 같이 명시적으로 boxing을 수행할 수도 있지만 명시적 boxing이 반드시 필요한 것은 아닙니다.  
   
- [!code-cs[csProgGuideTypes#19](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_6.cs)]  
+ [!code-cs[csProgGuideTypes#19](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_6.cs)]  
   
 ## 설명  
  이 예제에서는 boxing을 통해 정수 변수 `i`를 개체 `o`로 변환합니다.  그런 다음 변수 `i`에 저장된 값을 `123`에서 `456`으로 변경합니다.  이 예제에서는 원래 값 형식과 boxing된 개체에 개별 메모리 위치를 사용하여 서로 다른 값을 저장하는 방법을 보여 줍니다.  
   
 ## 예제  
- [!code-cs[csProgGuideTypes#16](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_7.cs)]  
+ [!code-cs[csProgGuideTypes#16](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_7.cs)]  
   
 ## unboxing  
  unboxing은 `object` 형식에서 [값 형식](../../../csharp/language-reference/keywords/value-types.md)으로, 또는 인터페이스 형식에서 해당 인터페이스를 구현하는 값 형식으로의 명시적 변환입니다.  unboxing 연산 과정은 다음과 같습니다.  
@@ -73,7 +73,7 @@ boxing 변환
   
  다음 문은 boxing 및 unboxing 연산을 모두 보여 줍니다.  
   
- [!code-cs[csProgGuideTypes#21](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_8.cs)]  
+ [!code-cs[csProgGuideTypes#21](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_8.cs)]  
   
  다음 그림에서는 이전 문의 결과를 보여 줍니다.  
   
@@ -85,7 +85,7 @@ unboxing 변환
 ## 예제  
  다음 예제에서는 잘못된 unboxing의 경우와 그 결과로 발생하는 `InvalidCastException`을 보여 줍니다.  이 예제에서는 `try` 및 `catch`를 사용하여 오류가 발생할 때 오류 메시지를 표시합니다.  
   
- [!code-cs[csProgGuideTypes#20](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/boxing-and-unboxing_9.cs)]  
+ [!code-cs[csProgGuideTypes#20](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/boxing-and-unboxing_9.cs)]  
   
  이 프로그램의 출력은 다음과 같습니다.  
   

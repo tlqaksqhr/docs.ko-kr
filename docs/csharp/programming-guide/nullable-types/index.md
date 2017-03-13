@@ -20,7 +20,7 @@ caps.handback.revision: 44
 # nullable 형식(C# 프로그래밍 가이드)
 nullable 형식은 <xref:System.Nullable%601?displayProperty=fullName> 구조체의 인스턴스입니다.  nullable 형식은 내부 값 형식의 올바른 값 범위뿐 아니라 `null` 값도 나타낼 수 있습니다.  예를 들어 `Nullable<Int32>`\("Int32의 nullable"이라고 읽음\)에는 \-2147483648에서 2147483647까지의 모든 값을 할당하거나 `null` 값을 할당할 수 있습니다.  `Nullable<bool>`에는 [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md) 또는 [null](../../../csharp/language-reference/keywords/null.md) 값을 할당할 수 있습니다.  숫자 및 부울 형식에 `null` 값을 할당할 수 있는 기능은 특히 값이 할당되지 않을 수 있는 요소를 포함하는 데이터베이스 및 기타 데이터 형식을 다룰 때 유용합니다.  예를 들어 데이터베이스의 Boolean 필드는 `true` 또는 `false` 값을 저장할 수도 있고, 정의되지 않을 수도 있습니다.  
   
- [!code-cs[csProgGuideTypes#3](../../../csharp/programming-guide/nullable-types/codesnippet/csharp/index_1.cs)]  
+ [!code-cs[csProgGuideTypes#3](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_1.cs)]  
   
  이 예제는 다음 출력을 표시합니다.  
   

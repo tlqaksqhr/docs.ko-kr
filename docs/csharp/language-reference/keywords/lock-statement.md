@@ -67,12 +67,12 @@ class Account
 ## 예제  
  다음 샘플에서는 C\#에서 잠금 없이 스레드를 사용하는 간단한 방법을 보여 줍니다.  
   
- [!code-cs[csrefKeywordsFixedLock#5](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefFixedLock/csrefKeywordsFixedLock.cs#5)]  
+ [!code-cs[csrefKeywordsFixedLock#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/lock-statement_1.cs)]  
   
 ## 예제  
  다음 샘플에서는 스레드와 `lock`을 사용합니다.  `lock` 문이 있으면 문 블록이 임계 영역이 되고 `balance`는 음수가 되지 않습니다.  
   
- [!code-cs[csrefKeywordsFixedLock#6](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefFixedLock/csrefKeywordsFixedLock.cs#6)]  
+ [!code-cs[csrefKeywordsFixedLock#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/lock-statement_2.cs)]  
   
 ## C\# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  

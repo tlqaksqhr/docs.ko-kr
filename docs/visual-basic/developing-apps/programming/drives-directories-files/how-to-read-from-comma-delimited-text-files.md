@@ -30,24 +30,24 @@ caps.handback.revision: 19
   
 1.  새 `TextFieldParser`를 만듭니다.  다음 코드에서는 `MyReader`라는 이름의 `TextFieldParser`를 만들고 `test.txt` 파일을 엽니다.  
   
-     [!code-vb[VbFileIORead#15](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-read-from-comma-d_1.vb)]  
+     [!code-vb[VbFileIORead#15](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-comma-delimited-text-files_1.vb)]  
   
 2.  `TextField` 형식과 구분 기호를 정의합니다.  다음 코드에서는 `TextFieldType` 속성을 `Delimited`로 정의하고 구분 기호를 ","로 정의합니다.  
   
-     [!code-vb[VbFileIORead#16](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-read-from-comma-d_2.vb)]  
+     [!code-vb[VbFileIORead#16](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-comma-delimited-text-files_2.vb)]  
   
 3.  파일의 필드를 순환하며 검색합니다.  손상된 줄이 있으면 오류가 보고되고 구문 분석은 계속됩니다.  다음 코드에서는 파일을 순환하며 검색하여 각 필드를 차례로 표시하고 형식이 잘못 지정된 모든 필드를 보고합니다.  
   
-     [!code-vb[VbFileIORead#17](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-read-from-comma-d_3.vb)]  
+     [!code-vb[VbFileIORead#17](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-comma-delimited-text-files_3.vb)]  
   
 4.  `While` 및 `Using` 블록을 `End While` 및 `End Using`으로 닫습니다.  
   
-     [!code-vb[VbFileIORead#18](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-read-from-comma-d_4.vb)]  
+     [!code-vb[VbFileIORead#18](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-comma-delimited-text-files_4.vb)]  
   
 ## 예제  
  이 예제에서는 `test.txt` 파일을 읽습니다.  
   
- [!code-vb[VbFileIORead#19](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/visualbasic/how-to-read-from-comma-d_5.vb)]  
+ [!code-vb[VbFileIORead#19](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-comma-delimited-text-files_5.vb)]  
   
 ## 강력한 프로그래밍  
  다음 조건에서 예외가 발생할 수 있습니다.  

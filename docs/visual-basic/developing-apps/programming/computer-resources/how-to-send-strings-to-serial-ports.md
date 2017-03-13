@@ -35,7 +35,7 @@ caps.handback.revision: 13
   
  <xref:System.IO.Ports.SerialPort.WriteLine%2A> 메서드에서 데이터를 직렬 포트로 보냅니다.  
   
- [!code-vb[VbVbalrMyComputer#33](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/visualbasic/VbVbalrMyComputer/Class2.vb#33)]  
+ [!code-vb[VbVbalrMyComputer#33](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-send-strings-to-serial-ports_1.vb)]  
   
 ## 코드 컴파일  
   

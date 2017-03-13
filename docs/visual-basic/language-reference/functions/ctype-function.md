@@ -64,7 +64,7 @@ CType(expression, typename)
 ## 예제  
  다음 예제에서는 `CType` 함수를 사용하여 식을 `Single` 데이터 형식으로 변환합니다.  
   
- [!code-vb[VbVbalrFunctions#24](../../../visual-basic/language-reference/functions/codesnippet/visualbasic/ctype-function_1.vb)]  
+ [!code-vb[VbVbalrFunctions#24](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/ctype-function_1.vb)]  
   
  다른 예제를 보려면 [Implicit and Explicit Conversions](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)를 참조하십시오.  
   

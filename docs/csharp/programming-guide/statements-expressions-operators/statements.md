@@ -21,15 +21,15 @@ caps.handback.revision: 28
   
  문은 세미콜론으로 끝나는 한 줄의 코드로 구성될 수도 있고 한 줄로 된 문이 여러 개가 포함된 블록이 될 수도 있습니다.  문 블록은 {} 괄호로 묶이며 중첩된 블록을 포함할 수 있습니다.  다음 코드에서는 한 줄로 된 문과 여러 줄로 된 문 블록의 예를 보여 줍니다.  
   
- [!code-cs[csProgGuideStatements#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/statements_1.cs)]  
+ [!code-cs[csProgGuideStatements#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_1.cs)]  
   
 ## 문의 종류  
  다음 표에서는 C\#의 다양한 문 종류와 관련 키워드 및 자세한 정보를 포함하는 항목에 대한 링크를 보여 줍니다.  
   
 |범주|C\# 키워드\/참고|  
 |--------|-----------------|  
-|선언 문|선언 문은 새 변수 또는 상수를 소개합니다.  필요한 경우 변수 선언에서 변수에 값을 할당할 수도 있습니다.  상수 선언에서는 반드시 값을 할당해야 합니다.<br /><br /> [!code-cs[csProgGuideStatements#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/statements_2.cs)]|  
-|식 문|값을 계산하는 식 문에서는 변수에 값을 저장해야 합니다.<br /><br /> [!code-cs[csProgGuideStatements#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/statements_3.cs)]|  
+|선언 문|선언 문은 새 변수 또는 상수를 소개합니다.  필요한 경우 변수 선언에서 변수에 값을 할당할 수도 있습니다.  상수 선언에서는 반드시 값을 할당해야 합니다.<br /><br /> [!code-cs[csProgGuideStatements#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_2.cs)]|  
+|식 문|값을 계산하는 식 문에서는 변수에 값을 저장해야 합니다.<br /><br /> [!code-cs[csProgGuideStatements#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_3.cs)]|  
 |[선택 문](../../../csharp/language-reference/keywords/selection-statements.md)|선택 문을 사용하면 하나 이상의 지정된 조건에 따라 다른 코드 섹션으로 분기할 수 있습니다.  자세한 내용은 다음 항목을 참조하십시오.<br /><br /> [if](../../../csharp/language-reference/keywords/if-else.md), [else](../../../csharp/language-reference/keywords/if-else.md), [switch](../../../csharp/language-reference/keywords/switch.md), [case](../../../csharp/language-reference/keywords/switch.md)|  
 |[반복 문](../../../csharp/language-reference/keywords/iteration-statements.md)|반복 문을 사용하면 배열과 같은 컬렉션을 반복하거나 지정된 조건이 충족될 때까지 동일한 문 집합을 반복적으로 수행할 수 있습니다.  자세한 내용은 다음 항목을 참조하십시오.<br /><br /> [do](../../../csharp/language-reference/keywords/do.md), [for](../../../csharp/language-reference/keywords/for.md), [foreach](../../../csharp/language-reference/keywords/foreach-in.md), [in](../../../csharp/language-reference/keywords/foreach-in.md), [while](../../../csharp/language-reference/keywords/while.md)|  
 |[점프 문](../../../csharp/language-reference/keywords/jump-statements.md)|점프 문을 사용하면 제어를 다른 코드 섹션으로 이동할 수 있습니다.  자세한 내용은 다음 항목을 참조하십시오.<br /><br /> [break](../../../csharp/language-reference/keywords/break.md), [continue](../../../csharp/language-reference/keywords/continue.md), [default](../../../csharp/language-reference/keywords/switch.md), [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md), [yield](../../../csharp/language-reference/keywords/yield.md)|  
@@ -40,30 +40,30 @@ caps.handback.revision: 28
 |`fixed` 문|fixed 문은 가비지 수집기에서 이동 가능한 변수를 재배치할 수 없도록 합니다.  자세한 내용은 [fixed](../../../csharp/language-reference/keywords/fixed-statement.md)를 참조하십시오.|  
 |`lock` 문|lock 문을 사용하면 코드 블록에 대한 액세스를 한 번에 하나의 스레드로 제한할 수 있습니다.  자세한 내용은 [lock](../../../csharp/language-reference/keywords/lock-statement.md)을 참조하십시오.|  
 |레이블 문|문에 레이블을 지정한 다음 [goto](../../../csharp/language-reference/keywords/goto.md) 키워드를 사용하여 해당 레이블이 지정된 문으로 이동할 수 있습니다.  다음 행의 예제를 참조하십시오.|  
-|빈 문|빈 문은 하나의 세미콜론으로 구성됩니다.  빈 문은 아무런 작업도 수행하지 않으므로 문이 필요하지만 동작을 수행할 필요가 없는 경우에 사용됩니다.  다음 예제에서는 빈 문을 사용하는 두 가지 경우를 보여 줍니다.<br /><br /> [!code-cs[csProgGuideStatements#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/statements_4.cs)]|  
+|빈 문|빈 문은 하나의 세미콜론으로 구성됩니다.  빈 문은 아무런 작업도 수행하지 않으므로 문이 필요하지만 동작을 수행할 필요가 없는 경우에 사용됩니다.  다음 예제에서는 빈 문을 사용하는 두 가지 경우를 보여 줍니다.<br /><br /> [!code-cs[csProgGuideStatements#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_4.cs)]|  
   
 ## 포함 문  
  [do](../../../csharp/language-reference/keywords/do.md), [while](../../../csharp/language-reference/keywords/while.md), [for](../../../csharp/language-reference/keywords/for.md) 및 [foreach](../../../csharp/language-reference/keywords/foreach-in.md)를 비롯한 일부 문의 뒤에는 반드시 포함 문이 옵니다.  이러한 포함 문은 하나의 문일 수도 있고 여러 개의 문이 {} 괄호로 묶인 문 블록일 수도 있습니다.  한 줄로 된 포함 문도 다음 예제와 같이 {} 괄호로 묶일 수 있습니다.  
   
- [!code-cs[csProgGuideStatements#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/statements_5.cs)]  
+ [!code-cs[csProgGuideStatements#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_5.cs)]  
   
  {} 괄호로 묶이지 않은 포함 문은 선언 문이나 레이블 문이 될 수 없습니다.  다음 예제에서 이를 확인할 수 있습니다.  
   
- [!code-cs[csProgGuideStatements#27](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/statements_6.cs)]  
+ [!code-cs[csProgGuideStatements#27](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_6.cs)]  
   
  오류를 수정하려면 포함 문을 블록 안에 배치합니다.  
   
- [!code-cs[csProgGuideStatements#28](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/statements_7.cs)]  
+ [!code-cs[csProgGuideStatements#28](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_7.cs)]  
   
 ## 중첩 문 블록  
  다음 예제에서와 같이 문 블록은 중첩될 수 있습니다.  
   
- [!code-cs[csProgGuideStatements#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/statements_8.cs)]  
+ [!code-cs[csProgGuideStatements#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_8.cs)]  
   
 ## 접근할 수 없는 문  
  컴파일러가 제어 흐름이 어떤 경우에도 특정 문에 도달할 수 없다고 판단하는 경우 다음 예제와 같이 경고 CS0162가 생성됩니다.  
   
- [!code-cs[csProgGuideStatements#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/statements_9.cs)]  
+ [!code-cs[csProgGuideStatements#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/statements_9.cs)]  
   
 ## 관련 단원  
   

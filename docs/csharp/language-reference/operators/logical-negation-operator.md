@@ -26,7 +26,7 @@ caps.handback.revision: 13
  사용자 정의 형식으로 `!` 연산자를 오버로드할 수 있습니다\([operator](../../../csharp/language-reference/keywords/operator.md) 참조\).  
   
 ## 예제  
- [!code-cs[csRefOperators#7](../../../csharp/language-reference/operators/codesnippet/csharp/csrefOperators/csrefOperators.cs#7)]  
+ [!code-cs[csRefOperators#7](../../../csharp/language-reference/operators/codesnippet/CSharp/logical-negation-operator_1.cs)]  
   
 ## 참고 항목  
  [C\# 참조](../../../csharp/language-reference/index.md)   

@@ -10,7 +10,7 @@ caps.handback.revision: 15
  연속에 대한 자세한 내용은 [into](../../../csharp/language-reference/keywords/into.md)를 참조하십시오.  다음 예제에서는 메모리 내 데이터 구조를 데이터 소스로 사용하지만 모든 종류의 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq-md.md)] 데이터 소스에 적용되는 동일한 원칙을 사용합니다.  
   
 ## 예제  
- [!code-cs[csProgGuideLINQ#23](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csrefLINQHowTos.cs#23)]  
+ [!code-cs[csProgGuideLINQ#23](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-perform-a-subquery-on-a-grouping-operation_1.cs)]  
   
 ## 코드 컴파일  
  이 예제에는 [방법: 개체 컬렉션 쿼리](../../../csharp/programming-guide/linq-query-expressions/how-to-query-a-collection-of-objects.md)에서 샘플 응용 프로그램에 정의된 개체에 대한 참조가 포함되어 있습니다.  이 메서드를 컴파일하고 실행하려면 해당 응용 프로그램의 `StudentClass` 클래스에 이 메서드를 붙여넣고 이 메서드에 대한 `Main` 메서드의 호출을 추가합니다.  

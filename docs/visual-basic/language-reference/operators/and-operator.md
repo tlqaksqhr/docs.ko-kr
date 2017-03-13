@@ -84,14 +84,14 @@ result = expression1 And expression2
 ## 예제  
  다음 예제에서는 `And` 연산자를 사용하여 두 식의 논리곱 연산을 수행합니다.  결과는 두 식이 모두 `True`인지 여부를 나타내는 `Boolean` 값입니다.  
   
- [!code-vb[VbVbalrOperators#22](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/and-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/and-operator_1.vb)]  
   
  위 예제의 결과는 각각 `True`, `False`가 됩니다.  
   
 ## 예제  
  다음 예제에서는 `And` 연산자를 사용하여 두 숫자 식의 개별 비트에 대한 논리곱 연산을 수행합니다.  피연산자의 해당 비트가 모두 1로 설정되면 결과 패턴의 비트도 설정됩니다.  
   
- [!code-vb[VbVbalrOperators#23](../../../visual-basic/language-reference/operators/codesnippet/visualbasic/and-operator_2.vb)]  
+ [!code-vb[VbVbalrOperators#23](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/and-operator_2.vb)]  
   
  위 예제의 결과는 각각 8, 2, 0이 됩니다.  
   

@@ -73,7 +73,7 @@ Next [ element ]
   
  다음 예제에서는 `For Each`...`Next` 문 목록 컬렉션의 모든 요소를 통해 반복 합니다.  
   
- [!code-vb[VbVbalrStatements#121](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-each-next-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#121](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_1.vb)]  
   
  추가 예제는 [컬렉션](../Topic/Collections%20\(C%23%20and%20Visual%20Basic\).md) 및 [배열](../../../visual-basic/programming-guide/language-features/arrays/index.md)을 참조하십시오.  
   
@@ -82,7 +82,7 @@ Next [ element ]
   
  다음 예제는 중첩된 `For Each`…`Next` 구조체를 보여 줍니다.  
   
- [!code-vb[VbVbalrStatements#122](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-each-next-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#122](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_2.vb)]  
   
  루프를 중첩 하는 경우 각 루프에는 고유 해야 합니다 `element` 변수입니다.  
   
@@ -95,7 +95,7 @@ Next [ element ]
   
  다음 예제에서는 `Continue For` 및 `Exit For` 문을 사용하는 방법을 설명합니다.  
   
- [!code-vb[VbVbalrStatements#123](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-each-next-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#123](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_3.vb)]  
   
  `For Each` 루프에 임의 수의 `Exit For` 문을 배치할 수 있습니다.  중첩된 `For Each` 루프 내에 `Exit For`를 사용하면 Exit For는 가장 안쪽의 루프를 끝내고 중첩 수준이 그 다음으로 높은 루프에 제어를 전달합니다.  
   
@@ -114,7 +114,7 @@ Next [ element ]
   
  다음 예제에서는 반복기 함수를 사용합니다.  반복기 함수는 `Yield` 문 내부에  [에 대 한...다음](../../../visual-basic/language-reference/statements/for-next-statement.md) 루프.  에 `ListEvenNumbers` 메서드를 반복할 때마다의 `For Each` 문의 본문 옆에 진행 하는 반복기 함수 호출을 만듭니다 `Yield` 문.  
   
- [!code-vb[VbVbalrStatements#127](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-each-next-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements#127](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_4.vb)]  
   
  자세한 내용은 [반복기](../Topic/Iterators%20\(C%23%20and%20Visual%20Basic\).md), [Yield 문](../../../visual-basic/language-reference/statements/yield-statement.md) 및 [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md)을 참조하십시오.  
   
@@ -142,7 +142,7 @@ Next [ element ]
   
  다음 예제에 대 한 할당 `m` 초기 값으로 `n` 때 컴파일되지 `Option Strict` 때문에 변환에 `Long` 에 `Integer` 은 축소 변환입니다.  하지만 `For Each` 문에서는 `number`에 대한 할당 시 `Long`에서 `Integer`로의 변환이 필요함에도 불구하고 컴파일러 오류가 보고되지 않습니다.  큰 숫자가 포함된 `For Each` 문에서는 <xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A>가 큰 숫자에 적용될 때 런타임 오류가 발생합니다.  
   
- [!code-vb[VbVbalrStatements#89](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-each-next-statement_5.vb)]  
+ [!code-vb[VbVbalrStatements#89](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_5.vb)]  
   
 ### IEnumerator 호출  
  `For Each`...`Next` 루프 실행이 시작되면 Visual Basic에서 `group`이 올바른 컬렉션 개체를 참조하는지 확인합니다.  올바른 컬렉션 개체를 참조하지 않는 경우 예외가 throw됩니다.  그렇지 않으면 열거자 개체의 <xref:System.Collections.IEnumerator.MoveNext%2A> 메서드와 <xref:System.Collections.IEnumerator.Current%2A> 속성을 호출하여 첫 번째 요소를 반환합니다.  `MoveNext`가 다음 요소가 없음을 나타내면, 즉 컬렉션이 비어 있으면 `For Each` 루프가 종료되고 `Next` 문 다음 문으로 제어가 전달됩니다.  그렇지 않으면 Visual Basic에서 `element`를 첫 번째 요소로 설정하고 문 블록을 실행합니다.  
@@ -163,7 +163,7 @@ Next [ element ]
 ## 예제  
  다음 예제에서는 <xref:System.IO.DirectoryInfo> 클래스를 사용하여 C:\\ 디렉터리에 있는 모든 폴더를 표시합니다.  
   
- [!code-vb[VbVbalrStatements#124](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-each-next-statement_6.vb)]  
+ [!code-vb[VbVbalrStatements#124](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_6.vb)]  
   
 ## 예제  
  다음 예제에서는 컬렉션을 정렬 하는 프로시저를 보여 줍니다.  인스턴스를 정렬 하는 예제는 한 `Car` 에 저장 하는 클래스는 <xref:System.Collections.Generic.List%601>.  `Car` 클래스가 구현 된 <xref:System.IComparable%601> 인터페이스를 필요로 하는 <xref:System.IComparable%601.CompareTo%2A> 메서드 구현.  
@@ -172,7 +172,7 @@ Next [ element ]
   
  에 `ListCars` 메서드는 `cars.Sort()` 문 목록 정렬.  이 호출에는 <xref:System.Collections.Generic.List%601.Sort%2A> 메서드는 <xref:System.Collections.Generic.List%601> 발생의 `CompareTo` 메서드가 자동으로 호출 하려면는 `Car` 개체의 `List`.  
   
- [!code-vb[VbVbalrStatements#125](../../../visual-basic/language-reference/error-messages/codesnippet/visualbasic/for-each-next-statement_7.vb)]  
+ [!code-vb[VbVbalrStatements#125](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_7.vb)]  
   
 ## 참고 항목  
  [컬렉션](../Topic/Collections%20\(C%23%20and%20Visual%20Basic\).md)   

@@ -31,7 +31,7 @@ sealed class B : A {}
 ## 예제  
  다음 예제에서 `Z`는 `Y`에서 상속하지만 `Z`는 `X`에 선언되고 `Y`에 봉인된 가상 함수 `F`를 재정의할 수 없습니다.  
   
- [!code-cs[csrefKeywordsModifiers#16](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#16)]  
+ [!code-cs[csrefKeywordsModifiers#16](../../../csharp/language-reference/keywords/codesnippet/CSharp/sealed_1.cs)]  
   
  클래스의 새 메서드 또는 속성을 정의할 때 [virtual](../../../csharp/language-reference/keywords/virtual.md)로 선언하지 않으면 파생 클래스가 재정의되지 않도록 할 수 있습니다.  
   
@@ -46,7 +46,7 @@ sealed class B : A {}
  추가 예제는 [추상 및 봉인 클래스와 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)를 참조하십시오.  
   
 ## 예제  
- [!code-cs[csrefKeywordsModifiers#17](../../../csharp/language-reference/keywords/codesnippet/csharp/csrefKeywordsModifiers/csrefKeywordsModifiers.cs#17)]  
+ [!code-cs[csrefKeywordsModifiers#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/sealed_2.cs)]  
   
  위 예제에서 다음 문을 사용하여 봉인 클래스에서 상속할 경우  
   

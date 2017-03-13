@@ -21,7 +21,7 @@ caps.handback.revision: 10
 ## 예제  
  다음 코드 예제에서는 <xref:System.Collections.Generic.Dictionary%602>가 `StudentName` 형식의 인스턴스로 초기화됩니다.  
   
- [!code-cs[csProgGuideLINQ#34](../../../csharp/programming-guide/arrays/codesnippet/csharp/csLINQProgRef/csRef30LangFeatures_2.cs#34)]  
+ [!code-cs[csProgGuideLINQ#34](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-a-dictionary-with-a-collection-initializer_1.cs)]  
   
  컬렉션의 각 요소에는 중괄호 두 쌍이 있습니다.  가장 안쪽의 중괄호로 `StudentName`에 대한 개체 이니셜라이저를 묶고 가장 바깥쪽 중괄호로 `students` <xref:System.Collections.Generic.Dictionary%602>에 추가될 키\/값 쌍에 대한 이니셜라이저를 묶습니다.  마지막으로 디렉터리에 대한 전체 컬렉션 이니셜라이저를 중괄호로 묶습니다.  
   

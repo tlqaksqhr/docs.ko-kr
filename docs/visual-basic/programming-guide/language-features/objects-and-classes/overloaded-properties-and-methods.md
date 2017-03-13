@@ -34,15 +34,15 @@ caps.handback.revision: 12
 ## 오버로딩 사용법  
  오버로딩은 개체 모델의 필요성에 의해, 다른 데이터 형식에서 작동하는 서로 다른 프로시저에 동일한 이름을 사용해야 할 때 특히 유용합니다.  예를 들어, 여러 다른 데이터 형식을 나타낼 수 있는 하나의 클래스에는 다음과 같은 `Display` 프로시저가 포함될 수 있습니다.  
   
- [!code-vb[VbVbalrOOP#64](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#64)]  
+ [!code-vb[VbVbalrOOP#64](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_1.vb)]  
   
  오버로딩을 사용하지 않는 경우에는 다음에서 볼 수 있는 것처럼 프로시저가 동일한 작업을 수행하는 경우에도 각 프로시저에 대해 고유한 이름을 만들어야 합니다.  
   
- [!code-vb[VbVbalrOOP#65](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#65)]  
+ [!code-vb[VbVbalrOOP#65](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_2.vb)]  
   
  오버로딩을 사용하면 여러 데이터 형식 중에서 선택할 수 있으므로 속성이나 메서드를 보다 쉽게 사용할 수 있습니다.  예를 들어, 앞에서 설명한 오버로드된 `Display` 메서드는 다음 코드를 사용하여 호출할 수 있습니다.  
   
- [!code-vb[VbVbalrOOP#66](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#66)]  
+ [!code-vb[VbVbalrOOP#66](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_3.vb)]  
   
  런타임에 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]은 지정한 매개 변수의 데이터 형식을 기준으로 올바른 프로시저를 호출합니다.  
   
@@ -72,11 +72,11 @@ caps.handback.revision: 12
   
 2.  `TaxClass` 클래스에 다음 코드를 추가합니다.  
   
-     [!code-vb[VbVbalrOOP#67](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#67)]  
+     [!code-vb[VbVbalrOOP#67](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_4.vb)]  
   
 3.  폼에 다음 프로시저를 추가합니다.  
   
-     [!code-vb[VbVbalrOOP#68](../../../../visual-basic/misc/codesnippet/visualbasic/VbVbalrOOP/OOP.vb#68)]  
+     [!code-vb[VbVbalrOOP#68](../../../../visual-basic/misc/codesnippet/VisualBasic/overloaded-properties-and-methods_5.vb)]  
   
 4.  폼에 단추를 추가하고 단추의 `Button1_Click` 이벤트에서 `ShowTax` 프로시저를 호출합니다.  
   

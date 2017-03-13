@@ -51,7 +51,7 @@ caps.handback.revision: 15
 ## 예제  
  다음 예제에서는 클래스\(참조 형식\)의 값 일치를 구현하는 방법을 보여 줍니다.  
   
- [!code-cs[csProgGuideStatements#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-define-value-equa_1.cs)]  
+ [!code-cs[csProgGuideStatements#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_1.cs)]  
   
  클래스\(참조 형식\)의 경우 두 <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName> 메서드의 기본 구현에서 값 일치 검사가 아니라 참조 일치 비교를 수행합니다.  구현자가 가상 메서드를 재정의하는 목적은 해당 메서드에 값 일치 구문을 지정하는 데 있습니다.  
   
@@ -60,7 +60,7 @@ caps.handback.revision: 15
 ## 예제  
  다음 예제에서는 구조체\(값 형식\)의 값 일치를 구현하는 방법을 보여 줍니다.  
   
- [!code-cs[csProgGuideStatements#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/csharp/how-to-define-value-equa_2.cs)]  
+ [!code-cs[csProgGuideStatements#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-value-equality-for-a-type_2.cs)]  
   
  구조체의 경우 <xref:System.Object.Equals%28System.Object%29?displayProperty=fullName>의 기본 구현\(<xref:System.ValueType?displayProperty=fullName>에서 재정의한 버전\)에서는 해당 형식의 모든 필드 값을 비교하는 데 리플렉션을 사용하여 값 일치 검사를 수행합니다.  구현자가 구조체에서 가상 메서드 `Equals`를 재정의하는 목적은 값 일치 검사를 수행할 수 있는 보다 효율적인 수단을 제공하고 추가적으로 비교의 기준을 구조체의 필드 또는 속성 하위 집합에 두려는 데 있습니다.  
   
