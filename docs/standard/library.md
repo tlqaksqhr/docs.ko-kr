@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
 translationtype: Human Translation
-ms.sourcegitcommit: eb98c703946d8be0757288ae9e00aab87b32e407
-ms.openlocfilehash: 939c6dd0621e3b1121aca52915b04bf51af1d1ef
+ms.sourcegitcommit: 519253bd6dc105afb138268c62347c29a6072fbb
+ms.openlocfilehash: f681b1663d1a2e6c2fbbd1cc415290d26bbbe429
+ms.lasthandoff: 03/07/2017
 
 ---
 
@@ -110,7 +111,7 @@ NuGet 패키지는 하나 이상의 [프레임워크](frameworks.md)를 대상�
 
 프로필 기반 PCL 호환성은 [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) NuGet 패키지에서 제공됩니다. 이러한 종속성은 프로필 기반 PCL을 포함하는 NuGet 패키지를 참조할 때 필요합니다.
 
-`netstandard`로 패키지된 프로필 기반 PCL은 일반적으로 project.json에 패키지된 프로필 기반 PCL보다 사용하기가 더 쉽습니다. `netstandard` 패키징은 기존 사용자와 호환됩니다.
+`netstandard`로 패키지된 프로필 기반 PCL은 일반적으로 패키지된 프로필 기반 PCL보다 더 쉽게 이용할 수 있습니다. `netstandard` 패키징은 기존 사용자와 호환됩니다.
 
 .NET 표준과 호환되는 PCL 프로필 집합을 확인할 수 있습니다. 
 
@@ -131,9 +132,4 @@ NuGet 패키지는 하나 이상의 [프레임워크](frameworks.md)를 대상�
 ## <a name="targeting-net-standard-library"></a>.NET 표준 라이브러리를 대상으로 지정
 
 `netstandard` 프레임워크와 NETStandard.Library 메타패키지의 조합을 사용하여 [.NET 표준 라이브러리를 빌드](../core/tutorials/libraries.md)할 수 있습니다. [.NET Core 도구를 사용하여 .NET 표준 라이브러리를 대상으로 지정](../core/packages.md)하는 예를 확인할 수 있습니다.
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

@@ -4,41 +4,42 @@ description: ".NET Core CLI 도구 및 공유 런타임을 설치하는 dotnet-i
 keywords: "dotnet-install, dotnet-install 스크립트, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 10/12/2016
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 59b9c456-2bfd-4adc-8202-a1c6a0a6c787
+ms.assetid: b64e7e6f-ffb4-4fc8-b43b-5731c89479c2
 translationtype: Human Translation
-ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
-ms.openlocfilehash: 8c5812828b5a19646d6ccbfe9f7cf2215889201f
+ms.sourcegitcommit: 99254f84873003496ee00214d55ff908f9fd47d3
+ms.openlocfilehash: 6301fb61be27d7dac6ead57159c0d9461b3eacb5
+ms.lasthandoff: 03/07/2017
 
 ---
 
 #<a name="dotnet-install-scripts-reference"></a>dotnet-install 스크립트 참조
 
-> [!WARNING]
-> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. .NET Core 도구 RC4 버전의 경우 [dotnet-install 스크립트 참조(.NET Core 도구 RC4)](../preview3/tools/dotnet-install-script.md) 항목을 참조하세요.
-
 ## <a name="name"></a>이름
-`dotnet-install.ps1` | `dotnet-install.sh` - CLI(명령줄 인터페이스) 도구 및 공유 런타임을 설치하는 데 사용되는 스크립트입니다.
+
+`dotnet-install.ps1` | `dotnet-install.sh` - .NET Core CLI(명령줄 인터페이스) 도구 및 공유 런타임을 설치하는 데 사용되는 스크립트입니다.
 
 ## <a name="synopsis"></a>개요
 Windows:
 
-`dotnet-install.ps1 [-Channel] [-Version]
-    [-InstallDir] [-Debug] [-NoPath] 
-    [-SharedRuntime]`
+```
+dotnet-install.ps1 [-Channel] [-Version] [-InstallDir] [-Architecture]
+    [-SharedRuntime] [-DebugSymbols] [-DryRun] [-NoPath] [-AzureFeed] [-ProxyAddress]
+```
 
 macOS/Linux:
 
-`dotnet-install.sh [--channel] [--version]
-    [--install-dir] [--debug] [--no-path] 
-    [--shared-runtime]`
+```
+dotnet-install.sh [--channel] [--version] [--install-dir] [--architecture]
+    [--shared-runtime] [--debug-symbols] [--dry-run] [--no-path] [--verbose] [--azure-feed] [--help]
+```
 
 ## <a name="description"></a>설명
-`dotnet-install` 스크립트는 CLI 도구 체인 및 공유 런타임의 관리자가 아닌 일반 설치를 수행하는 데 사용됩니다. 스크립트는 [CLI GitHub 리포지토리](https://github.com/dotnet/cli/tree/rel/1.0.0-preview2/scripts/obtain)에서 다운로드할 수 있습니다. 
+`dotnet-install` 스크립트는 CLI 도구 체인 및 공유 런타임의 관리자가 아닌 일반 설치를 수행하는 데 사용됩니다. 스크립트는 [CLI GitHub 리포지토리](https://github.com/dotnet/cli/tree/rel/1.0.0/scripts/obtain)에서 다운로드할 수 있습니다. 
 
 주요 사용 사례는 자동화 시나리오 및 관리자가 아닌 일반 설치에 도움을 주는 것입니다. 스크립트는 Windows에서 작동하는 PowerShell용 스크립트와 Linux/OS X에서 작동하는 bash 스크립트의 두 가지가 있습니다. 둘 다 동작은 동일합니다. 또한 Bash 스크립트는 PowerShell 스위치를 "인식"하므로 보드 전체에서 사용할 수 있습니다. 
 
@@ -62,48 +63,97 @@ macOS/Linux:
 
 `-Version [VERSION]`
 
-설치할 CLI 버전입니다. 버전은 세 부분으로 구성된 버전(예: 1.0.0-13232)으로 지정해야 합니다. 생략하면 `version` 속성을 포함하는 첫 번째 [global.json](global-json.md) 파일로 기본 설정됩니다. 이 파일이 없을 경우 최신 파일을 사용합니다.     
+설치할 CLI의 버전입니다. 버전은 세 부분으로 구성된 버전(예: 1.0.0-13232)으로 지정해야 합니다. 생략하면 `version` 속성을 포함하는 첫 번째 [global.json](global-json.md)으로 기본 설정됩니다. 이 파일이 없을 경우 최신 파일을 사용합니다.
 
 `-InstallDir [DIR]`
 
-설치할 경로입니다. 디렉터리가 없을 경우 만듭니다. 기본값은 *%LocalAppData%\Microsoft\dotnet*입니다.
+설치할 경로입니다. 디렉터리가 없을 경우 만듭니다. 기본값은 *%LocalAppData%\.dotnet*입니다.
 
-`-Debug`
+`-Architecture [ARCH]`
 
-`true`이면 디버깅 기호를 포함하는 더 큰 패키지를 사용해야 함을 나타내고, 그러지 않으면 `false`입니다. 기본값은 `false`입니다.
-
-`-NoPath`
-
-`true`이면 현재 세션에 대한 경로로 접두사/installdi을 내보내지 않음을 나타내고, 그러지 않으면 `false`입니다. 기본값은 `false`이며, PATH가 수정됩니다. 따라서 설치 후 바로 CLI 도구를 사용할 수 있게 됩니다. 
+설치할 .NET Core 바이너리의 아키텍처입니다. 가능한 값은 &lt;자동&gt;, x64 및 x86입니다. 기본값은 현재 실행 중인 OS 아키텍처를 나타내는 &lt;자동&gt;입니다.
 
 `-SharedRuntime`
 
-`true`이면 공유 런타임 비트만 설치하고, `false`이면 전체 SDK를 설치합니다. 기본값은 `false`입니다.
+설정된 경우 전체 SDK가 아니라 공유 런타임 비트만 설치합니다.
+
+`-DebugSymbols`
+
+설정된 경우 설치 관리자가 설치에 디버깅 기호를 포함합니다.
+
+> [!NOTE]
+> 이 스위치는 아직 작동하지 않습니다.
+
+`-DryRun`
+
+설정된 경우 스크립트에서 설치를 수행하지는 않지만 대신 현재 요청된 버전의 .NET CLI를 일관되게 설치하기 위해 사용할 명령줄을 표시합니다. 예를 들어 `latest` 버전을 지정하면 빌드 스크립트에서 이 명령을 결정적으로 사용할 수 있도록 특정 버전에 대한 링크를 표시합니다.
+또한 직접 설치하거나 다운로드하는 것을 선호하는 경우 이진 파일 위치를 표시합니다.
+
+`-NoPath`
+
+설정된 경우 현재 세션에 대한 경로로 접두사/installdir을 내보내지 않습니다. 기본적으로 스크립트는 경로를 수정하여, 설치 후 CLI 도구를 즉시 사용할 수 있게 만듭니다.
+
+`-AzureFeed`
+
+이 설치 관리자에서 사용할 Azure 피드에 대한 URL입니다. 변경하지 않는 것이 좋습니다. 기본값은 `https://dotnetcli.azureedge.net/dotnet`입니다.
+
+`-ProxyAddress`
+
+설정된 경우 설치 관리자에서 웹 요청을 만들 때 프록시를 사용합니다.
 
 ### <a name="bash-macoslinux"></a>Bash(Linux/macOS)
+
+`dotnet-install.sh [--channel] [--version] [--install-dir] [--architecture]
+    [--shared-runtime] [--debug-symbols] [--dry-run] [--no-path] [--verbose] [--azure-feed] [--help]
+`
+
 `--channel [CHANNEL]`
 
-설치할 채널(예: "future", "preview", "production")입니다. 기본값은 "Production"입니다.
+설치할 채널(예: "future", "dev", "production")입니다. 기본값은 "Production"입니다.
 
 `--version [VERSION]`
 
-설치할 CLI 버전입니다. 버전은 세 부분으로 구성된 버전(예: 1.0.0-13232)으로 지정해야 합니다. 생략하면 `version` 속성을 포함하는 첫 번째 [global.json](global-json.md) 파일로 기본 설정됩니다. 이 파일이 없을 경우 최신 파일을 사용합니다.     
+설치할 CLI의 버전입니다. 버전은 세 부분으로 구성된 버전(예: 1.0.0-13232)으로 지정해야 합니다. 생략하면 `version` 속성을 포함하는 첫 번째 [global.json](global-json.md)으로 기본 설정됩니다. 이 파일이 없을 경우 최신 파일을 사용합니다.
 
 `--install-dir [DIR]`
 
 설치할 위치 경로입니다. 디렉터리가 없을 경우 만듭니다. 기본값은 `$HOME/.dotnet`입니다.
 
-`--debug`
+`--architecture [ARCH]`
 
-`true`이면 디버깅 기호를 포함하는 더 큰 패키지를 사용해야 함을 나타내고, 그러지 않으면 `false`입니다. 기본값은 `false`입니다.
-
-`--no-path`
-
-`true`이면 현재 세션에 대한 경로로 접두사/installdi을 내보내지 않음을 나타내고, 그러지 않으면 `false`입니다. 기본값은 `false`이며, PATH가 수정됩니다. 따라서 설치 후 바로 CLI 도구를 사용할 수 있게 됩니다.  
+설치할 .NET 바이너리의 아키텍처입니다. 가능한 값은 &lt;자동&gt;, x64 및 amd64입니다. 기본값은 현재 실행 중인 OS 아키텍처를 나타내는 &lt;자동&gt;입니다.
 
 `--shared-runtime`
 
-`true`이면 공유 런타임 비트만 설치하고, `false`이면 전체 SDK를 설치합니다. 기본값은 `false`입니다.
+설정된 경우 전체 SDK가 아니라 공유 런타임 비트만 설치합니다.
+
+`--debug-symbols`
+
+설정된 경우 설치 관리자가 설치에 디버깅 기호를 포함합니다.
+
+> [!NOTE]
+> 이 스위치는 아직 작동하지 않습니다.
+
+`--dry-run`
+
+설정된 경우 스크립트에서 설치를 수행하지는 않지만 대신 현재 요청된 버전의 .NET CLI를 일관되게 설치하기 위해 사용할 명령줄을 표시합니다. 예를 들어 `latest` 버전을 지정하면 빌드 스크립트에서 이 명령을 결정적으로 사용할 수 있도록 특정 버전에 대한 링크를 표시합니다.
+또한 직접 설치하거나 다운로드하는 것을 선호하는 경우 이진 파일 위치를 표시합니다.
+
+`--no-path`
+
+설정된 경우 현재 세션에 대한 경로로 접두사/installdir을 내보내지 않습니다. 기본적으로 스크립트는 경로를 수정하여, 설치 후 CLI 도구를 즉시 사용할 수 있게 만듭니다.
+
+`--verbose`
+
+진단 정보를 표시합니다.
+
+`--azure-feed`
+
+이 설치 관리자에서 사용할 Azure 피드에 대한 URL입니다. 변경하지 않는 것이 좋습니다. 기본값은 `https://dotnetcli.azureedge.net/dotnet`입니다.
+
+`--help`
+
+스크립트에 대한 도움말을 출력합니다.
 
 ## <a name="examples"></a>예제
 
@@ -126,9 +176,3 @@ Windows:
 macOS/Linux:
 
 `./dotnet-install.sh --channel preview --install-dir ~/cli`
-
-
-
-<!--HONumber=Feb17_HO2-->
-
-

@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bf116df6-0042-46bf-be13-b69864816210
 translationtype: Human Translation
-ms.sourcegitcommit: 9584699ad7e745ae3cb059b1bb8327301c9a3286
-ms.openlocfilehash: 5271b63a47aa2fcc81cd9c8b1ffd22e618829412
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 7c9ccd455bf0d14122c0547177cc29ace6ebde42
+ms.lasthandoff: 02/17/2017
 
 ---
 
@@ -57,14 +58,14 @@ Object
 | ------------- | ----------- |
 | @System.Exception.Data | 키-값 쌍의 임의의 데이터를 보유하는 @System.Collections.IDictionary. |
 | @System.Exception.HelpLink | 예외의 원인에 대한 광범위한 정보를 제공하는 도움말 파일의 URL(또는 URN)을 포함할 수 있습니다. |
-| @System.Exception.InnerException | 이 속성을 사용하여 예외 처리 중 일련의 예외를 만들고 유지할 수 있습니다. 이전에 catch된 예외를 포함하는 새 예외를 만드는 데 사용할 수 있습니다. @System.Exception.InnerException 속성의 두 번째 예외에서 원래 예외를 캡처하고 두 번째 예외를 처리하는 코드에서 추가 정보를 검사하도록 허용할 수 있습니다. 예를 들어 부적절한 형식의 인수를 받는 메서드가 있다고 가정해봅시다.  코드에서 인수를 읽으려고 하지만 예외가 throw됩니다. 이 메서드는 예외를 catch하고 @System.FormatException.을 throw합니다. 예외가 throw된 이유를 확인하는 호출자 기능을 개선하기 위해 때로는 메서드가 도우미 루틴에서 throw된 예외를 catch한 다음 발생한 오류를 자세히 나타내는 예외를 throw하는 것이 좋습니다. 보다 의미 있는 새 예외를 만들 수 있으며, 이 경우 내부 예외 참조를 원래 예외로 설정할 수 있습니다. 그런 다음 보다 의미 있는 이 예외를 호출자에게 throw할 수 있습니다. 이 기능을 사용하면 처음 throw된 예외로 끝나는 일련의 연결된 예외를 만들 수 있습니다. |
+| @System.Exception.InnerException | 이 속성을 사용하여 예외 처리 중 일련의 예외를 만들고 유지할 수 있습니다. 이전에 catch된 예외를 포함하는 새 예외를 만드는 데 사용할 수 있습니다. @System.Exception.InnerException 속성의 두 번째 예외에서 원래 예외를 캡처하고 두 번째 예외를 처리하는 코드에서 추가 정보를 검사하도록 허용할 수 있습니다. 예를 들어 부적절한 형식의 인수를 받는 메서드가 있다고 가정해봅시다.  코드에서 인수를 읽으려고 하지만 예외가 throw됩니다. 메서드가 예외를 catch하고 @System.FormatException을 throw합니다. 예외가 throw된 이유를 확인하는 호출자 기능을 개선하기 위해 때로는 메서드가 도우미 루틴에서 throw된 예외를 catch한 다음 발생한 오류를 자세히 나타내는 예외를 throw하는 것이 좋습니다. 보다 의미 있는 새 예외를 만들 수 있으며, 이 경우 내부 예외 참조를 원래 예외로 설정할 수 있습니다. 그런 다음 보다 의미 있는 이 예외를 호출자에게 throw할 수 있습니다. 이 기능을 사용하면 처음 throw된 예외로 끝나는 일련의 연결된 예외를 만들 수 있습니다. |
 | @System.Exception.Message | 예외 원인에 대한 정보를 제공합니다.
 | @System.Exception.Source | 오류를 발생시키는 응용 프로그램 또는 개체의 이름을 가져오거나 설정합니다. |
 | @System.Exception.StackTrace | 오류가 발생한 위치를 확인하는 데 사용할 수 있는 스택 추적을 포함합니다. 디버깅 정보를 사용할 수 있는 경우 스택 추적에는 소스 파일 이름과 프로그램 줄 번호가 포함됩니다. |
 
-@System.Exception에서 상속받는 대부분의 클래스는 추가 멤버를 구현하거나 추가 기능을 제공하지 않습니다. 단순히 @System.Exception.에서 상속받습니다. 따라서 가장 중요한 예외 정보는 예외 클래스, 예외 이름 및 예외에 포함된 정보의 계층 구조에서 확인할 수 있습니다.
+@System.Exception에서 상속받는 대부분의 클래스는 추가 멤버를 구현하거나 추가 기능을 제공하지 않습니다. 단순히 @System.Exception에서 상속받습니다. 따라서 가장 중요한 예외 정보는 예외 클래스, 예외 이름 및 예외에 포함된 정보의 계층 구조에서 확인할 수 있습니다.
 
-@System.Exception,에서 파생된 개체만 throw 및 catch하는 것이 좋지만 @System.Object 클래스에서 파생된 모든 개체를 예외로 throw할 수 있습니다. 일부 언어는 @System.Exception.에서 파생되지 않은 개체의 throw 및 catch를 지원하지 않습니다.
+@System.Exception,에서 파생된 개체만 throw 및 catch하는 것이 좋지만 @System.Object 클래스에서 파생된 모든 개체를 예외로 throw할 수 있습니다. 일부 언어는 @System.Exception에서 파생되지 않은 개체의 throw 및 catch를 지원하지 않습니다.
 
 ## <a name="common-exceptions"></a>일반적인 예외
 
@@ -112,7 +113,7 @@ public class ProcessFile
 공용 언어 런타임은 catch 블록에서 catch되지 않은 예외를 catch합니다. 런타임의 구성 방법에 따라 디버그 대화 상자가 나타나거나, 프로그램 실행이 중단되고 예외 정보가 포함된 대화 상자가 나타나거나, 오류가 STDERR에 출력됩니다.
 
 > [!NOTE] 
-> 거의 모든 코드 줄에서 예외, 특히 @System.OutOfMemoryException.과 같은 공용 언어 런타임에서 throw된 예외가 발생할 수 있습니다. 대부분의 응용 프로그램은 이러한 예외를 처리할 필요가 없지만 다른 사용자가 사용할 라이브러리를 작성하는 경우 이러한 가능성에 유의해야 합니다. Try 블록에서 코드를 설정하는 경우에 대한 제안 사항은 [예외에 대한 모범 사례](#best-practices-for-exceptions)를 참조하세요.
+> 거의 모든 코드 줄에서 예외, 특히 @System.OutOfMemoryException과 같은 공용 언어 런타임에서 throw된 예외가 발생할 수 있습니다. 대부분의 응용 프로그램은 이러한 예외를 처리할 필요가 없지만 다른 사용자가 사용할 라이브러리를 작성하는 경우 이러한 가능성에 유의해야 합니다. Try 블록에서 코드를 설정하는 경우에 대한 제안 사항은 [예외에 대한 모범 사례](#best-practices-for-exceptions)를 참조하세요.
  
 ## <a name="how-to-use-specific-exceptions-in-a-catch-block"></a>Catch 블록에 특정 예외를 사용하는 방법
 
@@ -120,7 +121,7 @@ public class ProcessFile
 
 예외가 발생하면 스택 위로 전달되며 각 catch 블록에 예외를 처리할 수 있는 기회가 제공됩니다. catch 문의 순서가 중요합니다. 특정 예외를 대상으로 하는 catch 블록은 일반 예외 catch 블록 앞에 배치합니다. 그러지 않으면 컴파일러에서 오류가 발생할 수 있습니다. 예외 형식을 catch 블록에 지정된 예외 이름과 비교하여 적절한 catch 블록을 확인합니다. 특정 catch 블록이 없는 경우 일반 catch 블록(있는 경우)에서 예외를 catch합니다.
 
-다음 코드 예제에서는 `try`/`catch` 블록을 사용하여 @System.InvalidCastException.을 catch합니다. 샘플에서는 직원 수준(`Emlevel`)이라는 하나의 속성이 있는 `Employee`라는 클래스를 만듭니다. `PromoteEmployee` 메서드는 개체를 사용하고 직원 수준을 증가시킵니다. @System.DateTime 인스턴스가 `PromoteEmployee` 메서드로 전달될 때 @System.InvalidCastException이 발생합니다.
+다음 코드 예제에서는 `try`/`catch` 블록을 사용하여 @System.InvalidCastException을 catch합니다. 샘플에서는 직원 수준이라는 하나의 속성(`Emlevel`)이 있는 `Employee` 클래스를 만듭니다. `PromoteEmployee` 메서드는 개체를 사용하고 직원 수준을 증가시킵니다. @System.DateTime 인스턴스가 `PromoteEmployee` 메서드로 전달될 때 @System.InvalidCastException이 발생합니다.
 
 C#
 ```
@@ -177,7 +178,7 @@ public class Ex13
 
 예외가 발생하면 실행이 중단되고 해당 예외 처리기에 제어가 제공됩니다. 이 경우 대체로 실행될 것으로 예상한 코드 줄을 건너뜁니다. 파일 닫기와 같은 일부 리소스 정리 작업은 예외가 throw된 경우에도 수행해야 합니다. 이 작업을 위해 `finally` 블록을 사용할 수 있습니다. `finally` 블록은 예외가 throw되었는지 여부에 관계없이 항상 실행됩니다.
 
-다음 코드 예제에서는 `try`/`catch` 블록을 사용하여 @System.ArgumentOutOfRangeException.을 catch합니다. `Main` 메서드는 두 개의 배열을 만들고 한 배열을 다른 배열에 복사하려고 합니다. 작업에서 @System.ArgumentOutOfRangeException이 발생하고 콘솔에 오류가 기록됩니다. `finally` 블록은 복사 작업의 결과에 관계없이 실행됩니다.
+다음 코드 예제에서는 `try`/`catch` 블록을 사용하여 @System.ArgumentOutOfRangeException을 catch합니다. `Main` 메서드는 두 개의 배열을 만들고 한 배열을 다른 배열에 복사하려고 합니다. 작업에서 @System.ArgumentOutOfRangeException이 발생하고 콘솔에 오류가 기록됩니다. `finally` 블록은 복사 작업의 결과에 관계없이 실행됩니다.
 
 C#
 ```
@@ -210,7 +211,7 @@ class ArgumentOutOfRangeExample
 
 `throw` 문을 사용하여 명시적으로 예외를 throw할 수 있습니다. `throw` 문을 사용하여 catch된 예외를 다시 throw할 수도 있습니다. 디버그 시 자세한 정보를 제공하기 위해 다시 throw되는 예외에 정보를 추가하는 것은 좋은 코딩 방법입니다.
 
-다음 코드 예제에서는 `try`/`catch` 블록을 사용하여 가능한 @System.IO.FileNotFoundException.을 catch합니다. `try` 블록 뒤에는 @System.IO.FileNotFoundException을 catch하고 데이터 파일을 찾을 수 없는 경우 콘솔에 메시지를 쓰는 `catch` 블록이 있습니다. 다음 문은 새 @System.IO.FileNotFoundException을 throw하고 예외에 텍스트 정보를 추가하는 `throw` 문입니다.
+다음 코드 예제에서는 `try`/`catch` 블록을 사용하여 가능한 @System.IO.FileNotFoundException을 catch합니다. `try` 블록 뒤에는 @System.IO.FileNotFoundException을 catch하고 데이터 파일을 찾을 수 없는 경우 콘솔에 메시지를 쓰는 `catch` 블록이 있습니다. 다음 문은 새 @System.IO.FileNotFoundException을 throw하고 예외에 텍스트 정보를 추가하는 `throw` 문입니다.
 
 C#
 ```
@@ -249,7 +250,7 @@ public class ProcessFile
 
 ## <a name="how-to-create-user-defined-exceptions"></a>사용자 정의 예외를 만드는 방법
 
-.NET에서는 기본 클래스 @System.Exception.에서 최종적으로 파생되는 예외 클래스의 계층 구조를 제공합니다. 그러나 사용자 요구를 충족하는 미리 정의된 예외가 없는 경우 @System.Exception 클래스에서 파생하여 사용자 고유의 예외 클래스를 만들 수 있습니다.
+.NET에서는 기본 클래스 @System.Exception에서 최종적으로 파생되는 예외 클래스의 계층 구조를 제공합니다. 그러나 사용자 요구를 충족하는 미리 정의된 예외가 없는 경우 @System.Exception 클래스에서 파생하여 사용자 고유의 예외 클래스를 만들 수 있습니다.
 
 사용자 고유의 예외를 만드는 경우 다음 예제와 같이 사용자 정의 예외의 클래스 이름을 "Exception" 단어로 끝내고 세 가지 공통 생성자를 구현합니다. 예제에서는 `EmployeeListNotFoundException`이라는 새 예외 클래스를 정의합니다. 클래스는 @System.Exception에서 파생되며 세 가지 생성자를 포함합니다.
 
@@ -506,9 +507,4 @@ catch (Exception ex)
 ## <a name="see-also"></a>참고 항목
 
 .NET에서 예외가 작동하는 방식을 자세히 알아보려면 [What Every Dev needs to Know About Exceptions in the Runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md)(모든 개발자가 런타임 예외에 대해 알아야 할 사항)을 참조하세요.
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

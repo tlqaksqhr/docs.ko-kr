@@ -4,21 +4,22 @@ description: ".NET 이식성 분석기 도구를 사용하여 다양한 .NET 플
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
-ms.date: 07/05/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
 translationtype: Human Translation
-ms.sourcegitcommit: 8599be1eadcd6f005ef344bf173e8c06fce80725
-ms.openlocfilehash: 9e35fd4dff15cec688ee11f98682eb7cb96e9403
+ms.sourcegitcommit: 2dcfc9e725a9776e810f23a505e2c6fb157161c4
+ms.openlocfilehash: dd14dc23b14e45569f0fdb9a37954b34c4e654d1
+ms.lasthandoff: 02/21/2017
 
 ---
 
 # <a name="the-net-portability-analyzer"></a>.NET 이식성 분석기
 
-라이브러리를 다중 플랫폼으로 만들고 싶으세요? 응용 프로그램이 다른 .NET 플랫폼과 호환되도록 하는 데 필요한 작업량을 확인하고 싶으세요? [.NET 이식성 분석기](http://go.microsoft.com/fwlink/?LinkID=507467)는 어셈블리를 분석하여 프로그램이 .NET 플랫폼에서 얼마나 유연한지에 대한 자세한 보고서를 제공하는 도구입니다. 이식성 분석기는 Visual Studio 확장 및 콘솔 앱으로 제공됩니다.
+라이브러리를 다중 플랫폼으로 만들고 싶으세요? 응용 프로그램이 다른 .NET 플랫폼과 호환되도록 하는 데 필요한 작업량을 확인하고 싶으세요? [.NET 이식성 분석기](http://go.microsoft.com/fwlink/?LinkID=507467)는 어셈블리를 분석하여 프로그램이 .NET 플랫폼에서 얼마나 유연한지에 대한 자세한 보고서를 제공하는 도구입니다. 이식성 분석기는 Visual Studio 2015 확장 및 콘솔 앱으로 제공됩니다.
 
 ## <a name="new-targets"></a>새 대상
 
@@ -28,11 +29,11 @@ ms.openlocfilehash: 9e35fd4dff15cec688ee11f98682eb7cb96e9403
 
 ## <a name="how-to-use-portability-analyzer"></a>이식성 분석기를 사용하는 방법
 
-.NET 이식성 분석기 사용을 시작하려면 먼저 [Visual Studio 갤러리](http://go.microsoft.com/fwlink/?LinkID=507467)에서 확장을 다운로드하고 설치해야 합니다. Visual Studio에서 **도구** > **옵션** > **.NET 이식성 분석기**를 통해 구성하고 대상 플랫폼을 선택할 수 있습니다. 지금은 ASP.NET Core를 모든 .NET Core 기반 플랫폼(예: [Windows 10 .NET UAP 앱](http://blogs.windows.com/buildingapps/2015/03/02/a-first-look-at-the-windows-10-universal-app-platform/))의 프록시로 사용합니다.
+.NET 이식성 분석기 사용을 시작하려면 먼저 [Visual Studio 갤러리](http://go.microsoft.com/fwlink/?LinkID=507467)에서 확장을 다운로드하고 설치해야 합니다. Visual Studio에서 **분석** > **Portability Analyzer Settings**(이식성 분석기 설정)를 통해 구성하고 대상 플랫폼을 선택할 수 있습니다.
 
 ![이식성 스크린샷](./media/portability-analyzer/portability-screenshot.png)
 
-전체 프로젝트를 분석하려면 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **분석** > **어셈블리 이식성 분석**을 선택합니다. 전체 프로젝트를 분석하지 않으려면 **분석** 메뉴로 이동한 다음 **어셈블리 이식성 분석**을 선택합니다. 여기서 프로젝트의 실행 파일 또는 DLL을 선택합니다.
+전체 프로젝트를 분석하려면 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **어셈블리 이식성 분석**을 선택합니다. 전체 프로젝트를 분석하지 않으려면 **분석** 메뉴로 이동한 다음 **어셈블리 이식성 분석**을 선택합니다. 여기서 프로젝트의 실행 파일 또는 DLL을 선택합니다.
 
 ![이식성 솔루션 탐색기](./media/portability-analyzer/portability-solution-explorer.png)
 
@@ -42,15 +43,9 @@ ms.openlocfilehash: 9e35fd4dff15cec688ee11f98682eb7cb96e9403
 
 Visual Studio를 사용하고 싶지 않으신가요? 명령 프롬프트에서 이식성 분석기를 사용할 수도 있습니다. [API 이식성 분석기](http://www.microsoft.com/download/details.aspx?id=42678)를 다운로드합니다.
 
-*   현재 디렉터리를 분석하려면 다음 명령을 입력합니다. `\...\ApiPort.exe .`
-*   .dll 파일의 특정 목록을 분석하려면 다음 명령을 입력합니다. `\...\ApiPort.exe first.dll second.dll third.dll`
+*   현재 디렉터리를 분석하려면 다음 명령을 입력합니다. `\...\ApiPort.exe analyze -f .`
+*   .dll 파일의 특정 목록을 분석하려면 다음 명령을 입력합니다. `\...\ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
 
 .NET 이식성 보고서는 현재 디렉터리에 Excel 파일(*.xlsx*)로 저장됩니다. Excel 통합 문서의 **세부 정보** 탭에는 추가 정보가 포함됩니다.
 
-.NET 이식성 분석기에 대한 자세한 내용은 .NET 블로그에서 [Leveraging existing code across .NET platforms](https://blogs.msdn.microsoft.com/dotnet/2014/08/06/leveraging-existing-code-across-net-platforms/)(.NET 플랫폼 전반의 기존 코드 활용) 문서를 참조하세요.
-
-
-
-<!--HONumber=Nov16_HO3-->
-
-
+.NET 이식성 분석기에 대한 자세한 내용은 [GitHub 문서](https://github.com/Microsoft/dotnet-apiport#documentation) 및 [A Brief Look at the .NET Portability Analyzer](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer)(.NET 이식성 분석기 간단하게 살펴보기) Channel 9 비디오를 참조하세요.

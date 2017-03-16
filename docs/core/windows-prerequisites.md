@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
 translationtype: Human Translation
-ms.sourcegitcommit: a8019c9fc25ef458aa555743e61cd83a3beb11ed
-ms.openlocfilehash: b5c088da7d1155414a08995ae0d72154af891190
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: e374b924bf78d62227cb9607641130dfd9128186
+ms.openlocfilehash: 6383a0ce253f6f7000ed8a81b29b9e1d58914acc
+ms.lasthandoff: 03/06/2017
 
 ---
 
@@ -42,57 +42,14 @@ Windows 10 및 Windows Server 2016보다 이전 버전의 Windows에서 실행�
 > <em>Windows 7 및 Windows Server 2008용 컴퓨터만 해당:</em><br>
 > 설치된 Windows가 최신 버전이며 Windows 업데이트를 통해 설치된 핫픽스 [KB2533623](https://support.microsoft.com/en-us/kb/2533623)이 포함되어 있는지 확인하세요.
 
-## <a name="prerequisites-with-visual-studio"></a>Visual Studio 필수 구성 요소
+## <a name="prerequisites-with-visual-studio-2017"></a>Visual Studio 2017 필수 구성 요소
 
-.NET Core SDK를 사용하여 .NET Core 응용 프로그램을 개발할 수 있도록 원하는 편집기를 사용할 수 있습니다. 그러나 Visual Studio를 사용하여 Windows에서 .NET Core 응용 프로그램을 개발하려는 경우 두 가지 버전을 사용할 수 있습니다.
+.NET Core SDK를 사용하여 .NET Core 응용 프로그램을 개발할 수 있도록 원하는 편집기를 사용할 수 있습니다. 그러나 통합 개발 환경의 Windows에서 .NET Core 응용 프로그램을 개발하려는 경우 [Visual Studio 2017](#visual-studio-2017)을 사용할 수 있습니다.
 
-* [Visual Studio 2015](#visual-studio-2015)
-* [Visual Studio 2017 RC](#visual-studio-2017-rc)
+Visual Studio 2017을 사용하여 .NET Core 앱을 개발하려면 **.NET Core 플랫폼 간 개발** 도구 집합(**기타 도구 집합** 섹션)을 선택하여 최신 버전의 Visual Studio를 설치해야 합니다.
 
-Visual Studio 2015를 사용하여 만든 프로젝트는 기본적으로 project.json 기반이지만 Visual Studio 2017 RC를 사용하여 만든 프로젝트는 항상 MSBuild 기반이 됩니다. 형식 변경에 대한 자세한 내용은 [변경 내용의 대략적인 개요](./preview3/tools/layering.md)를 참조하세요.
+여러 버전의 Visual Studio 2017이 있습니다. [Visual Studio Community 2017](https://www.visualstudio.com/vs/visual-studio-2017/#downloadvs)을 무료로 다운로드하여 시작할 수 있습니다.  Visual Studio 설치 프로세스에 대한 자세한 내용은 [Visual Studio 2017 설치](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio)를 참조하세요.
 
-### <a name="visual-studio-2015"></a>Visual Studio 2015
-
-.NET Core 앱을 개발하기 위해 Visual Studio 2015를 사용하려는 경우 다음이 필요합니다.
-
-* Visual Studio 2015 업데이트 3.3 이상
-
-   여러 [버전](https://www.visualstudio.com/vs/compare)의 Visual Studio 2015가 있습니다. [Visual Studio Community 2015](https://www.visualstudio.com/downloads/)를 무료로 다운로드하여 시작할 수 있습니다. 
-
-   [Visual Studio 2015 업데이트 3.3](https://msdn.microsoft.com/library/mt752379.aspx)을 실행 중인지 확인하려면 다음을 수행하세요.
-
-   * **도움말** 메뉴에서 **Microsoft Visual Studio 정보**를 선택합니다.
-   * **Microsoft Visual Studio 정보** 대화 상자에서 버전 번호가 14.0.25424.00 이상이어야 하며, "업데이트 3"을 포함해야 합니다.
-   * 업데이트 3이 없으면 먼저 [Visual Studio 2015 업데이트 3](https://www.visualstudio.com/news/releasenotes/vs2015-update3-vs)을 다운로드 및 설치해야 합니다.
-   * 업데이트 3이 있지만 버전 번호가 14.0.25424.00보다 작은 경우 [Visual Studio 2015 업데이트 3.3](https://msdn.microsoft.com/library/mt752379.aspx)을 다운로드 및 설치해야 합니다.
-
-   [릴리스 정보](https://www.visualstudio.com/news/releasenotes/vs2015-update3-vs)에서 업데이트 3의 변경 내용에 대해 자세히 알아볼 수 있습니다.
-
-* Visual Studio용 NuGet Manager 확장
-
-   NuGet은 .NET Core를 포함한 Microsoft 개발 플랫폼에 대한 패키지 관리자입니다. .NET Core 앱을 빌드하려면 [NuGet 3.5.0-beta](https://dist.nuget.org/visualstudio-2015-vsix/v3.5.0-beta/NuGet.Tools.vsix) 이상이 필요합니다.
-
-* .NET Core Tooling Preview 2
-
-   [.NET Core 1.0.1 - VS 2015 Tooling Preview 2][sdk]를 다운로드하여 설치합니다. 
-
-   .NET Core 도구 패키지는 Visual Studio 2015용 .NET Core, 프로젝트 템플릿 및 기타 도구를 설치합니다.
-
-   > [!NOTE]
-   > 지금은 [.NET Core 1.0.1 - VS 2015 Tooling Preview 2][sdk]용 오프라인 설치 관리자를 다운로드할 수 없습니다. 오프라인 레이아웃을 이용하려면 대신 [일반 부트스트래퍼][sdk]를 다운로드하고 명령줄 옵션(예: `/layout c:\path`)과 함께 실행해야 합니다. 그런 다음 오프라인 설치 관리자로 사용할 수 있습니다. 로컬 경로에서 바로 실행 파일을 실행합니다. 이 절차는 전체 레이아웃이므로 지원되는 모든 언어의 모든 패키지를 다운로드하며 크기는 약 1GB입니다.
-
-### <a name="visual-studio-2017-rc"></a>Visual Studio 2017 RC
-
-.NET Core 앱을 개발하기 위해 Visual Studio 2017 RC를 사용하려는 경우 선택한 ".NET Core and Docker (Preview)" 워크로드를 사용하여 최신 버전의 Visual Studio RC를 설치해야 합니다. 
-
-여러 버전의 Visual Studio 2017 RC가 있습니다. [Visual Studio Community 2017 RC](https://www.visualstudio.com/vs/visual-studio-2017-rc/#downloadvs)는 무료로 다운로드하여 시작할 수 있습니다.  Visual Studio 설치 프로세스에 대한 자세한 내용은 [Visual Studio 2017 RC 설치](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio)를 참조하세요.
-
-최신 버전의 Visual Studio 2017 RC를 실행 중인지 확인하려면 다음을 수행합니다.
-
-* **도움말** 메뉴에서 **Microsoft Visual Studio 정보**를 선택합니다.
-* **Microsoft Visual Studio 정보** 대화 상자에서 버전 번호가 15.0.26020.0 이상이어야 합니다.
-
-[릴리스 정보](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes)에서 Visual Studio 2017 RC의 변경 내용에 대해 자세히 알아볼 수 있습니다.
+[릴리스 정보](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes)에서 Visual Studio 2017의 변경 내용에 대해 자세히 알아볼 수 있습니다.
 
 [sdk]: https://go.microsoft.com/fwlink/?LinkID=827546
-
