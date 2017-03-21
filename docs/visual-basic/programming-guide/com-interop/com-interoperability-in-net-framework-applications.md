@@ -1,49 +1,65 @@
 ---
-title: "COM Interoperability in .NET Framework Applications (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "interoperability, COM and .NET framework objects"
-  - "COM interop"
-  - "shared components"
+title: ".NET Framework 응용 프로그램 (Visual Basic)의 COM 상호 운용성 | Microsoft 문서"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- interoperability, COM and .NET framework objects
+- COM interop
+- shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
 caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
----
-# COM Interoperability in .NET Framework Applications (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 308ee8e495efa9368ef55d781f6b6dc314db51ac
+ms.lasthandoff: 03/13/2017
 
-COM 개체와 .NET Framework 개체를 동일한 응용 프로그램에서 사용하려면 이들 개체가 메모리에 존재하는 방식에서 생기는 차이점을 처리해야 합니다.  .NET Framework 개체는 관리되는 메모리, 즉 공용 언어 런타임에서 제어하는 메모리에 있으며 필요에 따라 이 런타임에 의해 이동될 수도 있습니다.  COM 개체는 관리되지 않는 메모리에 있으며 다른 메모리 위치로 이동될 수 없습니다.  [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs-md.md)]와 [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort-md.md)]에는 이러한 관리되는 구성 요소와 관리되지 않는 구성 요소의 상호 작용을 제어하는 도구가 있습니다.  관리 코드에 대한 자세한 내용은 [공용 언어 런타임](../Topic/Common%20Language%20Runtime%20\(CLR\).md)을 참조하십시오.  
+---
+# <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>.NET Framework 응용 프로그램의 COM 상호 운용성(Visual Basic)
+동일한 응용 프로그램에서 COM 개체 및.NET Framework 개체를 사용 하려는 경우는 개체가 메모리에 존재 하는 방법의 차이 해결 해야 합니다. .NET Framework 개체가 관리 되는 메모리에 있는-공용 언어 런타임에 의해 제어 하는 메모리-필요에 따라 런타임에 의해 이동 될 수도 있습니다. COM 개체는 관리 되지 않는 메모리에 있으며 다른 메모리 위치로 이동 하는 클래스가 아닙니다. [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]고 [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] 이러한 상호 작용을 제어 하는 도구를 코드와 비관리 구성 요소를 제공 합니다. 관리 되는 코드에 대 한 자세한 내용은 참조 [공용 언어 런타임](http://msdn.microsoft.com/library/059a624e-f7db-4134-ba9f-08b676050482)합니다.  
   
- .NET 응용 프로그램에서 COM 개체를 사용하는 것 외에도 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]을 사용하여 COM을 통해 비관리 코드에서 액세스할 수 있는 개체를 개발해야 할 수도 있습니다.  
+ .NET 응용 프로그램에서 COM 개체를 사용 하는 것 외에도 할 수 있습니다 사용 하 여 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] COM. 통해 비관리 코드에서 액세스할 수 있는 개체를 개발 하려면  
   
- 이 페이지에 있는 링크는 COM 개체와 .NET Framework 개체 간 상호 작용에 대한 자세한 내용을 보여 줍니다.  
+ 이 페이지에 있는 링크 COM 및.NET Framework 개체 간의 상호 작용에 자세히 설명 합니다.  
   
-## 관련 단원  
+## <a name="related-sections"></a>관련 단원  
  [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)  
- COM 개체, ActiveX 컨트롤, Win32 DLL, 관리되는 개체 및 COM 개체 상속을 비롯하여 Visual Basic에서의 COM 상호 운용성에 대해 설명하는 항목으로 이동하는 링크를 제공합니다.  
+ Visual basic에서 COM 개체, ActiveX 컨트롤, Win32 Dll, 관리 되는 개체 및 COM 개체의 상속을 포함 하 여 COM 상호 운용성을 다루는 항목에 대 한 링크를 제공 합니다.  
   
- [COM Interop Wrapper Error](/visual-cpp/misc/com-interop-wrapper-error)  
- 프로젝트 시스템에서 특정 구성 요소에 대한 COM 상호 운용성 래퍼를 만들 수 없는 경우에 발생하는 결과와 선택할 수 있는 옵션에 대해 설명합니다.  
+ [COM Interop 래퍼 오류](https://docs.microsoft.com/cpp/misc/com-interop-wrapper-error)  
+ 프로젝트 시스템에서 특정 구성 요소에 대 한 COM 상호 운용성 래퍼를 만들 수 없는 경우에 결과 및 옵션을 설명 합니다.  
   
- [비관리 코드와의 상호 운용](../Topic/Interoperating%20with%20Unmanaged%20Code.md)  
- 관리 코드와 비관리 코드 간의 몇 가지 상호 작용 문제에 대해 간단하게 설명하고 추가 정보를 볼 수 있는 링크를 제공합니다.  
+ [비관리 코드와의 상호 운용](https://msdn.microsoft.com/library/sd10k43k)  
+ 간략하게 몇 가지 관리 및 비관리 코드 간의 상호 작용 문제를 설명 하 고 추가 정보에 대 한 링크를 제공 합니다.  
   
- [COM 래퍼](../Topic/COM%20Wrappers.md)  
- 관리 코드에서 COM 메서드를 호출할 수 있는 런타임 호출 가능 래퍼와 COM 클라이언트에서 .NET 개체 메서드를 호출할 수 있는 COM 호출 가능 래퍼에 대해 설명합니다.  
+ [COM 래퍼](http://msdn.microsoft.com/library/e56c485b-6b67-4345-8e66-fd21835a6092)  
+ COM 메서드를 호출 하는 관리 되는 코드를 허용 하는 런타임 호출 가능 래퍼 및 COM 클라이언트에서.NET 개체 메서드를 호출할 수 있도록 하는 COM 호출 가능 래퍼에 설명 합니다.  
   
- [Advanced COM Interoperability](http://msdn.microsoft.com/ko-kr/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
- 래퍼, 예외, 상속, 스레딩, 이벤트, 변환 및 마샬링과 관련된 COM 상호 운용성에 대해 설명하는 항목으로 이동하는 링크를 제공합니다.  
+ [고급 COM 상호 운용성](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
+ 래퍼, 예외, 상속, 스레딩, 이벤트, 변환 및 마샬링 관련 하 여 COM 상호 운용성을 다루는 항목에 대 한 링크를 제공 합니다.  
   
- [Tlbimp.exe\(형식 라이브러리 가져오기\)](../Topic/Tlbimp.exe%20\(Type%20Library%20Importer\).md)  
- COM 형식 라이브러리에 있는 형식 정의를 공용 언어 런타임 어셈블리에 있는 동일한 기능의 정의로 변환하는 데 사용할 수 있는 도구에 대해 설명합니다.
+ [Tlbimp.exe (형식 라이브러리 가져오기)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)  
+ COM 형식 라이브러리에 있는 형식 정의 공용 언어 런타임 어셈블리의 동등한 정의로 변환 하는 데 사용할 수 도구에 설명 합니다.

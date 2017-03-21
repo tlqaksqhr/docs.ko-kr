@@ -1,61 +1,77 @@
 ---
-title: "How to: Pass Procedures to Another Procedure in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "AddressOf operator"
-  - "delegates [Visual Basic], passing procedures"
+title: "방법: 프로시저에 Visual Basic에서 다른 프로시저 전달 | Microsoft 문서"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- AddressOf operator
+- delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
 caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
----
-# How to: Pass Procedures to Another Procedure in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 9865e2d7d3786d289add3fa63b3db777317facdf
+ms.lasthandoff: 03/13/2017
 
-이 예제에서는 대리자를 사용하여 한 프로시저를 다른 프로시저에 전달하는 방법을 보여 줍니다.  
+---
+# <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>방법: Visual Basic에서 프로시저에 다른 프로시저 전달
+이 예제에서는 대리자를 사용 하 여 프로시저에 다른 프로시저 전달 하는 방법을 보여 줍니다.  
   
- 대리자는 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]의 다른 형식처럼 사용할 수 있는 형식입니다.  `AddressOf` 연산자를 프로시저 이름에 적용하면 대리자 개체가 반환됩니다.  
+ 대리자는 형식에서 다른 형식 처럼 사용할 수 있는 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]합니다. `AddressOf` 연산자 프로시저 이름에 적용 될 때 대리자 개체를 반환 합니다.  
   
- 이 예제의 프로시저에는 `AddressOf` 연산자를 통해 얻은 다른 프로시저에 대한 참조를 사용할 수 있는 대리자 매개 변수가 있습니다.  
+ 이 예제에 다른 프로시저를 사용 하 여 얻은에 대 한 참조를 사용할 수 있는 대리자 매개 변수가 있는 프로시저는 `AddressOf` 연산자입니다.  
   
-### 대리자 및 일치하는 프로시저 만들기  
+### <a name="create-the-delegate-and-matching-procedures"></a>대리자 및 일치 하는 프로시저 만들기  
   
-1.  `MathOperator`라는 대리자를 만듭니다.  
+1.  명명 된 대리자를 만들고 `MathOperator`합니다.  
   
-     [!code-vb[VbVbalrDelegates#1](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_1.vb)]  
+     [!code-vb[VbVbalrDelegates #&1;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_1.vb)]  
   
-2.  시그니처가 일치하도록 매개 변수 및 반환 값이 `MathOperator`와 일치하는 `AddNumbers`라는 프로시저를 만듭니다.  
+2.  라는 프로시저를 만들어 `AddNumbers` 매개 변수 및 반환 값의 일치 하는 `MathOperator`서명이 일치 되도록 합니다.  
   
-     [!code-vb[VbVbalrDelegates#2](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_2.vb)]  
+     [!code-vb[VbVbalrDelegates #&2;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_2.vb)]  
   
-3.  `MathOperator`와 시그니처가 일치하는 `SubtractNumbers`라는 프로시저를 만듭니다.  
+3.  라는 프로시저를 만들어 `SubtractNumbers` 일치 하는 서명을 사용 하 여 `MathOperator`합니다.  
   
-     [!code-vb[VbVbalrDelegates#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_3.vb)]  
+     [!code-vb[VbVbalrDelegates #&3;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_3.vb)]  
   
-4.  대리자를 매개 변수로 사용하는 `DelegateTest`라는 프로시저를 만듭니다.  
+4.  라는 프로시저를 만들어 `DelegateTest` 대리자를 매개 변수로 사용 합니다.  
   
-     이 프로시저에서는 `AddNumbers` 또는 `SubtractNumbers`에 대한 참조를 사용할 수 있습니다. 이는 두 프로시저의 시그니처가 `MathOperator` 시그니처와 일치하기 때문입니다.  
+     이 절차에 대 한 참조를 수락할 수 있는 `AddNumbers` 또는 `SubtractNumbers`해당 서명이 일치 하기 때문에는 `MathOperator` 서명 합니다.  
   
-     [!code-vb[VbVbalrDelegates#4](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_4.vb)]  
+     [!code-vb[VbVbalrDelegates #&4;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_4.vb)]  
   
-5.  한 번은 `AddNumbers`에 대한 대리자를 매개 변수로 사용하고 또 한 번은 `SubtractNumbers`에 대한 대리자를 매개 변수로 사용하여 `DelegateTest`를 호출하는 `Test`라는 프로시저를 만듭니다.  
+5.  라는 프로시저를 만듭니다 `Test` 호출 하는 `DelegateTest` 에 대 한 대리자를 두 번 `AddNumbers` 및 다시에 대 한 대리자를 매개 변수로 `SubtractNumbers` 매개 변수로 합니다.  
   
-     [!code-vb[VbVbalrDelegates#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_5.vb)]  
+     [!code-vb[VbVbalrDelegates #&5;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-pass-procedures-to-another-procedure_5.vb)]  
   
-     `Test`를 호출하면 먼저 `5`와 `3`에 대해 `AddNumbers`를 실행한 결과인 8이 표시되고,  그런 다음 `9`와 `3`에 대해 `SubtractNumbers`를 실행한 결과인 6이 표시됩니다.  
+     때 `Test` 은 호출 먼저 표시의 결과 `AddNumbers` 실행 `5` 및 `3`은 8입니다. 결과 `SubtractNumbers` 작업할 `9` 및 `3` 표시 되 면 6이 있습니다.  
   
-## 참고 항목  
- [Delegates](../../../../visual-basic/programming-guide/language-features/delegates/delegates.md)   
- [AddressOf Operator](../../../../visual-basic/language-reference/operators/addressof-operator.md)   
- [Delegate Statement](../../../../visual-basic/language-reference/statements/delegate-statement.md)   
- [How to: Invoke a Delegate Method](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)
+## <a name="see-also"></a>참고 항목  
+ [대리자](../../../../visual-basic/programming-guide/language-features/delegates/index.md)   
+ [AddressOf 연산자](../../../../visual-basic/language-reference/operators/addressof-operator.md)   
+ [Delegate 문](../../../../visual-basic/language-reference/statements/delegate-statement.md)   
+ [방법: 대리자 메서드 호출](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)

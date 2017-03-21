@@ -1,41 +1,57 @@
 ---
-title: "How to: Transform XML by Using LINQ (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "XML [Visual Basic], transforming"
-  - "LINQ to XML [Visual Basic], transforming XML"
+title: "방법: LINQ (Visual Basic)를 사용 하 여 XML 변환 | Microsoft 문서"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- XML [Visual Basic], transforming
+- LINQ to XML [Visual Basic], transforming XML
 ms.assetid: 815687f4-0bc2-4c0b-adc6-d78744aa356f
 caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
----
-# How to: Transform XML by Using LINQ (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 9f97466727064ea275c051b5916b0fb297e9e23a
+ms.lasthandoff: 03/13/2017
 
-[XML Literals](../../../../visual-basic/language-reference/xml-literals/index.md)을 사용하면 하나의 소스에서 XML을 읽고 이를 새 XML 형식으로 쉽게 변환할 수 있습니다.  LINQ 쿼리를 사용하여 변환할 내용을 검색하거나 기존 문서의 내용을 새 XML 형식으로 변경할 수 있습니다.  
+---
+# <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>방법: LINQ를 사용하여 XML 변형(Visual Basic)
+[XML 리터럴](../../../../visual-basic/language-reference/xml-literals/index.md) 쉽게 한 소스에서 XML을 읽고 새 XML 형식으로 변환 합니다. 콘텐츠를 변환 하 고, 검색에 대 한 LINQ 쿼리를 활용 하거나 새로운 XML 형식으로 기존 문서에서 콘텐츠를 변경할 수 있습니다.  
   
- 이 항목의 예제에서는 XML 소스 문서의 내용을 브라우저에서 볼 수 있는 HTML로 변환합니다.  
+ 이 항목의 예제 HTML 브라우저에 표시 되는 XML 소스 문서에서 콘텐츠를 변환 합니다.  
   
- [!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note-settings-general-md.md)]  
+[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
   
-### XML 문서를 변환하려면  
+### <a name="to-transform-an-xml-document"></a>XML 문서를 변환 하려면  
   
-1.  Visual Studio의 **콘솔 응용 프로그램** 프로젝트 템플릿에서 새 Visual Basic 프로젝트를 만듭니다.  
+1.  Visual Studio에서 새 Visual Basic 프로젝트에서 만들기는 **콘솔 응용 프로그램** 프로젝트 템플릿.  
   
-2.  프로젝트에서 만든 Module1.vb 파일을 두 번 클릭하여 Visual Basic 코드를 수정합니다.  다음 코드를 `Module1` 모듈의 `Sub Main`에 추가합니다.  이 코드는 소스 XML 문서를 <xref:System.Xml.Linq.XDocument> 개체로 만듭니다.  
+2.  Visual Basic 코드를 수정 하는 프로젝트에서 생성 된 Module1.vb 파일을 두 번 클릭 합니다. 다음 코드를 추가 하는 `Sub Main` 의 `Module1` 모듈입니다. 이 코드는 소스 XML 문서를 만듭니다는 <xref:System.Xml.Linq.XDocument>개체.</xref:System.Xml.Linq.XDocument>  
   
-    ```vb#  
+    ```vb  
     Dim catalog =   
       <?xml version="1.0"?>  
         <Catalog>  
@@ -67,13 +83,13 @@ caps.handback.revision: 14
         </Catalog>  
     ```  
   
-     [How to: Load XML from a File, String, or Stream](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md).  
+     [방법: 파일, 문자열 또는 스트림에서 XML 로드](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)합니다.  
   
-3.  소스 XML 문서를 만드는 코드 뒤에 다음 코드를 추가하여 개체에서 모든 \<Book\> 요소를 검색하고 이를 HTML 문서로 변환합니다.  \<Book\> 요소 목록은 변환된 HTML이 포함된 <xref:System.Xml.Linq.XElement> 개체의 컬렉션을 반환하는 LINQ 쿼리를 사용하여 만듭니다.  포함 식을 사용하여 소스 문서의 값을 새 XML 형식으로 저장할 수 있습니다.  
+3.  소스 XML 문서를 만드는 코드 뒤 모두 검색 하려면 다음 코드를 추가 \<책 > 개체에서 요소는 HTML 문서를 변환 하 고 있습니다. 목록이 \<책 > 요소 컬렉션을 반환 하는 LINQ 쿼리를 사용 하 여 만들어집니다 <xref:System.Xml.Linq.XElement>변환된 된 HTML을 포함 하는 개체입니다.</xref:System.Xml.Linq.XElement> 새 XML 형식에서 소스 문서에서의 끝에 포함 된 식을 사용할 수 있습니다.  
   
-     <xref:System.Xml.Linq.XElement.Save%2A> 메서드를 사용하여 결과 HTML 문서를 파일에 씁니다.  
+     결과 HTML 문서를 사용 하 여 파일에 기록 되는 <xref:System.Xml.Linq.XElement.Save%2A>메서드.</xref:System.Xml.Linq.XElement.Save%2A>  
   
-    ```vb#  
+    ```vb  
     Dim htmlOutput =   
       <html>  
         <body>  
@@ -92,13 +108,13 @@ caps.handback.revision: 14
     htmlOutput.Save("BookDescription.html")  
     ```  
   
-4.  `Module1`의 `Sub Main` 뒤에 새 메서드\(`Sub`\)를 추가하여 \<Description\> 노드를 지정한 HTML 형식으로 변환합니다.  이 메서드는 이전 단계의 코드에서 호출되며 \<Description\> 요소의 형식을 유지하는 데 사용됩니다.  
+4.  후 `Sub Main` 의 `Module1`, 새 메서드 추가 (`Sub`) 변환 하는 \<설명 > 지정한 HTML 형식으로 노드. 이 메서드는 이전 단계에서 코드에 의해 호출 되며의 형식을 유지 하는 데 사용 됩니다는 \<설명 > 요소입니다.  
   
-     다음 메서드는 \<Description\> 요소의 하위 요소를 HTML로 바꿉니다.  `ReplaceWith` 메서드는 하위 요소의 위치를 유지하는 데 사용됩니다.  \<Description\> 요소의 변환된 내용은 HTML 단락\(\<p\>\) 요소에 포함됩니다.  <xref:System.Xml.Linq.XContainer.Nodes%2A> 속성은 \<Description\> 요소의 변환된 내용을 검색하는 데 사용됩니다.  따라서 하위 요소가 변환된 내용에 포함됩니다.  
+     하위 요소를 대체 하는이 메서드는 \<설명 > html 요소입니다. `ReplaceWith` 메서드는 하위 요소의 위치를 유지 하기 위해 사용 됩니다. 변환된 된 내용을 \<설명 > 요소가 HTML 단락에 포함 되어 (\<p >) 요소입니다. <xref:System.Xml.Linq.XContainer.Nodes%2A>속성은 변환된 된 내용을 검색 하는 데 사용 된 \<설명 > 요소.</xref:System.Xml.Linq.XContainer.Nodes%2A> 이렇게 하면 하위 요소는 변환된 된 내용에 포함 합니다.  
   
-     `Module1`의 `Sub Main` 뒤에 다음 코드를 추가합니다.  
+     다음 코드를 추가 `Sub Main` 의 `Module1`합니다.  
   
-    ```vb#  
+    ```vb  
     Public Function TransformDescription(ByVal desc As XElement) As XElement  
   
       ' Replace <technology> elements with <b>.  
@@ -124,9 +140,9 @@ caps.handback.revision: 14
     End Function  
     ```  
   
-5.  변경 사항을 저장합니다.  
+5.  변경 내용을 저장합니다.  
   
-6.  F5 키를 눌러 코드를 실행합니다.  저장된 결과 문서는 다음과 비슷합니다.  
+6.  F5 키를 눌러 코드를 실행 합니다. 문서를 저장 된 결과 다음과 유사 합니다.  
   
     ```  
     <?xml version="1.0"?>  
@@ -165,10 +181,11 @@ caps.handback.revision: 14
     </html>  
     ```  
   
-## 참고 항목  
- [XML Literals](../../../../visual-basic/language-reference/xml-literals/index.md)   
- [Manipulating XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)   
+## <a name="see-also"></a>참고 항목  
+ [XML 리터럴](../../../../visual-basic/language-reference/xml-literals/index.md)   
+ [Visual Basic에서 XML 조작](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)   
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)   
- [How to: Load XML from a File, String, or Stream](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)   
+ [방법: 파일, 문자열 또는 스트림에서 XML 로드](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)   
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   
- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+ [Visual Basic의 LINQ 소개](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+

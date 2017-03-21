@@ -1,53 +1,69 @@
 ---
-title: "Composite Data Types (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "classes [Visual Basic], composite data types"
-  - "composite types"
-  - "composite data types"
-  - "data types [Visual Basic], composite"
-  - "arrays [Visual Basic], composite data types"
-  - "structures, composite data types"
-  - "classes [Visual Basic], composite types"
-  - "types [Visual Basic], composite"
+title: "복합 데이터 형식 (Visual Basic) | Microsoft 문서"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- classes [Visual Basic], composite data types
+- composite types
+- composite data types
+- data types [Visual Basic], composite
+- arrays [Visual Basic], composite data types
+- structures, composite data types
+- classes [Visual Basic], composite types
+- types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
 caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
----
-# Composite Data Types (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: d81b2c08155cb16754e780fdfb341b596322302d
+ms.lasthandoff: 03/13/2017
 
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]에서 제공하는 기본 데이터 형식과 별도로 다른 형식의 항목을 조합하여 구조체, 배열 및 클래스와 같은 *복합 데이터 형식*을 만들 수 있습니다.  기본 데이터 형식과 다른 복합 데이터 형식으로부터 복합 데이터 형식을 빌드할 수 있습니다.  예를 들어, 구조체 요소의 배열이나 배열 멤버를 가진 구조체를 정의할 수 있습니다.  
+---
+# <a name="composite-data-types-visual-basic"></a>복합 데이터 형식(Visual Basic)
+기본 데이터 형식 외에도 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 공급 장치, 수 조합 하 여 만들려는 다른 형식의 항목 *복합 데이터 형식* 구조, 배열, 클래스 등입니다. 복합 데이터 형식 및 다른 복합 형식의 기본 형식에서 빌드할 수 있습니다. 예를 들어 배열 구성원과 구조 요소를 배열 또는 구조를 정의할 수 있습니다.  
   
-## 데이터 형식  
- 복합 형식은 각 구성 요소의 데이터 형식과 다릅니다.  예를 들어, `Integer` 요소의 배열은 `Integer` 데이터 형식의 배열이 아닙니다.  
+## <a name="data-types"></a>데이터 형식  
+ 복합 형식이 각 구성 요소의 데이터 형식과 다릅니다. 예를 들어 배열을 `Integer` 요소 아닙니다는 `Integer` 데이터 형식입니다.  
   
- 일반적으로 배열 데이터 형식을 나타내는 데는 요소 형식, 괄호 및 쉼표가 필요에 따라 사용됩니다.  예를 들어, `String` 요소의 1차원 배열은 `String()`으로 나타내고 `Boolean` 요소의 2차원 배열은 `Boolean(,)`으로 나타냅니다.  
+ 배열 데이터 형식은 요소 형식, 괄호 및 쉼표를 사용 하 여 필요에 따라 일반적으로 표시 됩니다. 예를 들어&1; 차원 배열을 `String` 요소로 표시 됩니다 `String()`,&2; 차원 배열을 `Boolean` 요소로 표현 됩니다 `Boolean(,)`합니다.  
   
-## 구조체 형식  
- 모든 구조체를 포함하는 단일 데이터 형식은 없습니다.  각 구조체 정의는 고유한 데이터 형식을 나타냅니다. 이는 두 개의 구조체가 같은 요소를 동일한 순서로 정의하는 경우에도 해당됩니다.  그러나 같은 구조체의 인스턴스를 둘 이상 만들 경우 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]에서는 모든 인스턴스가 동일한 데이터 형식인 것으로 간주합니다.  
+## <a name="structure-types"></a>구조체 형식  
+ 모든 구조를 포함 하는 단일 데이터 형식은 없습니다. 대신, 구조체의 각 정의 두 개의 구조 순서 대로 동일한 요소를 정의 하는 경우에 고유한 데이터 형식을 나타냅니다. 그러나 동일한 구조를 두 개 이상의 인스턴스를 만드는 경우, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 데이터 형식이 동일한 것으로 간주 합니다.  
   
-## 배열 형식  
- 모든 배열을 포함하는 단일 데이터 형식은 없습니다.  배열의 특정 인스턴스의 데이터 형식을 결정하는 요소는 다음과 같습니다.  
+## <a name="array-types"></a>배열 형식  
+ 모든 배열을 포함 하는 단일 데이터 형식이 없습니다. 데이터 형식의 배열의 특정 인스턴스는 다음에 의해 결정 됩니다.  
   
--   배열이라는 사실  
+-   배열 이라는 사실  
   
--   배열의 차수\(차원 수\)  
+-   배열의 차수 (차원의 수)  
   
 -   배열의 요소 형식  
   
- 특히 특정 차원의 길이는 해당 인스턴스의 데이터 형식의 일부가 아닙니다.  다음은 이에 대한 예입니다.  
+ 특히, 주어진 차원의 길이 인스턴스의 데이터 형식의 일부가 아닙니다. 다음은 이에 대한 예입니다.  
   
 ```  
 Dim arrayA( ) As Byte = New Byte(12) {}  
@@ -57,21 +73,21 @@ Dim arrayD( , ) As Short
 Dim arrayE( , ) As Short = New Short(4, 10) {}  
 ```  
   
- 위 예제에서 배열 변수 `arrayA`와 `arrayB`는 다른 길이로 초기화되더라도 동일한 데이터 형식\(`Byte()`\)으로 간주됩니다.  변수 `arrayB`와 `arrayC`는 해당 요소 형식이 다르므로 동일한 형식이 아닙니다.  변수 `arrayC`와 `arrayD`는 차수가 다르므로 동일한 형식이 아닙니다.  변수 `arrayD`와 `arrayE`는 `arrayD`가 아직 초기화되지는 않았지만 차수와 요소 형식이 같으므로 동일한 데이터 형식\(`Short(,)`\)입니다.  
+ 앞의 예제에서 배열 변수 `arrayA` 및 `arrayB` 동일한 데이터 형식으로 간주 됩니다- `Byte()` -길이가 다른 초기화 하는 경우에 있습니다. 변수 `arrayB` 및 `arrayC` 는 해당 요소 형식이 다른 동일한 형식이 아닙니다. 변수 `arrayC` 및 `arrayD` 는 차수가 다른 동일한 형식이 아닙니다. 변수 `arrayD` 및 `arrayE` 유형이 동일- `Short(,)` -같기 때문에 차수 및 요소 형식, 경우에 `arrayD` 아직 초기화 되지 않았습니다.  
   
- 배열에 대한 자세한 내용은 [배열](../../../../visual-basic/programming-guide/language-features/arrays/index.md)을 참조하십시오.  
+ 배열에 대 한 자세한 내용은 참조 하십시오. [배열](../../../../visual-basic/programming-guide/language-features/arrays/index.md)합니다.  
   
-## 클래스 형식  
- 모든 클래스를 포함하는 단일 데이터 형식은 없습니다.  한 클래스가 다른 클래스에서 상속할 수는 있지만 각 클래스는 개별 데이터 형식입니다.  같은 클래스의 여러 인스턴스는 동일한 데이터 형식입니다.  한 클래스 인스턴스의 변수를 다른 인스턴스에 할당하면 두 인스턴스는 데이터 형식이 동일할 뿐 아니라 메모리에서 동일한 클래스 인스턴스를 가리킵니다.  
+## <a name="class-types"></a>클래스 형식  
+ 모든 클래스를 포함 하는 단일 데이터 형식은 없습니다. 하나의 클래스가 다른 클래스에서 상속할 수 있지만 각각 별도 데이터 형식입니다. 동일한 클래스의 여러 인스턴스는 동일한 데이터 형식입니다. 다른 클래스 인스턴스 변수를 할당 하는 경우 뿐만 아니라 동일한 데이터 형식을 갖습니다, 그리고 메모리의 동일한 클래스 인스턴스를 가리키는지 합니다.  
   
- 클래스에 대한 자세한 내용은 [Objects and Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)를 참조하십시오.  
+ 클래스에 대 한 자세한 내용은 참조 하십시오. [개체 및 클래스](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [Elementary Data Types](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)   
+ [기본 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)   
  [Visual Basic의 제네릭 형식](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)   
- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
- [Structures](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Troubleshooting Data Types](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [How to: Hold More Than One Value in a Variable](../../../../visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md)
+ [값 형식과 참조 형식](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
+ [Visual Basic의 형식 변환](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
+ [구조](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
+ [데이터 형식 문제 해결](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
+ [방법: 변수에 두 개 이상의 값 사용](../../../../visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md)

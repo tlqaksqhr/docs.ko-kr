@@ -1,44 +1,60 @@
 ---
-title: "Error Types (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-helpviewer_keywords: 
-  - "exceptions, types"
-  - "errors [Visual Basic], types"
-  - "errors [Visual Basic], logic"
-  - "errors [Visual Basic], syntax"
-  - "logic errors, Visual Basic"
-  - "run-time errors, types of errors"
-  - "syntax errors, Visual Basic"
+title: "오류 유형 (Visual Basic) | Microsoft 문서"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- exceptions, types
+- errors [Visual Basic], types
+- errors [Visual Basic], logic
+- errors [Visual Basic], syntax
+- logic errors, Visual Basic
+- run-time errors, types of errors
+- syntax errors, Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
 caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
----
-# Error Types (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: d48756b74baf757f043e68124d8b65c2f613e595
+ms.lasthandoff: 03/13/2017
 
-[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]에서 오류\(*예외*라고도 함\)는 구문 오류, 런타임 오류 및 논리 오류의 세 가지 범주로 분류됩니다.  
+---
+# <a name="error-types-visual-basic"></a>오류 형식(Visual Basic)
+[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], 오류 (라고도 *예외*) 세 가지 범주 중 하나에 속합니다: 구문 오류, 런타임 오류 및 논리 오류입니다.  
   
-## 구문 오류  
- *구문 오류*는 코드 작성 중에 발생하는 오류입니다.  [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]에서는 사용자가 **코드 편집기** 창에 코드를 입력할 때 이를 검사하여 철자를 잘못 입력하거나 언어 요소를 올바르지 않게 사용하는 등의 실수가 있으면 알려 줍니다.  이러한 구문 오류가 가장 흔한 형태의 오류이며,  발생 즉시 코딩 환경에서 쉽게 수정할 수 있습니다.  
+## <a name="syntax-errors"></a>구문 오류  
+ *구문 오류* 코드를 작성 하는 동안 나타나는 것 들입니다. [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]입력할 때 코드를 검사 하는 **코드 편집기** 창 철자 부적절 하 게 언어 요소를 사용 하 여 등의 실수 한 경우 사용자에 게 알려 합니다. 구문 오류는 오류의 가장 일반적인 유형입니다. 하면 쉽게 수정할 수 코딩 환경에서 발생 하는 즉시 합니다.  
   
 > [!NOTE]
->  `Option Explicit` 문은 구문 오류를 방지할 수 있는 한 가지 방법입니다.  이 문을 사용하려면 응용 프로그램에서 사용할 모든 변수를 미리 선언해야 합니다.  이렇게 하면 코드에서 해당 변수를 사용할 때 철자 오류가 발생할 경우 즉시 catch하여 수정할 수 있습니다.  
+>  `Option Explicit` 문은 구문 오류를 방지 하는 한 가지 방법은입니다. 강제로 사전에 응용 프로그램에서 사용할 모든 변수를 선언할 수 있습니다. 따라서 이러한 변수는 코드에 사용 되는 경우 철자 오류가 발생할 즉시 발생 하며 수정 될 수 있습니다.  
   
-## 런타임 오류  
- *런타임 오류*는 코드를 컴파일하여 실행한 후에만 나타나는 오류입니다.  런타임 오류에는 구문 오류가 없기 때문에 올바른 것처럼 보이지만 실행되지 않는 코드가 포함됩니다.  예를 들어, 파일을 여는 코드 한 줄을 올바르게 작성했어도  파일이 손상되었으면 해당 응용 프로그램이 `Open` 기능을 수행하지 못하고 실행이 중단됩니다.  대부분의 런타임 오류는 잘못된 코드를 다시 작성한 다음 다시 컴파일하고 실행하여 수정할 수 있습니다.  
+## <a name="run-time-errors"></a>런타임 오류  
+ *런타임 오류* 컴파일 및 코드를 실행 한 후에 나타나는 것 들입니다. 이러한 구문 오류가 없을 실행 되지 않는 한다는 점에서 올바른 것으로 나타날 수 있는 코드 작업이 포함 됩니다. 예를 들어 파일을 여는 코드 줄을 올바르게 작성할 수 있습니다. 파일이 손상 된 경우 응용 프로그램을 수행할 수 없습니다 하지만 `Open` 기능을 실행을 중지 합니다. 결함이 있는 코드를 다시 작성 한 다음 다시 컴파일하고 다시 실행 하 여 대부분의 런타임 오류를 해결할 수 있습니다.  
   
-## 논리 오류  
- *논리 오류*는 응용 프로그램을 사용할 때 나타나는 오류입니다.  주로 사용자의 작업에 대한 응답으로 원하지 않거나 예기치 않은 결과가 발생하는 경우가 논리 오류에 해당합니다.  예를 들면, 키를 잘못 입력하는 등의 외부 요인으로 인해 예상된 매개 변수와 동작하도록 되어 있는 응용 프로그램이 중단될 수 있습니다.  논리 오류는 일반적으로 오류 발생 원인이 분명하지 않기 때문에 가장 해결하기 어려운 형태의 오류입니다.  
+## <a name="logic-errors"></a>논리 오류  
+ *논리 오류* 는 나타나는 응용 프로그램을 사용에서 합니다. 이들은 대부분 자주 예기치 않은 결과가 사용자 작업에 대 한 응답에서입니다. 예를 들어 키를 잘못 입력된 또는 다른 외부 영향을 주지 않이 예상된 매개 변수 내에서 작동을 중지 하는 응용 프로그램 또는 완전히 합니다. 논리 오류는 일반적으로 되지 않으므로 항상 지우기 시작 위치를 수정 하기 어려운 유형입니다.  
   
-## 참고 항목  
- [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)   
- [디버거 기본 사항](/visual-studio/debugger/debugger-basics)
+## <a name="see-also"></a>참고 항목  
+ [Try...Catch...Finally 문](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)   
+ [디버거 기본 사항](https://docs.microsoft.com/visualstudio/debugger/debugger-basics)

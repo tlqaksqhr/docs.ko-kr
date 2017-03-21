@@ -1,39 +1,56 @@
 ---
-title: "이 호출이 대기되지 않으므로 호출이 완료되기 전에 현재 메서드가 계속 실행됩니다. | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc42358"
-  - "vbc42358"
-helpviewer_keywords: 
-  - "BC42358"
+title: "호출이 완료 되기 전에 실행 하 고 현재 메서드가 계속이 호출이 대기 되지 않으므로 | Microsoft 문서"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc42358
+- vbc42358
+helpviewer_keywords:
+- BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
 caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
----
-# 이 호출이 대기되지 않으므로 호출이 완료되기 전에 현재 메서드가 계속 실행됩니다.
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: a9165414bc08b62aab20410e7af187fa4b45c162
+ms.lasthandoff: 03/13/2017
 
+---
+# <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>이 호출이 대기되지 않으므로 호출이 완료되기 전에 현재 메서드가 계속 실행됩니다.
 이 호출이 대기되지 않으므로 호출이 완료되기 전에 현재 메서드가 계속 실행됩니다. 'Await' 연산자는 호출 결과에 적용하는 것이 좋습니다.  
   
- 현재 메서드는 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>을 반환하는 비동기 메서드를 호출하고 결과에 [Await](../../../visual-basic/language-reference/operators/await-operator.md) 연산자를 적용하지 않습니다. 비동기 메서드 호출이 비동기 작업을 시작합니다. 그러나 `Await` 연산자가 적용되지 않기 때문에 프로그램이 작업이 완료될 때까지 기다리지 않고 계속됩니다. 대부분의 경우 예상대로 동작하지 않습니다. 대개 호출 메서드의 다른 부분은 호출의 결과에 따라 다르거나, 최소한 호출을 포함하는 메서드에서 돌아오기 전에 호출된 메서드가 완료되어야 합니다.  
+ 현재 메서드를 반환 하는 비동기 메서드 호출을 <xref:System.Threading.Tasks.Task>또는 <xref:System.Threading.Tasks.Task%601>적용 하지는 [Await](../../../visual-basic/language-reference/operators/await-operator.md) ê.</xref:System.Threading.Tasks.Task%601> </xref:System.Threading.Tasks.Task> 비동기 메서드 호출이 비동기 작업을 시작합니다. 그러나 `Await` 연산자가 적용되지 않기 때문에 프로그램이 작업이 완료될 때까지 기다리지 않고 계속됩니다. 대부분의 경우 예상대로 동작하지 않습니다. 대개 호출 메서드의 다른 부분은 호출의 결과에 따라 다르거나, 최소한 호출을 포함하는 메서드에서 돌아오기 전에 호출된 메서드가 완료되어야 합니다.  
   
- 호출된 비동기 메서드에서 발생하는 예외로 인해 어떤 상황이 발생하는지도 중요한 문제입니다.<xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>를 반환하는 메서드에서 발생하는 예외는 반환된 작업에 저장됩니다. 작업을 기다리지 않거나 예외를 명시적으로 확인하지 않는 경우 예외가 손실됩니다. 작업을 기다리는 경우 예외가 다시 throw됩니다.  
+ 호출된 비동기 메서드에서 발생하는 예외로 인해 어떤 상황이 발생하는지도 중요한 문제입니다. 반환 하는 메서드에서 발생 하는 예외는 <xref:System.Threading.Tasks.Task>또는 <xref:System.Threading.Tasks.Task%601>반환된 된 작업에 저장 됩니다.</xref:System.Threading.Tasks.Task%601> </xref:System.Threading.Tasks.Task> 작업을 기다리지 않거나 예외를 명시적으로 확인하지 않는 경우 예외가 손실됩니다. 작업을 기다리는 경우 예외가 다시 throw됩니다.  
   
  가장 좋은 방법은 항상 호출을 기다리는 것입니다.  
   
- 이 메시지는 기본적으로 경고입니다. 경고를 숨기거나 오류로 처리하는 방법에 대한 자세한 내용은 [Visual Basic에서 경고 구성](/visual-studio/ide/configuring-warnings-in-visual-basic)을 참조하세요.  
+ 이 메시지는 기본적으로 경고입니다. 경고를 숨기 거 나 경고를 오류로 처리 하는 방법에 대 한 자세한 내용은 참조 [Visual Basic에서 경고 구성](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic)합니다.  
   
  **오류 ID:** BC42358  
   
-### 이 경고를 해결하려면  
+### <a name="to-address-this-warning"></a>이 경고를 해결하려면  
   
 -   비동기 호출이 완료될 때까지 기다리지 않으려고 하거나 호출된 메서드가 예외를 발생시키지 않는 경우에만 경고가 표시되지 않게 해야 합니다. 이 경우 변수에 호출의 작업 결과를 할당하여 경고가 표시되지 않게 할 수 있습니다.  
   
@@ -88,7 +105,7 @@ caps.handback.revision: 8
   
     ```  
   
-     이 예제에서는 Call \#1 또는 Call \#2를 선택할 경우 해당 호출자\(`CalledMethodAsync`\)와 호출자의 호출자\(`CallingMethodAsync`\)가 모두 완료된 후 기다리지 않는 비동기 메서드\(`StartButton_Click`\)가 끝납니다. 다음 출력의 마지막 줄은 호출된 메서드가 끝나는 시기를 보여줍니다. 전체 예제에서 `CallingMethodAsync`를 호출하는 이벤트 처리기의 시작과 종료가 출력에 표시되어 있습니다.  
+     이 예제에서는 Call #1 또는 Call #2를 선택할 경우 해당 호출자(`CalledMethodAsync`)와 호출자의 호출자(`CallingMethodAsync`)가 모두 완료된 후 기다리지 않는 비동기 메서드(`StartButton_Click`)가 끝납니다. 다음 출력의 마지막 줄은 호출된 메서드가 끝나는 시기를 보여줍니다. 전체 예제에서 `CallingMethodAsync` 를 호출하는 이벤트 처리기의 시작과 종료가 출력에 표시되어 있습니다.  
   
     ```  
   
@@ -100,8 +117,8 @@ caps.handback.revision: 8
         Task.Delay is finished--returning from called method.  
     ```  
   
-## 예제  
- 다음 Windows Presentation Foundation\(WPF\) 응용 프로그램은 이전 예제의 메서드를 포함합니다. 다음 단계는 응용 프로그램을 설정합니다.  
+## <a name="example"></a>예제  
+ 다음 Windows Presentation Foundation(WPF) 응용 프로그램은 이전 예제의 메서드를 포함합니다. 다음 단계는 응용 프로그램을 설정합니다.  
   
 1.  WPF 응용 프로그램을 만들고 이름을 `AsyncWarning`으로 지정합니다.  
   
@@ -126,7 +143,7 @@ caps.handback.revision: 8
   
      단추와 텍스트 상자가 포함된 간단한 창이 MainWindow.xaml의 **디자인** 뷰에 나타납니다.  
   
-     XAML 디자이너에 대한 자세한 내용은 [XAML 디자이너를 사용하여 UI 만들기](/visual-studio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)를 참조하세요. 간단한 UI를 직접 빌드하는 방법에 대한 자세한 내용은 [연습: Async 및 Await를 사용하여 웹에 액세스](../Topic/Walkthrough:%20Accessing%20the%20Web%20by%20Using%20Async%20and%20Await%20\(C%23%20and%20Visual%20Basic\).md)의 "WPF 응용 프로그램을 만들려면" 섹션과 "간단한 WPF MainWindow를 디자인하려면" 섹션을 참조하세요.  
+     XAML 디자이너에 대 한 자세한 내용은 참조 [XAML 디자이너를 사용 하 여 UI 만들기](https://docs.microsoft.com/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)합니다. 간단한 UI를 직접 작성 하는 방법에 대 한 정보를 참조 하십시오.는 "WPF 응용 프로그램 만들기"를 "하는 간단한 WPF MainWindow를 디자인" 섹션을 [연습:를 사용 하 여 Async 및 Await 하 여 웹 서비스에 액세스](http://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042)합니다.  
   
 4.  MainWindow.xaml.vb의 코드를 다음 코드로 바꿉니다.  
   
@@ -213,6 +230,6 @@ caps.handback.revision: 8
   
      예상 출력이 코드의 끝에 나타납니다.  
   
-## 참고 항목  
- [Await Operator](../../../visual-basic/language-reference/operators/await-operator.md)   
- [Async 및 Await를 사용한 비동기 프로그래밍](../Topic/Asynchronous%20Programming%20with%20Async%20and%20Await%20\(C%23%20and%20Visual%20Basic\).md)
+## <a name="see-also"></a>참고 항목  
+ [Await 연산자](../../../visual-basic/language-reference/operators/await-operator.md)   
+ [Async 및 Await를 사용한 비동기 프로그래밍](../../../visual-basic/programming-guide/concepts/async/index.md)

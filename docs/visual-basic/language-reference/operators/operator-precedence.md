@@ -1,92 +1,108 @@
 ---
-title: "Operator Precedence in Visual Basic | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "arithmetic operators, precedence"
-  - "operator precedence"
-  - "logical operators, precedence"
-  - "operators [Visual Basic], associativity"
-  - "operators [Visual Basic], resolution"
-  - "associativity of operators"
-  - "operators [Visual Basic], precedence"
-  - "precedence, of operators"
-  - "comparison operators, precedence"
-  - "math operators"
-  - "order of precedence"
+title: "Visual Basic의 연산자 우선 순위 | Microsoft 문서"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- arithmetic operators, precedence
+- operator precedence
+- logical operators, precedence
+- operators [Visual Basic], associativity
+- operators [Visual Basic], resolution
+- associativity of operators
+- operators [Visual Basic], precedence
+- precedence, of operators
+- comparison operators, precedence
+- math operators
+- order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
 caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
----
-# Operator Precedence in Visual Basic
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 6532fc0c26db3b736c863be075571570a3d25eef
+ms.lasthandoff: 03/13/2017
 
-식에서 여러 연산이 수행되는 경우 *연산자 우선 순위*라는 미리 지정된 순서에 따라 각 부분이 계산되고 결정됩니다.  
+---
+# <a name="operator-precedence-in-visual-basic"></a>Visual Basic에서의 연산자 우선 순위
+각 부분 평가 되 고 호출 하는 미리 결정 된 순서로 해결 식에서 몇 가지 작업이 발생할 때 *연산자 우선 순위*합니다.  
   
-## 우선 순위 규칙  
- 식에 두 개 이상의 범주에 속한 연산자가 있으면 해당 식은 다음 규칙에 따라 계산됩니다.  
+## <a name="precedence-rules"></a>우선 순위 규칙  
+ 식 연산자에서 둘 이상의 범주를 포함 하는 경우 다음 규칙에 따라 계산 됩니다.  
   
--   산술 연산자와 연결 연산자는 다음 단원에서 설명하는 우선 순위를 가지며, 모두 비교, 논리 및 비트 연산자보다 높은 우선 순위를 가집니다.  
+-   산술 및 연결 연산자는 다음 섹션에서 설명 하는 우선 순위를 있고 모든 비교, 논리 보다 높은 우선 순위 및 비트 연산자입니다.  
   
--   모든 비교 연산자의 우선 순위는 같습니다. 또한 모든 비교 연산자는 논리 연산자 및 비트 연산자보다 우선 순위가 높지만 산술 연산자 및 연결 연산자보다는 낮습니다.  
+-   모든 비교 연산자 있고 우선 순위가 동일한 연산자는 논리 및 비트 연산자 보다 우선 순위가 높은 있으며 산술 및 연결 연산자 보다 우선 순위가 모두 있습니다.  
   
--   논리 및 비트 연산자는 다음 단원에서 설명하는 우선 순위를 가지며 모두 산술, 연결 및 비교 연산자보다 우선 순위가 낮습니다.  
+-   논리 및 비트 연산자는 다음 섹션에서 설명 하는 우선 순위를 있고 모든 산술, 연결 및 비교 연산자 보다 우선 순위가 있습니다.  
   
--   우선 순위가 같은 연산자들은 식에 나타나는 순서에 따라 왼쪽에서 오른쪽으로 계산됩니다.  
+-   우선 순위가 같은 연산자는 왼쪽에서 오른쪽 계산 식에 나타나는 순서입니다.  
   
-## 우선 순위  
- 연산자는 다음 우선 순위에 따라 계산됩니다.  
+## <a name="precedence-order"></a>우선 순위  
+ 연산자의 우선 순위는 다음과 같은 순서로 평가 됩니다.  
   
-### 운영자를 기다립니다  
+### <a name="await-operator"></a>Await 연산자  
  대기  
   
-### 산술 및 연결 연산자  
- 지수 연산자\(`^`\)  
+### <a name="arithmetic-and-concatenation-operators"></a>산술 및 연결 연산자  
+ 지 수 (`^`)  
   
- 단항 같음 및 부정\(`+`, `–`\)  
+ 단항 같음 및 부정 (`+`, `–`)  
   
- 곱하기 및 부동 소수점 나누기\(`*`, `/`\)  
+ 곱하기 및 부동 소수점 나누기 (`*`, `/`)  
   
- 정수 나누기\(`\`\)  
+ 정수 나누기 (`\`)  
   
- 나머지 연산자\(`Mod`\)  
+ 산술 나머지 (`Mod`)  
   
- 더하기와 빼기 \(`+`, `–`\)  
+ 더하기와 빼기 (`+`, `–`)  
   
- 문자열 연결\(`&`\)  
+ 문자열 연결 (`&`)  
   
- 산술 비트 시프트 연산\(`<<`, `>>`\)  
+ 산술 비트 시프트 (`<<`, `>>`)  
   
-### 비교 연산자  
- 모든 비교 연산자\(`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`...`Is`\)  
+### <a name="comparison-operators"></a>비교 연산자  
+ All comparison operators (`=`, `<>`, `<`, `<=`, `>`, `>=`, `Is`, `IsNot`, `Like`, `TypeOf`... `Is`)  
   
-### 논리 및 비트 연산자  
- 부정 연산자\(`Not`\)  
+### <a name="logical-and-bitwise-operators"></a>논리 및 비트 연산자  
+ 부정 (`Not`)  
   
- 논리곱 연산자\(`And`, `AndAlso`\)  
+ 함께 (`And`, `AndAlso`)  
   
- 포함적 논리합\(`Or`, `OrElse`\)  
+ 포함 논리합 (`Or`, `OrElse`)  
   
- 배타적 논리합\(`Xor`\)  
+ 배타적 논리합 (`Xor`)  
   
-### 설명  
- `=` 연산자는 할당 연산자가 아니라 같음 비교 연산자입니다.  
+### <a name="comments"></a>설명  
+ `=` 연산자는 같음 비교 연산자만, 대입 연산자가 없습니다.  
   
- 문자열 연결 연산자\(`&`\)는 산술 연산자가 아니지만 우선 순위 면에서 산술 연산자와 같은 그룹에 포함됩니다.  
+ 문자열 연결 연산자 (`&`)는 산술 연산자가 산술 연산자와 그룹화는 우선 순위에 따라 하지만 발생 합니다.  
   
- `Is` 및 `IsNot` 연산자는 개체 참조 비교 연산자입니다.  두 개체의 값은 비교하지 않고 두 개체 변수가 같은 개체 인스턴스를 참조하는지 여부만 확인합니다.  
+ `Is` 및 `IsNot` 연산자는 개체 참조 비교 연산자입니다. 두 개체의 값을 비교 하지 않습니다. 이러한 두 개체 변수가 동일한 개체 인스턴스를 참조 하는지 여부 확인에 확인 합니다.  
   
-## 결합성  
- 승제 연산처럼 우선 순위가 같은 연산자가 식에 함께 나타나는 경우에는 컴파일러가 왼쪽에서 오른쪽의 순으로 계산합니다.  다음은 이에 대한 예입니다.  
+## <a name="associativity"></a>결합성  
+ 동일한 우선 순위의 연산자는 식, 곱하기 및 나누기, 예를 들어에 함께 표시 하는 경우 컴파일러도 왼쪽에서 오른쪽으로 각 작업을 평가 합니다. 다음은 이에 대한 예입니다.  
   
 ```  
 Dim n1 As Integer = 96 / 8 / 4  
@@ -94,12 +110,12 @@ Dim n2 As Integer = (96 / 8) / 4
 Dim n3 As Integer = 96 / (8 / 4)  
 ```  
   
- 첫 번째 식은 나누기 96 \/ 8\(결과 12\)을 계산한 다음 나누기 12 \/ 4\(결과 3\)를 계산합니다.  컴퓨터는 `n1`에 대한 연산을 왼쪽에서 오른쪽으로 계산하므로 계산은 `n2`에 대한 순서를 명시적으로 지정했을 때와 동일합니다.  `n1`과 `n2`의 결과는 3입니다.  이와 반대로 `n3`의 경우에는 괄호 때문에 컴파일러에서 8 \/ 4가 먼저 계산되므로 결과는 48입니다.  
+ 첫 번째 식이 96 나누기 / 8 (함 결과 12) 및 나누기 12 / 4 결과 3입니다. 에 대 한 작업으로 계산 하므로 `n1` 왼쪽에서 오른쪽으로 평가 동일한에 대 한이 순서를 명시적으로 지정 하는 경우 `n2`합니다. 둘 다 `n1` 및 `n2` 결과는&3;입니다. 반면, `n3` 48의 결과 괄호 8을 평가 하는 컴파일러가 / 4 첫 번째입니다.  
   
- 이러한 동작 때문에 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]에서는 연산자가 *왼쪽으로부터 결합*된다고 합니다.  
+ 이 동작으로 인해 연산자에 있다고 *왼쪽 결합형* 에서 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]합니다.  
   
-## 우선 순위 및 결합성 재정의  
- 괄호를 사용하여 식의 일부분을 다른 부분보다 먼저 계산할 수 있습니다.  이렇게 하면 우선 순위와 왼쪽으로부터의 결합성이 재정의됩니다.  [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]전에 외부 괄호로 묶인 작업을 항상 수행 합니다. 그러나 괄호 안에서 괄호를 사용 하지 않는 괄호 안에 일반적인 우선 순위와 결합성을 유지.  다음은 이에 대한 예입니다.  
+## <a name="overriding-precedence-and-associativity"></a>우선 순위 및 결합성 재정의  
+ 다른 사용자 보다 먼저 계산 하는 식의 일부분에 괄호를 사용할 수 있습니다. 이 우선 순위와 왼쪽된 결합성 재정의할 수 있습니다. [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]항상 외부 보다 먼저 괄호로 묶여 있는 작업을 수행 합니다. 그러나 괄호 안에 유지 일반 우선 순위와 결합성 괄호 안에서 괄호를 사용 하지 않으면 됩니다. 다음은 이에 대한 예입니다.  
   
 ```  
 Dim a, b, c, d, e, f, g As Double  
@@ -119,12 +135,12 @@ g = (a - (b + c)) / (d * e)
 ' The preceding line sets g to 0.5.  
 ```  
   
-## 참고 항목  
- [\= Operator](../../../visual-basic/language-reference/operators/assignment-operator.md)   
- [Is Operator](../../../visual-basic/language-reference/operators/is-operator.md)   
- [IsNot Operator](../../../visual-basic/language-reference/operators/isnot-operator.md)   
- [Like Operator](../../../visual-basic/language-reference/operators/like-operator.md)   
- [TypeOf Operator](../../../visual-basic/language-reference/operators/typeof-operator.md)   
- [Await Operator](../../../visual-basic/language-reference/operators/await-operator.md)   
- [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Operators and Expressions](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+## <a name="see-also"></a>참고 항목  
+ [= 연산자](../../../visual-basic/language-reference/operators/assignment-operator.md)   
+ [Is 연산자](../../../visual-basic/language-reference/operators/is-operator.md)   
+ [IsNot 연산자](../../../visual-basic/language-reference/operators/isnot-operator.md)   
+ [Like 연산자](../../../visual-basic/language-reference/operators/like-operator.md)   
+ [TypeOf 연산자](../../../visual-basic/language-reference/operators/typeof-operator.md)   
+ [Await 연산자](../../../visual-basic/language-reference/operators/await-operator.md)   
+ [기능별 연산자 목록](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
+ [연산자 및 식](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

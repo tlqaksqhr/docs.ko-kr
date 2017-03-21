@@ -1,59 +1,75 @@
 ---
-title: "Names of Declared XML Elements and Attributes (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "declarations [XML in Visual Basic]"
-  - "element names [XML in Visual Basic]"
-  - "names in XML literals"
-  - "attribute names [XML in Visual Basic]"
-  - "XML literals [Visual Basic], element names"
+title: "선언 된 XML 요소 및 특성 (Visual Basic)의 이름 | Microsoft 문서"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- declarations [XML in Visual Basic]
+- element names [XML in Visual Basic]
+- names in XML literals
+- attribute names [XML in Visual Basic]
+- XML literals [Visual Basic], element names
 ms.assetid: cc110118-b6cf-4ff9-a4e4-6233c90c9fbf
 caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
----
-# Names of Declared XML Elements and Attributes (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: ed8ecf69170acf9745a4038975e7e3421722d52d
+ms.lasthandoff: 03/13/2017
 
-이 항목에서는 XML 리터럴의 XML 요소 및 특성의 이름을 지정하는 데 필요한 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 지침을 제공합니다. XML 리터럴에는 로컬 이름 또는 정규화된 이름을 지정할 수 있습니다.  정규화된 이름은 XML 네임스페이스 접두사, 콜론 및 로컬 이름으로 구성됩니다.  XML 네임스페이스 접두사에 대한 자세한 내용은 [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)을 참조하십시오.  
+---
+# <a name="names-of-declared-xml-elements-and-attributes-visual-basic"></a>선언된 XML 요소 및 특성의 이름(Visual Basic)
+이 항목에서는 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] XML 리터럴의 XML 요소 및 특성 이름을 지정 하는 것에 대 한 지침입니다.  Xml 리터럴, 로컬 이름 또는 정규화 된 이름을 지정할 수 있습니다. 정규화 된 이름은 XML 네임 스페이스 접두사, 콜론 및 로컬 이름으로 구성 됩니다. XML 네임 스페이스 접두사에 대 한 자세한 내용은 참조 [XML 요소 리터럴](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)합니다.  
   
-## 규칙  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]에서 요소 또는 특성의 로컬 이름은 다음 규칙을 따라야 합니다.  
+## <a name="rules"></a>규칙  
+ 요소 또는 특성의 로컬 이름 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 다음 규칙을 따라야 합니다.  
   
--   네임스페이스로 시작할 수 있습니다.  영문자 또는 밑줄\(`_`\)로 시작해야 합니다.  
+-   네임 스페이스로 시작할 수 있습니다. 영문자 또는 밑줄으로 시작 해야 합니다 (`_`).  
   
--   영문자, 10진수, 밑줄, 마침표\(.\) 및 하이픈\(\-\)만으로 이루어져야 합니다.  
+-   알파벳 문자,&10; 진수 숫자, 밑줄, 마침표 (.) 및 하이픈만 포함 해야 합니다 (-).  
   
--   두 개 이상의 1024 자 아니어야 합니다.  
+-   개 이상의 1, 024 자 아니어야 합니다.  
   
--   이름에 나타나는 콜론은 네임스페이스 구분을 의미합니다.  따라서 콜론만 사용하여 특정 이름에 대해 XML 네임스페이스를 지정할 수 있습니다.  
+-   이름에 나타나는 콜론 네임 스페이스 구분을 나타냅니다. 따라서 특정 이름에 대 한 XML 네임 스페이스 지정에 대해서만 콜론을 사용할 수 있습니다.  
   
- 또한 다음 지침을 따라야 합니다.  
+ 또한 다음 지침을 준수 해야 합니다.  
   
--   XML 1.0 사양에는 모든 대문자 변형에 대해 문자열 "xml"로 시작하는 모든 이름이 예약되어 있습니다.  따라서 요소 및 특성 이름에 이러한 이름을 사용하지 마십시오.  
+-   XML 1.0 사양에는 문자열 "xml" 모든 대문자 변형로 시작 하는 모든 이름을 예약 합니다. 따라서 이러한 요소에 대 한 이름과 특성 이름은 사용 하지 마십시오.  
   
-### 이름 길이 지침  
- 실제 적용에 있어서 이름은 요소의 특성을 명확히 나타내면서 가능한 간결하게 지정해야  코드를 읽기가 쉬워지고 줄의 길이와 소스 파일 크기가 줄어듭니다.  
+### <a name="name-length-guidelines"></a>이름 길이 지침  
+ 실용적인 문제로 명확히 요소의 특성을 식별 하는 이름은 가능한 한 짧게 이어야 합니다. 이 코드의 가독성을 향상 하 고 줄 길이 소스 파일 크기를 줄입니다.  
   
- 그러나 이름이 요소 또는 코드에서 해당 요소를 사용하는 방법에 대해 충분히 설명하지 못할 정도로 짧아서는 안 됩니다.  이름의 길이는 코드의 가독성에 중요한 영향을 미칩니다.  적합한 요소 이름은 다른 사용자가 이름을 이해하려는 경우 또는 사용자 자신이 이름을 작성하고 나서 한참 뒤에 해당 이름을 보는 경우 시간을 절약할 수 있습니다.  
+ 그러나 사용자 이름은 너무 짧아서는 설명 하지는 않습니다 적절 하 게 요소 또는 코드에서 어떻게 해야 합니다. 이 코드의 가독성을 위해 중요 합니다. 다른 사용자가 이해 하려고 하거나 직접 보는 쓰고 후 오랫동안 하는 경우 적절 한 요소 이름을 시간을 절약할 수 있습니다.  
   
-## 이름의 대\/소문자 구분  
- XML 요소 이름은 대\/소문자를 구분합니다.  즉, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 컴파일러에서는 알파벳은 같고 대\/소문자가 다른 두 이름이 서로 다른 이름으로 해석됩니다.  예를 들어 `ABC`와 `abc`는 각각 별도의 요소를 참조하는 것으로 해석합니다.  
+## <a name="case-sensitivity-in-names"></a>이름에서 대/소문자 구분  
+ XML 요소 이름은 대/소문자를 구분 합니다. 즉, 해당 경우에는 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 컴파일러에서는 두 이름이 소문자만 다르고, 서로 다른 이름으로 해석 합니다. 예를 들어 해석 `ABC` 및 `abc` 각각 별도 요소를 참조 합니다.  
   
-## XML 네임스페이스  
- XML 요소 리터럴을 만드는 경우 요소 이름에 대해 XML 네임스페이스 접두사를 지정할 수 있습니다.  자세한 내용은 [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)을 참조하십시오.  
+## <a name="xml-namespaces"></a>XML 네임스페이스  
+ XML 요소 리터럴를 만들 때 요소 이름에 대 한 XML 네임 스페이스 접두사를 지정할 수 있습니다. 자세한 내용은 참조 [XML 요소 리터럴](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)합니다.  
   
-## 참고 항목  
- [Creating XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)   
- [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+## <a name="see-also"></a>참고 항목  
+ [Visual Basic에서 XML 만들기](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)   
+ [XML 요소 리터럴](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

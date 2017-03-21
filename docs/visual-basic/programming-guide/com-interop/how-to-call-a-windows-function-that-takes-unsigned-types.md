@@ -1,49 +1,65 @@
 ---
-title: "How to: Call a Windows Function that Takes Unsigned Types (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Windows functions, calling"
-  - "unsigned data types"
-  - "UShort data type, using"
-  - "functions [Visual Basic], calling Windows functions"
-  - "ULong data type, using"
-  - "UInteger data type, using"
-  - "data types [Visual Basic], using"
-  - "unsigned types"
-  - "data types [Visual Basic], unsigned"
-  - "data types [Visual Basic], numeric"
-  - "unsigned types, using"
+title: "방법: 부호 없는 형식 (Visual Basic)를 사용 하는 Windows 함수를 호출 합니다. | Microsoft 문서"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Windows functions, calling
+- unsigned data types
+- UShort data type, using
+- functions [Visual Basic], calling Windows functions
+- ULong data type, using
+- UInteger data type, using
+- data types [Visual Basic], using
+- unsigned types
+- data types [Visual Basic], unsigned
+- data types [Visual Basic], numeric
+- unsigned types, using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
 caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
----
-# How to: Call a Windows Function that Takes Unsigned Types (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: fbff07f4923b0633a2bc9b4fd558d9d51f64370a
+ms.lasthandoff: 03/13/2017
 
-부호 없는 정수 형식의 멤버가 있는 클래스, 모듈 또는 구조체를 사용하는 경우 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]에서 이 멤버에 액세스할 수 있습니다.  
+---
+# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>방법: 부호 없는 형식을 사용하는 Windows 함수 호출(Visual Basic)
+클래스, 모듈 또는 부호 없는 정수 형식의 멤버가 있는 구조체를 사용 하는 경우이 멤버에 액세스할 수 있습니다 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]합니다.  
   
-### 부호 없는 형식을 사용하는 Windows 함수를 호출하려면  
+### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>부호 없는 형식을 사용 하는 Windows 함수를 호출 하려면  
   
-1.  [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)을 사용하여 함수가 포함된 라이브러리, 해당 라이브러리에서의 함수 이름, 함수 호출 시퀀스 및 함수 호출 시 문자열 변환 방법을 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]에 지정합니다.  
+1.  사용 하 여 한 [선언 문](../../../visual-basic/language-reference/statements/declare-statement.md) 를 구분할 수 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 함수가 포함 된 라이브러리, 해당 라이브러리에 무엇이 이름, 호출 시퀀스는 기능 및 메서드를 호출 하는 경우 문자열을 변환 하는 방법입니다.  
   
-2.  `Declare` 문에서 부호 없는 형식을 사용하는 각 매개 변수에 적절한 형식\(`UInteger`, `ULong`, `UShort` 또는 `Byte`\)을 사용합니다.  
+2.  에 `Declare` 문을 사용 하 여 `UInteger`, `ULong`, `UShort`, 또는 `Byte` 각 매개 변수를 부호 없는 형식에 적합 합니다.  
   
-3.  호출할 Windows 함수에 대한 설명서를 참조하여 해당 함수가 사용하는 이름 및 상수 값을 찾습니다.  대부분의 이름 및 상수 값은 WinUser.h 파일에 정의되어 있습니다.  
+3.  이름 및 사용 되는 상수 값을 찾으려는 호출 하는 Windows 함수에 대 한 설명서를 참조 하십시오. 이들 중 대부분은 WinUser.h 파일에 정의 됩니다.  
   
-4.  코드에 필요한 상수를 선언합니다.  대부분의 Windows 상수는 부호 없는 32비트 값이고 이러한 값은 `As` `UInteger`로 선언해야 합니다.  
+4.  코드에서 필요한 상수를 선언 합니다. 많은 Windows 상수는 32 비트 부호 없는 값 및 이러한 선언 해야 `As``UInteger`합니다.  
   
-5.  일반적인 방법으로 함수를 호출합니다.  다음 예제에서는 부호 없는 정수 인수를 사용하는 Windows 함수 `MessageBox`를 호출합니다.  
+5.  일반적인 방법으로 함수를 호출 합니다. Windows 함수를 호출 하는 다음 예제에서는 `MessageBox`, 부호 없는 정수 인수를 사용 하 합니다.  
   
     ```  
     Public Class windowsMessage  
@@ -68,7 +84,7 @@ caps.handback.revision: 18
     End Class  
     ```  
   
-     다음 코드를 사용하여 `messageThroughWindows` 함수를 테스트할 수 있습니다.  
+     함수를 테스트할 수 `messageThroughWindows` 다음 코드를 사용 합니다.  
   
     ```  
     Public Sub consumeWindowsMessage()  
@@ -78,17 +94,17 @@ caps.handback.revision: 18
     ```  
   
     > [!CAUTION]
-    >  `UInteger`, `ULong`, `UShort` 및 `SByte` 데이터 형식은 CLS\([언어 독립성 및 언어 독립적 구성 요소](../Topic/Language%20Independence%20and%20Language-Independent%20Components.md)\)에 포함되어 있지 않으므로 CLS 규격 코드에서는 이 데이터 형식을 사용하는 구성 요소를 사용할 수 없습니다.  
+    >  `UInteger`, `ULong`, `UShort`, 및 `SByte` 데이터 형식이 없는의 일부는 [언어 독립성 및 언어 독립적 구성 요소](https://msdn.microsoft.com/library/12a7a7h3) CLS (), 하므로 CLS 규격 코드를 사용 하는 구성 요소를 사용할 수 없습니다.  
   
     > [!IMPORTANT]
-    >  Windows API\(응용 프로그래밍 인터페이스\)와 같은 비관리 코드를 호출하면 사용하는 코드가 잠재적인 보안 위험에 노출됩니다.  
+    >  Windows 응용 프로그램 프로그래밍 인터페이스 (API)와 같은 관리 되지 않는 코드를 호출 하는 잠재적인 보안 위험에 코드를 제공 합니다.  
   
     > [!IMPORTANT]
-    >  Windows API를 호출하려면 비관리 코드 권한이 있어야 합니다. 이 권한은 부분 신뢰 상태에서 코드 실행을 제한할 수 있습니다.  자세한 내용은 <xref:System.Security.Permissions.SecurityPermission> 및 [Code Access Permissions](http://msdn.microsoft.com/ko-kr/e5ae402f-6dda-4732-bbe8-77296630f675)을 참조하십시오.  
+    >  Windows API 호출 비관리 코드 권한이 필요 합니다. 자세한 내용은 참조 <xref:System.Security.Permissions.SecurityPermission>및 [코드 액세스 권한](http://msdn.microsoft.com/en-us/e5ae402f-6dda-4732-bbe8-77296630f675).</xref:System.Security.Permissions.SecurityPermission>  
   
-## 참고 항목  
- [Data Types](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Integer Data Type](../../../visual-basic/language-reference/data-types/integer-data-type.md)   
- [UInteger Data Type](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)   
- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)   
- [Walkthrough: Calling Windows APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+## <a name="see-also"></a>참고 항목  
+ [데이터 형식](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
+ [Integer 데이터 형식](../../../visual-basic/language-reference/data-types/integer-data-type.md)   
+ [UInteger 데이터 형식](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)   
+ [Declare 문](../../../visual-basic/language-reference/statements/declare-statement.md)   
+ [연습: Windows API 호출](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)

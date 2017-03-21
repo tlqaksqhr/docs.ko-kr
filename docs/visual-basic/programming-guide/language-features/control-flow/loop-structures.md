@@ -1,53 +1,69 @@
 ---
-title: "Loop Structures (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "control flow, loops"
-  - "For keyword [Visual Basic], loop structures"
-  - "loops"
-  - "loop structures"
-  - "statements [Visual Basic], loop"
-  - "Do statement, Do loops"
-  - "conditional statements, loop structures"
+title: "루프 구조 (Visual Basic) | Microsoft 문서"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- control flow, loops
+- For keyword [Visual Basic], loop structures
+- loops
+- loop structures
+- statements [Visual Basic], loop
+- Do statement, Do loops
+- conditional statements, loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
 caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
----
-# Loop Structures (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: c2835b9d9d22196447fb1863f6e4fa9bd11ecf0a
+ms.lasthandoff: 03/13/2017
 
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 루프 구조를 사용하면 한 줄 이상의 코드를 반복해서 실행할 수 있습니다.  조건이 `True` 또는 `False`일 때까지 루프 구조에서 지정된 횟수만큼 또는 컬렉션의 각 요소에 대해 한 번씩 문을 반복할 수 있습니다.  
+---
+# <a name="loop-structures-visual-basic"></a>루프 구조(Visual Basic)
+[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]루프 구조를 사용 하면 하나 이상의 코드 줄을 반복 해 서 실행할 수 있습니다. 조건이 될 때까지 루프 구조에서 문을 반복할 수 `True`조건이 될 때까지, `False`, 컬렉션에서 각 요소에 대해 한 번 횟수 또는 번호를 지정 합니다.  
   
- 다음 그림에서는 조건이 true가 될 때까지 문의 집합을 실행하는 루프 구조를 보여 줍니다.  
+ 다음 그림에는 조건이 true가 될 때까지 문 집합을 실행 하는 루프 구조를 보여 줍니다.  
   
- ![Do...Until 루프의 순서도](../../../../visual-basic/programming-guide/language-features/control-flow/media/dountilloop.gif "DoUntilLoop")  
-조건이 true가 될 때까지 문의 집합 실행  
+ ![순서도 수행... 루프](../../../../visual-basic/programming-guide/language-features/control-flow/media/dountilloop.gif "DoUntilLoop")  
+조건이 true가 될 때까지 문 집합을 실행 합니다.  
   
-## While 루프  
- `While`...`End While` 구문은 `While` 문에 지정된 조건이 `True`인 동안 문의 집합을 실행합니다.  자세한 내용은 [While...End While Statement](../../../../visual-basic/language-reference/statements/while-end-while-statement.md)을 참조하십시오.  
+## <a name="while-loops"></a>While 루프  
+ The `While`... `End While` 에 지정 된 조건으로 문 집합을 실행 하는 생성 된 `While` 문이 `True`합니다. 자세한 내용은 참조 [동안... While 문 종료](../../../../visual-basic/language-reference/statements/while-end-while-statement.md)합니다.  
   
-## Do 루프  
- `Do`...`Loop` 구문을 사용하면 루프 구조의 시작 부분이나 끝 부분에서 조건을 테스트할 수 있습니다.  조건이 `True` 상태인 동안 루프를 반복할지 또는 조건이 `True`가 될 때까지 루프를 반복할지 여부를 지정할 수도 있습니다.  자세한 내용은 [Do...Loop Statement](../../../../visual-basic/language-reference/statements/do-loop-statement.md)을 참조하십시오.  
+## <a name="do-loops"></a>Do 루프  
+ The `Do`... `Loop` 구문을 시작 또는 루프 구조의 끝에서 조건을 테스트할 수 있습니다. 조건이 동안 루프를 반복할지 여부를 지정할 수도 있습니다 `True` 될 때까지 또는 `True`합니다. 자세한 내용은 참조 [수행... 반복 문](../../../../visual-basic/language-reference/statements/do-loop-statement.md)합니다.  
   
-## For 루프  
- `For`...`Next` 구문은 루프를 횟수만큼 수행합니다.  이 구문은 *카운터*라고도 하는 루프 제어 변수를 사용하여 반복을 추적합니다.  이 카운터에 대한 시작 값과 끝 값을 지정하고, 하나의 반복에서 다음 반복으로 증가하는 정도를 선택적으로 지정할 수 있습니다.  자세한 내용은 [For...Next 문](../../../../visual-basic/language-reference/statements/for-next-statement.md)을 참조하십시오.  
+## <a name="for-loops"></a>For 루프  
+ The `For`... `Next` 구문은 루프 횟수 만큼 수행 합니다. 라고도 하는 루프 제어 변수를 사용 하 여 한 *카운터*, 반복을 추적 합니다. 시작 및 끝이 카운터에 대 한 값을 지정 하 고 필요에 따라 증가 하 한 반복에서 다음 크기를 지정할 수 있습니다. 자세한 내용은 참조 [에 대 한... 다음 문](../../../../visual-basic/language-reference/statements/for-next-statement.md)합니다.  
   
-## For Each 루프  
- `For Each`...`Next` 구문은 컬렉션의 각 요소에 대해 문의 집합을 한 번 실행합니다.  루프 제어 변수는 지정하지만, 시작 값과 끝 값을 결정할 필요는 없습니다.  자세한 내용은 [For Each...Next 문](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)을 참조하십시오.  
+## <a name="for-each-loops"></a>각 루프에 대 한  
+ The `For Each`... `Next` 구문은 컬렉션의 각 요소에 한 번씩 문 집합을 실행 합니다. 루프 제어 변수를 지정 하지만 시작 또는 끝 값을 확인할 필요가 없습니다. 자세한 내용은 참조 [각각에 대해... 다음 문](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)합니다.  
   
-## 참고 항목  
- [Control Flow](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)   
- [Decision Structures](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)   
- [Other Control Structures](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)   
- [Nested Control Structures](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
+## <a name="see-also"></a>참고 항목  
+ [제어 흐름](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)   
+ [판단 구조](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)   
+ [기타 제어 구조](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)   
+ [중첩 제어 구조](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)

@@ -1,49 +1,65 @@
 ---
-title: "How to: Call a Procedure that Does Not Return a Value (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "procedure calls, returning values"
-  - "Visual Basic code, procedures"
-  - "procedures, calling"
+title: "방법: 값 (Visual Basic)를 반환 하지 않는 프로시저 호출 | Microsoft 문서"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- procedure calls, returning values
+- Visual Basic code, procedures
+- procedures, calling
 ms.assetid: 259b49a3-a3c1-4254-ba8c-73cdc4127703
 caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
----
-# How to: Call a Procedure that Does Not Return a Value (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 17b2b902f3ee6ab79b2614b7742aa08fefab2420
+ms.lasthandoff: 03/13/2017
 
-`Sub` 프로시저는 호출 코드에 값을 반환하지 않습니다.  독립 실행형 호출 문을 사용하여 프로시저를 명시적으로 호출합니다.  식 내에서 프로시저 이름을 사용하여 프로시저를 호출할 수는 없습니다.  
+---
+# <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>방법: 값을 반환하지 않는 프로시저 호출(Visual Basic)
+A `Sub` 프로시저 호출 코드에 값을 반환 하지 않습니다. 이 명시적으로 호출 독립 실행형 호출 문을 사용 합니다. 식 내에서 프로시저 이름을 사용 하 여 호출할 수 없습니다.  
   
-### Sub 프로시저를 호출하려면  
+### <a name="to-call-a-sub-procedure"></a>Sub 프로시저를 호출 하려면  
   
-1.  이름이 지정 된 `Sub` 절차.  
+1.  이름을 지정는 `Sub` 프로시저입니다.  
   
-2.  프로시저 이름 다음에 인수 목록을 괄호로 묶어 지정합니다.  인수가 없으면 괄호를 생략해도 됩니다.  그러나 괄호를 사용하면 코드가 읽기 쉬워집니다.  
+2.  괄호로 묶어 인수 목록 프로시저 이름 뒤에. 필요에 따라 인수가 있을 경우 괄호를 생략할 수 있습니다. 그러나 괄호를 사용 하는 코드를 읽기 쉽게.  
   
-3.  인수 목록의 인수를 괄호로 묶고 쉼표로 구분합니다.  `Sub` 프로시저에서 해당 매개 변수를 정의하는 순서와 동일한 순서대로 인수를 지정해야 합니다.  
+3.  인수를 괄호로 묶고 쉼표로 구분 된 인수 목록에 배치 합니다. 같은 순서로 인수를 지정 해야 하는 `Sub` 프로시저는 해당 매개 변수를 정의 합니다.  
   
-     다음 예제에서는 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> 함수를 호출하여 응용 프로그램 창을 활성화합니다.  <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>는 창 제목을 단독 인수로 사용합니다.  그리고 호출 코드에 값을 반환하지 않습니다.  메모장 프로세스를 실행하고 있지 않을 경우 이 예제는 <xref:System.ArgumentException>을 throw합니다.  `Shell` 프로시저에서는 응용 프로그램이 지정된 경로에 있는 것으로 간주합니다.  
+     다음 예제에서는 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>응용 프로그램 창을 활성화 하는 함수입니다.</xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>창 제목 유일한 인수로 사용합니다.</xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> 호출 코드에는 값을 반환 하지 않습니다. 예제에서는 throw <xref:System.ArgumentException>.</xref:System.ArgumentException> 메모장 프로세스를 실행 하지 않는 경우 `Shell` 절차에서는 응용 프로그램을 지정 된 경로 가정 합니다.  
   
-     [!code-vb[VbVbalrCatRef#11](./codesnippet/VisualBasic/how-to-call-a-procedure-that-does-not-return-a-value_1.vb)]  
+     [!code-vb[VbVbalrCatRef #&11;](./codesnippet/VisualBasic/how-to-call-a-procedure-that-does-not-return-a-value_1.vb)]  
   
-## 참고 항목  
- <xref:Microsoft.VisualBasic.Interaction.Shell%2A>   
- <xref:System.ArgumentException>   
- [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md)   
- [Sub Procedures](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)   
- [Procedure Parameters and Arguments](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)   
- [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md)   
- [How to: Create a Procedure](../../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure.md)   
- [How to: Call a Procedure That Returns a Value](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-a-procedure-that-returns-a-value.md)   
- [How to: Call an Event Handler in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-event-handler.md)
+## <a name="see-also"></a>참고 항목  
+ <xref:Microsoft.VisualBasic.Interaction.Shell%2A></xref:Microsoft.VisualBasic.Interaction.Shell%2A>   
+ <xref:System.ArgumentException></xref:System.ArgumentException>   
+ [프로시저](./index.md)   
+ [Sub 프로시저](./sub-procedures.md)   
+ [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)   
+ [Sub 문](../../../../visual-basic/language-reference/statements/sub-statement.md)   
+ [방법: 프로시저 만들기](./how-to-create-a-procedure.md)   
+ [방법: 값을 반환 하는 프로시저 호출](./how-to-call-a-procedure-that-returns-a-value.md)   
+ [방법: Visual Basic에서 이벤트 처리기 호출](./how-to-call-an-event-handler.md)

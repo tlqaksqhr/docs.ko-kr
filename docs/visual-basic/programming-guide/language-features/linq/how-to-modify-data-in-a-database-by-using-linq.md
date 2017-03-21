@@ -1,81 +1,97 @@
 ---
-title: "How to: Modify Data in a Database by Using LINQ (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "inserting rows [LINQ to SQL]"
-  - "deleting rows [LINQ to SQL]"
-  - "updating rows [LINQ to SQL]"
-  - "inserting data [Visual Basic]"
-  - "deleting data"
-  - "data [Visual Basic], updating"
-  - "updating data [LINQ]"
-  - "queries [LINQ in Visual Basic], data changes in database"
-  - "queries [LINQ in Visual Basic], how-to topics"
+title: "방법: LINQ (Visual Basic)를 사용 하 여 데이터베이스의 데이터 수정 | Microsoft 문서"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- inserting rows [LINQ to SQL]
+- deleting rows [LINQ to SQL]
+- updating rows [LINQ to SQL]
+- inserting data [Visual Basic]
+- deleting data
+- data [Visual Basic], updating
+- updating data [LINQ]
+- queries [LINQ in Visual Basic], data changes in database
+- queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
 caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
----
-# How to: Modify Data in a Database by Using LINQ (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 44ca3e44d8411a6329d176eb778677bfab2b365c
+ms.lasthandoff: 03/13/2017
 
-LINQ\(통합 언어 쿼리\) 쿼리를 사용하면 손쉽게 데이터베이스 정보에 액세스하고 데이터베이스의 값을 수정할 수 있습니다.  
+---
+# <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>방법: LINQ를 사용하여 데이터베이스의 데이터 수정(Visual Basic)
+언어 통합 쿼리 (LINQ) 쿼리를 사용 하면 쉽게 데이터베이스 정보를 액세스 하 고 데이터베이스의 값을 수정할 수 있도록 합니다.  
   
- 다음 예제에서는 SQL Server 데이터베이스의 정보를 검색하고 업데이트하는 새 응용 프로그램을 만드는 방법을 보여 줍니다.  
+ 다음 예제에서는 SQL Server 데이터베이스에서 검색 하는 새 응용 프로그램을 만드는 방법 및 업데이트 정보를 보여 줍니다.  
   
- 이 항목의 예제에서는 Northwind 샘플 데이터베이스를 사용합니다.  개발 컴퓨터에 Northwind 샘플 데이터베이스가 없는 경우 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkID=98088) 웹 사이트에서 다운로드할 수 있습니다.  자세한 내용은 [샘플 데이터베이스 다운로드](../Topic/Downloading%20Sample%20Databases.md)를 참조하십시오.  
+ 이 항목의 예제는 Northwind 샘플 데이터베이스를 사용합니다. 개발 컴퓨터에 Northwind 샘플 데이터베이스가 없는 경우 있습니다에서 다운로드할 수는 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkID=98088) 웹 사이트입니다. 자세한 내용은 [샘플 데이터베이스 다운로드](https://msdn.microsoft.com/library/bb399411)합니다.  
   
-### 데이터베이스에 대한 연결을 만들려면  
+### <a name="to-create-a-connection-to-a-database"></a>데이터베이스에 연결을 만들려면  
   
-1.  Visual Studio의 **보기** 메뉴를 클릭한 다음 **서버 탐색기**\/**데이터베이스 탐색기**를 선택하여 **서버 탐색기**\/**데이터베이스 탐색기**를 엽니다.  
+1.  Visual Studio에서 열고 **서버 탐색기**/**데이터베이스 탐색기** 클릭 하 여는 **보기** 메뉴를 선택한 다음 선택 **서버 탐색기**/**데이터베이스 탐색기**합니다.  
   
-2.  **서버 탐색기**\/**데이터베이스 탐색기**에서 **데이터 연결**을 마우스 오른쪽 단추로 클릭하고 **연결 추가**를 클릭합니다.  
+2.  마우스 오른쪽 단추로 클릭 **데이터 연결** 에서 **서버 탐색기**/**데이터베이스 탐색기**를 클릭 하 고 **연결 추가**합니다.  
   
-3.  Northwind 샘플 데이터베이스에 대한 유효한 연결을 지정합니다.  
+3.  Northwind 샘플 데이터베이스에 올바른 연결을 지정 합니다.  
   
-### 프로젝트에 LINQ to SQL 파일을 추가하려면  
+### <a name="to-add-a-project-with-a-linq-to-sql-file"></a>SQL 파일에는 LINQ 사용 하 여 프로젝트를 추가 하려면  
   
-1.  Visual Studio의 **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **프로젝트**를 클릭합니다.  Visual Basic **Windows Forms 응용 프로그램**을 프로젝트 형식으로 선택합니다.  
+1.  Visual Studio에서에 **파일** 메뉴에서 **새로** 클릭 하 고 **프로젝트**합니다. Visual basic **Windows Forms 응용 프로그램** 프로젝트 유형으로 합니다.  
   
-2.  **프로젝트** 메뉴에서 **새 항목 추가**를 클릭합니다.  **LINQ to SQL 클래스** 항목 템플릿을 선택합니다.  
+2.  **프로젝트** 메뉴에서 **새 항목 추가**를 클릭합니다. 선택 된 **LINQ to SQL 클래스** 항목 템플릿.  
   
-3.  파일 이름을 `northwind.dbml`로 지정합니다.  **추가**를 클릭합니다.  `northwind.dbml` 파일에 대한 O\/R 디자이너\(개체 관계형 디자이너\)가 열립니다.  
+3.  파일 이름을 `northwind.dbml`합니다. **추가**를 클릭합니다. 개체 관계형 디자이너 (O/R 디자이너)에 대 한 열은 `northwind.dbml` 파일입니다.  
   
-### 쿼리 및 수정할 테이블을 디자이너에 추가하려면  
+### <a name="to-add-tables-to-query-and-modify-to-the-designer"></a>쿼리 디자이너를 수정 하는 테이블을 추가 하려면  
   
-1.  **서버 탐색기**\/**데이터베이스 탐색기**에서 Northwind 데이터베이스에 대한 연결을 확장합니다.  **테이블** 폴더를 확장합니다.  
+1.  **서버 탐색기**/**데이터베이스 탐색기**, Northwind 데이터베이스에 연결을 확장 합니다. 확장 된 **테이블** 폴더입니다.  
   
-     O\/R 디자이너를 닫은 경우에는 앞서 추가한 `northwind.dbml` 파일을 두 번 클릭하여 다시 열 수 있습니다.  
+     O/R 디자이너를 닫은 경우 있습니다 다시 열 수를 두 번 클릭 하 여는 `northwind.dbml` 이전에 추가한 파일입니다.  
   
-2.  Customers 테이블을 클릭하여 디자이너의 왼쪽 창으로 끌어 옵니다.  
+2.  Customers 테이블을 클릭 하 고 디자이너의 왼쪽된 창에 놓습니다.  
   
-     디자이너에서 프로젝트에 대한 새 Customer 개체를 만듭니다.  
+     디자이너는 프로젝트에 대 한 새 Customer 개체를 만듭니다.  
   
-3.  변경 내용을 저장한 다음 디자이너를 닫습니다.  
+3.  변경 내용을 저장 하 고 디자이너를 닫습니다.  
   
 4.  프로젝트를 저장합니다.  
   
-### 데이터베이스를 수정하여 결과를 표시하는 코드를 추가하려면  
+### <a name="to-add-code-to-modify-the-database-and-display-the-results"></a>데이터베이스를 수정 하 고 결과 표시 하는 코드를 추가 하려면  
   
-1.  **도구 상자**에서 <xref:System.Windows.Forms.DataGridView> 컨트롤을 프로젝트의 기본 Windows Form인 Form1로 끌어 옵니다.  
+1.  **도구 상자**를 끌어 한 <xref:System.Windows.Forms.DataGridView>Form1 프로젝트에 대 한 기본 Windows Form 컨트롤을.</xref:System.Windows.Forms.DataGridView>  
   
-2.  O\/R 디자이너에 테이블을 추가한 경우 디자이너는 <xref:System.Data.Linq.DataContext> 개체를 프로젝트에 추가한 것입니다.  이 개체에는 Customers 테이블에 액세스하는 데 사용할 수 있는 코드가 포함되어 있습니다.  또한 이 개체에는 테이블의 로컬 Customer 개체 및 Customers 컬렉션을 정의하는 코드가 포함되어 있습니다.  프로젝트에 대한 <xref:System.Data.Linq.DataContext> 개체의 이름은 .dbml 파일 이름을 기반으로 지정됩니다.  이 프로젝트에서 <xref:System.Data.Linq.DataContext> 개체의 이름은 `northwindDataContext`입니다.  
+2.  O/R 디자이너에 테이블을 추가한 경우 디자이너 추가 <xref:System.Data.Linq.DataContext>프로젝트에는 개체입니다.</xref:System.Data.Linq.DataContext> 이 개체에는 Customers 테이블에 액세스 하는 데 사용할 수 있는 코드가 포함 됩니다. 또한 로컬 고객 개체는 테이블에 대 한 Customers 컬렉션을 정의 하는 코드를 포함 합니다. <xref:System.Data.Linq.DataContext>.dbml 파일의 이름에 따라 프로젝트에 대 한 개체입니다.</xref:System.Data.Linq.DataContext> 이 프로젝트는 <xref:System.Data.Linq.DataContext>개체의 이름은 `northwindDataContext`.</xref:System.Data.Linq.DataContext>  
   
-     코드에서 <xref:System.Data.Linq.DataContext> 개체의 인스턴스를 만들어 O\/R 디자이너에서 지정한 Customers 컬렉션을 쿼리하고 수정할 수 있습니다.  Customers 컬렉션에 대한 변경 내용은 <xref:System.Data.Linq.DataContext> 개체의 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 메서드를 호출하여 해당 변경 내용을 전송하기 전까지는 데이터베이스에 반영되지 않습니다.  
+     인스턴스를 만들 수는 <xref:System.Data.Linq.DataContext>코드의 쿼리 개체를 O/R 디자이너에서 지정 된 고객 컬렉션을 수정 합니다.</xref:System.Data.Linq.DataContext> 호출 하 여 제출 하기 전에 Customers 컬렉션에 수행한 변경 내용을 데이터베이스에 반영 되지 않습니다는 <xref:System.Data.Linq.DataContext.SubmitChanges%2A>의 메서드는 <xref:System.Data.Linq.DataContext>개체.</xref:System.Data.Linq.DataContext> </xref:System.Data.Linq.DataContext.SubmitChanges%2A>  
   
-     Windows Form인 Form1을 두 번 클릭하여 사용자의 <xref:System.Data.Linq.DataContext> 속성으로 노출되는 Customers 테이블을 쿼리하려면 코드를 <xref:System.Windows.Forms.Form.Load> 이벤트에 추가합니다.  아래와 같은 코드를 추가합니다.  
+     Windows Form Form1 코드 추가 하는 <xref:System.Windows.Forms.Form.Load> <xref:System.Data.Linq.DataContext>.</xref:System.Data.Linq.DataContext> 의 속성으로 노출 되는 Customers 테이블을 쿼리 하는 이벤트</xref:System.Windows.Forms.Form.Load> 를 두 번 클릭 다음 코드를 추가합니다.  
   
-    ```vb#  
+    ```vb  
     Private db As northwindDataContext  
   
     Private Sub Form1_Load(ByVal sender As System.Object,   
@@ -95,11 +111,11 @@ LINQ\(통합 언어 쿼리\) 쿼리를 사용하면 손쉽게 데이터베이스
     End Sub  
     ```  
   
-3.  **도구 상자**에서 세 개의 <xref:System.Windows.Forms.Button> 컨트롤을 폼으로 끌어 옵니다.  첫 번째 `Button` 컨트롤을 선택합니다.  **속성** 창에서 `Button` 컨트롤의 `Name`은 `AddButton`으로 설정하고 `Text`는 `추가`로 설정합니다.  두 번째 단추를 선택하여 `Name` 속성은 `UpdateButton`으로 설정하고 `Text` 속성은 `업데이트`로 설정합니다.  세 번째 단추를 선택하여 `Name` 속성은 `DeleteButton`으로 설정하고 `Text` 속성은 `삭제`로 설정합니다.  
+3.  **도구 상자**, 세 개의 끌어 <xref:System.Windows.Forms.Button>컨트롤을 폼에.</xref:System.Windows.Forms.Button> 첫 번째 선택 `Button` 제어 합니다. 에 **속성** 창의 설정의 `Name` 의 `Button` 컨트롤을 `AddButton` 및 `Text` 를 `Add`합니다. 두 번째 단추를 선택 하 고 설정 된 `Name` 속성을 `UpdateButton` 및 `Text` 속성을 `Update`합니다. 세 번째 단추를 선택 하 고 설정 된 `Name` 속성을 `DeleteButton` 및 `Text` 속성을 `Delete`합니다.  
   
-4.  **추가** 단추를 두 번 클릭하여 코드를 해당 `Click` 이벤트에 추가합니다.  아래와 같은 코드를 추가합니다.  
+4.  두 번 클릭은 **추가** 단추 코드를 추가 하려면 해당 `Click` 이벤트입니다. 다음 코드를 추가합니다.  
   
-    ```vb#  
+    ```vb  
     Private Sub AddButton_Click(ByVal sender As System.Object,   
                                 ByVal e As System.EventArgs  
                                ) Handles AddButton.Click  
@@ -122,9 +138,9 @@ LINQ\(통합 언어 쿼리\) 쿼리를 사용하면 손쉽게 데이터베이스
     End Sub  
     ```  
   
-5.  **업데이트** 단추를 두 번 클릭하여 코드를 해당 `Click` 이벤트에 추가합니다.  아래와 같은 코드를 추가합니다.  
+5.  두 번 클릭은 **업데이트** 단추 코드를 추가 하려면 해당 `Click` 이벤트입니다. 다음 코드를 추가합니다.  
   
-    ```vb#  
+    ```vb  
     Private Sub UpdateButton_Click(ByVal sender As System.Object, _  
                                    ByVal e As System.EventArgs  
                                   ) Handles UpdateButton.Click  
@@ -143,9 +159,9 @@ LINQ\(통합 언어 쿼리\) 쿼리를 사용하면 손쉽게 데이터베이스
     End Sub  
     ```  
   
-6.  **삭제** 단추를 두 번 클릭하여 코드를 해당 `Click` 이벤트에 추가합니다.  아래와 같은 코드를 추가합니다.  
+6.  두 번 클릭은 **삭제** 단추 코드를 추가 하려면 해당 `Click` 이벤트입니다. 다음 코드를 추가합니다.  
   
-    ```vb#  
+    ```vb  
     Private Sub DeleteButton_Click(ByVal sender As System.Object, _  
                                    ByVal e As System.EventArgs  
                                   ) Handles DeleteButton.Click  
@@ -164,12 +180,11 @@ LINQ\(통합 언어 쿼리\) 쿼리를 사용하면 손쉽게 데이터베이스
     End Sub  
     ```  
   
-7.  F5 키를 눌러 프로젝트를 실행합니다.  **추가**를 클릭하여 새 레코드를 추가합니다.  **업데이트**를 클릭하여 새 레코드를 수정합니다.  **삭제**를 클릭하여 새 레코드를 삭제합니다.  
+7.  F5 키를 눌러 프로젝트를 실행합니다. 클릭 **추가** 새 레코드를 추가 합니다. 클릭 **업데이트** 새 레코드를 수정 합니다. 클릭 **삭제** 새 레코드를 삭제 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)   
- [Queries](../../../../visual-basic/language-reference/queries/queries.md)   
- [LINQ to SQL](../Topic/LINQ%20to%20SQL.md)   
- [DataContext 메서드\(O\/R 디자이너\)](/visual-studio/data-tools/datacontext-methods-o-r-designer)   
- [방법: 저장 프로시저를 할당하여 업데이트, 삽입 및 삭제 수행\(O\/R 디자이너\)](../Topic/How%20to:%20Assign%20stored%20procedures%20to%20perform%20updates,%20inserts,%20and%20deletes%20\(O-R%20Designer\).md)   
- [연습: LINQ to SQL 클래스 만들기\(O\/R 디자이너\)](../Topic/Walkthrough:%20Creating%20LINQ%20to%20SQL%20Classes%20\(O-R%20Designer\).md)
+ [쿼리](../../../../visual-basic/language-reference/queries/queries.md)   
+ [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)   
+ [DataContext 메서드 (O/R 디자이너)](https://docs.microsoft.com/visualstudio/data-tools/datacontext-methods-o-r-designer)   
+ [방법: 저장된 프로시저를 할당 업데이트, 삽입 및 삭제 (O/R 디자이너)를 수행 합니다.](http://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)

@@ -1,84 +1,99 @@
 ---
-title: "Constant and Literal Data Types (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "declaring constants, literal data types"
-  - "data types [Visual Basic], declaring"
-  - "constants, declaring"
-  - "explicit declarations"
-  - "literals, coercing data type"
-  - "declarations, data types"
+title: "상수 및 리터럴 데이터 형식 (Visual Basic) | Microsoft 문서"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- declaring constants, literal data types
+- data types [Visual Basic], declaring
+- constants, declaring
+- explicit declarations
+- literals, coercing data type
+- declarations, data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
 caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
----
-# Constant and Literal Data Types (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 22ad31415ab560b7fd0180a6dadd6d2dcd7ec77a
+ms.lasthandoff: 03/13/2017
 
-리터럴은 변수의 값이나 식의 결과로 표현되는 것이 아니라 숫자 3이나 문자열 "Hello"와 같이 있는 그대로 표현되는 값입니다.  상수는 리터럴 대신 사용되어 프로그램 전체에서 이 동일한 값을 유지하는 의미 있는 이름으로, 변수와 달리 값을 변경할 수 있습니다.  
+---
+# <a name="constant-and-literal-data-types-visual-basic"></a>상수 및 리터럴 데이터 형식(Visual Basic)
+리터럴은은 변수 값 또는 "Hello" 문자열 또는 숫자 3 등 식의 결과가 아닌 자체로 표현 되는 값입니다. 상수는 리터럴 자리를 차지 하 고 값이 변경 될 수 있습니다 변수와 달리 프로그램 전체에서 동일한 값이 그대로 유지 하는 의미 있는 이름입니다.  
   
- [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)가 `Off`이고 [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)가 `On`인 경우 모든 상수를 데이터 형식을 사용하여 명시적으로 선언해야 합니다.  다음 예제에서는 `MyByte`의 데이터 형식이 `Byte` 데이터 형식으로 명시적으로 선언되었습니다.  
+ 때 [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) 는 `Off` 및 [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) 는 `On`, 데이터 형식으로 모든 상수를 명시적으로 선언 해야 합니다. 다음 예제에서는 데이터의 형식 `MyByte` 데이터 형식으로 명시적으로 선언 된 `Byte`:  
   
- [!code-vb[VbVbalrConstants#1](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_1.vb)]  
+ [!code-vb[VbVbalrConstants #&1;](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_1.vb)]  
   
- `Option Infer`가 `On`이거나 `Option Strict`가 `Off`인 경우 `As` 절로 데이터 형식을 지정하지 않고 상수를 선언할 수 있습니다.  컴파일러는 식의 형식에서 상수 형식을 확인합니다.  숫자 정수 리터럴은 기본적으로 `Integer` 데이터 형식으로 캐스팅됩니다.  부동 소수점 숫자의 기본 데이터 형식은 `Double`이고 `True` 및 `False` 키워드는 `Boolean` 상수를 지정합니다.  
+ 때 `Option Infer` 는 `On` 또는 `Option Strict` 는 `Off`, 데이터 형식으로 지정 하지 않고 상수를 선언할 수는 `As` 절. 컴파일러에는 상수 식의 형식에서 형식을 결정 합니다. 기본적으로 숫자 정수 리터럴은 캐스팅 되는 `Integer` 데이터 형식입니다. 부동 소수점 숫자에 대 한 기본 데이터 형식 `Double`, 키워드 및 `True` 및 `False` 지정는 `Boolean` 상수입니다.  
   
-## 리터럴 및 형식 강제 변환  
- 경우에 따라 특정 데이터 형식에 리터럴을 강제로 적용할 수도 있습니다. 예를 들어, 매우 큰 정수 리터럴 값을 `Decimal` 형식의 변수에 할당하는 경우입니다.  다음 예제에서는 오류가 발생합니다.  
+## <a name="literals-and-type-coercion"></a>리터럴 및 형식 강제 변환  
+ 일부 경우에는 특정 데이터 형식에 리터럴을 강제로 하려는 예를 들어, 매우 큰 정수 리터럴 값 형식의 변수에 할당할 때 `Decimal`합니다. 다음 예제에서는 오류가 발생 합니다.  
   
 ```  
 Dim myDecimal as Decimal  
 myDecimal = 100000000000000000000   ' This causes a compiler error.  
 ```  
   
- 리터럴 표현에서 발생하는 오류입니다.  `Decimal` 데이터 형식은 이러한 큰 값을 저장할 수 있지만 리터럴은 암시적으로 큰 값을 저장할 수 없는 `Long` 형식으로 표시됩니다.  
+ 리터럴 표현에서 오류가 발생 합니다. `Decimal` 데이터 형식을 큰 값을 가질 수 있지만 리터럴으로 암시적으로 표시 됩니다는 `Long`, 수는 없습니다.  
   
- 리터럴에 형식 문자를 붙이거나 리터럴을 묶기 문자 안에 넣는 두 가지 방법으로 리터럴을 특정 데이터 형식으로 강제 변환할 수 있습니다.  형식 문자나 묶기 문자는 리터럴 바로 앞이나 뒤에 붙여야 하며 공백이나 기타 문자를 삽입해서는 안 됩니다.  
+ 두 가지 방법으로 특정 데이터 형식에 리터럴 강제 변환할 수 있습니다: 형식 문자를 추가 하 여 또는 묶기 문자 안에 배치 하 여 합니다. 형식 문자 또는 문자를 포함 해야 바로 앞 이나 뒤에 없는 중간 공백이 나 기타 모든 종류의 문자는 리터럴.  
   
- 위 예제가 제대로 실행되도록 하려면 리터럴에 형식 문자 `D`를 추가하여 `Decimal` 형식으로 표시되도록 하십시오.  
+ 이전 예제가 제대로 실행 되도록 하려면 추가 하는 `D` 형식으로 나타낼 수를 발생 시키는 리터럴 문자는 `Decimal`:  
   
- [!code-vb[VbVbalrConstants#2](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_2.vb)]  
+ [!code-vb[VbVbalrConstants #&2;](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_2.vb)]  
   
- 다음 예제는 형식 문자와 묶기 문자의 올바른 사용법을 보여 줍니다.  
+ 다음 예제에서는 형식 문자 및 바깥쪽 문자 변수의 올바른 사용법을 보여 줍니다.  
   
- [!code-vb[VbVbalrConstants#3](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_3.vb)]  
+ [!code-vb[VbVbalrConstants #&3;](../../../../visual-basic/programming-guide/language-features/constants-enums/codesnippet/VisualBasic/constant-and-literal-data-types_3.vb)]  
   
- 다음 표에서는 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]에서 사용할 수 있는 묶기 문자와 형식 문자를 보여 줍니다.  
+ 바깥쪽 문자와 형식에서 사용할 수 있는 문자는 다음 표에 나와 있는 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]합니다.  
   
-||||  
-|-|-|-|  
-|데이터 형식|묶기 문자|추가된 형식 문자|  
-|`Boolean`|\(없음\)|\(없음\)|  
-|`Byte`|\(없음\)|\(없음\)|  
-|`Char`|이때|C|  
-|`Date`|\#|\(없음\)|  
-|`Decimal`|\(없음\)|D 또는 @|  
-|`Double`|\(없음\)|R 또는 \#|  
-|`Integer`|\(없음\)|I 또는 %|  
-|`Long`|\(없음\)|L 또는 &|  
-|`Short`|\(없음\)|S|  
-|`Single`|\(없음\)|F 또는 \!|  
-|`String`|이때|\(없음\)|  
+|데이터 형식|구분 기호|추가 된 형식 문자|  
+|---|---|---|  
+|`Boolean`|(없음)|(없음)|  
+|`Byte`|(없음)|(없음)|  
+|`Char`|"|C|  
+|`Date`|#|(없음)|  
+|`Decimal`|(없음)|D 또는 @|  
+|`Double`|(없음)|R 또는 #|  
+|`Integer`|(없음)|I 또는 %|  
+|`Long`|(없음)|L 또는 / /|  
+|`Short`|(없음)|S|  
+|`Single`|(없음)|F 또는!|  
+|`String`|"|(없음)|  
   
-## 참고 항목  
- [User\-Defined Constants](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)   
- [How to: Declare A Constant](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)   
- [Constants Overview](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)   
- [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)   
- [Option Explicit Statement](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)   
- [Enumerations Overview](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)   
- [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)   
- [Enumerations and Name Qualification](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)   
- [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Constants and Enumerations](../../../../visual-basic/language-reference/constants-and-enumerations.md)
+## <a name="see-also"></a>참고 항목  
+ [사용자 정의 상수](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)   
+ [방법: 상수 선언](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)   
+ [상수 개요](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)   
+ [Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md)   
+ [Option Explicit 문](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)   
+ [열거형 개요](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)   
+ [방법: 열거형 선언](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)   
+ [열거형 및 이름 한정](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)   
+ [데이터 형식](../../../../visual-basic/language-reference/data-types/data-type-summary.md)   
+ [상수 및 열거형](../../../../visual-basic/language-reference/constants-and-enumerations.md)

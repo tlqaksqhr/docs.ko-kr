@@ -1,41 +1,57 @@
 ---
-title: "Troubleshooting Inherited Event Handlers in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "troubleshooting events"
-  - "inherited events"
-  - "troubleshooting Visual Basic, event handlers"
-  - "event handling, troubleshooting"
-  - "event handlers, troubleshooting"
+title: "Visual Basic에서 이벤트 처리기를 상속 문제 해결 | Microsoft 문서"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- troubleshooting events
+- inherited events
+- troubleshooting Visual Basic, event handlers
+- event handling, troubleshooting
+- event handlers, troubleshooting
 ms.assetid: e1c8759f-5370-4308-8476-8c48b73509bf
 caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
----
-# Troubleshooting Inherited Event Handlers in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 0dae6b48b1885a52b99ae3e7328340cac7b2d7d4
+ms.lasthandoff: 03/13/2017
 
-이 항목에서는 상속된 구성 요소의 이벤트 처리기와 관련하여 공통적으로 발생하는 문제점에 대해 설명합니다.  
+---
+# <a name="troubleshooting-inherited-event-handlers-in-visual-basic"></a>Visual Basic에서 상속된 이벤트 처리기 관련 문제 해결
+이 항목에서는 이벤트 처리기 상속 된 구성 요소에서 발생 하는 일반적인 문제입니다.  
   
-## 절차  
+## <a name="procedures"></a>절차  
   
-#### 이벤트 처리기의 코드가 호출할 때마다 두 번씩 실행되는 문제  
+#### <a name="code-in-event-handler-executes-twice-for-every-call"></a>이벤트 처리기의 코드는 모든 호출에 대 한 두 번 실행  
   
--   상속된 이벤트 처리기에는 [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md) 절을 사용할 수 없습니다.  기본 클래스의 메서드가 이미 해당 이벤트에 연결되어 있고 그에 따라 실행됩니다.  상속된 메서드에서 `Handles` 절을 제거하십시오.  
+-   상속된 된 이벤트 처리기를 포함 하지 않아야는 [처리](../../../../visual-basic/language-reference/statements/handles-clause.md) 절. 기본 클래스의 메서드는 이벤트와 이미 연결 되어 하 고 그에 따라 실행 됩니다. 제거는 `Handles` 상속 된 메서드에서 절.  
   
-     [!code-vb[VbVbalrEvents#32](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/troubleshooting-inherited-event-handlers_1.vb)]  
+     [!code-vb[VbVbalrEvents #&32;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/troubleshooting-inherited-event-handlers_1.vb)]  
   
--   상속된 메서드에 `Handles` 키워드가 없는 경우에는 코드에 [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md) 또는 동일한 이벤트를 처리하는 추가 메서드가 있는지 확인하십시오.  
+-   상속 된 메서드가 없는 경우는 `Handles` 키워드를 코드는 포함 되지 않았는지 확인 [AddHandler 문](../../../../visual-basic/language-reference/statements/addhandler-statement.md) 또는 동일한 이벤트를 처리 하는 추가 메서드가 있습니다.  
   
-## 참고 항목  
- [Events](../../../../visual-basic/programming-guide/language-features/events/events.md)
+## <a name="see-also"></a>참고 항목  
+ [이벤트](../../../../visual-basic/programming-guide/language-features/events/index.md)

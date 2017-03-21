@@ -1,28 +1,44 @@
 ---
-title: "Internal error happened at &lt;location&gt; | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
+title: "내부 오류가 발생 했습니다. &lt;위치&gt; | Microsoft 문서"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
 ms.assetid: 0af78cbc-89ec-40ea-9dee-bac9f2cb7c1e
 caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
----
-# Internal error happened at &lt;location&gt;
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 0a16fc33f27568c38ea3bce6ef8c28abbd5ae4b6
+ms.lasthandoff: 03/13/2017
 
-내부 오류가 발생했습니다.  오류가 발생한 줄이 오류 메시지에 포함되어 있습니다.  
+---
+# <a name="internal-error-happened-at-ltlocationgt"></a>내부 오류가 발생 했습니다. &lt;위치&gt;
+내부 오류가 발생했습니다. 줄 발생 한 것은 오류 메시지에 포함 되어 있습니다.  
   
-### 이 오류를 해결하려면  
+## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   이 오류가 `Error` 문 또는 `Raise` 메서드에 의해 발생되지 않았는지 확인합니다. Error 문 또는 Raise 메서드에 의해 오류가 발생되지 않은 경우 Microsoft 기술 지원 서비스에 메시지가 나타난 상황을 문의하십시오.  
+-   있는지 확인 하 여이 오류가 생성 되지 않았습니다는 `Error` 문 또는 `Raise` 방법으로, 것이 아닌 경우, 되는 메시지는 다음과 같이 표시 됩니다. 조건을 보고 하려면 Microsoft 기술 지원 서비스에 문의 합니다.  
   
-## 참고 항목  
- [디버거 기본 사항](/visual-studio/debugger/debugger-basics)
+## <a name="see-also"></a>참고 항목  
+ [디버거 기본 사항](https://docs.microsoft.com/visualstudio/debugger/debugger-basics)

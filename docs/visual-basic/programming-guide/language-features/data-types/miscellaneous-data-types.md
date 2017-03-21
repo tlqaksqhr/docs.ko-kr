@@ -1,48 +1,64 @@
 ---
-title: "Miscellaneous Data Types (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Object data type, data types"
-  - "data types [Visual Basic], choosing"
+title: "기타 데이터 형식 (Visual Basic) | Microsoft 문서"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Object data type, data types
+- data types [Visual Basic], choosing
 ms.assetid: 64c71a12-9057-4dbf-baca-7379c4aada69
 caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
----
-# Miscellaneous Data Types (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 2de377fa9dfd7ec13cdbb9b700f8485b0c0e2106
+ms.lasthandoff: 03/13/2017
 
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]에서는 숫자나 문자로 분류되지 않는 여러 데이터 형식을 제공합니다.  이러한 데이터 형식은 yes\/no 값, 날짜\/시간 값 및 개체 주소와 같은 특수 데이터를 처리합니다.  
+---
+# <a name="miscellaneous-data-types-visual-basic"></a>기타 데이터 형식(Visual Basic)
+[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]숫자 또는 문자 분류 되지 않는 몇 가지 데이터 형식을 제공 합니다. 대신,은 특수 한 데이터 처리와 같은 예/아니요 값, 날짜/시간 값 및 개체 주소 합니다.  
   
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 데이터 형식을 비교한 표를 보려면 [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md)을 참조하십시오.  
+ 나란히 비교를 보여 주는 표는 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 데이터 형식 참조 [데이터 형식](../../../../visual-basic/language-reference/data-types/data-type-summary.md)합니다.  
   
-## Boolean 형식  
- [Boolean Data Type](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)은 `True`나 `False`로 해석되는 부호 없는 값입니다.  데이터 너비는 구현하는 플랫폼에 따라 다릅니다.  변수가 true\/false, yes\/no 또는 on\/off 등의 두 상태로 된 값만 가질 수 있는 경우에는 변수를 `Boolean`으로 선언합니다.  
+## <a name="boolean-type"></a>부울 형식  
+ [Boolean 데이터 형식](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) 로 해석 되는 부호 없는 값은 `True` 또는 `False`합니다. 데이터 너비 구현 하는 플랫폼에 따라 달라 집니다. 변수를 포함할 수 있으면 true/false와 같은 두 가지 상태 값만 예/아니요 또는 켜기/끄기로 선언 `Boolean`합니다.  
   
-## Date 형식  
- [Date Data Type](../../../../visual-basic/language-reference/data-types/date-data-type.md)은 날짜와 시간 정보가 모두 있는 64비트 값입니다.  각 증분은 그레고리오력으로 1년 1월 1일 시작\(12:00 AM\)부터 경과한 시간의 100 나노초 단위를 나타냅니다.  변수가 날짜 값, 시간 값 또는 둘 다를 가질 수 있는 경우에는 변수를 `Date`로 선언합니다.  
+## <a name="date-type"></a>날짜 형식  
+ [Date 데이터 형식](../../../../visual-basic/language-reference/data-types/date-data-type.md) 날짜와 시간 정보를 보유 하는 64 비트 값입니다. 각 증분 일반 달력에서 1 년 1 월 1 (오전 12시)부터 경과 된 시간 (100 나노초)를 나타냅니다. 변수는 날짜 값, 시간 값 또는 둘 다를 포함할 수 있으면로 선언 `Date`합니다.  
   
-## Object 형식  
- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)은 응용 프로그램이나 일부 다른 응용 프로그램에 있는 개체 인스턴스를 가리키는 32비트 주소입니다.  `Object` 변수는 응용 프로그램에서 인식할 수 있는 개체나 모든 데이터 형식의 데이터를 참조할 수 있습니다.  여기에 둘 다  *값 형식*, 같은 `Integer`, `Boolean`, 및 구조체 인스턴스를 및  *참조 형식*, 어떤 같은 클래스에서 생성 된 개체의 인스턴스는 `String` 및 <xref:System.Windows.Forms.Form>, 및 인스턴스는 배열.  
+## <a name="object-type"></a>개체 형식  
+ [Object 데이터 형식](../../../../visual-basic/language-reference/data-types/object-data-type.md) 응용 프로그램 내에서 또는 일부 다른 응용 프로그램에서 개체 인스턴스를 가리키는 32 비트 주소입니다. `Object` 변수는 모든 데이터 형식의 데이터 또는 응용 프로그램에서 인식, 모든 개체를 참조할 수 있습니다. 모두 포함이 *값 형식*와 같은 `Integer`, `Boolean`, 및 구조 인스턴스 및 *참조 형식*이며와 같은 클래스에서 생성 된 개체의 인스턴스인 `String` 및 <xref:System.Windows.Forms.Form>, 배열 인스턴스.</xref:System.Windows.Forms.Form>  
   
- 변수가 컴파일 타임에는 알 수 없는 클래스 인스턴스에 대한 포인터를 저장하거나 다양한 데이터 형식의 데이터를 가리킬 수 있는 경우에는 변수를 `Object`로 선언합니다.  
+ 컴파일 타임에 모르는 하는 클래스의 인스턴스에 대 한 포인터를 저장 하는 변수 또는 다양 한 데이터 형식의 데이터를 가리키는 수로 선언 `Object`합니다.  
   
- 장점이 있는 `Object` 입니다 하면이 모든 데이터 형식의 데이터를 저장할 수 있는 데이터입니다.  그러나 추가 연산이 수행되므로 실행 시간이 오래 걸리고 응용 프로그램의 성능이 느려진다는 단점도 있습니다.  `Object` 변수를 값 형식에 사용하면 *boxing* 및 *unboxing*이 수행되고,  참조 형식에 사용하면 *런타임에 바인딩*이 수행됩니다.  
+ 장점은 `Object` 데이터 형식을 사용 하면 모든 데이터 형식의 데이터를 저장 한다는 것입니다. 단점은 실행 시간이 더 오래 걸리는 느리게 수행 하는 응용 프로그램을 확인 하는 추가 작업을 인해 발생 하는 것입니다. 사용 하는 경우는 `Object` 유발 값 형식에 대 한 변수를 *boxing* 및 *unboxing*합니다. 참조 형식에 대해 사용 하는 경우 발생할 *런타임에 바인딩*합니다.  
   
-## 참고 항목  
- [Type Characters](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)   
- [Elementary Data Types](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)   
- [Numeric Data Types](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)   
- [Character Data Types](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)   
- [Troubleshooting Data Types](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [Early and Late Binding](../../../../visual-basic/programming-guide/language-features/early-late-binding/early-and-late-binding.md)
+## <a name="see-also"></a>참고 항목  
+ [형식 문자](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)   
+ [기본 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)   
+ [숫자 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)   
+ [문자 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)   
+ [데이터 형식 문제 해결](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
+ [초기 바인딩 및 런타임에 바인딩](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)

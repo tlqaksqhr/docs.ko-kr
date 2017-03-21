@@ -1,186 +1,202 @@
 ---
-title: "For Each...Next 문(Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.ForEach"
-  - "vb.ForEachNext"
-  - "vb.Each"
-  - "ForEachNext"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "무한 루프"
-  - "Next 문, For Each...Next"
-  - "무한 루프"
-  - "루프 구조, For Each...Next"
-  - "루프, 무한"
-  - "Each 키워드"
-  - "명령, 반복"
-  - "For Each 문"
-  - "컬렉션, 명령 반복"
-  - "루프, 무한"
-  - "For Each...Next 문"
-  - "For 키워드[Visual Basic], For Each...Next 문"
-  - "Exit 문, For Each...Next 문"
-  - "반복"
+title: "각각에 대해... 다음 문 (Visual Basic) | Microsoft 문서"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.ForEach
+- vb.ForEachNext
+- vb.Each
+- ForEachNext
+dev_langs:
+- VB
+helpviewer_keywords:
+- infinite loops
+- Next statement, For Each...Next
+- endless loops
+- loop structures, For Each...Next
+- loops, endless
+- Each keyword
+- instructions, repeating
+- For Each statement
+- collections, instruction repetition
+- loops, infinite
+- For Each...Next statements
+- For keyword [Visual Basic], For Each...Next statements
+- Exit statement, For Each...Next statements
+- iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
 caps.latest.revision: 56
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 56
----
-# For Each...Next 문(Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: e0173877fa4a57da76fd774d70ce63d2beda23ad
+ms.lasthandoff: 03/13/2017
 
-컬렉션의 각 요소에 대해 문의 그룹을 반복합니다.  
+---
+# <a name="for-eachnext-statement-visual-basic"></a>For Each...Next 문(Visual Basic)
+컬렉션의 각 요소에 대 한 문 그룹을 반복합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-For Each element [ As datatype ] In group  
-    [ statements ]  
-    [ Continue For ]  
-    [ statements ]  
-    [ Exit For ]  
-    [ statements ]  
-Next [ element ]  
+For Each element [ As datatype ] In group  
+    [ statements ]  
+    [ Continue For ]  
+    [ statements ]  
+    [ Exit For ]  
+    [ statements ]  
+Next [ element ]  
 ```  
   
-## 요소  
+## <a name="parts"></a>요소  
   
-|||  
-|-|-|  
 |용어|정의|  
-|`element`|`For Each` 문에서는 필수적 요소입니다.  `Next` 문에서는 선택적 요소입니다.  컬렉션의  요소를 반복하는 데 사용되는 변수입니다.|  
-|`datatype`|필요한 경우 `element` 이미 선언 되지 않습니다.  `element`의 데이터 형식입니다.|  
-|`group`|필수 요소.  컬렉션 형식 또는 개체 형식 사용 하는 변수입니다.  `statements`를 반복할 컬렉션을 참조합니다.|  
-|`statements`|선택 사항입니다.  `For Each`와 `Next` 사이에서 `group`의 각 항목에 대해 실행되는 하나 이상의 문입니다.|  
-|`Continue For`|선택 사항입니다.  컨트롤을 `For Each` 루프 시작으로 전송합니다.|  
-|`Exit For`|선택 사항입니다.  `For Each` 루프 밖으로 제어를 전달합니다.|  
-|`Next`|필수 요소.  `For Each` 루프의 정의를 끝냅니다.|  
+|---|---|  
+|`element`|에 필요한는 `For Each` 문입니다. 경우 선택 사항는 `Next` 문입니다. 변수입니다. 컬렉션의 요소를 반복 하는 데 사용 합니다.|  
+|`datatype`|필요한 경우 `element` 이미 선언 되지 않습니다. 데이터 형식이 `element`합니다.|  
+|`group`|필수 요소. 컬렉션 형식 이거나 개체 형식이 있는 변수입니다. 컬렉션을 참조 하는 `statements` 를 반복할 합니다.|  
+|`statements`|선택적 요소. 하나 이상의 문 사이의 `For Each` 및 `Next` 각 항목에 대해 실행 하는 `group`합니다.|  
+|`Continue For`|선택적 요소. 시작 부분으로 제어를 전송에서 `For Each` 루프입니다.|  
+|`Exit For`|선택적 요소. 밖으로 제어를 전송에서 `For Each` 루프입니다.|  
+|`Next`|필수 요소. 정의 종료는 `For Each` 루프입니다.|  
   
-## 간단한 예제  
- 컬렉션이나 배열의 각 요소에 대해 여러 문을 반복하려는 경우 `For Each`...`Next` 루프를 사용합니다.  
+## <a name="simple-example"></a>간단한 예  
+ Use a `For Each`... `Next` 컬렉션 또는 배열의 각 요소에 대 한 문 집합을 반복할 때 반복 합니다.  
   
 > [!TIP]
->  [For...Next 문](../../../visual-basic/language-reference/statements/for-next-statement.md)은 각 루프의 반복을 제어 변수와 연결하고 해당 변수의 초기 값과 최종 값을 결정할 수 있는 경우에 제대로 작동합니다.  그러나 컬렉션을 처리 하는 경우는 초기 값과 최종 값 이라는 개념이 의미 없고 컬렉션의 요소 수를 반드시 알 수 없습니다.  이 이런 경우에에서는 `For Each`...`Next` 루프 더 나은 선택 하는 경우가 많습니다.  
+>  A [For... 다음 문](../../../visual-basic/language-reference/statements/for-next-statement.md) 루프의 각 반복을 제어 변수와 연결 하 고 해당 변수의 초기 및 최종 값을 결정 수 경우 잘 작동 합니다. 그러나 컬렉션을 다룰 때는 초기 및 최종 값의 개념, 의미 있는 없고 컬렉션의 요소 수를 알 필요가 없습니다. 이러한 종류의 경우에는 `For Each`... `Next` 루프는 대개 더 좋습니다.  
   
- 다음 예제에서는 `For Each`...`Next` 문 목록 컬렉션의 모든 요소를 통해 반복 합니다.  
+ 다음 예제에서는 `For Each`...`Next` 문 목록 컬렉션의 모든 요소를 반복합니다.  
   
- [!code-vb[VbVbalrStatements#121](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements #&121;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_1.vb)]  
   
- 추가 예제는 [컬렉션](../Topic/Collections%20\(C%23%20and%20Visual%20Basic\).md) 및 [배열](../../../visual-basic/programming-guide/language-features/arrays/index.md)을 참조하십시오.  
+ 더 많은 예제를 참조 하십시오. [컬렉션](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b) 및 [배열](../../../visual-basic/programming-guide/language-features/arrays/index.md)합니다.  
   
-## 중첩 된 루프  
- 한 루프를 다른 루프 내에 배치하여 `For Each` 루프를 서로 중첩할 수 있습니다.  
+## <a name="nested-loops"></a>중첩 된 루프  
+ 중첩할 수 `For Each` 서로 배치 하 여 루프입니다.  
   
- 다음 예제는 중첩된 `For Each`…`Next` 구조체를 보여 줍니다.  
+ 다음 예제에서는 중첩 된 `For Each`...`Next` 구조입니다.  
   
- [!code-vb[VbVbalrStatements#122](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements #&122;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_2.vb)]  
   
- 루프를 중첩 하는 경우 각 루프에는 고유 해야 합니다 `element` 변수입니다.  
+ 각 루프는 고유 해야 루프를 중첩할 때 `element` 변수입니다.  
   
- 또한 다른 종류의 제어 구조를 서로 중첩할 수 있습니다.  자세한 내용은 [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)을 참조하십시오.  
+ 또한 다른 종류의 제어 구조 서로 중첩할 수 있습니다. 자세한 내용은 참조 [중첩 제어 구조](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)합니다.  
   
-## 계속 해 서 exit  
- [Exit For](../../../visual-basic/language-reference/statements/exit-statement.md) 문 실행을 종료 하는 `For`...`Next` 다음에 오는 문에 루프 및 전송 컨트롤의 `Next` 문.  
+## <a name="exit-for-and-continue-for"></a>에 대 한 종료 하 고 계속 하기  
+ [에 Exit](../../../visual-basic/language-reference/statements/exit-statement.md) 문을 사용 하면 실행을 종료 하는 `For`...`Next` 루프 및 전송 컨트롤 뒤에 오는 문에 `Next` 문입니다.  
   
- `Continue For` 문은 제어를 루프의 다음 반복으로 바로 이동합니다.  자세한 내용은 [Continue Statement](../../../visual-basic/language-reference/statements/continue-statement.md)을 참조하십시오.  
+ `Continue For` 문은 제어 즉시 루프의 다음 반복으로 합니다. 자세한 내용은 참조 [Continue 문을](../../../visual-basic/language-reference/statements/continue-statement.md)합니다.  
   
- 다음 예제에서는 `Continue For` 및 `Exit For` 문을 사용하는 방법을 설명합니다.  
+ 다음 예제를 사용 하는 방법을 보여 줍니다는 `Continue For` 및 `Exit For` 문입니다.  
   
- [!code-vb[VbVbalrStatements#123](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements #&123;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_3.vb)]  
   
- `For Each` 루프에 임의 수의 `Exit For` 문을 배치할 수 있습니다.  중첩된 `For Each` 루프 내에 `Exit For`를 사용하면 Exit For는 가장 안쪽의 루프를 끝내고 중첩 수준이 그 다음으로 높은 루프에 제어를 전달합니다.  
+ 개수에 관계 없이 입력할 수 있습니다 `Exit For` 의 문에서 `For Each` 루프입니다. 사용 하는 경우 내에 중첩 된 `For Each` 루프, `Exit For` 실행이 다음으로 높은 중첩 수준에 가장 안쪽의 루프 및 전송에 컨트롤을 종료 합니다.  
   
- `Exit For`는 `If`...`Then`...`Else` 구조와 마찬가지로 주로 일부 조건을 계산한 후에 사용됩니다.  다음 조건에 대해 `Exit For`를 사용할 수 있습니다.  
+ `Exit For`일부 조건 평가한 후에 대개에서 예를 들어 한 `If`... `Then`... `Else` 구조입니다. 사용 하려는 `Exit For` 다음 조건에 대 한 합니다.  
   
--   계속 반복은 불필요하며 불가능합니다.  오류가 있는 값 또는 종료 요청이 원인일 수 있습니다.  
+-   계속 반복은 불필요 하거나 불가능 합니다. 이 잘못 된 값 이나 종료 요청으로 발생할 수 있습니다.  
   
--   `Try`...`Catch`...`Finally`에 예외가 catch되었습니다.  `Finally` 블록 끝에 `Exit For`를 사용할 수 있습니다.  
+-   예외가 포착 되는 `Try`... `Catch`... `Finally`. 사용할 수 있는 `Exit For` 의 끝에는 `Finally` 블록입니다.  
   
--   매우 많이 또는 무한정 실행되는 루프인 무한 루프가 있습니다.  이러한 조건을 감지한 경우 `Exit For`를 사용하여 루프를 이스케이프할 수 있습니다.  자세한 내용은 [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md)을 참조하십시오.  
+-   여기는 길어지거나 무한히 계속도 여러 번 실행 될 수 있는 루프는 무한 반복 합니다. 이러한 조건을 감지한 경우 사용할 수 있습니다 `Exit For` 를 루프를 이스케이프 합니다. 자세한 내용은 참조 [수행... 반복 문](../../../visual-basic/language-reference/statements/do-loop-statement.md)합니다.  
   
-## 반복기  
- 사용 하는  *반복기* 통해 사용자 지정 반복을 수행 합니다.  반복기는 함수가 될 수 있습니다 또는 `Get` 접근자입니다.  사용 하는 `Yield` 문 컬렉션 1 번의 각 요소를 반환 합니다.  
+## <a name="iterators"></a>반복기  
+ 사용 된 *반복기* 컬렉션에 대해 사용자 지정 반복을 수행 하 합니다. 반복기는 함수 일 수 또는 `Get` 접근자입니다. 사용 하 여 한 `Yield` 문을 한 번에 컬렉션의 각 요소를 반환 합니다.  
   
- 반복기를 사용 하 여 호출을 `For Each...Next` 문.  각 반복의 `For Each` 루프 반복기를 호출 합니다.  때는 `Yield` 문에 도달에서 반복기가 식에는 `Yield` 문입니다 반환 하 고 코드에서 현재 위치를 유지 합니다.  실행 위치에서 반복기가 호출 되는 다음 번 다시 시작 됩니다.  
+ 반복기를 사용 하 여 호출을 `For Each...Next` 문입니다. 각 반복에서 `For Each` 루프는 반복기를 호출 합니다. 때는 `Yield` 반복기의 식에서 문에 도달 하면는 `Yield` 문을 반환 되 고 코드에서 현재 위치는 유지 됩니다. 다음에 반복기가 호출되면 해당 위치에서 실행이 다시 시작됩니다.  
   
- 다음 예제에서는 반복기 함수를 사용합니다.  반복기 함수는 `Yield` 문 내부에  [에 대 한...다음](../../../visual-basic/language-reference/statements/for-next-statement.md) 루프.  에 `ListEvenNumbers` 메서드를 반복할 때마다의 `For Each` 문의 본문 옆에 진행 하는 반복기 함수 호출을 만듭니다 `Yield` 문.  
+ 다음 예제에서는 반복기 함수를 사용 합니다. 반복기 함수에는 `Yield` 문 내에 있는 한 [에 대 한... 다음](../../../visual-basic/language-reference/statements/for-next-statement.md) 루프입니다. 에 `ListEvenNumbers` 메서드, 각 반복의는 `For Each` 문 본문에서 다음 단계로 진행 하는 반복기 함수에 대 한 호출을 만듭니다 `Yield` 문입니다.  
   
- [!code-vb[VbVbalrStatements#127](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_4.vb)]  
+ [!code-vb[VbVbalrStatements&127;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_4.vb)]  
   
- 자세한 내용은 [반복기](../Topic/Iterators%20\(C%23%20and%20Visual%20Basic\).md), [Yield 문](../../../visual-basic/language-reference/statements/yield-statement.md) 및 [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md)을 참조하십시오.  
+ 자세한 내용은 참조 [반복기](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7), [Yield 문을](../../../visual-basic/language-reference/statements/yield-statement.md), 및 [반복기](../../../visual-basic/language-reference/modifiers/iterator.md)합니다.  
   
-## 기술 구현  
- When a `For Each`…`Next` 문이 실행 되 면, Visual Basic 컬렉션에 루프를 시작 하기 전에 한 번만 계산 합니다.  문 블록이 변경 되는 경우 `element` 또는 `group`, 이러한 변경 내용은 루프의 반복 영향을 주지 않습니다.  
+## <a name="technical-implementation"></a>기술 구현  
+ 경우는 `For Each`...`Next` Visual Basic, 문을 실행 한 번만 루프를 시작 하기 전에 컬렉션 자체를 평가 합니다. 문 블록 변경 되 면 `element` 또는 `group`, 이러한 변경 내용은 루프의 반복 영향을 주지 않습니다.  
   
- 컬렉션의 모든 요소가 `element`에 할당되었으면 `For Each` 루프가 종료되고 `Next` 문 다음 문으로 제어가 전달됩니다.  
+ 때 컬렉션의 모든 요소가 표시 된 순서 대로에 할당 된 `element`, `For Each` 루프가 종료 되 고 다음 문으로 전달 제어는 `Next` 문입니다.  
   
- 경우 `element` 않은 선언 된이 루프의 외부에 선언 해야에 `For Each` 문.  `As` 문을 사용하여 `element`의 형식을 명시적으로 선언할 수도 있고 형식을 할당하는 형식 유추에 의존할 수도 있습니다.  어느 경우든 `element`의 범위는 루프의 본문입니다.  그러나 루프 외부와 내부 모두에 `element`를 선언할 수는 없습니다.  
+ 경우 `element` 되지 않은 외부에 선언이 루프에서 선언 해야에 `For Each` 문입니다. 형식을 선언할 수 있습니다 `element` 를 사용 하 여 명시적으로 `As` 문이 형식을 할당 하는 형식 유추에 사용할 수 있습니다. 두 경우 모두의 범위 `element` 루프의 본문입니다. 그러나 선언할 수 없습니다 `element` 외부 및 내부 루프입니다.  
   
- 필요에 따라 `Next` 문에 `element`를 지정할 수 있습니다.  이렇게 하면 `For Each` 루프가 중첩된 경우에 특히 프로그램의 가독성이 향상됩니다.  해당 `For Each` 문에 나타나는 변수와 동일한 변수를 지정해야 합니다.  
+ 선택적으로 지정할 수 `element` 에 `Next` 문입니다. 중첩 된 경우에 특히 프로그램의 가독성이 향상 됩니다 `For Each` 루프입니다. 표시에 해당 하는 것과 같은 변수를 지정 해야 `For Each` 문입니다.  
   
- 루프 안에서 `element` 값을 변경하지 못하도록 할 수 있습니다.  이렇게 하면 코드를 읽고 디버그하기가 더 어려워질 수 있습니다.  값을 변경 `group` 컬렉션이 나 루프를 처음 입력 해도 해당 요소에 영향을 주지 않습니다.  
+ 값을 변경 하지 않도록 하려는 경우 `element` 루프 안에 있습니다. 이렇게 것 더 어렵게 만들 수를 읽고 코드를 디버깅 합니다. 값을 변경 `group` 컬렉션 또는 루프를 처음으로 입력 하는 경우는 해당 요소에 영향을 주지 않습니다.  
   
- 때에 중첩 루프를 경우는 `Next` 외부 중첩 수준의 문이 전에 `Next` 내부 수준에, 컴파일러는 오류 신호를 보냅니다.  그러나 모든 `Next` 문에 `element`를 지정하는 경우에만 컴파일러에서 이러한 겹치는 오류를 검색할 수 있습니다.  
+ 경우 루프를 중첩 하는 경우는 `Next` 외부 중첩 수준의의 문이 하기 전에 `Next` 내부 수준의 컴파일러에서 오류를 알립니다. 그러나 컴파일러 검색할 수 지정 하는 경우에 중복 오류 `element` 에서 모든 `Next` 문입니다.  
   
- 코드가 특정 순서로 컬렉션을 통과 하는에 있는 `For Each`...`Next` 루프 없는 최선의 선택, 열거자 개체의 특징을 모르면 컬렉션을 노출 합니다.  이동 Visual Basic 있지만 여 결정 되지 않습니다는 <xref:System.Collections.IEnumerator.MoveNext%2A> 메서드는 열거자 개체의.  따라서 `element`에서 처음 반환되는 컬렉션 요소나 지정된 요소 다음에 반환되는 컬렉션 요소를 예측할 수 없을 수 있습니다.  이 경우 `For`...`Next` 또는 `Do`...`Loop` 등의 다른 루프 구조를 사용하면 좀더 신뢰할 수 있는 결과를 얻을 수 있습니다..  
+ 코드가 특정 한 순서로 컬렉션을 이동 하는 경우는 `For Each`... `Next` 루프에 적합 하지 않을, 열거자 개체의 특징을 알 수 없는 경우 컬렉션을 노출 합니다. 탐색 순서에서 하지만 Visual Basic에서 결정 되지는 <xref:System.Collections.IEnumerator.MoveNext%2A>열거자 개체의 메서드.</xref:System.Collections.IEnumerator.MoveNext%2A> 처음에 반환 될 컬렉션의 요소를 예측할 수 없습니다 따라서 `element`, 다음에 지정 된 요소 반환 되는 또는입니다. 와 같은 다른 루프 구조를 사용 하 여 더 안정적인 결과 얻을 수 `For`... `Next` or `Do`... `Loop`.  
   
- `element`의 데이터 형식은 `group` 요소의 데이터 형식을 변환할 수 있는 형식이어야 합니다.  
+ 데이터 형식이 `element` 으로 있어야 데이터의 요소 형식 `group` 변환할 수 있습니다.  
   
- 데이터 형식은 `group` 열거 가능한 배열 또는 컬렉션을 참조 하는 참조 형식 이어야 합니다.  대부분 `group`은 [System.Collections](assetId:///System.Collections?qualifyHint=False&amp;autoUpgrade=True) 네임스페이스의 `T:System.Collections.IEnumerable` 인터페이스 또는 [System.Collections.Generic](assetId:///System.Collections.Generic?qualifyHint=False&amp;autoUpgrade=True) 네임스페이스의 `T:System.Collections.Generic.IEnumerable`1` 인터페이스를 구현하는 개체를 참조한다는 뜻입니다.  `System.Collections.IEnumerable`은 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 메서드를 정의하여, 컬렉션의 열거자 개체를 반환합니다.  열거자 개체는 `System.Collections` 네임스페이스의 `System.Collections.IEnumerator` 인터페이스를 구현하며 <xref:System.Collections.IEnumerator.Current%2A> 속성과 <xref:System.Collections.IEnumerator.Reset%2A> 및 <xref:System.Collections.IEnumerator.MoveNext%2A> 메서드를 노출합니다.  Visual Basic에서는 이를 사용하여 컬렉션을 순회합니다.  
+ 데이터 형식이 `group` 컬렉션 또는 열거 가능 배열을 참조 하는 참조 형식 이어야 합니다. 따라서 가장 일반적으로 `group` 구현 하는 개체를 참조 하는 <xref:System.Collections.IEnumerable>의 인터페이스는 `System.Collections` 네임 스페이스 또는 <xref:System.Collections.Generic.IEnumerable%601>의 인터페이스는 `System.Collections.Generic` 네임 스페이스.</xref:System.Collections.Generic.IEnumerable%601> </xref:System.Collections.IEnumerable> `System.Collections.IEnumerable`정의 <xref:System.Collections.IEnumerable.GetEnumerator%2A>메서드는 컬렉션에 대 한 열거자 개체를 반환 합니다.</xref:System.Collections.IEnumerable.GetEnumerator%2A> 열거자 개체를 구현 하는 `System.Collections.IEnumerator` 의 인터페이스는 `System.Collections` 네임 스페이스를 노출 하 고는 <xref:System.Collections.IEnumerator.Current%2A>속성 및 <xref:System.Collections.IEnumerator.Reset%2A>및 <xref:System.Collections.IEnumerator.MoveNext%2A>메서드.</xref:System.Collections.IEnumerator.MoveNext%2A> </xref:System.Collections.IEnumerator.Reset%2A> </xref:System.Collections.IEnumerator.Current%2A> Visual Basic 컬렉션을 탐색 하려면이 사용 합니다.  
   
-### 축소 변환  
- `Option Strict`가 `On`으로 설정된 경우 축소 변환을 수행하면 대개 컴파일 오류가 발생합니다.  하지만 `For Each` 문에서는 `group`의 요소에서 `element`로의 변환이 런타임에 계산되고 수행되므로 변환 축소로 인한 컴파일러 오류가 표시되지 않습니다.  
+### <a name="narrowing-conversions"></a>축소 변환  
+ 때 `Option Strict` 로 설정 된 `On`, 축소 변환에는 일반적으로 컴파일러 오류가 발생 합니다. 그러나에 `For Each` 문을 요소에서 변환 `group` 를 `element` 계산 되 고 실행 시 수행 축소 변환으로 발생 하는 컴파일러 오류 표시 되지 않습니다.  
   
- 다음 예제에 대 한 할당 `m` 초기 값으로 `n` 때 컴파일되지 `Option Strict` 때문에 변환에 `Long` 에 `Integer` 은 축소 변환입니다.  하지만 `For Each` 문에서는 `number`에 대한 할당 시 `Long`에서 `Integer`로의 변환이 필요함에도 불구하고 컴파일러 오류가 보고되지 않습니다.  큰 숫자가 포함된 `For Each` 문에서는 <xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A>가 큰 숫자에 적용될 때 런타임 오류가 발생합니다.  
+ 다음 예제에서는 할당에에서 `m` 에 대 한 초기 값으로 `n` 때 컴파일되지 않습니다 `Option Strict` 때문에 켜져 변환은 `Long` 에 `Integer` 축소 변환입니다. 에 `For Each` 반면 컴파일러 오류가 발생은 문에 대 한 할당도 보고 `number` 에서 동일한 변환 해야 하는 `Long` 를 `Integer`합니다. 에 `For Each` 다 수 포함 된 문에서 런타임 오류가 발생 하는 경우 <xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A>큰 숫자에 적용 됩니다.</xref:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger%2A>  
   
- [!code-vb[VbVbalrStatements#89](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_5.vb)]  
+ [!code-vb[VbVbalrStatements #&89;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_5.vb)]  
   
-### IEnumerator 호출  
- `For Each`...`Next` 루프 실행이 시작되면 Visual Basic에서 `group`이 올바른 컬렉션 개체를 참조하는지 확인합니다.  올바른 컬렉션 개체를 참조하지 않는 경우 예외가 throw됩니다.  그렇지 않으면 열거자 개체의 <xref:System.Collections.IEnumerator.MoveNext%2A> 메서드와 <xref:System.Collections.IEnumerator.Current%2A> 속성을 호출하여 첫 번째 요소를 반환합니다.  `MoveNext`가 다음 요소가 없음을 나타내면, 즉 컬렉션이 비어 있으면 `For Each` 루프가 종료되고 `Next` 문 다음 문으로 제어가 전달됩니다.  그렇지 않으면 Visual Basic에서 `element`를 첫 번째 요소로 설정하고 문 블록을 실행합니다.  
+### <a name="ienumerator-calls"></a>IEnumerator 호출  
+ 경우 실행을 `For Each`... `Next` 루프가 시작, Visual Basic 확인 `group` 유효한 컬렉션 개체를 참조 합니다. 그렇지 않으면 예외를 throw 합니다. 호출 된 <xref:System.Collections.IEnumerator.MoveNext%2A>메서드 및 <xref:System.Collections.IEnumerator.Current%2A>첫 번째 요소를 반환 하는 열거자 개체의 속성입니다.</xref:System.Collections.IEnumerator.Current%2A> </xref:System.Collections.IEnumerator.MoveNext%2A> 경우 `MoveNext` 중임을 나타냅니다 다음 없는 요소 즉, 컬렉션이 비어 있는 경우는 `For Each` 루프가 종료 되 고 다음 문으로 전달 제어는 `Next` 문입니다. 그렇지 않은 경우 Visual Basic 설정 `element` 첫 번째 요소 및 문 블록을 실행 합니다.  
   
- Visual Basic에서는 `Next` 문을 만날 때마다 `For Each` 문으로 돌아갑니다.  다시 `MoveNext`와 `Current`를 호출하여 다음 요소를 반환하고 결과에 따라 블록을 다시 실행하거나 루프를 종료합니다.  `MoveNext`에서 다음 요소가 없음을 나타내거나 `Exit For` 문을 만날 때까지 이 과정이 계속됩니다.  
+ Visual Basic 발견할 때마다는 `Next` 에 반환 문에 `For Each` 문. 호출 다시 `MoveNext` 및 `Current` 및 반환 하 고 다음 요소인 다시 것 블록을 실행 하거나 결과 따라 루프를 중지 합니다. 될 때까지이 프로세스를 계속 `MoveNext` 는 다음 요소가 나타냅니다 또는 `Exit For` 문이 있습니다.  
   
- **컬렉션 수정.** 반환 된 열거자 개체 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 일반적으로 추가, 삭제, 교체 또는 재배열 된 요소 컬렉션을 변경할 수 없습니다.  `For Each`...`Next` 루프를 시작한 다음 컬렉션을 변경하면 열거자 개체는 유효하지 않게 되고, 다음에 요소에 액세스하려고 하면 <xref:System.InvalidOperationException> 예외가 발생합니다.  
+ **컬렉션을 수정 합니다.** 반환 되는 열거자 개체 <xref:System.Collections.IEnumerable.GetEnumerator%2A>일반적으로 허용 하지 않습니다 추가, 삭제, 바꾸기 또는 모든 요소를 다시 정렬 하 여 컬렉션을 변경할 수 있습니다.</xref:System.Collections.IEnumerable.GetEnumerator%2A> 초기화 한 후에 컬렉션을 변경 하는 경우는 `For Each`... `Next` 루프 열거자 개체는 유효 하지 않았으며 요소에 액세스 하 여 다음 시도 <xref:System.InvalidOperationException>예외.</xref:System.InvalidOperationException>  
   
- 그러나 이와 같이 수정을 차단할지 결정 되지 않은 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)], 하지 않고 구현 된 <xref:System.Collections.IEnumerable> 인터페이스.  반복 과정에서 수정할 수 있도록 `IEnumerable`을 구현할 수 있습니다.  그러한 동적 수정 방식을 염두에 두고 있다면 사용 중인 컬렉션에 대한 `IEnumerable` 구현의 특징을 이해할 필요가 있습니다.  
+ 그러나이 인해 수정 되지 않습니다에 따른 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], 하지만 구현에 의해 아니라는 <xref:System.Collections.IEnumerable>인터페이스.</xref:System.Collections.IEnumerable> 구현 하는 것이 불가능 `IEnumerable` 반복 중 수정을 허용 하는 방식에서입니다. 그러한 동적 수정 방식을 고려 하는 경우의 특징을 이해 하 고 있는지 확인은 `IEnumerable` 를 사용 하는 컬렉션에서 구현 합니다.  
   
- **컬렉션 요소 수정.** 열거자 개체의 <xref:System.Collections.IEnumerator.Current%2A> 속성은 [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)이며 각 컬렉션 요소의 로컬 복사본을 반환합니다.  이것은 `For Each`...`Next` 루프에서 요소 자체를 수정할 수 없음을 의미합니다.  수정 내용을 들은 로컬 사본 으로부터 영향을 `Current` 를 내부 컬렉션에 반영 되지 않습니다.  그러나 요소가 참조 형식인 경우에는 요소가 가리키는 인스턴스의 멤버를 수정할 수 있습니다.  다음 예제에서는 수정의 `BackColor` 멤버 각각의 `thisControl` 요소.  그러나 수정할 수 없습니다 `thisControl` 자체.  
+ **컬렉션 요소를 수정 합니다.** <xref:System.Collections.IEnumerator.Current%2A>열거자 개체의 속성은 [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md), 각 컬렉션 요소의 로컬 복사본을 반환 합니다.</xref:System.Collections.IEnumerator.Current%2A> 이 요소 자체를 수정할 수 없음을 의미에 `For Each`... `Next` loop. 수정 내용이에서 로컬 복사본에만 영향을 줍니다 `Current` 다시 기본 컬렉션에 반영 되지 않습니다. 그러나 요소 참조 형식인 경우 가리키는 인스턴스의 멤버를 수정할 수 있습니다. 다음 예제에서는 수정 된 `BackColor` 의 각 구성원 `thisControl` 요소입니다. 그러나 수정할 수는 없습니다 `thisControl` 자체입니다.  
   
 <CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
- 앞의 예제에서는 `thisControl` 자체는 수정할 수 없어도 각 `thisControl` 요소의 `BackColor` 멤버는 수정할 수 있습니다.  
+ 앞의 예제를 수정할 수는 `BackColor` 의 각 구성원 `thisControl` 요소를 수정할 수는 있지만 `thisControl` 자체입니다.  
   
- **배열 탐색.** <xref:System.Array> 클래스는 <xref:System.Collections.IEnumerable> 인터페이스를 구현하므로 모든 배열이 <xref:System.Array.GetEnumerator%2A> 메서드를 노출합니다.  이것은 `For Each`...`Next` 루프로 배열을 여러 번 반복할 수 있음을 의미합니다.  그러나 배열 요소는 읽을 수만 있습니다.  이는 변경할 수 없습니다.  
+ **배열을 탐색 합니다.** 때문에 <xref:System.Array>클래스가 구현 하는 <xref:System.Collections.IEnumerable>인터페이스, 모든 배열 노출 된 <xref:System.Array.GetEnumerator%2A>메서드.</xref:System.Array.GetEnumerator%2A> </xref:System.Collections.IEnumerable> </xref:System.Array> 즉, 배열을 반복할 수 있는지는 `For Each`... `Next` loop. 그러나 배열 요소만 읽을 수 있습니다. 변경할 수 없습니다.  
   
-## 예제  
- 다음 예제에서는 <xref:System.IO.DirectoryInfo> 클래스를 사용하여 C:\\ 디렉터리에 있는 모든 폴더를 표시합니다.  
+## <a name="example"></a>예제  
+ 다음 예에서는 <xref:System.IO.DirectoryInfo>클래스</xref:System.IO.DirectoryInfo> 를 사용 하 여 C:\ 디렉터리에 있는 모든 폴더를 나열 합니다.  
   
- [!code-vb[VbVbalrStatements#124](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_6.vb)]  
+ [!code-vb[VbVbalrStatements #&124;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_6.vb)]  
   
-## 예제  
- 다음 예제에서는 컬렉션을 정렬 하는 프로시저를 보여 줍니다.  인스턴스를 정렬 하는 예제는 한 `Car` 에 저장 하는 클래스는 <xref:System.Collections.Generic.List%601>.  `Car` 클래스가 구현 된 <xref:System.IComparable%601> 인터페이스를 필요로 하는 <xref:System.IComparable%601.CompareTo%2A> 메서드 구현.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 컬렉션 정렬 절차를 보여 줍니다. 인스턴스를 정렬 하는 예제는 `Car` <xref:System.Collections.Generic.List%601>.</xref:System.Collections.Generic.List%601> 에 저장 되어 있는 클래스 `Car` 클래스가 구현 하는 <xref:System.IComparable%601>인터페이스를 필요로 하는 <xref:System.IComparable%601.CompareTo%2A>메서드를 구현 합니다.</xref:System.IComparable%601.CompareTo%2A> </xref:System.IComparable%601>  
   
- 각 호출에는 <xref:System.IComparable%601.CompareTo%2A> 메서드는 정렬에 사용 되는 단일 비교를 만듭니다.  사용자가 작성 한 코드에는 `CompareTo` 각 비교의 현재 개체를 다른 개체에 대 한 값을 반환 합니다.  반환 되는 값 이하일 경우 현재 개체 보다 다른 개체를 현재 개체가 다른 개체 보다 크면 0 보다 크고 0 같으면.  이 코드를 보다 큼, 보다 작음, 기준을 정의 하 고 같은 수 있습니다.  
+ 각 호출에는 <xref:System.IComparable%601.CompareTo%2A>메서드 정렬에 사용 되는 단일 비교를 수행 합니다.</xref:System.IComparable%601.CompareTo%2A> 사용자가 작성 한 코드는 `CompareTo` 메서드를 다른 개체와 현재 개체의 각 비교에 대 한 값을 반환 합니다. 현재 개체가 다른 개체보다 작으면 반환되는 값이&0;보다 작고, 현재 개체가 다른 개체보다 크면&0;보다 크고, 같으면&0;입니다. 이렇게 하면 보다 큼, 보다 작음 및 같음에 대한 조건을 코드에서 정의할 수 있습니다.  
   
- 에 `ListCars` 메서드는 `cars.Sort()` 문 목록 정렬.  이 호출에는 <xref:System.Collections.Generic.List%601.Sort%2A> 메서드는 <xref:System.Collections.Generic.List%601> 발생의 `CompareTo` 메서드가 자동으로 호출 하려면는 `Car` 개체의 `List`.  
+ 에 `ListCars` 메서드를는 `cars.Sort()` 문 목록을 정렬 합니다. 이 호출으로는 <xref:System.Collections.Generic.List%601.Sort%2A>의 메서드는 <xref:System.Collections.Generic.List%601>하면는 `CompareTo` 에 대 한 자동으로 호출 될 메서드를는 `Car` 개체에 `List`.</xref:System.Collections.Generic.List%601> </xref:System.Collections.Generic.List%601.Sort%2A>  
   
- [!code-vb[VbVbalrStatements#125](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_7.vb)]  
+ [!code-vb[VbVbalrStatements #&125;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_7.vb)]  
   
-## 참고 항목  
- [컬렉션](../Topic/Collections%20\(C%23%20and%20Visual%20Basic\).md)   
- [For...Next 문](../../../visual-basic/language-reference/statements/for-next-statement.md)   
- [Loop Structures](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   
- [While...End While Statement](../../../visual-basic/language-reference/statements/while-end-while-statement.md)   
- [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md)   
- [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)   
- [Object Initializers: Named and Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)   
- [Collection Initializers](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)   
+## <a name="see-also"></a>참고 항목  
+ [컬렉션](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)   
+ [...에 대 한 Next 문](../../../visual-basic/language-reference/statements/for-next-statement.md)   
+ [루프 구조](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   
+ [While... While 문 종료](../../../visual-basic/language-reference/statements/while-end-while-statement.md)   
+ [... 반복 문](../../../visual-basic/language-reference/statements/do-loop-statement.md)   
+ [확대 변환과 축소 변환](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)   
+ [개체 이니셜라이저: 명명 된 형식과 익명 형식](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)   
+ [컬렉션 이니셜라이저](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)   
  [배열](../../../visual-basic/programming-guide/language-features/arrays/index.md)

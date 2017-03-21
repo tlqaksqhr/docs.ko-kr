@@ -1,93 +1,109 @@
 ---
-title: "Lifetime in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "static variables, lifetime"
-  - "static variables, Visual Basic"
-  - "declared elements, lifetime"
-  - "Shared variable lifetime"
-  - "lifetime, declared elements"
-  - "lifetime, Visual Basic"
-  - "lifetime"
+title: "Visual Basic의 수명 | Microsoft 문서"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- static variables, lifetime
+- static variables, Visual Basic
+- declared elements, lifetime
+- Shared variable lifetime
+- lifetime, declared elements
+- lifetime, Visual Basic
+- lifetime
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
 caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
----
-# Lifetime in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: fa0cbdf4a8fe5e8fc41e4e4f373c79451fb7b75f
+ms.lasthandoff: 03/13/2017
 
-선언 요소의 *수명*은 선언 요소를 사용할 수 있는 기간을 의미합니다.  변수는 수명이 있는 유일한 요소입니다.  이를 위해 컴파일러에서는 프로시저 매개 변수와 함수 반환 값을 특별한 경우의 변수로 간주합니다.  변수의 수명은 변수가 값을 가질 수 있는 기간을 나타냅니다.  이 기간 동안 변수의 값은 변할 수 있지만 항상 어떤 값을 가집니다.  
+---
+# <a name="lifetime-in-visual-basic"></a>Visual Basic의 수명
+*수명* 선언 요소의 시간 동안 어떤 용도로 사용할 수 있습니다. 변수는 수명이 있는 유일한 요소입니다. 이 위해 컴파일러는 프로시저 매개 변수를 처리 및 변수의 특별 한 경우로 함수를 반환 합니다. 변수의 수명 값을 저장할 수 있는 기간을 나타냅니다. 해당 값은 해당 수명 동안 변경 될 수 있지만 항상 어떤 값을 가집니다.  
   
-## 여러 가지 수명  
- 프로시저 밖의 모듈 수준에서 선언된 *멤버 변수*는 일반적으로 해당 변수가 선언된 요소와 수명이 동일합니다.  클래스나 구조체에서 선언된 비공유 변수는 해당 변수가 선언된 클래스나 구조체의 각 인스턴스에 대한 개별적인 복사본으로 존재합니다.  따라서 각 변수와 인스턴스는 수명이 동일합니다.  그러나, `Shared` 변수는 응용 프로그램이 실행되는 전체 기간 동안 지속되는 하나의 수명만을 가집니다.  
+## <a name="different-lifetimes"></a>다른 수명  
+ A *멤버 변수* (다른 프로시저 외부의 모듈 수준에서 선언 됨) 일반적으로 수명이 같은 선언 된 요소입니다. 클래스 또는 구조체에 선언 된 비공유 변수 선언 된 구조체의 각 인스턴스에 대해 별도 복사본으로 존재 합니다. 각 변수는 해당 인스턴스로 수명이 동일 합니다. 그러나 한 `Shared` 변수는 응용 프로그램을 실행 하는 전체 기간 동안 지속 되는 단일 수명이 합니다.  
   
- 프로시저 내에 선언된 *지역 변수*는 지역 변수가 선언된 프로시저가 실행되는 동안에만 존재합니다.  이는 해당 프로시저의 매개 변수와 모든 함수 반환 값에도 적용됩니다.  그러나, 이 프로시저가 다른 프로시저를 호출하는 경우 호출된 프로시저가 실행되는 동안 지역 변수 값은 유지됩니다.  
+ A *지역 변수* (프로시저 내에 선언 된) 선언 된 프로시저를 실행 하는 동안에 존재 합니다. 또한 모든 함수 반환 값 및 해당 프로시저의 매개 변수에 적용 됩니다이. 그러나 해당 프로시저가 다른 프로시저를 호출 하는 경우 지역 변수 값을 유지 호출된 프로시저를 실행 하는 동안.  
   
-## 수명의 시작  
- 지역 변수의 수명은 지역 변수가 선언된 프로시저로 제어가 전달될 때 시작됩니다.  모든 지역 변수는 프로시저가 실행되기 시작하는 즉시 해당 데이터 형식의 기본값으로 초기화됩니다.  프로시저가 초기 값을 지정하는 `Dim` 문을 만나면 코드에서 이미 다른 값을 해당 변수에 할당했을 경우에도 해당 값에 해당 변수를 설정합니다.  
+## <a name="beginning-of-lifetime"></a>수명의 시작  
+ 로컬 변수의 수명 제어가 선언 되는 프로시저를 입력할 때 시작 됩니다. 프로시저를 시작 하는 즉시 모든 지역 변수 데이터 형식에 대 한 기본 값으로 초기화 됩니다를 실행 합니다. 프로시저가 발견 하는 경우는 `Dim` 초기 값을 지정 하는 문을 해당 변수를 설정 하려면 이러한 값을 코드에 이미 다른 값을 할당 한 경우에 합니다.  
   
- 구조체 변수의 각 멤버는 마치 개별적인 변수인 것처럼 초기화됩니다.  이와 비슷하게 배열 변수의 각 요소도 개별적으로 초기화됩니다.  
+ 구조체 변수의 각 멤버는 마치는 별도 변수인 것 처럼 초기화 됩니다. 마찬가지로, 배열 변수의 각 요소는 개별적으로 초기화 됩니다.  
   
- 프로시저 내의 블록에 선언된 `For` 루프 등의 변수는 프로시저가 실행되기 시작할 때 초기화됩니다.  이러한 초기화는 코드에서 해당 블록을 실행하는지 여부에 관계없이 적용됩니다.  
+ 프로시저 내의 블록 내에서 선언 된 변수 (예:는 `For` 루프) 프로시저에는 항목에 대해 초기화 됩니다. 이러한 초기화 코드 블록 실행 여부를 적용 합니다.  
   
-## 수명의 종료  
- 프로시저가 종료되면 해당 지역 변수의 값이 소실되고 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]에서는 이 지역 변수에서 사용하던 메모리를 회수합니다.  다음에 프로시저를 호출하면 모든 지역 변수가 다시 만들어지고 초기화됩니다.  
+## <a name="end-of-lifetime"></a>수명의 끝  
+ 프로시저 종료 되 면 해당 지역 변수의 값 유지 되지 않습니다, 그리고 및 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 해당 메모리를 회수 합니다. 다음에 프로시저를 호출할 때 모든 지역 변수가 다시 만들고 다시 초기화 합니다.  
   
- 클래스나 구조체의 인스턴스가 종료되면 비공유 변수의 메모리 및 값이 소실됩니다.  클래스 또는 구조체의 새 인스턴스는 각각 해당 비공유 변수를 만들고 초기화합니다.  `Shared` 변수는 응용 프로그램 실행이 중지될 때까지 보존됩니다.  
+ 클래스 또는 구조체의 인스턴스를 종료 하는 경우의 메모리와 해당 값 비공유 변수의 손실 합니다. 클래스 또는 구조체의 각 새 인스턴스를 만들고 비공유 변수의 다시 초기화 합니다. 그러나 `Shared` 변수는 응용 프로그램의 실행이 중지 될 때까지 유지 됩니다.  
   
-## 수명의 연장  
- `Static` 키워드를 사용하여 지역 변수를 선언한 경우 지역 변수의 수명은 해당 프로시저의 실행 시간보다 깁니다.  다음 표에서는 프로시저 선언에 따라 `Static` 변수의 수명이 결정되는 방법을 보여 줍니다.  
+## <a name="extension-of-lifetime"></a>수명의 연장  
+ 사용 하 여 로컬 변수를 선언 하는 경우는 `Static` 키워드를 수명 보다 길면 해당 프로시저의 실행 시간입니다. 다음 표에서 프로시저 선언 기간 결정 하는 방법을 보여 줍니다.는 `Static` 변수가 존재 합니다.  
   
-|프로시저 위치 및 공유 여부|Static 변수의 수명 시작|Static 변수의 수명 종료|  
-|---------------------|----------------------|----------------------|  
-|모듈. 기본적으로 shared|프로시저가 처음 호출될 때|응용 프로그램의 실행이 중지될 때|  
-|클래스. `Shared`\(프로시저는 인스턴스 멤버가 아님\)|프로시저가 특정 인스턴스나 클래스 또는 구조체 이름에 대해 처음 호출될 때|응용 프로그램의 실행이 중지될 때|  
-|클래스의 인스턴스. `Shared` 아님\(프로시저는 인스턴스 멤버임\)|프로시저가 특정 인스턴스에 대해 처음 호출될 때|인스턴스가 GC\(가비지 수집\)를 위해 해제될 때|  
+|프로시저 위치 및 공유|정적 변수 수명을 시작합니다|정적 변수 수명 끝|  
+|------------------------------------|-------------------------------------|-----------------------------------|  
+|(기본적으로 공유) 모듈에서|처음에 프로시저 호출 될 때|응용 프로그램 실행이 중지 될 때|  
+|클래스에서 `Shared` (절차는 인스턴스 멤버가 아님)|처음으로 프로시저를 호출할 특정 인스턴스 또는 자체 클래스 또는 구조체 이름|응용 프로그램 실행이 중지 될 때|  
+|클래스의 인스턴스에 하지 `Shared` (절차는 인스턴스 멤버는)|프로시저 라고 하는 특정 인스턴스에 처음으로|가비지 수집 (GC)에 인스턴스가 해제 되는 경우|  
   
-## 동일한 이름의 정적 변수  
- 둘 이상의 프로시저에서 이름이 같은 정적 변수를 선언할 수 있습니다.  이 경우 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)] 컴파일러에서는 각 변수를 개별 요소로 간주합니다.  따라서 그 중 한 변수를 초기화하더라도 다른 변수 값에는 영향을 주지 않습니다.  이것은 일련의 오버로드로 프로시저를 정의하고 각 오버로드에 이름이 같은 정적 변수를 선언하는 경우에도 마찬가지입니다.  
+## <a name="static-variables-of-the-same-name"></a>이름이 같은 정적 변수  
+ 둘 이상의 프로시저에 같은 이름의 정적 변수를 선언할 수 있습니다. 이 작업을 수행 하는 경우는 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 컴파일러는 각 변수를 별도 요소로 간주 합니다. 이러한 변수 중 하나를 초기화할 때 다른 값 영향을 주지 않습니다. 오버 로드 집합이 있는 프로시저를 정의 하 고 각 오버 로드에 동일한 이름 가진 정적 변수를 선언 하는 경우에 적용 됩니다.  
   
-## 정적 변수를 포함하는 요소  
- 클래스에서, 즉 해당 클래스의 프로시저 내에서 정적 지역 변수를 선언할 수 있습니다.  그러나 구조체에서는 정적 지역 변수를 해당 구조체에 있는 프로시저의 구조체 멤버나 지역 변수로 선언할 수 없습니다.  
+## <a name="containing-elements-for-static-variables"></a>정적 변수에 대 한 요소가 포함 된  
+ 해당 클래스의 프로시저 즉, 클래스 내의 정적 지역 변수를 선언할 수 있습니다. 그러나 구조체 멤버 또는 해당 구조 내에서 프로시저의 지역 변수로 구조체에 정적 지역 변수를 선언할 수 없습니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
-### 설명  
- 다음 예제에서는 [Static](../../../../visual-basic/language-reference/modifiers/static.md) 키워드를 사용하여 변수를 선언합니다.  [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md)에서 `Static`과 같은 한정자를 사용하는 경우에는 `Dim` 키워드를 사용하지 않아도 됩니다.  
+### <a name="description"></a>설명  
+ 다음 예제에서는 사용 하 여 변수를 선언 된 [정적](../../../../visual-basic/language-reference/modifiers/static.md) 키워드입니다. (참고 필요 하지 않은 `Dim` 키워드 때는 [Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) 와 같은 한정자를 사용 하 여 `Static`.)  
   
-### 코드  
- [!code-vb[VbVbalrKeywords#13](../../../../visual-basic/language-reference/codesnippet/VisualBasic/lifetime_1.vb)]  
+### <a name="code"></a>코드  
+ [!code-vb[VbVbalrKeywords #&13;](../../../../visual-basic/language-reference/codesnippet/VisualBasic/lifetime_1.vb)]  
   
-### 설명  
- 위 예제에서 변수 `applesSold`는 `runningTotal` 프로시저가 호출 코드로 돌아간 후에도 계속해서 존재합니다.  다음에 `runningTotal`이 호출될 때 `applesSold`는 이전에 계산된 값을 유지합니다.  
+### <a name="comments"></a>설명  
+ 위의 예제에서는 변수에서에서 `applesSold` 계속 존재는 절차를 수행한 후 `runningTotal` 호출 코드로 반환 합니다. 다음에 `runningTotal` 이라고 `applesSold` 는 이전에 계산 된 값을 유지 합니다.  
   
- `Static`를 사용하지 않고 `applesSold`를 선언한 경우에는 `runningTotal`을 호출할 때마다 이전의 누적 값이 보존되지 않습니다.  다음에 `runningTotal`이 호출될 때 `applesSold`가 다시 만들어지고 0으로 초기화되며 `runningTotal`은 단지 해당 프로시저가 호출될 때의 값을 반환합니다.  
+ 경우 `applesSold` 선언 되었으면 네임 스페이스를 사용 하지 않고 `Static`, 이전의 누적된 값에 대 한 호출에서 유지 되지는 것 `runningTotal`합니다. 다음에 `runningTotal` 를 호출 했지만 `applesSold` 다시 및 0으로 초기화 된 것 및 `runningTotal` 호출 된 동일한 값 단순히 반환는 합니다.  
   
-### 코드 컴파일  
- 정적 지역 변수의 값을 선언의 일부로 초기화할 수 있습니다.  배열을 `Static`으로 선언하면 차수\(차원 수\), 각 차원의 길이 및 개별 요소의 값을 초기화할 수 있습니다.  
+### <a name="compiling-the-code"></a>코드 컴파일  
+ 정적 지역 변수 선언의 일부로 값을 초기화할 수 있습니다. 배열을 선언 하는 경우 `Static`, 해당 순위 (차원의 수), 각 차원의 길이 및 개별 요소의 값을 초기화할 수 있습니다.  
   
-### 보안  
- 위 예제의 모듈 수준에서 `applesSold`를 선언하여 같은 수명을 얻을 수 있습니다.  그러나 이 방법으로 변수의 범위를 변경하면 프로시저가 더 이상 변수에 단독으로 액세스할 수 없게 됩니다.  이 상태에서는 다른 프로시저가 `applesSold`에 액세스하여 값을 변경할 수 있기 때문에 누계를 신뢰할 수 없고 코드 관리가 더욱 어려워질 수 있습니다.  
+### <a name="security"></a>보안  
+ 앞의 예제에서 선언 하 여 동일한 수명 주기를 생성할 수 있습니다 `applesSold` 모듈 수준입니다. 그러나 변수의 범위를 이러한 방식으로 변경 하면 프로시저가 더 이상 있을 경우 단독으로 액세스할 수 없습니다. 다른 프로시저에 액세스할 수 있으므로 `applesSold` 및 해당 값을 변경, 누적 합계를 신뢰할 수 및 코드를 유지 하기 위해 더욱 어려워질 수 있습니다.  
   
-## 참고 항목  
- [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)   
- [Nothing](../../../../visual-basic/language-reference/nothing.md)   
- [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)   
- [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)   
- [Access Levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)   
- [Variables](../../../../visual-basic/programming-guide/language-features/variables/index.md)   
+## <a name="see-also"></a>참고 항목  
+ [공유](../../../../visual-basic/language-reference/modifiers/shared.md)   
+ [아무 것도](../../../../visual-basic/language-reference/nothing.md)   
+ [선언된 요소 이름](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)   
+ [선언 된 요소에 대 한 참조](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
+ [Visual Basic의 범위](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)   
+ [Visual Basic의 액세스 수준](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)   
+ [변수](../../../../visual-basic/programming-guide/language-features/variables/index.md)   
  [변수 선언](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)   
- [Troubleshooting Data Types](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [Static](../../../../visual-basic/language-reference/modifiers/static.md)
+ [데이터 형식 문제 해결](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
+ [정적](../../../../visual-basic/language-reference/modifiers/static.md)

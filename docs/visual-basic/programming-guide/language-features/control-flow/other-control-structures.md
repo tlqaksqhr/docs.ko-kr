@@ -1,39 +1,55 @@
 ---
-title: "Other Control Structures (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "statements [Visual Basic], control flow"
-  - "control structures"
+title: "기타 제어 구조 (Visual Basic) | Microsoft 문서"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- statements [Visual Basic], control flow
+- control structures
 ms.assetid: 24b811f7-98ba-40ec-8dd3-4d528cfa4574
 caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
----
-# Other Control Structures (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 639571b493037f26951bd8fbf140d7bce3244889
+ms.lasthandoff: 03/13/2017
 
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]에서는 리소스를 삭제하거나 개체 참조의 반복 횟수를 줄이는 데 유용한 제어 구조를 제공합니다.  
+---
+# <a name="other-control-structures-visual-basic"></a>기타 제어 구조(Visual Basic)
+[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]제어 구조 데 도움이 되는 리소스를 삭제 또는 개체 참조를 반복 해야 할 횟수를 줄이고 제공 합니다.  
   
-## Using...End Using 구문  
- `Using...End Using` 구문은 SQL 연결 등의 리소스를 사용할 수 있는 문 블록을 구성합니다.  `Using` 문을 사용하여 리소스를 선택적으로 가져올 수 있습니다.  `Using` 블록을 종료하면 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]에서는 다른 코드에서 사용할 수 있도록 리소스를 자동으로 삭제합니다.  리소스는 로컬이며 삭제할 수 있어야 합니다.  자세한 내용은 [Using Statement](../../../../visual-basic/language-reference/statements/using-statement.md)을 참조하십시오.  
+## <a name="usingend-using-construction"></a>사용 하 여... 생성을 사용 하 여  
+ `Using...End Using` 구문은 문 블록을 할 때 SQL 연결 같은 리소스를 사용 합니다. 사용 하 여 리소스를 선택적으로 가져올 수는 `Using` 문입니다. 종료 하는 경우는 `Using` 블록 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 사용 하 여 다른 코드에 사용할 수 있도록 리소스의 자동으로 삭제 합니다. 리소스는 로컬 이며 삭제할 이어야 합니다. 자세한 내용은 참조 [문을 사용 하 여](../../../../visual-basic/language-reference/statements/using-statement.md)합니다.  
   
-## With...End With 구문  
- `With...End With` 구문을 사용하면 개체 참조를 한 번만 지정한 다음 해당 멤버에 액세스하는 여러 문을 실행할 수 있습니다.  이렇게 하면 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb-md.md)]에서 해당 멤버에 액세스하는 각 문에 대해 참조를 다시 설정할 필요가 없으므로 코드가 간단해지고 성능이 향상됩니다.  자세한 내용은 [With...End With Statement](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)을 참조하십시오.  
+## <a name="withend-with-construction"></a>와... 생성과 함께 종료 합니다.  
+ `With...End With` 생성을 사용 하면 개체 참조를 한 번만 지정할 수 다음 일련의 해당 멤버에 액세스 하는 문 실행 합니다. 이 코드를 간소화할 수 있으며 때문에 성능이 향상 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 멤버에 액세스 하는 각 문에 대 한 참조를 다시 설정할 필요가 없습니다. 자세한 내용은 참조 [와... 문을 사용 하 여 종료](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)합니다.  
   
-## 참고 항목  
- [Control Flow](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)   
- [Decision Structures](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)   
- [Loop Structures](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   
- [Nested Control Structures](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)   
- [Using Statement](../../../../visual-basic/language-reference/statements/using-statement.md)   
- [With...End With Statement](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+## <a name="see-also"></a>참고 항목  
+ [제어 흐름](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)   
+ [판단 구조](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)   
+ [루프 구조](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   
+ [중첩된 제어 구조](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)   
+ [문을 사용 하 여](../../../../visual-basic/language-reference/statements/using-statement.md)   
+ [With...End With 문](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)
