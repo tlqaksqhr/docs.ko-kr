@@ -56,7 +56,7 @@ Microsoft에서는 C#, F# 및 Visual Basic .NET이라는 세 가지 .NET 언어�
 
 범위가 지정된 형식은 일반적으로 메서드가 완료될 때 범위를 벗어나며, 이때 메서드 변수를 수집할 수 있습니다. 그러나 `using` 문을 사용하여 특정 개체가 메서드 종료보다 더 빨리 범위를 벗어남을 GC에 알릴 수 있습니다.
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L6-L9)]
+[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
 `using` 블록이 완료되면 GC는 이전 예제의 `stream` 개체를 수집하고 해당 메모리를 회수할 수 있음을 알게 됩니다.
 
@@ -68,7 +68,7 @@ Microsoft에서는 C#, F# 및 Visual Basic .NET이라는 세 가지 .NET 언어�
 
 다음 예제에서는 메모리 안전성의 결과로 예외가 throw됩니다.
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L11-L12)]
+[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
 ## <a name="type-safety"></a>형식 안전성
 
