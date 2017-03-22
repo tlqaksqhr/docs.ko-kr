@@ -39,11 +39,11 @@ ms.lasthandoff: 03/07/2017
 - `dotnet restore`
 - `dotnet run`
 
-##<a name="behavior"></a>동작
+## <a name="behavior"></a>동작
 
 .NET Core 도구 원격 분석 기능은 기본적으로 사용됩니다. 환경 변수 DOTNET_CLI_TELEMETRY_OPTOUT(예: macOS/Linux에서는 `export`, Windows에서는 `set`)을 true(예: “true”, 1)로 설정하여 원격 분석 기능을 옵트아웃할 수 있습니다.
 
-##<a name="data-points"></a>데이터 요소
+## <a name="data-points"></a>데이터 요소
 
 이 기능은 다음 데이터를 수집합니다.
 
@@ -57,7 +57,7 @@ ms.lasthandoff: 03/07/2017
 
 이 기능은 사용자 이름이나 전자 메일 등의 개인 데이터를 수집하지 않습니다. 코드를 검사하지 않으며 이름, 리포지토리, 작성자 등 중요하다고 생각될 수 있는 프로젝트 수준의 데이터(project.json에서 설정한 경우)를 추출하지 않습니다. 도구로 무엇을 빌드하느냐가 아니라 도구를 어떻게 사용하느냐를 알고자 합니다. 중요한 데이터가 수집된다면 그것은 버그입니다. 수정할 수 있도록 [문제를 제출](https://github.com/dotnet/cli/issues)하세요.
 
-##<a name="license"></a>라이선스
+## <a name="license"></a>라이선스
 
 .NET Core의 Microsoft 배포는 [MICROSOFT.NET 라이브러리 EULA](https://aka.ms/dotnet-core-eula)로 허가됩니다. 여기에는 원격 분석을 사용하도록 설정하는 다음의 "DATA" 섹션이 포함됩니다.
 
@@ -97,3 +97,4 @@ A command is running to initially populate your local package cache, to
 improve restore speed and enable offline access. This command will take up to 
 a minute to complete and will only happen once. 
 ```
+
