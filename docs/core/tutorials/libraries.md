@@ -11,15 +11,16 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 7f419e1fc2c9f442b08e19ede4e84f9cf6843a94
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
+ms.openlocfilehash: 94b6d965c7a39a02723b641f6551e54dd4df1f07
+ms.lasthandoff: 03/07/2017
 
 ---
 
 # <a name="developing-libraries-with-cross-platform-tools"></a>플랫폼 간 도구로 라이브러리 개발
 
-**도구 체인이 발전함에 따라 몇 가지 세부 정보는 변경될 수 있습니다.**
+> [!WARNING]
+> 이 항목은 최신 버전의 도구로 아직 업데이트되지 않았습니다.
 
 이 문서에서는 플랫폼 간 CLI 도구를 사용하여 .NET용 라이브러리를 작성하는 방법을 다룹니다.  CLI는 지원되는 운영 체제에서 작동하는 효율적인 하위 수준 환경을 제공합니다.  Visual Studio로 라이브러리를 빌드할 수 있습니다. 그러한 환경을 선호하는 경우 [Visual Studio 설명서를 참조하세요](libraries-with-vs.md).
 

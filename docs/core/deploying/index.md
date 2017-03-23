@@ -1,24 +1,22 @@
 ---
-title: ".NET Core 응용 프로그램 배포"
+title: ".NET Core 응용 프로그램 배포 | Microsoft 문서"
 description: ".NET Core 응용 프로그램 배포"
 keywords: ".NET, .NET Core, .NET Core 배포"
 author: rpetrusha
 ms.author: ronpet
-ms.date: 09/08/2016
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
 translationtype: Human Translation
-ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
-ms.openlocfilehash: 694502a105224543063cfc08e9310dc02c1d2319
+ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
+ms.openlocfilehash: 0e186665619bd76c5ba3d1e605b885a12aa15c66
+ms.lasthandoff: 03/07/2017
 
 ---
 
-# <a name="net-core-application-deployment"></a>.NET Core 응용 프로그램 배포 #
-
-> [!WARNING]
-> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. .NET Core 도구 RC4 버전의 경우 [.NET Core 응용 프로그램 배포(.NET Core 도구 RC4)](../preview3/deploying/index.md) 항목을 참조하세요.
+# <a name="net-core-application-deployment"></a>.NET Core 응용 프로그램 배포
 
 .NET Core 응용 프로그램에 대해 두 가지 유형을 배포를 만들 수 있습니다. 
 
@@ -50,7 +48,7 @@ FDD 배포에는 다음과 같은 여러 가지 장점이 있습니다.
 
 타사 종속성이 없는 프레임워크 종속 배포에는 앱의 빌드, 테스트 및 게시만 포함됩니다. C#으로 작성된 간단한 예제에서는 이 프로세스를 보여 줍니다. 이 예제에서는 명령줄에서 [dotnet 유틸리티](../tools/dotnet.md)를 사용하지만 Visual Studio나 Visual Studio Code와 같은 개발 환경을 사용하여 예제를 컴파일, 테스트 및 게시할 수도 있습니다.
 
-1. 프로젝트에 대한 디렉터리를 만들고 명령줄에서 [dotnet new](../tools/dotnet-new.md)를 입력하여 새 C# 콘솔 프로젝트를 만듭니다.
+1. 프로젝트에 대한 디렉터리를 만들고 명령줄에서 `[dotnet new console](../tools/dotnet-new.md)`를 입력하여 새 C# 콘솔 프로젝트를 만듭니다.
 
 2. 편집기에서 `Program.cs` 파일을 열고 자동 생성된 코드를 다음 코드로 바꿉니다. 텍스트를 입력하라는 메시지가 표시된 다음 사용자가 입력한 개별 단어가 표시됩니다. 정규식 `\w+`를 사용하여 입력 테스트의 단어를 구분합니다.
 
@@ -93,9 +91,9 @@ FDD 배포에는 다음과 같은 여러 가지 장점이 있습니다.
 
 4. [dotnet build](../tools/dotnet-build.md) 명령을 사용하여 앱의 디버그 빌드를 만듭니다.
 
-5. 프로그램을 디버그하고 테스트한 후에는 `dotnet publish -f netcoreapp1.0 -c release` 명령을 사용하여 앱과 함께 배포할 파일을 만들 수 있습니다. 그러면 앱의 디버그가 아닌 릴리스 버전이 만들어집니다.
+5. 프로그램을 디버그하고 테스트한 후에는 `dotnet publish -f netcoreapp1.1 -c release` 명령을 사용하여 앱과 함께 배포할 파일을 만들 수 있습니다. 그러면 앱의 디버그가 아닌 릴리스 버전이 만들어집니다.
 
-   결과 파일은 프로젝트 `.\bin\release\netcoreapp1.0` 하위 디렉터리의 하위 디렉터리에 있는 `publish`는 디렉터리에 배치됩니다.
+   결과 파일은 프로젝트 `.\bin\release\netcoreapp1.1` 하위 디렉터리의 하위 디렉터리에 있는 `publish`는 디렉터리에 배치됩니다.
 
 6. 게시 프로세스에서는 응용 프로그램의 파일과 함께 앱에 대한 디버깅 정보를 포함하는 프로그램 데이터베이스(.pdb) 파일을 내보냅니다. 이 파일은 기본적으로 디버깅 예외에 유용하며 응용 프로그램의 파일과 함께 패키지하지 않도록 선택할 수 있습니다.
 
@@ -107,17 +105,15 @@ FDD 배포에는 다음과 같은 여러 가지 장점이 있습니다.
 
 하나 이상의 타사 종속성이 있는 프레임워크 종속 배포에는 `dotnet restore` 명령을 실행하기 전에 세 가지 추가 단계가 포함됩니다.
 
-1. 모든 타사 라이브러리에 대한 참조를 `project.json` 파일의 `dependencies` 섹션에 추가합니다. 다음 `dependencies` 섹션에서는 Json.NET을 타사 라이브러리로 사용합니다.
+1. 모든 타사 라이브러리에 대한 참조를 `csproj` 파일의 `<ItemGroup>` 섹션에 추가합니다. 다음 `<ItemGroup>` 섹션은 타사 라이브러리로 Json.NET을 사용하여 기본 프로젝트에 종속성을 포함하는 `<ItemGroup>`을 보여 줍니다.
 
-    ```json
-    "dependencies": {
-      "Microsoft.NETCore.App": {
-        "type": "platform",
-        "version": "1.0.0"
-      },
-      "Newtonsoft.Json": "9.0.1"
-    },
+    ```xml
+      <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+      </ItemGroup>
     ```
+
+ 위의 예제에서는 SDK 종속성이 그대로 유지됩니다. 이 종속성은 명령줄 도구가 작동하는 데 필요한 대상을 모두 복원하는 데 필요하므로 정상적인 현상입니다.  
 
 2. 타사 종속성을 포함하는 NuGet 패키지를 아직 다운로드하지 않은 경우 다운로드합니다. 패키지를 다운로드하려면 종속성을 추가한 후 `dotnet restore` 명령을 실행합니다. 종속성은 게시 시간에 로컬 NuGet 캐시에서 확인되므로 시스템에서 사용할 수 있어야 합니다.
 
@@ -143,11 +139,11 @@ FDD 배포에는 다음과 같은 여러 가지 장점이 있습니다.
 
 - 다양한 자체 포함 .NET Core 앱을 시스템에 배포하면 각 앱에서 .NET Core 파일을 중복하므로 엄청나게 많은 디스크 공간을 사용합니다.
 
-### <a name="a-namesimpleselfa-deploying-a-simple-self-contained-deployment"></a><a name="simpleSelf"></a> 간단한 자체 포함 배포 ###
+### <a name="simpleSelf"></a> 간단한 자체 포함 배포 ###
 
-타사 종속성이 없는 자체 포함 배포에는 프로젝트 만들기, project.json 파일 수정, 앱 빌드, 테스트 및 수정이 포함됩니다.  C#으로 작성된 간단한 예제에서는 이 프로세스를 보여 줍니다. 이 예제에서는 명령줄에서 `dotnet` 유틸리티를 사용하지만 Visual Studio나 Visual Studio Code와 같은 개발 환경을 사용하여 예제를 컴파일, 테스트 및 게시할 수도 있습니다.
+타사 종속성이 없는 자체 포함 배포에는 프로젝트 만들기, csproj 파일 수정, 앱 빌드, 테스트 및 수정이 포함됩니다.  C#으로 작성된 간단한 예제에서는 이 프로세스를 보여 줍니다. 이 예제에서는 명령줄에서 `dotnet` 유틸리티를 사용하지만 Visual Studio나 Visual Studio Code와 같은 개발 환경을 사용하여 예제를 컴파일, 테스트 및 게시할 수도 있습니다.
 
-1. 프로젝트에 대한 디렉터리를 만들고 명령줄에서 `dotnet new`를 입력하여 새 C# 콘솔 프로젝트를 만듭니다.
+1. 프로젝트에 대한 디렉터리를 만들고 명령줄에서 `dotnet new console`를 입력하여 새 C# 콘솔 프로젝트를 만듭니다.
 
 2. 편집기에서 `Program.cs` 파일을 열고 자동 생성된 코드를 다음 코드로 바꿉니다. 텍스트를 입력하라는 메시지가 표시된 다음 사용자가 입력한 개별 단어가 표시됩니다. 정규식 `\w+`를 사용하여 입력 테스트의 단어를 구분합니다.
 
@@ -185,121 +181,72 @@ FDD 배포에는 다음과 같은 여러 가지 장점이 있습니다.
     }
     ```
 
-3. `project.json` 파일을 열고 `frameworks` 섹션에서 다음 줄을 제거합니다.
+3. `csproj` 파일의 `<PropertyGroup>` 섹션에서 앱의 대상 플랫폼을 정의하는 `<RuntimeIdentifiers>` 태그를 만들고 대상으로 지정한 각 플랫폼의 런타임 식별자를 지정합니다. 런타임 식별자 목록은 [런타임 식별자 카탈로그](../rid-catalog.md)를 참조하세요. 예를 들어 다음 예에서는 앱이 64비트 Windows 10 운영 체제 및 64비트 OS X 버전 10.11 운영 체제에서 실행됨을 나타냅니다.
 
-   ```json
-   "type": "platform",
-   ```
-수정한 후에는 프레임워크 섹션이 다음과 같이 표시되어야 합니다.
-
-    ```json
-    "frameworks": {
-      "netcoreapp1.0": {
-        "dependencies": {
-          "Microsoft.NETCore.App": {
-             "version": "1.0.0"
-          }
-        }
-      }
-    }
+    ```xml
+        <PropertyGroup>
+          <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+        </PropertyGroup>
     ```
-`"type": "platform"` 특성을 제거하면 프레임워크가 시스템 차원 플랫폼 패키지가 아니라 앱에 로컬인 구성 요소 집합으로 제공됨을 나타냅니다.
+RID를 구분하려면 세미콜론도 추가해야 합니다. 또한 `<RuntimeIdentifier>` 요소는 `csproj` 파일에 있는 `<PropertyGroup>`으로 이동합니다. 전체 샘플 `csproj` 파일은 이 섹션의 뒷부분에 나옵니다.
 
-4. `project.json` 파일에서 앱의 대상 플랫폼을 정의하는 `runtimes` 섹션을 만들고 대상으로 지정한 각 플랫폼의 런타임 식별자를 지정합니다. 런타임 식별자 목록은 [런타임 식별자 카탈로그](../rid-catalog.md)를 참조하세요. 예를 들어 다음 `runtimes` 섹션은 앱이 64비트 Windows 10 운영 체제 및 64비트 OS X 버전 10.10 운영 체제에서 실행됨을 나타냅니다.
+4. `dotnet restore` 명령을 실행하여 프로젝트에 지정된 종속성을 복원합니다.
 
-    ```json
-        "runtimes": {
-          "win10-x64": {},
-          "osx.10.10-x64": {}
-        }
-    ```
-이전 섹션과 `runtimes` 섹션을 구분하려면 쉼표를 추가해야 합니다.
-전체 샘플 `project.json` 파일은 이 섹션의 뒷부분에 나옵니다.
-
-6. `dotnet restore` 명령을 실행하여 프로젝트에 지정된 종속성을 복원합니다.
-
-7. 각 대상 플랫폼에서 `dotnet build` 명령을 사용하여 앱의 디버그 빌드를 만듭니다. 빌드하려는 런타임 식별자를 지정하지 않으면 `dotnet build` 명령은 현재 시스템의 런타임 ID에 대한 빌드만 만듭니다. 다음 명령을 사용하여 두 대상 플랫폼에 대한 앱을 빌드할 수 있습니다.
-
-    ```console
-    dotnet build -r win10-x64
-    dotnet build -r osx.10.10-x64
-    ```
-각 플랫폼에 대한 앱의 디버그 빌드는 프로젝트의 `.\bin\Debug\netcoreapp1.0\<runtime_identifier>` 하위 디렉터리에 있습니다.
-
-8. 프로그램을 디버그하고 테스트한 후에는 다음과 같이 두 대상 플랫폼에 `dotnet publish` 명령을 사용하여 각 대상 플랫폼에 대해 앱과 함께 배포할 파일을 만들 수 있습니다.
+5. 프로그램을 디버그하고 테스트한 후에는 다음과 같이 두 대상 플랫폼에 `dotnet publish` 명령을 사용하여 각 대상 플랫폼에 대해 앱과 함께 배포할 파일을 만들 수 있습니다.
 
    ```console
    dotnet publish -c release -r win10-x64
-   dotnet publish -c release -r osx.10.10-x64
+   dotnet publish -c release -r osx.10.11-x64
    ```
-그러면 각 대상 플랫폼에 대해 앱의 디버그가 아닌 릴리스 버전이 만들어집니다. 결과 파일은 프로젝트 `.\bin\release\netcoreapp1.0\<runtime_identifier>` 하위 디렉터리의 하위 디렉터리에 있는 `publish`라는 하위 디렉터리에 배치됩니다. 각 하위 디렉터리에는 앱을 시작하는 데 필요한 전체 파일 집합(앱 파일 및 모든 .NET Core 파일)이 포함됩니다.
+그러면 각 대상 플랫폼에 대해 앱의 디버그가 아닌 릴리스 버전이 만들어집니다. 결과 파일은 프로젝트 `.\bin\release\netcoreapp1.1\<runtime_identifier>` 하위 디렉터리의 하위 디렉터리에 있는 `publish`라는 하위 디렉터리에 배치됩니다. 각 하위 디렉터리에는 앱을 시작하는 데 필요한 전체 파일 집합(앱 파일 및 모든 .NET Core 파일)이 포함됩니다.
 
-9. 게시 프로세스에서는 응용 프로그램의 파일과 함께 앱에 대한 디버깅 정보를 포함하는 프로그램 데이터베이스(.pdb) 파일을 내보냅니다. 이 파일은 기본적으로 디버깅 예외에 유용하며 응용 프로그램의 파일과 함께 패키지하지 않도록 선택할 수 있습니다.
+6. 게시 프로세스에서는 응용 프로그램의 파일과 함께 앱에 대한 디버깅 정보를 포함하는 프로그램 데이터베이스(.pdb) 파일을 내보냅니다. 이 파일은 기본적으로 디버깅 예외에 유용하며 응용 프로그램의 파일과 함께 패키지하지 않도록 선택할 수 있습니다.
 
 게시된 파일은 원하는 방식으로 배포할 수 있습니다. 예를 들어 zip 파일로 패키지하거나, 간단한 `copy` 명령을 사용하여 선택한 설치 패키지와 함께 배포할 수 있습니다. 
 
-다음은 이 프로젝트에 대한 전체 `project.json` 파일입니다.
+다음은 이 프로젝트에 대한 전체 `csproj` 파일입니다.
 
-```json
-{
-  "version": "1.0.0-*",
-  "buildOptions": {
-    "debugType": "portable",
-    "emitEntryPoint": true
-  },
-  "dependencies": {},
-  "frameworks": {
-    "netcoreapp1.0": {
-      "dependencies": {
-        "Microsoft.NETCore.App": {
-          "version": "1.0.0"
-        }
-      }
-    }
-  },
-  "runtimes": {
-    "win10-x64": {},
-    "osx.10.10-x64": {}
-  }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <DebugType>Portable</DebugType>
+    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+  </PropertyGroup>
+</Project>
 ```
+
 
 ### <a name="deploying-a-self-contained-deployment-with-third-party-dependencies"></a>타사 종속성이 있는 자체 포함 배포 ###
 
 하나 이상의 타사 종속성이 있는 자체 포함 배포에는 타사 종속성 추가가 포함됩니다.
 
-1. 모든 타사 라이브러리에 대한 참조를 `project.json` 파일의 `dependencies` 섹션에 추가합니다. 다음 `dependencies` 섹션에서는 Json.NET을 타사 라이브러리로 사용합니다.
+1. 모든 타사 라이브러리에 대한 참조를 `csproj` 파일의 `<ItemGroup>` 섹션에 추가합니다. 다음 `<ItemGroup>` 섹션에서는 Json.NET을 타사 라이브러리로 사용합니다.
 
-    ```json
-    "dependencies": {
-      "Microsoft.NETCore.App": "1.0.0",
-      "Newtonsoft.Json": "9.0.1"
-    },
+    ```xml
+      <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+      </ItemGroup>
     ```
 2. 타사 종속성을 포함하는 NuGet 패키지를 시스템에 아직 다운로드하지 않은 경우 다운로드합니다. 앱에서 종속성을 사용할 수 있도록 하려면 종속성을 추가한 후 `dotnet restore` 명령을 실행합니다. 종속성은 게시 시간에 로컬 NuGet 캐시에서 확인되므로 시스템에서 사용할 수 있어야 합니다.
 
-다음은 이 프로젝트에 대한 전체 project.json 파일입니다.
+다음은 이 프로젝트에 대한 전체 csproj 파일입니다.
 
-```json
-{
-  "version": "1.0.0-*",
-  "buildOptions": {
-    "debugType": "portable",
-    "emitEntryPoint": true
-  },
-  "dependencies": {
-    "Microsoft.NETCore.App": "1.0.0",
-    "Newtonsoft.Json": "9.0.1"
-  },
-  "frameworks": {
-    "netcoreapp1.0": {
-    }
-  },
-  "runtimes": {
-    "win10-x64": {},
-    "osx.10.10-x64": {}
-  }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <DebugType>Portable</DebugType>
+    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+  </ItemGroup>
+</Project>
 ```
 
 응용 프로그램을 배포하면 앱에서 사용된 타사 종속성도 응용 프로그램 파일에 포함됩니다. 타사 라이브러리는 앱이 실행되는 시스템에 없어도 됩니다.
@@ -308,92 +255,68 @@ FDD 배포에는 다음과 같은 여러 가지 장점이 있습니다.
 
 ### <a name="deploying-a-self-contained-deployment-with-a-smaller-footprint"></a>공간이 더 작은 자체 포함 배포 ###
 
-대상 시스템에서 적절한 저장소 공간의 가용성이 문제가 될 경우 일부 시스템 구성 요소를 제외하여 앱의 전체 공간을 줄일 수 있습니다. 이렇게 하려면 앱에서 project.json 파일에 포함하는 .NET Core 구성 요소를 명시적으로 정의합니다.
+대상 시스템에서 적절한 저장소 공간의 가용성이 문제가 될 경우 일부 시스템 구성 요소를 제외하여 앱의 전체 공간을 줄일 수 있습니다. 전체 공간을 줄이기 위해 csproj 파일에서 앱이 포함하는 .NET Core 구성 요소를 명시적으로 정의합니다.
 
-공간이 더 작은 자체 포함 배포를 만들려면 자체 포함 배포를 만드는 처음 두 단계를 수행하여 시작합니다. `dotnet new` 명령을 실행하고 C# 소스 코드를 앱에 추가했으면 다음을 수행합니다.
+공간이 더 작은 자체 포함 배포를 만들려면 자체 포함 배포를 만드는 처음 두 단계를 수행하여 시작합니다. `dotnet new console` 명령을 실행하고 C# 소스 코드를 앱에 추가했으면 다음을 수행합니다.
 
-1. `project.json` 파일을 열고 `frameworks` 섹션을 다음으로 바꿉니다.
+1. `csproj` 파일을 열고 `<TargetFramework>` 요소를 다음으로 바꿉니다.
 
-    ```json
-    "frameworks": {
-      "netstandard1.6": { }
-    }
-    ```
-이 작업은 두 가지 역할을 합니다.
+  ```xml
+  <TargetFramework>netstandard1.6</TargetFramework>
+  ```
+.NET Core CLR, .NET Core 라이브러리 및 여러 가지 기타 시스템 구성 요소를 포함하는 전체 `netcoreapp1.0` 프레임워크를 사용하는 대신 앱이 .NET 표준 라이브러리를 사용함을 나타냅니다.
 
-    * .NET Core CLR, .NET Core 라이브러리 및 여러 가지 기타 시스템 구성 요소를 포함하는 전체 `netcoreapp1.0` 프레임워크를 사용하는 대신 앱이 .NET 표준 라이브러리를 사용함을 나타냅니다.
+2. 패키지 참조를 포함하는 `<ItemGroup>`을 다음으로 바꿉니다.
 
-    * `"type": "platform"` 특성을 제거하면 프레임워크가 시스템 차원 플랫폼 패키지가 아니라 앱에 로컬인 구성 요소 집합으로 제공됨을 나타냅니다.
+  ```xml
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.Runtime.CoreCLR" Version="1.0.2" />
+    <PackageReference Include="Microsoft.NETCore.DotNetHostPolicy" Version="1.0.1" />
+  </ItemGroup>
+  ```
 
-2. `dependencies` 섹션을 다음으로 바꿉니다.
-
-    ```json
-    "dependencies": {
-      "NETStandard.Library": "1.6.0",
-      "Microsoft.NETCore.Runtime.CoreCLR": "1.0.2",
-      "Microsoft.NETCore.DotNetHostPolicy":  "1.0.1"
-    },
-    ```
    앱에서 사용하는 시스템 구성 요소를 정의합니다. 앱과 함께 패키지되는 시스템 구성 요소에는 .NET 표준 라이브러리, .NET Core 런타임 및 .NET Core 호스트가 포함됩니다. 그러면 공간이 더 작은 자체 포함 배포가 생성됩니다.
 
-3. [간단한 자체 포함 배포](#simpleSelf)에서처럼 `project.json` 파일에서 앱의 대상 플랫폼을 정의하는 `runtimes` 섹션을 만들고 대상으로 지정한 각 플랫폼의 런타임 식별자를 지정합니다. 런타임 식별자 목록은 [런타임 식별자 카탈로그](../rid-catalog.md)를 참조하세요. 예를 들어 다음 `runtimes` 섹션은 앱이 64비트 Windows 10 운영 체제 및 64비트 OS X 버전 10.10 운영 체제에서 실행됨을 나타냅니다.
+3. [간단한 자체 포함 배포](#simpleSelf)에서처럼 `csproj` 파일의 `<PropertyGroup>`에서 앱의 대상 플랫폼을 정의하는 `<RuntimeIdentifiers>` 요소를 만들고 대상으로 지정한 각 플랫폼의 런타임 식별자를 지정합니다. 런타임 식별자 목록은 [런타임 식별자 카탈로그](../rid-catalog.md)를 참조하세요. 예를 들어 다음 예에서는 앱이 64비트 Windows 10 운영 체제 및 64비트 OS X 버전 10.11 운영 체제에서 실행됨을 나타냅니다.
 
-    ```json
-        "runtimes": {
-          "win10-x64": {},
-          "osx.10.10-x64": {}
-        }
+    ```xml
+    <PropertyGroup>
+      <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+    </PropertyGroup>
     ```
-이전 섹션과 `runtimes` 섹션을 구분하려면 쉼표를 추가해야 합니다.
-전체 샘플 `project.json` 파일은 이 섹션의 뒷부분에 나옵니다.
+    
+   전체 샘플 `csproj` 파일은 이 섹션의 뒷부분에 나옵니다.
 
 4. `dotnet restore` 명령을 실행하여 프로젝트에 지정된 종속성을 복원합니다.
 
-5. 각 대상 플랫폼에서 `dotnet build` 명령을 사용하여 앱의 디버그 빌드를 만듭니다. 빌드하려는 런타임 식별자를 지정하지 않으면 `dotnet build` 명령은 현재 시스템의 런타임 ID에 대한 빌드만 만듭니다. 다음 명령을 사용하여 두 대상 플랫폼에 대한 앱을 빌드할 수 있습니다.
-
-    ```console
-    dotnet build -r win10-x64
-    dotnet build -r osx.10.10-x64
-    ```
-
-6. 프로그램을 디버그하고 테스트한 후에는 다음과 같이 두 대상 플랫폼에 `dotnet publish` 명령을 사용하여 각 대상 플랫폼에 대해 앱과 함께 배포할 파일을 만들 수 있습니다.
+5. 프로그램을 디버그하고 테스트한 후에는 다음과 같이 두 대상 플랫폼에 `dotnet publish` 명령을 사용하여 각 대상 플랫폼에 대해 앱과 함께 배포할 파일을 만들 수 있습니다.
 
    ```console
    dotnet publish -c release -r win10-x64
-   dotnet publish -c release -r osx.10.10-x64
+   dotnet publish -c release -r osx.10.11-x64
    ```
 그러면 각 대상 플랫폼에 대해 앱의 디버그가 아닌 릴리스 버전이 만들어집니다. 결과 파일은 프로젝트 `.\bin\release\netstandard1.6\<runtime_identifier>` 하위 디렉터리의 하위 디렉터리에 있는 `publish`라는 하위 디렉터리에 배치됩니다. 각 하위 디렉터리에는 앱을 시작하는 데 필요한 전체 파일 집합(앱 파일 및 모든 .NET Core 파일)이 포함됩니다.
 
-7. 게시 프로세스에서는 응용 프로그램의 파일과 함께 앱에 대한 디버깅 정보를 포함하는 프로그램 데이터베이스(.pdb) 파일을 내보냅니다. 이 파일은 기본적으로 디버깅 예외에 유용하며 응용 프로그램의 파일과 함께 패키지하지 않도록 선택할 수 있습니다.
+6. 게시 프로세스에서는 응용 프로그램의 파일과 함께 앱에 대한 디버깅 정보를 포함하는 프로그램 데이터베이스(.pdb) 파일을 내보냅니다. 이 파일은 기본적으로 디버깅 예외에 유용하며 응용 프로그램의 파일과 함께 패키지하지 않도록 선택할 수 있습니다.
 
 게시된 파일은 원하는 방식으로 배포할 수 있습니다. 예를 들어 zip 파일로 패키지하거나, 간단한 `copy` 명령을 사용하여 선택한 설치 패키지와 함께 배포할 수 있습니다. 
 
-다음은 이 프로젝트에 대한 전체 `project.json` 파일입니다.
+다음은 이 프로젝트에 대한 전체 `csproj` 파일입니다.
 
-```json
-   {
-     "version": "1.0.0-*",
-     "buildOptions": {
-       "debugType": "portable",
-       "emitEntryPoint": true
-     },
-     "dependencies": {
-       "NETStandard.Library": "1.6.0",
-       "Microsoft.NETCore.Runtime.CoreCLR": "1.0.2",
-       "Microsoft.NETCore.DotNetHostPolicy":  "1.0.1"
-     },
-     "frameworks": {
-       "netstandard1.6": { }
-     },
-     "runtimes": {
-       "win10-x64": {},
-       "osx.10.10-x64": {}
-     }
-   }
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netstandard1.6</TargetFramework>
+    <VersionPrefix>1.0.0</VersionPrefix>
+    <DebugType>Portable</DebugType>
+    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.Runtime.CoreCLR" Version="1.0.2" />
+    <PackageReference Include="Microsoft.NETCore.DotNetHostPolicy" Version="1.0.1" />
+  </ItemGroup>
+</Project>
 ```
-
-
-
-<!--HONumber=Feb17_HO2-->
 
 

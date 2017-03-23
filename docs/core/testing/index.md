@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 76ab06edfed3cb124ac79f0d5d0c3480c0a5f170
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: 095ebad90e3f0b188d208d22f6f16b9552f8ea86
+ms.openlocfilehash: ca9d57a3ef3382c4957de5edb55959f1a3f13ee0
+ms.lasthandoff: 03/06/2017
 
 ---
 
@@ -34,7 +34,9 @@ ms.lasthandoff: 03/02/2017
 
 .NET Core 프로젝트의 단위 테스트에 대한 자세한 내용은 다음을 참조하세요.
 
-[xunit 및 .NET CLI를 사용하여 단위 테스트 만들기 연습](unit-testing-with-dotnet-test.md)을 사용해 보세요.
+[xUnit 및 .NET CLI를 사용하여 단위 테스트 만들기 연습](unit-testing-with-dotnet-test.md)을 사용해 보세요. 
 
-XUnit 팀은 [.NET Core 및 Visual Studio에서 xunit을 사용하는 방법](http://xunit.github.io/docs/getting-started-dotnet-core.html)을 보여 주는 자습서를 작성했습니다.
+XUnit 팀은 [.NET Core 및 Visual Studio에서 xUnit을 사용하는 방법](http://xunit.github.io/docs/getting-started-dotnet-core.html)을 보여 주는 자습서를 작성했습니다.
+
+MSTest를 사용하려는 경우 [MSTest 및 .NET CLI를 사용하여 단위 테스트 만들기 연습](unit-testing-with-mstest.md)을 사용해 보세요.
 

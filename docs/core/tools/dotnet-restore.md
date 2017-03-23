@@ -4,22 +4,20 @@ description: "dotnet restore 명령을 사용하여 종속성 및 프로젝트 �
 keywords: "dotnet-restore, CLI, CLI 명령, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 10/07/2016
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 60489b25-38de-47e6-bed1-59d9f42e2d46
+ms.assetid: fd7a5769-afbe-4838-bbaf-3ae0cfcbb914
 translationtype: Human Translation
-ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
-ms.openlocfilehash: df8174aa3252568d7112305af07e6399d96ca32f
+ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
+ms.openlocfilehash: a55cd932045a59f08146dff367a87eb6fe61f6e5
+ms.lasthandoff: 03/07/2017
 
 ---
 
 #<a name="dotnet-restore"></a>dotnet-restore
-
-> [!WARNING]
-> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. .NET Core 도구 RC4 버전의 경우 [dotnet-restore(.NET Core 도구 RC4)](../preview3/tools/dotnet-restore.md) 항목을 참조하세요.
 
 ## <a name="name"></a>이름
 
@@ -27,33 +25,30 @@ ms.openlocfilehash: df8174aa3252568d7112305af07e6399d96ca32f
 
 ## <a name="synopsis"></a>개요
 
-`dotnet restore [root] [--help] [--force-english-output] [--source]  
-    [--packages] [--disable-parallel] [--fallbacksource] [--configfile] 
-    [--no-cache] [--infer-runtimes] [--verbosity] [--ignore-failed-sources]`
+```
+dotnet restore [root] [-s|--source] [-r|--runtime] [--packages] [--disable-parallel] [--configfile] [--no-cache] [--ignore-failed-sources] [--no-dependencies] [-v|--verbosity]
+dotnet restore [-h|--help]
+```
 
 ## <a name="description"></a>설명
 
-`dotnet restore` 명령은 NuGet을 사용하여 [project.json](project-json.md) 파일에 지정된 종속성 및 프로젝트 관련 도구를 복원합니다. 기본적으로 종속성 및 도구의 복원은 병렬로 수행됩니다.
+`dotnet restore` 명령은 NuGet을 사용하여 프로젝트 파일에 지정된 종속성 및 프로젝트 관련 도구를 복원합니다. 기본적으로 종속성 및 도구의 복원은 병렬로 수행됩니다.
 
 종속성을 복원하려면 NuGet에 패키지가 있는 피드가 필요합니다. 일반적으로 피드는 NuGet.config 구성 파일을 통해 제공되며, 기본적으로 CLI 도구를 설치할 때 제공됩니다. 프로젝트 디렉터리에 고유한 NuGet.config 파일을 만들어 더 많은 피드를 지정할 수 있습니다. 명령 프롬프트에서 호출당 피드를 지정할 수도 있습니다. 
 
 종속성의 경우 복원 작업 중 `--packages` 인수를 사용하여 복원된 패키지가 배치될 위치를 지정할 수 있습니다. 지정하지 않으면 기본 NuGet 패키지 캐시가 사용됩니다. 이 캐시는 모든 운영 체제에서 사용자의 홈 디렉터리(예: Linux의 경우 */home/user1* 또는 Windows의 경우 *C:\Users\user1*)에 있는 `.nuget/packages` 디렉터리에 있습니다.
 
-프로젝트 관련 도구의 경우 `dotnet restore`는 먼저 도구가 압축된 패키지를 복원한 다음 [project.json](project-json.md)에 지정된 대로 도구의 종속성을 계속 복원합니다. 
+프로젝트 관련 도구의 경우 `dotnet restore`는 먼저 도구가 압축된 패키지를 복원한 다음 프로젝트 파일에 지정된 대로 도구의 종속성을 계속 복원합니다.
 
 ## <a name="options"></a>옵션
 
-`[root]` 
+`root` 
     
- 복원하려는 프로젝트 또는 프로젝트 폴더의 목록입니다. 각 값은 [project.json](project-json.md) 또는 [global.json](global-json.md) 파일이나 폴더에 대한 경로일 수 있습니다. 폴더를 지정하면 복원 작업에서 모든 하위 디렉터리에 있는 [project.json](project-json.md) 파일을 재귀적으로 검색하고 검색된 각 [project.json](project-json.md) 파일을 복원합니다.
+프로젝트 파일을 복원하는 선택적 경로입니다. 
 
 `-h|--help`
 
 명령에 대한 간단한 도움말을 출력합니다.
-
- `--force-english-output`
-
-고정 영어 기반 문화권을 사용하여 응용 프로그램을 강제로 실행합니다.
 
 `-s|--source <SOURCE>`
 
@@ -67,10 +62,6 @@ ms.openlocfilehash: df8174aa3252568d7112305af07e6399d96ca32f
 
 여러 프로젝트를 병렬로 복원을 사용하지 않도록 설정합니다. 
 
-`-f|--fallbacksource <FEED>`
-
-다른 모든 소스가 실패할 경우 복원 작업에서 대체 소스로 사용할 패키지 소스 목록을 지정합니다. 모든 유효한 피드 형식이 허용됩니다. 이 옵션을 여러 번 지정하여 여러 대체 소스를 제공할 수 있습니다.
-
 `--configfile <FILE>`
 
 복원 작업에 사용할 NuGet 구성 파일(NuGet.config)입니다.
@@ -79,17 +70,17 @@ ms.openlocfilehash: df8174aa3252568d7112305af07e6399d96ca32f
 
 패키지 및 HTTP 요청을 캐시하지 하도록 지정합니다.
 
-`--infer-runtimes`
-
-NuGet이 레거시 리포지토리에서 RID(런타임 식별자)를 유추하도록 허용하는 임시 옵션입니다.
-
-`--verbosity [LEVEL]`
-
-사용할 로깅의 자세한 정도입니다. 허용되는 값은 `Debug`, `Verbose`, `Information`, `Minimal`, `Warning` 또는 `Error`입니다.
-
 ` --ignore-failed-sources`
 
 버전 요구 사항을 충족하는 패키지가 있는 경우 실패한 소스에 대해서만 경고합니다.
+
+`--no-dependencies`
+
+P2P 참조를 사용하여 프로젝트를 복원할 경우 참조를 복원하지 말고 루트 프로젝트만 복원하세요.
+
+`--verbosity <LEVEL>`
+
+출력에 세부 정보를 표시합니다. 수준은 `normal`, `quiet` 또는 `detailed`입니다.
 
 ## <a name="examples"></a>예제
 
@@ -99,7 +90,7 @@ NuGet이 레거시 리포지토리에서 RID(런타임 식별자)를 유추하�
 
 지정된 경로에 있는 `app1` 프로젝트에 대한 종속성 및 도구를 복원합니다.
 
-`dotnet restore ~/projects/app1/project.json`
+`dotnet restore ~/projects/app1/app1.csproj`
     
 대체 소스로 제공된 파일 경로를 사용하여 현재 디렉터리에 있는 프로젝트에 대한 종속성 및 도구를 복원합니다.
 
@@ -112,8 +103,4 @@ NuGet이 레거시 리포지토리에서 RID(런타임 식별자)를 유추하�
 현재 디렉터리에 있는 프로젝트에 대한 종속성 및 도구를 복원하고 오류만 출력에 표시합니다.
 
 `dotnet restore --verbosity Error`
-
-
-<!--HONumber=Feb17_HO2-->
-
 

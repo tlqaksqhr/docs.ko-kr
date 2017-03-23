@@ -4,22 +4,20 @@ description: "dotnet-run 명령은 소스 코드에서 응용 프로그램을 �
 keywords: "dotnet-run, CLI, CLI 명령, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 10/07/2016
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.assetid: 495ff50b-cb30-4d30-8f20-beb3d5e7c31f
+ms.assetid: 40d4e60f-9900-4a48-b03c-0bae06792d91
 translationtype: Human Translation
-ms.sourcegitcommit: 796df1549a7553aa93158598d62338c02d4df73e
-ms.openlocfilehash: 2e14cd14bc3d5ed86c841e46dc80c2649f239a82
+ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
+ms.openlocfilehash: 60bb9160e43788539b0dc6bcf1372bb925e9ba22
+ms.lasthandoff: 03/07/2017
 
 ---
 
 #<a name="dotnet-run"></a>dotnet-run
-
-> [!WARNING]
-> 이 항목은 .NET Core Tools Preview 2에 적용됩니다. .NET Core 도구 RC4 버전의 경우 [dotnet-run(.NET Core 도구 RC4)](../preview3/tools/dotnet-run.md) 항목을 참조하세요.
 
 ## <a name="name"></a>이름 
 
@@ -27,23 +25,26 @@ ms.openlocfilehash: 2e14cd14bc3d5ed86c841e46dc80c2649f239a82
 
 ## <a name="synopsis"></a>개요
 
-`dotnet run [--help] [--framework] [--configuration]
-    [--project] [[--] [application arguments]]`
+```
+dotnet run [-c|--configuration] [-f|--framework] [-p|--project] [[--] [application arguments]]
+dotnet run [-h|--help]
+```
 
 ## <a name="description"></a>설명
-`dotnet run` 명령은 하나의 명령을 사용하여 소스 코드에서 응용 프로그램을 실행하는 편리한 옵션을 제공합니다. 이 명령은 소스 코드를 컴파일하고 출력 프로그램을 생성한 다음 해당 프로그램을 실행합니다. 또한 빠른 반복 개발에 유용하며 소스 분산 프로그램(예: 웹 사이트)을 실행하는 데 사용할 수도 있습니다.
 
-이 명령은 [dotnet build](dotnet-build.md)를 사용하여 프로그램을 시작하기 전에 소스 입력을 .NET 어셈블리로 빌드합니다. 이 명령 및 소스 입력 처리에 대한 요구 사항은 모두 빌드 명령에서 상속됩니다. 빌드 명령에 대한 설명서는 이러한 요구 사항에 대한 자세한 정보를 제공합니다.
+`dotnet run` 명령은 하나의 명령을 사용하여 소스 코드에서 응용 프로그램을 실행하는 편리한 옵션을 제공합니다. 명령줄에서 빠른 반복 개발에 유용합니다. 명령은 코드를 빌드하는 [ `dotnet build` ](dotnet-build.md) 명령에 따라 달라지므로, 프로젝트를 먼저 복원해야 하는 것처럼 빌드에 대한 요구 사항이 `dotnet run`에 적용됩니다. 
 
-출력 파일은 자식 *bin* 폴더에 기록되며, 이 폴더가 없을 경우 생성합니다. 필요에 따라 파일을 덮어씁니다. 임시 파일은 자식 *obj* 폴더에 기록됩니다.  
+출력 파일은 `bin/<configuration>/<target>`인 기본 위치에 작성됩니다. 예를 들어 `netcoreapp1.0` 응용 프로그램이 있고 `dotnet run`을 실행하는 경우 출력은 `bin/Debug/netcoreapp1.0`에 놓입니다. 필요에 따라 파일을 덮어씁니다. 임시 파일은 `obj` 디렉터리에 놓입니다. 
 
-여러 프레임워크가 지정된 프로젝트의 경우 `dotnet run`은 먼저 .NET Core 프레임워크를 선택합니다. 이러한 프레임워크가 없을 경우 오류가 출력됩니다. 다른 프레임워크를 지정하려면 `--framework` 인수를 사용합니다.
+지정된 프레임워크가 여러 개인 프로젝트의 경우 응용 프로그램을 실행할 프레임워크을 지정하는 데 `--framework` 옵션이 사용되지 않으면 `dotnet run`은 오류를 표시합니다.
 
 `dotnet run` 명령은 빌드된 어셈블리가 아닌 프로젝트의 컨텍스트에서 사용해야 합니다. 이식 가능한 응용 프로그램 DLL을 대신 실행하려는 경우에는 다음 예제와 같이 다른 명령 없이 [dotnet](dotnet.md)을 사용해야 합니다.
  
 `dotnet myapp.dll`
 
 `dotnet` 드라이버에 대한 자세한 내용은 [.NET Core 명령줄 도구(CLI)](index.md) 항목을 참조하세요.
+
+응용 프로그램을 실행하기 위해 `dotnet run` 명령은 NuGet 캐시에서 공유 런타임의 외부에 있는 응용 프로그램의 종속성을 확인합니다. 이러한 점에서 프로덕션에서 응용 프로그램을 실행하기 위해 이 명령을 사용하는 것은 권장되지 않습니다. 대신 [ `dotnet publish` ](dotnet-publish.md) 명령을 사용하여 [배포를 만들고](../deploying/index.md) 프로덕션에서 이 배포를 사용해야 합니다. 
 
 ## <a name="options"></a>옵션
 
@@ -55,31 +56,28 @@ ms.openlocfilehash: 2e14cd14bc3d5ed86c841e46dc80c2649f239a82
 
 명령에 대한 간단한 도움말을 출력합니다.
 
-`-f`, `--framework <FRAMEWORK_IDENTIFIER>`
+`-c|--configuration {Debug|Release}`
 
-지정된 FID(프레임워크 식별자)에 대한 응용 프로그램을 실행합니다. 
+프로젝트 빌드에 사용할 구성입니다. 기본값은 `Debug`입니다.
 
-`-c`, `--configuration <Debug|Release>`
+`-f|--framework <FRAMEWORK_IDENTIFIER>`
 
-게시할 때 사용할 구성입니다. 기본값은 `Debug`입니다.
+지정된 프레임워크를 사용하여 앱을 빌드하고 실행합니다. 프레임워크는 프로젝트 파일에 지정되어야 합니다.
 
-`-p`, `--project [PATH]`
+`-p|--project <PATH>`
 
-실행할 프로젝트를 지정합니다. [project.json](project-json.md) 파일 또는 [project.json](project-json.md) 파일을 포함하는 디렉터리에 대한 경로일 수 있습니다. 지정하지 않으면 현재 디렉터리로 기본 설정됩니다. 
+실행할 프로젝트 파일의 경로를 지정합니다. [csproj](csproj.md) 파일 또는 [csproj](csproj.md) 파일을 포함하는 디렉터리에 대한 경로일 수 있습니다. 지정하지 않으면 현재 디렉터리로 기본 설정됩니다. 
 
 ## <a name="examples"></a>예제
 
-현재 디렉터리에 있는 프로젝트를 실행합니다.`dotnet run` 
+현재 디렉터리에 있는 프로젝트를 실행합니다.
+
+`dotnet run` 
 
 지정된 프로젝트를 실행합니다.
 
-`dotnet run --project /projects/proj1/project.json`
+`dotnet run --project /projects/proj1/proj1.csproj`
 
 현재 디렉터리에 있는 프로젝트를 실행합니다. `--` 인수가 사용되었으므로 이 예제의 `--help` 인수는 실행 중인 응용 프로그램에 전달됩니다.
 
 `dotnet run --configuration Release -- --help`
-
-
-<!--HONumber=Feb17_HO2-->
-
-

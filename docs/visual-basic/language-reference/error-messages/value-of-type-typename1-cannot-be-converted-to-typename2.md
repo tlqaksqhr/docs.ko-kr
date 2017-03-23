@@ -1,0 +1,89 @@
+---
+title: "형식의 값 &quot;&lt;typename1&gt;&quot;로 변환할 수 없는&quot;&lt;typename2&gt;&quot; | Microsoft 문서"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30955
+- bc30955
+dev_langs:
+- VB
+helpviewer_keywords:
+- BC30955
+ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
+caps.latest.revision: 12
+author: stevehoag
+ms.author: shoag
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Machine Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: c973d5e2aa03d423e1dea8053946172655f08490
+ms.lasthandoff: 03/13/2017
+
+---
+# <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39"></a>형식의 값 '&lt;typename1&gt;'로 변환할 수 없는'&lt;typename2&gt;'
+형식의 값 '\<typename1 > '로 변환할 수 없는 '\<typename2 > '입니다. 형식 불일치 어셈블리에 대 한 프로젝트 참조를 사용 하는 파일 참조가 섞여 있기 때문일 수 있습니다 '\<assemblyname > '입니다. 에 대 한 파일 참조를 교체 '\<파일 경로 > ' 프로젝트에서 '\<projectname1 > '에 대 한 프로젝트와 '\<projectname2 > '입니다.  
+  
+ 프로젝트는 프로젝트 참조를 및 파일 참조를 모두 있는 경우에서 컴파일러는 형식 간에 변환할 수 보장할 수 없습니다.  
+  
+ 다음 의사 (pseudo) 코드에는이 오류를 생성할 수 있는 상황을 보여 줍니다.  
+  
+ `' ================ Visual Basic project P1 ================`  
+  
+ `'        P1 makes a PROJECT REFERENCE to project P2`  
+  
+ `'        and a FILE REFERENCE to project P3.`  
+  
+ `Public commonObject As P3.commonClass`  
+  
+ `commonObject = P2.getCommonClass()`  
+  
+ `' ================ Visual Basic project P2 ================`  
+  
+ `'        P2 makes a PROJECT REFERENCE to project P3`  
+  
+ `Public Function getCommonClass() As P3.commonClass`  
+  
+ `Return New P3.commonClass`  
+  
+ `End Function`  
+  
+ `' ================ Visual Basic project P3 ================`  
+  
+ `Public Class commonClass`  
+  
+ `End Class`  
+  
+ 프로젝트 `P1` 프로젝트를 통해 간접 프로젝트 참조를 사용 하면 `P2` 프로젝트에 `P3`에 대 한 직접 파일 참조도 `P3`합니다. 선언 `commonObject` 에 대 한 파일 참조를 사용 하 여 `P3`를 호출 하는 동안 `P2.getCommonClass` 에 대 한 프로젝트 참조를 사용 하 여 `P3`합니다.  
+  
+ 이 상황에서의 문제점은 파일 참조의 출력 파일의 이름과 파일 경로 지정 한다는 `P3` (일반적으로 p3.dll) 프로젝트 참조 소스 프로젝트를 식별 하는 동안 (`P3`) 프로젝트 이름으로 합니다. 이 때문에 컴파일러 보장할 수 없습니다 하는 형식을 `P3.commonClass` 두 개의 다른 참조를 통해 동일한 소스 코드에서 제공 합니다.  
+  
+ 이 상황은 일반적으로 발생 때 프로젝트 참조와 파일 참조가 섞여 있습니다. 앞의 그림에서 문제가 발생 하지 않습니다 `P1` 대 한 직접 프로젝트 참조를 `P3` 파일 참조가 대신 합니다.  
+  
+ **오류 ID:** BC30955  
+  
+## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
+  
+-   프로젝트 참조에 대 한 파일 참조를 변경 합니다.  
+  
+## <a name="see-also"></a>참고 항목  
+ [Visual Basic의 형식 변환](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
+ [프로젝트에서 참조 관리](https://docs.microsoft.com/visualstudio/ide/managing-references-in-a-project)   
+ [NIB 방법: 참조 추가 대화 상자를 사용하여 참조 추가 또는 제거](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)

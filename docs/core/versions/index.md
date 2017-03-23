@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 636c86fed9952542a256c075eb9e388b70cff174
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: 519253bd6dc105afb138268c62347c29a6072fbb
+ms.openlocfilehash: 7be49f3ac7a7806e631eacf5004343919654881e
+ms.lasthandoff: 03/07/2017
 
 ---
 
@@ -129,33 +129,28 @@ GitHub의 .NET Core 리포지토리에는 매일 많은 라이브러리의 새�
 
 .NET Core v1.0.0 안정적 버전을 전달한 후 새 시나리오를 사용하기 위해 새 API를 .NET Core 라이브러리에 추가합니다. 다양한 메타패키지가 업데이트된 .NET Core 라이브러리 패키지를 참조하도록 업데이트됩니다. 메타패키지는 더 높은 프레임워크 버전과 일치하도록 패치 업데이트(x.y)로 버전 관리됩니다. 새 API를 설명하도록 다양한 프레임워크가 업데이트됩니다. 새로운 .NET Core 배포가 `Microsoft.NETCore.App` 메타패키지와 일치하는 버전 번호로 릴리스됩니다.
 
-아래의 project.json 예제에 표시된 부분 업데이트를 확인할 수 있습니다.
+다음 프로젝트 파일에 표시된 부분 업데이트를 확인할 수 있습니다.
 
-```
-{
-  "dependencies": {
-    "Microsoft.NETCore.App": "1.1.0"
-  },
-  "frameworks": {
-    "netcoreapp1.1": {}
-  }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+</Project>
 ```
 
 ### <a name="shipping-a-major-release"></a>주 릴리스 전달
 
 .NET Core v1.y.z 안정적 버전을 지정하고 주요 새 시나리오를 사용하기 위해 새 API를 .NET Core 라이브러리에 추가합니다. 플랫폼에 대한 지원이 삭제될 수 있습니다. 다양한 메타패키지가 업데이트된 .NET Core 라이브러리 패키지를 참조하도록 업데이트됩니다. `Microsoft.NETCore.App` 메타패키지 및 `netcore` 프레임워크는 주요 업데이트(x.)로 버전 관리됩니다. `NETStandard.Library` 메타패키지는 여러 .NET 구현에 적용되므로 부분 업데이트(x.y)로 버전 관리될 수 있습니다. 새로운 .NET Core 배포가 `Microsoft.NETCore.App` 메타패키지와 일치하는 버전 번호로 릴리스됩니다.
 
-아래 예제의 project.json 메타패키지 참조에 표시된 주요 업데이트를 확인할 수 있습니다.
+다음 프로젝트 파일에 표시된 주요 업데이트를 확인할 수 있습니다. (`netcoreapp2.0`은 릴리스되지 않았습니다.)
 
-```
-{
-  "dependencies": {
-    "Microsoft.NETCore.App": "2.0.0"
-  },
-  "frameworks": {
-    "netcoreapp2.0": {}
-  }
-}
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+</Project>
+
 ```
 

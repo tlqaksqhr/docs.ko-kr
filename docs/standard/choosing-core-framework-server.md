@@ -11,8 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 155553e4-89a2-418d-be88-4e75f6c3cc69
 translationtype: Human Translation
-ms.sourcegitcommit: 572bec82e08d6b47a188e51964c8c2f440fa471c
-ms.openlocfilehash: e23514daacb34739b26b7a31afea2ccb30296e79
+ms.sourcegitcommit: 053e296db67b9dde23c4d6295dbc7246d2b486ed
+ms.openlocfilehash: 816fb524000eb96ed5a157934cabc51b90f11dc0
+ms.lasthandoff: 02/23/2017
 
 ---
 
@@ -53,7 +54,7 @@ ms.openlocfilehash: e23514daacb34739b26b7a31afea2ccb30296e79
 
 ### <a name="containers"></a>컨테이너
 
-컨테이너는 아키텍처 패턴을 따르는 웹앱 또는 서비스를 컨테이너화하는 데 사용할 수 있지만 일반적으로 마이크로 서비스 아키텍처와 연계하여 사용됩니다. Windows 컨테이너에 .NET Framework를 사용할 수 있지만 .NET Core의 모듈화된 간단한 특성은 컨테이너에 적합합니다.  컨테이너를 만들고 배포할 때 해당 이미지의 크기가 .NET Framework보다 .NET Core를 사용할 때 훨씬 작습니다.  플랫폼 간 사용되므로 예를 들어 서버 앱을 Linux Docker 컨테이너에 배포할 수 있습니다.
+컨테이너는 아키텍처 패턴을 따르는 웹앱 또는 서비스를 컨테이너화하는 데 사용할 수 있지만 일반적으로 마이크로 서비스 아키텍처와 연계하여 사용됩니다. Windows 컨테이너에 .NET Framework를 사용할 수 있지만 .NET Core의 모듈화된 간단한 특성은 컨테이너에 적합합니다. 컨테이너를 만들고 배포할 때 컨테이너 이미지의 크기가 .NET Framework보다 .NET Core를 사용할 때 훨씬 작습니다. 플랫폼 간 사용되므로 예를 들어 서버 앱을 Linux Docker 컨테이너에 배포할 수 있습니다.
 
 그런 다음 고유한 Linux 또는 Windows 인프라에서 Docker 컨테이너를 호스트하거나, 컨테이너 기반 응용 프로그램을 클라우드에서 관리, 오케스트레이션, 확장할 수 있는 [Azure Container Service](https://azure.microsoft.com/services/container-service/)와 같은 클라우드 서비스를 사용할 수 있습니다.
 
@@ -107,9 +108,4 @@ ms.openlocfilehash: e23514daacb34739b26b7a31afea2ccb30296e79
 * [.NET Framework에서 .NET Core로 이식](../core/porting/index.md)
 * [Docker 가이드의 .NET Framework](../framework/index.md)
 * [.NET 구성 요소 개요](components.md)
-
-
-
-<!--HONumber=Jan17_HO3-->
-
 
