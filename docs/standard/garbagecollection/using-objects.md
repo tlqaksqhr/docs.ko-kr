@@ -31,7 +31,7 @@ C#의 `using` 문과 Visual Basic의 `Using` 문은 개체를 만들고 정리�
 
 다음 예제에서는 `using` 문을 사용하여 [System.IO.StreamReader](xref:System.IO.StreamReader) 개체를 만들고 해제합니다.
 
-```cs
+```csharp
 using System;
 using System.IO;
 
@@ -77,7 +77,7 @@ End Module
 
 [StreamReader](xref:System.IO.StreamReader) 클래스가 [IDisposable](xref:System.IDisposable) 인터페이스를 구현하며, 이는 관리되지 않는 리소스를 사용함을 나타내지만 예제에서는 [StreamReader.Dispose](xref:System.IO.StreamReader.Dispose(System.Boolean)) 메서드를 명시적으로 호출하지 않습니다. C# 또는 Visual Basic 컴파일러가 `using` 문을 발견하면 `try/finally` 블록을 명시적으로 포함하는 다음 코드와 동일한 중간 언어(IL)를 표시합니다. 
 
-```cs
+```csharp
 using System;
 using System.IO;
 
@@ -134,7 +134,7 @@ End Module
 
 또한 C# `using` 문을 사용하면 단일 문으로 여러 리소스를 가져올 수 있으며, 이는 중첩된 using 문의 기능과 내부적으로 동일합니다. 다음 예제에서는 서로 다른 두 파일의 내용을 읽을 수 있도록 두 개의 [StreamReader](xref:System.IO.StreamReader) 개체를 인스턴스화합니다. 
 
-```cs
+```csharp
 using System;
 using System.IO;
 
@@ -171,7 +171,7 @@ public class Example
 
 `try/catch/finally` 블록을 사용하여 [StreamReader](xref:System.IO.StreamReader) 개체를 인스턴스화, 사용 및 삭제하고 [StreamReader](xref:System.IO.StreamReader) 생성자 및 해당 [ReadToEnd](xref:System.IO.StreamReader.ReadToEnd) 메서드에서 throw된 예외를 처리한다는 점을 제외하면 다음 예제는 이전 예제와 유사합니다. `finally` 블록의 코드가 [Dispose](xref:System.IDisposable.Dispose) 메서드를 호출하기 전에 [IDisposable](xref:System.IDisposable)을 구현하는 개체가 `null`이 아닌지 확인합니다. 이렇게 하지 않으면 런타임에 [NullReferenceException](xref:System.NullReferenceException) 예외가 발생할 수 있습니다. 
 
-```cs
+```csharp
 using System;
 using System.Globalization;
 using System.IO;

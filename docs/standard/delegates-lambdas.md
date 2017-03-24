@@ -21,7 +21,7 @@ ms.lasthandoff: 03/02/2017
 
 대리자는 특정 메서드 시그니처를 지정하는 형식을 정의합니다. 이 시그니처를 충족하는 메서드(정적 또는 인스턴스)를 해당 형식의 변수에 할당한 다음 직접 호출하거나(적절한 인수 사용) 다른 메서드에 인수로 전달한 다음 호출할 수 있습니다. 다음 예제에서는 대리자 사용을 보여 줍니다.
 
-```cs
+```csharp
 public class Program
 {
 
@@ -55,7 +55,7 @@ public class Program
 
 이제 위의 예제를 가져와서 사용자 지정 형식 대신 `Func<>` 대리자를 사용하여 다시 작성할 수 있습니다. 프로그램은 동일하게 실행됩니다.
 
-```cs
+```csharp
 public class Program
 {
 
@@ -78,7 +78,7 @@ public class Program
 
 예를 들어 이번에는 익명 대리자를 사용하여 짝수 목록만 필터링한 다음 콘솔에 출력하겠습니다.
 
-```cs
+```csharp
 public class Program
 {
 
@@ -115,7 +115,7 @@ public class Program
 
 람다 식은 대리자를 지정하는 또 다른 방법이므로 익명 대리자 대신 람다 식을 사용하도록 위의 샘플을 다시 작성할 수 있어야 합니다.
 
-```cs
+```csharp
 public class Program
 {
 
@@ -143,7 +143,7 @@ public class Program
 
 다시 말해, 람다는 단순히 대리자이므로 다음 코드 조각과 같이 문제 없이 이벤트 처리기로 사용할 수 있습니다.
 
-```cs
+```csharp
 public MainWindow()
 {
     InitializeComponent();

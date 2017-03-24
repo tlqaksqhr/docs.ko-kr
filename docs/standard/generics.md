@@ -29,7 +29,7 @@ ms.lasthandoff: 03/02/2017
 
 아래에는 런타임에 데이터 구조 형식을 알고 있을 경우의 효율성을 보여 주는 작은 프로그램이 있습니다.
 
-```cs
+```csharp
   using System;
   using System.Collections;
   using System.Collections.Generic;
