@@ -11,9 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
 translationtype: Human Translation
-ms.sourcegitcommit: 519253bd6dc105afb138268c62347c29a6072fbb
-ms.openlocfilehash: f681b1663d1a2e6c2fbbd1cc415290d26bbbe429
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 633dcc6d966125139cb21c4e70dac4d4794ee9a4
+ms.openlocfilehash: da326fb823c16c7795a6a05ad302c13918b435aa
+ms.lasthandoff: 03/20/2017
 
 ---
 
@@ -68,7 +68,7 @@ ms.lasthandoff: 03/07/2017
 
 공식 사양은 표준의 일부인 API를 정의하는 .cs 파일 집합입니다. 각 [구성 요소](https://github.com/dotnet/corefx/tree/master/src)에 대한 [ref 디렉터리](https://github.com/dotnet/corefx/tree/master/src/System.Runtime/ref)에서 .NET 표준 라이브러리 API를 정의합니다. ref 아티팩트는 [CoreFX 리포지토리](https://github.com/dotnet/corefx)에 있지만 .NET Core 특정은 아닙니다.
 
-[NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) 메타패키지([소스](https://github.com/dotnet/corefx/blob/master/pkg/NETStandard.Library/NETStandard.Library.packages.targets))는 하나 이상의 .NET 표준 라이브러리 버전을 부분적으로 정의하는 라이브러리 집합에 대해 설명합니다.
+[NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) 메타패키지([소스](https://github.com/dotnet/standard/blob/master/netstandard/pkg/NETStandard.Library.dependencies.props))는 하나 이상의 .NET 표준 라이브러리 버전을 부분적으로 정의하는 라이브러리 집합에 대해 설명합니다.
 
 System.Runtime 등의 지정된 구성 요소는 다음에 대해 설명합니다.
 
