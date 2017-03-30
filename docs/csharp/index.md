@@ -10,9 +10,9 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 52db8280-0e53-40cf-858b-e8eef3997dea
 translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d9efc2b1b8ad38a6444e7362da13ce3838476abd
-ms.lasthandoff: 03/13/2017
+ms.sourcegitcommit: 75908d895017c31e36da6702f1b69816afb91d14
+ms.openlocfilehash: 8721c71bf69210cf73d7e703f19a22e267e36a28
+ms.lasthandoff: 03/28/2017
 
 ---
 
@@ -27,7 +27,7 @@ C# 가이드는 C# 언어에 대한 다양한 정보를 제공합니다. 이 사
     - 이전에 개발을 수행했으나 C#이 처음인 경우에는 [C# 언어 둘러보기](tour-of-csharp/index.md)를 읽어보세요. 이 언어의 기본 구문 및 구조를 배우고 이 언어 둘러보기를 사용하여 이전에 사용했던 다른 언어와 C#을 비교할 수 있습니다. 기본적인 C# 프로그램을 사용해볼 수 있는 [자습서](tutorials/index.md)로 이동할 수도 있습니다. 또는 [C# 개념](concepts.md)을 확인하여 C# 언어의 기능을 보다 깊이 있게 이해할 수 있습니다.
 
 * 경험이 풍부한 C# 개발자:
-    - 이전에 C#을 사용해본 적이 있으면 이 언어의 최신 버전에 포함된 기능을 먼저 읽어보는 것이 좋습니다. 현재 버전의 새 기능에 대해서는 [C# 6의 새로운 기능](csharp-6.md)을 확인해 보세요. 그런 다음 좀 더 깊게 이해하려는 [C# 개념](concepts.md)을 찾아봅니다.
+    - 이전에 C#을 사용해본 적이 있으면 이 언어의 최신 버전에 포함된 기능을 먼저 읽어보는 것이 좋습니다. 현재 버전의 새 기능에 대해서는 [C# 의 새로운 기능](whats-new/index.md)을 확인해 보세요. 그런 다음 좀 더 깊게 이해하려는 [C# 개념](concepts.md)을 찾아봅니다.
  
 ## <a name="how-the-c-guide-is-organized"></a>C# 가이드의 구성 방식
 
@@ -42,7 +42,7 @@ C# 가이드에는 7개의 섹션이 있습니다. 순서대로 읽거나 가장
 * [C# 둘러보기](tour-of-csharp/index.md): 
     - 이 섹션에서는 이 언어의 개요를 살펴봅니다. C# 프로그램을 구성하는 요소와 언어의 기능을 배워봅니다. C#의 모든 구문 요소를 포함하는 간단한 샘플를 확인하고 주요 C# 언어 항목을 살펴봅니다. 
 
-* [최신 기능](whats-new.md):
+* [최신 기능](whats-new/index.md):
     - 이 언어의 새 기능에 대해 자세히 알아봅니다. C# Interactive(C#의 REPL) 및 .NET 컴파일러 플랫폼 SDK와 같은 새로운 도구에 대해 알아봅니다. 이 언어가 어떻게 진화하고 있는지도 살펴봅니다. 이 언어를 알아보면서 생산성을 높이는 데 도움이 되는 새로운 도구와 작업 자동화에 대해서도 배울 수 있습니다. 
 
 * [C# Interactive](interactive/index.md):
