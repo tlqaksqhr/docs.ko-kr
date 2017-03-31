@@ -157,7 +157,6 @@ Visual Studio에는 Microsoft Office 프로그래밍을 개선하는 새로운 �
   
      이 코드는 COM 프로그래밍에서 `ref` 키워드를 생략하는 기능, 명명된 인수, 선택적 인수 등 다양한 C#의 새로운 기능을 보여 줍니다. Visual Basic에는 이러한 기능이 이미 포함되어 있습니다. [PasteSpecial](http://go.microsoft.com/fwlink/?LinkId=147099) 메서드에는 모두 선택적 참조 매개 변수로 정의되는 7개 매개 변수가 있습니다. Visual C# 2010 이전 버전에서는 전송할 의미 있는 값이 없더라도 7개 매개 변수에 대해 인수로 사용할 개체 변수를 정의해야 했습니다. 명명된 인수와 선택적 인수를 사용하면 액세스할 매개 변수를 이름으로 지정하고 해당 매개 변수에만 인수를 보낼 수 있습니다. 이 예제에서는 클립보드에 통합 문서 링크를 만들어야 하고(`Link` 매개 변수) Word 문서에 링크를 아이콘으로 표시하도록(`DisplayAsIcon` 매개 변수) 지정하는 인수를 전송합니다. Visual C# 2010에서는 이러한 인수의 `ref` 키워드를 생략할 수도 있습니다. Visual C# 2008의 다음 코드 세그먼트를 Visual C# 2010에서는 맨 아래의 코드 줄 하나로 대체할 수 있습니다.  
   
-     [!code-cs[csOfficeWalkthrough#11](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_11.cs)]  
   
 ### <a name="to-run-the-application"></a>응용 프로그램을 실행하려면  
   
