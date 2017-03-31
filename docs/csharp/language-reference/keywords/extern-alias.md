@@ -1,53 +1,71 @@
 ---
-title: "extern alias(C# 참조) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "alias_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "별칭[C#], extern 키워드"
-  - "별칭, extern 키워드"
-  - "extern 별칭 키워드[C#]"
+title: "extern alias(C# 참조) | Microsoft 문서"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- alias_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- extern alias keyword [C#]
+- aliases [C#], extern keyword
+- aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
 caps.latest.revision: 16
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 16
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 2bda6b652b56c50883700fe5a2a81189dbcb0d2d
+ms.lasthandoff: 03/13/2017
+
 ---
-# extern alias(C# 참조)
-정규화된 형식 이름이 동일하고 버전만 다른 두 개의 어셈블리를 참조해야 할 수도 있습니다.  예를 들어 동일한 응용 프로그램에서 어셈블리의 버전을 여러 개 사용해야 할 수도 있습니다.  외부 어셈블리 별칭을 사용하면 각 어셈블리의 네임스페이스가 별칭으로 명명되어 루트 수준 네임스페이스 안에 래핑되므로 동일한 파일에서 여러 어셈블리 버전을 사용할 수 있습니다.  
+# <a name="extern-alias-c-reference"></a>extern alias(C# 참조)
+정규화된 형식 이름이 동일한 어셈블리의 두 버전을 참조해야 할 수 있습니다. 예를 들어 동일한 응용 프로그램에서 어셈블리 버전을 두 개 이상 사용해야 할 수 있습니다. 외부 어셈블리 별칭을 사용하면 각 어셈블리의 네임스페이스를 별칭으로 명명된 루트 수준 네임스페이스 내에서 래핑하여 동일한 파일에서 사용하도록 할 수 있습니다.  
   
 > [!NOTE]
 >  [extern](../../../csharp/language-reference/keywords/extern.md) 키워드는 메서드 한정자로도 사용되어 비관리 코드로 작성된 메서드를 선언합니다.  
   
- 정규화된 형식 이름이 동일한 두 개의 어셈블리를 참조하려면 다음과 같이 명령 프롬프트에서 별칭을 지정해야 합니다.  
+ 정규화된 형식 이름이 동일한 두 어셈블리를 참조하려면 다음과 같이 명령 프롬프트에서 별칭을 지정해야 합니다.  
   
  `/r:GridV1=grid.dll`  
   
  `/r:GridV2=grid20.dll`  
   
- 이렇게 하면 외부 별칭 `GridV1` 및 `GridV2`가 만들어집니다.  이러한 별칭을 한 프로그램에서 사용하려면 `extern` 키워드를 사용하여 별칭을 참조합니다.  예를 들면 다음과 같습니다.  
+ 그러면 외부 별칭 `GridV1` 및 `GridV2`가 생성됩니다. 프로그램 내에서 이러한 별칭을 사용하려면 `extern` 키워드를 사용하여 참조합니다. 예:  
   
  `extern alias GridV1;`  
   
  `extern alias GridV2;`  
   
- 각 외부 별칭 선언에서는 전역 네임스페이스와 같은 수준\(하위 수준은 제외\)에 있는 추가 루트 수준 네임스페이스를 선언합니다.  따라서 정규화된 이름을 사용하지 않고도 적절한 네임스페이스 별칭을 루트로 하여 모호성 문제 없이 각 어셈블리의 형식을 참조할 수 있습니다.  
+ 각 extern alias 선언에서는 전역 네임스페이스와 병렬이지만 전역 네임스페이스 내에 있지 않는 추가 루트 수준 네임스페이스를 소개합니다. 따라서 각 어셈블리의 형식은 적절한 namespace-alias에서 시작되는 정규화된 이름을 사용하여 명확하게 참조할 수 있습니다.  
   
- 앞의 예제에서 `GridV1::Grid`는 `grid.dll`의 표 컨트롤이며 `GridV2::Grid`는 `grid20.dll`의 표 컨트롤입니다.  
+ 이전 예제에서 `GridV1::Grid`는 `grid.dll`의 표 컨트롤이 되고 `GridV2::Grid`는 `grid20.dll`의 표 컨트롤이 됩니다.  
   
-## C\# 언어 사양  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C# 언어 사양  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## 참고 항목  
- [C\# 참조](../../../csharp/language-reference/index.md)   
- [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C\# 키워드](../../../csharp/language-reference/keywords/index.md)   
+## <a name="see-also"></a>참고 항목  
+ [C# 참조](../../../csharp/language-reference/index.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
+ [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
  [네임스페이스 키워드](../../../csharp/language-reference/keywords/namespace-keywords.md)   
  [:: 연산자](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)   
- [\/reference \(Import Metadata\)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)
+ [/reference(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)

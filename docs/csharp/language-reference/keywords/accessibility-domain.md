@@ -1,37 +1,55 @@
 ---
-title: "액세스 가능 도메인(C# 참조) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "액세스 가능 도메인[C#]"
+title: "액세스 가능 도메인(C# 참조) | Microsoft 문서"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- accessibility domain [C#]
 ms.assetid: 8af779c1-275b-44be-a864-9edfbca71bcc
 caps.latest.revision: 17
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 17
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: c7f575aa65680ccc886ac0246c589a8cac1302d7
+ms.lasthandoff: 03/13/2017
+
 ---
-# 액세스 가능 도메인(C# 참조)
-멤버의 액세스 가능 도메인은 프로그램 섹션에서 멤버가 참조될 수 있는 범위를 지정합니다.  멤버가 다른 형식 내에 중첩되어 있을 경우, 이 멤버의 액세스 가능 도메인은 멤버의 [액세스 가능성 수준](../../../csharp/language-reference/keywords/accessibility-levels.md) 및 직접 포함하는 형식의 액세스 가능 도메인에 의해 결정됩니다.  
+# <a name="accessibility-domain-c-reference"></a>액세스 가능 도메인(C# 참조)
+멤버의 액세스 가능 도메인은 멤버가 참조될 수 있는 프로그램 섹션을 지정합니다. 멤버가 다른 형식 내에 중첩되면 해당 액세스 가능 도메인은 멤버의 [액세스 가능성 수준](../../../csharp/language-reference/keywords/accessibility-levels.md) 및 한 수준 위 형식의 액세스 가능 도메인에 의해 결정됩니다.  
   
- 최상위 수준 형식의 액세스 가능 도메인은 가장 작을 경우 해당 최상위 수준 형식이 선언된 프로젝트의 프로그램 텍스트가 됩니다.  즉, 도메인은 이 프로젝트의 소스 파일을 모두 포함합니다.  중첩 형식의 액세스 가능 도메인은 가장 작을 경우 해당 중첩 형식이 선언된 형식의 프로그램 텍스트가 됩니다.  즉, 이 도메인은 모든 중첩 형식을 포함하는 형식 본문입니다.  중첩 형식의 액세스 가능 도메인은 포함하는 형식의 액세스 가능 도메인을 벗어날 수 없습니다.  이러한 개념은 다음 예제에 설명되어 있습니다.  
+ 최상위 형식의 액세스 가능 도메인은 최소한 최상위 형식이 선언된 프로젝트의 프로그램 텍스트입니다. 즉, 도메인에는 이 프로젝트의 모든 소스 파일이 포함됩니다. 중첩 형식의 액세스 가능 도메인은 최소한 중첩 형식이 선언된 프로젝트의 프로그램 텍스트입니다. 즉, 도메인은 모든 중첩 형식이 포함된 형식 본문입니다. 중첩 형식의 액세스 가능 도메인은 포함하는 형식의 액세스 가능 도메인을 초과하지 않습니다. 다음 예제에서는 이러한 개념을 보여 줍니다.  
   
-## 예제  
- 이 예제에는 최상위 형식인 `T1`과 두 개의 중첩 클래스 `M1` 및 `M2`가 있습니다.  각 클래스는 서로 다른 액세스 가능성이 선언된 필드를 포함하고 있습니다.  `Main` 메서드에서 각 문 뒤에 붙은 주석은 각 멤버의 액세스 가능 도메인을 나타냅니다.  액세스할 수 없는 멤버를 참조하려는 문은 주석으로 처리되어 있습니다.  액세스할 수 없는 멤버를 참조하려고 할 때 발생하는 컴파일러 오류를 보려면 주석을 한 번에 하나씩 제거하십시오.  
+## <a name="example"></a>예제  
+ 이 예제에는 최상위 형식 `T1`과 두 개의 중첩 클래스 `M1` 및 `M2`가 포함됩니다. 클래스에는 여러 가지 선언된 액세스 가능성을 가진 필드가 포함됩니다. `Main` 메서드에서 각 문 뒤에는 각 멤버의 액세스 가능성 도메인을 나타내는 주석이 있습니다. 액세스할 수 없는 멤버를 참조하려고 하는 문은 주석으로 처리됩니다. 액세스할 수 없는 멤버를 참조함으로써 발생한 컴파일러 오류를 확인하려면 한 번에 하나씩 주석을 제거합니다.  
   
  [!code-cs[csrefKeywordsModifiers#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/accessibility-domain_1.cs)]  
   
-## C\# 언어 사양  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C# 언어 사양  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## 참고 항목  
- [C\# 참조](../../../csharp/language-reference/index.md)   
- [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C\# 키워드](../../../csharp/language-reference/keywords/index.md)   
+## <a name="see-also"></a>참고 항목  
+ [C# 참조](../../../csharp/language-reference/index.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
+ [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
  [액세스 한정자](../../../csharp/language-reference/keywords/access-modifiers.md)   
  [액세스 가능성 수준](../../../csharp/language-reference/keywords/accessibility-levels.md)   
  [액세스 가능성 수준 사용에 대한 제한](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)   

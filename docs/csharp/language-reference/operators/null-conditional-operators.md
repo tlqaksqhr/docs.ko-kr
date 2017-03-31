@@ -1,22 +1,40 @@
 ---
-title: "Null 조건부 연산자(C# 및 Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
+title: "Null 조건부 연산자(C# 및 Visual Basic) | Microsoft 문서"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
 ms.assetid: 9c7b2c8f-a785-44ca-836c-407bfb6d27f5
 caps.latest.revision: 3
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 3
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 0ecdf3c610bb09d1ecdf01e25b75c8f01802e852
+ms.lasthandoff: 03/13/2017
+
 ---
-# Null 조건부 연산자(C# 및 Visual Basic)
-멤버 액세스\(`?.`\) 또는 인덱스\(`?[`\) 작업을 수행하기 전에 null을 테스트하는 데 사용됩니다.  이러한 연산자는 null 검사의 처리를 위해 작성하는 코드의 양을 줄이는 데 도움이 되며 특히 데이터 구조에서 아래로 내려가는 경우에 유용합니다.  
+# <a name="null-conditional-operators-c-and-visual-basic"></a>Null 조건부 연산자(C# 및 Visual Basic)
+멤버 액세스(`?.`) 또는 인덱스(`?[`) 작업을 수행하기 전에 null을 테스트하는 데 사용됩니다.  이러한 연산자는 null 검사의 처리를 위해 작성하는 코드의 양을 줄이는 데 도움이 되며 특히 데이터 구조에서 아래로 내려가는 경우에 유용합니다.  
   
-```c#  
+```csharp  
 int? length = customers?.Length; // null if customers is null   
 Customer first = customers?[0];  // null if customers is null  
 int? count = customers?[0]?.Orders?.Count();  // null if customers, the first customer, or Orders is null  
@@ -40,7 +58,7 @@ A?.B?.C?[0] == E
   
  또한 null 조건 멤버 액세스는 훨씬 더 적은 코드를 사용하여 스레드로부터 안전한 방식으로 대리자를 호출하는 데 사용됩니다.  이전 방식에서는 다음과 같은 코드가 필요합니다.  
   
-```c#  
+```csharp  
 var handler = this.PropertyChanged;  
 if (handler != null)  
     handler(…)  
@@ -65,13 +83,14 @@ PropertyChanged?.Invoke(e)
   
  null 조건부 대리자 호출 구문 `PropertyChanged?(e)`가 없기 때문에 `Invoke` 메서드를 명시적으로 호출해야 합니다.  허용하는 모호한 구문 분석 상황이 너무 많습니다.  
   
-## 언어 사양  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="language-specifications"></a>언어 사양  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
- 자세한 내용은 [Visual Basic Language Reference](../../../visual-basic/language-reference/index.md)를 참조하세요.  
+ 자세한 내용은 [Visual Basic 언어 참조](../../../visual-basic/language-reference/index.md)를 참조하세요.  
   
-## 참고 항목  
- [C\# 참조](../../../csharp/language-reference/index.md)   
- [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [Visual Basic Language Reference](../../../visual-basic/language-reference/index.md)   
- [Visual Basic Programming Guide](../../../visual-basic/programming-guide/index.md)
+## <a name="see-also"></a>참고 항목  
+ [??(Null 병합 연산자)](null-conditional-operator.md)   
+ [C# 참조](../../../csharp/language-reference/index.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
+ [Visual Basic 언어 참조](../../../visual-basic/language-reference/index.md)   
+ [Visual Basic 프로그래밍 가이드](../../../visual-basic/programming-guide/index.md)

@@ -1,90 +1,108 @@
 ---
-title: "액세스 한정자(C# 프로그래밍 가이드) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "액세스 한정자[C#], 정보"
-  - "C# 언어, 액세스 한정자"
+title: "액세스 한정자(C# 프로그래밍 가이드) | Microsoft 문서"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- C# Language, access modifiers
+- access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
 caps.latest.revision: 32
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 32
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 9940012829038f585ad78a10b70fe2941753e40e
+ms.lasthandoff: 03/13/2017
+
 ---
-# 액세스 한정자(C# 프로그래밍 가이드)
-모든 형식 및 형식 멤버에는 현재 어셈블리나 다른 어셈블리에서 사용할 수 있는지 여부를 제어하는 액세스 수준이 있습니다.  다음 액세스 한정자 중 하나를 사용하여 형식이나 멤버를 선언할 때 액세스 수준을 지정할 수 있습니다.  
+# <a name="access-modifiers-c-programming-guide"></a>액세스 한정자(C# 프로그래밍 가이드)
+모든 형식과 형식 멤버에는 사용 중인 어셈블리나 기타 어셈블리의 다른 코드에서 사용될 수 있는지 여부를 제어하는 액세스 가능성 수준이 있습니다. 다음 액세스 한정자를 사용하여 형식 또는 멤버를 선언할 때 해당 항목의 액세스 가능성을 지정할 수 있습니다.  
   
  [public](../../../csharp/language-reference/keywords/public.md)  
  동일한 어셈블리의 다른 코드나 해당 어셈블리를 참조하는 다른 어셈블리의 코드에서 형식이나 멤버에 액세스할 수 있습니다.  
   
  [private](../../../csharp/language-reference/keywords/private.md)  
- 동일한 클래스 또는 구조체의 코드에서만 형식이나 멤버에 액세스할 수 있습니다.  
+ 같은 클래스 또는 구조체의 코드에서만 형식 또는 멤버에 액세스할 수 있습니다.  
   
  [protected](../../../csharp/language-reference/keywords/protected.md)  
- 동일한 클래스나 구조체의 코드 또는 파생 클래스의 클래스에서만 형식이나 멤버에 액세스할 수 있습니다.  
+ 같은 클래스나 구조체 또는 해당 클래스에서 파생 클래스의 코드에서만 형식 또는 멤버에 액세스할 수 있습니다.  
   
  [internal](../../../csharp/language-reference/keywords/internal.md)  
  동일한 어셈블리의 코드에서는 형식이나 멤버에 액세스할 수 있지만 다른 어셈블리의 코드에서는 액세스할 수 없습니다.  
   
  `protected internal`  
- 형식 또는 멤버는 선언되는 어셈블리의 모든 코드에 액세스하거나 다른 어셈블리의 파생 클래스 내에서 액세스할 수 있습니다.   다른 어셈블리의 액세스는 보호된 내부 요소가 선언되는 클래스에서 파생되는 클래스 선언 내에서 발생해야 하며 파생된 클래스 형식의 인스턴스를 통해 발생해야 합니다.  
+ 형식이나 멤버가 선언된 어셈블리의 모든 코드에서 또는 다른 어셈블리의 파생 클래스 내에서 형식 또는 멤버에 액세스할 수 있습니다. 다른 어셈블리로부터의 액세스는 반드시 protected internal 요소가 선언된 클래스에서 파생한 클래스 선언 내에서 발생해야 하며, 반드시 이렇게 파생된 클래스 형식의 인스턴스를 통해서 발생해야 합니다.  
   
- 다음 예제에서는 형식 및 멤버에 대한 액세스 한정자를 지정하는 방법을 보여 줍니다.  
+ 다음 예제에서는 형식 및 멤버에 대해 액세스 한정자를 지정하는 방법을 보여 줍니다.  
   
  [!code-cs[csProgGuideObjects#72](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_1.cs)]  
   
- 모든 컨텍스트의 모든 형식 또는 멤버에서 모든 액세스 한정자를 사용할 수 있는 것은 아닙니다. 일부 경우에는 멤버를 포함하는 형식의 액세스 가능성에 의해 형식 멤버의 액세스 가능성이 제한됩니다.  다음 단원에서는 액세스 가능성에 대해 자세히 설명합니다.  
+ 모든 액세스 한정자를 모든 컨텍스트의 모든 형식이나 멤버에서 사용할 수 있는 것은 아니며, 경우에 따라 형식 멤버의 액세스 가능성이 포함하는 형식의 액세스 가능성에 의해 제한됩니다. 다음 섹션에서는 액세스 가능성을 자세히 설명합니다.  
   
-## 클래스 및 구조체 액세스 가능성  
- 네임스페이스 내부에서 직접 선언되어 다른 클래스나 구조체에 중첩되지 않은 클래스와 구조체는 public 또는 internal일 수 있습니다.  액세스 한정자가 지정되지 않으면 internal이 기본적으로 사용됩니다.  
+## <a name="class-and-struct-accessibility"></a>클래스 및 구조체 액세스 가능성  
+ 네임스페이스 내에서 직접 선언된(다른 클래스 또는 구조체 내에 중첩되지 않은) 클래스와 구조체는 public 또는 internal 중 하나일 수 있습니다. 액세스 한정자가 지정되지 않은 경우 internal이 기본값입니다.  
   
- 중첩된 클래스 및 구조체를 포함하는 구조체 멤버는 일반, 내부 또는 개인으로 선언할 수 있습니다.  중첩된 클래스 및 구조체를 포함한 클래스 멤버는 공용, 보호된 내부, 보호, 내부 또는 개인이 될 수 있습니다.  클래스 멤버 및 중첩된 클래스 및 구조체를 포함하는 구조체 멤버에 대한 액세스 수준은 기본적으로 private입니다.  private으로 선언된 중첩된 형식은 포함하는 형식 외부에서 액세스할 수 없습니다.  
+ 중첩 클래스 및 구조체를 포함한 구조체 멤버는 public, internal 또는 private으로 선언될 수 있습니다. 중첩 클래스 및 구조체를 포함한 클래스 멤버는 public, protected internal, protected, internal 또는 private으로 선언될 수 있습니다. 중첩 클래스 및 구조체를 포함한 클래스 멤버와 구조체 멤버의 액세스 수준은 기본적으로 private입니다. 포함하는 형식 외부에서는 private 중첩 형식에 액세스할 수 없습니다.  
   
- 파생 클래스의 액세스 가능성이 해당 기본 형식보다 좋을 수 없습니다.  예를 들어 내부 클래스 `A`에서 공용 클래스 `B`를 파생시킬 수 없습니다.  이러한 선언이 허용되면 파생 클래스에서 `A`의 모든 protected 또는 internal 멤버에 액세스할 수 있으므로 `A`를 public으로 만드는 것이나 마찬가지입니다.  
+ 파생 클래스는 기본 형식보다 큰 액세스 가능성을 가질 수 없습니다. 즉, public 클래스 `B`는 internal 클래스 `A`에서 파생될 수 없습니다. 파생될 수 있다면 파생 클래스에서 `A`의 모든 protected 또는 internal 멤버에 액세스할 수 있기 때문에 결과적으로 `A`가 public으로 설정됩니다.  
   
- InternalsVisibleToAttribute를 사용하면 다른 특정 어셈블리에서 internal 형식에 액세스하도록 허용할 수 있습니다.  자세한 내용은 [Friend 어셈블리](../Topic/Friend%20Assemblies%20\(C%23%20and%20Visual%20Basic\).md)를 참조하십시오.  
+ 다른 특정 어셈블리에서는 InternalsVisibleToAttribute를 사용하여 internal 형식에 액세스할 수 있습니다. 자세한 내용은 [Friend Assemblies](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055)(Friend 어셈블리)를 참조하세요.  
   
-## 클래스 및 구조체 멤버 액세스 가능성  
- 다섯 가지 액세스 형식 중 하나로 클래스 멤버\(중첩된 클래스와 구조체 포함\)를 선언할 수 있습니다.  구조체는 상속을 지원하지 않으므로 구조체 멤버는 protected로 선언할 수 없습니다.  
+## <a name="class-and-struct-member-accessibility"></a>클래스 및 구조체 멤버 액세스 가능성  
+ 중첩 클래스 및 구조체를 포함한 구조체 멤버는 5가지 액세스 형식으로 선언될 수 있습니다. 구조체는 상속을 지원하지 않으므로 구조체 멤버는 protected로 선언될 수 없습니다.  
   
- 일반적으로 멤버의 액세스 가능성은 멤버가 포함된 형식의 액세스 가능성보다 크지 않습니다.  그러나 내부 클래스의 공용 구성원은 구성원이 인터페이스 메서드를 구현하거나 공용 기본 클래스에 정의된 가상 메서드를 재정의하는 경우 어셈블리 외부에서 액세스할 수 있습니다.  
+ 일반적으로 멤버의 액세스 가능성은 멤버를 포함하는 형식의 액세스 가능성보다 크지 않습니다. 그러나 멤버가 인터페이스 메서드를 구현하거나 public 기본 클래스에 정의된 가상 메서드를 재정의하는 경우에는 어셈블리 외부에서 internal 클래스의 public 멤버에 액세스할 수 있습니다.  
   
- 필드, 속성 또는 이벤트는 최소한 멤버 자체로 액세스할 수 있어야 합니다.  마찬가지로, 반환 형식과, 메서드, 인덱서 또는 대리자인 모든 멤버의 매개 변수 형식은 멤버 자체만큼 액세스할 수 있어야 합니다.  예를 들어 public 메서드 `M`에서 클래스 `C`를 반환하려면 `C`도 public이어야 합니다.  마찬가지로 형식 `A`가 private으로 선언된 경우 `A`의 protected 속성이 존재할 수 없습니다.  
+ 필드, 속성 또는 이벤트인 멤버의 형식은 최소한 멤버 자체만큼 액세스할 수 있어야 합니다. 마찬가지로 메서드, 인덱서 또는 대리자인 멤버의 반환 형식과 매개 변수 형식은 최소한 멤버 자체만큼 액세스할 수 있어야 합니다. 예를 들어 `C` 클래스도 public인 경우에만 public 메서드 `M`이 `C` 클래스를 반환할 수 있습니다. 마찬가지로 `A` 형식이 private으로 선언되면 `A` 형식에는 protected 속성은 있을 수 없습니다.  
   
- 사용자 정의 연산자는 항상 public으로 선언되어야 합니다.  자세한 내용은 [operator](../../../csharp/language-reference/keywords/operator.md)를 참조하십시오.  
+ 사용자 정의 연산자는 public으로 선언되어야 합니다. 자세한 내용은 [연산자(C# 참조)](../../../csharp/language-reference/keywords/operator.md)를 참조하세요.  
   
- 소멸자에는 액세스 한정자를 사용할 수 없습니다.  
+ 소멸자에는 액세스 가능성 한정자가 포함될 수 없습니다.  
   
- 클래스나 구조체 멤버의 액세스 수준을 설정하려면 다음 예제와 같이 멤버 선언에 적절한 키워드를 추가합니다.  
+ 클래스 또는 구조체 멤버의 액세스 수준을 설정하려면 다음 예제와 같이 멤버 선언에 해당 키워드를 추가합니다.  
   
  [!code-cs[csProgGuideObjects#73](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/access-modifiers_2.cs)]  
   
 > [!NOTE]
->  보호된 내부 액세스 가능성 수준은 protected AND internal이 아니라 protected OR internal을 나타냅니다.  즉, 보호되는 내부 멤버는 파생 클래스를 포함하여 동일한 어셈블리의 모든 클래스에서 액세스할 수 있습니다.  동일한 어셈블리의 파생 클래스에서만 액세스할 수 있도록 제한하려면 클래스 자체를 internal로 선언하고 클래스의 멤버를 protected로 선언합니다.  
+>  protected internal 액세스 가능성 수준은 protected 및 internal이 아니라 protected 또는 internal을 의미합니다. 즉, 파생 클래스를 포함하여 같은 어셈블리의 모든 클래스에서 protected internal 멤버에 액세스할 수 있습니다. 액세스 가능성을 같은 어셈블리 파생 클래스로만 제한하려면 클래스 자체를 internal로 선언하고 해당 멤버를 protected로 선언합니다.  
   
-## 기타 형식  
- 네임스페이스 안에 직접 선언된 인터페이스는 public 또는 internal로 선언할 수 있으며, 클래스 및 구조체와 마찬가지로 인터페이스는 기본적으로 internal 액세스입니다.  인터페이스의 용도는 다른 형식이 클래스 또는 구조체에 액세스할 수 있게 하는 것이므로 인터페이스 멤버는 항상 public입니다.  인터페이스 멤버에는 액세스 한정자를 적용할 수 없습니다.  
+## <a name="other-types"></a>기타 형식  
+ 네임스페이스 내에서 직접 선언된 인터페이스는 public 또는 internal로 선언될 수 있고 클래스 및 구조체처럼 인터페이스는 기본적으로 internal 액세스로 설정됩니다. 인터페이스는 다른 형식이 클래스나 구조체에 액세스하는 데 사용되므로 인터페이스 멤버는 항상 public입니다. 액세스 한정자는 인터페이스 멤버에 적용될 수 없습니다.  
   
- 열거형 멤버는 항상 public이고 액세스 한정자를 적용할 수 없습니다.  
+ 열거형 멤버는 항상 public이고 액세스 한정자가 적용될 수 없습니다.  
   
- 대리자는 클래스 및 구조체와 같이 동작합니다.  기본적으로 네임스페이스 내에서 직접 선언하면 내부 액세스할 수 있으며 중첩되면 private 액세스 권한을 갖습니다.  
+ 대리자는 클래스 및 구조체처럼 동작합니다. 기본적으로 대리자는 네임스페이스 내에서 직접 선언될 경우 internal 액세스를 가지고 중첩될 경우 private 액세스를 가집니다.  
   
-## C\# 언어 사양  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C# 언어 사양  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## 참고 항목  
- [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>참고 항목  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
  [클래스 및 구조체](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [인터페이스](../../../csharp/programming-guide/interfaces/index.md)   
  [private](../../../csharp/language-reference/keywords/private.md)   
  [public](../../../csharp/language-reference/keywords/public.md)   
  [internal](../../../csharp/language-reference/keywords/internal.md)   
  [protected](../../../csharp/language-reference/keywords/protected.md)   
- [클래스](../../../csharp/language-reference/keywords/class.md)   
+ [class](../../../csharp/language-reference/keywords/class.md)   
  [struct](../../../csharp/language-reference/keywords/struct.md)   
  [interface](../../../csharp/language-reference/keywords/interface.md)

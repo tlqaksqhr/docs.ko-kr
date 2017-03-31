@@ -1,0 +1,295 @@
+---
+title: "속성"
+description: "속성"
+keywords: .NET, .NET Core
+author: BillWagner
+ms.author: wiwagn
+ms.date: 06/20/2016
+ms.topic: article
+ms.prod: .net
+ms.technology: devlang-csharp
+ms.devlang: csharp
+ms.assetid: 6950d25a-bba1-4744-b7c7-a3cc90438c55
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 871beb36f9801a0456eec1501fdbf07375c9b418
+ms.lasthandoff: 03/13/2017
+
+---
+
+# <a name="properties"></a>속성
+
+속성은 C#의 주요 구성 요소입니다. 언어는 개발자가 디자인 의도를 정확하게 표현하는 코드를 작성할 수 있는 구문을 정의합니다.
+
+속성은 액세스 시 필드처럼 동작합니다.
+그러나 필드와 달리 속성은 속성에 액세스하거나 할당할 때 실행되는 문을 정의하는 접근자로 구현됩니다.
+
+## <a name="property-syntax"></a>속성 구문
+속성 구문은 필드에 대한 자연 확장입니다. 필드는 저장소 위치를 정의합니다.
+
+```csharp
+public class Person
+{
+    public string FirstName;
+    // remaining implementation removed from listing
+}
+```
+
+속성 정의에는 해당 속성의 값을 검색하고 할당하는 `get` 및 `set` 접근자에 대한 선언이 포함됩니다.
+
+```csharp
+public class Person
+{
+    public string FirstName
+    {
+        get;
+        set;
+    }
+    // remaining implementation removed from listing
+}
+```
+
+위에 표시된 구문은 *자동 속성* 구문입니다. 컴파일러는 속성을 백업하는 필드의 저장소 위치를 생성합니다. 또한 컴파일러는 `get` 및 `set` 접근자의 본문을 구현합니다.
+아래 표시된 대로 저장소를 직접 정의할 수도 있습니다.
+
+```csharp
+public class Person
+{
+    public string FirstName
+    {
+        get { return firstName; }
+        set { firstName = value; }
+    }
+    private string firstName;
+    // remaining implementation removed from listing
+}
+```
+ 
+위에 표시된 속성 정의는 읽기/쓰기 속성입니다. set 접근자에서 `value` 키워드를 확인합니다. `set` 접근자에는 항상 `value`라는 단일 매개 변수가 있습니다. `get` 접근자는 속성 형식(이 예제에서는 `string`)으로 변환할 수 있는 값을 반환해야 합니다.
+ 
+이것이 기본 구문입니다. 다양한 디자인 구문을 지원하는 여러 가지 변환이 있습니다. 이러한 변환을 살펴보고 각 변환에 대한 구문 옵션을 알아봅니다. 
+
+## <a name="scenarios"></a>시나리오
+
+위의 예제에서는 가장 간단한 속성 정의 사례 중 하나인 유효성 검사 없는 읽기/쓰기 속성을 보여 주었습니다. `get` 및 `set` 접근자에서 원하는 코드를 작성하여 다양한 시나리오를 만들 수 있습니다.  
+
+### <a name="validation"></a>유효성 검사
+
+`set` 접근자에서 코드를 작성하여 속성으로 표현된 값이 항상 유효한지 확인합니다. 예를 들어 이름을 비워 두거나 공백일 수 없다는 `Person` 클래스에 대한 규칙이 있다고 가정합니다. 다음과 같이 작성할 수 있습니다.
+
+```csharp
+public class Person
+{
+    public string FirstName
+    {
+        get { return firstName; }
+        set
+        {
+            if (string.IsNullOrWhiteSpace(value))
+                throw new ArgumentException("First name must not be blank");
+            firstName = value;
+        }
+    }
+    private string firstName;
+    // remaining implementation removed from listing
+}
+```
+
+위의 예제에서는 첫 번째 이름을 비워 두거나 공백일 수 없다는 규칙을 적용합니다. 개발자가 작성하는 경우
+```csharp
+hero.FirstName = "";
+```
+해당 할당으로 인해 `ArgumentException`이 throw됩니다. 속성 set 접근자의 반환 형식이 void여야 하므로 예외를 throw하여 set 접근자에서 오류를 보고합니다.
+
+이는 간단한 유효성 검사입니다. 이 동일한 구문을 시나리오에서 필요한 항목으로 확장할 수 있습니다. 서로 다른 속성 간의 관계를 확인하거나 모든 외부 조건에 대해 유효성을 검사할 수 있습니다. 유효한 모든 C# 문을 속성 접근자에서 사용할 수 있습니다.
+
+### <a name="read-only"></a>읽기 전용
+
+이 시점까지 살펴본 모든 속성 정의는 공용 접근자를 사용한 읽기/쓰기 속성입니다. 속성에 유효한 유일한 액세스 가능성은 아닙니다.
+읽기 전용 속성을 만들거나 set 및 get 접근자에 대해 다른 액세스 가능성을 제공할 수 있습니다. `Person` 클래스가 해당 클래스의 다른 메서드에서만 `FirstName` 속성의 값을 변경할 수 있도록 한다고 가정합니다. set 접근자에 `public` 대신 `private` 액세스 가능성을 제공할 수 있습니다.
+
+```csharp
+public class Person
+{
+    public string FirstName
+    {
+        get;
+        private set;
+    }
+    // remaining implementation removed from listing
+}
+```
+
+이제 `FirstName` 속성을 모든 코드에서 액세스할 수 있지만 `Person` 클래스의 다른 코드에서만 할당할 수 있습니다.
+set 또는 get 접근자에 제한적인 액세스 한정자를 추가할 수 있습니다. 개별 접근자에 설정하는 액세스 한정자는 속성 정의의 액세스 한정자보다 더 제한적이어야 합니다. 위 내용은 `FirstName` 속성이 `public`이지만 set 접근자가 `private`이므로 유효합니다. `public` 접근자를 사용하여 `private` 속성을 선언할 수 없습니다. 속성 선언을 `protected`, `internal`, `protected internal` 또는 `private`로 선언할 수도 있습니다.   
+
+`get` 접근자에 더 제한적인 한정자를 설정하는 것도 가능합니다. 예를 들어 `public` 속성이 있지만 `get` 접근자를 `private`로 제한할 수 있습니다. 이 시나리오는 실제로 거의 수행되지 않습니다.
+ 
+### <a name="computed-properties"></a>계산된 속성
+
+속성은 멤버 필드의 값을 반환할 필요가 없습니다. 계산된 값을 반환하는 속성을 만들 수 있습니다. `Person` 개체를 확장하여 이름과 성을 연결해서 계산된 전체 이름을 반환하겠습니다.
+
+```csharp
+public class Person
+{
+    public string FirstName
+    {
+        get;
+        set;
+    }
+
+    public string LastName
+    {
+        get;
+        set;
+    }
+
+    public string FullName
+    {
+        get
+        {
+            return $"{FirstName} {LastName}";
+        }
+    }
+}
+```
+
+위 예제에서는 *문자열 보간* 구문을 사용하여 전체 이름에 대한 서식이 지정된 문자열을 만듭니다.
+
+계산된 `FullName` 속성을 만드는 보다 간결한 방법을 제공하는 *식 본문 멤버*를 사용할 수도 있습니다.
+
+```csharp
+public class Person
+{
+    public string FirstName
+    {
+        get;
+        set;
+    }
+
+    public string LastName
+    {
+        get;
+        set;
+    }
+
+    public string FullName =>  $"{FirstName} {LastName}";
+}
+```
+ 
+*식 본문 멤버*는 *람다 식* 구문을 사용하여 단일 식이 포함된 메서드를 정의합니다. 여기서 해당 식은 person 개체의 전체 이름을 반환합니다.
+
+### <a name="lazy-evaluated-properties"></a>지연 평가된 속성
+
+계산된 속성의 개념과 저장소를 혼합하고 *지연 평가된 속성*을 만들 수 있습니다.  예를 들어 처음 액세스할 때만 문자열 형식이 지정되도록 `FullName` 속성을 업데이트할 수 있습니다.
+
+```csharp
+public class Person
+{
+    public string FirstName
+    {
+        get;
+        set;
+    }
+
+    public string LastName
+    {
+        get;
+        set;
+    }
+
+    private string fullName;
+    public string FullName
+    {
+        get
+        {
+            if (fullName == null)
+                fullName = $"{FirstName} {LastName}";
+            return fullName;
+        }
+    }
+}
+```
+
+하지만 위의 코드에는 버그가 포함되어 있습니다. 코드가 `FirstName` 또는 `LastName` 속성의 값을 업데이트하는 경우 이전에 평가한 `fullName` 필드는 유효하지 않습니다. `fullName` 필드가 다시 평가되도록 `FirstName` 및 `LastName` 속성의 `set` 접근자를 업데이트해야 합니다.
+
+```csharp
+public class Person
+{
+    private string firstName;
+    public string FirstName
+    {
+        get { return firstName; }
+        set
+        {
+            firstName = value;
+            fullName = null;
+        }
+    }
+
+    private string lastName;
+    public string LastName
+    {
+        get { return lastName; }
+        set
+        {
+            lastName = value;
+            fullName = null;
+        }
+    }
+
+    private string fullName;
+    public string FullName
+    {
+        get
+        {
+            if (fullName == null)
+                fullName = $"{FirstName} {LastName}";
+            return fullName;
+        }
+    }
+}
+```
+
+이 최종 버전은 필요한 경우에만 `FullName` 속성을 평가합니다.
+이전에 계산한 버전이 유효한 경우 해당 버전이 사용됩니다. 다른 상태 변경으로 인해 이전에 계산한 버전이 무효화된 경우 다시 계산됩니다. 이 클래스를 사용하는 개발자는 구현 세부 정보를 알 필요가 없습니다. 이러한 내부 변경 내용은 Person 개체의 사용에 영향을 주지 않습니다. 이것이 속성을 사용하여 개체의 데이터 멤버를 노출하는 주요 이유입니다. 
+ 
+### <a name="inotifypropertychanged"></a>INotifyPropertyChanged
+
+속성 접근자에서 코드를 작성해야 하는 최종 시나리오는 값이 변경되었다고 데이터 바인딩 클라이언트에 알리는 데 사용되는 `INotifyPropertyChanged` 인터페이스를 지원하는 것입니다. 속성의 값이 변경되면 개체가 `PropertyChanged` 이벤트를 발생시켜 변경되었음을 나타냅니다. 데이터 바인딩 라이브러리가 해당 변경 내용에 따라 차례로 표시 요소를 업데이트합니다. 아래 코드는 이 person 클래스의 `FirstName` 속성에 대해 `INotifyPropertyChanged`를 구현하는 방법을 보여 줍니다.
+
+```csharp
+public class Person : INotifyPropertyChanged
+{
+    public string FirstName
+    {
+        get { return firstName; }
+        set
+        {
+            if (string.IsNullOrWhiteSpace(value))
+                throw new ArgumentException("First name must not be blank");
+            if (value != firstName)
+            {
+                PropertyChanged?.Invoke(this, 
+                    new PropertyChangedEventArgs(nameof(FirstName)));
+            }
+            firstName = value;
+        }
+    }
+    private string firstName;
+
+    public event PropertyChangedEventHandler PropertyChanged;
+    // remaining implementation removed from listing
+}
+```
+
+`?.` 연산자를 *null 조건부 연산자*라고 합니다. 연산자의 오른쪽을 평가하기 전에 null 참조를 확인합니다. 최종 결과로, `PropertyChanged` 이벤트에 대한 구독자가 없는 경우 이벤트를 발생시키는 코드가 실행되지 않습니다. 해당 경우 이 확인을 수행하지 않으면 `NullReferenceException`이 throw됩니다. 자세한 내용은 [`events`](delegates-events.md)에 대한 페이지를 참조하세요. 또한 이 예제에서는 새 `nameof` 연산자를 사용하여 속성 이름 기호에서 해당 텍스트 표현으로 변환합니다.
+`nameof`를 사용하면 속성 이름을 잘못 입력하는 오류를 줄일 수 있습니다.
+
+이것도 필요한 시나리오를 지원하기 위해 접근자의 코드를 작성할 수 있는 경우의 예입니다.
+
+## <a name="summing-up"></a>요약 
+
+속성은 클래스 또는 개체에 있는 스마트 필드의 한 형태입니다. 개체 외부에서는 개체의 필드와 유사하게 나타납니다. 그러나 C# 기능의 전체 팔레트를 사용하여 속성을 구현할 수 있습니다.
+유효성 검사, 다른 액세스 가능성, 지연 평가 또는 시나리오에 필요한 모든 요구 사항을 제공할 수 있습니다.
+
