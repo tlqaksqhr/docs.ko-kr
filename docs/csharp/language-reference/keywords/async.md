@@ -61,7 +61,7 @@ string contents = await contentsTask;
  `async` 키워드는 메서드, 람다 식 또는 무명 메서드를 수정할 때만 키워드로 사용됩니다. 다른 모든 컨텍스트에서는 식별자로 해석됩니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 비동기 이벤트 처리기, `StartButton_Click`, 비동기 메서드 및 `ExampleMethodAsync` 간의 제어 흐름과 구조를 보여 줍니다. 비동기 메서드의 결과는 다운로드한 웹 사이트의 길이입니다. 이 코드는 [!INCLUDE[vs_dev12](../../../csharp/getting-started/includes/vs_dev12_md.md)]에서 만든 WPF(Windows Presentation Foundation) 앱 또는 Windows 스토어 앱에 적합합니다. 앱을 설정하는 방법은 코드 주석을 참조하십시오.  
+ 다음 예제에서는 비동기 이벤트 처리기, `StartButton_Click`, 비동기 메서드 및 `ExampleMethodAsync` 간의 제어 흐름과 구조를 보여 줍니다. 비동기 메서드의 결과는 다운로드한 웹 사이트의 길이입니다. 이 코드는 Visual Studio에서 만든 WPF(Windows Presentation Foundation) 앱 또는 Windows 스토어 앱에 적합합니다. 앱을 설정하는 방법은 코드 주석을 참조하십시오.  
   
 ```csharp  
 // You can run this code in Visual Studio 2013 as a WPF app or a Windows Store app.  

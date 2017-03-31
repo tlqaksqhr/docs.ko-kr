@@ -36,7 +36,7 @@ ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>연습: Office 프로그래밍(C# 및 Visual Basic)
-[!INCLUDE[vs_dev10_long](../../../csharp/programming-guide/interop/includes/vs_dev10_long_md.md)]에는 Microsoft Office 프로그래밍을 개선하는 새로운 기능이 C# 및 Visual Basic에 도입되었습니다. 각 언어에는 다른 언어에 이미 포함되어 있었던 기능이 추가되었습니다.  
+Visual Studio에는 Microsoft Office 프로그래밍을 개선하는 새로운 기능이 C# 및 Visual Basic에 도입되었습니다. 각 언어에는 다른 언어에 이미 포함되어 있었던 기능이 추가되었습니다.  
   
  C#의 새로운 기능으로는 명명된 인수/선택적 인수, `dynamic` 형식의 반환 값, 그리고 COM 프로그래밍에서 `ref` 키워드를 생략하고 인덱싱된 속성에 액세스하는 기능이 있습니다. Visual Basic 새로운 기능으로는 자동 구현 속성, 람다 식의 문, 컬렉션 이니셜라이저 등이 있습니다.  
   
