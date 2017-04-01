@@ -39,8 +39,7 @@ ms.lasthandoff: 03/13/2017
 `#region`을 사용하면 Visual Studio Code 편집기의 [개요 기능](https://docs.microsoft.com/visualstudio/ide/outlining)을 사용할 때 확장하거나 축소할 수 있는 코드 블록을 지정할 수 있습니다. 더 긴 코드 파일에서 현재 작업 중인 파일 부분에 집중할 수 있도록 하나 이상의 영역을 축소하거나 숨길 수 있습니다. 다음 예제에서는 영역을 정의하는 방법을 보여 줍니다.  
   
 ```  
-  
-      #region MyClass definition  
+#region MyClass definition  
 public class MyClass   
 {  
     static void Main()   
@@ -59,3 +58,4 @@ public class MyClass
  [C# 참조](../../../csharp/language-reference/index.md)   
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
  [C# 전처리기 지시문](../../../csharp/language-reference/preprocessor-directives/index.md)
+
