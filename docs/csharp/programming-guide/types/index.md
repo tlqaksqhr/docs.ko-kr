@@ -36,9 +36,9 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5fbd7c5e08d862f079e0596cbe394afd0538bccc
-ms.lasthandoff: 03/13/2017
+ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
+ms.openlocfilehash: 61f23020b8a5dd0136d54e0a2ceb925bebca88cc
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="types-c-programming-guide"></a>형식(C# 프로그래밍 가이드)
@@ -175,7 +175,7 @@ stringList.Add("String example");
 // compile time error adding a type other than a string:
 stringList.Add(4);
 ```
- 형식 매개 변수를 사용하면 각 요소를 [개체](../../../csharp/language-reference/keywords/object.md)로 변환할 필요 없이 같은 클래스를 재사용하여 요소 형식을 포함할 수 있습니다. 컴파일러는 컬렉션 요소의 특정 형식을 인식하며, 예를 들어 이전 예제에서 `strings` 개체에 정수를 추가하려는 경우 컴파일 타임에 오류를 발생시킬 수 있기 때문에 제네릭 컬렉션 클래스를 *강력한 형식의 컬렉션*이라고 합니다. 자세한 내용은 [제네릭](../../../csharp/programming-guide/generics/index.md)을 참조하세요.  
+ 형식 매개 변수를 사용하면 각 요소를 [개체](../../../csharp/language-reference/keywords/object.md)로 변환할 필요 없이 같은 클래스를 재사용하여 요소 형식을 포함할 수 있습니다. 컴파일러는 컬렉션 요소의 특정 형식을 인식하며, 예를 들어 이전 예제에서 `strings` 개체에 정수를 추가하려는 경우 컴파일 시간에 오류를 발생시킬 수 있기 때문에 제네릭 컬렉션 클래스를 *강력한 형식의 컬렉션*이라고 합니다. 자세한 내용은 [제네릭](../../../csharp/programming-guide/generics/index.md)을 참조하세요.  
   
 ## <a name="implicit-types-anonymous-types-and-nullable-types"></a>암시적 형식, 무명 형식 및 Null 허용 형식  
  앞에서 설명한 대로 [var](../../../csharp/language-reference/keywords/var.md) 키워드를 사용하여 클래스 멤버가 아닌 로컬 변수를 암시적으로 형식화할 수 있습니다. 이 변수는 컴파일 타임에 형식을 받지만 형식은 컴파일러에서 제공됩니다. 자세한 내용은 [암시적으로 형식화된 지역 변수](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)를 참조하세요.  
@@ -202,9 +202,7 @@ stringList.Add(4);
 -   [익명 형식](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
   
 -   [제네릭](../../../csharp/programming-guide/generics/index.md)  
-  
--   [Visual C# 2010 시작](http://go.microsoft.com/fwlink/?LinkId=221214)의 [변수 및 식](http://go.microsoft.com/fwlink/?LinkId=221228)  
-  
+
 ## <a name="c-language-specification"></a>C# 언어 사양  
  [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
