@@ -1,0 +1,134 @@
+---
+title: "방법: LINQ 쿼리용 사용자 지정 메서드 추가(C#) | Microsoft 문서"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+ms.assetid: 1a500f60-2e10-49fb-8b2a-d8d08e4817cb
+caps.latest.revision: 3
+author: BillWagner
+ms.author: wiwagn
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 7843620518dd7965724f0108a8fa008c95bd4793
+ms.lasthandoff: 03/13/2017
+
+---
+# <a name="how-to-add-custom-methods-for-linq-queries-c"></a>방법: LINQ 쿼리용 사용자 지정 메서드 추가(C#)
+<xref:System.Collections.Generic.IEnumerable%601> 인터페이스에 확장 메서드를 추가하여 LINQ 쿼리에 대해 사용할 수 있는 메서드 집합 확장할 수 있습니다. 예를 들어 표준 평균 또는 최대 작업 외에 사용자 지정 집계 메서드를 만들어 값 시퀀스에서 단일 값을 계산할 수 있습니다. 값 시퀀스에 대한 특정 데이터 변환 또는 사용자 지정 필터로 작동하고 새 시퀀스를 반환하는 메서드를 만들 수도 있습니다. 몇 가지 메서드의 예로는 <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A> 및 <xref:System.Linq.Enumerable.Reverse%2A>가 있습니다.  
+  
+ <xref:System.Collections.Generic.IEnumerable%601> 인터페이스를 확장하면 사용자 지정 메서드를 열거 가능한 컬렉션에 적용할 수 있습니다. 자세한 내용은 [확장 메서드](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)를 참조하세요.  
+  
+## <a name="adding-an-aggregate-method"></a>집계 메서드 추가  
+ 집계 메서드는 값 집합에서 하나의 값을 계산합니다. LINQ는 <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Min%2A> 및 <xref:System.Linq.Enumerable.Max%2A>를 비롯한 여러 가지 집계 메서드를 제공합니다. <xref:System.Collections.Generic.IEnumerable%601> 인터페이스에 확장 메서드를 추가하여 고유한 집계 메서드를 만들 수 있습니다.  
+  
+ 다음 코드 예제에서는 `double` 형식의 숫자 시퀀스에 대한 중앙값을 계산하는 `Median`이라는 확장 메서드를 만드는 방법을 보여 줍니다.  
+  
+```cs  
+public static class LINQExtension  
+{  
+    public static double Median(this IEnumerable<double> source)  
+    {  
+        if (source.Count() == 0)  
+        {  
+            throw new InvalidOperationException("Cannot compute median for an empty set.");  
+        }  
+  
+        var sortedList = from number in source  
+                         orderby number  
+                         select number;  
+  
+        int itemIndex = (int)sortedList.Count() / 2;  
+  
+        if (sortedList.Count() % 2 == 0)  
+        {  
+            // Even number of items.  
+            return (sortedList.ElementAt(itemIndex) + sortedList.ElementAt(itemIndex - 1)) / 2;  
+        }  
+        else  
+        {  
+            // Odd number of items.  
+            return sortedList.ElementAt(itemIndex);  
+        }  
+    }  
+}  
+```  
+  
+ <xref:System.Collections.Generic.IEnumerable%601> 인터페이스에서 기타 집계 메서드를 호출하는 것과 같은 방식으로 열거 가능한 컬렉션에 대해 이 확장 메서드를 호출합니다.  
+  
+ 다음 코드 예제에서는 `double` 형식의 배열에 대해 `Median` 메서드를 사용하는 방법을 보여 줍니다.  
+  
+<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
+### <a name="overloading-an-aggregate-method-to-accept-various-types"></a>다양한 형식을 허용하도록 집계 메서드 오버로드  
+ 다양한 형식의 시퀀스를 허용하도록 집계 메서드를 오버로드할 수 있습니다. 표준 접근법은 각 형식에 대한 오버로드를 만드는 것입니다. 또 다른 접근법은 제네릭 형식을 사용하고 대리자를 통해 이를 특정 형식으로 변환할 오버로드를 만드는 것입니다. 두 가지 접근법을 결합할 수도 있습니다.  
+  
+#### <a name="to-create-an-overload-for-each-type"></a>각 형식에 대한 오버로드를 만들려면  
+ 지원하려는 각 형식에 대한 특정 오버로드를 만들 수 있습니다. 다음 코드 예제에서는 `integer` 형식에 대한 `Median` 메서드의 오버로드를 보여 줍니다.  
+  
+<CodeContentPlaceHolder>3</CodeContentPlaceHolder>  
+ 이제 다음 코드와 같이 `integer` 및 `double` 형식에 대한 `Median` 오버로드를 호출할 수 있습니다.  
+  
+<CodeContentPlaceHolder>4</CodeContentPlaceHolder>  
+<CodeContentPlaceHolder>5</CodeContentPlaceHolder>  
+<CodeContentPlaceHolder>6</CodeContentPlaceHolder>  
+#### <a name="to-create-a-generic-overload"></a>제네릭 오버로드를 만들려면  
+ 제네릭 개체의 시퀀스를 허용하는 오버로드를 만들 수도 있습니다. 이 오버로드는 대리자를 매개 변수로 사용하여 제네릭 형식의 개체 시퀀스를 특정 형식으로 변환합니다.  
+  
+ 다음 코드에서는 <xref:System.Func%602> 대리자를 매개 변수로 사용하는 `Median` 메서드의 오버로드를 보여 줍니다. 이 대리자는 제네릭 형식 T의 개체를 사용하고 `double` 형식의 개체를 반환합니다.  
+  
+```cs  
+// Generic overload.  
+  
+public static double Median<T>(this IEnumerable<T> numbers,  
+                       Func<T, double> selector)  
+{  
+    return (from num in numbers select selector(num)).Median();  
+}  
+```  
+  
+ 이제 임의 형식의 개체 시퀀스에 대해 `Median` 메서드를 호출할 수 있습니다. 형식에 자체 메서드 오버로드가 없으면 대리자 매개 변수를 전달해야 합니다. C#에서는 이 목적으로 람다 식을 사용할 수 있습니다. 또한 Visual Basic에서만, 메서드 호출 대신 `Aggregate` 또는 `Group By` 절을 사용할 경우 범위 내에 있는 값 또는 식을 이 절에 전달할 수 있습니다.  
+  
+ 다음 예제 코드에서는 정수 배열 및 문자열 배열에 대해 `Median` 메서드를 호출하는 방법을 보여 줍니다. 문자열의 경우 배열에서 문자열 길이의 중앙값이 계산됩니다. 예제에서는 각 경우에 <xref:System.Func%602> 대기자 매개 변수를 `Median` 메서드에 전달하는 방법을 보여 줍니다.  
+  
+<CodeContentPlaceHolder>8</CodeContentPlaceHolder>  
+## <a name="adding-a-method-that-returns-a-collection"></a>컬렉션을 반환하는 메서드 추가  
+ 값 시퀀스를 반환하는 사용자 지정 쿼리 메서드를 사용하여 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스를 확장할 수 있습니다. 이 경우 메서드는 <xref:System.Collections.Generic.IEnumerable%601> 형식의 컬렉션을 반환해야 합니다. 이러한 메서드는 필터 또는 데이터 변환을 값 시퀀스에 적용하는 데 사용될 수 있습니다.  
+  
+ 다음 예제에서는 모든 기타 요소를 첫 번째 인수부터 반환하는 `AlternateElements` 확장 메서드를 만드는 방법을 보여 줍니다.  
+  
+<CodeContentPlaceHolder>9</CodeContentPlaceHolder>  
+ 다음 코드와 같이 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스에서 기타 메서드를 호출하는 것처럼 열거 가능한 컬렉션에 대해 이 확장 메서드를 호출할 수 있습니다.  
+  
+```cs  
+string[] strings = { "a", "b", "c", "d", "e" };  
+  
+var query = strings.AlternateElements();  
+  
+foreach (var element in query)  
+{  
+    Console.WriteLine(element);  
+}  
+/*  
+ This code produces the following output:  
+  
+ a  
+ c  
+ e  
+*/  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Collections.Generic.IEnumerable%601>   
+ [확장명 메서드](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)

@@ -3,17 +3,17 @@ title: ".NET 둘러보기"
 description: ".NET 플랫폼의 몇 가지 주요 기능에 대한 둘러보기입니다."
 keywords: ".NET, .NET Core, 둘러보기, 프로그래밍 언어, 안전하지 않음, 메모리 관리, 형식 안전성, 비동기"
 author: cartermp
-manager: wpickett
-ms.author: phcart
-ms.date: 11/16/2016
+ms.author: wiwagn
+ms.date: 02/09/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
+ms.prod: .net
+ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
 translationtype: Human Translation
-ms.sourcegitcommit: 2c57b5cebd63b1d94b127cd269e3b319fb24dd97
-ms.openlocfilehash: 02e2fa22e36fd2f6618527ad3c89cbbd8587dfe2
+ms.sourcegitcommit: 48563be13dc07000ced2e6817b3028e6117abd93
+ms.openlocfilehash: ee6ced104137a453267b409fea05716d781ef83f
+ms.lasthandoff: 03/22/2017
 
 ---
 
@@ -34,7 +34,7 @@ ms.openlocfilehash: 02e2fa22e36fd2f6618527ad3c89cbbd8587dfe2
 
 ## <a name="programming-languages"></a>프로그래밍 언어
 
-.NET은 여러 프로그래밍 언어를 지원합니다.  .NET 런타임은 무엇보다 언어와 관련이 없는 런타임과 언어 상호 운용성을 지정하는 [CLI(공용 언어 인프라)](https://www.visualstudio.com/en-us/mt639507)를 구현합니다.  즉 어떤 .NET 언어를 선택해도 .NET에서 앱과 서비스를 구축할 수 있습니다.
+.NET은 여러 프로그래밍 언어를 지원합니다.  .NET 런타임은 무엇보다 언어와 관련이 없는 런타임과 언어 상호 운용성을 지정하는 [CLI(공용 언어 인프라)](https://www.visualstudio.com/license-terms/ecma-c-common-language-infrastructure-standards/)를 구현합니다.  즉 어떤 .NET 언어를 선택해도 .NET에서 앱과 서비스를 구축할 수 있습니다.
 
 Microsoft에서는 C#, F# 및 Visual Basic .NET이라는 세 가지 .NET 언어를 적극적으로 개발하고 지원합니다. 
 
@@ -54,21 +54,27 @@ Microsoft에서는 C#, F# 및 Visual Basic .NET이라는 세 가지 .NET 언어�
 
 할당 취소는 가비지 수집기에서 예약 실행을 통해 메모리를 회수할 때 자동으로 수행되기 때문에 메모리 할당을 취소하는 유사 키워드는 없습니다.
 
-범위가 지정된 형식은 일반적으로 메서드가 완료될 때 범위를 벗어나며, 이때 메서드 변수를 수집할 수 있습니다. 그러나 `using` 문을 사용하여 특정 개체가 메서드 종료보다 더 빨리 범위를 벗어남을 GC에 알릴 수 있습니다.
+가비지 수집기는 단지 *메모리 안전성*을 보장해주는 하나의 서비스입니다.  고정 메모리 안전성은 매우 간단합니다. 프로그램이 할당되고 해제되지 않은 메모리에만 액세스하면 메모리가 안전합니다.  예를 들어, 런타임은 프로그램이 배열의 끝에서 인덱싱하거나 개체의 끝에서 가상 필드에 액세스하지 않도록 합니다.
+
+다음 예제에서 런타임은 `InvalidIndexException` 예외를 throw하여 메모리 안전성을 강화합니다.
 
 [!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
-`using` 블록이 완료되면 GC는 이전 예제의 `stream` 개체를 수집하고 해당 메모리를 회수할 수 있음을 알게 됩니다.
+## <a name="working-with-unmanaged-resources"></a>관리되지 않는 리소스로 작업하기
 
-이에 대한 규칙은 F#에서 의미가 약간 달라질 수 있습니다.  F#의 리소스 관리에 대한 자세한 내용은 [리소스 관리: `use` 키워드](../fsharp/language-reference/resource-management-the-use-keyword.md)를 확인하세요.
+일부 개체는 *관리되지 않는 리소스*를 참조합니다. 관리되지 않는 리소스는 .NET 런타임으로 자동 관리되지 않는 리소스입니다.  예를 들어, 파일 핸들은 관리되지 않는 리소스입니다.  @System.IO.FileStream 개체는 관리되는 개체이지만, 관리되지 않는 파일 핸들을 참조합니다.  파일 스트림 사용을 마치면 파일 핸들을 릴리스해야 합니다.
 
-가비지 수집기를 통해 사용할 수 있는, 덜 눈에 띄지만 훨씬 광범위한 기능 중 하나는 메모리 안전성입니다. 고정 메모리 안전성은 매우 간단합니다. 프로그램이 할당되고 해제되지 않은 메모리에만 액세스하면 메모리가 안전합니다. 현수 포인터는 항상 버그이며 추적하기 어려운 경우가 많습니다.
+.NET에서는 관리되지 않는 리소스를 참조하는 개체가 @System.IDisposable 인터페이스를 구현합니다.  개체 사용을 마치면 관리되지 않는 모든 리소스를 릴리스하는 개체의 @System.IDisposable.Dispose 메서드를 호출합니다.  다음 예제에 나오는 것처럼 .NET 언어는 이러한 개체를 대상으로 편리한 `using` 구문을 제공합니다.
 
-.NET 런타임에서는 메모리 안전성에 대한 약속을 지키기 위해 GC에서 기본적으로 제공되지 않는 추가 서비스를 제공합니다. 프로그램이 배열의 끝에서 인덱싱하거나 개체의 끝에서 가상 필드에 액세스하지 않도록 합니다.
+[!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 
-다음 예제에서는 메모리 안전성의 결과로 예외가 throw됩니다.
+`using` 블록이 완료되면 .NET 런타임은 파일 핸들을 릴리스하는 `stream` 개체의 @System.IDisposable.Dispose 메서드를 자동으로 호출합니다.  예외로 인해 블록에 대한 제어가 없어지는 경우에도 런타임은 같은 방식으로 호출합니다.
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
+자세한 내용은 다음 페이지를 확인하세요.
+
+* C#에 대한 [using 문](../csharp/language-reference/keywords/using-statement.md)
+* F#에 대한 [리소스 관리: `use` 키워드](../fsharp/language-reference/resource-management-the-use-keyword.md)
+* Visual Basic에 대한 [Using 문](../visual-basic/language-reference/statements/using-statement.md)
 
 ## <a name="type-safety"></a>형식 안전성
 
@@ -82,7 +88,7 @@ Microsoft에서는 C#, F# 및 Visual Basic .NET이라는 세 가지 .NET 언어�
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
-C#, Visual Basic 및 F# 지원 로컬 **형식 유추**. 형식 유추는 컴파일러가 오른쪽에 있는 식에서 왼쪽에 있는 식의 형식을 유추함을 의미합니다. 형식 안전성이 손상되거나 무시되는 것은 아닙니다. 결과 형식은** **강력한 형식이며 수반되는 모든 특성을 포함합니다. 형식 유추를 도입하기 위해 이전 예제의 처음 두 줄을 다시 작성해 보겠습니다. 예제의 나머지 부분은 완전히 동일합니다.
+C#, Visual Basic 및 F# 지원 로컬 **형식 유추**. 형식 유추는 컴파일러가 오른쪽에 있는 식에서 왼쪽에 있는 식의 형식을 유추함을 의미합니다. 형식 안전성이 손상되거나 무시되는 것은 아닙니다. 결과 형식은****강력한 형식이며 수반되는 모든 특성을 포함합니다. 형식 유추를 도입하기 위해 이전 예제의 처음 두 줄을 다시 작성해 보겠습니다. 예제의 나머지 부분은 완전히 동일합니다.
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 
@@ -102,7 +108,7 @@ F#에는 C# 및 Visual Basic에 있는 메서드-지역 형식 유추보다 더 
 
 제네릭은 프로그래머가 제네릭 데이터 구조를 구현할 수 있도록 돕기 위해 추가되었습니다. 제네릭이 도입되기 전에는, 가령 `List` 형식을 제네릭으로 만들기 위해 `object` 형식인 요소로 작업해야 했습니다. 이 경우 미묘한 런타임 오류가 발생할 수 있다는 점 외에도 다양한 성능 및 의미 체계 문제가 있습니다. 후자의 경우 가장 심각한 문제는 예를 들어 데이터 구조에 정수와 문자열이 둘 다 포함되어 있을 때 목록의 멤버로 작업하면 `InvalidCastException`이 throw되는 것입니다.
 
-다음 샘플에서는 @System.Collections.Generic.List%601 형식 인스턴스를 사용하여 실행 중인 기본 프로그램을 보여 줍니다.
+다음 샘플에서는 @System.Collections.Generic.List%601 형식의 인스턴스를 사용하여 실행 중인 기본 프로그램을 보여 줍니다.
 
 [!code-csharp[GenericsShort](../../samples/csharp/snippets/tour/GenericsShort.csx)]
 
@@ -147,8 +153,4 @@ F# 기능을 살펴보고 싶은 경우 [F# 둘러보기](../fsharp/tour.md)를 
 사용자가 직접 코드 작성을 시작하려는 경우에는 [시작하기](getting-started.md)를 확인하세요.
 
 .NET의 중요한 구성 요소에 대해 알아보려면 [.NET 아키텍처 구성 요소](components.md)를 확인하세요.
-
-
-<!--HONumber=Nov16_HO3-->
-
 

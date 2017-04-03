@@ -1,45 +1,89 @@
 ---
-title: "switch(C# 참조) | Microsoft Docs"
-ms.date: "2017-03-07"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "switch_CSharpKeyword"
-  - "switch"
-  - "case"
-  - "case_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "switch 문[C#]"
-  - "switch 키워드[C#]"
-  - "case 문[C#]"
-  - "default 키워드[C#]"
+title: "switch 키워드(C# 참조) | Microsoft 문서"
+ms.date: 2017-03-07
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- switch_CSharpKeyword
+- switch
+- case
+- case_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- switch statement [C#]
+- switch keyword [C#]
+- case statement [C#]
+- default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
 caps.latest.revision: 47
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 47
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: b6f8b110e087093bd47573a1a4a05752be91e743
+ms.lasthandoff: 03/13/2017
+
 ---
-# switch(C# 참조)
-`switch` 문은 실행할 *스위치 섹션*을 후보 목록에서 선택하는 제어문입니다.  
+# <a name="switch-c-reference"></a>switch(C# 참조)
+`switch`는 *일치 식*을 사용한 패턴 일치를 기반으로 하여 후보 목록에서 실행할 *switch 섹션* 하나를 선택하는 선택 문입니다. 
   
- `switch` 문에는 스위치 섹션이 하나 이상 포함됩니다.  각 스위치 섹션에는 하나 이상의 *case 레이블* 및 하나 이상의 문이 있습니다.  다음 예제에서는 세 개의 스위치 섹션이 있는 간단한 `switch` 문을 보여 줍니다.  각 스위치 섹션에는 `case 1`과 같은 하나의 case 레이블과 두 개의 문이 있습니다.  
-  
- [!code-cs[csrefKeywordsSelection#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/switch_1.cs)]  
-  
-## 설명  
- 각 case 레이블은 상수 값을 지정합니다.  switch 문은 case 레이블과 *switch 식*의 값\(위의 예제에서 `caseSwitch`\)이 일치하는 스위치 섹션으로 제어를 보냅니다.  일치하는 값이 들어 있는 case 레이블이 없는 경우 `default` 섹션\(있는 경우\)으로 제어를 보냅니다.  `default` 섹션이 없으면 어떠한 작업도 수행되지 않으며 `switch` 문 외부로 제어를 보냅니다.  이전 예제에서는 `case 1`이 `caseSwitch` 값과 일치하기 때문에 첫 번째 스위치 섹션의 문이 실행됩니다.  
-  
- `switch` 문에 포함할 수 있는 스위치 섹션의 수에는 제한이 없으며 각 섹션에는 하나 이상의 case 레이블을 포함할 수 있습니다\(아래 예제의 문자열 case 레이블 참조\).  하지만 두 case 레이블에 동일한 상수 값을 포함할 수는 없습니다.  
-  
- 선택한 스위치 섹션에서 문 목록의 실행은 첫 번째 문으로 시작하고 일반적으로 `break`, `goto case`, `return` 또는 `throw` 같은 점프문에 도달할 때까지 문 목록 전체를 진행합니다.  이 경우 `switch` 문 외부 또는 다른 case 레이블로 제어를 보냅니다.  
-  
- C\+\+와 달리 C\#은 한 스위치 섹션에서 다음 스위치 섹션으로 실행을 계속하는 것을 허용하지 않습니다.  다음 코드는 오류를 발생시킵니다.  
-  
-```c#  
+ [!code-cs[switch#1](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]  
+
+단일 식을 3개 이상의 조건에 대해 테스트하는 경우 `switch` 문이 [if-else](if-else.md) 구문 대신 사용되는 경우가 많습니다. 예를 들어 다음 `switch` 문은 `Color` 형식의 변수에 다음 세 가지 값 중 하나가 있는지 여부를 확인합니다. 
+
+[!code-cs[switch#3](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)] 
+
+이 문은 `if`-`else` 구문을 사용하는 다음 예제와 같습니다. 
+
+[!code-cs[switch#3a](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)] 
+
+## <a name="the-match-expression"></a>일치 식
+
+일치 식은 `case` 레이블의 패턴과 일치시킬 값을 제공합니다. 사용되는 구문은 다음과 같습니다.
+
+```csharp
+   switch (expr)
+```
+
+C# 6에서 일치 식은 다음 형식의 값을 반환하는 식이어야 합니다.
+
+- [char](char.md)
+- [string](string.md)
+- [bool](bool.md) 
+- [int](int.md) 또는 [long](long.md)과 같은 정수 계열 값
+- [enum](enum.md) 값
+
+C# 7부터 일치 식은 null이 아닌 모든 식일 수 있습니다.
+ 
+## <a name="the-switch-section"></a>switch 섹션
+ 
+ `switch` 문에는 스위치 섹션이 하나 이상 포함됩니다. 각 switch 섹션에는 하나 이상의 *case 레이블* 및 하나 이상의 문이 있습니다. 다음 예제에서는 세 개의 스위치 섹션이 있는 간단한 `switch` 문을 보여 줍니다. 각 스위치 섹션에는 `case 1:`과 같은 하나의 case 레이블과 두 개의 문이 있습니다.
+ 
+  `switch` 문에 포함할 수 있는 switch 섹션 수에는 제한이 없으며 각 섹션에 하나 이상의 case 레이블을 포함할 수 있습니다(다음 예제 참조). 하지만 두 case 레이블에 동일한 식을 포함할 수는 없습니다.  
+
+ [!code-cs[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]  
+
+ switch 문에서 하나의 switch 섹션만 실행됩니다. C#은 한 switch 섹션에서 다음 switch 섹션으로 계속 실행하도록 허용하지 않습니다. 이 때문에 다음 코드는 컴파일러 오류 CS0163: "한 case 레이블(<case label>)에서 다른 case 레이블로 제어를 이동할 수 없습니다."를 생성합니다.   
+
+```csharp  
 switch (caseSwitch)  
 {  
     // The following switch section causes an error.  
@@ -51,31 +95,128 @@ switch (caseSwitch)
         break;  
 }  
 ```  
+이 요구 사항은 일반적으로 [break](break.md), [goto](goto.md) 또는 [return](return.md) 문을 통해 switch 섹션을 명시적으로 종료하여 충족됩니다. 그러나 다음 코드는 프로그램 제어가 `default` switch 섹션으로 이동할 수 없도록 하기 때문에 유효합니다.
   
- C\#의 경우 요구 사항에 따라 마지막 섹션을 포함한 스위치 섹션의 끝에 도달할 수 없어야 합니다.  즉, 다른 언어와 달리 코드에서 다음 스위치 섹션으로 진행하지 않습니다.  이 요구 사항은 대개 `break` 문을 사용하여 충족할 수 있지만, 문 목록의 끝에 도달할 수 없도록 보장한다는 점에서 다음 사례도 유효합니다.  
+ [!code-cs[switch#4](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]    
   
-```c#  
-case 4:  
-    while (true)  
-        Console.WriteLine("Endless looping. . . .");  
-```  
+ case 레이블이 일치 식과 일치하는 switch 섹션에서 문 목록의 실행은 첫 번째 문으로 시작하고 일반적으로 `break`, `goto case`, `return` 또는 `throw` 같은 점프 문에 도달할 때까지 문 목록 전체를 진행합니다. 이 경우 `switch` 문 외부 또는 다른 case 레이블로 제어를 보냅니다.  
+
+## <a name="case-labels"></a>case 레이블
+
+ 각 case 레이블은 일치 식과 비교할 패턴(이전 예제의 `caseSwitch` 변수)을 지정합니다. 일치하는 경우 제어가 일치하는 **첫 번째** case 레이블을 포함하는 switch 섹션으로 전송됩니다. 일치 식과 일치하는 case 레이블 패턴이 없는 경우 제어가 `default` case 레이블을 포함하는 섹션으로 전송됩니다(있는 경우). `default` case가 없는 경우 switch 섹션의 문이 실행되지 않으며, 제어가 `switch` 문 외부로 전송됩니다.
+
+ `switch` 문과 패턴 일치에 대한 자세한 내용은 [`switch` 문을 사용한 패턴 일치](#pattern) 섹션을 참조하세요.
+
+ C# 6에서 상수 패턴만 지원하고 상수 값의 반복을 허용하지 않는 경우 case 레이블은 상호 배타적인 값을 정의하며 하나의 패턴만 일치 식과 일치할 수 있습니다. 따라서 `case` 문이 표시되는 순서는 중요하지 않습니다.
+
+ 그러나 C# 7에서는 다른 패턴도 지원되므로 case 레이블에서 상호 배타적인 값을 정의할 필요가 없으며 여러 패턴이 일치 식과 일치할 수 있습니다. 첫 번째 일치 패턴을 포함하는 switch 섹션의 문만 실행되기 때문에 이제 `case` 문이 나타나는 순서가 중요합니다. C#에서 case 문이 이전 문과 같거나 이전 문의 하위 집합인 switch 섹션을 검색할 경우 컴파일러 오류, CS8120, "Switch case가 이전 case에서 이미 처리되었습니다."를 생성합니다. 
+
+ 다음 예제에서는 상호 배타적이 아닌 다양한 패턴을 사용하는 `switch` 문을 보여 줍니다. 더 이상 `switch` 문의 첫 번째 섹션이 아니도록 `case 0:` switch 섹션을 이동하는 경우 해당 값이 0인 정수는 `case int val` 문에 정의된 패턴인 모든 정수의 하위 집합이므로 C#에서 컴파일러 오류를 생성합니다.
+
+ [!code-cs[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]    
+
+이 문제를 해결하고 다음 두 가지 방법 중 하나로 컴파일러 경고를 제거할 수 있습니다.
+
+- switch 섹션의 순서 변경 
+ 
+- `case` 레이블에 </a name="when">when clause</a> 사용
+ 
+## <a name="the-default-case"></a>`default` case
+
+`default` case는 일치 식이 다른 `case` 레이블과 일치하지 않는 경우 실행할 switch 섹션을 지정합니다. `default` case가 없고 일치 식이 다른 `case` 레이블과 일치하지 않는 경우 프로그램 제어가 `switch` 문으로 이동합니다.
+
+`default` case는 `switch` 문에 임의 순서로 표시될 수 있습니다. 소스 코드에서의 해당 순서에 관계없이 항상 모든 `case` 레이블이 평가된 후 마지막에 평가됩니다.
+
+## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a>`switch` 문을 사용한 <a name="pattern" /> 패턴 일치
   
-## 예제  
- 다음 예제에서는 `switch` 문의 요구 사항과 기능을 보여 줍니다.  
+각 `case` 문은 일치 식과 일치할 경우 포함하는 switch 섹션이 실행되는 패턴을 정의합니다. 상수 패턴은 모든 버전의 C#에서 지원됩니다. 나머지 패턴은 C# 7부터 지원됩니다. 
   
- [!code-cs[csrefKeywordsSelection#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/switch_2.cs)]  
+### <a name="constant-pattern"></a>상수 패턴 
+
+상수 패턴은 일치 식이 지정된 상수와 같은지 여부를 테스트합니다. 사용되는 구문은 다음과 같습니다.
+
+```csharp
+   case constant:
+```
+
+여기서 *constant*는 테스트할 값입니다. *constant*는 다음 상수 식 중 하나가 될 수 있습니다. 
+
+- [bool](bool.md) 리터럴(`true` 또는 `false`)
+- [int](int.md), [long](long.md) 또는 [byte](byte.md)와 같은 모든 정수 계열 상수 
+- 선언된 `const` 변수의 이름
+- 열거형 상수
+- [char](char.md) 리터럴
+- [string](string.md) 리터럴
+
+상수 식은 다음과 같이 계산됩니다.
+
+- *expr* 및 *상수*가 정수 형식인 경우 C# 같음 연산자는 식에서 `true`가 반환되는지 여부(즉, `expr == constant` 여부)를 결정합니다.
+
+- 정수 형식이 아니면 static [Object.Equals(expr, constant)](xref:System.Object.Equals(System.Object,System.Object)) 메서드 호출을 통해 식의 값이 결정됩니다.  
+
+다음 예제에서는 상수 패턴을 사용하여 특정 날짜가 주말인지, 작업 주의 첫째 날인지, 작업 주의 마지막 날인지 또는 작업 주의 중간인지를 확인합니다. 현재 날짜의 [DateTime.DayOfWeek](xref:System.DateTime.DayOfWeek) 속성을 @System.DayOfWeek 열거형의 멤버와 비교해서 평가합니다. 
+
+[!code-cs[switch#7](../../../../samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
+
+다음 예제에서는 상수 패턴을 사용하여 자동 커피 머신을 시뮬레이트하는 콘솔 응용 프로그램의 사용자 입력을 처리합니다.
   
-## 예제  
- 마지막 예제에서는 문자열 변수 `str` 및 문자열 case 레이블이 실행 흐름을 제어합니다.  
+ [!code-cs[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]  
+
+### <a name="type-pattern"></a>형식 패턴
+
+형식 패턴은 간결한 형식 평가 및 변환을 사용하도록 설정합니다. `switch` 문과 함께 사용하여 패턴 일치를 수행하는 경우 식을 지정된 형식으로 변환할 수 있는지 여부를 테스트하고, 변환할 수 있으면 해당 형식의 변수로 캐스팅합니다. 사용되는 구문은 다음과 같습니다.
+
+```csharp
+   case type varname 
+```
+여기서 *type*은 *expr*의 결과가 변환되는 형식의 이름이고, *varname*은 일치에 성공할 경우 *expr*의 결과가 변환되는 개체입니다. 
+
+다음 중 하나가 true일 경우 `case` 식은 `true`입니다.
+
+- *expr*이 *type*과 동일한 형식의 인스턴스입니다.
+
+- *expr*이 *type*에서 파생된 형식의 인스턴스입니다. 즉, *expr*의 결과를 *type*의 인스턴스로 업캐스트할 수 있습니다.
+
+- *expr*의 컴파일 시간 형식은 *type*의 기본 클래스이고 *expr*의 런타임 형식은 *type*이거나 *type*에서 파생됩니다. 변수의 *컴파일 시간 형식*은 해당 형식 선언에 정의된 변수의 형식입니다. 변수의 *런타임 형식*은 해당 변수에 할당된 인스턴스의 형식입니다.
+
+- *expr*이 *type* 인터페이스를 구현하는 형식의 인스턴스입니다.
+
+case 식이 true이면 *varname*이 한정적으로 할당되고 switch 섹션 내의 로컬 범위만 갖습니다.
+
+`null`은 형식과 일치하지 않습니다. `null`과 일치하려면 다음 `case` 레이블을 사용합니다.
+
+```csharp
+case null:
+```
+ 
+다음 예제에서는 형식 패턴을 사용하여 다양한 종류의 컬렉션 형식에 대한 정보를 제공합니다.
+
+[!code-cs[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
+
+패턴 일치를 사용하지 않을 경우 이 코드를 다음과 같이 작성할 수 있습니다. 형식 패턴 일치를 사용하면 변환 결과가 `null`인지 여부를 테스트하거나 반복된 캐스트를 수행할 필요가 없으므로 더욱 단순하고 읽기 쉬운 코드가 생성됩니다.  
+
+[!code-cs[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
+
+## <a name="the-case-statement-and-the-when-clause"></a>`case` 문과 `when` 절
+
+C# 7부터 case 문이 상호 배타적일 필요가 없으므로 `when` 절을 사용하여 case 문이 true로 평가되기 위해 충족해야 하는 추가 조건을 지정할 수 있습니다. `when` 절은 부울 값을 반환하는 모든 식일 수 있습니다. `when` 절의 보다 일반적인 사용 중 하나는 일치 식의 값이 `null`일 때 switch 섹션이 실행되지 않도록 하는 것입니다. 
+
+ 다음 예제에서는 기본 `Shape` 클래스, `Shape`에서 파생된 `Rectangle` 클래스 및 `Rectangle`에서 파생된 `Square` 클래스를 정의합니다. `when` 절을 사용하여 `ShowShapeInfo`에서 `Square` 개체로 인스턴스화되지 않은 경우에도 동일한 길이 및 너비가 할당된 `Rectangle` 개체를 `Square`로 처리하도록 합니다. 이 메서드는 `null`인 개체나 면적이 0인 도형에 대한 정보를 표시하지 않습니다. 
+
+[!code-cs[switch#8](../../../../samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
   
- [!code-cs[csrefKeywordsSelection#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/switch_3.cs)]  
+`Shape` 개체가 `null`인지 여부를 테스트하는 예제의 `when` 절은 실행되지 않습니다. `null`인지 테스트하는 올바른 형식 패턴은 `case null:`입니다.
+
+## <a name="c-language-specification"></a>C# 언어 사양  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## C\# 언어 사양  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
-  
-## 참고 항목  
- [C\# 참조](../../../csharp/language-reference/index.md)   
- [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C\# 키워드](../../../csharp/language-reference/keywords/index.md)   
- [switch 문 \(C\+\+\)](/visual-cpp/cpp/switch-statement-cpp)   
- [if\-else](../../../csharp/language-reference/keywords/if-else.md)
+## <a name="see-also"></a>참고 항목  
+
+ [C# 참조](../index.md)   
+ [C# 프로그래밍 가이드](../../programming-guide/index.md)   
+ [C# 키워드](index.md)   
+ [if-else](if-else.md)   
+ [패턴 일치](../../pattern-matching.md)   
+ 
+
+ 

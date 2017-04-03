@@ -38,7 +38,7 @@ P/Invoke는 관리 코드에서 관리되지 않는 라이브러리의 구조체
 
 관리 코드에서 관리되지 않는 함수를 호출하는 가장 일반적인 예제에서 시작하겠습니다. 명령줄 응용 프로그램에서 메시지 상자를 표시하겠습니다.
 
-```cs
+```csharp
 using System.Runtime.InteropServices;
 
 public class Program {
@@ -66,7 +66,7 @@ public class Program {
 
 macOS에 대한 샘플도 이와 비슷합니다. 물론 macOS에서는 다른 동적 라이브러리 명명 체계를 사용하므로 `DllImport` 특성의 라이브러리 이름을 변경해야 합니다. 아래 샘플에서는 `getpid(2)` 함수를 사용하여 응용 프로그램의 프로세스 ID를 가져오고 콘솔에 출력합니다.
 
-```cs
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
@@ -89,7 +89,7 @@ namespace PInvokeSamples {
 
 물론 Linux에서도 이와 비슷합니다. `getpid(2)`는 [POSIX](https://en.wikipedia.org/wiki/POSIX) 시스템 호출이기 때문에 함수 이름이 같습니다.
 
-```cs
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
@@ -116,7 +116,7 @@ namespace PInvokeSamples {
 
 이 기능을 사용하는 방법은 위에서 설명한 관리 코드에서 네이티브 코드로의 프로세스와 비슷합니다. 지정된 콜백에 대해 시그니처와 일치하는 대리자를 정의하고 외부 메서드에 전달합니다. 다른 모든 작업은 런타임에서 수행합니다.
 
-```cs
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
@@ -160,7 +160,7 @@ namespace ConsoleApplication1 {
 
 Linux 및 macOS 예제는 다음과 같습니다. 해당 예제에서는 C 라이브러리 `libc`에 있는 `ftw` 함수를 사용합니다. 이 함수는 디렉터리 계층 구조를 트래버스하는 데 사용되며, 함수에 대한 포인터를 해당 매개 변수 중 하나로 사용합니다. 이 함수에는 다음과 같은 시그니처가 있습니다. `int (*fn) (const char *fpath, const struct stat *sb, int typeflag)`.
 
-```cs
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
@@ -213,7 +213,7 @@ namespace PInvokeSamples {
 
 macOS 예제에서는 동일한 함수를 사용하며, macOS에서 `libc`가 다른 위치에 유지되므로 `DllImport` 특성에 대한 인수만 다릅니다.
 
-```cs
+```csharp
 using System;
 using System.Runtime.InteropServices;
 
@@ -272,7 +272,7 @@ namespace PInvokeSamples {
 
 마샬링이 필요한 이유는 관리 코드와 비관리 코드의 형식이 서로 다르기 때문입니다. 예를 들어 관리 코드에서는 `String`을 사용하지만 관리되지 않는 환경에서는 문자열이 유니코드("와이드"), 비유니코드, null 종료, ASCII 등일 수 있습니다. 기본적으로 P/Invoke 하위 시스템은 [MSDN](https://msdn.microsoft.com/library/zah6xy75.aspx)에서 확인할 수 있는 기본 동작에 따라 올바른 작업을 수행하려고 합니다. 그러나 추가 제어가 필요한 경우 `MarshalAs` 특성을 사용하여 관리되지 않는 쪽에서 필요한 형식을 지정할 수 있습니다. 예를 들어 문자열을 null 종료 ANSI 문자열로 보내려는 경우 다음과 같이 할 수 있습니다.
 
-```cs
+```csharp
 [DllImport("somenativelibrary.dll"]
 static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 
@@ -282,7 +282,7 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 
 형식 마샬링의 또 다른 측면은 관리되지 않는 메서드에 구조체를 전달하는 방법입니다. 예를 들어 관리되지 않는 일부 메서드의 경우 매개 변수로 구조체가 필요합니다. 이러한 경우 관리되는 부분에서 해당 구조체 또는 클래스를 만들어 매개 변수로 사용해야 합니다. 그러나 클래스 정의만으로는 충분하지 않습니다. 클래스의 필드를 관리되지 않는 구조체에 매핑하는 방법도 마샬러에 지정해야 합니다. 이때 `StructLayout` 특성이 사용됩니다.
 
-```cs
+```csharp
 [DllImport("kernel32.dll")]
 static extern void GetSystemTime(SystemTime systemTime);
 
@@ -324,7 +324,7 @@ typedef struct _SYSTEMTIME {
 
 이전 예제에서 이와 관련된 Linux 및 macOS 예제를 이미 살펴봤습니다. 해당 예제가 아래에 다시 나와 있습니다.
 
-```cs
+```csharp
 [StructLayout(LayoutKind.Sequential)]
 public class StatClass {
         public uint DeviceID;

@@ -1,32 +1,50 @@
 ---
-title: "stackalloc(C# 참조) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "stackalloc_CSharpKeyword"
-  - "stackalloc"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "stackalloc 키워드[C#]"
+title: "stackalloc(C# 참조) | Microsoft 문서"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- stackalloc_CSharpKeyword
+- stackalloc
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- stackalloc keyword [C#]
 ms.assetid: adc04c28-3ed2-4326-807a-7545df92b852
 caps.latest.revision: 27
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 27
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+translationtype: Human Translation
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 337a06daaf36a1eb265f66cd191fc48b80f0bae1
+ms.lasthandoff: 03/13/2017
+
 ---
-# stackalloc(C# 참조)
-`stackalloc` 키워드는 안전하지 않은 코드 컨텍스트에서 스택에 메모리 블록을 할당하는 데 사용됩니다.  
+# <a name="stackalloc-c-reference"></a>stackalloc(C# 참조)
+`stackalloc` 키워드는 스택에 메모리 블록을 할당하기 위해 안전하지 않은 코드 컨텍스트에서 사용됩니다.  
   
 ```  
 int* block = stackalloc int[100];  
 ```  
   
-## 설명  
- 키워드는 지역 변수 이니셜라이저에서만 유효합니다.  다음 코드는 컴파일러 오류를 발생시킵니다.  
+## <a name="remarks"></a>주의  
+ 이 키워드는 지역 변수 이니셜라이저에서만 유효합니다. 다음 코드를 실행하면 컴파일러 오류가 발생합니다.  
   
 ```  
 int* block;  
@@ -36,24 +54,24 @@ int* block;
 block = stackalloc int[100];  
 ```  
   
- 포인터 형식이 관련되기 때문에 `stackalloc`에는 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 컨텍스트가 필요합니다.  자세한 내용은 [안전하지 않은 코드 및 포인터](../../../csharp/programming-guide/unsafe-code-pointers/index.md)를 참조하십시오.  
+ 포인터 형식이 사용되므로 `stackalloc`에 [안전하지 않은](../../../csharp/language-reference/keywords/unsafe.md) 컨텍스트가 필요합니다. 자세한 내용은 [안전하지 않은 코드 및 포인터](../../../csharp/programming-guide/unsafe-code-pointers/index.md)를 참조하세요.  
   
- `stackalloc`는 C 런타임 라이브러리의 [\_alloca](/visual-cpp/c-runtime-library/reference/alloca)와 비슷합니다.  
+ `stackalloc`는 C 런타임 라이브러리의 [_alloca](https://docs.microsoft.com/cpp/c-runtime-library/reference/alloca)와 유사합니다.  
   
- 다음 예제는 피보나치 수열의 20번째 숫자까지 계산 및 표시합니다.  각 번호에는 이전 두 숫자의 합계입니다.  이 코드에서 `int` 형식의 요소 100개를 포함하는 데 충분한 크기의 메모리 블록은 힙이 아니라 스택에 할당됩니다.  블록의 주소는 포인터 `fib`에 저장됩니다.  이 메모리는 가비지 수집의 영향을 받지 않으므로 [fixed](../../../csharp/language-reference/keywords/fixed-statement.md)를 사용하여 고정하지 않아도 됩니다.  메모리 블록의 수명은 해당 메모리 블록이 정의된 메서드의 수명에 따라 제한됩니다.  즉, 메서드에서 반환하기 전에는 메모리를 해제할 수 없습니다.  
+ 다음 예제에서는 피보나치 시퀀스의 처음 20개 숫자를 계산하고 표시합니다. 각 숫자는 이전 두 숫자의 합계입니다. 코드에서 `int` 형식의 요소 20개를 포함하기에 충분한 크기의 메모리 블록이 힙이 아니라 스택에 할당됩니다. 블록의 주소는 `fib` 포인터에 저장됩니다. 이 메모리에는 가비지 수집이 적용되지 않으므로 [fixed](../../../csharp/language-reference/keywords/fixed-statement.md)를 사용하여 고정할 필요가 없습니다. 메모리 블록의 수명은 이 수명을 정의하는 메서드의 수명으로 제한됩니다. 메서드가 반환되기 전에는 메모리를 해제할 수 없습니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  [!code-cs[csrefKeywordsOperator#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/stackalloc_1.cs)]  
   
-## 보안  
- 안전하지 않은 코드는 안전한 코드보다 위험합니다.  그러나 `stackalloc`을 사용하면 CLR\(공용 언어 런타임\)에서 버퍼 오버런 감지 기능이 자동으로 활성화됩니다.  버퍼 오버런을 감지하면 프로세스가 가능한 한 신속하게 종료되어 악의적인 코드가 실행될 가능성을 최소화합니다.  
+## <a name="security"></a>보안  
+ 안전하지 않은 코드는 안전한 코드보다 보안 수준이 낮습니다. 그러나 `stackalloc`를 사용하면 CLR(공용 언어 런타임)에서 버퍼 오버런 검색 기능이 자동으로 사용됩니다. 버퍼 오버런이 검색되면 악성 코드가 실행될 가능성을 최소화하기 위해 최대한 빨리 프로세스가 종료됩니다.  
   
-## C\# 언어 사양  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>C# 언어 사양  
+ [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
   
-## 참고 항목  
- [C\# 참조](../../../csharp/language-reference/index.md)   
- [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C\# 키워드](../../../csharp/language-reference/keywords/index.md)   
+## <a name="see-also"></a>참고 항목  
+ [C# 참조](../../../csharp/language-reference/index.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
+ [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
  [연산자 키워드](../../../csharp/language-reference/keywords/operator-keywords.md)   
  [안전하지 않은 코드 및 포인터](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
