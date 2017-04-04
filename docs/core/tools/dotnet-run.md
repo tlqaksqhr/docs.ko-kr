@@ -1,50 +1,49 @@
 ---
-title: "dotnet-run 명령 | Microsoft 문서"
+title: "dotnet-run 명령 - .NET Core CLI | Microsoft Docs"
 description: "dotnet-run 명령은 소스 코드에서 응용 프로그램을 실행하는 편리한 옵션을 제공합니다."
 keywords: "dotnet-run, CLI, CLI 명령, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/06/2017
+ms.date: 03/22/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 40d4e60f-9900-4a48-b03c-0bae06792d91
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 60bb9160e43788539b0dc6bcf1372bb925e9ba22
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
+ms.openlocfilehash: 49e6738a90663645f761bb7748a723624ad8fdc6
+ms.lasthandoff: 03/22/2017
 
 ---
 
-#<a name="dotnet-run"></a>dotnet-run
+# <a name="dotnet-run"></a>dotnet-run
 
 ## <a name="name"></a>이름 
 
-`dotnet-run` - 명시적 컴파일이나 시작 명령을 사용하지 않고 소스 코드를 '현재 위치'에서 실행합니다.
+`dotnet-run` - 명시적 컴파일이나 시작 명령을 사용하지 않고 소스 코드를 실행합니다.
 
 ## <a name="synopsis"></a>개요
 
-```
-dotnet run [-c|--configuration] [-f|--framework] [-p|--project] [[--] [application arguments]]
-dotnet run [-h|--help]
-```
+`dotnet run [-c|--configuration] [-f|--framework] [-p|--project] [[--] [application arguments]] [-h|--help]`
 
 ## <a name="description"></a>설명
 
-`dotnet run` 명령은 하나의 명령을 사용하여 소스 코드에서 응용 프로그램을 실행하는 편리한 옵션을 제공합니다. 명령줄에서 빠른 반복 개발에 유용합니다. 명령은 코드를 빌드하는 [ `dotnet build` ](dotnet-build.md) 명령에 따라 달라지므로, 프로젝트를 먼저 복원해야 하는 것처럼 빌드에 대한 요구 사항이 `dotnet run`에 적용됩니다. 
+`dotnet run` 명령은 하나의 명령을 사용하여 소스 코드에서 응용 프로그램을 실행하는 편리한 옵션을 제공합니다. 명령줄에서 빠른 반복 개발에 유용합니다. 이 명령은 코드 빌드 시 [`dotnet build`](dotnet-build.md) 명령에 의존합니다. 프로젝트를 먼저 복원해야 하는 등, 빌드에 대한 요구 사항은 `dotnet run`에도 적용됩니다. 
 
-출력 파일은 `bin/<configuration>/<target>`인 기본 위치에 작성됩니다. 예를 들어 `netcoreapp1.0` 응용 프로그램이 있고 `dotnet run`을 실행하는 경우 출력은 `bin/Debug/netcoreapp1.0`에 놓입니다. 필요에 따라 파일을 덮어씁니다. 임시 파일은 `obj` 디렉터리에 놓입니다. 
+출력 파일은 기본 위치, 즉 `bin/<configuration>/<target>`에 기록됩니다. 예를 들어 `netcoreapp1.0` 응용 프로그램이 있고 `dotnet run`을 실행하는 경우 출력은 `bin/Debug/netcoreapp1.0`에 추가됩니다. 필요에 따라 파일을 덮어씁니다. 임시 파일은 `obj` 디렉터리에 놓입니다. 
 
-지정된 프레임워크가 여러 개인 프로젝트의 경우 응용 프로그램을 실행할 프레임워크을 지정하는 데 `--framework` 옵션이 사용되지 않으면 `dotnet run`은 오류를 표시합니다.
+프로젝트가 여러 프레임워크를 지정하는 경우 프레임워크를 지정하는 데 `-f|--framework <FRAMEWORK>` 옵션을 사용하지 않은 한, `dotnet run`을 실행하면 오류가 발생합니다.
 
-`dotnet run` 명령은 빌드된 어셈블리가 아닌 프로젝트의 컨텍스트에서 사용해야 합니다. 이식 가능한 응용 프로그램 DLL을 대신 실행하려는 경우에는 다음 예제와 같이 다른 명령 없이 [dotnet](dotnet.md)을 사용해야 합니다.
+`dotnet run` 명령은 빌드된 어셈블리가 아닌 프로젝트의 컨텍스트에서 사용됩니다. 대신 프레임워크 종속 응용 프로그램 DLL을 실행하려고 하는 경우 명령 없이 [dotnet](dotnet.md)을 사용해야 합니다. 예를 들어 `myapp.dll`을 실행하려면 다음을 사용합니다.
  
-`dotnet myapp.dll`
+```
+dotnet myapp.dll
+```
 
 `dotnet` 드라이버에 대한 자세한 내용은 [.NET Core 명령줄 도구(CLI)](index.md) 항목을 참조하세요.
 
-응용 프로그램을 실행하기 위해 `dotnet run` 명령은 NuGet 캐시에서 공유 런타임의 외부에 있는 응용 프로그램의 종속성을 확인합니다. 이러한 점에서 프로덕션에서 응용 프로그램을 실행하기 위해 이 명령을 사용하는 것은 권장되지 않습니다. 대신 [ `dotnet publish` ](dotnet-publish.md) 명령을 사용하여 [배포를 만들고](../deploying/index.md) 프로덕션에서 이 배포를 사용해야 합니다. 
+응용 프로그램을 실행하기 위해 `dotnet run` 명령은 NuGet 캐시에서 공유 런타임의 외부에 있는 응용 프로그램의 종속성을 확인합니다. 캐시된 종속성을 사용하기 때문에 프로덕션 환경에서 응용 프로그램을 실행하는 데 `dotnet run`을 사용하는 것은 바람직하지 않습니다. 대신, [`dotnet publish`](dotnet-publish.md) 명령을 사용하여 [배포를 만들고](../deploying/index.md) 게시된 출력을 배포합니다. 
 
 ## <a name="options"></a>옵션
 
@@ -56,17 +55,20 @@ dotnet run [-h|--help]
 
 명령에 대한 간단한 도움말을 출력합니다.
 
-`-c|--configuration {Debug|Release}`
+`-c|--configuration <CONFIGURATION>`
 
 프로젝트 빌드에 사용할 구성입니다. 기본값은 `Debug`입니다.
 
-`-f|--framework <FRAMEWORK_IDENTIFIER>`
+`-f|--framework <FRAMEWORK>`
 
-지정된 프레임워크를 사용하여 앱을 빌드하고 실행합니다. 프레임워크는 프로젝트 파일에 지정되어야 합니다.
+지정된 [프레임워크](../../standard/frameworks.md)를 사용하여 앱을 빌드하고 실행합니다. 프레임워크는 프로젝트 파일에 지정되어야 합니다.
 
-`-p|--project <PATH>`
+`-p|--project <PATH/PROJECT.csproj>`
 
-실행할 프로젝트 파일의 경로를 지정합니다. [csproj](csproj.md) 파일 또는 [csproj](csproj.md) 파일을 포함하는 디렉터리에 대한 경로일 수 있습니다. 지정하지 않으면 현재 디렉터리로 기본 설정됩니다. 
+프로젝트 파일의 경로 및 이름을 지정합니다. (참고 참조) 지정하지 않으면 현재 디렉터리로 기본 설정됩니다.
+
+> [!NOTE]
+> `-p|--project` 옵션과 함께 프로젝트 파일의 경로와 이름을 사용합니다. 이번에는 CLI의 회귀로 인해 폴더 경로를 제공할 수 없습니다. 자세한 내용을 보고 이 문제를 추적하려면 [dotnet run -p으로 프로젝트를 시작할 수 없음(dotnet/cli #5992)](https://github.com/dotnet/cli/issues/5992)을 참조하세요.
 
 ## <a name="examples"></a>예제
 
@@ -78,6 +80,7 @@ dotnet run [-h|--help]
 
 `dotnet run --project /projects/proj1/proj1.csproj`
 
-현재 디렉터리에 있는 프로젝트를 실행합니다. `--` 인수가 사용되었으므로 이 예제의 `--help` 인수는 실행 중인 응용 프로그램에 전달됩니다.
+현재 디렉터리에 있는 프로젝트를 실행합니다. `--` 인수가 사용되므로 이 예제의 `--help` 인수는 응용 프로그램에 전달됩니다.
 
 `dotnet run --configuration Release -- --help`
+

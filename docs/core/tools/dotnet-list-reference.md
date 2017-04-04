@@ -1,21 +1,22 @@
 ---
-title: "dotnet-list reference 명령 | Microsoft 문서"
+title: "dotnet-list reference 명령 - .NET Core CLI | Microsoft Docs"
 description: "dotnet-list reference 명령은 프로젝트 간 참조를 나열하는 편리한 옵션을 제공합니다."
 keywords: "dotnet-list, CLI, CLI 명령, .NET Core"
 author: spboyer
 ms.author: mairaw
-ms.date: 03/06/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 8f954a0c-03f8-4fbc-a529-b313ab12c623
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: e95aa43bfed78d72ef1ea5f3883ae64e06ffaa99
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
+ms.openlocfilehash: fdaf2a6f66801be68507ccabe7e0f2fea5433e65
+ms.lasthandoff: 03/22/2017
 
 ---
+
 # <a name="dotnet-list-reference"></a>dotnet-list reference
 
 ## <a name="name"></a>이름
@@ -24,10 +25,7 @@ ms.lasthandoff: 03/07/2017
 
 ## <a name="synopsis"></a>개요
 
-```
-dotnet list [project] reference
-dotnet list reference [-h|--help]
-```
+`dotnet list [<PROJECT>] reference [-h|--help]`
 
 ## <a name="description"></a>설명
 
@@ -35,9 +33,9 @@ dotnet list reference [-h|--help]
 
 ## <a name="arguments"></a>인수
 
-`project`
+`PROJECT`
 
-참조를 나열할 프로젝트 파일입니다. 지정하지 않으면 이 명령은 현재 디렉터리에서 솔루션 파일을 하나 검색합니다.
+참조를 나열하기 위해 사용할 프로젝트 파일을 지정합니다. 지정하지 않으면 이 명령은 현재 디렉터리에서 프로젝트 파일을 검색합니다.
 
 ## <a name="options"></a>옵션
 

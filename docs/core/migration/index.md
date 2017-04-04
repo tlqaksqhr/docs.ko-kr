@@ -4,15 +4,15 @@ description: ".NET Core project.json을 csproj로 마이그레이션"
 keywords: ".NET, .NET Core, .NET Core 마이그레이션"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/04/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 1feadf3d-3cfc-41dd-abb5-a4fc303a7b53
 translationtype: Human Translation
-ms.sourcegitcommit: f829714f545314daaa218b241008b5a2955ec589
-ms.openlocfilehash: 5872201f705c07bf692d0dc7f962068632f6b540
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: fae5eabac7d1aac577c5c7a27e306c8c7ea8b418
+ms.openlocfilehash: 73ab5a9bdd957e6d9394a3be0aa55f554ee7a86a
+ms.lasthandoff: 03/16/2017
 
 ---
 
@@ -54,6 +54,8 @@ Visual Studio는 선택된 프로젝트를 자동으로 마이그레이션합니
 > [!NOTE]
 > VS Code를 사용 중인 경우 `dotnet migrate` 명령은 `tasks.json`과 같은 VS Code 관련 파일을 수정하지 않습니다. 이러한 파일은 수동으로 변경해야 합니다. Project Ryder나 다른 편집기 또는 Visual Studio 이외의 IDE(통합 개발 환경)를 사용 중인 경우에도 마찬가지입니다. 
 
+project.json 및 csproj 형식 간을 비교하려면 [project.json 및 csproj 속성 간 매핑](../tools/project-json-to-csproj.md)을 참조하세요.
+
 ### <a name="common-issues"></a>일반적인 문제
 
 - “No executable found matching command dotnet-migrate"(dotnet-migrate 명령과 일치하는 실행 파일을 찾을 수 없습니다.) 오류가 발생하는 경우 다음을 수행합니다.
@@ -79,7 +81,7 @@ Visual Studio는 선택된 프로젝트를 자동으로 마이그레이션합니
 * 프로젝트의 맨 위와 맨 아래에서 `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` 및 `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` 문을 제거합니다. 이러한 import 문은 SDK에 포함되므로, 프로젝트에 있을 필요가 없습니다. 
 * 프로젝트에 `Microsoft.NETCore.App` 또는 `NETStandard.Library` `<PackageReference>` 항목이 있으면 제거해야 합니다. 이러한 패키지 참조는 [SDK에 포함](https://aka.ms/sdkimplicitrefs)되어 있습니다. 
 * `Microsoft.NET.Sdk` `<PackageReference>` 요소가 있는 경우 제거합니다. SDK 참조는 `<Project>` 요소의 `Sdk` 특성을 통해 가져옵니다. 
-* [SDK에 포함](https://aka.ms/sdkimplicititems)된 GLOB를 제거합니다. 프로젝트에 이러한 GLOB를 남겨 두면 컴파일 항목이 중복되므로 빌드 시 오류가 발생합니다. 
+* [SDK에 포함](../tools/csproj.md#default-compilation-includes-in-net-core-projects)된 [glob](https://en.wikipedia.org/wiki/Glob_(programming))을 제거합니다. 프로젝트에 이러한 GLOB를 남겨 두면 컴파일 항목이 중복되므로 빌드 시 오류가 발생합니다. 
 
 이러한 단계를 수행하면 프로젝트가 RTM .NET Core csproj 형식과 완벽히 호환됩니다. 
 

@@ -4,16 +4,16 @@ description: "project.json 및 csproj e요소 간 매핑을 참조하세요."
 keywords: project.json, csproj, .NET Core, MSBuild
 author: natemcmaster
 ms.author: mairaw
-ms.date: 03/02/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 79c50621-a24a-4e64-bbb9-b953113e841c
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: beaae03add6f90692189325c0e1cff5ab761abb5
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: b4fb772973607b94e120377879a5dbdde2a25271
+ms.openlocfilehash: 9d0af9769264b7f22c90ffb6a831b42f06c6bb94
+ms.lasthandoff: 03/15/2017
 
 ---
 
@@ -612,7 +612,7 @@ MSBuild에서는 [항목](https://docs.microsoft.com/visualstudio/msbuild/common
 ```
 
 > [!NOTE]
-> 많은 기본 와일드카드 사용 패턴이 .NET Core SDK에 의해 자동으로 추가됩니다.
+> 많은 기본 [와일드카드 사용 패턴](https://en.wikipedia.org/wiki/Glob_(programming))이 .NET Core SDK에 의해 자동으로 추가됩니다.
 > 자세한 내용은 [기본 컴파일 항목 값](https://aka.ms/sdkimplicititems)을 참조하세요.
 
 모든 MSBuild `ItemGroup` 요소는 `Include`, `Exclude` 및 `Remove`를 지원합니다.

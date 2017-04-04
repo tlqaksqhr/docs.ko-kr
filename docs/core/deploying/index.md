@@ -4,15 +4,15 @@ description: ".NET Core 응용 프로그램 배포"
 keywords: ".NET, .NET Core, .NET Core 배포"
 author: rpetrusha
 ms.author: ronpet
-ms.date: 03/06/2017
+ms.date: 03/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 0e186665619bd76c5ba3d1e605b885a12aa15c66
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 24bca179bc153a6bb469e38067e457fa61a9d2b3
+ms.openlocfilehash: ef742b932a3a76359e3f06129dce0bf127a1977e
+ms.lasthandoff: 03/14/2017
 
 ---
 
@@ -48,11 +48,11 @@ FDD 배포에는 다음과 같은 여러 가지 장점이 있습니다.
 
 타사 종속성이 없는 프레임워크 종속 배포에는 앱의 빌드, 테스트 및 게시만 포함됩니다. C#으로 작성된 간단한 예제에서는 이 프로세스를 보여 줍니다. 이 예제에서는 명령줄에서 [dotnet 유틸리티](../tools/dotnet.md)를 사용하지만 Visual Studio나 Visual Studio Code와 같은 개발 환경을 사용하여 예제를 컴파일, 테스트 및 게시할 수도 있습니다.
 
-1. 프로젝트에 대한 디렉터리를 만들고 명령줄에서 `[dotnet new console](../tools/dotnet-new.md)`를 입력하여 새 C# 콘솔 프로젝트를 만듭니다.
+1. 프로젝트에 대한 디렉터리를 만들고 명령줄에서 [`dotnet new console`](../tools/dotnet-new.md)를 입력하여 새 C# 콘솔 프로젝트를 만듭니다.
 
 2. 편집기에서 `Program.cs` 파일을 열고 자동 생성된 코드를 다음 코드로 바꿉니다. 텍스트를 입력하라는 메시지가 표시된 다음 사용자가 입력한 개별 단어가 표시됩니다. 정규식 `\w+`를 사용하여 입력 테스트의 단어를 구분합니다.
 
-    ```cs
+    ```csharp
     using System;
     using System.Text.RegularExpressions;
 
@@ -91,9 +91,9 @@ FDD 배포에는 다음과 같은 여러 가지 장점이 있습니다.
 
 4. [dotnet build](../tools/dotnet-build.md) 명령을 사용하여 앱의 디버그 빌드를 만듭니다.
 
-5. 프로그램을 디버그하고 테스트한 후에는 `dotnet publish -f netcoreapp1.1 -c release` 명령을 사용하여 앱과 함께 배포할 파일을 만들 수 있습니다. 그러면 앱의 디버그가 아닌 릴리스 버전이 만들어집니다.
+5. 프로그램을 디버그하고 테스트한 후에는 `dotnet publish -f netcoreapp1.1 -c Release` 명령을 사용하여 앱과 함께 배포할 파일을 만들 수 있습니다. 그러면 앱의 디버그가 아닌 릴리스 버전이 만들어집니다.
 
-   결과 파일은 프로젝트 `.\bin\release\netcoreapp1.1` 하위 디렉터리의 하위 디렉터리에 있는 `publish`는 디렉터리에 배치됩니다.
+   결과 파일은 프로젝트 `.\bin\Release\netcoreapp1.1` 하위 디렉터리의 하위 디렉터리에 있는 `publish`는 디렉터리에 배치됩니다.
 
 6. 게시 프로세스에서는 응용 프로그램의 파일과 함께 앱에 대한 디버깅 정보를 포함하는 프로그램 데이터베이스(.pdb) 파일을 내보냅니다. 이 파일은 기본적으로 디버깅 예외에 유용하며 응용 프로그램의 파일과 함께 패키지하지 않도록 선택할 수 있습니다.
 
@@ -103,7 +103,7 @@ FDD 배포에는 다음과 같은 여러 가지 장점이 있습니다.
 
 ### <a name="deploying-a-framework-dependent-deployment-with-third-party-dependencies"></a>타사 종속성이 있는 프레임워크 종속 배포 ###
 
-하나 이상의 타사 종속성이 있는 프레임워크 종속 배포에는 `dotnet restore` 명령을 실행하기 전에 세 가지 추가 단계가 포함됩니다.
+하나 이상의 타사 종속성이 있는 프레임워크 종속 배포에는 `dotnet restore` 명령을 실행하기 전에 2가지 추가 단계가 포함됩니다.
 
 1. 모든 타사 라이브러리에 대한 참조를 `csproj` 파일의 `<ItemGroup>` 섹션에 추가합니다. 다음 `<ItemGroup>` 섹션은 타사 라이브러리로 Json.NET을 사용하여 기본 프로젝트에 종속성을 포함하는 `<ItemGroup>`을 보여 줍니다.
 
@@ -147,7 +147,7 @@ FDD 배포에는 다음과 같은 여러 가지 장점이 있습니다.
 
 2. 편집기에서 `Program.cs` 파일을 열고 자동 생성된 코드를 다음 코드로 바꿉니다. 텍스트를 입력하라는 메시지가 표시된 다음 사용자가 입력한 개별 단어가 표시됩니다. 정규식 `\w+`를 사용하여 입력 테스트의 단어를 구분합니다.
 
-    ```cs
+    ```csharp
     using System;
     using System.Text.RegularExpressions;
 
@@ -195,10 +195,10 @@ RID를 구분하려면 세미콜론도 추가해야 합니다. 또한 `<RuntimeI
 5. 프로그램을 디버그하고 테스트한 후에는 다음과 같이 두 대상 플랫폼에 `dotnet publish` 명령을 사용하여 각 대상 플랫폼에 대해 앱과 함께 배포할 파일을 만들 수 있습니다.
 
    ```console
-   dotnet publish -c release -r win10-x64
-   dotnet publish -c release -r osx.10.11-x64
+   dotnet publish -c Release -r win10-x64
+   dotnet publish -c Release -r osx.10.11-x64
    ```
-그러면 각 대상 플랫폼에 대해 앱의 디버그가 아닌 릴리스 버전이 만들어집니다. 결과 파일은 프로젝트 `.\bin\release\netcoreapp1.1\<runtime_identifier>` 하위 디렉터리의 하위 디렉터리에 있는 `publish`라는 하위 디렉터리에 배치됩니다. 각 하위 디렉터리에는 앱을 시작하는 데 필요한 전체 파일 집합(앱 파일 및 모든 .NET Core 파일)이 포함됩니다.
+그러면 각 대상 플랫폼에 대해 앱의 디버그가 아닌 릴리스 버전이 만들어집니다. 결과 파일은 프로젝트 `.\bin\Release\netcoreapp1.1\<runtime_identifier>` 하위 디렉터리의 하위 디렉터리에 있는 `publish`라는 하위 디렉터리에 배치됩니다. 각 하위 디렉터리에는 앱을 시작하는 데 필요한 전체 파일 집합(앱 파일 및 모든 .NET Core 파일)이 포함됩니다.
 
 6. 게시 프로세스에서는 응용 프로그램의 파일과 함께 앱에 대한 디버깅 정보를 포함하는 프로그램 데이터베이스(.pdb) 파일을 내보냅니다. 이 파일은 기본적으로 디버깅 예외에 유용하며 응용 프로그램의 파일과 함께 패키지하지 않도록 선택할 수 있습니다.
 
@@ -211,8 +211,6 @@ RID를 구분하려면 세미콜론도 추가해야 합니다. 또한 `<RuntimeI
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp1.1</TargetFramework>
-    <VersionPrefix>1.0.0</VersionPrefix>
-    <DebugType>Portable</DebugType>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
 </Project>
@@ -239,8 +237,6 @@ RID를 구분하려면 세미콜론도 추가해야 합니다. 또한 `<RuntimeI
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp1.1</TargetFramework>
-    <VersionPrefix>1.0.0</VersionPrefix>
-    <DebugType>Portable</DebugType>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <ItemGroup>
@@ -292,10 +288,10 @@ RID를 구분하려면 세미콜론도 추가해야 합니다. 또한 `<RuntimeI
 5. 프로그램을 디버그하고 테스트한 후에는 다음과 같이 두 대상 플랫폼에 `dotnet publish` 명령을 사용하여 각 대상 플랫폼에 대해 앱과 함께 배포할 파일을 만들 수 있습니다.
 
    ```console
-   dotnet publish -c release -r win10-x64
-   dotnet publish -c release -r osx.10.11-x64
+   dotnet publish -c Release -r win10-x64
+   dotnet publish -c Release -r osx.10.11-x64
    ```
-그러면 각 대상 플랫폼에 대해 앱의 디버그가 아닌 릴리스 버전이 만들어집니다. 결과 파일은 프로젝트 `.\bin\release\netstandard1.6\<runtime_identifier>` 하위 디렉터리의 하위 디렉터리에 있는 `publish`라는 하위 디렉터리에 배치됩니다. 각 하위 디렉터리에는 앱을 시작하는 데 필요한 전체 파일 집합(앱 파일 및 모든 .NET Core 파일)이 포함됩니다.
+그러면 각 대상 플랫폼에 대해 앱의 디버그가 아닌 릴리스 버전이 만들어집니다. 결과 파일은 프로젝트 `.\bin\Release\netstandard1.6\<runtime_identifier>` 하위 디렉터리의 하위 디렉터리에 있는 `publish`라는 하위 디렉터리에 배치됩니다. 각 하위 디렉터리에는 앱을 시작하는 데 필요한 전체 파일 집합(앱 파일 및 모든 .NET Core 파일)이 포함됩니다.
 
 6. 게시 프로세스에서는 응용 프로그램의 파일과 함께 앱에 대한 디버깅 정보를 포함하는 프로그램 데이터베이스(.pdb) 파일을 내보냅니다. 이 파일은 기본적으로 디버깅 예외에 유용하며 응용 프로그램의 파일과 함께 패키지하지 않도록 선택할 수 있습니다.
 
@@ -308,8 +304,6 @@ RID를 구분하려면 세미콜론도 추가해야 합니다. 또한 `<RuntimeI
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netstandard1.6</TargetFramework>
-    <VersionPrefix>1.0.0</VersionPrefix>
-    <DebugType>Portable</DebugType>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <ItemGroup>

@@ -11,9 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: cf497639-9f91-45cb-836f-998d1cea2f43
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: dc0693c2e2c034c4c71b4270ef2812be4af72e72
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
+ms.openlocfilehash: e9b8ad13a48dd43236769b130d6f8a75b7b023ca
+ms.lasthandoff: 03/10/2017
 
 ---
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 03/02/2017
 
 * 개체를 문자열 표현으로 변환하는 과정이 명확하지 않을 수 있습니다. 예를 들어 **Temperature** 또는 **Person** 개체의 문자열 표현이 어떻게 표시될지 명확하지 않습니다. 다양한 방식으로 **Temperature** 개체의 서식을 지정하는 예제는 [표준 서식 문자열](#standard-format-strings) 섹션을 참조하세요.
 
-* 값에 문화권별 형식 지정이 필요할 수 있습니다. 예를 들어, 숫자를 사용하여 통화 값을 나타내는 응용 프로그램에서는 숫자 문자열에 현재 문화권의 통화 기호, 그룹 구분 기호(대부분의 경우&1000; 단위 구분 기호임) 및 소수점 기호가 포함되어야 합니다. 예제는 [서식 공급자 및 IFormatProvider 인터페이스를 사용하여 문화권 구분 서식 지정](#culture-sensitive-formatting-with-format-providers-and-the-iformatprovider-interface) 섹션을 참조하세요. 
+* 값에 문화권별 형식 지정이 필요할 수 있습니다. 예를 들어, 숫자를 사용하여 통화 값을 나타내는 응용 프로그램에서는 숫자 문자열에 현재 문화권의 통화 기호, 그룹 구분 기호(대부분의 경우 1000 단위 구분 기호임) 및 소수점 기호가 포함되어야 합니다. 예제는 [서식 공급자 및 IFormatProvider 인터페이스를 사용하여 문화권 구분 서식 지정](#culture-sensitive-formatting-with-format-providers-and-the-iformatprovider-interface) 섹션을 참조하세요. 
 
 * 응용 프로그램에서 같은 값을 여러 가지 방법으로 표시해야 하는 경우도 있을 수 있습니다. 예를 들어, 응용 프로그램에서 해당 이름의 문자열 표현을 표시하거나 해당 내부 값을 표시하여 열거형 멤버를 나타낼 수 있습니다. 다양한 방식으로 [DayOfWeek](xref:System.DayOfWeek) 열거형 멤버의 형식을 지정하는 예제는 [표준 서식 문자열](#standard-format-strings) 섹션을 참조하세요.
 
@@ -72,7 +72,7 @@ ms.lasthandoff: 03/02/2017
 
 * [Object.ToString](xref:System.Object.ToString) 메서드를 재정의하여 개체 값의 사용자 지정 문자열 표현을 정의합니다. 자세한 내용은 이 항목의 뒷부분에 있는 [ToString 메서드 재정의](#overriding-the-tostring-method) 섹션을 참조하세요.
 
-* 개체의 값에 대한 문자열 표현에서 여러 형식을 사용할 수 있도록 형식 지정자를 정의합니다. 예를 들어, 다음 문의 "X" 형식 지정자는 정수를&16;진수 값의 문자열 표현으로 변환합니다.
+* 개체의 값에 대한 문자열 표현에서 여러 형식을 사용할 수 있도록 형식 지정자를 정의합니다. 예를 들어, 다음 문의 "X" 형식 지정자는 정수를 16진수 값의 문자열 표현으로 변환합니다.
 
   ```csharp
   int integerValue = 60312;
@@ -249,7 +249,7 @@ End Module
 
 .NET에서는 모든 숫자 형식, 날짜/시간 형식 및 열거형 형식에 대한 표준 형식 지정자 집합을 정의합니다. 예를 들어, 이러한 각 범주는 해당 형식 값에 대한 일반적인 문자열 표현을 정의하는 "G" 표준 형식 지정자를 지원합니다.
 
-열거형 형식의 표준 형식 문자열은 값의 문자열 표현을 직접 제어합니다. 열거형 값의 [ToString](xref:System.Object.ToString) 메서드에 전달된 형식 문자열은 값이 문자열 이름("G" 및 "F" 형식 지정자), 내부 정수 값("D" 형식 지정자) 또는&16;진수 값("X" 형식 지정자)을 사용하여 표시되는지 여부를 결정합니다. 다음 예제에서는 표준 형식 문자열을 사용하여 [DayOfWeek](xref:System.DayOfWeek) 열거형 값의 형식을 지정하는 방법을 보여 줍니다. 
+열거형 형식의 표준 형식 문자열은 값의 문자열 표현을 직접 제어합니다. 열거형 값의 [ToString](xref:System.Object.ToString) 메서드에 전달된 형식 문자열은 값이 문자열 이름("G" 및 "F" 형식 지정자), 내부 정수 값("D" 형식 지정자) 또는 16진수 값("X" 형식 지정자)을 사용하여 표시되는지 여부를 결정합니다. 다음 예제에서는 표준 형식 문자열을 사용하여 [DayOfWeek](xref:System.DayOfWeek) 열거형 값의 형식을 지정하는 방법을 보여 줍니다. 
 
 ```csharp
 DayOfWeek thisDay = DayOfWeek.Monday;
@@ -302,7 +302,7 @@ Next
 
 * 음수 값을 나타내는 데 괄호가 사용되지 않는 경우 결과 문자열에 사용되는 음수 기호를 결정하는 [NegativeSign](xref:System.Globalization.NumberFormatInfo.NegativeSign) 속성
 
-이외에도 숫자 형식 문자열에는 전체 자릿수 지정자가 포함될 수도 있습니다. 이 지정자의 의미는 해당 지정자가 사용되는 형식 문자열에 따라 달라지지만 일반적으로 결과 문자열에 표시될 전체 자릿수나 소수 자릿수를 나타냅니다. 예를 들어, 다음 예제에서는 "X4" 표준 숫자 문자열과 전체 자릿수 지정자를 사용하여 네 자리의&16;진수로 구성된 문자열 값을 만듭니다.
+이외에도 숫자 형식 문자열에는 전체 자릿수 지정자가 포함될 수도 있습니다. 이 지정자의 의미는 해당 지정자가 사용되는 형식 문자열에 따라 달라지지만 일반적으로 결과 문자열에 표시될 전체 자릿수나 소수 자릿수를 나타냅니다. 예를 들어, 다음 예제에서는 "X4" 표준 숫자 문자열과 전체 자릿수 지정자를 사용하여 네 자리의 16진수로 구성된 문자열 값을 만듭니다.
 
 ```csharp
 byte[] byteValues = { 12, 163, 255 };
@@ -617,7 +617,7 @@ Console.WriteLine(date1.ToString(customFormat))
 '       August 28, 2009 (Friday) 
 ```
 
-다음 예제에서는 [Int64](xref:System.Int64) 값을&7;자리 표준 미국 전화 번호로 지역 번호와 함께 표시하는 사용자 지정 형식 문자열을 정의합니다. 
+다음 예제에서는 [Int64](xref:System.Int64) 값을 7자리 표준 미국 전화 번호로 지역 번호와 함께 표시하는 사용자 지정 형식 문자열을 정의합니다. 
 
 ```csharp
 using System;
@@ -732,7 +732,7 @@ End Module
 
 ### <a name="culture-sensitive-formatting-of-numeric-values"></a>숫자 값의 문화권 구분 서식 지정
 
-기본적으로 숫자 값의 형식은 문화권을 구분합니다. 형식 지정 메서드를 호출할 때 문화권을 지정하지 않으면 현재 스레드 문화권의 형식 규칙이 사용됩니다. 이는 현재 스레드 문화권을&4;번 변경한 후 [Decimal.ToString(String)](xref:System.Decimal.ToString(System.String)) 메서드를 호출하는 다음 예제에 나와 있습니다. 각각의 경우 결과 문자열은 현재 문화권의 형식 규칙을 반영합니다. 이는 `ToString` 및 `ToString(String)` 메서드가 각 숫자 형식의 `ToString(String, IFormatProvider)` 메서드에 대한 호출을 래핑하기 때문입니다. 
+기본적으로 숫자 값의 형식은 문화권을 구분합니다. 형식 지정 메서드를 호출할 때 문화권을 지정하지 않으면 현재 스레드 문화권의 형식 규칙이 사용됩니다. 이는 현재 스레드 문화권을 4번 변경한 후 [Decimal.ToString(String)](xref:System.Decimal.ToString(System.String)) 메서드를 호출하는 다음 예제에 나와 있습니다. 각각의 경우 결과 문자열은 현재 문화권의 형식 규칙을 반영합니다. 이는 `ToString` 및 `ToString(String)` 메서드가 각 숫자 형식의 `ToString(String, IFormatProvider)` 메서드에 대한 호출을 래핑하기 때문입니다. 
 
 ```csharp
 using System;
@@ -858,7 +858,7 @@ End Module
 
 ### <a name="culture-sensitive-formatting-of-date-and-time-values"></a>날짜 및 시간 값의 문화권 구분 서식 지정
 
-기본적으로 날짜 및 시간 값의 형식은 문화권을 구분합니다. 형식 지정 메서드를 호출할 때 문화권을 지정하지 않으면 현재 스레드 문화권의 형식 규칙이 사용됩니다. 이는 현재 스레드 문화권을&4;번 변경한 후 [DateTime.ToString(String)](xref:System.DateTime.ToString(System.String)) 메서드를 호출하는 다음 예제에 나와 있습니다. 각각의 경우 결과 문자열은 현재 문화권의 형식 규칙을 반영합니다. 이는 [DateTime.ToString()](xref:System.DateTime.ToString), [DateTime.ToString(String)](xref:System.DateTime.ToString(System.String)), [DateTimeOffset.ToString()](xref:System.DateTimeOffset.ToString(System.String)) 및 [DateTimeOffset.ToString(String)](xref:System.DateTimeOffset.ToString(System.String)) 메서드가 [DateTime.ToString(String, IFormatProvider)](xref:System.DateTime.ToString(System.String,System.IFormatProvider)) 및 [DateTimeOffset.ToString(String, IFormatProvider)](xref:System.DateTimeOffset.ToString(System.String,System.IFormatProvider)) 메서드 호출을 래핑하기 때문입니다.
+기본적으로 날짜 및 시간 값의 형식은 문화권을 구분합니다. 형식 지정 메서드를 호출할 때 문화권을 지정하지 않으면 현재 스레드 문화권의 형식 규칙이 사용됩니다. 이는 현재 스레드 문화권을 4번 변경한 후 [DateTime.ToString(String)](xref:System.DateTime.ToString(System.String)) 메서드를 호출하는 다음 예제에 나와 있습니다. 각각의 경우 결과 문자열은 현재 문화권의 형식 규칙을 반영합니다. 이는 [DateTime.ToString()](xref:System.DateTime.ToString), [DateTime.ToString(String)](xref:System.DateTime.ToString(System.String)), [DateTimeOffset.ToString()](xref:System.DateTimeOffset.ToString(System.String)) 및 [DateTimeOffset.ToString(String)](xref:System.DateTimeOffset.ToString(System.String)) 메서드가 [DateTime.ToString(String, IFormatProvider)](xref:System.DateTime.ToString(System.String,System.IFormatProvider)) 및 [DateTimeOffset.ToString(String, IFormatProvider)](xref:System.DateTimeOffset.ToString(System.String,System.IFormatProvider)) 메서드 호출을 래핑하기 때문입니다.
 
 ```csharp
 using System;
@@ -1163,7 +1163,7 @@ End Module
 
 ## <a name="composite-formatting"></a>복합 형식 지정
 
-`String.Format` 및 `StringBuilder.AppendFormat` 같은 일부 메서드는 복합 형식 지정을 지원합니다. 복합 형식 문자열은&0;개 이상의 개체에 대한 문자열 표현이 통합된 단일 문자열을 반환하는 일종의 템플릿입니다. 복합 형식 문자열에서는 각 개체가 인덱싱된 형식 항목으로 표현됩니다. 형식 항목의 인덱스는 메서드의 매개 변수 목록에 표시되는 개체의 위치에 해당합니다. 인덱스는&0;에서 시작합니다. 예를 들어 다음과 같은 `String.Format` 메서드 호출에서 첫 번째 형식 항목인 `{0:D}`는 `thatDate`의 문자열 표현으로 바뀌고, 두 번째 형식 항목인 `{1}`은 `item1`의 문자열 표현으로 바뀌고, 세 번째 형식 항목인 `{2:C2}`는 `item1.Value`의 문자열 표현으로 바뀝니다.
+`String.Format` 및 `StringBuilder.AppendFormat` 같은 일부 메서드는 복합 형식 지정을 지원합니다. 복합 형식 문자열은 0개 이상의 개체에 대한 문자열 표현이 통합된 단일 문자열을 반환하는 일종의 템플릿입니다. 복합 형식 문자열에서는 각 개체가 인덱싱된 형식 항목으로 표현됩니다. 형식 항목의 인덱스는 메서드의 매개 변수 목록에 표시되는 개체의 위치에 해당합니다. 인덱스는 0에서 시작합니다. 예를 들어 다음과 같은 `String.Format` 메서드 호출에서 첫 번째 형식 항목인 `{0:D}`는 `thatDate`의 문자열 표현으로 바뀌고, 두 번째 형식 항목인 `{1}`은 `item1`의 문자열 표현으로 바뀌고, 세 번째 형식 항목인 `{2:C2}`는 `item1.Value`의 문자열 표현으로 바뀝니다.
 
 ```csharp
 result = String.Format("On {0:d}, the inventory of {1} was worth {2:C2}.", 
@@ -1240,7 +1240,7 @@ Next
 
 [ICustomFormatter](xref:System.ICustomFormatter) 인터페이스에는 복합 형식 지정 메서드에 의해 자동으로 복합 형식 문자열의 각 형식 항목마다 한 번씩 호출되는 [Format(String, Object, IFormatProvider)](xref:System.ICustomFormatter.Format(System.String,System.Object,System.IFormatProvider)) 메서드가 하나 있습니다. [Format(String, Object, IFormatProvider)](xref:System.ICustomFormatter.Format(System.String,System.Object,System.IFormatProvider)) 메서드에는 세 개의 매개 변수, 즉 형식 항목의 *formatString* 인수를 나타내는 형식 문자열, 형식을 지정할 개체 및 형식 지정 서비스를 제공하는 [IFormatProvider](xref:System.IFormatProvider) 개체가 포함되어 있습니다. 일반적으로 [ICustomFormatter](xref:System.ICustomFormatter)를 구현하는 클래스는 [IFormatProvider](xref:System.IFormatProvider)도 구현하여 이 마지막 매개 변수가 사용자 지정 형식 지정 클래스를 참조하도록 합니다. 이 메서드는 형식을 지정할 개체의 사용자 지정 형식 문자열 표현을 반환합니다. 이 메서드가 개체의 형식을 지정할 수 없는 경우에는 null 참조가 반환되어야 합니다.
 
-다음 예제에서는 정수 값을 뒤에 공백이 오는 두 자리&16;진수 값 시퀀스로 표시하는 `ByteByByteFormatter`라는 [ICustomFormatter](xref:System.ICustomFormatter) 구현을 제공합니다.
+다음 예제에서는 정수 값을 뒤에 공백이 오는 두 자리 16진수 값 시퀀스로 표시하는 `ByteByByteFormatter`라는 [ICustomFormatter](xref:System.ICustomFormatter) 구현을 제공합니다.
 
 ```csharp
 public class ByteByByteFormatter : IFormatProvider, ICustomFormatter

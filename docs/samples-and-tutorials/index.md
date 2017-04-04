@@ -10,8 +10,9 @@ ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
 translationtype: Human Translation
-ms.sourcegitcommit: 2ad428dcda9ef213a8487c35a48b33929259abba
-ms.openlocfilehash: f44193d8f7bc9f67acb8b04966e02beca18a0653
+ms.sourcegitcommit: ff143583ba62fc1d82561e739a75107e50ebee88
+ms.openlocfilehash: c10736e81d4f43d6ba70b71c25878dc4068a4a10
+ms.lasthandoff: 03/20/2017
 
 ---
 
@@ -86,6 +87,14 @@ ASP.NET Core를 학습하는 데 유용한 리소스는 [ASP.NET 사이트](http
 
 이 자습서에서는 ASP.NET Core 마이크로 서비스를 빌드하고 Docker에서 호스트하는 과정을 보여 줍니다. 빌드할 코드의 완성된 버전은 [GitHub의 core-docs 리포지토리](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice)에 있습니다.
 
+**[Visual Studio for Mac을 사용하여 macOS에서 .NET Core 시작](../core/tutorials/using-on-mac-vs.md)**
+
+이 자습서에서는 Visual Studio for Mac을 사용하여 간단한 .NET Core 콘솔 응용 프로그램을 빌드하는 방법을 보여 줍니다.
+
+**[Visual Studio for Mac을 사용하여 macOS에서 완전한 .NET Core 솔루션 빌드](../core/tutorials/using-on-mac-vs-full-solution.md)**
+
+이 자습서에서는 재사용 가능한 라이브러리 및 단위 테스트를 포함하는 완전한 .NET Core 솔루션을 빌드하는 방법을 보여 줍니다.
+
 ## <a name="deploying-to-containers"></a>컨테이너에 배포
 
 **[Windows Docker 컨테이너에서 ASP.NET MVC 응용 프로그램 실행](../framework/docker/aspnetmvc.md)**
@@ -96,8 +105,3 @@ ASP.NET Core를 학습하는 데 유용한 리소스는 [ASP.NET 사이트](http
 **[Windows 컨테이너에서 .NET Framework 콘솔 응용 프로그램 실행](../framework/docker/console.md)**
 
 이 자습서에서는 Windows 컨테이너에 기존 콘솔 응용 프로그램을 배포하는 방법을 보여 줍니다. 빌드할 코드의 완성된 버전은 [GitHub의 core-docs 리포지토리](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator)에 있습니다.
-
-
-<!--HONumber=Jan17_HO3-->
-
-
