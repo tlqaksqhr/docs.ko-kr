@@ -1,22 +1,23 @@
 ---
-title: "dotnet-msbuild 명령 | Microsoft 문서"
+title: "dotnet-msbuild 명령 - .NET Core CLI | Microsoft Docs"
 description: "dotnet-msbuild 명령은 MSBuild 명령줄에 대한 액세스 권한을 제공합니다."
 keywords: "dotnet-msmsbuild, CLI, CLI 명령, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/06/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: ffdc40ba-ef33-463e-aa35-b0af1fe615a2
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: a000e49a8672affe5b3bb9bd8a5f7e8095ab0aa9
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
+ms.openlocfilehash: 069909ab3890b75502602f57fc15df19bc7dd614
+ms.lasthandoff: 03/22/2017
 
 ---
-#<a name="dotnet-msbuild"></a>dotnet-msbuild
+
+# <a name="dotnet-msbuild"></a>dotnet-msbuild
 
 ## <a name="name"></a>이름
 
@@ -24,16 +25,13 @@ ms.lasthandoff: 03/07/2017
 
 ## <a name="synopsis"></a>개요
 
-```
-dotnet msbuild <msbuild_arguments>
-dotnet msbuild [-h]
-```
+`dotnet msbuild <msbuild_arguments> [-h]`
 
 ## <a name="description"></a>설명
 
-`dotnet msbuild` 명령을 사용하면 모든 기능을 갖춘 MSBuild에 액세스할 수 있습니다. 
+`dotnet msbuild` 명령을 사용하면 모든 기능을 갖춘 MSBuild에 액세스할 수 있습니다.
 
-이 명령에는 기존 MSBuild 명령줄 클라이언트와 정확히 동일한 기능이 있습니다. 옵션은 모두 동일합니다. [MSBuild 명령줄 참조](https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference)를 통해 옵션을 익힐 수 있습니다. 
+이 명령에는 기존 MSBuild 명령줄 클라이언트와 정확히 동일한 기능이 있습니다. 옵션은 모두 동일합니다. [MSBuild 명령줄 참조](https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference)를 사용하여 사용 가능한 옵션에 대한 정보를 얻을 수 있습니다. 
 
 ## <a name="examples"></a>예제
 

@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c0d70120-78c8-4d26-bb3c-801f42fc2366
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: a6f90a43b5f129cd246546f2cc36c4b97c3fb15c
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 4a1f0c88fb1ccd6694f8d4f5687431646adbe000
+ms.openlocfilehash: d32c73ac3a724d4701b7f6c1d548aedb3fb00c56
+ms.lasthandoff: 03/22/2017
 
 ---
 
@@ -74,7 +74,7 @@ DNX를 사용한 경우 세 부분(DNX, DNU 또는 DNVM) 중 하나에서 몇 �
 ### <a name="global-commands"></a>전역 명령
 DNU는 "명령 전역"이라는 개념과 함께 제공되었습니다. 이는 응용 프로그램 실행을 위해 지정한 DNX를 호출하는 셸 스크립트와 함께 NuGet 패키지로 패키지된 콘솔 응용 프로그램이었습니다. 
 
-CLI는 이 개념을 지원하지 않습니다. 대신 친숙한 `dotnet <command>` 구문을 사용하여 호출할 수 있는 프로젝트별 명령을 추가하는 개념을 지원합니다. 자세한 내용은 [확장성 개요](../tools/index.md#extensibility)에서 찾아볼 수 있습니다. 
+CLI는 이 개념을 지원하지 않습니다. 대신 친숙한 `dotnet <command>` 구문을 사용하여 호출할 수 있는 프로젝트별 명령을 추가하는 개념을 지원합니다.
 
 ### <a name="installing-dependencies"></a>종속성 설치
 v1부터 .NET Core CLI 도구에는 종속성 설치를 위한 `install` 명령이 없습니다. NuGet에서 패키지를 설치하려면 이를 종속성으로 `project.json` 파일에 추가한 후 `dotnet restore`를 실행해야 합니다. 
@@ -117,7 +117,7 @@ CLI와 DNX는 둘 다 `project.json` 파일 기반의 동일한 기본 프로젝
 
 이렇게 하면 `dotnet build`는 응용 프로그램의 진입점을 내보내서 코드 실행이 효과적으로 수행되도록 합니다. 클래스 라이브러리를 빌드하는 경우 위 섹션을 생략하면 됩니다. 물론 위 코드 조각을 `project.json` 파일에 추가한 후 정적 진입점을 추가해야 합니다. DNX에서 나오면 DNX가 지원하는 DI를 더 이상 사용할 수 없으므로 `static void Main()`이 기본 .NET 진입점이 되어야 합니다.
 
-`project.json`에 "commands" 섹션이 있는 경우 이를 제거할 수 있습니다. DNU 명령으로 사용되었던 명령 중 일부(예: Entity Framework CLI 명령)는 CLI에 프로젝트별 확장으로 이식됩니다. 프로젝트에서 사용하는 명령을 빌드한 경우 이를 CLI 확장으로 교체해야 합니다. 이 경우 `project.json`의 `commands` 노드를 `tools` 노드로 교체하고, [CLI 확장성 섹션](../tools/index.md#extensibility)에 설명된 대로 도구 종속성을 나열해야 합니다. 
+`project.json`에 "commands" 섹션이 있는 경우 이를 제거할 수 있습니다. DNU 명령으로 사용되었던 명령 중 일부(예: Entity Framework CLI 명령)는 CLI에 프로젝트별 확장으로 이식됩니다. 프로젝트에서 사용하는 명령을 빌드한 경우 이를 CLI 확장으로 교체해야 합니다. 이 경우 `project.json`의 `commands` 노드를 `tools` 노드로 교체하고, 도구 종속성을 나열해야 합니다. 
 
 이러한 작업이 완료되면 어떤 이식성 유형을 앱에 사용할지를 결정해야 합니다. .NET Core에서는 선택 가능한 폭넓은 이식성 옵션이 제공됩니다. 예를 들어 완전히 *이식 가능한* 응용 프로그램을 원할 수도 있고 *자체 포함* 응용 프로그램을 원할 수도 있습니다. 이식 가능한 응용 프로그램 옵션은 .NET Framework 응용 프로그램 작업과 유사하며, 대상 컴퓨터(.NET Core)에서 실행하기 위한 공유 구성 요소가 필요합니다. 자체 포함 응용 프로그램의 경우 .NET Core를 대상에 설치할 필요가 없지만, 지원할 각 OS에 대해 하나의 응용 프로그램을 생성해야 합니다. 이러한 이식성 형식 등에 대해서는  [응용 프로그램 이식성 유형](../deploying/index.md) 문서에서 설명합니다. 
 

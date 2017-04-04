@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: e67270cf713857a5fea16ebdd0abab774f555808
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: b4fb772973607b94e120377879a5dbdde2a25271
+ms.openlocfilehash: cd0b59b4a91dc4a83d73db55d8d0e611f73f63a6
+ms.lasthandoff: 03/15/2017
 
 ---
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 03/07/2017
 
 이렇게 하는 주된 이유는 프로젝트 파일에서 혼란을 줄이기 위해서입니다. SDK의 기본값은 가장 일반적인 사용 사례를 다루므로 개발자가 만드는 모든 프로젝트에서 반복할 필요가 없습니다. 결과적으로 프로젝트 파일 수가 줄어 훨씬 쉽게 이해하고 편집(필요한 경우)할 수 있습니다. 
 
-다음 표에는 SDK에 모두 포함되거나 제외되는 요소 및 GLOB가 나와 있습니다. 
+다음 표에는 SDK에 모두 포함되거나 제외되는 요소 및 [GLOB](https://en.wikipedia.org/wiki/Glob_(programming))가 나와 있습니다. 
 
 | 요소              | GLOB 포함                               | GLOB 제외                                                     | GLOB 제거                  |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
@@ -62,7 +62,7 @@ ms.lasthandoff: 03/07/2017
 이러한 변경으로 인해 다른 포함 항목의 기본 메커니즘이 수정되지 않습니다. 그러나 예를 들어 일부 파일을 지정하여 앱에 게시하려는 경우 해당 사항에 대해 *csproj*의 알려진 메커니즘을 계속 사용할 수 있습니다(예: `<Content>` 요소).
 
 ### <a name="recommendation"></a>권장 사항
-csproj를 사용하는 경우 프로젝트에서 기본 GLOB를 제거하고 다양한 시나리오(런타임, NuGet 패키징 등)에 대해 앱/라이브러리에서 필요로 하는 아티팩트에 대한 GLOB 파일 경로만 추가하는 것이 좋습니다.
+csproj를 사용하는 경우 프로젝트에서 기본 GLOB를 제거하고 다양한 시나리오(런타임, NuGet 패키징 등)에 대해 앱/라이브러리에서 필요로 하는 아티팩트에 대한 GLOB가 있는 파일 경로만 추가하는 것이 좋습니다.
 
 
 ## <a name="additions"></a>추가
@@ -109,11 +109,11 @@ csproj를 사용하는 경우 프로젝트에서 기본 GLOB를 제거하고 다
 * `None` – 자산이 사용되지 않습니다.
 * `All` – 모든 자산이 사용됩니다.
 
-### <a name="dotnetclitoolreference"></a>DotnetCliToolReference
-`<DotnetCliToolReference>` 항목 요소는 사용자가 프로젝트의 컨텍스트에서 복원할 CLI 도구를 지정합니다. 이 요소는 *project.json*의 `tools` 노드를 대체합니다. 
+### <a name="dotnetclitoolreference"></a>DotNetCliToolReference
+`<DotNetCliToolReference>` 항목 요소는 사용자가 프로젝트의 컨텍스트에서 복원할 CLI 도구를 지정합니다. 이 요소는 *project.json*의 `tools` 노드를 대체합니다. 
 
 ```xml
-<DotnetCliToolReference Include="<package-id>" Version="" />
+<DotNetCliToolReference Include="<package-id>" Version="" />
 ```
 
 #### <a name="version"></a>버전
@@ -243,3 +243,4 @@ nuget.exe 및 Visual Studio 패키지 관리자에 의해 적용되는, 이 패�
 
 ### <a name="nuspecproperties"></a>NuspecProperties
 key=value 쌍의 세미콜론으로 구분된 목록입니다.
+

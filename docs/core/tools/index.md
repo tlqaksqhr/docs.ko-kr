@@ -1,103 +1,108 @@
 ---
 title: ".NET Core CLI(명령줄 인터페이스) 도구 | Microsoft 문서"
-description: "CLI(명령줄 인터페이스)의 개념 및 주요 기능에 대한 개요"
+description: "CLI(명령줄 인터페이스) 도구 및 기능에 대한 개요"
 keywords: "CLI, CLI 도구, .NET, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/06/2017
+ms.date: 03/20/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 7c5eee9f-d873-4224-8f5f-ed83df329a59
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 4e3137d8506342662d145481d5e9fde1d53b9ba3
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 4a1f0c88fb1ccd6694f8d4f5687431646adbe000
+ms.openlocfilehash: d00277ceb7fd1c8a7186da330ab2bc4ad40c59a7
+ms.lasthandoff: 03/22/2017
 
 ---
 
-# <a name="net-core-command-line-interface-tools-net-core-sdk-10-tools"></a>.NET Core 명령줄 인터페이스 도구(.NET Core SDK 1.0 도구)
+# <a name="net-core-command-line-interface-cli-tools"></a>.NET Core CLI(명령줄 인터페이스) 도구
 
-.NET Core CLI(명령줄 인터페이스)는 .NET Core 응용 프로그램 개발에 사용되는 새로운 기본 플랫폼 간 도구 체인입니다. IDE(통합 개발 환경), 편집기 및 빌드 Orchestrator와 같은 기타 상위 수준 도구의 기반이 될 수 있는 주 계층이기 때문에 "기본"입니다. 
-
-기본적으로 플랫폼 간 인터페이스이며 지원되는 각 플랫폼에 동일한 노출 영역이 있습니다. 즉, 도구 사용 방법을 익히면 지원되는 모든 플랫폼에서 동일한 방식으로 사용할 수 있습니다. 
+.NET Core CLI(명령줄 인터페이스)는 .NET 응용 프로그램 개발에 사용되는 새로운 플랫폼 간 도구 체인입니다. 이 CLI는 IDE(통합 개발 환경), 편집기 및 빌드 Orchestrator와 같은 기타 상위 수준 도구의 기반이 됩니다.
 
 ## <a name="installation"></a>설치
-모든 도구와 마찬가지로 먼저 컴퓨터에 도구를 가져와야 합니다. 시나리오에 따라 기본 설치 관리자를 사용하여 CLI를 설치하거나 설치 셸 스크립트를 사용할 수 있습니다.
 
-기본 설치 관리자는 주로 개발자의 컴퓨터를 위한 것입니다. Ubuntu의 DEB 패키지 또는 Windows의 MSI 번들처럼 CLI는 지원되는 각 플랫폼의 기본 설치 메커니즘을 사용하여 배포됩니다. 이러한 설치 관리자는 설치 후 CLI를 즉시 사용하려는 사용자에게 필요한 환경을 설치 및 설정합니다. 그러나 이러한 사용자는 컴퓨터에 대한 관리자 권한이 필요합니다. [.NET Core 시작 페이지](https://aka.ms/dotnetcoregs)에서 설치 지침을 볼 수 있습니다.
+기본 설치 관리자를 사용하거나 설치 셸 스크립트를 사용합니다.
 
-반면 설치 스크립트를 사용할 경우에는 관리 권한이 필요하지 않습니다. 그러나 컴퓨터에 필수 구성 요소도 설치되지 않습니다. 모든 필수 구성 요소를 수동으로 설치해야 합니다. 스크립트는 대개 빌드 서버를 설정하거나 관리자 권한 없이 도구를 설치할 경우 사용됩니다(위의 필수 조건 주의 사항 참조). 자세한 내용은 [스크립트 참조 설치 항목](dotnet-install-script.md)에서 확인할 수 있습니다. CI(연속 통합) 빌드 서버에 CLI를 설치하는 방법에 관심이 있는 경우 [CI 서버와 CLI](using-ci-with-cli.md) 항목을 살펴볼 수 있습니다. 
+* Ubuntu의 DEB 패키지 또는 Windows의 MSI 번들처럼 기본 설치 관리자는 주로 개발자 컴퓨터에서 사용되고 지원되는 각 플랫폼의 기본 설치 메커니즘을 사용합니다. 이러한 설치 관리자는 개발자가 즉시 사용할 수 있도록 환경을 설치하고 구성하지만 컴퓨터에서 관리자 권한이 필요합니다. [.NET Core 설치 가이드](https://aka.ms/dotnetcoregs)에서 설치 지침을 볼 수 있습니다.
+* 셸 스크립트는 대개 빌드 서버를 설정하거나 관리자 권한 없이 도구를 설치할 경우 사용됩니다. 설치 스크립트는 컴퓨터에 필수 구성 요소를 설치하지 않으므로 이러한 구성 요소는 수동으로 설치해야 합니다. 자세한 내용은 [스크립트 참조 설치 항목](dotnet-install-script.md)을 참조하세요. CI(연속 통합) 빌드 서버에서 CLI를 설치하는 방법에 대한 자세한 내용은 [.NET Core SDK 및 CI(연속 통합)의 도구 사용](using-ci-with-cli.md)을 참조하세요.
 
-기본적으로 CLI는 "SxS”(병렬) 방식으로 설치됩니다. 즉, 특정 시간에 CLI 도구의 여러 버전이 단일 컴퓨터에 공존할 수 있습니다. 그러나 사용되는 올바른 버전에 대해서는 [드라이버 섹션](#driver)에 자세히 설명되어 있습니다. 
+기본적으로 CLI는 병렬(SxS) 방식으로 설치되므로 여러 버전의 CLI 도구가 단일 컴퓨터에 공존할 수 있습니다. 여러 버전이 설치되어 있는 컴퓨터에서 사용되는 버전을 확인하는 방법은 [드라이버](#driver) 섹션에 좀 더 자세히 설명되어 있습니다.
 
-### <a name="what-commands-come-in-the-box"></a>기본적으로 제공되는 명령
+## <a name="cli-commands"></a>CLI 명령
+
 다음은 기본적으로 설치되는 명령입니다.
 
+### <a name="basic-commands"></a>기본 명령
+
 * [new](dotnet-new.md)
-* [migrate](dotnet-migrate.md)
 * [restore](dotnet-restore.md)
-* [run](dotnet-run.md)
 * [build](dotnet-build.md)
-* [test](dotnet-test.md)
 * [publish](dotnet-publish.md)
+* [run](dotnet-run.md)
+* [test](dotnet-test.md)
+* [vstest](dotnet-vstest.md)
 * [pack](dotnet-pack.md)
+* [migrate](dotnet-migrate.md)
+* [clean](dotnet-clean.md)
+* [sln](dotnet-sln.md)
 
-프로젝트 단위로 더 많은 명령을 가져올 뿐만 아니라 고유한 명령을 추가할 수도 있습니다. 이 과정은 [확장성 섹션](#extensibility)에서 더 자세히 설명합니다. 
+### <a name="project-modification-commands"></a>프로젝트 수정 명령
 
-## <a name="working-with-the-cli"></a>CLI 작업
+* [add package](dotnet-add-package.md)
+* [add reference](dotnet-add-reference.md)
+* [remove package](dotnet-remove-package.md)
+* [remove reference](dotnet-remove-reference.md)
+* [list reference](dotnet-list-reference.md)
 
-자세한 정보를 검토하기 전에 CLI를 사용한 작업이 10,000피트 보기에서 어떻게 표시되는지 살펴보겠습니다. 다음 예제에서는 CLI 표준 설치에서 여러 가지 명령을 활용하여 간단한 새 콘솔 응용 프로그램을 초기화하고 종속성을 복원한 다음 응용 프로그램을 빌드하여 실행합니다. 
+### <a name="advanced-commands"></a>고급 명령
+
+* [nuget delete](dotnet-nuget-delete.md)
+* [nuget locals](dotnet-nuget-locals.md)
+* [nuget push](dotnet-nuget-push.md)
+* [msbuild](dotnet-msbuild.md)
+* [dotnet install script](dotnet-install-script.md)
+
+CLI에는 프로젝트에 맞게 추가 도구를 지정할 수 있는 확장성 모델이 있습니다. 자세한 내용은 [.NET Core CLI 확장성 모델](extensibility.md) 항목을 참조하세요.
+
+## <a name="command-structure"></a>명령 구조
+
+CLI 명령 구조는 [드라이버("dotnet")](#driver), [명령(또는 "동사")](#command-verb), 경우에 따라 명령 [arguments](#arguments) 및 [options](#options)로 구성됩니다. *my_app* 디렉터리에서 실행될 때 다음 명령이 표시하는 것처럼 새 콘솔 앱 생성 및 명령줄에서 실행 등의 대부분의 CLI 작업에서 이 패턴을 볼 수 있습니다.
 
 ```console
 dotnet new console
 dotnet restore
-dotnet build --output /stuff
-dotnet /stuff/new.dll
+dotnet build --output /build_output
+dotnet /build_output/my_app.dll
 ```
 
-이전 예제와 같이 CLI 도구를 사용하는 방식에는 패턴이 있습니다. 해당 패턴 내에서 각 명령의 세 가지 주요 조각을 식별할 수 있습니다.
-
-1. [드라이버("dotnet")](#driver)
-2. [명령 또는 "동사"](#the-verb)
-3. [명령 인수](#the-arguments)
-
 ### <a name="driver"></a>드라이버
-드라이버 이름은 [dotnet](dotnet.md)이며, 처음으로 호출되는 부분입니다. 드라이버에는 두 가지 책임이 있습니다.
 
-1. 이식 가능한 앱 실행
-2. 동사 실행
+이 드라이버는 [dotnet](dotnet.md)으로 이름이 지정되며 [프레임워크 종속 앱](../app-types.md)을 실행하거나 명령을 실행합니다. `dotnet`이 명령 없이 사용되는 유일한 경우는 응용 프로그램을 시작할 때 사용되는 경우입니다.
 
-수행하는 작업은 명령줄에 지정된 항목에 따라 달라집니다. 첫 번째 경우에는 `dotnet`이 `dotnet /path/to/your.dll`과 같이 실행되는 이식 가능한 앱 DLL을 지정합니다. 
+예를 들어 프레임워크 종속 앱을 실행하려면 드라이버 다음에 앱을 지정합니다(예: `dotnet /path/to/my_app.dll`). 앱의 DLL이 있는 폴더에서 명령을 실행할 때는 `dotnet my_app.dll`을 실행하기만 하면 됩니다.
 
-두 번째 경우에는 드라이버가 지정된 명령을 호출하려고 시도합니다. 그러면 CLI 명령 실행 프로세스가 시작됩니다. 먼저 드라이버에서 원하는 도구의 버전을 확인합니다. [global.json](global-json.md) 파일에서 `version` 속성을 사용하여 버전을 지정할 수 있습니다. 사용할 수 없는 경우 드라이버는 디스크에 설치된 최신 버전의 도구를 찾아 해당 버전을 사용합니다. 버전이 확인되면 명령을 실행합니다. 
+드라이버에 명령을 제공하면 `dotnet.exe`가 CLI 명령 실행 프로세스를 시작합니다. 먼저 드라이버는 사용할 도구 버전을 확인합니다. 명령 옵션에 버전을 지정하지 않으면 드라이버는 사용 가능한 최신 버전을 사용합니다. 설치된 최신 버전 이외의 버전을 지정하려면 `--fx-version <VERSION>` 옵션([dotnet 명령](dotnet.md) 참조 확인)을 사용합니다. SDK 버전이 확인되면 드라이버는 명령을 실행합니다.
 
-### <a name="the-verb"></a>"동사"
-동사는 작업을 수행하는 명령일 뿐입니다. `dotnet build`는 코드를 빌드합니다. `dotnet publish`는 코드를 게시합니다. 동사는 `dotnet-{verb}`와 같이 규칙에 따라 명명된 콘솔 응용 프로그램으로 구현됩니다.합니다. 모든 논리는 동사를 나타내는 콘솔 응용 프로그램에서 구현됩니다. 
+### <a name="command-verb"></a>명령("동사")
 
-### <a name="the-arguments"></a>인수
-명령줄에서 전달하는 인수는 호출하려는 실제 동사/명령에 대한 인수입니다. 예를 들어 `dotnet publish --output publishedapp`를 입력하면 `--output` 인수가 `publish` 명령에 전달됩니다. 
+명령("동사")은 작업을 수행하는 명령일 뿐입니다. 예를 들어 `dotnet build`는 코드를 빌드합니다. `dotnet publish`는 코드를 게시합니다. 명령은 `dotnet-{verb}` 규칙을 사용하여 콘솔 응용 프로그램으로 구현됩니다. 
 
-## <a name="types-of-application-portability"></a>응용 프로그램 이식성 유형
-CLI에서는 다음과 같은 두 가지 주요 방법으로 응용 프로그램을 이식할 수 있습니다.
+### <a name="arguments"></a>인수
 
-1. .NET Core가 설치되어 있는 모든 위치에서 실행할 수 있는 완전히 이식 가능한 응용 프로그램
-2. 자체 포함 배포
+명령줄에서 전달하는 인수는 호출되는 명령에 대한 인수입니다. 예를 들어 `dotnet publish my_app.csproj`를 실행하면 `my_app.csproj` 인수는 게시할 프로젝트를 나타내고 `publish` 명령에 전달됩니다.
 
-이 두 가지 방법에 대한 자세한 내용은 [.NET Core 응용 프로그램 배포](../deploying/index.md) 항목을 참조하세요. 
+### <a name="options"></a>옵션
+
+명령줄에서 전달하는 옵션은 호출되는 명령에 대한 옵션입니다. 예를 들어 `dotnet publish --output /build_output`을 실행하면 `--output` 옵션 및 해당 값이 `publish` 명령에 전달됩니다. 
 
 ## <a name="migration-from-projectjson"></a>project.json에서 마이그레이션
-Preview 2 도구 및 *project.json* 프로젝트를 사용한 경우 [dotnet migrate](dotnet-migrate.md) 명령 문서를 참조하여 명령과 프로젝트를 마이그레이션하는 방법을 살펴볼 수 있습니다. 
 
-> [!NOTE]
-> `dotnet migrate` 명령은 현재 Preview 2 이전 *project.json* 파일을 마이그레이션하지 않습니다. 
+Preview 2 도구를 사용하여 *project.json* 기반 프로젝트를 생성하는 경우 [dotnet migrate](dotnet-migrate.md) 항목에서 릴리스 도구와 함께 사용할 MSBuild/*.csproj*로 프로젝트를 마이그레이션하기 위한 정보를 참조하세요. Preview 2 도구 릴리스 이전에 만든 .NET Core 프로젝트의 경우 [DNX에서.NET Core CLI(project.json)로 마이그레이션](../migration/from-dnx.md)의 지침에 따라 프로젝트를 수동으로 업데이트한 후 `dotnet migrate`를 사용하거나 프로젝트를 직접 업그레이드합니다.
 
-## <a name="extensibility"></a>확장성
-워크플로에서 사용할 수 있는 일부 도구는 핵심 CLI 도구의 일부가 아닐 수 있습니다. 그러나 .NET Core CLI에는 프로젝트에 맞게 추가 도구를 지정할 수 있는 확장성 모델이 있습니다. 자세한 내용은 [.NET Core CLI 확장성 모델](extensibility.md) 항목에서 확인할 수 있습니다.
+## <a name="additional-resources"></a>추가 리소스
 
-## <a name="summary"></a>요약
-CLI의 가장 중요한 기능에 대한 간략한 개요입니다. 자세한 내용은 이 사이트의 참조 및 개념 항목을 사용하여 확인할 수 있습니다. 다음과 같은 기타 리소스도 사용할 수 있습니다.
-* [dotnet/CLI](https://github.com/dotnet/cli/) GitHub 리포지토리
-* [시작 지침](https://aka.ms/dotnetcoregs/)
+* [dotnet/CLI GitHub 리포지토리](https://github.com/dotnet/cli/)
+* [.NET Core 설치 가이드](https://aka.ms/dotnetcoregs/)
 

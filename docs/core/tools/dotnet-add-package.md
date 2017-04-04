@@ -1,21 +1,22 @@
 ---
-title: "dotnet-add package 명령 | Microsoft 문서"
+title: "dotnet-add package 명령 - .NET Core CLI | Microsoft Docs"
 description: "dotnet-add package 명령은 NuGet 패키지 참조를 프로젝트에 추가하는 편리한 옵션을 제공합니다."
 keywords: "dotnet-add, CLI, CLI 명령, .NET Core"
 author: spboyer
 ms.author: mairaw
-ms.date: 03/06/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 88e0da69-a5ea-46cc-8b46-5493242b7af9
 translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 806f4383452cb250f302dc30ab2d59f7e4772026
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
+ms.openlocfilehash: 41b46e879056d385ceb3abaec27db974cab812e3
+ms.lasthandoff: 03/22/2017
 
 ---
+
 # <a name="dotnet-add-package"></a>dotnet-add package
 
 ## <a name="name"></a>이름
@@ -24,14 +25,11 @@ ms.lasthandoff: 03/07/2017
 
 ## <a name="synopsis"></a>개요
 
-```
-dotnet add [project] package <package_name> [-v|--version] [-f|--framework] [-n|--no-restore] [-s|--source] [--package-directory]
-dotnet add package [-h|--help]
-```
+`dotnet add [<PROJECT>] package <PACKAGE_NAME> [-v|--version] [-f|--framework] [-n|--no-restore] [-s|--source] [--package-directory] [-h|--help]`
 
 ## <a name="description"></a>설명
 
-`dotnet add package`는 패키지 참조를 프로젝트 파일에 추가하는 편리한 옵션을 제공합니다. 명령을 실행한 후 추가하려는 패키지가 프로젝트의 모든 프레임워크와 호환되는지 확인하는 호환성 검사가 있습니다. 검사를 통과하면 [복원](dotnet-restore.md)이 실행되고 `<PackageReference>` 조각이 프로젝트 파일에 추가됩니다.
+`dotnet add package` 명령은 패키지 참조를 프로젝트 파일에 추가하는 편리한 옵션을 제공합니다. 명령을 실행한 후 패키지가 프로젝트의 프레임워크와 호환되는지 확인하는 호환성 검사가 있습니다. 검사를 통과하면 `<PackageReference>` 요소가 프로젝트 파일에 추가되고 [dotnet restore](dotnet-restore.md)가 실행됩니다.
 
 예를 들어 `Newtonsoft.Json`를 *ToDo.csproj*에 추가하면 다음과 유사한 출력이 생성됩니다.
 
@@ -39,7 +37,7 @@ dotnet add package [-h|--help]
 Microsoft (R) Build Engine version 15.1.545.13942
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-  Writing /var/folders/gj/1mgg_4jx7mbdqbhw1kgcpcjr0000gn/T/tmpm0kTMD.tmp
+Writing /var/folders/gj/1mgg_4jx7mbdqbhw1kgcpcjr0000gn/T/tmpm0kTMD.tmp
 info : Adding PackageReference for package 'Newtonsoft.Json' into project 'ToDo.csproj'.
 log  : Restoring packages for ToDo.csproj...
 info :   GET https://api.nuget.org/v3-flatcontainer/newtonsoft.json/index.json
@@ -50,21 +48,19 @@ info : Package 'Newtonsoft.Json' is compatible with all the specified frameworks
 info : PackageReference for package 'Newtonsoft.Json' version '9.0.1' added to file 'ToDo.csproj'.
 ```
 
-이제 *ToDo.csproj* 파일에 참조되는 패키지에 대한 [ `<PackageReference>` ](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files) 조각이 포함됩니다.
+이제 *ToDo.csproj* 파일에 참조되는 패키지에 대한 [`<PackageReference>`](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files) 요소가 포함됩니다.
 
 ```xml
-<PackageReference Include="Newtonsoft.Json">
-  <Version>9.0.1</Version>
-</PackageReference>
+<PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
 ```
 
 ## <a name="arguments"></a>인수
 
-`project`
+`PROJECT`
 
-작동할 프로젝트 파일입니다. 지정하지 않으면 이 명령은 현재 디렉터리에서 검색합니다.
+프로젝트 파일을 지정합니다. 지정하지 않으면 이 명령은 현재 디렉터리에서 검색합니다.
 
-`package_name`
+`PACKAGE_NAME`
 
 추가할 패키지 참조입니다.
 
@@ -80,7 +76,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '9.0.1' added to f
 
 `-f|--framework <FRAMEWORK>`
 
-특정 프레임워크를 대상으로 하는 경우에만 패키지 참조를 추가합니다.
+특정 [프레임워크](../../standard/frameworks.md)를 대상으로 하는 경우에만 패키지 참조를 추가합니다.
 
 `-n|--no-restore`
 
@@ -88,7 +84,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '9.0.1' added to f
 
 `-s|--source <SOURCE>`
 
-복원 작업 중 사용할 특정 NuGet 패키지 소스를 사용합니다.
+복원 작업 중 특정 NuGet 패키지 소스를 사용합니다.
 
 `--package-directory <PACKAGE_DIRECTORY>`
 

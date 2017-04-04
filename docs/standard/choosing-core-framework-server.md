@@ -11,9 +11,9 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 155553e4-89a2-418d-be88-4e75f6c3cc69
 translationtype: Human Translation
-ms.sourcegitcommit: 053e296db67b9dde23c4d6295dbc7246d2b486ed
-ms.openlocfilehash: 816fb524000eb96ed5a157934cabc51b90f11dc0
-ms.lasthandoff: 02/23/2017
+ms.sourcegitcommit: 405bac1faa446687a4acdcf2d5536ee31f31f246
+ms.openlocfilehash: 7151c87d373afce88c83239499ba33980383ab98
+ms.lasthandoff: 03/15/2017
 
 ---
 
@@ -93,6 +93,8 @@ ms.lasthandoff: 02/23/2017
 * WCF 서비스 구현. .NET Core에서 WCF 서비스를 사용할 수 있는 [WCF-클라이언트 라이브러리](https://github.com/dotnet/wcf)가 있더라도(2016년 6월 기준) WCF 서버 구현은 .NET Framework에서만 사용할 수 있습니다. 이 시나리오는 .NET Core에 대한 현재 계획의 일부가 아니지만 차후에 고려될 예정입니다.
 
 * 워크플로 관련 서비스: Windows WF(Workflow Foundation), 워크플로 서비스(단일 서비스에서 WCF + WF) 및 WCF Data Services(이전의 "ADO.NET 데이터 서비스")는 .NET Framework에서만 사용할 수 있으며 .NET Core에 적용할 계획은 아직 없습니다.
+
+* WPF(Windows Presentation Foundation) 및 Windows Forms: WPF 및 Windows Forms 응용 프로그램은 .NET Framework에서만 사용할 수 있습니다. .NET Core로 이식할 예정은 없습니다. 
 
 * 언어 지원: Visual Basic 및 F#에는 현재 도구 지원 .NET Core가 없지만 둘 다 Visual Studio 2017 이상 버전에서 지원될 예정입니다.
 

@@ -40,7 +40,7 @@
 #### [열거형 형식 문자열](standard/base-types/enumeration-format.md)
 #### [복합 형식 지정](standard/base-types/composite-format.md)
 #### [서식 지정 작업 수행](standard/base-types/performing-formatting-operations.md)
-##### [방법: 숫자 앞에&0;으로 채우기](standard/base-types/pad-number.md)
+##### [방법: 숫자 앞에 0으로 채우기](standard/base-types/pad-number.md)
 ##### [방법: 특정 날짜의 요일을 추출](standard/base-types/extract-day.md)
 ##### [방법: 사용자 지정 숫자 서식 공급자 정의 및 사용](standard/base-types/define-custom.md)
 ##### [방법: 날짜 및 시간 값 라운드트립](standard/base-types/roundtrip.md)
@@ -129,9 +129,12 @@
 # [.NET Core 가이드](core/index.md)
 ## [시작](core/getting-started.md)
 ## [Windows 필수 조건](core/windows-prerequisites.md)
+## [macOS 필수 조건](core/macos-prerequisites.md)
 ## [자습서](core/tutorials/index.md)
 ### [Visual Studio 2017을 사용하여 Windows에서 완전한 .NET Core 솔루션 구축](core/tutorials/using-on-windows-full-solution.md)
 ### [macOS에서 .NET Core 시작](core/tutorials/using-on-macos.md)
+### [Visual Studio for Mac을 사용하여 macOS에서 .NET Core 시작](core/tutorials/using-on-mac-vs.md)
+### [Visual Studio for Mac을 사용하여 macOS에서 완전한 .NET Core 솔루션 빌드](core/tutorials/using-on-mac-vs-full-solution.md)
 ### [CLI 도구를 사용하여 .NET Core 시작](core/tutorials/using-with-xplat-cli.md)
 #### [.NET Core 명령줄을 사용하여 프로젝트 구성 및 테스트](core/tutorials/testing-with-cli.md)
 ### [플랫폼 간 도구로 라이브러리 개발](core/tutorials/libraries.md)
@@ -139,8 +142,12 @@
 ### [.NET Core 1.0에 대한 패키지 종속성 버전을 관리하는 방법](core/tutorials/managing-package-dependency-versions.md)
 ### [네이티브 코드에서 .NET Core 호스트](core/tutorials/netcore-hosting.md)
 ## [패키지, 메타패키지 및 프레임워크](core/packages.md)
+## [CLI의 변경 내용 개요](core/tools/cli-msbuild-architecture.md)
+### [종속성 관리](core/tools/dependencies.md)
+### [csproj 형식에 대한 추가 사항](core/tools/csproj.md)
 ## 마이그레이션
 ### [csproj 형식으로 마이그레이션](core/migration/index.md)
+### [project.json 및 csproj 간 매핑](core/tools/project-json-to-csproj.md)
 ### [DNX에서 마이그레이션](core/migration/from-dnx.md)
 ## [응용 프로그램 배포](core/deploying/index.md)
 ### [플랫폼 간 도구로 NuGet 패키지 만들기](core/deploying/creating-nuget-packages.md)
@@ -154,12 +161,7 @@
 ### [.NET Core 지원](core/versions/lts-current.md)
 ### [🔧 서비스](core/versions/servicing.md)
 ## [런타임 식별자 카탈로그](core/rid-catalog.md)
-## [.NET Core 도구](core/tools/index.md)
-### [CLI의 변경 내용 개요](core/tools/cli-msbuild-architecture.md)
-### [종속성 관리](core/tools/dependencies.md)
-### [응용 프로그램 배포](core/deploying/index.md)
-### [csproj 형식에 대한 추가 사항](core/tools/csproj.md)
-### [project.json 및 csproj 간 매핑](core/tools/project-json-to-csproj.md)
+## [.NET Core CLI 도구](core/tools/index.md)
 ### [원격 분석](core/tools/telemetry.md)
 ### [확장성 모델](core/tools/extensibility.md)
 ### [연속 통합](core/tools/using-ci-with-cli.md)
@@ -179,6 +181,7 @@
 ### [dotnet-run](core/tools/dotnet-run.md)
 ### [dotnet-sln](core/tools/dotnet-sln.md)
 ### [dotnet-test](core/tools/dotnet-test.md)
+### [dotnet-vstest](core/tools/dotnet-vstest.md)
 ### 프로젝트 수정 명령
 #### 참조
 ##### [dotnet-add-reference](core/tools/dotnet-add-reference.md)
@@ -193,13 +196,13 @@
 ### [타사 종속성 분석](core/porting/third-party-deps.md)
 ### [라이브러리 이식](core/porting/libraries.md)
 ### [🔧 NuGet 패키지](core/porting/nuget-packages.md)
+## [VS 2015/project.json 문서](project-json.md)
 <!-- End .NET Core Content -->
 
 <!-- .NET Framework Content -->
 # [Docker 가이드의 .NET Framework](framework/index.md)
 ## [Docker](framework/docker/index.md)
 ### [컨테이너에서 콘솔 앱 실행](framework/docker/console.md)
-### [컨테이너에서 ASP.NET MVC 앱 실행](framework/docker/aspnetmvc.md)
 <!-- End .NET Framework Content -->
 
 <!-- Start of C# Content -->
@@ -408,14 +411,6 @@
 
 ## [응용 프로그램 개발](visual-basic/developing-apps/index.md)
 
-### [Visual Basic 개발 환경 사용](visual-basic/developing-apps/using-ide/using-the-visual-basic-development-environment.md)
-#### [Visual Basic 설정](visual-basic/developing-apps/using-ide/settings.md)
-#### [Visual Basic IntelliSense 코드 조각](visual-basic/developing-apps/using-ide/intellisense-code-snippets.md)
-#### [리팩터링](https://docs.microsoft.com/en-us/visualstudio/vb-ide/refactoring-vb)
-#### [코드 생성](https://docs.microsoft.com/en-us/visualstudio/vb-ide/code-generation-vb)
-#### [Visual Basic 코드에서 이벤트 처리기에 대한 도움말 사용](visual-basic/developing-apps/using-ide/help-for-event-handlers.md)
-#### [방법: Visual Basic에서 프로젝트 컴파일 및 실행](visual-basic/developing-apps/using-ide/how-to-compile-and-run-a-project.md)
-
 ### [Visual Basic의 프로그래밍](visual-basic/developing-apps/programming/index.md)
 #### [컴퓨터 리소스에 액세스](visual-basic/developing-apps/programming/computer-resources/computer-resources.md)
 #### [응용 프로그램의 정보 기록](visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
@@ -434,7 +429,6 @@
 #### [My가 프로젝트 형식에 의존하는 방식](visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
 
 ### [데이터 액세스](visual-basic/developing-apps/accessing-data.md)
-### [디버깅](visual-basic/developing-apps/debugging.md)
 ### [구성요소 만들기 및 사용](visual-basic/developing-apps/creating-and-using-components.md)
 
 ### [인쇄 및 보고](visual-basic/developing-apps/printing/printing-and-reporting.md)
@@ -870,7 +864,7 @@
 #### ['Declare' 문에서는 'As Any'가 지원되지 않습니다.](visual-basic/language-reference/error-messages/as-any-is-not-supported-in-declare-statements.md)
 #### ['<attributename>' 특성을 여러 번 사용할 수 없습니다.](visual-basic/language-reference/error-messages/attribute-attributename-cannot-be-applied-multiple-times.md)
 #### [자동화 오류](visual-basic/language-reference/error-messages/automation-error.md)
-#### [체크섬 값이 잘못되었습니다.&16;진수가 아니거나&16;진수 값이 홀수입니다.](visual-basic/language-reference/error-messages/bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits.md)
+#### [체크섬 값이 잘못되었습니다. 16진수가 아니거나 16진수 값이 홀수입니다.](visual-basic/language-reference/error-messages/bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits.md)
 #### [DLL 호출 규칙이 잘못되었습니다.](visual-basic/language-reference/error-messages/bad-dll-calling-convention.md)
 #### [파일 모드가 잘못되었습니다.](visual-basic/language-reference/error-messages/bad-file-mode.md)
 #### [파일 이름 또는 번호가 잘못되었습니다.](visual-basic/language-reference/error-messages/bad-file-name-or-number.md)
