@@ -12,6 +12,7 @@ ms.assetid: db39a0f5-e363-490f-a7e6-adb9a6ff2a8c
 translationtype: Human Translation
 ms.sourcegitcommit: ffc0530b2263db0e073f351aac2d539de6701ead
 ms.openlocfilehash: 4646a7e8c75315bb1a13bc5fddecd77888f6ae69
+ms.lasthandoff: 04/05/2017
 
 ---
 
@@ -61,10 +62,5 @@ GC에는 LOH(대형 개체 힙)이라는 큰 개체를 위한 추가 힙이 있�
 ## <a name="see-also"></a>참고 항목
 
 [관리되지 않는 리소스 정리](unmanaged.md)
-
-
-
-
-<!--HONumber=Jan17_HO3-->
 
 
