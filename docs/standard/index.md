@@ -11,17 +11,15 @@ ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: be44dce8181be45f6d73fcf498a873fb94aa56a6
-ms.lasthandoff: 04/05/2017
+ms.sourcegitcommit: 7bbd8f5d94127b35697ad267b2661da2c757aa20
+ms.openlocfilehash: 0fbe1dda72ad666304f5c817f4bfd477c3e81d83
+ms.lasthandoff: 04/06/2017
 
 ---
 
 # <a name="net-platform-guide"></a>.NET 플랫폼 가이드
 
 > [!NOTE]
-이 문서는 다시 작성될 예정입니다.
-
 > 간단한 .NET Core 응용 프로그램을 만드는 방법을 알아보려면 [".NET Core 시작" 자습서](../core/getting-started.md)를 확인해 보세요. 첫 번째 앱을 만들고 실행하는 데 몇 분밖에 걸리지 않습니다.
 
 .NET은 범용 개발 플랫폼입니다. 범용 솔루션이 사용되는 모든 종류의 앱 유형이나 작업에 사용할 수 있습니다. 자동 메모리 관리, 최신 프로그래밍 언어 등 고품질 응용 프로그램을 효율적으로 쉽게 빌드할 수 있게 해주며 대부분의 개발자에게 유용한 몇 가지 주요 기능이 있습니다. .NET은 기본 메모리 및 API에 대한 하위 수준 액세스를 제공하는 동시에 다양한 편의 기능이 있는 상위 수준의 프로그래밍 환경을 지원합니다.
