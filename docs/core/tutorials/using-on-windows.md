@@ -12,3 +12,4 @@ ms.lasthandoff: 03/08/2017
 ## <a name="content-retired"></a>사용되지 않는 콘텐츠입니다.
 
 .NET Core 및 Visual Studio 2017에 대한 시작 자습서는 [Visual Studio 2017에서 .NET Core를 사용하여 C# Hello World 응용 프로그램 빌드](../../csharp/getting-started/with-visual-studio.md)를 참조하세요.
+
