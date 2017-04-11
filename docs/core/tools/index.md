@@ -11,9 +11,9 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 7c5eee9f-d873-4224-8f5f-ed83df329a59
 translationtype: Human Translation
-ms.sourcegitcommit: 4a1f0c88fb1ccd6694f8d4f5687431646adbe000
-ms.openlocfilehash: d00277ceb7fd1c8a7186da330ab2bc4ad40c59a7
-ms.lasthandoff: 04/05/2017
+ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
+ms.openlocfilehash: 978dd62d655d0168b5a9c1c9732bc69ca9b256eb
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -79,7 +79,7 @@ dotnet /build_output/my_app.dll
 
 ### <a name="driver"></a>드라이버
 
-이 드라이버는 [dotnet](dotnet.md)으로 이름이 지정되며 [프레임워크 종속 앱](../app-types.md)을 실행하거나 명령을 실행합니다. `dotnet`이 명령 없이 사용되는 유일한 경우는 응용 프로그램을 시작할 때 사용되는 경우입니다.
+이 드라이버는 [dotnet](dotnet.md)으로 이름이 지정되며 [프레임워크 종속 앱](../deploying/index.md)을 실행하거나 명령을 실행합니다. `dotnet`이 명령 없이 사용되는 유일한 경우는 응용 프로그램을 시작할 때 사용되는 경우입니다.
 
 예를 들어 프레임워크 종속 앱을 실행하려면 드라이버 다음에 앱을 지정합니다(예: `dotnet /path/to/my_app.dll`). 앱의 DLL이 있는 폴더에서 명령을 실행할 때는 `dotnet my_app.dll`을 실행하기만 하면 됩니다.
 
@@ -104,5 +104,5 @@ Preview 2 도구를 사용하여 *project.json* 기반 프로젝트를 생성하
 ## <a name="additional-resources"></a>추가 리소스
 
 * [dotnet/CLI GitHub 리포지토리](https://github.com/dotnet/cli/)
-* [.NET Core 설치 가이드](https://aka.ms/dotnetcoregs/)
+* [.NET Core 설치 가이드](https://aka.ms/dotnetcoregs)
 
