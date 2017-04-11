@@ -212,9 +212,9 @@
 ## [C# 둘러보기](csharp/tour-of-csharp/)
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
-## [C#의 새로운 기능](csharp/whats-new.md) 
-### [C# 7의 새로운 기능](csharp/csharp-7.md)
-### [C# 6의 새로운 기능](csharp/csharp-6.md)
+## [C#의 새로운 기능](csharp/whats-new/index.md) 
+### [C# 7의 새로운 기능](csharp/whats-new/csharp-7.md)
+### [C# 6의 새로운 기능](csharp/whats-new/csharp-6.md)
 <!-- End What's New -->
 ## [🔧 C# Interactive](csharp/interactive/)
 <!-- Do this section later, once master redirects are in place -->
@@ -1025,7 +1025,7 @@
 #### [값이 할당되기 전에 '<variablename>' 변수를 사용했습니다.](visual-basic/language-reference/error-messages/variable-variablename-is-used-before-it-has-been-assigned-a-value.md)
 #### [변수가 Visual Basic에서 지원되지 않는 자동화 형식 사용](visual-basic/language-reference/error-messages/variable-uses-an-automation-type-not-supported.md)
 #### [XML axis 속성은 런타임 바인딩을 지원하지 않습니다.](visual-basic/language-reference/error-messages/xml-axis-properties-do-not-support-late-binding.md)
-#### [XML 주석 예외에는 'cref' 특성이 있어야 합니다.](visual-basic/language-reference/error-messages/xml-comment-exception-must-have-a-cref-attribute.md).
+#### [XML 주석 예외에는 'cref' 특성이 있어야 합니다](visual-basic/language-reference/error-messages/xml-comment-exception-must-have-a-cref-attribute.md).
 #### [XML 엔터티 참조는 지원되지 않습니다.](visual-basic/language-reference/error-messages/xml-entity-references-are-not-supported.md)
 #### [XML 리터럴 및 XML 속성은 ASP.NET의 포함 코드에서 지원되지 않습니다.](visual-basic/language-reference/error-messages/xml-literals-and-xml-properties-are-not-supported-in-embedded-code-in-aspnet.md)
 #### [’<uri>’ XML 네임스페이스 URI는 'xmlns'에만 바인딩할 수 있습니다.](visual-basic/language-reference/error-messages/xml-namespace-uri-uri-can-be-bound-only-to-xmlns.md)

@@ -31,9 +31,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d4fb156e095d4cec9a0e690a516414282359356a
-ms.lasthandoff: 03/13/2017
+ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
+ms.openlocfilehash: c29504e18aa716cbe106dbbe00c608fd465d9ac2
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="interoperability-c-programming-guide"></a>상호 운용성(C# 프로그래밍 가이드)
@@ -46,7 +46,7 @@ ms.lasthandoff: 03/13/2017
  C# 관리 코드와 비관리 코드 간에 상호 운용되도록 하는 방법을 설명합니다.  
   
  [방법: Visual C# 기능을 사용하여 Office Interop 개체에 액세스](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)  
- Office 프로그래밍을 용이하게 하도록 Visual C# 2010에 도입된 기능에 대해 설명합니다.  
+ Office 프로그래밍을 용이하게 하도록 Visual C#에 도입된 기능에 대해 설명합니다.  
   
  [방법: COM Interop 프로그래밍에서 인덱싱된 속성 사용](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
  인덱싱된 속성을 사용하여 매개 변수가 있는 COM 속성에 액세스하는 방법을 설명합니다.  

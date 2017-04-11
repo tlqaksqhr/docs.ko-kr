@@ -11,9 +11,9 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b77c7263-7cbf-4729-9626-8fbc3f5f14d9
 translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2e2ad151a91e5aabb36f18a7478e39d972573eb1
-ms.lasthandoff: 03/13/2017
+ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
+ms.openlocfilehash: ca0acaaf61d87a9a55204d1ff44e3572c64d54d0
+ms.lasthandoff: 04/04/2017
 
 ---
 
@@ -35,6 +35,7 @@ ms.lasthandoff: 03/13/2017
 
 - [ Visual Studio Code 시작](with-visual-studio-code.md)
 
-   Visual Studio Code는 IntelliSense(코드 완성) 및 디버깅을 지원하는 Windows, Linux 및 macOS용 프로그래밍 편집기입니다.
+   Visual Studio Code는 현대적인 웹 및 클라우드 응용 프로그램을 빌드 및 디버깅하기 위해 최적화된 강력한 코드 편집기입니다. IntelliSense를 지원하고 Windows, macOS, Linux에 사용할 수 있습니다.
 
    이 항목에서는 Visual Studio Code 및 .NET Core를 사용하여 간단한 Hello World 응용 프로그램을 만들고 실행하는 방법을 보여 줍니다.
+
