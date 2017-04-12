@@ -2,7 +2,7 @@
 title: "C에서 LINQ 쿼리 작성#"
 description: "쿼리를 작성하는 방법."
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

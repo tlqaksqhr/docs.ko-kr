@@ -2,7 +2,7 @@
 title: "join 절 결과를 순서대로 정렬"
 description: "join 절 결과를 순서대로 정렬하는 방법"
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

@@ -2,7 +2,7 @@
 title: "중첩 그룹 만들기"
 description: "중첩 그룹을 만드는 방법입니다."
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

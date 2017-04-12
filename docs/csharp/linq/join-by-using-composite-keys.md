@@ -2,7 +2,7 @@
 title: "복합 키를 사용하여 조인"
 description: "복합 키를 사용하여 조인하는 방법입니다."
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

@@ -2,8 +2,8 @@
 title: "기본 형식 | C# 가이드"
 description: "모든 C# 프로그램의 핵심 형식(숫자, 문자열 및 개체)을 알아봅니다."
 keywords: .NET, .NET Core, C#
-author: stevehoag
-ms.author: shoag
+author: BillWagner
+ms.author: wiwagn
 ms.date: 10/10/2016
 ms.topic: article
 ms.prod: .net

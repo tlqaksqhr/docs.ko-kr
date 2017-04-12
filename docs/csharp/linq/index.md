@@ -2,7 +2,7 @@
 title: LINQ(Language-Integrated Query)
 description: "C의 LINQ(Language Integrated Query) 소개#"
 keywords: .NET, .NET Core, LINQ, C#
-author: stevehoag
+author: BillWagner
 ms.author: wiwagn
 ms.date: 11/30/2016
 ms.topic: article
