@@ -11,7 +11,6 @@
 ## [인덱서](indexers/)
 ## [인터페이스](interfaces/)
 ## [상호 운용성](interop/)
-## [LINQ 쿼리 식](linq-query-expressions/)
 ## [Main()과 명령줄 인수](main-and-command-args/)
 ## [네임스페이스](namespaces/)
 ## [Nullable 형식](nullable-types/)
