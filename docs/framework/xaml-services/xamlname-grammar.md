@@ -64,7 +64,7 @@ Nl
 Number, Letter  
 ```  
   
- XAML은 속성 및 이벤트 한정 참조에 사용되는 DottedXamlName이라는 두 번째 문법도 정의합니다. 이 문법은 연결된 멤버에도 사용됩니다.  자세한 내용은 <xref:System.Windows.DependencyProperty> 및 [XAML 개요\(WPF\)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)를 참조하십시오.  
+ XAML은 속성 및 이벤트 한정 참조에 사용되는 DottedXamlName이라는 두 번째 문법도 정의합니다. 이 문법은 연결된 멤버에도 사용됩니다.  자세한 내용은 <xref:System.Windows.DependencyProperty> 및 [XAML 개요\(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)를 참조하십시오.  
   
  DottedXamlName 형식의 문자열 값은 다음 문법을 따라야 합니다.  
   

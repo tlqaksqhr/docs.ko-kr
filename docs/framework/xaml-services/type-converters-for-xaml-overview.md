@@ -67,7 +67,7 @@ caps.handback.revision: 14
  <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> 및 <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>은 서비스에서 <xref:System.ComponentModel.TypeConverter> 구현의 기능을 쿼리할 때 사용되는 지원 메서드입니다. 변환기의 동일한 변환 메서드에서 지원하는 형식 관련 케이스에 대해 `true`를 반환하려면 이러한 메서드를 구현해야 합니다. XAML 용도에서는 일반적으로 <xref:System.String> 형식을 의미합니다.  
   
 ### XAML에 대한 문화권 정보 및 형식 변환기  
- 각 <xref:System.ComponentModel.TypeConverter> 구현에서는 변환에 유효한 문자열을 고유하게 해석할 수 있으며 매개 변수로 전달되는 형식 설명을 사용하거나 무시할 수도 있습니다. 문화권 및 XAML 형식 변환에서 중요한 고려 사항은 XAML에서 지역화 가능한 문자열을 특성 값으로 사용할 수 있지만 이러한 지역화 가능한 문자열을 특정 문화권 요구 사항이 있는 형식 변환기 입력으로 사용할 수 없다는 점입니다. 이러한 제한은 XAML 특성 값에 대한 형식 변환기에서 `en-US` 문화권을 사용하는 고정 언어 XAML 처리 동작을 반드시 포함하기 때문입니다. 이러한 제한의 디자인상 이유에 대한 자세한 내용은 XAML 언어 사양\([\[MS\-XAML\]](http://go.microsoft.com/fwlink/?LinkId=114525)\) 또는 [WPF 전역화 및 지역화 개요](../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)를 참조하세요.  
+ 각 <xref:System.ComponentModel.TypeConverter> 구현에서는 변환에 유효한 문자열을 고유하게 해석할 수 있으며 매개 변수로 전달되는 형식 설명을 사용하거나 무시할 수도 있습니다. 문화권 및 XAML 형식 변환에서 중요한 고려 사항은 XAML에서 지역화 가능한 문자열을 특성 값으로 사용할 수 있지만 이러한 지역화 가능한 문자열을 특정 문화권 요구 사항이 있는 형식 변환기 입력으로 사용할 수 없다는 점입니다. 이러한 제한은 XAML 특성 값에 대한 형식 변환기에서 `en-US` 문화권을 사용하는 고정 언어 XAML 처리 동작을 반드시 포함하기 때문입니다. 이러한 제한의 디자인상 이유에 대한 자세한 내용은 XAML 언어 사양\([\[MS\-XAML\]](http://go.microsoft.com/fwlink/?LinkId=114525)\) 또는 [WPF 전역화 및 지역화 개요](../../../ocs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)를 참조하세요.  
   
  문화권이 문제가 될 수 있는 경우에 대한 예로 일부 문화권에서는 문자열 형식의 숫자에 대한 소수점 구분 기호로 마침표 대신 쉼표를 사용합니다. 이러한 사용은 쉼표를 구분 기호로 사용하는 기존의 많은 형식 변환기의 동작과 충돌합니다. 주변 XAML에서 `xml:lang`을 통해 문화권을 전달하면 문제가 해결되지 않습니다.  
   
@@ -117,4 +117,4 @@ caps.handback.revision: 14
 ## 참고 항목  
  <xref:System.ComponentModel.TypeConverterAttribute>   
  [Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)   
- [XAML 개요\(WPF\)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+ [XAML 개요\(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)

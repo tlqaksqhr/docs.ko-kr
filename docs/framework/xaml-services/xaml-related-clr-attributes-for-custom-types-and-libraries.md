@@ -134,7 +134,7 @@ caps.handback.revision: 8
   
  <xref:System.ComponentModel.TypeConverterAttribute> 특성을 형식에 적용하여 형식 변환기 구현을 참조합니다.  클래스, 구조체 또는 인터페이스에 대한 XAML의 형식 변환기를 정의할 수 있습니다.  열거형에 대한 형식 변환은 제공할 필요가 없습니다. 이 변환은 기본적으로 사용하도록 설정되어 있습니다.  
   
- 형식 변환기는 태그의 특성이나 초기화 텍스트에 사용되는 문자열에서 원하는 대상 형식으로 변환할 수 있어야 합니다.  자세한 내용은 [TypeConverter 및 XAML](../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)을 참조하십시오.  
+ 형식 변환기는 태그의 특성이나 초기화 텍스트에 사용되는 문자열에서 원하는 대상 형식으로 변환할 수 있어야 합니다.  자세한 내용은 [TypeConverter 및 XAML](../../../ocs/framework/wpf/advanced/typeconverters-and-xaml.md)을 참조하십시오.  
   
  형식의 모든 값에 적용하는 대신 XAML에 대한 형식 변환기 동작을 특정 속성에서 설정할 수도 있습니다.  이 경우 <xref:System.ComponentModel.TypeConverterAttribute>를 속성 정의\(특정 `get` 및 `set` 정의가 아닌 외부 정의\)에 적용합니다.  
   

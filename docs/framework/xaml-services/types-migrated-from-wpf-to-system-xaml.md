@@ -72,7 +72,7 @@ caps.handback.revision: 13
 |<xref:System.Windows.Markup.StaticExtension>|`{x:Static ...}`|  
 |<xref:System.Windows.Markup.TypeExtension>|`{x:Type ...}`|  
   
- System.Xaml에 특정 지원 클래스가 없을 수도 있지만 이제 XAML 언어의 언어 기능 처리를 위한 일반적인 논리가 System.Xaml과 구현된 XAML 판독기 및 XAML 작성기에 상주합니다. 예를 들어 `x:TypeArguments`는 System.Xaml 구현의 XAML 판독기 및 XAML 작성기에서 처리되는 특성입니다. XAML 노드 스트림에 기록될 수 있고, 기본\(CLR 기반\) XAML 스키마 컨텍스트 처리가 있으며, XAML 형식 시스템 표현을 포함합니다. 결과적으로, 모든 XAML 언어 수준 기능에 대한 참조 설명서는 3.5 설명서 집합에서와 같이 [고급\(Windows Presentation Foundation\)](../../../docs/framework/wpf/advanced/index.md)의 하위 항목으로 WPF 설명서에 포함되는 대신 [XAML Services](../../../docs/framework/xaml-services/index.md)의 하위 항목 및 .NET Framework 설명서 집합의 일반 영역입니다.  
+ System.Xaml에 특정 지원 클래스가 없을 수도 있지만 이제 XAML 언어의 언어 기능 처리를 위한 일반적인 논리가 System.Xaml과 구현된 XAML 판독기 및 XAML 작성기에 상주합니다. 예를 들어 `x:TypeArguments`는 System.Xaml 구현의 XAML 판독기 및 XAML 작성기에서 처리되는 특성입니다. XAML 노드 스트림에 기록될 수 있고, 기본\(CLR 기반\) XAML 스키마 컨텍스트 처리가 있으며, XAML 형식 시스템 표현을 포함합니다. 결과적으로, 모든 XAML 언어 수준 기능에 대한 참조 설명서는 3.5 설명서 집합에서와 같이 [고급\(Windows Presentation Foundation\)](../../../ml/index.xml)의 하위 항목으로 WPF 설명서에 포함되는 대신 [XAML Services](../../../docs/framework/xaml-services/index.md)의 하위 항목 및 .NET Framework 설명서 집합의 일반 영역입니다.  
   
 <a name="valueserializer_and_supporting_classes"></a>   
 ## ValueSerializer 및 지원 클래스  

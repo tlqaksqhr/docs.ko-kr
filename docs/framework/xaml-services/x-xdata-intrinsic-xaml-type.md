@@ -52,11 +52,11 @@ XAML 프로덕션 내에서 XML 데이터 아일랜드를 배치할 수 있습�
 ## WPF 사용 정보  
  `x:XData` 개체는 기본적으로 <xref:System.Windows.Data.XmlDataProvider>의 자식 요소로 사용되거나 <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=fullName> 속성의 자식 개체\(XAML에서는 일반적으로 속성 요소 구문으로 표현\)로 사용됩니다.  
   
- 일반적으로 데이터는 데이터 아일랜드 내의 기반 XML 네임스페이스를 새 기본 XML 네임스페이스\(빈 문자열로 설정\)로 재정의해야 합니다.  이렇게 하면 데이터를 참조하고 바인딩하는 데 사용되는 <xref:System.Windows.Data.Binding.XPath%2A> 식에 접두사가 포함되는 것을 피할 수 있기 때문에 간단한 데이터 아일랜드의 경우 가장 쉬운 방법입니다.  좀 더 복잡한 데이터 아일랜드의 경우에는 데이터에 대해 접두사를 여러 개 정의하고 루트의 XML 네임스페이스에 대해 특정 접두사를 사용할 수 있습니다.  이 경우 모든 <xref:System.Windows.Data.Binding.XPath%2A> 식 참조는 적절한 네임스페이스 매핑 접두사를 포함해야 합니다.  자세한 내용은 [데이터 바인딩 개요](../../../docs/framework/wpf/data/data-binding-overview.md)를 참조하십시오.  
+ 일반적으로 데이터는 데이터 아일랜드 내의 기반 XML 네임스페이스를 새 기본 XML 네임스페이스\(빈 문자열로 설정\)로 재정의해야 합니다.  이렇게 하면 데이터를 참조하고 바인딩하는 데 사용되는 <xref:System.Windows.Data.Binding.XPath%2A> 식에 접두사가 포함되는 것을 피할 수 있기 때문에 간단한 데이터 아일랜드의 경우 가장 쉬운 방법입니다.  좀 더 복잡한 데이터 아일랜드의 경우에는 데이터에 대해 접두사를 여러 개 정의하고 루트의 XML 네임스페이스에 대해 특정 접두사를 사용할 수 있습니다.  이 경우 모든 <xref:System.Windows.Data.Binding.XPath%2A> 식 참조는 적절한 네임스페이스 매핑 접두사를 포함해야 합니다.  자세한 내용은 [데이터 바인딩 개요](../../../ocs/framework/wpf/data/data-binding-overview.md)를 참조하십시오.  
   
  기술적으로 `x:XData`는 <xref:System.Xml.Serialization.IXmlSerializable> 형식의 모든 속성에 대해 콘텐츠로 사용할 수 있습니다.  하지만 주로 사용되는 구현은 <xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=fullName>입니다.  
   
 ## 참고 항목  
  <xref:System.Windows.Data.XmlDataProvider>   
- [데이터 바인딩 개요](../../../docs/framework/wpf/data/data-binding-overview.md)   
- [Binding 태그 확장](../../../docs/framework/wpf/advanced/binding-markup-extension.md)
+ [데이터 바인딩 개요](../../../ocs/framework/wpf/data/data-binding-overview.md)   
+ [Binding 태그 확장](../../../ocs/framework/wpf/advanced/binding-markup-extension.md)

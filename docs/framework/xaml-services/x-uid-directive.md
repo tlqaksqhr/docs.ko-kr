@@ -46,9 +46,9 @@ caps.handback.revision: 12
  프레임워크는 특성 <xref:System.Windows.Markup.UidPropertyAttribute>를 정의 형식에 적용하여 `x:Uid`에 대한 별칭이 될 개체 모델에 특정 속성을 지정할 수 있습니다.  프레임워크에서 특정 속성을 지정하면 `x:Uid`와 동일 개체에서 별칭이 지정된 멤버를 모두 지정할 수 없습니다.  두 개의 `x:Uid` 및 별칭이 지정된 멤버가 모두 지정되면 .NET Framework XAML 서비스 API는 이 경우에 일반적으로 <xref:System.Xaml.XamlDuplicateMemberException>를 throw합니다.  
   
 ## WPF 사용 정보  
- `x:Uid`의 WPF 지역화 프로세스의 역할과 XAML의 BAML 폼에 대한 자세한 내용은 [WPF의 전역화](../../../docs/framework/wpf/advanced/globalization-for-wpf.md) 또는 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>를 참조하십시오.  
+ `x:Uid`의 WPF 지역화 프로세스의 역할과 XAML의 BAML 폼에 대한 자세한 내용은 [WPF의 전역화](../../../ocs/framework/wpf/advanced/globalization-for-wpf.md) 또는 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>를 참조하십시오.  
   
 ## 참고 항목  
  <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>   
  <xref:Microsoft.Build.Tasks.Windows.UidManager>   
- [WPF의 전역화](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+ [WPF의 전역화](../../../ocs/framework/wpf/advanced/globalization-for-wpf.md)

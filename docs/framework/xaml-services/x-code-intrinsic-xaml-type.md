@@ -57,5 +57,5 @@ XAML 프로덕션 내에 코드를 배치할 수 있습니다.  이런 코드는
   
 ## 참고 항목  
  [x:Class Directive](../../../docs/framework/xaml-services/x-class-directive.md)   
- [WPF의 코드 숨김 및 XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)   
- [XAML 개요\(WPF\)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+ [WPF의 코드 숨김 및 XAML](../../../ocs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)   
+ [XAML 개요\(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)

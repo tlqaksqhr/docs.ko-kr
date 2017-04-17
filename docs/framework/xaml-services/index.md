@@ -40,7 +40,7 @@ caps.handback.revision: 13
   
 -   XAML 형식 시스템과 형식 지원의 평가 방식에 영향을 미치기 위해 `Lookup` 또는 `Invoker` 기법 사용  
   
- XAML을 언어적 측면에서 소개하는 자료를 보려면 [XAML 개요\(WPF\)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)를 참조하십시오.  해당 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]에 대한 경험이 없고 XAML 태그 및 XAML 언어 기능을 사용한 적이 없는 사용자를 대상으로 XAML에 대해 설명합니다.  또 다른 유용한 문서는 [XAML 언어 사양](http://go.microsoft.com/fwlink/?LinkId=114525)에 있는 소개 자료입니다.  
+ XAML을 언어적 측면에서 소개하는 자료를 보려면 [XAML 개요\(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)를 참조하십시오.  해당 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]에 대한 경험이 없고 XAML 태그 및 XAML 언어 기능을 사용한 적이 없는 사용자를 대상으로 XAML에 대해 설명합니다.  또 다른 유용한 문서는 [XAML 언어 사양](http://go.microsoft.com/fwlink/?LinkId=114525)에 있는 소개 자료입니다.  
   
 ## .NET 아키텍처의 .NET Framework XAML 서비스 및 System.Xaml  
  이전 버전의 [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)]에서는 XAML 언어 기능 지원이 [!INCLUDE[TLA#tla_netframewk](../../../includes/tlasharptla-netframewk-md.md)]\([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] 및 [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)]\)에서 작성된 프레임워크에 의해 구현되었으므로 사용 중인 특정 프레임워크에 따라 동작과 API가 다양했습니다.  여기에는 XAML 파서 및 개체 그래프 생성 메커니즘, XAML 언어 내장 항목, serialization 지원 등이 포함됩니다.  

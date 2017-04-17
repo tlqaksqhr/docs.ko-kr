@@ -52,14 +52,14 @@ XAML 태그 컴파일을 구성하여 태그와 코드 숨김 사이에 partial 
   
  `x:Class` 지시문의 값은 클래스의 정규화된 이름을 지정하지만 어셈블리 정보가 없는 문자열\(<xref:System.Type.FullName%2A?displayProperty=fullName>에 해당\)이어야 합니다.  간단한 응용 프로그램에서는 CLR 네임스페이스 정보를 생략할 수도 있는데 이는 코드 숨김에서도 구조가 동일한 경우, 즉 클래스 수준에서 코드 정의가 시작되는 경우에만 가능합니다.  
   
- 페이지 또는 응용 프로그램 정의에 대한 코드 숨김 파일은 컴파일된 응용 프로그램을 생성하는 프로젝트의 일부로 포함되고 태그 컴파일을 포함하는 코드 파일에 들어 있어야 합니다.  CLR 클래스에 대한 이름 규칙을 따라야 합니다.  자세한 내용은 [프레임 워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)를 참조하십시오.  기본적으로 코드 숨김 클래스는 `public`이어야 하지만 [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md)을 사용하여 다른 액세스 수준으로 정의할 수도 있습니다.  
+ 페이지 또는 응용 프로그램 정의에 대한 코드 숨김 파일은 컴파일된 응용 프로그램을 생성하는 프로젝트의 일부로 포함되고 태그 컴파일을 포함하는 코드 파일에 들어 있어야 합니다.  CLR 클래스에 대한 이름 규칙을 따라야 합니다.  자세한 내용은 [프레임 워크 디자인 지침](../../../ml/index.xml)를 참조하십시오.  기본적으로 코드 숨김 클래스는 `public`이어야 하지만 [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md)을 사용하여 다른 액세스 수준으로 정의할 수도 있습니다.  
   
  `x:Class` 특성의 정확한 해석은 특히 .NET Framework XAML 서비스에서 CLR 기반 XAML 구현에만 적용됩니다.  CLR에 기반하지 않고 .NET Framework XAML 서비스 클래스를 사용하지 않는 기타 XAML 구현은 다른 확인 방법을 사용하여 XAML 태그를 연결하고 런타임 코드를 지원합니다.  `x:Class`의 일반적인 해석에 대한 자세한 내용은 [\[MS\-XAML\]](http://go.microsoft.com/fwlink/?LinkId=114525)을 참조하십시오.  
   
  특정 아키텍처 수준에서는 `x:Class`의 의미가 .NET Framework XAML 서비스에 정의되지 않습니다.  그 이유는 .NET Framework XAML 서비스가 XAML 태그와 백업 코드가 연결되어 있는 프로그래밍 모델을 지정하지 않기 때문입니다.  `x:Class` 지시문과 관련된 추가 사용은 XAML 태그와 CLR 기반 코드 숨김을 연결하는 방법을 정의하기 위해 프로그래밍 모델 또는 응용 프로그램 모델을 사용하는 특정 프레임워크에서 구현될 수 있습니다.  각 프레임워크는 각 동작이나 빌드 환경에서 포함되어야 하는 특정 구성 요소 중 일부를 사용하는 자체 빌드 작업이 있을 수 있습니다.  프레임워크 내에서 빌드 작업은 코드 숨김에 사용된 특정 CLR 언어에 따라 다를 수도 있습니다.  
   
 ## WPF 프로그래밍 모델의 x:Class  
- WPF 응용 프로그램과 WPF 응용 프로그램 모델에서 `x:Class`는 XAML 파일의 루트이고 컴파일 중인 요소의 특성으로 선언하거나\(이 경우 XAML은 `Page` 빌드 작업이 있는 WPF 응용 프로그램 프로젝트에 포함됨\), 컴파일된 WPF 응용 프로그램의 응용 프로그램 정의에서 <xref:System.Windows.Application> 루트의 특성으로 선언할 수 있습니다.  페이지 루트 또는 응용 프로그램 루트 이외의 다른 요소에 `x:Class`을 선언하거나 컴파일되지 않은 XAML 파일에 선언하면 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] 및 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] WPF XAML 컴파일러에서 컴파일 타임 오류가 발생합니다.  WPF에서의 `x:Class` 처리의 다른 측면에 대한 자세한 내용은 [WPF의 코드 숨김 및 XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)를 참조하십시오.  
+ WPF 응용 프로그램과 WPF 응용 프로그램 모델에서 `x:Class`는 XAML 파일의 루트이고 컴파일 중인 요소의 특성으로 선언하거나\(이 경우 XAML은 `Page` 빌드 작업이 있는 WPF 응용 프로그램 프로젝트에 포함됨\), 컴파일된 WPF 응용 프로그램의 응용 프로그램 정의에서 <xref:System.Windows.Application> 루트의 특성으로 선언할 수 있습니다.  페이지 루트 또는 응용 프로그램 루트 이외의 다른 요소에 `x:Class`을 선언하거나 컴파일되지 않은 XAML 파일에 선언하면 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] 및 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] WPF XAML 컴파일러에서 컴파일 타임 오류가 발생합니다.  WPF에서의 `x:Class` 처리의 다른 측면에 대한 자세한 내용은 [WPF의 코드 숨김 및 XAML](../../../ocs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)를 참조하십시오.  
   
 ## Windows Workflow Foundation의 x:Class  
  Windows Workflow Foundation의 경우 `x:Class`는 전적으로 XAML에서 구성된 사용자 정의 활동의 클래스 이름을 지정하거나 코드 숨김을 사용하여 활동 디자이너에 대한 XAML 페이지의 partial 클래스 이름을 지정합니다.  
@@ -69,6 +69,6 @@ XAML 태그 컴파일을 구성하여 태그와 코드 숨김 사이에 partial 
   
 ## 참고 항목  
  [x:Subclass Directive](../../../docs/framework/xaml-services/x-subclass-directive.md)   
- [WPF에 대한 XAML 및 사용자 지정 클래스](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)   
+ [WPF에 대한 XAML 및 사용자 지정 클래스](../../../ocs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)   
  [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md)   
  [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

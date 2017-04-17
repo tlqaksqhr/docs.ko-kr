@@ -44,14 +44,14 @@ caps.handback.revision: 20
   
  모든 XAML 태그 확장과 같은 `x:Null` 태그 확장에서는 특성 값을 처리할 때 리터럴 또는 이벤트 처리기 참조가 아닌 다른 값이 되도록 이스케이프하기 위해 중괄호\(`{,}`\)를 사용합니다.  특성 구문은 이러한 태그 확장에 가장 많이 사용되는 구문입니다.  개체 요소 `<x:Null />`은 기술적으로 가능하지만 `x:Null` 태그 확장이 위치 매개 변수 또는 생성 인수를 갖지 않기 때문에 거의 사용되지 않습니다.  
   
- 태그 확장에 대한 자세한 내용은 [태그 확장 및 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)를 참조하십시오.  
+ 태그 확장에 대한 자세한 내용은 [태그 확장 및 WPF XAML](../../../ocs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)를 참조하십시오.  
   
  .NET Framework XAML 서비스에서 이 태그 확장에 대한 처리는 <xref:System.Windows.Markup.NullExtension> 클래스를 통해 정의됩니다.  
   
 ## WPF 사용 정보  
- 참조 형식 종속성 속성에서 설정되지 않은 초기 값이 `null`일 필요는 없습니다.  초기 기본값은 각 종속성 속성마다 다양할 수 있으며 속성 관련 메타데이터를 기반으로 할 수 있습니다.  많은 종속성 속성이 유효성 검사 콜백 구현 때문에 태그나 코드를 통해 `null`을 값으로 받을 수 없습니다.  종속성 속성에 대한 자세한 내용은 [종속성 속성 개요](../../../docs/framework/wpf/advanced/dependency-properties-overview.md)를 참조하십시오.  
+ 참조 형식 종속성 속성에서 설정되지 않은 초기 값이 `null`일 필요는 없습니다.  초기 기본값은 각 종속성 속성마다 다양할 수 있으며 속성 관련 메타데이터를 기반으로 할 수 있습니다.  많은 종속성 속성이 유효성 검사 콜백 구현 때문에 태그나 코드를 통해 `null`을 값으로 받을 수 없습니다.  종속성 속성에 대한 자세한 내용은 [종속성 속성 개요](../../../ocs/framework/wpf/advanced/dependency-properties-overview.md)를 참조하십시오.  
   
 ## 참고 항목  
  <xref:System.Windows.DependencyProperty.UnsetValue>   
- [XAML 개요\(WPF\)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)   
- [태그 확장 및 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+ [XAML 개요\(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)   
+ [태그 확장 및 WPF XAML](../../../ocs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

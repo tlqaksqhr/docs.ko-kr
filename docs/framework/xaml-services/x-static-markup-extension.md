@@ -79,9 +79,9 @@ caps.handback.revision: 25
   
 -   사용자 지정 어셈블리에서 형식을 참조하는 경우  
   
--   WPF 어셈블리에 포함되었지만 WPF 기본 XAML 네임스페이스의 일부로 매핑되지 않은 CLR 네임스페이스에 포함된 형식을 참조하는 경우.  CLR 네임스페이스를 WPF에 대한 기본 XAML 네임스페이스로 매핑하는 작업은 다양한 WPF 어셈블리의 정의에 따라 수행됩니다\(이 개념에 대한 자세한 내용은 [WPF XAML을 위한 XAML 네임스페이스 및 네임스페이스 매핑](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md) 참조\).  해당 CLR 네임스페이스가 일반적으로 <xref:System.Windows.Threading> 같은 XAML에 사용되지 않는 클래스 정의로 대부분 구성되어 있는 경우 매핑되지 않은 CLR 네임스페이스가 존재할 수 있습니다.  
+-   WPF 어셈블리에 포함되었지만 WPF 기본 XAML 네임스페이스의 일부로 매핑되지 않은 CLR 네임스페이스에 포함된 형식을 참조하는 경우.  CLR 네임스페이스를 WPF에 대한 기본 XAML 네임스페이스로 매핑하는 작업은 다양한 WPF 어셈블리의 정의에 따라 수행됩니다\(이 개념에 대한 자세한 내용은 [WPF XAML을 위한 XAML 네임스페이스 및 네임스페이스 매핑](../../../ocs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md) 참조\).  해당 CLR 네임스페이스가 일반적으로 <xref:System.Windows.Threading> 같은 XAML에 사용되지 않는 클래스 정의로 대부분 구성되어 있는 경우 매핑되지 않은 CLR 네임스페이스가 존재할 수 있습니다.  
   
- WPF용 접두사 및 XAML 네임스페이스에 대한 자세한 내용은 [WPF XAML을 위한 XAML 네임스페이스 및 네임스페이스 매핑](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)을 참조하십시오.  
+ WPF용 접두사 및 XAML 네임스페이스에 대한 자세한 내용은 [WPF XAML을 위한 XAML 네임스페이스 및 네임스페이스 매핑](../../../ocs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)을 참조하십시오.  
   
 ## 참고 항목  
  [x:Type Markup Extension](../../../docs/framework/xaml-services/x-type-markup-extension.md)   

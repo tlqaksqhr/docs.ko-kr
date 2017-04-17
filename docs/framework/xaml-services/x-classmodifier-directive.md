@@ -62,7 +62,7 @@ caps.handback.revision: 21
   
 ## 참고 항목  
  [x:Class Directive](../../../docs/framework/xaml-services/x-class-directive.md)   
- [WPF의 코드 숨김 및 XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)   
+ [WPF의 코드 숨김 및 XAML](../../../ocs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)   
  [x:FieldModifier Directive](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md)   
- [보안\(WPF\)](../../../docs/framework/wpf/security-wpf.md)   
+ [보안\(WPF\)](../../../ocs/framework/wpf/security-wpf.md)   
  [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

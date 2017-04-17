@@ -65,4 +65,4 @@ caps.handback.revision: 20
   
 ## 참고 항목  
  [x:Class Directive](../../../docs/framework/xaml-services/x-class-directive.md)   
- [WPF에 대한 XAML 및 사용자 지정 클래스](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+ [WPF에 대한 XAML 및 사용자 지정 클래스](../../../ocs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)

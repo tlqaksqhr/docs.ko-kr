@@ -82,6 +82,6 @@ XAML에 대한 언어 규칙에 따르면 [!INCLUDE[TLA2#tla_xaml](../../../incl
  또한 흐름 문서 모델에서 줄 바꿈을 함축하는 특정 인라인 요소에는 공백 의미 컬렉션에라도 의도적으로 공백을 새로 추가하면 안 됩니다. 예를 들어 <xref:System.Windows.Documents.LineBreak> 요소는 [!INCLUDE[TLA2#tla_html](../../../includes/tla2sharptla-html-md.md)]의 \<BR\/\> 태그와 같은 목적으로 사용되고 태그의 가독성을 높이기 위해 일반적으로 <xref:System.Windows.Documents.LineBreak>는 작성된 줄 바꿈으로 후속 텍스트와 구분됩니다. 후속 줄의 선행 공백이 될 수 있으므로 줄 바꿈을 정규화하면 안 됩니다. 해당 동작을 사용하기 위해 <xref:System.Windows.Documents.LineBreak> 요소에 대한 클래스 정의에서는 <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>를 적용하고, 이는 나중에 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 프로세서에 의해 <xref:System.Windows.Documents.LineBreak>를 둘러싼 공백이 항상 제거되는 것으로 해석됩니다.  
   
 ## 참고 항목  
- [XAML 개요\(WPF\)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)   
+ [XAML 개요\(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)   
  [XML Character Entities and XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)   
  [xml:space Handling in XAML](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)

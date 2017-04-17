@@ -46,7 +46,7 @@ caps.handback.revision: 11
 ## 열거형  
  열거형에는 XAML 네이티브 형식 변환 동작이 있습니다.  XAML에서 지정된 열거형 상수 이름은 기본 열거형 형식에 대해 확인되며 XAML 개체 작성기에 열거형 값을 반환합니다.  
   
- XAML은 <xref:System.FlagsAttribute>가 적용된 열거형에 대해 플래그 스타일 사용을 지원합니다.  자세한 내용은 [XAML 구문 정보](../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)를 참조하십시오.  [XAML 구문 정보](../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)는 WPF 사용자를 대상으로 작성되었지만 해당 항목에 있는 대부분의 정보는 특정 구현 프레임워크에 한정되지 않는 XAML과 관련이 있습니다.  
+ XAML은 <xref:System.FlagsAttribute>가 적용된 열거형에 대해 플래그 스타일 사용을 지원합니다.  자세한 내용은 [XAML 구문 정보](../../../ocs/framework/wpf/advanced/xaml-syntax-in-detail.md)를 참조하십시오.  [XAML 구문 정보](../../../ocs/framework/wpf/advanced/xaml-syntax-in-detail.md)는 WPF 사용자를 대상으로 작성되었지만 해당 항목에 있는 대부분의 정보는 특정 구현 프레임워크에 한정되지 않는 XAML과 관련이 있습니다.  
   
 ## 멤버 정의  
  형식은 XAML 사용을 위한 멤버를 정의할 수 있습니다.  XAML에서 사용할 수 없는 형식이라도 XAML에서 사용할 수 있는 멤버를 정의할 수 있습니다.  이는 CLR 상속 때문에 가능합니다.  멤버를 상속하는 일부 형식이 XAML 사용을 형식으로 지원하고 멤버가 기본 형식에 대한 XAML 사용을 지원하거나 네이티브 XAML 구문을 사용할 수 있는 한 해당 멤버는 XAML에서 사용 가능합니다.  

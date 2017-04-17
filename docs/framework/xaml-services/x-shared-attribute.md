@@ -40,7 +40,7 @@ caps.handback.revision: 16
   
  <xref:System.Windows.FrameworkElement.FindResource%2A>와 같은 리소스 API를 통해 반환되는 개체를 수정하거나, <xref:System.Windows.ResourceDictionary> 내에서 개체를 직접 수정하면 원본 리소스가 변경됩니다.  해당 리소스에 대한 참조가 동적 리소스 참조인 경우 리소스 사용자는 변경된 리소스를 받습니다.  
   
- 리소스에 대한 참조가 정적 리소스 참조인 경우 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 처리 시간 이후의 리소스 변경 내용은 적용되지 않습니다.  고정 및 동적 리소스 참조에 대한 자세한 내용은 [XAML 리소스](../../../docs/framework/wpf/advanced/xaml-resources.md)를 참조하십시오.  
+ 리소스에 대한 참조가 정적 리소스 참조인 경우 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 처리 시간 이후의 리소스 변경 내용은 적용되지 않습니다.  고정 및 동적 리소스 참조에 대한 자세한 내용은 [XAML 리소스](../../../ocs/framework/wpf/advanced/xaml-resources.md)를 참조하십시오.  
   
  `x:Shared="true"`를 명시적으로 지정하는 경우는 기본값이 이미 지정되었으므로 거의 없습니다.  WPF 개체 모델에서 `x:Shared`와 동일한 직접 코드가 없습니다. XAML 사용에서만 지정할 수 있으며 .NET Framework XAML 서비스 및 XAML 판독기를 사용하여 처리되는 경우 기본 WPF 동작 또는 로드 경로에 있는 임시 XAML 노드 스트림에서 처리되어야 합니다.  
   
@@ -58,5 +58,5 @@ caps.handback.revision: 16
   
 ## 참고 항목  
  <xref:System.Windows.ResourceDictionary>   
- [XAML 리소스](../../../docs/framework/wpf/advanced/xaml-resources.md)   
- [기본 요소](../../../docs/framework/wpf/advanced/base-elements.md)
+ [XAML 리소스](../../../ocs/framework/wpf/advanced/xaml-resources.md)   
+ [기본 요소](../../../ocs/framework/wpf/advanced/base-elements.md)

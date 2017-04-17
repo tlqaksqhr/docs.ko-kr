@@ -68,7 +68,7 @@ caps.handback.revision: 27
 ## WPF 사용 정보  
   
 ### 기본 XAML 네임스페이스 및 형식 매핑  
- WPF 프로그래밍을 위한 기본 XAML 네임스페이스에는 일반 XAML 시나리오에 필요한 대부분의 일반적인 XAML 시나리오가 포함되므로 XAML 형식 값을 참조할 때 접두사를 피할 수 있습니다.  사용자 지정 어셈블리의 형식을 참조하거나, WPF 어셈블리에 내에 있지만 기본 XAML 네임스페이스로 매핑되지 않은 CLR 네임스페이스에 포함된 형식의 경우에는 접두사를 매핑해야 할 수도 있습니다.  접두사, XAML 네임스페이스 및 CLR 네임스페이스 매핑에 대한 자세한 내용은 [WPF XAML을 위한 XAML 네임스페이스 및 네임스페이스 매핑](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)을 참조하십시오.  
+ WPF 프로그래밍을 위한 기본 XAML 네임스페이스에는 일반 XAML 시나리오에 필요한 대부분의 일반적인 XAML 시나리오가 포함되므로 XAML 형식 값을 참조할 때 접두사를 피할 수 있습니다.  사용자 지정 어셈블리의 형식을 참조하거나, WPF 어셈블리에 내에 있지만 기본 XAML 네임스페이스로 매핑되지 않은 CLR 네임스페이스에 포함된 형식의 경우에는 접두사를 매핑해야 할 수도 있습니다.  접두사, XAML 네임스페이스 및 CLR 네임스페이스 매핑에 대한 자세한 내용은 [WPF XAML을 위한 XAML 네임스페이스 및 네임스페이스 매핑](../../../ocs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)을 참조하십시오.  
   
 ### Typename\-as\-String을 지원하는 속성 입력  
  WPF는 `x:Type` 태그 확장 사용을 요구하지 않고 형식 <xref:System.Type>의 일부 속성 값을 지정할 수 있는 기술을 지원합니다.  대신, 형식 이름을 지정하는 문자열로 값을 지정할 수 있습니다.  이 예로는 <xref:System.Windows.Controls.ControlTemplate.TargetType%2A?displayProperty=fullName> 및 <xref:System.Windows.Style.TargetType%2A?displayProperty=fullName>이 있습니다.  이 동작에 대한 지원은 형식 변환기 또는 태그 확장을 통해 제공되지 않습니다.  대신, <xref:System.Windows.FrameworkElementFactory>를 통해 구현된 지연 동작입니다.  
@@ -88,6 +88,6 @@ caps.handback.revision: 27
   
 ## 참고 항목  
  <xref:System.Windows.Style>   
- [스타일 지정 및 템플릿](../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [XAML 개요\(WPF\)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)   
- [태그 확장 및 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+ [스타일 지정 및 템플릿](../../../ocs/framework/wpf/controls/styling-and-templating.md)   
+ [XAML 개요\(WPF\)](../../../ocs/framework/wpf/advanced/xaml-overview-wpf.md)   
+ [태그 확장 및 WPF XAML](../../../ocs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

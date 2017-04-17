@@ -74,8 +74,8 @@ caps.handback.revision: 20
   
  `</x:Array>`  
   
- 배열 요소로 사용되는 사용자 지정 형식의 경우 클래스는 XAML에서 개체 요소로 인스턴스화되기 위한 요구 사항도 지원해야 합니다.  자세한 내용은 [WPF에 대한 XAML 및 사용자 지정 클래스](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)를 참조하십시오.  
+ 배열 요소로 사용되는 사용자 지정 형식의 경우 클래스는 XAML에서 개체 요소로 인스턴스화되기 위한 요구 사항도 지원해야 합니다.  자세한 내용은 [WPF에 대한 XAML 및 사용자 지정 클래스](../../../ocs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)를 참조하십시오.  
   
 ## 참고 항목  
- [태그 확장 및 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)   
+ [태그 확장 및 WPF XAML](../../../ocs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)   
  [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

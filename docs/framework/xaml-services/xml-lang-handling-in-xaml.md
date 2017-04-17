@@ -51,4 +51,4 @@ caps.handback.revision: 15
  <xref:System.Windows.FrameworkElement> 또는 <xref:System.Windows.FrameworkContentElement>의 파생 클래스인 요소의 경우, `xml:lang` 특성의 해당되는 <xref:System.Windows.FrameworkElement.Language%2A> 종속성 속성을 사용할 수 있습니다. 기본적으로,  <xref:System.Windows.FrameworkElement.Language%2A> 속성은 이 속성 또는 `xml:lang` 특성 처리를 통해 달리 설정되지 않은 경우 "en\-US"를 사용합니다.  
   
 ## 참고 항목  
- [WPF의 전역화](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+ [WPF의 전역화](../../../ocs/framework/wpf/advanced/globalization-for-wpf.md)

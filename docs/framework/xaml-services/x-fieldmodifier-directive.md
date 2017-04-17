@@ -58,8 +58,8 @@ caps.handback.revision: 14
  기본적으로 루트 요소의 partial 클래스는 public이지만 [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md)을 사용하여 nonpublic으로 만들 수 있습니다.  [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md)은 루트 요소 클래스 인스턴스의 액세스 수준에도 영향을 줍니다.  루트 요소에 `x:Name` 및 `x:FieldModifier`를 모두 지정할 수 있지만 이 경우 루트 요소의 public 필드 복사본이 만들어질 뿐이며 실제 루트 요소 클래스의 액세스 수준은 여전히 [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md)을 통해 제어됩니다.  
   
 ## 참고 항목  
- [WPF에 대한 XAML 및 사용자 지정 클래스](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)   
- [WPF의 코드 숨김 및 XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)   
+ [WPF에 대한 XAML 및 사용자 지정 클래스](../../../ocs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)   
+ [WPF의 코드 숨김 및 XAML](../../../ocs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)   
  [x:Name Directive](../../../docs/framework/xaml-services/x-name-directive.md)   
- [WPF 응용 프로그램 만들기\(WPF\)](../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)   
+ [WPF 응용 프로그램 만들기\(WPF\)](../../../ocs/framework/wpf/app-development/building-a-wpf-application-wpf.md)   
  [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md)
