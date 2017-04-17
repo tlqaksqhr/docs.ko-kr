@@ -61,7 +61,7 @@ caps.handback.revision: 15
   
  이 예제에서는 콘솔에 `-1`를 표시합니다.  
   
- 앞의 예제는 기본적으로 문화권을 구분합니다. 문화권을 구분하지 않는 문자열 비교를 수행하려면 *culture* 매개 변수를 제공하여 사용할 문화권을 지정할 수 있게 해주는 <xref:System.String.Compare%2A?displayProperty=fullName> 메서드의 오버로드를 사용합니다.<xref:System.String.Compare%2A?displayProperty=fullName> 메서드를 사용하여 문화권을 구분하지 않는 비교를 수행하는 방법을 보여 주는 예제는 [문화권을 구분하지 않는 문자열 비교 수행](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)을 참조하세요.  
+ 앞의 예제는 기본적으로 문화권을 구분합니다. 문화권을 구분하지 않는 문자열 비교를 수행하려면 *culture* 매개 변수를 제공하여 사용할 문화권을 지정할 수 있게 해주는 <xref:System.String.Compare%2A?displayProperty=fullName> 메서드의 오버로드를 사용합니다.<xref:System.String.Compare%2A?displayProperty=fullName> 메서드를 사용하여 문화권을 구분하지 않는 비교를 수행하는 방법을 보여 주는 예제는 [문화권을 구분하지 않는 문자열 비교 수행](../../../ocs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)을 참조하세요.  
   
 ## CompareOrdinal  
  <xref:System.String.CompareOrdinal%2A?displayProperty=fullName> 메서드는 로컬 문화권을 고려하지 않고 두 문자열 개체를 비교합니다. 이 메서드의 반환 값은 앞의 표에서 **Compare** 메서드가 반환하는 값과 동일합니다.  
@@ -91,7 +91,7 @@ caps.handback.revision: 15
   
  이 예제에서는 콘솔에 `-1`를 표시합니다.  
   
- <xref:System.String.CompareTo%2A?displayProperty=fullName> 메서드의 모든 오버로드는 기본적으로 문화권 구분 및 대\/소문자 구분 비교 작업을 수행합니다. 문화권을 구분하지 않는 비교를 수행할 수 있는 이 메서드의 오버로드는 제공되지 않습니다. 코드를 이해하기 쉽도록 문화권 구분 작업에는 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName>를 지정하고 문화권을 구분하지 않는 작업에는 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>를 지정하여 **String.Compare** 메서드를 대신하는 것이 좋습니다.**String.Compare** 메서드를 사용하여 문화권 구분 비교와 문화권을 구분하지 않는 비교를 둘 다 수행하는 방법을 보여 주는 예제는 [문화권을 구분하지 않는 문자열 비교 수행](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)을 참조하세요.  
+ <xref:System.String.CompareTo%2A?displayProperty=fullName> 메서드의 모든 오버로드는 기본적으로 문화권 구분 및 대\/소문자 구분 비교 작업을 수행합니다. 문화권을 구분하지 않는 비교를 수행할 수 있는 이 메서드의 오버로드는 제공되지 않습니다. 코드를 이해하기 쉽도록 문화권 구분 작업에는 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName>를 지정하고 문화권을 구분하지 않는 작업에는 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>를 지정하여 **String.Compare** 메서드를 대신하는 것이 좋습니다.**String.Compare** 메서드를 사용하여 문화권 구분 비교와 문화권을 구분하지 않는 비교를 둘 다 수행하는 방법을 보여 주는 예제는 [문화권을 구분하지 않는 문자열 비교 수행](../../../ocs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)을 참조하세요.  
   
 ## 같음  
  **String.Equals** 메서드는 두 문자열이 같은지 여부를 쉽게 확인할 수 있습니다. 대\/소문자 구분 메서드는 **true** 또는 **false** 부울 값을 반환합니다. 다음 예제와 같이 기존 클래스에서 사용할 수 있습니다. 다음 예제에서는 **Equals** 메서드를 사용하여 문자열 개체에 "Hello World"라는 구가 포함되어 있는지 여부를 확인합니다.  
@@ -152,4 +152,4 @@ caps.handback.revision: 15
   
 ## 참고 항목  
  [기본적인 문자열 작업](../../../docs/standard/base-types/basic-string-operations.md)   
- [Culture의 영향을 받지 않는 문자열 작업 수행](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+ [Culture의 영향을 받지 않는 문자열 작업 수행](../../../ocs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

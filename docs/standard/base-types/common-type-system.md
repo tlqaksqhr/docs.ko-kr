@@ -282,7 +282,7 @@ caps.handback.revision: 24
   
 <a name="Events"></a>   
 ### 이벤트  
- 이벤트는 응답할 수 있는 인시던트를 정의하고 이벤트를 구독, 구독 취소 및 발생시키기 위한 메서드를 정의합니다.  이벤트는 주로 다른 형식에 상태 변경 내용을 알려주는 데 사용합니다.  자세한 내용은 [이벤트](../../../docs/standard/events/index.md)을 참조하세요.  
+ 이벤트는 응답할 수 있는 인시던트를 정의하고 이벤트를 구독, 구독 취소 및 발생시키기 위한 메서드를 정의합니다.  이벤트는 주로 다른 형식에 상태 변경 내용을 알려주는 데 사용합니다.  자세한 내용은 [이벤트](../../../ml/index.xml)을 참조하세요.  
   
 <a name="NestedTypes"></a>   
 ### 중첩 형식  
@@ -323,5 +323,5 @@ caps.handback.revision: 24
   
 ## 참고 항목  
  [.NET Framework 클래스 라이브러리](http://go.microsoft.com/fwlink/?LinkID=217856)   
- [공용 언어 런타임](../../../docs/standard/clr.md)   
+ [공용 언어 런타임](../../../ocs/standard/clr.md)   
  [.NET Framework의 형식 변환](../../../docs/standard/base-types/type-conversion.md)

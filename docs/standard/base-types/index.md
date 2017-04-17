@@ -40,5 +40,5 @@ caps.handback.revision: 14
  [공용 형식 시스템](../../../docs/standard/base-types/common-type-system.md)  
  .NET Framework에서 사용하는 형식에 대해 설명합니다.  
   
- [날짜, 시간 및 표준 시간대](../../../docs/standard/datetime/index.md)  
+ [날짜, 시간 및 표준 시간대](../../../ml/index.xml)  
  표준 시간대 인식 응용 프로그램에서 표준 시간대 관련 작업 및 표준 시간대 변환 작업을 수행하는 방법에 대해 설명합니다.

@@ -102,5 +102,5 @@ caps.handback.revision: 12
   
 ## 참고 항목  
  [서식 지정 작업 수행](../../../docs/standard/base-types/performing-formatting-operations.md)   
- [DateTime, DateTimeOffset, TimeSpan 및 TimeZoneInfo 중 선택](../../../docs/standard/datetime/choosing-between-datetime.md)   
+ [DateTime, DateTimeOffset, TimeSpan 및 TimeZoneInfo 중 선택](../../../ocs/standard/datetime/choosing-between-datetime.md)   
  [표준 날짜 및 시간 형식 문자열](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

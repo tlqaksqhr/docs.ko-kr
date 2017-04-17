@@ -267,4 +267,4 @@ caps.handback.revision: 33
  <xref:System.Text.DecoderFallback>   
  <xref:System.Text.Encoding>   
  <xref:System.Text.EncoderFallback>   
- [전역화 및 지역화](../../../docs/standard/globalization-localization/index.md)
+ [전역화 및 지역화](../../../ml/index.xml)
