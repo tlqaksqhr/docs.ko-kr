@@ -1,0 +1,64 @@
+---
+title: "활동 대리자 사용 | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework"
+ms.reviewer: ""
+ms.suite: ""
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
+caps.latest.revision: 12
+author: "Erikre"
+ms.author: "erikre"
+manager: "erikre"
+caps.handback.revision: 11
+---
+# 활동 대리자 사용
+작업 대리자를 사용하면 활동 작성자는 활동 사용자가 활동 기반 처리기를 제공할 수 있는 특정 시그니처가 있는 콜백을 노출할 수 있습니다.두 가지 형식의 작업 대리자를 사용할 수 있습니다. <xref:System.Activities.ActivityAction%601>은 반환 값이 없는 작업 대리자를 정의하는 데 사용되고 <xref:System.Activities.ActivityFunc%601>은 반환 값이 있는 작업 대리자를 정의하는 데 사용됩니다.  
+  
+ 작업 대리자는 자식 활동이 특정 시그니처를 사용하도록 제한해야 하는 시나리오에서 유용합니다.예를 들어 <xref:System.Activities.Statements.While> 활동은 제약 조건 없이 모든 형식의 자식 활동을 포함할 수 있지만 <xref:System.Activities.Statements.ForEach%601> 활동의 본문은 <xref:System.Activities.ActivityAction%601>이며 최종적으로 <xref:System.Activities.Statements.ForEach%601>에서 실행되는 자식 활동에는 <xref:System.Activities.Statements.ForEach%601>이 열거하는 컬렉션 멤버와 동일한 형식의 <xref:System.Activities.InArgument%601>이 있어야 합니다.  
+  
+## ActivityAction 사용  
+ <xref:System.Activities.Statements.Catch> 활동이나 <xref:System.Activities.Statements.ForEach%601> 활동 같은 여러 가지 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 활동에 활동 동작이 사용됩니다.각 경우에 활동 동작은 해당 활동 중 하나를 사용하여 워크플로를 작성할 때 필요한 동작을 제공하기 위해 워크플로 작성자가 활동을 지정하는 위치를 나타냅니다.다음 예제에서는 <xref:System.Activities.Statements.ForEach%601> 활동을 사용하여 콘솔 창에 텍스트를 표시합니다.<xref:System.Activities.Statements.ForEach%601>의 본문은 문자열인 <xref:System.Activities.Statements.ForEach%601>의 형식에 일치하는 <xref:System.Activities.ActivityAction%601>을 사용하여 지정됩니다.<xref:System.Activities.ActivityDelegate.Handler%2A>에 지정된 <xref:System.Activities.Statements.WriteLine> 활동의 <xref:System.Activities.Statements.WriteLine.Text%2A> 인수는 <xref:System.Activities.Statements.ForEach%601> 활동의 반복 대상인 컬렉션의 문자열 값에 바인딩됩니다.  
+  
+ [!code-csharp[CFX_ActivityExample#6](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#6)]  
+  
+ actionArgument는 컬렉션의 개별 항목을 WriteLine으로 이동하는 데 사용됩니다.워크플로가 호출되면 다음 출력이 콘솔에 표시됩니다.  
+  
+ **Hello**   
+**World.**  이 항목의 예에서는 개체 초기화 구문을 사용합니다.개체 초기화 구문은 워크플로에 있는 활동의 계층적 뷰를 제공하고 활동 간의 관계를 표시하기 때문에 코드에서 워크플로 정의를 만드는 유용한 방법일 수 있습니다.프로그래밍 방식으로 워크플로를 만들 때 개체 초기화 구문을 사용하기 위한 요구 사항은 없습니다.다음 예는 이전 예와 기능적으로 동일합니다.  
+  
+ [!code-csharp[CFX_ActivityExample#7](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]  
+  
+ 개체 이니셜라이저[!INCLUDE[crabout](../../../includes/crabout-md.md)][방법: 생성자를 호출하지 않고 개체 초기화\(C\# 프로그래밍 가이드\)](http://go.microsoft.com/fwlink/?LinkId=161015) 및 [방법: 개체 이니셜라이저를 사용하여 개체 선언](http://go.microsoft.com/fwlink/?LinkId=161016)을 참조하십시오.  
+  
+ 다음 예제에서는 <xref:System.Activities.Statements.TryCatch> 활동이 워크플로에 사용됩니다.<xref:System.ApplicationException>이 워크플로를 통해 throw되고 <xref:System.Activities.Statements.Catch%601> 활동을 통해 처리됩니다.<xref:System.Activities.Statements.Catch%601> 활동의 활동 동작에 대한 처리기는 <xref:System.Activities.Statements.WriteLine> 활동이며, 예외 세부 사항은 `ex`<xref:System.Activities.DelegateInArgument%601>을 사용하여 처리기로 전달됩니다.  
+  
+ [!code-csharp[CFX_WorkflowApplicationExample#33](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#33)]  
+  
+ <xref:System.Activities.ActivityAction%601>을 정의하는 사용자 지정 활동을 만들 때는 <xref:System.Activities.Statements.InvokeAction%601>을 사용하여 해당 <xref:System.Activities.ActivityAction%601>의 호출을 모델링합니다.이 예제에서는 사용자 지정 `WriteLineWithNotification` 활동을 정의합니다.이 활동은 <xref:System.Activities.Statements.WriteLine> 활동과, 문자열 인수 하나를 사용하는 <xref:System.Activities.ActivityAction%601>을 호출하는 <xref:System.Activities.Statements.InvokeAction%601>을 차례로 포함하는 <xref:System.Activities.Statements.Sequence>로 구성됩니다.  
+  
+ [!code-csharp[CFX_ActivityExample#1](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#1)]  
+  
+ `WriteLineWithNotification` 활동을 사용하여 워크플로를 만드는 경우 워크플로 작성자는 필요한 사용자 지정 논리를 활동 동작의 <xref:System.Activities.ActivityDelegate.Handler%2A>에 지정합니다.이 예제에서는 `WriteLineWithNotification` 활동을 사용하는 워크플로를 만들고 <xref:System.Activities.Statements.WriteLine> 활동을 <xref:System.Activities.ActivityDelegate.Handler%2A>로 사용합니다.  
+  
+ [!code-csharp[CFX_ActivityExample#2](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#2)]  
+  
+ 하나 이상의 인수를 전달하기 위해 제공된 일반 버전의 여러 <xref:System.Activities.Statements.InvokeAction%601> 및 <xref:System.Activities.ActivityAction%601>이 있습니다.  
+  
+## ActivityFunc 사용  
+ <xref:System.Activities.ActivityAction%601>은 활동의 결과 값이 없는 경우에 유용하고, 결과 값이 반환되는 경우에는 <xref:System.Activities.ActivityFunc%601>이 사용됩니다.<xref:System.Activities.ActivityFunc%601>을 정의하는 사용자 지정 활동을 만들 때는 <xref:System.Activities.Expressions.InvokeFunc%601>을 사용하여 해당 <xref:System.Activities.ActivityFunc%601>의 호출을 모델링합니다.다음 예제에서는 `WriteFillerText` 활동을 정의합니다.필터 텍스트를 제공하기 위해 정수 인수를 사용하고 문자열 결과를 반환하는 <xref:System.Activities.Expressions.InvokeFunc%601>을 지정합니다.필터 텍스트가 검색되면 <xref:System.Activities.Statements.WriteLine> 활동을 사용하여 해당 텍스트가 콘솔에 표시됩니다.  
+  
+ [!code-csharp[CFX_ActivityExample#3](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#3)]  
+  
+ 텍스트를 제공하기 위해 `int` 인수 하나를 사용하고 문자열 결과가 있는 활동을 사용해야 합니다.이 예제에서는 이 요구 사항과 일치하는 `TextGenerator` 활동을 보여 줍니다.  
+  
+ [!code-csharp[CFX_ActivityExample#4](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#4)]  
+  
+ `TextGenerator` 활동을 `WriteRandomText` 활동과 함께 사용하려면 이 활동을 <xref:System.Activities.ActivityDelegate.Handler%2A>로 지정합니다.  
+  
+ [!code-csharp[CFX_ActivityExample#5](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#5)]  
+  
+## 참고 항목  
+ [ActivityAction 노출 및 호출](../../../docs/framework/windows-workflow-foundation/samples/exposing-and-invoking-activityactions.md)
