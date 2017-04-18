@@ -30,8 +30,6 @@ caps.handback.revision: 35
   
  부터는 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], 컬렉션에는 <xref:System.Collections.Concurrent> 네임 스페이스는 여러 스레드에서 컬렉션 항목에 액세스 하기 위한 효율적이 고 스레드로부터 안전한 작업을 제공 합니다. System.Collections.Immutable 네임 스페이스의 변경 불가능 컬렉션 클래스 ([NuGet 패키지](https://www.nuget.org/packages/System.Collections.Immutable)) 되므로 본질적으로 스레드로부터 안전한 작업은 원래 컬렉션의 복사본에서 수행 되며 원본 컬렉션을 수정할 수 없습니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
-  
 <a name="BKMK_Commoncollectionfeatures"></a>   
 ## <a name="common-collection-features"></a>일반 컬렉션 기능  
  모든 컬렉션은 컬렉션의 항목 추가, 제거 또는 찾기를 위한 방법을 제공합니다. 또한 모든 컬렉션 구현 하는 직접 또는 간접적으로 <xref:System.Collections.ICollection> 인터페이스 또는 <xref:System.Collections.Generic.ICollection%601> 인터페이스는 이러한 기능을 공유 합니다.  
