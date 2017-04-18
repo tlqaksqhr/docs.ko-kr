@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f2b312cb-f80c-4b0d-9101-93908f06a6fa
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 26210b19de4f7bf70c085735771b0175945f38d4
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: 6bc2d9301e1572f15e5cb8bf1c5f02272ba8ec8d
+ms.openlocfilehash: 8ce7a458812233833a5329f731ba184416e433cf
+ms.lasthandoff: 04/05/2017
 
 ---
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 03/02/2017
 다음은 .NET Core를 가장 잘 정의하는 특징입니다.
 
 - **유연한 배포:** 앱이나 설치된 side-by-side사용자 또는 시스템 수준에 포함할 수 있습니다.
-- **플랫폼 간:** Windows, macOS 및 Linux에서 실행되며 다른 OS에 이식할 수 있습니다. [지원되는 OS(운영 체제)](https://github.com/dotnet/core/blob/master/roadmap.md), CPU 및 응용 프로그램 시나리오는 시간에 따라 증가하며 Microsoft, 다른 회사 및 개인이 제공합니다.
+- **플랫폼 간:** Windows, macOS 및 Linux에서 실행되며 다른 운영 체제에 이식할 수 있습니다. [지원되는 OS(운영 체제)](https://github.com/dotnet/core/blob/master/roadmap.md), CPU 및 응용 프로그램 시나리오는 시간에 따라 증가하며 Microsoft, 다른 회사 및 개인이 제공합니다.
 - **명령줄 도구:** 모든 제품 시나리오를 명령줄에서 실행할 수 있습니다. 
 - **호환:** .NET Core는 [.NET 표준 라이브러리](../standard/library.md)를 통해 .NET Framework, Xamarin 및 Mono와 호환됩니다.
 - **오픈 소스:** .NET Core 플랫폼은 MIT 및 Apache 2 라이선스를 사용하는 오픈 소스입니다. 설명서는 [CC-BY](http://creativecommons.org/licenses/by/4.0/)에 따라 사용이 허가됩니다. .NET Core는 [.NET Foundation](http://www.dotnetfoundation.org/) 프로젝트입니다.
