@@ -1,0 +1,76 @@
+---
+title: "WCF Data Services 개요 | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework-oob"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+dev_langs: 
+  - "HTML"
+  - "VB"
+  - "CSharp"
+  - "C++"
+helpviewer_keywords: 
+  - "WCF Data Services"
+  - "WCF Data Services, 정보"
+ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
+caps.latest.revision: 5
+author: "Erikre"
+ms.author: "erikre"
+manager: "erikre"
+caps.handback.revision: 5
+---
+# WCF Data Services 개요
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에서는 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]을 사용하여 웹 또는 인트라넷용 데이터 서비스를 만들고 사용할 수 있습니다.  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]를 사용하면 URI로 주소를 지정할 수 있는 리소스로 데이터를 노출할 수 있습니다.  따라서 REST\(Representational State Transfer\)의 의미 체계, 특히 표준 HTTP 동사인 GET, PUT, POST 및 DELETE를 사용하여 데이터에 액세스하고 변경할 수 있습니다. 이 항목에서는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]로 정의된 패턴 및 유용한 정보와 .NET Framework 기반 응용 프로그램에서 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]를 활용하기 위해 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에서 제공하는 기능에 대해 간략하게 설명합니다.  
+  
+## 리소스로 데이터 주소 지정  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]는 URI로 주소를 지정할 수 있는 리소스로 데이터를 노출합니다. 리소스 경로는 엔터티 데이터 모델의 엔터티\-관계 규칙을 기반으로 생성됩니다.  이 모델에서 엔터티는 고객, 주문, 항목 및 제품과 같이 응용 프로그램 도메인의 데이터 운영 단위를 나타냅니다.  자세한 내용은 [엔터티 데이터 모델](../../../../docs/framework/data/adonet/entity-data-model.md)을 참조하세요.  
+  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]에서는 엔터티 형식 인스턴스가 포함된 엔터티 집합으로 엔터티 리소스의 주소를 지정합니다.  예를 들어, URI `http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders`는 `CustomerID` 값이 `ALFKI`인 고객과 관련된 `Northwind` 데이터 서비스에서 모든 주문을 반환합니다.  
+  
+ 쿼리 식을 사용하면 필터링, 정렬 및 페이징과 같은 일반적인 쿼리 작업을 리소스에 대해 수행할 수 있습니다.  예를 들어, URI `http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=Freight gt 50`은 운송료가 $50보다 많은 주문만 반환하도록 리소스를 필터링합니다.  자세한 내용은 [데이터 서비스 리소스 액세스](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)을 참조하세요.  
+  
+## 상호 운용 가능한 데이터 액세스  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]는 .NET Framework를 사용하지 않는 응용 프로그램과 상호 운용할 수 있도록 하기 위해 표준 인터넷 프로토콜을 기반으로 합니다.  표준 URI를 사용하여 데이터의 주소를 지정할 수 있으므로 응용 프로그램에서 REST\(Representational State Transfer\)의 의미 체계, 특히 GET, PUT, POST, DELETE 등의 표준 HTTP 동사를 사용하여 데이터에 액세스하고 변경할 수 있습니다.  이렇게 하면 표준 HTTP 프로토콜을 통해 전송되는 데이터를 구문 분석하고 액세스할 수 있는 모든 클라이언트에서 해당 서비스에 액세스할 수 있습니다.  
+  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]는 AtomPub\(Atom Publishing Protocol\)의 확장 집합을 정의합니다. 또한 다양한 클라이언트 응용 프로그램 및 플랫폼을 고려하여 HTTP 요청 및 응답에 대해 여러 데이터 형식을 지원합니다.  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드는 Atom, JSON\(JavaScript Object Notation\) 및 일반 XML로 데이터를 나타낼 수 있습니다.  Atom이 기본 형식이지만 피드의 형식은 HTTP 요청의 헤더에서 지정됩니다.  자세한 내용은 [OData: 원자 형식](http://go.microsoft.com/fwlink/?LinkID=185794)\(영문\) 및 [OData: JSON 형식](http://go.microsoft.com/fwlink/?LinkID=185795)\(영문\)을 참조하세요.  
+  
+ 데이터를 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드로 게시할 때 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 캐싱, 인증 등의 작업을 위해 기존의 다른 인터넷 기능을 사용합니다.  이를 위해 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 ASP.NET, WCF\(Windows Communication Foundation\) 및 IIS\(인터넷 정보 서비스\)와 같은 기존 호스팅 응용 프로그램 및 서비스와 통합됩니다.  
+  
+## 저장소 독립성  
+ 리소스는 엔터티\-관계 모델을 기반으로 주소가 지정되지만 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 기본 데이터 원본에 관계없이 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드를 노출합니다. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]가 URI로 식별된 리소스에 대한 HTTP 요청을 수락하면 해당 요청이 deserialize되고 요청의 표현이 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 공급자에 전달됩니다.  이 공급자는 요청을 데이터 원본과 관련된 형식으로 변환하고 기본 데이터 원본에서 요청을 실행합니다. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]에 규정된 대로 리소스의 주소를 지정하는 개념적 모델과 기본 데이터 원본의 특정 스키마를 구분하여 저장소 독립성을 실현합니다.  
+  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 ADO.NET Entity Framework와 통합되므로 관계형 데이터를 노출하는 데이터 서비스를 만들 수 있습니다.  엔터티 데이터 모델 도구를 사용하여 주소 지정 가능한 리소스를 엔터티로 포함하는 데이터 모델을 만드는 동시에 이 모델과 기본 데이터베이스의 테이블 간에 매핑을 정의할 수 있습니다.  자세한 내용은 [Entity Framework 공급자](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)을 참조하세요.  
+  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하여 <xref:System.Linq.IQueryable%601> 인터페이스 구현을 반환하는 모든 데이터 구조를 노출하는 데이터 서비스를 만들 수도 있습니다.  이렇게 하면 .NET Framework 형식의 데이터를 노출하는 데이터 서비스를 만들 수 있습니다.  <xref:System.Data.Services.IUpdatable> 인터페이스도 구현하는 경우 만들기, 업데이트 및 삭제 작업이 지원됩니다.  자세한 내용은 [리플렉션 공급자](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)을 참조하세요.  
+  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]가 이러한 데이터 공급자와 통합되는 방식을 보려면 이 항목 뒷부분의 아키텍처 다이어그램을 참조하세요.  
+  
+## 사용자 지정 비즈니스 논리  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 서비스 작업과 인터셉터를 통해 사용자 지정 비즈니스 논리를 데이터 서비스에 쉽게 추가할 수 있도록 합니다.  서비스 작업은 데이터 리소스와 동일한 형식으로 URI를 통해 주소를 지정할 수 있는 메서드로, 서버에서 정의됩니다.  서비스 작업에서 쿼리 식 구문을 사용하여 작업에 의해 반환되는 데이터를 필터링, 정렬 및 페이징할 수도 있습니다. 예를 들어, URI `http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$orderby=OrderDate&$top=10&$skip=10`은 Northwind 데이터 서비스에서 런던 고객의 주문을 반환하고 페이징 결과가 `OrderDate`를 기준으로 정렬되는 `GetOrdersByCity`라는 서비스 작업에 대한 호출을 나타냅니다.  자세한 내용은 [서비스 작업](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)을 참조하세요.  
+  
+ 인터셉터를 사용하면 사용자 지정 응용 프로그램 논리를 데이터 서비스에 의한 요청 또는 응답 메시지 처리에 통합할 수 있습니다.  인터셉터는 지정된 엔터티 집합에 대해 쿼리, 삽입, 업데이트 또는 삭제 동작이 발생할 때 호출됩니다.  그러면 인터셉터가 데이터를 변경하거나, 사용 권한 정책을 적용하거나, 작업을 종료할 수 있습니다.  인터셉터 메서드는 데이터 서비스에서 노출하는 특정 엔터티 집합에 대해 명시적으로 등록되어야 합니다.  자세한 내용은 [인터셉터](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)을 참조하세요.  
+  
+## 클라이언트 라이브러리  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]에서는 데이터 서비스와 상호 작용하기 위한 균일한 패턴 집합을 정의합니다.  이 패턴 집합을 사용하면 이러한 서비스를 기반으로 데이터 서비스를 보다 쉽게 사용할 수 있도록 하는 클라이언트 쪽 라이브러리와 같은 다시 사용 가능한 구성 요소를 만들 수 있습니다.  
+  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에는 .NET Framework 기반 및 Silverlight 기반 클라이언트 응용 프로그램용 클라이언트 라이브러리가 모두 포함되어 있습니다.  이러한 클라이언트 라이브러리를 사용하면 .NET Framework 개체를 사용하여 데이터 서비스와 상호 작용할 수 있습니다.  클라이언트 라이브러리는 개체 기반 쿼리와 LINQ 쿼리, 관련 개체 로드, 변경 내용 추적 및 ID 확인도 지원합니다. 자세한 내용은 [WCF Data Services 클라이언트 라이브러리](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)을 참조하세요.  
+  
+ .NET Framework 및 Silverlight와 함께 포함된 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 클라이언트 라이브러리 외에도 PHP, AJAX 및 Java 응용 프로그램과 같은 클라이언트 응용 프로그램에서 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드를 사용할 수 있도록 하는 다른 클라이언트 라이브러리도 있습니다.  자세한 내용은 [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185796)\(영문\)를 참조하세요.  
+  
+## 아키텍처 개요  
+ 다음 다이어그램에서는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드를 노출하고 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 지원 클라이언트 라이브러리에서 이러한 피드를 사용하기 위한 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 아키텍처를 보여 줍니다.  
+  
+ ![WCF Data Services 아키텍처 다이어그램](../../../../docs/framework/data/wcf/media/astoriaservicearch.gif "AstoriaServiceArch")  
+  
+## 참고 항목  
+ [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)   
+ [시작](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)   
+ [WCF Data Services 정의](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)   
+ [Accessing a Data Service \(WCF Data Services\)](http://msdn.microsoft.com/ko-kr/1e54a2b9-2ec6-4002-b8f8-c1d8df37c350)   
+ [WCF Data Services 클라이언트 라이브러리](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)   
+ [REST\(Representational State Transfer\) \(영문\)](http://go.microsoft.com/fwlink/?LinkId=113919)

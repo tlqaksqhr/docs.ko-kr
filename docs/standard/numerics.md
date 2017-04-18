@@ -1,78 +1,85 @@
 ---
-title: ".NET Core의 숫자"
-description: ".NET Core의 숫자"
-keywords: .NET, .NET Core
-author: rpetrusha
-ms.author: ronpet
-ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: 6b8696be-55f5-4b66-98f3-69ff827c2c49
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 8e2aad830bdaccad6e8184fa462dd0d3157fd6c9
-ms.lasthandoff: 03/02/2017
-
+title: ".NET Framework의 숫자 | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-standard"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "SIMD"
+  - "System.Numerics.Vectors"
+  - "벡터"
+  - "과학적 컴퓨팅"
+  - "복합"
+  - "숫자"
+  - "BigInteger"
+ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
+caps.latest.revision: 11
+author: "rpetrusha"
+ms.author: "ronpet"
+manager: "wpickett"
+caps.handback.revision: 11
 ---
-
-# <a name="numerics-in-net-core"></a>.NET Core의 숫자
-
-.NET Core는 표준 숫자 정수 계열 및 부동 소수점 기본 형식과 [System.Numerics](https://docs.microsoft.com/dotnet/core/api/System.Numerics) 네임스페이스의 [System.Numerics.BigInteger](https://docs.microsoft.com/dotnet/core/api/System.Numerics.BigInteger), 이론적 상한 또는 하한이 없는 정수 형식, [System.Numerics.Complex](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Complex), 복소수를 나타내는 형식, [SIMD](https://en.wikipedia.org/wiki/SIMD)(Single Instruction Multiple Data) 사용 벡터 형식 집합을 지원합니다. 
-
-## <a name="integral-types"></a>정수 계열 형식 표
-
-.NET Core에서는 길이 범위가&1;~8바이트인 부호 있는 정수와 부호 없는 정수를 둘 다 지원합니다. 다음 표에서는 정수 계열 형식 및 해당 크기 목록을 제공하고 부호가 있는지 여부를 표시하고 해당 범위를 문서화합니다. 모든 정수는 값 형식입니다. 
-
-형식 | 부호 있음/부호 없음 | 크기(바이트) | 최소값 | 최대값
----- | --------------- | ------------ | ------------- | -------------
-[System.Byte](https://docs.microsoft.com/dotnet/core/api/System.Byte) | 부호 없음 | 1 | 0 | 255
-[System.Int16](https://docs.microsoft.com/dotnet/core/api/System.Int16) | 서명 | 2 | -32,768 | 32,767
-[System.Int32](https://docs.microsoft.com/dotnet/core/api/System.Int32) | 서명 | 4 | -2,147,483,648 | 2,147,483,647
-[System.Int64](https://docs.microsoft.com/dotnet/core/api/System.Int64) | 서명 | 9 | -9,223,372,036,854,775,808 | 9,223,372,036,854,775,807
-[System.SByte](https://docs.microsoft.com/dotnet/core/api/System.SByte) | 서명 | 1 | -128 | 127
-[System.UInt16](https://docs.microsoft.com/dotnet/core/api/System.UInt16) | 부호 없음 | 2 | 0 | 65,535
-[System.UInt32](https://docs.microsoft.com/dotnet/core/api/System.UInt32) | 부호 없음 | 4 | 0 | 4,294,967,295
-[System.UInt64](https://docs.microsoft.com/dotnet/core/api/System.UInt64) | 부호 없음 | 9 | 0 | 18,446,744,073,709,551,615
-
-각 정수 계열 형식은 산술, 비교, 같음, 명시적 변환 및 암시적 변환 연산자의 표준 집합을 지원합니다. 각 정수에는 같음 비교 및 상대 비교를 수행하고, 숫자의 문자열 표시를 해당 정수로 변환하고, 정수를 해당 문자열 표시로 변환하는 메서드가 포함됩니다. 두 정수의 더 작거나 더 큰 값을 반올림하고 식별하는 연산과 같이 표준 연산자를 통해 처리되는 연산 이외의 몇몇 추가 수치 연산은 [System.Math](https://docs.microsoft.com/dotnet/core/api/System.Math) 클래스에서 제공됩니다. [System.BitConverter](https://docs.microsoft.com/dotnet/core/api/System.BitConverter) 클래스를 사용하여 정수 값의 개별 비트를 사용할 수도 있습니다. 
-     
-부호 없는 정수 형식은 CLS와 호환되지 않습니다. 자세한 내용은 [.NET 공용 형식 시스템 및 공용 언어 사양](common-type-system.md)을 참조하세요.
-
-## <a name="floating-point-types"></a>부동 소수점 형식
-
-.NET Core에는 다음 표에 나열된 세 가지 기본 부동 소수점 형식이 포함되어 있습니다. 
-
-형식 | 크기(바이트) | 최소값 | 최대값
----- | ------------ | ------------- | -------------
-[System.Double](https://docs.microsoft.com/dotnet/core/api/System.Double) | 9 | -1.79769313486232e308 | 1.79769313486232e308
-[System.Single](https://docs.microsoft.com/dotnet/core/api/System.Single) | 4 | -3.402823e38 | 3.402823e38
-[System.Decimal](https://docs.microsoft.com/dotnet/core/api/System.Decimal) | 16 | -79,228,162,514,264,337,593,543,950,335 | 79,228,162,514,264,337,593,543,950,335
-   
-각 부동 소수점 형식은 산술, 비교, 같음, 명시적 변환 및 암시적 변환 연산자의 표준 집합을 지원합니다. 각 형식에는 같음 비교 및 상대 비교를 수행하고, 부동 소수점 수의 문자열 표시를 변환하고, 부동 소수점 수를 해당 문자열 표시로 변환하는 메서드가 포함됩니다. 일부 추가적인 수치, 대수 및 삼각 연산은 `Math` 클래스에서 제공됩니다. `BitConverter` 클래스를 사용하여 `Double` 및 `Single` 값의 개별 비트를 사용할 수도 있습니다. `Decimal` 구조체에는&10;진수 값의 개별 비트를 사용하기 위한 고유한 메서드인 `Decimal.GetBits` 및 `Decimal.Decimal(Int32())`와 몇몇 추가적인 수치 연산을 수행하기 위한 고유한 메서드 집합이 있습니다. 
-
-`Double` 및 `Single` 형식은 기본적으로 정확하지 않은 값(태양계에서 두 별 사이의 거리) 및 정밀도가 높고 반올림 오류가 적을 필요 없는 응용 프로그램에 사용해야 합니다. 정밀도가 더 높아야 하고 반올림 오류가 없어야 하는 경우 `Decimal` 형식을 사용해야 합니다.
-
-## <a name="biginteger"></a>BigInteger
-
-[System.Numerics.BigInteger](https://docs.microsoft.com/dotnet/core/api/System.Numerics.BigInteger)는 이론상 값에 상한이나 하한이 없는 임의로 큰 정수를 나타내는 변경할 수 없는 형식입니다. `BigInteger` 형식의 메서드는 기타 정수 계열 형식의 메서드와 매우 유사합니다.  
-
-## <a name="complex"></a>복합
-
-[System.Numerics.Complex](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Complex) 형식은 실수 부분과 허수 부분이 포함된 숫자인 복소수를 나타냅니다. 이 형식은 산술, 비교, 같음, 명시적 변환 및 암시적 변환 연산자의 표준 집합과 수치, 대수 및 삼각 메서드를 지원합니다. 
-
-## <a name="simd-enabled-vector-types"></a>SIMD 사용 벡터 형식
-
-`System.Numerics` 네임스페이스에는 .NET Core를 위한 SIMD 사용 벡터 형식 집합이 있습니다. SIMD를 통해 일부 연산을 하드웨어 수준에서 병렬화할 수 있습니다. 이 덕분에 벡터를 통해 계산을 수행하는 수치, 공학용 및 그래픽 앱의 성능이 훨씬 향상됩니다. 
-
-.NET Core의 SIMD 사용 벡터 형식은 다음과 같습니다. 
-
-* `Single` 형식의 2차원, 3차원 및 4차원 벡터인 [System.Numerics.Vector2](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Vector2), [System.Numerics.Vector3](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Vector3) 및 [System.Numerics.Vector4](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Vector4) 형식
-
-* 기본 숫자 형식의 벡터를 만들 수 있는 [Vector&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Vector-1) 구조체. 기본 숫자 형식에는 Decimal을 제외한 System 네임스페이스의 모든 숫자 형식이 포함됩니다.
-
-* 두 행렬 형식 [System.Numerics.Matrix3x2](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Matrix3x2)(3x2 행렬을 나타냄) 및 [System.Numerics.Matrix4x4](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Matrix4x4)(4x4 행렬을 나타냄) 
-
-* [System.Numerics.Plane](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Plane) 형식(3차원 평면을 나타냄) 및 [System.Numerics.Quaternion](https://docs.microsoft.com/dotnet/core/api/System.Numerics.Quaternion) 형식(3차원 물리적 회전을 인코드하는 데 사용되는 벡터를 나타냄)
-
+# .NET Framework의 숫자
+.NET Framework는 표준 숫자 정수 계열 및 부동 소수점 기본 형식과 지원 뿐만 <xref:System.Numerics.BigInteger>, 이론적 상한 또는 하 한이 없는 정수 형식 <xref:System.Numerics.Complex>, 복소수를 나타내는 형식 및의 SIMD 사용 벡터 형식 집합은 <xref:System.Numerics> 네임 스페이스입니다.  
+  
+ 또한 System.Numerics.Vectors, SIMD 사용 형식 라이브러리에 vectory, NuGet 패키지로 릴리스 되었습니다.  
+  
+## <a name="integral-types"></a>정수 계열 형식 표  
+ .NET Framework에서는&1;~8바이트 범위 길이의 부호 있는 정수와 부호 없는 정수를 둘 다 지원합니다. 다음 표에서는 정수 계열 형식 및 해당 크기 목록을 제공하고 부호가 있는지 여부를 표시하고 해당 범위를 문서화합니다. 모든 정수는 값 형식입니다.  
+  
+|형식|부호 있음/부호 없음|크기(바이트)|최소값|최대값|  
+|----------|----------------------|--------------------|-------------------|-------------------|  
+|<xref:System.Byte?displayProperty=fullName>|부호 없음|1|0|255|  
+|<xref:System.Int16?displayProperty=fullName>|서명|2|-32,768|32,767|  
+|<xref:System.Int32?displayProperty=fullName>|서명|4|-2,147,483,648|2,147,483,647|  
+|<xref:System.Int64?displayProperty=fullName>|서명|9|-9,223,372,036,854,775,808|9,223,372,036,854,775,807|  
+|<xref:System.SByte?displayProperty=fullName>|서명|1|-128|127|  
+|<xref:System.UInt16?displayProperty=fullName>|부호 없음|2|0|65,535|  
+|<xref:System.UInt32?displayProperty=fullName>|부호 없음|4|0|4,294,967,295|  
+|<xref:System.UInt64?displayProperty=fullName>|부호 없음|9|0|18,446,744,073,709,551,615|  
+  
+ 각 정수 계열 형식은 산술, 비교, 같음, 명시적 변환 및 암시적 변환 연산자의 표준 집합을 지원합니다. 각 정수에는 같음 비교 및 상대 비교를 수행하고, 숫자의 문자열 표시를 해당 정수로 변환하고, 정수를 해당 문자열 표시로 변환하는 메서드가 포함됩니다. 반올림 하 고 식별 두 정수의 더 작거나 더 큰 값에서 사용할 수 있는 같이 표준 연산자를 통해 처리 되는 것 이외의 몇몇 추가적인 수치 연산을 <xref:System.Math> 클래스입니다. 사용 하 여 정수 값의 개별 비트를 사용할 수도 있습니다는 <xref:System.BitConverter> 클래스입니다.  
+  
+ 부호 없는 정수 형식은 CLS와 호환되지 않습니다. 자세한 내용은 참조 [언어 독립성 및 언어 독립적 구성 요소](../../docs/standard/language-independence-and-language-independent-components.md)합니다.  
+  
+## <a name="floating-point-types"></a>부동 소수점 형식  
+ .NET Framework에는 다음 표에 나열된 세 가지 기본 형식 부동 소수점 형식이 포함됩니다.  
+  
+|형식|크기(바이트)|최소|Maximum|  
+|----------|-----------------------|-------------|-------------|  
+|<xref:System.Double?displayProperty=fullName>|9|-1.79769313486232e308|1.79769313486232e308|  
+|<xref:System.Single?displayProperty=fullName>|4|-3.402823e38|3.402823e38|  
+|<xref:System.Decimal?displayProperty=fullName>|16|-79,228,162,514,264,337,593,543,950,335|79,228,162,514,264,337,593,543,950,335|  
+  
+ 각 부동 소수점 형식은 산술, 비교, 같음, 명시적 변환 및 암시적 변환 연산자의 표준 집합을 지원합니다. 각 형식에는 같음 비교 및 상대 비교를 수행하고, 부동 소수점 수의 문자열 표시를 변환하고, 부동 소수점 수를 해당 문자열 표시로 변환하는 메서드가 포함됩니다. 사용할 수 있는 일부 추가적인 수치, 대 수 및 삼각 연산은 <xref:System.Math> 클래스입니다. 개별 비트를 사용할 수도 있습니다 <xref:System.Double> 및 <xref:System.Single> 사용 하 여 값의 <xref:System.BitConverter> 클래스입니다. <xref:System.Decimal?displayProperty=fullName> 구조에는 자체 메서드가 <xref:System.Decimal.GetBits%2A?displayProperty=fullName> 및 [Decimal.Decimal (Int32\<xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=fullName>10 진수 값을 사용 하는 것의 개별에 대 한 몇 가지 추가적인 수치 연산을 수행 하는 것에 대 한 메서드의 자체 집합 뿐만 아니라 비트입니다.  
+  
+ <xref:System.Double> 및 <xref:System.Single> 형식은 기본적으로 정확 하지 않은 (예: 태양계에서 두 별 사이의 거리) 값 및는 높은 수준의 전체 자릿수와 반올림 오류가 적을 필요 없는 응용 프로그램에 대 한 사용 해야 하는 데 사용 됩니다. 이 방법을 사용할지는 <xref:System.Decimal?displayProperty=fullName> 큰 되는 경우에 대 한 정밀도 필요한 형식과 반올림 오류가 없는 것이 좋은 경우  
+  
+## <a name="biginteger"></a>BigInteger  
+ <xref:System.Numerics.BigInteger?displayProperty=fullName>는 이론상 값에 상한이나 하한이 없는 임의로 큰 정수를 나타내는 변경할 수 없는 형식입니다. 메서드는 <xref:System.Numerics.BigInteger> 형식 매우 유사 다른 정수 계열 형식입니다.  
+  
+## <a name="complex"></a>복합  
+ <xref:System.Numerics.Complex> 형식은 복소수, 즉, 사용 하 여 숫자 실수 및 허수 부분을 나타냅니다. 이 형식은 산술, 비교, 같음, 명시적 변환 및 암시적 변환 연산자의 표준 집합과 수치, 대수 및 삼각 메서드를 지원합니다.  
+  
+## <a name="simd-enabled-vector-types"></a>SIMD 사용 벡터 형식  
+ <xref:System.Numerics> 네임 스페이스는.NET Framework에 대 한 SIMD 사용 벡터 형식 집합을 포함 합니다. SIMD(Single Instruction Multiple Data) 연산을 통해 몇몇 연산은 하드웨어 수준에서 병렬 처리될 수 있습니다. 이 덕분에 벡터를 통해 계산을 수행하는 수치, 공학용 및 그래픽 앱의 성능이 크게 향상됩니다.  
+  
+ .NET Framework의 SIMD 사용 벡터 형식은 다음과 같습니다.  또한 System.Numerics.Vectors에는 평면 형식과 쿼터니언 형식이 있습니다.  
+  
+-   <xref:System.Numerics.Vector2>, <xref:System.Numerics.Vector3>, 및 <xref:System.Numerics.Vector4> 형식인 2, 3 및 4 차원 벡터 형식의 <xref:System.Single>합니다.  
+  
+-   두 행렬 형식 <xref:System.Numerics.Matrix3x2>, 3x2 행렬; 나타내는 및 <xref:System.Numerics.Matrix4x4>, 4x4 행렬을 나타냅니다.  
+  
+-   <xref:System.Numerics.Plane> 및 <xref:System.Numerics.Quaternion> 형식입니다.  
+  
+ SimD 사용 벡터 형식은 비SimD 사용 하드웨어 및 JIT 컴파일러에서 이 형식을 사용할 수 있는 IL에서 구현됩니다. SIMD 지침을 활용하려면 64비트 앱을 관리 코드에 대한 새로운 64비트 JIT 컴파일러로 컴파일해야 합니다. 이 관리 코드는 .NET Framework 4.6과 함께 포함되어 있으며 x64 프로세서를 대상으로 지정할 때 SIMD 지원을 추가합니다.  
+  
+ SIMD로 다운로드할 수도 있습니다는 [NuGet 패키지](http://www.nuget.org/packages/System.Numerics.Vectors)합니다.  NuGET 패키지에도 일반 <xref:System.Numerics.Vector%601> 기본 숫자 형식의 벡터를 만들 수 있도록 구조입니다. (기본 숫자 형식에서 모든 숫자 형식이 포함 되는 <xref:System> 네임 스페이스를 제외 하 고 <xref:System.Decimal>.) 또한는 <xref:System.Numerics.Vector%601> 구조 라이브러리 벡터를 작업할 때 호출할 수 있는 편리한 메서드를 제공 합니다.  
+  
+## <a name="see-also"></a>참고 항목  
+ [응용 프로그램 주요 사항](../../docs/standard/application-essentials.md)
