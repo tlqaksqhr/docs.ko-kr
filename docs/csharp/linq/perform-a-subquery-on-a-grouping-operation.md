@@ -2,7 +2,7 @@
 title: "그룹화 작업에서 하위 쿼리 수행"
 description: "그룹화 작업에서 하위 쿼리를 수행하는 방법"
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

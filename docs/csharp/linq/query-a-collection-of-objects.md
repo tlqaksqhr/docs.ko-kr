@@ -2,7 +2,7 @@
 title: "개체의 컬렉션 쿼리"
 description: "컬렉션 쿼리 방법입니다."
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 11/30/2016

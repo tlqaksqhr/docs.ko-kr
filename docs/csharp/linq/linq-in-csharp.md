@@ -2,7 +2,7 @@
 title: "C의 LINQ#"
 description: "LINQ에 대한 자세한 정보를 제공하는 항목의 링크"
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 11/30/2016

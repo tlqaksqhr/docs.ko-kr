@@ -2,7 +2,7 @@
 title: "쿼리 결과 그룹화"
 description: "결과를 그룹화하는 방법입니다."
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

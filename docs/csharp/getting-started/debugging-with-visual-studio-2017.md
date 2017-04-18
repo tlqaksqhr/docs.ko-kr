@@ -2,8 +2,8 @@
 title: "Visual Studio 2017을 사용하여 C# Hello World 응용 프로그램 디버그"
 description: "Visual Studio 2017에서 C#으로 작성된 Hello World 앱을 디버그하는 방법 알아보기"
 keywords: ".NET Core, .NET Core 콘솔 응용 프로그램, .NET Core 디버깅"
-author: stevehoag
-ms.author: shoag
+author: BillWagner
+ms.author: wiwagn
 ms.date: 10/24/2016
 ms.topic: article
 ms.prod: .net-core

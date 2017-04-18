@@ -2,7 +2,7 @@
 title: "사용자 지정 조인 작업 수행"
 description: "사용자 지정 조인 작업을 수행하는 방법"
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

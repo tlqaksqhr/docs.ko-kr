@@ -2,7 +2,7 @@
 title: "런타임에 동적으로 조건자 필터 지정"
 description: "런타임에 동적으로 조건자 필터를 지정하는 방법"
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

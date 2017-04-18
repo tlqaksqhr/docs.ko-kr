@@ -2,7 +2,7 @@
 title: "쿼리 식의 Null 값 처리"
 description: "쿼리 식의 Null 값을 처리하는 방법입니다."
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

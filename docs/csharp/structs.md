@@ -2,8 +2,8 @@
 title: "구조체 | C# 가이드"
 description: "구조체 형식 및 만드는 방법을 알아봅니다."
 keywords: .NET, .NET Core, C#
-author: stevehoag
-ms.author: shoag
+author: BillWagner
+ms.author: wiwagn
 ms.date: 10/12/2016
 ms.topic: article
 ms.prod: .net

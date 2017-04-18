@@ -2,7 +2,7 @@
 title: "왼쪽 우선 외부 조인 수행"
 description: "왼쪽 우선 외부 조인을 수행하는 방법"
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016

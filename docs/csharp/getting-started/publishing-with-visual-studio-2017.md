@@ -2,8 +2,8 @@
 title: "Visual Studio 2017을 사용하여 Hello World 응용 프로그램 게시"
 description: "Visual Studio 2017을 사용하여 Hello World 응용 프로그램 게시"
 keywords: ".NET, .NET Core, .NET Core 콘솔 응용 프로그램, 게시(.NET Core), 배포(.NET Core)"
-author: stevehoag
-ms.author: shoag
+author: BillWagner
+ms.author: wiwagn
 ms.date: 10/24/2016
 ms.topic: article
 ms.prod: .net-core

@@ -2,7 +2,7 @@
 title: "메서드에서 쿼리 반환"
 description: "쿼리를 반환하는 방법."
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 11/30/2016

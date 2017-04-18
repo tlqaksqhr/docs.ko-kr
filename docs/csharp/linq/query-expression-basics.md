@@ -2,7 +2,7 @@
 title: "쿼리 식 기본 사항"
 description: "쿼리 식과 관련된 개념 소개"
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 11/30/2016

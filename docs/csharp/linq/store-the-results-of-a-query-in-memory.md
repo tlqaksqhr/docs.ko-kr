@@ -2,7 +2,7 @@
 title: "쿼리 결과를 메모리에 저장"
 description: "결과 저장 방법"
 keywords: .NET, .NET Core, C#
-author: stevehoag
+author: BillWagner
 manager: wpickett
 ms.author: wiwagn
 ms.date: 11/30/2016
