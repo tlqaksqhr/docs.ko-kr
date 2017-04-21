@@ -18,9 +18,9 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 404c69662c992bfba3399225fdca12376f33baa9
-ms.lasthandoff: 04/08/2017
+ms.sourcegitcommit: 8571258a2fa4e7bd5180301e30e0fea8117eede6
+ms.openlocfilehash: 83ffd29d4301ae8848cc01de8e7def045b24a0ca
+ms.lasthandoff: 04/15/2017
 
 ---
 # <a name="getting-started-with-the-net-framework"></a>.NET Framework 시작
@@ -68,7 +68,7 @@ ms.lasthandoff: 04/08/2017
   
  .NET Framework 응용 프로그램 또는 구성 요소를 개발하려면 다음과 같이 하세요.  
   
-1.  운영 체제에 사전 설치되지 않은 경우, 응용 프로그램의 대상이 되는 .NET Framework 버전을 설치합니다. 최신 프로덕션 버전은 .NET Framework 4.7입니다. .NET Framework 4.7은 Windows 10 크리에이티브 업데이트에 사전 설치되어 있지만 이전 버전의 Windows 운영 체제에는 설치되어 있지 않습니다. .NET Framework 시스템 요구 사항은 [시스템 요구 사항](../../../docs/framework/get-started/system-requirements.md)을 참조하십시오. 다른 버전의 .NET Framework 설치에 대한 자세한 내용은 [설치 가이드](../../../docs/framework/install/guide-for-developers.md)를 참조하십시오. 또한 번외 릴리스되는 추가 .NET Framework 패키지도 있습니다. 이러한 패키지에 대한 자세한 내용은 [.NET Framework 및 번외 릴리스](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)를 참조하십시오.  
+1.  운영 체제에 사전 설치되지 않은 경우, 응용 프로그램의 대상이 되는 .NET Framework 버전을 설치합니다. 최신 프로덕션 버전은 .NET Framework 4.7입니다. .NET Framework 4.7은 Windows 10 크리에이터 업데이트에 사전 설치되어 있지만 이전 버전의 Windows 운영 체제에는 설치되어 있지 않습니다. .NET Framework 시스템 요구 사항은 [시스템 요구 사항](../../../docs/framework/get-started/system-requirements.md)을 참조하십시오. 다른 버전의 .NET Framework 설치에 대한 자세한 내용은 [설치 가이드](../../../docs/framework/install/guide-for-developers.md)를 참조하십시오. 또한 번외 릴리스되는 추가 .NET Framework 패키지도 있습니다. 이러한 패키지에 대한 자세한 내용은 [.NET Framework 및 번외 릴리스](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)를 참조하십시오.  
   
 2.  .NET Framework 언어 또는 응용 프로그램을 개발하는 데 사용할 언어를 선택합니다. Microsoft의 Visual Basic, C#, Visual F# 및 C++를 포함한 많은 언어를 사용할 수 있습니다. (.NET Framework용 응용 프로그램을 개발할 수 있는 프로그래밍 언어는 [CLI(공용 언어 인프라) 사양](http://go.microsoft.com/fwlink/?LinkId=199862)을 준수합니다.)  
   
@@ -92,3 +92,4 @@ ms.lasthandoff: 04/08/2017
  [새로운 기능](../../../docs/framework/whats-new/index.md)   
  [.NET Framework 클래스 라이브러리](http://go.microsoft.com/fwlink/?LinkId=227195)   
  [개발 가이드](../../../docs/framework/development-guide.md)
+

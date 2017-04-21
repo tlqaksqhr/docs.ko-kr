@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 4.6 및 4.5 마이그레이션 가이드 | Microsoft 문서"
+title: ".NET Framework 4.7, 4.6 및 4.5 마이그레이션 가이드 | Microsoft 문서"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,12 +18,12 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 9004e102dac346e7d7d627f5adc573a18a53952e
-ms.lasthandoff: 04/08/2017
+ms.sourcegitcommit: d745ff3729fed78cdaf7402d8e8847e95a4ed400
+ms.openlocfilehash: aa587b7ca0beaabae8eb44f83355427579241b47
+ms.lasthandoff: 04/13/2017
 
 ---
-# <a name="migration-guide-to-the-net-framework-46-and-45"></a>.NET Framework 4.6 및 4.5 마이그레이션 가이드 
+# <a name="migration-guide-to-the-net-framework-47-46-and-45"></a>.NET Framework 4.7, 4.6 및 4.5 마이그레이션 가이드 
 이전 버전의 .NET Framework를 사용하여 앱을 만든 경우, 일반적으로 .NET Framework 4.5 및 해당 포인트 릴리스(4.5.1 및 4.5.2), .NET Framework 4.6 및 해당 포인트 릴리스(4.6.1 및 4.6.2) 또는 .NET Framework 4.7로 쉽게 업그레이드 할 수 있습니다. Visual Studio에서 프로젝트를 엽니다. 프로젝트가 이전 버전에서 만들어진 경우 **프로젝트 호환성** 대화 상자가 자동으로 열립니다. Visual Studio에서 프로젝트를 업그레이드하는 방법에 대한 자세한 내용은 [Visual Studio 프로젝트 포팅, 마이그레이션, 업그레이드](https://docs.microsoft.com/en-us/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects) 및 [Visual Studio 2017 플랫폼 대상 지정 및 호환성](https://www.visualstudio.com/en-us/productinfo/vs2017-compatibility-vs)을 참조하십시오.  
   
  그러나 .NET Framework에서 일부 사항을 변경하려면 코드를 변경해야 합니다. .NET Framework 4.5 및 해당 포인트 릴리스, .NET Framework 4.6 및 해당 포인트 릴리스 또는 .NET Framework 4.7의 새로운 기능을 활용할 수도 있습니다. 새 버전의 .NET Framework용 으로 변경하는 이러한 유형의 작업을 일반적으로 *마이그레이션*이라고 합니다. 앱을 마이그레이션할 필요가 없는 경우 다시 컴파일하지 않고 .NET Framework 4.5 이상 버전에서 실행할 수 있습니다.  

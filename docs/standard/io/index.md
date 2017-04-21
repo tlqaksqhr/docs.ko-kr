@@ -21,9 +21,9 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 887ddf85b1da556feee211c4b29f0a08550c84ad
-ms.lasthandoff: 04/08/2017
+ms.sourcegitcommit: 1fabc43044b6e0fa765a7c2f225add8b7eb923f5
+ms.openlocfilehash: 1d0c203313b33aeba26aded268467b1a1b181118
+ms.lasthandoff: 04/13/2017
 
 ---
 # <a name="file-and-stream-io"></a>파일 및 스트림 I/O
@@ -150,7 +150,7 @@ ms.lasthandoff: 04/08/2017
   
 -   경로 기반 압축 형식 <xref:System.IO.Compression.ZipFile> 및 <xref:System.IO.Compression.ZipFileExtensions>는 사용할 수 없습니다. 대신에, [Windows.Storage.Compression](http://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx) 네임스페이스에서 형식을 사용합니다.  
   
- 필요하다면 .NET Framework 스트림과 Windows 런타임 스트림 간에 변환할 수 있습니다. 자세한 내용은 [방법: .NET Framework 스트림과 Windows 런타임 스트림 간 변환](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md) 또는 <xref:System.IO.WindowsRuntimeStreamExtensions>를 참조하세요.  
+ 필요하다면 .NET Framework 스트림과 Windows 런타임 스트림 간에 변환할 수 있습니다. 자세한 내용은 [방법: .NET Framework 스트림과 Windows 런타임 스트림 간 변환](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md) 또는 [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx)를 참조하세요. <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
   
  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 I/O 작업에 대한 자세한 내용은 Windows 개발자 센터에서 [퀵 스타트: 파일 읽기 및 쓰기](http://go.microsoft.com/fwlink/p/?LinkId=243072)를 참조하세요.  
   
@@ -182,3 +182,4 @@ ms.lasthandoff: 04/08/2017
 -   [메모리 매핑된 파일](../../../docs/standard/io/memory-mapped-files.md)  
   
  가상 메모리의 디스크에 있는 파일의 내용을 포함하는 메모리 매핑된 파일에 대해 설명합니다. 메모리 매핑된 파일을 사용하면 매우 큰 파일을 편집하고 프로세스 간 통신을 위한 공유 메모리를 만들 수 있습니다.
+
