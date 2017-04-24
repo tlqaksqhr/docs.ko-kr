@@ -39,7 +39,11 @@ ms.lasthandoff: 04/08/2017
   
  이 응용 프로그램 집합을 빌드하려면 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에서 서비스 호스트를 구현합니다. 이 항목에서 이러한 서비스의 개요를 제공하며 자세한 정보를 찾을 수 있습니다.  
   
+<<<<<<< HEAD
 
+=======
+   
+>>>>>>> 170740e... fix build errors
   
 <a name="Application_Management"></a>   
 ## <a name="application-management"></a>응용 프로그램 관리  

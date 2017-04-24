@@ -33,7 +33,13 @@ ms.lasthandoff: 04/08/2017
  이 항목에서는 그래픽, 전환 효과, 소리 및 비디오를 응용 프로그램에 추가할 수 있도록 하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 그래픽, 애니메이션 및 미디어 기능을 소개합니다.  
   
 > [!NOTE]
+<<<<<<< HEAD
 >  Windows 서비스에서 WPF 유형을 사용해서는 안 됩니다. Windows 서비스에서 WPF 유형을 사용하려고 하면 서비스가 예상대로 작동하지 않을 수 있습니다.   
+=======
+>  Windows 서비스에서 WPF 형식을 사용하지 않는 것이 좋습니다.  Windows 서비스에서 WPF 형식을 사용하려고 하면 서비스가 예상대로 작동하지 않을 수 있습니다.  
+  
+   
+>>>>>>> 170740e... fix build errors
   
 <a name="whats_new_with_graphics_and_multimedia_in_wpf_4"></a>   
 ## <a name="whats-new-with-graphics-and-multimedia-in-wpf-4"></a>WPF 4에 포함된 그래픽 및 멀티미디어의 새로운 기능  
