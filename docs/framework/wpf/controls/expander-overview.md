@@ -22,7 +22,7 @@ caps.handback.revision: 19
 # Expander 개요
 <xref:System.Windows.Controls.Expander> 컨트롤은 창과 비슷하며 헤더를 포함하는 확장 가능한 영역에 콘텐츠를 제공하는 방법을 제공합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="CreatinganExpanderinXAML"></a>   
 ## 간단한 Expander 만들기  

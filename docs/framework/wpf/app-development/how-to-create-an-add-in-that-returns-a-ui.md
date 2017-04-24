@@ -36,7 +36,7 @@ caps.handback.revision: 5
 ## 예제  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]를 반환하는 추가 기능을 만들려면 파이프라인 세그먼트, 추가 기능 및 호스트 응용 프로그램 각각에 대한 특정 코드가 필요합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Contract"></a>   
 ## 계약 파이프라인 세그먼트 구현  

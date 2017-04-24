@@ -25,7 +25,7 @@ caps.handback.revision: 13
   
  이 자습서에서는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 창에서 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 시각적 개체를 호스팅하는 샘플 응용 프로그램인 [Hit Test with Win32 Interoperation 샘플](http://go.microsoft.com/fwlink/?LinkID=159995)을 작성하는 방법을 설명합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="requirements"></a>   
 ## 요구 사항  

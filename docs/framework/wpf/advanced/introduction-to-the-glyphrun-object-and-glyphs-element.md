@@ -26,7 +26,7 @@ caps.handback.revision: 20
 # GlyphRun 개체 및 Glyphs 요소 소개
 이 항목에 설명 된 <xref:System.Windows.Media.GlyphRun> 개체 및 <xref:System.Windows.Documents.Glyphs> 요소입니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="text_glyphrunovw_intro"></a>   
 ## <a name="introduction-to-glyphrun"></a>GlyphRun 소개  

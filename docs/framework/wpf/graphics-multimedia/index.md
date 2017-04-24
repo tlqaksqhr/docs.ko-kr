@@ -31,7 +31,7 @@ caps.handback.revision: 29
 > [!NOTE]
 >  Windows 서비스에서 WPF 형식을 사용하지 않는 것이 좋습니다.  Windows 서비스에서 WPF 형식을 사용하려고 하면 서비스가 예상대로 작동하지 않을 수 있습니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="whats_new_with_graphics_and_multimedia_in_wpf_4"></a>   
 ## WPF 4.0의 새로운 그래픽 및 멀티미디어 기능  

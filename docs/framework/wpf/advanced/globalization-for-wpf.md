@@ -24,7 +24,7 @@ caps.handback.revision: 31
 # WPF의 전역화
 이 항목에서는 글로벌 시장을 위한 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램을 작성할 때 알아야 하는 문제를 소개합니다.  전역화 프로그래밍 요소는 [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]의 `System.Globalization`에 정의됩니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="xaml_globalization"></a>   
 ## XAML 전역화  

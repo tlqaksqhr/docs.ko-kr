@@ -21,7 +21,7 @@ caps.handback.revision: 26
 # WPF의 입력 체계
 이 문서에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 주요 입력 기능을 소개합니다.  입력 기능의 주요한 특징에는 향상된 텍스트 렌더링 품질과 성능, [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 입력 체계 지원, 개선된 국제 범용 텍스트, 개선된 글꼴 지원 및 새로운 텍스트 API\(응용 프로그래밍 인터페이스\) 등이 있습니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## 향상된 텍스트 품질과 성능  

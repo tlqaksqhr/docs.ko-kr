@@ -81,7 +81,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  예를 들어, 이전 예제에 사용된 `ISampleService`에 대해 생성된 구성 파일에는 다음과 같은 끝점 정보가 포함되어 있습니다.  
   
- [!code[C_GeneratedCodeFiles#19](../../../samples/snippets/common/VS_Snippets_CFX/c_generatedcodefiles/common/client.exe.config#19)]  
+ <!-- TODO: review snippet reference [!code[C_GeneratedCodeFiles#19](../../../samples/snippets/common/VS_Snippets_CFX/c_generatedcodefiles/common/client.exe.config#19)]  -->  
   
  이 구성 파일은 `<client>` 요소에서 대상 끝점을 지정합니다. [!INCLUDE[crabout](../../../includes/crabout-md.md)]여러 대상 끝점을 사용 하 여 참조는 <xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=fullName> 또는 <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=fullName> 생성자입니다.  
   

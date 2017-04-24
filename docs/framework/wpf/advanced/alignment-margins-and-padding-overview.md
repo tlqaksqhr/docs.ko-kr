@@ -25,7 +25,7 @@ caps.handback.revision: 19
 # 맞춤, 여백 및 안쪽 여백 개요
 <xref:System.Windows.FrameworkElement> 클래스는 자식 요소의 위치를 정확하게 지정하는 데 사용되는 여러 속성을 노출합니다.  이 항목에서는 가장 중요한 네 가지 속성인 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A> 및 <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>에 대해 설명합니다.  이러한 속성은 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램에서 요소의 위치를 제어하는 기본적인 방법을 제공하므로 이러한 속성이 미치는 효과를 이해해야 합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="wcpsdk_layout_amp_introduction"></a>   
 ## 요소 위치 지정 소개  

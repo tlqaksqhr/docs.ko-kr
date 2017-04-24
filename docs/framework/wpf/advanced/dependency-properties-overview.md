@@ -27,7 +27,7 @@ caps.handback.revision: 29
 # 종속성 속성 개요
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 속성의 기능을 확장하는 데 사용할 수 있는 서비스 집합을 제공합니다.  이러한 서비스를 통칭하여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성 시스템이라고 합니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성 시스템의 지원을 받는 속성은 [종속성 속성](GTMT)이라고 합니다. 이 개요에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성 시스템 및 [종속성 속성](GTMT)의 기능에 대해 설명합니다. 또한 XAML 및 코드에서 기존 [종속성 속성](GTMT)을 사용하는 방법도 설명합니다.  이 개요 부분에서는 종속성 메타데이터와 같은 종속성 속성의 특징 및 사용자 지정 클래스에 사용자 고유의 종속성 속성을 만드는 방법도 소개합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 사전 요구 사항  

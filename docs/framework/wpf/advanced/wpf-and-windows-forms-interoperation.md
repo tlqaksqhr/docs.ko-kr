@@ -28,7 +28,7 @@ caps.handback.revision: 22
 > [!NOTE]
 >  *혼합 컨트롤* 시나리오에는 특별한 주의가 필요합니다.  혼합 컨트롤에서는 한 기술의 컨트롤이 다른 기술의 컨트롤에 중첩되어 있습니다.  이를 *중첩된 상호 운영*이라고 부릅니다.  *여러 수준 혼합 컨트롤*에는 두 수준 이상의 혼합 컨트롤 중첩이 있습니다.  여러 수준의 중첩된 상호 운영에 대한 예는 다른 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤이 포함된 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤이 있는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤입니다.  여러 수준 혼합 컨트롤은 지원되지 않습니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Windows_Presentation_Foundation_Application_Hosting"></a>   
 ## WPF에서 Windows Forms 컨트롤 호스팅  

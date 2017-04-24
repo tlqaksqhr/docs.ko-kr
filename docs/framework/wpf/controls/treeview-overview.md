@@ -23,7 +23,7 @@ caps.handback.revision: 32
 # TreeView 개요
 <xref:System.Windows.Controls.TreeView> 컨트롤은 축소 가능한 노드를 사용하여 계층 구조로 정보를 표시할 수 있는 방법을 제공합니다.  이 항목에서는 <xref:System.Windows.Controls.TreeView> 및 <xref:System.Windows.Controls.TreeViewItem> 컨트롤에 대해 소개하고 컨트롤 사용 방법을 보여 주는 간단한 예제를 제공합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Simple_TreeView_Control"></a>   
 ## TreeView 정의  

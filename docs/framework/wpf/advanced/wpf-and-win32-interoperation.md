@@ -24,7 +24,7 @@ caps.handback.revision: 25
 # WPF 및 Win32 상호 운용성
 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]와 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 코드의 상호 운용 방법에 대해 전반적으로 살펴봅니다.  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 응용 프로그램을 만들기 위한 다양한 환경을 제공합니다.  [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 코드를 작성하는 데 많은 시간과 비용을 투자했다면 이러한 코드의 일부를 다시 사용하는 것이 더 효과적일 것입니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="basics"></a>   
 ## WPF 및 Win32 상호 운용성 기본 사항  

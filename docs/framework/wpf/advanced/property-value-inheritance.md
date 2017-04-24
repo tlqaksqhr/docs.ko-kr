@@ -23,7 +23,7 @@ caps.handback.revision: 15
 # 속성 값 상속
 속성 값 상속은 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 속성 시스템의 한 기능입니다.  속성 값 상속을 사용하면 요소 트리의 자식 요소가 가장 가까운 부모 요소에 설정된 값을 상속하여 부모 요소로부터 특정 속성 값을 가져올 수 있습니다.  부모 요소도 속성 값 상속을 통해 속성 값을 가져올 수 있으므로 속성 시스템이 페이지 루트로 가는 모든 경로를 재귀적으로 사용할 수 있습니다.  속성 값 상속은 속성 시스템의 기본 동작이 아닙니다. 따라서 자식 요소에서 속성 값 상속이 시작되게 하려면 특정 메타데이터 설정을 사용하여 속성을 설정해야 합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Property_Value_Inheritance_is_Containment_Inheritance"></a>   
 ## 포함 상속으로서의 속성 값 상속  

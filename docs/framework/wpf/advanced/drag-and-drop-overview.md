@@ -26,7 +26,7 @@ caps.handback.revision: 30
 # 끌어서 놓기 개요
 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램의 끌어서 놓기 지원에 대해 개괄적으로 설명합니다.  끌어서 놓기는 일반적으로 마우스\(또는 다른 포인팅 장치\)를 사용하여 하나 이상의 개체를 선택하고 이러한 개체를 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]에서 원하는 놓기 대상 위로 끌어서 놓는 데이터 전송 방법을 가리킵니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Drag_and_Drop_Support"></a>   
 ## WPF의 끌어서 놓기 지원  

@@ -21,7 +21,7 @@ caps.handback.revision: 52
 # 응용 프로그램 관리 개요
 모든 응용 프로그램이 공통 집합을 적용 하는 응용 프로그램 구현 및 관리 하는 기능을 공유 하는 경향이 있습니다.  이 항목의 기능에 간략하게 설명에 <xref:System.Windows.Application> 클래스를 만들고 응용 프로그램을 관리 합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 ## 응용 프로그램 클래스  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], 공통 응용 프로그램 범위 기능에 캡슐화 되는 <xref:System.Windows.Application> 클래스입니다.  <xref:System.Windows.Application> 클래스에는 다음과 같은 기능이 포함 되어 있습니다.  
@@ -133,7 +133,7 @@ caps.handback.revision: 52
 ## 응용 프로그램 수명  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램의 수명은 <xref:System.Windows.Application>에 의해 발생되는 몇 가지 이벤트로 표시되므로 응용 프로그램의 시작, 활성화 및 비활성화 시점, 종료 시점을 알 수 있습니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Splash_Screen"></a>   
 ### 시작 화면  

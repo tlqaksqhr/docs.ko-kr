@@ -89,8 +89,8 @@ DrawingBrush 불투명 마스크 예제
 ## 그라데이션을 불투명 마스크로 사용  
  그라데이션 채우기를 만들려면 둘 이상의 그라데이션 중지점을 지정합니다.  각 그라데이션 중지점은 색과 위치를 설명합니다. 그라데이션 만들기 및 사용에 대한 자세한 내용은 [단색 및 그라데이션을 사용한 그리기 개요](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)를 참조하십시오.  혼합 색 대신에 불투명 마스크 그라데이션이 알파 채널 값을 혼합한다는 점을 제외하고 그라데이션을 불투명 마스크로 사용할 때와 프로세스가 동일합니다.  따라서 그라데이션 콘텐츠의 실제 색은 중요하지 않으며 각 색의 알파 채널 또는 불투명도만 중요합니다.  예를 들면 다음과 같습니다.  
   
- [!code-xml[OpacityMasksExample#LinearGradientOpacityMaskonImage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/GradientBrushExample.xaml#lineargradientopacitymaskonimage)]
- [!code-xml[OpacityMasksExample#LinearGradientOpacityMaskonImage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/GradientBrushExample.xaml#lineargradientopacitymaskonimage)]  
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#LinearGradientOpacityMaskonImage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/GradientBrushExample.xaml#lineargradientopacitymaskonimage)]  -->
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#LinearGradientOpacityMaskonImage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/GradientBrushExample.xaml#lineargradientopacitymaskonimage)]  -->  
   
 <a name="specifyinggradientcolors"></a>   
 ## 불투명 마스크에 그라데이션 중지점 지정  
@@ -106,8 +106,8 @@ DrawingBrush 불투명 마스크 예제
   
  위 줄에서 *aa*는 색의 불투명도를 지정하는 데 사용되는 2자리 16진수 값을 나타냅니다.  *rr*, *gg* 및 *bb*는 각각 색에서 빨간색, 녹색 및 파란색의 양을 지정하는 데 사용되는 2자리 16진수 값을 나타냅니다.  각 16진수는 0\-9 또는 A\-F의 값을 가집니다.  0이 가장 작은 값이고 F가 가장 큰 값입니다.  알파 값이 00이면 색이 완전히 투명해지고 알파 값이 FF이면 색이 완전히 불투명해집니다.  다음 예제에서는 두 개의 색을 지정하기 위해 16진수 [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] 표기법이 사용됩니다.  첫 번째는 완전히 불투명하고 두 번째는 완전히 투명합니다.  
   
- [!code-xml[OpacityMasksExample#AARRGGBBValueonOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]
- [!code-xml[OpacityMasksExample#AARRGGBBValueonOpacityMask](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]  
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#AARRGGBBValueonOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]  -->
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#AARRGGBBValueonOpacityMask](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]  -->  
   
 <a name="usingimageasopacitymask"></a>   
 ## 이미지를 불투명 마스크로 사용  
@@ -118,15 +118,15 @@ DrawingBrush 불투명 마스크 예제
   
  이미지를 불투명 마스크로 사용하려면 <xref:System.Windows.Media.ImageBrush>를 사용하여 이미지를 포함합니다.  불투명 마스크로 사용할 이미지를 만들 때 [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]와 같은 여러 수준의 투명도를 지원하는 형식으로 이미지를 저장합니다.  다음 예제에서는 이전 그림을 만드는 데 사용된 코드를 보여 줍니다.  
   
- [!code-xml[OpacityMasksExample#UIElementOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/ImageBrushExample.xaml#uielementopacitymask)]
- [!code-xml[OpacityMasksExample#UIElementOpacityMask](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/ImageBrushExample.xaml#uielementopacitymask)]  
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#UIElementOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/ImageBrushExample.xaml#uielementopacitymask)]  -->
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#UIElementOpacityMask](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/ImageBrushExample.xaml#uielementopacitymask)]  -->  
   
 <a name="tilingimageopacitymask"></a>   
 ### 바둑판식 이미지를 불투명 마스크로 사용  
  다음 예제에서는 동일한 이미지가 또 다른 <xref:System.Windows.Media.ImageBrush>와 함께 사용되지만 50픽셀 정사각형의 이미지 바둑판을 생성하기 위해 브러시의 바둑판식 배열 기능이 사용됩니다.  
   
- [!code-xml[OpacityMasksExample#TiledImageasOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/ImageBrushExample.xaml#tiledimageasopacitymask)]
- [!code-xml[OpacityMasksExample#TiledImageasOpacityMask](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/ImageBrushExample.xaml#tiledimageasopacitymask)]  
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#TiledImageasOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/ImageBrushExample.xaml#tiledimageasopacitymask)]  -->
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#TiledImageasOpacityMask](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/ImageBrushExample.xaml#tiledimageasopacitymask)]  -->  
   
 <a name="drawingbrushasopacitymask"></a>   
 ## 그리기에서 불투명 마스크 만들기  
@@ -137,15 +137,15 @@ DrawingBrush 불투명 마스크 예제
   
  그리기를 불투명 마스크로 사용하려면 <xref:System.Windows.Media.DrawingBrush>를 사용하여 그리기를 포함합니다.  다음 예제에서는 이전 그림을 만드는 데 사용된 코드를 보여 줍니다.  
   
- [!code-xml[OpacityMasksExample#OpacityMaskfromDrawing](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/DrawingBrushExample.xaml#opacitymaskfromdrawing)]
- [!code-xml[OpacityMasksExample#OpacityMaskfromDrawing](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/DrawingBrushExample.xaml#opacitymaskfromdrawing)]  
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#OpacityMaskfromDrawing](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/DrawingBrushExample.xaml#opacitymaskfromdrawing)]  -->
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#OpacityMaskfromDrawing](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/DrawingBrushExample.xaml#opacitymaskfromdrawing)]  -->  
   
 <a name="tileddrawingbrush"></a>   
 ### 바둑판식 그리기를 불투명 마스크로 사용  
  <xref:System.Windows.Media.ImageBrush>와 마찬가지로 <xref:System.Windows.Media.DrawingBrush>에서 그리기를 바둑판식으로 배열하도록 만들 수 있습니다.  다음 예제에서는 바둑판식 불투명 마스크를 만들기 위해 그리기 브러시가 사용됩니다.  
   
- [!code-xml[OpacityMasksExample#TiledDrawingasOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/DrawingBrushExample.xaml#tileddrawingasopacitymask)]
- [!code-xml[OpacityMasksExample#TiledDrawingasOpacityMask](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/DrawingBrushExample.xaml#tileddrawingasopacitymask)]  
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#TiledDrawingasOpacityMask](../../../../samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksExample/CS/DrawingBrushExample.xaml#tileddrawingasopacitymask)]  -->
+ <!-- TODO: review snippet reference [!code-xml[OpacityMasksExample#TiledDrawingasOpacityMask](../../../../samples/snippets/xaml/VS_Snippets_Wpf/OpacityMasksExample/XAML/DrawingBrushExample.xaml#tileddrawingasopacitymask)]  -->  
   
 ## 참고 항목  
  [이미지, 그림 및 시각적 표시로 그리기](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)   

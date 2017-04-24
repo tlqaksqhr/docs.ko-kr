@@ -26,7 +26,7 @@ caps.handback.revision: 10
 # 연결된 이벤트 개요
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]은 *연결된 이벤트*라고 하는 이벤트의 형식과 언어 구성 요소를 정의합니다.  연결된 이벤트 개념을 사용하면 실제로 이벤트를 정의하거나 상속하는 요소가 아닌 임의의 요소에 특정 이벤트에 대한 처리기를 추가할 수 있습니다.  이 경우 이벤트를 발생시키는 개체나 인스턴스를 처리하는 대상 모두 이벤트를 정의하거나 다른 방식으로 "소유"하지 않습니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 사전 요구 사항  

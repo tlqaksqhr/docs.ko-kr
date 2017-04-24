@@ -26,7 +26,7 @@ caps.handback.revision: 18
   
  다음 단원에서는 양방향 콘텐츠를 가장 잘 표시하는 방법에 대한 예제와 함께 다양한 양방향 기능에 대해 설명합니다.  대부분의 샘플에서는 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]이 사용되지만 이러한 개념을 [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] 또는 [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] 코드에 쉽게 적용할 수 있습니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="FlowDirection"></a>   
 ## FlowDirection  

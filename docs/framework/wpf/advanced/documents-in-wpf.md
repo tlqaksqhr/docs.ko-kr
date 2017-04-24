@@ -29,7 +29,7 @@ caps.handback.revision: 35
 # WPF의 문서
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서 제공하는 광범위한 문서 기능을 통해 이전 세대의 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]에 비해 보다 쉽게 액세스하고 읽을 수 있도록 디자인된 고품질 콘텐츠를 작성할 수 있습니다.  향상된 기능 및 품질과 더불어 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 문서 표시, 패키지 및 보안에 대한 통합 서비스도 제공합니다.  이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 문서 형식 및 문서 패키지를 소개합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="types_of_documents"></a>   
 ## 문서의 형식  

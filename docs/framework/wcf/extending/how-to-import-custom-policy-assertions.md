@@ -50,9 +50,9 @@ caps.handback.revision: 8
   
 1.  가져오기 형식을 추가 `<extensions>` 요소 안에 [ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) 클라이언트 구성 파일의 요소입니다.  
   
-     [!code[CustomPolicySample#7](../../../../samples/snippets/common/VS_Snippets_CFX/custompolicysample/common/client.exe.config#7)]
-     [!code-csharp[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]
-     [!code-vb[CustomPolicySample#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/client.exe.config#7)]  
+     <!-- TODO: review snippet reference [!code[CustomPolicySample#7](../../../../samples/snippets/common/VS_Snippets_CFX/custompolicysample/common/client.exe.config#7)]  -->
+     <!-- TODO: review snippet reference [!code-csharp[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]  -->
+     <!-- TODO: review snippet reference [!code-vb[CustomPolicySample#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/client.exe.config#7)]  -->  
   
 2.  클라이언트 응용 프로그램에서 사용 하 여는 <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=fullName> 또는 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=fullName> 를 확인 및 메타 데이터 가져오기 도구를 자동으로 호출 됩니다.  
   

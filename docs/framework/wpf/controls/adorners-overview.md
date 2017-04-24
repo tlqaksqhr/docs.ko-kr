@@ -21,7 +21,7 @@ caps.handback.revision: 34
 # 표시기 개요
 표시기\(adorner\)는 사용자에게 시각적 큐를 제공하기 위해 사용되는 <xref:System.Windows.FrameworkElement>의 특수 형식입니다.  또한 표시기를 사용하여 함수 핸들을 요소에 추가하거나 컨트롤에 대한 상태 정보를 제공할 수 있습니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="about_Adorners"></a>   
 ## 표시기 정보  

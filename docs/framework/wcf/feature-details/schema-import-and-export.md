@@ -53,7 +53,7 @@ caps.handback.revision: 14
   
  예를 들어 다음과 같은 스키마 단편은 가져오기 기본 설정을 사용하여 가져올 수 없습니다.  
   
- [!code[c_SchemaImportExport#9](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#9)]  
+ <!-- TODO: review snippet reference [!code[c_SchemaImportExport#9](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#9)]  -->  
   
  [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)합니다. 스키마가 데이터 계약 규칙을 따르지 않으면 다른 serialization 엔진을 사용합니다. 예를 들어는 <xref:System.Xml.Serialization.XmlSerializer> 자체 별도 스키마 가져오기 메커니즘을 사용 합니다. 또한 지원되는 스키마 범위가 확장되는 특별한 가져오기 모드도 있습니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]생성 하는 방법에 대 한 섹션 <xref:System.Xml.Serialization.IXmlSerializable> 의 형식은 [스키마를 생성 하는 클래스를 가져와서](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)합니다.  
   

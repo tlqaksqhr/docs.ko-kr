@@ -23,7 +23,7 @@ caps.handback.revision: 12
 # TypeConverter 및 XAML
 이 항목에서는 일반적인 XAML 언어 기능인 문자열 형식 변환의 목적에 대해 소개합니다.  .NET Framework에서 <xref:System.ComponentModel.TypeConverter> 클래스에는 관리되는 사용자 지정 클래스에 대한 구현에서 XAML 특성 구문의 속성 값으로 사용할 수 있는 특수한 기능이 있습니다.  사용자 지정 클래스를 작성한 다음 클래스의 인스턴스를 XAML에서 설정할 수 있는 특성 값으로 사용하려면 클래스에 <xref:System.ComponentModel.TypeConverterAttribute>를 적용하거나, 사용자 지정 <xref:System.ComponentModel.TypeConverter> 클래스를 작성하거나, 둘 다 수행해야 합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 ## 형식 변환 개념  
   

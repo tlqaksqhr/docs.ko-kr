@@ -59,7 +59,7 @@ Id 모델 인프라에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.
          다음 코드 예제에서는 `MyResourceType`이라는 사용자 지정 리소스 형식을 정의합니다.  
   
          [!code-csharp[c_CustomClaim#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#2)]
-         [!code-vb[c_CustomClaim#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#2)]  
+         <!-- TODO: review snippet reference [!code-vb[c_CustomClaim#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#2)]  -->  
   
     3.  
           [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 정의된 권한이나 사용자 지정 권한의 고유 값을 선택합니다.  
@@ -71,7 +71,7 @@ Id 모델 인프라에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.
          다음 코드 예제에서는 클레임 유형의 사용자 지정 클레임을 만듭니다 `http://example.org/claims/complexcustomclaim`, 사용자 지정 리소스 유형의 `MyResourceType`, 및는 <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> 오른쪽입니다.  
   
      [!code-csharp[c_CustomClaim#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#5)]
-     [!code-vb[c_CustomClaim#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#5)]  
+     <!-- TODO: review snippet reference [!code-vb[c_CustomClaim#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#5)]  -->  
   
 ## <a name="example"></a>예제  
  다음 코드 예제에서는 기본 리소스 형식의 사용자 지정 클레임과 기본이 아닌 리소스 형식의 사용자 지정 클레임을 만드는 방법을 보여 줍니다.  

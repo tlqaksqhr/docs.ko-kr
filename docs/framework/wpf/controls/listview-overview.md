@@ -22,7 +22,7 @@ caps.handback.revision: 24
 # ListView 개요
 <xref:System.Windows.Controls.ListView> 컨트롤은 데이터 항목 집합을 여러 레이아웃이나 뷰에 표시하기 위한 인프라를 제공합니다.  예를 들어 사용자가 데이터 항목을 표에 표시하고 열을 정렬해야 할 수 있습니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="WhatisaListView"></a>   
 ## ListView 정의  

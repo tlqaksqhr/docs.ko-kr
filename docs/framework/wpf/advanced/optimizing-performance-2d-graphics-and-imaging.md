@@ -26,7 +26,7 @@ caps.handback.revision: 7
 # 성능 최적화: 2차원 그래픽 및 이미징
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 응용 프로그램 요구 사항에 맞게 최적화할 수 있는 광범위한 2차원 그래픽 및 이미징 기능을 제공합니다.  이 항목에서는 이러한 영역에서의 성능 최적화에 대한 정보를 제공합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Drawing_and_Shapes"></a>   
 ## 그리기 및 도형  

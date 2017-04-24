@@ -43,7 +43,7 @@ caps.handback.revision: 21
   
  이 항목에서는 응용 프로그램 데이터 파일을 구성하고 사용하는 방법을 설명합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Resource_Files"></a>   
 ## 리소스 파일  

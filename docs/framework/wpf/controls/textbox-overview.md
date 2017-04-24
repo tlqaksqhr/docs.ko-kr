@@ -22,7 +22,7 @@ caps.handback.revision: 9
 # TextBox 개요
 <xref:System.Windows.Controls.TextBox> 클래스를 사용하면 서식 없는 텍스트를 표시하거나 편집할 수 있습니다.  <xref:System.Windows.Controls.TextBox>의 일반적인 용도는 폼에 있는 서식 없는 텍스트를 편집하는 것입니다.  예를 들어 사용자의 이름, 전화 번호 등을 묻는 폼은 텍스트 입력을 위한 <xref:System.Windows.Controls.TextBox> 컨트롤을 사용할 것입니다.  이 항목에서는 <xref:System.Windows.Controls.TextBox> 클래스를 소개하고 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 및 [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)]에서 이 클래스를 사용하는 방법에 대한 예제를 제공합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="textbox_or_richtextbox"></a>   
 ## TextBox 또는 RichTextBox?  

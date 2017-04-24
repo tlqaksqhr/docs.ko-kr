@@ -26,7 +26,7 @@ caps.handback.revision: 24
 # Drawing 개체 개요
 이 항목에서는 <xref:System.Windows.Media.Drawing> 개체를 소개하고 이 개체를 사용하여 도형, 비트맵, 텍스트 및 미디어를 효율적으로 그리는 방법을 설명합니다.  클립 아트를 만들거나, <xref:System.Windows.Media.DrawingBrush>를 사용하여 그리거나, <xref:System.Windows.Media.Visual> 개체를 사용할 때 <xref:System.Windows.Media.Drawing> 개체를 사용하십시오.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="whatisadrawingsection"></a>   
 ## Drawing 개체란?  

@@ -35,7 +35,7 @@ caps.handback.revision: 20
   
  이러한 응용 프로그램 집합을 빌드하기 위해 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 서비스 호스트를 구현합니다.  이 항목에서는 이러한 서비스에 대한 개요와 더 자세한 정보를 찾을 수 있는 링크를 제공합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Application_Management"></a>   
 ## 응용 프로그램 관리  

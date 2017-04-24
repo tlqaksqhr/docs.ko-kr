@@ -35,7 +35,7 @@ caps.handback.revision: 9
   
 3.  Web.config 파일을 만들어 신뢰할 수 있는 세션이 활성화되어 있고 필요한 메시지 배달 순서가 지정된 상태에서 <xref:System.ServiceModel.WSHttpBinding>을 사용하는 `CalculatorService`의 끝점을 구성합니다.  
   
-     [!code[c_HowTo_UseReliableSession#2111](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_usereliablesession/common/web.config#2111)]  
+     <!-- TODO: review snippet reference [!code[c_HowTo_UseReliableSession#2111](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_usereliablesession/common/web.config#2111)]  -->  
   
 4.  다음 줄을 포함하는 Service.svc 파일을 만듭니다.  
   
@@ -63,7 +63,7 @@ caps.handback.revision: 9
   
 4.  또한 Svcutil.exe는 <xref:System.ServiceModel.WSHttpBinding> 클래스를 사용하는 클라이언트의 구성도 생성합니다.이 파일은 [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]를 사용하는 경우 이름을 App.config로 지정해야 합니다.  
   
-     [!code[C_HowTo_UseReliableSession#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_usereliablesession/common/app.config#2211)]  
+     <!-- TODO: review snippet reference [!code[C_HowTo_UseReliableSession#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_usereliablesession/common/app.config#2211)]  -->  
   
 5.  응용 프로그램에서 `ClientCalculator`의 인스턴스를 만든 다음 서비스 작업을 호출합니다.  
   

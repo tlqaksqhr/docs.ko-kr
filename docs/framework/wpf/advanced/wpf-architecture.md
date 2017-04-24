@@ -54,7 +54,7 @@ caps.handback.revision: 16
 # WPF 아키텍처
 이 항목에서는 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 클래스 계층의 둘러보기를 제공합니다.  이 항목은 대부분의 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 주요 하위 시스템을 다루며 이들이 어떻게 상호 작용하는지를 설명하며,  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]의 설계자가 선택한 몇 가지 사항에 대해서 자세히 설명합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="System_Object"></a>   
 ## System.Object  

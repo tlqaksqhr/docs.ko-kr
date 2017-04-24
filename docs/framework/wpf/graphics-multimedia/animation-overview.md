@@ -110,7 +110,7 @@ caps.handback.revision: 73
   
 1.  만들기는 <xref:System.Windows.Media.Animation.Storyboard> 애니메이션을 자식으로 추가 합니다. 다음에 만드는 방법을 보여 줍니다는 <xref:System.Windows.Media.Animation.Storyboard> xaml에서입니다.  
   
-     [!code-xml[animation_ovws2#RectangleOpacityFadeExampleXaml_5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_5)]  
+     <!-- TODO: review snippet reference [!code-xml[animation_ovws2#RectangleOpacityFadeExampleXaml_5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_5)]  -->  
   
      만드는 <xref:System.Windows.Media.Animation.Storyboard> 코드에서 선언 된 <xref:System.Windows.Media.Animation.Storyboard> 클래스 수준에서 변수입니다.  
   

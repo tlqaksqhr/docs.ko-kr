@@ -22,7 +22,7 @@ caps.handback.revision: 26
 # WPF 응용 프로그램 배포(WPF)
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 응용 프로그램을 빌드한 후 배포해야 합니다.  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 및 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]에는 여러 배포 기술이 포함되어 있습니다.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 배포하는 데 사용되는 배포 기술은 응용 프로그램의 종류에 따라 다릅니다.  이 항목에서는 각 배포 기술에 대해 간략하게 살펴보고 각 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램 종류의 배포 요구 사항에 이러한 기술을 결합하는 방법에 대해 설명합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Deployment_Technologies"></a>   
 ## 배포 기술  

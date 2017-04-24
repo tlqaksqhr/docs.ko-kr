@@ -31,8 +31,8 @@ caps.handback.revision: 19
   
  <xref:System.Windows.Controls.Label> 컨트롤은 텍스트 줄 바꿈을 지원하지 않습니다.  여러 줄로 줄 바꿈되는 레이블이 필요한 경우 텍스트 줄 바꿈을 지원하는 다른 요소를 중첩시키고 해당 요소를 레이블 내부에 배치할 수 있습니다.  다음 예제에서는 <xref:System.Windows.Controls.TextBlock>을 사용하여 여러 줄의 텍스트로 줄 바꿈되는 레이블을 만드는 방법을 보여 줍니다.  
   
- [!code-xml[Label#5](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#5)]
- [!code-xml[Label#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#5)]  
+ <!-- TODO: review snippet reference [!code-xml[Label#5](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#5)]  -->
+ <!-- TODO: review snippet reference [!code-xml[Label#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#5)]  -->  
   
  **레이블에 선택키 및 텍스트 줄 바꿈 추가**  
   
@@ -42,8 +42,8 @@ caps.handback.revision: 19
   
  다음 예제에서는 선택키가 있고 텍스트 줄 바꿈을 지원하는 <xref:System.Windows.Controls.Label>을 만드는 방법을 보여 줍니다.  텍스트 줄 바꿈을 사용하기 위해 예제에서는 <xref:System.Windows.Controls.AccessText.TextWrapping%2A> 속성을 설정하고 밑줄 문자를 사용하여 선택키를 지정합니다.  이 경우 밑줄 문자 바로 다음에 오는 문자가 선택키가 됩니다.  
   
- [!code-xml[Label#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#4)]
- [!code-xml[Label#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#4)]  
+ <!-- TODO: review snippet reference [!code-xml[Label#4](../../../../samples/snippets/xaml/VS_Snippets_Wpf/Label/XAML/Pane1.xaml#4)]  -->
+ <!-- TODO: review snippet reference [!code-xml[Label#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Label/CS/Pane1.xaml#4)]  -->  
   
 ## 참고 항목  
  [How to: Set the Target Property of a Label](http://msdn.microsoft.com/ko-kr/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)

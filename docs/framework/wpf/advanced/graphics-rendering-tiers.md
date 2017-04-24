@@ -25,7 +25,7 @@ caps.handback.revision: 43
 # 그래픽 렌더링 계층
 렌더링 계층은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 실행하는 장치의 그래픽 하드웨어 기능 및 성능 수준을 정의합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="graphics_hardware"></a>   
 ## 그래픽 하드웨어  

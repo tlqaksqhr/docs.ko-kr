@@ -28,7 +28,7 @@ caps.handback.revision: 12
 > [!NOTE]
 >  이 문서에 나오는 모든 코드 예제는 [Advanced Text Formatting 샘플](http://go.microsoft.com/fwlink/?LinkID=159965)에서 찾을 수 있습니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prereq"></a>   
 ## 사전 요구 사항  

@@ -46,7 +46,7 @@ caps.handback.revision: 31
   
  이러한 위치에서 이러한 형식의 파일을 식별하고 로드하는 일관성 있는 메커니즘을 제공하기 위해 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 *Pack URI 체계*의 확장성을 이용합니다.  이 항목에서는 태그와 코드에서 Pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]를 사용하는 방법을 보여 주기 전에 이 체계를 개략적으로 소개하고 다양한 시나리오에서 Pack [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]를 구성하는 방법을 설명하며 절대 및 상대 [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]와 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 확인에 대해 설명합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="The_Pack_URI_Scheme"></a>   
 ## Pack URI 체계  

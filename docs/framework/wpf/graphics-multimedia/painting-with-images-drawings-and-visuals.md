@@ -26,7 +26,7 @@ caps.handback.revision: 27
 # 이미지, 그림 및 시각적 표시로 그리기
 이 항목에서는 <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush> 및 <xref:System.Windows.Media.VisualBrush> 개체를 사용하여 영역에 이미지, <xref:System.Windows.Media.Drawing> 또는 <xref:System.Windows.Media.Visual>을 그리는 방법을 보여 줍니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prereqs"></a>   
 ## 사전 요구 사항  

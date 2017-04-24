@@ -32,7 +32,7 @@ caps.handback.revision: 23
  <xref:System.ServiceModel.BasicHttpBinding> 기존 웹 서비스와 상호 운용 하는 클래스 및 해당 서비스의 대부분은 인터넷 정보 서비스 (IIS)에서 호스팅됩니다. 따라서 이 바인딩에 대한 전송 보안은 IIS 사이트와 매끄럽게 상호 운용하도록 디자인되었습니다. 보안 모드를 설정 하 여 이렇게 <xref:System.ServiceModel.BasicHttpSecurityMode> 로 설정한 다음 클라이언트 자격 증명 유형으로 설정 합니다. 자격 증명 형식 값은 IIS 디렉터리 보안 메커니즘에 해당됩니다. 다음 코드에서는 설정되는 모드와 Windows로 설정된 자격 증명 형식을 보여 줍니다. 이러한 구성은 클라이언트와 서버가 같은 Windows 도메인에 있는 경우에 사용할 수 있습니다.  
   
  [!code-csharp[c_ProgrammingSecurity#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#10)]
- [!code-vb[c_ProgrammingSecurity#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#10)]  
+ <!-- TODO: review snippet reference [!code-vb[c_ProgrammingSecurity#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#10)]  -->  
   
  또는 다음 구성을 사용할 수도 있습니다.  
   

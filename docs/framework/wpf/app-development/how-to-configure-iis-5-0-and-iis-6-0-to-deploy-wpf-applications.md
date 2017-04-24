@@ -32,7 +32,7 @@ caps.handback.revision: 17
   
  이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 배포할 수 있도록 [!INCLUDE[TLA#tla_iis50](../../../../includes/tlasharptla-iis50-md.md)] 및 [!INCLUDE[TLA#tla_iis60](../../../../includes/tlasharptla-iis60-md.md)]을 구성하는 방법을 설명합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 > [!NOTE]
 >  레지스트리에서 *UserAgent* 문자열을 검사하여 시스템에 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]이 설치되어 있는지 확인할 수 있습니다.  자세한 내용 및 *UserAgent* 문자열을 검사하여 시스템에 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]이 설치되었는지 확인하는 스크립트를 보려면 [.NET Framework 3.0 설치 여부 확인](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)을 참조하십시오.  

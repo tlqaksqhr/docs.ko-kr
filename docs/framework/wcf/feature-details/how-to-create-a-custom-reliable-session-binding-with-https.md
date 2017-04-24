@@ -35,7 +35,7 @@ caps.handback.revision: 9
   
 3.  Web.config 파일을 만들어 신뢰할 수 있는 세션 및 HTTPS 전송을 사용하는 "reliableSessionOverHttps"라는 사용자 지정 바인딩과 함께 `CalculatorService`에 대한 끝점을 구성합니다.  
   
-     [!code[c_HowTo_CreateReliableSessionHTTPS#2111](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/web.config#2111)]  
+     <!-- TODO: review snippet reference [!code[c_HowTo_CreateReliableSessionHTTPS#2111](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/web.config#2111)]  -->  
   
 4.  다음 줄을 포함하는 Service.svc 파일을 만듭니다.  
   
@@ -63,7 +63,7 @@ caps.handback.revision: 9
   
 4.  신뢰할 수 있는 세션 및 HTTPS 전송을 사용하는 "reliableSessionOverHttps"라는 사용자 지정 바인딩을 구성합니다.  
   
-     [!code[C_HowTo_CreateReliableSessionHTTPS#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/app.config#2211)]  
+     <!-- TODO: review snippet reference [!code[C_HowTo_CreateReliableSessionHTTPS#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_createreliablesessionhttps/common/app.config#2211)]  -->  
   
 5.  응용 프로그램에서 `ClientCalculator`의 인스턴스를 만든 다음 서비스 작업을 호출합니다.  
   

@@ -21,7 +21,7 @@ caps.handback.revision: 18
 # 기본 요소 개요
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 클래스 중에는 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 설명서에서 일반적으로 기본 요소 클래스라고 하는 네 가지 클래스에서 파생된 클래스가 많습니다.  이 네 가지 클래스는 <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement> 및 <xref:System.Windows.FrameworkContentElement>입니다.  <xref:System.Windows.DependencyObject> 클래스도 <xref:System.Windows.UIElement> 및 <xref:System.Windows.ContentElement>의 공통 기본 클래스이므로 관련이 있습니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="base_apis"></a>   
 ## WPF 클래스의 기본 요소 API  

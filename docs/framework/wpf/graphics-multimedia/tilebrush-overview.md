@@ -22,7 +22,7 @@ caps.handback.revision: 11
 # TileBrush 개요
 <xref:System.Windows.Media.TileBrush> 개체를 사용하면 이미지, <xref:System.Windows.Media.Drawing> 또는 <xref:System.Windows.Media.Visual>로 영역을 그리는 방법을 다양하게 제어할 수 있습니다.  이 항목에서는 <xref:System.Windows.Media.TileBrush> 기능을 사용하여 <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush> 또는 <xref:System.Windows.Media.VisualBrush>로 영역을 그리는 방법을 보다 잘 제어할 수 있는 방법에 대해 설명합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisite"></a>   
 ## 사전 요구 사항  

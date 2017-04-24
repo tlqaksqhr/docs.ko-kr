@@ -25,7 +25,7 @@ caps.handback.revision: 16
   
  이 항목에서는 스티커 메모 및 강조 표시 등과 같은 일반적인 주석의 유형을 검토하고, [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)]에서 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 문서 보기 컨트롤을 통해 응용 프로그램에 이러한 유형의 주석을 사용하는 방법을 보여 줍니다.  주석을 지원하는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 문서 보기 컨트롤에는 <xref:System.Windows.Controls.DocumentViewer> 및 <xref:System.Windows.Controls.FlowDocumentPageViewer>와 같은 <xref:System.Windows.Controls.Primitives.DocumentViewerBase>에서 파생된 컨트롤뿐만 아니라 <xref:System.Windows.Controls.FlowDocumentReader> 및 <xref:System.Windows.Controls.FlowDocumentScrollViewer>도 포함됩니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="caf1_type_stickynotes"></a>   
 ## 스티커 메모  

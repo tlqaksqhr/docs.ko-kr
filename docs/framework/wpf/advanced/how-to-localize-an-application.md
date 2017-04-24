@@ -26,7 +26,7 @@ caps.handback.revision: 33
 > [!NOTE]
 >  LocBaml 도구는 프로덕션용 응용 프로그램이 아닙니다.  지역화 API 중 일부를 사용하며 지역화 도구를 작성하는 방법을 설명하는 샘플로 제공됩니다.  
 >   
->  [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+>    
   
 <a name="Introduction"></a>   
 ## 개요  

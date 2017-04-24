@@ -28,7 +28,7 @@ HTTPS\(HTTP를 통한 TLS\(전송 계층 보안\)\) 또는 TCP를 통한 TLS와 
  HTTPS를 사용하여 클라이언트와 서비스 간에 통신하는 경우 서버에서 인증하는 데 사용하는 인증서는 신뢰 체인을 기본적으로 지원해야 합니다.즉, 신뢰할 수 있는 루트 인증 기관에 연결되어야 합니다.인증서가 해지되었는지 여부를 확인하기 위해 온라인 확인을 수행하지는 않습니다.다음 코드에서처럼 <xref:System.Net.Security.RemoteCertificateValidationCallback> 콜백을 등록하여 이 동작을 재정의할 수 있습니다.  
   
  [!code-csharp[c_CertificateValidationDifferences#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_certificatevalidationdifferences/cs/source.cs#1)]
- [!code-vb[c_CertificateValidationDifferences#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_certificatevalidationdifferences/vb/source.vb#1)]  
+ <!-- TODO: review snippet reference [!code-vb[c_CertificateValidationDifferences#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_certificatevalidationdifferences/vb/source.vb#1)]  -->  
   
  여기서 `ValidateServerCertificate`의 서명은 다음과 같습니다.  
   

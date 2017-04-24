@@ -21,7 +21,7 @@ caps.handback.revision: 42
 # WPF 응용 프로그램 만들기(WPF)
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 응용 프로그램은 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 실행 파일\(.exe\)이나 라이브러리\(.dll\)로 만들거나 두 형식의 어셈블리를 결합하여 만들 수 있습니다.  이 항목에서는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 빌드하는 방법을 소개하고 빌드 프로세스의 주요 단계에 대해 설명합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Building_a_WPF_Application_using_Command_Line"></a>   
 ## WPF 응용 프로그램 빌드  

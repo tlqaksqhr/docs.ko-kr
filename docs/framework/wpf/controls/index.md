@@ -21,7 +21,7 @@ caps.handback.revision: 9
 # 컨트롤
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 <xref:System.Windows.Controls.Button>, <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.Menu> 및 <xref:System.Windows.Controls.ListBox>와 같이 거의 모든 Windows 응용 프로그램에서 사용되는 대부분의 일반 UI 구성 요소가 제공됩니다.  지금까지는 이러한 개체를 컨트롤이라고 했습니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] SDK에서는 응용 프로그램의 시각적 개체를 나타내는 모든 클래스를 대략적으로 의미하기 위해 "컨트롤"이라는 용어를 계속 사용하지만 클래스가 시각적 존재가 되기 위해 <xref:System.Windows.Controls.Control> 클래스에서 상속될 필요가 없다는 점이 중요합니다.  <xref:System.Windows.Controls.Control> 클래스에서 상속되는 클래스에는 <xref:System.Windows.Controls.ControlTemplate>가 포함되어 있으므로 컨트롤 소비자는 새 서브클래스를 만들 필요 없이 컨트롤 모양을 완전히 변경할 수 있습니다.  이 항목에서는 컨트롤\(<xref:System.Windows.Controls.Control> 클래스에서 상속되는 경우와 상속되지 않는 경우 모두\)이 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 일반적으로 사용되는 방법에 대해 설명합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="creating_an_instance_of_a_control"></a>   
 ## 컨트롤의 인스턴스 만들기  

@@ -25,7 +25,7 @@ caps.handback.revision: 36
   
  <xref:System.Windows.Controls.Page> 클래스는 구조적 탐색을 지원하지 않습니다.  대신 <xref:System.Windows.Controls.Page>에서 <xref:System.Windows.Navigation.PageFunction%601> 클래스가 파생되어 구조적 탐색에 필요한 기본 생성자를 제공합니다.  이 항목에서는 <xref:System.Windows.Navigation.PageFunction%601>을 사용하여 구조적 탐색을 설정하는 방법을 보여 줍니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Structured_Navigation"></a>   
 ## 구조적 탐색  

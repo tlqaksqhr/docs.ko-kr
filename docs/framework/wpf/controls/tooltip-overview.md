@@ -22,7 +22,7 @@ caps.handback.revision: 21
 # 도구 설명 개요
 도구 설명은 마우스 포인터를 <xref:System.Windows.Controls.Button>과 같은 요소 위에 잠시 올려 두면 나타나는 작은 팝업 창입니다.  이 항목에서는 도구 설명을 소개하고 도구 설명의 콘텐츠를 만들고 사용자 지정하는 방법을 설명합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="what_is_a_tooltip"></a>   
 ## 도구 설명 정의  
