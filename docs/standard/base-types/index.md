@@ -1,35 +1,48 @@
 ---
-title: "기본 형식 작업"
-description: "기본 형식 작업"
-keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
-ms.date: 07/22/2016
+title: ".NET Framework에서 기본 형식 작업 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-4.6
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
 ms.topic: article
-ms.prod: .net
-ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: e53e414f-e0b6-4076-a6ab-189ba93e23cd
+helpviewer_keywords:
+- types, base
+- base types
+- type system, base types
+ms.assetid: 028d0ce8-ebc2-4a88-a16f-17508f6d0bd6
+caps.latest.revision: 14
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 2be90e0a3e6627152532ff607768dbbb333045d7
-ms.lasthandoff: 04/05/2017
+ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
+ms.openlocfilehash: 57d672e45e5b316f155f4bdb05320a4a6c4129db
+ms.lasthandoff: 04/08/2017
 
 ---
-
-# <a name="working-with-base-types"></a>기본 형식 작업
-
-이 섹션에서는 형식 지정, 변환 및 일반 작업을 포함하여 .NET 기본 형식 작업에 대해 설명합니다.
-
-## <a name="in-this-section"></a>단원 내용
-
-[형식 변환](type-conversion.md) - 형식 간에 변환하는 방법을 설명합니다.
-
-[형식 서식 지정](formatting-types.md) - 문자열 형식 지정자를 사용하여 문자열 형식을 지정하는 방법을 설명합니다.
-
-[문자열 조작](manipulating-strings.md) - 문자열을 조작하고 형식을 지정하는 방법을 설명합니다.
-
-[문자열 구문 분석](parsing-strings.md) - 문자열을 형식으로 변환하는 방법을 설명합니다.
-
-[공용 형식 시스템](common-type-system.md) - .NET에서 사용되는 형식에 대해 설명합니다.
-
+# <a name="working-with-base-types-in-the-net-framework"></a>.NET Framework에서 기본 형식 작업
+이 섹션에서는 형식 지정, 변환 및 일반 작업을 포함하여 .NET Framework 기본 형식 작업에 대해 설명합니다.  
+  
+## <a name="in-this-section"></a>단원 내용  
+ [.NET Framework의 형식 변환](../../../docs/standard/base-types/type-conversion.md)  
+ 형식 간에 변환하는 방법을 설명합니다.  
+  
+ [형식 서식 지정](../../../docs/standard/base-types/formatting-types.md)  
+ 문자열 형식 지정자를 사용하여 문자열 형식을 지정하는 방법을 설명합니다.  
+  
+ [문자열 조작](../../../docs/standard/base-types/manipulating-strings.md)  
+ 문자열을 조작하고 형식을 지정하는 방법을 설명합니다.  
+  
+ [문자열 구문 분석](../../../docs/standard/base-types/parsing-strings.md)  
+ 문자열을 .NET Framework 형식으로 변환하는 방법을 설명합니다.  
+  
+## <a name="related-sections"></a>관련 단원  
+ [공용 형식 시스템](../../../docs/standard/base-types/common-type-system.md)  
+ .NET Framework에서 사용되는 형식에 대해 설명합니다.  
+  
+ [날짜, 시간 및 표준 시간대](../../../docs/standard/datetime/index.md)  
+ 표준 시간대 인식 응용 프로그램에서 표준 시간대 및 표준 시간대 변환 작업을 수행하는 방법을 설명합니다.
