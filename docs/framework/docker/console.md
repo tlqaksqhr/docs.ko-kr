@@ -3,7 +3,6 @@ title: "Docker에서 콘솔 응용 프로그램 실행"
 description: "기존 .NET Framework 콘솔 응용 프로그램을 가져와 Windows Docker 컨테이너에서 실행하는 방법을 알아봅니다."
 author: spboyer
 keywords: ".NET, 컨테이너, 콘솔, 응용 프로그램"
-manager: wpickett
 ms.date: 09/28/2016
 ms.topic: article
 ms.prod: .net-framework-4.6
@@ -11,8 +10,9 @@ ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
 translationtype: Human Translation
-ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: 6d311674cc50c8a86128cf88c39e3044f70ba183
+ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
+ms.openlocfilehash: 4f1034763e4dae3711694b441b7a64b40cc99456
+ms.lasthandoff: 04/18/2017
 
 ---
 
@@ -26,7 +26,7 @@ Docker 및 Windows Server 컨테이너를 사용하도록 콘솔 응용 프로�
 
 대답 외에도 `Environment.MachineName`이 응답에 추가되어 로컬과 Windows 컨테이너에서 실행 중인 응용 프로그램 간의 차이를 보여 줍니다. 로컬에서 응용 프로그램을 실행하는 경우 로컬 컴퓨터 이름이 반환되어야 하며, Windows 컨테이너에서 실행하는 경우 컨테이너 세션 ID가 반환됩니다.
 
-전체 예제는 [GitHub의 dotnet/core-docs 리포지토리](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator)에서 확인할 수 있습니다.
+[전체 예제](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator)는 GitHub의 dotnet/docs 리포지토리에서 확인할 수 있습니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
 
 응용 프로그램을 컨테이너로 이동하는 작업을 시작하기 전에 몇 가지 Docker 용어를 알고 있어야 합니다.
 
@@ -51,7 +51,7 @@ Docker 사이트에서 [Docker 개요](https://docs.docker.com/engine/understand
 Windows 컨테이너는 [Windows 10 1주년 업데이트](https://www.microsoft.com/en-us/software-download/windows10/) 또는 [Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server)에서 지원됩니다.
 
 > [!NOTE]
->Windows Server 2016을 사용하는 경우 Windows용 Docker 설치 관리자에서 해당 기능을 사용하도록 설정되지 않기에, 수동으로 컨테이너를 사용하도록 설정해야 합니다. OS에 대한 업데이트가 모두 실행되었는지 확인한 다음 [컨테이너 호스트 배포](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/deployment/deployment) 문서의 지침에 따라 컨테이너 및 Docker 기능을 설치합니다.
+>Windows Server 2016을 사용하는 경우 Windows용 Docker 설치 관리자에서 해당 기능을 사용하도록 설정되지 않기에, 수동으로 컨테이너를 사용하도록 설정해야 합니다. OS에 대한 업데이트가 모두 실행되었는지 확인한 다음 [컨테이너 호스트 배포](https://msdn.microsoft.com/virtualization/windowscontainers/deployment/deployment) 문서의 지침에 따라 컨테이너 및 Docker 기능을 설치합니다.
 
 Windows 컨테이너를 지원하려면 Windows용 Docker 버전 1.12 베타 26 이상이 있어야 합니다. 기본적으로 Docker는 Linux 기반 컨테이너를 사용합니다. 시스템 트레이에서 Docker 아이콘을 마우스 오른쪽 단추로 클릭하고 **Windows 컨테이너로 전환**을 선택하여 Windows 컨테이너로 전환합니다. Docker에서 변경 프로세스가 실행되며 다시 시작해야 할 수도 있습니다.
 
@@ -60,7 +60,7 @@ Windows 컨테이너를 지원하려면 Windows용 Docker 버전 1.12 베타 26 
 ## <a name="building-the-application"></a>응용 프로그램 빌드
 일반적으로 콘솔 응용 프로그램은 설치 관리자, FTP 또는 파일 공유 배포를 통해 배포됩니다. 컨테이너에 배포하는 경우 자산을 컴파일하고 Docker 이미지를 만들 때 사용할 수 있는 위치에 스테이징해야 합니다.
 
-*build.ps1*에서 스크립트는 [MSBuild](https://msdn.microsoft.com/en-us/library/dd393574.aspx)를 통해 응용 프로그램을 컴파일하여 자산 빌드 태스크를 완료합니다. 필요한 자산을 마무리하기 위해 MSBuild에 몇 개의 매개 변수가 전달됩니다. 컴파일할 프로젝트 파일 또는 솔루션의 이름, 출력 위치, 마지막으로 구성(릴리스 또는 디버그)입니다.
+*build.ps1*에서 스크립트는 [MSBuild](https://msdn.microsoft.com/library/dd393574.aspx)를 통해 응용 프로그램을 컴파일하여 자산 빌드 태스크를 완료합니다. 필요한 자산을 마무리하기 위해 MSBuild에 몇 개의 매개 변수가 전달됩니다. 컴파일할 프로젝트 파일 또는 솔루션의 이름, 출력 위치, 마지막으로 구성(릴리스 또는 디버그)입니다.
 
 `Invoke-MSBuild` 호출에서 `OutputPath`는 **publish**로 설정되고 `Configuration`은 **릴리스**로 설정됩니다. 
 
@@ -144,9 +144,4 @@ docker run --rm console-random-answer-generator "Are you a square container?"
 
 ## <a name="summary"></a>요약
 Dockerfile을 추가하고 응용 프로그램을 게시하기만 하면 .NET Framework 콘솔 응용 프로그램을 컨테이너화할 수 있으며, 이제 응용 프로그램 코드를 변경하지 않고 여러 인스턴스 실행, 클린 시작 및 중지 등의 Windows Server 2016 기능을 활용할 수 있습니다.
-
-
-
-<!--HONumber=Nov16_HO3-->
-
 

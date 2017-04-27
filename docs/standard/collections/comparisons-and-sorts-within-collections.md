@@ -1,204 +1,71 @@
 ---
-title: "컬렉션 내에서 비교 및 정렬"
-description: "컬렉션 내에서 비교 및 정렬"
-keywords: .NET, .NET Core
+title: "컬렉션 내에서 비교 및 정렬 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sorting data, collections
+- IComparable.CompareTo method
+- Collections classes
+- Equals method
+- collections [.NET Framework], comparisons
+ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
+caps.latest.revision: 11
 author: mairaw
 ms.author: mairaw
-ms.date: 06/20/2016
-ms.topic: article
-ms.prod: .net
-ms.technology: dotnet-standard
-ms.devlang: dotnet
-ms.assetid: c7b7c005-628d-427a-91ad-af0c3958c00e
+manager: wpickett
 translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 6826c0c2e86d0a1add1f88b001c13143ee098634
-ms.lasthandoff: 03/02/2017
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 0da0bed43cb7871f522b94b134afb164d8ee3ab5
+ms.lasthandoff: 04/18/2017
 
 ---
-
 # <a name="comparisons-and-sorts-within-collections"></a>컬렉션 내에서 비교 및 정렬
-
-[System.Collections](https://docs.microsoft.com/dotnet/core/api/System.Collections) 클래스는 제거할 요소 검색, 키-값 쌍의 값 반환 등 컬렉션 관리와 관련된 거의 모든 프로세스에서 비교 연산을 수행합니다.
-
-컬렉션은 일반적으로 같음 비교자 및/또는 순서 비교자를 사용합니다. 비교에는 두 가지 구문이 사용됩니다. 
-
-## <a name="checking-for-equality"></a>같음 확인
-
-`Contains`, `IndexOf`, `LastIndexOf`, `Remove` 등의 메서드는 컬렉션 요소에 대해 같음 비교자를 사용합니다. 제네릭 컬렉션의 경우 다음 지침에 따라 동일한 항목인지를 비교합니다.
-
-*   T 형식이 [IEquatable&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.IEquatable-1) 제네릭 인터페이스를 구현하는 경우 같음 비교자는 해당 인터페이스의 `Equals` 메서드입니다.
-
-*   T 형식이 `IEquatable<T>`을 구현하지 않는 경우에는 `Object.Equals`가 사용됩니다.
-
-또한 사전 컬렉션의 일부 생성자 오버로드는 같은 키인지를 비교하는 데 사용되는 [IEqualityComparer&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IEqualityComparer-1) 구현을 허용합니다.
-
-## <a name="determining-sort-order"></a>정렬 순서 결정
-
-`BinarySearch` 및 `Sort`와 같은 메서드는 컬렉션 요소에 대해 순서 비교자를 사용합니다. 컬렉션의 요소를 비교할 수도 있고 특정 요소와 지정된 값을 비교할 수도 있습니다. 개체를 비교하는 경우 기본 비교자 및 명시적 비교자의 개념이 적용됩니다. 
-
-기본 비교자는 비교 대상 개체 중 하나 이상을 사용하여 `IComparable` 인터페이스를 구현합니다. 사용되는 모든 클래스에서 목록 컬렉션의 값 또는 사전 컬렉션의 키로서 `IComparable`을 구현하는 것이 좋습니다. 제네릭 컬렉션의 경우 다음 기준에 따라 같음 비교를 결정합니다.
-
-*   [System.IComparable&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.IComparable-1) 제네릭 인터페이스를 구현하는 T 형식인 경우 기본 비교자는 해당 인터페이스의 `CompareTo(T)` 메서드입니다.
-
-*   제네릭이 아닌 [System.IComparable](https://docs.microsoft.com/dotnet/core/api/System.IComparable) 인터페이스를 구현하는 T 형식인 경우 기본 비교자는 해당 인터페이스의 `CompareTo`(개체) 메서드입니다.
-
-*   T 형식이 두 인터페이스를 모두 구현하지 않는 경우에는 기본 비교자가 없으며 비교자 또는 비교 대리자를 명시적으로 제공해야 합니다.
-
-일부 메서드에는 명시적 비교를 제공하기 위해 매개 변수로서 `IComparer` 구현이 허용됩니다. 예를 들어는 `List<T>.Sort` 메서드에 [System.Collections.Generic.IComparer&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IComparer-1) 구현이 허용됩니다. 
-
-## <a name="equality-and-sort-example"></a>같음 및 정렬 예제
-
-다음 코드에서는 [IEquatable&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.IEquatable-1) 및[IComparable&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.IComparable-1)를 간단한 비즈니스 개체에 구현합니다. 또한 개체를 목록에 저장하고 정렬할 때 `Sort()` 메서드를 호출하면 'Part' 형식의 기본 비교자가 사용되며, 무명 메서드를 사용하여 `Sort(Comparison<T>)` 메서드가 구현됩니다.
-
-C#
-
-```csharp
-using System;
-using System.Collections.Generic;
-// Simple business object. A PartId is used to identify the type of part 
-// but the part name can change. 
-public class Part : IEquatable<Part> , IComparable<Part>
-{
-    public string PartName { get; set; }
-
-    public int PartId { get; set; }
-
-    public override string ToString()
-    {
-        return "ID: " + PartId + "   Name: " + PartName;
-    }
-    public override bool Equals(object obj)
-    {
-        if (obj == null) return false;
-        Part objAsPart = obj as Part;
-        if (objAsPart == null) return false;
-        else return Equals(objAsPart);
-    }
-    public int SortByNameAscending(string name1, string name2)
-    {
-
-        return name1.CompareTo(name2);
-    }
-
-    // Default comparer for Part type.
-    public int CompareTo(Part comparePart)
-    {
-          // A null value means that this object is greater.
-        if (comparePart == null)
-            return 1;
-
-        else
-            return this.PartId.CompareTo(comparePart.PartId);
-    }
-    public override int GetHashCode()
-    {
-        return PartId;
-    }
-    public bool Equals(Part other)
-    {
-        if (other == null) return false;
-        return (this.PartId.Equals(other.PartId));
-    }
-    // Should also override == and != operators.
-
-}
-public class Example
-{
-    public static void Main()
-    {
-        // Create a list of parts.
-        List<Part> parts = new List<Part>();
-
-        // Add parts to the list.
-        parts.Add(new Part() { PartName = "regular seat", PartId = 1434 });
-        parts.Add(new Part() { PartName= "crank arm", PartId = 1234 });
-        parts.Add(new Part() { PartName = "shift lever", PartId = 1634 }); ;
-        // Name intentionally left null.
-        parts.Add(new Part() {  PartId = 1334 });
-        parts.Add(new Part() { PartName = "banana seat", PartId = 1444 });
-        parts.Add(new Part() { PartName = "cassette", PartId = 1534 });
-
-
-        // Write out the parts in the list. This will call the overridden 
-        // ToString method in the Part class.
-        Console.WriteLine("\nBefore sort:");
-        foreach (Part aPart in parts)
-        {
-            Console.WriteLine(aPart);
-        }
-
-
-        // Call Sort on the list. This will use the 
-        // default comparer, which is the Compare method 
-        // implemented on Part.
-        parts.Sort();
-
-
-        Console.WriteLine("\nAfter sort by part number:");
-        foreach (Part aPart in parts)
-        {
-            Console.WriteLine(aPart);
-        }
-
-        // This shows calling the Sort(Comparison(T) overload using 
-        // an anonymous method for the Comparison delegate. 
-        // This method treats null as the lesser of two values.
-        parts.Sort(delegate(Part x, Part y)
-        {
-            if (x.PartName == null && y.PartName == null) return 0;
-            else if (x.PartName == null) return -1;
-            else if (y.PartName == null) return 1;
-            else return x.PartName.CompareTo(y.PartName);
-        });
-
-        Console.WriteLine("\nAfter sort by name:");
-        foreach (Part aPart in parts)
-        {
-            Console.WriteLine(aPart);
-        }
-
-        /*
-
-            Before sort:
-        ID: 1434   Name: regular seat
-        ID: 1234   Name: crank arm
-        ID: 1634   Name: shift lever
-        ID: 1334   Name:
-        ID: 1444   Name: banana seat
-        ID: 1534   Name: cassette
-
-        After sort by part number:
-        ID: 1234   Name: crank arm
-        ID: 1334   Name:
-        ID: 1434   Name: regular seat
-        ID: 1444   Name: banana seat
-        ID: 1534   Name: cassette
-        ID: 1634   Name: shift lever
-
-        After sort by name:
-        ID: 1334   Name:
-        ID: 1444   Name: banana seat
-        ID: 1534   Name: cassette
-        ID: 1234   Name: crank arm
-        ID: 1434   Name: regular seat
-        ID: 1634   Name: shift lever
-
-         */
-
-    }
-}
-```
-
-## <a name="see-also"></a>참고 항목
-
-[IComparer](https://docs.microsoft.com/dotnet/core/api/System.Collections.IComparer)
-
-[IEquatable&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.IEquatable-1)
-
-[IComparer&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IComparer-1)
-
-[IComparable](https://docs.microsoft.com/dotnet/core/api/System.IComparable)
-
-[IComparable&lt;T&gt;](https://docs.microsoft.com/dotnet/core/api/System.IComparable-1)
-
+<xref:System.Collections> 클래스는 제거할 요소 검색, 키-값 쌍의 값 반환 등 컬렉션 관리와 관련된 거의 모든 프로세스에서 비교 연산을 수행합니다.  
+  
+ 컬렉션은 일반적으로 같음 비교자 및/또는 순서 비교자를 사용합니다. 비교에는 두 가지 구문이 사용됩니다.  
+  
+<a name="BKMK_Checkingforequality"></a>   
+## <a name="checking-for-equality"></a>같음 확인  
+ `Contains`, <xref:System.Collections.IList.IndexOf%2A>, <xref:System.Collections.Generic.List%601.LastIndexOf%2A> 및 `Remove`와 같은 메서드는 컬렉션 요소에 대해 같음 비교자를 사용합니다. 제네릭 컬렉션의 경우 다음 지침에 따라 항목이 같은지를 비교합니다.  
+  
+-   T 형식이 <xref:System.IEquatable%601> 제네릭 인터페이스를 구현하는 경우 같음 비교자는 해당 인터페이스의 <xref:System.IEquatable%601.Equals%2A> 메서드입니다.  
+  
+-   형식 T가 <xref:System.IEquatable%601>을 구현하지 않는 경우 <xref:System.Object.Equals%2A?displayProperty=fullName>가 사용됩니다.  
+  
+ 또한 사전 컬렉션의 일부 생성자 오버로드는 같은 키인지를 비교하는 데 사용되는 <xref:System.Collections.Generic.IEqualityComparer%601> 구현을 허용합니다. 예를 들어 <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A?displayProperty=fullName> 생성자를 참조하세요.  
+  
+<a name="BKMK_Determiningsortorder"></a>   
+## <a name="determining-sort-order"></a>정렬 순서 결정  
+ `BinarySearch` 및 `Sort`와 같은 메서드는 컬렉션 요소에 대해 순서 비교자를 사용합니다. 컬렉션의 요소를 비교할 수도 있고 특정 요소와 지정된 값을 비교할 수도 있습니다. 개체를 비교하는 경우에는 `default comparer` 및 `explicit comparer`의 개념이 적용됩니다.  
+  
+ 기본 비교자는 비교 대상 개체 중 하나 이상을 사용하여 **IComparable** 인터페이스를 구현합니다. 사용되는 모든 클래스에 대해 **IComparable**을 목록 컬렉션의 값 또는 사전 컬렉션의 키로 구현하는 것이 좋습니다. 제네릭 컬렉션의 경우 다음 기준에 따라 같음 비교를 결정합니다.  
+  
+-   T 형식이 <xref:System.IComparable%601?displayProperty=fullName> 제네릭 인터페이스를 구현하는 경우 기본 비교자는 해당 인터페이스의 <xref:System.IComparable%601.CompareTo%28%600%29?displayProperty=fullName> 메서드입니다.  
+  
+-   T 형식이 <xref:System.IComparable?displayProperty=fullName> 비제네릭 인터페이스를 구현하는 경우 기본 비교자는 해당 인터페이스의 <xref:System.IComparable.CompareTo%28System.Object%29?displayProperty=fullName> 메서드입니다.  
+  
+-   T 형식이 두 인터페이스를 모두 구현하지 않는 경우에는 기본 비교자가 없으며 비교자 또는 비교 대리자를 명시적으로 제공해야 합니다.  
+  
+ 명시적 비교를 제공할 수 있도록 일부 메서드는 매개 변수로 **IComparer** 구현을 허용합니다. 예를 들어 <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=fullName> 메서드는 <xref:System.Collections.Generic.IComparer%601?displayProperty=fullName> 구현을 수락합니다.  
+  
+ 시스템의 현재 문화권 설정은 컬렉션 내의 비교와 정렬에 영향을 줄 수 있습니다. 기본적으로 **Collections** 클래스의 비교 및 정렬은 문화권을 구분합니다. 문화권 설정을 무시하고 일관된 비교 및 정렬 결과를 얻으려면 <xref:System.Globalization.CultureInfo>를 허용하는 멤버 오버로드에서 <xref:System.Globalization.CultureInfo.InvariantCulture%2A>를 사용합니다. 자세한 내용은 [컬렉션에서 문화권을 구분하지 않는 문자열 작업 수행](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) 및 [배열에서 문화권을 구분하지 않는 문자열 작업 수행](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-arrays.md)을 참조하세요.  
+  
+<a name="BKMK_Equalityandsortexample"></a>   
+## <a name="equality-and-sort-example"></a>같음 및 정렬 예제  
+ 다음 코드에서는 <xref:System.IEquatable%601> 및 <xref:System.IComparable%601>을 간단한 비즈니스 개체에 구현합니다. 또한 개체를 목록에 저장하고 정렬할 때 <xref:System.Collections.Generic.List%601.Sort> 메서드를 호출하면 `Part` 형식에 대해 기본 비교자가 사용되며, 무명 메서드를 사용하여 <xref:System.Collections.Generic.List%601.Sort%28System.Comparison%7B%600%7D%29> 메서드가 구현됩니다.  
+  
+ [!code-csharp[System.Collections.Generic.List.Sort#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.list.sort/cs/program.cs#1)]
+ [!code-vb[System.Collections.Generic.List.Sort#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.list.sort/vb/module1.vb#1)]  
+  
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Collections.IComparer>   
+ <xref:System.IEquatable%601>   
+ <xref:System.Collections.Generic.IComparer%601>   
+ <xref:System.IComparable>   
+ <xref:System.IComparable%601>
