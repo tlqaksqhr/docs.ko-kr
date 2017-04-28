@@ -22,7 +22,7 @@ ms.lasthandoff: 04/08/2017
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>C 시작#</h3>
+                                    <h3>C# 시작</h3>
                                 </div>
                             </div>
                         </div>
