@@ -24,9 +24,9 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: cd8012c393050091b801bbe10e53d0c910ca2620
-ms.lasthandoff: 04/08/2017
+ms.sourcegitcommit: 1fabc43044b6e0fa765a7c2f225add8b7eb923f5
+ms.openlocfilehash: a1914325966fc1b65cf4677328a165fbe1e0f776
+ms.lasthandoff: 04/13/2017
 
 ---
 # <a name="security-in-the-net-framework"></a>.NET Framework의 보안
@@ -51,9 +51,10 @@ ms.lasthandoff: 04/08/2017
  [비관리 코드에 대한 보안 코딩 지침](../../../docs/framework/security/secure-coding-guidelines-for-unmanaged-code.md)  
  비관리 코드를 호출할 때 모범 사례 및 보안 고려 사항 중 일부에 대해 설명합니다.  
   
- [Windows Identity Foundation](../../../docs/framework/security/windows-identity-foundation.md)  
+ [Windows Identity Foundation](../../../docs/framework/security/index.md)  
  응용 프로그램에서 클레임 기반 ID를 구현하는 방법을 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
  [개발 가이드](../../../docs/framework/development-guide.md)  
  만들기, 구성, 디버깅, 보안, 응용 프로그램 배포, 동적 프로그래밍에 대한 정보, 상호 운용성, 확장성, 메모리 관리 및 스레딩을 포함하여 응용 프로그램 개발에 대한 모든 주요 기술 분야 및 작업에 대한 지침을 제공합니다.
+
