@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
 translationtype: Human Translation
-ms.sourcegitcommit: 7cb3ed91b4dd80286035f8f445e7bbb43641e4e9
-ms.openlocfilehash: b0fd29de1879990dada25cd50df83f6675bf85d9
-ms.lasthandoff: 04/20/2017
+ms.sourcegitcommit: 6b30f41e3fb07a962542a09a41c698efee7ebb5a
+ms.openlocfilehash: 0a37c8dd2e1264d0b1b946ef9fe479ce4cf828fb
+ms.lasthandoff: 04/26/2017
 
 ---
 
@@ -80,3 +80,4 @@ CLI 도구를 사용하여 .NET Core 앱을 배포하는 방법을 보여 주는
 [Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md) (Visual Studio를 사용하여 .NET Core 앱 배포)  
 [패키지, 메타패키지 및 프레임워크](../packages.md)   
 [.NET Core RID(런타임 식별자) 카탈로그](../rid-catalog.md)
+
