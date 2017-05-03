@@ -40,7 +40,7 @@
 ### [dotnet 테스트 및 MSTest를 사용한 유닛 테스트](core/testing/unit-testing-with-mstest.md)
 ## [버전 관리](core/versions/index.md)
 ### [.NET Core 지원](core/versions/lts-current.md)
-### [🔧 서비스](core/versions/servicing.md)
+<!--### [🔧 Servicing](core/versions/servicing.md)-->
 ## [런타임 식별자 카탈로그](core/rid-catalog.md)
 ## [.NET Core CLI 도구](core/tools/index.md)
 ### [원격 분석](core/tools/telemetry.md)
@@ -76,7 +76,7 @@
 ### [.NET Core용 프로젝트 구성](core/porting/project-structure.md)
 ### [타사 종속성 분석](core/porting/third-party-deps.md)
 ### [라이브러리 이식](core/porting/libraries.md)
-### [🔧 NuGet 패키지](core/porting/nuget-packages.md)
+<!--### [🔧 NuGet packages](core/porting/nuget-packages.md)-->
 ## [VS 2015/project.json 문서](project-json.md)
 <!-- End .NET Core Content -->
 
@@ -130,9 +130,8 @@
 ### [C# 7의 새로운 기능](csharp/whats-new/csharp-7.md)
 ### [C# 6의 새로운 기능](csharp/whats-new/csharp-6.md)
 <!-- End What's New -->
-## [🔧 C# Interactive](csharp/interactive/)
+<!--## [🔧 C# Interactive](csharp/interactive/)-->
 <!-- Do this section later, once master redirects are in place -->
-## [C# 개념](csharp/concepts.md)
 ### [C# 형식 시스템](csharp/programming-guide/types/index.md)
 ### [네임스페이스](csharp/programming-guide/namespaces/index.md)
 ### [기본 형식](csharp/basic-types.md)
@@ -140,7 +139,7 @@
 ### [구조체](csharp/structs.md)
 ### [튜플](csharp/tuples.md)
 ### [인터페이스](csharp/programming-guide/interfaces/index.md)
-### [ 메서드 및 람다 식](csharp/methods-lambda-expressions.md)
+<!--### [🔧 Methods and Lambda Expressions](csharp/methods-lambda-expressions.md)-->
 #### [메서드](csharp/methods.md)
 #### [람다 식](csharp/lambda-expressions.md)
 ### [속성](csharp/properties.md)
@@ -158,7 +157,7 @@
 #### [대리자 및 이벤트를 구별](csharp/distinguish-delegates-events.md)
 ### [LINQ(Language-Integrated Query)](csharp/linq/)
 ### [비동기 프로그래밍](csharp/async.md)
-### [🔧 병렬 프로그래밍](csharp/parallel.md)
+<!--### [🔧 Parallel programming](csharp/parallel.md)-->
 ### [패턴 일치](csharp/pattern-matching.md)
 ### [식 트리](csharp/expression-trees.md)
 #### [식 트리 설명](csharp/expression-trees-explained.md)
@@ -169,11 +168,11 @@
 #### [식 변환](csharp/expression-trees-translating.md)
 #### [요약](csharp/expression-trees-summary.md)
 ### [기본 상호 운용성](csharp/programming-guide/interop/index.md)
-### [🔧 리플렉션 및 코드 생성](csharp/reflection.md)
+<!--### [🔧 Reflection & code generation](csharp/reflection.md)-->
 ### [코드 문서화](csharp/codedoc.md)
 ### [버전 관리](csharp/versioning.md)
 <!-- End of C# Concepts section -->
-## [🔧 .NET 컴파일러 플랫폼 사용](csharp/roslyn/index.md)
+<!--## [🔧 Using the .NET Compiler Platform](csharp/roslyn/index.md)-->
 ## [C# 프로그래밍 가이드](csharp/programming-guide/)
 ## [언어 참조](csharp/language-reference/)
 ## [연습](csharp/walkthroughs.md)
@@ -184,10 +183,10 @@
 
 ## [F# 둘러보기](fsharp/tour.md)
 
-## [함수형 프로그래밍 소개](fsharp/introduction-to-functional-programming/index.md)
+<!--## [Introduction to Functional Programming](fsharp/introduction-to-functional-programming/index.md)-->
 ### [첫 번째 클래스 값 함수](fsharp/introduction-to-functional-programming/functions-as-first-class-values.md)
 
-## [자습서](fsharp/tutorials/index.md)
+<!--## [Tutorials](fsharp/tutorials/index.md)-->
 ### [시작](fsharp/tutorials/getting-started/index.md)
 #### [Visual Studio 시작](fsharp/tutorials/getting-started/getting-started-visual-studio.md)
 #### [Visual Studio Code 및 Ionide 시작](fsharp/tutorials/getting-started/getting-started-vscode.md)
@@ -204,10 +203,10 @@
 #### [형식 공급자 만들기](fsharp/tutorials/type-providers/creating-a-type-provider.md)
 #### [형식 공급자 보안](fsharp/tutorials/type-providers/type-provider-security.md)
 #### [형식 공급자 문제 해결](fsharp/tutorials/type-providers/troubleshooting-type-providers.md)
-### [비동기 및 동시 실행 프로그래밍](fsharp/tutorials/asynchronous-and-concurrent-programming/index.md)
+<!--### [Asynchronous and Concurrent Programming](fsharp/tutorials/asynchronous-and-concurrent-programming/index.md)-->
 #### [비동기 프로그래밍](fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
 
-## [Visual Studio에서 F# 사용](fsharp/using-fsharp-in-visual-studio/index.md)
+<!--## [Using F# in Visual Studio](fsharp/using-fsharp-in-visual-studio/index.md)-->
 ### [Visual F# 개발 환경 기능](fsharp/using-fsharp-in-visual-studio/visual-fsharp-development-environment-features.md)
 ### [프로젝트 구성](fsharp/using-fsharp-in-visual-studio/configuring-projects.md)
 ### [이전 버전의 .NET 대상 지정](fsharp/using-fsharp-in-visual-studio/targeting-older-versions-of-net.md)
@@ -217,7 +216,7 @@
 ### [F#을 사용하여 Azure File Storage 시작](fsharp/using-fsharp-on-azure/file-storage.md)
 ### [F#을 사용하여 Azure Queue Storage 시작](fsharp/using-fsharp-on-azure/queue-storage.md)
 ### [F#을 사용하여 Azure Table Storage 시작](fsharp/using-fsharp-on-azure/table-storage.md)
-### [Azure Service Fabric에서 F# 사용](fsharp/using-fsharp-on-azure/using-fsharp-on-azure-service-fabric.md)
+<!--### [Using F# on Azure Service Fabric](fsharp/using-fsharp-on-azure/using-fsharp-on-azure-service-fabric.md)-->
 ### [F# Azure 종속성에 대한 패키지 관리](fsharp/using-fsharp-on-azure/package-management.md)
 
 ## [F# 언어 참조](fsharp/language-reference/index.md)
