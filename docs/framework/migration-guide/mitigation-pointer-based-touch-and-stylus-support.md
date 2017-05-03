@@ -2,6 +2,7 @@
 title: "완화: 포인터 기반 터치 및 스타일러스 지원 | Microsoft Docs"
 ms.custom: 
 ms.date: 04/07/2017
+ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
