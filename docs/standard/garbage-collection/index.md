@@ -2,11 +2,10 @@
 title: "가비지 수집 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework-4.6
+ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,13 +29,13 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 114ed6917fc4bde5090df88848552cceb79d3192
-ms.lasthandoff: 04/08/2017
+ms.sourcegitcommit: e6c68eb589ce80fa6154c77840c8d4fdee4d8a81
+ms.openlocfilehash: b48c375c86b435e880e9ad9650941ab0f2329c3a
+ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="garbage-collection"></a>가비지 컬렉션
-.NET Framework의 가비지 수집기는 응용 프로그램의 메모리 할당 및 해제를 관리합니다. 새 개체를 만들 때마다 공용 언어 런타임이 관리되는 힙에서 개체에 대해 메모리를 할당합니다. 관리되는 힙에서 주소 공간을 사용할 수 있다면 런타임은 계속해서 새 개체에 공간을 할당합니다. 그러나 메모리는 무한하지 않습니다. 결국 가비지 수집기는 메모리를 확보하기 위해 수집을 수행해야 합니다. 가비지 수집기의 최적화 엔진은 수행 중인 할당에 따라 수집을 수행하기에 가장 적합한 시간을 결정합니다. 가비지 수집기는 수집을 수행할 때 응용 프로그램에서 더 이상 사용하고 있지 않은 관리되는 힙에 있는 개체를 확인하고 해당 메모리를 회수하는 데 필요한 작업을 수행합니다.  
+.NET의 가비지 수집기는 응용 프로그램의 메모리 할당 및 해제를 관리합니다. 새 개체를 만들 때마다 공용 언어 런타임이 관리되는 힙에서 개체에 대해 메모리를 할당합니다. 관리되는 힙에서 주소 공간을 사용할 수 있다면 런타임은 계속해서 새 개체에 공간을 할당합니다. 그러나 메모리는 무한하지 않습니다. 결국 가비지 수집기는 메모리를 확보하기 위해 수집을 수행해야 합니다. 가비지 수집기의 최적화 엔진은 수행 중인 할당에 따라 수집을 수행하기에 가장 적합한 시간을 결정합니다. 가비지 수집기는 수집을 수행할 때 응용 프로그램에서 더 이상 사용하고 있지 않은 관리되는 힙에 있는 개체를 확인하고 해당 메모리를 회수하는 데 필요한 작업을 수행합니다.  
   
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>관련 항목  
