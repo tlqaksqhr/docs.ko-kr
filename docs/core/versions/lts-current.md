@@ -9,9 +9,10 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: fedc7025-f320-4cba-957b-ef74885f66de
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 1ef17b16b85c81a0b96bb1712db3734dc67d801d
 ms.openlocfilehash: 582a521e6a30b740465890b6cb8c773061a98ea6
+ms.contentlocale: ko-kr
 ms.lasthandoff: 02/07/2017
 
 ---
