@@ -1,0 +1,108 @@
+---
+title: "&lt;webHttpBinding&gt; | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework-4.6"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
+caps.latest.revision: 13
+author: "Erikre"
+ms.author: "erikre"
+manager: "erikre"
+caps.handback.revision: 13
+---
+# &lt;webHttpBinding&gt;
+SOAP 메시지 대신 HTTP 요청에 응답하는 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 웹 서비스에 대한 끝점을 구성하는 데 사용되는 바인딩 요소를 정의합니다.  
+  
+## 구문  
+  
+```  
+  
+<webHttpBinding>  
+    <binding   
+        allowCookies="Boolean"  
+        bypassProxyOnLocal="Boolean"  
+        closeTimeout="TimeSpan"  
+        hostNameComparisonMode="StrongWildCard/Exact/WeakWildcard"  
+        maxBufferPoolSize="integer"  
+        maxBufferSize="integer"  
+        maxReceivedMessageSize="Integer"  
+        name="string"  
+        openTimeout="TimeSpan"   
+        proxyAddress="URI"  
+        receiveTimeout="TimeSpan"  
+        sendTimeout="TimeSpan"  
+                transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse"  
+        useDefaultWebProxy="Boolean">  
+  
+writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding"  
+        <security mode="None/Transport/TransportCredentialOnly">  
+            <transport clientCredentialType =   
+                 "Basic/Certificate/Digest/None/Ntlm/Windows"  
+                  proxyCredentialType="Basic/Digest/None/Ntlm/Windows"  
+                  realm="string" />  
+        </security>  
+       <readerQuotas   
+            maxArrayLength="Integer"  
+            maxBytesPerRead="Integer"  
+            maxDepth="Integer"   
+            maxNameTableCharCount="Integer"           
+            maxStringContentLength="Integer" />  
+    </binding>  
+</webHttpBinding>  
+```  
+  
+## 특성 및 요소  
+ 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+  
+### 특성  
+  
+|특성|설명|  
+|--------|--------|  
+|allowCookies|클라이언트가 쿠키를 수락하고 이를 앞으로의 요청에서 전파할지 여부를 나타내는 부울 값입니다.  기본값은 false입니다.<br /><br /> 쿠키를 사용하는 ASMX 웹 서비스와 상호 작용할 때 이 속성을 사용할 수 있습니다.  그러면 서버에서 반환된 쿠키가 해당 서비스에 대한 이후의 모든 클라이언트 요청에 자동으로 복사되도록 할 수 있습니다.|  
+|bypassProxyOnLocal|로컬 주소에 대해 프록시 서버를 사용하지 않을 것인지 여부를 나타내는 부울 값입니다.  기본값은 `false`입니다.|  
+|closeTimeout|닫기 작업을 완료하기 위해 제공된 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다.  이 값은 <xref:System.TimeSpan.Zero>보다 크거나 같아야 합니다.  기본값은 00:01:00입니다.|  
+|hostnameComparisonMode|URI 구문 분석에 사용되는 HTTP 호스트 이름 비교 모드를 지정합니다.  이 특성은 <xref:System.ServiceModel.HostnameComparisonMode> 형식이며 URI에 대해 비교할 때 호스트 이름이 서비스에 연결하는 데 사용되는지 여부를 나타냅니다.  기본값은 <xref:System.ServiceModel.HostnameComparisonMode.StrongWildcard>이며 이 값은 비교 시 호스트 이름을 무시합니다.|  
+|maxBufferPoolSize|이 바인딩의 최대 버퍼 풀 크기를 지정하는 정수입니다.  기본값은 524,288바이트\(512 \* 1024\)입니다.  WCF\(Windows Communication Foundation\)의 많은 부분에서 버퍼를 사용합니다.  버퍼를 사용할 때마다 만들고 삭제하면 비용이 많이 들며, 버퍼에 대한 가비지 수집 역시 비용이 많이 듭니다.  버퍼 풀이 있으면 이 풀로부터 버퍼를 가져와 사용한 다음 다시 풀로 반환할 수 있습니다.  따라서 버퍼를 만들고 삭제하는 데 오버헤드를 피할 수 있습니다.|  
+|maxBufferSize|채널에서 메시지를 수신하는 메시지 버퍼 관리자가 사용하도록 할당된 최대 메모리를 지정하는 정수입니다.  기본값은 524,288\(0x80000\)바이트입니다.|  
+|maxReceivedMessageSize|헤더를 비롯하여 이 바인딩으로 구성된 채널에서 받을 수 있는 최대 메시지 크기\(바이트\)를 지정하는 양의 정수입니다.  이 한도를 초과하는 메시지 보낸 사람은 오류를 받습니다.  수신자는 메시지를 삭제하고 추적 로그에 이벤트 항목을 만듭니다.  기본값은 65536입니다. **Note:**  ASP.NET 호환 모드에서 이 값을 높이는 것만으로는 충분하지 않으며,  `httpRuntime` 값도 높여야 합니다\([httpRuntime 요소\(ASP.NET 설정 스키마\)](http://msdn.microsoft.com/ko-kr/e9b81350-8aaf-47cc-9843-5f7d0c59f369) 참조\).|  
+|name|바인딩의 구성 이름을 포함하는 문자열입니다.  이 값은 바인딩의 ID로 사용되므로 고유해야 합니다.  [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)]부터는 바인딩 및 동작에 이름이 필요하지 않습니다.  기본 구성 및 이름 없는 바인딩 및 동작에 대한 자세한 내용은 [단순화된 구성](../../../../../docs/framework/wcf/simplified-configuration.md) 및 [WCF 서비스를 위한 단순화된 구성](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)을 참조하세요.|  
+|openTimeout|열기 작업을 완료하기 위해 제공된 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다.  이 값은 <xref:System.TimeSpan.Zero>보다 크거나 같아야 합니다.  기본값은 00:01:00입니다.|  
+|proxyAddress|HTTP 프록시의 주소를 지정하는 URI입니다.  `useSystemWebProxy`가 `true`일 경우 이 설정은 `null`이어야 합니다.  기본값은 `null`입니다.|  
+|receiveTimeout|받기 작업을 완료하기 위해 제공된 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다.  이 값은 <xref:System.TimeSpan.Zero>보다 크거나 같아야 합니다.  기본값은 00:01:00입니다.|  
+|sendTimeout|보내기 작업을 완료하기 위해 제공된 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다.  이 값은 <xref:System.TimeSpan.Zero>보다 크거나 같아야 합니다.  기본값은 00:01:00입니다.|  
+|transferMode.|바인딩으로 구성된 서비스가 메시지 전송에 스트리밍 모드를 사용할지, 버퍼링 모드를 사용할지 또는 둘 다를 사용할지를 지정하는 <xref:System.ServiceModel.TransferMode> 값입니다.  기본값은 `Buffered`입니다.|  
+|useDefaultWebProxy|시스템의 자동 구성된 HTTP 프록시 사용 여부를 지정하는 부울 값입니다.  기본값은 `true`입니다.|  
+|writeEncoding|메시지 텍스트에 사용되는 문자 인코딩을 지정합니다.  유효한 값은 다음과 같습니다.<br /><br /> UnicodeFffeTextEncoding: 유니코드 BigEndian 인코딩<br /><br /> Utf16TextEncoding: 16비트 인코딩<br /><br /> Utf8TextEncoding: 8비트 인코딩<br /><br /> 기본값은 Utf8TextEncoding입니다.|  
+  
+### 자식 요소  
+  
+|요소|설명|  
+|--------|--------|  
+|[\<readerQuotas\>](../Topic/%3CreaderQuotas%3E.md)|이 바인딩으로 구성된 끝점에서 처리할 수 있는 POX 메시지의 복잡성에 대한 제약 조건을 정의합니다.  이 요소는 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement> 형식입니다.|  
+|[\<security\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-webhttpbinding.md)|바인딩에 대한 보안 설정을 정의합니다.  이 요소는 <xref:System.ServiceModel.Configuration.WebHttpSecurityElement> 형식입니다.|  
+  
+### 부모 요소  
+  
+|요소|설명|  
+|--------|--------|  
+|[\<bindings\>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|이 요소는 표준 및 사용자 지정 바인딩의 컬렉션을 보유합니다.|  
+  
+## 설명  
+ 개발자는 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 웹 프로그래밍 모델을 사용하여 SOAP 기반 메시징 대신 "POX\(Plain Old XML\)" 스타일 메시지를 사용하는 HTTP 요청을 통해 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 웹 서비스를 노출할 수 있습니다.  클라이언트가 HTTP 요청을 사용하여 서비스와 통신하려면 \<WebHttpBehavior\>가 연결된 [\<wsHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)으로 서비스 끝점을 구성해야 합니다.  
+  
+ 배포 및 ASP.AJAX 통합에 대한 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]의 지원은 둘 다 웹 프로그래밍 모델 위에 구축됩니다.  모델에 대한 자세한 내용은 [WCF 웹 HTTP 프로그래밍 모델](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)을 참조하세요.  
+  
+## 참고 항목  
+ <xref:System.ServiceModel.WebHttpBinding>   
+ <xref:System.ServiceModel.Configuration.WebHttpBindingElement>   
+ [WCF 웹 HTTP 프로그래밍 모델](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)   
+ [바인딩](../../../../../docs/framework/wcf/bindings.md)   
+ [시스템 제공 바인딩 구성](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
+ [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/ko-kr/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
+ [\<binding\>](../../../../../docs/framework/misc/binding.md)

@@ -1,0 +1,174 @@
+---
+title: "방법: 페더레이션 클라이언트 만들기 | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/30/2017"
+ms.prod: ".net-framework-4.6"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "dotnet-clr"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "페더레이션"
+  - "WCF, 페더레이션"
+ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
+caps.latest.revision: 21
+author: "Erikre"
+ms.author: "erikre"
+manager: "erikre"
+caps.handback.revision: 21
+---
+# 방법: 페더레이션 클라이언트 만들기
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 *페더레이션 서비스*에 대한 클라이언트 만들기는 세 개의 주요 단계로 구성됩니다.  
+  
+1.  [\<wsFederationHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) 또는 유사한 사용자 지정 바인딩을 구성합니다.적절한 바인딩 만들기에 대한 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]는 [방법: WSFederationHttpBinding 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)를 참조하십시오.또는 페더레이션 서비스의 메타데이터 끝점에 [ServiceModel Metadata 유틸리티 도구\(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)를 실행하여 페더레이션 서비스 및 하나 이상의 보안 토큰 서비스와 통신할 구성 파일을 생성합니다.  
+  
+2.  보안 토큰 서비스와 클라이언트의 상호 작용에 대한 다양한 측면을 제어하는 <xref:System.ServiceModel.Security.IssuedTokenClientCredential>의 속성을 설정합니다.  
+  
+3.  <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>의 속성을 설정합니다. 이 설정은 보안 토큰 서비스의 경우처럼 제공된 끝점과 안전하게 통신하는 데 필요한 인증서를 허용합니다.  
+  
+> [!NOTE]
+>  클라이언트가 가장된 자격 증명, <xref:System.ServiceModel.WSFederationHttpBinding> 바인딩 또는 사용자 지정 발급 토큰 및 비대칭 키를 사용할 때 <xref:System.Security.Cryptography.CryptographicException>이 throw될 수 있습니다.비대칭 키는 <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.IssuedKeyType%2A> 및 <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters.KeyType%2A> 속성이 각각 <xref:System.IdentityModel.Tokens.SecurityKeyType>로 설정된 경우 <xref:System.ServiceModel.WSFederationHttpBinding> 바인딩 및 사용자 지정 발급 토큰과 함께 사용됩니다.클라이언트가 메시지를 보내려고 할 때 및 클라이언트가 가장하고 있는 ID에 대해 사용자 프로필이 없을 때 <xref:System.Security.Cryptography.CryptographicException>이 throw됩니다.이 문제를 완화하려면 메시지를 보내기 전에 클라이언트 컴퓨터에 로그온하거나 `LoadUserProfile`을 호출합니다.  
+  
+ 이 항목에서는 이러한 절차에 대해 자세히 설명합니다.적절한 바인딩 만들기에 대한 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]는 [방법: WSFederationHttpBinding 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)를 참조하십시오.페더레이션 서비스가 작동하는 방식[!INCLUDE[crabout](../../../../includes/crabout-md.md)][페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)을 참조하십시오.  
+  
+### 페더레이션 서비스에 대한 구성을 생성하고 검사하려면  
+  
+1.  서비스의 메타데이터 URL 주소를 명령줄 매개 변수로 사용하여 [ServiceModel Metadata 유틸리티 도구\(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)를 실행합니다.  
+  
+2.  생성된 구성 파일을 적절한 편집기에서 엽니다.  
+  
+3.  생성된 [\<issuer\>](../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md) 및 [\<issuerMetadata\>](../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md) 요소의 특성 및 내용을 확인합니다.이들은 [\<wsFederationHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) 또는 사용자 지정 바인딩 요소의 [\<security\>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md) 요소 내에 있습니다.주소에 예상 도메인 이름 또는 다른 주소 정보가 포함되어 있는지 확인합니다.클라이언트가 이러한 주소를 인증하고 사용자 이름\/암호 쌍과 같은 정보를 노출할 수 있으므로 이 정보를 확인해야 합니다.해당 주소가 예상 주소가 아닐 경우 의도하지 않은 받는 사람에게 정보가 노출될 수 있습니다.  
+  
+4.  주석 처리된 \<`alternativeIssuedTokenParameters`\> 요소 내에서 추가 [\<issuedTokenParameters\>](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md) 요소를 확인합니다.Svcutil.exe 도구를 사용하여 페더레이션 서비스에 대한 구성을 생성할 때, 페더레이션 서비스 또는 중간 보안 토큰 서비스에서 발급자 주소를 지정하지 않고 여러 끝점을 노출하는 보안 토큰 서비스에 대한 메타데이터 주소를 지정하는 경우 결과 구성 파일이 첫 번째 끝점을 참조합니다.추가 끝점은 주석 처리된 \<`alternativeIssuedTokenParameters`\> 요소로 구성 파일에 있습니다.  
+  
+     이러한 \<`issuedTokenParameters`\> 중 하나가 구성에 이미 있던 것보다 나은지 여부를 결정합니다.예를 들어 클라이언트가 사용자 이름\/암호 쌍을 사용하지 않고 Windows [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 토큰을 사용하여 보안 토큰 서비스를 인증하는 것을 선호할 수 있습니다.  
+  
+    > [!NOTE]
+    >  서비스와 통신하기 전에 여러 보안 토큰 서비스를 이동해야 하는 경우 중간 보안 토큰 서비스가 클라이언트에 잘못된 보안 토큰 서비스를 지시할 수 있습니다.따라서 [\<issuedTokenParameters\>](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)의 보안 토큰 서비스 끝점이 예상 보안 토큰 서비스이며, 알 수 없는 보안 토큰 서비스가 아닌지를 확인합니다.  
+  
+### 코드에서 IssuedTokenClientCredential을 구성하려면  
+  
+1.  다음 예제 코드에서처럼 <xref:System.ServiceModel.Description.ClientCredentials> 클래스\(<xref:System.ServiceModel.ClientBase%601> 클래스의 <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> 속성 또는 <xref:System.ServiceModel.ChannelFactory> 클래스를 통해 반환된 클래스\)의 <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A> 속성을 통해 <xref:System.ServiceModel.Security.IssuedTokenClientCredential>에 액세스합니다.  
+  
+     [!code-csharp[c_CreateSTS#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#9)]
+     [!code-vb[c_CreateSTS#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#9)]  
+  
+2.  토큰 캐싱이 필요하지 않은 경우 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.CacheIssuedTokens%2A> 속성을 `false`로 설정합니다.<xref:System.ServiceModel.Security.IssuedTokenClientCredential.CacheIssuedTokens%2A> 속성은 보안 토큰 서비스의 이러한 토큰이 캐싱되었는지 여부를 제어합니다.이 속성이 `false`로 설정된 경우 클라이언트는 이전 토큰이 유효한지 여부에 관계없이 페더레이션 서비스에 자신을 다시 인증해야 할 때마다 보안 토큰 서비스로부터 새 토큰을 요청합니다.이 속성이 `true`로 설정된 경우 클라이언트는 토큰이 만료되지 않는 한 페더레이션 서비스에 자신을 다시 인증해야 할 때마다 기존 토큰을 다시 사용합니다.기본값은 `true`입니다.  
+  
+3.  캐싱된 토큰에서 시간 제한이 필요한 경우 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.MaxIssuedTokenCachingTime%2A> 속성을 <xref:System.TimeSpan> 값으로 설정합니다.이 속성은 토큰을 캐싱할 수 있는 기간을 지정합니다.지정한 시간 범위가 경과되면 토큰이 클라이언트 캐시로부터 제거됩니다.기본적으로 토큰은 무기한 캐싱됩니다.다음 예제에서는 이 시간 범위를 10분으로 설정합니다.  
+  
+     [!code-csharp[c_CreateSTS#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#15)]
+     [!code-vb[c_CreateSTS#15](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#15)]  
+  
+4.  선택적 요소입니다.<xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuedTokenRenewalThresholdPercentage%2A>를 백분율로 설정합니다.기본값은 60\(%\)입니다.이 속성은 토큰 유효 기간의 백분율을 지정합니다.예를 들어 발급한 토큰이 10시간 동안 유효하고 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuedTokenRenewalThresholdPercentage%2A>가 80으로 설정된 경우 8시간 후에 토큰이 갱신됩니다.다음 예제에서는 이 값을 80%로 설정합니다.  
+  
+     [!code-csharp[c_CreateSTS#16](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#16)]
+     [!code-vb[c_CreateSTS#16](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#16)]  
+  
+     토큰 유효 기간 및 `IssuedTokenRenewalThresholdPercentage` 값에 따라 결정되는 갱신 간격은 캐싱 시간이 갱신 임계값 시간보다 짧은 경우에 `MaxIssuedTokenCachingTime` 값으로 재정의됩니다.예를 들어 `IssuedTokenRenewalThresholdPercentage`와 토큰의 기간을 곱한 값이 8시간이고, `MaxIssuedTokenCachingTime` 값이 10분이면 클라이언트가 업데이트된 토큰에 대한 보안 토큰 서비스에 10분마다 연결합니다.  
+  
+5.  메시지 자격 증명에 메시지 보안 또는 전송 보안을 사용하지 않는 바인딩에서 <xref:System.ServiceModel.Security.SecurityKeyEntropyMode> 이외의 키 엔트로피 모드가 필요한 경우\(예: 바인딩에 <xref:System.ServiceModel.Channels.SecurityBindingElement>가 없는 경우\) <xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A> 속성을 적절한 값으로 설정합니다.*엔트로피* 모드는 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A> 속성을 사용하여 대칭 키를 제어할 수 있는지 여부를 결정합니다.이 기본값은 <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>입니다. 이 경우, 클라이언트와 토큰 발급자 모두 결합된 데이터를 제공하여 실제 키를 생성합니다.다른 값은 <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>와 <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>입니다. 즉, 전체 키가 클라이언트나 서버에 의해 각각 지정됩니다.다음 예제에서는 키에 대해 서버 데이터만 사용하도록 속성을 설정합니다.  
+  
+     [!code-csharp[c_CreateSTS#17](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#17)]
+     [!code-vb[c_CreateSTS#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#17)]  
+  
+    > [!NOTE]
+    >  <xref:System.ServiceModel.Channels.SecurityBindingElement>가 보안 토큰 서비스 또는 서비스 바인딩에 있는 경우 <xref:System.ServiceModel.Security.IssuedTokenClientCredential>에 설정된 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.DefaultKeyEntropyMode%2A>가 `SecurityBindingElement`의 <xref:System.ServiceModel.Channels.SecurityBindingElement.KeyEntropyMode%2A> 속성으로 재정의됩니다.  
+  
+6.  발급자 특정 끝점 동작을 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuerChannelBehaviors%2A> 속성에서 반환된 컬렉션에 추가하여 해당 동작을 구성합니다.  
+  
+     [!code-csharp[c_CreateSTS#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#14)]
+     [!code-vb[c_CreateSTS#14](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#14)]  
+  
+### 구성에서 IssuedTokenClientCredential을 구성하려면  
+  
+1.  끝점 동작에 [\<issuedToken\>](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) 요소의 자식으로 [\<issuedToken\>](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) 요소를 만듭니다.  
+  
+2.  토큰 캐싱이 필요하지 않은 경우 \<`issuedToken`\> 요소의 `cacheIssuedTokens` 특성을 `false`로 설정합니다.  
+  
+3.  캐싱된 토큰에서 시간 제한이 필요한 경우 \<`issuedToken`\> 요소의 `maxIssuedTokenCachingTime` 특성을 적절한 값으로 설정합니다.예를 들면 다음과 같습니다.  
+    `<issuedToken maxIssuedTokenCachingTime='00:10:00' />`  
+  
+4.  기본값 이외의 값을 사용하려는 경우에는 \<`issuedToken`\> 요소의 `issuedTokenRenewalThresholdPercentage` 특성을 적합한 값으로 설정합니다. 예를 들면 다음과 같습니다.  
+  
+    ```  
+    <issuedToken issuedTokenRenewalThresholdPercentage = "80" />  
+    ```  
+  
+5.  메시지 자격 증명에 메시지 보안 또는 전송 보안을 사용하지 않는 바인딩에 `CombinedEntropy` 이외의 키 엔트로피 모드가 있는 경우\(예: 바인딩에 `SecurityBindingElement`가 없는 경우\) `<issuedToken>` 요소의 `defaultKeyEntropyMode` 특성을 필요에 따라 `ServerEntropy` 또는 `ClientEntropy`로 설정합니다.  
+  
+    ```  
+    <issuedToken defaultKeyEntropyMode = "ServerEntropy" />  
+    ```  
+  
+6.  선택적 요소입니다.\<`issuerChannelBehaviors`\> 요소를 \<`issuedToken`\> 요소의 자식으로 만들어 발급자 특정 사용자 지정 끝점 동작을 구성합니다.각 동작에 대해 \<`issuerChannelBehaviors`\> 요소의 자식으로 \<`add`\> 요소를 만듭니다.\<`add`\> 요소에 `issuerAddress` 특성을 설정하여 동작의 발급자 주소를 지정합니다.\<`add`\> 요소에 `behaviorConfiguration` 특성을 설정하여 동작 자체를 지정합니다.  
+  
+    ```  
+    <issuerChannelBehaviors>  
+    <add issuerAddress="http://fabrikam.org/sts" behaviorConfiguration="FabrikamSTS" />  
+    </issuerChannelBehaviors>  
+    ```  
+  
+### 코드에 X509CertificateRecipientClientCredential을 구성하려면  
+  
+1.  <xref:System.ServiceModel.ChannelFactory> 속성 또는 <xref:System.ServiceModel.ClientBase%601> 클래스 <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> 속성의 <xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A> 속성을 통해 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>에 액세스합니다.  
+  
+     [!code-csharp[c_CreateSTS#18](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#18)]
+     [!code-vb[c_CreateSTS#18](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#18)]  
+  
+2.  <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 인스턴스를 제공된 끝점의 인증서에 사용할 수 있는 경우 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> 속성에서 반환된 컬렉션의 <xref:System.Collections.Generic.ICollection%601.Add%2A> 메서드를 사용합니다.  
+  
+     [!code-csharp[c_CreateSTS#19](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#19)]
+     [!code-vb[c_CreateSTS#19](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#19)]  
+  
+3.  <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 인스턴스를 사용할 수 없는 경우 다음 예제에서처럼 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential> 클래스의 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetScopedCertificate%2A> 메서드를 사용합니다.  
+  
+     [!code-csharp[c_CreateSTS#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#20)]
+     [!code-vb[c_CreateSTS#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#20)]  
+  
+### 구성에서 X509CertificateRecipientClientCredential을 구성하려면  
+  
+1.  [\<scopedCertificates\>](../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md) 요소를 끝점 동작에서 [\<clientCredentials\>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) 요소의 자식인 [\<serviceCertificate\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) 요소의 자식으로 만듭니다.  
+  
+2.  `<add>` 요소를 `<scopedCertificates>` 요소의 자식으로 만듭니다.적합한 인증서를 참조하도록 `storeLocation`, `storeName`, `x509FindType` 및 `findValue` 특성에 대한 값을 지정합니다.다음 예제에서처럼 인증서를 사용할 끝점의 주소를 제공하는 값으로 `targetUri` 특성을 설정합니다.  
+  
+    ```  
+    <scopedCertificates>  
+     <add targetUri="http://fabrikam.com/sts"   
+          storeLocation="CurrentUser"  
+          storeName="TrustedPeople"  
+          x509FindType="FindBySubjectName"  
+          findValue="FabrikamSTS" />  
+    </scopedCertificates>  
+    ```  
+  
+## 예제  
+ 다음 코드 샘플에서는 코드에 <xref:System.ServiceModel.Security.IssuedTokenClientCredential> 클래스의 인스턴스를 구성합니다.  
+  
+ [!code-csharp[c_FederatedClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federatedclient/cs/source.cs#2)]
+ [!code-vb[c_FederatedClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federatedclient/vb/source.vb#2)]  
+  
+## .NET Framework 보안  
+ 가능한 정보 노출을 방지하려면 Svcutil.exe 도구를 실행하여 페더레이션 끝점에서 메타데이터를 처리하는 클라이언트는 결과 보안 토큰 서비스 주소가 예상한 주소인지 확인해야 합니다.이러한 확인은 보안 토큰 서비스가 여러 끝점을 노출할 때 특히 중요합니다. 왜냐하면 Svcutil.exe 도구에서는 결과 구성 파일을 생성하여 이와 같은 첫 번째 끝점을 사용하지만 이 끝점이 클라이언트가 사용해야 하는 것이 아닐 수도 있기 때문입니다.  
+  
+## 필수 LocalIssuer  
+ 클라이언트가 항상 로컬 발급자를 사용해야 하는 경우, 체인의 두 번째에서 마지막까지의 보안 토큰 서비스가 발급자 주소나 발급자 메타데이터 주소를 지정하면 Svcutil.exe의 기본 출력으로 인해 로컬 발급자가 사용되지 않는다는 사실을 알아야 합니다.  
+  
+ <xref:System.ServiceModel.Security.IssuedTokenClientCredential> 클래스의 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A>, <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A> 및 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> 속성 설정[!INCLUDE[crabout](../../../../includes/crabout-md.md)][방법: 로컬 발급자 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)을 참조하십시오.  
+  
+## 범위가 지정된 인증서  
+ 보안 토큰 서비스와 통신할 서비스 인증서를 지정해야 하는 경우 일반적으로 인증서 협상이 사용되지 않으므로 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential> 클래스의 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> 속성을 사용하여 지정할 수 있습니다.<xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetDefaultCertificate%2A> 메서드는 <xref:System.Uri> 및 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>를 매개 변수로 사용합니다.지정한 인증서는 지정한 URI에서 끝점과 통신할 때 사용됩니다.또는 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.SetScopedCertificate%2A> 메서드를 사용하여 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> 속성에서 반환된 컬렉션에 인증서를 추가할 수 있습니다.  
+  
+> [!NOTE]
+>  제공된 URI로 범위가 지정된 인증서에 대한 클라이언트 개념은 이러한 URI에서 끝점을 노출하는 서비스로 아웃바운드 호출하는 응용 프로그램에만 적용됩니다.<xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 클래스의 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>에서 반환되는 컬렉션의 서버에 구성된 토큰처럼 발급된 토큰에 서명할 때 사용되는 인증서에는 적용되지 않습니다.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][방법: 페더레이션 서비스에서 자격 증명 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
+  
+## 참고 항목  
+ [Federation 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)   
+ [방법: WSFederationHttpBinding에서 보안 세션을 사용하지 않도록 설정](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)   
+ [방법: WSFederationHttpBinding 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)   
+ [방법: 페더레이션 서비스에서 자격 증명 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)   
+ [방법: 로컬 발급자 구성](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)   
+ [메타데이터 관련 보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)   
+ [방법: 메타데이터 끝점 보안 설정](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
