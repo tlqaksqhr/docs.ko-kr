@@ -26,7 +26,7 @@ caps.handback.revision: 33
 # 바인딩 선언 개요
 이 항목에서는 바인딩을 선언하는 여러 가지 방법을 설명합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Prereq"></a>   
 ## 사전 요구 사항  

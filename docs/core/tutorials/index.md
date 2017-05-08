@@ -10,9 +10,9 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
 translationtype: Human Translation
-ms.sourcegitcommit: ff143583ba62fc1d82561e739a75107e50ebee88
-ms.openlocfilehash: 3f8c62a6a3b179e146874761465ad2665c20a6dd
-ms.lasthandoff: 04/11/2017
+ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
+ms.openlocfilehash: 5630e2202f822015437bbb1d3f2cb751825e382b
+ms.lasthandoff: 05/03/2017
 
 ---
 
@@ -23,11 +23,11 @@ ms.lasthandoff: 04/11/2017
 ## <a name="building-applications-with-visual-studio-2017"></a>Visual Studio 2017을 사용하여 응용 프로그램 빌드
 
 - [C# Hello World 응용 프로그램 빌드](../../csharp/getting-started/with-visual-studio.md)
-- [C# Hello World 응용 프로그램 디버깅](../../csharp/getting-started/debugging-with-visual-studio-2017.md)
-- [C# Hello World 응용 프로그램 게시](../../csharp/getting-started/publishing-with-visual-studio-2017.md)
-- [C# 클래스 라이브러리 빌드](../../csharp/getting-started/library-with-visual-studio-2017.md)
+- [C# Hello World 응용 프로그램 디버깅](../../csharp/getting-started/debugging-with-visual-studio.md)
+- [C# Hello World 응용 프로그램 게시](../../csharp/getting-started/publishing-with-visual-studio.md)
+- [C# 클래스 라이브러리 빌드](../../csharp/getting-started/library-with-visual-studio.md)
 - [C# 클래스 라이브러리 테스트](../../csharp/getting-started/testing-library-with-visual-studio.md)
-- [.NET Core로 C# 클래스 라이브러리 사용](../../csharp/getting-started/consuming-library-with-visual-studio-2017.md)
+- [.NET Core로 C# 클래스 라이브러리 사용](../../csharp/getting-started/consuming-library-with-visual-studio.md)
 - [Windows에서 완전한 C# .NET Core 솔루션 빌드](using-on-windows-full-solution.md)
 - [NoSQL 자습서: .NET Core의 DocumentDB C# 콘솔 응용 프로그램 빌드](https://docs.microsoft.com/azure/documentdb/documentdb-dotnetcore-get-started)
 

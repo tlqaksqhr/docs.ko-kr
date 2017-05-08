@@ -33,7 +33,7 @@ caps.handback.revision: 3
  다음의 개념적 모델 함수는 강사가 고용된 이후 경과된 년 수를 반환합니다.  개념적 모델에 함수를 추가하는 방법은 [How to: Define Custom Functions in the Conceptual Model](http://msdn.microsoft.com/ko-kr/0dad7b8b-58f6-4271-b238-f34810d68e5f)를 참조하세요.  
   
  [!code-xml[DP ConceptualModelFunctions#1](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp conceptualmodelfunctions/xml/school.edmx#1)]
- [!code-xml[DP ConceptualModelFunctions#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp conceptualmodelfunctions/cs/obj/debug/edmxresourcestoembed/school.csdl#1)]  
+ <!-- TODO: review snippet reference [!code-xml[DP ConceptualModelFunctions#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp conceptualmodelfunctions/cs/obj/debug/edmxresourcestoembed/school.csdl#1)]  -->  
   
 ## 예제  
  다음에는 응용 프로그램에 아래 메서드를 추가하고 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>를 사용하여 이 메서드를 개념적 모델 함수에 매핑합니다.  

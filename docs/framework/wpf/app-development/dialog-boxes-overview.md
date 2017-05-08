@@ -38,7 +38,7 @@ caps.handback.revision: 24
   
  [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]여러 유형의 대화 상자, 메시지 상자, 일반 대화 상자 및 사용자 지정 대화 상자를 포함 하 여 만들 수 있습니다. 이 항목에서는 각, 설명 및 [대화 상자 샘플](http://go.microsoft.com/fwlink/?LinkID=159984) 일치 하는 예제를 제공 합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Message_Boxes"></a>   
 ## <a name="message-boxes"></a>메시지 상자  

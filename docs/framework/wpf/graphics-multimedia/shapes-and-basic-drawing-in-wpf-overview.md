@@ -27,7 +27,7 @@ caps.handback.revision: 14
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]은 그래픽 및 렌더링 서비스에 대한 여러 계층의 액세스를 제공합니다.  최상위 계층에서 <xref:System.Windows.Shapes.Shape> 개체는 사용이 간편하고 레이아웃 및 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 이벤트 시스템 참여와 같은 여러 유용한 기능을 제공합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="shapes"></a>   
 ## 도형 개체  

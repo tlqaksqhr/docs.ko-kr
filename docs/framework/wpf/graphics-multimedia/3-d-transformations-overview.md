@@ -22,7 +22,7 @@ caps.handback.revision: 17
 # 3차원 변환 개요
 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 그래픽 시스템에서 3차원 모델에 변환을 적용하는 방법을 설명합니다.  변환을 사용하면 개발자가 해당 항목을 정의하는 기준 값을 변경하지 않고도 모델의 위치, 크기 및 방향을 변경할 수 있습니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 ## 3차원 좌표 공간  
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 3차원 그래픽 콘텐츠는 2차원 요소 구조에 참여할 수 있는 요소인 <xref:System.Windows.Controls.Viewport3D>에 캡슐화됩니다.  그래픽 시스템에서는 Viewport3D를 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 다른 많은 요소처럼 2차원 시각적 요소로 처리합니다.  Viewport3D는 3차원 장면을 보여 주는 창\(뷰포트\)으로 작동합니다.  보다 정확히 말해 이는 3차원 장면이 투영되는 표면입니다.  동일한 장면 그래프에서 Viewport3D를 다른 2차원 그리기 개체와 함께 사용할 수 있지만 Viewport3D 내에서 2차원 및 3차원 개체가 상호 침투할 수 없습니다.  다음 설명에서 설명하는 좌표 공간은 Viewport3D 요소에 포함됩니다.  

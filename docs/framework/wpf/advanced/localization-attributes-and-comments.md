@@ -22,7 +22,7 @@ caps.handback.revision: 14
 # 지역화 특성 및 주석
 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 소스 코드 내의 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 지역화 주석과 속성은 지역화에 대한 규칙과 힌트를 제공하기 위해 개발자에 의해 제공됩니다.  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 지역화 주석에는 두 가지 정보 집합인 지역화 가능성 특성 및 자유 형식 지역화 주석이 포함됩니다.  지역화 가능성 특성은 지역화할 리소스를 나타내기 위해 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 지역화 API에 사용됩니다.  자유 형식 주석은 응용 프로그램 작성자가 포함하고 싶어하는 모든 정보입니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Localizer_Comments_"></a>   
 ## 지역화 주석  

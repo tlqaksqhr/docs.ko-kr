@@ -22,7 +22,7 @@ caps.handback.revision: 33
 # Popup 개요
 <xref:System.Windows.Controls.Primitives.Popup> 컨트롤은 지정된 요소나 화면 좌표를 기준으로 현재 응용 프로그램 창 위에 있는 별도의 창에 콘텐츠를 표시할 수 있는 방법을 제공합니다.  이 항목에서는 <xref:System.Windows.Controls.Primitives.Popup> 컨트롤을 소개하고 기본적인 사용 방법에 대한 정보를 제공합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="What_Is_a_Popup_"></a>   
 ## Popup 정의  

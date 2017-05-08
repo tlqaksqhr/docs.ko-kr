@@ -64,7 +64,7 @@ caps.handback.revision: 42
 8.  <xref:System.ServiceModel.ServiceHost> 클래스의 인스턴스를 만들어 서비스 형식 및 기본 주소 URI\(Uniform Resource Identifier\)를 나타내는 <xref:System.Type>을 [ServiceHost\(Type, Uri\<xref:System.ServiceModel.ServiceHost.%23ctor%28System.Type%2CSystem.Uri%5B%5D%29>에 전달합니다.메타데이터 게시를 사용하도록 설정한 다음 <xref:System.ServiceModel.ServiceHost>에서 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 메서드를 호출하여 서비스를 초기화하고 메시지를 받도록 서비스를 준비합니다.  
   
      [!code-csharp[CFX_SelfHost4#4](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#4)]
-     [!code-vb[CFX_SelfHost4#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#4)]  
+     <!-- TODO: review snippet reference [!code-vb[CFX_SelfHost4#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#4)]  -->  
   
     > [!NOTE]
     >  이 예제에서는 기본 끝점을 사용하며, 이 서비스에는 구성 파일이 필요하지 않습니다.끝점을 구성하지 않으면 런타임이 서비스에서 구현되는 각 서비스 계약의 각 기본 주소에 대해 끝점을 하나씩 만듭니다.기본 끝점[!INCLUDE[crabout](../../../includes/crabout-md.md)][단순화된 구성](../../../docs/framework/wcf/simplified-configuration.md) 및 [WCF 서비스를 위한 단순화된 구성](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)을 참조하십시오.  

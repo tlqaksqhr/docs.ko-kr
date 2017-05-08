@@ -23,7 +23,7 @@ caps.handback.revision: 37
 # OpenType 글꼴 기능
 이 항목의 주요 기능 중 일부에 대 한 개요를 제공 합니다. [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 글꼴 기술의 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>OpenType 글꼴 서식  

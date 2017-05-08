@@ -145,7 +145,7 @@ ms.lasthandoff: 03/07/2017
 
 .NET Core 응용 프로그램(TFM: `netcoreapp`) 프레임워크는 .NET Core 배포와 함께 제공되는 패키지 및 관련 API, 그리고 콘솔 응용 프로그램 모델을 나타냅니다. .NET Core 앱은 콘솔 응용 프로그램 모델을 대상으로 하기 때문에 이 프레임워크를 사용해야 하며, .NET Core에서만 실행되도록 만들어진 라이브러리도 마찬가지입니다. 이 프레임워크를 사용하면 앱과 라이브러리의 실행이 .NET Core로만 제한됩니다. 
 
-`Microsoft.NETCore.App` 메타패키지는 `netcoreapp` 프레임워크를 대상으로 합니다. 최대&60;개 라이브러리, `NETStandard.Library` 패키지에서 제공하는 최대&40;개 및 추가&20;개에 대한 액세스를 제공합니다. 추가 API에 대한 액세스 권한을 얻기 위해 `netcoreapp` 또는 호환 프레임워크(예: `netstandard`)를 대상으로 하는 추가 라이브러리를 참조할 수 있습니다. 
+`Microsoft.NETCore.App` 메타패키지는 `netcoreapp` 프레임워크를 대상으로 합니다. 최대 60개 라이브러리, `NETStandard.Library` 패키지에서 제공하는 최대 40개 및 추가 20개에 대한 액세스를 제공합니다. 추가 API에 대한 액세스 권한을 얻기 위해 `netcoreapp` 또는 호환 프레임워크(예: `netstandard`)를 대상으로 하는 추가 라이브러리를 참조할 수 있습니다. 
 
 다른 `netstandard` 라이브러리에서 종속성을 충족하는 경우 `Microsoft.NETCore.App`에서 제공하는 추가 라이브러리 대부분은 또한 `netstandard`를 대상으로 합니다. 즉, `netstandard` 라이브러리 역시 해당 패키지를 종속성으로 참조할 수 있습니다. 
 

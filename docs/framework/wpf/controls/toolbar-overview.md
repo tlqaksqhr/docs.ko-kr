@@ -22,7 +22,7 @@ caps.handback.revision: 27
 # ToolBar 개요
 <xref:System.Windows.Controls.ToolBar> 컨트롤은 일반적으로 기능에 있어 서로 관련된 명령 또는 컨트롤 그룹에 대한 컨테이너입니다.  <xref:System.Windows.Controls.ToolBar>에는 일반적으로 명령을 호출하는 단추가 들어 있습니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="ToolBarControl"></a>   
 ## ToolBar 컨트롤  

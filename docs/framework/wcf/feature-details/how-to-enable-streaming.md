@@ -52,7 +52,7 @@ caps.handback.revision: 13
   
     1.  샘플 중 다음 구성 조각은 `TransferMode` 및 사용자 지정 HTTP 바인딩에서 `basicHttpBinding` 속성을 스트리밍으로 설정하는 방법에 대해 보여 줍니다.  
   
-         [!code[c_HowTo_EnableStreaming#103](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]  
+         <!-- TODO: review snippet reference [!code[c_HowTo_EnableStreaming#103](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]  -->  
   
     2.  다음 코드 조각은 `TransferMode` 및 사용자 지정 HTTP 바인딩에서 `basicHttpBinding` 속성을 스트리밍으로 설정하는 방법에 대해 보여 줍니다.  
   

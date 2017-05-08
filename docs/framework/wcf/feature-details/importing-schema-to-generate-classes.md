@@ -68,7 +68,7 @@ caps.handback.revision: 15
   
  예를 들어 다음 스키마를 생각해 볼 수 있습니다.  
   
- [!code[c_SchemaImportExport#10](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#10)]  
+ <!-- TODO: review snippet reference [!code[c_SchemaImportExport#10](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#10)]  -->  
   
  다음 예제에서는 `Namespaces` 속성을 사용하여 "http://schemas.contoso.com/carSchema" 네임스페이스를 "Contoso.Cars"에 매핑합니다.  
   
@@ -98,18 +98,18 @@ caps.handback.revision: 15
 ### <a name="import-options-choosing-collection-types"></a>가져오기 옵션: 컬렉션 형식 선택  
  XML의 두 가지 특수 패턴은 항목 컬렉션, 즉 항목 목록 및 한 항목과 다른 항목 간의 연결을 나타냅니다. 다음은 문자열 목록의 예입니다.  
   
- [!code[C_SchemaImportExport#11](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#11)]  
+ <!-- TODO: review snippet reference [!code[C_SchemaImportExport#11](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#11)]  -->  
   
  다음은 문자열과 정수(`city name` 및 `population`) 간의 연결 예입니다.  
   
- [!code[C_SchemaImportExport#12](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
+ <!-- TODO: review snippet reference [!code[C_SchemaImportExport#12](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  -->  
   
 > [!NOTE]
 >  모든 연결을 목록으로 간주할 수도 있습니다. 예를 들어 앞의 연결을 두 개의 필드(문자열 필드 및 정수 필드)가 있는 복잡한 `city` 개체 목록으로 간주할 수 있습니다. 두 패턴은 모두 XSD 스키마에서 하나로 표현됩니다. 목록과 연결을 구분할 수 없으므로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에 관련된 특별한 주석이 스키마에 없으면 해당 패턴은 항상 목록으로 처리됩니다. 주석은 지정된 패턴이 연결을 나타냄을 가리킵니다. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)합니다.  
   
  일반적으로 목록은 스키마가 컬렉션의 표준 명명 패턴을 따르는지 여부에 따라 제네릭 목록에서 파생된 컬렉션 데이터 계약이나 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 배열로 가져옵니다. 이에서 더 자세하게 설명 [데이터 계약의 컬렉션 형식](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)합니다. 연결을로 가져올 일반적으로 <xref:System.Collections.Generic.Dictionary%602> 또는 사전 개체에서 파생 되는 컬렉션 데이터 계약.\</TKey, TValue> 예를 들어 다음 스키마를 생각해 볼 수 있습니다.  
   
- [!code[c_SchemaImportExport#13](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#13)]  
+ <!-- TODO: review snippet reference [!code[c_SchemaImportExport#13](../../../../samples/snippets/common/VS_Snippets_CFX/c_schemaimportexport/common/source.config#13)]  -->  
   
  이 스키마는 다음과 같이 가져옵니다(읽기 쉽도록 속성 대신 필드가 표시됨).  
   

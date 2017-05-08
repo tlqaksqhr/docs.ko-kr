@@ -31,7 +31,7 @@ caps.handback.revision: 22
 > [!NOTE]
 >  각 페이지 아래쪽에 있는 **의견** 링크를 제품과 관련된 의견을 보내는 데 사용하지 마십시오.  이러한 링크는 설명서와 관련된 의견을 보내는 데에만 사용됩니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Blogs"></a>   
 ## 블로그  

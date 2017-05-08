@@ -26,7 +26,7 @@ caps.handback.revision: 18
   
  <xref:System.Windows.Input.Keyboard> 클래스는 주로 키보드 포커스와 관련되고 <xref:System.Windows.Input.FocusManager>는 주로 논리적 포커스와 관련되지만 그 사용 영역이 명확하게 구분되는 것은 아닙니다.  키보드 포커스가 있는 요소에는 논리적 포커스도 있지만 논리적 포커스가 있는 요소에는 키보드 포커스가 없을 수 있습니다.  <xref:System.Windows.Input.Keyboard> 클래스를 사용하여 키보드 포커스가 있는 요소를 설정하면 해당 요소에 논리적 포커스도 설정되기 때문에 이 차이를 확실하게 알 수 있습니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Keyboard_Focus"></a>   
 ## 키보드 포커스  

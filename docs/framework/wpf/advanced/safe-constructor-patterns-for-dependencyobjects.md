@@ -23,7 +23,7 @@ caps.handback.revision: 11
 # DependencyObject의 안전한 생성자 패턴
 생성자는 파생 클래스에 대한 생성자의 기본 초기화로 호출될 수 있으므로 일반적으로 클래스 생성자는 가상 메서드나 대리자와 같은 콜백을 호출하지 않아야 합니다.  가상 메서드 호출은 지정된 개체의 초기화가 끝나지 않은 상태에서 수행될 수 있습니다.  하지만 속성 시스템 자체에서는 종속성 속성 시스템의 일부로 내부에서 콜백을 호출하고 노출합니다.  이 작업은 <xref:System.Windows.DependencyObject.SetValue%2A> 호출을 사용하여 종속성 속성 값을 설정함으로써 간단하게 수행할 수 있지만 속성 값을 결정하는 과정에서 콜백이 포함될 수 있습니다.  이 때문에 생성자 본문 내에서 종속성 속성 값을 설정할 때는 신중을 기해야 합니다. 형식이 기본 클래스로 사용되는 경우에는 이로 인해 문제가 발생할 수도 있습니다.  이 항목에서는 종속성 속성 상태 및 고유 콜백과 관련된 문제가 발생하지 않도록 <xref:System.Windows.DependencyObject> 생성자를 구현하는 특수한 패턴에 대해 설명합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Property_System_Virtual_Methods"></a>   
 ## 속성 시스템 가상 메서드  

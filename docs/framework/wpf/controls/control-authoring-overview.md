@@ -22,7 +22,7 @@ caps.handback.revision: 29
 # 컨트롤 제작 개요
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 컨트롤 모델은 확장성이 뛰어나기 때문에 새로운 컨트롤을 만들 필요가 거의 없습니다.  하지만 그래도 사용자 지정 컨트롤을 만들어야 하는 경우가 있습니다.  이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 다양한 컨트롤 제작 모델과 사용자 지정 컨트롤을 만들어야 하는 필요성을 최소화하는 기능에 대해 설명합니다.  또한 새 컨트롤을 만드는 방법을 보여 줍니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="when_to_write_a_new_control"></a>   
 ## 새 컨트롤 작성에 대한 대안  

@@ -28,7 +28,7 @@ caps.handback.revision: 75
   
  이 항목에서는 먼저 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 데이터 바인딩에 대한 핵심 개념을 살펴본 다음 <xref:System.Windows.Data.Binding> 클래스 및 기타 데이터 바인딩 기능을 사용하는 방법에 대해 살펴봅니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="what_is_data_binding"></a>   
 ## 데이터 바인딩의 정의  
@@ -64,7 +64,7 @@ caps.handback.revision: 75
   
 <a name="basic_data_binding_concepts"></a>   
 ## 기본 데이터 바인딩 개념  
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
  바인딩하려는 요소 및 데이터 소스의 특성에 관계없이 각 바인딩은 항상 다음 그림에 나타나는 모델을 따릅니다.  
   
@@ -128,7 +128,7 @@ caps.handback.revision: 75
   
 <a name="creating_a_binding"></a>   
 ## 바인딩 만들기  
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
  이전 단원에서 설명한 개념을 다시 요약하면, <xref:System.Windows.Data.Binding> 개체를 사용하여 바인딩을 만들며 각 바인딩에는 일반적으로 바인딩 대상, 대상 속성, 바인딩 소스 및 사용할 소스 값에 대한 경로의 네 구성 요소가 있습니다.  이 단원에서는 바인딩을 설정하는 방법을 설명합니다.  
   
@@ -220,7 +220,7 @@ caps.handback.revision: 75
   
 <a name="binding_to_collections"></a>   
 ## 컬렉션에 바인딩  
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
  바인딩 소스 개체는 속성에서 데이터를 포함하는 단일 개체 또는 함께 그룹화되는 경우가 많은\(예: 데이터베이스에 대한 쿼리 결과\) 다형성 개체의 데이터 컬렉션으로 취급될 수 있습니다.  지금까지 단일 개체에 대한 바인딩만 다뤘지만 대개는 데이터 컬렉션으로의 바인딩이 많이 사용됩니다.  예를 들어 일반적인 시나리오에서는 <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.ListView> 또는 <xref:System.Windows.Controls.TreeView> 등의 <xref:System.Windows.Controls.ItemsControl>을 사용하여 [데이터 바인딩의 정의](#what_is_data_binding) 단원에 소개된 응용 프로그램 등에서 데이터 컬렉션을 표시합니다.  
   
@@ -242,7 +242,7 @@ caps.handback.revision: 75
 ### 컬렉션 뷰  
  <xref:System.Windows.Controls.ItemsControl>을 데이터 컬렉션에 바인딩한 뒤에는 데이터를 정렬하거나, 필터링하거나, 그룹화할 수 있습니다.  이렇게 하려면 <xref:System.ComponentModel.ICollectionView> 인터페이스를 구현하는 클래스인 컬렉션 뷰를 사용합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="what_are_collection_views"></a>   
 #### 컬렉션 뷰의 정의  
@@ -369,7 +369,7 @@ caps.handback.revision: 75
   
 <a name="data_validation"></a>   
 ## 데이터 유효성 검사  
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
  사용자 입력을 받는 대부분의 응용 프로그램에는 사용자가 올바른 정보를 입력했는지 확인하기 위한 유효성 검사 논리가 필요합니다.  유효성 검사는 형식, 범위, 서식 또는 기타 응용 프로그램별 요구 사항을 기반으로 할 수 있습니다.  이 단원에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 데이터 유효성 검사가 작동하는 방식을 살펴봅니다.  
   

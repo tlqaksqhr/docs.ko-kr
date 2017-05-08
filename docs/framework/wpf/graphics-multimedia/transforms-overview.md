@@ -29,7 +29,7 @@ caps.handback.revision: 20
 # Transform 개요
 이 항목에서는 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> 클래스를 사용하여 <xref:System.Windows.FrameworkElement> 개체를 회전, 배율 조정, 이동\(위치 변환\) 및 기울이는 방법을 설명합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="whatIsATransformSection"></a>   
 ## Transform 정의  

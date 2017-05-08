@@ -43,7 +43,7 @@ caps.handback.revision: 65
 > [!NOTE]
 >  이 항목에서 "브라우저"라는 용어는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 호스팅할 수 있는 브라우저만 지칭하며 현재 [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] 및 Firefox가 해당됩니다.  특정 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 기능이 특정 브라우저에서만 지원되는 경우에는 브라우저 버전을 명시합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="XAMLBrowserApplications"></a>   
 ## WPF 응용 프로그램에서 탐색  

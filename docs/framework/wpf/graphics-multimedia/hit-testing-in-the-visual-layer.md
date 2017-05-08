@@ -22,7 +22,7 @@ caps.handback.revision: 41
 # 시각적 계층에서 적중 테스트
 이 항목에서는 시각적 계층에서 제공하는 적중 테스트 기능에 대해 간략하게 설명합니다.  적중 테스트를 사용하면 기하 도형 또는 점의 값이 <xref:System.Windows.Media.Visual>의 렌더링된 콘텐츠 내에 있는지 확인할 수 있습니다. 이 기능은 여러 개체를 선택하는 선택 영역과 같은 사용자 인터페이스 동작을 구현할 때 유용합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="hit_testing_scenarios"></a>   
 ## 적중 테스트 시나리오  

@@ -26,7 +26,7 @@ caps.handback.revision: 25
 # 혼합 응용 프로그램 문제 해결
 <a name="introduction"></a> 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 및 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 기술을 모두 사용하는 혼합 응용 프로그램을 작성할 때 발생할 수 있는 몇 가지 일반적인 문제를 설명합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="overlapping_controls"></a>   
 ## 컨트롤 겹침  

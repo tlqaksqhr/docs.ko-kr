@@ -23,7 +23,7 @@ caps.handback.revision: 24
 # 바인딩 소스 개요
 데이터 바인딩에서 [바인딩 소스](GTMT) 개체는 데이터를 가져온 개체를 참조합니다.  이 항목에서는 바인딩 소스로 사용할 수 있는 개체 형식에 대해 설명합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="binding_sources"></a>   
 ## 바인딩 소스 형식  

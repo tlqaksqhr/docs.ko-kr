@@ -24,7 +24,7 @@ caps.handback.revision: 26
 # 종속성 속성 값 우선 순위
 <a name="introduction"></a> 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 속성 시스템의 동작이 [종속성 속성](GTMT) 값에 어떤 영향을 줄 수 있는지에 대해 설명하고 속성 시스템의 특성이 속성의 유효 값에 적용되는 우선 순위에 대해 설명합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 사전 요구 사항  

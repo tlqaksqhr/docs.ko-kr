@@ -97,7 +97,7 @@ caps.handback.revision: 25
   
 4.  사용 하는 클라이언트에 대 한 구성을 <xref:System.ServiceModel.NetTcpBinding> 도 Svcutil.exe에 의해 생성 됩니다. 이 파일은 Visual Studio를 사용하는 경우 이름을 App.config로 지정해야 합니다.  
   
-     [!code[C_HowTo_HostInWAS#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]  
+     <!-- TODO: review snippet reference [!code[C_HowTo_HostInWAS#2211](../../../../samples/snippets/common/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]  -->  
   
 5.  응용 프로그램에서 `ClientCalculator`의 인스턴스를 만든 다음 서비스 작업을 호출합니다.  
   

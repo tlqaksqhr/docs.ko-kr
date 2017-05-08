@@ -83,8 +83,8 @@ caps.handback.revision: 8
 ## 예제  
  다음 예제에는 사용자에게 날짜 및 시간 값을 입력하라는 메시지를 표시하는 ASP.NET Web Form의 HTML 소스 및 코드가 모두 포함되어 있습니다.  또한 클라이언트 쪽 스크립트는 사용자 요청의 현지 날짜 및 시간과 UTC에 대한 사용자 표준 시간대의 오프셋을 숨겨진 필드에 씁니다.  이 정보는 서버에서 구문 분석되며 서버에서는 사용자 입력을 표시하는 웹 페이지를 반환합니다.  또한 사용자의 현지 시간, 서버의 시간 및 UTC를 사용하여 사용자 요청의 날짜 및 시간이 표시됩니다.  
   
- [!code-csharp[Formatting.HowTo.ParseDateInput#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.ParseDateInput/cs/GetDateInfo.aspx#1)]
- [!code-vb[Formatting.HowTo.ParseDateInput#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.ParseDateInput/vb/GetDateInfo.aspx#1)]  
+ <!-- TODO: review snippet reference [!code-csharp[Formatting.HowTo.ParseDateInput#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.ParseDateInput/cs/GetDateInfo.aspx#1)]  -->
+ <!-- TODO: review snippet reference [!code-vb[Formatting.HowTo.ParseDateInput#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.ParseDateInput/vb/GetDateInfo.aspx#1)]  -->  
   
  클라이언트 쪽 스크립트에서는 JavaScript `toLocaleString` 메서드를 호출합니다.  그러면 사용자 로캘의 서식 지정 규칙을 따르는 문자열이 생성되며, 이 문자열은 서버에서 성공적으로 구문 분석될 가능성이 더 높습니다.  
   

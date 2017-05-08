@@ -22,7 +22,7 @@ caps.handback.revision: 18
 # 프레임워크 속성 메타데이터
 프레임워크 속성 메타데이터 옵션은 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 아키텍처의 [WPF 프레임워크 수준](GTMT)에 있는 것으로 간주되는 개체 요소의 속성에 대해 보고됩니다.  일반적으로 [WPF 프레임워크 수준](GTMT) 지정의 경우 렌더링, 데이터 바인딩 및 속성 시스템 조정 등과 같은 기능이 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 표시 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 및 실행 파일에 의해 처리됩니다.  이러한 시스템은 프레임워크 속성 메타데이터를 쿼리하여 특정 요소 속성의 기능별 특성을 결정합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 사전 요구 사항  

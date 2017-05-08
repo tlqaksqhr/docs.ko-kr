@@ -24,7 +24,7 @@ caps.handback.revision: 24
 # 데이터 템플릿 개요
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 데이터 템플릿 모델 데이터의 표시를 정의 하는 뛰어난 융통성을 제공 합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]컨트롤의 데이터 표시 사용자 지정을 지원 하기 위해 기본 제공 기능이 있습니다. 이 항목에는 먼저 정의 하는 방법을 보여 줍니다는 <xref:System.Windows.DataTemplate> 하 고 다음 사용자 지정 논리와 계층적 데이터의 표시에 대 한 지원에 따라 템플릿 선택과 같은 다른 데이터 템플릿 기능을 소개 합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Prerequisites"></a>   
 ## <a name="prerequisites"></a>필수 구성 요소  
@@ -36,7 +36,7 @@ caps.handback.revision: 24
   
 <a name="DataTemplating_Basic"></a>   
 ## <a name="data-templating-basics"></a>데이터 템플릿 기본 사항  
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
  그 이유를 설명 하기 위해 <xref:System.Windows.DataTemplate> 중요 한 데이터 바인딩 예제를 살펴보겠습니다. 이 예제에는 한 <xref:System.Windows.Controls.ListBox> 의 목록에 바인딩된 `Task` 개체입니다. 각 `Task` 개체에는 `TaskName` (string)는 `Description` (string)는 `Priority` (int) 및 형식의 속성 `TaskType`, 즉는 `Enum` 값으로 `Home` 및 `Work`.  
   

@@ -35,7 +35,7 @@ caps.handback.revision: 26
   
  이 항목의 나머지 부분에서는 특히 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]와 관련된 각 계층의 기능을 설명합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Operating_System_Security"></a>   
 ## 운영 체제 보안  

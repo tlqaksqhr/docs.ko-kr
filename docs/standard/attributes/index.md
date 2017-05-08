@@ -1,44 +1,47 @@
 ---
 title: "특성을 사용하여 메타데이터 확장 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "프로그래밍 요소 주석 달기"
-  - "특성[.NET Framework], 메타데이터"
-  - "공용 언어 런타임, 특성"
-  - "요소[.NET Framework], 특성"
-  - "메타데이터 확장"
-  - "키워드 방식의 설명적 선언"
-  - "메타데이터, 확장"
-  - "런타임, 특성"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- metadata, extending
+- attributes [.NET Framework], metadata
+- elements [.NET Framework], attributes
+- common language runtime, attributes
+- annotating programming elements
+- keyword-like descriptive declarations
+- runtime, attributes
+- extending metadata
 ms.assetid: 30386922-1e00-4602-9ebf-526b271a8b87
 caps.latest.revision: 12
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+translationtype: Human Translation
+ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
+ms.openlocfilehash: 79a00f9961f85a92624f0f360a25a5727342de41
+ms.lasthandoff: 04/08/2017
+
 ---
-# 특성을 사용하여 메타데이터 확장
-공용 언어 런타임에서는 형식, 필드, 메서드 및 속성과 같은 프로그래밍 요소에 주석을 달기 위해 특성이라는 키워드 방식의 설명적 선언을 추가할 수 있습니다.  런타임용으로 코드를 컴파일하는 경우 MSIL\(Microsoft Intermediate Language\)로 변환되고 컴파일러에서 생성된 메타데이터와 함께 PE\(이식 가능한 실행\) 파일 내에 배치됩니다.  특성을 사용하여 런타임 리플렉션 서비스를 통해 추출할 수 있는 메타데이터에 추가 설명 정보를 배치할 수 있습니다.  <xref:System.Attribute?displayProperty=fullName>에서 파생되는 특수 클래스 인스턴스를 선언하면 컴파일러에서 특성을 만듭니다.  
+# <a name="extending-metadata-using-attributes"></a>특성을 사용하여 메타데이터 확장
+공용 언어 런타임에서는 형식, 필드, 메서드 및 속성과 같은 프로그래밍 요소에 주석을 달기 위해 특성이라는 키워드 방식의 설명적 선언을 추가할 수 있습니다. 런타임용으로 코드를 컴파일하는 경우 MSIL(Microsoft Intermediate Language)로 변환되고 컴파일러에서 생성된 메타데이터와 함께 PE(이식 가능한 실행) 파일 내에 배치됩니다. 특성을 사용하여 런타임 리플렉션 서비스를 통해 추출할 수 있는 메타데이터에 추가 설명 정보를 배치할 수 있습니다. <xref:System.Attribute?displayProperty=fullName>에서 파생되는 특수 클래스 인스턴스를 선언하면 컴파일러에서 특성을 만듭니다.  
   
- .NET Framework는 다양한 이유와 많은 문제를 해결하기 위해 특성을 사용합니다.  특성은 데이터를 직렬화하고, 보안을 적용하는 데 사용되는 특징을 지정하고, 코드를 쉽게 디버그할 수 있도록 JIT\(Just\-In\-Time\) 컴파일러에 의한 최적화를 제한하는 방법을 설명합니다.  또한 특성은 폼을 개발하는 동안 파일 이름 또는 코드 작성자를 기록하거나 컨트롤과 멤버의 표시 유형을 제어할 수 있습니다.  
+ .NET Framework는 다양한 이유와 많은 문제를 해결하기 위해 특성을 사용합니다. 특성은 데이터를 직렬화하고, 보안을 적용하는 데 사용되는 특징을 지정하고, 코드를 쉽게 디버그할 수 있도록 JIT(Just-In-Time) 컴파일러에 의한 최적화를 제한하는 방법을 설명합니다. 또한 특성은 폼을 개발하는 동안 파일 이름 또는 코드 작성자를 기록하거나 컨트롤과 멤버의 표시 유형을 제어할 수 있습니다.  
   
-## 관련 항목  
+## <a name="related-topics"></a>관련 항목  
   
 |제목|설명|  
-|--------|--------|  
+|-----------|-----------------|  
 |[특성 적용](../../../docs/standard/attributes/applying-attributes.md)|코드의 요소에 특성을 적용하는 방법을 설명합니다.|  
 |[사용자 지정 특성 작성](../../../docs/standard/attributes/writing-custom-attributes.md)|사용자 지정 특성 클래스를 디자인하는 방법을 설명합니다.|  
 |[특성에 저장된 정보 검색](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)|실행 컨텍스트에 로드된 코드에 대한 사용자 지정 특성을 검색하는 방법을 설명합니다.|  
-|[메타데이터 및 자동 기술 구성 요소](../../../docs/standard/metadata-and-self-describing-components.md)|메타데이터를 개괄적으로 설명하고 .NET Framework PE\(이식 가능한 실행\) 파일에서 구현하는 방법을 설명합니다.|  
+|[메타데이터 및 자동 기술 구성 요소](../../../docs/standard/metadata-and-self-describing-components.md)|메타데이터를 개괄적으로 설명하고 .NET Framework PE(이식 가능한 실행) 파일에서 구현하는 방법을 설명합니다.|  
 |[방법: 리플렉션 전용 컨텍스트에 어셈블리 로드](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|리플렉션 전용 컨텍스트에서 사용자 지정 특성 정보를 검색하는 방법을 설명합니다.|  
   
-## 참조  
+## <a name="reference"></a>참조  
  <xref:System.Attribute?displayProperty=fullName>

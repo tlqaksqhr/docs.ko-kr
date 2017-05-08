@@ -36,7 +36,7 @@ caps.handback.revision: 11
  ![빨간색 테두리가 있는 단추](../../../../docs/framework/wpf/controls/media/ndp-buttonmouseover.png "NDP\_ButtonMouseOver")  
 사용자 지정 컨트롤 템플릿을 사용하고 마우스 포인터가 놓여 있는 단추  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 사전 요구 사항  

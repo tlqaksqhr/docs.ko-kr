@@ -21,7 +21,7 @@ caps.handback.revision: 27
 # 연결된 속성 개요
 연결 된 속성은 XAML로 정의 된 개념입니다.  연결된 속성은 모든 개체에서 설정할 수 있는 전역 속성 형식으로 사용하기 위한 개념입니다.  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], 연결 된 속성을 기본 속성 "래퍼"가 없는 종속성 속성의 특수 한 형태로 일반적으로 정의 합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 사전 요구 사항  

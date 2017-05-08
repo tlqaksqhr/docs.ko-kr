@@ -28,7 +28,7 @@ caps.handback.revision: 22
 # Geometry 개요
 이 개요에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> 클래스를 사용하여 도형을 설명하는 방법에 대해 설명합니다.  이 항목에서는 <xref:System.Windows.Media.Geometry> 개체와 <xref:System.Windows.Shapes.Shape> 요소의 차이점도 비교합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="wcpsdk_graphics_geometry_introduction"></a>   
 ## Geometry란?  

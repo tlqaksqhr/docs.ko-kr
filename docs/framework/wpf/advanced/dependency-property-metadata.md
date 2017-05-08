@@ -24,7 +24,7 @@ caps.handback.revision: 23
 # 종속성 속성 메타데이터
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 속성 시스템에는 리플렉션이나 일반적인 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 특성을 통해 속성에 대해 보고할 수 있는 것보다 많은 정보를 제공하는 메타데이터 보고 시스템이 있습니다.  [종속성 속성](GTMT)의 메타데이터는 [종속성 속성](GTMT)을 정의하는 클래스를 통해 고유하게 할당할 수 있으며, [종속성 속성](GTMT)을 다른 클래스에 추가할 때 변경할 수 있고, 속성을 정의하는 기본 클래스에서 [종속성 속성](GTMT)을 상속하는 모든 파생 클래스를 통해 재정의할 수 있습니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 사전 요구 사항  

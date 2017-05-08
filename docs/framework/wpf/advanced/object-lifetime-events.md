@@ -45,7 +45,7 @@ caps.handback.revision: 18
 # 개체 수명 이벤트
 이 항목에서는 생성, 사용, 소멸이라는 개체 수명의 단계를 나타내는 특정 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이벤트에 대해 설명합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 사전 요구 사항  

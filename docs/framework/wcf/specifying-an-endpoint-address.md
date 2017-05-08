@@ -48,13 +48,13 @@ caps.handback.revision: 41
 ## <a name="defining-endpoint-addresses-in-configuration"></a>구성에서 끝점 주소 정의  
  사용 하 여 구성 파일에서 끝점을 정의 하는 [ <> \> ](http://msdn.microsoft.com/ko-kr/13aa23b7-2f08-4add-8dbf-a99f8127c017) 요소입니다.  
   
- [!code[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]  
+ <!-- TODO: review snippet reference [!code[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]  -->  
   
  때는 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 메서드는 (즉, 호스팅 응용 프로그램 서비스를 시작 하려고), 시스템은 한 [ <> \> ](../../../docs/framework/configure-apps/file-schema/wcf/service.md) "UE 지정 하는 이름 특성을 가진 요소. Samples.HelloService "로 설정 합니다. 하는 경우는 [ <> \> ](../../../docs/framework/configure-apps/file-schema/wcf/service.md) 요소를 찾을 때, 시스템 지정된 된 클래스를 로드 하 고 구성 파일에 제공 된 끝점 정의 사용 하 여 끝점을 만듭니다. 이 메커니즘을 통해 두 개의 코드 줄에서 서비스를 로드하고 시작하는 동시에 해당 코드의 바인딩 및 주소 지정 정보를 유지할 수 있습니다. 이 접근 방식의 이점은 응용 프로그램을 다시 컴파일하거나 다시 배포할 필요 없이 이러한 변경 작업을 수행할 수 있다는 점입니다.  
   
  선택적 헤더에 선언 된 [ <> \</> \> ](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)합니다. 다음은 두 가지 헤더(예: http://tempuri1.org/의 "Gold" 클라이언트 및 http://tempuri2.org/의 "Standard" 클라이언트) 간에 구분되는 구성 파일의 서비스에 대한 끝점을 지정하는 데 사용되는 요소의 예제입니다. 이 서비스를 호출 하는 클라이언트에서 적절 한 있어야 [ <> \> ](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) 의 구성 파일에 있습니다.  
   
- [!code[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  
+ <!-- TODO: review snippet reference [!code[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  -->  
   
  또한 헤더는 이전에 설명한 것처럼 끝점의 모든 메시지 대신 개별 메시지에서 설정될 수 있습니다. 사용 하 여 이렇게 <xref:System.ServiceModel.OperationContextScope> 다음 예제 에서처럼 보내는 메시지에 사용자 지정 헤더를 추가 하는 클라이언트 응용 프로그램에서 새 컨텍스트를 만드는를 합니다.  
   

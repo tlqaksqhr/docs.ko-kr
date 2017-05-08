@@ -34,7 +34,7 @@ caps.handback.revision: 29
 # 이미징 개요
 이 항목에서는 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]에 대해 소개합니다.  [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]을 사용하여 개발자는 이미지를 표시하거나 변환하고 형식을 지정할 수 있습니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="_wpfImaging"></a>   
 ## WPF 이미징 구성 요소  

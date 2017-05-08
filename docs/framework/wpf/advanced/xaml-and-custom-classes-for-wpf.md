@@ -23,7 +23,7 @@ caps.handback.revision: 21
 # WPF에 대한 XAML 및 사용자 지정 클래스
 XAML에서 구현 될 때 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 프레임 워크는 사용자 정의 클래스 또는 구조체에서 정의 하는 기능 지원 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 언어 및 다음 액세스는 클래스 XAML 태그를 사용 합니다.  일반적으로 사용자 지정 형식을 XAML 네임스페이스 접두사에 매핑하여 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 정의 형식과 사용자 지정 형식을 동일한 태그 파일에서 함께 사용할 수 있습니다.  이 항목에서는 사용자 지정 클래스를 XAML 요소로 사용 만족 시켜야 하는 요구 사항을 설명 합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Custom_Classes_in_Applications_vs__in_Assemblies"></a>   
 ## 응용 프로그램 또는 어셈블리의 사용자 지정 클래스  

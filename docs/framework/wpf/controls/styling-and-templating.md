@@ -35,7 +35,7 @@ caps.handback.revision: 33
   
  또한은 스타일 및 템플릿을 재사용할 수 있게 하는 리소스를 이해 하는 것이 중요 합니다. 리소스에 대 한 자세한 내용은 참조 [XAML 리소스](../../../../docs/framework/wpf/advanced/xaml-resources.md)합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="styling_and_templating_sample"></a>   
 ## <a name="styling-and-templating-sample"></a>스타일 및 템플릿 샘플  
