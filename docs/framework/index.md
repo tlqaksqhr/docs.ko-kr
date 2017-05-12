@@ -19,10 +19,11 @@ caps.latest.revision: 75
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: b6874fe1d3730d2d05a862ee60417a7ce90f226c
-ms.lasthandoff: 04/08/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 22822d80170e33be59253ecb0d74ec5eb2344751
+ms.openlocfilehash: 933d5f6a864820f5e694c0a9c7eab7b4fe5f790f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/04/2017
 
 ---
 
@@ -56,7 +57,8 @@ Windows와 함께 .NET Framework를 사용하면 .NET Framework 응용 프로그
 [시작](../../docs/framework/get-started/index.md)  
 .NET Framework의 포괄적인 개요 및 추가 리소스에 대한 링크를 제공합니다.  
   
-[마이그레이션 가이드](../../docs/framework/migration-guide/index.md) 응용 프로그램을 새 버전의 .NET Framework로 마이그레이션하는 경우 고려해야 할 리소스 및 변경 내용 목록을 제공합니다.  
+[마이그레이션 가이드](../../docs/framework/migration-guide/index.md)   
+응용 프로그램을 새 버전의 .NET Framework로 마이그레이션하는 경우 고려해야 할 리소스 및 변경 내용 목록을 제공합니다.  
   
 [개발 가이드](../../docs/framework/development-guide.md)  
 만들기, 구성, 디버깅, 보안, 응용 프로그램 배포, 동적 프로그래밍에 대한 정보, 상호 운용성, 확장성, 메모리 관리 및 스레딩을 포함하여 응용 프로그램 개발에 대한 모든 주요 기술 분야 및 작업에 대한 지침을 제공합니다.  
@@ -64,7 +66,8 @@ Windows와 함께 .NET Framework를 사용하면 .NET Framework 응용 프로그
 [도구](../../docs/framework/tools/index.md)  
 .NET Framework 기술을 사용하여 응용 프로그램을 개발, 구성 및 배포하는 데 도움이 되는 도구에 대해 설명합니다.  
   
-[.NET Framework 클래스 라이브러리](/dotnet/api/?view=netframework-4.7) .NET Framework 네임스페이스에 포함된 각 클래스에 대해 구문, 코드 예제 및 관련 정보를 제공합니다.  
+[.NET Framework 클래스 라이브러리](/dotnet/api/?view=netframework-4.7)   
+.NET Framework 네임스페이스에 포함된 각 클래스에 대해 구문, 코드 예제 및 관련 정보를 제공합니다.  
   
 [추가 클래스 라이브러리 및 API](../../docs/framework/additional-apis/index.md)  
 .NET Framework의 특정 플랫폼 또는 구현을 대상으로 하는 클래스 뿐만 아니라 OOB(대역 외) 릴리스에 포함된 클래스에 대한 설명서를 제공합니다.
