@@ -10,9 +10,10 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 633dcc6d966125139cb21c4e70dac4d4794ee9a4
 ms.openlocfilehash: da326fb823c16c7795a6a05ad302c13918b435aa
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/20/2017
 
 ---
@@ -86,7 +87,7 @@ System.Runtime 등의 지정된 구성 요소는 다음에 대해 설명합니�
 
 NuGet 패키지는 하나 이상의 [프레임워크](frameworks.md)를 대상으로 합니다. .NET 표준 라이브러리 패키지는 ".NET 표준" 프레임워크를 대상으로 합니다. `netstandard` [compact TFM](frameworks.md)(예: `netstandard1.4`)을 사용하여 .NET 표준 프레임워크를 대상으로 지정할 수 있습니다. 여러 런타임에서 실행되도록 만들어진 라이브러리는 이 프레임워크를 대상으로 해야 합니다. 
 
-`NETStandard.Library` 메타패키지는 .NET 표준 라이브러리를 정의하는 NuGet 패키지의 전체 집합을 참조합니다.  `netstandard`를 대상으로 지정하는 가장 일반적인 방법은 이 메타패키지를 참조하는 것입니다. 이 메타패키지는 최대&40;개의 .NET 라이브러리 및 .NET 표준 라이브러리를 정의하는 관련 API를 설명하고 액세스할 수 있도록 합니다. 추가 API에 액세스하기 위해 `netstandard`를 대상으로 하는 추가 패키지를 참조할 수 있습니다. 
+`NETStandard.Library` 메타패키지는 .NET 표준 라이브러리를 정의하는 NuGet 패키지의 전체 집합을 참조합니다.  `netstandard`를 대상으로 지정하는 가장 일반적인 방법은 이 메타패키지를 참조하는 것입니다. 이 메타패키지는 최대 40개의 .NET 라이브러리 및 .NET 표준 라이브러리를 정의하는 관련 API를 설명하고 액세스할 수 있도록 합니다. 추가 API에 액세스하기 위해 `netstandard`를 대상으로 하는 추가 패키지를 참조할 수 있습니다. 
 
 ### <a name="versioning"></a>버전 관리
 
