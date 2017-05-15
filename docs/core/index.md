@@ -10,16 +10,16 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f2b312cb-f80c-4b0d-9101-93908f06a6fa
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
-ms.openlocfilehash: 132551673f97142a90513d43d7690867c3d00295
+ms.sourcegitcommit: d00f2096e0799107a8a2ff1d12274c6026d4c27a
+ms.openlocfilehash: fe38934a3bd56b7c00e0f4c58c3978a539f23a97
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/10/2017
+ms.lasthandoff: 05/14/2017
 
 ---
 
 # <a name="net-core"></a>.NET Core
 
-> 간단한 .NET Core 응용 프로그램을 만드는 방법을 알아보려면 ["시작" 자습서](getting-started.md)를 확인하세요. 첫 번째 앱을 만들고 실행하는 데 몇 분밖에 걸리지 않습니다.
+> 간단한 .NET Core 응용 프로그램을 만드는 방법을 알아보려면 ["시작" 자습서](get-started.md)를 확인하세요. 첫 번째 앱을 만들고 실행하는 데 몇 분밖에 걸리지 않습니다.
 
 .NET Core는 Microsoft 및 [GitHub](https://github.com/dotnet/core)의 .NET 커뮤니티에서 유지 관리하는 범용 개발 플랫폼입니다. 플랫폼 간으로 Windows, macOS 및 Linux를 지원하며 장치, 클라우드 및 포함/IoT 시나리오에서 사용할 수 있습니다. 
 
