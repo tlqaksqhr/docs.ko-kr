@@ -54,9 +54,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 0eb78f92f22502d9e8595051361b45d9bf53ed64
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -259,3 +260,4 @@ End Sub
  [방법: 제네릭 클래스 사용](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)   
  [문제 해결 절차](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)   
  [부분 메서드](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)
+
