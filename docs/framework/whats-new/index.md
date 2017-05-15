@@ -71,13 +71,13 @@ ms.lasthandoff: 05/11/2017
 <a name="Core47" />
 #### <a name="core"></a>핵심
 
-.NET Framework 4.7에서는 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>를 통해 serialization이 향상됩니다.
+.NET Framework 4.7은 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>를 통해 serialization을 향상합니다.
 
 **ECC(Elliptic Curve 암호화)로 향상된 기능***
 
-.NET Framework 4.7에서는 개체가 이미 설정된 키를 나타낼 수 있도록 하기 위해 <xref:System.Security.Cryptography.ECDsa> 및 <xref:System.Security.Cryptography.ECDiffieHellman> 클래스에 `ImportParameters(ECParameters)` 메서드가 추가되었습니다. 또한 명시적 곡선 매개 변수를 사용하여 키를 내보내기 위한 `ExportParameters(Boolean)` 메서드도 추가되었습니다.
+.NET Framework 4.7에서는 `ImportParameters(ECParameters)` 메서드가 <xref:System.Security.Cryptography.ECDsa> 및 <xref:System.Security.Cryptography.ECDiffieHellman> 클래스에 추가되어 개체에서 이미 설정된 키를 나타낼 수 있습니다. 또한 명시적 곡선 매개 변수를 사용하여 키를 내보내기 위한 `ExportParameters(Boolean)` 메서드도 추가되었습니다.
 
-그뿐 아니라 .NET Framework 4.7에서는 추가 곡선(Brainpool 곡선 도구 모음 포함)에 대한 지원을 추가하며, 새로운 <xref:System.Security.Cryptography.ECDsa.Create%2A> 및 <xref:System.Security.Cryptography.ECDiffieHellman.Create%2A>팩터리 메서드를 통한 쉬운 생성을 위해 미리 정의된 정의도 추가적으로 제공합니다.
+그뿐 아니라 .NET Framework 4.7에서는 추가 곡선(Brainpool 곡선 도구 모음 포함)을 지원하며 새로운 <xref:System.Security.Cryptography.ECDsa.Create%2A> 및 <xref:System.Security.Cryptography.ECDiffieHellman.Create%2A> 팩터리 메서드를 통해 쉽게 만들 수 있도록 미리 정의된 정의도 추가했습니다.
 
 GitHub에서 [.NET Framework 4.7 암호화 개선 예제](https://gist.github.com/richlander/5a182899895a87a296c21ada97f7a54e)를 참조할 수 있습니다.
 
@@ -92,7 +92,7 @@ GitHub에서 [.NET Framework 4.7 암호화 개선 예제](https://gist.github.co
 
 **TLS 프로토콜에 대 한 기본 운영 체제 지원***
 
-<xref:System.Net.Security.SslStream?displayProperty=fullName> 및 업스택 구성 요소(예: HTTP, FTP, SMTP)에서 사용되는 TLS 스택을 통해 개발자들은 운영 체제에서 지원하는 기본 TLS 프로토콜을 사용할 수 있습니다. 개발자에게 더 이상 하드 코딩 TLS 버전은 필요하지 않습니다.
+<xref:System.Net.Security.SslStream?displayProperty=fullName>및 업스택 구성 요소(예: HTTP, FTP, SMTP)에서 사용되는 TLS 스택을 통해 개발자는 운영 체제에서 지원하는 기본 TLS 프로토콜을 사용할 수 있습니다. 개발자에게 더 이상 하드 코딩 TLS 버전은 필요하지 않습니다.
 
 <a name="ASP-NET47" />
 #### <a name="aspnet"></a>ASP.NET
@@ -105,9 +105,9 @@ NET Framework 4.7에서 ASP.NET에는 다음과 같은 새 기능이 포함됩�
 
 - **개체 캐시 저장소**. 개발자는 새 캐시 공급자 구성 섹션에서 새 **ICacheStoreProvider** 인터페이스를 사용하여 ASP.NET 응용 프로그램의 새로운 개체 캐시 구현을 연결할 수 있습니다.
  
-- **메모리 모니터링**. ASP.NET의 기본 메모리 모니터는 프로세스에 대해 구성된 전용 바이트 제한에 가까워지거나 컴퓨터의 사용 가능한 총 실제 RAM이 부족할 때 응용 프로그램에 알립니다. 이러한 제한에 가까워지면 알림이 발생합니다. 일부 응용 프로그램의 경우 알림이 구성된 제한에 너무 가까운 상태에서 발생하여 제대로 대응하지 못하게 됩니다. 개발자는 이제 자체 메모리 모니터를 사용하여 <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=fullName> 속성을 통해 기본값을 바꿀 수 있습니다.
+- **메모리 모니터링**. ASP.NET의 기본 메모리 모니터는 프로세스에 대해 구성된 전용 바이트 제한에 가까워지거나 컴퓨터의 사용 가능한 총 실제 RAM이 부족할 때 응용 프로그램에 알립니다. 이러한 제한에 가까워지면 알림이 발생합니다. 일부 응용 프로그램의 경우 알림이 구성된 제한에 너무 가까운 상태에서 발생하여 제대로 대응하지 못하게 됩니다. 개발자는 <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=fullName> 속성으로 메모리 모니터를 직접 작성해 기본 모니터를 대체할 수 있습니다.
 
-- **메모리 제한 반응**. 기본적으로 ASP.NET은 전용 바이트 제한이 가까워질 경우 개체 캐시를 트리밍하고 주기적으로 <xref:System.GC.Collect%2A?displayProperty=fullName>를 호출합니다. 일부 응용 프로그램의 경우 <xref:System.GC.Collect%2A?displayProperty=fullName> 호출 빈도 또는 트리밍되는 개체 양이 효율적이지 않습니다. 이제 개발자는 **IObserver** 구현을 응용 프로그램의 메모리 모니터에 구독하여 기본 동작을 바꾸거나 보완할 수 있습니다.
+- **메모리 제한 반응**. 기본적으로 ASP.NET은 전용 바이트 제한에 가까워지면 개체 캐시를 트리밍하고 주기적으로 <xref:System.GC.Collect%2A?displayProperty=fullName>를 호출합니다. 일부 응용 프로그램의 경우 <xref:System.GC.Collect%2A?displayProperty=fullName> 호출 빈도 또는 트리밍되는 캐시 양이 효율적이지 않습니다. 이제 개발자는 **IObserver** 구현을 응용 프로그램의 메모리 모니터에 구독하여 기본 동작을 바꾸거나 보완할 수 있습니다.
 
 <a name="wcf47" />
 #### <a name="windows-communication-foundation-wcf"></a>WCF(Windows Communication Foundation)
@@ -188,7 +188,7 @@ WISP(Windows 잉크 서비스 플랫폼) 대신 [WM_POINTER 메시지](https://m
  [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]의 ASP.NET에는 다음과 같은 향상된 기능이 포함되어 있습니다.
 
  **데이터 주석 유효성 검사기의 지역화된 오류 메시지에 대한 지원 향상** 
- 데이터 주석 유효성 검사기를 통해 클래스 속성에 하나 이상의 특성을 추가하여 유효성 검사를 수행할 수 있습니다. 유효성 검사에 실패하면 해당 특성의 <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=fullName> 요소가 오류 메시지 텍스트를 정의합니다. [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 이상에서는 ASP.NET을 사용하여 오류 메시지를 쉽게 지역화할 수 있습니다. 다음과 같은 경우에 오류 메시지를 지역화합니다.
+ 데이터 주석 유효성 검사기를 통해 클래스 속성에 하나 이상의 특성을 추가하여 유효성 검사를 수행할 수 있습니다. 특성의 <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=fullName> 요소는 유효성 검사가 실패할 경우에 표시할 오류 메시지의 텍스트를 정의합니다. [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 이상에서는 ASP.NET을 사용하여 오류 메시지를 쉽게 지역화할 수 있습니다. 다음과 같은 경우에 오류 메시지를 지역화합니다.
 
 1.  <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=fullName>가 유효성 검사 특성에 제공되는 경우
 
@@ -196,7 +196,7 @@ WISP(Windows 잉크 서비스 플랫폼) 대신 [WM_POINTER 메시지](https://m
 
 3.  지역화된 리소스 파일의 이름이 `DataAnnotation.Localization.{`*이름*`}.resx` 형식인 경우(여기서 *이름*은 *languageCode*`-`*country/regionCode* 또는 *languageCode* 형식의 문화권 이름임)
 
-4.  리소스의 키 이름이 <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=fullName> 특성에 할당된 문자열이며 그 값이 지역화된 오류 메시지인 경우
+4.  리소스의 키 이름이 <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=fullName> 특성에 할당된 문자열이고 해당 값이 지역화된 오류 메시지인 경우
 
  예를 들어, 다음 데이터 주석 특성은 잘못된 등급에 대한 기본 문화권의 오류 메시지를 정의합니다.
 
@@ -228,7 +228,7 @@ End Class
  또한, 데이터 주석 지역화를 확장할 수 있습니다. 개발자는 <xref:System.Web.Globalization.IStringLocalizerProvider> 인터페이스를 구현하여 리소스 파일 내부 이외의 위치에 지역화 문자열을 저장함으로써 문자열 로컬라이저 공급자를 연결할 수 있습니다.
 
  **세션 상태 저장소 공급자와 비동기 지원**
- 이제 ASP.NET을 통해 태스크 반환 메서드를 세션 상태 저장소 공급자와 함께 사용할 수 있으므로, ASP.NET 앱에서 비동기화의 확장성 이점을 누릴 수 있습니다. 세션 상태 저장소 공급자와의 비동기 작업을 지원하기 위해 ASP.NET에는 <xref:System.Web.SessionState.ISessionStateModule?displayProperty=fullName>이라는 새 인터페이스가 포함되어 있으며 이를 통해 개발자가 자체 세션 상태 모듈과 비동기 세션 저장소 공급자를 구현할 수 있습니다. 인터페이스는 다음과 같이 정의됩니다.
+ 이제 ASP.NET을 통해 태스크 반환 메서드를 세션 상태 저장소 공급자와 함께 사용할 수 있으므로, ASP.NET 앱에서 비동기화의 확장성 이점을 누릴 수 있습니다. 세션 상태 저장소 공급자와의 비동기 작업을 지원하기 위해 ASP.NET에는 <xref:System.Web.SessionState.ISessionStateModule?displayProperty=fullName>이라는 새 인터페이스가 포함되어 있습니다. 이 인터페이스는 <xref:System.Web.IHttpModule>에서 상속하며 개발자가 자체 세션 상태 모듈과 비동기 세션 저장소 공급자를 구현할 수 있도록 해줍니다. 인터페이스는 다음과 같이 정의됩니다.
 
 ```csharp
 
@@ -239,34 +239,34 @@ public interface ISessionStateModule : IHttpModule {
 
 ```
 
- 또한 <xref:System.Web.SessionState.SessionStateUtility> 클래스에는 비동기 작업을 지원하는 데 사용할 수 있는 두 가지 새로운 메서드 <xref:System.Web.SessionState.SessionStateUtility.IsSessionStateReadOnly%2A> 및 <xref:System.Web.SessionState.SessionStateUtility.IsSessionStateRequired%2A>가 포함되어 있습니다.
+ 또한 <xref:System.Web.SessionState.SessionStateUtility> 클래스는 비동기 작업을 지원하는 데 사용할 수 있는 두 개의 새로운 메서드 <xref:System.Web.SessionState.SessionStateUtility.IsSessionStateReadOnly%2A> 및 <xref:System.Web.SessionState.SessionStateUtility.IsSessionStateRequired%2A>를 포함합니다.
 
  **출력 캐시 공급자에 대한 비동기 지원**
  [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 이상에서는 태스크 반환 메서드를 출력 캐시 공급자와 함께 사용하여 비동기화의 확장성 이점을 제공할 수 있습니다.  이러한 메서드를 구현하는 공급자는 웹 서버에서 스레드 차단을 줄이고 ASP.NET 서비스의 확장성을 개선합니다.
 
  비동기 출력 캐시 공급자를 지원하기 위해 다음 API를 추가했습니다.
 
-- <xref:System.Web.Caching.OutputCacheProviderAsync?displayProperty=fullName> 클래스는 <xref:System.Web.Caching.OutputCacheProvider?displayProperty=fullName>에서 상속되며 이를 통해 개발자가 비동기 출력 캐시 공급자를 구현할 수 있습니다.
+- <xref:System.Web.Caching.OutputCacheProviderAsync?displayProperty=fullName> 클래스: <xref:System.Web.Caching.OutputCacheProvider?displayProperty=fullName>에서 상속하며 개발자가 비동기 출력 캐시 공급자를 구현할 수 있도록 해줍니다.
 
-- <xref:System.Web.Caching.OutputCacheUtility> 클래스는 출력 캐시를 구성하기 위한 도우미 메서드를 제공합니다.
+- <xref:System.Web.Caching.OutputCacheUtility> 클래스: 출력 캐시를 구성하기 위한 도우미 메서드를 제공합니다.
 
-- <xref:System.Web.HttpCachePolicy?displayProperty=fullName> 클래스에 18개의 새 메서드가 있습니다. 여기에 <xref:System.Web.HttpCachePolicy.GetCacheability%2A>, <xref:System.Web.HttpCachePolicy.GetCacheExtensions%2A>, <xref:System.Web.HttpCachePolicy.GetETag%2A>, <xref:System.Web.HttpCachePolicy.GetETagFromFileDependencies%2A>, <xref:System.Web.HttpCachePolicy.GetMaxAge%2A>, <xref:System.Web.HttpCachePolicy.GetMaxAge%2A>, <xref:System.Web.HttpCachePolicy.GetNoStore%2A>, <xref:System.Web.HttpCachePolicy.GetNoTransforms%2A>, <xref:System.Web.HttpCachePolicy.GetOmitVaryStar%2A>, <xref:System.Web.HttpCachePolicy.GetProxyMaxAge%2A>, <xref:System.Web.HttpCachePolicy.GetRevalidation%2A>, <xref:System.Web.HttpCachePolicy.GetUtcLastModified%2A>, <xref:System.Web.HttpCachePolicy.GetVaryByCustom%2A>, <xref:System.Web.HttpCachePolicy.HasSlidingExpiration%2A> 및 <xref:System.Web.HttpCachePolicy.IsValidUntilExpires%2A>가 포함됩니다.
+- <xref:System.Web.HttpCachePolicy?displayProperty=fullName> 클래스의 새로운 메서드 18개. 여기에는 <xref:System.Web.HttpCachePolicy.GetCacheability%2A>, <xref:System.Web.HttpCachePolicy.GetCacheExtensions%2A>, <xref:System.Web.HttpCachePolicy.GetETag%2A>, <xref:System.Web.HttpCachePolicy.GetETagFromFileDependencies%2A>, <xref:System.Web.HttpCachePolicy.GetMaxAge%2A>, <xref:System.Web.HttpCachePolicy.GetMaxAge%2A>, <xref:System.Web.HttpCachePolicy.GetNoStore%2A>, <xref:System.Web.HttpCachePolicy.GetNoTransforms%2A>, <xref:System.Web.HttpCachePolicy.GetOmitVaryStar%2A>, <xref:System.Web.HttpCachePolicy.GetProxyMaxAge%2A>, <xref:System.Web.HttpCachePolicy.GetRevalidation%2A>, <xref:System.Web.HttpCachePolicy.GetUtcLastModified%2A>, <xref:System.Web.HttpCachePolicy.GetVaryByCustom%2A>, <xref:System.Web.HttpCachePolicy.HasSlidingExpiration%2A>, <xref:System.Web.HttpCachePolicy.IsValidUntilExpires%2A> 등이 포함됩니다.
 
-- <xref:System.Web.HttpCacheVaryByContentEncodings?displayProperty=fullName> 클래스에 2개의 새 매서드 <xref:System.Web.HttpCacheVaryByContentEncodings.GetContentEncodings%2A> 및 <xref:System.Web.HttpCacheVaryByContentEncodings.SetContentEncodings%2A>가 있습니다.
+- <xref:System.Web.HttpCacheVaryByContentEncodings?displayProperty=fullName> 클래스의 새로운 메서드 2개: <xref:System.Web.HttpCacheVaryByContentEncodings.GetContentEncodings%2A> 및 <xref:System.Web.HttpCacheVaryByContentEncodings.SetContentEncodings%2A>.
 
-- <xref:System.Web.HttpCacheVaryByHeaders?displayProperty=fullName> 클래스에 2개의 새 매서드 <xref:System.Web.HttpCacheVaryByHeaders.GetHeaders%2A> 및 <xref:System.Web.HttpCacheVaryByHeaders.SetHeaders%2A>가 있습니다.
+- <xref:System.Web.HttpCacheVaryByHeaders?displayProperty=fullName> 클래스의 새로운 메서드 2개: <xref:System.Web.HttpCacheVaryByHeaders.GetHeaders%2A> 및 <xref:System.Web.HttpCacheVaryByHeaders.SetHeaders%2A>.
 
-- <xref:System.Web.HttpCacheVaryByParams?displayProperty=fullName> 클래스에 2개의 새 매서드 <xref:System.Web.HttpCacheVaryByParams.GetParams%2A> 및 <xref:System.Web.HttpCacheVaryByParams.SetParams%2A>가 있습니다.
+- <xref:System.Web.HttpCacheVaryByParams?displayProperty=fullName> 클래스의 새로운 메서드 2개: <xref:System.Web.HttpCacheVaryByParams.GetParams%2A> 및 <xref:System.Web.HttpCacheVaryByParams.SetParams%2A>.
 
-- <xref:System.Web.Caching.AggregateCacheDependency?displayProperty=fullName> 클래스에 <xref:System.Web.Caching.AggregateCacheDependency.GetFileDependencies%2A> 메서드가 있습니다.
+- <xref:System.Web.Caching.AggregateCacheDependency?displayProperty=fullName> 클래스의 <xref:System.Web.Caching.AggregateCacheDependency.GetFileDependencies%2A> 메서드.
 
-- <xref:System.Web.Caching.CacheDependency>에 <xref:System.Web.Caching.CacheDependency.GetFileDependencies%2A> 메서드가 있습니다.
+- <xref:System.Web.Caching.CacheDependency>의 <xref:System.Web.Caching.CacheDependency.GetFileDependencies%2A> 메서드.
 
 <a name="Strings"></a> 
 ### <a name="character-categories"></a>문자 범주
  [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]의 문자는 [유니코드 표준 버전 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/)을 기반으로 분류됩니다. [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 및 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]의 문자는 유니코드 6.3 문자 범주를 기반으로 분류됩니다.
 
- 유니코드 8.0 지원은 <xref:System.Globalization.CharUnicodeInfo> 클래스에 의한 문자 분류와 해당 클래스를 사용하는 유형 및 메서드로 제한됩니다. 여기에는 <xref:System.Globalization.StringInfo>클래스, 오버로드된 <xref:System.Char.GetUnicodeCategory%2A?displayProperty=fullName> 메서드 및 .NET Framework 정규식 엔진에서 인식되는 [문자 클래스](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)가 포함됩니다.  문자 및 문자열 비교와 정렬은 이 변경의 영향을 받지 않으며, 기본 운영 체제, Windows 7 시스템 또는 .NET Framework에서 제공하는 문자 데이터를 계속해서 사용합니다.
+ 유니코드 8.0 지원은 <xref:System.Globalization.CharUnicodeInfo> 클래스에 의한 문자 분류와 해당 클래스를 사용하는 유형 및 메서드로 제한됩니다. 여기에는 <xref:System.Globalization.StringInfo> 클래스, 오버로드된 <xref:System.Char.GetUnicodeCategory%2A?displayProperty=fullName> 메서드, .NET Framework 정규식 엔진에서 인식되는 [문자 클래스](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)가 포함됩니다.  문자 및 문자열 비교와 정렬은 이 변경의 영향을 받지 않으며, 기본 운영 체제, Windows 7 시스템 또는 .NET Framework에서 제공하는 문자 데이터를 계속해서 사용합니다.
 
  문자 범주를 유니코드 6.0에서 유니코드 7.0으로 변경하려면 유니코드 컨소시엄 웹 사이트에서 [유니코드 표준, 버전 7.0.0](http://www.unicode.org/versions/Unicode7.0.0/)을 참조하십시오. 유니코드 7.0에서 유니코드 8.0으로 변경하려면 유니코드 컨소시엄 웹 사이트에서 [유니코드 표준, 버전 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/)을 참조하십시오.
 
@@ -275,7 +275,7 @@ public interface ISessionStateModule : IHttpModule {
  **FIPS 186-3 DSA를 포함하는 X509 인증서에 대한 지원** 
  [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]에서는 키가 FIPS 186-2 1024비트 제한을 초과하는 DSA(디지털 서명 알고리즘) X509 인증서에 대한 지원을 추가했습니다.
 
- FIPS 186-3의 더 큰 키 크기를 지원할 뿐만 아니라 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]에서는 SHA-2 해시 알고리즘 패밀리(SHA256, SHA384 및 SHA512)를 통한 컴퓨팅 시그니처를 허용합니다. FIPS 186 3 지원은 새로운 <xref:System.Security.Cryptography.DSACng?displayProperty=fullName> 클래스에서 지원됩니다.
+ FIPS 186-3의 더 큰 키 크기를 지원할 뿐만 아니라 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]에서는 SHA-2 해시 알고리즘 패밀리(SHA256, SHA384 및 SHA512)를 통한 컴퓨팅 시그니처를 허용합니다. FIPS 186-3 지원은 새 <xref:System.Security.Cryptography.DSACng?displayProperty=fullName> 클래스에 의해 제공됩니다.
 
  .NET Framework 4.6의 <xref:System.Security.Cryptography.RSA> 클래스 및 .NET Framework 4.6.1의 <xref:System.Security.Cryptography.ECDsa> 클래스에 대한 최신 변경에 따라 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]의 <xref:System.Security.Cryptography.DSA> 추상 기본 클래스에는 호출자가 캐스팅하지 않고 이 기능을 사용할 수 있도록 해주는 추가 메서드가 있습니다. 다음 예제와 같이 <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPrivateKey%2A?displayProperty=fullName> 확장 메서드를 호출하여 데이터에 서명할 수 있습니다.
 
@@ -297,7 +297,7 @@ Public Shared Function SignDataDsaSha384(data As Byte(), cert As X509Certificate
 End Function
 ```
 
- 또한 다음 예제와 같이 <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPublicKey%2A?displayProperty=fullName> 확장 메서드를 호출하여 서명된 데이터를 확인할 수 있습니다.
+ 다음 예제와 같이 <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPublicKey%2A?displayProperty=fullName> 확장 메서드를 호출하여 서명된 데이터를 확인할 수 있습니다.
 
 ```csharp
 public static bool VerifyDataDsaSha384(byte[] data, byte[] signature, X509Certificate2 cert)
@@ -331,7 +331,7 @@ End Function
  **지속형 키 대칭 암호화 지원**
  Windows 암호화 라이브러리(CNG)에서는 지속형 대칭 키 저장과 하드웨어에 저장된 대칭 키 사용에 대한 지원을 추가했습니다. 개발자는 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]를 통해 이 기능을 활용할 수 있습니다.  키 이름과 키 공급자가 구현별로 다르게 표시되므로, 이 기능을 사용하려면 기본 팩토리 접근 방식 대신 구체적인 구현 형식의 생성자를 활용해야 합니다(예: `Aes.Create` 호출).
 
- 지속형 키 대칭 암호화 지원은 AES (<xref:System.Security.Cryptography.AesCng>) 및 3DES (<xref:System.Security.Cryptography.TripleDESCng>) 알고리즘을 위해 존재합니다. 예를 들면 다음과 같습니다.
+ AES(<xref:System.Security.Cryptography.AesCng>) 및 3DES(<xref:System.Security.Cryptography.TripleDESCng>) 알고리즘에 대해 지속형 키 대칭 암호화가 지원됩니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 public static byte[] EncryptDataWithPersistedKey(byte[] data, byte[] iv)
@@ -371,9 +371,9 @@ End Function
 ```
 
  **SHA-2 해시에 대한 SignedXml 지원**
- [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]에서는 RSA-SHA256, RSA-SHA384 및 RSA-SHA512 PKCS#1 시그니처 메서드, SHA256, SHA384 및 SHA512 참조 다이제스트 알고리즘에 대한 <xref:System.Security.Cryptography.Xml.SignedXml> 클래스에 지원을 추가했습니다.
+ [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]에서는 RSA-SHA256/RSA-SHA384/RSA-SHA512 PKCS#1 시그니처 메서드와 SHA256/SHA384/SHA512 참조 다이제스트 알고리즘에 대한 <xref:System.Security.Cryptography.Xml.SignedXml> 클래스 지원을 추가했습니다.
 
- URI 상수는 <xref:System.Security.Cryptography.Xml.SignedXml>에 다음과 같이 모두 표시됩니다.
+ URI 상수가 <xref:System.Security.Cryptography.Xml.SignedXml>에 모두 노출됩니다.
 
 |SignedXml 필드|상수|
 |---------------------|--------------|
@@ -384,11 +384,11 @@ End Function
 |<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigSHA512Url>|"http://www.w3.org/2001/04/xmlenc#sha512"|
 |<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigRSASHA512Url>|"http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"|
 
- 이러한 알고리즘에 대한 지원을 추가하기 위해 <xref:System.Security.Cryptography.CryptoConfig>에 사용자 지정 <xref:System.Security.Cryptography.SignatureDescription> 핸들러를 등록한 모든 프로그램은 이전과 마찬가지로 계속 기능하지만 현재는 플랫폼 기본값이 있으므로 <xref:System.Security.Cryptography.CryptoConfig> 등록이 더 이상 필요하지 않습니다.
+ 사용자 지정 <xref:System.Security.Cryptography.SignatureDescription> 처리기를 <xref:System.Security.Cryptography.CryptoConfig>에 등록하여 이러한 알고리즘에 대한 지원을 추가한 모든 프로그램은 계속해서 이전처럼 작동하지만, 이제 플랫폼 기본값이 없으므로 <xref:System.Security.Cryptography.CryptoConfig> 등록이 더 이상 필요하지 않습니다.
 
 <a name="SQLClient"></a> 
 ### <a name="sqlclient"></a>SqlClient
- SQL Server용 .NET Framework 데이터 공급자(<xref:System.Data.SqlClient?displayProperty=fullName>)는 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]에 다음과 같은 새로운 기능을 포함합니다.
+ .NET Framework Data Provider for SQL Server(<xref:System.Data.SqlClient?displayProperty=fullName>)는 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]에 다음과 같은 새로운 기능이 포함되어 있습니다.
 
  **Azure SQL Database와의 연결 풀링 및 시간 초과**
  연결 풀링을 사용하도록 설정한 상태에서 시간 초과 또는 다른 오류가 발생할 경우 예외가 캐시되고 다음에 연결하려고 시도할 때 캐시된 예외가 5초~1분 동안 throw됩니다.  자세한 내용은 [SQL Server 연결 풀링(ADO.NET)](../../../docs/framework/data/adonet/sql-server-connection-pooling.md)을 참조하십시오.
@@ -414,9 +414,9 @@ End Function
 
  **Always Encrypted 기능 향상** SQLClient에서는 Always Encrypted에 대한 두 가지 향상된 기능을 도입했습니다.
 
-- 암호화된 데이터베이스 열에 대한 매개 변수화된 쿼리 성능을 향상하기 위해 이제 쿼리 매개 변수에 대한 암호화 메타데이터가 캐시됩니다. <xref:System.Data.SqlClient.SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled%2A?displayProperty=fullName> 속성을 `true`(기본값)로 설정 시 동일한 쿼리가 여러 번 호출되는 경우 클라이언트가 서버에서 한 번만 매개 변수 메타데이터를 검색합니다.
+- 암호화된 데이터베이스 열에 대한 매개 변수화된 쿼리 성능을 향상하기 위해 이제 쿼리 매개 변수에 대한 암호화 메타데이터가 캐시됩니다. <xref:System.Data.SqlClient.SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled%2A?displayProperty=fullName> 속성을 `true`(기본값)로 설정한 상태에서 동일한 쿼리를 여러 번 호출할 경우 클라이언트는 서버에서 매개 변수 메타데이터를 한 번만 검색합니다.
 
-- 키 캐시의 열 암호화 키 항목은 이제 구성 가능한 시간 간격 후에 제거되며 <xref:System.Data.SqlClient.SqlConnection.ColumnEncryptionKeyCacheTtl%2A?displayProperty=fullName> 속성을 사용하여 설정됩니다.
+- 키 캐시의 열 암호화 키 항목은 이제 <xref:System.Data.SqlClient.SqlConnection.ColumnEncryptionKeyCacheTtl%2A?displayProperty=fullName> 속성을 사용하여 설정된 구성 가능한 시간 간격 후에 제거됩니다.
 
 <a name="WCF"></a> 
 ### <a name="windows-communication-foundation"></a>Windows Communication Foundation
@@ -454,9 +454,9 @@ AppContext.SetSwitch(disableCngCertificates, False)
 </runtime>
 ```
 
-이 기능을 사용하는 경우 날짜 및 시간 데이터를 역직렬화하기 위해 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 개체가 <xref:System.TimeZone> 형식 대신 <xref:System.TimeZoneInfo> 형식을 사용합니다. <xref:System.TimeZoneInfo>에서는 여러 조정 규칙을 지원하므로 기록 표준 시간대 데이터로 작업할 수 있지만 <xref:System.TimeZone>에서는 그렇지 않습니다.
+이 기능을 사용하도록 설정한 경우 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 개체에서는 <xref:System.TimeZone> 형식 대신 <xref:System.TimeZoneInfo> 형식을 사용하여 날짜 및 시간 데이터를 deserialize합니다. <xref:System.TimeZoneInfo>에서는 여러 조정 규칙을 지원하므로 기록 표준 시간대 데이터로 작업할 수 있지만 <xref:System.TimeZone>에서는 그렇지 않습니다.
 
-<xref:System.TimeZoneInfo>구조 및 시간대 조정에 대한 자세한 내용은 [표준 시간대 개요](../../../docs/standard/datetime/time-zone-overview.md)를 참조하십시오.
+<xref:System.TimeZoneInfo> 구조 및 시간대 조정에 대한 자세한 내용은 [표준 시간대 개요](../../../docs/standard/datetime/time-zone-overview.md)를 참조하세요.
 
 **XMLSerializer 클래스로 serialize 및 deserialize할 때 UTC 시간 유지 지원** 일반적으로 <xref:System.Xml.Serialization.XmlSerializer> 클래스는 UTC <xref:System.DateTime> 값을 serialize하는 데 사용될 경우 날짜 및 시간을 유지하는 serialize된 시간 문자열을 만들지만 로컬 시간으로 간주됩니다.  예를 들어 다음 코드를 호출하여 UTC 날짜 및 시간을 인스턴스화하는 경우
 
@@ -470,7 +470,7 @@ Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
 
 UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:00:00.0000000-08:00"이 결과로 제공됩니다.  serialize된 값은 항상 로컬 날짜 및 시간 값으로 deserialize됩니다.
 
- 응용 프로그램 구성 설정을 사용하여 <xref:System.DateTime> 값을 직렬화 및 역직렬화할 때 <xref:System.Xml.Serialization.XmlSerializer>에서 UTC 표준 시간대 정보를 유지할지 여부를 결정할 수 있습니다.
+ 응용 프로그램 구성 설정을 사용하여 <xref:System.DateTime> 값을 serialize 및 deserialize화할 때 <xref:System.Xml.Serialization.XmlSerializer>에서 UTC 표준 시간대 정보를 유지할지 여부를 결정할 수 있습니다.
 
 ```xml 
 <runtime>
@@ -479,9 +479,9 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 </runtime>
 ```
 
-이 기능을 사용하는 경우 날짜 및 시간 데이터를 역직렬화하기 위해 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 개체가 <xref:System.TimeZone> 형식 대신 <xref:System.TimeZoneInfo> 형식을 사용합니다. <xref:System.TimeZoneInfo>에서는 여러 조정 규칙을 지원하므로 기록 표준 시간대 데이터로 작업할 수 있지만 <xref:System.TimeZone>에서는 그렇지 않습니다.
+이 기능을 사용하도록 설정한 경우 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 개체에서는 <xref:System.TimeZone> 형식 대신 <xref:System.TimeZoneInfo> 형식을 사용하여 날짜 및 시간 데이터를 deserialize합니다. <xref:System.TimeZoneInfo>에서는 여러 조정 규칙을 지원하므로 기록 표준 시간대 데이터로 작업할 수 있지만 <xref:System.TimeZone>에서는 그렇지 않습니다.
 
-<xref:System.TimeZoneInfo>구조 및 시간대 조정에 대한 자세한 내용은 [표준 시간대 개요](../../../docs/standard/datetime/time-zone-overview.md)를 참조하십시오.
+<xref:System.TimeZoneInfo> 구조 및 시간대 조정에 대한 자세한 내용은 [표준 시간대 개요](../../../docs/standard/datetime/time-zone-overview.md)를 참조하세요.
 
  **NetNamedPipeBinding 가장 일치**
  WCF에는 클라이언트 응용 프로그램에서 요청한 항목과 가장 일치하는 URI를 수신하는 서비스에 항상 연결하도록 설정 가능한 새 앱 설정이 있습니다. 이 앱 설정을 `false`(기본값)로 지정한 경우 클라이언트에서 <xref:System.ServiceModel.NetNamedPipeBinding>을 사용하여 요청한 URI의 부분 문자열인 URI를 수신하는 서비스에 연결하려고 시도할 수 있습니다.
@@ -519,9 +519,9 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
  **그룹 정렬**
  <xref:System.Windows.Data.CollectionView> 개체를 사용하여 데이터를 그룹화하는 응용 프로그램에서는 이제 그룹 정렬 방법을 명시적으로 선언할 수 있습니다. 명시적으로 정렬하면 응용 프로그램에서 그룹을 동적으로 추가 또는 제거하거나 그룹화에 포함된 항목의 속성 값을 변경할 때 발생하는 직관적이지 않은 순서 지정 문제가 해결됩니다. 또한 그룹화 속성 비교를 전체 컬렉션 정렬에서 그룹화 정렬로 전환하여 그룹 만들기 프로세스의 성능을 향상할 수 있습니다.
 
- 그룹 정렬을 지원하기 위해 새로운 <xref:System.ComponentModel.GroupDescription.SortDescriptions%2A?displayProperty=fullName> 및 <xref:System.ComponentModel.GroupDescription.CustomSort%2A?displayProperty=fullName> 속성을 통해 <xref:System.ComponentModel.GroupDescription> 개체에서 생성된 그룹 컬렉션을 정렬하는 방법이 기술됩니다. 이 방법은 동일하게 명명된 <xref:System.Windows.Data.ListCollectionView> 속성에서 데이터 항목을 정렬하는 방법을 설명하는 방식과 유사합니다.
+ 그룹 정렬을 지원하기 위해 새 <xref:System.ComponentModel.GroupDescription.SortDescriptions%2A?displayProperty=fullName> 및 <xref:System.ComponentModel.GroupDescription.CustomSort%2A?displayProperty=fullName> 속성에서 <xref:System.ComponentModel.GroupDescription> 개체에 의해 생성되는 그룹 컬렉션을 정렬하는 방법을 설명합니다. 이 방법은 동일하게 명명된 <xref:System.Windows.Data.ListCollectionView> 속성에서 데이터 항목을 정렬하는 방법을 설명하는 방식과 유사합니다.
 
- <xref:System.Windows.Data.PropertyGroupDescription> 클래스의 두 가지 새로운 정적 속성 <xref:System.Windows.Data.PropertyGroupDescription.CompareNameAscending%2A> 및 <xref:System.Windows.Data.PropertyGroupDescription.CompareNameDescending%2A>는 가장 일반적인 경우에 사용할 수 있습니다.
+ <xref:System.Windows.Data.PropertyGroupDescription> 클래스의 새로운 두 정적 속성인 <xref:System.Windows.Data.PropertyGroupDescription.CompareNameAscending%2A> 및 <xref:System.Windows.Data.PropertyGroupDescription.CompareNameDescending%2A>은 가장 일반적인 경우에 사용할 수 있습니다.
 
  예를 들어 다음 XAML은 데이터를 연령별로 그룹화하고, 연령 그룹을 오름차순으로 정렬한 다음 각 연령 그룹 내의 항목을 성별로 그룹화합니다.
 
@@ -576,10 +576,10 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
  이 시나리오를 사용하지 않도록 설정한 경우 응용 프로그램을 실행하면 계속해서 예외가 발생하고 “이 구현은 Windows Platform FIPS 유효성을 검사한 암호화 알고리즘의 일부가 아닙니다.”라는 메시지가 표시됩니다.
 
- **Visual Studio Workflow Designer에서 동적 업데이트를 사용할 때 워크플로 기능 향상**
- 워크플로 디자이너, 순서도 활동 디자이너 및 기타 워크플로 활동 디자이너는 이제 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=fullName> 메서드를 호출한 이후에 저장된 워크플로를 로드하여 표시합니다. [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 이전의 .NET Framework 버전에서 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=fullName>를 호출한 후 저장된 워크플로에 대해 Visual Studio에 XAML 파일을 로드하면 다음과 같은 문제가 발생할 수 있습니다.
+ **Visual Studio 워크플로 디자이너에서 동적 업데이트를 사용할 때 워크플로 기능 향상**
+ 워크플로 디자이너, 순서도 활동 디자이너 및 기타 워크플로 활동 디자이너는 이제 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=fullName> 메서드를 호출한 이후에 저장된 워크플로를 로드하여 표시합니다. [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 이전 버전의 .NET Framework에서는 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=fullName> 호출 후에 저장된 워크플로에 대한 XAML 파일을 Visual Studio에서 로드하면 다음과 같은 문제가 발생할 수 있습니다.
 
-- 워크플로 디자이너가 XAML 파일을 올바르게 로드할 수 없습니다(<xref:System.Activities.Presentation.ViewState.ViewStateData.Id%2A?displayProperty=fullName>가 줄의 끝에 있는 경우).
+- 워크플로 디자이너에서 XAML 파일을 올바르게 로드할 수 없습니다(<xref:System.Activities.Presentation.ViewState.ViewStateData.Id%2A?displayProperty=fullName>가 줄의 끝에 있는 경우).
 
 - 순서도 활동 디자이너 또는 기타 워크플로 활동 디자이너는 연결된 속성 값과 달리 모든 개체를 기본 위치에 표시할 수 있습니다.
 
@@ -595,7 +595,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
 <a name="Debug462"></a> 
 ### <a name="debugging-improvements"></a>디버깅 기능 향상
- 단일 소스 코드 줄에서 `null`인 변수를 확인할 수 있도록 <xref:System.NullReferenceException>가 throw될 때 추가 분석을 수행하도록 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]에서 *관리되지 않는 디버깅 API*가 개선되었습니다.   이 시나리오를 지원하기 위해 관리되지 않는 디버깅 API에 다음 API를 추가했습니다.
+ 단일 소스 코드 줄에서 `null`인 변수를 확인할 수 있도록 <xref:System.NullReferenceException>이 throw될 때 추가 분석을 수행하도록 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]에서 *관리되지 않는 디버깅 API*가 개선되었습니다.   이 시나리오를 지원하기 위해 관리되지 않는 디버깅 API에 다음 API를 추가했습니다.
 
 - [ICorDebugCode4](../../../docs/framework/unmanaged-api/debugging/icordebugcode4-interface.md), [ICorDebugVariableHome](../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) 및 [ICorDebugVariableHomeEnum](../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) 인터페이스: 관리되는 변수의 네이티브 홈을 노출합니다. 이렇게 하면 <xref:System.NullReferenceException>가 발생할 경우 디버거에서 일부 코드 흐름 분석을 수행하고 거꾸로 살펴보면서 네이티브 위치 `null`에 해당하는 관리되는 변수를 결정합니다.
 
@@ -647,7 +647,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
  HSM에 저장된 열 마스터 키로 보호된 상시 암호화 데이터에 액세스하려면 고객이 HSM 공급업체에서 제공한 CSP 공급자 또는 CNG 키 저장소 공급자를 앱 서버 또는 클라이언트 컴퓨터에 설치해야 합니다.
 
- AlwaysOn에 대해 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> 연결 동작을 개선합니다. SqlClient는 이제 자동으로 AlwaysOn AG(가용성 그룹)에 대한 더 빠른 연결을 제공합니다. 응용 프로그램이 다른 서브넷의 AlwaysOn AG(가용성 그룹)에 연결되었는지 투명하게 감지하고 현재 활성 서버를 신속하게 검색하여 서버에 대한 연결을 제공합니다. 이 릴리스 전에는 AlwaysOn 가용성 그룹에 연결되었음을 나타내기 위해 응용 프로그램에서 `“MultisubnetFailover=true”`를 포함하도록 연결 문자열을 설정해야 했습니다. 연결 키워드를 `true`로 설정하지 않은 경우 응용 프로그램에서 AlwaysOn 가용성 그룹에 연결하는 동안 시간 초과가 발생할 수 있습니다. 이 릴리스를 통해 응용 프로그램에서 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>을 `true`로 설정할 필요가 *없습니다*. Always On 가용성 그룹의 SqlClient 지원에 대한 자세한 내용은 [고가용성 및 재해 복구에 대한 SqlClient 지원](../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)을 참조하십시오.
+ AlwaysOn의 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> 연결 동작 개선. SqlClient는 이제 자동으로 AlwaysOn AG(가용성 그룹)에 대한 더 빠른 연결을 제공합니다. 응용 프로그램이 다른 서브넷의 AlwaysOn AG(가용성 그룹)에 연결되었는지 투명하게 감지하고 현재 활성 서버를 신속하게 검색하여 서버에 대한 연결을 제공합니다. 이 릴리스 전에는 AlwaysOn 가용성 그룹에 연결되었음을 나타내기 위해 응용 프로그램에서 `“MultisubnetFailover=true”`를 포함하도록 연결 문자열을 설정해야 했습니다. 연결 키워드를 `true`로 설정하지 않은 경우 응용 프로그램에서 AlwaysOn 가용성 그룹에 연결하는 동안 시간 초과가 발생할 수 있습니다. 이 릴리스에서는 더 이상 응용 프로그램에서 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>를 `true`로 설정할 필요가 *없습니다*. Always On 가용성 그룹의 SqlClient 지원에 대한 자세한 내용은 [고가용성 및 재해 복구에 대한 SqlClient 지원](../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)을 참조하십시오.
 
 <a name="WPF461"></a> 
 ### <a name="windows-presentation-foundation-wpf"></a>WPF(Windows Presentation Foundation)
@@ -688,7 +688,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
 <a name="WWF461"></a> 
 ### <a name="windows-workflow-foundation-transactions"></a>Windows Workflow Foundation: 트랜잭션
- <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=fullName> 메서드는 이제 MSDTC 이외의 분산 트랜잭션 관리자를 사용하여 트랜잭션을 승격할 수 있습니다. GUID 트랜잭션 프로모터 식별자를 새로운 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=fullName> 오버로드로 지정하여 이 작업을 수행합니다. 이 작업이 성공한 경우 트랜잭션 기능이 제한됩니다. 비 MSDTC 트랜잭션 프로모터가 등록된 경우 다음 메서드는 MSDTC로의 승격이 필요하므로 <xref:System.Transactions.TransactionPromotionException>을 throw합니다.
+ <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=fullName> 메서드는 이제 MSDTC 이외의 분산 트랜잭션 관리자를 사용하여 트랜잭션을 승격할 수 있습니다. 이 작업을 수행하려면 GUID 트랜잭션 프로모터 식별자를 새 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=fullName> 오버로드로 지정합니다. 이 작업이 성공한 경우 트랜잭션 기능이 제한됩니다. 비 MSDTC 트랜잭션 프로모터가 등록된 경우 다음 메서드는 MSDTC로의 승격이 필요하므로 <xref:System.Transactions.TransactionPromotionException>을 throw합니다.
 
 - <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=fullName>
 
@@ -698,9 +698,9 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
 - <xref:System.Transactions.TransactionInterop.GetTransmitterPropagationToken%2A?displayProperty=fullName>
 
- 비 MSDTC 트랜잭션 프로모터가 등록된 경우 향후 정의된 프로토콜을 사용하여 지속적인 인리스트먼트에 사용되어야 합니다. <xref:System.Transactions.Transaction.PromoterType%2A> 속성을 사용하여 트랜잭션 프로모터의 <xref:System.Guid>를 얻을 수 있습니다. 트랜잭션이 승격될 때 트랜잭션 프로모터는 승격된 토큰을 나타내는 <xref:System.Byte> 배열을 제공합니다. 응용 프로그램에서는 <xref:System.Transactions.Transaction.GetPromotedToken%2A> 메서드를 사용하여 비 MSDTC 승격된 트랜잭션에 대한 승격된 토큰을 가져올 수 있습니다.
+ 비 MSDTC 트랜잭션 프로모터가 등록된 경우 향후 정의된 프로토콜을 사용하여 지속적인 인리스트먼트에 사용되어야 합니다. 트랜잭션 프로모터의 <xref:System.Guid>는 <xref:System.Transactions.Transaction.PromoterType%2A> 속성을 사용하여 가져올 수 있습니다. 트랜잭션이 승격될 때 트랜잭션 프로모터는 승격된 토큰을 나타내는 <xref:System.Byte> 배열을 제공합니다. 응용 프로그램에서는 <xref:System.Transactions.Transaction.GetPromotedToken%2A> 메서드를 사용하여 비 MSDTC 승격된 트랜잭션에 대한 승격된 토큰을 가져올 수 있습니다.
 
- 프로모션 작업을 성공적으로 완료하기 위해 새로운 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=fullName> 오버로드의 사용자가 특정 호출 순서를 따라야 합니다. 이러한 규칙은 메서드 설명서에 나와 있습니다.
+ 승격 작업을 완료하려면 새 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=fullName> 오버로드 사용자가 특정 호출 시퀀스를 따라야 합니다. 이러한 규칙은 메서드 설명서에 나와 있습니다.
 
 <a name="Profile461"></a> 
 ### <a name="profiling"></a>프로파일링
@@ -732,7 +732,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
     - **비동기 응답 플러시를 위한 작업 기반 API**
 
-         이제 ASP.NET은 비동기 응답 플러시에 대한 간단한 작업 기반 API인 <xref:System.Web.HttpResponse.FlushAsync%2A?displayProperty=fullName>를 제공합니다. 이를 통해 해당 언어의 `async/await` 지원을 사용하여 응답을 비동기적으로 플러시할 수 있습니다.
+         이제 ASP.NET이 비동기 응답 플러시에 대한 간단한 작업 기반 API인 <xref:System.Web.HttpResponse.FlushAsync%2A?displayProperty=fullName>를 제공합니다. 이를 통해 해당 언어의 `async/await` 지원을 사용하여 응답을 비동기적으로 플러시할 수 있습니다.
 
     - `Model binding supports task-returning methods`
 
@@ -754,7 +754,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
          또한 HTTP/2는 <xref:System.Net.Http.HttpClient?displayProperty=fullName> API를 사용하는 Windows 10 UWP(유니버설 Windows 플랫폼) 앱에서 지원되며 기본적으로 설정되어 있습니다.
 
-         ASP.NET 응용 프로그램의 [PUSH_PROMISE](http://http2.github.io/http2-spec/#PUSH_PROMISE) 기능을 사용하는 방법을 제공하기 위해 두 가지 오버로드 <xref:System.Web.HttpResponse.PushPromise%28System.String%29> 및 <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29>을 사용하는 새 메서드가 <xref:System.Web.HttpResponse> 클래스에 추가되었습니다.
+         ASP.NET 응용 프로그램의 [PUSH_PROMISE](http://http2.github.io/http2-spec/#PUSH_PROMISE) 기능 사용 방법을 제공하기 위해 두 개의 오버로드(<xref:System.Web.HttpResponse.PushPromise%28System.String%29> 및 <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29>)와 함께 새 메서드가 <xref:System.Web.HttpResponse> 클래스에 추가되었습니다.
 
         > [!NOTE]
         >  ASP.NET 5는 HTTP/2를 지원하는 반면 PUSH PROMISE 기능에 대한 지원은 아직 추가되지 않았습니다.
@@ -799,33 +799,33 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
     - **IReadOnlyCollection\<T> 구현**
 
-         <xref:System.Collections.Generic.Queue%601> 및 <xref:System.Collections.Generic.Stack%601>을 포함한 추가 컬렉션이 <xref:System.Collections.Generic.IReadOnlyCollection%601>을 구현합니다.
+         추가 컬렉션이 <xref:System.Collections.Generic.IReadOnlyCollection%601>(예: <xref:System.Collections.Generic.Queue%601> 및 <xref:System.Collections.Generic.Stack%601>)을 구현합니다.
 
     - **CultureInfo.CurrentCulture 및 CultureInfo.CurrentUICulture**
 
-         <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> 및 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> 속성은 이제 읽기 전용 대신 읽기/쓰기로 설정됩니다. 이러한 속성에 새 <xref:System.Globalization.CultureInfo> 개체를 할당하면 `Thread.CurrentThread.CurrentCulture` 속성으로 정의된 현재 스레드 문화권과 `Thread.CurrentThread.CurrentUICulture` 속성으로 정의된 현재 UI 스레드 문화권도 변경됩니다.
+         이제 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> 및 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> 속성이 읽기 전용이 아니라 읽기/쓰기입니다. 이러한 속성에 새 <xref:System.Globalization.CultureInfo> 개체를 할당하면 `Thread.CurrentThread.CurrentCulture` 속성으로 정의된 현재 스레드 문화권과 `Thread.CurrentThread.CurrentUICulture` 속성으로 정의된 현재 UI 스레드 문화권도 변경됩니다.
 
     - **GC(가비지 수집) 향상**
 
-         <xref:System.GC> 클래스는 이제 중요한 경로를 실행하는 동안 가비지 수집을 차단할 수 있는 <xref:System.GC.TryStartNoGCRegion%2A> 및 <xref:System.GC.EndNoGCRegion%2A> 메서드를 포함합니다.
+         이제 <xref:System.GC> 클래스에 <xref:System.GC.TryStartNoGCRegion%2A> 및 <xref:System.GC.EndNoGCRegion%2A> 메서드가 포함되었습니다. 두 메서드를 사용하면 중요 경로를 실행하는 동안 가비지 수집을 차단할 수 있습니다.
 
-         <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%2CSystem.Boolean%29?displayProperty=fullName> 메서드의 새 오버로드를 통해 소형 개체 힙과 대형 개체 힙을 모두 정리하여 압축할지 또는 정리만 할지 제어할 수 있습니다.
+         <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%2CSystem.Boolean%29?displayProperty=fullName> 메서드의 새 오버로드를 통해 소형 개체 힙과 대형 개체 힙을 모두 정리 및 압축할지, 아니면 정리만 할지 제어할 수 있습니다.
 
     - **SIMD 사용 형식**
 
-         <xref:System.Numerics> 네임스페이에는 이제 <xref:System.Numerics.Matrix3x2>, <xref:System.Numerics.Matrix4x4>, <xref:System.Numerics.Plane>, <xref:System.Numerics.Quaternion>, <xref:System.Numerics.Vector2>, <xref:System.Numerics.Vector3> 및 <xref:System.Numerics.Vector4> 등의 다양한 SIMD 사용 형식이 포함됩니다.
+         이제 <xref:System.Numerics> 네임스페이스에 많은 SIMD 사용 형식(예: <xref:System.Numerics.Matrix3x2>, <xref:System.Numerics.Matrix4x4>, <xref:System.Numerics.Plane>, <xref:System.Numerics.Quaternion>, <xref:System.Numerics.Vector2>, <xref:System.Numerics.Vector3>, <xref:System.Numerics.Vector4>)이 포함되었습니다.
 
          또한 새로운 64비트 JIT 컴파일러에는 하드웨어 SIMD 가속 기능이 있으므로 SIMD 사용 형식과 새 64비트 JIT 컴파일러를 함께 사용하면 성능이 현저히 향상됩니다.
 
     - **암호화 업데이트**
 
-         [Windows CNG 암호화 API](https://msdn.microsoft.com/library/windows/desktop/aa376214.aspx)를 지원하기 위해 <xref:System.Security.Cryptography?displayProperty=fullName> API가 업데이트됩니다. 이전 버전의 .NET Framework는 <xref:System.Security.Cryptography?displayProperty=fullName> 구현의 기반으로 [이전 버전의 Windows 암호화 API](https://msdn.microsoft.com/library/windows/desktop/aa380255.aspx)를 전적으로 사용했습니다. CNG API는 특정 범주의 앱에 중요한 [최신 암호화 알고리즘](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx#suite_b_support)을 지원하기 때문에 CNG API에 대한 지원 요청을 받았습니다.
+         <xref:System.Security.Cryptography?displayProperty=fullName> API가 [Windows CNG 암호화 API](https://msdn.microsoft.com/library/windows/desktop/aa376214.aspx)를 지원하도록 업데이트되고 있습니다. 이전 버전의 .NET Framework는 <xref:System.Security.Cryptography?displayProperty=fullName> 구현의 기반으로 [이전 버전의 Windows 암호화 API](https://msdn.microsoft.com/library/windows/desktop/aa380255.aspx)를 전적으로 사용했습니다. CNG API는 특정 범주의 앱에 중요한 [최신 암호화 알고리즘](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx#suite_b_support)을 지원하기 때문에 CNG API에 대한 지원 요청을 받았습니다.
 
          .NET Framework 4.6에는 Windows CNG 암호화 API를 지원하는 다음과 같은 새로운 향상 기능이 포함되어 있습니다.
 
         - X509 인증서에 대한 일련의 확장 메서드(`System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)` 및 `System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)`) - 가능한 경우 CAPI 기반 구현 대신 CNG 기반 구현을 반환합니다. (일부 스마트 카드 등에는 여전히 CAPI가 필요하며 API가 대체(fallback) 처리합니다.)
 
-        - <xref:System.Security.Cryptography.RSACng?displayProperty=fullName> 클래스는 RSA 알고리즘의 CNG 구현을 제공합니다.
+        - <xref:System.Security.Cryptography.RSACng?displayProperty=fullName> 클래스 - RSA 알고리즘의 CNG 구현을 제공합니다.
 
         - RSA API에 대한 향상 기능 - 일반 작업에 더 이상 캐스팅이 필요하지 않습니다. 예를 들어 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 개체를 사용하여 데이터를 암호화하려면 이전 버전의 .NET Framework에서 다음과 같은 코드가 필요합니다.
 
@@ -837,7 +837,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
     - **UNIX 시간으로/UNIX 시간에서 날짜 및 시간 변환 지원**
 
-         다음의 새 메서드가 <xref:System.DateTimeOffset> 구조에 추가되어 UNIX 시간으로/UNIX 시간에서 날짜 및 시간 변환을 지원합니다.
+         다음 새 메서드가 <xref:System.DateTimeOffset> 구조에 추가되어 UNIX 시간으로/UNIX 시간에서 날짜 및 시간 변환을 지원합니다.
 
         - <xref:System.DateTimeOffset.FromUnixTimeSeconds%2A?displayProperty=fullName>
 
@@ -890,13 +890,13 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
     - **TAP(작업 기반 비동기 패턴) 변경 내용**
 
-         [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]을 대상으로 하는 앱의 경우 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 개체는 문화권 및 호출 스레드의 UI 문화권을 상속합니다. 이전 버전의 .NET Framework를 대상으로 하거나 특정 버전의 .NET Framework를 대상으로 하지 않는 앱의 동작은 영향을 받지 않습니다. 자세한 내용은 <xref:System.Globalization.CultureInfo> 클래스 항목의 "문화권 및 작업 기반 비동기 작업" 섹션을 참조하십시오.
+         [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]를 대상으로 하는 앱의 경우 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 개체가 호출 스레드의 문화권과 UI 문화권을 상속합니다. 이전 버전의 .NET Framework를 대상으로 하거나 특정 버전의 .NET Framework를 대상으로 하지 않는 앱의 동작은 영향을 받지 않습니다. 자세한 내용은 <xref:System.Globalization.CultureInfo> 클래스 항목의 "문화권 및 작업 기반 비동기 작업" 섹션을 참조하세요.
 
          <xref:System.Threading.AsyncLocal%601?displayProperty=fullName> 클래스를 사용하여 `async` 메서드와 같은 지정된 비동기 제어 흐름의 로컬 앰비언트 데이터를 나타낼 수 있습니다. 스레드 간에 데이터를 유지하는 데 사용할 수 있습니다. <xref:System.Threading.AsyncLocal%601.Value%2A?displayProperty=fullName> 속성이 명시적으로 변경되거나 스레드가 컨텍스트 전환을 발생시켜 앰비언트 데이터가 변경될 때마다 알림을 표시하는 콜백 메서드를 정의할 수도 있습니다.
 
-         특정 상태에서 완료된 작업을 반환할 수 있도록 세 가지 편의 메서드 <xref:System.Threading.Tasks.Task.CompletedTask%2A?displayProperty=fullName>, <xref:System.Threading.Tasks.Task.FromCanceled%2A?displayProperty=fullName> 및 <xref:System.Threading.Tasks.Task.FromException%2A?displayProperty=fullName>이 TAP(작업 기반 비동기 패턴)에 추가되었습니다.
+         3개의 편리한 메서드(<xref:System.Threading.Tasks.Task.CompletedTask%2A?displayProperty=fullName>, <xref:System.Threading.Tasks.Task.FromCanceled%2A?displayProperty=fullName> 및 <xref:System.Threading.Tasks.Task.FromException%2A?displayProperty=fullName>)가 작업 기반 비동기 패턴(TAP)에 추가되어 특정 상태에서 완료된 작업을 반환합니다.
 
-         <xref:System.IO.Pipes.NamedPipeClientStream> 클래스가 이제 새 <xref:System.IO.Pipes.NamedPipeClientStream.ConnectAsync%2A>와의 비동기 통신을 지원합니다. 메서드를 재정의합니다.
+         이제 <xref:System.IO.Pipes.NamedPipeClientStream> 클래스가 새 <xref:System.IO.Pipes.NamedPipeClientStream.ConnectAsync%2A>와의 비동기 통신을 지원합니다. 메서드를 재정의합니다.
 
     - **EventSource에서 이벤트 로그에 쓰기 지원**
 
@@ -922,7 +922,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
     - **HDPI 기능 향상**
 
-         이제 WPF의 HDPI 지원이 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]에서 보다 향상되었습니다. 테두리가 있는 컨트롤에 클리핑 인스턴스를 줄이기 위해 레이아웃 반올림을 변경했습니다. 기본적으로 <xref:System.Runtime.Versioning.TargetFrameworkAttribute>가 .NET 4.6으러 설정된 경우에만 이 기능을 사용합니다.  이전 버전의 프레임워크를 대상으로 하지만 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]에서 실행되는 응용 프로그램은 app.config 파일의 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 섹션에 다음 줄을 추가하여 새 동작을 옵트인(opt in)할 수 있습니다.
+         이제 WPF의 HDPI 지원이 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]에서 보다 향상되었습니다. 테두리가 있는 컨트롤에 클리핑 인스턴스를 줄이기 위해 레이아웃 반올림을 변경했습니다. 기본적으로 이 기능은 <xref:System.Runtime.Versioning.TargetFrameworkAttribute>가 .NET 4.6으로 설정될 때에만 사용됩니다.  이전 버전의 프레임워크를 대상으로 하지만 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]에서 실행되는 응용 프로그램은 app.config 파일의 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 섹션에 다음 줄을 추가하여 새 동작을 옵트인(opt in)할 수 있습니다.
 
         ```
         <AppContextSwitchOverrides
@@ -944,13 +944,13 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
     - **투명한 자식 창 지원**
 
-         [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]의 WPF는 Windows 8.1 이상 버전에서 투명한 자식 창을 지원합니다. 이를 통해 최상위 창에서 사각형이 아닌 투명한 자식 창을 만들 수 있습니다. <xref:System.Windows.Interop.HwndSourceParameters.UsesPerPixelTransparency%2A?displayProperty=fullName> 속성을 `true`로 설정하여 이 기능을 사용할 수 있습니다.
+         [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]의 WPF는 Windows 8.1 이상 버전에서 투명한 자식 창을 지원합니다. 이를 통해 최상위 창에서 사각형이 아닌 투명한 자식 창을 만들 수 있습니다. <xref:System.Windows.Interop.HwndSourceParameters.UsesPerPixelTransparency%2A?displayProperty=fullName> 속성을 `true`로 설정하여 이 기능을 사용하도록 설정할 수 있습니다.
 
 - **WCF(Windows Communication Foundation)**
 
     - **SSL 지원**
 
-         이제 WCF가 전송 보안 및 클라이언트 인증으로 NetTcp를 사용할 때 SSL 3.0 및 TLS 1.0뿐만 아니라 SSL 버전 TLS 1.1 및 TLS 1.2를 지원합니다. 이제 사용할 프로토콜을 선택하거나 이전의 안정성이 낮은 프로토콜을 사용하지 않도록 설정할 수 있습니다. <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A> 속성을 설정하거나 구성 파일에 다음을 추가하여 이 작업을 수행할 수 있습니다.
+         이제 WCF가 전송 보안 및 클라이언트 인증으로 NetTcp를 사용할 때 SSL 3.0 및 TLS 1.0뿐만 아니라 SSL 버전 TLS 1.1 및 TLS 1.2를 지원합니다. 이제 사용할 프로토콜을 선택하거나 이전의 안정성이 낮은 프로토콜을 사용하지 않도록 설정할 수 있습니다. 이 작업을 수행하려면 <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A> 속성을 설정하거나 구성 파일에 다음을 추가합니다.
 
         ```
         <netTcpBinding>
@@ -971,7 +971,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
         - **연결 그룹 이름의 접두사 사용**
 
-             사용자가 WCF에서 연결 그룹 이름의 접두사로 사용할 문자열을 지정할 수 있습니다. 서로 다른 접두사를 가진 두 메시지는 서로 다른 기본 HTTP 연결을 사용하여 보내집니다. 메시지의 <xref:System.ServiceModel.Channels.Message.Properties%2A?displayProperty=fullName> 속성에 키/값 쌍을 추가하여 접두사를 설정합니다. 키는 "HttpTransportConnectionGroupNamePrefix"이며 값은 원하는 접두사입니다.
+             사용자가 WCF에서 연결 그룹 이름의 접두사로 사용할 문자열을 지정할 수 있습니다. 서로 다른 접두사를 가진 두 메시지는 서로 다른 기본 HTTP 연결을 사용하여 보내집니다. 키/값 쌍을 메시지의 <xref:System.ServiceModel.Channels.Message.Properties%2A?displayProperty=fullName> 속성에 추가하여 접두사를 설정합니다. 키는 "HttpTransportConnectionGroupNamePrefix"이며 값은 원하는 접두사입니다.
 
         - **다른 채널 팩터리 사용**
 
@@ -1003,7 +1003,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
 - **트랜잭션**
 
-     이제 <xref:System.Transactions.TransactionException>에서 파생된 예외를 throw한 트랜잭션의 분산 트랜잭션 식별자를 포함할 수 있습니다. 이렇게 하려면 app.config 파일의 `appSettings` 섹션에 다음 키를 추가합니다.
+     이제 <xref:System.Transactions.TransactionException>에서 파생된 예외를 발생시킨 트랜잭션의 분산 트랜잭션 식별자를 포함할 수 있습니다. 이렇게 하려면 app.config 파일의 `appSettings` 섹션에 다음 키를 추가합니다.
 
     ```
     <add key="Transactions:IncludeDistributedTransactionIdInExceptionMessage" value="true"/> 
@@ -1019,13 +1019,13 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
          [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]에는 두 개의 새 API가 추가되어 포트를 재사용할 수 있습니다. 이를 통해 동시 연결 시 64K 제한을 효과적으로 제거합니다.
 
-        - <xref:System.Net.Sockets.SocketOptionName?displayProperty=fullName> 열거형 값.
+        - <xref:System.Net.Sockets.SocketOptionName?displayProperty=fullName> 열거형 값
 
-        - <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=fullName> 속성.
+        - <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=fullName> 속성
 
-         `HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319` 등록 키의 `HWRPortReuseOnSocketBind` 값이 0x1으로 설정되어 있지 않으면 기본적으로 <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=fullName> 속성은 `false`입니다. HTTP 연결에서 로컬 포트 재사용을 활성화하려면 <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=fullName> 속성을 `true`로 설정하십시오. 이렇게 하면 <xref:System.Net.Http.HttpClient> 및 <xref:System.Net.HttpWebRequest>에서 나가는 모든 TCP 소켓 연결이 새 Windows 10 소켓 옵션인 [SO_REUSE_UNICASTPORT](https://msdn.microsoft.com/library/windows/desktop/ms740532.aspx)를 사용하여 로컬 포트를 재사용할 수 있습니다.
+         기본적으로 `HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319` 레지스트리 키의 `HWRPortReuseOnSocketBind` 값이 0x1로 설정되지 않는 한 <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=fullName> 속성은 `false`입니다. HTTP 연결에 로컬 포트를 재사용하려면 <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=fullName> 속성을 `true`로 설정합니다. 이렇게 하면 <xref:System.Net.Http.HttpClient> 및 <xref:System.Net.HttpWebRequest>에서 나가는 모든 TCP 소켓 연결이 새 Windows 10 소켓 옵션인 [SO_REUSE_UNICASTPORT](https://msdn.microsoft.com/library/windows/desktop/ms740532.aspx)를 사용하여 로컬 포트를 재사용할 수 있습니다.
 
-         소켓 전용 응용 프로그램을 제작하는 개발자는 바인딩하는 동안 아웃바운드 소켓이 로컬 포트를 재사용할 수 있도록 <xref:System.Net.Sockets.Socket.SetSocketOption%2A?displayProperty=fullName> 등의 메서드를 호출할 때 <xref:System.Net.Sockets.SocketOptionName?displayProperty=fullName> 옵션을 지정할 수 있습니다.
+         소켓 전용 응용 프로그램을 작성하는 개발자가 <xref:System.Net.Sockets.Socket.SetSocketOption%2A?displayProperty=fullName>과 같은 메서드를 호출할 때 <xref:System.Net.Sockets.SocketOptionName?displayProperty=fullName> 옵션을 지정하면 아웃바운드 소켓이 바인딩하는 동안 로컬 포트를 재사용합니다.
 
     - **국제 도메인 이름 및 PunyCode 지원**
 
@@ -1033,9 +1033,9 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
 - **Windows Forms 컨트롤 크기 조정.**
 
-     이 기능은 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]에서 <xref:System.Windows.Forms.DomainUpDown>, <xref:System.Windows.Forms.NumericUpDown>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, <xref:System.Windows.Forms.DataGridViewColumn> 및 <xref:System.Windows.Forms.ToolStripSplitButton> 형식과 <xref:System.Drawing.Design.UITypeEditor>를 그릴 때 사용되는 <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A> 속성으로 지정된 사각형을 포함하도록 확장되었습니다.
+     [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]에서는 이 기능이 <xref:System.Windows.Forms.DomainUpDown>, <xref:System.Windows.Forms.NumericUpDown>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, <xref:System.Windows.Forms.DataGridViewColumn> 및 <xref:System.Windows.Forms.ToolStripSplitButton> 형식과 <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A>를 그릴 때 사용되는 <xref:System.Drawing.Design.UITypeEditor> 속성으로 지정된 사각형을 포함하도록 확장되었습니다.
 
-     이 기능은 옵트인(opt-in) 기능입니다. 이 기능을 사용하려면 아래와 같이 응용 프로그램 구성 파일(app.config)에서 `EnableWindowsFormsHighDpiAutoResizing` 요소를 `true`로 설정해야 합니다.
+     이 기능은 옵트인 기능입니다. 이 기능을 사용하려면 아래와 같이 응용 프로그램 구성 파일(app.config)에서 `EnableWindowsFormsHighDpiAutoResizing` 요소를 `true`로 설정해야 합니다.
 
     ```
     <appSettings>
@@ -1045,7 +1045,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
 - **코드 페이지 인코딩 지원**
 
-     [!INCLUDE[net_core](../../../includes/net-core-md.md)]에서는 주로 유니코드 인코딩을 지원하며, 기본적으로 코드 페이지 인코딩에 대한 제한된 지원을 제공합니다. <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=fullName> 메서드를 사용하여 코드 페이지 인코딩을 등록해 .NET Framework에서는 사용 가능하지만 [!INCLUDE[net_core](../../../includes/net-core-md.md)]에서는 지원되지 않는 코드 페이지 인코딩에 대한 지원을 추가할 수 있습니다. 자세한 내용은 <xref:System.Text.CodePagesEncodingProvider?displayProperty=fullName>를 참조 하세요.
+     [!INCLUDE[net_core](../../../includes/net-core-md.md)]에서는 주로 유니코드 인코딩을 지원하며, 기본적으로 코드 페이지 인코딩에 대한 제한된 지원을 제공합니다. <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=fullName> 메서드로 코드 페이지 인코딩을 등록하여 .NET Framework에서 사용할 수 있지만 [!INCLUDE[net_core](../../../includes/net-core-md.md)]에서 지원되지 않는 코드 페이지 인코딩에 대한 지원을 추가할 수 있습니다. 자세한 내용은 <xref:System.Text.CodePagesEncodingProvider?displayProperty=fullName>을 참조하십시오.
 
 - **.NET 네이티브**
 
@@ -1064,11 +1064,11 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 <a name="v452"></a> 
 ## <a name="whats-new-in-the-net-framework-452"></a>.NET Framework 4.5.2의 새로운 기능
 
-- **ASP.NET 앱을 위한 새 API.** 새 <xref:System.Web.HttpResponse.AddOnSendingHeaders%2A?displayProperty=fullName> 및 <xref:System.Web.HttpResponseBase.AddOnSendingHeaders%2A?displayProperty=fullName> 메서드를 사용하면 응답이 클라이언트 앱으로 플러시될 때 응답 헤더 및 상태 코드를 검사하고 수정할 수 있습니다. <xref:System.Web.HttpApplication.PreSendRequestHeaders> 및 <xref:System.Web.HttpApplication.PreSendRequestContent> 이벤트보다 더욱 효율적이고 신뢰할 수 있는 이러한 메서드를 사용하는 것이 좋습니다.
+- **ASP.NET 앱을 위한 새 API.** 새로운 <xref:System.Web.HttpResponse.AddOnSendingHeaders%2A?displayProperty=fullName> 및 <xref:System.Web.HttpResponseBase.AddOnSendingHeaders%2A?displayProperty=fullName> 메서드를 통해, 응답이 클라이언트 앱에 플러시되고 있을 때 응답 헤더와 상태 코드를 검사 및 수정할 수 있습니다. 이러한 메서드는 <xref:System.Web.HttpApplication.PreSendRequestHeaders> 및 <xref:System.Web.HttpApplication.PreSendRequestContent> 이벤트 대신 사용할 수 있으며 더욱 효율적이고 신뢰할 수 있습니다.
 
-     <xref:System.Web.Hosting.HostingEnvironment.QueueBackgroundWorkItem%2A?displayProperty=fullName> 메서드를 사용하면 작은 배경 작업 항목을 예약할 수 있습니다. ASP.NET는 이러한 항목을 추적하여 모든 백그라운드 작업 항목이 완료될 때까지는 IIS가 작업자 프로세스를 갑자기 종료하지 못하도록 합니다. ASP.NET 관리되는 앱 도메인 외부에서는 이 메서드를 호출할 수 없습니다.
+     <xref:System.Web.Hosting.HostingEnvironment.QueueBackgroundWorkItem%2A?displayProperty=fullName> 메서드를 사용하면 소형 백그라운드 작업 항목을 예약할 수 있습니다. ASP.NET는 이러한 항목을 추적하여 모든 백그라운드 작업 항목이 완료될 때까지는 IIS가 작업자 프로세스를 갑자기 종료하지 못하도록 합니다. ASP.NET 관리되는 앱 도메인 외부에서는 이 메서드를 호출할 수 없습니다.
 
-     새 <xref:System.Web.HttpResponse.HeadersWritten?displayProperty=fullName> 및 <xref:System.Web.HttpResponseBase.HeadersWritten?displayProperty=fullName> 속성은 응답 헤더가 작성되었는지 여부를 나타내는 부울 값을 반환합니다. 이러한 속성을 사용하면 <xref:System.Web.HttpResponse.StatusCode%2A?displayProperty=fullName>(헤더가 작성되어 있으면 예외를 throw) 등의 API를 성공적으로 호출할 수 있습니다.
+     새로운 <xref:System.Web.HttpResponse.HeadersWritten?displayProperty=fullName> 및 <xref:System.Web.HttpResponseBase.HeadersWritten?displayProperty=fullName> 속성은 응답 헤더가 작성되어 있는지 여부를 나타내는 부울 값을 반환합니다. 이러한 속성을 사용하면 <xref:System.Web.HttpResponse.StatusCode%2A?displayProperty=fullName>(헤더가 작성되어 있으면 예외를 throw) 등의 API를 성공적으로 호출할 수 있습니다.
 
 - **Windows Forms 컨트롤 크기 조정.** 이 기능은 확장되었습니다. 시스템 DPI 설정을 사용하여 다음과 같은 추가 컨트롤의 구성 요소 크기를 조정할 수 있습니다(예: 콤보 상자의 드롭다운 화살표).
 
@@ -1082,13 +1082,13 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
     </appSettings>
     ```
 
-- **새 워크플로 기능.** <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> 메서드를 사용하는 리소스 관리자(그에 따라 <xref:System.Transactions.IPromotableSinglePhaseNotification> 인터페이스 구현)는 새 <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=fullName> 메서드를 사용하여 다음을 요청할 수 있습니다.
+- **새 워크플로 기능.** <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> 메서드를 사용하여 <xref:System.Transactions.IPromotableSinglePhaseNotification> 인터페이스를 구현하는 리소스 관리자는 새로운 <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=fullName> 메서드를 통해 다음을 요청할 수 있습니다.
 
     - 트랜잭션을 MSDTC(Microsoft Distributed Transaction Coordinator) 트랜잭션으로 승격합니다.
 
-    - 단일 단계 커밋을 지원하는 지속적인 인리스트먼트인 <xref:System.Transactions.ISinglePhaseNotification>로 <xref:System.Transactions.IPromotableSinglePhaseNotification>을 대체합니다.
+    - <xref:System.Transactions.IPromotableSinglePhaseNotification>을 단일 단계 커밋이 지원되는 견고한 인리스트먼트인 <xref:System.Transactions.ISinglePhaseNotification>으로 바꿉니다.
 
-     이 기능은 동일한 앱 도메인 내에서 수행할 수 있으며 승격 수행을 위해 MSDTC와 상호 작용하기 위한 관리되지 않는 코드가 추가로 필요하지 않습니다. 새 메서드는 <xref:System.Transactions?displayProperty=fullName>에서, 승격 가능한 인리스트먼트로 구현되는 <xref:System.Transactions.IPromotableSinglePhaseNotification>`Promote` 메서드로의 처리되지 않은 호출이 있을 때만 호출할 수 있습니다.
+     이 기능은 동일한 앱 도메인 내에서 수행할 수 있으며 승격 수행을 위해 MSDTC와 상호 작용하기 위한 관리되지 않는 코드가 추가로 필요하지 않습니다. 새 메서드는 승격 가능한 인리스트먼트에 의해 구현되는 <xref:System.Transactions.IPromotableSinglePhaseNotification>`Promote` 메서드에 대한 <xref:System.Transactions?displayProperty=fullName>의 호출이 해결되지 않은 경우에만 호출할 수 있습니다.
 
 - **프로파일링 기능 향상.** 다음과 같은 관리되지 않는 새로운 프로파일링 API를 통해 더욱 강력한 프로파일링 기능이 제공됩니다.
 
@@ -1114,7 +1114,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
 - **트랜잭션을 승격하고 지속적인 인리스트먼트로 변환**
 
-     <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=fullName>은 다음과 같이 .NET Framework 4.5.2 및 4.6에 추가된 새 API입니다.
+     <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=fullName>은 .NET Framework 4.5.2 및 4.6에 추가된 새로운 API입니다.
 
     ```csharp
     [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name = "FullTrust")]
@@ -1124,7 +1124,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
                                               EnlistmentOptions enlistmentOptions)
     ```
 
-     해당 메서드는 이전에 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=fullName> 메서드에 대한 응답으로 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=fullName>가 만든 인리스트먼트가 사용할 수 있습니다. 트랜잭션을 MSDTC 트랜잭션으로 승격하고 승격할 수 있는 인리스트먼트를 지속적인 인리스트먼트로 "변환"하도록 `System.Transactions`에게 요청합니다. 이 메서드가 성공적으로 완료된 후에는 `System.Transactions`이 더 이상 <xref:System.Transactions.IPromotableSinglePhaseNotification> 인터페이스를 참조하지 않으며 이후의 모든 알림은 제공된 <xref:System.Transactions.ISinglePhaseNotification> 인터페이스에 도착합니다. 해당 인리스트먼트는 지속적인 인리스트먼트로 작동해야 하며 트랜잭션 로깅 및 복구를 지원합니다. 자세한 내용은 <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=fullName>을 참조하십시오. 또한 인리스트먼트는 <xref:System.Transactions.ISinglePhaseNotification>.</xref:System.Transactions.ISinglePhaseNotification>을 지원해야 합니다.  이 메서드는 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=fullName> 호출을 처리하는 동안에 *오직* 호출을 받는 것만 가능합니다. 그렇지 않은 경우 <xref:System.Transactions.TransactionException> 예외가 throw됩니다.
+     이 메서드는 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=fullName> 메서드에 대한 응답으로 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=fullName>가 이전에 만든 인리스트먼트에 의해 사용될 수 있습니다. 트랜잭션을 MSDTC 트랜잭션으로 승격하고 승격할 수 있는 인리스트먼트를 지속적인 인리스트먼트로 "변환"하도록 `System.Transactions`에게 요청합니다. 이 메서드가 성공적으로 완료되면 `System.Transactions`이 <xref:System.Transactions.IPromotableSinglePhaseNotification> 인터페이스를 더 이상 참조하지 않습니다. 향후 모든 알림은 제공된 <xref:System.Transactions.ISinglePhaseNotification> 인터페이스에 도착하게 됩니다. 해당 인리스트먼트는 지속적인 인리스트먼트로 작동해야 하며 트랜잭션 로깅 및 복구를 지원합니다. 자세한 내용은 <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=fullName>을 참조하세요. 또한 인리스트먼트는 <xref:System.Transactions.ISinglePhaseNotification>을 지원해야 합니다.  이 메서드는 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=fullName> 호출을 처리하는 동안에*만* 호출할 수 있습니다. 그렇지 않은 경우 <xref:System.Transactions.TransactionException> 예외가 발생합니다.
 
  [맨 위로 이동](#introduction)
 
@@ -1152,9 +1152,9 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
 - 어셈블리에 대한 자동 바인딩 리디렉션. [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)]부터는 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]을 대상으로 하는 응용 프로그램을 컴파일할 때 응용 프로그램 또는 해당 구성 요소가 동일한 어셈블리의 여러 버전을 참조할 경우 응용 프로그램 구성 파일에 바인딩 리디렉션을 추가할 수 있습니다. 또한 이전 버전의 .NET Framework를 대상으로 하는 프로젝트에 대해 이 기능을 사용하도록 설정할 수 있습니다. 자세한 내용은 [방법: 자동 바인딩 리디렉션 사용 설정 및 해제](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)를 참조하십시오.
 
-- 진단 정보를 수집하여 개발자가 서버 및 클라우드 응용 프로그램의 성능을 향상시키는 기능. 자세한 내용은 <xref:System.Diagnostics.Tracing.EventSource>클래스의 <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> 및 <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> 메서드를 참조하십시오.
+- 진단 정보를 수집하여 개발자가 서버 및 클라우드 응용 프로그램의 성능을 향상시키는 기능. 자세한 내용은 <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> 클래스의 <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> 및 <xref:System.Diagnostics.Tracing.EventSource> 메서드를 참조하세요.
 
-- 가비지 수집 동안 LOH(대형 개체 힙)를 명시적으로 압축하는 기능. 자세한 내용은 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=fullName>속성을 참조하십시오.
+- 가비지 수집 동안 LOH(대형 개체 힙)를 명시적으로 압축하는 기능. 자세한 내용은 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=fullName> 속성을 참조하세요.
 
 - .NET Framework 업데이트를 통해 ASP.NET 응용 프로그램 일시 중단, 멀티 코어 JIT 개선 및 빠른 응용 프로그램 시작 등의 추가적인 성능 개선. 자세한 내용은 [.NET Framework 4.5.1 알림](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/) 및 [ASP.NET 응용 프로그램 일시 중단](https://blogs.msdn.microsoft.com/dotnet/2013/10/09/asp-net-app-suspend-responsive-shared-net-web-hosting/) 블로그 게시물을 참조하십시오.
 
@@ -1162,7 +1162,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
 - Windows Forms 컨트롤 크기 조정. 앱의 응용 프로그램 구성 파일(app.config)의 항목을 선택하여 시스템 DPI 설정으로 컨트롤 구성 요소(예: 속성 표에 표시되는 아이콘)의 크기를 조정할 수 있습니다. 이 기능은 현재 다음과 같은 Windows Forms 컨트롤에서 지원됩니다.
 
-     <xref:System.Windows.Forms.PropertyGrid>    <xref:System.Windows.Forms.TreeView>    <xref:System.Windows.Forms.DataGridView>의 일부 구성 요소(그 밖에 지원되는 컨트롤에 대해서는 [4.5.2의 새로운 기능](#v452) 참조)
+     <xref:System.Windows.Forms.PropertyGrid>    <xref:System.Windows.Forms.TreeView>    <xref:System.Windows.Forms.DataGridView>의 일부 구성 요소(그 밖에 지원되는 컨트롤에 대해서는 [4.5.2의 새 기능](#v452) 참조)
 
      이 기능을 사용하려면 다음과 같이 새로운 \<appSettings> 요소를 구성 파일(app.config)에 추가하여 `EnableWindowsFormsHighDpiAutoResizing` 요소를 `true`로 설정합니다.
 
@@ -1199,29 +1199,29 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
 - 서버에 대한 백그라운드 가비지 수집을 통해 성능 향상. 사용자가 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서 서버 가비지 수집을 사용하면 백그라운드 가비지 수집을 사용하도록 자동으로 설정됩니다. [가비지 컬렉션 기본 사항](../../../docs/standard/garbage-collection/fundamentals.md) 항목의 백그라운드 서버 가비지 컬렉션 섹션을 참조하십시오.
 
-- 응용 프로그램 성능 개선을 위해 다중 코어 프로세서에서 선택적으로 사용 가능한 백그라운드 JIT(Just-In-Time) 컴파일. <xref:System.Runtime.ProfileOptimization>을 참조하십시오.
+- 응용 프로그램 성능 개선을 위해 다중 코어 프로세서에서 선택적으로 사용 가능한 백그라운드 JIT(Just-In-Time) 컴파일. <xref:System.Runtime.ProfileOptimization>을 참조하세요.
 
-- 정규식 엔진이 시간 초과되기 전에 정규식 해결을 시도하는 시간을 제한하는 기능. <xref:System.Text.RegularExpressions.Regex.MatchTimeout%2A?displayProperty=fullName> 속성을 참조하십시오.
+- 정규식 엔진이 시간 초과되기 전에 정규식 해결을 시도하는 시간을 제한하는 기능. <xref:System.Text.RegularExpressions.Regex.MatchTimeout%2A?displayProperty=fullName> 속성을 참조하세요.
 
-- 응용 프로그램 도메인에 대한 기본 문화권을 정의하는 기능. <xref:System.Globalization.CultureInfo> 클래스를 참조하십시오.
+- 응용 프로그램 도메인에 대한 기본 문화권을 정의하는 기능. <xref:System.Globalization.CultureInfo> 클래스를 참조하세요.
 
-- 콘솔에서 유니코드(UTF-16) 인코딩 지원. <xref:System.Console> 클래스를 참조하십시오.
+- 콘솔에서 유니코드(UTF-16) 인코딩 지원. <xref:System.Console> 클래스를 참조하세요.
 
-- 문화권 문자열 순서 지정 및 비교 데이터의 버전 관리 지원. <xref:System.Globalization.SortVersion> 클래스를 참조하십시오.
+- 문화권 문자열 순서 지정 및 비교 데이터의 버전 관리 지원. <xref:System.Globalization.SortVersion> 클래스를 참조하세요.
 
 - 리소스 검색 시 성능 향상. [리소스 패키징 및 배포](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)를 참조하십시오.
 
-- 압축 파일의 크기를 줄이기 위해 zip 압축 기능 개선. <xref:System.IO.Compression?displayProperty=fullName> 네임스페이스를 참조하십시오.
+- 압축 파일의 크기를 줄이기 위해 zip 압축 기능 개선. <xref:System.IO.Compression?displayProperty=fullName> 네임스페이스를 참조하세요.
 
-- <xref:System.Reflection.Context.CustomReflectionContext> 클래스를 통해 기본 리플렉션 동작을 재정의하도록 리플렉션 컨텍스트를 사용자 지정하는 기능.
+- <xref:System.Reflection.Context.CustomReflectionContext> 클래스를 통해 기본 리플렉션 동작을 재정의하도록 리플렉션 컨텍스트를 사용자 지정하는 기능
 
-- [!INCLUDE[win8](../../../includes/win8-md.md)]에서 <xref:System.Globalization.IdnMapping?displayProperty=fullName> 클래스 사용 시 IDNA(Internationalizing Domain Names in Applications) 표준의 2008 버전을 지원합니다.
+- <xref:System.Globalization.IdnMapping?displayProperty=fullName>에서 [!INCLUDE[win8](../../../includes/win8-md.md)] 클래스 사용 시 IDNA(Internationalizing Domain Names in Applications) 표준의 2008 버전 지원
 
-- .NET Framework가 [!INCLUDE[win8](../../../includes/win8-md.md)]에서 사용되면 유니코드 6.0을 구현하는 문자열 비교가 운영 체제에 위임됨. 다른 플랫폼에서 실행되는 경우 유니코드 5.x를 구현하는 자체 문자열 비교 데이터가 .NET Framework에 포함됩니다. <xref:System.String>클래스 및 <xref:System.Globalization.SortVersion>클래스의 설명 섹션을 참조하십시오.
+- .NET Framework가 [!INCLUDE[win8](../../../includes/win8-md.md)]에서 사용되면 유니코드 6.0을 구현하는 문자열 비교가 운영 체제에 위임됨. 다른 플랫폼에서 실행되는 경우 유니코드 5.x를 구현하는 자체 문자열 비교 데이터가 .NET Framework에 포함됩니다. <xref:System.String> 클래스 및 <xref:System.Globalization.SortVersion> 클래스의 설명 섹션을 참조하세요.
 
 - 응용 프로그램 도메인 단위로 문자열에 대한 해시 코드를 계산하는 기능. [\<<UseRandomizedStringHashAlgorithm> 요소](../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)를 참조하십시오.
 
-- 형식 반사는 <xref:System.Type>과 <xref:System.Reflection.TypeInfo> 클래스 간에 분할을 지원합니다. [Windows 스토어 앱에 대한 .NET Framework의 리플렉션](../../../docs/framework/reflection-and-codedom/reflection-for-windows-store-apps.md)을 참조하십시오.
+- 형식 리플렉션이 <xref:System.Type> 및 <xref:System.Reflection.TypeInfo> 클래스 사이의 분할 지원. [Windows 스토어 앱에 대한 .NET Framework의 리플렉션](../../../docs/framework/reflection-and-codedom/reflection-for-windows-store-apps.md)을 참조하십시오.
 
 ### <a name="managed-extensibility-framework-mef"></a>MEF(Managed Extensibility Framework)
  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]의 MEF(Managed Extensibility Framework)는 다음과 같은 새로운 기능을 제공합니다.
@@ -1259,21 +1259,21 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
 <a name="networking"></a> 
 ### <a name="networking"></a>네트워킹
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서는 HTTP 응용 프로그램의 새로운 프로그래밍 인터페이스를 제공합니다. 자세한 내용은 새로운 <xref:System.Net.Http?displayProperty=fullName> 및 <xref:System.Net.Http.Headers?displayProperty=fullName> 네임스페이스를 참조하십시오.
+ [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서는 HTTP 응용 프로그램의 새로운 프로그래밍 인터페이스를 제공합니다. 자세한 내용은 새로운 <xref:System.Net.Http?displayProperty=fullName> 및 <xref:System.Net.Http.Headers?displayProperty=fullName> 네임스페이스를 참조하세요.
 
- 기존의 <xref:System.Net.HttpListener> 및 관련 클래스를 사용하여 WebSocket 연결을 허용하고 이와 상호 작용하는 새로운 프로그래밍 인터페이스 지원도 포함되어 있습니다. 자세한 내용은 새로운 <xref:System.Net.WebSockets> 네임스페이스 및 <xref:System.Net.HttpListener> 클래스를 참조하십시오.
+ 기존의 <xref:System.Net.HttpListener> 및 관련 클래스를 사용하여 WebSocket 연결을 허용하고 이와 상호 작용하는 새로운 프로그래밍 인터페이스 지원도 포함되어 있습니다. 자세한 내용은 새로운 <xref:System.Net.WebSockets> 네임스페이스 및 <xref:System.Net.HttpListener> 클래스를 참조하세요.
 
  또한 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에는 다음 네트워킹 개선 사항이 포함되어 있습니다.
 
-- RFC 규격 URI 지원. 자세한 내용은 <xref:System.Uri> 및 관련 클래스를 참조하십시오.
+- RFC 규격 URI 지원. 자세한 내용은 <xref:System.Uri> 및 관련 클래스를 참조하세요.
 
-- IDN(Internationalized Domain Name) 구문 분석 지원. 자세한 내용은 <xref:System.Uri> 및 관련 클래스를 참조하십시오.
+- IDN(Internationalized Domain Name) 구문 분석 지원. 자세한 내용은 <xref:System.Uri> 및 관련 클래스를 참조하세요.
 
-- EAI(Email Address Internationalization) 지원. 자세한 내용은 <xref:System.Net.Mail> 네임스페이스를 참조하십시오.
+- EAI(Email Address Internationalization) 지원. 자세한 내용은 <xref:System.Net.Mail> 네임스페이스를 참조하세요.
 
-- IPv6 지원 개선. 자세한 내용은 <xref:System.Net.NetworkInformation> 네임스페이스를 참조하십시오.
+- IPv6 지원 개선. 자세한 내용은 <xref:System.Net.NetworkInformation> 네임스페이스를 참조하세요.
 
-- 이중 모드 소켓 지원. 자세한 내용은 <xref:System.Net.Sockets.Socket> 및 <xref:System.Net.Sockets.TcpListener>클래스를 참조하십시오.
+- 이중 모드 소켓 지원. 자세한 내용은 <xref:System.Net.Sockets.Socket> 및 <xref:System.Net.Sockets.TcpListener> 클래스를 참조하세요.
 
 <a name="client"></a> 
 ### <a name="windows-presentation-foundation-wpf"></a>WPF(Windows Presentation Foundation)
@@ -1283,7 +1283,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
 - 동기 및 비동기 데이터 유효성 검사를 지원하는 새로운 <xref:System.ComponentModel.INotifyDataErrorInfo> 인터페이스
 
-- <xref:System.Windows.Controls.VirtualizingPanel> 및 <xref:System.Windows.Threading.Dispatcher> 클래스에 대한 새 기능
+- <xref:System.Windows.Controls.VirtualizingPanel> 및 <xref:System.Windows.Threading.Dispatcher> 클래스의 새로운 기능
 
 - 그룹화된 큰 데이터 집합을 표시하고 UI가 아닌 스레드에서 컬렉션에 액세스할 때의 성능 개선
 
@@ -1349,7 +1349,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
     - 공유 트리거 전환 작성을 위한 디자이너 지원
 
-    - <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> 및 <xref:System.Activities.Statements.Transition>을 비롯하여 상태 시스템 워크플로를 만들기 위한 활동
+    - <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> 및 <xref:System.Activities.Statements.Transition>을 포함하는 상태 시스템 워크플로를 만들기 위한 활동
 
 - 다음과 같은 향상된 Workflow Designer 기능
 
@@ -1381,7 +1381,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
     - 지속되는 워크플로 인스턴스와 해당 워크플로 정의 사이에 매핑을 제공하는 새로운 <xref:System.Activities.WorkflowIdentity> 클래스
 
-    - <xref:System.ServiceModel.Activities.WorkflowServiceHost>를 비롯하여 동일한 호스트에서 여러 워크플로 버전을 Side-by-Side 실행
+    - <xref:System.ServiceModel.Activities.WorkflowServiceHost>를 포함하여 같은 호스트에서 여러 워크플로 버전을 side-by-side로 실행
 
     - 동적 업데이트에서 지속된 워크플로 인스턴스의 정의를 수정할 수 있는 기능
 
