@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 1feadf3d-3cfc-41dd-abb5-a4fc303a7b53
-translationtype: Human Translation
-ms.sourcegitcommit: fae5eabac7d1aac577c5c7a27e306c8c7ea8b418
-ms.openlocfilehash: 73ab5a9bdd957e6d9394a3be0aa55f554ee7a86a
-ms.lasthandoff: 04/11/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: 7ee369e62027aaf59e4c1a340bbdd30a643e2b75
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/14/2017
 
 ---
 
@@ -58,7 +59,7 @@ project.json 및 csproj 형식 간을 비교하려면 [project.json 및 csproj �
 
 ### <a name="common-issues"></a>일반적인 문제
 
-- “No executable found matching command dotnet-migrate"(dotnet-migrate 명령과 일치하는 실행 파일을 찾을 수 없습니다.) 오류가 발생하는 경우 다음을 수행합니다.
+- “No executable found matching command dotnet-migrate”(dotnet-migrate 명령과 일치하는 실행 파일을 찾을 수 없습니다.) 오류가 발생하는 경우 다음을 수행합니다.
 
 `dotnet --version`을 실행하여 사용 중인 버전을 확인합니다. [`dotnet migrate`](../tools/dotnet-migrate.md)을 사용하려면 .NET Core CLI RC3 이상이 필요합니다.
 *global.json* 파일이 현재 또는 상위 디렉터리에 있고 `sdk` 버전이 이전 버전으로 설정된 경우 이 오류가 발생합니다.
