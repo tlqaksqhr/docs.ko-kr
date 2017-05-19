@@ -29,19 +29,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1f84c40950d2a23681094e06118ae2e1bdbd5a71
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 0832ee88bba58579eea001335be9cb8c2130834d
+ms.openlocfilehash: 3fc7bb7cb54cb83fbb1c008283302c816f4d6fa4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/28/2017
 
 ---
 # <a name="getting-started-with-c"></a>C 시작#
 다음 항목에서는 C#을 사용하여 응용 프로그램 개발을 시작하는 데 도움이 되는 정보를 제공합니다. 이러한 항목에서는 Visual Studio 및 C# 언어의 여러 새로운 기능도 소개합니다.  
   
 ## <a name="in-this-section"></a>단원 내용  
- [Visual Studio 2013의 Visual C# 주요 변경 내용](../../csharp/getting-started/breaking-changes-in-visual-studio-2013.md)  
- 이전 버전 이후 C# 컴파일러에서 변경된 주요 사항을 소개합니다.  
-  
  [C# 언어 및 .NET Framework 소개](../../csharp/getting-started/introduction-to-the-csharp-language-and-the-net-framework.md)  
  C# 언어와 .NET 플랫폼에 대해 간략하게 설명합니다.  
   

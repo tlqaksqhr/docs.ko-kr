@@ -18,10 +18,11 @@ caps.latest.revision: 53
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 3d1ddfa9842909a491af2541c9ac770989fc2164
-ms.lasthandoff: 04/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 987c7063c5e6dce10233761b6e37ed102d5878a9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="64-bit-applications"></a>64비트 응용 프로그램
@@ -67,7 +68,7 @@ ms.lasthandoff: 04/18/2017
 |--------------|---------------------|  
 |Visual Basic|[/platform (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/platform.md)|  
 |Visual C#|[-platform(C# 컴파일러 옵션)](~/docs/csharp/language-reference/compiler-options/platform-compiler-option.md)|  
-|Visual C++|**/clr:safe**를 사용하여 플랫폼 제약 없는 MSIL(Microsoft intermediate language) 응용 프로그램을 만들 수 있습니다. 자세한 내용은 [/clr(공용 언어 런타임 컴파일)](http://msdn.microsoft.com/library/fec5a8c0-40ec-484c-a213-8dec918c1d6c)을 참조하세요.<br /><br /> Visual C++에는 각 64비트 운영 체제에 대한 별도의 컴파일러가 포함됩니다. Visual C++를 사용하여 64비트 Windows 운영 체제에서 실행되는 네이티브 응용 프로그램을 만드는 방법에 대한 자세한 내용은 [64비트 프로그래밍](http://msdn.microsoft.com/library/h2k70f3s\(v=vs.80\))을 참조하세요.|  
+|Visual C++|**/clr:safe**를 사용하여 플랫폼 제약 없는 MSIL(Microsoft intermediate language) 응용 프로그램을 만들 수 있습니다. 자세한 내용은 [/clr(공용 언어 런타임 컴파일)](/cpp/build/reference/clr-common-language-runtime-compilation)을 참조하세요.<br /><br /> Visual C++에는 각 64비트 운영 체제에 대한 별도의 컴파일러가 포함됩니다. Visual C++를 사용하여 64비트 Windows 운영 체제에서 실행되는 네이티브 응용 프로그램을 만드는 방법에 대한 자세한 내용은 [64비트 프로그래밍](http://msdn.microsoft.com/library/h2k70f3s\(v=vs.80\))을 참조하세요.|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>.exe 파일 또는 .dll 파일 상태 확인  
  .exe 파일이나 .dll 파일을 특정 플랫폼 또는 WOW64에서만 실행해야 하는지를 확인하려면 [CorFlags.exe(CorFlags 변환 도구)](../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md)를 옵션없이 사용합니다. CorFlags.exe를 사용하여 .exe 파일이나 .dll 파일의 플랫폼 상태를 변경할 수도 있습니다. Visual Studio 어셈블리의 CLR 헤더에서 주 런타임 버전은 2로 설정되고 부 런타임 버전 번호는 5로 설정됩니다. 부 런타임 버전이 0으로 설정된 응용 프로그램은 레거시 응용 프로그램으로 처리되고 항상 WOW64를 통해 실행됩니다.  
