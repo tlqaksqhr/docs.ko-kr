@@ -1,4 +1,4 @@
-# [.NET 시작](getting-started.md)
+# [.NET 시작](get-started.md)
 # [.NET 둘러보기](tour.md)
 # [.NET 아키텍처 구성 요소](components.md)
 # [.NET 표준 라이브러리](library.md)
