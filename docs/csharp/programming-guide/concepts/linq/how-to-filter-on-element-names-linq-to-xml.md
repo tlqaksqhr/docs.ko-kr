@@ -14,10 +14,11 @@ ms.assetid: 1849fb03-f075-421f-863c-e8fb32773cdf
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0b6d2acd628d823caa78076ebbf9b4236a9935f3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 5c11af47434ec00e812f966d5937c138a5ac3640
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/24/2017
 
 
 ---
@@ -29,10 +30,22 @@ ms.lasthandoff: 03/13/2017
   
  이 예제에서는 XML 문서 [샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md)을 사용합니다.  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```csharp  
+XElement po = XElement.Load("PurchaseOrder.xml");  
+IEnumerable<XElement> items =  
+    from el in po.Descendants("ProductName")  
+    select el;  
+foreach(XElement prdName in items)  
+    Console.WriteLine(prdName.Name + ":" + (string) prdName);  
+```  
+  
  이 코드의 결과는 다음과 같습니다.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+```  
+ProductName:Lawnmower  
+ProductName:Baby Monitor  
+```  
+  
  <xref:System.Xml.Linq.XElement> 컬렉션의 <xref:System.Collections.Generic.IEnumerable%601>을 반환하는 다른 메서드도 동일한 패턴을 따릅니다. 이러한 시그니처는 <xref:System.Xml.Linq.XContainer.Elements%2A> 및 <xref:System.Xml.Linq.XContainer.Descendants%2A>와 유사합니다. 다음은 메서드 시그니처가 유사한 메서드의 전체 목록입니다.  
   
 -   <xref:System.Xml.Linq.XNode.Ancestors%2A>  
@@ -54,7 +67,7 @@ ms.lasthandoff: 03/13/2017
   
  이 예제에서는 XML 문서 [샘플 XML 파일: 네임스페이스에서 일반적인 구매 주문](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)을 사용합니다.  
   
-```cs  
+```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
 XElement po = XElement.Load("PurchaseOrderInNamespace.xml");  
 IEnumerable<XElement> items =  

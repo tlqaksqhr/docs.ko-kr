@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 61f1ac22923ad637ba145b448f75e0f1a7e142b6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 9fbfa3602766b51c4be5078b793139501802a90c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>비동기 작업 또는 작업 목록 취소(C#)
@@ -62,7 +63,7 @@ ms.lasthandoff: 03/13/2017
   
 1.  액세스하는 모든 메서드에 대한 범위 내에 있는 `CancellationTokenSource` 변수 `cts`를 선언합니다.  
   
-    ```cs  
+    ```csharp  
     public partial class MainWindow : Window  
     {  
         // ***Declare a System.Threading.CancellationTokenSource.  
@@ -71,7 +72,7 @@ ms.lasthandoff: 03/13/2017
   
 2.  **취소** 단추에 대한 다음 이벤트 처리기를 추가합니다. 이벤트 처리기는 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName> 메서드를 사용하여 사용자가 취소를 요청할 때 `cts`를 알립니다.  
   
-    ```cs  
+    ```csharp  
     // ***Add an event handler for the Cancel button.  
     private void cancelButton_Click(object sender, RoutedEventArgs e)  
     {  
@@ -86,14 +87,14 @@ ms.lasthandoff: 03/13/2017
   
     -   `CancellationTokenSource`, `cts`를 인스턴스화합니다.  
   
-        ```cs  
+        ```csharp  
         // ***Instantiate the CancellationTokenSource.  
         cts = new CancellationTokenSource();  
         ```  
   
     -   지정된 웹 사이트의 콘텐츠를 다운로드하는 `AccessTheWebAsync` 호출에서 `cts`의 <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=fullName> 속성을 인수로 보냅니다. 취소가 요청되면 `Token` 속성은 메시지를 전파합니다. 사용자가 다운로드 작업을 취소하도록 선택할 경우 메시지를 표시하는 catch 블록을 추가합니다. 다음 코드는 변경 내용을 보여 줍니다.  
   
-        ```cs  
+        ```csharp  
         try  
         {  
             // ***Send a token to carry the message if cancellation is requested.  
@@ -116,7 +117,7 @@ ms.lasthandoff: 03/13/2017
   
      다음 코드는 `AccessTheWebAsync`의 변경 내용을 보여 줍니다.  
   
-    ```cs  
+    ```csharp  
     // ***Provide a parameter for the CancellationToken.  
     async Task<int> AccessTheWebAsync(CancellationToken ct)  
     {  
@@ -179,7 +180,7 @@ ms.lasthandoff: 03/13/2017
   
 1.  웹 주소 목록에 메서드를 추가합니다.  
   
-    ```cs  
+    ```csharp  
     // ***Add a method that creates a list of web addresses.  
     private List<string> SetUpURLList()  
     {  
@@ -199,14 +200,14 @@ ms.lasthandoff: 03/13/2017
   
 2.  `AccessTheWebAsync`에서 메서드를 호출합니다.  
   
-    ```cs  
+    ```csharp  
     // ***Call SetUpURLList to make a list of web addresses.  
     List<string> urlList = SetUpURLList();  
     ```  
   
 3.  `AccessTheWebAsync`에서 다음 루프를 추가하여 목록에 있는 각 웹 주소를 처리합니다.  
   
-    ```cs  
+    ```csharp  
     // ***Add a loop to process the list of web addresses.  
     foreach (var url in urlList)  
     {  
@@ -225,10 +226,13 @@ ms.lasthandoff: 03/13/2017
   
 4.  `AccessTheWebAsync`는 길이를 표시하므로 메서드가 아무것도 반환할 필요가 없습니다. return 문을 제거하고 메서드의 반환 형식을 <xref:System.Threading.Tasks.Task%601> 대신 <xref:System.Threading.Tasks.Task>로 변경합니다.  
   
-<CodeContentPlaceHolder>10</CodeContentPlaceHolder>  
+    ```csharp  
+    async Task AccessTheWebAsync(CancellationToken ct)  
+    ```  
+  
      식 대신 문을 사용하여 `startButton_Click`에서 메서드를 호출합니다.  
   
-    ```cs  
+    ```csharp  
     await AccessTheWebAsync(cts.Token);  
     ```  
   
@@ -275,7 +279,7 @@ ms.lasthandoff: 03/13/2017
 ### <a name="cancel-a-task-example"></a>작업 취소 예제  
  다음 코드는 단일 작업을 취소하는 예제에 대한 전체 MainWindow.xaml.cs 파일입니다.  
   
-```cs  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -386,7 +390,7 @@ namespace CancelATask
 ### <a name="cancel-a-list-of-tasks-example"></a>작업 목록 취소 예제  
  다음 코드는 작업 목록을 취소하는 예제에 대한 전체 MainWindow.xaml.cs 파일입니다.  
   
-```cs  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  

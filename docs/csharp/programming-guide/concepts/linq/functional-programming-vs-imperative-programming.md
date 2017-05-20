@@ -14,10 +14,11 @@ ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f15f1b6b55a4cb7d036a89d1636aab166740037d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 9e16daec1c830f4541229beaa10b079e683914fe
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -40,7 +41,7 @@ ms.lasthandoff: 03/13/2017
  대부분의 언어가 특정 프로그래밍 패러다임을 지원하도록 디자인되었지만 대부분의 일반 언어도 다양한 패러다임을 지원할 수 있습니다. 예를 들어, 함수 포인터가 있는 언어로 함수형 프로그래밍을 수행할 수 있습니다. 또한 C#에서는 람다 식과 형식 유추를 비롯한 함수형 프로그래밍을 지원하기 위해 명시적 언어 확장을 제공합니다. LINQ 기술은 선언적 함수형 프로그래밍의 형태입니다.  
   
 ## <a name="functional-programming-using-xslt"></a>XSLT를 사용하는 함수형 프로그래밍  
- 많은 XSLT 개발자는 순수 함수형 방법에 익숙합니다. XSLT 스타일시트를 개발하는 가장 효과적인 방법은 각 템플릿을 구성 가능한 분리된 변환으로 처리하는 것입니다. 실행 순서는 완전히 무시됩니다. XSLT는 절차적 코드 실행에 대한 이스케이프 메커니즘으로 인해 비순수 함수가 생성되는 의도하지 않은 결과를 발생시킬 수 있는 점을 제외하고 의도하지 않은 결과를 허용하지 않습니다. XSLT가 효과적인 도구이긴 하지만 일부 특징은 최적이 아닙니다. 예를 들어, XML로 프로그래밍 구문을 표현하면 비교적 상세한 코드가 생성되므로 코드를 유지 관리하기가 어렵습니다. 또한 재귀에 크게 의존하여 흐름을 제어하면 읽기 어려운 코드가 생성될 수 있습니다. XSLT에 대한 자세한 내용은 [XSLT 변환](http://msdn.microsoft.com/library/202f8820-224c-494f-b61e-cd127eac6e03)을 참조하세요.  
+ 많은 XSLT 개발자는 순수 함수형 방법에 익숙합니다. XSLT 스타일시트를 개발하는 가장 효과적인 방법은 각 템플릿을 구성 가능한 분리된 변환으로 처리하는 것입니다. 실행 순서는 완전히 무시됩니다. XSLT는 절차적 코드 실행에 대한 이스케이프 메커니즘으로 인해 비순수 함수가 생성되는 의도하지 않은 결과를 발생시킬 수 있는 점을 제외하고 의도하지 않은 결과를 허용하지 않습니다. XSLT가 효과적인 도구이긴 하지만 일부 특징은 최적이 아닙니다. 예를 들어, XML로 프로그래밍 구문을 표현하면 비교적 상세한 코드가 생성되므로 코드를 유지 관리하기가 어렵습니다. 또한 재귀에 크게 의존하여 흐름을 제어하면 읽기 어려운 코드가 생성될 수 있습니다. XSLT에 대한 자세한 내용은 [XSLT 변환](../../../../standard/data/xml/xslt-transformations.md)을 참조하세요.  
   
  그러나 XSLT는 XML의 모양을 변환하는 데 순수 함수형 방법을 사용하는 경우의 가치를 입증합니다. LINQ to XML을 사용하는 순수 함수형 프로그래밍은 많은 부분이 XSLT와 유사합니다. 그러나 LINQ to XML과 C#에 도입된 프로그래밍 구문을 사용하면 XSLT보다 읽기 쉽고 유지 관리가 용이한 순수 함수 변환을 작성할 수 있습니다.  
   
@@ -64,5 +65,5 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="see-also"></a>참고 항목  
  [순수 함수 변환 소개(C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)   
- [XSLT 변환](http://msdn.microsoft.com/library/202f8820-224c-494f-b61e-cd127eac6e03)   
+ [XSLT 변환](../../../../standard/data/xml/xslt-transformations.md)   
  [순수 함수로 리팩터링(C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

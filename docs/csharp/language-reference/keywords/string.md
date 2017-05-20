@@ -34,10 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a616808a8e6ff5e259c503c0143db4b8f73bdef2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 737a0902a0cb010a74b59560abe43f5cfb6550db
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="string-c-reference"></a>string(C# 참조)
@@ -125,12 +126,12 @@ Console.WriteLine(a);
 ## <a name="see-also"></a>참고 항목  
  [C# 참조](../../../csharp/language-reference/index.md)   
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [문자열 사용에 대한 모범 사례](http://msdn.microsoft.com/library/b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7)   
+ [문자열 사용에 대한 모범 사례](../../../standard/base-types/best-practices-strings.md)   
  [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
  [참조 형식](../../../csharp/language-reference/keywords/reference-types.md)   
  [값 형식](../../../csharp/language-reference/keywords/value-types.md)   
- [기본적인 문자열 작업](http://msdn.microsoft.com/library/8133d357-90b5-4b62-9927-43323d99b6b6)   
- [새 문자열 만들기](http://msdn.microsoft.com/library/06fdf123-2fac-4459-8904-eb48ab908a30)   
+ [기본적인 문자열 작업](../../../standard/base-types/basic-string-operations.md)   
+ [새 문자열 만들기](../../../standard/base-types/creating-new.md)   
  [숫자 결과 형식 지정 표](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)
 

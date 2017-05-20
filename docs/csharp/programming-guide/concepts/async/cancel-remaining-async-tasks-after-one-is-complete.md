@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3434dc4b13295101970fd4aadb69d56ddbca7142
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: fa0a35df3c2038859a8c2861780fd8dfa98d4429
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>비동기 작업 하나가 완료되면 남은 비동기 작업 취소(C#)
@@ -59,7 +60,7 @@ ms.lasthandoff: 03/13/2017
   
  **CancelAListOfTasks** 프로젝트의 MainWindow.xaml.cs 파일에서는 `AccessTheWebAsync`의 루프에서 각 웹 사이트에 대한 처리 단계를 다음 비동기 메서드로 이동하여 전환을 시작합니다.  
   
-```cs  
+```csharp  
 / ***Bundle the processing steps for a website into one async method.  
 async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken ct)  
 {  
@@ -81,13 +82,22 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
   
 2.  실행될 때 제네릭 작업의 컬렉션을 생성하는 쿼리를 만듭니다. 각 `ProcessURLAsync` 호출은 <xref:System.Threading.Tasks.Task%601>를 반환합니다. 여기서 `TResult`는 정수입니다.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+    ```csharp  
+    // ***Create a query that, when executed, returns a collection of tasks.  
+    IEnumerable<Task<int>> downloadTasksQuery =  
+        from url in urlList select ProcessURLAsync(url, client, ct);  
+    ```  
+  
 3.  `ToArray`를 호출하여 쿼리를 실행하고 작업을 시작합니다. 다음 단계에서 `WhenAny` 메서드를 적용하면 `ToArray`를 사용하지 않고 쿼리가 실행되고 작업이 시작되지만 다른 메서드는 시작되지 않을 수 있습니다. 가장 안전한 방법은 쿼리를 명시적으로 강제 실행하는 것입니다.  
   
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
+    ```csharp  
+    // ***Use ToArray to execute the query and start the download tasks.   
+    Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
+    ```  
+  
 4.  작업 컬렉션에서 `WhenAny`를 호출합니다. `WhenAny`는 `Task(Of Task(Of Integer))` 또는 `Task<Task<int>>`를 반환합니다.  즉, `WhenAny`는 대기 시 단일 `Task(Of Integer)` 또는 `Task<int>`로 계산되는 작업을 반환합니다. 이 단일 작업은 컬렉션에서 완료될 첫 번째 작업입니다. 첫 번째로 완료된 작업은 `firstFinishedTask`에 할당됩니다. `firstFinishedTask`의 형식은 <xref:System.Threading.Tasks.Task%601>입니다. 여기서 `TResult`는 반환 형식이 `ProcessURLAsync`이므로 정수입니다.  
   
-    ```cs  
+    ```csharp  
     // ***Call WhenAny and then await the result. The task that finishes   
     // first is assigned to firstFinishedTask.  
     Task<int> firstFinishedTask = await Task.WhenAny(downloadTasks);  
@@ -95,14 +105,14 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
   
 5.  이 예제에서는 첫 번째로 완료되는 작업에만 초점을 맞춥니다. 따라서 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName>을 사용하여 나머지 작업을 취소합니다.  
   
-    ```cs  
+    ```csharp  
     // ***Cancel the rest of the downloads. You just want the first one.  
     cts.Cancel();  
     ```  
   
 6.  마지막으로 다운로드된 콘텐츠의 길이를 검색할 때까지 `firstFinishedTask`를 대기하게 합니다.  
   
-    ```cs  
+    ```csharp  
     var length = await firstFinishedTask;  
     resultsTextBox.Text += String.Format("\r\nLength of the downloaded website:  {0}\r\n", length);  
     ```  
@@ -116,7 +126,7 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
   
  [Async 샘플: 응용 프로그램 미세 조정](http://go.microsoft.com/fwlink/?LinkId=255046)에서 프로젝트를 다운로드할 수 있습니다.  
   
-```cs  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  

@@ -14,10 +14,11 @@ ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3e4ff1807605164afc95eaebf37a131d9dddb79c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 87a8efd8e8631ac200a95069f889d6756cbd5a4a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -48,7 +49,7 @@ ms.lasthandoff: 03/13/2017
  함수형 프로그래밍에 대한 자세한 내용은 [함수형 프로그래밍 및 명령형 프로그래밍 비교(C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)를 참조하세요.  
   
 #### <a name="domain-specific-fp-languages"></a>영역별 FP 언어  
- 범용 프로그래밍 언어가 널리 채택되지는 않았지만 특정 영역별 함수형 프로그래밍 언어는 보다 성공적이었습니다. 예를 들어, CSS 스타일시트는 많은 웹 페이지의 모양과 느낌을 결정하는 데 사용되고 XSLT(Extensible Stylesheet Language Transformation) 스타일시트는 XML 데이터 조작에서 광범위하게 사용됩니다. XSLT에 대한 자세한 내용은 [XSLT 변환](http://msdn.microsoft.com/library/202f8820-224c-494f-b61e-cd127eac6e03)을 참조하세요.  
+ 범용 프로그래밍 언어가 널리 채택되지는 않았지만 특정 영역별 함수형 프로그래밍 언어는 보다 성공적이었습니다. 예를 들어, CSS 스타일시트는 많은 웹 페이지의 모양과 느낌을 결정하는 데 사용되고 XSLT(Extensible Stylesheet Language Transformation) 스타일시트는 XML 데이터 조작에서 광범위하게 사용됩니다. XSLT에 대한 자세한 내용은 [XSLT 변환](../../../../standard/data/xml/xslt-transformations.md)을 참조하세요.  
   
 ## <a name="terminology"></a>용어  
  다음 표에는 함수 변환과 관련된 몇 가지 용어가 정의되어 있습니다.  
@@ -64,7 +65,7 @@ ms.lasthandoff: 03/13/2017
  자세한 내용은 [람다 식](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)을 참조하세요.  
   
  컬렉션  
- 대개 동일한 형식을 갖고 있는 구조화된 데이터 집합입니다. LINQ와의 호환을 가능하게 하려면 컬렉션이 <xref:System.Collections.IEnumerable> 인터페이스나 <xref:System.Linq.IQueryable> 인터페이스(또는 제네릭 인터페이스인 <xref:System.Collections.Generic.IEnumerator%601> 또는 <xref:System.Linq.IQueryable%601> 중 하나)를 구현해야 합니다.  
+ 대개 동일한 형식을 갖고 있는 구조화된 데이터 집합입니다. LINQ와 호환되려면 컬렉션은 <xref:System.Collections.IEnumerable> 인터페이스나 <xref:System.Linq.IQueryable> 인터페이스(또는 해당하는 제네릭 항목인 <xref:System.Collections.Generic.IEnumerator%601> 또는 <xref:System.Linq.IQueryable%601> 중 하나)를 구현해야 합니다.  
   
  튜플(익명 형식)  
  수학적 개념인 튜플은 각각 특정한 형식을 가진 개체의 유한 시퀀스입니다. 튜플을 정렬된 목록이라고 하기도 합니다. 익명 형식은 이 개념을 언어에 구현한 것입니다. 익명 형식을 사용하여 명명되지 않은 클래스 형식을 선언하고 해당 형식의 개체를 동시에 인스턴스화할 수 있습니다.  

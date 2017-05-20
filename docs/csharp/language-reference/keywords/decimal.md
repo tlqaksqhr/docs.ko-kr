@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f104657c66e067ffe657f8387fef2178e3b2e62b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 336a4a7bb485a48282dd740bafb81421e0cba693
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="decimal-c-reference"></a>decimal(C# 참조)
@@ -77,7 +78,7 @@ myMoney = (decimal)x;
  명시적 숫자 변환에 대한 자세한 내용은 [명시적 숫자 변환 표](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)를 참조하세요.  
   
 ## <a name="formatting-decimal-output"></a>Decimal 출력 서식 지정  
- `String.Format` 메서드를 사용하거나 `String.Format()`을 호출하는 <xref:System.Console.Write%2A?displayProperty=fullName> 메서드를 통해 결과의 서식을 지정할 수 있습니다. 통화 서식은 이 문서 뒷부분에 있는 두 번째 예제처럼 표준 통화 서식 문자열 "C" 또는 "c"를 사용하여 지정합니다. `String.Format` 메서드에 대한 자세한 내용은 <xref:System.String.Format%2A?displayProperty=fullName>을 참조하세요.  
+ `String.Format` 메서드를 사용하거나 <xref:System.Console.Write%2A?displayProperty=fullName>을 호출하는 `String.Format()` 메서드를 통해 결과의 서식을 지정할 수 있습니다. 통화 서식은 이 문서 뒷부분에 있는 두 번째 예제처럼 표준 통화 서식 문자열 "C" 또는 "c"를 사용하여 지정합니다. `String.Format` 메서드에 대한 자세한 내용은 <xref:System.String.Format%2A?displayProperty=fullName>을 참조하십시오.  
   
 ## <a name="example"></a>예제  
  다음은 [double](../../../csharp/language-reference/keywords/double.md) 및 `decimal` 변수를 추가하려고 시도하여 컴파일러 오류가 발생하는 예제입니다.  
@@ -119,4 +120,4 @@ Console.WriteLine((double)dec + dub);
  [기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [명시적 숫자 변환 표](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)   
- [표준 숫자 형식 문자열](http://msdn.microsoft.com/library/580e57eb-ac47-4ffd-bccd-3a1637c2f467)
+ [표준 숫자 형식 문자열](../../../standard/base-types/standard-numeric-format-strings.md)
