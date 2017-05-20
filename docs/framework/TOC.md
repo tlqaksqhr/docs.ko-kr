@@ -1,4 +1,4 @@
-# [.NET Framework 개발 가이드](development-guide.md)
+# [개발 가이드](development-guide.md)
 ## [응용 프로그램 주요 사항](../standard/application-essentials.md)
 ## [데이터 및 모델링](data/index.md)
 ## [클라이언트 응용 프로그램](develop-client-apps.md)
@@ -15,4 +15,3 @@
 ## [여러 플랫폼을 대상으로 개발](../standard/cross-platform/index.md)
 ## [배포](deployment/index.md)
 ## [성능](performance/index.md)
-
