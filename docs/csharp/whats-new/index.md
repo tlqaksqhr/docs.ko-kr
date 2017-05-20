@@ -10,14 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
-translationtype: Human Translation
-ms.sourcegitcommit: 0184e07012ffe1a1300dc5af7e99e0d5a3517d6b
-ms.openlocfilehash: a5abc801decbcedb4980b8b4992d128aa1e1bb2e
-ms.lasthandoff: 05/02/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: 4ff34455c7cc6135f7324b18d3aebca576d70edf
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/14/2017
 
 ---
 
-# <a name="whats-new-in-c"></a>C의 새로운 기능# #
+# <a name="whats-new-in-c"></a>C#의 새로운 기능 #
 
 
 * [C# 7](csharp-7.md):
@@ -31,6 +32,7 @@ ms.lasthandoff: 05/02/2017
 -->
 * [플랫폼 간 지원](../../core/index.md):
     - C#은 .NET Core 지원을 통해 여러 플랫폼에서 실행됩니다. macOS 또는 지원되는 여러 Linux 배포판 중 하나에서 C#을 사용해보고 싶다면 .NET Core에 대해 알아보세요.
+
 <!--
 - [.NET Compiler Platform SDK](../roslyn/index.md):
     - The .NET Compiler Platform SDK enables you to write code that performs static analysis on C# code. You can use these APIs to find potential errors, or bad practices, suggest fixes, and even implement those fixes.

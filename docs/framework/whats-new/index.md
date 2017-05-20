@@ -17,10 +17,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ec57b79f67f826dbe61aa81bb5f82e20d61db2e3
-ms.openlocfilehash: cec16529ea93773362715cac7694b451ce3dddfe
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: e36d3523a52def454e7ed0233f2179ab88ab3bcb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 05/14/2017
 
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework의 새로운 기능
@@ -528,14 +528,14 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 ```xaml
 <GroupDescriptions>
      <PropertyGroupDescription 
-         PropertyName=”Age” 
+         PropertyName="Age" 
          CustomSort= 
-              ”{x:Static PropertyGroupDescription.CompareNamesAscending}”/>
+              "{x:Static PropertyGroupDescription.CompareNamesAscending}"/>
      </PropertyGroupDescription>
 </GroupDescriptions>
 
 <SortDescriptions>
-     <SortDescription PropertyName=”LastName”/>
+     <SortDescription PropertyName="LastName"/>
 </SortDescriptions>
 ```
 
@@ -553,7 +553,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
 ```xml
 <runtime>
-   <AppContextSwitchOverrides value=”Switch.System.Windows.DoNotScaleForDpiChanges=false”/>
+   <AppContextSwitchOverrides value="Switch.System.Windows.DoNotScaleForDpiChanges=false"/>
 </runtime>
 ```
 
@@ -633,13 +633,11 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
  다음 예제 코드에서는 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]에 포함된 ECDSA  X509 인증서에 대한 새 지원을 사용하여 바이트 스트림을 위한 서명을 쉽게 생성하는 방법을 보여 줍니다.
 
- [!code-csharp[whatsnew.461.crypto#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#1)]
- [!code-vb[whatsnew.461.crypto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code461.vb#1)]
+ [!code-csharp[whatsnew.461.crypto#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#1)] [!code-vb[whatsnew.461.crypto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code461.vb#1)]
 
  다음은 .NET Framework 4.6에서 서명을 생성하는 데 필요한 코드에 표시된 대비를 제공합니다.
 
- [!code-csharp[whatsnew.461.crypto#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#2)]
- [!code-vb[whatsnew.461.crypto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code46.vb#2)]
+ [!code-csharp[whatsnew.461.crypto#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#2)] [!code-vb[whatsnew.461.crypto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code46.vb#2)]
 
 <a name="ADO.NET461"></a> 
 ### <a name="adonet"></a>ADO.NET
@@ -649,7 +647,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
  HSM에 저장된 열 마스터 키로 보호된 상시 암호화 데이터에 액세스하려면 고객이 HSM 공급업체에서 제공한 CSP 공급자 또는 CNG 키 저장소 공급자를 앱 서버 또는 클라이언트 컴퓨터에 설치해야 합니다.
 
- AlwaysOn의 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> 연결 동작 개선. SqlClient는 이제 자동으로 AlwaysOn AG(가용성 그룹)에 대한 더 빠른 연결을 제공합니다. 응용 프로그램이 다른 서브넷의 AlwaysOn AG(가용성 그룹)에 연결되었는지 투명하게 감지하고 현재 활성 서버를 신속하게 검색하여 서버에 대한 연결을 제공합니다. 이 릴리스 전에는 AlwaysOn 가용성 그룹에 연결되었음을 나타내기 위해 응용 프로그램에서 `“MultisubnetFailover=true”`를 포함하도록 연결 문자열을 설정해야 했습니다. 연결 키워드를 `true`로 설정하지 않은 경우 응용 프로그램에서 AlwaysOn 가용성 그룹에 연결하는 동안 시간 초과가 발생할 수 있습니다. 이 릴리스에서는 더 이상 응용 프로그램에서 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>를 `true`로 설정할 필요가 *없습니다*. Always On 가용성 그룹의 SqlClient 지원에 대한 자세한 내용은 [고가용성 및 재해 복구에 대한 SqlClient 지원](../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)을 참조하십시오.
+ AlwaysOn의 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> 연결 동작 개선. SqlClient는 이제 자동으로 AlwaysOn AG(가용성 그룹)에 대한 더 빠른 연결을 제공합니다. 응용 프로그램이 다른 서브넷의 AlwaysOn AG(가용성 그룹)에 연결되었는지 투명하게 감지하고 현재 활성 서버를 신속하게 검색하여 서버에 대한 연결을 제공합니다. 이 릴리스 전에는 AlwaysOn 가용성 그룹에 연결되었음을 나타내기 위해 응용 프로그램에서 `"MultisubnetFailover=true"`를 포함하도록 연결 문자열을 설정해야 했습니다. 연결 키워드를 `true`로 설정하지 않은 경우 응용 프로그램에서 AlwaysOn 가용성 그룹에 연결하는 동안 시간 초과가 발생할 수 있습니다. 이 릴리스에서는 더 이상 응용 프로그램에서 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>를 `true`로 설정할 필요가 *없습니다*. Always On 가용성 그룹의 SqlClient 지원에 대한 자세한 내용은 [고가용성 및 재해 복구에 대한 SqlClient 지원](../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)을 참조하십시오.
 
 <a name="WPF461"></a> 
 ### <a name="windows-presentation-foundation-wpf"></a>WPF(Windows Presentation Foundation)
@@ -677,7 +675,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
 - 파일은 BOM(바이트 순서 표시)으로 시작하는 UTF-16 LE 일반 텍스트여야 합니다.
 
-- 각 줄은 단어(추가되거나 제외된 단어 목록의 단어) 또는 단어가 세로 막대("&#124;")로 구분된 자동 고침 쌍(자동 고침 단어 목록)으로 구성되어야 합니다.
+- 각 줄은 단어(추가되거나 제외된 단어 목록의 단어) 또는 단어가 세로 막대(“&#124;”)로 구분된 자동 고침 쌍(자동 고침 단어 목록)으로 구성되어야 합니다.
 
 - 이러한 파일은 읽기 전용으로 간주되며 시스템에 의해 수정되지 않습니다.
 
@@ -831,13 +829,11 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
         - RSA API에 대한 향상 기능 - 일반 작업에 더 이상 캐스팅이 필요하지 않습니다. 예를 들어 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 개체를 사용하여 데이터를 암호화하려면 이전 버전의 .NET Framework에서 다음과 같은 코드가 필요합니다.
 
-             [!code-csharp[WhatsNew.Casting#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#1)]
-             [!code-vb[WhatsNew.Casting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#1)]
+             [!code-csharp[WhatsNew.Casting#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#1)]    [!code-vb[WhatsNew.Casting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#1)]
 
              .NET Framework 4.6에서 새로운 암호화 API를 사용하는 코드는 캐스팅을 방지하기 위해 다음과 같이 작성될 수 있습니다.
 
-             [!code-csharp[WhatsNew.Casting#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#2)]
-             [!code-vb[WhatsNew.Casting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#2)]
+             [!code-csharp[WhatsNew.Casting#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#2)]    [!code-vb[WhatsNew.Casting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#2)]
 
     - **UNIX 시간으로/UNIX 시간에서 날짜 및 시간 변환 지원**
 
@@ -894,7 +890,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
     - **TAP(작업 기반 비동기 패턴) 변경 내용**
 
-         [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]를 대상으로 하는 앱의 경우 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 개체가 호출 스레드의 문화권과 UI 문화권을 상속합니다. 이전 버전의 .NET Framework를 대상으로 하거나 특정 버전의 .NET Framework를 대상으로 하지 않는 앱의 동작은 영향을 받지 않습니다. 자세한 내용은 <xref:System.Globalization.CultureInfo> 클래스 항목의 "문화권 및 작업 기반 비동기 작업" 섹션을 참조하세요.
+         [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]를 대상으로 하는 앱의 경우 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 개체가 호출 스레드의 문화권과 UI 문화권을 상속합니다. 이전 버전의 .NET Framework를 대상으로 하거나 특정 버전의 .NET Framework를 대상으로 하지 않는 앱의 동작은 영향을 받지 않습니다. 자세한 내용은 <xref:System.Globalization.CultureInfo> 클래스 항목의 “문화권 및 작업 기반 비동기 작업” 섹션을 참조하세요.
 
          <xref:System.Threading.AsyncLocal%601?displayProperty=fullName> 클래스를 사용하여 `async` 메서드와 같은 지정된 비동기 제어 흐름의 로컬 앰비언트 데이터를 나타낼 수 있습니다. 스레드 간에 데이터를 유지하는 데 사용할 수 있습니다. <xref:System.Threading.AsyncLocal%601.Value%2A?displayProperty=fullName> 속성이 명시적으로 변경되거나 스레드가 컨텍스트 전환을 발생시켜 앰비언트 데이터가 변경될 때마다 알림을 표시하는 콜백 메서드를 정의할 수도 있습니다.
 
@@ -989,7 +985,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
 - **WWF(Windows Workflow Foundation)**
 
-     이제 요청 시간이 초과되기 전에 처리 중인 "비 프로토콜" 책갈피가 있을 때 워크플로 서비스가 순서가 잘못된 작업 요청을 유지하는 시간을 초 단위로 지정할 수 있습니다. "비 프로토콜" 책갈피는 처리 중인 수신 작업에 관련되지 않은 책갈피입니다. 일부 작업은 구현되는 과정에서 비 프로토콜 책갈피를 만들기 때문에 비 프로토콜 책갈피가 있는지 정확히 알 수 없습니다. 여기에는 상태 및 선택이 포함됩니다. 따라서 워크플로 서비스를 상태 컴퓨터를 사용하여 구현하거나 선택 작업을 포함하여 구현한 경우 대부분 비 프로토콜 책갈피가 포함됩니다. app.config 파일의 `appSettings` 섹션에 다음과 같은 줄을 추가하여 간격을 지정합니다.
+     이제 요청 시간이 초과되기 전에 처리 중인 “비 프로토콜” 책갈피가 있을 때 워크플로 서비스가 순서가 잘못된 작업 요청을 유지하는 시간을 초 단위로 지정할 수 있습니다. “비 프로토콜” 책갈피는 처리 중인 수신 작업에 관련되지 않은 책갈피입니다. 일부 작업은 구현되는 과정에서 비 프로토콜 책갈피를 만들기 때문에 비 프로토콜 책갈피가 있는지 정확히 알 수 없습니다. 여기에는 상태 및 선택이 포함됩니다. 따라서 워크플로 서비스를 상태 컴퓨터를 사용하여 구현하거나 선택 작업을 포함하여 구현한 경우 대부분 비 프로토콜 책갈피가 포함됩니다. app.config 파일의 `appSettings` 섹션에 다음과 같은 줄을 추가하여 간격을 지정합니다.
 
     ```
     <add key="microsoft:WorkflowServices:FilterResumeTimeoutInSeconds" value="60"/>
@@ -1128,7 +1124,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
                                               EnlistmentOptions enlistmentOptions)
     ```
 
-     이 메서드는 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=fullName> 메서드에 대한 응답으로 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=fullName>가 이전에 만든 인리스트먼트에 의해 사용될 수 있습니다. 트랜잭션을 MSDTC 트랜잭션으로 승격하고 승격할 수 있는 인리스트먼트를 지속적인 인리스트먼트로 "변환"하도록 `System.Transactions`에게 요청합니다. 이 메서드가 성공적으로 완료되면 `System.Transactions`이 <xref:System.Transactions.IPromotableSinglePhaseNotification> 인터페이스를 더 이상 참조하지 않습니다. 향후 모든 알림은 제공된 <xref:System.Transactions.ISinglePhaseNotification> 인터페이스에 도착하게 됩니다. 해당 인리스트먼트는 지속적인 인리스트먼트로 작동해야 하며 트랜잭션 로깅 및 복구를 지원합니다. 자세한 내용은 <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=fullName>을 참조하세요. 또한 인리스트먼트는 <xref:System.Transactions.ISinglePhaseNotification>을 지원해야 합니다.  이 메서드는 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=fullName> 호출을 처리하는 동안에*만* 호출할 수 있습니다. 그렇지 않은 경우 <xref:System.Transactions.TransactionException> 예외가 발생합니다.
+     이 메서드는 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=fullName> 메서드에 대한 응답으로 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=fullName>가 이전에 만든 인리스트먼트에 의해 사용될 수 있습니다. 트랜잭션에서 MSDTC 트랜잭션으로 수준을 올리고, 수준을 올릴 수 있는 인리스트먼트를 지속적인 인리스트먼트로 “변환”하도록 `System.Transactions`에게 요청합니다. 이 메서드가 성공적으로 완료되면 `System.Transactions`이 <xref:System.Transactions.IPromotableSinglePhaseNotification> 인터페이스를 더 이상 참조하지 않습니다. 향후 모든 알림은 제공된 <xref:System.Transactions.ISinglePhaseNotification> 인터페이스에 도착하게 됩니다. 해당 인리스트먼트는 지속적인 인리스트먼트로 작동해야 하며 트랜잭션 로깅 및 복구를 지원합니다. 자세한 내용은 <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=fullName>을 참조하세요. 또한 인리스트먼트는 <xref:System.Transactions.ISinglePhaseNotification>을 지원해야 합니다.  이 메서드는 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=fullName> 호출을 처리하는 동안에*만* 호출할 수 있습니다. 그렇지 않은 경우 <xref:System.Transactions.TransactionException> 예외가 발생합니다.
 
  [맨 위로 이동](#introduction)
 
