@@ -17,31 +17,33 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: e36d3523a52def454e7ed0233f2179ab88ab3bcb
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: 416e97cd7f59b0fc63052673acee8b55a3c11c1f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 05/19/2017
 
 ---
+
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework의 새로운 기능
-<a name="introduction"></a> 이 문서에서는 다음 버전의 .NET Framework에 새로 추가된 주요 기능과 향상된 내용에 대해 요약합니다.
+<a name="introduction"></a> 이 문서에서는 다음 버전의 .NET Framework에 새로 추가된 주요 기능과 향상된 내용에 대해 요약합니다.  
+ 
+[.NET Framework 4.7](#v47)   
+[.NET Framework 4.6.2](#v462)   
+[.NET Framework 4.6.1](#v461)   
+[.NET 2015 및 .NET Framework 4.6](#v46)   
+[.NET Framework 4.5.2](#v452)   
+[.NET Framework 4.5.1](#v451)   
+[.NET Framework 4.5](#core)   
 
- [.NET Framework 4.7](#v47)   
- [.NET Framework 4.6.2](#v462)   
- [.NET Framework 4.6.1](#v461)   
- [.NET 2015 및 .NET Framework 4.6](#v46)   
- [.NET Framework 4.5.2](#v452)   
- [.NET Framework 4.5.1](#v451)   
- [.NET Framework 4.5](#core)   
-
- 이 문서는 각 새로운 기능에 대한 포괄적인 정보를 제공하지 않으며 변경될 수 있습니다. .NET Framework에 대한 일반적인 내용은 [시작](../../../docs/framework/get-started/index.md)을 참조하십시오. 지원되는 플랫폼은 [시스템 요구 사항](~/docs/framework/get-started/system-requirements.md)을 참조하십시오. 다운로드 링크와 설치 지침은 [설치 가이드](../../../docs/framework/install/guide-for-developers.md)를 참조하십시오.
+이 문서는 각 새로운 기능에 대한 포괄적인 정보를 제공하지 않으며 변경될 수 있습니다. .NET Framework에 대한 일반적인 내용은 [시작](../../../docs/framework/get-started/index.md)을 참조하십시오. 지원되는 플랫폼은 [시스템 요구 사항](~/docs/framework/get-started/system-requirements.md)을 참조하십시오. 다운로드 링크와 설치 지침은 [설치 가이드](../../../docs/framework/install/guide-for-developers.md)를 참조하십시오.
 
 > [!NOTE]
->  .NET Framework 팀에서는 플랫폼 지원을 확장하고 새로운 기능(예: 변경할 수 없는 컬렉션 및 SIMD 사용 벡터 형식)을 도입하기 위한 NuGet이 있는 번외 기능도 릴리스했습니다. 자세한 내용은 [추가 클래스 라이브러리 및 API](../additional-apis/index.md) 및 [.NET Framework 및 번외 릴리스](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)를 참조하십시오. .NET Framework에 대해서는 [NuGet 패키지의 전체 목록](https://blogs.msdn.microsoft.com/dotnet/p/nugetpackages/)을 참조하거나 [피드](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/)를 구독하십시오.
+> .NET Framework 팀에서는 플랫폼 지원을 확장하고 새로운 기능(예: 변경할 수 없는 컬렉션 및 SIMD 사용 벡터 형식)을 도입하기 위한 NuGet이 있는 번외 기능도 릴리스했습니다. 자세한 내용은 [추가 클래스 라이브러리 및 API](../additional-apis/index.md) 및 [.NET Framework 및 번외 릴리스](~/docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)를 참조하십시오. .NET Framework에 대해서는 [NuGet 패키지의 전체 목록](https://blogs.msdn.microsoft.com/dotnet/p/nugetpackages/)을 참조하거나 [피드](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/)를 구독하십시오.
 
 <a name="v47"></a> 
 ## <a name="introducing-the-net-framework-47"></a>.NET Framework 4.7 소개
- .NET Framework 4.7은 .NET Framework 4.6, 4.6.1 및 4.6.2에서 빌드되며 제품의 안정성을 유지하면서 많은 새로운 수정 및 여러 가지 새 기능이 추가됩니다.
+
+.NET Framework 4.7은 .NET Framework 4.6, 4.6.1 및 4.6.2에서 빌드되며 제품의 안정성을 유지하면서 많은 새로운 수정 및 여러 가지 새 기능이 추가됩니다.
 
 ### <a name="downloading-and-installing-the-net-framework-47"></a>.NET Framework 4.7 다운로드 및 설치
  
@@ -159,7 +161,8 @@ WISP(Windows 잉크 서비스 플랫폼) 대신 [WM_POINTER 메시지](https://m
 
 <a name="v462"></a> 
 ## <a name="whats-new-in-the-net-framework-462"></a>.NET Framework 4.6.2의 새로운 기능
- [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]에는 다음과 같은 영역의 새 기능이 포함됩니다.
+
+[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]에는 다음과 같은 영역의 새 기능이 포함됩니다.
 
 - [ASP.NET](#ASPNET462)
 
@@ -219,9 +222,9 @@ End Class
 
  그런 다음 키가 오류 메시지 문자열이고 값이 지역화된 오류 메시지인 리소스 파일 DataAnnotation.Localization.fr.resx를 만들 수 있습니다. 해당 파일은 `App.LocalResources` 폴더에서 찾아야 합니다. 예를 들면, 다음은 지역화된 프랑스어(fr) 오류 메시지의 값과 키입니다.
 
-|이름|값|
-|----------|-----------|
-|등급은 1에서 10 사이여야 합니다.|La note doit être comprise entre 1 et 10.|
+| 이름                                 | 값                                     |
+| ------------------------------------ | ----------------------------------------- |
+| 등급은 1에서 10 사이여야 합니다. | La note doit être comprise entre 1 et 10. |
 
  그러면 이 파일은 다음을 할 수 있습니다.
 
@@ -231,12 +234,10 @@ End Class
  이제 ASP.NET을 통해 태스크 반환 메서드를 세션 상태 저장소 공급자와 함께 사용할 수 있으므로, ASP.NET 앱에서 비동기화의 확장성 이점을 누릴 수 있습니다. 세션 상태 저장소 공급자와의 비동기 작업을 지원하기 위해 ASP.NET에는 <xref:System.Web.SessionState.ISessionStateModule?displayProperty=fullName>이라는 새 인터페이스가 포함되어 있습니다. 이 인터페이스는 <xref:System.Web.IHttpModule>에서 상속하며 개발자가 자체 세션 상태 모듈과 비동기 세션 저장소 공급자를 구현할 수 있도록 해줍니다. 인터페이스는 다음과 같이 정의됩니다.
 
 ```csharp
-
 public interface ISessionStateModule : IHttpModule {
     void ReleaseSessionState(HttpContext context);
     Task ReleaseSessionStateAsync(HttpContext context);
 }
-
 ```
 
  또한 <xref:System.Web.SessionState.SessionStateUtility> 클래스는 비동기 작업을 지원하는 데 사용할 수 있는 두 개의 새로운 메서드 <xref:System.Web.SessionState.SessionStateUtility.IsSessionStateReadOnly%2A> 및 <xref:System.Web.SessionState.SessionStateUtility.IsSessionStateRequired%2A>를 포함합니다.

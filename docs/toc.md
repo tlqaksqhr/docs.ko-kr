@@ -38,6 +38,7 @@
 ## [단위 테스트](core/testing/index.md)
 ### [dotnet 테스트 및 xUnit을 사용한 유닛 테스트](core/testing/unit-testing-with-dotnet-test.md)
 ### [dotnet 테스트 및 MSTest를 사용한 유닛 테스트](core/testing/unit-testing-with-mstest.md)
+### [선택적 단위 테스트 실행](core/testing/selective-unit-tests.md)
 ## [버전 관리](core/versions/index.md)
 ### [.NET Core 지원](core/versions/lts-current.md)
 <!--### [🔧 Servicing](core/versions/servicing.md)-->
@@ -84,6 +85,7 @@
 # [.NET Framework 가이드](framework/index.md)
 ## [새로운 기능](framework/whats-new/)
 ## [시작](framework/get-started/)
+## [설치 가이드](framework/install/)
 ## [마이그레이션 가이드](framework/migration-guide/)
 ## [Docker 가이드의 .NET Framework](framework/docker/index.md)
 ### [컨테이너에서 콘솔 앱 실행](framework//docker/console.md)
@@ -132,6 +134,7 @@
 <!-- End What's New -->
 <!--## [🔧 C# Interactive](csharp/interactive/)-->
 <!-- Do this section later, once master redirects are in place -->
+## C# 개념
 ### [C# 형식 시스템](csharp/programming-guide/types/index.md)
 ### [네임스페이스](csharp/programming-guide/namespaces/index.md)
 ### [기본 형식](csharp/basic-types.md)
@@ -183,12 +186,11 @@
 
 ## [F# 둘러보기](fsharp/tour.md)
 
-<!--## [Introduction to Functional Programming](fsharp/introduction-to-functional-programming/index.md)-->
-### [첫 번째 클래스 값 함수](fsharp/introduction-to-functional-programming/functions-as-first-class-values.md)
-
 <!--## [Tutorials](fsharp/tutorials/index.md)-->
+## 자습서
 ### [시작](fsharp/tutorials/getting-started/index.md)
 #### [Visual Studio 시작](fsharp/tutorials/getting-started/getting-started-visual-studio.md)
+#### [Mac용 Visual Studio 시작](fsharp/tutorials/getting-started/getting-started-with-visual-studio-for-mac.md)
 #### [Visual Studio Code 및 Ionide 시작](fsharp/tutorials/getting-started/getting-started-vscode.md)
 #### [명령줄 도구 시작](fsharp/tutorials/getting-started/getting-started-command-line.md)
 ### [F# Interactive](fsharp/tutorials/fsharp-interactive/index.md)
@@ -203,7 +205,13 @@
 #### [형식 공급자 만들기](fsharp/tutorials/type-providers/creating-a-type-provider.md)
 #### [형식 공급자 보안](fsharp/tutorials/type-providers/type-provider-security.md)
 #### [형식 공급자 문제 해결](fsharp/tutorials/type-providers/troubleshooting-type-providers.md)
+
+<!--## [Introduction to Functional Programming](fsharp/introduction-to-functional-programming/index.md)-->
+## 함수형 프로그래밍 소개
+### [첫 번째 클래스 값 함수](fsharp/introduction-to-functional-programming/functions-as-first-class-values.md)
+
 <!--### [Asynchronous and Concurrent Programming](fsharp/tutorials/asynchronous-and-concurrent-programming/index.md)-->
+### 비동기 및 동시 실행 프로그래밍
 #### [비동기 프로그래밍](fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
 
 <!--## [Using F# in Visual Studio](fsharp/using-fsharp-in-visual-studio/index.md)-->
