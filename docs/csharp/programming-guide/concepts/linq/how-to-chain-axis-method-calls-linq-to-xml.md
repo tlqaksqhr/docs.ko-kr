@@ -14,10 +14,11 @@ ms.assetid: 067e6da2-ee32-486d-803c-e611b328e39a
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a47129d3c84d7bfb49929529a50b064c8424b4c3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: bcd325d72ac14f2b33860fbc9e2662c33ca2703d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 
 ---
@@ -27,7 +28,7 @@ ms.lasthandoff: 03/13/2017
  요소의 컬렉션을 반환하며 `Elements`의 이름이 포함된 두 축인 <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName> 메서드와 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> 메서드가 있습니다. 이러한 두 축을 결합하여 트리의 특정 깊이에서 지정된 이름의 모든 요소를 찾을 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 이 예제에서는 <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName> 및 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName>을 사용하여 모든 `PurchaseOrder` 요소의 모든 `Address` 요소에 있는 모든 `Name` 요소를 찾습니다.  
+ 이 예제에서는 <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName> 및 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName>를 사용하여 모든 `Name` 요소의 모든 `Address` 요소에 있는 모든 `PurchaseOrder` 요소를 찾습니다.  
   
  이 예제에서는 XML 문서 [샘플 XML 파일: 여러 구매 주문(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)을 사용합니다.  
   
@@ -54,7 +55,7 @@ foreach (XElement e in names)
 <Name>Jessica Arnold</Name>  
 ```  
   
- 이는 `Elements` 축의 구현 중 하나가 <xref:System.Xml.Linq.XContainer>의 <xref:System.Collections.Generic.IEnumerable%601>에 대한 확장 메서드이기 때문에 작동합니다. <xref:System.Xml.Linq.XElement>는 <xref:System.Xml.Linq.XContainer>에서 파생되므로 <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName> 메서드에 대한 호출의 결과에 대해 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> 메서드를 호출할 수 있습니다.  
+ 이는 `Elements` 축의 구현 중 하나가 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XContainer>에 대한 확장 메서드이기 때문에 작동합니다. <xref:System.Xml.Linq.XElement>는 <xref:System.Xml.Linq.XContainer>에서 파생되므로 <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName> 메서드에 대한 호출의 결과에 대해 <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName> 메서드를 호출할 수 있습니다.  
   
 ## <a name="example"></a>예제  
  중간에 상위 요소가 있을 수도 있고 없을 수도 있는 특정 요소 깊이에서 모든 요소를 검색하려는 경우가 있습니다. 예를 들어, 다음 문서에서 `ConfigParameter` 요소의 자식인 모든 `Customer` 요소를 검색하고 `ConfigParameter` 요소의 자식인 `Root`는 검색하지 않으려고 할 수 있습니다.  

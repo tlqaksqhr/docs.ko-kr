@@ -16,16 +16,17 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 26d5c4da21671c0f4ce37bf08c28ae82213f4374
-ms.lasthandoff: 04/08/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: a8a89b8987eaff4d94f5e620c45b551b7be682d8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="asynchronous-programming-patterns"></a>비동기 프로그래밍 패턴
 .NET Framework에서는 비동기 작업을 수행하기 위한 세 가지 패턴을 제공합니다.  
   
--   <xref:System.IAsyncResult> 패턴이라고도 하는 APM(비동기 프로그래밍 모델) 패턴 - 비동기 작업에는 `Begin` 및 `End` 메서드가 필요합니다(예: 비동기 쓰기 작업의 경우 `BeginWrite` 및 `EndWrite`). 신규 개발에서는 이 패턴을 더 이상 사용하지 않는 것이 좋습니다. 자세한 내용은 [APM(비동기 프로그래밍 모델)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)을 참조하세요.  
+-   <xref:System.IAsyncResult> 패턴이라고도 하는 APM(비동기 프로그래밍 모델) 패턴. 이 패턴에서는 비동기 작업을 수행하려면 `Begin` 및 `End` 메서드가 필요합니다. 예를 들어 비동기 쓰기 작업의 경우에는 `BeginWrite` 및 `EndWrite` 메서드가 필요합니다. 신규 개발에서는 이 패턴을 더 이상 사용하지 않는 것이 좋습니다. 자세한 내용은 [APM(비동기 프로그래밍 모델)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)을 참조하세요.  
   
 -   EAP(이벤트 기반 비동기 패턴). 이 패턴에서는 `Async` 접미사가 있는 메서드가 필요하며 하나 이상의 이벤트, 이벤트 처리기 대리가 형식 및 `EventArg`에서 파생된 형식도 필요합니다. EAP는 .NET Framework 2.0에 도입되었습니다. 이 패턴 역시 신규 개발에서는 더 이상 사용하지 않는 것이 좋습니다. 자세한 내용은 [EAP(이벤트 기반 비동기 패턴)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)를 참조하세요.  
   
@@ -80,4 +81,4 @@ public class MyClass
 |-----------|-----------------|  
 |[APM(비동기 프로그래밍 모델)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)|<xref:System.IAsyncResult> 인터페이스를 사용하여 비동기 동작을 제공하는 레거시 모델에 대해 설명합니다. 신규 개발에서는 이 모델을 더 이상 사용하지 않는 것이 좋습니다.|  
 |[EAP(이벤트 기반 비동기 패턴)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)|비동기 동작을 제공하기 위한 이벤트 기반 레거시 모델에 대해 설명합니다. 신규 개발에서는 이 모델을 더 이상 사용하지 않는 것이 좋습니다.|  
-|[TAP(작업 기반 비동기 패턴)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)|<xref:System.Threading.Tasks> 네임스페이스를 기반으로 하는 새로운 비동기 패턴에 대해 설명합니다. .NET Framework 4 이상 버전에서 비동기 프로그래밍을 수행할 때는 이 모델을 사용하는 것이 좋습니다.|
+|[TAP(작업 기반 비동기 패턴)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)|<xref:System.Threading.Tasks> 네임스페이스를 기반으로 하는 새 비동기 패턴에 대해 설명합니다. .NET Framework 4 이상 버전에서 비동기 프로그래밍을 수행할 때는 이 모델을 사용하는 것이 좋습니다.|

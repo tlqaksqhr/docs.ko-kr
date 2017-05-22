@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 1d6cebecd75bedc393b06261c1955a554c9cf18c
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="preserving-white-space-while-serializing"></a>serialize할 때 공백 유지
@@ -33,7 +34,7 @@ ms.lasthandoff: 03/13/2017
  다른 일반적인 시나리오는 이미 의도적으로 들여쓴 XML을 읽고 수정하는 것입니다. 이 들여쓰기를 변경하려고 하지 않을 수 있습니다. [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]에서는 XML을 로드하거나 구문 분석할 때 공백을 유지하고 XML을 serialize할 때 서식을 해제하는 경우 이렇게 할 수 있습니다.  
   
 ## <a name="white-space-behavior-of-methods-that-serialize-xml-trees"></a>XML 트리를 serialize하는 메서드의 공백 동작  
- <xref:System.Xml.Linq.XElement> 및 <xref:System.Xml.Linq.XDocument> 클래스의 다음 메서드는 XML 트리를 serialize합니다. 파일, <xref:System.IO.TextReader> 또는 <xref:System.Xml.XmlReader>로 XML 트리를 serialize할 수 있습니다. `ToString` 메서드는 문자열로 serialize합니다.  
+ <xref:System.Xml.Linq.XElement> 및 <xref:System.Xml.Linq.XDocument> 클래스의 다음 메서드는 XML 트리를 serialize합니다. XML 트리를 파일, <xref:System.IO.TextReader> 또는 <xref:System.Xml.XmlReader>로 serialize할 수 있습니다. `ToString` 메서드는 문자열로 serialize합니다.  
   
 -   <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName>  
   

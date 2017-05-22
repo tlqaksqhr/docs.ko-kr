@@ -14,9 +14,9 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 54aec822322e94dd309cb275c4d3a9b28a5b0fd5
+ms.sourcegitcommit: b828bb1d6c8fb750ad9ef34f8a7a1b7d2574f4c6
+ms.openlocfilehash: a1049d1f30c18576c24c80f42464233cec30c6b5
 ms.contentlocale: ko-kr
 
 ---
-Windows Vista
+LINQ(Language-Integrated Query)

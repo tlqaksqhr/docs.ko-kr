@@ -14,10 +14,11 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 10af942724ce0207bc6e64f1ebabfdcd2d3488bd
-ms.lasthandoff: 04/18/2017
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="retargeting-changes-in-the-net-framework-452"></a>.NET Framework 4.5.2의 변경 내용 대상 변경
@@ -39,7 +40,7 @@ ms.lasthandoff: 04/18/2017
   
 |기능|변경|영향|범위|  
 |-------------|------------|------------|-----------|  
-|<xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=fullName> 메서드를 사용하여 클립보드에서 HTML 형식의 데이터 검색|[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]를 대상으로 하거나 .NET Framework 4.5.1 이하 버전에서 실행되는 앱의 경우, <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=fullName>는 HTML 형식의 데이터를 ASCII 문자열로 검색합니다. 그 결과 ASCII 문자가 아닌 문자(ASCII 코드가 0x7F보다 큰 문자)는 임의의 두 문자로 표시됩니다. 예를 들어 é 문자(0xE9)는 Ã©(0xC3 0xA9) 문자로 표시됩니다.<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 이상을 대상으로 하거나 .NET Framework 4.5.2에서 실행되는 앱의 경우, <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=fullName>는 HTML 형식의 데이터를 UTF-8로 검색하여 0x7F보다 큰 문자를 올바르게 나타낼 수 있습니다.|HTML 형식 문자열 인코딩 문제에 대한 해결 방법을 구현한 상태에서(예를 들어 클립보드에서 검색한 HTML 문자열을 <xref:System.Text.UTF8Encoding.GetString%2A?displayProperty=fullName> 메서드에 전달하여 명시적으로 인코딩함으로써) 앱의 대상을 버전 4에서 4.5로 다시 지정하려면 해당 해결 방법을 제거해야 합니다.|부|  
+|<xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=fullName> 메서드로 클립보드에서 HTML 형식의 데이터 검색|[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]를 대상으로 하거나 .NET Framework 4.5.1 이하 버전에서 실행되는 앱의 경우, <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=fullName>는 HTML 형식의 데이터를 ASCII 문자열로 검색합니다. 그 결과 ASCII 문자가 아닌 문자(ASCII 코드가 0x7F보다 큰 문자)는 임의의 두 문자로 표시됩니다. 예를 들어 é 문자(0xE9)는 Ã©(0xC3 0xA9) 문자로 표시됩니다.<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 이상을 대상으로 하거나 .NET Framework 4.5.2에서 실행되는 앱의 경우, <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=fullName>는 HTML 형식의 데이터를 UTF-8로 검색하여 0x7F보다 큰 문자를 올바르게 나타낼 수 있습니다.|HTML 형식 문자열 인코딩 문제에 대한 해결 방법을 구현한 상태에서(예를 들어 클립보드에서 검색한 HTML 문자열을 <xref:System.Text.UTF8Encoding.GetString%2A?displayProperty=fullName> 메서드에 전달하여 명시적으로 인코딩함으로써) 앱의 대상을 버전 4에서 4.5로 다시 지정하려면 해당 해결 방법을 제거해야 합니다.|부|  
   
 ## <a name="see-also"></a>참고 항목  
  [런타임 변경 내용](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-2.md)   

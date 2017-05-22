@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 02919c2e1e76991a3b37533da57b5c3ce4ded3c6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: fc8716c2190ac42b66ba8d76ccfec152ea804c4a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>방법: 큰 XML 문서의 변환 스트리밍 수행(C#)
@@ -213,7 +214,7 @@ static void Main(string[] args)
   
  이 예제에서는 이 항목의 이전 예제와 동일한 소스 문서인 Source.xml을 사용하고 똑같은 출력을 생성합니다.  
   
- <xref:System.Xml.Linq.XStreamingElement>를 사용하여 출력 XML을 스트리밍하는 것이 <xref:System.Xml.XmlWriter>에 쓰는 것보다 낫습니다.  
+ <xref:System.Xml.Linq.XStreamingElement>를 사용하여 출력 XML을 스트림하는 것이 <xref:System.Xml.XmlWriter>에 쓰는 것보다 좋은 방법입니다.  
   
 ```csharp  
 static IEnumerable<XElement> StreamCustomerItem(string uri)  
