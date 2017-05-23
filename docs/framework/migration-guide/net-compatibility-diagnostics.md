@@ -479,7 +479,7 @@ ms.lasthandoff: 05/22/2017
 |범위|Microsoft Edge|  
 |버전|4.5|  
 |형식|런타임|  
-|영향을 받는 API|<xref:System.Web.HttpRequest.ContentEncoding?displayProperty=fullName>|  
+|영향을 받는 API|<xref:System.Web.HttpRequest.ContentEncoding%2A?displayProperty=fullName>|  
 |분석기|CD0043|  
   
 <a name="diagnostic44"></a>   
