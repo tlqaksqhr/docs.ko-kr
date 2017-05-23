@@ -41,7 +41,6 @@ ms.lasthandoff: 04/18/2017
      다음 구성 파일에 이 내용이 나와 있습니다.  
   
     ```xml  
-  
     <configuration>  
         <system.serviceModel>  
             <bindings>  
@@ -58,7 +57,6 @@ ms.lasthandoff: 04/18/2017
             </bindings>  
         </system.ServiceModel>  
     </configuration>  
-  
     ```  
   
 -   소스 코드에서 바인딩이 동적으로 구성되면 소스 코드에서 TLS 1.1(<xref:System.Security.Authentication.SslProtocols?displayProperty=fullName>) 또는 이전 버전의 프로토콜을 사용하도록 <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=fullName> 속성을 업데이트합니다.  

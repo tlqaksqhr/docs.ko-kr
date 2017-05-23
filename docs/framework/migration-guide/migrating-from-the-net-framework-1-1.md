@@ -17,9 +17,10 @@ caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 6a9df183b13a84f8ded047892c0e4b7f7d5f0d60
+ms.contentlocale: ko-kr
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -37,7 +38,6 @@ ms.lasthandoff: 04/18/2017
           <supportedRuntime version="v4.0"/>  
        </startup>  
     </configuration>  
-  
     ```  
   
 -   [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]를 대상으로 하는 컴파일러를 사용하여 응용 프로그램을 다시 컴파일할 수 있습니다. 처음에 Visual Studio 2003을 사용하여 솔루션을 개발하고 컴파일한 경우 [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)]에서 솔루션을 열 수 있으며 **프로젝트 호환성** 대화 상자를 사용하여 Visual Studio 2003에서 사용된 형식의 솔루션 및 프로젝트 파일을 [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)]에서 사용된 MSBuild(Microsoft Build Engine) 형식으로 변환합니다.  
@@ -59,7 +59,6 @@ ms.lasthandoff: 04/18/2017
       <CompatSortNLSVersion enabled="4096"/>  
    </runtime>  
 </configuration>  
-  
 ```  
   
  그러나 경우에 따라 소스 코드를 수정하고 응용 프로그램을 다시 컴파일해야 할 수도 있습니다.  
@@ -76,3 +75,4 @@ ms.lasthandoff: 04/18/2017
  사용되지 않는 형식 및 멤버의 영향은 대상이 변경된 응용 프로그램 및 다시 컴파일된 응용 프로그램에서 다르게 나타납니다. 사용되지 않는 형식 및 멤버를 사용하더라도 해당 어셈블리에서 해당 형식 및 멤버를 물리적으로 제거하지 않는 경우 대상이 변경된 응용 프로그램에 영향을 주지 않습니다. 사용되지 않는 형식 및 멤버를 사용하는 응용 프로그램을 다시 컴파일하면 일반적으로 컴파일러 오류가 아닌 컴파일러 경고가 발생합니다. 하지만 경우에 따라 컴파일러 오류가 발생되어 사용되지 않는 형식 및 멤버를 사용하는 코드가 성공적으로 컴파일되지 않습니다. 이 경우 응용 프로그램을 다시 컴파일하기 전에 사용되지 않는 형식 및 멤버를 호출하는 소스 코드를 다시 작성해야 합니다. 사용되지 않는 형식 및 멤버에 대한 자세한 내용은 [클래스 라이브러리의 사용되지 않는 기능](../../../docs/framework/whats-new/whats-obsolete.md)을 참조하세요.  
   
  [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 릴리스 이후 사용되지 않는 형식 및 멤버의 영향을 평가하려면 [클래스 라이브러리의 사용되지 않는 기능](../../../docs/framework/whats-new/whats-obsolete.md)을 참조하세요. 사용되지 않는 형식 및 멤버 목록은 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 및 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서 확인하십시오.
+

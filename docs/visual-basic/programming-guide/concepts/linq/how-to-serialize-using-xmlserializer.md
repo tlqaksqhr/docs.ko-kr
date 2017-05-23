@@ -20,9 +20,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 4503774e8d6fc9b0a71c3a4ee390f98b485cc003
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -84,7 +85,6 @@ Public Class XLinqTest
         End Using  
     End Sub  
 End Class  
-  
 ```  
   
  이 예제는 다음과 같은 출력을 생성합니다.  
@@ -100,3 +100,4 @@ Testing for type: XElementContainer
   
 ## <a name="see-also"></a>참고 항목  
  [XElement 개체 (Visual Basic)를 포함 하는 개체 그래프를 직렬화 하는 작업](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+

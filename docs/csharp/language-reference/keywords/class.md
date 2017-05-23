@@ -42,7 +42,6 @@ ms.lasthandoff: 05/15/2017
 클래스는 다음 예제와 같이 `class` 키워드를 사용하여 선언됩니다.  
   
 ```  
-  
       class TestClass  
 {  
     // Methods, properties, fields, events, delegates   
@@ -122,3 +121,4 @@ Console.Write(child1.name);   // Error
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
  [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
  [참조 형식](../../../csharp/language-reference/keywords/reference-types.md)
+

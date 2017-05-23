@@ -36,17 +36,14 @@ ms.lasthandoff: 04/18/2017
 -   app.config 파일의 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 섹션에 다음을 추가하여 소스 코드를 수정하지 않고 이러한 변경을 옵트아웃(opt out)할 수 있습니다.  
   
     ```xml  
-  
     <runtime>  
         <AppContextSwitchOverrides value = "Switch.System.MemberDescriptorEqualsReturnsFalseIfEquivalent=true" />  
      </runtime>  
-  
     ```  
   
 -   다음 코드 조각과 같이 <xref:System.ComponentModel.MemberDescriptor.Equals%2A?displayProperty=fullName> 메서드를 호출한 후에 <xref:System.ComponentModel.MemberDescriptor.Category%2A?displayProperty=fullName> 및 <xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=fullName> 속성을 수동으로 비교하여 이전 동작을 복원하도록 소스 코드를 수정할 수 있습니다.  
   
     ```csharp  
-  
     if (memberDescriptor1.Equals(memberDescriptor2) &   
         memberDescriptor1.Description.Equals(memberDescriptor2.Category)) {  
           // Code to execute if true.  
@@ -54,28 +51,23 @@ ms.lasthandoff: 04/18/2017
     else {  
           // Code to execute if false.     
     }  
-  
     ```  
   
     ```  
-  
     If memberDescriptor1.Equals(memberDescriptor2) And   
         memberDescriptor1.Description.Equals(memberDescriptor2.Category)  
           // Code to execute if True.  
     Else  
           // Code to execute if False.     
     End If  
-  
     ```  
   
  [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 이전 버전을 대상으로 하는 앱의 경우 app.config 파일에 다음 값을 추가하여 이 변경을 사용하도록 설정할 수 있습니다.  
   
 ```xml  
-  
 <runtime>  
     <AppContextSwitchOverrides value="Switch.System.MemberDescriptorEqualsReturnsFalseIfEquivalent=true />  
 </runtime>  
-  
 ```  
   
 ## <a name="see-also"></a>참고 항목  

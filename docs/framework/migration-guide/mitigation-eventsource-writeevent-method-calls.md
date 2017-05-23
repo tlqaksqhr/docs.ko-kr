@@ -14,9 +14,10 @@ caps.latest.revision: 6
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: cde809989d89c10caeb97ec853c8649a108cd72d
+ms.contentlocale: ko-kr
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -27,13 +28,11 @@ ms.lasthandoff: 04/18/2017
  다음과 같은 방식으로 정의된 ETW 이벤트 메서드는 계약을 중단합니다.  
   
 ```  
-  
 [Event(2, Level = EventLevel.Informational)]  
 public void Info2(string message)  
 {  
    base.WriteEvent(2, message, "-");  
 }  
-  
 ```  
   
  이 계약이 위반되면 <xref:System.Diagnostics.Tracing.EventListener> 개체가 프로세스의 <xref:System.Diagnostics.Tracing.EventSource> 데이터를 읽는 경우 런타임에 <xref:System.IndexOutOfRangeException> 예외가 throw됩니다.  
@@ -41,13 +40,11 @@ public void Info2(string message)
  이 ETW 이벤트 메서드에 대한 정의는 다음 패턴을 따라야 합니다.  
   
 ```  
-  
 [Event(2, Level = EventLevel.Informational)]  
 public void Info2(string message)  
 {  
    base.WriteEvent(2, message);  
 }  
-  
 ```  
   
 ## <a name="mitigation"></a>완화  
@@ -56,7 +53,6 @@ public void Info2(string message)
  <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> 메서드를 호출하기 위한 두 개의 메서드를 다음과 같이 정의하여 변경해야 하는 코드의 양을 최소화할 수 있습니다.  
   
 ```  
-  
 [NonEvent]  
 public void Info2(string message)  
 {  
@@ -67,8 +63,8 @@ public void Info2Internal(string message, string prefix)
 {  
    WriteEvent(2, message, prefix);  
 }  
-  
 ```  
   
 ## <a name="see-also"></a>참고 항목  
  [런타임 변경 내용](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)
+

@@ -15,9 +15,10 @@ caps.latest.revision: 4
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: c2dbf60cacf47be3c448b5683b771840ef85ddaf
+ms.contentlocale: ko-kr
 ms.lasthandoff: 04/18/2017
 
 ---
@@ -35,13 +36,11 @@ ms.lasthandoff: 04/18/2017
 -   응용 프로그램의 구성 파일에 다음 `AppContextSwitchOverrides` 요소를 추가하여 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> 및 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>를 진행하지 않는 이전 동작으로 옵트인(opt in)함으로써  
   
     ```xml  
-  
     <configuration>  
         <runtime>  
             <AppContextSwitchOverrides value="Switch.System.Globalization.NoAsyncCurrentCulture=true" />  
         </runtime>  
     </configuration>  
-  
     ```  
   
 -   다음 호환성 전환을 프로그래밍 방식으로 설정하여 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> 및 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>를 진행하지 않는 이전 동작으로 옵트인(opt in)함으로써  
@@ -56,3 +55,4 @@ ms.lasthandoff: 04/18/2017
   
 ## <a name="see-also"></a>참고 항목  
  [대상 다시 지정 변경 내용](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+

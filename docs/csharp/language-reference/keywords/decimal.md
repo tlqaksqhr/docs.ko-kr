@@ -48,7 +48,6 @@ ms.lasthandoff: 05/10/2017
  숫자 형식의 실수 리터럴이 `decimal`로 처리되게 하려면 다음과 같이 접미사 m 또는 M을 사용합니다.  
   
 ```  
-  
 decimal myMoney = 300.5m;  
 ```  
   
@@ -58,14 +57,12 @@ decimal myMoney = 300.5m;
  정수 형식은 암시적으로 `decimal`로 변환되어 계산 결과가 `decimal`로 나타납니다. 따라서 접미사를 붙이지 않고 정수 리터럴을 사용하여 decimal 변수를 초기화할 수 있습니다. 예를 들면 다음과 같습니다.  
   
 ```  
-  
 decimal myMoney = 300;  
 ```  
   
  부동 소수점 형식과 `decimal` 형식 간의 암시적 변환은 없습니다. 따라서 이 두 형식 간의 변환에는 캐스트를 사용해야 합니다. 예:  
   
 ```  
-  
       decimal myMoney = 99.9m;  
 double x = (double)myMoney;  
 myMoney = (decimal)x;  
@@ -92,7 +89,6 @@ Console.WriteLine(dec + dub);
 // You can fix the error by using explicit casting of either operand.  
 Console.WriteLine(dec + (decimal)dub);  
 Console.WriteLine((double)dec + dub);  
-  
 ```  
   
  다음 오류가 발생합니다.  
@@ -121,3 +117,4 @@ Console.WriteLine((double)dec + dub);
  [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [명시적 숫자 변환 표](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)   
  [표준 숫자 형식 문자열](../../../standard/base-types/standard-numeric-format-strings.md)
+
