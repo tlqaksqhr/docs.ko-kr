@@ -14,10 +14,11 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 247fbf574f13985fc941f252c0a6e7268194c079
-ms.lasthandoff: 04/18/2017
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="runtime-changes-in-the-net-framework-452"></a>.NET Framework 4.5.2의 런타임 변경 내용
@@ -39,7 +40,7 @@ ms.lasthandoff: 04/18/2017
   
 |기능|변경|영향|범위|  
 |-------------|------------|------------|-----------|  
-|QueryView를 통한 관계|관련 엔터티를 쿼리의 일부로 포함시키려는 0..1 탐색 속성으로 QueryView가 포함된 쿼리를 앱에서 실행하는 경우(예: `.Include(e=>e.RelatedNavProp)` 호출) Entity Framework가 더 이상 <xref:System.StackOverflowException> 예외를 throw하지 않습니다.|이러한 변경은 `.Include`를 호출하는 쿼리를 실행할 때 1-0..1 관계가 있는 QueryView를 사용하는 코드에만 영향을 줍니다. 이 변경으로 인해 안정성이 향상되며 거의 모든 앱에는 영향을 주지 않습니다. 하지만 이 변경으로 예기치 않은 동작이 발생하면 다음 항목을 앱 구성 파일의 `<appSettings>` 섹션에 추가하여 이 기능을 비활성화할 수 있습니다.<br /><br /> `<add key="EntityFramework_SimplifyUserSpecifiedViews"  value="false" />`|Microsoft Edge|  
+|QueryView를 통한 관계|관련 엔터티를 쿼리의 일부로 포함시키려는 0..1 탐색 속성으로 QueryView가 포함된 쿼리를 앱에서 실행하는 경우(예: <xref:System.StackOverflowException> 호출) Entity Framework가 더 이상 `.Include(e=>e.RelatedNavProp)` 예외를 throw하지 않습니다.|이러한 변경은 `.Include`를 호출하는 쿼리를 실행할 때 1-0..1 관계가 있는 QueryView를 사용하는 코드에만 영향을 줍니다. 이 변경으로 인해 안정성이 향상되며 거의 모든 앱에는 영향을 주지 않습니다. 하지만 이 변경으로 예기치 않은 동작이 발생하면 다음 항목을 앱 구성 파일의 `<appSettings>` 섹션에 추가하여 이 기능을 비활성화할 수 있습니다.<br /><br /> `<add key="EntityFramework_SimplifyUserSpecifiedViews"  value="false" />`|Microsoft Edge|  
   
 ## <a name="see-also"></a>참고 항목  
  [대상 다시 지정 변경 내용](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-5-2.md)   
