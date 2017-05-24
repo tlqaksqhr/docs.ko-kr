@@ -20,23 +20,21 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 22822d80170e33be59253ecb0d74ec5eb2344751
-ms.openlocfilehash: 933d5f6a864820f5e694c0a9c7eab7b4fe5f790f
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: a2ef49f9192c7fa414b02e7e41a270606f52bb3c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/04/2017
+ms.lasthandoff: 05/19/2017
 
 ---
 
 # <a name="net-framework-guide"></a>.NET Framework 가이드
 
 > [!NOTE]
->  이 .NET Framework 콘텐츠 집합에는 .NET Framework 버전 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 및 4.7에 대한 정보가 포함되어 있습니다. .NET Framework를 다운로드하려면 [.NET Framework 설치](../../docs/framework/install/guide-for-developers.md)를 참조하세요. .NET Framework 4.5, [!INCLUDE[net_v46](../../includes/net-v46-md.md)], 해당 포인트 릴리스 및 .NET Framework 4.7의 새로운 기능과 변경 사항 목록은 [.NET Framework의 새로운 기능](../../docs/framework/whats-new/index.md)을 참조하세요. 지원되는 플랫폼 목록은 [.NET Framework 시스템 요구 사항](../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+> 이 .NET Framework 콘텐츠 집합에는 .NET Framework 버전 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 및 4.7에 대한 정보가 포함되어 있습니다. .NET Framework를 다운로드하려면 [.NET Framework 설치](../../docs/framework/install/guide-for-developers.md)를 참조하세요. .NET Framework 4.5, [!INCLUDE[net_v46](../../includes/net-v46-md.md)], 해당 포인트 릴리스 및 .NET Framework 4.7의 새로운 기능과 변경 사항 목록은 [.NET Framework의 새로운 기능](../../docs/framework/whats-new/index.md)을 참조하세요. 지원되는 플랫폼 목록은 [.NET Framework 시스템 요구 사항](../../docs/framework/get-started/system-requirements.md)을 참조하세요. 
 
-.NET Framework는 메모리 관리, 종류 및 메모리 안전성, 보안 기능, 네트워킹 및 응용 프로그램 배포를 비롯하여 많은 서비스를 제공합니다. 또한 하위 수준의 Windows 운영 체제를 추상화하는 사용하기 쉬운 데이터 구조 및 API를 제공합니다. .NET Framework와 함께 C#, F#, Visual Basic등의 다양한 프로그래밍 언어를 사용할 수 있습니다.
+.NET Framework는 웹, Windows, Windows Phone, Windows Server 및 Microsoft Azure용 앱을 빌드하기 위한 개발 플랫폼으로, 많은 업계 표준에 대한 다양한 기능 및 지원을 포함하는 .NET Framework 클래스 라이브러리와 CLR(공용 언어 런타임)로 구성됩니다.
 
- .NET Framework는 Windows, Windows Phone, Windows Server 및 Microsoft Azure용 앱을 빌드하기 위한 개발 플랫폼으로, 많은 업계 표준에 대한 다양한 기능 및 지원을 포함하는 .NET Framework 클래스 라이브러리와 CLR(공용 언어 런타임)로 구성됩니다.  
-
-.NET Framework는 메모리 관리, 종류 및 메모리 안전성, 보안 기능, 네트워킹 및 응용 프로그램 배포를 비롯하여 많은 서비스를 제공합니다. 또한 하위 수준의 Windows 운영 체제를 추상화하는 사용하기 쉬운 데이터 구조 및 API를 제공합니다. .NET Framework와 함께 C#, F#, Visual Basic등의 다양한 프로그래밍 언어를 사용할 수 있습니다.
+.NET Framework는 메모리 관리, 유형 및 메모리 안전성, 보안, 네트워킹 및 응용 프로그램 배포를 비롯하여 다양한 서비스를 제공합니다. 또한 하위 수준의 Windows 운영 체제를 추상화하는 사용하기 쉬운 데이터 구조 및 API를 제공합니다. .NET Framework와 함께 C#, F#, Visual Basic등의 다양한 프로그래밍 언어를 사용할 수 있습니다.  
 
 사용자와 개발자 모두를 위한 .NET Framework에 대한 일반적인 소개는 [시작](../../docs/framework/get-started/index.md)을 참조하십시오. .NET Framework의 아키텍처 및 주요 기능에 대한 소개는 [개요](../../docs/framework/get-started/overview.md)를 참조하세요.  
 
@@ -48,9 +46,10 @@ Windows와 함께 .NET Framework를 사용하면 .NET Framework 응용 프로그
 
 [.NET Framework 복구](./install/repair.md)를 참조하여 .NET Framework를 설치할 때 오류가 발생하는 경우 .NET Framework 설치를 복구하는 방법을 알아봅니다.
 
-.NET Framework 다운로드에 대한 자세한 내용은 [.NET Framework 설치](../../docs/framework/install/guide-for-developers.md)를 참조하세요.  
+.NET Framework 다운로드에 대한 자세한 내용은 [개발자용 .NET Framework 설치](../../docs/framework/install/guide-for-developers.md)를 참조하세요.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>단원 내용
+
 [새로운 기능](../../docs/framework/whats-new/index.md)  
 최신 버전의 .NET Framework에 새로 추가된 주요 기능과 변경 내용에 대해 설명합니다. 사용되지 않는 형식 및 멤버의 목록을 제공하고 이전 .NET Framework 버전에서 응용 프로그램을 마이그레이션하는 방법에 대한 지침을 제공합니다.  
   
@@ -71,3 +70,4 @@ Windows와 함께 .NET Framework를 사용하면 .NET Framework 응용 프로그
   
 [추가 클래스 라이브러리 및 API](../../docs/framework/additional-apis/index.md)  
 .NET Framework의 특정 플랫폼 또는 구현을 대상으로 하는 클래스 뿐만 아니라 OOB(대역 외) 릴리스에 포함된 클래스에 대한 설명서를 제공합니다.
+
