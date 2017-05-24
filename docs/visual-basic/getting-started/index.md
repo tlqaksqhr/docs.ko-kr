@@ -1,6 +1,6 @@
 ---
 title: "Visual Basic 시작 | Microsoft Docs"
-ms.date: 2015-07-20
+ms.date: 2017-05-01
 ms.prod: .net
 ms.technology:
 - devlang-visual-basic
@@ -29,17 +29,22 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
-ms.openlocfilehash: 31c50b38b2bfdc68e0f2ab03bc4d3b67e843a09d
-ms.lasthandoff: 05/01/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d3f21e32c162133e70a124da125c30afc7303738
+ms.openlocfilehash: ada42b9a033b548f5e2967040c44f7c790014211
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="getting-started-with-visual-basic"></a>Visual Basic 시작
 설명서의 이 섹션에서는 Visual Basic 응용 프로그램의 개발을 시작하는 데 도움이 되는 내용을 제공합니다.  
   
 ## <a name="in-this-section"></a>단원 내용  
- [Visual Studio 의 Visual Basic 주요 변경 내용](breaking-changes-in-visual-studio.md)  
+
+[Visual Basic의 새로운 기능](whats-new.md)   
+각 Visual Basic .NET 버전의 새로운 기능을 나열합니다.
+
+[Visual Studio 의 Visual Basic 주요 변경 내용](breaking-changes-in-visual-studio.md)  
  이 릴리스에서 응용 프로그램이 컴파일되지 않도록 하거나 런타임 동작을 변경할 수 있는 변경 사항을 보여줍니다.  
   
  [Visual Basic 프로그래머를 위한 추가 리소스](../../visual-basic/getting-started/additional-resources.md)  

@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6023f09a9a355c9ab00252f9e2ac6cc45abf42ce
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: d855989586fdee8b98bd994125ebb5c59776040a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>클래스 및 구조체(C# 프로그래밍 가이드)
@@ -76,9 +77,9 @@ ms.lasthandoff: 03/13/2017
   
 -   [생성자](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   
--   [소멸자](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
-  
 -   [이벤트](../../../csharp/programming-guide/events/index.md)  
+  
+-   [종료자](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
   
 -   [인덱서](../../../csharp/programming-guide/indexers/index.md)  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 03/13/2017
  일부 메서드 및 속성은 *클라이언트 코드*라고 하는 클래스 또는 구조체 외부의 코드에서 호출하거나 액세스할 수 있습니다. 다른 메서드 및 속성은 클래스 또는 구조체 자체에서만 사용할 수 있습니다. 의도된 클라이언트 코드에서만 연결될 수 있도록 코드의 액세스 가능성을 제한하는 것이 중요합니다. 어떻게 액세스할 수 있는 형식 및 해당 멤버는 클라이언트 코드에 액세스 한정자 [public](../../../csharp/language-reference/keywords/public.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), `protected internal` 및 [private](../../../csharp/language-reference/keywords/private.md)을 사용하여 형식 및 해당 멤버가 클라이언트 코드에 액세스하는 방법을 지정합니다. 기본 액세스 가능성은 `private`입니다. 자세한 내용은 [액세스 한정자](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)를 참조하세요.  
   
 ### <a name="inheritance"></a>상속  
- 클래스(구조체는 아님)는 상속 개념을 지원합니다. 다른 클래스(의 *기본 클래스*)에서 파생되는 클래스는 생성자와 소멸자를 제외하고 기본 클래스의 모든 public, protected 및 internal 멤버를 자동으로 포함합니다. 자세한 내용은 [상속](../../../csharp/programming-guide/classes-and-structs/inheritance.md) 및 [다형성](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)을 참조하세요.  
+ 클래스(구조체는 아님)는 상속 개념을 지원합니다. 다른 클래스(*기본 클래스*)에서 파생되는 클래스는 생성자와 종료자를 제외하고 기본 클래스의 모든 public, protected 및 internal 멤버를 자동으로 포함합니다. 자세한 내용은 [상속](../../../csharp/programming-guide/classes-and-structs/inheritance.md) 및 [다형성](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)을 참조하세요.  
   
  클래스를 [abstract](../../../csharp/language-reference/keywords/abstract.md)로 선언할 수도 있습니다. 즉, 하나 이상의 해당 메서드에 구현이 없는 상태를 의미합니다. 추상 클래스는 직접 인스턴스화할 수 없지만 누락된 구현을 제공하는 다른 클래스에 대한 기본 클래스로 사용될 수 있습니다. 다른 클래스가 이 클래스에서 상속 받지 못하게 하려면 클래스를 [sealed](../../../csharp/language-reference/keywords/sealed.md)로 선언할 수도 있습니다. 자세한 내용은 [Abstract 및 Sealed 클래스와 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)를 참조하세요.  
   
