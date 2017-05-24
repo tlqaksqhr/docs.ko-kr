@@ -41,10 +41,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fd70919f68c7c48894e7c944aeb1a74c73513e8e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: c4e018ec0073086a82d52ccd37463c070e9fb6e6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="c-operators"></a>C# 연산자
@@ -66,9 +67,7 @@ C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 �
  [f(x)](../../../csharp/language-reference/operators/invocation-operator.md) – 함수 호출  
   
  [a&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md) – 집계 개체 인덱싱  
-  
- [a?&#91;x&#93;](../../../csharp/language-reference/operators/null-conditional-operators.md) – null 조건부 인덱싱.  왼쪽 피연산자가 `null`인 경우 `null`을 반환합니다.  
-  
+   
  [x++](../../../csharp/language-reference/operators/increment-operator.md) – 후위 증가.  x의 값을 반환하고 1 더 큰 x 값(일반적으로 정수 1을 더함)으로 저장소 위치를 업데이트합니다.  
   
  [x--](../../../csharp/language-reference/operators/decrement-operator.md) –  후위 감소.  x의 값을 반환하고 1 더 작은 x 값(일반적으로 정수 1을 뺌)으로 저장소 위치를 업데이트합니다.  
@@ -224,13 +223,13 @@ C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 �
   
 - 정수 산술 연산 오버플로는 <xref:System.OverflowException>을 throw하거나 결과의 가장 중요한 비트를 삭제합니다. 정수를 0으로 나누면 항상 @System.DivideByZeroException이 throw됩니다.  
 
-   정수 오버플로가 발생할 경우 수행되는 작업은 실행 컨텍스트에 따라 달라지며, 컨텍스트는 [checked 또는 unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)일 수 있습니다. checked 컨텍스트에서 <xref:System.OverflowException>이 throw됩니다. unchecked 컨텍스트에서는 결과의 가장 중요한 비트가 무시되고 실행이 계속됩니다. 따라서 C#에서는 오버플로 처리 또는 무시를 선택합니다. 기본적으로 산술 연산은 *unchecked* 컨텍스트에서 발생합니다. 
+   정수 오버플로가 발생할 경우 수행되는 작업은 실행 컨텍스트에 따라 달라지며, 컨텍스트는 [checked 또는 unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)일 수 있습니다. checked 컨텍스트에서는 <xref:System.OverflowException>이 throw됩니다. unchecked 컨텍스트에서는 결과의 가장 중요한 비트가 무시되고 실행이 계속됩니다. 따라서 C#에서는 오버플로 처리 또는 무시를 선택합니다. 기본적으로 산술 연산은 *unchecked* 컨텍스트에서 발생합니다. 
 
    산술 연산자 외에도 정수 계열 형식 간 캐스팅(예: [long](../../../csharp/language-reference/keywords/long.md)을 [int](../../../csharp/language-reference/keywords/int.md)로 캐스팅)은 오버플로를 발생시키고 checked 또는 unchecked 실행이 적용될 수 있습니다. 그러나 비트 연산자와 시프트 연산자는 오버플로를 발생시키지 않습니다.  
    
 -   부동 소수점 산술 연산 오버플로 또는 0으로 나누기에서 예외를 throw하지 않습니다. 부동 소수점 형식은 IEEE 754를 기반으로 하여 무한대 및 NaN(숫자가 아님)를 나타내려면 프로비전이 필요하기 때문입니다.  
   
--   [10진수](../../../csharp/language-reference/keywords/decimal.md) 산술 오버플로는 항상 <xref:System.OverflowException>을 throw합니다. 10진수를 0으로 나누면 항상 <xref:System.DivideByZeroException>이 throw됩니다.  
+-   [10진수<xref:System.OverflowException> 산술 연산 오버플로는 항상 ](../../../csharp/language-reference/keywords/decimal.md)을 throw합니다. 10진수를 0으로 나누면 항상 <xref:System.DivideByZeroException>이 throw됩니다.  
   
   
 ## <a name="see-also"></a>참고 항목  

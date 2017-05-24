@@ -15,9 +15,10 @@ ms.assetid: 73082738-2113-4438-8545-98d5df0927cb
 caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 615842d7b2fb1ae51d3380ecf928c22a59e42516
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/13/2017
 
 
@@ -53,7 +54,6 @@ End If
 For Each el As XElement In list1  
     Console.WriteLine(el)  
 Next  
-  
 ```  
   
  이 예제는 다음과 같은 출력을 생성합니다.  
@@ -83,3 +83,4 @@ Results are identical
   
 ## <a name="see-also"></a>참고 항목  
  [LINQ to XML에 대 한 XPath 사용자 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+

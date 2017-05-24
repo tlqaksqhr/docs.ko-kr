@@ -24,7 +24,7 @@ caps.handback.revision: 14
 # 개체 트리에 없는 개체 요소 초기화
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 초기화의 몇 가지 측면은 일반적으로 [논리 트리](GTMT) 또는 [시각적 트리](GTMT)에 연결되는 요소에 의존하는 프로세스로 지연됩니다.  이 항목에서는 두 트리에 연결되지 않는 요소를 초기화하기 위해 필요할 수 있는 단계를 설명합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 ## 요소 및 논리 트리  
  코드에서 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 클래스의 인스턴스를 만들 때 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 클래스에 대한 개체 초기화의 몇 가지 측면은 클래스 생성자 호출 시 실행되는 코드의 일부가 아님을 알아 두어야 합니다.  특히 컨트롤 클래스의 경우 해당 컨트롤의 시각적 표현 대부분은 생성자에 정의되지 않고  컨트롤의 템플릿에 의해 정의됩니다.  템플릿의 소스는 다양할 수 있지만 대부분의 경우 템플릿은 테마 스타일에서 가져옵니다.  템플릿은 실제로 런타임에 바인딩됩니다. 즉, 컨트롤 레이아웃 준비가 될 때까지는 필요한 템플릿이 해당 컨트롤에 연결되지 않습니다.  또한 컨트롤은 루트에서 렌더링 화면에 연결되는 논리 트리에 연결되기 전까지는 레이아웃 준비가 되지 않습니다.  모든 자식 요소의 렌더링을 논리 트리에 정의된 대로 시작하는 것은 루트 수준 요소입니다.  

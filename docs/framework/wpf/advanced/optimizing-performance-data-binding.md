@@ -24,7 +24,7 @@ caps.handback.revision: 7
   
  이 항목에서는 데이터 바인딩과 관련된 성능 권장 사항을 제공합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="HowDataBindingReferencesAreResolved"></a>   
 ## 데이터 바인딩 참조를 확인하는 방법  

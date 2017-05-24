@@ -24,7 +24,7 @@ caps.handback.revision: 31
 > [!IMPORTANT]
 >  [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 이상에서 <xref:System.Windows.Media.Effects.BitmapEffect> 클래스는 사용되지 않습니다.  <xref:System.Windows.Media.Effects.BitmapEffect> 클래스를 사용하려고 하면 사용되지 않음 예외가 발생합니다.  <xref:System.Windows.Media.Effects.BitmapEffect> 클래스 대신 <xref:System.Windows.Media.Effects.Effect> 클래스를 사용할 수 있습니다.  대부분의 경우 <xref:System.Windows.Media.Effects.Effect> 클래스가 훨씬 빠릅니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="wpf_effects"></a>   
 ## WPF 비트맵 효과  

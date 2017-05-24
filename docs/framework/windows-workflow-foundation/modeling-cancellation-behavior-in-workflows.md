@@ -84,7 +84,7 @@ caps.handback.revision: 9
   
  다음 예제에서는 <xref:System.Activities.NativeActivity>의 <xref:System.Activities.NativeActivity.Cancel%2A> 재정의를 기반으로 하는 사용자 지정 `ParallelForEach` 활동을 정의합니다.활동을 취소하면 이 재정의를 통해 활동의 취소 논리가 처리됩니다.이 예제는 [비제네릭 ParallelForEach](../../../docs/framework/windows-workflow-foundation/samples/non-generic-parallelforeach.md) 샘플의 일부입니다.  
   
- [!code-csharp[CFX_WorkflowApplicationExample#1010](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#1010)]  
+ <!-- TODO: review snippet reference [!code-csharp[CFX_WorkflowApplicationExample#1010](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#1010)]  -->  
   
  <xref:System.Activities.NativeActivity> 파생 활동의 경우 <xref:System.Activities.NativeActivityContext.IsCancellationRequested%2A> 속성을 조사하여 취소가 요청되었는지 여부를 확인하고 <xref:System.Activities.NativeActivityContext.MarkCanceled%2A> 메서드를 호출하여 자신을 취소된 활동으로 표시할 수 있습니다.<xref:System.Activities.NativeActivityContext.MarkCanceled%2A>를 호출한다고 해서 활동이 즉시 완료되지는 않습니다.일반적으로 런타임에서 더 이상 처리 중인 작업이 없을 때 활동이 완료되지만, <xref:System.Activities.NativeActivityContext.MarkCanceled%2A>를 호출한 경우에는 최종 상태가 <xref:System.Activities.ActivityInstanceState> 대신 <xref:System.Activities.ActivityInstanceState>가 됩니다.  
   

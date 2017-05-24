@@ -29,7 +29,7 @@ caps.handback.revision: 28
 # 라우트된 이벤트 개요
 이 항목에서는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]의 라우트된 이벤트 개념에 대해 설명합니다.  이 항목에서는 먼저 라우트된 이벤트의 의미를 정의한 다음 라우트된 이벤트가 요소 트리를 통해 라우팅하는 방법에 대해 설명합니다. 그런 다음 라우트된 이벤트를 처리하는 방법에 대해 간단히 살펴보고 고유의 사용자 지정 라우트된 이벤트를 만드는 방법을 보여 줍니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 사전 요구 사항  

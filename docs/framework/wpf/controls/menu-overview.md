@@ -22,7 +22,7 @@ caps.handback.revision: 18
 # Menu 개요
 <xref:System.Windows.Controls.Menu> 클래스를 사용 하면 명령 및 계층적 순서로 이벤트 처리기와 관련 된 요소를 구성할 수 있습니다. 각 <xref:System.Windows.Controls.Menu> 의 컬렉션을 포함 하는 요소 <xref:System.Windows.Controls.MenuItem> 요소입니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="menu_control"></a>   
 ## <a name="menu-control"></a>Menu 컨트롤  

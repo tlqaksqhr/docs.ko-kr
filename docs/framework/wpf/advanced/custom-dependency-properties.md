@@ -28,7 +28,7 @@ caps.handback.revision: 24
 # 사용자 지정 종속성 속성
 이 항목에서는 먼저 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램 개발자와 구성 요소 작성자가 사용자 지정 [종속성 속성](GTMT)을 만드는 이유에 대해 설명한 다음 종속성 속성을 구현하는 단계 및 속성의 성능, 유용성 또는 다양성을 향상시키는 구현 옵션에 대해 설명합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 사전 요구 사항  

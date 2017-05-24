@@ -24,7 +24,7 @@ caps.handback.revision: 7
 # 컬렉션 형식 종속성 속성
 이 항목에서는 속성의 형식이 컬렉션 형식인 [종속성 속성](GTMT)을 구현하는 방법에 대한 지침 및 제안 패턴을 제공합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="implementing"></a>   
 ## 컬렉션 형식 종속성 속성 구현  
@@ -36,7 +36,7 @@ caps.handback.revision: 7
   
  다음 예제를 살펴보십시오.  예제의 다음 섹션에서는 클래스 `Aquarium`의 정의를 보여 줍니다.  클래스는 <xref:System.Windows.FrameworkElement> 형식 제약 조건이 있는 제네릭 <xref:System.Collections.Generic.List%601> 형식을 사용하는 컬렉션 형식 종속성 속성 `AquariumObjects`를 정의합니다.  종속성 속성에 대한 <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> 호출에서 메타데이터는 기본값을 새 제네릭 <xref:System.Collections.Generic.List%601>로 설정합니다.  
   
- [!code-csharp[PropertiesOvwSupport#CollectionProblemDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemdefinition)]
+ <!-- TODO: review snippet reference [!code-csharp[PropertiesOvwSupport#CollectionProblemDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemdefinition)]  -->
  [!code-vb[PropertiesOvwSupport#CollectionProblemDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemdefinition)]  
 [!code-csharp[PropertiesOvwSupport#CollectionProblemEndB](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemendb)]
 [!code-vb[PropertiesOvwSupport#CollectionProblemEndB](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemendb)]  

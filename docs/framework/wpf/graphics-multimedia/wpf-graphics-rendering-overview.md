@@ -22,7 +22,7 @@ caps.handback.revision: 48
 # WPF 그래픽 렌더링 개요
 이 항목에서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 표시 계층에 대해 간략하게 설명합니다.  여기서는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 모델에서의 렌더링 지원을 위한 <xref:System.Windows.Media.Visual> 클래스의 역할을 중점적으로 설명합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="role_of_visual_object"></a>   
 ## 표시 개체의 역할  

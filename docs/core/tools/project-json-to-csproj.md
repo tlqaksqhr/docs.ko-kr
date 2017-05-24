@@ -10,16 +10,17 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 79c50621-a24a-4e64-bbb9-b953113e841c
-translationtype: Human Translation
-ms.sourcegitcommit: b4fb772973607b94e120377879a5dbdde2a25271
-ms.openlocfilehash: 9d0af9769264b7f22c90ffb6a831b42f06c6bb94
-ms.lasthandoff: 03/15/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: deb760878391856cf07bab04563d0ec19a1511e7
+ms.openlocfilehash: 7062102ff17c13b7cf25a1cfbb266c696221151b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/30/2017
 
 ---
 
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 및 csproj 속성 간 매핑
 
-[Nate McMaster](http://github.com/natemcmaster)
+[Nate McMaster](https://github.com/natemcmaster)
 
 .NET Core 도구 개발 중 중요한 디자인 변경으로 인해 *project.json* 파일이 더 이상 지원되지 않으며 대신 .NET Core 프로젝트를 MSBuild/csproj 형식으로 전환합니다.
 
@@ -323,7 +324,7 @@ csproj에는 동일한 항목이 없습니다.
 
 ```xml
 <PropertyGroup>
-  <RuntimeIdentifiers>win7-x64;osx.10-11-x64;ubuntu.16.04-x64</RuntimeIdentifiers>
+  <RuntimeIdentifiers>win7-x64;osx.10.11-x64;ubuntu.16.04-x64</RuntimeIdentifiers>
 </PropertyGroup>
 ```
 
@@ -664,7 +665,6 @@ MSBuild에서는 [항목](https://docs.microsoft.com/visualstudio/msbuild/common
 ```
 
 ## <a name="see-also"></a>참고 항목
-[project.json 참조](project-json.md)
 
 [CLI의 변경 내용에 대한 대략적인 개요](../tools/cli-msbuild-architecture.md)
 

@@ -32,10 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9e5c3012ce057387497f97e713eb625ac2f2a7d1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 87497d48c04a00e09c82550d49dc85d7be719edf
+ms.openlocfilehash: 7ca43aa68edc89420dd320f92b50311d7279ac06
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/19/2017
 
 ---
 # <a name="c-reference"></a>C# 참조
@@ -64,9 +65,10 @@ ms.lasthandoff: 03/13/2017
  C# 언어 사양의 최신 버전(Microsoft Word 형식)에 대한 포인터를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
+<!--
  [C# FAQ](http://go.microsoft.com/fwlink/?LinkId=70367)  
- C# 개발자 센터의 증가하는 C# 질문과 대답 목록을 제공합니다.  
-  
+ Provides a growing list of C# Frequently Asked Questions in the C# Developer Center.  
+-->  
  [Microsoft 기술 자료의 C# 기술 자료 문서](http://go.microsoft.com/fwlink/?LinkId=70368)  
  MSDN에서 사용할 수 있는 기술 자료 문서에 대한 Microsoft 검색 페이지를 엽니다.  
   
@@ -78,3 +80,4 @@ ms.lasthandoff: 03/13/2017
   
  [C# 프로그래밍 가이드](../../csharp/programming-guide/index.md)  
  C# 프로그래밍 언어를 사용하는 방법에 대한 정보를 포함합니다.
+

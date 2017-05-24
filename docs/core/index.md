@@ -9,26 +9,27 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f2b312cb-f80c-4b0d-9101-93908f06a6fa
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 26210b19de4f7bf70c085735771b0175945f38d4
-ms.lasthandoff: 03/02/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d00f2096e0799107a8a2ff1d12274c6026d4c27a
+ms.openlocfilehash: fe38934a3bd56b7c00e0f4c58c3978a539f23a97
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/14/2017
 
 ---
 
 # <a name="net-core"></a>.NET Core
 
-> 간단한 .NET Core 응용 프로그램을 만드는 방법을 알아보려면 ["시작" 자습서](getting-started.md)를 확인하세요. 첫 번째 앱을 만들고 실행하는 데 몇 분밖에 걸리지 않습니다.
+> 간단한 .NET Core 응용 프로그램을 만드는 방법을 알아보려면 ["시작" 자습서](get-started.md)를 확인하세요. 첫 번째 앱을 만들고 실행하는 데 몇 분밖에 걸리지 않습니다.
 
 .NET Core는 Microsoft 및 [GitHub](https://github.com/dotnet/core)의 .NET 커뮤니티에서 유지 관리하는 범용 개발 플랫폼입니다. 플랫폼 간으로 Windows, macOS 및 Linux를 지원하며 장치, 클라우드 및 포함/IoT 시나리오에서 사용할 수 있습니다. 
 
 다음은 .NET Core를 가장 잘 정의하는 특징입니다.
 
 - **유연한 배포:** 앱이나 설치된 side-by-side사용자 또는 시스템 수준에 포함할 수 있습니다.
-- **플랫폼 간:** Windows, macOS 및 Linux에서 실행되며 다른 OS에 이식할 수 있습니다. [지원되는 OS(운영 체제)](https://github.com/dotnet/core/blob/master/roadmap.md), CPU 및 응용 프로그램 시나리오는 시간에 따라 증가하며 Microsoft, 다른 회사 및 개인이 제공합니다.
+- **플랫폼 간:** Windows, macOS 및 Linux에서 실행되며 다른 운영 체제에 이식할 수 있습니다. [지원되는 OS(운영 체제)](https://github.com/dotnet/core/blob/master/roadmap.md), CPU 및 응용 프로그램 시나리오는 시간에 따라 증가하며 Microsoft, 다른 회사 및 개인이 제공합니다.
 - **명령줄 도구:** 모든 제품 시나리오를 명령줄에서 실행할 수 있습니다. 
 - **호환:** .NET Core는 [.NET 표준 라이브러리](../standard/library.md)를 통해 .NET Framework, Xamarin 및 Mono와 호환됩니다.
-- **오픈 소스:** .NET Core 플랫폼은 MIT 및 Apache 2 라이선스를 사용하는 오픈 소스입니다. 설명서는 [CC-BY](http://creativecommons.org/licenses/by/4.0/)에 따라 사용이 허가됩니다. .NET Core는 [.NET Foundation](http://www.dotnetfoundation.org/) 프로젝트입니다.
+- **오픈 소스:** .NET Core 플랫폼은 MIT 및 Apache 2 라이선스를 사용하는 오픈 소스입니다. 설명서는 [CC-BY](https://creativecommons.org/licenses/by/4.0/)에 따라 사용이 허가됩니다. .NET Core는 [.NET Foundation](https://dotnetfoundation.org/) 프로젝트입니다.
 - **Microsoft에서 지원:** .NET Core는 [.NET Core 지원](https://www.microsoft.com/net/core/support/)에 따라 Microsoft에서 지원됩니다.
 
 ## <a name="composition"></a>컴퍼지션
@@ -62,13 +63,13 @@ C# 및 F# 컴파일러와 .NET Core 도구는 Visual Studio, [Visual Studio Code
 
 .NET Core는 자체적으로 도구, 로컬 서비스 및 텍스트 기반 게임에 유용한 단일 응용 프로그램 모델 즉, 콘솔 앱을 포함합니다. 기능을 확장하기 위해 다음과 같은 추가 응용 프로그램 모델이 .NET Core를 기반으로 구축되었습니다.
 
-- [ASP.NET Core](http://asp.net)
+- [ASP.NET Core](https://docs.microsoft.com/aspnet/core/)
 - [Windows 10 UWP(유니버설 Windows 플랫폼)](https://developer.microsoft.com/windows)
 - [Xamarin.Forms](https://www.xamarin.com/forms)
 
 ### <a name="open-source"></a>오픈 소스
 
-[.NET Core](https://github.com/dotnet/core)는 오픈 소스(MIT 라이선스)이며 2014년 Microsoft에 의해 [.NET Foundation](http://dotnetfoundation.org)에 제공되었습니다. 이제 가장 많이 사용되는 .NET Foundation 프로젝트 중의 하나입니다. 이 프로젝트는 개인, 교육 또는 상업용으로 개인 및 회사에서 자유롭게 채택할 수 있습니다. 여러 회사에서 앱, 도구, 새 플랫폼 및 호스팅 서비스의 일부로 .NET Core를 사용합니다. 이러한 회사 중 일부는 GitHub에서 .NET Core에 대한 중요한 정보를 제공하고 [.NET Foundation Technical Steering Group(.NET Foundation 기술 방향 설정 그룹)](http://www.dotnetfoundation.org/blog/tsg-welcome)의 일부로 제품 판매에 대한 지침을 제공합니다.
+[.NET Core](https://github.com/dotnet/core)는 오픈 소스(MIT 라이선스)이며 2014년 Microsoft에 의해 [.NET Foundation](https://dotnetfoundation.org)에 제공되었습니다. 이제 가장 많이 사용되는 .NET Foundation 프로젝트 중의 하나입니다. 이 프로젝트는 개인, 교육 또는 상업용으로 개인 및 회사에서 자유롭게 채택할 수 있습니다. 여러 회사에서 앱, 도구, 새 플랫폼 및 호스팅 서비스의 일부로 .NET Core를 사용합니다. 이러한 회사 중 일부는 GitHub에서 .NET Core에 대한 중요한 정보를 제공하고 [.NET Foundation Technical Steering Group(.NET Foundation 기술 방향 설정 그룹)](https://dotnetfoundation.org/blog/tsg-welcome)의 일부로 제품 판매에 대한 지침을 제공합니다.
 
 ## <a name="acquisition"></a>취득
 

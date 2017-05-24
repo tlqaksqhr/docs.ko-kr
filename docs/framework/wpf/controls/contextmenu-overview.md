@@ -22,7 +22,7 @@ caps.handback.revision: 24
 # ContextMenu 개요
 <xref:System.Windows.Controls.ContextMenu> 클래스는 컨텍스트별 <xref:System.Windows.Controls.Menu>를 사용하여 기능을 노출하는 요소를 나타냅니다.  일반적으로 사용자는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]에서 마우스 오른쪽 단추를 클릭하여 <xref:System.Windows.Controls.ContextMenu>를 노출합니다.  이 항목에서는 <xref:System.Windows.Controls.ContextMenu> 요소를 소개하고 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 및 코드에서 이 요소를 사용하는 방법에 대한 예제를 제공합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="contextmenu_control"></a>   
 ## ContextMenu 컨트롤  

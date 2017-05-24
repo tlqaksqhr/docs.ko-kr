@@ -23,7 +23,7 @@ caps.handback.revision: 25
 # GridView 개요
 <xref:System.Windows.Controls.GridView> 보기 모드는 <xref:System.Windows.Controls.ListView> 컨트롤의 보기 모드 중 하나입니다.  <xref:System.Windows.Controls.GridView> 클래스 및 지원 클래스를 사용하면 대개 단추를 대화형 열 머리글로 사용하는 표 형식으로 항목 컬렉션을 볼 수 있습니다.  이 항목에서는 <xref:System.Windows.Controls.GridView> 클래스를 소개하고 클래스 사용 방법을 간략하게 설명합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="DefiningaListViewthatusesGridViewView"></a>   
 ## GridView 뷰 정의  

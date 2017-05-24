@@ -27,7 +27,7 @@ caps.handback.revision: 7
 # 종속성 속성 보안
 일반적으로 종속성 속성은 공용 속성으로 간주됩니다.  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 속성 시스템에서는 기본적으로 종속성 속성 값의 보안을 유지하지 않습니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="AccessSecurity"></a>   
 ## 래퍼 및 종속성 속성에 대한 액세스 및 보안  

@@ -27,7 +27,7 @@ caps.handback.revision: 32
 > [!NOTE]
 >  이 항목에서 설명 하는 리소스 파일은 리소스 파일에 설명 된 다르지 [WPF 응용 프로그램 리소스, 콘텐츠 및 데이터 파일](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md) 포함 또는 연결 된 리소스에 설명 된 다른 [응용 프로그램 리소스 관리 (.NET)](../Topic/Managing%20Application%20Resources%20\(.NET\).md)합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="usingresources"></a>   
 ## <a name="using-resources-in-xaml"></a>XAML의 리소스 사용  

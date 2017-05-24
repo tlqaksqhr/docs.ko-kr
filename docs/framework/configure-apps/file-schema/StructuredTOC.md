@@ -1,6 +1,0 @@
-# [구성 파일 스키마](index.md)
-# [<configuration> 요소](configuration-element.md)
-# [<assemblyBinding> 요소](assemblybinding-element-for-configuration.md)
-# [<linkedConfiguration> 요소](linkedconfiguration-element.md)
-# [구성 섹션 스키마](configuration-sections-schema.md)
-# [응용 프로그램 설정 스키마](application-settings-schema.md)

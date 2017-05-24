@@ -20,9 +20,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 64a708e3b88f48ad30d3f3ad25141a31f3d8f73d
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -124,7 +125,6 @@ TOTAL bytes returned:  890591
  다음 코드에서는 이러한 변경 내용을 보여 주며, 별표로 표시되어 있습니다. 변경 내용을이 항목의 끝에 코드를 추가 하거나에서 완성된 된 응용 프로그램을 다운로드할 수 있습니다 [Async 샘플:.NET 데스크톱 응용 프로그램에서 재진입](http://go.microsoft.com/fwlink/?LinkId=266571)합니다. 프로젝트 이름은 DisableStartButton입니다.  
   
 ```vb  
-  
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)  
     ' This line is commented out to make the results clearer in the output.  
     'ResultsTextBox.Text = ""  
@@ -161,7 +161,6 @@ End Sub
   
         ' *** Declare a System.Threading.CancellationTokenSource.  
         Dim cts As CancellationTokenSource  
-  
     ```  
   
 2.  `StartButton_Click`에서 작업이 이미 진행 중인지 확인합니다. 하는 경우의 값 `cts` 는 `Nothing`, 작업이 이미 활성화 되어 있습니다. 값이 없으면 `Nothing`, 이미 실행 중인 작업이 취소 됩니다.  
@@ -171,7 +170,6 @@ End Sub
     If cts IsNot Nothing Then  
         cts.Cancel()  
     End If  
-  
     ```  
   
 3.  `cts`를 현재 프로세스를 나타내는 다른 값으로 설정합니다.  
@@ -180,7 +178,6 @@ End Sub
     ' *** Now set cts to cancel the current process if the button is chosen again.  
     Dim newCTS As CancellationTokenSource = New CancellationTokenSource()  
     cts = newCTS  
-  
     ```  
   
 4.  끝에 `StartButton_Click`, 현재 프로세스가 완료 되의 값을 설정 하므로 `cts` 다시 `Nothing`합니다.  
@@ -190,7 +187,6 @@ End Sub
     If cts Is newCTS Then  
         cts = Nothing  
     End If  
-  
     ```  
   
  다음 코드에서는 `StartButton_Click`의 모든 변경 내용을 보여 줍니다. 추가된 내용은 별표로 표시됩니다.  
@@ -226,7 +222,6 @@ Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
         cts = Nothing  
     End If  
 End Sub  
-  
 ```  
   
  `AccessTheWebAsync`에서 다음과 같이 변경합니다.  
@@ -275,7 +270,6 @@ Private Async Function AccessTheWebAsync(ct As CancellationToken) As Task
     ResultsTextBox.Text &=  
         String.Format(vbCrLf & vbCrLf & "TOTAL bytes returned:  " & total & vbCrLf)  
 End Function  
-  
 ```  
   
  선택 하는 경우는 **시작** 단추를 몇 번이이 앱이 실행 되는 동안 다음과 같은 출력을 유사한 결과 생성 해야 합니다.  
@@ -318,7 +312,6 @@ TOTAL bytes returned:  890591
  다음과 같은 출력 결과 표시 하는 경우 사용자가 선택 된 **시작** 단추를 두 번만 합니다. 결과에서 처음으로 문자, 레이블 및 A 나타냅니다는 **시작** 단추를 선택 합니다. 숫자는 다운로드 대상 목록에서 URL의 순서를 보여 줍니다.  
   
 ```  
-  
 #Starting group A.  
 #Task assigned for group A.  
   
@@ -390,7 +383,6 @@ C-8. msdn.microsoft.com/library/ff730837.aspx               148010
 TOTAL bytes returned:  920526  
   
 #Group C is complete.  
-  
 ```  
   
  그룹 B와 C는 그룹 A가 완료되기 전에 시작되지만 각 그룹에 대한 출력은 별도로 나타납니다. 그룹 A에 대 한 모든 출력 그룹 B에 대 한 모든 출력 한 다음 모든 출력&3;. 그룹에 대 한 다음, 첫 번째로 표시 앱 항상 순서에 그룹을 표시 하며, 각 그룹에 대해 항상 표시는 개별 웹 사이트에 대 한 정보 Url은 Url의 목록에 표시 되는 순서 대로.  
@@ -705,3 +697,4 @@ End Function
 ## <a name="see-also"></a>참고 항목  
  [연습: Async를 사용 하 여 웹 서비스에 액세스 및 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
  [비동기 프로그래밍 async 및 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+

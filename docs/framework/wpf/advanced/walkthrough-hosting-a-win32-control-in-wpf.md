@@ -24,7 +24,7 @@ caps.handback.revision: 17
   
  이 항목에서는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 목록 상자 컨트롤을 호스팅하는 응용 프로그램인 [Hosting a Win32 ListBox Control in WPF 샘플](http://go.microsoft.com/fwlink/?LinkID=159998)을 예로 들어 설명합니다.  이러한 일반 절차를 확장하여 원하는 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 창을 호스팅할 수 있습니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="requirements"></a>   
 ## 요구 사항  

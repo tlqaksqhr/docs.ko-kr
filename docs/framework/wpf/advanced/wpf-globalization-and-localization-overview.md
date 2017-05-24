@@ -26,7 +26,7 @@ caps.handback.revision: 34
   
  지역화는 응용 프로그램 리소스를 응용 프로그램에서 지원할 각 문화권에 맞는 지역화된 버전으로 번역하는 작업입니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 지역화를 수행할 때는 <xref:System.Windows.Markup.Localizer> 네임스페이스의 API를 사용합니다. 이러한 API는 [LocBaml Tool 샘플](http://go.microsoft.com/fwlink/?LinkID=160016) 명령줄 도구의 기반이 됩니다.  LocBaml을 빌드하고 사용하는 방법에 대한 자세한 내용은 [응용 프로그램 지역화](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)를 참조하십시오.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 ## WPF를 위한 최선의 전역화 및 지역화 방법  
  이 단원에서 제공하는 UI 디자인 및 지역화 관련 팁을 참조하면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 기본적으로 제공하는 전역화와 지역화 기능을 최대한 활용할 수 있습니다.  

@@ -23,7 +23,7 @@ caps.handback.revision: 19
 # WPF의 트리
 많은 기술에서 요소와 구성 요소는 트리 구조로 구성되며, 개발자는 이 트리의 개체 노드를 직접 조작하여 응용 프로그램의 렌더링이나 동작에 영향을 줍니다.  또한 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 여러 가지 트리 구조 비유를 통해 프로그램 요소 간의 관계를 정의합니다.  대체로 WPF 개발자는 개체 트리 비유를 개념적으로 사용하여 코드에서 응용 프로그램을 만들거나 XAML에서 응용 프로그램의 일부를 정의할 수 있지만, 이 작업을 위해 XML DOM에서 사용할 수 있는 API 같은 일반적인 개체 트리 조작 API 대신 특정 API를 호출하거나 특정 태그를 사용합니다.  WPF는 트리 비유 뷰를 제공하는 두 개의 도우미 클래스 <xref:System.Windows.LogicalTreeHelper>와 <xref:System.Windows.Media.VisualTreeHelper>를 노출합니다.  시각적 트리 및 논리적 트리란 용어는 특정한 주요 WPF 기능의 동작을 이해하는 데 유용하므로 WPF 설명서에서도 사용됩니다.  이 항목에서는 시각적 트리 및 논리적 트리가 나타내는 대상을 정의하고, 이러한 트리가 전체 개체 트리 개념과 어떻게 관련되는지를 설명하며, <xref:System.Windows.LogicalTreeHelper> 및 <xref:System.Windows.Media.VisualTreeHelper>를 소개합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="element_tree"></a>   
 ## WPF의 트리  

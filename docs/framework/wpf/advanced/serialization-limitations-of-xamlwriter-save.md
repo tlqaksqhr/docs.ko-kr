@@ -23,7 +23,7 @@ caps.handback.revision: 9
 # XamlWriter.Save의 serialization 제한
 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] <xref:System.Windows.Markup.XamlWriter.Save%2A>를 사용하여 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램의 콘텐츠를 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 파일로 serialize할 수 있습니다.  하지만 serialize하는 내용에 대해서는 몇 가지 제한에 주목해야 합니다.  이 항목에서는 이러한 제한과 몇 가지 일반적인 고려 사항에 대해 설명합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Run_Time__Not_Design_Time_Representation"></a>   
 ## 디자인 타임이 아닌 런타임 표현  

@@ -30,8 +30,8 @@ caps.handback.revision: 12
   
  다음 예제와 같이 <xref:System.Windows.Data.XmlNamespaceMapping> 요소를 사용하여 네임스페이스를 <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A>에 매핑할 수 있습니다.  그런 다음 <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A>를 사용하여 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 네임스페이스를 참조할 수 있습니다.  이 예제의 <xref:System.Windows.Controls.ListBox>는 각 *item*의 *title*과 *dc:date*를 표시합니다.  
   
- [!code-xml[XmlnsBind#XmlNamespaceMapping](../../../../samples/snippets/xaml/VS_Snippets_Wpf/XmlnsBind/XAML/Window1.xaml#xmlnamespacemapping)]
- [!code-xml[XmlnsBind#XmlNamespaceMapping](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlnsBind/CS/Window1.xaml#xmlnamespacemapping)]  
+ <!-- TODO: review snippet reference [!code-xml[XmlnsBind#XmlNamespaceMapping](../../../../samples/snippets/xaml/VS_Snippets_Wpf/XmlnsBind/XAML/Window1.xaml#xmlnamespacemapping)]  -->
+ <!-- TODO: review snippet reference [!code-xml[XmlnsBind#XmlNamespaceMapping](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XmlnsBind/CS/Window1.xaml#xmlnamespacemapping)]  -->  
   
  지정하는 <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A>가 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 소스에 사용되는 접두사와 일치할 필요는 없습니다. [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 소스에서 접두사가 변경되더라도 매핑은 계속 작동합니다.  
   

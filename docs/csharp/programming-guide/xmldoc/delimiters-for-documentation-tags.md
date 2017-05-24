@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: ba3b38a8bce9f5b49ef863acfae04bc2a39c052a
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -69,7 +70,6 @@ XML 문서 주석을 사용하려면 문서 주석이 시작되고 끝나는 위
     /**   
      * <summary>text</summary>   
     */  
-  
     ```  
   
 -   컴파일러는 두 번째 및 세 번째 줄의 시작 부분에서 " * "의 일반적인 패턴을 식별합니다. 이 패턴은 출력에 포함되지 않습니다.  
@@ -105,3 +105,4 @@ XML 문서 주석을 사용하려면 문서 주석이 시작되고 끝나는 위
  [XML 문서 주석](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)   
  [/doc(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)   
  [XML 문서 주석](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+

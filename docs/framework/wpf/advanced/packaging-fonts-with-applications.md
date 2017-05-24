@@ -27,7 +27,7 @@ caps.handback.revision: 25
 > [!NOTE]
 >  대부분의 소프트웨어와 마찬가지로 글꼴 파일도 판매하는 대신 라이선스를 부여합니다.  글꼴 사용을 관리하는 라이선스는 공급업체마다 다르지만 일반적으로 [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)]가 응용 프로그램 및 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]에 제공하는 글꼴을 관리하는 라이선스를 비롯하여 대부분의 라이선스에서는 응용 프로그램 내에 글꼴을 포함하거나 기타 다른 방법으로 재배포하는 것을 허용하지 않습니다.  따라서 개발자는 응용 프로그램 내에 포함하거나 기타 다른 방법으로 재배포하려는 글꼴에 대해 필요한 라이선스 권한이 있는지 확인해야 합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="introduction_to_packaging_fonts"></a>   
 ## 글꼴 패키징 소개  

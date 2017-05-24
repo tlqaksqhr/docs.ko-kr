@@ -26,7 +26,7 @@ caps.handback.revision: 18
 # 단색 및 그라데이션을 사용한 그리기 개요
 이 항목에서는 <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush> 및 <xref:System.Windows.Media.RadialGradientBrush> 개체를 사용하여 단색, 선형 그라데이션 및 방사형 그라데이션으로 그리는 방법을 설명합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="solidcolor"></a>   
 ## 단색으로 영역 그리기  

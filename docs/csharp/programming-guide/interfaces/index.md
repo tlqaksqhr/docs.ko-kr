@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 25c2bf8830d80f0f41855d0fa9e292b0edcbe052
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 9a580d0426038036f2e64167de8c540041c0a6b4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="interfaces-c-programming-guide"></a>인터페이스(C# 프로그래밍 가이드)
@@ -43,13 +44,13 @@ ms.lasthandoff: 03/13/2017
   
  [!code-cs[csProgGuideInheritance #47](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interfaces_1.cs)]  
   
- 인터페이스를 구현하는 모든 클래스나 구조체에는<xref:System.IEquatable%601>인터페이스에서 지정한 서명과 일치하는<xref:System.IEquatable%601.Equals%2A>메서드에 대한 정의가 포함되어 있어야 합니다. 따라서 `IEquatable<T>`을 구현하는 클래스를 계산하여 클래스의 인스턴스에서 동일한 클래스의 다른 인스턴스와 동일한지 여부를 확인할 수 있는 `Equals` 메서드를 포함할 수 있습니다.  
+ <xref:System.IEquatable%601> 인터페이스를 구현하는 모든 클래스나 구조체에는 인터페이스에서 지정한 서명과 일치하는 <xref:System.IEquatable%601.Equals%2A> 메서드에 대한 정의가 포함되어 있어야 합니다. 따라서 `IEquatable<T>`을 구현하는 클래스를 계산하여 클래스의 인스턴스에서 동일한 클래스의 다른 인스턴스와 동일한지 여부를 확인할 수 있는 `Equals` 메서드를 포함할 수 있습니다.  
   
  `IEquatable<T>`의 정의에서는 `Equals`에 대한 구현을 제공하지 않습니다. 인터페이스는 서명만 정의합니다. 이런 방식으로 C#의 인터페이스는 모든 메서드가 추상인 추상 클래스와 유사합니다. 그러나 클래스 또는 구조체는 여러 인터페이스를 구현할 수 있지만 클래스는 추상인지 여부에 관계없이 단일 클래스만 상속할 수 있습니다. 따라서 인터페이스를 사용하여 여러 소스의 동작을 클래스에 포함할 수 있습니다.  
   
  추상 클래스에 대한 자세한 내용은 [추상 및 봉인 클래스와 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)를 참조하세요.  
   
- 인터페이스에는 메서드, 속성, 이벤트, 인덱서 또는 이러한 네 가지 멤버 형식의 조합이 포함될 수 있습니다. 예제에 대한 링크는[관련 단원](../../../csharp/programming-guide/interfaces/index.md#BKMK_RelatedSections)을 참조하세요. 인터페이스에는 상수, 필드, 연산자, 인스턴스 생성자, 소멸자 또는 형식이 포함될 수 없습니다. 인터페이스 멤버는 자동으로 공용이 되며 액세스 한정자를 포함할 수 없습니다. 또한 멤버는 [정적](../../../csharp/language-reference/keywords/static.md)일 수 없습니다.  
+ 인터페이스에는 메서드, 속성, 이벤트, 인덱서 또는 이러한 네 가지 멤버 형식의 조합이 포함될 수 있습니다. 예제에 대한 링크는[관련 단원](../../../csharp/programming-guide/interfaces/index.md#BKMK_RelatedSections)을 참조하세요. 인터페이스에는 상수, 필드, 연산자, 인스턴스 생성자, 종료자 또는 형식이 포함될 수 없습니다. 인터페이스 멤버는 자동으로 공용이 되며 액세스 한정자를 포함할 수 없습니다. 또한 멤버는 [정적](../../../csharp/language-reference/keywords/static.md)일 수 없습니다.  
   
  인터페이스 멤버를 구현하려면 구현 클래스의 해당 멤버가 공용이고 비정적이어야 하며 인터페이스 멤버와 동일한 이름 및 서명을 사용해야 합니다.  
   

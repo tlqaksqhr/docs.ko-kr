@@ -22,7 +22,7 @@ caps.handback.revision: 7
 # 읽기 전용 종속성 속성
 이 항목에서는 기존의 읽기 전용 종속성 속성 및 사용자 지정 읽기 전용 종속성 속성을 만드는 시나리오와 방법을 비롯하여 읽기 전용 속성에 대해 설명합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="prerequisites"></a>   
 ## 사전 요구 사항  

@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5c2db2c58449cadcc33904f31cca215fb78405d2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 3656141c32a04e3a32a2992185f4c418c6915482
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="await-c-reference"></a>await(C# 참조)
@@ -48,13 +49,35 @@ ms.lasthandoff: 03/13/2017
   
  다음 코드에서 <xref:System.Net.Http.HttpClient> 메서드 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>는 `Task\<byte[]>`, `getContentsTask`를 반환합니다. 작업은 작업이 완료될 때 실제 바이트 배열을 생성하기 위한 약속입니다. `await` 연산자는 `getContentsTask`에 적용되어 `getContentsTask`가 완료될 때까지 `SumPageSizesAsync`의 실행을 일시 중단합니다. 동시에 컨트롤은 `SumPageSizesAsync` 호출자에게 반환됩니다. `getContentsTask`가 완료되면 `await` 식이 바이트 배열로 계산됩니다.  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```csharp  
+private async Task SumPageSizesAsync()  
+{  
+    // To use the HttpClient type in desktop apps, you must include a using directive and add a   
+    // reference for the System.Net.Http namespace.  
+    HttpClient client = new HttpClient();  
+    // . . .  
+    Task<byte[]> getContentsTask = client.GetByteArrayAsync(url);  
+    byte[] urlContents = await getContentsTask;  
+  
+    // Equivalently, now that you see how it works, you can write the same thing in a single line.  
+    //byte[] urlContents = await client.GetByteArrayAsync(url);  
+    // . . .  
+}  
+```  
+  
 > [!IMPORTANT]
 >  전체 예제는 [연습: Async 및 Await를 사용하여 웹에 액세스](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)를 참조하세요. 샘플은 Microsoft 웹 사이트의 [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](http://go.microsoft.com/fwlink/?LinkID=255191&clcid=0x409)(비동기 샘플: 웹 액세스 연습(C# 및 Visual Basic))에서 다운로드할 수 있습니다. 예제는 AsyncWalkthrough_HttpClient 프로젝트에 있습니다.  
   
  이전 예제와 같이 `await`가 `Task<TResult>`를 반환하는 메서드 호출의 결과에 적용되는 경우 `await`식의 형식은 TResult입니다. `await`가 `Task`를 반환하는 메서드 호출의 결과에 적용되는 경우 `await`식의 형식은 void입니다. 다음 예제에서 차이점을 보여 줍니다.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+```csharp  
+// Keyword await used with a method that returns a Task<TResult>.  
+TResult result = await AsyncMethodThatReturnsTaskTResult();  
+  
+// Keyword await used with a method that returns a Task.  
+await AsyncMethodThatReturnsTask();  
+```  
+  
  `await` 식은 해당 식이 실행되고 있는 스레드를 차단하지 않습니다. 대신 컴파일러가 대기 중인 작업에서 연속된 작업으로 비동기 메서드의 나머지 부분을 등록하도록 합니다. 그런 다음 컨트롤이 비동기 메서드 호출자에게 반환됩니다. 작업이 완료되면 해당 연속 작업이 호출되고 중단된 비동기 메서드의 실행이 다시 시작됩니다.  
   
  `await` 식은 바로 바깥쪽의 메서드, 람다 식 또는 `async` 한정자로 표시되는 무명 메서드의 본문에서만 발생할 수 있습니다. *await*라는 용어는 해당 컨텍스트에서만 키워드 역할을 합니다. 다른 컨텍스트에서는 식별자로 해석됩니다. 메서드, 람다 식 또는 무명 메서드 내에서 `await` 식은 동기 함수의 본문, 쿼리 식, [lock 문](../../../csharp/language-reference/keywords/lock-statement.md)의 블록 또는 [안전하지 않은](../../../csharp/language-reference/keywords/unsafe.md) 컨텍스트에서 발생할 수 있습니다.  
@@ -73,8 +96,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="example"></a>예제  
  다음 Windows Forms 예제에서는 비동기 메서드 `WaitAsynchronouslyAsync`에서 `await`의 사용을 보여 줍니다. 해당 메서드의 동작을 `WaitSynchronously`의 동작과 대조합니다. `await` 연산자가 작업에 적용되지 않으면 해당 정의에서 `async` 한정자를 사용하고 본문에서 <xref:System.Threading.Thread.Sleep%2A?displayProperty=fullName>을 호출하더라도 `WaitSynchronously`가 동기적으로 실행됩니다.  
   
-```cs  
-  
+```csharp  
 private async void button1_Click(object sender, EventArgs e)  
 {  
     // Call the method that runs asynchronously.  
@@ -111,3 +133,4 @@ public async Task<string> WaitSynchronously()
  [async 및 await를 사용한 비동기 프로그래밍](../../../csharp/programming-guide/concepts/async/index.md)   
  [연습: Async 및 Await를 사용하여 웹에 액세스](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
  [async](../../../csharp/language-reference/keywords/async.md)
+

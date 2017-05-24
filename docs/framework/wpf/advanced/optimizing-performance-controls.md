@@ -23,7 +23,7 @@ caps.handback.revision: 21
 # 성능 최적화: 컨트롤
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에는 대부분의 Windows 응용 프로그램에 사용되는 일반적인 UI\(사용자 인터페이스\) 구성 요소가 다수 포함되어 있습니다.  이 항목에서는 UI의 성능을 향상시킬 수 있는 기술에 대해 설명합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Displaying"></a>   
 ## 대용량 데이터 집합 표시  

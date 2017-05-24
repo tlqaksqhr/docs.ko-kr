@@ -22,7 +22,7 @@ caps.handback.revision: 17
 # 스타일을 지정할 수 있는 컨트롤을 디자인하기 위한 지침
 이 문서에서는 스타일 및 템플릿을 지정할 수 있는 컨트롤을 디자인할 때 고려할 일련의 최선의 구현 방법을 요약합니다.  기본 제공 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤 집합의 테마 컨트롤 스타일을 작업하면서 수많은 시행 착오를 통해 이러한 최적의 구현 방법을 얻게 되었습니다.  이러한 과정을 통해 성공적인 스타일은 스타일 자체만큼이나 잘 디자인된 개체 모델의 결과임을 알게 되었습니다.  이 문서는 스타일 제작자가 아니라 컨트롤 제작자를 위해 작성되었습니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Terminology"></a>   
 ## 용어  

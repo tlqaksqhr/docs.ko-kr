@@ -22,7 +22,7 @@ caps.handback.revision: 22
 # PropertyPath XAML 구문
 <xref:System.Windows.PropertyPath> 개체는 <xref:System.Windows.PropertyPath> 형식을 값으로 사용하는 다양한 속성을 설정하기 위한 복잡한 인라인 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 구문을 지원합니다.  이 항목에서는 바인딩 및 애니메이션 구문에 적용되는 <xref:System.Windows.PropertyPath> 구문에 대해 설명합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="where"></a>   
 ## PropertyPath 사용 대상  

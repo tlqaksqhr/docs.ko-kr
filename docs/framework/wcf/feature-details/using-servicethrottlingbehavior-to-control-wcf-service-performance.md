@@ -28,7 +28,7 @@ caps.handback.revision: 8
   
  다음 코드 예제에서는 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> 설정 하는 응용 프로그램 구성 파일에서 클래스는 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentSessions%2A>, <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A>, 및 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A> 속성을 1로는 간단한 예입니다. 실제 경험을 통해 특정 응용 프로그램에 대한 최적의 설정을 결정합니다.  
   
- [!code-csharp[ServiceThrottlingBehavior#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/servicethrottlingbehavior/cs/hostapplication.exe.config#3)]  
+ <!-- TODO: review snippet reference [!code-csharp[ServiceThrottlingBehavior#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/servicethrottlingbehavior/cs/hostapplication.exe.config#3)]  -->  
   
  정확한 런타임 동작은 값에 따라 달라 집니다는 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> 및 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 메시지 수는 작업 실행 한 번에 서비스의 수명을 제어 하는 속성 <xref:System.ServiceModel.InstanceContext> 수신 채널 기준으로 세션을 각각.  
   

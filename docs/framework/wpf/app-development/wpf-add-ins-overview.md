@@ -29,7 +29,7 @@ caps.handback.revision: 35
 # WPF 추가 기능 개요
 <a name="Introduction"></a> [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]에는 개발자가 추가 기능 확장성을 지원하는 응용 프로그램을 만드는 데 사용할 수 있는 추가 기능 모델이 포함되어 있습니다.  이 추가 기능 모델을 사용하면 응용 프로그램 기능을 통합하고 확장하는 추가 기능을 만들 수 있습니다.  어떤 경우에는 응용 프로그램에서 추가 기능으로 제공되는 [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]를 표시해야 합니다.  이 항목에서는 이러한 경우에 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]를 사용하여 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 추가 기능 모델을 보완하는 방법과 그 바탕을 이루는 아키텍처, 이점, 한계 등에 대해 설명합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Requirements"></a>   
 ## 사전 요구 사항  

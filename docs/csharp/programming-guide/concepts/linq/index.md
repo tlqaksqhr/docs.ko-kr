@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a97cdc61caf2cd9d1f71a6763e4903bb5a5fdc54
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 65e882db800d51c69f6f135b4d4529af0bc86653
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 ---
 
@@ -50,7 +51,7 @@ LINQ(Language-Integrated Query)는 C# 언어에 직접 쿼리 기능을 통합�
   
 -   일반적으로 LINQ 쿼리를 작성하는 경우 가능하면 쿼리 구문을 사용하고 필요한 경우 메서드 구문을 사용하는 것이 좋습니다. 두 개의 다른 폼 간에 의미 체계 또는 성능상의 차이는 없습니다. 쿼리 식이 메서드 구문으로 작성된 동급의 식보다 읽기 쉬운 경우가 많습니다.  
   
--   <xref:System.Linq.Enumerable.Count%2A> 또는 <xref:System.Linq.Enumerable.Max%2A> 같은 일부 쿼리 작업에는 동급의 쿼리 식 절이 없으므로 메서드 호출으로 표현해야 합니다. 메서드 구문을 다양한 방법으로 쿼리 구문에 조합할 수 있습니다. 자세한 내용은 [쿼리 구문과 메서드 구문 비교](query-syntax-and-method-syntax-in-linq.md)를 참조하세요.  
+-   <xref:System.Linq.Enumerable.Count%2A> 또는 <xref:System.Linq.Enumerable.Max%2A>와 같은 일부 쿼리 작업은 해당하는 쿼리 식 절이 없으므로 메서드 호출로 표현해야 합니다. 메서드 구문을 다양한 방법으로 쿼리 구문에 조합할 수 있습니다. 자세한 내용은 [쿼리 구문과 메서드 구문 비교](query-syntax-and-method-syntax-in-linq.md)를 참조하세요.  
   
 -   쿼리 식은 쿼리가 적용되는 형식에 따라 식 트리 또는 대리자로 컴파일될 수 있습니다. <xref:System.Collections.Generic.IEnumerable%601> 쿼리는 대리자로 컴파일됩니다. <xref:System.Linq.IQueryable> 및 <xref:System.Linq.IQueryable%601> 쿼리는 식 트리로 컴파일됩니다. 자세한 내용은 [식 트리](../../../expression-trees.md)를 참조하세요.  
 
@@ -59,7 +60,7 @@ LINQ(Language-Integrated Query)는 C# 언어에 직접 쿼리 기능을 통합�
 LINQ에 대한 자세한 내용을 알아보려면 [쿼리 식 기본 사항](../../../linq/query-expression-basics.md)에서 몇 가지 기본 개념을 익힌 후 관심 있는 LINQ 기술에 대한 설명서를 읽어보세요.   
 -   XML 문서: [LINQ to XML](linq-to-xml.md)  
   
--   ADO.NET Entity Framework: [LINQ to Entities](http://msdn.microsoft.com/library/641f9b68-9046-47a1-abb0-1c8eaeda0e2d)  
+-   ADO.NET Entity Framework: [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)  
   
 -   .NET 컬렉션, 파일, 문자열 등: [LINQ to Objects](linq-to-objects.md)
 

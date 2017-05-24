@@ -33,7 +33,7 @@ caps.handback.revision: 9
   
  이 항목 렌더링 성능 권장 사항 텍스트를 제공합니다.  
   
- [!INCLUDE[autoOutline](../Token/autoOutline_md.md)]  
+   
   
 <a name="Glyph_Level"></a>   
 ## <a name="rendering-text-at-the-glyph-level"></a>문자 모양 수준에 텍스트를 렌더링합니다.  

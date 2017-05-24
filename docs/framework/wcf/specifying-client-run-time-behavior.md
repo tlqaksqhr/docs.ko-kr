@@ -42,9 +42,9 @@ caps.handback.revision: 8
   
  다음 코드 예제에서는 클라이언트 콜백 개체의 관리되는 예외 정보를 SOAP 메시지에 반환하도록 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]에 지시하는 클라이언트 구성 파일을 보여 줍니다.  
   
- [!code[SCA.CallbackContract#4](../../../samples/snippets/common/VS_Snippets_CFX/sca.callbackcontract/common/client.exe.config#4)]
- [!code-csharp[SCA.CallbackContract#4](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.exe.config#4)]
- [!code-vb[SCA.CallbackContract#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.callbackcontract/vb/client.exe.config#4)]  
+ <!-- TODO: review snippet reference [!code[SCA.CallbackContract#4](../../../samples/snippets/common/VS_Snippets_CFX/sca.callbackcontract/common/client.exe.config#4)]  -->
+ <!-- TODO: review snippet reference [!code-csharp[SCA.CallbackContract#4](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.exe.config#4)]  -->
+ <!-- TODO: review snippet reference [!code-vb[SCA.CallbackContract#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.callbackcontract/vb/client.exe.config#4)]  -->  
   
 ## <a name="using-the-clientviabehavior-behavior"></a>ClientViaBehavior 동작 사용  
  사용할 수는 <xref:System.ServiceModel.Description.ClientViaBehavior> 동작 전송 채널은 만들 수는 Uniform Resource Identifier를 지정할 수 있습니다. 직접 네트워크 대상이 메시지의 의도된 프로세서가 아닌 경우 이 동작을 사용합니다. 이 경우 호출 응용 프로그램에서 최종 대상을 알 필요가 없거나 대상 `Via` 헤더가 주소가 아닌 경우에 다중 홉 대화가 가능합니다.  

@@ -15,9 +15,10 @@ ms.assetid: 2dfb446b-5a07-4c00-9ab3-a74ba734ff3a
 caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: e1982110ccf01f52ace20db6985d7329407357d8
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/13/2017
 
 
@@ -98,7 +99,6 @@ Module Module1
         End Using  
     End Sub  
 End Module  
-  
 ```  
   
 ## <a name="external-resources"></a>외부 리소스  
@@ -110,3 +110,4 @@ End Module
   
 ## <a name="see-also"></a>참고 항목  
  [자습서: WordprocessingML 문서 (Visual Basic)에서 내용 조작](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+

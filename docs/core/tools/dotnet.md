@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 256e468e-eaaa-4715-b5fb-8cbddcf80e69
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: a470403e703ffb55de3d91cd5334c09bf11be06d
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
+ms.openlocfilehash: 02779e1ac5db1a7a68ddede6d30063366270dc50
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 03/22/2017
 
 각 특정 기능은 명령으로 구현됩니다. 기능을 사용하려면 [`dotnet build`](dotnet-build.md)와 같이 `dotnet`뒤에 명령을 지정합니다. 명령 다음에 오는 모든 인수는 고유한 인수입니다.
 
-`dotnet` 자체가 명령으로 사용되는 유일한 경우는 [프레임워크 종속 앱](../app-types.md)을 실행하는 경우입니다. `dotnet` 동사 뒤에 응용 프로그램 DLL을 지정하여 응용 프로그램을 실행합니다(예: `dotnet myapp.dll`).
+`dotnet` 자체가 명령으로 사용되는 유일한 경우는 [프레임워크 종속 앱](../deploying/index.md)을 실행하는 경우입니다. `dotnet` 동사 뒤에 응용 프로그램 DLL을 지정하여 응용 프로그램을 실행합니다(예: `dotnet myapp.dll`).
 
 ## <a name="options"></a>옵션
 

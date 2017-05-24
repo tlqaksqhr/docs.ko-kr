@@ -15,9 +15,10 @@ ms.assetid: adb46c98-a650-42e2-b62d-835920fe8421
 caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: b54bc8a2b7821399857f716c35a651c24de10f3f
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/13/2017
 
 
@@ -50,7 +51,6 @@ Else
     Console.WriteLine("Results differ")  
 End If  
 Console.WriteLine(el1)  
-  
 ```  
   
  이 예제는 다음과 같은 출력을 생성합니다.  
@@ -62,3 +62,4 @@ Results are identical
   
 ## <a name="see-also"></a>참고 항목  
  [LINQ to XML에 대 한 XPath 사용자 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+

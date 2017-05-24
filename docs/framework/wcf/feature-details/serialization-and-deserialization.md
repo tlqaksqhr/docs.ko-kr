@@ -49,7 +49,7 @@ caps.handback.revision: 13
   
  다음 예제에서는 특정 형식의 컬렉션인 `LibraryPatron`이 포함된 클래스 `LibraryItem`을 보여 줍니다. 두 번째 클래스는 `LibraryItem` 형식을 정의합니다. 세 번째와 네 번째 클래스인 `Book` 및 `Newspaper`는 `LibraryItem` 클래스에서 상속됩니다.  
   
- [!code-csharp[c_StandaloneDataContractSerializer#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_standalonedatacontractserializer/cs/source.cs#3)]
+ <!-- TODO: review snippet reference [!code-csharp[c_StandaloneDataContractSerializer#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_standalonedatacontractserializer/cs/source.cs#3)]  -->
  [!code-vb[c_StandaloneDataContractSerializer#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_standalonedatacontractserializer/vb/source.vb#3)]  
   
  다음 코드에서는 `knownTypes` 매개 변수를 사용하여 serializer의 인스턴스를 구성합니다.  
