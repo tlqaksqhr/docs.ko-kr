@@ -31,10 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2243630d940035046aae9a4c50bcdba3c15f7210
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: f96b64590975416a85ce1957f475c44ff5e35f50
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="reading-from-and-writing-to-the-registry-using-the-microsoftwin32-namespace-visual-basic"></a>Microsoft.Win32 네임스페이스를 사용하여 레지스트리 읽기 및 쓰기(Visual Basic)
@@ -54,7 +55,7 @@ ms.lasthandoff: 03/13/2017
 |<xref:Microsoft.Win32.Registry.Users>|기본 사용자 기본 설정에 대한 정보를 포함합니다.|  
   
 > [!IMPORTANT]
->  데이터를 로컬 컴퓨터(<xref:Microsoft.Win32.Registry.LocalMachine>)에 기록하는 것보다 현재 사용자(<xref:Microsoft.Win32.Registry.CurrentUser>)에게 기록하는 것이 더 안전합니다. 만들고 있는 키가 전에 다른 프로세스(예: 악의적인 프로세스)로 만들어진 경우 일반적으로 "스쿼팅(squatting)"이라는 조건이 발생합니다. 이 문제가 발생하지 않도록 하려면 키가 존재하지 않을 경우 `Nothing`을 반환하는 메서드(예: <xref:Microsoft.Win32.RegistryKey.GetValue%2A>)를 사용합니다.  
+>  로컬 컴퓨터(<xref:Microsoft.Win32.Registry.LocalMachine>)보다 현재 사용자(<xref:Microsoft.Win32.Registry.CurrentUser>)에게 데이터를 기록하는 것이 더 안전합니다. 만들고 있는 키가 전에 다른 프로세스(예: 악의적인 프로세스)로 만들어진 경우 일반적으로 "스쿼팅(squatting)"이라는 조건이 발생합니다. 이 문제가 발생하지 않도록 하려면 키가 존재하지 않을 경우 `Nothing`을 반환하는 메서드(예: <xref:Microsoft.Win32.RegistryKey.GetValue%2A>)를 사용합니다.  
   
 ## <a name="reading-a-value-from-the-registry"></a>레지스트리에서 값 읽기  
  다음 코드는 HKEY_CURRENT_USER에서 문자열을 읽는 방법을 보여 줍니다.  
