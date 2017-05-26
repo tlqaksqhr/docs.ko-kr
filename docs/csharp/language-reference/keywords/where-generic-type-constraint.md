@@ -30,16 +30,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d5c0b9fff370893d890518c6a95a74889b3f2295
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: e5baa75c55d58a4d975fc42472f90ff4125cbb5c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where(제네릭 형식 제약 조건)(C# 참조)
 제네릭 형식 정의에서 `where` 절은 제네릭 선언에 정의된 형식 매개 변수의 인수로 사용할 수 있는 형식에 대한 제약 조건을 지정하는 데 사용됩니다. 예를 들어, 다음과 같이 형식 매개 변수 `T`가 <xref:System.IComparable%601> 인터페이스를 구현하도록 제네릭 클래스 `MyGenericClass`를 선언할 수 있습니다.  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```csharp  
+public class MyGenericClass<T> where T:IComparable { }  
+```  
+  
 > [!NOTE]
 >  쿼리 식의 where 절에 대한 자세한 내용은 [where 절](../../../csharp/language-reference/keywords/where-clause.md)을 참조하세요.  
   
@@ -59,13 +63,13 @@ ms.lasthandoff: 03/13/2017
   
  제약 조건을 다음과 같이 제네릭 메서드의 형식 매개 변수에 첨부할 수도 있습니다.  
   
-```  
+```csharp  
 public bool MyMethod<T>(T t) where T : IMyInterface { }  
 ```  
   
  대리자에 대한 형식 매개 변수 제약 조건을 설명하는 구문은 메서드의 구문과 동일합니다.  
   
-```  
+```csharp  
 delegate T MyDelegate<T>() where T : new()  
 ```  
   
