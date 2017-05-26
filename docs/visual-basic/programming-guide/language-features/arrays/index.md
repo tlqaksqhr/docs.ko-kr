@@ -34,10 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1eeccc9b4f1cb00d434b1af61656b64bb860dbb8
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 324055a730b977faad637a14362b5c906931c721
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/23/2017
 
 ---
 # <a name="arrays-in-visual-basic"></a>Visual Basic의 배열
@@ -50,7 +51,6 @@ ms.lasthandoff: 03/13/2017
  설명하기 전에 몇 가지 빠른 예제는 다음과 같습니다.  
   
 ```vb  
-  
 'Declare a single-dimension array of 5 values  
 Dim numbers(4) As Integer   
   
@@ -121,7 +121,7 @@ Dim sales()() As Double = New Double(11)() {}
   
  인덱스 없이 배열 변수 이름만 사용하여 배열 전체를 참조할 수 있습니다.  
   
- 앞의 예제에서 `students` 배열은 하나의 인덱스를 사용하며 1차원 배열로 간주됩니다. 둘 이상의 인덱스 또는 아래 첨자를 사용하는 배열을 다차원 배열이라고 합니다. 자세한 내용은 이 항목의 나머지 부분과 [Visual Basic의 배열 차원](../../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md)을 참조하세요.  
+ 앞의 예제에서 `students` 배열은 하나의 인덱스를 사용하며 1차원 배열로 간주됩니다. 둘 이상의 인덱스 또는 아래 첨자를 사용하는 배열을 다차원 배열이라고 합니다. 자세한 내용은 이 항목의 나머지 부분과 [Array Dimensions in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md)을 참조하세요.  
   
 ##  <a name="BKMK_CreatingAnArray"></a> 배열 만들기  
  여러 가지 방법으로 배열의 크기를 정의할 수 있습니다. 다음 예제와 같이 배열을 선언할 때 크기를 제공할 수 있습니다.  
@@ -154,7 +154,7 @@ Dim sales()() As Double = New Double(11)() {}
   
  [!code-vb[VbVbalrCollectionInitializers#3](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_8.vb)]  
   
- 형식 유추를 사용하는 경우 배열 리터럴에 대해 제공된 값 목록의 기준 형식에 의해 배열 형식이 결정됩니다. 기준 형식은 배열 리터럴의 다른 모든 형식이 확장될 수 있는 고유 형식입니다. 이 고유 형식을 확인할 수 없는 경우 기준 형식은 배열의 다른 모든 형식이 축소될 수 있는 고유 형식입니다. 이러한 고유 형식을 모두 확인할 수 없는 경우 기준 형식은 `Object`입니다. 예를 들어 배열 리터럴에 제공된 값 목록이 `Integer`, `Long`및 `Double`형식의 값을 포함하는 경우 결과 배열은 `Double`형식입니다. `Integer` 및 `Long` 은 둘 다 `Double`로만 확장됩니다. 따라서 기준 형식은 `Double` 입니다. 자세한 내용은 [확대 변환과 축소 변환](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)을 참조하세요. 이러한 유추 규칙은 클래스 멤버에서 정의된 지역 변수인 배열에 대해 유추된 형식에 적용됩니다. 클래스 수준 변수를 만들 때 배열 리터럴을 사용할 수 있지만 클래스 수준에서 형식 유추를 사용할 수는 없습니다. 따라서 클래스 수준에서 지정된 배열 리터럴은 배열 리터럴에 대해 제공된 값을 `Object`형식으로 유추합니다.  
+ 형식 유추를 사용하는 경우 배열 리터럴에 대해 제공된 값 목록의 기준 형식에 의해 배열 형식이 결정됩니다. 기준 형식은 배열 리터럴의 다른 모든 형식이 확장될 수 있는 고유 형식입니다. 이 고유 형식을 확인할 수 없는 경우 기준 형식은 배열의 다른 모든 형식이 축소될 수 있는 고유 형식입니다. 이러한 고유 형식을 모두 확인할 수 없는 경우 기준 형식은 `Object`입니다. 예를 들어 배열 리터럴에 제공된 값 목록이 `Integer`, `Long`및 `Double`형식의 값을 포함하는 경우 결과 배열은 `Double`형식입니다. `Integer` 및 `Long` 은 둘 다 `Double`로만 확장됩니다. 따라서 기준 형식은 `Double` 입니다. 자세한 내용은 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)을 참조하세요. 이러한 유추 규칙은 클래스 멤버에서 정의된 지역 변수인 배열에 대해 유추된 형식에 적용됩니다. 클래스 수준 변수를 만들 때 배열 리터럴을 사용할 수 있지만 클래스 수준에서 형식 유추를 사용할 수는 없습니다. 따라서 클래스 수준에서 지정된 배열 리터럴은 배열 리터럴에 대해 제공된 값을 `Object`형식으로 유추합니다.  
   
  배열 리터럴을 사용하여 만든 배열의 요소 형식을 명시적으로 지정할 수 있습니다. 이 경우 배열 리터럴의 값이 배열 요소의 형식으로 확장되어야 합니다. 다음 코드 예제는 정수 목록에서 `Double` 형식의 배열을 만듭니다.  
   
@@ -181,11 +181,11 @@ Dim sales()() As Double = New Double(11)() {}
 ##  <a name="BKMK_Iterating"></a> 배열 반복  
  배열을 반복하는 경우 가장 낮은 인덱스부터 가장 높은 인덱스까지 배열의 각 요소에 액세스합니다.  
   
- 다음 예제에서는 [For...Next 문](../../../../visual-basic/language-reference/statements/for-next-statement.md)을 사용하여 1차원 배열을 반복합니다. <xref:System.Array.GetUpperBound%2A> 메서드는 인덱스가 가질 수 있는 가장 높은 값을 반환합니다. 가장 낮은 인덱스 값은 항상 0입니다.  
+ 다음 예제에서는 [For...Next 문](../../../../visual-basic/language-reference/statements/for-next-statement.md)을 사용하여 1차원 배열을 반복합니다. <xref:System.Array.GetUpperBound%2A> 메서드는 인덱스가 가질 수 있는 가장 큰 값을 반환합니다. 가장 낮은 인덱스 값은 항상 0입니다.  
   
  [!code-vb[VbVbalrArrays#41](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_13.vb)]  
   
- 다음 예제에서는 `For...Next` 문을 사용하여 다차원 배열을 반복합니다. <xref:System.Array.GetUpperBound%2A> 메서드는 차원을 지정하는 매개 변수를 갖습니다. `GetUpperBound(0)`는 첫 번째 차원에 대한 높은 인덱스 값을 반환하고 `GetUpperBound(1)`는 두 번째 차원에 대한 높은 인덱스 값을 반환합니다.  
+ 다음 예제에서는 `For...Next` 문을 사용하여 다차원 배열을 반복합니다. <xref:System.Array.GetUpperBound%2A> 메서드에는 차원을 지정하는 매개 변수가 있습니다. `GetUpperBound(0)` 는 첫 번째 차원에 대한 높은 인덱스 값을 반환하고 `GetUpperBound(1)` 는 두 번째 차원에 대한 높은 인덱스 값을 반환합니다.  
   
  [!code-vb[VbVbalrArrays#42](../../../../visual-basic/programming-guide/language-features/arrays/codesnippet/VisualBasic/index_14.vb)]  
   
@@ -224,7 +224,7 @@ Dim sales()() As Double = New Double(11)() {}
   
  다음과 같은 경우 길이가 0인 배열을 만들어야 할 수도 있습니다.  
   
--   코드는 <xref:System.NullReferenceException> 예외를 발생하지 않으면서 <xref:System.Array.Length%2A>또는 <xref:System.Array.Rank%2A>와 같은 <xref:System.Array> 클래스 멤버에 액세스하거나 <xref:Microsoft.VisualBasic.Information.UBound%2A> 같은 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 함수를 호출해야 합니다.  
+-   <xref:System.NullReferenceException> 예외가 발생할 위험 없이 코드에서 <xref:System.Array.Length%2A> 또는 <xref:System.Array.Rank%2A>와 같은 <xref:System.Array> 클래스의 멤버에 액세스하거나 <xref:Microsoft.VisualBasic.Information.UBound%2A>와 같은 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 함수를 호출해야 하는 경우  
   
 -   `Nothing` 을 특별한 경우로 확인할 필요가 없도록 하여 사용하는 코드를 보다 간단하게 유지하려는 경우  
   
@@ -250,18 +250,18 @@ Dim prices(3, 4, 5) As Long
 |||  
 |---|---|  
 |차원 길이|각 차원의 인덱스는 0부터 시작하므로 0부터 상한까지의 범위입니다. 따라서 지정된 차원의 길이는 해당 차원에 대해 선언된 상한보다 1만큼 더 큽니다.|  
-|길이 제한|배열의 각 차원 길이는 `Integer` 데이터 형식의 최대값, 즉 (2 ^ 31) - 1로 제한됩니다. 그러나 배열의 총 크기는 시스템에서 사용 가능한 메모리에 의해서도 제한됩니다. 사용 가능한 RAM 크기를 초과하는 배열을 초기화하려고 하면 공용 언어 런타임에서 <xref:System.OutOfMemoryException> 예외가 throw됩니다.|  
+|길이 제한|배열의 각 차원 길이는 `Integer` 데이터 형식의 최대값, 즉 (2 ^ 31) - 1로 제한됩니다. 그러나 배열의 총 크기는 시스템에서 사용 가능한 메모리에 의해서도 제한됩니다. 사용 가능한 RAM 크기를 초과하는 배열을 초기화하려고 하면 공용 언어 런타임에서 <xref:System.OutOfMemoryException> 예외가 발생합니다.|  
 |크기 및 요소 크기|배열의 크기는 해당 요소의 데이터 형식과 독립적입니다. 크기는 항상 저장소에서 사용하는 바이트 수가 아니라 요소의 총 수를 나타냅니다.|  
 |메모리 소비|배열이 메모리에 저장되는 방법에 대해서는 어떠한 가정도 하지 않는 것이 좋습니다. 저장소는 각 데이터 너비의 플랫폼마다 달라지므로 동일한 배열이 32비트 시스템보다 64비트 시스템에서 더 많은 메모리를 사용할 수 있습니다. 시스템 구성에 따라 배열을 초기화할 때 CLR(공용 언어 런타임)에서 저장소를 할당하여 요소를 최대한 가깝게 압축하거나 모두 일반적인 하드웨어 경계에 맞출 수 있습니다. 또한 배열의 제어 정보로 인해 저장소 오버헤드가 필요하며, 차원이 추가될 때마다 이 오버헤드가 증가합니다.|  
   
 ##  <a name="BKMK_ArrayTypes"></a> 배열 형식 및 기타 형식  
  각 배열에는 데이터 형식이 있지만 해당 요소의 데이터 형식과 다릅니다. 모든 배열에 대한 단일 데이터 형식은 없습니다. 대신, 배열의 데이터 형식은 배열의 차원 수 또는 *차수*와 배열에 있는 요소의 데이터 형식에 의해 결정됩니다. 두 배열 변수는 동일한 차수이고 해당 요소가 동일한 데이터 형식인 경우에만 동일한 데이터 형식으로 간주됩니다. 배열의 차원 길이는 배열 데이터 형식에 영향을 주지 않습니다.  
   
- 모든 배열은 <xref:System.Array?displayProperty=fullName> 클래스에서 상속되며, `Array` 형식으로 변수를 선언할 수 있지만 `Array` 형식의 배열을 만들 수는 없습니다. 또한 [ReDim 문](../../../../visual-basic/language-reference/statements/redim-statement.md)은 `Array` 형식으로 선언된 변수에 대해 작업할 수 없습니다. 이러한 이유 및 형식 안전성을 위해 앞의 예제에서 모든 배열을 `Integer` 와 같은 특정 형식으로 선언하는 것이 좋습니다.  
+ 모든 배열은 <xref:System.Array?displayProperty=fullName> 클래스에서 상속되며 `Array` 형식으로 변수를 선언할 수 있지만, `Array` 형식의 배열을 만들 수는 없습니다. 또한 [ReDim 문](../../../../visual-basic/language-reference/statements/redim-statement.md)은 `Array` 형식으로 선언된 변수에 대해 작업할 수 없습니다. 이러한 이유 및 형식 안전성을 위해 앞의 예제에서 모든 배열을 `Integer` 와 같은 특정 형식으로 선언하는 것이 좋습니다.  
   
  배열이나 해당 요소의 데이터 형식을 여러 가지 방법으로 확인할 수 있습니다.  
   
--   변수에 대해 <xref:System.Object.GetType%2A?displayProperty=fullName> 메서드를 호출하여 변수의 런타임 형식에 대한 <xref:System.Type> 개체를 수신할 수 있습니다. <xref:System.Type> 개체는 해당 속성과 메서드에 광범위한 정보를 보유합니다.  
+-   변수에서 <xref:System.Object.GetType%2A?displayProperty=fullName> 메서드를 호출하여 변수의 런타임 형식에 대한 <xref:System.Type> 개체를 받을 수 있습니다. <xref:System.Type> 개체는 해당 속성과 메서드에 광범위한 정보를 보유합니다.  
   
 -   <xref:Microsoft.VisualBasic.Information.TypeName%2A> 함수에 변수를 전달하여 런타임 형식의 이름을 포함하는 `String`을 받을 수 있습니다.  
   
@@ -293,7 +293,7 @@ Dim prices(3, 4, 5) As Long
   
 |용어|정의|  
 |----------|----------------|  
-|[Visual Basic의 배열 차원](../../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md)|배열의 차수 및 차원을 설명합니다.|  
+|[Array Dimensions in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/array-dimensions.md)|배열의 차수 및 차원을 설명합니다.|  
 |[방법: Visual Basic에서 배열 변수 초기화](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)|배열에 초기 값을 채우는 방법을 설명합니다.|  
 |[방법: Visual Basic에서 배열 정렬](../../../../visual-basic/programming-guide/language-features/arrays/how-to-sort-an-array.md)|배열의 요소를 사전순으로 정렬하는 방법을 보여 줍니다.|  
 |[방법: 한 배열에 다른 배열 할당](../../../../visual-basic/programming-guide/language-features/arrays/how-to-assign-one-array-to-another-array.md)|다른 배열 변수에 배열을 할당하는 규칙 및 단계를 설명합니다.|  
@@ -303,3 +303,4 @@ Dim prices(3, 4, 5) As Long
  <xref:System.Array>   
  [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md)   
  [ReDim 문](../../../../visual-basic/language-reference/statements/redim-statement.md)
+

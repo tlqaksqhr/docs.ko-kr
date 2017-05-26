@@ -26,10 +26,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c072d365b4ecffb524b57c2328217da05a8af3ed
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f111ba3db26f247cbc56ee296b652bc04efb837d
+ms.openlocfilehash: 66c68530f5684e4d75b9aaa21334e54dde5b64b6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/02/2017
 
 ---
 # <a name="using-static-directive-c-reference"></a>using 정적 지시문(C# 참조)
@@ -46,7 +47,7 @@ using static <fully-qualified-type-name>
 
 `using static` 지시문은 C# 6에서 도입되었습니다.
 
-## <a name="reamrks"></a>설명
+## <a name="remarks"></a>설명
  
 일반적으로 정적 멤버를 호출할 때 멤버 이름과 함께 형식 이름을 제공합니다. 형식의 멤버를 호출하기 위해 동일한 형식 이름을 반복해서 입력하면 코드가 복잡하고 난해해질 수 있습니다. 예를 들어 `Circle` 클래스에 대한 다음 정의에서는 @System.Math 클래스의 많은 멤버를 참조합니다.
   

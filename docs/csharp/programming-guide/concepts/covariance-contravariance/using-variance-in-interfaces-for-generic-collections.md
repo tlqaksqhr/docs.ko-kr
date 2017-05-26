@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9bf7f107833800f5ae2843dcefcd195a8a15a1b8
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 44adda352b5e7d0ef13e51ed114a0f45487f52ea
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-c"></a>제네릭 컬렉션용 인터페이스의 가변성 사용(C#)
@@ -35,11 +36,45 @@ ms.lasthandoff: 03/13/2017
 ## <a name="converting-generic-collections"></a>제네릭 컬렉션 변환  
  다음 예제에서는 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스에서 공변성(covariance) 지원의 이점을 보여 줍니다. `PrintFullName` 메서드는 `IEnumerable<Person>` 형식의 컬렉션을 매개 변수로 수락합니다. 그러나 `Employee`는 `Person`을 상속하므로 `IEnumerable<Employee>` 형식의 컬렉션에 대해 이를 다시 사용할 수 있습니다.  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```csharp  
+// Simple hierarchy of classes.  
+public class Person  
+{  
+    public string FirstName { get; set; }  
+    public string LastName { get; set; }  
+}  
+  
+public class Employee : Person { }  
+  
+class Program  
+{  
+    // The method has a parameter of the IEnumerable<Person> type.  
+    public static void PrintFullName(IEnumerable<Person> persons)  
+    {  
+        foreach (Person person in persons)  
+        {  
+            Console.WriteLine("Name: {0} {1}",  
+            person.FirstName, person.LastName);  
+        }  
+    }  
+  
+    public static void Test()  
+    {  
+        IEnumerable<Employee> employees = new List<Employee>();  
+  
+        // You can pass IEnumerable<Employee>,   
+        // although the method expects IEnumerable<Person>.  
+  
+        PrintFullName(employees);  
+  
+    }  
+}  
+```  
+  
 ## <a name="comparing-generic-collections"></a>제네릭 컬렉션 비교  
  다음 예제에서는 <xref:System.Collections.Generic.IComparer%601> 인터페이스에서 반공변성(contravariance) 지원의 이점을 보여 줍니다. `PersonComparer` 클래스는 `IComparer<Person>` 인터페이스를 구현합니다. 그러나 `Employee`는 `Person`을 상속하므로 `Employee` 형식 개체의 시퀀스를 비교하기 위해 이 클래스를 다시 사용할 수 있습니다.  
   
-```cs  
+```csharp  
 // Simple hierarchy of classes.  
 public class Person  
 {  

@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f9ee1f0cae90120692fa4f41d2f432551281ab6d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 7e2310df174a7c38fafba3fed4e4bd3de4fa377a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>dynamic 형식 사용(C# 프로그래밍 가이드)
@@ -72,7 +73,7 @@ ms.lasthandoff: 03/13/2017
  [!code-cs[CsProgGuideTypes#55](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_7.cs)]  
   
 ## <a name="dynamic-language-runtime"></a>동적 언어 런타임  
- DLR(동적 언어 런타임)은 [!INCLUDE[net_v40_short](../../../csharp/programming-guide/types/includes/net_v40_short_md.md)]의 새로운 API입니다. DLR은 C#에서 `dynamic` 형식을 지원하는 인프라를 제공하며, IronPython 및 IronRuby와 같은 동적 프로그래밍 언어를 구현합니다. DLR에 대한 자세한 내용은 [동적 언어 런타임 개요](http://msdn.microsoft.com/library/f769a271-8aff-4bea-bfab-6160217ce23d)를 참조하세요.  
+ DLR(동적 언어 런타임)은 [!INCLUDE[net_v40_short](../../../csharp/programming-guide/types/includes/net_v40_short_md.md)]의 새로운 API입니다. DLR은 C#에서 `dynamic` 형식을 지원하는 인프라를 제공하며, IronPython 및 IronRuby와 같은 동적 프로그래밍 언어를 구현합니다. DLR에 대한 자세한 내용은 [동적 언어 런타임 개요](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)를 참조하세요.  
   
 ## <a name="com-interop"></a>COM Interop  
  [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)]에는 Office 자동화 API와 같은 COM API와의 상호 운용 환경을 개선하는 몇 가지 기능이 포함되어 있습니다. 개선 사항 중에는 `dynamic` 형식의 사용 및 [명명된 인수 및 선택적 인수](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)의 사용이 포함됩니다.  
@@ -88,6 +89,6 @@ ms.lasthandoff: 03/13/2017
 |제목|설명|  
 |-----------|-----------------|  
 |[dynamic](../../../csharp/language-reference/keywords/dynamic.md)|`dynamic` 키워드의 사용법을 설명합니다.|  
-|[동적 언어 런타임 개요](http://msdn.microsoft.com/library/f769a271-8aff-4bea-bfab-6160217ce23d)|동적 언어에 대한 서비스 집합을 CLR(공용 언어 런타임)에 추가하는 런타임 환경인 DLR 개요를 제공합니다.|  
+|[동적 언어 런타임 개요](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)|동적 언어에 대한 서비스 집합을 CLR(공용 언어 런타임)에 추가하는 런타임 환경인 DLR 개요를 제공합니다.|  
 |[연습: 동적 개체 만들기 및 사용](../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)|사용자 지정 동적 개체를 만들고 `IronPython` 라이브러리에 액세스하는 프로젝트를 만드는 데 필요한 단계별 지침을 제공합니다.|  
 |[방법: Visual C# 기능을 사용하여 Office Interop 개체에 액세스](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)|명명된 인수와 선택적 인수, `dynamic` 형식, Office API 개체에 대한 액세스를 간소화하는 기타 향상된 기능을 사용하는 프로젝트를 만드는 방법을 보여 줍니다.|
