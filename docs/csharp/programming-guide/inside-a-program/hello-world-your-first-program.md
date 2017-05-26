@@ -35,7 +35,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
 ms.openlocfilehash: 21abcf70cce2d6c9052629ce60d08e9ec6ac16e7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- 프로그램 처음 만들기(C# 프로그래밍 가이드)
@@ -43,7 +43,7 @@ ms.lasthandoff: 03/31/2017
   
  소개 개념에 대한 추가 예제는 [Visual C# 및 Visual Basic 시작](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)을 참조하세요.  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-create-and-run-a-console-application"></a>콘솔 응용 프로그램을 만들고 실행하려면  
   

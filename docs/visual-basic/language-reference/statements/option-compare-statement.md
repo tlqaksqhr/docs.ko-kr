@@ -43,9 +43,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 8b1b077a8818315e52ada6b08ff1e1ced9bbd17c
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -86,7 +87,7 @@ Option Compare { Binary | Text }
 ## <a name="when-an-option-compare-statement-is-not-present"></a>Option Compare 문이 없는 경우  
  소스 코드에 없는 경우는 `Option Compare` 문는 **옵션 비교** 에 설정 된 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 사용 됩니다. 으로 지정한 설정이 명령줄 컴파일러를 사용 하는 경우는 [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) 컴파일러 옵션을 사용 합니다.  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 #### <a name="to-set-option-compare-in-the-ide"></a>IDE에서 Option Compare를 설정하려면  
   

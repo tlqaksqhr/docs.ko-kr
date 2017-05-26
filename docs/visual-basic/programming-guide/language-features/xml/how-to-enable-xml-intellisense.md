@@ -33,9 +33,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 84af19189fa3fc510c8d4f8e408cbb2a393d8b8f
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -52,7 +53,7 @@ Visual Basic의 XML IntelliSense는 XML 스키마에 정의 된 요소에 대 �
   
  Visual Basic의 XML IntelliSense의 기능에 자세한 내용은 참조 [Visual Basic의 XML IntelliSense](../../../../visual-basic/programming-guide/language-features/xml/xml-intellisense.md)합니다. XML 네임 스페이스 가져오기에 대 한 자세한 내용은 참조 하십시오. [Imports 문 (XML Namespace)](../../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md) 또는 [프로젝트 디자이너 (Visual Basic), 참조 페이지](https://docs.microsoft.com/visualstudio/ide/reference/references-page-project-designer-visual-basic)합니다.  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
  ![비디오에 링크](../../../../visual-basic/programming-guide/language-features/xml/media/playvideo.gif "PlayVideo") 이 항목의 비디오 버전을 참조 하십시오. [Video How to: Visual Basic의 XML IntelliSense 사용](http://go.microsoft.com/fwlink/?LinkId=102466)합니다. 관련된 비디오 데모를 참조 하십시오. [어떻게 XML IntelliSense 활성화 및 사용 하 여 XML 네임 스페이스 할까요?](http://go.microsoft.com/fwlink/?LinkId=143035)합니다.  
   

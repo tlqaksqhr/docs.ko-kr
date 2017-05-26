@@ -50,7 +50,7 @@ ms.lasthandoff: 05/22/2017
   
  C#에서 오류 및 경고 옵션을 구성하는 방법에 대한 자세한 내용은 [프로젝트 디자이너, 빌드 페이지(C#)](https://docs.microsoft.com/visualstudio/ide/reference/build-page-project-designer-csharp)를 참조하세요.  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)   

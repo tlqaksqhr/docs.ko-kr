@@ -67,7 +67,7 @@ ms.lasthandoff: 05/15/2017
 -   [같음 비교](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   

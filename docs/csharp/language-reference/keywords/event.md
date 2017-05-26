@@ -32,9 +32,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 60a6322f8e120c6a443638b4f6e409acdfa0b235
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -65,7 +66,7 @@ ms.lasthandoff: 03/13/2017
  이벤트는 [virtual](../../../csharp/language-reference/keywords/virtual.md) 키워드를 사용하여 가상 이벤트로 표시할 수 있습니다. 그러면 파생 클래스에서 [override](../../../csharp/language-reference/keywords/override.md) 키워드를 사용하여 이벤트 동작을 재정의할 수 있습니다. 자세한 내용은 [상속](../../../csharp/programming-guide/classes-and-structs/inheritance.md)을 참조하세요. 또한 가상 이벤트를 재정의하는 이벤트는 [sealed](../../../csharp/language-reference/keywords/sealed.md)일 수 있으며, 파생 클래스에 대해 더 이상 가상이 아니도록 지정합니다. 마지막으로 이벤트를 [abstract](../../../csharp/language-reference/keywords/abstract.md)로 선언할 수 있으며, 컴파일러에서 `add` 및 `remove` 이벤트 접근자 블록을 생성하지 않는다는 의미입니다. 따라서 파생 클래스는 자체 구현을 제공해야 합니다.  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [C# 참조](../../../csharp/language-reference/index.md)   
