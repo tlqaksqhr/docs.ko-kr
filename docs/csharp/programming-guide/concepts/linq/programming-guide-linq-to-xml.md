@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 5e1e95d92123b2874aace0c36005a8a07a6203fc
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/24/2017
 
 ---
 # <a name="programming-guide-linq-to-xml-c"></a>프로그래밍 가이드(LINQ to XML)(C#)
@@ -43,8 +44,7 @@ ms.lasthandoff: 03/13/2017
 |[XML 트리 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)|XML 트리 생성의 개념과 작업에 대해 설명합니다. 함수 생성을 사용하거나 문자열이나 파일에서 XML 텍스트의 구문을 분석하여 XML 트리를 만들 수 있습니다. 또한 <xref:System.Xml.XmlReader>를 사용하여 XML 트리를 채울 수 있습니다.|  
 |[XML 네임스페이스 작업(C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)|네임스페이스를 사용하는 XML 트리를 만드는 데 대해 자세히 설명합니다.|  
 |[XML 트리 serialize(C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)|XML 트리를 serialize하는 여러 방법에 대해 설명하고 사용할 방법에 대한 지침을 제공합니다.|  
-|[LINQ to XML 축(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)|
-          [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 쿼리를 작성하기 전에 이해해야 하는 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 축 메서드를 열거하고 설명합니다.|  
+|[LINQ to XML 축(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)|[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 쿼리를 작성하기 전에 이해해야 하는 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 축 메서드를 열거하고 설명합니다.|  
 |[XML 트리 쿼리(C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)|XML 트리를 쿼리하는 일반적인 예제를 제공합니다.|  
 |[XML 트리 수정(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)|DOM(문서 개체 모델)과 마찬가지로, [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]을 통해서도 메모리 내 XML 트리를 수정할 수 있습니다.|  
 |[고급 LINQ to XML 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)|주석, 이벤트, 스트리밍 및 기타 고급 시나리오에 대해 설명합니다.|  
