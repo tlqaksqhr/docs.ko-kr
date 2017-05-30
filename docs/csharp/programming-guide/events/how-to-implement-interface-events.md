@@ -1,27 +1,46 @@
 ---
 title: "방법: 인터페이스 이벤트 구현(C# 프로그래밍 가이드) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "이벤트[C#], 인터페이스의"
-  - "인터페이스[C#], 클래스에서 이벤트 구현"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- interfaces [C#], event implementation in classes
+- events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
 caps.latest.revision: 21
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 21
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a780a11d8dd238187eb82933359bbb151bb3c333
+ms.openlocfilehash: 4a5b5b862a88d7008049e411e6dc0f020952cc5c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
+
 ---
-# 방법: 인터페이스 이벤트 구현(C# 프로그래밍 가이드)
-[인터페이스](../../../csharp/language-reference/keywords/interface.md)에서는 [이벤트](../../../csharp/language-reference/keywords/event.md)를 선언할 수 있습니다.  다음 예제에서는 클래스에 인터페이스 이벤트를 구현하는 방법을 보여 줍니다.  기본적으로 규칙은 인터페이스 메서드나 속성을 구현할 때와 동일합니다.  
+# <a name="how-to-implement-interface-events-c-programming-guide"></a>방법: 인터페이스 이벤트 구현(C# 프로그래밍 가이드)
+[인터페이스](../../../csharp/language-reference/keywords/interface.md)는 [이벤트](../../../csharp/language-reference/keywords/event.md)를 선언할 수 있습니다. 다음 예제에서는 클래스에서 인터페이스 이벤트를 구현하는 방법을 보여 줍니다. 기본적인 규칙은 다른 모든 인터페이스 메서드나 속성을 구현할 때의 규칙과 같습니다.  
   
-### 클래스에 인터페이스 이벤트를 구현하려면  
+### <a name="to-implement-interface-events-in-a-class"></a>클래스에서 인터페이스 이벤트를 구현하려면  
   
--   클래스에 이벤트를 선언하고 이를 적절한 영역에서 호출합니다.  
+-   클래스에서 이벤트를 선언한 다음 적절한 영역에서 이벤트를 호출합니다.  
   
     ```  
     namespace ImplementInterfaceEvents  
@@ -57,15 +76,15 @@ caps.handback.revision: 21
     }  
     ```  
   
-## 예제  
- 다음 예제에서는 클래스가 두 개 이상의 인터페이스에서 상속되며 각 인터페이스에 동일한 이름의 이벤트가 있는 보다 덜 일반적인 경우를 처리하는 방법을 보여 줍니다.  이 경우 하나 이상의 이벤트에 대해 명시적으로 인터페이스를 구현해야 합니다.  이벤트에 대한 명시적 인터페이스 구현을 작성할 때는 `add` 및 `remove` 이벤트 접근자를 작성해야 합니다.  일반적으로 이러한 접근자는 컴파일러에서 제공되지만 이 경우에는 컴파일러에서 제공할 수 없습니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 클래스가 둘 이상의 인터페이스에서 상속을 받으며 각 인터페이스에는 이름이 같은 이벤트가 있는 드문 상황을 처리하는 방법을 보여 줍니다. 이러한 상황에서는 이벤트 하나 이상에 대해 명시적 인터페이스 구현을 제공해야 합니다. 이벤트에 대한 명시적 인터페이스 구현을 쓸 때는 `add` 및 `remove` 이벤트 접근자도 써야 합니다. 일반적으로는 컴파일러가 이러한 접근자를 제공하지만 이 예제의 경우에는 컴파일러가 접근자를 제공할 수 없습니다.  
   
- 사용자 고유의 접근자를 제공하면 두 이벤트를 클래스의 동일한 이벤트가 나타낼지 각기 다른 이벤트가 나타낼지를 지정할 수 있습니다.  예를 들어, 인터페이스 사양에 따라 다른 시간에 이벤트를 발생시켜야 하는 경우에는 클래스에 있는 별도의 구현에 각 이벤트를 연결할 수 있습니다.  다음 예제에서는 구독자가 `IShape` 또는 `IDrawingObject`에 대한 모양 참조를 캐스팅하여 수신할 `OnDraw` 이벤트를 결정합니다.  
+ 고유한 접근자를 제공하면 클래스에서 두 이벤트를 같은 이벤트로 표시할지 아니면 다른 이벤트로 표시할지를 지정할 수 있습니다. 예를 들어 인터페이스 사양에 따라 이벤트가 서로 다른 시간에 발생해야 하는 경우에는 각 이벤트를 클래스의 개별 구현과 연결할 수 있습니다. 다음 예제에서는 구독자가 `IShape` 또는 `IDrawingObject`에 셰이프 참조를 캐스팅하여 수신할 `OnDraw` 이벤트를 결정합니다.  
   
  [!code-cs[csProgGuideEvents#10](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-implement-interface-events_1.cs)]  
   
-## 참고 항목  
- [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>참고 항목  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
  [이벤트](../../../csharp/programming-guide/events/index.md)   
  [대리자](../../../csharp/programming-guide/delegates/index.md)   
  [명시적 인터페이스 구현](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)   

@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e68cde6d56d4de584861b8bcf29e072a5fc18928
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: b5054e277895d185ab8ec6f6a2950d5dedbef390
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>방법: Visual Basic에서 레지스트리 키 값 읽기
@@ -68,7 +69,7 @@ ms.lasthandoff: 03/13/2017
   
  다음 조건에서 예외가 발생합니다.  
   
--   키 이름이 `Nothing`인 경우(<xref:System.ArgumentNullException>)  
+-   키의 이름이 `Nothing`인 경우(<xref:System.ArgumentNullException>)  
   
 -   사용자에게 레지스트리 키에서 읽을 수 있는 권한이 없는 경우(<xref:System.Security.SecurityException>)  
   

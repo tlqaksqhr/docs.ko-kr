@@ -41,16 +41,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 89137b3c927a7ac8ed126f2be3695c4aa72a85fb
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: a5ae7f4a720c04639191edf36425426dfc339a37
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>연습: Visual Basic에서 파일과 디렉터리 조작
 이 연습에서는 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]에서 파일 I/O의 기본 개념을 소개합니다. 디렉터리에 텍스트 파일을 나열하고 검사하는 작은 응용 프로그램을 만드는 방법을 설명합니다. 선택한 각 텍스트 파일에 대해 응용 프로그램은 파일 특성 및 내용의 첫 줄을 제공합니다. 로그 파일에 정보를 기록하는 옵션이 있습니다.  
   
- 이 연습에서는 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]에서 사용 가능한 `My.Computer.FileSystem Object`의 멤버를 사용합니다. 자세한 내용은 <xref:Microsoft.VisualBasic.FileIO.FileSystem>을 참조하세요. 연습의 끝 부분에서 <xref:System.IO> 네임스페이스의 클래스를 사용하는 동등한 예제가 제공됩니다.  
+ 이 연습에서는 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]에서 사용 가능한 `My.Computer.FileSystem Object`의 멤버를 사용합니다. 자세한 내용은 <xref:Microsoft.VisualBasic.FileIO.FileSystem>를 참조하세요. 연습의 끝 부분에서 <xref:System.IO> 네임스페이스의 클래스를 사용하는 동등한 예제가 제공됩니다.  
   
 [!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 03/13/2017
   
      [!code-vb[VbVbcnMyFileSystem#103](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_1.vb)]  
   
-     `FolderBrowserDialog1.ShowDialog` 호출은 **폴더 찾아보기** 대화 상자를 엽니다. 사용자가 **확인**을 클릭하면 <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> 속성이 인수로서 `ListFiles` 메서드로 전송됩니다. 이 메서드는 다음 단계에서 추가됩니다.  
+     `FolderBrowserDialog1.ShowDialog` 호출은 **폴더 찾아보기** 대화 상자를 엽니다. 사용자가 **확인**을 클릭하면 <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> 속성이 `ListFiles` 메서드로 인수에 전송됩니다. 다음 단계에서 이 메서드를 추가합니다.  
   
 3.  다음 `ListFiles` 메서드를 추가합니다.  
   
@@ -92,7 +93,7 @@ ms.lasthandoff: 03/13/2017
   
      이 코드는 먼저 **ListBox**를 지웁니다.  
   
-     그런 다음 <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A> 메서드는 디렉터리의 각 파일에 대해 하나씩 문자열의 컬렉션을 검색합니다. `GetFiles` 메서드는 특정 패턴과 일치하는 파일을 검색하기 위해 패턴 인수를 허용합니다. 이 예제에서는 확장명이 .txt인 파일만 반환됩니다.  
+     <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A> 메서드는 디렉터리에 있는 각 파일에 대해 나하씩 문자열 컬렉션을 검색합니다. `GetFiles` 메서드는 특정 패턴과 일치하는 파일을 검색하기 위해 패턴 인수를 허용합니다. 이 예제에서는 확장명이 .txt인 파일만 반환됩니다.  
   
      `GetFiles` 메서드에 의해 반환되는 문자열은 **ListBox**에 추가됩니다.  
   
@@ -110,7 +111,7 @@ ms.lasthandoff: 03/13/2017
   
      [!code-vb[VbVbcnMyFileSystem#105](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_3.vb)]  
   
-     이 코드는 항목이 `ListBox`에서 선택되었는지 확인합니다. 그런 다음 `ListBox`에서 파일 경로 항목을 가져옵니다. 파일이 아직 있는지 확인하기 위해 <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A> 메서드가 사용됩니다.  
+     이 코드는 항목이 `ListBox`에서 선택되었는지 확인합니다. 그런 다음 `ListBox`에서 파일 경로 항목을 가져옵니다. <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A> 메서드는 파일이 아직 있는지를 확인하는 데 사용됩니다.  
   
      파일 경로가 인수로서 `GetTextForOutput` 메서드로 전송됩니다. 이 메서드는 다음 단계에서 추가되어, 파일 정보를 포함하는 문자열을 반환합니다. 파일 정보는 **MessageBox**에 나타납니다.  
   
@@ -120,7 +121,7 @@ ms.lasthandoff: 03/13/2017
   
      이 코드는 <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> 메서드를 사용하여 파일 매개 변수를 가져옵니다. 파일 매개 변수는 <xref:System.Text.StringBuilder>에 추가됩니다.  
   
-     <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> 메서드는 <xref:System.IO.StreamReader>로 파일 내용을 읽어옵니다. 내용의 첫 번째 줄을 `StreamReader`에서 가져와 `StringBuilder`에 추가합니다.  
+     <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> 메서드는 파일 내용을 <xref:System.IO.StreamReader>로 읽어들입니다. 내용의 첫 번째 줄을 `StreamReader`에서 가져와 `StringBuilder`에 추가합니다.  
   
 4.  응용 프로그램을 실행합니다. **찾아보기**를 클릭하고 .txt 파일이 포함된 폴더로 이동합니다. **확인**을 클릭합니다.  
   
@@ -136,7 +137,7 @@ ms.lasthandoff: 03/13/2017
   
      이 코드는 선택한 파일과 동일한 디렉터리에 로그 파일을 저장하도록 로그 파일 경로를 설정합니다. 로그 항목의 텍스트는 파일 정보 뒤에 현재 날짜 및 시간으로 설정됩니다.  
   
-     `append` 인수가 `True`로 설정된 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 메서드가 로그 항목을 만드는 데 사용됩니다.  
+     `append` 인수가 `True`로 설정된 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 메서드를 사용하여 로그 항목을 만듭니다.  
   
 2.  응용 프로그램을 실행합니다. 텍스트 파일로 이동하고, `ListBox`에서 선택하고, **결과 저장** 확인란을 선택한 다음 **검사**를 클릭합니다. 로그 항목이 `log.txt` 파일에 기록되었는지 확인합니다.  
   

@@ -33,17 +33,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 497f4ea3dfd175248ff733cceb691b2aa0c758e9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 3cc9bec56817bbccd5faa8e05535cb565a11baac
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Visual Basic에서 응용 프로그램 로그 작업
 `My.Applicaton.Log` 및 `My.Log` 개체를 사용하면 로깅 및 추적 정보를 로그에 쉽게 쓸 수 있습니다.  
   
 ## <a name="how-messages-are-logged"></a>메시지가 기록되는 방식  
- 먼저 로그의 <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A> 속성의 <xref:System.Diagnostics.TraceSource.Switch%2A> 속성으로 메시지의 심각도를 확인합니다. 기본적으로 심각도가 "정보" 이상인 메시지만 로그의 `TraceListener` 컬렉션에 지정된 추적 수신기로 전달됩니다. 그런 다음 각 수신기는 메시지의 심각도를 수신기의 <xref:System.Diagnostics.TraceSource.Switch%2A> 속성과 비교합니다. 메시지의 심각도가 충분히 높으면 수신기는 메시지를 기록합니다.  
+ 먼저 로그 <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A> 속성의 <xref:System.Diagnostics.TraceSource.Switch%2A> 속성으로 메시지의 심각도를 확인합니다. 기본적으로 심각도가 "정보" 이상인 메시지만 로그의 `TraceListener` 컬렉션에 지정된 추적 수신기로 전달됩니다. 그런 다음 각 수신기는 메시지의 심각도를 수신기의 <xref:System.Diagnostics.TraceSource.Switch%2A> 속성과 비교합니다. 메시지의 심각도가 충분히 높으면 수신기는 메시지를 기록합니다.  
   
  다음 다이어그램에서는 `WriteEntry` 메서드에 기록된 메시지가 로그의 추적 수신기의 `WriteLine` 메서드로 전달되는 방식을 보여 줍니다.  
   
@@ -54,11 +55,11 @@ ms.lasthandoff: 03/13/2017
  ![내 로그 구성](../../../../visual-basic/developing-apps/programming/log-info/media/mylogconfig.png "MyLogConfig")  
   
 ## <a name="where-messages-are-logged"></a>메시지가 기록되는 위치  
- 어셈블리에 구성 파일이 없으면 `My.Application.Log` 및 `My.Log` 개체가 <xref:System.Diagnostics.DefaultTraceListener> 클래스를 통해 응용 프로그램의 디버그 출력에 기록합니다. 또한 `My.Application.Log` 개체는 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> 클래스를 통해 어셈블리의 로그 파일에 기록하고, `My.Log` 개체는 <xref:System.Web.WebPageTraceListener> 클래스를 통해 ASP.NET 웹 페이지의 출력에 기록합니다.  
+ 어셈블리에 구성 파일이 없으면 `My.Application.Log` 및 `My.Log` 개체가 <xref:System.Diagnostics.DefaultTraceListener> 클래스를 통해 응용 프로그램의 디버그 출력에 메시지를 씁니다. 또한 `My.Application.Log` 개체는 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> 클래스를 통해 어셈블리의 로그 파일에 메시지를 쓰고, `My.Log` 개체는 <xref:System.Web.WebPageTraceListener> 클래스를 통해 ASP.NET 웹 페이지의 출력에 메시지를 씁니다.  
   
  디버그 출력은 응용 프로그램을 디버그 모드에서 실행할 때 [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] **출력** 창에서 볼 수 있습니다. **출력** 창을 열려면 **디버그** 메뉴 항목을 클릭하고 **창**을 가리킨 다음 **출력**을 클릭합니다. **출력** 창의 **다음에서 출력 보기** 상자에서 **디버그** 를 선택합니다.  
   
- 기본적으로 `My.Application.Log` 는 사용자의 응용 프로그램 데이터가 있는 경로에 로그 파일을 씁니다. <xref:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter%2A> 개체의 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> 속성에서 경로를 가져올 수 있습니다. 해당 경로의 형식은 다음과 같습니다.  
+ 기본적으로 `My.Application.Log` 는 사용자의 응용 프로그램 데이터가 있는 경로에 로그 파일을 씁니다. 경로는 <xref:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter%2A> 개체의 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> 속성에서 가져올 수 있습니다. 해당 경로의 형식은 다음과 같습니다.  
   
  `BasePath`\\`CompanyName`\\`ProductName`\\`ProductVersion`  
   
@@ -66,12 +67,12 @@ ms.lasthandoff: 03/13/2017
   
  C:\Documents and Settings\\`username`\Application Data  
   
- `CompanyName`, `ProductName`및 `ProductVersion` 값은 응용 프로그램의 어셈블리 정보에서 가져옵니다. 로그 파일 이름의 형식은 *AssemblyName*.log이며 여기서 *AssemblyName* 은 확장명을 제외한 어셈블리의 파일 이름입니다. 응용 프로그램에서 로그에 쓰려고 할 때 원본 로그를 사용할 수 없는 경우와 같이 둘 이상의 로그 파일이 필요한 경우 로그 파일 이름의 형식은 *AssemblyName*-*iteration*.log이며, 여기서 `iteration`은 양의 `Integer`입니다.  
+ `CompanyName`, `ProductName`및 `ProductVersion` 값은 응용 프로그램의 어셈블리 정보에서 가져옵니다. 로그 파일 이름의 형식은 *AssemblyName*.log이며 여기서 *AssemblyName* 은 확장명을 제외한 어셈블리의 파일 이름입니다. 응용 프로그램에서 로그에 쓰려고 할 때 원본 로그를 사용할 수 없는 경우와 같이 둘 이상의 로그 파일이 필요한 경우 로그 파일 이름의 형식은 *AssemblyName*-*iteration*.log이며 여기서 `iteration` 은 양의 `Integer`을 클릭합니다.  
   
- 컴퓨터 및 응용 프로그램의 구성 파일을 추가하거나 변경하여 기본 동작을 재정의할 수 있습니다. 자세한 내용은 [연습: My.Application.Log가 정보를 기록하는 위치 변경](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)을 참조하세요.  
+ 컴퓨터 및 응용 프로그램의 구성 파일을 추가하거나 변경하여 기본 동작을 재정의할 수 있습니다. 자세한 내용은 [Walkthrough: Changing Where My.Application.Log Writes Information](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)을 참조하십시오.  
   
 ## <a name="configuring-log-settings"></a>로그 설정 구성  
- `Log` 개체에는 응용 프로그램 구성 파일인 app.config 없이 작동하는 기본 구현이 있습니다. 기본값을 변경하려면 새 설정이 지정된 구성 파일을 추가해야 합니다. 자세한 내용은 [연습: My.Application.Log 출력 필터링](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)을 참조하세요.  
+ `Log` 개체에는 응용 프로그램 구성 파일인 app.config 없이 작동하는 기본 구현이 있습니다. 기본값을 변경하려면 새 설정이 지정된 구성 파일을 추가해야 합니다. 자세한 내용은 [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)을 참조하세요.  
   
  로그 구성 섹션은 app.config 파일의 주 `<system.diagnostics>` 노드에 있는 `<configuration>` 노드에 있습니다. 로그 정보는 다음과 같은 여러 노드에 정의되어 있습니다.  
   

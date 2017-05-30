@@ -15,10 +15,11 @@ caps.latest.revision: 9
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: 87898a4a6ba3d3ef4c53fd1c6b8f94ff353f10e4
-ms.lasthandoff: 04/18/2017
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>스레드로부터 안전한 컬렉션 사용 시기
@@ -41,25 +42,25 @@ ms.lasthandoff: 04/18/2017
  컴퓨터의 코어 수에 비례하는 성능의 증가입니다. 배율이 두 개의 코어를 사용하는 경우보다 8개의 코어를 사용하는 경우 더 빠르게 수행하는 알고리즘입니다.  
   
 ## <a name="concurrentqueuet-vs-queuet"></a>ConcurrentQueue(T) 및 Queue(T)  
- 각 요소에 대한 처리 시간이 매우 작은 순수 생산자-소비자 시나리오(몇 가지 지침)에서 <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=fullName>는 외부 잠금이 있는 <xref:System.Collections.Generic.Queue%601?displayProperty=fullName>를 통해 어느 정도의 성능 이점을 제공할 수 있습니다. 이 시나리오에서 <xref:System.Collections.Concurrent.ConcurrentQueue%601>는 하나의 전용 스레드가 큐에 대기 중이고 다른 하나의 전용 스레드가 큐에서 해제되는 경우 최고의 성능을 발휘합니다. 이 규칙을 적용하지 않을 경우 <xref:System.Collections.Generic.Queue%601>는 다중 코어를 갖는 <xref:System.Collections.Concurrent.ConcurrentQueue%601> 컴퓨터에서보다 약간 더 빠르게 작동될 수 있습니다.  
+ 명령이 몇 개뿐이어서 각 요소에 대한 처리 시간이 매우 짧은 순수 생산자-소비자 시나리오의 경우 <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=fullName>를 사용하면 외부 잠금이 있는 <xref:System.Collections.Generic.Queue%601?displayProperty=fullName>을 통해 성능을 어느 정도 개선할 수 있습니다. 이 시나리오에서 <xref:System.Collections.Concurrent.ConcurrentQueue%601>은 하나의 전용 스레드가 큐에 대기 중이고 다른 하나의 전용 스레드가 큐에서 해제되는 경우 최고의 성능을 발휘합니다. 이 규칙을 적용하지 않는 경우 <xref:System.Collections.Generic.Queue%601>은 다중 코어인 컴퓨터의 <xref:System.Collections.Concurrent.ConcurrentQueue%601>보다 약간 더 빠르게 수행할 수 있습니다.  
   
- 처리 시간이 500FLOPS(부동 소수점 연산) 이상인 경우 매우 우수한 확장성을 가진 두 개의 스레드 규칙은 <xref:System.Collections.Concurrent.ConcurrentQueue%601>에 적용되지 않습니다. <xref:System.Collections.Generic.Queue%601>는 이 시나리오에서는 잘 확장되지 않습니다.  
+ 처리 시간이 500FLOPS(부동 소수점 연산) 이상인 경우 매우 우수한 확장성을 가진 두 개의 스레드 규칙은 <xref:System.Collections.Concurrent.ConcurrentQueue%601>에 적용되지 않습니다. <xref:System.Collections.Generic.Queue%601>는 이 시나리오에서 잘 확장되지 않습니다.  
   
- 혼합 생산자-소비자 시나리오에서 처리 시간이 매우 짧을 때는 외부 잠금이 있는 <xref:System.Collections.Generic.Queue%601>가 <xref:System.Collections.Concurrent.ConcurrentQueue%601>보다 더 잘 확장됩니다. 그러나 처리 시간이 500FLOPS 이상이면 <xref:System.Collections.Concurrent.ConcurrentQueue%601>가 더 잘 확장됩니다.  
+ 혼합 생산자-소비자 시나리오에서 처리 시간이 매우 작은 경우 <xref:System.Collections.Generic.Queue%601>의 외부 잠금 배율은 <xref:System.Collections.Concurrent.ConcurrentQueue%601>에 비해 우수합니다. 그러나 처리 시간이 500FLOPS 이상인 경우 <xref:System.Collections.Concurrent.ConcurrentQueue%601>의 확장성이 더 우수합니다.  
   
 ## <a name="concurrentstack-vs-stack"></a>ConcurrentStack 및 스택  
- 처리 시간이 매우 짧으면 순수 생산자-소비자 시나리오에서 외부 잠금이 있는 <xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=fullName> 및 <xref:System.Collections.Generic.Stack%601?displayProperty=fullName>은 하나의 전용 푸싱 스레드 및 하나의 전용 팝업 스레드에 대해 거의 동일하게 작동할 수 있습니다. 그러나 스레드 수가 증가하면 경합 증가로 인해 두 형식이 모두 느려지며 <xref:System.Collections.Generic.Stack%601>이 <xref:System.Collections.Concurrent.ConcurrentStack%601>보다 더 잘 작동할 수 있습니다. 처리 시간이 500FLOPS 이상인 경우 두 형식은 거의 동일한 속도로 확장합니다.  
+ 순수 생산자-소비자 시나리오에서 처리 시간이 매우 짧으면 외부 잠금이 있는 <xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=fullName> 및 <xref:System.Collections.Generic.Stack%601?displayProperty=fullName>의 성능은 전용 푸싱 스레드와 전용 팝업 스레드를 하나씩 사용하는 경우 거의 동일할 가능성이 높습니다. 그러나 스레드가 증가하면 경합 증가로 인해 두 유형의 성능이 모두 저하되고 <xref:System.Collections.Generic.Stack%601>이 <xref:System.Collections.Concurrent.ConcurrentStack%601>보다 우수한 결과를 수행할 수 있습니다. 처리 시간이 500FLOPS 이상인 경우 두 형식은 거의 동일한 속도로 확장합니다.  
   
- 혼합 생산자-소비자 시나리오에서 <xref:System.Collections.Concurrent.ConcurrentStack%601>은 소규모 및 대규모 작업에서 더 빠릅니다.  
+ 혼합 생산자-소비자 시나리오에서는 <xref:System.Collections.Concurrent.ConcurrentStack%601>이 소규모 및 대규모 워크로드를 빠르게 처리합니다.  
   
- <xref:System.Collections.Concurrent.ConcurrentStack%601.PushRange%2A> 및 <xref:System.Collections.Concurrent.ConcurrentStack%601.TryPopRange%2A>를 사용하면 액세스 시간을 크게 단축할 수 있습니다.  
+ <xref:System.Collections.Concurrent.ConcurrentStack%601.PushRange%2A> 및 <xref:System.Collections.Concurrent.ConcurrentStack%601.TryPopRange%2A>를 사용하면 액세스 시간을 크게 절약할 수 있습니다.  
   
 ## <a name="concurrentdictionary-vs-dictionary"></a>ConcurrentDictionary 및 사전  
- 일반적으로 여러 스레드에서 동시에 키 또는 값을 추가하고 업데이트 모든 시나리오에서 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName>를 사용합니다. 잦은 업데이트 및 비교적 적은 읽기를 포함하는 시나리오에서 <xref:System.Collections.Concurrent.ConcurrentDictionary%602>는 일반적으로 어느 정도 이점을 제공합니다. 많은 읽기 및 업데이트를 포함하는 시나리오에서 <xref:System.Collections.Concurrent.ConcurrentDictionary%602>는 일반적으로 코어를 가진 컴퓨터에서 훨씬 빠릅니다.  
+ 일반적으로는 여러 스레드에서 키나 값을 동시에 추가하고 업데이트하는 모든 시나리오에서 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName>를 사용합니다. 잦은 업데이트 및 비교적 적은 읽기를 포함하는 시나리오에서 <xref:System.Collections.Concurrent.ConcurrentDictionary%602>은 일반적으로 어느 정도 이점을 제공합니다. 많은 읽기 및 업데이트를 포함하는 시나리오에서 <xref:System.Collections.Concurrent.ConcurrentDictionary%602>은 일반적으로 코어를 가진 컴퓨터에서 훨씬 빠릅니다.  
   
  잦은 업데이트를 포함하는 시나리오에서 <xref:System.Collections.Concurrent.ConcurrentDictionary%602>의 동시성 수준을 증가시키고 더 많은 코어가 있는 컴퓨터에서 성능이 향상되는지를 측정할 수 있습니다. 동시성 수준을 변경하면 가능한 한 글로벌 운영을 하지 마십시오.  
   
- 사전이 모든 스레드에서 수정되지 않은 경우 동기화가 필요하지 않기 때문에 키 또는 값을 읽기만 할 때는 <xref:System.Collections.Generic.Dictionary%602>가 더 빠릅니다.  
+ 사전이 어떤 스레드에서도 수정되지 않는 경우에는 동기화가 필요하지 않기 때문에 키 또는 값을 읽기만 할 때는 <xref:System.Collections.Generic.Dictionary%602>가 더 빠릅니다.  
   
 ## <a name="concurrentbag"></a>ConcurrentBag  
  순수 생산자-소비자 시나리오에서 <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=fullName>은 다른 동시 컬렉션 형식보다 더 느리게 작동할 수 있습니다.  
@@ -67,7 +68,7 @@ ms.lasthandoff: 04/18/2017
  혼합 생산자-소비자 시나리오에서 <xref:System.Collections.Concurrent.ConcurrentBag%601>은 일반적으로 크고 작은 작업에 대한 다른 동시 컬렉션 형식보다 훨씬 빠르고 확장성이 큽니다.  
   
 ## <a name="blockingcollection"></a>BlockingCollection  
- 경계 및 차단 구문이 필요한 경우 <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=fullName>은 사용자 지정 구현을 보다 빠르게 수행할 수 있습니다. 또한 여러 가지 취소, 열거 및 예외 처리를 지원합니다.  
+ 경계 및 차단 구문이 필요한 경우에는 어떤 사용자 지정 구현보다 <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=fullName>을 사용하는 것이 더 속도가 빠를 가능성이 높습니다. 또한 여러 가지 취소, 열거 및 예외 처리를 지원합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Collections.Concurrent?displayProperty=fullName>   

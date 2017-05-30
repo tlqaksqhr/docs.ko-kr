@@ -59,7 +59,7 @@ ms.lasthandoff: 05/22/2017
   
 -   배열 요소 형식은 배열 형식을 비롯한 어떤 형식도 될 수 있습니다.  
   
--   배열 형식은 <xref:System.Array> 추상 기본 형식에서 파생된 [참조 형식](../../../csharp/language-reference/keywords/reference-types.md)입니다. 이 형식으로 <xref:System.Collections.IEnumerable> 및 <xref:System.Collections.Generic.IEnumerable%601>이 구현되므로 C#에서 모든 배열에 대해 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 반복을 사용할 수 있습니다.  
+-   배열 형식은 <xref:System.Array> 추상 기본 형식에서 파생된 [참조 형식](../../../csharp/language-reference/keywords/reference-types.md)입니다. 이 형식은 <xref:System.Collections.IEnumerable> 및 <xref:System.Collections.Generic.IEnumerable%601>을 구현하므로 C#의 모든 배열에서 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 반복을 사용할 수 있습니다.  
   
 ## <a name="related-sections"></a>관련 단원  
   
