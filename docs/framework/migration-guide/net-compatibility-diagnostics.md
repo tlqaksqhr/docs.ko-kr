@@ -200,7 +200,7 @@ ms.lasthandoff: 05/22/2017
 |범위|Microsoft Edge|  
 |버전|4.5|  
 |형식|런타임|  
-|영향을 받는 API|<xref:System.Xml.Linq.LoadOptions?displayProperty=fullName>|  
+|영향을 받는 API|<xref:System.Xml.Linq.LoadOptions.SetLineInfo?displayProperty=fullName>|  
 |분석기|CD0019|  
   
 <a name="diagnostic20"></a>   
