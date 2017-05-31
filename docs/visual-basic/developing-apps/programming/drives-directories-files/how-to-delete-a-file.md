@@ -1,75 +1,92 @@
 ---
-title: "How to: Delete a File in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Delete method"
-  - "files, deleting"
-  - "files, manipulating"
-  - "File object"
+title: "방법: Visual Basic에서 파일 삭제 | Microsoft Docs"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Delete method
+- files, deleting
+- files, manipulating
+- File object
 ms.assetid: 4b721769-3e45-4be7-b7fe-b08dc4141b44
 caps.latest.revision: 24
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 24
----
-# How to: Delete a File in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: f6cf3192d6983b6222815c5c77a3dfd0b3845650
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
-`My.Computer.FileSystem` 개체의 `DeleteFile` 메서드를 사용하면 파일을 삭제할 수 있습니다.  이 메서드에서는 삭제된 파일을 **휴지통**으로 보낼 것인지 여부, 파일 삭제를 사용자에게 확인할 것인지 여부, 사용자가 작업을 취소했을 때 수행할 작업 등의 옵션을 제공합니다.  
+---
+# <a name="how-to-delete-a-file-in-visual-basic"></a>방법: Visual Basic에서 파일 삭제
+`My.Computer.FileSystem` 개체의 `DeleteFile` 메서드를 사용하면 파일을 삭제할 수 있습니다. 삭제된 파일을 **휴지통**으로 보낼지 여부, 사용자에게 파일 삭제를 확인하는 메시지를 표시할지 여부, 사용자가 작업을 취소할 때 수행할 작업 등의 옵션이 제공됩니다.  
   
-### 텍스트 파일을 삭제하려면  
+### <a name="to-delete-a-text-file"></a>텍스트 파일을 삭제하려면  
   
--   `DeleteFile` 메서드를 사용하여 파일을 삭제합니다.  다음 코드에서는 `test.txt`라는 이름의 파일을 삭제하는 방법을 보여 줍니다.  
+-   `DeleteFile` 메서드를 사용하여 파일을 삭제합니다. 다음 코드에서는 `test.txt`라는 파일을 삭제하는 방법을 보여 줍니다.  
   
      [!code-vb[VbVbcnMyFileSystem#22](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-delete-a-file_1.vb)]  
   
-### 텍스트 파일을 삭제하고 사용자에게 파일을 삭제할 것인지 확인하려면  
+### <a name="to-delete-a-text-file-and-ask-the-user-to-confirm-that-the-file-should-be-deleted"></a>텍스트 파일을 삭제하고 사용자에게 파일 삭제를 확인하는 메시지를 표시하려면  
   
--   `DeleteFile` 메서드를 사용하여 `showUI`를 `AllDialogs`로 설정하여 파일을 삭제합니다.  다음 코드에서는 `test.txt`라는 파일을 삭제하고 사용자에게 파일을 삭제할 것인지 확인하는 방법을 보여 줍니다.  
+-   `showUI`를 `AllDialogs`로 설정하여 `DeleteFile` 메서드를 통해 파일을 삭제합니다. 다음 코드에서는 `test.txt`라는 파일을 삭제하고 사용자가 파일 삭제를 확인할 수 있도록 하는 방법을 보여 줍니다.  
   
      [!code-vb[VbFileIOMisc#9](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-delete-a-file_2.vb)]  
   
-### 텍스트 파일을 삭제하고 휴지통으로 보내려면  
+### <a name="to-delete-a-text-file-and-send-it-to-the-recycle-bin"></a>텍스트 파일을 삭제하고 휴지통으로 보내려면  
   
--   `DeleteFile` 메서드를 사용하여 `recycle` 매개 변수에 `SendToRecycleBin`을 지정하여 파일을 삭제합니다.  다음 코드에서는 `test.txt`라는 파일을 삭제하고 **휴지통**으로 보내는 방법을 보여 줍니다.  
+-   `recycle` 매개 변수에 대해 `SendToRecycleBin`을 지정하여 `DeleteFile` 메서드를 통해 파일을 삭제합니다. 다음 코드에서는 `test.txt`라는 파일을 삭제하고 **휴지통**으로 보내는 방법을 보여 줍니다.  
   
      [!code-vb[VbFileIOMisc#10](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-delete-a-file_3.vb)]  
   
-## 강력한 프로그래밍  
- 다음 조건에서 예외가 발생할 수 있습니다.  
+## <a name="robust-programming"></a>강력한 프로그래밍  
+ 다음 조건에서 예외가 발생합니다.  
   
--   길이가 0인 문자열이거나, 공백만 포함하거나, 잘못된 문자를 포함하거나, \\\\.\\로 시작하는 장치 경로와 같은 여러 가지 이유 중 하나로 경로가 올바르지 않은 경우  \\\) \(<xref:System.ArgumentException>\).  
+-   길이가 0인 문자열이거나, 공백만 포함하거나, 잘못된 문자를 포함하거나, 경로가 장치 경로인 경우(\\\\.\\로 시작됨)와 같은 여러 가지 이유 중 하나로 경로가 올바르지 않은 경우(<xref:System.ArgumentException>)  
   
--   경로가 `Nothing`이기 때문에 올바르지 않은 경우\(<xref:System.ArgumentNullException>\)  
+-   경로가 `Nothing`이기 때문에 유효하지 않은 경우(<xref:System.ArgumentNullException>)  
   
--   경로가 시스템 정의 최대 길이를 초과하는 경우\(<xref:System.IO.PathTooLongException>\)  
+-   경로가 시스템 정의 최대 길이를 초과하는 경우(<xref:System.IO.PathTooLongException>)  
   
--   경로의 파일 이름이나 폴더 이름에 콜론\(:\)이 있거나 이름의 형식이 잘못된 경우\(<xref:System.NotSupportedException>\)  
+-   경로의 파일 이름이나 폴더 이름에 콜론(:)이 있거나 이름의 형식이 잘못된 경우(<xref:System.NotSupportedException>)  
   
--   파일이 사용 중인 경우\(<xref:System.IO.IOException>\)  
+-   파일이 사용 중인 경우(<xref:System.IO.IOException>)  
   
--   경로를 보는 데 필요한 권한이 사용자에게 없는 경우\(<xref:System.Security.SecurityException>\)  
+-   경로를 보는 데 필요한 권한이 사용자에게 없는 경우(<xref:System.Security.SecurityException>)  
   
--   파일이 없는 경우\(<xref:System.IO.FileNotFoundException>\)  
+-   파일이 없는 경우(<xref:System.IO.FileNotFoundException>)  
   
--   사용자에게 파일을 삭제할 권한이 없거나 파일이 읽기 전용인 경우\(<xref:System.UnauthorizedAccessException>\)  
+-   사용자에게 파일을 삭제할 수 있는 권한이 없거나 파일이 읽기 전용인 경우(<xref:System.UnauthorizedAccessException>)  
   
--   사용자에게 충분한 권한이 없는 부분 신뢰 상황인 경우\(<xref:System.Security.SecurityException>\)  
+-   사용자에게 충분한 사용 권한이 없는 부분 신뢰 상황이 있는 경우(<xref:System.Security.SecurityException>)  
   
--   사용자가 작업을 취소했고 `onUserCancel`이 `ThrowException`으로 설정된 경우\(<xref:System.OperationCanceledException>\)  
+-   사용자가 작업을 취소했으며 `onUserCancel`이 `ThrowException`으로 설정된 경우(<xref:System.OperationCanceledException>)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.VisualBasic.FileIO.UICancelOption>   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>   
  <xref:Microsoft.VisualBasic.FileIO.UIOption>   
  <xref:Microsoft.VisualBasic.FileIO.RecycleOption>   
- [How to: Get the Collection of Files in a Directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+ [방법: 디렉터리의 파일 컬렉션 가져오기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

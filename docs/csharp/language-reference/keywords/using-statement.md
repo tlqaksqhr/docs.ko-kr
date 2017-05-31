@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 587e50d5c81c19d75e9d8bf4779064947a373b71
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 49d7f0dc14f6595ed1e96e5072766dc119f22127
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="using-statement-c-reference"></a>using 문(C# 참조)
@@ -41,8 +42,8 @@ ms.lasthandoff: 03/13/2017
   
  [!code-cs[csrefKeywordsNamespace#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-statement_1.cs)]  
   
-## <a name="remarks"></a>주의  
- <xref:System.IO.File> 및 <xref:System.Drawing.Font>는 관리되지 않는 리소스에 액세스하는 관리되는 형식의 예입니다(이 경우 파일 핸들 및 장치 컨텍스트). 다른 많은 종류의 관리되지 않는 리소스 및 이를 캡슐화하는 클래스 라이브러리 형식이 있습니다. 그러한 모든 형식은 <xref:System.IDisposable> 인터페이스를 구현해야 합니다.  
+## <a name="remarks"></a>설명  
+ <xref:System.IO.File> 및 <xref:System.Drawing.Font>는 관리되지 않는 리소스에 액세스하는 관리되는 형식의 예입니다(이 경우 파일 핸들 및 장치 컨텍스트). 다른 많은 종류의 관리되지 않는 리소스 및 이를 캡슐화하는 클래스 라이브러리 형식이 있습니다. 이러한 형식은 모두 <xref:System.IDisposable> 인터페이스를 구현해야 합니다.  
   
  일반적으로 `IDisposable` 개체를 사용할 경우 `using` 문에서 선언 및 인스턴스화해야 합니다. `using` 문은 올바른 방법으로 개체에서 <xref:System.IDisposable.Dispose%2A> 메서드를 호출하며, (앞서 설명한 대로 사용하는 경우) <xref:System.IDisposable.Dispose%2A>가 호출되자마자 개체 자체가 범위를 벗어나도록 만듭니다. `using` 블록 내에서 개체는 읽기 전용이며 수정하거나 다시 할당할 수 없습니다.  
   
@@ -59,12 +60,12 @@ ms.lasthandoff: 03/13/2017
  [!code-cs[csrefKeywordsNamespace#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/using-statement_4.cs)]  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [C# 참조](../../../csharp/language-reference/index.md)   
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
  [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
  [using 지시문](../../../csharp/language-reference/keywords/using-directive.md)   
- [가비지 수집](../../../standard/garbagecollection/index.md)   
- [Dispose 메서드 구현](http://msdn.microsoft.com/library/eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9)
+ [가비지 수집](../../../standard/garbage-collection/index.md)   
+ [Dispose 메서드 구현](../../../standard/garbage-collection/implementing-dispose.md)
