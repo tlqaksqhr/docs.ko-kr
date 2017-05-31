@@ -41,7 +41,7 @@ ms.lasthandoff: 05/10/2017
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 /appconfig:file  
 ```  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 05/10/2017
 ## <a name="example"></a>예제  
  다음 예제에서는 응용 프로그램이 두 구현에 모두 있는 .NET Framework 어셈블리의 .NET Framework for Silverlight 구현과 .NET Framework 구현 둘 다에 대한 참조를 사용할 수 있도록 하는 app.config 파일을 보여 줍니다. **/appconfig** 컴파일러 옵션은 이 app.config 파일의 위치를 지정합니다.  
   
-```  
+```xml  
 <configuration>  
       <runtime>  
       <assemblyBinding>  

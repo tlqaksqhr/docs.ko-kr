@@ -43,7 +43,7 @@ ms.lasthandoff: 05/22/2017
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 /checked[+ | -]  
 ```  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 05/22/2017
 ## <a name="example"></a>예제  
  다음 명령은 `t2.cs`를 컴파일합니다. 명령에서 `/checked`를 사용하면 `checked` 또는 `unchecked` 키워드의 범위에 없고 데이터 형식 범위를 벗어난 값을 생성하는 파일의 정수 산술 문이 런타임에 예외를 일으키도록 지정합니다.  
   
-```  
+```console  
 csc t2.cs /checked  
 ```  
   

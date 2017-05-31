@@ -48,7 +48,7 @@ ms.lasthandoff: 03/31/2017
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 /reference:[alias=]filename  
 /reference:filename  
 ```  
@@ -95,7 +95,7 @@ ms.lasthandoff: 03/31/2017
   
  이렇게 하면 외부 별칭 "GridV1" 및 "GridV2"가 설정되며, 프로그램에서 extern 문을 통해 사용됩니다.  
   
-```  
+```csharp  
 extern alias GridV1;  
 extern alias GridV2;  
 // Using statements go here.  
@@ -103,13 +103,13 @@ extern alias GridV2;
   
  이 작업이 완료되면 다음과 같이 컨트롤 이름 앞에 GridV1을 추가하여 grid.dll에서 그리드 컨트롤을 참조할 수 있습니다.  
   
-```  
+```csharp  
 GridV1::Grid  
 ```  
   
  또한 다음과 같이 컨트롤 이름 앞에 GridV2를 추가하여 grid20.dll에서 그리드 컨트롤을 참조할 수 있습니다.  
   
-```  
+```csharp  
 GridV2::Grid   
 ```  
   

@@ -43,7 +43,7 @@ ms.lasthandoff: 05/10/2017
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 /debug[+ | -]  
 /debug:{full | pdbonly}  
 ```  
@@ -82,7 +82,7 @@ ms.lasthandoff: 05/10/2017
 ## <a name="example"></a>예제  
  출력 파일 `app.pdb`에 디버깅 정보를 넣습니다.  
   
-```  
+```console  
 csc /debug /pdb:app.pdb test.cs  
 ```  
   
