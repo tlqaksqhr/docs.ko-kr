@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
-translationtype: Human Translation
-ms.sourcegitcommit: 519253bd6dc105afb138268c62347c29a6072fbb
-ms.openlocfilehash: 9cb957973e68129194c998c88e398351b48819ec
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
+ms.openlocfilehash: e0ba4886bd954c8e772a85a677775167e7c4bc53
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -37,12 +38,12 @@ ms.lasthandoff: 03/07/2017
 
 다음은 .NET Core용 핵심 NuGet 패키지의 목록입니다.
 
-- [System.Runtime](https://www.nuget.org/packages/System.Runtime) - 가장 기본적인 .NET Core 패키지로 [Object](http://docs.microsoft.com/dotnet/core/api/System.Object), [String](http://docs.microsoft.com/dotnet/core/api/System.String), [Array](http://docs.microsoft.com/dotnet/core/api/System.Array), [Action](http://docs.microsoft.com/dotnet/core/api/System.Action) 및 [IList&lt;T&gt;](http://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.IList-1) 포함.
-- [System.Collections](https://www.nuget.org/packages/System.Collections) - 주로 제네릭 컬렉션 집합으로 [List&lt;T&gt;](http://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.List-1) 및 [Dictionary&lt;K,V&gt;](http://docs.microsoft.com/dotnet/core/api/System.Collections.Generic.Dictionary-2) 포함.
-- [System.Net.Http](https://www.nuget.org/packages/System.Net.Http) - HTTP 네트워크 통신에 대한 형식의 집합으로 [HttpClient](http://docs.microsoft.com/dotnet/core/api/System.Net.Http.HttpClient) 및 [HttpResponseMessage](http://docs.microsoft.com/dotnet/core/api/System.Net.Http.HttpResponseMessage) 포함.
-- [System.IO.FileSystem](https://www.nuget.org/packages/System.IO.FileSystem) - 로컬 및 네트워크 디스크 기본 저장소에 대한 읽기 및 쓰기를 위한 형식의 집합으로 [File](http://docs.microsoft.com/dotnet/core/api/System.IO.File) 및 [Directory](http://docs.microsoft.com/dotnet/core/api/System.IO.Directory) 포함.
-- [System.Linq](https://www.nuget.org/packages/System.Linq) - 개체 쿼리를 위한 형식의 집합으로 Enumerable 및 [ILookup&lt;TKey, TElement&gt;](http://docs.microsoft.com/dotnet/core/api/System.Linq.ILookup-2) 포함.
-- [System.Reflection](https://www.nuget.org/packages/System.Reflection) - 형식의 로드, 검사 및 활성화를 위한 형식의 집합으로 [Assembly](http://docs.microsoft.com/dotnet/core/api/System.Reflection.Assembly), [TypeInfo](http://docs.microsoft.com/dotnet/core/api/System.Reflection.TypeInfo) 및 [MethodInfo](http://docs.microsoft.com/dotnet/core/api/System.Reflection.MethodInfo) 포함.
+- [System.Runtime](https://www.nuget.org/packages/System.Runtime) - 가장 기본적인 .NET Core 패키지로, <xref:System.Object>, <xref:System.String>, <xref:System.Array>, <xref:System.Action> 및 <xref:System.Collections.Generic.IList%601>를 포함합니다.
+- [System.Collections](https://www.nuget.org/packages/System.Collections) - 주로 제네릭 컬렉션 집합으로, <xref:System.Collections.Generic.List%601> 및 <xref:System.Collections.Generic.Dictionary%602>를 포함합니다.
+- [System.Net.Http](https://www.nuget.org/packages/System.Net.Http) - HTTP 네트워크 통신을 위한 형식 집합으로, <xref:System.Net.Http.HttpClient> 및 <xref:System.Net.Http.HttpResponseMessage>를 포함합니다.
+- [System.IO.FileSystem](https://www.nuget.org/packages/System.IO.FileSystem) - 로컬 또는 네트워크 디스크 기반 저장소에 대한 읽기 및 쓰기를 위한 형식 집합으로, <xref:System.IO.File> 및 <xref:System.IO.Directory>를 포함합니다.
+- [System.Linq](https://www.nuget.org/packages/System.Linq) - 개체 쿼리를 위한 형식 집합으로, `Enumerable` 및 <xref:System.Linq.ILookup%602>을 포함합니다.
+- [System.Reflection](https://www.nuget.org/packages/System.Reflection) - 형식의 로드, 검사 및 활성화를 위한 형식 집합으로, <xref:System.Reflection.Assembly>, <xref:System.Reflection.TypeInfo> 및 <xref:System.Reflection.MethodInfo>를 포함합니다.
 
 일반적으로 패키지별로 프로젝트에 패키지를 포함하는 것보다는 종종 함께 사용되는 패키지 집합인 *메타패키지*를 포함하는 것이 훨씬 더 간단합니다. (메타패키지에 대한 자세한 내용은 다음 단원을 참조하세요.) 그러나 단일 패키지가 필요한 경우 [System.Runtime](https://www.nuget.org/packages/System.Runtime/) 패키지를 참조하는 아래 예제에서처럼 포함할 수 있습니다. 
 

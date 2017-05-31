@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 038a67e3e7c3c9c120d76faa82cfc046233ab5df
-ms.lasthandoff: 03/02/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
+ms.openlocfilehash: 007d96cf7d174e7849a2b9c8439cfac893c7aa5c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/12/2017
 
 ---
  
@@ -97,7 +98,7 @@ npm install -g yo generator-aspnet generator-docker
 
 참조 지점으로 응용 프로그램을 컨테이너화하기 전에 먼저 로컬로 응용 프로그램을 실행합니다. 
 
-완성된 응용 프로그램은 [GitHub의 dotnet/core-docs 리포지토리](https://github.com/dotnet/docs/tree/master/samples/core/docker/building-net-docker-images)에 있습니다.
+완성된 응용 프로그램은 [GitHub의 dotnet/docs 리포지토리](https://github.com/dotnet/docs/tree/master/samples/core/docker/building-net-docker-images)에 있습니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
 
 응용 프로그램에 대한 디렉터리를 만듭니다.
 
@@ -145,7 +146,6 @@ $ yo docker
 ❯ .NET Core
   Golang
   Node.js
-
 ```
 
 - `.NET Core`를 프로젝트 형식으로 선택

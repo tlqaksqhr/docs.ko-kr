@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 0d6e1e34-277c-4aaf-9880-3ebf81023857
-translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 0579d59e8da24428d9e174baf0cc865d62c08195
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
+ms.openlocfilehash: 7ef4ce7a953265816cd36a0ad08b77c227280bde
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/01/2017
 
 ---
 
@@ -33,7 +34,7 @@ SaaS CI 솔루션에는 몇 가지 옵션이 있습니다. 이 문서에서는 �
 
 Windows 플랫폼에서는 MSI를 사용할 수 있습니다. 
 
-안정적인 최신 릴리스를 안내하는 [.NET Core 시작 페이지](https://aka.ms/dotnetcoregs)에서 모든 이진을 찾을 수 있습니다. 더 새로운 릴리스(불안정할 수 있음)나 최신 릴리스를 사용하려면 [CLI 리포지토리](https://github.com/dotnet/cli)의 링크를 사용할 수 있습니다. 
+안정적인 최신 릴리스를 가리키는 [.NET Core 설치 가이드](https://aka.ms/dotnetcoregs)에서 모든 이진을 찾을 수 있습니다. 더 새로운 릴리스(불안정할 수 있음)나 최신 릴리스를 사용하려면 [CLI 리포지토리](https://github.com/dotnet/cli)의 링크를 사용할 수 있습니다. 
 
 ## <a name="using-the-installer-script"></a>설치 관리자 스크립트 사용
 설치 관리자 스크립트를 사용하면 관리자가 아닌 사용자도 빌드 서버에 설치할 수 있습니다. 자동화도 매우 쉽게 수행할 수 있습니다. 스크립트 자체는 필요한 ZIP/tarball 파일을 다운로드하고 압축을 풉니다. 또한 설치 후 바로 도구를 호출할 수 있도록 로컬 컴퓨터의 설치 위치를 PATH에 추가합니다. 
@@ -62,12 +63,12 @@ Travis는 빌드 행렬에서 `osx`(OS X 10.11) 및 `linux`(Ubuntu 14.04) 작업
 
 ### <a name="appveyor"></a>AppVeyor
 
-[appveyor.com ci](https://www.appveyor.com/)의 빌드 작업자 이미지 `Visual Studio 2015`에 .NET Core SDK preview2가 이미 설치되어 있습니다.
+[appveyor.com ci](https://www.appveyor.com/)의 빌드 작업자 이미지 `Visual Studio 2017`에 .NET Core SDK 1.0.1이 이미 설치되어 있습니다.
 
 다음을 사용하면 됩니다.
 
 ```yaml
-os: Visual Studio 2015
+os: Visual Studio 2017
 ```
 
 .NET Core SDK의 특정 버전을 설치할 수 있습니다. 자세한 내용은 [예제 appveyor.yml](https://github.com/dotnet/docs/blob/master/appveyor.yml)을 참조하세요. 

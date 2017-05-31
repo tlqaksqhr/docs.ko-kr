@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
-translationtype: Human Translation
-ms.sourcegitcommit: 9d770d008ff1223499de36b2b7b731d8ff6f0f2b
-ms.openlocfilehash: 7618af5bed33d2e1801b1a9c1351a1d09d49b86e
-ms.lasthandoff: 03/08/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d866cf8eab2b8db936d813ccae7882f8d7db5720
+ms.openlocfilehash: cf420d4379afbdb3c6db048c7817a4c143c124d9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/26/2017
 
 ---
 
@@ -22,19 +23,19 @@ ms.lasthandoff: 03/08/2017
 
 .NET Core 런타임 호스트는 고급 시나리오이며, .NET Core 빌드 프로세스는 .NET Core 응용 프로그램을 실행하는 기본 호스트를 제공하므로 대부분의 경우 .NET Core 개발자는 호스트에 대해 걱정할 필요가 없습니다. 그러나 일부 특수한 경우, 네이티브 프로세스에서 관리 코드를 호출하는 수단으로나 런타임 작동 방식에 대해 더 많은 제어 권한을 얻기 위해 .NET Core 런타임을 명시적으로 호스트한 것이 유용할 수 있습니다.
 
-이 문서에서는 네이티브 코드에서 .NET Core 런타임을 시작하고 초기 응용 프로그램 도메인(@System.AppDomain)을 만들고 관리 코드를 실행하는 데 필요한 단계에 대한 개요를 제공합니다.
+이 문서에서는 네이티브 코드에서 .NET Core 런타임을 시작하고, 초기 응용 프로그램 도메인(<xref:System.AppDomain>)을 만들고, 관리 코드를 실행하는 데 필요한 단계를 간략하게 설명합니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>필수 구성 요소
 
 호스트는 네이티브 응용 프로그램이기 때문에 이 자습서에서는 .NET Core를 호스트하는 C++ 응용 프로그램을 생성을 다룹니다. [Visual Studio](https://www.visualstudio.com/downloads/)에서 제공하는 C++ 개발 환경 같은 C++ 개발 환경이 필요합니다.
 
 또한 호스트를 테스트할 간단한 .NET Core 응용 프로그램이 필요하므로 [.NET Core SDK](https://www.microsoft.com/net/core)를 설치하고 [소규모 .NET Core 테스트 앱](../../csharp/getting-started/with-visual-studio.md)(예: 'Hello World' 앱)을 빌드해야 합니다. 새로운 .NET Core 콘솔 프로젝트 템플릿으로 만든 'Hello World' 앱으로 충분합니다.
 
-이 자습서와 해당 [관련 샘플](https://github.com/dotnet/docs/tree/master/samples/core/hosting)에서는 Windows 호스트를 빌드합니다. 그러나 Unix에서 호스트에 대해서는 이 문서의 마지막 부분을 참조하세요.
+이 자습서 및 관련 샘플에서는 Windows 호스트를 빌드합니다. Unix에서 호스트하는 방법에 대해서는 이 문서의 끝에 있는 참고를 참조하세요.
 
 ## <a name="creating-the-host"></a>호스트 만들기
 
-이 문서에 설명된 단계를 보여 주는 샘플 호스트는 [.NET Core 샘플](https://github.com/dotnet/docs/tree/master/samples/core/hosting) 리포지토리에서 사용할 수 있습니다. 샘플의 host.cpp 파일의 주석은 이 자습서에서 번호가 매겨진 단계를 샘플에서 수행되는 위치와 명확하게 연결합니다.
+이 문서에 설명된 단계를 보여 주는 [샘플 호스트](https://github.com/dotnet/docs/tree/master/samples/core/hosting)는 GitHub의 dotnet/docs 리포지토리에서 사용할 수 있습니다. 샘플의 *host.cpp* 파일에 있는 주석은 이 자습서에서 번호가 매겨진 단계를 샘플에서 수행되는 위치와 명확하게 연결합니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
 
 샘플 호스트는 학습 목적으로 사용되므로 오류 검사가 부족하며 효율성보다 가독성을 강조하도록 설계되었습니다. [dotnet/coreclr](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts) 리포지토리에서 더 많은 실제 호스트 샘플을 사용할 수 있습니다. 특히 [CoreRun 호스트](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts/corerun)는 간단한 샘플을 읽은 후 학습하기 좋은 일반 용도의 호스트입니다.
 
@@ -146,3 +147,4 @@ coreclrhost.h를 사용(mscoree.h 대신 직접적으로)하는 예는 [UnixCore
 처음에 작동되지 않으면, 호스트가 예상한 위치에서 *coreclr.dll*을 사용할 수 있고, 필요한 프레임워크 라이브러리가 모두 TPA 목록에 있으며 CoreCLR의 비트 수(32비트 또는 64비트)가 호스트가 빌드된 방식과 일치하는지 다시 확인합니다.
 
 .NET Core 런타임 호스트는 일부 개발자만 필요로 하는 고급 시나리오이지만, 네이티브 프로세스에서 관리 코드를 실행해야 하거나 .NET Core 런타임의 동작에 대해 더 많은 제어권이 필요한 경우 아주 유용할 수 있습니다. .NET Core는 자체를 나란히 실행할 수 있기 때문에 여러 버전의 .NET Core 런타임을 초기화 및 시작하는 호스트를 만들고 동일한 프로세스로 모든 호스트에서 앱을 실행할 수도 있습니다. 
+

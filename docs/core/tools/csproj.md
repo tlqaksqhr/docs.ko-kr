@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
-translationtype: Human Translation
-ms.sourcegitcommit: b4fb772973607b94e120377879a5dbdde2a25271
-ms.openlocfilehash: cd0b59b4a91dc4a83d73db55d8d0e611f73f63a6
-ms.lasthandoff: 03/15/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 81f31f1abc9db14b6b899564d67ca6e90d269ad7
+ms.openlocfilehash: 154f60d8f4c0f45d335c6125d5e6a106688dc8db
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/11/2017
 
 ---
 
@@ -21,12 +22,22 @@ ms.lasthandoff: 03/15/2017
 이 문서는 *project.json*에서 *csproj* 및 [MSBuild](https://github.com/Microsoft/MSBuild)로 프로젝트 시스템을 전환함에 따라 프로젝트 파일에 추가된 변경 내용을 간략하게 설명합니다. 일반 프로젝트 파일 구문 및 참조에 대한 자세한 내용은 [MSBuild 프로젝트 파일](https://docs.microsoft.com/visualstudio/msbuild/msbuild-project-file-schema-reference) 설명서를 참조하세요.  
 
 ## <a name="implicit-package-references"></a>암시적 패키지 참조
-메타패키지는 현재 프로젝트 파일의 `<TargetFramework>` 또는 `<TargetFrameworks>` 속성에 지정된 대상 프레임워크를 기준으로 암시적으로 참조됩니다. 대상 프레임워크가 `netcoreap1.x`인 경우 적합한 버전의 `Microsoft.NETCore.App` 메타패키지가 참조됩니다. 또는 대상 프레임워크가 `netstandard1.x`인 경우 적합한 버전의 `NetStandard.Library` 메타패키지가 참조됩니다.
+메타패키지는 프로젝트 파일의 `<TargetFramework>` 또는 `<TargetFrameworks>` 속성에 지정된 대상 프레임워크를 기준으로 암시적으로 참조됩니다. `<TargetFramework>`가 지정된 경우 `<TargetFrameworks>`는 순서와 관계없이 무시됩니다.
 
-나머지 동작에 대해서는 도구가 예상대로 작동하고, 대부분의 제스처가 동일하게 유지됩니다(예: `dotnet restore`). 
+```xml
+ <PropertyGroup>
+   <TargetFramework>netcoreapp1.1</TargetFramework>
+ </PropertyGroup>
+ ```
+ 
+ ```xml
+ <PropertyGroup>
+   <TargetFrameworks>netcoreapp1.1;net462</TargetFrameworks>
+ </PropertyGroup>
+ ```
 
 ### <a name="recommendations"></a>권장 사항
-`Microsoft.NETCore.App` 또는 `NetStandard.Library` 메타패키지가 현재 암시적으로 참조되기 때문에 권장되는 최선의 구현 방법은 다음과 같습니다.
+`Microsoft.NETCore.App` 또는 `NetStandard.Library` 메타패키지가 암시적으로 참조되기 때문에 권장되는 모범 사례는 다음과 같습니다.
 
 * 절대로 프로젝트 파일의 `<PackageReference>` 속성을 통해 `Microsoft.NETCore.App` 또는 `NetStandard.Library` 메타패키지를 명시적으로 참조하지 않습니다.
 * 특정 버전의 런타임이 필요한 경우 메타패키지를 참조하는 대신 프로젝트의 `<RuntimeFrameworkVersion>` 속성(예: `1.0.4`)을 사용해야 합니다.

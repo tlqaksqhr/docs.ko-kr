@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 74b87cdb-a244-4c13-908c-539118bfeef9
-translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: f3eaf007593336234c6eff20127e9d02d2d5c9fa
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 25847dd6921e547074f4501d34d865dfb1b98b59
+ms.openlocfilehash: de496d96120df1ec275bb4a69f01b6266b0b5a89
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/17/2017
 
 ---
 
@@ -23,7 +24,7 @@ ms.lasthandoff: 03/07/2017
 
 이 문서에서는 새 참조 형식을 설명합니다. 또한 프로젝트에 대한 이 새 참조 형식을 사용하여 패키지 종속성을 추가하는 방법을 보여 줍니다. 
 
-## <a name="the-new-packagereference-element"></a>새 <PackageReference> 요소
+## <a name="the-new-packagereference-element"></a>새 \<PackageReference> 요소
 `<PackageReference>`의 기본 구조는 다음과 같습니다.
 
 ```xml
@@ -72,3 +73,4 @@ MSBuild에 익숙한 경우 이미 존재하는 다른 참조 형식에 익숙�
 
 ## <a name="removing-a-dependency-from-the-project"></a>프로젝트에서 종속성 제거
 프로젝트 파일에서 종속성을 제거하는 작업은 프로젝트 파일에서 `<PackageReference>`를 단순히 제거하는 것입니다.
+

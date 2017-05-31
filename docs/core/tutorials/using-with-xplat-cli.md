@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 41632e63-d5c6-4427-a09e-51dc1116d45f
-translationtype: Human Translation
-ms.sourcegitcommit: e30414ac3dd48bbb060ad6f2a33a0a124cba0fa3
-ms.openlocfilehash: 6ffca900d5649823e6aa2e28486a64a2f7844efc
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: deb760878391856cf07bab04563d0ec19a1511e7
+ms.openlocfilehash: b1ff9218932d5ef49941ca427d9ee38503a9c103
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/30/2017
 
 ---
 
@@ -30,9 +31,9 @@ ms.lasthandoff: 03/22/2017
 
 ## <a name="hello-console-app"></a>Hello, 콘솔 앱!
 
-먼저, 원하는 이름의 폴더로 이동하거나 폴더를 새로 만듭니다. *Hello*는 샘플 코드에 대해 선택한 이름으로, [여기](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/HelloMsBuild)서 찾을 수 있습니다.
+GitHub의 dotnet/docs 리포지토리에서 [샘플 코드를 보거나 다운로드](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/HelloMsBuild)할 수 있습니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
 
-명령 프롬프트를 열고 다음을 입력합니다.
+명령 프롬프트를 열고 *Hello*라는 폴더를 만듭니다. 만든 폴더로 이동하고 다음을 입력합니다.
 
 ```
 $ dotnet new console
@@ -44,11 +45,11 @@ $ dotnet run
 
 1. `$ dotnet new console`
 
-[`dotnet new`](../tools/dotnet-new.md)는 콘솔 앱을 빌드하는 데 필요한 종속성이 있는 최신 `Hello.csproj` 프로젝트 파일입니다.  응용 프로그램에 대한 진입점을 포함하는 기본 파일인 `Program.cs`도 만듭니다.
+   [`dotnet new`](../tools/dotnet-new.md)는 콘솔 앱을 빌드하는 데 필요한 종속성이 있는 최신 `Hello.csproj` 프로젝트 파일입니다.  응용 프로그램에 대한 진입점을 포함하는 기본 파일인 `Program.cs`도 만듭니다.
    
-`Hello.csproj`:
+   `Hello.csproj`:
 
-[!code[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]   
+   [!code[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]   
 
    프로젝트 파일은 종속성을 복원하고 프로그램을 빌드하는 데 필요한 모든 항목을 지정합니다.
 
@@ -57,7 +58,7 @@ $ dotnet run
 
    `Program.cs`:
 
-[!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]   
+   [!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]   
 
    프로그램은 `using System`으로 시작됩니다. 즉, "`System` 네임스페이스의 모든 항목을 이 파일 범위로 가져옵니다". `System` 네임스페이스에는 `string` 또는 숫자 형식과 같은 기본 구문이 포함되어 있습니다.
 
@@ -65,7 +66,7 @@ $ dotnet run
 
 2. `$ dotnet restore`
 
-   [`dotnet restore`](../tools/dotnet-restore.md)는 [NuGet](http://nuget.org)(.NET 패키지 관리자)을 호출하여 종속성 트리를 복원합니다. NuGet은 *Hello.csproj* 파일을 분석하고, 파일에 명시된 종속성을 다운로드하고(또는 컴퓨터의 캐시에서 종속성을 가져오고), *obj/project.assets.json* 파일을 작성합니다.  *project.assets.json* 파일은 컴파일 및 실행하려면 필요합니다.
+   [`dotnet restore`](../tools/dotnet-restore.md)는 [NuGet](https://www.nuget.org/)(.NET 패키지 관리자)을 호출하여 종속성 트리를 복원합니다. NuGet은 *Hello.csproj* 파일을 분석하고, 파일에 명시된 종속성을 다운로드하고(또는 컴퓨터의 캐시에서 종속성을 가져오고), *obj/project.assets.json* 파일을 작성합니다.  *project.assets.json* 파일은 컴파일 및 실행하려면 필요합니다.
    
    *project.assets.json* 파일은 NuGet 종속성 및 앱을 설명하는 기타 정보로 구성된 그래프의 지속적이고 전체적인 집합입니다.  [`dotnet build`](../tools/dotnet-build.md) 및 [`dotnet run`](../tools/dotnet-run.md) 같은 다른 도구에서는 이 파일을 읽고, NuGet 종속성 및 바인딩 확인의 올바른 집합으로 소스 코드를 처리합니다.
    
@@ -93,32 +94,32 @@ $ dotnet run
 
 1. *Program.cs* 파일의 내용을 다음 코드로 바꿉니다.
 
-[!code-csharp[피보나치](../../../samples/core/console-apps/fibonacci-msbuild/Program.cs)]   
+   [!code-csharp[피보나치](../../../samples/core/console-apps/fibonacci-msbuild/Program.cs)]   
 
 2. [ `dotnet build` ](../tools/dotnet-build.md)를 실행하여 변경 내용을 컴파일합니다.
 
 3. 앱에 매개 변수를 전달하는 프로그램을 실행합니다.
 
-```
-$ dotnet run -- John
-Hello John!
-Fibonacci Numbers 1-15:
-1: 0
-2: 1
-3: 1
-4: 2
-5: 3
-6: 5
-7: 8
-8: 13
-9: 21
-10: 34
-11: 55
-12: 89
-13: 144
-14: 233
-15: 377
-```
+   ```
+   $ dotnet run -- John
+   Hello John!
+   Fibonacci Numbers 1-15:
+   1: 0
+   2: 1
+   3: 1
+   4: 2
+   5: 3
+   6: 5
+   7: 8
+   8: 13
+   9: 21
+   10: 34
+   11: 55
+   12: 89
+   13: 144
+   14: 233
+   15: 377
+   ```
 
 됐습니다!  원하는 대로 `Program.cs`를 보강할 수 있습니다.
 
@@ -128,33 +129,33 @@ Fibonacci Numbers 1-15:
 
 1. 다음 코드를 사용하여 *Hello* 디렉터리 내에 *FibonacciGenerator.cs*라는 새 파일을 추가합니다.
 
-[!code-csharp[피보나치 생성기](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]   
+   [!code-csharp[피보나치 생성기](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]   
 
 2. 다음 예제에서처럼 *Program.cs* 파일의 `Main` 메서드를 변경하여 새 클래스를 인스턴스화하고 메서드를 호출합니다.
 
-[!code-csharp[New Program.cs](../../../samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
+   [!code-csharp[New Program.cs](../../../samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
 
 3. [ `dotnet build` ](../tools/dotnet-build.md)를 실행하여 변경 내용을 컴파일합니다.
 
 4. [`dotnet run`](../tools/dotnet-run.md)을 실행하여 앱을 실행합니다. 다음은 프로그램 출력을 보여 줍니다.
 
-```
-0
-1
-1
-2
-3
-5
-8
-13
-21
-34
-55
-89
-144
-233
-377
-```
+   ```
+   0
+   1
+   1
+   2
+   3
+   5
+   8
+   13
+   21
+   34
+   55
+   89
+   144
+   233
+   377
+   ```
 
 됐습니다! 이제 여기에서 배운 기본 개념을 활용하여 고유의 프로그램을 만들 수 있습니다.
 
