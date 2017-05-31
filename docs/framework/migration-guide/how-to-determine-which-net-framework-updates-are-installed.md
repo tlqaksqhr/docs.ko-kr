@@ -17,10 +17,11 @@ caps.latest.revision: 6
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: e94e4e1036aa474ff011a50daa4a683fbe0ab47d
-ms.lasthandoff: 04/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: dc1c456c71efb3cc6e60a8fdc77384e65975f110
+ms.openlocfilehash: 6237bdaf1d12743bee71633acf8cef69c21b414e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="how-to-determine-which-net-framework-updates-are-installed"></a>방법: 설치된 .NET Framework 업데이트 확인
@@ -43,8 +44,7 @@ ms.lasthandoff: 04/18/2017
 ## <a name="example"></a>예제  
  다음 코드는 컴퓨터에 설치된 .NET Framework 업데이트를 프로그래밍 방식으로 확인합니다. 이 예제를 실행하려면 관리자 자격 증명이 있어야 합니다.  
   
- [!code-csharp[ListUpdates#1](../../../samples/snippets/csharp/VS_Snippets_CLR/listupdates/cs/program.cs#1)]
- [!code-vb[ListUpdates#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/listupdates/vb/program.vb#1)]  
+ [!code-csharp[ListUpdates#1](../../../samples/snippets/csharp/VS_Snippets_CLR/listupdates/cs/program.cs#1)] [!code-vb[ListUpdates#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/listupdates/vb/program.vb#1)]  
   
  이 예제는 다음과 유사한 출력 결과를 표시합니다.  
   
@@ -80,3 +80,4 @@ Microsoft .NET Framework 4 Extended
  [방법: 설치된 .NET Framework 버전 확인](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
  [설치 가이드](../../../docs/framework/install/guide-for-developers.md)   
  [버전 및 종속성](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+

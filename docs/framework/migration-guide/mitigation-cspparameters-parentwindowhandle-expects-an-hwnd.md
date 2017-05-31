@@ -2,6 +2,7 @@
 title: "완화: CspParameters.ParentWindowHandle에 HWND 필요 | Microsoft Docs"
 ms.custom: 
 ms.date: 04/07/2017
+ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -16,10 +17,11 @@ caps.latest.revision: 5
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9460c8b6ca8db927af4064e3567eca34c1bf5c91
-ms.openlocfilehash: 22c258b06a5cc8fa3fec72665d7e413b0cdd11ee
-ms.lasthandoff: 04/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
+ms.openlocfilehash: 31898c86adc687b63a1b7f02eee98aae9b16c5f7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-cspparametersparentwindowhandle-expects-an-hwnd"></a>완화: CspParameters.ParentWindowHandle에 HWND 필요
@@ -46,7 +48,7 @@ cspParameters.ParentWindowHandle = form.Handle;
 
 올바른 값이 `form.Handle` 값을 포함하는 메모리 위치의 주소임을 확인한 개발자는 <xref:System.Security.AppContext> 스위치 `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle`을 `true`로 설정하여 이러한 동작 변경을 옵트아웃(opt out)할 수 있습니다.
 
-- [AppContext](assetID:///T:System.Security.AppContext) 인스턴스에서 호환성 스위치를 프로그래밍 방식으로 설정
+- 프로그래밍 방식으로 <xref:System.Security.AppContext> 인스턴스의 호환성 스위치 설정
 
 - 다음 줄을 app.config 파일의 `<runtime>` 섹션에 추가
    

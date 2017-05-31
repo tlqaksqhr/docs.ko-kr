@@ -1,7 +1,7 @@
 ---
 title: ".NET Framework 버전 및 종속성 | Microsoft 문서"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 05/02/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,11 @@ caps.latest.revision: 122
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 06ffe36615212baab646198f13c897af5f0041fc
-ms.lasthandoff: 04/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: dc1c456c71efb3cc6e60a8fdc77384e65975f110
+ms.openlocfilehash: c51d905ab1b2dc6ca923463536ecdc19735d7643
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 버전 및 종속성
@@ -38,8 +39,8 @@ ms.lasthandoff: 04/18/2017
   
 |.NET Framework 버전|CLR 버전|기능|포함된 Visual Studio 버전|✓ 다음에서 포함된 버전:<br />+ 다음에서 설치 가능한 버전:<br />Windows|✓ 다음에서 포함된 버전:<br />+ 다음에서 설치 가능한 버전:<br />Windows Server|설치된 .NET 버전 확인 방법|  
 |----------------------------|-----------------|--------------|---------------------------------------|----------------------------------------------------|-----------------------------------------------------------|-----------------------------------------| 
-|.NET 4.7|4|- 운영 체제에서 제공하는 TLS 지원 수준 지원.<br/> - TLS1.1 또는 TLS1.2에 대한 기본 메시지 보안 설정 구성 가능. <br /> - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 안정성 향상. <br /> - WCF 응용 프로그램을 사용한 직렬화 및 역직렬화 안정성 향상. <br /> - ASP.NET 개체 캐시 확장 가능. <br /> - WPF 응용 프로그램용 WISP(Windows 잉크 서비스 플랫폼) 대신 `WM_POINTER` Windows 메시지 기반의 터치/스타일러스 스택 지원. <br /> - WPF 응용 프로그램에서 인쇄하는 경우 Windows 인쇄 문서 패키지 API 사용. | | ✓  10 제작자 업데이트||`Release` DWORD 사용: 460798 |  
-|.NET 4.6.2|4|-   FIS 186-3 DSA를 포함하는 X509 인증서에 대한 지원, 지속형 키 대칭 암호화 지원, SHA-2 해시에 대한 <xref:System.Security.Cryptography.Xml.SignedXml> 지원, ECDiffieHellman 키 파생 루틴에 대한 입력 정확성 향상을 비롯한 암호화 향상.<br />-   WPF(Windows Presentation Foundation) 앱에 대한 소프트 키보드 지원 및 모니터별 DPI.<br />-   TLS 1.1 및 TLS 1.2 프로토콜에 대한 ClickOnce 지원.<br />-   Windows Forms 및 WPF 앱을 UWP 앱으로 변환 지원.||✓  10 1주년 업데이트<br /><br /> + 8.1<br />+ 7|✓  2016<br /><br /> + 2012 R2<br />+ 2012<br />+ 2008 R2 SP1|`Release` DWORD 사용:<br /><br /> -   394802(Windows 10 1주년 업데이트)<br />-   394806(다른 모든 OS 버전)<br /><br /> ([지침](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md) 참조)|  
+|.NET 4.7|4|- 운영 체제에서 제공하는 TLS 지원 수준 지원.<br/> - TLS1.1 또는 TLS1.2에 대한 기본 메시지 보안 설정 구성 가능. <br /> - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>의 안정성 향상 <br /> - WCF 응용 프로그램을 사용한 직렬화 및 역직렬화 안정성 향상. <br /> - ASP.NET 개체 캐시 확장 가능. <br /> - WPF 응용 프로그램용 WISP(Windows 잉크 서비스 플랫폼) 대신 `WM_POINTER` Windows 메시지 기반의 터치/스타일러스 스택 지원. <br /> - WPF 응용 프로그램에서 인쇄하는 경우 Windows 인쇄 문서 패키지 API 사용.<br /> - Windows 10 크리에이터 업데이트에서 실행되는 Windows Forms 응용 프로그램에 대한 높은 DPI 및 다중 모니터 지원 향상 | | ✓  10 제작자 업데이트 <br/> <br/> + 10 1주년 업데이트 <br/> + 8.1 <br/> +7| + 2016 <br/> + 2012 R2 <br/> + 2012 <br/> + 2008 R2 SP1 |`Release` DWORD 사용:<br/><br/> - 460798(Windows 10 크리에이터 업데이트) <br/> - 460805(다른 모든 OS 버전) <br/><br/> ([지침](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md) 참조) |  
+|.NET 4.6.2|4|- FIS 186-3 DSA를 포함하는 X509 인증서에 대한 지원, 지속형 키 대칭형 암호화 지원, SHA-2 해시에 대한 <xref:System.Security.Cryptography.Xml.SignedXml> 지원, ECDiffieHellman 키 파생 루틴에 대한 입력 정확성 향상을 비롯한 암호화 향상.<br />-   WPF(Windows Presentation Foundation) 앱에 대한 소프트 키보드 지원 및 모니터별 DPI.<br />-   TLS 1.1 및 TLS 1.2 프로토콜에 대한 ClickOnce 지원.<br />-   Windows Forms 및 WPF 앱을 UWP 앱으로 변환 지원.||✓  10 1주년 업데이트<br /><br /> + 8.1<br />+ 7|✓  2016<br /><br /> + 2012 R2<br />+ 2012<br />+ 2008 R2 SP1|`Release` DWORD 사용:<br /><br /> -   394802(Windows 10 1주년 업데이트)<br />-   394806(다른 모든 OS 버전)<br /><br /> ([지침](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md) 참조)|  
 |.NET 4.6.1|4|-   ECDSA를 포함하는 X509 인증서 지원<br />-   ADO.NET의 하드웨어로 보호된 키에 대해 상시 암호화 지원<br />-   WPF의 향상된 맞춤법 검사<br />-   [자세히...](../../../docs/framework/whats-new/index.md)||✓ 10 11월 업데이트<br /><br /> + 10<br />+ 8.1<br />+ 8<br />+ 7|+ 2012 R2<br />+ 2012<br />+ 2008 R2 SP1|`Release` DWORD 사용:<br /><br /> -   394254(Windows 10 11월 업데이트)<br />-   394271(다른 모든 OS 버전)<br /><br /> ([지침](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md) 참조)|  
 |.NET 4.6|4|-   .NET 네이티브를 사용하여 컴파일<br />-   ASP.NET Core 5<br />-   이벤트 추적 향상<br />-   페이지 인코딩 지원<br />-   [자세히...](../../../docs/framework/whats-new/index.md)|2015(일부 .NET 라이브러리는 [NuGet](https://www.nuget.org/)에서 사용할 수 있음) 자세한 내용은 [.NET Framework 및 번외 릴리스](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)를 참조하십시오.|✓ 10<br />+ 8.1<br />+ 8<br />+ 7<br />+ Vista|+ 2012 R2<br />+ 2012<br />+ 2008 R2 SP1<br />+ 2008 SP2|`Release` DWORD 사용:<br /><br /> -   393295(Windows 10)<br />-   393297(다른 모든 OS 버전)<br /><br /> ([지침](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md) 참조)|  
 |4.5.2|4|-   트랜잭션 시스템 및 ASP.NET을 위한 새 API<br />-   시스템 DPI를 통한 Windows Forms 컨트롤 크기 조정<br />-   프로파일링 기능 향상<br />-   ETW 및 스트레스 로깅 향상<br />-   [자세히...](../../../docs/framework/whats-new/index.md)|-|+ 8.1<br />+ 8<br />+ 7<br />+ Vista|+ 2012 R2<br />+ 2012<br />+ 2008 R2 SP1<br />+ 2008 SP2|`Release` DWORD 사용: 379893<br />([지침](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md) 참조)|  
@@ -55,11 +56,11 @@ ms.lasthandoff: 04/18/2017
  사용 중인 응용 프로그램이 특정 버전에 종속적일 수 있고 해당 버전을 제거하면 응용 프로그램이 중단될 수 있으므로 컴퓨터에 설치된 .NET Framework의 모든 버전은 일반적으로 제거하면 안 됩니다. 여러 버전의 .NET Framework를 동시에 단일 컴퓨터에서 로드할 수 있습니다. 즉, 이전 버전을 제거하지 않고도 .NET Framework를 설치할 수 있습니다. 자세한 내용은 [시작](../../../docs/framework/get-started/index.md)을 참조하십시오.  
   
 ## <a name="targeting-and-running-net-framework-apps-for-version-45-and-later"></a>.NET Framework 앱의 대상을 버전 4.5 이상으로 지정 및 앱 실행  
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]는 컴퓨터의 현재 위치에서 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]를 대체하는 업데이트이고 마찬가지로 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1 및 4.6.2는 현재 위치에서 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]를 대체하는 업데이트이므로 동일한 런타임 버전을 사용하지만 어셈블리 버전이 업데이트되어 새로운 형식과 멤버를 포함합니다. 이러한 업데이트 중 하나를 설치한 후에도 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 또는 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 앱은 다시 컴파일하지 않고 계속 실행되어야 합니다. 하지만 그 반대의 경우는 성립되지 않습니다. 이전 버전의 .NET Framework에서 이후 버전의 .NET Framework를 대상으로 하는 앱을 실행하지 않는 것이 좋습니다. 예를 들어 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]을 대상으로 하는 앱을 실행하지 않는 것이 좋습니다. 다음과 같은 지침이 적용됩니다.  
+ [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]는 컴퓨터의 현재 위치에서 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]를 대체하는 업데이트이고, 마찬가지로 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7은 현재 위치에서 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]를 대체하는 업데이트이므로 동일한 런타임 버전을 사용하지만 어셈블리 버전이 업데이트되어 새로운 형식과 멤버를 포함합니다. 이러한 업데이트 중 하나를 설치한 후에도 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 또는 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 앱은 다시 컴파일하지 않고 계속 실행되어야 합니다. 하지만 그 반대의 경우는 성립되지 않습니다. 이전 버전의 .NET Framework에서 이후 버전의 .NET Framework를 대상으로 하는 앱을 실행하지 않는 것이 좋습니다. 예를 들어 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]을 대상으로 하는 앱을 실행하지 않는 것이 좋습니다. 다음과 같은 지침이 적용됩니다.  
   
--   Visual Studio에서 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]을 프로젝트의 대상 프레임워크로 선택(이를 통해 <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=fullName> 속성 설정)하여 프로젝트를 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 어셈블리 또는 실행 파일로 컴파일할 수 있습니다. 이 어셈블리 또는 실행 파일은 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6 또는 4.6.1이 설치된 모든 컴퓨터에서 사용할 수 있습니다.  
+-   Visual Studio에서는 프로젝트에 대한 대상 프레임워크로 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]를 선택(<xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=fullName> 속성을 설정)하여 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 어셈블리 또는 실행 파일로 프로젝트를 컴파일할 수 있습니다. 이 어셈블리 또는 실행 파일은 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2 또는 4.7이 설치된 모든 컴퓨터에서 사용할 수 있습니다.  
   
--   Visual Studio에서 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]을 프로젝트의 대상 프레임워크로 선택(이를 통해 <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=fullName> 속성 설정)하여 프로젝트를 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 어셈블리 또는 실행 파일로 컴파일할 수 있습니다. 이 어셈블리 또는 실행 파일은 .NET Framework [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 이상의 버전이 설치된 컴퓨터에서만 실행됩니다. [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]을 대상으로 하는 실행 파일은 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]와 같은 이전 버전의 .NET Framework만 설치된 컴퓨터에서 실행되는 것이 차단되며 사용자에게 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]을 설치하라는 메시지가 표시됩니다. 또한, [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]와 같은 이전 버전의 .NET Framework를 대상으로 하는 앱에서 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 어셈블리를 호출하지 말아야 합니다.  
+-   Visual Studio에서는 프로젝트에 대한 대상 프레임워크로 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]를 선택(<xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=fullName> 속성을 설정)하여 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 어셈블리 또는 실행 파일로 프로젝트를 컴파일할 수 있습니다. 이 어셈블리 또는 실행 파일은 .NET Framework [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 이상의 버전이 설치된 컴퓨터에서만 실행됩니다. [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]을 대상으로 하는 실행 파일은 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]와 같은 이전 버전의 .NET Framework만 설치된 컴퓨터에서 실행되는 것이 차단되며 사용자에게 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]을 설치하라는 메시지가 표시됩니다. 또한, [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]와 같은 이전 버전의 .NET Framework를 대상으로 하는 앱에서 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 어셈블리를 호출하지 말아야 합니다.  
   
      여기서 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 및 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]는 예제로만 사용됩니다. 이 원칙은 실행 중인 시스템에 설치된 것보다 이후 버전의 .NET Framework를 대상으로 하는 모든 앱에 적용됩니다.  
   
@@ -84,3 +85,4 @@ ms.lasthandoff: 04/18/2017
  [버전 호환성](../../../docs/framework/migration-guide/version-compatibility.md)   
  [Microsoft .NET Framework 지원 기간 정책](http://go.microsoft.com/fwlink/?LinkId=196607)   
  [문제 해결](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+
