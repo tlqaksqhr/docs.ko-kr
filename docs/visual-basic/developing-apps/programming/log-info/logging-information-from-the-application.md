@@ -47,7 +47,7 @@ ms.lasthandoff: 05/22/2017
   
  `Log` 개체는 응용 프로그램의 로그 수신기에 정보를 쓰기 위한 메서드를 제공하고, `Log` 개체의 고급 `TraceSource` 속성은 자세한 구성 정보를 제공합니다. `Log` 개체는 응용 프로그램의 구성 파일에서 구성됩니다.  
   
- `My.Log` 개체는 ASP.NET 응용 프로그램에만 사용할 수 있습니다. 클라이언트 응용 프로그램의 경우 `My.Application.Log`를 사용합니다. 자세한 내용은 <xref:Microsoft.VisualBasic.Logging.Log>을 참조하십시오.  
+ `My.Log` 개체는 ASP.NET 응용 프로그램에만 사용할 수 있습니다. 클라이언트 응용 프로그램의 경우 `My.Application.Log`를 사용합니다. 자세한 내용은 <xref:Microsoft.VisualBasic.Logging.Log>를 참조하세요.  
   
 ## <a name="tasks"></a>작업  
   

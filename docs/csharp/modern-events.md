@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d750209f2d970044aac2f3b8b119412a58595171
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 0184e07012ffe1a1300dc5af7e99e0d5a3517d6b
+ms.openlocfilehash: 8fc483fb52babd27f897958b17c0303710c6cce4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/02/2017
 
 ---
 
@@ -24,7 +25,7 @@ ms.lasthandoff: 03/13/2017
 이전 문서에서는 가장 일반적인 이벤트 패턴을 설명했습니다. .NET Core에는 보다 완화된 패턴이 있습니다. 이 버전에서는 `EventHandler<TEventArgs>` 정의에 `TEventArgs`가 `System.EventArgs`에서 파생된 클래스여야 한다는 제약 조건이 더 이상 없습니다.
 
 이 때문에 유연성이 증가하고 이전 버전과 호환됩니다. 유연성부터 살펴보겠습니다. System.EventArgs 클래스는 개체의 부분 복사본을 만드는 `MemberwiseClone()` 메서드 하나를 소개합니다.
-이 메서드는 `EventArgs`에서 파생된 클래스에 대해 해당 기능을 구현하기 위해 [리플렉션](reflection.md)을 사용해야 합니다. 특정 파생 클래스에서는 해당 기능을 더 쉽게 만들 수 있습니다. 이는 System.EventArgs에서 파생되는 것이 디자인을 제한하는 제약 조건이지만 추가적인 혜택은 없음을 의미합니다.
+이 메서드는 `EventArgs`에서 파생된 클래스에 대해 해당 기능을 구현하기 위해 리플렉션을 사용해야 합니다. 특정 파생 클래스에서는 해당 기능을 더 쉽게 만들 수 있습니다. 이는 System.EventArgs에서 파생되는 것이 디자인을 제한하는 제약 조건이지만 추가적인 혜택은 없음을 의미합니다.
 실제로 `EventArgs`에서 파생되지 않도록 `FileFoundArgs` 및 `SearchDirectoryArgs`의 정의를 변경할 수 있습니다.
 프로그램은 동일하게 작동합니다.
 

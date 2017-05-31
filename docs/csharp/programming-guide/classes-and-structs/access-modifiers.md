@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9940012829038f585ad78a10b70fe2941753e40e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: c8d870feccd1fe44caf566ce45349818b6ddf6e9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="access-modifiers-c-programming-guide"></a>액세스 한정자(C# 프로그래밍 가이드)
@@ -76,7 +77,7 @@ ms.lasthandoff: 03/13/2017
   
  사용자 정의 연산자는 public으로 선언되어야 합니다. 자세한 내용은 [연산자(C# 참조)](../../../csharp/language-reference/keywords/operator.md)를 참조하세요.  
   
- 소멸자에는 액세스 가능성 한정자가 포함될 수 없습니다.  
+ 종료자에는 접근성 한정자를 사용할 수 없습니다.  
   
  클래스 또는 구조체 멤버의 액세스 수준을 설정하려면 다음 예제와 같이 멤버 선언에 해당 키워드를 추가합니다.  
   
@@ -93,7 +94,7 @@ ms.lasthandoff: 03/13/2017
  대리자는 클래스 및 구조체처럼 동작합니다. 기본적으로 대리자는 네임스페이스 내에서 직접 선언될 경우 internal 액세스를 가지고 중첩될 경우 private 액세스를 가집니다.  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   

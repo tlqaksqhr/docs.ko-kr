@@ -1,6 +1,6 @@
 ---
 title: "sbyte(C# 참조) | Microsoft Docs"
-ms.date: 2015-07-20
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,39 +30,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: df57296bb285441aeddc596289d82d1e458dc278
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 2de7b352382f1a39ef73788c553d9bd881644019
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="sbyte-c-reference"></a>sbyte(C# 참조)
-`sbyte` 키워드는 다음 표에 나와 있는 크기와 범위에 따라 값을 저장하는 정수 형식을 나타냅니다.  
+
+`sbyte`는 다음 표에 나와 있는 크기와 범위에 따라 값을 저장하는 정수 형식을 나타냅니다.  
   
 |형식|범위|크기|.NET Framework 형식|  
 |----------|-----------|----------|-------------------------|  
 |`sbyte`|-128 ~ 127|부호 있는 8비트 정수|<xref:System.SByte?displayProperty=fullName>|  
   
 ## <a name="literals"></a>리터럴  
- 다음과 같이 `sbyte` 변수를 선언하고 초기화할 수 있습니다.  
+
+10진수 리터럴, 16진수 리터럴 또는 (C# 7부터) 이진 리터럴을 할당하여 `sbyte` 변수를 선언하고 초기화할 수 있습니다. 
+
+다음 예제에서는 10진수, 16진수 및 이진 리터럴로 표현된 -102와 같은 정수가 [int](../../../csharp/language-reference/keywords/int.md)에서 `sbyte` 값으로 변환됩니다.    
   
-```  
-  
-sbyte sByte1 = 127;  
-```  
-  
- 앞의 선언에서 정수 리터럴 127은 암시적으로 [int](../../../csharp/language-reference/keywords/int.md)에서 `sbyte`로 변환됩니다. 리터럴 정수가 `sbyte` 범위를 초과하는 경우 컴파일 오류가 발생합니다.  
-  
+[!code-cs[SByte](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#SByte)]  
+
+> [!NOTE] 
+> `0x` 또는 `0X` 접두사를 사용하여 16진수 리터럴을 나타내고, `0b` 또는 `0B` 접두사를 사용하여 이진 리터럴을 나타냅니다. 10진수 리터럴에는 접두사가 없습니다.
+
+C# 7부터는 다음 예제와 같이 밑줄 문자 `_`를 자릿수 구분 기호로 사용하여 가독성을 향상할 수도 있습니다.
+
+[!code-cs[SByteSeparator](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#SByteS)]  
+
+정수 리터럴이 `sbyte`의 범위를 벗어난 경우(즉, <xref:System.SByte.MinValue?displayProperty=fullName>보다 작거나 <xref:System.SByte.MaxValue?displayProperty=fullName>보다 큰 경우) 컴파일 오류가 발생합니다. 정수 리터럴에 접미사가 없는 경우 해당 형식은 값이 표현될 수 있는 [int](int.md), [uint](uint.md), [long](long.md), [ulong](ulong.md) 형식 중 첫 번째 형식입니다. 즉, 이 예제에서 숫자 리터럴 `0x9A` 및 `0b10011010`은 값이 <xref:System.SByte.MaxValue?displayProperty=fullName>을 초과하는 156인 32비트 부호 있는 정수로 해석됩니다. 이 때문에 캐스팅 연산자가 필요하며, [unchecked](unchecked.md) 컨텍스트에서 대입이 발생해야 합니다. 
+
+## <a name="compiler-overload-resolution"></a>컴파일러 오버로드 확인
+
  오버로드된 메서드를 호출할 때 캐스트를 사용해야 합니다. 예를 들어 `sbyte` 및 [int](../../../csharp/language-reference/keywords/int.md) 매개 변수를 사용하는 다음의 오버로드된 메서드를 살펴보세요.  
   
-```  
+```csharp  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(sbyte b) {}  
 ```  
   
  `sbyte` 캐스트를 사용하면 올바른 형식이 호출됩니다. 예를 들면 다음과 같습니다.  
   
-```  
+```csharp 
 // Calling the method with the int parameter:  
 SampleMethod(5);  
 // Calling the method with the sbyte parameter:  
@@ -74,39 +85,34 @@ SampleMethod((sbyte)5);
   
  더 큰 저장소 크기의 비리터럴 숫자 형식을 `sbyte`로 암시적으로 변환할 수는 없습니다(정수 형식의 저장소 크기는 [정수 형식 표](../../../csharp/language-reference/keywords/integral-types-table.md) 참조). 예를 들어 다음 두 가지 `sbyte` 변수 `x` 및 `y`를 고려해 보세요.  
   
-```  
-  
+```csharp  
 sbyte x = 10, y = 20;  
 ```  
   
  대입 연산자의 오른쪽에 있는 산술 식은 기본적으로 [int](../../../csharp/language-reference/keywords/int.md)로 평가되므로 다음 대입문은 컴파일 오류를 일으킵니다.  
   
-```  
-  
+```csharp  
 sbyte z = x + y;   // Error: conversion from int to sbyte  
 ```  
   
  이 문제를 해결하려면 다음 예제와 같이 식을 캐스팅합니다.  
   
-```  
-  
+```csharp  
 sbyte z = (sbyte)(x + y);   // OK: explicit conversion  
 ```  
   
  그러나 대상 변수에 동일한 저장소 크기 또는 더 큰 저장소 크기가 있는 다음 문을 사용할 수 있습니다.  
   
-```  
-  
-      sbyte x = 10, y = 20;  
+```csharp
+sbyte x = 10, y = 20;  
 int m = x + y;  
 long n = x + y;  
 ```  
   
  부동 소수점 형식에서 `sbyte`로의 암시적 변환은 없습니다. 예를 들어 명시적 캐스트를 사용하지 않는 경우 다음 문은 컴파일러 오류를 일으킵니다.  
   
-```  
-  
-      sbyte x = 3.0;         // Error: no implicit conversion from double  
+```csharp  
+sbyte x = 3.0;         // Error: no implicit conversion from double  
 sbyte y = (sbyte)3.0;  // OK: explicit conversion  
 ```  
   

@@ -32,16 +32,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6083af22fe8743a3d952138e04be90536cbd75d3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: 43ba8cdf265efd930199f7c6a8a77e49f491e737
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/14/2017
 
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>람다 식(C# 프로그래밍 가이드)
-람다 식은 [대리자](../../../csharp/programming-guide/delegates/using-delegates.md) 또는 [식 트리](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) 형식을 만드는 데 사용할 수 있는 [익명 함수](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)입니다. 람다 식을 사용하여 인수로 전달되거나 함수 호출 값으로 반환되는 로컬 함수를 쓸 수 있습니다. 람다 식은 LINQ 쿼리 식을 작성하는 데 특히 유용합니다.  
+람다 식은 [대리자](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) 또는 [식 트리](../../../csharp/programming-guide/delegates/using-delegates.md) 형식을 만드는 데 사용할 수 있는 [익명 함수](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) 입니다. 람다 식을 사용하여 인수로 전달되거나 함수 호출 값으로 반환되는 로컬 함수를 쓸 수 있습니다. 람다 식은 LINQ 쿼리 식을 작성하는 데 특히 유용합니다.  
   
- 람다 식을 만들려면 람다 연산자 [=>](../../../csharp/language-reference/operators/lambda-operator.md) 왼쪽에 입력 매개 변수(있는 경우)를 지정하고 다른 쪽에 식이나 문 블록을 삽입합니다. 예를 들어 람다 식 `x => x * x` 는 이름이 `x` 인 매개 변수를 지정하고 `x` 제곱 값을 반환합니다. 다음 예제와 같이 대리자 형식에 이 식을 할당할 수도 있습니다.  
+ 람다 식을 만들려면 람다 연산자 [=>](../../../csharp/language-reference/operators/lambda-operator.md)왼쪽에 입력 매개 변수를 지정하고(있는 경우) 다른 쪽에 식이나 문 블록을 삽입합니다. 예를 들어 람다 식 `x => x * x` 는 이름이 `x` 인 매개 변수를 지정하고 `x` 제곱 값을 반환합니다. 다음 예제와 같이 대리자 형식에 이 식을 할당할 수도 있습니다.  
   
 ```csharp  
 delegate int del(int i);  
@@ -69,11 +70,11 @@ namespace ConsoleApplication1
 }  
 ```  
   
- `=>` 연산자는 할당(`=`)과 우선 순위가 같고 [오른쪽 결합성이 있습니다](../../../csharp/programming-guide/statements-expressions-operators/operators.md)(연산자 문서의 "결합성" 섹션 참조).  
+ `=>` 연산자는 대입(`=`)과 우선 순위가 같고 [오른쪽 결합형](../../../csharp/programming-guide/statements-expressions-operators/operators.md)입니다(연산자 문서의 "결합성" 섹션 참조).  
   
  람다 식은 메서드 기반 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] 쿼리에서 <xref:System.Linq.Enumerable.Where%2A> 같은 표준 쿼리 연산자 메서드의 인수로 사용됩니다.  
   
- [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] to Objects 및 [!INCLUDE[sqltecxlinq](../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]에서처럼 메서드 기반 구문을 사용하여 <xref:System.Linq.Enumerable> 클래스에서 <xref:System.Linq.Enumerable.Where%2A> 메서드를 호출하는 경우 매개 변수는 대리자 형식 <xref:System.Func%602?displayProperty=fullName>입니다. 람다 식은 이러한 대리자를 만드는 가장 간단한 방법입니다. 예를 들어 [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)]에서처럼 <xref:System.Linq.Queryable?displayProperty=fullName> 클래스에서 동일한 메서드를 호출하는 경우 매개 변수 형식은 <xref:System.Linq.Expressions.Expression?displayProperty=fullName><Func\>이고, 여기서 Func는 최대 16개의 입력 매개 변수가 있는 Func 대리자 중 하나입니다. 이 경우에도 람다 식을 사용하면 식 트리를 간단하게 만들 수 있습니다. 람다 식은 `Where` 호출과 비슷하게 보일 수 있지만 실제로 람다 식을 통해 생성되는 개체 형식은 다릅니다.  
+ <xref:System.Linq.Enumerable.Where%2A> to Objects 및 <xref:System.Linq.Enumerable>에서처럼 메서드 기반의 구문을 사용하여 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] 클래스에서 [!INCLUDE[sqltecxlinq](../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 메서드를 호출하는 경우 매개 변수는 <xref:System.Func%602?displayProperty=fullName> 대리자 형식입니다. 람다 식은 이러한 대리자를 만드는 가장 간단한 방법입니다. 예를 들어 [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)]에서처럼 이 메서드를 <xref:System.Linq.Queryable?displayProperty=fullName> 클래스에서 호출하는 경우 매개 변수 형식은 <xref:System.Linq.Expressions.Expression?displayProperty=fullName><Func\>이고, 여기서 Func는 입력 매개 변수를 16개까지 가질 수 있는 임의의 Func 대리자입니다. 이 경우에도 람다 식을 사용하면 식 트리를 간단하게 만들 수 있습니다. 람다 식은 `Where` 호출과 비슷하게 보일 수 있지만 실제로 람다 식을 통해 생성되는 개체 형식은 다릅니다.  
   
  위의 예제에서 대리자 시그니처는 형식이 암시적으로 지정된 `int`형식의 입력 매개 변수 하나를 포함하고 `int`를 반환합니다. 람다 식에도 입력 매개 변수 하나(`x`)와 컴파일러에서 `int` 형식으로 암시적으로 변환할 수 있는 반환 값이 있기 때문에 람다 식을 이 형식의 대리자로 변환할 수 있습니다. 형식 유추는 다음 단원에서 자세하게 설명합니다. 입력 매개 변수를 5로 사용하여 대리자를 호출하면 25라는 결과가 반환됩니다.  
   
@@ -115,9 +116,9 @@ namespace ConsoleApplication1
 
  문 람다의 본문에 지정할 수 있는 문의 개수에는 제한이 없지만 일반적으로 2-3개 정도만 지정합니다.  
   
- [StatementLamba#1](../../../../samples\snippets\csharp\programming-guide\lambda-expressions/statements.cs#1)]
+[!code-csharp[StatementLamba#1](../../../../samples\snippets\csharp\programming-guide\lambda-expressions/statements.cs#1)]
 
- [StatementLamba#2](../../../../samples\snippets\csharp\programming-guide\lambda-expressions/statements.cs#2)]
+[!code-csharp[StatementLamba#2](../../../../samples\snippets\csharp\programming-guide\lambda-expressions/statements.cs#2)]
 
  무명 메서드와 마찬가지로 문 람다는 식 트리를 만드는 데 사용할 수 없습니다.  
   
@@ -174,13 +175,13 @@ public partial class Form1 : Form
  비동기 메서드를 만들고 사용하는 방법에 대한 자세한 내용은 [Async 및 Await를 사용한 비동기 프로그래밍](../../../csharp/programming-guide/concepts/async/index.md)을 참조하세요.  
   
 ## <a name="lambdas-with-the-standard-query-operators"></a>표준 쿼리 연산자와 람다 식  
- 대부분의 표준 쿼리 연산자는 형식이 제네릭 대리자의 <xref:System.Func%602> 패밀리 중 하나인 입력 매개 변수를 사용합니다. 이러한 대리자는 형식 매개 변수를 사용하여 입력 매개 변수의 수와 형식 및 대리자의 반환 형식을 정의합니다. `Func` 대리자는 소스 데이터 집합에 있는 각 요소에 적용할 사용자 정의 식을 캡슐화하는 데 매우 유용합니다. 다음 대리자 형식을 예로 들 수 있습니다.  
+ 대부분의 표준 쿼리 연산자에는 형식이 제네릭 대리자의 <xref:System.Func%602> 패밀리 중 하나인 입력 매개 변수를 사용합니다. 이러한 대리자는 형식 매개 변수를 사용하여 입력 매개 변수의 수와 형식 및 대리자의 반환 형식을 정의합니다. `Func` 대리자는 소스 데이터 집합에 있는 각 요소에 적용할 사용자 정의 식을 캡슐화하는 데 매우 유용합니다. 다음 대리자 형식을 예로 들 수 있습니다.  
   
 ```csharp  
 public delegate TResult Func<TArg0, TResult>(TArg0 arg0)  
 ```  
   
- 이 경우 대리자를 `Func<int,bool> myFunc` 로 인스턴스화할 수 있습니다. 여기서 `int` 는 입력 매개 변수이고, `bool` 은 반환 값입니다. 반환 값은 항상 마지막 형식 매개 변수에 지정됩니다. `Func<int, string, bool>`은 두 입력 매개 변수 `int` 및 `string`과 반환 형식 `bool`을 사용하여 대리자를 정의합니다. 다음 `Func` 대리자를 호출하면 입력 매개 변수가 5인지 여부를 나타내는 true 또는 false가 반환됩니다.  
+ 이 경우 대리자를 `Func<int,bool> myFunc` 로 인스턴스화할 수 있습니다. 여기서 `int` 는 입력 매개 변수이고, `bool` 은 반환 값입니다. 반환 값은 항상 마지막 형식 매개 변수에 지정됩니다. `Func<int, string, bool>` 은 두 입력 매개 변수 `int` 및 `string`과 반환 형식 `bool`을 사용하여 대리자를 정의합니다. 다음 `Func` 대리자를 호출하면 입력 매개 변수가 5인지 여부를 나타내는 true 또는 false가 반환됩니다.  
   
 ```csharp  
 Func<int, bool> myFunc = x => x == 5;  
@@ -189,7 +190,7 @@ bool result = myFunc(4); // returns false of course
   
  System.Linq.Queryable에 정의되어 있는 표준 쿼리 연산자의 경우와 같이 인수 형식이 `Expression<Func>`인 경우에도 람다 식을 사용할 수 있습니다. `Expression<Func>` 인수를 지정하면 식 트리에 람다 식이 컴파일됩니다.  
   
- 표준 쿼리 연산자 <xref:System.Linq.Enumerable.Count%2A> 메서드는 다음과 같이 표시됩니다.  
+ 다음 코드에서는 표준 쿼리 연산자인 <xref:System.Linq.Enumerable.Count%2A> 메서드를 보여 줍니다.  
   
 ```csharp  
 int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };  
@@ -225,7 +226,7 @@ customers.Where(c => c.City == "London");
   
 -   람다 식의 반환 값(있는 경우)은 대리자의 반환 형식으로 암시적으로 변환될 수 있어야 합니다.  
   
- 공용 형식 시스템에는 "람다 식"이라는 개념이 기본적으로 포함되어 있지 않기 때문에 람다 식 자체에는 형식이 없습니다. 그러나 람다 식의 "형식"을 비공식적으로 언급해야 할 경우도 있는데 이러한 경우 형식은 대리자 형식 또는 람다 식이 변환되는 <xref:System.Linq.Expressions.Expression> 형식을 의미합니다.  
+ 공용 형식 시스템에는 "람다 식"이라는 개념이 기본적으로 포함되어 있지 않기 때문에 람다 식 자체에는 형식이 없습니다. 그러나 람다 식의 "형식"을 비공식적으로 언급해야 할 경우도 있는데 이 경우 형식은 대리자 형식 또는 람다 식이 변환되는 <xref:System.Linq.Expressions.Expression> 형식을 의미합니다.  
   
 ## <a name="variable-scope-in-lambda-expressions"></a>람다 식의 변수 범위  
  람다 식은 람다 함수를 정의하는 메서드 범위 내에 있거나 람다 식을 포함하는 형식 범위 내에 있는 *외부 변수*([무명 메서드](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) 참조)를 참조할 수 있습니다. 이러한 방식으로 캡처되는 변수는 변수가 범위를 벗어나 가비지 수집되는 경우에도 람다 식에 사용할 수 있도록 저장됩니다. 외부 변수는 명확하게 할당해야만 람다 식에 사용할 수 있습니다. 다음 예제에서는 이러한 규칙을 보여 줍니다.  
@@ -274,7 +275,6 @@ class Test
         Console.ReadKey();  
     }  
 }  
-  
 ```  
   
  람다 식의 변수 범위에는 다음과 같은 규칙이 적용됩니다.  
@@ -300,6 +300,7 @@ class Test
  [LINQ(Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)   
  [무명 메서드](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)   
  [is](../../../csharp/language-reference/keywords/is.md)   
- [식 트리](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)   
+ [Expression Trees](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)   
  [Visual Studio 2008 C# 샘플(LINQ 샘플 쿼리 파일 및 XQuery 프로그램 참조)](http://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)   
  [재귀 람다 식](http://go.microsoft.com/fwlink/?LinkId=112395)
+

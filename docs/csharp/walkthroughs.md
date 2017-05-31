@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8c4c52096803ff0cbf311afb2a0e38a7f37cf86c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 0832ee88bba58579eea001335be9cb8c2130834d
+ms.openlocfilehash: 1008d0ff78ee7c2876b49564dd03a767a63e78f3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/28/2017
 
 ---
 # <a name="c-walkthroughs"></a>C# 연습
@@ -43,7 +44,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="in-this-section"></a>단원 내용  
 
  [Async 및 Await를 사용하여 웹에 액세스](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [!INCLUDE[vs_dev11_long](../csharp/includes/vs_dev11_long_md.md)]에 도입된 [async](../csharp/language-reference/keywords/async.md) 및 [await](../csharp/language-reference/keywords/await.md)를 사용하여 비동기 솔루션을 만드는 방법을 보여 줍니다.  
+ [async](../csharp/language-reference/keywords/async.md) 및 [await](../csharp/language-reference/keywords/await.md)를 사용하여 비동기 솔루션을 만드는 방법을 보여 줍니다.  
   
  [C# 또는 Visual Basic에서 Windows 런타임 구성 요소를 만든 다음 JavaScript에서 호출](https://msdn.microsoft.com/library/windows/apps/hh779077.aspx)  
  [!INCLUDE[wrt](../csharp/includes/wrt_md.md)] 형식을 만들고 [!INCLUDE[wrt](../csharp/includes/wrt_md.md)] 구성 요소에 패키지한 다음 JavaScript를 사용하여 Windows용으로 빌드된 [!INCLUDE[win8_appname_long](../csharp/includes/win8_appname_long_md.md)] 앱에서 해당 형식을 호출하는 방법을 보여 줍니다.  

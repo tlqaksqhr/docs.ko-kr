@@ -1,36 +1,54 @@
 ---
 title: "방법: Visual Basic에서 특정 패턴의 파일을 디렉터리에 복사 | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "My.Computer.FileSystem.CopyFile 메서드, 파일 복사 [Visual Basic]"
-  - "파일, 복사"
-  - "CopyFile 메서드, Visual Basic에서 파일 복사"
-  - "I/O [Visual Basic], 파일 복사"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- My.Computer.FileSystem.CopyFile method, copying files [Visual Basic]
+- files, copying
+- CopyFile method, copying files in Visual Basic
+- I/O [Visual Basic], copying files
 ms.assetid: f205d2ad-bbe5-4d55-8a40-acda21aa82dd
 caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
----
-# 방법: Visual Basic에서 특정 패턴의 파일을 디렉터리에 복사
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 86422f931585629bd34553a777ccec8a6f33fc8a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
-<xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> 메서드는 파일의 경로 이름을 나타내는 읽기 전용 문자열 컬렉션을 반환합니다.`wildCards` 매개 변수를 사용하여 특정 패턴을 지정할 수 있습니다.  
+---
+# <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>방법: Visual Basic에서 특정 패턴의 파일을 디렉터리에 복사
+<xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> 메서드는 파일의 경로 이름을 나타내는 읽기 전용 문자열 컬렉션을 반환합니다. `wildCards` 매개 변수를 사용하여 특정 패턴을 지정할 수 있습니다.  
   
  일치하는 파일이 없으면 빈 컬렉션이 반환됩니다.  
   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A> 메서드를 사용하여 파일을 디렉터리로 복사할 수 있습니다.  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A> 메서드를 사용하여 파일을 디렉터리에 복사할 수 있습니다.  
   
-### 특정 패턴의 파일을 디렉터리로 복사하려면  
+### <a name="to-copy-files-with-a-specific-pattern-to-a-directory"></a>특정 패턴의 파일을 디렉터리로 복사하려면  
   
 1.  `GetFiles` 메서드를 사용하여 파일 목록을 반환합니다. 이 예제에서는 지정된 디렉터리에 있는 .rtf 파일을 모두 반환합니다.  
   
@@ -40,35 +58,35 @@ caps.handback.revision: 15
   
      [!code-vb[VbVbcnMyFileSystem#88](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-files-with-a-specific-pattern-to-a-directory_2.vb)]  
   
-3.  `Next` 문으로 `For` 문을 닫습니다.  
+3.  `For` 문으로 `Next` 문을 닫습니다.  
   
      [!code-vb[VbVbcnMyFileSystem#89](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-files-with-a-specific-pattern-to-a-directory_3.vb)]  
   
-## 예제  
+## <a name="example"></a>예제  
  위 코드 조각의 완전한 형식인 다음 예제에서는 지정된 디렉터리의 모든 .rtf 파일을 `testdirectory`라는 이름의 디렉터리로 복사합니다.  
   
  [!code-vb[VbFileIOMisc#37](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-copy-files-with-a-specific-pattern-to-a-directory_4.vb)]  
   
-## .NET Framework 보안  
+## <a name="net-framework-security"></a>.NET Framework 보안  
  다음 조건에서 예외가 발생합니다.  
   
--   빈 문자열이거나, 공백만 포함하거나, 잘못된 문자를 포함하거나, 경로가 장치 경로인 경우\(\\\\.\\로 시작됨\)와 같은 여러 가지 이유 중 하나로 경로가 올바르지 않은 경우\(<xref:System.ArgumentException>\)  
+-   길이가 0인 문자열이거나, 공백만 포함하거나, 잘못된 문자를 포함하거나, 경로가 장치 경로인 경우(\\\\.\\로 시작됨)와 같은 여러 가지 이유 중 하나로 경로가 올바르지 않은 경우(<xref:System.ArgumentException>)  
   
--   경로가 `Nothing`이기 때문에 올바르지 않은 경우\(<xref:System.ArgumentNullException>\)  
+-   경로가 `Nothing`이기 때문에 유효하지 않은 경우(<xref:System.ArgumentNullException>)  
   
--   디렉터리가 없는 경우\(<xref:System.IO.DirectoryNotFoundException>\)  
+-   디렉터리가 없는 경우(<xref:System.IO.DirectoryNotFoundException>)  
   
--   디렉터리가 기존 파일을 가리키는 경우\(<xref:System.IO.IOException>\)  
+-   디렉터리가 기존 파일을 가리키는 경우(<xref:System.IO.IOException>)  
   
--   경로가 시스템 정의 최대 길이를 초과하는 경우\(<xref:System.IO.PathTooLongException>\)  
+-   경로가 시스템 정의 최대 길이를 초과하는 경우(<xref:System.IO.PathTooLongException>)  
   
--   경로의 파일 이름이나 디렉터리 이름에 콜론\(:\)이 있거나 이름의 형식이 잘못된 경우\(<xref:System.NotSupportedException>\)  
+-   경로의 파일 이름이나 디렉터리 이름에 콜론(:)이 있거나 이름의 형식이 잘못된 경우(<xref:System.NotSupportedException>)  
   
--   경로를 보는 데 필요한 권한이 사용자에게 없는 경우\(<xref:System.Security.SecurityException>\) 사용자에게 필요한 권한이 없는 경우\(<xref:System.UnauthorizedAccessException>\)  
+-   경로를 보는 데 필요한 권한이 사용자에게 없는 경우(<xref:System.Security.SecurityException>) 사용자에게 필요한 권한이 없는 경우(<xref:System.UnauthorizedAccessException>)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>   
  <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>   
- [How to: Find Subdirectories with a Specific Pattern](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)   
- [Troubleshooting: Reading from and Writing to Text Files](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)   
- [How to: Get the Collection of Files in a Directory](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+ [방법: 특정 패턴의 하위 디렉터리 찾기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)   
+ [문제 해결: 텍스트 파일 읽기 및 쓰기](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)   
+ [방법: 디렉터리의 파일 컬렉션 가져오기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

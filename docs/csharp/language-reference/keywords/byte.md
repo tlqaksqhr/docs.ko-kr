@@ -1,6 +1,6 @@
 ---
 title: "byte(C# 참조) | Microsoft 문서"
-ms.date: 2015-07-20
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,28 +30,36 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7c522506b4541edb2a81036e93e8872711f849b9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 57c4b1c7ead9386ff4067da5915a55a79f5e562e
+ms.openlocfilehash: fce94687cbf055219913758d49642c8e4a999db3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="byte-c-reference"></a>byte(C# 참조)
-`byte` 키워드는 다음 표에 나와 있는 값을 저장하는 정수 형식을 나타냅니다.  
+
+`byte`는 다음 표에 나와 있는 값을 저장하는 정수 형식을 나타냅니다.  
   
 |형식|범위|크기|.NET Framework 형식|  
 |----------|-----------|----------|-------------------------|  
 |`byte`|0 ~ 255|부호 없는 8비트 정수|<xref:System.Byte?displayProperty=fullName>|  
   
 ## <a name="literals"></a>리터럴  
- 다음 예제와 같이 `byte` 변수를 선언하고 초기화할 수 있습니다.  
+
+ 10진수 리터럴, 16진수 리터럴 또는 (C# 7부터) 이진 리터럴을 할당하여 `byte` 변수를 선언하고 초기화할 수 있습니다. 정수 리터럴이 `byte`의 범위를 벗어난 경우(즉, <xref:System.Byte.MinValue?displayProperty=fullName>보다 작거나 <xref:System.Byte.MaxValue?displayProperty=fullName>보다 큰 경우) 컴파일 오류가 발생합니다.
+
+다음 예제에서는 10진수, 16진수 및 이진 리터럴로 표현된 201과 같은 정수가 [int](../../../csharp/language-reference/keywords/int.md)에서 `byte` 값으로 암시적으로 변환됩니다.    
   
-```  
-byte myByte = 255;  
-```  
-  
- 앞의 선언에서 정수 리터럴 `255`는 암시적으로 [int](../../../csharp/language-reference/keywords/int.md)에서 `byte`로 변환됩니다. 리터럴 정수가 `byte` 범위를 초과하는 경우 컴파일 오류가 발생합니다.  
-  
+[!code-cs[Byte](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#Byte)]  
+
+> [!NOTE] 
+> `0x` 또는 `0X` 접두사를 사용하여 16진수 리터럴을 나타내고, `0b` 또는 `0B` 접두사를 사용하여 이진 리터럴을 나타냅니다. 10진수 리터럴에는 접두사가 없습니다.
+
+C# 7부터는 다음 예제와 같이 밑줄 문자 `_`를 자릿수 구분 기호로 사용하여 가독성을 향상할 수도 있습니다.
+
+[!code-cs[Byte](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ByteS)]  
+ 
 ## <a name="conversions"></a>변환  
  `byte`에서 [short](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) 또는 [decimal](../../../csharp/language-reference/keywords/decimal.md)로의 미리 정의된 암시적 변환이 있습니다.  
   

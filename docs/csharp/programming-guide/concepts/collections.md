@@ -16,10 +16,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8fb5101eabd95dd6574caf344a428afcd4bf648c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 6ce347ec50378590946c756b3adbf64fe855874d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="collections-c"></a>컬렉션(C#)
@@ -156,7 +157,7 @@ numbers.ForEach(
 // Output: 0 2 4 6 8  
 ```  
   
- <xref:System.Collections.Generic.List%601>의 요소 형식에 대해 고유한 클래스를 정의할 수도 있습니다. 다음 예제에서 <xref:System.Collections.Generic.List%601>에서 사용되는 `Galaxy` 클래스는 코드에서 정의됩니다.  
+ <xref:System.Collections.Generic.List%601>의 요소 형식에 대해 고유한 클래스를 정의할 수도 있습니다. 다음 예제에서, <xref:System.Collections.Generic.List%601>에서 사용되는 `Galaxy` 클래스는 코드에서 정의됩니다.  
   
 ```csharp  
 private static void IterateThroughList()  
@@ -220,13 +221,13 @@ public class Galaxy
 ### <a name="systemcollectionsconcurrent-classes"></a>System.Collections.Concurrent 클래스  
  .NET Framework 4 이상에서 <xref:System.Collections.Concurrent> 네임스페이스의 컬렉션은 여러 스레드에서 컬렉션 항목에 액세스하기 위한 효율적이고 스레드로부터 안전한 작업을 제공합니다.  
   
- 여러 스레드가 동시에 컬렉션에 액세스할 때마다 <xref:System.Collections.Generic?displayProperty=fullName> 및 <xref:System.Collections?displayProperty=fullName>의 해당 형식 대신 <xref:System.Collections.Concurrent> 네임스페이스의 클래스를 사용해야 합니다. 자세한 내용은 [스레드로부터 안전한 컬렉션](../../../standard/collections/threadsafe/index.md) 및 <xref:System.Collections.Concurrent>를 참조하세요.  
+ 여러 스레드가 동시에 컬렉션에 액세스할 때마다 <xref:System.Collections.Generic?displayProperty=fullName> 및 <xref:System.Collections?displayProperty=fullName>의 해당 형식 대신 <xref:System.Collections.Concurrent> 네임스페이스의 클래스를 사용해야 합니다. 자세한 내용은 [스레드로부터 안전한 컬렉션](../../../standard/collections/thread-safe/index.md) 및 <xref:System.Collections.Concurrent>를 참조하세요.  
   
  <xref:System.Collections.Concurrent> 네임스페이스에 포함된 일부 클래스는 <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Concurrent.ConcurrentQueue%601> 및 <xref:System.Collections.Concurrent.ConcurrentStack%601>입니다.  
   
 <a name="BKMK_Collections"></a>
 ### <a name="systemcollections-classes"></a>System.Collections 클래스  
- <xref:System.Collections?displayProperty=fullName> 네임스페이스의 클래스는 구체적으로 형식화된 개체가 아니라 `Object` 형식의 개체로 요소를 저장합니다.  
+ <xref:System.Collections?displayProperty=fullName> 네임스페이스의 클래스는 구체적 형식의 개체가 아니라 `Object` 형식의 개체로 요소를 저장합니다.  
   
  가능하면 항상 `System.Collections` 네임스페이스의 레거시 형식 대신 <xref:System.Collections.Generic?displayProperty=fullName> 네임스페이스 또는 <xref:System.Collections.Concurrent> 네임스페이스의 제네릭 컬렉션을 사용해야 합니다.  
   
@@ -239,7 +240,7 @@ public class Galaxy
 |<xref:System.Collections.Queue>|FIFO(선입선출) 방식의 개체 컬렉션을 나타냅니다.|  
 |<xref:System.Collections.Stack>|LIFO(후입선출) 방식의 개체 컬렉션을 나타냅니다.|  
   
- <xref:System.Collections.Specialized> 네임스페이스는 문자열 전용 컬렉션 및 연결된 목록과 하이브리드 사전 등 특수하고 강력한 형식의 컬렉션 클래스를 제공합니다.  
+ <xref:System.Collections.Specialized> 네임스페이스는 문자열 전용 컬렉션 및 연결된 목록과 하이브리드 사전 등의 특수한 강력한 형식의 컬렉션 클래스를 제공합니다.  
 
 <a name="BKMK_KeyValuePairs"></a>
 ## <a name="implementing-a-collection-of-keyvalue-pairs"></a>키/값 쌍의 컬렉션 구현  
@@ -332,7 +333,7 @@ private static void FindInDictionary(string symbol)
 }  
 ```  
   
- 대신 다음 예제에서는 <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> 메서드를 사용하여 키를 통해 항목을 빠르게 찾습니다.  
+ 다음 예제에서는 대신 <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> 메서드를 사용하여 키를 통해 항목을 신속하게 찾습니다.  
   
 ```csharp  
 private static void FindInDictionary2(string symbol)  
@@ -554,7 +555,7 @@ public class Color
 ```  
 
 <a name="BKMK_Iterators"></a> 
-##  <a name="iterators"></a>반복기  
+##  <a name="iterators"></a>Iterators  
  *반복기*는 컬렉션에 대해 사용자 지정 반복을 수행하는 데 사용됩니다. 반복기는 메서드 또는 `get` 접근자일 수 있습니다. 반복기는 [yield return](../../../csharp/language-reference/keywords/yield.md) 문을 사용하여 한 번에 하나씩 컬렉션의 각 요소를 반환합니다.  
   
  [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 문을 사용하여 반복기를 호출합니다. 각각의 `foreach` 루프의 반복이 반복기를 호출합니다. `yield return` 문이 반복기 메서드에 도달하면 식이 반환되고 코드에서 현재 위치는 유지됩니다. 다음에 반복기가 호출되면 해당 위치에서 실행이 다시 시작됩니다.  
@@ -593,7 +594,7 @@ private static IEnumerable<int> EvenSequence(
  [프로그래밍 개념(C#)](../../../csharp/programming-guide/concepts/index.md)   
  [Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md)   
  [LINQ to Objects(C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)   
- [PLINQ(병렬 LINQ)](http://msdn.microsoft.com/library/3d4d0cd3-bde4-490b-99e7-f4e41be96455)   
+ [PLINQ(병렬 LINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)   
  [컬렉션 및 데이터 구조](../../../standard/collections/index.md)   
  [컬렉션 만들기 및 조작](http://msdn.microsoft.com/en-us/2065398e-eb1a-4821-9188-75f16e42e069)   
  [Collection 클래스 선택](../../../standard/collections/selecting-a-collection-class.md)   

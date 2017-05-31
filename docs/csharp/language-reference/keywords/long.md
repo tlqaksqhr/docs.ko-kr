@@ -1,6 +1,6 @@
 ---
 title: "long(C# 참조) | Microsoft 문서"
-ms.date: 2015-07-20
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,67 +30,81 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c28c8308d7ed32f7240f56113a77a0794cb1ba62
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 0ea7f109ab934660418aab1a88bff7206ef23a37
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="long-c-reference"></a>long(C# 참조)
-`long` 키워드는 다음 표에 나와 있는 크기와 범위에 따라 값을 저장하는 정수 형식을 나타냅니다.  
+
+`long`은 다음 표에 나와 있는 크기와 범위에 따라 값을 저장하는 정수 형식을 나타냅니다.  
   
 |형식|범위|크기|.NET Framework 형식|  
 |----------|-----------|----------|-------------------------|  
 |`long`|–9,223,372,036,854,775,808 ~ 9,223,372,036,854,775,807|부호 있는 64비트 정수|<xref:System.Int64?displayProperty=fullName>|  
   
-## <a name="literals"></a>리터럴  
- 다음 예제와 같이 `long` 변수를 선언하고 초기화할 수 있습니다.  
+## <a name="literals"></a>리터럴 
+
+10진수 리터럴, 16진수 리터럴 또는 (C# 7부터) 이진 리터럴을 할당하여 `long` 변수를 선언하고 초기화할 수 있습니다. 
+
+다음 예제에서는 10진수, 16진수 및 이진 리터럴로 표현된 4,294,967,296과 같은 정수가 `long` 값에 할당됩니다.  
   
+[!code-cs[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#Long)]  
+
+> [!NOTE] 
+> `0x` 또는 `0X` 접두사를 사용하여 16진수 리터럴을 나타내고, `0b` 또는 `0B` 접두사를 사용하여 이진 리터럴을 나타냅니다. 10진수 리터럴에는 접두사가 없습니다. 
+
+C# 7부터는 다음 예제와 같이 밑줄 문자 `_`를 자릿수 구분 기호로 사용하여 가독성을 향상할 수도 있습니다.
+
+[!code-cs[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#LongS)]  
+ 
+ 형식을 나타내는 접미사가 정수 리터럴에 포함되어 있을 수도 있습니다. `L` 접미사는 `long`을 나타냅니다. 다음 예제에서는 `L` 접미사를 사용하여 정수(long)를 나타냅니다.
+ 
+```csharp
+long value = 4294967296L;  
 ```  
+
+> [!NOTE]
+>  소문자 "l"을 접미사로 사용할 수도 있습니다. 그러나 이렇게 하면 문자 "l"과 숫자 "1"을 혼동하기 쉬우므로 컴파일러 경고가 생성됩니다. 쉽게 구별할 수 있도록 "L"을 사용합니다.  
   
-long long1 = 4294967296;  
-```  
+ `L` 접미사를 사용하는 경우 리터럴 정수의 형식은 해당 크기에 따라 `long` 또는 [ulong](../../../csharp/language-reference/keywords/ulong.md)으로 결정됩니다. 이 경우 [ulong](../../../csharp/language-reference/keywords/ulong.md)의 범위보다 작기 때문에 `long`입니다.  
   
- 정수 리터럴에 접미사가 없는 경우 해당 형식은 [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), `long`, [ulong](../../../csharp/language-reference/keywords/ulong.md) 등 값이 표현될 수 있는 형식의 첫 번째입니다. 위의 예제에서는 [uint](../../../csharp/language-reference/keywords/uint.md)의 범위를 초과하기 때문에 `long` 형식입니다(정수 형식의 저장소 크기는 [정수 형식 표](../../../csharp/language-reference/keywords/integral-types-table.md) 참조).  
+ 접미사는 일반적으로 오버로드된 메서드를 호출할 때 사용됩니다. 예를 들어 다음 오버로드된 메서드에는 `long` 및 [int](../../../csharp/language-reference/keywords/int.md) 형식의 매개 변수가 있습니다.  
   
- 다음과 같이 `long` 형식과 함께 L 접미사를 사용할 수도 있습니다.  
-  
-```  
-  
-long long2 = 4294967296L;  
-```  
-  
- L 접미사를 사용하는 경우 리터럴 정수의 형식은 해당 크기에 따라 `long` 또는 [ulong](../../../csharp/language-reference/keywords/ulong.md)으로 결정됩니다. 이 경우 [ulong](../../../csharp/language-reference/keywords/ulong.md)의 범위보다 작기 때문에 `long`입니다.  
-  
- 접미사는 일반적으로 오버로드된 메서드를 호출할 때 사용됩니다. 예를 들어 `long` 및 [int](../../../csharp/language-reference/keywords/int.md) 매개 변수를 사용하는 다음의 오버로드된 메서드를 살펴보세요.  
-  
-```  
+```csharp
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(long l) {}  
 ```  
   
- L 접미사를 사용하면 올바른 형식이 호출됩니다. 예를 들면 다음과 같습니다.  
+ `L` 접미사를 사용하면 올바른 오버로드가 호출됩니다.  
   
+```csharp  
+SampleMethod(5);    // Calls the method with the int parameter  
+SampleMethod(5L);   // Calls the method with the long parameter  
 ```  
-SampleMethod(5);    // Calling the method with the int parameter  
-SampleMethod(5L);   // Calling the method with the long parameter  
-```  
+정수 리터럴에 접미사가 없는 경우 해당 형식은 값이 표현될 수 있는 다음 형식 중 첫 번째 형식입니다. 
+
+1. [int](int.md)
+2. [uint](../../../csharp/language-reference/keywords/uint.md)
+3. `long`
+4. [ulong](../../../csharp/language-reference/keywords/ulong.md) 
+
+앞의 예제에서 리터럴 4294967296은 [uint](../../../csharp/language-reference/keywords/uint.md)의 범위를 초과하기 때문에 `long` 형식입니다(정수 형식의 저장소 크기는 [정수 형식 표](../../../csharp/language-reference/keywords/integral-types-table.md) 참조).  
   
- 같은 식에서 다른 숫자 정수 형식과 함께 `long` 형식을 사용할 수 있으며, 이 경우 식은 `long`(또는 관계형 또는 부울 식의 경우 [bool](../../../csharp/language-reference/keywords/bool.md))로 계산됩니다. 예를 들어 다음 식은 `long`으로 계산됩니다.  
+ 같은 식에서 다른 정수 형식과 함께 `long` 형식을 사용하는 경우에는 식이 `long`(또는 관계형 또는 부울 식의 경우 [bool](../../../csharp/language-reference/keywords/bool.md))으로 평가됩니다. 예를 들어 다음 식은 `long`으로 계산됩니다.  
   
-```  
+```csharp  
 898L + 88  
 ```  
-  
-> [!NOTE]
->  소문자 "l"을 접미사로 사용할 수도 있습니다. 그러나 이렇게 하면 문자 "l"과 숫자 "1"을 혼동하기 쉬우므로 컴파일러 경고가 생성됩니다. 쉽게 구별할 수 있도록 "L"을 사용합니다.  
   
  부동 소수점 형식 및 정수 형식이 혼합된 산술 식에 대한 자세한 내용은 [float](../../../csharp/language-reference/keywords/float.md) 및 [double](../../../csharp/language-reference/keywords/double.md)을 참조하세요.  
   
 ## <a name="conversions"></a>변환  
  `long`에서 [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) 또는 [decimal](../../../csharp/language-reference/keywords/decimal.md)로 미리 정의된 암시적 변환이 있습니다. 없는 경우 캐스트를 사용해야 합니다. 예를 들어 다음 문은 명시적 캐스트 없이 컴파일 오류를 생성합니다.  
   
-```  
+```csharp  
 int x = 8L;        // Error: no implicit conversion from long to int  
 int x = (int)8L;   // OK: explicit conversion to int  
 ```  
@@ -99,9 +113,8 @@ int x = (int)8L;   // OK: explicit conversion to int
   
  부동 소수점 형식에서 `long`로의 암시적 변환은 없습니다. 예를 들어 명시적 캐스트를 사용하지 않는 경우 다음 문은 컴파일러 오류를 일으킵니다.  
   
-```  
-  
-      long x = 3.0;         // Error: no implicit conversion from double  
+```csharp  
+long x = 3.0;         // Error: no implicit conversion from double  
 long y = (long)3.0;   // OK: explicit conversion  
 ```  
   

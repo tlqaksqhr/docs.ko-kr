@@ -1,6 +1,6 @@
 ---
 title: "ushort(C# 참조) | Microsoft 문서"
-ms.date: 2015-07-20
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,13 +30,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d27a7b3b44d91b5b52e82b13fb111d865f851297
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 20d3c1e9b10df0d1fff96fa3e56e6a81c4663f51
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="ushort-c-reference"></a>ushort(C# 참조)
+
 `ushort` 키워드는 다음 표에 나와 있는 크기와 범위에 따라 값을 저장하는 정수 데이터 형식을 나타냅니다.  
   
 |형식|범위|크기|.NET Framework 형식|  
@@ -44,25 +46,32 @@ ms.lasthandoff: 03/13/2017
 |`ushort`|0 ~ 65,535|부호 없는 16비트 정수|<xref:System.UInt16?displayProperty=fullName>|  
   
 ## <a name="literals"></a>리터럴  
- 다음 예제와 같이 `ushort` 변수를 선언하고 초기화할 수 있습니다.  
+
+10진수 리터럴, 16진수 리터럴 또는 (C# 7부터) 이진 리터럴을 할당하여 `ushort` 변수를 선언하고 초기화할 수 있습니다. 정수 리터럴이 `ushort`의 범위를 벗어난 경우(즉, <xref:System.UInt16.MinValue?displayProperty=fullName>보다 작거나 <xref:System.UInt16.MaxValue?displayProperty=fullName>보다 큰 경우) 컴파일 오류가 발생합니다.
+
+다음 예제에서는 10진수, 16진수 및 이진 리터럴로 표현된 65,034와 같은 정수가 [int](../../../csharp/language-reference/keywords/int.md)에서 `ushort` 값으로 암시적으로 변환됩니다.    
   
-```  
-  
-ushort myShort = 65535;  
-```  
-  
- 앞의 선언에서 정수 리터럴 `65535`는 암시적으로 [int](../../../csharp/language-reference/keywords/int.md)에서 `ushort`로 변환됩니다. 리터럴 정수가 `ushort` 범위를 초과하는 경우 컴파일 오류가 발생합니다.  
+[!code-cs[UShort](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UShort)]  
+
+> [!NOTE] 
+> `0x` 또는 `0X` 접두사를 사용하여 16진수 리터럴을 나타내고, `0b` 또는 `0B` 접두사를 사용하여 이진 리터럴을 나타냅니다. 10진수 리터럴에는 접두사가 없습니다.
+
+C# 7부터는 다음 예제와 같이 밑줄 문자 `_`를 자릿수 구분 기호로 사용하여 가독성을 향상할 수도 있습니다.
+
+[!code-cs[UShort](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UShortS)]  
+ 
+## <a name="compiler-overload-resolution"></a>컴파일러 오버로드 확인
   
  오버로드된 메서드를 호출할 때 캐스트를 사용해야 합니다. 예를 들어 `ushort` 및 [int](../../../csharp/language-reference/keywords/int.md) 매개 변수를 사용하는 다음의 오버로드된 메서드를 살펴보세요.  
   
-```  
+```csharp  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(ushort s) {}  
 ```  
-  
+ 
  `ushort` 캐스트를 사용하면 올바른 형식이 호출됩니다. 예를 들면 다음과 같습니다.  
   
-```  
+```csharp  
 // Calls the method with the int parameter:  
 SampleMethod(5);  
 // Calls the method with the ushort parameter:  
@@ -74,35 +83,32 @@ SampleMethod((ushort)5);
   
  [byte](../../../csharp/language-reference/keywords/byte.md) 또는 [char](../../../csharp/language-reference/keywords/char.md)에서 `ushort`로 미리 정의된 암시적 변환이 있습니다. 아니면 캐스트를 사용해 명시적 변환을 수행해야 합니다. 예를 들어 다음 두 가지 `ushort` 변수 `x` 및 `y`를 고려해 보세요.  
   
-```  
-  
+```csharp 
 ushort x = 5, y = 12;  
 ```  
   
  다음 대입문은 대입 연산자의 오른쪽에 있는 산술 식이 기본적으로 `int`로 계산되므로 컴파일 오류를 생성합니다.  
   
-```  
-  
+```csharp  
 ushort z = x + y;   // Error: conversion from int to ushort  
 ```  
   
  이 문제를 해결하려면 다음 캐스트를 사용합니다.  
   
-```  
-  
+```csharp 
 ushort z = (ushort)(x + y);   // OK: explicit conversion   
 ```  
   
  그러나 대상 변수에 동일한 저장소 크기 또는 더 큰 저장소 크기가 있는 다음 문을 사용할 수 있습니다.  
   
-```  
+```csharp
 int m = x + y;  
 long n = x + y;  
 ```  
   
  부동 소수점 형식에서 `ushort`로의 암시적 변환은 없습니다. 예를 들어 명시적 캐스트를 사용하지 않는 경우 다음 문은 컴파일러 오류를 일으킵니다.  
   
-```  
+```csharp  
 // Error -- no implicit conversion from double:  
 ushort x = 3.0;   
 // OK -- explicit conversion:  
