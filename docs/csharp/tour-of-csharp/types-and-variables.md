@@ -1,6 +1,6 @@
 ---
 title: "C# 형식 및 변수 | C# 언어 둘러보기"
-description: "C에서 형식을 정의하고 변수를 선언하는 방식 알아보기#"
+description: "C#에서 형식 정의 및 변수 선언에 대한 자세한 정보"
 keywords: ".NET, csharp, 형식, 참조 형식, 값 형식"
 author: BillWagner
 ms.author: wiwagn
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 93d09003ea4c54e6851ce00bbc4edecf039d0324
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: 24d405ad33cb4f11dd9e7ba7edb39f10db8041a1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/14/2017
 
 ---
 
@@ -89,7 +90,7 @@ C# 프로그램에서는 *형식 선언*을 사용하여 새 형식을 만듭니
 
 `delegate` 형식은 특정 매개 변수 목록 및 반환 형식이 있는 메서드에 대한 참조를 나타내는 형식입니다. 대리자는 메서드를 변수에 할당되고 매개 변수로 전달될 수 있는 엔터티로 취급할 수 있도록 합니다. 대리자는 함수 언어에서 제공하는 함수 형식과 유사합니다. 또한 다른 언어에 나오는 함수 포인터의 개념과 비슷하지만 함수 포인터와 달리 대리자는 개체 지향적이며 형식 안전 방식입니다.
 
-클래스, `struct`, `interface` 및 `delegate` 형식은 모두 제네릭을 지원하므로 다른 형식으로 매개 변수화할 수 있습니다.
+`class`, `struct`, `interface` 및 `delegate` 형식은 모두 제네릭을 지원하므로 다른 형식으로 매개 변수화할 수 있습니다.
 
 `enum` 형식은 명명된 상수가 있는 고유한 형식입니다. 모든 `enum` 형식은 8가지 정수 형식 중 하나인 내부 형식을 갖습니다. `enum` 형식의 값 집합은 내부 형식의 값 집합과 동일합니다.
 
@@ -101,9 +102,9 @@ C#의 형식 시스템은 모든 형식의 값이 `object`로 취급될 수 있�
 
 [!code-csharp[Boxing](../../../samples/snippets/csharp/tour/types-and-variables/Program.cs#L1-L10)]
 
-값 형식의 값이 `object` 형식으로 변환되면 “box”라고도 하는 `object` 인스턴스가 값을 보유하기 위해 할당되고 값은 해당 box로 복사됩니다. 반대로 `object` 참조가 값 형식으로 캐스트될 때 참조된 `object`가 올바른 값 형식의 box인지 확인한 후 확인 결과가 성공이면 box의 값이 복사됩니다.
+값 형식의 값이 `object` 형식으로 변환되면 "box"라고도 하는 `object` 인스턴스가 값을 보유하기 위해 할당되고 값이 해당 box에 복사됩니다. 반대로 `object` 참조가 값 형식으로 캐스트될 때 참조된 `object`가 올바른 값 형식의 box인지 확인한 후 확인 결과가 성공이면 box의 값이 복사됩니다.
 
-C# 통합 형식 시스템은 결과적으로 값 형식이 "요청 시"에 개체가 될 수 있다는 것을 의미합니다. 통합 때문에 `object` 형식을 사용하는 범용 라이브러리는 참조 형식 및 값 형식 둘 다에 사용될 수 있습니다.
+C# 통합 형식 시스템은 결과적으로 값 형식이 "요청 시" 개체가 될 수 있음을 의미합니다. 통합 때문에 `object` 형식을 사용하는 범용 라이브러리는 참조 형식 및 값 형식 둘 다에 사용될 수 있습니다.
 
 C#에는 필드, 배열 요소, 지역 변수 및 매개 변수를 포함하는 여러 종류의 *변수*가 있습니다. 변수는 저장소 위치를 나타내고, 모든 변수는 아래와 같이 변수에 저장될 수 있는 값을 결정하는 형식을 갖습니다.
 

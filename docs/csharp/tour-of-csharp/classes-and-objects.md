@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: eca74e69b0377f85deaf4cedbdf7b9edcf1b4b87
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 68fbe2e9895825bbbb41cfe025bfdf1d4f9d3d04
+ms.openlocfilehash: 6fe6b83d4a2b50a5eb7c2f6b23d4bda367666ac9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/05/2017
 
 ---
 # <a name="classes-and-objects"></a>클래스 및 개체
@@ -68,9 +69,9 @@ ms.lasthandoff: 03/13/2017
 * `protected`
     - 이 클래스 또는 이 클래스에서 파생된 클래스로만 액세스가 제한됨
 * `internal`
-    - 이 프로그램으로만 액세스가 제한됨
+    - 현재 어셈블리(.exe, .dll 등)로만 액세스가 제한됨
 * `protected internal`
-    - 이 프로그램 또는 이 클래스에서 파생된 클래스로만 액세스가 제한됨
+    - 포함하는 클래스 또는 포함하는 클래스에서 파생된 클래스로만 액세스가 제한됨
 * `private`
     - 이 클래스로만 액세스가 제한됨
 
@@ -89,7 +90,7 @@ ms.lasthandoff: 03/13/2017
 
 ## <a name="base-classes"></a>기본 클래스
 
-클래스 선언은 클래스 이름 및 형식 매개 변수 뒤에 콜론과 기본 클래스의 이름을 사용하여 기본 클래스를 지정할 수 있습니다. 기본 클래스 지정을 생략하면 형식 개체에서 파생되는 것과 같습니다. 다음 예제에서 `Point3D`의 기본 클래스는 `Point`이고 `Point`의 기본 클래스는 `object`입니다.
+클래스 선언은 클래스 이름 및 형식 매개 변수 뒤에 콜론과 기본 클래스의 이름을 사용하여 기본 클래스를 지정할 수 있습니다. 기본 클래스 지정을 생략하면 `object` 형식에서 파생되는 클래스와 같습니다. 다음 예제에서 `Point3D`의 기본 클래스는 `Point`이고 `Point`의 기본 클래스는 `object`입니다.
 
 [!code-csharp[Point3DClass](../../../samples/snippets/csharp/tour/classes-and-objects/Point.cs#L3-L20)]
 
@@ -127,15 +128,15 @@ static 한정자 없이 선언된 필드는 인스턴스 필드를 정의합니�
 
 매개 변수는 메서드에 값 또는 변수 참조를 전달하는 데 사용됩니다. 메서드의 매개 변수는 메서드가 호출될 때 지정된 *인수*에서 실제 값을 가져옵니다. 매개 변수에는 값 매개 변수, 참조 매개 변수, 출력 매개 변수 및 매개 변수 배열의 네 가지 종류가 있습니다.
 
-*값 매개 변수*는 입력 매개 변수 전달에 사용됩니다. 값 매개 변수는 매개 변수에 전달된 인수에서 초기 값을 가져오는 지역 변수에 해당합니다. 값 매개 변수를 수정해도 매개 변수에 전달된 인수에는 영향을 주지 않습니다. 
+*값 매개 변수*는 입력 매개 변수를 전달하는 데 사용됩니다. 값 매개 변수는 매개 변수에 전달된 인수에서 초기 값을 가져오는 지역 변수에 해당합니다. 값 매개 변수를 수정해도 매개 변수에 전달된 인수에는 영향을 주지 않습니다. 
 
 해당 인수를 생략할 수 있도록 기본값을 지정하면 값 매개 변수는 선택적일 수 있습니다.
 
-*참조 매개 변수*는 입력 및 출력 매개 변수 전달 둘 다에 사용됩니다. 참조 매개 변수에 전달되는 인수는 변수여야 하며, 메서드를 실행하는 동안 참조 매개 변수는 인수 변수와 동일한 저장소 위치를 나타냅니다. 참조 매개 변수는 `ref` 한정자를 사용하여 선언됩니다. 다음 예제에서는 `ref` 매개 변수를 사용하는 방법을 보여 줍니다.
+*참조 매개 변수*는 인수를 참조로 전달하는 데 사용됩니다. 참조 매개 변수에 전달되는 인수는 한정된 값을 가진 변수여야 하며, 메서드를 실행하는 동안 참조 매개 변수는 인수 변수와 동일한 저장소 위치를 나타냅니다. 참조 매개 변수는 `ref` 한정자를 사용하여 선언됩니다. 다음 예제에서는 `ref` 매개 변수를 사용하는 방법을 보여 줍니다.
 
 [!code-csharp[swapExample](../../../samples/snippets/csharp/tour/classes-and-objects/RefExample.cs#L3-L18)]
 
-*출력 매개 변수*는 출력 매개 변수 전달에 사용됩니다. 출력 매개 변수는 호출자가 제공한 인수의 초기 값이 중요하지 않다는 점을 제외하고 참조 매개 변수와 비슷합니다. 출력 매개 변수는 `out` 한정자를 사용하여 선언됩니다. 다음 예제에서는 `out` 매개 변수를 사용하는 방법을 보여 줍니다.
+*출력 매개 변수*는 인수를 참조로 전달하는 데 사용됩니다. 호출자가 제공한 인수에 값을 명시적으로 할당할 필요가 없다는 점을 제외하고 참조 매개 변수와 비슷합니다. 출력 매개 변수는 `out` 한정자를 사용하여 선언됩니다. 다음 예제에서는 C# 7에서 도입된 구문으로 `out` 매개 변수를 사용하는 방법을 보여 줍니다.
 
 [!code-csharp[OutExample](../../../samples/snippets/csharp/tour/classes-and-objects/OutExample.cs#L3-L17)]
 
@@ -201,7 +202,7 @@ C#에서는 해당 값을 얻기 위해 먼저 로컬 변수를 *명확 하게 �
 
 [!code-csharp[ExpressionExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L40-L43)]
 
-`Expression` 인스턴스의 `Evaluate` 메서드는 지정된 식을 계산하고 `double` 값을 생성하기 위해 호출됩니다. 이 메서드는 변수 이름(항목의 키로)과 값(항목의 값으로)을 포함하는 @`Dctionary`를 인수로 사용합니다. `Evaluate` 메서드는 `virtual abstract` 메서드입니다. 즉, 비추상 파생 클래스가 실제 구현을 제공하도록 재정의해야 합니다.
+`Expression` 인스턴스의 `Evaluate` 메서드는 지정된 식을 계산하고 `double` 값을 생성하기 위해 호출됩니다. 이 메서드는 변수 이름(항목의 키)과 값(항목의 값)을 포함하는 `Dictionary` 인수를 사용합니다. `Evaluate`가 추상 메서드이기 때문에 `Expression`에서 파생된 비추상 클래스는 `Evaluate`를 재정의해야 합니다.
 
 `Evaluate`의 `Constant` 구현은 단순히 저장된 상수를 반환합니다. `VariableReference`의 구현은 사전에서 변수 이름을 조회하고 결과 값을 반환합니다. `Operation`의 구현은 먼저 왼쪽 및 오른쪽 피연산자를 계산하고(재귀적으로 해당 `Evaluate` 메서드 호출) 지정된 산술 연산을 수행합니다.
 
