@@ -1,42 +1,59 @@
 ---
-title: "Performing Network Operations (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "network operations, performing"
-  - "My.Computer.Network object, tasks"
+title: "네트워크 작업 수행(Visual Basic) | Microsoft Docs"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- network operations, performing
+- My.Computer.Network object, tasks
 ms.assetid: 8ecc47ce-7730-49cd-b21d-3a13477eec6b
 caps.latest.revision: 10
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 10
----
-# Performing Network Operations (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: ce4ab3e16a5b47a72a9d8081fc5ef3acc1cdcd7b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
-다음 표에서는 `My.Computer.Network` 개체와 관련된 작업을 나열합니다.  
+---
+# <a name="performing-network-operations-visual-basic"></a>네트워크 작업 수행(Visual Basic)
+다음 표에는 `My.Computer.Network` 개체와 연결된 작업이 나와 있습니다.  
   
-## 단원 내용  
- [How to: Upload a File](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
- `My.Computer.Network`를 사용하여 파일을 원격 위치에 업로드하고 저장하는 방법을 보여 줍니다.  
+## <a name="in-this-section"></a>단원 내용  
+ [방법: 파일 업로드](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
+ `My.Computer.Network`를 사용하여 파일을 업로드하고 원격 위치에 저장하는 방법을 보여 줍니다.  
   
- [How to: Download a File](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
+ [방법: 파일 다운로드](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
  `My.Computer.Network`를 사용하여 원격 위치에서 파일을 다운로드하는 방법을 보여 줍니다.  
   
- [How to: Check Connection Status](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-check-connection-status.md)  
- 컴퓨터의 네트워크 연결이 작동 중인지 여부를 확인하는 방법을 보여 줍니다.  
+ [방법: 연결 상태 확인](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-check-connection-status.md)  
+ 컴퓨터에 작동하는 네트워크 연결이 있는지 확인하는 방법을 보여 줍니다.  
   
-## 참조  
+## <a name="reference"></a>참조  
  <xref:Microsoft.VisualBasic.Devices.Network>  
- 네트워트 작업을 위한 메서드, 속성 및 이벤트를 나열합니다.  
+ 네트워크 작업을 위한 메서드, 속성 및 이벤트를 보여 줍니다.  
   
  <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>  
  `DownloadFile` 메서드를 설명합니다.  
