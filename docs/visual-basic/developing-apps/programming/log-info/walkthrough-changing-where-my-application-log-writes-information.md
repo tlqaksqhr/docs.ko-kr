@@ -33,10 +33,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: f2563a334248740ff1bd4fc49662229d8f3bf27e
+ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
+ms.openlocfilehash: 5e3d68e6a64ec9f8e9cd8bfd13fa8174da568299
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>연습: My.Application.Log가 정보를 기록하는 위치 변경(Visual Basic)
@@ -65,7 +65,7 @@ ms.lasthandoff: 05/22/2017
   
 3.  다음 요소를 `<listeners>` 섹션에 추가합니다.  
   
-    ```  
+    ```xml  
     <!-- Uncomment to connect the application file log. -->  
     <!-- <add name="FileLog" /> -->  
     <!-- Uncomment to connect the event log. -->  
@@ -84,7 +84,7 @@ ms.lasthandoff: 05/22/2017
   
 6.  다음 요소를 `<sharedListeners>` 섹션에 추가합니다.  
   
-    ```  
+    ```xml  
     <add name="FileLog"  
          type="Microsoft.VisualBasic.Logging.FileLogTraceListener,   
                Microsoft.VisualBasic, Version=8.0.0.0,   
@@ -115,7 +115,7 @@ ms.lasthandoff: 05/22/2017
   
 7.  app.config 파일의 내용은 다음 XML과 비슷합니다.  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
     <configuration>  
       <system.diagnostics>  
@@ -180,13 +180,13 @@ ms.lasthandoff: 05/22/2017
   
      다음 형식을 사용할 수 있습니다.  
   
-    -   파일 로그에 쓰는 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName> 수신기  
+    -   <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName> 수신기 - 로그 파일에 기록합니다.  
   
-    -   `initializeData` 매개 변수로 지정된 컴퓨터 이벤트 로그에 정보를 쓰는 <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> 수신기  
+    -   <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> 수신기 - `initializeData` 매개 변수로 지정한 컴퓨터 이벤트 로그에 정보를 기록합니다.  
   
-    -   `initializeData` 매개 변수에 지정된 파일에 쓰는 <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> 및 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName> 수신기  
+    -   <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> 및 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName> 수신기 - `initializeData` 매개 변수에 지정된 파일에 기록합니다.  
   
-    -   명령줄 콘솔에 쓰는 <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName> 수신기  
+    -   <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName> 수신기 - 명령줄 콘솔에 기록합니다.  
   
      다른 형식의 로그 수신기가 정보를 쓰는 위치에 대한 자세한 내용은 해당 형식의 설명서를 참조하세요.  
   
@@ -213,5 +213,5 @@ ms.lasthandoff: 05/22/2017
  <xref:System.Diagnostics.TraceListener>   
  <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName>   
  <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName>   
- [How to: Write Event Information to a Text File](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)   
+ [방법: 텍스트 파일에 이벤트 정보 쓰기](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)   
  [방법: 응용 프로그램 이벤트 로그에 쓰기](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)

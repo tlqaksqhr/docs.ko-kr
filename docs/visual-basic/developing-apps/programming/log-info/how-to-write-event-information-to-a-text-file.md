@@ -62,7 +62,7 @@ ms.lasthandoff: 05/22/2017
   
 3.  다음 요소를 `<listeners>` 섹션에 추가합니다.  
   
-    ```  
+    ```xml  
     <add name="FileLogListener" />  
     ```  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 05/22/2017
   
 5.  다음 요소를 `<sharedListeners>` 섹션에 추가합니다.  
   
-    ```  
+    ```xml  
     <add name="FileLogListener"   
         type="Microsoft.VisualBasic.Logging.FileLogTraceListener,   
               Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral,   

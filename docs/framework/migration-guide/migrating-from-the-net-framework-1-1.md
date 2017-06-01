@@ -32,7 +32,7 @@ ms.lasthandoff: 04/18/2017
   
 -   [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]에서 실행되는 응용 프로그램 대상을 변경할 수 있습니다. 대상을 변경하려면 응용 프로그램을 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서 실행하도록 허용하는 응용 프로그램의 구성 파일에 [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 요소를 추가해야 합니다. 이러한 구성 파일은 다음과 같은 형식을 사용합니다.  
   
-    ```  
+    ```xml  
     <configuration>   
        <startup>  
           <supportedRuntime version="v4.0"/>  
@@ -53,7 +53,7 @@ ms.lasthandoff: 04/18/2017
 ## <a name="breaking-changes"></a>주요 변경 사항  
  주요 변경 사항이 발생하면 구체적인 변경 사항에 따라 대상이 변경되거나 다시 컴파일된 응용 프로그램 모두에 대해 해결 방법을 사용할 수 있습니다. 이 경우 자식 요소를 응용 프로그램의 구성 파일에 있는 [\<runtime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 요소에 추가하여 이전 동작을 복원할 수 있습니다. 예를 들어 다음 구성 파일에서는 [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)]에서 사용된 문자열 정렬 및 비교 동작을 복원하여 대상이 변경되거나 다시 컴파일된 응용 프로그램에서 사용할 수 있습니다.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <CompatSortNLSVersion enabled="4096"/>  
