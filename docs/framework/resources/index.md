@@ -26,7 +26,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
 ms.openlocfilehash: ffe0b574b00e3ce420d83658f5844f26c3f8ea72
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 06/02/2017
 
 ---
 # <a name="resources-in-desktop-apps"></a>데스크톱 응용 프로그램의 리소스
