@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5852e79f551ce88e0ca54de159abbc222d769234
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: bbc5a3aebfd0086388a4a5b020ad8679395cb74b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>방법: 16진수 문자열과 숫자 형식 간 변환(C# 프로그래밍 가이드)
@@ -75,7 +76,7 @@ ms.lasthandoff: 03/13/2017
  [!code-cs[csProgGuideTypes#38](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-between-hexadecimal-strings-and-numeric-types_5.cs)]  
   
 ## <a name="see-also"></a>참고 항목  
- [표준 숫자 형식 문자열](http://msdn.microsoft.com/library/580e57eb-ac47-4ffd-bccd-3a1637c2f467)   
+ [표준 숫자 형식 문자열](../../../standard/base-types/standard-numeric-format-strings.md)   
  [형식](../../../csharp/programming-guide/types/index.md)   
  [방법: 문자열이 숫자 값을 나타내는지 확인](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
 

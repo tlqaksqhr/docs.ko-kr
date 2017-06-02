@@ -31,16 +31,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 4d830e5df5af7d2c50cbf1501cbed67d1a0ffdad
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="ltremarksgt-c-programming-guide"></a>&lt;remarks&gt;(C# 프로그래밍 가이드)
 ## <a name="syntax"></a>구문  
   
-```  
+```xml  
 <remarks>description</remarks>  
 ```  
   

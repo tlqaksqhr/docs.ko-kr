@@ -1,6 +1,6 @@
 ---
 title: "Visual Basic 시작 | Microsoft Docs"
-ms.date: 2015-07-20
+ms.date: 2017-05-01
 ms.prod: .net
 ms.technology:
 - devlang-visual-basic
@@ -29,17 +29,22 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2d94b01f24ea1c45ecbf6b14ecfdf164d8b8b10c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d3f21e32c162133e70a124da125c30afc7303738
+ms.openlocfilehash: ada42b9a033b548f5e2967040c44f7c790014211
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="getting-started-with-visual-basic"></a>Visual Basic 시작
 설명서의 이 섹션에서는 Visual Basic 응용 프로그램의 개발을 시작하는 데 도움이 되는 내용을 제공합니다.  
   
 ## <a name="in-this-section"></a>단원 내용  
- [Visual Studio 2015의 Visual Basic 주요 변경 내용](../../visual-basic/getting-started/breaking-changes-in-visual-studio-2015.md)  
+
+[Visual Basic의 새로운 기능](whats-new.md)   
+각 Visual Basic .NET 버전의 새로운 기능을 나열합니다.
+
+[Visual Studio 의 Visual Basic 주요 변경 내용](breaking-changes-in-visual-studio.md)  
  이 릴리스에서 응용 프로그램이 컴파일되지 않도록 하거나 런타임 동작을 변경할 수 있는 변경 사항을 보여줍니다.  
   
  [Visual Basic 프로그래머를 위한 추가 리소스](../../visual-basic/getting-started/additional-resources.md)  
@@ -48,7 +53,7 @@ ms.lasthandoff: 03/13/2017
  [Visual Basic 살펴보기](http://msdn.microsoft.com/vstudio/hh388573.aspx)  
  Visual Basic에서 프로그래밍하는 방법을 학습할 수 있는 리소스에 대한 링크를 제공합니다.  
   
- [Visual Basic 다운로드](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx)  
+ [Visual Basic 다운로드](https://www.visualstudio.com/downloads/)  
  무료 버전을 포함하여 Visual Basic 지원이 포함된 Visual Studio 버전에 대한 다운로드 링크를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
@@ -64,7 +69,7 @@ ms.lasthandoff: 03/13/2017
  [의견 보내기](https://docs.microsoft.com/visualstudio/ide/talk-to-us)  
  지원을 받고 사용자 의견을 보내는 방법에 대해 설명합니다.  
   
- [Visual Studio](http://msdn.microsoft.com/en-us/06ddebea-2c83-4a45-bb48-6264c797ed93)  
+ [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/)  
  [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] 설명서에 대한 링크를 제공합니다.  
   
  [C#](../../csharp/csharp.md)  

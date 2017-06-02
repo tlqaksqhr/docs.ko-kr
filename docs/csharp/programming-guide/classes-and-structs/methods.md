@@ -29,10 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e44ef58e85fee164ab3b8be73a35083bd44c5df1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: da1abda4faec540c115d93e14a757dae24c5ae78
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="methods-c-programming-guide"></a>메서드(C# 프로그래밍 가이드)
@@ -42,10 +43,10 @@ ms.lasthandoff: 03/13/2017
 >  이 항목에서는 명명된 메서드에 대해 설명합니다. 익명 함수에 대한 자세한 내용은 [익명 함수](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)를 참조하세요.  
   
 ## <a name="method-signatures"></a>메서드 서명  
- 메서드는 [클래스](../../../csharp/language-reference/keywords/class.md) 또는 [구조체](../../../csharp/language-reference/keywords/struct.md)에서 `public` 또는 `private` 등의 액세스 수준, `abstract` 또는 `sealed` 등의 선택적 한정자, 반환 값, 메서드 이름 및 메서드 매개 변수를 지정하여 선언합니다. 이들 부분은 함께 메서드 서명을 구성합니다.  
+ 메서드는 [클래스](../../../csharp/language-reference/keywords/class.md) 또는 [구조체](../../../csharp/language-reference/keywords/struct.md) 에서 `public` 또는 `private`등의 액세스 수준, `abstract` 또는 `sealed`등의 선택적 한정자, 반환 값, 메서드 이름 및 메서드 매개 변수를 지정하여 선언합니다. 이들 파트는 함께 메서드 서명을 구성합니다.  
   
 > [!NOTE]
->  메서드의 반환 값은 메서드 오버로드를 위한 메서드 서명의 부분이 아닙니다. 그러나 대리자와 대리자가 가리키는 메서드 간의 호환성을 결정할 경우에는 메서드 서명의 부분입니다.  
+>  메서드의 반환 값은 메서드 오버로드를 위한 메서드 서명의 파트가 아닙니다. 그러나 대리자와 대리자가 가리키는 메서드 간의 호환성을 결정할 경우에는 메서드 서명의 파트입니다.  
   
  메서드 매개 변수는 괄호로 묶고 쉼표로 구분합니다. 빈 괄호는 메서드에 매개 변수가 필요하지 않음을 나타냅니다. 이 클래스에는 다음 세 가지 메서드가 포함됩니다.  
   
@@ -111,22 +112,21 @@ static void Main(string[] args)
                 }  
             }  
         }  
-  
 ```  
   
  자세한 내용은 [return](../../../csharp/language-reference/keywords/return.md)을 참조하세요.  
   
 ## <a name="async-methods"></a>비동기 메서드  
- 비동기 기능을 사용하면 명시적 콜백을 사용하거나 수동으로 여러 메서드 또는 람다 식에 코드를 분할하지 않고도 비동기 메서드를 호출할 수 있습니다. 비동기 기능은 [!INCLUDE[vs_dev11_long](../../../csharp/includes/vs_dev11_long_md.md)]에서 도입되었습니다.  
+ 비동기 기능을 사용하면 명시적 콜백을 사용하거나 수동으로 여러 메서드 또는 람다 식에 코드를 분할하지 않고도 비동기 메서드를 호출할 수 있습니다. 
   
  메서드에 [async](../../../csharp/language-reference/keywords/async.md) 한정자를 표시하면 메서드에서 [await](../../../csharp/language-reference/keywords/await.md) 연산자를 사용할 수 있습니다. 컨트롤이 비동기 메서드의 await 식에 도달하면 컨트롤이 호출자로 돌아가고 대기 중인 작업이 완료될 때까지 메서드의 진행이 일시 중단됩니다. 작업이 완료되면 메서드가 실행이 다시 시작될 수 있습니다.  
   
 > [!NOTE]
 >  비동기 메서드는 아직 완료되지 않은 첫 번째 대기된 개체를 검색할 때나 비동기 메서드의 끝에 도달할 때 중에서 먼저 발생하는 시점에 호출자에게 반환됩니다.  
   
- 비동기 메서드에는 <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> 또는 void의 반환 형식이 있을 수 있습니다. void 반환 형식은 기본적으로 void 반환 형식이 필요할 때 이벤트 처리기를 정의하는 데 사용합니다. void를 반환하는 비동기 메서드는 대기할 수 없고 void를 반환하는 메서드의 호출자는 메서드가 throw하는 예외를 catch할 수 없습니다.  
+ 비동기 메서드의 반환 형식은 <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> 또는 void일 수 있습니다. void 반환 형식은 기본적으로 void 반환 형식이 필요할 때 이벤트 처리기를 정의하는 데 사용합니다. void를 반환하는 비동기 메서드는 대기할 수 없고 void를 반환하는 메서드의 호출자는 메서드가 throw하는 예외를 catch할 수 없습니다.  
   
- 다음 예제에서 `DelayAsync`는 반환 형식이 <xref:System.Threading.Tasks.Task%601>인 비동기 메서드입니다. `DelayAsync`에는 정수를 반환하는 `return` 문이 포함됩니다. 따라서 `DelayAsync`의 메서드 선언의 반환 형식은 `Task<int>`여야 합니다. 반환 형식이 `Task<int>`이므로 `await` 의 `DoSomethingAsync` 식 계산에서 다음 문과 같이 정수가 생성됩니다. `int result = await delayTask`.  
+ 다음 예제에서 `DelayAsync`는 반환 형식이 <xref:System.Threading.Tasks.Task%601>인 비동기 메서드입니다. `DelayAsync`에는 정수를 반환하는 `return` 문이 포함됩니다. 따라서 `DelayAsync` 의 메서드 선언의 반환 형식은 `Task<int>`여야 합니다. 반환 형식이 `Task<int>`이므로 `await` 의 `DoSomethingAsync` 식 계산에서 다음 문과 같이 정수가 생성됩니다. `int result = await delayTask`.  
   
  `startButton_Click` 메서드는 반환 형식이 void인 비동기 메서드의 한 가지 예입니다. `DoSomethingAsync` 는 비동기 메서드이므로 다음 문과 같이 `DoSomethingAsync` 호출에 대한 작업을 기다려야 합니다. `await DoSomethingAsync();`. `startButton_Click` 메서드에 `async` 식이 포함되므로 `await` 한정자를 사용하여 해당 메서드를 정의해야 합니다.  
   
@@ -150,17 +150,17 @@ public Customer this[long id] => store.LookupCustomer(id);
   
  메서드가 `void` 를 반환하거나 비동기 메서드이면 메서드 본문은 문 식이어야 합니다(람다에서와 같음).  속성 및 인덱서의 경우 읽기 전용이어야 하며, `get` 접근자 키워드를 사용하지 않습니다.  
   
-## <a name="iterators"></a>반복기  
- 반복기는 배열 목록과 같은 컬렉션에 대해 사용자 지정 반복을 수행합니다. 반복기는 [yield return](../../../csharp/language-reference/keywords/yield.md) 문을 사용하여 각 요소를 한 번에 하나씩 반환합니다. [yield return](../../../csharp/language-reference/keywords/yield.md) 문에 도달하면 코드의 현재 위치가 기억됩니다. 다음에 반복기가 호출되면 해당 위치에서 실행이 다시 시작됩니다.  
+## <a name="iterators"></a>Iterators  
+ 반복기는 배열 목록과 같은 컬렉션에 대해 사용자 지정 반복을 수행합니다. 반복기는 [yield return](../../../csharp/language-reference/keywords/yield.md) 문을 사용하여 각 요소를 따로따로 반환할 수 있습니다. [yield return](../../../csharp/language-reference/keywords/yield.md) 문에 도달하면 코드의 현재 위치가 기억됩니다. 다음에 반복기가 호출되면 해당 위치에서 실행이 다시 시작됩니다.  
   
  [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 문을 사용하여 클라이언트 코드에서 반복기를 호출합니다.  
   
- 반복기의 반환 형식은 <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> 또는 <xref:System.Collections.Generic.IEnumerator%601>입니다.  
+ 반복기의 반환 형식은 <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> 또는 <xref:System.Collections.Generic.IEnumerator%601>일 수 있습니다.  
   
  자세한 내용은 [반복기](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)를 참조하세요.  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
@@ -174,3 +174,4 @@ public Customer this[long id] => store.LookupCustomer(id);
  [out](../../../csharp/language-reference/keywords/out.md)   
  [ref](../../../csharp/language-reference/keywords/ref.md)   
  [매개 변수 전달](passing-parameters.md)
+

@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 6945bedf-5bf3-4955-8588-83fb87511b79
-translationtype: Human Translation
-ms.sourcegitcommit: ff143583ba62fc1d82561e739a75107e50ebee88
-ms.openlocfilehash: c76168d1c9ae65ef0d17c55aab156a4f16ecea52
-ms.lasthandoff: 03/20/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
+ms.openlocfilehash: c1f279e4c78111350dbc8ec01d33d65773c56bb1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/12/2017
 
 ---
 
@@ -20,7 +21,7 @@ ms.lasthandoff: 03/20/2017
 
 Visual Studio for Mac은 .NET Core 응용 프로그램 개발을 위해 필요한 전기능 IDE(통합 개발 환경)를 제공합니다. 이 항목에서는 재사용 가능한 라이브러리 및 단위 테스트를 포함하는 .NET Core 솔루션을 빌드하는 과정을 안내합니다.
 
-이 자습서에서는 사용자가 입력하는 검색어 및 텍스트 문자열을 수락하고, 클래스 라이브러리의 메서드를 사용하여 해당 검색어가 문자열에 나타나는 횟수를 계산하고, 사용자에게 결과를 반환하는 응용 프로그램을 만드는 방법을 보여 줍니다. 또한 이 솔루션에는 TDD(테스트 기반 개발) 개념을 소개하기 위한 클래스 라이브러리용 단위 테스트도 포함되어 있습니다. 전체 샘플에 대한 자습서를 수행하려면 [샘플 솔루션](https://github.com/dotnet/docs/blob/master/samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter)을 다운로드합니다.
+이 자습서에서는 사용자가 입력하는 검색어 및 텍스트 문자열을 수락하고, 클래스 라이브러리의 메서드를 사용하여 해당 검색어가 문자열에 나타나는 횟수를 계산하고, 사용자에게 결과를 반환하는 응용 프로그램을 만드는 방법을 보여 줍니다. 또한 이 솔루션에는 TDD(테스트 기반 개발) 개념을 소개하기 위한 클래스 라이브러리용 단위 테스트도 포함되어 있습니다. 전체 샘플에 대한 자습서를 수행하려면 [샘플 솔루션](https://github.com/dotnet/docs/blob/master/samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter)을 다운로드합니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
 
 > [!NOTE]
 > Visual Studio for Mac은 미리 보기 소프트웨어입니다. 모든 미리 보기 버전의 Microsoft 제품과 마찬가지로 사용자의 의견은 매우 중요합니다. 두 가지가 Visual Studio for Mac의 개발 팀에 다음 두 가지 방법으로 의견을 제공할 수 있습니다.

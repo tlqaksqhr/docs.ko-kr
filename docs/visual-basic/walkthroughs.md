@@ -14,8 +14,8 @@ helpviewer_keywords:
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
 caps.latest.revision: 18
-author: stevehoag
-ms.author: shoag
+author: dotnet-bot
+ms.author: dotnetcontent
 translation.priority.ht:
 - cs-cz
 - de-de
@@ -30,17 +30,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 07743cabc00f65b1369c2733e5119cf1eaf47e0a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: f88f7dcc7880621cf0f482b32ad7c1e5f1b51257
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Visual Basic 언어 연습
 연습에서는 일반 시나리오에 대한 단계별 지침을 제공하므로 제품 또는 특정 기능 영역 파악을 효율적으로 시작할 수 있습니다.  
   
  [비동기 프로그램 작성](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [!INCLUDE[vs_dev11_long](../csharp/includes/vs_dev11_long_md.md)]에 도입된 [Async](../visual-basic/language-reference/modifiers/async.md) 및 [Await](../visual-basic/language-reference/operators/await-operator.md)를 사용하여 비동기 솔루션을 만드는 방법을 보여 줍니다.  
+ [Async](../visual-basic/language-reference/modifiers/async.md) 및 [Await](../visual-basic/language-reference/operators/await-operator.md)를 사용하여 비동기 솔루션을 만드는 방법을 보여 줍니다.  
   
  [이벤트 선언 및 발생](../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
  [!INCLUDE[vbprvb](../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]에서 이벤트가 선언되고 발생하는 방법을 보여 줍니다.  
@@ -91,7 +92,7 @@ ms.lasthandoff: 03/13/2017
  강력한 암호 특성을 확인하는 방법 및 암호 실패 확인에 대한 정보로 문자열 매개 변수를 업데이트하는 방법을 보여 줍니다.  
   
  [Visual Basic에서 문자열 암호화 및 암호 해독](../visual-basic/programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
- <xref:System.Security.Cryptography.DESCryptoServiceProvider> 클래스를 사용하여 문자열을 암호화 및 해독하는 방법을 보여 줍니다.  
+ <xref:System.Security.Cryptography.DESCryptoServiceProvider> 클래스를 사용하여 문자열을 암호화하고 암호 해독하는 방법을 보여 줍니다.  
   
  [Visual Basic에서 파일 및 폴더 조작](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
  [!INCLUDE[vbprvb](../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 함수를 사용하여 파일에 대한 정보를 확인하고, 파일에서 문자열을 검색하고, 파일에 쓰는 방법을 보여 줍니다.  

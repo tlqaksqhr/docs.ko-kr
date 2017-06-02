@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7ac24019390be8501e32b944fb1f9527636815eb
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 22ef950c85b5d19141ea346a9e02d58003f45232
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="yield-c-reference"></a>yield(C# 참조)
@@ -41,7 +42,11 @@ ms.lasthandoff: 03/13/2017
   
  다음 예제에서는 두 가지 형태의 `yield` 문을 보여줍니다.  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```csharp  
+yield return <expression>;  
+yield break;  
+```  
+  
 ## <a name="remarks"></a>설명  
  `yield return` 문을 사용하여 각 요소를 따로따로 반환할 수 있습니다.  
   
@@ -76,7 +81,14 @@ ms.lasthandoff: 03/13/2017
 ## <a name="technical-implementation"></a>기술 구현  
  다음 코드는 반복기 메서드에서 `IEnumerable<string>`을 반환하고 해당 요소를 반복합니다.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+```csharp  
+IEnumerable<string> elements = MyIteratorMethod();  
+foreach (string element in elements)  
+{  
+   ...  
+}  
+```  
+  
  `MyIteratorMethod` 호출은 메서드의 본문을 실행하지 않습니다. 대신에 `IEnumerable<string>` 변수에 `elements`을 반환합니다.  
   
  `foreach` 루프의 반복에서 `elements`에 대해 <xref:System.Collections.IEnumerator.MoveNext%2A> 메서드가 호출됩니다. 이 호출은 다음 `MyIteratorMethod` 문에 도달할 때까지 `yield return` 본문을 실행합니다. `yield return` 문에서 반환하는 식은 루프 본문에서 사용하는 `element` 변수의 값은 물론, 요소의 <xref:System.Collections.Generic.IEnumerator%601.Current%2A> 속성인 `IEnumerable<string>`도 결정합니다.  
@@ -96,7 +108,7 @@ ms.lasthandoff: 03/13/2017
  [!code-cs[csrefKeywordsContextual#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/yield_2.cs)]  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [C# 참조](../../../csharp/language-reference/index.md)   

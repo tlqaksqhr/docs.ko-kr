@@ -1,4 +1,4 @@
-# [어셈블리와 전역 어셈블리 캐시(Visual Basic)](index.md)
+# [어셈블리 및 GAC](index.md)
 ## [Friend 어셈블리](friend-assemblies.md)
 ### [방법: 서명되지 않은 Friend 어셈블리 만들기](how-to-create-unsigned-friend-assemblies.md)
 ### [방법: 서명된 Friend 어셈블리 만들기](how-to-create-signed-friend-assemblies.md)

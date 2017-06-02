@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6bf3902995531768b8b065aca70790c16d77b0ce
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: ca1ecff264734c16369c9a7d28fbb388bb2f1ccc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 파일 I/O 및 파일 시스템에 사용되는 클래스(Visual Basic)
@@ -56,7 +57,7 @@ ms.lasthandoff: 03/13/2017
 |<xref:System.IO.FileMode?displayProperty=fullName>|파일을 여는 방식을 제어합니다. 이 매개 변수는 대부분의 `FileStream` 및 `IsolatedStorageFileStream`에 대한 생성자와 <xref:System.IO.File> 및 <xref:System.IO.FileInfo>의 `Open` 메서드에 대한 생성자에서 지정됩니다.|  
 |<xref:System.IO.FileShare?displayProperty=fullName>|다른 파일 스트림이 같은 파일에 대해 가질 수 있는 액세스 형식을 제어하기 위한 상수를 정의합니다.|  
 |<xref:System.IO.Path?displayProperty=fullName>|디렉터리 문자열을 처리하기 위한 메서드와 속성을 제공합니다.|  
-|<xref:System.Security.Permissions.FileIOPermission?displayProperty=fullName>|<xref:System.Security.Permissions.FileIOPermissionAttribute.Read%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Write%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Append%2A> 및 <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> 권한을 정의하여 파일 및 폴더의 액세스를 제어합니다.|  
+|<xref:System.Security.Permissions.FileIOPermission?displayProperty=fullName>|<xref:System.Security.Permissions.FileIOPermissionAttribute.Read%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Write%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Append%2A> 및 <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> 권한을 정의하여 파일 및 폴더 액세스를 제어합니다.|  
   
 ## <a name="classes-used-to-create-streams"></a>스트림을 만드는 데 사용되는 클래스  
  다음 표에서는 스트림을 만드는 데 사용되는 기본 클래스를 나열하고 설명합니다.  
@@ -64,7 +65,7 @@ ms.lasthandoff: 03/13/2017
 |클래스|설명|  
 |-----------|-----------------|  
 |<xref:System.IO.BufferedStream?displayProperty=fullName>|다른 스트림에서 작업을 읽고 쓰기 위한 버퍼링 레이어를 추가합니다.|  
-|<xref:System.IO.FileStream?displayProperty=fullName>|<xref:System.IO.FileStream.Seek%2A> 메서드를 통해 파일에 대한 임의 액세스를 지원합니다. <xref:System.IO.FileStream>은 기본적으로 파일을 동기적으로 열지만 비동기 작업도 지원합니다.|  
+|<xref:System.IO.FileStream?displayProperty=fullName>|<xref:System.IO.FileStream.Seek%2A> 메서드를 통해 임의 파일 액세스를 지원합니다. <xref:System.IO.FileStream>은 기본적으로 파일을 동기적으로 열지만 비동기 작업도 지원합니다.|  
 |<xref:System.IO.MemoryStream?displayProperty=fullName>|백업 저장소가 파일이 아니라 메모리인 스트림을 만듭니다.|  
 |<xref:System.Net.Sockets.NetworkStream?displayProperty=fullName>|네트워크 액세스를 위한 데이터의 기본 스트림을 제공합니다.|  
 |<xref:System.Security.Cryptography.CryptoStream?displayProperty=fullName>|데이터 스트림을 암호화 변환에 연결하는 스트림을 정의합니다.|  
@@ -76,8 +77,8 @@ ms.lasthandoff: 03/13/2017
 |---------------|---------------------|  
 |<xref:System.IO.BinaryReader?displayProperty=fullName>|<xref:System.IO.FileStream>에서 인코딩된 문자열 및 기본 데이터 형식을 읽습니다.|  
 |<xref:System.IO.BinaryWriter?displayProperty=fullName>|<xref:System.IO.FileStream>에 인코딩된 문자열 및 기본 데이터 형식을 씁니다.|  
-|<xref:System.IO.StreamReader?displayProperty=fullName>|<xref:System.IO.FileStream>에서 문자를 읽어 <xref:System.IO.StreamReader.CurrentEncoding%2A>을 통해 문자를 바이트로 변환하거나 그 반대로 변환합니다. <xref:System.IO.StreamReader>에는 바이트 순서 표시와 같은 <xref:System.IO.StreamReader.CurrentEncoding%2A> 관련 프리앰블이 있는지 여부에 따라 제공된 스트림에 대한 올바른 <xref:System.IO.StreamReader.CurrentEncoding%2A> 확인을 시도하는 생성자가 있습니다.|  
-|<xref:System.IO.StreamWriter?displayProperty=fullName>|`FileStream`에 문자를 써서 <xref:System.IO.StreamWriter.Encoding%2A>을 통해 문자를 바이트로 변환합니다.|  
+|<xref:System.IO.StreamReader?displayProperty=fullName>|<xref:System.IO.FileStream>에서 문자를 읽고 <xref:System.IO.StreamReader.CurrentEncoding%2A>을 사용하여 문자와 바이트 간을 변환합니다. <xref:System.IO.StreamReader>에는 바이트 순서 표시 등의 <xref:System.IO.StreamReader.CurrentEncoding%2A> 관련 프리앰블 유무를 기준으로 하여 지정된 스트림의 올바른 <xref:System.IO.StreamReader.CurrentEncoding%2A> 확인을 시도하는 생성자가 있습니다.|  
+|<xref:System.IO.StreamWriter?displayProperty=fullName>|`FileStream`에 문자를 쓰고 <xref:System.IO.StreamWriter.Encoding%2A>을 사용하여 문자와 바이트 간을 변환합니다.|  
 |<xref:System.IO.StringReader?displayProperty=fullName>|`String`에서 문자를 읽습니다. 출력은 인코딩의 스트림 또는 `String` 중 하나일 수 있습니다.|  
 |<xref:System.IO.StringWriter?displayProperty=fullName>|`String`에 문자를 씁니다. 출력은 인코딩의 스트림 또는 `String` 중 하나일 수 있습니다.|  
   

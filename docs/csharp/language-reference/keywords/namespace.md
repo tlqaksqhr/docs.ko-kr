@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: cc90fe67f7c65d53980786c39f2a6f9869eec321
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -80,7 +81,7 @@ ms.lasthandoff: 03/13/2017
 -   [방법: 전역 네임스페이스 별칭 사용](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [C# 참조](../../../csharp/language-reference/index.md)   

@@ -9,16 +9,17 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdcdb812-6f13-4f20-9e90-0c0977937142
-translationtype: Human Translation
-ms.sourcegitcommit: 4a1f0c88fb1ccd6694f8d4f5687431646adbe000
-ms.openlocfilehash: 3ca312509d7ba7a7759d1ac294f79cc359419c52
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: cc2e823be1a3d1c0267d98c95b25126bd7d048d4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 ---
 
 # <a name="unit-testing-in-net-core-using-dotnet-test"></a>Dotnet 테스트를 사용하여 .NET Core에서 단위 테스트
 
-이 자습서에서는 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 단위 테스트 개념을 알아볼 수 있습니다. 미리 빌드된 솔루션을 사용하여 이 자습서를 진행하려는 경우 시작하기 전에 [샘플 코드를 보거나 다운로드](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test/).
+이 자습서에서는 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 단위 테스트 개념을 알아볼 수 있습니다. 미리 빌드된 솔루션을 사용하여 이 자습서를 진행하려는 경우 시작하기 전에 [샘플 코드를 보거나 다운로드](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test/). 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
 
 ### <a name="creating-the-source-project"></a>소스 프로젝트 만들기
 
@@ -48,7 +49,7 @@ namespace Prime.Services
 
 ### <a name="creating-the-test-project"></a>테스트 프로젝트 만들기
 
-디렉터리를 다시 *unit-testing-using-dotnet-test* 디렉터리로 변경하고 *PrimeServices.Tests* 디렉터리를 만듭니다. 디렉터리 구조는 다음과 같습니다.
+디렉터리를 다시 *unit-testing-using-dotnet-test* 디렉터리로 변경하고 *PrimeService.Tests* 디렉터리를 만듭니다. 디렉터리 구조는 다음과 같습니다.
 
 ```
 /unit-testing-using-dotnet-test

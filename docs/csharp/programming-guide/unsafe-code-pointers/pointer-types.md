@@ -28,9 +28,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 100fa20e69c9a1cd6133437c29d1d5955e871656
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -124,7 +125,6 @@ Console.ReadLine();
 //12  
 //--------  
 //12  
-  
 ```  
   
  `void*` 형식의 포인터에는 간접 참조 연산자를 적용할 수 없습니다. 그러나 캐스트를 사용하여 void 포인터를 다른 포인터 형식으로 변환하거나 반대로 변환할 수 있습니다.  
@@ -148,7 +148,7 @@ Console.ReadLine();
 |`fixed` 문|해당 주소를 찾을 수 있도록 임시로 변수를 고정합니다.|  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
@@ -160,3 +160,4 @@ Console.ReadLine();
  [fixed 문](../../../csharp/language-reference/keywords/fixed-statement.md)   
  [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)   
  [boxing 및 unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
+

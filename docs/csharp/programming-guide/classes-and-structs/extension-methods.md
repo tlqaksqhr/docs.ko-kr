@@ -29,16 +29,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b12c4b20f65f8cd2b68a55c5d2548b289a560c3c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d65b4050287289df419685127cdbbb18f52ec719
+ms.openlocfilehash: a214f129424fd458decf473ef94ec3c5ed6eed3c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/16/2017
 
 ---
 # <a name="extension-methods-c-programming-guide"></a>확장명 메서드(C# 프로그래밍 가이드)
 확장명 메서드를 사용하면 새 파생 형식을 만들거나 다시 컴파일하거나 원래 형식을 수정하지 않고도 기존 형식에 메서드를 "추가"할 수 있습니다. 확장 메서드는 특수한 종류의 정적 메서드이지만 확장 형식의 인스턴스 메서드인 것처럼 호출됩니다. C# 및 Visual Basic에서 작성된 클라이언트 코드의 경우 확장명 메서드를 호출하는 것과 형식에 실제로 정의된 메서드를 호출하는 데는 명백한 차이가 없습니다.  
   
- 가장 일반적인 확장 메서드는 기존 <xref:System.Collections.IEnumerable?displayProperty=fullName> 및 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> 형식에 쿼리 기능을 추가하는 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] 표준 쿼리 연산자입니다. 표준 쿼리 연산자를 사용하려면 `using System.Linq` 지시문을 사용해서 먼저 범위를 지정합니다. 그러면 <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 모든 형식에 <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A> 등의 인스턴스 메서드가 있는 것처럼 보입니다. <xref:System.Collections.Generic.List%601> 또는 <xref:System.Array> 같은 <xref:System.Collections.Generic.IEnumerable%601> 형식의 인스턴스 뒤에 "점"을 입력하면 IntelliSense 문 완성에 이러한 추가 메서드가 표시됩니다.  
+ 가장 일반적인 확장명 메서드는 쿼리 기능을 기존 <xref:System.Collections.IEnumerable?displayProperty=fullName> 및 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> 형식에 추가하는 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] 표준 쿼리 연산자입니다. 표준 쿼리 연산자를 사용하려면 `using System.Linq` 지시문을 사용해서 먼저 범위를 지정합니다. 그러면 <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 모든 형식에 <xref:System.Linq.Enumerable.GroupBy%2A>, <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.Average%2A> 등의 인스턴스 메서드가 있는 것처럼 나타납니다. <xref:System.Collections.Generic.List%601> 또는 <xref:System.Array>와 같은 <xref:System.Collections.Generic.IEnumerable%601> 형식의 인스턴스 뒤에 "dot"를 입력하면 IntelliSense 문 완성에서 이러한 추가 메서드를 볼 수 있습니다.  
   
  다음 예제에서는 정수 배열에서 표준 쿼리 연산자 `OrderBy`를 호출하는 방법을 보여 줍니다. 괄호 안의 식은 람다 식입니다. 많은 표준 쿼리 연산자가 람다 식을 매개 변수로 사용하지만 확장명 메서드에 대한 요구 사항은 아닙니다. 자세한 내용은 [람다 식](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)을 참조하세요.  
   
@@ -78,7 +79,7 @@ using System.Linq;
 > [!NOTE]
 >  <xref:System.String>에 대한 표준 쿼리 연산자는 IntelliSense에는 표시되지 않지만 사용할 수 있습니다.  
   
-## <a name="binding-extension-methods-at-compile-time"></a>컴파일 시간에 확장명 메서드 바인딩  
+## <a name="binding-extension-methods-at-compile-time"></a>컴파일 타임에 확장 메서드 바인딩  
  확장 메서드를 사용하여 클래스 또는 인터페이스를 확장할 수 있지만 재정의할 수는 없습니다. 이름과 시그니처가 인터페이스 또는 클래스 메서드와 동일한 확장 메서드는 호출되지 않습니다. 컴파일 시간에 확장 메서드는 항상 형식 자체에서 정의된 인스턴스 메서드보다 우선 순위가 낮습니다. 즉, 형식에 `Process(int i)`라는 메서드가 있고 동일한 시그니처를 가진 확장 메서드가 있는 경우 컴파일러는 항상 인스턴스 메서드에 바인딩합니다. 컴파일러는 메서드 호출을 발견할 경우 먼저 형식의 인스턴스 메서드에서 일치 항목을 찾습니다. 일치 항목이 없으면 형식에 대해 정의된 확장 메서드를 검색하고 찾은 첫 번째 확장 메서드에 바인딩합니다. 다음 예제에서는 컴파일러가 바인딩할 확장명 메서드 또는 인스턴스 메서드를 확인하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
@@ -95,7 +96,7 @@ using System.Linq;
   
  기존 메서드를 사용하여 소스 코드를 변경할 수 없는 형식을 확장하는 경우 형식의 구현이 변경되어 확장명 메서드가 손상될 수도 있습니다.  
   
- 지정된 형식에 대해 확장 메서드를 구현하는 경우 다음 사항을 명심하십시오.  
+ 지정된 형식에 대해 확장 메서드를 구현하는 경우 다음 사항에 유의하세요.  
   
 -   시그니처가 형식에 정의된 메서드와 동일한 확장 메서드는 호출되지 않습니다.  
   
@@ -112,3 +113,4 @@ using System.Linq;
  [언어 간 확장 메서드 상호 운용성](http://go.microsoft.com/fwlink/?LinkId=112386)   
  [확장 메서드 및 대리자 변환](http://go.microsoft.com/fwlink/?LinkId=112387)   
  [확장 메서드 바인딩 및 오류 보고](http://go.microsoft.com/fwlink/?LinkId=112388)
+

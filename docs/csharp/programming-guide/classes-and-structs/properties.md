@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 6f4d2bf3ad04fedafb44f8fed63f7234d48af63b
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="properties-c-programming-guide"></a>속성(C# 프로그래밍 가이드)
@@ -92,7 +93,7 @@ ms.lasthandoff: 03/13/2017
 -   [자동으로 구현된 속성](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   

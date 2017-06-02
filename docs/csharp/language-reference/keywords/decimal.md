@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f104657c66e067ffe657f8387fef2178e3b2e62b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 336a4a7bb485a48282dd740bafb81421e0cba693
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="decimal-c-reference"></a>decimal(C# 참조)
@@ -47,7 +48,6 @@ ms.lasthandoff: 03/13/2017
  숫자 형식의 실수 리터럴이 `decimal`로 처리되게 하려면 다음과 같이 접미사 m 또는 M을 사용합니다.  
   
 ```  
-  
 decimal myMoney = 300.5m;  
 ```  
   
@@ -57,14 +57,12 @@ decimal myMoney = 300.5m;
  정수 형식은 암시적으로 `decimal`로 변환되어 계산 결과가 `decimal`로 나타납니다. 따라서 접미사를 붙이지 않고 정수 리터럴을 사용하여 decimal 변수를 초기화할 수 있습니다. 예를 들면 다음과 같습니다.  
   
 ```  
-  
 decimal myMoney = 300;  
 ```  
   
  부동 소수점 형식과 `decimal` 형식 간의 암시적 변환은 없습니다. 따라서 이 두 형식 간의 변환에는 캐스트를 사용해야 합니다. 예:  
   
 ```  
-  
       decimal myMoney = 99.9m;  
 double x = (double)myMoney;  
 myMoney = (decimal)x;  
@@ -77,7 +75,7 @@ myMoney = (decimal)x;
  명시적 숫자 변환에 대한 자세한 내용은 [명시적 숫자 변환 표](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)를 참조하세요.  
   
 ## <a name="formatting-decimal-output"></a>Decimal 출력 서식 지정  
- `String.Format` 메서드를 사용하거나 `String.Format()`을 호출하는 <xref:System.Console.Write%2A?displayProperty=fullName> 메서드를 통해 결과의 서식을 지정할 수 있습니다. 통화 서식은 이 문서 뒷부분에 있는 두 번째 예제처럼 표준 통화 서식 문자열 "C" 또는 "c"를 사용하여 지정합니다. `String.Format` 메서드에 대한 자세한 내용은 <xref:System.String.Format%2A?displayProperty=fullName>을 참조하세요.  
+ `String.Format` 메서드를 사용하거나 <xref:System.Console.Write%2A?displayProperty=fullName>을 호출하는 `String.Format()` 메서드를 통해 결과의 서식을 지정할 수 있습니다. 통화 서식은 이 문서 뒷부분에 있는 두 번째 예제처럼 표준 통화 서식 문자열 "C" 또는 "c"를 사용하여 지정합니다. `String.Format` 메서드에 대한 자세한 내용은 <xref:System.String.Format%2A?displayProperty=fullName>을 참조하십시오.  
   
 ## <a name="example"></a>예제  
  다음은 [double](../../../csharp/language-reference/keywords/double.md) 및 `decimal` 변수를 추가하려고 시도하여 컴파일러 오류가 발생하는 예제입니다.  
@@ -91,7 +89,6 @@ Console.WriteLine(dec + dub);
 // You can fix the error by using explicit casting of either operand.  
 Console.WriteLine(dec + (decimal)dub);  
 Console.WriteLine((double)dec + dub);  
-  
 ```  
   
  다음 오류가 발생합니다.  
@@ -119,4 +116,5 @@ Console.WriteLine((double)dec + dub);
  [기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [명시적 숫자 변환 표](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)   
- [표준 숫자 형식 문자열](http://msdn.microsoft.com/library/580e57eb-ac47-4ffd-bccd-3a1637c2f467)
+ [표준 숫자 형식 문자열](../../../standard/base-types/standard-numeric-format-strings.md)
+

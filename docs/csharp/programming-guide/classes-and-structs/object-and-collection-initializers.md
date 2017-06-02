@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 34c0c1ff1c00eecc27edaff30f119e2f3dac8c1d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 66045a6902e64db394a1f5812658e25a11692027
+ms.openlocfilehash: a4d0e8f348afdf1793804a4062be45d2fb4e7e2b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/21/2017
 
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>개체 및 컬렉션 이니셜라이저(C# 프로그래밍 가이드)
@@ -44,7 +45,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="object-initializers-with-anonymous-types"></a>익명 형식의 개체 이니셜라이저  
  개체 이니셜라이저는 모든 컨텍스트에서 사용할 수 있지만 특히 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] 쿼리 식에 유용합니다. 쿼리 식은 [무명 형식](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)을 자주 사용합니다. 이 형식은 다음 선언에 표시된 바와 같이 개체 이니셜라이저를 사용하는 경우에만 초기화될 수 있습니다.  
   
-```  
+```csharp
 var pet = new { Age = 10, Name = "Fluffy" };  
 ```  
   
@@ -54,13 +55,13 @@ var pet = new { Age = 10, Name = "Fluffy" };
   
  이 쿼리를 실행하면 다음 예제와 같이 `productInfos` 문에서 액세스할 수 있는 개체 시퀀스가 `foreach` 변수에 포함됩니다.  
   
-```  
+```csharp
 foreach(var p in productInfos){...}  
 ```  
   
  새 익명 형식의 각 개체에는 원래 개체의 속성이나 필드와 동일한 이름을 받는 두 개의 public 속성이 있습니다. 익명 형식을 만들 때 필드 이름을 바꿀 수도 있습니다. 다음 예제에서는 `UnitPrice` 필드의 이름을 `Price`로 바꿉니다.  
   
-```  
+```csharp
 select new {p.ProductName, Price = p.UnitPrice};  
 ```  
   
@@ -68,11 +69,11 @@ select new {p.ProductName, Price = p.UnitPrice};
  개체 이니셜라이저에 nullable 구조체를 사용하는 것은 컴파일 시간 오류입니다.  
   
 ## <a name="collection-initializers"></a>컬렉션 이니셜라이저  
- 컬렉션 이니셜라이저를 사용하면 <xref:System.Collections.IEnumerable>을 구현하는 컬렉션 클래스나 `Add` 확장 메서드가 있는 클래스를 초기화할 때 하나 이상의 요소 이니셜라이저를 지정할 수 있습니다. 요소 이니셜라이저는 단순한 값, 식 또는 개체 이니셜라이저일 수 있습니다. 컬렉션 이니셜라이저를 사용하면 소스 코드에서 클래스의 `Add` 메서드에 대한 호출을 여러 번 지정할 필요가 없습니다. 컴파일러가 호출을 추가합니다.  
+ 컬렉션 이니셜라이저를 사용하면 <xref:System.Collections.IEnumerable>을 구현하고 적절한 시그니처가 있는 `Add`를 인스턴스 메서드 또는 확장 메서드로 포함하는 컬렉션 형식을 초기화할 때 하나 이상의 요소 이니셜라이저를 지정할 수 있습니다. 요소 이니셜라이저는 단순한 값, 식 또는 개체 이니셜라이저일 수 있습니다. 컬렉션 이니셜라이저를 사용하면 소스 코드에서 클래스의 `Add` 메서드에 대한 호출을 여러 번 지정할 필요가 없습니다. 컴파일러가 호출을 추가합니다.  
   
  다음 예제에서는 두 개의 단순한 컬렉션 이니셜라이저를 보여 줍니다.  
   
-```  
+```csharp
 List<int> digits = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };  
 List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };  
 ```  
@@ -87,7 +88,7 @@ List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };
   
  컬렉션이 인덱싱을 지원하는 경우 인덱싱된 요소를 지정할 수 있습니다.  
   
-```  
+```csharp
 var numbers = new Dictionary<int, string> {   
     [7] = "seven",   
     [9] = "nine",   
@@ -102,3 +103,4 @@ var numbers = new Dictionary<int, string> {
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
  [LINQ 쿼리 식](../../../csharp/programming-guide/linq-query-expressions/index.md)   
  [익명 형식](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+

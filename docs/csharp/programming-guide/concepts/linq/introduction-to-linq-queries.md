@@ -34,10 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 957ab9907c16e494f87873934fe4caccc146c975
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a7d963bad57beb968631e1cf79d7e97dd1554de1
+ms.openlocfilehash: d4739a1ba1c09b29aba25d5439592b82610a2092
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ 쿼리 소개(C#)
@@ -77,7 +78,6 @@ IQueryable<Customer> custQuery =
     from cust in db.Customers  
     where cust.City == "London"  
     select cust;  
-  
 ```  
   
  특정 형식의 데이터 소스를 만드는 방법에 대한 자세한 내용은 다양한 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 공급자에 대한 설명서를 참조하세요. 그러나 기본 규칙은 매우 간단합니다. [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 데이터 소스는 제네릭 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스 또는 이 인터페이스에서 상속된 인터페이스를 지원하는 모든 개체입니다.  
@@ -88,7 +88,7 @@ IQueryable<Customer> custQuery =
 ##  <a name="query"></a> 쿼리  
  쿼리는 데이터 소스 또는 소스에서 검색할 정보를 지정합니다. 필요한 경우 쿼리는 정보를 반환하기 전에 해당 정보를 정렬, 그룹화 및 구체화하는 방법도 지정합니다. 쿼리는 쿼리 변수에 저장되고 쿼리 식으로 초기화됩니다. 쿼리를 쉽게 작성할 수 있도록 C#에서는 새로운 쿼리 구문이 도입되었습니다.  
   
- 이전 예제의 쿼리는 정수 배열에서 모든 짝수를 반환합니다. 쿼리 식에는 `from`, `where` 및 `select`의 세 가지 절이 포함됩니다. SQL에 익숙한 경우 절의 순서가 SQL의 순서와 반대임을 알고 있을 것입니다. `from` 절은 데이터 소스를 지정하고 `where` 절은 필터를 적용하며 `select` 절은 반환되는 요소의 형식을 지정합니다. 이러한 쿼리 절 및 다른 쿼리 절은 [LINQ 쿼리 식](../../../../csharp/programming-guide/linq-query-expressions/index.md) 섹션에서 자세히 설명합니다. 여기에서 중요한 점은 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]에서 쿼리 변수 자체는 아무 작업도 수행하지 않고 데이터를 반환하지 않는다는 것입니다. 나중에 쿼리가 실행될 때 결과를 생성하는 데 필요한 정보를 저장합니다. 백그라운드에서 쿼리를 생성하는 방법에 대한 자세한 내용은 [표준 쿼리 연산자 개요(C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)[표준 쿼리 연산자 개요](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)를 참조하세요.  
+ 이전 예제의 쿼리는 정수 배열에서 모든 짝수를 반환합니다. 쿼리 식에는 `from`, `where` 및 `select`의 세 가지 절이 포함됩니다. SQL에 익숙한 경우 절의 순서가 SQL의 순서와 반대임을 알고 있을 것입니다. `from` 절은 데이터 소스를 지정하고 `where` 절은 필터를 적용하며 `select` 절은 반환되는 요소의 형식을 지정합니다. 이러한 쿼리 절 및 다른 쿼리 절은 [LINQ 쿼리 식](../../../../csharp/programming-guide/linq-query-expressions/index.md) 섹션에서 자세히 설명합니다. 여기에서 중요한 점은 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]에서 쿼리 변수 자체는 아무 작업도 수행하지 않고 데이터를 반환하지 않는다는 것입니다. 나중에 쿼리가 실행될 때 결과를 생성하는 데 필요한 정보를 저장합니다. 백그라운드에서 쿼리를 생성하는 방법에 대한 자세한 내용은 [표준 쿼리 연산자 개요(C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)를 참조하세요.  
   
 > [!NOTE]
 >  쿼리는 메서드 구문을 사용하여 표현할 수도 있습니다. 자세한 내용은 [LINQ의 쿼리 구문 및 메서드 구문](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)을 참조하세요.  
@@ -122,3 +122,4 @@ IQueryable<Customer> custQuery =
  [LINQ 쿼리 식](../../../../csharp/programming-guide/linq-query-expressions/index.md)   
  [foreach, in](../../../../csharp/language-reference/keywords/foreach-in.md)   
  [쿼리 키워드(LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)
+

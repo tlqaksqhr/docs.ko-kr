@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c0d70120-78c8-4d26-bb3c-801f42fc2366
-translationtype: Human Translation
-ms.sourcegitcommit: 4a1f0c88fb1ccd6694f8d4f5687431646adbe000
-ms.openlocfilehash: d32c73ac3a724d4701b7f6c1d548aedb3fb00c56
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
+ms.openlocfilehash: e30573a60e27314466822935249e2b1b119a9259
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -105,7 +106,7 @@ v1부터 .NET Core CLI 도구에는 종속성 설치를 위한 `install` 명령�
 ```
 
 ### <a name="migrating-the-project-file"></a>프로젝트 파일 마이그레이션
-CLI와 DNX는 둘 다 `project.json` 파일 기반의 동일한 기본 프로젝트 시스템을 사용합니다. 프로젝트 파일의 구문 및 의미 체계는 시나리오에 따른 약간의 차이를 제외하면 상당 부분 동일합니다. 또한 [스키마 파일](http://json.schemastore.org/project) 또는 좀 더 친숙한 [project.json 참조](../tools/project-json.md)에서 볼 수 있는 스키마에 대한 몇 가지 변경 사항이 있습니다. 
+CLI와 DNX는 둘 다 `project.json` 파일 기반의 동일한 기본 프로젝트 시스템을 사용합니다. 프로젝트 파일의 구문 및 의미 체계는 시나리오에 따른 약간의 차이를 제외하면 상당 부분 동일합니다. 또한 [스키마 파일](http://json.schemastore.org/project)에서 확인할 수 있는 몇 가지 스키마 변경 내용이 있습니다.
 
 콘솔 응용 프로그램을 작성하는 경우 프로젝트 파일에 다음 조각을 추가해야 합니다.
 

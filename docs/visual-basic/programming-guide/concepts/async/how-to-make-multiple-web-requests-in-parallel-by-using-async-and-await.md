@@ -20,9 +20,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: e4c41cc3813a9f96d944d115c6aaa5c5842a629b
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -46,7 +47,6 @@ Dim myTask = someWebAccessMethodAsync(url)
 ' The application of Await suspends the rest of this method until the task is   
 ' complete.  
 Dim result = Await myTask  
-  
 ```  
   
  작업을 시작 하 고 대기 하는 것 사이 다른 작업을 시작할 수 있습니다. 추가 작업을 암시적으로 병렬로 실행할 수 있지만 추가 스레드가 생성 됩니다.  
@@ -225,3 +225,4 @@ End Class
  [연습: Async를 사용 하 여 웹 서비스에 액세스 및 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
  [비동기 프로그래밍 async 및 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)   
  [방법: Task.WhenAll (Visual Basic)를 사용 하 여 비동기 연습 확장](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+

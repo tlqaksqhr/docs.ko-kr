@@ -31,9 +31,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: c0d300dbb47e64d2425f8af3bc6a819b145786fa
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -168,7 +169,7 @@ var 패턴을 사용한 패턴 일치는 항상 성공합니다. 사용되는 �
 
 # <a name="c-language-specification"></a>C# 언어 사양
   
-[!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [C# 참조](../../../csharp/language-reference/index.md)   

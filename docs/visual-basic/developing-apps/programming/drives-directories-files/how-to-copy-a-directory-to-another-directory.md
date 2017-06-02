@@ -33,14 +33,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0b2d59f347df075e3f8c4f952b62e8ad7fa1643f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 59efea23743d126e9b1d5a842fc7655ad3350acd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>방법: Visual Basic에서 디렉터리를 다른 디렉터리에 복사
-<xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> 메서드를 사용하여 디렉터리를 다른 디렉터리로 복사할 수 있습니다. 이 메서드는 디렉터리 자체뿐만 아니라 디렉터리 내용을 복사합니다. 대상 디렉터리가 없는 경우 새로 만듭니다. 같은 이름의 디렉터리가 대상 위치에 있고 `overwrite`가 `False`로 설정된 경우 두 디렉터리의 내용이 병합됩니다. 작업 중에 디렉터리의 새 이름을 지정할 수 있습니다.  
+<xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> 메서드를 사용하여 디렉터리를 다른 디렉터리에 복사합니다. 이 메서드는 디렉터리 자체뿐만 아니라 디렉터리 내용을 복사합니다. 대상 디렉터리가 없는 경우 새로 만듭니다. 같은 이름의 디렉터리가 대상 위치에 있고 `overwrite`가 `False`로 설정된 경우 두 디렉터리의 내용이 병합됩니다. 작업 중에 디렉터리의 새 이름을 지정할 수 있습니다.  
   
  디렉터리 내의 파일을 복사하는 경우 `overwrite`가 `False`로 설정된 동안 병합 중에 있는 파일 등의 특정 파일에서 발생하는 예외가 throw될 수 있습니다. 이러한 예외가 throw되면 `Data` 속성이 파일 또는 디렉터리 경로가 키이고 특정 예외 메시지가 해당 값에 포함된 항목을 저장하는 단일 예외에 통합됩니다.  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 03/13/2017
   
 -   길이가 0인 문자열이거나, 공백만 포함하거나, 잘못된 문자를 포함하거나, 경로가 장치 경로인 경우(\\\\.\\로 시작됨)와 같은 여러 가지 이유 중 하나로 경로가 올바르지 않은 경우(<xref:System.ArgumentException>)  
   
--   경로가 `Nothing`이기 때문에 유효하지 않은 경우(<xref:System.ArgumentNullException>)  
+-   경로가 `Nothing`이기 때문에 올바르지 않은 경우(<xref:System.ArgumentNullException>)  
   
 -   `destinationDirectoryName`이 `Nothing` 또는 빈 문자열인 경우(<xref:System.ArgumentNullException>)  
   
@@ -73,7 +74,7 @@ ms.lasthandoff: 03/13/2017
   
 -   `ShowUI`가 `UIOption.AllDialogs`로 설정되었으며 사용자가 작업을 취소하거나 디렉터리에 있는 하나 이상의 파일을 복사할 수 없는 경우(<xref:System.OperationCanceledException>)  
   
--   작업이 순환되는 경우(<xref:System.InvalidOperationException>)  
+-   작업이 순환 방식인 경우(<xref:System.InvalidOperationException>)  
   
 -   경로에 콜론(:)이 포함된 경우(<xref:System.NotSupportedException>)  
   
@@ -83,7 +84,7 @@ ms.lasthandoff: 03/13/2017
   
 -   경로를 보는 데 필요한 권한이 사용자에게 없는 경우(<xref:System.Security.SecurityException>)  
   
--   대상 파일은 있지만 액세스할 수 없는 경우(<xref:System.UnauthorizedAccessException>)  
+-   대상 파일이 있지만 액세스할 수 없는 경우(<xref:System.UnauthorizedAccessException>)  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>   

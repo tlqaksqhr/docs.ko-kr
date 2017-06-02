@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 28c6b9da6d94bd402e720db48d5c7a2977344f05
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
+ms.openlocfilehash: d421f0115642efa73dbeb893dba912b96d5f4dc6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>캐스팅 및 형식 변환(C# 프로그래밍 가이드)
@@ -103,11 +104,8 @@ Giraffe g2 = (Giraffe) a;
  C#에서는 실제로 캐스트를 수행하기 전에 호환성을 테스트할 수 있는 [is](../../../csharp/language-reference/keywords/is.md) 및 [as](../../../csharp/language-reference/keywords/as.md) 연산자를 제공합니다. 자세한 내용은 [방법: AS 및 IS 연산자를 사용한 안전한 캐스트](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md)를 참조하세요.  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
-  
-## <a name="featured-book-chapter"></a>중요 설명서 장  
- [Visual C# 2010 시작](http://go.microsoft.com/fwlink/?LinkId=221214)의 [변수 자세히 알아보기](http://go.microsoft.com/fwlink/?LinkId=221230)  
-  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
 ## <a name="see-also"></a>참고 항목  
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
  [형식](../../../csharp/programming-guide/types/index.md)   

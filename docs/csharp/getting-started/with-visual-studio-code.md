@@ -1,23 +1,24 @@
 ---
-title: "Visual Studio Code 시작 | C# 가이드"
+title: "Visual Studio Code 시작하기 | C# 가이드"
 description: "VS Code를 사용하여 C#에서 첫 번째 .NET Core 응용 프로그램을 만들고 디버그하는 방법을 알아봅니다."
 keywords: "C#, 시작, 취득, 설치, Visual Studio Code, 플랫폼 간"
 author: kendrahavens
 ms.author: mairaw
-ms.date: 03/07/2017
+ms.date: 5/02/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 76c23597-4cf9-467e-8a47-0c3703ce37e7
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4550129f4e6f1eeb3521ad7fe3233f2bda49e5c5
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d00f2096e0799107a8a2ff1d12274c6026d4c27a
+ms.openlocfilehash: a8233995046e6fdf980bf630da18908a02d2bfb0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/14/2017
 
 ---
 
-# <a name="getting-started-with-visual-studio-code"></a>Visual Studio Code 시작
+# <a name="get-started-with-visual-studio-code"></a>Visual Studio Code 시작하기
 
 .NET Core는 Windows, Linux 및 macOS에서 실행되는 서버 응용 프로그램을 만들기 위한 빠른 모듈식 플랫폼을 제공합니다. C# 확장이 있는 Visual Studio Code를 사용하면 C# IntelliSense(스마트 코드 완성) 및 디버깅을 완벽하게 지원하는 강력한 편집 환경이 구현됩니다.
 
@@ -94,6 +95,6 @@ ms.lasthandoff: 03/13/2017
 > VS Code에서 OmniSharp를 사용한 .NET Core 디버깅에 대한 자세한 내용 및 문제 해결 정보는 [.NET Core 디버거 설정 지침](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
-- [Visual Studio Code 설치](https://code.visualstudio.com/docs/setup/setup-overview)
-- [Visual Studio Code의 디버깅](https://code.visualstudio.com/Docs/editor/debugging)
+[Visual Studio Code 설정](https://code.visualstudio.com/docs/setup/setup-overview)   
+[Visual Studio Code의 디버깅](https://code.visualstudio.com/Docs/editor/debugging)
 

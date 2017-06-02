@@ -23,5 +23,6 @@
 ### [구조체 변수](structure-variables.md)
 ### [구조체 및 기타 프로그래밍 요소](structures-and-other-programming-elements.md)
 ### [구조체와 클래스](structures-and-classes.md)
+## [튜플](tuples.md)
 ## [데이터 형식의 효율적 사용](efficient-use-of-data-types.md)
 ## [데이터 형식 문제 해결](troubleshooting-data-types.md)

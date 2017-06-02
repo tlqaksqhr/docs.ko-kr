@@ -36,10 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 12e99815d1fd1b9c57706653e41a360802a6d80c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 94842349ae1c0fa3ccbdb2279b05a0faeb2f5d30
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-log-messages-when-the-application-starts-or-shuts-down-visual-basic"></a>방법: 응용 프로그램이 시작 또는 종료될 때 메시지 기록(Visual Basic)
@@ -61,7 +62,7 @@ ms.lasthandoff: 03/13/2017
   
 2.  **선언** 메뉴에서 **Startup**을 선택합니다.  
   
-     주 응용 프로그램이 실행되기 전에 응용 프로그램에서 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> 이벤트가 발생합니다.  
+     주 응용 프로그램이 실행되기 전에 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> 이벤트가 발생합니다.  
   
 3.  `My.Application.Log.WriteEntry` 이벤트 처리기에 `Startup` 메서드를 추가합니다.  
   
@@ -73,7 +74,7 @@ ms.lasthandoff: 03/13/2017
   
 2.  **선언** 메뉴에서 **Shutdown**을 선택합니다.  
   
-     주 응용 프로그램이 실행된 후 종료되기 전에 응용 프로그램에서 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> 이벤트가 발생합니다.  
+     주 응용 프로그램이 실행된 후 종료되기 전에 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> 이벤트가 발생합니다.  
   
 3.  `My.Application.Log.WriteEntry` 이벤트 처리기에 `Shutdown` 메서드를 추가합니다.  
   
@@ -88,5 +89,5 @@ ms.lasthandoff: 03/13/2017
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
  <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>   
  <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>   
- [프로젝트 디자이너, 응용 프로그램 페이지(Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-visual-basic)   
+ [Application Page, Project Designer (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-visual-basic)   
  [응용 프로그램 로그 작업](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)

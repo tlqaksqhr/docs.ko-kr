@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4c1bab99fc1139f03e5f754cfecaee392b947171
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: d974e93c3c50a61889a9ed37ad5f68f7a131a538
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="async-return-types-c"></a>비동기 반환 형식(C#)
@@ -38,7 +39,7 @@ ms.lasthandoff: 03/13/2017
   
  다음 예제에서 `TaskOfT_MethodAsync` 비동기 메서드는 정수를 반환하는 return 문을 포함합니다. 따라서 메서드 선언은 `Task<int>`의 반환 형식을 지정해야 합니다.  
   
-```cs  
+```csharp  
 // TASK<T> EXAMPLE  
 async Task<int> TaskOfT_MethodAsync()  
 {  
@@ -64,7 +65,7 @@ async Task<int> TaskOfT_MethodAsync()
   
  다음 코드는 `TaskOfT_MethodAsync` 메서드를 호출하고 기다립니다. 결과는 `result1` 변수에 할당됩니다.  
   
-```cs  
+```csharp  
 // Call and await the Task<T>-returning async method in the same statement.  
 int result1 = await TaskOfT_MethodAsync();  
 ```  
@@ -74,7 +75,7 @@ int result1 = await TaskOfT_MethodAsync();
 > [!WARNING]
 >  <xref:System.Threading.Tasks.Task%601.Result%2A> 속성은 차단 속성입니다. 해당 작업이 완료되기 전에 액세스하려고 하면, 작업이 완료되고 값을 사용할 수 있을 때까지 현재 활성화된 스레드가 차단됩니다. 대부분의 경우 속성에 직접 액세스하지 않고 `await`를 사용하여 값에 액세스해야 합니다.  
   
-```cs  
+```csharp  
 // Call and await in separate statements.  
 Task<int> integerTask = TaskOfT_MethodAsync();  
   
@@ -86,7 +87,7 @@ int result2 = await integerTask;
   
  다음 코드의 display 문은 `result1` 변수, `result2` 변수 및 `Result` 속성의 값이 동일한지 확인합니다. `Result` 속성은 차단 속성이므로 해당 작업이 대기 상태가 되기 전에 액세스하지 않아야 합니다.  
   
-```cs  
+```csharp  
 // Display the values of the result1 variable, the result2 variable, and  
 // the integerTask.Result property.  
 textBox1.Text += String.Format("\r\nValue of result1 variable:   {0}\r\n", result1);  
@@ -99,7 +100,7 @@ textBox1.Text += String.Format("Value of integerTask.Result: {0}\r\n", integerTa
   
  다음 예제에서는 `Task_MethodAsync` 비동기 메서드가 return 문을 포함하지 않습니다. 따라서 이 메서드에 대해 `Task_MethodAsync`가 대기할 수 있도록 `Task`의 반환 형식을 지정합니다. `Task` 형식의 정의는 반환 값을 저장하기 위한 `Result` 속성을 포함하지 않습니다.  
   
-```cs  
+```csharp  
 // TASK EXAMPLE  
 async Task Task_MethodAsync()  
 {  
@@ -118,7 +119,7 @@ async Task Task_MethodAsync()
   
  다음 코드는 `Task_MethodAsync` 메서드를 호출하고 기다립니다.  
   
-```cs  
+```csharp  
 // Call and await the Task-returning async method in the same statement.  
 await Task_MethodAsync();  
 ```  
@@ -127,7 +128,16 @@ await Task_MethodAsync();
   
  다음 코드는 `Task_MethodAsync`가 반환하는 작업을 대기하는 것에서 `Task_MethodAsync` 호출을 구분합니다.  
   
-<CodeContentPlaceHolder>6</CodeContentPlaceHolder>  
+```csharp  
+// Call and await in separate statements.  
+Task simpleTask = Task_MethodAsync();  
+  
+// You can do other work that does not rely on simpleTask before awaiting.  
+textBox1.Text += String.Format("\r\nApplication can continue working while the Task runs. . . .\r\n");  
+  
+await simpleTask;  
+```  
+  
 ##  <a name="BKMK_VoidReturnType"></a> Void 반환 형식  
  void 반환 형식은 void 반환 형식이 필요한 이벤트 처리기에서 주로 사용합니다. void 반환은 또한 "실행 후 제거"로 분류할 수 있는 작업을 수행하는 메서드 또는 viod를 반환하는 메서드를 재정의하는 데 사용할 수 있습니다. 하지만 void를 반환하는 비동기 메서드는 대기할 수가 없기 때문에 가능할 때마다 `Task`를 반환하는 것이 좋습니다. 이러한 메서드의 호출자는 호출된 비동기 메서드가 마치는 것을 기다리지 않고 완료될 때까지 계속 진행할 수 있어야 하므로, 해당 호출자는 비동기 메서드가 생성하는 모든 값 또는 예외와 독립되어 있어야 합니다.  
   
@@ -137,7 +147,21 @@ await Task_MethodAsync();
   
  다음 코드는 비동기 이벤트 처리기를 정의합니다.  
   
-<CodeContentPlaceHolder>7</CodeContentPlaceHolder>  
+```csharp  
+// VOID EXAMPLE  
+private async void button1_Click(object sender, RoutedEventArgs e)  
+{  
+    textBox1.Clear();  
+  
+    // Start the process and await its completion. DriverAsync is a   
+    // Task-returning async method.  
+    await DriverAsync();  
+  
+    // Say goodbye.  
+    textBox1.Text += "\r\nAll done, exiting button-click event handler.";  
+}  
+```  
+  
 ##  <a name="BKMK_Example"></a> 전체 예제  
  다음 WPF(Windows Presentation Foundation) 프로젝트는 이 항목의 코드 예제를 포함합니다.  
   
@@ -161,7 +185,7 @@ await Task_MethodAsync();
   
 6.  MainWindow.xaml의 **XAML** 창에서 코드를 다음 코드로 바꿉니다.  
   
-    ```cs  
+    ```csharp  
     <Window x:Class="AsyncReturnTypes.MainWindow"  
             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
@@ -181,7 +205,7 @@ await Task_MethodAsync();
   
 8.  MainWindow.xaml.cs의 코드를 다음 코드로 바꿉니다.  
   
-    ```cs  
+    ```csharp  
     using System;  
     using System.Collections.Generic;  
     using System.Linq;  

@@ -20,9 +20,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: de78bfda263071817535157522430de080d4f6a4
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -220,7 +221,6 @@ Task returnedTask = Task_MethodAsync()
 Await returnedTask  
 ' or, in a single statement  
 Await Task_MethodAsync()  
-  
 ```  
   
  반환된 각 작업은 진행 중인 작업을 나타냅니다. 작업은 비동기 프로세스 상태에 대한 정보를 캡슐화하며, 결과적으로 프로세스의 최종 결과 또는 성공하지 못한 경우 프로세스가 발생시키는 예외에 대한 정보를 캡슐화합니다.  
@@ -334,3 +334,4 @@ End Class
 ## <a name="see-also"></a>참고 항목  
  [Await 연산자](../../../../visual-basic/language-reference/operators/await-operator.md)   
  [비동기](../../../../visual-basic/language-reference/modifiers/async.md)
+

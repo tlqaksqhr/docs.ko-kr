@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: dc931fe2c87620ddb073f53f7e8edccaa1e3b987
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: 3dcf0204d57861543743fee4de9523231465d24c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/14/2017
 
 ---
 
@@ -30,7 +31,10 @@ ms.lasthandoff: 03/13/2017
 
 GitHub에서 REST 서비스에 HTTP 요청을 실행하는 응용 프로그램을 빌드합니다. JSON 형식의 정보를 읽은 후 해당 JSON 패킷을 C# 개체로 변환합니다. 마지막으로 C# 개체를 사용하는 방법을 배웁니다.
 
-이 자습서에는 많은 기능이 있습니다. 하나씩 빌드해 보겠습니다. 
+이 자습서에는 많은 기능이 있습니다. 하나씩 빌드해 보겠습니다.
+
+이 항목에 대한 [최종 샘플](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient)을 따르려는 경우 해당 샘플을 다운로드할 수 있습니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
+
 ## <a name="prerequisites"></a>필수 구성 요소
 .NET Core를 실행하려면 컴퓨터에 설정해야 합니다. [.NET Core](https://www.microsoft.com/net/core) 페이지에서 설치 지침을 확인할 수 있습니다. Windows, Linux, macOS 또는 Docker 컨테이너에서 이 응용 프로그램을 실행할 수 있습니다. 선호하는 코드 편집기를 설치해야 합니다. 아래 설명에서는 오픈 소스 플랫폼 간 편집기인 [Visual Studio Code](https://code.visualstudio.com/)를 사용합니다. 그러나 익숙한 어떤 도구도 사용 가능합니다.
 ## <a name="create-the-application"></a>응용 프로그램 만들기
@@ -360,7 +364,7 @@ using System.Globalization;
 Console.WriteLine(repo.LastPush);
 ```
 
-해당 버전은 [여기](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient)에 있는 완성된 버전과 일치해야 합니다.
+이제 해당 버전이 [완성된 샘플](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient)과 일치해야 합니다.
  
 ## <a name="conclusion"></a>결론
 

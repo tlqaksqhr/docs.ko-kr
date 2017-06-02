@@ -1,62 +1,67 @@
 ---
 title: ".NET 시작"
-description: "시작"
-keywords: .NET
+description: ".NET 기술 제품군을 시작합니다."
+keywords: ".NET, .NET Core, 시작, 뉴스"
 author: richlander
-manager: wpickett
-ms.date: 10/12/2016
+ms.author: mairaw
+ms.date: 05/11/2017
 ms.topic: article
 ms.prod: .net
-ms.technology: .net-technologies
 ms.devlang: dotnet
 ms.assetid: cb788dcf-2120-467f-9c34-c02a90e1f68f
-translationtype: Human Translation
-ms.sourcegitcommit: 15c55a87beb64f265a164db918c7721c7690fadf
-ms.openlocfilehash: dac380e7c493abc733c136f022d3634b807d8836
+ms.translationtype: Human Translation
+ms.sourcegitcommit: ae036cfcad341ffc859336a7ab2a49feec145715
+ms.openlocfilehash: 315b24896797badd0a7540477f79f3f220e5c300
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/18/2017
 
 ---
 
 # <a name="welcome-to-net"></a>.NET 시작
 
-> 간단한 .NET Core 응용 프로그램을 만드는 방법을 알아보려면 [".NET Core 시작" 자습서](core/getting-started.md)를 확인해 보세요. 첫 번째 앱을 만들고 실행하는 데 몇 분밖에 걸리지 않습니다.
+.NET Core 앱을 만드는 방법은 [.NET Core 시작](core/get-started.md)을 참조하세요.
 
-.NET을 시작합니다. 클라우드에서 IoT와 게임에 이르기까지 원하는 모든 종류의 응용 프로그램을 .NET으로 빌드할 수 있습니다. Windows, Linux, Android, macOS 및 iOS용 다음 응용 프로그램의 빌드를 지금 시작할 수 있습니다. 수백만 명의 개발자가 .NET을 사용하여 중요 업무용 응용 프로그램, 개인용 앱 및 몰입형 게임을 개발합니다. 다음 응용 프로그램을 작성할 수 있습니다.
-
-Windows, macOS 및 Linux에서 앱과 게임을 개발할 수 있습니다. 앱 또는 게임을 빌드하고 서버 또는 데스크톱에 배포하거나 앱 스토어에 게시하기 위해 사용할 수 있는 무료 도구가 있습니다. 학생들도 액세스할 수 있으며 전 세계 대기업에서 사용되고 있습니다.
+무료 플랫폼 간 도구를 사용하여 .NET으로 클라우드, IoT, 게임 등 다양한 유형의 앱을 빌드합니다. 그리고 Android, iOS, Linux, macOS 및 Windows에서 해당 앱을 실행할 수 있습니다. 앱을 서버 또는 데스크톱에 배포하고 모바일 장치에 배포하기 위해 앱 스토어에 게시합니다. .NET은 학생 및 아마추어 프로그래머가 사용할 수 있으며 이들 모두 활기 넘치는 국제 개발자 커뮤니티에 참여하고 다양 한 .NET 기술에 대한 글을 직접 작성할 수 있습니다.
 
 ## <a name="news"></a>뉴스
 
-.NET 커뮤니티에는 배우거나 탐색할 새로운 내용이 항상 있습니다. 다음은 확인해볼 만한 최신 뉴스입니다.
-
 - [Introducing .NET Standard](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/)(표준 .NET 소개)
-- [.NET Core 1.0.1 announcement](https://blogs.msdn.microsoft.com/dotnet/2016/09/13/announcing-september-2016-updates-for-net-core-1-0/)(.NET Core 1.0.1 발표)
-- [Announcing .NET Framework 4.6.2](https://blogs.msdn.microsoft.com/dotnet/2016/08/02/announcing-net-framework-4-6-2/)(.NET Framework 4.6.2 발표)
-- [Announcing .NET Core 1.0](https://blogs.msdn.microsoft.com/dotnet/announcing-net-core-1-0)(.NET Core 1.0 발표)
-- [Announcing ASP.NET Core 1.0](https://blogs.msdn.microsoft.com/webdev/2016/06/27/announcing-asp-net-core-1-0/)(ASP.NET Core 1.0 발표)
+- [Announcing .NET Core 2.0 Preview 1](https://blogs.msdn.microsoft.com/dotnet/2017/05/10/announcing-net-core-2-0-preview-1/)(.NET Core 2.0 Preview 1 발표)
+- [Announcing ASP.NET 2.0 Preview 1 and Updates for .NET Web Developers](https://blogs.msdn.microsoft.com/webdev/2017/05/10/aspnet-2-preview-1/)(ASP.NET 2.0 Preview 1 및 .NET 웹 개발자용 업데이트 발표)
+- [A fresh update to Visual Studio 2017 and the next preview](https://blogs.msdn.microsoft.com/visualstudio/2017/05/10/update-to-visual-studio-2017-and-next-preview/)(Visual Studio 2017에 대한 최신 업데이트 및 다음 미리 보기)
+- [Visual Studio for Mac: now generally available](https://blogs.msdn.microsoft.com/visualstudio/2017/05/10/visual-studio-for-mac-now-generally-available/)(Visual Studio for Mac: 현재 일반 공급)
+- [Announcing .NET Core Tools 1.0 (.NET Core 1.0.4, .NET Core 1.1.1, .NET Core SDK 1.0.1)](https://blogs.msdn.microsoft.com/dotnet/2017/03/07/announcing-net-core-tools-1-0/)(.NET Core Tools 1.0(.NET Core 1.0.4, .NET Core 1.1.1, .NET Core SDK 1.0.1) 발표)
+- [Announcing Visual Studio 2017 General Availability](https://blogs.msdn.microsoft.com/visualstudio/2017/03/07/announcing-visual-studio-2017-general-availability-and-more/)(Visual Studio 2017 일반 공급 발표)
+- [What's new for .NET Core and Visual Studio 2017 (video)](https://channel9.msdn.com/events/Visual-Studio/Visual-Studio-2017-Launch/T108)(.NET Core 및 Visual Studio 2017 새로운 기능(비디오))
+- [Announcing the .NET Framework 4.7](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/)(.NET Framework 4.7 발표)
+- [New Features in C# 7.0](https://blogs.msdn.microsoft.com/dotnet/2017/03/09/new-features-in-c-7-0/)(C# 7.0의 새 기능)
+- [Announcing F# 4.1 and the Visual F# Tools for Visual Studio 2017](https://blogs.msdn.microsoft.com/dotnet/2017/03/07/announcing-f-4-1-and-the-visual-f-tools-for-visual-studio-2017-2/)(Visual Studio 2017용 F# 4.1 및 Visual F# 도구 발표)
 - [Open Source Xamarin, Ready for you!](https://blog.xamarin.com/live-from-evolve-open-source-xamarin-ready-for-you/)(오픈 소스 Xamarin, 준비 완료!)
 - [The week in .NET](https://blogs.msdn.microsoft.com/dotnet/tag/week-in-net/)(이 주의 .NET 소식)
-- [Thank you for watching dotnetConf 2016!](https://blogs.msdn.microsoft.com/dotnet/2016/06/09/thank-you-for-watching-dotnetconf-2016/)(dotnetConf 2016을 시청해 주셔서 감사합니다!)
+- [Build 2017 on Channel 9 - Video on Microsoft's latest technologies and news!](https://channel9.msdn.com/?wt.mc_id=build_hp#programGuide)(Channel 9의 Build 2017 - Microsoft의 최신 기술 및 뉴스에 대한 비디오!)
 
 ## <a name="documentation"></a>설명서
 
-다음 문서는 처음부터 앱을 빌드하는 방법 또는 이미 작업 중인 앱을 완료하는 방법을 보여 줍니다. 확인해야 할 주요 섹션은 다음과 같습니다.
+이 문서에서는 .NET의 다양한 플랫폼 및 언어 지원에 대해 설명합니다.  다음 섹션 중 하나에서 .NET 및 해당 언어를 시작할 수 있습니다.
 
+- [.NET 플랫폼 가이드](standard/index.md)
+- [.NET Core 가이드](core/index.md)
+- [.NET Framework 가이드](framework/index.md)
 - [C# 가이드](csharp/index.md)
 - [F# 가이드](fsharp/index.md)
-- [.NET Core API](../api/index.md)
-- [.NET Core 가이드](core/index.md)
-- [.NET 표준 가이드](standard/index.md)
+- [Visual Basic 가이드](visual-basic/index.md)
 
-## <a name="open-source"></a>오픈 소스
+또한 [.NET API 참조](https://docs.microsoft.com/dotnet/api)를 찾아볼 수 있습니다.
 
-.NET의 많은 부분은 오픈 소스 참가자에 의해 빌드됩니다. 이 [.NET 설명서](https://github.com/dotnet/core-docs)에 참가할 수 있습니다. 또한 소스를 읽고 [.NET Core](https://github.com/dotnet/core) 및 [Xamarin](http://open.xamarin.com)을 비롯한 .NET 제품에 참가할 수 있습니다. Microsoft의 주요 프로젝트도 [.NET Foundation](http://dotnetfoundation.org)에 참가했습니다.
+## <a name="open-source"></a>소스 열기
 
-## <a name="community"></a>커뮤니티
+이 문서는 완전히 [오픈 소스](https://github.com/dotnet/docs)입니다.  문제 생성부터 문서 작성에 이르기까지 원하는 방식으로 참여할 수 있습니다.  .NET 자체도 대부분 오픈 소스입니다.
 
-.NET 커뮤니티에 오신 것을 환영합니다. [.NET 커뮤니티](https://www.microsoft.com/net/community)에서 이미 활동하고 있는 다른 사람들을 만나 새로운 기능을 알아보거나 도움을 요청할 수 있습니다.
+- [.NET Core 홈](https://github.com/dotnet/core)
+- [.NET 라이브러리](https://github.com/dotnet/corefx)
+- [.NET Core 런타임](https://github.com/dotnet/coreclr)
+- [Roslyn(C# 및 Visual Basic) 컴파일러 플랫폼 및 IDE 도구](https://github.com/dotnet/roslyn)
+- [F# 컴파일러 및 IDE 도구](https://github.com/microsoft/visualfsharp)
 
-
-
-<!--HONumber=Nov16_HO1-->
-
+[.NET 커뮤니티](https://www.microsoft.com/net/community)에서 이미 활동하고 있는 다른 사람들을 만나 새로운 기능을 알아보거나 도움을 요청할 수 있습니다.
 

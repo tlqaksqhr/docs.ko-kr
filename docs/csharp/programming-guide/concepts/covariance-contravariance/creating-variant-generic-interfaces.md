@@ -131,7 +131,7 @@ SampleImplementation<Button> button = new SampleImplementation<Button>();
  Variant 제네릭 인터페이스를 확장할 경우 `in` 및 `out` 키워드를 사용하여 파생 인터페이스가 가변성을 지원하는지 명시적으로 지정해야 합니다. 컴파일러에서는 확장되고 있는 인터페이스에서 가변성을 유추하지 않습니다. 예를 들어 다음 인터페이스를 살펴봅니다.  
   
 ```csharp  
-nterface ICovariant<out T> { }  
+interface ICovariant<out T> { }  
 interface IInvariant<T> : ICovariant<T> { }  
 interface IExtCovariant<out T> : ICovariant<T> { }  
 ```  
@@ -204,3 +204,4 @@ class Program
 ## <a name="see-also"></a>참고 항목  
  [제네릭 인터페이스의 가변성(C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)   
  [Func 및 Action 제네릭 대리자에 가변성 사용(C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+

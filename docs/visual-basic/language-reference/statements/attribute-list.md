@@ -30,9 +30,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: e360794ad217784e2358967bfbcc03959cd043b1
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -87,3 +88,4 @@ ms.lasthandoff: 03/13/2017
  [모듈 \<키워드 >](../../../visual-basic/language-reference/modifiers/module-keyword.md)   
  [특성 개요](../../../visual-basic/programming-guide/concepts/attributes/index.md)   
  [방법: 코드에서 문 분리 및 결합](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+

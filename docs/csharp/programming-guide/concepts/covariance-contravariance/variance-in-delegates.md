@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 413b8c3bfbfd70c91edeebece07833874db06334
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: cd1b765faa734973bf5e184cee2ac934ebdf9241
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="variance-in-delegates-c"></a>대리자의 가변성(C#)
@@ -30,7 +31,7 @@ ms.lasthandoff: 03/13/2017
   
  다음과 같이 두 개의 클래스 및 두 개의 대리자(제네릭 및 비 제네릭)를 가지고 있는 코드를 예로 들어보겠습니다.  
   
-```cs  
+```csharp  
 public class First { }  
 public class Second : First { }  
 public delegate First SampleDelegate(Second a);  
@@ -39,7 +40,7 @@ public delegate R SampleGenericDelegate<A, R>(A a);
   
  `SampleDelegate` 또는 `SampleGenericDelegate<A, R>` 형식의 대리자를 만들 때 다음 메서드 중 하나를 할당할 수 있습니다.  
   
-```cs  
+```csharp  
 // Matching signature.  
 public static First ASecondRFirst(Second first)  
 { return new First(); }  
@@ -60,7 +61,7 @@ public static Second AFirstRSecond(First first)
   
  다음 코드 예제에서는 메서드 시그니처 및 대리자 형식 사이의 암시적 변환을 보여 줍니다.  
   
-```cs  
+```csharp  
 // Assigning a method with a matching signature   
 // to a non-generic delegate. No conversion is necessary.  
 SampleDelegate dNonGeneric = ASecondRFirst;  
@@ -87,7 +88,7 @@ SampleGenericDelegate<Second, First> dGenericConversion = AFirstRSecond;
   
  다음 코드 예제에서는 공변(covariant) 제네릭 형식 매개 변수가 있는 대리자를 만드는 방법을 보여 줍니다.  
   
-```cs  
+```csharp  
 // Type T is declared covariant by using the out keyword.  
 public delegate T SampleGenericDelegate <out T>();  
   
@@ -105,7 +106,7 @@ public static void Test()
   
  다음 코드 예제에서, `String`은 `Object`를 상속하지만 `SampleGenericDelegate<String>`을 `SampleGenericDelegate<Object>`로 명시적으로 변환할 수 없습니다. `T` 제네릭 매개 변수를 `out` 키워드로 표시하면 이 문제를 수정할 수 있습니다.  
   
-```cs  
+```csharp  
 public delegate T SampleGenericDelegate<T>();  
   
 public static void Test()  
@@ -145,30 +146,51 @@ public static void Test()
   
  `out` 키워드를 사용하여 제네릭 대리자에서 제네릭 형식 매개 변수를 공변(covariant)으로 선언할 수 있습니다. 공변(covariant) 형식은 메서드 반환 형식으로만 사용할 수 있으며 메서드 인수의 형식으로는 사용할 수 없습니다. 다음 코드 예제에서는 공변(covariant) 제네릭 대리자를 선언하는 방법을 보여 줍니다.  
   
-<CodeContentPlaceHolder>5</CodeContentPlaceHolder>  
+```csharp  
+public delegate R DCovariant<out R>();  
+```  
+  
  `in` 키워드를 사용하여 제네릭 대리자에서 제네릭 형식 매개 변수를 반공변(contravariant)으로 선언할 수 있습니다. 반공변(contravariant) 형식은 메서드 인수의 형식으로서만 사용할 수 있으며 메서드 반환 형식으로는 사용할 수 없습니다. 다음 코드 예제에서는 반공변(contravariant) 제네릭 대리자를 선언하는 방법을 보여 줍니다.  
   
-<CodeContentPlaceHolder>6</CodeContentPlaceHolder>  
+```csharp  
+public delegate void DContravariant<in A>(A a);  
+```  
+  
 > [!IMPORTANT]
 > C#의  `ref` 및 `out` 매개 변수는 variant로 표시할 수 없습니다.  
   
  동일한 대리자에서, 그러나 서로 다른 형식 매개 변수에 대해 분산 및 공변성(covariance)을 모두 지원하는 것도 가능합니다. 다음 예제에서 이를 확인할 수 있습니다.  
   
-<CodeContentPlaceHolder>7</CodeContentPlaceHolder>  
+```csharp  
+public delegate R DVariant<in A, out R>(A a);  
+```  
+  
 ### <a name="instantiating-and-invoking-variant-generic-delegates"></a>Variant 제네릭 대리자 인스턴스화 및 호출  
  비 variant 대리자를 인스턴스화 및 호출하듯 variant 대리자를 인스턴스화 및 호출할 수 있습니다. 다음 예제에서는 람다 식을 사용하여 대리자가 인스턴스화됩니다.  
   
-<CodeContentPlaceHolder>8</CodeContentPlaceHolder>  
+```csharp  
+DVariant<String, String> dvariant = (String str) => str + " ";  
+dvariant("test");  
+```  
+  
 ### <a name="combining-variant-generic-delegates"></a>Variant 제네릭 대리자 결합  
  Variant 대리자는 결합할 수 없습니다. <xref:System.Delegate.Combine%2A> 메서드는 variant 대리자 변환을 지원하지 않으며 대리자가 정확히 동일한 형식일 것으로 예상합니다. 따라서 다음 코드 예제와 같이 <xref:System.Delegate.Combine%2A> 메서드를 사용하거나 `+` 연산자를 사용하여 대리자를 결합하면 런타임 예외가 발생할 수 있습니다.  
   
-<CodeContentPlaceHolder>9</CodeContentPlaceHolder>  
+```csharp  
+Action<object> actObj = x => Console.WriteLine("object: {0}", x);  
+Action<string> actStr = x => Console.WriteLine("string: {0}", x);  
+// All of the following statements throw exceptions at run time.  
+// Action<string> actCombine = actStr + actObj;  
+// actStr += actObj;  
+// Delegate.Combine(actStr, actObj);  
+```  
+  
 ## <a name="variance-in-generic-type-parameters-for-value-and-reference-types"></a>값 및 참조 형식에 대한 제네릭 형식 매개 변수에서의 가변성  
  제네릭 형식 매개 변수에 대한 가변성은 참조 형식에 대해서만 지원됩니다. 정수는 값 형식이므로, 예를 들어 `DVariant<int>`를 명시적으로 `DVariant<Object>` 또는 `DVariant<long>`으로 변환할 수 없습니다.  
   
  다음 예제에서는 제네릭 형식 매개 변수에서의 가변성이 값 형식에 대해 지원되지 않음을 보여 줍니다.  
   
-```cs  
+```csharp  
 // The type T is covariant.  
 public delegate T DVariant<out T>();  
   

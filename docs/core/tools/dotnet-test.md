@@ -4,16 +4,17 @@ description: "`dotnet test` 명령은 지정된 프로젝트에서 단위 테스
 keywords: "dotnet-test, CLI, CLI 명령, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 03/25/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 4bf0aef4-148a-41c6-bb95-0a9e1af8762e
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 26b5834135db8041995a137f5008d00cdf14d820
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: ae036cfcad341ffc859336a7ab2a49feec145715
+ms.openlocfilehash: 734cf337fdd0d33f6c2b6d929b795b2307135550
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/18/2017
 
 ---
 
@@ -29,7 +30,7 @@ ms.lasthandoff: 03/22/2017
 
 ## <a name="description"></a>설명
 
-`dotnet test` 명령은 지정된 프로젝트에서 단위 테스트를 실행하는 데 사용됩니다. 단위 테스트는 단위 테스트 프레임워크(예: MSText, NUnit 또는 xUnit) 및 해당 단위 테스트 프레임워크에 대한 dotnet Test Runner에 종속되어 있는 클래스 라이브러리 프로젝트입니다. 이러한 프로젝트는 NuGet 패키지로 패키지되고 프로젝트에 대한 일반 종속성으로 복원됩니다.
+`dotnet test` 명령은 지정된 프로젝트에서 단위 테스트를 실행하는 데 사용됩니다. 단위 테스트는 단위 테스트 프레임워크(예: MSTest, NUnit 또는 xUnit) 및 단위 테스트 프레임워크에 대한 dotnet Test Runner에 종속되어 있는 콘솔 응용 프로그램 프로젝트입니다. 이러한 프로젝트는 NuGet 패키지로 패키지되고 프로젝트에 대한 일반 종속성으로 복원됩니다.
 
 테스트 프로젝트에서는 Test Runner도 지정해야 합니다. 다음의 예제 프로젝트 파일에서 볼 수 있듯이 일반적인 `<PackageReference>` 요소를 사용하여 지정합니다.
 
@@ -55,7 +56,7 @@ ms.lasthandoff: 03/22/2017
 
 `--filter <EXPRESSION>`
 
-지정된 식을 사용하여 현재 프로젝트의 테스트를 필터링합니다. 필터링 지원에 대한 자세한 내용 [Running selective unit tests in Visual Studio using TestCaseFilter](https://aka.ms/vstest-filtering)(TestCaseFilter를 사용하여 Visual Studio에서 선택적 단위 테스트 실행)를 참조하세요.
+지정된 식을 사용하여 현재 프로젝트의 테스트를 필터링합니다. 자세한 내용은 [필터 옵션 세부 정보](#filter-option-details) 섹션을 참조하세요. 선택적 단위 테스트 필터링을 사용하는 방법에 대한 추가 정보 및 예제는 [선택적 단위 테스트 실행](../testing/selective-unit-tests.md)을 참조하세요.
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
@@ -97,9 +98,46 @@ ms.lasthandoff: 03/22/2017
 
 `test1` 프로젝트에서 테스트를 실행합니다.
 
-`dotnet test ~/projects/test1/test1.csproj` 
+`dotnet test ~/projects/test1/test1.csproj`
+
+## <a name="filter-option-details"></a>필터 옵션 세부 정보
+
+`--filter <EXPRESSION>`
+
+`<Expression>`에 `<property><operator><value>[|&<Expression>]` 형식이 있습니다.
+
+`<property>`은(는) `Test Case`의 특성입니다. 다음은 인기 있는 단위 테스트 프레임 워크에서 지원되는 속성입니다.
+
+| 테스트 프레임워크 | 지원되는 속성                                                                                      |
+| :------------: | --------------------------------------------------------------------------------------------------------- |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>이름</li><li>ClassName</li><li>우선 순위</li><li>TestCategory</li></ul> |
+| Xunit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>특성</li></ul>                                   |
+
+`<operator>`은(는) 속성과 값 사이의 관계를 설명합니다.
+
+| 연산자 | 함수        |
+| :------: | --------------- |
+| `=`      | 정확하게 일치     |
+| `!=`     | 정확하게 일치하지 않음 |
+| `~`      | 포함        |
+
+`<value>`는 문자열입니다. 모든 조회는 대/소문자를 구분합니다.
+
+`<operator>`이(가) 없는 식은 `FullyQualifiedName` 속성의 `contains`(으)로 자동으로 간주됩니다(예를 들어 `dotnet test --filter xyz`과(와) `dotnet test --filter FullyQualifiedName~xyz`이(가) 동일).
+
+식은 조건부 연산자와 조인할 수 있습니다.
+
+| 연산자 | 함수 |
+| :------: | :------: |
+| `|`      | 또는       |
+| `&`      | AND      |
+
+조건부 연산자를 사용 하는 경우 식을 괄호로 묶을 수 있습니다 (예를 들어 `(Name~TestMethod1) | (Name~TestMethod2)`).
+
+선택적 단위 테스트 필터링을 사용하는 방법에 대한 추가 정보 및 예제는 [선택적 단위 테스트 실행](../testing/selective-unit-tests.md)을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 
-* [대상 프레임워크](../../standard/frameworks.md)
-* [RID(런타임 식별자) 카탈로그](../rid-catalog.md)
+[프레임워크 및 대상](../../standard/frameworks.md)   
+[.NET Core RID(런타임 식별자) 카탈로그](../rid-catalog.md)
+

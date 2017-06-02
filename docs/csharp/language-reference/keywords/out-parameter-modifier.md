@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: af1f16016053d3c1b3cae34ff0cb6a3ce8cee9e7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: a2f2e9b9239836b051820bda66523822e95cdf52
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out 매개 변수 한정자(C# 참조)
@@ -44,7 +45,7 @@ ms.lasthandoff: 03/13/2017
   
  `out` 인수로 전달되는 변수는 메서드 호출에서 전달되기 전에 초기화할 필요가 없지만 호출된 메서드는 메서드가 반환되기 전에 값을 할당해야 합니다.  
   
- `ref` 및 `out` 키워드는 서로 다른 런타임 동작을 수행하지만 컴파일 타임에 메서드 시그니처의 일부로 간주되지는 않습니다. 따라서 메서드 하나는 `ref` 인수를 사용하고 다른 하나는 `out` 인수를 사용한다는 것 외에는 차이점이 없으면 메서드를 오버로드할 수 없습니다. 예를 들어 다음 코드는 컴파일되지 않습니다.  
+ `ref` 및 `out` 키워드는 서로 다른 런타임 동작을 수행하지만 컴파일 시간에 메서드 시그니처의 일부로 간주되지는 않습니다. 따라서 메서드 하나는 `ref` 인수를 사용하고 다른 하나는 `out` 인수를 사용한다는 것 외에는 차이점이 없으면 메서드를 오버로드할 수 없습니다. 예를 들어 다음 코드는 컴파일되지 않습니다.  
   
 ```csharp
 class CS0663_Example
@@ -72,7 +73,7 @@ class CS0663_Example
 
 ## <a name="declaring-out-arguments"></a>`out` 인수 선언   
 
- 메서드가 여러 값을 반환하도록 하려는 경우 `out` 인수를 사용하여 메서드를 선언하면 유용합니다. 다음 예제에서는 `out`을 사용하여 단일 메서드 호출로&3;개 변수를 반환합니다. 세 번째 인수는 null에 할당됩니다. 따라서 메서드가 값을 선택적으로 반환할 수 있습니다.  
+ 메서드가 여러 값을 반환하도록 하려는 경우 `out` 인수를 사용하여 메서드를 선언하면 유용합니다. 다음 예제에서는 `out`을 사용하여 단일 메서드 호출로 3개 변수를 반환합니다. 세 번째 인수는 null에 할당됩니다. 따라서 메서드가 값을 선택적으로 반환할 수 있습니다.  
   
  [!code-cs[csrefKeywordsMethodParams#4](../../../../samples/snippets/csharp/language-reference/keywords/out/out-4.cs)]  
 
@@ -88,12 +89,12 @@ C# 7부터 별도 변수 선언이 아니라 메서드 호출의 인수 목록�
 
  [!code-cs[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/out/out-6.cs)]  
    
-앞의 예제에서 `number` 변수는 `int`로 강력하게 형식화됩니다. 다음 예제와 같이 암시적으로 형식화된 지역 변수를 선언할 수도 있습니다.
+앞의 예제에서 `number` 변수는 `int`로 강력하게 형식화됩니다. 다음 예제와 같이 암시적 형식 지역 변수를 선언할 수도 있습니다.
 
  [!code-cs[csrefKeywordsMethodParams#7](../../../../samples/snippets/csharp/language-reference/keywords/out/out-7.cs)]  
    
 ## <a name="c-language-specification"></a>C# 언어 사양  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [C# 참조](../../../csharp/language-reference/index.md)   

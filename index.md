@@ -18,11 +18,11 @@ ms.lasthandoff: 04/08/2017
                             <div class="card">
                                 <div class="cardImageOuter">
                                     <div class="cardImage">
-                                        <img data-hoverimage="/dotnet/articles/images/hub/featured-1.svg" src="/dotnet/articles/images/hub/featured-1.png" alt="" />
+                                        <img data-hoverimage="/dotnet/images/hub/featured-1.svg" src="/dotnet/images/hub/featured-1.png" alt="" />
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>C 시작#</h3>
+                                    <h3>C# 시작</h3>
                                 </div>
                             </div>
                         </div>
@@ -30,13 +30,13 @@ ms.lasthandoff: 04/08/2017
                 </a>
             </li>
             <li>
-                <a href="/dotnet/api/?view=netcore-1.1.0">
+                <a href="/dotnet/api/?view=netcore-1.1">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
                                 <div class="cardImageOuter">
                                     <div class="cardImage">
-                                        <img data-hoverimage="/dotnet/articles/images/hub/featured-2.svg" src="/dotnet/articles/images/hub/featured-2.png" alt="" />
+                                        <img data-hoverimage="/dotnet/images/hub/featured-2.svg" src="/dotnet/images/hub/featured-2.png" alt="" />
                                     </div>
                                 </div>
                                 <div class="cardText">
@@ -54,7 +54,7 @@ ms.lasthandoff: 04/08/2017
                             <div class="card">
                                 <div class="cardImageOuter">
                                     <div class="cardImage">
-                                        <img data-hoverimage="/dotnet/articles/images/hub/featured-3.svg" src="/dotnet/articles/images/hub/featured-3.png" alt="" />
+                                        <img data-hoverimage="/dotnet/images/hub/featured-3.svg" src="/dotnet/images/hub/featured-3.png" alt="" />
                                     </div>
                                 </div>
                                 <div class="cardText">
@@ -82,14 +82,14 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/articles/images/hub/net.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/articles/welcome">.NET이란?</a></h3>
-                                                <p><a href="/dotnet/articles/standard/getting-started">시작</a></p>
-                                                <p><a href="/dotnet/articles/standard/tour">.NET 둘러보기</a></p>
-                                                <p><a href="/dotnet/articles/standard/components">.NET 아키텍처 개념</a></p>
+                                                <h3><a href="/dotnet/welcome">.NET이란?</a></h3>
+                                                <p><a href="/dotnet/standard/getting-started">시작</a></p>
+                                                <p><a href="/dotnet/standard/tour">.NET 둘러보기</a></p>
+                                                <p><a href="/dotnet/standard/components">.NET 아키텍처 개념</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -101,14 +101,14 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/articles/images/hub/netcore.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/netcore.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/articles/core">.NET Core 가이드</a></h3>
-                                                <p><a href="/dotnet/articles/core/getting-started">시작</a></p>
-                                                <p><a href="/dotnet/articles/core/tutorials">자습서</a></p>
-                                                <p><a href="/dotnet/articles/core/porting">.NET Framework에서 이식</a></p>
+                                                <h3><a href="/dotnet/core">.NET Core 가이드</a></h3>
+                                                <p><a href="/dotnet/core/getting-started">시작</a></p>
+                                                <p><a href="/dotnet/core/tutorials">자습서</a></p>
+                                                <p><a href="/dotnet/core/porting">.NET Framework에서 이식</a></p>
                                                 <p><a href="/aspnet/core/getting-started">ASP.NET Core</a></p>
                                             </div>
                                         </div>
@@ -121,14 +121,14 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/articles/images/hub/netframework.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/netframework.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/articles/framework/">.NET Framework 가이드</a></h3>
-                                                <p><a href="/dotnet/articles/framework/get-started/">시작</a></p>
-                                                <p><a href="/dotnet/articles/framework/development-guide">자습서</a></p>
-                                                <p><a href="/dotnet/articles/framework/develop-client-apps">클라이언트 개발</a></p>
+                                                <h3><a href="/dotnet/framework/">.NET Framework 가이드</a></h3>
+                                                <p><a href="/dotnet/framework/get-started/">시작</a></p>
+                                                <p><a href="/dotnet/framework/development-guide">자습서</a></p>
+                                                <p><a href="/dotnet/framework/develop-client-apps">클라이언트 개발</a></p>
                                                 <p><a href="/aspnet/#pivot=aspnet">ASP.NET</a></p>
                                             </div>
                                         </div>
@@ -141,7 +141,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/articles/images/hub/xamarin.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/xamarin.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -161,14 +161,14 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/articles/images/hub/csharp.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/csharp.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/articles/csharp">C# 가이드</a></h3>
-                                                <p><a href="/dotnet/articles/csharp/getting-started">시작</a></p>
-                                                <p><a href="/dotnet/articles/csharp/tour-of-csharp">C# 둘러보기</a></p>
-                                                <p><a href="/dotnet/articles/csharp/language-reference">C# 언어 참조</a></p>
+                                                <h3><a href="/dotnet/csharp">C# 가이드</a></h3>
+                                                <p><a href="/dotnet/csharp/getting-started">시작</a></p>
+                                                <p><a href="/dotnet/csharp/tour-of-csharp">C# 둘러보기</a></p>
+                                                <p><a href="/dotnet/csharp/language-reference">C# 언어 참조</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -180,14 +180,14 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/articles/images/hub/fsharp.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/fsharp.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/articles/fsharp">F# 가이드</a></h3>
-                                                <p><a href="/dotnet/articles/fsharp/tutorials/getting-started">시작</a></p>
-                                                <p><a href="/dotnet/articles/fsharp/tour">F# 둘러보기</a></p>
-                                                <p><a href="/dotnet/articles/fsharp/language-reference">F# 언어 참조</a></p>
+                                                <h3><a href="/dotnet/fsharp">F# 가이드</a></h3>
+                                                <p><a href="/dotnet/fsharp/tutorials/getting-started">시작</a></p>
+                                                <p><a href="/dotnet/fsharp/tour">F# 둘러보기</a></p>
+                                                <p><a href="/dotnet/fsharp/language-reference">F# 언어 참조</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -199,14 +199,14 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="/dotnet/articles/images/hub/vb.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/vb.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/articles/visual-basic">Visual Basic 가이드</a></h3>
-                                                <p><a href="/dotnet/articles/visual-basic/getting-started">시작</a></p>
-                                                <p><a href="/dotnet/articles/visual-basic/walkthroughs">Visual Basic 둘러보기</a></p>
-                                                <p><a href="/dotnet/articles/visual-basic/language-reference">Visual Basic 언어 참조</a></p>
+                                                <h3><a href="/dotnet/visual-basic">Visual Basic 가이드</a></h3>
+                                                <p><a href="/dotnet/visual-basic/getting-started">시작</a></p>
+                                                <p><a href="/dotnet/visual-basic/walkthroughs">Visual Basic 둘러보기</a></p>
+                                                <p><a href="/dotnet/visual-basic/language-reference">Visual Basic 언어 참조</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -215,7 +215,7 @@ ms.lasthandoff: 04/08/2017
                             <li class="fullSpan">
                                 <div class="container footer">
                                     <p><a href="https://github.com/dotnet/Docs/blob/master/CONTRIBUTING.md">.NET 문서 및 샘플에 참여</a></p>
-                                    <p><a href="https://docs.microsoft.com/en-us/dotnet/articles/project-json">Visual Studio 2015/project.json 버전 설명서 찾기</a></p>
+                                    <p><a href="https://docs.microsoft.com/en-us/dotnet/project-json">Visual Studio 2015/project.json 버전 설명서 찾기</a></p>
                                 </div>
                             </li>
                         </ul>
@@ -229,7 +229,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-web-1.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-web-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -248,7 +248,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-web-2.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-web-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -267,7 +267,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-web-3.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-web-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -286,7 +286,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-web-4.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-web-4.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -305,11 +305,11 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-web-5.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-web-5.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="/dotnet/articles/framework/docker/aspnetmvc">
+                                                <a href="/dotnet/framework/docker/aspnetmvc">
                                                     <h3>컨테이너의 ASP.NET 앱</h3>
                                                     <p>Docker를 사용하여 ASP.NET 앱을 배포하는 방법을 알아봅니다.</p>
                                                 </a>
@@ -324,7 +324,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-web-6.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-web-6.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -348,7 +348,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-cloud-1.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-cloud-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -367,7 +367,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-cloud-2.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-cloud-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -386,11 +386,11 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-cloud-3.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-cloud-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <a href="/dotnet/articles/fsharp/using-fsharp-on-azure">
+                                                <a href="/dotnet/fsharp/using-fsharp-on-azure">
                                                     <h3>Azure에서 F# 사용</h3>
                                                     <p>F#에서 Azure Storage, Cloud Services 및 Azure Functions와 같은 다양한 Azure 서비스를 사용하는 방법에 알아봅니다.</p>
                                                 </a>
@@ -405,7 +405,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-cloud-4.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-cloud-4.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -429,7 +429,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-mobile-1.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-mobile-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -448,7 +448,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-mobile-2.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-mobile-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -467,7 +467,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-mobile-3.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-mobile-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -491,7 +491,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-desktop-1.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-desktop-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -511,7 +511,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-desktop-2.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-desktop-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -530,7 +530,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-desktop-3.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-desktop-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -549,7 +549,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-desktop-4.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-desktop-4.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -573,7 +573,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-gaming-1.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-gaming-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -593,7 +593,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-gaming-2.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-gaming-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -612,7 +612,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-gaming-3.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-gaming-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -631,7 +631,7 @@ ms.lasthandoff: 04/08/2017
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="/dotnet/articles/images/hub/net-docs-gaming-4.svg" alt="" />
+                                                    <img src="/dotnet/images/hub/net-docs-gaming-4.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">

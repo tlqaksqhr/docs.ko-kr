@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 57c49b555d7989a27fb4a2943b72cd2c4849694b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: ed747cf589e1f4731d78af7cc206ff3674d666b2
+ms.openlocfilehash: b2ce10b3c079ff2c881f6dbe297ead33b8254476
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 
@@ -35,7 +36,7 @@ ms.lasthandoff: 03/13/2017
 * 들어오는 HTTP 요청을 처리하고 HTTP 응답을 생성하는 방법
 * null 허용 값 형식을 사용하는 방법
 
-[GitHub 리포지토리](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice)에서 코드를 검색할 수 있습니다.
+이 항목에 대한 [샘플 앱을 보거나 다운로드](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice)할 수 있습니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
 
 ### <a name="why-docker"></a>Docker를 사용해야 하는 이유
 
@@ -100,7 +101,7 @@ dotnet build
 dotnet run
 ```
 
-기본 구성은 http://localhost:5000을 수신합니다. 브라우저를 열고 해당 페이지로 이동하면 "Hello World!" 반환됩니다.
+기본 구성은 http://localhost:5000 을 수신합니다. 브라우저를 열고 해당 페이지로 이동하면 "Hello World!" 반환됩니다.
 
 ### <a name="anatomy-of-an-aspnet-core-application"></a>ASP.NET Core 응용 프로그램 분석
 
@@ -145,7 +146,7 @@ Project.json에는 프로젝트에 대한 정보가 포함됩니다. 자주 사�
 
 다음에는 문자열을 double 값으로 변환해야 합니다. 문자열을 double로 변환하는 데 사용하는 메서드는 `double.TryParse()`입니다.
 
-```cs
+```csharp
 bool TryParse(string s, out double result);
 ```
 
@@ -173,7 +174,7 @@ bool TryParse(string s, out double result);
 
 다음 작업은 임의 일기 예보를 빌드하는 것입니다. 일기 예보에 대해 원하는 값을 포함하는 데이터 컨테이너부터 시작하겠습니다.
 
-```cs
+```csharp
 public class WeatherReport
 {
     private static readonly string[] PossibleConditions = new string[]
@@ -285,10 +286,6 @@ docker build -t weather-microservice .
 
 이 명령은 Dockerfile의 모든 정보를 기반으로 컨테이너 이미지를 빌드합니다. `-t` 인수는 이 컨테이너 이미지에 대한 태그 또는 이름을 제공합니다. 위의 명령줄에서 Docker 컨테이너에 사용되는 태그는 `weather-microservice`입니다. 이 명령이 완료되면 컨테이너에서 새 서비스를 실행할 준비가 된 것입니다. 
 
-> [!Note]
-> copy 명령은 응용 프로그램의 소스뿐 아니라 빌드된 모든 자산도 복사합니다.
-> Docker 이미지를 빌드하기 전에 로컬 컴퓨터에서 `obj`, `bin` 및 `out` 디렉터리를 제거해야 합니다.
-
 다음 명령을 실행하여 컨테이너를 시작하고 서비스를 실행합니다.
 
 ```console
@@ -343,7 +340,7 @@ docker rm hello-docker
 컴퓨터에서 사용하지 않은 이미지를 제거하려는 경우 다음 명령을 사용합니다.
 
 ```console
-docker rmi hello-docker
+docker rmi weather-microservice
 ```
 
 ## <a name="conclusion"></a>결론 

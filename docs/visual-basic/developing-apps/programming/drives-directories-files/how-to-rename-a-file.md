@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a0a31353ce3ee0c48907f9550f6961260f92b64a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: a090fa8df6347a98b5c971c26664e6dd1098a594
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-rename-a-file-in-visual-basic"></a>방법: Visual Basic에서 파일 이름 바꾸기
@@ -55,13 +56,13 @@ ms.lasthandoff: 03/13/2017
   
 -   `newName`에 경로 정보가 포함된 경우(<xref:System.ArgumentException>)  
   
--   경로가 `Nothing`이기 때문에 유효하지 않은 경우(<xref:System.ArgumentNullException>)  
+-   경로가 `Nothing`이기 때문에 올바르지 않은 경우(<xref:System.ArgumentNullException>)  
   
 -   `newName`이 `Nothing` 또는 빈 문자열인 경우(<xref:System.ArgumentNullException>)  
   
 -   소스 파일이 잘못되었거나 없는 경우(<xref:System.IO.FileNotFoundException>)  
   
--   `newName`에 지정된 이름을 가진 기존 파일 또는 디렉터리가 있는 경우(<xref:System.IO.IOException>)  
+-   `newName`에 지정된 이름의 기존 파일 또는 디렉터리가 있는 경우(<xref:System.IO.IOException>)  
   
 -   경로가 시스템 정의 최대 길이를 초과하는 경우(<xref:System.IO.PathTooLongException>)  
   

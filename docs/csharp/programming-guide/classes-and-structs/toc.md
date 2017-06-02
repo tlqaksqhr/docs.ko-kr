@@ -41,7 +41,7 @@
 ### [전용 생성자](private-constructors.md)
 ### [정적 생성자](static-constructors.md)
 ### [방법: 복사 생성자 작성](how-to-write-a-copy-constructor.md)
-## [소멸자](destructors.md)
+## [종료자](destructors.md)
 ## [개체 이니셜라이저 및 컬렉션 이니셜라이저](object-and-collection-initializers.md)
 ### [방법: 개체 이니셜라이저를 사용하여 개체 초기화](how-to-initialize-objects-by-using-an-object-initializer.md)
 ### [방법: 컬렉션 이니셜라이저를 사용하여 사전 초기화](how-to-initialize-a-dictionary-with-a-collection-initializer.md)

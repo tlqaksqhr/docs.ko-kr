@@ -26,17 +26,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a3e2641e5c7cd3ce98ca869889848e8cdf4eed62
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: ee9d0f9803c6de056644587578792568ab25b4da
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/14/2017
 
 ---
 # <a name="interpolated-strings-c-reference"></a>보간된 문자열(C# 참조)
 
 문자열을 생성하는 데 사용됩니다.  보간된 문자열은 *보간된 식*이 포함된 템플릿 문자열과 유사합니다.  보간된 문자열은 포함하는 보간된 식을 해당 문자열 표현으로 바꾸는 문자열을 반환합니다.  
 
-보간된 문자열의 인수는 [복합 형식 문자열](../../../standard/base-types/composite-format.md#composite-format-string)보다 더 쉽게 이해할 수 있습니다.  예를 들어 보간된 문자열  
+보간된 문자열의 인수는 [복합 형식 문자열](../../../standard/base-types/composite-formatting.md#composite-format-string)보다 더 쉽게 이해할 수 있습니다.  예를 들어 보간된 문자열  
   
 ```csharp  
 Console.WriteLine($"Name = {name}, hours = {hours:hh}"); 
@@ -85,7 +86,7 @@ $"<text> {<interpolated-expression> [,<field-width>] [<:format-string>] } <text>
 
    보간된 문자열은 리플렉션을 통해서만 검사할 수 있습니다. @System.Console.WriteLine(System.String) 등의 문자열 형식 지정 메서드에 전달되는 경우 해당 형식 항목이 확인되고 결과 문자열이 반환됩니다. 
 
-3. 보간된 문자열을 복합 형식 문자열을 나타내는 <xref:System.FormattableString> 변수로 변환. 예를 들어 복합 형식 문자열 및 복합 형식 문자열이 결과 문자열로 렌더링되는 방식을 검사하면 쿼리를 빌드하는 경우 삽입 공격으로부터 보호하는 데 도움이 됩니다.  <xref:System.FormattableString>에는 @System.Globalization.InvariantCulture 및 @System.Globalization.CurrentCulture에 대한 결과 문자열을 생성할 수 있는 <xref:System.FormattableString.ToString> 오버로드도 포함되어 있습니다.  나타나는 모든 이중 중괄호("{{" 및 "}}")는 형식을 지정할 때까지 이중 중괄호로 유지됩니다.  포함된 보간 식은 모두 {0}, {1} 등으로 변환됩니다.  
+3. 보간된 문자열을 복합 형식 문자열을 나타내는 <xref:System.FormattableString> 변수로 변환. 예를 들어 복합 형식 문자열 및 복합 형식 문자열이 결과 문자열로 렌더링되는 방식을 검사하면 쿼리를 빌드하는 경우 삽입 공격으로부터 보호하는 데 도움이 됩니다.  <xref:System.FormattableString>에는 @System.Globalization.InvariantCulture 및 @System.Globalization.CurrentCulture에 대한 결과 문자열을 생성할 수 있도록 하는 <xref:System.FormattableString.ToString> 오버로드도 포함되어 있습니다.  나타나는 모든 이중 중괄호("{{" 및 "}}")는 형식을 지정할 때까지 이중 중괄호로 유지됩니다.  포함된 보간 식은 모두 {0}, {1} 등으로 변환됩니다.  
 
    [!code-cs[interpolated-strings3](../../../../samples/snippets/csharp/language-reference/keywords/interpolated-strings3.cs#1)]  
 

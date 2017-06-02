@@ -29,9 +29,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 9bf8f2f5fcc4dfa2b29e368a4e26bf112e08149e
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -42,7 +43,7 @@ ms.lasthandoff: 03/13/2017
   
  바인딩할 수도 있습니다 데이터 소스에 실행할 때 설정 하 여는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A>속성을 `True` 데이터 소스를 할당 하는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DataSource%2A>속성.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.DataSource%2A> </xref:Microsoft.VisualBasic.PowerPacks.DataRepeater.VirtualMode%2A> 이 경우 데이터 소스와 모든 상호 작용을 관리 해야 합니다. 자세한 내용은 참조 [DataRepeater 컨트롤의 가상 모드](../../../visual-basic/developing-apps/windows-forms/virtual-mode-in-the-datarepeater-control-visual-studio.md)합니다.  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-create-a-data-bound-datarepeater"></a>데이터 바인딩된 DataRepeater를 만들려면  
   

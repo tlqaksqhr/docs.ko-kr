@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 26bc9822-e42b-48ec-b0d6-499dc604add7
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 41093464c0dc2631217d89e2e715d05b78051284
-ms.lasthandoff: 03/02/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
+ms.openlocfilehash: 5ecc2dd249ab0e1e25e2fcaa4f7548f91085e54a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/10/2017
 
 ---
 
@@ -32,7 +33,7 @@ ms.lasthandoff: 03/02/2017
 ## <a name="acquiring-the-net-core-sdk"></a>.NET Core SDK 가져오기
 모든 도구와 마찬가지로 먼저 컴퓨터에 도구를 가져와야 합니다. 시나리오에 따라, 기본 설치 관리자를 사용하여 SDK를 설치할 수도 있고 설치 셸 스크립트를 사용할 수도 있습니다.
 
-기본 설치 관리자는 주로 개발자의 컴퓨터를 위한 것입니다. Ubuntu의 DEB 패키지 또는 Windows MSI 번들처럼 SDK는 지원되는 플랫폼의 기본 설치 메커니즘을 사용하여 배포됩니다. 이러한 설치 관리자는 설치 후 SDK를 즉시 사용하려는 사용자에게 필요한 환경을 설치 및 설정합니다. 그러나 이러한 사용자는 컴퓨터에 대한 관리자 권한이 필요합니다. [.NET Core 시작 페이지](https://aka.ms/dotnetcoregs)에서 설치 지침을 볼 수 있습니다.
+기본 설치 관리자는 주로 개발자의 컴퓨터를 위한 것입니다. Ubuntu의 DEB 패키지 또는 Windows MSI 번들처럼 SDK는 지원되는 플랫폼의 기본 설치 메커니즘을 사용하여 배포됩니다. 이러한 설치 관리자는 설치 후 SDK를 즉시 사용하려는 사용자에게 필요한 환경을 설치 및 설정합니다. 그러나 이러한 사용자는 컴퓨터에 대한 관리자 권한이 필요합니다. [.NET Core 설치 가이드](https://aka.ms/dotnetcoregs)에서 설치 지침을 볼 수 있습니다.
 
 반면 설치 스크립트를 사용할 경우에는 관리 권한이 필요하지 않습니다. 그러나 컴퓨터에 필수 구성 요소도 설치되지 않습니다. 모든 필수 구성 요소를 수동으로 설치해야 합니다. 스크립트는 대개 빌드 서버를 설정하거나 관리자 권한 없이 도구를 설치할 경우 사용됩니다(위의 필수 구성 요소 주의 사항 참조). 자세한 내용은 [스크립트 참조 설치 항목](tools/dotnet-install-script.md)에서 확인할 수 있습니다. CI 빌드 서버에 SDK를 설치하는 방법에 관심이 있는 경우 [CI 서버와 SDK](tools/using-ci-with-cli.md) 문서를 살펴볼 수 있습니다. 
 

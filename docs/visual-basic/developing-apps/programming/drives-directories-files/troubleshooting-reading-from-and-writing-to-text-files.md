@@ -35,10 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d4051975bf11bd65aad1535c40e7eb091c791efd
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 739f14a7cb5c559720bfac1a78b5fc50001052cb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="troubleshooting-reading-from-and-writing-to-text-files-visual-basic"></a>문제 해결: 텍스트 파일 읽기 및 쓰기(Visual Basic)

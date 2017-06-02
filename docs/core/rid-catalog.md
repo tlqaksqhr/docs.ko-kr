@@ -9,9 +9,10 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: b2032f5d-771f-48d9-917c-587d9509035c
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 811b9539019b7cc2817b5742760ae52fbc2f95dd
 ms.openlocfilehash: fc59a9f3333f01caf9622dd500a5de6e2ae5132b
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/02/2017
 
 ---
@@ -21,7 +22,7 @@ ms.lasthandoff: 03/02/2017
 ## <a name="what-are-rids"></a>RID란?
 RID는 *Runtime IDentifier(런타임 식별자)*의 약어입니다. RID는 응용 프로그램 또는 자산(즉, 어셈블리)이 실행될 대상 운영 체제를 식별하기 위해 사용됩니다. RID의 예를 들면 "ubuntu.14.04-x64", "win7-x64", "osx.10.11-x64"와 같습니다. 기본 종속성이 있는 패키지의 경우 RID는 패키지를 복원할 수 있는 플랫폼을 지정합니다. 
 
-RID는 실제로 불투명한 문자열이라는 점에 유의해야 합니다. 즉, RID는 사용하는 작업에 대해 정확히 일치해야만 작동합니다. 예를 들어, Ubuntu 14.04의 간단한 복제본인 [Elementary OS](https://elementary.io/)의 경우를 고려해 보겠습니다. .NET Core와 CLI는 Ubuntu의&14;.04 버전에서 작동하지만, 수정 없이 Elementary OS에서 사용하려고 하면 패키지에 대한 복원 작업이 모두 실패합니다. 그 이유는 Elementary OS를 플랫폼으로 지정하는 RID가 현재 없기 때문입니다. 
+RID는 실제로 불투명한 문자열이라는 점에 유의해야 합니다. 즉, RID는 사용하는 작업에 대해 정확히 일치해야만 작동합니다. 예를 들어, Ubuntu 14.04의 간단한 복제본인 [Elementary OS](https://elementary.io/)의 경우를 고려해 보겠습니다. .NET Core와 CLI는 Ubuntu의 14.04 버전에서 작동하지만, 수정 없이 Elementary OS에서 사용하려고 하면 패키지에 대한 복원 작업이 모두 실패합니다. 그 이유는 Elementary OS를 플랫폼으로 지정하는 RID가 현재 없기 때문입니다. 
 
 구체적인 운영 체제를 나타내는 RID는 일반적으로 `[os].[version]-[arch]`의 패턴을 따릅니다. 각각은 다음과 같습니다.
 - `[os]` - 운영 체제 모니커입니다(예: `ubuntu`).

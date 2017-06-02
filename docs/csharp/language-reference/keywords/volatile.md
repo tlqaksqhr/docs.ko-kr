@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d31ba6dd73ec4f5abcb34dc481144b154301f1af
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 801187b1fcc25a1eea1f40ec8ac4c67af42e5880
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="volatile-c-reference"></a>volatile(C# 참조)
@@ -53,7 +54,7 @@ ms.lasthandoff: 03/13/2017
   
 -   참조 형식으로 알려진 제네릭 형식 매개 변수.  
   
--   <xref:System.IntPtr> 및 <xref:System.UIntPtr>.  
+-   <xref:System.IntPtr>와 <xref:System.UIntPtr>을 참조하세요.  
   
  Volatile 키워드는 클래스 또는 구조체의 필드에만 적용할 수 있습니다. 지역 변수는 `volatile`로 선언할 수 없습니다.  
   
@@ -63,12 +64,12 @@ ms.lasthandoff: 03/13/2017
  [!code-cs[csrefKeywordsModifiers#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_1.cs)]  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 보조 또는 작업자 스레드를 만들어 기본 스레드와 병렬로 처리하는 데 사용하는 방법을 보여줍니다. 다중 스레딩에 대한 배경 정보는 [관리되는 스레딩](http://msdn.microsoft.com/library/7b46a7d9-c6f1-46d1-a947-ae97471bba87) 및 [스레딩](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)을 참조하세요.  
+ 다음 예제에서는 보조 또는 작업자 스레드를 만들어 기본 스레드와 병렬로 처리하는 데 사용하는 방법을 보여줍니다. 다중 스레딩에 대한 배경 정보는 [관리되는 스레딩](../../../standard/threading/index.md) 및 [스레딩](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)을 참조하세요.  
   
  [!code-cs[csProgGuideThreading#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_2.cs)]  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [C# 참조](../../../csharp/language-reference/index.md)   

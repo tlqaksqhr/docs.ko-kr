@@ -16,10 +16,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fe482e4db15ce621e74bdacf9313a3d31ade51b2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 11a606ef18bc497630c0a417488e533a0880056f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="iterators-c"></a>반복기(C#)
@@ -50,7 +51,7 @@ public static System.Collections.IEnumerable SomeNumbers()
 }  
 ```  
   
- 반복기 메서드 또는 `get` 접근자의 반환 형식은 <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> 또는 <xref:System.Collections.Generic.IEnumerator%601>이 될 수 있습니다.  
+ 반복기 메서드 또는 `get` 접근자의 반환 형식은 <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> 또는 <xref:System.Collections.Generic.IEnumerator%601>일 수 있습니다.  
   
  `yield break` 문을 사용하여 반복기를 종료할 수 있습니다.  
   
@@ -102,7 +103,7 @@ public static System.Collections.Generic.IEnumerable<int>
 ```  
   
 ##  <a name="BKMK_CollectionClass"></a> 컬렉션 클래스 만들기  
- 다음 예제에서는 `DaysOfTheWeek` 클래스가 <xref:System.Collections.IEnumerable> 인터페이스를 구현하며, <xref:System.Collections.IEnumerable.GetEnumerator%2A> 메서드가 필요합니다. 컴파일러는 `GetEnumerator` 메서드를 암시적으로 호출하며, <xref:System.Collections.IEnumerator>를 반환합니다.  
+ 다음 예제에서 `DaysOfTheWeek` 클래스는 <xref:System.Collections.IEnumerable> 인터페이스를 구현하며, <xref:System.Collections.IEnumerable.GetEnumerator%2A> 메서드가 필요합니다. 컴파일러는 `GetEnumerator` 메서드를 암시적으로 호출하며, <xref:System.Collections.IEnumerator>가 반환됩니다.  
   
  `GetEnumerator` 메서드는 `yield return` 문을 사용하여 각 문자열을 한 번에 하나씩 반환합니다.  
   
@@ -231,9 +232,9 @@ public class Zoo : IEnumerable
 ```  
   
 ##  <a name="BKMK_GenericList"></a> 제네릭 목록과 함께 반복기 사용  
- 다음 예제에서는 `Stack(Of T)` 제네릭 클래스가 <xref:System.Collections.Generic.IEnumerable%601> 제네릭 인터페이스를 구현합니다. `Push` 메서드는 `T` 형식의 배열에 값을 할당합니다. <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 메서드는 `yield return` 문을 사용하여 배열 값을 반환합니다.  
+ 다음 예제에서 `Stack(Of T)` 제네릭 클래스는 <xref:System.Collections.Generic.IEnumerable%601> 제네릭 인터페이스를 구현합니다. `Push` 메서드는 `T` 형식의 배열에 값을 할당합니다. <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 메서드는 `yield return` 문을 사용하여 배열 값을 반환합니다.  
   
- 제네릭 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 메서드 외에 제네릭이 아닌 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 메서드도 구현해야 하는데, <xref:System.Collections.Generic.IEnumerable%601>이 <xref:System.Collections.IEnumerable>에서 상속되기 때문입니다. 제네릭이 아닌 구현은 제네릭 구현을 따릅니다.  
+ 제네릭 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 메서드뿐 아니라 제네릭이 아닌 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 메서드도 구현해야 합니다. <xref:System.Collections.Generic.IEnumerable%601>이 <xref:System.Collections.IEnumerable>에서 상속하기 때문입니다. 제네릭이 아닌 구현은 제네릭 구현을 따릅니다.  
   
  예제에서는 명명된 반복기를 사용하여 동일한 데이터 컬렉션을 반복하는 다양한 방법을 지원합니다. 이러한 명명된 반복기는 `TopToBottom` 및 `BottomToTop` 속성과 `TopN` 메서드입니다.  
   
@@ -348,7 +349,7 @@ public class Stack<T> : IEnumerable<T>
 ```  
   
 ##  <a name="BKMK_SyntaxInformation"></a> 구문 정보  
- 반복기는 메서드 또는 `get` 접근자로 발생할 수 있습니다. 반복기는 이벤트, 인스턴스 생성자, 정적 생성자 또는 정적 소멸자에서 발생할 수 없습니다.  
+ 반복기는 메서드 또는 `get` 접근자로 발생할 수 있습니다. 이벤트, 인스턴스 생성자, 정적 생성자 또는 정적 종료자에서는 반복기가 발생할 수 없습니다.  
   
  `yield return` 문의 식 형식에서 반복기의 반환 형식으로 암시적 변환이 있어야 합니다.  
   
@@ -361,7 +362,7 @@ public class Stack<T> : IEnumerable<T>
   
  컴파일러의 용도를 확인하려면 Ildasm.exe 도구를 사용하여 반복기 메서드에 대해 생성되는 Microsoft Intermediate Language 코드를 확인할 수 있습니다.  
   
- [class](../../../csharp/language-reference/keywords/class.md) 또는 [struct](../../../csharp/language-reference/keywords/struct.md)에 대해 반복기를 만들면 전체 <xref:System.Collections.IEnumerator> 인터페이스를 구현할 필요가 없습니다. 컴파일러에서 반복기를 검색하면 <xref:System.Collections.IEnumerator> 또는 <xref:System.Collections.Generic.IEnumerator%601> 인터페이스의 `Current`, `MoveNext` 및 `Dispose` 메서드를 자동으로 생성합니다.  
+ [class](../../../csharp/language-reference/keywords/class.md) 또는 [struct](../../../csharp/language-reference/keywords/struct.md)에 대해 반복기를 만드는 경우 전체 <xref:System.Collections.IEnumerator> 인터페이스를 구현할 필요가 없습니다. 컴파일러는 반복기를 검색할 경우 <xref:System.Collections.IEnumerator> 또는 <xref:System.Collections.Generic.IEnumerator%601> 인터페이스의 `Current`, `MoveNext` 및 `Dispose` 메서드를 자동으로 생성합니다.  
   
  `foreach` 루프를 연속 반복하거나 `IEnumerator.MoveNext`를 직접 호출하면 다음 반복기 코드 본문이 이전 `yield return` 문 다음에 다시 시작됩니다. 그런 후 반복기 본문의 끝에 도달하거나 `yield break` 문이 나타날 때까지 다음 `yield return` 문을 계속 실행합니다.  
   

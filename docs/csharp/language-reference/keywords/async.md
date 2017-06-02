@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8734f639e45f12ddd987a1c34e7f3ac38aa7d73f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
+ms.openlocfilehash: e7f4cfa81de3c4db41d9303abf65cfd0edc926a4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/01/2017
 
 ---
 # <a name="async-c-reference"></a>async(C# 참조)
@@ -61,10 +62,10 @@ string contents = await contentsTask;
  `async` 키워드는 메서드, 람다 식 또는 무명 메서드를 수정할 때만 키워드로 사용됩니다. 다른 모든 컨텍스트에서는 식별자로 해석됩니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 비동기 이벤트 처리기, `StartButton_Click`, 비동기 메서드 및 `ExampleMethodAsync` 간의 제어 흐름과 구조를 보여 줍니다. 비동기 메서드의 결과는 다운로드한 웹 사이트의 길이입니다. 이 코드는 Visual Studio에서 만든 WPF(Windows Presentation Foundation) 앱 또는 Windows 스토어 앱에 적합합니다. 앱을 설정하는 방법은 코드 주석을 참조하십시오.  
+ 다음 예제에서는 비동기 이벤트 처리기, `StartButton_Click`, 비동기 메서드 및 `ExampleMethodAsync` 간의 제어 흐름과 구조를 보여 줍니다. 비동기 메서드의 결과는 다운로드한 웹 사이트의 길이입니다. 이 코드는 Visual Studio에서 만든 WPF(Windows Presentation Foundation) 앱 또는 Windows 스토어 앱에 적합합니다. 앱을 설정하는 방법은 코드 주석을 참조하세요.  
   
 ```csharp  
-// You can run this code in Visual Studio 2013 as a WPF app or a Windows Store app.  
+// You can run this code in Visual Studio as a WPF app or a Windows Store app.  
 // You need a button (StartButton) and a textbox (ResultsTextBox).  
 // Remember to set the names and handler so that you have something like this:  
 // <Button Content="Button" HorizontalAlignment="Left" Margin="88,77,0,0" VerticalAlignment="Top" Width="75"  

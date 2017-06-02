@@ -1,5 +1,5 @@
 ---
-title: "C의 상속#"
+title: "C#의 상속"
 description: "C# 라이브러리 및 응용 프로그램에서 상속 사용 방법 알아보기"
 keywords: "상속(C#), 기본 클래스, 파생 클래스, 추상 기본 클래스"
 author: rpetrusha
@@ -11,10 +11,11 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c14a2ecfa4b9c9522278098d54aad258b5feb1dc
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 0c76bbcc8e60a2739b8c2735b3576842bd4f0942
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 및 .NET의 상속 #
@@ -53,13 +54,13 @@ C# 및 .NET은 *단일 상속*만 지원합니다. 즉, 하나의 클래스가 �
 
 - [인스턴스 생성자](../programming-guide/classes-and-structs/constructors.md): 클래스의 새 인스턴스를 만들기 위해 호출합니다. 각 클래스는 자체 생성자를 정의해야 합니다.
 
-- [소멸자](../programming-guide/classes-and-structs/destructors.md): 클래스의 인스턴스를 소멸하기 위해 런타임의 가비지 수집기에 의해 호출됩니다.
+- [종료자](../programming-guide/classes-and-structs/destructors.md): 클래스의 인스턴스를 삭제하기 위해 런타임의 가비지 수집기에 의해 호출됩니다.
 
 기본 클래스의 다른 모든 멤버는 파생 클래스에서 상속되지만 표시 가능 여부는 해당 액세스 가능성에 따라 달라집니다. 멤버의 액세스 가능성은 다음과 같이 파생 클래스의 표시 여부에 영향을 미칩니다.
 
 - [개인](../language-reference/keywords/private.md) 멤버는 기본 클래스에 중첩된 파생 클래스에서만 표시됩니다. 그렇지 않으면 파생 클래스에서 표시되지 않습니다. 다음 예제에서 `A.B`는 `A`에서 파생되는 중첩 클래스이고 `C`는 `A`에서 파생됩니다. 개인 `A.value` 필드는 A.B에 표시됩니다. 그러나 `C.GetValue` 메서드에서 주석을 제거하고 예제를 컴파일하려고 하면 컴파일러 오류 CS0122: "보호 수준 때문에 'A.value'에 액세스할 수 없습니다."가 표시됩니다.
 
-   [!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/private.cs#1)]
+   [!code-csharp[상속](../../../samples/snippets/csharp/tutorials/inheritance/private.cs#1)]
 
 - [Protected](../language-reference/keywords/protected.md) 멤버는 파생 클래스에서만 표시됩니다.
 
@@ -67,7 +68,7 @@ C# 및 .NET은 *단일 상속*만 지원합니다. 즉, 하나의 클래스가 �
 
 - [Public] (../language-reference/keywords/protected.md) 멤버는 파생 클래스에서 표시되고 파생 클래스의 공용 인터페이스에 속합니다. 상속된 Public 멤버는 파생 클래스에 정의된 것처럼 호출할 수 있습니다. 다음 예제에서 클래스 `A`는 `Method1`이라는 메서드를 정의하고 클래스 `B`는 클래스 `A`에서 상속합니다. 그런 다음 이 예제에서는 마치 `B`에 대한 인스턴스 메서드인 것처럼 `Method1`을 호출합니다.
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
+[!code-csharp[상속](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
 파생 클래스는 대체 구현을 제공하여 상속된 멤버를 *재정의*할 수도 있습니다. 멤버를 재정의하기 위해서는 기본 클래스의 멤버가 [virtual](../language-reference/keywords/virtual.md) 키워드로 표시되어야 합니다. 기본적으로 기본 클래스 멤버는 `virtual`로 표시되지 않으며 재정의할 수 없습니다. 다음 예제와 같이 비가상 멤버를 재정의하려고 하면 컴파일러 오류 CS0506: "<member>: 상속된 ‘<member>’ 멤버는 virtual, abstract 또는 override로 표시되지 않았으므로 재정의할 수 없습니다.”가 표시됩니다.
 
@@ -122,11 +123,11 @@ C# 및 .NET은 *단일 상속*만 지원합니다. 즉, 하나의 클래스가 �
 
 암시적 상속의 의미를 살펴보기 위해 빈 클래스 정의에 해당하는 새 클래스 `SimpleClass`를 정의해 보겠습니다.
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
+[!code-csharp[상속](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
 
-그런 후 리플렉션(형식이 메타데이터를 검사하여 해당 형식에 대한 정보 획득)을 사용하여 `SimpleClass` 형식에 속하는 멤버의 목록을 가져올 수 있습니다. `SimpleClass` 클래스에서 어떤 멤버도 정의하지 않았지만 예제의 출력에는 실제로 9개의 멤버가 있는 것으로 나타납니다. 이러한 멤버 중 하나는 C# 컴파일러에서 `SimpleClass` 형식에 대해 자동으로 제공하는 매개 변수 없는(또는 기본) 생성자입니다. 이중 8개 또는 7개 멤버가 .NET 형식 시스템의 모든 클래스 및 인터페이스가 궁극적으로 암시적으로 상속하는 형식인 @System.Object의 멤버입니다.
+그런 후 리플렉션(형식이 메타데이터를 검사하여 해당 형식에 대한 정보 획득)을 사용하여 `SimpleClass` 형식에 속하는 멤버의 목록을 가져올 수 있습니다. `SimpleClass` 클래스에서 어떤 멤버도 정의하지 않았지만 예제의 출력에는 실제로 9개의 멤버가 있는 것으로 나타납니다. 이러한 멤버 중 하나는 C# 컴파일러에서 `SimpleClass` 형식에 대해 자동으로 제공하는 매개 변수 없는(또는 기본) 생성자입니다. 이중 8개 또는 7개 멤버가 .NET 형식 시스템의 모든 클래스 및 인터페이스가 궁극적으로 암시적으로 상속하는 형식인 @System.Object 의 멤버입니다.
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
+[!code-csharp[상속](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
 
 @System.Object 클래스에서 암시적으로 상속되므로 다음 메서드를 `SimpleClass` 클래스에서 사용할 수 있습니다.
 
@@ -142,9 +143,9 @@ C# 및 .NET은 *단일 상속*만 지원합니다. 즉, 하나의 클래스가 �
 
 - 보호된 @System.Object.MemberwiseClone 메서드: 현재 개체의 단순 복제를 만듭니다.
 
-암시적 상속으로 인해, `SimpleClass` 개체에서 상속된 모든 멤버를 실제로 `SimpleClass` 클래스에 정의된 멤버인 것처럼 호출할 수 있습니다. 예를 들어 다음 예제에서는 `SimpleClass`가 @System.Object에서 상속하는 `SimpleClass.ToString` 메서드를 호출합니다.
+암시적 상속으로 인해, `SimpleClass` 개체에서 상속된 모든 멤버를 실제로 `SimpleClass` 클래스에 정의된 멤버인 것처럼 호출할 수 있습니다. 예를 들어 다음 예제에서는 `SimpleClass` 가 @System.Object 에서 상속하는 `SimpleClass.ToString` 메서드를 호출합니다.
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass2.cs#1)]
+[!code-csharp[상속](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass2.cs#1)]
 
 다음 표에는 C#으로 만들 수 있는 형식 및 이러한 형식이 암시적으로 상속하는 형식 범주가 나와 있습니다. 각 기본 형식은 암시적으로 파생된 형식에 대한 상속을 통해 다른 멤버 집합을 사용할 수 있게 합니다.
 
@@ -163,11 +164,11 @@ C# 및 .NET은 *단일 상속*만 지원합니다. 즉, 하나의 클래스가 �
 
 "~이다(is a)"는 형식과 해당 형식의 특정 인스턴스화 사이의 관계를 나타내기도 합니다. 다음 예제에서 `Automobile`은 세 가지 고유한 읽기 전용 속성, 즉 자동차의 제조업체인 `Moke`, 자동차의 종류인 `Model`, 제조 연도인 `Year`를 갖는 클래스입니다. `Automobile` 클래스는 해당 인수가 속성 값에 할당되는 생성자를 가지며, @System.Object.ToString 메서드를 재정의하여 `Automobile` 클래스가 아닌 `Automobile` 인스턴스를 고유하게 식별하는 문자열을 생성합니다.
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#1)]
+[!code-csharp[상속](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#1)]
 
 이 경우에서는 특정 자동차 제조업체 및 모델을 나타내기 위해 상속에 의존하지 않아야 합니다. 예를 들어 Packard Motor Car Company에서 제조한 자동차임을 나타내기 위해 `Packard` 형식을 정의할 필요가 없습니다. 대신 다음 예제와 같이 해당 클래스 생성자에 해당 값을 전달한 상태로 `Automobile` 개체를 만들어 이러한 사실을 나타낼 수 있습니다.
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#2)]
+[!code-csharp[상속](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#2)]
 
 상속을 기준으로 하는 ~이다(is a) 관계는 기본 클래스와 기본 클래스에 추가 멤버를 더하거나 기본 클래스에 없는 추가 기능을 필요로 하는 파생 클래스에 가장 잘 적용됩니다.
 
@@ -191,7 +192,7 @@ C# 및 .NET은 *단일 상속*만 지원합니다. 즉, 하나의 클래스가 �
 
    이 예제에서는 `Publication` 클래스와 파생 클래스 `Book` 하나로 이루어진 간단한 계층 구조를 사용합니다. 이 예제를 쉽게 확장하여 `Magazine` 및 `Article`과 같이 `Publication`에서 파생되는 많은 수의 추가 클래스를 만들 수 있습니다.
 
-- 기본 클래스의 인스턴스화가 타당한지 여부. 그렇지 않은 경우 클래스에 [abstract](../language-reference/keywords/abstract.md) 키워드를 적용해야 합니다. 클래스 생성자에 대한 직접 호출에 의해 `abstract` 키워드로 표시된 클래스를 인스턴스화하려고 하면 C# 컴파일러는 오류 CS0144, "추상 클래스 또는 인터페이스의 인스턴스를 만들 수 없습니다."를 생성합니다. 리플렉션을 사용하여 클래스를 인스턴스화하려고 하면 리플렉션 메서드가 @System.MemberAccessException을 throw합니다. 그렇지 않으면 해당 클래스 생성자를 호출하여 `Publication` 클래스를 인스턴스화할 수 있습니다.
+- 기본 클래스의 인스턴스화가 타당한지 여부. 그렇지 않은 경우 클래스에 [abstract](../language-reference/keywords/abstract.md) 키워드를 적용해야 합니다. 클래스 생성자에 대한 직접 호출에 의해 `abstract` 키워드로 표시된 클래스를 인스턴스화하려고 하면 C# 컴파일러는 오류 CS0144, "추상 클래스 또는 인터페이스의 인스턴스를 만들 수 없습니다."를 생성합니다. 리플렉션을 사용하여 클래스를 인스턴스화하려고 하면 리플렉션 메서드가 @System.MemberAccessException 을 throw합니다. 그렇지 않으면 해당 클래스 생성자를 호출하여 `Publication` 클래스를 인스턴스화할 수 있습니다.
 
    기본적으로 기본 클래스는 해당 클래스 생성자를 호출하여 인스턴스화할 수 있습니다. 클래스 생성자를 명시적으로 정의할 필요는 없습니다. 생성자가 기본 클래스의 소스 코드에 없는 경우 C# 컴파일러는 기본(매개 변수 없는) 생성자를 자동으로 제공합니다.
 
@@ -203,9 +204,9 @@ C# 및 .NET은 *단일 상속*만 지원합니다. 즉, 하나의 클래스가 �
 
    이 예제에서는 파생 클래스를 `sealed`로 표시할 것입니다.
 
-다음 예제에서는 `Publication` 클래스에 대한 소스 코드와 `Publication.PublicationType` 속성이 반환하는 `PublicationType` 열거형을 보여 줍니다. @System.Object에서 상속하는 멤버 외에 `Publication` 클래스는 다음과 같은 고유한 멤버 및 멤버 재정의를 정의합니다.
+다음 예제에서는 `Publication` 클래스에 대한 소스 코드와 `Publication.PublicationType` 속성이 반환하는 `PublicationType` 열거형을 보여 줍니다. @System.Object 에서 상속하는 멤버 외에 `Publication` 클래스는 다음과 같은 고유한 멤버 및 멤버 재정의를 정의합니다:
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#1)]
+[!code-csharp[상속](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#1)]
 
 - 생성자
 
@@ -222,7 +223,7 @@ C# 및 .NET은 *단일 상속*만 지원합니다. 즉, 하나의 클래스가 �
 
   `Title`은 `pubTitle`이라는 private 필드에 값을 저장하는 `Publication` 생성자를 호출하여 해당 값이 제공되는 읽기 전용 @System.String 속성입니다.
 
-  `Pages`는 출판물에 포함된 총 페이지 수를 나타내는 읽기/쓰기 @System.Int32 속성입니다. 값은 `totalPages`라는 private 필드에 저장됩니다. 값은 양수여야 하며 양수가 아니면 @System.ArgumentOutOfRangeException이 throw됩니다.
+  `Pages`는 출판물에 포함된 총 페이지 수를 나타내는 읽기/쓰기 @System.Int32 속성입니다. 값은 `totalPages`라는 private 필드에 저장됩니다. 값은 양수여야 하며 양수가 아니면 @System.ArgumentOutOfRangeException 이 throw됩니다.
 
 - 출판사 관련 멤버
 
@@ -238,7 +239,7 @@ C# 및 .NET은 *단일 상속*만 지원합니다. 즉, 하나의 클래스가 �
 
 - `ToString` 메서드 재정의
 
-  형식이 @System.Object.ToString 메서드를 재정의하지 않으면 한 인스턴스를 다른 인스턴스와 구분하는 데 별로 도움이 되지 않는 형식의 정규화된 이름을 반환합니다. `Publication` 클래스는 @System.Object.ToString을 재정의하여 `Title` 속성의 값을 반환합니다.
+  형식이 @System.Object.ToString 메서드를 재정의하지 않으면 한 인스턴스를 다른 인스턴스와 구분하는 데 별로 도움이 되지 않는 형식의 정규화된 이름을 반환합니다. `Publication` 클래스는 @System.Object.ToString 을 재정의하여 `Title` 속성의 값을 반환합니다.
 
 다음 그림에서는 기본 `Publication` 클래스와 암시적으로 상속된 @System.Object 클래스 간 관계를 보여 줍니다.
 
@@ -248,7 +249,7 @@ C# 및 .NET은 *단일 상속*만 지원합니다. 즉, 하나의 클래스가 �
 
 `Book` 클래스는 책을 특수한 출판문 형식으로 나타냅니다. 다음 예제에서는 `Book` 클래스에 대한 소스 코드를 보여 줍니다.
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#2)]
+[!code-csharp[상속](../../../samples/snippets/csharp/tutorials/inheritance/base-and-derived.cs#2)]
 
 `Publication`에서 상속하는 멤버 외에 `Book` 클래스는 다음과 같은 고유한 멤버 및 멤버 재정의를 정의합니다.
 
@@ -272,7 +273,7 @@ C# 및 .NET은 *단일 상속*만 지원합니다. 즉, 하나의 클래스가 �
 
   재정의되지 않으면 @System.Object.Equals(System.Object) 메서드는 참조 같음 여부를 테스트합니다. 즉, 두 개체 변수는 같은 개체를 참조하는 경우 동일한 것으로 간주됩니다. 반면에 `Book` 클래스의 경우 두 `Book` 개체는 동일한 ISBN을 가질 경우 동일합니다.
 
-  @System.Object.Equals(System.Object) 메서드를 재정의할 경우 런타임이 효율적인 검색을 위해 해시된 컬렉션에 항목을 저장하는 데 사용하는 값을 반환하는 @System.Object.GetHashCode 메서드도 재정의해야 합니다. 해시 코드는 같음 테스트와 일치하는 값을 반환해야 합니다. 두 `Book` 개체의 ISBN 속성이 같으면 `true`를 반환하도록 @System.Object.Equals(System.Object)를 재정의했으므로 `ISBN` 속성이 반환하는 문자열의 @System.String.GetHashCode 메서드를 호출하여 계산된 해시 코드를 반환합니다.
+  @System.Object.Equals(System.Object) 메서드를 재정의할 경우 런타임이 효율적인 검색을 위해 해시된 컬렉션에 항목을 저장하는 데 사용하는 값을 반환하는 @System.Object.GetHashCode 메서드도 재정의해야 합니다. 해시 코드는 같음 테스트와 일치하는 값을 반환해야 합니다. 두 `Book` 개체의 ISBN 속성이 같으면 `true` 를 반환하도록 @System.Object.Equals (System.Object)를 재정의했으므로 `ISBN` 속성이 반환하는 문자열의 @System.String.GetHashCode 메서드를 호출하여 계산된 해시 코드를 반환합니다.
 
 다음 그림에서는 `Book` 클래스와 해당 기본 클래스인 `Publication` 클래스 간 관계를 보여 줍니다.
 
@@ -280,7 +281,7 @@ C# 및 .NET은 *단일 상속*만 지원합니다. 즉, 하나의 클래스가 �
 
 이제 다음과 같이 `Book` 개체를 인스턴스화하고, 고유 및 상속된 멤버를 둘 다 호출하고, 형식 `Publication` 또는 형식 `Book`의 매개 변수를 요구하는 메서드에 인수로 전달할 수 있습니다.
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/use-publication.cs#1)]
+[!code-csharp[상속](../../../samples/snippets/csharp/tutorials/inheritance/use-publication.cs#1)]
 
 ## <a name="abstract"></a> 추상 기본 클래스 및 파생 클래스 디자인 ##
 
@@ -288,17 +289,17 @@ C# 및 .NET은 *단일 상속*만 지원합니다. 즉, 하나의 클래스가 �
 
 예를 들어 닫힌 2차원 기하 도형 각각에 2개의 속성, 즉 도형의 내부 크기를 나타내는 area 속성과 도형 가장자리의 거리를 나타내는 perimeter 속성이 포함되어 있습니다. 그러나 이러한 속성이 계산되는 방식은 전적으로 도형에 따라 결정됩니다. 예를 들어 원의 둘레(또는 원주)를 계산하는 공식은 삼각형의 둘레를 계산하는 공식과 완전히 다릅니다.
 
-다음 예제에서는 두 속성 `Area` 및 `Perimeter`를 정의하는 `Shape`라는 추상 기본 클래스를 정의합니다. 클래스를 [abstract](../language-reference/keywords/abstract.md) 키워드로 표시하는 것 외에, 각 인스턴스 멤버도 [abstract](../language-reference/keywords/abstract.md) 키워드로 표시됩니다. 이 경우 `Shape`도 정규화된 이름은 아닌 형식의 이름을 반환하도록 @System.Object.ToString 메서드를 재정의합니다. 아울러 두 정적 멤버 `GetArea` 및 `GetPerimeter`를 정의합니다. 이러한 정적 멤버는 호출자가 파생 클래스 인스턴스의 면적 및 둘레를 쉽게 검색할 수 있도록 합니다. 파생 클래스의 인스턴스를 이러한 메서드 중 하나로 전달하면 런타임은 파생 클래스의 메서드 재정의를 호출합니다.
+다음 예제에서는 두 속성 `Area` 및 `Perimeter`를 정의하는 `Shape`라는 추상 기본 클래스를 정의합니다. 클래스를 [abstract](../language-reference/keywords/abstract.md) 키워드로 표시하는 것 외에, 각 인스턴스 멤버도 [abstract](../language-reference/keywords/abstract.md) 키워드로 표시됩니다. 이 경우 `Shape` 도 정규화된 이름은 아닌 형식의 이름을 반환하도록 @System.Object.ToString 메서드를 재정의합니다. 아울러 두 정적 멤버 `GetArea` 및 `GetPerimeter`를 정의합니다. 이러한 정적 멤버는 호출자가 파생 클래스 인스턴스의 면적 및 둘레를 쉽게 검색할 수 있도록 합니다. 파생 클래스의 인스턴스를 이러한 메서드 중 하나로 전달하면 런타임은 파생 클래스의 메서드 재정의를 호출합니다.
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#1)]
+[!code-csharp[상속](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#1)]
 
 그러면 `Shape`에서 특정 도형을 나타내는 일부 클래스를 파생할 수 있습니다. 다음 예제에서는 3개의 클래스인 `Triangle`, `Rectangle` 및 `Circle`을 정의합니다. 각각은 해당 특정 도형에 고유한 수식을 사용하여 면적 및 둘레를 계산합니다. 일부 파생 클래스는 나타내는 도형마다 고유한 `Rectangle.Diagonal` 및 `Circle.Diameter`와 같은 속성도 정의합니다.
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
+[!code-csharp[상속](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
 
 다음 예제에서는 `Shape`에서 파생된 개체를 사용합니다. 또한 `Shape`에서 파생된 개체의 배열을 인스턴스화하고 반환 `Shape` 속성 값을 래핑하는 `Shape` 클래스의 정적 메서드를 호출합니다. 런타임에서는 파생 형식의 재정의된 속성에서 값을 검색합니다. 또한 이 예제에서는 배열의 각 `Shape` 개체를 해상 파생 형식으로 캐스팅하고, 캐스팅이 성공하면 `Shape`의 해당 특정 하위 클래스 속성을 검색합니다. 
 
-[!CODE [Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
+[!code-csharp[상속](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 
 ## <a name="see-also"></a>참고 항목 ##
 

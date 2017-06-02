@@ -30,9 +30,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: f064ed0710a83e4bf0eaf5c35b962c29443f9d23
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -44,14 +45,12 @@ ms.lasthandoff: 03/13/2017
  기본적으로 첫 번째 열거자 값은 0이며 그 이후의 열거자 값은 순서대로 1씩 증가됩니다. 예를 들어 다음 열거형에서 `Sat` 은 `0`, `Sun` 은 `1`, `Mon` 은 `2`등입니다.  
   
 ```  
-  
 enum Days {Sat, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
  다음 예제와 같이 열거자는 이니셜라이저를 사용하여 기본값을 재정의할 수 있습니다.  
   
 ```  
-  
 enum Days {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
@@ -60,7 +59,6 @@ enum Days {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
  모든 열거형 형식에는 기본 형식이 있으며, 해당 형식은 [char](../../../csharp/language-reference/keywords/char.md) 형식을 제외한 임의의 정수 형식이 될 수 있습니다. 열거형 요소의 기본적인 기본 형식은 [int](../../../csharp/language-reference/keywords/int.md)입니다. [byte](../../../csharp/language-reference/keywords/byte.md)와 같은 다른 정수 형식의 열거형을 선언하려면 다음 예제에서와 같이 식별자와 그다음의 형식 뒤에 콜론을 사용합니다.  
   
 ```  
-  
 enum Days : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
@@ -76,7 +74,6 @@ enum Days : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
  기본 형식은 각 열거자에 할당될 저장소 크기를 지정합니다. 그러나 `enum` 형식에서 정수 형식으로 변환하려면 명시적 캐스트가 필요합니다. 예를 들어 다음 문은 `enum`을 `int`로 변환하는 캐스트를 사용하여 [int](../../../csharp/language-reference/keywords/int.md) 형식의 변수에 열거자 `Sun`을 할당합니다.  
   
 ```  
-  
 int x = (int)Days.Sun;  
 ```  
   
@@ -112,7 +109,7 @@ int x = (int)Days.Sun;
  `5`  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [C# 참조](../../../csharp/language-reference/index.md)   
@@ -122,3 +119,4 @@ int x = (int)Days.Sun;
  [기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [명시적 숫자 변환 표](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

@@ -36,10 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9623d1c3076d622d69a0f7c4e711274f6e244023
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: f471bac04a853e5876b9da52b7b858e1e1766e28
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 파일 I/O 및 파일 시스템의 기본 사항(Visual Basic)
@@ -104,7 +105,7 @@ ms.lasthandoff: 03/13/2017
 |파일의 특성 확인|<xref:System.IO.FileAttributes>|  
   
 ## <a name="file-permissions"></a>파일 사용 권한  
- 파일 및 디렉터리에 대한 액세스 제어는 <xref:System.Security.Permissions.FileIOPermission> 클래스로 수행할 수 있습니다. 이는 기본적으로 ASPNET( [!INCLUDE[vstecasp](../../../../csharp/language-reference/preprocessor-directives/includes/vstecasp_md.md)] 및 [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] 설치 과정에서 생성됨)이라는 이름의 특수한 로컬 사용자 계정 컨텍스트 내에서 실행되는 Web Forms로 작업하는 개발자에게 특히 중요할 수 있습니다. 그러한 응용 프로그램 요청이 리소스에 액세스할 경우 ASPNET 사용자 계정은 제한된 권한을 갖게 되며, 따라서 웹 응용 프로그램에서 파일에 쓰기 등의 작업을 수행하지 못할 수 있습니다. 자세한 내용은 [보안 권한](http://msdn.microsoft.com/en-us/b03757b4-e926-4196-b738-3733ced2bda0) 및 <xref:System.Security.Permissions.FileIOPermission>을 참조하세요.  
+ 파일 및 디렉터리에 대한 액세스 제어는 <xref:System.Security.Permissions.FileIOPermission> 클래스로 수행할 수 있습니다. 이는 기본적으로 ASPNET([!INCLUDE[vstecasp](../../../../csharp/language-reference/preprocessor-directives/includes/vstecasp_md.md)] 및 [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] 설치 과정에서 생성됨)이라는 이름의 특수한 로컬 사용자 계정 컨텍스트 내에서 실행되는 Web Forms로 작업하는 개발자에게 특히 중요할 수 있습니다. 그러한 응용 프로그램 요청이 리소스에 액세스할 경우 ASPNET 사용자 계정은 제한된 권한을 갖게 되며, 따라서 웹 응용 프로그램에서 파일에 쓰기 등의 작업을 수행하지 못할 수 있습니다. 자세한 내용은 [보안 권한](http://msdn.microsoft.com/en-us/b03757b4-e926-4196-b738-3733ced2bda0) 및 <xref:System.Security.Permissions.FileIOPermission>을 참조하세요.  
   
 ## <a name="isolated-file-storage"></a>격리된 파일 저장소  
  격리된 저장소는 사용자 또는 코드에 권한이 부족한 상태에서 파일로 작업할 때 발생하는 문제를 해결하기 위한 시도입니다. 격리된 저장소는 하나 이상의 저장소를 유지할 수 있는 데이터 구획을 각 사용자에게 할당합니다. 사용자 및 어셈블리를 기준으로 저장소를 서로 격리할 수 있습니다. 저장소를 만든 사용자 및 어셈블리만이 저장소에 액세스할 수 있습니다. 저장소는 완전한 가상 파일 시스템 역할을 합니다. 한 저장소 내에서 디렉터리와 파일을 만들고 조작할 수 있습니다.  

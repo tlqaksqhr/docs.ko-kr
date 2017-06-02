@@ -30,9 +30,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: b4aa3c7c54e5e4d53975262adbbd9b54c701a69e
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -46,7 +47,6 @@ public void SampleMethod()
 {  
     // Body of the method.  
 }  
-  
 ```  
   
  `void`는 또한 알 수 없는 형식에 대한 포인터를 선언하기 위해 안전하지 않은 컨텍스트에서도 사용됩니다. 자세한 내용은 [포인터 형식](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)을 참조하세요.  
@@ -64,3 +64,4 @@ public void SampleMethod()
  [값 형식](../../../csharp/language-reference/keywords/value-types.md)   
  [메서드](../../../csharp/programming-guide/classes-and-structs/methods.md)   
  [안전하지 않은 코드 및 포인터](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
+

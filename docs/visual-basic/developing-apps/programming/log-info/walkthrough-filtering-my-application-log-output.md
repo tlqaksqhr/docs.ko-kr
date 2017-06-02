@@ -33,10 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: caa4b8be16e5000d02d82a83199a25d13ad07bba
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: c0b8b0a4174527d1fc512b461355d2508e34e152
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>연습: My.Application.Log 출력 필터링(Visual Basic)
@@ -161,7 +162,7 @@ ms.lasthandoff: 03/13/2017
 9. `value` 특성의 값을 다시 "정보"로 변경합니다.  
   
     > [!NOTE]
-    >  `DefaultSwitch` 스위치 설정은 `My.Application.Log`만 제어합니다. [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] <xref:System.Diagnostics.Trace?displayProperty=fullName> 및 <xref:System.Diagnostics.Debug?displayProperty=fullName> 클래스의 작동 방식은 변경하지 않습니다.  
+    >  `DefaultSwitch` 스위치 설정은 `My.Application.Log`만 제어합니다. [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] <xref:System.Diagnostics.Trace?displayProperty=fullName> 및 <xref:System.Diagnostics.Debug?displayProperty=fullName> 클래스의 동작은 변경되지 않습니다.  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>My.Application.Log 수신기에 대한 개별 필터링  
  이전 예제에서는 모든 `My.Application.Log` 출력에 대한 필터링을 변경하는 방법을 보여 줍니다. 이 예제에서는 개별 로그 수신기를 필터링하는 방법을 보여 줍니다. 기본적으로 응용 프로그램에는 각각 응용 프로그램의 디버그 출력 및 로그 파일에 기록하는 두 개의 수신기가 있습니다.  
@@ -212,7 +213,7 @@ ms.lasthandoff: 03/13/2017
     </add>  
     ```  
   
-     <xref:System.Diagnostics.EventTypeFilter> 필터는 <xref:System.Diagnostics.SourceLevels> 열거형 값 중 하나를 `initializeData` 특성으로 사용합니다.  
+     <xref:System.Diagnostics.EventTypeFilter> 필터는 <xref:System.Diagnostics.SourceLevels> 열거형 값 중 하나를 해당 `initializeData` 특성으로 사용합니다.  
   
 7.  app.config 파일의 내용은 다음 XML과 비슷합니다.  
   
@@ -278,5 +279,5 @@ ms.lasthandoff: 03/13/2017
  [연습: My.Application.Log가 정보를 기록하는 위치 변경](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)   
  [연습: 사용자 지정 로그 수신기 만들기](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)   
  [방법: 로그 메시지 쓰기](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
- [추적 스위치](http://msdn.microsoft.com/library/8ab913aa-f400-4406-9436-f45bc6e54fbe)   
+ [추적 스위치](../../../../framework/debug-trace-profile/trace-switches.md)   
  [응용 프로그램의 정보 기록](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)

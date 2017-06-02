@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 67b30a93fd046a76dca4cc6abe273426d818aaf5
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 9aaf49c685498bce451eb53a35a56d8a8fde928c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="using-async-for-file-access-c"></a>파일 액세스에 Async 사용(C#)
@@ -55,9 +56,9 @@ using System.Threading.Tasks;
 ```  
   
 ## <a name="use-of-the-filestream-class"></a>FileStream 클래스 사용  
- 이 항목의 예제는 운영 체제 수준에서 비동기 I/O를 일으키는 옵션이 있는 <xref:System.IO.FileStream> 클래스를 사용합니다. 이 옵션을 사용하면 많은 경우 ThreadPool 스레드를 차단하지 않아도 됩니다. 이 옵션을 사용하도록 설정하려면 생성자 호출에서 `useAsync=true` 또는 `options=FileOptions.Asynchronous` 인수를 지정합니다.  
+ 이 항목의 예제에서는 운영 체제 수준에서 비동기 I/O를 일으키는 옵션이 있는 <xref:System.IO.FileStream> 클래스를 사용합니다. 이 옵션을 사용하면 많은 경우 ThreadPool 스레드를 차단하지 않아도 됩니다. 이 옵션을 사용하도록 설정하려면 생성자 호출에서 `useAsync=true` 또는 `options=FileOptions.Asynchronous` 인수를 지정합니다.  
   
- 파일 경로를 지정하여 직접 열 경우 <xref:System.IO.StreamReader> 및 <xref:System.IO.StreamWriter>와 함께 이 옵션을 사용할 수 없습니다. 그러나 <xref:System.IO.FileStream> 클래스에서 연 <xref:System.IO.Stream>을 제공하면 이 옵션을 사용할 수 있습니다. 대기 중에는 UI 스레드가 차단되지 않으므로, ThreadPool 스레드가 차단된 경우에도 UI 앱에서 비동기 호출이 더 빠릅니다.  
+ 파일 경로를 지정하여 직접 여는 경우에는 <xref:System.IO.StreamReader> 및 <xref:System.IO.StreamWriter>와 함께 이 옵션을 사용할 수 없습니다. 그러나 <xref:System.IO.FileStream> 클래스에서 열린 <xref:System.IO.Stream>을 제공하면 이 옵션을 사용할 수 있습니다. 대기 중에는 UI 스레드가 차단되지 않으므로, ThreadPool 스레드가 차단된 경우에도 UI 앱에서 비동기 호출이 더 빠릅니다.  
   
 ## <a name="writing-text"></a>텍스트 쓰기  
  다음 예제에서는 파일에 텍스트를 씁니다. 각 await 문에서 메서드가 즉시 종료됩니다. 파일 I/O가 완료되면 await 문 뒤에 오는 문에서 메서드가 다시 시작됩니다. async 한정자는 await 문을 사용하는 메서드의 정의에 있습니다.  
@@ -94,7 +95,7 @@ await theTask;
  첫 번째 문은 작업을 반환하여 파일 처리가 시작되도록 합니다. await가 있는 두 번째 문은 메서드를 즉시 종료하고 다른 작업을 반환하도록 합니다. 나중에 파일 처리가 완료되면 await 뒤에 오는 문으로 실행이 반환됩니다. 자세한 내용은 [비동기 프로그램의 제어 흐름(C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)을 참조하세요.  
   
 ## <a name="reading-text"></a>텍스트 읽기  
- 다음 예제에서는 파일에서 텍스트를 읽습니다. 텍스트가 버퍼링되고, 이 경우 <xref:System.Text.StringBuilder>에 배치됩니다. 이전 예제와 달리 await의 계산에서 값이 생성됩니다. <xref:System.IO.Stream.ReadAsync%2A> 메서드는 <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>를 반환하므로, 연산이 끝나면 await 계산 결과 `Int32` 값(`numRead`)이 생성됩니다. 자세한 내용은 [비동기 반환 형식(C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)을 참조하세요.  
+ 다음 예제에서는 파일에서 텍스트를 읽습니다. 텍스트가 버퍼링되고, 이 경우 <xref:System.Text.StringBuilder>에 배치됩니다. 이전 예제와 달리 await의 계산에서 값이 생성됩니다. <xref:System.IO.Stream.ReadAsync%2A> 메서드는 <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>를 반환하므로 작업이 완료된 후 await 평가에서 `Int32` 값(`numRead`)이 생성됩니다. 자세한 내용은 [비동기 반환 형식(C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)을 참조하세요.  
   
 ```csharp  
 public async void ProcessRead()  
@@ -188,7 +189,7 @@ public async void ProcessWriteMult()
 }  
 ```  
   
- <xref:System.IO.Stream.WriteAsync%2A> 및 <xref:System.IO.Stream.ReadAsync%2A> 메서드를 사용하는 경우, 연산 중간 스트림을 취소하는 데 사용할 수 있는 <xref:System.Threading.CancellationToken>을 지정할 수 있습니다. 자세한 내용은 [비동기 응용 프로그램 미세 조정(C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) 및 [관리되는 스레드의 취소](http://msdn.microsoft.com/library/eea11fe5-d8b0-4314-bb5d-8a58166fb1c3)를 참조하세요.  
+ <xref:System.IO.Stream.WriteAsync%2A> 및 <xref:System.IO.Stream.ReadAsync%2A> 메서드를 사용하는 경우 중간에 작업을 취소하는 데 사용할 수 있는 <xref:System.Threading.CancellationToken>을 지정할 수 있습니다. 자세한 내용은 [비동기 응용 프로그램 미세 조정(C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) 및 [관리되는 스레드의 취소](../../../../standard/threading/cancellation-in-managed-threads.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [async 및 await를 사용한 비동기 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/async/index.md)   

@@ -33,10 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 3e60516d1f443528c357eb12612b6149f34c1f7e
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="-operator-c-reference"></a>?: 연산자(C# 참조)
@@ -54,7 +55,6 @@ condition ? first_expression : second_expression;
  조건 연산자를 사용하면 `if-else` 구성이 필요할 수 있는 계산을 더 간결하게 표현할 수 있습니다. 예를 들어, 다음 코드는 처음에 `if` 문을 사용한 다음 조건부 연산자를 사용하여 정수를 양 또는 음으로 분류합니다.  
   
 ```  
-  
 int input = Convert.ToInt32(Console.ReadLine());  
 string classify;  
   
@@ -66,7 +66,6 @@ else
   
 // ?: conditional operator.  
 classify = (input > 0) ? "positive" : "negative";  
-  
 ```  
   
  조건 연산자에는 오른쪽 결합성이 있습니다. `a ? b : c ? d : e` 식은 `a ? b : (c ? d : e)`가 아닌 `(a ? b : c) ? d : e`로 평가됩니다.  
@@ -83,3 +82,4 @@ classify = (input > 0) ? "positive" : "negative";
  [if-else](../../../csharp/language-reference/keywords/if-else.md)   
  [?. 및 ? 연산자](../../../csharp/language-reference/operators/null-conditional-operators.md)   
  [?? 연산자](../../../csharp/language-reference/operators/null-conditional-operator.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "C# 둘러보기 | C# 가이드"
+title: "C# 둘러보기 - C# 가이드 | Microsoft Docs"
 description: "C#을 처음 사용하시나요? 언어의 기본 사항에 대해 알아봅니다."
 keywords: ".NET, .NET core, C#, C# 입문서, C# 가이드"
 author: BillWagner
@@ -10,16 +10,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7249f1bed4395671cc294d5db83e83844782736a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: f122f59dd6f194facd98f4c6fa7f84c658c02a90
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/23/2017
 
 ---
 
 # <a name="a-tour-of-the-c-language"></a>C# 언어 둘러보기  
 
-C#("샵 참조")은 간단한 최신의 개체 지향 및 형식 안전 프로그래밍 언어입니다. C#은 C 언어 제품군에서 시작되었으며 C, C++, Java 및 JavaScript 프로그래머에게 친숙할 것입니다.
+C#(“샵 참조”)은 간단하면서도 형식이 안전한 최신 개체 지향 프로그래밍 언어입니다. C#은 C 언어 제품군에서 시작되었으며 C, C++, Java 및 JavaScript 프로그래머에게 친숙할 것입니다.
 
 C#은 개체 지향 언어이지만 ***구성 요소 지향*** 프로그래밍도 지원합니다. 현대의 소프트웨어 설계는 독립적이고 자체 설명적인 기능 패키지 형식을 갖는 소프트웨어 구성 요소에 점점 더 많이 의존하고 있습니다. 이러한 구성 요소의 핵심은 속성, 메서드 및 이벤트를 포함하는 프로그래밍 모델을 제공한다는 데 있습니다. 이러한 구성 요소는 구성 요소에 대한 선언적 정보를 제공하는 특성을 보유하며 자체 설명서를 통합하고 있습니다. C#은 이러한 개념을 직접적으로 지원하는 언어 구문을 제공함으로써 소프트웨어 구성 요소를 만들고 사용할 수 있는 뛰어난 자연 언어로 자리매김하게 되었습니다.
 
@@ -31,11 +32,11 @@ C# 프로그램 및 라이브러리가 호환되는 방식으로 계속 진화�
 
 ## <a name="hello-world"></a>Hello World
 
-"Hello, World" 프로그램은 프로그래밍 언어를 소개하는 데 일반적으로 사용됩니다. C#에서는 다음과 같습니다.
+“Hello, World” 프로그램은 프로그래밍 언어를 소개하는 데 일반적으로 사용됩니다. C#에서는 다음과 같습니다.
 
 [!code-csharp[Hello World](../../../samples/snippets/csharp/tour/hello/Program.cs#L1-L8)]
 
-C# 소스 파일은 일반적으로 파일 확장명이 `.cs`입니다. "Hello, World" 프로그램이 파일 `hello.cs`에 저장되어 있다고 가정할 경우 프로그램은 명령줄을 사용하여 컴파일될 수 있습니다.
+C# 소스 파일은 일반적으로 파일 확장명이 `.cs`입니다. “Hello, World” 프로그램이 파일 `hello.cs`에 저장되어 있다고 가정할 경우 프로그램은 명령줄을 사용하여 컴파일될 수 있습니다.
 
 ```console
 csc hello.cs
@@ -51,9 +52,9 @@ Hello, World
 > `csc` 명령은 전체 프레임워크에 대해 컴파일을 수행하며 모든 플랫폼에서 사용 가능하지는 않을 수 있습니다.
 
 
-"Hello, World" 프로그램은 `System` 네임스페이스를 참조하는 `using` 지시문으로 시작합니다. 네임스페이스는 계층적으로 C# 프로그램 및 라이브러리를 구성하는 방법을 제공합니다. 네임스페이스에는 형식 및 다른 네임스페이스가 포함됩니다. 예를 들어 `System` 네임스페이스에는 많은 형식(예: 프로그램에 참조되는 `Console` 클래스) 및 많은 다른 네임스페이스(예: `IO` 및 `Collections`)가 포함되어 있습니다. 지정된 네임스페이스를 참조하는 `using` 지시문을 사용하여 해당 네임스페이스의 멤버인 형식을 정규화되지 않은 방식으로 사용할 수 있습니다. `using` 지시문 때문에, 프로그램은 `Console.WriteLine`을 `System.Console.WriteLine`의 약식으로 사용할 수 있습니다.
+“Hello, World” 프로그램은 `System` 네임스페이스를 참조하는 `using` 지시문으로 시작합니다. 네임스페이스는 계층적으로 C# 프로그램 및 라이브러리를 구성하는 방법을 제공합니다. 네임스페이스에는 형식 및 다른 네임스페이스가 포함됩니다. 예를 들어 `System` 네임스페이스에는 많은 형식(예: 프로그램에 참조되는 `Console` 클래스) 및 많은 다른 네임스페이스(예: `IO` 및 `Collections`)가 포함되어 있습니다. 지정된 네임스페이스를 참조하는 `using` 지시문을 사용하여 해당 네임스페이스의 멤버인 형식을 정규화되지 않은 방식으로 사용할 수 있습니다. `using` 지시문 때문에, 프로그램은 `Console.WriteLine`을 `System.Console.WriteLine`의 약식으로 사용할 수 있습니다.
 
-"Hello, World" 프로그램에서 선언된 `Hello` 클래스에는 단일 멤버인 `Main` 메서드가 있습니다. `Main` 메서드는 static 한정자로 선언됩니다. 인스턴스 메서드는 키워드 `this`를 사용하여 특정 바깥쪽 개체 인스턴스를 참조할 수 있지만 정적 메서드는 특정 개체에 대한 참조 없이 작동합니다. 관례상 `Main`이라는 정적 메서드가 프로그램의 진입점으로 사용됩니다.
+“Hello, World” 프로그램에서 선언된 `Hello` 클래스에는 단일 멤버인 `Main` 메서드가 있습니다. `Main` 메서드는 static 한정자로 선언됩니다. 인스턴스 메서드는 키워드 `this`를 사용하여 특정 바깥쪽 개체 인스턴스를 참조할 수 있지만 정적 메서드는 특정 개체에 대한 참조 없이 작동합니다. 관례상 `Main`이라는 정적 메서드가 프로그램의 진입점으로 사용됩니다.
 
 프로그램의 출력은 `System` 네임스페이스에 있는 `Console` 클래스의 `WriteLine` 메서드에 의해 생성됩니다. 이 클래스는 기본적으로는 컴파일러에서 자동으로 참조되는 표준 클래스 라이브러리를 통해 제공됩니다.
 

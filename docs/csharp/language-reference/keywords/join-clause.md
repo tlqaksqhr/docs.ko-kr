@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c80cce6cbb29946dfc2d0407781cd4ba698a2ea2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 26027418b70d211dcadf6ace58b24927d94e427a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="join-clause-c-reference"></a>join 절(C# 참조)
@@ -88,7 +89,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="joins-on-object-collections-vs-relational-tables"></a>개체 컬렉션 및 관계형 테이블에서 조인  
  [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] 쿼리 식에서 조인 작업은 개체 컬렉션에서 수행됩니다. 개체 컬렉션은 두 개의 관계형 테이블과 정확히 동일한 방식으로 "조인"할 수 없습니다. [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)]에서는 두 소스 시퀀스가 관계로 연결되지 않는 경우에만 명시적 `join` 절이 필요합니다. [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)]로 작업할 때 외래 키 테이블은 기본 테이블의 속성으로 개체 모델에 표시됩니다. 예를 들어 Northwind 데이터베이스에서 Customer 테이블은 Orders 테이블과 외래 키 관계가 있습니다. 테이블을 개체 모델에 매핑하면 Customer 클래스는 해당 Customer와 연결된 Orders 컬렉션을 포함하는 Orders 속성을 갖습니다. 사실상 조인은 이미 수행된 것입니다.  
   
- [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)] 컨텍스트에서 관련 테이블을 쿼리하는 방법에 대한 자세한 내용은 [방법: 데이터베이스 관계 매핑](http://msdn.microsoft.com/library/538def39-8399-46fb-b02d-60ede4e050af)을 참조하세요.  
+ [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)] 컨텍스트에서 관련 테이블을 쿼리하는 방법에 대한 자세한 내용은 [방법: 데이터베이스 관계 매핑](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md)을 참조하세요.  
   
 ## <a name="composite-keys"></a>복합 키  
  복합 키를 사용하여 여러 값이 같은지 여부를 테스트할 수 있습니다. 자세한 내용은 [방법: 복합 키를 사용하여 조인](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)을 참조하세요. 복합 키는 `group` 절에서도 사용할 수 있습니다.  
@@ -98,7 +99,7 @@ ms.lasthandoff: 03/13/2017
   
  [!code-cs[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_5.cs)]  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  뒤에 `into`가 오지 않는 `join` 절은 <xref:System.Linq.Enumerable.Join%2A> 메서드 호출로 변환됩니다. 뒤에 `into`가 오는 `join` 절은 <xref:System.Linq.Enumerable.GroupJoin%2A> 메서드 호출로 변환됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

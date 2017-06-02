@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8c23c17967474af0f91c0dda6d071073234736c6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
+ms.openlocfilehash: 2014047f17f766023ba4db4981aad6e6d4902381
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="enumeration-types-c-programming-guide"></a>열거형 형식(C# 프로그래밍 가이드)
@@ -95,20 +96,17 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
   
  [!code-cs[csProgGuideEnums#7](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_6.cs)]  
   
- <xref:System.FlagsAttribute?displayProperty=fullName> 특성으로 열거형 형식을 정의할 때 고려할 사항에 대한 자세한 내용은 <xref:System.Enum?displayProperty=fullName>을 참조하세요.  
+ <xref:System.FlagsAttribute?displayProperty=fullName> 특성을 사용하여 열거형 형식을 정의할 때 고려할 사항에 대한 자세한 내용은 <xref:System.Enum?displayProperty=fullName>을 참조하세요.  
   
 ## <a name="using-the-systemenum-methods-to-discover-and-manipulate-enum-values"></a>System.Enum 메서드를 사용하여 열거형 값 검색 및 조작  
- 모든 열거형은 <xref:System.Enum?displayProperty=fullName> 형식의 인스턴스입니다. <xref:System.Enum?displayProperty=fullName>에서 새 클래스를 파생시킬 수는 없지만 해당 메서드를 사용하여 열거형 인스턴스에서 값에 대한 정보를 검색하고 값을 조작할 수 있습니다.  
+ 모든 열거형은 <xref:System.Enum?displayProperty=fullName> 형식의 인스턴스입니다. <xref:System.Enum?displayProperty=fullName>에서 새 클래스를 파생시킬 수는 없지만 해당 메서드를 사용하여 열거형 인스턴스에서 값에 대한 정보를 검색하고 값을 조작할 수는 있습니다.  
   
  [!code-cs[csProgGuideEnums#5](../../csharp/programming-guide/codesnippet/CSharp/enumeration-types_7.cs)]  
   
- 자세한 내용은 <xref:System.Enum?displayProperty=fullName>을 참조하세요.  
+ 자세한 내용은 <xref:System.Enum?displayProperty=fullName>을 참조하십시오.  
   
  또한 확장 메서드를 사용하여 열거형에 대한 새 메서드를 만들 수 있습니다. 자세한 내용은 [방법: 새 열거형 메서드 만들기](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)를 참조하세요.  
-  
-## <a name="featured-book-chapter"></a>중요 설명서 장  
- [Visual C# 2010 시작](http://go.microsoft.com/fwlink/?LinkId=221214)의 [변수 자세히 알아보기](http://go.microsoft.com/fwlink/?LinkId=221230)  
-  
+
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Enum?displayProperty=fullName>   
  [C# 프로그래밍 가이드](../../csharp/programming-guide/index.md)   

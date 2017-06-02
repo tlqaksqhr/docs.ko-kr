@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 480df976-7568-4df4-9d26-9911357b5a31
-translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: c816bf4c93430a009e61ddf2a3673c43f49b8de9
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: eda9e6f30defb93737aa67563aa6e606a8a2fb91
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/14/2017
 
 ---
 
@@ -41,13 +42,13 @@ ms.lasthandoff: 03/07/2017
 
 ## <a name="behavior"></a>동작
 
-.NET Core 도구 원격 분석 기능은 기본적으로 사용됩니다. 환경 변수 DOTNET_CLI_TELEMETRY_OPTOUT(예: macOS/Linux에서는 `export`, Windows에서는 `set`)을 true(예: “true”, 1)로 설정하여 원격 분석 기능을 옵트아웃할 수 있습니다.
+.NET Core 도구 원격 분석 기능은 기본적으로 사용됩니다. 환경 변수 DOTNET_CLI_TELEMETRY_OPTOUT(예: macOS/Linux에서는 `export`, Windows에서는 `set`)을 true(예: "true", 1)로 설정하여 원격 분석 기능을 옵트아웃할 수 있습니다.
 
 ## <a name="data-points"></a>데이터 요소
 
 이 기능은 다음 데이터를 수집합니다.
 
-- 사용되는 명령(예: “build”, “restore”)
+- 사용되는 명령(예: "build", "restore")
 - 명령의 ExitCode
 - 테스트 프로젝트의 경우 사용되는 Test Runner
 - 호출의 타임스탬프

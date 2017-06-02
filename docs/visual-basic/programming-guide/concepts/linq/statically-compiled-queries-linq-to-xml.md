@@ -15,9 +15,10 @@ ms.assetid: 3f4825c7-c3b0-48da-ba4e-8e97fb2a2f34
 caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 2ea8e71acf861b93a21296c74254b3ca4d977d0a
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/13/2017
 
 
@@ -43,7 +44,6 @@ Dim list1 = From el In po.Descendants("Address")
 For Each el In list1  
     Console.WriteLine(el)  
 Next  
-  
 ```  
   
  이 예제의 쿼리 식은 메서드 기반 쿼리 구문에 대한 컴파일러로 다시 작성되었습니다. 메서드 기반 쿼리 구문으로 작성된 다음 예제는 이전 쿼리에서와 같은 결과를 생성합니다.  
@@ -87,7 +87,6 @@ For Each n As Xml.XmlNode In nl
     Console.WriteLine(n.OuterXml)  
 Next  
 reader.Close()  
-  
 ```  
   
  이 쿼리는 LINQ to XML;를 사용 하는 예제와 동일한 출력 반환 유일한 차이점은 XML을 들여쓰기로 LINQ to XML에서 처리 하는 반면 <xref:System.Xml.XmlDocument>하지 않습니다.</xref:System.Xml.XmlDocument>  
@@ -106,3 +105,4 @@ reader.Close()
   
 ## <a name="see-also"></a>참고 항목  
  [성능 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+

@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c821afbbe8571d9573321b9d11b069aa0f7cd342
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 3bb7e2c9665cf98fe48e1445dfcf8009b329a39a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>연습: Visual Studio에서 관리되는 어셈블리의 형식 포함(C#)
@@ -48,7 +49,7 @@ ms.lasthandoff: 03/13/2017
   
 -   상수는 포함되지 않습니다.  
   
--   <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> 클래스는 포함된 형식을 키로서 지원하지 않습니다. 포함된 형식을 키로서 지원하도록 고유한 사전 형식을 구현할 수 있습니다.  
+-   <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> 클래스는 포함된 형식을 키로 지원하지 않습니다. 포함된 형식을 키로서 지원하도록 고유한 사전 형식을 구현할 수 있습니다.  
   
  이 연습에서는 다음을 수행합니다.  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 03/13/2017
   
 -   클라이언트 프로그램을 실행하여, 클라이언트 프로그램을 다시 컴파일할 필요 없이 런타임 어셈블리의 새 버전이 사용되고 있는지 확인합니다.  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="creating-an-interface"></a>인터페이스 만들기  
   
@@ -70,7 +71,7 @@ ms.lasthandoff: 03/13/2017
   
 1.  Visual Studio의 **파일** 메뉴에서 **새로 만들기**를 선택한 다음 **프로젝트**를 클릭합니다.  
   
-2.  **새 프로젝트** 대화 상자의 **프로젝트 형식** 창에서 **Windows**가 선택되었는지 확인합니다. **템플릿** 창에서 **클래스 라이브러리**를 선택합니다. **이름** 상자에 `TypeEquivalenceInterface`를 입력한 다음 **확인**을 클릭합니다. 새 프로젝트가 만들어집니다.  
+2.  **새 프로젝트** 대화 상자의 **프로젝트 형식** 창에서 **Windows**가 선택되었는지 확인합니다. **템플릿** 창에서 **클래스 라이브러리**를 선택합니다. **이름** 상자에 `TypeEquivalenceInterface`을 입력한 다음 **확인**을 클릭합니다. 새 프로젝트가 만들어집니다.  
   
 3.  **솔루션 탐색기**에서 Class1.cs 파일을 마우스 오른쪽 단추로 클릭한 다음 **이름 바꾸기**를 클릭합니다. 파일 이름을 `ISampleInterface.cs`로 바꾸고 ENTER 키를 누릅니다. 파일 이름을 바꾸면 클래스 이름도 `ISampleInterface`로 바뀝니다. 이 클래스는 클래스에 대한 공용 인터페이스를 나타냅니다.  
   
@@ -80,14 +81,32 @@ ms.lasthandoff: 03/13/2017
   
 6.  ISampleInterface.cs 파일을 엽니다. ISampleInterface 인터페이스를 만드는 ISampleInterface 클래스 파일에 다음 코드를 추가합니다.  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+    ```csharp  
+    using System;  
+    using System.Runtime.InteropServices;  
+  
+    namespace TypeEquivalenceInterface  
+    {  
+        [ComImport]  
+        [Guid("8DA56996-A151-4136-B474-32784559F6DF")]  
+        public interface ISampleInterface  
+        {  
+            void GetUserInput();  
+            string UserInput { get; }  
+        }  
+    }  
+    ```  
+  
 7.  **도구** 메뉴에서 **GUID 만들기**를 클릭합니다. **GUID 만들기** 대화 상자에서 **레지스트리 형식**과 **복사**를 차례로 클릭합니다. **끝내기**를 클릭합니다.  
   
 8.  `Guid` 특성에서 샘플 GUID를 삭제하고, **GUID 만들기** 대화 상자에서 복사한 GUID를 붙여 넣습니다. 복사된 GUID에서 중괄호({})를 제거합니다.  
   
 9. **솔루션 탐색기**에서 **Properties** 폴더를 확장합니다. AssemblyInfo.cs 파일을 두 번 클릭합니다. 파일에 다음 특성을 추가합니다.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
+    ```csharp  
+    [assembly: ImportedFromTypeLib("")]  
+    ```  
+  
      파일을 저장합니다.  
   
 10. 프로젝트를 저장합니다.  
@@ -114,7 +133,29 @@ ms.lasthandoff: 03/13/2017
   
 8.  다음 코드를 SampleClass 클래스 파일에 추가하여 SampleClass 클래스를 만듭니다.  
   
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
+    ```csharp  
+    using System;  
+    using System.Collections.Generic;  
+    using System.Linq;  
+    using System.Text;  
+    using TypeEquivalenceInterface;  
+  
+    namespace TypeEquivalenceRuntime  
+    {  
+        public class SampleClass : ISampleInterface  
+        {  
+            private string p_UserInput;  
+            public string UserInput { get { return p_UserInput; } }  
+  
+            public void GetUserInput()  
+            {  
+                Console.WriteLine("Please enter a value:");  
+                p_UserInput = Console.ReadLine();  
+            }  
+        }  
+    )  
+    ```  
+  
 9. 프로젝트를 저장합니다.  
   
 10. TypeEquivalenceRuntime 프로젝트를 마우스 오른쪽 단추로 클릭하고 **빌드**를 클릭합니다. 클래스 라이브러리 .dll 파일이 컴파일되고 지정된 빌드 출력 경로에 저장됩니다(예: C:\TypeEquivalenceSample).  
@@ -135,7 +176,32 @@ ms.lasthandoff: 03/13/2017
   
 6.  다음 코드를 Program.cs 파일에 추가하여 클라이언트 프로그램을 만듭니다.  
   
-<CodeContentPlaceHolder>3</CodeContentPlaceHolder>  
+    ```csharp  
+    using System;  
+    using System.Collections.Generic;  
+    using System.Linq;  
+    using System.Text;  
+    using TypeEquivalenceInterface;  
+    using System.Reflection;  
+  
+    namespace TypeEquivalenceClient  
+    {  
+        class Program  
+        {  
+            static void Main(string[] args)  
+            {  
+                Assembly sampleAssembly = Assembly.Load("TypeEquivalenceRuntime");  
+                ISampleInterface sampleClass =   
+                    (ISampleInterface)sampleAssembly.CreateInstance("TypeEquivalenceRuntime.SampleClass");  
+                sampleClass.GetUserInput();  
+                Console.WriteLine(sampleClass.UserInput);  
+                Console.WriteLine(sampleAssembly.GetName().Version.ToString());  
+                Console.ReadLine();  
+            }  
+        }  
+    }  
+    ```  
+  
 7.  Ctrl+F5를 눌러 프로그램을 빌드하고 실행합니다.  
   
 ## <a name="modifying-the-interface"></a>인터페이스 수정  
@@ -148,7 +214,10 @@ ms.lasthandoff: 03/13/2017
   
 3.  SampleInterface.cs 파일을 엽니다. ISampleInterface 인터페이스에 다음 코드 줄을 추가합니다.  
   
-<CodeContentPlaceHolder>4</CodeContentPlaceHolder>  
+    ```csharp  
+    DateTime GetDate();  
+    ```  
+  
      파일을 저장합니다.  
   
 4.  프로젝트를 저장합니다.  
@@ -165,7 +234,7 @@ ms.lasthandoff: 03/13/2017
   
 3.  SampleClass.cs 파일을 엽니다. SampleClass 클래스에 다음 코드 줄을 추가합니다.  
   
-    ```cs  
+    ```csharp  
     public DateTime GetDate()  
     {  
         return DateTime.Now;  
@@ -183,6 +252,6 @@ ms.lasthandoff: 03/13/2017
 ## <a name="see-also"></a>참고 항목  
  [/link(C# 컴파일러 옵션)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)   
  [C# 프로그래밍 가이드](../../../../csharp/programming-guide/index.md)   
- [어셈블리를 사용한 프로그래밍](http://msdn.microsoft.com/library/25918b15-701d-42c7-95fc-c290d08648d6)   
+ [어셈블리를 사용한 프로그래밍](../../../../framework/app-domains/programming-with-assemblies.md)   
  [어셈블리 및 전역 어셈블리 캐시(C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
 

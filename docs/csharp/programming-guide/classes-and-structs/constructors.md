@@ -1,30 +1,74 @@
 ---
 title: "생성자(C# 프로그래밍 가이드) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "생성자[C#]"
-  - "클래스[C#], 생성자"
-  - "C# 언어, 생성자"
+ms.date: 2017-05-05
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- constructors [C#]
+- classes [C#], constructors
+- C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
 caps.latest.revision: 23
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 23
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 064d8f8b3068596cd1d4fc2dd073f165f0ebadcb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/15/2017
+
 ---
-# 생성자(C# 프로그래밍 가이드)
-[클래스](../../../csharp/language-reference/keywords/class.md)나 [구조체](../../../csharp/language-reference/keywords/struct.md)를 만들 때마다 해당 생성자가 호출됩니다.  클래스나 구조체에는 서로 다른 인수를 사용하는 여러 생성자가 있을 수 있습니다.  프로그래머는 생성자를 통해 기본값을 설정하고, 인스턴스화를 제한하며, 융통성 있고 읽기 쉬운 코드를 작성할 수 있습니다.  자세한 내용 및 예제를 보려면 [생성자 사용](../../../csharp/programming-guide/classes-and-structs/using-constructors.md) 및 [인스턴스 생성자](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)를 참조하십시오.  
+# <a name="constructors-c-programming-guide"></a>생성자(C# 프로그래밍 가이드)
+[class](../../../csharp/language-reference/keywords/class.md) 또는 [struct](../../../csharp/language-reference/keywords/struct.md)를 만들 때마다 해당 생성자가 호출됩니다. 클래스 또는 구조체에는 서로 다른 인수를 사용하는 여러 생성자가 있을 수 있습니다. 프로그래머는 생성자를 통해 기본값을 설정하고, 인스턴스화를 제한하며, 유연하고 읽기 쉬운 코드를 작성할 수 있습니다. 자세한 내용 및 예제는 [생성자 사용](../../../csharp/programming-guide/classes-and-structs/using-constructors.md) 및 [인스턴스 생성자](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)를 참조하세요.  
+
+## <a name="default-constructors"></a>기본 생성자
   
- 사용자가 작성한 개체에 대해 생성자를 제공하지 않으면 C\#에서 기본적으로 개체를 인스턴스화하고 모든 멤버 변수에 기본값을 설정하는 생성자를 만듭니다. 기본값은 [기본값 표](../../../csharp/language-reference/keywords/default-values-table.md)에 나열되어 있습니다.  자세한 내용과 예제를 보려면 [인스턴스 생성자](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)을 참조하십시오.  
+클래스에 대한 생성자를 제공하지 않으면 C#이 기본적으로 개체를 인스턴스화하고 멤버 변수를 [기본값 표](../../../csharp/language-reference/keywords/default-values-table.md)에 나열된 기본값으로 설정하는 생성자를 새로 만듭니다. 구조체에 대한 생성자를 제공하지 않으면 C#이 *암시적 기본 생성자*에서 응답하여 값 형식의 각 필드를 [기본값 표](../../../csharp/language-reference/keywords/default-values-table.md)에 나열된 기본값으로 자동으로 초기화합니다. 자세한 내용 및 예제는 [인스턴스 생성자](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)를 참조하세요.  
+
+## <a name="constructor-syntax"></a>생성자 구문
+
+생성자는 이름이 해당 형식의 이름과 동일한 메서드입니다. 해당 메서드 시그니처에는 메서드 이름과 매개 변수 목록만 포함되고 반환 형식은 포함되지 않습니다. 다음 예제에서는 `Person`이라는 클래스에 대한 생성자를 보여 줍니다.
+
+[!code-cs[생성자](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#1)]  
+
+생성자를 단일 문으로 구현할 수 있는 경우 [식 본문 정의](../statements-expressions-operators/expression-bodied-members.md)를 사용할 수 있습니다. 다음 예제에서는 생성자에 *name*이라는 단일 문자열 매개 변수가 있는 `Location` 클래스를 정의합니다. 식 본문 정의에서 `Name` 속성에 인수를 할당합니다.
+
+[!code-cs[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
+
+## <a name="static-constructors"></a>정적 생성자
+
+앞의 예제에서는 새 개체를 만드는 인스턴스 생성자를 모두 보여 주었습니다. 클래스 또는 구조체에 형식의 정적 멤버를 초기화하는 정적 생성자도 있을 수 있습니다.  정적 생성자에는 매개 변수가 없습니다. 정적 필드를 초기화하는 정적 생성자를 제공하지 않으면 C# 컴파일러가 필드를 [기본값 표](../../../csharp/language-reference/keywords/default-values-table.md)에 나열된 기본값으로 초기화하는 기본 정적 생성자를 제공합니다. 
+
+다음 예제에서는 정적 생성자를 사용하여 정적 필드를 초기화합니다.
+
+[!code-cs[생성자](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#2)]  
+
+다음 예제와 같이 식 본문 정의를 사용하여 정적 생성자를 정의할 수도 있습니다. 
+
+[!code-cs[생성자](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#3)]  
+
+자세한 내용 및 예제는 [정적 생성자](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)를 참조하세요.  
   
- 정적 클래스와 구조체에도 생성자가 있을 수 있습니다.  자세한 내용과 예제를 보려면 [정적 생성자](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)을 참조하십시오.  
-  
-## 단원 내용  
+## <a name="in-this-section"></a>단원 내용  
  [생성자 사용](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
   
  [인스턴스 생성자](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)  
@@ -35,9 +79,9 @@ caps.handback.revision: 23
   
  [방법: 복사 생성자 작성](../../../csharp/programming-guide/classes-and-structs/how-to-write-a-copy-constructor.md)  
   
-## 참고 항목  
- [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>참고 항목  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
  [클래스 및 구조체](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [소멸자](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
+ [종료자](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
  [static](../../../csharp/language-reference/keywords/static.md)   
- [이유는 이니셜라이저는 생성자로 반대 순서로 실행 합니까? 1부](http://go.microsoft.com/fwlink/?LinkId=112374)
+ [이니셜라이저가 생성자와 반대 순서로 실행되는 이유는 무엇인가요? 1부](http://go.microsoft.com/fwlink/?LinkId=112374)

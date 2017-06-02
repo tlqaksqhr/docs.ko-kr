@@ -35,23 +35,24 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a8580acf6fd23f9de264d3fed47d268898d498a6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 06a97ffe88fdae344b07d04b6ce560d4c163d431
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>데이터를 클립보드에 저장하고 클립보드에서 읽기(Visual Basic)
 클립보드를 사용하여 텍스트 및 이미지와 같은 데이터를 저장할 수 있습니다. 클립보드는 모든 활성 프로세스에서 공유되기 때문에 프로세스 간에 데이터를 전송하는 데 사용할 수 있습니다. `My.Computer.Clipboard` 개체를 사용하면 클립보드에 쉽게 액세스하고 읽고 쓸 수 있습니다.  
   
 ## <a name="reading-from-the-clipboard"></a>클립보드에서 읽기  
- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetText%2A> 메서드를 사용하여 클립보드에서 텍스트를 읽을 수 있습니다. 다음 코드는 텍스트를 읽고 메시지 상자에 표시합니다. 예제가 제대로 실행되려면 클립보드에 텍스트가 저장되어 있어야 합니다.  
+ <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetText%2A> 메서드를 사용하여 클립보드에 텍스트를 읽습니다. 다음 코드는 텍스트를 읽고 메시지 상자에 표시합니다. 예제가 제대로 실행되려면 클립보드에 텍스트가 저장되어 있어야 합니다.  
   
  [!code-vb[VbVbcnMyClipboard#4](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_1.vb)]  
   
  이 코드 예제는 IntelliSense 코드 조각으로 사용할 수도 있습니다. 코드 조각 선택에서 **Windows Forms 응용 프로그램 > 클립보드**에 있습니다. 자세한 내용은 [코드 조각](https://docs.microsoft.com/visualstudio/ide/code-snippets)을 참조하세요.  
   
- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetImage%2A> 메서드를 사용하여 클립보드에서 이미지를 검색할 수 있습니다. 이 예제에서는 이미지를 검색하고 `PictureBox1`에 할당하기 전에 클립보드에 이미지가 있는지 확인합니다.  
+ <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetImage%2A> 메서드를 사용하여 클립보드에서 이미지를 검색합니다. 이 예제에서는 이미지를 검색하고 `PictureBox1`에 할당하기 전에 클립보드에 이미지가 있는지 확인합니다.  
   
  [!code-vb[VbResourceTasks#16](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_2.vb)]  
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 03/13/2017
  클립보드에 배치된 항목은 응용 프로그램이 종료된 후에도 유지됩니다.  
   
 ## <a name="determining-the-type-of-file-stored-in-the-clipboard"></a>클립보드에 저장된 파일 형식 확인  
- 클립보드의 데이터는 텍스트, 오디오 파일 또는 이미지와 같은 다양한 형태일 수 있습니다. 클립보드에 있는 파일 종류를 확인하기 위해 <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsAudio%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsFileDropList%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsImage%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsText%2A> 등의 메서드를 사용할 수 있습니다. 확인하려는 사용자 지정 형식이 있는 경우 <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsData%2A> 메서드를 사용할 수 있습니다.  
+ 클립보드의 데이터는 텍스트, 오디오 파일 또는 이미지와 같은 다양한 형태일 수 있습니다. 클립보드에 있는 파일의 종류를 확인하려는 경우 <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsAudio%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsFileDropList%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsImage%2A>, <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsText%2A> 등의 메서드를 사용할 수 있습니다. 사용자 지정 형식을 확인하려는 경우에는 <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.ContainsData%2A> 메서드를 사용할 수 있습니다.  
   
  `ContainsImage` 함수를 사용하여 클립보드에 포함된 데이터가 이미지인지 여부를 확인할 수 있습니다. 다음 코드는 데이터가 이미지인지 여부를 확인하고 그에 따라 보고합니다.  
   
@@ -74,19 +75,19 @@ ms.lasthandoff: 03/13/2017
  [!code-vb[VbVbcnMyClipboard#3](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_4.vb)]  
   
 ## <a name="writing-to-the-clipboard"></a>클립보드에 쓰기  
- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetText%2A> 메서드를 사용하여 클립보드에 텍스트를 쓸 수 있습니다. 다음 코드는 클립보드에 "This is a test string" 문자열을 씁니다.  
+ <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetText%2A> 메서드를 사용하여 클립보드에 텍스트를 씁니다. 다음 코드는 클립보드에 "This is a test string" 문자열을 씁니다.  
   
  [!code-vb[VbVbcnMyClipboard#1](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_5.vb)]  
   
- `SetText` 메서드는 <xref:System.Windows.Forms.TextDataFormat>의 형식을 포함하는 형식 매개 변수를 수락할 수 있습니다. 다음 코드는 클립보드에 "This is a test string" 문자열을 RTF 텍스트로 씁니다.  
+ `SetText` 메서드는 <xref:System.Windows.Forms.TextDataFormat> 형식을 포함하는 형식 매개 변수를 수락할 수 있습니다. 다음 코드는 클립보드에 "This is a test string" 문자열을 RTF 텍스트로 씁니다.  
   
  [!code-vb[VbVbcnMyClipboard#2](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_6.vb)]  
   
- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetData%2A> 메서드를 사용하여 클립보드에 데이터를 쓸 수 있습니다. 이 예제에서는 `DataObject``dataChunk`를 사용자 지정 형식 `specialFormat`으로 클립보드에 씁니다.  
+ <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetData%2A> 메서드를 사용하여 클립보드에 데이터를 씁니다. 이 예제에서는 `DataObject``dataChunk`를 사용자 지정 형식 `specialFormat`으로 클립보드에 씁니다.  
   
  [!code-vb[VbVbcnMyClipboard#7](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_7.vb)]  
   
- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetAudio%2A> 메서드를 사용하여 클립보드에 오디오 데이터를 쓸 수 있습니다. 이 예제에서는 바이트 배열 `musicReader`를 만들고, `cool.wav` 파일을 배열로 읽어온 다음 클립보드에 씁니다.  
+ <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetAudio%2A> 메서드를 사용하여 클립보드에 오디오 데이터를 씁니다. 이 예제에서는 바이트 배열 `musicReader`를 만들고, `cool.wav` 파일을 배열로 읽어온 다음 클립보드에 씁니다.  
   
  [!code-vb[VbResourceTasks#5](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/storing-data-to-and-reading-from-the-clipboard_8.vb)]  
   

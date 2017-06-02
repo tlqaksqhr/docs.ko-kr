@@ -2,18 +2,19 @@
 title: "클래스 | C# 가이드"
 description: "클래스 형식 및 만드는 방법을 알아봅니다."
 keywords: .NET, .NET Core, C#
-author: stevehoag
-ms.author: shoag
+author: BillWagner
+ms.author: wiwagn
 ms.date: 10/10/2016
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4b5614123d38ae00cb471ef85d0eb92c03c68bba
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: f2cfeac321860a609c21046818c36fbc6aa3c636
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/15/2017
 
 ---
 
@@ -25,7 +26,7 @@ ms.lasthandoff: 03/13/2017
 
 [!code-csharp[참조 형식](../../samples/snippets/csharp/concepts/classes/reference-type.cs)]
   
-개체가 만들어지면 관리되는 힙에 메모리가 할당되고 변수에는 개체 위치에 대한 참조만 포함됩니다. 관리되는 힙의 형식은 할당될 때, 그리고 *가비지 수집*이라는 CLR의 자동 메모리 관리 기능에 의해 회수될 때 오버헤드가 필요합니다. 그러나 가비지 수집은 고도로 최적화되고 대부분 시나리오에서 성능 문제를 일으키지 않습니다. 가비지 수집에 대한 자세한 내용은 [자동 메모리 관리 및 가비지 수집](../standard/garbagecollection/gc.md)을 참조하세요.  
+개체가 만들어지면 관리되는 힙에 메모리가 할당되고 변수에는 개체 위치에 대한 참조만 포함됩니다. 관리되는 힙의 형식은 할당될 때, 그리고 *가비지 수집*이라는 CLR의 자동 메모리 관리 기능에 의해 회수될 때 오버헤드가 필요합니다. 그러나 가비지 수집은 고도로 최적화되고 대부분 시나리오에서 성능 문제를 일으키지 않습니다. 가비지 수집에 대한 자세한 내용은 [자동 메모리 관리 및 가비지 수집](../standard/garbage-collection/gc.md)을 참조하세요.  
   
 참조 형식은 개체 지향 프로그래밍의 기본적인 특성인 *상속*을 완전히 지원합니다. 클래스를 만들 때 [sealed](https://msdn.microsoft.com/library/88c54tsw.aspx)로 정의되지 않은 기타 인터페이스 또는 클래스에서 상속될 수 있고 기타 클래스는 직접 만든 클래스에서 상속되고 가상 메서드를 재정의할 수 있습니다. 자세한 내용은 [상속](https://msdn.microsoft.com/library/ms173149.aspx)을 참조하세요.
 
@@ -81,7 +82,7 @@ C++와 달리 C#의 클래스는 하나의 기본 클래스에서만 직접 상�
 [클래스 및 구조체 멤버](https://msdn.microsoft.com/library/ms173113.aspx)   
 [클래스 및 구조체 메서드](https://msdn.microsoft.com/library/ms173114.aspx)   
 [생성자](https://msdn.microsoft.com/library/ace5hbzh.aspx)   
-[소멸자](https://msdn.microsoft.com/library/66x5fx1b.aspx)   
+[종료자](https://msdn.microsoft.com/library/66x5fx1b.aspx)   
 [개체](https://msdn.microsoft.com/library/ms173110.aspx)
 
 

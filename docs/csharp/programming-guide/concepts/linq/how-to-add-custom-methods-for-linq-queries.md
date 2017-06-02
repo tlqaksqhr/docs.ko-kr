@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7843620518dd7965724f0108a8fa008c95bd4793
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 5f3ac26abe3eccc19b928375059e2562c4aa6a80
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-c"></a>방법: LINQ 쿼리용 사용자 지정 메서드 추가(C#)
@@ -35,7 +36,7 @@ ms.lasthandoff: 03/13/2017
   
  다음 코드 예제에서는 `double` 형식의 숫자 시퀀스에 대한 중앙값을 계산하는 `Median`이라는 확장 메서드를 만드는 방법을 보여 줍니다.  
   
-```cs  
+```csharp  
 public static class LINQExtension  
 {  
     public static double Median(this IEnumerable<double> source)  
@@ -69,26 +70,69 @@ public static class LINQExtension
   
  다음 코드 예제에서는 `double` 형식의 배열에 대해 `Median` 메서드를 사용하는 방법을 보여 줍니다.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
+```csharp  
+double[] numbers1 = { 1.9, 2, 8, 4, 5.7, 6, 7.2, 0 };  
+  
+var query1 = numbers1.Median();  
+  
+Console.WriteLine("double: Median = " + query1);  
+```  
+
+```csharp  
+/*  
+ This code produces the following output:  
+  
+ Double: Median = 4.85  
+*/  
+```  
+  
 ### <a name="overloading-an-aggregate-method-to-accept-various-types"></a>다양한 형식을 허용하도록 집계 메서드 오버로드  
  다양한 형식의 시퀀스를 허용하도록 집계 메서드를 오버로드할 수 있습니다. 표준 접근법은 각 형식에 대한 오버로드를 만드는 것입니다. 또 다른 접근법은 제네릭 형식을 사용하고 대리자를 통해 이를 특정 형식으로 변환할 오버로드를 만드는 것입니다. 두 가지 접근법을 결합할 수도 있습니다.  
   
 #### <a name="to-create-an-overload-for-each-type"></a>각 형식에 대한 오버로드를 만들려면  
  지원하려는 각 형식에 대한 특정 오버로드를 만들 수 있습니다. 다음 코드 예제에서는 `integer` 형식에 대한 `Median` 메서드의 오버로드를 보여 줍니다.  
   
-<CodeContentPlaceHolder>3</CodeContentPlaceHolder>  
+```csharp  
+//int overload  
+  
+public static double Median(this IEnumerable<int> source)  
+{  
+    return (from num in source select (double)num).Median();  
+}  
+```   
  이제 다음 코드와 같이 `integer` 및 `double` 형식에 대한 `Median` 오버로드를 호출할 수 있습니다.  
   
-<CodeContentPlaceHolder>4</CodeContentPlaceHolder>  
-<CodeContentPlaceHolder>5</CodeContentPlaceHolder>  
-<CodeContentPlaceHolder>6</CodeContentPlaceHolder>  
+```csharp  
+double[] numbers1 = { 1.9, 2, 8, 4, 5.7, 6, 7.2, 0 };  
+  
+var query1 = numbers1.Median();  
+  
+Console.WriteLine("double: Median = " + query1);  
+```  
+  
+```csharp  
+int[] numbers2 = { 1, 2, 3, 4, 5 };  
+  
+var query2 = numbers2.Median();  
+  
+Console.WriteLine("int: Median = " + query2);  
+```  
+  
+```csharp  
+/*  
+ This code produces the following output:  
+  
+ Double: Median = 4.85  
+ Integer: Median = 3  
+*/  
+```  
+
 #### <a name="to-create-a-generic-overload"></a>제네릭 오버로드를 만들려면  
  제네릭 개체의 시퀀스를 허용하는 오버로드를 만들 수도 있습니다. 이 오버로드는 대리자를 매개 변수로 사용하여 제네릭 형식의 개체 시퀀스를 특정 형식으로 변환합니다.  
   
  다음 코드에서는 <xref:System.Func%602> 대리자를 매개 변수로 사용하는 `Median` 메서드의 오버로드를 보여 줍니다. 이 대리자는 제네릭 형식 T의 개체를 사용하고 `double` 형식의 개체를 반환합니다.  
   
-```cs  
+```csharp  
 // Generic overload.  
   
 public static double Median<T>(this IEnumerable<T> numbers,  
@@ -102,16 +146,65 @@ public static double Median<T>(this IEnumerable<T> numbers,
   
  다음 예제 코드에서는 정수 배열 및 문자열 배열에 대해 `Median` 메서드를 호출하는 방법을 보여 줍니다. 문자열의 경우 배열에서 문자열 길이의 중앙값이 계산됩니다. 예제에서는 각 경우에 <xref:System.Func%602> 대기자 매개 변수를 `Median` 메서드에 전달하는 방법을 보여 줍니다.  
   
-<CodeContentPlaceHolder>8</CodeContentPlaceHolder>  
+```csharp  
+int[] numbers3 = { 1, 2, 3, 4, 5 };  
+  
+/*   
+  You can use the num=>num lambda expression as a parameter for the Median method   
+  so that the compiler will implicitly convert its value to double.  
+  If there is no implicit conversion, the compiler will display an error message.            
+*/  
+  
+var query3 = numbers3.Median(num => num);  
+  
+Console.WriteLine("int: Median = " + query3);  
+  
+string[] numbers4 = { "one", "two", "three", "four", "five" };  
+  
+// With the generic overload, you can also use numeric properties of objects.  
+  
+var query4 = numbers4.Median(str => str.Length);  
+  
+Console.WriteLine("String: Median = " + query4);  
+  
+/*  
+ This code produces the following output:  
+  
+ Integer: Median = 3  
+ String: Median = 4  
+*/  
+```   
 ## <a name="adding-a-method-that-returns-a-collection"></a>컬렉션을 반환하는 메서드 추가  
  값 시퀀스를 반환하는 사용자 지정 쿼리 메서드를 사용하여 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스를 확장할 수 있습니다. 이 경우 메서드는 <xref:System.Collections.Generic.IEnumerable%601> 형식의 컬렉션을 반환해야 합니다. 이러한 메서드는 필터 또는 데이터 변환을 값 시퀀스에 적용하는 데 사용될 수 있습니다.  
   
  다음 예제에서는 모든 기타 요소를 첫 번째 인수부터 반환하는 `AlternateElements` 확장 메서드를 만드는 방법을 보여 줍니다.  
   
-<CodeContentPlaceHolder>9</CodeContentPlaceHolder>  
+```csharp  
+// Extension method for the IEnumerable<T> interface.   
+// The method returns every other element of a sequence.  
+  
+public static IEnumerable<T> AlternateElements<T>(this IEnumerable<T> source)  
+{  
+    List<T> list = new List<T>();  
+  
+    int i = 0;  
+  
+    foreach (var element in source)  
+    {  
+        if (i % 2 == 0)  
+        {  
+            list.Add(element);  
+        }  
+  
+        i++;  
+    }  
+  
+    return list;  
+}  
+```  
  다음 코드와 같이 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스에서 기타 메서드를 호출하는 것처럼 열거 가능한 컬렉션에 대해 이 확장 메서드를 호출할 수 있습니다.  
   
-```cs  
+```csharp  
 string[] strings = { "a", "b", "c", "d", "e" };  
   
 var query = strings.AlternateElements();  

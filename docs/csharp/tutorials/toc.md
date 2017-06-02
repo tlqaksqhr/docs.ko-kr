@@ -1,10 +1,9 @@
 # [자습서](index.md)
-## [🔧 Visual Studio를 사용하여 응용 프로그램 생성, 디버그 및 배포](create-debug-deploy.md)
-## [🔧 C# Interactive를 사용하여 탐색 및 실험](exploring-with-csharp-interactive.md)
-## [🔧 이식 가능한 라이브러리 만들기](creating-portable-libraries.md)
-## [🔧 비동기 UI 프로그래밍](asynchronous-ui-programming.md)
-## [🔧 비동기 서버 프로그래밍](asynchronous-server-programming.md)
-## [🔧 동시 실행 프로그래밍](concurrent-programming.md)
+<!--## [🔧 Using C# Interactive to explore and experiment](exploring-with-csharp-interactive.md)-->
+<!--## [🔧 Creating portable libraries](creating-portable-libraries.md)-->
+<!--## [🔧 Asynchronous UI programming](asynchronous-ui-programming.md)-->
+<!--## [🔧 Asynchronous server programming](asynchronous-server-programming.md)-->
+<!--## [🔧 Concurrent programming](concurrent-programming.md)-->
 ## [C# 및 .NET의 상속](inheritance.md)
 ## [콘솔 응용 프로그램](console-teleprompter.md)
 ## [REST 클라이언트](console-webapiclient.md)

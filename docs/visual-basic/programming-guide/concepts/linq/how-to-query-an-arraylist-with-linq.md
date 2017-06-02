@@ -20,9 +20,10 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: f48b06c23b1e28fccb953638954a8d9afefe574e
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -30,10 +31,8 @@ ms.lasthandoff: 03/13/2017
 제네릭이 아닌 쿼리를 LINQ를 사용 하는 경우 <xref:System.Collections.IEnumerable>와 같은 컬렉션 <xref:System.Collections.ArrayList>, 컬렉션에 있는 개체의 특정 유형을 반영 하도록 범위 변수의 형식을 명시적으로 선언 해야 합니다.</xref:System.Collections.ArrayList> </xref:System.Collections.IEnumerable> 예를 들어 한 <xref:System.Collections.ArrayList>의 `Student` 개체를 프로그램 [From 절이](../../../../visual-basic/language-reference/queries/from-clause.md) 다음과 같아야 합니다:</xref:System.Collections.ArrayList>  
   
 ```  
-  
 Dim query = From student As Student In arrList   
 ...  
-  
 ```  
   
  범위 변수의 종류를 지정 하 여 각 항목에 캐스팅할는 <xref:System.Collections.ArrayList>에 `Student`.</xref:System.Collections.ArrayList>  
@@ -97,3 +96,4 @@ End Module
   
 ## <a name="see-also"></a>참고 항목  
  [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+

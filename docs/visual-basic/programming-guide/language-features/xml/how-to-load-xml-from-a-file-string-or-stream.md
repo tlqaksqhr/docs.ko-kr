@@ -32,16 +32,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 242c8b79cbe1329b6f53e9fd4e5495d4a157e08c
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="how-to-load-xml-from-a-file-string-or-stream-visual-basic"></a>방법: 파일, 문자열 또는 스트림에서 XML 로드(Visual Basic)
 만들 수 있습니다 [XML 리터럴을](../../../../visual-basic/language-reference/xml-literals/index.md) 몇 가지 메서드를 사용 하 여 파일, 문자열, 또는 스트림과 같은 외부 소스에서 내용으로 채웁니다. 이러한 메서드는 다음 예제에 표시 됩니다.  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-load-xml-from-a-file"></a>파일에서 XML을 로드 하려면  
   

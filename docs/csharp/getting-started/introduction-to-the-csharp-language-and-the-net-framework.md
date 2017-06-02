@@ -28,17 +28,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bfd3c08f69461d65140ef948672774a7435c326d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
+ms.openlocfilehash: a2c5986dfb9ed4f80e15e8e3ddf061ef858a1e93
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 언어 및 .NET Framework 소개
 유연하고 형식이 안전한 개체 지향 언어인 C#은 개발자가 [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)]에서 실행되는 안전하고 강력한 여러 응용 프로그램을 구축할 수 있도록 지원합니다. C#을 사용하여 Windows 클라이언트 응용 프로그램, XML Web services, 분산 구성 요소, 클라이언트-서버 응용 프로그램, 데이터베이스 응용 프로그램 등을 만들 수 있습니다. Visual C#에서는 고급 코드 편집기, 편리한 사용자 인터페이스 디자이너, 통합 디버거 및 다른 많은 도구를 제공하여 C# 언어 및 [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)]에 따라 보다 쉽게 응용 프로그램을 개발할 수 있습니다.  
   
 > [!NOTE]
->  [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] 설명서에서는 사용자가 기본적인 프로그래밍 개념을 이해하고 있다고 간주합니다. 완전 초보 사용자인 경우 웹에서 사용할 수 있는 [!INCLUDE[csprcsxpr](../../csharp/getting-started/includes/csprcsxpr_md.md)]를 살펴볼 수도 있습니다. C#에 대한 설명서 및 웹 리소스를 활용하여 실제 프로그래밍 기술을 배울 수도 있습니다.  
+> [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] 설명서에서는 사용자가 기본적인 프로그래밍 개념을 이해하고 있다고 간주합니다. 완전 초보 사용자인 경우 웹에서 사용할 수 있는 [!INCLUDE[csprcsxpr](../../csharp/getting-started/includes/csprcsxpr_md.md)]를 살펴볼 수도 있습니다. C#에 대한 설명서 및 웹 리소스를 활용하여 실제 프로그래밍 기술을 배울 수도 있습니다.  
   
 ## <a name="c-language"></a>C# 언어  
  C# 구문은 다양한 표현 기능을 갖추면서도 간편하고 쉽게 배울 수 있습니다. C#의 중괄호 구문은 C, C++ 또는 Java에 익숙한 사용자라면 누구나 바로 알아볼 수 있습니다. 이러한 언어에 익숙한 개발자는 일반적으로 매우 짧은 시간 내에 C#으로 생산적인 작업을 수행할 수 있습니다. C# 구문은 C++의 복잡성을 획기적으로 단순화하고 Java에는 없는 null 허용 값 형식, 열거형, 대리자, 람다 식 및 직접 메모리 액세스와 같은 강력한 기능을 제공합니다. C#은 향상된 형식 안정성 및 성능을 제공하는 제네릭 메서드와 형식을 지원하고, 컬렉션 클래스의 구현을 통해 클라이언트 코드에서 쉽게 사용할 수 있는 사용자 지정 반복 동작을 정의할 수 있도록 하는 반복기를 지원합니다. [!INCLUDE[vbteclinqext](../../csharp/getting-started/includes/vbteclinqext_md.md)] 식은 강력한 형식의 쿼리를 최고의 언어 구문으로 만들어줍니다.  
@@ -85,15 +86,6 @@ ms.lasthandoff: 03/13/2017
  [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)]에는 런타임 서비스 외에, 파일 입/출력부터 문자열 조작, XML 구문 분석, Windows Forms 컨트롤에 이르는 모든 항목에 대해 다양하고 유용한 기능을 제공하는 네임스페이스로 구성된 4,000개 이상의 광범위한 클래스 라이브러리도 포함됩니다. 일반적인 C# 응용 프로그램은 [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)] 클래스 라이브러리를 광범위하게 사용하여 일반적인 "배관" 작업을 처리합니다.  
   
  .NET Framework에 대한 자세한 내용은 [Microsoft.NET Framework 개요](http://msdn.microsoft.com/en-us/d05daf50-00fe-45c7-8383-06fe41697355)를 참조하세요.  
-  
-## <a name="featured-book-chapters"></a>중요 설명서 장  
- [C# 3.0 학습: C# 3.0 기본 사항 마스터](http://go.microsoft.com/fwlink/?LinkId=195412)의 [C# 언어 기본 사항](http://go.microsoft.com/fwlink/?LinkId=195416)  
-  
- [C# 3.0 학습: C# 3.0 기본 사항 마스터](http://go.microsoft.com/fwlink/?LinkId=195412)의 [C# 및 .NET 프로그래밍](http://go.microsoft.com/fwlink/?LinkId=195413)  
-  
- [Visual C# 2010 시작](http://go.microsoft.com/fwlink/?LinkId=221214)의 [C# 소개](http://go.microsoft.com/fwlink/?LinkId=221226)  
-  
- [C# 3.0 학습: C# 3.0 기본 사항 마스터](http://go.microsoft.com/fwlink/?LinkId=195412)의 [Visual Studio 2008 및 C# Express 2008](http://go.microsoft.com/fwlink/?LinkId=195414)  
   
 ## <a name="see-also"></a>참고 항목  
  [C#](../../csharp/csharp.md)   

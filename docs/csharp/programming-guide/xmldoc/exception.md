@@ -31,16 +31,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 2ab14da86cd85eabda58aa2e1177f9f8136e3ee2
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="ltexceptiongt-c-programming-guide"></a>&lt;exception&gt;(C# 프로그래밍 가이드)
 ## <a name="syntax"></a>구문  
   
-```  
+```xml  
 <exception cref="member">description</exception>  
 ```  
   

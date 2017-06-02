@@ -16,10 +16,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 74872957345de77f43f3ac649ed6f809aea5f784
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 3f3e6aa047e0de279d15298408c4593c5fb17666
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="object-oriented-programming-c"></a>개체 지향 프로그래밍(C#)
@@ -43,7 +44,7 @@ C#은 캡슐화, 상속, 다형성 등 개체 지향 프로그래밍에 대한 �
   
          [생성자](#Constructors)  
   
-         [소멸자](#Destructors)  
+         [종료자](#Finalizers)  
   
          [이벤트](#Events)  
   
@@ -197,13 +198,13 @@ public class SampleClass
   
  [생성자](../../../csharp/programming-guide/classes-and-structs/constructors.md).  
   
-####  <a name="Destructors"></a> 소멸자  
- 소멸자는 클래스의 인스턴스를 소멸하는 데 사용됩니다. .NET Framework에서는 응용 프로그램의 관리되는 개체에 대해 가비지 수집기가 자동으로 메모리를 할당하고 해제하지만 응용 프로그램에서 만들어지는 관리되지 않는 개체를 정리하려면 여전히 소멸자가 필요할 수 있습니다. 각 클래스에는 소멸자가 하나씩만 있을 수 있습니다.  
+####  <a name="Finalizers"></a> 종료자  
+ 종료자는 클래스의 인스턴스를 소멸하는 데 사용됩니다. .NET Framework에서는 응용 프로그램의 관리되는 개체에 대해 가비지 수집기가 자동으로 메모리를 할당하고 해제하지만 응용 프로그램이 만드는 관리되지 않는 리소스를 정리하려면 여전히 종료자가 필요할 수 있습니다. 각 클래스에는 종료자가 하나씩만 있을 수 있습니다.  
   
- .NET Framework의 소멸자 및 가비지 수집에 대한 자세한 내용은 [가비지 수집](../../../standard/garbagecollection/index.md)을 참조하세요.  
+ .NET Framework의 종료자 및 가비지 수집에 대한 자세한 내용은 [가비지 수집](../../../standard/garbage-collection/index.md)을 참조하세요.  
   
 ####  <a name="Events"></a> 이벤트  
- 클래스나 개체에서는 특정 상황이 발생할 때 이벤트를 통해 다른 클래스나 개체에 이를 알려 줄 수 있습니다. 이벤트를 보내거나 발생시키는 클래스를 *게시자*라고 하며 이벤트를 받거나 처리하는 클래스를 *구독자*라고 합니다. 이벤트를 발생시키고 처리하는 방법에 대한 자세한 내용은 [이벤트](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f)를 참조하세요.  
+ 클래스나 개체에서는 특정 상황이 발생할 때 이벤트를 통해 다른 클래스나 개체에 이를 알려 줄 수 있습니다. 이벤트를 보내거나 발생시키는 클래스를 *게시자*라고 하며 이벤트를 받거나 처리하는 클래스를 *구독자*라고 합니다. 이벤트를 발생시키고 처리하는 방법에 대한 자세한 내용은 [이벤트](../../../standard/events/index.md)를 참조하세요.  
   
 -   클래스에서 이벤트를 선언하려면 [event](../../../csharp/language-reference/keywords/event.md) 키워드를 사용합니다.  
   
@@ -413,7 +414,7 @@ sampleObject.Field = "Sample string";
  *대리자*는 메서드 시그니처를 정의하는 형식으로, 호환되는 시그니처가 있는 모든 메서드에 대한 참조를 제공할 수 있습니다. 대리자를 통해 메서드를 호출할 수 있습니다. 대리자는 메서드를 다른 메서드에 인수로 전달하는 데 사용됩니다.  
   
 > [!NOTE]
->  이벤트 처리기는 대리자를 통해 호출되는 메서드라고 할 수 있습니다. 이벤트를 처리할 때 대리자를 사용하는 방법에 대한 자세한 내용은 [이벤트](http://msdn.microsoft.com/library/b6f65241-e0ad-4590-a99f-200ce741bb1f)를 참조하세요.  
+>  이벤트 처리기는 대리자를 통해 호출되는 메서드라고 할 수 있습니다. 이벤트를 처리할 때 대리자를 사용하는 방법에 대한 자세한 내용은 [이벤트](../../../standard/events/index.md)를 참조하세요.  
   
  대리자를 만들려면  
   
