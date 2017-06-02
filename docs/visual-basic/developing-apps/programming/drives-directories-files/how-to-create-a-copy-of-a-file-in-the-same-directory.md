@@ -64,7 +64,7 @@ ms.lasthandoff: 05/22/2017
   
 -   시스템이 절대 경로를 검색할 수 없는 경우(<xref:System.ArgumentException>)  
   
--   경로가 `Nothing`이기 때문에 유효하지 않은 경우(<xref:System.ArgumentNullException>)  
+-   경로가 `Nothing`이기 때문에 올바르지 않은 경우(<xref:System.ArgumentNullException>)  
   
 -   소스 파일이 잘못되었거나 없는 경우(<xref:System.IO.FileNotFoundException>)  
   
@@ -74,13 +74,13 @@ ms.lasthandoff: 05/22/2017
   
 -   사용자에게 파일에 액세스할 수 있는 권한이 없는 경우(<xref:System.IO.IOException>)  
   
--   대상 폴더에 있는 동일한 이름의 파일이 사용 중인 경우(<xref:System.IO.IOException>)  
+-   대상 폴더에 있는 동일한 이름의 파일이 사용 중인 경우 (<xref:System.IO.IOException>)  
   
 -   경로의 파일 이름이나 폴더 이름에 콜론(:)이 있거나 이름의 형식이 잘못된 경우(<xref:System.NotSupportedException>)  
   
 -   `ShowUI`가 `True`로 설정되고, `onUserCancel`이 `ThrowException`으로 설정되고, 사용자가 작업을 취소한 경우(<xref:System.OperationCanceledException>)  
   
--   `ShowUI`가 `True`로 설정되고, `onUserCancel`이 `ThrowException`으로 설정되고, 지정되지 않은 I/O 오류가 발생한 경우(<xref:System.OperationCanceledException>)  
+-   `ShowUI`가 `True`로 설정되고, `onUserCancel`이 `ThrowException`으로 설정되고, 지정하지 않은 I/O 오류가 발생하는 경우(<xref:System.OperationCanceledException>)  
   
 -   경로가 시스템 정의 최대 길이를 초과하는 경우(<xref:System.IO.PathTooLongException>)  
   

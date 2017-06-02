@@ -60,11 +60,11 @@ ms.lasthandoff: 05/22/2017
   
 -   디렉터리 이름이 너무 긴 경우(<xref:System.IO.PathTooLongException>)  
   
--   디렉터리 이름이 콜론 ":"인 경우(<xref:System.NotSupportedException>)  
+-   디렉터리 이름이 콜론 “:”인 경우(<xref:System.NotSupportedException>)  
   
 -   사용자에게 디렉터리를 만들 수 있는 권한이 없는 경우(<xref:System.UnauthorizedAccessException>)  
   
--   부분 신뢰 상황에서 사용자에게 사용 권한이 없는 경우(<xref:System.Security.SecurityException>)  
+-   부분 신뢰 상황에서 사용자에게 권한이 없는 경우(<xref:System.Security.SecurityException>)  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CreateDirectory%2A>   

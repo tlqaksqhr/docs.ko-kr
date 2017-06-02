@@ -47,7 +47,7 @@ ms.lasthandoff: 05/22/2017
   
 ## <a name="literals"></a>리터럴  
 
- 10진수 리터럴, 16진수 리터럴 또는 (C# 7부터) 이진 리터럴을 할당하여 `byte` 변수를 선언하고 초기화할 수 있습니다. 정수 리터럴이 `byte`의 범위를 벗어난 경우(즉, <xref:System.Byte.MinValue?displayProperty=fullName>보다 작거나 <xref:System.Byte.MaxValue?displayProperty=fullName>보다 큰 경우) 컴파일 오류가 발생합니다.
+ 10진수 리터럴, 16진수 리터럴 또는 (C# 7부터) 이진 리터럴을 할당하여 `byte` 변수를 선언하고 초기화할 수 있습니다. 정수 리터럴이 `byte` 범위를 벗어나는 경우(즉 <xref:System.Byte.MinValue?displayProperty=fullName>보다 작거나 <xref:System.Byte.MaxValue?displayProperty=fullName>보다 큰 경우) 컴파일 오류가 발생합니다.
 
 다음 예제에서는 10진수, 16진수 및 이진 리터럴로 표현된 201과 같은 정수가 [int](../../../csharp/language-reference/keywords/int.md)에서 `byte` 값으로 암시적으로 변환됩니다.    
   
@@ -66,7 +66,6 @@ C# 7부터는 다음 예제와 같이 밑줄 문자 `_`를 자릿수 구분 기�
  더 큰 저장소 크기의 비리터럴 숫자 형식을 `byte`로 암시적으로 변환할 수는 없습니다. 정수 형식의 저장소 크기에 대한 자세한 내용은 [정수 형식 표](../../../csharp/language-reference/keywords/integral-types-table.md)를 참조하세요. 예를 들어 다음 두 가지 `byte` 변수 `x` 및 `y`를 고려해 보세요.  
   
 ```  
-  
 byte x = 10, y = 20;  
 ```  
   
@@ -133,3 +132,4 @@ SampleMethod((byte)5);
  [기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [명시적 숫자 변환 표](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

@@ -46,7 +46,7 @@ ms.lasthandoff: 05/22/2017
   
  일치하는 파일이 없으면 빈 컬렉션이 반환됩니다.  
   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A> 메서드를 사용하여 파일을 디렉터리에 복사할 수 있습니다.  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A> 메서드를 사용하여 파일을 디렉터리로 복사할 수 있습니다.  
   
 ### <a name="to-copy-files-with-a-specific-pattern-to-a-directory"></a>특정 패턴의 파일을 디렉터리로 복사하려면  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 05/22/2017
   
 -   길이가 0인 문자열이거나, 공백만 포함하거나, 잘못된 문자를 포함하거나, 경로가 장치 경로인 경우(\\\\.\\로 시작됨)와 같은 여러 가지 이유 중 하나로 경로가 올바르지 않은 경우(<xref:System.ArgumentException>)  
   
--   경로가 `Nothing`이기 때문에 유효하지 않은 경우(<xref:System.ArgumentNullException>)  
+-   경로가 `Nothing`이기 때문에 올바르지 않은 경우(<xref:System.ArgumentNullException>)  
   
 -   디렉터리가 없는 경우(<xref:System.IO.DirectoryNotFoundException>)  
   

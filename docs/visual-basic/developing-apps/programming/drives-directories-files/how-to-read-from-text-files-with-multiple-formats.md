@@ -64,7 +64,7 @@ ms.lasthandoff: 05/22/2017
   
      [!code-vb[VbFileIORead#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_1.vb)]  
   
-3.  너비와 형식을 정의하여 새 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> 개체를 만듭니다.  
+3.  너비와 형식을 정의하는 새 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> 개체를 만듭니다.  
   
      [!code-vb[VbFileIORead#5](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-read-from-text-files-with-multiple-formats_2.vb)]  
   
@@ -84,11 +84,11 @@ ms.lasthandoff: 05/22/2017
 ## <a name="robust-programming"></a>강력한 프로그래밍  
  다음 조건에서 예외가 발생합니다.  
   
--   지정된 형식을 사용하여 행을 구문 분석할 수 없는 경우(<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>). 예외 메시지는 예외를 발생시키는 줄을 지정하지만 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> 속성이 줄에 포함된 텍스트에 할당됩니다.  
+-   지정한 형식을 사용하여 행을 구문 분석할 수 없는 경우(<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>). 예외 메시지에는 예외를 발생시키는 줄이 지정되어 있지만 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> 속성은 해당 줄에 포함되어 있는 텍스트에 할당됩니다.  
   
--   지정된 파일이 없는 경우(<xref:System.IO.FileNotFoundException>)  
+-   지정한 파일이 없는 경우(<xref:System.IO.FileNotFoundException>)  
   
--   사용자에게 파일에 액세스할 수 있는 권한이 없는 부분 신뢰 상황인 경우 (<xref:System.Security.SecurityException>)  
+-   사용자에게 파일에 액세스할 수 있는 권한이 없는 부분 신뢰 상황인 경우 (<xref:System.Security.SecurityException>).  
   
 -   경로가 너무 긴 경우(<xref:System.IO.PathTooLongException>)  
   

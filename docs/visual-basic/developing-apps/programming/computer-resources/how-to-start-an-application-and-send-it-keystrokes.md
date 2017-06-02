@@ -50,7 +50,7 @@ ms.lasthandoff: 05/22/2017
  요청된 프로세스 식별자를 가진 응용 프로그램을 찾을 수 없는 경우 <xref:System.ArgumentException> 예외가 발생합니다.  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
- `Shell` 함수를 호출하려면 완전 신뢰가 필요합니다(<xref:System.Security.SecurityException> 클래스).  
+ `Shell` 함수에 대한 호출은 완전 신뢰가 필요합니다(<xref:System.Security.SecurityException> 클래스).  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.VisualBasic.Devices.Keyboard.SendKeys%2A>   

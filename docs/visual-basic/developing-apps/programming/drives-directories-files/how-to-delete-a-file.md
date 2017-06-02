@@ -66,13 +66,13 @@ ms.lasthandoff: 05/22/2017
   
 -   길이가 0인 문자열이거나, 공백만 포함하거나, 잘못된 문자를 포함하거나, 경로가 장치 경로인 경우(\\\\.\\로 시작됨)와 같은 여러 가지 이유 중 하나로 경로가 올바르지 않은 경우(<xref:System.ArgumentException>)  
   
--   경로가 `Nothing`이기 때문에 유효하지 않은 경우(<xref:System.ArgumentNullException>)  
+-   경로가 `Nothing`이기 때문에 올바르지 않은 경우(<xref:System.ArgumentNullException>)  
   
 -   경로가 시스템 정의 최대 길이를 초과하는 경우(<xref:System.IO.PathTooLongException>)  
   
 -   경로의 파일 이름이나 폴더 이름에 콜론(:)이 있거나 이름의 형식이 잘못된 경우(<xref:System.NotSupportedException>)  
   
--   파일이 사용 중인 경우(<xref:System.IO.IOException>)  
+-   파일을 사용 중인 경우(<xref:System.IO.IOException>)  
   
 -   경로를 보는 데 필요한 권한이 사용자에게 없는 경우(<xref:System.Security.SecurityException>)  
   
@@ -80,9 +80,9 @@ ms.lasthandoff: 05/22/2017
   
 -   사용자에게 파일을 삭제할 수 있는 권한이 없거나 파일이 읽기 전용인 경우(<xref:System.UnauthorizedAccessException>)  
   
--   사용자에게 충분한 사용 권한이 없는 부분 신뢰 상황이 있는 경우(<xref:System.Security.SecurityException>)  
+-   사용자에게 충분한 권한이 없는 부분 신뢰 상황인 경우(<xref:System.Security.SecurityException>)  
   
--   사용자가 작업을 취소했으며 `onUserCancel`이 `ThrowException`으로 설정된 경우(<xref:System.OperationCanceledException>)  
+-   사용자가 작업을 취소하고 `onUserCancel`이 `ThrowException`으로 설정된 경우(<xref:System.OperationCanceledException>)  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.VisualBasic.FileIO.UICancelOption>   

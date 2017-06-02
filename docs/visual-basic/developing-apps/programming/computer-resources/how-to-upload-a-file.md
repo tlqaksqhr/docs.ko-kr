@@ -42,7 +42,7 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="how-to-upload-a-file-in-visual-basic"></a>방법: Visual Basic에서 파일 업로드
-<xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> 메서드를 사용하여 파일을 업로드하고 원격 위치에 저장할 수 있습니다. `ShowUI` 매개 변수를 `True`로 설정하면 다운로드 진행률을 표시하고 사용자가 작업을 취소할 수 있도록 하는 대화 상자가 표시됩니다.  
+<xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> 메서드는 파일을 업로드하고 원격 위치에 저장하는 데 사용될 수 있습니다. `ShowUI` 매개 변수를 `True`로 설정하면 다운로드 진행률을 표시하고 사용자가 작업을 취소할 수 있도록 하는 대화 상자가 표시됩니다.  
   
 ### <a name="to-upload-a-file"></a>파일을 업로드하려면  
   

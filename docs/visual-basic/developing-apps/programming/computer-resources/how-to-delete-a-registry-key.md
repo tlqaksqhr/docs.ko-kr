@@ -60,7 +60,7 @@ ms.lasthandoff: 05/22/2017
   
  다음 조건에서 예외가 발생합니다.  
   
--   키 이름이 `Nothing`인 경우(<xref:System.ArgumentNullException>)  
+-   키의 이름이 `Nothing`인 경우(<xref:System.ArgumentNullException>)  
   
 -   사용자에게 레지스트리 키를 삭제할 수 있는 권한이 없는 경우(<xref:System.Security.SecurityException>)  
   

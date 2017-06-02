@@ -41,7 +41,7 @@ ms.lasthandoff: 05/22/2017
 # <a name="how-to-log-exceptions-in-visual-basic"></a>방법: Visual Basic에서 예외 기록
 `My.Application.Log` 및 `My.Log` 개체를 사용하여 응용 프로그램에서 발생하는 예외에 대한 정보를 기록할 수 있습니다. 이 예제에서는 `My.Application.Log.WriteException` 메서드를 사용하여 명시적으로 catch하는 예외 및 처리되지 않은 예외를 기록하는 방법을 보여 줍니다.  
   
- 추적 정보를 기록하려면 `My.Application.Log.WriteEntry` 메서드를 사용합니다. 자세한 내용은 <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>를 참조하세요.  
+ 추적 정보를 기록하려면 `My.Application.Log.WriteEntry` 메서드를 사용합니다. 자세한 내용은 <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>을 참조하세요.  
   
 ### <a name="to-log-a-handled-exception"></a>처리된 예외를 기록하려면  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/22/2017
   
 3.  예외를 생성할 수 있는 코드를 `Try` 블록에 넣습니다.  
   
-     <xref:System.NullReferenceException> 예외를 발생시키는 `Dim` 및 `MsgBox` 줄의 주석 처리를 제거합니다.  
+     `Dim` 및 `MsgBox` 줄의 주석 처리를 제거하여 <xref:System.NullReferenceException> 예외를 발생시킵니다.  
   
      [!code-vb[VbVbalrMyApplicationLog#7](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-exceptions_3.vb)]  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 05/22/2017
   
 5.  **선언** 메뉴에서 **UnhandledException**을 선택합니다.  
   
-     주 응용 프로그램이 실행되기 전에 응용 프로그램에서 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> 이벤트가 발생합니다.  
+     주 응용 프로그램이 실행되기 전에 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> 이벤트가 발생합니다.  
   
 6.  `My.Application.Log.WriteException` 이벤트 처리기에 `UnhandledException` 메서드를 추가합니다.  
   

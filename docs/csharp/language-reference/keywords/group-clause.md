@@ -81,10 +81,10 @@ ms.lasthandoff: 05/22/2017
 group person by new {name = person.surname, city = person.city};  
 ```  
   
- 쿼리 변수를 다른 메서드에 전달해야 하는 경우 명명된 형식을 사용합니다. 자동으로 구현된 속성을 키에 사용하여 특수 클래스를 만든 다음 <xref:System.Object.Equals%2A> 및 <xref:System.Object.GetHashCode%2A> 메서드를 재정의합니다. 구조체를 사용할 수도 있으며, 이 경우 이러한 메서드를 엄격하게 재정의하지 않아도 됩니다. 자세한 내용은 [방법: 자동으로 구현된 속성을 사용하여 간단한 클래스 구현](../../../csharp/programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) 및 [방법: 디렉터리 트리에서 중복된 파일 쿼리](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)를 참조하세요. 두 번째 항목에는 명명된 형식과 함께 복합 키를 사용하는 방법을 보여 주는 코드 예제가 있습니다.  
+ 쿼리 변수를 다른 메서드에 전달해야 하는 경우 명명된 형식을 사용합니다. 키에 대해 자동 구현 속성을 사용하여 특수 클래스를 만든 다음 <xref:System.Object.Equals%2A> 및 <xref:System.Object.GetHashCode%2A> 메서드를 재정의합니다. 구조체를 사용할 수도 있으며, 이 경우 이러한 메서드를 엄격하게 재정의하지 않아도 됩니다. 자세한 내용은 [방법: 자동으로 구현된 속성을 사용하여 간단한 클래스 구현](../../../csharp/programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) 및 [방법: 디렉터리 트리에서 중복된 파일 쿼리](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)를 참조하세요. 두 번째 항목에는 명명된 형식과 함께 복합 키를 사용하는 방법을 보여 주는 코드 예제가 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 추가 쿼리 논리가 그룹에 적용되지 않는 경우 소스 데이터를 그룹으로 정렬하기 위한 표준 패턴을 보여 줍니다. 이를 비연속 그룹화라고 합니다. 문자열 배열에 있는 요소는 첫 문자에 따라 그룹화됩니다. 쿼리 결과는 `char` 형식의 public `Key` 속성을 포함하는 <xref:System.Linq.IGrouping%602> 형식 및 그룹화의 각 항목을 포함하는 <xref:System.Collections.Generic.IEnumerable%601> 컬렉션입니다.  
+ 다음 예제에서는 추가 쿼리 논리가 그룹에 적용되지 않는 경우 소스 데이터를 그룹으로 정렬하기 위한 표준 패턴을 보여 줍니다. 이를 비연속 그룹화라고 합니다. 문자열 배열에 있는 요소는 첫 문자에 따라 그룹화됩니다. 쿼리 결과는 그룹에 각 항목을 포함하는 공용 `Key` 속성 형식 `char` 및 <xref:System.Collections.Generic.IEnumerable%601> 컬렉션을 포함하는 <xref:System.Linq.IGrouping%602> 형식입니다.  
   
  `group` 절의 결과는 시퀀스의 시퀀스입니다. 따라서 반환된 각 그룹 내의 개별 요소에 액세스하려면 다음 예제와 같이 그룹 키를 반복하는 루프 안에 중첩된 `foreach` 루프를 사용합니다.  
   
@@ -96,7 +96,7 @@ group person by new {name = person.surname, city = person.city};
  [!code-cs[cscsrefQueryKeywords#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_8.cs)]  
   
 ## <a name="remarks"></a>설명  
- 컴파일 시간에 `group` 절은 <xref:System.Linq.Enumerable.GroupBy%2A> 메서드 호출로 변환됩니다.  
+ `group` 절은 컴파일 시간에 <xref:System.Linq.Enumerable.GroupBy%2A> 메서드 호출로 변환됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Linq.IGrouping%602>   

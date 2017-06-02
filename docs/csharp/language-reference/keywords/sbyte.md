@@ -60,7 +60,7 @@ C# 7부터는 다음 예제와 같이 밑줄 문자 `_`를 자릿수 구분 기�
 
 [!code-cs[SByteSeparator](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#SByteS)]  
 
-정수 리터럴이 `sbyte`의 범위를 벗어난 경우(즉, <xref:System.SByte.MinValue?displayProperty=fullName>보다 작거나 <xref:System.SByte.MaxValue?displayProperty=fullName>보다 큰 경우) 컴파일 오류가 발생합니다. 정수 리터럴에 접미사가 없는 경우 해당 형식은 값이 표현될 수 있는 [int](int.md), [uint](uint.md), [long](long.md), [ulong](ulong.md) 형식 중 첫 번째 형식입니다. 즉, 이 예제에서 숫자 리터럴 `0x9A` 및 `0b10011010`은 값이 <xref:System.SByte.MaxValue?displayProperty=fullName>을 초과하는 156인 32비트 부호 있는 정수로 해석됩니다. 이 때문에 캐스팅 연산자가 필요하며, [unchecked](unchecked.md) 컨텍스트에서 대입이 발생해야 합니다. 
+정수 리터럴이 `sbyte` 범위를 벗어나는 경우(즉 <xref:System.SByte.MinValue?displayProperty=fullName>보다 작거나 <xref:System.SByte.MaxValue?displayProperty=fullName>보다 큰 경우) 컴파일 오류가 발생합니다. 정수 리터럴에 접미사가 없는 경우 해당 형식은 값이 표현될 수 있는 [int](int.md), [uint](uint.md), [long](long.md), [ulong](ulong.md) 형식 중 첫 번째 형식입니다. 즉, 이 예제에서 숫자 리터럴 `0x9A` 및 `0b10011010`은 값이 <xref:System.SByte.MaxValue?displayProperty=fullName>을 초과하는 156인 부호 있는 32비트 정수로 해석됩니다. 이 때문에 캐스팅 연산자가 필요하며, [unchecked](unchecked.md) 컨텍스트에서 대입이 발생해야 합니다. 
 
 ## <a name="compiler-overload-resolution"></a>컴파일러 오버로드 확인
 

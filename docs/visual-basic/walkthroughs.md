@@ -92,7 +92,7 @@ ms.lasthandoff: 05/22/2017
  강력한 암호 특성을 확인하는 방법 및 암호 실패 확인에 대한 정보로 문자열 매개 변수를 업데이트하는 방법을 보여 줍니다.  
   
  [Visual Basic에서 문자열 암호화 및 암호 해독](../visual-basic/programming-guide/language-features/strings/walkthrough-encrypting-and-decrypting-strings.md)  
- <xref:System.Security.Cryptography.DESCryptoServiceProvider> 클래스를 사용하여 문자열을 암호화 및 해독하는 방법을 보여 줍니다.  
+ <xref:System.Security.Cryptography.DESCryptoServiceProvider> 클래스를 사용하여 문자열을 암호화하고 암호 해독하는 방법을 보여 줍니다.  
   
  [Visual Basic에서 파일 및 폴더 조작](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
  [!INCLUDE[vbprvb](../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 함수를 사용하여 파일에 대한 정보를 확인하고, 파일에서 문자열을 검색하고, 파일에 쓰는 방법을 보여 줍니다.  

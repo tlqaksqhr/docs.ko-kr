@@ -62,7 +62,7 @@ ms.lasthandoff: 05/22/2017
   
      [!code-vb[VbVbalrMyApplicationLog#19](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/troubleshooting-log-listeners_3.vb)]  
   
-     자세한 내용은 <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A>를 참조하세요.  
+     자세한 내용은 <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A>을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   

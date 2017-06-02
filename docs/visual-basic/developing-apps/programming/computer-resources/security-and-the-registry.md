@@ -48,7 +48,7 @@ ms.lasthandoff: 05/22/2017
   
  <xref:System.Security.Permissions.RegistryPermission> 없이 코드에서 액세스할 수 있는 메모리 위치에 레지스트리 변수를 저장하면 안 됩니다. 마찬가지로, 사용 권한을 부여하는 경우 작업을 완료하는 데 필요한 최소 권한을 부여합니다.  
   
- 레지스트리 권한 액세스 값은 <xref:System.Security.Permissions.RegistryPermissionAccess> 열거형에서 정의됩니다. 다음 표에서는 해당 멤버를 자세히 설명합니다.  
+ 레지스트리 권한 액세스 값은 <xref:System.Security.Permissions.RegistryPermissionAccess> 열거형에 의해 정의됩니다. 다음 표에서는 해당 멤버를 자세히 설명합니다.  
   
 |값|레지스트리 변수에 대한 액세스 권한|  
 |-----------|----------------------------------|  
