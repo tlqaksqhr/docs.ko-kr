@@ -17,25 +17,25 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: dc1c456c71efb3cc6e60a8fdc77384e65975f110
-ms.openlocfilehash: c51d905ab1b2dc6ca923463536ecdc19735d7643
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: ec15e14b299b5bed46d8d35a8c60e5f73a1d5237
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 버전 및 종속성
 .NET Framework의 각 버전에는 CLR(공용 언어 런타임), 기본 클래스 라이브러리 및 기타 관리되는 라이브러리가 포함되어 있습니다. 이 항목에서는 버전별 .NET Framework의 주요 기능에 대해 설명하고 기본 CLR 버전 및 관련 개발 환경에 대한 정보를 제공하며 Windows 운영 체제별로 설치된 버전을 확인합니다.  
   
 > [!NOTE]
->  .NET Framework의 다운로드 및 설치에 대한 자세한 내용은 [설치 가이드](../../../docs/framework/install/guide-for-developers.md)를 참조하십시오.  
+>  .NET Framework 다운로드 및 설치에 대한 자세한 내용은 [개발자용 .NET Framework 설치](../../../docs/framework/install/guide-for-developers.md)를 참조하세요.  
   
  다음 테이블에는 .NET Framework 버전 기록이 요약되어 있으며 Visual Studio, Windows 및 Windows Server와의 상관 관계가 나와 있습니다. Visual Studio에서는 나열된 .NET Framework 버전으로 사용이 제한되지 않도록 멀티 타기팅 기능을 제공합니다.  
   
  새 .NET Framework 버전에서는 각각 이전 버전의 기능을 유지하며 새 기능을 추가합니다. CLR은 고유한 버전 번호로 식별됩니다. CLR 버전은 매번 증가하지 않지만, .NET Framework 버전 번호는 각 릴리스마다 증가합니다. 예를 들어 .NET Framework 4, 4.5 및 이후 릴리스에는 CLR 4가 포함되지만 .NET Framework 2.0, 3.0 및 3.5에는 CLR 2.0이 포함됩니다. CLR 버전 3이 포함된 .NET Framework 버전은 없습니다.  
   
- 지원되는 운영 체제의 전체 목록은 [시스템 요구 사항](../../../docs/framework/get-started/system-requirements.md)을 참조하십시오. 다운로드에 대해서는 [설치 가이드](../../../docs/framework/install/guide-for-developers.md)를 참조하십시오. 컴퓨터에 설치된 .NET Framework 버전을 확인하려면 [방법: 설치된 .NET Framework 버전 확인](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)을 참조하십시오.  
+ 지원되는 운영 체제의 전체 목록은 [시스템 요구 사항](../../../docs/framework/get-started/system-requirements.md)을 참조하십시오. 다운로드에 대해서는 [개발자용 .NET Framework 설치](../../../docs/framework/install/guide-for-developers.md)를 참조하세요. 컴퓨터에 설치된 .NET Framework 버전을 확인하려면 [방법: 설치된 .NET Framework 버전 확인](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)을 참조하십시오.  
   
- 표의 **Windows에 포함됨/설치 가능** 및 **Windows Server에 포함됨/설치 가능** 열에 ✓ 표시된 운영 체제 버전에 설치되어 있는 .NET Framework 버전은 [제어판에서 활성화](../../../docs/framework/install/net-framework-3-5-on-windows-8-plus.md)되거나(Windows의 경우) 서버 관리자를 통해 활성화되어야(Windows Server의 경우) 합니다.  
+ 표의 **Windows에 포함됨/설치 가능** 및 **Windows Server에 포함됨/설치 가능** 열에 ✓ 표시된 운영 체제 버전에 설치되어 있는 .NET Framework 버전은 [제어판에서 활성화](../../../docs/framework/install/dotnet-35-windows-10.md)되거나(Windows의 경우) 서버 관리자를 통해 활성화되어야(Windows Server의 경우) 합니다.  
   
 |.NET Framework 버전|CLR 버전|기능|포함된 Visual Studio 버전|✓ 다음에서 포함된 버전:<br />+ 다음에서 설치 가능한 버전:<br />Windows|✓ 다음에서 포함된 버전:<br />+ 다음에서 설치 가능한 버전:<br />Windows Server|설치된 .NET 버전 확인 방법|  
 |----------------------------|-----------------|--------------|---------------------------------------|----------------------------------------------------|-----------------------------------------------------------|-----------------------------------------| 
@@ -64,12 +64,12 @@ ms.lasthandoff: 05/15/2017
   
      여기서 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 및 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]는 예제로만 사용됩니다. 이 원칙은 실행 중인 시스템에 설치된 것보다 이후 버전의 .NET Framework를 대상으로 하는 모든 앱에 적용됩니다.  
   
- .NET Framework의 일부 변경 내용으로 인해 앱 코드를 변경해야 할 수 있습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 이상 버전에서 기존 앱을 실행하기 전에 [응용 프로그램 호환성](../../../docs/framework/migration-guide/application-compatibility.md)을 참조하십시오. 현재 버전 설치에 대한 자세한 내용은 [설치 가이드](../../../docs/framework/install/guide-for-developers.md)를 참조하십시오. .NET Framework 지원에 대한 자세한 내용은 Microsoft 지원 웹 사이트의 [Microsoft .NET Framework 지원 기간 정책](http://go.microsoft.com/fwlink/?LinkId=196607)을 참조하십시오.  
+ .NET Framework의 일부 변경 내용으로 인해 앱 코드를 변경해야 할 수 있습니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 이상 버전에서 기존 앱을 실행하기 전에 [응용 프로그램 호환성](../../../docs/framework/migration-guide/application-compatibility.md)을 참조하십시오. 현재 버전 설치에 대한 자세한 내용은 [개발자용 .NET Framework 설치](../../../docs/framework/install/guide-for-developers.md)를 참조하세요. .NET Framework 지원에 대한 자세한 내용은 Microsoft 지원 웹 사이트의 [Microsoft .NET Framework 지원 기간 정책](http://go.microsoft.com/fwlink/?LinkId=196607)을 참조하십시오.  
   
 ## <a name="targeting-and-running-apps-for-older-versions"></a>이전 버전에 대한 대상 지정 및 앱 실행  
  .NET Framework 버전 2.0, 3.0 및 3.5는 동일한 버전의 CLR(CLR 2.0)로 빌드됩니다. 이러한 버전은 단일 설치의 후속 레이어를 나타냅니다. 각 버전은 이전 버전 위에 증분 방식으로 빌드됩니다. 컴퓨터에서 버전 2.0, 3.0 및 3.5를 side-by-side 실행할 수는 없습니다. 버전 3.5를 설치하면 2.0 및 3.0 레이어가 자동으로 설치되며 버전 2.0, 3.0 및 3.5용으로 빌드된 앱 모두를 3.5 버전에서 실행할 수 있습니다. 그러나 이 계층적 방식은 .NET Framework 4에서 종료됩니다. .NET Framework 4부터는 In-Process Side-By-Side 호스팅을 사용하여 단일 프로세스에서 여러 버전의 CLR을 실행할 수 있습니다. 자세한 내용은 [어셈블리 및 Side-by-Side 실행](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md)을 참조하십시오.  
   
- 또한 앱이 버전 2.0, 3.0 또는 3.5를 대상으로 하는 경우 사용자가 앱을 실행하기 전에 [!INCLUDE[win8](../../../includes/win8-md.md)] 또는 [!INCLUDE[win81](../../../includes/win81-md.md)] 컴퓨터에서 .NET Framework 3.5를 사용하도록 설정해야 할 수 있습니다. 자세한 내용은 [Windows 8 이상 버전에 .NET Framework 3.5 설치](../../../docs/framework/install/net-framework-3-5-on-windows-8-plus.md)를 참조하십시오.  
+ 또한 앱이 버전 2.0, 3.0 또는 3.5를 대상으로 하는 경우 사용자가 앱을 실행하기 전에 [!INCLUDE[win8](../../../includes/win8-md.md)] 또는 [!INCLUDE[win81](../../../includes/win81-md.md)] 컴퓨터에서 .NET Framework 3.5를 사용하도록 설정해야 할 수 있습니다. 자세한 내용은 [Windows 10, Windows 8.1 및 Windows 8에 .NET Framework 3.5 설치](../../../docs/framework/install/dotnet-35-windows-10.md)를 참조하세요.  
   
 ## <a name="next-steps"></a>다음 단계  
   
@@ -81,8 +81,9 @@ ms.lasthandoff: 05/15/2017
   
 -   컴퓨터에 설치된 버전 또는 업데이트 확인에 대한 자세한 내용은 [방법: 설치된 .NET Framework 버전 확인](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md) 및 [방법: 설치된 .NET Framework 업데이트 확인](../../../docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)을 참조하십시오.  
   
-## <a name="see-also"></a>참고 항목  
- [버전 호환성](../../../docs/framework/migration-guide/version-compatibility.md)   
- [Microsoft .NET Framework 지원 기간 정책](http://go.microsoft.com/fwlink/?LinkId=196607)   
- [문제 해결](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+## <a name="see-also"></a>참고 항목
+
+[버전 호환성](../../../docs/framework/migration-guide/version-compatibility.md)   
+[Microsoft .NET Framework 지원 기간 정책](http://go.microsoft.com/fwlink/?LinkId=196607)   
+[차단된 .NET Framework 설치 및 제거 문제 해결](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
 
