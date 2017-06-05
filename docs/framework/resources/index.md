@@ -22,11 +22,11 @@ caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: ffe0b574b00e3ce420d83658f5844f26c3f8ea72
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
+ms.openlocfilehash: 3bbfaf3272444fbd2127f01ae4d5c9ca0db7bd39
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 04/08/2017
 
 ---
 # <a name="resources-in-desktop-apps"></a>데스크톱 응용 프로그램의 리소스
@@ -53,13 +53,13 @@ ms.lasthandoff: 06/02/2017
 ## <a name="retrieving-resources"></a>리소스 검색  
  실행 시, 응용 프로그램은 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> 속성으로 지정된 문화권에 따라 적절한 지역화된 리소스를 스레드별로 로드합니다. 이 속성 값은 다음과 같이 파생됩니다.  
   
--   지역화된 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체를 <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=fullName> 속성에 직접 할당합니다.  
+-   지역화된 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체를 <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=fullName>에 직접 할당합니다.  
   
--   문화권이 명시적으로 할당되지 않은 경우에는 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=fullName> 속성에서 기본 스레드 UI 문화권을 검색합니다.  
+-   문화권을 명시적으로 할당되지 않은 경우 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=fullName> 속성에서 기본 스레드 UI 문화권을 검색합니다.  
   
 -   기본 스레드 UI 문화권이 명시적으로 할당되지 않은 경우에는 Windows `GetUserDefaultUILanguage` 함수를 호출하여 로컬 컴퓨터의 현재 사용자에 대한 문화권을 검색합니다.  
   
- 현재 UI 문화권을 설정하는 방법에 대한 자세한 내용은 <xref:System.Globalization.CultureInfo> 및 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> 참조 페이지를 참조하십시오.  
+ 현재 UI 문화권을 설정하는 방법에 대한 자세한 내용은 <xref:System.Globalization.CultureInfo> 및 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> 참조 페이지를 참조하세요.  
   
  <xref:System.Resources.ResourceManager?displayProperty=fullName> 클래스를 사용하여 현재 UI 문화권 또는 특정 문화권에 대한 리소스를 검색할 수도 있습니다. <xref:System.Resources.ResourceManager> 클래스가 데스크톱 응용 프로그램에서 리소스를 검색하는 데 가장 일반적으로 사용되지만, <xref:System.Resources?displayProperty=fullName> 네임스페이스는 리소스를 검색하는 데 사용할 수 있는 추가 형식을 포함합니다. 여기에는 다음이 포함됩니다.  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 06/02/2017
   
 -   <xref:System.Resources.ResXResourceReader> 클래스를 사용하면 XML(.resx) 파일에서 리소스를 검색할 수 있습니다.  
   
--   <xref:System.Resources.ResourceSet> 클래스를 사용하면 대체 규칙을 준수하지 않고 특정 문화권의 리소스를 검색할 수 있습니다. 리소스는 어셈블리 또는 독립 실행형 이진 .resources 파일에 저장할 수 있습니다. 또한 <xref:System.Resources.IResourceReader> 클래스를 사용하여 다른 소스에서 리소스를 검색할 수 있도록 하는 <xref:System.Resources.ResourceSet> 구현을 개발할 수 있습니다.  
+-   <xref:System.Resources.ResourceSet> 클래스를 사용하면 대체 규칙을 준수하지 않고 특정 문화권의 리소스를 검색할 수 있습니다. 리소스는 어셈블리 또는 독립 실행형 이진 .resources 파일에 저장할 수 있습니다. 또한 <xref:System.Resources.ResourceSet> 클래스를 사용하여 다른 소스에서 리소스를 검색할 수 있도록 하는 <xref:System.Resources.IResourceReader> 구현을 개발할 수 있습니다.  
   
 -   <xref:System.Resources.ResXResourceSet> 클래스를 사용하면 메모리에서 XML 리소스 파일에 있는 모든 항목을 검색할 수 있습니다.  
   
