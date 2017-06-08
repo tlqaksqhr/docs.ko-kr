@@ -21,11 +21,11 @@ caps.latest.revision: 42
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: d6313cea51b98b3b19363f3c465e5adf241ab3d4
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 46a0ccb9db4d468e68b1e8d1d278308e6e87e85e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/08/2017
+ms.lasthandoff: 06/08/2017
 
 ---
 # <a name="globalizing-and-localizing-net-framework-applications"></a>.NET Framework 응용 프로그램 전역화 및 지역화
@@ -70,7 +70,7 @@ ms.lasthandoff: 04/08/2017
  <xref:System.Globalization?displayProperty=fullName> 네임스페이스  
  언어, 국가/지역, 사용하는 달력, 날짜, 통화 및 숫자 형식 패턴, 문자열 정렬 순서 등의 문화권 관련 정보를 정의하는 클래스를 포함합니다.  
   
- <xref:System.Resources> 네임 스페이스  
+ <xref:System.Resources> 네임스페이스  
  리소스를 만들고 조작하고 사용하기 위한 클래스를 제공합니다.  
   
  <xref:System.Text> 네임스페이스  
