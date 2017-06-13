@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9ba08e55e3bc07c2ce6369e2b33ccbe632545d24
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: bcebdd1a6462e651619776549754eacfac9f9573
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/12/2017
 
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>방법: 사용자 지정 확장명 메서드 구현 및 호출(C# 프로그래밍 가이드)
@@ -53,12 +54,12 @@ ms.lasthandoff: 03/13/2017
      연산자가 적용되는 형식을 나타내기 때문에 첫 번째 매개 변수는 호출 코드에서 지정되지 않고 컴파일러가 개체 형식을 이미 알고 있습니다. 매개 변수 2 ~ `n`에 대한 인수만 제공하면 됩니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 `CustomExtensions.StringExtension` 클래스에 `WordCount`라는 확장 메서드를 구현합니다. 이 메서드는 첫 번째 메서드 매개 변수로 지정된 <xref:System.String> 클래스에 대해 작동합니다. `CustomExtensions` 네임스페이스를 응용 프로그램 네임스페이스로 가져오고, `Main` 메서드 내부에서 메서드가 호출됩니다.  
+ 다음 예제에서는 `CustomExtensions.StringExtension` 클래스에 `WordCount`라는 확장 메서드를 구현합니다. 작동 하는 메서드는 <xref:System.String> 첫 번째 메서드 매개 변수로 지정 되는 클래스입니다. `CustomExtensions` 네임스페이스를 응용 프로그램 네임스페이스로 가져오고, `Main` 메서드 내부에서 메서드가 호출됩니다.  
   
  [!code-cs[csProgGuideExtensionMethods#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-and-call-a-custom-extension-method_1.cs)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- 이 코드를 실행하려면 코드를 복사하여 [!INCLUDE[vs_current_short](../../../csharp/programming-guide/classes-and-structs/includes/vs_current_short_md.md)]에서 생성된 Visual C# 콘솔 응용 프로그램 프로젝트에 붙여넣습니다. 기본적으로 이 프로젝트는 [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] 버전 3.5를 대상으로 하며, System.Core.dll에 대한 참조 및 System.Linq에 대한 `using` 지시문을 포함합니다. 이러한 요구 사항 중 하나 이상이 프로젝트에 없는 경우 수동으로 추가할 수 있습니다.   
+ 이 코드를 실행하려면 코드를 복사하여 [!INCLUDE[vs_current_short](~/includes/vs-current-short-md.md)]에서 생성된 Visual C# 콘솔 응용 프로그램 프로젝트에 붙여넣습니다. 기본적으로 이 프로젝트는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 버전 3.5를 대상으로 하며, System.Core.dll에 대한 참조 및 System.Linq에 대한 `using` 지시문을 포함합니다. 이러한 요구 사항 중 하나 이상이 프로젝트에 없는 경우 수동으로 추가할 수 있습니다.   
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
  확장 메서드는 특정 보안 취약성은 없습니다. 형식 자체에서 정의된 인스턴스 또는 정적 메서드를 기준으로 모든 이름 충돌이 해결되기 때문에 확장 메서드를 사용하여 형식의 기존 메서드를 가장할 수는 없습니다. 확장 메서드는 확장된 클래스의 개인 데이터에 액세스할 수 없습니다.  

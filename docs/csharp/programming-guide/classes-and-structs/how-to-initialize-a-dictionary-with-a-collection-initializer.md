@@ -28,10 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 60443456be4b4fbb13dad6cb9c372a1af332c2fd
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 6c6f15772f098618d63a48ada122b1e98ef5e62d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/12/2017
 
 ---
 # <a name="how-to-initialize-a-dictionary-with-a-collection-initializer-c-programming-guide"></a>방법: 컬렉션 이니셜라이저를 사용하여 사전 초기화(C# 프로그래밍 가이드)
@@ -42,10 +43,10 @@ ms.lasthandoff: 03/13/2017
   
  [!code-cs[csProgGuideLINQ#34](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-a-dictionary-with-a-collection-initializer_1.cs)]  
   
- 컬렉션의 각 요소에는 두 쌍의 중괄호가 있습니다. 안쪽 중괄호는 `StudentName`에 대한 개체 이니셜라이저를 묶고, 바깥쪽 중괄호는 `students`<xref:System.Collections.Generic.Dictionary`2>에 추가할 키/값 쌍에 대한 이니셜라이저를 묶습니다. 마지막으로, 사전에 대한 전체 컬렉션 이니셜라이저가 중괄호로 묶여 있습니다.  
+ 컬렉션의 각 요소에는 두 쌍의 중괄호가 있습니다. 가장 안쪽의 중괄호로 묶습니다에 대 한 개체 이니셜라이저는 `StudentName`, 바깥쪽 중괄호로 묶습니다에 추가할 수 있는 키/값 쌍에 대 한 이니셜라이저는 `students` <xref:System.Collections.Generic.Dictionary`2>합니다. 마지막으로, 사전에 대한 전체 컬렉션 이니셜라이저가 중괄호로 묶여 있습니다.  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- 이 코드를 실행하려면 클래스를 복사하여 [!INCLUDE[vs_current_short](../../../csharp/programming-guide/classes-and-structs/includes/vs_current_short_md.md)]에서 생성된 Visual C# 콘솔 응용 프로그램 프로젝트에 붙여넣습니다. 기본적으로 이 프로젝트는 [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] 버전 3.5를 대상으로 하며, System.Core.dll에 대한 참조 및 System.Linq에 대한 using 지시문을 포함합니다. 이러한 요구 사항 중 하나 이상이 프로젝트에 없는 경우 수동으로 추가할 수 있습니다.   
+ 이 코드를 실행하려면 클래스를 복사하여 [!INCLUDE[vs_current_short](~/includes/vs-current-short-md.md)]에서 생성된 Visual C# 콘솔 응용 프로그램 프로젝트에 붙여넣습니다. 기본적으로 이 프로젝트는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 버전 3.5를 대상으로 하며, System.Core.dll에 대한 참조 및 System.Linq에 대한 using 지시문을 포함합니다. 이러한 요구 사항 중 하나 이상이 프로젝트에 없는 경우 수동으로 추가할 수 있습니다.   
   
 ## <a name="see-also"></a>참고 항목  
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   

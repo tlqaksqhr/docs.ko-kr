@@ -1,5 +1,5 @@
 ---
-title: "플랫폼 간 도구로 라이브러리 개발"
+title: "크로스 플랫폼 도구와 라이브러리를 개발 | Microsoft Docs"
 description: "플랫폼 간 도구로 라이브러리 개발"
 keywords: .NET, .NET Core
 author: cartermp
@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
 ms.translationtype: Human Translation
-ms.sourcegitcommit: e6286e65ac24de3318f9ec7c97ef6ee2c7b192ed
-ms.openlocfilehash: 15528cb0a12da07763613bee79180c4941224ddf
+ms.sourcegitcommit: 829c604f9bafce03b7008cbb768371a1a08de222
+ms.openlocfilehash: b56a285d21c9103f76b4e9fb0749a4e36a603074
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 06/12/2017
 
 ---
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 05/02/2017
 
 이 문서에는 .NET 표준을 다양한 구현에 매핑하는 표가 있습니다.
 
-[!INCLUDE [net-standard-table](../../includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
 
 라이브러리 만들기 작업에서 이 표의 의미는 다음과 같습니다.
 
@@ -237,7 +237,7 @@ netstandard1.4/
 
 ## <a name="how-to-test-libraries-on-net-core"></a>.NET Core에서 라이브러리를 테스트하는 방법
 
-플랫폼 간에 테스트할 수 있는 기능이 중요합니다.  기본적으로 [xUnit](http://xunit.github.io/) 또는 MSTest를 사용할 수 있습니다.  둘 다 .NET Core에서 라이브러리를 단위 테스트하는 데 적합합니다.  테스트 프로젝트로 솔루션을 설정하는 방법은 [솔루션 구조](#structuring-a-solution)에 따라 달라집니다.  다음 예제에서는 테스트 및 원본 디렉터리가 동일한 최상위 디렉터리에 있다고 가정합니다.
+플랫폼 간에 테스트할 수 있는 기능이 중요합니다.  기본적으로 [xUnit](http://xunit.github.io/) 또는 MSTest를 사용할 수 있습니다.  둘 다 단위 테스트 라이브러리.NET Core에서 완벽 하 게 적합 합니다.  테스트 프로젝트로 솔루션을 설정하는 방법은 [솔루션 구조](#structuring-a-solution)에 따라 달라집니다.  다음 예에서는 테스트 및 소스 디렉터리 동일한 최상위 디렉터리에 나타나는 가정 합니다.
 
 > [!INFO] 일부 [.NET CLI 명령](../tools/index.md)이 사용됩니다.  자세한 내용은 [dotnet new](../tools/dotnet-new.md) 및 [dotnet sln](../tools/dotnet-sln.md)을 참조하세요.
 
@@ -319,12 +319,13 @@ let doWork data = async {
 이와 같은 사용 시나리오는, 액세스하는 API가 C# 및 F#에 대해 다른 구조를 가지고 있어야 한다는 뜻입니다.  이를 수행하는 일반적인 방법은 Core 프로젝트로 호출하는 API 계층을 정의하는 C# 및 F# 프로젝트에서 라이브러리의 모든 논리를 해당 Core 프로젝트로 팩터링하는 것입니다.  섹션의 나머지 부분에서는 다음 이름을 사용합니다.
 
 * **AwesomeLibrary.Core** - 라이브러리에 대한 모든 논리를 포함하는 Core 프로젝트
-* **AwesomeLibrary.CSharp** - C에서 사용하기 위한 공용 API가 포함된 프로젝트#
-* **AwesomeLibrary.FSharp** - F에서 사용하기 위한 공용 API가 포함된 프로젝트#
+* **AwesomeLibrary.CSharp** -C#에서 사용 하도록 설계 된 공용 Api 사용 하 여 프로젝트
+* **AwesomeLibrary.FSharp** -F #에서 사용 하도록 설계 된 공용 Api 사용 하 여 프로젝트
 
 터미널에서 다음 명령을 실행하면 이 가이드와 동일한 구조를 생성할 수 있습니다.
 
 ```console
+mkdir AwesomeLibrary && cd AwesomeLibrary
 dotnet new sln
 mkdir AwesomeLibrary.Core && cd AwesomeLibrary.Core && dotnet new classlib
 cd ..
@@ -332,9 +333,9 @@ mkdir AwesomeLibrary.CSharp && cd AwesomeLibrary.CSharp && dotnet new classlib
 cd ..
 mkdir AwesomeLibrary.FSharp && cd AwesomeLibrary.FSharp && dotnet new classlib -lang F#
 cd ..
-dotnet sln add AwesomeLibrary.Core/AwesomeLibrary.Core/csproj
-dotnet sln add AwesomeLibrary.CSharp/AwesomeLibrary.CSharp/csproj
-dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp/csproj
+dotnet sln add AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
+dotnet sln add AwesomeLibrary.CSharp/AwesomeLibrary.CSharp.csproj
+dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp.fsproj
 ```
 
 그러면 위의 세 가지 프로젝트와 프로젝트를 함께 연결하는 솔루션 파일 하나가 추가됩니다.  솔루션 파일을 만들고 프로젝트를 연결하면 최상위 수준에서 프로젝트를 복원하고 빌드할 수 있습니다.
@@ -344,7 +345,7 @@ dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp/csproj
 프로젝트를 참조하는 가장 좋은 방법은 .NET CLI를 사용하여 프로젝트 참조를 추가하는 것입니다.  **AwesomeLibrary.CSharp** 및 **AwesomeLibrary.FSharp** 프로젝트 디렉터리에서 다음 명령을 실행할 수 있습니다.
 
 ```console
-$ dotnet add reference ../AwesomeLibrary.Core.csproj
+$ dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 
 이제 **AwesomeLibrary.CSharp** 및 **AwesomeLibrary.FSharp** 둘 다의 프로젝트 파일에서 **AwesomeLibrary.Core**를 `ProjectReference` 대상으로 참조합니다.  프로젝트 파일을 검사하고 파일에서 다음을 통해 이를 확인할 수 있습니다.
@@ -360,3 +361,4 @@ $ dotnet add reference ../AwesomeLibrary.Core.csproj
 ### <a name="structuring-a-solution"></a>솔루션 구성
 
 다중 프로젝트 솔루션의 또 다른 중요한 측면은 전체 프로젝트 구조를 올바르게 설정하는 것입니다. 코드를 원하는 대로 구성할 수 있으며, `dotnet sln add`를 사용하여 각 프로젝트를 솔루션 파일에 연결하기만 하면 솔루션 수준에서 `dotnet restore` 및 `dotnet build`를 실행할 수 있습니다.
+
