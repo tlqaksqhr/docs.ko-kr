@@ -29,14 +29,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5daf71faea5736036e9e3e0178e84ea03c314ff6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: acb554a757886d1924fa7ef69814b98b3b440871
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/12/2017
 
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma checksum(C# 참조)
-[!INCLUDE[vstecasp](../../../csharp/language-reference/preprocessor-directives/includes/vstecasp_md.md)] 페이지의 디버그를 돕기 위해 소스 파일에 대한 체크섬을 생성합니다.  
+[!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 페이지의 디버그를 돕기 위해 소스 파일에 대한 체크섬을 생성합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -57,9 +58,9 @@ ms.lasthandoff: 03/13/2017
 ## <a name="remarks"></a>설명  
  Visual Studio 디버거는 체크섬을 사용하여 항상 올바른 소스를 찾도록 합니다. 컴파일러는 소스 파일에 대한 체크섬을 계산한 다음 출력을 PDB(프로그램 데이터베이스) 파일로 내보냅니다. 그런 다음 디버거는 PDB를 사용하여 소스 파일에 대해 계산하는 체크섬과 비교합니다.  
   
- 체크섬이 .aspx 파일이 아니라 생성된 소스 파일에 대해 계산되므로 이 솔루션은 [!INCLUDE[vstecasp](../../../csharp/language-reference/preprocessor-directives/includes/vstecasp_md.md)] 프로젝트에서 작동하지 않습니다. 이 문제를 해결하기 위해 `#pragma checksum`은 [!INCLUDE[vstecasp](../../../csharp/language-reference/preprocessor-directives/includes/vstecasp_md.md)] 페이지에 대한 체크섬 지원을 제공합니다.  
+ 체크섬이 .aspx 파일이 아니라 생성된 소스 파일에 대해 계산되므로 이 솔루션은 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 프로젝트에서 작동하지 않습니다. 이 문제를 해결하기 위해 `#pragma checksum`은 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 페이지에 대한 체크섬 지원을 제공합니다.  
   
- [!INCLUDE[csprcs](../../../csharp/includes/csprcs_md.md)]에서 [!INCLUDE[vstecasp](../../../csharp/language-reference/preprocessor-directives/includes/vstecasp_md.md)] 프로젝트를 만드는 경우 생성된 소스 파일에 소스가 생성되는 .aspx 파일에 대한 체크섬이 포함됩니다. 그런 다음 컴파일러는 PDB 파일에 이 정보를 씁니다.  
+ [!INCLUDE[csprcs](~/includes/csprcs-md.md)]에서 [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] 프로젝트를 만드는 경우 생성된 소스 파일에 소스가 생성되는 .aspx 파일에 대한 체크섬이 포함됩니다. 그런 다음 컴파일러는 PDB 파일에 이 정보를 씁니다.  
   
  컴파일러가 파일에서 `#pragma checksum` 지시문을 발견하지 못하면 체크섬을 계산하고 PDB 파일에 값을 씁니다.  
   
