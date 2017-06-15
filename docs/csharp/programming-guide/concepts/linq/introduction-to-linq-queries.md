@@ -38,7 +38,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
 ms.openlocfilehash: 317ea9a17a792bcbfd11c5f1085218e2b0f2a312
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/12/2017
+ms.lasthandoff: 06/15/2017
 
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ 쿼리 소개(C#)
