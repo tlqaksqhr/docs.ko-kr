@@ -122,10 +122,10 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 ```
 
-이 첫 번째 버전은 dotnet foundation 조직의 모든 리포지토리 목록을 읽으라는 웹 요청을 수행합니다. (.NET Foundation의 gitHub ID는 'dotnet'임) 먼저, 새 @System.Net.Http.HttpClient를 만듭니다. 이 개체는 요청 및 응답을 처리합니다. 다음에 나오는 몇 개의 줄은 이 요청에 대해 @System.Net.Http.HttpClient를 설정합니다. 먼저 GitHub JSON 응답을 수락하도록 구성됩니다.
+이 첫 번째 버전은 dotnet foundation 조직의 모든 리포지토리 목록을 읽으라는 웹 요청을 수행합니다. (.NET Foundation의 gitHub ID는 'dotnet'임) 먼저, 새 @System.Net.Http.HttpClient 를 만듭니다. 이 개체는 요청 및 응답을 처리합니다. 다음에 나오는 몇 개의 줄은 이 요청에 대해 @System.Net.Http.HttpClient 를 설정합니다. 먼저 GitHub JSON 응답을 수락하도록 구성됩니다.
 이 형식은 단순히 JSON입니다. 다음 줄은 이 개체의 모든 요청에 사용자 에이전트 헤더를 추가합니다. 이러한 두 가지 헤더는 GitHub 서버 코드에서 확인되며 GitHub에서 정보를 검색하는 데 필요합니다.
 
-@System.Net.Http.HttpClient를 구성한 후에는 웹 요청을 수행하고 응답을 검색합니다. 이 첫 번째 버전에서는 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)?displayProperty=fullname> 편의 메서드를 사용합니다. 이 편의 메서드는 웹 요청을 수행하는 작업을 시작한 다음, 요청이 반환될 때 응답 스트림을 읽고 해당 스트림에서 콘텐츠를 추출합니다. 응답의 본문은 @System.String으로 반환됩니다. 작업이 완료되면 이 문자열을 사용할 수 있습니다. 
+@System.Net.Http.HttpClient 를 구성한 후에는 웹 요청을 수행하고 응답을 검색합니다. 이 첫 번째 버전에서는 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)?displayProperty=fullname> 편의 메서드를 사용합니다. 이 편의 메서드는 웹 요청을 수행하는 작업을 시작한 다음, 요청이 반환될 때 응답 스트림을 읽고 해당 스트림에서 콘텐츠를 추출합니다. 응답의 본문은 @System.String 으로 반환됩니다. 작업이 완료되면 이 문자열을 사용할 수 있습니다. 
 
 이 메서드의 마지막 두 줄은 해당 작업을 대기하고 콘솔에 응답을 출력합니다.
 앱을 빌드한 다음 실행합니다. `ProcessRepositories`에는 `await` 연산자가 포함되므로 이제 빌드 경고는 사라집니다. 길게 표시되는 JSON 형식 텍스트를 볼 수 있습니다.   
