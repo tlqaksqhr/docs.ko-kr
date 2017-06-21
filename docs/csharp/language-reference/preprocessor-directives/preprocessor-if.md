@@ -1,5 +1,5 @@
 ---
-title: "#if(C# 참조) | Microsoft Docs"
+title: "#<a name=\"if-c-reference--microsoft-docs\"></a>if(C# 참조) | Microsoft Docs"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/22/2017
 # <a name="if-c-reference"></a>#if(C# 참조)
 C# 컴파일러는 `#if` 지시문과 [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) 지시문이 차례로 확인되면 지정된 기호가 정의되어 있어야 지시문 사이의 코드를 컴파일합니다.  C 및 C++와 달리 기호에 숫자 값을 할당할 수는 없습니다. C#의 #if 문은 부울이며 기호가 정의되었는지 여부만을 테스트합니다. 예를 들면 다음과 같습니다.  
   
-```  
+```csharp
 #define DEBUG  
 // ...  
 #if DEBUG  
@@ -64,7 +64,7 @@ C# 컴파일러는 `#if` 지시문과 [#endif](../../../csharp/language-referenc
   
 ## <a name="example"></a>예제  
   
-```  
+```csharp
 // preprocessor_if.cs  
 #define DEBUG#define MYTEST  
 using System;  
@@ -90,3 +90,4 @@ public class MyClass
  [C# 참조](../../../csharp/language-reference/index.md)   
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
  [C# 전처리기 지시문](../../../csharp/language-reference/preprocessor-directives/index.md)
+
