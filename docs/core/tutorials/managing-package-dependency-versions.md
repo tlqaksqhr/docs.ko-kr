@@ -9,9 +9,10 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 4424a947-bdf9-4775-8d48-dc350a4e0aee
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
 ms.openlocfilehash: cf6c9757ab451f88c80fedb2dfebf7f5e320f365
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/02/2017
 
 ---
@@ -56,19 +57,19 @@ ms.lasthandoff: 03/02/2017
 
 .NET Core 1.0과 함께 출시된 모든 패키지와 버전의 큰 목록이 있지만 코드가 특정 시나리오에 놓인 경우 이러한 목록을 검토하지 않아도 될 수 있습니다.
 
-`NETStandard.Library`**에만 종속되어 있나요?******
+`NETStandard.Library`**에만 종속되어 있나요****?**
 
 이 경우 `NETStandard.Library` 패키지를 버전 `1.6`으로 고정해야 합니다.  이것은 조정된 메타패키지이므로 패키지 종료도 1.0으로 고정됩니다.
 
-`Microsoft.NETCore.App`**에만 종속되어 있나요?******
+`Microsoft.NETCore.App`**에만 종속되어 있나요****?**
 
 이 경우 `Microsoft.NETCore.App` 패키지를 버전 `1.0.0`으로 고정해야 합니다.  이것은 조정된 메타패키지이므로 패키지 종료도 1.0으로 고정됩니다.
 
-****`NETStandard.Library` **또는** `Microsoft.NETCore.App` **메타패키지 종속성을 [잘라내고](../deploying/reducing-dependencies.md) 있나요?**
+**당신은 [트리밍](../deploying/reducing-dependencies.md) 프로그램** `NETStandard.Library` **또는** `Microsoft.NETCore.App` **metapackage 종속성?**
 
 그렇다면 시작하는 메타패키지도 1.0으로 고정되어 있는지 확인해야 합니다.  잘라낸 후 종속된 개별 패키지도 1.0으로 고정됩니다.
 
-`NETStandard.Library` **또는** `Microsoft.NETCore.App` **메타패키지 외부의 패키지에 종속되어 있나요?******
+**외부에서 패키지에 따라 입니까는** `NETStandard.Library` **또는** `Microsoft.NETCore.App` **metapackages?**
 
 그렇다면 다른 종속성을 1.0으로 고정해야 합니다.  이 문서 뒤에 나오는 올바른 패키지 버전 및 빌드 번호를 참조하세요.
 
