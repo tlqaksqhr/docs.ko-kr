@@ -75,7 +75,7 @@ ms.lasthandoff: 06/08/2017
 [!code-xml[ControlsOverview#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlsOverview/CSharp/AppInCode.xaml#7)]  
   
 > [!NOTE]
->                               <xref:System.Windows.Controls.Button>의                              <xref:System.Windows.Controls.Control.Background%2A>속성을                               <xref:System.Windows.Media.SolidColorBrush>로 설정해야 예제가 정상적으로 작동합니다.  
+>                               <xref:System.Windows.Controls.Button>의                              <xref:System.Windows.Controls.Control.Background%2A> 속성을                               <xref:System.Windows.Media.SolidColorBrush>로 설정해야 예제가 정상적으로 작동합니다.  
   
 <a name="subscribing_to_events"></a>   
 ## <a name="subscribing-to-events"></a>이벤트 구독  
