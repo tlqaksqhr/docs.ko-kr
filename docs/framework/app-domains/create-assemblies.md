@@ -1,56 +1,61 @@
 ---
 title: "어셈블리 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "어셈블리[.NET Framework], 만들기"
-  - "어셈블리[.NET Framework], 다중 파일"
-  - "다중 파일 어셈블리"
-  - "단일 파일 어셈블리"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assemblies [.NET Framework], multifile
+- single-file assemblies
+- assemblies [.NET Framework], creating
+- multifile assemblies
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
 caps.latest.revision: 8
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 8
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: c131e82e2312e2c1b7fe1b6b2b6d0a6dfb626209
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/02/2017
+
 ---
-# 어셈블리 만들기
-[!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]와 같은 IDE나 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]에서 제공하는 컴파일러 및 도구를 사용하여 단일 파일 또는 다중 파일 어셈블리를 만들 수 있습니다.  가장 단순한 어셈블리인 단일 파일 어셈블리는 그 이름이 단순하며 단일 응용 프로그램 도메인에 로드됩니다.  이 어셈블리는 응용 프로그램 디렉터리 외부의 다른 어셈블리에서 참조할 수 없으며 버전 검사도 실행되지 않습니다.  이 어셈블리로 구성된 응용 프로그램을 제거하려면 어셈블리가 들어 있는 디렉터리를 삭제하면 됩니다.  대부분의 개발자는 이 기능을 사용한 어셈블리만으로 응용 프로그램을 배포할 수 있습니다.  
+# <a name="creating-assemblies"></a>어셈블리 만들기
+[!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] 등의 IDE 또는 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]에서 제공된 컴파일러와 도구를 사용하여 단일 파일 또는 복사 파일 어셈블리를 만들 수 있습니다. 가장 단순한 어셈블리는 간단한 이름을 가지고 단일 응용 프로그램 도메인에 로드되는 단일 파일입니다. 이 어셈블리는 응용 프로그램 디렉터리 외부에 있는 다른 어셈블리가 참조할 수 없고 버전 확인이 진행되지 않습니다. 어셈블리로 구성된 응용 프로그램을 제거하려면 어셈블리가 있는 디렉터리를 삭제하면 됩니다. 대부분 개발자의 경우 응용 프로그램을 배포하는 데는 이러한 기능이 포함된 어셈블리만 있으면 됩니다.  
   
- 여러 개의 코드 모듈과 리소스 파일을 사용하여 다중 파일 어셈블리를 만들 수 있습니다.  또한, 여러 응용 프로그램에서 공유할 수 있는 어셈블리도 만들 수 있습니다.  공유 어셈블리는 강력한 이름을 사용해야 하며 전역 어셈블리 캐시에서 배포될 수 있습니다.  
+ 여러 코드 모듈 및 리소스 파일에서 복수 파일 어셈블리를 만들 수 있습니다. 여러 응용 프로그램에서 공유될 수 있는 어셈블리를 만들 수도 있습니다. 공유 어셈블리에는 강력한 이름이 있어야 하고 공유 어셈블리는 전역 어셈블리 캐시에 배포될 수 있습니다.  
   
- 코드 모듈과 리소스를 어셈블리로 그룹화하는 경우, 다음과 같은 요소에 따라 여러 가지 옵션이 있습니다.  
+ 코드 모듈 및 리소스를 어셈블리로 그룹화할 경우 다음 요소에 따라 여러 가지 옵션이 있습니다.  
   
 -   버전 관리  
   
-     버전 정보가 동일한 모듈로 그룹화합니다.  
+     같은 버전 정보를 포함해야 하는 모듈을 그룹화합니다.  
   
 -   배포  
   
-     사용자 배포 모델을 지원하는 코드 모듈 및 리소스로 그룹화합니다.  
+     배포 모델을 지원하는 코드 모듈 및 리소스를 그룹화합니다.  
   
--   다시 사용  
+-   재사용  
   
-     특정 용도를 위해 논리적으로 함께 사용할 수 있는 모듈로 그룹화합니다.  예를 들어, 프로그램 관리에 가끔씩 사용되는 형식과 클래스로 구성된 어셈블리는 동일 어셈블리에 저장될 수 있습니다.  또한, 여러 개의 응용 프로그램에서 공유하려는 형식도 어셈블리로 그룹화되어야 하며, 이 때 어셈블리는 강력한 이름으로 서명되어야 합니다.  
+     몇 가지 목적으로 모듈이 논리적으로 함께 사용될 수 있는 경우 모듈을 그룹화합니다. 예를 들어 가끔 프로그램 유지 관리에 사용되는 형식 및 클래스로 구성되는 어셈블리는 같은 어셈블리에 포함될 수 있습니다. 또한 여러 응용 프로그램과 공유하려는 형식은 어셈블리로 그룹화되어야 하고 해당 어셈블리는 강력한 이름으로 서명되어야 합니다.  
   
 -   보안  
   
-     동일 보안 권한을 필요로 하는 형식이 포함된 모듈로 그룹화합니다.  
+     같은 보안 권한이 필요한 형식이 포함된 모듈을 그룹화합니다.  
   
 -   범위 지정  
   
-     표시 형식을 동일 어셈블리로 제한해야 하는 형식이 포함된 모듈로 그룹화합니다.  
+     표시 유형을 같은 어셈블리로 제한해야 하는 형식이 포함된 모듈을 그룹화합니다.  
   
- 관리되지 않는 COM 응용 프로그램에서 공용 언어 런타임 어셈블리을 사용하기 위해서는 특수한 사항을 고려해야 합니다.  비관리 코드 작업에 대한 자세한 내용은 [.NET Framework 구성 요소를 COM에 노출](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)을 참조하십시오.  
+ 공용 언어 런타임 어셈블리를 비관리 COM 응용 프로그램에 사용 가능하게 설정할 경우 특별히 고려해야 할 사항이 있습니다. 비관리 코드 사용에 대한 자세한 내용은 [.NET Framework 구성 요소를 COM에 노출](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [어셈블리를 사용한 프로그래밍](../../../docs/framework/app-domains/programming-with-assemblies.md)   
  [어셈블리 버전 관리](../../../docs/framework/app-domains/assembly-versioning.md)   
  [방법: 단일 파일 어셈블리 만들기](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)   

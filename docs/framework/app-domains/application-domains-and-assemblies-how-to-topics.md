@@ -1,26 +1,31 @@
 ---
 title: "응용 프로그램 도메인 및 어셈블리 방법 항목 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "응용 프로그램 도메인, 방법"
-  - "어셈블리[.NET Framework], 방법"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assemblies [.NET Framework], how-tos
+- application domains, how-tos
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 caps.latest.revision: 6
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 6
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: afbedbf1565f698d0bda2afe6e75d68c610f2aa2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/02/2017
+
 ---
-# 응용 프로그램 도메인 및 어셈블리 방법 항목
-다음 단원에는 응용 프로그램 도메인과 어셈블리를 사용한 프로그래밍에 대한 개념 설명서에 나와 있는 모든 방법 항목의 링크가 들어 있습니다.  
+# <a name="application-domains-and-assemblies-how-to-topics"></a>응용 프로그램 도메인 및 어셈블리 방법 항목
+다음 섹션에는 응용 프로그램 도메인 및 어셈블리를 사용한 프로그래밍에 대한 개념 설명서에 나오는 모든 방법 항목에 대한 링크가 있습니다.  
   
  **응용 프로그램 도메인**  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 6
   
 -   [방법: 다중 파일 어셈블리 빌드](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
   
--   [방법: 공개\/개인 키 쌍 만들기](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
+-   [방법: 공개/개인 키 쌍 만들기](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
   
 -   [방법: 강력한 이름으로 어셈블리 서명](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
   
@@ -58,5 +63,5 @@ caps.handback.revision: 6
   
 -   [방법: 어셈블리 내용 보기](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
   
-## 참고 항목  
- [응용 프로그램 도메인과 어셈블리](../../../docs/framework/app-domains/index.md)
+## <a name="see-also"></a>참고 항목  
+ [응용 프로그램 도메인 및 어셈블리](../../../docs/framework/app-domains/index.md)

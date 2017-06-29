@@ -1,7 +1,7 @@
 ---
-title: "Windows 8, Windows 8.1 및 Windows 10에 .NET Framework 3.5 설치 | Microsoft 문서"
+title: "Windows 8, Windows 8.1 및 Windows 10에 .NET Framework 3.5 설치의 문제 해결 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 04/20/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
@@ -17,13 +17,14 @@ caps.latest.revision: 69
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: f48ef7a29e05824834395fdd9fd850a017a5f7e6
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: d935648da22db51b004a2f209070bde737a6908d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 06/02/2017
 
 ---
+
 # <a name="installing-the-net-framework-35-on-windows-8-windows-81-and-windows-10"></a>Windows 8, Windows 8.1 및 Windows 10에 .NET Framework 3.5 설치
 .NET Framework는 Windows에서 실행되는 대부분의 응용 프로그램에서 필수적인 요소이며, 해당 응용 프로그램이 실행되는 데 필요한 공통적인 기능을 제공합니다. 개발자의 경우 .NET Framework는 응용 프로그램 빌드를 위한 일관된 프로그래밍 모델을 제공합니다. Windows 운영 체제를 사용하는 경우 .NET Framework가 이미 컴퓨터에 설치되었을 수 있습니다. 구체적으로 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 에는 [!INCLUDE[win8](../../../includes/win8-md.md)]가 포함되어 있고, [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 에는 [!INCLUDE[win81](../../../includes/win81-md.md)] 이 포함되어 있으며, Windows 10에는 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 이 포함되어 있습니다.  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 05/11/2017
 ## <a name="enable-the-net-framework-35-in-control-panel"></a>제어판에서 .NET Framework 3.5를 사용하도록 설정  
  제어판을 통해 직접 .NET Framework 3.5를 사용하도록 설정할 수 있습니다. 이 옵션을 사용하려면 인터넷에 연결해야 합니다.  
   
-1.  키보드에서 Windows 키 ![Windows 로고](../../../docs/framework/get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo")를 누르고, Windows 기능을 입력한 후 Enter 키를 누릅니다. **Windows 기능 사용/사용 안 함 대화 상자** 가 표시됩니다. 또는 제어판을 열고 프로그램 항목을 클릭한 다음 프로그램 및 기능에서 "Windows 기능 사용/사용 안 함"을 클릭합니다.  
+1.  키보드에서 Windows 키 ![Windows 로고](../../../docs/framework/get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo")를 누르고, Windows 기능을 입력한 후 Enter 키를 누릅니다. **Windows 기능 사용/사용 안 함 대화 상자** 가 표시됩니다. 또는 [제어판]을 열고 프로그램 항목을 클릭한 다음 [프로그램 및 기능]에서 "Windows 기능 사용/사용 안 함"을 클릭합니다.  
   
 2.  **.NET Framework 3.5(.NET 2.0 및 3.0 포함)** 확인란을 선택하고, 확인을 누르고, 메시지가 표시되면 컴퓨터를 다시 부팅합니다.  
   
@@ -73,3 +74,4 @@ ms.lasthandoff: 05/11/2017
   
 ## <a name="see-also"></a>참고 항목  
  [설치 가이드](../../../docs/framework/get-started/index.md)
+

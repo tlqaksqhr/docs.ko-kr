@@ -1,55 +1,57 @@
 ---
 title: "방법: 어셈블리 내용 보기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "어셈블리 매니페스트, 정보 보기"
-  - "Ildasm.exe"
-  - "MSIL 디스어셈블러"
-  - "어셈블리[.NET Framework], 내용 보기"
-  - "어셈블리 정보 보기"
-  - "MSIL"
-  - "MSIL 정보 보기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- assembly manifest, viewing information
+- Ildasm.exe
+- MSIL Disassembler
+- assemblies [.NET Framework], viewing contents
+- viewing assembly information
+- MSIL
+- viewing MSIL information
 ms.assetid: fb7baaab-4c0d-47ad-8fd3-4591cf834709
 caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 38ed309c8d1ef7467b235eb2e751ffb9016a83ab
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/02/2017
+
 ---
-# 방법: 어셈블리 내용 보기
-[Ildasm.exe\(IL 디스어셈블러\)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)를 사용하면 파일에 있는 MSIL\(Microsoft Intermediate Language\) 정보를 볼 수 있습니다.  검사할 파일이 어셈블리인 경우, 이 정보에는 어셈블리 특성 이외에 다른 모듈 및 어셈블리의 참조가 포함될 수 있습니다.  이 정보는 파일이 어셈블리인지 아니면 어셈블리의 일부인지를 결정하거나 또는 다른 모듈 및 어셈블리의 참조가 파일에 포함되어 있는지를 결정하는 데 유용합니다.  
+# <a name="how-to-view-assembly-contents"></a>방법: 어셈블리 내용 보기
+[Ildasm.exe(IL 디스어셈블러)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)를 사용하여 파일의 MSIL(Microsoft Intermediate Language) 정보를 볼 수 있습니다. 검사되는 파일이 어셈블리이면 이 정보에 어셈블리의 특성뿐만 아니라 다른 모듈 및 어셈블리에 대한 참조가 포함될 수 있습니다. 이 정보는 파일이 어셈블리 또는 어셈블리의 일부인지 여부 및 파일이 다른 모듈 또는 어셈블리에 대한 참조를 포함하는지 여부를 확인하는 데 유용할 수 있습니다.  
   
-### Ildasm.exe를 사용하여 어셈블리의 내용을 표시하려면  
+### <a name="to-display-the-contents-of-an-assembly-using-ildasmexe"></a>Ildasm.exe를 사용하여 어셈블리의 내용을 표시하려면  
   
-1.  명령 프롬프트에서 **ildasm** \<*assembly name*\> 을 입력합니다.  예를 들어, 다음 명령은 `Hello.exe` 어셈블리를 디스어셈블합니다.  
+1.  명령 프롬프트에서 **ildasm** \<*assembly name*>을 입력합니다. 예를 들어 다음 명령은 `Hello.exe` 어셈블리를 디스어셈블합니다.  
   
     ```  
     ildasm Hello.exe  
     ```  
   
-### 어셈블리 매니페스트 정보를 보려면  
+### <a name="to-view-assembly-manifest-information"></a>어셈블리 매니페스트 정보를 보려면  
   
-1.  MSIL 디스어셈블러 창에서 MANIFEST 아이콘을 두 번 클릭합니다.  
+1.  MSIL 디스어셈블러 창에서 매니페스트 아이콘을 두 번 클릭합니다.  
   
-## 예제  
- 다음은 간단한 "Hello, World" 예제 프로그램을 보여 줍니다.  프로그램을 컴파일한 다음 Ildasm.exe를 사용하여 Hello.exe 어셈블리를 디스어셈블하고 어셈블리 매니페스트를 봅니다.  
+## <a name="example"></a>예제  
+ 다음 예제는 기본 "Hello, World" 프로그램으로 시작합니다. 프로그램을 컴파일한 후 Ildasm.exe를 사용하여 Hello.exe 어셈블리를 디스어셈블하고 어셈블리 매니페스트를 봅니다.  
   
- [!code-cpp[Conceptual.Assembly.Contents#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.contents/cpp/source.cpp#1)]
- [!code-csharp[Conceptual.Assembly.Contents#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.contents/cs/source.cs#1)]
- [!code-vb[Conceptual.Assembly.Contents#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.contents/vb/source.vb#1)]  
+ [!code-cpp[Conceptual.Assembly.Contents#1](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.assembly.contents/cpp/source.cpp#1)] [!code-csharp[Conceptual.Assembly.Contents#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.assembly.contents/cs/source.cs#1)] [!code-vb[Conceptual.Assembly.Contents#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.assembly.contents/vb/source.vb#1)]  
   
- Hello.exe 어셈블리에 대해 ildasm.exe 명령을 실행하고 IL DASM 창에서 MANIFEST 아이콘을 두 번 클릭하면 다음과 같이 출력됩니다.  
+ Hello.exe 어셈블리에서 ildasm.exe 명령을 실행하고 IL DASM 창에서 매니페스트 아이콘을 두 번 클릭하면 다음과 같은 출력이 생성됩니다.  
   
 ```  
-  
 // Metadata version: v4.0.30319  
 .assembly extern mscorlib  
 {  
@@ -72,26 +74,26 @@ caps.handback.revision: 11
 .subsystem 0x0003       // WINDOWS_CUI  
 .corflags 0x00000001    //  ILONLY  
 // Image base: 0x00600000  
-  
 ```  
   
- 다음 표는 예제에서 사용된 Hello.exe 어셈블리의 어셈블리 매니페스트에 있는 각 지시문에 대해 설명합니다.  
+ 다음 표에서는 예제에 사용된 Hello.exe 어셈블리의 어셈블리 매니페스트에 있는 각 지시문에 대해 설명합니다.  
   
 |지시문|설명|  
-|---------|--------|  
-|**.assembly extern\<** assembly name**\>**|현재 모듈에서 참조되는 항목을 포함하는 또 다른 어셈블리\(이 예제에서 `mscorlib`\)를 지정합니다.|  
-|**.publickeytoken \<** *token* **\>**|참조되는 어셈블리의 실제 키 토큰을 지정합니다.|  
-|**.ver \<** *version number* **\>**|참조되는 어셈블리의 버전 번호를 지정합니다.|  
-|**.assembly \<** *assembly name* **\>**|어셈블리 이름을 지정합니다.|  
-|**.hash algorithm \<** *int32 value* **\>**|사용되는 해시 알고리즘을 지정합니다.|  
-|**.ver \<** *version number* **\>**|어셈블리의 버전 번호를 지정합니다.|  
-|**.module \<** *file name* **\>**|어셈블리를 구성하는 모듈의 이름을 지정합니다.  이 예제에서는 어셈블리가 하나의 파일로 구성됩니다.|  
-|**.subsystem \<** *value* **\>**|프로그램에 필요한 응용 프로그램 환경을 지정합니다.  이 예제에서 값 3은 이 실행 파일이 콘솔에서 실행됨을 나타냅니다.|  
-|**.corflags**|메타데이터에서 현재 예약된 파일입니다.|  
+|---------------|-----------------|  
+|**.assembly extern \<** *assembly name* **>**|현재 모듈에서 참조하는 항목이 포함된 다른 어셈블리를 지정합니다(이 예제에서는 `mscorlib`).|  
+|**.publickeytoken \<** *token* **>**|참조된 어셈블리의 실제 키의 토큰을 지정합니다.|  
+|**.ver \<** *version number* **>**|참조된 어셈블리의 버전 번호를 지정합니다.|  
+|**.assembly \<** *assembly name* **>**|어셈블리 이름을 지정합니다.|  
+|**.hash algorithm \<** *int32 value* **>**|사용되는 해시 알고리즘을 지정합니다.|  
+|**.ver \<** *version number* **>**|어셈블리의 버전 번호를 지정합니다.|  
+|**.module \<** *file name* **>**|어셈블리를 구성하는 모듈의 이름을 지정합니다. 이 예제에서는 어셈블리가 파일 하나로만 구성됩니다.|  
+|**.subsystem \<** *value* **>**|프로그램에 필요한 응용 프로그램 환경을 지정합니다. 이 예제에서 값 3은 이 실행 파일이 콘솔에서 실행됨을 나타냅니다.|  
+|**.corflags**|현재 메타데이터에서 예약된 필드입니다.|  
   
- 어셈블리 매니페스트에는 어셈블리 콘텐츠에 따라 여러 가지 다른 지시문이 포함될 수 있습니다.  어셈블리 매니페스트의 전체 지시문 목록은 ECMA 설명서, 특히 "Partition II: Metadata Definition and Semantics" 및 "Partition III: CIL Instruction Set"를 참조하십시오.  이 설명서는 온라인에서 참고 가능합니다; MSDN의  [ECMA C\# and Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkID=99212) 및 Ecma International 웹 사이트의  [Standard ECMA\-335 \- Common Language Infrastructure \(CLI\)](http://go.microsoft.com/fwlink/?LinkID=65552) 를 참조하십시오.  
+ 어셈블리 매니페스트에는 어셈블리의 내용에 따라 여러 다른 지시문이 포함될 수 있습니다. 어셈블리 매니페스트에 있는 지시문의 광범위한 목록은 ECMA 설명서의 "파티션 II: 메타데이터 정의 및 의미 체계" 및 "파티션 III: CIL 명령 집합"을 참조하세요. 이 설명서는 온라인으로 제공됩니다. MSDN의 [ECMA C# 및 공용 언어 인프라 표준](http://go.microsoft.com/fwlink/?LinkID=99212) 및 Ecma International 웹 사이트의 [표준 ECMA-335 - CLI(공용 언어 인프라)](http://go.microsoft.com/fwlink/?LinkID=65552)를 참조하세요.  
   
-## 참고 항목  
- [Application Domains and Assemblies](http://msdn.microsoft.com/ko-kr/433b04ae-4ba8-4849-9dbd-79194f240346)   
+## <a name="see-also"></a>참고 항목  
+ [응용 프로그램 도메인 및 어셈블리](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)   
  [응용 프로그램 도메인 및 어셈블리 방법 항목](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)   
- [Ildasm.exe\(IL 디스어셈블러\)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+ [Ildasm.exe(IL 디스어셈블러)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+

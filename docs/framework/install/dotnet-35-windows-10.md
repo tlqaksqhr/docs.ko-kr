@@ -1,25 +1,25 @@
 ---
-title: "Windows 10, Windows 8.1 및 Windows 8에 .NET Framework 3.5 설치"
+title: "Windows 10, Windows 8.1 및 Windows 8에 .NET Framework 3.5 설치 | Microsoft Docs"
 description: "Windows 10, Windows 8.1 및 Windows 8에 .NET Framework 3.5를 설치하는 방법 알아보기"
 author: rlander
 keywords: ".Net Framework, 설치"
-ms.date: 03/28/2017
+ms.date: 04/20/2017
 ms.topic: article
 ms.prod: .net-framework-4.6
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 67cda1d5-c6g4-4eb5-93e6-4f478de07ff7
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bea5aa270cef5105a685f5141362b439c12af340
-ms.openlocfilehash: 1d775f0633caa7c097caf084f58aaaa4c1a7d61e
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 137436a073c050ed431b231204a3aca31c98c01a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 06/02/2017
 
 ---
 
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Windows 10, Windows 8.1 및 Windows 8에 .NET Framework 3.5 설치
 
-Windows 10, Windows 8.1 및 Windows 8에서 응용 프로그램을 실행하려면 .NET Framework 3.5가 필요할 수 있습니다. 다음 지침이 도움이 될 수 있습니다. 이러한 지침은 이전 Windows 버전에도 사용할 수 있습니다.
+Windows 10, Windows 8.1 및 Windows 8에서 응용 프로그램을 실행하려면 .NET Framework 3.5가 필요할 수 있습니다. 이러한 지침은 이전 Windows 버전에도 사용할 수 있습니다.
 
 ## <a name="install-the-net-framework-35-on-demand"></a>요청 시 .NET Framework 3.5 설치
 
@@ -31,10 +31,11 @@ Windows 10, Windows 8.1 및 Windows 8에서 응용 프로그램을 실행하려�
 
 Windows 제어판을 통해 .NET Framework 3.5를 사용하도록 설정할 수 있습니다. 이 옵션을 사용하려면 인터넷에 연결해야 합니다.
 
-1. 키보드에서 Windows 키 ![Windows 로고](https://i-msdn.sec.s-msft.com/dynimg/IC721376.jpeg)를 누르고, Windows 기능을 입력한 후 Enter 키를 누릅니다. **Windows 기능 사용/사용 안 함 대화 상자** 가 표시됩니다.
-2. **.NET Framework 3.5(.NET 2.0 및 3.0 포함)** 확인란을 선택하고, 확인을 누르고, 메시지가 표시되면 컴퓨터를 다시 부팅합니다.
+1. 키보드에서 Windows 키 ![Windows 로고](https://i-msdn.sec.s-msft.com/dynimg/IC721376.jpeg)를 누르고, “Windows 기능”을 입력한 후 Enter 키를 누릅니다. **Windows 기능 사용/사용 안 함** 대화 상자가 나타납니다.
 
-![제어판으로 .NET 설치](./media/dotnet-control-panel.png)
+2. **.NET Framework 3.5(.NET 2.0 및 3.0 포함)** 확인란을 선택하고, [확인]을 선택하고, 메시지가 표시되면 컴퓨터를 다시 부팅합니다.
 
-이 기능이 필요한 개발자 또는 서버 관리자가 아니라면 WCF(Windows Communication Foundation) HTTP 활성화를 위한 자식 항목을 선택할 필요가 없습니다.
+   ![제어판으로 .NET 설치](./media/dotnet-control-panel.png)
+
+   이 기능이 필요한 개발자 또는 서버 관리자가 아니라면 **WCF(Windows Communication Foundation) HTTP 활성화** 및 **WCF(Windows Communication Foundation) 비 HTTP 활성화**를 위한 자식 항목을 선택할 필요가 없습니다.
 
