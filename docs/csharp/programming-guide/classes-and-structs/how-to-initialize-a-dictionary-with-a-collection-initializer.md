@@ -32,7 +32,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
 ms.openlocfilehash: 6c6f15772f098618d63a48ada122b1e98ef5e62d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/15/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 # <a name="how-to-initialize-a-dictionary-with-a-collection-initializer-c-programming-guide"></a>방법: 컬렉션 이니셜라이저를 사용하여 사전 초기화(C# 프로그래밍 가이드)

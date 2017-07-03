@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 829c604f9bafce03b7008cbb768371a1a08de222
-ms.openlocfilehash: b56a285d21c9103f76b4e9fb0749a4e36a603074
+ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
+ms.openlocfilehash: f1af698557abecc61d6f4ecdb8e4602ef69d9dc1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/15/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/15/2017
 
 ## <a name="how-to-target-the-net-standard"></a>.NET 표준을 대상으로 지정하는 방법
 
-.NET 표준에 익숙하지 않은 경우 자세한 내용은 [.NET 표준 라이브러리](../../standard/library.md)를 참조하세요.
+.NET 표준에 익숙하지 않은 경우 자세한 내용은 [.NET 표준 라이브러리](../../standard/net-standard.md)를 참조하세요.
 
 이 문서에는 .NET 표준을 다양한 구현에 매핑하는 표가 있습니다.
 
