@@ -1,5 +1,5 @@
 ---
-title: "LINQ 쿼리 소개(C#) | Microsoft 문서"
+title: "LINQ 쿼리 소개(C#) | Microsoft Docs"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -38,7 +38,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
 ms.openlocfilehash: 317ea9a17a792bcbfd11c5f1085218e2b0f2a312
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/15/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ 쿼리 소개(C#)
@@ -62,13 +62,13 @@ ms.lasthandoff: 06/15/2017
  ![완전한 LINQ 쿼리 작업](../../../../csharp/programming-guide/concepts/linq/media/linq_query.png "LINQ_Query")  
   
 ## <a name="the-data-source"></a>데이터 소스  
- 이전 예제에서는 데이터 원본 (가) 배열 때문에 암시적으로 지 원하는 제네릭 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스입니다. 즉, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]로 쿼리할 수 있다는 의미입니다. 쿼리가 실행 되는 `foreach` 문, 및 `foreach` 필요 <xref:System.Collections.IEnumerable> 또는 <xref:System.Collections.Generic.IEnumerable%601>합니다. 지 원하는 형식 <xref:System.Collections.Generic.IEnumerable%601> 또는 파생된 인터페이스 예: 제네릭 <xref:System.Linq.IQueryable%601> 라고 *쿼리 가능 형식*합니다.  
+ 이전 예제에서는 데이터 소스가 배열이기 때문에 제네릭 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스를 암시적으로 지원합니다. 즉, [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]로 쿼리할 수 있다는 의미입니다. 쿼리가 `foreach` 문에서 실행되고, `foreach`는 <xref:System.Collections.IEnumerable> 또는 <xref:System.Collections.Generic.IEnumerable%601>이 필요합니다. <xref:System.Collections.Generic.IEnumerable%601> 또는 제네릭 <xref:System.Linq.IQueryable%601> 같은 파생된 인터페이스를 지원하는 형식을 *쿼리 가능 형식*이라고 합니다.  
   
- 쿼리 가능 형식은 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 데이터 소스로 사용하기 위해 수정하거나 특별하게 처리할 필요가 없습니다. 소스 데이터가 쿼리 가능 형식으로 메모리에 나타나지 않을 경우 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 공급자는 그렇게 나타내야 합니다. 예를 들어 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] XML 문서를 쿼리 가능한 로드 <xref:System.Xml.Linq.XElement> 유형:  
+ 쿼리 가능 형식은 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 데이터 소스로 사용하기 위해 수정하거나 특별하게 처리할 필요가 없습니다. 소스 데이터가 쿼리 가능 형식으로 메모리에 나타나지 않을 경우 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 공급자는 그렇게 나타내야 합니다. 예를 들어 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]는 XML 문서를 쿼리 가능 <xref:System.Xml.Linq.XElement> 형식으로 로드합니다.  
   
  [!code-cs[CsLINQGettingStarted#2](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_2.cs)]  
   
- 먼저 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]을 사용하여 디자인 타임에 수동으로 또는 Visual Studio에서 [Visual Studio의 LINQ to SQL 도구](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)를 사용하여 개체 관계형 매핑을 만듭니다. 개체에 대해 쿼리를 작성하면 런타임에 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]에서 데이터베이스와의 통신을 처리합니다. 다음 예에서 `Customers` 쿼리 결과의 형식과 데이터베이스의 특정 테이블을 나타내는 <xref:System.Linq.IQueryable%601>에서 파생 <xref:System.Collections.Generic.IEnumerable%601>합니다.  
+ 먼저 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]을 사용하여 디자인 타임에 수동으로 또는 Visual Studio에서 [Visual Studio의 LINQ to SQL 도구](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)를 사용하여 개체 관계형 매핑을 만듭니다. 개체에 대해 쿼리를 작성하면 런타임에 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]에서 데이터베이스와의 통신을 처리합니다. 다음 예에서 `Customers`는 데이터베이스의 특정 테이블을 나타내며, <xref:System.Linq.IQueryable%601> 쿼리 결과 형식은 <xref:System.Collections.Generic.IEnumerable%601>에서 파생됩니다.  
   
 ```csharp  
 Northwnd db = new Northwnd(@"c:\northwnd.mdf");  
@@ -80,10 +80,10 @@ IQueryable<Customer> custQuery =
     select cust;  
 ```  
   
- 특정 형식의 데이터 소스를 만드는 방법에 대한 자세한 내용은 다양한 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 공급자에 대한 설명서를 참조하세요. 하지만 기본 규칙은 매우 간단:는 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 데이터 원본이 지 원하는 제네릭 개체 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스 또는 여기에서 상속 하는 인터페이스입니다.  
+ 특정 형식의 데이터 소스를 만드는 방법에 대한 자세한 내용은 다양한 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 공급자에 대한 설명서를 참조하세요. 그러나 기본 규칙은 아주 간단합니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 데이터 소스는 제네릭 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스 또는 이 인터페이스에서 상속된 인터페이스를 지원하는 모든 개체입니다.  
   
 > [!NOTE]
->  와 같은 형식은 <xref:System.Collections.ArrayList> 제네릭이 아닌를 지 원하는 <xref:System.Collections.IEnumerable> 인터페이스도 사용할 수도 있습니다는 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 데이터 원본입니다. 자세한 내용은 [방법: LINQ를 사용하여 ArrayList 쿼리(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)를 참조하세요.  
+>  제네릭이 아닌 <xref:System.Collections.IEnumerable> 인터페이스를 지원하는 <xref:System.Collections.ArrayList> 같은 형식은 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 데이터 소스로도 사용됩니다. 자세한 내용은 [방법: LINQ를 사용하여 ArrayList 쿼리(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)를 참조하세요.  
   
 ##  <a name="query"></a> 쿼리  
  쿼리는 데이터 소스 또는 소스에서 검색할 정보를 지정합니다. 필요한 경우 쿼리는 정보를 반환하기 전에 해당 정보를 정렬, 그룹화 및 구체화하는 방법도 지정합니다. 쿼리는 쿼리 변수에 저장되고 쿼리 식으로 초기화됩니다. 쿼리를 쉽게 작성할 수 있도록 C#에서는 새로운 쿼리 구문이 도입되었습니다.  
@@ -109,7 +109,7 @@ IQueryable<Customer> custQuery =
   
  [!code-cs[csLinqGettingStarted#5](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_4.cs)]  
   
- 쿼리 즉시 실행 하 고 해당 결과 캐시를 호출할 수 있습니다는 <xref:System.Linq.Enumerable.ToList%2A> 또는 <xref:System.Linq.Enumerable.ToArray%2A> 메서드.  
+ 모든 쿼리를 즉시 실행하고 그 결과를 캐시하기 위해 <xref:System.Linq.Enumerable.ToList%2A> 또는 <xref:System.Linq.Enumerable.ToArray%2A> 메서드를 호출할 수 있습니다.  
   
  [!code-cs[csLinqGettingStarted#6](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_5.cs)]  
   
