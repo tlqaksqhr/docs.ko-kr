@@ -30,10 +30,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 0832ee88bba58579eea001335be9cb8c2130834d
-ms.openlocfilehash: 3fc7bb7cb54cb83fbb1c008283302c816f4d6fa4
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 4dd406d40bd6f3dc12db19087be80c13644419d7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="getting-started-with-c"></a>C# 시작
@@ -48,7 +48,7 @@ ms.lasthandoff: 05/22/2017
   
 ## <a name="related-sections"></a>관련 단원  
  [C#용 Visual Studio 개발 환경 사용](https://docs.microsoft.com/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
- [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] 통합 개발 환경 사용 지침을 제공합니다.  
+ [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 통합 개발 환경 사용 지침을 제공합니다.  
   
  [C# 프로그래밍 가이드](../../csharp/programming-guide/index.md)  
  C# 프로그래밍 개념에 대한 정보를 제공하고 C#에서 다양한 작업을 수행하는 방법을 설명합니다.  
