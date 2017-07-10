@@ -29,10 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: d95795c5900561bdb9d8247f819a51c2086377b7
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 6df68180b0b159009bfd4ccc3ff54db115791d9f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="visual-basic"></a>Visual Basic
@@ -59,7 +60,7 @@ Visual Basic은 형식이 안전한 개체 지향 응용 프로그램을 생산�
  Visual Basic 언어 및 컴파일러 정보를 포함합니다.  
 
  [Visual Basic을 사용한 응용 프로그램 개발](../visual-basic/developing-apps/index.md)  
- 보안, 예외 처리, [!INCLUDE[dnprdnshort](../csharp/getting-started/includes/dnprdnshort_md.md)]클래스 라이브러리 사용 등과 같이 Visual Basic을 사용한 개발의 다양한 측면을 설명합니다.
+ 보안, 예외 처리, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]클래스 라이브러리 사용 등과 같이 Visual Basic을 사용한 개발의 다양한 측면을 설명합니다.
 
  [COM Interop](../visual-basic/programming-guide/com-interop/index.md)  
  Visual Basic을 사용하여 COM(구성 요소 개체 모델)을 만들고 사용하는 작업과 관련된 상호 운용성 문제에 대해 설명합니다.  
@@ -75,4 +76,4 @@ Visual Basic은 형식이 안전한 개체 지향 응용 프로그램을 생산�
  Visual Studio의 기본에 대해 알아보는 데 도움이 되는 항목의 링크를 제공합니다.  
   
  [.NET Framework 클래스 라이브러리](http://go.microsoft.com/fwlink/?LinkID=227195)  
- Microsoft [!INCLUDE[dnprdnshort](../csharp/getting-started/includes/dnprdnshort_md.md)] SDK에 포함된 클래스, 인터페이스, 값 형식 라이브러리에 대한 입문 정보를 제공합니다.
+ Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK에 포함된 클래스, 인터페이스, 값 형식 라이브러리에 대한 입문 정보를 제공합니다.

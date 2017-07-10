@@ -31,18 +31,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 26d2ceac051905f5ac46b59f6fd2598e924355c7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: cdfd19e9df6ec107c1195e7555ce07aea8967588
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="linq-in-visual-basic"></a>Visual Basic의 LINQ
-이 섹션에는 Visual Basic 및 [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)]를 이해하고 사용하는 데 도움이 되는 개요, 예제 및 배경 정보가 나와 있습니다.  
+이 섹션에는 Visual Basic 및 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]를 이해하고 사용하는 데 도움이 되는 개요, 예제 및 배경 정보가 나와 있습니다.  
   
 ## <a name="in-this-section"></a>단원 내용  
  [Visual Basic의 LINQ 소개](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 공급자, 연산자, 쿼리 구조 및 언어 기능을 소개합니다.  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 공급자, 연산자, 쿼리 구조 및 언어 기능을 소개합니다.  
   
  [방법: 데이터베이스 쿼리](../../../../visual-basic/programming-guide/language-features/linq/how-to-query-a-database-by-using-linq.md)  
  SQL Server 데이터베이스에 연결하고 LINQ를 사용하여 쿼리를 실행하는 방법의 예를 제공합니다.  

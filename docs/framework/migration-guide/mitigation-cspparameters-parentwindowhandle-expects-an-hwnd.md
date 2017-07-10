@@ -18,10 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
-ms.openlocfilehash: 31898c86adc687b63a1b7f02eee98aae9b16c5f7
+ms.sourcegitcommit: 84aadd0ccd7b5c786612d06ca0b46fb5aecd3d2b
+ms.openlocfilehash: d068da3253056712f0aab7d536d8faf7c836422b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 # <a name="mitigation-cspparametersparentwindowhandle-expects-an-hwnd"></a>완화: CspParameters.ParentWindowHandle에 HWND 필요
@@ -46,9 +46,9 @@ cspParameters.ParentWindowHandle = form.Handle;
 
 ## <a name="mitigation"></a>완화
 
-올바른 값이 `form.Handle` 값을 포함하는 메모리 위치의 주소임을 확인한 개발자는 <xref:System.Security.AppContext> 스위치 `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle`을 `true`로 설정하여 이러한 동작 변경을 옵트아웃(opt out)할 수 있습니다.
+올바른 값이 `form.Handle` 값을 포함하는 메모리 위치의 주소임을 확인한 개발자는 <xref:System.AppContext> 스위치 `Switch.System.Security.Cryptography.DoNotAddrOfCspParentWindowHandle`을 `true`로 설정하여 이러한 동작 변경을 옵트아웃(opt out)할 수 있습니다.
 
-- <xref:System.Security.AppContext> 인스턴스에서 호환성 스위치를 프로그래밍 방식으로 설정
+- <xref:System.AppContext> 인스턴스에서 호환성 스위치를 프로그래밍 방식으로 설정
 
 - 다음 줄을 app.config 파일의 `<runtime>` 섹션에 추가
    
@@ -58,7 +58,7 @@ cspParameters.ParentWindowHandle = form.Handle;
    </runtime>
    ```
 
-반대로 .NET Framework 4.7에서 실행되지만 이전 버전의 .NET Framework를 대상으로 하는 응용 프로그램에 대한 새로운 동작을 옵트인(opt in)하려는 사용자는 <xref:System.Security.AppContext> 스위치를 `false`로 설정할 수 있습니다.
+반대로 .NET Framework 4.7에서 실행되지만 이전 버전의 .NET Framework를 대상으로 하는 응용 프로그램에 대한 새로운 동작을 옵트인(opt in)하려는 사용자는 <xref:System.AppContext> 스위치를 `false`로 설정할 수 있습니다.
  
 ## <a name="see-also"></a>참고 항목
 
