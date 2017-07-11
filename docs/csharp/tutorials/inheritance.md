@@ -1,5 +1,5 @@
 ---
-title: "C#의 상속"
+title: "C#의 상속 | Microsoft Docs"
 description: "C# 라이브러리 및 응용 프로그램에서 상속 사용 방법 알아보기"
 keywords: "상속(C#), 기본 클래스, 파생 클래스, 추상 기본 클래스"
 author: rpetrusha
@@ -12,23 +12,31 @@ ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 0c76bbcc8e60a2739b8c2735b3576842bd4f0942
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: ebb4c4eb754e456ae8a16226c282dc1698dcdd0d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 05/23/2017
 
 ---
-# <a name="inheritance-in-c-and-net"></a>C# 및 .NET의 상속 #
+<a id="inheritance-in-c-and-net" class="xliff"></a>
 
-## <a name="introduction"></a>소개 ##
+# C# 및 .NET의 상속 #
+
+<a id="introduction" class="xliff"></a>
+
+## 소개 ##
 
 이 자습서에서는 C#의 상속에 대해 소개합니다. 상속은 특정 기능(데이터 및 동작)을 제공하는 기본 클래스를 정의하고 해당 기능을 상속하거나 재정의하는 파생 클래스를 정의할 수 있는 개체 지향 프로그래밍 언어의 기능입니다.
 
-## <a name="prerequisites"></a>필수 구성 요소 ##
+<a id="prerequisites" class="xliff"></a>
+
+## 필수 구성 요소 ##
 
 이 자습서에서는 .NET Core를 설치했다고 가정합니다. 설치 지침은 [.NET Core 설치 가이드](https://www.microsoft.com/net/core)를 참조하세요. 코드 편집기도 필요합니다. 원하는 어떤 코드 편집기도 사용 가능하지만 이 자습서에서는 [Visual Studio Code](https://code.visualstudio.com)를 사용합니다.
 
-## <a name="running-the-examples"></a>예제 실행 ##
+<a id="running-the-examples" class="xliff"></a>
+
+## 예제 실행 ##
 
 이 자습서의 예제를 만들고 실행하기 위해 명령줄에서 [dotnet](../../core/tools/dotnet.md) 유틸리티를 사용합니다. 각 예제에 대해 다음 단계를 수행합니다.
 
@@ -42,7 +50,9 @@ ms.lasthandoff: 05/15/2017
 
 1. [dotnet run](../../core/tools/dotnet-run.md) 명령을 입력하여 예제를 컴파일하고 실행합니다.
 
-## <a name="background-what-is-inheritance"></a>배경 지식: 상속이란? ##
+<a id="background-what-is-inheritance" class="xliff"></a>
+
+## 배경 지식: 상속이란? ##
 
 *상속*은 개체 지향 프로그래밍의 기본적인 특성 중 하나입니다. 부모 클래스의 동작을 다시 사용(상속), 확장 또는 수정하는 자식 클래스를 정의할 수 있습니다. 멤버가 상속되는 클래스를 *기본 클래스*라고 합니다. 기본 클래스의 멤버를 상속하는 클래스를 *파생 클래스*라고 합니다.
 
@@ -117,7 +127,9 @@ C# 및 .NET은 *단일 상속*만 지원합니다. 즉, 하나의 클래스가 �
    }
    ```
 
-## <a name="implicit-inheritance"></a>암시적 상속 ##
+<a id="implicit-inheritance" class="xliff"></a>
+
+## 암시적 상속 ##
 
 단일 상속을 통해 상속할 수 있는 형식을 제외하고, .NET 형식 시스템의 모든 형식은 @System.Object 또는 여기에서 파생된 형식에서 암시적으로 상속합니다. 따라서 모든 형식에서 공통적인 기능을 사용할 수 있습니다.
 
@@ -156,7 +168,9 @@ C# 및 .NET은 *단일 상속*만 지원합니다. 즉, 하나의 클래스가 �
 | enum | @System.Enum, System.ValueType, @System.Object |
 | 대리자 | @System.MulticastDelegate, @System.Delegate, @System.Object |
 
-## <a name="inheritance-and-an-is-a-relationship"></a>상속 및 "~이다(is a)" 관계 ##
+<a id="inheritance-and-an-is-a-relationship" class="xliff"></a>
+
+## 상속 및 "~이다(is a)" 관계 ##
 
 일반적으로 상속은 기본 클래스와 하나 이상의 파생 클래스 간 "~이다(is a)" 관계를 나타내는 데 사용됩니다. 여기서 파생 클래스는 기본 클래스의 특수화된 버전입니다. 즉, 파생 클래스는 기본 클래스의 한 종류입니다. 예를 들어 `Publication` 클래스는 임의 종류의 출판물을 나타내고 `Book` 및 `Magazine` 클래스는 특정 유형의 출판물을 나타냅니다.
 
@@ -172,11 +186,15 @@ C# 및 .NET은 *단일 상속*만 지원합니다. 즉, 하나의 클래스가 �
 
 상속을 기준으로 하는 ~이다(is a) 관계는 기본 클래스와 기본 클래스에 추가 멤버를 더하거나 기본 클래스에 없는 추가 기능을 필요로 하는 파생 클래스에 가장 잘 적용됩니다.
 
-## <a name="designing-the-base-class-and-derived-classes"></a>기본 클래스 및 파생 클래스 디자인 ##
+<a id="designing-the-base-class-and-derived-classes" class="xliff"></a>
+
+## 기본 클래스 및 파생 클래스 디자인 ##
 
 기본 클래스와 해당 파생 클래스를 디자인하는 프로세스를 살펴보겠습니다. 이 섹션에서는 책, 잡지, 신문, 저널, 기사 등과 같은 모든 종류의 출판물을 나타내는 기본 클래스 `Publication`을 정의합니다. 또한 `Publication` 클래스에서 파생되는 `Book` 클래스도 정의합니다. `Magazine`, `Journal`, `Newspaper` 및 `Article` 등의 다른 파생 클래스를 정의하도록 예제를 쉽게 확장할 수 있습니다.
 
-### <a name="the-base-publication-class"></a>기본 `Publication` 클래스 ###
+<a id="the-base-publication-class" class="xliff"></a>
+
+### 기본 `Publication` 클래스 ###
 
 `Publication` 클래스를 디자인할 때는 다음과 같은 몇 가지 디자인 결정을 내려야 합니다.
 
@@ -245,7 +263,9 @@ C# 및 .NET은 *단일 상속*만 지원합니다. 즉, 하나의 클래스가 �
 
 ![Object 및 Publication 클래스](media/publication-class.jpg)
 
-### <a name="the-book-class"></a>`Book` 클래스 ###
+<a id="the-book-class" class="xliff"></a>
+
+### `Book` 클래스 ###
 
 `Book` 클래스는 책을 특수한 출판문 형식으로 나타냅니다. 다음 예제에서는 `Book` 클래스에 대한 소스 코드를 보여 줍니다.
 
@@ -301,7 +321,9 @@ C# 및 .NET은 *단일 상속*만 지원합니다. 즉, 하나의 클래스가 �
 
 [!code-csharp[상속](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 
-## <a name="see-also"></a>참고 항목 ##
+<a id="see-also" class="xliff"></a>
+
+## 참고 항목 ##
 
 [클래스 및 개체](../tour-of-csharp/classes-and-objects.md)</br>
 [상속(C# 프로그래밍 가이드)](../programming-guide/classes-and-structs/inheritance.md)

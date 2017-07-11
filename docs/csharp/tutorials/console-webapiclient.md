@@ -1,5 +1,5 @@
 ---
-title: ".NET Core를 사용하여 REST 클라이언트 만들기"
+title: ".NET Core를 사용하여 REST 클라이언트 만들기 | Microsoft Docs"
 description: "이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능에 대해 설명합니다."
 keywords: .NET, .NET Core
 author: BillWagner
@@ -11,16 +11,20 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
 ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: 3dcf0204d57861543743fee4de9523231465d24c
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: e39e4f606d4bd1f17f5cb84940a48ef4bd53bd2d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="rest-client"></a>REST 클라이언트
+<a id="rest-client" class="xliff"></a>
 
-## <a name="introduction"></a>소개
+# REST 클라이언트
+
+<a id="introduction" class="xliff"></a>
+
+## 소개
 이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능에 대해 설명합니다. 다음을 배울 수 있습니다.
 *    .NET Core CLI(명령줄 인터페이스)의 기본 사항
 *   C# 언어 기능의 개요
@@ -35,16 +39,22 @@ GitHub에서 REST 서비스에 HTTP 요청을 실행하는 응용 프로그램�
 
 이 항목에 대한 [최종 샘플](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient)을 따르려는 경우 해당 샘플을 다운로드할 수 있습니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+<a id="prerequisites" class="xliff"></a>
+
+## 필수 구성 요소
 .NET Core를 실행하려면 컴퓨터에 설정해야 합니다. [.NET Core](https://www.microsoft.com/net/core) 페이지에서 설치 지침을 확인할 수 있습니다. Windows, Linux, macOS 또는 Docker 컨테이너에서 이 응용 프로그램을 실행할 수 있습니다. 선호하는 코드 편집기를 설치해야 합니다. 아래 설명에서는 오픈 소스 플랫폼 간 편집기인 [Visual Studio Code](https://code.visualstudio.com/)를 사용합니다. 그러나 익숙한 어떤 도구도 사용 가능합니다.
-## <a name="create-the-application"></a>응용 프로그램 만들기
+<a id="create-the-application" class="xliff"></a>
+
+## 응용 프로그램 만들기
 첫 번째 단계에서는 새 응용 프로그램을 만듭니다. 명령 프롬프트를 열고 응용 프로그램에 대한 새 디렉터리를 만듭니다. 해당 디렉터리를 현재 디렉터리로 지정합니다. 명령 프롬프트에 명령 `dotnet new console`을 입력합니다. 이렇게 하면 기본 "Hello World" 응용 프로그램에 대한 시작 파일이 만들어집니다.
 
 파일 수정을 시작하기 전에 간단한 Hello World 응용 프로그램을 실행하는 단계를 진행해 보겠습니다. 응용 프로그램을 만든 후에 명령 프롬프트에서 `dotnet restore`를 입력합니다. 이 명령은 NuGet 패키지 복원 프로세스를 실행합니다. NuGet은 .NET 패키지 관리자입니다. 이 명령은 프로젝트에 대한 누락된 종속성 중 하나를 다운로드합니다. 이 프로젝트는 새 프로젝트이므로 어떤 종속성도 없습니다. 따라서 처음 실행하면 .NET Core 프레임워크가 다운로드됩니다. 이 초기 단계 후에 새 종속 패키지를 추가하거나 종속성 버전을 업데이트할 때 `dotnet restore`를 실행하기만 하면 됩니다.  
 
 패키지를 복원한 후 `dotnet build`를 실행합니다. 이렇게 하면 빌드 엔진이 실행되고 응용 프로그램이 만들어집니다. 마지막으로 `dotnet run`을 실행하여 응용 프로그램을 실행합니다.
 
-## <a name="adding-new-dependencies"></a>새 종속성 추가
+<a id="adding-new-dependencies" class="xliff"></a>
+
+## 새 종속성 추가
 .NET Core의 주요 디자인 목표 중 하나는 .NET Framework 설치의 크기를 최소화하는 것입니다. .NET Core 응용 프로그램 프레임워크에는 .NET Full Framework의 가장 일반적인 요소만 포함되어 있습니다. 응용 프로그램에 일부 기능을 위해 추가 라이브러리가 필요한 경우 C# 프로젝트(*.csproj) 파일에 해당 종속성을 추가합니다. 현재 예제에서는 응용 프로그램이 JSON 응답을 처리할 수 있도록 `System.Runtime.Serialization.Json` 패키지를 추가해야 합니다.
 
 `csproj` 프로젝트 파일을 엽니다. 파일의 첫 번째 줄은 다음과 같습니다.
@@ -64,7 +74,9 @@ GitHub에서 REST 서비스에 HTTP 요청을 실행하는 응용 프로그램�
 
 이러한 변경을 수행한 후에는 패키지가 시스템에 설치되도록 `dotnet restore`를 다시 실행해야 합니다.
 
-## <a name="making-web-requests"></a>웹 요청 수행
+<a id="making-web-requests" class="xliff"></a>
+
+## 웹 요청 수행
 이제 웹에서 데이터 검색을 시작할 준비가 되었습니다. 이 응용 프로그램에서는 [GitHub API](https://developer.github.com/v3/)에서 정보를 읽게 됩니다. [.NET Foundation](http://www.dotnetfoundation.org/) 상위 항목 아래에서 프로젝트에 대한 정보를 읽어 보겠습니다. 먼저 GitHub API에 대해 요청을 수행하여 프로젝트에 대한 정보를 검색합니다. 사용하게 될 끝점은 [https://api.github.com/orgs/dotnet/repos](https://api.github.com/orgs/dotnet/repos)입니다. 이러한 프로젝트에 대해 모든 정보를 검색하려고 하므로 HTTP GET 요청을 사용합니다.
 브라우저도 HTTP GET 요청을 사용하므로 해당 URL을 브라우저에 붙여 넣어 수신되고 처리 중인 정보를 볼 수 있습니다.
 
@@ -130,7 +142,9 @@ using System.Net.Http.Headers;
 이 메서드의 마지막 두 줄은 해당 작업을 대기하고 콘솔에 응답을 출력합니다.
 앱을 빌드한 다음 실행합니다. `ProcessRepositories`에는 `await` 연산자가 포함되므로 이제 빌드 경고는 사라집니다. 길게 표시되는 JSON 형식 텍스트를 볼 수 있습니다.   
 
-## <a name="processing-the-json-result"></a>JSON 결과 처리
+<a id="processing-the-json-result" class="xliff"></a>
+
+## JSON 결과 처리
 
 지금까지 웹 서버에서 응답을 검색하고 해당 응답에 포함된 텍스트를 표시하는 코드를 작성했습니다. 다음에는 JSON 응답을 C# 개체로 변환해 보겠습니다.
 
@@ -192,7 +206,9 @@ foreach (var repo in repositories)
 
 응용 프로그램을 컴파일하고 실행합니다. .NET Foundation에 포함된 리포지토리의 이름이 출력됩니다.
 
-## <a name="controlling-serialization"></a>serialization 제어
+<a id="controlling-serialization" class="xliff"></a>
+
+## serialization 제어
 
 더 많은 기능을 추가하기 전에 `repo` 형식의 주소를 지정하고 더 많은 표준 C# 규칙을 따르도록 합니다. 이 작업을 위해 JSON Serializer가 작동하는 방식을 제어하는 *특성*을 `repo` 형식에 주석으로 지정합니다. 여기서는 이러한 특성을 사용하여 JSON 키 이름과 C# 클래스 및 멤버 이름 간에 매핑을 정의합니다. 사용되는 2가지 특성은 `DataContract` 특성 및 `DataMember` 특성입니다. 규칙에 따라 모든 Attribute 클래스는 접미사 `Attribute`로 끝납니다. 그러나 특성을 적용할 때 해당 접미사를 사용할 필요는 없습니다. 
 
@@ -289,7 +305,9 @@ public static void Main(string[] args)
 
 작업이 완료될 때까지 Task의 `Result` 속성에 대한 액세스가 차단됩니다. 일반적으로 `ProcessRepositories` 메서드에서와 같이 작업의 컴파일을 `await`하는 것을 선호하겠지만 `Main` 메서드에서는 허용되지 않습니다.
 
-## <a name="reading-more-information"></a>추가 정보 읽기
+<a id="reading-more-information" class="xliff"></a>
+
+## 추가 정보 읽기
 
 GitHub API에서 전송되는 JSON 패킷에 있는 속성을 몇 가지 더 처리하는 것으로 마무리해 보겠습니다. 모든 기능을 알 수는 없겠지만 일부 속성을 추가하면 C# 언어의 몇 가지 기능이 추가로 확인됩니다.
 
@@ -366,7 +384,9 @@ Console.WriteLine(repo.LastPush);
 
 이제 해당 버전이 [완성된 샘플](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient)과 일치해야 합니다.
  
-## <a name="conclusion"></a>결론
+<a id="conclusion" class="xliff"></a>
+
+## 결론
 
 이 자습서에서는 웹 요청을 수행하고, 결과를 구문 분석하고, 해당 결과의 속성을 표시하는 방법을 알아보았습니다. 또한 프로젝트에 종속성으로 새 패키지를 추가했습니다. 개체 지향 기술을 지원하는 C# 언어의 일부 기능을 확인했습니다.
 

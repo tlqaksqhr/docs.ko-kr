@@ -1,5 +1,5 @@
 ---
-title: "C# 구조체 | C# 언어 둘러보기"
+title: "C# 구조체 - C# 언어 둘러보기 | Microsoft Docs"
 description: "구조체라고 하는 C# 값 형식의 기본 사항에 대해 알아보기"
 keywords: ".NET, C#, 구조체, 값 형식"
 author: BillWagner
@@ -11,14 +11,16 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 38ce3cdf3aaa033d84bb2c1a421cb04c6f928ab4
-ms.openlocfilehash: 04b1784b461961496856d62aa6cb70b5978e2437
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 1061144a10a95b254c01db4d12144fdc5619a085
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="structs"></a>구조체
+<a id="structs" class="xliff"></a>
+
+# 구조체
 
 ***구조체***는 클래스처럼 데이터 멤버 및 함수 멤버를 포함할 수 있는 데이터 구조이지만 값 형식이며 힙 할당이 필요하지 않다는 점이 클래스와 다릅니다. 구조체 형식의 변수는 구조체의 데이터를 직접 저장하지만 클래스 형식의 변수는 동적으로 할당된 개체에 대한 참조를 저장합니다. 구조체 형식은 사용자 지정 상속을 지원하지 않으며 모든 구조체 형식은 <xref:System.ValueType> 형식에서 암시적으로 상속되고, 이 형식은 다시 `object`에서 암시적으로 상속됩니다.
 

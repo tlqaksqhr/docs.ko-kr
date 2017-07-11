@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio 2017에서 .NET Core로 클래스 라이브러리 사용"
+title: "Visual Studio 2017에서 .NET Core로 클래스 라이브러리 사용 | Microsoft Docs"
 description: "Visual Studio 2017에서 클래스 라이브러리의 멤버를 호출하는 방법을 알아봅니다."
 keywords: ".NET Core, .NET Core 클래스 라이브러리, .NET 표준, .NET 클래스 라이브러리 배포"
 author: BillWagner
@@ -11,14 +11,16 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: d7b94076-1108-4174-94e7-a18f00072bb7
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
-ms.openlocfilehash: d980ae6c3c2f903dcabf18b26670c18fa9a49f22
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 5ad07e4116c75eb9b9d513c2a4fe43dfe62660d5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="consuming-a-class-library-with-net-core-in-visual-studio-2017"></a>Visual Studio 2017에서 .NET Core로 클래스 라이브러리 사용
+<a id="consuming-a-class-library-with-net-core-in-visual-studio-2017" class="xliff"></a>
+
+# Visual Studio 2017에서 .NET Core로 클래스 라이브러리 사용
 
 [Visual Studio 2017에서 .NET Core로 C# 클래스 라이브러리 빌드](./library-with-visual-studio.md) 및 [Visual Studio 2017에서 .NET Core로 클래스 라이브러리 테스트](testing-library-with-visual-studio.md)의 단계를 따라 클래스 라이브러리를 빌드 및 테스트했으며 라이브러리의 릴리스 버전을 빌드했으므로 다음 단계는 호출자가 사용할 수 있게 만드는 것입니다. 이 작업은
 
@@ -26,7 +28,9 @@ ms.lasthandoff: 05/03/2017
 
 * 라이브러리에 일반적으로 액세스할 수 있으면 NuGet 패키지로 배포할 수 있습니다.
 
-## <a name="including-a-library-as-a-project-in-a-solution"></a>라이브러리를 솔루션에 프로젝트로 포함
+<a id="including-a-library-as-a-project-in-a-solution" class="xliff"></a>
+
+## 라이브러리를 솔루션에 프로젝트로 포함
 
 클래스 라이브러리와 동일한 솔루션에 단위 테스트를 포함한 것처럼 응용 프로그램을 해당 솔루션의 일부로 포함할 수 있습니다. 예를 들어 사용자가 문자열을 입력하도록 요구하고 첫 번째 문자가 대문자인지 여부를 보고하는 콘솔 응용 프로그램에서 이 클래스 라이브러리를 사용할 수 있습니다.
 
@@ -62,7 +66,9 @@ ms.lasthandoff: 05/03/2017
 
 [Visual Studio 2017을 사용하여 C# Hello World 응용 프로그램 디버그](debugging-with-visual-studio.md) 및 [Visual Studio 2017을 사용하여 Hello World 응용 프로그램 게시](publishing-with-visual-studio.md)의 단계에 따라 이 라이브러리를 사용하는 응용 프로그램을 디버그하고 게시할 수 있습니다.
 
-## <a name="distributing-the-library-in-a-nuget-package"></a>NuGet 패키지에 포함된 라이브러리 배포
+<a id="distributing-the-library-in-a-nuget-package" class="xliff"></a>
+
+## NuGet 패키지에 포함된 라이브러리 배포
 
 클래스 라이브러리를 NuGet 패키지로 게시하여 광범위하게 사용하도록 할 수 있습니다. Visual Studio에서는 NuGet 패키지의 생성을 지원하지 않습니다. 이 패키지를 만들려면 [`dotnet` 명령줄 유틸리티](../../core/tools/dotnet.md)를 사용합니다.
 

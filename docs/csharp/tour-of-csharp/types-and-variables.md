@@ -1,5 +1,5 @@
 ---
-title: "C# 형식 및 변수 | C# 언어 둘러보기"
+title: "C# 형식 및 변수 - C# 언어 둘러보기 | Microsoft Docs"
 description: "C#에서 형식 정의 및 변수 선언에 대한 자세한 정보"
 keywords: ".NET, csharp, 형식, 참조 형식, 값 형식"
 author: BillWagner
@@ -11,14 +11,16 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
 ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: 24d405ad33cb4f11dd9e7ba7edb39f10db8041a1
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 5c22d1087d27b03cfbf71d319a72e9e02203e9f2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="types-and-variables"></a>형식 및 변수
+<a id="types-and-variables" class="xliff"></a>
+
+# 형식 및 변수
 
 C#에는 두 가지 종류의 형식, 즉 *값 형식*과 *참조 형식*이 있습니다. 값 형식의 변수에는 해당 데이터가 직접 포함되지만 참조 형식의 변수에는 데이터(개체라고도 함)에 대한 참조가 저장됩니다. 참조 형식에서는 두 가지 변수가 같은 개체를 참조할 수 있으므로 한 변수에 대한 작업이 다른 변수에서 참조하는 개체에 영향을 미칠 수 있습니다. 값 형식에서는 변수에 데이터의 자체 사본이 들어 있으며 한 변수의 작업이 다른 변수에 영향을 미칠 수 없습니다(`ref` 및 `out` ref 및 out 매개 변수 제외).
 

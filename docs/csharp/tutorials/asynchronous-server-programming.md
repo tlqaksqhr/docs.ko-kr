@@ -1,5 +1,5 @@
 ---
-title: "비동기 서버 프로그래밍 | C# 가이드"
+title: "비동기 서버 프로그래밍 - C# 가이드 | Microsoft Docs"
 description: "비동기 프로그래밍 기법을 사용하여 서버 작업을 오프로드하기 위한 기술 알아보기"
 keywords: "C#, 비동기, CPU 바인딩, 네트워크 바인딩"
 ms.date: 08/24/2016
@@ -9,14 +9,17 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 7402b29b-1093-456d-be4c-f60ecb8926bb
 redirect_url: /dotnet/articles/csharp/tutorials/index
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: eed659373cb3aeb965e363d13fdf025c7dcfb955
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: daa832604a30ccc24b7ce2d43516de36680797f6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="-asynchronous-server-programming"></a>🔧 비동기 서버 프로그래밍
+<a id="-asynchronous-server-programming" class="xliff"></a>
+
+# 🔧 비동기 서버 프로그래밍
 
 > **참고:**
 > 
