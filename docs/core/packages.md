@@ -1,5 +1,5 @@
 ---
-title: "패키지, 메타패키지 및 프레임워크"
+title: "패키지, 메타패키지 및 프레임워크 | Microsoft Docs"
 description: "패키지, 메타패키지 및 프레임워크"
 keywords: .NET, .NET Core
 author: richlander
@@ -10,20 +10,24 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d97a1501ad25b683cbb5d7fbd8bd1b137f7f4046
-ms.openlocfilehash: e0ba4886bd954c8e772a85a677775167e7c4bc53
+ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
+ms.openlocfilehash: 6a8f57de57e3470b0312b0d248d91d14f613ae94
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/10/2017
+ms.lasthandoff: 06/20/2017
 
 ---
 
-# <a name="packages-metapackages-and-frameworks"></a>패키지, 메타패키지 및 프레임워크
+<a id="packages-metapackages-and-frameworks" class="xliff"></a>
+
+# 패키지, 메타패키지 및 프레임워크
 
 .NET Core는 NuGet 패키지로 구성된 플랫폼입니다. 일부 제품은 정교하게 정의된 패키지로 구성되는 반면 다른 제품은 다소 거칠게 정의된 패키지로 구성됩니다. 이러한 이중성을 수용하기 위해 이 제품은 세분화된 패키지 집합으로 배포되고, 그런 다음 비공식적으로 "메타패키지"라고 하는 패키지 형식의 거친 덩어리로 기술됩니다.
 
 각 .NET Core 패키지는 프레임워크라고 하는 여러 .NET 런타임에서의 실행을 지원합니다. 그러한 프레임워크 중 일부는 `net46`처럼 .NET Framework를 나타내는 기존의 프레임워크입니다. 또 다른 집합은 "패키지 기반 프레임워크"로 간주할 수 있는 새로운 프레임워크로, 프레임워크를 정의하기 위한 새 모델을 설정합니다. 이러한 패키지 기반 프레임워크는 패키지로서 완전히 구성 및 정의되어, 패키지와 프레임워크 간에 강력한 관계를 형성합니다.
 
-## <a name="packages"></a>패키지
+<a id="packages" class="xliff"></a>
+
+## 패키지
 
 .NET Core는 기본 형식, 더 높은 수준의 데이터 형식, 앱 구성 형식 및 공통 유틸리티를 제공하는 패키지 집합으로 나누어집니다. 이러한 각 패키지는 동일한 이름의 단일 어셈블리를 나타냅니다. 예를 들어 [System.Runtime](https://www.nuget.org/packages/System.Runtime)은 System.Runtime.dll을 포함합니다. 
 
@@ -40,10 +44,10 @@ ms.lasthandoff: 04/10/2017
 
 - [System.Runtime](https://www.nuget.org/packages/System.Runtime) - 가장 기본적인 .NET Core 패키지로, <xref:System.Object>, <xref:System.String>, <xref:System.Array>, <xref:System.Action> 및 <xref:System.Collections.Generic.IList%601>를 포함합니다.
 - [System.Collections](https://www.nuget.org/packages/System.Collections) - 주로 제네릭 컬렉션 집합으로, <xref:System.Collections.Generic.List%601> 및 <xref:System.Collections.Generic.Dictionary%602>를 포함합니다.
-- [System.Net.Http](https://www.nuget.org/packages/System.Net.Http) - HTTP 네트워크 통신을 위한 형식 집합으로, <xref:System.Net.Http.HttpClient> 및 <xref:System.Net.Http.HttpResponseMessage>를 포함합니다.
-- [System.IO.FileSystem](https://www.nuget.org/packages/System.IO.FileSystem) - 로컬 또는 네트워크 디스크 기반 저장소에 대한 읽기 및 쓰기를 위한 형식 집합으로, <xref:System.IO.File> 및 <xref:System.IO.Directory>를 포함합니다.
-- [System.Linq](https://www.nuget.org/packages/System.Linq) - 개체 쿼리를 위한 형식 집합으로, `Enumerable` 및 <xref:System.Linq.ILookup%602>을 포함합니다.
-- [System.Reflection](https://www.nuget.org/packages/System.Reflection) - 형식의 로드, 검사 및 활성화를 위한 형식 집합으로, <xref:System.Reflection.Assembly>, <xref:System.Reflection.TypeInfo> 및 <xref:System.Reflection.MethodInfo>를 포함합니다.
+- [System.Net.Http](https://www.nuget.org/packages/System.Net.Http) - HTTP 네트워크 통신에 대한 형식의 집합으로, <xref:System.Net.Http.HttpClient> 및 <xref:System.Net.Http.HttpResponseMessage>를 포함합니다.
+- [System.IO.FileSystem](https://www.nuget.org/packages/System.IO.FileSystem) - 로컬 및 네트워크 디스크 기본 저장소에 대한 읽기 및 쓰기를 위한 형식의 집합으로, <xref:System.IO.File> 및 <xref:System.IO.Directory>를 포함합니다.
+- [System.Linq](https://www.nuget.org/packages/System.Linq) - 개체 쿼리를 위한 형식 집합으로, `Enumerable` 및 <xref:System.Linq.ILookup%602>를 포함합니다.
+- [System.Reflection](https://www.nuget.org/packages/System.Reflection) - 형식의 로드, 검사 및 활성화를 위한 형식의 집합으로, <xref:System.Reflection.Assembly>, <xref:System.Reflection.TypeInfo> 및 <xref:System.Reflection.MethodInfo>를 포함합니다.
 
 일반적으로 패키지별로 프로젝트에 패키지를 포함하는 것보다는 종종 함께 사용되는 패키지 집합인 *메타패키지*를 포함하는 것이 훨씬 더 간단합니다. (메타패키지에 대한 자세한 내용은 다음 단원을 참조하세요.) 그러나 단일 패키지가 필요한 경우 [System.Runtime](https://www.nuget.org/packages/System.Runtime/) 패키지를 참조하는 아래 예제에서처럼 포함할 수 있습니다. 
 
@@ -58,7 +62,9 @@ ms.lasthandoff: 04/10/2017
 </Project>
 ```
 
-## <a name="metapackages"></a>메타패키지
+<a id="metapackages" class="xliff"></a>
+
+## 메타패키지
 
 메타패키지는 서로 의미가 있는 패키지 집합을 기술하기 위한 NuGet 패키지 규칙입니다. 메타패키지는 종속성을 설정함으로써 이러한 패키지 집합을 나타냅니다. 선택적으로, 프레임워크를 지정하여 이 패키지 집합에 대한 프레임워크를 설정할 수 있습니다. 
 
@@ -80,7 +86,9 @@ ms.lasthandoff: 04/10/2017
 - [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) - .NET Core 배포에 포함된 라이브러리를 설명합니다. [`.NETCoreApp` 프레임워크를 설정합니다](https://github.com/dotnet/core-setup/blob/master/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj). 더 작은 `NETStandard.Library`에 종속됩니다.
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) - .NET Core에서 실행되는 mscorlib 기반 PCL(이식 가능한 클래스 라이브러리)을 사용하도록 설정하는 호환성 외관의 집합입니다.
 
-## <a name="frameworks"></a>프레임워크
+<a id="frameworks" class="xliff"></a>
+
+## 프레임워크
 
 각 .NET Core 패키지는 런타임 프레임워크 집합을 지원합니다. 프레임워크는 사용 가능한 API 집합(및 기타 가능한 특성)을 설명하며, 이러한 집합은 특정 프레임워크를 대상으로 할 때 사용할 수 있습니다. 새 API가 추가될 때 버전이 지정됩니다.
 
@@ -96,7 +104,9 @@ ms.lasthandoff: 04/10/2017
 
 `.NETStandard,Version=1.3` 프레임워크는 패키지 기반 프레임워크로서, API를 정의하고 노출하는 프레임워크를 대상으로 하는 패키지에 의존합니다.
 
-## <a name="package-based-frameworks"></a>패키지 기반 프레임워크
+<a id="package-based-frameworks" class="xliff"></a>
+
+## 패키지 기반 프레임워크
 
 프레임워크와 패키지 간에 양방향 관계가 있습니다. 첫 번째 부분은 특정 프레임워크(예: `netstandard1.3`)에 사용 가능한 API를 정의하는 것입니다. `netstandard1.3`(또는 `netstandard1.0`과 같은 호환되는 프레임워크)을 대상으로 하는 패키지는 `netstandard1.3`에 사용 가능한 API를 정의합니다. 순환 정의처럼 들릴 수 있지만 그렇지 않습니다. "패키지 기반" 덕분에 프레임워크의 API 정의는 패키지에서 옵니다. 프레임워크 자체는 API를 정의하지 않습니다.
 
@@ -111,9 +121,11 @@ ms.lasthandoff: 04/10/2017
 - `netstandard`
 - `netcoreapp`
 
-### <a name="net-standard"></a>.NET 표준
+<a id="net-standard" class="xliff"></a>
 
-.NET 표준(대상 프레임워크 모니커: `netstandard`) 프레임워크는 [.NET 표준 라이브러리](../standard/library.md)에 의해 정의되고 그 위에 빌드되는 API를 나타냅니다. 여러 런타임에서 실행되도록 만들어진 라이브러리는 이 프레임워크를 대상으로 하며, .NET Core, .NET Framework 및 Mono/Xamarin 같은 .NET 표준 호환 런타임에서 지원됩니다. 이러한 각 런타임은 구현하는 API에 따라 .NET 표준 버전 집합을 지원합니다. 
+### .NET 표준
+
+.NET 표준(대상 프레임워크 모니커: `netstandard`) 프레임워크는 [.NET 표준](../standard/net-standard.md)에 의해 정의되고 그 위에 빌드되는 API를 나타냅니다. 여러 런타임에서 실행되도록 만들어진 라이브러리는 이 프레임워크를 대상으로 하며, .NET Core, .NET Framework 및 Mono/Xamarin 같은 .NET 표준 호환 런타임에서 지원됩니다. 이러한 각 런타임은 구현하는 API에 따라 .NET 표준 버전 집합을 지원합니다. 
 
 `netstandard` 프레임워크는 `NETStandard.Library` 메타패키지를 암시적으로 참조합니다. 예를 들어 다음 MSBuild 프로젝트 파일은 프로젝트가 .NET 표준 라이브러리 버전 1.6 메타패키지를 참조하는 `netstandard1.6`을 대상으로 지정함을 나타냅니다. 
 
@@ -142,7 +154,9 @@ ms.lasthandoff: 04/10/2017
 
 `NETStandard.Library`의 1.3.0 버전으로 `netstandard1.6`를 대상으로 하는 반대의 경우는 유효하지 않습니다. 더 낮은 메타패키지로 더 높은 프레임워크를 대상으로 할 수 없습니다. 더 낮은 버전의 메타패키지는 더 높은 프레임워크의 자산을 노출하지 않기 때문입니다. 메타패키지의 버전 관리 체계는 메타패키지가 프레임워크의 최고 버전과 일치해야 한다고 주장합니다. 버전 관리 체계 덕분에, `netstandard1.6` 자산을 포함하는 경우 `NETStandard.Library`의 첫 번째 버전은 v1.6.0입니다. 위의 예제에는 v1.3.0이 사용되지만(위 예제와 대칭을 위해), 실제로 존재하지는 않습니다.
 
-### <a name="net-core-application"></a>.NET Core 응용 프로그램
+<a id="net-core-application" class="xliff"></a>
+
+### .NET Core 응용 프로그램
 
 .NET Core 응용 프로그램(TFM: `netcoreapp`) 프레임워크는 .NET Core 배포와 함께 제공되는 패키지 및 관련 API, 그리고 콘솔 응용 프로그램 모델을 나타냅니다. .NET Core 앱은 콘솔 응용 프로그램 모델을 대상으로 하기 때문에 이 프레임워크를 사용해야 하며, .NET Core에서만 실행되도록 만들어진 라이브러리도 마찬가지입니다. 이 프레임워크를 사용하면 앱과 라이브러리의 실행이 .NET Core로만 제한됩니다. 
 
