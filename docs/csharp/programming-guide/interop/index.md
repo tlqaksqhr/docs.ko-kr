@@ -30,18 +30,23 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
-ms.openlocfilehash: c29504e18aa716cbe106dbbe00c608fd465d9ac2
-ms.lasthandoff: 03/31/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: be95d675d22dedcbf45c8eb1e8fd8d9f5ce0b56c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/26/2017
 
 ---
-# <a name="interoperability-c-programming-guide"></a>상호 운용성(C# 프로그래밍 가이드)
+<a id="interoperability-c-programming-guide" class="xliff"></a>
+
+# 상호 운용성(C# 프로그래밍 가이드)
 상호 운용성은 비관리 코드에 대한 기존 투자를 보존하고 활용할 수 있도록 합니다. CLR(공용 언어 런타임)의 제어 하에서 실행되는 코드를 *관리 코드*라고 하고, CLR 외부에서 실행되는 코드를 *비관리 코드*라고 합니다. COM, COM+, C++ 구성 요소, ActiveX 구성 요소 및 Microsoft Win32 API는 비관리 코드의 예입니다.  
   
- [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]에서는 플랫폼 호출 서비스, <xref:System.Runtime.InteropServices> 네임스페이스, C++ 상호 운용성 및 COM 상호 운용성(COM interop)을 통해 비관리 코드와 상호 운용됩니다.  
+ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]에서는 플랫폼 호출 서비스, <xref:System.Runtime.InteropServices> 네임스페이스, C++ 상호 운용성 및 COM 상호 운용성(COM interop)을 통해 비관리 코드와의 상호 운용이 가능합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+<a id="in-this-section" class="xliff"></a>
+
+## 단원 내용  
  [상호 운용성 개요](../../../csharp/programming-guide/interop/interoperability-overview.md)  
  C# 관리 코드와 비관리 코드 간에 상호 운용되도록 하는 방법을 설명합니다.  
   
@@ -60,10 +65,14 @@ ms.lasthandoff: 03/31/2017
  [COM 클래스 예제](../../../csharp/programming-guide/interop/example-com-class.md)  
  C# 클래스를 COM 개체로 노출하는 방법을 보여 줍니다.  
   
-## <a name="c-language-specification"></a>C# 언어 사양  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+<a id="c-language-specification" class="xliff"></a>
+
+## C# 언어 사양  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
+<a id="see-also" class="xliff"></a>
+
+## 참고 항목  
  <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=fullName>   
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
  [비관리 코드와의 상호 운용](https://msdn.microsoft.com/library/sd10k43k)   
