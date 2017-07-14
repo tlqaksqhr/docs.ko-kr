@@ -1,5 +1,5 @@
 ---
-title: "Docker에서 콘솔 응용 프로그램 실행"
+title: "Docker에서 콘솔 응용 프로그램 실행 | Microsoft Docs"
 description: "기존 .NET Framework 콘솔 응용 프로그램을 가져와 Windows Docker 컨테이너에서 실행하는 방법을 알아봅니다."
 author: spboyer
 keywords: ".NET, 컨테이너, 콘솔, 응용 프로그램"
@@ -10,14 +10,15 @@ ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
-ms.openlocfilehash: 4f1034763e4dae3711694b441b7a64b40cc99456
+ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
+ms.openlocfilehash: 36df4d44e5c6f5493009ef9cfebeb9f31683a884
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 06/01/2017
 
 ---
 
-# <a name="running-console-applications-in-windows-containers"></a>Windows 컨테이너에서 콘솔 응용 프로그램 실행
+# Windows 컨테이너에서 콘솔 응용 프로그램 실행
+<a id="running-console-applications-in-windows-containers" class="xliff"></a>
 
 콘솔 응용 프로그램은 간단한 상태 쿼리에서 장기 실행 문서 이미지 처리 태스크에 이르기까지 다양한 용도로 사용됩니다. 어떤 경우든지 이러한 응용 프로그램을 시작하고 크기를 조정하는 기능은 하드웨어 취득, 시작 시간 또는 여러 인스턴스 실행의 제약을 받습니다.
 
@@ -48,7 +49,8 @@ Docker 사이트에서 [Docker 개요](https://docs.docker.com/engine/understand
 1. [이미지에 대한 Dockerfile 만들기](#creating-the-dockerfile)
 1. [Docker 컨테이너를 빌드 및 실행하는 프로세스](#creating-the-image)
 
-## <a name="prerequisites"></a>필수 구성 요소
+## 필수 구성 요소
+<a id="prerequisites" class="xliff"></a>
 Windows 컨테이너는 [Windows 10 1주년 업데이트](https://www.microsoft.com/en-us/software-download/windows10/) 또는 [Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server)에서 지원됩니다.
 
 > [!NOTE]
@@ -58,7 +60,8 @@ Windows 컨테이너를 지원하려면 Windows용 Docker 버전 1.12 베타 26 
 
 ![Windows-Containers](./media/console/SwitchContainer.png)
 
-## <a name="building-the-application"></a>응용 프로그램 빌드
+## 응용 프로그램 빌드
+<a id="building-the-application" class="xliff"></a>
 일반적으로 콘솔 응용 프로그램은 설치 관리자, FTP 또는 파일 공유 배포를 통해 배포됩니다. 컨테이너에 배포하는 경우 자산을 컴파일하고 Docker 이미지를 만들 때 사용할 수 있는 위치에 스테이징해야 합니다.
 
 *build.ps1*에서 스크립트는 [MSBuild](https://msdn.microsoft.com/library/dd393574.aspx)를 통해 응용 프로그램을 컴파일하여 자산 빌드 태스크를 완료합니다. 필요한 자산을 마무리하기 위해 MSBuild에 몇 개의 매개 변수가 전달됩니다. 컴파일할 프로젝트 파일 또는 솔루션의 이름, 출력 위치, 마지막으로 구성(릴리스 또는 디버그)입니다.
@@ -73,7 +76,8 @@ function Invoke-MSBuild ([string]$MSBuildPath, [string]$MSBuildParameters) {
 Invoke-MSBuild -MSBuildPath "MSBuild.exe" -MSBuildParameters ".\ConsoleRandomAnswerGenerator.csproj /p:OutputPath=.\publish /p:Configuration=Release"
 ```
 
-## <a name="creating-the-dockerfile"></a>Dockerfile 만들기
+## Dockerfile 만들기
+<a id="creating-the-dockerfile" class="xliff"></a>
 콘솔 .NET Framework 응용 프로그램에 사용되는 기본 이미지는 [Docker 허브](https://hub.docker.com/r/microsoft/windowsservercore/)에서 공개적으로 사용할 수 있는 `microsoft/windowsservercore`입니다. 기본 이미지에는 Windows Server 2016 최소 설치와 .NET Framework 4.6.2가 포함되어 있으며 Windows 컨테이너의 기본 OS 이미지 역할을 합니다.
 
 ```
@@ -83,10 +87,11 @@ ENTRYPOINT ConsoleRandomAnswerGenerator.exe
 ```
 Dockerfile의 첫 번째 줄에서는 [`FROM`](https://docs.docker.com/engine/reference/builder/#/from) 명령을 사용하여 기본 이미지를 지정합니다. 파일에 있는 [`ADD`](https://docs.docker.com/engine/reference/builder/#/add)는 **publish** 폴더의 응용 프로그램 자산을 컨테이너의 루트 폴더에 복사합니다. 마지막으로, 이미지의 [`ENTRYPOINT`](https://docs.docker.com/engine/reference/builder/#/entrypoint) 설정은 컨테이너를 시작할 때 실행할 명령 또는 응용 프로그램을 지정합니다. 
 
-## <a name="creating-the-image"></a>이미지 만들기
+## 이미지 만들기
+<a id="creating-the-image" class="xliff"></a>
 Docker 이미지를 만들기 위해 다음 코드가 *build.ps1* 스크립트에 추가되었습니다. 스크립트를 실행하면 [응용 프로그램 빌드](#building-the-application) 섹션에서 정의된 MSBuild를 통해 컴파일된 자산을 사용하여 `console-random-answer-generator` 이미지가 생성됩니다.
 
-```
+```powershell
 $ImageName="console-random-answer-generator"
 
 function Invoke-Docker-Build ([string]$ImageName, [string]$ImagePath, [string]$DockerBuildArgs = "") {
@@ -106,7 +111,8 @@ REPOSITORY                        TAG                 IMAGE ID            CREATE
 console-random-answer-generator   latest              8f7c807db1b5        8 seconds ago       7.33 GB
 ```
 
-## <a name="running-the-container"></a>컨테이너 실행
+## 컨테이너 실행
+<a id="running-the-container" class="xliff"></a>
 Docker 명령을 사용하여 명령줄에서 컨테이너를 시작할 수 있습니다.
 
 ```
@@ -134,7 +140,8 @@ docker run --rm console-random-answer-generator "Are you a square container?"
 
 이 옵션으로 명령을 실행한 다음 `docker ps -a` 명령의 출력을 살펴보면 컨테이너 ID(`Environment.MachineName`)가 목록에 없는 것을 확인할 수 있습니다.
 
-### <a name="running-the-container-using-powershell"></a>PowerShell을 사용하여 컨테이너 실행
+### PowerShell을 사용하여 컨테이너 실행
+<a id="running-the-container-using-powershell" class="xliff"></a>
 샘플 프로젝트 파일에는 PowerShell을 사용하여 인수를 수락하는 응용 프로그램을 실행하는 방법의 예인 *run.ps1*도 있습니다.
 
 실행하려면 PowerShell을 열고 다음 명령을 사용합니다.
@@ -143,6 +150,7 @@ docker run --rm console-random-answer-generator "Are you a square container?"
 .\run.ps1 "Is this easy or what?"
 ```
 
-## <a name="summary"></a>요약
+## 요약
+<a id="summary" class="xliff"></a>
 Dockerfile을 추가하고 응용 프로그램을 게시하기만 하면 .NET Framework 콘솔 응용 프로그램을 컨테이너화할 수 있으며, 이제 응용 프로그램 코드를 변경하지 않고 여러 인스턴스 실행, 클린 시작 및 중지 등의 Windows Server 2016 기능을 활용할 수 있습니다.
 
