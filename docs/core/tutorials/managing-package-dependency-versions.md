@@ -57,11 +57,11 @@ ms.lasthandoff: 05/23/2017
 
 .NET Core 1.0과 함께 출시된 모든 패키지와 버전의 큰 목록이 있지만 코드가 특정 시나리오에 놓인 경우 이러한 목록을 검토하지 않아도 될 수 있습니다.
 
-****`NETStandard.Library`에만 종속되어 있나요 **?**
+`NETStandard.Library`**에만 종속되어 있나요** **?**
 
 이 경우 `NETStandard.Library` 패키지를 버전 `1.6`으로 고정해야 합니다.  이것은 조정된 메타패키지이므로 패키지 종료도 1.0으로 고정됩니다.
 
-****`Microsoft.NETCore.App`에만 종속되어 있나요 **?**
+`Microsoft.NETCore.App`**에만 종속되어 있나요** **?**
 
 이 경우 `Microsoft.NETCore.App` 패키지를 버전 `1.0.0`으로 고정해야 합니다.  이것은 조정된 메타패키지이므로 패키지 종료도 1.0으로 고정됩니다.
 
