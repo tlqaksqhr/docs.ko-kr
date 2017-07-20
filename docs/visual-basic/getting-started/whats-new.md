@@ -1,6 +1,6 @@
 ---
 title: "Visual Basic의 새로운 기능 | Microsoft 문서"
-ms.date: 2015-07-20
+ms.date: 2017-04-27
 ms.prod: .net
 ms.technology:
 - devlang-visual-basic
@@ -15,8 +15,8 @@ helpviewer_keywords:
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
 caps.latest.revision: 145
-author: dotnet-bot
-ms.author: dotnetcontent
+author: rpetrusha
+ms.author: ronpet
 translation.priority.ht:
 - cs-cz
 - de-de
@@ -31,55 +31,112 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 55cf69a06a047c12f027007ed7180bf74307f2c9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d3f21e32c162133e70a124da125c30afc7303738
+ms.openlocfilehash: 18544a0311e24cf427111e364421db6e9fc27326
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic의 새로운 기능
-이 페이지에는 각 Visual Basic 버전의 주요 기능 이름과 최신 Visual Basic 버전의 새로운 기능 및 향상된 기능에 대한 설명이 정리되어 있습니다.  
+
+이 항목에는 각 Visual Basic 버전의 주요 기능 이름과 최신 Visual Basic 버전의 새로운 기능 및 향상된 기능에 대한 자세한 설명이 정리되어 있습니다.
   
-## <a name="previous-versions"></a>이전 버전  
- Visual Basic / Visual Studio .NET 2002  
- 첫 번째 릴리스  
-  
- Visual Basic / Visual Studio .NET 2003  
- 비트 시프트 연산자, 루프 변수 선언  
-  
- Visual Basic / Visual Studio .NET 2005  
- `My` 형식 및 도우미 형식(앱, 컴퓨터, 파일 시스템, 네트워크에 액세스)  
-  
- Visual Basic / Visual Studio .NET 2008  
- LINQ(통합 언어 쿼리), XML 리터럴, 지역 형식 유추, 개체 이니셜라이저, 익명 형식, 확장 메서드, 로컬 `var` 형식 유추, 람다 식, `if` 연산자, 부분 메서드(Partial Method), nullable 값 형식  
-  
- Visual Basic, Visual Studio .NET 2010  
- 자동으로 구현된 속성, 컬렉션 이니셜라이저, 암시적 줄 연속, 동적, 제네릭 공변성(Covariance)/반공변성(Contravariance), 전역 네임스페이스 액세스  
-  
- Visual Basic / Visual Studio .NET 2012  
- `Async` / `await`, 반복기, 호출자 정보 특성  
-  
- Visual Basic / Visual Studio .NET 2013  
- .NET 컴파일러 플랫폼 ("Roslyn")의 기술 미리 보기  
-  
- Visual Basic / Visual Studio .NET 2015  
- 현재 버전, 아래 참조  
-  
-## <a name="current-version"></a>현재 버전  
- [Nameof](../../csharp/language-reference/keywords/nameof.md)  
+## <a name="current-version"></a>현재 버전
+
+Visual Basic / Visual Studio .NET 2017   
+새로운 기능은 [Visual Basic 2017](#visual-basic-2017)을 참조하세요.
+
+## <a name="previous-versions"></a>이전 버전
+
+Visual Basic / Visual Studio .NET 2015   
+새로운 기능은 [Visual Basic 14](#visual-basic-14)를 참조하세요.
+
+Visual Basic / Visual Studio .NET 2013  
+.NET 컴파일러 플랫폼("Roslyn")의 기술 미리 보기
+
+Visual Basic / Visual Studio .NET 2012   
+`Async` 및 `await` 키워드, 반복기, 호출자 정보 특성
+
+Visual Basic, Visual Studio .NET 2010   
+자동으로 구현된 속성, 컬렉션 이니셜라이저, 암시적 줄 연속, 동적, 제네릭 공변성(Covariance)/반공변성(Contravariance), 전역 네임스페이스 액세스
+
+Visual Basic / Visual Studio .NET 2008   
+LINQ(통합 언어 쿼리), XML 리터럴, 지역 형식 유추, 개체 이니셜라이저, 익명 형식, 확장 메서드, 로컬 `var` 형식 유추, 람다 식, `if` 연산자, 부분 메서드(Partial Method), nullable 값 형식  
+
+Visual Basic / Visual Studio .NET 2005   
+`My` 형식 및 도우미 형식(앱, 컴퓨터, 파일 시스템, 네트워크에 액세스)
+
+Visual Basic / Visual Studio .NET 2003   
+비트 시프트 연산자, 루프 변수 선언
+
+Visual Basic / Visual Studio .NET 2002   
+Visual Basic .NET의 첫 번째 릴리스
+
+## <a name="visual-basic-2017"></a>Visual Basic 2017
+
+[튜플](../programming-guide/language-features/data-types/tuples.md)
+
+튜플은 단일 메서드 호출에서 여러 값을 반환하는 데 주로 사용되는 간단한 데이터 구조입니다. 일반적으로 하나의 메서드에서 여러 값을 반환하려면 다음 중 하나를 수행해야 합니다.
+
+- 사용자 지정 형식(`Class` 또는 `Structure`)을 정의합니다. 이는 대규모 솔루션입니다.
+
+- 메서드에서 값을 반환하는 것 외에도 `ByRef` 매개 변수를 하나 이상 정의합니다.
+ 
+Visual Basic의 튜플 지원을 사용하면 튜플을 신속하게 정의하고, 필요에 따라 해당 값에 의미 체계 이름을 할당하고, 해당 값을 빠르게 검색할 수 있습니다. 다음 예제에서는 <xref:System.Int32.TryParse%2A> 메서드 호출을 래핑하고 튜플을 반환합니다.
+
+[!code-vb[튜플](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#2)]
+
+그런 다음 메서드를 호출하고 반환된 튜플을 코드에서 다음과 같이 처리할 수 있습니다.
+
+[!code-vb[ReturnTuple](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#3)] 
+
+**이진 리터럴 및 자릿수 구분 기호**
+
+`&B` 또는 `&b` 접두사를 사용하여 이진 리터럴을 정의할 수 있습니다. 또한 밑줄 문자 `_`를 자릿수 구분 기호로 사용하여 가독성을 향상할 수 있습니다. 다음 예제에서는 두 기능을 모두 사용하여 `Byte` 값을 할당하고 10진수, 16진수, 이진수로 표시합니다.
+
+[!code-vb[이진](../../../samples/snippets/visualbasic/getting-started/bin-example.vb#1)]
+
+자세한 내용은 [바이트](../language-reference/data-types/byte-data-type.md#literal-assignments), [정수](../language-reference/data-types/integer-data-type.md#literal-assignments), [Long](../language-reference/data-types/long-data-type.md#literal-assignments), [Short](../language-reference/data-types/short-data-type.md#literal-assignments), [SByte](../language-reference/data-types/sbyte-data-type.md#literal-assignments), [UInteger](../language-reference/data-types/uinteger-data-type.md#literal-assignments), [ULong](../language-reference/data-types/ulong-data-type.md#literal-assignments) 및 [UShort](../language-reference/data-types/ushort-data-type.md#literal-assignments) 데이터 형식의 "리터럴 할당" 섹션을 참조하세요.
+
+**C# 참조 반환 값 지원**
+
+C# 7부터 C#에서 참조 반환 값을 지원합니다. 즉, 호출하는 메서드가 참조로 반환된 값을 받을 때 참조 값을 변경할 수 있습니다. Visual Basic에서 참조 반환 값이 있는 메서드를 작성할 수는 없지만 참조 반환 값을 사용하고 수정할 수 있습니다.
+
+예를 들어 C#으로 작성된 다음 `Sentence` 클래스에는 문장 내에서 지정한 하위 문자열로 시작하는 다음 단어를 찾는 `FindNext` 메서드가 포함되어 있습니다. 문자열은 참조 반환 값으로 반환되며, 메서드에 참조로 전달된 `Boolean` 변수는 검색에 성공했는지 여부를 나타냅니다. 즉, 호출자는 반환된 값을 읽을 수 있을 뿐만 아니라 수정할 수도 있으며, 수정 내용이 `Sentence` 클래스에 반영됩니다.
+
+[!code-vb[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
+
+가장 간단한 형태로, 문장에서 찾은 단어를 코드에서 다음과 같이 수정할 수 있습니다. 메서드 대신 메서드가 반환하는 식, 즉 참조 반환 값에 값을 할당합니다.
+
+[!code-vb[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-return.vb#1)]
+
+그러나 이 코드의 문제는 일치 항목이 없을 경우 메서드가 첫 번째 단어를 반환한다는 것입니다. 이 예제에서는 `Boolean` 인수의 값을 검사하여 일치 항목이 있는지 확인하지 않으므로 일치 항목이 없을 경우 첫 번째 단어를 수정합니다. 다음 예제에서는 일치 항목이 없을 경우 첫 번째 단어를 해당 단어로 대체하여 이 문제를 해결합니다.
+
+[!code-vb[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-return.vb#2)]
+
+더 나은 해결 방법은 참조 반환 값이 참조로 전달되는 도우미 메서드를 사용하는 것입니다. 그러면 도우미 메서드가 참조로 전달된 인수를 수정할 수 있습니다. 다음 예제에서는 해당 작업을 수행합니다.
+
+[!code-vb[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-return-helper.vb#1)]
+
+자세한 내용은 [참조 반환 값](../programming-guide/language-features/procedures/ref-return-values.md)을 참조하세요.
+
+## <a name="visual-basic-14"></a>Visual Basic 14
+
+[Nameof](../../csharp/language-reference/keywords/nameof.md)  
  문자열을 하드 코드하지 않고 오류 메시지에서 사용하기 위해 형식이나 멤버의 정규화되지 않은 문자열 이름을 가져올 수 있습니다.  이 기능을 사용하면 리팩터링할 때 코드를 올바르게 유지할 수 있습니다.  이 기능은 MVC(Model-View-Controller) 링크를 연결하고 속성 변경 이벤트를 발생시키는 데도 유용합니다.  
   
- [문자열 보간](../../csharp/language-reference/keywords/interpolated-strings.md)  
+[문자열 보간](../../csharp/language-reference/keywords/interpolated-strings.md)  
  문자열 보간 식을 사용하여 문자열을 생성할 수 있습니다.  보간된 문자열 식은 식이 포함된 템플릿 문자열과 유사합니다.  보간된 문자열은 인수 측면에서 [Composite Formatting](../../standard/base-types/composite-format.md)보다 이해하기 쉽습니다.  
   
- [Null 조건부 멤버 액세스 및 인덱싱](../../csharp/language-reference/operators/null-conditional-operators.md)  
- 멤버 액세스(`?.`) 또는 인덱스(`?[]`) 작업을 수행하기 전에 매우 간단한 구문을 사용하여 null 테스트를 수행할 수 있습니다.  이러한 연산자는 null 검사의 처리를 위해 작성하는 코드의 양을 줄이는 데 도움이 되며 특히 데이터 구조에서 아래로 내려가는 경우에 유용합니다.  왼쪽 피연산자 또는 개체 참조가 null이면 연산에서 null이 반환됩니다.  
+[Null 조건부 멤버 액세스 및 인덱싱](../../csharp/language-reference/operators/null-conditional-operators.md)  
+멤버 액세스(`?.`) 또는 인덱스(`?[]`) 작업을 수행하기 전에 매우 간단한 구문을 사용하여 null 테스트를 수행할 수 있습니다.  이러한 연산자는 null 검사의 처리를 위해 작성하는 코드의 양을 줄이는 데 도움이 되며 특히 데이터 구조에서 아래로 내려가는 경우에 유용합니다.  왼쪽 피연산자 또는 개체 참조가 null이면 연산에서 null이 반환됩니다.  
   
- [다중 선 문자열 리터럴](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
+[다중 선 문자열 리터럴](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
  문자열 리터럴에 줄 바꿈 시퀀스가 포함될 수 있습니다.  `<xml><![CDATA[...text with newlines...]]></xml>.Value` 사용과 관련된 이전 작업은 더 이상 필요하지 않습니다.  
   
- 설명  
- 암시적 줄 연속 뒤, 이니셜라이저 식 내부 및 LINQ 식 항 사이에 주석을 입력할 수 있습니다.  
+설명  
+암시적 줄 연속 뒤, 이니셜라이저 식 내부 및 LINQ 식 항 사이에 주석을 입력할 수 있습니다.  
   
  더 효율적인 정규화된 이름 확인  
  `Threading.Thread.Sleep(1000)`과 같은 코드가 제공된 경우 이전에는 Visual Basic에서 "Threading" 네임스페이스를 조회하고 System.Threading 및 System.Windows.Threading 간에 모호하다는 사실을 발견한 후 오류를 보고했습니다.  이제 Visual Basic에서는 두 가지 가능한 네임스페이스를 함께 고려합니다.  완성 목록을 표시하는 경우 Visual Studio 편집기에서 두 형식의 멤버가 모두 완성 목록에 나열됩니다.  
@@ -129,10 +186,10 @@ End Interface
   
 Interface IMock2 : Inherits ICustomer, ITime  
 End Interface  
-  
 ```  
   
  이제 컴파일러에서 일반 오버로드 확인 규칙을 사용하여 호출하는 데 가장 적합한 `GetDetails`를 선택하며, 샘플에서와 같이 Visual Basic에서 인터페이스 관계를 선언할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Visual Studio 2017의 새로운 기능](https://docs.microsoft.com/en-us/visualstudio/ide/whats-new-in-visual-studio)
+

@@ -1,5 +1,5 @@
 ---
-title: "dotnet 테스트를 사용하여 .NET Core에서 단위 테스트 | Microsoft Docs"
+title: "Dotnet 테스트 및 xUnit을 사용하여 .NET Core에서 단위 테스트 | Microsoft Docs"
 description: "Dotnet 테스트를 사용하여 .NET Core에서 단위 테스트"
 keywords: .NET, .NET Core
 author: ardalis
@@ -9,18 +9,22 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdcdb812-6f13-4f20-9e90-0c0977937142
-translationtype: Human Translation
-ms.sourcegitcommit: 4a1f0c88fb1ccd6694f8d4f5687431646adbe000
-ms.openlocfilehash: 3ca312509d7ba7a7759d1ac294f79cc359419c52
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 06e1ecc181847f87df9ed3a527638008ca6857fc
+ms.openlocfilehash: b5c6d162adf363da41c4c60fdd9fe38e1d58d27a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
+<a id="unit-testing-in-net-core-using-dotnet-test-and-xunit" class="xliff"></a>
 
-# <a name="unit-testing-in-net-core-using-dotnet-test"></a>Dotnet 테스트를 사용하여 .NET Core에서 단위 테스트
+# Dotnet 테스트 및 xUnit을 사용하여 .NET Core에서 단위 테스트
 
-이 자습서에서는 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 단위 테스트 개념을 알아볼 수 있습니다. 미리 빌드된 솔루션을 사용하여 이 자습서를 진행하려는 경우 시작하기 전에 [샘플 코드를 보거나 다운로드](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test/).
+이 자습서에서는 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 단위 테스트 개념을 알아볼 수 있습니다. 미리 빌드된 솔루션을 사용하여 이 자습서를 진행하려는 경우 시작하기 전에 [샘플 코드를 보거나 다운로드](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test/). 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
 
-### <a name="creating-the-source-project"></a>소스 프로젝트 만들기
+<a id="creating-the-source-project" class="xliff"></a>
+
+### 소스 프로젝트 만들기
 
 셸 창을 엽니다. 솔루션을 저장하기 위한 *unit-testing-using-dotnet-test*라는 디렉터리를 만듭니다. 이 새로운 디렉터리 내에 *PrimeService* 디렉터리를 만듭니다. 따라서 지금까지의 디렉터리 구조는 다음과 같습니다.
 
@@ -46,9 +50,11 @@ namespace Prime.Services
 }
 ```
 
-### <a name="creating-the-test-project"></a>테스트 프로젝트 만들기
+<a id="creating-the-test-project" class="xliff"></a>
 
-디렉터리를 다시 *unit-testing-using-dotnet-test* 디렉터리로 변경하고 *PrimeServices.Tests* 디렉터리를 만듭니다. 디렉터리 구조는 다음과 같습니다.
+### 테스트 프로젝트 만들기
+
+디렉터리를 다시 *unit-testing-using-dotnet-test* 디렉터리로 변경하고 *PrimeService.Tests* 디렉터리를 만듭니다. 디렉터리 구조는 다음과 같습니다.
 
 ```
 /unit-testing-using-dotnet-test
@@ -96,7 +102,9 @@ GitHub의 [샘플 리포지토리](https://github.com/dotnet/docs/blob/master/sa
         PrimeServiceTests.csproj
 ```
 
-## <a name="creating-the-first-test"></a>첫 번째 테스트 만들기
+<a id="creating-the-first-test" class="xliff"></a>
+
+## 첫 번째 테스트 만들기
 
 라이브러리 또는 테스트를 빌드하기 전에 *PrimeService.Tests* 디렉터리에서 [`dotnet restore`](../tools/dotnet-restore.md)을 실행합니다. 이 명령은 각 프로젝트에 대해 필요한 모든 NuGet 패키지를 복원합니다.
 
@@ -145,7 +153,9 @@ public bool IsPrime(int candidate)
 
 *PrimeService.Tests* 디렉터리에서 `dotnet test`를 다시 실행합니다. `dotnet test` 명령은 `PrimeService` 프로젝트에 대한 빌드를 실행한 다음 `PrimeService.Tests` 프로젝트에 대한 빌드를 실행합니다. 두 프로젝트를 모두 빌드한 후 이 단일 테스트를 실행합니다. 전달합니다.
 
-### <a name="adding-more-features"></a>더 많은 기능 추가
+<a id="adding-more-features" class="xliff"></a>
+
+### 더 많은 기능 추가
 
 이제 하나의 테스트를 통과했으므로 더 작성할 수 있습니다. 소수에 대한 몇 가지 다른 간단한 사례가 있습니다(0, -1). 이들을 `[Fact]` 특성과 함께 새 테스트로 추가할 수도 있지만, 이렇게 하면 금방 지루해질 수 있습니다. 비슷한 테스트 모음을 작성하는 데 사용할 수 있는 다른 xUnit 특성이 있습니다.  `[Theory]` 특성은 같은 코드를 실행하는 테스트 모음을 나타내지만, 서로 다른 입력 인수를 가지고 있습니다. `[InlineData]` 특성을 사용하여 그러한 입력의 값을 지정할 수 있습니다. 
  

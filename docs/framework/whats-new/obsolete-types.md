@@ -18,13 +18,15 @@ caps.latest.revision: 41
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 175e46e3729190423b85296d7c7c47b136339305
-ms.lasthandoff: 04/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 01c66e2c291766ba00376261740906934f065855
+ms.openlocfilehash: b7040d4c82c9434b2d24a579a93602660479ec59
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
-# <a name="obsolete-types-in-the-net-framework"></a>.NET Framework에서 사용되지 않는 형식
+# .NET Framework에서 사용되지 않는 형식
+<a id="obsolete-types-in-the-net-framework" class="xliff"></a>
 <a name="introduction"></a> 이 문서의 표에는 어셈블리에서 구성된 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 및 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]에서 사용하지 않는 형식이 나열되어 있습니다. 사용하지 않는 형식과 각 어셈블리에서 권장되는 대체 형식의 목록을 보려면 다음 링크를 사용합니다. 이러한 형식은 사용되지 않으므로 해당 형식의 멤버도 모두 사용되지 않습니다. .NET Framework 클래스 라이브러리의 사용되지 않는 멤버에 대한 추가 목록은 [사용되지 않는 멤버](../../../docs/framework/whats-new/obsolete-members.md)를 참조하십시오.  
   
 -   [시스템 어셈블리에서 사용되지 않는 형식](#obsolete_types_in_system_assemblies)  
@@ -80,11 +82,13 @@ ms.lasthandoff: 04/18/2017
     -   [Microsoft.VisualC.dll](#visualc)  
   
 <a name="obsolete_types_in_system_assemblies"></a>   
-## <a name="obsolete-types-in-system-assemblies"></a>시스템 어셈블리에서 사용되지 않는 형식  
+## 시스템 어셈블리에서 사용되지 않는 형식
+<a id="obsolete-types-in-system-assemblies" class="xliff"></a>  
  다음 표에서는 시스템 어셈블리에서 사용되지 않는 것으로 선언된 형식을 보여 줍니다. 이러한 어셈블리는 .NET Framework를 대상으로 하는 일반\-용도의 응용 프로그램 개발에 사용됩니다.  
   
 <a name="mscorlib"></a>   
-### <a name="assembly-mscorlibdll"></a>어셈블리: mscorlib.dll  
+### 어셈블리: mscorlib.dll
+<a id="assembly-mscorlibdll" class="xliff"></a>  
   
 |형식|메시지|  
 |----------|-------------|  
@@ -92,56 +96,56 @@ ms.lasthandoff: 04/18/2017
 |<xref:System.Collections.CaseInsensitiveHashCodeProvider?displayProperty=fullName>|대신 <xref:System.StringComparer?displayProperty=fullName>를 사용하십시오.|  
 |<xref:System.Collections.IHashCodeProvider?displayProperty=fullName>|대신 <xref:System.Collections.IEqualityComparer?displayProperty=fullName>를 사용하십시오.|  
 |<xref:System.Configuration.Assemblies.AssemblyHash?displayProperty=fullName>|<xref:System.Configuration.Assemblies.AssemblyHash> 클래스는 사용되지 않습니다.|  
-|<xref:System.Diagnostics.Contracts.Internal.ContractHelper?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음 대신 System.Runtime.CompilerServices 네임스페이스의 <xref:System.Runtime.CompilerServices.ContractHelper?displayProperty=fullName> 클래스를 사용하십시오.|  
-|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=fullName>|대체 API 사용 가능: 대신 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=fullName> 사용자 지정 특성을 내보냅니다.|  
-|<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.CONNECTDATA?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.CONNECTDATA?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.DESCKIND?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.DESCKIND?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.DISPPARAMS?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.DISPPARAMS?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.ELEMDESC?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.ELEMDESC?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.EXCEPINFO?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.EXCEPINFO?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.FILETIME?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.FILETIME?displayProperty=fullName>을 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.FUNCDESC?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.FUNCDESC?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.FUNCFLAGS?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.FUNCFLAGS?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.FUNCKIND?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.FUNCKIND?displayProperty=fullName>를 사용하십시오.|  
+|<xref:System.Diagnostics.Contracts.Internal.ContractHelper?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음 System.Runtime.CompilerServices 네임스페이스의 <xref:System.Runtime.CompilerServices.ContractHelper?displayProperty=fullName> 클래스를 대신 사용합니다.|  
+|<xref:System.Reflection.Emit.UnmanagedMarshal?displayProperty=fullName>|대체 API 사용 가능: <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=fullName> 사용자 지정 특성을 대신 내보냅니다.|  
+|<xref:System.Runtime.InteropServices.BIND_OPTS?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.BIND_OPTS?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.BINDPTR?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.BINDPTR?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.CALLCONV?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.CALLCONV?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.CONNECTDATA?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.CONNECTDATA?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.DESCKIND?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.DESCKIND?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.DISPPARAMS?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.DISPPARAMS?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.ELEMDESC?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.ELEMDESC?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.EXCEPINFO?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.EXCEPINFO?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.FILETIME?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.FILETIME?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.FUNCDESC?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.FUNCDESC?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.FUNCFLAGS?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.FUNCFLAGS?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.FUNCKIND?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.FUNCKIND?displayProperty=fullName> 를 사용하세요.|  
 |<xref:System.Runtime.InteropServices.IDispatchImplAttribute?displayProperty=fullName>|이 특성은 사용되지 않으며 이후 버전에서 제거됩니다.|  
 |<xref:System.Runtime.InteropServices.IDispatchImplType?displayProperty=fullName>|<xref:System.Runtime.InteropServices.IDispatchImplAttribute?displayProperty=fullName>는 사용되지 않습니다.|  
-|<xref:System.Runtime.InteropServices.IDLDESC?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.IDLDESC?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.IDLFLAG?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.IDLFLAG?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.IMPLTYPEFLAGS?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.INVOKEKIND?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.INVOKEKIND?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.LIBFLAGS?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.LIBFLAGS?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.PARAMDESC?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.PARAMDESC?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.PARAMFLAG?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.PARAMFLAG?displayProperty=fullName>를 사용하십시오.|  
+|<xref:System.Runtime.InteropServices.IDLDESC?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.IDLDESC?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.IDLFLAG?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.IDLFLAG?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.IMPLTYPEFLAGS?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.IMPLTYPEFLAGS?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.INVOKEKIND?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.INVOKEKIND?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.LIBFLAGS?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.LIBFLAGS?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.PARAMDESC?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.PARAMDESC?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.PARAMFLAG?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.PARAMFLAG?displayProperty=fullName> 를 사용하세요.|  
 |<xref:System.Runtime.InteropServices.SetWin32ContextInIDispatchAttribute?displayProperty=fullName>|이 특성은 사용되지 않습니다. 응용 프로그램 도메인에서는 더 이상 IDispatch 호출의 활성화 컨텍스트 경계를 따르지 않습니다.|  
-|<xref:System.Runtime.InteropServices.STATSTG?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.STATSTG?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.SYSKIND?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.SYSKIND?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.TYPEATTR?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.TYPEATTR?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.TYPEDESC?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.TYPEDESC?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.TYPEFLAGS?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.TYPEFLAGS?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.TYPEKIND?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.TYPEKIND?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.TYPELIBATTR?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.TYPELIBATTR?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.UCOMIBindCtx?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.IBindCtx?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.UCOMIConnectionPoint?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.UCOMIConnectionPointContainer?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumConnectionPoints?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumConnections?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.IEnumConnections?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumMoniker?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.IEnumMoniker?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumString?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.IEnumString?displayProperty=fullName>을 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.UCOMIEnumVARIANT?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.UCOMIMoniker?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.IMoniker?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.UCOMIPersistFile?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.IPersistFile?displayProperty=fullName>을 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.UCOMIRunningObjectTable?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.IRunningObjectTable?displayProperty=fullName>을 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.UCOMIStream?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.IStream?displayProperty=fullName>을 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.UCOMITypeComp?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.ITypeComp?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.UCOMITypeInfo?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.ITypeComp?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.VARDESC?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Security.SecurityCriticalScope?displayProperty=fullName>|<xref:System.Security.SecurityCriticalScope>는 .NET 2.0 투명도 호환성을 위해서만 사용됩니다.|  
-|<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=fullName>|<xref:System.Security.SecurityTreatAsSafeAttribute>는 .NET 2.0 투명도 호환성을 위해서만 사용됩니다. 대신 <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=fullName>를 사용하십시오.|  
+|<xref:System.Runtime.InteropServices.STATSTG?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.STATSTG?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.SYSKIND?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.SYSKIND?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.TYPEATTR?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.TYPEATTR?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.TYPEDESC?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.TYPEDESC?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.TYPEFLAGS?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.TYPEFLAGS?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.TYPEKIND?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.TYPEKIND?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.TYPELIBATTR?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.TYPELIBATTR?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.UCOMIBindCtx?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.IBindCtx?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.UCOMIConnectionPoint?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.UCOMIConnectionPointContainer?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumConnectionPoints?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.IEnumConnectionPoints?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumConnections?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.IEnumConnections?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumMoniker?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.IEnumMoniker?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumString?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.IEnumString?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.UCOMIEnumVARIANT?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.IEnumVARIANT?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.UCOMIMoniker?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.IMoniker?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.UCOMIPersistFile?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.IPersistFile?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.UCOMIRunningObjectTable?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.IRunningObjectTable?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.UCOMIStream?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.IStream?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.UCOMITypeComp?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.ITypeComp?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.UCOMITypeInfo?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.VARDESC?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=fullName>|대신 <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Security.SecurityCriticalScope?displayProperty=fullName>|<xref:System.Security.SecurityCriticalScope>는 .NET 2.0 투명도 호환성을 위한 용도로만 사용됩니다.|  
+|<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=fullName>|<xref:System.Security.SecurityTreatAsSafeAttribute>는 .NET 2.0 투명도 호환성을 위한 용도로만 사용됩니다. 대신 <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=fullName>를 사용하십시오.|  
 |<xref:System.Security.Policy.FirstMatchCodeGroup?displayProperty=fullName>|이 형식은 사용되지 않으며 .NET Framework의 이후 릴리스에서 제거됩니다.|  
 |<xref:System.Security.Policy.PermissionRequestEvidence?displayProperty=fullName>|어셈블리 수준의 선언적 보안은 사용되지 않으며 더 이상 기본적으로 CLR에서 적용되지 않습니다.|  
 |<xref:System.Security.Policy.UnionCodeGroup?displayProperty=fullName>|이 형식은 사용되지 않으며 .NET Framework의 이후 릴리스에서 제거됩니다.|  
@@ -149,7 +153,8 @@ ms.lasthandoff: 04/18/2017
  [맨 위로 이동](#introduction)  
   
 <a name="Core"></a>   
-### <a name="assembly-systemcoredll"></a>어셈블리: System.Core.dll  
+### 어셈블리: System.Core.dll
+<a id="assembly-systemcoredll" class="xliff"></a>  
   
 |형식|메시지|  
 |----------|-------------|  
@@ -158,81 +163,87 @@ ms.lasthandoff: 04/18/2017
  [맨 위로 이동](#introduction)  
   
 <a name="data"></a>   
-### <a name="assembly-systemdatadll"></a>어셈블리: System.Data.dll  
+### 어셈블리: System.Data.dll
+<a id="assembly-systemdatadll" class="xliff"></a>  
   
 |형식|메시지|  
 |----------|-------------|  
 |<xref:System.Data.DataSysDescriptionAttribute?displayProperty=fullName>|<xref:System.Data.DataSysDescriptionAttribute>는 사용되지 않습니다.|  
 |<xref:System.Data.PropertyAttributes?displayProperty=fullName>|<xref:System.Data.PropertyAttributes>는 사용되지 않습니다.|  
 |<xref:System.Data.TypedDataSetGenerator?displayProperty=fullName>|<xref:System.Data.TypedDataSetGenerator> 클래스는 이후 릴리스에서 제거됩니다. System.Design.dll의 <xref:System.Data.Design.TypedDataSetGenerator?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Xml.XmlDataDocument?displayProperty=fullName>|The <xref:System.Xml.XmlDataDocument> 클래스는 이후 릴리스에서 제거됩니다.|  
+|<xref:System.Xml.XmlDataDocument?displayProperty=fullName>|<xref:System.Xml.XmlDataDocument> 클래스는 이후 릴리스에서 제거됩니다.|  
   
  [맨 위로 이동](#introduction)  
   
 <a name="oracleclient"></a>   
-### <a name="assembly-systemdataoracleclientdll"></a>어셈블리: System.Data.OracleClient.dll  
+### 어셈블리: System.Data.OracleClient.dll
+<a id="assembly-systemdataoracleclientdll" class="xliff"></a>  
   
 |형식|메시지|  
 |----------|-------------|  
 |<xref:System.Data.OracleClient.OracleClientFactory?displayProperty=fullName>|<xref:System.Data.OracleClient.OracleClientFactory>는 사용되지 않습니다.|  
 |<xref:System.Data.OracleClient.OracleCommand?displayProperty=fullName>|<xref:System.Data.OracleClient.OracleCommand>는 사용되지 않습니다.|  
 |<xref:System.Data.OracleClient.OracleCommandBuilder?displayProperty=fullName>|<xref:System.Data.OracleClient.OracleCommandBuilder>는 사용되지 않습니다.|  
-|<xref:System.Data.OracleClient.OracleConnection?displayProperty=fullName>|<xref:System.Data.OracleClient.OracleConnection>은 사용되지 않습니다.|  
+|<xref:System.Data.OracleClient.OracleConnection?displayProperty=fullName>|<xref:System.Data.OracleClient.OracleConnection>는 사용되지 않습니다.|  
 |<xref:System.Data.OracleClient.OracleConnectionStringBuilder?displayProperty=fullName>|<xref:System.Data.OracleClient.OracleConnectionStringBuilder>는 사용되지 않습니다.|  
 |<xref:System.Data.OracleClient.OracleDataAdapter?displayProperty=fullName>|<xref:System.Data.OracleClient.OracleDataAdapter>는 사용되지 않습니다.|  
-|<xref:System.Data.OracleClient.OraclePermission?displayProperty=fullName>|<xref:System.Data.OracleClient.OraclePermission>은 사용되지 않습니다.|  
+|<xref:System.Data.OracleClient.OraclePermission?displayProperty=fullName>|<xref:System.Data.OracleClient.OraclePermission>는 사용되지 않습니다.|  
 |<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=fullName>|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=fullName>는 사용되지 않습니다.|  
   
  [맨 위로 이동](#introduction)  
   
 <a name="design"></a>   
-### <a name="assembly-systemdesigndll"></a>어셈블리: System.Design.dll  
+### 어셈블리: System.Design.dll
+<a id="assembly-systemdesigndll" class="xliff"></a>  
   
 |형식|메시지|  
 |----------|-------------|  
-|<xref:System.ComponentModel.Design.LocalizationExtenderProvider?displayProperty=fullName>|이 클래스는 사용되지 않습니다. 대신 <xref:System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Web.UI.Design.DataBindingCollectionConverter?displayProperty=fullName>|DataBindings 편집은 속성 눈금 대신 <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=fullName>를 통해 시작되므로 이 형식은 사용하지 않는 것이 좋습니다.|  
-|<xref:System.Web.UI.Design.DataBindingCollectionEditor?displayProperty=fullName>|DataBindings 편집은 속성 눈금 대신 <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=fullName>를 통해 시작되므로 이 형식은 사용하지 않는 것이 좋습니다.|  
-|<xref:System.Web.UI.Design.IControlDesignerBehavior?displayProperty=fullName>|대신 <xref:System.Web.UI.Design.IControlDesignerTag?displayProperty=fullName> 및 <xref:System.Web.UI.Design.IControlDesignerView?displayProperty=fullName>를 사용하는 것이 좋습니다.|  
-|<xref:System.Web.UI.Design.IHtmlControlDesignerBehavior?displayProperty=fullName>|대신 <xref:System.Web.UI.Design.IControlDesignerTag?displayProperty=fullName> 및 <xref:System.Web.UI.Design.IControlDesignerView?displayProperty=fullName>를 사용하는 것이 좋습니다.|  
-|<xref:System.Web.UI.Design.ITemplateEditingFrame?displayProperty=fullName>|템플릿 편집이 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName>에서 처리되므로 이 형식은 사용하지 않는 것이 좋습니다. 템플릿 편집을 지원하려면 <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 속성에서 템플릿 데이터를 표시하고 <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A?displayProperty=fullName>를 호출하십시오.|  
-|<xref:System.Web.UI.Design.IWebFormReferenceManager?displayProperty=fullName>|대신 <xref:System.Web.UI.Design.WebFormsReferenceManager?displayProperty=fullName>를 사용하는 것이 좋습니다. <xref:System.Web.UI.Design.WebFormsReferenceManager>는 추가 기능을 포함하며 확장성을 강화합니다. <xref:System.Web.UI.Design.WebFormsReferenceManager>를 가져오려면 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName>에서 `RootDesigner.ReferenceManager` 속성을 사용하십시오.|  
-|<xref:System.Web.UI.Design.IWebFormsDocumentService?displayProperty=fullName>|대신 <xref:System.Web.UI.Design.WebFormsRootDesigner?displayProperty=fullName>를 사용하는 것이 좋습니다. <xref:System.Web.UI.Design.WebFormsRootDesigner>는 추가 기능을 포함하며 확장성을 강화합니다. <xref:System.Web.UI.Design.WebFormsRootDesigner>를 가져오려면 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName>에서 <xref:System.Web.UI.Design.ControlDesigner.RootDesigner%2A> 속성을 사용하십시오.|  
-|<xref:System.Web.UI.Design.ITemplateEditingService?displayProperty=fullName>|템플릿 편집이 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName>에서 처리되므로 이 형식은 사용하지 않는 것이 좋습니다. 템플릿 편집을 지원하려면 <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 속성에서 템플릿 데이터를 표시하고 <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A?displayProperty=fullName>를 호출하십시오.|  
-|<xref:System.Web.UI.Design.ITemplateEditingService?displayProperty=fullName>|콘텐츠 편집에 <xref:System.Web.UI.Design.EditableDesignerRegion?displayProperty=fullName>을 사용하므로 <xref:System.Web.UI.Design.ContainerControlDesigner?displayProperty=fullName>를 대신 사용하는 것이 좋습니다. 디자이너 영역을 사용하면 편집 중인 콘텐츠를 보다 효율적으로 제어할 수 있습니다.|  
-|<xref:System.Web.UI.Design.TemplateEditingService?displayProperty=fullName>|템플릿 편집이 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName>에서 처리되므로 이 형식은 사용하지 않는 것이 좋습니다. 템플릿 편집을 지원하려면 <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 속성에서 템플릿 데이터를 표시하고 <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A?displayProperty=fullName>를 호출하십시오.|  
-|<xref:System.Web.UI.Design.TemplateEditingVerb?displayProperty=fullName>|템플릿 편집이 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName>에서 처리되므로 이 형식은 사용하지 않는 것이 좋습니다. 템플릿 편집을 지원하려면 <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 속성에서 템플릿 데이터를 표시하고 <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A?displayProperty=fullName>를 호출하십시오.|  
-|<xref:System.Web.UI.Design.WebControls.CalendarAutoFormatDialog?displayProperty=fullName>|자동 서식 대화 상자는 디자이너 호스트를 통해 시작되므로 이 형식은 사용하지 않는 것이 좋습니다. 사용할 수 있는 자동 서식 목록은 <xref:System.Web.UI.Design.ControlDesigner.AutoFormats%2A?displayProperty=fullName> 속성의 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName>에 표시됩니다.|  
-|<xref:System.Web.UI.Design.WebControls.PanelDesigner?displayProperty=fullName>|콘텐츠 편집에 <xref:System.Web.UI.Design.EditableDesignerRegion?displayProperty=fullName>을 사용하므로 대신 <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner?displayProperty=fullName>를 사용하는 것이 좋습니다. 디자이너 영역을 사용하면 편집 중인 콘텐츠를 보다 효율적으로 제어할 수 있습니다.|  
+|<xref:System.ComponentModel.Design.LocalizationExtenderProvider?displayProperty=fullName>|이 클래스는 사용되지 않습니다. 대신 <xref:System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider?displayProperty=fullName> 를 사용하세요.|  
+|<xref:System.Web.UI.Design.DataBindingCollectionConverter?displayProperty=fullName>|DataBindings 편집은 속성 표가 아닌 <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=fullName>를 통해 시작되므로 이 형식은 사용하지 않는 것이 좋습니다.|  
+|<xref:System.Web.UI.Design.DataBindingCollectionEditor?displayProperty=fullName>|DataBindings 편집은 속성 표가 아닌 <xref:System.ComponentModel.Design.DesignerActionList?displayProperty=fullName>를 통해 시작되므로 이 형식은 사용하지 않는 것이 좋습니다.|  
+|<xref:System.Web.UI.Design.IControlDesignerBehavior?displayProperty=fullName>|<xref:System.Web.UI.Design.IControlDesignerTag?displayProperty=fullName> 및 <xref:System.Web.UI.Design.IControlDesignerView?displayProperty=fullName>를 대신 사용하는 것이 좋습니다.|  
+|<xref:System.Web.UI.Design.IHtmlControlDesignerBehavior?displayProperty=fullName>|<xref:System.Web.UI.Design.IControlDesignerTag?displayProperty=fullName> 및 <xref:System.Web.UI.Design.IControlDesignerView?displayProperty=fullName>를 대신 사용하는 것이 좋습니다.|  
+|<xref:System.Web.UI.Design.ITemplateEditingFrame?displayProperty=fullName>|템플릿 편집은 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName>에서 처리되므로 이 형식은 사용하지 않는 것이 좋습니다. 템플릿 편집을 지원하려면 <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 속성에서 템플릿 데이터를 노출하고 <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A?displayProperty=fullName>를 호출하십시오.|  
+|<xref:System.Web.UI.Design.IWebFormReferenceManager?displayProperty=fullName>|<xref:System.Web.UI.Design.WebFormsReferenceManager?displayProperty=fullName>를 대신 사용하는 것이 좋습니다. <xref:System.Web.UI.Design.WebFormsReferenceManager>는 기능을 추가로 포함하며 보다 높은 확장성을 허용합니다. <xref:System.Web.UI.Design.WebFormsReferenceManager>를 가져오려면 `RootDesigner.ReferenceManager`의 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 속성을 사용하십시오.|  
+|<xref:System.Web.UI.Design.IWebFormsDocumentService?displayProperty=fullName>|<xref:System.Web.UI.Design.WebFormsRootDesigner?displayProperty=fullName>를 대신 사용하는 것이 좋습니다. <xref:System.Web.UI.Design.WebFormsRootDesigner>는 기능을 추가로 포함하며 보다 높은 확장성을 허용합니다. <xref:System.Web.UI.Design.WebFormsRootDesigner>를 가져오려면 <xref:System.Web.UI.Design.ControlDesigner.RootDesigner%2A>의 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 속성을 사용하십시오.|  
+|<xref:System.Web.UI.Design.ITemplateEditingService?displayProperty=fullName>|템플릿 편집은 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName>에서 처리되므로 이 형식은 사용하지 않는 것이 좋습니다. 템플릿 편집을 지원하려면 <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 속성에서 템플릿 데이터를 노출하고 <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A?displayProperty=fullName>를 호출하십시오.|  
+|<xref:System.Web.UI.Design.ReadWriteControlDesigner?displayProperty=fullName>|콘텐츠 편집에 <xref:System.Web.UI.Design.ContainerControlDesigner?displayProperty=fullName>을 사용하는 <xref:System.Web.UI.Design.EditableDesignerRegion?displayProperty=fullName>를 대신 사용하는 것이 좋습니다. 디자이너 영역을 사용하면 편집 중인 콘텐츠를 보다 효율적으로 제어할 수 있습니다.|  
+|<xref:System.Web.UI.Design.TemplateEditingService?displayProperty=fullName>|템플릿 편집은 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName>에서 처리되므로 이 형식은 사용하지 않는 것이 좋습니다. 템플릿 편집을 지원하려면 <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 속성에서 템플릿 데이터를 노출하고 <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A?displayProperty=fullName>를 호출하십시오.|  
+|<xref:System.Web.UI.Design.TemplateEditingVerb?displayProperty=fullName>|템플릿 편집은 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName>에서 처리되므로 이 형식은 사용하지 않는 것이 좋습니다. 템플릿 편집을 지원하려면 <xref:System.Web.UI.Design.ControlDesigner.TemplateGroups%2A?displayProperty=fullName> 속성에서 템플릿 데이터를 노출하고 <xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A?displayProperty=fullName>를 호출하십시오.|  
+|<xref:System.Web.UI.Design.WebControls.CalendarAutoFormatDialog?displayProperty=fullName>|자동 서식 대화 상자는 디자이너 호스트를 통해 시작되므로 이 형식은 사용하지 않는 것이 좋습니다. 사용 가능한 자동 서식 목록은 <xref:System.Web.UI.Design.ControlDesigner?displayProperty=fullName> 속성의 <xref:System.Web.UI.Design.ControlDesigner.AutoFormats%2A?displayProperty=fullName>에서 노출됩니다.|  
+|<xref:System.Web.UI.Design.WebControls.PanelDesigner?displayProperty=fullName>|콘텐츠 편집에 <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner?displayProperty=fullName>을 사용하는 <xref:System.Web.UI.Design.EditableDesignerRegion?displayProperty=fullName>를 대신 사용하는 것이 좋습니다. 디자이너 영역을 사용하면 편집 중인 콘텐츠를 보다 효율적으로 제어할 수 있습니다.|  
   
  [맨 위로 이동](#introduction)  
   
 <a name="system"></a>   
-### <a name="assembly-systemdll"></a>어셈블리: System.dll  
+### 어셈블리: System.dll
+<a id="assembly-systemdll" class="xliff"></a>  
   
 |형식|메시지|  
 |----------|-------------|  
-|<xref:System.ComponentModel.IComNativeDescriptorHandler?displayProperty=fullName>|이 인터페이스는 사용되지 않습니다. <xref:System.ComponentModel.TypeDescriptionProvider?displayProperty=fullName>를 추가하여 <xref:System.ComponentModel.TypeDescriptor.ComObjectType%2A?displayProperty=fullName> 형식을 대신 처리하십시오.|  
-|<xref:System.ComponentModel.RecommendedAsConfigurableAttribute?displayProperty=fullName>|대신 <xref:System.ComponentModel.SettingsBindableAttribute?displayProperty=fullName>를 사용하여 새 설정 모델로 작업할 수 있습니다.|  
-|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=fullName>|이 특성은 사용되지 않습니다. 대신 <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=fullName>를 사용하십시오. 예를 들어 CodeDom에 대해 루트 디자이너를 지정하려면 `DesignerSerializerAttribute\(...,typeof\(TypeCodeDomSerializer\)\)`를 사용하십시오.|  
+|<xref:System.ComponentModel.IComNativeDescriptorHandler?displayProperty=fullName>|이 인터페이스는 사용되지 않습니다. <xref:System.ComponentModel.TypeDescriptionProvider?displayProperty=fullName> 형식을 처리하려면 대신 <xref:System.ComponentModel.TypeDescriptor.ComObjectType%2A?displayProperty=fullName>를 추가합니다.|  
+|<xref:System.ComponentModel.RecommendedAsConfigurableAttribute?displayProperty=fullName>|새 설정 모델을 사용하려면 대신 <xref:System.ComponentModel.SettingsBindableAttribute?displayProperty=fullName>를 사용하십시오.|  
+|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=fullName>|이 특성은 사용되지 않습니다. 대신 <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=fullName>를 사용하세요. 예를 들어 CodeDom에 대해 루트 디자이너를 지정하려면 `DesignerSerializerAttribute\(...,typeof\(TypeCodeDomSerializer\)\)`를 사용하십시오.|  
 |<xref:System.Diagnostics.DiagnosticsConfigurationHandler?displayProperty=fullName>|이 클래스는 사용되지 않습니다.|  
-|<xref:System.Diagnostics.PerformanceCounterManager?displayProperty=fullName>|이 클래스는 사용되지 않습니다. 대신 <xref:System.Diagnostics.PerformanceCounter?displayProperty=fullName> 클래스를 통한 성능 카운터를 사용하십시오.|  
-|<xref:System.Net.GlobalProxySelection?displayProperty=fullName>|이 클래스는 사용되지 않습니다. 대신 <xref:System.Net.WebRequest.DefaultWebProxy%2A?displayProperty=fullName>를 사용하여 전역 기본 프록시에 액세스하고 설정합니다. <xref:System.Net.GlobalProxySelection.GetEmptyWebProxy%2A?displayProperty=fullName> 대신 'null'을 사용하십시오.|  
+|<xref:System.Diagnostics.PerformanceCounterManager?displayProperty=fullName>|이 클래스는 사용되지 않습니다. 대신 <xref:System.Diagnostics.PerformanceCounter?displayProperty=fullName> 클래스를 통해 성능 카운터를 사용하십시오.|  
+|<xref:System.Net.GlobalProxySelection?displayProperty=fullName>|이 클래스는 사용되지 않습니다. 전역 기본 프록시를 액세스 및 설정하려면 대신 <xref:System.Net.WebRequest.DefaultWebProxy%2A?displayProperty=fullName>를 사용하십시오. <xref:System.Net.GlobalProxySelection.GetEmptyWebProxy%2A?displayProperty=fullName> 대신 'null'을 사용하십시오.|  
 |<xref:System.Net.Sockets.SocketClientAccessPolicyProtocol?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> 이 형식을 사용하면 컴파일러 오류가 생성됩니다.<br /><br /> 이 API는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.|  
   
  [맨 위로 이동](#introduction)  
   
 <a name="enterpriseservices"></a>   
-### <a name="assembly-systementerpriseservicesdll"></a>어셈블리: System.EnterpriseServices.dll  
+### 어셈블리: System.EnterpriseServices.dll
+<a id="assembly-systementerpriseservicesdll" class="xliff"></a>  
   
 |형식|메시지|  
 |----------|-------------|  
-|<xref:System.EnterpriseServices.RegistrationHelperTx?displayProperty=fullName>|<xref:System.EnterpriseServices.RegistrationHelperTx>는 사용되지 않습니다.|  
+|<xref:System.EnterpriseServices.RegistrationHelperTx?displayProperty=fullName>|<xref:System.EnterpriseServices.RegistrationHelperTx> 클래스는 사용되지 않습니다.|  
   
  [맨 위로 이동](#introduction)  
   
 <a name="net"></a>   
-### <a name="assembly-systemnetdll"></a>어셈블리: System.Net.dll  
+### 어셈블리: System.Net.dll
+<a id="assembly-systemnetdll" class="xliff"></a>  
   
 |형식|메시지|  
 |----------|-------------|  
@@ -249,12 +260,13 @@ ms.lasthandoff: 04/18/2017
  [맨 위로 이동](#introduction)  
   
 <a name="servicemodel"></a>   
-### <a name="assembly-systemservicemodeldll"></a>어셈블리: System.ServiceModel.dll  
+### 어셈블리: System.ServiceModel.dll
+<a id="assembly-systemservicemodeldll" class="xliff"></a>  
   
 |형식|메시지|  
 |----------|-------------|  
 |<xref:System.ServiceModel.NetPeerTcpBinding?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> 피어 채널 기능은 사용되지 않으며 향후 제거될 예정입니다.|  
-|<xref:System.ServiceModel.Channels.HttpCookieContainerBindingElement?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> 이 형식은 사용되지 않습니다. Http <xref:System.Net.CookieContainer>를 사용하려면 Http 바인딩 또는 <xref:System.ServiceModel.Channels.HttpTransportBindingElement>에서 `AllowCookies`를 사용합니다.|  
+|<xref:System.ServiceModel.Channels.HttpCookieContainerBindingElement?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> 이 형식은 사용되지 않습니다. Http <xref:System.Net.CookieContainer>를 사용하려면 Http 바인딩 또는 `AllowCookies`의 <xref:System.ServiceModel.Channels.HttpTransportBindingElement> 속성을 사용합니다.|  
 |<xref:System.ServiceModel.Channels.PeerCustomResolverBindingElement?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> 피어 채널 기능은 사용되지 않으며 향후 제거될 예정입니다.|  
 |<xref:System.ServiceModel.Channels.PeerTransportBindingElement?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> 피어 채널 기능은 사용되지 않으며 향후 제거될 예정입니다.|  
 |<xref:System.ServiceModel.Configuration.NetPeerTcpBindingCollectionElement?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> 피어 채널 기능은 사용되지 않으며 향후 제거될 예정입니다.|  
@@ -265,28 +277,30 @@ ms.lasthandoff: 04/18/2017
  [맨 위로 이동](#introduction)  
   
 <a name="web"></a>   
-### <a name="assembly-systemwebdll"></a>어셈블리: System.Web.dll  
+### 어셈블리: System.Web.dll
+<a id="assembly-systemwebdll" class="xliff"></a>  
   
 |형식|메시지|  
 |----------|-------------|  
 |<xref:System.Web.Configuration.PassportAuthentication?displayProperty=fullName>|이 형식은 사용되지 않습니다. Passport 인증 제품은 더 이상 지원되지 않으며 [Microsoft Account](http://go.microsoft.com/fwlink/?LinkId=733413)로 대체되었습니다.|  
-|<xref:System.Web.Mail.MailAttachment?displayProperty=fullName>|대신 <xref:System.Net.Mail.Attachment?displayProperty=fullName>를 사용하는 것이 좋습니다.|  
-|<xref:System.Web.Mail.MailEncoding?displayProperty=fullName>|대신 <xref:System.Net.Mime.TransferEncoding?displayProperty=fullName>을 사용하는 것이 좋습니다.|  
-|<xref:System.Web.Mail.MailFormat?displayProperty=fullName>|대신 <xref:System.Net.Mail.MailMessage.IsBodyHtml%2A?displayProperty=fullName>를 사용하는 것이 좋습니다.|  
-|<xref:System.Web.Mail.MailMessage?displayProperty=fullName>|대신 <xref:System.Net.Mail.MailMessage?displayProperty=fullName>를 사용하는 것이 좋습니다.|  
-|<xref:System.Web.Mail.MailPriority?displayProperty=fullName>|대신 <xref:System.Net.Mail.MailPriority?displayProperty=fullName>를 사용하는 것이 좋습니다.|  
-|<xref:System.Web.Mail.SmtpMail?displayProperty=fullName>|대신 <xref:System.Net.Mail.SmtpClient?displayProperty=fullName>를 사용하는 것이 좋습니다.|  
+|<xref:System.Web.Mail.MailAttachment?displayProperty=fullName>|<xref:System.Net.Mail.Attachment?displayProperty=fullName>를 대신 사용하는 것이 좋습니다.|  
+|<xref:System.Web.Mail.MailEncoding?displayProperty=fullName>|<xref:System.Net.Mime.TransferEncoding?displayProperty=fullName>를 대신 사용하는 것이 좋습니다.|  
+|<xref:System.Web.Mail.MailFormat?displayProperty=fullName>|<xref:System.Net.Mail.MailMessage.IsBodyHtml%2A?displayProperty=fullName>를 대신 사용하는 것이 좋습니다.|  
+|<xref:System.Web.Mail.MailMessage?displayProperty=fullName>|<xref:System.Net.Mail.MailMessage?displayProperty=fullName>를 대신 사용하는 것이 좋습니다.|  
+|<xref:System.Web.Mail.MailPriority?displayProperty=fullName>|<xref:System.Net.Mail.MailPriority?displayProperty=fullName>를 대신 사용하는 것이 좋습니다.|  
+|<xref:System.Web.Mail.SmtpMail?displayProperty=fullName>|<xref:System.Net.Mail.SmtpClient?displayProperty=fullName>를 대신 사용하는 것이 좋습니다.|  
 |<xref:System.Web.Security.PassportAuthenticationEventArgs?displayProperty=fullName>|이 형식은 사용되지 않습니다. Passport 인증 제품은 더 이상 지원되지 않으며 [Microsoft Account](http://go.microsoft.com/fwlink/?LinkId=733413)로 대체되었습니다.|  
 |<xref:System.Web.Security.PassportAuthenticationEventHandler?displayProperty=fullName>|이 형식은 사용되지 않습니다. Passport 인증 제품은 더 이상 지원되지 않으며 [Microsoft Account](http://go.microsoft.com/fwlink/?LinkId=733413)로 대체되었습니다.|  
 |<xref:System.Web.Security.PassportAuthenticationModule?displayProperty=fullName>|이 형식은 사용되지 않습니다. Passport 인증 제품은 더 이상 지원되지 않으며 [Microsoft Account](http://go.microsoft.com/fwlink/?LinkId=733413)로 대체되었습니다.|  
 |<xref:System.Web.Security.PassportIdentity?displayProperty=fullName>|이 형식은 사용되지 않습니다. Passport 인증 제품은 더 이상 지원되지 않으며 [Microsoft Account](http://go.microsoft.com/fwlink/?LinkId=733413)로 대체되었습니다.|  
 |<xref:System.Web.Security.PassportPrincipal?displayProperty=fullName>|이 형식은 사용되지 않습니다. Passport 인증 제품은 더 이상 지원되지 않으며 [Microsoft Account](http://go.microsoft.com/fwlink/?LinkId=733413)로 대체되었습니다.|  
-|<xref:System.Web.UI.ObjectConverter?displayProperty=fullName>|대신 <xref:System.Convert?displayProperty=fullName> 및 <xref:System.String.Format%2A?displayProperty=fullName>을 사용하는 것이 좋습니다.|  
+|<xref:System.Web.UI.ObjectConverter?displayProperty=fullName>|<xref:System.Convert?displayProperty=fullName> 및 <xref:System.String.Format%2A?displayProperty=fullName>를 대신 사용하는 것이 좋습니다.|  
   
  [맨 위로 이동](#introduction)  
   
 <a name="mobile"></a>   
-### <a name="assembly-systemwebmobiledll"></a>어셈블리: System.Web.Mobile.dll  
+### 어셈블리: System.Web.Mobile.dll
+<a id="assembly-systemwebmobiledll" class="xliff"></a>  
   
 |형식|메시지|  
 |----------|-------------|  
@@ -486,159 +500,171 @@ ms.lasthandoff: 04/18/2017
  [맨 위로 이동](#introduction)  
   
 <a name="workflow_activities"></a>   
-### <a name="assembly-systemworkflowactivitiesdll"></a>어셈블리: System.Workflow.Activities.dll  
+### 어셈블리: System.Workflow.Activities.dll
+<a id="assembly-systemworkflowactivitiesdll" class="xliff"></a>  
   
 |형식|메시지|  
 |----------|-------------|  
-|<xref:System.Workflow.Activities?displayProperty=fullName> 네임스페이스의 모든 형식|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*에서 새 형식을 사용하십시오.|  
-|<xref:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하십시오.|  
-|<xref:System.Workflow.Activities.Rules.RuleActionTrackingEvent?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하십시오.|  
-|<xref:System.Workflow.Activities.Rules.RuleConditionReference?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하십시오.|  
-|<xref:System.Workflow.Activities.Rules.RuleSetReference?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하십시오.|  
+|<xref:System.Workflow.Activities?displayProperty=fullName> 네임스페이스의 모든 형식|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하세요.|  
+|<xref:System.Workflow.Activities.Configuration.ActiveDirectoryRoleFactoryConfiguration?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하세요.|  
+|<xref:System.Workflow.Activities.Rules.RuleActionTrackingEvent?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하세요.|  
+|<xref:System.Workflow.Activities.Rules.RuleConditionReference?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하세요.|  
+|<xref:System.Workflow.Activities.Rules.RuleSetReference?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하세요.|  
   
  [맨 위로 이동](#introduction)  
   
 <a name="workflow_componentmodel"></a>   
-### <a name="assembly-systemworkflowcomponentmodeldll"></a>어셈블리: System.Workflow.ComponentModel.dll  
+### 어셈블리: System.Workflow.ComponentModel.dll
+<a id="assembly-systemworkflowcomponentmodeldll" class="xliff"></a>  
   
 |형식|메시지|  
 |----------|-------------|  
-|<xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=fullName> 및 <xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=fullName>를 제외한 <xref:System.Workflow.ComponentModel> 네임스페이스의 모든 형식|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하십시오.|  
-|<xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=fullName> 및 <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=fullName>을 제외한 <xref:System.Workflow.ComponentModel.Compiler> 네임스페이스의 모든 형식|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하십시오.|  
-|<xref:System.Workflow.ComponentModel.Design.ConnectorEventHandler>를 제외한 <xref:System.Workflow.ComponentModel.Design> 네임스페이스의 모든 형식|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하십시오.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하십시오.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializer?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하십시오.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하십시오.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하십시오.|  
-|<xref:System.Workflow.ComponentModel.Serialization.ActivityTypeCodeDomSerializer?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하십시오.|  
-|<xref:System.Workflow.ComponentModel.Serialization.CompositeActivityMarkupSerializer?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하십시오.|  
-|<xref:System.Workflow.ComponentModel.Serialization.DependencyObjectCodeDomSerializer?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하십시오.|  
+|<xref:System.Workflow.ComponentModel> 및 <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=fullName>를 제외한 <xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=fullName> 네임스페이스의 모든 형식|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하세요.|  
+|<xref:System.Workflow.ComponentModel.Compiler> 및 <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=fullName>를 제외한 <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=fullName> 네임스페이스의 모든 형식|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하세요.|  
+|<xref:System.Workflow.ComponentModel.Design>를 제외한 <xref:System.Workflow.ComponentModel.Design.ConnectorEventHandler> 네임스페이스의 모든 형식|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하세요.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하세요.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializer?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하세요.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하세요.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivitySurrogateSelector?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하세요.|  
+|<xref:System.Workflow.ComponentModel.Serialization.ActivityTypeCodeDomSerializer?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하세요.|  
+|<xref:System.Workflow.ComponentModel.Serialization.CompositeActivityMarkupSerializer?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하세요.|  
+|<xref:System.Workflow.ComponentModel.Serialization.DependencyObjectCodeDomSerializer?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하세요.|  
   
  [맨 위로 이동](#introduction)  
   
 <a name="workflow_runtime"></a>   
-### <a name="assembly-systemworkflowruntimedll"></a>어셈블리: System.Workflow.Runtime.dll  
+### 어셈블리: System.Workflow.Runtime.dll
+<a id="assembly-systemworkflowruntimedll" class="xliff"></a>  
   
 |형식|메시지|  
 |----------|-------------| 
-|System.Activities.Statements.Interop](assetId:///T:System.Activities.Statements.Interop)|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br />Workflow Foundation 3.0 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*에서 Workflow 4.0 형식을 사용하십시오.|  
-|<xref:System.Activities.Tracking.InteropTrackingRecord>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br />Workflow Foundation 3.0 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*에서 Workflow 4.0 형식을 사용하십시오.|   
-|<xref:System.Workflow.Runtime> 네임스페이스의 모든 형식|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하십시오.|  
-|<xref:System.Workflow.Runtime.Configuration> 네임스페이스의 모든 형식|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하십시오.|  
-|<xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback>을 제외한 <xref:System.Workflow.Runtime.DebugEngine>의 네임스페이스의 모든 형식|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하십시오.|  
-|<xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback>을 제외한 <xref:System.Workflow.Runtime.Hosting> 네임스페이스의 모든 형식|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하십시오.|  
-|<xref:System.Workflow.Runtime.Tracking> 네임스페이스의 모든 형식|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하십시오.|  
+|<xref:System.Activities.Statements.Interop>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br />Workflow Foundation 3.0 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 Workflow 4.0 형식을 사용하세요.|  
+|<xref:System.Activities.Tracking.InteropTrackingRecord>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br />Workflow Foundation 3.0 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 Workflow 4.0 형식을 사용하세요.|   
+|<xref:System.Workflow.Runtime> 네임스페이스의 모든 형식|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하세요.|  
+|<xref:System.Workflow.Runtime.Configuration> 네임스페이스의 모든 형식|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하세요.|  
+|<xref:System.Workflow.Runtime.DebugEngine>를 제외한 <xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback> 네임스페이스의 모든 형식|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하세요.|  
+|<xref:System.Workflow.Runtime.Hosting>를 제외한 <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback> 네임스페이스의 모든 형식|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하세요.|  
+|<xref:System.Workflow.Runtime.Tracking> 네임스페이스의 모든 형식|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> System.Workflow.\* 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 형식을 사용하세요.|  
   
  [맨 위로 이동](#introduction)  
   
 <a name="workflowservices"></a>   
-### <a name="assembly-systemworkflowservicesdll"></a>어셈블리: System.WorkflowServices.dll  
+### 어셈블리: System.WorkflowServices.dll
+<a id="assembly-systemworkflowservicesdll" class="xliff"></a>  
   
 |형식|메시지|  
 |----------|-------------|  
-|<xref:System.ServiceModel.WorkflowServiceHost?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*에서 WF 4 형식을 사용하십시오.|  
-|<xref:System.ServiceModel.Activation.WorkflowServiceHostFactory?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*에서 WF 4 형식을 사용하십시오.|  
-|<xref:System.ServiceModel.Activities.Description.WorkflowRuntimeEndpoint?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*에서 WF 4 형식을 사용하십시오.|  
-|<xref:System.ServiceModel.Configuration.ExtendedWorkflowRuntimeServiceElementCollection?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*에서 WF 4 형식을 사용하십시오.|  
-|<xref:System.ServiceModel.Configuration.PersistenceProviderElement?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*에서 WF 4 형식을 사용하십시오.|  
-|<xref:System.ServiceModel.Configuration.WorkflowRuntimeElement?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*에서 WF 4 형식을 사용하십시오.|  
-|<xref:System.ServiceModel.Description.DurableOperationAttribute?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*에서 WF 4 형식을 사용하십시오.|  
-|<xref:System.ServiceModel.Description.DurableServiceAttribute?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*에서 WF 4 형식을 사용하십시오.|  
-|<xref:System.ServiceModel.Description.PersistenceProviderBehavior?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*에서 WF 4 형식을 사용하십시오.|  
-|<xref:System.ServiceModel.Description.UnknownExceptionAction?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*에서 WF 4 형식을 사용하십시오.|  
-|<xref:System.ServiceModel.Description.WorkflowRuntimeBehavior?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*에서 WF 4 형식을 사용하십시오.|  
-|<xref:System.ServiceModel.Dispatcher.DurableOperationContext?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*에서 WF 4 형식을 사용하십시오.|  
-|<xref:System.ServiceModel.Persistence.InstanceLockException?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*에서 WF 4 형식을 사용하십시오.|  
-|<xref:System.ServiceModel.Persistence.InstanceNotFoundException?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*에서 WF 4 형식을 사용하십시오.|  
-|<xref:System.ServiceModel.Persistence.LockingPersistenceProvider?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*에서 WF 4 형식을 사용하십시오.|  
-|<xref:System.ServiceModel.Persistence.PersistenceException?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*에서 WF 4 형식을 사용하십시오.|  
-|<xref:System.ServiceModel.Persistence.PersistenceProvider?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*에서 WF 4 형식을 사용하십시오.|  
-|<xref:System.ServiceModel.Persistence.PersistenceProviderFactory?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*에서 WF 4 형식을 사용하십시오.|  
-|<xref:System.ServiceModel.Persistence.SqlPersistenceProviderFactory?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*에서 WF 4 형식을 사용하십시오.|  
-|<xref:System.Workflow.Activities?displayProperty=fullName> 네임스페이스의 모든 형식|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*에서 WF 4 형식을 사용하십시오.|  
-|<xref:System.Workflow.Runtime.Hosting.ChannelManagerService?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*에서 WF 4 형식을 사용하십시오.|  
+|<xref:System.ServiceModel.WorkflowServiceHost?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 WF 4 형식을 사용하세요.|  
+|<xref:System.ServiceModel.Activation.WorkflowServiceHostFactory?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 WF 4 형식을 사용하세요.|  
+|<xref:System.ServiceModel.Activities.Description.WorkflowRuntimeEndpoint?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 WF 4 형식을 사용하세요.|  
+|<xref:System.ServiceModel.Configuration.ExtendedWorkflowRuntimeServiceElementCollection?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 WF 4 형식을 사용하세요.|  
+|<xref:System.ServiceModel.Configuration.PersistenceProviderElement?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 WF 4 형식을 사용하세요.|  
+|<xref:System.ServiceModel.Configuration.WorkflowRuntimeElement?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 WF 4 형식을 사용하세요.|  
+|<xref:System.ServiceModel.Description.DurableOperationAttribute?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 WF 4 형식을 사용하세요.|  
+|<xref:System.ServiceModel.Description.DurableServiceAttribute?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 WF 4 형식을 사용하세요.|  
+|<xref:System.ServiceModel.Description.PersistenceProviderBehavior?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 WF 4 형식을 사용하세요.|  
+|<xref:System.ServiceModel.Description.UnknownExceptionAction?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 WF 4 형식을 사용하세요.|  
+|<xref:System.ServiceModel.Description.WorkflowRuntimeBehavior?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 WF 4 형식을 사용하세요.|  
+|<xref:System.ServiceModel.Dispatcher.DurableOperationContext?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 WF 4 형식을 사용하세요.|  
+|<xref:System.ServiceModel.Persistence.InstanceLockException?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 WF 4 형식을 사용하세요.|  
+|<xref:System.ServiceModel.Persistence.InstanceNotFoundException?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 WF 4 형식을 사용하세요.|  
+|<xref:System.ServiceModel.Persistence.LockingPersistenceProvider?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 WF 4 형식을 사용하세요.|  
+|<xref:System.ServiceModel.Persistence.PersistenceException?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 WF 4 형식을 사용하세요.|  
+|<xref:System.ServiceModel.Persistence.PersistenceProvider?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 WF 4 형식을 사용하세요.|  
+|<xref:System.ServiceModel.Persistence.PersistenceProviderFactory?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 WF 4 형식을 사용하세요.|  
+|<xref:System.ServiceModel.Persistence.SqlPersistenceProviderFactory?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 WF 4 형식을 사용하세요.|  
+|<xref:System.Workflow.Activities?displayProperty=fullName> 네임스페이스의 모든 형식|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 WF 4 형식을 사용하세요.|  
+|<xref:System.Workflow.Runtime.Hosting.ChannelManagerService?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> WF 3 형식은 사용되지 않습니다. 대신 <xref:System.Activities>.\*의 새 WF 4 형식을 사용하세요.|  
   
  [맨 위로 이동](#introduction)  
   
 <a name="xaml"></a>   
-### <a name="assembly-systemxamldll"></a>어셈블리: System.Xaml.dll  
+### 어셈블리: System.Xaml.dll
+<a id="assembly-systemxamldll" class="xliff"></a>  
   
 |형식|메시지|  
 |----------|-------------|  
-|<xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute?displayProperty=fullName>|XAML 파서에서 사용되지 않습니다. <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=fullName>를 살펴보십시오.|  
+|<xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute?displayProperty=fullName>|XAML 파서에서 사용되지 않습니다. <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=fullName>를 참조하십시오.|  
   
  [맨 위로 이동](#introduction)  
   
 <a name="xml"></a>   
-### <a name="assembly-systemxmldll"></a>어셈블리: System.Xml.dll  
+### 어셈블리: System.Xml.dll
+<a id="assembly-systemxmldll" class="xliff"></a>  
   
 |형식|메시지|  
 |----------|-------------|  
 |<xref:System.Xml.IApplicationResourceStreamResolver?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> 이 형식을 사용하면 컴파일러 오류가 생성됩니다.<br /><br /> 이 API는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.|  
-|<xref:System.Xml.Schema.XmlSchemaCollection?displayProperty=fullName>|스키마 컴파일과 유효성 검사의 경우 <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=fullName>를 사용하십시오.|  
-|<xref:System.Xml.XmlValidatingReader?displayProperty=fullName>|대신 적절한 <xref:System.Xml.XmlReaderSettings?displayProperty=fullName>를 사용하여 <xref:System.Xml.XmlReader.Create%2A?displayProperty=fullName> 메서드에서 생성된 <xref:System.Xml.XmlReader?displayProperty=fullName>를 사용하십시오.|  
+|<xref:System.Xml.Schema.XmlSchemaCollection?displayProperty=fullName>|스키마 컴파일 및 유효성 검사에는 <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=fullName>을 사용하십시오.|  
+|<xref:System.Xml.XmlValidatingReader?displayProperty=fullName>|대신 적절한 <xref:System.Xml.XmlReader?displayProperty=fullName>를 사용하여 <xref:System.Xml.XmlReader.Create%2A?displayProperty=fullName> 메서드에서 만드는 <xref:System.Xml.XmlReaderSettings?displayProperty=fullName>를 사용하십시오.|  
 |<xref:System.Xml.XmlXapResolver?displayProperty=fullName>|이 형식을 사용하면 컴파일러 오류가 생성됩니다. 이 API는 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.|  
-|<xref:System.Xml.Xsl.XslTransform?displayProperty=fullName>|이 클래스는 사용되지 않습니다. 대신 <xref:System.Xml.Xsl.XslCompiledTransform?displayProperty=fullName>을 사용하십시오.|  
+|<xref:System.Xml.Xsl.XslTransform?displayProperty=fullName>|이 클래스는 사용되지 않습니다. 대신 <xref:System.Xml.Xsl.XslCompiledTransform?displayProperty=fullName>를 사용하십시오.|  
   
  [맨 위로 이동](#introduction)  
   
 <a name="WindowsBase"></a>   
-### <a name="assembly-windowsbasedll"></a>어셈블리: WindowsBase.dll  
+### 어셈블리: WindowsBase.dll
+<a id="assembly-windowsbasedll" class="xliff"></a>  
   
 |형식|메시지|  
 |----------|-------------|  
-|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=fullName>|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=fullName>은 사용되지 않습니다. 이 인터페이스는 더 이상 사용되지 않습니다.|  
+|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=fullName>|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=fullName>는 사용되지 않습니다. 이 인터페이스는 더 이상 사용되지 않습니다.|  
   
  [맨 위로 이동](#introduction)  
   
 <a name="obsolete_types_in_microsoft_assemblies"></a>   
-## <a name="obsolete-types-in-microsoft-assemblies"></a>Microsoft 어셈블리에서 사용되지 않는 형식  
+## Microsoft 어셈블리에서 사용되지 않는 형식
+<a id="obsolete-types-in-microsoft-assemblies" class="xliff"></a>  
  다음 단원에서는 Microsoft 어셈블리에서 사용되지 않는 형식을 보여 줍니다. 이러한 어셈블리는 Microsoft.JScript.dll, Microsoft.VisualC.dll 등의 개별 언어를 대상으로 하는 어셈블리와 같은 특수 용도의 어셈블리입니다.  
   
 <a name="IEHost"></a>   
-### <a name="assembly-iehostdll-and-ieexecexe"></a>어셈블리: IEHost.dll 및 IEExec.exe  
+### 어셈블리: IEHost.dll 및 IEExec.exe
+<a id="assembly-iehostdll-and-ieexecexe" class="xliff"></a>  
  IEHost.dll 및 IEExec.exe 어셈블리는 .NET Framework에서 제거되었습니다. 해당 형식 및 멤버는 모두 사용되지 않으며 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]의 일부로 지원되지 않습니다. 이러한 어셈블리는 Windows Forms 컨트롤을 호스팅하여 Internet Explorer에서 실행 파일을 실행하기 위해 사용되었습니다. ClickOnce, XBAP(XAML 브라우저 응용 프로그램) 및 Microsoft Silverlight를 대신 사용하는 것이 좋습니다.  
   
  [맨 위로 이동](#introduction)  
   
 <a name="Engine"></a>   
-### <a name="assembly-microsoftbuildenginedll"></a>어셈블리: Microsoft.Build.Engine.dll  
+### 어셈블리: Microsoft.Build.Engine.dll
+<a id="assembly-microsoftbuildenginedll" class="xliff"></a>  
   
 |형식|메시지|  
 |----------|-------------|  
-|<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=fullName>|이 클래스는 사용되지 않습니다. 대신 <!--zz <xref:Microsoft.Build?displayProperty=fullName> -->``Microsoft.Build` 어셈블리에서 <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=fullName>을 사용하십시오.|  
-|<xref:Microsoft.Build.BuildEngine.Project?displayProperty=fullName>|이 클래스는 사용되지 않습니다. 대신 <xref:Microsoft.Build?displayProperty=fullName> 어셈블리에서 <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=fullName>을 사용하십시오.|  
+|<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=fullName>|이 클래스는 사용되지 않습니다. 대신 *Microsoft.Build* 어셈블리의 <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=fullName>을 사용하세요.|  
+|<xref:Microsoft.Build.BuildEngine.Project?displayProperty=fullName>|이 클래스는 사용되지 않습니다. 대신 *Microsoft.Build* 어셈블리의 <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=fullName>을 사용하세요.|  
   
  [맨 위로 이동](#introduction)  
   
 <a name="jscript"></a>   
-### <a name="assembly-microsoftjscriptdll"></a>어셈블리: Microsoft.JScript.dll  
+### 어셈블리: Microsoft.JScript.dll
+<a id="assembly-microsoftjscriptdll" class="xliff"></a>  
   
 |형식|메시지|  
 |----------|-------------|  
-|<xref:Microsoft.JScript.Vsa.BaseVsaEngine?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 설명서를 참조하십시오.|  
-|<xref:Microsoft.JScript.Vsa.BaseVsaSite?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 설명서를 참조하십시오.|  
-|<xref:Microsoft.JScript.Vsa.BaseVsaStartup?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 설명서를 참조하십시오.|  
-|<xref:Microsoft.JScript.Vsa.IJSVsaCodeItem?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 설명서를 참조하십시오.|  
-|<xref:Microsoft.JScript.Vsa.IJSVsaEngine?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 설명서를 참조하십시오.|  
-|<xref:Microsoft.JScript.Vsa.IJSVsaError?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 설명서를 참조하십시오.|  
-|<xref:Microsoft.JScript.Vsa.IJSVsaGlobalItem?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 설명서를 참조하십시오.|  
-|<xref:Microsoft.JScript.Vsa.IJSVsaItem?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 설명서를 참조하십시오.|  
-|<xref:Microsoft.JScript.Vsa.IJSVsaItems?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 설명서를 참조하십시오.|  
-|<xref:Microsoft.JScript.Vsa.IJSVsaPersistSite?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 설명서를 참조하십시오.|  
-|<xref:Microsoft.JScript.Vsa.IJSVsaReferenceItem?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 설명서를 참조하십시오.|  
-|<xref:Microsoft.JScript.Vsa.IJSVsaSite?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 설명서를 참조하십시오.|  
-|<xref:Microsoft.JScript.Vsa.JSVsaError?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 설명서를 참조하십시오.|  
-|<xref:Microsoft.JScript.Vsa.JSVsaException?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 설명서를 참조하십시오.|  
-|<xref:Microsoft.JScript.Vsa.JSVsaItemFlag?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 설명서를 참조하십시오.|  
-|<xref:Microsoft.JScript.Vsa.JSVsaItemType?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 설명서를 참조하십시오.|  
-|<xref:Microsoft.JScript.Vsa.ResInfo?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 설명서를 참조하십시오.|  
-|<xref:Microsoft.JScript.Vsa.VsaEngine?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 설명서를 참조하십시오.|  
+|<xref:Microsoft.JScript.Vsa.BaseVsaEngine?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 문서를 참조하십시오.|  
+|<xref:Microsoft.JScript.Vsa.BaseVsaSite?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 문서를 참조하십시오.|  
+|<xref:Microsoft.JScript.Vsa.BaseVsaStartup?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 문서를 참조하십시오.|  
+|<xref:Microsoft.JScript.Vsa.IJSVsaCodeItem?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 문서를 참조하십시오.|  
+|<xref:Microsoft.JScript.Vsa.IJSVsaEngine?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 문서를 참조하십시오.|  
+|<xref:Microsoft.JScript.Vsa.IJSVsaError?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 문서를 참조하십시오.|  
+|<xref:Microsoft.JScript.Vsa.IJSVsaGlobalItem?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 문서를 참조하십시오.|  
+|<xref:Microsoft.JScript.Vsa.IJSVsaItem?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 문서를 참조하십시오.|  
+|<xref:Microsoft.JScript.Vsa.IJSVsaItems?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 문서를 참조하십시오.|  
+|<xref:Microsoft.JScript.Vsa.IJSVsaPersistSite?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 문서를 참조하십시오.|  
+|<xref:Microsoft.JScript.Vsa.IJSVsaReferenceItem?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 문서를 참조하십시오.|  
+|<xref:Microsoft.JScript.Vsa.IJSVsaSite?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 문서를 참조하십시오.|  
+|<xref:Microsoft.JScript.Vsa.JSVsaError?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 문서를 참조하십시오.|  
+|<xref:Microsoft.JScript.Vsa.JSVsaException?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 문서를 참조하십시오.|  
+|<xref:Microsoft.JScript.Vsa.JSVsaItemFlag?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 문서를 참조하십시오.|  
+|<xref:Microsoft.JScript.Vsa.JSVsaItemType?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 문서를 참조하십시오.|  
+|<xref:Microsoft.JScript.Vsa.ResInfo?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 문서를 참조하십시오.|  
+|<xref:Microsoft.JScript.Vsa.VsaEngine?displayProperty=fullName>|이 형식은 Visual Studio 2005에서 사용되지 않으므로 사용하지 않는 것이 좋습니다. 이 기능을 대체할 기능은 없습니다. 추가 도움말은 <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=fullName> 문서를 참조하십시오.|  
   
  [맨 위로 이동](#introduction)  
   
 <a name="VBCompat"></a>   
-### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>어셈블리: Microsoft.VisualBasic.Compatibility.dll  
+### 어셈블리: Microsoft.VisualBasic.Compatibility.dll
+<a id="assembly-microsoftvisualbasiccompatibilitydll" class="xliff"></a>  
   
 |형식|메시지|  
 |----------|-------------|  
@@ -713,7 +739,8 @@ ms.lasthandoff: 04/18/2017
  [맨 위로 이동](#introduction)  
   
 <a name="VBCompatData"></a>   
-### <a name="assembly-microsoftvisualbasiccompatibilitydatadll"></a>어셈블리: Microsoft.VisualBasic.Compatibility.Data.dll  
+### 어셈블리: Microsoft.VisualBasic.Compatibility.Data.dll
+<a id="assembly-microsoftvisualbasiccompatibilitydatadll" class="xliff"></a>  
   
 |형식|메시지|  
 |----------|-------------|  
@@ -770,7 +797,8 @@ ms.lasthandoff: 04/18/2017
  [맨 위로 이동](#introduction)  
   
 <a name="visualc"></a>   
-### <a name="assembly-microsoftvisualcdll"></a>어셈블리: Microsoft.VisualC.dll  
+### 어셈블리: Microsoft.VisualC.dll
+<a id="assembly-microsoftvisualcdll" class="xliff"></a>  
   
 |형식|메시지|  
 |----------|-------------|  
@@ -785,6 +813,8 @@ ms.lasthandoff: 04/18/2017
 |<xref:Microsoft.VisualC.NeedsCopyConstructorModifier?displayProperty=fullName>|Microsoft.VisualC.dll은 사용되지 않는 어셈블리이며 이전 버전과의 호환성을 위해서만 존재합니다.|  
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=fullName>|Microsoft.VisualC.dll은 사용되지 않는 어셈블리이며 이전 버전과의 호환성을 위해서만 존재합니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## 참고 항목
+<a id="see-also" class="xliff"></a>  
  [클래스 라이브러리의 사용되지 않는 기능](../../../docs/framework/whats-new/whats-obsolete.md)   
  [사용되지 않는 멤버](../../../docs/framework/whats-new/obsolete-members.md)
+

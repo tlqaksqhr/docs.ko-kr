@@ -1,19 +1,19 @@
 ---
-title: "Docker에서 콘솔 응용 프로그램 실행"
+title: "Docker에서 콘솔 응용 프로그램 실행 | Microsoft Docs"
 description: "기존 .NET Framework 콘솔 응용 프로그램을 가져와 Windows Docker 컨테이너에서 실행하는 방법을 알아봅니다."
 author: spboyer
 keywords: ".NET, 컨테이너, 콘솔, 응용 프로그램"
 ms.date: 09/28/2016
 ms.topic: article
-ms.prod: .net-framework-4.6
+ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
-ms.openlocfilehash: 4f1034763e4dae3711694b441b7a64b40cc99456
+ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
+ms.openlocfilehash: 36df4d44e5c6f5493009ef9cfebeb9f31683a884
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 06/01/2017
 
 ---
 
@@ -86,7 +86,7 @@ Dockerfile의 첫 번째 줄에서는 [`FROM`](https://docs.docker.com/engine/re
 ## <a name="creating-the-image"></a>이미지 만들기
 Docker 이미지를 만들기 위해 다음 코드가 *build.ps1* 스크립트에 추가되었습니다. 스크립트를 실행하면 [응용 프로그램 빌드](#building-the-application) 섹션에서 정의된 MSBuild를 통해 컴파일된 자산을 사용하여 `console-random-answer-generator` 이미지가 생성됩니다.
 
-```
+```powershell
 $ImageName="console-random-answer-generator"
 
 function Invoke-Docker-Build ([string]$ImageName, [string]$ImagePath, [string]$DockerBuildArgs = "") {

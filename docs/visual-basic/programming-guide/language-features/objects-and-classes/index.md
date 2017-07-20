@@ -32,21 +32,21 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4892ed6dcfb3843bd6cb2de2d3e032bfeb1efdf9
-ms.openlocfilehash: 2c2db6fcbbd3d3736d9ab0e1e9190c2516a17937
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: ee5a7731acb52b3f7891ac9490ff227ad478426f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/16/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Visual Basic의 개체 및 클래스
 *개체*는 하나의 단위로 취급될 수 있는 코드 및 데이터의 조합입니다. 개체는 컨트롤 또는 폼과 같은 응용 프로그램의 부분일 수 있습니다. 전체 응용 프로그램이 하나의 개체가 될 수도 있습니다.
 
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]에서 응용 프로그램을 만들 때는 계속해서 개체를 사용하게 됩니다. 컨트롤, 폼 및 데이터 액세스 개체와 같은 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]에서 제공하는 개체를 사용할 수 있습니다. 또한 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 응용 프로그램 내에서 다른 응용 프로그램의 개체를 사용할 수도 있습니다. 개체를 직접 만들고 해당 개체에 대해 추가 속성 및 메서드를 정의할 수 있습니다. 개체는 프로그램에 대한 조립식 빌딩 블록처럼 작동합니다. 즉, 코드 조각을 한 번 작성한 후 반복해서 다시 사용할 수 있습니다.  
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서 응용 프로그램을 만들 때는 계속해서 개체를 사용하게 됩니다. 컨트롤, 폼 및 데이터 액세스 개체와 같은 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서 제공하는 개체를 사용할 수 있습니다. 또한 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 응용 프로그램 내에서 다른 응용 프로그램의 개체를 사용할 수도 있습니다. 개체를 직접 만들고 해당 개체에 대해 추가 속성 및 메서드를 정의할 수 있습니다. 개체는 프로그램에 대한 조립식 빌딩 블록처럼 작동합니다. 즉, 코드 조각을 한 번 작성한 후 반복해서 다시 사용할 수 있습니다.  
   
 이 항목에서는 개체에 대해 좀 더 자세히 설명합니다.  
 
 ## <a name="objects-and-classes"></a>개체 및 클래스
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]의 각 개체는 *클래스*로 정의됩니다. 클래스는 개체의 변수, 속성, 프로시저 및 이벤트를 설명합니다. 개체는 클래스의 인스턴스입니다. 클래스를 정의한 후에는 필요한 수만큼 개체를 만들 수 있습니다.
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]의 각 개체는 *클래스*로 정의됩니다. 클래스는 개체의 변수, 속성, 프로시저 및 이벤트를 설명합니다. 개체는 클래스의 인스턴스입니다. 클래스를 정의한 후에는 필요한 수만큼 개체를 만들 수 있습니다.
 
 개체와 해당 클래스 간의 관계를 이해하기 위해 쿠키 커터와 쿠키를 생각해 보세요. 쿠키 커터는 클래스입니다. 각 쿠키에 대해 크기와 모양 같은 특징을 정의합니다. 클래스는 개체를 만드는 데 사용됩니다. 개체는 쿠키입니다.
 
@@ -190,7 +190,7 @@ safetyTimer.Start()
 ## <a name="reusing-classes-and-objects"></a>클래스 및 개체 다시 사용  
 개체를 사용하면 변수 및 프로시저를 한 번 선언한 후 필요할 때마다 다시 사용할 수 있습니다. 예를 들어 응용 프로그램에 맞춤법 검사기를 추가하려는 경우 모든 변수 및 지원 함수를 정의하여 맞춤법 검사 기능을 제공할 수 있습니다. 맞춤법 검사기를 클래스로 만드는 경우 컴파일된 어셈블리에 대한 참조를 추가하여 다른 응용 프로그램에서 다시 사용할 수 있습니다. 다른 사람이 이미 개발한 맞춤법 검사기 클래스를 사용하여 일부 작업을 줄일 수도 있습니다.
 
-[!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)]에서는 사용할 수 있는 다양한 예제를 제공합니다. 다음 예제에서는 <xref:System> 네임스페이스의 <xref:System.TimeZone> 클래스를 사용합니다. <xref:System.TimeZone>에서는 현재 컴퓨터 시스템의 표준 시간대에 대한 정보를 검색할 수 있도록 하는 멤버를 제공합니다.
+[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]에서는 사용할 수 있는 다양한 예제를 제공합니다. 다음 예제에서는 <xref:System> 네임스페이스의 <xref:System.TimeZone> 클래스를 사용합니다. <xref:System.TimeZone>에서는 현재 컴퓨터 시스템의 표준 시간대에 대한 정보를 검색할 수 있도록 하는 멤버를 제공합니다.
 
 ```vb
 Public Sub examineTimeZone()
@@ -258,7 +258,7 @@ End Sub
 개체를 연관지을 수 있는 또 다른 방법은 *포함 관계*입니다. 컨테이너 개체는 논리적으로 다른 개체를 캡슐화합니다. 예를 들어 <xref:System.OperatingSystem> 개체에 논리적으로 <xref:System.Version> 개체를 포함하며, 이는 해당 <xref:System.OperatingSystem.Version%2A> 속성을 통해 반환됩니다. 컨테이너 개체가 다른 개체를 물리적으로 포함하는 것은 아닙니다.
 
 #### <a name="collections"></a>컬렉션
-특정 형식의 개체 포함을 *컬렉션*으로 나타냅니다. 컬렉션은 열거할 수 있는 유사한 개체의 그룹입니다. [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]에서는 컬렉션의 항목을 반복할 수 있는 [For Each...Next 문](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)의 특수 구문을 지원합니다. 또한 컬렉션을 사용하면<xref:Microsoft.VisualBasic.Collection.Item%2A>을 사용하여 인덱스별로 또는 고유 문자열에 연결하여 요소를 검색할 수 있습니다. 컬렉션은 인덱스를 사용하지 않고도 항목을 추가 또는 제거할 수 있도록 하므로 배열보다 더 쉽게 사용할 수 있습니다. 사용 편의성 때문에 컬렉션을 폼 및 컨트롤을 저장하는 데 종종 사용합니다.
+특정 형식의 개체 포함을 *컬렉션*으로 나타냅니다. 컬렉션은 열거할 수 있는 유사한 개체의 그룹입니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서는 컬렉션의 항목을 반복할 수 있는 [For Each...Next 문](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)의 특수 구문을 지원합니다. 또한 컬렉션을 사용하면<xref:Microsoft.VisualBasic.Collection.Item%2A>을 사용하여 인덱스별로 또는 고유 문자열에 연결하여 요소를 검색할 수 있습니다. 컬렉션은 인덱스를 사용하지 않고도 항목을 추가 또는 제거할 수 있도록 하므로 배열보다 더 쉽게 사용할 수 있습니다. 사용 편의성 때문에 컬렉션을 폼 및 컨트롤을 저장하는 데 종종 사용합니다.
 
 ## <a name="related-topics"></a>관련 항목  
  [연습: 클래스 정의](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  
@@ -281,4 +281,3 @@ End Sub
 
  [방법: 익명 형식 선언에서 속성 이름 및 형식 유추](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
  무명 형식 선언에서 속성 이름 및 형식을 유추하는 방법을 설명합니다. 성공 및 실패한 유추의 예제를 제공합니다.
-

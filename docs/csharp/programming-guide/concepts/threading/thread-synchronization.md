@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 31b206eb01d778b67acc1a25d3c69e2e1dfd553d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: f8d51aa1c50c097577a575be9b5da4b9e0effc55
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="thread-synchronization-c"></a>스레드 동기화(C#)
@@ -36,11 +37,11 @@ ms.lasthandoff: 03/13/2017
   
  다중 스레드 프로그래밍에 대한 배경 정보는 다음을 참조하세요.  
   
--   [관리되는 스레딩 기본 사항](http://msdn.microsoft.com/library/b2944911-0e8f-427d-a8bb-077550618935)  
+-   [관리되는 스레딩 기본 사항](../../../../standard/threading/managed-threading-basics.md)  
   
--   [스레드 및 스레딩 사용](http://msdn.microsoft.com/library/9b5ec2cd-121b-4d49-b075-222cf26f2344)  
+-   [스레드 및 스레딩 사용](../../../../standard/threading/using-threads-and-threading.md)  
   
--   [관리되는 스레딩을 구현하는 최선의 방법](http://msdn.microsoft.com/library/e51988e7-7f4b-4646-a06d-1416cee8d557)  
+-   [관리되는 스레딩을 구현하는 최선의 방법](../../../../standard/threading/managed-threading-best-practices.md)  
   
 ## <a name="the-lock-keyword"></a>lock 키워드  
  C# `lock` 문을 사용하여 코드 블록이 다른 스레드에 의해 중단되지 않고 완료될 때까지 실행되도록 할 수 있습니다. 이렇게 하려면 코드 블록 기간 동안 지정된 개체에 대한 상호 배타적 잠금을 얻습니다.  
@@ -104,9 +105,9 @@ finally
 ## <a name="synchronization-events-and-wait-handles"></a>동기화 이벤트 및 대기 핸들  
  잠금 또는 모니터는 스레드가 중요한 코드 블록의 동시 실행을 방지하는 데 유용하지만 이러한 구문은 한 스레드가 다른 스레드에 이벤트를 전달할 수 있도록 허용하지 않습니다. 이렇게 하려면 스레드를 활성화하고 일시 중단하는 데 사용할 수 있는 두 상태(신호 알림 및 신호 알림 해제) 중 하나인 *동기화 이벤트* 개체가 필요합니다. 신호 알림이 해제된 동기화 이벤트에서 대기하도록 하여 스레드를 일시 중단하고, 이벤트 상태를 신호 알림으로 변경하여 스레드를 활성화할 수 있습니다. 스레드가 이미 신호 알림을 보낸 이벤트에서 대기하려고 하면 지연 없이 계속 실행됩니다.  
   
- 동기화 이벤트에는 <xref:System.Threading.AutoResetEvent> 및 <xref:System.Threading.ManualResetEvent>의 두 가지가 있습니다. 두 가지 동기화 이벤트는 <xref:System.Threading.AutoResetEvent>가 스레드를 활성화할 때마다 자동으로 신호 알림에서 신호 알림 해제로 변경된다는 점만 다릅니다. 반대로, <xref:System.Threading.ManualResetEvent>는 개수에 관계없이 스레드가 신호 알림 상태에 의해 활성화될 수 있도록 하며, 해당 <xref:System.Threading.EventWaitHandle.Reset%2A> 메서드가 호출될 때만 신호 알림 해제 상태로 돌아갑니다.  
+ 동기화 이벤트에는 <xref:System.Threading.AutoResetEvent> 및 <xref:System.Threading.ManualResetEvent>의 두 가지 종류가 있습니다. 두 가지 동기화 이벤트는 <xref:System.Threading.AutoResetEvent>가 스레드를 활성화할 때마다 자동으로 신호 알림에서 신호 알림 해제로 변경된다는 점만 다릅니다. 반대로, <xref:System.Threading.ManualResetEvent>는 개수와 관계없이 스레드가 신호 알림 상태에 의해 활성화될 수 있도록 하며, 해당 <xref:System.Threading.EventWaitHandle.Reset%2A> 메서드가 호출될 때만 신호 알림 해제 상태로 돌아갑니다.  
   
- <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A> 또는 <xref:System.Threading.WaitHandle.WaitAll%2A>와 같은 대기 메서드 중 하나를 호출하여 스레드가 이벤트에서 대기하도록 할 수 있습니다. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=fullName>은 단일 이벤트가 신호를 받게 될 때까지 스레드가 대기하도록 하고, <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=fullName>은 하나 이상의 지정된 이벤트가 신호를 받게 될 때까지 스레드를 차단하고, <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=fullName>은 지정된 이벤트가 모두 신호를 받게 될 때까지 스레드를 차단합니다. 이벤트는 해당 <xref:System.Threading.EventWaitHandle.Set%2A> 메서드가 호출될 때 신호를 받게 됩니다.  
+ <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A>, <xref:System.Threading.WaitHandle.WaitAll%2A> 등의 대기 메서드 중 하나를 호출하여 스레드가 이벤트에서 대기하도록 만들 수 있습니다. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=fullName>을 사용하면 단일 이벤트 신호 알림을 보낼 때까지 스레드가 대기하고, <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=fullName>을 사용하면 표시된 하나 이상의 이벤트 신호 알림을 보낼 때까지 스레드가 차단되고, <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=fullName>을 사용하면 표시된 모든 이벤트 신호 알림을 보낼 때까지 스레드가 차단됩니다. 해당 <xref:System.Threading.EventWaitHandle.Set%2A> 메서드가 호출될 때 이벤트 신호를 보냅니다.  
   
  다음 예제에서는 `Main` 함수에 의해 스레드가 생성되고 시작됩니다. 새 스레드는 <xref:System.Threading.WaitHandle.WaitOne%2A> 메서드를 사용하여 이벤트에서 대기합니다. `Main` 함수를 실행하는 기본 스레드에서 이벤트 신호 알림을 보낼 때까지 스레드가 일시 중단됩니다. 이벤트 신호 알림을 보내면 보조 스레드가 반환됩니다. 이 경우 이벤트는 하나의 스레드 활성화에만 사용되므로 <xref:System.Threading.AutoResetEvent> 또는 <xref:System.Threading.ManualResetEvent> 클래스를 사용할 수 있습니다.  
   
@@ -143,11 +144,11 @@ class ThreadingExample
 ```  
   
 ## <a name="mutex-object"></a>뮤텍스 개체  
- *뮤텍스*는 모니터와 유사하며, 한 번에 둘 이상의 스레드가 코드 블록을 동시에 실행할 수 없도록 합니다. 실제로 "뮤텍스"란 이름은 "상호 배타적"이란 용어의 약식 형태입니다. 그러나 모니터와 달리 뮤텍스는 프로세스 간에 스레드를 동기화하는 데 사용할 수 있습니다. 뮤텍스는 <xref:System.Threading.Mutex> 클래스로 표현됩니다.  
+ *뮤텍스*는 모니터와 유사하며, 한 번에 둘 이상의 스레드가 코드 블록을 동시에 실행할 수 없도록 합니다. 실제로 "뮤텍스"란 이름은 "상호 배타적"이란 용어의 약식 형태입니다. 그러나 모니터와 달리 뮤텍스는 프로세스 간에 스레드를 동기화하는 데 사용할 수 있습니다. 뮤텍스는 <xref:System.Threading.Mutex> 클래스가 나타냅니다.  
   
  프로세스 간 동기화에 사용되는 경우 뮤텍스가 다른 응용 프로그램에서 사용되어 전역 또는 정적 변수를 통해 공유할 수 없기 때문에 *명명 된 뮤텍스*라고 합니다. 두 응용 프로그램이 모두 동일한 뮤텍스 개체에 액세스할 수 있도록 이름이 지정되어야 합니다.  
   
- 프로세스 간 스레드 동기화에 뮤텍스를 사용할 수 있지만, 모니터가 .NET Framework용으로 특별히 설계되어 리소스를 더 효율적으로 사용하기 때문에 일반적으로 <xref:System.Threading.Monitor>를 사용하는 것이 좋습니다. 반면, <xref:System.Threading.Mutex> 클래스는 Win32 구문에 대한 래퍼입니다. 모니터보다 더 강력하지만, 뮤텍스는 <xref:System.Threading.Monitor> 클래스에 필요한 것보다 계산 비용이 더 큰 interop 전환이 필요합니다. 뮤텍스 사용 예제는 [뮤텍스](http://msdn.microsoft.com/library/9dd06e25-12c0-4a9e-855a-452dc83803e2)를 참조하세요.  
+ 프로세스 간 스레드 동기화에 뮤텍스를 사용할 수 있지만, 모니터가 .NET Framework용으로 특별히 설계되어 리소스를 더 효율적으로 사용하기 때문에 일반적으로 <xref:System.Threading.Monitor>를 사용하는 것이 좋습니다. 반면, <xref:System.Threading.Mutex> 클래스는 Win32 구문에 대한 래퍼입니다. 모니터보다 더 강력하지만, 뮤텍스는 <xref:System.Threading.Monitor> 클래스에 필요한 것보다 계산 비용이 더 큰 interop 전환이 필요합니다. 뮤텍스 사용 예제는 [뮤텍스](../../../../standard/threading/mutexes.md)를 참조하세요.  
   
 ## <a name="interlocked-class"></a>Interlocked 클래스  
  <xref:System.Threading.Interlocked> 클래스의 메서드를 사용하여 여러 스레드가 동일한 값을 동시에 업데이트하거나 비교하려고 할 때 발생할 수 있는 문제를 방지할 수 있습니다. 이 클래스의 메서드를 사용하면 모든 스레드의 값을 안전하게 증가, 감소, 교환 및 비교할 수 있습니다.  
@@ -177,8 +178,8 @@ class ThreadingExample
  <xref:System.Threading.EventWaitHandle.Set%2A>   
  [다중 스레드 응용 프로그램(C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)   
  [lock 문](../../../../csharp/language-reference/keywords/lock-statement.md)   
- [뮤텍스](http://msdn.microsoft.com/library/9dd06e25-12c0-4a9e-855a-452dc83803e2)   
+ [뮤텍스](../../../../standard/threading/mutexes.md)   
  @System.Threading.Monitor   
- [연동 작업](http://msdn.microsoft.com/library/cbda7114-c752-4f3e-ada1-b1e8dd262f2b)   
- [AutoResetEvent](http://msdn.microsoft.com/library/6d39c48d-6b37-4a9b-8631-f2924cfd9c18)   
- [다중 스레딩을 위한 데이터 동기화](http://msdn.microsoft.com/library/b980eb4c-71d5-4860-864a-6dfe3692430a)
+ [연동 작업](../../../../standard/threading/interlocked-operations.md)   
+ [AutoResetEvent](../../../../standard/threading/autoresetevent.md)   
+ [다중 스레딩을 위한 데이터 동기화](../../../../standard/threading/synchronizing-data-for-multithreading.md)

@@ -21,20 +21,22 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ddcefb2b35f8cbf06a3abcc16158eee850f799ff
-ms.openlocfilehash: ec4594343c5a78649d7d7a4d151545612da9138b
+ms.sourcegitcommit: 1cd1761d630f61a58f29d88e9342551d48cbc6a8
+ms.openlocfilehash: eb1d58651f1e982b53bc5cc06d4d58ba4690b1d7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 06/20/2017
 
 ---
-# <a name="net-framework-system-requirements"></a>.NET Framework 시스템 요구 사항
+# .NET Framework 시스템 요구 사항
+<a id="net-framework-system-requirements" class="xliff"></a>
 이 항목의 표에는 .NET Framework 4.7, [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 및 해당 포인트 릴리스(4.6.1 및 4.6.2)와 .NET Framework 4.5 및 해당 포인트 릴리스(4.5.1과 4.5.2)의 하드웨어, 운영 체제 및 소프트웨어 요구 사항이 나와 있습니다. .NET Framework용 응용 프로그램을 개발할 수 있는 개발 환경을 구축하려면 또 다른 여러 가지 요구 사항을 충족해야 합니다.
 
- 다운로드 정보와 링크는 [설치 가이드](../../../docs/framework/install/guide-for-developers.md)를 참조하십시오.
+ 다운로드 정보와 링크에 대해서는 [개발자용 .NET Framework 설치](../../../docs/framework/install/guide-for-developers.md)를 참조하세요.
 
  .NET Framework 버전의 지원 기간에 대한 자세한 내용은 [Microsoft 제품 지원 수명 주기](https://support.microsoft.com/en-us/lifecycle/search?sort=PN&alpha=Microsoft%20.NET%20Framework&Filter=FilterNO)를 참조하십시오.
 
-## <a name="hardware-requirements"></a>하드웨어 요구 사항
+## 하드웨어 요구 사항
+<a id="hardware-requirements" class="xliff"></a>
 
 |||
 |-|-|
@@ -44,11 +46,13 @@ ms.lasthandoff: 05/11/2017
 |32비트|4.5GB|
 |64비트|4.5GB|
 
-## <a name="installation-requirements"></a>설치 요구 사항
+## 설치 요구 사항
+<a id="installation-requirements" class="xliff"></a>
 
 - .NET Framework를 설치하려면 관리자 권한이 필요합니다. .NET Framework를 설치하려는 컴퓨터에 관리자 권한이 없는 경우 네트워크 관리자에게 문의하세요.
 
-## <a name="supported-client-operating-systems"></a>지원되는 클라이언트 운영 체제
+## 지원되는 클라이언트 운영 체제
+<a id="supported-client-operating-systems" class="xliff"></a>
 
 |운영 체제|지원되는 버전|OS가 사전 설치됨|별도로 설치 가능|
 |----------------------|------------------------|------------------------------|----------------------------|
@@ -58,7 +62,7 @@ ms.lasthandoff: 05/11/2017
 |Windows 10|32비트 및 64비트|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
 |[!INCLUDE[win81](../../../includes/win81-md.md)]|32비트, 64비트 및 ARM|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]|[!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET Framework 4.7|
 |[!INCLUDE[win8](../../../includes/win8-md.md)]|32비트, 64비트 및 ARM|[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
-|Windows 7 SP1|32비트 및 64비트|--|.NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|
+|Windows 7 SP1|32비트 및 64비트|--|.NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET Framework 4.7|
 |Windows Vista SP2|32비트 및 64비트|--|.NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
 |Windows XP|32비트 및 64비트|--|.NET Framework 4|
 
@@ -74,7 +78,8 @@ ms.lasthandoff: 05/11/2017
 
 - 64비트 운영 체제에서는 .NET Framework가 WOW64(64비트 컴퓨터의 32비트 프로세싱) 및 64비트 프로세싱을 둘 다 지원합니다.
 
-## <a name="supported-server-operating-systems"></a>지원되는 서버 운영 체제
+## 지원되는 서버 운영 체제
+<a id="supported-server-operating-systems" class="xliff"></a>
 
 |운영 체제|지원되는 버전|OS가 사전 설치됨|별도로 설치 가능|
 |----------------------|------------------------|------------------------------|----------------------------|
@@ -96,7 +101,9 @@ ms.lasthandoff: 05/11/2017
 
 - 64비트 운영 체제에서는 .NET Framework가 WOW64(64비트 컴퓨터의 32비트 프로세싱) 및 64비트 프로세싱을 둘 다 지원합니다.
 
-## <a name="see-also"></a>참고 항목
- [설치 가이드](../../../docs/framework/install/guide-for-developers.md)   
+## 참고 항목
+<a id="see-also" class="xliff"></a>
+ [설치 가이드](../../../docs/framework/install/index.md)   
  [시작](../../../docs/framework/get-started/index.md)   
- [문제 해결](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+ [차단된 .NET Framework 설치 및 제거 문제 해결](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+

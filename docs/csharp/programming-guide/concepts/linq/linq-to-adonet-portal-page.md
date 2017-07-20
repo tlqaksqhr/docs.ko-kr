@@ -19,12 +19,14 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f1c70901d5c2e5f5d709ec3c10821fbd1aa9dee6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: dd0e67a0c01fdf0a08a2a57fa4c196e726f575bd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/03/2017
 
 ---
+
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET(포털 페이지)
 [!INCLUDE[linq_adonet](../../../../csharp/programming-guide/concepts/linq/includes/linq_adonet_md.md)]를 사용하면 [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] 프로그래밍 모델을 통해 [!INCLUDE[vstecado](~/includes/vstecado-md.md)]의 열거 가능한 개체를 쿼리할 수 있습니다.  
   
@@ -53,4 +55,5 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="see-also"></a>참고 항목  
  [LINQ 및 ADO.NET](http://msdn.microsoft.com/library/bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec)   
+
  [LINQ(Language-Integrated Query)(C#)](../../../../csharp/programming-guide/concepts/linq/index.md)

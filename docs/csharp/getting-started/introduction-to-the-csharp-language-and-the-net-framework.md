@@ -29,20 +29,20 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
-ms.openlocfilehash: a2c5986dfb9ed4f80e15e8e3ddf061ef858a1e93
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: e63a964956e2fbe91573a970c7df3fc29d848c9c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 언어 및 .NET Framework 소개
-유연하고 형식이 안전한 개체 지향 언어인 C#은 개발자가 [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)]에서 실행되는 안전하고 강력한 여러 응용 프로그램을 구축할 수 있도록 지원합니다. C#을 사용하여 Windows 클라이언트 응용 프로그램, XML Web services, 분산 구성 요소, 클라이언트-서버 응용 프로그램, 데이터베이스 응용 프로그램 등을 만들 수 있습니다. Visual C#에서는 고급 코드 편집기, 편리한 사용자 인터페이스 디자이너, 통합 디버거 및 다른 많은 도구를 제공하여 C# 언어 및 [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)]에 따라 보다 쉽게 응용 프로그램을 개발할 수 있습니다.  
+유연하고 형식이 안전한 개체 지향 언어인 C#은 개발자가 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]에서 실행되는 안전하고 강력한 여러 응용 프로그램을 구축할 수 있도록 지원합니다. C#을 사용하여 Windows 클라이언트 응용 프로그램, XML Web services, 분산 구성 요소, 클라이언트-서버 응용 프로그램, 데이터베이스 응용 프로그램 등을 만들 수 있습니다. Visual C#에서는 고급 코드 편집기, 편리한 사용자 인터페이스 디자이너, 통합 디버거 및 다른 많은 도구를 제공하여 C# 언어 및 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]에 따라 보다 쉽게 응용 프로그램을 개발할 수 있습니다.  
   
 > [!NOTE]
-> [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] 설명서에서는 사용자가 기본적인 프로그래밍 개념을 이해하고 있다고 간주합니다. 완전 초보 사용자인 경우 웹에서 사용할 수 있는 [!INCLUDE[csprcsxpr](../../csharp/getting-started/includes/csprcsxpr_md.md)]를 살펴볼 수도 있습니다. C#에 대한 설명서 및 웹 리소스를 활용하여 실제 프로그래밍 기술을 배울 수도 있습니다.  
+> [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 설명서에서는 사용자가 기본적인 프로그래밍 개념을 이해하고 있다고 간주합니다. 완전 초보 사용자인 경우 웹에서 사용할 수 있는 [!INCLUDE[csprcsxpr](~/includes/csprcsxpr-md.md)]를 살펴볼 수도 있습니다. C#에 대한 설명서 및 웹 리소스를 활용하여 실제 프로그래밍 기술을 배울 수도 있습니다.  
   
 ## <a name="c-language"></a>C# 언어  
- C# 구문은 다양한 표현 기능을 갖추면서도 간편하고 쉽게 배울 수 있습니다. C#의 중괄호 구문은 C, C++ 또는 Java에 익숙한 사용자라면 누구나 바로 알아볼 수 있습니다. 이러한 언어에 익숙한 개발자는 일반적으로 매우 짧은 시간 내에 C#으로 생산적인 작업을 수행할 수 있습니다. C# 구문은 C++의 복잡성을 획기적으로 단순화하고 Java에는 없는 null 허용 값 형식, 열거형, 대리자, 람다 식 및 직접 메모리 액세스와 같은 강력한 기능을 제공합니다. C#은 향상된 형식 안정성 및 성능을 제공하는 제네릭 메서드와 형식을 지원하고, 컬렉션 클래스의 구현을 통해 클라이언트 코드에서 쉽게 사용할 수 있는 사용자 지정 반복 동작을 정의할 수 있도록 하는 반복기를 지원합니다. [!INCLUDE[vbteclinqext](../../csharp/getting-started/includes/vbteclinqext_md.md)] 식은 강력한 형식의 쿼리를 최고의 언어 구문으로 만들어줍니다.  
+ C# 구문은 다양한 표현 기능을 갖추면서도 간편하고 쉽게 배울 수 있습니다. C#의 중괄호 구문은 C, C++ 또는 Java에 익숙한 사용자라면 누구나 바로 알아볼 수 있습니다. 이러한 언어에 익숙한 개발자는 일반적으로 매우 짧은 시간 내에 C#으로 생산적인 작업을 수행할 수 있습니다. C# 구문은 C++의 복잡성을 획기적으로 단순화하고 Java에는 없는 null 허용 값 형식, 열거형, 대리자, 람다 식 및 직접 메모리 액세스와 같은 강력한 기능을 제공합니다. C#은 향상된 형식 안정성 및 성능을 제공하는 제네릭 메서드와 형식을 지원하고, 컬렉션 클래스의 구현을 통해 클라이언트 코드에서 쉽게 사용할 수 있는 사용자 지정 반복 동작을 정의할 수 있도록 하는 반복기를 지원합니다. [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 식은 강력한 형식의 쿼리를 최고의 언어 구문으로 만들어줍니다.  
   
  개체 지향 언어인 C#은 캡슐화, 상속 및 다형성의 개념을 지원합니다. 응용 프로그램의 진입점인 `Main` 메서드를 포함하는 모든 변수 및 메서드가 클래스 정의 내에 캡슐화됩니다. 클래스는 단일 부모 클래스에서 직접 상속될 수 있지만 원하는 수의 인터페이스를 구현할 수 있습니다. 부모 클래스에서 가상 메서드를 재정의하는 메서드에는 우발적인 재정의를 방지하는 방법으로 `override` 키워드가 필요합니다. C#에서 구조체는 같은 클래스와 같습니다. 즉, 인터페이스를 구현할 수 있지만 상속을 지원하지 않는 스택 할당 형식입니다.  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 05/22/2017
   
 -   인라인 XML 문서 주석  
   
--   [!INCLUDE[vbteclinqext](../../csharp/getting-started/includes/vbteclinqext_md.md)]: 다양한 데이터 소스에 대한 기본 제공 쿼리 기능을 제공합니다.  
+-   [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]: 다양한 데이터 소스에 대한 기본 제공 쿼리 기능을 제공합니다.  
   
  COM 개체 또는 네이티브 Win32 DLL 등의 다른 Windows 소프트웨어와 상호 작용해야 하는 경우 C#에서 "Interop"이라는 프로세스를 통해 작업할 수 있습니다. Interop을 사용하면 네이티브 C++ 응용 프로그램에서 수행할 수 있는 거의 모든 작업을 C# 프로그램으로 수행할 수 있습니다. C#은 직접 메모리 액세스가 절대적으로 중요한 경우를 위한 "안전하지 않은" 코드 개념 및 포인터까지도 지원합니다.  
   
@@ -68,12 +68,12 @@ ms.lasthandoff: 05/22/2017
   
 -   C# 언어의 특정 측면에 대한 자세한 내용은 [C# 참조](../../csharp/language-reference/index.md)를 참조하세요.  
   
--   [!INCLUDE[vbteclinq](../../csharp/includes/vbteclinq_md.md)]에 대한 자세한 내용은 [LINQ(언어 통합 쿼리)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)를 참조하세요.  
+-   [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]에 대한 자세한 내용은 [LINQ(언어 통합 쿼리)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)를 참조하세요.  
   
 -   Visual C# 팀이 발표한 최신 기사 및 리소스를 찾아보려면 [Visual C# 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=47811)를 참조하세요.  
   
 ## <a name="net-framework-platform-architecture"></a>.NET Framework 플랫폼 아키텍처  
- C# 프로그램은 CLR(공용 언어 런타임)이라고 하는 가상 실행 시스템과 통합된 클래스 라이브러리 집합을 포함하는 Windows의 통합 구성 요소인 [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)]에서 실행됩니다. CLR은 언어 및 라이브러리가 원활하게 함께 작동하는 실행 및 개발 환경을 만들기 위한 기준이 되는 국제 표준인 CLI(공용 언어 인프라)를 Microsoft에서 상업적으로 구현한 것입니다.  
+ C# 프로그램은 CLR(공용 언어 런타임)이라고 하는 가상 실행 시스템과 통합된 클래스 라이브러리 집합을 포함하는 Windows의 통합 구성 요소인 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]에서 실행됩니다. CLR은 언어 및 라이브러리가 원활하게 함께 작동하는 실행 및 개발 환경을 만들기 위한 기준이 되는 국제 표준인 CLI(공용 언어 인프라)를 Microsoft에서 상업적으로 구현한 것입니다.  
   
  C#으로 작성된 소스 코드는 CLI 사양을 준수하는 IL(중간 언어)로 컴파일됩니다. IL 코드 및 리소스(예: 비트맵 및 문자열)는 일반적으로 확장명이 .exe 또는 .dll인 어셈블리라는 실행 파일로 디스크에 저장됩니다. 어셈블리는 어셈블리의 형식, 버전, 문화권 및 보안 요구 사항에 대한 정보를 제공하는 매니페스트를 포함합니다.  
   
@@ -81,9 +81,9 @@ ms.lasthandoff: 05/22/2017
   
  ![C# 소스 코드-기계 실행](../../csharp/getting-started/media/netarchitecture.png "NETarchitecture")  
   
- 언어 상호 운용성은 [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)]의 주요 기능입니다. C# 컴파일러에서 생성된 IL 코드는 CTS(공용 형식 사양)을 준수하므로 C#에서 생성된 IL 코드는 .NET 버전의 Visual Basic, Visual C++ 또는 20개 이상의 다른 CTS 규격 언어에서 생성된 코드와 상호 작용할 수 있습니다. 단일 어셈블리는 다른 .NET 언어로 작성된 여러 모듈을 포함할 수 있고 형식은 마치 같은 언어로 작성된 것처럼 서로를 참조할 수 있습니다.  
+ 언어 상호 운용성은 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]의 주요 기능입니다. C# 컴파일러에서 생성된 IL 코드는 CTS(공용 형식 사양)을 준수하므로 C#에서 생성된 IL 코드는 .NET 버전의 Visual Basic, Visual C++ 또는 20개 이상의 다른 CTS 규격 언어에서 생성된 코드와 상호 작용할 수 있습니다. 단일 어셈블리는 다른 .NET 언어로 작성된 여러 모듈을 포함할 수 있고 형식은 마치 같은 언어로 작성된 것처럼 서로를 참조할 수 있습니다.  
   
- [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)]에는 런타임 서비스 외에, 파일 입/출력부터 문자열 조작, XML 구문 분석, Windows Forms 컨트롤에 이르는 모든 항목에 대해 다양하고 유용한 기능을 제공하는 네임스페이스로 구성된 4,000개 이상의 광범위한 클래스 라이브러리도 포함됩니다. 일반적인 C# 응용 프로그램은 [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)] 클래스 라이브러리를 광범위하게 사용하여 일반적인 "배관" 작업을 처리합니다.  
+ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]에는 런타임 서비스 외에, 파일 입/출력부터 문자열 조작, XML 구문 분석, Windows Forms 컨트롤에 이르는 모든 항목에 대해 다양하고 유용한 기능을 제공하는 네임스페이스로 구성된 4,000개 이상의 광범위한 클래스 라이브러리도 포함됩니다. 일반적인 C# 응용 프로그램은 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 클래스 라이브러리를 광범위하게 사용하여 일반적인 "배관" 작업을 처리합니다.  
   
  .NET Framework에 대한 자세한 내용은 [Microsoft.NET Framework 개요](http://msdn.microsoft.com/en-us/d05daf50-00fe-45c7-8383-06fe41697355)를 참조하세요.  
   

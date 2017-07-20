@@ -1,6 +1,6 @@
 ---
 title: "ulong(C# 참조) | Microsoft 문서"
-ms.date: 2015-07-20
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,13 +30,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 36de0add1d7fdf58745c65d231f3789c532ab69f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: a0889086fbc986a37d052917469fbdb5442df44f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="ulong-c-reference"></a>ulong(C# 참조)
+
 `ulong` 키워드는 다음 표에 나와 있는 크기와 범위에 따라 값을 저장하는 정수 형식을 나타냅니다.  
   
 |형식|범위|크기|.NET Framework 형식|  
@@ -44,44 +46,43 @@ ms.lasthandoff: 03/13/2017
 |`ulong`|0 ~ 18,446,744,073,709,551,615|부호 없는 64비트 정수|<xref:System.UInt64?displayProperty=fullName>|  
   
 ## <a name="literals"></a>리터럴  
- 다음 예제와 같이 `ulong` 변수를 선언하고 초기화할 수 있습니다.  
+
+10진수 리터럴, 16진수 리터럴 또는 (C# 7부터) 이진 리터럴을 할당하여 `ulong` 변수를 선언하고 초기화할 수 있습니다.  정수 리터럴이 `ulong`의 범위를 벗어난 경우(즉, <xref:System.UInt64.MinValue?displayProperty=fullName>보다 작거나 <xref:System.UInt64.MaxValue?displayProperty=fullName>보다 큰 경우) 컴파일 오류가 발생합니다. 
+
+다음 예제에서는 10진수, 16진수 및 이진 리터럴로 표현된 7,934,076,125와 같은 정수가 `ulong` 값에 할당됩니다.  
   
-```  
-  
-ulong uLong = 9223372036854775808;  
-```  
-  
- 정수 리터럴에 접미사가 없는 경우 해당 형식은 [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), `ulong` 등 값이 표현될 수 있는 형식의 첫 번째입니다. 위의 예제에서는 `ulong` 형식입니다.  
-  
- 접미사를 사용하여 다음 규칙에 따라 리터럴 형식을 지정할 수도 있습니다.  
-  
--   L 또는 l을 사용하는 경우 리터럴 정수 형식은 크기에 따라 [long](../../../csharp/language-reference/keywords/long.md) 또는 `ulong` 중 하나가 됩니다.  
-  
-    > [!NOTE]
-    >  소문자 "l"을 접미사로 사용할 수 있습니다. 그러나 이렇게 하면 문자 "l"과 숫자 "1"을 혼동하기 쉬우므로 컴파일러 경고가 생성됩니다. 쉽게 구별할 수 있도록 "L"을 사용합니다.  
-  
--   `U` 또는 `u`를 사용하는 경우 리터럴 정수 형식은 크기에 따라 [uint](../../../csharp/language-reference/keywords/uint.md) 또는 `ulong` 중 하나가 됩니다.  
-  
--   UL, ul, Ul, uL, LU, lu, Lu 또는 lU를 사용하는 경우 리터럴 정수의 형식은 `ulong`이 됩니다.  
-  
-     예를 들어 다음 세 문의 출력은 별칭 `ulong`에 해당하는 시스템 형식 `UInt64`가 됩니다.  
-  
-    ```  
-    Console.WriteLine(9223372036854775808L.GetType());  
-    Console.WriteLine(123UL.GetType());  
-    Console.WriteLine((123UL + 456).GetType());  
-    ```  
+[!code-cs[ulong](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#ULong)]  
+
+> [!NOTE] 
+> `0x` 또는 `0X` 접두사를 사용하여 16진수 리터럴을 나타내고, `0b` 또는 `0B` 접두사를 사용하여 이진 리터럴을 나타냅니다. 10진수 리터럴에는 접두사가 없습니다. 
+
+C# 7부터는 다음 예제와 같이 밑줄 문자 `_`를 자릿수 구분 기호로 사용하여 가독성을 향상할 수도 있습니다.
+
+[!code-cs[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#LongS)]  
+ 
+ 형식을 나타내는 접미사가 정수 리터럴에 포함되어 있을 수도 있습니다. `UL` 또는 `ul` 접미사는 숫자 리터럴을 `ulong` 값으로 명확하게 식별합니다. 리터럴 값이 <xref:System.Int64.MaxValue?displayProperty=fullName>을 초과하는 경우 `L` 접미사는 `ulong`을 나타냅니다. 또한 리터럴 값이 <xref:System.UInt32.MaxValue?displayProperty=fullName>을 초과하는 경우 `U` 또는 `u` 접미사는 `ulong`을 나타냅니다. 다음 예제에서는 `ul` 접미사를 사용하여 정수(long)를 나타냅니다.
+ 
+[!code-cs[ulsuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#2)]
+
+정수 리터럴에 접미사가 없는 경우 해당 형식은 값이 표현될 수 있는 다음 형식 중 첫 번째 형식입니다. 
+
+1. [int](int.md)
+2. [uint](../../../csharp/language-reference/keywords/uint.md)
+3. [long](long.md)
+4. `ulong`
+
+## <a name="compiler-overload-resolution"></a>컴파일러 오버로드 확인
   
  접미사는 일반적으로 오버로드된 메서드를 호출할 때 사용됩니다. 예를 들어 `ulong` 및 [int](../../../csharp/language-reference/keywords/int.md) 매개 변수를 사용하는 다음의 오버로드된 메서드를 살펴보세요.  
   
-```  
+```csharp  
 public static void SampleMethod(int i) {}  
 public static void SampleMethod(ulong l) {}  
 ```  
   
  `ulong` 매개 변수와 함께 접미사를 사용하면 올바른 형식이 호출됩니다. 예를 들면 다음과 같습니다.  
   
-```  
+```csharp  
 SampleMethod(5);    // Calling the method with the int parameter  
 SampleMethod(5UL);  // Calling the method with the ulong parameter  
 ```  
@@ -91,7 +92,7 @@ SampleMethod(5UL);  // Calling the method with the ulong parameter
   
  `ulong`에서 정수 형식으로의 암시적 변환은 없습니다. 예를 들어 다음 문은 명시적 캐스트 없이 컴파일 오류를 생성합니다.  
   
-```  
+```csharp  
 long long1 = 8UL;   // Error: no implicit conversion from ulong  
 ```  
   
@@ -99,7 +100,7 @@ long long1 = 8UL;   // Error: no implicit conversion from ulong
   
  또한 부동 소수점 형식에서 `ulong`로의 암시적 변환은 없습니다. 예를 들어 명시적 캐스트를 사용하지 않는 경우 다음 문은 컴파일러 오류를 일으킵니다.  
   
-```  
+```csharp  
 // Error -- no implicit conversion from double:  
 ulong x = 3.0;  
 // OK -- explicit conversion:  

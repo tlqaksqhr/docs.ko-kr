@@ -35,14 +35,14 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d3f21e32c162133e70a124da125c30afc7303738
-ms.openlocfilehash: 56f39e82e9295a9c1d9f862e3486373590a32e7f
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 06b649ef8351601918d1cb92ee0c3646d747f8f3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic의 프로시저
-*프로시저*란 선언문(`Function`, `Sub`, `Operator`, `Get`, `Set`) 및 일치하는 `End` 문으로 감싼 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 문의 블록입니다. [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]의 모든 실행문은 프로시저 내에 있어야 합니다.  
+*프로시저*란 선언문(`Function`, `Sub`, `Operator`, `Get`, `Set`) 및 일치하는 `End` 문으로 감싼 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 문의 블록입니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]의 모든 실행문은 프로시저 내에 있어야 합니다.  
   
 ## <a name="calling-a-procedure"></a>프로시저 호출  
  코드에서 다른 위치에 있는 프로시저를 호출합니다. 이것을 *프로시저 호출*이라고 합니다. 프로시저는 실행이 완료되면 자신을 호출한 코드(*호출 코드*라고 함)로 컨트롤을 반환합니다. 호출 코드란 프로시저를 이름으로 지정하고 프로시저에 컨트롤을 전달하는 문 또는 문 내부의 식입니다.  
@@ -60,7 +60,7 @@ ms.lasthandoff: 05/15/2017
  대부분의 경우 프로시저는 사용자가 호출할 때마다 다른 데이터에서 작동해야 합니다. 프로시저 호출의 일부로 이 정보를 프로시저에 전달할 수 있습니다. 프로시저는 0개 이상의 *매개 변수*를 정의하며, 각 매개 변수는 사용자가 전달할 것으로 예상하는 값을 나타냅니다. 프로시저 정의의 각 매개 변수에 해당하는 것이 프로시저 호출의 *인수*입니다. 인수는 지정된 프로시저 호출에서 해당 매개 변수에 전달하는 값을 나타냅니다.  
   
 ## <a name="types-of-procedures"></a>프로시저 유형  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]은 여러 유형의 프로시저를 사용합니다.  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]은 여러 유형의 프로시저를 사용합니다.  
   
 -   [Sub 프로시저](./sub-procedures.md)는 작업을 수행하지만 호출 코드에 값을 반환하지 않습니다.  
   

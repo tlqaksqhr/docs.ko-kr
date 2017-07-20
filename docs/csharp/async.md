@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 27c39f8c67a3f8288883a37025797a461c50f940
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: 2983dccc63c38884a24f4183d41b406797d5d10f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/14/2017
 
 ---
 
@@ -114,7 +115,7 @@ C#에서는 컴파일러가 해당 코드를, `await`에 도달할 때 실행을
     
 **I/O 바인딩된** 작업이 있을 경우 `Task.Run` *없이* `async` 및 `await`를 사용합니다.  작업 병렬 라이브러리를 사용*하면 안 됩니다*.  그 이유는 [세부 비동기 문서](../standard/async-in-depth.md)에서 간단히 설명합니다.
 
-**CPU 바인딩된** 작업이 있고 빠른 응답이 필요할 경우 `async` 및 `await`를 사용하지만 `Task.Run`을 **사용하여 또 다른 스레드에서 작업을 생성합니다.  작업이 동시성 및 병렬 처리에 해당할 경우 작업 병렬 라이브러리를 사용하는 것이 좋습니다.
+**CPU 바인딩된** 작업이 있고 빠른 응답이 필요할 경우 `async` 및 `await`를 사용하지만 `Task.Run`을 사용하여 또 다른 스레드에서 작업을 생성합니다.  작업이 동시성 및 병렬 처리에 해당할 경우 작업 병렬 라이브러리를 사용하는 것이 좋습니다.
 
 또한 항상 코드 실행을 측정해야 합니다.  예를 들어 CPU 바인딩된 작업이 다중 스레딩 시 컨텍스트 전환의 오버헤드에 비해 부담이 크지 않은 상황이 될 수 있습니다.  모든 선택에는 절충점이 있습니다. 상황에 맞는 올바른 절충점을 선택해야 합니다.
 
@@ -229,7 +230,7 @@ public static async Task<User[]> GetUsers(IEnumerable<int> userIds)
 
 기억해야 할 중요한 정보입니다.  `await`가 `async` 메서드의 본문에서 사용되지 않으면 C# 컴파일러가 경고를 생성하지만 코드는 일반 메서드인 것처럼 컴파일 및 실행됩니다.  이 방법은 상당히 비효율적입니다. 비동기 메서드용으로 C# 컴파일러에서 생성된 상태 컴퓨터가 아무 작업도 수행하지 않기 때문입니다.
 
-*   **작성하는 모든 비동기 메서드 이름의 접미사로 “Async”를 추가해야 합니다.**
+*   **작성하는 모든 비동기 메서드 이름의 접미사로 "Async"를 추가해야 합니다.**
 
 이 규칙을 .NET에서 사용하여 동기 및 비동기 메서드를 훨씬 더 쉽게 구별할 수 있습니다. 코드에서 명시적으로 호출되지 않은 특정 메서드(예: 이벤트 처리기 또는 웹 컨트롤러 메서드)가 반드시 적용되는 것은 아닙니다. 이러한 메서드는 코드에서 명시적으로 호출되지 않으므로 명시적으로 명명하는 것은 별로 중요하지 않습니다.
 

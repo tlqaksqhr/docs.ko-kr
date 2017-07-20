@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 17edc1598b806f073ad93e470dc8764cfeb1e4eb
-ms.openlocfilehash: 8c42c213a3933f35750d2ad7db9c88867aacd549
-ms.lasthandoff: 04/17/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 9f1cb93d5aaf7f90fc332594a2ca2a7cfc0c9c2f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="error-messages-visual-basic"></a>오류 메시지(Visual Basic)
@@ -50,7 +51,7 @@ Visual Basic 응용 프로그램을 작성, 컴파일 또는 실행할 때 다�
  특정 오류를 해결하는 방법에 대한 자세한 내용은 [Visual Basic 프로그래머를 위한 추가 리소스](../../../visual-basic/getting-started/additional-resources.md)를 참조하세요.  
   
 ## <a name="run-time-errors"></a>런타임 오류  
- Visual Basic 응용 프로그램이 시스템에서 실행할 수 없는 작업을 수행하려고 하는 경우 런타임 오류가 발생하고 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]에서 `Exception` 개체를 throw합니다. [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]에서는 `Throw` 문을 사용하여 `Exception` 개체를 포함하는 모든 데이터 형식의 사용자 지정 오류를 생성할 수 있습니다. 응용 프로그램은 catch한 예외의 오류 번호 및 메시지를 표시하여 오류를 식별할 수 있습니다. 오류가 catch되지 않으면 응용 프로그램이 종료됩니다.  
+ Visual Basic 응용 프로그램이 시스템에서 실행할 수 없는 작업을 수행하려고 하는 경우 런타임 오류가 발생하고 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서 `Exception` 개체를 throw합니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서는 `Throw` 문을 사용하여 `Exception` 개체를 포함하는 모든 데이터 형식의 사용자 지정 오류를 생성할 수 있습니다. 응용 프로그램은 catch한 예외의 오류 번호 및 메시지를 표시하여 오류를 식별할 수 있습니다. 오류가 catch되지 않으면 응용 프로그램이 종료됩니다.  
   
  코드는 런타임 오류를 트래핑하고 검사할 수 있습니다. 오류를 생성하는 코드를 `Try` 블록에 포함할 경우 일치 하는 `Catch` 블록 내에서 throw된 오류를 catch할 수 있습니다. 런타임 시 오류를 트래핑하고 코드에 응답하는 방법에 대한 자세한 내용은 [Try...Catch...Finally 문](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)을 참조하세요.  
   

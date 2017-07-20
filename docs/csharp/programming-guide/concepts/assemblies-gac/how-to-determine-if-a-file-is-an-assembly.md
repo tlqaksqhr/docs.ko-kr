@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4de303da9215fb07ecbb6bfff78d18dcd246aad3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 9565d0af978f1a1bc3744db127ac75911b519ab2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>방법: 파일이 어셈블리인지 확인(C#)
@@ -34,13 +35,13 @@ ms.lasthandoff: 03/13/2017
   
 2.  테스트하려는 파일을 로드합니다.  
   
-3.  **ILDASM**에서 파일이 PE(이식 가능) 파일이 아니라고 보고하는 경우에는 어셈블리가 아닙니다. 자세한 내용은 [방법: 어셈블리 내용 보기](http://msdn.microsoft.com/library/fb7baaab-4c0d-47ad-8fd3-4591cf834709) 항목을 참조하세요.  
+3.  **ILDASM**에서 파일이 PE(이식 가능) 파일이 아니라고 보고하는 경우에는 어셈블리가 아닙니다. 자세한 내용은 [방법: 어셈블리 내용 보기](../../../../framework/app-domains/how-to-view-assembly-contents.md) 항목을 참조하세요.  
   
 ### <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>파일이 어셈블리인지 프로그래밍 방식으로 확인하는 방법  
   
 1.  테스트하는 파일의 전체 파일 경로와 이름을 전달하여 <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 메서드를 호출합니다.  
   
-2.  <xref:System.BadImageFormatException> 예외가 throw되는 경우 파일은 어셈블리가 아닙니다.  
+2.  <xref:System.BadImageFormatException> 예외가 throw되는 경우 파일이 어셈블리가 아닙니다.  
   
 ## <a name="example"></a>예제  
  이 예제에서는 DLL을 테스트하여 어셈블리인지 확인합니다.  

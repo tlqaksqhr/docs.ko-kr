@@ -4,16 +4,17 @@ description: "dotnet restore 명령을 사용하여 종속성 및 프로젝트 �
 keywords: "dotnet-restore, CLI, CLI 명령, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 03/24/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fd7a5769-afbe-4838-bbaf-3ae0cfcbb914
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 92da0806eb6c365a4622668242edc28d9966ed26
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 602c173ff8d114a76c5598cd0826485ac32a2e72
+ms.openlocfilehash: fd4fd6ef2e8482a2b961ccbca1f5227d80c8be53
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/29/2017
 
 ---
 
@@ -37,6 +38,8 @@ ms.lasthandoff: 03/22/2017
 
 프로젝트 관련 도구의 경우 `dotnet restore`는 먼저 도구가 압축된 패키지를 복원한 다음 프로젝트 파일에 지정된 대로 도구의 종속성을 계속 복원합니다.
 
+`dotnet restore` 명령의 동작은 *Nuget.Config* 파일(있는 경우)에 있는 일부 설정의 영향을 받습니다. 예를 들어 *NuGet.Config*의 `globalPackagesFolder`를 설정하면 복원된 NuGet 패키지가 지정한 폴더에 저장됩니다. `dotnet restore` 명령의 `--packages` 옵션을 지정하는 대신 이 방법을 사용할 수 있습니다. 자세한 내용은 [NuGet.Config 참조](https://docs.microsoft.com/nuget/schema/nuget-config-file)를 참조하세요.
+
 ## <a name="arguments"></a>인수
 
 `ROOT` 
@@ -57,7 +60,7 @@ ms.lasthandoff: 03/22/2017
 
 패키지 복원의 런타임을 지정합니다. *.csproj* 파일의 `<RuntimeIdentifiers>` 태그에 명시적으로 나열되지 않은 런타임의 패키지를 복원하는 데 사용됩니다. RID(런타임 식별자) 목록은 [RID 카탈로그](../rid-catalog.md)를 참조하세요. 이 옵션을 여러 번 지정하여 여러 RID를 제공합니다.
 
-`--packages <PACKAGES_DIRECTORY]`
+`--packages <PACKAGES_DIRECTORY>`
 
 복원된 패키지에 대한 디렉터리를 지정합니다. 
 
@@ -103,7 +106,7 @@ ms.lasthandoff: 03/22/2017
 
 `dotnet restore -s c:\packages\mypackages -s c:\packages\myotherpackages` 
 
-현재 디렉터리에 있는 프로젝트에 대한 종속성 및 도구를 복원하고 오류만 출력에 표시합니다.
+현재 디렉터리에 있는 프로젝트에 대한 종속성 및 도구를 복원하고 최소 출력만 표시합니다.
 
-`dotnet restore --verbosity Error`
+`dotnet restore --verbosity minimal`
 

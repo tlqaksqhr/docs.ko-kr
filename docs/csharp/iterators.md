@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: df6e493f4dfb72ac59951832773cc818627f4c2f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
+ms.openlocfilehash: 7fea22be3b98c3218d173e5d80f1f22ef7ecf7e2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/12/2017
 
 ---
 
@@ -29,6 +30,8 @@ ms.lasthandoff: 03/13/2017
 + 데이터가 반복기 메서드를 통해 효율적으로 흐르는 데이터 파이프라인 만들기.
 
 C# 언어는 이러한 두 시나리오에 대한 기능을 제공합니다. 이 문서에서는 해당 기능에 대한 개요를 제공합니다.
+
+이 자습서는 여러 단계로 구성됩니다. 각 단계 후에 응용 프로그램을 실행하고 진행 상황을 확인할 수 있습니다. 이 항목에 대한 [전체 샘플을 보거나 다운로드](https://github.com/dotnet/docs/blob/master/samples/csharp/iterators)할 수도 있습니다. 다운로드 지침은 [샘플 및 자습서](../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
 
 ## <a name="iterating-with-foreach"></a>foreach로 반복 처리
 

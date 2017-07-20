@@ -35,7 +35,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
 ms.openlocfilehash: 21abcf70cce2d6c9052629ce60d08e9ec6ac16e7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- 프로그램 처음 만들기(C# 프로그래밍 가이드)
@@ -43,7 +43,7 @@ ms.lasthandoff: 03/31/2017
   
  소개 개념에 대한 추가 예제는 [Visual C# 및 Visual Basic 시작](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)을 참조하세요.  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-create-and-run-a-console-application"></a>콘솔 응용 프로그램을 만들고 실행하려면  
   
@@ -103,10 +103,10 @@ ms.lasthandoff: 03/31/2017
   
  명령줄 인수를 사용하는 방법에 대한 자세한 내용은 [Main() 및 명령줄 인수](../../../csharp/programming-guide/main-and-command-args/index.md) 및 [How to: Create and Use Assemblies Using the Command Line](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)(방법: 명령줄을 사용하여 어셈블리 만들기 및 사용)의 예제를 참조하세요.  
   
- `Main` 메서드가 끝날 때 <xref:System.Console.ReadKey%2A>를 호출하면 프로그램을 디버그 모드에서 실행할 경우 F5 키를 눌러 출력을 읽을 수 있는 기회를 얻기 전에 콘솔 창이 닫히지 않습니다.  
+ `Main` 메서드가 끝날 때 <xref:System.Console.ReadKey%2A>를 호출하면 프로그램을 디버그 모드에서 실행할 경우 F5 키를 눌러 출력을 읽을 수 있게 될 때까지 콘솔 창이 닫히지 않습니다.  
   
 ## <a name="input-and-output"></a>입력 및 출력  
- 일반적으로 C# 프로그램에서는 .NET Framework의 런타임 라이브러리에서 제공되는 입출력 서비스를 사용합니다. `System.Console.WriteLine("Hello World!");` 문에는 <xref:System.Console.WriteLine%2A> 메서드가 사용됩니다. 이 메서드는 런타임 라이브러리에 있는 <xref:System.Console> 클래스의 출력 메서드 중 하나입니다. 이 메서드는 표준 출력 스트림에 문자열 매개 변수를 표시하고 이어서 새 줄을 표시합니다. 기타 <xref:System.Console> 메서드는 다양한 입력 및 출력 작업에 사용할 수 있습니다. 프로그램 시작 부분에 `using System;` 지시문을 포함하면 <xref:System> 클래스 및 메서드를 정규화하지 않고 바로 사용할 수 있습니다. 예를 들어 `System.Console.WriteLine` 대신 `Console.WriteLine`을 호출할 수 있습니다.  
+ 일반적으로 C# 프로그램에서는 .NET Framework의 런타임 라이브러리에서 제공되는 입출력 서비스를 사용합니다. `System.Console.WriteLine("Hello World!");` 문은 <xref:System.Console.WriteLine%2A> 메서드를 사용합니다. 이 메서드는 런타임 라이브러리에 있는 <xref:System.Console> 클래스의 출력 메서드 중 하나입니다. 이 메서드는 표준 출력 스트림에 문자열 매개 변수를 표시하고 이어서 새 줄을 표시합니다. 기타 <xref:System.Console> 메서드는 다양한 입력 및 출력 작업에 사용할 수 있습니다. 프로그램 시작 부분에 `using System;` 지시문을 포함하면 <xref:System> 클래스 및 메서드를 정규화하지 않고 바로 사용할 수 있습니다. 예를 들어 `System.Console.WriteLine` 대신 `Console.WriteLine`을 호출할 수 있습니다.  
   
  [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_8.cs)]  
   

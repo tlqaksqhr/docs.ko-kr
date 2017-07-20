@@ -1,26 +1,26 @@
 ---
-title: "Windows XP에 .NET Framework 설치"
+title: "Windows XP에 .NET Framework 설치 | Microsoft Docs"
 description: "Windows XP에 .NET Framework를 설치하는 방법 알아보기"
 author: rlander
 keywords: ".Net Framework, 설치"
 ms.date: 03/28/2017
 ms.topic: article
-ms.prod: .net-framework-4.6
+ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 87cda1d5-c8g5-5eb5-93e8-5f478de07ff7
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bea5aa270cef5105a685f5141362b439c12af340
-ms.openlocfilehash: 1355f8d70d9b256e3b0b9bf00ef80889aa35fb69
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 3ae323580496e86c45c8bff962f42cca4b0201cd
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/11/2017
+ms.lasthandoff: 06/02/2017
 
 ---
 
-# <a name="installing-the-net-framework-on-windows-xp"></a>Windows XP에 .NET Framework 설치
+# <a name="install-the-net-framework-on-windows-xp"></a>Windows XP에 .NET Framework 설치
 
-> [!NOTE] 
-> Windows XP는 Microsoft에서 더 이상 지원되지 않습니다. 지원되며 최신 버전의 .NET Framework를 지원하는 Windows 10으로 업그레이드하는 것이 좋습니다. 이 문서는 유용한 문제 해결 가이드로만 제공됩니다. 
+> [!NOTE]
+> Windows XP는 Microsoft에서 더 이상 지원되지 않습니다. 지원되며 최신 버전의 .NET Framework를 지원하는 Windows 10으로 업그레이드하는 것이 좋습니다. 이 문서는 유용한 문제 해결 가이드로만 제공됩니다.
 
 Windows XP에서 응용 프로그램을 실행하려면 .NET Framework가 필요할 수 있습니다. 다음 지침이 도움이 될 수 있습니다. 지침은 필요한 .NET Framework 버전에 따라 다릅니다.
 

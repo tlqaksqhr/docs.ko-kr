@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0c2a9740a23ff370c1376dfa737b7e2dcd33def7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 3814213389119f1fb6692fd57b0f5636a81025bb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="how-to-use-a-thread-pool-c"></a>방법: 스레드 풀 사용(C#)
@@ -30,7 +31,7 @@ ms.lasthandoff: 03/13/2017
   
  다음 예제에서는 .NET Framework 스레드 풀을 사용하여 20에서 40 사이의 숫자 10개에 대한 `Fibonacci` 결과를 계산합니다. 각 `Fibonacci` 결과는 계산을 수행하는 `ThreadPoolCallback`이라는 메서드를 제공하는 `Fibonacci` 클래스로 표현됩니다. 각 `Fibonacci` 값을 나타내는 개체가 생성되고 `ThreadPoolCallback` 메서드가 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>에 전달되면, 여기서 풀에서 사용 가능한 스레드를 할당하여 메서드를 실행합니다.  
   
- 각 `Fibonacci` 개체에 계산할 값이 반임의적으로 지정되고 각 스레드가 프로세서 시간을 경쟁하므로 10개 결과를 모두 계산하는 데 걸리는 기간을 미리 알 수 없습니다. 이 때문에 생성 중 `Fibonacci` 개체에 <xref:System.Threading.ManualResetEvent>클래스 인스턴스가 전달됩니다. 해당 계산이 완료되면 각 개체가 제공된 이벤트 개체에 신호 알림을 보내며, 이렇게 하여 `Fibonacci` 개체 10개가 모두 결과를 계산할 때까지 기본 스레드에서 <xref:System.Threading.WaitHandle.WaitAll%2A>을 사용하여 실행을 차단할 수 있습니다. 그런 다음 `Main` 메서드가 각 `Fibonacci` 결과를 표시합니다.  
+ 각 `Fibonacci` 개체에 계산할 값이 반임의적으로 지정되고 각 스레드가 프로세서 시간을 경쟁하므로 10개 결과를 모두 계산하는 데 걸리는 기간을 미리 알 수 없습니다. 이 때문에 생성 중 각 `Fibonacci` 개체에 <xref:System.Threading.ManualResetEvent> 클래스 인스턴스가 전달됩니다. 해당 계산이 완료되면 각 개체가 제공된 이벤트 개체에 신호 알림을 보내며, 이렇게 하여 `Fibonacci` 개체 10개가 모두 결과를 계산할 때까지 기본 스레드에서 <xref:System.Threading.WaitHandle.WaitAll%2A>을 사용하여 실행을 차단할 수 있습니다. 그런 다음 `Main` 메서드가 각 `Fibonacci` 결과를 표시합니다.  
   
 ## <a name="example"></a>예제  
   
@@ -159,4 +160,4 @@ Fibonacci(27) = 196418
  [스레드 풀링(C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)   
  [스레딩(C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
  @System.Threading.Monitor   
- [보안](http://msdn.microsoft.com/library/9a9621d7-8883-4a4f-a874-65e8e09e20a6)
+ [보안](../../../../standard/security/index.md)

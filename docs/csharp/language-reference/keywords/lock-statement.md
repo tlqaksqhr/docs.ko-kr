@@ -30,17 +30,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 020be199391789360ae9a25858bef54d8259ae56
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: ae705e7df4515cd0c7481f64fa63b2e844a7d564
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="lock-statement-c-reference"></a>lock 문(C# 참조)
 `lock` 키워드는 지정된 개체에 대한 상호 배타적 잠금을 얻고 문을 실행한 다음 잠금을 해제하여 문 블록을 임계 영역으로 표시합니다. 다음 예제에는 `lock` 문이 포함되어 있습니다.  
   
 ```  
-  
 class Account  
 {  
     decimal balance;  
@@ -58,7 +58,6 @@ class Account
         }  
     }  
 }  
-  
 ```  
   
  자세한 내용은 [스레드 동기화](http://msdn.microsoft.com/library/413e1f28-a2c5-4eec-8338-aa43e7982ff4)를 참조하세요.  
@@ -68,7 +67,7 @@ class Account
   
  [스레딩](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c) 섹션에서 스레딩에 대해 설명합니다.  
   
- `lock` 키워드는 블록의 시작 부분에서 <xref:System.Threading.Monitor.Enter%2A>를 호출하고 블록의 끝에서 <xref:System.Threading.Monitor.Exit%2A>를 호출합니다. <xref:System.Threading.Thread.Interrupt%2A>가 `lock` 문에 들어오려고 대기 중인 스레드를 중단하면 <xref:System.Threading.ThreadInterruptedException>이 throw됩니다.  
+ `lock` 키워드는 블록의 시작 부분에서 <xref:System.Threading.Monitor.Enter%2A>를 호출하고 블록의 끝 부분에서 <xref:System.Threading.Monitor.Exit%2A>를 호출합니다. <xref:System.Threading.Thread.Interrupt%2A>가 `lock` 문의 입력을 기다리는 스레드를 중단하면 <xref:System.Threading.ThreadInterruptedException>이 throw됩니다.  
   
  일반적으로 코드 제어를 벗어나서 `public` 형식이나 인스턴스를 잠그지 마세요. 일반적인 구문 `lock (this)`, `lock (typeof (MyType))` 및 `lock ("myLock")`은 이 지침을 위반합니다.  
   
@@ -104,6 +103,7 @@ class Account
  [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
  [문 키워드](../../../csharp/language-reference/keywords/statement-keywords.md)   
  @System.Threading.Monitor   
- [연동 작업](http://msdn.microsoft.com/library/cbda7114-c752-4f3e-ada1-b1e8dd262f2b)   
- [AutoResetEvent](http://msdn.microsoft.com/library/6d39c48d-6b37-4a9b-8631-f2924cfd9c18)   
+ [연동 작업](../../../standard/threading/interlocked-operations.md)   
+ [AutoResetEvent](../../../standard/threading/autoresetevent.md)   
  [스레드 동기화](http://msdn.microsoft.com/library/413e1f28-a2c5-4eec-8338-aa43e7982ff4)
+

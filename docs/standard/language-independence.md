@@ -10,9 +10,10 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
 ms.openlocfilehash: 815d9c24c139ef738b256c7bee791756a2fdb3b3
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/10/2017
 
 ---
@@ -346,7 +347,7 @@ CLS 규격 형식 | 설명
  
  .NET Framework 클래스 라이브러리 또는 기타 다른 클래스 라이브러리는 다음 예시와 같은 CLS 규격이 아닌 기타 형식을 포함할 수 있습니다. 
  
- * boxed 값 형식. 다음 C# 예제에서는 이름이 `Value`인 `int`*형식의 public 속성이 있는 클래스를 만듭니다. `int`*는 boxed 값 형식이므로 컴파일러에서 CLS 비규격으로 플래그를 지정합니다.
+ * boxed 값 형식. 다음 C# 예제에서는 이름이 `Value`인 `int` *형식의 public 속성이 있는 클래스를 만듭니다. `int`*는 boxed 값 형식이므로 컴파일러에서 CLS 비규격으로 플래그를 지정합니다.
 
   ```csharp
   using System;

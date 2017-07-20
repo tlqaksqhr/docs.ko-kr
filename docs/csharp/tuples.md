@@ -10,16 +10,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f2c81b7e18f36bde5b46c0c6df5c8122cd303931
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 6b30f41e3fb07a962542a09a41c698efee7ebb5a
+ms.openlocfilehash: 0ea7299d87dc69784e3bed93e48d83e4a0076a20
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/26/2017
 
 ---
 
 # <a name="c-tuple-types"></a>C# 튜플 형식 #
 
-C# 튜플은 간단한 구문을 사용하여 정의하는 형식입니다. 장점으로 더 간단한 구문, 필드 수("인자 수"라고 함) 및 형식에 따른 변환 규칙, 복사 및 할당에 대한 일관된 규칙 등이 있습니다. 반면, 튜플은 상속과 관련된 개체 지향 구문의 일부를 지원하지 않습니다. [C# 7 새로운 기능의 튜플](csharp-7.md#tuples) 항목에 대한 섹션에서 전반적인 개요를 확인할 수 있습니다.
+C# 튜플은 간단한 구문을 사용하여 정의하는 형식입니다. 장점으로 더 간단한 구문, 필드 수("인자 수"라고 함) 및 형식에 따른 변환 규칙, 복사 및 할당에 대한 일관된 규칙 등이 있습니다. 반면, 튜플은 상속과 관련된 개체 지향 구문의 일부를 지원하지 않습니다. [C# 7 새로운 기능의 튜플](whats-new/csharp-7.md#tuples) 항목에 대한 섹션에서 전반적인 개요를 확인할 수 있습니다.
 
 이 항목에서는 C# 7에서 튜플을 제어하는 언어 규칙, 다양한 사용 방법 및 튜플 작업에 대한 초기 지침을 알아봅니다.
 
@@ -65,7 +66,7 @@ C# 튜플은 간단한 구문을 사용하여 정의하는 형식입니다. 장�
 
 ## <a name="assignment-and-tuples"></a>할당 및 튜플
 
-이 언어는 필드 수가 같고 각 필드의 형식이 같은 튜플 형식 간의 할당을 지원합니다. 이러한 형식은 컴파일 시간 형식과 정확히 일치해야 합니다. 다른 변환은 할당에 고려되지 않습니다. 튜플 형식 간에 허용되는 할당 종류를 살펴보겠습니다.
+이 언어는 필드 수가 같은 튜플 형식 간의 할당 및 각 필드에 대한 형식의 암시적 변환을 지원합니다. 다른 변환은 할당에 고려되지 않습니다. 튜플 형식 간에 허용되는 할당 종류를 살펴보겠습니다.
 
 다음 예제에서 사용되는 이러한 변수를 살펴보세요.
 
@@ -181,7 +182,7 @@ private static (double, double, int) ComputeSumAndSumOfSquares(IEnumerable<doubl
 ```
 튜플에 있는 모든 필드의 형식이 같은 경우에도 괄호 밖에 특정 형식을 사용할 수 없습니다.
 
-### <a name="deconstring-user-defined-types"></a>사용자 정의 형식 분해
+### <a name="deconstructing-user-defined-types"></a>사용자 정의 형식 분해
 
 위와 같이 모든 튜플 형식을 분해할 수 있습니다. 또한 사용자 정의 형식(클래스, 구조체 또는 인터페이스)에서 쉽게 분해를 사용할 수 있습니다.
 

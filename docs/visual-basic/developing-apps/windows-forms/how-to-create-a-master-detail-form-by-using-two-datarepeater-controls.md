@@ -28,9 +28,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 23789bb11cab17b50928651e1dc00d5d59640c0f
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/13/2017
 
 ---
@@ -39,7 +40,7 @@ ms.lasthandoff: 03/13/2017
   
  동일한 마스터 테이블 노드를 공유 하는 세부 항목을 끌어 관련된 데이터를 표시할 수는 **데이터 원본** 창으로는 <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>제어 합니다.</xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> 예를 들어 Customers 테이블 및 관련된 Orders 테이블에 있는 데이터 원본에 있으면 두 테이블 모두으로 표시에서 트리 뷰의 최상위 노드는 **데이터 원본** 창입니다. 열을 볼 수 있도록 Customers 노드를 확장 합니다. 목록에서 마지막 열 Orders 테이블을 나타내는 노드임이 되는지 확인 합니다. 이 노드는 고객에 대 한 관련된 주문을 나타냅니다.  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-display-related-data-in-two-datarepeater-controls"></a>두 개의 DataRepeater 컨트롤에 관련된 데이터 표시  
   

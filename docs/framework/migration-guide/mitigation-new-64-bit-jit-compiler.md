@@ -19,10 +19,11 @@ caps.latest.revision: 6
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 994da1622246d09930fa9b74d6debac4f7a24b5b
-ms.lasthandoff: 04/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 407b31c8b5825093d9ba6bab6329aaf8dd821572
+ms.openlocfilehash: f5bab95cc5a4ff49a0ff81e209f0a71c78914976
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>마이그레이션: 새로운 64비트 JIT 컴파일러
@@ -40,11 +41,11 @@ ms.lasthandoff: 04/18/2017
   
 -   특정 상황에서 메서드에 전달된 구조체가 릴리스 빌드에서 값 형식이 아닌 참조 형식으로 처리됩니다. 이 문제의 징후 중 하나는 컬렉션의 개별 항목이 예기치 않은 순서로 표시되는 것입니다.  
   
--   특정 상황에서 최적화가 사용되도록 설정되어 있을 경우 <xref:System.UInt16> 값을 높은 비트 집합과 비교하면 결과가 잘못됩니다.  
+-   특정 상황에서 최적화가 사용되도록 설정되어 있을 경우 <xref:System.UInt16> 값을 높은 비트의 집합과 비교하면 결과가 잘못됩니다.  
   
--   배열 값을 초기화할 때와 같은 특정 상황에서 <xref:System.Reflection.Emit.OpCodes.Initblk?displayProperty=fullName> IL 명령에 의해 메모리가 초기화되면 잘못된 값이 사용될 수 있습니다. 이로 인해 처리되지 않은 예외 또는 잘못된 출력이 발생할 수 있습니다.  
+-   배열 값을 초기화할 때와 같은 특정 상황에서 <xref:System.Reflection.Emit.OpCodes.Initblk?displayProperty=fullName> IL 명령에 따라 메모리가 초기화되면 잘못된 값이 사용될 수 있습니다. 이로 인해 처리되지 않은 예외 또는 잘못된 출력이 발생할 수 있습니다.  
   
--   드문 경우에 컴파일러 최적화가 사용되도록 설정되면 조건부 비트 테스트가 잘못된 <xref:System.Boolean> 값을 반환하거나 예외를 throw할 수 있습니다.  
+-   드물게 특정한 상황에서 컴파일러 최적화가 사용되도록 설정되면 조건부 비트 테스트가 잘못된 <xref:System.Boolean> 값을 반환하거나 예외를 throw할 수 있습니다.  
   
 -   특정 상황에서 `try` 블록을 시작하기 전에 `if` 문을 사용해서 조건을 테스트한 후에 `try` 블록을 종료하고 `catch` 또는 `finally` 블록에서 동일한 조건을 평가하면 새로운 64비트 JIT 컴파일러는 코드를 최적화할 때 `catch` 또는 `finally` 블록에서 `if` 조건을 제거합니다. 결과적으로 `catch` 또는 `finally` 블록에서 `if` 문 내의 코드가 무조건적으로 실행됩니다.  
   
@@ -62,17 +63,15 @@ ms.lasthandoff: 04/18/2017
 ## <a name="mitigation-of-other-issues"></a>기타 문제 완화  
  이전 64비트 JIT 컴파일러 및 새로운 64비트 JIT 컴파일러를 사용하여 컴파일한 코드 또는 둘 다 새로운 64비트 JIT 컴파일러를 사용하여 컴파일한 앱의 디버그 버전 및 릴리스 버전 간 동작에서 다른 차이가 발생하는 경우 다음을 수행하여 이전 64비트 JIT 컴파일러로 앱을 컴파일할 수 있습니다.  
   
--   응용 프로그램별로 [ \<useLegacyJIT>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) 요소를 응용 프로그램의 구성 파일에 추가할 수 있습니다. 다음은 새로운 64비트 JIT 컴파일러를 사용하는 컴파일을 사용하지 않도록 설정하고, 대신 레거시 64비트 JIT 컴파일러를 사용합니다.  
+-   응용 프로그램별로 [\<useLegacyJit>](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md) 요소를 응용 프로그램의 구성 파일에 추가할 수 있습니다. 다음은 새로운 64비트 JIT 컴파일러를 사용하는 컴파일을 사용하지 않도록 설정하고, 대신 레거시 64비트 JIT 컴파일러를 사용합니다.  
   
     ```xml  
-  
     <?xml version ="1.0"?>  
     <configuration>  
         <runtime>  
-           <useLegacyJIT enabled="1" />  
+           <useLegacyJit enabled="1" />  
         </runtime>  
     </configuration>  
-  
     ```  
   
 -   사용자별로 레지스트리의 `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` 키에 `useLegacyJit`라는 `REG_DWORD` 값을 추가할 수 있습니다. 값이 1이면 레거시 64비트 JIT 컴파일러가 사용되도록 설정되고 값이 0이면 새로운 64비트 JIT 컴파일러가 사용되도록 설정됩니다.  
@@ -83,4 +82,5 @@ ms.lasthandoff: 04/18/2017
   
 ## <a name="see-also"></a>참고 항목  
  [런타임 변경 내용](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)   
- [\<useLegacyJIT> 요소](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)
+ [\<useLegacyJit> 요소](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)
+

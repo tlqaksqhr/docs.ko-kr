@@ -1,69 +1,86 @@
 ---
-title: "How to: Write Text to Files in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "files, writing to"
-  - "text, writing to files"
-  - "writing to files"
-  - "examples [Visual Basic], text files"
+title: "방법: Visual Basic에서 파일에 텍스트 쓰기 | Microsoft Docs"
+ms.custom: 
+ms.date: 2015-07-20
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- files, writing to
+- text, writing to files
+- writing to files
+- examples [Visual Basic], text files
 ms.assetid: 304956eb-530d-4df7-b48f-9b4d1f2581a0
 caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
----
-# How to: Write Text to Files in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 8febfbb5d4fb9042f2d9153a81aa18bd279cf3dc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
-<xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 메서드를 사용하여 파일에 텍스트를 쓸 수 있습니다.  지정된 파일이 없으면 새로 만들어집니다.  
+---
+# <a name="how-to-write-text-to-files-in-visual-basic"></a>방법: Visual Basic에서 파일에 텍스트 쓰기
+<xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 메서드를 사용하여 파일에 텍스트를 쓸 수 있습니다. 지정한 파일이 없으면 새로 만들어집니다.  
   
-## 절차  
+## <a name="procedure"></a>프로시저  
   
-#### 파일에 텍스트를 쓰려면  
+#### <a name="to-write-text-to-a-file"></a>파일에 텍스트를 쓰려면  
   
--   파일에 텍스트를 쓰려면 `WriteAllText` 메서드를 사용하면서 쓸 파일 및 텍스트를 지정합니다.  이 예제에서는 `"This is new text."`라는 줄을 `test.txt` 파일에 쓰면서 텍스트를 파일의 기존 텍스트에 추가합니다.  
+-   파일과 쓸 텍스트를 지정하여 `WriteAllText` 메서드를 통해 파일에 텍스트를 씁니다. 이 예제에서는 `test.txt`라는 파일에 `"This is new text."` 줄을 쓰고 파일에 있는 기존 텍스트에 텍스트를 추가합니다.  
   
      [!code-vb[VbFileIOWrite#3](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files_1.vb)]  
   
-#### 파일에 일련의 문자열을 쓰려면  
+#### <a name="to-write-a-series-of-strings-to-a-file"></a>일련의 문자열을 파일에 쓰려면  
   
--   문자열 컬렉션을 순환하며 검색합니다.  `WriteAllText` 메서드를 사용하여 추가할 대상 파일과 문자열을 지정하고 `append`를 `True`로 설정하여 파일에 텍스트를 씁니다.  
+-   문자열 컬렉션을 반복합니다. 대상 파일 및 추가할 문자열을 지정하고 `append`를 `True`로 설정하여 `WriteAllText` 메서드를 통해 파일에 텍스트를 씁니다.  
   
-     이 예제에서는 `Documents and Settings` 디렉터리에 있는 파일의 이름을 `FileList.txt`에 쓰고 가독성을 높이기 위해 각 이름 사이에 캐리지 리턴을 삽입합니다.  
+     이 예제에서는 `Documents and Settings` 디렉터리에 있는 파일 이름을 `FileList.txt`에 쓰고, 가독성을 높이기 위해 각 이름 사이에 캐리지 리턴을 삽입합니다.  
   
      [!code-vb[VbFileIOWrite#4](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files_2.vb)]  
   
-## 강력한 프로그래밍  
- 다음 조건에서 예외가 발생할 수 있습니다.  
+## <a name="robust-programming"></a>강력한 프로그래밍  
+ 다음 조건에서 예외가 발생합니다.  
   
--   길이가 0인 문자열이거나, 공백만 포함하거나, 잘못된 문자를 포함하거나, \\\\.\\로 시작하는 장치 경로와 같은 여러 가지 이유 중 하나로 경로가 올바르지 않은 경우  \\\) \(<xref:System.ArgumentException>\).  
+-   길이가 0인 문자열이거나, 공백만 포함하거나, 잘못된 문자를 포함하거나, 경로가 장치 경로인 경우(\\\\.\\로 시작됨)와 같은 여러 가지 이유 중 하나로 경로가 올바르지 않은 경우(<xref:System.ArgumentException>)  
   
--   경로가 `Nothing`이기 때문에 올바르지 않은 경우\(<xref:System.ArgumentNullException>\)  
+-   경로가 `Nothing`이기 때문에 올바르지 않은 경우(<xref:System.ArgumentNullException>)  
   
--   `File`이 존재하지 않는 경로를 가리키는 경우\(<xref:System.IO.FileNotFoundException> 또는 <xref:System.IO.DirectoryNotFoundException>\)  
+-   `File`이 존재하지 않는 경로를 가리키는 경우(<xref:System.IO.FileNotFoundException> 또는 <xref:System.IO.DirectoryNotFoundException>)  
   
--   다른 프로세스에서 파일을 사용 중이거나 I\/O 오류가 발생한 경우\(<xref:System.IO.IOException>\)  
+-   다른 프로세스에서 파일을 사용 중이거나 I/O 오류가 발생한 경우(<xref:System.IO.IOException>)  
   
--   경로가 시스템 정의 최대 길이를 초과하는 경우\(<xref:System.IO.PathTooLongException>\)  
+-   경로가 시스템 정의 최대 길이를 초과하는 경우(<xref:System.IO.PathTooLongException>)  
   
--   경로의 파일 이름이나 디렉터리 이름에 콜론\(:\)이 있거나 이름의 형식이 잘못된 경우\(<xref:System.NotSupportedException>\)  
+-   경로의 파일 이름이나 디렉터리 이름에 콜론(:)이 있거나 이름의 형식이 잘못된 경우(<xref:System.NotSupportedException>)  
   
--   경로를 보는 데 필요한 권한이 사용자에게 없는 경우\(<xref:System.Security.SecurityException>\)  
+-   경로를 보는 데 필요한 권한이 사용자에게 없는 경우(<xref:System.Security.SecurityException>)  
   
--   디스크가 꽉 찼고 `WriteAllText`에 대한 호출이 실패한 경우\(<xref:System.IO.IOException>\)  
+-   디스크가 꽉 찼고 `WriteAllText`에 대한 호출에 실패한 경우(<xref:System.IO.IOException>)  
   
- 부분 신뢰 컨텍스트에서 실행 중인 경우에는 불충분한 권한 때문에 코드에서 예외를 throw할 수 있습니다.  자세한 내용은 [코드 액세스 보안 기본 사항](../Topic/Code%20Access%20Security%20Basics.md)을 참조하십시오.  
+ 부분 신뢰 컨텍스트에서 실행하는 경우 권한 부족으로 인해 코드에서 예외를 throw할 수 있습니다. 자세한 내용은 [코드 액세스 보안 기본 사항](https://msdn.microsoft.com/library/33tceax8)을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>   
- [How to: Read from Text Files](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)
+ [방법: 텍스트 파일에서 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)

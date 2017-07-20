@@ -17,10 +17,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: Human Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 416e97cd7f59b0fc63052673acee8b55a3c11c1f
+ms.sourcegitcommit: 9fc099a7ec490250204c7d7d3ddce37b62c3165e
+ms.openlocfilehash: 0c6ce1020dbd1488f4abd51e13b887eab0068521
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 06/07/2017
 
 ---
 
@@ -68,7 +68,7 @@ ms.lasthandoff: 05/22/2017
 - [Windows Forms](#wf47)
 - [WPF(Windows Presentation Foundation)](#WPF47)
 
-.NET Framework 4.7에 추가된 새 API 목록은 GitHub에서 [.NET Framework 4.7 API 변경 내용](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md)을 참조하세요. .NET Framework 4.7의 향상된 기능 및 버그 수정 목록은 GitHub에서 [.NET Framework 4.7 변경 내용 목록](http://gutithub.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md)을 참조하세요.  자세한 내용은 .NET 블로그에서 [.NET Framework 4.7 알림](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/)을 참조하세요.
+.NET Framework 4.7에 추가된 새 API 목록은 GitHub에서 [.NET Framework 4.7 API 변경 내용](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md)을 참조하세요. .NET Framework 4.7의 향상된 기능 및 버그 수정 목록은 GitHub에서 [.NET Framework 4.7 변경 내용 목록](http://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md)을 참조하세요.  자세한 내용은 .NET 블로그에서 [.NET Framework 4.7 알림](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/)을 참조하세요.
 
 <a name="Core47" />
 #### <a name="core"></a>핵심
@@ -634,13 +634,11 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
  다음 예제 코드에서는 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]에 포함된 ECDSA  X509 인증서에 대한 새 지원을 사용하여 바이트 스트림을 위한 서명을 쉽게 생성하는 방법을 보여 줍니다.
 
- [!code-csharp[whatsnew.461.crypto#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#1)] 
- [!code-vb[whatsnew.461.crypto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code461.vb#1)]
+ [!code-csharp[whatsnew.461.crypto#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#1)] [!code-vb[whatsnew.461.crypto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code461.vb#1)]
 
  다음은 .NET Framework 4.6에서 서명을 생성하는 데 필요한 코드에 표시된 대비를 제공합니다.
 
- [!code-csharp[whatsnew.461.crypto#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#2)] 
- [!code-vb[whatsnew.461.crypto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code46.vb#2)]
+ [!code-csharp[whatsnew.461.crypto#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#2)] [!code-vb[whatsnew.461.crypto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code46.vb#2)]
 
 <a name="ADO.NET461"></a> 
 ### <a name="adonet"></a>ADO.NET
@@ -743,7 +741,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
          비동기 모델 바인딩은 `aspnet:EnableAsyncModelBinding` 구성 설정으로 제어합니다.
 
-        ```
+        ```xml
         <appSettings>
            <add key=" aspnet:EnableAsyncModelBinding" value="true|false" />
         </appSettings>
@@ -776,7 +774,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
          .NET Framework 4.5에서는 [임의 문자열 해시 알고리즘](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)이 도입되었습니다. 그러나 일부 ASP.NET 기능이 안정적인 해시 코드에 종속되어 있어 ASP.NET에서는 지원하지 않았습니다. 이제 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]에서 임의 문자열 해시 알고리즘을 지원합니다. 이 기능을 사용하려면 `aspnet:UseRandomizedStringHashAlgorithm` 구성 설정을 사용합니다.
 
-        ```
+        ```xml
         <appSettings>
            <add key="aspnet:UseRandomizedStringHashAlgorithm" value="true|false" />
         </appSettings>
@@ -832,13 +830,11 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
         - RSA API에 대한 향상 기능 - 일반 작업에 더 이상 캐스팅이 필요하지 않습니다. 예를 들어 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 개체를 사용하여 데이터를 암호화하려면 이전 버전의 .NET Framework에서 다음과 같은 코드가 필요합니다.
 
-             [!code-csharp[WhatsNew.Casting#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#1)]    
-             [!code-vb[WhatsNew.Casting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#1)]
+             [!code-csharp[WhatsNew.Casting#1](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#1)]    [!code-vb[WhatsNew.Casting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#1)]
 
              .NET Framework 4.6에서 새로운 암호화 API를 사용하는 코드는 캐스팅을 방지하기 위해 다음과 같이 작성될 수 있습니다.
 
-             [!code-csharp[WhatsNew.Casting#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#2)]    
-             [!code-vb[WhatsNew.Casting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#2)]
+             [!code-csharp[WhatsNew.Casting#2](../../../samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#2)]    [!code-vb[WhatsNew.Casting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#2)]
 
     - **UNIX 시간으로/UNIX 시간에서 날짜 및 시간 변환 지원**
 
@@ -928,7 +924,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
          이제 WPF의 HDPI 지원이 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]에서 보다 향상되었습니다. 테두리가 있는 컨트롤에 클리핑 인스턴스를 줄이기 위해 레이아웃 반올림을 변경했습니다. 기본적으로 이 기능은 <xref:System.Runtime.Versioning.TargetFrameworkAttribute>가 .NET 4.6으로 설정될 때에만 사용됩니다.  이전 버전의 프레임워크를 대상으로 하지만 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]에서 실행되는 응용 프로그램은 app.config 파일의 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 섹션에 다음 줄을 추가하여 새 동작을 옵트인(opt in)할 수 있습니다.
 
-        ```
+        ```xml
         <AppContextSwitchOverrides
         value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=false"
         />
@@ -936,7 +932,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
          이제 서로 다른 DPI 설정(다중 DPI 설치)을 사용하여 여러 대의 모니터에 걸쳐 있는 WPF 창이 블랙아웃 영역 없이 완전하게 렌더링됩니다. 이 새로운 동작을 사용하지 않으려면 app.config 파일의 `<appSettings>` 섹션에 다음 줄을 추가하여 옵트아웃(opt out)할 수 있습니다.
 
-        ```
+        ```xml
         <add key="EnableMultiMonitorDisplayClipping" value="true"/>
         ```
 
@@ -956,7 +952,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
          이제 WCF가 전송 보안 및 클라이언트 인증으로 NetTcp를 사용할 때 SSL 3.0 및 TLS 1.0뿐만 아니라 SSL 버전 TLS 1.1 및 TLS 1.2를 지원합니다. 이제 사용할 프로토콜을 선택하거나 이전의 안정성이 낮은 프로토콜을 사용하지 않도록 설정할 수 있습니다. 이 작업을 수행하려면 <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A> 속성을 설정하거나 구성 파일에 다음을 추가합니다.
 
-        ```
+        ```xml
         <netTcpBinding>
            <binding>
               <security mode= "None|Transport|Message|TransportWithMessageCredential" >
@@ -981,7 +977,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
              사용자는 서로 다른 채널 팩터리로 만들어진 채널을 사용하여 보낸 메시지가 서로 다른 기본 HTTP 연결을 사용하도록 하는 기능을 사용하도록 설정할 수도 있습니다. 이 기능을 사용하려면 사용자가 다음 `appSetting`을 `true`로 설정해야 합니다.
 
-            ```
+            ```xml
             <appSettings>
                <add key="wcf:httpTransportBinding:useUniqueConnectionPoolPerFactory" value="true" />
             </appSettings>
@@ -991,7 +987,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
      이제 요청 시간이 초과되기 전에 처리 중인 “비 프로토콜” 책갈피가 있을 때 워크플로 서비스가 순서가 잘못된 작업 요청을 유지하는 시간을 초 단위로 지정할 수 있습니다. “비 프로토콜” 책갈피는 처리 중인 수신 작업에 관련되지 않은 책갈피입니다. 일부 작업은 구현되는 과정에서 비 프로토콜 책갈피를 만들기 때문에 비 프로토콜 책갈피가 있는지 정확히 알 수 없습니다. 여기에는 상태 및 선택이 포함됩니다. 따라서 워크플로 서비스를 상태 컴퓨터를 사용하여 구현하거나 선택 작업을 포함하여 구현한 경우 대부분 비 프로토콜 책갈피가 포함됩니다. app.config 파일의 `appSettings` 섹션에 다음과 같은 줄을 추가하여 간격을 지정합니다.
 
-    ```
+    ```xml
     <add key="microsoft:WorkflowServices:FilterResumeTimeoutInSeconds" value="60"/>
     ```
 
@@ -1009,7 +1005,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
      이제 <xref:System.Transactions.TransactionException>에서 파생된 예외를 발생시킨 트랜잭션의 분산 트랜잭션 식별자를 포함할 수 있습니다. 이렇게 하려면 app.config 파일의 `appSettings` 섹션에 다음 키를 추가합니다.
 
-    ```
+    ```xml
     <add key="Transactions:IncludeDistributedTransactionIdInExceptionMessage" value="true"/> 
     ```
 
@@ -1041,7 +1037,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
      이 기능은 옵트인 기능입니다. 이 기능을 사용하려면 아래와 같이 응용 프로그램 구성 파일(app.config)에서 `EnableWindowsFormsHighDpiAutoResizing` 요소를 `true`로 설정해야 합니다.
 
-    ```
+    ```xml
     <appSettings>
        <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />
     </appSettings>
@@ -1080,7 +1076,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
      이 기능은 옵트인(opt-in) 기능입니다. 이 기능을 사용하려면 아래와 같이 응용 프로그램 구성 파일(app.config)에서 `EnableWindowsFormsHighDpiAutoResizing` 요소를 `true`로 설정해야 합니다.
 
-    ```
+    ```xml
     <appSettings>
        <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />
     </appSettings>
@@ -1170,7 +1166,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
      이 기능을 사용하려면 다음과 같이 새로운 \<appSettings> 요소를 구성 파일(app.config)에 추가하여 `EnableWindowsFormsHighDpiAutoResizing` 요소를 `true`로 설정합니다.
 
-    ```
+    ```xml
     <appSettings>
        <add key="EnableWindowsFormsHighDpiAutoResizing" value="true" />
     </appSettings>

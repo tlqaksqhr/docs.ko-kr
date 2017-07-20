@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 570a5218ce2d750eb5f3a1a1b57e1e05f7fc0cbd
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: a686058d97d499b3baf32b20b56834162200f346
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="parsing-text-files-with-the-textfieldparser-object-visual-basic"></a>TextFieldParser 개체를 사용하여 텍스트 파일 구문 분석(Visual Basic)
@@ -52,7 +53,7 @@ ms.lasthandoff: 03/13/2017
   
  형식이 정의되고 나면 `ReadFields` 메서드로 각 줄을 차례로 처리하여 파일을 반복할 수 있습니다.  
   
- 필드가 지정된 형식과 일치하지 않는 경우 <xref:Microsoft.VisualBasic.FileIO.MalformedLineException> 예외가 throw됩니다. 이러한 예외가 throw되는 경우 `ErrorLine` 및 `ErrorLineNumber` 속성에 예외를 발생시키는 텍스트와 해당 텍스트의 줄 번호가 포함됩니다.  
+ 필드가 지정된 형식과 일치하지 않으면 <xref:Microsoft.VisualBasic.FileIO.MalformedLineException> 예외가 throw됩니다. 이러한 예외가 throw되는 경우 `ErrorLine` 및 `ErrorLineNumber` 속성에 예외를 발생시키는 텍스트와 해당 텍스트의 줄 번호가 포함됩니다.  
   
 ## <a name="parsing-files-with-multiple-formats"></a>여러 형식의 파일 구문 분석  
  `TextFieldParser` 개체의 `PeekChars` 메서드를 사용하면 각 필드를 읽기 전에 확인하여 필드에 대한 여러 형식을 정의하고 그에 따라 반응할 수 있습니다. 자세한 내용은 [방법: 여러 형식의 텍스트 파일에서 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)를 참조하세요.  

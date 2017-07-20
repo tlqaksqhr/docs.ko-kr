@@ -39,10 +39,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 83569fa264ba3ed6e271281885940a70a5354840
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="filealign-c-compiler-options"></a>/filealign(C# 컴파일러 옵션)
@@ -50,7 +51,7 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 /filealign:number  
 ```  
   
@@ -75,7 +76,7 @@ ms.lasthandoff: 03/13/2017
   
 4.  **파일 맞춤** 속성을 수정합니다.  
   
- 프로그래밍 방식으로 이 컴파일러 옵션을 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>를 참조하세요.  
+ 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)   

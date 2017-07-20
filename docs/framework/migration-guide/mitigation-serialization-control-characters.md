@@ -17,10 +17,11 @@ caps.latest.revision: 3
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9460c8b6ca8db927af4064e3567eca34c1bf5c91
-ms.openlocfilehash: be68f399587910e290fc3487b887ca566c2c9f97
-ms.lasthandoff: 04/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
+ms.openlocfilehash: 596d7ea858e40a558767fa76bb717dbbba97d4ed
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a>완화: DataContractJsonSerializer로 제어 문자 serialization
@@ -29,7 +30,7 @@ ms.lasthandoff: 04/18/2017
  
 ## <a name="impact"></a>영향
 
-.NET framework 4.6.2 및 이전 버전에서 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>는 ECMAScript V6 및 V8 표준과 호환되는 방식에서 `\b`, `\f` 및 `\t`와 같은 일부 특수 제어 문자를 serialize하지 않았습니다.
+.NET framework 4.6.2 이하 버전에서는 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>가 ECMAScript V6 및 V8 표준과 호환되는 방식으로 `\b`, `\f`, `\t` 등의 일부 특수 제어 문자를 serialize하지 않았습니다.
 
 .NET Framework 4.7 이상의 .NET Framework 버전을 대상으로 하는 앱의 경우 이러한 제어 문자의 serialization이 ECMAScript V6 및 V8과 호환됩니다. 다음 API가 영향을 받습니다.
 

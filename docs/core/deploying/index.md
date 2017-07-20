@@ -10,14 +10,16 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 3ffe3909902659a22cb25bac6dc5aaa4f5b9fde2
-ms.openlocfilehash: 31503e39d8a96092dbce03c17397e1adfec6421e
+ms.sourcegitcommit: 83200e452bccc20bfa82d94899514019e9d05a23
+ms.openlocfilehash: 5e2b03d0731e13e1d5261679a65b1e01cd1d3fe4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 07/05/2017
 
 ---
 
-# <a name="net-core-application-deployment"></a>.NET Core 응용 프로그램 배포
+<a id="net-core-application-deployment" class="xliff"></a>
+
+# .NET Core 응용 프로그램 배포
 
 .NET Core 응용 프로그램에 대해 두 가지 유형을 배포를 만들 수 있습니다.
 
@@ -25,11 +27,15 @@ ms.lasthandoff: 05/13/2017
 
 - 자체 포함 배포. FDD와 달리 SCD(자체 포함 배포)에서는 대상 시스템에 공유 구성 요소가 없어도 됩니다. .NET Core 라이브러리 및 .NET Core 런타임을 비롯한 모든 구성 요소가 응용 프로그램에 포함되며 다른 .NET Core 응용 프로그램에서는 격리됩니다. SCD는 플랫폼별 .NET Core 호스트의 이름이 변경된 버전인 실행 파일(예: Windows 플랫폼에서 `app`이라는 응용 프로그램에 대한 *app.exe*)과 실제 응용 프로그램인 *.dll* 파일(예: *app.dll*)을 포함합니다.
 
-## <a name="framework-dependent-deployments-fdd"></a>프레임워크 종속 배포(FDD)
+<a id="framework-dependent-deployments-fdd" class="xliff"></a>
+
+## 프레임워크 종속 배포(FDD)
 
 FDD에서는 앱과 타사 종속성만 배포합니다. 앱에서 대상 시스템에 있는 .NET Core 버전을 사용하므로 .NET Core를 배포할 필요가 없습니다. 이 배포는 .NET Core 앱의 기본 배포 모델입니다.
 
-### <a name="why-create-a-framework-dependent-deployment"></a>프레임워크 종속 배포를 만드는 이유
+<a id="why-create-a-framework-dependent-deployment" class="xliff"></a>
+
+### 프레임워크 종속 배포를 만드는 이유
 
 FDD 배포에는 다음과 같은 여러 가지 장점이 있습니다.
 
@@ -45,11 +51,15 @@ FDD 배포에는 다음과 같은 여러 가지 장점이 있습니다.
 
 - .NET Core 런타임 및 라이브러리가 향후 릴리스에서 사용자 모르게 변경될 수 있습니다. 드문 경우지만 이로 인해 앱의 동작이 변경될 수 있습니다.
 
-## <a name="self-contained-deployments-scd"></a>자체 포함 배포(SCD)
+<a id="self-contained-deployments-scd" class="xliff"></a>
 
-자체 포함 배포에서는 앱과 필요한 타사 종속성 외에도 앱을 빌드하는 데 사용한 .NET Core 버전도 배포합니다. SCD를 만들 때 다양한 플랫폼의 [.NET Core에 대한 기본 종속성](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)(예: macOS의 OpenSSL)을 포함하지 않으므로 앱을 실행하려면 이러한 종속성이 있어야 합니다.
+## 자체 포함 배포(SCD)
 
-### <a name="why-deploy-a-self-contained-deployment"></a>자체 포함 배포를 배포하는 이유
+자체 포함 배포에서는 앱과 필요한 타사 종속성 외에도 앱을 빌드하는 데 사용한 .NET Core 버전도 배포합니다. SCD를 만들 때 다양한 플랫폼의 [.NET Core에 대한 기본 종속성](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)을 포함하지 않으므로 앱을 실행하려면 이러한 종속성이 있어야 합니다.
+
+<a id="why-deploy-a-self-contained-deployment" class="xliff"></a>
+
+### 자체 포함 배포를 배포하는 이유
 
 자체 포함 배포를 배포하면 다음과 같은 두 가지 주요 장점이 있습니다.
 
@@ -65,7 +75,9 @@ FDD 배포에는 다음과 같은 여러 가지 장점이 있습니다.
 
 - 다양한 자체 포함 .NET Core 앱을 시스템에 배포하면 각 앱에서 .NET Core 파일을 중복하므로 엄청나게 많은 디스크 공간을 사용합니다.
 
-## <a name="step-by-step-examples"></a>단계별 예제
+<a id="step-by-step-examples" class="xliff"></a>
+
+## 단계별 예제
 
 CLI 도구를 사용하여 .NET Core 앱을 배포하는 방법을 보여 주는 단계별 예제는 [Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md)(CLI 도구를 사용하여 .NET Core 앱 배포)를 참조하세요. Visual Studio를 사용하여 .NET Core 앱을 배포하는 방법을 보여 주는 단계별 예제는 [Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md)(Visual Studio를 사용하여 .NET Core 앱 배포)를 참조하세요. 각 항목에는 다음 배포에 대한 예제가 포함되어 있습니다.
 
@@ -74,7 +86,9 @@ CLI 도구를 사용하여 .NET Core 앱을 배포하는 방법을 보여 주는
 - 자체 포함 배포
 - 타사 종속성이 있는 자체 포함 배포
 
-# <a name="see-also"></a>참고 항목
+<a id="see-also" class="xliff"></a>
+
+# 참고 항목
 
 [Deploying .NET Core Apps with CLI Tools](deploy-with-cli.md) (CLI 도구를 사용하여 .NET Core 앱 배포)  
 [Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md) (Visual Studio를 사용하여 .NET Core 앱 배포)  

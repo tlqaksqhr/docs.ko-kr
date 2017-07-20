@@ -36,10 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b6f8b110e087093bd47573a1a4a05752be91e743
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: b53ab404e7a5ea0dfee7ca64b668a7e6fe026bde
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/15/2017
 
 ---
 # <a name="switch-c-reference"></a>switch(C# 참조)
@@ -150,7 +151,7 @@ switch (caseSwitch)
 
 상수 식은 다음과 같이 계산됩니다.
 
-- *expr* 및 *상수*가 정수 형식인 경우 C# 같음 연산자는 식에서 `true`가 반환되는지 여부(즉, `expr == constant` 여부)를 결정합니다.
+- *expr* 및 *constant*가 정수 형식인 경우 C# 같음 연산자는 식에서 `true`를 반환하는지 여부 즉, `expr == constant`인지 여부를 확인합니다.
 
 - 정수 형식이 아니면 static [Object.Equals(expr, constant)](xref:System.Object.Equals(System.Object,System.Object)) 메서드 호출을 통해 식의 값이 결정됩니다.  
 
@@ -208,7 +209,7 @@ C# 7부터 case 문이 상호 배타적일 필요가 없으므로 `when` 절을 
 `Shape` 개체가 `null`인지 여부를 테스트하는 예제의 `when` 절은 실행되지 않습니다. `null`인지 테스트하는 올바른 형식 패턴은 `case null:`입니다.
 
 ## <a name="c-language-specification"></a>C# 언어 사양  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
 

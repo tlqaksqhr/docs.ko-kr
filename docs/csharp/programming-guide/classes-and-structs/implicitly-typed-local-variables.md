@@ -28,14 +28,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 59bb61d8dd530e87f342d38acb131fab5e25febf
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 1aaa231a807ec50b8bcb922bf0dd218ec72d24ff
+ms.openlocfilehash: 21180ce100f81e38b327347e548929a47a2e029d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>암시적으로 형식화된 지역 변수(C# 프로그래밍 가이드)
-지역 변수에 명시적 형식 대신 유추된 "형식" `var`을 지정할 수 있습니다. `var` 키워드는 초기화 문의 오른쪽에 있는 식에서 변수의 형식을 유추하도록 컴파일러에 지시합니다. 유추된 형식은 기본 제공 형식, 무명 형식, 사용자 정의 형식 또는 .NET Framework 클래스 라이브러리에 정의된 형식일 수 있습니다. `var`을 사용하여 배열을 초기화하는 방법에 대한 자세한 내용은 [암시적으로 형식화된 배열](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)을 참조하세요.  
+명시적 형식을 제공하지 않고 지역 변수를 선언할 수 있습니다. `var` 키워드는 초기화 문의 오른쪽에 있는 식에서 변수의 형식을 유추하도록 컴파일러에 지시합니다. 유추된 형식은 기본 제공 형식, 무명 형식, 사용자 정의 형식 또는 .NET Framework 클래스 라이브러리에 정의된 형식일 수 있습니다. `var`을 사용하여 배열을 초기화하는 방법에 대한 자세한 내용은 [암시적으로 형식화된 배열](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)을 참조하세요.  
   
  다음 예제에서는 `var`을 사용하여 지역 변수를 선언하는 다양한 방법을 보여 줍니다.  
   
@@ -107,3 +108,4 @@ ms.lasthandoff: 03/13/2017
  [for](../../../csharp/language-reference/keywords/for.md)   
  [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)   
  [using 문](../../../csharp/language-reference/keywords/using-statement.md)
+

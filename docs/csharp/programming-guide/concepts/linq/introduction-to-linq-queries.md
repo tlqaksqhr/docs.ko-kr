@@ -1,5 +1,5 @@
 ---
-title: "LINQ 쿼리 소개(C#) | Microsoft 문서"
+title: "LINQ 쿼리 소개(C#) | Microsoft Docs"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,12 +34,14 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 957ab9907c16e494f87873934fe4caccc146c975
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 317ea9a17a792bcbfd11c5f1085218e2b0f2a312
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/03/2017
 
 ---
+
 # <a name="introduction-to-linq-queries-c"></a>LINQ 쿼리 소개(C#)
 *쿼리*는 데이터 소스에서 데이터를 검색하는 식입니다. 쿼리는 일반적으로 특수화된 쿼리 언어로 표현됩니다. 관계형 데이터베이스에는 SQL이 사용되고 XML에는 XQuery가 사용되는 것처럼 시간에 따라 다양한 형식의 데이터 소스에 대해 서로 다른 언어가 개발되었습니다. 따라서 개발자는 지원해야 하는 데이터 소스의 형식이나 데이터 형식에 따라 새로운 쿼리 언어를 배워야 했습니다. [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]는 다양한 데이터 소스 및 형식에 사용할 수 있는 일관된 모델을 제공함으로써 이러한 상황을 간단하게 합니다. [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 쿼리에서는 항상 개체를 사용하고 있습니다. XML 문서, SQL 데이터베이스, [!INCLUDE[vstecado](~/includes/vstecado-md.md)] 데이터 집합, .NET 컬렉션 및 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 공급자를 사용할 수 있는 다른 모든 형식에서 데이터를 쿼리하고 변환하는 데 동일한 기본 코딩 패턴을 사용합니다.  
   

@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1733538c605cb06c7da4d91a6780caa3ea3bec23
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: ff7e67add731324e01b8f2cc323a66e3a8683ec9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/15/2017
 
 ---
 
@@ -44,7 +45,7 @@ ms.lasthandoff: 03/13/2017
   
 -   구조체 선언 내에서 필드가 `const` 또는 `static`으로 선언된 경우가 아니면 필드를 초기화할 수 없습니다.  
   
--   구조체는 기본 생성자(매개 변수가 없는 생성자) 또는 소멸자를 선언할 수 없습니다.  
+-   구조체는 기본 생성자(매개 변수가 없는 생성자) 또는 종료자를 선언할 수 없습니다.  
   
 -   할당 시 구조체가 복사됩니다. 구조체를 새 변수에 할당하면 모든 데이터가 복사되고, 새 복사본을 수정해도 원래 복사본의 데이터는 변경되지 않습니다. Dictionary<string, myStruct> 등의 값 형식 컬렉션으로 작업하는 경우 이 점을 명심해야 합니다.  
   

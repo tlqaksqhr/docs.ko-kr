@@ -1,5 +1,5 @@
 ---
-title: "특성 | C#"
+title: "특성 - C# | Microsoft Docs"
 description: "C#에서 특성이 작동하는 방식을 알아봅니다."
 keywords: ".NET, .NET Core, C#, 특성"
 author: mgroves
@@ -10,14 +10,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f03e8ac38bc0f3b0d527c0cdcb5f01b40bbb9682
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 512a222a727e3e6a032848b87463dda0ae8f7362
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="using-attributes-in-c"></a>C에서 특성 사용# #
+<a id="using-attributes-in-c" class="xliff"></a>
+
+# C#에서 특성 사용 #
 
 특성은 선언적으로 정보를 코드와 연결하는 방법을 제공합니다. 다양한 대상에 적용할 수 있는 재사용 가능 요소를 제공할 수도 있습니다.
 
@@ -25,11 +28,15 @@ ms.lasthandoff: 03/13/2017
 
 이 자습서에서는 코드에 특성을 추가하는 방법, 사용자 지정 특성을 만들고 사용하는 방법, .NET Core로 빌드되는 일부 특성을 사용하는 방법을 소개합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+<a id="prerequisites" class="xliff"></a>
+
+## 필수 구성 요소
 .NET Core를 실행하도록 컴퓨터에 설정해야 합니다. [.NET Core](https://www.microsoft.com/net/core) 페이지에서 설치 지침을 확인할 수 있습니다.
 Windows, Ubuntu Linux, macOS 또는 Docker 컨테이너에서 이 응용 프로그램을 실행할 수 있습니다. 선호하는 코드 편집기를 설치해야 합니다. 아래 설명에서는 오픈 소스 플랫폼 간 편집기인 [Visual Studio Code](https://code.visualstudio.com/)를 사용합니다. 그러나 익숙한 어떤 도구도 사용 가능합니다.
 
-## <a name="create-the-application"></a>응용 프로그램 만들기
+<a id="create-the-application" class="xliff"></a>
+
+## 응용 프로그램 만들기
 
 이제 모든 도구를 설치했으므로 새로운 .NET Core 응용 프로그램을 만들어 보겠습니다. 명령줄 생성기를 사용하려면 즐겨 사용하는 셸에서 다음 명령을 실행합니다.
 
@@ -39,7 +46,9 @@ Windows, Ubuntu Linux, macOS 또는 Docker 컨테이너에서 이 응용 프로�
 
 이 프로그램을 실행하려면 `dotnet run`을 사용합니다. 콘솔에 "Hello, World" 출력이 표시됩니다.
 
-## <a name="how-to-add-attributes-to-code"></a>코드에 특성을 추가하는 방법
+<a id="how-to-add-attributes-to-code" class="xliff"></a>
+
+## 코드에 특성을 추가하는 방법
 
 C#에서 특성은 `Attribute` 기본 클래스에서 상속되는 클래스입니다. `Attribute`에서 상속되는 모든 클래스는 코드의 다른 부분에서 일종의 "태그"로 사용될 수 있습니다.
 예를 들어 `ObsoleteAttribute`라는 특성이 있습니다. 이 특성은 코드가 더 이상 사용되지 않으며 더 이상 사용할 수 없음을 알리기 위해 사용됩니다. 예를 들어 대괄호를 사용하여 클래스에 이 특성을 배치할 수 있습니다.
@@ -58,7 +67,9 @@ C#에서 특성은 `Attribute` 기본 클래스에서 상속되는 클래스입�
 특성 생성자에 대한 매개 변수는 단순 형식/리터럴인 `bool, int, double, string, Type, enums, etc` 및 해당 형식의 배열로 제한됩니다.
 식 또는 변수는 사용할 수 없습니다. 위치 또는 명명된 매개 변수는 얼마든지 사용할 수 있습니다.
 
-## <a name="how-to-create-your-own-attribute"></a>고유한 특성을 만드는 방법
+<a id="how-to-create-your-own-attribute" class="xliff"></a>
+
+## 고유한 특성을 만드는 방법
 
 특성을 만드는 과정은 `Attribute` 기본 클래스에서 상속하는 것만큼 간단합니다.
 
@@ -80,7 +91,9 @@ C#에서 특성은 `Attribute` 기본 클래스에서 상속되는 클래스입�
 
 위에서는 `Attribute constructor parameter 'myClass' has type 'Foo', which is not a valid attribute parameter type`과 같은 컴파일러 오류가 발생합니다.
 
-## <a name="how-to-restrict-attribute-usage"></a>특성 사용을 제한하는 방법
+<a id="how-to-restrict-attribute-usage" class="xliff"></a>
+
+## 특성 사용을 제한하는 방법
 
 특성은 다양한 "대상"에 사용할 수 있습니다. 위의 예제에서는 클래스에 대한 특성만 표시하지만 다음에도 사용될 수 있습니다.
 
@@ -108,7 +121,9 @@ C#에서 특성은 `Attribute` 기본 클래스에서 상속되는 클래스입�
 
 [!code-csharp[고유한 특성 사용](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#AttributeUsageExample2)]
 
-## <a name="how-to-use-attributes-attached-to-a-code-element"></a>코드 요소에 연결된 특성을 사용하는 방법
+<a id="how-to-use-attributes-attached-to-a-code-element" class="xliff"></a>
+
+## 코드 요소에 연결된 특성을 사용하는 방법
 
 특성는 메타데이터로 작동합니다. 외부 영향이 없으면 어떤 작업도 수행하지 않습니다.
 
@@ -132,7 +147,9 @@ C#에서 특성은 `Attribute` 기본 클래스에서 상속되는 클래스입�
 이러한 `Attribute` 개체가 지연되어 인스턴스화되는 것에 유의해야 합니다. 즉, `GetCustomAttribute` 또는 `GetCustomAttributes`를 사용해야만 인스턴스화됩니다.
 또한 매번 인스턴스화되기도 합니다. `GetCustomAttributes`를 연속해서 2번 호출하면 2개의 다른 `ObsoleteAttribute` 인스턴스가 반환됩니다.
 
-## <a name="common-attributes-in-the-base-class-library-bcl"></a>BCL(기본 클래스 라이브러리)의 공통 특성
+<a id="common-attributes-in-the-base-class-library-bcl" class="xliff"></a>
+
+## BCL(기본 클래스 라이브러리)의 공통 특성
 
 특성은 많은 도구 및 프레임워크에서 사용됩니다. NUnit은 NUnit Test Runner에서 사용되는 `[Test]` 및 `[TestFixture]` 같은 특성을 사용합니다. ASP.NET MVC는 `[Authorize]`와 같은 특성을 사용하고 MVC 작업에 대해 크로스 커팅(Cross-Cutting) 문제를 해결하기 위한 작업 필터 프레임워크를 제공합니다. [PostSharp](https://www.postsharp.net)은 특성 구문을 사용하여 C#을 사용한 AOP(Aspect-Oriented Programming)를 허용합니다.
 
@@ -149,7 +166,9 @@ C#에서 특성은 `Attribute` 기본 클래스에서 상속되는 클래스입�
 
 위의 코드에서는 리터럴 `"Name"` 문자열이 없어도 됩니다. 이 경우 입력 관련 버그가 방지되며 좀 더 매끄러운 리팩터링/이름 바꾸기가 가능해집니다.
 
-## <a name="summary"></a>요약
+<a id="summary" class="xliff"></a>
+
+## 요약
 
 특성은 C#에 선언적 기능을 제공합니다. 하지만 메타데이터로서의 코드 형태를 가지므로 단독으로 동작하지 않습니다.
 

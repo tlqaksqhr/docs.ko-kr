@@ -23,16 +23,16 @@ ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-long-path-support"></a>완화: 긴 경로 지원
-[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]를 대상으로 하는 앱부터 경로 또는 정규화된 파일 이름이 260(또는 `MAX_PATH`)자를 초과하는 경우 파일 시스템 I/O 메서드는 더 이상 <xref:System.IO.PathTooLongException>을 자동으로 throw하지 않습니다. 대신 최대 32,000자의 긴 경로가 지원됩니다.  
+[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]를 대상으로 하는 앱부터는 경로 또는 정규화된 파일 이름이 260(또는 `MAX_PATH`)자를 초과하더라도 파일 시스템 I/O 메서드가 더 이상 <xref:System.IO.PathTooLongException>을 자동으로 throw하지 않습니다. 대신 최대 32,000자의 긴 경로가 지원됩니다.  
   
 ## <a name="impact"></a>영향  
- [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]를 대상으로 다시 컴파일되었으며 이전에 경로가 260자를 초과했으므로 <xref:System.IO.PathTooLongException>을 자동으로 throw했던 앱은 이제 다음 조건에서만 <xref:System.IO.PathTooLongException>을 throw합니다.  
+ [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]를 대상으로 다시 컴파일되었으며 이전에 경로가 260자를 초과하여 <xref:System.IO.PathTooLongException>을 자동으로 throw했던 앱은 이제 다음 조건에서만 <xref:System.IO.PathTooLongException>을 throw합니다.  
   
--   경로 길이가 <xref:System.Int16.MaxValue?displayProperty=fullName>(32, 767)자보다 긴 경우  
+-   경로의 길이가 <xref:System.Int16.MaxValue?displayProperty=fullName>(32,767)자보다 긴 경우  
   
 -   운영 체제가 `COR_E_PATHTOOLONG` 또는 동급을 반환하는 경우  
   
- [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 이전 버전을 대상으로 하는 앱의 레거시 동작은 경로가 260자를 초과할 때마다 런타임에서 자동으로 <xref:System.IO.PathTooLongException>을 throw하는 것입니다.  
+ [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 이하 버전을 대상으로 하는 앱의 레거시 동작은 경로가 260자를 초과할 때마다 런타임에서 자동으로 <xref:System.IO.PathTooLongException>을 throw하는 것입니다.  
   
 ## <a name="mitigation"></a>완화  
  [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]를 대상으로 하는 앱의 경우 원치 않을 경우 app.config 파일의 [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) 섹션에 다음을 추가하여 긴 경로 지원을 옵트아웃(opt out)할 수 있습니다.  

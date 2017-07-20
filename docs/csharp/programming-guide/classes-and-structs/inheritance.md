@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4590130fed9606f0f0592895de548c4bd7865db7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: 4ad15bc57b3ec3b6b06f671f560dce426af64ccc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="inheritance-c-programming-guide"></a>상속(C# 프로그래밍 가이드)
@@ -47,14 +48,14 @@ ms.lasthandoff: 03/13/2017
   
  파생 클래스는 개념적 측면에서 기본 클래스의 특수화입니다. 예를 들어 기본 클래스 `Animal`이 있는 경우 `Mammal`이라는 하나의 파생 클래스와 `Reptile`이라는 다른 파생 클래스가 있을 수 있습니다. `Mammal`은 `Animal`이고 `Reptile`은 `Animal`이지만 각 파생 클래스는 기본 클래스의 서로 다른 특수화를 나타냅니다.  
   
- 다른 클래스에서 파생할 클래스를 정의하는 경우 파생 클래스는 해당 생성자와 소멸자를 제외하고 기본 클래스의 모든 멤버를 암시적으로 얻게 됩니다. 따라서 파생 클래스는 다시 구현하지 않고도 기본 클래스의 코드를 다시 사용할 수 있습니다. 파생 클래스에서 더 많은 멤버를 추가할 수 있습니다. 이런 방식으로 파생 클래스는 기본 클래스의 기능을 확장합니다.  
+ 다른 클래스에서 파생할 클래스를 정의하는 경우 파생 클래스는 해당 생성자와 종료자를 제외하고 기본 클래스의 모든 멤버를 암시적으로 얻게 됩니다. 따라서 파생 클래스는 다시 구현하지 않고도 기본 클래스의 코드를 다시 사용할 수 있습니다. 파생 클래스에서 더 많은 멤버를 추가할 수 있습니다. 이런 방식으로 파생 클래스는 기본 클래스의 기능을 확장합니다.  
   
  다음 그림은 일부 비즈니스 프로세스의 작업 항목을 나타내는 `WorkItem` 클래스를 보여 줍니다. 모든 클래스와 마찬가지로, <xref:System.Object?displayProperty=fullName>에서 파생되고 해당 메서드를 모두 상속합니다. `WorkItem`은 고유한 멤버 5개를 추가합니다. 생성자는 상속되지 않으므로 생성자도 여기에 포함됩니다. `ChangeRequest` 클래스는 `WorkItem`에서 상속되며 특정 종류의 작업 항목을 나타냅니다. `ChangeRequest`는 `WorkItem` 및 <xref:System.Object>에서 상속하는 멤버에 둘 이상의 멤버를 추가합니다. 고유한 생성자를 추가해야 하며, `originalItemID`도 추가합니다. `originalItemID` 속성을 사용하면 `ChangeRequest` 인스턴스를 변경 요청이 적용되는 원래 `WorkItem`에 연결할 수 있습니다.  
   
  ![클래스 상속](../../../csharp/programming-guide/classes-and-structs/media/class_inheritance.png "Class_Inheritance")  
 클래스 상속  
   
- 다음 예제에서는 앞의 그림에서 보여 주는 클래스 관계가 C#에서 어떻게 표현되는지를 보여 줍니다. 또한 이 예제에서는 `WorkItem`이 가상 메서드 <xref:System.Object.ToString%2A?displayProperty=fullName>을 재정의하는 방법과 `ChangeRequest` 클래스가 메서드의 `WorkItem` 구현을 상속하는 방법을 보여 줍니다.  
+ 다음 예제에서는 앞의 그림에서 보여 주는 클래스 관계가 C#에서 어떻게 표현되는지를 보여 줍니다. 또한 이 예제에서 `WorkItem`은 가상 메서드 <xref:System.Object.ToString%2A?displayProperty=fullName>을 재정의하는 방법과 `ChangeRequest` 클래스가 메서드의 `WorkItem` 구현을 상속하는 방법을 보여 줍니다.  
   
  [!code-cs[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
   

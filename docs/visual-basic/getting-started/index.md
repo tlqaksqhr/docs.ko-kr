@@ -30,10 +30,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d3f21e32c162133e70a124da125c30afc7303738
-ms.openlocfilehash: ada42b9a033b548f5e2967040c44f7c790014211
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 3f3d00e8145620520697941c9002ea81f8de9044
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="getting-started-with-visual-basic"></a>Visual Basic 시작
@@ -61,22 +61,22 @@ ms.lasthandoff: 05/15/2017
  개체 지향 프로그래밍을 소개하고 개체를 직접 만드는 방법과 개체를 사용하여 코딩을 단순화하는 방법을 설명하는 페이지에 대한 링크를 제공합니다.  
   
  [샘플](../../visual-basic/sample-applications.md)  
- [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]의 샘플 코드에 대한 링크를 제공합니다.  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]의 샘플 코드에 대한 링크를 제공합니다.  
   
  [연습](../../visual-basic/walkthroughs.md)  
- [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 언어의 여러 측면을 보여 주는 도움말 페이지 목록을 제공합니다.  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 언어의 여러 측면을 보여 주는 도움말 페이지 목록을 제공합니다.  
   
  [의견 보내기](https://docs.microsoft.com/visualstudio/ide/talk-to-us)  
  지원을 받고 사용자 의견을 보내는 방법에 대해 설명합니다.  
   
  [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/)  
- [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] 설명서에 대한 링크를 제공합니다.  
+ [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 설명서에 대한 링크를 제공합니다.  
   
  [C#](../../csharp/csharp.md)  
- [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)]을 사용한 응용 프로그램 개발과 관련된 설명서에 대한 링크를 제공합니다.  
+ [!INCLUDE[csprcs](~/includes/csprcs-md.md)]을 사용한 응용 프로그램 개발과 관련된 설명서에 대한 링크를 제공합니다.  
   
  [Visual C++](https://docs.microsoft.com/cpp/)  
  Visual C++ 설명서에 대한 링크를 제공합니다.  
   
  [Office/SharePoint 개발](https://msdn.microsoft.com/library/d2tx7z6d)  
- Microsoft Office와 [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)]를 비즈니스 응용 프로그램으로 사용하는 방법에 대해 설명합니다.
+ Microsoft Office와 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]를 비즈니스 응용 프로그램으로 사용하는 방법에 대해 설명합니다.

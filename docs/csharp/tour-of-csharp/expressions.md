@@ -1,5 +1,5 @@
 ---
-title: "C# 식 | C# 언어 둘러보기"
+title: "C# 식 - C# 언어 둘러보기 | Microsoft Docs"
 description: "식, 피연산자 및 연산자는 C# 언어의 기본 구성 요소입니다."
 keywords: ".NET, c샵, 식, 연산자, 피연산자"
 author: BillWagner
@@ -11,14 +11,16 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ce5f71ab3e797015a26dddbf0579c84dec580750
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 66eae1fcb7eca4572c49dca78bc31155464a6920
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="expressions"></a>식
+<a id="expressions" class="xliff"></a>
+
+# 식
 
 *식*은 *피연산자* 및 *연산자*로 생성됩니다. 식의 연산자는 피연산자에 적용할 연산을 나타냅니다. 연산자의 예로 `+`, `-`, `*`, `/` 및 `new`가 있습니다. 피연산자의 예로는 리터럴, 필드, 지역 변수 및 식이 있습니다.
 

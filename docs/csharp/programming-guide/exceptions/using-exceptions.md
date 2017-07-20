@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8a4bbb2f6d8060cd9196dd510cd89c827c9d697d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
+ms.openlocfilehash: a8c29002ae2287df60996ed2b23068eec1e2739b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/15/2017
 
 ---
 # <a name="using-exceptions-c-programming-guide"></a>예외 사용(C# 프로그래밍 가이드)
@@ -59,7 +60,7 @@ C#에서는 런타임 시 프로그램의 오류가 예외라는 메커니즘을
   
  예외가 throw된 후 호출 스택에서 호환되는 `catch` 블록을 찾지 못하면 다음 세 가지 중 하나가 발생합니다.  
   
--   예외가 소멸자 내부에 있으면 소멸자가 중단되고 기본 소멸자(있는 경우)가 호출됩니다.  
+-   예외가 종료자 내부에 있으면 종료자가 중단되고 기본 종료자(있는 경우)가 호출됩니다.  
   
 -   호출 스택에 정적 생성자 또는 정적 필드 이니셜라이저가 포함된 경우 새 예외의 <xref:System.Exception.InnerException%2A> 속성에 할당된 원래 예외와 함께 <xref:System.TypeInitializationException>이 throw됩니다.  
   

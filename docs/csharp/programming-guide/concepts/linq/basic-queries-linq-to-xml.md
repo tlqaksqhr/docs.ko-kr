@@ -14,10 +14,11 @@ ms.assetid: d333bb7d-20c1-448a-95b7-e5ba07915744
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: e3879dfe92f158c545a1f4a42c6bfc35aae06f3c
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/24/2017
 
 
 ---
@@ -38,8 +39,7 @@ ms.lasthandoff: 03/13/2017
 |[방법: 네임스페이스에서 모든 노드 찾기(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-all-nodes-in-a-namespace.md)|특정 네임스페이스에 있는 노드를 모두 찾는 방법을 보여 줍니다.|  
 |[방법: 요소 정렬(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-elements.md)|결과를 정렬하는 쿼리를 작성하는 방법을 보여 줍니다.|  
 |[방법: 여러 키로 요소 정렬(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md)|여러 키에 대해 정렬하는 방법을 보여 줍니다.|  
-|[방법: 중간 값 계산(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-calculate-intermediate-values.md)|
-          `Let` 절을 사용하여 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 쿼리에서 중간 값을 계산하는 방법을 보여 줍니다.|  
+|[방법: 중간 값 계산(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-calculate-intermediate-values.md)|`Let` 절을 사용하여 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 쿼리에서 중간 값을 계산하는 방법을 보여 줍니다.|  
 |[방법: 컨텍스트에 따라 요소를 찾는 쿼리 작성(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-query-that-finds-elements-based-on-context.md)|트리의 다른 요소를 기반으로 요소를 선택하는 방법을 보여 줍니다.|  
 |[방법: 빈 쿼리 결과 집합 디버그(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md)|기본 네임스페이스에 있는 XML에 대한 쿼리를 디버깅할 때 적절한 해결 방법을 보여 줍니다.|  
   

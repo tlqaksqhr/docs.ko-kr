@@ -1,78 +1,83 @@
 ---
 title: "In-Process Side-by-Side 실행 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "in-process side-by-side 실행"
-  - "side-by-side 실행, in-process"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- in-process side-by-side execution
+- side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 caps.latest.revision: 25
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 25
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
+ms.openlocfilehash: 09044e2f604ba9b1b87850eea001492c111d45c9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/02/2017
+
 ---
-# In-Process Side-by-Side 실행
-[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터는 in\-process side\-by\-side 호스팅을 사용하여 단일 프로세스에서 여러 버전의 CLR\(공용 언어 런타임\)을 실행할 수 있습니다.  관리되는 COM 구성 요소는 프로세스에서 로드한 .NET Framework 버전과 상관없이 기본적으로 해당 구성 요소가 빌드된 .NET Framework 버전을 사용하여 실행됩니다.  
+# <a name="in-process-side-by-side-execution"></a>In-Process Side-by-Side 실행
+[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터 In-Process Side-By-Side 호스팅을 사용하여 단일 프로세스에서 여러 버전의 CLR(공용 언어 런타임)을 실행할 수 있습니다. 기본적으로 관리되는 COM 구성 요소는 프로세스에 대해 로드된 .NET Framework 버전에 관계없이 빌드 시 사용된 .NET Framework 버전을 사용하여 실행됩니다.  
   
-## Background  
- .NET Framework에서는 관리되는 코드 응용 프로그램을 위해 side\-by\-side 호스팅을 항상 제공해 왔지만 관리되는 COM 구성 요소에 대해서는 이러한 기능을 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]부터 제공했습니다.  그 이전에는 프로세스로 로드된 관리되는 COM 구성 요소가 이미 로드되어 있는 런타임 버전 또는 .NET Framework의 최신 설치 버전을 사용하여 실행되었습니다.  이 버전이 COM 구성 요소와 호환되지 않으면 해당 구성 요소가 실패하게 됩니다.  
+## <a name="background"></a>배경  
+ .NET Framework는 관리되는 코드 응용 프로그램에 대해 항상 병렬 호스팅을 제공하지만 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 이전에는 관리되는 COM 구성 요소에 대해 해당 기능을 제공하지 않았습니다. 과거에는 프로세스에 로드된 관리되는 COM 구성 요소를 이미 로드된 런타임 버전 또는 설치된 최신 버전의 .NET Framework로 실행했습니다. 이 버전이 COM 구성 요소와 호환되지 않으면 구성 요소가 실패합니다.  
   
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서는 다음을 보장하기 위해 side\-by\-side 호스팅의 새 접근법을 제공합니다.  
+ [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서는 다음을 보장하는 병렬 호스팅에 대한 새로운 접근 방법을 제공합니다.  
   
--   .NET Framework의 새 버전을 설치해도 기존 응용 프로그램에 영향을 주지 않습니다.  
+-   새로운 버전의 .NET Framework를 설치해도 기존 응용 프로그램에는 영향이 없습니다.  
   
--   응용 프로그램은 빌드된 버전의 .NET Framework를 기반으로 실행됩니다.  명시적으로 지정된 경우가 아니라면 응용 프로그램은 .NET Framework의 새 버전을 사용하지 않습니다.  그러나 응용 프로그램은 .NET Framework의 새 버전을 사용하기 위해 쉽게 전환될 수 있습니다.  
+-   빌드 시 사용된 .NET Framework 버전에 대해 응용 프로그램이 실행됩니다. 명시적으로 지정되지 않은 경우 새로운 버전의 .NET Framework를 사용하지 않습니다. 그러나 응용 프로그램이 새로운 버전의 .NET Framework 사용으로 전환하는 것이 더 편리합니다.  
   
-## 사용자 및 개발자에 대한 영향  
+## <a name="effects-on-users-and-developers"></a>사용자와 개발자에 대한 영향  
   
--   **최종 사용자 및 시스템 관리자**.  이제 이러한 사용자는 런타임의 새 버전을 독립적으로 또는 응용 프로그램과 함께 설치할 경우 컴퓨터에 아무런 영향을 주지 않는다는 확신을 가질 수 있습니다.  기존 응용 프로그램은 이전과 동일하게 계속 실행됩니다.  
+-   **최종 사용자 및 시스템 관리자**. 이제 이러한 사용자가 독립적으로 또는 응용 프로그램을 사용하여 새로운 버전의 런타임을 설치할 때 컴퓨터에 영향을 주지 않을 것을 확신할 수 있습니다. 기존 응용 프로그램은 예전과 같이 계속 실행됩니다.  
   
--   **응용 프로그램 개발자**.  Side\-by\-side 호스팅은 응용 프로그램 개발자에게 거의 영향을 미치지 않습니다.  기본적으로 응용 프로그램은 빌드된 .NET Framework의 버전을 기반으로 실행되며, 이는 이전과 동일하게 적용됩니다.  그러나 개발자는 이 동작을 재정의하고 응용 프로그램이 새로운 .NET Framework 버전에서 실행되도록 지정할 수 있습니다\([시나리오 2](#scenarios) 참조\).  
+-   **응용 프로그램 개발자**. 병렬 호스팅은 응용 프로그램 개발자에게 거의 영향을 주지 않습니다. 기본적으로 응용 프로그램은 항상 빌드 시 사용된 .NET Framework 버전에서 실행되며, 이 동작은 변경되지 않았습니다. 그러나 개발자가 이 동작을 재정의하고 응용 프로그램이 최신 버전의 .NET Framework에서 실행되도록 지정할 수 있습니다([시나리오 2](#scenarios) 참조).  
   
--   **라이브러리 개발자 및 소비자**.  Side\-by\-side 호스팅은 라이브러리 개발자가 직면하는 호환성 문제를 해결해 주지 않습니다.  직접 참조 또는 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 호출을 통해 응용 프로그램에서 직접 로드한 라이브러리는 해당 라이브러리가 로드된 <xref:System.AppDomain>의 런타임을 계속 사용합니다.  라이브러리는 지원할 .NET Framework의 모든 버전을 대상으로 테스트해야 합니다.  [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 런타임을 사용하여 컴파일된 응용 프로그램에 이전 런타임을 사용하여 빌드된 라이브러리가 포함되어 있으면 해당 라이브러리는 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 런타임도 사용하게 됩니다.  그러나 이전 런타임을 사용하여 빌드된 응용 프로그램과 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]을 사용하여 빌드된 라이브러리가 있으면 응용 프로그램에서 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 도 사용하도록 해야 합니다\([시나리오 3](#scenarios) 참조\).  
+-   **라이브러리 개발자 및 소비자**. 병렬 호스팅은 라이브러리 개발자가 직면하는 호환성 문제를 해결하지 않습니다. 직접 참조를 통해 또는 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 호출을 통해 응용 프로그램에서 직접 로드하는 라이브러리는 로드된 <xref:System.AppDomain>의 런타임을 계속 사용합니다. 지원하려는 모든 버전의 .NET Framework에 대해 라이브러리를 테스트해야 합니다. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 런타임을 사용하여 응용 프로그램이 컴파일되었지만 이전 런타임을 사용하여 빌드된 라이브러리를 포함하는 경우 해당 라이브러리는 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 런타임도 사용합니다. 그러나 이전 런타임을 사용하여 빌드된 응용 프로그램과 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]을 사용하여 빌드된 라이브러리가 있는 경우 응용 프로그램이 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]도 사용하도록 강제 적용해야 합니다([시나리오 3](#scenarios) 참조).  
   
--   **관리되는 COM 구성 요소 개발자**.  이전까지 관리되는 COM 구성 요소는 컴퓨터에 설치된 런타임의 최신 버전을 사용하여 자동으로 실행되었습니다.  그러나 이제는 COM 구성 요소가 빌드된 런타임 버전을 기반으로 해당 구성 요소를 실행할 수 있습니다.  
+-   **관리되는 COM 구성 요소 개발자**. 과거에는 관리되는 COM 구성 요소가 자동으로 컴퓨터에 설치된 최신 버전의 런타임을 사용하여 실행되었습니다. 이제 빌드 시 사용된 런타임 버전에서 COM 구성 요소를 실행할 수 있습니다.  
   
-     다음 표에서 알 수 있듯이 .NET Framework 버전 1.1을 사용하여 빌드된 구성 요소는 버전 4 구성 요소와 함께 실행될 수 있습니다. 그러나 버전의 2.0, 3.0 또는 3.5의 경우 side\-by\-side 호스팅을 사용할 수 없기 때문에 이러한 버전의 구성 요소와 .NET Framework 버전 1.1을 사용하여 빌드된 구성 요소가 함께 실행될 수는 없습니다.  
+     다음 표와 같이 .NET Framework 버전 1.1로 빌드된 구성 요소를 버전 4 구성 요소와 함께 나란히 실행할 수 있지만 버전 2.0, 3.0 또는 3.5 구성 요소의 경우 해당 버전에 병렬 호스팅을 사용할 수 없기 때문에 병렬 실행할 수 없습니다.  
   
-    |.NET Framework 버전|1.1|2.0 \- 3.5|4|  
-    |-----------------------|---------|----------------|-------|  
+    |.NET Framework 버전|1.1|2.0 - 3.5|4|  
+    |----------------------------|---------|----------------|-------|  
     |1.1|해당 없음|아니요|예|  
-    |2.0 \- 3.5|아니요|해당 없음|예|  
+    |2.0 - 3.5|아니요|해당 없음|예|  
     |4|예|예|해당 없음|  
   
 > [!NOTE]
->  .NET Framework 버전 3.0 및 3.5는 버전 2.0을 기반으로 증분 방식으로 빌드되어 있기 때문에 두 버전을 함께 실행할 필요가 없습니다.  두 버전은 본질적으로 동일합니다.  
+>  .NET Framework 버전 3.0 및 3.5는 버전 2.0에서 증분 방식으로 빌드되었으며 병렬 실행할 필요가 없습니다. 이들은 기본적으로 동일한 버전입니다.  
   
 <a name="scenarios"></a>   
-## 일반적인 Side\-by\-Side 호스팅 시나리오  
+## <a name="common-side-by-side-hosting-scenarios"></a>일반적인 병렬 호스팅 시나리오  
   
--   **시나리오 1:** .NET Framework의 이전 버전을 사용하여 빌드된 COM 구성 요소를 사용하는 네이티브 응용 프로그램.  
+-   **시나리오 1:** 이전 버전의 .NET Framework를 사용하여 빌드된 COM 구성 요소를 사용하는 네이티브 응용 프로그램  
   
-     설치된 .NET Framework 버전: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 및 COM 구성 요소에서 사용하는 .NET Framework의 모든 기타 버전.  
+     설치된 .NET Framework 버전: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 및 COM 구성 요소에서 사용하는 다른 모든 버전의 .NET Framework  
   
-     수행할 작업: 이 시나리오에서는 없습니다.  COM 구성 요소는 해당 구성 요소가 등록된 .NET Framework의 버전을 사용하여 실행됩니다.  
+     수행할 작업: 이 시나리오에서는 수행할 작업이 없습니다. COM 구성 요소는 등록된 .NET Framework 버전과 함께 실행됩니다.  
   
--   **시나리오 2**: [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)]을 사용하여 빌드된 관리되는 응용 프로그램이며, [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)]을 사용하여 실행하는 방법을 선호하지만 버전 2.0이 없으면 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]을 기반으로 실행하려는 응용 프로그램.  
+-   **시나리오 2**: [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)]에서 실행하는 것이 좋지만 버전 2.0이 없는 경우 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서도 실행하려는, [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)]으로 빌드된 관리되는 응용 프로그램  
   
-     설치된 .NET Framework 버전: .NET Framework의 이전 버전 및 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+     설치된 .NET Framework 버전: 이전 버전의 .NET Framework 및 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
-     수행할 작업: 응용 프로그램 디렉터리의 [응용 프로그램 구성 파일](../../../docs/framework/configure-apps/index.md) 에서 [\<startup\> element](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) 와 [\<supportedRuntime\> 요소](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 집합을 다음과 같이 사용합니다.  
+     수행할 작업: 응용 프로그램 디렉터리의 [응용 프로그램 구성 파일](../../../docs/framework/configure-apps/index.md)에서 [\<startup> 요소](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) 및 [\<supportedRuntime> 요소](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 집합을 다음과 같이 사용합니다.  
   
-    ```  
+    ```xml  
     <configuration>  
       <startup >  
         <supportedRuntime version="v2.0.50727" />  
@@ -81,13 +86,13 @@ caps.handback.revision: 25
     </configuration>  
     ```  
   
--   **시나리오 3:** .NET Framework의 이전 버전을 사용하여 빌드된 COM 구성 요소를 사용하는 네이티브 응용 프로그램이며, [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]을 사용하여 실행하려는 응용 프로그램.  
+-   **시나리오 3:** [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서 실행하려는, 이전 버전의 .NET Framework를 사용하여 빌드된 COM 구성 요소를 사용하는 네이티브 응용 프로그램  
   
-     설치된 .NET Framework 버전: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+     설치된 .NET Framework 버전: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]  
   
      수행할 작업: 응용 프로그램 디렉터리의 응용 프로그램 구성 파일에서 `useLegacyV2RuntimeActivationPolicy` 특성이 `true`로 설정된 `<startup>` 요소 및 `<supportedRuntime>` 요소 집합을 다음과 같이 사용합니다.  
   
-    ```  
+    ```xml  
     <configuration>  
       <startup useLegacyV2RuntimeActivationPolicy="true">  
         <supportedRuntime version="v4.0" />  
@@ -95,10 +100,10 @@ caps.handback.revision: 25
     </configuration>  
     ```  
   
-## 예제  
- 다음 예제는 관리되는 COM 구성 요소의 컴파일에 사용된 .NET Framework 버전을 사용하여 해당 구성 요소를 실행하는 관리되지 않는 COM 호스트를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 구성 요소가 사용하도록 컴파일된 .NET Framework 버전을 사용하여 관리되는 COM 구성 요소를 실행하는 관리되지 않는 COM 호스트를 보여 줍니다.  
   
- 다음 예제를 실행하기 위해서, [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]를 사용하여 다음 관리 COM 구성 요소를 컴파일하고 등록합니다.  구성 요소를 등록하기 위해서, **프로젝트** 메뉴에서, **속성**을 클릭하고, **빌드** 탭을 클릭한 다음 **COM interop를 위한 등록** 확인란을 선택합니다.  
+ 다음 예제를 실행하려면 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]을 사용하여 다음 관리 COM 구성 요소를 컴파일하고 등록합니다. 구성 요소를 등록하려면 **프로젝트** 메뉴에서 **속성**을 클릭하고 **빌드** 탭을 클릭한 다음 **COM Interop 등록** 확인란을 선택합니다.  
   
 ```  
 using System;  
@@ -123,7 +128,7 @@ namespace BasicComObject
 }  
 ```  
   
- 관리되지 않는 다음 C\+\+ 응용 프로그램을 컴파일합니다. 이 응용 프로그램은 이전 예제에서 만든 COM 개체를 활성화합니다.  
+ 앞의 예제에서 만든 COM 개체를 활성화하는 다음과 같은 관리되지 않는 C++ 응용 프로그램을 컴파일합니다.  
   
 ```  
 #include "stdafx.h"  
@@ -181,9 +186,9 @@ int _tmain(int argc, _TCHAR* argv[])
     CoUninitialize();  
     return 0;  
 }  
-  
 ```  
   
-## 참고 항목  
- [\<startup\> 요소](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)   
- [\<supportedRuntime\> 요소](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+## <a name="see-also"></a>참고 항목  
+ [\<startup> 요소](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)   
+ [\<supportedRuntime> 요소](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+

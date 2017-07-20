@@ -11,24 +11,32 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 4bf0aef4-148a-41c6-bb95-0a9e1af8762e
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ae036cfcad341ffc859336a7ab2a49feec145715
-ms.openlocfilehash: 734cf337fdd0d33f6c2b6d929b795b2307135550
+ms.sourcegitcommit: 1cd1761d630f61a58f29d88e9342551d48cbc6a8
+ms.openlocfilehash: 0537dbbdfa61503069f6329c4163278f2c9b0af3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/18/2017
+ms.lasthandoff: 06/20/2017
 
 ---
 
-#<a name="dotnet-test"></a>dotnet-test
+<a id="dotnet-test" class="xliff"></a>
 
-## <a name="name"></a>이름
+#dotnet-test
+
+<a id="name" class="xliff"></a>
+
+## 이름
 
 `dotnet-test` - 단위 테스트를 실행하는 데 사용하는 .NET 테스트 드라이버입니다.
 
-## <a name="synopsis"></a>개요
+<a id="synopsis" class="xliff"></a>
+
+## 개요
 
 `dotnet test [<PROJECT>] [-s|--settings] [-t|--list-tests] [--filter] [-a|--test-adapter-path] [-l|--logger] [-c|--configuration] [-f|--framework] [-o|--output] [-d|--diag] [--no-build] [-v|--verbosity] [-h|--help]`
 
-## <a name="description"></a>설명
+<a id="description" class="xliff"></a>
+
+## 설명
 
 `dotnet test` 명령은 지정된 프로젝트에서 단위 테스트를 실행하는 데 사용됩니다. 단위 테스트는 단위 테스트 프레임워크(예: MSTest, NUnit 또는 xUnit) 및 단위 테스트 프레임워크에 대한 dotnet Test Runner에 종속되어 있는 콘솔 응용 프로그램 프로젝트입니다. 이러한 프로젝트는 NuGet 패키지로 패키지되고 프로젝트에 대한 일반 종속성으로 복원됩니다.
 
@@ -36,7 +44,9 @@ ms.lasthandoff: 05/18/2017
 
 [!code-xml[XUnit 기본 템플릿](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
-## <a name="options"></a>옵션
+<a id="options" class="xliff"></a>
+
+## 옵션
 
 `PROJECT`
     
@@ -90,7 +100,9 @@ ms.lasthandoff: 05/18/2017
 
 명령의 세부 정보 표시 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다.
 
-## <a name="examples"></a>예제
+<a id="examples" class="xliff"></a>
+
+## 예제
 
 현재 디렉터리에 있는 프로젝트에서 테스트를 실행합니다.
 
@@ -100,7 +112,9 @@ ms.lasthandoff: 05/18/2017
 
 `dotnet test ~/projects/test1/test1.csproj`
 
-## <a name="filter-option-details"></a>필터 옵션 세부 정보
+<a id="filter-option-details" class="xliff"></a>
+
+## 필터 옵션 세부 정보
 
 `--filter <EXPRESSION>`
 
@@ -129,14 +143,16 @@ ms.lasthandoff: 05/18/2017
 
 | 연산자 | 함수 |
 | :------: | :------: |
-| `|`      | 또는       |
+| <code>&#124;</code>      | 또는       |
 | `&`      | AND      |
 
 조건부 연산자를 사용 하는 경우 식을 괄호로 묶을 수 있습니다 (예를 들어 `(Name~TestMethod1) | (Name~TestMethod2)`).
 
 선택적 단위 테스트 필터링을 사용하는 방법에 대한 추가 정보 및 예제는 [선택적 단위 테스트 실행](../testing/selective-unit-tests.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+<a id="see-also" class="xliff"></a>
+
+## 참고 항목
 
 [프레임워크 및 대상](../../standard/frameworks.md)   
 [.NET Core RID(런타임 식별자) 카탈로그](../rid-catalog.md)

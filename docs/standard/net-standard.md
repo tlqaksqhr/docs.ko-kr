@@ -34,7 +34,7 @@ ms.lasthandoff: 05/11/2017
 
 다음 표에는 모든 .NET 표준 버전 및 지원되는 플랫폼이 나와 있습니다.
 
-[!INCLUDE [net-standard-table](../includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
 
 대상으로 지정할 수 있는 가장 높은 버전의 .NET 표준을 찾으려면 다음을 수행합니다.
 1. 실행할 .NET 플랫폼을 나타내는 행을 찾습니다.

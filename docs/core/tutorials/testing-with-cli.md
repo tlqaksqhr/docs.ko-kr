@@ -1,208 +1,176 @@
 ---
 title: ".NET Core 명령줄을 사용하여 프로젝트 구성 및 테스트 | Microsoft 문서"
 description: "이 자습서에서는 명령줄에서 .NET Core 프로젝트를 구성하고 테스트하는 방법을 설명합니다."
-keywords: .NET, .NET Core
+keywords: ".NET, .NET Core, 유닛 테스트, .NET CLI, xUnit"
 author: cartermp
 ms.author: mairaw
-ms.date: 03/07/2017
+ms.date: 05/16/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 52ff1be3-d92e-4477-9c84-8c1771e87ab5
-translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: 3f401907a59d5427cbcfaa0b785931a7ed82110f
-ms.lasthandoff: 03/07/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 6edd52bc56a03138fe16048fa06cad00a2af4847
+ms.openlocfilehash: 1e6e987777678ade860f108aed05bba926a6d4fd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/16/2017
 
 ---
 
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>.NET Core 명령줄을 사용하여 프로젝트 구성 및 테스트
 
-이 자습서에서는 [명령줄을 사용하여 Windows/Linux/macOS에서 .NET Core 시작](./using-with-xplat-cli.md)에 따라 간단한 "hello world" 시나리오 이상의 방법을 보여 주며, 잘 구성된 고급 응용 프로그램을 위한 방법을 안내합니다.
+이 자습서에서는 [명령줄을 사용하여 Windows/Linux/macOS에서 .NET Core 시작](using-with-xplat-cli.md)에 따라 간단한 콘솔 앱 이상의 잘 구성된 고급 응용 프로그램을 개발하는 과정을 안내합니다. 이 자습서에서는 폴더를 사용하여 코드를 구성하는 방법을 보여 준 후에 [xUnit](https://xunit.github.io/) 테스트 프레임워크를 사용하여 콘솔 응용 프로그램을 확장하는 방법을 보여 줍니다.
 
 ## <a name="using-folders-to-organize-code"></a>폴더를 사용하여 코드 구성
 
-작업할 몇 가지 새로운 형식을 도입하려 한다고 가정해 보겠습니다. 이렇게 하려면 파일을 더 추가하고 *Program.cs* 파일에 포함할 수 있는 네임스페이스를 부여하면 됩니다.
+콘솔 앱에 새 유형을 도입하려는 경우 유형이 포함된 파일을 앱에 추가하면 됩니다. 예를 들어 `AccountInformation` 및 `MonthlyReportRecords` 유형이 포함된 파일을 프로젝트에 추가하는 경우 프로젝트 파일 구조가 단순하며 쉽게 탐색할 수 있습니다.
 
 ```
 /MyProject
-|__Program.cs
 |__AccountInformation.cs
 |__MonthlyReportRecords.cs
 |__MyProject.csproj
-```
-
-프로젝트의 크기가 비교적 작은 경우에는 이 방법이 매우 효과적입니다. 그러나 다양한 데이터 형식 및 여러 레이어가 포함된 더 큰 앱이 있는 경우 항목을 논리적으로 구성해야 할 수 있습니다. 여기에서 폴더를 생각할 수 있습니다. 이 가이드에서 다루는 [NewTypes 샘플 프로젝트](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/NewTypesMsBuild)를 따를 수도 있고, 자신의 파일과 폴더를 만들 수도 있습니다.
-
-시작하려면 프로젝트의 루트 아래에 새 폴더를 만듭니다. `/Model`이 여기서 선택되었습니다.
-
-```
-/NewTypes
-|__/Model
 |__Program.cs
-|__NewTypes.csproj
 ```
 
-이제 몇 가지 새로운 형식을 폴더에 추가합니다.
+그러나 이 방법은 프로젝트의 크기가 비교적 작은 경우에만 효과적입니다. 프로젝트에 20개의 유형을 추가하면 어떻게 될지 상상이 되시나요? 프로젝트의 루트 디렉터리에 너무 많은 파일이 있으면 분명히 프로젝트 탐색과 유지 관리가 쉽지 않을 것입니다.
+
+프로젝트를 구성하려면 유형 파일을 보관할 새 폴더를 만들고 이름을 *Models*로 지정합니다. *Models* 폴더에 유형 파일을 넣습니다.
 
 ```
-/NewTypes
-|__/Model
+/MyProject
+|__/Models
    |__AccountInformation.cs
    |__MonthlyReportRecords.cs
+|__MyProject.csproj
 |__Program.cs
-|__NewTypes.csproj
 ```
 
-이제 마치 이들이 동일한 디렉터리의 파일인 것처럼, `Program.cs`에 포함할 수 있도록 모든 파일에 동일한 네임스페이스를 부여합니다.
+논리적으로 파일을 폴더로 그룹화하는 프로젝트는 탐색과 유지 관리가 용이합니다. 다음 섹션에서는 폴더 및 유닛 테스트를 사용하여 좀 더 복잡한 샘플을 만듭니다.
 
-### <a name="example-pet-types"></a>예제: Pet 형식
+## <a name="organizing-and-testing-using-the-newtypes-pets-sample"></a>NewTypes Pets 샘플을 사용하여 구성 및 테스트
 
-이 예제에서는 새로운 두 형식 `Dog` 및 `Cat`을 만들고 인터페이스 `IPet`을 구현합니다.
+### <a name="building-the-sample"></a>샘플 빌드
 
-폴더 구조:
+다음 단계를 위해 [NewTypes Pets 샘플](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/NewTypesMsBuild)을 사용할 수도 있고, 고유한 파일과 폴더를 만들 수도 있습니다. 나중에 더 많은 유형을 추가할 수 있는 폴더 구조로 유형이 논리적으로 구성되며, 테스트도 나중에 더 많은 테스트를 추가할 수 있는 폴더에 논리적으로 배치됩니다.
+
+샘플에는 두 유형 `Dog` 및 `Cat`이 포함되어 있으며, 두 유형이 공용 인터페이스 `IPet`을 구현하도록 합니다. `NewTypes` 프로젝트의 목표는 애완 동물 관련 유형을 *Pets* 폴더로 구성하는 것입니다. 나중에 *WildAnimals*등의 다른 유형 집합을 추가하면 *Pets* 폴더와 함께 *NewTypes* 폴더에 배치됩니다. *WildAnimals* 폴더에는 애완 동물이 아닌 동물 유형(예: `Squirrel` 및 `Rabbit`)이 포함될 수 있습니다. 이렇게 하면 유형을 추가해도 프로젝트의 체계적인 구성이 유지됩니다. 
+
+표시된 파일 내용으로 다음 폴더 구조를 만듭니다.
 
 ```
 /NewTypes
-|__/Pets
-   |__Dog.cs
-   |__Cat.cs
-   |__IPet.cs
-|__Program.cs
-|__NewTypes.csproj
+|__/src
+   |__/NewTypes
+      |__/Pets
+         |__Dog.cs
+         |__Cat.cs
+         |__IPet.cs
+      |__Program.cs
+      |__NewTypes.csproj
 ```
 
-`IPet.cs`:
-```csharp
-using System;
+*IPet.cs*:
 
-namespace Pets
-{
-    public interface IPet
-    {
-        string TalkToOwner();
-    }
-}
+[!code-csharp[IPet 인터페이스](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/IPet.cs)]
+
+*Dog.cs*:
+
+[!code-csharp[Dog 클래스](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Dog.cs)]
+
+*Cat.cs*:
+
+[!code-csharp[Cat 클래스](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Cat.cs)]
+
+*Program.cs*:
+
+[!code-csharp[Main](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Program.cs)]
+
+*NewTypes.csproj*:
+
+[!code-xml[NewTypes csproj](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/NewTypes.csproj)]
+
+다음 명령을 실행합니다.
+
+```console
+dotnet restore
+dotnet run
 ```
 
-`Dog.cs`:
-```csharp
-using System;
+다음 출력이 표시됩니다.
 
-namespace Pets
-{
-    public class Dog : IPet
-    {
-        public string TalkToOwner() => "Woof!";
-    }
-}
-```
-
-`Cat.cs`:
-```csharp
-using System;
-
-namespace Pets
-{
-    public class Cat : IPet
-    {
-        public string TalkToOwner() => "Meow!";
-    }
-}
-```
-
-`Program.cs`:
-```csharp
-using System;
-using Pets;
-using System.Collections.Generic;
-
-namespace ConsoleApplication
-{
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            List<IPet> pets = new List<IPet>
-            {
-                new Dog(),
-                new Cat()  
-            };
-            
-            foreach (var pet in pets)
-            {
-                Console.WriteLine(pet.TalkToOwner());
-            }
-        }
-    }
-}
-```
-
-`NewTypes.csproj`:
-```xml
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
-  
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.0</TargetFramework>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Include="**\*.cs" />
-    <EmbeddedResource Include="**\*.resx" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Microsoft.NETCore.App">
-      <Version>1.0.1</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.NET.Sdk">
-      <Version>1.0.0-alpha-20161104-2</Version>
-      <PrivateAssets>All</PrivateAssets>
-    </PackageReference>
-  </ItemGroup>
-  
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-</Project>
-```
-
-이를 실행하면 다음이 가능합니다.
-
-```
-$ dotnet restore
-$ dotnet run
+```console
 Woof!
 Meow!
 ```
 
-새로운 pet 형식을 추가하여(예: `Bird`) 이 프로젝트를 확장할 수 있습니다.
+연습(옵션): 이 프로젝트를 확장하여 `Bird` 등의 새로운 애완 동물 유형을 추가할 수 있습니다. 새의 `TalkToOwner` 메서드를 통해 소유자에게 `Tweet!`을 제공합니다. 앱을 다시 실행합니다. 출력에 `Tweet!`이 포함됩니다.
 
-## <a name="testing-your-console-app"></a>콘솔 앱 테스트
+### <a name="testing-the-sample"></a>샘플 테스트
 
-어떤 지점에 도달하면 프로젝트를 테스트해야 할 수 있습니다. 이 경우 다음 방법을 사용할 수 있습니다.
+`NewTypes` 프로젝트가 구현되었으며, 애완 동물 관련 유형을 폴더에 보관하여 구성했습니다. 다음으로, 테스트 프로젝트를 만들고 [xUnit](https://xunit.github.io/) 테스트 프레임워크를 사용하여 테스트 작성을 시작합니다. 유닛 테스트를 사용하면 애완 동물 유형의 동작을 자동으로 검사하여 제대로 작동하는지 확인할 수 있습니다.
 
-1. 기존 프로젝트의 모든 소스를 새로운 `src` 폴더로 이동합니다.
+*test* 폴더를 만들고, 이 폴더 안에 *NewTypesTests* 폴더를 만듭니다. *NewTypesTests* 폴더의 명령 프롬프트에서 `dotnet new xunit`를 실행합니다. 그러면 *NewTypesTests.csproj* 및 *UnitTest1.cs*라는 두 파일이 생성됩니다.
 
-   ```
-   /Project
-   |__/src
-   ```
+테스트 프로젝트는 현재 `NewTypes`의 형식을 테스트할 수 없으며, `NewTypes` 프로젝트에 대한 프로젝트 참조가 필요합니다. 프로젝트 참조를 추가하려면 [`dotnet add reference`](../tools/dotnet-add-reference.md) 명령을 사용합니다.
 
-2. `/test` 디렉터리를 만든 다음 `cd`를 사용하여 만든 디렉터리로 이동합니다.
+```
+dotnet add reference ../../src/NewTypes/NewTypes.csproj
+```
 
-   ```
-   /Project
-   |__/src
-   |__/test
-   ```
+*NewTypesTests.csproj* 파일에 `<ItemGroup>` 노드를 추가하여 수동으로 프로젝트 참조를 추가할 수도 있습니다.
 
-3. `dotnet new xunit` 명령으로 디렉터리를 초기화합니다. 여기에서는 xUnit을 가정하지만 `xunit`를 `mstest`로 대체하여 MSTest를 사용할 수도 있습니다.
-   
-### <a name="example-extending-the-newtypes-project"></a>예제: NewTypes 프로젝트 확장
+```xml
+<ItemGroup>
+  <ProjectReference Include="../../src/NewTypes/NewTypes.csproj" />
+</ItemGroup>
+```
 
-프로젝트 시스템이 준비되었으므로 이제 테스트 프로젝트를 만들고 테스트 작성을 시작할 수 있습니다. 여기서부터 이 가이드는 [샘플 Types 프로젝트](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/NewTypesMsBuild)를 사용하고 확장합니다. 또한 [Xunit](https://xunit.github.io/) 테스트 프레임워크를 사용합니다. 이 가이드의 과정을 따라 해도 되고, 테스트와 함께 고유한 다중 프로젝트 시스템을 만들어도 됩니다.
+*NewTypesTests.csproj*:
+
+[!code-xml[NewTypesTests csproj](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/NewTypesTests.csproj)]
+
+*NewTypesTests.csproj* 파일에는 다음이 포함되어 있습니다.
+
+* .NET 테스트 인프라인 `Microsoft.NET.Test.Sdk`에 대한 패키지 참조
+* xUnit 테스트 프레임워크인 `xunit`에 대한 패키지 참조
+* 테스트 실행기인 `xunit.runner.visualstudio`에 대한 패키지 참조
+* 테스트할 코드인 `NewTypes`에 대한 프로젝트 참조
+
+*UnitTest1.cs*의 이름을 *PetTests.cs*로 변경하고 파일의 코드를 다음 코드로 바꿉니다.
+
+```csharp
+using System;
+using Xunit;
+using Pets;
+
+public class PetTests
+{
+    [Fact]
+    public void DogTalkToOwnerReturnsWoof()
+    {
+        string expected = "Woof!";
+        string actual = new Dog().TalkToOwner();
+        
+        Assert.NotEqual(expected, actual);
+    }
+    
+    [Fact]
+    public void CatTalkToOwnerReturnsMeow()
+    {
+        string expected = "Meow!";
+        string actual = new Cat().TalkToOwner();
+        
+        Assert.NotEqual(expected, actual);
+    }
+}
+```
+
+연습(옵션): 소유자에 대한 `Tweet!`을 생성하는 `Bird` 유형을 이전에 추가한 경우 *PetTests.cs* 파일에 테스트 메서드 `BirdTalkToOwnerReturnsTweet`을 추가하여 `TalkToOwner` 메서드가 `Bird` 유형에 대해 제대로 작동하는지 확인합니다.
+
+> [!NOTE]
+> `expected` 및 `actual` 값이 같다고 예상하는 경우에도 `Assert.NotEqual` 검사를 사용한 초기 어설션에서는 두 값이 *같지 않다*고 지정합니다. 테스트 논리를 검사하기 위해 처음에는 항상 한 번 실패하도록 테스트를 만듭니다. 이는 TDD(테스트 기반 디자인) 방법론에서 중요한 단계입니다. 테스트가 실패하는지 확인한 후에 테스트를 통과할 수 있도록 어설션을 조정합니다.
 
 전체 프로젝트 구조는 다음과 같습니다.
 
@@ -222,102 +190,73 @@ Meow!
       |__NewTypesTests.csproj
 ```
 
-테스트 프로젝트에 있는지 확인해야 할 두 가지가 있습니다.
-
-1. 다음이 있는 올바른 *NewTypesTests.csproj* 파일:
-
-   * 다음에 대한 참조:`xunit`
-   * 다음에 대한 참조:`dotnet-test-xunit`
-   * 테스트 중인 코드에 해당하는 네임스페이스에 대한 참조
-
-   이 파일은 *NewTypesTests* 디렉터리의 명령 프롬프트에서 `dotnet new xunit`을 입력한 다음 `NewTypes` 프로젝트에 프로젝트 참조를 추가하여 만들 수 있습니다.
-
-    `NewTypesTests/NewTypesTests.csproj`:
-    ```xml
-    <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-      <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
-
-      <PropertyGroup>
-        <OutputType>Exe</OutputType>
-        <TargetFramework>netcoreapp1.0</TargetFramework>
-      </PropertyGroup>
-
-      <ItemGroup>
-        <Compile Include="**\*.cs" />
-        <EmbeddedResource Include="**\*.resx" />
-      </ItemGroup>
-
-      <ItemGroup>
-        <PackageReference Include="Microsoft.NETCore.App">
-          <Version>1.0.1</Version>
-        </PackageReference>
-        <PackageReference Include="Microsoft.NET.Sdk">
-          <Version>1.0.0-alpha-20161104-2</Version>
-          <PrivateAssets>All</PrivateAssets>
-        </PackageReference>
-        <PackageReference Include="Microsoft.NET.Test.Sdk">
-          <Version>15.0.0-preview-20161024-02</Version>
-        </PackageReference>
-        <PackageReference Include="xunit">
-          <Version>2.2.0-beta3-build3402</Version>
-        </PackageReference>
-        <PackageReference Include="xunit.runner.visualstudio">
-          <Version>2.2.0-beta4-build1188</Version>
-        </PackageReference>
-        <ProjectReference Include="../../src/NewTypes/NewTypes.csproj"/>
-      </ItemGroup>
-
-      <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-    </Project>
-    ```
-
-2. xUnit 테스트 클래스
-
-    `PetTests.cs`: 
-    ```csharp
-    using System;
-    using Xunit;
-    using Pets;
-    public class PetTests
-    {
-        [Fact]
-        public void DogTalkToOwnerTest()
-        {
-            string expected = "Woof!";
-            string actual = new Dog().TalkToOwner();
-            
-            Assert.Equal(expected, actual);
-        }
-        
-        [Fact]
-        public void CatTalkToOwnerTest()
-        {
-            string expected = "Meow!";
-            string actual = new Cat().TalkToOwner();
-            
-            Assert.Equal(expected, actual);
-        }
-    }
-    ```
-   
-이제 테스트를 실행할 수 있습니다! [`dotnet test`](../tools/dotnet-test.md) 명령은 프로젝트에 지정된 Test Runner를 실행합니다. 최상위 디렉터리에서 시작해야 합니다.
+*test/NewTypesTests* 디렉터리에서 시작합니다. [`dotnet restore`](../tools/dotnet-restore.md) 명령을 사용하여 테스트 프로젝트를 복원합니다. [`dotnet test`](../tools/dotnet-test.md) 명령을 사용하여 테스트를 실행합니다. 이 명령은 프로젝트 파일에 지정된 Test Runner를 시작합니다.
+ 
+예상대로 테스트에 실패하고, 콘솔에 다음 출력이 표시됩니다.
  
 ```
-$ cd test/NewTypesTests
-$ dotnet restore
-$ dotnet test
-```
- 
-출력은 다음과 같습니다.
- 
-```
-xUnit.net .NET CLI test runner (64-bit win10-x64)
-  Discovering: NewTypesTests
-  Discovered:  NewTypesTests
-  Starting:    NewTypesTests
-  Finished:    NewTypesTests
-=== TEST EXECUTION SUMMARY ===
-   NewTypesTests  Total: 2, Errors: 0, Failed: 0, Skipped: 0, Time: 0.144s
-SUMMARY: Total: 1 targets, Passed: 1, Failed: 0.
+Test run for C:\NewTypesMsBuild\test\NewTypesTests\bin\Debug\netcoreapp1.1\NewTypesTests.dll(.NETCoreApp,Version=v1.1)
+Microsoft (R) Test Execution Command Line Tool Version 15.0.0.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+[xUnit.net 00:00:00.7271827]   Discovering: NewTypesTests
+[xUnit.net 00:00:00.8258687]   Discovered:  NewTypesTests
+[xUnit.net 00:00:00.8663545]   Starting:    NewTypesTests
+[xUnit.net 00:00:01.0109236]     PetTests.CatTalkToOwnerReturnsMeow [FAIL]
+[xUnit.net 00:00:01.0119107]       Assert.NotEqual() Failure
+[xUnit.net 00:00:01.0120278]       Expected: Not "Meow!"
+[xUnit.net 00:00:01.0120968]       Actual:   "Meow!"
+[xUnit.net 00:00:01.0130500]       Stack Trace:
+[xUnit.net 00:00:01.0141240]         C:\NewTypesMsBuild\test\NewTypesTests\PetTests.cs(22,0): at PetTests.CatTalkToOwnerReturnsMeow()
+[xUnit.net 00:00:01.0272364]     PetTests.DogTalkToOwnerReturnsWoof [FAIL]
+[xUnit.net 00:00:01.0273649]       Assert.NotEqual() Failure
+[xUnit.net 00:00:01.0274166]       Expected: Not "Woof!"
+[xUnit.net 00:00:01.0274690]       Actual:   "Woof!"
+[xUnit.net 00:00:01.0275264]       Stack Trace:
+[xUnit.net 00:00:01.0275960]         C:\NewTypesMsBuild\test\NewTypesTests\PetTests.cs(13,0): at PetTests.DogTalkToOwnerReturnsWoof()
+[xUnit.net 00:00:01.0294509]   Finished:    NewTypesTests
+Failed   PetTests.CatTalkToOwnerReturnsMeow
+Error Message:
+ Assert.NotEqual() Failure
+Expected: Not "Meow!"
+Actual:   "Meow!"
+Stack Trace:
+   at PetTests.CatTalkToOwnerReturnsMeow() in C:\NewTypesMsBuild\test\NewTypesTests\PetTests.cs:line 22
+Failed   PetTests.DogTalkToOwnerReturnsWoof
+Error Message:
+ Assert.NotEqual() Failure
+Expected: Not "Woof!"
+Actual:   "Woof!"
+Stack Trace:
+   at PetTests.DogTalkToOwnerReturnsWoof() in C:\NewTypesMsBuild\test\NewTypesTests\PetTests.cs:line 13
+
+Total tests: 2. Passed: 0. Failed: 2. Skipped: 0.
+Test Run Failed.
+Test execution time: 2.1371 Seconds
 ```
 
+테스트 어설션을 `Assert.NotEqual`에서 `Assert.Equal`로 변경합니다.
+
+[!code-csharp[PetTests 클래스](../../../samples/core/console-apps/NewTypesMsBuild/test/NewTypesTests/PetTests.cs)]
+
+`dotnet test` 명령을 사용하여 테스트를 다시 실행하면 다음 출력이 표시됩니다.
+
+```
+Microsoft (R) Test Execution Command Line Tool Version 15.0.0.0
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+[xUnit.net 00:00:01.3882374]   Discovering: NewTypesTests
+[xUnit.net 00:00:01.4767970]   Discovered:  NewTypesTests
+[xUnit.net 00:00:01.5157667]   Starting:    NewTypesTests
+[xUnit.net 00:00:01.6408870]   Finished:    NewTypesTests
+
+Total tests: 2. Passed: 2. Failed: 0. Skipped: 0.
+Test Run Successful.
+Test execution time: 1.6634 Seconds
+```
+
+테스트를 통과합니다. 애완 동물 유형의 메서드가 소유자에게 설명할 때 올바른 값을 반환합니다.
+
+xUnit를 사용하여 프로젝트를 구성 및 테스트하는 기술을 배웠습니다. 이러한 기술을 활용하여 사용자 고유의 프로젝트에 적용해 보세요. *즐거운 코딩을 경험하시기 바랍니다!*

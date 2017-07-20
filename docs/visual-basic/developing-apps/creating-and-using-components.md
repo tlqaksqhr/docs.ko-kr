@@ -27,27 +27,28 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9ca4df41897fafc5d7981c85741ae4fa1a8c641f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
+ms.openlocfilehash: 1235f62f6ac0878e16387c35150764f3585bc004
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Visual Basic에서 구성 요소 만들기 및 사용
-*구성 요소*는 <xref:System.ComponentModel.IComponent?displayProperty=fullName> 인터페이스를 구현하는 클래스이거나 <xref:System.ComponentModel.IComponent>를 구현하는 클래스에서 직접적 또는 간접적으로 파생되는 클래스입니다. [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)] 구성 요소는 재사용 가능한 개체이고, 다른 개체와 상호 작용할 수 있으며, 외부 리소스 및 디자인 타임 지원에 대한 제어를 제공합니다.  
+*구성 요소*는 <xref:System.ComponentModel.IComponent?displayProperty=fullName> 인터페이스를 구현하는 클래스이거나 <xref:System.ComponentModel.IComponent>를 구현하는 클래스에서 직접 또는 간접적으로 파생되는 클래스입니다. [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)] 구성 요소는 재사용 가능한 개체이고, 다른 개체와 상호 작용할 수 있으며, 외부 리소스 및 디자인 타임 지원에 대한 제어를 제공합니다.  
   
  구성 요소의 중요한 기능은 구성 요소가 디자인 가능하다는 것입니다. 즉, 구성 요소인 클래스는 [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] 통합 개발 환경에서 사용할 수 있습니다. 구성 요소는 도구 상자에 추가하고, 양식에 끌어서 놓고, 디자인 화면에서 조작할 수 있습니다. 구성 요소에 대한 기본 디자인 타임 지원은 [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)]에 기본 제공됩니다. 구성 요소 개발자는 기본 디자인 타임 기능을 이용하기 위해 추가 작업을 할 필요가 없습니다.  
   
- *컨트롤*과 구성 요소는 둘 다 디자인 가능하다는 점에서 비슷합니다. 그러나 컨트롤은 사용자 인터페이스를 제공하지만 구성 요소는 제공하지 않습니다. 컨트롤은 기본 컨트롤 클래스 <xref:System.Windows.Forms.Control> 또는 <xref:System.Web.UI.Control> 중 하나에서 파생되어야 합니다.  
+ *컨트롤*과 구성 요소는 둘 다 디자인 가능하다는 점에서 비슷합니다. 그러나 컨트롤은 사용자 인터페이스를 제공하지만 구성 요소는 제공하지 않습니다. 컨트롤은 기본 컨트롤 클래스인 <xref:System.Windows.Forms.Control> 또는 <xref:System.Web.UI.Control> 중 하나에서 파생되어야 합니다.  
   
 ## <a name="when-to-create-a-component"></a>구성 요소를 만들어야 하는 경우  
- 클래스가 디자인 화면(예: Windows Forms 또는 Web Forms 디자이너)에서 사용되지만 사용자 인터페이스가 없는 경우 클래스는 구성 요소로서, <xref:System.ComponentModel.IComponent>를 직접적 또는 간접적으로 구현하는 클래스에서 파생되거나 <xref:System.ComponentModel.IComponent>를 구현해야 합니다.  
+ 클래스가 Design Surface(예: Windows Forms 또는 Web Forms 디자이너)에서 사용되지만 사용자 인터페이스가 없는 경우 클래스는 구성 요소로서, <xref:System.ComponentModel.IComponent>를 구현하거나 <xref:System.ComponentModel.IComponent>를 직접 또는 간접적으로 구현하는 클래스에서 파생되어야 합니다.  
   
  <xref:System.ComponentModel.Component> 및 <xref:System.ComponentModel.MarshalByValueComponent> 클래스는 <xref:System.ComponentModel.IComponent> 인터페이스의 기본 구현입니다. 이러한 클래스 간의 기본 차이점은 <xref:System.ComponentModel.Component> 클래스는 참조에 의해 마샬링되지만 <xref:System.ComponentModel.IComponent>는 값에 의해 마샬링된다는 점입니다. 다음 목록에서는 구현에 대한 다양한 지침을 제공합니다.  
   
--   구성 요소가 참조에 의해 마샬링되어야 하는 경우 <xref:System.ComponentModel.Component>에서 파생시킵니다.  
+-   구성 요소가 참조에 의해 마샬링되어야 하는 경우 <xref:System.ComponentModel.Component>에서 파생합니다.  
   
--   구성 요소가 값에 의해 마샬링되어야 하는 경우 <xref:System.ComponentModel.MarshalByValueComponent>에서 파생시킵니다.  
+-   구성 요소가 값에 의해 마샬링되어야 하는 경우 <xref:System.ComponentModel.MarshalByValueComponent>에서 파생합니다.  
   
 -   단일 상속으로 인해 구성 요소가 기본 구현 중 하나에서 파생될 수 없는 경우 <xref:System.ComponentModel.IComponent>를 구현합니다.  
   
@@ -58,11 +59,11 @@ ms.lasthandoff: 03/13/2017
   
  핵심 구성 요소 클래스는 다음과 같습니다.  
   
--   <xref:System.ComponentModel.Component>. <xref:System.ComponentModel.IComponent> 인터페이스의 기본 구현입니다. 이 클래스를 통해 응용 프로그램 간에 개체를 공유할 수 있습니다.  
+-   <xref:System.ComponentModel.Component>. <xref:System.ComponentModel.IComponent> 인터페이스에 대한 기본 구현입니다. 이 클래스를 통해 응용 프로그램 간에 개체를 공유할 수 있습니다.  
   
--   <xref:System.ComponentModel.MarshalByValueComponent>. <xref:System.ComponentModel.IComponent> 인터페이스의 기본 구현입니다.  
+-   <xref:System.ComponentModel.MarshalByValueComponent>. <xref:System.ComponentModel.IComponent> 인터페이스에 대한 기본 구현입니다.  
   
--   <xref:System.ComponentModel.Container>. <xref:System.ComponentModel.IContainer> 인터페이스의 기본 구현입니다. 이 클래스는 0 또는 추가 구성 요소를 캡슐화합니다.  
+-   <xref:System.ComponentModel.Container>. <xref:System.ComponentModel.IContainer> 인터페이스에 대한 기본 구현입니다. 이 클래스는 0 또는 추가 구성 요소를 캡슐화합니다.  
   
  구성 요소 라이선싱에 사용되는 일부 클래스는 다음과 같습니다.  
   
@@ -95,7 +96,7 @@ ms.lasthandoff: 03/13/2017
  [구성 요소 클래스](http://msdn.microsoft.com/library/ce2e5647-e673-4c2b-8125-ffebbd9d71bc)  
  클래스를 구성 요소로 설정하는 작업, 구성 요소 기능을 표시하는 방법, 구성 요소에 대한 액세스 제어 및 구성 요소 인스턴스를 만드는 방법 제어를 설명합니다.  
   
- [컨트롤 및 구성 요소 제작 문제 해결](http://msdn.microsoft.com/library/e9c8c099-2271-4737-882f-50f336c7a55e)  
+ [컨트롤 및 구성 요소 제작 문제 해결](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
  일반적인 문제 해결 방법을 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  

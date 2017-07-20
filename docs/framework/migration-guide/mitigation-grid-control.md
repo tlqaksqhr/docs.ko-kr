@@ -17,15 +17,16 @@ caps.latest.revision: 4
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: 9460c8b6ca8db927af4064e3567eca34c1bf5c91
-ms.openlocfilehash: c7acce9d41af7e72b04b89751a7b186c9581dfea
-ms.lasthandoff: 04/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 39e8e757a446b30ab18914465853138e1c239e40
+ms.openlocfilehash: 75b3c39fa2739b58fdee5c2183d5dfaaeb2f6af5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="mitigation-grid-control39s-space-allocation-to-star-columns"></a>완화: Grid 컨트롤의 별 열 공간 할당
 
-.NET Framework 4.7부터 WPF는 <xref:System.Windows.Controls.Grid> 컨트롤이 \* 열에 공간을 할당하는 데 사용하는 알고리즘을 대신합니다. 
+.NET Framework 4.7부터는 <xref:System.Windows.Controls.Grid> 컨트롤이 \* 열에 공간을 할당하는 데 사용하는 알고리즘 대신 WPF가 사용됩니다. 
 
 ## <a name="whats-changed"></a>변경된 내용
 
@@ -63,7 +64,7 @@ D. 이러한 모든 설명은 "이상적" 레이아웃과 관련된 것으로 �
 
 새 알고리즘은 다음과 같은 많은 경우에 \* 열에 할당되는 실제 너비를 변경합니다.
 
-- 하나 이상의 \* 열이 해당 열에 대한 비례 할당을 재정의하는 최소 또는 최대 너비를 가지는 경우 (최소 너비는 명시적인 <xref:System.Windows.FrameworkElement.MinWidth%2A> 선언 또는 열 콘텐츠에서 가져온 암시적 최소값에서 파생될 수 있습니다. 최대 너비는 <xref:System.Windows.FrameworkElement.MaxWidth%2A> 선언에서 명시적으로 정의할 수만 있습니다.
+- 하나 이상의 \* 열이 해당 열에 대한 비례 할당을 재정의하는 최소 또는 최대 너비를 가지는 경우 최소 너비는 명시적인 <xref:System.Windows.FrameworkElement.MinWidth%2A> 선언 또는 열 콘텐츠에서 가져온 암시적 최소값에서 파생될 수 있습니다. 최대 너비는 <xref:System.Windows.FrameworkElement.MaxWidth%2A> 선언에서 명시적으로 정의해야 합니다.
 
 - 하나 이상의 \* 열 선언이 10^298보다 큰 훨씬 큰 \* 가중치를 선언하는 경우
 

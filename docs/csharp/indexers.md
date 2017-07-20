@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3dc9347aa3c4090b71d473d13b5c7ad68f1fbc76
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
+ms.openlocfilehash: a3ee06e9e177fe3c0a41e99361ba9289943c1cf5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/12/2017
 
 ---
 
@@ -52,8 +53,7 @@ public int this[string key]
 API가 해당 컬렉션에 대한 인수가 정의되는 일부 컬렉션을 모델링하는 경우 형식에 *인덱서*를 정의합니다. 인덱서는 .NET Core Framework의 일부인 컬렉션 형식에 직접 매핑될 수도 있고, 매핑되지 않을 수도 있습니다. 형식에 컬렉션 모델링 이외의 다른 책임이 있을 수도 있습니다.
 인덱서를 사용하면 해당 추상화의 값이 저장 또는 계산되는 방법의 내부 세부 정보를 노출하지 않고 형식의 추상화와 일치하는 API를 제공할 수 있습니다.
 
-*인덱서*를 사용하기 위한 몇 가지 일반적인 시나리오를 살펴보겠습니다.
-모든 샘플에 대한 코드는 core-docs [GitHub 리포지토리](https://github.com/dotnet/core-docs)에서 확인할 수 있습니다. 또는 [샘플 폴더](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers)에 직접 액세스할 수 있습니다.
+*인덱서*를 사용하기 위한 몇 가지 일반적인 시나리오를 살펴보겠습니다. [인덱서에 대한 샘플 폴더](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers)에 액세스할 수 있습니다. 다운로드 지침은 [샘플 및 자습서](../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
 
 ### <a name="arrays-and-vectors"></a>배열 및 벡터
 

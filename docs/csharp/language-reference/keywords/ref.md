@@ -31,12 +31,14 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 353abf8a0c852acbbb2949f9640c1465dec8593b
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/13/2017
 
 ---
+
 # <a name="ref-c-reference"></a>ref(C# 참조)
 `ref` 키워드는 인수를 값이 아닌 참조로 전달하도록 합니다. 인수를 참조로 전달하는 경우 호출된 메서드의 매개 변수 변경 내용이 호출 메서드에 반영됩니다. 예를 들어 호출자가 지역 변수 식 또는 배열 요소 액세스 식을 전달하는 경우 호출된 메서드에서 ref 매개 변수가 참조하는 개체를 바꾸면 호출자의 지역 변수 또는 배열 요소가 새 개체를 참조합니다.  
   

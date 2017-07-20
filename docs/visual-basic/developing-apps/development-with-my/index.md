@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 815f459a651adf98dfb78a8444f4b873dece8283
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
+ms.openlocfilehash: 76055b9c0a611fa3688e5bada1dd8e7d426765e3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="development-with-my-visual-basic"></a>My를 사용한 개발(Visual Basic)
@@ -59,7 +60,7 @@ Visual Basic은 강력한 기능을 지원하며 생산성 및 사용 편의성�
  응용 프로그램의 리소스 및 설정에 액세스할 수 있도록 하는 `My.Resources` 및 `My.Settings` 개체에 대해 설명합니다.  
   
  [Visual Basic 응용 프로그램 모델 개요](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 응용 프로그램 시작/종료 모델에 대해 설명합니다.  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 응용 프로그램 시작/종료 모델에 대해 설명합니다.  
   
  [My가 프로젝트 형식에 의존하는 방식](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  여러 다른 프로젝트 형식에서 사용할 수 있는 `My` 기능에 대해 자세히 설명합니다.  

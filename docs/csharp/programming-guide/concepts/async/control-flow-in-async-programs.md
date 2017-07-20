@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d014ddcdfabae83343de6b1e9338ae38fe2b22d0
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
+ms.openlocfilehash: 4d73428cd2a896309f90af45fef682186c470417
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/14/2017
 
 ---
 # <a name="control-flow-in-async-programs-c"></a>비동기 프로그램의 제어 흐름(C#)
@@ -37,14 +38,13 @@ ms.lasthandoff: 03/13/2017
   
 -   `startButton_Click` - `AccessTheWebAsync`를 호출하고 결과를 표시합니다.  
   
--   `AccessTheWebAsync` - 웹 사이트의 콘텐츠를 문자열로 다운로드하고 문자열의 길이를 반환합니다. `AccessTheWebAsync`는 비동기 <xref:System.Net.Http.HttpClient> 메서드, <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>을 사용하여 콘텐츠를 다운로드합니다.  
+-   `AccessTheWebAsync` - 웹 사이트의 콘텐츠를 문자열로 다운로드하고 문자열의 길이를 반환합니다. `AccessTheWebAsync`는 비동기 <xref:System.Net.Http.HttpClient> 메서드인 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>을 사용하여 콘텐츠를 다운로드합니다.  
   
  전체 프로그램에서 전략적 지점에 번호가 매겨진 표시 줄이 나타나 프로그램 실행 방식을 이해하도록 도와주고 표시된 각 지점에서 수행되는 작업을 설명합니다. 표시 줄에는 "ONE"~"SIX"의 레이블이 지정됩니다. 레이블은 프로그램이 이러한 코드 줄에 도달하는 순서를 나타냅니다.  
   
  다음 코드에서는 프로그램의 개요를 보여 줍니다.  
   
-```cs  
-  
+```csharp  
 public partial class MainWindow : Window  
 {  
     // . . .  
@@ -75,13 +75,11 @@ public partial class MainWindow : Window
         return urlContents.Length;  
     }  
 }  
-  
 ```  
   
  "ONE"~"SIX"의 레이블이 지정된 각 위치에는 프로그램의 현재 상태에 대한 정보가 표시됩니다. 다음 출력이 생성됩니다.  
   
 ```  
-  
 ONE:   Entering startButton_Click.  
            Calling AccessTheWebAsync.  
   
@@ -147,7 +145,7 @@ Length of the downloaded string: 33946.
   
 6.  MainWindow.xaml의 **XAML** 보기에서 코드를 다음 코드로 바꿉니다.  
   
-    ```cs  
+    ```csharp  
     <Window  
             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
@@ -159,7 +157,6 @@ Length of the downloaded string: 33946.
             <TextBox x:Name="resultsTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="576" Height="265" FontFamily="Lucida Console" FontSize="10" VerticalScrollBarVisibility="Visible" Grid.ColumnSpan="3"/>  
         </Grid>  
     </Window>  
-  
     ```  
   
      텍스트 상자와 단추가 포함된 간단한 창이 MainWindow.xaml의 **디자인** 보기에 나타납니다.  
@@ -170,7 +167,7 @@ Length of the downloaded string: 33946.
   
 9. MainWindow.xaml.cs에서 코드를 다음 코드로 바꿉니다.  
   
-    ```cs  
+    ```csharp  
     using System;  
     using System.Collections.Generic;  
     using System.Linq;  
@@ -289,12 +286,12 @@ Length of the downloaded string: 33946.
   
 ## <a name="trace-the-program"></a>프로그램 추적  
   
-### <a name="steps-one-and-two"></a>1단계 및 2단계  
- 첫 번째 두 개의 표시 줄은 `startButton_Click`이 `AccessTheWebAsync`를 호출하고 `AccessTheWebAsync`가 비동기 <xref:System.Net.Http.HttpClient> 메서드 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>을 호출할 때 경로를 추적합니다. 다음 그림은 메서드 간의 호출을 간단히 보여 줍니다.  
+### <a name="steps-one-and-two"></a>1, 2단계  
+ 처음 두 표시 줄은 `startButton_Click`이 `AccessTheWebAsync`를 호출하고, `AccessTheWebAsync`가 비동기 <xref:System.Net.Http.HttpClient> 메서드 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>을 호출할 때 경로를 추적합니다. 다음 그림은 메서드 간의 호출을 간단히 보여 줍니다.  
   
  ![1단계 및 2단계](../../../../csharp/programming-guide/concepts/async/media/asynctrace-onetwo.png "AsyncTrace-ONETWO")  
   
- `AccessTheWebAsync` 및 `client.GetStringAsync`의 반환 형식은 <xref:System.Threading.Tasks.Task%601>입니다. `AccessTheWebAsync`의 경우 TResult는 정수입니다. `GetStringAsync`의 경우 TResult는 문자열입니다. 비동기 메서드 반환 형식에 대한 자세한 내용은 [비동기 반환 형식(C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)을 참조하세요.  
+ `AccessTheWebAsync` 및 `client.GetStringAsync`의 반환 형식은 둘 다 <xref:System.Threading.Tasks.Task%601>입니다. `AccessTheWebAsync`의 경우 TResult는 정수입니다. `GetStringAsync`의 경우 TResult는 문자열입니다. 비동기 메서드 반환 형식에 대한 자세한 내용은 [비동기 반환 형식(C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)을 참조하세요.  
   
  제어가 다시 호출자로 이동할 때 작업 반환 비동기 메서드는 작업 인스턴스를 반환합니다. 호출된 메서드에서 `await` 연산자가 발견되거나 호출된 메서드가 종료될 때 제어는 비동기 메서드에서 호출자로 반환됩니다. "THREE"~"SIX"의 레이블이 지정된 표시 줄은 이 프로세스 부분을 추적합니다.  
   
@@ -303,13 +300,24 @@ Length of the downloaded string: 33946.
   
  `client.GetStringAsync` 메서드는 `AccessTheWebAsync`의 `getStringTask` 변수에 할당된 문자열의 작업을 반환합니다. 예제 프로그램의 다음 줄은 `client.GetStringAsync` 호출 및 할당을 보여 줍니다.  
   
-<CodeContentPlaceHolder>5</CodeContentPlaceHolder>  
- 작업은 결국 실제 문자열을 생성하기 위한 `client.GetStringAsync`의 약속으로 간주할 수 있습니다. 그리고 `client.GetStringAsync`의 약속된 문자열을 사용하지 않는 작업이 `AccessTheWebAsync`에 있는 경우 `client.GetStringAsync`가 대기하는 동안 해당 작업이 계속될 수 있습니다. 예제에서 "THREE” 레이블이 지정된 다음 출력 줄은 독립 작업을 수행할 기회를 나타냅니다.  
+```csharp  
+Task<string> getStringTask = client.GetStringAsync("http://msdn.microsoft.com");  
+```  
   
-<CodeContentPlaceHolder>6</CodeContentPlaceHolder>  
+ 작업은 결국 실제 문자열을 생성하기 위한 `client.GetStringAsync`의 약속으로 간주할 수 있습니다. 그리고 `client.GetStringAsync`의 약속된 문자열을 사용하지 않는 작업이 `AccessTheWebAsync`에 있는 경우 `client.GetStringAsync`가 대기하는 동안 해당 작업이 계속될 수 있습니다. 예제에서 "THREE" 레이블이 지정된 다음 출력 줄은 독립 작업을 수행할 기회를 나타냅니다.  
+  
+```  
+THREE: Back in AccessTheWebAsync.  
+           Task getStringTask is started.  
+           About to await getStringTask & return a Task<int> to startButton_Click.  
+```  
+  
  다음 문은 `getStringTask`가 대기 상태일 때 `AccessTheWebAsync`의 진행을 일시 중단합니다.  
   
-<CodeContentPlaceHolder>7</CodeContentPlaceHolder>  
+```csharp  
+string urlContents = await getStringTask;  
+```  
+  
  다음 그림은 `client.GetStringAsync`에서 `getStringTask`에 대한 할당으로의 제어 흐름과 `getStringTask` 만들기에서 await 연산자 적용으로의 제어 흐름을 보여 줍니다.  
   
  ![3단계](../../../../csharp/programming-guide/concepts/async/media/asynctrace-three.png "AsyncTrace-Three")  
@@ -326,13 +334,24 @@ Length of the downloaded string: 33946.
   
  다음 문은 이 작업을 `getLengthTask` 변수에 할당합니다.  
   
-<CodeContentPlaceHolder>8</CodeContentPlaceHolder>  
+```csharp  
+Task<int> getLengthTask = AccessTheWebAsync();  
+```  
+  
  `AccessTheWebAsync`에서처럼 `startButton_Click`은 작업이 대기 상태가 될 때까지 비동기 작업(`getLengthTask`)의 결과를 사용하지 않는 작업을 계속할 수 있습니다. 다음 출력 줄은 해당 작업을 나타냅니다.  
   
-<CodeContentPlaceHolder>9</CodeContentPlaceHolder>  
+```  
+FOUR:  Back in startButton_Click.  
+           Task getLengthTask is started.  
+           About to await getLengthTask -- no caller to return to.  
+```  
+  
  `startButton_Click`의 진행은 `getLengthTask`가 대기 상태일 때 일시 중단됩니다. 다음 대입문은 `AccessTheWebAsync`가 완료될 때까지 `startButton_Click`을 일시 중단합니다.  
   
-<CodeContentPlaceHolder>10</CodeContentPlaceHolder>  
+```csharp  
+int contentLength = await getLengthTask;  
+```  
+  
  다음 그림에서 화살표는 `AccessTheWebAsync`의 await 식에서 `getLengthTask`에 대한 값 할당으로의 제어 흐름에 이어 `getLengthTask`가 대기 상태가 될 때까지 `startButton_Click`의 일반적인 처리를 보여 줍니다.  
   
  ![4단계](../../../../csharp/programming-guide/concepts/async/media/asynctrace-four.png "AsyncTrace-FOUR")  
@@ -340,7 +359,13 @@ Length of the downloaded string: 33946.
 ### <a name="step-five"></a>5단계  
  `client.GetStringAsync`가 완료되었음을 알리면 `AccessTheWebAsync` 처리는 일시 중단이 해제되고 await 문을 무시하고 계속 진행될 수 있습니다. 다음 출력 줄은 처리 다시 시작을 나타냅니다.  
   
-<CodeContentPlaceHolder>11</CodeContentPlaceHolder>  
+```  
+FIVE:  Back in AccessTheWebAsync.  
+           Task getStringTask is complete.  
+           Processing the return statement.  
+           Exiting from AccessTheWebAsync.  
+```  
+  
  return 문의 피연산자, `urlContents.Length`는 `AccessTheWebAsync`가 반환하는 작업에 저장됩니다. await 식은 `startButton_Click`의 `getLengthTask`에서 해당 값을 검색합니다.  
   
  다음 그림은 `client.GetStringAsync`(및 `getStringTask`)가 완료된 후 제어의 전송을 보여 줍니다.  
@@ -354,10 +379,19 @@ Length of the downloaded string: 33946.
   
  다음 출력 줄은 `startButton_Async`의 처리 다시 시작을 나타냅니다.  
   
-<CodeContentPlaceHolder>12</CodeContentPlaceHolder>  
+```  
+SIX:   Back in startButton_Click.  
+           Task getLengthTask is finished.  
+           Result from AccessTheWebAsync is stored in contentLength.  
+           About to display contentLength and exit.  
+```  
+  
  await 식은 `getLengthTask`에서 `AccessTheWebAsync`에 있는 return 문의 피연산자인 정수 값을 검색합니다. 다음 문은 이 해당 값을 `contentLength` 변수에 할당합니다.  
   
-<CodeContentPlaceHolder>13</CodeContentPlaceHolder>  
+```csharp  
+int contentLength = await getLengthTask;  
+```  
+  
  다음 그림은 `AccessTheWebAsync`에서 `startButton_Click`로의 제어 반환을 보여 줍니다.  
   
  ![6단계](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace-SIX")  
@@ -367,3 +401,4 @@ Length of the downloaded string: 33946.
  [비동기 반환 형식(C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)   
  [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
  [Async Sample: Control Flow in Async Programs (C# and Visual Basic)](http://go.microsoft.com/fwlink/?LinkId=255285)(Async 샘플: 비동기 프로그램의 제어 흐름(C# 및 Visual Basic))
+

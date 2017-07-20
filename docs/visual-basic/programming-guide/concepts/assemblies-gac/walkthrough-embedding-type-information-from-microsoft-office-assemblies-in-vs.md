@@ -20,16 +20,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: 4347ba0e740419b53a1aa662c43933dead107e9c
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>연습: Visual Studio (Visual Basic)에서 Microsoft Office 어셈블리의 형식 정보 포함
 COM 개체를 참조 하는 응용 프로그램에서 형식 정보를 포함 하는 경우에 주 interop 어셈블리 (PIA)에 대 한 필요성을 제거할 수 있습니다. 또한, 포함된 된 형식 정보를 사용 하면 응용 프로그램에 대 한 버전 독립성을 달성할 수 있습니다. 즉, 각 버전에 대 한 특정 PIA를 요구 하지 않고 COM 라이브러리의 여러 버전의 형식을 사용 하 여 프로그램을 작성할 수 있습니다. Microsoft Office 라이브러리에서 개체를 사용 하는 응용 프로그램에 대 한 일반적인 시나리오입니다. 형식 정보를 포함 하는 프로그램이 나 각 버전의 Microsoft Office PIA를 다시 배포 하지 않아도 서로 다른 컴퓨터에 다른 버전의 Microsoft Office를 사용 하는 프로그램의 동일한 빌드 수 있습니다.  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="prerequisites"></a>필수 조건  
  이 연습에서는 다음 사항이 필요합니다.  

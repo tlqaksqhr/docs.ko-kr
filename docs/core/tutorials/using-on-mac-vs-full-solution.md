@@ -4,20 +4,22 @@ description: "이 항목에서는 재사용 가능한 라이브러리 및 단위
 keywords: .NET, .NET Core, macOS, Mac
 author: guardrex
 ms.author: mairaw
-ms.date: 03/16/2017
+ms.date: 06/12/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 6945bedf-5bf3-4955-8588-83fb87511b79
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
-ms.openlocfilehash: c1f279e4c78111350dbc8ec01d33d65773c56bb1
+ms.sourcegitcommit: 83200e452bccc20bfa82d94899514019e9d05a23
+ms.openlocfilehash: a54100a4eda6997b73b60d88b583e290973acb8e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 07/05/2017
 
 ---
 
-# <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Visual Studio for Mac을 사용하여 macOS에서 완전한 .NET Core 솔루션 빌드
+<a id="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac" class="xliff"></a>
+
+# Visual Studio for Mac을 사용하여 macOS에서 완전한 .NET Core 솔루션 빌드
 
 Visual Studio for Mac은 .NET Core 응용 프로그램 개발을 위해 필요한 전기능 IDE(통합 개발 환경)를 제공합니다. 이 항목에서는 재사용 가능한 라이브러리 및 단위 테스트를 포함하는 .NET Core 솔루션을 빌드하는 과정을 안내합니다.
 
@@ -28,21 +30,23 @@ Visual Studio for Mac은 .NET Core 응용 프로그램 개발을 위해 필요�
 > * Visual Studio for Mac의 메뉴에서 **도움말 > 문제 보고**를 선택하거나 시작 화면에서 **문제 보고**를 선택하면 버그 보고서를 작성하기 위한 창이 열립니다.
 > * 제안을 하려면 메뉴에서 **도움말 > 제안하기**를 선택하거나 시작 화면에서 **제안 하기**를 선택합니다. 그러면 [Visual Studio for Mac UserVoice 웹 페이지](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac)로 이동됩니다.
 
-## <a name="prerequisites"></a>필수 조건
+<a id="prerequisites" class="xliff"></a>
 
-[.NET Core 및 OpenSSL](https://www.microsoft.com/net/core#macos)
+## 필수 조건
 
 필수 구성 요소에 대한 자세한 내용은 [Mac의 .NET Core에 대한 필수 구성 요소](../../core/macos-prerequisites.md)를 참조하세요.
 
-## <a name="getting-started"></a>시작
+<a id="getting-started" class="xliff"></a>
+
+## 시작
 
 필수 구성 요소와 Visual Studio for Mac을 이미 설치한 경우 이 섹션을 건너뛰고 [라이브러리 빌드](#building-a-library)를 계속 진행합니다. 다음 단계에 따라 필수 구성 요소 및 Visual Studio for Mac을 설치합니다.
 
-1. [.NET Core 및 OpenSSL](https://www.microsoft.com/net/core#macos)을 다운로드하고 설치합니다.
+[Visual Studio for Mac 설치 관리자](https://www.visualstudio.com/vs/visual-studio-mac/)를 다운로드합니다. 설치 관리자를 실행합니다. 사용권 계약을 읽은 다음 동의합니다. 설치하는 동안 플랫폼 간 모바일 앱 개발 기술인 Xamarin을 설치할 기회가 제공됩니다. Xamarin 및 관련된 구성 요소의 설치는 .NET Core 개발에서 선택 사항입니다. Visual Studio for Mac 설치 프로세스에 대한 연습을 진행하려면 [Visual Studio for Mac 소개](https://developer.xamarin.com/guides/cross-platform/visual-studio-mac/)를 참조하세요. 설치가 완료되면 Visual Studio for Mac IDE를 시작합니다.
 
-1. [Visual Studio for Mac 설치 관리자](https://www.visualstudio.com/vs/visual-studio-mac/)를 다운로드합니다. 설치 관리자를 실행합니다. 사용권 계약을 읽은 다음 동의합니다. 설치하는 동안 플랫폼 간 모바일 앱 개발 기술인 Xamarin을 설치할 기회가 제공됩니다. Xamarin 및 관련된 구성 요소의 설치는 .NET Core 개발에서 선택 사항입니다. Visual Studio for Mac 설치 프로세스에 대한 연습을 진행하려면 [Visual Studio for Mac 소개](https://developer.xamarin.com/guides/cross-platform/visual-studio-mac/)를 참조하세요. 설치가 완료되면 Visual Studio for Mac IDE를 시작합니다.
+<a id="building-a-library" class="xliff"></a>
 
-## <a name="building-a-library"></a>라이브러리 빌드
+## 라이브러리 빌드
 
 1. 시작 화면에서 **새 프로젝트**를 선택합니다. **새 프로젝트** 대화 상자의 **다중 플랫폼** 노드에서 **.NET 표준 라이브러리** 템플릿을 선택합니다. **새로 만들기**를 선택합니다.
 
@@ -70,7 +74,9 @@ Visual Studio for Mac은 .NET Core 응용 프로그램 개발을 위해 필요�
 
    ![빌드 성공 메시지를 표시하는 오류 패널의 빌드 출력 창](./media/using-on-mac-vs-full-solution/vsmacfull04.png)
 
-## <a name="creating-a-test-project"></a>테스트 프로젝트 만들기
+<a id="creating-a-test-project" class="xliff"></a>
+
+## 테스트 프로젝트 만들기
 
 단위 테스트는 개발 및 게시 동안 자동화된 소프트웨어 테스트를 제공합니다. 이 자습서에서 사용하는 테스트 프레임워크는 [xUnit](https://xunit.github.io/)입니다.
 
@@ -158,7 +164,9 @@ Visual Studio for Mac은 .NET Core 응용 프로그램 개발을 위해 필요�
 
    ![콘솔 창의 테스트 통과 총 테스트: 4 성공: 4 실패: 0 테스트 실행이 통과되었습니다.](./media/using-on-mac-vs-full-solution/vsmacfull12.png)
 
-## <a name="adding-a-console-app"></a>콘솔 앱 추가
+<a id="adding-a-console-app" class="xliff"></a>
+
+## 콘솔 앱 추가
 
 1. **솔루션** 사이드바에서 `WordCounter` 솔루션을 마우스 오른쪽 단추로 클릭합니다. **.NET Core > 앱** 템플릿에서 템플릿을 선택하여 새 **콘솔 응용 프로그램** 프로젝트를 추가합니다. **새로 만들기**를 선택합니다. 프로젝트 이름을 **WordCounterApp**으로 지정합니다. **만들기**를 선택하여 솔루션에 프로젝트를 만듭니다.
 
@@ -194,7 +202,9 @@ Visual Studio for Mac은 .NET Core 응용 프로그램 개발을 위해 필요�
 
    ![앱 출력에서 검색 단어 개수가 값 999로 변경됨](./media/using-on-mac-vs-full-solution/vsmacfull19.png)
 
-## <a name="next-steps"></a>다음 단계
+<a id="next-steps" class="xliff"></a>
+
+## 다음 단계
 
 * Xamarin 개발자 웹 사이트의 [Visual Studio for Mac 소개](https://developer.xamarin.com/guides/cross-platform/visual-studio-mac/)에서 Visual Studio for Mac의 추가 기능을 알아봅니다.
 * Visual Studio for Mac 기능을 심도 깊게 알아보려면 [Xamarin Studio 둘러보기](https://developer.xamarin.com/guides/cross-platform/xamarin-studio/ide-tour/) 가이드를 참조하세요.

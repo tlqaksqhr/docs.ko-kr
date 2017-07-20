@@ -1,5 +1,5 @@
 ---
-title: "콘솔 응용 프로그램"
+title: "콘솔 응용 프로그램 | Microsoft Docs"
 description: "이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능에 대해 설명합니다."
 keywords: .NET, .NET Core
 author: BillWagner
@@ -10,16 +10,21 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 41e8976e7b133380687a65265fd5ebe9a810a4ff
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: 7e8cc0ed7093a90a51d1b0c50123adb73ca968aa
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/23/2017
 
 ---
 
-# <a name="console-application"></a>콘솔 응용 프로그램
+<a id="console-application" class="xliff"></a>
 
-## <a name="introduction"></a>소개
+# 콘솔 응용 프로그램
+
+<a id="introduction" class="xliff"></a>
+
+## 소개
 이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능에 대해 설명합니다. 다음을 배울 수 있습니다.
 *    .NET Core CLI(명령줄 인터페이스)의 기본 사항
 *    C# 콘솔 응용 프로그램의 구조
@@ -30,9 +35,13 @@ ms.lasthandoff: 03/13/2017
 텍스트 파일을 읽고 콘솔에 해당 텍스트 파일의 내용을 에코하는 응용 프로그램을 빌드해 보겠습니다. 콘솔의 출력은 큰 소리로 읽는 속도에 맞춰집니다. ‘<’ 또는 ‘>’ 키를 눌러 속도를 높이거나 낮출 수 있습니다.
 
 이 자습서에는 많은 기능이 있습니다. 하나씩 빌드해 보겠습니다. 
-## <a name="prerequisites"></a>필수 구성 요소
+<a id="prerequisites" class="xliff"></a>
+
+## 필수 구성 요소
 .NET Core를 실행하도록 컴퓨터에 설정해야 합니다. [.NET Core](https://www.microsoft.com/net/core) 페이지에서 설치 지침을 확인할 수 있습니다. Windows, Linux, macOS 또는 Docker 컨테이너에서 이 응용 프로그램을 실행할 수 있습니다. 선호하는 코드 편집기를 설치해야 합니다. 
-## <a name="create-the-application"></a>응용 프로그램 만들기
+<a id="create-the-application" class="xliff"></a>
+
+## 응용 프로그램 만들기
 첫 번째 단계에서는 새 응용 프로그램을 만듭니다. 명령 프롬프트를 열고 응용 프로그램에 대한 새 디렉터리를 만듭니다. 해당 디렉터리를 현재 디렉터리로 지정합니다. 명령 프롬프트에 명령 `dotnet new console`을 입력합니다. 이렇게 하면 기본 "Hello World" 응용 프로그램에 대한 시작 파일이 만들어집니다.
 
 파일 수정을 시작하기 전에 간단한 Hello World 응용 프로그램을 실행하는 단계를 진행해 보겠습니다. 응용 프로그램을 만든 후에 명령 프롬프트에서 `dotnet restore`를 입력합니다. 이 명령은 NuGet 패키지 복원 프로세스를 실행합니다. NuGet은 .NET 패키지 관리자입니다. 이 명령은 프로젝트에 대한 누락된 종속성 중 하나를 다운로드합니다. 이 프로젝트는 새 프로젝트이므로 어떤 종속성도 없습니다. 따라서 처음 실행하면 .NET Core 프레임워크가 다운로드됩니다. 이 초기 단계 후에 새 종속 패키지를 추가하거나 종속성 버전을 업데이트할 때 `dotnet restore`를 실행하기만 하면 됩니다. 이 프로세스는 프로젝트 디렉터리에 프로젝트 잠금 파일(project.lock.json)도 만듭니다. 이 파일은 프로젝트 종속성을 관리하는 데 도움이 됩니다. 이 파일에는 모든 프로젝트 종속성의 로컬 위치가 포함됩니다. 이 파일을 소스 제어에 추가할 필요가 없습니다. `dotnet restore`를 실행할 때 생성됩니다. 
@@ -52,8 +61,10 @@ using System;
 namespace TeleprompterConsole
 ```
 
-## <a name="reading-and-echoing-the-file"></a>파일 읽기 및 에코
-추가할 첫 번째 기능은 텍스트 파일을 읽고 콘솔에 해당 텍스트를 모두 표시하는 것입니다. 먼저 텍스트 파일을 추가해 보겠습니다. 이 [샘플](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter)에 대한 GitHub 리포지토리의 [sampleQuotes.txt](https://raw.githubusercontent.com/dotnet/docs/master/samples/csharp/getting-started/console-teleprompter/sampleQuotes.txt) 파일을 프로젝트 디렉터리로 복사합니다. 이 파일은 응용 프로그램에 대한 스크립트로 작동합니다.
+<a id="reading-and-echoing-the-file" class="xliff"></a>
+
+## 파일 읽기 및 에코
+추가할 첫 번째 기능은 텍스트 파일을 읽고 콘솔에 해당 텍스트를 모두 표시하는 기능입니다. 먼저 텍스트 파일을 추가해 보겠습니다. 이 [샘플](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter)에 대한 GitHub 리포지토리의 [sampleQuotes.txt](https://raw.githubusercontent.com/dotnet/docs/master/samples/csharp/getting-started/console-teleprompter/sampleQuotes.txt) 파일을 프로젝트 디렉터리로 복사합니다. 이 파일은 응용 프로그램에 대한 스크립트로 작동합니다. 이 항목에 대한 샘플 앱을 다운로드하는 방법에 대한 정보를 원하는 경우 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples) 항목의 지침을 참조하세요.
 
 다음에는 다음 메서드를 Program 클래스에 추가합니다(`Main` 메서드 바로 아래).
 
@@ -98,7 +109,9 @@ foreach (var line in lines)
 
 프로그램을 실행합니다(`dotnet run`을 사용하면 콘솔에 출력되는 모든 줄을 볼 수 있음).  
 
-## <a name="adding-delays-and-formatting-output"></a>지연 추가 및 출력 서식 지정
+<a id="adding-delays-and-formatting-output" class="xliff"></a>
+
+## 지연 추가 및 출력 서식 지정
 결과가 너무 빨리 표시되어 큰 표시로 읽을 수 없습니다. 이제 출력에 지연을 추가해야 합니다. 처음에는 비동기 처리를 가능하게 하는 일부 코어 코드를 빌드합니다. 그러나 이러한 첫 번째 단계는 몇 가지 안티 패턴을 따르게 됩니다. 안티 패턴은 코드를 추가할 때 주석에 표시되며 코드는 이후 단계에서 업데이트됩니다.
 
 이 섹션에는 두 단계가 있습니다. 먼저 전체 줄이 아니라 단일 단어를 반환하는 반복기 메서드를 업데이트하게 됩니다. 이 작업은 다음과 같이 수정하면 수행됩니다. `yield return line;` 문을 다음 코드로 바꿉니다.
@@ -151,7 +164,9 @@ if (lineLength > 70)
  
 샘플을 실행하면 미리 구성된 속도로 크게 읽을 수 있습니다.
 
-## <a name="async-tasks"></a>비동기 작업
+<a id="async-tasks" class="xliff"></a>
+
+## 비동기 작업
 이 마지막 단계에서는 텍스트 표시 속도를 높이거나 낮추려는 경우 사용자로부터 입력을 읽는 작업을 실행하면서 다른 작업에서 비동기적으로 출력을 쓰는 코드를 추가합니다. 이 과정은 몇 가지 단계로 진행되며 마지막에 필요한 모든 업데이트가 수행됩니다.
 첫 번째 단계는 지금까지 파일을 읽고 표시하기 위해 만든 코드를 나타내는 비동기 @System.Threading.Tasks.Task 반환 메서드를 만드는 것입니다.
 
@@ -172,7 +187,7 @@ private static async Task ShowTeleprompter()
 }
 ```
 
-두 가지가 변경된 것을 알 수 있습니다. 첫째, 이 버전은 메서드 본문에서 @System.Threading.Tasks.Task.Wait를 호출하여 작업이 완료되기를 동기식으로 대기하지 않고, `await` 키워드를 사용합니다. 이 작업을 수행하기 위해 메서드 시그니처에 `async` 한정자를 추가해야 합니다. 이 메서드는 `Task`를 반환합니다. `Task` 개체를 반환하는 Return 문은 없습니다. 대신, `Task` 개체는 `await` 연산자를 사용할 때 컴파일러가 생성하는 코드에 의해 만들어집니다. `await`에 도달하면 이 메서드가 반환되는 것을 상상할 수 있습니다. 반환된 `Task`는 작업이 완료되지 않았음을 나타냅니다.
+두 가지가 변경된 것을 알 수 있습니다. 첫째, 이 버전은 메서드 본문에서 @System.Threading.Tasks.Task.Wait 를 호출하여 작업이 완료되기를 동기식으로 대기하지 않고, `await` 키워드를 사용합니다. 이 작업을 수행하기 위해 메서드 시그니처에 `async` 한정자를 추가해야 합니다. 이 메서드는 `Task`를 반환합니다. `Task` 개체를 반환하는 Return 문은 없습니다. 대신, `Task` 개체는 `await` 연산자를 사용할 때 컴파일러가 생성하는 코드에 의해 만들어집니다. `await`에 도달하면 이 메서드가 반환되는 것을 상상할 수 있습니다. 반환된 `Task`는 작업이 완료되지 않았음을 나타냅니다.
 이 메서드는 대기 중인 작업이 완료되면 다시 시작됩니다. 실행되어 완료되면 반환된 `Task`는 완료되었음을 나타냅니다.
 호출하는 코드는 반환된 `Task`를 모니터링하여 완료되었는지 확인합니다.
 
@@ -208,7 +223,7 @@ private static async Task GetInput()
 }
 ```
 
-이 메서드는 콘솔에서 키를 읽고 사용자가 ‘<’ 또는 ‘>’를 누를 때 지연을 나타내는 지역 변수를 수정하는 @System.Action 대리자를 나타내는 람다 식을 만듭니다. 이 메서드는 @System.Console.ReadKey를 사용하여 차단한 후 사용자가 키를 누를 때까지 기다립니다.
+이 메서드는 콘솔에서 키를 읽고 사용자가 ‘<’ 또는 ‘>’를 누를 때 지연을 나타내는 지역 변수를 수정하는 @System.Action 대리자를 나타내는 람다 식을 만듭니다. 이 메서드는 @System.Console.ReadKey 를 사용하여 차단한 후 사용자가 키를 누를 때까지 기다립니다.
 
 이 기능을 완료하려면 이러한 두 작업(`GetInput` 및 `ShowTeleprompter`)을 시작하고 이러한 두 작업 간에 공유 데이터를 관리하는 새 `async Task` 반환 메서드를 만들어야 합니다.
  
@@ -311,7 +326,9 @@ public void SetDone()
 }
 ```
 
-## <a name="conclusion"></a>결론
+<a id="conclusion" class="xliff"></a>
+
+## 결론
 이 자습서에서는 콘솔 응용 프로그램 사용과 관련된 다양한 C# 언어 및 .NET Core 라이브러리 기능을 살펴보았습니다.
 이 지식을 토대로 해당 언어 및 여기서 소개된 클래스에 대해 좀 더 자세히 알아볼 수 있습니다. 지금까지 파일 및 콘솔 I/O 기본 사항, 작업 기반 비동기 프로그래밍 모델의 차단 및 비차단 사용, C# 언어 둘러보기, C# 프로그램이 구성되는 방식, .NET Core 명령줄 인터페이스 및 도구에 대해 살펴보았습니다.
  

@@ -59,7 +59,7 @@ CLR(공용 언어 런타임)을 호스트하는 모든 응용 프로그램에서
   
 2.  다음과 같은 [\<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) 요소를 응용 프로그램 구성 파일에 추가합니다.  
   
-    ```  
+    ```xml  
     <configuration>  
       <startup>  
         <supportedRuntime version="<version>"/>  

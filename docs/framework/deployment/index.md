@@ -26,11 +26,11 @@ caps.latest.revision: 56
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3dbadeec14ce9c023af39ae4ff95d0183826e7c1
-ms.openlocfilehash: eb0f0636abb39eabb387388fcdd39df8aca88c34
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
+ms.openlocfilehash: 46f524a8c2ee2d65d5c756a101a5c26c5919e165
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 06/02/2017
 
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>.NET Framework 및 응용 프로그램 배포
@@ -61,9 +61,9 @@ ms.lasthandoff: 05/02/2017
   
 -   클라이언트 응용 프로그램과 함께 .NET Framework 배포(개발자용):  
   
-    -   설치 및 배포 프로젝트에 [InstallShield 사용](../../../docs/framework/deployment/deployment-guide-for-developers.md#installshield)  
+    -   설치 및 배포 프로젝트에 [InstallShield 사용](../../../docs/framework/deployment/deployment-guide-for-developers.md#installshield-deployment)  
   
-    -   [Visual Studio ClickOnce 응용 프로그램 사용](../../../docs/framework/deployment/deployment-guide-for-developers.md#clickonce)  
+    -   [Visual Studio ClickOnce 응용 프로그램 사용](../../../docs/framework/deployment/deployment-guide-for-developers.md#clickonce-deployment)  
   
     -   [WiX 설치 패키지 만들기](../../../docs/framework/deployment/deployment-guide-for-developers.md#wix)  
   
@@ -171,12 +171,12 @@ ms.lasthandoff: 05/02/2017
 |제목|설명|  
 |-----------|-----------------|  
 |[런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|공용 언어 런타임에서 바인딩 요청을 충족하는 데 사용할 어셈블리를 확인하는 방법을 설명합니다.|  
-|[최선의 어셈블리 로드 방법](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|<xref:System.InvalidCastException>, <xref:System.MissingMethodException> 및 기타 오류를 발생시킬 수 있는 유형 ID의 문제를 방지하는 방법을 설명합니다.|  
+|[최선의 어셈블리 로드 방법](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|<xref:System.InvalidCastException>, <xref:System.MissingMethodException> 및 다른 오류를 발생시킬 수 있는 형식 ID 문제를 방지하는 방법을 설명합니다.|  
 |[.NET Framework 4.5를 설치하는 동안 시스템 다시 시작 줄이기](../../../docs/framework/deployment/reducing-system-restarts.md)|최대한 다시 시작을 방지하는 다시 시작 관리자 및 .NET Framework를 설치하는 응용 프로그램이 다시 시작 관리자를 활용할 수 있는 방법을 설명합니다.|  
 |[관리자를 위한 배포 가이드](../../../docs/framework/deployment/guide-for-administrators.md)|시스템 관리자가 SCCM(System Center Configuration Manager)을 사용하여 .NET Framework 및 해당 시스템 종속성을 네트워크 전체에 배포할 수 있는 방법을 설명합니다.|  
 |[개발자를 위한 배포 가이드](../../../docs/framework/deployment/deployment-guide-for-developers.md)|개발자가 응용 프로그램과 함께 .NET Framework를 사용자 컴퓨터에 설치할 수 있는 방법을 설명합니다.|  
 |[응용 프로그램, 서비스 및 구성 요소 배포](https://docs.microsoft.com/visualstudio/deployment/deploying-applications-services-and-components)|ClickOnce 및 Windows Installer 기술을 사용하여 응용 프로그램을 게시하기 위한 지침을 포함하여 Visual Studio의 배포 옵션을 설명합니다.| 
-|[ClickOnce 응용 프로그램 게시](http://msdn.microsoft.com/library/eb6dfe79-f54c-4331-8e36-073688e70973)|Windows Forms 응용 프로그램을 패키징하고 ClickOnce로 네트워크의 클라이언트 컴퓨터에 배포하는 방법을 설명합니다.|  
+|[ClickOnce 응용 프로그램 게시](/visualstudio/deployment/publishing-clickonce-applications)|Windows Forms 응용 프로그램을 패키징하고 ClickOnce로 네트워크의 클라이언트 컴퓨터에 배포하는 방법을 설명합니다.|  
 |[리소스 패키징 및 배포](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)|.NET Framework에서 리소스를 패키징 및 배포하는 데 사용하는 허브 및 스포크 모델을 설명합니다. 리소스 명명 규칙, 대체(fallback) 프로세스 및 패키징 대안을 설명합니다.|  
 |[Interop 응용 프로그램 배포](../../../docs/framework/interop/deploying-an-interop-application.md)|일반적으로 .NET Framework 클라이언트 어셈블리, 고유한 COM 형식 라이브러리를 나타내는 하나 이상의 interop 어셈블리 및 하나 이상의 등록된 COM 구성 요소를 포함하는 interop 응용 프로그램을 제공하고 설치하는 방법을 설명합니다.|  
 |[방법: .NET Framework 4.5 설치 관리자에서 진행률 가져오기](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|설치 진행 상황을 자체적으로 표시하면서 .NET Framework 설치 프로세스를 자동으로 시작하고 추적하는 방법을 설명합니다.|  

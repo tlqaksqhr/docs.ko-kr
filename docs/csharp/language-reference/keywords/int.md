@@ -1,6 +1,6 @@
 ---
 title: "int(C# 참조) | Microsoft 문서"
-ms.date: 2015-07-20
+ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -30,40 +30,56 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 910b23cb0048d5d9f21c9c32e8f34219a425622a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
+ms.openlocfilehash: 48283ce80bbbff4182362ea9ae6258d31e175e0d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="int-c-reference"></a>int(C# 참조)
-`int` 키워드는 다음 표에 나와 있는 크기와 범위에 따라 값을 저장하는 정수 형식을 나타냅니다.  
+
+`int`는 다음 표에 나와 있는 크기와 범위에 따라 값을 저장하는 정수 형식을 나타냅니다.  
   
 |형식|범위|크기|.NET Framework 형식|기본값|  
 |----------|-----------|----------|-------------------------|-------------------|  
 |`int`|–2,147,483,648 ~ 2,147,483,647|부호 있는 32비트 정수|<xref:System.Int32?displayProperty=fullName>|0|  
   
 ## <a name="literals"></a>리터럴  
- 다음 예제와 같이 `int` 형식의 변수를 선언하고 초기화할 수 있습니다.  
+ 
+10진수 리터럴, 16진수 리터럴 또는 (C# 7부터) 이진 리터럴을 할당하여 `int` 변수를 선언하고 초기화할 수 있습니다.  정수 리터럴이 `int`의 범위를 벗어난 경우(즉, <xref:System.Int32.MinValue?displayProperty=fullName>보다 작거나 <xref:System.Int32.MaxValue?displayProperty=fullName>보다 큰 경우) 컴파일 오류가 발생합니다. 
+
+다음 예제에서는 10진수, 16진수 및 이진 리터럴로 표현된 16,342와 같은 정수가 `int` 값에 할당됩니다.  
   
-```  
-  
-int i = 123;  
-```  
-  
- 정수 리터럴에 접미사가 없는 경우 해당 형식은 `int`, [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md) 등 값이 표현될 수 있는 형식의 첫 번째입니다. 이 예제에서는 `int` 형식입니다.  
+[!code-cs[int](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#Int)]  
+
+> [!NOTE] 
+> `0x` 또는 `0X` 접두사를 사용하여 16진수 리터럴을 나타내고, `0b` 또는 `0B` 접두사를 사용하여 이진 리터럴을 나타냅니다. 10진수 리터럴에는 접두사가 없습니다. 
+
+C# 7부터는 다음 예제와 같이 밑줄 문자 `_`를 자릿수 구분 기호로 사용하여 가독성을 향상할 수도 있습니다.
+
+[!code-cs[int](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#IntS)]  
+ 
+ `int` 형식을 나타내는 접미사는 없어도 형식을 나타내는 접미사가 정수 리터럴에 포함되어 있을 수도 있습니다. 정수 리터럴에 접미사가 없는 경우 해당 형식은 값이 표현될 수 있는 다음 형식 중 첫 번째 형식입니다. 
+
+1. `int`
+2. [uint](../../../csharp/language-reference/keywords/uint.md)
+3. [long](../../../csharp/language-reference/keywords/long.md)
+4. [ulong](../../../csharp/language-reference/keywords/ulong.md) 
+ 
+이 예제에서 리터럴 90946은 `int` 형식입니다.
   
 ## <a name="conversions"></a>변환  
  `int`에서 [long](../../../csharp/language-reference/keywords/long.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) 또는 [decimal](../../../csharp/language-reference/keywords/decimal.md)로 미리 정의된 암시적 변환이 있습니다. 예:  
   
-```  
+```csharp  
 // '123' is an int, so an implicit conversion takes place here:  
 float f = 123;  
 ```  
   
  [sbyte](../../../csharp/language-reference/keywords/sbyte.md), [byte](../../../csharp/language-reference/keywords/byte.md), [short](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md) 또는 [char](../../../csharp/language-reference/keywords/char.md)에서 `int`로 미리 정의된 암시적 변환이 있습니다. 예를 들어 다음 대입문은 캐스트 없이 컴파일 오류를 생성합니다.  
   
-```  
+```csharp  
 long aLong = 22;  
 int i1 = aLong;       // Error: no implicit conversion from long.  
 int i2 = (int)aLong;  // OK: explicit conversion.  
@@ -71,9 +87,8 @@ int i2 = (int)aLong;  // OK: explicit conversion.
   
  부동 소수점 형식에서 `int`로의 암시적 변환은 없습니다. 예를 들어 명시적 캐스트를 사용하지 않는 경우 다음 문은 컴파일러 오류를 일으킵니다.  
   
-```  
-  
-      int x = 3.0;         // Error: no implicit conversion from double.  
+```csharp  
+int x = 3.0;         // Error: no implicit conversion from double.  
 int y = (int)3.0;    // OK: explicit conversion.  
 ```  
   

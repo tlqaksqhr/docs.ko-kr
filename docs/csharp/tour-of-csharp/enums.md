@@ -1,6 +1,6 @@
 ---
-title: "C# 열거형 | C# 언어 둘러보기"
-description: "C의 열거형, 명명된 개별 상수에 대해 자세히 알아보기#"
+title: "C# 열거형 - C# 언어 둘러보기 | Microsoft Docs"
+description: "C#의 열거형, 명명된 개별 상수에 대해 자세히 알아보기"
 keywords: ".NET, c샵"
 author: BillWagner
 ms.author: wiwagn
@@ -10,14 +10,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 7faba1cc-6ea9-4a19-adb9-0335e4b132e5
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 677fd5fb931cca704fa6a0550a229ebb2fccdd7a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
+ms.openlocfilehash: b317f399fcbb5c1e91976defba3532bf5533b539
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/23/2017
 
 ---
     
-# <a name="enums"></a>열거형
+<a id="enums" class="xliff"></a>
+
+# 열거형
 
 ***열거형 형식***은 명명된 상수 집합을 갖는 고유 값 형식입니다. 개별 값 집합을 가질 수 있는 형식을 정의해야 할 경우 열거형을 정의합니다. 정수 값 형식 중 하나를 기본 저장소로 사용합니다. 또한 개별 값에 대해 의미 체계 의미를 제공합니다.
 

@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: c6cfc54c2dbd3e14d874d7684fdc75a972260cc3
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/22/2017
 
 ---
 # <a name="checked-c-compiler-options"></a>/checked(C# 컴파일러 옵션)
@@ -42,7 +43,7 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 /checked[+ | -]  
 ```  
   
@@ -63,12 +64,12 @@ ms.lasthandoff: 03/13/2017
   
 4.  **산술 연산 오버플로/언더플로 확인** 속성을 수정합니다.  
   
- 이 컴파일러 옵션에 프로그래밍 방식으로 액세스하려면 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>를 참조하세요.  
+ 프로그래밍 방식으로 이 컴파일러 옵션에 액세스하려면 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>를 참조하세요.  
   
 ## <a name="example"></a>예제  
  다음 명령은 `t2.cs`를 컴파일합니다. 명령에서 `/checked`를 사용하면 `checked` 또는 `unchecked` 키워드의 범위에 없고 데이터 형식 범위를 벗어난 값을 생성하는 파일의 정수 산술 문이 런타임에 예외를 일으키도록 지정합니다.  
   
-```  
+```console  
 csc t2.cs /checked  
 ```  
   
