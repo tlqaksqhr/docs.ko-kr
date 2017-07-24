@@ -46,7 +46,7 @@ Visual C#에는 Office API 개체에 간편하게 액세스할 수 있는 기능
   
  이 연습을 완료하려면 Microsoft Office Excel 2007 및 Microsoft Office Word 2007 이상 버전이 컴퓨터에 설치되어 있어야 합니다.  
   
- [!INCLUDE[windowsver](../../../csharp/programming-guide/interop/includes/windowsver_md.md)] 이전 버전의 운영 체제를 사용 중이라면 [!INCLUDE[dnprdnlong](../../../csharp/programming-guide/events/includes/dnprdnlong_md.md)]이 설치되어 있는지 확인합니다.  
+ [!INCLUDE[windowsver](../../../csharp/programming-guide/interop/includes/windowsver_md.md)]이전 버전의 운영 체제를 사용 중이라면 [!INCLUDE[dnprdnlong](../../../csharp/programming-guide/events/includes/dnprdnlong_md.md)]이 설치되어 있는지 확인합니다.  
   
 [!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
   
