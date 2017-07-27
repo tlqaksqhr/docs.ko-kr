@@ -1,5 +1,5 @@
 ---
-title: "방법: LINQ 쿼리와 정규식 결합(C#) | Microsoft 문서"
+title: "방법: LINQ 쿼리와 정규식 결합(C#) | Microsoft Docs"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,15 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 51cce0d7ffd4806365600ee93d57806af96f08a8
+ms.translationtype: HT
+ms.sourcegitcommit: 1cd1761d630f61a58f29d88e9342551d48cbc6a8
+ms.openlocfilehash: 9ba49d25f9e31fc0fcceff5f213a6df703fd41e2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/26/2017
 
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>방법: LINQ 쿼리와 정규식 결합(C#)
-이 예제에서는 <xref:System.Text.RegularExpressions.Regex> 클래스를 사용하여 텍스트 문자열에서 더 복잡한 일치를 수행하는 정규식을 만드는 방법을 보여 줍니다. LINQ 쿼리를 사용하면 손쉽게 정규식을 통해 검색하려는 파일을 정확히 필터링하고 결과를 구성할 수 있습니다.  
+이 예제에서는 <xref:System.Text.RegularExpressions.Regex> 클래스를 사용하여 더 복잡한 텍스트 문자열 일치를 찾는 정규식을 작성하는 방법을 보여 줍니다. LINQ 쿼리를 사용하면 손쉽게 정규식을 통해 검색하려는 파일을 정확히 필터링하고 결과를 구성할 수 있습니다.  
   
 ## <a name="example"></a>예제  
   
@@ -110,7 +110,7 @@ class QueryWithRegEx
 }  
 ```  
   
- `RegEx` 검색에서 반환된 <xref:System.Text.RegularExpressions.MatchCollection> 개체를 쿼리할 수도 있습니다. 이 예제에서는 각 일치 항목의 값만 결과로 생성됩니다. 그러나 LINQ를 사용하여 해당 컬렉션에 대한 모든 종류의 필터링, 정렬 및 그룹화를 수행할 수도 있습니다. <xref:System.Text.RegularExpressions.MatchCollection>은 제네릭이 아닌 <xref:System.Collections.IEnumerable> 컬렉션이므로 쿼리에서 범위 변수의 형식을 명시적으로 설정해야 합니다.  
+ `RegEx` 검색에서 반환되는 <xref:System.Text.RegularExpressions.MatchCollection> 개체를 쿼리할 수도 있습니다. 이 예제에서는 각 일치 항목의 값만 결과로 생성됩니다. 그러나 LINQ를 사용하여 해당 컬렉션에 대한 모든 종류의 필터링, 정렬 및 그룹화를 수행할 수도 있습니다. <xref:System.Text.RegularExpressions.MatchCollection>은 제네릭이 아닌 <xref:System.Collections.IEnumerable> 컬렉션이므로 쿼리에 범위 변수의 형식을 명시적으로 기술해야 합니다.  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
  System.Core.dll에 대한 참조와 System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 사용하여 .NET Framework 버전 3.5 이상을 대상으로 하는 프로젝트를 만듭니다.  
