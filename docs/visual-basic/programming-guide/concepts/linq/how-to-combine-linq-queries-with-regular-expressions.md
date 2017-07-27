@@ -1,5 +1,5 @@
 ---
-title: "방법: LINQ 쿼리와 정규식 (Visual Basic)를 결합 합니다. | Microsoft 문서"
+title: "방법: LINQ 쿼리와 정규식 결합(Visual Basic) | Microsoft Docs"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,15 +20,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 283b5e844c91da22aadd7bcf88ea327ccc080be7
+ms.translationtype: MT
+ms.sourcegitcommit: 1cd1761d630f61a58f29d88e9342551d48cbc6a8
+ms.openlocfilehash: d9d63a729a31394b96a78479bc115125a1a7baeb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/26/2017
 
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>방법: LINQ 쿼리와 정규식 (Visual Basic)를 결합 합니다.
-사용 하는 방법을 보여 주는이 예제는 <xref:System.Text.RegularExpressions.Regex>클래스를 좀 더 복잡 한 텍스트 문자열에서 일치 하는 정규식을 만드는.</xref:System.Text.RegularExpressions.Regex> LINQ 쿼리를 사용 하면는 정규식으로 검색 하 고 결과 구체화 하는 것이 원하는 파일에 대 한 필터를 쉽게 합니다.  
+# <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>방법: LINQ 쿼리와 정규식 결합(Visual Basic)
+이 예제에서는 <xref:System.Text.RegularExpressions.Regex> 클래스를 사용하여 더 복잡한 텍스트 문자열 일치를 찾는 정규식을 작성하는 방법을 보여 줍니다. LINQ 쿼리를 사용하면 손쉽게 정규식을 통해 검색하려는 파일을 정확히 필터링하고 결과를 구성할 수 있습니다.  
   
 ## <a name="example"></a>예제  
   
@@ -97,12 +97,12 @@ Class LinqRegExVB
 End Class  
 ```  
   
- 도 쿼리할 수 있는 참고는 <xref:System.Text.RegularExpressions.MatchCollection>에서 반환 되는 개체는 `RegEx` 검색.</xref:System.Text.RegularExpressions.MatchCollection> 이 예제의 결과에서 일치 하는 문자열의 값만 생성 됩니다. 그러나 LINQ를 사용 하 여 모든 종류의 필터링, 정렬 및 해당 컬렉션에서 그룹화를 수행할 수 이기도 합니다. 때문에 <xref:System.Text.RegularExpressions.MatchCollection>제네릭이 아닌 <xref:System.Collections.IEnumerable>쿼리에서 범위 변수의 형식을 명시적으로 지정 해야 하는 컬렉션.</xref:System.Collections.IEnumerable> </xref:System.Text.RegularExpressions.MatchCollection>  
+ `RegEx` 검색에서 반환되는 <xref:System.Text.RegularExpressions.MatchCollection> 개체를 쿼리할 수도 있습니다. 이 예제에서는 각 일치 항목의 값만 결과로 생성됩니다. 그러나 LINQ를 사용하여 해당 컬렉션에 대한 모든 종류의 필터링, 정렬 및 그룹화를 수행할 수도 있습니다. <xref:System.Text.RegularExpressions.MatchCollection>은 제네릭이 아닌 <xref:System.Collections.IEnumerable> 컬렉션이므로 쿼리에 범위 변수의 형식을 명시적으로 기술해야 합니다.  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- .NET Framework 버전 3.5 이상 System.Core.dll에 대 한 참조를 대상으로 하는 프로젝트 만들기 및 `Imports` 는 System.Linq 네임 스페이스에 대 한 정보입니다.  
+ System.Core.dll에 대한 참조와 System.Linq 네임스페이스에 대한 `Imports` 문을 사용하여 .NET Framework 버전 3.5 이상을 대상으로 하는 프로젝트를 만듭니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ 및 파일 디렉터리 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+ [LINQ 및 문자열(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
+ [LINQ 및 파일 디렉터리(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
 

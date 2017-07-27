@@ -1,5 +1,5 @@
 ---
-title: "방법: 파일 또는 폴더 만들기(C# 프로그래밍 가이드) | Microsoft 문서"
+title: "방법: 파일 또는 폴더 만들기(C# 프로그래밍 가이드) | Microsoft Docs"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bba53c8d175d95aa3b89ba458517d439a8d2bb11
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: 95b35941e18d22e2d484017262d9adbe8a081a8a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/26/2017
 
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>방법: 파일 또는 폴더 만들기(C# 프로그래밍 가이드)
@@ -42,7 +43,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="example"></a>예제  
  [!code-cs[csFilesandFolders#10](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-create-a-file-or-folder_1.cs)]  
   
- 폴더가 이미 있는 경우 <xref:System.IO.Directory.CreateDirectory%2A>는 아무 작업도 수행하지 않으며 예외가 throw되지 않습니다. 그러나 <xref:System.IO.File.Create%2A?displayProperty=fullName>는 기존 파일을 새 파일로 바꿉니다. 이 예제에서는 `if`-`else` 문을 사용하여 기존 파일이 바뀌지 않도록 합니다.  
+ 폴더가 이미 있으면 <xref:System.IO.Directory.CreateDirectory%2A>는 아무 작업도 수행하지 않으며 예외가 throw되지 않습니다. 그러나 <xref:System.IO.File.Create%2A?displayProperty=fullName>는 기존 파일을 새 파일로 바꿉니다. 이 예제에서는 `if`-`else` 문을 사용하여 기존 파일이 바뀌지 않도록 합니다.  
   
  예제에서 다음을 변경하여 특정 이름의 파일이 이미 있는지 여부에 따라 다른 결과를 지정할 수 있습니다. 파일이 없는 경우 코드에서 파일을 만듭니다. 파일이 있는 경우 코드에서 해당 파일에 데이터를 추가합니다.  
   
@@ -54,7 +55,6 @@ ms.lasthandoff: 03/13/2017
   
     // Replace that line with the following assignment.  
     string fileName = "MyNewFile.txt";  
-  
     ```  
   
 -   다음 코드를 사용하여 `if`-`else` 문을 `using` 문으로 바꿉니다.  
@@ -67,7 +67,6 @@ ms.lasthandoff: 03/13/2017
             fs.WriteByte(i);  
         }  
     }  
-  
     ```  
   
  예제를 여러 번 실행하여 매번 파일에 데이터가 추가되는지 확인합니다.  
@@ -78,20 +77,21 @@ ms.lasthandoff: 03/13/2017
   
 -   폴더 이름 형식이 잘못된 경우. 예를 들어 잘못된 문자를 포함하거나 공백만으로 이루어져 있습니다(<xref:System.ArgumentException> 클래스). <xref:System.IO.Path> 클래스를 사용하여 유효한 경로 이름을 만듭니다.  
   
--   만들 폴더의 부모 폴더가 읽기 전용인 경우(<xref:System.IO.IOException> 클래스)  
+-   만들 폴더의 부모 폴더가 읽기 전용입니다(<xref:System.IO.IOException> 클래스).  
   
--   폴더 이름이 `null`인 경우(<xref:System.ArgumentNullException> 클래스)  
+-   폴더 이름이 `null`입니다(<xref:System.ArgumentNullException> 클래스).  
   
--   폴더 이름이 너무 긴 경우(<xref:System.IO.PathTooLongException> 클래스)  
+-   폴더 이름이 너무 깁니다(<xref:System.IO.PathTooLongException> 클래스).  
   
--   폴더 이름이 콜론 ":"으로만 이루어진 경우(<xref:System.IO.PathTooLongException> 클래스)  
+-   폴더 이름이 콜론(“:”)뿐입니다(<xref:System.IO.PathTooLongException> 클래스).  
   
 ## <a name="net-framework-security"></a>.NET Framework 보안  
- 부분 신뢰 상황에서는 <xref:System.Security.SecurityException> 클래스 인스턴스가 throw될 수 있습니다.  
+ 부분 신뢰 상황에서는 <xref:System.Security.SecurityException> 클래스의 인스턴스가 throw될 수 있습니다.  
   
- 폴더를 만들 수 있는 권한이 없는 경우 예제에서 <xref:System.UnauthorizedAccessException> 클래스 인스턴스가 throw됩니다.  
+ 폴더를 만들 수 있는 권한이 없는 경우 이 예제에서는 <xref:System.UnauthorizedAccessException> 클래스의 인스턴스가 throw됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.IO?displayProperty=fullName>   
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
  [파일 시스템 및 레지스트리(C# 프로그래밍 가이드)](../../../csharp/programming-guide/file-system/index.md)
+
