@@ -1,5 +1,5 @@
 ---
-title: "XML 리터럴(Visual Basic) | Microsoft Docs"
+title: "XML 리터럴(Visual Basic)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.reviewer: 
@@ -34,21 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 7398d02ddd73576fb502a10559891127307b96c0
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9182402167c64d6683670ae240cd0dd58ee9d1ef
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="xml-literals-visual-basic" class="xliff"></a>
-
-# XML 리터럴(Visual Basic)
+# <a name="xml-literals-visual-basic"></a>XML 리터럴(Visual Basic)
 이 섹션의 항목에서는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]의 XML 리터럴 구문을 설명합니다. XML 리터럴 구문을 사용하여 코드에서 직접 XML을 통합할 수 있습니다.  
   
-<a id="in-this-section" class="xliff"></a>
-
-## 단원 내용  
+## <a name="in-this-section"></a>단원 내용  
   
 |항목|설명|  
 |-----------|-----------------|  
@@ -58,7 +54,6 @@ ms.lasthandoff: 05/26/2017
 |[XML 주석 리터럴](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)|<xref:System.Xml.Linq.XComment> 개체를 나타내는 리터럴 구문을 설명합니다.|  
 |[XML 처리 명령 리터럴](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)|<xref:System.Xml.Linq.XProcessingInstruction> 개체를 나타내는 리터럴 구문을 설명합니다.|  
   
-<a id="see-also" class="xliff"></a>
-
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
+

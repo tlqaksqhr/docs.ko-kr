@@ -1,5 +1,5 @@
 ---
-title: "Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic) | Microsoft Docs"
+title: "Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,16 +20,14 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 7efef9e445d542e4575c94af78179316bf628aa1
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 87f089a6de77dc5d4085b12f68b0511ec22b3f63
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="asynchronous-programming-with-async-and-await-visual-basic" class="xliff"></a>
-
-# Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)
+# <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)
 비동기 프로그래밍을 사용하여 성능 병목 현상을 방지하고 응용 프로그램의 전체적인 응답성을 향상할 수 있습니다. 그러나 비동기 응용 프로그램을 쓰는 일반적인 기술이 복잡하여 해당 응용 프로그램을 쓰고, 디버깅하고, 유지 관리하기 어려울 수 있습니다.  
   
  Visual Studio 2012에는 Windows 런타임 뿐 아니라 .NET Framework 4.5 이상의 비동기 지원을 활용하는 간단한 비동기 프로그래밍 접근 방법이 도입되었습니다. 컴파일러는 개발자가 하던 어려운 작업을 수행하고, 응용 프로그램은 동기 코드와 비슷한 논리 구조를 유지합니다. 따라서 약간의 노력만으로도 비동기 프로그래밍의 모든 장점을 누릴 수 있습니다.  
@@ -333,9 +331,7 @@ End Class
 ' Length of the downloaded string: 41763.  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Await 연산자](../../../../visual-basic/language-reference/operators/await-operator.md)   
  [비동기](../../../../visual-basic/language-reference/modifiers/async.md)
 

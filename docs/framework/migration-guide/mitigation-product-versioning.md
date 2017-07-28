@@ -1,5 +1,5 @@
 ---
-title: "완화: 제품 버전 관리 | Microsoft 문서"
+title: "완화: 제품 버전 관리"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,11 +14,11 @@ caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: a6bf9656dee0e6074a8341997abb0e73dc3666f5
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0c69eaefde812d8910ebfc329765d0571701da25
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mitigation-product-versioning"></a>완화: 제품 버전 관리
@@ -52,3 +52,4 @@ ms.lasthandoff: 05/22/2017
 ## <a name="see-also"></a>참고 항목  
  [런타임 변경 내용](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
  
+

@@ -1,5 +1,5 @@
 ---
-title: "키워드(Visual Basic) | Microsoft Docs"
+title: "키워드(Visual Basic)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.suite: 
@@ -35,21 +35,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 5474dd8cf57253a7783a272638081b0439483306
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6997ab8d05e2061a0f42ab86d6a7d7fb74b634fe
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="keywords-visual-basic" class="xliff"></a>
-
-# 키워드(Visual Basic)
+# <a name="keywords-visual-basic"></a>키워드(Visual Basic)
 다음 표에는 모든 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 언어 키워드가 나와 있습니다.  
   
-<a id="reserved-keywords" class="xliff"></a>
-
-## 예약 키워드  
+## <a name="reserved-keywords"></a>예약 키워드  
  다음 키워드는 *예약*되어 있습니다. 즉, 이러한 키워드를 변수 또는 프로시저와 같은 프로그래밍 요소의 이름으로 사용할 수 없습니다. 이름을 대괄호(`[``]`)로 묶으면 이 제한을 무시할 수 있습니다. 자세한 내용은 [선언 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)에서 "이스케이프 이름"을 참조하세요.  
   
 > [!NOTE]
@@ -108,9 +104,7 @@ ms.lasthandoff: 05/26/2017
 > [!NOTE]
 >  `EndIf`, `GoSub`, `Variant` 및 `Wend`는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서 더 이상 사용되지 않더라도 예약 키워드로 유지됩니다. `Let` 키워드의 의미가 변경되었습니다. `Let`은 이제 LINQ 쿼리에서 사용됩니다. 자세한 내용은 [Let 절](../../../visual-basic/language-reference/queries/let-clause.md)을 참조하세요.  
   
-<a id="unreserved-keywords" class="xliff"></a>
-
-## 예약되지 않은 키워드  
+## <a name="unreserved-keywords"></a>예약되지 않은 키워드  
  다음 키워드는 예약되어 있지 않습니다. 즉, 이러한 키워드를 프로그래밍 요소의 이름으로 사용할 수 있습니다. 하지만 이렇게 하면 코드를 읽기 힘들어 사소한 오류를 찾기 어려울 수 있으므로 권장하지 않습니다.  
   
 |||||  
@@ -126,9 +120,7 @@ ms.lasthandoff: 05/26/2017
 |[Until](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[Where](../../../visual-basic/language-reference/queries/where-clause.md)|[Yield](../../../visual-basic/language-reference/statements/yield-statement.md)|[#ExternalSource](../../../visual-basic/language-reference/directives/externalsource-directive.md)|  
 |[#Region](../../../visual-basic/language-reference/directives/region-directive.md)||||  
   
-<a id="related-topics" class="xliff"></a>
-
-## 관련 항목  
+## <a name="related-topics"></a>관련 항목  
   
 |제목|설명|  
 |-----------|-----------------|  
@@ -151,8 +143,6 @@ ms.lasthandoff: 05/26/2017
 |[레지스트리 요약](../../../visual-basic/language-reference/keywords/registry-summary.md)|프로그램 설정을 읽고, 저장 및 삭제하는 데 사용되는 함수를 나열합니다.|  
 |[문자열 조작 요약](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)|문자열을 조작하는 데 사용되는 함수를 나열합니다.|  
   
-<a id="see-also" class="xliff"></a>
-
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Visual Basic 런타임 라이브러리 멤버](../../../visual-basic/language-reference/runtime-library-members.md)
 

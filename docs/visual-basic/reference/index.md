@@ -1,5 +1,5 @@
 ---
-title: "참조(Visual Basic) | Microsoft Docs"
+title: "참조(Visual Basic)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: c730caa8b3beaa3e26e63b324a5394a4a0c46d64
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4c341ec68a12019814d0185cab9b89ad5928d171
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reference-visual-basic"></a>참조(Visual Basic)
@@ -48,7 +48,7 @@ ms.lasthandoff: 05/26/2017
  [.NET Framework 참조 정보](../../visual-basic/reference/net-framework-reference-information.md)  
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 클래스 라이브러리 사용에 대한 정보의 링크를 제공합니다.  
   
- [Visual Basic 언어 사양](../../visual-basic/reference/language-specification.md)  
+ [Visual Basic 언어 사양](../../visual-basic/reference/language-specification/index.md)  
  언어의 모든 측면에 대한 상세 정보를 포함하는 전체 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 언어 사양에 대한 링크를 제공합니다.  
   
 ## <a name="reference"></a>참조  
@@ -59,11 +59,12 @@ ms.lasthandoff: 05/26/2017
  이 네임스페이스는 화면에 표시되는 대로 폼의 팩스를 인쇄하는 데 사용할 수 있는 구성 요소를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [일반 사용자 인터페이스 요소(Visual Studio)](https://docs.microsoft.com/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
+ [일반 사용자 인터페이스 요소(Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
  [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]에서 사용되는 대화 상자 및 창에 대한 항목이 포함되어 있습니다.  
   
- [Visual Studio의 XML 도구](https://docs.microsoft.com/visualstudio/xml-tools/xml-tools-in-visual-studio)  
+ [Visual Studio의 XML 도구](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
  [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]에서 제공되는 다양한 XML 도구에 대한 항목의 링크를 제공합니다.  
   
  [자동화 및 확장성 참조](http://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf)  
  공유 및 언어별 구성 요소 둘 다에 대한 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]의 자동화 및 확장성에 대해 다루는 항목의 링크를 제공합니다.
+

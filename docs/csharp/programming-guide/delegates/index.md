@@ -1,5 +1,5 @@
 ---
-title: "대리자(C# 프로그래밍 가이드) | Microsoft Docs"
+title: "대리자(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: ae5591bcd17a4b7afcdcdfb36717801819f2311f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1d3dc2252b086f9df9e64a059a53ec8792e11b45
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="delegates-c-programming-guide"></a>대리자(C# 프로그래밍 가이드)
@@ -92,3 +92,4 @@ ms.lasthandoff: 06/26/2017
  <xref:System.Delegate>   
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
  [이벤트](../../../csharp/programming-guide/events/index.md)
+

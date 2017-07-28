@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic의 연산자 및 식 | Microsoft Docs"
+title: "Visual Basic의 연산자 및 식"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -36,23 +36,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 069178fe753c3e09116c8a4845f96faf13eb72ec
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3675af3ac8a0a80b5fb5f208c1679dc28ab77acf
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="operators-and-expressions-in-visual-basic" class="xliff"></a>
-
-# Visual Basic의 연산자 및 식
+# <a name="operators-and-expressions-in-visual-basic"></a>Visual Basic의 연산자 및 식
 *연산자*는 값을 가지는 하나 이상의 코드 요소에서 작업을 수행하는 코드 요소입니다. 값 요소는 변수, 상수, 리터럴, 속성을 포함하고 `Function` 및 `Operator` 프로시저와 식에서 반환됩니다.  
   
  *식*은 연산자와 결합된 일련의 값 요소로서, 새 값을 생성합니다. 연산자는 계산, 비교 또는 기타 작업을 수행하여 값 요소에 적용됩니다.  
   
-<a id="types-of-operators" class="xliff"></a>
-
-## 연산자 형식  
+## <a name="types-of-operators"></a>연산자 형식  
  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서는 다음과 같은 연산자 형식을 제공합니다.  
   
 -   [산술 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)는 비트 패턴 이동을 포함하여 숫자 값에서 친숙한 계산을 수행합니다.  
@@ -65,9 +61,7 @@ ms.lasthandoff: 05/26/2017
   
  연산자와 결합된 값 요소를 해당 연산자의 *피연산자*라고 합니다. *문*을 구성하는 대입 연산자를 제외하고 값 요소와 결합된 연산자는 식을 구성합니다. 자세한 내용은 [문](../../../../visual-basic/programming-guide/language-features/statements.md)을 참조하세요.  
   
-<a id="evaluation-of-expressions" class="xliff"></a>
-
-## 식 평가  
+## <a name="evaluation-of-expressions"></a>식 평가  
  식의 최종 결과는 값을 나타냅니다. 값은 일반적으로 `Boolean`, `String` 또는 숫자 형식과 같은 친숙한 데이터 형식입니다.  
   
  식의 예제는 다음과 같습니다.  
@@ -96,9 +90,8 @@ ms.lasthandoff: 05/26/2017
   
  자세한 내용과 예제는 [Operator Overloading in Visual Basic 2005](http://go.microsoft.com/fwlink/?LinkId=101703)(Visual Basic 2005의 연산자 오버로드)를 참조하세요.  
   
-<a id="see-also" class="xliff"></a>
-
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [연산자](../../../../visual-basic/language-reference/operators/index.md)   
  [연산자의 효율적 결합](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/efficient-combination-of-operators.md)   
  [문](../../../../visual-basic/language-reference/statements/index.md)
+

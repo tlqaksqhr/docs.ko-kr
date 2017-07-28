@@ -1,5 +1,5 @@
 ---
-title: "64비트 응용 프로그램 | Microsoft Docs"
+title: "64비트 응용 프로그램"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,11 +18,11 @@ caps.latest.revision: 53
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 987c7063c5e6dce10233761b6e37ed102d5878a9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9930b44e8ab711f319140e43ad0a36d5d78a7ffb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="64-bit-applications"></a>64비트 응용 프로그램
@@ -74,3 +74,4 @@ ms.lasthandoff: 05/10/2017
  .exe 파일이나 .dll 파일을 특정 플랫폼 또는 WOW64에서만 실행해야 하는지를 확인하려면 [CorFlags.exe(CorFlags 변환 도구)](../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md)를 옵션없이 사용합니다. CorFlags.exe를 사용하여 .exe 파일이나 .dll 파일의 플랫폼 상태를 변경할 수도 있습니다. Visual Studio 어셈블리의 CLR 헤더에서 주 런타임 버전은 2로 설정되고 부 런타임 버전 번호는 5로 설정됩니다. 부 런타임 버전이 0으로 설정된 응용 프로그램은 레거시 응용 프로그램으로 처리되고 항상 WOW64를 통해 실행됩니다.  
   
  .exe 또는 .dll을 프로그래밍 방식으로 쿼리하여 특정 플랫폼 또는 WOW64에서만 실행해야 하는지를 확인하려면 <xref:System.Reflection.Module.GetPEKind%2A?displayProperty=fullName> 메서드를 사용합니다.
+

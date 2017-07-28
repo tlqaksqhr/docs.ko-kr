@@ -1,5 +1,5 @@
 ---
-title: "이벤트(Visual Basic) | Microsoft Docs"
+title: "이벤트(Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: e4e92b4e47d7cc743233aff3aaa77232a74e789f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 84f8385e1b2f16c4bcfa53ef2c77e1f0cf61e5e3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="events-visual-basic"></a>이벤트(Visual Basic)
@@ -133,3 +133,4 @@ ms.lasthandoff: 05/26/2017
 |[이벤트](../../../../standard/events/index.md)|[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]의 이벤트 모델 개요를 제공합니다.|  
 |[Windows Forms에서 이벤트 처리기 만들기](https://msdn.microsoft.com/library/dacysss4.aspx)|Windows Forms 개체와 관련된 이벤트로 작업하는 방법을 설명합니다.|  
 |[대리자](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|Visual Basic의 대리자에 대해 간략하게 설명합니다.|
+

@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 시작 | Microsoft Docs"
+title: "Visual Basic 시작"
 ms.date: 2017-05-01
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 3f3d00e8145620520697941c9002ea81f8de9044
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0f94aab658175c1a338aff78d2645fd631fd37c8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="getting-started-with-visual-basic"></a>Visual Basic 시작
@@ -66,17 +66,18 @@ ms.lasthandoff: 05/26/2017
  [연습](../../visual-basic/walkthroughs.md)  
  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 언어의 여러 측면을 보여 주는 도움말 페이지 목록을 제공합니다.  
   
- [의견 보내기](https://docs.microsoft.com/visualstudio/ide/talk-to-us)  
+ [의견 보내기](/visualstudio/ide/talk-to-us)  
  지원을 받고 사용자 의견을 보내는 방법에 대해 설명합니다.  
   
- [Visual Studio](https://docs.microsoft.com/en-us/visualstudio/)  
+ [Visual Studio](/visualstudio/)  
  [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 설명서에 대한 링크를 제공합니다.  
   
  [C#](../../csharp/csharp.md)  
  [!INCLUDE[csprcs](~/includes/csprcs-md.md)]을 사용한 응용 프로그램 개발과 관련된 설명서에 대한 링크를 제공합니다.  
   
- [Visual C++](https://docs.microsoft.com/cpp/)  
+ [Visual C++](/cpp/)  
  Visual C++ 설명서에 대한 링크를 제공합니다.  
   
  [Office/SharePoint 개발](https://msdn.microsoft.com/library/d2tx7z6d)  
  Microsoft Office와 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]를 비즈니스 응용 프로그램으로 사용하는 방법에 대해 설명합니다.
+

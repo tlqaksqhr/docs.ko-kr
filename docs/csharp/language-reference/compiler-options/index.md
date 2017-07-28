@@ -1,5 +1,5 @@
 ---
-title: "C# 컴파일러 옵션 | Microsoft Docs"
+title: "C# 컴파일러 옵션"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -33,10 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c355f42106cfb7790591108b9b0f0938c34fdb32
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 12fd3210aeda6c260c91232baf99381a55b00cab
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c-compiler-options"></a>C# 컴파일러 옵션
@@ -63,11 +64,12 @@ ms.lasthandoff: 03/13/2017
  컴파일러 옵션의 사전순 목록입니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [프로젝트 디자이너, 빌드 페이지](https://docs.microsoft.com/visualstudio/ide/reference/build-page-project-designer-csharp)  
+ [프로젝트 디자이너, 빌드 페이지](/visualstudio/ide/reference/build-page-project-designer-csharp)  
  프로젝트가 컴파일, 빌드 및 디버그되는 방법을 제어하는 속성 설정. Visual C# 프로젝트의 사용자 지정 빌드 단계에 대한 정보를 포함합니다.  
   
- [기본 및 사용자 지정 빌드](https://docs.microsoft.com/visualstudio/ide/compiling-and-building-in-visual-studio)  
+ [기본 및 사용자 지정 빌드](/visualstudio/ide/compiling-and-building-in-visual-studio)  
  빌드 형식 및 구성에 대한 정보입니다.  
   
- [빌드 준비 및 관리](https://docs.microsoft.com/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio)  
+ [빌드 준비 및 관리](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio)  
  Visual Studio 개발 환경 내의 빌드 절차
+

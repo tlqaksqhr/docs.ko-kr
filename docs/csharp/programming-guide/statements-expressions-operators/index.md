@@ -1,5 +1,5 @@
 ---
-title: "문, 식, 연산자(C# 프로그래밍 가이드) | Microsoft Docs"
+title: "문, 식, 연산자(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -32,11 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: d7c648786e7f507fe2ca58ffd2480da6b204aafa
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 71988a5b9aa59b2655b4fd7b91522fe69c8064b6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>문, 식, 연산자(C# 프로그래밍 가이드)
@@ -72,3 +72,4 @@ ms.lasthandoff: 05/15/2017
 ## <a name="see-also"></a>참고 항목  
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
  [캐스팅 및 형식 변환](../../../csharp/programming-guide/types/casting-and-type-conversions.md)
+
