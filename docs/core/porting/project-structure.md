@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 및 .NET Core를 지원하도록 프로젝트 구성 | Microsoft Docs"
+title: ".NET Framework 및 .NET Core를 지원하도록 프로젝트 구성"
 description: ".NET Framework 및 .NET Core에 대해 솔루션을 나란히 컴파일하려는 프로젝트 소유자를 위한 도움말입니다."
 keywords: ".NET, .NET Core, .NET Framework, 프로젝트 레이아웃, 여러 프레임워크"
 author: conniey
@@ -10,16 +10,14 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 3af62252-1dfa-4336-8d2f-5cfdb57d7724
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 6565ccd42180a37eba52c286becfecb5bef1890d
+ms.sourcegitcommit: 9fd4e033a5f33d4f560b12e23950abd62c7825c5
+ms.openlocfilehash: d83378b094fbae16c788c04269b833a4ecae3608
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 04/07/2017
 
 ---
 
-<a id="organizing-your-project-to-support-net-framework-and-net-core" class="xliff"></a>
-
-# .NET Framework 및 .NET Core를 지원하도록 프로젝트 구성
+# <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>.NET Framework 및 .NET Core를 지원하도록 프로젝트 구성
 
 이 문서는 .NET Framework 및 .NET Core에 대해 솔루션을 나란히 컴파일하려는 프로젝트 소유자를 위해 작성되었습니다. 개발자가 이러한 목표를 달성할 수 있도록 프로젝트를 구성하는 몇 가지 옵션이 제공됩니다. 다음 목록에서는 .NET Core를 사용하여 프로젝트 레이아웃을 설정하는 방법을 결정할 때 고려해야 할 몇 가지 일반적인 시나리오를 제공합니다. 여기에서 모든 것을 다루지는 못할 수 있습니다. 프로젝트 요구에 따라 우선 순위를 정하세요.
 
@@ -40,9 +38,7 @@ ms.lasthandoff: 05/23/2017
   * Visual Studio 2017이 없는 개발자/참가자의 경우 업그레이드하지 않고 기존 프로젝트에 대한 개발을 계속 지원할 수 있습니다.
   * 기존 프로젝트에서 코드 변동이 필요하지 않으므로 새 버그가 발생할 가능성이 줄어듭니다.
 
-<a id="example" class="xliff"></a>
-
-## 예제
+## <a name="example"></a>예제
 
 아래 리포지토리를 고려하세요.
 
@@ -52,9 +48,7 @@ ms.lasthandoff: 05/23/2017
 
 아래에서는 기존 프로젝트의 제약 조건 및 복잡성에 따라 이 리포지토리에 대한 .NET Core 지원을 추가하는 여러 가지 방법을 설명합니다.
 
-<a id="replace-existing-projects-with-a-multi-targeted-net-core-project" class="xliff"></a>
-
-## 기존 프로젝트를 멀티 타기팅 .NET Core 프로젝트로 교체
+## <a name="replace-existing-projects-with-a-multi-targeted-net-core-project"></a>기존 프로젝트를 멀티 타기팅 .NET Core 프로젝트로 교체
 
 기존 *\*.csproj* 파일을 제거하고 여러 프레임워크를 대상으로 하는 단일 *\*.csproj* 파일을 만들도록 리포지토리를 재구성합니다. 서로 다른 프레임워크에 대해 단일 프로젝트를 컴파일할 수 있으므로 이는 좋은 옵션입니다. 대상 프레임워크별로 서로 다른 컴파일 옵션 및 종속성을 처리할 수도 있습니다.
 
@@ -65,9 +59,7 @@ ms.lasthandoff: 05/23/2017
 주목할 변경 사항은 다음과 같습니다.
 * *packages.config* 및 *\*.csproj*가 새로운 [.NET Core *\*.csproj*][example-csproj-netcore]로 바뀌었습니다. NuGet 패키지가 `<PackageReference> ItemGroup`을 사용하여 지정됩니다.
 
-<a id="keep-existing-projects-and-create-a-net-core-project" class="xliff"></a>
-
-## 기존 프로젝트를 유지하고 .NET Core 프로젝트 만들기
+## <a name="keep-existing-projects-and-create-a-net-core-project"></a>기존 프로젝트를 유지하고 .NET Core 프로젝트 만들기
 
 이전 프레임워크를 대상으로 하는 기존 프로젝트가 있는 경우, 이러한 프로젝트는 그대로 두고 이후 프레임워크를 대상으로 하는 .NET Core를 사용할 수 있습니다.
 
@@ -79,9 +71,7 @@ ms.lasthandoff: 05/23/2017
 * .NET Core와 기존 프로젝트가 별도의 폴더에 유지됩니다.
     * 프로젝트를 별도의 폴더에 유지하면 Visual Studio 2017이 없어도 됩니다. 이전 프로젝트만 여는 별도 솔루션을 만들 수 있습니다.
 
-<a id="see-also" class="xliff"></a>
-
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 
 .NET Core로의 마이그레이션에 대한 자세한 지침은 [.NET Core 이식 문서][porting-doc]를 참조하세요.
 

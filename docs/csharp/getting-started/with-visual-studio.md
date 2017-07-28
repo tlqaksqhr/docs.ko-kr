@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio 2017에서 .NET Core를 사용하여 C# Hello World 응용 프로그램 빌드 | Microsoft Docs"
+title: "Visual Studio 2017에서 .NET Core를 사용하여 C# Hello World 응용 프로그램 빌드"
 description: "Visual Studio 2017을 사용하여 간단한 .NET Core 콘솔 응용 프로그램을 빌드하는 방법을 알아봅니다."
 keywords: ".NET Core, .NET Core 콘솔 응용 프로그램, Visual Studio 2017"
 author: BillWagner
@@ -11,30 +11,24 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 08c8e18a95c25477eb81bd6df10cf593b284bf64
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b19bf07b2a2bba944bb33ddb1c887f77331ba8d1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="building-a-c-hello-world-application-with-net-core-in-visual-studio-2017" class="xliff"></a>
-
-# Visual Studio 2017에서 .NET Core를 사용하여 C# Hello World 응용 프로그램 빌드
+# <a name="building-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>Visual Studio 2017에서 .NET Core를 사용하여 C# Hello World 응용 프로그램 빌드
 
 이 항목에서는 Visual Studio 2017을 사용하여 간단한 .NET Core 콘솔 응용 프로그램을 빌드, 디버그 및 게시하는 과정을 단계별로 소개합니다. Visual Studio 2017은 .NET Core 응용 프로그램 빌드를 위해 필요한 모든 기능을 갖춘 개발 환경을 제공합니다. 플랫폼 특정 종속성이 없는 응용 프로그램은 .NET Core에서 대상으로 하는 모든 플랫폼과 .NET Core가 설치된 모든 시스템에서 실행할 수 있습니다.
 
-<a id="prerequisites" class="xliff"></a>
-
-## 필수 구성 요소
+## <a name="prerequisites"></a>필수 구성 요소
 
 ".NET Core 플랫폼 간 개발" 워크로드가 설치된 [Visual Studio 2017](https://www.visualstudio.com/downloads/). 
 
 자세한 내용은 [Windows의 .NET Core에 대한 필수 조건](../../core/windows-prerequisites.md) 항목을 참조하세요.
 
-<a id="a-simple-hello-world-application" class="xliff"></a>
-
-## 간단한 Hello World 응용 프로그램
+## <a name="a-simple-hello-world-application"></a>간단한 Hello World 응용 프로그램
 
 먼저 간단한 "Hello World" 콘솔 응용 프로그램을 만들어 보겠습니다. 아래 단계를 수행합니다.
 
@@ -64,9 +58,7 @@ ms.lasthandoff: 05/23/2017
 
 1. 콘솔 창을 닫으려면 아무 키나 누릅니다.
 
-<a id="enhancing-the-hello-world-application" class="xliff"></a>
-
-## Hello World 응용 프로그램 개선
+## <a name="enhancing-the-hello-world-application"></a>Hello World 응용 프로그램 개선
 
 사용자에게 이름을 입력하라는 메시지를 표시한 다음 사용자 이름을 날짜 및 시간과 함께 표시하도록 응용 프로그램을 개선합니다. 프로그램을 수정하고 테스트하려면 다음을 수행합니다.
 
@@ -92,9 +84,7 @@ ms.lasthandoff: 05/23/2017
 
 - 응용 프로그램의 배포 가능한 버전을 개발 및 게시하는 방법에 대한 자세한 내용은 [Visual Studio 2017을 사용하여 Hello World 응용 프로그램 게시](publishing-with-visual-studio.md)를 참조하세요.
 
-<a id="related-topics" class="xliff"></a>
-
-## 관련 항목
+## <a name="related-topics"></a>관련 항목
 
 콘솔 응용 프로그램 대신 .NET Core 및 Visual Studio 2017을 사용하여 클래스 라이브러리를 빌드할 수도 있습니다. 단계별 지침을 보려면 [Visual Studio 2017에서 C# 및 .NET Core로 클래스 라이브러리 빌드](library-with-visual-studio.md)를 참조하세요.
 
