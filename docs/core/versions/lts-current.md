@@ -1,5 +1,5 @@
 ---
-title: ".NET Core 지원 | Microsoft 문서"
+title: ".NET Core 지원"
 description: ".NET Core에 대한 여러 릴리스 트레인 지원(LTS 및 현재)에 대해 알아봅니다."
 keywords: ".NET, .NET Core, lts, 현재, fts, 지원, 지원 트레인, 지원 트랙, 수명 주기, 릴리스 트레인"
 author: kendrahavens
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: fedc7025-f320-4cba-957b-ef74885f66de
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1ef17b16b85c81a0b96bb1712db3734dc67d801d
-ms.openlocfilehash: 582a521e6a30b740465890b6cb8c773061a98ea6
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 254611ef05af22eea616fcfe3288239a744e0ccc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 02/07/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -43,3 +43,4 @@ LTS 릴리스:
 ### <a name="further-reading"></a>추가 정보
 * [.NET Core Support Lifecycle Fact Sheet](https://www.microsoft.com/net/core/support)(.NET Core 지원 수명 주기 팩트 시트)
 * [Currently supported operating systems and versions](https://github.com/dotnet/core/blob/master/roadmap.md)(현재 지원되는 운영 체제 및 버전)
+

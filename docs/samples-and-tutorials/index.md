@@ -1,5 +1,5 @@
 ---
-title: "샘플 및 자습서 | Microsoft Docs"
+title: "샘플 및 자습서"
 description: ".NET Core, ASP.NET Core 및 .NET에 대해 배우는 데 도움이 되는 C# 언어용 샘플 및 자습서에 대한 정보입니다."
 keywords: ".NET, .NET Core, ASP.NET, C#, 샘플, 자습서"
 author: BillWagner
@@ -9,35 +9,27 @@ ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 65c55837d6ccb93373b84aa4bdef416bdf4fa75a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5c8b6e2d14a14724a040bed5cc58c5ffef3ce520
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="samples-and-tutorials" class="xliff"></a>
-
-# 샘플 및 자습서
+# <a name="samples-and-tutorials"></a>샘플 및 자습서
 
 .NET 설명서에는 .NET에 대해 설명하는 샘플 및 자습서 집합이 포함되어 있습니다. 이 항목에서는 .NET Core, ASP.NET Core 및 C# 샘플 및 자습서를 찾고, 보고, 다운로드하는 방법을 설명합니다. F# 프로그래밍 언어를 학습하기 위한 리소스는 [F# Foundation 사이트](http://fsharp.org/learn.html)에서 찾을 수 있습니다. 온라인 코드 편집기를 사용하여 C#을 살펴보려는 경우 이러한 [대화형 자습서](http://go.microsoft.com/fwlink/p/?LinkId=817234)를 사용해 보세요. 샘플 코드를 보고 다운로드 하는 방법에 대한 지침은 [샘플 보기 및 다운로드](#viewing-and-downloading-samples) 섹션을 참조하세요.
 
-<a id="net-core" class="xliff"></a>
+## <a name="net-core"></a>.NET Core
 
-## .NET Core
-
-<a id="samples" class="xliff"></a>
-
-### 샘플
+### <a name="samples"></a>샘플
 
 **[dotnet 테스트를 사용한 .NET Core의 유닛 테스트](../core/testing/unit-testing-with-dotnet-test.md)**
 
 이 가이드에서는 ASP.NET Core 웹앱 및 관련 단위 테스트를 만드는 방법을 보여 줍니다. 먼저 간단한 웹 서비스 앱을 만든 다음 테스트를 추가합니다. 계속해서 더 많은 테스트를 만들어 새로운 기능 구현을 안내합니다. [완료된 샘플](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test)은 GitHub의 dotnet/docs 리포지토리에서 사용 가능합니다.
 
-<a id="tutorials" class="xliff"></a>
-
-### 자습서
+### <a name="tutorials"></a>자습서
 
 **[CLI 도구를 사용하여 .NET Core 콘솔 앱 작성: 단계별 가이드](../core/tutorials/using-with-xplat-cli.md)**
 
@@ -47,19 +39,13 @@ ms.lasthandoff: 06/08/2017
 
 이 문서에서는 플랫폼 간 CLI 도구를 사용하여 .NET용 라이브러리를 작성하는 방법을 다룹니다. 이러한 도구는 지원되는 모든 운영 체제에서 작동하는 효율적인 하위 수준 환경을 제공합니다. [완료된 샘플](https://github.com/dotnet/docs/tree/master/samples/framework/libraries/frameworks-library)은 GitHub의 dotnet/docs 리포지토리에서 사용 가능합니다.
 
-<a id="aspnet-core" class="xliff"></a>
+## <a name="aspnet-core"></a>ASP.NET Core
 
-## ASP.NET Core
+[ASP.NET Core 자습서](/aspnet/core/tutorials/)를 참조하세요. ASP.NET Core 설명서의 많은 문서에는 해당 문서를 위해 작성된 샘플에 대한 링크가 있습니다.
 
-[ASP.NET Core 자습서](https://docs.microsoft.com/aspnet/core/tutorials/)를 참조하세요. ASP.NET Core 설명서의 많은 문서에는 해당 문서를 위해 작성된 샘플에 대한 링크가 있습니다.
+## <a name="c-language"></a>C# 언어
 
-<a id="c-language" class="xliff"></a>
-
-## C# 언어
-
-<a id="samples" class="xliff"></a>
-
-### 샘플
+### <a name="samples"></a>샘플
 
 **[반복기](../csharp/iterators.md)**
 
@@ -81,9 +67,7 @@ ms.lasthandoff: 06/08/2017
 
 이러한 일련의 샘플에서는 LINQ(Language-Integrated Query)의 여러 가지 기능을 보여 줍니다. [완료된 샘플](https://github.com/dotnet/docs/tree/master/samples/core/linq/csharp)은 GitHub의 dotnet/docs 리포지토리에서 사용 가능합니다.
 
-<a id="tutorials" class="xliff"></a>
-
-### 자습서
+### <a name="tutorials"></a>자습서
 
 **[콘솔 응용 프로그램](../csharp/tutorials/console-teleprompter.md)**
 
@@ -109,9 +93,7 @@ ms.lasthandoff: 06/08/2017
 
 이 자습서에서는 재사용 가능한 라이브러리 및 단위 테스트를 포함하는 완전한 .NET Core 솔루션을 빌드하는 방법을 보여 줍니다.
 
-<a id="deploying-to-containers" class="xliff"></a>
-
-## 컨테이너에 배포
+## <a name="deploying-to-containers"></a>컨테이너에 배포
 
 **[Windows Docker 컨테이너에서 ASP.NET MVC 응용 프로그램 실행](../framework/docker/aspnetmvc.md)**
 
@@ -121,9 +103,7 @@ ms.lasthandoff: 06/08/2017
 
 이 자습서에서는 Windows 컨테이너에 기존 콘솔 앱을 배포하는 방법을 보여 줍니다. [완료된 샘플](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator)은 GitHub의 dotnet/docs 리포지토리에서 사용 가능합니다.
 
-<a id="viewing-and-downloading-samples" class="xliff"></a>
-
-## 샘플 보기 및 다운로드
+## <a name="viewing-and-downloading-samples"></a>샘플 보기 및 다운로드
 
 많은 항목에서 GitHub에서 보거나 다운로드할 수 있는 소스 코드 및 샘플을 보여 줍니다. 샘플을 보려면 샘플 링크를 따라가세요. 코드를 다운로드하려면 다음 지침을 따르세요.
 

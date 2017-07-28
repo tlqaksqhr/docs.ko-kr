@@ -1,5 +1,5 @@
 ---
-title: ".NET Core 시작 | Microsoft Docs"
+title: ".NET Core 시작"
 description: "Windows, Linux 및 macOS에서 .NET Core 응용 프로그램을 빌드하는 방법을 알아볼 수 있는 리소스를 찾아보세요."
 keywords: .NET, .NET Core
 author: mairaw
@@ -9,23 +9,19 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
-ms.openlocfilehash: b187cae8477a0395ca9b7edbbe170ae9e6be4220
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 890e6af3095866608e9c91ea26b4d0edb6d81e29
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/27/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="get-started-with-net-core" class="xliff"></a>
-
-# .NET Core 시작
+# <a name="get-started-with-net-core"></a>.NET Core 시작
 
 .NET Core는 [Windows](#windows), [Linux](#linux) 및 [macOS/OS X](#os-x--macos)에서 실행됩니다.
 
-<a id="windows" class="xliff"></a>
-
-## 창
+## <a name="windows"></a>창
 
 [Windows](https://www.microsoft.com/net/core#windows)에 .NET Core를 설치합니다. 
 
@@ -39,9 +35,7 @@ ms.lasthandoff: 05/27/2017
 
 지원되는 Windows 버전 목록은 [Windows 개발을 위한 필수 조건](windows-prerequisites.md) 항목을 참조하세요. 
 
-<a id="linux" class="xliff"></a>
-
-## Linux
+## <a name="linux"></a>Linux
 
 배포/버전에 .NET Core를 설치합니다.
 
@@ -59,9 +53,7 @@ ms.lasthandoff: 05/27/2017
 
 .NET Core는 위의 설치 링크에 나열된 Linux 배포 및 버전에서 지원됩니다.
 
-<a id="os-x--macos" class="xliff"></a>
-
-## OS X/macOS
+## <a name="os-x--macos"></a>OS X/macOS
 
 [macOS](https://www.microsoft.com/net/core#macos)용 .NET Core를 설치합니다. .NET Core는 OS X El Capitan(버전 10.11)과 macOS Sierra(버전 10.12)에서 지원됩니다.
 

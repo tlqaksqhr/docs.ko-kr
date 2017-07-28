@@ -1,5 +1,5 @@
 ---
-title: ".NET Core CLI 확장성 모델 | Microsoft 문서"
+title: ".NET Core CLI 확장성 모델"
 description: "CLI(명령줄 인터페이스) 도구를 확장할 수 있는 방법을 알아봅니다."
 keywords: "CLI, 확장성, 사용자 지정 명령, .NET Core"
 author: blackdwarf
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fffc3400-aeb9-4c07-9fea-83bc8dbdcbf3
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5a9c7ba999e278f4c5fbec51fa547b3e35828f88
-ms.openlocfilehash: 7e5cfdf644b3f4c6c5cc4f4e6f77ec72910b1f47
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5c4d478d42f395cefdd38c796b19a1f875c4ef2e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/27/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -50,7 +50,7 @@ CLI 도구는 세 가지 주요 방법으로 확장할 수 있습니다.
 ### <a name="consuming-per-project-tools"></a>프로젝트 단위 도구 사용
 이러한 도구를 사용하려면 사용할 각 도구에 대한 `<DotNetCliToolReference>` 요소를 프로젝트 파일에 추가해야 합니다. `<DotNetCliToolReference>` 요소 내에서 도구가 상주하는 패키지를 참조하고 필요한 버전을 지정합니다. [`dotnet restore`](dotnet-restore.md)를 실행하면 도구 및 해당 종속성이 복원됩니다.
 
-프로젝트의 빌드 출력을 로드하여 실행해야 하는 도구의 경우 일반적으로 프로젝트 파일의 일반 종속성 아래에 나열되는 다른 종속성이 있습니다. CLI에서는 빌드 엔진으로 MSBuild를 사용하기 때문에 전반적인 빌드 프로세스에 포함될 수 있는 방식으로 이러한 도구 부분을 사용자 지정 MSBuild [대상](https://docs.microsoft.com/visualstudio/msbuild/msbuild-targets) 및 [작업](https://docs.microsoft.com/visualstudio/msbuild/msbuild-tasks)으로 작성하는 것이 좋습니다. 또한 출력 파일 위치, 빌드 중인 현재 구성 등 빌드를 통해 생성된 모든 데이터를 쉽게 가져올 수 있습니다. 이 정보는 모두 임의 대상에서 읽을 수 있는 MSBuild 속성 집합이 됩니다. 이 문서의 뒷부분에 있는 NuGet을 사용하여 사용자 지정 대상을 추가하는 방법을 확인할 수 있습니다.
+프로젝트의 빌드 출력을 로드하여 실행해야 하는 도구의 경우 일반적으로 프로젝트 파일의 일반 종속성 아래에 나열되는 다른 종속성이 있습니다. CLI에서는 빌드 엔진으로 MSBuild를 사용하기 때문에 전반적인 빌드 프로세스에 포함될 수 있는 방식으로 이러한 도구 부분을 사용자 지정 MSBuild [대상](/visualstudio/msbuild/msbuild-targets) 및 [작업](/visualstudio/msbuild/msbuild-tasks)으로 작성하는 것이 좋습니다. 또한 출력 파일 위치, 빌드 중인 현재 구성 등 빌드를 통해 생성된 모든 데이터를 쉽게 가져올 수 있습니다. 이 정보는 모두 임의 대상에서 읽을 수 있는 MSBuild 속성 집합이 됩니다. 이 문서의 뒷부분에 있는 NuGet을 사용하여 사용자 지정 대상을 추가하는 방법을 확인할 수 있습니다.
 
 간단한 도구를 추가하는 예제를 검토해 보겠습니다. 간단한 프로젝트에 도구만 추가합니다. 다음은 NuGet 패키지에서 지정된 API를 검색할 수 있는 `dotnet-api-search`라는 예제 명령이 지정된 경우 해당 도구를 사용하는 콘솔 응용 프로그램의 프로젝트 파일입니다.
 
@@ -85,7 +85,7 @@ CLI 도구는 세 가지 주요 방법으로 확장할 수 있습니다.
 동일한 리포지토리에서 [사용된 도구의 구현](https://github.com/dotnet/cli/tree/rel/1.0.1/TestAssets/TestPackages)도 확인할 수 있습니다.
 
 ### <a name="custom-targets"></a>사용자 지정 대상
-NuGet에는 [사용자 지정 MSBuild 대상 및 props 파일을 패키지](https://docs.microsoft.com/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package)하는 기능이 있습니다. .NET Core CLI 도구가 MSBuild를 사용하도록 이동하면서 이제 동일한 확장성 메커니즘이 .NET Core 프로젝트에 적용됩니다. 빌드 프로세스를 확장하거나 빌드 프로세스에서 생성된 파일과 같은 아티팩트에 액세스하거나 빌드 호출 시 구성을 검사하려는 경우 이 유형의 확장성을 사용하게 됩니다.
+NuGet에는 [사용자 지정 MSBuild 대상 및 props 파일을 패키지](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package)하는 기능이 있습니다. .NET Core CLI 도구가 MSBuild를 사용하도록 이동하면서 이제 동일한 확장성 메커니즘이 .NET Core 프로젝트에 적용됩니다. 빌드 프로세스를 확장하거나 빌드 프로세스에서 생성된 파일과 같은 아티팩트에 액세스하거나 빌드 호출 시 구성을 검사하려는 경우 이 유형의 확장성을 사용하게 됩니다.
 
 다음 예제에서는 `csproj` 구문을 사용하여 대상의 프로젝트 파일을 볼 수 있습니다. 이렇게 하면 [`dotnet pack`](dotnet-pack.md) 명령에 대상 파일 및 어셈블리를 패키지 내의 *빌드* 폴더에 배치하여 패키지할 항목이 지정됩니다. `Label` 속성이 `dotnet pack instructions`로 설정된 `<ItemGroup>` 요소 및 그 아래에 정의된 Target을 확인합니다.
 

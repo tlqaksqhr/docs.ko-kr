@@ -1,5 +1,5 @@
 ---
-title: ".NET Core Docker 이미지 작성 | Microsoft Docs"
+title: ".NET Core Docker 이미지 작성"
 description: "Docker 이미지 및 .NET Core 이해"
 keywords: .NET, .NET Core, Docker
 author: spboyer
@@ -10,24 +10,20 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7f6be5a87923a12eef879b2f5acdafc1347588e3
-ms.openlocfilehash: a8ade58a9ff1f5e68865506d91c200681cec2aeb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b0e227bb932abe68db26f1d05e6170af399d0d39
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
  
 
-<a id="building-docker-images-for-net-core-applications" class="xliff"></a>
-
-#.NET Core 응용 프로그램에 대한 Docker 이미지 작성
+#<a name="building-docker-images-for-net-core-applications"></a>.NET Core 응용 프로그램에 대한 Docker 이미지 작성
 
 .NET Core와 Docker를 함께 사용하는 방법을 이해하려면 먼저 제공되는 다양한 Docker 이미지와 올바른 사용 시기에 대해 알고 있어야 합니다. 여기서는 제공되는 변형 이미지를 살펴보고, ASP.NET Core Web API를 빌드하며, Yeoman Docker 도구를 사용하여 디버깅 가능한 컨테이너를 만들 뿐만 아니라 Visual Studio Code가 이 프로세스에 어떻게 도움이 되는지를 살펴봅니다. 
 
-<a id="docker-image-optimizations" class="xliff"></a>
-
-## Docker 이미지 최적화
+## <a name="docker-image-optimizations"></a>Docker 이미지 최적화
 
 개발자를 위한 Docker 이미지를 작성할 때 다음 세 가지 주요 시나리오를 중점적으로 고려했습니다.
 
@@ -43,9 +39,7 @@ ms.lasthandoff: 06/26/2017
 
 여러 버전의 .NET Core 이미지가 있지만 모두 하나 이상의 레이어를 공유합니다. 모든 이미지가 동일한 기본 레이어와 잠재적으로 다른 레이어를 공유하기 때문에 저장하는 데 필요한 디스크 공간의 크기나 레지스트리에서 끌어오는 델타가 전체보다 훨씬 더 작습니다.  
 
-<a id="docker-image-variations" class="xliff"></a>
-
-## Docker 이미지 변형
+## <a name="docker-image-variations"></a>Docker 이미지 변형
 
 위의 목표를 달성하기 위해 [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/)에서 이미지 변형을 제공합니다.
 
@@ -53,9 +47,7 @@ ms.lasthandoff: 06/26/2017
 
 - `microsoft/dotnet:<version>-core`: 즉, **microsoft/dotnet:1.0.0-core**로, [이식 가능한 .NET Core 응용 프로그램](../deploying/index.md)을 실행하는 이미지이며 **프로덕션**에서 응용 프로그램을 실행하는 데 맞게 최적화되어 있습니다. SDK를 포함하지 않으며 `dotnet publish`의 최적화된 출력을 수행하기 위한 것입니다. 이식 가능한 런타임은 실행 중인 여러 컨테이너에서 공유 이미지 레이어를 활용하는 경우 Docker 컨테이너 시나리오에 적합합니다.  
 
-<a id="alternative-images" class="xliff"></a>
-
-## 대체 이미지
+## <a name="alternative-images"></a>대체 이미지
 
 개발, 빌드 및 프로덕션에 최적화된 시나리오 외에도 추가 이미지를 제공합니다.
 
@@ -84,9 +76,7 @@ microsoft/dotnet    latest                  03c10abbd08a        540.4 MB
 microsoft/dotnet    1.0.0-core              b8da4a1fd280        253.2 MB
 ```
 
-<a id="prerequisites" class="xliff"></a>
-
-## 필수 조건
+## <a name="prerequisites"></a>필수 조건
 
 빌드하고 실행하려면 다음과 같은 몇 가지 항목을 설치해야 합니다.
 
@@ -105,9 +95,7 @@ npm install -g yo generator-aspnet generator-docker
 > [!NOTE]
 > 이 샘플에서는 [Visual Studio Code](http://code.visualstudio.com)를 편집기에 사용합니다.
 
-<a id="creating-the-web-api-application" class="xliff"></a>
-
-## Web API 응용 프로그램 만들기
+## <a name="creating-the-web-api-application"></a>Web API 응용 프로그램 만들기
 
 참조 지점으로 응용 프로그램을 컨테이너화하기 전에 먼저 로컬로 응용 프로그램을 실행합니다. 
 
@@ -138,9 +126,7 @@ dotnet restore
 
 `Ctrl+C`를 사용하여 응용 프로그램을 중지합니다.
 
-<a id="adding-docker-support" class="xliff"></a>
-
-## Docker 지원 추가
+## <a name="adding-docker-support"></a>Docker 지원 추가
 
 Microsoft용 Yeoman 생성기를 사용하여 프로젝트에 Docker 지원을 추가할 수 있습니다. 현재 컨테이너 내에서 프로젝트를 빌드하고 실행하는 데 도움이 되는 Dockerfile 및 스크립트를 만들어 .NET Core, Node.js 및 Go 프로젝트를 지원합니다. 편집기 디버깅 및 명령 팔레트를 지원하기 위해 Visual Studio Code 관련 파일(launch.json, tasks.json)도 추가됩니다.
 
@@ -189,9 +175,7 @@ $ yo docker
 
 **Dockerfile** - 이 이미지는 **microsoft/dotnet:1.0.0-core**를 기반으로 하는 릴리스 이미지이며 프로덕션에 사용됩니다. 빌드할 때 이 이미지는 약 253MB입니다.
 
-<a id="creating-the-docker-images" class="xliff"></a>
-
-### Docker 이미지 만들기
+### <a name="creating-the-docker-images"></a>Docker 이미지 만들기
 `dockerTask.sh` 또는 `dockerTask.ps1` 스크립트를 사용하여 특정 환경에서 **api** 응용 프로그램에 대한 이미지 및 컨테이너를 빌드하거나 작성할 수 있습니다. 다음 명령을 실행하여 **debug** 이미지를 빌드합니다.
 
 ```bash
@@ -233,9 +217,7 @@ api                 debug                70e89fbc5dbe        1 hour ago        7
 api                 latest               ef17184c8de6        1 hour ago        260.7 MB
 ```
 
-<a id="summary" class="xliff"></a>
-
-## 요약
+## <a name="summary"></a>요약
 
 Docker 생성기를 사용하여 Web API 응용 프로그램에 필요한 파일을 추가하면 이미지의 개발 및 프로덕션 버전을 만드는 프로세스가 간단해집니다.  도구는 컨테이너 내에서 응용 프로그램의 단계별 실행 디버깅을 제공하는 Windows 및 Visual Studio Code 통합에서 동일한 결과를 얻도록 하는 PowerShell 스크립트도 제공하여 플랫폼 간 도구입니다. 이미지 변형 및 대상 시나리오를 이해하면 프로덕션 배포에 최적화된 이미지를 얻는 동시에 내부 루프 개발 프로세스를 최적화할 수 있습니다.  
 

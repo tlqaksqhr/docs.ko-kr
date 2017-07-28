@@ -1,5 +1,5 @@
 ---
-title: "macOS에서 .NET Core 시작 | Microsoft Docs"
+title: "macOS에서 .NET Core 시작"
 description: "이 문서에서는 Visual Studio Code를 사용하여 .NET Core 솔루션을 만드는 단계와 워크플로를 제공합니다."
 keywords: .NET, .NET Core, Mac, macOS, Visual Studio Code
 author: bleroy
@@ -9,26 +9,22 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
-ms.openlocfilehash: 21e6b786c8a9a00cc1ed09d2c3891c3cfa433ef5
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 54a5078f71c68ce3d35c67b266dc198e123cdf88
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/27/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="getting-started-with-net-core-on-macos" class="xliff"></a>
-
-# macOS에서 .NET Core 시작
+# <a name="getting-started-with-net-core-on-macos"></a>macOS에서 .NET Core 시작
 
 이 문서에서는 macOS용 .NET Core 솔루션을 만드는 단계와 워크플로를 제공합니다. 프로젝트 및 단위 테스트를 만들고, 디버깅 도구를 사용하고, [NuGet](https://www.nuget.org/)을 통해 타사 라이브러리를 통합하는 방법을 알아봅니다.
 
 > [!NOTE]
 > 이 문서에서는 macOS의 [Visual Studio Code](http://code.visualstudio.com)를 사용합니다.
 
-<a id="prerequisites" class="xliff"></a>
-
-## 필수 구성 요소
+## <a name="prerequisites"></a>필수 구성 요소
 
 [.NET Core SDK](https://www.microsoft.com/net/core)를 설치합니다. .NET Core SDK에는 최신 버전의 .NET Core 프레임워크 및 런타임이 포함되어 있습니다.
 
@@ -36,9 +32,7 @@ ms.lasthandoff: 05/27/2017
 
 Visual Studio Code 팔레트를 열려면 Visual Studio Code를 열고 <kbd>F1</kbd> 키를 눌러 Visual Studio Code C# 확장을 설치합니다. **ext install**을 입력하여 확장 목록을 표시합니다. C# 확장을 선택합니다. Visual Studio Code를 다시 시작하여 확장을 활성화합니다. 자세한 내용은 [Visual Studio Code C# 확장 문서](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)를 참조하세요.
 
-<a id="getting-started" class="xliff"></a>
-
-## 시작
+## <a name="getting-started"></a>시작
 
 이 자습서에서는 라이브러리 프로젝트, 해당 라이브러리 프로젝트에 대한 테스트, 라이브러리를 사용하는 콘솔 응용 프로그램 등 프로젝트 3개를 만듭니다. GitHub의 dotnet/docs 리포지토리에서 이 항목에 대한 [소스를 보거나 다운로드](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/golden)할 수 있습니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
 
@@ -117,9 +111,7 @@ namespace Library
 dotnet build
 ```
 
-<a id="create-the-test-project" class="xliff"></a>
-
-## 테스트 프로젝트 만들기
+## <a name="create-the-test-project"></a>테스트 프로젝트 만들기
 
 라이브러리에 대한 테스트 프로젝트를 빌드합니다. *golden* 폴더에서 새 테스트 프로젝트를 만듭니다.
 
@@ -182,9 +174,7 @@ dotnet test test-library/test-library.csproj
 dotnet test test-library/test-library.csproj
 ```
 
-<a id="create-the-console-app" class="xliff"></a>
-
-## 콘솔 앱 만들기
+## <a name="create-the-console-app"></a>콘솔 앱 만들기
 
 다음 단계에 따라 만든 콘솔 앱은 이전에 만든 라이브러리 프로젝트에 대한 종속성을 가지며, 실행 시 해당 라이브러리 메서드를 호출합니다. 이 개발 패턴을 사용하면 여러 프로젝트에 재사용 가능한 라이브러리를 만드는 방법을 확인할 수 있습니다.
 
@@ -225,9 +215,7 @@ using Library;
 dotnet run -p app/app.csproj
 ```
 
-<a id="debug-the-application" class="xliff"></a>
-
-## 응용 프로그램 디버그
+## <a name="debug-the-application"></a>응용 프로그램 디버그
 
 `Main` 메서드의 `WriteLine` 문에 중단점을 설정합니다. 이렇게 하려면 `WriteLine` 줄에 커서를 놓고 <kbd>F9</kbd> 키를 누르거나 중단점을 설정할 줄의 왼쪽 여백에서 마우스를 클릭합니다. 코드 줄 옆의 여백에 빨간색 원이 나타납니다. 중단점에 도달하면 중단점 줄이 실행되기 *전에* 코드 실행이 중지됩니다.
 

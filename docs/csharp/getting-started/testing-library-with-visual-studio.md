@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio 2017에서 .NET Core로 클래스 라이브러리 테스트 | Microsoft Docs"
+title: "Visual Studio 2017에서 .NET Core로 클래스 라이브러리 테스트"
 description: "Visual Studio 2017을 사용하여 C#으로 작성된 클래스 라이브러리를 테스트하는 방법 알아보기"
 keywords: ".NET Core, .NET 표준 클래스 라이브러리, Visual Studio 2017, 단위 테스트"
 author: BillWagner
@@ -10,23 +10,19 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 069ad711-3eaa-45c6-94d7-b40249cc8b99
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 61c1c57fc0910fc2f4ce34da2975d181c40ed5cb
-ms.openlocfilehash: f07ba05a617f5e270f0e08f2006b25cecc04f05b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5254000ab95fb2cb877466a9c387d200b1a81cd6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/09/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="testing-a-class-library-with-net-core-in-visual-studio-2017" class="xliff"></a>
-
-# Visual Studio 2017에서 .NET Core로 클래스 라이브러리 테스트
+# <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Visual Studio 2017에서 .NET Core로 클래스 라이브러리 테스트
 
 [Visual Studio 2017에서 C# 및 .NET Core를 사용하여 클래스 라이브러리 빌드](library-with-visual-studio.md)에서는 @System.String 클래스에 확장 메서드를 추가하는 간단한 클래스 라이브러리를 만들었습니다. 이제 예상대로 작동하는지 확인하기 위한 단위 테스트를 만들어 보겠습니다. 이전 항목에서 만든 솔루션에 단위 테스트 프로젝트를 추가할 것입니다.
 
-<a id="creating-a-unit-test-project" class="xliff"></a>
-
-## 단위 테스트 프로젝트 만들기
+## <a name="creating-a-unit-test-project"></a>단위 테스트 프로젝트 만들기
 
 단위 테스트 프로젝트를 만들려면 다음을 수행합니다.
 
@@ -58,9 +54,7 @@ ms.lasthandoff: 06/09/2017
 
    ![참조 관리자](./media/testing-library-with-visual-studio/referencemanager.png)
 
-<a id="adding-and-running-unit-test-methods" class="xliff"></a>
-
-## 단위 테스트 메서드 추가 및 실행
+## <a name="adding-and-running-unit-test-methods"></a>단위 테스트 메서드 추가 및 실행
 
 Visual Studio는 단위 테스트를 실행할 때 단위 테스트 클래스([\[TestClass\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testclassattribute.aspx) 특성이 적용된 클래스)에서 [\[TestMethod\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testmethodattribute.aspx) 특성으로 표시된 각 메서드를 실행합니다. 테스트 메서드는 첫 번째 오류가 발생하거나 메서드에 포함된 모든 테스트가 성공적으로 수행되면 종료됩니다.
 
@@ -104,9 +98,7 @@ Assert 메서드 | 함수
 
    ![테스트 탐색기 창](./media/testing-library-with-visual-studio/firsttest.png)
 
-<a id="handling-test-failures" class="xliff"></a>
-
-## 테스트 오류 처리
+## <a name="handling-test-failures"></a>테스트 오류 처리
 
 테스트를 실행할 때 오류가 발생하지는 않았지만 테스트 메서드 중 하나가 실패하도록 약간 변경해 보겠습니다.
 
@@ -127,9 +119,7 @@ Assert 메서드 | 함수
 
 1. 추가한 코드(`"Error", `)를 제거하고 테스트를 다시 실행합니다. 테스트를 통과합니다.
 
-<a id="testing-the-release-version-of-the-library" class="xliff"></a>
-
-## 라이브러리의 릴리스 버전 테스트
+## <a name="testing-the-release-version-of-the-library"></a>라이브러리의 릴리스 버전 테스트
 
 지금까지 디버그 버전의 라이브러리에 대한 테스트를 실행했습니다. 테스트를 모두 통과하고 라이브러리를 적절히 테스트했으므로 추가 시간 동안 라이브러리의 릴리스 빌드에 대해 테스트를 실행해야 합니다. 컴파일러 최적화를 비롯한 여러 가지 요인 때문에 디버그 및 릴리스 빌드 간에 서로 다른 동작이 발생할 수도 있습니다.
 
