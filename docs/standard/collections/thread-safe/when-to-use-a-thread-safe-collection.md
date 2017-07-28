@@ -1,5 +1,5 @@
 ---
-title: "스레드로부터 안전한 컬렉션 사용 시기 | Microsoft Docs"
+title: "스레드로부터 안전한 컬렉션 사용 시기"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 87898a4a6ba3d3ef4c53fd1c6b8f94ff353f10e4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5166b7b7be38fae9bf809cb0b3aa79b76efd41ac
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>스레드로부터 안전한 컬렉션 사용 시기
@@ -74,3 +74,4 @@ ms.lasthandoff: 05/22/2017
  <xref:System.Collections.Concurrent?displayProperty=fullName>   
  [스레드로부터 안전한 컬렉션](../../../../docs/standard/collections/thread-safe/index.md)   
  [병렬 프로그래밍](../../../../docs/standard/parallel-programming/index.md)
+

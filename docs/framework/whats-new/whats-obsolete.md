@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 클래스 라이브러리의 사용되지 않는 기능 | Microsoft 문서"
+title: ".NET Framework 클래스 라이브러리의 사용되지 않는 기능"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,11 +18,11 @@ caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 68c71e26ac5e5a1872ac006d02adec84c1fb63da
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7afe9496ca116ed0c330c4ff9e7c3a855249cf14
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>.NET Framework 클래스 라이브러리의 사용되지 않는 기능
@@ -92,3 +92,4 @@ ms.lasthandoff: 04/18/2017
   
 ## <a name="see-also"></a>참고 항목  
  [\<supportedRuntime> 요소](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+
