@@ -1,5 +1,5 @@
 ---
-title: "식 트리(Visual Basic) | Microsoft 문서"
+title: "식 트리(Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,10 +20,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
-ms.openlocfilehash: 5f22d535ea6fb55ccadba4476e2e61f32b7a64f2
-ms.lasthandoff: 03/31/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e67f6696ab6e41e9185c7d1356b98113e1473a87
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="expression-trees-visual-basic"></a>식 트리(Visual Basic)
@@ -33,7 +34,7 @@ ms.lasthandoff: 03/31/2017
   
  식 트리는 동적 언어와 .NET Framework 간에 상호 운용성을 제공하고 컴파일러 작성기가 MSIL(Microsoft Intermediate Language) 대신 식 트리를 내보낼 수 있도록 DLR(동적 언어 런타임)에서도 사용됩니다. DLR에 대한 자세한 내용은 [동적 언어 런타임 개요](https://msdn.microsoft.com/library/dd233052)를 참조하세요.  
   
- 익명 람다 식을 기준으로 C# 또는 Visual Basic 컴파일러가 식 트리를 자동으로 만들도록 할 수도 있고, <xref:System.Linq.Expressions> 네임스페이스를 사용하여 식 트리를 수동으로 만들 수도 있습니다.  
+ 익명 람다 식을 기준으로 C# 또는 Visual Basic 컴파일러가 식 트리를 자동으로 만들도록 할 수도 있고 <xref:System.Linq.Expressions> 네임스페이스를 사용하여 식 트리를 수동으로 만들 수도 있습니다.  
   
 ## <a name="creating-expression-trees-from-lambda-expressions"></a>람다 식에서 식 트리 만들기  
  람다 식을 <xref:System.Linq.Expressions.Expression%601> 형식 변수에 할당하면 컴파일러가 해당 람다 식을 나타내는 식 트리를 작성하기 위해 코드를 내보냅니다.  
@@ -48,7 +49,7 @@ Dim lambda As Expression(Of Func(Of Integer, Boolean)) =
 ```  
   
 ## <a name="creating-expression-trees-by-using-the-api"></a>API를 사용하여 식 트리 만들기  
- API를 사용하여 식 트리를 만들려면 <xref:System.Linq.Expressions.Expression> 클래스를 사용합니다. 이 클래스는 변수나 매개 변수를 나타내는 <xref:System.Linq.Expressions.ParameterExpression> 또는 메서드 호출을 나타내는 <xref:System.Linq.Expressions.MethodCallExpression>과 같이 특정 형식의 식 트리 노드를 만드는 정적 팩터리 메서드를 포함합니다. <xref:System.Linq.Expressions.ParameterExpression>, <xref:System.Linq.Expressions.MethodCallExpression> 및 다른 식 관련 형식도 <xref:System.Linq.Expressions> 네임스페이스에서 정의합니다. 이러한 형식은 추상 형식 <xref:System.Linq.Expressions.Expression>에서 파생됩니다.  
+ API를 사용하여 식 트리를 만들려면 <xref:System.Linq.Expressions.Expression> 클래스를 사용합니다. 이 클래스는 변수나 매개 변수를 나타내는 <xref:System.Linq.Expressions.ParameterExpression> 또는 메서드 호출을 나타내는 <xref:System.Linq.Expressions.MethodCallExpression>과 같이 특정 형식의 식 트리 노드를 만드는 정적 팩터리 메서드를 포함합니다. <xref:System.Linq.Expressions.ParameterExpression>, <xref:System.Linq.Expressions.MethodCallExpression> 및 기타 식 관련 형식도 <xref:System.Linq.Expressions> 네임스페이스에서 정의됩니다. 이러한 형식은 추상 형식 <xref:System.Linq.Expressions.Expression>에서 파생됩니다.  
   
  다음 코드 예제에서는 API를 사용하여 람다 식 `Function(num) num < 5`를 나타내는 식 트리를 만드는 방법을 보여 줍니다.  
   
@@ -131,7 +132,7 @@ Console.WriteLine(String.Format("Decomposed expression: {0} => {1} {2} {3}",
  식 트리는 변경할 수 없어야 합니다. 즉, 식 트리를 수정하려면 기존 식 트리를 복사한 다음 트리 내의 노드를 바꾸는 방법으로 새 식 트리를 생성해야 합니다. 식 트리 방문자를 사용하면 기존 식 트리를 트래버스할 수 있습니다. 자세한 내용은 [방법: 식 트리 수정(Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)을 참조하세요.  
   
 ## <a name="compiling-expression-trees"></a>식 트리 컴파일  
- <xref:System.Linq.Expressions.Expression%601> 형식은 식 트리에서 나타내는 코드를 실행 가능한 대리자로 컴파일하는 <xref:System.Linq.Expressions.Expression%601.Compile%2A> 메서드를 제공합니다.  
+ <xref:System.Linq.Expressions.Expression%601> 형식은 식 트리로 표시되는 코드를 실행 가능한 대리자로 컴파일하는 <xref:System.Linq.Expressions.Expression%601.Compile%2A> 메서드를 제공합니다.  
   
  다음 코드 예제에서는 식 트리를 컴파일하고 결과 코드를 실행하는 방법을 보여 줍니다.  
   
@@ -165,3 +166,4 @@ Console.WriteLine(expr.Compile()(4))
  [람다 식](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)   
  [동적 언어 런타임 개요](https://msdn.microsoft.com/library/dd233052)   
  [프로그래밍 개념(Visual Basic)](../../../../visual-basic/programming-guide/concepts/index.md)
+

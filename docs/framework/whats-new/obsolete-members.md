@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework에서 사용되지 않는 멤버 | Microsoft 문서"
+title: ".NET Framework에서 사용되지 않는 멤버"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,15 +18,14 @@ caps.latest.revision: 56
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 84aadd0ccd7b5c786612d06ca0b46fb5aecd3d2b
-ms.openlocfilehash: d7f9c49fbe771e7ac7a5f346129e04c3b4932e3d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 80de2914b9fefc5705853faffa283bdde6a4fe1c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# .NET Framework에서 사용되지 않는 멤버
-<a id="obsolete-members-in-the-net-framework" class="xliff"></a>
+# <a name="obsolete-members-in-the-net-framework"></a>.NET Framework에서 사용되지 않는 멤버
 이 문서의 표에는 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]\) 등의 포인트 릴리스를 포함한 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]\(와 해당 포인트 릴리스\)을 포함한 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]\(에서 사용되지 않은 형식 멤버가 어셈블리별로 구성되어 있습니다. 각 어셈블리에서 사용되지 않는 멤버 목록과 권장되는 대체 항목을 확인하려면 다음 링크를 사용합니다. 사용되지 않는 형식의 멤버는 이 항목에 나열되지 않습니다. 사용되지 않는 형식 목록은 [사용되지 않는 형식](../../../docs/framework/whats-new/obsolete-types.md)을 참조하십시오.  
   
 -   [시스템 어셈블리에서 사용되지 않는 멤버](#SystemMembers)  
@@ -96,13 +95,11 @@ ms.lasthandoff: 05/23/2017
     -   [Microsoft.VisualBasic.dll](#visualbasic)  
   
 <a name="SystemMembers"></a>   
-## 시스템 어셈블리에서 사용되지 않는 멤버
-<a id="obsolete-members-in-system-assemblies" class="xliff"></a>  
+## <a name="obsolete-members-in-system-assemblies"></a>시스템 어셈블리에서 사용되지 않는 멤버  
  다음 표에서는 시스템 어셈블리에서 사용되지 않는 멤버를 보여 줍니다. 이러한 어셈블리는 .NET Framework를 대상으로 하는 일반\-용도의 응용 프로그램 개발에 사용됩니다.  
   
 <a name="mscorlib"></a>   
-### 어셈블리: mscorlib.dll
-<a id="assembly-mscorlibdll" class="xliff"></a>  
+### <a name="assembly-mscorlibdll"></a>어셈블리: mscorlib.dll  
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
@@ -268,8 +265,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Threading.WaitHandle?displayProperty=fullName>|<xref:System.Threading.WaitHandle.Handle%2A>|대신                                          <xref:System.Threading.WaitHandle.SafeWaitHandle%2A?displayProperty=fullName> 속성을 사용하세요.|  
   
 <a name="PresentationCore"></a>   
-### 어셈블리: PresentationCore.dll
-<a id="assembly-presentationcoredll" class="xliff"></a>  
+### <a name="assembly-presentationcoredll"></a>어셈블리: PresentationCore.dll  
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
@@ -304,8 +300,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Windows.Media.Media3D.Viewport3DVisual?displayProperty=fullName>|<xref:System.Windows.Media.Media3D.Viewport3DVisual.BitmapEffectInput%2A>|비트맵 효과는 사용되지 않으며 더 이상 작동하지 않습니다. 대신 해당하는 경우                                          <xref:System.Windows.Media.Effects.Effect?displayProperty=fullName>를 사용하는 것이 좋습니다.|  
   
 <a name="PresFW"></a>   
-### 어셈블리: PresentationFramework.dll
-<a id="assembly-presentationframeworkdll" class="xliff"></a>  
+### <a name="assembly-presentationframeworkdll"></a>어셈블리: PresentationFramework.dll  
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
@@ -315,8 +310,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Windows.Data.ListCollectionView?displayProperty=fullName>|<xref:System.Windows.Data.ListCollectionView.OnBeginChangeLogging%2A>|                                        <xref:System.Windows.Data.ListCollectionView.OnAllowsCrossThreadChangesChanged%2A?displayProperty=fullName>로 대체되었습니다.|  
   
 <a name="Act"></a>   
-### 어셈블리: System.Activities.dll
-<a id="assembly-systemactivitiesdll" class="xliff"></a>  
+### <a name="assembly-systemactivitiesdll"></a>어셈블리: System.Activities.dll  
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
@@ -324,8 +318,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Activities.Debugger.XamlDebuggerXmlReader?displayProperty=fullName>|<xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.Xaml.XamlReader%2CSystem.IO.TextReader%29?displayProperty=fullName>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> 이 생성자를 사용하지 마세요. 대신                                          <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%29?displayProperty=fullName> 또는                                           <xref:System.Activities.Debugger.XamlDebuggerXmlReader.%23ctor%28System.IO.TextReader%2CSystem.Xaml.XamlSchemaContext%29?displayProperty=fullName>를 사용하세요.|  
   
 <a name="ActPres"></a>   
-### 어셈블리: System.Activities.Presentation.dll
-<a id="assembly-systemactivitiespresentationdll" class="xliff"></a>  
+### <a name="assembly-systemactivitiespresentationdll"></a>어셈블리: System.Activities.Presentation.dll  
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
@@ -340,8 +333,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Activities.Presentation.Services.ModelChangedEventArgs?displayProperty=fullName>|<xref:System.Activities.Presentation.Services.ModelChangedEventArgs.PropertiesChanged%2A>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> 이 속성을 사용하지 마세요. 대신                                          <xref:System.Activities.Presentation.Services.ModelChangedEventArgs.ModelChangeInfo%2A>를 사용하세요.|  
   
 <a name="core"></a>   
-### 어셈블리: System.Core.dll
-<a id="assembly-systemcoredll" class="xliff"></a>  
+### <a name="assembly-systemcoredll"></a>어셈블리: System.Core.dll  
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
@@ -384,8 +376,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Runtime.CompilerServices.RuntimeOps?displayProperty=fullName>|<xref:System.Runtime.CompilerServices.RuntimeOps.Quote%2A>|이 멤버를 사용하면 컴파일러 오류가 생성됩니다.<br /><br /> 이 메서드를 사용하지 마세요.|  
   
 <a name="data"></a>   
-### 어셈블리: System.Data.dll
-<a id="assembly-systemdatadll" class="xliff"></a>  
+### <a name="assembly-systemdatadll"></a>어셈블리: System.Data.dll  
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
@@ -407,8 +398,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Data.SqlClient.SqlParameterCollection?displayProperty=fullName>|<xref:System.Data.SqlClient.SqlParameterCollection.Add%28System.String%2CSystem.Object%29>|<xref:System.Data.SqlClient.SqlParameterCollection.Add%28System.String%2CSystem.Object%29>는 사용되지 않습니다.                                          <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A?displayProperty=fullName>를 사용하세요.|  
   
 <a name="entity"></a>   
-### 어셈블리: System.Data.Entity.dll
-<a id="assembly-systemdataentitydll" class="xliff"></a>  
+### <a name="assembly-systemdataentitydll"></a>어셈블리: System.Data.Entity.dll  
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
@@ -418,8 +408,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Data.Objects.ObjectContext?displayProperty=fullName>|<xref:System.Data.Objects.ObjectContext.SaveChanges%28System.Boolean%29>|대신                                          <xref:System.Data.Objects.ObjectContext.SaveChanges%28System.Data.Objects.SaveOptions%29>를 사용하세요.|  
   
 <a name="oracleclient"></a>   
-### 어셈블리: System.Data.OracleClient.dll
-<a id="assembly-systemdataoracleclientdll" class="xliff"></a>  
+### <a name="assembly-systemdataoracleclientdll"></a>어셈블리: System.Data.OracleClient.dll  
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
@@ -428,8 +417,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Data.OracleClient.OracleParameterCollection?displayProperty=fullName>|<xref:System.Data.OracleClient.OracleParameterCollection.Add%28System.String%2CSystem.Object%29>|<xref:System.Data.OracleClient.OracleParameterCollection.Add%28System.String%2CSystem.Object%29>는 사용되지 않습니다.                                          <xref:System.Data.OracleClient.OracleParameterCollection.AddWithValue%2A?displayProperty=fullName>를 사용하세요.|  
   
 <a name="design"></a>   
-### 어셈블리: System.Design.dll
-<a id="assembly-systemdesigndll" class="xliff"></a>  
+### <a name="assembly-systemdesigndll"></a>어셈블리: System.Design.dll  
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
@@ -482,8 +470,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Windows.Forms.Design.ControlDesigner?displayProperty=fullName>|<xref:System.Windows.Forms.Design.ControlDesigner.OnSetComponentDefaults%2A>|이 메서드는 사용되지 않습니다. 대신                                         <xref:System.Windows.Forms.Design.ControlDesigner.InitializeNewComponent%2A?displayProperty=fullName>를 사용하세요.|  
   
 <a name="system"></a>   
-### 어셈블리: System.dll
-<a id="assembly-systemdll" class="xliff"></a>  
+### <a name="assembly-systemdll"></a>어셈블리: System.dll  
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
@@ -595,8 +582,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Security.Claims.DynamicRoleClaimProvider?displayProperty=fullName>|<xref:System.Security.Claims.DynamicRoleClaimProvider.AddDynamicRoleClaims%2A>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> 이 멤버를 사용하면 컴파일러 오류가 생성됩니다.<br /><br />                                          <xref:System.Security.Claims.ClaimsIdentity>에 클레임을 추가하려면                                          <xref:System.Security.Claims.ClaimsAuthenticationManager?displayProperty=fullName>를 사용하세요.|  
   
 <a name="drawing"></a>   
-### 어셈블리: System.Drawing.dll
-<a id="assembly-systemdrawingdll" class="xliff"></a>  
+### <a name="assembly-systemdrawingdll"></a>어셈블리: System.Drawing.dll  
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
@@ -604,8 +590,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Drawing.Imaging.EncoderParameter?displayProperty=fullName>|<xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Int32%2CSystem.Int32%29>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> 이 생성자는 사용되지 않습니다.                                          <xref:System.Drawing.Imaging.EncoderParameter.%23ctor%28System.Drawing.Imaging.Encoder%2CSystem.Int32%2CSystem.Drawing.Imaging.EncoderParameterValueType%2CSystem.IntPtr%29>를 사용하세요.|  
   
 <a name="messaging"></a>   
-### 어셈블리: System.Messaging.dll
-<a id="assembly-systemmessagingdll" class="xliff"></a>  
+### <a name="assembly-systemmessagingdll"></a>어셈블리: System.Messaging.dll  
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
@@ -613,8 +598,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Messaging.MessageQueue?displayProperty=fullName>|<xref:System.Messaging.MessageQueue.GetMessageEnumerator%2A>|이 메서드는                                          <xref:System.Messaging.MessageEnumerator.RemoveCurrent%2A?displayProperty=fullName> 메서드 패밀리를 잘못 구현하는                                          <xref:System.Messaging.MessageEnumerator?displayProperty=fullName>를 반환합니다. 대신 <xref:System.Messaging.MessageQueue.GetMessageEnumerator2%2A?displayProperty=fullName>를 사용하십시오.|  
   
 <a name="servicemodel"></a>   
-### 어셈블리: System.ServiceModel.dll
-<a id="assembly-systemservicemodeldll" class="xliff"></a>  
+### <a name="assembly-systemservicemodeldll"></a>어셈블리: System.ServiceModel.dll  
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
@@ -626,8 +610,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.ServiceModel.Security.WindowsClientCredential?displayProperty=fullName>|<xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>|이 속성은 사용되지 않으며 이전 버전과의 호환성을 위해서만 유지됩니다. 로컬 컴퓨터 정책을 사용하여 NTLM의 사용 여부를 확인합니다.|  
   
 <a name="smDisc"></a>   
-### 어셈블리: System.ServiceModel.Discovery.dll
-<a id="assembly-systemservicemodeldiscoverydll" class="xliff"></a>  
+### <a name="assembly-systemservicemodeldiscoverydll"></a>어셈블리: System.ServiceModel.Discovery.dll  
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
@@ -635,16 +618,14 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint?displayProperty=fullName>|<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br />                                          <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.TransportSettings%2A> 속성은 사용되지 않습니다.                                          <xref:System.ServiceModel.Channels.UdpTransportBindingElement?displayProperty=fullName>를 사용하여 전송 속성을 설정하는 것이 좋습니다.|  
   
 <a name="datavisualization"></a>   
-### 어셈블리: System.Web.DataVisualization.dll
-<a id="assembly-systemwebdatavisualizationdll" class="xliff"></a>  
+### <a name="assembly-systemwebdatavisualizationdll"></a>어셈블리: System.Web.DataVisualization.dll  
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
 |<xref:System.Web.UI.DataVisualization.Charting.Chart?displayProperty=fullName>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A>|<xref:System.Web.UI.DataVisualization.Charting.Chart.ViewStateData%2A>는 사용되지 않습니다. 대신                                          <xref:System.Web.UI.Control.ViewState%2A?displayProperty=fullName>를 확인해 보세요.|  
   
 <a name="web"></a>   
-### 어셈블리: System.Web.dll
-<a id="assembly-systemwebdll" class="xliff"></a>  
+### <a name="assembly-systemwebdll"></a>어셈블리: System.Web.dll  
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
@@ -679,16 +660,14 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Web.UI.WebControls.Xml?displayProperty=fullName>|<xref:System.Web.UI.WebControls.Xml.Document%2A>|대신                                          <xref:System.Web.UI.WebControls.Xml.XPathNavigator%2A?displayProperty=fullName> 속성을 사용하는 것이 좋습니다.                                          <xref:System.Xml.XPath.XPathDocument?displayProperty=fullName>를 만들고                                          <xref:System.Xml.XPath.XPathDocument.CreateNavigator%2A?displayProperty=fullName>를 호출하여                                          <xref:System.Xml.XPath.XPathNavigator?displayProperty=fullName>를 만드세요.|  
   
 <a name="dynamicdata"></a>   
-### 어셈블리: System.Web.DynamicData.dll
-<a id="assembly-systemwebdynamicdatadll" class="xliff"></a>  
+### <a name="assembly-systemwebdynamicdatadll"></a>어셈블리: System.Web.DynamicData.dll  
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
 |<xref:System.Web.DynamicData.DynamicDataExtensions?displayProperty=fullName>|<xref:System.Web.DynamicData.DynamicDataExtensions.EnablePersistedSelection%2A>|데이터 바인딩된 컨트롤(예:                                          <xref:System.Web.UI.WebControls.GridView?displayProperty=fullName> 또는                                          <xref:System.Web.UI.WebControls.ListView?displayProperty=fullName>)의                                          `EnablePersistedSelection` 속성을 사용하세요.|  
   
 <a name="extensions"></a>   
-### 어셈블리: System.Web.Extensions.dll
-<a id="assembly-systemwebextensionsdll" class="xliff"></a>  
+### <a name="assembly-systemwebextensionsdll"></a>어셈블리: System.Web.Extensions.dll  
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
@@ -702,8 +681,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Web.UI.ScriptResourceAttribute?displayProperty=fullName>|<xref:System.Web.UI.ScriptResourceAttribute.TypeName%2A>|이 속성은 사용되지 않습니다. 대신                                         <xref:System.Web.UI.ScriptResourceAttribute.StringResourceClientTypeName%2A?displayProperty=fullName>을 사용하세요.|  
   
 <a name="services"></a>   
-### 어셈블리: System.Web.Services.dll
-<a id="assembly-systemwebservicesdll" class="xliff"></a>  
+### <a name="assembly-systemwebservicesdll"></a>어셈블리: System.Web.Services.dll  
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
@@ -711,8 +689,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Web.Services.Protocols.SoapHeaderAttribute?displayProperty=fullName>|<xref:System.Web.Services.Protocols.SoapHeaderAttribute.Required%2A>|이 속성은 이후 버전에서 제거됩니다. 이제 SOAP 메시지에 특정 헤더가 없어도 됩니다.|  
   
 <a name="forms"></a>   
-### 어셈블리: System.Windows.Forms.dll
-<a id="assembly-systemwindowsformsdll" class="xliff"></a>  
+### <a name="assembly-systemwindowsformsdll"></a>어셈블리: System.Windows.Forms.dll  
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
@@ -729,8 +706,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Windows.Forms.PrintPreviewDialog?displayProperty=fullName>|<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A>|이 속성은 사용되지 않습니다. 대신                                          <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A?displayProperty=fullName> 속성을 사용하세요.|  
   
 <a name="xaml"></a>   
-### 어셈블리: System.Xaml.dll
-<a id="assembly-systemxamldll" class="xliff"></a>  
+### <a name="assembly-systemxamldll"></a>어셈블리: System.Xaml.dll  
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
@@ -738,8 +714,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute?displayProperty=fullName>|<xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%2CSystem.Type%29>|`expressionType` 인수는 XAML 파서에서 사용되지 않습니다. 필요한 반환 형식을 지정하려면                                          <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute.%23ctor%28System.Type%29?displayProperty=fullName>를 사용하세요. 식 형식에 대해 사용자 지정 처리를 지정하려면                                          <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=fullName>를 사용하세요.|  
   
 <a name="xml"></a>   
-### 어셈블리: System.Xml.dll
-<a id="assembly-systemxmldll" class="xliff"></a>  
+### <a name="assembly-systemxmldll"></a>어셈블리: System.Xml.dll  
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
@@ -761,26 +736,22 @@ ms.lasthandoff: 05/23/2017
 |<xref:System.Xml.Serialization.XmlSerializerFactory?displayProperty=fullName>|<xref:System.Xml.Serialization.XmlSerializerFactory.CreateSerializer%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%2CSystem.String%2CSystem.Security.Policy.Evidence%29>|이 메서드는 사용되지 않으며 .NET Framework의 이후 릴리스에서 제거됩니다.                                          <xref:System.Security.Policy.Evidence?displayProperty=fullName> 매개 변수를 사용하지 않는                                          <xref:System.Xml.Serialization.XmlSerializerFactory.CreateSerializer%2A?displayProperty=fullName>의 오버로드를 사용하세요.|  
   
 <a name="MicrosoftMembers"></a>   
-## Microsoft 어셈블리에서 사용되지 않는 멤버
-<a id="obsolete-members-in-microsoft-assemblies" class="xliff"></a>  
+## <a name="obsolete-members-in-microsoft-assemblies"></a>Microsoft 어셈블리에서 사용되지 않는 멤버  
  다음 표에서는 Microsoft 어셈블리에서 사용되지 않는 멤버를 보여 줍니다. 특수한 용도의 어셈블리로, 개별 언어(예: Microsoft.VisualBasic.dll) 또는 빌드 시스템(예: Microsoft.Build.Engine.dll)을 대상으로 하는 어셈블리를 포함합니다.  
   
 <a name="IEHost"></a>   
-### 어셈블리: IEHost.dll 및 IEExec.exe
-<a id="assembly-iehostdll-and-ieexecexe" class="xliff"></a>  
+### <a name="assembly-iehostdll-and-ieexecexe"></a>어셈블리: IEHost.dll 및 IEExec.exe  
  IEHost.dll 및 IEExec.exe 어셈블리는 .NET Framework에서 제거되었습니다. 해당 형식 및 멤버는 모두 사용되지 않으며 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서 지원되지 않습니다. 이러한 어셈블리는 Windows Forms 컨트롤을 호스팅하여 Internet Explorer에서 실행 파일을 실행하기 위해 사용되었습니다. 이 기술의 대안으로 ClickOnce, XBAP(XAML 브라우저 응용 프로그램) 및 Microsoft Silverlight가 있습니다.  
   
 <a name="isymwrapper"></a>   
-### 어셈블리: ISymWrapper.dll
-<a id="assembly-isymwrapperdll" class="xliff"></a>  
+### <a name="assembly-isymwrapperdll"></a>어셈블리: ISymWrapper.dll  
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
 |<xref:System.Diagnostics.SymbolStore.SymBinder?displayProperty=fullName>|<xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.Int32%2CSystem.String%2CSystem.String%29>|대신 <xref:System.Diagnostics.SymbolStore.SymBinder.GetReader%28System.IntPtr%2CSystem.String%2CSystem.String%29?displayProperty=fullName>를 사용하는 것이 좋습니다.                                          <xref:System.Diagnostics.SymbolStore.ISymbolBinder1.GetReader%2A?displayProperty=fullName>는 가져오기 인터페이스 포인터를                                          <xref:System.Int32?displayProperty=fullName>가 아닌                                           <xref:System.IntPtr?displayProperty=fullName>로 사용하므로 32비트 및 64비트 아키텍처 둘 다에서 작동합니다.|  
   
 <a name="conversion"></a>   
-### 어셈블리: Microsoft.Build.Conversion.v4.0.dll
-<a id="assembly-microsoftbuildconversionv40dll" class="xliff"></a>  
+### <a name="assembly-microsoftbuildconversionv40dll"></a>어셈블리: Microsoft.Build.Conversion.v4.0.dll  
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
@@ -790,8 +761,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:Microsoft.Build.Conversion.ProjectFileConverter?displayProperty=fullName>|<xref:Microsoft.Build.Conversion.ProjectFileConverter.ConvertInMemory%28Microsoft.Build.BuildEngine.Engine%2CMicrosoft.Build.BuildEngine.ProjectLoadSettings%29>|대신 매개 변수가 없는                                          <xref:Microsoft.Build.Conversion.ProjectFileConverter.ConvertInMemory?displayProperty=fullName> 메서드를 사용하세요.|  
   
 <a name="engine"></a>   
-### 어셈블리: Microsoft.Build.Engine.dll
-<a id="assembly-microsoftbuildenginedll" class="xliff"></a>  
+### <a name="assembly-microsoftbuildenginedll"></a>어셈블리: Microsoft.Build.Engine.dll  
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
@@ -799,32 +769,28 @@ ms.lasthandoff: 05/23/2017
 |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=fullName>|<xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28System.String%29>|단순히 .NET Framework 위치를                                          <xref:Microsoft.Build.BuildEngine.Engine.BinPath%2A>로 전달하는 경우 매개 변수가 없는                                          <xref:Microsoft.Build.BuildEngine.Engine.%23ctor?displayProperty=fullName> 생성자로 변경하세요. 그렇지 않으면 레지스트리 또는 구성 파일에서 사용자 지정 도구 집합을 정의하거나 엔진의                                          <xref:Microsoft.Build.BuildEngine.ToolsetCollection?displayProperty=fullName>에 요소를 추가할 수 있습니다. 그런 다음                                          <xref:Microsoft.Build.BuildEngine.Engine.%23ctor?displayProperty=fullName> 또는                                          <xref:Microsoft.Build.BuildEngine.Engine.%23ctor%28Microsoft.Build.BuildEngine.ToolsetDefinitionLocations%29?displayProperty=fullName> 생성자를 대신 사용하세요.|  
   
 <a name="BuildFW"></a>   
-### 어셈블리: Microsoft.Build.Framework.dll
-<a id="assembly-microsoftbuildframeworkdll" class="xliff"></a>  
+### <a name="assembly-microsoftbuildframeworkdll"></a>어셈블리: Microsoft.Build.Framework.dll  
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
 |<xref:Microsoft.Build.Framework.XamlTypes.ContentType?displayProperty=fullName>|<xref:Microsoft.Build.Framework.XamlTypes.ContentType.ItemGroupName%2A>|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> 이 멤버를 사용하면 컴파일러 오류가 생성됩니다.<br /><br /> 대신                                          <xref:Microsoft.Build.Framework.XamlTypes.ContentType.ItemType%2A?displayProperty=fullName> 속성을 사용하세요.|  
   
 <a name="BuildUtil4"></a>   
-### 어셈블리: Microsoft.Build.Utilities.v4.0.dll
-<a id="assembly-microsoftbuildutilitiesv40dll" class="xliff"></a>  
+### <a name="assembly-microsoftbuildutilitiesv40dll"></a>어셈블리: Microsoft.Build.Utilities.v4.0.dll  
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
 |<xref:Microsoft.Build.Utilities.ToolTask?displayProperty=fullName>|<xref:Microsoft.Build.Utilities.ToolTask.EnvironmentOverride%2A>|                                         <xref:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables%2A?displayProperty=fullName> 속성을 사용하세요.|  
   
 <a name="data_entity_tasks"></a>   
-### 어셈블리: Microsoft.Data.Entity.Build.Tasks.dll
-<a id="assembly-microsoftdataentitybuildtasksdll" class="xliff"></a>  
+### <a name="assembly-microsoftdataentitybuildtasksdll"></a>어셈블리: Microsoft.Data.Entity.Build.Tasks.dll  
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
 |<!--zz <xref:Microsoft.Data.Entity.Build.Tasks.EntityDeploy?displayProperty=fullName> --> `Microsoft.Data.Entity.Build.Tasks.EntityDeploy`| <!--zz <xref:Microsoft.Data.Entity.Build.Tasks.EntityDeploy.EntityDataModelEmbeddedResources%2A>  -->`Microsoft.Data.Entity.Build.Tasks.EntityDeploy.EntityDataModelEmbeddedResources`|.NET Framework 4.5에서 처음으로 사용되지 않음<br /><br /> 이전 버전인 버전 3.5와의 호환성을 위해서만 사용됩니다.|  
   
 <a name="visualbasic"></a>   
-### 어셈블리: Microsoft.VisualBasic.dll
-<a id="assembly-microsoftvisualbasicdll" class="xliff"></a>  
+### <a name="assembly-microsoftvisualbasicdll"></a>어셈블리: Microsoft.VisualBasic.dll  
   
 |형식|멤버|메시지|  
 |----------|------------|-------------|  
@@ -841,7 +807,7 @@ ms.lasthandoff: 05/23/2017
 |<xref:Microsoft.VisualBasic.CompilerServices.Operators?displayProperty=fullName>|<xref:Microsoft.VisualBasic.CompilerServices.Operators.FallbackInvokeUserDefinedOperator%2A>|이 멤버를 사용하면 컴파일러 오류가 생성됩니다.<br /><br /> 이 메서드를 사용하지 마세요.|  
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=fullName>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|`DynData` 레지스트리 키는 이 버전의 .NET Framework에서 지원되지 않는 Win9x에서만 작동합니다. 대신 `PerformanceData` 레지스트리 키를 사용하십시오. 이 속성은 Framework의 이후 버전에서 제거됩니다.|  
   
-## 참고 항목
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>참고 항목  
  [클래스 라이브러리의 사용되지 않는 기능](../../../docs/framework/whats-new/whats-obsolete.md)   
  [사용되지 않는 형식](../../../docs/framework/whats-new/obsolete-types.md)
+

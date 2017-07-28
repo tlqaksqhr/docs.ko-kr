@@ -1,5 +1,5 @@
 ---
-title: "C# 참조 | Microsoft Docs"
+title: "C# 참조"
 ms.date: 2017-02-14
 ms.prod: .net
 ms.technology:
@@ -32,11 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 87497d48c04a00e09c82550d49dc85d7be719edf
-ms.openlocfilehash: 7ca43aa68edc89420dd320f92b50311d7279ac06
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4a988a8a2c5999351061254da2b7877bdffd8a32
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c-reference"></a>C# 참조
@@ -61,7 +61,7 @@ ms.lasthandoff: 05/19/2017
  [C# 컴파일러 오류](../../csharp/language-reference/compiler-messages/index.md)  
  C# 컴파일러 오류 및 경고의 원인과 해결 방법을 보여 주는 코드 조각을 포함합니다.  
   
- [C# 언어 사양](../../csharp/language-reference/language-specification.md)  
+ [C# 언어 사양](../../csharp/language-reference/language-specification/index.md)  
  C# 언어 사양의 최신 버전(Microsoft Word 형식)에 대한 포인터를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
@@ -75,7 +75,7 @@ ms.lasthandoff: 05/19/2017
  [C#](../../csharp/csharp.md)  
  Visual C# 설명서 포털을 제공합니다.  
   
- [C#용 Visual Studio 개발 환경 사용](https://docs.microsoft.com/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
+ [C#용 Visual Studio 개발 환경 사용](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
  IDE 및 편집기를 설명하는 개념 및 작업 항목의 링크를 제공합니다.  
   
  [C# 프로그래밍 가이드](../../csharp/programming-guide/index.md)  

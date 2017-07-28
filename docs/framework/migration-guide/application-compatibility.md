@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework의 응용 프로그램 호환성 | Microsoft 문서"
+title: ".NET Framework의 응용 프로그램 호환성"
 ms.custom: 
 ms.date: 05/19/2017
 ms.prod: .net-framework
@@ -19,41 +19,37 @@ ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3d0d39f1d6d15dc2757387ea83d3a0f868f6ec17
-ms.openlocfilehash: 9169b8ec118ed0d9ab3f05eec47317cf68551754
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b3c7df2984c2c9e8af308ca8070f7207d11ba49e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/31/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# .NET Framework의 응용 프로그램 호환성
-<a id="application-compatibility-in-the-net-framework" class="xliff"></a>
+# <a name="application-compatibility-in-the-net-framework"></a>.NET Framework의 응용 프로그램 호환성
 
-## 소개
-<a id="introduction" class="xliff"></a>
+## <a name="introduction"></a>소개
+
 호환성은 각 .NET 릴리스의 매우 중요한 목표입니다. 호환성이 있으면 각 버전이 누적되므로 이전 버전이 계속 작동합니다. 반면, 성능 향상, 보안 문제 해결 또는 버그 수정을 위해 이전 기능이 변경되면 이후 버전에서 실행되는 기존 코드 또는 기존 응용 프로그램에서 호환성 문제가 발생할 수 있습니다. .NET Framework는 대상 다시 지정 변경 내용 및 런타임 변경 내용을 인식합니다. 대상 다시 지정 변경 내용은 .NET Framework의 특정 버전을 대상으로 지정하지만 이후 버전에서 실행되는 응용 프로그램에 영향을 미칩니다. 런타임 변경 내용은 특정 버전에서 실행되는 모든 응용 프로그램에 영향을 미칩니다.
 
 각 앱은 .NET Framework의 특정 버전을 대상으로 하며, 다음을 통해 지정됩니다.
 
-* Visual Studio에서 대상 프레임워크 정의
-* 프로젝트 파일에서 대상 프레임워크 지정
-* 소스 코드에 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 적용
+- Visual Studio에서 대상 프레임워크 정의
+- 프로젝트 파일에서 대상 프레임워크 지정
+- 소스 코드에 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 적용
 
 대상으로 지정된 버전보다 더 새로운 버전에서 실행될 경우 .NET Framework는 특수 동작을 사용하여 대상으로 지정된 이전 버전을 모방합니다. 즉, 앱은 Framework의 더 새로운 버전에서 실행되지만 이전 버전에서 실행되는 것처럼 동작합니다. .NET Framework 버전 간의 대부분의 호환성 문제는 이 특수 모델을 통해 완화됩니다.
 
-## 런타임 변경 내용
-<a id="runtime-changes" class="xliff"></a>
+## <a name="runtime-changes"></a>런타임 변경 내용
 
 런타임 문제는 새 런타임이 컴퓨터에서 발생하고 같은 이진 파일이 실행되지만 다른 동작이 확인될 경우 발생하는 문제입니다. .NET Framework 4.0용으로 컴파일된 이진 파일은 4.5 이상 버전의 .NET Framework 4.0 호환성 모드에서 실행됩니다. 4.5에 영향을 미치는 대부분의 변경 내용은 4.0용으로 컴파일된 이진 파일에 영향을 미치지 않습니다. 이 내용은 AppDomain에만 적용되고 항목 어셈블리의 설정에 따라 달라집니다.
 
-## 대상 다시 지정 변경 내용
-<a id="retargeting-changes" class="xliff"></a>
+## <a name="retargeting-changes"></a>대상 다시 지정 변경 내용
 
 대상 다시 지정 문제는 4.0을 대상으로 하는 어셈블리가 4.5를 대상으로 지정하도록 설정된 경우 발생하는 문제입니다. 이제 어셈블리는 이전 기능에 대한 잠재적인 호환성 문제뿐 아니라 새로운 기능을 선택합니다. 또한 이것은 어셈블리를 사용하는 콘솔 앱 또는 어셈블리를 참조하는 웹 사이트와 같은 항목 어셈블리에 의해 지정됩니다.
 
-## .NET 호환성 진단
-<a id="net-compatibility-diagnostics" class="xliff"></a>
+## <a name="net-compatibility-diagnostics"></a>.NET 호환성 진단
 
 .NET 호환성 진단은 .NET Framework 버전 간에 응용 프로그램 호환성 문제를 식별할 수 있도록 하는 Roslyn 기반 분석기입니다. 이 목록은 사용할 수 있는 모든 분석기를 포함하지만, 한 하위 집합은 특정 마이그레이션에만 적용됩니다. 분석기는 예정된 마이그레이션에 적용되는 문제를 확인하고 해당 문제만 표시합니다.
 
@@ -85,18 +81,17 @@ ms.lasthandoff: 05/31/2017
 
 -   사용 가능한 진단의 ID
 
-## 용도
-<a id="usage" class="xliff"></a>
+## <a name="usage"></a>용도
+
 시작하려면 아래에서 호환성 변경 형식을 선택합니다.
 
-* [대상 다시 지정 변경 내용](./retargeting/index.md)
-* [런타임 변경 내용](./runtime/index.md)
+- [대상 다시 지정 변경 내용](./retargeting/index.md)
+- [런타임 변경 내용](./runtime/index.md)
 
 
-## 참고 항목
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>참고 항목
 
-* [버전 및 종속성](../../../docs/framework/migration-guide/versions-and-dependencies.md)
-* [새로운 기능](../../../docs/framework/whats-new/index.md)
-* [클래스 라이브러리의 사용되지 않는 기능](../../../docs/framework/whats-new/whats-obsolete.md)
+[버전 및 종속성](../../../docs/framework/migration-guide/versions-and-dependencies.md)   
+[새로운 기능](../../../docs/framework/whats-new/index.md)   
+[클래스 라이브러리의 사용되지 않는 기능](../../../docs/framework/whats-new/whats-obsolete.md)
 

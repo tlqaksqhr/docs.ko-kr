@@ -1,5 +1,5 @@
 ---
-title: "C# 언어 및 .NET Framework 소개 | Microsoft Docs"
+title: "C# 언어 및 .NET Framework 소개"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: e63a964956e2fbe91573a970c7df3fc29d848c9c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d828e5e1914e73193e6449d4fb6d8fb3f0d0775b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 언어 및 .NET Framework 소개
@@ -64,7 +64,7 @@ ms.lasthandoff: 05/26/2017
   
  다음은 추가적인 C# 리소스입니다.  
   
--   언어에 대한 일반적이면서 유용한 소개 정보는 [C# 언어 사양](../../csharp/language-reference/language-specification.md), 1장을 참조하세요.  
+-   언어에 대한 일반적이면서 유용한 소개 정보는 [C# 언어 사양](../../csharp/language-reference/language-specification/index.md), 1장을 참조하세요.  
   
 -   C# 언어의 특정 측면에 대한 자세한 내용은 [C# 참조](../../csharp/language-reference/index.md)를 참조하세요.  
   
@@ -89,4 +89,5 @@ ms.lasthandoff: 05/26/2017
   
 ## <a name="see-also"></a>참고 항목  
  [C#](../../csharp/csharp.md)   
- [Visual C# 및 Visual Basic 시작](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+ [Visual C# 및 Visual Basic 시작](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+

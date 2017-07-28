@@ -1,5 +1,5 @@
 ---
-title: "제네릭 컬렉션 사용 기준 | Microsoft Docs"
+title: "제네릭 컬렉션 사용 기준"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -16,11 +16,11 @@ caps.latest.revision: 17
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 9dcf0802b1d9a1d6b63d108289cbc814b73e8c48
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 465939bca9e0300300efef9842f312800817a5cc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="when-to-use-generic-collections"></a>제네릭 컬렉션 사용 기준
@@ -30,31 +30,31 @@ ms.lasthandoff: 05/22/2017
   
  기존 컬렉션 형식에 해당하는 제네릭 형식은 다음과 같습니다.  
   
--   <xref:System.Collections.Generic.List%601>는 <xref:System.Collections.ArrayList>에 해당하는 제네릭 클래스입니다.  
+-   <xref:System.Collections.Generic.List%601> 는 <xref:System.Collections.ArrayList>에 해당하는 제네릭 클래스입니다.  
   
--   <xref:System.Collections.Generic.Dictionary%602> 및 <xref:System.Collections.Concurrent.ConcurrentDictionary%602>는 <xref:System.Collections.Hashtable>에 해당하는 제네릭 클래스입니다.  
+-   <xref:System.Collections.Generic.Dictionary%602> 및 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 는 <xref:System.Collections.Hashtable>에 해당하는 제네릭 클래스입니다.  
   
--   <xref:System.Collections.ObjectModel.Collection%601>는 <xref:System.Collections.CollectionBase>에 해당하는 제네릭 클래스입니다. <xref:System.Collections.ObjectModel.Collection%601>는 기본 클래스로 사용할 수 있지만 <xref:System.Collections.CollectionBase>와는 달리 추상 클래스가 아니므로 훨씬 쉽게 사용할 수 있습니다.  
+-   <xref:System.Collections.ObjectModel.Collection%601> 는 <xref:System.Collections.CollectionBase>에 해당하는 제네릭 클래스입니다. <xref:System.Collections.ObjectModel.Collection%601> 는 기본 클래스로 사용할 수 있지만 <xref:System.Collections.CollectionBase>와는 달리 추상 클래스가 아니므로 훨씬 쉽게 사용할 수 있습니다.  
   
--   <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>는 <xref:System.Collections.ReadOnlyCollectionBase>에 해당하는 제네릭 클래스입니다. <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>는 추상 클래스가 아니며 기존 <xref:System.Collections.Generic.List%601>를 읽기 전용 컬렉션으로 쉽게 노출할 수 있는 생성자를 포함합니다.  
+-   <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 는 <xref:System.Collections.ReadOnlyCollectionBase>에 해당하는 제네릭 클래스입니다. <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 는 추상 클래스가 아니며 기존 <xref:System.Collections.Generic.List%601> 를 읽기 전용 컬렉션으로 쉽게 노출할 수 있는 생성자를 포함합니다.  
   
 -   <xref:System.Collections.Generic.Queue%601>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>, <xref:System.Collections.Generic.Stack%601>, <xref:System.Collections.Concurrent.ConcurrentStack%601>, <xref:System.Collections.Generic.SortedList%602> 제네릭 클래스는 각각 같은 이름의 제네릭이 아는 클래스에 해당합니다.  
   
 ## <a name="additional-types"></a>추가 형식  
  다수의 제네릭 컬렉션 형식에는 그에 해당하는 제네릭이 아닌 형식이 없습니다. 이러한 형식은 다음과 같습니다.  
   
--   <xref:System.Collections.Generic.LinkedList%601>는 O(1) 삽입 및 제거 작업을 제공하는 범용 연결된 목록입니다.  
+-   <xref:System.Collections.Generic.LinkedList%601> 는 O(1) 삽입 및 제거 작업을 제공하는 범용 연결된 목록입니다.  
   
--   <xref:System.Collections.Generic.SortedDictionary%602>는 O(로그 `n`) 삽입 및 검색 작업을 제공하는 정렬된 사전으로, <xref:System.Collections.Generic.SortedList%602> 대신 사용하면 유용합니다.  
+-   <xref:System.Collections.Generic.SortedDictionary%602> 는 O(로그 `n`) 삽입 및 검색 작업을 제공하는 정렬된 사전으로, <xref:System.Collections.Generic.SortedList%602>대신 사용하면 유용합니다.  
   
--   <xref:System.Collections.ObjectModel.KeyedCollection%602>은 자체 키를 포함하는 개체를 저장할 수 있도록 하는 목록과 사전 간의 하이브리드 형식입니다.  
+-   <xref:System.Collections.ObjectModel.KeyedCollection%602> 은 자체 키를 포함하는 개체를 저장할 수 있도록 하는 목록과 사전 간의 하이브리드 형식입니다.  
   
--   <xref:System.Collections.Concurrent.BlockingCollection%601>는 경계 및 차단 기능을 포함하는 컬렉션 클래스를 구현합니다.  
+-   <xref:System.Collections.Concurrent.BlockingCollection%601> 는 경계 및 차단 기능을 포함하는 컬렉션 클래스를 구현합니다.  
   
--   <xref:System.Collections.Concurrent.ConcurrentBag%601>는 순서가 지정되지 않은 요소의 빠른 삽입 및 제거 기능을 제공합니다.  
+-   <xref:System.Collections.Concurrent.ConcurrentBag%601> 는 순서가 지정되지 않은 요소의 빠른 삽입 및 제거 기능을 제공합니다.  
   
 ## <a name="linq-to-objects"></a>LINQ to Objects  
- LINQ to Objects 기능을 사용하면 개체 형식이 <xref:System.Collections.IEnumerable?displayProperty=fullName> 또는 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> 인터페이스를 구현하는 경우 LINQ 쿼리를 통해 메모리 내 개체에 액세스할 수 있습니다. LINQ 쿼리는 데이터 액세스를 위한 일반 패턴을 제공하고, 표준 `foreach` 루프에 비해 간결하고 쉽게 읽을 수 있으며, 필터링, 순서 지정 및 그룹화 기능을 제공합니다. 또한 LINQ 쿼리를 통해 성능을 향상시킬 수도 있습니다. 자세한 내용은 [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9) 및 [PLINQ(병렬 LINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)를 참조하세요.  
+ LINQ to Objects 기능을 사용하면 개체 형식이 <xref:System.Collections.IEnumerable?displayProperty=fullName> 또는 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> 인터페이스를 구현하는 경우 LINQ 쿼리를 통해 메모리 내 개체에 액세스할 수 있습니다. LINQ 쿼리는 데이터 액세스를 위한 일반 패턴을 제공하고, 표준 `foreach` 루프에 비해 간결하고 쉽게 읽을 수 있으며, 필터링, 순서 지정 및 그룹화 기능을 제공합니다. 또한 LINQ 쿼리를 통해 성능을 향상시킬 수도 있습니다. 자세한 내용은 [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9) 및 [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)를 참조하세요.  
   
 ## <a name="additional-functionality"></a>추가 기능  
  일부 제네릭 형식은 제네릭이 아닌 컬렉션 형식에는 없는 기능을 포함합니다. 예를 들어 제네릭이 아닌 <xref:System.Collections.Generic.List%601> 클래스에 해당하는 <xref:System.Collections.ArrayList> 클래스에는 제네릭 대리자를 허용하는 여러 메서드가 포함되어 있습니다. 이러한 대리자로는 목록 검색을 위한 메서드를 지정할 수 있도록 하는 <xref:System.Predicate%601> 대리자, 목록의 각 요소에 대해 작동하는 메서드를 나타내는 <xref:System.Action%601> 대리자, 형식 간의 변환을 정의할 수 있도록 하는 <xref:System.Converter%602> 대리자 등이 있습니다.  
@@ -65,3 +65,4 @@ ms.lasthandoff: 05/22/2017
  [컬렉션 및 데이터 구조](../../../docs/standard/collections/index.md)   
  [일반적으로 사용되는 컬렉션 형식](../../../docs/standard/collections/commonly-used-collection-types.md)   
  [제네릭](../../../docs/standard/generics/index.md)
+

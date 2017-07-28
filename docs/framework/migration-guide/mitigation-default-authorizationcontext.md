@@ -1,5 +1,5 @@
 ---
-title: "완화: 기본 AuthorizationContext | Microsoft Docs"
+title: "완화: 기본 AuthorizationContext"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,15 +14,15 @@ caps.latest.revision: 3
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: d2cffc531efc0f0be841956d3a09e1ab253d8fbd
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 48363d0f8e515b703e49761a763379566e217844
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mitigation-default-authorizationcontext"></a>완화: 기본 AuthorizationContext
-`null``authorizationPolicies` 인수를 사용하는 <xref:System.IdentityModel.Policy.AuthorizationContext.CreateDefaultAuthorizationContext%28System.Collections.Generic.IList%7BSystem.IdentityModel.Policy.IAuthorizationPolicy%7D%29>에 대한 호출에서 반환되는 <xref:System.IdentityModel.Policy.AuthorizationContext> 구현은 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]의 구현을 변경했습니다.  
+`null``authorizationPolicies` 인수가 있는 <xref:System.IdentityModel.Policy.AuthorizationContext.CreateDefaultAuthorizationContext%28System.Collections.Generic.IList%7BSystem.IdentityModel.Policy.IAuthorizationPolicy%7D%29>에 대한 호출에서 반환한 <xref:System.IdentityModel.Policy.AuthorizationContext> 구현이 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]에서 해당 구현을 변경했습니다.  
   
 ## <a name="impact"></a>영향  
  드문 경우이지만 사용자 지정 인증을 사용하는 WCF 앱은 다르게 동작할 수 있습니다.  
@@ -40,3 +40,4 @@ ms.lasthandoff: 04/18/2017
   
 ## <a name="see-also"></a>참고 항목  
  [대상 다시 지정 변경 내용](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+

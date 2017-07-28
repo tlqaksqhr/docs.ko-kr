@@ -1,5 +1,5 @@
 ---
-title: "Hashtable 및 Dictionary 컬렉션 형식 | Microsoft Docs"
+title: "Hashtable 및 Dictionary 컬렉션 형식"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -20,11 +20,11 @@ caps.latest.revision: 16
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 59aa4bd6160491ac6c6a4f45131531226ec7e58f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1c77754efcfa626c2907fd57740133a0db4737d4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Hashtable 및 Dictionary 컬렉션 형식
@@ -52,3 +52,4 @@ ms.lasthandoff: 05/22/2017
  <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName>   
  [일반적으로 사용되는 컬렉션 형식](../../../docs/standard/collections/commonly-used-collection-types.md)
+

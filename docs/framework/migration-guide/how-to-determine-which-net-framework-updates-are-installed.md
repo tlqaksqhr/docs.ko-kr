@@ -1,5 +1,5 @@
 ---
-title: "방법: 설치된 .NET Framework 업데이트 확인 | Microsoft Docs"
+title: "방법: 설치된 .NET Framework 업데이트 확인"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,21 +17,19 @@ caps.latest.revision: 6
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
-ms.openlocfilehash: 6a6e4c9c2bdacc01f82d3a53aec706809bcfaa5a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b29b402e859688dcced6bd4429b18298070fb5e4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# 방법: 설치된 .NET Framework 업데이트 확인
-<a id="how-to-determine-which-net-framework-updates-are-installed" class="xliff"></a>
+# <a name="how-to-determine-which-net-framework-updates-are-installed"></a>방법: 설치된 .NET Framework 업데이트 확인
 컴퓨터에 설치된 각 .NET Framework 버전에 대해 설치된 업데이트는 Windows 레지스트리에 나열됩니다. 레지스트리 편집기(regedit.exe)를 사용하여 이 정보를 볼 수 있습니다.  
   
  레지스트리 편집기에서 .NET Framework 버전과 각 버전에 대해 설치된 업데이트는 서로 다른 하위 키에 저장되어 있습니다. 설치된 버전 번호 검색에 대한 자세한 내용은 [방법: 설치된 .NET Framework 버전 확인](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)을 참조하세요. .NET Framework 설치에 대한 자세한 내용은 [개발자용 .NET Framework 설치](../../../docs/framework/install/guide-for-developers.md)를 참조하세요.  
   
-### 설치된 업데이트를 찾으려면
-<a id="to-find-installed-updates" class="xliff"></a>  
+### <a name="to-find-installed-updates"></a>설치된 업데이트를 찾으려면  
   
 1.  **regedit.exe** 프로그램을 엽니다. Windows 8 이상에서는 시작 화면을 열고 이름을 입력합니다. 이전 버전의 Windows에서는 **시작** 메뉴에서 **실행**을 선택하고 **열기** 상자에 **regedit.exe**를 입력합니다.  
   
@@ -43,8 +41,7 @@ ms.lasthandoff: 05/23/2017
   
      설치된 업데이트가 적용되는 .NET Framework 버전을 식별하는 하위 키 아래에 나열됩니다. 각 업데이트는 KB(기술 자료) 번호로 식별됩니다.  
   
-## 예제
-<a id="example" class="xliff"></a>  
+## <a name="example"></a>예제  
  다음 코드는 컴퓨터에 설치된 .NET Framework 업데이트를 프로그래밍 방식으로 확인합니다. 이 예제를 실행하려면 관리자 자격 증명이 있어야 합니다.  
   
  [!code-csharp[ListUpdates#1](../../../samples/snippets/csharp/VS_Snippets_CLR/listupdates/cs/program.cs#1)] [!code-vb[ListUpdates#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/listupdates/vb/program.vb#1)]  
@@ -77,8 +74,7 @@ Microsoft .NET Framework 4 Extended
   KB2656351  Security Update for Microsoft .NET Framework 4 Extended (KB2656351)  
 ```  
   
-## 참고 항목
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>참고 항목
 
 [방법: 설치된 .NET Framework 버전 확인](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
 [.NET Framework 설치](../../../docs/framework/install/guide-for-developers.md)   

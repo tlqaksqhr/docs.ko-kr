@@ -1,5 +1,5 @@
 ---
-title: "Sorted 컬렉션 형식 | Microsoft Docs"
+title: "Sorted 컬렉션 형식"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -19,15 +19,14 @@ caps.latest.revision: 16
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 375babff42f13c41852651811f92f6bdda91b1e2
-ms.openlocfilehash: 7b4a762e3021e80a15d66b15589eec2e269a2888
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 210582c6cf31b59f7f6c4b577c0e8a2c2f25ddd6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# Sorted 컬렉션 형식
-<a id="sorted-collection-types" class="xliff"></a>
+# <a name="sorted-collection-types"></a>Sorted 컬렉션 형식
 <xref:System.Collections.SortedList?displayProperty=fullName> 클래스, <xref:System.Collections.Generic.SortedList%602?displayProperty=fullName> 제네릭 클래스 및 <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=fullName> 제네릭 클래스는 <xref:System.Collections.Hashtable> 클래스 및 <xref:System.Collections.Generic.Dictionary%602> 제네릭 클래스와 유사합니다. 해당 항목은 여기서 <xref:System.Collections.IDictionary> 인터페이스를 구현하지만 키를 기준으로 한 정렬 순서로 해당 요소를 유지 관리하고 O(1) 삽입 및 해시 테이블의 검색 특성을 갖지 않습니다. 세 가지 클래스에는 공통적으로 다음과 같은 몇 가지 기능이 있습니다.  
   
 -   세 가지 클래스는 모두 <xref:System.Collections.IDictionary?displayProperty=fullName> 인터페이스를 구현합니다. 두 개의 제네릭 인터페이스는 <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName> 제네릭 클래스도 구현합니다.  
@@ -57,8 +56,7 @@ ms.lasthandoff: 06/15/2017
   
  [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터 <xref:System.Collections.Generic.SortedSet%601> 클래스는 삽입, 삭제 및 검색 후에 정렬된 순서에 따라 데이터를 유지 관리하는 자체 균형 조정 트리를 제공합니다. 이 클래스와 <xref:System.Collections.Generic.HashSet%601> 클래스는 <xref:System.Collections.Generic.ISet%601> 인터페이스를 구현합니다.  
   
-## 참고 항목
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>참고 항목  
  <xref:System.Collections.IDictionary?displayProperty=fullName>   
  <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602>   

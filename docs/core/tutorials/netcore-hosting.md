@@ -1,5 +1,5 @@
 ---
-title: ".NET Core 호스트 | Microsoft 문서"
+title: ".NET Core 호스트"
 description: "네이티브 코드에서 .NET Core 런타임 호스트"
 keywords: ".NET, .NET Core, 호스트, .NET Core 호스트"
 author: mjrousos
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d866cf8eab2b8db936d813ccae7882f8d7db5720
-ms.openlocfilehash: cf420d4379afbdb3c6db048c7817a4c143c124d9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 61c321b512b1920718196319d367f467f9291b2a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -23,9 +23,9 @@ ms.lasthandoff: 04/26/2017
 
 .NET Core 런타임 호스트는 고급 시나리오이며, .NET Core 빌드 프로세스는 .NET Core 응용 프로그램을 실행하는 기본 호스트를 제공하므로 대부분의 경우 .NET Core 개발자는 호스트에 대해 걱정할 필요가 없습니다. 그러나 일부 특수한 경우, 네이티브 프로세스에서 관리 코드를 호출하는 수단으로나 런타임 작동 방식에 대해 더 많은 제어 권한을 얻기 위해 .NET Core 런타임을 명시적으로 호스트한 것이 유용할 수 있습니다.
 
-이 문서에서는 네이티브 코드에서 .NET Core 런타임을 시작하고, 초기 응용 프로그램 도메인(<xref:System.AppDomain>)을 만들고, 관리 코드를 실행하는 데 필요한 단계를 간략하게 설명합니다.
+이 문서에서는 네이티브 코드에서 .NET Core 런타임을 시작하고 초기 응용 프로그램 도메인(<xref:System.AppDomain>)을 만들고 관리 코드를 실행하는 데 필요한 단계에 대한 개요를 제공합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>필수 조건
 
 호스트는 네이티브 응용 프로그램이기 때문에 이 자습서에서는 .NET Core를 호스트하는 C++ 응용 프로그램을 생성을 다룹니다. [Visual Studio](https://www.visualstudio.com/downloads/)에서 제공하는 C++ 개발 환경 같은 C++ 개발 환경이 필요합니다.
 
@@ -110,9 +110,9 @@ AppDomain이 실행 중이면 호스트에서 이제 관리 코드를 실행할 
 void *pfnDelegate = NULL;
 hr = runtimeHost->CreateDelegate(
   domainId,
-  L"HW, Version=1.0.0.0, Culture=neutral",    // Target managed assembly
+  L"HW, Version=1.0.0.0, Culture=neutral",  // Target managed assembly
   L"ConsoleApplication.Program",            // Target managed type
-  L"Main",                                    // Target entry point (static method)
+  L"Main",                                  // Target entry point (static method)
   (INT_PTR*)&pfnDelegate);
 
 ((MainMethodFp*)pfnDelegate)(NULL);

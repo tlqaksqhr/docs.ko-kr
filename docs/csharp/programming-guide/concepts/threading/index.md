@@ -1,5 +1,5 @@
 ---
-title: "스레딩(C#) | Microsoft Docs"
+title: "스레딩(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: e3f213b43c2f05a5afef1db7aec8b9c2695df989
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 45ffa38254717c9aee29c3922bf801f6a90c716e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="threading-c"></a>스레딩(C#)
@@ -62,3 +62,4 @@ ms.lasthandoff: 07/03/2017
 |[스레드 풀링(C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)|시스템에서 관리하는 작업자 스레드 풀을 사용하는 방법을 설명합니다.|  
 |[방법: 스레드 풀 사용(C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|스레드 풀에서 여러 스레드의 동기화된 사용을 보여 줍니다.|  
 |[스레딩](https://msdn.microsoft.com/library/3e8s7xdd)|.NET Framework에서 스레딩을 구현하는 방법을 설명합니다.|
+

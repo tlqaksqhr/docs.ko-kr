@@ -1,5 +1,5 @@
 ---
-title: "차단된 .NET Framework 설치 및 제거 문제 해결 | Microsoft Docs"
+title: "차단된 .NET Framework 설치 및 제거 문제 해결"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 57
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 1d3dd5bc21bee91fe997deb8d5000145f4098f9c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c0d2d657a44c813fc94f8342ba1e6c33b330dfdb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 

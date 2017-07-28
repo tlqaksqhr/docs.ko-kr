@@ -1,5 +1,5 @@
 ---
-title: "개체(Visual Basic) | Microsoft Docs"
+title: "개체(Visual Basic)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.suite: 
@@ -28,21 +28,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 6d4ed7e551c9a0d039f0206a86fa3a748dd728ef
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 98503c5764690d6dea90bf46a229e9ee2fd81df7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="objects-visual-basic" class="xliff"></a>
-
-# 개체(Visual Basic)
+# <a name="objects-visual-basic"></a>개체(Visual Basic)
 이 항목에서는 Visual Basic 런타임 개체를 설명하고 멤버 프로시저, 속성 및 이벤트 테이블을 포함하는 기타 항목의 링크를 제공합니다.  
   
-<a id="visual-basic-run-time-objects" class="xliff"></a>
-
-## Visual Basic 런타임 개체  
+## <a name="visual-basic-run-time-objects"></a>Visual Basic 런타임 개체  
   
 |||  
 |---|---|  
@@ -73,8 +69,7 @@ ms.lasthandoff: 05/26/2017
 |[My.WebServices 개체](../../../visual-basic/language-reference/objects/my-webservices-object.md)|현재 프로젝트에서 참조하는 각 웹 서비스의 단일 인스턴스를 만들고 액세스하기 위한 속성을 제공합니다.|  
 |<xref:Microsoft.VisualBasic.FileIO.TextFieldParser>|구조화된 텍스트 파일을 구문 분석하기 위한 메서드와 속성을 제공합니다.|  
   
-<a id="see-also" class="xliff"></a>
-
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Visual Basic 언어 참조](../../../visual-basic/language-reference/index.md)   
  [Visual Basic](../../../visual-basic/index.md)
+

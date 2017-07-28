@@ -1,5 +1,5 @@
 ---
-title: "선택적 단위 테스트 실행 | Microsoft Docs"
+title: "선택적 단위 테스트 실행"
 description: "필터 식을 사용하여 dotnet 명령으로 선택적 단위 테스트를 실행하는 방법을 보여 줍니다."
 keywords: ".NET, .NET Core, 단위 테스트, 선택적 테스트"
 author: smadala
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13d01272-bbf8-456c-a97a-560001d1a7f2
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ae036cfcad341ffc859336a7ab2a49feec145715
-ms.openlocfilehash: aceb0dc92b6c355a2b36a541d59cf1cd3cf4d0d4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: af832d04d2cba530a93710a90701ab119a66deef
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/18/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 

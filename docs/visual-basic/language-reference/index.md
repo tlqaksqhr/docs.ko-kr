@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 언어 참조 | Microsoft Docs"
+title: "Visual Basic 언어 참조"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -33,21 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: ada35fcbbbe84f6339f47af736a8581db85cfb56
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1ac47bde27397e80993a6bb5d2512715f44acfc1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-<a id="visual-basic-language-reference" class="xliff"></a>
-
-# Visual Basic 언어 참조
+# <a name="visual-basic-language-reference"></a>Visual Basic 언어 참조
 이 섹션에서는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 언어의 다양한 측면에 대한 참조 정보를 제공합니다.  
   
-<a id="in-this-section" class="xliff"></a>
-
-## 단원 내용  
+## <a name="in-this-section"></a>단원 내용  
  [글꼴 표시 및 코드 규칙](../../visual-basic/language-reference/typographic-and-code-conventions.md)  
  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 설명서에서 언어의 키워드, 자리 표시자 및 기타 요소에 대한 서식을 지정하는 방법을 요약합니다.  
   
@@ -108,11 +104,10 @@ ms.lasthandoff: 05/26/2017
  [오류 메시지](../../visual-basic/language-reference/error-messages/index.md)  
  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러 및 런타임 오류 메시지의 목록과 메시지를 처리하는 방법에 대한 도움말을 제공합니다.  
   
-<a id="related-sections" class="xliff"></a>
-
-## 관련 단원  
+## <a name="related-sections"></a>관련 단원  
  [Visual Basic](../../visual-basic/index.md)  
  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 언어의 모든 영역에 대한 포괄적인 도움말을 제공합니다.  
   
  [Visual Basic 명령줄 컴파일러](../../visual-basic/reference/command-line-compiler/index.md)  
  [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] IDE(통합 개발 환경) 내에서 프로그램을 컴파일하는 대신 명령줄 컴파일러를 사용하는 방법을 설명합니다.
+

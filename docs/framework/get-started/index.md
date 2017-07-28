@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 시작 | Microsoft Docs"
+title: ".NET Framework 시작"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 42d0ddd649ffaaaf375c3396e4a82b066c9719e9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f5c2441148ba869629a88ab2fcc83131f5205493
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework 시작
@@ -86,10 +86,11 @@ ms.lasthandoff: 05/19/2017
 |[.NET Framework 및 번외 릴리스](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)|.NET Framework 번외 릴리스 및 이러한 릴리스를 응용 프로그램에서 사용하는 방법에 대해 설명합니다.|
 |[시스템 요구 사항](../../../docs/framework/get-started/system-requirements.md)|.NET Framework를 실행하기 위한 하드웨어 및 소프트웨어 요구 사항이 나와 있습니다.|
 |[.NET Core 및 오픈 소스](../../../docs/framework/get-started/net-core-and-open-source.md)|.NET Core와 .NET Framework 간의 관계 및 오픈 소스 .NET Core 프로젝트에 액세스하는 방법에 대해 설명합니다.|
-|[.NET Core 설명서](https://docs.microsoft.com/dotnet/)|.NET Core에 대한 개념 및 API 참조 설명서입니다.|
+|[.NET Core 설명서](/dotnet/)|.NET Core에 대한 개념 및 API 참조 설명서입니다.|
 
 ## <a name="see-also"></a>참고 항목
  [.NET Framework 가이드](../../../docs/framework/index.md)   
  [새로운 기능](../../../docs/framework/whats-new/index.md)   
  [.NET API 브라우저](/dotnet/api/)   
  [개발 가이드](../../../docs/framework/development-guide.md)
+

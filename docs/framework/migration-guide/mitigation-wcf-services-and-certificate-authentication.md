@@ -1,5 +1,5 @@
 ---
-title: "완화: WCF 서비스 및 인증서 인증 | Microsoft Docs"
+title: "완화: WCF 서비스 및 인증서 인증"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -15,23 +15,20 @@ caps.latest.revision: 3
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
-ms.openlocfilehash: 0b32fa96cd002e927fa00e8c2a797d1ff6b17cb8
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1d6f78d24fc6411fca81fbbb8eb886d6d0a7fe9c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/30/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# 완화: WCF 서비스 및 인증서 인증
-<a id="mitigation-wcf-services-and-certificate-authentication" class="xliff"></a>
+# <a name="mitigation-wcf-services-and-certificate-authentication"></a>완화: WCF 서비스 및 인증서 인증
 .NET Framework 4.6은 WCF SSL 프로토콜 기본 목록에 TLS 1.1 및 TLS 1.2를 추가합니다. 클라이언트와 서버 컴퓨터에.NET Framework 4.6 및 이후 버전이 설치되어 있으면 TLS 1.2가 협상에 사용됩니다.  
   
-## 영향
-<a id="impact" class="xliff"></a>  
+## <a name="impact"></a>영향  
  TLS 1.2는 MD5 인증서 인증을 지원하지 않습니다. 결과적으로 고객이 해시 알고리즘에 대해 MD5를 사용하는 SSL 인증서를 사용 하는 경우 WCF 클라이언트에서 WCF 서비스에 연결하지 못합니다. 자세한 내용은 [완화: WCF 서비스 및 인증서 인증](../../../docs/framework/migration-guide/mitigation-wcf-services-and-certificate-authentication.md)을 참조하십시오.  
   
-## 완화
-<a id="mitigation" class="xliff"></a>  
+## <a name="mitigation"></a>완화  
  다음 중 하나를 수행하여 WCF 클라이언트가 WCF 서버에 연결할 수 있도록 함으로써 이 문제를 해결할 수 있습니다.  
   
 -   MD5 알고리즘을 사용 하지 않도록 인증서를 업데이트합니다. 이것은 권장되는 해결 방법입니다.  
@@ -67,7 +64,6 @@ ms.lasthandoff: 05/30/2017
     > [!CAUTION]
     >  MD5 해시 알고리즘을 사용하는 인증서는 안전하지 않은 것으로 간주되므로 이 해결 방법은 권장되지 않습니다.  
   
-## 참고 항목
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>참고 항목  
  [런타임 변경 내용](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
 

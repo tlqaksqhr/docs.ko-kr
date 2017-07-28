@@ -1,5 +1,5 @@
 ---
-title: ".NET 시작 | Microsoft Docs"
+title: ".NET 시작"
 description: ".NET 기술 제품군을 시작합니다."
 keywords: ".NET, .NET Core, 시작, 뉴스"
 author: richlander
@@ -9,25 +9,21 @@ ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: cb788dcf-2120-467f-9c34-c02a90e1f68f
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c12811f3eb8b0aeeeeab6d41ba2983ee9a0ae0f9
-ms.openlocfilehash: 7055438edf0ce4466f3ae6a5d8eb9216b324d3b7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0c6d4d9efbf51d8ae6308a34cbc4f522cceea001
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/06/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="welcome-to-net" class="xliff"></a>
-
-# .NET 시작
+# <a name="welcome-to-net"></a>.NET 시작
 
 .NET Core 앱을 만드는 방법은 [.NET Core 시작](core/get-started.md)을 참조하세요.
 
 무료 플랫폼 간 도구를 사용하여 .NET으로 클라우드, IoT, 게임 등 다양한 유형의 앱을 빌드합니다. 그리고 Android, iOS, Linux, macOS 및 Windows에서 해당 앱을 실행할 수 있습니다. 앱을 서버 또는 데스크톱에 배포하고 모바일 장치에 배포하기 위해 앱 스토어에 게시합니다. .NET은 학생 및 아마추어 프로그래머가 사용할 수 있으며 이들 모두 활기 넘치는 국제 개발자 커뮤니티에 참여하고 다양 한 .NET 기술에 대한 글을 직접 작성할 수 있습니다.
 
-<a id="news" class="xliff"></a>
-
-## 뉴스
+## <a name="news"></a>뉴스
 
 - [Introducing .NET Standard](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/)(표준 .NET 소개)
 - [Announcing .NET Core 2.0 Preview 2](https://blogs.msdn.microsoft.com/dotnet/2017/06/28/announcing-net-core-2-0-preview-2/)(.NET Core 2.0 Preview 2 발표)
@@ -44,9 +40,7 @@ ms.lasthandoff: 07/06/2017
 - [The week in .NET](https://blogs.msdn.microsoft.com/dotnet/tag/week-in-net/)(이 주의 .NET 소식)
 - [Build 2017 on Channel 9 - Video on Microsoft's latest technologies and news!](https://channel9.msdn.com/?wt.mc_id=build_hp#programGuide)(Channel 9의 Build 2017 - Microsoft의 최신 기술 및 뉴스에 대한 비디오!)
 
-<a id="documentation" class="xliff"></a>
-
-## 설명서
+## <a name="documentation"></a>설명서
 
 이 문서에서는 .NET의 다양한 플랫폼 및 언어 지원에 대해 설명합니다.  다음 섹션 중 하나에서 .NET 및 해당 언어를 시작할 수 있습니다.
 
@@ -57,11 +51,9 @@ ms.lasthandoff: 07/06/2017
 - [F# 가이드](fsharp/index.md)
 - [Visual Basic 가이드](visual-basic/index.md)
 
-또한 [.NET API 참조](https://docs.microsoft.com/dotnet/api)를 찾아볼 수 있습니다.
+또한 [.NET API 참조](/dotnet/api)를 찾아볼 수 있습니다.
 
-<a id="open-source" class="xliff"></a>
-
-## 소스 열기
+## <a name="open-source"></a>소스 열기
 
 이 문서는 완전히 [오픈 소스](https://github.com/dotnet/docs)입니다.  문제 생성부터 문서 작성에 이르기까지 원하는 방식으로 참여할 수 있습니다.  .NET 자체도 대부분 오픈 소스입니다.
 

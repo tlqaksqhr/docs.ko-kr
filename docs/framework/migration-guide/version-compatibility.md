@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework의 버전 호환성 | Microsoft 문서"
+title: ".NET Framework의 버전 호환성"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,11 +18,11 @@ caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 09f682d9c3a1cf5d42bba878676d84b9328a1a81
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 741c2d1c49f44a6a7b299845cdc37cc8425c326b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>.NET Framework의 버전 호환성
@@ -59,7 +59,7 @@ ms.lasthandoff: 05/22/2017
   
 -   이러한 항목에 대해 앱에 영향을 줄 수 있는 모든 변경 사항을 확인하고 설명된 해결 방법을 적용하십시오.  
   
-    -   [.NET Framework 4 마이그레이션 문제](http://go.microsoft.com/fwlink/p/?LinkId=248212)  
+    -   [.NET Framework 4 마이그레이션 문제](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)  
   
     -   [4.5의 응용 프로그램 호환성](../../../docs/framework/migration-guide/application-compatibility-in-the-net-framework-4-5.md)  
   
@@ -95,5 +95,5 @@ ms.lasthandoff: 05/22/2017
  [클래스 라이브러리의 사용되지 않는 기능](../../../docs/framework/whats-new/whats-obsolete.md)   
  [응용 프로그램 호환성](../../../docs/framework/migration-guide/application-compatibility.md)   
  [Microsoft .NET Framework 지원 기간 정책](http://go.microsoft.com/fwlink/p/?LinkId=248212)   
- [.NET Framework 4 마이그레이션 문제](http://go.microsoft.com/fwlink/p/?LinkId=248212)
+ [.NET Framework 4 마이그레이션 문제](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)
 

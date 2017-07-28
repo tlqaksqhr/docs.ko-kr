@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 시스템 요구 사항 | Microsoft 문서"
+title: ".NET Framework 시스템 요구 사항"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -20,23 +20,21 @@ caps.latest.revision: 95
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1cd1761d630f61a58f29d88e9342551d48cbc6a8
-ms.openlocfilehash: eb1d58651f1e982b53bc5cc06d4d58ba4690b1d7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4b48b2d7b8b6256c2395cee069d7705001258a0a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/20/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# .NET Framework 시스템 요구 사항
-<a id="net-framework-system-requirements" class="xliff"></a>
+# <a name="net-framework-system-requirements"></a>.NET Framework 시스템 요구 사항
 이 항목의 표에는 .NET Framework 4.7, [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 및 해당 포인트 릴리스(4.6.1 및 4.6.2)와 .NET Framework 4.5 및 해당 포인트 릴리스(4.5.1과 4.5.2)의 하드웨어, 운영 체제 및 소프트웨어 요구 사항이 나와 있습니다. .NET Framework용 응용 프로그램을 개발할 수 있는 개발 환경을 구축하려면 또 다른 여러 가지 요구 사항을 충족해야 합니다.
 
  다운로드 정보와 링크에 대해서는 [개발자용 .NET Framework 설치](../../../docs/framework/install/guide-for-developers.md)를 참조하세요.
 
  .NET Framework 버전의 지원 기간에 대한 자세한 내용은 [Microsoft 제품 지원 수명 주기](https://support.microsoft.com/en-us/lifecycle/search?sort=PN&alpha=Microsoft%20.NET%20Framework&Filter=FilterNO)를 참조하십시오.
 
-## 하드웨어 요구 사항
-<a id="hardware-requirements" class="xliff"></a>
+## <a name="hardware-requirements"></a>하드웨어 요구 사항
 
 |||
 |-|-|
@@ -46,13 +44,11 @@ ms.lasthandoff: 06/20/2017
 |32비트|4.5GB|
 |64비트|4.5GB|
 
-## 설치 요구 사항
-<a id="installation-requirements" class="xliff"></a>
+## <a name="installation-requirements"></a>설치 요구 사항
 
 - .NET Framework를 설치하려면 관리자 권한이 필요합니다. .NET Framework를 설치하려는 컴퓨터에 관리자 권한이 없는 경우 네트워크 관리자에게 문의하세요.
 
-## 지원되는 클라이언트 운영 체제
-<a id="supported-client-operating-systems" class="xliff"></a>
+## <a name="supported-client-operating-systems"></a>지원되는 클라이언트 운영 체제
 
 |운영 체제|지원되는 버전|OS가 사전 설치됨|별도로 설치 가능|
 |----------------------|------------------------|------------------------------|----------------------------|
@@ -78,8 +74,7 @@ ms.lasthandoff: 06/20/2017
 
 - 64비트 운영 체제에서는 .NET Framework가 WOW64(64비트 컴퓨터의 32비트 프로세싱) 및 64비트 프로세싱을 둘 다 지원합니다.
 
-## 지원되는 서버 운영 체제
-<a id="supported-server-operating-systems" class="xliff"></a>
+## <a name="supported-server-operating-systems"></a>지원되는 서버 운영 체제
 
 |운영 체제|지원되는 버전|OS가 사전 설치됨|별도로 설치 가능|
 |----------------------|------------------------|------------------------------|----------------------------|
@@ -101,8 +96,7 @@ ms.lasthandoff: 06/20/2017
 
 - 64비트 운영 체제에서는 .NET Framework가 WOW64(64비트 컴퓨터의 32비트 프로세싱) 및 64비트 프로세싱을 둘 다 지원합니다.
 
-## 참고 항목
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>참고 항목
  [설치 가이드](../../../docs/framework/install/index.md)   
  [시작](../../../docs/framework/get-started/index.md)   
  [차단된 .NET Framework 설치 및 제거 문제 해결](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)

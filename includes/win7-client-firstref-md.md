@@ -1,1 +1,1 @@
-Windows&7; 운영 체제
+Windows 7 운영 체제
