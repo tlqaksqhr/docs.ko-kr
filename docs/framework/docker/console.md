@@ -1,5 +1,5 @@
 ---
-title: "Docker에서 콘솔 응용 프로그램 실행 | Microsoft Docs"
+title: "Docker에서 콘솔 응용 프로그램 실행"
 description: "기존 .NET Framework 콘솔 응용 프로그램을 가져와 Windows Docker 컨테이너에서 실행하는 방법을 알아봅니다."
 author: spboyer
 keywords: ".NET, 컨테이너, 콘솔, 응용 프로그램"
@@ -10,10 +10,10 @@ ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: 36df4d44e5c6f5493009ef9cfebeb9f31683a884
+ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
+ms.openlocfilehash: 4f1034763e4dae3711694b441b7a64b40cc99456
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/01/2017
+ms.lasthandoff: 04/18/2017
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio 2017을 사용하여 C# Hello World 응용 프로그램 디버그 | Microsoft Docs"
+title: "Visual Studio 2017을 사용하여 C# Hello World 응용 프로그램 디버그"
 description: "Visual Studio 2017에서 C#으로 작성된 Hello World 앱을 디버그하는 방법을 알아봅니다."
 keywords: ".NET Core, .NET Core 콘솔 응용 프로그램, .NET Core 디버깅"
 author: BillWagner
@@ -11,22 +11,18 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: cb213625-cc60-438b-9b9e-49aed0e4a974
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 026158029bfc843bd6cd171933091dc9ac6d4dbe
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a3ed6572d0c8f64f89f77527aa21df454b30982c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="debugging-your-c-hello-world-application-with-visual-studio-2017" class="xliff"></a>
-
-# Visual Studio 2017을 사용하여 C# Hello World 응용 프로그램 디버그
+# <a name="debugging-your-c-hello-world-application-with-visual-studio-2017"></a>Visual Studio 2017을 사용하여 C# Hello World 응용 프로그램 디버그
 
 지금까지 [Visual Studio 2017에서 .NET Core를 사용하여 C# Hello World 응용 프로그램 빌드](.\with-visual-studio.md)의 단계에 따라 간단한 콘솔 응용 프로그램을 만들고 실행했습니다. 응용 프로그램을 작성하고 컴파일했으면 테스트를 시작할 수 있습니다. Visual Studio에는 응용 프로그램을 테스트하고 문제를 해결하는 데 사용할 수 있는 포괄적인 디버깅 도구 집합이 포함되어 있습니다.
 
-<a id="debugging-in-debug-mode" class="xliff"></a>
-
-## 디버그 모드에서 디버깅
+## <a name="debugging-in-debug-mode"></a>디버그 모드에서 디버깅
 
 *디버그* 및 *릴리스*는 Visual Studio의 기본 빌드 구성 중 두 개입니다. 현재 빌드 구성은 도구 모음에 표시됩니다. 다음 도구 모음 그림은 Visual Studio가 **디버그** 모드로 응용 프로그램을 컴파일하도록 구성되어 있음을 보여 줍니다.
 
@@ -34,9 +30,7 @@ ms.lasthandoff: 05/23/2017
 
 항상 디버그 모드에서 프로그램을 테스트하면서 시작해야 합니다. 디버그 모드는 대부분의 컴파일러 최적화를 끄고 빌드 프로세스 중 보다 다양한 정보를 제공합니다.
 
-<a id="setting-a-breakpoint" class="xliff"></a>
-
-## 중단점 설정
+## <a name="setting-a-breakpoint"></a>중단점 설정
 
 디버그 모드에서 프로그램을 실행하고 몇 가지 디버깅 기능을 수행합니다.
 
@@ -68,9 +62,7 @@ ms.lasthandoff: 05/23/2017
 
 1. 아무 키나 눌러 응용 프로그램을 끝내고 디버그 모드를 종료합니다.
 
-<a id="setting-a-conditional-breakpoint" class="xliff"></a>
-
-## 조건부 중단점 설정
+## <a name="setting-a-conditional-breakpoint"></a>조건부 중단점 설정
 
 프로그램은 사용자가 입력하는 문자열을 표시합니다. 사용자가 아무 값도 입력하지 않으면 어떻게 되나요? 하나 이상의 조건이 충족될 경우 프로그램 실행을 중단하는 유용한 디버깅 기능인 *조건부 중단점*을 사용하여 테스트할 수 있습니다.
 
@@ -112,9 +104,7 @@ ms.lasthandoff: 05/23/2017
 
 1. 코드 창 왼쪽 여백에 있는 점을 클릭하거나 행을 선택하고 **디버그 > 중단점 설정/해제** 메뉴 항목을 선택하여 중단점을 지웁니다.
 
-<a id="stepping-through-a-program" class="xliff"></a>
-
-## 단계별 프로그램 실행
+## <a name="stepping-through-a-program"></a>단계별 프로그램 실행
 
 Visual Studio에서 프로그램을 한 줄씩 단계별로 실행하고 해당 실행을 모니터링할 수도 있습니다. 일반적으로 중단점을 설정하고 이 기능을 사용하여 프로그램 코드 일부의 프로그램 흐름을 따라가면서 확인할 수 있습니다. 여기서는 프로그램이 작으므로 다음을 수행하여 전체 프로그램을 단계별로 실행할 수 있습니다.
 
@@ -142,9 +132,7 @@ Visual Studio에서 프로그램을 한 줄씩 단계별로 실행하고 해당 
 
 1. 아무 키나 눌러 콘솔 창을 닫고 디버그 모드를 끝냅니다.
 
-<a id="building-a-release-version" class="xliff"></a>
-
-## 릴리스 버전 빌드
+## <a name="building-a-release-version"></a>릴리스 버전 빌드
 
 응용 프로그램의 디버그 빌드를 테스트한 후에는 릴리스 버전을 컴파일하고 테스트해야 합니다. 릴리스 버전에는 응용 프로그램의 동작에 부정적인 영향을 줄 수 있는 컴파일러 최적화가 통합됩니다. 예를 들어 성능 향상을 위해 설계된 컴파일러 최적화는 비동기 또는 다중 스레드 응용 프로그램에서 경합 상태를 만들 수 있습니다.
 

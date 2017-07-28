@@ -1,5 +1,5 @@
 ---
-title: "LINQ 작업 | Microsoft Docs"
+title: "LINQ 작업"
 description: "이 자습서에서는 LINQ를 사용하여 시퀀스를 생성하고, LINQ 쿼리에서 사용할 메서드를 작성하고, 즉시 계산 및 지연 계산 간을 구분하는 방법을 알아봅니다."
 keywords: .NET, .NET Core
 author: BillWagner
@@ -11,24 +11,20 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 81ae0a1bd54aff6a5be39ef75cf24eb29d3e0671
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ec86c558b9aa9c6269fcf9890978f61a934c081f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="working-with-linq" class="xliff"></a>
+# <a name="working-with-linq"></a>LINQ 작업
 
-# LINQ 작업
-
-<a id="introduction" class="xliff"></a>
-
-## 소개
+## <a name="introduction"></a>소개
 
 이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능에 대해 설명합니다. 다음을 배울 수 있습니다.
 
-*    LINQ를 사용하여 시퀀스를 생성하는 방법
+*   LINQ를 사용하여 시퀀스를 생성하는 방법
 *   LINQ 쿼리에서 쉽게 사용할 수 있는 메서드를 작성하는 방법
 *   즉시 계산 및 지연 계산을 구분하는 방법
 
@@ -40,23 +36,17 @@ ms.lasthandoff: 05/23/2017
 
 이 자습서는 여러 단계로 구성됩니다. 각 단계 후에 응용 프로그램을 실행하고 진행 상황을 확인할 수 있습니다. GitHub의 dotnet/docs 리포지토리에서 [완성된 샘플](https://github.com/dotnet/docs/blob/master/samples/csharp/getting-started/console-linq)을 볼 수도 있습니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
 
-<a id="prerequisites" class="xliff"></a>
-
-## 필수 구성 요소
+## <a name="prerequisites"></a>필수 구성 요소
 
 .NET Core를 실행하도록 컴퓨터에 설정해야 합니다. [.NET Core](https://www.microsoft.com/net/core) 페이지에서 설치 지침을 확인할 수 있습니다. Windows, Ubuntu Linux, OS X 또는 Docker 컨테이너에서 이 응용 프로그램을 실행할 수 있습니다. 선호하는 코드 편집기를 설치해야 합니다. 아래 설명에서는 오픈 소스 플랫폼 간 편집기인 [Visual Studio Code](https://code.visualstudio.com/)를 사용합니다. 그러나 익숙한 어떤 도구도 사용 가능합니다.
 
-<a id="create-the-application" class="xliff"></a>
-
-## 응용 프로그램 만들기
+## <a name="create-the-application"></a>응용 프로그램 만들기
 
 첫 번째 단계에서는 새 응용 프로그램을 만듭니다. 명령 프롬프트를 열고 응용 프로그램에 대한 새 디렉터리를 만듭니다. 해당 디렉터리를 현재 디렉터리로 지정합니다. 명령 프롬프트에 명령 `dotnet new console`을 입력합니다. 이렇게 하면 기본 "Hello World" 응용 프로그램에 대한 시작 파일이 만들어집니다.
 
 이전에 C#을 사용해본 적이 없으면 [이 자습서](console-teleprompter.md)에서 C# 프로그램의 구조를 확인하세요. 해당 부분을 읽고 여기로 돌아와 LINQ에 대해 자세히 알아볼 수 있습니다. 
 
-<a id="creating-the-data-set" class="xliff"></a>
-
-## 데이터 집합 만들기
+## <a name="creating-the-data-set"></a>데이터 집합 만들기
 
 먼저 카드 데크를 만들어 보겠습니다. 두 개의 소스(4개 카드 세트에 대해 1개, 13개 값에 대해 1개)가 있는 LINQ 쿼리를 사용하여 이 작업을 수행합니다. 이러한 소스를 52개 카드 데크로 조합합니다. `foreach` 루프 내의 `Console.WriteLine` 문이 카드를 표시합니다.
 
@@ -110,9 +100,7 @@ static IEnumerable<string> Ranks()
 
 ![52개의 카드를 작성하는 앱을 표시하는 콘솔 창](./media/working-with-linq/console.png)
 
-<a id="manipulating-the-order" class="xliff"></a>
-
-## 순서 조작
+## <a name="manipulating-the-order"></a>순서 조작
 
 다음에는 순서 섞기를 수행할 수 있는 유틸리티 메서드를 빌드해 보겠습니다. 첫 번째 단계는 데크를 하나로 분할하는 것입니다. LINQ API에 속하는 `Take()` 및 `Skip()` 메서드가 이 기능을 제공합니다.
 
@@ -185,9 +173,7 @@ public static void Main(string[] args)
 }
 ```
 
-<a id="comparisons" class="xliff"></a>
-
-## 비교
+## <a name="comparisons"></a>비교
 
 데크가 원래 순서로 돌아가는 데 몇 번을 섞어야 하는지 살펴보겠습니다. 두 시퀀스가 서로 같은지 확인하는 메서드를 작성해야 합니다. 이 메서드를 만든 후에는 데크 순서를 섞는 코드를 루프에 배치하고 데크가 원래 순서로 돌아갈 때를 확인해야 합니다.
 
@@ -221,9 +207,7 @@ Console.WriteLine(times);
 
 샘플을 실행하고, 8회 반복 후 원래 구성으로 돌아갈 때까지 각 순서 섞기에서 데크가 재정렬되는 방식을 확인합니다.
 
-<a id="optimizations" class="xliff"></a>
-
-## 최적화
+## <a name="optimizations"></a>최적화
 
 지금까지 빌드한 샘플은 *내부 순서 섞기*을 실행합니다. 즉, 맨 위 및 맨 아래 카드가 실행할 때마다 항상 같은 위치에 있습니다. 한 가지 부분을 변경하여 52장 카드가 모두 위치를 바꾸는 *외부 순서 섞기*를 실행해 보겠습니다. 외부 순서 섞기의 경우 반으로 나눈 아래쪽 부분의 첫 번째 카드가 데크의 첫 번째 카드가 되도록 데크를 인터리브합니다. 즉, 반으로 나눈 위쪽 부분의 마지막 카드가 맨 아래 카드가 됩니다. 이를 위해 한 줄만 변경하면 됩니다. 데크의 위쪽 절반과 아래쪽 절반의 순서를 변경하도록 순서 섞기 호출을 업데이트합니다.
 
@@ -301,9 +285,7 @@ public static void Main(string[] args)
 
 실제로 즉시 계산을 사용할 때 성능이 더 좋아지는 알고리즘도 있고, 지연 계산을 사용할 때 성능이 더 좋아지는 알고리즘도 있습니다. (일반적으로 지연 계산은 데이터베이스 엔진과 같이 데이터 소스가 별도 프로세스일 때 사용하면 더 좋습니다. 이러한 경우 지연 계산은 좀 더 복잡한 쿼리를 통해 데이터베이스 프로세스에 대해 단일 왕복만 실행하도록 합니다.) LINQ는 지연 및 즉시 계산을 모두 가능하게 합니다. 계산해 보고 최상의 방법을 선택합니다.
 
-<a id="preparing-for-new-features" class="xliff"></a>
-
-## 새 기능 준비
+## <a name="preparing-for-new-features"></a>새 기능 준비
 
 이 샘플에 대해 작성한 코드는 작업을 수행하는 간단한 프로토타입을 만드는 예제입니다. 이러한 방식은 문제 영역을 탐색할 수 있는 좋은 방법이며 많은 기능에서 최선의 영구적인 해결책이 될 수 있습니다. 카드에 대해 *익명 형식*을 사용했으며 각 카드는 문자열로 표현됩니다.
 
@@ -347,9 +329,7 @@ var startingDeck = (from s in Suits().LogQuery("Suit Generation")
 
 컴파일하고 다시 실행합니다. 출력은 조금 더 간결해지며 코드는 좀 더 명확하고 보다 쉽게 확장될 수 있습니다.
 
-<a id="conclusion" class="xliff"></a>
-
-## 결론
+## <a name="conclusion"></a>결론
 
 이 샘플에서는 LINQ에서 사용되는 일부 메서드를 통해 LINQ 지원 코드에서 쉽게 사용할 수 있는 자체 메서드를 만드는 방법을 보여 줍니다. 또한 지연 계산 및 즉시 계산 간의 차이점과 이러한 결정이 성능이 미칠 수 있는 결과도 보여 주었습니다.
 
