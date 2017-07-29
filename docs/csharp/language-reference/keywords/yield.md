@@ -1,5 +1,5 @@
 ---
-title: "yield(C# 참조) | Microsoft 문서"
+title: "yield(C# 참조)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,15 +30,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 22ef950c85b5d19141ea346a9e02d58003f45232
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: eb55fd5b1ade48316516cda83633935abbf8dcf9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="yield-c-reference"></a>yield(C# 참조)
-문에 `yield` 키워드를 사용하는 경우 해당 메서드, 연산자, 또는 이 키워드가 나타나는 `get` 접근자가 반복기임을 나타냅니다. 사용자 지정 컬렉션 형식에 대한 <xref:System.Collections.IEnumerable> 및 <xref:System.Collections.IEnumerator> 패턴을 구현할 때 `yield`를 사용하여 반복기를 정의하면 명시적인 추가 클래스가 필요하지 않습니다(열거형의 상태를 보관하는 클래스의 예는 <xref:System.Collections.Generic.IEnumerator%601> 참조).  
+문에 `yield` 키워드를 사용하는 경우 해당 메서드, 연산자, 또는 이 키워드가 나타나는 `get` 접근자가 반복기임을 나타냅니다. `yield`를 사용하여 반복기를 정의할 경우 사용자 지정 컬렉션 형식에 <xref:System.Collections.Generic.IEnumerator%601> 및 <xref:System.Collections.IEnumerable> 패턴을 구현하면 명시적 추가 클래스(열거형의 상태를 보관하는 클래스, 예제는 <xref:System.Collections.IEnumerator> 참조)를 사용하지 않아도 됩니다.  
   
  다음 예제에서는 두 가지 형태의 `yield` 문을 보여줍니다.  
   
@@ -59,11 +59,11 @@ yield break;
 ## <a name="iterator-methods-and-get-accessors"></a>반복기 메서드 및 Get 접근자  
  반복기 선언은 다음과 같은 요구 사항을 충족해야 합니다.  
   
--   반환 형식은 <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> 또는 <xref:System.Collections.Generic.IEnumerator%601>여야 합니다.  
+-   반환 형식은 <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, 또는 <xref:System.Collections.Generic.IEnumerator%601>여야 합니다.  
   
 -   선언에 [ref](../../../csharp/language-reference/keywords/ref.md) 또는 [out](../../../csharp/language-reference/keywords/out.md) 매개 변수가 허용되지 않습니다.  
   
- <xref:System.Collections.IEnumerable> 또는 <xref:System.Collections.IEnumerator>를 반환하는 반복기의 `yield` 형식은 `object`입니다.  반복기가 <xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Collections.Generic.IEnumerator%601>를 반환하는 경우 `yield return` 문에 있는 식의 형식에서 제네릭 형식 매개 변수로의 암시적 변환이 있어야 합니다.  
+ `yield` 또는 <xref:System.Collections.IEnumerable>를 반환하는 반복기의 <xref:System.Collections.IEnumerator> 형식은 `object`입니다.  반복기가 <xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Collections.Generic.IEnumerator%601>를 반환할 경우 `yield return` 문의 식 형식에서 제네릭 형식 매개 변수로 암시적 변환이 있어야 합니다.  
   
  `yield return` 또는 `yield break` 문은 다음과 같은 특징이 있는 메서드에 사용할 수 없습니다.  
   
@@ -91,7 +91,7 @@ foreach (string element in elements)
   
  `MyIteratorMethod` 호출은 메서드의 본문을 실행하지 않습니다. 대신에 `IEnumerable<string>` 변수에 `elements`을 반환합니다.  
   
- `foreach` 루프의 반복에서 `elements`에 대해 <xref:System.Collections.IEnumerator.MoveNext%2A> 메서드가 호출됩니다. 이 호출은 다음 `MyIteratorMethod` 문에 도달할 때까지 `yield return` 본문을 실행합니다. `yield return` 문에서 반환하는 식은 루프 본문에서 사용하는 `element` 변수의 값은 물론, 요소의 <xref:System.Collections.Generic.IEnumerator%601.Current%2A> 속성인 `IEnumerable<string>`도 결정합니다.  
+ `foreach` 루프 반복에서 <xref:System.Collections.IEnumerator.MoveNext%2A>에 대한 `elements` 메서드가 호출됩니다. 이 호출은 다음 `MyIteratorMethod` 문에 도달할 때까지 `yield return` 본문을 실행합니다. `yield return` 문에서 반환하는 식은 루프 본문에서 사용하는 `element` 변수 값뿐만 아니라 요소의 <xref:System.Collections.Generic.IEnumerator%601.Current%2A> 속성인 `IEnumerable<string>`도 결정합니다.  
   
  이후에 `foreach` 루프가 반복될 때마다 중지되었던 위치에서 반복기 본문 실행이 계속되고 `yield return` 문에 도달하면 다시 중지됩니다. `foreach` 루프는 반복기 메서드가 종료되거나 `yield break` 문에 도달하면 완료됩니다.  
   
@@ -115,3 +115,4 @@ foreach (string element in elements)
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
  [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)   
  [반복기](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)
+

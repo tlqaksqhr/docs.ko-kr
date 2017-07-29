@@ -1,5 +1,5 @@
 ---
-title: "XElement 클래스 개요(C#) | Microsoft 문서"
+title: "XElement 클래스 개요(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,17 +19,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 193ae8193d73d57638835c96c3f7dfd28d320473
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 20c6c7aed7d00b26d08f3733147616313ad851f3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="xelement-class-overview-c"></a>XElement 클래스 개요(C#)
-<xref:System.Xml.Linq.XElement> 클래스는 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]의 기본 클래스 중 하나입니다. XML 요소를 나타냅니다. 이 클래스를 사용하여 요소를 만들거나, 요소의 내용을 변경하거나, 자식 요소를 추가, 변경 또는 삭제하거나, 특성을 요소에 추가하거나, 요소의 내용을 텍스트 형태로 serialize할 수 있습니다. <xref:System.Xml?displayProperty=fullName>에서 <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, <xref:System.Xml.Xsl.XslCompiledTransform>과 같은 기타 클래스와 상호 운용이 가능합니다.  
+<xref:System.Xml.Linq.XElement> 클래스는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]의 기본 클래스 중 하나이며 XML 요소를 나타냅니다. 이 클래스를 사용하여 요소를 만들거나, 요소의 내용을 변경하거나, 자식 요소를 추가, 변경 또는 삭제하거나, 특성을 요소에 추가하거나, 요소의 내용을 텍스트 형태로 serialize할 수 있습니다. 또한 <xref:System.Xml?displayProperty=fullName>, <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter>과 같은 <xref:System.Xml.Xsl.XslCompiledTransform>의 다른 클래스와 상호 운용할 수도 있습니다.  
   
 ## <a name="xelement-functionality"></a>XElement 기능  
- 이 항목에서는 <xref:System.Xml.Linq.XElement> 클래스가 제공하는 기능에 대해 설명합니다.  
+ 이 항목에서는 <xref:System.Xml.Linq.XElement> 클래스에서 제공하는 기능에 대해 설명합니다.  
   
 ### <a name="constructing-xml-trees"></a>XML 트리 생성  
  다음과 같은 다양한 방법으로 XML 트리를 생성할 수 있습니다.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 03/13/2017
   
 -   <xref:System.IO.TextReader>, 텍스트 파일 또는 웹 주소(URL)와 같은 다양한 소스에서 XML의 구문을 분석할 수 있습니다. 자세한 내용은 [XML 구문 분석(C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)을 참조하세요.  
   
--   <xref:System.Xml.XmlReader>를 사용하여 트리를 채울 수 있습니다. 자세한 내용은 <xref:System.Xml.Linq.XNode.ReadFrom%2A>를 참조하세요.  
+-   <xref:System.Xml.XmlReader>를 사용하여 트리를 채울 수 있습니다. 자세한 내용은 <xref:System.Xml.Linq.XNode.ReadFrom%2A>을 참조하세요.  
   
 -   내용을 <xref:System.Xml.XmlWriter>에 쓸 수 있는 모듈이 있는 경우 <xref:System.Xml.Linq.XContainer.CreateWriter%2A> 메서드를 사용하여 작성기를 만들고 모듈에 작성기를 전달한 다음 <xref:System.Xml.XmlWriter>에 쓴 내용을 사용하여 XML 트리를 채울 수 있습니다.  
   
@@ -60,7 +61,7 @@ XElement contacts =
     );  
 ```  
   
- XML 트리를 만드는 또 다른 일반적인 방법에는 다음 예제에서와 같이 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 쿼리의 결과를 사용하여 XML 트리를 채우는 작업이 포함됩니다.  
+ XML 트리를 만드는 또 다른 일반적인 방법에는 다음 예제에서와 같이 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리의 결과를 사용하여 XML 트리를 채우는 작업이 포함됩니다.  
   
 ```csharp  
 XElement srcTree = new XElement("Root",  
@@ -98,12 +99,12 @@ Console.WriteLine(xmlTree);
  자세한 내용은 [XML 트리 serialize(C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)를 참조하세요.  
   
 ### <a name="retrieving-xml-data-via-axis-methods"></a>축 메서드를 통해 XML 데이터 검색  
- 축 메서드를 사용하여 특성, 자식 요소, 하위 요소 및 상위 요소를 검색할 수 있습니다. [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 쿼리는 축 메서드에 대해 작동하며 XML 트리를 탐색하고 처리하는 융통성 있고 강력한 몇 가지 방법을 제공합니다.  
+ 축 메서드를 사용하여 특성, 자식 요소, 하위 요소 및 상위 요소를 검색할 수 있습니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리는 축 메서드에 대해 작동하며 XML 트리를 탐색하고 처리하는 융통성 있고 강력한 몇 가지 방법을 제공합니다.  
   
  자세한 내용은 [LINQ to XML 축(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)을 참조하세요.  
   
 ### <a name="querying-xml-trees"></a>XML 트리 쿼리  
- XML 트리에서 데이터를 추출하는 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 쿼리를 작성할 수 있습니다.  
+ XML 트리에서 데이터를 추출하는 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리를 작성할 수 있습니다.  
   
  자세한 내용은 [XML 트리 쿼리(C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)를 참조하세요.  
   
@@ -114,3 +115,4 @@ Console.WriteLine(xmlTree);
   
 ## <a name="see-also"></a>참고 항목  
  [LINQ to XML 프로그래밍 개요(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+

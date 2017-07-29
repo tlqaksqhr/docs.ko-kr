@@ -1,5 +1,5 @@
 ---
-title: "XML 문서 주석(C# 프로그래밍 가이드) | Microsoft 문서"
+title: "XML 문서 주석(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -34,11 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: 59f8c164acba31ac76387614b5603bb518417800
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 408b2de29b15158499067da05dbb2f89eb1ba22f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>XML 문서 주석(C# 프로그래밍 가이드)
@@ -51,7 +51,7 @@ Visual C#에서는 주석이 참조하는 코드 블록 바로 앞의 소스 코
 public class MyClass{}  
 ```  
   
- [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 옵션을 사용하여 컴파일하는 경우 컴파일러는 소스 코드에서 모든 XML 태그를 검색하고 XML 문서 파일을 만듭니다. 컴파일러에서 생성한 파일을 기반으로 최종 문서를 만들려면 사용자 지정 도구를 만들거나 [Sandcastle](http://go.microsoft.com/fwlink/?LinkId=124061)과 같은 도구를 사용하면 됩니다.  
+ [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) 옵션을 사용하여 컴파일하는 경우 컴파일러는 소스 코드에서 모든 XML 태그를 검색하고 XML 문서 파일을 만듭니다. 컴파일러에서 생성한 파일을 기반으로 최종 문서를 만들려면 사용자 지정 도구를 만들거나 [Sandcastle](https://github.com/EWSoftware/SHFB)과 같은 도구를 사용하면 됩니다.  
   
  XML 요소를 참조하려면(예를 들어, 함수가 XML 문서 주석에서 설명하려는 특정 XML 요소를 처리하는 경우) 표준 인용 메커니즘(`<` 및 `>`)을 사용할 수 있습니다.  코드 참조(`cref`) 요소에서 제네릭 식별자를 참조하려면 이스케이프 문자(예: `cref="List<T>"`) 또는 괄호(`cref="List{T}"`)를 사용할 수 있습니다.  특별한 경우로, 컴파일러는 제네릭 식별자를 참조할 때 문서 주석을 더 쉽게 작성할 수 있도록 괄호를 꺾쇠 괄호로 구문 분석합니다.  
   
@@ -74,7 +74,8 @@ public class MyClass{}
 -   [/doc(문서 주석 처리)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
+

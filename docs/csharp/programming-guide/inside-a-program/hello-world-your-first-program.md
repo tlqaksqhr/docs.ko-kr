@@ -1,5 +1,5 @@
 ---
-title: "Hello World -- 프로그램 처음 만들기(C# 프로그래밍 가이드) | Microsoft 문서"
+title: "Hello World -- 프로그램 처음 만들기(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,17 +31,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
-ms.openlocfilehash: 21abcf70cce2d6c9052629ce60d08e9ec6ac16e7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2305c0232038130e9d42d3e892597e3b753d5d08
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- 프로그램 처음 만들기(C# 프로그래밍 가이드)
 다음 절차에서는 기존 "Hello World!" 프로그램의 C# 버전을 만듭니다. 이 프로그램은 문자열 `Hello World!`를 표시합니다.  
   
- 소개 개념에 대한 추가 예제는 [Visual C# 및 Visual Basic 시작](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)을 참조하세요.  
+ 소개 개념에 대한 추가 예제는 [Visual C# 및 Visual Basic 시작](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)을 참조하세요.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -156,4 +156,5 @@ ms.lasthandoff: 05/22/2017
  [\<paveover>C# 샘플 응용 프로그램](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)   
  [C# 참조](../../../csharp/language-reference/index.md)   
  [Main()과 명령줄 인수](../../../csharp/programming-guide/main-and-command-args/index.md)   
- [Visual C# 및 Visual Basic 시작](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+ [Visual C# 및 Visual Basic 시작](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+

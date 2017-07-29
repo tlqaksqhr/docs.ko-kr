@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 파일 I/O 및 파일 시스템에 사용되는 클래스(Visual Basic) | Microsoft 문서"
+title: ".NET Framework 파일 I/O 및 파일 시스템에 사용되는 클래스(Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -30,17 +30,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: ca1ecff264734c16369c9a7d28fbb388bb2f1ccc
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a87d2e6f87b92b5f66706095d3f485c080008e0f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 파일 I/O 및 파일 시스템에 사용되는 클래스(Visual Basic)
 다음 표에는 .NET Framework 파일 I/O에 공통적으로 사용되고 파일 I/O 클래스로 범주화되는 클래스, 스트림을 만드는 데 사용되는 클래스 및 스트림을 읽고 스트림에 쓰는 데 사용되는 클래스가 나와 있습니다.  
   
- [!INCLUDE[dnprdnlong](../../../../csharp/programming-guide/events/includes/dnprdnlong_md.md)] 문서를 시작하고 더 포괄적인 목록을 찾으려면 [클래스 라이브러리 개요](https://msdn.microsoft.com/library/hfa3fa08)를 참조하세요.  
+ [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] 문서를 시작하고 더 포괄적인 목록을 찾으려면 [클래스 라이브러리 개요](https://msdn.microsoft.com/library/hfa3fa08)를 참조하세요.  
   
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>파일, 드라이브 및 디렉터리의 기본 I/O 클래스  
  다음 표에서는 파일 I/O에 사용되는 기본 클래스를 나열하고 설명합니다.  
@@ -87,3 +87,4 @@ ms.lasthandoff: 05/22/2017
  [파일 및 스트림 I/O](https://msdn.microsoft.com/library/k3352a4t)   
  [비동기 파일 I/O](https://msdn.microsoft.com/library/kztecsys)   
  [.NET Framework 파일 I/O 및 파일 시스템의 기본 사항(Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)
+

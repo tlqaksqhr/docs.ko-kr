@@ -1,5 +1,5 @@
 ---
-title: "식(C# 프로그래밍 가이드) | Microsoft Docs"
+title: "식(C# 프로그래밍 가이드)"
 ms.date: 2017-05-11
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 79efbca3d8d0b32c83dc3909e0a33839ecc0ef3e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9cfefe047805282ea682e127ffb56528fda48c0a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="expressions-c-programming-guide"></a>식(C# 프로그래밍 가이드)
@@ -101,3 +101,4 @@ C#에서는 메서드, 생성자, 종료자, 속성 및 인덱서에 대한 간�
  [연산자](../../../csharp/programming-guide/statements-expressions-operators/operators.md)   
  [형식](../../../csharp/programming-guide/types/index.md)   
  [LINQ 쿼리 식](../../../csharp/programming-guide/linq-query-expressions/index.md)
+

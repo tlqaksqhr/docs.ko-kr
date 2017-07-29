@@ -1,5 +1,5 @@
 ---
-title: "XAttribute 클래스 개요(C#) | Microsoft 문서"
+title: "XAttribute 클래스 개요(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,22 +19,23 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e1b461158fed20ea5824d89ec455abb667d3fef2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fdac066fbd467768cedcf93f6258cbde0b6dd847
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="xattribute-class-overview-c"></a>XAttribute 클래스 개요(C#)
 특성은 요소와 연결된 이름/값 쌍입니다. <xref:System.Xml.Linq.XAttribute> 클래스는 XML 특성을 나타냅니다.  
   
 ## <a name="overview"></a>개요  
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]에서 특성 작업은 요소 작업과 유사합니다. 특성과 요소의 생성자는 유사합니다. 특성과 요소의 컬렉션을 검색하는 데 사용하는 메서드는 유사합니다. 특성 컬렉션의 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 쿼리 식은 요소 컬렉션의 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 쿼리 식과 매우 유사하게 보입니다.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서 특성 작업은 요소 작업과 유사합니다. 특성과 요소의 생성자는 유사합니다. 특성과 요소의 컬렉션을 검색하는 데 사용하는 메서드는 유사합니다. 특성 컬렉션의 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 식은 요소 컬렉션의 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 식과 매우 유사하게 보입니다.  
   
  특성이 요소에 추가된 순서는 유지됩니다. 즉, 특성을 반복하는 경우 특성은 추가된 동일한 순서로 표시됩니다.  
   
 ## <a name="the-xattribute-constructor"></a>XAttribute 생성자  
- <xref:System.Xml.Linq.XAttribute> 클래스의 다음 생성자는 가장 일반적으로 사용하게 될 생성자입니다.  
+ <xref:System.Xml.Linq.XAttribute> 클래스의 다음 생성자는 가장 일반적으로 사용하는 생성자입니다.  
   
 |생성자|설명|  
 |-----------------|-----------------|  
@@ -57,7 +58,7 @@ Console.WriteLine(phone);
 ```  
   
 ### <a name="functional-construction-of-attributes"></a>특성의 함수 생성  
- 다음과 같이 <xref:System.Xml.Linq.XElement> 개체를 생성하면서 <xref:System.Xml.Linq.XAttribute> 개체도 함께 생성할 수 있습니다.  
+ <xref:System.Xml.Linq.XAttribute> 개체의 생성과 함께 다음과 같이 <xref:System.Xml.Linq.XElement> 개체를 인라인으로 생성할 수 있습니다.  
   
 ```csharp  
 XElement c = new XElement("Customers",  
@@ -91,9 +92,10 @@ Console.WriteLine(c);
 ```  
   
 ### <a name="attributes-are-not-nodes"></a>특성은 노드가 아님  
- 특성과 요소 사이에는 차이점이 있습니다. <xref:System.Xml.Linq.XAttribute> 개체는 XML 트리에서 노드가 아닙니다. 특성은 XML 요소와 연결된 이름/값 쌍입니다. DOM(문서 개체 모델)과 대조적으로 이는 XML의 구조를 더욱 충실하게 반영합니다. <xref:System.Xml.Linq.XAttribute> 개체는 XML 트리에서 실제로 노드가 아니지만, <xref:System.Xml.Linq.XAttribute> 개체 작업은 <xref:System.Xml.Linq.XElement> 개체 작업과 매우 유사합니다.  
+ 특성과 요소 사이에는 차이점이 있습니다. <xref:System.Xml.Linq.XAttribute> 개체는 XML 트리의 노드가 아닙니다. 특성은 XML 요소와 연결된 이름/값 쌍입니다. DOM(문서 개체 모델)과 대조적으로 이는 XML의 구조를 더욱 충실하게 반영합니다. <xref:System.Xml.Linq.XAttribute> 개체가 실제로 XML 트리의 노드는 아니지만 <xref:System.Xml.Linq.XAttribute> 개체 작업은 <xref:System.Xml.Linq.XElement> 개체 작업과 매우 유사합니다.  
   
  이 차이는 주로 노드 수준에서 XML 트리 작업을 하는 코드를 작성하는 개발자에게만 중요합니다. 대부분의 개발자는 이 차이에 대해 염려하지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [LINQ to XML 프로그래밍 개요(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+

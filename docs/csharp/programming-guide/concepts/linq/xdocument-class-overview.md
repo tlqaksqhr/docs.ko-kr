@@ -1,5 +1,5 @@
 ---
-title: "XDocument 클래스 개요(C#) | Microsoft 문서"
+title: "XDocument 클래스 개요(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 445b7dff10e25556dabb87867144edece7fc26f9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2e8513c8c969f7522866454838c6c08da528c1b6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="xdocument-class-overview-c"></a>XDocument 클래스 개요(C#)
@@ -51,10 +51,10 @@ ms.lasthandoff: 05/22/2017
   
  <xref:System.Xml.Linq.XDocument>를 serialize할 때 `XDocument.Declaration`이 `null`인 경우에도 작성기의 `Writer.Settings.OmitXmlDeclaration`이 `false`(기본값)로 설정되어 있으면 출력에 XML 선언이 포함됩니다.  
   
- 기본적으로 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]에서는 버전을 "1.0"으로 설정하고 인코딩을 "utf-8"로 설정합니다.  
+ 기본적으로 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 버전을 "1.0"으로 설정하고 인코딩을 "utf-8"로 설정합니다.  
   
 ## <a name="using-xelement-without-xdocument"></a>XDocument 없이 XElement 사용  
- 앞에서 설명했듯이 <xref:System.Xml.Linq.XElement> 클래스는 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 프로그래밍 인터페이스의 기본 클래스입니다. 응용 프로그램에서는 대부분의 경우 문서를 만들도록 요구하지 않습니다. <xref:System.Xml.Linq.XElement> 클래스를 사용하여 XML 트리를 만들고, XML 트리에 다른 XML 트리를 추가하고, XML 트리를 수정 및 저장할 수 있습니다.  
+ 앞에서 설명했듯이 <xref:System.Xml.Linq.XElement> 클래스는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 프로그래밍 인터페이스의 기본 클래스입니다. 응용 프로그램에서는 대부분의 경우 문서를 만들도록 요구하지 않습니다. <xref:System.Xml.Linq.XElement> 클래스를 사용하여 XML 트리를 만들고, XML 트리에 다른 XML 트리를 추가하고, XML 트리를 수정 및 저장할 수 있습니다.  
   
 ## <a name="using-xdocument"></a>XDocument 사용  
  <xref:System.Xml.Linq.XDocument>를 생성하려면 <xref:System.Xml.Linq.XElement> 개체를 생성할 때와 마찬가지로 함수 생성을 사용합니다.  
@@ -105,3 +105,4 @@ d.Save("test.xml");
   
 ## <a name="see-also"></a>참고 항목  
  [LINQ to XML 프로그래밍 개요(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+

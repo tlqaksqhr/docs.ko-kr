@@ -1,5 +1,5 @@
 ---
-title: "고정 크기 버퍼(C# 프로그래밍 가이드) | Microsoft 문서"
+title: "고정 크기 버퍼(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6c5cacb588dc263e5b72e4b3cd93ad10b4b681f2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e1a3dcf953cb56fc3436fdd5e7ecb60478a12922
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>고정 크기 버퍼(C# 프로그래밍 가이드)
@@ -55,7 +56,7 @@ private fixed char name[30];
   
  [!code-cs[csProgGuidePointers#20](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/fixed-size-buffers_2.cs)]  
   
- 128개 요소 `char` 배열의 크기는 256바이트입니다. 고정 크기 [char](../../../csharp/language-reference/keywords/char.md) 버퍼는 인코딩에 관계없이 항상 문자당 2바이트를 사용합니다. 이는 char 버퍼가 `CharSet = CharSet.Auto` 또는 `CharSet = CharSet.Ansi`를 사용하는 API 메서드 또는 구조체로 마샬링되는 경우에도 마찬가지입니다. 자세한 내용은 <xref:System.Runtime.InteropServices.CharSet>을 참조하세요.  
+ 128개 요소 `char` 배열의 크기는 256바이트입니다. 고정 크기 [char](../../../csharp/language-reference/keywords/char.md) 버퍼는 인코딩에 관계없이 항상 문자당 2바이트를 사용합니다. 이는 char 버퍼가 `CharSet = CharSet.Auto` 또는 `CharSet = CharSet.Ansi`를 사용하는 API 메서드 또는 구조체로 마샬링되는 경우에도 마찬가지입니다. 자세한 내용은 <xref:System.Runtime.InteropServices.CharSet>을 참조하십시오.  
   
  또 다른 일반적인 고정 크기 배열은 [bool](../../../csharp/language-reference/keywords/bool.md) 배열입니다. `bool` 배열의 요소 크기는 항상 1바이트입니다. `bool` 배열은 비트 배열이나 버퍼를 만드는 데 적합하지 않습니다.  
   
@@ -77,3 +78,4 @@ private fixed char name[30];
  [안전하지 않은 코드 및 포인터](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
  [fixed 문](../../../csharp/language-reference/keywords/fixed-statement.md)   
  [상호 운용성](../../../csharp/programming-guide/interop/index.md)
+
