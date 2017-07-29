@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 응용 프로그램에서 데이터에 액세스 | Microsoft 문서"
+title: "Visual Basic 응용 프로그램에서 데이터에 액세스"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,51 +28,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 227aaf74dff0ae16fc5030ac8031ffa0f9ddf632
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4ff9885f66171ee0454bff058b342d1b5683d3e3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Visual Basic 응용 프로그램에서 데이터에 액세스
-[!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]에는 데이터에 액세스하는 응용 프로그램 개발을 지원하기 위한 여러 가지 새로운 기능이 포함됩니다. [데이터 소스 창](https://docs.microsoft.com/visualstudio/data-tools/add-new-data-sources)에서 양식으로 항목을 끌어 Windows 응용 프로그램에 대한 데이터 바인딩된 양식을 만듭니다. **데이터 소스 창**에서 기존 컨트롤로 항목을 끌어 컨트롤을 데이터에 바인딩합니다.  
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에는 데이터에 액세스하는 응용 프로그램 개발을 지원하기 위한 여러 가지 새로운 기능이 포함됩니다. [데이터 소스 창](/visualstudio/data-tools/add-new-data-sources)에서 양식으로 항목을 끌어 Windows 응용 프로그램에 대한 데이터 바인딩된 양식을 만듭니다. **데이터 소스 창**에서 기존 컨트롤로 항목을 끌어 컨트롤을 데이터에 바인딩합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [Visual Studio에서 데이터 액세스](https://docs.microsoft.com/visualstudio/data-tools/)  
+ [Visual Studio에서 데이터 액세스](/visualstudio/data-tools/)  
  응용 프로그램에 데이터 액세스 기능을 통합하는 방법을 설명하는 페이지의 링크를 제공합니다.
 
- [.NET용 Visual Studio 데이터 도구](https://docs.microsoft.com/visualstudio/data-tools/visual-studio-data-tools-for-dotnet)  
- [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)]를 통해 데이터를 사용하는 응용 프로그램을 만드는 방법에 대한 페이지의 링크를 제공합니다.  
+ [.NET용 Visual Studio 데이터 도구](/visualstudio/data-tools/visual-studio-data-tools-for-dotnet)  
+ [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]를 통해 데이터를 사용하는 응용 프로그램을 만드는 방법에 대한 페이지의 링크를 제공합니다.  
   
  [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
  Visual Basic에서 LINQ를 사용하는 방법을 설명하는 항목의 링크를 제공합니다.  
   
  [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
- [!INCLUDE[vbtecdlinq](../../csharp/includes/vbtecdlinq_md.md)]에 대한 정보를 제공합니다. 프로그래밍 예제를 포함합니다.  
+ [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]에 대한 정보를 제공합니다. 프로그래밍 예제를 포함합니다.  
   
- [LINQ to SQL Tools in Visual Studio](https://docs.microsoft.com/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)(Visual Studio의 LINQ to SQL 도구)  
+ [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)(Visual Studio의 LINQ to SQL 도구)  
  응용 프로그램에서 [LINQ to SQL](https://msdn.microsoft.com/library/bb386976) 개체 모델을 만드는 방법에 대한 항목의 링크를 제공합니다.  
   
- [n 계층 응용 프로그램에서 데이터 집합 작업](https://docs.microsoft.com/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
+ [n 계층 응용 프로그램에서 데이터 집합 작업](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
  다중 계층 데이터 응용 프로그램을 만드는 방법에 대한 항목의 링크를 제공합니다.  
      
- [새 연결 추가](https://docs.microsoft.com/visualstudio/data-tools/add-new-connections)  
- [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)]를 사용하여 디자인 타임 도구 및 ADO.NET 연결 개체를 통해 응용 프로그램을 데이터에 연결하는 방법에 대한 페이지의 링크를 제공합니다.  
+ [새 연결 추가](/visualstudio/data-tools/add-new-connections)  
+ [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]를 사용하여 디자인 타임 도구 및 ADO.NET 연결 개체를 통해 응용 프로그램을 데이터에 연결하는 방법에 대한 페이지의 링크를 제공합니다.  
 
- [Visual Studio의 데이터 집합 도구](https://docs.microsoft.com/visualstudio/data-tools/dataset-tools-in-visual-studio)  
+ [Visual Studio의 데이터 집합 도구](/visualstudio/data-tools/dataset-tools-in-visual-studio)  
  데이터를 데이터 집합에 로드하는 방법 및 SQL 문과 저장 프로시저를 실행하는 방법을 설명하는 페이지의 링크를 제공합니다.  
   
- [Visual Studio에서 데이터에 컨트롤 바인딩](https://docs.microsoft.com/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)  
+ [Visual Studio에서 데이터에 컨트롤 바인딩](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)  
  데이터 바인딩된 컨트롤을 통해 Windows Forms에 데이터를 표시하는 방법을 설명하는 페이지의 링크를 제공합니다.  
   
- [데이터 집합의 데이터 편집](https://docs.microsoft.com/visualstudio/data-tools/edit-data-in-datasets)  
+ [데이터 집합의 데이터 편집](/visualstudio/data-tools/edit-data-in-datasets)  
  데이터 집합의 데이터 테이블에서 데이터를 조작하는 방법을 설명하는 페이지의 링크를 제공합니다.  
   
- [데이터 집합의 데이터 유효성 검사](https://docs.microsoft.com/visualstudio/data-tools/validate-data-in-datasets)  
+ [데이터 집합의 데이터 유효성 검사](/visualstudio/data-tools/validate-data-in-datasets)  
  열 및 행 변경 중에 데이터 집합에 유효성 검사를 추가하는 방법을 설명하는 페이지의 링크를 제공합니다.  
   
- [데이터를 다시 데이터베이스에 저장](https://docs.microsoft.com/visualstudio/data-tools/save-data-back-to-the-database)  
+ [데이터를 다시 데이터베이스에 저장](/visualstudio/data-tools/save-data-back-to-the-database)  
  응용 프로그램에서 데이터베이스로 업데이트된 데이터를 보내는 방법을 설명하는 페이지의 링크를 제공합니다.  
   
  [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx)  

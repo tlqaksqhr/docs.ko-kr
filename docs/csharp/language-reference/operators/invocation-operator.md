@@ -1,5 +1,5 @@
 ---
-title: "() 연산자(C# 참조) | Microsoft 문서"
+title: "() 연산자(C# 참조)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 159a663ca151a276b3b56f13cf8e997069210d67
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1b0a683880f0791ee69ea5971756d104323b4303
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="-operator-c-reference"></a>() 연산자(C# 참조)
@@ -67,3 +67,4 @@ ms.lasthandoff: 03/13/2017
  [C# 참조](../../../csharp/language-reference/index.md)   
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
  [C# 연산자](../../../csharp/language-reference/operators/index.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "new 한정자(C# 참조) | Microsoft 문서"
+title: "new 한정자(C# 참조)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,11 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3c636d50e6c871c529104d5f2985e861f9a652b2
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f763b9a1d2f146b8ebb475a01bd12f1a4238050a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="new-modifier-c-reference"></a>new 한정자(C# 참조)
@@ -82,3 +82,4 @@ The keyword new is required on 'MyDerivedC.x' because it hides inherited member 
  [한정자](../../../csharp/language-reference/keywords/modifiers.md)   
  [Override 및 New 키워드를 사용하여 버전 관리](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)   
  [Override 및 New 키워드를 사용해야 하는 경우](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)
+

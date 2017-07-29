@@ -1,5 +1,5 @@
 ---
-title: "무명 형식(C# 프로그래밍 가이드) | Microsoft Docs"
+title: "익명 형식(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 6a6950680a733b3d99edd54fc9a9cfd0338e513c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 80a0d3c99f7765dba1166fd9c5ecc3e7fbadc7a1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="anonymous-types-c-programming-guide"></a>익명 형식(C# 프로그래밍 가이드)
@@ -75,7 +75,7 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
   
  익명 형식을 가지고 있으므로 필드, 속성, 이벤트 또는 메서드의 반환 형식은 선언할 수 없습니다. 마찬가지로, 익명 형식을 가지고 있으므로 메서드, 속성, 생성자 또는 인덱서의 정식 매개 변수는 선언할 수 없습니다. 익명 형식이나 익명 형식을 포함한 컬렉션을 메서드에 대한 인수로 전달하려면 매개 변수를 형식 개체로 선언하면 됩니다. 그러나 이렇게 하면 강력한 형식화를 사용하는 의미가 없습니다. 쿼리 결과를 저장하거나 메서드 경계 외부로 전달해야 하는 경우 익명 형식 대신 일반적인 명명된 구조체 또는 클래스 사용을 고려하세요.  
   
- 무명 형식에 대한 <xref:System.Object.Equals%2A> 및 <xref:System.Object.GetHashCode%2A> 메서드는 속성의 `Equals` 및 `GetHashCode` 메서드 측면에서 정의되므로 동일한 무명 형식의 두 인스턴스는 해당 속성이 모두 같은 경우에만 동일합니다.  
+ 익명 형식에 대한 <xref:System.Object.Equals%2A> 및 <xref:System.Object.GetHashCode%2A> 메서드는 속성의 `Equals` 및 `GetHashCode` 메서드 측면에서 정의되므로 동일한 익명 형식의 두 인스턴스는 해당 속성이 모두 동일한 경우에만 동일합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   

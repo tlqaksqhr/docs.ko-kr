@@ -1,5 +1,5 @@
 ---
-title: "방법: Visual Basic에서 텍스트 파일 읽기 | Microsoft 문서"
+title: "방법: Visual Basic에서 텍스트 파일 읽기"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,11 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 4ea4f6ebfaf06a8b2b5d161d9986eebd28f50d5b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9b38b7f869a1d4ff290042a18a9bc2e0fa2709b7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-read-from-text-files-in-visual-basic"></a>방법: Visual Basic에서 텍스트 파일 읽기
@@ -80,7 +80,7 @@ ms.lasthandoff: 05/22/2017
   
 -   경로를 보는 데 필요한 권한이 사용자에게 없는 경우(<xref:System.Security.SecurityException>)  
   
- 파일 이름을 바탕으로 파일 내용을 판단하면 안 됩니다. 예를 들어, Form1.vb 파일이 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 소스 파일이 아닐 수도 있습니다.  
+ 파일 이름을 바탕으로 파일 내용을 판단하면 안 됩니다. 예를 들어, Form1.vb 파일이 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 소스 파일이 아닐 수도 있습니다.  
   
  응용 프로그램에서 데이터를 사용하기 전에 모든 입력을 확인해야 합니다. 파일의 내용이 예상한 내용과 다를 수 있으며 파일을 읽는 메서드가 실패할 수도 있습니다.  
   
@@ -94,3 +94,4 @@ ms.lasthandoff: 05/22/2017
  [문제 해결: 텍스트 파일 읽기 및 쓰기](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)   
  [연습: Visual Basic에서 파일과 디렉터리 조작](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)   
  [파일 인코딩](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)
+

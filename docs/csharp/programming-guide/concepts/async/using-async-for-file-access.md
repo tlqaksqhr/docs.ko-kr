@@ -1,5 +1,5 @@
 ---
-title: "파일 액세스에 Async 사용(C#) | Microsoft 문서"
+title: "파일 액세스에 Async 사용(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 9aaf49c685498bce451eb53a35a56d8a8fde928c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1b2994b77150f0566f250d20f2ac121c44a365bc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-async-for-file-access-c"></a>파일 액세스에 Async 사용(C#)
@@ -195,3 +195,4 @@ public async void ProcessWriteMult()
  [async 및 await를 사용한 비동기 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/async/index.md)   
  [비동기 반환 형식(C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)   
  [비동기 프로그램의 제어 흐름(C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "호출자 정보(C#) | Microsoft 문서"
+title: "호출자 정보(C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -16,10 +16,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 087b547cfc558fb4c82026e9af6ac621809e0ca0
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8c514266b474f6d4cd3f02e6f9008bef053c407a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="caller-information-c"></a>호출자 정보(C#)
@@ -93,3 +94,4 @@ public void TraceMessage(string message,
  [공통 특성(C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)   
  [명명된 인수 및 선택적 인수](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)   
  [프로그래밍 개념(C#)](../../../csharp/programming-guide/concepts/index.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "C# 연습 | Microsoft 문서"
+title: "C# 연습"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0832ee88bba58579eea001335be9cb8c2130834d
-ms.openlocfilehash: 1008d0ff78ee7c2876b49564dd03a767a63e78f3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0e49290852ccdc83ab7879366102602f0ca3f99b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/28/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c-walkthroughs"></a>C# 연습
@@ -47,7 +47,7 @@ ms.lasthandoff: 03/28/2017
  [async](../csharp/language-reference/keywords/async.md) 및 [await](../csharp/language-reference/keywords/await.md)를 사용하여 비동기 솔루션을 만드는 방법을 보여 줍니다.  
   
  [C# 또는 Visual Basic에서 Windows 런타임 구성 요소를 만든 다음 JavaScript에서 호출](https://msdn.microsoft.com/library/windows/apps/hh779077.aspx)  
- [!INCLUDE[wrt](../csharp/includes/wrt_md.md)] 형식을 만들고 [!INCLUDE[wrt](../csharp/includes/wrt_md.md)] 구성 요소에 패키지한 다음 JavaScript를 사용하여 Windows용으로 빌드된 [!INCLUDE[win8_appname_long](../csharp/includes/win8_appname_long_md.md)] 앱에서 해당 형식을 호출하는 방법을 보여 줍니다.  
+ [!INCLUDE[wrt](~/includes/wrt-md.md)] 형식을 만들고 [!INCLUDE[wrt](~/includes/wrt-md.md)] 구성 요소에 패키지한 다음 JavaScript를 사용하여 Windows용으로 빌드된 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 앱에서 해당 형식을 호출하는 방법을 보여 줍니다.  
   
  [Office 프로그래밍(C# 및 Visual Basic)](../csharp/programming-guide/interop/walkthrough-office-programming.md)  
  C# 및 Visual Basic을 사용하여 Excel 통합 문서와 Word 문서를 만드는 방법을 보여 줍니다.  
@@ -71,10 +71,10 @@ ms.lasthandoff: 03/28/2017
  `TabControl`에서 탭 추가/제거, 부모 항목에 컨트롤 도킹, `SplitContainer` 컨트롤 방향 변경 등 일반적으로 수행하는 몇 가지 작업을 보여 줍니다.  
   
  [C#에서 쿼리 작성(LINQ)](../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- [!INCLUDE[vbteclinq](../csharp/includes/vbteclinq_md.md)] 쿼리 식을 작성하는 데 사용되는 C# 언어 기능을 보여 줍니다.  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 식을 작성하는 데 사용되는 C# 언어 기능을 보여 줍니다.  
   
  [데이터 조작(C#)(LINQ to SQL)](https://msdn.microsoft.com/library/bb386927.aspx)  
- 데이터베이스에서 데이터를 추가/수정/삭제하는 [!INCLUDE[vbtecdlinq](../csharp/includes/vbtecdlinq_md.md)] 시나리오에 대해 설명합니다.  
+ 데이터베이스에서 데이터를 추가/수정/삭제하는 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 시나리오에 대해 설명합니다.  
   
  [간단한 개체 모델 및 쿼리(C#)(LINQ to SQL)](https://msdn.microsoft.com/library/bb386940.aspx)  
  엔터티 클래스 및 해당 엔터티 클래스를 필터링하는 간단한 쿼리를 만드는 방법을 보여 줍니다.  
@@ -83,15 +83,16 @@ ms.lasthandoff: 03/28/2017
  LINQ to SQL을 사용해 저장 프로시저만 실행하여 데이터에 액세스하는 방법을 보여 줍니다.  
   
  [관계 간 쿼리(C#)(LINQ to SQL)](https://msdn.microsoft.com/library/bb386951.aspx)  
- [!INCLUDE[vbtecdlinq](../csharp/includes/vbtecdlinq_md.md)] 연결을 사용하여 데이터베이스에서 외래 키 관계를 표시하는 방법을 보여 줍니다.  
+ [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 연결을 사용하여 데이터베이스에서 외래 키 관계를 표시하는 방법을 보여 줍니다.  
 
- [C#에서 시각화 도우미 작성](https://docs.microsoft.com/visualstudio/debugger/walkthrough-writing-a-visualizer-in-csharp)  
+ [C#에서 시각화 도우미 작성](/visualstudio/debugger/walkthrough-writing-a-visualizer-in-csharp)  
  C#을 사용하여 간단한 시각화 도우미를 작성하는 방법을 보여 줍니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [배포 샘플 및 연습](https://docs.microsoft.com/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
+ [배포 샘플 및 연습](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
  일반적인 배포 시나리오의 단계별 예제를 제공합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [C# 프로그래밍 가이드](../csharp/programming-guide/index.md)   
- [Visual Studio 샘플](https://docs.microsoft.com/visualstudio/ide/visual-studio-samples)
+ [Visual Studio 샘플](/visualstudio/ide/visual-studio-samples)
+

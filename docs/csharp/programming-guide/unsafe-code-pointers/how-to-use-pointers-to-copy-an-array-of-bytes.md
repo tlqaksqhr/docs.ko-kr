@@ -1,5 +1,5 @@
 ---
-title: "방법: 포인터를 사용하여 바이트 배열 복사(C# 프로그래밍 가이드) | Microsoft Docs"
+title: "방법: 포인터를 사용하여 바이트 배열 복사(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: b9d6f93a92b48fcbdd70475ae4c1b8a62ddd9125
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 808a74f75e4dcbcec47735d98063138e2c7456e5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/08/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-use-pointers-to-copy-an-array-of-bytes--c-programming-guide"></a>방법: 포인터를 사용하여 바이트 배열 복사(C# 프로그래밍 가이드)
@@ -51,3 +51,4 @@ ms.lasthandoff: 04/08/2017
  [안전하지 않은 코드 및 포인터](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
  [/unsafe(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md)   
  [가비지 수집](../../../standard/garbage-collection/index.md)
+

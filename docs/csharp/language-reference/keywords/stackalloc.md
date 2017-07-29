@@ -1,5 +1,5 @@
 ---
-title: "stackalloc(C# 참조) | Microsoft 문서"
+title: "stackalloc(C# 참조)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 337a06daaf36a1eb265f66cd191fc48b80f0bae1
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 53d61cfdcf4d356a28881c57ad923017c2b479ae
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc(C# 참조)
@@ -57,7 +57,7 @@ block = stackalloc int[100];
   
  포인터 형식이 사용되므로 `stackalloc`에 [안전하지 않은](../../../csharp/language-reference/keywords/unsafe.md) 컨텍스트가 필요합니다. 자세한 내용은 [안전하지 않은 코드 및 포인터](../../../csharp/programming-guide/unsafe-code-pointers/index.md)를 참조하세요.  
   
- `stackalloc`는 C 런타임 라이브러리의 [_alloca](https://docs.microsoft.com/cpp/c-runtime-library/reference/alloca)와 유사합니다.  
+ `stackalloc`는 C 런타임 라이브러리의 [_alloca](/cpp/c-runtime-library/reference/alloca)와 유사합니다.  
   
  다음 예제에서는 피보나치 시퀀스의 처음 20개 숫자를 계산하고 표시합니다. 각 숫자는 이전 두 숫자의 합계입니다. 코드에서 `int` 형식의 요소 20개를 포함하기에 충분한 크기의 메모리 블록이 힙이 아니라 스택에 할당됩니다. 블록의 주소는 `fib` 포인터에 저장됩니다. 이 메모리에는 가비지 수집이 적용되지 않으므로 [fixed](../../../csharp/language-reference/keywords/fixed-statement.md)를 사용하여 고정할 필요가 없습니다. 메모리 블록의 수명은 이 수명을 정의하는 메서드의 수명으로 제한됩니다. 메서드가 반환되기 전에는 메모리를 해제할 수 없습니다.  
   
@@ -76,3 +76,4 @@ block = stackalloc int[100];
  [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
  [연산자 키워드](../../../csharp/language-reference/keywords/operator-keywords.md)   
  [안전하지 않은 코드 및 포인터](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "방법: XML 트리의 모양 변환(C#) | Microsoft 문서"
+title: "방법: XML 트리의 모양 변환(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: 93c5d426-dea2-4709-a991-60204de42e8f
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8f11c77bc6273642bc4ffce3bf546c5a897729bc
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3558cb7592641d784f0150ce7016563ad9c81c46
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a>방법: XML 트리의 모양 변환(C#)
@@ -100,7 +100,7 @@ Console.WriteLine(newCustOrd);
 ## <a name="example"></a>예제  
  이 예제에서는 일부 요소의 이름을 바꾸고 일부 특성을 요소로 변환합니다.  
   
- 코드에서 <xref:System.Xml.Linq.XElement> 개체의 목록을 반환하는 `ConvertAddress`를 호출합니다. 메서드의 인수는 `Address` 특성의 값이 `Type`인 `"Shipping"` 복합 요소를 확인하는 쿼리입니다.  
+ 코드에서는 `ConvertAddress` 개체의 목록을 반환하는 <xref:System.Xml.Linq.XElement>를 호출합니다. 메서드의 인수는 `Address` 특성의 값이 `Type`인 `"Shipping"` 복합 요소를 확인하는 쿼리입니다.  
   
  이 예제에서는 XML 문서 [샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md)을 사용합니다.  
   
@@ -152,3 +152,4 @@ static void Main(string[] args)
   
 ## <a name="see-also"></a>참고 항목  
  [프로젝션 및 변환(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+

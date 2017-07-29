@@ -1,5 +1,5 @@
 ---
-title: "XML 트리 serialize(C#) | Microsoft 문서"
+title: "XML 트리 serialize(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 348f9cab6fa93ada89eb87d0077e0e5838b449d7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f3b8ee68065a056cccbf02d96bf5f21e7ccea16b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="serializing-xml-trees-c"></a>XML 트리 serialize(C#)
@@ -36,8 +37,9 @@ XML 트리를 serialize하는 것은 XML 트리에서 XML을 생성하는 것을
 |-----------|-----------------|  
 |[serialize할 때 공백 유지](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-serializing.md)|XML 트리를 serialize할 때 공백 동작을 제어하는 방법에 대해 설명합니다.|  
 |[XML 선언으로 serialize(C#)](../../../../csharp/programming-guide/concepts/linq/serializing-with-an-xml-declaration.md)|XML 선언이 포함된 XML 트리를 serialize하는 방법에 대해 설명합니다.|  
-|[Files, TextWriters 및 XmlWriters로 serialization](../../../../csharp/programming-guide/concepts/linq/serializing-to-files-textwriters-and-xmlwriters.md)|문서를 <xref:System.IO.File>, <xref:System.IO.TextWriter> 또는 <xref:System.Xml.XmlWriter>로 serialize하는 방법을 설명합니다.|  
-|[XmlReader로 serialize(XSLT 호출)(C#)](../../../../csharp/programming-guide/concepts/linq/serializing-to-an-xmlreader-invoking-xslt.md)|다른 모듈에서 XML 트리의 내용을 읽을 수 있도록 하는 <xref:System.Xml.XmlReader>를 만드는 방법을 설명합니다.|  
+|[Files, TextWriters 및 XmlWriters로 serialization](../../../../csharp/programming-guide/concepts/linq/serializing-to-files-textwriters-and-xmlwriters.md)|문서를 <xref:System.IO.File>, <xref:System.IO.TextWriter> 또는 <xref:System.Xml.XmlWriter>로 serialize하는 방법에 대해 설명합니다.|  
+|[XmlReader로 serialize(XSLT 호출)(C#)](../../../../csharp/programming-guide/concepts/linq/serializing-to-an-xmlreader-invoking-xslt.md)|다른 모듈에서 XML 트리의 내용을 읽을 수 있도록 하는 <xref:System.Xml.XmlReader>를 만드는 방법에 대해 설명합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [프로그래밍 가이드(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Override 및 New 키워드를 사용하여 버전 관리(C# 프로그래밍 가이드) | Microsoft 문서"
+title: "Override 및 New 키워드를 사용하여 버전 관리(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b464b4c395af093bb9124bb671c5c212c750f497
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 167262f7b2423fffec61b1e903f849d2ab387ed2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Override 및 New 키워드를 사용하여 버전 관리(C# 프로그래밍 가이드)
@@ -77,7 +78,7 @@ C# 언어는 서로 다른 라이브러리의 [기본](../../../csharp/language-
   
  [!code-cs[csProgGuideInheritance#44](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/versioning-with-the-override-and-new-keywords_5.cs)]  
   
- 메서드가 새 기본 클래스 메서드를 재정의하도록 하지 않으려면 다음 고려 사항을 적용하세요. 두 메서드 간 혼동을 피하려면 메서드의 이름을 바꿀 수 있습니다. 이 방법은 시간이 오래 걸리고 오류가 발생하기 쉬우며 어떤 경우에는 실용적이지 않습니다. 그러나 프로젝트 규모가 비교적 작으면 Visual Studio 리팩터링 옵션을 사용하여 메서드의 이름을 바꿀 수 있습니다. 자세한 내용은 [클래스 및 형식 리팩터링(클래스 디자이너)](https://docs.microsoft.com/visualstudio/ide/refactoring-classes-and-types-class-designer)을 참조하세요.  
+ 메서드가 새 기본 클래스 메서드를 재정의하도록 하지 않으려면 다음 고려 사항을 적용하세요. 두 메서드 간 혼동을 피하려면 메서드의 이름을 바꿀 수 있습니다. 이 방법은 시간이 오래 걸리고 오류가 발생하기 쉬우며 어떤 경우에는 실용적이지 않습니다. 그러나 프로젝트 규모가 비교적 작으면 Visual Studio 리팩터링 옵션을 사용하여 메서드의 이름을 바꿀 수 있습니다. 자세한 내용은 [클래스 및 형식 리팩터링(클래스 디자이너)](/visualstudio/ide/refactoring-classes-and-types-class-designer)을 참조하세요.  
   
  또는 파생 클래스 정의에서 `new` 키워드를 사용하여 경고를 방지할 수 있습니다.  
   
@@ -105,3 +106,4 @@ C# 언어는 서로 다른 라이브러리의 [기본](../../../csharp/language-
  [클래스 및 구조체](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [메서드](../../../csharp/programming-guide/classes-and-structs/methods.md)   
  [상속](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+

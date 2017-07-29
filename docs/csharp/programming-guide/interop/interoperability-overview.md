@@ -1,5 +1,5 @@
 ---
-title: "상호 운용성 개요(C# 프로그래밍 가이드) | Microsoft 문서"
+title: "상호 운용성 개요(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 5084c4af3334c39f844fec67a1ab05dd9443bf27
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c817dcd9073a5a1d4aeee558bf53d50566bbb472
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>상호 운용성 개요(C# 프로그래밍 가이드)
@@ -50,7 +50,7 @@ ms.lasthandoff: 05/10/2017
 >  CLR([공용 언어 런타임](../../../standard/clr.md))은 시스템 리소스에 대한 액세스를 관리합니다. CLR 외부에 있는 비관리 코드를 호출하면 이 보안 메커니즘을 우회하므로 보안 위험이 제기됩니다. 예를 들어 비관리 코드는 CLR 보안 메커니즘을 우회하여 비관리 코드의 리소스를 직접 호출할 수 있습니다. 자세한 내용은 [.NET Framework 보안](http://go.microsoft.com/fwlink/?LinkId=37122)을 참조하세요.  
   
 ## <a name="c-interop"></a>C++ Interop  
- C# 또는 다른 .NET Framework 언어로 작성된 코드에서 사용할 수 있도록 IJW(It Just Works)라고도 하는 C++ interop를 사용하여 네이티브 C++ 클래스를 래핑할 수 있습니다. 이렇게 하려면 C++ 코드를 작성하여 네이티브 DLL 또는 COM 구성 요소를 래핑합니다. 다른 .NET Framework 언어와 달리 [!INCLUDE[vcprvc](../../../csharp/programming-guide/interop/includes/vcprvc_md.md)]에는 관리 코드와 비관리 코드가 동일한 응용 프로그램 및 동일한 파일에 있을 수 있도록 하는 상호 운용성 지원이 있습니다. 그런 다음 **/clr** 컴파일러 스위치로 관리되는 어셈블리를 생성하여 C++ 코드를 빌드합니다. 마지막으로, C# 프로젝트의 어셈블리에 대한 참조를 추가하고 다른 관리되는 클래스를 사용하는 것처럼 래핑된 개체를 사용합니다.  
+ C# 또는 다른 .NET Framework 언어로 작성된 코드에서 사용할 수 있도록 IJW(It Just Works)라고도 하는 C++ interop를 사용하여 네이티브 C++ 클래스를 래핑할 수 있습니다. 이렇게 하려면 C++ 코드를 작성하여 네이티브 DLL 또는 COM 구성 요소를 래핑합니다. 다른 .NET Framework 언어와 달리 [!INCLUDE[vcprvc](~/includes/vcprvc-md.md)]에는 관리 코드와 비관리 코드가 동일한 응용 프로그램 및 동일한 파일에 있을 수 있도록 하는 상호 운용성 지원이 있습니다. 그런 다음 **/clr** 컴파일러 스위치로 관리되는 어셈블리를 생성하여 C++ 코드를 빌드합니다. 마지막으로, C# 프로젝트의 어셈블리에 대한 참조를 추가하고 다른 관리되는 클래스를 사용하는 것처럼 래핑된 개체를 사용합니다.  
   
 ## <a name="exposing-com-components-to-c"></a>C#에 COM 구성 요소 노출  
  C# 프로젝트에서 COM 구성 요소를 사용할 수 있습니다. 일반적인 단계는 다음과 같습니다.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 05/10/2017
   
 2.  COM 구성 요소 또는 형식 라이브러리에 대한 참조를 프로젝트에 추가합니다.  
   
-     참조를 추가하면 [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]에서 형식 라이브러리를 입력으로 사용하는 [Tlbimp.exe(형식 라이브러리 가져오기)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)를 통해 .NET Framework interop 어셈블리를 출력합니다. RCW(런타임 호출 가능 래퍼)라고도 하는 어셈블리는 형식 라이브러리에 있는 인터페이스 및 COM 클래스를 래핑하는 인터페이스 및 관리되는 클래스를 포함합니다. [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]에서 생성된 어셈블리에 대한 참조를 프로젝트에 추가합니다.  
+     참조를 추가하면 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]에서 형식 라이브러리를 입력으로 사용하는 [Tlbimp.exe(형식 라이브러리 가져오기)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)를 통해 .NET Framework interop 어셈블리를 출력합니다. RCW(런타임 호출 가능 래퍼)라고도 하는 어셈블리는 형식 라이브러리에 있는 인터페이스 및 COM 클래스를 래핑하는 인터페이스 및 관리되는 클래스를 포함합니다. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]에서 생성된 어셈블리에 대한 참조를 프로젝트에 추가합니다.  
   
 3.  RCW에서 정의된 클래스의 인스턴스를 만듭니다. 그러면 COM 개체의 인스턴스가 생성됩니다.  
   
@@ -72,11 +72,11 @@ ms.lasthandoff: 05/10/2017
   
 1.  C# 프로젝트에서 Interop 특성을 추가합니다.  
   
-     [!INCLUDE[csprcs](../../../csharp/includes/csprcs_md.md)] 프로젝트 속성을 수정하여 어셈블리 COM이 표시되도록 설정할 수 있습니다. 자세한 내용은 [어셈블리 정보 대화 상자](https://docs.microsoft.com/visualstudio/ide/reference/assembly-information-dialog-box)를 참조하세요.  
+     [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 프로젝트 속성을 수정하여 어셈블리 COM이 표시되도록 설정할 수 있습니다. 자세한 내용은 [어셈블리 정보 대화 상자](/visualstudio/ide/reference/assembly-information-dialog-box)를 참조하세요.  
   
 2.  COM 형식 라이브러리를 생성하고 COM 사용을 위해 등록합니다.  
   
-     COM interop에 대해 C# 어셈블리를 자동으로 등록하도록 [!INCLUDE[csprcs](../../../csharp/includes/csprcs_md.md)] 프로젝트 속성을 수정할 수 있습니다. [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]에서는 [Regasm.exe(어셈블리 등록 도구)](http://msdn.microsoft.com/library/e190e342-36ef-4651-a0b4-0e8c2c0281cb)를 사용하며, 관리되는 어셈블리를 입력으로 사용하는 `/tlb` 명령줄 스위치를 통해 형식 라이브러리를 생성합니다. 이 형식 라이브러리는 어셈블리의 `public` 형식을 설명하고, COM 클라이언트가 관리되는 클래스를 만들 수 있도록 레지스트리 항목을 추가합니다.  
+     COM interop에 대해 C# 어셈블리를 자동으로 등록하도록 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 프로젝트 속성을 수정할 수 있습니다. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]에서는 [Regasm.exe(어셈블리 등록 도구)](http://msdn.microsoft.com/library/e190e342-36ef-4651-a0b4-0e8c2c0281cb)를 사용하며, 관리되는 어셈블리를 입력으로 사용하는 `/tlb` 명령줄 스위치를 통해 형식 라이브러리를 생성합니다. 이 형식 라이브러리는 어셈블리의 `public` 형식을 설명하고, COM 클라이언트가 관리되는 클래스를 만들 수 있도록 레지스트리 항목을 추가합니다.  
   
  자세한 내용은 [.NET Framework 구성 요소를 COM에 노출](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6) 및 [예제 COM 클래스](../../../csharp/programming-guide/interop/example-com-class.md)를 참조하세요.  
   
@@ -87,3 +87,4 @@ ms.lasthandoff: 05/10/2017
  [비관리 코드와의 상호 운용](https://msdn.microsoft.com/library/sd10k43k)   
  [고급 COM 상호 운용성](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)   
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
+

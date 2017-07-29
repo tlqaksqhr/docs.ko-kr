@@ -1,5 +1,5 @@
 ---
-title: "LINQ to XML에서 지연된 실행 및 지연 계산(C#) | Microsoft 문서"
+title: "LINQ to XML에서 지연된 실행 및 지연 계산(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: 8683d1b4-b7ec-407b-be12-906ebe958a09
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1f9d60242c75b996d25997b2adc83ccafcc538de
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 10ecebc2563df5a12b71a743727b1be21b19b671
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>LINQ to XML에서 지연된 실행 및 지연 계산(C#)
@@ -27,7 +27,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="deferred-execution"></a>지연된 실행  
  지연된 실행은 *실현된* 값이 실제로 필요할 때까지 식의 계산이 지연되는 것을 의미합니다. 지연된 실행은 특히 일련의 연결된 쿼리나 조작이 포함된 프로그램에서 큰 데이터 컬렉션을 조작해야 하는 경우 성능을 크게 높일 수 있습니다. 최상의 경우에는 지연된 실행을 통해 소스 컬렉션을 한 번만 반복할 수 있습니다.  
   
- LINQ 기술은 <xref:System.Xml.Linq.Extensions?displayProperty=fullName>과 같은 다양한 LINQ 네임스페이스의 확장 메서드와 핵심 <xref:System.Linq?displayProperty=fullName> 클래스의 멤버에서 지연된 실행을 광범위하게 사용합니다.  
+ LINQ 기술은 <xref:System.Linq?displayProperty=fullName>와 같은 다양한 LINQ 네임스페이스의 확장 메서드와 핵심 <xref:System.Xml.Linq.Extensions?displayProperty=fullName> 클래스의 멤버에서 지연된 실행을 광범위하게 사용합니다.  
   
  지연된 실행은 반복기 블록에서 사용될 때 C# 언어에서 [yield](../../../../csharp/language-reference/keywords/yield.md) 키워드(`yield-return` 문의 형태)로 직접 지원됩니다. 이러한 반복기는 <xref:System.Collections.IEnumerator> 또는 <xref:System.Collections.Generic.IEnumerator%601> 형식(또는 파생 형식)의 컬렉션을 반환해야 합니다.  
   
@@ -50,3 +50,4 @@ ms.lasthandoff: 03/13/2017
  [개념과 용어(함수 변환)(C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)   
  [집계 작업(C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)   
  [yield](../../../../csharp/language-reference/keywords/yield.md)
+

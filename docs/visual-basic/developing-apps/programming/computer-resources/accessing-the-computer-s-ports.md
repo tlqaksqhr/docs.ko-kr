@@ -1,5 +1,5 @@
 ---
-title: "컴퓨터 포트에 액세스(Visual Basic) | Microsoft 문서"
+title: "컴퓨터 포트에 액세스(Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 69153a48b87e069de68b9332c7fc7653058096ef
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: db4fdbea07000ab92d5329f53d68c61db9d0547d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="accessing-the-computer39s-ports-visual-basic"></a>컴퓨터 포트에 액세스(Visual Basic)
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/22/2017
  컴퓨터의 직렬 포트에서 문자열을 받는 방법을 보여 줍니다.  
   
  [.NET Framework의 포트 작업](../../../../visual-basic/developing-apps/programming/computer-resources/port-operations-in-the-net-framework.md)  
- 포트 작업을 수행할 때 [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)]를 사용하는 방법을 설명합니다.  
+ 포트 작업을 수행할 때 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]를 사용하는 방법을 설명합니다.  
   
 ## <a name="reference"></a>참조  
  <xref:Microsoft.VisualBasic.Devices.Ports>  
@@ -70,3 +70,4 @@ ms.lasthandoff: 05/22/2017
 ## <a name="related-sections"></a>관련 단원  
  <xref:System.IO.Ports.SerialPort>  
  .NET Framework <xref:System.IO.Ports.SerialPort> 클래스를 설명합니다.
+

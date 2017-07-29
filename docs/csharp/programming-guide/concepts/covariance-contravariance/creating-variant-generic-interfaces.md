@@ -1,5 +1,5 @@
 ---
-title: "Variant 제네릭 인터페이스 만들기(C#) | Microsoft 문서"
+title: "Variant 제네릭 인터페이스 만들기(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a3dcc75151a3cff601869b4f8a3a4de698d2dc47
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 122b56e34582fdd84424fd3f5d2fd5904b401775
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-variant-generic-interfaces-c"></a>Variant 제네릭 인터페이스 만들기(C#)
@@ -35,7 +36,7 @@ ms.lasthandoff: 03/13/2017
  제네릭 형식 매개 변수에 `in` 및 `out` 키워드를 사용하여 Variant 제네릭 인터페이스를 선언할 수 있습니다.  
   
 > [!IMPORTANT]
-> C#에서  `ref` 및 `out` 매개 변수는 variant일 수 없습니다. 또한 값 형식은 가변성을 지원하지 않습니다.  
+>  C#에서 `ref` 및 `out` 매개 변수는 variant일 수 없습니다. 또한 값 형식은 가변성을 지원하지 않습니다.  
   
  `out` 키워드를 사용하여 제네릭 형식 매개 변수를 공변(covariant)으로 선언할 수 있습니다. 공변(covariant) 형식은 다음 조건을 충족해야 합니다.  
   

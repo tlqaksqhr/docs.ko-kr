@@ -1,5 +1,5 @@
 ---
-title: "방법: 루트 요소 찾기(XPath 및 LINQ to XML)(C#) | Microsoft 문서"
+title: "방법: 루트 요소 찾기(XPath 및 LINQ to XML)(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,15 +14,15 @@ ms.assetid: 4fd824e0-4d39-429b-b092-f6a5c046ee6c
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1f8fa5eaa88565d5505ef9310cf4fe40ecab44b2
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2731b773e436114bb2324ba1cea339cf9327adb9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-find-the-root-element-xpath-linq-to-xml-c"></a>방법: 루트 요소 찾기(XPath 및 LINQ to XML)(C#)
-이 항목에서는 XPath와 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]을 사용하여 루트 요소를 가져오는 방법을 보여 줍니다.  
+이 항목에서는 XPath와 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]을 사용하여 루트 요소를 가져오는 방법을 보여 줍니다.  
   
  XPath 식은 다음과 같습니다.  
   
@@ -58,3 +58,4 @@ PurchaseOrders
   
 ## <a name="see-also"></a>참고 항목  
  [XPath 사용자를 위한 LINQ to XML(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+

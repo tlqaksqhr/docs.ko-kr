@@ -1,5 +1,5 @@
 ---
-title: "LINQ to XML 보안(C#) | Microsoft 문서"
+title: "LINQ to XML 보안(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d4da76c120b8028c12a8c2ac58e5130d89a01e05
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b55a9b70ad4291bc74b629e289bdc168a30702ca
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="linq-to-xml-security-c"></a>LINQ to XML 보안(C#)
@@ -38,9 +39,9 @@ ms.lasthandoff: 03/13/2017
  XML은 문서의 크기, 깊이, 요소 이름 크기 등이 제한되어 있지 않기 때문에 서비스 거부 공격에 기본적으로 취약합니다. XML 처리에 사용하는 구성 요소에 관계없이 과도한 리소스를 사용하는 경우 응용 프로그램 도메인을 재활용할 준비가 항상 되어 있어야 합니다.  
   
 ## <a name="mitigation-of-xml-xsd-xpath-and-xslt-attacks"></a>XML, XSD, XPath 및 XSLT 공격의 완화  
- LINQ to XML은 <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter>를 기반으로 합니다. LINQ to XML은 <xref:System.Xml.Schema?displayProperty=fullName> 및 <xref:System.Xml.XPath?displayProperty=fullName> 네임스페이스의 확장 메서드를 통해 XSD와 XPath를 지원합니다. <xref:System.Xml.XmlReader>, <xref:System.Xml.XPath.XPathNavigator> 및 <xref:System.Xml.XmlWriter> 클래스를 LINQ to XML과 함께 사용하면 XSLT를 호출하여 XML 트리를 변환할 수 있습니다.  
+ LINQ to XML은 <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter>를 기반으로 빌드되었습니다. LINQ to XML에서는 <xref:System.Xml.Schema?displayProperty=fullName> 및 <xref:System.Xml.XPath?displayProperty=fullName> 네임스페이스의 확장 메서드를 통해 XSD와 XPath를 지원합니다. LINQ to XML과 함께 <xref:System.Xml.XmlReader>, <xref:System.Xml.XPath.XPathNavigator> 및 <xref:System.Xml.XmlWriter> 클래스를 사용하는 경우 XSLT를 호출하여 XML 트리를 변환할 수 있습니다.  
   
- 보안 수준이 낮은 환경에서 작업하는 경우 <xref:System.Xml?displayProperty=fullName>, <xref:System.Xml.Schema?displayProperty=fullName>, <xref:System.Xml.XPath?displayProperty=fullName> 및 <xref:System.Xml.Xsl?displayProperty=fullName>에 XML 및 클래스 사용과 관련된 다양한 보안 문제가 있습니다. 이러한 문제는 다음과 같지만 다음 문제로만 제한되지는 않습니다.  
+ 보안 수준이 낮은 운영 환경에서는 XML 및 <xref:System.Xml?displayProperty=fullName>, <xref:System.Xml.Schema?displayProperty=fullName>, <xref:System.Xml.XPath?displayProperty=fullName> 및 <xref:System.Xml.Xsl?displayProperty=fullName>의 클래스 사용과 관련된 많은 보안 문제가 있습니다. 이러한 문제는 다음과 같지만 다음 문제로만 제한되지는 않습니다.  
   
 -   XSD, XPath 및 XSLT는 많은 시간이나 메모리를 사용하는 작업을 지정할 수 있는 문자열 기반 언어입니다. 문자열이 악성이 아닌지 확인하거나 이러한 문자열을 확인할 때 시스템 리소스를 과도하게 사용하게 될 가능성을 모니터링하고 완화하는 것은 신뢰할 수 없는 소스에서 XSD, XPath 또는 XSLT 문자열을 가져오는 응용 프로그램 프로그래머의 책임입니다.  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 03/13/2017
   
 -   매우 깊은 XML 문서는 서비스 거부 문제를 일으킬 수 있으므로 XML 문서의 깊이를 제한할 수 있습니다.  
   
--   신뢰할 수 없는 어셈블리에서 <xref:System.Xml.NameTable>, <xref:System.Xml.XmlNamespaceManager> 및 <xref:System.Xml.XmlResolver> 개체와 같은 지원 구성 요소를 수락하지 마세요.  
+-   신뢰할 수 없는 어셈블리에서 <xref:System.Xml.NameTable>, <xref:System.Xml.XmlNamespaceManager> 및 <xref:System.Xml.XmlResolver> 개체와 같은 지원 구성 요소를 받아들이지 않습니다.  
   
 -   큰 문서 공격을 완화하기 위해 데이터를 청크로 읽습니다.  
   
@@ -79,7 +80,7 @@ ms.lasthandoff: 03/13/2017
   
  많은 권한을 가진 어셈블리의 코드가 이벤트 처리기에서 <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName>를 호출한 후 제한된 권한을 가진 악의적인 어셈블리에 XML 트리가 전달되면 악의적인 어셈블리로 인해 이벤트가 발생할 수 있습니다. 이벤트에서 많은 권한을 가진 어셈블리에 있는 코드를 실행하기 때문에 악의적인 어셈블리가 상승된 권한으로 작동합니다.  
   
- 이벤트 처리기에서 <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName>를 호출하지 않는 것이 좋습니다.  
+ 이벤트 처리기에서 <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName>를 절대로 호출하지 않는 것이 좋습니다.  
   
 ### <a name="dtds-are-not-secure"></a>DTD에 보안이 설정되지 않음  
  DTD의 엔터티에는 기본적으로 보안이 설정되지 않습니다. DTD가 포함된 악의적인 XML 문서로 인해 파서에서 모든 메모리와 CPU 시간을 사용하여 서비스 거부 공격을 일으킬 수 있습니다. 따라서 LINQ to XML에서 DTD 처리는 기본적으로 해제되어 있습니다. 신뢰할 수 없는 소스에서는 DTD를 받아들이지 않아야 합니다.  
@@ -117,3 +118,4 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="see-also"></a>참고 항목  
  [프로그래밍 가이드(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "base(C# 참조) | Microsoft 문서"
+title: "base(C# 참조)"
 description: "base 키워드(C#)"
 keywords: "base(C#), base 키워드(C#), base 키워드(C# 참조), base 키워드(C# 언어 참조)"
 ms.custom: 
@@ -34,11 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: adebe9f77cf1fe40a4aa8b00a2ef65c499d27ad3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c875ca834fc66e0bf6cd596f376773badca757e3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="base-c-reference"></a>base(C# 참조)
@@ -74,3 +74,4 @@ ms.lasthandoff: 03/13/2017
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
  [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
  [this](../../../csharp/language-reference/keywords/this.md)
+

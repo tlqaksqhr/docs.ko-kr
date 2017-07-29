@@ -1,5 +1,5 @@
 ---
-title: "방법: DataContractSerializer를 사용하여 serialize(C#) | Microsoft 문서"
+title: "방법: DataContractSerializer를 사용하여 serialize(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 76be9d08aea9472d1b7c4b558a168965dea13374
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: da57267bb8fd33263c950db0ca3d0a5b1b5817d4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-serialize-using-datacontractserializer-c"></a>방법: DataContractSerializer를 사용하여 serialize(C#)
@@ -109,3 +110,4 @@ Testing for type: XElementNullContainer
   
 ## <a name="see-also"></a>참고 항목  
  [XElement 개체를 포함하는 개체 그래프 serialize(C#)](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+

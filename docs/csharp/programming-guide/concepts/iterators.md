@@ -1,5 +1,5 @@
 ---
-title: "반복기(C#) | Microsoft 문서"
+title: "반복기(C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -16,11 +16,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 11a606ef18bc497630c0a417488e533a0880056f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5d5543a48d0c835f5270067d1e5ad514c28842b2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="iterators-c"></a>반복기(C#)
@@ -368,7 +368,7 @@ public class Stack<T> : IEnumerable<T>
   
  반복기는 <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=fullName> 메서드를 지원하지 않습니다. 처음부터 다시 반복하려면 새 반복기를 가져와야 합니다.  
   
- 자세한 내용은 [C# 언어 사양](../../../csharp/language-reference/language-specification.md)을 참조하세요.  
+ 자세한 내용은 [C# 언어 사양](../../../csharp/language-reference/language-specification/index.md)을 참조하세요.  
   
 ##  <a name="BKMK_UseOfIterators"></a> 반복기 사용  
  반복기를 사용하면 복잡한 코드를 사용하여 목록 시퀀스를 채워야 하는 경우 `foreach` 루프의 단순성을 유지할 수 있습니다. 이 기능은 다음을 수행하려는 경우에 유용할 수 있습니다.  
@@ -386,3 +386,4 @@ public class Stack<T> : IEnumerable<T>
  [yield](../../../csharp/language-reference/keywords/yield.md)   
  [배열에 foreach 사용](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)   
  [제네릭](../../../csharp/programming-guide/generics/index.md)
+

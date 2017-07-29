@@ -1,5 +1,5 @@
 ---
-title: "방법: 중간 값 계산(C#) | Microsoft 문서"
+title: "방법: 중간 값 계산(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: 7fd3001f-f8f9-4bce-879f-d4c7af8a04fe
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9bcc58a1d7e3ffb9b0387acbcfe8efb0f68bf15c
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 17f3deb790f48173fbef189fcc8f4fd569f33036
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-calculate-intermediate-values-c"></a>방법: 중간 값 계산(C#)
@@ -81,3 +81,4 @@ foreach (decimal ex in extensions)
   
 ## <a name="see-also"></a>참고 항목  
  [기본 쿼리(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+

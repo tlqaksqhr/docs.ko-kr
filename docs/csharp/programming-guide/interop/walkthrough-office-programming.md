@@ -1,5 +1,5 @@
 ---
-title: "연습: Office 프로그래밍(C# 및 Visual Basic) | Microsoft 문서"
+title: "연습: Office 프로그래밍(C# 및 Visual Basic)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 836c648dd5da964b0d48e612f273778f4ffb2db0
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 73713d29be0ffc79a9feb54c39b1f75a39b35df6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>연습: Office 프로그래밍(C# 및 Visual Basic)
@@ -47,9 +47,9 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
 
 이 연습을 완료하려면 Microsoft Office Excel 및 Microsoft Office Word가 컴퓨터에 설치되어 있어야 합니다.  
   
- [!INCLUDE[windowsver](../../../csharp/programming-guide/interop/includes/windowsver_md.md)] 이전 버전의 운영 체제를 사용 중이라면 [!INCLUDE[dnprdnlong](../../../csharp/programming-guide/events/includes/dnprdnlong_md.md)]이 설치되어 있는지 확인합니다.  
+ [!INCLUDE[windowsver](~/includes/windowsver-md.md)] 이전 버전의 운영 체제를 사용 중이라면 [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)]이 설치되어 있는지 확인합니다.  
   
-[!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-set-up-an-excel-add-in-application"></a>Excel 추가 기능 응용 프로그램을 설치하려면  
   
@@ -73,7 +73,7 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
   
 1.  **솔루션 탐색기**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 클릭합니다. **참조 추가** 대화 상자가 나타납니다.  
   
-2.  **어셈블리** 탭의 **구성 요소 이름** 목록에서 **Microsoft.Office.Interop.Excel**, 버전 `<version>.0.0.0`(Office 제품 버전 번호에 대한 자세한 내용은 [Microsoft 버전](https://en.wikipedia.org/wiki/Microsoft_Office#Versions) 참조)을 선택하고 Ctrl 키를 누른 상태로 **Microsoft.Office.Interop.Word**, `version <version>.0.0.0`을 선택합니다. 이러한 어셈블리가 보이지 않으면 어셈블리가 설치되어 있으며 표시되는지를 확인해야 할 수 있습니다([방법: Office 주 Interop 어셈블리 설치](https://docs.microsoft.com/visualstudio/vsto/how-to-install-office-primary-interop-assemblies) 참조).  
+2.  **어셈블리** 탭의 **구성 요소 이름** 목록에서 **Microsoft.Office.Interop.Excel**, 버전 `<version>.0.0.0`(Office 제품 버전 번호에 대한 자세한 내용은 [Microsoft 버전](https://en.wikipedia.org/wiki/Microsoft_Office#Versions) 참조)을 선택하고 Ctrl 키를 누른 상태로 **Microsoft.Office.Interop.Word**, `version <version>.0.0.0`을 선택합니다. 이러한 어셈블리가 보이지 않으면 어셈블리가 설치되어 있으며 표시되는지를 확인해야 할 수 있습니다([방법: Office 주 Interop 어셈블리 설치](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies) 참조).  
   
 3.  **확인**을 클릭합니다.  
   
@@ -105,7 +105,7 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
   
      이 메서드에는 두 가지 새로운 C# 기능이 사용됩니다. Visual Basic에서는 이 두 기능이 모두 이미 포함되어 있습니다.  
   
-    -   [Add](http://go.microsoft.com/fwlink/?LinkId=210910) 메서드에는 특정 템플릿을 지정하기 위한 *선택적 매개 변수*가 있습니다. [!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)]에서 새롭게 제공되는 선택적 매개 변수를 사용하면 매개 변수의 기본값을 사용하려는 경우 해당 매개 변수의 인수를 생략할 수 있습니다. 앞의 예제에서는 인수가 전송되지 않으므로 `Add`는 기본 템플릿을 사용하며 새 통합 문서를 만듭니다. 이전 버전의 C#에서 이와 동일한 문을 사용하려면 자리 표시자 인수인 `excelApp.Workbooks.Add(Type.Missing)`를 사용해야 했습니다.  
+    -   [Add](http://go.microsoft.com/fwlink/?LinkId=210910) 메서드에는 특정 템플릿을 지정하기 위한 *선택적 매개 변수*가 있습니다. [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]에서 새롭게 제공되는 선택적 매개 변수를 사용하면 매개 변수의 기본값을 사용하려는 경우 해당 매개 변수의 인수를 생략할 수 있습니다. 앞의 예제에서는 인수가 전송되지 않으므로 `Add`는 기본 템플릿을 사용하며 새 통합 문서를 만듭니다. 이전 버전의 C#에서 이와 동일한 문을 사용하려면 자리 표시자 인수인 `excelApp.Workbooks.Add(Type.Missing)`를 사용해야 했습니다.  
   
          자세한 내용은 [명명된 인수 및 선택적 인수](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)를 참조하세요.  
   
@@ -215,3 +215,4 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
  [연습: Excel용 첫 VSTO 추가 기능 만들기](http://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)   
  [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)   
  [상호 운용성](../../../csharp/programming-guide/interop/index.md)
+

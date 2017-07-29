@@ -1,5 +1,5 @@
 ---
-title: "개체(C# 프로그래밍 가이드) | Microsoft 문서"
+title: "개체(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: fe548eb5d520945e3f0d52750bbf89935947116e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a2a23d02e4ea95e908f97bc7264ee64d6899aee8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="objects-c-programming-guide"></a>개체(C# 프로그래밍 가이드)
@@ -52,7 +52,7 @@ ms.lasthandoff: 05/15/2017
   
  [!code-cs[csProgGuideStatements#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/objects_2.cs)]  
   
- `p1` 및 `p2` 둘 다에 대한 메모리가 스레드 스택에서 할당됩니다. 해당 메모리가 선언된 형식 또는 메서드와 함께 회수됩니다. 이는 할당 시 구조체가 복사되는 이유 중 하나입니다. 반면, 클래스 인스턴스에 할당된 메모리는 개체에 대한 모든 참조가 범위를 벗어날 때 공용 언어 런타임에 의해 자동으로 회수(가비지 수집)됩니다. C++에서와 같이 클래스 개체를 자동으로 제거할 수 없습니다. [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)]의 가비지 수집에 대한 자세한 내용은 [가비지 수집](../../../standard/garbage-collection/index.md)을 참조하세요.  
+ `p1` 및 `p2` 둘 다에 대한 메모리가 스레드 스택에서 할당됩니다. 해당 메모리가 선언된 형식 또는 메서드와 함께 회수됩니다. 이는 할당 시 구조체가 복사되는 이유 중 하나입니다. 반면, 클래스 인스턴스에 할당된 메모리는 개체에 대한 모든 참조가 범위를 벗어날 때 공용 언어 런타임에 의해 자동으로 회수(가비지 수집)됩니다. C++에서와 같이 클래스 개체를 자동으로 제거할 수 없습니다. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]의 가비지 수집에 대한 자세한 내용은 [가비지 수집](../../../standard/garbage-collection/index.md)을 참조하세요.  
   
 > [!NOTE]
 >  관리되는 힙의 메모리 할당 및 할당 취소는 공용 언어 런타임에서 고도로 최적화되어 있습니다. 대부분의 경우 힙에서 클래스 인스턴스를 할당하는 경우와 스택에서 구조체 인스턴스를 할당하는 경우의 성능 차이는 크지 않습니다.  
@@ -91,3 +91,4 @@ ms.lasthandoff: 05/15/2017
  [struct](../../../csharp/language-reference/keywords/struct.md)   
  [new 연산자](../../../csharp/language-reference/keywords/new-operator.md)   
  [공용 형식 시스템](../../../standard/base-types/common-type-system.md)
+

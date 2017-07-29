@@ -1,5 +1,5 @@
 ---
-title: "csc.exe를 사용한 명령줄 빌드 | Microsoft Docs"
+title: "csc.exe를 사용한 명령줄 빌드"
 ms.date: 2017-04-19
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: d90dc35fd985cbe35cfe86f7c299bd12aed11365
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: dd47544e11222dfb0035f37196abcdf5654d5537
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="command-line-build-with-cscexe"></a>csc.exe를 사용한 명령줄 빌드
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/10/2017
 
 표준 명령 프롬프트 창을 사용하는 경우 컴퓨터의 하위 디렉터리에서 *csc.exe*를 호출하려면 먼저 경로를 조정해야 합니다. 또한 *vsvars32.bat*를 실행하여 명령줄 빌드를 지원하도록 적절한 환경 변수를 설정해야 합니다. *vsvars32.bat*를 찾아서 실행하는 방법에 대한 지침을 포함하여 vsvars32.bat에 대한 자세한 내용은 [방법: Visual Studio 명령줄에 필요한 환경 변수 설정](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)을 참조하세요.
 
-[!INCLUDE[winsdklong](../../../csharp/language-reference/compiler-options/includes/winsdklong_md.md)]만 있는 컴퓨터에서 작업 중인 경우 **Microsoft .NET Framework SDK** 메뉴 옵션에서 여는 **SDK 명령 프롬프트**에서 C# 컴파일러를 사용할 수 있습니다.
+[!INCLUDE[winsdklong](~/includes/winsdklong-md.md)]만 있는 컴퓨터에서 작업 중인 경우 **Microsoft .NET Framework SDK** 메뉴 옵션에서 여는 **SDK 명령 프롬프트**에서 C# 컴파일러를 사용할 수 있습니다.
 
 또한 MSBuild를 사용하여 프로그래밍 방식으로 C# 프로그램을 빌드할 수도 있습니다. 자세한 내용은 [MSBuild](/visualstudio/msbuild/msbuild)를 참조하세요.
 
@@ -81,37 +81,37 @@ C# 컴파일러에서는 운영 체제 명령줄에 지정된 인수를 해석�
 
 - *File.cs*를 컴파일하여 *File.exe*를 생성합니다.
 
-```
+```console
 csc File.cs 
 ```
 
 - *File.cs*를 컴파일하여 *File.dll*을 생성합니다.
 
-```
+```console
 csc /target:library File.cs
 ```
 
 - *File.cs*를 컴파일하여 *My.exe*를 만듭니다.
 
-```
+```console
 csc /out:My.exe File.cs
 ```
 
 - 최적화를 사용하여 현재 디렉터리에 있는 모든 C# 파일을 컴파일하고 DEBUG 기호를 정의합니다. 출력은 *File2.exe*입니다.
 
-```
+```console
 csc /define:DEBUG /optimize /out:File2.exe *.cs
 ```
 
 - 현재 디렉터리에 있는 모든 C# 파일을 컴파일하여 *File2.dll*의 디버그 버전을 생성합니다. 로고 및 경고가 표시되지 않습니다.
 
-```
+```console
 csc /target:library /out:File2.dll /warn:0 /nologo /debug *.cs
 ```
 
 - 현재 디렉터리에 있는 모든 C# 파일을 *Something.xyz*(DLL)로 컴파일합니다.
 
-```
+```console
 csc /target:library /out:Something.xyz *.cs
 ```
 

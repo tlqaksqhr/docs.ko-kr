@@ -1,5 +1,5 @@
 ---
-title: "암시적 숫자 변환 표(C# 참조) | Microsoft 문서"
+title: "암시적 숫자 변환 표(C# 참조)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e4a0eca529b7c66cca527cfef3078a2c5bd24555
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4c7aa29f9bdeb5f30918e6d7b990c5197e7fe1a1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>암시적 숫자 변환 표(C# 참조)
@@ -73,3 +73,4 @@ ms.lasthandoff: 03/13/2017
  [기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [명시적 숫자 변환 표](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)   
  [캐스팅 및 형식 변환](../../../csharp/programming-guide/types/casting-and-type-conversions.md)
+

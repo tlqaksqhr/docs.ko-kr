@@ -1,5 +1,5 @@
 ---
-title: "C# 코딩 규칙(C# 프로그래밍 가이드) | Microsoft 문서"
+title: "C# 코딩 규칙(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 85e113f66998157a69be3f1d9065a5c4c1117773
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9f32fdc0eb1954cdac30c39e05c74d43301d850c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# 코딩 규칙(C# 프로그래밍 가이드)
@@ -60,7 +60,7 @@ ms.lasthandoff: 05/10/2017
 ## <a name="layout-conventions"></a>레이아웃 규칙  
  효율적인 레이아웃에서는 서식을 사용하여 코드 구조를 강조하고 코드를 보다 쉽게 읽을 수 있도록 생성합니다. Microsoft 예제 및 샘플은 다음 규칙을 따릅니다.  
   
--   기본 코드 편집기 설정(스마트 들여쓰기, 4자 들여쓰기, 탭을 공백으로 저장)을 사용합니다. 자세한 내용은 [옵션, 텍스트 편집기, C#, 서식](https://docs.microsoft.com/visualstudio/ide/reference/options-text-editor-csharp-formatting)을 참조하세요.  
+-   기본 코드 편집기 설정(스마트 들여쓰기, 4자 들여쓰기, 탭을 공백으로 저장)을 사용합니다. 자세한 내용은 [옵션, 텍스트 편집기, C#, 서식](/visualstudio/ide/reference/options-text-editor-csharp-formatting)을 참조하세요.  
   
 -   문을 한 줄에 하나씩만 작성합니다.  
   
@@ -221,3 +221,4 @@ ms.lasthandoff: 05/10/2017
 ## <a name="see-also"></a>참고 항목  
  [Visual Basic 코딩 규칙](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)   
  [보안 코딩 지침](../../../standard/security/secure-coding-guidelines.md)
+

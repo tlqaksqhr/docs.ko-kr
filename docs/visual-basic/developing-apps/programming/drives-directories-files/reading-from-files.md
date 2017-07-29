@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic에서 파일 읽기 | Microsoft 문서"
+title: "Visual Basic에서 파일 읽기"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,11 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 6e2dbabb7ad2141840fbfaed054494e5604e24c3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 298f821cc2dd6e8152db71206669b243112b6a6a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reading-from-files-in-visual-basic"></a>Visual Basic에서 파일 읽기
@@ -90,4 +90,5 @@ ms.lasthandoff: 05/22/2017
  파일과 디렉터리에서 `My` 기능을 사용하는 방법을 보여 줍니다.  
   
  [연습: .NET Framework 메서드를 사용하여 파일 조작](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- 파일과 디렉터리에서 [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] 메서드를 사용하는 방법을 보여 줍니다.
+ 파일과 디렉터리에서 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 메서드를 사용하는 방법을 보여 줍니다.
+

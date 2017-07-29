@@ -1,5 +1,5 @@
 ---
-title: "방법: 문자열 비교(C# 프로그래밍 가이드) | Microsoft 문서"
+title: "방법: 문자열 비교(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 1699a488234a9de8dab9c060bb33e6afd2346780
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 494b9ef1a1e6c8958dd3df2edb44debf32690eeb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-compare-strings-c-programming-guide"></a>방법: 문자열 비교(C# 프로그래밍 가이드)
@@ -67,4 +67,5 @@ ms.lasthandoff: 05/10/2017
  <xref:System.StringComparer?displayProperty=fullName>   
  [문자열](../../../csharp/programming-guide/strings/index.md)   
  [문자열 비교](../../../standard/base-types/comparing.md)   
- [응용 프로그램 전역화 및 지역화](https://docs.microsoft.com/visualstudio/ide/globalizing-and-localizing-applications)
+ [응용 프로그램 전역화 및 지역화](/visualstudio/ide/globalizing-and-localizing-applications)
+

@@ -1,5 +1,5 @@
 ---
-title: "cref 특성(C# 프로그래밍 가이드) | Microsoft Docs"
+title: "cref 특성(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,15 +27,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dc1c456c71efb3cc6e60a8fdc77384e65975f110
-ms.openlocfilehash: 781efb81acab79dfbcd72c24761aa3dfdd79940c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7861d6696b7a40b8a665d489b92a3b196a7dd0ce
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="cref-attribute-c-programming-guide"></a>cref 특성(C# 프로그래밍 가이드)
-XML 문서 태그의 `cref` 특성은 "코드 참조"를 의미합니다. 태그의 내부 텍스트를 형식, 메서드, 속성 등의 코드 요소로 지정합니다. [Sandcastle](http://go.microsoft.com/fwlink/?LinkId=124061) 등의 문서 도구는 `cref` 특성을 사용하여 형식 또는 멤버가 문서화된 페이지에 대한 하이퍼링크를 자동으로 생성합니다.  
+XML 문서 태그의 `cref` 특성은 "코드 참조"를 의미합니다. 태그의 내부 텍스트를 형식, 메서드, 속성 등의 코드 요소로 지정합니다. [Sandcastle](https://github.com/EWSoftware/SHFB) 등의 문서 도구는 `cref` 특성을 사용하여 형식 또는 멤버가 문서화된 페이지에 대한 하이퍼링크를 자동으로 생성합니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 [\<see>](../../../csharp/programming-guide/xmldoc/see.md) 태그에 사용된 `cref` 특성을 보여 줍니다.  
@@ -44,7 +44,7 @@ XML 문서 태그의 `cref` 특성은 "코드 참조"를 의미합니다. 태그
   
  컴파일하면 프로그램이 다음 XML 파일을 생성합니다. 예를 들어 `GetZero` 메서드의 `cref` 특성은 컴파일러에서 `"M:TestNamespace.TestClass.GetZero"`로 변환되었습니다. "M:" 접두사는 "메서드"를 의미하며, Sandcastle 등의 문서 도구에서 인식되는 규칙입니다. 접두사의 전체 목록은 [XML 파일 처리](../../../csharp/programming-guide/xmldoc/processing-the-xml-file.md)를 참조하세요.  
   
-```  
+```xml  
 <?xml version="1.0"?>  
 <doc>  
     <assembly>  

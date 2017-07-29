@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic에서 구성 요소 만들기 및 사용 | Microsoft 문서"
+title: "Visual Basic에서 구성 요소 만들기 및 사용"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,17 +27,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 1235f62f6ac0878e16387c35150764f3585bc004
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 03929dd0dbb81a9efee5b69ede78ff0b4ab4d380
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Visual Basic에서 구성 요소 만들기 및 사용
-*구성 요소*는 <xref:System.ComponentModel.IComponent?displayProperty=fullName> 인터페이스를 구현하는 클래스이거나 <xref:System.ComponentModel.IComponent>를 구현하는 클래스에서 직접 또는 간접적으로 파생되는 클래스입니다. [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)] 구성 요소는 재사용 가능한 개체이고, 다른 개체와 상호 작용할 수 있으며, 외부 리소스 및 디자인 타임 지원에 대한 제어를 제공합니다.  
+*구성 요소*는 <xref:System.ComponentModel.IComponent?displayProperty=fullName> 인터페이스를 구현하는 클래스이거나 <xref:System.ComponentModel.IComponent>를 구현하는 클래스에서 직접 또는 간접적으로 파생되는 클래스입니다. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 구성 요소는 재사용 가능한 개체이고, 다른 개체와 상호 작용할 수 있으며, 외부 리소스 및 디자인 타임 지원에 대한 제어를 제공합니다.  
   
- 구성 요소의 중요한 기능은 구성 요소가 디자인 가능하다는 것입니다. 즉, 구성 요소인 클래스는 [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] 통합 개발 환경에서 사용할 수 있습니다. 구성 요소는 도구 상자에 추가하고, 양식에 끌어서 놓고, 디자인 화면에서 조작할 수 있습니다. 구성 요소에 대한 기본 디자인 타임 지원은 [!INCLUDE[dnprdnshort](../../csharp/getting-started/includes/dnprdnshort_md.md)]에 기본 제공됩니다. 구성 요소 개발자는 기본 디자인 타임 기능을 이용하기 위해 추가 작업을 할 필요가 없습니다.  
+ 구성 요소의 중요한 기능은 구성 요소가 디자인 가능하다는 것입니다. 즉, 구성 요소인 클래스는 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 통합 개발 환경에서 사용할 수 있습니다. 구성 요소는 도구 상자에 추가하고, 양식에 끌어서 놓고, 디자인 화면에서 조작할 수 있습니다. 구성 요소에 대한 기본 디자인 타임 지원은 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]에 기본 제공됩니다. 구성 요소 개발자는 기본 디자인 타임 기능을 이용하기 위해 추가 작업을 할 필요가 없습니다.  
   
  *컨트롤*과 구성 요소는 둘 다 디자인 가능하다는 점에서 비슷합니다. 그러나 컨트롤은 사용자 인터페이스를 제공하지만 구성 요소는 제공하지 않습니다. 컨트롤은 기본 컨트롤 클래스인 <xref:System.Windows.Forms.Control> 또는 <xref:System.Web.UI.Control> 중 하나에서 파생되어야 합니다.  
   
@@ -103,3 +103,4 @@ ms.lasthandoff: 05/22/2017
  [방법: Windows Forms에서 디자인 타임 지원 액세스](http://msdn.microsoft.com/library/a84f8579-1f47-41b9-ba37-69030b0aff09)   
  [방법: 디자인 모드에서 컨트롤의 모양과 동작 확장](http://msdn.microsoft.com/library/68f85054-2253-47f5-a4f2-3f1ac8c9f27b)   
  [방법: 디자인 모드에서 컨트롤에 대한 사용자 지정 초기화 수행](http://msdn.microsoft.com/library/914eaa03-092f-4556-9160-b8a2a40641d9)
+

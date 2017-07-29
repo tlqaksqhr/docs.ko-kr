@@ -1,5 +1,5 @@
 ---
-title: "연습: Visual Studio에서 개체 유지(C#) | Microsoft 문서"
+title: "연습: Visual Studio에서 개체 유지(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f76e40e2503bf857922490d728c3a9f3432aa31f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4c8dce64c470f01f540a83f68e3861df56913e4c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-c"></a>연습: Visual Studio에서 개체 유지(C#)
@@ -44,7 +45,7 @@ ms.lasthandoff: 03/13/2017
   
 ### <a name="to-create-the-loan-class"></a>Loan 클래스를 만들려면  
   
-1.  새 클래스 라이브러리 프로젝트를 만들고 "LoanClass"라는 이름을 지정합니다. 자세한 내용은 [솔루션 및 프로젝트 만들기](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects)를 참조하세요.  
+1.  새 클래스 라이브러리 프로젝트를 만들고 "LoanClass"라는 이름을 지정합니다. 자세한 내용은 [솔루션 및 프로젝트 만들기](/visualstudio/ide/creating-solutions-and-projects)를 참조하세요.  
   
 2.  **솔루션 탐색기**에서 Class1 파일에 대한 바로 가기 메뉴를 열고 **이름 바꾸기**를 선택합니다. 파일 이름을 `Loan`으로 바꾸고 ENTER 키를 누릅니다. 파일 이름을 바꾸면 클래스 이름도 `Loan`으로 바뀝니다.  
   
@@ -102,7 +103,7 @@ ms.lasthandoff: 03/13/2017
   
 7.  **확인** 을 클릭하여 대화 상자를 닫습니다.  
   
-8.  디자이너에서 네 개의 <xref:System.Windows.Forms.TextBox> 컨트롤을 양식에 추가합니다.  
+8.  디자이너에서 <xref:System.Windows.Forms.TextBox> 컨트롤 4개를 폼에 추가합니다.  
   
 9. 코드 편집기에서 다음 코드를 추가합니다.  
   
@@ -203,7 +204,7 @@ ms.lasthandoff: 03/13/2017
     }  
     ```  
   
-     먼저 파일이 있는지를 확인해야 합니다. 파일이 있으면 이진 파일을 읽기 위한 <xref:System.IO.Stream> 클래스를 만들고, 파일을 변환하기 위한 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 클래스를 만듭니다. 또한 스트림 형식에서 Loan 개체 형식으로 변환해야 합니다.  
+     먼저 파일이 있는지를 확인해야 합니다. 파일이 있으면 이진 파일을 읽는 <xref:System.IO.Stream> 클래스와 파일을 변환하는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 클래스를 만듭니다. 또한 스트림 형식에서 Loan 개체 형식으로 변환해야 합니다.  
   
  그런 다음 텍스트 상자에 입력된 데이터를 `Loan` 클래스에 저장하는 코드를 추가하고, 클래스를 파일로 serialize해야 합니다.  
   
