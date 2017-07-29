@@ -1,5 +1,5 @@
 ---
-title: "방법: CSV 파일에서 XML 생성(C#) | Microsoft 문서"
+title: "방법: CSV 파일에서 XML 생성(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,18 +14,18 @@ ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8297ec6c462a3b01548b156f10a1470b8a5e6173
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 749919868364d0f35bd60246460013b07c004643
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-generate-xml-from-csv-files-c"></a>방법: CSV 파일에서 XML 생성(C#)
-이 예제에서는 [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)] 및 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]을 사용하여 CSV(쉼표로 구분된 값) 파일에서 XML 파일을 생성하는 방법을 보여 줍니다.  
+이 예제에서는 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 및 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]을 사용하여 CSV(쉼표로 구분된 값) 파일에서 XML 파일을 생성하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드에서는 문자열 배열에 대해 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 쿼리를 수행합니다.  
+ 다음 코드에서는 문자열 배열에 대해 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리를 수행합니다.  
   
  쿼리에서 `let` 절을 사용하여 각 문자열을 필드 배열로 분할합니다.  
   
@@ -121,3 +121,4 @@ Console.WriteLine(cust);
   
 ## <a name="see-also"></a>참고 항목  
  [프로젝션 및 변환(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+

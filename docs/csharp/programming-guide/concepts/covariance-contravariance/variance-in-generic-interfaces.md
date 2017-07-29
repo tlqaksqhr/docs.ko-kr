@@ -1,5 +1,5 @@
 ---
-title: "제네릭 인터페이스의 가변성(C#) | Microsoft 문서"
+title: "제네릭 인터페이스의 가변성(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 7acde09659624fd097471824e6407dc181d88893
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 40daaa3d008a93ab48d0d74894f60f0baca1d12b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="variance-in-generic-interfaces-c"></a>제네릭 인터페이스의 가변성(C#)
@@ -111,3 +111,4 @@ IEnumerable<Object> listObjects = new List<String>();
  [Variant 제네릭 인터페이스 만들기(C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)   
  [제네릭 인터페이스](../../../../standard/generics/interfaces.md)   
  [대리자의 가변성(C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+

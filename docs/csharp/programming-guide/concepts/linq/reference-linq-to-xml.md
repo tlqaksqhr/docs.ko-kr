@@ -1,5 +1,5 @@
 ---
-title: "참조(LINQ to XML) | Microsoft 문서"
+title: "참조(LINQ to XML)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5afdbf5566e3c077252a6207ae965e48cf00ae83
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 80aed8cce447ba3ea0e702e06bf88ec4840adc5b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reference-linq-to-xml"></a>참조(LINQ to XML)
@@ -33,7 +34,8 @@ ms.lasthandoff: 03/13/2017
   
  XSD 파일을 기준으로 XML 트리의 유효성을 검사하는 데 도움이 되는 확장 메서드에 대한 참조 설명서는 <xref:System.Xml.Schema.Extensions?displayProperty=fullName>를 참조하세요.  
   
- XML 트리에서 XPath 쿼리를 평가하는 데 도움이 되는 확장 메서드에 대한 참조 설명서는 <xref:System.Xml.XPath.Extensions?displayProperty=fullName>를 참조하세요.  
+ XML 트리에 대한 XPath 쿼리를 계산하는 데 사용할 수 있는 확장 메서드에 대한 참조 설명서는 <xref:System.Xml.XPath.Extensions?displayProperty=fullName>를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [LINQ to XML(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)
+

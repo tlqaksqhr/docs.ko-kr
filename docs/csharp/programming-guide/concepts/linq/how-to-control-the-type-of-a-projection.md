@@ -1,5 +1,5 @@
 ---
-title: "방법: 프로젝션 형식 제어(C#) | Microsoft 문서"
+title: "방법: 프로젝션 형식 제어(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,18 +14,18 @@ ms.assetid: e4db6b7e-4cc9-4c8f-af85-94acf32aa348
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 465a04338de0a092bf60e15ce07a9aace160bbe3
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e681fbffe681237d0b0ac3d7a161180e478172f9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-control-the-type-of-a-projection-c"></a>방법: 프로젝션 형식 제어(C#)
-프로젝션은 데이터 집합을 하나 가져와서 필터링하고 모양을 변경하며 형식까지도 변경하는 프로세스입니다. 대부분의 쿼리 식은 프로젝션을 수행합니다. 이 단원에 나와 있는 대부분의 쿼리 식은 <xref:System.Xml.Linq.XElement>의 <xref:System.Collections.Generic.IEnumerable%601>로 확인되지만 다른 형식의 컬렉션을 만들기 위해 프로젝션의 형식을 제어할 수 있습니다. 이 항목에서는 프로젝션의 형식을 제어하는 방법을 보여 줍니다.  
+프로젝션은 데이터 집합을 하나 가져와서 필터링하고 모양을 변경하며 형식까지도 변경하는 프로세스입니다. 대부분의 쿼리 식은 프로젝션을 수행합니다. 이 단원에 나와 있는 대부분의 쿼리 식은 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement>로 확인되지만 다른 형식의 컬렉션을 만들기 위해 프로젝션의 형식을 제어할 수 있습니다. 이 항목에서는 프로젝션의 형식을 제어하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 새 형식 `Customer`를 정의합니다. 쿼리 식은 `Customer` 절에서 새 `Select` 개체를 인스턴스화합니다. 이에 따라 쿼리 식의 형식이 `Customer`의 <xref:System.Collections.Generic.IEnumerable%601>가 됩니다.  
+ 다음 예제에서는 새 형식 `Customer`를 정의합니다. 쿼리 식은 `Customer` 절에서 새 `Select` 개체를 인스턴스화합니다. 이에 따라 쿼리 식의 형식이 <xref:System.Collections.Generic.IEnumerable%601>의 `Customer`이 됩니다.  
   
  이 예제에서는 XML 문서 [샘플 XML 파일: 고객 및 주문(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)을 사용합니다.  
   
@@ -84,3 +84,4 @@ LETSS:Let's Stop N Shop:Jaime Yorres
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Linq.Enumerable.Select%2A>   
  [프로젝션 및 변환(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+

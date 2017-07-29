@@ -1,5 +1,5 @@
 ---
-title: "방법: XSD를 사용하여 유효성 검사(LINQ to XML)(C#) | Microsoft 문서"
+title: "방법: XSD를 사용하여 유효성 검사(LINQ to XML)(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,17 +19,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c3a510c91b74df1e5d0ad26655fa33e8447ea850
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cec3090541f7bbc306eb41fff409dc890cc55d17
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>방법: XSD를 사용하여 유효성 검사(LINQ to XML)(C#)
 <xref:System.Xml.Schema> 네임스페이스에는 XSD(XML 스키마 정의 언어) 파일에 대해 XML 트리의 유효성을 쉽게 검사할 수 있도록 하는 확장 메서드가 포함되어 있습니다. 자세한 내용은 <xref:System.Xml.Schema.Extensions.Validate%2A> 메서드 설명서를 참조하세요.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 <xref:System.Xml.Schema.XmlSchemaSet>를 만든 다음 스키마 집합과 비교해서 두 <xref:System.Xml.Linq.XDocument> 개체의 유효성을 검사합니다. 문서 중 하나는 유효하고 다른 하나는 유효하지 않습니다.  
+ 다음 예제에서는 <xref:System.Xml.Schema.XmlSchemaSet>을 만든 다음 스키마 집합에 대해 두 <xref:System.Xml.Linq.XDocument> 개체의 유효성을 검사합니다. 문서 중 하나는 유효하고 다른 하나는 유효하지 않습니다.  
   
 ```csharp  
 string xsdMarkup =  
@@ -139,3 +140,4 @@ custOrdDoc did not validate
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Xml.Schema.Extensions.Validate%2A>   
  [XML 트리 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+

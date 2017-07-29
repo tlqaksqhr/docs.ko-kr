@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic에서 파일/디렉터리 만들기, 삭제 및 이동 | Microsoft Docs"
+title: "Visual Basic에서 파일/디렉터리 만들기, 삭제 및 이동"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -48,11 +48,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 6484c8233c2834732aefb270323723b6c9757f05
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 00144ca80e267ef2f24df0bdaa1c9f689a43af77
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a>Visual Basic에서 파일/디렉터리 만들기, 삭제 및 이동
@@ -147,3 +147,4 @@ ms.lasthandoff: 05/22/2017
   
  [파일에 쓰기](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
  파일에 쓰기와 관련된 작업을 나열합니다.
+

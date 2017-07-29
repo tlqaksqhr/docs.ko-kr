@@ -1,5 +1,5 @@
 ---
-title: "확장 메서드를 사용하여 리팩터링(C#) | Microsoft 문서"
+title: "확장 메서드를 사용하여 리팩터링(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,17 +14,17 @@ ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a8d4df7081c765ce09f95f51822dbd7543876b87
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c4145e38a6fc49d53d274520dd155cffb5e7f9d5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>확장 메서드를 사용하여 리팩터링(C#)
 이 예제는 확장 메서드로 구현된 순수 함수를 사용하여 문자열의 연결을 리팩터링하는 방법으로 이전 예제인 [단락의 텍스트 검색(C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)을 기반으로 작성되었습니다.  
   
- 이전 예제에서는 <xref:System.Linq.Enumerable.Aggregate%2A> 표준 쿼리 연산자를 사용하여 여러 문자열을 한 문자열로 연결합니다. 그러나 생성되는 쿼리가 더 작고 간단하기 때문에 이 작업을 수행하는 확장명 메서드를 작성하는 것이 간편합니다.  
+ 이전 예제에서는 <xref:System.Linq.Enumerable.Aggregate%2A> 표준 쿼리 연산자를 사용하여 여러 문자열을 한 문자열로 연결합니다. 그러나 생성되는 쿼리가 더 작고 간단하기 때문에 이 작업을 수행하는 확장 메서드를 작성하는 것이 간편합니다.  
   
 ## <a name="example"></a>예제  
  이 예제에서는 WordprocessingML 문서를 처리하여 단락, 각 단락의 스타일 및 각 단락의 텍스트를 검색합니다. 이 예제는 이 자습서의 이전 예제를 기반으로 합니다.  
@@ -261,3 +261,4 @@ StyleName:Code >Hello World<
 ## <a name="see-also"></a>참고 항목  
  [자습서: WordprocessingML 문서에서 내용 조작(C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)   
  [순수 함수로 리팩터링(C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+

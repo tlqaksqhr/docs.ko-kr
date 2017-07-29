@@ -1,5 +1,5 @@
 ---
-title: "매개 변수 전달(C# 프로그래밍 가이드) | Microsoft 문서"
+title: "매개 변수 전달(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a4004cb22dfd23d24c6c333a560cb89b8ab08771
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4b8c0c7f7b8c3820edbafbe90fb961c12da8fc84
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="passing-parameters-c-programming-guide"></a>매개 변수 전달(C# 프로그래밍 가이드)
@@ -57,3 +57,4 @@ C#에서는 인수를 값 또는 참조로 매개 변수에 전달할 수 있습
 ## <a name="see-also"></a>참고 항목  
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
  [메서드](../../../csharp/programming-guide/classes-and-structs/methods.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "C의 LINQ#"
+title: "C#의 LINQ"
 description: "LINQ에 대한 자세한 정보를 제공하는 항목의 링크"
 keywords: .NET, .NET Core, C#
 author: BillWagner
@@ -11,13 +11,14 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 8eb3284f-0ab9-4cad-9216-2da58d9761a5
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ebd7bf01396a89d1d2c2c2065b78a611dd36183a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d8b005ae43816e852c3af7c014f994af30af1e2d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="linq-in-c"></a>C의 LINQ#
+# <a name="linq-in-c"></a>C#의 LINQ
 이 섹션에는 LINQ에 대한 자세한 정보를 제공하는 항목의 링크가 포함되어 있습니다.  
   
 ## <a name="in-this-section"></a>단원 내용  
@@ -46,3 +47,4 @@ ms.lasthandoff: 03/13/2017
  [표준 쿼리 연산자 개요](../programming-guide/concepts/linq/standard-query-operators-overview.md)  
  LINQ에서 사용되는 표준 메서드를 소개합니다.  
   
+

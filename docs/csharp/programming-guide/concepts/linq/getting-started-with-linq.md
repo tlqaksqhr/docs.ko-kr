@@ -1,5 +1,5 @@
 ---
-title: "C#에서 LINQ 시작 | Microsoft 문서"
+title: "C#에서 LINQ 시작"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,13 +34,14 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 88eff7c3909a31939f5789fd19bc4f1d07d013b7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 02a76889912e441cc0d1bcf27cb5e9421ef852ad
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="getting-started-with-linq-in-c"></a>C에서 LINQ 시작#
+# <a name="getting-started-with-linq-in-c"></a>C#에서 LINQ 시작
 이 섹션에서는 LINQ 설명서 및 샘플의 나머지 부분을 이해하는 데 도움이 되는 기본 배경 정보를 제공합니다.  
   
 ## <a name="in-this-section"></a>단원 내용  
@@ -83,3 +84,4 @@ ms.lasthandoff: 03/13/2017
   
  [Visual Basic에서 LINQ 시작](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
  Visual Basic에서 LINQ 사용 관련 항목에 대한 링크를 제공합니다.
+

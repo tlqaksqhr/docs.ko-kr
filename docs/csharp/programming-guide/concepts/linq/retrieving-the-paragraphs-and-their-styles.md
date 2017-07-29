@@ -1,5 +1,5 @@
 ---
-title: "단락 및 해당 스타일 검색(C#) | Microsoft 문서"
+title: "단락 및 해당 스타일 검색(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: c2f767f8-57b1-4b4b-af04-89ffb1f7067d
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fddaa5e25befc40278888c0b401ad39a61e8e9d4
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: db420c0aca9edadb8009556ebf476f196ee7641a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a>단락 및 해당 스타일 검색(C#)
@@ -35,7 +35,7 @@ ms.lasthandoff: 03/13/2017
 xDoc.Root.Element(w + "body").Descendants(w + "p")  
 ```  
   
- 이 식은 이전 예제 [기본 단락 스타일 찾기(C#)](../../../../csharp/programming-guide/concepts/linq/finding-the-default-paragraph-style.md)의 쿼리 소스와 유사합니다. 중요한 차이점은 이 식은 <xref:System.Xml.Linq.XContainer.Elements%2A> 대신 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축을 사용한다는 것입니다. 섹션이 포함된 문서에서 단락은 본문 요소의 직접 자식이 아니고 계층 구조에서 두 수준 아래에 있기 때문에 쿼리에서는 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축을 사용합니다. 문서에서 섹션을 사용하는지와 상관없이 코드는 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축을 사용하여 작동합니다.  
+ 이 식은 이전 예제 [기본 단락 스타일 찾기(C#)](../../../../csharp/programming-guide/concepts/linq/finding-the-default-paragraph-style.md)의 쿼리 소스와 유사합니다. 주요 차이점은 이 식에서는 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축 대신 <xref:System.Xml.Linq.XContainer.Elements%2A> 축을 사용하는 것입니다. 섹션이 포함된 문서에서 단락은 본문 요소의 직접적 자식이 아니고 계층 구조에서 두 수준 아래에 있기 때문에 쿼리에서는 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축을 사용합니다. 코드에서는 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축을 사용하여 문서에서 섹션을 사용하는지 여부에 대한 작업을 합니다.  
   
 ## <a name="example"></a>예제  
  쿼리에서는 `let` 절을 사용하여 스타일 노드가 포함된 요소를 확인합니다. 요소가 없으면 `styleNode`가 `null`로 설정됩니다.  
@@ -44,7 +44,7 @@ xDoc.Root.Element(w + "body").Descendants(w + "p")
 let styleNode = para.Elements(w + "pPr").Elements(w + "pStyle").FirstOrDefault()  
 ```  
   
- `let` 절은 먼저 <xref:System.Xml.Linq.XContainer.Elements%2A> 축을 사용하여 `pPr`라는 이름의 모든 요소를 찾은 다음, <xref:System.Xml.Linq.Extensions.Elements%2A> 확장 메서드를 사용하여 `pStyle`이라는 이름의 모든 자식 요소를 찾고, 마지막으로 <xref:System.Linq.Enumerable.FirstOrDefault%2A> 표준 쿼리 연산자를 사용하여 컬렉션을 singleton으로 변환합니다. 컬렉션이 비어 있으면 `styleNode`가 `null`로 설정됩니다. 이 방법은 `pStyle` 하위 노드를 찾을 때 유용합니다. `pPr` 자식 노드가 없으면 코드에서 예외를 throw하지 않고, 대신 `styleNode`가 `null`로 설정됩니다. 이는 이 `let` 절의 원하는 동작입니다.  
+ `let` 절에서는 먼저 <xref:System.Xml.Linq.XContainer.Elements%2A> 축을 사용하여 `pPr`이라는 모든 요소를 찾은 다음 <xref:System.Xml.Linq.Extensions.Elements%2A> 확장 메서드를 사용하여 `pStyle`이라는 모든 자식 요소를 찾고, 마지막으로 <xref:System.Linq.Enumerable.FirstOrDefault%2A> 표준 쿼리 연산자를 사용하여 컬렉션을 singleton으로 변환합니다. 컬렉션이 비어 있으면 `styleNode`가 `null`로 설정됩니다. 이 방법은 `pStyle` 하위 노드를 찾을 때 유용합니다. `pPr` 자식 노드가 없으면 코드에서 예외를 throw하지 않고, 대신 `styleNode`가 `null`로 설정됩니다. 이는 이 `let` 절의 원하는 동작입니다.  
   
  쿼리에서는 두 멤버 `StyleName` 및 `ParagraphNode`가 있는 익명 형식의 컬렉션을 프로젝션합니다.  
   
@@ -146,3 +146,4 @@ StyleName:Code
   
 ## <a name="see-also"></a>참고 항목  
  [자습서: WordprocessingML 문서에서 내용 조작(C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "const(C# 참조) | Microsoft 문서"
+title: "const(C# 참조)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,18 +30,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 700e80272384a946609d538c5516f0480b7fed27
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b8f6d567deed513ff5693fe39bd21c8607677402
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="const-c-reference"></a>const(C# 참조)
 상수 필드 또는 지역 상수를 선언할 때는 `const` 키워드를 사용합니다. 상수 필드 및 지역 상수는 변수가 아니며 수정할 수 없습니다. 상수는 숫자, 부울 값, 문자열 또는 null 참조일 수 있습니다. 언제든지 변경될 수 있는 정보를 나타낼 때는 상수를 만들지 마세요. 예를 들어, 상수 필드를 사용하여 서비스의 가격, 제품 버전 번호 또는 회사의 브랜드 이름을 저장하지 마세요. 이러한 값은 시간이 지남에 따라 변경될 수 있으며, 컴파일러는 상수를 전파하므로 변경 내용을 보기 위해서는 라이브러리를 사용하여 컴파일된 다른 코드를 다시 컴파일해야 합니다. [readonly](../../../csharp/language-reference/keywords/readonly.md) 키워드를 참조하세요. 예:  
   
-```  
-      const int x = 0;  
+```csharp
+const int x = 0;  
 public const double gravitationalConstant = 6.673e-11;  
 private const string productName = "Visual C#";  
 ```  
@@ -53,7 +53,7 @@ private const string productName = "Visual C#";
   
  상수 선언에서는 다음과 같이 여러 상수를 선언할 수 있습니다.  
   
-```  
+```csharp
 public const double x = 1.0, y = 2.0, z = 3.0;  
 ```  
   
@@ -61,7 +61,7 @@ public const double x = 1.0, y = 2.0, z = 3.0;
   
  상수는 다음과 같이 상수 식에 참여할 수 있습니다.  
   
-```  
+```csharp
 public const int c1 = 5;  
 public const int c2 = c1 + 100;  
 ```  

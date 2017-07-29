@@ -1,5 +1,5 @@
 ---
-title: "고급 쿼리 기술(LINQ to XML)(C#) | Microsoft 문서"
+title: "고급 쿼리 기술(LINQ to XML)(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,15 +14,15 @@ ms.assetid: 028d978e-215b-4d50-ba70-adce0659386d
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: dd73718e45959569ce012e9a49b9698123114195
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 91460ed99854edda829503d451728c4274d7ba2b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="advanced-query-techniques-linq-to-xml-c"></a>고급 쿼리 기술(LINQ to XML)(C#)
-이 단원에서는 고급 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 쿼리 기법의 예제를 제공합니다.  
+이 단원에서는 고급 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리 기법의 예제를 제공합니다.  
   
 ## <a name="in-this-section"></a>단원 내용  
   
@@ -31,7 +31,7 @@ ms.lasthandoff: 03/13/2017
 |[방법: 두 컬렉션 조인(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md)|`Join` 절을 사용하여 XML 데이터의 관계를 이용하는 방법을 보여 줍니다.|  
 |[방법: 그룹화를 사용하여 계층 구조 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-create-hierarchy-using-grouping.md)|데이터를 그룹화한 다음 그룹화에 따라 XML을 생성하는 방법을 보여 줍니다.|  
 |[방법: XPath를 사용하여 LINQ to XML 쿼리(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-linq-to-xml-using-xpath.md)|XPath 쿼리를 기반으로 컬렉션을 검색하는 방법을 보여 줍니다.|  
-|[방법: LINQ to XML 축 메서드 작성(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md)|[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 축 메서드를 작성하는 방법을 보여 줍니다.|  
+|[방법: LINQ to XML 축 메서드 작성(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md)|[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 축 메서드를 작성하는 방법을 보여 줍니다.|  
 |[방법: 텍스트를 XML로 변환 스트리밍 수행(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-perform-streaming-transformations-of-text-to-xml.md)|작은 메모리 사용 공간을 유지하면서 매우 큰 텍스트 파일을 XML로 변환하는 방법을 보여 줍니다.|  
 |[방법: 트리의 모든 노드 나열(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-list-all-nodes-in-a-tree.md)|XML 트리의 모든 노드를 나열하는 유틸리티 메서드를 제공합니다. 이 메서드는 XML 트리를 수정하는 디버깅 코드에 유용합니다.|  
 |[방법: Office Open XML 문서에서 단락 검색(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-paragraphs-from-an-office-open-xml-document.md)|Office Open XML 문서를 열고 XElement 개체 컬렉션의 단락, 단락의 텍스트 및 단락의 스타일을 검색합니다.|  
@@ -40,3 +40,4 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="see-also"></a>참고 항목  
  [XML 트리 쿼리(C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
+

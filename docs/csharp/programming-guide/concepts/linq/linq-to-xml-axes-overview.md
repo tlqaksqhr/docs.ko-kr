@@ -1,5 +1,5 @@
 ---
-title: "LINQ to XML 축 개요(C#) | Microsoft 문서"
+title: "LINQ to XML 축 개요(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,12 +14,11 @@ ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
 caps.latest.revision: 4
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b43d3cb5cc7154c1133c5fa17e5bdacca97a38c9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fdd4e6ffc17bc2c39d0dbeadbba955aacfe02dd9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>LINQ to XML 축 개요(C#)
@@ -27,9 +26,9 @@ XML 트리를 만들거나 XML 문서를 XML 트리에 로드한 후 XML 트리�
   
  [XElement 클래스 개요](http://msdn.microsoft.com/library/d35180fe-7016-4895-9bfc-ba1e3f7875ec)에 설명된 대로 <xref:System.Xml.Linq.XElement> 개체는 단일 요소 노드를 나타냅니다. 요소의 내용은 복합 요소(구조화된 내용이라고도 함)이거나 단순 요소일 수 있습니다. 단순 요소는 비어 있거나 값을 포함할 수 있습니다. 노드에 구조화된 내용이 포함되어 있으면 다양한 축 메서드를 사용하여 하위 요소의 열거형을 검색할 수 있습니다. 가장 일반적으로 사용되는 축 메서드는 <xref:System.Xml.Linq.XContainer.Elements%2A> 및 <xref:System.Xml.Linq.XContainer.Descendants%2A>입니다.  
   
- 컬렉션을 반환하는 축 메서드 외에도 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 쿼리에서 일반적으로 사용하는 두 메서드가 있습니다. <xref:System.Xml.Linq.XContainer.Element%2A> 메서드는 단일 <xref:System.Xml.Linq.XElement>를 반환합니다. <xref:System.Xml.Linq.XElement.Attribute%2A> 메서드는 단일 <xref:System.Xml.Linq.XAttribute>를 반환합니다.  
+ 컬렉션을 반환하는 축 메서드 외에도 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리에서 일반적으로 사용하는 두 메서드가 있습니다. <xref:System.Xml.Linq.XContainer.Element%2A> 메서드는 단일 <xref:System.Xml.Linq.XElement>를 반환합니다. <xref:System.Xml.Linq.XElement.Attribute%2A> 메서드는 단일 <xref:System.Xml.Linq.XAttribute>를 반환합니다.  
   
- 많은 용도를 위해 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 쿼리는 트리를 검사하고, 트리에서 데이터를 추출하고, 트리를 변환하는 가장 강력한 방법을 제공합니다. [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 쿼리는 <xref:System.Collections.Generic.IEnumerable%601>를 구현하는 개체에 대해 작동하며 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 축은 <xref:System.Xml.Linq.XElement> 컬렉션의 <xref:System.Collections.Generic.IEnumerable%601>와, <xref:System.Xml.Linq.XAttribute> 컬렉션의 <xref:System.Collections.Generic.IEnumerable%601>를 반환합니다. 쿼리를 수행하려면 이러한 컬렉션이 필요합니다.  
+ 많은 용도를 위해 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리는 트리를 검사하고, 트리에서 데이터를 추출하고, 트리를 변환하는 가장 강력한 방법을 제공합니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리는 <xref:System.Collections.Generic.IEnumerable%601>를 구현하는 개체에 대해 작동하며 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 축은 <xref:System.Xml.Linq.XElement> 컬렉션의 <xref:System.Collections.Generic.IEnumerable%601>와, <xref:System.Xml.Linq.XAttribute> 컬렉션의 <xref:System.Collections.Generic.IEnumerable%601>를 반환합니다. 쿼리를 수행하려면 이러한 컬렉션이 필요합니다.  
   
  요소와 특성의 컬렉션을 검색하는 축 메서드 외에도 트리를 매우 자세히 반복하는 데 사용할 수 있는 축 메서드가 있습니다. 예를 들어, 요소와 특성을 처리하는 대신 트리의 노드로 작업할 수 있습니다. 노드는 요소와 특성보다 세부적인 단위입니다. 노드로 작업할 때 XML 주석, 텍스트 노드, 처리 명령 등을 검사할 수 있습니다. 이 기능은 워드 프로세서를 작성 중인 사용자가 문서를 XML로 저장하려는 경우 등에 중요합니다. 그러나 XML 프로그래머의 대다수는 요소, 특성 및 해당 값에 주로 관심이 있습니다.  
   
@@ -69,3 +68,4 @@ XML 트리를 만들거나 XML 문서를 XML 트리에 로드한 후 XML 트리�
   
 ## <a name="see-also"></a>참고 항목  
  [LINQ to XML 축(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+

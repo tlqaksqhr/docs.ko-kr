@@ -1,5 +1,5 @@
 ---
-title: "정적으로 컴파일된 쿼리(LINQ to XML)(C#) | Microsoft 문서"
+title: "정적으로 컴파일된 쿼리(LINQ to XML)(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: 3bf558fe-0705-479d-86d4-00188f5fcf9c
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 10e4df75be88dc5609e0ca15666042a0354824bc
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8e9986524756c979226919d37318a9ca2562213a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="statically-compiled-queries-linq-to-xml-c"></a>정적으로 컴파일된 쿼리(LINQ to XML)(C#)
@@ -59,7 +59,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <xref:System.Linq.Enumerable.Where%2A> 메서드는 확장 메서드입니다. 자세한 내용은 [확장 메서드](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)를 참조하세요. <xref:System.Linq.Enumerable.Where%2A>는 확장 메서드이므로 위 쿼리는 다음과 같이 작성된 것처럼 컴파일됩니다.  
+ <xref:System.Linq.Enumerable.Where%2A> 메서드는 확장 메서드입니다. 자세한 내용은 [확장 메서드](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)를 참조하세요. <xref:System.Linq.Enumerable.Where%2A>은 확장 메서드입니다. 위 쿼리는 다음과 같이 작성된 것처럼 컴파일됩니다.  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -93,7 +93,7 @@ reader.Close();
   
  이 쿼리에서는 LINQ to XML을 사용하는 예제와 같은 결과를 반환합니다. LINQ to XML에서는 출력되는 XML을 들여쓰지만 <xref:System.Xml.XmlDocument>는 들여쓰지 않는다는 점만 다릅니다.  
   
- 그러나 <xref:System.Xml.XmlNode.SelectNodes%2A> 메서드는 호출될 때마다 내부적으로 다음을 수행해야 하므로 <xref:System.Xml.XmlDocument>는 일반적으로 LINQ to XML과 같이 효과적으로 수행되지 않습니다.  
+ 그러나 <xref:System.Xml.XmlDocument> 메서드는 호출될 때마다 내부적으로 다음을 수행해야 하므로 <xref:System.Xml.XmlNode.SelectNodes%2A>는 일반적으로 LINQ to XML과 같이 효과적으로 수행되지 않습니다.  
   
 -   XPath 식이 포함된 문자열을 구문 분석하여 문자열을 토큰으로 나눕니다.  
   
@@ -107,3 +107,4 @@ reader.Close();
   
 ## <a name="see-also"></a>참고 항목  
  [성능(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)
+

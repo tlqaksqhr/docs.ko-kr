@@ -1,5 +1,5 @@
 ---
-title: "goto(C# 참조) | Microsoft 문서"
+title: "goto(C# 참조)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 700376096d969052a9f4633f565f9d9fd4dfec46
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cd298809ab883f425f3bb88239f2951ab98cc03e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="goto-c-reference"></a>goto(C# 참조)
@@ -61,5 +61,6 @@ ms.lasthandoff: 05/22/2017
  [C# 참조](../../../csharp/language-reference/index.md)   
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
  [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
- [goto 문](https://docs.microsoft.com/cpp/cpp/goto-statement-cpp)   
+ [goto 문](/cpp/cpp/goto-statement-cpp)   
  [점프 문](../../../csharp/language-reference/keywords/jump-statements.md)
+

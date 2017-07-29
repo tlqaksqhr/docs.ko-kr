@@ -1,5 +1,5 @@
 ---
-title: "생성자 사용(C# 프로그래밍 가이드) | Microsoft 문서"
+title: "생성자 사용(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,11 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 47103d13a68c5250c33dbca3e89de2f1f3e13449
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 75b55fde2fbd1697aed7eb0665a571c63b9b0b42
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-constructors-c-programming-guide"></a>생성자 사용(C# 프로그래밍 가이드)
@@ -106,7 +106,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  [!code-cs[csProgGuideObjects#60](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_9.cs)]  
   
- 생성자는 [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) 또는 `protected``internal`로 표시할 수 있습니다. 이러한 액세스 한정자는 클래스의 사용자가 클래스를 생성하는 방법을 정의합니다. 자세한 내용은 [액세스 한정자](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)를 참조하세요.  
+ 생성자는 [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) 또는 `protected internal`로 표시할 수 있습니다. 이러한 액세스 한정자는 클래스의 사용자가 클래스를 생성하는 방법을 정의합니다. 자세한 내용은 [액세스 한정자](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)를 참조하세요.  
   
  [static](../../../csharp/language-reference/keywords/static.md) 키워드를 사용하여 생성자를 정적으로 선언할 수 있습니다. 정적 생성자는 정적 필드에 액세스하기 직전에 자동으로 호출되며 일반적으로 정적 클래스 멤버를 초기화하는 데 사용됩니다. 자세한 내용은 [정적 생성자](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)를 참조하세요.  
   
@@ -118,3 +118,4 @@ Console.WriteLine("{0}, {1}", a, b);
  [클래스 및 구조체](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [생성자](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
  [종료자](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+

@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 파일 I/O 및 파일 시스템의 기본 사항(Visual Basic) | Microsoft 문서"
+title: ".NET Framework 파일 I/O 및 파일 시스템의 기본 사항(Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -36,11 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 16b71732272dacd6610b8b32eb74ff07fafec314
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b84e8bbaeb09bfe2ccddb17ecb9b0f8f71cd37c6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 파일 I/O 및 파일 시스템의 기본 사항(Visual Basic)
@@ -130,3 +130,4 @@ ms.lasthandoff: 07/03/2017
  [파일 및 스트림 I/O](https://msdn.microsoft.com/library/k3352a4t)   
  [비동기 파일 I/O](https://msdn.microsoft.com/library/kztecsys)   
  [.NET Framework 파일 I/O 및 파일 시스템에 사용되는 클래스(Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)
+

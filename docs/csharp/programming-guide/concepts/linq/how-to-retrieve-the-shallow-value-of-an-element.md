@@ -1,5 +1,5 @@
 ---
-title: "방법: 요소의 단순 값 검색(C#) | Microsoft 문서"
+title: "방법: 요소의 단순 값 검색(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,12 +14,11 @@ ms.assetid: 924a2699-72f6-4be1-aaa6-de62f8ec73b9
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d96dc59c2d798f11d949e26d208a2ce71d9c4de2
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: aad07fdba1d3df2b72f867e6845536300031146b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a>방법: 요소의 단순 값 검색(C#)
@@ -94,3 +93,4 @@ Column  Name="Name"         =Customer.Name
   
 ## <a name="see-also"></a>참고 항목  
  [LINQ to XML 축(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+

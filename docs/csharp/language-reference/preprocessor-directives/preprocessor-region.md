@@ -1,5 +1,5 @@
 ---
-title: "#region(C# 참조) | Microsoft 문서"
+title: "#<a name=\"region-c-reference\"></a>region(C# 참조)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,16 +29,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2924daffcdc44c8f5ba5cf97c5b141c0dd07ca4a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f7685d23bc1d40a0d0b6c9ac9a644019e1186eb7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="region-c-reference"></a>#region(C# 참조)
-`#region`을 사용하면 Visual Studio Code 편집기의 [개요 기능](https://docs.microsoft.com/visualstudio/ide/outlining)을 사용할 때 확장하거나 축소할 수 있는 코드 블록을 지정할 수 있습니다. 더 긴 코드 파일에서 현재 작업 중인 파일 부분에 집중할 수 있도록 하나 이상의 영역을 축소하거나 숨길 수 있습니다. 다음 예제에서는 영역을 정의하는 방법을 보여 줍니다.  
+`#region`을 사용하면 Visual Studio Code 편집기의 [개요 기능](/visualstudio/ide/outlining)을 사용할 때 확장하거나 축소할 수 있는 코드 블록을 지정할 수 있습니다. 더 긴 코드 파일에서 현재 작업 중인 파일 부분에 집중할 수 있도록 하나 이상의 영역을 축소하거나 숨길 수 있습니다. 다음 예제에서는 영역을 정의하는 방법을 보여 줍니다.  
   
-```  
+```csharp
 #region MyClass definition  
 public class MyClass   
 {  

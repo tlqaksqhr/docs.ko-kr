@@ -1,5 +1,5 @@
 ---
-title: "방법: 네임스페이스 접두사 제어(C#)(LINQ to XML) | Microsoft 문서"
+title: "방법: 네임스페이스 접두사 제어(C#)(LINQ to XML)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 96bc6d1187aa72f8653cd01b2027306009634fd5
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1e56dcf74725940019cda1bf340b2f3ac4e1f6c4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>방법: 네임스페이스 접두사 제어(C#)(LINQ to XML)
@@ -36,7 +37,7 @@ ms.lasthandoff: 03/13/2017
   
  네임스페이스 접두사를 제어하는 또 다른 일반적인 경우는 사용자가 XML 문서를 수동으로 편집하도록 하고 사용자가 입력하기 편한 네임스페이스 접두사를 만들려고 할 때입니다. 예를 들어, XSD 문서를 생성할 수 있습니다. 스키마 규칙에서는 스키마 네임스페이스의 접두사로 `xs` 또는 `xsd`를 사용하도록 제안합니다.  
   
- 네임스페이스 접두사를 제어하려면 네임스페이스를 선언하는 특성을 삽입합니다. 특정 접두사가 포함된 네임스페이스를 선언하는 경우 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]에서는 serialize할 때 네임스페이스 접두사를 고려하려고 합니다.  
+ 네임스페이스 접두사를 제어하려면 네임스페이스를 선언하는 특성을 삽입합니다. 특정 접두사가 포함된 네임스페이스를 선언하는 경우 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 serialize할 때 네임스페이스 접두사를 고려하려고 합니다.  
   
  접두사가 포함된 네임스페이스를 선언하는 특성을 만들려면 특성 이름의 네임스페이스가 <xref:System.Xml.Linq.XNamespace.Xmlns%2A>이고 특성의 이름이 네임스페이스 접두사인 특성을 만듭니다. 특성 값은 네임스페이스의 URI입니다.  
   
@@ -72,3 +73,4 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>참고 항목  
  [XML 네임스페이스 작업(C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+

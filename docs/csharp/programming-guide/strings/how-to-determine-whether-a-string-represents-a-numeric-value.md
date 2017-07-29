@@ -1,5 +1,5 @@
 ---
-title: "방법: 문자열이 숫자 값을 나타내는지 확인(C# 프로그래밍 가이드) | Microsoft Docs"
+title: "방법: 문자열이 숫자 값을 나타내는지 확인(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 343e7304a83f396b8bdcc9c92e9123eed206be56
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d2f89f4a4771625389a04f5c92829c91d66eb207
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>방법: 문자열이 숫자 값을 나타내는지 확인(C# 프로그래밍 가이드)
@@ -67,3 +67,4 @@ bool result = int.TryParse(s, out i); //i now = 108
  [방법: 16진수 문자열과 숫자 형식 간 변환](../../../csharp/programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)   
  [숫자 문자열 구문 분석](../../../standard/base-types/parsing-numeric.md)   
  [형식 서식 지정](../../../standard/base-types/formatting-types.md)
+

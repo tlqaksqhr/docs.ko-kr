@@ -1,5 +1,5 @@
 ---
-title: "클래스(C# 프로그래밍 가이드) | Microsoft 문서"
+title: "클래스(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 1f327e7171df8b91d4c5a787c879069a4e44f562
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: eedb087f177b1bff6f4d4177cd56ac4cca016490
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="classes-c-programming-guide"></a>클래스(C# 프로그래밍 가이드)
@@ -74,7 +74,7 @@ ms.lasthandoff: 05/15/2017
   
  C++와 달리 C#의 클래스는 하나의 기본 클래스에서만 직접 상속될 수 있습니다. 그러나 기본 클래스 자체는 다른 클래스에서 상속될 수 있으므로 클래스는 여러 기본 클래스를 간접적으로 상속할 수 있습니다. 게다가 클래스는 두 개 이상의 인터페이스를 직접 구현할 수 있습니다. 자세한 내용은 [인터페이스](../../../csharp/programming-guide/interfaces/index.md)를 참조하세요.  
   
- 클래스는 [abstract](../../../csharp/language-reference/keywords/abstract.md)로 선언될 수 있습니다. 추상 클래스에는 시그니처 정의가 있지만 구현이 없는 추상 메서드가 포함됩니다. 추상 클래스는 인스턴스화할 수 없습니다. 추상 클래스는 추상 메서드를 구현하는 파생 클래스를 통해서만 사용할 수 있습니다. 이와 달리 [sealed](../../../csharp/language-reference/keywords/sealed.md) 클래스에서는 다른 클래스가 파생될 수 없습니다. 자세한 내용은 [추상 및 봉인 클래스와 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)를 참조하세요.  
+ 클래스는 [abstract](../../../csharp/language-reference/keywords/abstract.md)로 선언될 수 있습니다. 추상 클래스에는 시그니처 정의가 있지만 구현이 없는 추상 메서드가 포함됩니다. 추상 클래스는 인스턴스화할 수 없습니다. 추상 클래스는 추상 메서드를 구현하는 파생 클래스를 통해서만 사용할 수 있습니다. 이와 달리 [sealed](../../../csharp/language-reference/keywords/sealed.md) 클래스에서는 다른 클래스가 파생될 수 없습니다. 자세한 내용은 [Abstract 및 Sealed 클래스와 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)를 참조하세요.  
   
  클래스 정의는 여러 소스 파일로 분할될 수 있습니다. 자세한 내용은 참조 [Partial 클래스 및 메서드](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)합니다.  
   
@@ -96,3 +96,4 @@ ms.lasthandoff: 05/15/2017
  [생성자](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
  [종료자](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
  [개체](../../../csharp/programming-guide/classes-and-structs/objects.md)
+

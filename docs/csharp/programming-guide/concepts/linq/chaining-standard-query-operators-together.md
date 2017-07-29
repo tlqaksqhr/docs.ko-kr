@@ -1,5 +1,5 @@
 ---
-title: "여러 표준 쿼리 연산자 연결(C#) | Microsoft 문서"
+title: "여러 표준 쿼리 연산자 연결(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8e9da047fcc224176d028f8caef8b57bc134dc21
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 40c65c80c08caa310cb72a194534ad63fcea890a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="chaining-standard-query-operators-together-c"></a>여러 표준 쿼리 연산자 연결(C#)
@@ -100,3 +100,4 @@ Main: str >GHI!!!<
   
 ## <a name="see-also"></a>참고 항목  
  [자습서: 여러 쿼리 연결(C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+

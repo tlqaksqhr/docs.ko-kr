@@ -1,5 +1,5 @@
 ---
-title: "방법: Visual Basic에서 레지스트리 키 값 읽기 | Microsoft 문서"
+title: "방법: Visual Basic에서 레지스트리 키 값 읽기"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,11 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: b5054e277895d185ab8ec6f6a2950d5dedbef390
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 69b833777629cfd642ab75ac055b96b59c1da70b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>방법: Visual Basic에서 레지스트리 키 값 읽기
@@ -56,7 +56,7 @@ ms.lasthandoff: 05/22/2017
   
      [!code-vb[VbResourceTasks#4](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-read-a-value-from-a-registry-key_1.vb)]  
   
- 이 코드 예제는 IntelliSense 코드 조각으로 사용할 수도 있습니다. 코드 조각 선택에서 **Windows 운영 체제 > 레지스트리**에 있습니다. 자세한 내용은 [코드 조각](https://docs.microsoft.com/visualstudio/ide/code-snippets)을 참조하세요.  
+ 이 코드 예제는 IntelliSense 코드 조각으로 사용할 수도 있습니다. 코드 조각 선택에서 **Windows 운영 체제 > 레지스트리**에 있습니다. 자세한 내용은 [코드 조각](/visualstudio/ide/code-snippets)을 참조하세요.  
   
 ### <a name="to-determine-whether-a-value-exists-in-a-registry-key"></a>레지스트리 키에 값이 있는지 확인하려면  
   
@@ -82,3 +82,4 @@ ms.lasthandoff: 05/22/2017
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>   
  <xref:Microsoft.Win32.RegistryHive>   
  [레지스트리 읽기 및 쓰기](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+

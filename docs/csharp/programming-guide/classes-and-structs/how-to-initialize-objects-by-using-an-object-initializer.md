@@ -1,5 +1,5 @@
 ---
-title: "방법: 개체 이니셜라이저를 사용하여 개체 초기화(C# 프로그래밍 가이드) | Microsoft 문서"
+title: "방법: 개체 이니셜라이저를 사용하여 개체 초기화(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9d6537332b4ddcca185a0ac3039a925e0b3fcef2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 01f2391680d9236b42f0d015b944b8f12455d0c8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-initialize-objects-by-using-an-object-initializer-c-programming-guide"></a>방법: 개체 이니셜라이저를 사용하여 개체 초기화(C# 프로그래밍 가이드)
@@ -52,8 +53,9 @@ ms.lasthandoff: 03/13/2017
  [!code-cs[csProgGuideLINQ#36](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-objects-by-using-an-object-initializer_2.cs)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- 이 코드를 실행하려면 클래스를 복사하여 [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]에서 생성된 Visual C# 콘솔 응용 프로그램 프로젝트에 붙여넣습니다.   
+ 이 코드를 실행하려면 클래스를 복사하여 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]에서 생성된 Visual C# 콘솔 응용 프로그램 프로젝트에 붙여넣습니다.   
   
 ## <a name="see-also"></a>참고 항목  
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
  [개체 이니셜라이저 및 컬렉션 이니셜라이저](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+

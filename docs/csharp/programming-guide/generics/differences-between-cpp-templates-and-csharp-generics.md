@@ -1,5 +1,5 @@
 ---
-title: "C++ 템플릿과 C# 제네릭의 차이점(C# 프로그래밍 가이드) | Microsoft 문서"
+title: "C++ 템플릿과 C# 제네릭의 차이점(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d3171b1e3f48907778be6e256780e06bad36481f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 483d33531141127e083c5b75789f405427e46890
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="differences-between-c-templates-and-c-generics-c-programming-guide"></a>C++ 템플릿과 C# 제네릭의 차이점(C# 프로그래밍 가이드)
@@ -57,4 +58,5 @@ C# 제네릭 및 C++ 템플릿은 둘 다 매개 변수가 있는 형식을 지�
 ## <a name="see-also"></a>참고 항목  
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
  [제네릭 소개](../../../csharp/programming-guide/generics/introduction-to-generics.md)   
- [템플릿](https://docs.microsoft.com/cpp/cpp/templates-cpp)
+ [템플릿](/cpp/cpp/templates-cpp)
+

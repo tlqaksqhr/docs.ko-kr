@@ -1,5 +1,5 @@
 ---
-title: "방법: 요소 이름 필터링(LINQ to XML)(C#) | Microsoft 문서"
+title: "방법: 요소 이름 필터링(LINQ to XML)(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,16 +14,15 @@ ms.assetid: 1849fb03-f075-421f-863c-e8fb32773cdf
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 5c11af47434ec00e812f966d5937c138a5ac3640
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 03f1be79322882e49b7cb619ff4578fda94450a7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/24/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-filter-on-element-names-linq-to-xml-c"></a>방법: 요소 이름 필터링(LINQ to XML)(C#)
-<xref:System.Xml.Linq.XElement>의 <xref:System.Collections.Generic.IEnumerable%601>을 반환하는 메서드 중 하나를 호출하는 경우 요소 이름을 필터링할 수 있습니다.  
+<xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement>을 반환하는 메서드 중 하나를 호출하면 요소 이름을 기준으로 필터링할 수 있습니다.  
   
 ## <a name="example"></a>예제  
  이 예제에서는 하위 요소의 컬렉션을 검색합니다. 하위 항목이 필터링되므로 컬렉션에는 지정된 이름을 가진 하위 항목만 포함됩니다.  
@@ -46,7 +45,7 @@ ProductName:Lawnmower
 ProductName:Baby Monitor  
 ```  
   
- <xref:System.Xml.Linq.XElement> 컬렉션의 <xref:System.Collections.Generic.IEnumerable%601>을 반환하는 다른 메서드도 동일한 패턴을 따릅니다. 이러한 시그니처는 <xref:System.Xml.Linq.XContainer.Elements%2A> 및 <xref:System.Xml.Linq.XContainer.Descendants%2A>와 유사합니다. 다음은 메서드 시그니처가 유사한 메서드의 전체 목록입니다.  
+ <xref:System.Collections.Generic.IEnumerable%601> 컬렉션의 <xref:System.Xml.Linq.XElement>을 반환하는 다른 메서드는 같은 패턴을 따릅니다. 이들 메서드 시그니처는 <xref:System.Xml.Linq.XContainer.Elements%2A> 및 <xref:System.Xml.Linq.XContainer.Descendants%2A>와 비슷합니다. 다음은 메서드 시그니처가 유사한 메서드의 전체 목록입니다.  
   
 -   <xref:System.Xml.Linq.XNode.Ancestors%2A>  
   
@@ -86,3 +85,4 @@ foreach (XElement prdName in items)
   
 ## <a name="see-also"></a>참고 항목  
  [LINQ to XML 축(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "열거형 형식(C# 프로그래밍 가이드) | Microsoft 문서"
+title: "열거형 형식(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
-ms.openlocfilehash: 2014047f17f766023ba4db4981aad6e6d4902381
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 677de7c6e0c0f72b600ce8ee5a8bad265725f6d3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="enumeration-types-c-programming-guide"></a>열거형 형식(C# 프로그래밍 가이드)
@@ -64,7 +64,7 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
   
 -   클라이언트 코드에 대해 변수에 유효한 값을 명확하게 지정합니다.  
   
--   [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)]에서 IntelliSense는 정의된 값 목록을 표시합니다.  
+-   [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]에서 IntelliSense는 정의된 값 목록을 표시합니다.  
   
  열거자 목록의 요소에 대해 값을 지정하지 않으면 값이 자동으로 1씩 증가합니다. 이전 예제에서 `Days.Sunday`의 값은 0이고, `Days.Monday`의 값은 1이 되는 식입니다. 새 `Days` 개체를 만드는 경우 값을 명시적으로 지정하지 않으면 기본값 `Days.Sunday`(0)가 됩니다. 열거형을 만들 때 가장 논리적인 기본값을 선택하고 0 값을 지정합니다. 그러면 열거형을 만들 때 값을 명시적으로 지정하지 않은 경우 모든 열거형에 해당 기본값이 지정됩니다.  
   
@@ -111,3 +111,4 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
  <xref:System.Enum?displayProperty=fullName>   
  [C# 프로그래밍 가이드](../../csharp/programming-guide/index.md)   
  [enum](../../csharp/language-reference/keywords/enum.md)
+

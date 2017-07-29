@@ -1,5 +1,5 @@
 ---
-title: "예외 처리문(C# 참조) | Microsoft 문서"
+title: "예외 처리문(C# 참조)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 156be3b61afc26401956b2f257c5e00b9ef03fc9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0c60adc167fc585755c8bbb85a05cf2af025edd3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="exception-handling-statements-c-reference"></a>예외 처리문(C# 참조)
@@ -52,3 +53,4 @@ C#은 프로그램 실행 중에 발생할 수 있는 비정상적인 상황(예
  [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
  [문 키워드](../../../csharp/language-reference/keywords/statement-keywords.md)   
  [예외 및 예외 처리](../../../csharp/programming-guide/exceptions/index.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "방법: Office Open XML 문서 수정(C#) | Microsoft 문서"
+title: "방법: Office Open XML 문서 수정(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 73cf5130ee4d08398251764bbe4a953f2fde917c
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 21a82e6ff71c9f8c4882eeab266275627e2c2cd0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-modify-an-office-open-xml-document-c"></a>방법: Office Open XML 문서 수정(C#)
@@ -161,3 +161,4 @@ New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<
   
 ## <a name="see-also"></a>참고 항목  
  [고급 쿼리 기술(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+

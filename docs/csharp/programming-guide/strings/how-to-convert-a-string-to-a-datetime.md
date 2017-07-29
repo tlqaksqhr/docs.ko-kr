@@ -1,5 +1,5 @@
 ---
-title: "방법: 문자열을 DateTime으로 변환(C# 프로그래밍 가이드) | Microsoft 문서"
+title: "방법: 문자열을 DateTime으로 변환(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,10 +28,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f31deeb2b29495ab48781c7e673fed37e8ad8dce
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 15ef1ec4debf242cdabc42f26add890bd4b61507
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-convert-a-string-to-a-datetime-c-programming-guide"></a>방법: 문자열을 DateTime으로 변환(C# 프로그래밍 가이드)
@@ -45,7 +46,7 @@ ms.lasthandoff: 03/13/2017
   
  문자열을 dateTime으로 변환하는 간단한 예는 아래 예제를 참조하세요.  
   
- 날짜 문자열의 추가 예제는 <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName>을 참조하세요.  
+ 날짜 문자열의 자세한 예는 <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName>을 참조하세요.  
   
 ```csharp  
 string dateTime = "01/08/2008 14:50:50.42";  
@@ -73,3 +74,4 @@ Press any key to continue . . .
   
 ## <a name="see-also"></a>참고 항목  
  [문자열](../../../csharp/programming-guide/strings/index.md)
+

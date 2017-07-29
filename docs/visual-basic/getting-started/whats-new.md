@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic의 새로운 기능 | Microsoft 문서"
+title: "Visual Basic의 새로운 기능"
 ms.date: 2017-04-27
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d3f21e32c162133e70a124da125c30afc7303738
-ms.openlocfilehash: 18544a0311e24cf427111e364421db6e9fc27326
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0a9379d5dd2d1c6b3ed6820e350c19fb346ac84c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic의 새로운 기능
@@ -105,7 +105,7 @@ C# 7부터 C#에서 참조 반환 값을 지원합니다. 즉, 호출하는 메�
 
 예를 들어 C#으로 작성된 다음 `Sentence` 클래스에는 문장 내에서 지정한 하위 문자열로 시작하는 다음 단어를 찾는 `FindNext` 메서드가 포함되어 있습니다. 문자열은 참조 반환 값으로 반환되며, 메서드에 참조로 전달된 `Boolean` 변수는 검색에 성공했는지 여부를 나타냅니다. 즉, 호출자는 반환된 값을 읽을 수 있을 뿐만 아니라 수정할 수도 있으며, 수정 내용이 `Sentence` 클래스에 반영됩니다.
 
-[!code-vb[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
+[!code-csharp[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
 
 가장 간단한 형태로, 문장에서 찾은 단어를 코드에서 다음과 같이 수정할 수 있습니다. 메서드 대신 메서드가 반환하는 식, 즉 참조 반환 값에 값을 할당합니다.
 
@@ -191,5 +191,5 @@ End Interface
  이제 컴파일러에서 일반 오버로드 확인 규칙을 사용하여 호출하는 데 가장 적합한 `GetDetails`를 선택하며, 샘플에서와 같이 Visual Basic에서 인터페이스 관계를 선언할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Visual Studio 2017의 새로운 기능](https://docs.microsoft.com/en-us/visualstudio/ide/whats-new-in-visual-studio)
+ [Visual Studio 2017의 새로운 기능](/visualstudio/ide/whats-new-in-visual-studio)
 

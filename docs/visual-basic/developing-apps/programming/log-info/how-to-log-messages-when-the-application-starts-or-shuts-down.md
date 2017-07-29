@@ -1,5 +1,5 @@
 ---
-title: "방법: 응용 프로그램이 시작 또는 종료될 때 메시지 기록(Visual Basic) | Microsoft 문서"
+title: "방법: 응용 프로그램이 시작 또는 종료될 때 메시지 기록(Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -36,11 +36,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 94842349ae1c0fa3ccbdb2279b05a0faeb2f5d30
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fa5bf57ac5245e9363089b85607b7e6d1a00ba14
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-log-messages-when-the-application-starts-or-shuts-down-visual-basic"></a>방법: 응용 프로그램이 시작 또는 종료될 때 메시지 기록(Visual Basic)
@@ -81,7 +81,7 @@ ms.lasthandoff: 05/22/2017
      [!code-vb[VbVbalrMyApplicationLog#2](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-messages-when-the-application-starts-or-shuts-down_2.vb)]  
   
 ## <a name="example"></a>예제  
- **프로젝트 디자이너** 를 사용하여 코드 편집기에서 응용 프로그램 이벤트에 액세스할 수 있습니다. 자세한 내용은 [프로젝트 디자이너, 응용 프로그램 페이지(Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-visual-basic)를 참조하세요.  
+ **프로젝트 디자이너** 를 사용하여 코드 편집기에서 응용 프로그램 이벤트에 액세스할 수 있습니다. 자세한 내용은 [프로젝트 디자이너, 응용 프로그램 페이지(Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)를 참조하세요.  
   
  [!code-vb[VbVbalrMyApplicationLog#3](../../../../visual-basic/developing-apps/programming/log-info/codesnippet/VisualBasic/how-to-log-messages-when-the-application-starts-or-shuts-down_3.vb)]  
   
@@ -89,5 +89,6 @@ ms.lasthandoff: 05/22/2017
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
  <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>   
  <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>   
- [Application Page, Project Designer (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/application-page-project-designer-visual-basic)   
+ [프로젝트 디자이너, 응용 프로그램 페이지(Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)   
  [응용 프로그램 로그 작업](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
+

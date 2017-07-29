@@ -1,5 +1,5 @@
 ---
-title: "C# | Microsoft 문서"
+title: C#
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,10 +31,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d8470043d266275cd70d48299be96f1ee6f50682
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f9a46179f25c166923f702b745e874406adfdeac
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c"></a>C#
@@ -44,10 +45,10 @@ C#("시 샵"으로 발음)은 .NET Framework에서 실행되는 다양한 응용
   
 ## <a name="in-this-section"></a>단원 내용  
  [C# 시작](../csharp/getting-started/getting-started-with-csharp.md)  
- C# 언어나 [!INCLUDE[vsprvs](../csharp/includes/vsprvs_md.md)]를 처음 접하는 프로그래머에게 C#의 기능을 소개하고 [!INCLUDE[vsprvs](../csharp/includes/vsprvs_md.md)]에 대한 도움말을 검색하는 방법을 안내합니다.  
+ C# 언어나 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]를 처음 접하는 프로그래머에게 C#의 기능을 소개하고 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]에 대한 도움말을 검색하는 방법을 안내합니다.  
   
- [C#용 Visual Studio 개발 환경 사용](https://docs.microsoft.com/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
- [!INCLUDE[csprcs](../csharp/includes/csprcs_md.md)] 개발 환경을 소개합니다.  
+ [C#용 Visual Studio 개발 환경 사용](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
+ [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 개발 환경을 소개합니다.  
   
  [C# 프로그래밍 가이드](../csharp/programming-guide/index.md)  
  C# 언어 구문을 사용하는 방법에 대해 설명하고 실제 예제를 제공합니다.  
@@ -62,9 +63,10 @@ C#("시 샵"으로 발음)은 .NET Framework에서 실행되는 다양한 응용
  C#을 사용하는 프로그래밍 연습 및 각 연습에 대한 간단한 설명에 대한 링크를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [C# 언어 사양](../csharp/language-reference/language-specification.md)  
+ [C# 언어 사양](../csharp/language-reference/language-specification/index.md)  
  C# 사양의 최신 버전(Microsoft Word 형식)에 대한 링크를 제공합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Visual C# 및 Visual Basic 시작](https://docs.microsoft.com/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)   
+ [Visual C# 및 Visual Basic 시작](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)   
  [.NET 개발](https://msdn.microsoft.com/library/ff361664)
+

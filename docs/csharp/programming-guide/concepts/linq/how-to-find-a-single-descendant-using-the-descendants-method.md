@@ -1,5 +1,5 @@
 ---
-title: "방법: Descendants 메서드를 사용하여 단일 하위 항목 찾기(C#) | Microsoft 문서"
+title: "방법: Descendants 메서드를 사용하여 단일 하위 항목 찾기(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: 6f735be9-0293-4680-8007-ca9d96bfebed
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9fbce5524a214f96b0d44b281e18d43675bfe0b4
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 89e20ede65caf65e91a37cbee69c80146a1443f0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>방법: Descendants 메서드를 사용하여 단일 하위 항목 찾기(C#)
@@ -87,3 +87,4 @@ GC3 Value
   
 ## <a name="see-also"></a>참고 항목  
  [기본 쿼리(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+

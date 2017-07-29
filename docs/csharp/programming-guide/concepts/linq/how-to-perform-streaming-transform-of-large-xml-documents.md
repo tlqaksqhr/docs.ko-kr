@@ -1,5 +1,5 @@
 ---
-title: "방법: 큰 XML 문서의 변환 스트리밍 수행(C#) | Microsoft 문서"
+title: "방법: 큰 XML 문서의 변환 스트리밍 수행(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: fc8716c2190ac42b66ba8d76ccfec152ea804c4a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 952fad19f9abdea464e2763b721446ab5fe68301
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>방법: 큰 XML 문서의 변환 스트리밍 수행(C#)
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/22/2017
   
  [방법: 헤더 정보에 액세스하여 XML 조각 스트림(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)에 설명된 기법을 사용하는 경우에도 변환된 문서를 포함하는 XML 트리를 어셈블하려고 하면 메모리 사용 공간이 너무 커집니다.  
   
- 두 가지 주요 방법이 있습니다. 그 중 하나는 <xref:System.Xml.Linq.XStreamingElement>의 지연된 처리 특성을 사용하는 것이고, 다른 하나는 <xref:System.Xml.XmlWriter>를 만들고 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]의 기능을 사용하여 요소를 <xref:System.Xml.XmlWriter>에 쓰는 것입니다. 이 항목에서는 두 방법을 모두 보여 줍니다.  
+ 두 가지 주요 방법이 있습니다. 그 중 하나는 <xref:System.Xml.Linq.XStreamingElement>의 지연된 처리 특성을 사용하는 것이고, 다른 하나는 <xref:System.Xml.XmlWriter>를 만들고 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]의 기능을 사용하여 요소를 <xref:System.Xml.XmlWriter>에 쓰는 것입니다. 이 항목에서는 두 방법을 모두 보여 줍니다.  
   
 ## <a name="example"></a>예제  
  다음 예제는 [방법: 헤더 정보에 액세스하여 XML 조각 스트리밍(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)의 예제를 기반으로 합니다.  
@@ -208,7 +208,7 @@ static void Main(string[] args)
 ## <a name="example"></a>예제  
  다음 예제도 [방법: 헤더 정보에 액세스하여 XML 조각 스트리밍(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)의 예제를 기반으로 합니다.  
   
- 이 예제에서는 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]의 기능을 사용하여 요소를 <xref:System.Xml.XmlWriter>에 씁니다. 이 예제에서는 작은 메모리 사용 공간을 유지하면서도 매우 큰 문서를 변환할 수 있습니다.  
+ 이 예제에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]의 기능을 사용하여 요소를 <xref:System.Xml.XmlWriter>에 씁니다. 이 예제에서는 작은 메모리 사용 공간을 유지하면서도 매우 큰 문서를 변환할 수 있습니다.  
   
  사용자 지정 축(`StreamCustomerItem`)은 문서에 `Customer`, `Name` 및 `Item` 요소가 있고 이러한 요소가 다음 Source.xml 문서의 경우와 마찬가지로 정렬되어 있다고 가정하고 작성된 것입니다. 그러나 더욱 강력한 구현은 XSD를 사용하여 소스 문서의 유효성을 검사하거나, 잘못된 문서의 구문을 분석할 준비가 되어 있습니다.  
   
@@ -341,3 +341,4 @@ static void Main(string[] args)
   
 ## <a name="see-also"></a>참고 항목  
  [고급 LINQ to XML 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

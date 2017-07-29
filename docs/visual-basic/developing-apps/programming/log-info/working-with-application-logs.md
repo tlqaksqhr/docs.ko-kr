@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic에서 응용 프로그램 로그 작업 | Microsoft 문서"
+title: "Visual Basic에서 응용 프로그램 로그 작업"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -33,18 +33,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 3cc9bec56817bbccd5faa8e05535cb565a11baac
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0f6916571ff978c6558343ff51217b5d342a4d5c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Visual Basic에서 응용 프로그램 로그 작업
 `My.Applicaton.Log` 및 `My.Log` 개체를 사용하면 로깅 및 추적 정보를 로그에 쉽게 쓸 수 있습니다.  
   
 ## <a name="how-messages-are-logged"></a>메시지가 기록되는 방식  
- 먼저 로그 <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A> 속성의 <xref:System.Diagnostics.TraceSource.Switch%2A> 속성으로 메시지의 심각도를 확인합니다. 기본적으로 심각도가 "정보" 이상인 메시지만 로그의 `TraceListener` 컬렉션에 지정된 추적 수신기로 전달됩니다. 그런 다음 각 수신기는 메시지의 심각도를 수신기의 <xref:System.Diagnostics.TraceSource.Switch%2A> 속성과 비교합니다. 메시지의 심각도가 충분히 높으면 수신기는 메시지를 기록합니다.  
+ 먼저 로그의 <xref:System.Diagnostics.TraceSource.Switch%2A> 의 <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A> 속성으로 메시지의 심각도를 확인합니다. 기본적으로 심각도가 "정보" 이상인 메시지만 로그의 `TraceListener` 컬렉션에 지정된 추적 수신기로 전달됩니다. 그런 다음 각 수신기는 메시지의 심각도를 수신기의 <xref:System.Diagnostics.TraceSource.Switch%2A> 속성과 비교합니다. 메시지의 심각도가 충분히 높으면 수신기는 메시지를 기록합니다.  
   
  다음 다이어그램에서는 `WriteEntry` 메서드에 기록된 메시지가 로그의 추적 수신기의 `WriteLine` 메서드로 전달되는 방식을 보여 줍니다.  
   
@@ -55,11 +55,11 @@ ms.lasthandoff: 05/22/2017
  ![내 로그 구성](../../../../visual-basic/developing-apps/programming/log-info/media/mylogconfig.png "MyLogConfig")  
   
 ## <a name="where-messages-are-logged"></a>메시지가 기록되는 위치  
- 어셈블리에 구성 파일이 없으면 `My.Application.Log` 및 `My.Log` 개체가 <xref:System.Diagnostics.DefaultTraceListener> 클래스를 통해 응용 프로그램의 디버그 출력에 메시지를 씁니다. 또한 `My.Application.Log` 개체는 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> 클래스를 통해 어셈블리의 로그 파일에 메시지를 쓰고, `My.Log` 개체는 <xref:System.Web.WebPageTraceListener> 클래스를 통해 ASP.NET 웹 페이지의 출력에 메시지를 씁니다.  
+ 어셈블리에 구성 파일이 없으면 `My.Application.Log` 및 `My.Log` 개체가 <xref:System.Diagnostics.DefaultTraceListener> 클래스를 통해 응용 프로그램의 디버그 출력에 메시지를 기록합니다. 또한 `My.Application.Log` 개체는 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> 클래스를 통해 어셈블리의 로그 파일에 기록하고, `My.Log` 개체는 <xref:System.Web.WebPageTraceListener> 클래스를 통해 ASP.NET 웹 페이지의 출력에 기록합니다.  
   
- 디버그 출력은 응용 프로그램을 디버그 모드에서 실행할 때 [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)] **출력** 창에서 볼 수 있습니다. **출력** 창을 열려면 **디버그** 메뉴 항목을 클릭하고 **창**을 가리킨 다음 **출력**을 클릭합니다. **출력** 창의 **다음에서 출력 보기** 상자에서 **디버그** 를 선택합니다.  
+ 디버그 출력은 응용 프로그램을 디버그 모드에서 실행할 때 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] **출력** 창에서 볼 수 있습니다. **출력** 창을 열려면 **디버그** 메뉴 항목을 클릭하고 **창**을 가리킨 다음 **출력**을 클릭합니다. **출력** 창의 **다음에서 출력 보기** 상자에서 **디버그** 를 선택합니다.  
   
- 기본적으로 `My.Application.Log` 는 사용자의 응용 프로그램 데이터가 있는 경로에 로그 파일을 씁니다. 경로는 <xref:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter%2A> 개체의 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> 속성에서 가져올 수 있습니다. 해당 경로의 형식은 다음과 같습니다.  
+ 기본적으로 `My.Application.Log` 는 사용자의 응용 프로그램 데이터가 있는 경로에 로그 파일을 씁니다. 경로는 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> 개체의 <xref:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter%2A> 속성에서 가져올 수 있습니다. 해당 경로의 형식은 다음과 같습니다.  
   
  `BasePath`\\`CompanyName`\\`ProductName`\\`ProductVersion`  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 05/22/2017
   
  다음 코드에서 `<sources>`, `<switches>`및 `<sharedListeners>` 노드의 예제를 볼 수 있습니다.  
   
-```  
+```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
@@ -130,3 +130,4 @@ ms.lasthandoff: 05/22/2017
 ## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
  [응용 프로그램의 정보 기록](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
+

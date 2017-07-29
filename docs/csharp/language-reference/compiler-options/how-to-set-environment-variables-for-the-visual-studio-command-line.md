@@ -1,5 +1,5 @@
 ---
-title: "방법: Visual Studio 명령줄에 필요한 환경 변수 설정 | Microsoft Docs"
+title: "방법: Visual Studio 명령줄에 필요한 환경 변수 설정"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -38,11 +38,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a780a11d8dd238187eb82933359bbb151bb3c333
-ms.openlocfilehash: e2cc644bb3b2c51615fe763224505b07e113ad62
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 569683169c6d7ae50c33ed06d3b365a663f16715
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>방법: Visual Studio 명령줄에 필요한 환경 변수 설정
@@ -63,3 +63,4 @@ vsvars32.bat 파일은 명령줄 빌드를 사용하도록 적절한 환경 변�
   
 ## <a name="see-also"></a>참고 항목  
  [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "방법: 문자열을 숫자로 변환(C# 프로그래밍 가이드) | Microsoft Docs"
+title: "방법: 문자열을 숫자로 변환(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: d406f1731db1e0979be8bba8d10301e57a2281e9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 08d13e40a385ce8e9011b508b04361b2e050f904
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>방법: 문자열을 숫자로 변환(C# 프로그래밍 가이드)
@@ -80,3 +80,4 @@ ms.lasthandoff: 05/14/2017
  [형식](../../../csharp/programming-guide/types/index.md)   
  [방법: 문자열이 숫자 값을 나타내는지 확인](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)   
  [.NET Framework 4 서식 유틸리티](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+

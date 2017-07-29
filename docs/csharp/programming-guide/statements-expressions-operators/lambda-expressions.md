@@ -1,5 +1,5 @@
 ---
-title: "람다 식(C# 프로그래밍 가이드) | Microsoft 문서"
+title: "람다 식(C# 프로그래밍 가이드)"
 ms.date: 2017-03-03
 ms.prod: .net
 ms.technology:
@@ -32,11 +32,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: 43ba8cdf265efd930199f7c6a8a77e49f491e737
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c952c72d9108775fbd0f824f82cacdab5ba91d09
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>람다 식(C# 프로그래밍 가이드)
@@ -72,9 +72,9 @@ namespace ConsoleApplication1
   
  `=>` 연산자는 대입(`=`)과 우선 순위가 같고 [오른쪽 결합형](../../../csharp/programming-guide/statements-expressions-operators/operators.md)입니다(연산자 문서의 "결합성" 섹션 참조).  
   
- 람다 식은 메서드 기반 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] 쿼리에서 <xref:System.Linq.Enumerable.Where%2A> 같은 표준 쿼리 연산자 메서드의 인수로 사용됩니다.  
+ 람다 식은 메서드 기반 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리에서 <xref:System.Linq.Enumerable.Where%2A> 같은 표준 쿼리 연산자 메서드의 인수로 사용됩니다.  
   
- <xref:System.Linq.Enumerable.Where%2A> to Objects 및 <xref:System.Linq.Enumerable>에서처럼 메서드 기반의 구문을 사용하여 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)] 클래스에서 [!INCLUDE[sqltecxlinq](../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 메서드를 호출하는 경우 매개 변수는 <xref:System.Func%602?displayProperty=fullName> 대리자 형식입니다. 람다 식은 이러한 대리자를 만드는 가장 간단한 방법입니다. 예를 들어 [!INCLUDE[vbtecdlinq](../../../csharp/includes/vbtecdlinq_md.md)]에서처럼 이 메서드를 <xref:System.Linq.Queryable?displayProperty=fullName> 클래스에서 호출하는 경우 매개 변수 형식은 <xref:System.Linq.Expressions.Expression?displayProperty=fullName><Func\>이고, 여기서 Func는 입력 매개 변수를 16개까지 가질 수 있는 임의의 Func 대리자입니다. 이 경우에도 람다 식을 사용하면 식 트리를 간단하게 만들 수 있습니다. 람다 식은 `Where` 호출과 비슷하게 보일 수 있지만 실제로 람다 식을 통해 생성되는 개체 형식은 다릅니다.  
+ <xref:System.Linq.Enumerable.Where%2A> to Objects 및 <xref:System.Linq.Enumerable> 에서처럼 메서드 기반의 구문을 사용하여 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 클래스에서 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]메서드를 호출하는 경우 매개 변수는 <xref:System.Func%602?displayProperty=fullName>대리자 형식입니다. 람다 식은 이러한 대리자를 만드는 가장 간단한 방법입니다. 예를 들어 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]에서처럼 이 메서드를 <xref:System.Linq.Queryable?displayProperty=fullName> 클래스에서 호출하는 경우 매개 변수 형식은 <xref:System.Linq.Expressions.Expression?displayProperty=fullName><Func\>이고, 여기서 Func는 입력 매개 변수를 16개까지 가질 수 있는 임의의 Func 대리자입니다. 이 경우에도 람다 식을 사용하면 식 트리를 간단하게 만들 수 있습니다. 람다 식은 `Where` 호출과 비슷하게 보일 수 있지만 실제로 람다 식을 통해 생성되는 개체 형식은 다릅니다.  
   
  위의 예제에서 대리자 시그니처는 형식이 암시적으로 지정된 `int`형식의 입력 매개 변수 하나를 포함하고 `int`를 반환합니다. 람다 식에도 입력 매개 변수 하나(`x`)와 컴파일러에서 `int` 형식으로 암시적으로 변환할 수 있는 반환 값이 있기 때문에 람다 식을 이 형식의 대리자로 변환할 수 있습니다. 형식 유추는 다음 단원에서 자세하게 설명합니다. 입력 매개 변수를 5로 사용하여 대리자를 호출하면 25라는 결과가 반환됩니다.  
   
@@ -290,7 +290,7 @@ class Test
 -   점프문의 대상이 블록 외부에 있는 경우 람다 식에 람다 함수 내에 있는 `goto` 문, `break` 문 또는 `continue` 문을 포함할 수 없습니다. 대상이 블록 내에 있는 경우 람다 함수 블록 외부에 점프문을 사용해도 오류가 발생합니다.  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="featured-book-chapter"></a>중요 설명서 장  
  [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](http://go.microsoft.com/fwlink/?LinkId=195395) 의 [Delegates, Events, and Lambda Expressions](http://go.microsoft.com/fwlink/?LinkId=195369)  

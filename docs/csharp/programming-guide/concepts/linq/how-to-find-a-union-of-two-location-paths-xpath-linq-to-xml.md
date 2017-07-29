@@ -1,5 +1,5 @@
 ---
-title: "방법: 두 위치 경로의 공용 구조체 찾기(XPath-LINQ to XML)(C#) | Microsoft 문서"
+title: "방법: 두 위치 경로의 공용 구조체 찾기(XPath-LINQ to XML)(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: 069622d3-2b58-4919-8903-710a564c0788
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c1e63adc27b32475b4cff908e72157464e0e5097
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b15991b6a97c19cd038114649bcef90f53ea5ace
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-c"></a>방법: 두 위치 경로의 공용 구조체 찾기(XPath-LINQ to XML)(C#)
@@ -31,7 +31,7 @@ XPath를 사용하여 두 XPath 위치 경로의 통합을 찾을 수 있습니�
  <xref:System.Linq.Enumerable.Concat%2A> 표준 쿼리 연산자를 사용하여 동일한 결과를 얻을 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 이 예제에서는 모든 `Category` 요소와 모든 `Price` 요소를 찾은 다음 단일 컬렉션으로 연결합니다. [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 쿼리는 <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A>를 호출하여 결과를 정렬합니다. XPath 식 계산의 결과도 문서 순서로 되어 있습니다.  
+ 이 예제에서는 모든 `Category` 요소와 모든 `Price` 요소를 찾은 다음 단일 컬렉션으로 연결합니다. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리는 <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A>을 호출하여 결과를 정렬합니다. XPath 식 계산의 결과도 문서 순서로 되어 있습니다.  
   
  이 예제에서는 XML 문서 [샘플 XML 파일: 숫자 데이터(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)를 사용합니다.  
   
@@ -82,3 +82,4 @@ Results are identical
   
 ## <a name="see-also"></a>참고 항목  
  [XPath 사용자를 위한 LINQ to XML(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+

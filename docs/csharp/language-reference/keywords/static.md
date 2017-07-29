@@ -1,5 +1,5 @@
 ---
-title: "static(C# 참조) | Microsoft 문서"
+title: "static(C# 참조)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: 36c9fd396914f2d958615b9f62666a0d0cc47fc1
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8e46dc2f00d1c185379dba1017ca445b9ae5ae72
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="static-c-reference"></a>static(C# 참조)
@@ -66,7 +66,7 @@ Console.WriteLine(MyBaseC.MyStruct.x);
  클래스 및 정적 클래스에 정적 생성자가 있을 수 있습니다. 프로그램이 시작된 후, 클래스가 인스턴스화되기 전에 정적 생성자가 호출됩니다.  
   
 > [!NOTE]
->  `static` 키워드는 C++보다 사용이 제한적입니다. C++ 키워드와 비교하려면 [저장소 클래스(C++)](https://docs.microsoft.com/cpp/cpp/storage-classes-cpp#static)를 참조하세요.
+>  `static` 키워드는 C++보다 사용이 제한적입니다. C++ 키워드와 비교하려면 [저장소 클래스(C++)](/cpp/cpp/storage-classes-cpp#static)를 참조하세요.
   
  정적 멤버를 보여 주려면 회사 직원을 나타내는 클래스를 고려해 보세요. 클래스에 직원 수를 구하는 메서드와 직원 수를 저장하는 필드가 포함되어 있다고 가정합니다. 메서드와 필드는 둘 다 인스턴스 직원에 속하지 않습니다. 대신 회사 클래스에 속해 있습니다. 따라서 클래스의 정적 멤버로 선언해야 합니다.  
   

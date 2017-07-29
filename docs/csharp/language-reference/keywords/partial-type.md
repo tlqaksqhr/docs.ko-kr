@@ -1,5 +1,5 @@
 ---
-title: "부분(형식)(C# 참조) | Microsoft 문서"
+title: "부분(형식)(C# 참조)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 29cec1546de1058929ec192614bc460a9df176ce
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5405455d933f6512cfa3a18e1a545556c5715151
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="partial-type-c-reference"></a>부분(형식)(C# 참조)
@@ -59,3 +59,4 @@ ms.lasthandoff: 03/13/2017
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
  [한정자](../../../csharp/language-reference/keywords/modifiers.md)   
  [제네릭 소개](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+

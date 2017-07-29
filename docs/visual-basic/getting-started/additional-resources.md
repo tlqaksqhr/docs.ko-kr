@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic 프로그래머를 위한 추가 리소스 | Microsoft 문서"
+title: "Visual Basic 프로그래머를 위한 추가 리소스"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -36,11 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 692e0a53391556c6327e493d3d45e811db4cfdb7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1ebc788f629e011dff88c1db119ce25a3829e009
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="additional-resources-for-visual-basic-programmers"></a>Visual Basic 프로그래머를 위한 추가 리소스
@@ -71,13 +71,13 @@ ms.lasthandoff: 05/22/2017
 |용어|정의|  
 |----------|----------------|  
 |[Visual Basic 언어](http://go.microsoft.com/fwlink/?LinkId=145963)|
-          [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 언어 구문 및 컴파일러에 대해 설명합니다.|  
+          [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 언어 구문 및 컴파일러에 대해 설명합니다.|  
 |[Visual Basic Interop 및 업그레이드](http://go.microsoft.com/fwlink/?LinkId=145966)|
-          [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]으로 업그레이드하고 상호 운용성 기능을 사용하는 방법에 대해 설명합니다.|  
+          [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]으로 업그레이드하고 상호 운용성 기능을 사용하는 방법에 대해 설명합니다.|  
 |[Visual Basic IDE](http://go.microsoft.com/fwlink/?LinkId=145971)|
-          [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] 통합 개발 환경에서 작업하는 방법에 대해 설명합니다.|  
+          [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 통합 개발 환경에서 작업하는 방법에 대해 설명합니다.|  
 |[Visual Basic Power Packs](http://social.msdn.microsoft.com/Forums/vbpowerpacks/threads)|Visual Basic Power Pack의 일부분인 추가 기능, 컨트롤, 구성 요소, 샘플 및 도구에 대해 설명합니다.|  
-|[Visual Basic 일반](http://go.microsoft.com/fwlink/?LinkId=145973)|다른 포럼에서 다루지 않는 [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 관련 문제에 대해 설명합니다.|  
+|[Visual Basic 일반](http://go.microsoft.com/fwlink/?LinkId=145973)|다른 포럼에서 다루지 않는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 관련 문제에 대해 설명합니다.|  
   
 ### <a name="chats-and-discussion-groups"></a>채팅 및 토론 그룹  
   
@@ -106,8 +106,9 @@ ms.lasthandoff: 05/22/2017
 |용어|정의|  
 |----------|----------------|  
 |[DevX Visual Basic Zone](http://go.microsoft.com/fwlink/?LinkId=145978)(DevX Visual Basic 영역)|오늘날의 Visual Basic 개발자를 위한 심층 기술 문서를 제공합니다.|  
-|[vb.dotnet.technical](http://go.microsoft.com/fwlink/?LinkId=145986)|DevX 포럼에서 [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]의 새로운 기능에 대해 토론할 수 있는 포럼을 제공합니다.|  
+|[vb.dotnet.technical](http://go.microsoft.com/fwlink/?LinkId=145986)|DevX 포럼에서 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]의 새로운 기능에 대해 토론할 수 있는 포럼을 제공합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [시작](../../visual-basic/getting-started/index.md)   
- [의견 보내기](https://docs.microsoft.com/visualstudio/ide/talk-to-us)
+ [의견 보내기](/visualstudio/ide/talk-to-us)
+

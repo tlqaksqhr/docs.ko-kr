@@ -1,5 +1,5 @@
 ---
-title: "네임스페이스 키워드(C# 참조) | Microsoft 문서"
+title: "네임스페이스 키워드(C# 참조)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 59c384e6a103dfdf1f0fe8b38c601cdad7b0ea12
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0613bb81446e1c6b0cde94b0c0bdd6dd810ce264
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="namespace-keywords-c-reference"></a>네임스페이스 키워드(C# 참조)
@@ -53,3 +54,4 @@ ms.lasthandoff: 03/13/2017
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
  [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
  [네임스페이스](../../../csharp/programming-guide/namespaces/index.md)
+

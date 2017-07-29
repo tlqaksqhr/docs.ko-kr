@@ -1,5 +1,5 @@
 ---
-title: "implicit(C# 참조) | Microsoft 문서"
+title: "implicit(C# 참조)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7109a6e467539ca8161b3b44bfb50697314f3c13
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e4452a3bb6da2d0d294ca26d6b957f2c1c4402fd
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="implicit-c-reference"></a>implicit(C# 참조)
@@ -55,3 +55,4 @@ ms.lasthandoff: 03/13/2017
  [explicit](../../../csharp/language-reference/keywords/explicit.md)   
  [연산자(C# 참조)](../../../csharp/language-reference/keywords/operator.md)   
  [방법: 구조체 간의 사용자 정의 변환 구현](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
+

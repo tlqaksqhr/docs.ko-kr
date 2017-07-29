@@ -1,5 +1,5 @@
 ---
-title: "방법: 비동기적으로 웹 서비스 호출(Visual Basic) | Microsoft 문서"
+title: "방법: 비동기적으로 웹 서비스 호출(Visual Basic)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.suite: 
@@ -29,16 +29,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a88c7250ba844603bcbc33d0768a45c40f18f53e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f191ccb5f42f9cfc5dc4e44e58d2338422207aa1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>방법: 비동기적으로 웹 서비스 호출(Visual Basic)
 이 예제에서는 비동기 메서드 호출의 결과를 검색할 수 있도록 웹 서비스의 비동기 처리기 이벤트에 처리기를 연결합니다. 여기에는 http://www.xmethods.net의 DemoTemperatureService 웹 서비스가 사용되었습니다.  
   
- [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] IDE(통합 개발 환경)에서 프로젝트의 웹 서비스를 참조하면 `My.WebServices` 개체에 해당 웹 서비스가 추가되며 IDE가 지정된 웹 서비스에 액세스하기 위한 클라이언트 프록시 클래스를 생성합니다.  
+ [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] IDE(통합 개발 환경)에서 프로젝트의 웹 서비스를 참조하면 `My.WebServices` 개체에 해당 웹 서비스가 추가되며 IDE가 지정된 웹 서비스에 액세스하기 위한 클라이언트 프록시 클래스를 생성합니다.  
   
  프록시 클래스를 통해 웹 서비스 메서드를 동기식으로 호출할 수 있습니다. 이 경우 응용 프로그램은 함수가 완료될 때까지 기다립니다. 또한 프록시는 추가 멤버를 만들어 메서드를 비동기식으로 호출합니다. 각 웹 서비스 함수(*NameOfWebServiceFunction*)에 대해 프록시는 *NameOfWebServiceFunction*`Async` 서브루틴, *NameOfWebServiceFunction*`Completed` 이벤트 및 *NameOfWebServiceFunction*`CompletedEventArgs` 클래스를 만듭니다. 이 예제에서는 비동기 멤버를 사용하여 DemoTemperatureService 웹 서비스의 `getTemp` 함수에 액세스하는 방법을 보여줍니다.  
   
@@ -91,3 +92,4 @@ ms.lasthandoff: 03/13/2017
 ## <a name="see-also"></a>참고 항목  
  [응용 프로그램 웹 서비스 액세스](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)   
  [My.WebServices 개체](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+

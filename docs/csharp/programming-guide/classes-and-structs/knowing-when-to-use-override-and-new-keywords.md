@@ -1,5 +1,5 @@
 ---
-title: "Override 및 New 키워드를 사용해야 하는 경우(C# 프로그래밍 가이드) | Microsoft Docs"
+title: "Override 및 New 키워드를 사용해야 하는 경우(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 4e7d42f65ec8e7a3d9246d801d5efe074f0714b1
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4888a93819b155d10b82bfd1ee105a73a1fdc126
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Override 및 New 키워드를 사용해야 하는 경우(C# 프로그래밍 가이드)

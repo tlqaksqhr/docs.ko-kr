@@ -1,5 +1,5 @@
 ---
-title: "LINQ를 통한 데이터 변환(C#) | Microsoft 문서"
+title: "LINQ를 통한 데이터 변환(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -37,16 +37,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: b97d55045a999f3714a5af41fc4247e87684b6c3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5b48dd495b843f8211a2b6e26df8a4f0618b254a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-
 # <a name="data-transformations-with-linq-c"></a>LINQ를 통한 데이터 변환(C#)
-[!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)]는 데이터 검색만 관련된 것이 아닙니다. 데이터 변환을 위한 강력한 도구이기도 합니다. [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 쿼리를 사용하여 소스 시퀀스를 입력으로 사용하고 다양한 방법으로 수정하여 새 출력 시퀀스를 만들 수 있습니다. 정렬 및 그룹화를 통해 요소 자체를 수정하지 않고 시퀀스 자체를 수정할 수 있습니다. 하지만 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 쿼리의 가장 강력한 기능은 새 형식을 만드는 기능일 것입니다. 이 작업은 [select](../../../../csharp/language-reference/keywords/select-clause.md) 절에서 수행합니다. 예를 들어, 아래와 같은 작업을 수행할 수 있습니다.  
+[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]는 데이터 검색만 관련된 것이 아닙니다. 데이터 변환을 위한 강력한 도구이기도 합니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리를 사용하여 소스 시퀀스를 입력으로 사용하고 다양한 방법으로 수정하여 새 출력 시퀀스를 만들 수 있습니다. 정렬 및 그룹화를 통해 요소 자체를 수정하지 않고 시퀀스 자체를 수정할 수 있습니다. 하지만 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리의 가장 강력한 기능은 새 형식을 만드는 기능일 것입니다. 이 작업은 [select](../../../../csharp/language-reference/keywords/select-clause.md) 절에서 수행합니다. 예를 들어, 아래와 같은 작업을 수행할 수 있습니다.  
   
 -   여러 입력 시퀀스를 새 형식을 가진 단일 출력 시퀀스로 병합합니다.  
   
@@ -59,7 +58,7 @@ ms.lasthandoff: 07/03/2017
  이것은 몇 가지 예일 뿐입니다. 물론 같은 쿼리에서 다양한 방법으로 이러한 변환을 결합할 수 있습니다. 또한 한 쿼리의 출력 시퀀스는 새 쿼리에 대한 입력 시퀀스로 사용할 수 있습니다.  
   
 ## <a name="joining-multiple-inputs-into-one-output-sequence"></a>여러 입력을 단일 출력 시퀀스로 결합  
- [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 쿼리를 사용하여 두 개 이상의 입력 시퀀스에서 생성된 요소가 포함된 출력 시퀀스를 만들 수 있습니다. 다음 예제에서는 두 개의 메모리 내 데이터 구조를 결합하는 방법을 보여 주지만 XML, SQL 또는 DataSet 소스에서 데이터를 결합하는 데는 같은 원칙을 적용할 수 있습니다. 다음 두 가지 클래스 형식을 가정합니다.  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리를 사용하여 두 개 이상의 입력 시퀀스에서 생성된 요소가 포함된 출력 시퀀스를 만들 수 있습니다. 다음 예제에서는 두 개의 메모리 내 데이터 구조를 결합하는 방법을 보여 주지만 XML, SQL 또는 DataSet 소스에서 데이터를 결합하는 데는 같은 원칙을 적용할 수 있습니다. 다음 두 가지 클래스 형식을 가정합니다.  
   
  [!code-cs[CsLINQGettingStarted#7](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_1.cs)]  
   
@@ -89,14 +88,14 @@ ms.lasthandoff: 07/03/2017
  자세한 내용은 [개체 및 컬렉션 이니셜라이저](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md) 및 [무명 형식](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)을 참조하세요.  
   
 ## <a name="transforming-in-memory-objects-into-xml"></a>메모리 내 개체를 XML로 변환  
- [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 쿼리를 통해 메모리 내 데이터 구조, SQL 데이터베이스, [!INCLUDE[vstecado](~/includes/vstecado-md.md)] 데이터 집합 및 XML 스트림이나 문서 간에 손쉽게 데이터를 변환할 수 있습니다. 다음 예제에서는 메모리 내 데이터 구조의 개체를 XML 요소로 변환합니다.  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리를 통해 메모리 내 데이터 구조, SQL 데이터베이스, [!INCLUDE[vstecado](~/includes/vstecado-md.md)] 데이터 집합 및 XML 스트림이나 문서 간에 손쉽게 데이터를 변환할 수 있습니다. 다음 예제에서는 메모리 내 데이터 구조의 개체를 XML 요소로 변환합니다.  
   
  [!code-cs[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]  
   
  이 코드에서는 다음 XML 출력을 생성합니다.  
   
-```  
-< Root>  
+```xml  
+<Root>  
   <student>  
     <First>Svetlana</First>  
     <Last>Omelchenko</Last>  
@@ -121,7 +120,7 @@ ms.lasthandoff: 07/03/2017
  출력 시퀀스에 소스 시퀀스의 요소 또는 요소 속성이 포함되어 있지 않을 수 있습니다. 대신에 출력이 소스 요소를 입력 인수로 사용하여 계산되는 값 시퀀스일 수 있습니다. 다음 간단한 쿼리는 실행 시 값이 `double` 형식 요소의 소스 시퀀스에 기반을 둔 계산을 나타내는 문자열 시퀀스를 출력합니다.  
   
 > [!NOTE]
->  쿼리가 일부 다른 도메인으로 변환될 경우 쿼리 식에서 메서드를 호출할 수 없습니다. 예를 들어 SQL Server에는 관련 컨텍스트가 없으므로 [!INCLUDE[vbtecdlinq](../../../../csharp/includes/vbtecdlinq_md.md)]에서 일반 C# 메서드를 호출할 수 없습니다. 그러나 저장 프로시저를 메서드에 매핑하고 저장 프로시저를 호출할 수 있습니다. 자세한 내용은 [저장 프로시저](../../../../framework/data/adonet/sql/linq/stored-procedures.md)를 참조하세요.  
+>  쿼리가 일부 다른 도메인으로 변환될 경우 쿼리 식에서 메서드를 호출할 수 없습니다. 예를 들어 SQL Server에는 관련 컨텍스트가 없으므로 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]에서 일반 C# 메서드를 호출할 수 없습니다. 그러나 저장 프로시저를 메서드에 매핑하고 저장 프로시저를 호출할 수 있습니다. 자세한 내용은 [저장 프로시저](../../../../framework/data/adonet/sql/linq/stored-procedures.md)를 참조하세요.  
   
  [!code-cs[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_4.cs)]  
   
@@ -132,3 +131,4 @@ ms.lasthandoff: 07/03/2017
  [LINQ to XML(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)   
  [LINQ 쿼리 식](../../../../csharp/programming-guide/linq-query-expressions/index.md)   
  [select 절](../../../../csharp/language-reference/keywords/select-clause.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "방법: 개체 그래프 프로젝션(C#) | Microsoft 문서"
+title: "방법: 개체 그래프 프로젝션(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,11 +14,11 @@ ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: abf16b36fa8b384c2685a29a1697cc7c3e53a7ec
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3f09d1ab23d027829a8b3ea94fa62455ddb95499
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-project-an-object-graph-c"></a>방법: 개체 그래프 프로젝션(C#)
@@ -227,7 +227,7 @@ class Program {
 }  
 ```  
   
- 이 예제에서는 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 쿼리의 결과가 `PurchaseOrderItem`의 <xref:System.Collections.Generic.IEnumerable%601>로 반환됩니다. `PurchaseOrder` 클래스의 항목은 `PurchaseOrderItem`의 <xref:System.Collections.Generic.IEnumerable%601> 형식입니다. 코드는 <xref:System.Linq.Enumerable.ToList%2A> 확장 메서드를 사용하여 쿼리 결과에서 <xref:System.Collections.Generic.List%601> 컬렉션을 만듭니다.  
+ 이 예제에서는 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리의 결과가 <xref:System.Collections.Generic.IEnumerable%601>의 `PurchaseOrderItem`로 반환됩니다. `PurchaseOrder` 클래스의 항목은 <xref:System.Collections.Generic.IEnumerable%601>의 `PurchaseOrderItem` 형식입니다. 이 코드에서는 <xref:System.Linq.Enumerable.ToList%2A> 확장 메서드를 사용하여 쿼리 결과에서 <xref:System.Collections.Generic.List%601> 컬렉션을 만듭니다.  
   
  예제의 결과는 다음과 같습니다.  
   
@@ -272,3 +272,4 @@ ShipDate: 5/21/1999
  <xref:System.Linq.Enumerable.Select%2A>   
  <xref:System.Linq.Enumerable.ToList%2A>   
  [프로젝션 및 변환(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "XML 선언으로 serialize(C#) | Microsoft 문서"
+title: "XML 선언으로 serialize(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,17 +19,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5c0389630c7fc4b8aa394974b7e42cce2a5101a4
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 36ffb8ddd584785c660896ca77707d504638852f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="serializing-with-an-xml-declaration-c"></a>XML 선언으로 serialize(C#)
 이 항목에서는 serialization을 통해 XML 선언이 생성되는지 여부를 제어하는 방법에 대해 설명합니다.  
   
 ## <a name="xml-declaration-generation"></a>XML 선언 생성  
- <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName> 메서드 또는 <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=fullName> 메서드를 사용하여 <xref:System.IO.File> 또는 <xref:System.IO.TextWriter>로 serialize하면 XML 선언이 생성됩니다. <xref:System.Xml.XmlWriter>로 serialize하면 <xref:System.Xml.XmlWriterSettings> 개체에 지정된 작성기 설정에 따라 XML 선언이 생성되는지 여부가 결정됩니다.  
+ <xref:System.IO.File> 메서드 또는 <xref:System.IO.TextWriter> 메서드를 사용하여 <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName> 또는 <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=fullName>로 serialize하면 XML 선언이 생성됩니다. <xref:System.Xml.XmlWriter>로 serialize하면 <xref:System.Xml.XmlWriterSettings> 개체에 지정된 작성기 설정에 따라 XML 선언이 생성되는지 여부가 결정됩니다.  
   
  `ToString` 메서드를 사용하여 문자열로 serialize하는 경우 생성되는 XML에는 XML 선언이 포함되지 않습니다.  
   
@@ -79,3 +80,4 @@ Console.WriteLine(sb.ToString());
   
 ## <a name="see-also"></a>참고 항목  
  [XML 트리 serialize(C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+

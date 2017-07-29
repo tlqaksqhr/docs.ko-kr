@@ -1,5 +1,5 @@
 ---
-title: "데이터 필터링(C#) | Microsoft 문서"
+title: "데이터 필터링(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1d0efd313a670348a65870c348dd2ef5e079e5d0
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: defa6716f677c44da5dd27cb64b3b1d140a65272
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="filtering-data-c"></a>데이터 필터링(C#)
@@ -69,3 +70,4 @@ foreach (string str in query)
  [방법: 리플렉션을 사용하여 어셈블리의 메타데이터 쿼리(LINQ)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)   
  [방법: 지정된 특성 또는 이름을 갖는 파일 쿼리(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)   
  [방법: 단어 또는 필드에 따라 텍스트 데이터 정렬 또는 필터링(LINQ)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+
