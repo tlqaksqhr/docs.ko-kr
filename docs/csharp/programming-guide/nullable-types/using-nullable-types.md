@@ -1,5 +1,5 @@
 ---
-title: "nullable 형식 사용(C# 프로그래밍 가이드) | Microsoft Docs"
+title: "Nullable 형식 사용(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,11 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a780a11d8dd238187eb82933359bbb151bb3c333
-ms.openlocfilehash: 88397167b12a00bf5e99a0537148a2957b9f0bd8
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0721d9f60abc4e158135d6b050953b3e63ab8cb5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Nullable 형식 사용(C# 프로그래밍 가이드)
@@ -137,3 +137,4 @@ nullable 형식은 기본 형식의 모든 값과 추가 [null](../../../csharp/
  [Nullable 형식](../../../csharp/programming-guide/nullable-types/index.md)   
  [Nullable 형식 boxing](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)   
  [Nullable 값 형식](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+

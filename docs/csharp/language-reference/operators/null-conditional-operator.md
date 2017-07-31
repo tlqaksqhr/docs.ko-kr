@@ -1,5 +1,5 @@
 ---
-title: "?? 연산자(C# 참조) | Microsoft 문서"
+title: "?? 연산자(C# 참조)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a780a11d8dd238187eb82933359bbb151bb3c333
-ms.openlocfilehash: de2abc6830419c368c6a62dfd74fc6f2013db9d4
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 86e50b97d7ded8adc74f031faf026b69ccdd0c87
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="-operator-c-reference"></a>?? 연산자(C# 참조)
@@ -57,3 +57,4 @@ ms.lasthandoff: 05/22/2017
  [C# 연산자](../../../csharp/language-reference/operators/index.md)   
  [Nullable 형식](../../../csharp/programming-guide/nullable-types/index.md)   
  [What Exactly Does ‘Lifted’ mean?](http://go.microsoft.com/fwlink/?LinkID=112382)(‘리프트’란 정확히 어떤 의미인가요?)
+
