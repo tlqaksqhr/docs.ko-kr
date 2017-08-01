@@ -1,5 +1,5 @@
 ---
-title: "dotnet-restore 명령 - .NET Core CLI | Microsoft Docs"
+title: "dotnet-restore 명령 - .NET Core CLI"
 description: "dotnet restore 명령을 사용하여 종속성 및 프로젝트 관련 도구를 복원하는 방법을 알아봅니다."
 keywords: "dotnet-restore, CLI, CLI 명령, .NET Core"
 author: blackdwarf
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fd7a5769-afbe-4838-bbaf-3ae0cfcbb914
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 602c173ff8d114a76c5598cd0826485ac32a2e72
-ms.openlocfilehash: fd4fd6ef2e8482a2b961ccbca1f5227d80c8be53
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a9e471bd1d66d68703b025cd3eaa009cb296a9fb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/29/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 03/29/2017
 
 프로젝트 관련 도구의 경우 `dotnet restore`는 먼저 도구가 압축된 패키지를 복원한 다음 프로젝트 파일에 지정된 대로 도구의 종속성을 계속 복원합니다.
 
-`dotnet restore` 명령의 동작은 *Nuget.Config* 파일(있는 경우)에 있는 일부 설정의 영향을 받습니다. 예를 들어 *NuGet.Config*의 `globalPackagesFolder`를 설정하면 복원된 NuGet 패키지가 지정한 폴더에 저장됩니다. `dotnet restore` 명령의 `--packages` 옵션을 지정하는 대신 이 방법을 사용할 수 있습니다. 자세한 내용은 [NuGet.Config 참조](https://docs.microsoft.com/nuget/schema/nuget-config-file)를 참조하세요.
+`dotnet restore` 명령의 동작은 *Nuget.Config* 파일(있는 경우)에 있는 일부 설정의 영향을 받습니다. 예를 들어 *NuGet.Config*의 `globalPackagesFolder`를 설정하면 복원된 NuGet 패키지가 지정한 폴더에 저장됩니다. `dotnet restore` 명령의 `--packages` 옵션을 지정하는 대신 이 방법을 사용할 수 있습니다. 자세한 내용은 [NuGet.Config 참조](/nuget/schema/nuget-config-file)를 참조하세요.
 
 ## <a name="arguments"></a>인수
 

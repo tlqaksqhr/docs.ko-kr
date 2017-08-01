@@ -1,6 +1,6 @@
 ---
-title: "플랫폼 간 도구로 NuGet 패키지 만들기 | Microsoft Docs"
-description: "플랫폼 간 도구로 NuGet 패키지 만들기"
+title: "플랫폼 간 도구로 NuGet 패키지 만들기"
+description: "'dotnet pack' 명령을 사용하여 NuGet 패키지를 만드는 방법에 관해 알아봅니다."
 keywords: .NET, .NET Core, NuGet
 author: cartermp
 ms.author: mairaw
@@ -10,17 +10,15 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 2f0415c1-110b-433d-87c1-ae3d543a8844
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 2b2081bce1725fb4a019881521604e4171b85028
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9e5c762de0a14407c92c9752edc9619caa07d500
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="how-to-create-a-nuget-package-with-cross-platform-tools" class="xliff"></a>
-
-# 플랫폼 간 도구로 NuGet 패키지를 만드는 방법
+# <a name="how-to-create-a-nuget-package-with-cross-platform-tools"></a>플랫폼 간 도구로 NuGet 패키지를 만드는 방법
 
 > [!NOTE]
 > 다음에서는 Unix를 사용하는 명령줄 샘플을 보여 줍니다.  여기에 표시된 `dotnet pack` 명령은 Windows에서와 동일한 방식으로 작동합니다.
@@ -65,9 +63,7 @@ SuperAwesomeLibrary.1.0.0.symbols.nupkg
 
 또한 NuGet 패키지를 게시하는 데 필요한 파일이 있습니다.
 
-<a id="dont-confuse-dotnet-pack-with-dotnet-publish" class="xliff"></a>
-
-## `dotnet pack`을 다음과 혼동하지 마세요.`dotnet publish`
+## <a name="dont-confuse-dotnet-pack-with-dotnet-publish"></a>`dotnet pack`을 다음과 혼동하지 마세요.`dotnet publish`
 
 어떤 지점에서도 `dotnet publish` 명령은 관련되지 않습니다.  `dotnet publish` 명령은 동일한 번들에 있는 모든 종속성과 함께 응용 프로그램을 배포하기 위한 것이며 NuGet을 통해 배포하고 사용할 NuGet 패키지를 생성하기 위한 것이 아닙니다.
 

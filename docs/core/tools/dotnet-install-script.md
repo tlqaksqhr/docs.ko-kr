@@ -1,19 +1,20 @@
 ---
-title: "dotnet-install 스크립트 | Microsoft 문서"
+title: "dotnet 설치 스크립트"
 description: ".NET Core CLI 도구 및 공유 런타임을 설치하는 dotnet-install 스크립트에 대해 알아봅니다."
 keywords: "dotnet-install, dotnet-install 스크립트, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 07/10/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: b64e7e6f-ffb4-4fc8-b43b-5731c89479c2
-translationtype: Human Translation
-ms.sourcegitcommit: 4a1f0c88fb1ccd6694f8d4f5687431646adbe000
-ms.openlocfilehash: fbc1ce8d864a5c2150c61f4b8bf7cb8544921634
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8af168e96f8f5b57626b126135d8b5e509fbb059
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -57,15 +58,28 @@ macOS/Linux:
 
 `-Channel <CHANNEL>`
 
-설치에 대한 소스 채널을 지정합니다. 값은 `future`, `preview` 및 `production`입니다. 기본값은 `production`입니다.
+설치에 대한 소스 채널을 지정합니다. 가능한 값은 다음과 같습니다.
+
+- `Current` - 현재 릴리스
+- `LTS` - 장기 지원 채널(현재 지원되는 릴리스)
+- 특정 릴리스를 나타내는 X.Y 형식의 두 부분으로 된 버전(예: `2.0` 또는 `1.0`)
+- 분기 이름[예: `master` 분기에서 온 최신 값의 경우 `release/2.0.0`, `release/2.0.0-preview2` 또는 `master`("bleeding edge" 야간 릴리스)]
+
+기본값은 `LTS`입니다. .NET 지원 채널에 대한 자세한 내용은 [.NET Core 지원 주기](https://www.microsoft.com/net/core/support) 항목을 참조하세요.
 
 `-Version <VERSION>`
 
-설치할 CLI의 버전을 지정합니다. 버전은 세 부분으로 구성된 버전(예: 1.0.0-13232)으로 지정해야 합니다. 생략하면 `version` 속성을 포함하는 첫 번째 [global.json](global-json.md)으로 기본 설정됩니다. 없으면 최신 버전을 사용합니다.
+소스 채널의 빌드 버전을 나타냅니다(`-Channel` 옵션 참조). 가능한 값은 다음과 같습니다.
+
+- `latest` - 채널의 최신 빌드
+- `coherent` - 채널의 일관된 최신 빌드, 안정적인 최신 패키지 조합 사용
+- 특정 빌드 버전을 나타내는 X.Y.Z 형식의 세 부분으로 구성된 버전(예: 패치 버전을 나타내는 `x`가 있는 `1.0.x` 또는 `2.0.0-preview2-006120`과 같은 특정 빌드)
+
+생략하면 `-Version`은 `version` 멤버를 포함하는 첫 번째 [global.json](global-json.md)으로 기본 설정됩니다. 이것이 존재하지 않을 경우 `-Version`은 `latest`로 기본 설정됩니다.
 
 `-InstallDir <DIRECTORY>`
 
-설치 경로를 지정합니다. 디렉터리가 없을 경우 만듭니다. 기본값은 *%LocalAppData%\.dotnet*입니다.
+설치 경로를 지정합니다. 디렉터리가 없을 경우 만듭니다. 기본값은 *%LocalAppData%\.dotnet*입니다. 이진 파일은 디렉터리에 직접 배치됩니다.
 
 `-Architecture <ARCHITECTURE>`
 
@@ -84,7 +98,7 @@ macOS/Linux:
 
 `-DryRun`
 
-설정된 경우 스크립트에서 설치를 수행하지는 않지만 대신 현재 요청된 버전의 .NET CLI를 일관되게 설치하기 위해 사용할 명령줄을 표시합니다. 예를 들어 `latest` 버전을 지정하면 빌드 스크립트에서 이 명령을 결정적으로 사용할 수 있도록 특정 버전에 대한 링크를 표시합니다. 또한 직접 설치하거나 다운로드하는 것을 선호하는 경우 이진 파일 위치를 표시합니다.
+설정된 경우 스크립트에서 설치를 수행하지는 않지만 대신 현재 요청된 버전의 .NET Core CLI를 일관되게 설치하기 위해 사용할 명령줄을 표시합니다. 예를 들어 `latest` 버전을 지정하면 빌드 스크립트에서 이 명령을 결정적으로 사용할 수 있도록 특정 버전에 대한 링크를 표시합니다. 또한 직접 설치하거나 다운로드하는 것을 선호하는 경우 이진 파일 위치를 표시합니다.
 
 `-NoPath`
 
@@ -102,13 +116,26 @@ macOS/Linux:
 
 `dotnet-install.sh [--channel] [--version] [--install-dir] [--architecture] [--shared-runtime] [--debug-symbols] [--dry-run] [--no-path] [--verbose] [--azure-feed] [--help]`
 
-`--channel <CHANNEL>`
+`-Channel <CHANNEL>`
 
-설치에 대한 소스 채널을 지정합니다. 값은 `future`, `dev` 및 `production`입니다. 기본값은 `production`입니다.
+설치에 대한 소스 채널을 지정합니다. 가능한 값은 다음과 같습니다.
 
-`--version <VERSION>`
+- `Current` - 현재 릴리스
+- `LTS` - 장기 지원 채널(현재 지원되는 릴리스)
+- 특정 릴리스를 나타내는 X.Y 형식의 두 부분으로 된 버전(예: `2.0` 또는 `1.0`)
+- 분기 이름[예: `master` 분기에서 온 최신 값의 경우 `release/2.0.0`, `release/2.0.0-preview2` 또는 `master`("bleeding edge" 야간 릴리스)]
 
-설치할 CLI의 버전을 지정합니다. 버전은 세 부분으로 구성된 버전(예: 1.0.0-13232)으로 지정해야 합니다. 생략하면 `version` 속성을 포함하는 첫 번째 [global.json](global-json.md)으로 기본 설정됩니다. 없으면 최신 버전을 사용합니다.
+기본값은 `LTS`입니다. .NET 지원 채널에 대한 자세한 내용은 [.NET Core 지원 주기](https://www.microsoft.com/net/core/support) 항목을 참조하세요.
+
+`-Version <VERSION>`
+
+소스 채널의 빌드 버전을 나타냅니다(`-Channel` 옵션 참조). 가능한 값은 다음과 같습니다.
+
+- `latest` - 채널의 최신 빌드
+- `coherent` - 채널의 일관된 최신 빌드, 안정적인 최신 패키지 조합 사용
+- 특정 빌드 버전을 나타내는 X.Y.Z 형식의 세 부분으로 구성된 버전(예: 패치 버전을 나타내는 `x`가 있는 `1.0.x` 또는 `2.0.0-preview2-006120`과 같은 특정 빌드)
+
+생략하면 `-Version`은 `version` 멤버를 포함하는 첫 번째 [global.json](global-json.md)으로 기본 설정됩니다. 이것이 존재하지 않을 경우 `-Version`은 `latest`로 기본 설정됩니다.
 
 `--install-dir <DIRECTORY>`
 
@@ -131,7 +158,7 @@ macOS/Linux:
 
 `--dry-run`
 
-설정된 경우 스크립트에서 설치를 수행하지는 않지만 대신 현재 요청된 버전의 .NET CLI를 일관되게 설치하기 위해 사용할 명령줄을 표시합니다. 예를 들어 `latest` 버전을 지정하면 빌드 스크립트에서 이 명령을 결정적으로 사용할 수 있도록 특정 버전에 대한 링크를 표시합니다. 또한 직접 설치하거나 다운로드하는 것을 선호하는 경우 이진 파일 위치를 표시합니다.
+설정된 경우 스크립트에서 설치를 수행하지는 않지만 대신 현재 요청된 버전의 .NET Core CLI를 일관되게 설치하기 위해 사용할 명령줄을 표시합니다. 예를 들어 `latest` 버전을 지정하면 빌드 스크립트에서 이 명령을 결정적으로 사용할 수 있도록 특정 버전에 대한 링크를 표시합니다. 또한 직접 설치하거나 다운로드하는 것을 선호하는 경우 이진 파일 위치를 표시합니다.
 
 `--no-path`
 
@@ -170,3 +197,9 @@ Windows:
 macOS/Linux:
 
 `./dotnet-install.sh --channel preview --install-dir ~/cli`
+
+## <a name="see-also"></a>참고 항목
+
+[.NET Core 릴리스](https://github.com/dotnet/core/releases)   
+[.NET Core 런타임 및 SDK 다운로드 아카이브](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
+

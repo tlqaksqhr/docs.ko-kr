@@ -1,5 +1,5 @@
 ---
-title: "dotnet-build 명령 - .NET Core CLI | Microsoft Docs"
+title: "dotnet-build 명령 - .NET Core CLI"
 description: "dotnet-build 명령은 프로젝트와 모든 종속성을 빌드합니다."
 keywords: "dotnet-build, CLI, CLI 명령, .NET Core"
 author: blackdwarf
@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 5e1a2bc4-a919-4a86-8f33-a9b218b1fcb3
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: e5deac8a7b8faac97ccf8b801f274a2c03268d64
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d2006b15978f384e53e43a0a2562e81d10582abd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -35,9 +36,9 @@ ms.lasthandoff: 03/22/2017
 
 빌드하려면 응용 프로그램의 종속성을 나열하는 *project.assets.json* 파일이 필요합니다. 프로젝트를 빌드하기 전에 [`dotnet restore`](dotnet-restore.md)를 실행하면 파일이 생성됩니다. 자산 파일이 없으면 도구로 참조 어셈블리를 확인할 수 없으므로 오류가 발생합니다.
 
-`dotnet build`는 MSBuild를 사용하여 프로젝트를 빌드하므로 병렬 및 증분 빌드를 모두 지원합니다. 자세한 내용은 [증분 빌드](https://docs.microsoft.com/visualstudio/msbuild/incremental-builds)를 참조하세요. 
+`dotnet build`는 MSBuild를 사용하여 프로젝트를 빌드하므로 병렬 및 증분 빌드를 모두 지원합니다. 자세한 내용은 [증분 빌드](/visualstudio/msbuild/incremental-builds)를 참조하세요. 
 
-해당 옵션 외에도, `dotnet build` 명령은 속성 설정에 대한 `/p` 또는 로거를 정의하는 `/l`처럼 MSBuild 옵션도 수락합니다. 이러한 옵션에 대한 자세한 내용은 [MSBuild 명령줄 참조](https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference)를 참조하세요. 
+해당 옵션 외에도, `dotnet build` 명령은 속성 설정에 대한 `/p` 또는 로거를 정의하는 `/l`처럼 MSBuild 옵션도 수락합니다. 이러한 옵션에 대한 자세한 내용은 [MSBuild 명령줄 참조](/visualstudio/msbuild/msbuild-command-line-reference)를 참조하세요. 
 
 프로젝트가 실행 가능한지 아닌지 여부는 프로젝트 파일의 `<OutputType>` 속성으로 확인할 수 있습니다. 다음 예제에서는 실행 코드를 생성하는 프로젝트를 보여 줍니다.
 

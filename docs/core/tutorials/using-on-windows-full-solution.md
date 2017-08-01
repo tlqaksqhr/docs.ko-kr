@@ -1,6 +1,6 @@
 ---
-title: "Visual Studio 2017을 사용하여 Windows에서 완전한 .NET Core 솔루션 구축 | Microsoft 문서"
-description: "Visual Studio 2017을 사용하여 Windows에서 완전한 .NET Core 솔루션 구축"
+title: "Visual Studio 2017을 사용하여 Windows에서 완전한 .NET Core 솔루션 구축"
+description: "Windows의 Visual Studio 2017에서 완전한 .NET Core 솔루션을 구축하는 방법에 관해 알아봅니다."
 keywords: .NET, .NET Core
 author: bleroy
 ms.author: mairaw
@@ -9,10 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: ba7e082c-a7c8-431e-a342-f67734b660f6
-translationtype: Human Translation
-ms.sourcegitcommit: 195664ae6409be02ca132900d9c513a7b412acd4
-ms.openlocfilehash: b8505f88b324fcdf3a51d75c455ec5869e058774
-ms.lasthandoff: 03/07/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6b164198f5fbbae5ebc6164fc281dd7de8172b70
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 

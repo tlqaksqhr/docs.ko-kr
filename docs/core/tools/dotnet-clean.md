@@ -1,5 +1,5 @@
 ---
-title: "dotnet-clean 명령 - .NET Core CLI | Microsoft Docs"
+title: "dotnet-clean 명령 - .NET Core CLI"
 description: "dotnet-clean 명령은 현재 디렉터리를 정리합니다."
 keywords: "dotnet-clean, CLI, CLI 명령, .NET Core"
 author: blackdwarf
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: eff65fa1-bab4-4421-8260-d0a284b690b2
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 0bdd8b9ab133ca92e414618412d95d8136d6234a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 10222781d5bff596d1b7883bc73097758e878235
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 03/22/2017
 
 ## <a name="description"></a>설명
 
-`dotnet clean` 명령은 이전 빌드의 출력을 정리합니다. 이 명령은 [MSBuild 대상](https://docs.microsoft.com/visualstudio/msbuild/msbuild-targets)으로 구현되므로 명령이 실행될 때 프로젝트가 평가됩니다. 빌드 중 생성된 출력만 정리됩니다. 중간(*obj*) 및 최종 출력(*bin*) 폴더가 모두 정리됩니다.
+`dotnet clean` 명령은 이전 빌드의 출력을 정리합니다. 이 명령은 [MSBuild 대상](/visualstudio/msbuild/msbuild-targets)으로 구현되므로 명령이 실행될 때 프로젝트가 평가됩니다. 빌드 중 생성된 출력만 정리됩니다. 중간(*obj*) 및 최종 출력(*bin*) 폴더가 모두 정리됩니다.
 
 ## <a name="arguments"></a>인수
 

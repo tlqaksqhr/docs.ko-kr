@@ -1,5 +1,5 @@
 ---
-title: ".NET Core 도구에서 종속성 관리 | Microsoft 문서"
+title: ".NET Core 도구에서 종속성 관리"
 description: ".NET Core 도구로 종속성을 관리하는 방법을 설명합니다."
 keywords: "CLI, 확장성, 사용자 지정 명령, .NET Core"
 author: blackdwarf
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 74b87cdb-a244-4c13-908c-539118bfeef9
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 25847dd6921e547074f4501d34d865dfb1b98b59
-ms.openlocfilehash: de496d96120df1ec275bb4a69f01b6266b0b5a89
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b982d72b92cefb015c584ea6827dc60999ca9a00
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -31,10 +31,10 @@ ms.lasthandoff: 05/17/2017
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" />
 ```
 
-MSBuild에 익숙한 경우 이미 존재하는 다른 참조 형식에 익숙할 것입니다. 키는 프로젝트에 추가할 패키지 ID를 지정하는 `Include` 문입니다. `<Version>` 자식 요소는 가져올 버전을 지정합니다. 버전은 [NuGet 버전 규칙](https://docs.microsoft.com/nuget/create-packages/dependency-versions#version-ranges)에 따라 지정됩니다.
+MSBuild에 익숙한 경우 이미 존재하는 다른 참조 형식에 익숙할 것입니다. 키는 프로젝트에 추가할 패키지 ID를 지정하는 `Include` 문입니다. `<Version>` 자식 요소는 가져올 버전을 지정합니다. 버전은 [NuGet 버전 규칙](/nuget/create-packages/dependency-versions#version-ranges)에 따라 지정됩니다.
 
 > [!NOTE]
-> 전체 `csproj` 구문에 대해 잘 알고 있지 않은 경우 자세한 내용은[MSBuild 프로젝트 참조](https://docs.microsoft.com/visualstudio/msbuild/msbuild-project-file-schema-reference) 설명서를 참조하세요.  
+> 전체 `csproj` 구문에 대해 잘 알고 있지 않은 경우 자세한 내용은[MSBuild 프로젝트 참조](/visualstudio/msbuild/msbuild-project-file-schema-reference) 설명서를 참조하세요.  
 
 특정 대상에만 사용할 수 있는 종속성을 추가하려면 다음 예와 같은 조건을 사용하여 수행합니다.
 

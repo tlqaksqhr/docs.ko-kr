@@ -1,5 +1,5 @@
 ---
-title: "dotnet-publish 명령 - .NET Core CLI | Microsoft Docs"
+title: "dotnet-publish 명령 - .NET Core CLI"
 description: "dotnet-publish 명령은 .NET Core 프로젝트를 디렉터리에 게시합니다."
 keywords: "dotnet-publish, CLI, CLI 명령, .NET Core"
 author: blackdwarf
@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: f2ef275a-7c5e-430a-8c30-65f52af62771
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: 48bfe6c77ee6c5d905069f47da5512ac63a24b2a
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a8a37b1eacab13682d4f4a2bea2f9ea248cdd9eb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 03/22/2017
 * 런타임에 대한 기타 구성 옵션(예: 가비지 수집 유형)뿐만 아니라 응용 프로그램에서 예상하는 공유 런타임을 지정하는 *\*.runtime.config.json* 파일
 * 응용 프로그램의 종속성. 이러한 종속성은 NuGet 캐시에서 출력 폴더로 복사됩니다.
 
-`dotnet publish` 명령의 출력은 실행을 위해 호스팅 시스템(예: 서버, PC, Mac, 랩톱)으로 배포할 준비가 되었으며 응용 프로그램의 배포를 준비하는 공식적으로 지원되는 유일한 방법입니다. 프로젝트에서 지정하는 배포 유형에 따라 호스팅 시스템에 .NET Core 공유 런타임이 설치되어 있을 수도 있고 그렇지 않을 수도 있습니다. 자세한 내용은 [.NET Core 응용 프로그램 배포](../deploying/index.md)를 참조하세요. 게시된 응용 프로그램의 디렉터리 구조에 대해서는 [디렉터리 구조](https://docs.microsoft.com/en-us/aspnet/core/hosting/directory-structure)를 참조하세요.
+`dotnet publish` 명령의 출력은 실행을 위해 호스팅 시스템(예: 서버, PC, Mac, 랩톱)으로 배포할 준비가 되었으며 응용 프로그램의 배포를 준비하는 공식적으로 지원되는 유일한 방법입니다. 프로젝트에서 지정하는 배포 유형에 따라 호스팅 시스템에 .NET Core 공유 런타임이 설치되어 있을 수도 있고 그렇지 않을 수도 있습니다. 자세한 내용은 [.NET Core 응용 프로그램 배포](../deploying/index.md)를 참조하세요. 게시된 응용 프로그램의 디렉터리 구조에 대해서는 [디렉터리 구조](/aspnet/core/hosting/directory-structure)를 참조하세요.
 
 ## <a name="arguments"></a>인수
 
@@ -96,3 +97,4 @@ ms.lasthandoff: 03/22/2017
 
 * [대상 프레임워크](../../standard/frameworks.md)
 * [RID(런타임 식별자) 카탈로그](../rid-catalog.md)
+

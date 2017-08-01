@@ -1,5 +1,5 @@
 ---
-title: "CLI 도구를 사용한 .NET Core 앱 배포 | Microsoft Docs"
+title: "CLI 도구를 사용한 .NET Core 앱 배포"
 description: "CLI(명령줄 인터페이스) 도구를 사용한 .NET Core 앱 배포에 대해 알아봅니다."
 keywords: ".NET, .NET Core, .NET Core 배포"
 author: rpetrusha
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 82ebe16d-5e1c-46cc-91e8-71974296429c
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3ffe3909902659a22cb25bac6dc5aaa4f5b9fde2
-ms.openlocfilehash: e3736d44c05e8740451ff72b28cd01c384ecd34d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 005355868eefdbf21e3107f6db5230d7952276b2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -85,7 +85,7 @@ ms.lasthandoff: 05/13/2017
 
 1. 타사 종속성을 포함하는 NuGet 패키지를 아직 다운로드하지 않은 경우 다운로드합니다. 패키지를 다운로드하려면 종속성을 추가한 후 `dotnet restore` 명령을 실행합니다. 종속성은 게시 시간에 로컬 NuGet 캐시에서 확인되므로 시스템에서 사용할 수 있어야 합니다.
 
-타사 종속성이 있는 프레임워크 종속 배포는 타사 종속성만큼만 이식 가능합니다. 예를 들어 타사 라이브러리에서 macOS를 지원하는 경우 Windows 시스템에 앱을 이식할 수 없습니다. 이러한 현상은 타사 종속성 자체가 네이티브 코드에 종속된 경우에 발생합니다. 관련된 좋은 예로 [libuv](https://github.com/libuv/libuv)에 대한 기본 종속성이 필요한 [Kestrel 서버](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel)가 있습니다. 이런 종류의 타사 종속성이 있는 응용 프로그램에 대해 FDD를 만들면 게시된 출력에는 기본 종속성에서 지원하고 NuGet 패키지에 있는 각 [RID(런타임 식별자)](../rid-catalog.md#what-are-rids)에 대한 폴더가 포함됩니다.
+타사 종속성이 있는 프레임워크 종속 배포는 타사 종속성만큼만 이식 가능합니다. 예를 들어 타사 라이브러리에서 macOS를 지원하는 경우 Windows 시스템에 앱을 이식할 수 없습니다. 이러한 현상은 타사 종속성 자체가 네이티브 코드에 종속된 경우에 발생합니다. 관련된 좋은 예로 [libuv](https://github.com/libuv/libuv)에 대한 기본 종속성이 필요한 [Kestrel 서버](/aspnet/core/fundamentals/servers/kestrel)가 있습니다. 이런 종류의 타사 종속성이 있는 응용 프로그램에 대해 FDD를 만들면 게시된 출력에는 기본 종속성에서 지원하고 NuGet 패키지에 있는 각 [RID(런타임 식별자)](../rid-catalog.md#what-are-rids)에 대한 폴더가 포함됩니다.
 
 ## <a name="simpleSelf"></a> 타사 종속성이 없는 자체 포함 배포
 

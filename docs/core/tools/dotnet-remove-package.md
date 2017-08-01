@@ -1,5 +1,5 @@
 ---
-title: "dotnet-remove package 명령 - .NET Core CLI | Microsoft Docs"
+title: "dotnet-remove package 명령 - .NET Core CLI"
 description: "dotnet-remove package 명령은 프로젝트에 대한 NuGet 패키지 참조를 제거하는 편리한 옵션을 제공합니다."
 keywords: "dotnet-remove, CLI, CLI 명령, .NET Core"
 author: spboyer
@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 2fcc8d37-16b3-4581-8038-832160e72d36
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: a321610540534a63bd12a8f878950b75e882c3d4
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a3fef846d5850e2c2a158ccd1f30a84e8f23f793
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -52,3 +53,4 @@ ms.lasthandoff: 03/22/2017
 현재 디렉터리의 프로젝트에서 `Newtonsoft.Json` NuGet 패키지를 제거합니다.
 
 `dotnet remove package Newtonsoft.Json`
+

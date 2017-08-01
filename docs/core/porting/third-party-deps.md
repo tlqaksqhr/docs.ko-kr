@@ -1,5 +1,5 @@
 ---
-title: ".NET Core로 이식 - 타사 종속성 분석 | Microsoft Docs"
+title: ".NET Core로 이식 - 타사 종속성 분석"
 description: ".NET Core로 이식 - 타사 종속성 분석"
 keywords: .NET, .NET Core
 author: cartermp
@@ -9,29 +9,23 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: b446e9e0-72f6-48f6-92c6-70ad0ce3f86a
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
-ms.openlocfilehash: c4c97f7f1aa6f574e4acae91320c92c2a76147ea
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a074978f2817abafa7b8a9fefe7c67c9c52195b3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/20/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="porting-to-net-core---analyzing-your-third-party-party-dependencies" class="xliff"></a>
-
-# .NET Core로 이식 - 타사 종속성 분석
+# <a name="porting-to-net-core---analyzing-your-third-party-party-dependencies"></a>.NET Core로 이식 - 타사 종속성 분석
 
 이식 프로세스의 첫 번째 단계는 타사 종속성을 이해하는 것입니다.  .NET Core에서 아직 실행되지 않는 것이 무엇인지를 파악하고 이에 대한 대체 계획을 개발해야 합니다.
 
-<a id="prerequisites" class="xliff"></a>
-
-## 필수 조건
+## <a name="prerequisites"></a>필수 조건
 
 이 문서에서는 사용자가 Windows 및 Visual Studio를 사용하며 .NET Framework에서 실행되는 코드를 가지고 있다고 가정합니다.
 
-<a id="analyzing-nuget-packages" class="xliff"></a>
-
-## NuGet 패키지 분석
+## <a name="analyzing-nuget-packages"></a>NuGet 패키지 분석
 
 이식성에 대한 NuGet 패키지 분석은 매우 쉽습니다.  NuGet 패키지는 플랫폼별 어셈블리를 포함하는 폴더의 집합 자체이므로, .NET Core 어셈블리를 포함하는 폴더가 있는지만 확인하면 됩니다.
 
@@ -61,7 +55,7 @@ portable-net451-win81
 portable-net45-win8-wpa8-wpa81
 ```
 
-[.NET 표준 라이브러리](../../standard/net-standard.md)의 버전에 매핑되는 TFM(대상 프레임워크 모니커) 및 .NET Core와 호환되는 기존의 PCL(이식 가능한 클래스 라이브러리) 프로필입니다.  호환되는 `netcoreapp1.0`은 응용 프로그램용이며 라이브러리용이 아닙니다.  `netcoreapp1.0` 기반 라이브러리를 사용하는 것에는 문제가 없지만, 해당 라이브러리는 다른 `netcoreapp1.0` 응용 프로그램이 사용하는 것 *이외의* 용도가 아닐 수 있습니다.
+[.NET 표준](../../standard/net-standard.md)의 버전에 매핑되는 TFM(대상 프레임워크 모니커) 및 .NET Core와 호환되는 기존의 PCL(이식 가능한 클래스 라이브러리) 프로필입니다.  호환되는 `netcoreapp1.0`은 응용 프로그램용이며 라이브러리용이 아닙니다.  `netcoreapp1.0` 기반 라이브러리를 사용하는 것에는 문제가 없지만, 해당 라이브러리는 다른 `netcoreapp1.0` 응용 프로그램이 사용하는 것 *이외의* 용도가 아닐 수 있습니다.
 
 호환 가능한 .NET Core의 시험판에서 사용되는 일부 레거시 TFM도 있습니다.
 
@@ -80,9 +74,7 @@ dotnet5.5
 > [!NOTE]
 > 기존 PCL 또는 시험판 .NET Core를 대상으로 하는 패키지를 사용하려면 `project.json` 파일에서 `imports` 지시문을 사용해야 합니다.
 
-<a id="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core" class="xliff"></a>
-
-### NuGet 패키지 종속성이 .NET Core에서 실행되지 않는 경우 수행할 작업
+### <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>NuGet 패키지 종속성이 .NET Core에서 실행되지 않는 경우 수행할 작업
 
 종속된 NuGet 패키지가 .NET Core에서 실행되지 않을 경우 수행할 수 있는 몇 가지가 있습니다.
 
@@ -98,15 +90,11 @@ dotnet5.5
 
 .NET 팀은 다음에 .NET Core를 지원하기 위해 어떤 라이브러리가 가장 중요한지 알고자 합니다. 또한 사용하고 싶은 라이브러리에 대해 dotnet@microsoft.com으로 메일을 보낼 수 있습니다.
 
-<a id="analyzing-dependencies-which-arent-nuget-packages" class="xliff"></a>
-
-## NuGet 패키지가 아닌 종속성 분석
+## <a name="analyzing-dependencies-which-arent-nuget-packages"></a>NuGet 패키지가 아닌 종속성 분석
 
 파일 시스템의 DLL처럼, NuGet 패키지가 아닌 종속성이 있을 수 있습니다.  해당 종속성의 이식 가능성을 확인하는 유일한 방법은 [ApiPort 도구](https://github.com/Microsoft/dotnet-apiport/blob/master/docs/HowTo/)를 실행하는 것입니다.
 
-<a id="next-steps" class="xliff"></a>
-
-## 다음 단계
+## <a name="next-steps"></a>다음 단계
 
 라이브러리를 이식하려는 경우 [라이브러리 이식](libraries.md)을 확인합니다.
 

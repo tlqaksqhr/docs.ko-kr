@@ -1,6 +1,6 @@
 ---
-title: ".NET Core SDK 개요 | Microsoft Docs"
-description: ".NET Core SDK 개요"
+title: ".NET Core SDK 개요"
+description: ".NET Core 프로젝트를 만드는 데 사용되는 라이브러리 및 도구 집합인 .NET Core SDK에 관해 알아보세요."
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -10,21 +10,17 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 26bc9822-e42b-48ec-b0d6-499dc604add7
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 1b05b7e1a2d274f02cd1222c0a90a59583d37e92
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8f3d0f5b3bccdd1ca25fa1202c2c727e402fe668
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="net-core-sdk-overview" class="xliff"></a>
+# <a name="net-core-sdk-overview"></a>.NET Core SDK 개요 
 
-# .NET Core SDK 개요 
-
-<a id="introduction" class="xliff"></a>
-
-## 소개
+## <a name="introduction"></a>소개
 .NET Core SDK(소프트웨어 개발 키트)는 개발자들이 .NET Core 응용 프로그램과 라이브러리를 만드는 데 사용할 수 있는 라이브러리 및 도구 집합입니다. 이 SDK는 개발자들이 가장 많이 사용할만한 패키지로서 
 
 다음 구성 요소를 포함합니다.
@@ -34,9 +30,7 @@ ms.lasthandoff: 05/23/2017
 3. 응용 프로그램은 물론 [CLI 명령](tools/index.md)도 실행하기 위한 `dotnet` 드라이버
 
 
-<a id="acquiring-the-net-core-sdk" class="xliff"></a>
-
-## .NET Core SDK 가져오기
+## <a name="acquiring-the-net-core-sdk"></a>.NET Core SDK 가져오기
 모든 도구와 마찬가지로 먼저 컴퓨터에 도구를 가져와야 합니다. 시나리오에 따라, 기본 설치 관리자를 사용하여 SDK를 설치할 수도 있고 설치 셸 스크립트를 사용할 수도 있습니다.
 
 기본 설치 관리자는 주로 개발자의 컴퓨터를 위한 것입니다. Ubuntu의 DEB 패키지 또는 Windows MSI 번들처럼 SDK는 지원되는 플랫폼의 기본 설치 메커니즘을 사용하여 배포됩니다. 이러한 설치 관리자는 설치 후 SDK를 즉시 사용하려는 사용자에게 필요한 환경을 설치 및 설정합니다. 그러나 이러한 사용자는 컴퓨터에 대한 관리자 권한이 필요합니다. [.NET Core 설치 가이드](https://aka.ms/dotnetcoregs)에서 설치 지침을 볼 수 있습니다.
