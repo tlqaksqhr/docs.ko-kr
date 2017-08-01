@@ -1,0 +1,1 @@
+이 클래스가 나타내는 메시지에 대한 자세한 내용은 [Web Services Federation Language (WS-Federation) Version 1.2](http://go.microsoft.com/fwlink/?LinkID=210152)(WS-Federation(Web Services Federation Language) 버전 1.2)(http://go.microsoft.com/fwlink/?LinkID=210152) 사양의 섹션 13을 참조하세요.
