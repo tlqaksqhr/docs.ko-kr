@@ -1,5 +1,5 @@
 ---
-title: "C# 대리자 - C# 언어 둘러보기 | Microsoft Docs"
+title: "C# 대리자 - C# 언어 둘러보기"
 description: "C# 대리자를 사용한 런타임에 바인딩 알아보기"
 keywords: ".NET, c샵, 대리자, 람다, 런타임에 바인딩"
 author: BillWagner
@@ -10,17 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 3cc27357-3ac2-43a1-aad0-86a77b88f884
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 217fd974f547a4a84b328979ee94ee634038b213
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bb304b2e5c762a44aab931b5e8f7fe9c99805eba
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="delegates" class="xliff"></a>
-
-# 대리자
+# <a name="delegates"></a>대리자
 
 ***대리자***는 특정 매개 변수 목록 및 반환 형식이 있는 메서드에 대한 참조를 나타내는 형식입니다. 대리자는 메서드를 변수에 할당되고 매개 변수로 전달될 수 있는 엔터티로 취급할 수 있도록 합니다. 또한 대리자는 다른 언어에 나오는 함수 포인터의 개념과 비슷하지만 함수 포인터와 달리 대리자는 개체 지향적이며 형식 안전 방식입니다.
 

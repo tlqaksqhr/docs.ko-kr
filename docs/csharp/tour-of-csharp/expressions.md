@@ -1,5 +1,5 @@
 ---
-title: "C# 식 - C# 언어 둘러보기 | Microsoft Docs"
+title: "C# 식 - C# 언어 둘러보기"
 description: "식, 피연산자 및 연산자는 C# 언어의 기본 구성 요소입니다."
 keywords: ".NET, c샵, 식, 연산자, 피연산자"
 author: BillWagner
@@ -10,17 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 66eae1fcb7eca4572c49dca78bc31155464a6920
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 155804dd212d8eda8d81ce7e296a9fe308e9c69b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="expressions" class="xliff"></a>
-
-# 식
+# <a name="expressions"></a>식
 
 *식*은 *피연산자* 및 *연산자*로 생성됩니다. 식의 연산자는 피연산자에 적용할 연산을 나타냅니다. 연산자의 예로 `+`, `-`, `*`, `/` 및 `new`가 있습니다. 피연산자의 예로는 리터럴, 필드, 지역 변수 및 식이 있습니다.
 
@@ -28,8 +26,8 @@ ms.lasthandoff: 05/23/2017
 
 피연산자는 동일한 우선 순위를 가진 두 연산자 사이에 나올 경우 연산자의 *결합성*에 따라 연산이 수행되는 순서가 제어됩니다.
 
-*    대입 연산자를 제외하고 모든 이항 연산자는 *왼쪽 결합성*을 갖습니다. 즉, 연산이 왼쪽에서 오른쪽으로 수행됩니다. 예를 들어, `x + y + z`는 `(x + y) + z`로 계산됩니다.
-*    대입 연산자 및 조건부 연산자(`?:`)는 *오른쪽 결합성*을 갖습니다. 즉, 연산이 오른쪽에서 왼쪽으로 수행됩니다. 예를 들어, `x = y = z`는 `x = (y = z)`로 계산됩니다.
+*   대입 연산자를 제외하고 모든 이항 연산자는 *왼쪽 결합성*을 갖습니다. 즉, 연산이 왼쪽에서 오른쪽으로 수행됩니다. 예를 들어, `x + y + z`는 `(x + y) + z`로 계산됩니다.
+*   대입 연산자 및 조건부 연산자(`?:`)는 *오른쪽 결합성*을 갖습니다. 즉, 연산이 오른쪽에서 왼쪽으로 수행됩니다. 예를 들어, `x = y = z`는 `x = (y = z)`로 계산됩니다.
 
 우선 순위 및 결합성은 괄호를 사용하여 제어할 수 있습니다. 예를 들어 `x + y * z`는 먼저 `y`와 `z`를 곱한 다음 그 결과를 `x`와 더하지만 `(x + y) * z`는 먼저 `x`와 `y`를 더한 다음 그 결과에 `z`를 곱합니다.
 

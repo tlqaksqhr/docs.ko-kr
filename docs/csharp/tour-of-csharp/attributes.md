@@ -1,5 +1,5 @@
 ---
-title: "C# 특성 - C# 언어 둘러보기 | Microsoft Docs"
+title: "C# 특성 - C# 언어 둘러보기"
 description: "C#에서 특성을 사용하는 선언적 프로그래밍에 대해 알아보기"
 keywords: ".NET, c샵"
 author: BillWagner
@@ -10,17 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 753bcfe2-7ddd-4487-9513-ba70937fc8e9
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 9e7ad62e85df83f181fa4aa8ea6da56b6f739f14
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5f290b2cb7074d0b442d5971e5e08a0f6cac55ac
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="attributes" class="xliff"></a>
-
-# 특성
+# <a name="attributes"></a>특성
 
 C# 프로그램의 형식, 멤버 및 기타 엔터티는 동작의 특정 측면을 제어하는 한정자를 지원합니다. 예를 들어 메서드의 액세스 가능성은 `public`, `protected`, `internal` 및 `private` 한정자를 사용하여 제어됩니다. C#은 선언적 정보의 사용자 정의 형식을 프로그램 엔터티에 연결하고 런타임에 검색할 수 있도록 이러한 기능을 일반화합니다. 프로그램은 ***특성***을 정의하고 사용하여 이러한 추가적인 선언적 정보를 지정합니다.
 

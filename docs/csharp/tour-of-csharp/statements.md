@@ -1,5 +1,5 @@
 ---
-title: "C# 문 - C# 언어 둘러보기 | Microsoft Docs"
+title: "C# 문 - C# 언어 둘러보기"
 description: "문을 사용하여 C# 프로그램 동작 만들기"
 keywords: ".NET, c샵, 문, 구문"
 author: BillWagner
@@ -10,17 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 5409c379-5622-4fae-88b5-1654276ea8d4
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: a6389d041fd9e464a40a86c4c7a4075086d05e9b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 99ec2489daf89926da9b8c4e148965412826a8a6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="statements" class="xliff"></a>
-
-# 문
+# <a name="statements"></a>문
 
 프로그램의 동작은 *문*을 사용하여 표현됩니다. C#은 여러 다른 종류의 문을 지원하며 이중 많은 문이 포함 문에 대해 정의됩니다.
 

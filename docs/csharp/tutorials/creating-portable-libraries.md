@@ -1,5 +1,5 @@
 ---
-title: "이식 가능한 라이브러리 만들기 - C# 가이드 | Microsoft Docs"
+title: "이식 가능한 라이브러리 만들기 - C# 가이드"
 description: "이식 가능한 라이브러리를 만들고 라이브러리가 지원하는 플랫폼 및 버전을 지정하는 방법을 알아봅니다."
 keywords: "C#, UWP, 이식 가능한 어셈블리, 플랫폼 간"
 ms.date: 08/24/2016
@@ -9,11 +9,11 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 254836c0-3be7-4549-bd9a-40fc0f445c31
 redirect_url: /dotnet/csharp/tutorials/index
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 06430b6b74c472e60ab9bd64507bf3fca37c70e8
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 534380026773fb2e2203db502b21b8c0ac3d3081
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 

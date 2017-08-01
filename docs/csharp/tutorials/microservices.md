@@ -1,5 +1,5 @@
 ---
-title: "Docker에서 호스트되는 마이크로 서비스 - C# | Microsoft Docs"
+title: "Docker에서 호스트되는 마이크로 서비스 - C#"
 description: "Docker 컨테이너에서 실행되는 ASP.NET Core 서비스를 만드는 방법 알아보기"
 keywords: ".NET, .NET Core, Docker, C#, ASP.NET, 마이크로 서비스"
 author: BillWagner
@@ -10,21 +10,17 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
-ms.openlocfilehash: 40d81a161e6be06a32fb559b70a4e7eeca41e4da
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5585db33fb5020ed18c26f32ce0b63f97353d20f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/27/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="microservices-hosted-in-docker" class="xliff"></a>
+# <a name="microservices-hosted-in-docker"></a>Docker에서 호스트되는 마이크로 서비스
 
-# Docker에서 호스트되는 마이크로 서비스
-
-<a id="introduction" class="xliff"></a>
-
-## 소개
+## <a name="introduction"></a>소개
 
 이 자습서에서는 Docker 컨테이너에서 ASP.NET Core 마이크로 서비스를 빌드 및 배포하는 데 필요한 작업에 대해 설명합니다. 이 자습서를 진행하면서 다음을 익히게 됩니다.
 
@@ -42,18 +38,14 @@ ms.lasthandoff: 05/27/2017
 
 이 항목에 대한 [샘플 앱을 보거나 다운로드](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice)할 수 있습니다. 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
 
-<a id="why-docker" class="xliff"></a>
-
-### Docker를 사용해야 하는 이유
+### <a name="why-docker"></a>Docker를 사용해야 하는 이유
 
 Docker를 사용하면 데이터 센터 또는 공용 클라우드에서 서비스를 호스트하는 표준 컴퓨터 이미지를 쉽게 만들 수 있습니다. Docker는 이미지를 구성하고, 필요할 때 이미지를 복제하여 응용 프로그램의 설치 크기를 조정할 수 있도록 합니다.
 
 이 자습서의 모든 코드는 모든 .NET Core 환경에서 작동합니다.
 Docker 설치를 위한 추가 작업은 ASP.NET Core 응용 프로그램에 해당합니다. 
 
-<a id="prerequisites" class="xliff"></a>
-
-## 필수 구성 요소
+## <a name="prerequisites"></a>필수 구성 요소
 .NET Core를 실행하도록 컴퓨터에 설정해야 합니다. [.NET Core](https://www.microsoft.com/net/core) 페이지에서 설치 지침을 확인할 수 있습니다.
 Windows, Ubuntu Linux, macOS 또는 Docker 컨테이너에서 이 응용 프로그램을 실행할 수 있습니다. 선호하는 코드 편집기를 설치해야 합니다. 아래 설명에서는 오픈 소스 플랫폼 간 편집기인 [Visual Studio Code](https://code.visualstudio.com/)를 사용합니다. 그러나 익숙한 어떤 도구도 사용 가능합니다.
 
@@ -70,9 +62,7 @@ Docker는 여러 Linux 배포판, macOS 또는 Windows에 설치할 수 있습�
 
 `npm install -g generator-aspnet`
 
-<a id="create-the-application" class="xliff"></a>
-
-## 응용 프로그램 만들기
+## <a name="create-the-application"></a>응용 프로그램 만들기
 
 이제 모든 도구를 설치했으므로 새로운 ASP.NET Core 응용 프로그램을 만들어 보겠습니다. 명령줄 생성기를 사용하려면 즐겨 사용하는 셸에서 다음 yeoman 명령을 실행합니다.
 
@@ -113,9 +103,7 @@ dotnet run
 
 기본 구성은 http://localhost:5000 을 수신합니다. 브라우저를 열고 해당 페이지로 이동하면 "Hello World!" 반환됩니다.
 
-<a id="anatomy-of-an-aspnet-core-application" class="xliff"></a>
-
-### ASP.NET Core 응용 프로그램 분석
+### <a name="anatomy-of-an-aspnet-core-application"></a>ASP.NET Core 응용 프로그램 분석
 
 응용 프로그램을 빌드했으므로 기능이 구현되는 방식을 살펴보겠습니다. 생성된 파일 중에서 이 시점에서 특히 흥미로운 2개의 파일은 project.json과 Startup.cs입니다. 
 
@@ -128,9 +116,7 @@ Project.json에는 프로젝트에 대한 정보가 포함됩니다. 자주 사�
 
 두 메서드는 asp.net core 인프라에서 응용 프로그램을 구성 및 실행하기 위해 호출됩니다. `ConfigureServices` 메서드는 이 응용 프로그램에 필요한 서비스에 대해 설명합니다. Lean 마이크로 서비스를 빌드하는 경우 어떤 종속성도 구성할 필요가 없습니다. `Configure` 메서드는 들어오는 HTTP 요청에 대한 처리기를 구성합니다. 템플릿은 텍스트 'Hello World!'를 포함하는 모든 요청에 응답하는 간단한 처리기를 생성합니다.
 
-<a id="build-a-microservice" class="xliff"></a>
-
-## 마이크로 서비스 빌드
+## <a name="build-a-microservice"></a>마이크로 서비스 빌드
 
 빌드하려는 서비스는 전 세계 어디에서든지 날씨 보고서를 전달할 것입니다. 프로덕션 응용 프로그램에서는 날씨 데이터를 검색하기 위해 몇 가지 서비스를 호출할 수 있습니다. 이 샘플에서는 임의 일기 예보를 생성합니다. 
 
@@ -144,9 +130,7 @@ Project.json에는 프로젝트에 대한 정보가 포함됩니다. 자주 사�
 
 다음 섹션에서는 이러한 각 단계를 안내합니다.
 
-<a id="parsing-the-query-string" class="xliff"></a>
-
-### 쿼리 문자열 구문 분석.
+### <a name="parsing-the-query-string"></a>쿼리 문자열 구문 분석.
 
 먼저 쿼리 문자열을 구문 분석합니다. 서비스는 다음 형식으로 쿼리 문자열의 'lat' 및 'long' 인수를 수락합니다.
 
@@ -186,9 +170,7 @@ bool TryParse(string s, out double result);
 
 이제 웹 응용 프로그램을 실행하고 구문 분석 코드가 작동하는지 확인할 수 있습니다. 브라우저에서 웹 요청에 값을 추가합니다. 그러면 업데이트된 결과가 표시됩니다.
 
-<a id="build-a-random-weather-forecast" class="xliff"></a>
-
-### 임의 일기 예보 빌드
+### <a name="build-a-random-weather-forecast"></a>임의 일기 예보 빌드
 
 다음 작업은 임의 일기 예보를 빌드하는 것입니다. 일기 예보에 대해 원하는 값을 포함하는 데이터 컨테이너부터 시작하겠습니다.
 
@@ -220,9 +202,7 @@ public class WeatherReport
 
 [!code-csharp[GenerateRandomReport](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#GenerateRandomReport "임의 날씨 보고서 생성")]
 
-<a id="build-the-json-response" class="xliff"></a>
-
-### JSON 응답을 빌드합니다.
+### <a name="build-the-json-response"></a>JSON 응답을 빌드합니다.
 
 서버의 최종 코드 작업은 WeatherReport 배열을 JSON 패킷으로 변환하고 클라이언트에 다시 전송하는 것입니다. 먼저 JSON 패킷을 만들어 보겠습니다. 종속성 목록에 NewtonSoft JSON Serializer를 추가합니다. 이 경우 `dotnet` CLI를 사용하면 됩니다.
 
@@ -238,9 +218,7 @@ dotnet add package Newtonsoft.Json
 
 이제 응용 프로그램이 실행되고 임의 예보를 반환합니다.
 
-<a id="build-a-docker-image" class="xliff"></a>
-
-## Docker 이미지 빌드
+## <a name="build-a-docker-image"></a>Docker 이미지 빌드
 
 마지막 작업은 Docker에서 응용 프로그램을 실행하는 것입니다. 응용 프로그램을 나타내는 Docker 이미지를 실행하는 Docker 컨테이너를 만들 것입니다.
 
@@ -290,9 +268,7 @@ ENTRYPOINT ["dotnet", "out/WeatherMicroservice.dll", "--server.urls", "http://0.
 
 이 구성된 포트는 Dockerfile의 마지막 줄에 있는 `dotnet`에 대한 `--server.urls` 인수에서 참조됩니다. `ENTRYPOINT` 명령은 서비스를 시작하는 명령 및 명령줄 옵션을 Docker에 알립니다. 
 
-<a id="building-and-running-the-image-in-a-container" class="xliff"></a>
-
-## 컨테이너에서 이미지 빌드 및 실행
+## <a name="building-and-running-the-image-in-a-container"></a>컨테이너에서 이미지 빌드 및 실행
 
 이미지를 빌드하고 Docker 컨테이너 내의 서비스를 실행해 보겠습니다. 로컬 디렉터리의 모든 파일을 이미지에 복사하려고 하지는 않을 것입니다. 대신 컨테이너에서 응용 프로그램에 빌드합니다. `.dockerignore` 파일을 만들고 이미지로 복사되지 않는 디렉토리를 지정합니다. 빌드 자산은 복사하고 싶지 않을 수 있습니다. 빌드를 지정하고 디렉터리를 `.dockerignore` 파일에 게시합니다.
 
@@ -332,9 +308,7 @@ docker ps
 http://localhost/?lat=35.5&long=40.75
 ```
 
-<a id="attaching-to-a-running-container" class="xliff"></a>
-
-## 실행 중인 컨테이너에 연결
+## <a name="attaching-to-a-running-container"></a>실행 중인 컨테이너에 연결
 
 명령 창에서 서비스를 실행할 때는 각 요청에 대해 출력되는 진단 정보를 볼 수 있습니다. 컨테이너가 분리 모드에서 실행 중인 경우에는 해당 정보가 표시되지 않습니다. Docker attach 명령을 사용하면 실행 중인 컨테이너에 연결하여 로그 정보를 볼 수 있습니다.  명령 창에서 다음 명령을 실행합니다.
 
@@ -369,9 +343,7 @@ docker rm hello-docker
 docker rmi weather-microservice
 ```
 
-<a id="conclusion" class="xliff"></a>
-
-## 결론 
+## <a name="conclusion"></a>결론 
 
 이 자습서에서는 ASP.NET Core 마이크로 서비스를 빌드하고 몇 가지 간단한 기능을 추가했습니다.
 

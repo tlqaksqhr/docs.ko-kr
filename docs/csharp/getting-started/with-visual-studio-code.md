@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio Code 시작하기 - C# 가이드 | Microsoft Docs"
+title: "Visual Studio Code 시작하기 - C# 가이드"
 description: "Visual Studio Code를 사용하여 C#에서 첫 번째 .NET Core 응용 프로그램을 만들고 디버그하는 방법을 알아봅니다."
 keywords: "C#, 시작, 취득, 설치, Visual Studio Code, 플랫폼 간"
 author: kendrahavens
@@ -10,31 +10,25 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 76c23597-4cf9-467e-8a47-0c3703ce37e7
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b64eb0d8f1778a4834ecce5d2ced71e0741dbff3
-ms.openlocfilehash: 14b1696c37f40f7ffc6eb295e08ce1ceee061e45
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2e1e9ce39b2de05478a2bf010584e2e7fd8eb02f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/27/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="get-started-with-visual-studio-code" class="xliff"></a>
-
-# Visual Studio Code 시작하기
+# <a name="get-started-with-visual-studio-code"></a>Visual Studio Code 시작하기
 
 .NET Core는 Windows, Linux 및 macOS에서 실행되는 서버 응용 프로그램을 만들기 위한 빠른 모듈식 플랫폼을 제공합니다. C# 확장이 있는 Visual Studio Code를 사용하면 C# IntelliSense(스마트 코드 완성) 및 디버깅을 완벽하게 지원하는 강력한 편집 환경이 구현됩니다.
 
-<a id="prerequisites" class="xliff"></a>
-
-## 필수 구성 요소
+## <a name="prerequisites"></a>필수 구성 요소
 
 1. [Visual Studio Code](https://code.visualstudio.com/)를 설치합니다.
 2. [.NET Core SDK](https://www.microsoft.com/net/download/core)를 설치합니다.
 3. Visual Studio Code Marketplace에서 [C# 확장](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)을 설치합니다.
 
-<a id="hello-world" class="xliff"></a>
-
-## Hello World
+## <a name="hello-world"></a>Hello World
 
 .NET Core에서 간단한 "Hello World" 프로그램으로 시작해 보겠습니다.
 
@@ -69,9 +63,7 @@ ms.lasthandoff: 05/27/2017
 
 [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core), [macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS) 또는 [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu)에 대한 추가 설치 도움말이 제공되는 짧은 비디오 자습서를 볼 수도 있습니다.
 
-<a id="debug" class="xliff"></a>
-
-## 디버그
+## <a name="debug"></a>디버그
 1. *Program.cs*를 클릭하여 엽니다. Visual Studio Code에서 C# 파일을 처음 열면 [OmniSharp](http://www.omnisharp.net/)에서 편집기가 로드됩니다.
 
   ![Program.cs 파일 열기](media/with-visual-studio-code/opencs.png)
@@ -102,9 +94,7 @@ ms.lasthandoff: 05/27/2017
 > [!TIP] 
 > Visual Studio Code에서 OmniSharp를 사용한 .NET Core 디버깅에 대한 자세한 내용 및 문제 해결 정보는 [Instructions for setting up the .NET Core debugger](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)(.NET Core 디버거 설정 지침)를 참조하세요.
 
-<a id="see-also" class="xliff"></a>
-
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 [Visual Studio Code 설정](https://code.visualstudio.com/docs/setup/setup-overview)   
 [Visual Studio Code의 디버깅](https://code.visualstudio.com/Docs/editor/debugging)
 

@@ -1,5 +1,5 @@
 ---
-title: "C# 인터페이스 - C# 언어 둘러보기 | Microsoft Docs"
+title: "C# 인터페이스 - C# 언어 둘러보기"
 description: "인터페이스는 C#의 형식이 구현하는 계약을 정의합니다."
 keywords: ".NET, c샵, 인터페이스, 다중 상속, 다형성"
 author: BillWagner
@@ -10,17 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a9bf82f4-efd1-4216-bd34-4ef0fa48c968
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 6c18de7a4aa86a321b65b4ce65e07c48ca1dbc24
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 673ac56f3f5732fcda02d313b6f4273708ae365f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="interfaces" class="xliff"></a>
-
-# 인터페이스
+# <a name="interfaces"></a>인터페이스
 
 ***인터페이스***는 클래스 및 구조체에서 구현될 수 있는 계약을 정의합니다. 인터페이스는 메서드, 속성, 이벤트 및 인덱서를 포함할 수 있습니다. 인터페이스는 정의하는 멤버의 구현을 제공하지 않으며 단순히 인터페이스를 구현하는 클래스 또는 구조체에서 제공해야 하는 멤버를 지정합니다.
 
