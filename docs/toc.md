@@ -1,7 +1,7 @@
 # [환영](welcome.md)
 
-<!-- Start of .NET Platform Guide -->
-# [.NET 플랫폼 가이드](standard/index.md)
+<!-- Start of .NET Guide -->
+# [.NET 가이드](standard/index.md)
 ## [.NET 시작](standard/get-started.md)
 ## [.NET 둘러보기](standard/tour.md)
 ## [.NET 마이크로 서비스: 컨테이너화된 .NET 응용 프로그램을 위한 아키텍처](standard/microservices-architecture/)
@@ -48,7 +48,7 @@
 ## [병렬 프로그래밍](standard/parallel-programming/)
 ## [보안](standard/security/)
 ## [여러 플랫폼 개발](standard/cross-platform/)
-<!-- End of .NET Platform Guide -->
+<!-- End of .NET Guide -->
 
 <!-- .NET Core Content -->
 # [.NET Core 가이드](core/index.md)
@@ -124,6 +124,8 @@
 ### [타사 종속성 분석](core/porting/third-party-deps.md)
 ### [라이브러리 이식](core/porting/libraries.md)
 <!--### [🔧 NuGet packages](core/porting/nuget-packages.md)-->
+## [소스에서 .NET Core 빌드](core/build/index.md)
+### [.NET Core 배포 패키징](core/build/distribution-packaging.md)
 ## [VS 2015/project.json 문서](project-json.md)
 <!-- End .NET Core Content -->
 
@@ -201,7 +203,7 @@
 #### [강력한 형식의 대리자](csharp/delegates-strongly-typed.md)
 #### [대리자에 대한 일반적인 패턴](csharp/delegates-patterns.md)
 #### [이벤트 소개](csharp/events-overview.md)
-#### [.NET 이벤트 패턴](csharp/event-pattern.md)
+#### [표준 .NET 이벤트 패턴](csharp/event-pattern.md)
 #### [업데이트된.NET 이벤트 패턴](csharp/modern-events.md)
 #### [대리자 및 이벤트를 구별](csharp/distinguish-delegates-events.md)
 ### [LINQ(Language-Integrated Query)](csharp/linq/)
@@ -231,14 +233,13 @@
 # [F# 가이드](fsharp/index.md)
 
 ## [F# 둘러보기](fsharp/tour.md)
-
+## [시작](fsharp/get-started/index.md)
+### [Visual Studio 시작](fsharp/get-started/get-started-visual-studio.md)
+### [Mac용 Visual Studio 시작](fsharp/get-started/get-started-with-visual-studio-for-mac.md)
+### [Visual Studio Code 및 Ionide 시작](fsharp/get-started/get-started-vscode.md)
+### [.NET Core CLI 시작](fsharp/get-started/get-started-command-line.md)
 <!--## [Tutorials](fsharp/tutorials/index.md)-->
 ## 자습서
-### [시작](fsharp/tutorials/getting-started/index.md)
-#### [Visual Studio 시작](fsharp/tutorials/getting-started/getting-started-visual-studio.md)
-#### [Mac용 Visual Studio 시작](fsharp/tutorials/getting-started/getting-started-with-visual-studio-for-mac.md)
-#### [Visual Studio Code 및 Ionide 시작](fsharp/tutorials/getting-started/getting-started-vscode.md)
-#### [명령줄 도구 시작](fsharp/tutorials/getting-started/getting-started-command-line.md)
 ### [F# Interactive](fsharp/tutorials/fsharp-interactive/index.md)
 #### [F# Interactive 옵션](fsharp/tutorials/fsharp-interactive/fsharp-interactive-options.md)
 ### [형식 공급자](fsharp/tutorials/type-providers/index.md)
@@ -355,7 +356,7 @@
 ### [네임스페이스](fsharp/language-reference/namespaces.md)
 ### [모듈](fsharp/language-reference/modules.md)
 ### [가져오기 선언: open 키워드](fsharp/language-reference/import-declarations-the-open-keyword.md)
-### [서명](fsharp/language-reference/signatures.md)
+### [시그니처](fsharp/language-reference/signatures.md)
 ### [측정 단위](fsharp/language-reference/units-of-measure.md)
 ### [XML 문서](fsharp/language-reference/xml-documentation.md)
 ### [지연 계산](fsharp/language-reference/lazy-computations.md)
@@ -1058,7 +1059,7 @@
 ##### [/win32resource](visual-basic/reference/command-line-compiler/win32resource.md)
 #### [컴파일러 옵션 범주별 목록](visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)
 ### [.NET Framework 참조 정보](visual-basic/reference/net-framework-reference-information.md)
-### [언어 사양](visual-basic/reference/language-specification.md)
+### [언어 사양](visual-basic/reference/language-specification/)
 ## [샘플 응용 프로그램](visual-basic/sample-applications.md)
 ## [연습](visual-basic/walkthroughs.md)
 

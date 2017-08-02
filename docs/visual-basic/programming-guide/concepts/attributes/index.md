@@ -1,5 +1,5 @@
 ---
-title: "특성 개요(Visual Basic) | Microsoft Docs"
+title: "특성 개요(Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,10 +20,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 81f6275334a0ba1507dcff2bcd85e0b1aa276067
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0464de06390a9899cbe312b16cbad41d0b6639eb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="attributes-overview-visual-basic"></a>특성 개요(Visual Basic)
@@ -50,7 +51,7 @@ ms.lasthandoff: 03/13/2017
 End Class  
 ```  
   
- 특성 <xref:System.Runtime.InteropServices.DllImportAttribute>를 갖는 메서드는 다음과 같이 선언됩니다.  
+ <xref:System.Runtime.InteropServices.DllImportAttribute> 특성을 사용하는 메서드는 다음과 같이 선언됩니다.  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -124,13 +125,13 @@ Module: CLSCompliant(True)>
 ## <a name="common-uses-for-attributes"></a>특성의 일반적인 용도  
  다음 목록에는 코드에서 특성이 사용되는 일반적인 경우가 나와 있습니다.  
   
--   SOAP 프로토콜을 통해 메서드를 호출할 수 있음을 나타내기 위해 웹 서비스에서 `WebMethod` 특성을 사용하여 메서드에 표시. 자세한 내용은 <xref:System.Web.Services.WebMethodAttribute>를 참조하세요.  
+-   SOAP 프로토콜을 통해 메서드를 호출할 수 있음을 나타내기 위해 웹 서비스에서 `WebMethod` 특성을 사용하여 메서드에 표시. 자세한 내용은 <xref:System.Web.Services.WebMethodAttribute>을 참조하십시오.  
   
--   네이티브 코드와 상호 운용될 경우 메서드 매개 변수를 마샬링하는 방법 설명. 자세한 내용은 <xref:System.Runtime.InteropServices.MarshalAsAttribute>를 참조하세요.  
+-   네이티브 코드와 상호 운용될 경우 메서드 매개 변수를 마샬링하는 방법 설명. 자세한 내용은 <xref:System.Runtime.InteropServices.MarshalAsAttribute>을 참조하십시오.  
   
 -   클래스, 메서드 및 인터페이스에 대한 COM 속성 설명  
   
--   <xref:System.Runtime.InteropServices.DllImportAttribute> 클래스를 사용하여 비관리 코드 호출  
+-   <xref:System.Runtime.InteropServices.DllImportAttribute> 클래스를 사용하는 비관리 코드 호출  
   
 -   제목, 버전, 설명 또는 상표를 기준으로 어셈블리 설명  
   
@@ -163,3 +164,4 @@ Module: CLSCompliant(True)>
  [Visual Basic 프로그래밍 가이드](../../../../visual-basic/programming-guide/index.md)   
  [리플렉션(Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)   
  [특성](https://msdn.microsoft.com/library/5x6cd29c)
+

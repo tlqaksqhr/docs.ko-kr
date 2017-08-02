@@ -1,6 +1,6 @@
 ---
-title: ".NET Core 자습서 | Microsoft Docs"
-description: ".NET Core 자습서"
+title: ".NET Core 자습서"
+description: ".NET Core 학습을 위한 자습서에 따라 Mac, Linux 및 Windows에서 앱과 라이브러리를 빌드하세요."
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 86320023259bae3bd262a146681f24a6c6d3f7ea
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d12286fb6d9666aa74b4da260a5e64776010890c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 05/23/2017
 - [C# 클래스 라이브러리 테스트](../../csharp/getting-started/testing-library-with-visual-studio.md)
 - [.NET Core로 C# 클래스 라이브러리 사용](../../csharp/getting-started/consuming-library-with-visual-studio.md)
 - [Windows에서 완전한 C# .NET Core 솔루션 빌드](using-on-windows-full-solution.md)
-- [NoSQL 자습서: .NET Core의 DocumentDB C# 콘솔 응용 프로그램 빌드](https://docs.microsoft.com/azure/documentdb/documentdb-dotnetcore-get-started)
+- [NoSQL 자습서: .NET Core의 DocumentDB C# 콘솔 응용 프로그램 빌드](/azure/documentdb/documentdb-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>Visual Studio Code를 사용하여 응용 프로그램 빌드
 
@@ -55,5 +55,5 @@ ms.lasthandoff: 05/23/2017
 - [.NET Core 1.0에 대한 패키지 종속성 버전을 관리하는 방법](managing-package-dependency-versions.md)
 - [네이티브 코드에서 .NET Core 호스트](netcore-hosting.md)
 
-ASP.NET Core 웹 응용 프로그램 개발에 대한 자습서는 [ASP.NET Core 설명서](https://docs.microsoft.com/aspnet/core/)를 참조하세요.
+ASP.NET Core 웹 응용 프로그램 개발에 대한 자습서는 [ASP.NET Core 설명서](/aspnet/core/)를 참조하세요.
 
