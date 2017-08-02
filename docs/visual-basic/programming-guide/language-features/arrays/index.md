@@ -1,5 +1,5 @@
 ---
-title: "Visual Basic의 배열 | Microsoft Docs"
+title: "Visual Basic의 배열"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -34,11 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e0a5ab6a7b3ee752af6b58a35a11e4fc0fb2b08a
-ms.openlocfilehash: cc7f5e28831cfe6ec12526d7dac5b12c208fb05a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8ebad59a07d07d61ea77e41e4044b3febc0ef250
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="arrays-in-visual-basic"></a>Visual Basic의 배열
@@ -224,7 +224,7 @@ Dim sales()() As Double = New Double(11)() {}
   
  다음과 같은 경우 길이가 0인 배열을 만들어야 할 수도 있습니다.  
   
--   <xref:System.NullReferenceException> 예외가 발생할 위험 없이 코드에서 <xref:System.Array.Length%2A> 또는 <xref:System.Array.Rank%2A>와 같은 <xref:System.Array> 클래스의 멤버에 액세스하거나 <xref:Microsoft.VisualBasic.Information.UBound%2A>와 같은 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 함수를 호출해야 하는 경우  
+-   <xref:System.NullReferenceException> 예외가 발생할 위험 없이 코드에서 <xref:System.Array> 또는 <xref:System.Array.Length%2A> 와 같은 <xref:System.Array.Rank%2A>클래스의 멤버에 액세스하거나 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 와 같은 <xref:Microsoft.VisualBasic.Information.UBound%2A>함수를 호출해야 하는 경우  
   
 -   `Nothing` 을 특별한 경우로 확인할 필요가 없도록 하여 사용하는 코드를 보다 간단하게 유지하려는 경우  
   
@@ -235,7 +235,7 @@ Dim sales()() As Double = New Double(11)() {}
   
  다음 예제에서는 3차원 배열을 선언합니다.  
   
-```  
+```vb
 Dim prices(3, 4, 5) As Long  
 ```  
   
@@ -263,7 +263,7 @@ Dim prices(3, 4, 5) As Long
   
 -   변수에서 <xref:System.Object.GetType%2A?displayProperty=fullName> 메서드를 호출하여 변수의 런타임 형식에 대한 <xref:System.Type> 개체를 받을 수 있습니다. <xref:System.Type> 개체는 해당 속성과 메서드에 광범위한 정보를 보유합니다.  
   
--   <xref:Microsoft.VisualBasic.Information.TypeName%2A> 함수에 변수를 전달하여 런타임 형식의 이름을 포함하는 `String`을 받을 수 있습니다.  
+-   <xref:Microsoft.VisualBasic.Information.TypeName%2A> 함수에 변수를 전달하여 런타임 형식의 이름을 포함하는 `String` 을 받을 수 있습니다.  
   
 -   <xref:Microsoft.VisualBasic.Information.VarType%2A> 함수에 변수를 전달하여 변수의 형식 분류를 나타내는 `VariantType` 값을 받을 수 있습니다.  
   

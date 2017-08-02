@@ -193,7 +193,7 @@
 #### [ComboBox 스타일 및 템플릿](combobox-styles-and-templates.md)
 #### [ContextMenu 스타일 및 템플릿](contextmenu-styles-and-templates.md)
 #### [DataGrid 스타일 및 템플릿](datagrid-styles-and-templates.md)
-#### [DatePicker 스타일 및 템플릿](datepicker-syles-and-templates.md)
+#### [DatePicker 스타일 및 템플릿](datepicker-styles-and-templates.md)
 #### [DocumentViewer 스타일 및 템플릿](documentviewer-styles-and-templates.md)
 #### [Expander 스타일 및 템플릿](expander-styles-and-templates.md)
 #### [Frame 스타일 및 템플릿](frame-styles-and-templates.md)

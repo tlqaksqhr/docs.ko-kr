@@ -8,3 +8,4 @@
 ### [방법: 설치된 .NET Framework 업데이트 확인](how-to-determine-which-net-framework-updates-are-installed.md)
 ## [방법: .NET Framework 4 또는 4.5를 지원하도록 앱 구성](how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
 ## [.NET Framework 1.1에서 마이그레이션](migrating-from-the-net-framework-1-1.md)
+## [.NET Framework 4 마이그레이션 문제](net-framework-4-migration-issues.md)

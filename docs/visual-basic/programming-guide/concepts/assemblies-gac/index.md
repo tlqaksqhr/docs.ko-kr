@@ -1,5 +1,5 @@
 ---
-title: "어셈블리와 전역 어셈블리 캐시(Visual Basic) | Microsoft Docs"
+title: "어셈블리와 전역 어셈블리 캐시(Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -20,10 +20,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0b712132becfe47d50d1c06c0e8fd9940b8035e9
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c5a1a3a651fc7d2b42f8ac55ab6f2d832f258bb0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="assemblies-and-the-global-assembly-cache-visual-basic"></a>어셈블리와 전역 어셈블리 캐시(Visual Basic)
@@ -41,7 +42,7 @@ ms.lasthandoff: 03/13/2017
   
 -   리플렉션을 사용하여 프로그래밍 방식으로 어셈블리에 대한 정보를 얻을 수 있습니다. 자세한 내용은 [리플렉션(Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)을 참조하세요.  
   
--   조사 목적으로만 어셈블리를 로드하려는 경우 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>와 같은 메서드를 사용합니다.  
+-   검사할 어셈블리만 로드하려면 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 같은 메서드를 사용합니다.  
   
 ## <a name="assembly-manifest"></a>어셈블리 매니페스트  
  모든 어셈블리 내에는 *어셈블리 매니페스트*가 있습니다. 목차와 마찬가지로, 어셈블리 매니페스트에는 다음이 포함됩니다.  
@@ -50,7 +51,7 @@ ms.lasthandoff: 03/13/2017
   
 -   어셈블리를 구성하는 다른 모든 파일을 설명하는 파일 테이블(예: 사용자의 .exe 또는 .dll 파일이 의존하는 사용자가 만든 다른 모든 어셈블리 또는 비트맵이나 추가 정보 파일)  
   
--   *어셈블리 참조 목록*: 누군가가 만들었을 수 있으며 사용자의 응용 프로그램에 필요한 .dlls 또는 기타 파일을 비롯한 모든 외부 종속성 목록 어셈블리 참조는 global 및 private 개체에 대한 참조를 포함합니다. global 개체는 System32 디렉터리 등과 같이 다른 응용 프로그램에서 사용할 수 있는 영역인 전역 어셈블리 캐시에 상주합니다. <xref:Microsoft.VisualBasic?displayProperty=fullName> 네임스페이스는 전역 어셈블리 캐시에 포함된 어셈블리의 예입니다. private 개체는 응용 프로그램이 설치된 디렉터리와 같거나 낮은 수준에 있는 디렉터리에 있어야 합니다.  
+-   *어셈블리 참조 목록*: 누군가가 만들었을 수 있으며 사용자의 응용 프로그램에 필요한 .dlls 또는 기타 파일을 비롯한 모든 외부 종속성 목록 어셈블리 참조는 global 및 private 개체에 대한 참조를 포함합니다. global 개체는 System32 디렉터리 등과 같이 다른 응용 프로그램에서 사용할 수 있는 영역인 전역 어셈블리 캐시에 상주합니다. <xref:Microsoft.VisualBasic?displayProperty=fullName> 네임스페이스는 전역 어셈블리 캐시의 어셈블리에 대한 예입니다. private 개체는 응용 프로그램이 설치된 디렉터리와 같거나 낮은 수준에 있는 디렉터리에 있어야 합니다.  
   
  어셈블리는 콘텐츠, 버전 관리 및 종속성에 대한 정보를 포함하므로 Visual Basic으로 만드는 응용 프로그램은 제대로 작동하기 위해 Windows 레지스트리 값에 의존하지 않습니다. 어셈블리는 .dll 충돌을 줄이고 더 안정적이고 배포하기 쉬운 응용 프로그램을 구현합니다. 많은 경우에 해당 파일을 대상 컴퓨터에 복사하는 것만으로 .NET 기반 응용 프로그램을 설치할 수 있습니다.  
   
@@ -74,3 +75,4 @@ ms.lasthandoff: 03/13/2017
  [방법: 명령줄을 사용하여 어셈블리 만들기 및 사용(Visual Basic)](how-to-create-and-use-assemblies-using-the-command-line.md)   
  [연습: Visual Studio에서 관리되는 어셈블리의 형식 포함(Visual Basic)](walkthrough-embedding-types-from-managed-assemblies-in-vs.md)   
  [연습: Visual Studio에서 Microsoft Office 어셈블리의 형식 정보 포함(Visual Basic)](walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-vs.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio 2017에서 C# 및 .NET Core로 클래스 라이브러리 빌드 | Microsoft Docs"
+title: "Visual Studio 2017에서 C# 및 .NET Core로 클래스 라이브러리 빌드"
 description: "Visual Studio 2017을 사용하여 C#으로 작성된 클래스 라이브러리를 빌드하는 방법 알아보기"
 keywords: ".NET Core, .NET 표준 클래스 라이브러리, Visual Studio 2017"
 author: BillWagner
@@ -10,28 +10,24 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: c849ca26-6a25-4d35-9544-f343af88e0e7
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
-ms.openlocfilehash: c29c4d2d1332fbf9e9e162e671200384a930aff1
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 709b05dc9baeae1e99481a37287b91730b395f63
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/20/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="building-a-class-library-with-c-and-net-core-in-visual-studio-2017" class="xliff"></a>
+# <a name="building-a-class-library-with-c-and-net-core-in-visual-studio-2017"></a>Visual Studio 2017에서 C# 및 .NET Core로 클래스 라이브러리 빌드
 
-# Visual Studio 2017에서 C# 및 .NET Core로 클래스 라이브러리 빌드
-
-*클래스 라이브러리*는 응용 프로그램에서 호출되는 형식 및 메서드를 정의합니다. .NET Core를 사용하여 개발한 클래스 라이브러리는 .NET 표준 라이브러리를 지원하므로 .NET 표준 라이브러리의 해당 버전을 지원하는 모든 .NET 플랫폼에서 라이브러리를 호출할 수 있습니다. 클래스 라이브러리를 마칠 때 타사 구성 요소로 배포할지 또는 하나 이상의 응용 프로그램과 함께 번들 구성 요소로 포함할지 결정할 수 있습니다.
+*클래스 라이브러리*는 응용 프로그램에서 호출되는 형식 및 메서드를 정의합니다. .NET Core를 사용하여 개발한 클래스 라이브러리는 .NET 표준을 지원하므로 .NET 표준의 해당 버전을 지원하는 모든 .NET 플랫폼에서 라이브러리를 호출할 수 있습니다. 클래스 라이브러리를 마칠 때 타사 구성 요소로 배포할지 또는 하나 이상의 응용 프로그램과 함께 번들 구성 요소로 포함할지 결정할 수 있습니다.
 
 > [!NOTE]
 > .NET 표준 버전 및 지원되는 플랫폼 목록은 [.NET 표준](../../standard/net-standard.md)을 참조하세요.
 
 이 항목에서는 단일 문자열 처리 메서드를 포함하는 간단한 유틸리티 라이브러리를 만들어 보겠습니다. @System.String 클래스의 멤버인 것처럼 호출할 수 있도록 [확장 메서드](../../csharp/programming-guide/classes-and-structs/extension-methods.md)로 구현하겠습니다.
 
-<a id="creating-a-class-library-solution" class="xliff"></a>
-
-## 클래스 라이브러리 솔루션 만들기
+## <a name="creating-a-class-library-solution"></a>클래스 라이브러리 솔루션 만들기
 
 먼저 클래스 라이브러리 프로젝트의 솔루션과 관련 프로젝트를 만들어 보겠습니다. Visual Studio 솔루션은 하나 이상의 프로젝트에 대한 컨테이너로 작동합니다. 솔루션을 만들려면
 
@@ -41,9 +37,7 @@ ms.lasthandoff: 06/20/2017
 
    ![새 프로젝트 대화 상자](./media/library-with-visual-studio/newproject.png)
 
-<a id="creating-the-class-library-project" class="xliff"></a>
-
-## 클래스 라이브러리 프로젝트 만들기
+## <a name="creating-the-class-library-project"></a>클래스 라이브러리 프로젝트 만들기
 
 클래스 라이브러리 프로젝트를 만듭니다.
 
@@ -65,9 +59,7 @@ ms.lasthandoff: 06/20/2017
 
    ![빌드에 성공했음을 표시하는 출력 창](./media/library-with-visual-studio/buildsucceeds.png)
 
-<a id="next-step" class="xliff"></a>
-
-## 다음 단계
+## <a name="next-step"></a>다음 단계
 
 라이브러리를 성공적으로 빌드했습니다. 해당 메서드를 호출하지 않았으므로 예상대로 작동하는지 알지 못합니다. 라이브러리 개발의 다음 단계는 [C# 단위 테스트 프로젝트](testing-library-with-visual-studio.md)를 사용하여 테스트하는 것입니다.
 

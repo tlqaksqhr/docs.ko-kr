@@ -1,6 +1,6 @@
 ---
-title: ".NET Framework에서 .NET Core로 이식 | Microsoft Docs"
-description: ".NET Framework에서 .NET Core로 이식"
+title: ".NET Framework에서 .NET Core로 이식"
+description: "이식 프로세스를 이해하고 .NET Framework 프로젝트를 .NET Core로 이식할 때 유용한 도구에 관해 알아보세요."
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: mairaw
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 00d00d38-99af-44f4-a75f-defcd9729dc5
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: f922fd75bf22d3cfb0c54276443820bae175bc79
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 40930b572b385c5407d309ddcacdcc86097a9919
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 

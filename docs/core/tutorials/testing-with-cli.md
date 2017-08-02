@@ -1,7 +1,7 @@
 ---
-title: ".NET Core 명령줄을 사용하여 프로젝트 구성 및 테스트 | Microsoft 문서"
+title: ".NET Core 명령줄을 사용하여 프로젝트 구성 및 테스트"
 description: "이 자습서에서는 명령줄에서 .NET Core 프로젝트를 구성하고 테스트하는 방법을 설명합니다."
-keywords: ".NET, .NET Core, 유닛 테스트, .NET CLI, xUnit"
+keywords: ".NET, .NET Core, 유닛 테스트, .NET Core CLI, xUnit"
 author: cartermp
 ms.author: mairaw
 ms.date: 05/16/2017
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 52ff1be3-d92e-4477-9c84-8c1771e87ab5
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6edd52bc56a03138fe16048fa06cad00a2af4847
-ms.openlocfilehash: 1e6e987777678ade860f108aed05bba926a6d4fd
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1a0a0554b28600821fb15f64d31c6bce74a17136
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/16/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -260,3 +260,4 @@ Test execution time: 1.6634 Seconds
 테스트를 통과합니다. 애완 동물 유형의 메서드가 소유자에게 설명할 때 올바른 값을 반환합니다.
 
 xUnit를 사용하여 프로젝트를 구성 및 테스트하는 기술을 배웠습니다. 이러한 기술을 활용하여 사용자 고유의 프로젝트에 적용해 보세요. *즐거운 코딩을 경험하시기 바랍니다!*
+

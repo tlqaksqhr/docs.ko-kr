@@ -1,401 +1,200 @@
 ---
-title: ".NET Core로 이식 - 라이브러리 | Microsoft Docs"
-description: ".NET Core로 이식 - 라이브러리"
+title: ".NET Core로 이식 - 라이브러리"
+description: ".NET Framework에서 .NET Core로 라이브러리 프로젝트를 이식하는 방법에 관해 알아봅니다."
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: mairaw
-ms.date: 06/20/2016
+ms.date: 07/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9cd469dfd4f38605f1455c008388ad04c366e484
-ms.openlocfilehash: 271720298d6432e9fed9ef757df2000c5b7d2482
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b7cce50df0862a93c8ce144cd30965fb5b5705ed
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/20/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="porting-to-net-core---libraries" class="xliff"></a>
+# <a name="porting-to-net-core---libraries"></a>.NET Core로 이식 - 라이브러리
 
-# .NET Core로 이식 - 라이브러리
+이 문서에서는 플랫폼 간에 실행되도록 .NET Core에 라이브러리 코드를 이식하는 방법에 관해 설명합니다.
 
-.NET Core 1.0이 릴리스되면서 기존 라이브러리 코드를 이식하여 플랫폼 간에 실행할 수 있게 되었습니다. 이 문서에서는 .NET 표준 라이브러리, 사용할 수 없는 기술, .NET Core 1.0에서 제공되는 더 적은 수의 API를 확인하는 방법, .NET Core SDK Preview 2와 함께 제공되는 도구를 사용하는 방법 및 코드 이식에 권장되는 접근 방식에 대해 설명합니다.
+## <a name="prerequisites"></a>필수 조건
 
-이식은 특히 코드베이스가 큰 경우 시간이 걸릴 수 있는 작업입니다. 또한 코드에 가장 적합하도록 필요에 따라 이 지침을 조정할 수 있어야 합니다. 코드베이스는 모두 각기 다르기 때문에 이 문서에서는 관련 내용을 최대한 포괄하도록 유연하게 구성하려고 하지만 경우에 따라 설명된 지침과는 다르게 작업해야 할 수도 있습니다.
+이 문서에서는 다음을 전제로 합니다.
 
-<a id="prerequisites" class="xliff"></a>
+- 사용자가 Visual Studio 2017 이상을 사용합니다. .NET Core는 이전 버전의 Visual Studio에서 지원되지 않습니다.
+- 사용자가 [권장 이식 프로세스](index.md)를 이해합니다.
+- 사용자가 [타사 종속성](third-party-deps.md)과 관련된 문제를 모두 해결했습니다.
 
-## 필수 구성 요소
+또한 다음 항목의 내용을 숙지해야 합니다.
 
-이 문서에서는 Windows에서 Visual Studio 2017 이상을 사용하고 있다고 가정합니다. .NET Core 코드를 작성하는 데 필요한 비트는 이전 버전의 Visual Studio에서 사용할 수 없습니다.
+[.NET 표준](~/docs/standard/net-standard.md)   
+이 항목에서는 모든 .NET 런타임에서 사용할 수 있는 .NET API의 공식 사양에 관해 설명합니다.
 
-또한 이 문서에서는 [권장되는 이식 프로세스](index.md)를 이해하고 있으며 [타사 종속성](third-party-deps.md) 관련 문제를 모두 해결했다고 가정합니다.
+[패키지, 메타패키지 및 프레임워크](~/docs/core/packages.md)   
+이 문서에서는 .NET Core가 패키지를 정의하고 사용하는 방법과 패키지가 여러 .NET 런타임에서 실행되는 코드를 지원하는 방법에 관해 설명합니다.
 
-<a id="targeting-the-net-standard-library" class="xliff"></a>
+[플랫폼 간 도구로 라이브러리 개발](~/docs/core/tutorials/libraries.md)   
+이 항목에서는 플랫폼 간 CLI 도구를 사용하여 .NET용 라이브러리를 작성하는 방법에 관해 설명합니다.
 
-## .NET 표준 라이브러리를 대상으로 지정
+[.NET Core용 *csproj* 형식에 대한 추가 사항](~/docs/core/tools/csproj.md)   
+이 문서에서는 *csproj* 및 MSBuild로 프로젝트 시스템을 전환함에 따라 프로젝트 파일에 추가된 변경 내용을 간략하게 설명합니다.
 
-.NET Core에 대한 플랫폼 간 라이브러리를 작성하는 가장 좋은 방법은 [.NET 표준](../../standard/net-standard.md)을 대상으로 지정하는 것입니다. .NET 표준 라이브러리는 모든 .NET 런타임에서 사용할 수 있는 .NET API의 공식 사양이며, .NET Core 런타임에서 지원됩니다.
+[.NET Core로 이식 - 타사 종속성 분석](~/docs/core/porting/third-party-deps.md)   
+이 항목에서는 타사 종속성의 이식성 및 .NET Core에서 NuGet 패키지 종속성이 실행되지 않는 경우 해야 할 작업에 관해 설명합니다.
 
-즉, 사용할 수 있는 API와 지원할 수 있는 플랫폼 간에 균형을 이루어야 하며 원하는 항목에 가장 적합한 .NET 플랫폼 표준의 버전을 선택해야 한다는 의미입니다.
+## <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Core에서 사용할 수 없는 .NET Framework 기술
 
-지금까지는 .NET 표준 1.0부터 1.6까지 7개의 다양한 버전을 고려할 수 있습니다. 더 높은 버전을 선택하면 더 적은 대상에서 실행하는 대신 더 많은 API에 액세스할 수 있습니다. 더 낮은 버전을 선택하면 더 적은 API를 사용하는 대신 더 많은 대상에서 코드를 실행할 수 있습니다.
+.NET Framework 라이브러리에서 사용할 수 있는 AppDomain, 원격 통신, CAS(코드 액세스 보안), 보안 투명도와 같은 몇몇 기술은 .NET Core에서 사용할 수 없습니다. 라이브러리가 이러한 기술 중 하나 이상에 의존하는 경우 아래에 설명된 대체 방법을 고려하세요. API 호환성에 대한 자세한 정보를 위해 CoreFX 팀이 GitHub에서 [행동 변경/호환 중단 및 사용 중단/레거시 API 목록](https://github.com/dotnet/corefx/wiki/ApiCompat)을 유지 관리합니다.
 
-편의를 위해 다음에서는 각 .NET 표준 버전과 해당 버전이 실행되는 각 특정 영역에 대한 매트릭스를 제공합니다.
+API 또는 기술이 현재 구현되지 않았기 때문에 이들을 고의로 지원하지 않는 것은 아닙니다. 특정 API 및 기술을 요청하려면 GitHub의 [dotnet/corefx 리포지토리 문제](https://github.com/dotnet/corefx/issues)에서 문제를 제기하세요. [문제의 이식 요청](https://github.com/dotnet/corefx/labels/port-to-core)은 `port-to-core` 레이블로 표시됩니다.
 
-| 플랫폼 이름 | Alias |  |  |  |  |  | | |
-| :---------- | :--------- |:--------- |:--------- |:--------- |:--------- |:--------- |:--------- |:--------- |
-|.NET 표준 | netstandard | 1.0 | 1.1 | 1.2 | 1.3 | 1.4 | 1.5 | 1.6 |
-|.NET Core|netcoreapp|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|1.0|
-|.NET Framework|net|&rarr;|4.5|4.5.1|4.6|4.6.1|4.6.2|4.6.3|
-|Mono/Xamarin 플랫폼||&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|&rarr;|*|
-|범용 Windows 플랫폼|uap|&rarr;|&rarr;|&rarr;|&rarr;|10.0|||
-|창|win|&rarr;|8.0|8.1|||||
-|Windows Phone|wpa|&rarr;|&rarr;|8.1|||||
-|Windows Phone Silverlight|wp|8.0|||||||
+### <a name="appdomains"></a>AppDomain
 
-이해하고 있어야 할 핵심 사항은 **더 낮은 버전을 대상으로 하는 프로젝트는 더 높은 버전을 대상으로 하는 프로젝트를 참조할 수 없다**는 것입니다. 예를 들어 .NET 플랫폼 표준 버전 1.2를 대상으로 하는 프로젝트는 .NET 플랫폼 표준 버전 1.3 이상을 대상으로 하는 프로젝트를 참조할 수 없습니다. 그러나 프로젝트가 더 낮은 버전을 참조할 수는 **있으므로** .NET 플랫폼 표준 1.3을 대상으로 하는 프로젝트는 .NET 플랫폼 표준 1.2 이하를 대상으로 하는 프로젝트를 참조할 수 있습니다.
+AppDomain은 앱을 서로 분리합니다. AppDomain에는 런타임 지원이 필요하고, 일반적으로 상당히 비싸므로 .NET Core에서 구현되지 않습니다. 앞으로 이 기능을 추가할 계획이 없습니다. 코드 격리의 경우 별도의 프로세스 또는 컨테이너를 대신 사용하는 것이 좋습니다. 어셈블리를 동적으로 로드하기 위해 새 <xref:System.Runtime.Loader.AssemblyLoadContext> 클래스를 사용하는 것이 좋습니다.
 
-가능한 가장 낮은 .NET 표준 버전을 선택하여 프로젝트 전체에서 사용하는 것이 좋습니다.
+.NET Framework에서 코드를 쉽게 마이그레이션할 수 있도록 .NET Core에서 <xref:System.AppDomain> API 표면의 일부를 공개했습니다. API 중 일부는 정상적으로 작동하고(예: <xref:System.AppDomain.UnhandledException?displayProperty=fullName>), 일부 멤버는 아무것도 하지 않고(예: <xref:System.AppDomain.SetCachePath%2A>), 일부는 <xref:System.PlatformNotSupportedException>을 throw합니다(예: <xref:System.AppDomain.CreateDomain%2A>). [dotnet/corefx GitHub 리포지토리](https://github.com/dotnet/corefx)의 [`System.AppDomain` 참조 소스](https://github.com/dotnet/corefx/blob/master/src/System.Runtime.Extensions/src/System/AppDomain.cs)에 대해 사용하는 형식을 확인하여 구현된 버전과 일치하는 분기를 선택합니다.
 
-자세한 내용은 [.NET 플랫폼 표준 라이브러리](../../standard/net-standard.md)를 참조하세요.
+### <a name="remoting"></a>원격 통신
 
-<a id="key-technologies-not-yet-available-on-the-net-standard-or-net-core" class="xliff"></a>
+.NET Remoting은 문제가 있는 아키텍처로 확인되었으며 더 이상 지원되지 않는 AppDomain 간 통신에 사용됩니다. 또한 원격 통신에는 유지 관리 비용이 많이 드는 런타임 지원이 필요합니다. 이러한 이유로 .NET Remoting은 .NET Core에서 지원되지 않으며 향후 지원을 추가할 계획이 없습니다.
 
-## .NET 표준 또는 .NET Core에서 아직 사용할 수 없는 핵심 기술
+프로세스 간 통신을 위해 <xref:System.IO.Pipes> 또는 <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> 클래스 같은 IPC(Inter-process communication) 메커니즘을 원격 통신 대신 사용할 수 있습니다.
 
-현재 .NET Core에는 사용할 수 없는 일부 기술을 .NET Framework에서 사용 중일 수 있습니다. 다음 하위 섹션은 각각 이러한 기술 중 하나에 해당합니다. 채택할 수 있는 대체 옵션이 있는 경우 나열됩니다.
+여러 컴퓨터에서 네트워크 기반 솔루션을 대신 사용하세요. HTTP와 같이 오버헤드가 낮은 일반 텍스트 프로토콜을 사용하는 것이 좋습니다. ASP.NET Core에서 사용하는 웹 서버인 [Kestrel 웹 서버](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel)도 옵션이 될 수 있습니다. 또한 네트워크 기반, 컴퓨터 간 시나리오에서 <xref:System.Net.Sockets>의 사용을 고려하세요. 추가 옵션은 [.NET 오픈 소스 개발자 프로젝트: 메시징](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging)을 참조하세요.
 
-<a id="app-domains" class="xliff"></a>
+### <a name="code-access-security-cas"></a>CAS(코드 액세스 보안)
 
-### 응용 프로그램 도메인
+관리되는 응용 프로그램 또는 라이브러리에서 사용하거나 실행하는 리소스를 제한하기 위해 런타임 또는 프레임워크에 의존하는 샌드박싱은 [.NET Framework에서 지원되지 않으므로](~/docs/framework/misc/code-access-security.md) .NET Core에서도 지원되지 않습니다. CAS를 보안 경계로 계속 처리하기 위해 권한 상승이 발생하는 .NET Framework 및 런타임에는 사례가 너무 많이 있습니다. 또한 CAS는 구현을 더욱 복잡하게 만들고 이를 사용하지 않을 응용 프로그램의 정확성-성능에 종종 영향을 미칩니다.
 
-AppDomain은 .NET Framework에서 다양한 용도로 사용할 수 있습니다. 코드 격리의 경우 별도의 프로세스 및/또는 컨테이너를 대신 사용하는 것이 좋습니다. 어셈블리를 동적으로 로드하기 위해 새 @System.Runtime.Loader.AssemblyLoadContext 클래스를 사용하는 것이 좋습니다.
+최소한의 권한으로 프로세스를 실행하려면 가상화, 컨테이너 또는 사용자 계정과 같은 운영 체제에서 제공하는 보안 경계를 사용할 수 있습니다.
 
-<a id="remoting" class="xliff"></a>
+### <a name="security-transparency"></a>보안 투명도
 
-### 원격 통신
+CAS와 마찬가지로 보안 투명도는 샌드박스 코드를 보안상 중요한 코드와 선언적인 방식으로 분리할 수 있지만 [더 이상 보안 경계로서 지원되지는 않습니다](~/docs/framework/misc/security-transparent-code.md). 이 기능은 Silverlight에서 많이 사용됩니다. 
 
-프로세스 간 통신을 위해 [파이프](https://docs.microsoft.com/dotnet/core/api/system.io.pipes) 또는 [메모리 매핑된 파일](https://docs.microsoft.com/dotnet/core/api/system.io.memorymappedfiles.memorymappedfile)과 같은 IPC(Inter-process communication) 메커니즘을 원격 통신 대신 사용할 수 있습니다.
+최소한의 권한으로 프로세스를 실행하려면 가상화, 컨테이너 또는 사용자 계정과 같은 운영 체제에서 제공하는 보안 경계를 사용할 수 있습니다.
 
-컴퓨터 간에는 HTTP와 같이 가급적 오버헤드가 낮은 일반 텍스트 프로토콜인 네트워크 기반 솔루션을 대신 사용할 수 있습니다. 여기에서 ASP.NET Core에서 사용하는 웹 서버인 [KestrelHttpServer](https://github.com/aspnet/KestrelHttpServer)가 옵션이 될 수 있습니다. [Castle.Core](https://github.com/castleproject/Core)를 통한 원격 프록시 생성도 고려할 옵션입니다.
+### <a name="globaljson"></a>global.json
 
-<a id="binary-serialization" class="xliff"></a>
-
-### 이진 Serialization
-
-이진 Serialization 대신 여러 가지 다른 serialization 기술을 선택할 수 있습니다. 형식 및 공간 목표에 적합한 기술을 선택해야 합니다. 많이 사용되는 옵션은 다음과 같습니다.
-
-* JSON의 경우 [JSON.NET](http://www.newtonsoft.com/json)
-* XML 및 JSON의 경우 @System.Runtime.Serialization.DataContractSerializer
-* XML의 경우 @System.Xml.Serialization.XmlSerializer
-* 프로토콜 버퍼의 경우 [protobuf-net](https://github.com/mgravell/protobuf-net)
-
-각 옵션의 장점에 대해 알아보고 요구 사항에 맞는 옵션을 선택하려면 연결된 리소스를 참조하세요. 여러 가지 다른 serialization 형식과 기술이 있으며, 그 중 대부분이 오픈 소스입니다.
-
-<a id="sandboxes" class="xliff"></a>
-
-### 샌드박스
-
-샌드박싱 대신 최소 권한 집합으로 프로세스를 실행하기 위한 사용자 계정과 같이 운영 체제에서 제공하는 보안 경계를 사용할 수 있습니다.
-
-<a id="overview-of-projectjson" class="xliff"></a>
-
-## `project.json` 개요
-
-[project.json 프로젝트 모델](../tools/project-json.md)은 .NET Core SDK 1.0 Preview 2와 함께 제공되는 프로젝트 모델입니다. 이 모델은 현재 활용할 수 있는 다음과 같은 몇 가지 장점을 제공합니다.
-
-* 단일 빌드에서 대상별 어셈블리를 생성할 수 있는 간단한 멀티 타기팅.
-* 프로젝트의 빌드를 사용하여 NuGet 패키지를 쉽게 생성하는 기능.
-* 프로젝트 파일에서 파일을 나열할 필요가 없음.
-* NuGet 패키지 종속성과 프로젝트 간 종속성의 통합.
-
-> `project.json`은 결국 사용되지 않지만 현재는 .NET 표준에서 라이브러리를 빌드하는 데 사용할 수 있습니다.
-
-<a id="the-project-file-projectjson" class="xliff"></a>
-
-### 프로젝트 파일: `project.json`
-
-.NET Core 프로젝트는 `project.json` 파일을 포함하는 디렉터리로 정의됩니다. 이 파일은 패키지 종속성, 컴파일러 구성, 런타임 구성 등 프로젝트의 측면이 선언되는 위치입니다.
-
-`dotnet restore` 명령은 이 프로젝트 파일을 읽고 프로젝트의 모든 종속성을 복원한 다음 `project.lock.json` 파일을 생성합니다. 이 파일에는 빌드 시스템에서 프로젝트를 빌드하는 데 필요한 모든 정보가 포함되어 있습니다.
-
-`project.json` 파일에 대한 자세한 내용은 [project.json 참조](../tools/project-json.md)를 참조하세요.
-
-<a id="the-solution-file-globaljson" class="xliff"></a>
-
-### 솔루션 파일: `global.json`
-
-`global.json` 파일은 여러 프로젝트를 포함하는 솔루션에 포함할 선택적 파일입니다. 일반적으로 이 파일은 프로젝트 집합의 루트 디렉터리에 있으며, 프로젝트를 포함할 수 있는 다양한 하위 디렉터리에 대해 빌드 시스템에 알리는 데 사용할 수 있습니다. 여러 프로젝트로 구성된 더 큰 시스템용입니다.
-
-예를 들어 다음과 같이 최상위 `/src` 및 `/test` 폴더로 코드를 구성할 수 있습니다.
+*global.json* 파일은 .NET Core 도구 버전의 프로젝트를 설정할 수 있는 선택적 파일입니다. .NET Core의 야간 빌드를 사용 중이고 특정 버전의 SDK를 지정하려면 *global.json* 파일로 버전을 지정하세요. 이 파일은 일반적으로 현재 작업 디렉터리 또는 부모 디렉터리 중 하나에 있습니다. 
 
 ```json
 {
-    "projects":[ "src", "test" ]
+  "sdk": {
+    "version": "2.1.0-preview1-006491"
+  }
 }
 ```
 
-그런 다음 `/src` 및 `/test` 내의 고유한 하위 폴더에 아래에 여러 `project.json` 파일을 넣을 수 있습니다.
+## <a name="converting-a-pcl-project"></a>PCL 프로젝트 변환
 
-<a id="how-to-multitarget-with-projectjson" class="xliff"></a>
+Visual Studio 2017에서 라이브러리를 로드하고 다음 단계를 수행하여 PCL 프로젝트의 대상을 .NET 표준으로 변환할 수 있습니다.
 
-### 다음을 사용한 멀티 타기팅 방법: `project.json`
+1. 프로젝트 파일을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.
+1. **라이브러리** 아래에서 **.NET 플랫폼 표준을 대상으로 지정**을 선택합니다.
 
-많은 라이브러리는 최대한 광범위한 범위를 갖도록 멀티 타기팅됩니다. .NET Core를 사용하면 멀티 타기팅은 "최고 수준의 개체"입니다. 즉, 단일 빌드로 플랫폼별 어셈블리를 쉽게 생성할 수 있습니다.
+패키지가 NuGet 3.0을 지원하면 프로젝트의 대상이 .NET 표준으로 다시 지정됩니다.
 
-멀티 타기팅은 `project.json` 파일에 올바른 TFM(대상 프레임워크 모니커)을 추가하고, 각 대상에 대한 올바른 종속성(.NET Core의 경우 `dependencies` 및 .NET Framework의 경우 `frameworkAssemblies`)을 사용하고, 잠재적으로 `#if` 지시문을 사용하여 플랫폼별 API 사용에 대한 소스 코드를 조건부로 컴파일하는 것만큼 간단합니다.
+패키지가 NuGet 3.0을 지원하지 않으면 Visual Studio에서 현재 패키지를 제거하라는 대화 상자가 나타납니다. 이 알림을 받으면 다음 단계를 수행합니다.
 
-예를 들어 일부 네트워크 작업을 수행하려는 라이브러리를 작성하고 모든 .NET Framework 버전, PCL(이식 가능한 클래스 라이브러리 Class) 프로필 및 .NET Core에서 해당 라이브러리를 실행하려는 경우를 가정해 보겠습니다. .NET Core 및 .NET Framework 4.5+ 대상의 경우 `System.Net.Http` 라이브러리 및 `async`/`await`를 사용할 수 있습니다. 그러나 이전 버전의 .NET Framework에서는 해당 API를 사용할 수 없습니다.
+1. 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리**를 선택합니다.
+1. 프로젝트의 패키지를 기록해 둡니다.
+1. 하나씩 패키지를 제거합니다.
+1. 제거 프로세스를 완료하려면 Visual Studio를 다시 시작해야 합니다. 이 경우 **NuGet 패키지 관리자** 창에 **다시 시작** 단추가 표시됩니다.
+1. 프로젝트를 다시 로드하면 .NET 표준이 대상이 됩니다. 제거해야 하는 패키지를 추가합니다.
 
-다음은 .NET Framework 버전 2.0, 3.5, 4.0, 4.5 및 .NET 표준 1.6을 대상으로 하는 `project.json`의 샘플 `frameworks` 섹션입니다.
+## <a name="retargeting-your-net-framework-code-to-net-framework-462"></a>.NET Framework 4.6.2로 .NET Framework 코드 대상 다시 지정
 
-```javascript
-{
-    "frameworks":{
-        "net20":{
-            "frameworkAssemblies":{
-                "System.Net":""
-            }
-        },
-        "net35":{
-            "frameworkAssemblies":{
-                "System.Net":""
-            }
-        },
-        "net40":{
-            "frameworkAssemblies":{
-                "System.Net":""
-            }
-        },
-        "net45":{
-            "frameworkAssemblies":{
-                "System.Net.Http":"",
-                "System.Threading.Tasks":""
-            }
-        },
-        ".NETPortable,Version=v4.5,Profile=Profile259": {
-            "buildOptions": {
-                "define": [ "PORTABLE" ]
-             },
-             "frameworkAssemblies":{
-                 "mscorlib":"",
-                 "System":"",
-                 "System.Core":"",
-                 "System.Net.Http":""
-             }
-        },
-        "netstandard16":{
-            "dependencies":{
-                "NETStandard.Library":"1.6.0",
-                "System.Net.Http":"4.0.1",
-                "System.Threading.Tasks":"4.0.11"
-            }
-        },
-    }
-}
-```
-
-PCL 대상은 특별합니다. 컴파일러에서 인식할 수 있도록 빌드 정의를 지정해야 하며 `mscorlib`를 포함하여 사용하는 모든 어셈블리를 지정해야 합니다.
-
-그러면 소스 코드에서 다음과 같이 종속성을 사용할 수 있습니다.
-
-```csharp
-#if (NET20 || NET35 || NET40 || PORTABLE)
-using System.Net;
-#else
-using System.Net.Http;
-using System.Threading.Tasks;
-#endif
-```
-
-모든 .NET Framework 및 .NET 표준 대상에는 컴파일러에서 인식할 수 있는 이름이 있어야 합니다.
-
-```
-.NET Framework 2.0   --> NET20
-.NET Framework 3.5   --> NET35
-.NET Framework 4.0   --> NET40
-.NET Framework 4.5   --> NET45
-.NET Framework 4.5.1 --> NET451
-.NET Framework 4.5.2 --> NET452
-.NET Framework 4.6   --> NET46
-.NET Framework 4.6.1 --> NET461
-.NET Framework 4.6.2 --> NET462
-.NET Standard 1.0    --> NETSTANDARD1_0
-.NET Standard 1.1    --> NETSTANDARD1_1
-.NET Standard 1.2    --> NETSTANDARD1_2
-.NET Standard 1.3    --> NETSTANDARD1_3
-.NET Standard 1.4    --> NETSTANDARD1_4
-.NET Standard 1.5    --> NETSTANDARD1_5
-.NET Standard 1.6    --> NETSTANDARD1_6
-```
-
-위에서 설명한 대로 PCL을 대상으로 하는 경우에는 컴파일러에서 이해할 수 있도록 빌드 정의를 지정해야 합니다. 컴파일러에서 사용할 수 있는 기본 정의는 없습니다.
-
-<a id="using-projectjson-in-visual-studio" class="xliff"></a>
-
-### Visual Studio에서 `project.json` 사용
-
-Visual Studio에서 `project.json`을 사용하는 두 가지 옵션은 다음과 같습니다.
-
-1. 새 xproj 프로젝트 형식.
-2. 표준 .NET을 지원하는, 대상이 다시 지정된 PCL 프로젝트.
-
-각각에는 서로 다른 장점 및 단점이 있습니다.
-
-<a id="when-to-pick-an-xproj-project" class="xliff"></a>
-
-#### Xproj 프로젝트를 선택하는 경우
-
-Visual Studio의 새로운 Xproj 프로젝트 시스템에서는 `project.json` 기반 프로젝트 모델의 기능을 활용하여 기존 프로젝트 형식에 비해 두 가지 주요 기능을 제공합니다. 즉, 여러 어셈블리를 빌드하여 원활한 멀티 타기팅 및 빌드에서 NuGet 패키지를 직접 생성하는 기능을 제공합니다.
-
-그러나 다음과 같이 사용할 수 있는 특정 기능이 부족해질 수 있습니다.
-
-- F# 또는 Visual Basic에 대한 지원
-- 지역화된 리소스 문자열로 위성 어셈블리 생성
-- 파일 시스템에서 `.dll` 파일 직접 참조
-- 참조 관리자에서 csproj 기반 프로젝트를 참조하는 기능(`.dll` 파일에 따라 직접 지원됨)
-
-프로젝트 요구 사항이 상대적으로 적고 xproj의 새로운 기능을 활용할 수 있는 경우 프로젝트 시스템으로 선택해야 합니다. 이 작업은 Visual Studio에서 다음과 같이 수행할 수 있습니다.
-
-1. Visual Studio 2015 이상을 사용하고 있는지 확인합니다.
-2. 파일 | 새 프로젝트를 선택합니다.
-3. Visual C#에서 ".NET Core"를 선택합니다.
-4. "클래스 라이브러리(.NET Core)" 템플릿을 선택합니다. 
-
-<a id="when-to-pick-a-pcl-project" class="xliff"></a>
-
-#### PCL 프로젝트를 선택하는 경우
-
-Visual Studio에서 PCL(이식 가능한 클래스 라이브러리)을 만들고 프로젝트 구성 대화 상자에서 ".NET Core"를 선택하여 기존 프로젝트 시스템에서 .NET Core를 대상으로 지정할 수 있습니다. 그런 다음 .NET 표준을 기반으로 하도록 프로젝트 대상을 다시 지정해야 합니다.
-
-1. Visual Studio에서 프로젝트 파일을 마우스 오른쪽 단추로 클릭하고 속성을 선택합니다.
-2. 빌드에서 ".NET 표준으로 변환"을 선택합니다.
-
-고급 프로젝트 시스템 요구 사항이 있는 경우 이 옵션을 선택해야 합니다. `xproj` 프로젝트 시스템에서처럼 플랫폼별 어셈블리를 생성하여 멀티 타기팅하려면 [How to Make Portable Class Libraries Work for You(이식 가능한 클래스 라이브러리가 작동하도록 설정하는 방법)](https://blogs.msdn.microsoft.com/dsplaisted/2012/08/27/how-to-make-portable-class-libraries-work-for-you/)에 설명된 대로 "Bait 및 스위치" PCL을 만들어야 합니다.
-
-<a id="retargeting-your-net-framework-code-to-net-framework-462" class="xliff"></a>
-
-## .NET Framework 4.6.2로 .NET Framework 코드 대상 다시 지정
-
-코드가 .NET Framework 4.6.2를 대상으로 하지 않는 경우 대상을 다시 지정하는 것이 좋습니다. 그러면 .NET 표준에서 기존 API를 지원할 수 없는 경우 최신 API를 대신 사용할 수 있습니다.
+코드가 .NET Framework 4.6.2를 대상으로 하지 않는 경우 .NET Framework 4.6.2로 대상을 다시 지정하는 것이 좋습니다. 그러면 .NET 표준에서 기존 API를 지원할 수 없는 경우 최신 API를 대신 사용할 수 있습니다.
 
 Visual Studio에서 이식하려는 각 프로젝트에 대해 다음을 수행합니다.
 
 1. 프로젝트를 마우스 오른쪽 단추로 클릭하고 속성을 선택합니다.
-2. "대상 프레임워크" 드롭다운에서 ".NET Framework 4.6.2"를 선택합니다.
-3. 프로젝트를 다시 컴파일합니다.
+1. **대상 프레임워크** 드롭다운에서 **.NET Framework 4.6.2**를 선택합니다.
+1. 프로젝트를 다시 컴파일합니다.
 
-됐습니다! 프로젝트가 .NET Framework 4.6.2를 대상으로 하기 때문에 해당 버전의 .NET Framework를 코드 이식의 기반으로 사용할 수 있습니다.
+프로젝트가 .NET Framework 4.6.2를 대상으로 하기 때문에 해당 버전의 .NET Framework를 코드 이식의 기반으로 사용할 수 있습니다.
 
-<a id="determining-the-portability-of-your-code" class="xliff"></a>
+## <a name="determining-the-portability-of-your-code"></a>코드의 이식성 확인
 
-## 코드의 이식성 확인
+다음 단계에서는 API Portability Analyzer(ApiPort)를 실행하여 분석을 위한 이식성 보고서를 생성합니다.
 
-다음 단계에서는 API Portability Analyzer(ApiPort)를 실행하여 분석을 시작할 수 있는 이식성 보고서를 생성합니다.
+[API 이식성 도구(ApiPort)](~/docs/standard/portability-analyzer.md)를 이해하고 .NET Core를 대상으로 하는 이식성 보고서를 생성할 수 있어야 합니다. 이 작업을 수행하는 방법은 요구 사항 및 개인적 취향에 따라 달라질 수 있습니다. 다음은 몇 가지 서로 다른 접근 방식입니다. 코드가 어떻게 구성되어 있는가에 따라 이러한 접근 방식의 단계를 혼합하여 사용할 수 있습니다.
 
-[API 이식성 도구(ApiPort)](https://github.com/Microsoft/dotnet-apiport/blob/master/docs/HowTo/)를 이해하고 .NET Core를 대상으로 하는 이식성 보고서를 생성할 수 있어야 합니다. 이 작업을 수행하는 방법은 요구 사항 및 개인적 취향에 따라 달라질 수 있습니다. 다음은 몇 가지 다양한 접근 방식입니다. 코드가 구성된 방법에 따라 각 접근 방식을 혼합하여 사용할 수 있습니다.
+### <a name="dealing-primarily-with-the-compiler"></a>주로 컴파일러 처리
 
-<a id="dealing-primarily-with-the-compiler" class="xliff"></a>
+이 접근 방식은 작은 프로젝트 또는 많은 .NET Framework API를 사용하지 않는 프로젝트에 가장 적합할 수 있습니다. 접근 방식은 간단합니다.
 
-### 주로 컴파일러 처리
+1. 필요에 따라 프로젝트에서 ApiPort를 실행합니다. ApiPort를 실행하는 경우 해결해야 할 문제에 대한 보고서에서 정보를 가져오세요.
+1. 모든 코드를 새 .NET Core 프로젝트에 복사합니다.
+1. 이식성 보고서(생성된 경우)를 참조하면서 프로젝트가 완전히 컴파일될 때까지 컴파일러 오류를 해결합니다.
 
-이 접근 방식은 작은 프로젝트 또는 많은 .NET Framework API를 사용하지 않는 프로젝트에 가장 적합할 수 있습니다. 이 접근 방식은 매우 간단합니다.
+이 접근 방식은 구조적이지는 않지만 코드 중심 접근 방식을 사용하면 종종 문제를 신속하게 해결할 수 있으므로 더 작은 프로젝트나 라이브러리에 가장 적합한 방법이 될 수 있습니다. 데이터 모델만 포함하는 프로젝트가 이 접근 방식에 적합한 후보가 될 수 있습니다.
 
-1. 필요에 따라 프로젝트에서 ApiPort를 실행합니다.
-2. ApiPort가 실행된 경우 보고서를 신속하게 살펴봅니다.
-3. 모든 코드를 새 .NET Core 프로젝트에 복사합니다.
-4. 필요한 경우 이식성 보고서를 참조하여 컴파일될 때까지 컴파일러 오류를 해결합니다.
-5. 필요에 따라 반복합니다.
+### <a name="staying-on-the-net-framework-until-portability-issues-are-resolved"></a>이식성 문제가 해결될 때까지 .NET Framework 유지
 
-이 접근 방식은 매우 구조적이지는 않지만 코드 중심 접근 방식을 사용하면 문제를 신속하게 해결할 수 있으므로 더 작은 프로젝트나 라이브러리에 가장 적합한 방법이 될 수 있습니다. 데이터 모델만 포함하는 프로젝트가 여기에 적합한 후보가 될 수 있습니다.
-
-<a id="staying-on-the-net-framework-until-portability-issues-are-resolved" class="xliff"></a>
-
-### 이식성 문제가 해결될 때까지 .NET Framework 유지
-
-이 접근 방식은 전체 프로세스 중에 컴파일되는 코드를 원하는 경우 적합할 수 있습니다. 이 접근 방식은 다음과 같습니다.
+이 접근 방식은 전체 프로세스 중에 컴파일되는 코드를 선호하는 경우 적합할 수 있습니다. 이 접근 방식은 다음과 같습니다.
 
 1. 프로젝트에서 ApiPort를 실행합니다.
-2. 이식 가능한 다른 API를 사용하여 문제를 해결합니다.
-3. 직접적인 대안을 사용할 수 없는 영역을 기록해 둡니다.
-4. 각 프로젝트를 .NET Core 프로젝트에 복사할 준비가 되었다고 확신할 때까지 이식하려는 모든 프로젝트에 대해 1-3단계를 반복합니다.
-5. 새 .NET Core 프로젝트에 코드를 복사합니다.
-6. 기록해 둔 문제를 해결합니다.
+1. 이식 가능한 다른 API를 사용하여 문제를 해결합니다.
+1. 직접적인 대안을 사용할 수 없는 영역을 기록해 둡니다.
+1. 각 프로젝트를 새 .NET Core 프로젝트에 복사할 준비가 되었다고 확신할 때까지 이식하려는 모든 프로젝트에 대해 이전 단계를 반복합니다.
+1. 새 .NET Core 프로젝트에 코드를 복사합니다.
+1. 직접적인 대안이 없는 것으로 기록해 둔 문제를 해결합니다.
 
-이 신중한 접근 방식은 단순히 컴파일러 오류를 해결하는 것보다는 구조적이지만 비교적 코드 중심적이며 항상 컴파일할 수 있는 코드가 있다는 장점이 있습니다. 다른 API를 사용하여 해결할 수 없는 특정 문제를 해결하는 방법은 현저하게 달라질 수 있습니다. 특정 프로젝트에 대해 보다 포괄적인 계획을 개발해야 할 수 있으며, 이는 다음 접근 방식에서 설명합니다.
+이 신중한 접근 방식은 단순히 컴파일러 오류를 해결하는 것보다는 구조적이지만 비교적 코드 중심적이며 컴파일되는 코드가 항상 있다는 장점이 있습니다. 다른 API를 사용하여 해결할 수 없는 특정 문제를 해결하는 방법은 현저하게 달라집니다. 특정 프로젝트에 대해 보다 포괄적인 계획을 개발해야 할 수 있으며, 이는 다음 접근 방식에서 설명합니다.
 
-<a id="developing-a-comprehensive-plan-of-attack" class="xliff"></a>
+### <a name="developing-a-comprehensive-plan-of-attack"></a>포괄적인 공격 계획 개발
 
-### 포괄적인 공격 계획 개발
-
-이 접근 방식은 .NET Core를 지원하기 위해 코드를 재구성하거나 특정 영역을 다시 작성해야 할 수 있는 더 크고 더 복잡한 프로젝트에 가장 적합할 수 있습니다. 이 접근 방식은 다음과 같습니다.
+이 접근 방식은 .NET Core를 지원하기 위해 코드를 재구성하거나 코드의 특정 영역을 완전히 다시 작성해야 할 수 있는 더 크고 더 복잡한 프로젝트에 가장 적합할 수 있습니다. 이 접근 방식은 다음과 같습니다.
 
 1. 프로젝트에서 ApiPort를 실행합니다.
-2. 코드에서 이식 불가능한 각 형식이 사용되고 있는 위치 및 해당 형식이 전체 이식성에 어떻게 영향을 주는지를 파악합니다.
-
-   a. 해당 형식의 특성을 이해합니다. 수는 적은데 자주 사용되나요? 아니면 수는 많은데 자주 사용되지 않나요? 집중적으로 사용되나요? 아니면 코드 전체에 분산되어 있나요?
-   
-   b. 이식할 수 없는 코드는 격리가 쉬우므로 더 쉽게 처리할 수 있나요?
-   
-   c. 코드를 리팩터링해야 하나요?
-   
-   d. 이식할 수 없는 해당 형식에 대해 동일한 작업을 수행하는 다른 API가 있나요? 예를 들어 `WebClient` 클래스를 사용하고 있는 경우 `HttpClient` 클래스를 대신 사용할 수 있습니다.
-   
-   e. 드롭인 대체가 아닌 경우에도 작업을 수행하는 데 사용할 수 있는 이식 가능한 다른 API가 있나요? 예를 들어 `XmlSchema`를 사용하여 XML의 구문을 분석하는데 XML 스키마 검색이 필요하지 않은 경우 `System.Linq.Xml` API를 사용하고 데이터를 직접 구문 분석할 수 있습니다.
-
-3. 이식하기 어려운 어셈블리가 있는 경우 지금은 .NET Framework에 유지하는 것이 나을까요? 다음과 같은 몇 가지 사항을 고려해야 합니다.
-
-   a. .NET Framework 또는 Windows 관련 기능을 너무 많이 사용하기 때문에 .NET Core와 호환되지 않는 일부 기능이 라이브러리에 있을 수 있습니다. 지금은 해당 기능을 유지하고 당분간은 기능이 더 적은 라이브러리의 .NET Core 버전을 릴리스하는 것이 더 나을까요?
-   
-   b. 여기에서 리팩터링이 도움이 될까요?
-   
-4. 사용할 수 없는 .NET Framework API의 고유한 구현을 작성하는 것이 합리적일까요?
-
-   대신 [.NET Framework 참조 소스](https://github.com/Microsoft/referencesource)에서 코드를 복사, 수정 및 사용하는 것이 좋을 수 있습니다. 이 코드는 [MIT 라이선스](https://github.com/Microsoft/referencesource/blob/master/LICENSE.txt)에 따라 사용이 허가되므로 매우 자유롭게 이 작업을 수행할 수 있습니다. 코드에서 Microsoft 특성을 제대로 지정하기만 하면 됩니다.
-   
-5. 필요에 따라 다른 프로젝트에 대해 이 프로세스를 반복합니다.
-6. 계획을 설정했으면 해당 계획을 실행합니다.
+1. 이식 불가능한 각 형식이 사용되고 있는 위치 및 해당 형식이 전체 이식성에 어떻게 영향을 주는지를 파악합니다.
+   - 해당 형식의 특성을 이해합니다. 수는 적은데 자주 사용되나요? 아니면 수는 많지만 자주 사용되지 않나요? 집중적으로 사용되나요? 아니면 코드 전체에 분산되어 있나요?
+   - 이식할 수 없는 코드는 격리가 쉬우므로 더 효과적으로 처리할 수 있나요?
+   - 코드를 리팩터링해야 하나요?
+   - 이식할 수 없는 해당 형식에 대해 동일한 작업을 수행하는 다른 API가 있나요? 예를 들어 <xref:System.Net.WebClient> 클래스를 사용하고 있는 경우 <xref:System.Net.Http.HttpClient> 클래스를 대신 사용할 수 있습니다.
+   - 드롭인 대체가 아닌 경우에도 작업을 수행하는 데 사용할 수 있는 이식 가능한 다른 API가 있나요? 예를 들어 <xref:System.Xml.Schema.XmlSchema>를 사용하여 XML을 구문 분석하지만 XML 스키마 검색이 필요하지 않은 경우, API를 사용하는 대신 <xref:System.Xml.Linq> API를 사용하고 직접 구문 분석을 구현할 수 있습니다.
+1. 이식하기 어려운 어셈블리가 있는 경우 지금은 .NET Framework에 유지하는 것이 나을까요? 다음과 같은 몇 가지 사항을 고려해야 합니다.
+   - .NET Framework 또는 Windows 관련 기능을 너무 많이 사용하기 때문에 .NET Core와 호환되지 않는 일부 기능이 라이브러리에 있을 수 있습니다. 기능 이식을 위해 리소스를 사용할 수 있을 때까지 임시로 해당 기능을 유지하고 당분간은 기능이 더 적은 라이브러리의 .NET Core 버전을 릴리스하는 것이 더 나을까요?
+   - 리팩터링이 도움이 될까요?
+1. 사용할 수 없는 .NET Framework API의 고유한 구현을 작성하는 것이 합리적일까요?
+   [.NET Framework 참조 소스](https://github.com/Microsoft/referencesource)에서 코드를 복사, 수정 및 사용하는 것이 좋을 수 있습니다. 참조 소스 코드는 [MIT 라이선스](https://github.com/Microsoft/referencesource/blob/master/LICENSE.txt)에 따라 라이선스가 부여되므로, 소스를 자신의 코드에 대한 기초로 매우 자유롭게 사용할 수 있습니다. 코드에서 Microsoft 특성을 제대로 지정하기만 하면 됩니다.
+1. 필요에 따라 다른 프로젝트에 대해 이 프로세스를 반복합니다.
  
-분석 단계는 코드베이스의 크기에 따라 다소 시간이 걸릴 수 있습니다. 이 단계에서 시간을 할애하여 필요한 변경의 범위를 철저하게 이해하고 계획을 개발하면 장기 실행, 특히 더 복잡한 코드베이스가 있는 경우 많은 시간을 절약할 수 있습니다.
+분석 단계는 코드베이스의 크기에 따라 다소 시간이 걸릴 수 있습니다. 이 단계에서 시간을 할애하여 필요한 변경의 범위를 철저하게 이해하고 계획을 개발하면 장기 실행, 특히 복잡한 코드베이스가 있는 경우 일반적으로 시간이 절약됩니다.
 
 계획에 코드베이스의 중요한 변경 작업을 포함하는 동시에 .NET Framework 4.6.2를 계속 대상으로 지정할 수 있으므로 이전 접근 방식보다 더 구조화된 버전으로 만들 수 있습니다. 계획 실행을 시작하는 방법은 코드베이스에 따라 달라집니다.
 
-<a id="mixing-approaches" class="xliff"></a>
-
-### 접근 방식 혼합
+### <a name="mixing-approaches"></a>접근 방식 혼합
 
 위의 접근 방식을 프로젝트 단위로 혼합하여 사용할 수 있습니다. 사용자 및 코드베이스에 가장 적합한 방법을 수행해야 합니다.
 
-<a id="porting-your-tests" class="xliff"></a>
-
-## 테스트 이식
+## <a name="porting-your-tests"></a>테스트 이식
 
 코드를 이식한 경우 모든 항목이 제대로 작동하는지 확인하는 가장 좋은 방법은 .NET Core에 이식할 때 코드를 테스트하는 것입니다. 이렇게 하려면 .NET Core에 대한 테스트를 빌드하고 실행하는 테스트 프레임워크를 사용해야 합니다. 현재는 다음과 같은 세 가지 옵션이 있습니다.
 
-* [xUnit](https://xunit.github.io/)
-   - [시작](http://xunit.github.io/docs/getting-started-dotnet-core.html)
-   - [MSTest 프로젝트를 xUnit으로 변환하는 도구](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
-* [NUnit](http://www.nunit.org/)
-  - [시작](https://github.com/nunit/docs/wiki/Installation)
-  - [MSTest에서 NUnit으로 마이그레이션에 대한 블로그 게시물](http://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
-* [MSTest](https://msdn.microsoft.com/library/ms243147.aspx)
+- [xUnit](https://xunit.github.io/)
+  * [시작](http://xunit.github.io/docs/getting-started-dotnet-core.html)
+  * [MSTest 프로젝트를 xUnit으로 변환하는 도구](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
+- [NUnit](http://www.nunit.org/)
+  * [시작](https://github.com/nunit/docs/wiki/Installation)
+  * [MSTest에서 NUnit으로 마이그레이션에 대한 블로그 게시물](http://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
+- [MSTest](https://docs.microsoft.com/visualstudio/test/unit-test-basics)
 
-<a id="recommended-approach-to-porting" class="xliff"></a>
+## <a name="recommended-approach-to-porting"></a>이식에 권장되는 접근 방식
 
-## 이식에 권장되는 접근 방식
-
-마지막으로 코드 자체를 이식합니다. 궁극적으로 실제 이식 작업은 .NET Framework 코드가 구성된 방법에 따라 현저하게 달라집니다. 그러나 다음은 코드베이스에서 제대로 작동할 수 있는 권장 접근 방식입니다.
-
-코드를 이식하려면 라이브러리의 "기본"으로 시작하는 것이 좋습니다. 이는 다른 모든 항목에서 직접적으로나 간접적으로 사용하는 데이터 모델이나 일부 다른 기본 클래스 및 메서드가 될 수 있습니다.
+궁극적으로 이식 작업은 .NET Framework 코드가 구성된 방법에 따라 크게 달라집니다. 코드를 이식하는 좋은 방법은 코드의 기본 구성 요소인 라이브러리의 *기본*으로 시작하는 것입니다. 이는 다른 모든 항목에서 직접적으로나 간접적으로 사용하는 데이터 모델이나 일부 다른 기본 클래스 및 메서드가 될 수 있습니다.
 
 1. 현재 이식하고 있는 라이브러리의 계층을 테스트하는 테스트 프로젝트를 이식합니다.
-2. 라이브러리의 "기본"을 새 .NET Core 프로젝트에 복사하고 지원하려는 .NET 표준의 버전을 선택합니다.
-3. 코드를 컴파일하는 데 필요한 대로 내용을 변경합니다. 이 작업의 많은 부분에서 NuGet 패키지 종속성을 `project.json` 파일에 추가해야 할 수 있습니다.
-4. 테스트를 실행하고 필요에 따라 조정합니다.
-5. 이식할 다음 코드 계층을 선택하고 2단계와 3단계를 반복합니다.
+1. 라이브러리의 기본을 새 .NET Core 프로젝트에 복사하고 지원하려는 .NET 표준의 버전을 선택합니다.
+1. 코드를 컴파일하는 데 필요한 대로 내용을 변경합니다. 이 작업의 많은 부분에서 NuGet 패키지 종속성을 *csproj* 파일에 추가해야 할 수 있습니다.
+1. 테스트를 실행하고 필요에 따라 조정합니다.
+1. 이식할 다음 코드 계층을 선택하고 이전 단계를 반복합니다.
 
-기본 라이브러리의 바깥쪽으로 조직적으로 이동하고 필요에 따라 각 계층을 테스트하면 이식은 한 번에 하나의 코드 계층으로 문제가 격리되는 체계적인 프로세스가 됩니다.
+라이브러리의 기본으로 시작하고 기본에서 바깥쪽으로 이동하면서 필요에 따라 각 계층을 테스트하면, 이식은 한 번에 하나의 코드 계층으로 문제가 격리되는 체계적인 프로세스가 됩니다.
 

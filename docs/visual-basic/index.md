@@ -1,5 +1,5 @@
 ---
-title: Visual Basic | Microsoft Docs
+title: Visual Basic
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,11 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31905a37f09db5f5192123f0118252fbe8b02eff
-ms.openlocfilehash: 6df68180b0b159009bfd4ccc3ff54db115791d9f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 00f3cb66a19af0d63e7bcd158ae39a5930b27c9f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="visual-basic"></a>Visual Basic
@@ -47,8 +47,7 @@ Visual Basic은 형식이 안전한 개체 지향 응용 프로그램을 생산�
  [시작](../visual-basic/getting-started/index.md)   
  다양한 버전의 제품에서 사용할 수 있는 기능과 새로운 기능이 나열되어 있기 때문에 작업을 시작하는 데 도움이 됩니다.  
    
- [프로그래밍 개념](../visual-basic/programming-guide/concepts/index.md)  
- Visual Basic 프로그래머에게 가장 유용한 언어 개념을 제공합니다.
+ [프로그래밍 개념](../visual-basic/programming-guide/concepts/index.md) Visual Basic 프로그래머에게 가장 유용한 언어 개념을 제공합니다.
 
  [프로그램 구조 및 코드 규칙](../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
  명명 규칙, 코드의 주석 및 Visual Basic 내의 제한과 같은 Visual Basic의 기본 구조 및 코드 규칙에 대한 설명서가 포함되어 있습니다.  
@@ -72,8 +71,9 @@ Visual Basic은 형식이 안전한 개체 지향 응용 프로그램을 생산�
  일반적인 시나리오에 대한 단계별 지침의 링크를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [Visual Studio에서 개발 시작](https://docs.microsoft.com/visualstudio/ide/get-started-developing-with-visual-studio)  
+ [Visual Studio에서 개발 시작](/visualstudio/ide/get-started-developing-with-visual-studio)  
  Visual Studio의 기본에 대해 알아보는 데 도움이 되는 항목의 링크를 제공합니다.  
   
  [.NET Framework 클래스 라이브러리](http://go.microsoft.com/fwlink/?LinkID=227195)  
  Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK에 포함된 클래스, 인터페이스, 값 형식 라이브러리에 대한 입문 정보를 제공합니다.
+

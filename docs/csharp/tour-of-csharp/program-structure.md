@@ -1,5 +1,5 @@
 ---
-title: "C# 프로그램 구조 - C# 언어 둘러보기 | Microsoft Docs"
+title: "C# 프로그램 구조 - C# 언어 둘러보기"
 description: "C# 프로그램의 기본 구성 요소에 대해 알아보기"
 keywords: .NET .NET Core
 author: BillWagner
@@ -10,17 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 3642b6525691d6179eca66f11d5002377323cdf3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8d8f443f8458cd392c75e9787e612ca1cc3518c7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="program-structure" class="xliff"></a>
-
-# 프로그램 구조
+# <a name="program-structure"></a>프로그램 구조
 
 C#의 핵심적인 조직 개념은 ***프로그램***, ***네임스페이스***, ***형식***, ***멤버*** 및 ***어셈블리***입니다. C# 프로그램은 하나 이상의 소스 파일로 구성됩니다. 프로그램은 멤버를 포함하고 네임스페이스로 구성될 수 있는 형식을 선언합니다. 클래스와 인터페이스는 형식의 예입니다. 필드, 메서드, 속성 및 이벤트는 멤버의 예입니다. C# 프로그램을 컴파일하면 실제로 어셈블리로 패키지됩니다. 어셈블리는 일반적으로 ***응용 프로그램***을 구현하는지 또는 ***라이브러리***를 구현하는지에 따라 각각 파일 확장명 `.exe` 또는 `.dll`을 갖습니다.
 

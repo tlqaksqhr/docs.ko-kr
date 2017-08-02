@@ -1,6 +1,6 @@
 ---
-title: ".NET Core RID(런타임 식별자) 카탈로그 | Microsoft Docs"
-description: ".NET Core RID(런타임 식별자) 카탈로그"
+title: ".NET Core RID(런타임 식별자) 카탈로그"
+description: "RID(런타임 식별자) 및 .NET Core에서 RID의 사용 방법에 관해 알아봅니다."
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -9,21 +9,17 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: b2032f5d-771f-48d9-917c-587d9509035c
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 904b9be05cd2e5337272ce7ddce15b1075fbefeb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3490fb639efd223dc36190324bdf3a06bc23c10e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="net-core-runtime-identifier-rid-catalog" class="xliff"></a>
+# <a name="net-core-runtime-identifier-rid-catalog"></a>.NET Core RID(런타임 식별자) 카탈로그
 
-# .NET Core RID(런타임 식별자) 카탈로그
-
-<a id="what-are-rids" class="xliff"></a>
-
-## RID란?
+## <a name="what-are-rids"></a>RID란?
 RID는 *Runtime IDentifier(런타임 식별자)*의 약어입니다. RID는 응용 프로그램 또는 자산(즉, 어셈블리)이 실행될 대상 운영 체제를 식별하기 위해 사용됩니다. RID의 예를 들면 "ubuntu.14.04-x64", "win7-x64", "osx.10.11-x64"와 같습니다. 기본 종속성이 있는 패키지의 경우 RID는 패키지를 복원할 수 있는 플랫폼을 지정합니다. 
 
 RID는 실제로 불투명한 문자열이라는 점에 유의해야 합니다. 즉, RID는 사용하는 작업에 대해 정확히 일치해야만 작동합니다. 예를 들어, Ubuntu 14.04의 간단한 복제본인 [Elementary OS](https://elementary.io/)의 경우를 고려해 보겠습니다. .NET Core와 CLI는 Ubuntu의 14.04 버전에서 작동하지만, 수정 없이 Elementary OS에서 사용하려고 하면 패키지에 대한 복원 작업이 모두 실패합니다. 그 이유는 Elementary OS를 플랫폼으로 지정하는 RID가 현재 없기 때문입니다. 
@@ -64,17 +60,13 @@ RID 그래프는 `runtime.json`라는 파일의 `Microsoft.NETCore.Platforms`라
 * 플랫폼에 대해 이미 정의되어 있고 이 문서에서 보여준 RID를 사용해야 합니다.
 * RID는 구체적이어야 하므로 실제 RID 값에서 어떤 것도 가정해서는 안 됩니다. 특정 플랫폼에 어떤 RID가 필요한지를 확인하려면 이 문서를 참조하세요.
 
-<a id="using-rids" class="xliff"></a>
-
-## RID 사용
+## <a name="using-rids"></a>RID 사용
 RID를 사용하려면 어떤 RID가 있는지를 알아야 합니다. 새 RID가 정기적으로 플랫폼에 추가됩니다. 최신 버전을 보려면 CoreFX 리포지토리에서 [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) 파일을 확인하세요.
 
 > [!NOTE]
 > 이 정보를 좀 더 대화형 방식으로 얻을 수 있도록 작업하고 있습니다. 그렇게 되면 이 페이지도 해당 도구 및/또는 사용 방법 문서를 안내하도록 업데이트될 것입니다. 
 
-<a id="windows-rids" class="xliff"></a>
-
-## Windows RID
+## <a name="windows-rids"></a>Windows RID
 
 * Windows 7 / Windows Server 2008 R2
     * `win7-x64`
@@ -93,9 +85,7 @@ RID를 사용하려면 어떤 RID가 있는지를 알아야 합니다. 새 RID�
     * `win10-arm`
     * `win10-arm64`
 
-<a id="linux-rids" class="xliff"></a>
-
-## Linux RID
+## <a name="linux-rids"></a>Linux RID
 
 * Red Hat Enterprise Linux
     * `rhel.7-x64`
@@ -128,9 +118,7 @@ RID를 사용하려면 어떤 RID가 있는지를 알아야 합니다. 새 RID�
     * `linuxmint.17.3-x64`
     * `linuxmint.18-x64`
 
-<a id="os-x-rids" class="xliff"></a>
-
-## OS X RID
+## <a name="os-x-rids"></a>OS X RID
 
 * `osx.10.10-x64`
 * `osx.10.11-x64`

@@ -1,6 +1,6 @@
 ---
-title: ".NET Core 1.0에 대한 패키지 종속성 버전을 관리하는 방법 | Microsoft Docs"
-description: ".NET Core 1.0에 대한 패키지 종속성 버전을 관리하는 방법"
+title: ".NET Core 1.0에 대한 패키지 종속성 버전을 관리하는 방법"
+description: ".NET Core 라이브러리 및 앱에 대한 패키지 종속성 버전 관리에 관해 알아봅니다."
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: mairaw
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 4424a947-bdf9-4775-8d48-dc350a4e0aee
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 3576fecfd4964bc0a4ca9482888cd61e6ac44350
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7f31aeb3c07a75059a4f8cd9392dcea31eb5bf41
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -81,7 +81,7 @@ ms.lasthandoff: 05/23/2017
 
 ## <a name="packages-and-version-numbers-organized-by-metapackage"></a>메타패키지로 구성된 패키지 및 버전 번호
 
-[.NET 표준 라이브러리 패키지 및 1.0에 대한 해당 버전을 나열합니다](https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/release/1.0.0/Latest_Packages.txt).
+[.NET 표준 패키지 및 1.0에 대한 해당 버전을 나열합니다](https://github.com/dotnet/versions/blob/master/build-info/dotnet/corefx/release/1.0.0/Latest_Packages.txt).
 
 [모든 런타임 패키지 및 1.0에 대한 해당 버전을 나열합니다](https://github.com/dotnet/versions/blob/master/build-info/dotnet/coreclr/release/1.0.0/LKG_Packages.txt).
 

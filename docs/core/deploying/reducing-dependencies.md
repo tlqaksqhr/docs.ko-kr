@@ -1,6 +1,6 @@
 ---
-title: "project.json으로 패키지 종속성 감소 | Microsoft Docs"
-description: "project.json으로 패키지 종속성 감소"
+title: "project.json으로 패키지 종속성 감소"
+description: "Project.json 기반의 라이브러리를 만들 때 패키지 종속성이 감소합니다."
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: mairaw
@@ -9,31 +9,25 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 916251e3-87f9-4eee-81ec-94076215e6fa
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 616fb3f4b2ed3fda9a2a49ac3ec83ff466c43968
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 23d83f0402e35bc4bed31ef59a6fff0e28e01d35
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
-<a id="reducing-package-dependencies-with-projectjson" class="xliff"></a>
-
-# project.json으로 패키지 종속성 감소
+# <a name="reducing-package-dependencies-with-projectjson"></a>project.json으로 패키지 종속성 감소
 
 이 문서에서는 `project.json` 라이브러리를 작성할 때 패키지 종속성을 줄이는 방법에 대해 알아야 할 내용을 다룹니다. 이 문서를 마칠 때는 필요한 종속성만을 사용하도록 라이브러리를 작성하는 방법을 이해하게 될 것입니다. 
 
-<a id="why-its-important" class="xliff"></a>
-
-## 중요한 이유
+## <a name="why-its-important"></a>중요한 이유
 
 .NET Core는 NuGet 패키지로 구성된 제품입니다.  필수 패키지는 [.NET 표준 라이브러리 메타패키지](https://www.nuget.org/packages/NETStandard.Library)입니다. 이는 다른 패키지들로 구성된 NuGet 패키지로,  .NET Framework, .NET Core 및 Xamarin/Mono 같은 여러 .NET 구현에서 작업할 수 있도록 보장하는 패키지 집합을 제공합니다.
 
 그러나 라이브러리에서 포함된 모든 패키지를 사용하지는 않을 것입니다.  라이브러리를 작성하여 NuGet을 통해 배포할 때, 실제로 사용하는 패키지만으로 종속성을 "잘라내는" 것이 가장 바람직합니다.  이렇게 하면 NuGet 패키지에서 전체적인 공간을 적게 차지합니다.
 
-<a id="how-to-do-it" class="xliff"></a>
-
-## 방법
+## <a name="how-to-do-it"></a>방법
 
 현재로서는 패키지 참조를 잘라내는 공식 `dotnet` 명령이 없습니다.  이 작업을 수동으로 수행해야 합니다.  일반적인 프로세스는 다음과 같습니다.
 
@@ -49,9 +43,7 @@ ms.lasthandoff: 05/23/2017
 1. 시행착오.  패키지를 제거하고 복원하면서 여전히 컴파일되는지를 알아보고 이 프로세스를 반복합니다.
 2. 참조를 피킹하여 실제로 어떤 코드가 사용되는지를 알아보기 위해 [ILSpy](http://ilspy.net) 또는 [.NET Reflector](http://www.red-gate.com/products/dotnet-development/reflector) 같은 도구를 사용합니다.  그런 다음 사용 중인 형식에 해당하지 않는 패키지를 제거할 수 있습니다.
 
-<a id="example" class="xliff"></a>
-
-## 예제 
+## <a name="example"></a>예제 
 
 제네릭 컬렉션 형식에 추가 기능을 제공한 라이브러리를 작성했다고 가정해 보겠습니다.  그런 라이브러리는 `System.Collections` 같은 패키지에 종속되어야 하지만, `System.Net.Http` 같은 패키지에는 전혀 종속되지 않을 수 있습니다.  따라서 이 라이브러리에 필요한 것으로만 패키지 종속성을 잘라낼 수 있습니다.
 

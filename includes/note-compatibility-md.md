@@ -1,0 +1,2 @@
+> [!NOTE]
+>  Visual Basic 6.0에서 Visual Basic 2008로 업그레이드하는 도구에서 사용할 수 있도록 N:Microsoft.VisualBasic.Compatibility.VB6?qualifyHint=False&autoUpgrade=True 네임스페이스의 함수 및 개체가 제공됩니다. 이러한 함수와 개체에서 제공하는 대부분의 기능은 .NET Framework의 다른 네임스페이스에서 얻을 수 있는 기능과 동일하므로 이러한 함수와 개체는 Visual Basic 6.0 코드 모델이 .NET Framework 구현과 크게 다른 경우에만 필요합니다.

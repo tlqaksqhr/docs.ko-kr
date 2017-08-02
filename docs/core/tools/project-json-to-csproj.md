@@ -1,5 +1,5 @@
 ---
-title: "project.json 및 csproj 비교 - .NET Core | Microsoft 문서"
+title: "project.json 및 csproj 비교 - .NET Core"
 description: "project.json 및 csproj e요소 간 매핑을 참조하세요."
 keywords: project.json, csproj, .NET Core, MSBuild
 author: natemcmaster
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 79c50621-a24a-4e64-bbb9-b953113e841c
-ms.translationtype: Human Translation
-ms.sourcegitcommit: deb760878391856cf07bab04563d0ec19a1511e7
-ms.openlocfilehash: 7062102ff17c13b7cf25a1cfbb266c696221151b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0f82e82c6a11220e24c85cef19bc131e12c77bf0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/30/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -494,7 +494,7 @@ MSBuild에는 `owners` 요소에 대해 동일한 요소가 없습니다. `summa
 }
 ```
 
-MSBuild에서 해당하는 요소는 [targets](https://docs.microsoft.com/visualstudio/msbuild/msbuild-targets)입니다.
+MSBuild에서 해당하는 요소는 [targets](/visualstudio/msbuild/msbuild-targets)입니다.
 
 ```xml
 <Target Name="MyPreCompileTarget" BeforeTargets="Build">
@@ -562,12 +562,12 @@ MSBuild에서 해당하는 요소는 [targets](https://docs.microsoft.com/visual
 }
 ```
 
-csproj에서 지원되지 않습니다. 대신 *.nuspec* 파일에 콘텐츠 파일을 포함해야 합니다. 자세한 내용은 [콘텐츠 파일 포함](https://docs.microsoft.com/nuget/schema/nuspec#including-content-files)을 참조하세요.
+csproj에서 지원되지 않습니다. 대신 *.nuspec* 파일에 콘텐츠 파일을 포함해야 합니다. 자세한 내용은 [콘텐츠 파일 포함](/nuget/schema/nuspec#including-content-files)을 참조하세요.
 
 ## <a name="files"></a>파일
 
 *project.json*에서 빌드 및 팩을 확장하여 컴파일하고 다른 폴더에서 포함할 수 있습니다.
-MSBuild에서는 [항목](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-items)을 사용하여 수행합니다. 다음 예제는 일반적인 변환입니다.
+MSBuild에서는 [항목](/visualstudio/msbuild/common-msbuild-project-items)을 사용하여 수행합니다. 다음 예제는 일반적인 변환입니다.
 
 ```json
 {
@@ -620,7 +620,7 @@ MSBuild에서는 [항목](https://docs.microsoft.com/visualstudio/msbuild/common
 
 .nupkg 내의 패키지 레이아웃은 `PackagePath="path"`를 사용하여 수정할 수 있습니다.
 
-`Content`를 제외하고, 대부분의 항목 그룹은 패키지에 포함되도록 `Pack="true"`를 명시적으로 추가해야 합니다. MSBuild `<IncludeContentInPack>` 속성이 기본적으로 `true`로 설정되어 있기 때문에 `Content`는 패키지의 *content* 폴더에 놓입니다. 자세한 내용은 [패키지에 콘텐츠 포함](https://docs.microsoft.com/nuget/schema/msbuild-targets#including-content-in-a-package)을 참조하세요.
+`Content`를 제외하고, 대부분의 항목 그룹은 패키지에 포함되도록 `Pack="true"`를 명시적으로 추가해야 합니다. MSBuild `<IncludeContentInPack>` 속성이 기본적으로 `true`로 설정되어 있기 때문에 `Content`는 패키지의 *content* 폴더에 놓입니다. 자세한 내용은 [패키지에 콘텐츠 포함](/nuget/schema/msbuild-targets#including-content-in-a-package)을 참조하세요.
 
 `PackagePath="%(Identity)"`는 패키지 경로를 프로젝트 상대 파일 경로에 설정하는 간단한 방법입니다.
 

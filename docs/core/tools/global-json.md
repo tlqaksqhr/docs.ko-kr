@@ -1,6 +1,6 @@
 ---
-title: "global.json 참조 | Microsoft 문서"
-description: "global.json 참조"
+title: "global.json 참조"
+description: ".NET Core 도구 버전 설정을 허용하는 global.json 파일의 스키마를 참조하세요."
 keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 96102f96-d403-4385-8ef6-5d80e406eb0c
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ec7028d43e7236056e5a53160f6017edadfec8c2
-ms.openlocfilehash: a35938d355cb86205e9c822736862298508cf861
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ffa97164736fc7f3edc450682d23bdf499b6eb34
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/06/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 

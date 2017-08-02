@@ -1,5 +1,5 @@
 ---
-title: "C# Interactive 시작 - C# 가이드 | Microsoft Docs"
+title: "C# Interactive 시작 - C# 가이드"
 description: "C# Interactive 시작"
 keywords: "C#, 시작, REPL, 플랫폼 간"
 ms.date: 08/23/2016
@@ -9,11 +9,11 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: a6907ffe-7920-4813-984f-6001d9e44756
 redirect_url: /dotnet/csharp/getting-started/index
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4437ce5d344cf06d30e31911def6287999fc6ffc
-ms.openlocfilehash: 608f7f2b2143ece7aabc09cd0d56b6b33fdba32f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 41deedefdf513a35f7894d7edd40530a3aa2c2f2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/23/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 

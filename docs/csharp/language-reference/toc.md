@@ -6,4 +6,4 @@
 ## [C# 전처리기 지시문](preprocessor-directives/)
 ## [C# 컴파일러 옵션](compiler-options/)
 ## [C# 컴파일러 오류](compiler-messages/)
-## [C# 언어 사양](language-specification.md)
+## [C# 6.0 초안 언어 사양](language-specification/)

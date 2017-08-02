@@ -1,42 +1,61 @@
 ---
-title: "함수(Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Visual Basic, 함수"
-  - "함수[Visual Basic]"
+title: "함수(Visual Basic)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.suite: 
+ms.technology:
+- devlang-visual-basic
+ms.topic: article
+dev_langs:
+- VB
+helpviewer_keywords:
+- Visual Basic, functions
+- functions [Visual Basic]
 ms.assetid: d86fc51f-f46e-4941-8ae2-6262da3d2688
 caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
----
-# 함수(Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
+author: dotnet-bot
+ms.author: dotnetcontent
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0cbdb4fc7b01f814f1f956b1f7fe2c27e72c1848
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
+---
+# <a name="functions-visual-basic"></a>함수(Visual Basic)
 이 단원의 항목에는 Visual Basic 런타임 멤버 함수의 테이블이 포함되어 있습니다.  
   
 > [!NOTE]
->  함수를 작성 하 고 호출 합니다.  자세한 내용은 [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md) 및 [How to: Create a Procedure that Returns a Value](../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md)을 참조하십시오.  
+>  또한 함수를 만들고 호출할 수 있습니다. 자세한 내용은 [함수 문](../../../visual-basic/language-reference/statements/function-statement.md) 및 [방법: 값을 반환하는 프로시저 만들기](../../../visual-basic/programming-guide/language-features/procedures/how-to-create-a-procedure-that-returns-a-value.md)를 참조하세요.  
   
-## 단원 내용  
- [Conversion Functions](../../../visual-basic/language-reference/functions/conversion-functions.md)  
+## <a name="in-this-section"></a>단원 내용  
+ [변환 함수](../../../visual-basic/language-reference/functions/conversion-functions.md)  
   
  [수학 함수](../../../visual-basic/language-reference/functions/math-functions.md)  
   
  [문자열 함수](../../../visual-basic/language-reference/functions/string-functions.md)  
   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [형식 변환 함수](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
   
  [CType 함수](../../../visual-basic/language-reference/functions/ctype-function.md)  
   
-## 관련 단원  
- [Visual Basic Language Reference](../../../visual-basic/language-reference/index.md)  
+## <a name="related-sections"></a>관련 단원  
+ [Visual Basic 언어 참조](../../../visual-basic/language-reference/index.md)  
   
  [Visual Basic](../../../visual-basic/index.md)
+

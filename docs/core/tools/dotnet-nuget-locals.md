@@ -1,5 +1,5 @@
 ---
-title: "dotnet-nuget-locals 명령 - .NET Core CLI | Microsoft Docs"
+title: "dotnet-nuget-locals 명령 - .NET Core CLI"
 description: "dotnet-nuget-locals 명령은 http-request 캐시, 임시 캐시 또는 시스템 전체의 글로벌 패키지 폴더와 같은 로컬 NuGet 리소스를 지우거나 목록에 포함합니다."
 keywords: "dotnet-nuget-locals, CLI, CLI 명령, .NET Core"
 author: karann-msft
@@ -10,10 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 8440229e-317e-4dc1-9463-cba5fdb12c3b
-translationtype: Human Translation
-ms.sourcegitcommit: dff752a9d31ec92b113dae9eed20cd72faf57c84
-ms.openlocfilehash: d0acfaa6ff1a11f49a0d3751b675ea94bd6ae3a3
-ms.lasthandoff: 03/22/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2c9ea7b3b7c61b347cb7c56254773290f04a0cd6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -95,5 +96,5 @@ ms.lasthandoff: 03/22/2017
 
 ## <a name="troubleshooting"></a>문제 해결
 
-`dotnet nuget locals` 명령을 사용하는 동안 가장 일반적으로 나타나는 문제와 오류에 대한 자세한 내용은 [NuGet 캐시 관리](https://docs.microsoft.com/nuget/consume-packages/managing-the-nuget-cache)를 참조하세요.
+`dotnet nuget locals` 명령을 사용하는 동안 가장 일반적으로 나타나는 문제와 오류에 대한 자세한 내용은 [NuGet 캐시 관리](/nuget/consume-packages/managing-the-nuget-cache)를 참조하세요.
 
