@@ -1,7 +1,7 @@
 ---
 title: "차단된 .NET Framework 설치 및 제거 문제 해결"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 05/26/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
@@ -90,5 +90,4 @@ Windows 프로그램 호환성 모드로 실행될 때 .NET Framework 4.5 또는
 [개발자용 .NET Framework 설치](../../../docs/framework/install/guide-for-developers.md)   
 [방법: 설치된 .NET Framework 버전 확인](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
 [버전 및 종속성](../../../docs/framework/migration-guide/versions-and-dependencies.md)
-
 
