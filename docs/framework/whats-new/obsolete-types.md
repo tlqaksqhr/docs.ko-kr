@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework에서 사용되지 않는 형식 | Microsoft 문서"
+title: ".NET Framework에서 사용되지 않는 형식"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,15 +18,14 @@ caps.latest.revision: 41
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 01c66e2c291766ba00376261740906934f065855
-ms.openlocfilehash: b7040d4c82c9434b2d24a579a93602660479ec59
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 15ab48dedaef24ea209c38939ee87a0321da55cf
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# .NET Framework에서 사용되지 않는 형식
-<a id="obsolete-types-in-the-net-framework" class="xliff"></a>
+# <a name="obsolete-types-in-the-net-framework"></a>.NET Framework에서 사용되지 않는 형식
 <a name="introduction"></a> 이 문서의 표에는 어셈블리에서 구성된 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 및 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]에서 사용하지 않는 형식이 나열되어 있습니다. 사용하지 않는 형식과 각 어셈블리에서 권장되는 대체 형식의 목록을 보려면 다음 링크를 사용합니다. 이러한 형식은 사용되지 않으므로 해당 형식의 멤버도 모두 사용되지 않습니다. .NET Framework 클래스 라이브러리의 사용되지 않는 멤버에 대한 추가 목록은 [사용되지 않는 멤버](../../../docs/framework/whats-new/obsolete-members.md)를 참조하십시오.  
   
 -   [시스템 어셈블리에서 사용되지 않는 형식](#obsolete_types_in_system_assemblies)  
@@ -82,13 +81,11 @@ ms.lasthandoff: 05/22/2017
     -   [Microsoft.VisualC.dll](#visualc)  
   
 <a name="obsolete_types_in_system_assemblies"></a>   
-## 시스템 어셈블리에서 사용되지 않는 형식
-<a id="obsolete-types-in-system-assemblies" class="xliff"></a>  
+## <a name="obsolete-types-in-system-assemblies"></a>시스템 어셈블리에서 사용되지 않는 형식  
  다음 표에서는 시스템 어셈블리에서 사용되지 않는 것으로 선언된 형식을 보여 줍니다. 이러한 어셈블리는 .NET Framework를 대상으로 하는 일반\-용도의 응용 프로그램 개발에 사용됩니다.  
   
 <a name="mscorlib"></a>   
-### 어셈블리: mscorlib.dll
-<a id="assembly-mscorlibdll" class="xliff"></a>  
+### <a name="assembly-mscorlibdll"></a>어셈블리: mscorlib.dll  
   
 |형식|메시지|  
 |----------|-------------|  
@@ -153,8 +150,7 @@ ms.lasthandoff: 05/22/2017
  [맨 위로 이동](#introduction)  
   
 <a name="Core"></a>   
-### 어셈블리: System.Core.dll
-<a id="assembly-systemcoredll" class="xliff"></a>  
+### <a name="assembly-systemcoredll"></a>어셈블리: System.Core.dll  
   
 |형식|메시지|  
 |----------|-------------|  
@@ -163,8 +159,7 @@ ms.lasthandoff: 05/22/2017
  [맨 위로 이동](#introduction)  
   
 <a name="data"></a>   
-### 어셈블리: System.Data.dll
-<a id="assembly-systemdatadll" class="xliff"></a>  
+### <a name="assembly-systemdatadll"></a>어셈블리: System.Data.dll  
   
 |형식|메시지|  
 |----------|-------------|  
@@ -176,8 +171,7 @@ ms.lasthandoff: 05/22/2017
  [맨 위로 이동](#introduction)  
   
 <a name="oracleclient"></a>   
-### 어셈블리: System.Data.OracleClient.dll
-<a id="assembly-systemdataoracleclientdll" class="xliff"></a>  
+### <a name="assembly-systemdataoracleclientdll"></a>어셈블리: System.Data.OracleClient.dll  
   
 |형식|메시지|  
 |----------|-------------|  
@@ -193,8 +187,7 @@ ms.lasthandoff: 05/22/2017
  [맨 위로 이동](#introduction)  
   
 <a name="design"></a>   
-### 어셈블리: System.Design.dll
-<a id="assembly-systemdesigndll" class="xliff"></a>  
+### <a name="assembly-systemdesigndll"></a>어셈블리: System.Design.dll  
   
 |형식|메시지|  
 |----------|-------------|  
@@ -216,8 +209,7 @@ ms.lasthandoff: 05/22/2017
  [맨 위로 이동](#introduction)  
   
 <a name="system"></a>   
-### 어셈블리: System.dll
-<a id="assembly-systemdll" class="xliff"></a>  
+### <a name="assembly-systemdll"></a>어셈블리: System.dll  
   
 |형식|메시지|  
 |----------|-------------|  
@@ -232,8 +224,7 @@ ms.lasthandoff: 05/22/2017
  [맨 위로 이동](#introduction)  
   
 <a name="enterpriseservices"></a>   
-### 어셈블리: System.EnterpriseServices.dll
-<a id="assembly-systementerpriseservicesdll" class="xliff"></a>  
+### <a name="assembly-systementerpriseservicesdll"></a>어셈블리: System.EnterpriseServices.dll  
   
 |형식|메시지|  
 |----------|-------------|  
@@ -242,8 +233,7 @@ ms.lasthandoff: 05/22/2017
  [맨 위로 이동](#introduction)  
   
 <a name="net"></a>   
-### 어셈블리: System.Net.dll
-<a id="assembly-systemnetdll" class="xliff"></a>  
+### <a name="assembly-systemnetdll"></a>어셈블리: System.Net.dll  
   
 |형식|메시지|  
 |----------|-------------|  
@@ -260,8 +250,7 @@ ms.lasthandoff: 05/22/2017
  [맨 위로 이동](#introduction)  
   
 <a name="servicemodel"></a>   
-### 어셈블리: System.ServiceModel.dll
-<a id="assembly-systemservicemodeldll" class="xliff"></a>  
+### <a name="assembly-systemservicemodeldll"></a>어셈블리: System.ServiceModel.dll  
   
 |형식|메시지|  
 |----------|-------------|  
@@ -277,8 +266,7 @@ ms.lasthandoff: 05/22/2017
  [맨 위로 이동](#introduction)  
   
 <a name="web"></a>   
-### 어셈블리: System.Web.dll
-<a id="assembly-systemwebdll" class="xliff"></a>  
+### <a name="assembly-systemwebdll"></a>어셈블리: System.Web.dll  
   
 |형식|메시지|  
 |----------|-------------|  
@@ -299,8 +287,7 @@ ms.lasthandoff: 05/22/2017
  [맨 위로 이동](#introduction)  
   
 <a name="mobile"></a>   
-### 어셈블리: System.Web.Mobile.dll
-<a id="assembly-systemwebmobiledll" class="xliff"></a>  
+### <a name="assembly-systemwebmobiledll"></a>어셈블리: System.Web.Mobile.dll  
   
 |형식|메시지|  
 |----------|-------------|  
@@ -500,8 +487,7 @@ ms.lasthandoff: 05/22/2017
  [맨 위로 이동](#introduction)  
   
 <a name="workflow_activities"></a>   
-### 어셈블리: System.Workflow.Activities.dll
-<a id="assembly-systemworkflowactivitiesdll" class="xliff"></a>  
+### <a name="assembly-systemworkflowactivitiesdll"></a>어셈블리: System.Workflow.Activities.dll  
   
 |형식|메시지|  
 |----------|-------------|  
@@ -514,8 +500,7 @@ ms.lasthandoff: 05/22/2017
  [맨 위로 이동](#introduction)  
   
 <a name="workflow_componentmodel"></a>   
-### 어셈블리: System.Workflow.ComponentModel.dll
-<a id="assembly-systemworkflowcomponentmodeldll" class="xliff"></a>  
+### <a name="assembly-systemworkflowcomponentmodeldll"></a>어셈블리: System.Workflow.ComponentModel.dll  
   
 |형식|메시지|  
 |----------|-------------|  
@@ -533,8 +518,7 @@ ms.lasthandoff: 05/22/2017
  [맨 위로 이동](#introduction)  
   
 <a name="workflow_runtime"></a>   
-### 어셈블리: System.Workflow.Runtime.dll
-<a id="assembly-systemworkflowruntimedll" class="xliff"></a>  
+### <a name="assembly-systemworkflowruntimedll"></a>어셈블리: System.Workflow.Runtime.dll  
   
 |형식|메시지|  
 |----------|-------------| 
@@ -549,8 +533,7 @@ ms.lasthandoff: 05/22/2017
  [맨 위로 이동](#introduction)  
   
 <a name="workflowservices"></a>   
-### 어셈블리: System.WorkflowServices.dll
-<a id="assembly-systemworkflowservicesdll" class="xliff"></a>  
+### <a name="assembly-systemworkflowservicesdll"></a>어셈블리: System.WorkflowServices.dll  
   
 |형식|메시지|  
 |----------|-------------|  
@@ -579,8 +562,7 @@ ms.lasthandoff: 05/22/2017
  [맨 위로 이동](#introduction)  
   
 <a name="xaml"></a>   
-### 어셈블리: System.Xaml.dll
-<a id="assembly-systemxamldll" class="xliff"></a>  
+### <a name="assembly-systemxamldll"></a>어셈블리: System.Xaml.dll  
   
 |형식|메시지|  
 |----------|-------------|  
@@ -589,8 +571,7 @@ ms.lasthandoff: 05/22/2017
  [맨 위로 이동](#introduction)  
   
 <a name="xml"></a>   
-### 어셈블리: System.Xml.dll
-<a id="assembly-systemxmldll" class="xliff"></a>  
+### <a name="assembly-systemxmldll"></a>어셈블리: System.Xml.dll  
   
 |형식|메시지|  
 |----------|-------------|  
@@ -603,8 +584,7 @@ ms.lasthandoff: 05/22/2017
  [맨 위로 이동](#introduction)  
   
 <a name="WindowsBase"></a>   
-### 어셈블리: WindowsBase.dll
-<a id="assembly-windowsbasedll" class="xliff"></a>  
+### <a name="assembly-windowsbasedll"></a>어셈블리: WindowsBase.dll  
   
 |형식|메시지|  
 |----------|-------------|  
@@ -613,20 +593,17 @@ ms.lasthandoff: 05/22/2017
  [맨 위로 이동](#introduction)  
   
 <a name="obsolete_types_in_microsoft_assemblies"></a>   
-## Microsoft 어셈블리에서 사용되지 않는 형식
-<a id="obsolete-types-in-microsoft-assemblies" class="xliff"></a>  
+## <a name="obsolete-types-in-microsoft-assemblies"></a>Microsoft 어셈블리에서 사용되지 않는 형식  
  다음 단원에서는 Microsoft 어셈블리에서 사용되지 않는 형식을 보여 줍니다. 이러한 어셈블리는 Microsoft.JScript.dll, Microsoft.VisualC.dll 등의 개별 언어를 대상으로 하는 어셈블리와 같은 특수 용도의 어셈블리입니다.  
   
 <a name="IEHost"></a>   
-### 어셈블리: IEHost.dll 및 IEExec.exe
-<a id="assembly-iehostdll-and-ieexecexe" class="xliff"></a>  
+### <a name="assembly-iehostdll-and-ieexecexe"></a>어셈블리: IEHost.dll 및 IEExec.exe  
  IEHost.dll 및 IEExec.exe 어셈블리는 .NET Framework에서 제거되었습니다. 해당 형식 및 멤버는 모두 사용되지 않으며 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]의 일부로 지원되지 않습니다. 이러한 어셈블리는 Windows Forms 컨트롤을 호스팅하여 Internet Explorer에서 실행 파일을 실행하기 위해 사용되었습니다. ClickOnce, XBAP(XAML 브라우저 응용 프로그램) 및 Microsoft Silverlight를 대신 사용하는 것이 좋습니다.  
   
  [맨 위로 이동](#introduction)  
   
 <a name="Engine"></a>   
-### 어셈블리: Microsoft.Build.Engine.dll
-<a id="assembly-microsoftbuildenginedll" class="xliff"></a>  
+### <a name="assembly-microsoftbuildenginedll"></a>어셈블리: Microsoft.Build.Engine.dll  
   
 |형식|메시지|  
 |----------|-------------|  
@@ -636,8 +613,7 @@ ms.lasthandoff: 05/22/2017
  [맨 위로 이동](#introduction)  
   
 <a name="jscript"></a>   
-### 어셈블리: Microsoft.JScript.dll
-<a id="assembly-microsoftjscriptdll" class="xliff"></a>  
+### <a name="assembly-microsoftjscriptdll"></a>어셈블리: Microsoft.JScript.dll  
   
 |형식|메시지|  
 |----------|-------------|  
@@ -663,8 +639,7 @@ ms.lasthandoff: 05/22/2017
  [맨 위로 이동](#introduction)  
   
 <a name="VBCompat"></a>   
-### 어셈블리: Microsoft.VisualBasic.Compatibility.dll
-<a id="assembly-microsoftvisualbasiccompatibilitydll" class="xliff"></a>  
+### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>어셈블리: Microsoft.VisualBasic.Compatibility.dll  
   
 |형식|메시지|  
 |----------|-------------|  
@@ -739,8 +714,7 @@ ms.lasthandoff: 05/22/2017
  [맨 위로 이동](#introduction)  
   
 <a name="VBCompatData"></a>   
-### 어셈블리: Microsoft.VisualBasic.Compatibility.Data.dll
-<a id="assembly-microsoftvisualbasiccompatibilitydatadll" class="xliff"></a>  
+### <a name="assembly-microsoftvisualbasiccompatibilitydatadll"></a>어셈블리: Microsoft.VisualBasic.Compatibility.Data.dll  
   
 |형식|메시지|  
 |----------|-------------|  
@@ -797,8 +771,7 @@ ms.lasthandoff: 05/22/2017
  [맨 위로 이동](#introduction)  
   
 <a name="visualc"></a>   
-### 어셈블리: Microsoft.VisualC.dll
-<a id="assembly-microsoftvisualcdll" class="xliff"></a>  
+### <a name="assembly-microsoftvisualcdll"></a>어셈블리: Microsoft.VisualC.dll  
   
 |형식|메시지|  
 |----------|-------------|  
@@ -813,8 +786,7 @@ ms.lasthandoff: 05/22/2017
 |<xref:Microsoft.VisualC.NeedsCopyConstructorModifier?displayProperty=fullName>|Microsoft.VisualC.dll은 사용되지 않는 어셈블리이며 이전 버전과의 호환성을 위해서만 존재합니다.|  
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=fullName>|Microsoft.VisualC.dll은 사용되지 않는 어셈블리이며 이전 버전과의 호환성을 위해서만 존재합니다.|  
   
-## 참고 항목
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>참고 항목  
  [클래스 라이브러리의 사용되지 않는 기능](../../../docs/framework/whats-new/whats-obsolete.md)   
  [사용되지 않는 멤버](../../../docs/framework/whats-new/obsolete-members.md)
 

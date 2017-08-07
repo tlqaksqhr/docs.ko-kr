@@ -1,5 +1,5 @@
 ---
-title: ".NET Core 및 오픈 소스 | Microsoft 문서"
+title: ".NET Core 및 오픈 소스"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -14,20 +14,18 @@ caps.latest.revision: 8
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 24ae3c7e78d43960cf8c4127a164caa7edb69254
-ms.openlocfilehash: c6e7a2658cffa5692ffe515f6d07918f550d72c6
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b61533260a86f10beda0b6652771c858828ec62c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/25/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# .NET Core 및 오픈 소스
-<a id="net-core-and-open-source" class="xliff"></a>
+# <a name="net-core-and-open-source"></a>.NET Core 및 오픈 소스
 이 항목에서는 .NET Core에 대한 간략한 개요 및 자세한 정보를 찾는 방법을 보여줍니다. .NET Core 주제에 대한 전체 목록은 [.NET Core 가이드](../../core/index.md)를 참조하세요.
   
 <a name="BKMK_WhatisNETCore"></a>   
-## .NET Core란?
-<a id="what-is-net-core" class="xliff"></a>  
+## <a name="what-is-net-core"></a>.NET Core란?  
  .NET Core는 .NET 플랫폼의 일반적인 용도를 위한 모듈식 플랫폼 간 오픈 소스 구현입니다. .NET Framework와 동일한 많은 API를 포함하고 있으며(.NET Core는 작은 집합) 다양한 운영 체제 및 대상 칩을 지원하는 런타임, 프레임 워크, 컴파일러 및 도구 구성 요소를 포함합니다. .NET Core 구현은 주로 ASP.NET Core 작업을 기반으로 하지만 많은 최신 런타임에 대한 필요와 욕구에 의해서도 구현됩니다. 장치, 클라우드 및 포함/IoT 시나리오에 사용할 수 있습니다.  
   
  .NET Core를 시작하려면 [.NET Core 홈 페이지](https://www.microsoft.com/net/core)를 방문하십시오.  
@@ -42,8 +40,7 @@ ms.lasthandoff: 05/25/2017
 
 -   **모듈식:** .NET Core는 NuGet을 통해 작은 어셈블리 패키지로 릴리스되므로 모듈식입니다. 대부분의 핵심 기능을 포함하는 하나의 큰 어셈블리 대신, .NET Core는 작은 기능 중심 패키지로 제공됩니다. 이렇게 하면 더 많은 Agile 개발 모델을 활성화하고 필요한 NuGet 패키지만 포함하도록 응용 프로그램을 최적화할 수 있습니다. 작은 응용 프로그램 노출 영역 혜택에는 보안 강화, 서비스 절감, 성능 향상 및 사용한 만큼만 지불하는 비용 감소가 포함됩니다.  
   
-## .NET Core 플랫폼
-<a id="the-net-core-platform" class="xliff"></a>  
+## <a name="the-net-core-platform"></a>.NET Core 플랫폼  
  .NET Core 플랫폼은 관리되는 컴파일러, 런타임, 기본 클래스 라이브러리 및 ASP.NET Core와 같은 다양한 응용 프로그램 모델을 포함하는 여러 요소로 구성됩니다. 다음의 [GitHub](https://github.com/) 리포지토리를 방문하여 다양한 구성 요소에 대해 자세히 알아보고 참여할 수 있습니다.  
   
 -   [.NET Core](https://github.com/dotnet/core)  
@@ -58,8 +55,8 @@ ms.lasthandoff: 05/25/2017
   
 -   [ASP.NET Core](https://github.com/aspnet/home)  
   
-## 참고 항목
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>참고 항목  
  [.NET Core 홈 페이지](https://www.microsoft.com/net/core)   
- [.NET Core 설명서 사이트](../core/index.md)   
+ [.NET Core 가이드](../../core/index.md)   
  [ASP.NET Core 설명서](/aspnet/core/)
+

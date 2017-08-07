@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework의 개요 | Microsoft Docs"
+title: ".NET Framework의 개요"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -19,15 +19,14 @@ caps.latest.revision: 34
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: f7af2ff5db3d6d06383906fc271ae60d68f43731
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6e4cd4dc15fb8da942e947a031567b180327a7d6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/19/2017
+ms.lasthandoff: 07/28/2017
 
 ---
-# .NET Framework의 개요
-<a id="overview-of-the-net-framework" class="xliff"></a>
+# <a name="overview-of-the-net-framework"></a>.NET Framework의 개요
 .NET Framework는 차세대 응용 프로그램 및 XML 웹 서비스의 빌드 및 실행을 지원하는 기술입니다. .NET Framework는 다음과 같은 목적을 달성하기 위해 디자인되었습니다.  
   
 -   개체 코드가 로컬로 저장 및 실행되든, 로컬로 실행되지만 인터넷을 통해 분산되든, 원격으로 실행되든 상관 없이 일관된 개체 지향 프로그래밍 환경을 제공합니다.  
@@ -55,13 +54,12 @@ ms.lasthandoff: 05/19/2017
   
  다음 그림에서는 응용 프로그램 및 전체 시스템에 대한 공용 언어 런타임과 클래스 라이브러리의 관계를 보여 줍니다. 이 그림에서는 관리 코드가 보다 큰 아키텍처에서 작동하는 방식도 보여 줍니다.  
   
- ![더 큰 아키텍처 내의 관리 코드](../../../docs/framework/get-started/media/circle.gif "circle")  
+ ![더 큰 아키텍처 내의 관리 코드](../../../docs/framework/get-started/media/circle.gif "원")  
 컨텍스트에 있는 .NET Framework  
   
  다음 섹션에서는 .NET Framework의 기본 기능에 대해 보다 자세히 설명합니다.  
   
-## 공용 언어 런타임의 기능
-<a id="features-of-the-common-language-runtime" class="xliff"></a>  
+## <a name="features-of-the-common-language-runtime"></a>공용 언어 런타임의 기능  
  공용 언어 런타임에서는 메모리, 스레드 실행, 코드 실행, 코드 안전성 확인, 컴파일 및 기타 시스템 서비스를 관리합니다. 이러한 기능은 공용 언어 런타임에서 실행되는 관리 코드의 기본 기능입니다.  
   
  보안과 관련하여, 관리되는 구성 요소의 장점으로 인터넷, 기업 네트워크 및 로컬 컴퓨터 등을 포함하는 여러 요소에 따라 신뢰도를 다르게 부여할 수 있습니다. 이는 관리되는 구성 요소가 동일한 활성 응용 프로그램에 사용되는 경우에도 파일 액세스 작업, 레지스트리 액세스 작업 또는 기타 중요한 기능을 수행할 수 있을 수도 있고 수행할 수 없을 수도 있음을 의미합니다.  
@@ -80,8 +78,7 @@ ms.lasthandoff: 05/19/2017
   
  마지막으로, 런타임은 Microsoft SQL Server 및 IIS(인터넷 정보 서비스)와 같은 고성능의 서버 쪽 응용 프로그램을 통해 호스팅될 수 있습니다. 이 인프라를 사용하면 관리 코드로 비즈니스 논리를 작성하면서, 런타임 호스팅을 지원하는 우수한 엔터프라이즈 서버의 뛰어난 성능을 경험할 수 있습니다.  
   
-## .NET Framework 클래스 라이브러리
-<a id="net-framework-class-library" class="xliff"></a>  
+## <a name="net-framework-class-library"></a>.NET Framework 클래스 라이브러리  
  .NET Framework 클래스 라이브러리는 공용 언어 런타임과 강력하게 통합된 다시 사용할 수 있는 형식의 컬렉션입니다. 클래스 라이브러리는 개체 지향적이며, 사용자 고유의 관리 코드는 이 라이브러리에서 제공하는 형식에서 기능이 파생될 수 있습니다. 클래스 라이브러리를 사용하면 .NET Framework 형식을 사용하기가 쉬워질 뿐만 아니라 .NET Framework의 새로운 기능을 익히는 데 필요한 시간도 줄어듭니다. 또한 타사 구성 요소가 .NET Framework의 클래스와 쉽게 통합될 수 있습니다.  
   
  예를 들어, .NET Framework 컬렉션 클래스에서는 사용자 고유의 컬렉션 클래스를 개발하는 데 사용할 수 있는 여러 인터페이스를 구현합니다. 사용자의 컬렉션 클래스는 .NET Framework의 클래스와 쉽게 결합됩니다.  
@@ -104,11 +101,11 @@ ms.lasthandoff: 05/19/2017
   
  예를 들어, Windows Forms 클래스는 Windows GUI 개발을 매우 단순하게 하는 다시 사용할 수 있는 형식의 포괄적인 집합입니다. ASP.NET Web Form 응용 프로그램을 작성하는 경우 Web Forms 클래스를 사용할 수 있습니다.  
   
-## 참고 항목
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>참고 항목  
  [시스템 요구 사항](../../../docs/framework/get-started/system-requirements.md)   
  [설치 가이드](../../../docs/framework/install/index.md)   
  [개발 가이드](../../../docs/framework/development-guide.md)   
  [도구](../../../docs/framework/tools/index.md)   
  [.NET Framework 샘플](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)   
  [.NET Framework 클래스 라이브러리](http://go.microsoft.com/fwlink/?LinkID=227195)
+
