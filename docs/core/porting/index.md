@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 00d00d38-99af-44f4-a75f-defcd9729dc5
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 40930b572b385c5407d309ddcacdcc86097a9919
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: 4fc68a3dbdec634d8e92a066a46939ba19c65db7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
@@ -47,7 +47,7 @@ ms.lasthandoff: 07/28/2017
 
 다음은 유용하게 사용할 수 있는 간단한 도구 목록입니다.
 
-* NuGet - [Nuget 클라이언트](https://dist.nuget.org/index.html) 또는 [NuGet 패키지 탐색기](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer)로, Microsoft의 .NET 플랫폼용 패키지 관리자입니다.
+* NuGet - [NuGet 클라이언트](https://dist.nuget.org/index.html) 또는 [NuGet 패키지 탐색기](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer)로, Microsoft의 .NET 구현용 패키지 관리자입니다.
 * Api Portability Analyzer - [명령줄 도구](https://github.com/Microsoft/dotnet-apiport/releases) 또는 [Visual Studio 확장](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)으로, 문제에 대한 어셈블리 단위 분석 결과를 사용하여 .NET Framework와 .NET Core 간에 코드를 이식할 수 있는 정도에 대한 보고서를 생성할 수 있는 도구 체인입니다.  자세한 내용은 [프로세스에 도움이 되는 도구](https://github.com/Microsoft/dotnet-apiport/blob/master/docs/HowTo/)를 참조하세요.
 * 역방향 패키지 검색 - 형식을 검색하고 해당 형식을 포함하는 패키지를 찾을 수 있는 [유용한 웹 서비스](https://packagesearch.azurewebsites.net)입니다.
 

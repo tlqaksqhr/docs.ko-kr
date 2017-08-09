@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b4f59c0ba38168960bf5d662e4719d9b31ef553d
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 4708abcbd14f47089859ea1dba143a6648c845e5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -83,7 +83,7 @@ PATCH인 경우
 
 - .NET Core 1.0 기준 v1.6(이러한 버전은 일반적으로나 의도적으로 일치하지 않음).
 - `netstandard` 프레임워크에 매핑됩니다. 
-- 최신 앱 개발에 필요한 것으로 간주되고 .NET 플랫폼에서 [.NET 표준](../../standard/net-standard.md) 플랫폼으로 간주되도록 구현해야 하는 패키지를 설명합니다.
+- 최신 앱 개발에 필요한 것으로 간주되고 .NET 구현에서 [.NET 표준](../../standard/net-standard.md) 플랫폼으로 간주되도록 구현해야 하는 패키지를 설명합니다.
 
 **Microsoft.NETCore.App**
 
@@ -97,7 +97,7 @@ PATCH인 경우
 
 프레임워크 버전은 새 API가 추가될 때 업데이트됩니다. 이러한 버전은 구현 관련 사항이 아닌 API 셰이프를 나타내므로 패치 버전에 대한 개념이 없습니다. 주 및 부 버전 관리는 앞 부분에 지정된 SemVer 규칙을 따릅니다.
 
-`netcoreapp` 프레임워크는 .NET Core 배포에 연결되어 있습니다. 따라서 .NET Core에서 사용하는 버전 번호를 따릅니다. 예를 들어 .NET Core 2.0이 릴리스되면 `netcoreapp2.0`을 대상으로 합니다. 모든 프레임워크에 동일하게 적용된다는 점을 고려하면 `netstandard` 프레임워크는 .NET 런타임의 버전 관리 체계와 일치하지 않습니다.
+`netcoreapp` 프레임워크는 .NET Core 배포에 연결되어 있습니다. 따라서 .NET Core에서 사용하는 버전 번호를 따릅니다. 예를 들어 .NET Core 2.0이 릴리스되면 `netcoreapp2.0`을 대상으로 합니다. 모든 프레임워크에 동일하게 적용된다는 점을 고려하면 `netstandard` 프레임워크는 .NET 구션의 버전 관리 체계와 일치하지 않습니다.
 
 ## <a name="versioning-in-practice"></a>실제 버전 관리
 

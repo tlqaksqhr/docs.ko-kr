@@ -17,10 +17,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b7197f2453367e4613b4d44f0d84be5984525a5a
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: f922abca6898e91748158ee16f89ca7f57a81bf7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
@@ -703,7 +703,7 @@ UTC보다 8시간 늦은 시스템에 관해 serialize된 시간 문자열 "03:0
 
 - **ASP.NET 5**
 
-     .NET 2015에는 최신 클라우드 기반 앱을 빌드하기 위한 린(lean) .NET 플랫폼인 ASP.NET 5가 포함되어 있습니다. 이 플랫폼은 모듈식이므로 응용 프로그램에 필요한 기능만 포함할 수 있습니다. IIS에서 호스트되거나 사용자 지정 프로세스에서 자체 호스트될 수 있으며 동일한 서버에서 다양한 .NET Framework 버전으로 앱을 실행할 수 있습니다. 클라우드 배포용으로 설계된 새 환경 구성 시스템도 포함됩니다.
+     .NET 2015에는 최신 클라우드 기반 앱을 빌드하기 위한 린(lean) .NET 구현인 ASP.NET 5가 포함되어 있습니다. ASP.NET 5는 모듈식이므로 응용 프로그램에 필요한 기능만 포함할 수 있습니다. IIS에서 호스트되거나 사용자 지정 프로세스에서 자체 호스트될 수 있으며 동일한 서버에서 다양한 .NET Framework 버전으로 앱을 실행할 수 있습니다. 클라우드 배포용으로 설계된 새 환경 구성 시스템도 포함됩니다.
 
      MVC, Web API 및 웹 페이지가 MVC 6이라는 단일 프레임워크로 통합됩니다. Visual Studio 2015의 새로운 도구를 통해 ASP.NET 5 앱을 빌드합니다. 기존 응용 프로그램도 새로운 .NET Framework에서 작동하지만 MVC 6 또는 SignalR 3을 사용하는 앱을 빌드하려면 Visual Studio 2015의 프로젝트 시스템을 사용해야 합니다.
 
