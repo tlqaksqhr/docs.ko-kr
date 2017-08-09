@@ -13,8 +13,8 @@
 | Windows Phone Silverlight                 | 8.0   |        |       |       |       |        |        |       |
 
 - 열은 .NET 표준 버전을 나타냅니다. 각 헤더 셀은 .NET 표준의 해당 버전에 추가된 API를 보여 주는 문서의 링크입니다.
-- 행은 다양한 .NET 플랫폼을 나타냅니다.
-- 각 셀의 버전 번호는 해당 .NET 표준 버전을 대상으로 지정하는 데 필요한 플랫폼의 *최소* 버전을 나타냅니다.
+- 행은 다양한 .NET 구현을 나타냅니다.
+- 각 셀의 버전 번호는 해당 .NET 표준 버전을 대상으로 지정하는 데 필요한 구현의 *최소* 버전을 나타냅니다.
 
 [1.0]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.0.md
 [1.1]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.1.md
