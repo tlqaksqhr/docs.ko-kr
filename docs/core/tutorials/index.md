@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d12286fb6d9666aa74b4da260a5e64776010890c
+ms.sourcegitcommit: 3bd8800e7410ae4a3b89f5962af957789edd48b0
+ms.openlocfilehash: 828a858f1c0679d72d59eb0a1db2d5e26aa7b88e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 07/28/2017
 
 ## <a name="building-applications-with-visual-studio-code"></a>Visual Studio Code를 사용하여 응용 프로그램 빌드
 
-- [Visual Studio Code를 사용하여 C# 시작](../../csharp/getting-started/with-visual-studio-code.md)
+- [C# 및 Visual Studio Code 시작](with-visual-studio-code.md)
 - [macOS에서 .NET Core 시작](using-on-macos.md)
 
 ## <a name="building-applications-with-visual-studio-for-mac"></a>Visual Studio for Mac을 사용하여 응용 프로그램 빌드

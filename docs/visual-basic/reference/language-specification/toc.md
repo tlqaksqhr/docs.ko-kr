@@ -116,5 +116,6 @@
 ### [권장 태그](../../../../_vblang/spec/documentation-comments.md#recommended-tags)
 ### [ID 문자열](../../../../_vblang/spec/documentation-comments.md#id-strings)
 ### [문서 주석 예](../../../../_vblang/spec/documentation-comments.md#documentation-comments-example)
-## 문법: [vb.html](http://ljw1004.github.io/vbspec/vb.html) 또는 ANTLR 형식으로 다운로드: [vb.g4](vb.g4?raw=true)
-
+## 문법
+### [vb.html](http://ljw1004.github.io/vbspec/vb.html)
+### [vb.g4 - ANTLR 형식](http://ljw1004.github.io/vbspec/vb.g4?raw=true)

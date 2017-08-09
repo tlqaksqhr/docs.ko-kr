@@ -36,10 +36,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5b8b7951c01ac5a82c79a0942fdc99368c2d0175
+ms.sourcegitcommit: 9fc16c63a6e0e0dd31ee4a68fca8b945b8281e04
+ms.openlocfilehash: 906fa362c249c3e5abbd6f2ed3ba879a81334aeb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="types-c-programming-guide"></a>형식(C# 프로그래밍 가이드)
@@ -140,7 +140,7 @@ char c = 'Z';
  모든 열거형은 <xref:System.ValueType?displayProperty=fullName>에서 상속받는 <xref:System.Enum?displayProperty=fullName>에서 상속됩니다. 구조체에 적용되는 모든 규칙이 열거형에도 적용됩니다. 열거형에 대한 자세한 내용은 [열거형 형식](../../../csharp/programming-guide/enumeration-types.md)을 참조하세요.  
   
 ### <a name="reference-types"></a>참조 형식  
- [클래스](../../../csharp/language-reference/keywords/class.md), [대리자](../../../csharp/language-reference/keywords/delegate.md), 배열 또는 [인터페이스](../../../csharp/language-reference/keywords/interface.md)로 정의되는 형식은 *참조 형식*입니다. 런타임에 참조 형식의 변수를 선언하면 [new](../../../csharp/language-reference/keywords/new.md) 연산자를 사용하여 개체의 인스턴스를 명시적으로 만들거나 `new, as shown in the following example:`를 사용하여 다른 곳에서 만들어진 개체를 할당할 때까지 변수에는 [null](../../../csharp/language-reference/keywords/null.md) 값이 포함됩니다.  
+ [클래스](../../../csharp/language-reference/keywords/class.md), [대리자](../../../csharp/language-reference/keywords/delegate.md), 배열 또는 [인터페이스](../../../csharp/language-reference/keywords/interface.md)로 정의되는 형식은 *참조 형식*입니다. 런타임에 참조 형식의 변수를 선언하면 [new](../../../csharp/language-reference/keywords/new.md) 연산자를 사용하여 개체의 인스턴스를 명시적으로 만들거나 다음 예제와 같이 `new`를 사용하여 다른 곳에서 만들어진 개체를 할당할 때까지 변수에는 [null](../../../csharp/language-reference/keywords/null.md) 값이 포함됩니다.
   
 ```csharp  
 MyClass mc = new MyClass();  

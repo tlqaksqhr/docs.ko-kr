@@ -65,9 +65,12 @@
             - name: .NET Framework의 병렬 프로그래밍
               tocHref: /dotnet/standard/parallel-programming/
               topicHref: /dotnet/standard/parallel-programming/index
-            - name: .NET Framework의 보안
+            - name: .NET의 보안
               tocHref: /dotnet/standard/security/
               topicHref: /dotnet/standard/security/index
+            - name: .NET의 Serialization
+              tocHref: /dotnet/standard/serialization/
+              topicHref: /dotnet/standard/serialization/index
             - name: 관리되는 스레딩
               tocHref: /dotnet/standard/threading/
               topicHref: /dotnet/standard/threading/index
@@ -211,9 +214,6 @@
             - name: .NET Framework의 보안
               tocHref: /dotnet/framework/security/
               topicHref: /dotnet/framework/security/index
-            - name: .NET Framework의 Serialization
-              tocHref: /dotnet/framework/serialization/
-              topicHref: /dotnet/framework/serialization/index
             - name: .NET Framework 도구
               tocHref: /dotnet/framework/tools/
               topicHref: /dotnet/framework/tools/index
