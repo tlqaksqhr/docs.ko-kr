@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f2b312cb-f80c-4b0d-9101-93908f06a6fa
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0e002411d9856bc5f98566ed1bd9d8122e884d5d
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 51f21e49623231f08d2c4a72e9b99c1141563e5e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -124,13 +124,13 @@ Windows 및 Unix 구현은 크기가 비슷합니다. CoreFX는 [Microsoft.Win32
 - [System.IO](https://github.com/dotnet/corefx/tree/master/src/System.IO) 및 [System.Security.Cryptography.Algorithms](https://github.com/dotnet/corefx/tree/master/src/System.Security.Cryptography.Algorithms)는 저장소 및 암호화 API가 각 OS에서 현저하게 다르기 때문에 플랫폼별입니다. 
 - [System.Collections](https://github.com/dotnet/corefx/tree/master/src/System.Collections) 및 [System.Linq](https://github.com/dotnet/corefx/tree/master/src/System.Linq)는 데이터 구조를 통해 만들고 작동하기 때문에 플랫폼 중립입니다.
 
-## <a name="comparisons-to-other-net-platforms"></a>다른 .NET 플랫폼과 비교
+## <a name="comparisons-to-other-net-implementations"></a>다른 .NET 구현과 비교
 
-기존 .NET 플랫폼과 비교하여 .NET Core의 크기 및 모양을 이해하는 것이 가장 쉽습니다. 
+기존 .NET 구현과 비교하여 .NET Core의 크기 및 모양을 이해하는 것이 가장 쉽습니다. 
 
 ### <a name="comparison-with-net-framework"></a>.NET Framework와 비교
 
-.NET 플랫폼은 Microsoft가 2000년에 처음 발표한 후 발전해 왔습니다. .NET Framework는 Microsoft가 15년 이상 동안 생성한 기본 .NET 제품이었습니다. 
+.NET은 Microsoft가 2000년에 처음 발표한 후 발전해 왔습니다. .NET Framework는 Microsoft가 15년 이상 동안 생성한 기본 .NET 구현입니다. 
 
 .NET Core와 .NET Framework 간의 주요 차이점은 다음과 같습니다. 
 
@@ -140,7 +140,7 @@ Windows 및 Unix 구현은 크기가 비슷합니다. CoreFX는 [Microsoft.Win32
 - **플랫폼** -- .NET Framework는 Windows와 Windows Server를 지원하는 반면 .NET Core는 macOS 및 Linux도 지원합니다.
 - **오픈 소스** -- .NET Core는 오픈 소스이며, [.NET Framework의 읽기 전용 하위 집합](https://github.com/microsoft/referencesource)은 오픈 소스입니다.
 
-.NET Core는 고유하고 .NET Framework 및 기타 .NET 플랫폼과 현저한 차이가 있지만 소스 또는 이진 공유 기술을 사용하여 간단하게 코드를 공유할 수 있습니다. 
+.NET Core는 고유하고 .NET Framework 및 기타 .NET 구현과 현저한 차이가 있지만 소스 또는 이진 공유 기술을 사용하여 간단하게 코드를 공유할 수 있습니다. 
 
 ### <a name="comparison-with-mono"></a>Mono와 비교
 
