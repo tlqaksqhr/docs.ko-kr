@@ -30,10 +30,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 14022b0272d5ad356c76bf0153f6ea5dfda91994
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: f88dc299bdc503ae83740e4c1259aa1896481760
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 # <a name="getting-started-with-c"></a>C# 시작
@@ -41,7 +41,7 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="in-this-section"></a>단원 내용  
  [C# 언어 및 .NET Framework 소개](../../csharp/getting-started/introduction-to-the-csharp-language-and-the-net-framework.md)  
- C# 언어와 .NET 플랫폼에 대해 간략하게 설명합니다.  
+ C# 언어 및 .NET에 대해 간략히 설명합니다.  
   
  [Visual C# 프로그래머를 위한 추가 리소스](../../csharp/getting-started/additional-resources.md)  
  일반적인 문제 해결 방법을 찾는 경우 참조할 수 있는 웹 사이트 및 뉴스 그룹의 링크를 제공합니다.  
