@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 1f3b9a68-4dea-4b60-8cb3-f46164eedbbf
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 50e128137fde445f64e10cf7c2a1ee5fdecb34e6
-ms.openlocfilehash: 283b9405000cba328c348fada81c70683b700a8b
+ms.translationtype: HT
+ms.sourcegitcommit: 318bf7a77748dfcee5f28243409d31e8d3e5c9ff
+ms.openlocfilehash: 8e0fd8db2810c36358a7bcf94f4bc5e7d2aa399e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/01/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/01/2017
 
 필요한 구성은 Windows용 Docker에서 **[공유 드라이브](https://docs.docker.com/docker-for-windows/#shared-drives)**를 설정하는 것입니다. 이 설정은 볼륨 매핑 및 디버깅 지원을 위해 필요합니다.
 
-시스템 트레이에서 Docker 아이콘을 마우스 오른쪽 단추로 클릭하고 설정을 클릭한 다음 공유 드라이브를 선택합니다.
+시스템 트레이에서 Docker 아이콘을 마우스 오른쪽 단추로 클릭하고 **설정**을 클릭한 다음 **공유 드라이브**를 선택합니다. Docker에서 파일을 저장할 드라이브를 선택하고 변경 내용을 적용합니다.
 
 ![공유 드라이브](./media/visual-studio-tools-for-docker/settings-shared-drives-win.png)
 
@@ -48,6 +48,8 @@ Visual Studio를 사용하여 새로운 ASP.NET Core 웹 응용 프로그램을 
 프로젝트 상황에 맞는 메뉴
 
 ![Docker 지원 추가를 마우스 오른쪽 단추로 클릭](./media/visual-studio-tools-for-docker/right-click-add-docker-support.png)
+
+프로젝트에 Docker 지원을 추가할 때 Windows 컨테이너 또는 Linux 컨테이너를 선택할 수 있습니다. (Docker 호스트는 동일한 컨테이너 형식을 실행 중이어야 합니다. 실행 중인 Docker 인스턴스에서 컨테이너 형식을 변경해야 하는 경우 시스템 트레이의 **Docker** 아이콘을 마우스 오른쪽 단추로 클릭하고 **Windows 컨테이너로 전환** 또는 **Linux 컨테이너로 전환**을 선택합니다.) 
 
 다음 파일이 프로젝트에 추가됩니다.
 

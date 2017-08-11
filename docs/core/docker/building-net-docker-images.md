@@ -11,10 +11,10 @@ ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b0e227bb932abe68db26f1d05e6170af399d0d39
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 252b67a528b9cc666a5353b7c4a4c7e2c488e7af
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
  
@@ -53,7 +53,7 @@ ms.lasthandoff: 07/28/2017
 
 - `microsoft/dotnet:<version>-onbuild`: 즉, **microsoft/dotnet:1.0.0-preview2-onbuild**로, [ONBUILD](https://docs.docker.com/engine/reference/builder/#/onbuild) 트리거를 포함합니다. 빌드는 응용 프로그램을 [COPY](https://docs.docker.com/engine/reference/builder/#/copy)하고, `dotnet restore`를 실행하며, Docker 이미지가 실행될 때 응용 프로그램을 실행하는 [ENTRYPOINT](https://docs.docker.com/engine/reference/builder/#/entrypoint) `dotnet run` 명령을 만듭니다. 프로덕션에 최적화된 이미지는 아니지만 단순히 소스 코드를 이미지에 복사하여 실행할 때 유용한 경우는 있습니다. 
 
-- `microsoft/dotnet:<version>-core-deps`: 즉, **microsoft/dotnet:1.0.0-core-deps**로, 자체 포함 응용 프로그램을 실행하려는 경우 이 이미지를 사용합니다. .NET Core에 필요한 모든 기본 종속성과 함께 운영 체제를 포함합니다. 이 이미지는 고유한 사용자 지정 CoreFX 또는 CoreCLR 빌드에 대한 기본 이미지로 사용할 수도 있습니다. **onbuild** 변형이 단순히 코드를 이미지에 배치하고 실행하도록 최적화된 반면 이 이미지는 .NET 런타임이 응용 프로그램과 함께 패키지로 제공되는 .NET Core 앱을 실행하는 데 필요한 운영 체제 종속성만 갖도록 최적화되어 있습니다. 각 이미지가 응용 프로그램 내에서 .NET Core 런타임을 전달하기 때문에 이 이미지는 일반적으로 동일한 호스트에서 여러 .NET Core 컨테이너를 실행하는 데 최적화되어 있지 않으며 이미지 레이어를 활용할 수 없습니다.   
+- `microsoft/dotnet:<version>-core-deps`: 즉, **microsoft/dotnet:1.0.0-core-deps**로, 자체 포함 응용 프로그램을 실행하려는 경우 이 이미지를 사용합니다. .NET Core에 필요한 모든 기본 종속성과 함께 운영 체제를 포함합니다. 이 이미지는 고유한 사용자 지정 CoreFX 또는 CoreCLR 빌드에 대한 기본 이미지로 사용할 수도 있습니다. **onbuild** 변형이 단순히 코드를 이미지에 배치하고 실행하도록 최적화된 반면, 이 이미지는 .NET 런타임이 응용 프로그램과 함께 패키지로 제공되는 .NET Core 앱을 실행하는 데 필요한 운영 체제 종속성만 갖도록 최적화되어 있습니다. 각 이미지가 응용 프로그램 내에서 .NET Core 런타임을 전달하기 때문에 이 이미지는 일반적으로 동일한 호스트에서 여러 .NET Core 컨테이너를 실행하는 데 최적화되어 있지 않으며 이미지 레이어를 활용할 수 없습니다.   
 
 각 변형의 최신 버전:
 
