@@ -1,10 +1,7 @@
 ---
 title: "인터페이스(Visual Basic)"
-ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -34,10 +31,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1da2458f39886a5d5f0bbf17fd9e63550ed80adf
+ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
+ms.openlocfilehash: 0b3f13cd69564a61da1a961e35c5319e4c2d79aa
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="interfaces-visual-basic"></a>인터페이스(Visual Basic)
@@ -110,5 +107,5 @@ ms.lasthandoff: 07/28/2017
 |제목|설명|  
 |-----------|-----------------|  
 |[연습: 인터페이스 만들기 및 구현](../../../../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)|고유한 인터페이스를 정의하고 구현하는 프로세스를 안내하는 자세한 절차를 설명합니다.|  
-|[제네릭 인터페이스의 가변성](http://msdn.microsoft.com/library/e14322da-1db3-42f2-9a67-397daddd6b6a)|제네릭 인터페이스의 공분산 및 반공분산에 대해 설명하고 .NET Framework의 Variant 제네릭 인터페이스의 목록을 제공합니다.|
+|[제네릭 인터페이스의 가변성](../../concepts/covariance-contravariance/variance-in-generic-interfaces.md)|제네릭 인터페이스의 공분산 및 반공분산에 대해 설명하고 .NET Framework의 Variant 제네릭 인터페이스의 목록을 제공합니다.|
 

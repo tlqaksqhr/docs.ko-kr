@@ -382,7 +382,7 @@
 # [Visual Basic 가이드](visual-basic/index.md)
 ## [시작](visual-basic/getting-started/index.md)
 ### [Visual Basic의 새로운 기능](visual-basic/getting-started/whats-new.md)
-### [Visual Studio 2015의 Visual Basic 주요 변경 내용](visual-basic/getting-started/breaking-changes-in-visual-studio-2015.md)
+### [Visual Studio 의 Visual Basic 주요 변경 내용](visual-basic/getting-started/breaking-changes-in-visual-studio.md)
 ### [Visual Basic 프로그래머를 위한 추가 리소스](visual-basic/getting-started/additional-resources.md)
 
 ## [응용 프로그램 개발](visual-basic/developing-apps/index.md)
