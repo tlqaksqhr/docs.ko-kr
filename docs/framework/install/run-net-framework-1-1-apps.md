@@ -1,7 +1,7 @@
 ---
 title: "Windows 8, Windows 8.1 또는 Windows 10에서 .NET Framework 1.1 앱 실행"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 05/26/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
@@ -18,20 +18,20 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4ae88205af37d8ffb49e845942e83432357d4bdd
+ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
+ms.openlocfilehash: c7b53a842dc4f9b6bfc04e058411e4a6d11a7bd1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
 # <a name="run-net-framework-11-apps-on-windows-8-windows-81-or-windows-10"></a>Windows 8, Windows 8.1 또는 Windows 10에서 .NET Framework 1.1 앱 실행
 
-.NET Framework 1.1은 [!INCLUDE[win8](../../../includes/win8-md.md)], [!INCLUDE[win81](../../../includes/win81-md.md)], [!INCLUDE[winserver8](../../../includes/winserver8-md.md)], [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] 또는 Windows 10 운영 체제에서 지원되지 않습니다. 경우에 따라 .NET Framework 1.1은 응용 프로그램을 실행하는 데 필요할 때 특별히 식별됩니다. 이 경우 ISV(Independent Software Vendor)에 문의하여 [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] 이상의 버전에서 실행되도록 응용 프로그램을 업그레이드하도록 요청합니다. 자세한 내용은 [.NET Framework 1.1에서 마이그레이션](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)을 참조하세요.
+.NET Framework 1.1은 [!INCLUDE[win8](../../../includes/win8-md.md)], [!INCLUDE[win81](../../../includes/win81-md.md)], [!INCLUDE[winserver8](../../../includes/winserver8-md.md)], [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] 또는 Windows 10 운영 체제에서 지원되지 않습니다. 앱을 실행하는 데 특별히 .NET Framework 1.1이 필요하다고 확인될 수도 있습니다. 이 경우 ISV(Independent Software Vendor)에 문의하여 [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] 이상의 버전에서 실행되도록 앱을 업그레이드해야 합니다. 자세한 내용은 [.NET Framework 1.1에서 마이그레이션](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)을 참조하세요.
 
 ## <a name="install-the-net-framework-11-from-a-cd-or-download-center"></a>CD 또는 다운로드 센터에서 .NET Framework 1.1 설치
 
-.NET Framework 1.1을 [!INCLUDE[win8](../../../includes/win8-md.md)], [!INCLUDE[win81](../../../includes/win81-md.md)], [!INCLUDE[winserver8](../../../includes/winserver8-md.md)], [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] 또는 Windows 10에 수동으로 설치할 수는 없습니다. 더 이상 지원되지 않습니다. 패키지를 설치하려고 하면 다음과 같은 오류 메시지가 표시됩니다. "이 버전의 .NET Framework가 이전에 설치된 버전과 호환되지 않으므로 설치를 계속할 수 없습니다." 이 문제를 해결하려면 [.NET Framework 3.5 SP1](http://www.microsoft.com/download/details.aspx?id=22)을 설치합니다. 이 버전에는 [!INCLUDE[win8](../../../includes/win8-md.md)], [!INCLUDE[win81](../../../includes/win81-md.md)] 및 Windows 10에서 지원되는 .NET Framework 2.0(.NET Framework 1.1 후속 릴리스)이 포함되어 있습니다. 항상 먼저 응용 프로그램을 설치하여 .NET Framework의 이후 버전으로 자동으로 업데이트할지 결정해야 합니다. 그렇지 않은 경우 ISV에 응용 프로그램 업데이트를 문의하십시오.
+.NET Framework 1.1을 [!INCLUDE[win8](../../../includes/win8-md.md)], [!INCLUDE[win81](../../../includes/win81-md.md)], [!INCLUDE[winserver8](../../../includes/winserver8-md.md)], [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] 또는 Windows 10에 수동으로 설치할 수는 없습니다. 더 이상 지원되지 않습니다. 패키지를 설치하려고 하면 다음과 같은 오류 메시지가 표시됩니다. "이 버전의 .NET Framework가 이전에 설치된 버전과 호환되지 않으므로 설치를 계속할 수 없습니다." 이 문제를 해결하려면 [.NET Framework 3.5 SP1](http://www.microsoft.com/download/details.aspx?id=22)을 설치합니다. 이 버전에는 [!INCLUDE[win8](../../../includes/win8-md.md)], [!INCLUDE[win81](../../../includes/win81-md.md)] 및 Windows 10에서 지원되는 .NET Framework 2.0(.NET Framework 1.1 후속 릴리스)이 포함되어 있습니다. 항상 먼저 앱을 설치하여 .NET Framework의 이후 버전으로 자동으로 업데이트되는지 확인해야 합니다. 그러지 않으면 ISV에 앱 업데이트에 대해 문의하세요.
 
 ## <a name="see-also"></a>참고 항목
 

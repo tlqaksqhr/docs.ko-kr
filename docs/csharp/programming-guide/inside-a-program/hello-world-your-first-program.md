@@ -32,10 +32,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2305c0232038130e9d42d3e892597e3b753d5d08
+ms.sourcegitcommit: b7cb84362c96dac50ae5136334138b55ed1ce00b
+ms.openlocfilehash: 03891f83885cf41ab157ebd78ef7e72767b4b163
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- 프로그램 처음 만들기(C# 프로그래밍 가이드)
@@ -123,11 +123,11 @@ ms.lasthandoff: 07/28/2017
   
 2.  다음 단계 중 하나를 수행하여 명령 프롬프트 창을 엽니다.  
   
-    -   Windows 8의 경우 **시작** 화면에서 `Developer Command Prompt`를 검색하고 **VS2012용 개발자 명령 프롬프트**를 탭하거나 선택합니다.  
+    -   Windows 10의 경우 **시작** 메뉴에서 `Developer Command Prompt`를 검색하고 **VS 2017용 개발자 명령 프롬프트**를 탭하거나 선택합니다.  
   
          개발자 명령 프롬프트 창이 나타납니다.  
   
-    -   Windows 7의 경우 **시작** 메뉴를 열고, Visual Studio 현재 버전의 폴더를 확장하고, **Visual Studio Tools**의 바로 가기 메뉴를 열고 나서, **VS2012용 개발자 명령 프롬프트**를 선택합니다.  
+    -   Windows 7의 경우 **시작** 메뉴를 열고, Visual Studio 현재 버전의 폴더를 확장하고, **Visual Studio Tools**의 바로 가기 메뉴를 열고 나서, **VS 2017용 개발자 명령 프롬프트**를 선택합니다.  
   
          개발자 명령 프롬프트 창이 나타납니다.  
   

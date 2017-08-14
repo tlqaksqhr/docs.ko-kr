@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bbb524e50d74207227420d073afd5758d3d5aaa7
+ms.translationtype: HT
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 659a3366b00d6abe6598c31774d008c6b8f400fd
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -58,7 +58,7 @@ ms.lasthandoff: 07/28/2017
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/expression3.cs#3)]
 
-위의 예제에서 식 람다의 본문은 메서드 호출로 구성될 수 있습니다. 그러나 SQL Server 또는 EF(Entity Framework)와 같이 .NET Framework 외부에서 평가되는 식 트리를 만드는 경우 .NET 런타임 컨텍스트 외부에서는 메서드가 의미가 없을 수 있으므로 람다 식에서 메서드 호출을 사용할 수 없도록 방지해야 합니다. 이 경우 메서드 호출을 사용하도록 선택하면 메서드 호출을 철저히 테스트하여 성공적으로 해결할 수 있도록 해야 합니다.
+위의 예제에서 식 람다의 본문은 메서드 호출로 구성될 수 있습니다. 그러나 SQL Server 또는 EF(Entity Framework)와 같이 .NET Framework 외부에서 평가되는 식 트리를 만드는 경우 .NET 구현 컨텍스트 외부에서는 메서드가 의미가 없을 수 있으므로 람다 식에서 메서드 호출을 사용할 수 없도록 방지해야 합니다. 이 경우 메서드 호출을 사용하도록 선택하면 메서드 호출을 철저히 테스트하여 성공적으로 해결할 수 있도록 해야 합니다.
 
 ## <a name="statement-lambdas"></a>문 람다 ##
 

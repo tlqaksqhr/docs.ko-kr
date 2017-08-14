@@ -1,7 +1,7 @@
 ---
 title: "개발자용 .NET Framework 설치"
 ms.custom: 
-ms.date: 04/28/2017
+ms.date: 05/26/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
@@ -20,16 +20,16 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: da0e9bd789068d94feda3c2a6ab0d35606d423a1
+ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
+ms.openlocfilehash: 844b3e40b816d324ca4ba22d6884be5a7e3a2ec1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/05/2017
 
 ---
 
 # <a name="install-the-net-framework-for-developers"></a>개발자용 .NET Framework 설치
 
-.NET은 Windows에서 실행되는 대부분의 응용 프로그램에서 필수적인 요소이며, 해당 응용 프로그램이 실행되는 데 필요한 공통적인 기능을 제공합니다. 개발자를 위해 .NET Framework에서는 시각적으로 멋진 사용자 환경 및 원활하고 안전한 통신이 가능한 응용 프로그램을 구축하기 위한 포괄적이고 일관적인 프로그래밍 모델을 제공합니다.  
+.NET은 Windows에서 실행되는 대부분의 앱에서 필수적인 요소이며, 해당 앱이 실행되는 데 필요한 공통적인 기능을 제공합니다. 개발자를 위해 .NET Framework에서는 시각적으로 멋진 사용자 환경 및 원활하고 안전한 통신이 가능한 앱을 구축하기 위한 포괄적이고 일관적인 프로그래밍 모델을 제공합니다.  
 
 이 문서에서는 컴퓨터에 .NET Framework 4.5와 해당 포인트 릴리스(4.5.1, 4.5.2), [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 해당 포인트 릴리스(4.6.1, 4.6.2) 및 .NET Framework 4.7을 설치하기 위한 링크를 제공합니다. 개발자는 이러한 링크를 앱과 함께 .NET Framework를 다운로드하고 재배포하기 위해 사용할 수 있습니다.
 
