@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
 ms.translationtype: HT
-ms.sourcegitcommit: 3bd8800e7410ae4a3b89f5962af957789edd48b0
-ms.openlocfilehash: 828a858f1c0679d72d59eb0a1db2d5e26aa7b88e
+ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
+ms.openlocfilehash: 9932555d5a5b029b4faaf3edcaa3ab523eebe77e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 
@@ -23,12 +23,13 @@ ms.lasthandoff: 08/03/2017
 
 ## <a name="building-applications-with-visual-studio-2017"></a>Visual Studio 2017을 사용하여 응용 프로그램 빌드
 
-- [C# Hello World 응용 프로그램 빌드](../../csharp/getting-started/with-visual-studio.md)
-- [C# Hello World 응용 프로그램 디버깅](../../csharp/getting-started/debugging-with-visual-studio.md)
-- [C# Hello World 응용 프로그램 게시](../../csharp/getting-started/publishing-with-visual-studio.md)
-- [C# 클래스 라이브러리 빌드](../../csharp/getting-started/library-with-visual-studio.md)
-- [C# 클래스 라이브러리 테스트](../../csharp/getting-started/testing-library-with-visual-studio.md)
-- [.NET Core로 C# 클래스 라이브러리 사용](../../csharp/getting-started/consuming-library-with-visual-studio.md)
+- [C# Hello World 응용 프로그램 빌드](with-visual-studio.md)
+- [C# Hello World 응용 프로그램 디버깅](debugging-with-visual-studio.md)
+- [C# Hello World 응용 프로그램 게시](publishing-with-visual-studio.md)
+- [C# 클래스 라이브러리 빌드](library-with-visual-studio.md)
+- [Visual Basic에서 클래스 라이브러리 빌드](vb-library-with-visual-studio.md)
+- [클래스 라이브러리 테스트](testing-library-with-visual-studio.md)
+- [클래스 라이브러리 사용](consuming-library-with-visual-studio.md)
 - [Windows에서 완전한 C# .NET Core 솔루션 빌드](using-on-windows-full-solution.md)
 - [NoSQL 자습서: .NET Core의 DocumentDB C# 콘솔 응용 프로그램 빌드](/azure/documentdb/documentdb-dotnetcore-get-started)
 
@@ -46,7 +47,7 @@ ms.lasthandoff: 08/03/2017
 
 - [.NET Core CLI 도구를 사용하여 Windows/Linux/macOS에서 .NET Core 시작](using-with-xplat-cli.md)
 - [.NET Core CLI 도구를 사용하여 프로젝트 구성 및 테스트](testing-with-cli.md)
-- [F# 시작](../../fsharp/tutorials/getting-started/getting-started-command-line.md)
+- [F# 시작](../../fsharp/get-started/get-started-command-line.md)
 
 ## <a name="other"></a>기타
 - [Dotnet 테스트를 사용한 .NET Core의 단위 테스트](../testing/unit-testing-with-dotnet-test.md)
@@ -54,6 +55,7 @@ ms.lasthandoff: 08/03/2017
 - [플랫폼 간 도구로 라이브러리 개발](libraries.md)
 - [.NET Core 1.0에 대한 패키지 종속성 버전을 관리하는 방법](managing-package-dependency-versions.md)
 - [네이티브 코드에서 .NET Core 호스트](netcore-hosting.md)
+- [dotnet용 사용자 지정 템플릿 새로 만들기](create-custom-template.md)
 
 ASP.NET Core 웹 응용 프로그램 개발에 대한 자습서는 [ASP.NET Core 설명서](/aspnet/core/)를 참조하세요.
 

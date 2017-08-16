@@ -4,20 +4,19 @@ description: "CLI(명령줄 인터페이스) 도구 및 기능에 대한 개요"
 keywords: "CLI, CLI 도구, .NET, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 03/20/2017
+ms.date: 08/12/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 7c5eee9f-d873-4224-8f5f-ed83df329a59
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a8c91621095ea187dd4236db7533520556840c59
+ms.sourcegitcommit: 61dedb132a34cf97894e77bb20d47694b2c0c104
+ms.openlocfilehash: adde2922a6e98cc4ced7ea7313fa8eb702932471
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/13/2017
 
 ---
-
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core CLI(명령줄 인터페이스) 도구
 
 .NET Core CLI(명령줄 인터페이스)는 .NET 응용 프로그램 개발에 사용되는 새로운 플랫폼 간 도구 체인입니다. 이 CLI는 IDE(통합 개발 환경), 편집기 및 빌드 Orchestrator와 같은 기타 상위 수준 도구의 기반이 됩니다.
@@ -48,6 +47,7 @@ ms.lasthandoff: 07/28/2017
 * [migrate](dotnet-migrate.md)
 * [clean](dotnet-clean.md)
 * [sln](dotnet-sln.md)
+* [저장](dotnet-store.md) - .NET Core 2.0 SDK 이상 버전을 사용할 수 있습니다.
 
 ### <a name="project-modification-commands"></a>프로젝트 수정 명령
 
