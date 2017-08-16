@@ -1,6 +1,6 @@
 ---
 title: "Visual Basic 시작"
-ms.date: 2017-05-01
+ms.date: 2017-08-10
 ms.prod: .net
 ms.technology:
 - devlang-visual-basic
@@ -8,8 +8,8 @@ ms.topic: article
 dev_langs:
 - VB
 helpviewer_keywords:
-- getting started, Visual Basic
-- Visual Basic, getting started
+- get started, Visual Basic
+- Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 caps.latest.revision: 36
 author: dotnet-bot
@@ -30,13 +30,13 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0f94aab658175c1a338aff78d2645fd631fd37c8
+ms.sourcegitcommit: d69fc927565c3bb1c365850875c3c6a1787a1fe7
+ms.openlocfilehash: 3dfa38a495d12bc1e3f301009f4a90d42cbe4754
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/11/2017
 
 ---
-# <a name="getting-started-with-visual-basic"></a>Visual Basic 시작
+# <a name="get-started-with-visual-basic"></a>Visual Basic 시작
 설명서의 이 섹션에서는 Visual Basic 응용 프로그램의 개발을 시작하는 데 도움이 되는 내용을 제공합니다.  
   
 ## <a name="in-this-section"></a>단원 내용  
@@ -45,18 +45,18 @@ ms.lasthandoff: 07/28/2017
 각 Visual Basic .NET 버전의 새로운 기능을 나열합니다.
 
 [Visual Studio 의 Visual Basic 주요 변경 내용](breaking-changes-in-visual-studio.md)  
- 이 릴리스에서 응용 프로그램이 컴파일되지 않도록 하거나 런타임 동작을 변경할 수 있는 변경 사항을 보여줍니다.  
+이 릴리스에서 응용 프로그램이 컴파일되지 않도록 하거나 런타임 동작을 변경할 수 있는 변경 사항을 보여줍니다.  
   
- [Visual Basic 프로그래머를 위한 추가 리소스](../../visual-basic/getting-started/additional-resources.md)  
- 일반적인 문제 해결 방법을 찾는 경우 참조할 수 있는 웹 사이트 및 뉴스 그룹의 목록을 제공합니다.  
+[Visual Basic 프로그래머를 위한 추가 리소스](additional-resources.md)  
+일반적인 문제 해결 방법을 찾는 경우 참조할 수 있는 웹 사이트 및 뉴스 그룹의 목록을 제공합니다.  
   
- [Visual Basic 살펴보기](http://msdn.microsoft.com/vstudio/hh388573.aspx)  
- Visual Basic에서 프로그래밍하는 방법을 학습할 수 있는 리소스에 대한 링크를 제공합니다.  
-  
+## <a name="see-also"></a>참고 항목
  [Visual Basic 다운로드](https://www.visualstudio.com/downloads/)  
  무료 버전을 포함하여 Visual Basic 지원이 포함된 Visual Studio 버전에 대한 다운로드 링크를 제공합니다.  
-  
-## <a name="related-sections"></a>관련 단원  
+
+ [초보자를 위한 Visual Basic 기본 사항](https://mva.microsoft.com/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)   
+ Visual Basic 프로그래밍의 기본 개념에 대해 설명하는 Microsoft Virtual Academy 과정입니다.
+
  [개체 지향 프로그래밍](../programming-guide/concepts/object-oriented-programming.md)  
  개체 지향 프로그래밍을 소개하고 개체를 직접 만드는 방법과 개체를 사용하여 코딩을 단순화하는 방법을 설명하는 페이지에 대한 링크를 제공합니다.  
   
