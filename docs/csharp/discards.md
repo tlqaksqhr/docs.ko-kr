@@ -10,10 +10,10 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.translationtype: HT
-ms.sourcegitcommit: 9fc16c63a6e0e0dd31ee4a68fca8b945b8281e04
-ms.openlocfilehash: 7d7753a2c15cc20169005ea1c5f64eb74067cb24
+ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
+ms.openlocfilehash: eca5febd448a135eb7ec52e4243ae341563190df
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/01/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="discards---c-guide"></a>무시 항목 - C# 가이드
@@ -47,7 +47,7 @@ C# 7에서 무시 항목은 다음 컨텍스트의 할당에서 지원됩니다.
 
 [!code-csharp[Class-discard](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/class-discard1.cs)]
 
-무시 항목을 사용한 사용자 정의 형식 분해에 대한 자세한 내용은 [튜플 및 기타 형식 분해](deconstruct.md#deconstructing-a-user-defined type-with-discards)를 참조하세요.
+무시 항목을 사용한 사용자 정의 형식 분해에 대한 자세한 내용은 [튜플 및 기타 형식 분해](deconstruct.md#deconstructing-a-user-defined-type-with-discards)를 참조하세요.
 
 ## <a name="pattern-matching-with-switch-and-is"></a>`switch` 및 `is`를 사용한 패턴 일치
 
