@@ -1,5 +1,5 @@
 ---
-title: "다중 파일 어셈블리 | Microsoft Docs"
+title: "다중 파일 어셈블리"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 0521e3bcfc7ed4e58434bacf36b43840647ddf50
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7851375c03f9caacd9c89d33e5a03212581d7937
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="multifile-assemblies"></a>다중 파일 어셈블리
@@ -53,3 +53,4 @@ ms.lasthandoff: 06/02/2017
 ## <a name="see-also"></a>참고 항목  
  [방법: 다중 파일 어셈블리 빌드](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   
  [어셈블리를 사용한 프로그래밍](../../../docs/framework/app-domains/programming-with-assemblies.md)
+

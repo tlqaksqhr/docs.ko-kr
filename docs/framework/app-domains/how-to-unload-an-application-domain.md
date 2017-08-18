@@ -1,5 +1,5 @@
 ---
-title: "방법: 응용 프로그램 도메인 언로드 | Microsoft Docs"
+title: "방법: 응용 프로그램 도메인 언로드"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,11 +18,11 @@ caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: b9146d7565809cc0f92556478f93b9d444538826
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: eefaf670202e6b4977d75fffa906f1b07053eb3e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-unload-an-application-domain"></a>방법: 응용 프로그램 도메인 언로드
@@ -39,3 +39,4 @@ ms.lasthandoff: 06/02/2017
  [응용 프로그램 도메인으로 프로그래밍](http://msdn.microsoft.com/en-us/bd36055b-56bd-43eb-b4d8-820c37172131)   
  [방법: 응용 프로그램 도메인 만들기](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)   
  [응용 프로그램 도메인 사용](../../../docs/framework/app-domains/use.md)
+

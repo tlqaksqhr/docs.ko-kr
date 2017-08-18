@@ -1,5 +1,5 @@
 ---
-title: "방법: CodeDOM을 사용하여 클래스 만들기 | Microsoft Docs"
+title: "방법: CodeDOM을 사용하여 클래스 만들기"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -20,11 +20,11 @@ caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 47d3d8559efa627f1f103b6c1f9f516f567b9dc0
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3876ed881d98b4ee0bdb66f43de3de939111d45d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-a-class-using-codedom"></a>방법: CodeDOM을 사용하여 클래스 만들기
@@ -117,3 +117,4 @@ The object:
 ## <a name="see-also"></a>참고 항목  
  [CodeDOM 사용](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)   
  [CodeDOM 그래프에서 소스 코드 생성 및 컴파일](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "응용 프로그램 도메인 및 어셈블리를 사용한 프로그래밍 | Microsoft Docs"
+title: "응용 프로그램 도메인 및 어셈블리를 사용한 프로그래밍"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -19,11 +19,11 @@ caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 6078d7eafaad8f695c3ef5efd4a3cc37da7dee3c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6dcf8e4c9bf2401309b1d80d2306bd619b96460d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/08/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="programming-with-application-domains-and-assemblies"></a>응용 프로그램 도메인 및 어셈블리를 사용한 프로그래밍
@@ -53,3 +53,4 @@ Microsoft Internet Explorer, ASP.NET 및 Windows 셸과 같은 호스트는 프�
   
  [리플렉션 개요](../../../docs/framework/reflection-and-codedom/reflection.md)  
  **Reflection** 클래스를 사용하여 어셈블리에 대한 정보를 얻는 방법을 설명합니다.
+

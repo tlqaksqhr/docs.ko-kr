@@ -1,5 +1,5 @@
 ---
-title: "SignTool.exe(서명 도구) | Microsoft Docs"
+title: "SignTool.exe(서명 도구)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 33
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
-ms.openlocfilehash: 4cdbfda05fe9acafc6d717f3e0d3b1a57026df9c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 78814d27e8416d37a018fa3bc1ab643d99970ec9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe(서명 도구)
@@ -164,7 +164,7 @@ signtool [command] [options] [file_name | ...]
 |2|실행이 경고와 함께 완료되었습니다.|  
   
 ## <a name="examples"></a>예제  
- 다음 명령은 카탈로그 파일 MyCatalogFileName.cat를 시스템 구성 요소와 드라이버 데이터베이스에 추가합니다. `/v` 옵션은 `MyCatalogFileName.cat`라는 기존 카탈로그 파일이 바뀌지 않도록 해야 하는 경우 고유 이름을 생성합니다.  
+ 다음 명령은 카탈로그 파일 MyCatalogFileName.cat를 시스템 구성 요소와 드라이버 데이터베이스에 추가합니다. `/u` 옵션은 `MyCatalogFileName.cat`라는 기존 카탈로그 파일이 바뀌지 않도록 해야 하는 경우 고유 이름을 생성합니다.  
   
 ```  
 signtool catdb /v /u MyCatalogFileName.cat  

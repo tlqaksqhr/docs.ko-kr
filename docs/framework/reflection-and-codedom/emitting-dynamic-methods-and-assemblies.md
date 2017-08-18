@@ -1,5 +1,5 @@
 ---
-title: "동적 메서드 및 어셈블리 내보내기 | Microsoft Docs"
+title: "동적 메서드 및 어셈블리 생성"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -20,11 +20,11 @@ caps.latest.revision: 18
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: d8e4c5bb677be7e20f6571ea6eb53831027ade27
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c28a5b71a93ea5159adc73316771d490dbe0db87
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>동적 메서드 및 어셈블리 생성
@@ -71,3 +71,4 @@ ms.lasthandoff: 06/02/2017
   
  [공용 언어 런타임의 어셈블리](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  .NET Framework의 어셈블리에 대해 간략하게 설명합니다.
+

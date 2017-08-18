@@ -1,5 +1,5 @@
 ---
-title: "Mage.exe(매니페스트 생성 및 편집 도구) | Microsoft Docs"
+title: "Mage.exe(매니페스트 생성 및 편집 도구)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 68
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: caa06be840f0612e94742e7ea167f02b8b8d657d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 67551eb207461d5ac68db9f23b48ff7266c39ae9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe(매니페스트 생성 및 편집 도구)
@@ -114,7 +114,7 @@ mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
   
  배포 매니페스트를 채우기 위해 **-AppManifest** 옵션을 사용하는 경우 Mage.exe는 현재 배포 버전 기반의 이름을 가진 하위 디렉터리 내의 배포 매니페스트와 동일한 디렉터리에 응용 프로그램 매니페스트가 있는 것으로 가정하고 그에 따라 배포 매니페스트를 구성합니다. 응용 프로그램 매니페스트가 다른 위치에 있는 경우에는 **-AppCodeBase** 옵션을 사용하여 위치를 설정합니다.  
   
- 응용 프로그램을 배포하기 전에 배포 및 응용 프로그램 매니페스트에 서명해야 합니다. 매니페스트 서명에 대한 지침은 [신뢰할 수 있는 응용 프로그램 배포 개요](/visualstudio/deployment/trusted-application-deployment-overview)를 참조하세요.  
+ 응용 프로그램을 배포하기 전에 배포 및 응용 프로그램 매니페스트에 서명해야 합니다. 매니페스트 서명에 대한 지침은 [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview)를 참조하세요.  
   
  응용 프로그램 매니페스트에 대한 **-TrustLevel** 옵션에서는 클라이언트 컴퓨터에서 응용 프로그램을 실행하는 데 필요한 권한 집합을 지정합니다. 기본적으로 응용 프로그램의 신뢰 수준은 응용 프로그램의 URL이 속하는 *영역* 을 기반으로 할당됩니다. 인터넷을 통해 배포된 응용 프로그램은 인터넷 영역에 배치되는 반면 회사 네트워크를 통해 배포된 응용 프로그램은 일반적으로 인트라넷 영역에 배치됩니다. 두 가지 보안 영역 모두 응용 프로그램에서 로컬 리소스에 액세스하는 데 제한이 있지만 인트라넷 영역이 인터넷 영역보다 약간 덜 제한적입니다. FullTrust 영역에서는 컴퓨터의 로컬 리소스에 대해 응용 프로그램에 완전한 액세스가 부여됩니다. **-TrustLevel** 옵션을 통해 응용 프로그램을 이 영역에 배치하면 CLR의 트러스트 관리자 구성 요소가 이러한 높은 신뢰 수준을 부여할지 여부를 사용자에게 묻습니다. 응용 프로그램을 회사 네트워크를 통해 배포하는 경우에는 신뢰할 수 있는 응용 프로그램 배포를 사용하여 사용자에게 묻지 않고 응용 프로그램의 신뢰 수준을 높일 수 있습니다.  
   
@@ -215,3 +215,4 @@ mage -Sign deploy.application -CertFile cert.pfx -Password <passwd>
  [신뢰할 수 있는 응용 프로그램 배포 개요](/visualstudio/deployment/trusted-application-deployment-overview)   
  [MageUI.exe(매니페스트 생성 및 편집 도구, 그래픽 클라이언트)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)   
  [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "방법: 리플렉션 내보내기를 사용하여 제네릭 메서드 정의 | Microsoft Docs"
+title: "방법: 리플렉션 내보내기를 사용하여 제네릭 메서드 정의"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,11 +18,11 @@ caps.latest.revision: 13
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
-ms.openlocfilehash: f69e3d0959412ccedd6e1926832533371185acd5
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 655ec9d5c53de10e6044cacc0eb8239fefe36489
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>방법: 리플렉션 내보내기를 사용하여 제네릭 메서드 정의
@@ -159,3 +159,4 @@ ms.lasthandoff: 06/02/2017
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Reflection.Emit.MethodBuilder>   
  [방법: 리플렉션 내보내기를 사용하여 제네릭 형식 정의](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)
+

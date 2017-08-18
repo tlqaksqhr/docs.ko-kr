@@ -1,5 +1,5 @@
 ---
-title: "MDbg.exe(.NET Framework 명령줄 디버거) | Microsoft Docs"
+title: "MDbg.exe(.NET Framework 명령줄 디버거)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 27
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 99cf844513e7264d9542cd3502613b5e2b90da76
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f65251d5712f981eaa038cd8fbfe66b5e690b4b6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe(.NET Framework 명령줄 디버거)
@@ -124,3 +124,4 @@ mdbg>
 ## <a name="see-also"></a>참고 항목  
  [도구](../../../docs/framework/tools/index.md)   
  [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+

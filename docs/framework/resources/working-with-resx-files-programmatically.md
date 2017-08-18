@@ -1,5 +1,5 @@
 ---
-title: "프로그래밍 방식으로 .resx 파일 작업 | Microsoft Docs"
+title: "프로그래밍 방식으로 .resx 파일 작업"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 12
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: c74a79b06503e105dd9ba47cc8079019e038b11f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 361559ab3ea5b09e5568a94692ca6cf374fe5ecf
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="working-with-resx-files-programmatically"></a>프로그래밍 방식으로 .resx 파일 작업
@@ -35,13 +35,13 @@ XML 리소스 파일(.resx)이 이름/값 쌍의 데이터가 뒤에 오는 특�
 ## <a name="creating-a-resx-file"></a>.resx 파일 만들기  
  다음 단계에 따라 <xref:System.Resources.ResXResourceWriter?displayProperty=fullName> 클래스를 사용하여 프로그래밍 방식으로 .resx 파일을 만들 수 있습니다.  
   
-1.  <xref:System.Resources.ResXResourceWriter.%23ctor%28System.String%29?displayProperty=fullName> 메서드를 호출하고 .resx 파일의 이름을 제공하여 <xref:System.Resources.ResXResourceWriter> 개체를 인스턴스화합니다. 파일 이름에는 .resx 확장명이 포함되어야 합니다. `using` 블록에서 <xref:System.Resources.ResXResourceWriter> 개체를 인스턴스화하는 경우 3단계에서 <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=fullName> 메서드를 명시적으로 호출할 필요가 없습니다.  
+1.  <xref:System.Resources.ResXResourceWriter> 메서드를 호출하고 .resx 파일의 이름을 제공하여 <xref:System.Resources.ResXResourceWriter.%23ctor%28System.String%29?displayProperty=fullName> 개체를 인스턴스화합니다. 파일 이름에는 .resx 확장명이 포함되어야 합니다. <xref:System.Resources.ResXResourceWriter> 블록에서 `using` 개체를 인스턴스화하는 경우 3단계에서 <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=fullName> 메서드를 명시적으로 호출할 필요가 없습니다.  
   
 2.  파일에 추가할 각 리소스에 대해 <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=fullName> 메서드를 호출합니다. 이 메서드의 오버로드를 사용하여 문자열, 개체 및 이진 데이터(바이트 배열)를 추가합니다. 리소스가 개체이면 serialize 가능해야 합니다.  
   
 3.  <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=fullName> 메서드를 호출하여 리소스 파일을 생성하고 모든 리소스를 해제합니다. <xref:System.Resources.ResXResourceWriter> 개체가 `using` 블록 내에서 만들어진 경우 리소스가 .resx 파일에 기록되고 <xref:System.Resources.ResXResourceWriter> 개체에서 사용되는 리소스가 `using` 블록 끝에서 해제됩니다.  
   
- 생성되는 .resx 파일에는 적절한 헤더와 <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=fullName> 메서드에서 추가된 각 리소스에 대한 `data` 태그가 있습니다.  
+ 생성되는 .resx 파일에는 적절한 헤더와 `data` 메서드에서 추가된 각 리소스에 대한 <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=fullName> 태그가 있습니다.  
   
 > [!WARNING]
 >  암호, 보안이 중요한 정보 또는 개인 데이터를 저장할 때는 리소스 파일을 사용하지 마세요.  
@@ -56,7 +56,7 @@ XML 리소스 파일(.resx)이 이름/값 쌍의 데이터가 뒤에 오는 특�
  .resx 파일은 런타임 실행 파일에 포함하거나 위성 어셈블리로 컴파일할 수 없습니다. [리소스 파일 생성기 (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)를 사용하여 .resx 파일을 이진 리소스 파일(.resources)로 변환해야 합니다. 생성되는 .resources 파일은 응용 프로그램 어셈블리나 위성 어셈블리에 포함될 수 있습니다. 자세한 내용은 [Creating Resource Files](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)을 참조하세요.  
   
 ## <a name="enumerating-resources"></a>리소스 열거  
- 경우에 따라 .resx 파일에서 특정 리소스 대신 모든 리소스를 검색할 수 있습니다. 이렇게 하려면 .resx 파일의 모든 리소스에 대한 열거자를 제공하는 <xref:System.Resources.ResXResourceReader?displayProperty=fullName> 클래스를 사용하면 됩니다. <xref:System.Resources.ResXResourceReader?displayProperty=fullName> 클래스는 루프의 각 반복에 대한 특정 리소스를 나타내는 <xref:System.Collections.DictionaryEntry> 개체를 반환하는 <xref:System.Collections.IDictionaryEnumerator>를 구현합니다. <xref:System.Collections.DictionaryEntry.Key%2A?displayProperty=fullName> 속성은 리소스의 키를 반환하고, <xref:System.Collections.DictionaryEntry.Value%2A?displayProperty=fullName> 속성은 리소스의 값을 반환합니다.  
+ 경우에 따라 .resx 파일에서 특정 리소스 대신 모든 리소스를 검색할 수 있습니다. 이렇게 하려면 .resx 파일의 모든 리소스에 대한 열거자를 제공하는 <xref:System.Resources.ResXResourceReader?displayProperty=fullName> 클래스를 사용하면 됩니다. <xref:System.Resources.ResXResourceReader?displayProperty=fullName> 클래스는 루프의 각 반복에 대한 특정 리소스를 나타내는 <xref:System.Collections.IDictionaryEnumerator>개체를 반환하는 <xref:System.Collections.DictionaryEntry> 를 구현합니다. <xref:System.Collections.DictionaryEntry.Key%2A?displayProperty=fullName> 속성은 리소스의 키를 반환하고, <xref:System.Collections.DictionaryEntry.Value%2A?displayProperty=fullName> 속성은 리소스의 값을 반환합니다.  
   
  다음 예제에서는 이전 예제에서 만들어진 CarResources.resx 파일에 대한 <xref:System.Resources.ResXResourceReader> 개체를 만들고 리소스 파일을 반복합니다. 이 예제에서는 리소스 파일에 정의된 두 `Automobile` 개체를 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 개체에 추가하고 문자열 6개 중 5개를 <xref:System.Collections.SortedList> 개체에 추가합니다. <xref:System.Collections.SortedList> 개체의 값은 열 머리글을 콘솔에 표시하는 데 사용되는 매개 변수 배열로 변환됩니다. `Automobile` 속성 값도 콘솔에 표시됩니다.  
   
@@ -92,3 +92,4 @@ XML 리소스 파일(.resx)이 이름/값 쌍의 데이터가 뒤에 오는 특�
  [리소스 파일 만들기](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)   
  [Resgen.exe(리소스 파일 생성기)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)   
  [Al.exe(어셈블리 링커)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+

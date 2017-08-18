@@ -1,5 +1,5 @@
 ---
-title: "MageUI.exe(매니페스트 생성 및 편집 도구, 그래픽 클라이언트) | Microsoft Docs"
+title: "MageUI.exe (매니페스트 생성 및 편집 도구, 그래픽 클라이언트)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 38
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: acd994c4b36200a924c537750f7e8b14a24d06c8
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f6daa65c15a35bc84d8d7c07a86f42ffd251274d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (매니페스트 생성 및 편집 도구, 그래픽 클라이언트)
@@ -210,3 +210,4 @@ MageUI.exe는 명령줄 도구인 Mage.exe와 동일한 기능을 지원하지�
  [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)   
  [연습: ClickOnce 응용 프로그램 수동 배포](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)   
  [Mage.exe(매니페스트 생성 및 편집 도구)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
+

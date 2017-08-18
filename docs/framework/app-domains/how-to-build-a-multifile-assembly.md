@@ -1,5 +1,5 @@
 ---
-title: "방법: 다중 파일 어셈블리 빌드 | Microsoft Docs"
+title: "방법: 다중 파일 어셈블리 빌드"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -25,11 +25,11 @@ caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: daca0f9acb9dab393d1b2142f37e288f7f1329f9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5dd9de26f083209a0e8da79562f914023e008251
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-build-a-multifile-assembly"></a>방법: 다중 파일 어셈블리 빌드
@@ -95,3 +95,4 @@ ms.lasthandoff: 06/02/2017
  [방법: 어셈블리 내용 보기](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)   
  [런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
  [다중 파일 어셈블리](../../../docs/framework/app-domains/multifile-assemblies.md)
+

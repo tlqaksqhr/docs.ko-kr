@@ -1,5 +1,5 @@
 ---
-title: "Fuslogvw.exe(어셈블리 바인딩 로그 뷰어) | Microsoft Docs"
+title: "Fuslogvw.exe(어셈블리 바인딩 로그 뷰어)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -26,11 +26,11 @@ caps.latest.revision: 35
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
-ms.openlocfilehash: 249e07461a0b96ba3a9afddbc812cabfe05c37c2
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 381464ecc911dedb0dd394ded7c29fe143423142
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe(어셈블리 바인딩 로그 뷰어)
@@ -249,3 +249,4 @@ Discarding native image.
  [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)   
  [런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
  [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+

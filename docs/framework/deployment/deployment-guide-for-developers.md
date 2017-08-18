@@ -1,5 +1,5 @@
 ---
-title: "개발자를 위한 .NET Framework 배포 가이드 | Microsoft Docs"
+title: "개발자를 위한 .NET Framework 배포 가이드"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 108
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 5ceb8014ce3b6cea08e8e6c8c347ccb1658ee0ea
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 043338d73e67ee36d2888b748402d824ee6d5daf
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>개발자를 위한 .NET Framework 배포 가이드
@@ -76,9 +76,9 @@ ms.lasthandoff: 06/02/2017
 
 |응용 프로그램용 배포 전략|사용 가능한 배포 방법|사용할 .NET Framework 재배포 가능 패키지|
 |--------------------------------------|----------------------------------|-------------------------------------------|
-|웹에서 설치|- [InstallShield](#installshield-deployment)<br />- [WiX 도구 집합](#wix)<br />- [수동 설치](#installing_manually)|[웹 설치 관리자](#redistributable-packages)|
-|디스크에서 설치|- [InstallShield](#installshield-deployment)<br />- [WiX 도구 집합](#wix)<br />- [수동 설치](#installing_manually)|[오프라인 설치 관리자](#redistributable-packages)|
-|LAN(Local Area Network)(엔터프라이즈 앱용)에서 설치|- [ClickOnce](#clickonce-deployment)|[웹 설치 관리자](#redistributable-packages)(제한 사항은 [ClickOnce](#clickonce-deployment) 참조) 또는 [오프라인 설치 관리자](#redistributable-packages)|
+|웹에서 설치|- [InstallShield](#installshield-deployment)<br />- [WiX 도구 집합](#wix)<br />- [수동 설치](#installing_manually)|[Web installer](#redistributable-packages)|
+|디스크에서 설치|- [InstallShield](#installshield-deployment)<br />- [WiX 도구 집합](#wix)<br />- [수동 설치](#installing_manually)|[Offline installer](#redistributable-packages)|
+|LAN(Local Area Network)(엔터프라이즈 앱용)에서 설치|- [ClickOnce](#clickonce-deployment)|[웹 설치 관리자](#redistributable-packages) (제한의 경우 [ClickOnce](#clickonce-deployment) 참조) 또는 [오프라인 설치 관리자](#redistributable-packages)|
 
 ## <a name="redistributable-packages"></a>재배포 가능 패키지
  .NET Framework에서는 두 개의 재배포 가능 패키지인 웹 설치 관리자(부트스트래퍼) 및 오프라인 설치 관리자(독립 실행형 재배포 가능 패키지)를 사용할 수 있습니다. 다음 표에서는 두 개의 패키지를 비교합니다.
@@ -232,7 +232,7 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
     > [!IMPORTANT]
     > 올바른 버전의 .NET Framework가 설치되어 있는지 확인할 때, 대상 버전의 설치 여부가 아니라 대상 버전 *또는* 이후 버전이 설치되어 있는지를 확인해야 합니다. 즉, 레지스트리에서 검색한 릴리스 키가 대상 버전의 릴리스 키와 같은지가 *아니라* 대상 버전의 릴리스 키보다 크거나 같은지를 확인해야 합니다.
 
-- 언어 팩이 사용자 컴퓨터에 이미 설치되어 있는지 여부를 [감지](#detecting-the-language-packs)합니다.
+- 언어 팩이 사용자 컴퓨터에 이미 설치되어 있는지 여부를[감지](#detecting-the-language-packs) 합니다.
 
 - 배포를 제어하려면 .NET Framework 설치 프로세스를 자동으로 시작하고 추적합니다( [How to: Get Progress from the .NET Framework 4.5 Installer](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)참조).
 
@@ -298,7 +298,7 @@ Type: DWORD
 > [!IMPORTANT]
 > 언어 팩에는 응용 프로그램을 실행하는 데 필요한 .NET Framework 구성 요소가 포함되지 않으므로 언어 팩을 설치하기 전에 웹 또는 오프라인 설치 관리자를 사용하여 .NET Framework를 설치해야 합니다.
 
- [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]부터 패키지 이름은 NDP<`version`>-KB<`number`>-x86-x64-AllOS-<`culture`>.exe 형식이고, 여기서 `version`은 .NET Framework의 버전 번호이고, `number`는 Microsoft 기술 자료 문서 번호이며, `culture`는 [국가/지역](#supported-languages)을 지정합니다. 이러한 패키지 중 하나의 예는 `NDP452-KB2901907-x86-x64-AllOS-JPN.exe`입니다. 패키지 이름은 이 문서 앞부분의 [재배포 가능 패키지](#redistributable-packages) 섹션에 나열되어 있습니다.
+ [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]부터 패키지 이름은 NDP<`version`>-KB<`number`>-x86-x64-AllOS-<`culture`>.exe 형식이고, 여기서 `version`은 .NET Framework의 버전 번호이고, `number`는 Microsoft 기술 자료 문서 번호이며, `culture`는 [국가/지역](#supported-languages)을 지정합니다. 이러한 패키지 중 하나의 예는 `NDP452-KB2901907-x86-x64-AllOS-JPN.exe`입니다. 패키지 이름은 이 문서 앞부분의 [Redistributable Packages](#redistributable-packages) 섹션에 나열되어 있습니다.
 
  .NET Framework 오프라인 설치 관리자를 사용하여 언어 팩을 설치하려면 해당 설치 관리자를 응용 프로그램의 설치 프로그램에 연결해야 합니다. 예를 들어 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 오프라인 설치 관리자를 일본어 언어 팩과 함께 배포하려면 다음 명령을 사용합니다.
 
@@ -355,7 +355,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |------------|-----------------|
 |**/CEIPConsent**|기본 동작을 덮어쓰고 향후 배포 환경을 개선하기 위해 Microsoft에 익명으로 피드백을 보냅니다. 이 옵션은 설치 프로그램에서 사용자에게 동의를 요청하고 Microsoft로 익명 피드백을 보낼 수 있는 권한을 사용자가 부여한 경우에만 사용될 수 있습니다.|
 |**/chainingpackage** `packageName`|연결을 수행하는 실행 파일의 이름을 지정합니다. 이 정보는 향후 배포 환경 개선을 지원하기 위해 익명 피드백으로 Microsoft에 보내집니다.<br /><br /> 패키지 이름에 공백이 포함되어 있으면 **/chainingpackage "Lucerne Publishing"**과 같이 큰따옴표를 구분자로 사용합니다. 연결 패키지의 예는 MSDN 라이브러리의 [설치 패키지에서 진행 정보 가져오기](http://go.microsoft.com/fwlink/?LinkId=181926) 를 참조하세요.|
-|**/LCID**  `LCID`<br /><br /> 여기서 `LCID`는 로캘 식별자를 지정합니다([지원되는 언어](#supported-languages) 참조).|`LCID` 로 지정된 언어 팩을 설치하고 표시된 UI가 해당 언어로 표시되도록 합니다(자동 모드가 설정되어 있지 않은 경우).<br /><br /> 웹 설치 관리자에 대해 이 옵션을 사용하면 웹을 통해 언어 팩도 함께 설치됩니다. **참고:** 웹 설치 관리자에서만 이 옵션을 사용합니다.|
+|**/LCID**  `LCID`<br /><br /> 여기서 `LCID` 는 로캘 식별자를 지정합니다( [지원되는 언어](#supported-languages)참조).|`LCID` 로 지정된 언어 팩을 설치하고 표시된 UI가 해당 언어로 표시되도록 합니다(자동 모드가 설정되어 있지 않은 경우).<br /><br /> 웹 설치 관리자에 대해 이 옵션을 사용하면 웹을 통해 언어 팩도 함께 설치됩니다. **참고:** 웹 설치 관리자에서만 이 옵션을 사용합니다.|
 |**/log** `file` &#124; `folder`|로그 파일의 위치를 지정합니다. 기본값은 프로세스에 대한 임시 폴더이며 기본 파일 이름은 패키지를 기반으로 합니다. 파일 확장명이 .txt인 경우 텍스트 로그가 생성됩니다. 다른 확장명을 지정하거나 확장명을 지정하지 않는 경우 HTML 로그가 만들어집니다.|
 |**/msioptions**|.msi 및 .msp 항목에 대해 전달될 옵션을 지정합니다(예: `/msioptions "PROPERTY1='Value'"`).|
 |**/norestart**|설치 프로그램이 자동으로 재부팅하지 않도록 합니다. 이 옵션을 사용하는 경우 연결 응용 프로그램은 반환 코드를 캡처하고 재부팅을 처리해야 합니다. MSDN 라이브러리의 [설치 패키지에서 프로세스 진행 정보 가져오기](http://go.microsoft.com/fwlink/?LinkId=179606) 를 참조하세요.|
@@ -405,3 +405,4 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
  [차단된 .NET Framework 설치 및 제거 문제 해결](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)   
  [.NET Framework 4.5를 설치하는 동안 시스템 다시 시작 줄이기](../../../docs/framework/deployment/reducing-system-restarts.md)   
  [방법: .NET Framework 4.5 설치 관리자에서 진행률 가져오기](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+

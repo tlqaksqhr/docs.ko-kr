@@ -1,5 +1,5 @@
 ---
-title: "응용 프로그램 도메인 사용 | Microsoft Docs"
+title: "응용 프로그램 도메인 사용"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -18,11 +18,11 @@ caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 3aa6a381d7c6017e27deac642f23b68c50af7509
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b2dac2238ae9117d3678335748c680d594a8b5c6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-application-domains"></a>응용 프로그램 도메인 사용
@@ -77,3 +77,4 @@ ms.lasthandoff: 06/02/2017
   
  [리플렉션 개요](../../../docs/framework/reflection-and-codedom/reflection.md)  
  **Reflection** 클래스를 사용하여 어셈블리에 대한 정보를 얻는 방법을 설명합니다.
+

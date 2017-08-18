@@ -1,5 +1,5 @@
 ---
-title: "연습: 클라이언트 응용 프로그램 서비스 사용 | Microsoft Docs"
+title: "연습: 클라이언트 응용 프로그램 서비스 사용"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 47
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: c5c36c371c43e6cba8875c0b6bea98c228438218
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 64a27269ee6f3711f0c51f2c97cd8876c3ea6103
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-using-client-application-services"></a>연습: 클라이언트 응용 프로그램 서비스 사용
@@ -254,7 +254,7 @@ ms.lasthandoff: 06/02/2017
   
 4.  **솔루션 탐색기**에서 Form1을 두 번 클릭하여 디자이너를 표시합니다.  
   
-5.  디자이너에서 폼 화면을 두 번 클릭하여 `Form1_Load`라는 <xref:System.Windows.Forms.Form.Load?displayProperty=fullName> 이벤트 처리기를 생성합니다.  
+5.  디자이너에서 폼 화면을 두 번 클릭하여 <xref:System.Windows.Forms.Form.Load?displayProperty=fullName> 라는 `Form1_Load`이벤트 처리기를 생성합니다.  
   
      코드 편집기가 나타나고 커서가 `Form1_Load` 메서드에 있습니다.  
   
@@ -276,7 +276,7 @@ ms.lasthandoff: 06/02/2017
 ## <a name="adding-a-login-form-as-a-credentials-provider"></a>자격 증명 공급자로 로그인 폼 추가  
  응용 프로그램 코드에서 사용자 자격 증명을 획득하여 <xref:System.Web.Security.Membership.ValidateUser%2A> 메서드에 전달할 수 있습니다. 그러나 나중에 변경하려는 경우를 위해 대체로 자격 증명을 획득하는 코드를 응용 프로그램 코드와 별도로 유지하는 것이 유용합니다.  
   
- 다음 절차에서는 자격 증명 공급자를 사용하도록 응용 프로그램을 구성한 다음 두 매개 변수에 대해 모두 <xref:System.String.Empty>를 전달하도록 <xref:System.Web.Security.Membership.ValidateUser%2A> 메서드 호출을 변경합니다. 빈 문자열은 구성된 자격 증명 공급자의 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> 메서드를 호출하는 <xref:System.Web.Security.Membership.ValidateUser%2A> 메서드를 나타냅니다.  
+ 다음 절차에서는 자격 증명 공급자를 사용하도록 응용 프로그램을 구성한 다음 두 매개 변수에 대해 모두 <xref:System.Web.Security.Membership.ValidateUser%2A> 를 전달하도록 <xref:System.String.Empty> 메서드 호출을 변경합니다. 빈 문자열은 구성된 자격 증명 공급자의 <xref:System.Web.Security.Membership.ValidateUser%2A> 메서드를 호출하는 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> 메서드를 나타냅니다.  
   
 #### <a name="to-configure-your-application-to-use-a-credentials-provider"></a>자격 증명 공급자를 사용하도록 응용 프로그램을 구성하려면  
   
@@ -298,14 +298,14 @@ ms.lasthandoff: 06/02/2017
   
 4.  다음 메서드를 `Form1_Load` 메서드 뒤에 추가합니다.  
   
-     이 메서드는 빈 문자열을 `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName> 메서드에 전달하여 [로그인] 대화 상자를 표시합니다. 인증 서비스를 사용할 수 없는 경우 <xref:System.Web.Security.Membership.ValidateUser%2A> 메서드에서 <xref:System.Net.WebException>이 발생합니다. 이 경우 `ValidateUsingCredentialsProvider` 메서드는 경고 메시지를 표시하고 사용자에게 오프라인 모드에서 다시 시도할지 여부를 묻습니다. 이 기능을 사용하려면 **How to: Configure Client Application Services** 에 설명된 [오프라인으로 로그인할 수 있도록 로컬에 암호 해시 저장](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)기능이 필요합니다. 이 기능은 기본적으로 새 프로젝트에 대해 사용됩니다.  
+     이 메서드는 빈 문자열을 `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=fullName> 메서드에 전달하여 로그인 대화 상자를 표시합니다. 인증 서비스를 사용할 수 없는 경우 <xref:System.Web.Security.Membership.ValidateUser%2A> 메서드에서 <xref:System.Net.WebException>이 발생합니다. 이 경우 `ValidateUsingCredentialsProvider` 메서드는 경고 메시지를 표시하고 사용자에게 오프라인 모드에서 다시 시도할지 여부를 묻습니다. 이 기능을 사용하려면 **How to: Configure Client Application Services** 에 설명된 [오프라인으로 로그인할 수 있도록 로컬에 암호 해시 저장](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)기능이 필요합니다. 이 기능은 기본적으로 새 프로젝트에 대해 사용됩니다.  
   
      사용자의 유효성이 검사되지 않은 경우 `ValidateUsingCredentialsProvider` 메서드는 오류 메시지를 표시하고 응용 프로그램을 종료합니다. 끝으로, 이 메서드는 인증 시도의 결과를 반환합니다.  
   
      [!code-csharp[ClientApplicationServices#020](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#020)]  [!code-vb[ClientApplicationServices#020](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#020)]  
   
 ### <a name="creating-a-login-form"></a>로그인 폼 만들기  
- 자격 증명 공급자는 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> 인터페이스를 구현하는 클래스입니다. 이 인터페이스에는 <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials> 개체를 반환하는 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A>라는 단일 메서드가 있습니다. 다음 절차에서는 표시를 위해 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A>를 구현하는 로그인 대화 상자를 만들고 사용자 지정 자격 증명을 반환합니다.  
+ 자격 증명 공급자는 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> 인터페이스를 구현하는 클래스입니다. 이 인터페이스에는 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> 개체를 반환하는 <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials> 라는 단일 메서드가 있습니다. 다음 절차에서는 표시를 위해 <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> 를 구현하는 로그인 대화 상자를 만들고 사용자 지정 자격 증명을 반환합니다.  
   
  [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 에서는 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 로그인 폼 **템플릿을 제공하므로** 및 C#의 경우 별도 절차가 제공됩니다. 이렇게 하면 시간과 코딩 활동을 줄일 수 있습니다.  
   
@@ -385,10 +385,10 @@ ms.lasthandoff: 06/02/2017
   
      이 메서드는 `static` <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=fullName> 속성을 통해 반환된 <xref:System.Security.Principal.IPrincipal>의 <xref:System.Security.Principal.IPrincipal.IsInRole%2A> 메서드를 호출합니다. 클라이언트 응용 프로그램 서비스를 사용하도록 구성된 응용 프로그램에 대해 이 속성은 <xref:System.Web.ClientServices.ClientRolePrincipal>을 반환합니다. 이 클래스는 <xref:System.Security.Principal.IPrincipal> 인터페이스를 구현하기 때문에 명시적으로 참조할 필요가 없습니다.  
   
-     사용자가 "manager" 역할인 경우 `DisplayButtonForManagerRole` 메서드는 `managerOnlyButton`의 <xref:System.Windows.Forms.Control.Visible%2A> 속성을 `true`로 설정합니다. 또한 이 메서드는 <xref:System.Net.WebException>이 발생하여 역할 서비스를 사용할 수 없음을 나타내는 경우 오류 메시지를 표시합니다.  
+     사용자가 "manager" 역할인 경우 `DisplayButtonForManagerRole` 메서드는 <xref:System.Windows.Forms.Control.Visible%2A> 의 `managerOnlyButton` 속성을 `true`로 설정합니다. 또한 이 메서드는 <xref:System.Net.WebException> 이 발생하여 역할 서비스를 사용할 수 없음을 나타내는 경우 오류 메시지를 표시합니다.  
   
     > [!NOTE]
-    >  <xref:System.Web.ClientServices.ClientRolePrincipal.IsInRole%2A> 메서드는 사용자 로그인이 만료된 경우 항상 `false`를 반환합니다. 이 연습에 대한 예제 코드에 표시된 것처럼 응용 프로그램이 인증 후 즉시 <xref:System.Security.Principal.IPrincipal.IsInRole%2A> 메서드를 한 번 호출하는 경우에는 이 문제가 발생하지 않습니다. 다른 시간에 응용 프로그램이 사용자 역할을 검색해야 하는 경우 해당 로그인이 만료된 사용자의 유효성을 다시 검사하는 코드를 추가하는 것이 좋습니다. 모든 유효한 사용자가 역할에 할당되면 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A?displayProperty=fullName> 메서드를 호출하여 로그인이 만료되었는지 여부를 확인할 수 있습니다. 역할이 반환되지 않는 경우 로그인이 만료된 것입니다. 이 기능의 예는 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A> 메서드를 참조하세요. 이 기능은 응용 프로그램 구성에서 **서버 쿠키가 만료될 때마다 다시 사용자 로그온** 을 선택한 경우에만 필요합니다. 자세한 내용은 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)을 참조하십시오.  
+    >  <xref:System.Web.ClientServices.ClientRolePrincipal.IsInRole%2A> 메서드는 사용자 로그인이 만료된 경우 항상 `false` 를 반환합니다. 이 연습에 대한 예제 코드에 표시된 것처럼 응용 프로그램이 인증 후 즉시 <xref:System.Security.Principal.IPrincipal.IsInRole%2A> 메서드를 한 번 호출하는 경우에는 이 문제가 발생하지 않습니다. 다른 시간에 응용 프로그램이 사용자 역할을 검색해야 하는 경우 해당 로그인이 만료된 사용자의 유효성을 다시 검사하는 코드를 추가하는 것이 좋습니다. 모든 유효한 사용자가 역할에 할당되면 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A?displayProperty=fullName> 메서드를 호출하여 로그인이 만료되었는지 여부를 확인할 수 있습니다. 역할이 반환되지 않는 경우 로그인이 만료된 것입니다. 이 기능의 예는 <xref:System.Web.ClientServices.Providers.ClientRoleProvider.GetRolesForUser%2A> 메서드를 참조하세요. 이 기능은 응용 프로그램 구성에서 **서버 쿠키가 만료될 때마다 다시 사용자 로그온** 을 선택한 경우에만 필요합니다. 자세한 내용은 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)을 참조하십시오.  
   
      [!code-csharp[ClientApplicationServices#030](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#030)]  [!code-vb[ClientApplicationServices#030](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#030)]  
   
@@ -429,7 +429,7 @@ ms.lasthandoff: 06/02/2017
   
 9. Form1 클래스의 끝에 다음 메서드를 추가합니다.  
   
-     이 메서드는 `webSettingsTestTextBox`의 <xref:System.Windows.Forms.TextBox.Text%2A> 속성을 이 절차의 앞부분에서 생성된 `Settings` 클래스의 `WebSettingsTestText` 속성에 바인딩합니다. 또한 이 메서드는 <xref:System.Net.WebException>이 발생하여 웹 설정 서비스를 사용할 수 없음을 나타내는 경우 오류 메시지를 표시합니다.  
+     이 메서드는 <xref:System.Windows.Forms.TextBox.Text%2A> 의 `webSettingsTestTextBox` 속성을 이 절차의 앞부분에서 생성된 `WebSettingsTestText` 클래스의 `Settings` 속성에 바인딩합니다. 또한 이 메서드는 <xref:System.Net.WebException>이 발생하여 웹 설정 서비스를 사용할 수 없음을 나타내는 경우 오류 메시지를 표시합니다.  
   
      [!code-csharp[ClientApplicationServices#040](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#040)]   [!code-vb[ClientApplicationServices#040](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#040)]  
   
@@ -444,9 +444,9 @@ ms.lasthandoff: 06/02/2017
   
 12. 생성된 메서드를 다음 코드로 바꿉니다.  
   
-     <xref:System.Windows.Forms.Form.FormClosing> 이벤트 처리기는 다음 섹션에서 추가할 로그아웃 기능에서도 사용되는 `SaveSettings` 메서드를 호출합니다. `SaveSettings` 메서드는 먼저 사용자가 로그아웃하지 않았음을 확인합니다. 이 작업을 위해 현재 보안 주체가 반환한 <xref:System.Security.Principal.IIdentity>의 <xref:System.Security.Principal.IIdentity.AuthenticationType%2A> 속성을 검사합니다. 현재 보안 주체는 `static` <xref:System.Threading.Thread.CurrentPrincipal%2A> 속성을 통해 검색됩니다. 클라이언트 응용 프로그램 서비스에 대해 사용자가 인증된 경우 인증 형식은 "ClientForms"입니다. 사용자가 로그아웃한 후 유효한 Windows ID를 가지고 있을 수도 있기 때문에 `SaveSettings` 메서드는 단순히 <xref:System.Security.Principal.IIdentity.IsAuthenticated%2A?displayProperty=fullName> 속성을 검사할 수 없습니다.  
+     <xref:System.Windows.Forms.Form.FormClosing> 이벤트 처리기는 다음 섹션에서 추가할 로그아웃 기능에서도 사용되는 `SaveSettings` 메서드를 호출합니다. `SaveSettings` 메서드는 먼저 사용자가 로그아웃하지 않았음을 확인합니다. 이 작업을 위해 현재 보안 주체가 반환한 <xref:System.Security.Principal.IIdentity.AuthenticationType%2A> 의 <xref:System.Security.Principal.IIdentity> 속성을 검사합니다. 현재 보안 주체는 `static` <xref:System.Threading.Thread.CurrentPrincipal%2A> 속성을 통해 검색됩니다. 클라이언트 응용 프로그램 서비스에 대해 사용자가 인증된 경우 인증 형식은 "ClientForms"입니다. 사용자가 로그아웃한 후 유효한 Windows ID를 가지고 있을 수도 있기 때문에 `SaveSettings` 메서드는 단순히 <xref:System.Security.Principal.IIdentity.IsAuthenticated%2A?displayProperty=fullName> 속성을 검사할 수 없습니다.  
   
-     사용자가 로그아웃하지 않은 경우 `SaveSettings` 메서드는 이 절차의 앞부분에서 생성된 `Settings` 클래스의 <xref:System.Configuration.ApplicationSettingsBase.Save%2A> 메서드를 호출합니다. 인증 쿠키가 만료된 경우 이 메서드에서 <xref:System.Net.WebException>이 발생할 수 있습니다. 이 문제는 응용 프로그램 구성에서 **서버 쿠키가 만료될 때마다 다시 사용자 로그온** 을 선택한 경우에만 발생합니다. 자세한 내용은 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)을 참조하십시오. `SaveSettings` 메서드는 <xref:System.Web.Security.Membership.ValidateUser%2A> 호출을 통해 로그인 대화 상자를 표시하여 쿠키 만료를 처리합니다. 사용자가 성공적으로 로그인하는 경우 `SaveSettings` 메서드는 자신을 호출하여 설정을 다시 저장하려고 합니다.  
+     사용자가 로그아웃하지 않은 경우 `SaveSettings` 메서드는 이 절차의 앞부분에서 생성된 <xref:System.Configuration.ApplicationSettingsBase.Save%2A> 클래스의 `Settings` 메서드를 호출합니다. 인증 쿠키가 만료된 경우 이 메서드에서 <xref:System.Net.WebException> 이 발생할 수 있습니다. 이 문제는 응용 프로그램 구성에서 **서버 쿠키가 만료될 때마다 다시 사용자 로그온** 을 선택한 경우에만 발생합니다. 자세한 내용은 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)을 참조하십시오. `SaveSettings` 메서드는 <xref:System.Web.Security.Membership.ValidateUser%2A> 호출을 통해 로그인 대화 상자를 표시하여 쿠키 만료를 처리합니다. 사용자가 성공적으로 로그인하는 경우 `SaveSettings` 메서드는 자신을 호출하여 설정을 다시 저장하려고 합니다.  
   
      이전 코드와 같이 `SaveSettings` 메서드는 원격 서비스를 사용할 수 없는 경우 오류 메시지를 표시합니다. 설정 공급자가 원격 서비스에 액세스할 수 없는 경우에도 설정이 로컬 캐시에 저장된 후 응용 프로그램이 다시 시작될 때 다시 로드됩니다.  
   
@@ -488,7 +488,7 @@ ms.lasthandoff: 06/02/2017
  로그아웃 기능을 테스트하려면 응용 프로그램을 실행하고 로그인 대화 상자에서 **암호 저장** 을 선택합니다. 응용 프로그램을 닫은 후 다시 시작하여 더 이상 로그인할 필요가 없음을 확인합니다. 끝으로, 로그아웃을 클릭하여 응용 프로그램을 다시 시작합니다.  
   
 ## <a name="enabling-offline-mode"></a>오프라인 모드 사용  
- 다음 절차에서는 사용자가 오프라인 모드로 전환할 수 있도록 폼에 확인란을 추가합니다. 응용 프로그램은 `static` <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A?displayProperty=fullName> 속성을 `true`로 설정하여 오프라인 모드를 나타냅니다. 오프라인 상태는 로컬 하드 디스크에서  <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=fullName> 속성이 나타내는 위치에 저장됩니다. 즉, 오프라인 상태는 사용자 단위 및 응용 프로그램 단위로 저장됩니다.  
+ 다음 절차에서는 사용자가 오프라인 모드로 전환할 수 있도록 폼에 확인란을 추가합니다. 응용 프로그램은 `static` <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A?displayProperty=fullName> 속성을 `true`로 설정하여 오프라인 모드를 나타냅니다. 오프라인 상태는 로컬 하드 디스크에서 <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=fullName> 속성이 나타내는 위치에 저장됩니다. 즉, 오프라인 상태는 사용자 단위 및 응용 프로그램 단위로 저장됩니다.  
   
  오프라인 모드에서는 모든 클라이언트 응용 프로그램 서비스 요청이 서비스에 액세스하는 대신 로컬 캐시에서 데이터를 검색합니다. 기본 구성에서 로컬 데이터는 암호화된 형태의 사용자 암호를 포함합니다. 이렇게 하면 응용 프로그램이 오프라인 모드에 있는 동안 사용자가 로그인할 수 있습니다. 자세한 내용은 [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)을 참조하십시오.  
   
@@ -525,7 +525,7 @@ ms.lasthandoff: 06/02/2017
  이 연습에서는 Windows Forms 응용 프로그램에서 클라이언트 응용 프로그램 서비스를 사용하도록 설정 및 사용하는 방법을 배웠습니다. 테스트 서버를 설정한 후 사용자를 인증하고 서버에서 사용자 역할 및 응용 프로그램 설정을 검색하는 코드를 응용 프로그램에 추가했습니다. 또한 연결을 사용할 수 없을 때 응용 프로그램에서 원격 서비스 대신 로컬 데이터 캐시를 사용하도록 오프라인 모드를 사용하는 방법을 배웠습니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 실제 응용 프로그램에서는 사용할 수 없는 경우가 있거나 통지 없이 다운될 수 있는 원격 서버에서 많은 사용자의 데이터에 액세스합니다. 강력한 응용 프로그램을 만들려면 서비스를 사용할 수 없는 상황에 적절하게 대응해야 합니다. 이 연습에서는 try/catch 블록을 포함하여 <xref:System.Net.WebException>을 catch하고 서비스를 사용할 수 없는 경우 오류 메시지를 표시합니다. 프로덕션 코드에서는 오프라인 모드로 전환하거나, 응용 프로그램을 종료하거나, 특정 기능에 대한 액세스를 거부하여 이러한 경우를 처리하는 것이 좋습니다.  
+ 실제 응용 프로그램에서는 사용할 수 없는 경우가 있거나 통지 없이 다운될 수 있는 원격 서버에서 많은 사용자의 데이터에 액세스합니다. 강력한 응용 프로그램을 만들려면 서비스를 사용할 수 없는 상황에 적절하게 대응해야 합니다. 이 연습에서는 try/catch 블록을 포함하여 <xref:System.Net.WebException> 을 catch하고 서비스를 사용할 수 없는 경우 오류 메시지를 표시합니다. 프로덕션 코드에서는 오프라인 모드로 전환하거나, 응용 프로그램을 종료하거나, 특정 기능에 대한 액세스를 거부하여 이러한 경우를 처리하는 것이 좋습니다.  
   
  응용 프로그램 보안을 강화하려면 배포 전에 응용 프로그램과 서버를 철저히 테스트해야 합니다.  
   
