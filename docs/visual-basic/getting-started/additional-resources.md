@@ -70,12 +70,9 @@ ms.lasthandoff: 07/28/2017
   
 |용어|정의|  
 |----------|----------------|  
-|[Visual Basic 언어](http://go.microsoft.com/fwlink/?LinkId=145963)|
-          [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 언어 구문 및 컴파일러에 대해 설명합니다.|  
-|[Visual Basic Interop 및 업그레이드](http://go.microsoft.com/fwlink/?LinkId=145966)|
-          [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]으로 업그레이드하고 상호 운용성 기능을 사용하는 방법에 대해 설명합니다.|  
-|[Visual Basic IDE](http://go.microsoft.com/fwlink/?LinkId=145971)|
-          [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 통합 개발 환경에서 작업하는 방법에 대해 설명합니다.|  
+|[Visual Basic 언어](http://go.microsoft.com/fwlink/?LinkId=145963)|[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 언어 구문 및 컴파일러에 대해 설명합니다.|  
+|[Visual Basic Interop 및 업그레이드](http://go.microsoft.com/fwlink/?LinkId=145966)|[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]으로 업그레이드하고 상호 운용성 기능을 사용하는 방법에 대해 설명합니다.|  
+|[Visual Basic IDE](http://go.microsoft.com/fwlink/?LinkId=145971)|[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 통합 개발 환경에서 작업하는 방법에 대해 설명합니다.|  
 |[Visual Basic Power Packs](http://social.msdn.microsoft.com/Forums/vbpowerpacks/threads)|Visual Basic Power Pack의 일부분인 추가 기능, 컨트롤, 구성 요소, 샘플 및 도구에 대해 설명합니다.|  
 |[Visual Basic 일반](http://go.microsoft.com/fwlink/?LinkId=145973)|다른 포럼에서 다루지 않는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 관련 문제에 대해 설명합니다.|  
   
