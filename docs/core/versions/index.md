@@ -3,16 +3,16 @@ title: ".NET Core 버전 관리"
 description: ".NET Core 버전 관리의 작동 방식을 이해합니다."
 author: bleroy
 ms.author: mairaw
-ms.date: 08/10/2017
+ms.date: 08/11/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
 ms.translationtype: HT
-ms.sourcegitcommit: 3a25c1c3b540bac8ef963a8bbf708b0700c3e9e2
-ms.openlocfilehash: 94614e436734389df7bf3a6e2df2abe49593021a
+ms.sourcegitcommit: c5a80e487d4351e0eaf20e510df06999e212e096
+ms.openlocfilehash: d672e93a3e4f70439aa42aef04674500b0b0566d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/12/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="net-core-versioning"></a>.NET Core 버전 관리
@@ -154,6 +154,10 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 ### <a name="preview-versions"></a>미리 보기 버전
 
 미리 보기 버전에는 `-preview-[number]-([build]|"final")`이 추가됩니다. 예를 들어, `2.0.0-preview-1-final`을 입력합니다.
+
+### <a name="servicing-versions"></a>서비스 버전
+
+릴리스가 출시된 후에 릴리스 분기는 일반적으로 매일 빌드 만들기를 중지하고 대신 서비스 빌드를 만들기 시작합니다. 서비스 버전에는 `-servicing-[number]`이 추가됩니다. 예를 들어, `2.0.1-servicing-006924`을 입력합니다.
 
 ### <a name="lts-vs-current"></a>LTS 및 Current
 
