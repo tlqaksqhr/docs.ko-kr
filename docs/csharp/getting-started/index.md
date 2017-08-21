@@ -1,6 +1,6 @@
 ---
 title: "시작 - C# 가이드"
-description: "C# 시작"
+description: "기초 C # 개념을 빨리 배우고 .NET Core 응용 프로그램을 작성할 수 있는 짧고 간단한 자습서를 찾아보세요."
 keywords: "C#, 시작, 취득, 설치"
 author: rpetrusha
 ms.author: ronpet
@@ -9,12 +9,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.assetid: b77c7263-7cbf-4729-9626-8fbc3f5f14d9
 ms.translationtype: HT
-ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
-ms.openlocfilehash: 81132887a1abdc79b87e7095350f1e66368bce33
+ms.sourcegitcommit: 867f9eb286fa7ff5ef3e9167c1ab944c81161216
+ms.openlocfilehash: 347c88a66363ab04d519d10fdf7973692fcadde9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="get-started-with-c"></a>C# 시작 #
@@ -33,7 +32,7 @@ ms.lasthandoff: 08/14/2017
 
    클래스 라이브러리를 사용하면 다른 응용 프로그램에서 호출할 수 있는 형식 및 형식 멤버를 정의할 수 있습니다. 이 항목에서는 문자열이 대문자로 시작되는지 여부를 결정하는 단일 메서드로 클래스 라이브러리를 만들 수 있습니다. 라이브러리 빌드를 마친 후에는 [단위 테스트](../../core/tutorials/testing-library-with-visual-studio.md)를 개발하여 라이브러리가 예상대로 작동하는지 확인하고 [사용하려는 응용 프로그램](../../core/tutorials/consuming-library-with-visual-studio.md)에서 사용 가능하게 만들 수 있습니다.
 
-- [C# 및 Visual Studio Code 시작](../../core/tutorials/with-visual-studio-code.md)
+* [C# 및 Visual Studio Code 시작](../../core/tutorials/with-visual-studio-code.md)
 
    Visual Studio Code는 현대적인 웹 및 클라우드 응용 프로그램을 빌드 및 디버깅하기 위해 최적화된 강력한 코드 편집기입니다. IntelliSense를 지원하고 Windows, macOS, Linux에 사용할 수 있습니다.
 
