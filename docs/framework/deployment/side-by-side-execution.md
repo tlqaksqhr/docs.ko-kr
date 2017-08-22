@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework의 Side-by-Side 실행 | Microsoft Docs"
+title: ".NET Framework의 Side-by-Side 실행"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -21,11 +21,11 @@ caps.latest.revision: 21
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a32f50ce8a92fa22d9627a1510a4b3ec1087364e
-ms.openlocfilehash: 460471cceda60697382d770e1b95be75ff3cfc8a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1628d75ab7f842c6b7486a1d57f490b4d876ee28
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>.NET Framework의 Side-by-Side 실행
@@ -33,14 +33,14 @@ Side-by-side 실행은 동일한 컴퓨터에서 여러 버전의 응용 프로�
   
  다음 그림에서는 동일한 컴퓨터에서 두 가지 다른 버전의 런타임을 사용하는 여러 응용 프로그램을 보여 줍니다. 응용 프로그램 A, B, C는 런타임 버전 1.0을 사용하지만 응용 프로그램 D는 런타임 버전 1.1을 사용합니다.  
   
- ![Side&#45;by&#45;Side 실행](../../../docs/framework/deployment/media/simplesbs.gif "simplesbs")  
+ ![Side&#45;by&#45;side 실행](../../../docs/framework/deployment/media/simplesbs.gif "simplesbs")  
 두 가지 버전의 런타임에 대한 Side-by-Side 실행  
   
  .NET Framework는 공용 언어 런타임과 API 형식이 포함된 어셈블리의 컬렉션으로 구성되어 있습니다. 런타임과 .NET Framework 어셈블리의 버전은 별도로 관리됩니다. 예를 들어, 런타임 버전 4.0은 실제로 버전 4.0.319이며 .NET Framework 어셈블리 버전 1.0은 버전 1.0.3300.0입니다.  
   
  다음 그림에서는 동일한 컴퓨터에서 두 가지 다른 버전의 구성 요소를 사용하는 여러 응용 프로그램을 보여 줍니다. 응용 프로그램 A와 B는 구성 요소 버전 1.0을 사용하지만 응용 프로그램 C는 동일한 구성 요소의 버전 2.0을 사용합니다.  
   
- ![Side&#45;by&#45;Side 실행](../../../docs/framework/deployment/media/compsbs.gif "compsbs")  
+ ![Side&#45;by&#45;side 실행](../../../docs/framework/deployment/media/compsbs.gif "compsbs")  
 두 가지 버전의 구성 요소에 대한 Side-by-Side 실행  
   
  Side-by-Side 실행을 사용하면 응용 프로그램이 바인딩하는 구성 요소 버전과 응용 프로그램이 사용하는 런타임 버전을 보다 강력하게 제어할 수 있습니다.  
@@ -138,3 +138,4 @@ publicKeyToken=...,
   
 ## <a name="reference"></a>참조  
  [\<supportedRuntime> 요소](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+

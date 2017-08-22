@@ -1,5 +1,5 @@
 ---
-title: "방법: 응용 프로그램 도메인에 어셈블리 로드 | Microsoft Docs"
+title: "방법: 응용 프로그램 도메인에 어셈블리 로드"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,17 +17,17 @@ caps.latest.revision: 16
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 7caaa27fed13c33508b7decde1d87e723167d96b
+ms.translationtype: HT
+ms.sourcegitcommit: 934373d61407c8cc19b7d6424898a582880f9c21
+ms.openlocfilehash: c319da0f8e6f3cdfb83e659a778136d668699834
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 08/10/2017
 
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>방법: 응용 프로그램 도메인에 어셈블리 로드
-응용 프로그램 도메인에 어셈블리를 로드하는 방법에는 여러 가지가 있습니다. [System.Reflection.Assembly](https://msdn.microsoft.com/en-us/library/system.reflection.aspx) 클래스의 `static`(Visual Basic에서는 `Shared`) <xref:System.Reflection.Assembly.Load%2A> 메서드를 사용하는 것이 좋습니다. 어셈블리를 로드할 수 있는 다른 방법은 다음과 같습니다.  
+응용 프로그램 도메인에 어셈블리를 로드하는 방법에는 여러 가지가 있습니다. <xref:System.Reflection.Assembly?displayProperty=fullName> 클래스의 `static`(Visual Basic에서는 `Shared`) <xref:System.Reflection.Assembly.Load%2A> 메서드를 사용하는 것이 좋습니다. 어셈블리를 로드할 수 있는 다른 방법은 다음과 같습니다.  
   
--   [Assembly](https://msdn.microsoft.com/en-us/library/system.reflection.aspx) 클래스의 <xref:System.Reflection.Assembly.LoadFrom%2A> 메서드는 파일 위치가 지정된 경우 어셈블리를 로드합니다. 이 메서드로 어셈블리를 로드하는 경우 다른 로드 컨텍스트가 사용됩니다.  
+-   <xref:System.Reflection.Assembly> 클래스의 <xref:System.Reflection.Assembly.LoadFrom%2A> 메서드는 파일 위치가 지정된 경우 어셈블리를 로드합니다. 이 메서드로 어셈블리를 로드하는 경우 다른 로드 컨텍스트가 사용됩니다.  
   
 -   <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> 및 <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> 메서드는 리플렉션 전용 컨텍스트에 어셈블리를 로드합니다. 이 컨텍스트에 로드된 어셈블리는 검사할 수만 있고 실행할 수 없으므로 다른 플랫폼을 대상으로 하는 어셈블리를 검사할 수 있습니다. [방법: 리플렉션 전용 컨텍스트에 어셈블리 로드](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)를 참조하세요.  
   
@@ -57,3 +57,4 @@ ms.lasthandoff: 06/02/2017
  [응용 프로그램 도메인 사용](../../../docs/framework/app-domains/use.md)   
  [방법: 리플렉션 전용 컨텍스트에 어셈블리 로드](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)   
  [응용 프로그램 도메인 및 어셈블리](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)
+

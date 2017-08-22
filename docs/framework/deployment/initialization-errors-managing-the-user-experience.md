@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 초기화 오류: 사용자 환경 관리 | Microsoft Docs"
+title: ".NET Framework 초기화 오류: 사용자 환경 관리"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -23,11 +23,11 @@ caps.latest.revision: 5
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 70f0515b2b4219dcb7e143b0c81f91d3855fd433
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ad1a40319a1571643d022536bba93686d82a3d9f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework 초기화 오류: 사용자 환경 관리
@@ -106,3 +106,4 @@ CLR(공용 언어 런타임) 활성화 시스템은 관리되는 응용 프로�
  [방법: .NET Framework 4 또는 4.5를 지원하도록 앱 구성](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)   
  [방법: CLR 활성화 문제 디버깅](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)   
  [Windows 10, Windows 8.1 및 Windows 8에 .NET Framework 3.5 설치](../../../docs/framework/install/dotnet-35-windows-10.md)
+
