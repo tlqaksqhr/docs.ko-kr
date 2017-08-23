@@ -13,10 +13,10 @@ author: rpetrusha
 ms.author: mariaw
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2766edd72d7f0ebb03692ef50be96ffc3c676270
+ms.sourcegitcommit: 934373d61407c8cc19b7d6424898a582880f9c21
+ms.openlocfilehash: b70c0a7291cf8569781ffc6b67632f93c5627e8b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/10/2017
 
 ---
 
@@ -262,8 +262,8 @@ ms.lasthandoff: 07/28/2017
 | ------- | ------------------------ | ------------------- |
 | **명령 인스턴스 바인딩** | 보기-모델 기반 명령 인스턴스를 보기 기반 입력 제스처에 바인딩하는 메커니즘을 제공하기 위해 <xref:System.Windows.Input.InputBinding> 클래스는 이제 <xref:System.Windows.DependencyObject> 대신 <xref:System.Windows.Freezable>에서 상속받습니다. 이제 다음 속성이 종속성 속성이 됩니다.<br><br>* <xref:System.Windows.Input.InputBinding.Command><br>* <xref:System.Windows.Input.InputBinding.CommandParameter><br>* <xref:System.Windows.Input.InputBinding.CommandTarget><br><br>이 변경의 결과는 다음과 같습니다.<br><br>* 이제 <xref:System.Windows.Input.InputBinding> 개체는 변경 가능한 상태로 유지되는 대신 등록 시 고정됩니다.<br>* <xref:System.Windows.DependencyObject> 클래스의 제한 때문에 다중 스레드에서 인스턴스 수준 <xref:System.Windows.Input.InputBinding> 개체에 액세스할 수 없습니다.<br>* <xref:System.Windows.Freezable> 클래스의 제한 때문에 등록 이후에 클래스 수준 입력 바인딩을 변경할 수 없습니다.<br>* 보기-모델에서 작성된 명령 인스턴스에는 입력 바인딩을 지정할 수 없습니다. | 바인딩이 변경될 수 있는 경우 개별 스레드에 <xref:System.Windows.Input.InputBinding> 클래스의 개별 인스턴스를 작성하거나 아니면 고정하세요. 등록된 후에는 클래스 수준의 정적 <xref:System.Windows.Input.InputBinding>을 변경하지 마세요. |
 | **브라우저 응용 프로그램** | WPF 브라우저 응용 프로그램(.XBAP)은 이제 개체가 올바른 순서로 라우팅된 키 이벤트를 수신할 수 있도록 독립 실행형 WPF 응용 프로그램과 마찬가지로 키 이벤트를 처리합니다. | 없음 |
-| **데드 키 조합** | WPF는 눈에 보이는 문자를 생성하지 않는 데드 키를 난독 처리하지만, 대신 키가 다음 문자 키와 결합되어 한 문자를 생성함을 나타냅니다. [KeyDown](https://msdn.microsoft.com/library/system.windows.input.keyboard.keydown(v=vs.100).aspx) 이벤트와 같은 키 입력 이벤트는 <xref:System.Windows.Input.KeyEventArgs.Key> 속성을 <xref:System.Windows.Input.Key> 값으로 설정하여 키가 데드 키일 때 보고합니다. 응용 프로그램은 일반적으로 결합된 문자를 만드는 키보드 입력에 응답하지 않으므로, 이는 일반적으로 예상되는 동작입니다. | 결합된 문자의 일부였던 키를 읽어야 하는 응용 프로그램은 <xref:System.Windows.Input.KeyEventArgs.DeadCharProcessedKey> 속성을 사용하여 현재 모호한 키를 얻을 수 있습니다. |
-| **포커스 관리자** | `true`로 설정된 [IsFocusScope](https://msdn.microsoft.com/library/system.windows.input.focusmanager.isfocusscope(v=vs.100).aspx) 연결 속성이 있는 요소가 [FocusManager.GetFocusedElement](https://msdn.microsoft.com/library/ms604088(v=vs.100).aspx) 메서드에 전달되면, 이 메서드는 해당 포커스 영역 내에서 마지막 키보드 포커스 요소인 요소를 반환합니다. 단, 반환된 요소가 메서드에 전달된 요소와 동일한 <xref:System.Windows.PresentationSource> 개체여야 합니다. | 없음 |
+| **데드 키 조합** | WPF는 눈에 보이는 문자를 생성하지 않는 데드 키를 난독 처리하지만, 대신 키가 다음 문자 키와 결합되어 한 문자를 생성함을 나타냅니다. <xref:System.Windows.Input.Keyboard.KeyDownEvent> 이벤트와 같은 키 입력 이벤트는 <xref:System.Windows.Input.KeyEventArgs.Key> 속성을 <xref:System.Windows.Input.Key> 값으로 설정하여 키가 데드 키일 때 보고합니다. 응용 프로그램은 일반적으로 결합된 문자를 만드는 키보드 입력에 응답하지 않으므로, 이는 일반적으로 예상되는 동작입니다. | 결합된 문자의 일부였던 키를 읽어야 하는 응용 프로그램은 <xref:System.Windows.Input.KeyEventArgs.DeadCharProcessedKey> 속성을 사용하여 현재 모호한 키를 얻을 수 있습니다. |
+| **포커스 관리자** | `true`로 설정된 [IsFocusScope](https://msdn.microsoft.com/library/system.windows.input.focusmanager.isfocusscope.aspx) 연결 속성이 있는 요소가 <xref:System.Windows.Input.FocusManager.GetFocusedElement(System.Windows.DependencyObject)?displayProperty=fullName> 메서드에 전달되면, 이 메서드는 해당 포커스 영역 내에서 마지막 키보드 포커스 요소인 요소를 반환합니다. 단, 반환된 요소가 메서드에 전달된 요소와 동일한 <xref:System.Windows.PresentationSource> 개체여야 합니다. | 없음 |
 
 ### <a name="ui-automation"></a>UI 자동화
 
@@ -298,7 +298,7 @@ ms.lasthandoff: 07/28/2017
 | 기능 | 3.5 SP1과의 차이점 |
 | ------- | ------------------------ |
 | **카멜레온 스키마** | 데이터 손상을 방지하기 위해 이제 카멜레온 스키마는 여러 스키마에 포함될 때 올바르게 복제됩니다.<br><br>카멜레온 스키마는 대상 네임스페이스가 없는 스키마이며, 다른 XSD에 포함될 때 가져오기 스키마의 대상 네임스페이스를 사용합니다. 카멜레온 스키마는 스키마에 공통 형식을 포함하는 데 종종 사용됩니다. |
-| **ID 함수** | <xref:System.Xml.XmlReader> 개체가 XLST에 전달될 때 이제 XSLT [id 함수](https://msdn.microsoft.com/library/ms190915.aspx)가 null 대신 올바른 값을 반환합니다.<br><br>사용자가 <xref:System.Xml.Linq.XNode.CreateReader%2A> 메서드를 사용하여 LINQ to XML 클래스에서 <xref:System.Xml.XmlReader> 개체를 만들었고 이 <xref:System.Xml.XmlReader> 개체가 XSLT로 전달된 경우, XSLT의 `id` 함수 인스턴스가 전에는 null을 반환했습니다. 이것은 `id` 함수에 대해 허용된 반환 값이 아닙니다. |
+| **ID 함수** | <xref:System.Xml.XmlReader> 개체가 XLST에 전달될 때 이제 XSLT [id 함수](/sql/xquery/functions-on-sequences-id)가 null 대신 올바른 값을 반환합니다.<br><br>사용자가 <xref:System.Xml.Linq.XNode.CreateReader%2A> 메서드를 사용하여 LINQ to XML 클래스에서 <xref:System.Xml.XmlReader> 개체를 만들었고 이 <xref:System.Xml.XmlReader> 개체가 XSLT로 전달된 경우, XSLT의 `id` 함수 인스턴스가 전에는 null을 반환했습니다. 이것은 `id` 함수에 대해 허용된 반환 값이 아닙니다. |
 | **네임스페이스 특성** | 데이터 손상을 방지하기 위해 이제 <xref:System.Xml.XPath.XPathNavigator> 개체가 `x:xmlns` 특성의 로컬 이름을 올바르게 반환합니다. |
 | **네임스페이스 선언** | 하위 트리의 <xref:System.Xml.XmlReader> 개체는 더 이상 하나의 XML 요소 내에 중복된 네임스페이스 선언을 만들지 않습니다. |
 | **스키마 유효성 검사** | 잘못된 스키마 유효성 검사를 방지하기 위해, <xref:System.Xml.Schema.XmlSchemaSet> 클래스는 XSD 스키마가 일관성 있고 정확하게 컴파일되도록 합니다. 이러한 스키마는 다른 스키마를 포함할 수 있습니다. 예를 들어 `A.xsd`는 `C.xsd`를 포함할 수 있는 `B.xsd`를 포함할 수 있습니다. 이들 중 하나를 컴파일하면 이 의존성 그래프가 트래버스됩니다. |
