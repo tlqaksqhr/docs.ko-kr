@@ -1,7 +1,7 @@
 ---
-title: "튜플 및 기타 형식 분해 | Microsoft Docs"
-description: "튜플 및 기타 형식을 분해하는 방법 알아보기"
-keywords: .NET, .NET Core, C#0
+title: "튜플 및 기타 형식 분해"
+description: "튜플 및 기타 형식을 분해하는 방법을 알아봅니다."
+keywords: .NET, .NET Core, C#
 author: rpetrusha
 ms-author: ronpet
 ms.date: 07/18/2016
@@ -11,13 +11,12 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
 ms.translationtype: HT
-ms.sourcegitcommit: 9fc16c63a6e0e0dd31ee4a68fca8b945b8281e04
-ms.openlocfilehash: f0946db700301a63109f23be5536f3a0505f4d60
+ms.sourcegitcommit: 863940512f33568ee10569da4712e7e646bc3ba7
+ms.openlocfilehash: ad0ed6568da073683545727ef47f6a223942c8d6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/01/2017
+ms.lasthandoff: 08/12/2017
 
 ---
-
 # <a name="deconstructing-tuples-and-other-types"></a>튜플 및 기타 형식 분해 #
 
 튜플은 메서드 호출에서 여러 값을 검색할 수 있는 간단한 방법입니다. 하지만 튜플을 검색한 후 튜플의 개별 요소를 처리해야 합니다. 다음 예제와 같이 요소별로 이 작업을 수행하면 번거롭습니다. `QueryCityData` 메서드는 3 튜플을 반환하며 각 튜플 요소가 별도의 작업에서 변수에 할당됩니다.
@@ -44,21 +43,21 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
 - C#에서 각 변수의 형식을 유추하도록 `var` 키워드를 사용할 수 있습니다. `var` 키워드는 괄호 밖에 놓습니다. 다음 예제에서는 `QueryCityData` 메서드에서 반환된 3 튜플을 분해할 때 형식 유추를 사용합니다.
  
-      [!code-csharp[Deconstruction-Infer](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple3.cs#1)]
+    [!code-csharp[Deconstruction-Infer](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple3.cs#1)]
 
     괄호 안에 일부 또는 모든 변수 선언에 `var` 키워드를 개별적으로 사용할 수도 있습니다. 
 
-      [!code-csharp[Deconstruction-Infer-Some](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple4.cs#1)]
+    [!code-csharp[Deconstruction-Infer-Some](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple4.cs#1)]
 
     이 방법은 번거로우므로 사용하지 않는 것이 좋습니다.
 
-튜플에 있는 모든 필드의 형식이 같은 경우에도 괄호 밖에 특정 형식을 지정할 수 없습니다. 이 경우 컴파일러 오류 CS8136, “`var (...)` 양식에서는 `var`에 특정 형식을 사용할 수 없습니다.”가 생성됩니다.
+튜플에 있는 모든 필드의 형식이 같은 경우에도 괄호 밖에 특정 형식을 지정할 수 없습니다. 이 경우 컴파일러 오류 CS8136, “Deconstruction 'var (...)' 양식에서는 'var'에 특정 형식을 사용할 수 없습니다.”가 생성됩니다.
 
 튜플의 각 요소도 변수에 할당해야 합니다. 생략하는 요소가 있으면 컴파일러에서 CS8132 오류, “‘x’ 요소의 튜플을 ‘y’ 변수로 분해할 수 없습니다.”가 생성됩니다.
 
 ## <a name="deconstructing-tuple-elements-with-discards"></a>무시 항목을 사용한 튜플 요소 분해
 
-튜플을 분해할 때 일부 요소 값에만 관심이 있는 경우가 종종 있습니다. C# 7부터는 C#에서 지원하는 *무시 항목* 즉, 무시하도록 선택한 값을 갖는 쓰기 전용 변수를 활용할 수 있습니다. 무시 항목은 할당에서 밑줄 문자(“_”)로 지정됩니다. 원하는 수의 값을 모두 하나의 무시 항목 `_`로 표시하여 무시할 수 있습니다.
+튜플을 분해할 때 일부 요소 값에만 관심이 있는 경우가 종종 있습니다. C# 7부터는 C#에서 지원하는 *무시 항목* 즉, 무시하도록 선택한 값을 갖는 쓰기 전용 변수를 활용할 수 있습니다. 무시 항목은 할당에서 밑줄 문자(“\_”)로 지정됩니다. 원하는 수의 값을 모두 하나의 무시 항목 `_`로 표시하여 무시할 수 있습니다.
 
 다음 예제에서는 무시 항목과 함께 튜플을 사용하는 방법을 보여 줍니다. `QueryCityDataForYears` 메서드는 도시의 이름, 도시의 면적, 연도, 해당 연도의 도시 인구, 두 번째 연도, 해당 두 번째 연도의 도구 인구를 포함하는 6 튜플을 반환합니다. 이 예제는 이러한 두 연도 사이의 인구 변화를 보여 줍니다. 튜플에서 사용 가능한 데이터 중 도시 면적에는 관심이 없고 디자인 타임에 도시 이름과 두 날짜를 알고 있습니다. 따라서 튜플에 저장된 두 가지 인구 값에만 관심이 있고 나머지 값은 무시 항목으로 처리할 수 있습니다.  
 
@@ -90,7 +89,7 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
 ## <a name="deconstructing-a-user-defined-type-with-discards"></a>무시 항목을 사용한 사용자 정의 형식 분해
 
-[튜플](#deconstructing-tuple-elements-with-discards)에서와 마찬가지로 무시 항목을 사용하여 `Deconstruct` 메서드에서 반환된 항목 중 선택한 항목을 무시할 수 있습니다. 각 무시 항목은 “_”라는 변수로 정의하며 단일 분해 작업에 여러 무시 항목을 포함할 수 있습니다.
+[튜플](#deconstructing-tuple-elements-with-discards)에서와 마찬가지로 무시 항목을 사용하여 `Deconstruct` 메서드에서 반환된 항목 중 선택한 항목을 무시할 수 있습니다. 각 무시 항목은 “\_”이라는 변수로 정의하며 단일 분해 작업에 여러 무시 항목을 포함할 수 있습니다.
 
 다음 예제에서는 `Person` 개체를 4개의 문자열(이름, 성, 도시 및 주)로 분해하지만 성과 주는 무시합니다.
 
