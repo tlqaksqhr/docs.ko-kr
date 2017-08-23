@@ -22,7 +22,7 @@ ms.lasthandoff: 08/04/2017
 
 *람다 식*은 개체로 처리되는 코드 블록(식 또는 문 블록)입니다. 이 식은 인수로 메서드에 전달할 수 있으며 메서드 호출에서 반환될 수도 있습니다. 람다 식은 다음과 같은 경우에 광범위하게 사용됩니다.
 
-- 실행될 코드를 @System.Threading.Tasks.Task.Run(System.Action)과 같은 비동기 메서드에 전달.
+- 실행될 코드를 @System.Threading.Tasks.Task.Run (System.Action)과 같은 비동기 메서드에 전달.
 
 - [LINQ 쿼리 식](linq/index.md) 작성.
 
@@ -110,7 +110,7 @@ C#의 튜플 지원에 대한 자세한 내용은 [C# 튜플 형식](tuples.md)�
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#3)]
 
-@System.Linq.Queryable 형식에 정의되어 있는 표준 쿼리 연산자의 경우와 같이 인수 형식이 @System.Linq.Expressions.Expression%601인 경우에도 람다 식을 사용할 수 있습니다. @System.Linq.Expressions.Expression%601 인수를 지정하면 람다 식이 식 트리로 컴파일됩니다. 다음 예제에서는 [System.Linq.Enumerable.Count](xref:System.Linq.Enumerable.Count%60%601(System.Collections.Generic.IEnumerable{%60%600})) 표준 쿼리 연산자를 사용합니다.
+@System.Linq.Queryable 형식에 정의되어 있는 표준 쿼리 연산자의 경우와 같이 인수 형식이 @System.Linq.Expressions.Expression%601 인 경우에도 람다 식을 사용할 수 있습니다. @System.Linq.Expressions.Expression%601 인수를 지정하면 람다 식이 식 트리로 컴파일됩니다. 다음 예제에서는 [System.Linq.Enumerable.Count](xref:System.Linq.Enumerable.Count%60%601(System.Collections.Generic.IEnumerable{%60%600})) 표준 쿼리 연산자를 사용합니다.
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#4)]
 
