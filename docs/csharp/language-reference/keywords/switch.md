@@ -37,10 +37,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 4609c30a03c835b9b1338ea6bc9672f7445cfd25
-ms.openlocfilehash: ebbfb5818c8f2a07df7a8cb4724e99b1b9268b03
+ms.sourcegitcommit: 387c8c7e44ab818ca97e686330746f50df091bb9
+ms.openlocfilehash: 5c151e3bbd46212f1234d46ff05d389f2384ca0e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="switch-c-reference"></a>switch(C# 참조)
@@ -100,7 +100,7 @@ switch (caseSwitch)
   
  [!code-cs[switch#4](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]    
   
- case 레이블이 일치 식과 일치하는 switch 섹션에서 문 목록의 실행은 첫 번째 문으로 시작하고 일반적으로 `break`, `goto case`, `return` 또는 `throw` 같은 점프 문에 도달할 때까지 문 목록 전체를 진행합니다. 이 경우 `switch` 문 외부 또는 다른 case 레이블로 제어를 보냅니다.  
+ case 레이블이 일치 식과 일치하는 switch 섹션에서 문 목록의 실행은 첫 번째 문으로 시작하고 일반적으로 `break`, `goto case`, `goto label`, `return` 또는 `throw` 같은 점프 문에 도달할 때까지 문 목록 전체를 진행합니다. 이 경우 `switch` 문 외부 또는 다른 case 레이블로 제어를 보냅니다. 사용되는 경우 `goto` 문은 constant 레이블에 컨트롤을 전달해야 합니다. 이 제한 사항이 필요합니다. constant가 아닌 레이블에 컨트롤을 전달하려고 하면 코드의 의도치 않은 위치에 컨트롤을 전달하거나 무한 루프를 만드는 것과 같은 원치 않는 부작용이 발생할 수 있기 때문입니다.
 
 ## <a name="case-labels"></a>case 레이블
 
