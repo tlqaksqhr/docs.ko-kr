@@ -1,28 +1,26 @@
 ---
-title: "dotnet-migrate 명령 - .NET Core CLI"
-description: "dotnet-migrate 명령은 프로젝트와 모든 종속성을 마이그레이션합니다."
-keywords: "dotnet-migrate, CLI, CLI 명령, .NET Core"
-author: blackdwarf
+title: "dotnet migrate 명령 - .NET Core CLI"
+description: "dotnet migrate 명령은 프로젝트와 모든 종속성을 마이그레이션합니다."
+author: mairaw
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 0da07253-5ae1-42e9-9455-bffee9950952
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e8491d69b2e0df7b3bd2741e34abdb9631777019
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 674b19f9fc546e057c7b7fa4b024a0b013eda7e5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-migrate"></a>dotnet 마이그레이션
 
-# <a name="dotnet-migrate"></a>dotnet-migrate
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>이름
 
-`dotnet-migrate` - Preview 2 .NET Core 프로젝트를 .NET Core SDK 1.0 프로젝트로 마이그레이션합니다.
+`dotnet migrate` - Preview 2 .NET Core 프로젝트를 .NET Core SDK 1.0 프로젝트로 마이그레이션합니다.
 
 ## <a name="synopsis"></a>개요
 
@@ -41,7 +39,7 @@ ms.lasthandoff: 07/28/2017
 * *solution.sln* 파일: 솔루션에서 참조된 프로젝트를 마이그레이션합니다.
 * 지정된 디렉터리의 모든 하위 디렉터리(재귀적)
 
-`dotnet migrate` 명령은 마이그레이션된 *project.json* 파일을 `backup` 디렉터리에서 유지합니다. 이 디렉터리는 없는 경우 생성됩니다. 이 동작은 `--skip-backup` 옵션을 사용하여 재정의됩니다. 
+`dotnet migrate` 명령은 마이그레이션된 *project.json* 파일을 `backup` 디렉터리에서 유지합니다. 이 디렉터리는 없는 경우 생성됩니다. 이 동작은 `--skip-backup` 옵션을 사용하여 재정의됩니다.
 
 기본적으로 마이그레이션 작업은 표준 출력(STDOUT)에 마이그레이션 프로세스의 상태를 출력합니다. `--report-file <REPORT_FILE>` 옵션을 사용하는 경우 출력이 지정된 파일에 저장됩니다. 
 
@@ -64,11 +62,11 @@ ms.lasthandoff: 07/28/2017
 
 `-h|--help`
 
-명령에 대한 간단한 도움말을 출력합니다.  
+명령에 대한 간단한 도움말을 출력합니다.
 
 `-t|--template-file <TEMPLATE_FILE>`
 
-마이그레이션에 사용할 템플릿 csproj 파일입니다. 기본적으로 `dotnet new console`에서 삭제한 것과 동일한 템플릿이 사용됩니다. 
+마이그레이션에 사용할 템플릿 csproj 파일입니다. 기본적으로 `dotnet new console`에서 삭제한 것과 동일한 템플릿이 사용됩니다.
 
 `-v|--sdk-package-version <VERSION>`
 
@@ -107,4 +105,3 @@ ms.lasthandoff: 07/28/2017
 현재 프로젝트만 마이그레이션하고 프로젝트 간(P2P) 종속성은 마이그레이션하지 않으며, 특정 SDK 버전을 사용합니다.
 
 `dotnet migrate -s -v 1.0.0-preview4`
-

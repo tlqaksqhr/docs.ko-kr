@@ -1,28 +1,26 @@
 ---
-title: "dotnet-nuget-locals 명령 - .NET Core CLI"
-description: "dotnet-nuget-locals 명령은 http-request 캐시, 임시 캐시 또는 시스템 전체의 글로벌 패키지 폴더와 같은 로컬 NuGet 리소스를 지우거나 목록에 포함합니다."
-keywords: "dotnet-nuget-locals, CLI, CLI 명령, .NET Core"
+title: "dotnet nuget locals 명령 - .NET Core CLI"
+description: "dotnet nuget locals 명령은 http-request 캐시, 임시 캐시 또는 컴퓨터 전체의 글로벌 패키지 폴더와 같은 로컬 NuGet 리소스를 지우거나 목록에 포함합니다."
 author: karann-msft
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 8440229e-317e-4dc1-9463-cba5fdb12c3b
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2c9ea7b3b7c61b347cb7c56254773290f04a0cd6
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 2b66198ac3e33c640abda0c96fb05944f5ea91df
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
-# <a name="dotnet-nuget-locals"></a>dotnet-nuget locals
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>이름
 
-`dotnet-nuget locals` - 로컬 NuGet 리소스를 지우거나 나열합니다. 
+`dotnet nuget locals` - 로컬 NuGet 리소스를 지우거나 나열합니다.
 
 ## <a name="synopsis"></a>개요
 
@@ -38,27 +36,16 @@ ms.lasthandoff: 07/28/2017
 
 다음 값 중 하나입니다.
 
-`all`
-
-지정된 작업이 모든 캐시 형식 즉, http-request 캐시, 전역 패키지 캐시 및 임시 캐시에 적용됨을 나타냅니다.
-
-`http-cache`
-
-지정된 작업이 http-request 캐시에만 적용됨을 나타냅니다. 다른 캐시 위치는 영향을 받지 않습니다.
-
-`global-packages`
-
-지정된 작업이 전역 패키지 캐시에만 적용됨을 나타냅니다. 다른 캐시 위치는 영향을 받지 않습니다.
-
-`temp`
-
-지정된 작업이 임시 캐시에만 적용됨을 나타냅니다. 다른 캐시 위치는 영향을 받지 않습니다.
+* `all` - 지정된 작업이 모든 캐시 형식 즉, http-request 캐시, 전역 패키지 캐시 및 임시 캐시에 적용됨을 나타냅니다.
+* `http-cache` - 지정된 작업이 http-request 캐시에만 적용됨을 나타냅니다. 다른 캐시 위치는 영향을 받지 않습니다.
+* `global-packages` - 지정된 작업이 전역 패키지 캐시에만 적용됨을 나타냅니다. 다른 캐시 위치는 영향을 받지 않습니다.
+* `temp` - 지정된 작업이 임시 캐시에만 적용됨을 나타냅니다. 다른 캐시 위치는 영향을 받지 않습니다.
 
 ## <a name="options"></a>옵션
 
 `-h|--help`
 
-명령에 대한 간단한 도움말을 출력합니다.  
+명령에 대한 간단한 도움말을 출력합니다.
 
 `-c|--clear`
 
@@ -97,4 +84,3 @@ ms.lasthandoff: 07/28/2017
 ## <a name="troubleshooting"></a>문제 해결
 
 `dotnet nuget locals` 명령을 사용하는 동안 가장 일반적으로 나타나는 문제와 오류에 대한 자세한 내용은 [NuGet 캐시 관리](/nuget/consume-packages/managing-the-nuget-cache)를 참조하세요.
-

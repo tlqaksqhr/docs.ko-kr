@@ -1,24 +1,22 @@
 ---
 title: "dotnet 명령 - .NET Core CLI"
 description: "dotnet 명령(.NET Core CLI 도구에 대한 일반 드라이버) 및 사용법에 대해 알아봅니다."
-keywords: "dotnet, CLI, CLI 명령, .NET Core"
-author: blackdwarf
+author: mairaw
 ms.author: mairaw
-ms.date: 03/20/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 256e468e-eaaa-4715-b5fb-8cbddcf80e69
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1f377ea55278ae382f56a0dc0cbcf1bb99f49eca
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: d08c6794acd450556a5f97fced229eb7289b6d58
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
-
 # <a name="dotnet-command"></a>dotnet 명령
+
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>이름
 
@@ -26,7 +24,11 @@ ms.lasthandoff: 07/28/2017
 
 ## <a name="synopsis"></a>개요
 
-`dotnet [command] [arguments] [--version] [--info] [-d|--diagnostics] [-v|--verbose] [--fx-version] [--additionalprobingpath] [-h|--help]`
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+`dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx] [-v|--verbose] [--version]`
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+`dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [-v|--verbose] [--version]`
+---
 
 ## <a name="description"></a>설명
 
@@ -38,9 +40,15 @@ ms.lasthandoff: 07/28/2017
 
 ## <a name="options"></a>옵션
 
-`-v|--verbose`
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-자세한 정보 출력을 사용합니다.
+`--additionaldeps <PATH>`
+
+추가적인 *deps.json* 파일의 경로입니다.
+
+`--additionalprobingpath <PATH>`
+
+검색 정책 및 검색할 어셈블리를 포함하는 경로입니다.
 
 `-d|--diagnostics`
 
@@ -48,64 +56,122 @@ ms.lasthandoff: 07/28/2017
 
 `--fx-version <VERSION>`
 
-응용 프로그램을 실행하는 데 사용할 설치된 공유 프레임워크 버전입니다.
-
-`--additionalprobingpath <PATH>`
-
-검색 정책 및 검색할 어셈블리를 포함하는 경로입니다.
-
-`--version`
-
-CLI 도구의 버전을 출력합니다.
-
-`--info`
-
-현재 운영 체제, 버전에 대한 SHA 커밋 및 기타 정보 등 CLI 도구 및 환경에 대한 자세한 정보를 출력합니다.
+응용 프로그램 실행에 사용할 설치된 .NET Core 런타임의 버전입니다.
 
 `-h|--help`
 
 명령에 대한 간단한 도움말을 출력합니다. `dotnet`과 함께 사용되는 경우 사용 가능한 명령 목록도 출력합니다.
 
+`--info`
+
+현재 운영 체제, 버전에 대한 SHA 커밋 및 기타 정보 등 CLI 도구 및 환경에 대한 자세한 정보를 출력합니다.
+
+`--roll-forward-on-no-candidate-fx`
+
+ 후보 공유 프레임워크에서는 롤포워드하지 않습니다.
+
+`-v|--verbose`
+
+자세한 정보 출력을 사용합니다.
+
+`--version`
+
+사용 중인 .NET Core SDK 버전을 출력합니다.
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`--additionalprobingpath <PATH>`
+
+검색 정책 및 검색할 어셈블리를 포함하는 경로입니다.
+
+`-d|--diagnostics`
+
+진단 출력을 사용합니다.
+
+`--fx-version <VERSION>`
+
+응용 프로그램 실행에 사용할 설치된 .NET Core 런타임의 버전입니다.
+
+`-h|--help`
+
+명령에 대한 간단한 도움말을 출력합니다. `dotnet`과 함께 사용되는 경우 사용 가능한 명령 목록도 출력합니다.
+
+`--info`
+
+현재 운영 체제, 버전에 대한 SHA 커밋 및 기타 정보 등 CLI 도구 및 환경에 대한 자세한 정보를 출력합니다.
+
+`-v|--verbose`
+
+자세한 정보 출력을 사용합니다.
+
+`--version`
+
+사용 중인 .NET Core SDK 버전을 출력합니다.
+
+---
+
 ## <a name="dotnet-commands"></a>dotnet 명령
 
 ### <a name="general"></a>일반
 
-명령 | 함수
---- | ---
-[dotnet-build](dotnet-build.md) | .NET Core 응용 프로그램을 빌드합니다.
-[dotnet-clean](dotnet-clean.md) | 빌드 출력을 정리합니다.
-[dotnet-migrate](dotnet-migrate.md) | 유효한 Preview 2 프로젝트를 .NET Core SDK 1.0 프로젝트로 마이그레이션합니다.
-[dotnet-msbuild](dotnet-msbuild.md) | MSBuild 명령줄에 대한 액세스 권한을 제공합니다.
-[dotnet-new](dotnet-new.md) | 지정한 템플릿에 대해 C# 또는 F# 프로젝트를 초기화합니다.
-[dotnet-pack](dotnet-pack.md) | 코드의 NuGet 패키지를 만듭니다.
-[dotnet-publish](dotnet-publish.md) | .NET Framework 종속형 또는 자체 포함 응용 프로그램을 게시합니다.
-[dotnet-restore](dotnet-restore.md) | 지정된 응용 프로그램에 대한 종속성을 복원합니다.
-[dotnet-run](dotnet-run.md) | 소스에서 응용 프로그램을 실행합니다.
-[dotnet-sln](dotnet-sln.md) | 솔루션 파일에 프로젝트를 추가, 제거 및 나열하는 옵션입니다.
-[dotnet-test](dotnet-test.md) | Test Runner를 사용하여 테스트를 실행합니다.
+# <a name="net-core-2xtabnetcore1x"></a>[.NET Core 2.x](#tab/netcore1x)
+
+| 명령                             | 함수                                                            |
+| ----------------------------------- | ------------------------------------------------------------------- |
+| [dotnet build](dotnet-build.md)     | .NET Core 응용 프로그램을 빌드합니다.                                     |
+| [dotnet clean](dotnet-clean.md)     | 빌드 출력을 정리합니다.                                              |
+| [dotnet help](dotnet-help.md)       | 명령에 대한 자세한 온라인 설명서를 표시합니다.           |
+| [dotnet migrate](dotnet-migrate.md) | 유효한 Preview 2 프로젝트를 .NET Core SDK 1.0 프로젝트로 마이그레이션합니다.  |
+| [dotnet msbuild](dotnet-msbuild.md) | MSBuild 명령줄에 대한 액세스 권한을 제공합니다.                        |
+| [dotnet new](dotnet-new.md)         | 지정한 템플릿에 대해 C# 또는 F# 프로젝트를 초기화합니다.                |
+| [dotnet pack](dotnet-pack.md)       | 코드의 NuGet 패키지를 만듭니다.                               |
+| [dotnet publish](dotnet-publish.md) | .NET Framework 종속형 또는 자체 포함 응용 프로그램을 게시합니다. |
+| [dotnet restore](dotnet-restore.md) | 지정된 응용 프로그램에 대한 종속성을 복원합니다.                  |
+| [dotnet run](dotnet-run.md)         | 소스에서 응용 프로그램을 실행합니다.                                   |
+| [dotnet sln](dotnet-sln.md)         | 솔루션 파일에 프로젝트를 추가, 제거 및 나열하는 옵션입니다.       |
+| [dotnet store](dotnet-store.md)     | 어셈블리를 런타임 패키지 저장소에 저장합니다.                     |
+| [dotnet test](dotnet-test.md)       | Test Runner를 사용하여 테스트를 실행합니다.                                     |
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+| 명령                             | 함수                                                            |
+| ----------------------------------- | ------------------------------------------------------------------- |
+| [dotnet build](dotnet-build.md)     | .NET Core 응용 프로그램을 빌드합니다.                                     |
+| [dotnet clean](dotnet-clean.md)     | 빌드 출력을 정리합니다.                                              |
+| [dotnet migrate](dotnet-migrate.md) | 유효한 Preview 2 프로젝트를 .NET Core SDK 1.0 프로젝트로 마이그레이션합니다.  |
+| [dotnet msbuild](dotnet-msbuild.md) | MSBuild 명령줄에 대한 액세스 권한을 제공합니다.                        |
+| [dotnet new](dotnet-new.md)         | 지정한 템플릿에 대해 C# 또는 F# 프로젝트를 초기화합니다.                |
+| [dotnet pack](dotnet-pack.md)       | 코드의 NuGet 패키지를 만듭니다.                               |
+| [dotnet publish](dotnet-publish.md) | .NET Framework 종속형 또는 자체 포함 응용 프로그램을 게시합니다. |
+| [dotnet restore](dotnet-restore.md) | 지정된 응용 프로그램에 대한 종속성을 복원합니다.                  |
+| [dotnet run](dotnet-run.md)         | 소스에서 응용 프로그램을 실행합니다.                                   |
+| [dotnet sln](dotnet-sln.md)         | 솔루션 파일에 프로젝트를 추가, 제거 및 나열하는 옵션입니다.       |
+| [dotnet test](dotnet-test.md)       | Test Runner를 사용하여 테스트를 실행합니다.                                     |
+
+---
 
 ### <a name="project-references"></a>프로젝트 참조
 
 명령 | 함수
 --- | ---
-[dotnet-add reference](dotnet-add-reference.md) | 프로젝트 참조를 추가합니다.
-[dotnet-list reference](dotnet-list-reference.md) | 프로젝트 참조를 나열합니다.
-[dotnet-remove reference](dotnet-remove-reference.md) | 프로젝트 참조를 제거합니다.
+[dotnet add reference](dotnet-add-reference.md) | 프로젝트 참조를 추가합니다.
+[dotnet list reference](dotnet-list-reference.md) | 프로젝트 참조를 나열합니다.
+[dotnet remove reference](dotnet-remove-reference.md) | 프로젝트 참조를 제거합니다.
 
 ### <a name="nuget-packages"></a>NuGet 패키지
 
 명령 | 함수
 --- | ---
-[dotnet-add package](dotnet-add-package.md) | NuGet 패키지를 추가합니다.
-[dotnet-remove package](dotnet-remove-package.md) | NuGet 패키지를 제거합니다.
+[dotnet add package](dotnet-add-package.md) | NuGet 패키지를 추가합니다.
+[dotnet remove package](dotnet-remove-package.md) | NuGet 패키지를 제거합니다.
 
 ### <a name="nuget-commands"></a>NuGet 명령
 
 명령 | 함수
 --- | ---
-[dotnet-nuget delete](dotnet-nuget-delete.md) | 서버에서 패키지를 삭제하거나 목록에서 제거합니다.
-[dotnet-nuget locals](dotnet-nuget-locals.md) | http-request 캐시, 임시 캐시 또는 시스템 전체의 글로벌 패키지 폴더와 같은 로컬 NuGet 리소스를 지우거나 목록에 포함합니다.
-[dotnet-nuget push](dotnet-nuget-push.md) | 서버에 패키지를 푸시하고 게시합니다.
+[dotnet nuget delete](dotnet-nuget-delete.md) | 서버에서 패키지를 삭제하거나 목록에서 제거합니다.
+[dotnet nuget locals](dotnet-nuget-locals.md) | http-request 캐시, 임시 캐시 또는 시스템 전체의 글로벌 패키지 폴더와 같은 로컬 NuGet 리소스를 지우거나 목록에 포함합니다.
+[dotnet nuget push](dotnet-nuget-push.md) | 서버에 패키지를 푸시하고 게시합니다.
 
 ## <a name="examples"></a>예제
 
