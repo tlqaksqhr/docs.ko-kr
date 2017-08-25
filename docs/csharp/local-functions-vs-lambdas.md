@@ -6,7 +6,7 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 06/27/2016
 ms.topic: article
-ms.prod: visual-studio-dev-15
+ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
@@ -17,8 +17,7 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 08/16/2017
 
 ---
-
-### <a name="local-functions-compared-to-lambda-expressions"></a>로컬 함수 및 람다 식 비교
+# <a name="local-functions-compared-to-lambda-expressions"></a>로컬 함수 및 람다 식 비교
 
 얼핏 보기에 [로컬 함수](programming-guide/classes-and-structs/local-functions.md)와 [람다 식](lambda-expressions.md)은 매우 유사합니다.
 필요에 따라 로컬 함수가 훨씬 더 효율적이고 간단한 솔루션일 수 있습니다.
