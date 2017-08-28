@@ -11,10 +11,11 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9fd0ef3c71d66ceca28d3ae7025058df469655c2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: be8e2374f89366c6a98df900674a957bd2f531cc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="query-expression-basics"></a>쿼리 식 기본 사항
@@ -25,7 +26,7 @@ ms.lasthandoff: 03/13/2017
   
  일반적으로 소스 데이터는 논리적으로 같은 종류의 요소 시퀀스로서 구성됩니다. 예를 들어 SQL Database 테이블은 행 시퀀스를 포함합니다. XML 파일에는 XML 요소의 "시퀀스"가 있습니다(트리 구조에서는 계층적으로 구성되지만). 메모리 내 컬렉션은 개체의 시퀀스를 포함합니다. 
   
- 응용 프로그램의 관점에서 소스 데이터의 특정 형식과 구조는 중요하지 않습니다. 응용 프로그램에는 항상 소스 데이터가 <xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Linq.IQueryable%601> 컬렉션으로 보입니다. 예를 들어 LINQ to XML에서 소스 데이터는 `IEnumerable`\<<xref:System.Xml.Linq.XElement>>로 표시됩니다.  
+ 응용 프로그램의 관점에서 소스 데이터의 특정 형식과 구조는 중요하지 않습니다. 응용 프로그램에는 소스 데이터가 항상 <xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Linq.IQueryable%601> 컬렉션으로 표시됩니다. 예를 들어 LINQ to XML에서 소스 데이터는 `IEnumerable`\<<xref:System.Xml.Linq.XElement>>로 표시됩니다.  
   
  이 소스 시퀀스에서 쿼리는 다음 세 가지 중 하나를 수행할 수 있습니다.  
   

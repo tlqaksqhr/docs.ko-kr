@@ -1,5 +1,5 @@
 ---
-title: "식 본문 멤버(C# 프로그래밍 가이드) | Microsoft Docs"
+title: "식 본문 멤버(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -12,11 +12,11 @@ helpviewer_keywords:
 - C# language, expresion-bodied members
 author: rpetrusha
 ms.author: ronpet
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a5ed524a1b17f7be8903f998cbd732594faab831
-ms.openlocfilehash: b77f656d36dc4f0a715755e13bfcd6c3515c697b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d12f9f3af9a57e142311f6d1676b5f97e8b60d19
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/15/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>식 본문 멤버(C# 프로그래밍 가이드)
@@ -41,9 +41,9 @@ C# 6에서는 메서드 및 속성 가져오기 접근자에 대해 식 본문 �
 
 ## <a name="methods"></a>메서드
 
-식 본문 메서드는 형식이 메서드의 반환 형식과 일치하는 값을 반환하거나 `void`를 반환하는 메서드의 경우 일부 작업을 수행하는 단일 식으로 구성됩니다. 예를 들어 <xref:System.Object.ToString%2A> 메서드를 재정의하는 형식에는 일반적으로 현재 개체의 문자열 표현을 반환하는 단일 식이 포함되어 있습니다. 
+식 본문 메서드는 형식이 메서드의 반환 형식과 일치하는 값을 반환하거나 `void`을(를) 반환하는 메서드의 경우 일부 작업을 수행하는 단일 식으로 구성됩니다. 예를 들어 <xref:System.Object.ToString%2A> 메서드를 재정의하는 형식에는 일반적으로 현재 개체의 문자열 표현을 반환하는 단일 식이 포함되어 있습니다. 
 
-다음 예제에<xref:System.Object.ToString%2A> 메서드를 식 본문 정의로 재정의하는 `Person` 클래스를 정의합니다. 또한 이름을 콘솔에 표시하는 `Show` 메서드를 정의합니다. `return` 키워드는 `ToString` 식 본문 정의에 사용되지 않습니다.
+다음 예제에서 <xref:System.Object.ToString%2A> 메서드를 식 본문 정의로 재정의하는 `Person` 클래스를 정의합니다. 또한 이름을 콘솔에 표시하는 `Show` 메서드를 정의합니다. `return` 키워드는 `ToString` 식 본문 정의에 사용되지 않습니다.
 
 [!code-cs[expression-bodied-methods](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-methods.cs)]  
 
@@ -103,7 +103,7 @@ PropertyName => returnValue;
 
 속성과 마찬가지로, get 접근자가 값을 반환하는 단일 문으로 구성되거나 set 접근자가 단순 할당을 수행하는 경우 인덱서의 get 및 set 접근자는 식 본문 정의로 구성됩니다.
 
-다음 예제에서는 다양한 스포츠의 이름이 포함된 내부 <xref:System.String> 배열을 포함하는 `Sports`라는 클래스를 정의합니다. 인덱서의 get 및 set 접근자는 둘 다 식 본문 정의로 구현됩니다.
+다음 예제에서는 다양한 스포츠의 이름이 포함된 내부 <xref:System.String> 배열을 포함하는 `Sports`(이)라는 클래스를 정의합니다. 인덱서의 get 및 set 접근자는 둘 다 식 본문 정의로 구현됩니다.
 
 [!code-cs[expression-bodied-indexer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-indexers.cs#1)] 
 

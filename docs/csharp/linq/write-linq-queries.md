@@ -1,5 +1,5 @@
 ---
-title: "C에서 LINQ 쿼리 작성#"
+title: "C#에서 LINQ 쿼리 작성하기"
 description: "쿼리를 작성하는 방법."
 keywords: .NET, .NET Core, C#
 author: BillWagner
@@ -11,14 +11,15 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2e08c8e3594bedeab763895c8b6f7d78a2bbf56d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7051e33a185b0ab898c4b9d7368f8f0e6883c119
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="write-linq-queries-in-c"></a>C에서 LINQ 쿼리 작성#
+# <a name="write-linq-queries-in-c"></a>C#에서 LINQ 쿼리 작성하기
 
 이 항목에서는 C#에서 LINQ 쿼리를 작성할 수 있는 세 가지 방법을 보여 줍니다.  
   
@@ -28,7 +29,7 @@ ms.lasthandoff: 03/13/2017
   
 3.  쿼리 구문과 메서드 구문을 조합해서 사용합니다.  
   
- 다음 예제에서는 앞서 나열한 각 방법을 사용하여 몇몇 간단한 LINQ 쿼리를 보여 줍니다. 일반적인 규칙은 가능한 경우 항상 (1)을 사용하고, 필요할 때마다 (2) 및 (3)을 사용하는 것입니다.  
+ 다음 예제에서는 앞서 나열한 각 방법을 사용하여 몇몇 간단한 LINQ 쿼리를 보여 줍니다. 일반적인 규칙은 가능한 경우 항상 (1)을(를) 사용하고, 필요할 때마다 (2) 및 (3)을 사용하는 것입니다.  
   
 > [!NOTE]
 >  이러한 쿼리는 간단한 메모리 내 컬렉션에서 작동합니다. 그러나 기본 구문은 LINQ to Entities 및 LINQ to XML에서 사용되는 구문과 동일합니다.  
@@ -36,11 +37,11 @@ ms.lasthandoff: 03/13/2017
 ## <a name="example"></a>예제  
   
 ## <a name="query-syntax"></a>쿼리 구문  
- 대부분의 쿼리를 작성하는 권장 방법은 *쿼리 구문*을 사용하여 *쿼리 식*을 만드는 것입니다. 다음 예제는 세 개의 쿼리 식을 보여 줍니다. 첫 번째 쿼리 식은 `where` 절과 함께 조건을 적용하여 결과를 필터링 또는 제한하는 방법을 보여 줍니다. 이 식은 값이 7보다 크거나 3보다 작은 소스 시퀀스의 모든 요소를 반환합니다. 두 번째 식은 반환된 결과를 정렬하는 방법을 보여 줍니다. 세 번째 식은 키에 따라 결과를 그룹화하는 방법을 보여 줍니다. 이 쿼리는 단어의 첫 글자를 기반으로 두 그룹을 반환합니다.  
+ 대부분의 쿼리를 작성하는 권장 방법은 *쿼리 구문*을 사용하여 *쿼리 식*을 만드는 것입니다. 다음 예제는 세 개의 쿼리 식을 보여 줍니다. 첫 번째 쿼리 식은 `where` 절과 함께 조건을 적용하여 결과를 필터링 또는 제한하는 방법을 보여 줍니다. 이 식은 값이 7보다 크거나 3보다 작은 소스 시퀀스의 모든 요소를 반환합니다. 두 번째 식은 반환된 결과를 정렬하는 방법을 보여 줍니다. 세 번째 식은 키에 따라 결과를 그룹화하는 방법을 보여 줍니다. 이 쿼리는 단어의 첫 글자를 기반으로 하여 두 그룹을 반환합니다.  
   
  [!code-cs[csProgGuideLINQ#5](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_1.cs)]  
   
- 쿼리의 형식은 <xref:System.Collections.Generic.IEnumerable%601>입니다. 다음 예제와 같이 이러한 모든 쿼리는 `var`을 사용해 작성할 수 있습니다.  
+ 쿼리의 형식은 <xref:System.Collections.Generic.IEnumerable%601>입니다. 다음 예제와 같이 이러한 모든 쿼리는 `var`을(를) 사용해 작성할 수 있습니다.  
   
  `var query = from num in numbers...`  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 03/13/2017
   
  [!code-cs[csProgGuideLINQ#7](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_3.cs)]  
   
- 이전 쿼리에서 쿼리 #4만 즉시 실행됩니다. 그 이유는 해당 쿼리가 제네릭 <xref:System.Collections.Generic.IEnumerable%601> 컬렉션이 아니라 단일 값을 반환하기 때문입니다. 메서드 자체는 값을 계산하기 위해 `foreach`를 사용해야 합니다.  
+ 이전 쿼리에서 쿼리 #4만 즉시 실행됩니다. 그 이유는 해당 쿼리가 제네릭 <xref:System.Collections.Generic.IEnumerable%601> 컬렉션이 아니라 단일 값을 반환하기 때문입니다. 메서드 자체는 값을 계산하기 위해 `foreach`을(를) 사용해야 합니다.  
   
  다음 예제와 같이 [var](../language-reference/keywords/var.md)과 함께 암시적 형식을 사용하여 각각의 이전 쿼리를 작성할 수 있습니다.  
   
@@ -73,7 +74,7 @@ ms.lasthandoff: 03/13/2017
   
  쿼리 #7은 컬렉션이 아닌 단일 값을 반환하므로 쿼리가 즉시 실행됩니다.  
   
- 이전 쿼리는 다음과 같이 `var`과 함께 암시적 형식을 사용하여 작성할 수 있습니다.  
+ 이전 쿼리는 다음과 같이 `var`과(와) 함께 암시적 형식을 사용하여 작성할 수 있습니다.  
   
 ```csharp  
 var numCount = (from num in numbers...  
@@ -95,3 +96,4 @@ int numCount = numbers.Where(n => n < 3 || n > 7).Count();
   [연습: C#에서 쿼리 작성](../programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)   
  [LINQ 쿼리 식](index.md)   
  [where 절](../language-reference/keywords/where-clause.md)
+

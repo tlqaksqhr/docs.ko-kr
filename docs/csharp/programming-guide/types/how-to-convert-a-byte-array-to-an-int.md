@@ -1,5 +1,5 @@
 ---
-title: "방법: 바이트 배열을 정수로 변환(C# 프로그래밍 가이드) | Microsoft 문서"
+title: "방법: 바이트 배열을 정수로 변환(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2d26bb4821e09c6633d1c5a4dd40e132e57acf94
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 86ecfe95ab6fb5ce60e7568050cdf974d0dc3d88
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-convert-a-byte-array-to-an-int-c-programming-guide"></a>방법: 바이트 배열을 정수로 변환(C# 프로그래밍 가이드)
@@ -60,7 +61,7 @@ ms.lasthandoff: 03/13/2017
  [!code-cs[csProgGuideTypes#22](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-byte-array-to-an-int_1.cs)]  
   
 ## <a name="example"></a>예제  
- 이 예제에서 <xref:System.BitConverter> 클래스의 <xref:System.BitConverter.GetBytes%28System.Int32%29> 메서드는 `int`를 바이트 배열로 변환하기 위해 호출됩니다.  
+ 이 예제에서는 <xref:System.BitConverter> 클래스의 <xref:System.BitConverter.GetBytes%28System.Int32%29> 메서드를 호출하여 `int`를 바이트 배열로 변환합니다.  
   
 > [!NOTE]
 >  출력은 컴퓨터 아키텍처의 endianess에 따라 달라질 수 있습니다.  

@@ -1,5 +1,5 @@
 ---
-title: "연습: async 및 await를 사용하여 웹에 액세스(C#) | Microsoft 문서"
+title: "연습: async 및 await를 사용하여 웹에 액세스(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0832ee88bba58579eea001335be9cb8c2130834d
-ms.openlocfilehash: 2874eaadd23fdfdc1baf9337169ad5a52c05905f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7c03cad060e2ba459277c28f929df88be70e4044
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/28/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>연습: async 및 await를 사용하여 웹에 액세스(C#)
@@ -105,7 +105,7 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
   
 6.  텍스트 상자와 단추가 둘 다 **MainWindow** 창에 나타나도록 위치를 지정합니다.  
   
-     WPF XAML 디자이너에 대한 자세한 내용은 [XAML 디자이너를 사용하여 UI 만들기](https://docs.microsoft.com/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)를 참조하세요.  
+     WPF XAML 디자이너에 대한 자세한 내용은 [XAML 디자이너를 사용하여 UI 만들기](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)를 참조하세요.  
   
 ##  <a name="BKMK_AddReference"></a>   
 ###  <a name="AddRef"></a> 참조를 추가하려면  
@@ -271,20 +271,20 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
 ##  <a name="BKMK_ConvertGtBtArr"></a>   
 ###  <a name="GetURLContents"></a> GetURLContents를 비동기 메서드로 변환하려면  
   
-1.  동기 솔루션을 비동기 솔루션으로 변환하려면 `GetURLContents`에서 시작하는 것이 가장 좋습니다. <xref:System.Net.HttpWebRequest> 메서드 <xref:System.Net.HttpWebRequest.GetResponse%2A> 및 <xref:System.IO.Stream> 메서드 <xref:System.IO.Stream.CopyTo%2A>대한 호출은 응용 프로그램이 웹에 액세스하는 곳이기 때문입니다. .NET Framework는 두 메서드의 비동기 버전을 제공하여 변환을 쉽게 만듭니다.  
+1.  동기 솔루션을 비동기 솔루션으로 변환하려면 `GetURLContents`에서 시작하는 것이 가장 좋습니다. <xref:System.Net.HttpWebRequest> 메서드 <xref:System.Net.HttpWebRequest.GetResponse%2A> 및 <xref:System.IO.Stream> 메서드 <xref:System.IO.Stream.CopyTo%2A> 호출은 응용 프로그램이 웹에 액세스하는 위치이기 때문입니다. .NET Framework는 두 메서드의 비동기 버전을 제공하여 변환을 쉽게 만듭니다.  
   
      `GetURLContents`에서 사용되는 메서드에 대한 자세한 내용은 <xref:System.Net.WebRequest>를 참조하세요.  
   
     > [!NOTE]
     >  이 연습 단계를 수행하면 여러 가지 컴파일러 오류가 표시됩니다. 이러한 오류는 무시하고 연습을 진행할 수 있습니다.  
   
-     `GetURLContents`의 세 번째 줄에서 호출되는 메서드를 `GetResponse`에서 비동기, 작업 기반 <xref:System.Net.WebRequest.GetResponseAsync%2A> 메서드로 변경합니다.  
+     `GetURLContents`의 셋째 줄에서 호출되는 메서드를 `GetResponse`에서 비동기 작업 기반 <xref:System.Net.WebRequest.GetResponseAsync%2A> 메서드로 변경합니다.  
   
     ```csharp  
     using (WebResponse response = webReq.GetResponseAsync())  
     ```  
   
-2.  `GetResponseAsync`는 <xref:System.Threading.Tasks.Task%601>을 반환합니다. 이 경우 *작업 반환 변수*, `TResult`의 형식은 <xref:System.Net.WebResponse>입니다. 작업은 요청한 데이터를 다운로드하고 작업을 실행하여 완료한 후 실제 `WebResponse` 개체를 생성한다는 약속입니다.  
+2.  `GetResponseAsync`는 <xref:System.Threading.Tasks.Task%601>를 반환합니다. 이 경우 *작업 반환 변수* `TResult`는 <xref:System.Net.WebResponse> 형식입니다. 작업은 요청한 데이터를 다운로드하고 작업을 실행하여 완료한 후 실제 `WebResponse` 개체를 생성한다는 약속입니다.  
   
      작업에서 `WebResponse` 값을 검색하려면 다음 코드에 표시된 대로 [await](../../../../csharp/language-reference/keywords/await.md) 연산자를 `GetResponseAsync` 호출에 적용합니다.  
   
@@ -332,7 +332,7 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
     private async byte[] GetURLContents(string url)  
     ```  
   
-5.  비동기 메서드의 반환 형식으로는 <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> 또는 C#의 `void`만 가능합니다. 일반적으로 `void`의 반환 형식은 비동기 이벤트 처리기에서만 사용되며, 여기서 `void`는 필수입니다. 경우에 따라 완료된 메서드에 T 형식의 값을 반환하는 [return](../../../../csharp/language-reference/keywords/return.md) 문이 있는 경우 `Task(T)`를 사용하고, 완료된 메서드에서 의미 있는 값을 반환하지 않는 경우 `Task`를 사용합니다. `Task` 반환 형식은 "Task(void)" 의미로 간주할 수 있습니다.  
+5.  C#에서 비동기 메서드의 반환 형식은 <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> 또는 `void`만 될 수 있습니다. 일반적으로 `void`의 반환 형식은 비동기 이벤트 처리기에서만 사용되며, 여기서 `void`는 필수입니다. 경우에 따라 완료된 메서드에 T 형식의 값을 반환하는 [return](../../../../csharp/language-reference/keywords/return.md) 문이 있는 경우 `Task(T)`를 사용하고, 완료된 메서드에서 의미 있는 값을 반환하지 않는 경우 `Task`를 사용합니다. `Task` 반환 형식은 "Task(void)" 의미로 간주할 수 있습니다.  
   
      자세한 내용은 [비동기 반환 형식(C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)을 참조하세요.  
   
@@ -450,7 +450,7 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
 ##  <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
 ###  <a name="GetURLContentsAsync"></a> GetURLContentsAsync 메서드를 .NET Framework 메서드로 바꾸려면  
   
-1.  .NET Framework 4.5는 사용할 수 있는 다양한 비동기 메서드를 제공합니다. 그중 하나인 <xref:System.Net.Http.HttpClient> 메서드 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>는 이 연습에 필요한 것만 수행합니다. 이전 절차에서 만든 `GetURLContentsAsync` 메서드 대신 사용할 수도 있습니다.  
+1.  .NET Framework 4.5는 사용할 수 있는 다양한 비동기 메서드를 제공합니다. 그 중 하나인 <xref:System.Net.Http.HttpClient> 메서드 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>가 바로 이 연습에 필요한 기능을 수행합니다. 이전 절차에서 만든 `GetURLContentsAsync` 메서드 대신 사용할 수도 있습니다.  
   
      첫 번째 단계로 `SumPageSizesAsync` 메서드에서 `HttpClient` 개체를 만듭니다. 메서드의 시작 부분에 다음 선언을 추가합니다.  
   

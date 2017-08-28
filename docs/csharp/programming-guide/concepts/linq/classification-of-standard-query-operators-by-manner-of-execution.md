@@ -1,5 +1,5 @@
 ---
-title: "실행 방식에 따라 표준 쿼리 연산자 분류(C#) | Microsoft 문서"
+title: "실행 방식에 따라 표준 쿼리 연산자 분류(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cb79fe22bd551599eef7f20bd34492a2930d5609
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4217cbce36bc055cf8c6dde446df4d7b7394430d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>실행 방식에 따라 표준 쿼리 연산자 분류(C#)
@@ -34,7 +35,7 @@ ms.lasthandoff: 03/13/2017
  즉시 실행은 코드의 쿼리가 선언되는 지점에서 데이터 소스를 읽고 작업이 수행됨을 의미합니다. 하나의 비열거형 결과를 반환하는 모든 표준 쿼리 연산자는 즉시 실행됩니다.  
   
 ### <a name="deferred"></a>연기됨  
- 지연된 실행은 코드의 쿼리가 선언되는 지점에서 작업이 수행되지 않음을 의미합니다. 예를 들어 `foreach` 문을 사용하여 쿼리 변수가 열거될 경우에만 작업이 수행됩니다. 즉, 쿼리 실행 결과는 쿼리가 정의될 때가 아니라 쿼리가 실행될 때 데이터 소스의 내용에 따라 달라집니다. 쿼리 변수가 여러 번 열거될 경우 매번 결과가 다를 수 있습니다. 반환 형식이 <xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Linq.IOrderedEnumerable%601>인 거의 모든 표준 쿼리 연산자는 지연된 방식으로 실행됩니다.  
+ 지연된 실행은 코드의 쿼리가 선언되는 지점에서 작업이 수행되지 않음을 의미합니다. 예를 들어 `foreach` 문을 사용하여 쿼리 변수가 열거될 경우에만 작업이 수행됩니다. 즉, 쿼리 실행 결과는 쿼리가 정의될 때가 아니라 쿼리가 실행될 때 데이터 소스의 내용에 따라 달라집니다. 쿼리 변수가 여러 번 열거될 경우 매번 결과가 다를 수 있습니다. 반환 형식이 <xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Linq.IOrderedEnumerable%601>인 표준 쿼리 연산자는 대부분 지연 방식으로 실행됩니다.  
   
  지연된 실행을 사용하는 쿼리 연산자는 스트리밍 및 비스트리밍으로 추가로 분류할 수 있습니다.  
   
@@ -108,3 +109,4 @@ ms.lasthandoff: 03/13/2017
  [표준 쿼리 연산자 개요(C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
  [표준 쿼리 연산자의 쿼리 식 구문(C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)   
  [LINQ to Objects(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+

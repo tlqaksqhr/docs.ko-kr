@@ -1,5 +1,5 @@
 ---
-title: "uint(C# 참조) | Microsoft 문서"
+title: "uint(C# 참조)"
 ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 24a47d83f9f8a778b6df53b5e1e5444eda819680
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4342c08ab536f45a2e3b5fa6fe94839436600a4a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="uint-c-reference"></a>uint(C# 참조)
@@ -49,7 +49,7 @@ ms.lasthandoff: 03/24/2017
   
 ## <a name="literals"></a>리터럴  
 
-10진수 리터럴, 16진수 리터럴 또는 (C# 7부터) 이진 리터럴을 할당하여 `uint` 변수를 선언하고 초기화할 수 있습니다. 정수 리터럴이 `uint`의 범위를 벗어난 경우(즉, <xref:System.UInt32.MinValue?displayProperty=fullName>보다 작거나 <xref:System.UInt32.MaxValue?displayProperty=fullName>보다 큰 경우) 컴파일 오류가 발생합니다.
+10진수 리터럴, 16진수 리터럴 또는 (C# 7부터) 이진 리터럴을 할당하여 `uint` 변수를 선언하고 초기화할 수 있습니다. 정수 리터럴이 `uint` 범위를 벗어나는 경우(즉 <xref:System.UInt32.MinValue?displayProperty=fullName>보다 작거나 <xref:System.UInt32.MaxValue?displayProperty=fullName>보다 큰 경우) 컴파일 오류가 발생합니다.
 
 다음 예제에서는 10진수, 16진수 및 이진 리터럴로 표현된 3,000,000,000과 같은 정수가 `uint` 값에 할당됩니다.  
   
@@ -62,7 +62,7 @@ C# 7부터는 다음 예제와 같이 밑줄 문자 `_`를 자릿수 구분 기�
 
 [!code-cs[uint](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#UIntS)]  
  
- 형식을 나타내는 접미사가 정수 리터럴에 포함되어 있을 수도 있습니다. `U` 또는 'u' 접미사는 리터럴의 숫자 값에 따라 `uint` 또는 `ulong`을 나타냅니다. 다음 예제에서는 `u` 접미사를 사용하여 두 형식의 부호 없는 정수를 나타냅니다. 첫 번째 리터럴은 해당 값이 <xref:System.UInt32.MaxValue?displayProperty=fullName>보다 작기 때문에 `uint`이고, 두 번째 리터럴은 해당 값이 <xref:System.UInt32.MaxValue?displayProperty=fullName>보다 크기 때문에 `ulong`입니다.
+ 형식을 나타내는 접미사가 정수 리터럴에 포함되어 있을 수도 있습니다. `U` 또는 'u' 접미사는 리터럴의 숫자 값에 따라 `uint` 또는 `ulong`을 나타냅니다. 다음 예제에서는 `u` 접미사를 사용하여 두 형식의 부호 없는 정수를 나타냅니다. 첫 번째 리터럴은 해당 값이 <xref:System.UInt32.MaxValue?displayProperty=fullName>보다 작기 때문에 `uint`인 반면, 두 번째 리터럴은 해당 값이 <xref:System.UInt32.MaxValue?displayProperty=fullName>보다 크기 때문에 `ulong`입니다.
 
 [!code-cs[usuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#1)]  
  
@@ -104,7 +104,7 @@ uint y = (uint)3.0;
  암시적 숫자 변환 규칙에 대한 자세한 내용은 [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)를 참조하세요.  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.UInt32>   
@@ -115,3 +115,4 @@ uint y = (uint)3.0;
  [기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [명시적 숫자 변환 표](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

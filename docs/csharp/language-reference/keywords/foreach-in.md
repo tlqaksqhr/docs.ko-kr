@@ -1,5 +1,5 @@
 ---
-title: "foreach, in(C# 참조) | Microsoft 문서"
+title: "foreach, in(C# 참조)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -32,15 +32,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: aa5408dbe214af2c21edd394f74fb8b675f2a099
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: aed1d4f086f0b1334df750fd912d20d66326a043
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in(C# 참조)
-`foreach` 문은 <xref:System.Collections.IEnumerable?displayProperty=fullName> 또는 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> 인터페이스를 구현하는 배열이나 개체 컬렉션의 각 요소에 대해 포함된 문 그룹을 반복합니다. `foreach` 문을 컬렉션을 반복하여 원하는 정보를 가져오는 데 사용되지만 예측할 수 없는 결과를 방지하지 위해 소스 컬렉션에서 항목을 추가하거나 제거하는 데 사용할 수는 없습니다. 소스 컬렉션에서 항목을 추가하거나 제거해야 하는 경우 [for](../../../csharp/language-reference/keywords/for.md) 루프를 사용하세요.  
+`foreach` 문은 <xref:System.Collections.IEnumerable?displayProperty=fullName> 또는 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> 인터페이스를 구현하는 배열 또는 개체 컬렉션의 각 요소에 대해 포함 문의 그룹을 반복합니다. `foreach` 문은 컬렉션을 반복하여 원하는 정보를 얻는 데 사용되지만, 예측할 수 없는 부작용을 방지하지 위해 소스 컬렉션에서 항목을 추가하거나 제거하는 데 사용할 수는 없습니다. 소스 컬렉션에서 항목을 추가하거나 제거해야 하는 경우 [for](../../../csharp/language-reference/keywords/for.md) 루프를 사용하세요.  
   
  포함된 문은 배열이나 컬렉션의 각 요소에 대해 계속 실행됩니다. 컬렉션의 모든 요소에 대해 반복이 완료되면 제어가 `foreach` 블록 다음 문으로 전달됩니다.  
   
@@ -74,3 +74,4 @@ ms.lasthandoff: 03/13/2017
  [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
  [반복 문](../../../csharp/language-reference/keywords/iteration-statements.md)   
  [for](../../../csharp/language-reference/keywords/for.md)
+

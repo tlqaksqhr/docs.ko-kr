@@ -1,5 +1,5 @@
 ---
-title: "ulong(C# 참조) | Microsoft 문서"
+title: "ulong(C# 참조)"
 ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: a0889086fbc986a37d052917469fbdb5442df44f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c2da253e4da7a5d6cfa71116e4fcba7816441e92
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="ulong-c-reference"></a>ulong(C# 참조)
@@ -47,7 +47,7 @@ ms.lasthandoff: 03/24/2017
   
 ## <a name="literals"></a>리터럴  
 
-10진수 리터럴, 16진수 리터럴 또는 (C# 7부터) 이진 리터럴을 할당하여 `ulong` 변수를 선언하고 초기화할 수 있습니다.  정수 리터럴이 `ulong`의 범위를 벗어난 경우(즉, <xref:System.UInt64.MinValue?displayProperty=fullName>보다 작거나 <xref:System.UInt64.MaxValue?displayProperty=fullName>보다 큰 경우) 컴파일 오류가 발생합니다. 
+10진수 리터럴, 16진수 리터럴 또는 (C# 7부터) 이진 리터럴을 할당하여 `ulong` 변수를 선언하고 초기화할 수 있습니다.  정수 리터럴이 `ulong` 범위를 벗어나는 경우(즉 <xref:System.UInt64.MinValue?displayProperty=fullName>보다 작거나 <xref:System.UInt64.MaxValue?displayProperty=fullName>보다 큰 경우) 컴파일 오류가 발생합니다. 
 
 다음 예제에서는 10진수, 16진수 및 이진 리터럴로 표현된 7,934,076,125와 같은 정수가 `ulong` 값에 할당됩니다.  
   
@@ -60,7 +60,7 @@ C# 7부터는 다음 예제와 같이 밑줄 문자 `_`를 자릿수 구분 기�
 
 [!code-cs[long](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#LongS)]  
  
- 형식을 나타내는 접미사가 정수 리터럴에 포함되어 있을 수도 있습니다. `UL` 또는 `ul` 접미사는 숫자 리터럴을 `ulong` 값으로 명확하게 식별합니다. 리터럴 값이 <xref:System.Int64.MaxValue?displayProperty=fullName>을 초과하는 경우 `L` 접미사는 `ulong`을 나타냅니다. 또한 리터럴 값이 <xref:System.UInt32.MaxValue?displayProperty=fullName>을 초과하는 경우 `U` 또는 `u` 접미사는 `ulong`을 나타냅니다. 다음 예제에서는 `ul` 접미사를 사용하여 정수(long)를 나타냅니다.
+ 형식을 나타내는 접미사가 정수 리터럴에 포함되어 있을 수도 있습니다. `UL` 또는 `ul` 접미사는 숫자 리터럴을 `ulong` 값으로 명확하게 식별합니다. 리터럴 값이 <xref:System.Int64.MaxValue?displayProperty=fullName>를 초과할 경우 `L` 접미사는 `ulong`을 나타냅니다. 또한 리터럴 값이 <xref:System.UInt32.MaxValue?displayProperty=fullName>를 초과할 경우 `U` 또는 `ulong` 접미사는 `u`을 나타냅니다. 다음 예제에서는 `ul` 접미사를 사용하여 정수(long)를 나타냅니다.
  
 [!code-cs[ulsuffix](../../../../samples/snippets/csharp/language-reference/keywords/numeric-suffixes.cs#2)]
 
@@ -112,7 +112,7 @@ ulong y = (ulong)3.0;
  암시적 숫자 변환 규칙에 대한 자세한 내용은 [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)를 참조하세요.  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.UInt64>   
@@ -123,3 +123,4 @@ ulong y = (ulong)3.0;
  [기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [명시적 숫자 변환 표](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

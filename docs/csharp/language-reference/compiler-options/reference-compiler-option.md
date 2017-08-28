@@ -1,5 +1,5 @@
 ---
-title: "-reference(C# 컴파일러 옵션) | Microsoft Docs"
+title: "-reference(C# 컴파일러 옵션)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -36,11 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7e33ed084c560470a486ebbb25035a59ddc18565
-ms.openlocfilehash: 11bb7fc9490879714542bfbd77a81d58e7d8e8ed
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f057da85202dc5b677af7b9106468b3bc1af6d3f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reference-c-compiler-options"></a>/reference(C# 컴파일러 옵션)
@@ -84,7 +84,7 @@ ms.lasthandoff: 03/31/2017
  자주 사용되는 .NET Framework 어셈블리를 참조하는 csc 지시 파일(.rsp)이 기본적으로 사용됩니다. 컴파일러에서 csc.rsp를 사용하지 않도록 하려면 [/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)를 사용합니다.  
   
 > [!NOTE]
-> Visual Studio에서 **참조 추가** 대화 상자를 사용합니다. 자세한 내용은 [방법: 참조 관리자를 사용하여 참조 추가 또는 제거](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)를 참조하세요. `/reference`를 사용한 참조 추가와 **참조 추가** 대화 상자를 사용한 참조 추가의 동작이 같도록 하려면 추가하는 어셈블리에 대한 **Interop 형식 포함** 속성을 **False**로 설정합니다. 이 속성의 기본값은 **True**입니다.  
+> Visual Studio에서 **참조 추가** 대화 상자를 사용합니다. 자세한 내용은 [방법: 참조 관리자를 사용하여 참조 추가 또는 제거](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)를 참조하세요. `/reference`를 사용한 참조 추가와 **참조 추가** 대화 상자를 사용한 참조 추가의 동작이 같도록 하려면 추가하는 어셈블리에 대한 **Interop 형식 포함** 속성을 **False**로 설정합니다. 이 속성의 기본값은 **True**입니다.  
   
 ## <a name="example"></a>예제  
  이 예제에서는 [extern 별칭](../../../csharp/language-reference/keywords/extern-alias.md) 기능을 사용하는 방법을 보여 줍니다.  
@@ -115,4 +115,5 @@ GridV2::Grid
   
 ## <a name="see-also"></a>참고 항목  
  [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)   
- [NIB 방법: 프로젝트 속성 및 구성 설정 수정](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+ [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)
+

@@ -1,5 +1,5 @@
 ---
-title: "파일 인코딩(Visual Basic) | Microsoft Docs"
+title: "파일 인코딩(Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -33,11 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: d59312951429780990e9cc048e3ad0671b81d8ae
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6d4a12d3c6098271dad0a52a9c6799303b9fe81d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="file-encodings-visual-basic"></a>파일 인코딩(Visual Basic)
@@ -50,7 +50,7 @@ ms.lasthandoff: 04/12/2017
   
  이전 문자 인코딩 표준은 8비트 코드 값 또는 8비트 값의 조합을 사용하여 특정 언어나 지역에서 사용되는 문자를 나타내는 Windows ANSI 문자 집합 등의 기존 문자 집합으로 이루어져 있습니다.  
   
-## <a name="encoding-class"></a>Encoding 클래스  
+## <a name="encoding-class"></a>인코딩 클래스  
  <xref:System.Text.Encoding> 클래스는 문자 인코딩을 나타냅니다. 이 표에서는 사용 가능한 인코딩 형식을 나열하고 각 인코딩 형식을 설명합니다.  
   
 |이름|설명|
@@ -64,3 +64,4 @@ ms.lasthandoff: 04/12/2017
 ## <a name="see-also"></a>참고 항목  
  [파일 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)   
  [파일에 쓰기](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+

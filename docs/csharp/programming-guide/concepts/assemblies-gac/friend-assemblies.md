@@ -1,5 +1,5 @@
 ---
-title: "Friend 어셈블리(C#) | Microsoft 문서"
+title: "Friend 어셈블리(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,20 +19,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ca01b9e91de08f3bdf53cd0572a3e1d1af0cf0af
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e2680b5799c552a063ff7c539a31a5dd00b90a75
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="friend-assemblies-c"></a>Friend 어셈블리(C#)
 *friend 어셈블리*는 다른 어셈블리의 [내부](../../../../csharp/language-reference/keywords/internal.md) 형식 및 멤버에 액세스할 수 있는 어셈블리입니다. 어셈블리를 friend 어셈블리로 식별하는 경우 다른 어셈블리에서 액세스할 수 있도록 하기 위해 더 이상 형식 및 멤버를 public으로 표시할 필요가 없습니다. 다음과 같은 시나리오에서 특히 편리합니다.  
   
--   단위 테스트 중 테스트 코드는 별도의 어셈블리에서 실행되지만 테스트 중인 어셈블리에서 `internal`로 표시된 멤버에 액세스해야 하는 경우.  
+-   유닛 테스트 중 테스트 코드는 별도의 어셈블리에서 실행되지만 테스트 중인 어셈블리에서 `internal`로 표시된 멤버에 액세스해야 하는 경우.  
   
--   클래스 라이브러리를 개발하고 있고 라이브러리에 대한 추가 사항이 별도의 어셈블리에 포함되어 있지만 기존 어셈블리에서 `internal`로 표시된 멤버에 액세스해야 하는 경우  
+-   클래스 라이브러리를 개발하고 있고 라이브러리에 대한 추가 사항이 별도의 어셈블리에 포함되어 있지만 기존 어셈블리에서 `internal`(으)로 표시된 멤버에 액세스해야 하는 경우  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성을 사용하여 지정된 어셈블리에 대해 하나 이상의 friend 어셈블리를 식별할 수 있습니다. 다음 예제에서는 어셈블리 A에서 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성을 사용하고 `AssemblyB` 어셈블리를 friend 어셈블리로 지정합니다. 그러면 `AssemblyB` 어셈블리가 어셈블리 A에서 `internal`로 표시된 모든 형식 및 멤버에 액세스할 수 있습니다.  
   
 > [!NOTE]
@@ -82,7 +83,7 @@ public class ClassWithFriendMethod
   
 -   어셈블리 *A*에 어셈블리 *B*와 공유하려는 수백 개의 형식이 있는 경우 모든 형식에 <xref:System.Security.Permissions.StrongNameIdentityPermission>을 추가해야 합니다. friend 어셈블리를 사용하는 경우에는 friend 관계를 한 번만 선언하면 됩니다.  
   
--   <xref:System.Security.Permissions.StrongNameIdentityPermission>을 사용하는 경우 공유할 형식을 public으로 선언해야 합니다. friend 어셈블리를 사용하는 경우에는 공유 형식이 `internal`로 선언됩니다.  
+-   <xref:System.Security.Permissions.StrongNameIdentityPermission>을 사용하는 경우 공유하려는 형식을 public으로 선언해야 합니다. friend 어셈블리를 사용하는 경우에는 공유 형식이 `internal`로 선언됩니다.  
   
  모듈 파일(확장명이 .netmodule인 파일)에서 어셈블리의 `internal` 형식 및 메서드에 액세스하는 방법에 대한 자세한 내용은 [/moduleassemblyname(C#)](../../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md)을 참조하세요.  
   
@@ -93,3 +94,4 @@ public class ClassWithFriendMethod
  [방법: 서명된 Friend 어셈블리 만들기(C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)   
  [어셈블리 및 전역 어셈블리 캐시(C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)   
  [C# 프로그래밍 가이드](../../../../csharp/programming-guide/index.md)
+

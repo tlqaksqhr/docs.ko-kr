@@ -1,5 +1,5 @@
 ---
-title: "Nullable 형식 boxing(C# 프로그래밍 가이드) | Microsoft Docs"
+title: "Nullable 형식 boxing(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,15 +29,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: e4ff2e8a31ca5a59494f80597460e90107e78c8a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5ce063a70ced98fd8b99b4b46d704e08ddc96e10
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="boxing-nullable-types-c-programming-guide"></a>Nullable 형식 boxing(C# 프로그래밍 가이드)
-Nullable 형식을 기반으로 하는 개체는 개체가 null이 아닌 경우에만 boxing됩니다. <xref:System.Nullable%601.HasValue%2A>가 `false`이면 boxing 대신 개체 참조가 `null`에 할당됩니다. 예를 들면 다음과 같습니다.  
+Nullable 형식을 기반으로 하는 개체는 개체가 null이 아닌 경우에만 boxing됩니다. <xref:System.Nullable%601.HasValue%2A>가 `false`이면 boxing 대신 개체 참조가 `null`에 할당됩니다. 예:  
   
 ```csharp  
 bool? b = null;  
@@ -45,7 +45,7 @@ object o = b;
 // Now o is null.  
 ```  
   
- 개체가 null이 아닌 경우(<xref:System.Nullable%601.HasValue%2A>가 `true`인 경우) boxing이 발생하지만 nullable 개체의 기반이 되는 기본 형식만 boxing됩니다. null이 아닌 nullable 값 형식을 boxing하면 값 형식을 래핑하는 <xref:System.Nullable%601?displayProperty=fullName>이 아니라 값 형식 자체가 boxing됩니다. 예를 들면 다음과 같습니다.  
+ 개체가 null이 아닌 경우(<xref:System.Nullable%601.HasValue%2A>가 `true`인 경우) boxing이 발생하지만 nullable 개체의 기반이 되는 기본 형식만 boxing됩니다. null이 아닌 nullable 값 형식을 boxing하면 값 형식을 래핑하는 <xref:System.Nullable%601?displayProperty=fullName>이 아니라 값 형식 자체가 boxing됩니다. 예:  
   
 ```csharp  
 bool? b = false;  
@@ -94,3 +94,4 @@ int? i2 = (int?)iBoxed;
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
  [Nullable 형식](../../../csharp/programming-guide/nullable-types/index.md)   
  [방법: Nullable 형식 식별](../../../csharp/programming-guide/nullable-types/how-to-identify-a-nullable-type.md)
+

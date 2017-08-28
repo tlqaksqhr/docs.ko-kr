@@ -1,6 +1,6 @@
 ---
-title: "튜플 | C# 가이드"
-description: "C의 명명되지 않은 튜플 형식과 명명된 튜플 형식에 대한 자세한 정보#"
+title: "튜플 - C# 가이드"
+description: "C#의 명명되지 않은 튜플 형식과 명명된 튜플 형식에 대한 자세한 정보"
 keywords: .NET, .NET Core, C#
 author: BillWagner
 ms-author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6b30f41e3fb07a962542a09a41c698efee7ebb5a
-ms.openlocfilehash: 0ea7299d87dc69784e3bed93e48d83e4a0076a20
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0efb478491ab4c226ec56519c9a957b19ce0478f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/26/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -25,8 +25,10 @@ C# 튜플은 간단한 구문을 사용하여 정의하는 형식입니다. 장�
 이 항목에서는 C# 7에서 튜플을 제어하는 언어 규칙, 다양한 사용 방법 및 튜플 작업에 대한 초기 지침을 알아봅니다.
 
 > [!NOTE]
-> 새 튜플 기능을 사용하려면 `System.ValueTuple` 형식이 필요합니다. Visual Studio 2017에서는 NuGet 갤러리에 있는 NuGet 패키지 [System.ValueTuple](https://www.nuget.org/packages/System.ValueTuple/)을 추가해야 합니다.
-> 이 패키지가 없으면 `error CS8179: Predefined type 'System.ValueTuple``2' is not defined or imported` 또는 `error CS8137: Cannot define a class or member that utilizes tuples because the compiler required type 'System.Runtime.CompilerServices.TupleElementNamesAttribute' cannot be found.`와 유사한 컴파일 오류가 발생할 수 있습니다.
+> 새 튜플 기능을 사용하려면 @System.ValueTuple 형식이 필요합니다.
+> 형식을 포함하지 않는 플랫폼에서 사용하려면 NuGet 패키지 [`System.ValueTuple`](https://www.nuget.org/packages/System.ValueTuple/)을 추가해야 합니다.
+>
+> 이는 프레임워크에서 제공되는 형식을 사용하는 다른 언어 기능과 비슷합니다. 예를 들어 `async` 및 `await`는 `INotifyCompletion` 인터페이스를 사용하고 LINQ는 `IEnumerable<T>`을 사용합니다. 그러나 .NET이 점점 더 플랫폼 독립적으로 되면서 배달 메커니즘도 변하고 있습니다. .NET Framework가 언어 컴파일러와 동일한 주기로 제공되지 않을 수도 있습니다. 새로운 언어 기능이 새 형식을 사용하는 경우 해당 형식은 언어 기능이 제공될 때 NuGet 패키지로 제공됩니다. 이러한 새로운 형식이 .NET Standard API에 추가되고 프레임워크의 일부로 제공되면, NuGet 패키지 요구 사항이 제거됩니다.
 
 새 튜플 지원을 추가하는 이유부터 살펴보겠습니다. 메서드는 단일 개체를 반환합니다. 튜플을 사용하면 해당 단일 개체에 여러 값을 보다 쉽게 패키징할 수 있습니다. 
 

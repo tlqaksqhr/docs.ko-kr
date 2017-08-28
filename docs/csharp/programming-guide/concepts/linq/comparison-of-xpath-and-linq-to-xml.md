@@ -1,5 +1,5 @@
 ---
-title: "XPath 및 LINQ to XML2 비교 | Microsoft 문서"
+title: "XPath 및 LINQ to XML 비교2"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,29 +14,29 @@ ms.assetid: 87d361b1-daa9-4fd4-a53a-cbfa40111ad3
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d60000605a42faa22841cc7b76b878a77bc53b7f
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a0b24eeeb79651f69178fa4e9c2e4a3359434556
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="comparison-of-xpath-and-linq-to-xml"></a>XPath 및 LINQ to XML 비교
-XPath와 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]은 유사한 기능을 제공합니다. XML 트리를 쿼리하여 결과를 요소 컬렉션, 특성 컬렉션, 노드 컬렉션 또는 요소나 특성의 값으로 반환하는 데 사용할 수 있습니다. 하지만 차이점도 있습니다.  
+XPath와 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]은 유사한 기능을 제공합니다. XML 트리를 쿼리하여 결과를 요소 컬렉션, 특성 컬렉션, 노드 컬렉션 또는 요소나 특성의 값으로 반환하는 데 사용할 수 있습니다. 하지만 차이점도 있습니다.  
   
 ## <a name="differences-between-xpath-and-linq-to-xml"></a>XPath와 LINQ to XML의 차이점  
- XPath는 새 형식의 프로젝션을 허용하지 않습니다. XPath는 트리에서 노드 컬렉션만 반환할 수 있지만, [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]은 쿼리를 실행하고 개체 그래프나 XML 트리를 새 모양으로 프로젝션할 수 있습니다. [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 쿼리는 훨씬 많은 기능을 포함하며 XPath 식보다 훨씬 더 강력합니다.  
+ XPath는 새 형식의 프로젝션을 허용하지 않습니다. XPath는 트리에서 노드 컬렉션만 반환할 수 있지만, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]은 쿼리를 실행하고 개체 그래프나 XML 트리를 새 모양으로 프로젝션할 수 있습니다. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리는 훨씬 많은 기능을 포함하며 XPath 식보다 훨씬 더 강력합니다.  
   
- XPath 식은 문자열 내에 분리되어 존재합니다. C# 컴파일러는 컴파일 시간에 XPath 식의 구문을 분석할 수 없습니다. 이와 반대로 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 쿼리는 C# 컴파일러에서 구문이 분석되고 컴파일됩니다. 컴파일러에서는 많은 쿼리 오류를 catch할 수 있습니다.  
+ XPath 식은 문자열 내에 분리되어 존재합니다. C# 컴파일러는 컴파일 시간에 XPath 식의 구문을 분석할 수 없습니다. 이와 반대로 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리는 C# 컴파일러에서 구문이 분석되고 컴파일됩니다. 컴파일러에서는 많은 쿼리 오류를 catch할 수 있습니다.  
   
- XPath 결과는 강력한 형식이 아닙니다. 많은 경우에 XPath 식의 계산 결과는 개체이며 적절한 형식을 결정하고 필요한 경우 결과를 캐스팅하는 것은 개발자에게 달려 있습니다. 이와 반대로 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 쿼리의 프로젝션은 강력한 형식입니다.  
+ XPath 결과는 강력한 형식이 아닙니다. 많은 경우에 XPath 식의 계산 결과는 개체이며 적절한 형식을 결정하고 필요한 경우 결과를 캐스팅하는 것은 개발자에게 달려 있습니다. 이와 반대로 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리의 프로젝션은 강력한 형식입니다.  
   
 ## <a name="result-ordering"></a>결과 정렬  
  XPath 1.0 권장 사항에는 XPath 식의 계산 결과인 컬렉션이 정렬되지 않는다고 나와 있습니다.  
   
- 그러나 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] XPath 축 메서드에서 반환하는 컬렉션을 반복할 때 컬렉션의 노드는 문서 순서로 반환됩니다. 이는 조건자가 `preceding` 및 `preceding-sibling`과 같이 문서 순서의 역순으로 표현되는 XPath 축에 액세스하는 경우에도 해당됩니다.  
+ 그러나 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] XPath 축 메서드에서 반환하는 컬렉션을 반복할 때 컬렉션의 노드는 문서 순서로 반환됩니다. 이는 조건자가 `preceding` 및 `preceding-sibling`과 같이 문서 순서의 역순으로 표현되는 XPath 축에 액세스하는 경우에도 해당됩니다.  
   
- 이와 반대로 대부분의 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 축은 문서 순서로 컬렉션을 반환하지만 그 중 <xref:System.Xml.Linq.XNode.Ancestors%2A> 및 <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>는 문서 순서의 역순으로 컬렉션을 반환합니다. 다음 표에서는 축을 열거하고 각 축의 컬렉션 순서를 나타냅니다.  
+ 이와 반대로 대부분의 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 축은 문서 순서로 컬렉션을 반환하지만 그 중 <xref:System.Xml.Linq.XNode.Ancestors%2A> 및 <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>는 문서 순서의 역순으로 컬렉션을 반환합니다. 다음 표에서는 축을 열거하고 각 축의 컬렉션 순서를 나타냅니다.  
   
 |LINQ to XML 축|정렬|  
 |----------------------|--------------|  
@@ -61,18 +61,18 @@ XPath와 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/li
   
  이와 반대로 LINQ to XML의 모든 위치 조건자는 항상 축의 순서로 표현됩니다. 예를 들어, `anElement.ElementsBeforeSelf().ToList()[0]`은 바로 이전 형제가 아니라 쿼리된 요소에 대한 부모의 첫 번째 자식 요소를 반환합니다. 또 다른 예로, `anElement.Ancestors().ToList()[0]`은 부모 요소를 반환합니다.  
   
- 위의 방법은 전체 컬렉션을 유형화합니다. 이 방법이 해당 쿼리를 가장 효율적으로 작성하는 방법은 아닙니다. 해당 쿼리는 위치 조건자의 동작을 보여 주기 위해 이 방법으로 작성되었습니다. 동일한 쿼리를 작성하는 데 더욱 적합한 방법은 `anElement.ElementsBeforeSelf().First()`와 같이 <xref:System.Linq.Enumerable.First%2A> 메서드를 사용하는 것입니다.  
+ 위의 방법은 전체 컬렉션을 유형화합니다. 이 방법이 해당 쿼리를 가장 효율적으로 작성하는 방법은 아닙니다. 해당 쿼리는 위치 조건자의 동작을 보여 주기 위해 이 방법으로 작성되었습니다. 동일한 쿼리를 작성하는 데 더욱 적합한 방법은 <xref:System.Linq.Enumerable.First%2A>와 같이 `anElement.ElementsBeforeSelf().First()` 메서드를 사용하는 것입니다.  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]에서 바로 이전 요소를 찾으려는 경우 다음 식을 작성할 수 있습니다.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서 바로 이전 요소를 찾으려는 경우 다음 식을 작성할 수 있습니다.  
   
  `ElementsBeforeSelf().Last()`  
   
 ## <a name="performance-differences"></a>성능 차이점  
  
-          [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]에서 XPath 기능을 사용하는 XPath 쿼리의 성능은 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 쿼리의 성능보다 낮습니다.  
+          [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서 XPath 기능을 사용하는 XPath 쿼리의 성능은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리의 성능보다 낮습니다.  
   
 ## <a name="comparison-of-composition"></a>구성 비교  
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 쿼리의 구성은 XPath 식의 구성과 다소 비슷하지만 구문은 매우 다릅니다.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리의 구성은 XPath 식의 구성과 다소 비슷하지만 구문은 매우 다릅니다.  
   
  예를 들어, `customers`라는 변수에 요소가 있고 `CompanyName`라는 모든 자식 요소 아래에서 `Customer`이라는 손자 요소를 찾으려는 경우 다음과 같이 XPath 식을 작성할 수 있습니다.  
   
@@ -80,7 +80,7 @@ XPath와 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/li
 customers.XPathSelectElements("./Customer/CompanyName");  
 ```  
   
- 동일한 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 쿼리는 다음과 같습니다.  
+ 동일한 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리는 다음과 같습니다.  
   
 ```csharp  
 customers.Element("Customer").Elements("CompanyName");  
@@ -104,3 +104,4 @@ customers.Element("Customer").Elements("CompanyName");
   
 ## <a name="see-also"></a>참고 항목  
  [XPath 사용자를 위한 LINQ to XML(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+

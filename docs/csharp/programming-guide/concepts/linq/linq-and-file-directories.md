@@ -1,5 +1,5 @@
 ---
-title: "LINQ 및 파일 디렉터리(C#) | Microsoft 문서"
+title: "LINQ 및 파일 디렉터리(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9437ff7142623e82363aecdc4cef376b6813fc39
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e7324e3b1d165bfe7ef477fa73bac5d3e7735dc5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="linq-and-file-directories-c"></a>LINQ 및 파일 디렉터리(C#)
@@ -58,3 +59,4 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="see-also"></a>참고 항목  
  [LINQ to Objects(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+

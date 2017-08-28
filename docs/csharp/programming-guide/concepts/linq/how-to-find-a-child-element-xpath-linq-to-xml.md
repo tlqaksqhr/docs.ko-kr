@@ -1,5 +1,5 @@
 ---
-title: "방법: 자식 요소 찾기(XPath 및 LINQ to XML)(C#) | Microsoft 문서"
+title: "방법: 자식 요소 찾기(XPath 및 LINQ to XML)(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,15 +14,15 @@ ms.assetid: 4fa6182d-6196-4ed1-9c9e-82949ff89c71
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b788d6dbd44f8ed01fe65a18fb25d8e3a0592220
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8950b74ff05b7a5383a570c971161f88a261d7ea
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-find-a-child-element-xpath-linq-to-xml-c"></a>방법: 자식 요소 찾기(XPath 및 LINQ to XML)(C#)
-이 항목에서는 XPath 자식 요소 축과 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> 메서드를 비교합니다.  
+이 항목에서는 XPath 자식 요소 축과 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A> 메서드를 비교합니다.  
   
  XPath 식은 `DeliveryNotes`입니다.  
   
@@ -59,3 +59,4 @@ Results are identical
   
 ## <a name="see-also"></a>참고 항목  
  [XPath 사용자를 위한 LINQ to XML(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "where 절(C# 참조) | Microsoft 문서"
+title: "where 절(C# 참조)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,10 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1094f68293dd05fdfe69a39016689cbaa3fd6290
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 97d7c16d6bf8048e621141fff52a47907881fd2f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="where-clause-c-reference"></a>where 절(C# 참조)
@@ -57,7 +58,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="remarks"></a>주의  
  `where` 절은 필터링 메커니즘입니다. 첫 번째 또는 마지막 절이 될 수 없다는 점을 제외하고, 쿼리 식의 거의 모든 곳에 배치할 수 있습니다. 소스 요소를 그룹화 전에 필터링할지, 그룹화 후에 필터링할지에 따라 `where` 절은 [group](../../../csharp/language-reference/keywords/group-clause.md) 절 앞 또는 뒤에 나타날 수 있습니다.  
   
- 지정된 조건자가 데이터 소스의 요소에 대해 유효하지 않은 경우, 컴파일 시간 오류가 발생합니다. 이는 [!INCLUDE[vbteclinq](../../../csharp/includes/vbteclinq_md.md)]에서 제공하는 강력한 형식 검사의 이점 중 하나입니다.  
+ 지정된 조건자가 데이터 소스의 요소에 대해 유효하지 않은 경우, 컴파일 시간 오류가 발생합니다. 이는 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]에서 제공하는 강력한 형식 검사의 이점 중 하나입니다.  
   
  컴파일 시간에 `where` 키워드는 <xref:System.Linq.Enumerable.Where%2A> 표준 쿼리 연산자 메서드에 대한 호출로 변환됩니다.  
   
@@ -68,3 +69,4 @@ ms.lasthandoff: 03/13/2017
  [데이터 필터링](http://msdn.microsoft.com/library/cee88d0f-31aa-4c60-9452-cc122ed0057d)   
  [LINQ 쿼리 식](../../../csharp/programming-guide/linq-query-expressions/index.md)   
  [C#에서 LINQ 시작](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+

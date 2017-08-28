@@ -1,6 +1,6 @@
 ---
 title: Expression Trees
-description: Expression Trees
+description: ".NET Core의 식 트리에 대해 알아본 다음 이를 사용하여 검사, 수정 및 실행할 수 있는 구조로 코드를 나타내는 방법을 알아봅니다."
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e6ec60b6cdbe29def719f7970dad15fad65902e7
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3935906d9fca81a094999eefdd49ae4ed56990bf
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -31,10 +31,10 @@ LINQ 쿼리를 만들 때 일반적으로 람다 식을 사용하여 함수 인�
 따라서 [Entity Framework](http://docs.efproject.net/en/latest/)는 C#에서 작성된 쿼리를 데이터베이스 엔진에서 실행되는 SQL로 변환할 수 있습니다. 또 다른 예로 널리 사용되는 .NET 모의 프레임워크인 [Moq](https://github.com/Moq/moq)가 있습니다.
 
 이 자습서의 나머지 섹션에서는 식 트리의 정의를 살펴보고, 식 트리를 지원하는 프레임워크 클래스를 검사하며, 식 트리로 작업하는 방법을 보여 줍니다. 식 트리를 읽는 방법, 식 트리를 만드는 방법, 수정된 식 트리를 만드는 방법, 식 트리로 표시되는 코드를 실행하는 방법 등을 알아봅니다. 자습서를 읽고 나면 이러한 구조를 사용하여 풍부한 적응 알고리즘을 만들 수 있습니다.
-<style type="text/css"> ol { list-style-type: upper-roman; } </style>
+
 1. [식 트리 설명](expression-trees-explained.md)
 
-    Understand the structure and concepts behind *Expression Trees*.
+    *식 트리*의 구조와 개념을 이해합니다.
     
 2. [식 트리를 지원하는 프레임워크 형식](expression-classes.md)
     

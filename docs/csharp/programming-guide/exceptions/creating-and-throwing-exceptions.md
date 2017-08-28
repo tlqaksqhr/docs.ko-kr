@@ -1,5 +1,5 @@
 ---
-title: "예외 만들기 및 Throw(C# 프로그래밍 가이드) | Microsoft 문서"
+title: "예외 만들기 및 Throw(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c3eab50a6a785676dd397498fbe95348187e2b7e
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5f49b0911aa94480988987f209bc73d187451620
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>예외 만들기 및 Throw(C# 프로그래밍 가이드)
@@ -56,13 +56,13 @@ ms.lasthandoff: 03/13/2017
   
 -   메서드에 대한 인수가 예외를 일으키는 경우.  
   
-     이 경우 원래 예외가 catch되고 <xref:System.ArgumentException> 인스턴스가 만들어져야 합니다. 원래 예외가 <xref:System.ArgumentException>의 생성자에 <xref:System.Exception.InnerException%2A> 매개 변수로 전달되어야 합니다.  
+     이 경우 원래 예외가 catch되고 <xref:System.ArgumentException> 인스턴스가 만들어져야 합니다. 원래 예외를 <xref:System.ArgumentException>의 생성자에 <xref:System.Exception.InnerException%2A> 매개 변수로 전달해야 합니다.  
   
      [!code-cs[csProgGuideExceptions#14](../../../csharp/programming-guide/exceptions/codesnippet/CSharp/creating-and-throwing-exceptions_3.cs)]  
   
- 예외에는 <xref:System.Exception.StackTrace%2A> 속성이 포함됩니다. 이 문자열에는 현재 콜 스택에 대한 메서드의 이름과 각 메서드에 대해 예외가 throw된 파일 이름 및 줄 번호가 포함됩니다. <xref:System.Exception.StackTrace%2A> 개체는 `throw` 문의 지점에서 CLR(공용 언어 런타임)에 의해 자동으로 만들어지므로 해당 예외는 스택 추적이 시작되는 지점에서 throw되어야 합니다.  
+ 예외에 이름이 <xref:System.Exception.StackTrace%2A>인 속성이 포함되어 있습니다. 이 문자열에는 현재 콜 스택에 대한 메서드의 이름과 각 메서드에 대해 예외가 throw된 파일 이름 및 줄 번호가 포함됩니다. <xref:System.Exception.StackTrace%2A> 개체는 `throw` 문의 지점에서 CLR(공용 언어 런타임)에 의해 자동으로 만들어지므로 해당 예외는 스택 추적이 시작되는 지점에서 throw되어야 합니다.  
   
- 모든 예외에는 <xref:System.Exception.Message%2A> 속성이 포함됩니다. 예외의 이유를 설명하려면 이 문자열을 설정해야 합니다. 보안이 중요한 정보는 메시지 텍스트에 넣으면 안 됩니다. <xref:System.Exception.Message%2A> 외에 <xref:System.ArgumentException>에는 예외를 throw한 인수의 이름으로 설정해야 하는 <xref:System.ArgumentException.ParamName%2A> 속성이 포함됩니다. 속성 setter의 경우 <xref:System.ArgumentException.ParamName%2A>을 `value`로 설정해야 합니다.  
+ 모든 예외에 이름이 <xref:System.Exception.Message%2A>인 속성이 포함되어 있습니다. 예외의 이유를 설명하려면 이 문자열을 설정해야 합니다. 보안이 중요한 정보는 메시지 텍스트에 넣으면 안 됩니다. <xref:System.Exception.Message%2A> 외에 <xref:System.ArgumentException>에는 예외를 throw한 인수의 이름으로 설정해야 하는 <xref:System.ArgumentException.ParamName%2A> 속성이 포함되어 있습니다. 속성 setter의 경우 <xref:System.ArgumentException.ParamName%2A>을 `value`로 설정해야 합니다.  
   
  Public 및 protected 메서드 멤버는 의도한 함수를 완료할 수 없을 때마다 예외를 throw해야 합니다. throw된 예외 클래스는 오류 조건에 맞을 수 있는 가장 구체적인 예외여야 합니다. 이러한 예외는 클래스 기능의 일부로 문서화해야 하고 파생 클래스 또는 원래 클래스의 업데이트는 이전 버전과의 호환성을 위해 같은 동작을 유지해야 합니다.  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 03/13/2017
   
 -   예외는 throw하는 대신 반환 값 또는 매개 변수로 반환하면 안 됩니다.  
   
--   자체 소스 코드에서 의도적으로 <xref:System.Exception?displayProperty=fullName>, <xref:System.SystemException?displayProperty=fullName>, <xref:System.NullReferenceException?displayProperty=fullName>, 또는 <xref:System.IndexOutOfRangeException?displayProperty=fullName>을 throw하지 마세요.  
+-   고유한 소스 코드에서 의도적으로 <xref:System.Exception?displayProperty=fullName>, <xref:System.SystemException?displayProperty=fullName>, <xref:System.NullReferenceException?displayProperty=fullName> 또는 <xref:System.IndexOutOfRangeException?displayProperty=fullName>을 throw하지 마세요.  
   
 -   릴리스 모드가 아닌 디버그 모드에서 throw될 수 있는 예외를 만들지 마세요. 개발 단계에서 런타임 오류를 식별하려면 대신 디버그 어설션을 사용하세요.  
   
@@ -92,3 +92,4 @@ ms.lasthandoff: 03/13/2017
  [예외 및 예외 처리](../../../csharp/programming-guide/exceptions/index.md)   
  [예외 계층 구조](http://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)   
  [예외 처리](../../../csharp/programming-guide/exceptions/exception-handling.md)
+

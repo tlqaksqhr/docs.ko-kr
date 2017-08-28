@@ -1,5 +1,5 @@
 ---
-title: "연습: My.Application.Log 출력 필터링(Visual Basic) | Microsoft 문서"
+title: "My.Application.Log 출력 필터링(Visual Basic)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -33,11 +33,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: c0b8b0a4174527d1fc512b461355d2508e34e152
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a19bd71f1346be292dcc7b143a0080ac1cf11ec0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>연습: My.Application.Log 출력 필터링(Visual Basic)
@@ -48,7 +48,7 @@ ms.lasthandoff: 05/22/2017
   
 #### <a name="to-build-the-sample-application"></a>샘플 응용 프로그램을 빌드하려면  
   
-1.  새 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] Windows 응용 프로그램 프로젝트를 엽니다.  
+1.  새 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Windows 응용 프로그램 프로젝트를 엽니다.  
   
 2.  Button1이라는 단추를 Form1에 추가합니다.  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 05/22/2017
   
 6.  응용 프로그램을 닫습니다.  
   
-     응용 프로그램의 디버그 출력 창을 보는 방법에 대한 자세한 내용은 [출력 창](https://docs.microsoft.com/visualstudio/ide/reference/output-window)을 참조하세요. 응용 프로그램 로그 파일의 위치에 대한 자세한 내용은 [연습: My.Application.Log가 정보를 기록하는 위치 확인](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)을 참조하세요.  
+     응용 프로그램의 디버그 출력 창을 보는 방법에 대한 자세한 내용은 [출력 창](/visualstudio/ide/reference/output-window)을 참조하세요. 응용 프로그램 로그 파일의 위치에 대한 자세한 내용은 [연습: My.Application.Log가 정보를 기록하는 위치 확인](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)을 참조하세요.  
   
     > [!NOTE]
     >  기본적으로 응용 프로그램을 닫으면 응용 프로그램이 로그 파일 출력을 플러시합니다.  
@@ -162,7 +162,7 @@ ms.lasthandoff: 05/22/2017
 9. `value` 특성의 값을 다시 "정보"로 변경합니다.  
   
     > [!NOTE]
-    >  `DefaultSwitch` 스위치 설정은 `My.Application.Log`만 제어합니다. [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] <xref:System.Diagnostics.Trace?displayProperty=fullName> 및 <xref:System.Diagnostics.Debug?displayProperty=fullName> 클래스의 동작은 변경되지 않습니다.  
+    >  `DefaultSwitch` 스위치 설정은 `My.Application.Log`만 제어합니다. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=fullName> 및 <xref:System.Diagnostics.Debug?displayProperty=fullName> 클래스의 동작은 변경되지 않습니다.  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>My.Application.Log 수신기에 대한 개별 필터링  
  이전 예제에서는 모든 `My.Application.Log` 출력에 대한 필터링을 변경하는 방법을 보여 줍니다. 이 예제에서는 개별 로그 수신기를 필터링하는 방법을 보여 줍니다. 기본적으로 응용 프로그램에는 각각 응용 프로그램의 디버그 출력 및 로그 파일에 기록하는 두 개의 수신기가 있습니다.  
@@ -281,3 +281,4 @@ ms.lasthandoff: 05/22/2017
  [방법: 로그 메시지 쓰기](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
  [추적 스위치](../../../../framework/debug-trace-profile/trace-switches.md)   
  [응용 프로그램의 정보 기록](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "-target:winmdobj(C# 컴파일러 옵션) | Microsoft 문서"
+title: "-target:winmdobj(C# 컴파일러 옵션)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -26,10 +26,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7581ec18db0d2741452b47ad6200482b63c102be
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3967f7f9326652271ce55aa286e9f42f94dee775
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="targetwinmdobj-c-compiler-options"></a>/target:winmdobj(C# 컴파일러 옵션)
@@ -37,7 +38,7 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 /target:winmdobj  
 ```  
   
@@ -58,17 +59,18 @@ ms.lasthandoff: 03/13/2017
   
 3.  **출력 형식** 목록에서 **WinMD 파일**을 선택합니다.  
   
-     **WinMD 파일** 옵션은 [!INCLUDE[win8_appname_long](../../../csharp/includes/win8_appname_long_md.md)] 앱 템플릿에만 사용할 수 있습니다.  
+     **WinMD 파일** 옵션은 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 앱 템플릿에만 사용할 수 있습니다.  
   
- 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>를 참조하세요.  
+ 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>을 참조하십시오.  
   
 ## <a name="example"></a>예제  
  다음 명령은 `filename.cs`를 중간 .winmdobj 파일로 컴파일합니다.  
   
-```  
+```console  
 csc /target:winmdobj filename.cs  
 ```  
   
 ## <a name="see-also"></a>참고 항목  
  [/target(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)   
  [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)
+

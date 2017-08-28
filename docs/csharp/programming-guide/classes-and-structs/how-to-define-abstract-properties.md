@@ -1,64 +1,84 @@
 ---
-title: "방법: 추상 속성 정의(C# 프로그래밍 가이드) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "추상 속성[C#]"
-  - "속성[C#], abstract"
+title: "방법: 추상 속성 정의(C# 프로그래밍 가이드)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- properties [C#], abstract
+- abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
 caps.latest.revision: 13
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 13
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c6decaae138a21c24e94e2ed74111c860777f64b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
+
 ---
-# 방법: 추상 속성 정의(C# 프로그래밍 가이드)
-다음 예제에서는 [추상](../../../csharp/language-reference/keywords/abstract.md) 속성을 정의하는 방법을 보여 줍니다.  추상 속성 선언에서는 속성 접근자에 대한 구현을 제공하지 않습니다. 여기서는 클래스가 속성을 지원하도록 선언하지만 접근자 구현은 파생 클래스의 몫으로 남겨 둡니다.  다음 예제에서는 기본 클래스에서 상속된 추상 속성을 구현하는 방법을 보여 줍니다.  
+# <a name="how-to-define-abstract-properties-c-programming-guide"></a>방법: 추상 속성 정의(C# 프로그래밍 가이드)
+다음 예제에서는 [abstract](../../../csharp/language-reference/keywords/abstract.md) 속성을 정의하는 방법을 보여 줍니다. 추상 속성 선언은 속성 접근자의 구현을 제공하지 않습니다. 클래스가 속성을 지원하도록 선언하지만 접근자 구현은 파생 클래스에서 처리되도록 합니다. 다음 예제에서는 기본 클래스에서 상속된 추상 속성을 구현하는 방법을 보여 줍니다.  
   
- 이 샘플은 파일 세 개로 구성되어 있습니다. 각 파일은 개별적으로 컴파일되고 그 결과 어셈블리는 다음 컴파일에서 참조합니다.  
+ 이 샘플은 개별적으로 컴파일된 파일 3개로 구성되었으며, 결과로 생성된 어셈블리는 다음 컴파일 시 참조됩니다.  
   
--   abstractshape.cs: 추상 `Area` 속성이 들어 있는 `Shape` 클래스입니다.  
+-   abstractshape.cs: 추상 `Area` 속성이 포함된 `Shape` 클래스입니다.  
   
 -   shapes.cs: `Shape` 클래스의 서브클래스입니다.  
   
--   shapetest.cs: `Shape` 파생 개체 일부의 영역을 표시하기 위한 테스트 프로그램입니다.  
+-   shapetest.cs: 일부 `Shape` 파생 개체의 영역을 표시할 테스트 프로그램입니다.  
   
- 예제를 컴파일하려면 다음 명령을 사용해야 합니다.  
+ 예제를 컴파일하려면 다음 명령을 사용합니다.  
   
  `csc abstractshape.cs shapes.cs shapetest.cs`  
   
- 이렇게 하면 실행 파일 shapetest.exe가 만들어집니다.  
+ 그러면 shapetest.exe 실행 파일이 생성됩니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  이 파일에서는 `double` 형식의 `Area` 속성을 포함하는 `Shape` 클래스를 선언합니다.  
   
  [!code-cs[csProgGuideInheritance#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_1.cs)]  
   
--   속성에 대한 한정자는 속성 선언 자체에 배치됩니다.  예를 들면 다음과 같습니다.  
+-   속성의 한정자는 속성 선언 자체에 배치됩니다. 예:  
   
     ```  
     public abstract double Area  
     ```  
   
--   이 예제에서의 `Area`와 같이 추상 속성을 선언할 때 단순히 사용할 수 있는 속성 접근자를 나타내고 구현하지는 않습니다.  이 예제에서는 [get](../../../csharp/language-reference/keywords/get.md) 접근자만 사용할 수 있으므로 속성이 읽기 전용입니다.  
+-   추상 속성(이 예제의 `Area`)을 선언할 때는 단순히 사용할 수 있는 속성 접근자를 나타내고 구현하지 않습니다. 이 예제에서는 [get](../../../csharp/language-reference/keywords/get.md) 접근자만 사용할 수 있으므로 속성은 읽기 전용입니다.  
   
-## 예제  
- 다음 코드에서는 `Shape`의 서브클래스 세 개를 보여 주고 이 서브클래스에서 `Area` 속성을 재정의하여 자체 구현을 제공하는 방법을 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 코드에서는 `Shape`의 세 가지 서브클래스와 이러한 서브클래스에서 `Area` 속성을 재정의하여 고유한 구현을 제공하는 방법을 보여 줍니다.  
   
  [!code-cs[csProgGuideInheritance#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_2.cs)]  
   
-## 예제  
- 다음은 여러 `Shape` 파생 개체를 만들고 해당 면적을 출력하는 테스트 프로그램 코드입니다.  
+## <a name="example"></a>예제  
+ 다음 코드에서는 많은 `Shape` 파생 개체를 만들고 해당 영역을 출력하는 테스트 프로그램을 보여 줍니다.  
   
  [!code-cs[csProgGuideInheritance#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-define-abstract-properties_3.cs)]  
   
-## 참고 항목  
- [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>참고 항목  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
  [클래스 및 구조체](../../../csharp/programming-guide/classes-and-structs/index.md)   
  [추상 및 봉인 클래스와 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
  [속성](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [방법: 명령줄을 사용하여 어셈블리 만들기 및 사용](../Topic/How%20to:%20Create%20and%20Use%20Assemblies%20Using%20the%20Command%20Line%20\(C%23%20and%20Visual%20Basic\).md)
+ [방법: 명령줄을 사용하여 어셈블리 만들기 및 사용](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)
+

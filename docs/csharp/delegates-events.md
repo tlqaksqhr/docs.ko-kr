@@ -1,6 +1,6 @@
 ---
 title: "대리자 및 이벤트"
-description: "대리자 및 이벤트"
+description: ".NET Core 설명서에서 대리자 및 이벤트에 대한 정보를 찾을 수 있는 위치를 확인합니다."
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 4e80e053-8022-4987-a8a0-209caec0315d
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c9a2d44ae73208543380c52547473a572ba45d04
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e511b5057cb83119819a1403d56f23f738488a3f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -21,10 +22,9 @@ ms.lasthandoff: 03/13/2017
 
 이 항목은 다음 문서에서 다룹니다.
 
-<style type="text/css"> ol { list-style-type: upper-roman; } </style>
 1. [대리자 개요](delegates-overview.md)
 
-    This article covers an overview of delegates.
+    이 문서에서는 대리자에 대해 간략하게 설명합니다.
 
 2. [System.Delegate 및 `delegate` 키워드](delegate-class.md)
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 03/13/2017
 
     이 문서에서는 .NET의 이벤트에 대해 간략하게 설명합니다.
 
-6. [.NET 이벤트 패턴](event-pattern.md)
+6. [표준 .NET 이벤트 패턴](event-pattern.md)
 
     이 문서에서는 .NET의 표준 이벤트 패턴에 대해 설명합니다.
 

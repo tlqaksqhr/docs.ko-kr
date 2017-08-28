@@ -1,34 +1,54 @@
 ---
-title: "&lt;= 연산자(C# 참조) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "<=_CSharpKeyword"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "<= 연산자[C#]"
-  - "작거나 같음 연산자(<=)[C#]"
+title: "&lt;= 연산자(C# 참조)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- <=_CSharpKeyword
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- less than or equal to operator (<=) [C#]
+- <= operator [C#]
 ms.assetid: bb0caec9-d253-4105-b8bc-5252233251e4
 caps.latest.revision: 16
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 16
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 931843783888a844d9f90f273b2362d327e8ccbc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
+
 ---
-# &lt;= 연산자(C# 참조)
-모든 숫자 형식과 열거형은 "작거나 같음" 관계 연산자\(`<=`\)를 정의합니다. 이 연산자는 첫째 피연산자가 둘째 피연산자보다 작거나 같으면 `true`를 반환하고 그렇지 않으면 `false`를 반환합니다.  
+# <a name="lt-operator-c-reference"></a>&lt;= 연산자(C# 참조)
+모든 숫자 형식과 열거형은 첫 번째 피연산자가 두 번째 피연산자보다 작거나 같을 경우에 `true`를 반환하고 그렇지 않으면 `false`를 반환하는 “작거나 같음” 관계 연산자(`<=`)를 정의합니다.  
   
-## 설명  
- 사용자 정의 형식으로 `<=` 연산자를 오버로드할 수 있습니다.  자세한 내용은 [연산자](../../../csharp/language-reference/keywords/operator.md)를 참조하십시오.  `<=` 연산자를 오버로드할 경우에는 [\>\=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) 연산자도 오버로드해야 합니다.  정수 계열 형식에 대한 연산은 일반적으로 열거형에서 허용됩니다.  
+## <a name="remarks"></a>설명  
+ 사용자 정의 형식은 `<=` 연산자를 오버로드할 수 있습니다. 자세한 내용은 [operator](../../../csharp/language-reference/keywords/operator.md)를 참조하세요. `<=` 연산자가 오버로드되면 [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) 또한 오버로드되어야 합니다. 정수 계열 형식에 대한 연산은 일반적으로 열거형에서 허용됩니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  [!code-cs[csRefOperators#32](../../../csharp/language-reference/operators/codesnippet/CSharp/less-than-equal-operator_1.cs)]  
   
-## 참고 항목  
- [C\# 참조](../../../csharp/language-reference/index.md)   
- [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C\# 연산자](../../../csharp/language-reference/operators/index.md)   
+## <a name="see-also"></a>참고 항목  
+ [C# 참조](../../../csharp/language-reference/index.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
+ [C# 연산자](../../../csharp/language-reference/operators/index.md)   
  [explicit](../../../csharp/language-reference/keywords/explicit.md)
+

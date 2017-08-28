@@ -1,70 +1,90 @@
 ---
-title: "무명 메서드(C# 프로그래밍 가이드) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "무명 메서드[C#]"
-  - "대리자[C#], 무명 메서드"
-  - "메서드[C#], 무명"
+title: "무명 메서드(C# 프로그래밍 가이드)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- anonymous methods [C#]
+- methods [C#], anonymous
+- delegates [C#], anonymous methods
 ms.assetid: a62441fa-f0a3-4acb-9aa6-93762a635275
 caps.latest.revision: 31
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 31
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 92842becf26a15ab1a6f5e9621002abf71dc67bc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
+
 ---
-# 무명 메서드(C# 프로그래밍 가이드)
-2.0보다 이전 버전의 C\#에서는 [명명된 메서드](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)를 사용하는 방법으로만 [대리자](../../../csharp/language-reference/keywords/delegate.md)를 선언할 수 있었습니다.  C\# 2.0에는 무명 메서드가 도입되었고 C\# 3.0 이상에서는 무명 메서드 대신 람다 식을 사용하여 인라인 코드를 작성하는 방법이 더 선호됩니다.  그러나 이 항목에서 설명하는 무명 메서드에 대한 내용은 람다 식에도 적용됩니다.  무명 메서드에는 람다 식에 없는 기능이 한 가지 있습니다.  무명 메서드를 사용하면 매개 변수 목록을 생략할 수 있으며,  이는 무명 메서드가 여러 시그니처를 가진 대리자로 변환될 수 있음을 의미합니다.  람다 식을 사용해서는 이렇게 할 수 없습니다.  람다 식에 대한 자세한 내용은 [람다 식](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)을 참조하십시오.  
+# <a name="anonymous-methods-c-programming-guide"></a>무명 메서드(C# 프로그래밍 가이드)
+2.0 이전의 C# 버전에서 [delegate](../../../csharp/language-reference/keywords/delegate.md)를 선언하는 유일한 방법은 [명명된 메서드](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)를 사용하는 것이었습니다. C# 2.0에서는 무명 메서드가 도입되었고, C# 3.0 이상에서는 람다 식이 인라인 코드를 작성하는 기본 방법으로 무명 메서드를 대체합니다. 그러나 이 항목의 무명 메서드 관련 정보는 람다 식에도 적용됩니다. 무명 메서드가 람다 식에서 찾을 수 없는 기능을 제공하는 한 가지 경우가 있습니다. 무명 메서드를 사용하여 매개 변수 목록을 생략할 수 있습니다. 즉, 무명 메서드를 여러 시그니처를 가진 대리자로 변환할 수 있습니다. 람다 식에서는 이 작업이 불가능합니다. 람다 식에 대한 자세한 내용은 [람다 식](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)을 참조하세요.  
   
- 무명 메서드를 만드는 것은 본질적으로 코드 블록을 대리자 매개 변수로 전달하기 위한 방법입니다.  두 가지 예를 들겠습니다.  
+ 무명 메서드를 만드는 것은 기본적으로 코드 블록을 대리자 매개 변수로 전달하는 방법 중 하나입니다. 다음 두 가지 예제를 살펴보세요.  
   
  [!code-cs[csProgGuideDelegates#6](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_1.cs)]  
   
  [!code-cs[csProgGuideDelegates#5](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_2.cs)]  
   
- 무명 메서드를 사용하면 별도의 메서드를 만들 필요가 없으므로 대리자를 인스턴스화하는 데 따르는 코딩 오버헤드를 줄일 수 있습니다.  
+ 무명 메서드를 사용하면 별도 메서드를 만들 필요가 없기 때문에 대리자를 인스턴스화하는 코딩 오버헤드가 줄어듭니다.  
   
- 예를 들어 메서드를 만드는 것이 불필요한 오버헤드가 되는 상황에서는 대리자 대신 코드 블록을 지정하는 것이 유용합니다.  새로운 스레드를 시작할 때가 좋은 예입니다.  다음 클래스는 스레드를 만들고 스레드에서 실행할 코드도 포함하므로 대리자를 위한 추가 메서드를 만들 필요가 없습니다.  
+ 예를 들어 메서드를 만드는 것이 불필요한 오버헤드처럼 보일 수도 있는 경우 대리자 대신 코드 블록을 지정하는 것이 유용할 수 있습니다. 좋은 예로 새 스레드를 시작하는 경우를 들 수 있습니다. 이 클래스는 스레드를 만들며, 대리자에 대한 추가 메서드를 만들지 않고 스레드에서 실행하는 코드도 포함합니다.  
   
  [!code-cs[csProgGuideDelegates#7](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_3.cs)]  
   
-## 설명  
+## <a name="remarks"></a>설명  
  무명 메서드의 매개 변수 범위는 *무명 메서드 블록*입니다.  
   
- 무명 메서드 블록 안에서 블록 밖을 대상으로 [goto](../../../csharp/language-reference/keywords/goto.md), [break](../../../csharp/language-reference/keywords/break.md) 또는 [continue](../../../csharp/language-reference/keywords/continue.md)와 같은 점프 문을 사용하면 오류가 발생합니다.  무명 메서드 블록 밖에서 블록 안을 대상으로 `goto`, `break` 또는 `continue`와 같은 점프 문을 사용해도 오류가 발생합니다.  
+ 대상이 블록 외부에 있을 경우 [goto](../../../csharp/language-reference/keywords/goto.md), [break](../../../csharp/language-reference/keywords/break.md), [continue](../../../csharp/language-reference/keywords/continue.md) 등의 점프 문을 무명 메서드 블록 내부에 사용하는 것은 오류입니다. 대상이 블록 내부에 있을 경우 `goto`, `break`, `continue` 등의 점프 문을 무명 메서드 블록 외부에 사용하는 것도 오류입니다.  
   
- 지역 변수 및 매개 변수의 범위에 무명 메서드 선언이 포함되는 경우 이러한 변수를 무명 메서드의 *외부* 변수라고 합니다.  예를 들어, 다음 코드 단편에서 `n`은 외부 변수입니다.  
+ 범위에 무명 메서드 선언이 포함된 지역 변수 및 매개 변수를 무명 메서드의 *외부* 변수라고 합니다. 예를 들어 다음 코드 세그먼트에서 `n`은 외부 변수입니다.  
   
  [!code-cs[csProgGuideDelegates#8](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_4.cs)]  
   
- 외부 변수에 `n` 라고  *캡처* 대리자를 만들 때.  무명 메서드를 참조 하는 대리자가 가비지 수집의 대상이 될 때까지 지역 변수와 달리 캡처된 변수의 수명은 확장 합니다.  
+ 외부 변수 `n`에 대한 참조는 대리자를 만들 때 *캡처*됩니다. 지역 변수와 달리 캡처된 변수의 수명은 무명 메서드를 참조하는 대리자가 가비지 수집에 적격할 때까지 연장됩니다.  
   
- 무명 메서드에서는 외부 범위의 [ref](../../../csharp/language-reference/keywords/ref.md) 또는 [out](../../../csharp/language-reference/keywords/out.md) 매개 변수에 액세스할 수 없습니다.  
+ 무명 메서드는 외부 범위의 [ref](../../../csharp/language-reference/keywords/ref.md) 또는 [out](../../../csharp/language-reference/keywords/out.md) 매개 변수에 액세스할 수 없습니다.  
   
- *무명 메서드 블록*에서는 안전한 코드에만 액세스할 수 있습니다.  
+ 안전하지 않은 코드는 *무명 메서드 블록* 내에서 액세스할 수 없습니다.  
   
- 무명 메서드는 [is](../../../csharp/language-reference/keywords/is.md) 연산자의 왼쪽에 사용할 수 없습니다.  
+ [is](../../../csharp/language-reference/keywords/is.md) 연산자의 왼쪽에는 무명 메서드를 사용할 수 없습니다.  
   
-## 예제  
- 다음 예제에서는 대리자를 인스턴스화하는 두 가지 방법을 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 대리자를 인스턴스화하는 다음 두 가지 방법을 보여 줍니다.  
   
--   대리자를 무명 메서드에 연결  
+-   무명 메서드에 대리자 연결  
   
--   대리자를 명명된 메서드\(`DoWork`\)에 연결  
+-   명명된 메서드(`DoWork`)에 대리자 연결  
   
- 각각의 경우에서 대리자가 호출되면 메시지가 표시됩니다.  
+ 각각의 경우 대리자를 호출할 때 메시지가 표시됩니다.  
   
  [!code-cs[csProgGuideDelegates#4](../../../csharp/programming-guide/delegates/codesnippet/CSharp/anonymous-methods_5.cs)]  
   
-## 참고 항목  
- [C\# 참조](../../../csharp/language-reference/index.md)   
- [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
+## <a name="see-also"></a>참고 항목  
+ [C# 참조](../../../csharp/language-reference/index.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
  [대리자](../../../csharp/programming-guide/delegates/index.md)   
  [람다 식](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
  [안전하지 않은 코드 및 포인터](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
  [메서드](../../../csharp/programming-guide/classes-and-structs/methods.md)   
- [명명된 메서드와 익명 메서드의 대리자 비교](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)
+ [명명된 메서드 및 무명 메서드가 있는 대리자](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)
+

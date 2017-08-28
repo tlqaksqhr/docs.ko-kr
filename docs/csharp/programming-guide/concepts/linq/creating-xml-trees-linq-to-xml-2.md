@@ -1,5 +1,5 @@
 ---
-title: "C#에서 XML 트리 만들기(LINQ to XML) | Microsoft 문서"
+title: "C#에서 XML 트리 만들기(LINQ to XML)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 92ba0d345183ec503d61254355f948f82a18f053
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ac95fcf49736b554c8a3d4d0061f63b3ac4d3f65
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>C#에서 XML 트리 만들기(LINQ to XML)
@@ -33,9 +34,9 @@ ms.lasthandoff: 03/13/2017
 ## <a name="constructing-elements"></a>요소 생성  
  <xref:System.Xml.Linq.XElement> 및 <xref:System.Xml.Linq.XAttribute> 생성자의 시그니처를 사용하여 요소나 특성의 내용을 생성자에 인수로 전달할 수 있습니다. 생성자 중 하나의 인수 수가 고정되어 있지 않기 때문에 원하는 수의 자식 요소를 전달할 수 있습니다. 물론 이러한 각 자식 요소에는 자신의 자식 요소가 포함될 수 있습니다. 각 요소에는 원하는 수의 특성을 추가할 수 있습니다.  
   
- <xref:System.Xml.Linq.XNode>(<xref:System.Xml.Linq.XElement> 포함) 또는 <xref:System.Xml.Linq.XAttribute> 개체를 추가할 때 새 내용에 부모가 없으면 개체가 XML 트리에 연결됩니다. 새 내용에 이미 부모가 있고 다른 XML 트리의 일부이면 새 내용이 복제되고 새로 복제된 내용이 XML 트리에 추가됩니다. 이 항목의 마지막 예제에서는 이에 대해 보여 줍니다.  
+ <xref:System.Xml.Linq.XNode>(<xref:System.Xml.Linq.XElement> 포함) 또는 <xref:System.Xml.Linq.XAttribute> 개체를 추가할 때 새 내용에 부모가 없으면 개체가 XML 트리에 추가되기만 합니다. 새 내용에 이미 부모가 있고 다른 XML 트리의 일부이면 새 내용이 복제되고 새로 복제된 내용이 XML 트리에 추가됩니다. 이 항목의 마지막 예제에서는 이에 대해 보여 줍니다.  
   
- `contacts`<xref:System.Xml.Linq.XElement>를 만들려면 다음 코드를 사용합니다.  
+ `contacts`<xref:System.Xml.Linq.XElement>를 만들려면 다음 코드를 사용할 수 있습니다.  
   
 ```csharp  
 XElement contacts =  
@@ -61,8 +62,8 @@ XElement contacts =
 |생성자|설명|  
 |-----------------|-----------------|  
 |`XElement(XName name, object content)`|<xref:System.Xml.Linq.XElement>를 만듭니다. `name` 매개 변수는 요소의 이름을 지정하고, `content`는 요소의 내용을 지정합니다.|  
-|`XElement(XName name)`|<xref:System.Xml.Linq.XName>을 지정된 이름으로 초기화하여 <xref:System.Xml.Linq.XElement>를 만듭니다.|  
-|`XElement(XName name, params object[] content)`|<xref:System.Xml.Linq.XName>을 지정된 이름으로 초기화하여 <xref:System.Xml.Linq.XElement>를 만듭니다. 특성 및/또는 자식 요소는 매개 변수 목록의 내용에서 만들어집니다.|  
+|`XElement(XName name)`|<xref:System.Xml.Linq.XElement>을 지정된 이름으로 초기화하여 <xref:System.Xml.Linq.XName>를 만듭니다.|  
+|`XElement(XName name, params object[] content)`|<xref:System.Xml.Linq.XElement>을 지정된 이름으로 초기화하여 <xref:System.Xml.Linq.XName>를 만듭니다. 특성 및/또는 자식 요소는 매개 변수 목록의 내용에서 만들어집니다.|  
   
  `content` 매개 변수는 융통성이 매우 크기 때문에 <xref:System.Xml.Linq.XElement>의 유효한 자식인 모든 형식의 개체를 지원합니다. 이 매개 변수로 전달되는 개체의 형식에 따라 다음과 같은 규칙이 적용됩니다.  
   
@@ -74,7 +75,7 @@ XElement contacts =
   
 -   <xref:System.Xml.Linq.XProcessingInstruction>, <xref:System.Xml.Linq.XComment> 또는 <xref:System.Xml.Linq.XText>는 자식 내용으로 추가됩니다.  
   
--   <xref:System.Collections.IEnumerable>은 열거되고 이러한 규칙은 결과에 재귀적으로 적용됩니다.  
+-   <xref:System.Collections.IEnumerable>이 열거되고 이러한 규칙이 결과에 재귀적으로 적용됩니다.  
   
 -   다른 모든 형식의 경우 `ToString` 메서드가 호출되고 결과가 텍스트 내용으로 추가됩니다.  
   
@@ -200,7 +201,7 @@ Console.WriteLine(n);
 ```  
   
 ### <a name="attaching-vs-cloning"></a>추가와 복제 비교  
- 앞에서 설명한 대로 <xref:System.Xml.Linq.XNode>(<xref:System.Xml.Linq.XElement> 포함) 또는 <xref:System.Xml.Linq.XAttribute> 개체를 추가할 때 새 내용에 부모가 없으면 개체가 XML 트리에 연결됩니다. 새 내용에 이미 부모가 있고 다른 XML 트리의 일부이면 새 내용이 복제되고 새로 복제된 내용이 XML 트리에 추가됩니다.  
+ 위에서 설명했듯이 <xref:System.Xml.Linq.XNode>(<xref:System.Xml.Linq.XElement> 포함) 또는 <xref:System.Xml.Linq.XAttribute> 개체를 추가할 때 새 내용에 부모가 없으면 개체가 XML 트리에 추가되기만 합니다. 새 내용에 이미 부모가 있고 다른 XML 트리의 일부이면 새 내용이 복제되고 새로 복제된 내용이 XML 트리에 추가됩니다.  
   
 ```csharp  
 // Create a tree with a child element.  
@@ -237,3 +238,4 @@ Child2 was attached
   
 ## <a name="see-also"></a>참고 항목  
  [XML 트리 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+

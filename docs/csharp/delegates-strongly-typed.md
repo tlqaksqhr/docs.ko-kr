@@ -1,6 +1,6 @@
 ---
 title: "강력한 형식의 대리자"
-description: "강력한 형식의 대리자"
+description: "대리자가 필요한 기능을 만들 때 제네릭 대리자 형식을 사용하여 사용자 지정 형식을 선언하는 방법을 알아봅니다."
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 564a683d-352b-4e57-8bac-b466529daf6b
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ad73474ceb56f8610facd1668825bb0e71ccc7cb
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0a8185c21e129c91b2c3ecb1f74f8ce2f75c5db9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 

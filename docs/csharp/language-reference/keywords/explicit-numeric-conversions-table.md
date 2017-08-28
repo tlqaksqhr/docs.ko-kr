@@ -1,70 +1,90 @@
 ---
-title: "명시적 숫자 변환 표(C# 참조) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "변환[C#], 명시적 숫자"
-  - "명시적 숫자 변환[C#]"
-  - "숫자 변환[C#], explicit"
-  - "숫자 데이터 형식[C#]"
-  - "형식 변환[C#], 명시적 숫자"
-  - "형식[C#], 명시적 숫자 변환"
+title: "명시적 숫자 변환 표(C# 참조)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- conversions [C#], explicit numeric
+- numeric conversions [C#], explicit
+- explicit numeric conversion [C#]
+- numeric data types [C#]
+- types [C#], explicit numeric conversions
+- type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
 caps.latest.revision: 14
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 14
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0315810522be319a6bb565c99e1c8f7d1ba4701b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
+
 ---
-# 명시적 숫자 변환 표(C# 참조)
-숫자 형식 간에 암시적 변환이 없는 경우, 임의의 숫자 형식을 다른 숫자 형식으로 변환하기 위해 캐스트 식을 사용하여 명시적 숫자 변환을 수행합니다.  다음 표에서는 이러한 변환을 보여 줍니다.  
+# <a name="explicit-numeric-conversions-table-c-reference"></a>명시적 숫자 변환 표(C# 참조)
+명시적 숫자 변환은 캐스트 식을 사용하여 숫자 형식을 암시적 변환이 없는 다른 숫자 형식으로 변환하는 데 사용됩니다. 다음 표에는 이러한 변환이 나와 있습니다.  
   
- 변환에 대한 자세한 내용은 [캐스팅 및 형식 변환\(C\#\)](../../../csharp/programming-guide/types/casting-and-type-conversions.md)를 참조하십시오.  
+ 변환에 대한 자세한 내용은 [캐스팅 및 형식 변환](../../../csharp/programming-guide/types/casting-and-type-conversions.md)을 참조하세요.  
   
-|From|To|  
+|시작|대상|  
 |----------|--------|  
 |[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|`byte`, `ushort`, `uint`, `ulong` 또는 `char`|  
 |[byte](../../../csharp/language-reference/keywords/byte.md)|`Sbyte` 또는 `char`|  
 |[short](../../../csharp/language-reference/keywords/short.md)|`sbyte`, `byte`, `ushort`, `uint`, `ulong` 또는 `char`|  
-|[ushort](../../../csharp/language-reference/keywords/ushort.md)|`sbyte`,  `byte`,  `short` 또는  `char`|  
-|[int](../../../csharp/language-reference/keywords/int.md)|`sbyte`, `byte`, `short`, `ushort`, `uint`, `ulong` ``  또는 `char`|  
+|[ushort](../../../csharp/language-reference/keywords/ushort.md)|`sbyte`, `byte`, `short` 또는 `char`|  
+|[int](../../../csharp/language-reference/keywords/int.md)|`sbyte`, `byte`, `short`, `ushort`, `uint`, `ulong` 또는 `char`|  
 |[uint](../../../csharp/language-reference/keywords/uint.md)|`sbyte`, `byte`, `short`, `ushort`, `int` 또는 `char`|  
 |[long](../../../csharp/language-reference/keywords/long.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `ulong` 또는 `char`|  
 |[ulong](../../../csharp/language-reference/keywords/ulong.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long` 또는 `char`|  
-|[char](../../../csharp/language-reference/keywords/char.md)|`sbyte`, `byte` 또는  `short`|  
-|[float](../../../csharp/language-reference/keywords/float.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char` ``  또는 `decimal`|  
-|[double](../../../csharp/language-reference/keywords/double.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`  ``  또는 `decimal`|  
+|[char](../../../csharp/language-reference/keywords/char.md)|`sbyte`, `byte` 또는 `short`|  
+|[float](../../../csharp/language-reference/keywords/float.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char` 또는 `decimal`|  
+|[double](../../../csharp/language-reference/keywords/double.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float` 또는 `decimal`|  
 |[decimal](../../../csharp/language-reference/keywords/decimal.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float` 또는 `double`|  
   
-## 설명  
+## <a name="remarks"></a>설명  
   
--   명시적 숫자 변환으로 정밀도가 손실되거나 예외가 throw될 수 있습니다.  
+-   명시적 숫자 변환으로 인하여 자릿수 손실 또는 예외 throw가 발생할 수 있습니다.  
   
--   `decimal` 값을 정수 계열 형식으로 변환할 경우 이 값은 0에 가장 가까운 정수 계열 값으로 반올림됩니다.  결과로 나타난 정수 계열 값이 대상 형식의 범위를 초과하는 경우 <xref:System.OverflowException>이 throw됩니다.  
+-   `decimal` 값을 정수 형식으로 변환하면, 이 값은 0을 향한 방향으로 가장 가까운 정수값으로 반올림됩니다. 결과 정수 값이 대상 형식 범위에서 벗어났을 경우 <xref:System.OverflowException>이 throw됩니다.  
   
--   `double` 또는 `float` 값을 정수 계열 형식으로 변환하면 값이 잘립니다.  결과 정수 계열 값이 대상 값의 범위를 벗어나는 경우 오버플로 검사 컨텍스트에 따라 결과가 다릅니다.  검사된 컨텍스트에서는 `OverflowException`이 throw되지만 검사되지 않은 컨텍스트에서는 결과가 대상 형식의 지정되지 않은 값입니다.  
+-   `double` 또는 `float` 값을 정수 형식으로 변환할 경우 결과 값이 잘립니다. 결과 정수 값이 대상 형식 범위에서 벗어났을 경우 결과 값은 오버플로 검사 컨텍스트에 따라 결정됩니다. Checked 컨텍스트에서는 `OverflowException`이 throw됩니다. 반면 Unchecked 컨텍스트에서 결과는 지정되지 않은 대상 형식 값이 됩니다.  
   
--   `double`을 `float`로 변환하는 경우 `double` 값은 가장 근사치의 `float` 값으로 반올림됩니다.  `double` 값이 너무 작거나 커서 대상 형식에 맞지 않는 경우 결과는 0이 되거나 무한대가 됩니다.  
+-   `double`을 `float`로 변환할 경우 `double` 값을 가장 가까운 `float` 값으로 반올림합니다. `double` 값이 너무 크거나 작아서 대상 형식에 맞출 수 없을 경우 결과 값은 0 또는 무한대가 됩니다.  
   
--   `float` 또는 `double`을 `decimal`로 변환하는 경우 소스 값은 `decimal` 형식으로 변환되며 필요한 경우 28번째 소수 자리수 아래는 가장 가까운 수로 반올림됩니다.  원본 값의 값에 따라 다음과 같은 결과가 발생할 수 있습니다.  
+-   `float` 또는 `double`을 `decimal`로 변환할 경우 소스 값을 `decimal` 표현으로 변환한 다음 필요한 경우 가장 가까운 소수점 이하 28번째 자리로 반올림합니다. 소스 값에 따라 다음 결과 중 하나가 발생할 수 있습니다.  
   
-    -   원본 값이 너무 작아 `decimal`로 나타낼 수 없는 경우 결과는 0이 됩니다.  
+    -   소스 값이 너무 작아서 `decimal`로 나타낼 수 없을 경우 결과 값은 0이 됩니다.  
   
-    -   원본 값이 NaN\(숫자 아님\) 또는 무한대이거나 너무 커서 `decimal`로 나타낼 수 없는 경우 `OverflowException`이 throw됩니다.  
+    -   소스 값이 NaN(숫자가 아님), 무한대 또는 너무 커서 `decimal`로 나타낼 수 없을 경우 `OverflowException`을 throw합니다.  
   
--   `decimal`을 `float` 또는 `double`로 변환하는 경우 `decimal` 값은 가장 가까운 `double` 또는 `float` 값으로 반올림됩니다.  
+-   `decimal`을 `float` 또는 `double`로 변환할 경우 `decimal` 값을 가장 가까운 `double` 또는 `float` 값으로 반올림합니다.  
   
- 명시적 변환에 대한 자세한 내용은 C\# 언어 사양의 명시적 변환을 참조하십시오.  사양에 액세스하는 방법에 대한 자세한 내용은 [C\# 언어 사양](../../../csharp/language-reference/language-specification.md)을 참조하십시오.  
+ 명시적 변환에 대한 자세한 내용은 C# 언어 사양의 Explicit(명시적)을 참조하세요. 사양에 액세스하는 방법에 대한 자세한 내용은 [C# 언어 사양](../../../csharp/language-reference/language-specification/index.md)을 참조하세요.  
   
-## 참고 항목  
- [C\# 참조](../../../csharp/language-reference/index.md)   
- [C\# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [캐스팅 및 형식 변환\(C\#\)](../../../csharp/programming-guide/types/casting-and-type-conversions.md)   
- [\(\) 연산자](../../../csharp/language-reference/operators/invocation-operator.md)   
- [정수 계열 형식 표](../../../csharp/language-reference/keywords/integral-types-table.md)   
+## <a name="see-also"></a>참고 항목  
+ [C# 참조](../../../csharp/language-reference/index.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
+ [캐스팅 및 형식 변환](../../../csharp/programming-guide/types/casting-and-type-conversions.md)   
+ [() 연산자](../../../csharp/language-reference/operators/invocation-operator.md)   
+ [정수 형식 표](../../../csharp/language-reference/keywords/integral-types-table.md)   
  [기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
+

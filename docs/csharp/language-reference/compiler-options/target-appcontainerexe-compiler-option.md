@@ -1,5 +1,5 @@
 ---
-title: "-target:appcontainerexe(C# 컴파일러 옵션) | Microsoft 문서"
+title: "-target:appcontainerexe(C# 컴파일러 옵션)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -26,18 +26,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 168771506692308bc9b031df5c059e58e8d190b1
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 77016d094ec7e82729a46208c17e2a77fe733103
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="targetappcontainerexe-c-compiler-options"></a>/target:appcontainerexe(C# 컴파일러 옵션)
-**/target:appcontainerexe** 컴파일러 옵션을 사용하는 경우 컴파일러에서 앱 컨테이너에서 실행해야 하는 Windows 실행 파일(.exe)을 만듭니다. 이 옵션은 [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)와 같지만 [!INCLUDE[win8_appname_long](../../../csharp/includes/win8_appname_long_md.md)] 앱용으로 설계되었습니다.  
+**/target:appcontainerexe** 컴파일러 옵션을 사용하는 경우 컴파일러에서 앱 컨테이너에서 실행해야 하는 Windows 실행 파일(.exe)을 만듭니다. 이 옵션은 [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)와 같지만 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 앱용으로 설계되었습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 /target:appcontainerexe  
 ```  
   
@@ -54,14 +55,14 @@ ms.lasthandoff: 03/13/2017
   
 2.  **응용 프로그램** 탭의 **출력 형식** 목록에서 **Windows 스토어 앱**을 선택합니다.  
   
-     이 옵션은 [!INCLUDE[win8_appname_long](../../../csharp/includes/win8_appname_long_md.md)] 응용 프로그램 템플릿에서만 사용할 수 있습니다.  
+     이 옵션은 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 응용 프로그램 템플릿에서만 사용할 수 있습니다.  
   
- 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>를 참조하세요.  
+ 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>을 참조하십시오.  
   
 ## <a name="example"></a>예제  
  다음 명령은 `filename.cs`를 응용 프로그램 컨테이너에서만 실행할 수 있는 Windows 실행 파일로 컴파일합니다.  
   
-```  
+```console  
 csc /target:appcontainerexe filename.cs  
 ```  
   
@@ -69,3 +70,4 @@ csc /target:appcontainerexe filename.cs
  [/target(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)   
  [/target:winexe(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)   
  [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)
+

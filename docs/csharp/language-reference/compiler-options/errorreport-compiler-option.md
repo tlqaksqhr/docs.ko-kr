@@ -1,5 +1,5 @@
 ---
-title: "-errorreport(C# 컴파일러 옵션) | Microsoft 문서"
+title: "-errorreport(C# 컴파일러 옵션)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 34e7e3b8c6a9f645ec1b359095c2d289afd1370a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d32ec08da36509527b153166ae15019f129aad71
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="errorreport-c-compiler-options"></a>/errorreport(C# 컴파일러 옵션)
@@ -76,7 +76,7 @@ ms.lasthandoff: 05/22/2017
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
-1.  프로젝트 **속성** 페이지를 엽니다. 자세한 내용은 [프로젝트 디자이너, 빌드 페이지(C#)](https://docs.microsoft.com/visualstudio/ide/reference/build-page-project-designer-csharp)를 참조하세요.  
+1.  프로젝트 **속성** 페이지를 엽니다. 자세한 내용은 [프로젝트 디자이너, 빌드 페이지(C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)를 참조하세요.  
   
 2.  **빌드** 속성 페이지를 클릭합니다.  
   
@@ -88,3 +88,4 @@ ms.lasthandoff: 05/22/2017
   
 ## <a name="see-also"></a>참고 항목  
  [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)
+

@@ -1,6 +1,6 @@
 ---
 title: "비동기 프로그래밍"
-description: "비동기 프로그래밍"
+description: ".NET Core에서 제공하는 C# 언어 수준 비동기 프로그래밍 모델에 대해 알아봅니다."
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.translationtype: Human Translation
-ms.sourcegitcommit: be7974018ce3195dc7344192d647fe64fb2ebcc4
-ms.openlocfilehash: 2983dccc63c38884a24f4183d41b406797d5d10f
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2ddaa82e6f8492142523e9d240b0d337cfccffd8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/14/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -32,7 +32,7 @@ I/O 바인딩된 코드에서는 `async` 메서드의 내부에 `Task` 또는 `T
 
 CPU 바인딩된 코드에서는 `Task.Run` 메서드와 함께 백그라운드 스레드에서 시작되는 작업을 `await`합니다.
 
-`await` 키워드는 `await`를 수행한 메서드의 호출자로 제어 원한을 양도하므로 마법이 일어나는 곳입니다.  결국 이 키워드 덕분에 UI의 반응이 빠르거나 서비스가 탄력적일 수 있습니다.
+`await` 키워드가 마법이 일어나는 곳입니다. `await`를 수행한 메서드의 호출자에게 제어를 넘기고, 궁극적으로 UI가 응답하거나 서비스가 탄력적일 수 있도록 합니다.
 
 위에 연결된 TAP에 간단히 설명된 `async` 및 `await` 이외의 비동기 코드에 접근하는 다른 방법이 있지만, 이 문서에서는 이 지점부터 앞으로 언어 수준 구문에 초점을 맞춥니다.
 
@@ -74,7 +74,7 @@ private DamageResult CalculateDamageDone()
 
 calculateButton.Clicked += async (o, e) =>
 {
-    // This line will yield control to the UI CalculateDamageDone()
+    // This line will yield control to the UI while CalculateDamageDone()
     // performs its work.  The UI thread is free to perform other work.
     var damageResult = await Task.Run(() => CalculateDamageDone());
     DisplayDamage(damageResult);
@@ -105,7 +105,7 @@ C#에서는 컴파일러가 해당 코드를, `await`에 도달할 때 실행을
 
 다음은 코드를 작성하기 전에 질문해야 하는 두 가지 질문입니다.
 
-1. 코드가 데이터베이스의 데이터와 같은 무엇인가를 "기다리게" 되나요?
+1. 코드가 데이터베이스의 데이터와 같은 무엇인가를 “기다리게” 되나요?
 
     대답이 "예"이면 **I/O 바인딩된** 작업입니다.
 
@@ -180,7 +180,6 @@ private async void SeeTheDotNets_Click(object sender, RoutedEventArgs e)
 이 예제에서는 `userId` 집합에 대한 `User` 데이터를 확인하는 방법을 보여 줍니다.
 
 ```csharp
-
 public async Task<User> GetUser(int userId)
 {
     // Code omitted:
@@ -205,7 +204,6 @@ public static Task<IEnumerable<User>> GetUsers(IEnumerable<int> userIds)
 다음은 LINQ를 사용하여 이 코드를 더 간결하게 작성하는 또 다른 방법입니다.
 
 ```csharp
-
 public async Task<User> GetUser(int userId)
 {
     // Code omitted:

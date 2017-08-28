@@ -1,6 +1,6 @@
 ---
 title: "식 트리 작성"
-description: "식 트리 작성"
+description: "식 트리를 빌드하기 위한 기술을 알아봅니다."
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 890c058bd09893c2adb185e1d8107246eef2e20a
-ms.openlocfilehash: 5cce6b538e27f654c1f4fec732a9c69372f8c9ad
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c0d7bcf6e07f4a49e15e6f6f4e028eebfe82d8bf
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -70,7 +70,7 @@ var lambda = Expression.Lambda(
 
 ## <a name="building-a-tree"></a>트리 작성
 
-메모리에서 식 트리를 작성할 때의 기본 사항입니다. 좀 더 복잡한 트리는 일반적으로 노드 유형과 트리의 노드가 더 많음을 의미합니다. 예제를 하나 더 실행하고 식 트리를 만들 때 일반적으로 작성하는 인수 노드와 메서드 호출 노드라는 노드 유형을 두 개 더 살펴보겠습니다.
+메모리에서 식 트리를 작성할 때의 기본 사항입니다. 좀 더 복잡한 트리는 일반적으로 노드 형식과 트리의 노드가 더 많음을 의미합니다. 예제를 하나 더 실행하고 식 트리를 만들 때 일반적으로 작성하는 두 가지 노드 형식인 인수 노드와 메서드 호출 노드 살펴보겠습니다.
 
 식 트리를 작성하여 다음 식을 만들어 보겠습니다.
 
@@ -94,7 +94,7 @@ var ySquared = Expression.Multiply(yParameter, yParameter);
 var sum = Expression.Add(xSquared, ySquared);
 ```
 
-다음으로 `Math.Sqrt`를 호출하기 위한 메서드 호출 식을 만들어야 합니다.
+다음으로 `Math.Sqrt`을(를) 호출하기 위한 메서드 호출 식을 만들어야 합니다.
 
 ```csharp
 var sqrtMethod = typeof(Math).GetMethod("Sqrt", new[] { typeof(double) });

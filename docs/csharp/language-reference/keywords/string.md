@@ -1,5 +1,5 @@
 ---
-title: "string(C# 참조) | Microsoft 문서"
+title: "string(C# 참조)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -34,11 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: 737a0902a0cb010a74b59560abe43f5cfb6550db
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 56847aad4cb8b0427594a299df2306d21675506b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="string-c-reference"></a>string(C# 참조)
@@ -93,7 +93,7 @@ Console.WriteLine(a);
 ```  
   
 > [!NOTE]
->  이스케이프 코드 `\`u`dddd`(여기서 `dddd`는 4자리 숫자)는 유니코드 문자 U+`dddd`를 나타냅니다. 8자리 유니코드 이스케이프 코드 `\Udddddddd`도 인식됩니다.  
+>  이스케이프 코드 `\udddd`(여기서 `dddd`는 4자리 숫자)는 유니코드 문자 U+`dddd`를 나타냅니다. 8자리 유니코드 이스케이프 코드 `\Udddddddd`도 인식됩니다.  
   
  축자 문자열 리터럴은 @으로 시작하며 큰따옴표로 묶여 있습니다. 예:  
   

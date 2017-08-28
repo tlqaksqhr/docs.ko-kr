@@ -1,5 +1,5 @@
 ---
-title: "in(제네릭 한정자)(C# 참조) | Microsoft 문서"
+title: "in(제네릭 한정자)(C# 참조)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b6c490d14b47aaa527fe2ddb3627ea0a84bfe604
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a2c20a74b48fad8eb7021e23002d06e78a1fd624
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="in-generic-modifier-c-reference"></a>in(제네릭 한정자)(C# 참조)
@@ -65,3 +65,4 @@ ms.lasthandoff: 03/13/2017
  [out](../../../csharp/language-reference/keywords/out-generic-modifier.md)   
  [공변성(Covariance) 및 반공변성(Contravariance)](http://msdn.microsoft.com/library/a58cc086-276f-4f91-a366-85b7f95f38b8)   
  [한정자](../../../csharp/language-reference/keywords/modifiers.md)
+

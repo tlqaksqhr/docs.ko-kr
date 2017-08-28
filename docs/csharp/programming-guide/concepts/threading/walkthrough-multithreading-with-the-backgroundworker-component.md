@@ -1,5 +1,5 @@
 ---
-title: "연습: BackgroundWorker 구성 요소를 사용한 다중 스레딩(C#) | Microsoft 문서"
+title: "연습: BackgroundWorker 구성 요소를 사용한 다중 스레딩(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,22 +19,23 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1a27591c62e55295b3cf2b9716776b25d984865a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 541a1ec788c337eea9965b8a46155e5c6606ea2f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-c"></a>연습: BackgroundWorker 구성 요소를 사용한 다중 스레딩(C#)
 이 연습에서는 텍스트 파일에서 단어를 검색하는 다중 스레드 Windows Forms 응용 프로그램을 만드는 방법을 보여 줍니다. 세부 항목은 다음과 같습니다.  
   
--   <xref:System.ComponentModel.BackgroundWorker> 구성 요소로 호출할 수 있는 메서드로 클래스를 정의합니다.  
+-   <xref:System.ComponentModel.BackgroundWorker> 구성 요소에서 호출할 수 있는 메서드를 사용하여 클래스 정의  
   
--   <xref:System.ComponentModel.BackgroundWorker> 구성 요소에 의해 발생하는 이벤트를 처리합니다.  
+-   <xref:System.ComponentModel.BackgroundWorker> 구성 요소에서 발생하는 이벤트 처리  
   
--   <xref:System.ComponentModel.BackgroundWorker> 구성 요소를 시작하여 메서드를 실행합니다.  
+-   메서드를 실행할 <xref:System.ComponentModel.BackgroundWorker> 구성 요소 시작  
   
--   <xref:System.ComponentModel.BackgroundWorker> 구성 요소를 중지하는 `Cancel` 단추를 구현합니다.  
+-   <xref:System.ComponentModel.BackgroundWorker> 구성 요소를 중지하는 `Cancel` 단추 구현  
   
 ### <a name="to-create-the-user-interface"></a>사용자 인터페이스를 만들려면  
   
@@ -293,3 +294,4 @@ ms.lasthandoff: 03/13/2017
 ## <a name="see-also"></a>참고 항목  
  [스레딩(C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
  [방법: 이벤트 구독 및 구독 취소](../../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)
+
