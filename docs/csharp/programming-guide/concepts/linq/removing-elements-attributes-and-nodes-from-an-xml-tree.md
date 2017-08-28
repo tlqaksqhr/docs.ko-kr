@@ -1,10 +1,7 @@
 ---
 title: "XML 트리에서 요소, 특성 및 노드 제거(C#)"
-ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - devlang-csharp
 ms.topic: article
@@ -15,10 +12,10 @@ caps.latest.revision: 4
 author: BillWagner
 ms.author: wiwagn
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6cbf2b0e05307cd8d70603d5fa3ad1cc55123503
+ms.sourcegitcommit: 934373d61407c8cc19b7d6424898a582880f9c21
+ms.openlocfilehash: 40be8959c731746df9392e3cbf29c88fce222b0b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/10/2017
 
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>XML 트리에서 요소, 특성 및 노드 제거(C#)
@@ -32,8 +29,8 @@ XML 트리를 수정하여 요소, 특성 및 다른 형식의 노드를 제거�
   
 |메서드|설명|  
 |------------|-----------------|  
-|[XAttribute.Remove](https://msdn.microsoft.com/library/system.xml.linq.xattribute.remove\(v=vs.110\).aspx)|부모에서 <xref:System.Xml.Linq.XAttribute>를 제거합니다.|  
-|[XContainer.RemoveNodes](https://msdn.microsoft.com/library/system.xml.linq.xcontainer.removenodes\(v=vs.110\).aspx)|<xref:System.Xml.Linq.XContainer>에서 자식 노드를 제거합니다.|  
+|<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=fullName>|부모에서 <xref:System.Xml.Linq.XAttribute>를 제거합니다.|  
+|<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=fullName>|<xref:System.Xml.Linq.XContainer>에서 자식 노드를 제거합니다.|  
 |<xref:System.Xml.Linq.XElement.RemoveAll%2A?displayProperty=fullName>|<xref:System.Xml.Linq.XElement>에서 내용과 특성을 제거합니다.|  
 |<xref:System.Xml.Linq.XElement.RemoveAttributes%2A?displayProperty=fullName>|<xref:System.Xml.Linq.XElement>의 특성을 제거합니다.|  
 |<xref:System.Xml.Linq.XElement.SetAttributeValue%2A?displayProperty=fullName>|값으로 `null`을 전달하면 특성을 제거합니다.|  

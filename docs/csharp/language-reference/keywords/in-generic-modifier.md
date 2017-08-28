@@ -29,10 +29,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a2c20a74b48fad8eb7021e23002d06e78a1fd624
+ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
+ms.openlocfilehash: 663fa75a7e214ed97efb45dda2c9ac298559653d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="in-generic-modifier-c-reference"></a>in(제네릭 한정자)(C# 참조)
@@ -46,7 +46,7 @@ ms.lasthandoff: 07/28/2017
   
  반공변(contravariant) 대리자에 동일한 형식의 다른 대리자를 할당할 수 있지만 덜 파생된 제네릭 형식 매개 변수가 필요합니다.  
   
- 자세한 내용은 [공변성(Covariance) 및 반공변성(Contravariance)](http://msdn.microsoft.com/library/a58cc086-276f-4f91-a366-85b7f95f38b8)을 참조하세요.  
+ 자세한 내용은 [공변성(Covariance) 및 반공변성(Contravariance)](../../programming-guide/concepts/covariance-contravariance/index.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 반공변(contravariant) 제네릭 인터페이스를 선언, 확장 및 구현하는 방법을 보여 줍니다. 또한 이 인터페이스를 구현하는 클래스에 대해 암시적 변환을 사용하는 방법을 보여 줍니다.  
@@ -63,6 +63,6 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>참고 항목  
  [out](../../../csharp/language-reference/keywords/out-generic-modifier.md)   
- [공변성(Covariance) 및 반공변성(Contravariance)](http://msdn.microsoft.com/library/a58cc086-276f-4f91-a366-85b7f95f38b8)   
+ [공변성(Covariance) 및 반공변성(Contravariance)](../../programming-guide/concepts/covariance-contravariance/index.md)   
  [한정자](../../../csharp/language-reference/keywords/modifiers.md)
 
