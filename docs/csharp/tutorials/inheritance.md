@@ -5,17 +5,17 @@ keywords: "상속(C#), 기본 클래스, 파생 클래스, 추상 기본 클래�
 author: rpetrusha
 manager: wpickett
 ms.author: ronpet
-ms.date: 03/06/2017
+ms.date: 08/16/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
 ms.translationtype: HT
-ms.sourcegitcommit: 7912d46736fd9f9d9d2ee41c416d3dfc157cfe12
-ms.openlocfilehash: 44e77b099b15b5ddccfd6b3826d0225de1b0a74f
+ms.sourcegitcommit: 3e1ec8b24c4debf24a0d52ad2a23897975c41550
+ms.openlocfilehash: 78aff41ae597a3dbe9a57e2342b52b399ea96d66
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 및 .NET의 상속
@@ -216,13 +216,13 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 출판물과 관련된 두 가지 속성
 
-  `Title`은 `pubTitle`이라는 private 필드에 값을 저장하는 `Publication` 생성자를 호출하여 해당 값이 제공되는 읽기 전용 <xref:System.String> 속성입니다.
+  `Title`은 `Publication` 생성자를 호출하여 해당 값이 제공되는 읽기 전용 <xref:System.String> 속성입니다.
 
   `Pages`는 출판물에 포함된 총 페이지 수를 나타내는 읽기/쓰기 <xref:System.Int32> 속성입니다. 값은 `totalPages`라는 private 필드에 저장됩니다. 값은 양수여야 하며 양수가 아니면 <xref:System.ArgumentOutOfRangeException> 이 throw됩니다.
 
 - 출판사 관련 멤버
 
-  두 개의 읽기 전용 속성인 `Publisher` 및 `Type`은 private `pubName` 및 `pubType` 필드의 값을 반환합니다. 해당 값은 원래 `Publication` 클래스 생성자를 호출하여 제공됩니다.
+  두 개의 읽기 전용 속성 `Publisher` 및 `Type`입니다. 해당 값은 원래 `Publication` 클래스 생성자를 호출하여 제공됩니다.
 
 - 출판 관련 멤버
 
@@ -230,7 +230,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 저작권 관련 멤버
 
-  `Copyright` 메서드는 저작권 소유자의 이름과 저작권 연도를 인수로 사용한 후 private `copyrName` 및 `copyrDate` 필드에 할당합니다. 값은 `CopyrightName` 및 `CopyrightDate` 속성에서 검색할 수 있습니다.
+  `Copyright` 메서드는 저작권 소유자의 이름과 저작권 연도를 인수로 사용한 후 `CopyrightName` 및 `CopyrightDate` 속성에 할당합니다.
 
 - `ToString` 메서드 재정의
 
@@ -250,13 +250,13 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 2개의 생성자
 
-  두 `Book` 생성자는 3가지 공용 매개 변수를 공유합니다. 두 *title* 및 *publisher*는 `Publication` 생성자의 매개 변수에 해당합니다. 세 번째는 private `authorName` 필드에 저장되는 *author*입니다. 한 생성자에는 private `id` 필드에 저장되는 *isbn* 매개 변수가 포함됩니다.
+  두 `Book` 생성자는 3가지 공용 매개 변수를 공유합니다. 두 *title* 및 *publisher*는 `Publication` 생성자의 매개 변수에 해당합니다. 세 번째는 private `authorName` 필드에 저장되는 *author*입니다. 한 생성자에는 `ISBN` auto 속성에 저장되는 *isbn* 매개 변수가 포함됩니다.
 
   첫 번째 생성자는 [this](../language-reference/keywords/this.md) 키워드를 사용하여 다른 생성자를 호출합니다. 이것은 생성자를 정의하는 일반적인 패턴입니다. 가장 많은 수의 매개 변수를 사용하여 생성자를 호출하면 더 적은 수의 매개 변수를 사용하는 생성자가 기본값을 제공합니다.
 
   두 번째 생성자는 [base](../language-reference/keywords/base.md) 키워드를 사용하여 기본 클래스 생성자에 제목 및 출판사 이름을 전달합니다. 소스 코드에서 기본 클래스 생성자를 명시적으로 호출하지 않으면 C# 컴파일러는 기본 클래스의 기본 생성자 또는 매개 변수 없는 생성자에 대한 호출을 자동으로 제공합니다.
 
-- 읽기 전용 `ISBN` 속성: 고유한 10 또는 13자리 숫자인 `Book` 개체의 국제 표준 도서 번호를 반환합니다. ISBN은 `Book` 생성자 중 하나에 인수로 제공되고 private `id` 필드에 저장됩니다.
+- 읽기 전용 `ISBN` 속성: 고유한 10 또는 13자리 숫자인 `Book` 개체의 국제 표준 도서 번호를 반환합니다. ISBN은 `Book` 생성자 중 하나에 인수로 제공됩니다. ISBN은 컴파일러에서 자동 생성되는 private 지원 필드에 저장됩니다.
 
 - 읽기 전용 `Author` 속성. 저자 이름은 두 `Book` 생성자에 인수로 제공되고 private `authorName` 필드에 저장됩니다.
 
