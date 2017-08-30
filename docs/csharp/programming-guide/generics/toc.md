@@ -8,7 +8,6 @@
 ## [제네릭 메서드](generic-methods.md)
 ## [제네릭 및 배열](generics-and-arrays.md)
 ## [제네릭 대리자](generic-delegates.md)
-## [제네릭 코드의 default 키워드](default-keyword-in-generic-code.md)
 ## [C++ 템플릿과 C# 제네릭의 차이점](differences-between-cpp-templates-and-csharp-generics.md)
 ## [런타임의 제네릭](generics-in-the-run-time.md)
 ## [.NET Framework 클래스 라이브러리의 제네릭](generics-in-the-net-framework-class-library.md)

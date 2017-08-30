@@ -3,16 +3,16 @@ title: ".NET Core 버전 관리"
 description: ".NET Core 버전 관리의 작동 방식을 이해합니다."
 author: bleroy
 ms.author: mairaw
-ms.date: 08/11/2017
+ms.date: 08/25/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
 ms.translationtype: HT
-ms.sourcegitcommit: c5a80e487d4351e0eaf20e510df06999e212e096
-ms.openlocfilehash: d672e93a3e4f70439aa42aef04674500b0b0566d
+ms.sourcegitcommit: 02cfb7708959057de593506db55e4f31f5ab4fd0
+ms.openlocfilehash: 48343ad8d42ad576b1975e81cd764b4ec6f5bc76
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="net-core-versioning"></a>.NET Core 버전 관리
@@ -103,7 +103,7 @@ Microsoft가 아닌 엔터티가 .NET Core를 배포할 수 있습니다. 특히
 
 ##### <a name="preview-versions"></a>미리 보기 버전
 
-패키지 유지 관리자는 런타임 및 SDK의 미리 보기 버전을 포함하도록 결정할 수 있습니다. 버전이 지정되지 않은 `dotnet-sdk` 패키지에 이러한 미리 보기 버전을 포함해서는 안 되지만, 이름의 주 버전 및 부 버전 섹션에 추가 미리 보기 마커를 추가하여 버전이 지정된 패키지로서 릴리스할 수 있습니다. 예를 들어 `dotnet-sdk-2.0-preview-1-final` 패키지가 있을 수 있습니다.
+패키지 유지 관리자는 런타임 및 SDK의 미리 보기 버전을 포함하도록 결정할 수 있습니다. 버전이 지정되지 않은 `dotnet-sdk` 패키지에 이러한 미리 보기 버전을 포함해서는 안 되지만, 이름의 주 버전 및 부 버전 섹션에 추가 미리 보기 마커를 추가하여 버전이 지정된 패키지로서 릴리스할 수 있습니다. 예를 들어 `dotnet-sdk-2.0-preview1-final` 패키지가 있을 수 있습니다.
 
 ### <a name="docker"></a>Docker
 
@@ -153,7 +153,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 ### <a name="preview-versions"></a>미리 보기 버전
 
-미리 보기 버전에는 `-preview-[number]-([build]|"final")`이 추가됩니다. 예를 들어, `2.0.0-preview-1-final`을 입력합니다.
+미리 보기 버전에는 `-preview[number]-([build]|"final")`이 추가됩니다. 예를 들어, `2.0.0-preview1-final`을 입력합니다.
 
 ### <a name="servicing-versions"></a>서비스 버전
 
