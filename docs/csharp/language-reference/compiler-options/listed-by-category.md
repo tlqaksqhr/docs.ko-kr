@@ -30,10 +30,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bf0b4a4130fe69a15e6db438ac1d58b676c9ee8b
+ms.sourcegitcommit: 8e8d01587ccde967b8484b3b61916f8cf437f6c0
+ms.openlocfilehash: 584d0cb249644e6b4ffe15e115c49256f5fa2716
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="c-compiler-options-listed-by-category"></a>C# 컴파일러 옵션 범주별 목록
@@ -55,6 +55,8 @@ ms.lasthandoff: 07/28/2017
 |[/pdb](../../../csharp/language-reference/compiler-options/pdb-compiler-option.md)|.pdb 파일의 이름과 위치를 지정합니다.|  
 |[/platform](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)|출력 플랫폼을 지정합니다.|  
 |[/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|컴파일러 출력 언어를 지정합니다.|  
+|[/refout](refout-compiler-option.md)|주 어셈블리 외에도 참조 어셈블리를 생성합니다.|  
+|[/refonly](refonly-compiler-option.md)|주 어셈블리를 대신 참조 어셈블리를 생성합니다.|  
 |[/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md)|다섯 가지 옵션([/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md), [/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md), [/target:library](../../../csharp/language-reference/compiler-options/target-library-compiler-option.md), [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md), [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)) 중 하나를 사용하여 출력 파일 형식을 지정합니다.|  
 |/modulename:\<string>|소스 모듈의 이름을 지정합니다.|  
   

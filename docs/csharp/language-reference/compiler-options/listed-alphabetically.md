@@ -31,10 +31,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 291c35f73b47167289a88f0b7655c26699fdc009
+ms.sourcegitcommit: 8e8d01587ccde967b8484b3b61916f8cf437f6c0
+ms.openlocfilehash: 8a32dcab0a64fdb715871806088825e227f08abb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>C# 컴파일러 옵션 사전순 목록
@@ -85,6 +85,8 @@ ms.lasthandoff: 07/28/2017
 |[/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|컴파일러 출력에 사용할 언어를 지정합니다.|  
 |[/recurse](../../../csharp/language-reference/compiler-options/recurse-compiler-option.md)|와일드카드 지정에 따라 현재 디렉터리와 하위 디렉터리에 있는 모든 파일을 포함합니다.|  
 |[/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)|지정한 어셈블리 파일에서 메타데이터를 참조합니다.|  
+|[/refout](refout-compiler-option.md)|주 어셈블리 외에도 참조 어셈블리를 생성합니다.|  
+|[/refonly](refonly-compiler-option.md)|주 어셈블리를 대신 참조 어셈블리를 생성합니다.|  
 |[/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md)|지정한 리소스를 포함합니다.|  
 |/ruleset:\<file>|특정 진단을 사용하지 않는 규칙 집합 파일을 지정합니다.|  
 |[/subsystemversion](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)|실행 파일이 사용할 수 있는 하위 시스템의 최소 버전을 지정합니다.|  

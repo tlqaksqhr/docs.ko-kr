@@ -10,10 +10,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 18cf7a4b-29f0-4b14-85b8-80af754aabd8
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 753c620e1352dfc5fc57c380c66479c8e2d9b0ee
+ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
+ms.openlocfilehash: 3f2ee35db5b77efcce629b6315060a723429b19c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="ref-returns-and-ref-locals"></a>참조 반환 및 참조 로컬
@@ -44,7 +44,7 @@ C# 7부터 C#에서 참조 반환 값(ref return)을 지원합니다. 참조 반
  
 - 반환 값은 상수, 열거형 멤버, `class` 또는 `struct`의 속성일 수 없습니다. 이러한 값을 반환하려고 하면 컴파일러 오류 CS8156, “식이 참조로 반환될 수 없으므로 이 컨텍스트에서 해당 식을 사용할 수 없습니다.”가 생성됩니다.
 
-또한 비동기 메서드는 실행을 마치기 전에 반환할 수 있고 해당 반환 값을 알 수 없으므로 `async` 메서드에서는 참조 반환 값이 허용되지 않습니다.
+또한 비동기 메서드는 실행을 마치기 전에 반환할 수 있으므로, 해당 반환 값을 여전히 알 수 없는 동안 비동기 메서드에서는 참조 반환 값이 허용되지 않습니다.
  
 ## <a name="defining-a-ref-return-value"></a>참조 반환 값 정의
 
