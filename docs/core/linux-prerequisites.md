@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
 ms.translationtype: HT
-ms.sourcegitcommit: dd1557d3a43a13c8103c82dfa467aa889fcf3bbb
-ms.openlocfilehash: 2ee303424721b7e1ecb8473c5f957ca929a8742f
+ms.sourcegitcommit: c30888895275ce18628ea341fee2d5a77080b8f6
+ms.openlocfilehash: ff2b85372208e76c6c3becb551c41cdfb275d272
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 
@@ -82,7 +82,7 @@ CentOS 배포에는 다음과 같은 라이브러리 설치가 필요합니다.
 .NET Core 기본 설치 관리자는 지원되는 Linux 배포/버전에서 사용할 수 있습니다. 기본 설치 관리자를 사용하려면 서버에 대한 관리자(sudo) 권한이 필요합니다. 기본 설치 관리자를 사용하는 장점은 모든 .NET Core 기본 종속성을 설치한다는 것입니다. 기본 설치 관리자는 .NET Core SDK 시스템 차원을 설치합니다.
 
 Linux에는 두 가지 패키지 선택 항목이 있습니다. 
-* 피드 기반 패키지 관리자 사용(예: Ubuntu의 경우 apt-get, CentOS의 경우 yum). 
+* 피드 기반 패키지 관리자 사용(예: Ubuntu의 경우 apt-get, CentOS/RHEL의 경우 yum).
 * 패키지 자체 사용(DEB 또는 RPM). 
 
 ### <a name="scripting-installs-with-the-net-core-installer-script"></a>.NET Core 설치 관리자 스크립트를 사용하여 설치 스크립팅 
@@ -94,15 +94,11 @@ Linux에는 두 가지 패키지 선택 항목이 있습니다.
 > [!IMPORTANT]
 > 스크립트를 실행하기 전에 필요한 모든 [종속성](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)을 설치하세요.
 
-## <a name="install-net-core-dependencies-for-red-hat-enterprise-linux-rhel-7-server"></a>RHEL(Red Hat Enterprise Linux) 7 Server에 대한 .NET Core 종속성 설치
+## <a name="install-net-core-for-red-hat-enterprise-linux-rhel-7"></a>RHEL(Red Hat Enterprise Linux) 7에 대한 .NET Core 설치
 
-> [!Warning]
-> 시작하기 전에 시스템에서 .NET Core의 이전 버전을 제거하세요.
+RHEL 7에 .NET Core를 설치하려면 다음과 같이 합니다.
 
-### <a name="verify-and-enable-the-net-channel-for-rhel-7-server"></a>RHEL 7 Server에 대한 .NET 채널 확인 및 사용
-RHEL Server에 .NET Core 종속성을 설치하려면:
-
-1. RHEL 7 Server 구독에 따라 사용할 수 있는 Red Hat .NET 채널을 사용하도록 설정합니다. 
+1. RHEL 7 구독에 따라 사용할 수 있는 Red Hat .NET 채널을 사용하도록 설정합니다.
     * Red Hat Enterprise 7 Server의 경우 다음을 사용합니다.
          ```bash
         subscription-manager repos --enable=rhel-7-server-dotnet-rpms
@@ -120,11 +116,42 @@ RHEL Server에 .NET Core 종속성을 설치하려면:
     ```bash
     yum install scl-utils
     ```
-3. .NET Core 1.1(및 모든 종속성)을 설치합니다.
-    ```bash
-    yum install rh-dotnetcore11
-    scl enable rh-dotnetcore11 bash
-    ```
+3. .NET Core 설치
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+.NET Core 2.0 SDK 및 런타임 설치:
+```bash
+yum install rh-dotnet20
+```
+사용자 환경에 대해 .NET Core 2.0 SDK/런타임을 사용하도록 설정:
+```bash
+scl enable rh-dotnet20 bash
+```
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+**.NET Core 1.1**
+
+.NET Core 1.1 SDK 및 런타임 설치:
+```bash
+yum install rh-dotnetcore11
+```
+사용자 환경에 대해 .NET Core 1.1 SDK 및 런타임을 사용하도록 설정:
+```bash
+scl enable rh-dotnetcore11 bash
+```
+
+**.NET Core 1.0**
+
+.NET Core 1.0 SDK 및 런타임 설치:
+```bash
+yum install rh-dotnetcore10
+```
+사용자 환경에 대해 .NET Core 1.0 SDK 및 런타임을 사용하도록 설정:
+```bash
+scl enable rh-dotnetcore10 bash
+```
+---
 4. `dotnet --help` 명령을 실행하여 설치 성공을 증명합니다.
 
      ```bash
