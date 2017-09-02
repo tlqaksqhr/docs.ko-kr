@@ -29,10 +29,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 982c2b03a81e094d791fef1c3178bc637ef4ad8b
-ms.openlocfilehash: 2ba47e8462c3a8dc6baa5ef2dc1f11937ebf6d29
+ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
+ms.openlocfilehash: 9e4f54f3a5b461be267301a2b8bc8de52ef9f776
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/01/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="overloadable-operators-c-programming-guide"></a>오버로드할 수 있는 연산자(C# 프로그래밍 가이드)
@@ -48,7 +48,7 @@ C#에서는 [operator](../../../csharp/language-reference/keywords/operator.md) 
 |[&#91;&#93;](../../../csharp/language-reference/operators/index-operator.md)|배열 인덱싱 연산자는 오버로드할 수 없지만 인덱서를 정의할 수 있습니다.|
 |[(T)x](../../../csharp/language-reference/operators/invocation-operator.md)|캐스트 연산자는 오버로드할 수 없지만 새 변환 연산자를 정의할 수 있습니다([explicit](../../../csharp/language-reference/keywords/explicit.md) 및 [implicit](../../../csharp/language-reference/keywords/implicit.md) 참조).|
 |[+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [\*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../csharp/language-reference/operators/division-assignment-operator.md), [%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [^=](../../../csharp/language-reference/operators/xor-assignment-operator.md), [\<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|할당 연산자는 오버로드할 수 없지만 예를 들어 `+=`는 오버로드할 수 있는 `+`를 사용하여 계산됩니다.|
-|[=](../../../csharp/language-reference/operators/assignment-operator.md), [.](../../../csharp/language-reference/operators/member-access-operator.md), [?:](../../../csharp/language-reference/operators/conditional-operator.md), [??](../../../csharp/language-reference/operators/null-conditional-operator.md), [->](../../../csharp/language-reference/operators/dereference-operator.md), [=>](../../../csharp/language-reference/operators/lambda-operator.md), [f(x)](../../../csharp/language-reference/operators/invocation-operator.md), [as](../../../csharp/language-reference/keywords/as.md), [checked](../../../csharp/language-reference/keywords/checked.md), [unchecked](../../../csharp/language-reference/keywords/unchecked.md), [default](../../../csharp/programming-guide/generics/default-keyword-in-generic-code.md), [delegate](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md), [is](../../../csharp/language-reference/keywords/is.md), [new](../../../csharp/language-reference/keywords/new.md), [sizeof](../../../csharp/language-reference/keywords/sizeof.md), [typeof](../../../csharp/language-reference/keywords/typeof.md)|이러한 연산자는 오버로드할 수 없습니다.|
+|[=](../../../csharp/language-reference/operators/assignment-operator.md), [.](../../../csharp/language-reference/operators/member-access-operator.md), [?:](../../../csharp/language-reference/operators/conditional-operator.md), [??](../../../csharp/language-reference/operators/null-conditional-operator.md), [->](../../../csharp/language-reference/operators/dereference-operator.md), [=>](../../../csharp/language-reference/operators/lambda-operator.md), [f(x)](../../../csharp/language-reference/operators/invocation-operator.md), [as](../../../csharp/language-reference/keywords/as.md), [checked](../../../csharp/language-reference/keywords/checked.md), [unchecked](../../../csharp/language-reference/keywords/unchecked.md), [default](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md), [delegate](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md), [is](../../../csharp/language-reference/keywords/is.md), [new](../../../csharp/language-reference/keywords/new.md), [sizeof](../../../csharp/language-reference/keywords/sizeof.md), [typeof](../../../csharp/language-reference/keywords/typeof.md)|이러한 연산자는 오버로드할 수 없습니다.|
 
 > [!NOTE]
 > 비교 연산자는 오버로드될 경우 쌍으로 오버로드되어야 합니다. 즉, `==`가 오버로드되면 `!=`도 오버로드되어야 합니다. 그 반대의 경우도 마찬가지여서, `!=`를 오버로드하면 `==`도 오버로드해야 합니다. 비교 연산자 `<`와 `>`, `<=`와 `>=`도 마찬가지입니다.
