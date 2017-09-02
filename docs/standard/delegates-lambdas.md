@@ -1,6 +1,6 @@
 ---
 title: "대리자 및 람다 식"
-description: "대리자 및 람다 식"
+description: "대리자가 특정 메서드 시그니처를 지정하며, 직접 호출하거나 다른 메서드에 전달한 다음 호출할 수 있는 형식을 정의하는 방법을 알아봅니다."
 keywords: .NET, .NET Core
 author: richlander
 ms.author: wiwagn
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 1dbe9c72999c14e45910310eb0bbc91ebe9f1e4a
-ms.lasthandoff: 03/02/2017
+ms.translationtype: HT
+ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
+ms.openlocfilehash: d04a158db4f97a0e37f8a92149a3f237ee2e5434
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
 
 ---
 
@@ -39,7 +40,6 @@ public class Program
       Console.WriteLine(rev("a string"));
   }
 }
-
 ```
 
 *   줄 4에서는 특정 시그니처의 대리자 형식(이 경우 문자열 매개 변수를 사용하고 문자열 매개 변수를 반환하는 메서드)을 만듭니다.
@@ -71,10 +71,9 @@ public class Program
       Console.WriteLine(rev("a string"));
   }
 }
-
 ```
 
-이 간단한 예제에서는 Main() 메서드 외부에서 메서드를 정의하는 것이 불필요해 보입니다. .NET Framework 2.0에서 **익명 대리자** 개념이 도입된 것은 이 때문입니다. 익명 대리자 지원을 사용하면 추가 형식이나 메서드를 지정할 필요 없이 "인라인" 대리자를 만들 수 있습니다. 필요한 위치에 대리자 정의를 인라인으로 추가하기만 하면 됩니다.
+이 간단한 예제에서는 Main() 메서드 외부에서 메서드를 정의하는 것이 불필요해 보입니다. .NET Framework 2.0에서 **익명 대리자** 개념이 도입된 것은 이 때문입니다. 익명 대리자 지원을 사용하면 추가 형식이나 메서드를 지정할 필요 없이 “인라인” 대리자를 만들 수 있습니다. 필요한 위치에 대리자 정의를 인라인으로 추가하기만 하면 됩니다.
 
 예를 들어 이번에는 익명 대리자를 사용하여 짝수 목록만 필터링한 다음 콘솔에 출력하겠습니다.
 
@@ -104,14 +103,13 @@ public class Program
     }
   }
 }
-
 ```
 
 강조 표시된 줄에 유의하세요. 보시는 것처럼 대리자 본문은 다른 모든 대리자와 마찬가지로 단순히 식 집합일 뿐입니다. 그러나 별도의 정의가 아니라 `List<T>` 형식의 `FindAll()` 메서드 호출에서 _임시로_ 도입했습니다.
 
 그러나 이 방법의 경우에도 제거할 수 있는 많은 코드가 있습니다. 이때 **람다 식**이 유용합니다.
 
-람다 식 또는 줄여서 "람다"는 처음에 C# 3.0에서 LINQ(Language-Integrated Query)의 핵심 구성 요소 중 하나로 도입되었습니다. 람다 식은 단지 대리자 사용에 더 편리한 구문일 뿐입니다. 시그니처와 메서드 본문을 선언하지만 대리자에 할당되지 않은 경우 고유한 공식 ID가 없습니다. 대리자와 달리 이벤트 등록의 왼쪽 항으로 또는 다양한 Linq 절과 메서드에서 직접 할당할 수 있습니다.
+람다 식 또는 줄여서 “람다”는 처음에 C# 3.0에서 LINQ(Language-Integrated Query)의 핵심 구성 요소 중 하나로 도입되었습니다. 람다 식은 단지 대리자 사용에 더 편리한 구문일 뿐입니다. 시그니처와 메서드 본문을 선언하지만 대리자에 할당되지 않은 경우 고유한 공식 ID가 없습니다. 대리자와 달리 이벤트 등록의 왼쪽 항으로 또는 다양한 Linq 절과 메서드에서 직접 할당할 수 있습니다.
 
 람다 식은 대리자를 지정하는 또 다른 방법이므로 익명 대리자 대신 람다 식을 사용하도록 위의 샘플을 다시 작성할 수 있어야 합니다.
 
@@ -136,7 +134,6 @@ public class Program
     }
   }
 }
-
 ```
 
 강조 표시된 줄을 살펴보면 람다 식이 어떻게 표시되는지 확인할 수 있습니다. 대리자 사용에 **매우** 편리한 구문일 뿐이므로 이면에서 수행되는 동작은 익명 대리자의 경우와 비슷합니다.
@@ -153,7 +150,6 @@ public MainWindow()
         this.Title = "Loaded";
     };
 }
-
 ```
 
 ## <a name="further-reading-and-resources"></a>추가 정보 및 리소스
