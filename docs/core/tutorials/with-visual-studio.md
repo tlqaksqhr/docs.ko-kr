@@ -11,10 +11,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
 ms.translationtype: HT
-ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
-ms.openlocfilehash: 9ade8dc5dad0ac542de8c2ed1249a5361bcffc97
+ms.sourcegitcommit: 9b3a2f38b981dd5e7c3535c8212125a147aab122
+ms.openlocfilehash: 37b81a6d4cf53dcf17158ccc4df6aca488f9a26b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 
@@ -88,7 +88,7 @@ ms.lasthandoff: 08/14/2017
 
 ## <a name="related-topics"></a>관련 항목
 
-콘솔 응용 프로그램 대신 .NET Core 및 Visual Studio 2017을 사용하여 클래스 라이브러리를 빌드할 수도 있습니다. 단계별 지침을 보려면 [Visual Studio 2017에서 C# 및 .NET Core로 클래스 라이브러리 빌드](../../csharp/getting-started/library-with-visual-studio.md)를 참조하세요.
+콘솔 응용 프로그램 대신 .NET Core 및 Visual Studio 2017을 사용하여 클래스 라이브러리를 빌드할 수도 있습니다. 단계별 지침을 보려면 [Visual Studio 2017에서 C# 및 .NET Core로 클래스 라이브러리 빌드](library-with-visual-studio.md)를 참조하세요.
 
 다운로드할 수 있는 코드 편집기인 [Visual Studio Code](https://code.visualstudio.com/)를 사용하여 Mac, Linux 및 Windows에서 .NET Core 콘솔 응용 프로그램을 개발할 수도 있습니다. 단계별 자습서에 대해서는 [Visual Studio Code 시작](with-visual-studio-code.md)을 참조하세요.
 

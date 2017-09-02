@@ -1,20 +1,16 @@
 ---
 title: "Visual Studio 2017에서 .NET Core로 클래스 라이브러리 사용"
 description: "Visual Studio 2017에서 클래스 라이브러리의 멤버를 호출하는 방법을 알아봅니다."
-keywords: ".NET Core, .NET Core 클래스 라이브러리, .NET Standard, .NET Standard 클래스 라이브러리 배포"
 author: BillWagner
-ms.author: wiwang
+ms.author: wiwagn
 ms.date: 08/07/2017
 ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
-ms.assetid: d7b94076-1108-4174-94e7-a18f00072bb7
+ms.prod: .net-core
 ms.translationtype: HT
-ms.sourcegitcommit: 3a25c1c3b540bac8ef963a8bbf708b0700c3e9e2
-ms.openlocfilehash: 5a99cb1816d0f9359e7c10c87531b5d93adff961
+ms.sourcegitcommit: 1b028e5880f9e57e87c16eabeb442e0a46a369da
+ms.openlocfilehash: 38e6c7d8797285abc4eb2e87602cc0bbf46ba590
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/12/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 
