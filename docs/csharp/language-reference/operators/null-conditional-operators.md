@@ -26,10 +26,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3a396280e1095497b86e4792f4debb9cf0435f50
+ms.sourcegitcommit: 6118956a5681ddbeb110f6e01f090b85cdd65089
+ms.openlocfilehash: 465a395a33c027132b7890e02d540438096e2073
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="null-conditional-operators-c-and-visual-basic"></a>Null 조건부 연산자(C# 및 Visual Basic)
@@ -47,7 +47,7 @@ Dim first as Customer = customers?(0)  ' null if customers is null
 Dim count as Integer? = customers?(0)?.Orders?.Count()  ' null if customers, the first customer, or Orders is null  
 ```  
   
- 마지막 예제에서는 null 조건 연산자가 단락임을 보여 줍니다.  조건부 멤버 액세스 및 인덱스 작업 체인의 한 작업에서 null을 반환하면 체인 실행의 나머지 부분이 중지됩니다.  식에서 우선 순위가 낮은 다른 작업은 계속됩니다.  예를 들어 다음 식에서 `E`는 항상 실행되고 `??` 및 `==` 작업이 실행됩니다.  
+ 마지막 예제에서는 null 조건 연산자가 단락임을 보여 줍니다.  조건부 멤버 액세스 및 인덱스 작업 체인의 한 작업에서 null을 반환하면 체인 실행의 나머지 부분이 중지됩니다.  식에서 우선 순위가 낮은 다른 작업은 계속됩니다.  예를 들어 다음 식에서 `E`는 두 번째 줄에서 실행되고 `??` 및 `==` 작업이 실행됩니다.  첫 번째 줄에서 `??`는 주기를 단축하고 `E`는 왼쪽이 null이 아닌 값으로 평가되면 실행되지 않습니다.
   
 ```csharp
 A?.B?.C?[0] ?? E  
