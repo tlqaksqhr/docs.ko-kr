@@ -30,16 +30,22 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: d69fc927565c3bb1c365850875c3c6a1787a1fe7
-ms.openlocfilehash: 3dfa38a495d12bc1e3f301009f4a90d42cbe4754
+ms.sourcegitcommit: 9b3a2f38b981dd5e7c3535c8212125a147aab122
+ms.openlocfilehash: fe0c7b1e523cd36bae1dd02e43c5ff568f282f2e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="get-started-with-visual-basic"></a>Visual Basic 시작
 설명서의 이 섹션에서는 Visual Basic 응용 프로그램의 개발을 시작하는 데 도움이 되는 내용을 제공합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="get-started-with-visual-basic-and-net-core"></a>Visual Basic 및.NET Core 시작
+
+[Visual Studio 2017에서 .NET Core를 사용하여 Visual Basic Hello World 응용 프로그램 빌드](../../core/tutorials/vb-with-visual-studio.md)
+
+[Visual Studio 2017에서 Visual Basic 및 .NET Core로 클래스 라이브러리 빌드](../../core/tutorials/vb-library-with-visual-studio.md)  
+
+## <a name="additional-information"></a>추가 정보
 
 [Visual Basic의 새로운 기능](whats-new.md)   
 각 Visual Basic .NET 버전의 새로운 기능을 나열합니다.
@@ -49,7 +55,13 @@ ms.lasthandoff: 08/11/2017
   
 [Visual Basic 프로그래머를 위한 추가 리소스](additional-resources.md)  
 일반적인 문제 해결 방법을 찾는 경우 참조할 수 있는 웹 사이트 및 뉴스 그룹의 목록을 제공합니다.  
-  
+
+## <a name="develop-net-core-applications-with-visual-basic"></a>Visual Basic을 사용한 .NET Core 응용 프로그램 개발
+
+[Visual Studio 2017에서 .NET Core를 사용하여 Visual Basic Hello World 앱 빌드](../../core/tutorials/vb-with-visual-studio.md) 
+
+[Visual Studio 2017에서 Visual Basic 및 .NET Core로 클래스 라이브러리 빌드](../../core/tutorials/vb-library-with-visual-studio.md) 
+
 ## <a name="see-also"></a>참고 항목
  [Visual Basic 다운로드](https://www.visualstudio.com/downloads/)  
  무료 버전을 포함하여 Visual Basic 지원이 포함된 Visual Studio 버전에 대한 다운로드 링크를 제공합니다.  

@@ -11,10 +11,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
 ms.translationtype: HT
-ms.sourcegitcommit: 195b2206eec0a8f070454aed1ddefe56ee92adc9
-ms.openlocfilehash: 7b7cb235e2ba5bc3c9a21603058eb20475766ea7
+ms.sourcegitcommit: df0438dd742db802bb0f935d840006236d5d9bf9
+ms.openlocfilehash: 0a328f62a02aea223340fcc00e839e841041a7d6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 
@@ -25,9 +25,12 @@ ms.lasthandoff: 08/15/2017
 > [!IMPORTANT]
 > C# 언어는 일부 기능의 경우 *표준 라이브러리*의 형식 및 메서드를 사용합니다. 한 가지 예는 예외 처리입니다. 모든 `throw` 문 또는 식은 throw된 개체가 @System.Exception에서 파생되는지 확인합니다. 마찬가지로 모든 `catch`는 발견되는 형식이 @System.Exception에서 파생되는지 확인합니다. 각 버전은 새 요구 사항을 추가할 수 있습니다. 이전 환경에서 최신 언어 기능을 사용하려면 특정 라이브러리를 설치해야 합니다. 이러한 내용은 각 특정 버전에 대한 페이지에서 설명합니다. 이 종속성의 배경은 [언어 및 라이브러리 간 관계](relationships-between-language-and-library.md)에서 자세히 알아볼 수 있습니다. 
 
-* [C# 7](csharp-7.md):
-    - 이 페이지에서는 C# 언어의 최신 기능을 설명합니다. 여기서는 현재 [Visual Studio 2017](https://www.visualstudio.com/vs/whatsnew/)에서 사용 가능한 C#7을 소개합니다.
+* [C# 7.1](csharp-7-1.md):
+    - 이 페이지에서는 C# 언어의 최신 기능을 설명합니다. 여기서는 현재 [Visual Studio 2017 버전 15.3](https://www.visualstudio.com/vs/whatsnew/) 및 [.NET Core 2.0 SDK](../../core/whats-new/index.md)에서 사용 가능한 C# 7.1을 소개합니다.
 
+* [C# 7](csharp-7.md):
+    - 이 페이지에서는 C# 7에 추가된 기능을 설명합니다. 이러한 기능은 [Visual Studio 2017](https://www.visualstudio.com/vs/whatsnew/) 및 [.NET Core 1.0](../../core/whats-new/index.md) 이상에 추가되었습니다.
+     
 * [C# 6](csharp-6.md):
     - 이 페이지에서는 C# 6에 추가된 기능을 설명합니다. 이러한 기능은 Windows 개발자를 위한 Visual Studio 2015와 macOS 및 Linux에서 C#을 사용하는 개발자를 위한 .NET Core 1.0에서 사용할 수 있습니다.
 
