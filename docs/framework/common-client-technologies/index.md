@@ -18,7 +18,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 8c36d3577d46136d98b3cbcc9aefd19b30960a0b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="common-client-technologies-in-the-net-framework"></a>.NET Framework의 일반 클라이언트 기술
