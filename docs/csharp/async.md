@@ -11,10 +11,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2ddaa82e6f8492142523e9d240b0d337cfccffd8
+ms.sourcegitcommit: 019461964ba63d874ce86511474aa37b4342bbc4
+ms.openlocfilehash: b4a95438fe8b7490337de10299b824c5796bb4d1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 
@@ -128,7 +128,7 @@ C#에서는 컴파일러가 해당 코드를, `await`에 도달할 때 실행을
 이 코드 조각은 www.dotnetfoundation.org에서 HTML을 다운로드하고 문자열 ".NET"이 HTML에서 발생하는 횟수를 계산합니다.  또한 ASP.NET MVC를 통해 이 작업을 수행하는 웹 컨트롤러 메서드를 정의하여 숫자를 반환합니다.
 
 > [!NOTE]
-> 실제 HTML 구문 분석을 수행하려는 경우에는 정규식을 사용하면 안 됩니다.  프로덕션 코드에서 이 작업을 수행하려면 구문 분석 라이브러리를 사용하세요.
+> 프로덕션 코드에서 HTML 구문 분석을 수행하려는 경우 정규식을 사용하지 마세요. 대신 구문 분석 라이브러리를 사용하세요.
 
 ```csharp
 private readonly HttpClient _httpClient = new HttpClient();

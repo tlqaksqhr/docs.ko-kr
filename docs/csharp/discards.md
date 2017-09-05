@@ -10,10 +10,10 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.translationtype: HT
-ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
-ms.openlocfilehash: eca5febd448a135eb7ec52e4243ae341563190df
+ms.sourcegitcommit: 6170e096e36f8d054fdfe9cbd8311e6492e32a04
+ms.openlocfilehash: 3f8804f9b7522e385b145a9643dec942cc1aab9f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="discards---c-guide"></a>무시 항목 - C# 가이드
@@ -33,7 +33,7 @@ C# 7에서 무시 항목은 다음 컨텍스트의 할당에서 지원됩니다.
 - `out` 매개 변수를 사용한 메서드 호출
 - 범위에 `_`이 없는 경우 독립 실행형 `_`
 
-`_`이 유효한 무시 항목인 경우, 해당 값을 검색하거나 할당 작업에서 사용하려고 하면 “‘_’ 이름이 현재 컨텍스트에 없습니다.”라는 컴파일러 오류 CS0301이 생성됩니다. 이는 `_`에 값이 할당되어 있지 않고 저장소 위치도 할당되어 있지 않을 수 있기 때문입니다. 실제 변수인 경우에는 이전 예제에서처럼 2개 이상의 값을 무시할 수 없습니다.
+`_`이 유효한 무시 항목인 경우, 해당 값을 검색하거나 할당 작업에서 사용하려고 하면 “‘\_’ 이름이 현재 컨텍스트에 없습니다.”라는 컴파일러 오류 CS0301이 생성됩니다. 이는 `_`에 값이 할당되어 있지 않고 저장소 위치도 할당되어 있지 않을 수 있기 때문입니다. 실제 변수인 경우에는 이전 예제에서처럼 2개 이상의 값을 무시할 수 없습니다.
 
 ## <a name="tuple-and-object-deconstruction"></a>튜플 및 개체 분해
 
