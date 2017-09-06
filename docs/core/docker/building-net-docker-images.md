@@ -197,7 +197,7 @@ Visual Studio Code의 왼쪽에 있는 보기 표시줄에서 디버깅 아이�
 
 ![vscode 디버깅 아이콘](./media/building-net-docker-images/debugging_debugicon.png)
 
-그런 다음 재생 아이콘이나 <F5> 키를 탭하여 이미지를 생성하고 컨테이너 내에서 응용 프로그램을 시작합니다. Web API가 http://localhost:5000에서 기본 웹 브라우저를 사용하여 시작됩니다.
+그런 다음 재생 아이콘이나 <F5> 키를 탭하여 이미지를 생성하고 컨테이너 내에서 응용 프로그램을 시작합니다. Web API가 http://localhost:5000 에서 기본 웹 브라우저를 사용하여 시작됩니다.
 
 ![VSCode Docker 도구 디버그](./media/building-net-docker-images/docker-tools-vscode-f5.png)
 
