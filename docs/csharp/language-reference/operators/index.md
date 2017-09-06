@@ -42,10 +42,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ee13c7dec733dcc8e3067ea2bf9421177a284d54
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: eb8c4f11e540aa2685989ef11b2515a32d8d1fd6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="c-operators"></a>C# 연산자
@@ -80,7 +80,7 @@ C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 �
   
  [unchecked](../../../csharp/language-reference/keywords/unchecked.md) – 정수 연산에 오버플로 검사를 사용하지 않도록 설정합니다.  이것은 기본 컴파일러 동작입니다.  
   
- [default(T)](../../../csharp/programming-guide/generics/default-keyword-in-generic-code.md) – T 형식의 초기화된 기본값을 반환합니다. 참조 형식의 경우 `null`, 숫자 형식의 경우 0, 구조체 형식의 경우 멤버에 입력된 0/`null`을 반환합니다.  
+ [default(T)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) – T 형식의 기본값을 반환합니다. 참조 형식의 경우 `null`, 숫자 형식의 경우 0, 구조체 형식의 경우 멤버에 입력된 0/`null`을 반환합니다.  
   
  [delegate](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) – 대리자 인스턴스를 선언하고 반환합니다.  
   
@@ -235,7 +235,6 @@ C#에서는 많은 연산자를 제공하며, 이러한 연산자는 식에서 �
 ## <a name="see-also"></a>참고 항목  
  [C# 참조](../../../csharp/language-reference/index.md)   
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C#](../../../csharp/csharp.md)   
- [오버로드할 수 있는 연산자](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)   
+ [C#](../../../csharp/index.md) [오버로드할 수 있는 연산자](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)   
  [C# 키워드](../../../csharp/language-reference/keywords/index.md)
 
