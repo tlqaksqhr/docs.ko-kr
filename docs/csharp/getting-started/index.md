@@ -2,18 +2,21 @@
 title: "시작 - C# 가이드"
 description: "기초 C # 개념을 빨리 배우고 .NET Core 응용 프로그램을 작성할 수 있는 짧고 간단한 자습서를 찾아보세요."
 keywords: "C#, 시작, 취득, 설치"
+helpviewer_keywords:
+- Visual C#, getting started
+- getting started, Visual C#
 author: rpetrusha
 ms.author: ronpet
-ms.date: 05/02/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.translationtype: HT
-ms.sourcegitcommit: 867f9eb286fa7ff5ef3e9167c1ab944c81161216
-ms.openlocfilehash: 347c88a66363ab04d519d10fdf7973692fcadde9
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: c2e2408b2d7a02a1a75965f32888d240bafae0f0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="get-started-with-c"></a>C# 시작 #
@@ -21,6 +24,10 @@ ms.lasthandoff: 08/17/2017
 이 섹션에서는 C# 및 .NET Core를 사용하여 응용 프로그램을 빠르게 빌드할 수 있는 짧고 간단한 자습서를 제공합니다. Visual Studio 2017 및 Visual Studio Code에 대한 시작 항목이 제공됩니다. 간단한 Hello World 응용 프로그램을 빌드할 수도 있고, Visual Studio 2017을 사용하는 경우에는 다른 응용 프로그램에서 사용할 수 있는 간단한 클래스 라이브러리를 빌드할 수 있습니다.
 
 다음 항목을 사용할 수 있습니다.
+
+* [C# 언어 및 .NET Framework 소개](introduction-to-the-csharp-language-and-the-net-framework.md)
+
+     C# 언어 및 .NET에 대해 간략히 설명합니다.
 
 * [Visual Studio 2017 RC에서 .NET Core를 사용하여 C# Hello World 응용 프로그램 빌드](../../core/tutorials/with-visual-studio.md)
 
@@ -37,4 +44,33 @@ ms.lasthandoff: 08/17/2017
    Visual Studio Code는 현대적인 웹 및 클라우드 응용 프로그램을 빌드 및 디버깅하기 위해 최적화된 강력한 코드 편집기입니다. IntelliSense를 지원하고 Windows, macOS, Linux에 사용할 수 있습니다.
 
    이 항목에서는 Visual Studio Code 및 .NET Core를 사용하여 간단한 Hello World 응용 프로그램을 만들고 실행하는 방법을 보여 줍니다.
+
+* [Visual C# 프로그래머를 위한 추가 리소스](additional-resources.md)
+
+   일반적인 문제 해결 방법을 찾는 경우 참조할 수 있는 웹 사이트 및 뉴스 그룹의 링크를 제공합니다.
+
+## <a name="related-sections"></a>관련 단원
+
+* [C#용 Visual Studio 개발 환경 사용](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
+
+    [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 통합 개발 환경 사용 지침을 제공합니다.
+
+* [C# 프로그래밍 가이드](../../csharp/programming-guide/index.md)
+
+    C# 프로그래밍 개념에 대한 정보를 제공하고 C#에서 다양한 작업을 수행하는 방법을 설명합니다.
+
+* [C# 참조](../../csharp/language-reference/index.md)
+
+    C# 키워드, 연산자, 전처리기 지시문, 컴파일러 옵션 및 컴파일러 오류와 경고에 대한 자세한 참조 정보를 제공합니다.
+
+* [Visual Studio 샘플](/visualstudio/ide/visual-studio-samples)
+
+    온라인 샘플에 액세스하는 방법을 제공합니다.
+
+* [연습](../../csharp/walkthroughs.md)
+
+    C#을 사용하는 프로그래밍 연습 및 각 연습에 대한 간단한 설명에 대한 링크를 제공합니다.
+
+## <a name="see-also"></a>참고 항목
+ [Visual Studio를 사용하여 Visual C# 및 Visual Basic 시작](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic) [초급 개발자 학습 센터](http://go.microsoft.com/fwlink/?LinkId=123826)
 

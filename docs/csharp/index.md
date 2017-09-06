@@ -3,17 +3,23 @@ title: "C# 가이드"
 description: "새 개발자이든 숙련된 전문가이든, C# 가이드를 통해 C#에 관한 폭넓은 지식을 얻는 방법을 알아봅니다."
 keywords: .NET, .NET Core
 author: BillWagner
-ms.date: 08/03/2016
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 52db8280-0e53-40cf-858b-e8eef3997dea
+helpviewer_keywords:
+- documentation [C#]
+- Help, Visual C# documentation
+- C# language
+- Visual C#
+ms.author: wiwagn
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 18e26035e41c97af135f0075075bd2441182f157
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: 5cb79aa1fd89e080e8dc67c379a0a927102a6419
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 
@@ -32,7 +38,7 @@ C# 가이드는 C# 언어에 대한 다양한 정보를 제공합니다. 이 사
  
 ## <a name="how-the-c-guide-is-organized"></a>C# 가이드의 구성 방식
 
-C# 가이드에는 7개의 섹션이 있습니다. 순서대로 읽거나 가장 많이 관심이 가는 부분으로 직접 이동할 수 있습니다. 일부 섹션에서는 이 언어를 매우 깊이 있게 다룹니다. 다른 섹션에서는 C# 및 .NET Framework를 사용하여 만들 수 있는 프로그램 종류 중 일부를 보여 주는 종단 간 시나리오를 제공합니다.
+C# 가이드에는 여러 섹션이 있습니다. 순서대로 읽거나 가장 많이 관심이 가는 부분으로 직접 이동할 수 있습니다. 일부 섹션에서는 이 언어를 매우 깊이 있게 다룹니다. 다른 섹션에서는 C# 및 .NET Framework를 사용하여 만들 수 있는 프로그램 종류 중 일부를 보여 주는 종단 간 시나리오를 제공합니다.
 
 * [시작](getting-started/index.md):
     - 이 섹션에서는 기본 플랫폼에서 C# 개발 환경을 위해 설치해야 하는 항목을 소개합니다. 이 섹션의 다른 항목에서는 지원되는 다양한 환경에서 첫 번째 C# 프로그램을 만드는 방법을 설명합니다.
@@ -52,6 +58,25 @@ C# 가이드에는 7개의 섹션이 있습니다. 순서대로 읽거나 가장
 <!--* [.NET Compiler Platform SDK](roslyn/index.md):
     - The .NET Compiler Platform SDK enables you to write components that analyze code, and suggest or make improvements to that code. In this section, you'll learn how the APIs are organized, and how you can create code that enables rules and practices for your team. You'll also see samples, end to end scenarios, and links to other libraries with more examples using these APIs.
 -->
+* [C#용 Visual Studio 개발 환경 사용](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
+    - [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 개발 환경을 소개합니다.  
+
+* [C# 프로그래밍 가이드](../csharp/programming-guide/index.md)  
+    - C# 언어 구문을 사용하는 방법에 대해 설명하고 실제 예제를 제공합니다.  
+
+* [C# 샘플](http://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)  
+    - C# 관련 항목이 표시되도록 필터링된 MSDN 코드 갤러리입니다.  
+  
+* [연습](../csharp/walkthroughs.md)  
+    - C#을 사용하는 프로그래밍 연습 및 각 연습에 대한 간단한 설명에 대한 링크를 제공합니다.  
+
 * [언어 참조](language-reference/index.md):
-    - 이 섹션에서는 C# 언어에 대한 참조 자료를 제공합니다. 이 자료는 C#의 구문 및 의미 체계를 이해하는 데 도움이 됩니다. 
+    - 이 섹션에서는 C# 언어에 대한 참조 자료를 제공합니다. 이 자료는 C#의 구문 및 의미 체계를 이해하는 데 도움이 됩니다. 또한 형식, 연산자, 특성, 전처리기 지시문, 컴파일러 스위치, 컴파일러 오류 및 컴파일러 경고에 대한 참조 자료도 포함하고 있습니다.
+  
+* [C# 언어 사양](../csharp/language-reference/language-specification/index.md)  
+    - C# 사양의 최신 버전(Microsoft Word 형식)에 대한 링크를 제공합니다.  
+  
+## <a name="see-also"></a>참고 항목  
+ [Visual C# 및 Visual Basic 시작](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)   
+ [.NET 개발](https://msdn.microsoft.com/library/ff361664)
 
