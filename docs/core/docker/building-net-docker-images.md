@@ -11,15 +11,18 @@ ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 ms.translationtype: HT
-ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
-ms.openlocfilehash: 252b67a528b9cc666a5353b7c4a4c7e2c488e7af
+ms.sourcegitcommit: 9dc52f3a8c74c1aa575a83cb3bbd579b93fae9ae
+ms.openlocfilehash: 0e679ffc22f52de5e2ce8194942efbb2f5299ee4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 09/06/2017
 
 ---
- 
 
 #<a name="building-docker-images-for-net-core-applications"></a>.NET Core 응용 프로그램에 대한 Docker 이미지 작성
+
+ 
+> [!IMPORTANT]
+> .NET Core 2.0에 대한 업데이트 중입니다. 아래 지침은 만료되었습니다. 불편을 끼쳐드려서 죄송합니다.
 
 .NET Core와 Docker를 함께 사용하는 방법을 이해하려면 먼저 제공되는 다양한 Docker 이미지와 올바른 사용 시기에 대해 알고 있어야 합니다. 여기서는 제공되는 변형 이미지를 살펴보고, ASP.NET Core Web API를 빌드하며, Yeoman Docker 도구를 사용하여 디버깅 가능한 컨테이너를 만들 뿐만 아니라 Visual Studio Code가 이 프로세스에 어떻게 도움이 되는지를 살펴봅니다. 
 
@@ -197,7 +200,7 @@ Visual Studio Code의 왼쪽에 있는 보기 표시줄에서 디버깅 아이�
 
 ![vscode 디버깅 아이콘](./media/building-net-docker-images/debugging_debugicon.png)
 
-그런 다음 재생 아이콘이나 <F5> 키를 탭하여 이미지를 생성하고 컨테이너 내에서 응용 프로그램을 시작합니다. Web API가 http://localhost:5000 에서 기본 웹 브라우저를 사용하여 시작됩니다.
+그런 다음 재생 아이콘이나 <F5> 키를 탭하여 이미지를 생성하고 컨테이너 내에서 응용 프로그램을 시작합니다. Web API가 http://localhost:5000에서 기본 웹 브라우저를 사용하여 시작됩니다.
 
 ![VSCode Docker 도구 디버그](./media/building-net-docker-images/docker-tools-vscode-f5.png)
 
