@@ -1,5 +1,5 @@
 ---
-title: "LINQ to XML 주석3 | Microsoft 문서"
+title: "LINQ to XML 주석3"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,15 +14,15 @@ ms.assetid: 54e7b9d0-07f5-488f-9065-b6e6b870f810
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 13718f509eee46853020cfe1dd27ee85437d2e6d
-ms.lasthandoff: 03/13/2017
-
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3fa8715deac8776f7a512439ee055be6faf4649f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="linq-to-xml-annotations"></a>LINQ to XML 주석
-[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]에서 주석을 사용하여 임의의 형식에 대한 임의의 개체를 XML 트리의 XML 구성 요소와 연결할 수 있습니다.  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서 주석을 사용하여 임의의 형식에 대한 임의의 개체를 XML 트리의 XML 구성 요소와 연결할 수 있습니다.  
   
  <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XAttribute>와 같은 XML 구성 요소에 주석을 추가하려면 <xref:System.Xml.Linq.XObject.AddAnnotation%2A> 메서드를 호출합니다. 형식별로 주석을 검색할 수 있습니다.  
   
@@ -40,3 +40,4 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="see-also"></a>참고 항목  
  [고급 LINQ to XML 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "메서드 | C# 가이드"
+title: "메서드 - C# 가이드"
 description: "메서드, 메서드 매개 변수 및 메서드 반환 값의 개요"
 keywords: .NET, .NET Core, C#
 author: rpetrusha
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 81f31f1abc9db14b6b899564d67ca6e90d269ad7
-ms.openlocfilehash: 42ded63bacfb6ff2ceadde6fa37c7bddb413a933
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6b5e01f7244b8b7b83fbc76a80eae0c1432c936a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="methods"></a>메서드 #
@@ -280,14 +280,12 @@ if (person != null)
 일반적으로 식의 결과와 함께 바로 반환되거나 단일 문이 메서드 본문으로 포함된 메서드 정의가 있습니다.  `=>`를 사용하여 해당 메서드를 속성을 정의하기 위한 구문 바로 가기는 다음과 같습니다.
 
 ```csharp
-
 public Point Move(int dx, int dy) => new Point(x + dx, y + dy);
 public void Print() => Console.WriteLine(First + " " + Last);
 // Works with operators, properties, and indexers too.
 public static Complex operator +(Complex a, Complex b) => a.Add(b);
 public string Name => First + " " + Last;
 public Customer this[long id] => store.LookupCustomer(id);
-
 ```
 
 메서드가 `void`를 반환하거나 비동기 메서드이면 메서드 본문은 문 식이어야 합니다(람다에서와 같음).  속성 및 인덱서의 경우 읽기 전용이어야 하며, `get` 접근자 키워드를 사용하지 않습니다.
@@ -303,12 +301,12 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 ## <a name="see-also"></a>참고 항목 ##
 
-[액세스 한정자](https://msdn.microsoft.com/library/wxh6fsc7.aspx)
-[정적 클래스 및 정적 클래스 멤버](https://msdn.microsoft.com/library/79b3xss3.aspx)
-[상속](https://msdn.microsoft.com/library/ms173149.aspx)
-[추상 및 봉인 클래스와 클래스 멤버](https://msdn.microsoft.com/library/ms173150.aspx)
-[params](https://msdn.microsoft.com/library/w5zay9db.aspx)
-[out](https://msdn.microsoft.com/library/t3c3bfhx.aspx)
-[ref](https://msdn.microsoft.com/library/14akc2c7.aspx)
+[액세스 한정자](https://msdn.microsoft.com/library/wxh6fsc7.aspx)   
+[정적 클래스 및 정적 클래스 멤버](https://msdn.microsoft.com/library/79b3xss3.aspx)   
+[상속](https://msdn.microsoft.com/library/ms173149.aspx)   
+[추상 및 봉인 클래스와 클래스 멤버](https://msdn.microsoft.com/library/ms173150.aspx)   
+[params](https://msdn.microsoft.com/library/w5zay9db.aspx)   
+[out](https://msdn.microsoft.com/library/t3c3bfhx.aspx)   
+[ref](https://msdn.microsoft.com/library/14akc2c7.aspx)   
 [매개 변수 전달](https://msdn.microsoft.com/library/0f66670z.aspx)
 

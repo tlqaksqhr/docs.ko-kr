@@ -1,5 +1,5 @@
 ---
-title: "다중 스레드 프로시저의 매개 변수 및 반환 값(C#) | Microsoft 문서"
+title: "다중 스레드 프로시저의 매개 변수 및 반환 값(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 95fdc0f74c1f2c35a4f3b5c0a8f40f5d4fe9457c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5e377a006409dbae49b3c00297f69e8d55a01295
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="parameters-and-return-values-for-multithreaded-procedures-c"></a>다중 스레드 프로시저의 매개 변수 및 반환 값(C#)
@@ -141,3 +142,4 @@ private void BackgroundWorker1_RunWorkerCompleted(
  [다중 스레드 응용 프로그램(C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)   
  [대리자](../../../../csharp/programming-guide/delegates/index.md)   
  [구성 요소에서 다중 스레딩](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)
+

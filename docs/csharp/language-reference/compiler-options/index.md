@@ -34,10 +34,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 12fd3210aeda6c260c91232baf99381a55b00cab
+ms.sourcegitcommit: 02cfb7708959057de593506db55e4f31f5ab4fd0
+ms.openlocfilehash: 7c5f5274a5685e50fb7f1d06771b0340200d1c3f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="c-compiler-options"></a>C# 컴파일러 옵션
@@ -53,9 +53,6 @@ ms.lasthandoff: 07/28/2017
   
  [방법: Visual Studio 명령줄에 필요한 환경 변수 설정](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
  vsvars32.bat를 실행하여 명령줄 빌드를 사용하도록 하는 단계를 제공합니다.  
-  
- [C# 응용 프로그램 배포](../../../csharp/language-reference/compiler-options/app-deployment.md)  
- C# 응용 프로그램을 배포하기 위한 옵션에 대해 설명합니다.  
   
  [범주별 C# 컴파일러 옵션 목록](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
  컴파일러 옵션의 범주별 목록입니다.  

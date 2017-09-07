@@ -1,5 +1,5 @@
 ---
-title: "동적 소스 코드 생성 및 컴파일 | Microsoft Docs"
+title: "동적 소스 코드 생성 및 컴파일"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 86483858b93f58b22d8c8440baa76d68250745dd
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f1eb17af8fef96f42973e65859bd17b1e835fa98
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="dynamic-source-code-generation-and-compilation"></a>동적 소스 코드 생성 및 컴파일
@@ -63,3 +63,4 @@ ms.lasthandoff: 06/02/2017
 ## <a name="related-sections"></a>관련 단원  
  [CodeDOM 빠른 참조](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524)  
  개발자가 소스 코드 요소를 나타내는 CodeDOM 요소를 빠르게 찾을 수 있는 방법을 제공합니다.
+

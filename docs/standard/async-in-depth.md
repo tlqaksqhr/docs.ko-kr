@@ -1,6 +1,6 @@
 ---
 title: "비동기에 대한 자세한 설명"
-description: ".NET에서 비동기 코드가 작동하는 방식에 대한 자세한 설명"
+description: ".NET 작업 기반 비동기 모델을 사용하여 간단하게 I/O 및 CPU 바인딩된 비동기 코드를 작성하는 방법을 알아봅니다."
 keywords: ".NET, .NET Core, .NET 표준"
 author: cartermp
 ms.author: wiwagn
@@ -10,16 +10,17 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-translationtype: Human Translation
-ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
-ms.openlocfilehash: 92d94fd7f148bb4c1bbad50212d90d722214085f
-ms.lasthandoff: 03/10/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
+ms.openlocfilehash: 4591ec591d9aba41e303bacdb6ed94c6663376be
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/29/2017
 
 ---
 
 # <a name="async-in-depth"></a>비동기에 대한 자세한 설명
 
-.NET 태스크 기반 비동기 모델을 사용하면 I/O 및 CPU 바인딩된 비동기 코드를 간단하게 작성할 수 있습니다. 모델은 `Task` 및 `Task<T>` 형식과 `async` 및 `await` 언어 키워드로 표시됩니다. 이 문서에서는 .NET 비동기를 사용하는 방법을 설명하고 백그라운드에서 사용되는 비동기 프레임워크에 대한 통찰을 제공합니다.
+.NET 태스크 기반 비동기 모델을 사용하면 I/O 및 CPU 바인딩된 비동기 코드를 간단하게 작성할 수 있습니다. 모델은 C# 및 Visual Basic에서 `Task` 및 `Task<T>` 형식과 `async` 및 `await` 키워드로 표시됩니다. (언어 관련 리소스는 [참고 항목](#see-also) 섹션에 있습니다.) 이 문서에서는 .NET 비동기를 사용하는 방법을 설명하고 백그라운드에서 사용되는 비동기 프레임워크에 대한 통찰을 제공합니다.
 
 ## <a name="task-and-tasklttgt"></a>Task 및 Task&lt;T&gt;
 
@@ -32,9 +33,9 @@ ms.lasthandoff: 03/10/2017
 
 태스크는 태스크의 결과 값(`Task<T>`의 경우)을 모니터링, 대기 및 액세스하기 위한 API 프로토콜을 표시합니다. `await` 키워드가 있는 언어 통합에서는 태스크 사용을 위한 상위 수준 추상화를 제공합니다. 
 
-`await`를 사용하면 태스크가 완료될 때까지 해당 호출자에게 제어가 양도되므로 태스크가 실행되는 동안 응용 프로그램 또는 서비스에서 유용한 작업을 수행할 수 있습니다. 태스크가 완료된 후에는 코드에서 콜백 또는 이벤트를 사용하여 실행을 계속할 필요가 없습니다. 언어 및 태스크 API 통합에서 해당 작업을 자동으로 수행합니다. `Task<T>`를 사용하는 경우 `await` 키워드는 태스크가 완료될 때 반환되는 값을 추가로 "래핑 해제"합니다.  작동 방식에 대한 자세한 내용은 아래에서 자세히 설명합니다.
+`await`를 사용하면 태스크가 완료될 때까지 해당 호출자에게 제어가 양도되므로 태스크가 실행되는 동안 응용 프로그램 또는 서비스에서 유용한 작업을 수행할 수 있습니다. 태스크가 완료된 후에는 코드에서 콜백 또는 이벤트를 사용하여 실행을 계속할 필요가 없습니다. 언어 및 태스크 API 통합에서 해당 작업을 자동으로 수행합니다. `Task<T>`를 사용하는 경우 `await` 키워드는 작업이 완료될 때 반환되는 값을 추가로 “래핑 해제”합니다.  작동 방식에 대한 자세한 내용은 아래에서 자세히 설명합니다.
 
-[TAP(태스크 기반 비동기 패턴) 문서](https://msdn.microsoft.com/library/hh873175.aspx)에서 태스크 및 태스크를 조작하는 다양한 방법에 대해 자세히 알아볼 수 있습니다.
+[TAP(작업 기반 비동기 패턴)](~/docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) 항목에서 작업 및 작업을 조작하는 다양한 방법에 대해 자세히 알아볼 수 있습니다.
 
 ## <a name="deeper-dive-into-tasks-for-an-io-bound-operation"></a>I/O 바인딩된 작업에 대한 태스크 심층 분석
 
@@ -45,14 +46,14 @@ ms.lasthandoff: 03/10/2017
 ```csharp
 public Task<string> GetHtmlAsync()
 {
-     // Execution is synchronous here
+    // Execution is synchronous here
     var client = new HttpClient();
     
     return client.GetStringAsync("http://www.dotnetfoundation.org");
 }
 ```
 
-두 번째 예제에서는 태스크에 적용할 `async` 및 `await` 키워드 사용을 추가합니다.
+두 번째 예제에서는 작업에 적용할 `async` 및 `await` 키워드 사용을 추가합니다.
 
 ```csharp
 public async Task<string> GetFirstCharactersCountAsync(string url, int count)
@@ -147,3 +148,10 @@ public async Task<int> CalculateResult(InputData data)
 ### <a name="why-does-async-help-here"></a>이때 비동기가 왜 도움이 될까요?
 
 `async` 및 `await`는 응답성이 필요할 때 CPU 바인딩된 작업을 관리하는 모범 사례입니다. CPU 바인딩된 작업에 비동기를 사용하는 여러 가지 패턴이 있습니다. 비동기 사용 시 작은 비용이 발생하며 타이트 루프에는 권장되지 않습니다.  이 새로운 기능과 관련된 코드 작성 방법은 사용자가 결정할 사항입니다.
+
+## <a name="see-also"></a>참고 항목
+
+[C#의 비동기 프로그래밍](~/docs/csharp/async.md)   
+[Async Programming in F#](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md) (F#의 비동기 프로그래밍)  
+[Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
+

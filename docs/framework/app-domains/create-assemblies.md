@@ -1,5 +1,5 @@
 ---
-title: "어셈블리 만들기 | Microsoft Docs"
+title: "어셈블리 만들기"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -19,11 +19,11 @@ caps.latest.revision: 8
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: c131e82e2312e2c1b7fe1b6b2b6d0a6dfb626209
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 583c448bd939cd4d1d16bff372afff4172dcf985
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-assemblies"></a>어셈블리 만들기
@@ -62,3 +62,4 @@ ms.lasthandoff: 06/02/2017
  [방법: 다중 파일 어셈블리 빌드](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   
  [런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
  [다중 파일 어셈블리](../../../docs/framework/app-domains/multifile-assemblies.md)
+

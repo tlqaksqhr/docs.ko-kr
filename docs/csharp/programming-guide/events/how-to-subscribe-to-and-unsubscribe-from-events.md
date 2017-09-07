@@ -1,5 +1,5 @@
 ---
-title: "방법: 이벤트 구독 및 구독 취소(C# 프로그래밍 가이드) | Microsoft 문서"
+title: "방법: 이벤트 구독 및 구독 취소(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 583168bc8cce2f4bee9a2dd35d1e59c7a0f380a6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d444a2efe03ec127ff88236deadab719d0d64259
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>방법: 이벤트 구독 및 구독 취소(C# 프로그래밍 가이드)
@@ -46,7 +47,7 @@ ms.lasthandoff: 03/13/2017
   
 3.  만들려는 이벤트(예: `Load` 이벤트)를 두 번 클릭합니다.  
   
-     [!INCLUDE[csprcs](../../../csharp/includes/csprcs_md.md)]에서 빈 이벤트 처리기 메서드를 만들고 코드에 추가합니다. 또는 **코드** 보기에서 수동으로 코드를 추가할 수 있습니다. 예를 들어 다음 코드 줄은 `Form` 클래스에서 `Load` 이벤트가 발생할 때 호출되는 이벤트 처리기 메서드를 선언합니다.  
+     [!INCLUDE[csprcs](~/includes/csprcs-md.md)]에서 빈 이벤트 처리기 메서드를 만들고 코드에 추가합니다. 또는 **코드** 보기에서 수동으로 코드를 추가할 수 있습니다. 예를 들어 다음 코드 줄은 `Form` 클래스에서 `Load` 이벤트가 발생할 때 호출되는 이벤트 처리기 메서드를 선언합니다.  
   
      [!code-cs[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-subscribe-to-and-unsubscribe-from-events_1.cs)]  
   

@@ -1,5 +1,5 @@
 ---
-title: "방법: 단일 파일 어셈블리 만들기 | Microsoft Docs"
+title: "방법: 단일 파일 어셈블리 만들기"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,18 +22,18 @@ caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 0ddf25f1d588c0972381a54ee0da4b35e3c0dc33
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1a584e6ded79489e5e33b07d02dde618541c6cc8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-build-a-single-file-assembly"></a>방법: 단일 파일 어셈블리 만들기
 가장 단순한 형식의 어셈블리인 단일 파일 어셈블리에는 형식 정보 및 구현과 [어셈블리 매니페스트](../../../docs/framework/app-domains/assembly-manifest.md)가 포함되어 있습니다. 명령줄 컴파일러 또는 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]를 사용하여 단일 파일 어셈블리를 만들 수 있습니다. 기본적으로 컴파일러는 확장명이 .exe인 어셈블리 파일을 만듭니다.  
   
 > [!NOTE]
-> C# 및 Visual Basic용  [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]는 단일 파일 어셈블리를 만드는 경우에만 사용할 수 있습니다. 다중 파일 어셈블리를 만들려면 명령줄 컴파일러나 Visual C++용 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]를 사용해야 합니다.  
+>  C# 및 Visual Basic용 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]는 단일 파일 어셈블리를 만드는 경우에만 사용할 수 있습니다. 다중 파일 어셈블리를 만들려면 명령줄 컴파일러나 Visual C++용 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]를 사용해야 합니다.  
   
  다음 절차에는 명령줄 컴파일러를 사용하여 단일 파일 어셈블리를 만드는 방법을 보여 줍니다.  
   
@@ -99,3 +99,4 @@ vbc /out:myCodeLibrary.dll /t:library myCode.vb
  [다중 파일 어셈블리](../../../docs/framework/app-domains/multifile-assemblies.md)   
  [방법: 다중 파일 어셈블리 빌드](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   
  [어셈블리를 사용한 프로그래밍](../../../docs/framework/app-domains/programming-with-assemblies.md)
+

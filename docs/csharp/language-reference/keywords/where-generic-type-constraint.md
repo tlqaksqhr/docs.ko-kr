@@ -1,5 +1,5 @@
 ---
-title: "where(제네릭 형식 제약 조건)(C# 참조) | Microsoft 문서"
+title: "where(제네릭 형식 제약 조건)(C# 참조)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,15 +30,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: e5baa75c55d58a4d975fc42472f90ff4125cbb5c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 8e81640ee56ed672bb09242a070fdf167740874b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where(제네릭 형식 제약 조건)(C# 참조)
-제네릭 형식 정의에서 `where` 절은 제네릭 선언에 정의된 형식 매개 변수의 인수로 사용할 수 있는 형식에 대한 제약 조건을 지정하는 데 사용됩니다. 예를 들어, 다음과 같이 형식 매개 변수 `T`가 <xref:System.IComparable%601> 인터페이스를 구현하도록 제네릭 클래스 `MyGenericClass`를 선언할 수 있습니다.  
+제네릭 형식 정의에서 `where` 절은 제네릭 선언에 정의된 형식 매개 변수의 인수로 사용할 수 있는 형식에 대한 제약 조건을 지정하는 데 사용됩니다. 예를 들어 형식 매개 변수 `T`가 <xref:System.IComparable%601> 인터페이스를 구현하도록 제네릭 클래스 `MyGenericClass`를 선언할 수 있습니다.  
   
 ```csharp  
 public class MyGenericClass<T> where T:IComparable { }  
@@ -51,7 +51,7 @@ public class MyGenericClass<T> where T:IComparable { }
   
  [!code-cs[csrefKeywordsContextual#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_1.cs)]  
   
- `where` 절에 생성자 제약 조건이 포함될 수도 있습니다. 새 연산자를 사용하여 형식 매개 변수의 인스턴스를 만들 수 있습니다. 그러나 그렇게 하려면 생성자 제약 조건 `new()`로 형식 매개 변수를 제한해야 합니다. [new () 제약 조건](../../../csharp/language-reference/keywords/new-constraint.md)을 사용하면 컴파일러는 제공된 인수에 액세스 가능하고 매개 변수가 없는 생성자(또는 기본 생성자)가 있어야 한다는 것을 알게 됩니다. 예:  
+ `where` 절에 생성자 제약 조건이 포함될 수도 있습니다. 새 연산자를 사용하여 형식 매개 변수의 인스턴스를 만들 수 있습니다. 그러나 그렇게 하려면 생성자 제약 조건 `new()`(으)로 형식 매개 변수를 제한해야 합니다. [new () 제약 조건](../../../csharp/language-reference/keywords/new-constraint.md)을 사용하면 컴파일러는 제공된 형식 인수에는 액세스 가능하며 매개 변수가 없는 생성자(또는 기본 생성자)가 있어야 한다는 것을 알게 됩니다. 예:  
   
  [!code-cs[csrefKeywordsContextual#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_2.cs)]  
   
@@ -86,3 +86,4 @@ delegate T MyDelegate<T>() where T : new()
  [제네릭 소개](../../../csharp/programming-guide/generics/introduction-to-generics.md)   
  [new 제약 조건](../../../csharp/language-reference/keywords/new-constraint.md)   
  [형식 매개 변수에 대한 제약 조건](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)
+

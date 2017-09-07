@@ -1,5 +1,5 @@
 ---
-title: "try-catch(C# 참조) | Microsoft 문서"
+title: "try-catch(C# 참조)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -34,11 +34,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 13684c7e32c52765f4d45d6a5bd2c6f8194efefe
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b7ec6c96ac21ba2115d1e7eead5700b6dbfcc952
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="try-catch-c-reference"></a>try-catch(C# 참조)
@@ -47,7 +47,7 @@ try-catch 문은 `try` 블록에 이어 서로 다른 예외에 대한 처리기
 ## <a name="remarks"></a>주의  
  예외가 throw되면 CLR(공용 언어 런타임)에서는 이 예외를 처리하는 `catch` 문을 검색합니다. 현재 실행 중인 메서드에 `catch` 블록이 포함되지 않으면 CLR에서는 현재 메서드를 호출한 메서드 등에서 호출 스택까지 확인합니다. `catch` 블록을 찾을 수 없으면 CLR에서는 처리되지 않은 예외 메시지를 사용자에게 표시하고 프로그램의 예외를 중지합니다.  
   
- `try` 블록에는 예외를 가져올 수 있는 보호된 코드가 포함됩니다. 블록은 예외가 throw되거나 성공적으로 완료될 때까지 실행됩니다. 예를 들어 `null` 개체를 캐스팅하는 다음 시도에서는 <xref:System.NullReferenceException> 예외가 발생합니다.  
+ `try` 블록에는 예외를 가져올 수 있는 보호된 코드가 포함됩니다. 블록은 예외가 throw되거나 성공적으로 완료될 때까지 실행됩니다. 예를 들어 `null` 개체를 캐스팅하는 다음 시도에서 <xref:System.NullReferenceException> 예외가 발생합니다.  
   
 ```csharp  
 object o2 = null;  
@@ -176,7 +176,7 @@ static void Main()
  [!code-cs[csAsyncExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_3.cs)]  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 여러 작업에서 여러 예외가 발생할 수 있는 경우 예외 처리를 보여 줍니다. `try` 블록은 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> 호출에서 반환되는 작업을 기다립니다. WhenAll이 적용된 작업 세 개가 완료되면 작업이 완료됩니다.  
+ 다음 예제에서는 여러 작업에서 여러 예외가 발생할 수 있는 경우 예외 처리를 보여 줍니다. `try` 블록은 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>에 대한 호출에서 반환된 작업을 기다립니다. WhenAll이 적용된 작업 세 개가 완료되면 작업이 완료됩니다.  
   
  세 작업에서 각각 예외가 발생합니다. `catch` 블록은 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>에서 반환된 작업의 `Exception.InnerExceptions` 속성에 있는 예외를 반복합니다.  
   
@@ -189,7 +189,7 @@ static void Main()
  [C# 참조](../../../csharp/language-reference/index.md)   
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
  [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
- [try, throw 및 catch 문(C++)](https://docs.microsoft.com/cpp/cpp/try-throw-and-catch-statements-cpp)   
+ [try, throw 및 catch 문(C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)   
  [예외 처리 문](../../../csharp/language-reference/keywords/exception-handling-statements.md)   
  [throw](../../../csharp/language-reference/keywords/throw.md)   
  [try-finally](../../../csharp/language-reference/keywords/try-finally.md)   

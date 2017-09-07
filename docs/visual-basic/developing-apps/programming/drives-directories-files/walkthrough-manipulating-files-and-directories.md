@@ -1,5 +1,5 @@
 ---
-title: "연습: Visual Basic에서 파일과 디렉터리 조작 | Microsoft 문서"
+title: "Visual Basic에서 파일과 디렉터리 조작"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -41,19 +41,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: a5ae7f4a720c04639191edf36425426dfc339a37
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9e66d062df07fc23dfbd5d509e08ccd08813db15
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>연습: Visual Basic에서 파일과 디렉터리 조작
-이 연습에서는 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]에서 파일 I/O의 기본 개념을 소개합니다. 디렉터리에 텍스트 파일을 나열하고 검사하는 작은 응용 프로그램을 만드는 방법을 설명합니다. 선택한 각 텍스트 파일에 대해 응용 프로그램은 파일 특성 및 내용의 첫 줄을 제공합니다. 로그 파일에 정보를 기록하는 옵션이 있습니다.  
+이 연습에서는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서 파일 I/O의 기본 개념을 소개합니다. 디렉터리에 텍스트 파일을 나열하고 검사하는 작은 응용 프로그램을 만드는 방법을 설명합니다. 선택한 각 텍스트 파일에 대해 응용 프로그램은 파일 특성 및 내용의 첫 줄을 제공합니다. 로그 파일에 정보를 기록하는 옵션이 있습니다.  
   
- 이 연습에서는 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]에서 사용 가능한 `My.Computer.FileSystem Object`의 멤버를 사용합니다. 자세한 내용은 <xref:Microsoft.VisualBasic.FileIO.FileSystem>를 참조하세요. 연습의 끝 부분에서 <xref:System.IO> 네임스페이스의 클래스를 사용하는 동등한 예제가 제공됩니다.  
+ 이 연습에서는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서 사용 가능한 `My.Computer.FileSystem Object`의 멤버를 사용합니다. 자세한 내용은 <xref:Microsoft.VisualBasic.FileIO.FileSystem>를 참조하세요. 연습의 끝 부분에서 <xref:System.IO> 네임스페이스의 클래스를 사용하는 동등한 예제가 제공됩니다.  
   
-[!INCLUDE[note_settings_general](../../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
+[!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-create-the-project"></a>프로젝트를 만들려면  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 05/22/2017
   
 3.  **이름** 상자에 `FileExplorer`를 입력하여 프로젝트 이름을 설정한 다음 **확인**을 클릭합니다.  
   
-     [!INCLUDE[vsprvs](../../../../csharp/includes/vsprvs_md.md)]에서 **솔루션 탐색기**에 프로젝트를 추가하면 Windows Forms 디자이너가 열립니다.  
+     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]에서 **솔루션 탐색기**에 프로젝트를 추가하면 Windows Forms 디자이너가 열립니다.  
   
 4.  다음 표의 컨트롤을 양식에 추가하고 속성의 해당 값을 설정합니다.  
   

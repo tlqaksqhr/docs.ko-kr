@@ -1,5 +1,5 @@
 ---
-title: "방법: XML 파일에 개체 데이터 쓰기(C#) | Microsoft 문서"
+title: "방법: XML 파일에 개체 데이터 쓰기(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 197e91be6d3785e437cb33541b2b4c9b4a2cbb84
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a4b2fde8f823e6b945d074327559013f4e748909
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-c"></a>방법: XML 파일에 개체 데이터 쓰기(C#)
-이 예제에서는 <xref:System.Xml.Serialization.XmlSerializer> 클래스를 사용하여 클래스의 개체를 XML 파일에 씁니다.  
+이 예제에서는 <xref:System.Xml.Serialization.XmlSerializer> 클래스를 사용하여 XML 파일에 클래스의 개체를 씁니다.  
   
 ## <a name="example"></a>예제  
   
@@ -81,3 +82,4 @@ public class XMLWrite
  <xref:System.IO.StreamWriter>   
  [방법: XML 파일에서 개체 데이터 읽기(C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)   
  [serialization(C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)
+

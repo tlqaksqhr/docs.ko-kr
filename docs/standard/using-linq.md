@@ -1,6 +1,6 @@
 ---
 title: LINQ(Language-Integrated Query)
-description: LINQ(Language-Integrated Query)
+description: "LINQ가 표현력 있는 선언형 코드를 작성하는 한 가지 방법으로 API와 언어 수준 쿼리 기능을 C# 및 VB에 제공하는 방법을 알아봅니다."
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-translationtype: Human Translation
-ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
-ms.openlocfilehash: 6d9c163255939c3732177ecccb373479ab610447
-ms.lasthandoff: 03/02/2017
+ms.translationtype: HT
+ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
+ms.openlocfilehash: 1478b5dc5844cef0abfea44eba88a12801d32bd4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
 
 ---
 
@@ -29,7 +30,6 @@ LINQ는 표현력 있는 선언형 코드를 작성하는 한 가지 방법으�
 var linqExperts = from p in programmers
                   where p.IsNewToLINQ
                   select new LINQExpert(p);
-
 ```
 
 `IEnumerable<T>` API를 사용한 동일한 예제:
@@ -37,7 +37,6 @@ var linqExperts = from p in programmers
 ```csharp
 var linqExperts = programmers.Where(p => IsNewToLINQ)
                              .Select(p => new LINQExpert(p));
-
 ```
 
 ## <a name="linq-is-expressive"></a>LINQ의 뛰어난 표현력
@@ -53,7 +52,6 @@ foreach (var pet in pets)
 {
     petLookup.Add(pet.RFID, pet);
 }
-
 ```
 
 코드의 숨은 의도는 새 `Dictionary<int, Pet>`을 만들고 루프를 통해 사전에 추가하는 것이 아니라 기존 목록을 사전으로 변환하는 것입니다. LINQ는 이 의도를 유지하지만 명령형 코드는 유지하지 않습니다.
@@ -62,7 +60,6 @@ foreach (var pet in pets)
 
 ```csharp
 var petLookup = pets.ToDictionary(pet => pet.RFID);
-
 ```
 
 LINQ를 사용하는 코드는 프로그래머로 추론할 때 의도와 코드를 일치시키기 때문에 유용합니다. 그 외에도 코드가 간소화되는 이점이 있습니다. 위와 같이 코드베이스의 상당 부분이 1/3만큼 줄어든다고 상상해 보세요. 멋지지 않나요?
@@ -81,7 +78,6 @@ public static IEnumerable<XElement> FindAllElementsWithAttribute(XElement docume
            where (string)el.Element(attributeName) == value
            select el;
 }
-
 ```
 
 이 작업을 수행하기 위해 수동으로 XML 문서를 트래버스하는 코드를 작성하는 것이 훨씬 더 어려울 것입니다.
@@ -94,7 +90,6 @@ XML 조작이 LINQ 공급자로 수행할 수 있는 유일한 작업은 아닙�
 
 ```csharp
 var filteredItems = myItems.Where(item => item.Foo);
-
 ```
 
 위 코드가 아래 코드보다 훨씬 더 간결합니다.
@@ -103,7 +98,6 @@ var filteredItems = myItems.Where(item => item.Foo);
 var filteredItems = from item in myItems
                     where item.Foo
                     select item;
-
 ```
 
 API 구문이 쿼리 구문보다 더 간결한 방법이 아닌가요?
@@ -151,7 +145,6 @@ var queryCats = from dog in dogs
 // Summing then lengths of a set of strings
 int seed = 0;
 int sumOfStrings = strings.Aggregate(seed, (s1, s2) => s1.Length + s2.Length);
-
 ```
 
 *   목록의 목록 평면화:
@@ -159,7 +152,6 @@ int sumOfStrings = strings.Aggregate(seed, (s1, s2) => s1.Length + s2.Length);
 ```csharp
 // Transforms the list of kennels into a list of all their dogs.
 var allDogsFromKennels = kennels.SelectMany(kennel => kennel.Dogs);
-
 ```
 
 *   두 집합 간의 합집합(사용자 지정 비교 연산자 사용):
@@ -195,7 +187,6 @@ public class DogHairLengthComparer : IEqualityComparer<Dog>
 
 // Gets all the short-haired dogs between two different kennels
 var allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, new DogHairLengthComparer());
-
 ```
 
 *   두 집합 간의 교집합:
@@ -204,7 +195,6 @@ var allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, new DogHairLengthCompa
 // Gets the volunteers who spend share time with two humane societies.
 var volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
                                                      new VolunteerTimeComparer());
-
 ```
 
 *   순서:
@@ -214,7 +204,6 @@ var volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
 var results = DirectionsProcessor.GetDirections(start, end)
               .OrderBy(direction => direction.HasNoTolls)
               .ThenBy(direction => direction.EstimatedTime);
-
 ```
 
 *   마지막으로, 고급 샘플: 동일한 형식을 가진 두 인스턴스의 속성 값이 같은지 확인([이 StackOverflow 게시물](http://stackoverflow.com/a/844855)에서 가져와 수정함):
@@ -239,7 +228,6 @@ public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params st
 
     return self == to;
 }
-
 ```
 
 ## <a name="plinq"></a>PLINQ
@@ -260,7 +248,6 @@ public static string GetAllFacebookUserLikesMessage(IEnumerable<FacebookUser> fa
     return facebookUsers.AsParallel()
                         .Aggregate(seed, threadAccumulator, threadResultAccumulator, resultSelector);
 }
-
 ```
 
 이 코드는 필요에 따라 시스템 스레드 간에 `facebookUsers`를 분할하고, 각 스레드의 총계를 병렬로 합산한 다음, 각 스레드에서 계산된 결과를 합산하고 그 결과를 멋진 문자열로 프로젝션합니다.

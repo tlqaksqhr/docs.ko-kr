@@ -1,5 +1,5 @@
 ---
-title: "스레드 타이머(C#) | Microsoft 문서"
+title: "스레드 타이머(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1f91fde1340772c62f7779a2503bfb79aba7c3fb
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 30037b5b6d798796e7f76fa045f882b7f335e0d7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="thread-timers-c"></a>스레드 타이머(C#)
-<xref:System.Threading.Timer?displayProperty=fullName> 클래스는 별도 스레드에서 작업을 정기적으로 실행하는 데 유용합니다. 예를 들어 스레드 타이머를 사용하여 데이터베이스의 상태 및 무결성을 확인하거나 중요한 파일을 백업할 수 있습니다.  
+<xref:System.Threading.Timer?displayProperty=fullName> 클래스는 별도 스레드에서 정기적으로 작업을 실행하는 데 유용합니다. 예를 들어 스레드 타이머를 사용하여 데이터베이스의 상태 및 무결성을 확인하거나 중요한 파일을 백업할 수 있습니다.  
   
 ## <a name="thread-timer-example"></a>스레드 타이머 예제  
  다음 예제에서는 2초마다 작업을 시작하고 플래그를 사용하여 타이머를 중지하는 <xref:System.IDisposable.Dispose%2A> 메서드를 시작합니다. 이 예제에서는 출력 창에 상태를 게시합니다.  
@@ -88,3 +89,4 @@ private void TimerTask(object StateObj)
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Threading>   
  [다중 스레드 응용 프로그램(C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)
+

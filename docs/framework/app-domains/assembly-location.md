@@ -1,5 +1,5 @@
 ---
-title: "어셈블리 위치 | Microsoft Docs"
+title: "어셈블리 위치"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 7
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 4ee16bb622b03a5c9975a896aab951ae74d184a9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3bc0fc4e099540a87832b225aa0a3c262c54e9c3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="assembly-location"></a>어셈블리 위치
@@ -44,3 +44,4 @@ ms.lasthandoff: 06/02/2017
  [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)   
  [런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
  [어셈블리를 사용한 프로그래밍](../../../docs/framework/app-domains/programming-with-assemblies.md)
+

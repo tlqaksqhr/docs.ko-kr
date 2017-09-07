@@ -1,5 +1,5 @@
 ---
-title: "방법: 리플렉션 전용 컨텍스트에 어셈블리 로드 | Microsoft Docs"
+title: "방법: 리플렉션 전용 컨텍스트에 어셈블리 로드"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -20,11 +20,11 @@ caps.latest.revision: 8
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 19006cc5f24ffc66b92e53e8174c6bd33c249679
-ms.openlocfilehash: b61d75598572857e8d7b28547a5b94f3fe07faa5
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9af4fa8068f25fd22eafe3ac27fbd7a4c7697c30
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>방법: 리플렉션 전용 컨텍스트에 어셈블리 로드
@@ -60,3 +60,4 @@ ms.lasthandoff: 06/02/2017
  <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>   
  <xref:System.Reflection.Assembly.ReflectionOnly%2A>   
  <xref:System.Reflection.CustomAttributeData>
+

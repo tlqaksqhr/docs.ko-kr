@@ -1,13 +1,9 @@
 ---
-title: "어셈블리 서명 연기 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/30/2017
+title: "어셈블리 서명 연기"
+ms.date: 07/31/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-bcl
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - deferring assembly signing
@@ -20,11 +16,11 @@ caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 2fce2174da6b5d954e0197d7c834289070c09a22
+ms.translationtype: HT
+ms.sourcegitcommit: 0ee5fed355e0d8418500f1ecee53019548d9f7f8
+ms.openlocfilehash: 2c50a652c834dba80595f2ea419bc75148e13419
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="delay-signing-an-assembly"></a>어셈블리 서명 연기
@@ -62,8 +58,8 @@ ms.lasthandoff: 06/02/2017
   
      **–Vr** 또는 **–Vk** 옵션을 사용하여 테스트 키 서명에 대해 .snk 파일을 선택적으로 포함할 수 있습니다.  
   
-    > [!CAUTION]
-    >  개발하는 동안에만 **-Vr** 또는 **–Vk** 옵션을 사용합니다. 어셈블리를 확인 생략 목록에 추가하면 보안상 허점이 발생합니다. 악의적인 어셈블리가 확인 건너뛰기 목록에 추가된 어셈블리의 정규화된 어셈블리 이름(어셈블리 이름, 버전, culture 및 공개 키 토큰)을 사용하여 해당 어셈블리의 ID를 모방할 수 있습니다. 이렇게 되면 악의적인 어셈블리도 확인을 건너뛸 수 있습니다.  
+    > [!WARNING]
+    > 강력한 이름을 보안용으로 사용하지 마세요. 강력한 이름은 고유한 ID를 제공할 뿐입니다.
   
     > [!NOTE]
     >  64비트 컴퓨터에서 Visual Studio를 통해 개발하는 동안 서명 연기를 사용하고 **모든 CPU**에 대한 어셈블리를 컴파일할 경우 **-Vr** 옵션을 두 번 적용해야 할 수 있습니다. Visual Studio에서 **모든 CPU**는 **플랫폼 대상** 빌드 속성의 값이고 명령줄에서 컴파일할 경우 기본값입니다. 응용 프로그램을 명령줄 또는 파일 탐색기에서 실행하려면 [Sn.exe(강력한 이름 도구)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)의 64비트 버전을 사용하여 **-Vr** 옵션을 어셈블리에 적용합니다. 디자인 타임에 어셈블리를 Visual Studio에 로드하려면(예: 어셈블리에 응용 프로그램의 다른 어셈블리에서 사용되는 구성 요소가 포함된 경우) 강력한 이름 도구의 32비트 버전을 사용합니다. 그 이유는 JIT(Just-In-Time) 컴파일러가 명령줄에서 실행되는 어셈블리를 64비트 네이티브 코드로 컴파일하고, 디자인 타임 환경에 로드되는 어셈블리를 32비트 네이티브 코드로 컴파일하기 때문입니다.  
@@ -81,3 +77,4 @@ ms.lasthandoff: 06/02/2017
  [방법: 공개/개인 키 쌍 만들기](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)   
  [Sn.exe(강력한 이름 도구)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)   
  [어셈블리를 사용한 프로그래밍](../../../docs/framework/app-domains/programming-with-assemblies.md)
+

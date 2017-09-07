@@ -1,5 +1,5 @@
 ---
-title: "방법: 첫째 예외 알림 받기 | Microsoft Docs"
+title: "방법: 첫째 예외 알림 받기"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: d5d3cd1e19d8a8156c4ee7968cb06770dcae58d0
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: dd906fa2d45331082b9dc86c972e5630361e2653
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>방법: 첫째 예외 알림 받기
@@ -91,7 +91,7 @@ ms.lasthandoff: 06/02/2017
 > [!NOTE]
 >  기본 응용 프로그램 도메인의 이름은 실행 파일의 이름과 같습니다.  
   
- 기본 응용 프로그램 도메인에 <xref:System.AppDomain.FirstChanceException> 이벤트 처리기를 추가하면 기본 응용 프로그램 도메인이 예외를 처리하기 전에 이벤트가 발생하고 처리됩니다. 이를 확인하려면 `Main()`의 시작 부분에 C# 코드 `AppDomain.CurrentDomain.FirstChanceException += FirstChanceException;`(Visual Basic에서는 `AddHandler AppDomain.CurrentDomain.FirstChanceException, FirstChanceExceptio`n)을 추가합니다.  
+ 기본 응용 프로그램 도메인에 <xref:System.AppDomain.FirstChanceException> 이벤트 처리기를 추가하면 기본 응용 프로그램 도메인이 예외를 처리하기 전에 이벤트가 발생하고 처리됩니다. 이를 확인하려면 `Main()`의 시작 부분에 C# 코드 `AppDomain.CurrentDomain.FirstChanceException += FirstChanceException;`(Visual Basic에서는 `AddHandler AppDomain.CurrentDomain.FirstChanceException, FirstChanceException`)을 추가합니다.  
   
  [!code-csharp[System.AppDomain.FirstChanceException_howto#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#1)] [!code-vb[System.AppDomain.FirstChanceException_howto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#1)]  
   
@@ -101,3 +101,4 @@ ms.lasthandoff: 06/02/2017
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.AppDomain.FirstChanceException>
+

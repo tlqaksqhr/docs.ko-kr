@@ -1,5 +1,5 @@
 ---
-title: "out(제네릭 한정자)(C# 참조) | Microsoft 문서"
+title: "out(제네릭 한정자)(C# 참조)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a5b488eab5966a556b3e3c91ae8c748d11e61367
+ms.translationtype: HT
+ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
+ms.openlocfilehash: a560a0307723d32750a7e26ad4ee1afec360a849
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="out-generic-modifier-c-reference"></a>out(제네릭 한정자)(C# 참조)
@@ -44,7 +44,7 @@ ms.lasthandoff: 03/13/2017
   
  공변(covariant) 대리자에 동일한 형식의 다른 대리자를 할당할 수 있지만 더 파생된 제네릭 형식 매개 변수가 필요합니다.  
   
- 자세한 내용은 [공변성(Covariance) 및 반공변성(Contravariance)](http://msdn.microsoft.com/library/a58cc086-276f-4f91-a366-85b7f95f38b8)을 참조하세요.  
+ 자세한 내용은 [공변성(Covariance) 및 반공변성(Contravariance)](../../programming-guide/concepts/covariance-contravariance/index.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 공변(covariant) 제네릭 인터페이스를 선언, 확장 및 구현하는 방법을 보여 줍니다. 또한 공변(covariant) 인터페이스를 구현하는 클래스에 대해 암시적 변환을 사용하는 방법을 보여 줍니다.  
@@ -71,6 +71,7 @@ ms.lasthandoff: 03/13/2017
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [제네릭 인터페이스의 가변성](http://msdn.microsoft.com/library/e14322da-1db3-42f2-9a67-397daddd6b6a)   
+ [제네릭 인터페이스의 가변성](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)   
  [in](../../../csharp/language-reference/keywords/in-generic-modifier.md)   
  [한정자](../../../csharp/language-reference/keywords/modifiers.md)
+

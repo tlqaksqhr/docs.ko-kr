@@ -1,5 +1,5 @@
 ---
-title: "-target:library(C# 컴파일러 옵션) | Microsoft 문서"
+title: "-target:library(C# 컴파일러 옵션)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f739d778e7bada7f34e42ecfd05364e8cae5d453
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c54599a3badf65fe6d53f74f71fde58772afa6c2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="targetlibrary-c-compiler-options"></a>/target:library(C# 컴파일러 옵션)
@@ -76,3 +76,4 @@ csc /target:library in.cs
 ## <a name="see-also"></a>참고 항목  
  [/target(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)   
  [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)
+

@@ -33,10 +33,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4a988a8a2c5999351061254da2b7877bdffd8a32
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: 1ad08fd188e901f49e01803816407870af37729d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="c-reference"></a>C# 참조
@@ -72,8 +72,7 @@ ms.lasthandoff: 07/28/2017
  [Microsoft 기술 자료의 C# 기술 자료 문서](http://go.microsoft.com/fwlink/?LinkId=70368)  
  MSDN에서 사용할 수 있는 기술 자료 문서에 대한 Microsoft 검색 페이지를 엽니다.  
   
- [C#](../../csharp/csharp.md)  
- Visual C# 설명서 포털을 제공합니다.  
+ [C#](../../csharp/index.md) Visual C# 설명서 포털을 제공합니다.  
   
  [C#용 Visual Studio 개발 환경 사용](/visualstudio/csharp-ide/using-the-visual-studio-development-environment-for-csharp)  
  IDE 및 편집기를 설명하는 개념 및 작업 항목의 링크를 제공합니다.  

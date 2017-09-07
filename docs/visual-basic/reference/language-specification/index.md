@@ -1,6 +1,6 @@
 ---
 title: "Visual Basic 언어 사양"
-ms.date: 2015-07-20
+ms.date: 2017-08-02
 ms.prod: .net
 ms.technology:
 - devlang-visual-basic
@@ -30,10 +30,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2e35bb15d75b715c4137c2bca5ea94697dbbe340
+ms.sourcegitcommit: a16c50310dc45f231d921bce0ae6549864652951
+ms.openlocfilehash: eb8260d1c7349e2a1402f92a54ee118eb2d9ca7d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="visual-basic-language-specification"></a>Visual Basic 언어 사양
@@ -41,13 +41,12 @@ ms.lasthandoff: 07/28/2017
   
  이 사양은 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkId=188623)에서 제공됩니다.  
   
-이 사이트에는 [VB 11 사양](../../../../_vblang/spec/introduction.md)이 들어 있습니다. 이 사양은 [dotnet/vblang GitHub 리포지토리](https://github.com/dotnet/vb/blob/master/spec/README.md)에 포함된 markdown 파일에서 빌드됩니다.
+이 사이트에는 [VB 11 사양](../../../../_vblang/spec/introduction.md)이 들어 있습니다. 이 사양은 [dotnet/vblang GitHub 리포지토리](https://github.com/dotnet/vblang/blob/master/spec/README.md)에 포함된 Markdown 파일에서 빌드됩니다.
 
-사양에 관한 문제는 [dotnet/vblang](https://github.com/dotnet/vblang/issues) 리포지토리에 작성해야 합니다. 또는, 발견한 오류를 수정하는 데 관심이 있는 경우 동일한 리포지토리에 [끌어오기 요청](https://github.com/dotnet/vblang/pulls)을 제출할 수 있습니다.
+사양에 관한 문제는 [dotnet/vblang](https://github.com/dotnet/vblang/issues) 리포지토리에 작성해야 합니다. 또는 발견한 오류를 수정하는 데 관심이 있는 경우 동일한 리포지토리에 [끌어오기 요청](https://github.com/dotnet/vblang/pulls)을 제출할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목  
  [Visual Basic 언어 참조](../../../visual-basic/language-reference/index.md)
 
 >[!div class="step-by-step"]
 [다음](../../../../_vblang/spec/introduction.md)
-

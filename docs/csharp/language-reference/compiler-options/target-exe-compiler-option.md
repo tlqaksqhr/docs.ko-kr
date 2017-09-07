@@ -1,5 +1,5 @@
 ---
-title: "-target:exe(C# 컴파일러 옵션) | Microsoft 문서"
+title: "-target:exe(C# 컴파일러 옵션)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,11 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9d5784186f564241c896333d518e297c3c094f28
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bd035bffb697e895da8765f9e5d230fa84e98f04
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="targetexe-c-compiler-options"></a>/target:exe(C# 컴파일러 옵션)
@@ -79,3 +79,4 @@ csc in.cs
 ## <a name="see-also"></a>참고 항목  
  [/target(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)   
  [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)
+

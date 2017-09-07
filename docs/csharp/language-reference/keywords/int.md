@@ -1,5 +1,5 @@
 ---
-title: "int(C# 참조) | Microsoft 문서"
+title: "int(C# 참조)"
 ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 48283ce80bbbff4182362ea9ae6258d31e175e0d
+ms.translationtype: HT
+ms.sourcegitcommit: 935428cc9442a3e1d15eeb8942176c237bff4e22
+ms.openlocfilehash: 6e87893bcd9800b61297e71b782028fec5116479
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="int-c-reference"></a>int(C# 참조)
@@ -47,9 +47,9 @@ ms.lasthandoff: 03/24/2017
   
 ## <a name="literals"></a>리터럴  
  
-10진수 리터럴, 16진수 리터럴 또는 (C# 7부터) 이진 리터럴을 할당하여 `int` 변수를 선언하고 초기화할 수 있습니다.  정수 리터럴이 `int`의 범위를 벗어난 경우(즉, <xref:System.Int32.MinValue?displayProperty=fullName>보다 작거나 <xref:System.Int32.MaxValue?displayProperty=fullName>보다 큰 경우) 컴파일 오류가 발생합니다. 
+10진수 리터럴, 16진수 리터럴 또는 (C# 7부터) 이진 리터럴을 할당하여 `int` 변수를 선언하고 초기화할 수 있습니다.  정수 리터럴이 `int` 범위를 벗어나는 경우(즉 <xref:System.Int32.MinValue?displayProperty=fullName>보다 작거나 <xref:System.Int32.MaxValue?displayProperty=fullName>보다 큰 경우) 컴파일 오류가 발생합니다. 
 
-다음 예제에서는 10진수, 16진수 및 이진 리터럴로 표현된 16,342와 같은 정수가 `int` 값에 할당됩니다.  
+다음 예제에서는 10진수, 16진수 및 이진 리터럴로 표현된 90,946와 같은 정수가 `int` 값에 할당됩니다.  
   
 [!code-cs[int](../../../../samples/snippets/csharp/language-reference/keywords/numeric-literals.cs#Int)]  
 
@@ -95,7 +95,7 @@ int y = (int)3.0;    // OK: explicit conversion.
  부동 소수점 형식 및 정수 형식이 혼합된 산술 식에 대한 자세한 내용은 [float](../../../csharp/language-reference/keywords/float.md) 및 [double](../../../csharp/language-reference/keywords/double.md)을 참조하세요.  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Int32>   
@@ -106,3 +106,4 @@ int y = (int)3.0;    // OK: explicit conversion.
  [기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [명시적 숫자 변환 표](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

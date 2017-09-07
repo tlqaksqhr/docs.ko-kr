@@ -1,5 +1,5 @@
 ---
-title: "SecAnnotate.exe(.NET Security Annotator 도구) | Microsoft Docs"
+title: "SecAnnotate.exe(.NET Security Annotator 도구)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -22,11 +22,11 @@ caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: c274d1b9cdb0e9bf96a79d89f2f75b7f57dee25a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cdfe635b913f379a031994ad359a7d6ab657c255
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe(.NET Security Annotator 도구)
@@ -70,3 +70,4 @@ SecAnnotate.exe [parameters] [assemblies]
  .NET Security Annotator에 대한 자세한 내용은 .NET Security 블로그의 [SecAnnotate를 사용하여 어셈블리의 투명도 위반 분석](http://go.microsoft.com/fwlink/?LinkId=187648) 항목을 참조하세요.  
   
 ## <a name="examples"></a>예제
+

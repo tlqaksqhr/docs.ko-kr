@@ -1,5 +1,5 @@
 ---
-title: "공통 특성(C#) | Microsoft 문서"
+title: "공통 특성(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bafcb0a9a81d97e060acca38b7c0bfca23efdaad
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 98bb21ef0b5582202578b72fd6eaf459801747cc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="common-attributes-c"></a>공통 특성(C#)
@@ -54,7 +55,7 @@ ms.lasthandoff: 03/13/2017
 -   어셈블리 매니페스트 특성  
   
 ### <a name="assembly-identity-attributes"></a>어셈블리 ID 특성  
- name, version 및 culture의 세 가지 특성(해당하는 경우 강력한 이름 포함)이 어셈블리의 ID를 결정합니다. 이러한 특성은 어셈블리의 전체 이름을 구성하며 코드에서 어셈블리를 참조할 때 필요합니다. 특성을 사용하여 어셈블리의 버전 및 문화권을 설정할 수 있습니다. 그러나 이름 값은 어셈블리가 만들어질 때 어셈블리 매니페스트가 포함된 파일에 따라 컴파일러, [어셈블리 정보 대화 상자](https://docs.microsoft.com/visualstudio/ide/reference/assembly-information-dialog-box)의 Visual Studio IDE 또는 어셈블리 링커(Al.exe)에서 설정됩니다. <xref:System.Reflection.AssemblyFlagsAttribute> 특성은 어셈블리의 여러 복사본이 공존할 수 있는지 지정합니다.  
+ name, version 및 culture의 세 가지 특성(해당하는 경우 강력한 이름 포함)이 어셈블리의 ID를 결정합니다. 이러한 특성은 어셈블리의 전체 이름을 구성하며 코드에서 어셈블리를 참조할 때 필요합니다. 특성을 사용하여 어셈블리의 버전 및 문화권을 설정할 수 있습니다. 그러나 이름 값은 어셈블리가 만들어질 때 어셈블리 매니페스트가 포함된 파일에 따라 컴파일러, [어셈블리 정보 대화 상자](/visualstudio/ide/reference/assembly-information-dialog-box)의 Visual Studio IDE 또는 어셈블리 링커(Al.exe)에서 설정됩니다. <xref:System.Reflection.AssemblyFlagsAttribute> 특성은 어셈블리의 여러 복사본이 공존할 수 있는지 여부를 지정합니다.  
   
  다음 표에서는 ID 특성을 보여 줍니다.  
   
@@ -192,16 +193,18 @@ static void DoIfAorB()
   
  AND 연산자를 통해 기호를 논리적으로 연결하는 결과를 얻으려면 순차적 조건부 메서드를 정의합니다. 예를 들어 아래 두 번째 메서드는 `A` 및 `B`가 둘 다 정의된 경우에만 실행됩니다.  
   
-```csharp  
-<Conditional("A")>   
-Shared Sub DoIfA()  
-    DoIfAandB()  
-End Sub  
+```csharp
+[Conditional("A")]  
+static void DoIfA()  
+{  
+    DoIfAandB();  
+}  
   
-<Conditional("B")>   
-Shared Sub DoIfAandB()  
-    ' Code to execute when both A and B are defined...  
-End Sub  
+[Conditional("B")]  
+static void DoIfAandB()  
+{  
+    // Code to execute when both A and B are defined...  
+}  
 ```  
   
 ### <a name="using-conditional-with-attribute-classes"></a>특성 클래스와 함께 조건부 사용  
@@ -250,3 +253,4 @@ class SampleClass
  [특성](https://msdn.microsoft.com/library/5x6cd29c)   
  [리플렉션(C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
  [리플렉션을 사용하여 특성 액세스(C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+

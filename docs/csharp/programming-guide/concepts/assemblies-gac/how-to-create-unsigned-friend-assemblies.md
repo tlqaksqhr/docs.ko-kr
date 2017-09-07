@@ -1,5 +1,5 @@
 ---
-title: "방법: 서명되지 않은 Friend 어셈블리 만들기(C#) | Microsoft 문서"
+title: "방법: 서명되지 않은 Friend 어셈블리 만들기(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c7d2924f0a619c234871232e155bb6f23e43aee4
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 967436204ab0824a510c12dc4c6e288d91d7dfa0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a>방법: 서명되지 않은 Friend 어셈블리 만들기(C#)
@@ -112,3 +113,4 @@ ms.lasthandoff: 03/13/2017
  [Friend 어셈블리(C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)   
  [방법: 서명된 Friend 어셈블리 만들기(C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)   
  [C# 프로그래밍 가이드](../../../../csharp/programming-guide/index.md)
+

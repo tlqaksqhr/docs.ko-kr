@@ -1,5 +1,5 @@
 ---
-title: "동적 언어 런타임 개요 | Microsoft Docs"
+title: "동적 언어 런타임 개요"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -19,11 +19,11 @@ caps.latest.revision: 26
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 0930cd01af6af3f00aae070e712e5a758fd99090
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0f6bfc54a3a597325da153852710a0b22871b54e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="dynamic-language-runtime-overview"></a>동적 언어 런타임 개요
@@ -60,7 +60,7 @@ DLR(*동적 언어 런타임*)은 동적 언어에 대한 서비스 집합을 CL
   
  DLR을 사용하여 개발된 언어의 예는 다음과 같습니다.  
   
--   IronPython. [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141040) 웹 사이트에서 오픈 소스 소프트웨어로 제공됩니다.  
+-   IronPython. [GitHub](https://github.com/IronLanguages/ironpython2) 웹 사이트에서 오픈 소스 소프트웨어로 제공됩니다.  
   
 -   IronRuby. [RubyForge](http://go.microsoft.com/fwlink/?LinkId=141044) 웹 사이트에서 오픈 소스 소프트웨어로 제공됩니다.  
   
@@ -107,3 +107,4 @@ DLR 아키텍처
  [공용 언어 런타임](../../../docs/standard/clr.md)   
  [Expression Trees](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)   
  [연습: 동적 개체 만들기 및 사용](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+

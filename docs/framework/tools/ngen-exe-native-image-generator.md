@@ -1,5 +1,5 @@
 ---
-title: "Ngen.exe(네이티브 이미지 생성기) | Microsoft Docs"
+title: "Ngen.exe(네이티브 이미지 생성기)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -31,11 +31,11 @@ caps.latest.revision: 57
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
-ms.openlocfilehash: 65ecfdf69d739e76e386ed334c95f31ad266b904
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 75c329c2d57e1731c1f3cd0d34f680c3706763ce
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe(네이티브 이미지 생성기)
@@ -202,7 +202,7 @@ ngen /? | /help
 ## <a name="generating-images-for-----different-scenarios"></a>다른 시나리오에 대한 이미지 생성  
  어셈블리의 네이티브 이미지를 생성하면 런타임에서 해당 어셈블리를 실행할 때마다 자동으로 이 네이티브 이미지를 찾아 사용하려고 합니다. 사용 시나리오에 따라 여러 이미지를 생성할 수 있습니다.  
   
- 예를 들어, 디버깅 또는 프로파일링 시나리오에서 어셈블리를 실행하는 경우 런타임은 `/Debug` 및 `/Profile` 옵션을 사용하여 생성한 네이티브 이미지를 찾습니다. 일치하는 네이티브 이미지를 찾을 수 없는 경우 런타임은 표준 JIT 컴파일로 되돌아갑니다. 네이티브 이미지를 디버그하는 유일한 방법은 `/Debug` 옵션으로 네이티브 이미지를 만드는 것입니다.  
+ 예를 들어, 디버깅 또는 프로파일링 시나리오에서 어셈블리를 실행하는 경우 런타임은 `/Debug` 및 `/Profile` 옵션을 사용하여 생성한 네이티브 이미지를 찾습니다. 일치하는 네이티브 이미지를 찾을 수 없는 경우 런타임은 표준 JIT 컴파일로 되돌아갑니다. 네이티브 이미지를 디버깅하는 유일한 방법은 `/Debug` 옵션으로 네이티브 이미지를 만드는 것입니다.  
   
  `uninstall` 작업은 시나리오도 인식하므로 시나리오를 모두 제거하거나 선택한 시나리오만 제거할 수 있습니다.  
   
@@ -305,7 +305,7 @@ using System.Runtime.CompilerServices;
 [assembly:DependencyAttribute("Assembly2", LoadHint.Sometimes)]  
 ```  
   
-```cpp#  
+```cpp  
 using namespace System::Runtime::CompilerServices;  
 [assembly:DependencyAttribute("Assembly1", LoadHint.Always)];  
 [assembly:DependencyAttribute("Assembly2", LoadHint.Sometimes)];  

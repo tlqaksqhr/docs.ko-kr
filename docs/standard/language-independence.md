@@ -1,26 +1,26 @@
 ---
 title: "언어 독립성 및 언어 독립적 구성 요소"
-description: "언어 독립성 및 언어 독립적 구성 요소"
+description: "C#, C++/CLI, F#, IronPython, VB, Visual COBOL, PowerShell 등 .NET에서 지원되는 많은 언어 중 하나로 개발할 수 있는 방법을 알아봅니다."
 keywords: .NET, .NET Core
-author: stevehoag
-ms.author: shoag
+author: dotnet-bot
+ms.author: dotnetcontent
 ms.date: 07/22/2016
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.translationtype: Human Translation
-ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
-ms.openlocfilehash: 815d9c24c139ef738b256c7bee791756a2fdb3b3
+ms.translationtype: HT
+ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
+ms.openlocfilehash: 3da0bc3c9abf28aeb588ec9277c4e0b503df4d8b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/10/2017
+ms.lasthandoff: 08/21/2017
 
 ---
 
 # <a name="language-independence-and-language-independent-components"></a>언어 독립성 및 언어 독립적 구성 요소
 
-.NET 플랫폼은 언어 독립적입니다. 즉, 개발자는 C#, F#, Visual Basic 등의 .NET 플랫폼을 대상으로 하는 많은 언어 중 하나로 개발할 수 있습니다. 원래 작성된 언어를 모르거나 원래의 언어 규칙을 따르지 않고도 .NET 플랫폼용으로 개발된 클래스 라이브러리의 형식과 멤버에 액세스할 수 있습니다. 구성 요소 개발자인 경우 해당 언어와 관계없이 모든 .NET 앱에서 구성 요소에 액세스할 수 있습니다.
+.NET은 언어 독립적입니다. 즉, 개발자는 C#, F#, Visual Basic 등의 .NET 구현을 대상으로 하는 많은 언어 중 하나로 개발할 수 있습니다. 원래 작성된 언어를 모르거나 원래의 언어 규칙을 따르지 않고도 .NET 구현용으로 개발된 클래스 라이브러리의 형식과 멤버에 액세스할 수 있습니다. 구성 요소 개발자인 경우 해당 언어와 관계없이 모든 .NET 앱에서 구성 요소에 액세스할 수 있습니다.
 
 > [!NOTE]
 > 이 문서의 첫 부분에서는 언어 독립적 구성 요소, 즉 모든 언어로 작성된 앱에서 사용할 수 있는 구성 요소를 만드는 방법을 설명합니다. 여러 언어로 작성된 소스 코드에서 구성 요소나 앱을 하나 만들 수도 있습니다. 이 문서의 두 번째 부분에서 [언어 간 상호 운용성](#cross-language-interoperability)을 참조하세요. 
@@ -347,7 +347,7 @@ CLS 규격 형식 | 설명
  
  .NET Framework 클래스 라이브러리 또는 기타 다른 클래스 라이브러리는 다음 예시와 같은 CLS 규격이 아닌 기타 형식을 포함할 수 있습니다. 
  
- * boxed 값 형식. 다음 C# 예제에서는 이름이 `Value`인 `int` *형식의 public 속성이 있는 클래스를 만듭니다. `int`*는 boxed 값 형식이므로 컴파일러에서 CLS 비규격으로 플래그를 지정합니다.
+ * boxed 값 형식. 다음 C# 예제에서는 이름이 `Value`인 `int`* 형식의 public 속성이 있는 클래스를 만듭니다. `int`*는 boxed 값 형식이므로 컴파일러에서 CLS 비규격으로 플래그를 지정합니다.
 
   ```csharp
   using System;
@@ -1110,7 +1110,7 @@ CLS 규격 배열은 다음 규칙을 따릅니다.
          Return numbersOut
      End Function
   End Module
-```
+  ```
 
 ### <a name="interfaces"></a>인터페이스
 
@@ -1626,9 +1626,9 @@ End Module
 '       Outer`1+Inner1B`1[System.String,System.Int32]
 ```
 
-제네릭 형식 이름을 *name*'*n* 형식으로 인코드합니다. 여기서 *name*은 형식 이름, *`*은 문자 리터럴, *n*은 이 형식에서 선언된 매개 변수 개수 또는 중첩된 제네릭 형식의 경우 새로 도입된 형식 매개 변수 개수입니다. 제네릭 형식 이름의 이러한 인코딩은 라이브러리에서 CLS 규격 제네릭 형식에 액세스하기 위해 리플렉션을 사용하는 개발자들에게 주로 유용합니다. 
+제네릭 형식 이름을 name'n 형식으로 인코드합니다. 여기서 name은 형식 이름, `는 문자 리터럴, n은 이 형식에서 선언된 매개 변수 개수 또는 중첩된 제네릭 형식의 경우 새로 도입된 형식 매개 변수 개수입니다. 제네릭 형식 이름의 이러한 인코딩은 라이브러리에서 CLS 규격 제네릭 형식에 액세스하기 위해 리플렉션을 사용하는 개발자들에게 주로 유용합니다. 
 
-제약 조건이 제네릭 형식에 적용될 경우 제약 조건으로 사용되는 모든 형식도 CLS 규격이어야 합니다. 다음 예제에서는 CLS 규격 및 `BaseClass` 제네릭 클래스가 아닌 이름이 `BaseCollection`인 클래스를 정의합니다. 해당 형식 매개 변수는 `BaseClass`에서 파생되어야 합니다. 하지만 `BaseClass`는 CLS 규격이 아니므로 컴파일러에서 경고가 발생합니다. 
+제약 조건이 제네릭 형식에 적용될 경우 제약 조건으로 사용되는 모든 형식도 CLS 규격이어야 합니다. 다음 예제에서는 CLS 규격 및 `BaseClass` 제네릭 클래스가 아닌 이름이 `BaseCollection`인 클래스를 정의합니다. 해당 형식 매개 변수는 `BaseClass`에서 파생되어야 합니다. 하지만 `BaseClass`는 CLS 규격이 아니므로 컴파일러에서 경고를 발생시킵니다. 
 
 ```csharp
 using System;
@@ -1660,7 +1660,6 @@ End Class
 '    
 '    Public Class BaseCollection(Of T As BaseClass)
 '                                        ~~~~~~~~~
-
 ```
 
 제네릭 형식이 제네릭 기본 형식에서 파생되는 경우 기본 형식에 대한 제약 조건이 충족됨을 보장할 수 있도록 모든 제약 조건을 다시 선언해야 합니다. 다음 예제에서는 임의의 숫자 형식을 나타낼 수 있는 `Number<T>`를 정의합니다. 또한 부동 소수점 값을 나타내는 `FloatingPoint<T>` 클래스도 정의합니다. 하지만 이 소스 코드는 `Number<T>`(여기서 T는 값 형식이어야 함)에 대한 제약 조건을 `FloatingPoint<T>`에 적용하지 못하므로 컴파일되지 못합니다.
@@ -1938,7 +1937,7 @@ CLS 규격 클래스의 생성자와 구조체는 다음 규칙을 따라야 합
 
 * 파생된 클래스의 생성자는 상속된 인스턴스 데이터에 액세스하기 전에 기본 클래스의 인스턴스 생성자를 호출해야 합니다. 이 요구 사항은 파생된 클래스에서 기본 클래스 생성자가 상속되지 않기 때문입니다. 이 규칙은 직접 상속을 지원하지 않는 구조체에는 적용되지 않습니다. 
 
-  일반적으로 컴파일러는 다음 예제에서처럼 CLS 규격 여부와는 독립적으로 이 규칙을 적용합니다. 이 예제에서는 `Person` 클래스에서 파생된 `Doctor` 클래스를 만들지만 `Doctor` 클래스는 `Person` 클래스 생성자를 호출하여 상속된 인스턴스 필드를 초기화하지 못합니다. 
+  일반적으로 컴파일러는 다음 예제에서처럼 CLS 규격 여부와는 독립적으로 이 규칙을 적용합니다. 이 예제에서는 `Doctor` 클래스에서 파생되는 `Person` 클래스를 만들지만 `Doctor` 클래스는 `Person` 클래스 생성자를 호출하여 상속된 인스턴스 필드를 초기화하는 데 실패합니다. 
 
     ```csharp
     using System;

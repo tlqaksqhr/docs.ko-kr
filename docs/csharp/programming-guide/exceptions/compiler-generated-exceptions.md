@@ -1,5 +1,5 @@
 ---
-title: "컴파일러 생성 예외(C# 프로그래밍 가이드) | Microsoft 문서"
+title: "컴파일러 생성 예외(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4015551ac983610afc8bf1f08e73a33c1ac338ff
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d8fbae9272b34dd4d010199470c930c846cd1b74
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="compiler-generated-exceptions-c-programming-guide"></a>컴파일러 생성 예외(C# 프로그래밍 가이드)
@@ -38,7 +39,7 @@ ms.lasthandoff: 03/13/2017
   
 |예외|설명|  
 |---------------|-----------------|  
-|<xref:System.ArithmeticException>|<xref:System.DivideByZeroException> 및 <xref:System.OverflowException>과 같이 산술 연산 중에 발생하는 예외의 기본 클래스입니다.|  
+|<xref:System.ArithmeticException>|<xref:System.DivideByZeroException>, <xref:System.OverflowException> 등의 산술 연산 중에 발생하는 예외에 대한 기본 클래스입니다.|  
 |<xref:System.ArrayTypeMismatchException>|제공된 요소의 실제 형식이 배열의 실제 형식과 호환되지 않아 배열이 요소를 저장할 수 없는 경우 throw됩니다.|  
 |<xref:System.DivideByZeroException>|정수 값을 0으로 나누려고 시도할 경우 throw됩니다.|  
 |<xref:System.IndexOutOfRangeException>|인덱스가 0보다 작거나 배열 경계를 벗어날 때 배열을 인덱싱하려고 시도할 경우 throw됩니다.|  
@@ -56,3 +57,4 @@ ms.lasthandoff: 03/13/2017
  [try-catch](../../../csharp/language-reference/keywords/try-catch.md)   
  [try-finally](../../../csharp/language-reference/keywords/try-finally.md)   
  [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
+

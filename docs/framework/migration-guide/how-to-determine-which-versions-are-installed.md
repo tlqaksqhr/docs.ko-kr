@@ -1,13 +1,9 @@
 ---
 title: "방법: 설치된 .NET Framework 버전 확인"
-ms.custom: 
-ms.date: 04/07/2017
+ms.date: 08/09/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - versions, determining for .NET Framework
@@ -18,10 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cddee407d1245568054871d71f2840f463859535
+ms.sourcegitcommit: 775e4512a5ff31c7059961f6332c6bdc0dc5247a
+ms.openlocfilehash: afb01fd47ed2ce3b9c5838f3a8f61c8d34147378
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>방법: 설치된 .NET Framework 버전 확인
@@ -37,13 +33,14 @@ ms.lasthandoff: 07/28/2017
  [레지스트리 보기(버전 4.5 이상)](#net_b)  
  [코드를 사용하여 레지스트리 쿼리(버전 1-4)](#net_c)  
  [코드를 사용하여 레지스트리 쿼리(버전 4.5 이상)](#net_d)  
+ [PowerShell을 사용하여 레지스트리 쿼리(버전 4.5 이상)](#ps_a)  
   
  CLR 버전을 찾으려면 다음을 참조하여 도구나 코드를 사용합니다.  
   
  [Clrver 도구 사용](#clr_a)  
  [코드를 사용하여 System.Environment 클래스 쿼리](#clr_b)  
   
- .NET Framework 버전별로 설치된 업데이트를 검색하는 방법에 대한 자세한 내용은 [방법: 설치된 .NET Framework 업데이트 확인](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)을 참조하십시오. .NET Framework 설치에 대한 자세한 내용은 [개발자용 .NET Framework 설치](../../../docs/framework/install/guide-for-developers.md)를 참조하세요.  
+ .NET Framework 버전별로 설치된 업데이트를 검색하는 방법에 대한 자세한 내용은 [방법: 설치된 .NET Framework 업데이트 확인](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)을 참조하세요. .NET Framework 설치에 대한 자세한 내용은 [개발자용 .NET Framework 설치](../../../docs/framework/install/guide-for-developers.md)를 참조하세요.  
   
 <a name="net_a"></a>   
 #### <a name="to-find-net-framework-versions-by-viewing-the-registry-net-framework-1-4"></a>레지스트리를 확인하여 .NET Framework 버전을 찾으려면(.NET Framework 1-4)  
@@ -107,7 +104,7 @@ ms.lasthandoff: 07/28/2017
      다음 코드에서는 이 쿼리의 예제를 보여 줍니다.
 
     > [!NOTE]
-    > 이 코드는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 이상 버전을 검색하는 방법은 보여 주지 않습니다. 이전 섹션에 설명된 대로 `Release` DWORD를 확인하여 해당 버전을 검색합니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 또는 이후 버전을 검색하는 코드에 대해서는 이 문서의 다음 섹션을 참조하십시오.
+    > 이 코드는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 이상 버전을 검색하는 방법은 보여 주지 않습니다. 이전 섹션에 설명된 대로 `Release` DWORD를 확인하여 해당 버전을 검색합니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 또는 이후 버전을 검색하는 코드에 대해서는 이 문서의 다음 섹션을 참조하세요.
 
      [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed1.cs)]    [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed1.vb)]
 
@@ -154,6 +151,27 @@ ms.lasthandoff: 07/28/2017
 
     - 최신 버전에서 가장 오래된 버전 순서대로 확인합니다.
 
+<a name="ps_a"></a> 
+#### <a name="to-check-for-a-minimum-required-net-framework-version-by-querying-the-registry-in-powershell-net-framework-45-and-later"></a>PowerShell로 레지스트리를 쿼리하여 최소한 필요한 .NET Framework 버전을 확인하려면(.NET Framework 4.5 이상)
+
+- 다음 예제에서는 `Release` 키워드 값을 확인하여 Windows OS 버전에 관계없이 .NET Framework 4.6.2 이상이 설치되어 있는지 확인합니다(해당하는 경우 `True` 반환, 이외의 경우 `False` 반환).
+
+    ```PowerShell
+    Get-ChildItem "hklm:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\" | Get-ItemPropertyValue -Name Release | % { $_ -ge 394802 } 
+    ```
+
+    다른 최소한 필요한 .NET Framework 버전을 확인하기 위해 이전 예제의 `394802`를 다음 표의 다른 값으로 바꿀 수 있습니다.
+  
+    |버전|릴리스 DWORD의 최소 값|
+    |-------------|--------------------------------|
+    |.NET Framework 4.5|378389|
+    |.NET Framework 4.5.1|378675|
+    |.NET Framework 4.5.2|379893|
+    |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|393295|
+    |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|394254|
+    |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|394802|
+    |.NET Framework 4.7|460798|
+
 <a name="clr_a"></a> 
 #### <a name="to-find-the-current-runtime-version-by-using-the-clrver-tool"></a>Clrver 도구를 사용하여 현재 런타임 버전을 찾으려면
 
@@ -167,7 +185,7 @@ ms.lasthandoff: 07/28/2017
     v4.0.30319
     ```
 
-     이 도구의 사용 방법에 대한 자세한 내용은 [Clrver.exe(CLR 버전 도구)](~/docs/framework/tools/clrver-exe-clr-version-tool.md)를 참조하십시오.
+     이 도구의 사용 방법에 대한 자세한 내용은 [Clrver.exe(CLR 버전 도구)](~/docs/framework/tools/clrver-exe-clr-version-tool.md)를 참조하세요.
 
 <a name="clr_b"></a> 
 #### <a name="to-find-the-current-runtime-version-by-querying-the-environment-class-in-code"></a>Environment 클래스를 코드로 쿼리하여 현재 런타임 버전을 확인하려면

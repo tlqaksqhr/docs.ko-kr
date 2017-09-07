@@ -30,10 +30,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 909c90da69d85512399eacd16e1ba6db7aad2291
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: 56e22638457017688ff380f6683b463b47c53a17
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="nullable-types-c-programming-guide"></a>nullable 형식(C# 프로그래밍 가이드)
@@ -56,7 +56,7 @@ Nullable 형식은 <xref:System.Nullable%601?displayProperty=fullName> 구조체
   
 -   다음 예제와 같이 <xref:System.Nullable%601.HasValue%2A> 및 <xref:System.Nullable%601.Value%2A> 읽기 전용 속성을 사용하여 null인지 테스트하고 값을 검색합니다. `if(x.HasValue) j = x.Value;`  
   
-    -   `HasValue` 속성은 변수에 값이 있으면 `true`를, `null`이면 `false`를 반환합니다.
+    -   `HasValue` 속성은 변수에 값이 있으면 `true`를, `null`이면 `false`를 반환합니다.  
   
     -   `Value` 속성은 할당된 값이 있으면 해당 값을 반환합니다. 그렇지 않으면 <xref:System.InvalidOperationException?displayProperty=fullName>이 throw됩니다.  
   
@@ -83,7 +83,6 @@ Nullable 형식은 <xref:System.Nullable%601?displayProperty=fullName> 구조체
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Nullable>   
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C#](../../../csharp/csharp.md)   
+ [C#](../../../csharp/index.md)   
  [C# 참조](../../../csharp/language-reference/index.md)   
  ['리프트'란 정확히 어떤 의미입니까?](http://go.microsoft.com/fwlink/?LinkId=112382)
-

@@ -1,5 +1,5 @@
 ---
-title: "액세스 가능성 수준(C# 참조) | Microsoft 문서"
+title: "액세스 가능성 수준(C# 참조)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -28,11 +28,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 30220e92e55ac6101cf8fedd8920755cd25978bd
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 796802a407c486c1df5332d5b4920467f3a1171b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="accessibility-levels-c-reference"></a>액세스 가능성 수준(C# 참조)
@@ -43,10 +43,10 @@ ms.lasthandoff: 03/13/2017
 |`public`|액세스가 제한되지 않습니다.|  
 |`protected`|액세스가 포함하는 클래스 또는 포함하는 클래스에서 파생된 형식으로 제한됩니다.|  
 |`internal`|액세스가 현재 어셈블리로 제한됩니다.|  
-|`protected` `internal`|액세스가 현재 어셈블리 또는 포함하는 클래스에서 파생된 형식으로 제한됩니다.|  
+|`protected internal`|액세스가 현재 어셈블리 또는 포함하는 클래스에서 파생된 형식으로 제한됩니다.|  
 |`private`|액세스가 포함하는 형식으로 제한됩니다.|  
   
- `protected` `internal` 조합을 사용할 경우를 제외하고 멤버 또는 형식에는 액세스 한정자가 하나만 허용됩니다.  
+ `protected internal` 조합을 사용할 경우를 제외하고 멤버 또는 형식에는 액세스 한정자가 하나만 허용됩니다.  
   
  네임스페이스에는 액세스 한정자가 허용되지 않습니다. 네임스페이스에는 액세스 제한이 없습니다.  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 03/13/2017
 |소속 그룹|기본 멤버 액세스 가능성|멤버의 허용된 선언된 액세스 가능성|  
 |----------------|----------------------------------|--------------------------------------------------|  
 |`enum`|`public`|없음|  
-|`class`|`private`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`<br /><br /> `protected` `internal`|  
+|`class`|`private`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`<br /><br /> `protected internal`|  
 |`interface`|`public`|없음|  
 |`struct`|`private`|`public`<br /><br /> `internal`<br /><br /> `private`|  
   
@@ -80,3 +80,4 @@ ms.lasthandoff: 03/13/2017
  [private](../../../csharp/language-reference/keywords/private.md)   
  [protected](../../../csharp/language-reference/keywords/protected.md)   
  [internal](../../../csharp/language-reference/keywords/internal.md)
+

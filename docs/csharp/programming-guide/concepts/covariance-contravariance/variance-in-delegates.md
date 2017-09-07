@@ -1,5 +1,5 @@
 ---
-title: "대리자의 가변성(C#) | Microsoft 문서"
+title: "대리자의 가변성(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: cd1b765faa734973bf5e184cee2ac934ebdf9241
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 79de8218f3fcdf52dad84bb0bacffde01a222066
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="variance-in-delegates-c"></a>대리자의 가변성(C#)
@@ -157,7 +157,7 @@ public delegate void DContravariant<in A>(A a);
 ```  
   
 > [!IMPORTANT]
-> C#의  `ref` 및 `out` 매개 변수는 variant로 표시할 수 없습니다.  
+>  C#의 `ref` 및 `out` 매개 변수는 variant로 표시할 수 없습니다.  
   
  동일한 대리자에서, 그러나 서로 다른 형식 매개 변수에 대해 분산 및 공변성(covariance)을 모두 지원하는 것도 가능합니다. 다음 예제에서 이를 확인할 수 있습니다.  
   
@@ -214,6 +214,7 @@ public static void Test()
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [제네릭](https://msdn.microsoft.com/library/ms172192)   
+ [제네릭](~/docs/standard/generics/index.md)   
  [Func 및 Action 제네릭 대리자에 가변성 사용(C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)   
  [방법: 대리자 조합(멀티캐스트 대리자)](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
+

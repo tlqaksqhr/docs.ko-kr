@@ -1,5 +1,5 @@
 ---
-title: "-target(C# 컴파일러 옵션) | Microsoft 문서"
+title: "-target(C# 컴파일러 옵션)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -32,17 +32,18 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 615a0e2993dc78919008e8f9245504a486e2fb77
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 22dc86ce0c0a24681d05e54e5f1ba4f36295659a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="target-c-compiler-options"></a>/target(C# 컴파일러 옵션)
 **/target** 컴파일러 옵션은 다음 네 가지 형태 중 하나로 지정할 수 있습니다.  
   
  [/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md)  
- [!INCLUDE[win8_appname_long](../../../csharp/includes/win8_appname_long_md.md)] 앱에 대한 .exe 파일을 만듭니다.  
+ [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 앱에 대한 .exe 파일을 만듭니다.  
   
  [/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md)  
  .exe 파일을 만듭니다.  
@@ -63,7 +64,7 @@ ms.lasthandoff: 03/13/2017
   
  어셈블리 매니페스트는 컴파일의 첫 번째 .exe 출력 파일 또는 .exe 출력 파일이 없는 경우 첫 번째 DLL에 배치됩니다. 예를 들어 다음 명령줄에서 매니페스트는 `1.exe`에 배치됩니다.  
   
-```  
+```console  
 csc /out:1.exe t1.cs /out:2.netmodule t2.cs  
 ```  
   
@@ -71,7 +72,7 @@ csc /out:1.exe t1.cs /out:2.netmodule t2.cs
   
  어셈블리를 만드는 경우 <xref:System.CLSCompliantAttribute> 특성을 사용하여 코드의 전체 또는 일부를 CLS 규격으로 지정할 수 있습니다.  
   
-```  
+```csharp  
 // target_clscompliant.cs  
 [assembly:System.CLSCompliant(true)]   // specify assembly compliance  
   
@@ -82,9 +83,10 @@ public class TestClass
 }  
 ```  
   
- 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>를 참조하세요.  
+ 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)   
- [NIB 방법: 프로젝트 속성 및 구성 설정 수정](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)   
+ [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)   
  [/subsystemversion(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)
+

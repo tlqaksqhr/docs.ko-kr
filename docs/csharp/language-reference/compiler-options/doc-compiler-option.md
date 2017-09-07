@@ -1,5 +1,5 @@
 ---
-title: "-doc(C# 컴파일러 옵션) | Microsoft 문서"
+title: "/doc(C# 컴파일러 옵션)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -35,11 +35,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 8addbbfe1e854feee560192292b713da4fc67e6c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 58608c1301b2df3286c1f8a1de189f6256b19052
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="doc-c-compiler-options"></a>/doc(C# 컴파일러 옵션)
@@ -64,7 +64,7 @@ ms.lasthandoff: 03/13/2017
   
  Main을 포함하는 소스 코드 파일이 먼저 XML로 출력됩니다.  
   
- [IntelliSense](https://docs.microsoft.com/visualstudio/ide/using-intellisense) 기능에서 사용하기 위해 생성된 .xml 파일을 사용하려면 .xml 파일의 이름을 지원하려는 어셈블리와 동일하게 지정한 다음 .xml 파일이 어셈블리와 동일한 디렉터리에 있도록 해야 합니다. 따라서 어셈블리가 Visual Studio 프로젝트에서 참조되면 .xml 파일도 검색됩니다. 자세한 내용은 [코드 주석 제공](https://docs.microsoft.com/visualstudio/ide/supplying-xml-code-comments)을 참조하세요.  
+ [IntelliSense](/visualstudio/ide/using-intellisense) 기능에서 사용하기 위해 생성된 .xml 파일을 사용하려면 .xml 파일의 이름을 지원하려는 어셈블리와 동일하게 지정한 다음 .xml 파일이 어셈블리와 동일한 디렉터리에 있도록 해야 합니다. 따라서 어셈블리가 Visual Studio 프로젝트에서 참조되면 .xml 파일도 검색됩니다. 자세한 내용은 [코드 주석 제공](/visualstudio/ide/supplying-xml-code-comments)을 참조하세요.  
   
  [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)을 사용하여 컴파일하지 않으면 컴파일의 출력 파일에 대한 어셈블리 매니페스트를 포함하는 파일의 이름을 지정하는 \<assembly>\</assembly> 태그가 `file`에 포함됩니다.  
   
@@ -81,8 +81,9 @@ ms.lasthandoff: 03/13/2017
   
 3.  **XML 문서 파일** 속성을 수정합니다.  
   
- 프로그래밍 방식으로 이 컴파일러 옵션을 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>을 참조하세요.  
+ 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)   
- [NIB 방법: 프로젝트 속성 및 구성 설정 수정](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+ [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)
+

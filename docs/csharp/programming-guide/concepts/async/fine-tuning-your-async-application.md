@@ -1,5 +1,5 @@
 ---
-title: "Async 응용 프로그램 미세 조정(C#) | Microsoft 문서"
+title: "Async 응용 프로그램 미세 조정(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,20 +19,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 74cab732debe2381cbd3b9106b2431e2490ef57e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7afcdb28fbe10d5aa33dd2704d264ffd716af5d6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="fine-tuning-your-async-application-c"></a>Async 응용 프로그램 미세 조정(C#)
-<xref:System.Threading.Tasks.Task> 형식이 제공하는 메서드 및 속성을 사용하여 async 응용 프로그램에 정확성 및 유연성을 추가할 수 있습니다. 이 섹션의 항목에서는 <xref:System.Threading.CancellationToken> 및 중요한 `Task` 메서드(예: <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> 및 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName>)를 사용하는 예제를 보여 줍니다.  
+<xref:System.Threading.Tasks.Task> 형식이 제공하는 메서드 및 속성을 사용하여 async 응용 프로그램에 정확성 및 유연성을 추가할 수 있습니다. 이 섹션의 항목에서는 <xref:System.Threading.CancellationToken>을 사용하는 예제와 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> 및 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName>과 같은 중요한 `Task` 메서드를 보여 줍니다.  
   
  `WhenAny` 및 `WhenAll`를 사용하면 더 쉽게 여러 작업을 시작하고 단일 작업을 모니터링하여 완료할 때까지 기다릴 수 있습니다.  
   
--   `WhenAny`는 컬렉션의 임의 작업이 완료되면 완료되는 작업을 반환합니다.  
+-   `WhenAny`은(는) 컬렉션의 임의 작업이 완료되면 완료되는 작업을 반환합니다.  
   
-     `WhenAny`를 사용하는 예제는 [비동기 작업 하나가 완료되면 남은 비동기 작업 취소(C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md) 및 [S비동기 작업을 여러 개 시작하고 완료될 때마다 처리(C#)](../../../../csharp/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)를 참조하세요.  
+     `WhenAny`을(를) 사용하는 예제는 [비동기 작업 하나가 완료되면 남은 비동기 작업 취소(C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md) 및 [S비동기 작업을 여러 개 시작하고 완료될 때마다 처리(C#)](../../../../csharp/programming-guide/concepts/async/start-multiple-async-tasks-and-process-them-as-they-complete.md)를 참조하세요.  
   
 -   `WhenAll`은 컬렉션의 모든 작업이 완료되면 완료되는 작업을 반환합니다.  
   
@@ -59,3 +60,4 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="see-also"></a>참고 항목  
  [async 및 await를 사용한 비동기 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/async/index.md)
+

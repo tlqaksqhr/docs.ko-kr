@@ -31,10 +31,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8d8586e5601db67105e9e2f4290f37d2598fb89a
+ms.sourcegitcommit: dbc7f6ad4e6ddd30b3c808840420335a0c0155ad
+ms.openlocfilehash: 904b0f5bf99ed133eb505f65faaa63ca99053f5a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="c-60-draft-language-specification"></a>C# 6.0 초안 언어 사양
@@ -47,7 +47,8 @@ C# 언어 사양은 C# 구문 및 사용을 위한 확정된 소스입니다. �
 초안 사양에 관한 문제는 [dotnet/csharplang](https://github.com/dotnet/csharplang/issues) 리포지토리에 작성해야 합니다. 또는, 발견한 오류를 수정하는 데 관심이 있는 경우 동일한 리포지토리에 [끌어오기 요청](https://github.com/dotnet/csharplang/pulls)을 제출할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../language-reference/index.md) [C# 프로그래밍 가이드](../../programming-guide/index.md)
+ [C# 참조](../../language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../programming-guide/index.md)
 
 >[!div class="step-by-step"]
 [다음](../../../../_csharplang/spec/lexical-structure.md)

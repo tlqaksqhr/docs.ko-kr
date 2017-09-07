@@ -1,39 +1,59 @@
 ---
-title: "/nostdlib (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/nostdlib"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "nostdlib compiler option [C#]"
-  - "-nostdlib compiler option [C#]"
-  - "/nostdlib compiler option [C#]"
+title: "-nostdlib(C# 컴파일러 옵션)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /nostdlib
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- nostdlib compiler option [C#]
+- -nostdlib compiler option [C#]
+- /nostdlib compiler option [C#]
 ms.assetid: ec197989-fa49-4725-a455-e06b551eb65f
 caps.latest.revision: 18
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 18
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1d500e2e55ab3117aa674e11d6cdd25703035879
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
+
 ---
-# /nostdlib (C# Compiler Options)
-**\/nostdlib**를 사용하면 전체 시스템 네임스페이스를 정의하는 mscorlib.dll을 가져올 수 없습니다.  
+# <a name="nostdlib-c-compiler-options"></a>/nostdlib(C# 컴파일러 옵션)
+**/nostdlib** 를 사용하면 전체 시스템 네임스페이스를 정의하는 mscorlib.dll을 가져올 수 없습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```  
+```console  
 /nostdlib[+ | -]  
 ```  
   
-## 설명  
+## <a name="remarks"></a>설명  
  고유한 시스템 네임스페이스와 개체를 정의하거나 만들려면 이 옵션을 사용합니다.  
   
- **\/nostdlib**를 지정하지 않으면 mscorlib.dll을 프로그램으로 가져옵니다\(**\/nostdlib\-** 지정과 동일함\).**\/nostdlib**를 지정하는 것은 **\/nostdlib\+**를 지정하는 것과 같습니다.  
+ **/nostdlib**를 지정하지 않으면 mscorlib.dll을 프로그램으로 가져옵니다( **/nostdlib-**지정과 동일함). **/nostdlib** 를 지정하는 것은 **/nostdlib+**를 지정하는 것과 같습니다.  
   
-### Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
 1.  프로젝트의 **속성** 페이지를 엽니다.  
   
@@ -45,5 +65,6 @@ caps.handback.revision: 18
   
  이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.NoStdLib%2A>을 참조하세요.  
   
-## 참고 항목  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)
+## <a name="see-also"></a>참고 항목  
+ [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)
+

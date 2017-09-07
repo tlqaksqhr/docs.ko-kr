@@ -1,24 +1,28 @@
 ---
-title: ".NET Framework 응용 프로그램 주요 사항 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - ".NET Framework 개발"
+title: ".NET Framework 응용 프로그램 주요 사항"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- .NET Framework development
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
 caps.latest.revision: 19
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 19
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 318bf7a77748dfcee5f28243409d31e8d3e5c9ff
+ms.openlocfilehash: 00bc12a16418038c74a5e8858a77818e66982727
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
+
 ---
-# .NET Framework 응용 프로그램 주요 사항
+# <a name="net-framework-application-essentials"></a>.NET Framework 응용 프로그램 주요 사항
 .NET Framework 설명서의 이 섹션은 .NET Framework의 기본 응용 프로그램 개발 작업에 대한 정보를 제공합니다.  
   
 ## <a name="in-this-section"></a>단원 내용  
@@ -40,7 +44,7 @@ caps.handback.revision: 19
  [예외](../../docs/standard/exceptions/index.md)  
  .NET Framework에서 제공하는 오류 처리 및 예외 처리의 기본 사항을 설명합니다.  
   
- [파일 및 스트림 I/o](../../docs/standard/io/index.md)  
+ [파일 및 스트림 I/O](../../docs/standard/io/index.md)  
  동기 및 비동기 파일과 데이터 스트림 액세스를 수행할 수 있는 방법 및 격리된 저장소를 사용하는 방법을 설명합니다.  
   
  [날짜, 시간 및 표준 시간대](../../docs/standard/datetime/index.md)  
@@ -49,7 +53,7 @@ caps.handback.revision: 19
  [응용 프로그램 도메인 및 어셈블리](../../docs/framework/app-domains/index.md)  
  어셈블리 및 응용 프로그램 도메인을 만들고 이에 대한 작업을 수행하는 방법을 설명합니다.  
   
- [serialization](../../docs/framework/serialization/index.md)  
+ [serialization](../../docs/standard/serialization/index.md)  
  개체의 상태를 지속하거나 전송할 수 있는 형식으로 변환하는 프로세스를 설명합니다.  
   
  [데스크톱 앱의 리소스](../../docs/framework/resources/index.md)  
@@ -64,7 +68,7 @@ caps.handback.revision: 19
  [특성](../../docs/standard/attributes/index.md)  
  특성을 사용하여 메타데이터를 사용자 지정할 수 있는 방법을 설명합니다.  
   
- [64 비트 응용 프로그램](../../docs/framework/64-bit-apps.md)  
+ [64비트 응용 프로그램](../../docs/framework/64-bit-apps.md)  
  Windows 64비트 운영 체제에서 실행할 응용 프로그램 개발 관련 문제를 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
@@ -73,3 +77,4 @@ caps.handback.revision: 19
   
  [보안](../../docs/standard/security/index.md)  
  안전한 응용 프로그램 개발을 용이하게 하는 .NET Framework와 공용 언어 런타임의 클래스 및 서비스에 대한 정보를 제공합니다.
+

@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 도구 | Microsoft Docs"
+title: ".NET Framework 도구"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -24,11 +24,11 @@ caps.latest.revision: 65
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 792ffdaefdd3379673df7789bd499eade26b0a6d
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bee585074a444e8df5d67e035d5e0b65d292f8ac
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/08/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="net-framework-tools"></a>.NET Framework 도구
@@ -78,7 +78,7 @@ ms.lasthandoff: 04/08/2017
  IL(Intermediate Language) 코드가 들어 있는 PE(이식 가능한 실행) 파일을 사용하여 IL 어셈블러(Ilasm.exe)에 입력할 수 있는 텍스트 파일을 만듭니다.  
   
  [Installutil.exe(설치 관리자 도구)](../../../docs/framework/tools/installutil-exe-installer-tool.md)  
- 특정 어셈블리에서 설치 관리자 구성 요소를 실행하는 방법으로 서버 리소스를 설치하고 제거할 수 있도록 합니다. (<xref:System.Configuration.Install> 네임스페이스의 클래스와 함께 작동합니다.) 특정 어셈블리에서 설치 관리자 구성 요소를 실행하는 방법으로 서버 리소스를 설치하고 제거할 수 있도록 합니다. (<xref:System.Configuration.Install> 네임스페이스의 클래스와 함께 작동합니다.)  
+ 특정 어셈블리에서 설치 관리자 구성 요소를 실행하는 방법으로 서버 리소스를 설치하고 제거할 수 있도록 합니다. <xref:System.Configuration.Install> 네임스페이스의 클래스에서 작동합니다. 특정 어셈블리에서 설치 관리자 구성 요소를 실행하는 방법으로 서버 리소스를 설치하고 제거할 수 있도록 합니다. <xref:System.Configuration.Install> 네임스페이스의 클래스에서 작동합니다.  
   
  [Lc.exe(라이선스 컴파일러)](../../../docs/framework/tools/lc-exe-license-compiler.md)  
  라이선스 정보가 들어 있는 텍스트 파일을 읽고, 공용 언어 런타임 실행 파일에 리소스로 포함할 수 있는 .licenses 파일을 생성합니다. 라이선스 정보가 들어 있는 텍스트 파일을 읽고, 공용 언어 런타임 실행 파일에 리소스로 포함할 수 있는 .licenses 파일을 생성합니다.  
@@ -149,3 +149,4 @@ ms.lasthandoff: 04/08/2017
   
  [Windows Communication Foundation 도구](../../../docs/framework/wcf/tools.md)  
  WCF(Windows Communication Foundation) 응용 프로그램을 보다 쉽게 만들고 배포하고 관리할 수 있도록 지원하는 도구가 포함되어 있습니다.
+

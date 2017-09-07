@@ -1,5 +1,5 @@
 ---
-title: "LINQ 및 제네릭 형식(C#) | Microsoft 문서"
+title: "LINQ 및 제네릭 형식(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -33,23 +33,24 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1951d53b069104f3439aa2fe3ee3975bae0e1659
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 177db64491d58b31ca50cef0bb2eda8c2cb65078
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ 및 제네릭 형식(C#)
-[!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 쿼리는 [!INCLUDE[dnprdnshort](../../../../csharp/getting-started/includes/dnprdnshort_md.md)] 버전 2.0에서 도입된 제네릭 형식을 기반으로 합니다. 제네릭에 대한 세부 지식이 없어도 쿼리 작성을 시작할 수 있습니다. 그러나 다음 두 가지 기본 개념은 이해하는 것이 좋습니다.  
+[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 버전 2.0에서 도입된 제네릭 형식을 기반으로 합니다. 제네릭에 대한 세부 지식이 없어도 쿼리 작성을 시작할 수 있습니다. 그러나 다음 두 가지 기본 개념은 이해하는 것이 좋습니다.  
   
-1.  <xref:System.Collections.Generic.List%601> 같은 제네릭 컬렉션 클래스의 인스턴스를 만들 때 "T"를 목록에 포함할 개체 형식으로 대체합니다. 예를 들어 문자열 목록은 `List<string>`으로 표현되고, `Customer` 개체 목록은 `List<Customer>`로 표현됩니다. 제네릭 목록은 강력한 형식이어야 하며 해당 요소를 <xref:System.Object>로 저장하는 컬렉션에 비해 많은 장점을 제공합니다. `List<string>`에 `Customer`를 추가하려고 하면 컴파일 시간에 오류가 발생합니다. 런타임 형식 캐스팅을 수행할 필요가 없기 때문에 제네릭 컬렉션을 사용하기가 쉽습니다.  
+1.  <xref:System.Collections.Generic.List%601> 같은 제네릭 컬렉션 클래스의 인스턴스를 만들 때 “T”를 목록에 포함할 개체 형식으로 대체합니다. 예를 들어 문자열 목록은 `List<string>`으로 표현되고, `Customer` 개체 목록은 `List<Customer>`로 표현됩니다. 제네릭 목록은 강력한 형식이어야 하며 해당 요소를 <xref:System.Object>로 저장하는 컬렉션에 비해 많은 장점을 제공합니다. `List<string>`에 `Customer`를 추가하려고 하면 컴파일 시간에 오류가 발생합니다. 런타임 형식 캐스팅을 수행할 필요가 없기 때문에 제네릭 컬렉션을 사용하기가 쉽습니다.  
   
-2.  <xref:System.Collections.Generic.IEnumerable%601>는 `foreach` 문을 사용하여 제네릭 컬렉션 클래스를 열거할 수 있는 인터페이스입니다. 제네릭 컬렉션 클래스는 <xref:System.Collections.ArrayList>와 같은 제네릭이 아닌 컬렉션 클래스에서 <xref:System.Collections.IEnumerable>을 지원하는 것처럼 <xref:System.Collections.Generic.IEnumerable%601>를 지원합니다.  
+2.  <xref:System.Collections.Generic.IEnumerable%601>은 `foreach` 문을 사용하여 제네릭 컬렉션 클래스를 열거할 수 있는 인터페이스입니다. 제네릭 컬렉션 클래스는 <xref:System.Collections.ArrayList> 등의 제네릭이 아닌 컬렉션이 <xref:System.Collections.IEnumerable>을 지원하는 것처럼 <xref:System.Collections.Generic.IEnumerable%601>을 지원합니다.  
   
  제네릭에 대한 자세한 내용은 [제네릭](../../../../csharp/programming-guide/generics/index.md)을 참조하세요.  
   
 ## <a name="ienumerablet-variables-in-linq-queries"></a>LINQ 쿼리의 IEnumerable<T\> 변수  
- [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 쿼리 변수는 <xref:System.Collections.Generic.IEnumerable%601> 형식이거나 <xref:System.Linq.IQueryable%601>와 같은 파생 형식입니다. 형식이 `IEnumerable<Customer>`인 쿼리 변수가 표시되면 쿼리가 실행될 때 0개 이상의 `Customer` 개체 시퀀스를 생성한다는 의미입니다.  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 변수는 <xref:System.Collections.Generic.IEnumerable%601> 또는 파생 형식(예: <xref:System.Linq.IQueryable%601>)으로 형식화됩니다. 형식이 `IEnumerable<Customer>`인 쿼리 변수가 표시되면 쿼리가 실행될 때 0개 이상의 `Customer` 개체 시퀀스를 생성한다는 의미입니다.  
   
  [!code-cs[csLINQGettingStarted#34](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/linq-and-generic-types_1.cs)]  
   
@@ -65,3 +66,4 @@ ms.lasthandoff: 03/13/2017
 ## <a name="see-also"></a>참고 항목  
  [C#에서 LINQ 시작](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)   
  [제네릭](../../../../csharp/programming-guide/generics/index.md)
+

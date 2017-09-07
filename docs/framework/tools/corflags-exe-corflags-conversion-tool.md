@@ -1,5 +1,5 @@
 ---
-title: "CorFlags.exe(CorFlags 변환 도구) | Microsoft Docs"
+title: "CorFlags.exe(CorFlags 변환 도구)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -23,11 +23,11 @@ caps.latest.revision: 17
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 49906f2e9416f1e6cccda5de7f657f10acaaab5a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 80fb48fc86d3010020a0a8a79bb2b4b7a6275368
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe(CorFlags 변환 도구)
@@ -71,3 +71,4 @@ CorFlags.exe assembly [options]
  [도구](../../../docs/framework/tools/index.md)   
  [64비트 응용 프로그램](../../../docs/framework/64-bit-apps.md)   
  [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+

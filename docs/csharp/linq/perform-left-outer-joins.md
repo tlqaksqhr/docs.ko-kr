@@ -11,10 +11,11 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: f542cee6-3169-4dcf-a631-3a6a79ccd473
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6ba90a6fe16d4ba33e8b9e55c93f7365b6bc905b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d81f6e9df228dc6eec985253f53b70a95493ed42
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="perform-left-outer-joins"></a>왼쪽 우선 외부 조인 수행
@@ -25,7 +26,7 @@ ms.lasthandoff: 03/13/2017
   
  두 컬렉션의 왼쪽 우선 외부 조인을 생성하는 첫 번째 단계는 그룹 조인을 사용하여 내부 조인을 수행하는 것입니다. 이 프로세스에 대한 설명은 [내부 조인 수행](perform-inner-joins.md)을 참조하세요. 이 예제에서 `Person` 개체 목록은 `Pet.Owner`와 일치하는 `Person` 개체를 기준으로 `Pet` 개체 목록에 내부 조인됩니다.  
   
- 두 번째 단계는 오른쪽 컬렉션에 일치하는 항목이 없는 경우에도 첫 번째(왼쪽) 컬렉션의 각 요소를 결과 집합에 포함하는 것입니다. 이렇게 하려면 그룹 조인에서 일치하는 요소의 각 시퀀스에 대해 <xref:System.Linq.Enumerable.DefaultIfEmpty%2A>를 호출합니다. 이 예제에서는 일치하는 `Pet` 개체의 각 시퀀스에 대해 <xref:System.Linq.Enumerable.DefaultIfEmpty%2A>를 호출합니다. 메서드는 `Person` 개체에 대해 일치하는 `Pet` 개체의 시퀀스가 비어 있는 경우 단일 기본값을 포함하는 컬렉션을 반환하여 각 `Person` 개체가 결과 컬렉션에 반환되도록 합니다.  
+ 두 번째 단계는 오른쪽 컬렉션에 일치하는 항목이 없는 경우에도 첫 번째(왼쪽) 컬렉션의 각 요소를 결과 집합에 포함하는 것입니다. 이렇게 하려면 그룹 조인에서 일치하는 요소의 각 시퀀스에 대해 <xref:System.Linq.Enumerable.DefaultIfEmpty%2A>를 호출합니다. 이 예제에서는 일치하는 `Pet` 개체의 각 시퀀스에서 <xref:System.Linq.Enumerable.DefaultIfEmpty%2A>를 호출합니다. 메서드는 `Person` 개체에 대해 일치하는 `Pet` 개체의 시퀀스가 비어 있는 경우 단일 기본값을 포함하는 컬렉션을 반환하여 각 `Person` 개체가 결과 컬렉션에 반환되도록 합니다.  
   
 > [!NOTE]
 >  참조 형식의 기본값은 `null`이므로 예제에서는 각 `Pet` 컬렉션의 각 요소에 액세스하기 전에 null 참조를 확인합니다.  
@@ -39,3 +40,4 @@ ms.lasthandoff: 03/13/2017
  [그룹화 조인 수행](perform-grouped-joins.md)   
  [무명 형식](../programming-guide/classes-and-structs/anonymous-types.md)   
  
+

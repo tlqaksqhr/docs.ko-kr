@@ -1,26 +1,22 @@
 ---
 title: "Visual Studio 2017에서 .NET Core로 클래스 라이브러리 사용"
 description: "Visual Studio 2017에서 클래스 라이브러리의 멤버를 호출하는 방법을 알아봅니다."
-keywords: ".NET Core, .NET Core 클래스 라이브러리, .NET 표준, .NET 클래스 라이브러리 배포"
 author: BillWagner
-ms.author: wiwang
-ms.date: 04/17/2017
+ms.author: wiwagn
+ms.date: 08/07/2017
 ms.topic: article
-ms.prod: .net
-ms.technology: devlang-csharp
-ms.devlang: csharp
-ms.assetid: d7b94076-1108-4174-94e7-a18f00072bb7
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d980ae6c3c2f903dcabf18b26670c18fa9a49f22
+ms.prod: .net-core
+ms.translationtype: HT
+ms.sourcegitcommit: 1b028e5880f9e57e87c16eabeb442e0a46a369da
+ms.openlocfilehash: 38e6c7d8797285abc4eb2e87602cc0bbf46ba590
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 
 # <a name="consuming-a-class-library-with-net-core-in-visual-studio-2017"></a>Visual Studio 2017에서 .NET Core로 클래스 라이브러리 사용
 
-[Visual Studio 2017에서 .NET Core로 C# 클래스 라이브러리 빌드](./library-with-visual-studio.md) 및 [Visual Studio 2017에서 .NET Core로 클래스 라이브러리 테스트](testing-library-with-visual-studio.md)의 단계를 따라 클래스 라이브러리를 빌드 및 테스트했으며 라이브러리의 릴리스 버전을 빌드했으므로 다음 단계는 호출자가 사용할 수 있게 만드는 것입니다. 이 작업은
+[Visual Studio 2017에서 .NET Core를 사용하여 C# 클래스 라이브러리 빌드](./library-with-visual-studio.md) 또는 [Visual Studio 2017에서 .NET Core를 사용하여 Visual Basic 클래스 라이브러리 빌드](vb-library-with-visual-studio.md)의 단계를 따라 클래스 라이브러리를 만들고, [Visual Studio 2017에서 .NET Core를 사용하여 클래스 라이브러리 테스트](testing-library-with-visual-studio.md)에서 테스트하고, 라이브러리의 릴리스 버전을 빌드한 후 다음 단계는 호출자가 사용할 수 있게 만드는 것입니다. 이 작업은
 
 * 라이브러리가 단일 솔루션에 사용되는 경우(예: 단일 대형 응용 프로그램의 구성 요소인 경우) 솔루션에 프로젝트로 포함할 수 있습니다.
 
@@ -30,13 +26,14 @@ ms.lasthandoff: 07/28/2017
 
 클래스 라이브러리와 동일한 솔루션에 단위 테스트를 포함한 것처럼 응용 프로그램을 해당 솔루션의 일부로 포함할 수 있습니다. 예를 들어 사용자가 문자열을 입력하도록 요구하고 첫 번째 문자가 대문자인지 여부를 보고하는 콘솔 응용 프로그램에서 이 클래스 라이브러리를 사용할 수 있습니다.
 
+# <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. [Visual Studio 2017에서 .NET Core를 사용하여 C# 클래스 라이브러리 빌드](./library-with-visual-studio.md) 항목에서 만든 `ClassLibraryProjects` 솔루션을 엽니다. **솔루션 탐색기**에서 **ClassLibraryProjects** 솔루션을 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **추가** > **새 프로젝트**를 선택합니다.
 
-1. **새 프로젝트 추가** 대화 상자에서 **.NET Core** 노드, **콘솔 앱(.NET Core)** 프로젝트 템플릿을 차례로 선택합니다. **이름** 텍스트 상자에 "ShowCase"를 입력하고 **확인** 단추를 선택합니다.
+1. **새 프로젝트 추가** 대화 상자에서 **Visual C#** 노드를 확장하고 **.NET Core** 노드, **콘솔 앱(.NET Core)** 프로젝트 템플릿을 차례로 선택합니다. **이름** 텍스트 상자에 "ShowCase"를 입력하고 **확인** 단추를 선택합니다.
 
    ![새 프로젝트 추가 대화 상자](./media/consuming-library-with-visual-studio/addnewproject.png)
 
-1. **솔루션 탐색기**에서 **ShowCase** 프로젝트를 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **시작 프로젝트로 설정**을 선택합니다.
+1. **솔루션 탐색기**에서 **ShowCase** 프로젝트를 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **시작 프로젝트로 설정**을 선택합니다. 
 
    ![ShowCase 상황에 맞는 메뉴](./media/consuming-library-with-visual-studio/setstartupproject.png)
 
@@ -50,7 +47,7 @@ ms.lasthandoff: 07/28/2017
 
 1. *Program.cs* 파일의 코드 창에서 모든 코드를 다음 코드로 바꿉니다.
 
- [!CODE-csharp[UsingClassLib#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/showcase.cs#1)]
+   [!CODE-csharp[UsingClassLib#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/showcase.cs)]
 
    이 코드는 [Console.WindowHeight](xref:System.Console.WindowHeight) 속성을 사용하여 콘솔 창의 행 수를 결정합니다. [Console.CursorTop](xref:System.Console.CursorTop) 속성이 콘솔 창의 행 수보다 크거나 같으면 코드는 콘솔 창을 지우고 사용자에게 메시지를 표시합니다.
 
@@ -59,8 +56,39 @@ ms.lasthandoff: 07/28/2017
 1. 필요한 경우 도구 모음을 변경하여 컴파일하는 `ShowCase` 프로젝트의 **디버그** 릴리스를 컴파일합니다. **ShowCase** 단추에서 녹색 화살표를 선택하여 프로그램을 컴파일하고 실행합니다.
 
    ![이미지](./media/consuming-library-with-visual-studio/toolbar.png)
+# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+1. [Visual Studio 2017에서 Visual Basic 및 .NET Core를 사용하여 클래스 라이브러리 빌드](vb-library-with-visual-studio.md) 항목에서 만든 `ClassLibraryProjects` 솔루션을 엽니다. **솔루션 탐색기**에서 **ClassLibraryProjects** 솔루션을 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **추가** > **새 프로젝트**를 선택합니다.
 
-[Visual Studio 2017을 사용하여 C# Hello World 응용 프로그램 디버그](debugging-with-visual-studio.md) 및 [Visual Studio 2017을 사용하여 Hello World 응용 프로그램 게시](publishing-with-visual-studio.md)의 단계에 따라 이 라이브러리를 사용하는 응용 프로그램을 디버그하고 게시할 수 있습니다.
+1. **새 프로젝트 추가** 대화 상자에서 **Visual Basic** 노드를 확장하고 **.NET Core** 노드, **콘솔 앱(.NET Core)** 프로젝트 템플릿을 차례로 선택합니다. **이름** 텍스트 상자에 "ShowCase"를 입력하고 **확인** 단추를 선택합니다.
+
+   ![새 프로젝트 추가 대화 상자](./media/consuming-library-with-visual-studio/vb-addnewproject.png)
+
+1. **솔루션 탐색기**에서 **ShowCase** 프로젝트를 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **시작 프로젝트로 설정**을 선택합니다. 
+
+   ![ShowCase 상황에 맞는 메뉴](./media/consuming-library-with-visual-studio/setstartupproject.png)
+
+1. 처음에는 프로젝트에서 클래스 라이브러리에 액세스할 수 없습니다. 클래스 라이브러리의 메서드를 호출할 수 있도록 허용하려면 클래스 라이브러리에 대한 참조를 만듭니다. **솔루션 탐색기**에서 `ShowCase` 프로젝트의 **종속성** 노드를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 선택합니다.
+
+   ![ShowCase 종속성 상황에 맞는 메뉴](./media/consuming-library-with-visual-studio/addreference.png)
+
+1. **참조 관리자** 대화 상자에서 **StringLibrary**, 해당 클래스 라이브러리 프로젝트를 차례로 선택한 다음 **확인** 단추를 선택합니다.
+
+   ![참조 관리자](./media/consuming-library-with-visual-studio/referencemanager.png)
+
+1. *Program.vb* 파일의 코드 창에서 모든 코드를 다음 코드로 바꿉니다.
+
+    [!CODE-vb[UsingClassLib#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/showcase.vb)]
+
+   이 코드는 [Console.WindowHeight](xref:System.Console.WindowHeight) 속성을 사용하여 콘솔 창의 행 수를 결정합니다. [Console.CursorTop](xref:System.Console.CursorTop) 속성이 콘솔 창의 행 수보다 크거나 같으면 코드는 콘솔 창을 지우고 사용자에게 메시지를 표시합니다.
+
+   프로그램에서 문자열을 입력하라는 메시지를 사용자에게 표시합니다. 문자열이 대문자로 시작하는지 여부를 나타냅니다. 사용자가 문자열을 입력하지 않고 Enter 키를 누르면 응용 프로그램이 종료되고 콘솔 창이 닫힙니다.
+
+1. 필요한 경우 도구 모음을 변경하여 컴파일하는 `ShowCase` 프로젝트의 **디버그** 릴리스를 컴파일합니다. **ShowCase** 단추에서 녹색 화살표를 선택하여 프로그램을 컴파일하고 실행합니다.
+
+   ![이미지](./media/consuming-library-with-visual-studio/toolbar.png)
+---
+
+[Visual Studio 2017을 사용하여 Hello World 응용 프로그램 디버그](debugging-with-visual-studio.md) 및 [Visual Studio 2017을 사용하여 Hello World 응용 프로그램 게시](publishing-with-visual-studio.md)의 단계에 따라 이 라이브러리를 사용하는 응용 프로그램을 디버그하고 게시할 수 있습니다.
 
 ## <a name="distributing-the-library-in-a-nuget-package"></a>NuGet 패키지에 포함된 라이브러리 배포
 

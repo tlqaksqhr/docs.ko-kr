@@ -2,21 +2,20 @@
 title: ".NET 시작"
 description: ".NET 기술 제품군을 시작합니다."
 keywords: ".NET, .NET Core, 시작, 뉴스"
-author: richlander
+author: mairaw
 ms.author: mairaw
-ms.date: 07/03/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: cb788dcf-2120-467f-9c34-c02a90e1f68f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0c6d4d9efbf51d8ae6308a34cbc4f522cceea001
+ms.sourcegitcommit: 6500a14839b14d75d09d8d807c943553dbe09b47
+ms.openlocfilehash: 991a5f4419e6aadc2580f34c97dc74a42dc8cbe6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/15/2017
 
 ---
-
 # <a name="welcome-to-net"></a>.NET 시작
 
 .NET Core 앱을 만드는 방법은 [.NET Core 시작](core/get-started.md)을 참조하세요.
@@ -25,12 +24,15 @@ ms.lasthandoff: 07/28/2017
 
 ## <a name="news"></a>뉴스
 
-- [Introducing .NET Standard](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/)(표준 .NET 소개)
-- [Announcing .NET Core 2.0 Preview 2](https://blogs.msdn.microsoft.com/dotnet/2017/06/28/announcing-net-core-2-0-preview-2/)(.NET Core 2.0 Preview 2 발표)
-- [Introducing ASP.NET Core 2.0 Preview 2](https://blogs.msdn.microsoft.com/webdev/2017/06/28/introducing-asp-net-core-2-0-preview-2/)(ASP.NET Core 2.0 Preview 2 소개)
-- [A fresh update to Visual Studio 2017 and the next preview](https://blogs.msdn.microsoft.com/visualstudio/2017/05/10/update-to-visual-studio-2017-and-next-preview/)(Visual Studio 2017에 대한 최신 업데이트 및 다음 미리 보기)
+- [.NET Core 2.0 릴리스](https://channel9.msdn.com/Blogs/dotnet/NET-Core-20-Released)
+- [.NET Core 2.0 발표](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-core-2-0/)
+- [.NET Standard 2.0 발표](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/)
+- [ASP.NET Core 2.0 발표](https://blogs.msdn.microsoft.com/webdev/2017/08/14/announcing-asp-net-core-2-0/)
+- [Entity Framework Core 2.0 발표](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-entity-framework-core-2-0/)
+- [Visual Basic의 새로운 기능: .NET Standard 클래스 라이브러리 및 dotnet CLI](https://blogs.msdn.microsoft.com/vbteam/2017/08/14/new-for-visual-basic-net-standard-class-libraries-and-the-dotnet-cli/)
+- [Visual Studio 2017 버전 15.3 릴리스](https://blogs.msdn.microsoft.com/visualstudio/2017/08/14/visual-studio-2017-version-15-3-released/)
+- [.NET Standard 소개](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/)
 - [Visual Studio for Mac: now generally available](https://blogs.msdn.microsoft.com/visualstudio/2017/05/10/visual-studio-for-mac-now-generally-available/)(Visual Studio for Mac: 현재 일반 공급)
-- [Announcing .NET Core Tools 1.0 (.NET Core 1.0.4, .NET Core 1.1.1, .NET Core SDK 1.0.1)](https://blogs.msdn.microsoft.com/dotnet/2017/03/07/announcing-net-core-tools-1-0/)(.NET Core Tools 1.0(.NET Core 1.0.4, .NET Core 1.1.1, .NET Core SDK 1.0.1) 발표)
 - [Announcing Visual Studio 2017 General Availability](https://blogs.msdn.microsoft.com/visualstudio/2017/03/07/announcing-visual-studio-2017-general-availability-and-more/)(Visual Studio 2017 일반 공급 발표)
 - [What's new for .NET Core and Visual Studio 2017 (video)](https://channel9.msdn.com/events/Visual-Studio/Visual-Studio-2017-Launch/T108)(.NET Core 및 Visual Studio 2017 새로운 기능(비디오))
 - [Announcing the .NET Framework 4.7](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/)(.NET Framework 4.7 발표)
@@ -44,7 +46,7 @@ ms.lasthandoff: 07/28/2017
 
 이 문서에서는 .NET의 다양한 플랫폼 및 언어 지원에 대해 설명합니다.  다음 섹션 중 하나에서 .NET 및 해당 언어를 시작할 수 있습니다.
 
-- [.NET 플랫폼 가이드](standard/index.md)
+- [.NET 가이드](standard/index.md)
 - [.NET Core 가이드](core/index.md)
 - [.NET Framework 가이드](framework/index.md)
 - [C# 가이드](csharp/index.md)
@@ -55,7 +57,7 @@ ms.lasthandoff: 07/28/2017
 
 ## <a name="open-source"></a>소스 열기
 
-이 문서는 완전히 [오픈 소스](https://github.com/dotnet/docs)입니다.  문제 생성부터 문서 작성에 이르기까지 원하는 방식으로 참여할 수 있습니다.  .NET 자체도 대부분 오픈 소스입니다.
+이 문서는 완전히 [오픈 소스](https://github.com/dotnet/docs)입니다. 문제 생성부터 문서 작성에 이르기까지 원하는 방식으로 참여할 수 있습니다.  .NET 자체도 대부분 오픈 소스입니다.
 
 - [.NET Core 홈](https://github.com/dotnet/core)
 - [.NET 라이브러리](https://github.com/dotnet/corefx)

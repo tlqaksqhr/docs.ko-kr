@@ -1,5 +1,5 @@
 ---
-title: "기본 형식 | C# 가이드"
+title: "기본 형식 - C# 가이드"
 description: "모든 C# 프로그램의 핵심 형식(숫자, 문자열 및 개체)을 알아봅니다."
 keywords: .NET, .NET Core, C#
 author: BillWagner
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 4762266380b3defab17951fdc4dd5c99d59935c6
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1965164b656cd194ac596909d13ccdd707adcc6d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 

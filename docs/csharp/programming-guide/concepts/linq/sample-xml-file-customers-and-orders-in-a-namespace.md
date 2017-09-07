@@ -1,5 +1,5 @@
 ---
-title: "샘플 XML 파일: 네임스페이스의 Customers 및 Orders2 | Microsoft 문서"
+title: "샘플 XML 파일: 네임스페이스의 Customers 및 Orders2"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7dea3d47573cdca0c90914ffd9f29dac9f2885c0
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 840f11debe9f75fad37f39baf05dc126ec2f636d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>샘플 XML 파일: 네임스페이스의 Customers 및 Orders
-다음 XML 파일은 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 설명서의 다양한 예제에서 사용됩니다. 이 파일에는 고객과 주문이 포함되어 있습니다. XML은 네임스페이스에 있습니다.  
+다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다. 이 파일에는 고객과 주문이 포함되어 있습니다. XML은 네임스페이스에 있습니다.  
   
 ## <a name="customersordersinnamespacexml"></a>CustomersOrdersInNamespace.xml  
   
@@ -448,3 +449,4 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="see-also"></a>참고 항목  
  [샘플 XML 문서(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+

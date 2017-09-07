@@ -1,5 +1,5 @@
 ---
-title: "event(C# 참조) | Microsoft 문서"
+title: "event(C# 참조)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -32,24 +32,24 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 60a6322f8e120c6a443638b4f6e409acdfa0b235
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 674e36625a68243afff75f6c5028309dc7aff02a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="event-c-reference"></a>event(C# 참조)
 `event` 키워드는 게시자 클래스에서 이벤트를 선언하는 데 사용됩니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 <xref:System.EventHandler>를 기본 대리자 형식으로 사용하는 이벤트를 선언하고 발생시키는 방법을 보여 줍니다. 제네릭 <xref:System.EventHandler%601>대리자 형식을 사용하는 방법 및 이벤트를 구독하고 이벤트 처리기 메서드를 만드는 방법을 보여 주는 전체 코드 예제는 [방법: .NET Framework 지침을 따르는 이벤트 게시](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)를 참조하세요.  
+ 다음 예제에서는 <xref:System.EventHandler>를 기본 대리자 형식으로 사용하는 이벤트를 선언하고 발생시키는 방법을 보여 줍니다. 제네릭 <xref:System.EventHandler%601> 대리자 형식을 사용하는 방법 및 이벤트를 구독하고 이벤트 처리기 메서드를 만드는 방법을 보여 주는 전체 코드 예제는 [방법: .NET Framework 지침을 따르는 이벤트 게시](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)를 참조하세요.  
   
  [!code-cs[csrefKeywordsModifiers#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/event_1.cs)]  
   
  이벤트는 해당 이벤트가 선언되는 클래스(게시자 클래스) 또는 구조체 내에서만 호출할 수 있는 특수한 멀티캐스트 대리자입니다. 다른 클래스 또는 구조체에서 이벤트를 구독하는 경우 해당 이벤트 처리기 메서드는 게시자 클래스에서 이벤트를 발생시킬 때 호출됩니다. 자세한 내용 및 코드 예제는 [이벤트](../../../csharp/programming-guide/events/index.md) 및 [대리자](../../../csharp/programming-guide/delegates/index.md)를 참조하세요.  
   
- 이벤트는 [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) 또는 `protected``internal`로 표시할 수 있습니다. 이러한 액세스 한정자는 클래스 사용자가 이벤트에 액세스하는 방법을 정의합니다. 자세한 내용은 [액세스 한정자](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)를 참조하세요.  
+ 이벤트는 [public](../../../csharp/language-reference/keywords/public.md), [private](../../../csharp/language-reference/keywords/private.md), [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md) 또는 `protected internal`로 표시할 수 있습니다. 이러한 액세스 한정자는 클래스 사용자가 이벤트에 액세스하는 방법을 정의합니다. 자세한 내용은 [액세스 한정자](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)를 참조하세요.  
   
 ## <a name="keywords-and-events"></a>키워드 및 이벤트  
  이벤트에 적용되는 키워드는 다음과 같습니다.  
@@ -76,3 +76,4 @@ ms.lasthandoff: 03/13/2017
  [remove](../../../csharp/language-reference/keywords/remove.md)   
  [한정자](../../../csharp/language-reference/keywords/modifiers.md)   
  [방법: 대리자 조합(멀티캐스트 대리자)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
+

@@ -62,7 +62,7 @@ catch ExceptionType [e] when (expr)
 7부터 `case` 레이블은 더 이상 상호 배타적일 필요가 없으며 `case` 레이블이 `switch` 문에 나타나는 순서로 어떤 스위치 블록을 실행할지를 결정할 수 있습니다. 필터 조건도 참인 경우에만 관련 사례 레이블을 참으로 만드는 필터 조건을 지정하려면 `when` 키워드를 사용할 수 있습니다. 사용되는 구문은 다음과 같습니다.
 
 ```csharp
-case (expr) where (when-condition):
+case (expr) when (when-condition):
 ```
 여기서 *expr*은 일치 식과 비교되는 상수 패턴 또는 형식 패턴이며 *when-condition*은 부울 식입니다. 
 

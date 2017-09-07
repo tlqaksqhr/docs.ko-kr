@@ -1,5 +1,5 @@
 ---
-title: "-linkresource(C# 컴파일러 옵션) | Microsoft Docs"
+title: "-linkresource(C# 컴파일러 옵션)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -34,11 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe32676f0e39ed109a68f39584cf41aec5f5ce90
-ms.openlocfilehash: d9a3bc4dc4b51d6170c67f9d2f95b6805497b31c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 022d6c1a53eab98fc033c902f903e7bc66e6da3f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="linkresource-c-compiler-options"></a>/linkresource(C# 컴파일러 옵션)
@@ -101,4 +101,5 @@ gacutil -i A.dll
  [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)   
  [Al.exe(어셈블리 링커)](https://msdn.microsoft.com/library/c405shex)   
  [어셈블리 및 전역 어셈블리 캐시 사용](../../../framework/app-domains/working-with-assemblies-and-the-gac.md)   
- [NIB 방법: 프로젝트 속성 및 구성 설정 수정](http://msdn.microsoft.com/en-us/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+ [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)
+

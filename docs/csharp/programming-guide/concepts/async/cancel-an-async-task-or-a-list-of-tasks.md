@@ -1,5 +1,5 @@
 ---
-title: "비동기 작업 또는 작업 목록 취소(C#) | Microsoft 문서"
+title: "비동기 작업 또는 작업 목록 취소(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 9fbfa3602766b51c4be5078b793139501802a90c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2e34344c9cdf0717291c4c7375bab703679515a7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>비동기 작업 또는 작업 목록 취소(C#)
@@ -70,7 +70,7 @@ ms.lasthandoff: 03/24/2017
         CancellationTokenSource cts;  
     ```  
   
-2.  **취소** 단추에 대한 다음 이벤트 처리기를 추가합니다. 이벤트 처리기는 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName> 메서드를 사용하여 사용자가 취소를 요청할 때 `cts`를 알립니다.  
+2.  **취소** 단추에 대한 다음 이벤트 처리기를 추가합니다. 이벤트 처리기는 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName> 메서드를 사용하여 사용자가 취소를 요청할 때 `cts`에 알려줍니다.  
   
     ```csharp  
     // ***Add an event handler for the Cancel button.  
@@ -92,7 +92,7 @@ ms.lasthandoff: 03/24/2017
         cts = new CancellationTokenSource();  
         ```  
   
-    -   지정된 웹 사이트의 콘텐츠를 다운로드하는 `AccessTheWebAsync` 호출에서 `cts`의 <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=fullName> 속성을 인수로 보냅니다. 취소가 요청되면 `Token` 속성은 메시지를 전파합니다. 사용자가 다운로드 작업을 취소하도록 선택할 경우 메시지를 표시하는 catch 블록을 추가합니다. 다음 코드는 변경 내용을 보여 줍니다.  
+    -   지정된 웹 사이트의 콘텐츠를 다운로드하는 `AccessTheWebAsync` 호출에서 `cts`의 <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=fullName> 속성을 인수로 전송합니다. 취소가 요청되면 `Token` 속성은 메시지를 전파합니다. 사용자가 다운로드 작업을 취소하도록 선택할 경우 메시지를 표시하는 catch 블록을 추가합니다. 다음 코드는 변경 내용을 보여 줍니다.  
   
         ```csharp  
         try  
@@ -113,7 +113,7 @@ ms.lasthandoff: 03/24/2017
         }  
         ```  
   
-4.  `AccessTheWebAsync`에서는 <xref:System.Net.Http.HttpClient> 형식에서 `GetAsync` 메서드의 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=fullName> 오버로드를 사용하여 웹 사이트의 콘텐츠를 다운로드합니다. `AccessTheWebAsync`의 <xref:System.Threading.CancellationToken> 매개 변수인 `ct`를 두 번째 인수로 전달합니다. 사용자가 **취소** 단추를 선택하면 토큰이 메시지를 전달합니다.  
+4.  `AccessTheWebAsync`에서 <xref:System.Net.Http.HttpClient> 형식에 있는 `GetAsync` 메서드의 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=fullName> 오버로드를 사용하여 웹 사이트의 콘텐츠를 다운로드합니다. `AccessTheWebAsync`의 <xref:System.Threading.CancellationToken> 매개 변수인 `ct`를 두 번째 인수로 전달합니다. 사용자가 **취소** 단추를 선택하면 토큰이 메시지를 전달합니다.  
   
      다음 코드는 `AccessTheWebAsync`의 변경 내용을 보여 줍니다.  
   
@@ -239,7 +239,6 @@ ms.lasthandoff: 03/24/2017
 5.  프로그램을 취소하지 않으면 다음 출력이 생성됩니다.  
   
     ```  
-  
     Length of the downloaded string: 35939.  
   
     Length of the downloaded string: 237682.  
@@ -255,7 +254,6 @@ ms.lasthandoff: 03/24/2017
     Length of the downloaded string: 145790.  
   
     Downloads complete.  
-  
     ```  
   
      다운로드가 완료되기 전에 **취소** 단추를 선택하면 취소하기 전에 완료된 다운로드의 길이가 출력에 포함됩니다.  
@@ -268,7 +266,6 @@ ms.lasthandoff: 03/24/2017
     Length of the downloaded string: 128607.  
   
     Downloads canceled.  
-  
     ```  
   
 ##  <a name="BKMK_CompleteExamples"></a> 전체 예제  
@@ -538,3 +535,4 @@ namespace CancelAListOfTasks
  [async 및 await를 사용한 비동기 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/async/index.md)   
  [Async 응용 프로그램 미세 조정(C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
  [Async 샘플: 응용 프로그램 미세 조정](http://go.microsoft.com/fwlink/?LinkId=255046)
+

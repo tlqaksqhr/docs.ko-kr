@@ -1,6 +1,6 @@
 ---
 title: "속성"
-description: "속성"
+description: "유효성 검사, 계산된 값, 지연 평가, 속성 변경 알림 기능을 포함하는 C# 속성에 대해 알아봅니다."
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 6950d25a-bba1-4744-b7c7-a3cc90438c55
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f9eab74a3b259037aff30320753191eee95aa974
-ms.openlocfilehash: 763a76a8ea0e48fd6935c951ce584efad50dabb9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e5d2d5d7074678383243e687d4b469606007e585
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/25/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 

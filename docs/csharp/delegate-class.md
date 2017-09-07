@@ -1,6 +1,6 @@
 ---
 title: "System.Delegate 및 `delegate` 키워드"
-description: "System.Delegate 및 `delegate` 키워드"
+description: ".NET Framework에서 대리자를 지원하는 클래스와 해당 클래스가 ‘delegate’ 키워드에 매핑되는 방법을 설명합니다."
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b20c4816582ef3e4d36512c38947f64e86d26541
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 465326fe520d6a062609e0c4c471135ef88b0dd6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -142,3 +143,4 @@ Sort() 예제에서는 일반적으로 단일 대상 메서드를 대리자에 �
 이제 언어 구문 및 대리자 지원 클래스를 확인했으므로 강력한 형식의 대리자를 사용하고, 만들고, 호출하는 방법을 살펴보겠습니다.
 
 [다음](delegates-strongly-typed.md)
+

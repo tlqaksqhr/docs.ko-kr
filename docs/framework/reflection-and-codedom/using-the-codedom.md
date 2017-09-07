@@ -1,5 +1,5 @@
 ---
-title: "CodeDOM 사용 | Microsoft Docs"
+title: "CodeDOM 사용"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -28,11 +28,11 @@ caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: d1712b3f06f9131b1e55ca34a1e40e83b63f280b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cd594e9087a158ab8d5372ad72019cf3e04c38af
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="using-the-codedom"></a>CodeDOM 사용
@@ -118,3 +118,4 @@ CodeDOM은 소스 코드 요소의 다양한 일반적인 형식을 나타내는
  각 CodeDOM 형식에 대한 문서는 <xref:System.CodeDom> 네임스페이스에 대한 참조 문서를 참조하세요.  
   
  코드 요소의 특정 형식을 나타내는 CodeDOM 요소를 찾기 위한 빠른 차트는 [CodeDOM 빠른 참조](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524)를 참조하세요.
+

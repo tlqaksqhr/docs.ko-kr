@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d9a3b8904f88fc20d84082d85f89a7f65c584e0f
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 6e614986dc91310dea40971987969e7433cb79e8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -21,7 +21,7 @@ ms.lasthandoff: 07/28/2017
 
 .NET Core는 NuGet 패키지로 구성된 플랫폼입니다. 일부 제품은 정교하게 정의된 패키지로 구성되는 반면 다른 제품은 다소 거칠게 정의된 패키지로 구성됩니다. 이러한 이중성을 수용하기 위해 이 제품은 세분화된 패키지 집합으로 배포되고, 그런 다음 비공식적으로 "메타패키지"라고 하는 패키지 형식의 거친 덩어리로 기술됩니다.
 
-각 .NET Core 패키지는 프레임워크라고 하는 여러 .NET 런타임에서의 실행을 지원합니다. 그러한 프레임워크 중 일부는 `net46`처럼 .NET Framework를 나타내는 기존의 프레임워크입니다. 또 다른 집합은 "패키지 기반 프레임워크"로 간주할 수 있는 새로운 프레임워크로, 프레임워크를 정의하기 위한 새 모델을 설정합니다. 이러한 패키지 기반 프레임워크는 패키지로서 완전히 구성 및 정의되어, 패키지와 프레임워크 간에 강력한 관계를 형성합니다.
+각 .NET Core 패키지는 프레임워크라고 하는 여러 .NET 구현에서의 실행을 지원합니다. 그러한 프레임워크 중 일부는 `net46`처럼 .NET Framework를 나타내는 기존의 프레임워크입니다. 또 다른 집합은 "패키지 기반 프레임워크"로 간주할 수 있는 새로운 프레임워크로, 프레임워크를 정의하기 위한 새 모델을 설정합니다. 이러한 패키지 기반 프레임워크는 패키지로서 완전히 구성 및 정의되어, 패키지와 프레임워크 간에 강력한 관계를 형성합니다.
 
 ## <a name="packages"></a>패키지
 

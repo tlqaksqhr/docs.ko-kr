@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio에서 식 트리 디버그(C#) | Microsoft 문서"
+title: "Visual Studio에서 식 트리 디버그(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,16 +19,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 14ab67e78a3b4c4819ddca36a406526e78f5485e
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0cf40b38ca9a6f743aca2894506e1d0ea80c9d57
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>Visual Studio에서 식 트리 디버그(C#)
-응용 프로그램을 디버그할 때 식 트리의 구조 및 내용을 분석할 수 있습니다. 식 트리 구조의 개요를 빠르게 확인하려면 디버그 모드에서만 제공되는 `DebugView` 속성을 사용합니다. 디버깅에 대한 자세한 내용은 [Debugging in Visual Studio](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio)(Visual Studio의 디버깅)를 참조하세요.  
+응용 프로그램을 디버그할 때 식 트리의 구조 및 내용을 분석할 수 있습니다. 식 트리 구조의 개요를 빠르게 확인하려면 디버그 모드에서만 제공되는 `DebugView` 속성을 사용합니다. 디버깅에 대한 자세한 내용은 [Debugging in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)(Visual Studio의 디버깅)를 참조하세요.  
   
- 식 트리의 내용을 더 잘 표현하기 위해 `DebugView` 속성은 Visual Studio 시각화 도우미를 사용합니다. 자세한 내용은 [Create Custom Visualizers](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data)(사용자 지정 시각화 도우미 만들기)를 참조하세요.  
+ 식 트리의 내용을 더 잘 표현하기 위해 `DebugView` 속성은 Visual Studio 시각화 도우미를 사용합니다. 자세한 내용은 [Create Custom Visualizers](/visualstudio/debugger/create-custom-visualizers-of-data)(사용자 지정 시각화 도우미 만들기)를 참조하세요.  
   
 ### <a name="to-open-a-visualizer-for-an-expression-tree"></a>식 트리에 대한 시각화 도우미를 열려면  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 03/13/2017
  각 식 형식은 다음 섹션에 설명된 대로 시각화 도우미에 표시됩니다.  
   
 ## <a name="parameterexpressions"></a>ParameterExpressions  
- <xref:System.Linq.Expressions.ParameterExpression> 변수 이름은 시작 부분에 "$" 기호가 표시됩니다.  
+ <xref:System.Linq.Expressions.ParameterExpression> 변수 이름의 시작 부분에 “$” 기호가 표시됩니다.  
   
  매개 변수에 이름이 없으면 자동으로 생성된 이름이 할당됩니다(예: `$var1` 또는 `$var2`).  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 03/13/2017
 |`double num = 10; ConstantExpression expr = Expression.Constant(num);`|10D|  
   
 ## <a name="blockexpression"></a>BlockExpression  
- <xref:System.Linq.Expressions.BlockExpression> 개체의 형식이 블록에 있는 마지막 식의 형식과 다를 경우 형식은 꺽쇠 괄호(\< 및 >) 안의 `DebugInfo` 속성에 표시됩니다. 같을 경우 <xref:System.Linq.Expressions.BlockExpression> 개체의 형식이 표시되지 않습니다.  
+ <xref:System.Linq.Expressions.BlockExpression> 개체의 형식이 블록에 있는 마지막 식의 형식과 다를 경우 형식은 꺾쇠 괄호(\< 및 >) 안의 `DebugInfo` 속성에 표시됩니다. 같을 경우 <xref:System.Linq.Expressions.BlockExpression> 개체의 형식이 표시되지 않습니다.  
   
 ### <a name="examples"></a>예제  
   
@@ -110,7 +111,7 @@ ms.lasthandoff: 03/13/2017
 |`LabelTarget target = Expression.Label(); BlockExpression block = Expression.Block( Expression.Goto(target5), Expression.Label(target5));`|`.Block() {`<br /><br /> `.Goto #Label1 { };`<br /><br /> `.Label`<br /><br /> `.LabelTarget #Label1:`<br /><br /> `}`|  
   
 ## <a name="checked-operators"></a>확인된 연산자  
- 확인된 연산자는 연산자 앞에 "#" 기호가 표시됩니다. 예를 들어 확인된 더하기 연산자는 `#+`로 표시됩니다.  
+ 확인된 연산자는 연산자 앞에 “#” 기호가 표시됩니다. 예를 들어 확인된 더하기 연산자는 `#+`로 표시됩니다.  
   
 ### <a name="examples"></a>예제  
   
@@ -121,5 +122,6 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="see-also"></a>참고 항목  
  [식 트리(C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)   
- [Visual Studio의 디버깅](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio)   
- [Create Custom Visualizers of Data](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data)(데이터의 사용자 지정 시각화 도우미 만들기)
+ [Visual Studio의 디버깅](/visualstudio/debugger/debugging-in-visual-studio)   
+ [Create Custom Visualizers of Data](/visualstudio/debugger/create-custom-visualizers-of-data)(데이터의 사용자 지정 시각화 도우미 만들기)
+

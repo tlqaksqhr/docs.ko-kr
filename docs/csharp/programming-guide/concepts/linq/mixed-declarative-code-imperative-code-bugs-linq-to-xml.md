@@ -1,5 +1,5 @@
 ---
-title: "혼합된 선언적 코드-명령적 코드 버그(LINQ to XML)(C#) | Microsoft Docs"
+title: "혼합된 선언적 코드-명령적 코드 버그(LINQ to XML)(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,14 +19,15 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 747b3462dd6e463a565b27553f241b1ee5171de7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2fb679ee2593520e633daba969ccaa4db4d30509
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-c"></a>혼합된 선언적 코드-명령적 코드 버그(LINQ to XML)(C#)
-[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]에는 XML 트리를 직접 수정하는 데 사용할 수 있는 다양한 메서드가 포함되어 있습니다. 요소를 추가 및 삭제하고, 요소의 내용을 변경하고, 특성을 추가하는 등의 작업을 수행할 수 있습니다. 이 프로그래밍 인터페이스는 [XML 트리 수정(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)에 설명되어 있습니다. <xref:System.Xml.Linq.XContainer.Elements%2A>와 같은 축 중 하나를 반복하면서 XML 트리를 수정하면 이상한 버그가 발생할 수 있습니다.  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에는 XML 트리를 직접 수정하는 데 사용할 수 있는 다양한 메서드가 포함되어 있습니다. 요소를 추가 및 삭제하고, 요소의 내용을 변경하고, 특성을 추가하는 등의 작업을 수행할 수 있습니다. 이 프로그래밍 인터페이스는 [XML 트리 수정(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)에 설명되어 있습니다. <xref:System.Xml.Linq.XContainer.Elements%2A>와 같은 축 중 하나를 반복하면서 XML 트리를 수정하면 이상한 버그가 발생할 수 있습니다.  
   
  이 문제를 "할로윈 문제"라고도 합니다.  
   
@@ -62,7 +63,7 @@ foreach (XElement e in root.Elements())
   
  이 코드는 무한 루프에 들어갑니다. `foreach` 문은 `Elements()` 축을 반복하여 새 요소를 `doc` 요소에 추가합니다. 따라서 방금 추가한 요소도 반복하게 됩니다. 루프를 반복할 때마다 새 개체를 할당하기 때문에 결국 사용 가능한 모든 메모리를 사용하게 됩니다.  
   
- 다음과 같이 <xref:System.Linq.Enumerable.ToList%2A> 표준 쿼리 연산자를 사용하여 컬렉션을 메모리에 끌어오는 방법으로 이 문제를 해결할 수 있습니다.  
+ 다음과 같이 <xref:System.Linq.Enumerable.ToList%2A> 표준 쿼리 연산자를 사용하여 컬렉션을 메모리에 가져오는 방법으로 이 문제를 해결할 수 있습니다.  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -113,7 +114,7 @@ Console.WriteLine(root);
 </Root>  
 ```  
   
- 여기에서도 해결 방법은 다음과 같이 <xref:System.Linq.Enumerable.ToList%2A>를 호출하여 컬렉션을 구체화하는 것입니다.  
+ 여기에서도 해결 방법은 다음과 같이 <xref:System.Linq.Enumerable.ToList%2A>을 호출하여 컬렉션을 구체화하는 것입니다.  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -186,3 +187,4 @@ Console.WriteLine(newRoot);
   
 ## <a name="see-also"></a>참고 항목  
  [고급 LINQ to XML 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "방법: Visual Basic에서 다른 디렉터리에 파일의 복사본 만들기 | Microsoft Docs"
+title: "방법: Visual Basic에서 다른 디렉터리에 파일의 복사본 만들기"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -33,11 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: a51633fa65321325e1ae08c1e03cf2392f771cc9
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ef6fcfaa38343d0fb137571b82f4d2719f3d61ef
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/22/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-a-different-directory-in-visual-basic"></a>방법: Visual Basic에서 다른 디렉터리에 파일의 복사본 만들기
@@ -52,11 +52,11 @@ ms.lasthandoff: 05/22/2017
 ## <a name="robust-programming"></a>강력한 프로그래밍  
  다음 조건에서는 예외가 throw될 수 있습니다.  
   
--   길이가 0인 문자열이거나, 공백만 포함하거나, 잘못된 문자를 포함하거나, 경로가 장치 경로인 경우(\\\\.\\로 시작됨)와 같은 여러 가지 이유 중 하나로 경로가 올바르지 않은 경우(<xref:System.ArgumentException>)  
+-   길이가 0인 문자열이거나, 공백만 포함하거나, 잘못된 문자를 포함하거나, 경로가 장치 경로인 경우(\\\\.\\로 시작됨)와 같은 여러 가지 이유 중 하나로 경로가 유효하지 않은 경우(<xref:System.ArgumentException>)  
   
 -   시스템이 절대 경로를 검색할 수 없는 경우(<xref:System.ArgumentException>)  
   
--   경로가 `Nothing`이기 때문에 올바르지 않은 경우(<xref:System.ArgumentNullException>)  
+-   경로가 `Nothing`이기 때문에 유효하지 않은 경우(<xref:System.ArgumentNullException>)  
   
 -   소스 파일이 잘못되었거나 없는 경우(<xref:System.IO.FileNotFoundException>)  
   
@@ -88,3 +88,4 @@ ms.lasthandoff: 05/22/2017
  [방법: 동일한 디렉터리에 파일의 복사본 만들기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)   
  [방법: 디렉터리를 다른 디렉터리에 복사](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)   
  [방법: 파일 이름 바꾸기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)
+

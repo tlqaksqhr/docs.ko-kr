@@ -1,13 +1,9 @@
 ---
-title: "강력한 이름의 어셈블리 만들기 및 사용 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/30/2017
+title: "강력한 이름의 어셈블리 만들기 및 사용"
+ms.date: 08/01/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-bcl
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - strong-name bypass feature
@@ -24,17 +20,17 @@ caps.latest.revision: 17
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 7c694fc26d65fee277c7a6873494c8d1900408b2
+ms.translationtype: HT
+ms.sourcegitcommit: 0ee5fed355e0d8418500f1ecee53019548d9f7f8
+ms.openlocfilehash: 39fbd38549a791a761c633dca90dbdeeeefce10b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="creating-and-using-strong-named-assemblies"></a>강력한 이름의 어셈블리 만들기 및 사용
 <a name="top"></a> 강력한 이름은 간단한 텍스트 이름, 버전 번호 및 문화권 정보(제공되는 경우)를 포함하는 어셈블리 ID와 공개 키 및 디지털 서명으로 구성됩니다. 디지털 서명은 해당 개인 키를 사용하여 어셈블리 파일에서 생성됩니다. 어셈블리 파일은 어셈블리를 구성하는 모든 파일의 이름과 해시가 들어 있는 어셈블리 매니페스트를 포함합니다.  
   
- 강력한 이름의 어셈블리는 다른 강력한 이름의 어셈블리에서 형식만 사용할 수 있습니다. 그러지 않으면 강력한 이름의 어셈블리 보안이 손상됩니다.  
+ 강력한 이름의 어셈블리는 다른 강력한 이름의 어셈블리에서 형식만 사용할 수 있습니다. 그러지 않으면 강력한 이름의 어셈블리 무결성이 손상됩니다.  
   
  이 개요는 다음과 같은 단원으로 구성됩니다.  
   
@@ -61,7 +57,7 @@ ms.lasthandoff: 06/02/2017
 4.  어셈블리가 전역 어셈블리 캐시에 있는 경우 공용 언어 런타임은 강력한 이름 서명을 확인합니다. 런타임에 강력한 이름으로 바인딩할 때 공용 언어 런타임은 어셈블리 B의 매니페스트에 저장된 키와 어셈블리 A의 강력한 이름을 생성하는 데 사용된 키를 비교합니다. .NET Framework 보안 검사를 통과하고 바인딩에 성공하면, 어셈블리 B에서 어셈블리 A의 비트가 변조되지 않았고 실제로 어셈블리 A의 개발자가 이러한 비트를 전달했음을 보증합니다.  
   
 > [!NOTE]
->  이 시나리오에서는 신뢰 문제를 다루지 않습니다. 어셈블리에는 강력한 이름 외에도 전체 Microsoft Authenticode 서명이 있을 수 있습니다. Authenticode 서명에는 신뢰 관계를 설정하는 인증서가 포함되어 있습니다. 강력한 이름에는 이런 방식으로 코드에 서명하지 않아도 된다는 점에 유의하는 것이 중요합니다. 사실상 강력한 이름 서명을 생성하는 데 사용되는 키가 Authenticode 서명을 생성하는 데 사용되는 키와 동일하지 않아도 됩니다.  
+>  이 시나리오에서는 신뢰 문제를 다루지 않습니다. 어셈블리에는 강력한 이름 외에도 전체 Microsoft Authenticode 서명이 있을 수 있습니다. Authenticode 서명에는 신뢰 관계를 설정하는 인증서가 포함되어 있습니다. 강력한 이름에는 이런 방식으로 코드에 서명하지 않아도 된다는 점에 유의하는 것이 중요합니다. 강력한 이름은 고유한 ID를 제공할 뿐입니다.  
   
  [맨 위로 이동](#top)  
   
@@ -94,6 +90,7 @@ ms.lasthandoff: 06/02/2017
 |[방법: 강력한 이름의 어셈블리 참조](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|컴파일 타임 또는 런타임에 강력한 이름의 어셈블리에 있는 형식 또는 리소스를 참조하는 방법에 대해 설명합니다.|  
 |[방법: 강력한 이름 건너뛰기 기능 비활성화](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)|강력한 이름 서명의 유효성 검사를 건너뛰는 기능을 비활성화하는 방법에 대해 설명합니다. 이 기능은 모든 응용 프로그램 또는 특정 응용 프로그램에 대해 비활성화할 수 있습니다.|  
 |[어셈블리 만들기](../../../docs/framework/app-domains/create-assemblies.md)|단일 파일 어셈블리와 다중 파일 어셈블리에 대해 설명합니다.|  
-|[NIB: 방법: 어셈블리 서명 연기(Visual Studio)](http://msdn.microsoft.com/en-us/cab63b7a-591e-4674-b236-d77cd29a79ea)|어셈블리를 만든 후 강력한 이름의 어셈블리에 서명하는 방법에 대해 설명합니다.|  
+|[Visual Studio에서 어셈블리 서명을 연기하는 방법](/visualstudio/ide/managing-assembly-and-manifest-signing#how-to-sign-an-assembly-in-visual-studio)|어셈블리를 만든 후 강력한 이름의 어셈블리에 서명하는 방법에 대해 설명합니다.|  
 |[Sn.exe(강력한 이름 도구)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)|강력한 이름의 어셈블리를 만들 수 있도록 지원하는 .NET Framework에 포함된 도구에 대해 설명합니다. 이 도구는 키 관리, 서명 생성 및 서명 확인을 위한 옵션을 제공합니다.|  
 |[Al.exe(어셈블리 링커)](../../../docs/framework/tools/al-exe-assembly-linker.md)|모듈 또는 리소스 파일에서 어셈블리 매니페스트가 있는 파일을 생성하는 .NET Framework에 포함된 도구에 대해 설명합니다.|
+

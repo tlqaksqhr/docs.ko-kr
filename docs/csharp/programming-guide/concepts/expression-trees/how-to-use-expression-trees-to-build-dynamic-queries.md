@@ -1,5 +1,5 @@
 ---
-title: "방법: 식 트리를 사용하여 동적 쿼리 빌드(C#) | Microsoft 문서"
+title: "방법: 식 트리를 사용하여 동적 쿼리 빌드(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,11 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 76dc6ebe2cc2489d83a2693a3143d36d46c8ef82
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b09674690093ea89fcf59b79d90d34e9605b44a2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>방법: 식 트리를 사용하여 동적 쿼리 빌드(C#)
@@ -129,3 +129,4 @@ foreach (string company in results)
  [식 트리(C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)   
  [방법: 식 트리 실행(C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)   
  [방법: 런타임에 동적으로 조건자 필터 지정](../../../../csharp/programming-guide/linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)
+

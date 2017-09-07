@@ -1,5 +1,5 @@
 ---
-title: "float(C# 참조) | Microsoft 문서"
+title: "float(C# 참조)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -31,10 +31,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1c3a66e4f9c690effb35e280e00e29930ec64d75
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2f1fb02f84de504112eee826dbee1275fa3ccb7a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="float-c-reference"></a>float(C# 참조)
@@ -45,7 +46,7 @@ ms.lasthandoff: 03/13/2017
 |`float`|-3.4 × 10<sup>38</sup> ~ +3.4 × 10<sup>38</sup>|7개의 자릿수|<xref:System.Single?displayProperty=fullName>|  
   
 ## <a name="literals"></a>리터럴  
- 기본적으로 대입 연산자 오른쪽의 실수 리터럴은 [double](double.md)로 처리됩니다. 따라서 부동 변수를 초기화하려면 다음 예제와 같이 접미사 `f` 또는 `F`를 사용합니다.  
+ 기본적으로 대입 연산자 오른쪽의 실수 리터럴은 [double](double.md)로 처리됩니다. 따라서 부동 변수를 초기화하려면 다음 예제와 같이 접미사 `f` 또는 `F`을(를) 사용합니다.  
   
 ```csharp
 float x = 3.5F;  
@@ -73,12 +74,12 @@ float x = 3.5F;
  이러한 값에 대한 자세한 내용은 [IEEE](http://go.microsoft.com/fwlink/?LinkId=26269) 웹 사이트에서 제공되는 이진 부동 소수점 연산에 대한 IEEE 표준을 참조하세요.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 [int](int.md), [short](short.md) 및 `float`가 수학 식에 포함되어 `float` 결과를 제공합니다. `float`는 <xref:System.Single?displayProperty=fullName> 형식에 대한 별칭입니다. 식에 [double](double.md)이 없습니다.  
+ 다음 예제에서는 [int](int.md), [short](short.md) 및 `float`이(가) 수학 식에 포함되어 `float` 결과를 제공합니다. (`float`는 <xref:System.Single?displayProperty=fullName> 형식의 별칭입니다.) 식에 [double](double.md)이 없습니다.  
   
  [!code-cs[csrefKeywordsTypes#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/float_1.cs)]  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Single>   
@@ -90,3 +91,4 @@ float x = 3.5F;
  [기본 제공 형식 표](built-in-types-table.md)   
  [암시적 숫자 변환 표](implicit-numeric-conversions-table.md)   
  [명시적 숫자 변환 표](explicit-numeric-conversions-table.md)
+

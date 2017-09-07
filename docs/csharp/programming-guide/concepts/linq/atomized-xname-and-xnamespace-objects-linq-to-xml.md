@@ -1,5 +1,5 @@
 ---
-title: "원자화된 XName 및 XNamespace 개체(LINQ to XML)(C#) | Microsoft 문서"
+title: "원자화된 XName 및 XNamespace 개체(LINQ to XML)(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -14,19 +14,18 @@ ms.assetid: a5b21433-b49d-415c-b00e-bcbfb0d267d7
 caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 89f5c2634e1deb196b121f2983b85f125927ae32
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 1731be2847e5e118340b93cd35205fc13ff9f75a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-c"></a>원자화된 XName 및 XNamespace 개체(LINQ to XML)(C#)
 <xref:System.Xml.Linq.XName> 및 <xref:System.Xml.Linq.XNamespace> 개체는 *원자화*됩니다. 즉, 이들 개체의 정규화된 이름이 같으면 같은 개체를 참조합니다. 이를 통해 쿼리 성능이 향상될 수 있습니다. 두 개의 원자화된 이름이 같은지 비교하는 경우 기본 중간 언어에서 이 두 개의 참조가 같은 개체를 가리키는지 여부만 확인하면 됩니다. 기본 코드는 시간이 많이 걸리는 문자열 비교를 수행할 필요가 없습니다.  
   
 ## <a name="atomization-semantics"></a>원자화 의미 체계  
- 원자화는 두 <xref:System.Xml.Linq.XName> 개체가 같은 로컬 이름을 가지고 동일한 네임스페이스에 있는 경우 동일한 인스턴스를 공유함을 의미합니다. 마찬가지로 두 <xref:System.Xml.Linq.XNamespace> 개체가 같은 네임스페이스 URI를 가지면 같은 인스턴스를 공유합니다.  
+ 원자화는 두 <xref:System.Xml.Linq.XName> 개체가 같은 로컬 이름을 갖고 있고 동일한 네임스페이스에 있는 경우 동일한 인스턴스를 공유함을 의미합니다. 마찬가지로 두 <xref:System.Xml.Linq.XNamespace> 개체가 같은 네임스페이스 URI를 갖고 있으면 같은 인스턴스를 공유합니다.  
   
  클래스가 원자화된 개체를 사용하려면 클래스에 대한 생성자가 public이 아니라 private이어야 합니다. 이는 생성자가 public인 경우 원자화되지 않은 개체를 생성할 수 있기 때문입니다. <xref:System.Xml.Linq.XName> 및 <xref:System.Xml.Linq.XNamespace> 클래스는 문자열을 <xref:System.Xml.Linq.XName> 또는 <xref:System.Xml.Linq.XNamespace>로 변환하는 암시적 변환 연산자를 구현합니다. 이를 통해 이러한 개체의 인스턴스를 가져올 수 있습니다. 생성자는 액세스할 수 없으므로 생성자를 사용하여 인스턴스를 가져올 수 없습니다.  
   
@@ -89,3 +88,4 @@ foreach (var z in query)
   
 ## <a name="see-also"></a>참고 항목  
  [성능(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)
+

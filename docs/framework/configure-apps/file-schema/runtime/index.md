@@ -1,5 +1,5 @@
 ---
-title: "런타임 설정 스키마 | Microsoft Docs"
+title: "런타임 설정 스키마"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -23,11 +23,11 @@ caps.latest.revision: 49
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: deb760878391856cf07bab04563d0ec19a1511e7
-ms.openlocfilehash: 84935c04856e9d72a8305d9d215acbab5090234a
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f457546a07e95e57ac1282bd2d1a2bab6024cdf3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="runtime-settings-schema"></a>런타임 설정 스키마
@@ -144,3 +144,4 @@ ms.lasthandoff: 06/08/2017
  [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)   
  [방법: 동시 가비지 수집 비활성화](http://msdn.microsoft.com/en-us/ba2c6c67-5778-497c-9fac-5f793b5500c7)   
  [어셈블리 버전 리디렉션](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+

@@ -29,10 +29,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4899b3604343925e7e4e0535929d041b1a1f1081
+ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
+ms.openlocfilehash: de81058173b0985577474e8601aa84d4e83336a5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="generics-c-programming-guide"></a>제네릭(C# 프로그래밍 가이드)
@@ -72,8 +72,6 @@ ms.lasthandoff: 07/28/2017
 -   [제네릭 메서드](../../../csharp/programming-guide/generics/generic-methods.md)  
   
 -   [제네릭 대리자](../../../csharp/programming-guide/generics/generic-delegates.md)  
-  
--   [default 키워드](../../../csharp/programming-guide/generics/default-keyword-in-generic-code.md)  
   
 -   [C++ 템플릿과 C# 제네릭의 차이점](../../../csharp/programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md)  
   

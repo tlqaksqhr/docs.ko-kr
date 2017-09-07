@@ -1,5 +1,5 @@
 ---
-title: "방법: 레지스트리에 키 만들기(Visual C#) | Microsoft 문서"
+title: "방법: 레지스트리에 키 만들기(Visual C#)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +29,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3a377a85acdc31b426171ab6583bff92b24889b3
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 96d34df3314494fc96ad8b55d7462b67dcc7bd72
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-a-key-in-the-registry-visual-c"></a>방법: 레지스트리에 키 만들기(Visual C#)
@@ -53,7 +54,7 @@ key.Close();
   
 -   `Names` 매개 변수를 레지스트리의 HKEY_CURRENT_USER 노드 바로 아래에 있는 키 이름으로 바꿉니다.  
   
--   `Nam`e 매개 변수를 Names 노드 바로 아래에 있는 값 이름으로 바꿉니다.  
+-   `Name` 매개 변수를 Names 노드 바로 아래에 있는 값 이름으로 바꿉니다.  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
  레지스트리 구조를 검사하여 키에 적합한 위치를 찾습니다. 예를 들어 현재 사용자의 소프트웨어 키를 열고 회사 이름으로 키를 만들 수 있습니다. 그런 다음 회사 키에 레지스트리 값을 추가합니다.  
@@ -82,3 +83,4 @@ key.Close();
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
  [파일 시스템 및 레지스트리(C# 프로그래밍 가이드)](../../../csharp/programming-guide/file-system/index.md)   
  [C#을 사용하여 레지스트리에서 읽기, 쓰기 및 삭제](http://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)
+

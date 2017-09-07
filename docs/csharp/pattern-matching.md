@@ -1,6 +1,6 @@
 ---
-title: "패턴 일치 | C# 가이드"
-description: "C의 패턴 일치 식에 대한 자세한 정보#"
+title: "패턴 일치 - C# 가이드"
+description: "C#의 패턴 일치 식에 대한 자세한 정보"
 keywords: .NET, .NET Core, C#
 ms.date: 01/24/2017
 ms.author: wiwagn
@@ -9,10 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c5b1ef4b6de108e2ea3967630e9e37e52a97245c
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cf17b68514ff263b784bcb42d2015d27015328d9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -50,7 +51,7 @@ C# 7 이전에는 일련의 `if` 및 `is` 문에서 각 형식을 테스트해�
 
 이 업데이트된 버전에서 `is` 식은 변수를 테스트하고 적절한 형식의 새로운 변수에 할당합니다. 또한 이 버전에는 `struct`인 `Rectangle` 형식이 포함되어 있습니다. 새 `is` 식은 참조 형식뿐 아니라 값 형식에서도 작동합니다.
 
-패턴 일치 식에 대한 언어 규칙은 일치 식의 결과를 잘못 사용하는 경우를 방지하는 데 도움이 됩니다. 위의 예제에서 `s`,  `c` 및 `r` 변수는 범위 내에만 있고 해당 패턴 일치 식에 `true` 결과가 있는 경우 무기한 할당됩니다. 다른 위치에 있는 변수 중 하나를 사용하려는 경우 코드에서 컴파일러 오류를 생성합니다.
+패턴 일치 식에 대한 언어 규칙은 일치 식의 결과를 잘못 사용하는 경우를 방지하는 데 도움이 됩니다. 위의 예제에서 `s`, `c` 및 `r` 변수는 범위 내에만 있고 해당 패턴 일치 식에 `true` 결과가 있는 경우 무기한 할당됩니다. 다른 위치에 있는 변수 중 하나를 사용하려는 경우 코드에서 컴파일러 오류를 생성합니다.
 
 범위부터 시작하여 해당 규칙을 자세히 살펴보겠습니다. `c` 변수는 첫 번째 `if` 문의 `else` 분기에서만 범위 내에 있습니다. `s` 변수는 `ComputeArea` 메서드에서 범위 내에 있습니다. 이는 `if` 문의 각 분기가 변수에 대해 별도 범위를 설정하기 때문입니다. 그러나 `if` 문 자체는 별도 범위를 설정하지 않습니다. 즉, `if` 문에서 선언된 변수는 `if` 문(이 경우 메서드)과 동일한 범위에 있습니다. 이 동작은 패턴 일치와 관련은 없지만 변수 범위와 `if` 및 `else` 문에 대해 정의된 동작입니다.
 
@@ -111,7 +112,7 @@ C# 7 이전에는 일련의 `if` 및 `is` 문에서 각 형식을 테스트해�
 
 [!code-csharp[NullCase](../../samples/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "null 사례 추가")]
 
-`null` 패턴의 특수 사례는 `null` 상수에 형식이 없지만 모든 참조 형식 또는 nullable 형식으로 변환할 수 있기 때문에 흥미롭습니다. 
+`null` 패턴의 특수 동작은 패턴에서 형식이 없는 `null` 상수를 모든 참조 형식 또는 nullable 형식으로 변환할 수 있기 때문에 흥미롭습니다. `null`을 임의 형식으로 변환하는 대신, 언어에서 `null` 값은 변수의 컴파일 시간 형식과 관계없이 어떠한 형식 패턴과도 일치하지 않는다고 정의합니다. 이 동작을 통해 새 `switch` 기반 형식 패턴이 `is` 문과 일치하게 됩니다. `is` 문은 확인되는 값이 `null`일 경우 항상 `false`를 반환합니다. 더 간단하기도 합니다. 형식을 확인한 후에는 추가 null 검사가 필요하지 않습니다. 위 샘플의 case 블록에 null 검사가 없다는 사실에서 이를 확인할 수 있습니다. 형식 패턴 일치를 통해 null이 아닌 값이 보장되므로 null 검사가 필요하지 않습니다.
 
 ## <a name="conclusions"></a>결론
 

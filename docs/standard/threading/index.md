@@ -1,5 +1,5 @@
 ---
-title: "관리되는 스레딩 | Microsoft Docs"
+title: "관리되는 스레딩"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -16,11 +16,11 @@ caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 3d6aa14f94b4a1537b49cda17229cd073b5d8486
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f2a8792818e837f019403aa84c2c2e98db0b2b89
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="managed-threading"></a>관리되는 스레딩
@@ -70,3 +70,4 @@ ms.lasthandoff: 06/08/2017
   
  [PLINQ(병렬 LINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
  다중 프로세서를 활용하기 위해 쿼리를 병렬로 실행하기 위한 시스템을 설명합니다.
+

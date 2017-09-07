@@ -1,5 +1,5 @@
 ---
-title: "어셈블리 콘텐츠 | Microsoft Docs"
+title: "어셈블리 콘텐츠"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -19,11 +19,11 @@ caps.latest.revision: 8
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: e1268744a8a5334fafb2c40c111c480dd30ddd9b
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 864e90fea6eb3e65a5a35a9eac38eaecf2299e41
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="assembly-contents"></a>어셈블리 콘텐츠
@@ -62,3 +62,4 @@ ms.lasthandoff: 06/02/2017
  [공용 언어 런타임의 어셈블리](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)   
  [어셈블리 매니페스트](../../../docs/framework/app-domains/assembly-manifest.md)   
  [어셈블리 보안 고려 사항](../../../docs/framework/app-domains/assembly-security-considerations.md)
+

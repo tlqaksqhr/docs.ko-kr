@@ -1,5 +1,5 @@
 ---
-title: "LINQ를 지원하는 C# 기능 | Microsoft 문서"
+title: "LINQ를 지원하는 C# 기능"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -31,17 +31,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f844e967e2abb7ea23e04a797017261e33bb4d75
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 01db44482ee3230d15af5ce8e0373fb15a769609
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="c-features-that-support-linq"></a>LINQ를 지원하는 C# 기능
-다음 섹션에서는 C# 3.0에 도입된 새로운 언어 구문을 소개합니다. 이러한 새 기능은 모두 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 쿼리에서 어느 정도 사용되지만 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)]로 제한되지 않고 유용한 모든 컨텍스트에서 사용할 수 있습니다.  
+다음 섹션에서는 C# 3.0에 도입된 새로운 언어 구문을 소개합니다. 이러한 새 기능은 모두 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리에서 어느 정도 사용되지만 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]로 제한되지 않고 유용한 모든 컨텍스트에서 사용할 수 있습니다.  
   
 ## <a name="query-expressions"></a>쿼리 식  
- 쿼리 식은 SQL이나 XQuery와 유사한 선언적 구문을 사용하여 IEnumerable 컬렉션을 쿼리합니다. 컴파일 시간에 쿼리 구문은 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 공급자의 표준 쿼리 연산자 확장 메서드 구현에 대한 메서드 호출로 변환됩니다. 응용 프로그램은 `using` 지시문으로 적절한 네임스페이스를 지정하여 범위 내에 있는 표준 쿼리 연산자를 제어합니다. 다음 쿼리 식은 문자열의 배열을 사용하고 문자열의 첫 번째 문자에 따라 그룹화하며 그룹의 순서를 지정합니다.  
+ 쿼리 식은 SQL이나 XQuery와 유사한 선언적 구문을 사용하여 IEnumerable 컬렉션을 쿼리합니다. 컴파일 시간에 쿼리 구문은 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 공급자의 표준 쿼리 연산자 확장 메서드 구현에 대한 메서드 호출로 변환됩니다. 응용 프로그램은 `using` 지시문으로 적절한 네임스페이스를 지정하여 범위 내에 있는 표준 쿼리 연산자를 제어합니다. 다음 쿼리 식은 문자열의 배열을 사용하고 문자열의 첫 번째 문자에 따라 그룹화하며 그룹의 순서를 지정합니다.  
   
 ```  
 var query = from str in stringArray  
@@ -63,12 +64,12 @@ var query = from str in stringArray
             select str;  
 ```  
   
- `var`로 선언된 변수는 형식을 명시적으로 지정한 변수만큼 강력한 형식입니다. `var`을 사용하면 무명 형식을 만들 수 있지만 모든 지역 변수에 사용할 수 있습니다. 배열은 암시적 형식 지정을 사용하여 선언할 수도 있습니다.  
+ `var`(으)로 선언된 변수는 형식을 명시적으로 지정한 변수만큼 강력한 형식입니다. `var`을 사용하면 무명 형식을 만들 수 있지만 모든 지역 변수에 사용할 수 있습니다. 배열은 암시적 형식 지정을 사용하여 선언할 수도 있습니다.  
   
  자세한 내용은 [암시적으로 형식화된 지역 변수](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)를 참조하세요.  
   
 ## <a name="object-and-collection-initializers"></a>개체 및 컬렉션 이니셜라이저  
- 개체 및 컬렉션 이니셜라이저를 사용하면 개체에 대한 생성자를 명시적으로 호출하지 않고 개체를 초기화할 수 있습니다. 일반적으로 이니셜라이저는 소스 데이터를 새 데이터 형식으로 프로젝션할 때 쿼리 식에서 사용됩니다. public `Name` 및 `Phone` 속성이 있는 `Customer`라는 클래스를 가정할 경우 다음 코드에서처럼 개체 이니셜라이저를 사용할 수 있습니다.  
+ 개체 및 컬렉션 이니셜라이저를 사용하면 개체에 대한 생성자를 명시적으로 호출하지 않고 개체를 초기화할 수 있습니다. 일반적으로 이니셜라이저는 소스 데이터를 새 데이터 형식으로 프로젝션할 때 쿼리 식에서 사용됩니다. public `Name` 및 `Phone` 속성이 있는 `Customer`(이)라는 클래스를 가정할 경우 다음 코드에서처럼 개체 이니셜라이저를 사용할 수 있습니다.  
   
 ```  
 Customer cust = new Customer { Name = "Mike", Phone = "555-1212" };  
@@ -86,12 +87,12 @@ select new {name = cust.Name, phone = cust.Phone};
  자세한 내용은 [무명 형식](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)을 참조하세요.  
   
 ## <a name="extension-methods"></a>확장명 메서드  
- 확장 메서드는 형식과 연결하여 형식에 대한 인스턴스 메서드인 것처럼 호출할 수 있는 정적 메서드입니다. 이 기능을 사용하면 실제로 수정하지 않고도 기존 형식에 새 메서드를 "추가"할 수 있습니다. 표준 쿼리 연산자는 <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 모든 형식에 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 쿼리 기능을 제공하는 확장 메서드 집합입니다.  
+ 확장 메서드는 형식과 연결하여 형식에 대한 인스턴스 메서드인 것처럼 호출할 수 있는 정적 메서드입니다. 이 기능을 사용하면 실제로 수정하지 않고도 기존 형식에 새 메서드를 "추가"할 수 있습니다. 표준 쿼리 연산자는 <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 모든 형식에 대해 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 기능을 제공하는 확장 메서드 집합입니다.  
   
  자세한 내용은 [확장 메서드](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)를 참조하세요.  
   
 ## <a name="lambda-expressions"></a>람다 식  
- 람다 식은 => 연산자를 사용하여 함수 본문에서 입력 매개 변수를 구분하는 인라인 함수이며 컴파일 시간에 대리자나 식 트리로 변환할 수 있습니다. [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 프로그래밍에서는 표준 쿼리 연산자에 대한 메서드를 직접 호출할 때 람다 식이 나타납니다.  
+ 람다 식은 => 연산자를 사용하여 함수 본문에서 입력 매개 변수를 구분하는 인라인 함수이며 컴파일 시간에 대리자나 식 트리로 변환할 수 있습니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 프로그래밍에서는 표준 쿼리 연산자에 대한 메서드를 직접 호출할 때 람다 식이 나타납니다.  
   
  자세한 내용은 다음을 참조하세요.  
   
@@ -112,3 +113,4 @@ public string Name {get; set;}
   
 ## <a name="see-also"></a>참고 항목  
  [LINQ(Language-Integrated Query)(C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+

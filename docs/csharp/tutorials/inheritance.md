@@ -5,23 +5,20 @@ keywords: "상속(C#), 기본 클래스, 파생 클래스, 추상 기본 클래�
 author: rpetrusha
 manager: wpickett
 ms.author: ronpet
-ms.date: 03/06/2017
+ms.date: 08/16/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c3004d84e9a87fcf86737b18fe58bb200eefd33b
+ms.sourcegitcommit: 3e1ec8b24c4debf24a0d52ad2a23897975c41550
+ms.openlocfilehash: 78aff41ae597a3dbe9a57e2342b52b399ea96d66
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/17/2017
 
 ---
-
 # <a name="inheritance-in-c-and-net"></a>C# 및 .NET의 상속
-
-## <a name="introduction"></a>소개
 
 이 자습서에서는 C#의 상속에 대해 소개합니다. 상속은 특정 기능(데이터 및 동작)을 제공하는 기본 클래스를 정의하고 해당 기능을 상속하거나 재정의하는 파생 클래스를 정의할 수 있는 개체 지향 프로그래밍 언어의 기능입니다.
 
@@ -122,13 +119,13 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 [!code-csharp[상속](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#1)]
 
-그런 후 리플렉션(형식이 메타데이터를 검사하여 해당 형식에 대한 정보 획득)을 사용하여 `SimpleClass` 형식에 속하는 멤버의 목록을 가져올 수 있습니다. `SimpleClass` 클래스에서 어떤 멤버도 정의하지 않았지만 예제의 출력에는 실제로 9개의 멤버가 있는 것으로 나타납니다. 이러한 멤버 중 하나는 C# 컴파일러에서 `SimpleClass` 형식에 대해 자동으로 제공하는 매개 변수 없는(또는 기본) 생성자입니다. 이중 8개 또는 7개 멤버가 .NET 형식 시스템의 모든 클래스 및 인터페이스가 궁극적으로 암시적으로 상속하는 형식인 <xref:System.Object> 의 멤버입니다.
+그런 후 리플렉션(형식이 메타데이터를 검사하여 해당 형식에 대한 정보 획득)을 사용하여 `SimpleClass` 형식에 속하는 멤버의 목록을 가져올 수 있습니다. `SimpleClass` 클래스에서 어떤 멤버도 정의하지 않았지만 예제의 출력에는 실제로 9개의 멤버가 있는 것으로 나타납니다. 이러한 멤버 중 하나는 C# 컴파일러에서 `SimpleClass` 형식에 대해 자동으로 제공하는 매개 변수 없는(또는 기본) 생성자입니다. 나머지 8개 멤버는 .NET 형식 시스템의 모든 클래스 및 인터페이스가 마지막에 암시적으로 상속하는 형식인 <xref:System.Object>의 멤버입니다.
 
 [!code-csharp[상속](../../../samples/snippets/csharp/tutorials/inheritance/simpleclass.cs#2)]
 
 <xref:System.Object> 클래스에서 암시적으로 상속되므로 다음 메서드를 `SimpleClass` 클래스에서 사용할 수 있습니다.
 
-- 공용 `ToString` 메서드: `SimpleClass` 개체를 해당 문자열 표현, 정규화된 형식 이름으로 변환합니다. 이 경우 `ToString` 메서드는 문자열 "SimpleClass"를 반환합니다.
+- 공용 `ToString` 메서드: `SimpleClass` 개체를 해당 문자열 표현으로 변환하고 정규화된 형식 이름을 반환합니다. 이 경우 `ToString` 메서드는 문자열 "SimpleClass"를 반환합니다.
 
 - 두 개체가 같은지를 테스트하는 세 가지 메서드: 공용 인스턴스 `Equals(Object)` 메서드, 공용 정적 `Equals(Object, Object)` 메서드, 공용 정적 `ReferenceEquals(Object, Object)` 메서드. 기본적으로 이러한 메서드는 참조 같음을 테스트합니다. 즉, 두 개체 변수가 같으려면 같은 개체를 참조해야 합니다.
 
@@ -160,7 +157,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 > [!NOTE]
 > 클래스 또는 구조체는 하나 이상의 인터페이스를 구현할 수 있습니다. 인터페이스 구현은 종종 단일 상속을 위한 해결 방법 또는 구조체에 상속을 사용하는 방법으로 제공되지만, 인터페이스 및 해당 구현 형식 사이에서 상속과는 다른 관계(“~할 수 있다(can do)” 관계)를 나타내는 데 사용됩니다. 인터페이스는 해당 인터페이스를 구현 형식에서 사용 가능하게 만드는 기능 일부(예: 같은지 테스트하는 기능, 개체를 비교하거나 정렬하는 기능 또는 문화권별 구문 분석 및 서식 지정을 지원하는 기능)를 정의합니다.
 
-"~이다(is a)"는 형식과 해당 형식의 특정 인스턴스화 사이의 관계를 나타내기도 합니다. 다음 예제에서 `Automobile`은 세 가지 고유한 읽기 전용 속성, 즉 자동차의 제조업체인 `Moke`, 자동차의 종류인 `Model`, 제조 연도인 `Year`를 갖는 클래스입니다. `Automobile` 클래스는 해당 인수가 속성 값에 할당되는 생성자를 가지며, <xref:System.Object.ToString%2A?displayProperty=fullName> 메서드를 재정의하여 `Automobile` 클래스가 아닌 `Automobile` 인스턴스를 고유하게 식별하는 문자열을 생성합니다.
+"~이다(is a)"는 형식과 해당 형식의 특정 인스턴스화 사이의 관계를 나타내기도 합니다. 다음 예제에서 `Automobile`은 세 가지 고유한 읽기 전용 속성, 즉 자동차의 제조업체인 `Make`, 자동차의 종류인 `Model`, 제조 연도인 `Year`를 갖는 클래스입니다. `Automobile` 클래스는 해당 인수가 속성 값에 할당되는 생성자를 가지며, <xref:System.Object.ToString%2A?displayProperty=fullName> 메서드를 재정의하여 `Automobile` 클래스가 아닌 `Automobile` 인스턴스를 고유하게 식별하는 문자열을 생성합니다.
 
 [!code-csharp[상속](../../../samples/snippets/csharp/tutorials/inheritance/is-a.cs#1)]
 
@@ -219,13 +216,13 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 출판물과 관련된 두 가지 속성
 
-  `Title`은 `pubTitle`이라는 private 필드에 값을 저장하는 `Publication` 생성자를 호출하여 해당 값이 제공되는 읽기 전용 <xref:System.String> 속성입니다.
+  `Title`은 `Publication` 생성자를 호출하여 해당 값이 제공되는 읽기 전용 <xref:System.String> 속성입니다.
 
   `Pages`는 출판물에 포함된 총 페이지 수를 나타내는 읽기/쓰기 <xref:System.Int32> 속성입니다. 값은 `totalPages`라는 private 필드에 저장됩니다. 값은 양수여야 하며 양수가 아니면 <xref:System.ArgumentOutOfRangeException> 이 throw됩니다.
 
 - 출판사 관련 멤버
 
-  두 개의 읽기 전용 속성인 `Publisher` 및 `Type`은 private `pubName` 및 `pubType` 필드의 값을 반환합니다. 해당 값은 원래 `Publication` 클래스 생성자를 호출하여 제공됩니다.
+  두 개의 읽기 전용 속성 `Publisher` 및 `Type`입니다. 해당 값은 원래 `Publication` 클래스 생성자를 호출하여 제공됩니다.
 
 - 출판 관련 멤버
 
@@ -233,7 +230,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 저작권 관련 멤버
 
-  `Copyright` 메서드는 저작권 소유자의 이름과 저작권 연도를 인수로 사용한 후 private `copyrName` 및 `copyrDate` 필드에 할당합니다. 값은 `CopyrightName` 및 `CopyrightDate` 속성에서 검색할 수 있습니다.
+  `Copyright` 메서드는 저작권 소유자의 이름과 저작권 연도를 인수로 사용한 후 `CopyrightName` 및 `CopyrightDate` 속성에 할당합니다.
 
 - `ToString` 메서드 재정의
 
@@ -253,13 +250,13 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 2개의 생성자
 
-  두 `Book` 생성자는 3가지 공용 매개 변수를 공유합니다. 두 *title* 및 *publisher*는 `Publication` 생성자의 매개 변수에 해당합니다. 세 번째는 private `authorName` 필드에 저장되는 *author*입니다. 한 생성자에는 private `id` 필드에 저장되는 *isbn* 매개 변수가 포함됩니다.
+  두 `Book` 생성자는 3가지 공용 매개 변수를 공유합니다. 두 *title* 및 *publisher*는 `Publication` 생성자의 매개 변수에 해당합니다. 세 번째는 private `authorName` 필드에 저장되는 *author*입니다. 한 생성자에는 `ISBN` auto 속성에 저장되는 *isbn* 매개 변수가 포함됩니다.
 
   첫 번째 생성자는 [this](../language-reference/keywords/this.md) 키워드를 사용하여 다른 생성자를 호출합니다. 이것은 생성자를 정의하는 일반적인 패턴입니다. 가장 많은 수의 매개 변수를 사용하여 생성자를 호출하면 더 적은 수의 매개 변수를 사용하는 생성자가 기본값을 제공합니다.
 
   두 번째 생성자는 [base](../language-reference/keywords/base.md) 키워드를 사용하여 기본 클래스 생성자에 제목 및 출판사 이름을 전달합니다. 소스 코드에서 기본 클래스 생성자를 명시적으로 호출하지 않으면 C# 컴파일러는 기본 클래스의 기본 생성자 또는 매개 변수 없는 생성자에 대한 호출을 자동으로 제공합니다.
 
-- 읽기 전용 `ISBN` 속성: 고유한 10 또는 13자리 숫자인 `Book` 개체의 국제 표준 도서 번호를 반환합니다. ISBN은 `Book` 생성자 중 하나에 인수로 제공되고 private `id` 필드에 저장됩니다.
+- 읽기 전용 `ISBN` 속성: 고유한 10 또는 13자리 숫자인 `Book` 개체의 국제 표준 도서 번호를 반환합니다. ISBN은 `Book` 생성자 중 하나에 인수로 제공됩니다. ISBN은 컴파일러에서 자동 생성되는 private 지원 필드에 저장됩니다.
 
 - 읽기 전용 `Author` 속성. 저자 이름은 두 `Book` 생성자에 인수로 제공되고 private `authorName` 필드에 저장됩니다.
 

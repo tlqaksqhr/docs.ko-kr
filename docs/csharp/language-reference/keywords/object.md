@@ -1,5 +1,5 @@
 ---
-title: "object(C# 참조) | Microsoft 문서"
+title: "object(C# 참조)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: cf1ec249c928f4bc23827ef0b831a8a64659ab8c
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 744debc51f68cc52f03bce09c9f276a66ae085e1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="object-c-reference"></a>object(C# 참조)
@@ -54,3 +54,4 @@ ms.lasthandoff: 03/13/2017
  [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
  [참조 형식](../../../csharp/language-reference/keywords/reference-types.md)   
  [값 형식](../../../csharp/language-reference/keywords/value-types.md)
+

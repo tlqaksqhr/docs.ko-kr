@@ -1,6 +1,6 @@
 ---
 title: "식 해석"
-description: "식 해석"
+description: "식 트리의 구조를 검사하는 코드를 작성하는 방법을 알아봅니다."
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 07352a2807c08ad19b8d5a47c5a42a0e1c455ab6
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e7c5f7404546c6f3812fc5cc3d0320c77816634d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 
@@ -58,7 +58,7 @@ The value of the constant value is 24
 Expression<Func<int>> sum = () => 1 + 2;
 ```
 
-> `var`을 사용하여 이 식 트리를 선언하지 않습니다. 왜냐하면 할당의 오른쪽이 암시적으로 형식화되어 있기 때문에 그렇게 할 수 없습니다. 이 사항을 좀더 자세히 이해하려면 [여기](implicitly-typed-lambda-expressions.md)를 읽어보세요.
+> `var`을(를) 사용하여 이 식 트리를 선언하지 않습니다. 왜냐하면 할당의 오른쪽이 암시적으로 형식화되어 있기 때문에 그렇게 할 수 없습니다. 이 사항을 좀더 자세히 이해하려면 [여기](implicitly-typed-lambda-expressions.md)를 읽어보세요.
 
 루트 노드는 `LambdaExpression`입니다. `=>` 연산자의 오른쪽에서 흥미로운 코드를 가져오려면 `LambdaExpression`의 자식 중 하나를 찾아야 합니다. 이 섹션에서는 모든 식을 사용하여 찾습니다. 부모 노드는 `LambdaExpression`의 반환 형식을 찾는 데 도움이 됩니다.
 
@@ -522,7 +522,7 @@ The expression body is:
 
 마지막 예제도 가능한 노드 형식의 하위 집합을 인식합니다.
 이 예제가 실패하도록 하는 많은 식을 제공할 수도 있습니다.
-전체 구현은 [ExpressionVisitor](https://docs.microsoft.com/dotnet/core/api/System.Linq.Expressions.ExpressionVisitor)라는 이름으로 .NET 표준 라이브러리에 포함되며 가능한 노드 형식을 모두 처리할 수 있습니다.
+전체 구현은 [ExpressionVisitor](/dotnet/core/api/System.Linq.Expressions.ExpressionVisitor)라는 이름으로 .NET Standard에 포함되며 가능한 노드 형식을 모두 처리할 수 있습니다.
 
 마지막으로 이 문서에서 사용된 라이브러리는 데모 및 학습용으로 작성되었으며, 최적화되지 않았습니다. 사용된 구조를 매우 명확하게 하고 노드를 방문하여 포함된 항목을 분석하는 데 사용된 기술을 강조하기 위해 작성되었습니다. 프로덕션 구현에서는 지금까지보다 성능에 더 많은 주의를 기울입니다.
 

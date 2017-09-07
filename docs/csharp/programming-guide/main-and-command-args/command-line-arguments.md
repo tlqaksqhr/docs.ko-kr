@@ -1,5 +1,5 @@
 ---
-title: "명령줄 인수(C# 프로그래밍 가이드) | Microsoft 문서"
+title: "명령줄 인수(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -27,10 +27,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 4034f1575321c94f003a12a83df617d4a0d50702
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f0d404ae0384ec97b0eb78c6284e07cac8065548
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>명령줄 인수(C# 프로그래밍 가이드)
@@ -41,7 +42,7 @@ ms.lasthandoff: 03/13/2017
  [!code-cs[csProgGuideMain#3](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_2.cs)]  
   
 > [!NOTE]
->  Windows Forms 응용 프로그램의 `Main` 메서드에서 명령줄 인수를 사용하도록 설정하려면 program.cs에서 `Main`의 시그니처를 수동으로 수정해야 합니다. Windows Forms 디자이너에서 생성된 코드는 입력 매개 변수 없이 `Main`을 만듭니다. <xref:System.Environment.CommandLine%2A?displayProperty=fullName> 또는 <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=fullName>을 사용하여 콘솔 또는 Windows 응용 프로그램의 임의 지점에서 명령줄 인수에 액세스할 수도 있습니다.  
+>  Windows Forms 응용 프로그램의 `Main` 메서드에서 명령줄 인수를 사용하도록 설정하려면 program.cs에서 `Main`의 시그니처를 수동으로 수정해야 합니다. Windows Forms 디자이너에서 생성된 코드는 입력 매개 변수 없이 `Main`을 만듭니다. <xref:System.Environment.CommandLine%2A?displayProperty=fullName> 또는 <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=fullName>를 사용하여 콘솔 또는 Windows 응용 프로그램의 임의 지점에서 명령줄 인수에 액세스할 수 있습니다.  
   
  `Main` 메서드의 매개 변수는 명령줄 인수를 나타내는 <xref:System.String> 배열입니다. 일반적으로 다음과 같이 `Length` 속성을 테스트하여 인수가 있는지 확인합니다.  
   
@@ -91,7 +92,7 @@ long num = Convert.ToInt64(s);
 5.  이 명령은 다음 출력을 생성합니다. `The factorial of 3 is 6.`  
   
 > [!NOTE]
->  Visual Studio에서 응용 프로그램을 실행할 경우 [프로젝트 디자이너, 디버그 페이지](https://docs.microsoft.com/visualstudio/ide/reference/debug-page-project-designer)에서 명령줄 인수를 지정할 수 있습니다.  
+>  Visual Studio에서 응용 프로그램을 실행할 경우 [프로젝트 디자이너, 디버그 페이지](/visualstudio/ide/reference/debug-page-project-designer)에서 명령줄 인수를 지정할 수 있습니다.  
   
  명령줄 인수를 사용하는 방법에 대한 자세한 내용은 [방법: 명령줄을 사용하여 어셈블리 만들기 및 사용](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)을 참조하세요.  
   
@@ -103,3 +104,4 @@ long num = Convert.ToInt64(s);
  [방법: foreach를 사용하여 명령줄 인수 액세스](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)   
  [Main() 반환 값](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)   
  [클래스](../../../csharp/programming-guide/classes-and-structs/classes.md)
+

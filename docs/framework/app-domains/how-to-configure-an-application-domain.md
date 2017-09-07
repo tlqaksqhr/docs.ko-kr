@@ -1,5 +1,5 @@
 ---
-title: "방법: 응용 프로그램 도메인 구성 | Microsoft Docs"
+title: "방법: 응용 프로그램 도메인 구성"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 22da4e19b3103892f42e5afee02c6b3ffa2d0581
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4f8c91a11deac63e2ad44628a609ed4ca6501e84
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-configure-an-application-domain"></a>방법: 응용 프로그램 도메인 구성
@@ -40,3 +40,4 @@ ms.lasthandoff: 06/02/2017
 ## <a name="see-also"></a>참고 항목  
  [응용 프로그램 도메인으로 프로그래밍](http://msdn.microsoft.com/en-us/bd36055b-56bd-43eb-b4d8-820c37172131)   
  [응용 프로그램 도메인 사용](../../../docs/framework/app-domains/use.md)
+

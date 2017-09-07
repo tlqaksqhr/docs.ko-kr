@@ -11,19 +11,20 @@ ms.prod: .net-core
 ms.technology: .net-core-technologies
 ms.devlang: dotnet
 ms.assetid: cbda9c08-151b-4c9e-82f7-c3d7f3dac66b
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f49b0e0dac7df20fc6e5015b9707208ee65a48d6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ddd028a3aad5186ef6773b32e9f9e8e1cbff95fc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="group-results-by-contiguous-keys"></a>연속 키를 기준으로 결과 그룹화
 
 다음 예제에서는 연속 키의 하위 시퀀스를 나타내는 청크로 요소를 그룹화하는 방법을 보여 줍니다. 예를 들어 키-값 쌍의 다음 시퀀스가 제공된다고 가정합니다.  
   
-|Key|값|  
+|키|값|  
 |---------|-----------|  
-|A|수|  
+|A|We|  
 |A|think|  
 |A|that|  
 |B|Linq|  
@@ -58,3 +59,4 @@ ms.lasthandoff: 03/13/2017
 ## <a name="see-also"></a>참고 항목  
  [LINQ 쿼리 식](index.md)   
  
+

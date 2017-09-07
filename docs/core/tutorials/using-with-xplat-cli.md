@@ -5,16 +5,16 @@ keywords: .NET Core, CLI
 author: cartermp
 ms.author: mairaw
 ms.date: 03/08/2017
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 41632e63-d5c6-4427-a09e-51dc1116d45f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5cb697703ad117a131ca8cea1dd19e3acc8cca84
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 53894b7548b7bedfe3a980efd53a076c0e4efc7f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -54,7 +54,7 @@ $ dotnet run
    프로젝트 파일은 종속성을 복원하고 프로그램을 빌드하는 데 필요한 모든 항목을 지정합니다.
 
    * `OutputType` 태그에서는 실행 파일, 즉 콘솔 응용 프로그램을 빌드하고 있음을 지정합니다.
-   * `TargetFramework` 태그는 대상으로 지정한 .NET 런타임을 지정합니다. 고급 시나리오에서는 여러 대상 프레임워크를 지정하고 이 모든 프레임워크를 단일 작업으로 빌드할 수 있습니다. 이 자습서에서는 .NET Core 1.0에 대해서만 빌드합니다.
+   * `TargetFramework` 태그에서는 대상으로 하는 .NET 구현을 지정합니다. 고급 시나리오에서는 여러 대상 프레임워크를 지정하고 이 모든 프레임워크를 단일 작업으로 빌드할 수 있습니다. 이 자습서에서는 .NET Core 1.0에 대해서만 빌드합니다.
 
    `Program.cs`:
 

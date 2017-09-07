@@ -1,5 +1,5 @@
 ---
-title: "명명된 인수와 선택적 인수(C# 프로그래밍 가이드) | Microsoft 문서"
+title: "명명된 인수와 선택적 인수(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -36,14 +36,15 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9827553c1362d92bdf68a50e840b33474a22dcaa
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
+ms.openlocfilehash: a7f05e3e0b19bf6457989f8db2b46741cf6b28c1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>명명된 인수와 선택적 인수(C# 프로그래밍 가이드)
-[!INCLUDE[csharp_dev10_long](../../../csharp/programming-guide/classes-and-structs/includes/csharp_dev10_long_md.md)]에서는 명명된 인수 및 선택적 인수를 소개합니다. *명명된 인수*를 사용하면 인수를 매개 변수 목록 내의 매개 변수 위치가 아니라 매개 변수 이름과 연결하여 특정 매개 변수에 대한 인수를 지정할 수 있습니다. *선택적 인수*를 사용하면 일부 매개 변수에 대한 인수를 생략할 수 있습니다. 두 기법 모두 메서드, 인덱서, 생성자 및 대리자에 사용할 수 있습니다.  
+[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]에서는 명명된 인수 및 선택적 인수를 소개합니다. *명명된 인수*를 사용하면 인수를 매개 변수 목록 내의 매개 변수 위치가 아니라 매개 변수 이름과 연결하여 특정 매개 변수에 대한 인수를 지정할 수 있습니다. *선택적 인수*를 사용하면 일부 매개 변수에 대한 인수를 생략할 수 있습니다. 두 기법 모두 메서드, 인덱서, 생성자 및 대리자에 사용할 수 있습니다.  
   
  명명된 인수와 선택적 인수를 사용하는 경우 매개 변수 목록이 아니라 인수 목록에 표시되는 순서대로 인수가 평가됩니다.  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 03/13/2017
   
 -   `new ValType()` 형태의 식. 여기서 `ValType`은 [enum](../../../csharp/language-reference/keywords/enum.md) 또는 [struct](../../../csharp/programming-guide/classes-and-structs/structs.md)와 같은 값 형식입니다.  
   
--   [default(ValType)](../../../csharp/programming-guide/generics/default-keyword-in-generic-code.md) 형태의 식. 여기서 `ValType`은 값 형식입니다.  
+-   [default(ValType)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) 형태의 식. 여기서 `ValType`은 값 형식입니다.  
   
  선택적 매개 변수는 매개 변수 목록의 끝에서 모든 필수 매개 변수 다음에 정의됩니다. 호출자가 연속된 선택적 매개 변수 중 하나에 대한 인수를 제공하는 경우 이전의 모든 선택적 매개 변수에 대한 인수를 제공해야 합니다. 인수 목록에서 쉼표로 구분된 간격은 지원되지 않습니다. 예를 들어 다음 코드에서 인스턴스 메서드 `ExampleMethod`는 필수 매개 변수 하나와 선택적 매개 변수 두 개로 정의됩니다.  
   
@@ -139,10 +140,11 @@ AutoFormat 매개 변수
 -   두 후보가 똑같이 정상이라고 판단되는 경우 기본적으로 호출에서 인수가 생략된 선택적 매개 변수가 없는 후보가 설정됩니다. 이는 매개 변수가 적은 후보에 대한 오버로드 확인에서 일반적인 기본 설정의 결과입니다.  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [방법: Office 프로그래밍에서 명명된 인수 및 선택적 인수 사용](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)   
  [dynamic 형식 사용](../../../csharp/programming-guide/types/using-type-dynamic.md)   
  [생성자 사용](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)   
  [인덱서 사용](../../../csharp/programming-guide/indexers/using-indexers.md)
+

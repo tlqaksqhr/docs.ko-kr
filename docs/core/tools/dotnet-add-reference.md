@@ -1,28 +1,26 @@
 ---
 title: "dotnet-add reference 명령 - .NET Core CLI"
-description: "dotnet-add reference 명령은 프로젝트 간 참조를 추가하는 편리한 옵션을 제공합니다."
-keywords: "dotnet-add, CLI, CLI 명령, .NET Core"
-author: spboyer
+description: "dotnet add reference 명령은 프로젝트 간 참조를 추가하는 편리한 옵션을 제공합니다."
+author: mairaw
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: 5e2a3efd-443c-4f23-a1b1-a662a5387879
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 98491efc183ad62f47275d0832a32dde5899373d
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 18e3ce22c1b9a4506b2690262d8d0c4e13a58ed1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
-
 # <a name="dotnet-add-reference"></a>dotnet-add reference
+
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>이름
 
-`dotnet-add reference` - 프로젝트 간(P2P) 참조를 추가합니다.
+`dotnet add reference` - 프로젝트 간(P2P) 참조를 추가합니다.
 
 ## <a name="synopsis"></a>개요
 
@@ -73,4 +71,3 @@ ms.lasthandoff: 07/28/2017
 Linux/Unix에서 와일드카드 사용 패턴을 사용하여 여러 프로젝트 참조 추가:
 
 `dotnet add app/app.csproj reference **/*.csproj`
-

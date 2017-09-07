@@ -1,5 +1,5 @@
 ---
-title: "방법: 폴더 집합의 전체 바이트 수 쿼리(LINQ)(C#) | Microsoft 문서"
+title: "방법: 폴더 집합의 전체 바이트 수 쿼리(LINQ)(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: dd78f36792ab65f31075a7a83660261f096953ae
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7eabb1b04a708e0b6f443552cdb07540b4d970dc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-c"></a>방법: 폴더 집합의 전체 바이트 수 쿼리(LINQ)(C#)
@@ -95,3 +96,4 @@ class QuerySize
 ## <a name="see-also"></a>참고 항목  
  [LINQ to Objects(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)   
  [LINQ 및 파일 디렉터리(C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+

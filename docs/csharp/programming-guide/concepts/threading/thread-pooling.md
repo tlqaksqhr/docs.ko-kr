@@ -1,5 +1,5 @@
 ---
-title: "스레드 풀링(C#) | Microsoft 문서"
+title: "스레드 풀링(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: da18d75f5d80cd7ad8a9a974bf0ffda196e7ea86
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d2f8e5a2d7a83dc6fef72ef87b4003ae49656d8f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="thread-pooling-c"></a>스레드 풀링(C#)
@@ -34,7 +35,7 @@ ms.lasthandoff: 03/13/2017
   
  일반적으로 스레드 풀에는 최대 개수의 스레드가 있습니다. 모든 스레드가 사용 중인 경우 추가 작업이 스레드를 사용할 수 있게 되면 처리될 때까지 큐에 배치됩니다.  
   
- 고유한 스레드 풀을 구현할 수 있지만, <xref:System.Threading.ThreadPool> 클래스를 통해 .NET Framework에서 제공하는 스레드 풀을 사용하는 것이 더 쉽습니다.  
+ 고유한 스레드 풀을 구현할 수 있지만, <xref:System.Threading.ThreadPool> 클래스를 통해 .NET Framework에서 제공하는 스레드 풀을 사용하는 편이 더 쉽습니다.  
   
  스레드 풀링을 사용하는 경우 실행하려는 프로시저에 대한 대리자를 사용하여 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=fullName> 메서드를 호출합니다. 그러면 C#에서 스레드를 만들고 프로시저를 실행합니다.  
   
@@ -82,3 +83,4 @@ private void AnotherLongTask(Object state)
  [스레딩(C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
  [다중 스레드 응용 프로그램(C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)   
  [스레드 동기화(C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)
+

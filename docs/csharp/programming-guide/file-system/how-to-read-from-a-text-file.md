@@ -1,5 +1,5 @@
 ---
-title: "방법: 텍스트 파일에서 읽기(C# 프로그래밍 가이드) | Microsoft 문서"
+title: "방법: 텍스트 파일에서 읽기(C# 프로그래밍 가이드)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -32,10 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d545aa7f25da49b3ca0fc50b0c5a55c9c0d2b967
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bd0ad3e062c4d4b32fb6140cacba9a4a32674759
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>방법: 텍스트 파일에서 읽기(C# 프로그래밍 가이드)
@@ -66,3 +67,4 @@ ms.lasthandoff: 03/13/2017
  <xref:System.IO?displayProperty=fullName>   
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
  [파일 시스템 및 레지스트리(C# 프로그래밍 가이드)](../../../csharp/programming-guide/file-system/index.md)
+

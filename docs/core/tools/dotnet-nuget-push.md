@@ -1,28 +1,26 @@
 ---
-title: "dotnet-nuget-push 명령 - .NET Core CLI"
-description: "dotnet-nuget-push 명령은 서버에 패키지를 푸시하고 게시합니다."
-keywords: "dotnet-nuget-push, CLI, CLI 명령, .NET Core"
+title: "dotnet nuget push 명령 - .NET Core CLI"
+description: "dotnet nuget push 명령은 서버에 패키지를 푸시하고 게시합니다."
 author: karann-msft
 ms.author: mairaw
-ms.date: 03/15/2017
+ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: f54d9adf-94f8-41cc-bb52-42f7ca3be6ff
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 83da967d9d7432fcb422b88344ff597d45fc9e85
+ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
+ms.openlocfilehash: 6721615e4df820ab50ea4f79fbba30daeffe8165
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/14/2017
 
 ---
+# <a name="dotnet-nuget-push"></a>dotnet nuget push
 
-# <a name="dotnet-nuget-push"></a>dotnet-nuget push
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>이름
 
-`dotnet-nuget push` - 서버에 패키지를 푸시하고 게시합니다.
+`dotnet nuget push` - 서버에 패키지를 푸시하고 게시합니다.
 
 ## <a name="synopsis"></a>개요
 
@@ -42,7 +40,7 @@ ms.lasthandoff: 07/28/2017
 
 `-h|--help`
 
-명령에 대한 간단한 도움말을 출력합니다.  
+명령에 대한 간단한 도움말을 출력합니다.
 
 `-s|--source <SOURCE>`
 
@@ -84,11 +82,11 @@ ms.lasthandoff: 07/28/2017
 
 사용자 지정 푸시 소스 `http://customsource`에 *foo.nupkg*를 푸시하여 API 키를 제공합니다.
 
-`dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s http://customsource/` 
+`dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s http://customsource/`
 
 기본 푸시 소스 *foo.nupkg*를 푸시합니다.
 
-`dotnet nuget push foo.nupkg` 
+`dotnet nuget push foo.nupkg`
 
 기본 기호 소스에 *foo.symbols.nupkg*를 푸시합니다.
 

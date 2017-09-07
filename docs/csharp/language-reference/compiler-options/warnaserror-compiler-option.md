@@ -1,60 +1,80 @@
 ---
-title: "/warnaserror (C# Compiler Options) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-csharp"
-ms.topic: "article"
-f1_keywords: 
-  - "/warnaserror"
-dev_langs: 
-  - "CSharp"
-helpviewer_keywords: 
-  - "/warnaserror compiler option [C#]"
-  - "-warnaserror compiler option [C#]"
-  - "warnaserror compiler option [C#]"
+title: "-warnaserror(C# 컴파일러 옵션)"
+ms.date: 2015-07-20
+ms.prod: .net
+ms.technology:
+- devlang-csharp
+ms.topic: article
+f1_keywords:
+- /warnaserror
+dev_langs:
+- CSharp
+helpviewer_keywords:
+- /warnaserror compiler option [C#]
+- -warnaserror compiler option [C#]
+- warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
 caps.latest.revision: 15
-author: "BillWagner"
-ms.author: "wiwagn"
-caps.handback.revision: 15
+author: BillWagner
+ms.author: wiwagn
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: df29fd760e0e4a002f1b5078d85370a74f322e23
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
+
 ---
-# /warnaserror (C# Compiler Options)
-**\/warnaserror\+** 옵션을 사용하면 모든 경고가 오류로 처리됩니다.  
+# <a name="warnaserror-c-compiler-options"></a>/warnaserror(C# 컴파일러 옵션)
+**/warnaserror+** 옵션은 모든 경고를 오류로 처리합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```  
+```console  
 /warnaserror[<U>+</U> | -][:warning-list]  
 ```  
   
-## 설명  
- 일반적으로는 경고로 보고될 메시지가 경고 대신 오류로 보고되고, 빌드 프로세스는 중지되므로 출력 파일이 빌드되지 않습니다.  
+## <a name="remarks"></a>설명  
+ 일반적으로 경고로 보고되는 메시지가 대신 오류로 보고되며, 빌드 프로세스가 중지됩니다(출력 파일이 작성되지 않음).  
   
- 기본적으로는 **\/warnaserror\-**가 설정되어 있으므로 경고가 발생해도 출력 파일은 생성됩니다.  **\/warnaserror**는 **\/warnaserror\+**와 같으며 경고를 오류로 처리합니다.  
+ 기본적으로 **/warnaserror-**가 적용되며, 경고가 발생해도 출력 파일이 생성됩니다. **/warnaserror+**와 동일한 **/warnaserror**는 경고가 오류로 처리되도록 합니다.  
   
- 필요에 따라 특정 경고만 오류로 처리하려는 경우 오류로 처리할 경고 번호를 쉼표로 구분하여 지정할 수도 있습니다.  
+ 필요에 따라 몇 개의 특정 경고만 오류로 처리하려는 경우 오류로 처리할 경고 번호의 쉼표로 구분된 목록을 지정할 수 있습니다.  
   
- 컴파일러에서 표시할 경고 수준을 지정하려면 [\/warn](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)을 사용합니다.  특정 경고를 비활성화하려면 [\/nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md)을 사용합니다.  
+ 컴파일러에서 표시할 경고 수준을 지정하려면 [/warn](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)을 사용합니다. 특정 경고를 사용하지 않으려면 [/nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md)을 사용합니다.  
   
-### Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
-1.  프로젝트의 **속성** 페이지를 엽니다.  
+1.  프로젝트 **속성** 페이지를 엽니다.  
   
 2.  **빌드** 속성 페이지를 클릭합니다.  
   
 3.  **경고를 오류로 처리** 속성을 수정합니다.  
   
-     프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors%2A>를 참조하십시오.  
+     프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors%2A>를 참조하세요.  
   
-## 예제  
+## <a name="example"></a>예제  
  `in.cs`를 컴파일하고 컴파일러에서 경고를 표시하지 않도록 합니다.  
   
-```  
+```console  
 csc /warnaserror in.cs  
 csc /warnaserror:642,649,652 in.cs  
 ```  
   
-## 참고 항목  
- [C\# Compiler Options](../../../csharp/language-reference/compiler-options/index.md)   
- [방법: 프로젝트 속성 및 구성 설정 수정](http://msdn.microsoft.com/ko-kr/e7184bc5-2f2b-4b4f-aa9a-3ecfcbc48b67)
+## <a name="see-also"></a>참고 항목  
+ [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)   
+ [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)
+

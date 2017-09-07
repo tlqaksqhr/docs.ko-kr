@@ -1,5 +1,5 @@
 ---
-title: "다중 스레드 응용 프로그램(C#) | Microsoft 문서"
+title: "다중 스레드 응용 프로그램(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a36fd71ff41eb219f4c4de36d4fa8da9b8ee179a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: dfe0f9c6e911295270df8464d1070a524412466d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="multithreaded-applications-c"></a>다중 스레드 응용 프로그램(C#)
@@ -47,13 +48,13 @@ System.Threading.Thread newThread =
 newThread.Start();  
 ```  
   
- 스레드의 실행을 중지하려면 다음 코드와 같이 <xref:System.Threading.Thread.Abort%2A> 메서드를 사용합니다.  
+ 스레드 실행을 중지하려면 다음 코드와 같이 <xref:System.Threading.Thread.Abort%2A> 메서드를 사용합니다.  
   
 ```csharp  
 newThread.Abort();  
 ```  
   
- 스레드 시작 및 중지 외에도 <xref:System.Threading.Thread.Sleep%2A> 또는 <xref:System.Threading.Thread.Suspend%2A> 메서드를 사용하여 스레드를 일시 중지하고, <xref:System.Threading.Thread.Resume%2A> 메서드를 사용하여 일시 중단된 스레드를 다시 시작하고, <xref:System.Threading.Thread.Abort%2A> 메서드를 사용하여 스레드를 제거할 수도 있습니다.  
+ 스레드 시작 및 중지 외에도 <xref:System.Threading.Thread.Sleep%2A> 또는 <xref:System.Threading.Thread.Suspend%2A> 메서드를 호출하여 스레드를 일시 중지하고, <xref:System.Threading.Thread.Resume%2A> 메서드를 사용하여 일시 중단된 스레드를 다시 시작하고, <xref:System.Threading.Thread.Abort%2A> 메서드를 사용하여 스레드를 삭제할 수도 있습니다.  
   
 ### <a name="thread-methods"></a>스레드 메서드  
  다음 표에서는 개별 스레드를 제어하는 데 사용할 수 있는 메서드 중 일부를 보여 줍니다.  
@@ -82,7 +83,7 @@ newThread.Abort();
 |<xref:System.Threading.Thread.ThreadState%2A>|스레드 상태를 설명하는 값을 포함합니다.|  
   
 ## <a name="thread-priorities"></a>스레드 우선 순위  
- 모든 스레드에는 실행할 수 있는 프로세서 시간 조각의 크기를 결정하는 우선 순위 속성이 있습니다. 운영 체제는 우선 순위가 높은 스레드에 더 긴 시간 조각을 할당하고 우선 순위가 낮은 스레드에는 더 짧은 시간 조각을 할당합니다. 새 스레드는 `Normal` 값으로 생성되지만 <xref:System.Threading.Thread.Priority%2A> 속성을 <xref:System.Threading.ThreadPriority> 열거형의 임의 값으로 변경할 수 있습니다.  
+ 모든 스레드에는 실행할 수 있는 프로세서 시간 조각의 크기를 결정하는 우선 순위 속성이 있습니다. 운영 체제는 우선 순위가 높은 스레드에 더 긴 시간 조각을 할당하고 우선 순위가 낮은 스레드에는 더 짧은 시간 조각을 할당합니다. 새 스레드는 `Normal` 값으로 생성되지만, <xref:System.Threading.Thread.Priority%2A> 속성을 <xref:System.Threading.ThreadPriority> 열거형의 임의 값으로 변경할 수 있습니다.  
   
  다양한 스레드 우선 순위에 대한 자세한 설명은 <xref:System.Threading.ThreadPriority>를 참조하세요.  
   
@@ -94,3 +95,4 @@ newThread.Abort();
  [스레드 동기화(C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)   
  [다중 스레드 프로시저의 매개 변수 및 반환 값(C#)](../../../../csharp/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)   
  [스레딩(C#)](../../../../csharp/programming-guide/concepts/threading/index.md)
+

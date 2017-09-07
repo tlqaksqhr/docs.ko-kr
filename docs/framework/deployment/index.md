@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework 및 응용 프로그램 | Microsoft 문서"
+title: ".NET Framework 및 응용 프로그램 배포"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -26,11 +26,11 @@ caps.latest.revision: 56
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fe9ab371ab8d3eee3778412e446b7aa30b42476b
-ms.openlocfilehash: 46f524a8c2ee2d65d5c756a101a5c26c5919e165
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 3fc00af210ae777e2749767c6426405c87c9c097
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>.NET Framework 및 응용 프로그램 배포
@@ -77,7 +77,7 @@ ms.lasthandoff: 06/02/2017
   
     -   [관리자 가이드](../../../docs/framework/deployment/guide-for-administrators.md)  
   
- **서비스**  
+  **서비스**  
   
 -   일반적인 내용은 [.NET Framework 블로그](http://go.microsoft.com/fwlink/p/?LinkId=254977)를 참조하세요.  
   
@@ -175,7 +175,7 @@ ms.lasthandoff: 06/02/2017
 |[.NET Framework 4.5를 설치하는 동안 시스템 다시 시작 줄이기](../../../docs/framework/deployment/reducing-system-restarts.md)|최대한 다시 시작을 방지하는 다시 시작 관리자 및 .NET Framework를 설치하는 응용 프로그램이 다시 시작 관리자를 활용할 수 있는 방법을 설명합니다.|  
 |[관리자를 위한 배포 가이드](../../../docs/framework/deployment/guide-for-administrators.md)|시스템 관리자가 SCCM(System Center Configuration Manager)을 사용하여 .NET Framework 및 해당 시스템 종속성을 네트워크 전체에 배포할 수 있는 방법을 설명합니다.|  
 |[개발자를 위한 배포 가이드](../../../docs/framework/deployment/deployment-guide-for-developers.md)|개발자가 응용 프로그램과 함께 .NET Framework를 사용자 컴퓨터에 설치할 수 있는 방법을 설명합니다.|  
-|[응용 프로그램, 서비스 및 구성 요소 배포](https://docs.microsoft.com/visualstudio/deployment/deploying-applications-services-and-components)|ClickOnce 및 Windows Installer 기술을 사용하여 응용 프로그램을 게시하기 위한 지침을 포함하여 Visual Studio의 배포 옵션을 설명합니다.| 
+|[응용 프로그램, 서비스 및 구성 요소 배포](/visualstudio/deployment/deploying-applications-services-and-components)|ClickOnce 및 Windows Installer 기술을 사용하여 응용 프로그램을 게시하기 위한 지침을 포함하여 Visual Studio의 배포 옵션을 설명합니다.| 
 |[ClickOnce 응용 프로그램 게시](/visualstudio/deployment/publishing-clickonce-applications)|Windows Forms 응용 프로그램을 패키징하고 ClickOnce로 네트워크의 클라이언트 컴퓨터에 배포하는 방법을 설명합니다.|  
 |[리소스 패키징 및 배포](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)|.NET Framework에서 리소스를 패키징 및 배포하는 데 사용하는 허브 및 스포크 모델을 설명합니다. 리소스 명명 규칙, 대체(fallback) 프로세스 및 패키징 대안을 설명합니다.|  
 |[Interop 응용 프로그램 배포](../../../docs/framework/interop/deploying-an-interop-application.md)|일반적으로 .NET Framework 클라이언트 어셈블리, 고유한 COM 형식 라이브러리를 나타내는 하나 이상의 interop 어셈블리 및 하나 이상의 등록된 COM 구성 요소를 포함하는 interop 응용 프로그램을 제공하고 설치하는 방법을 설명합니다.|  

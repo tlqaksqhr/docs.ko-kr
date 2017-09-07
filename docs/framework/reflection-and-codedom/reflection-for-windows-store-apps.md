@@ -1,5 +1,5 @@
 ---
-title: "Windows 스토어 앱에 대한 .NET Framework의 리플렉션 | Microsoft Docs"
+title: "Windows 스토어 앱에 대한 .NET Framework의 리플렉션"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -17,11 +17,11 @@ caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: f5f1bd47fca6a2affc21890b1731ef438d160d30
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fd9f8dc3b17dee946155986fe9c66a4f4c4e1353
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Windows 스토어 앱에 대한 .NET Framework의 리플렉션
@@ -50,3 +50,4 @@ ms.lasthandoff: 06/02/2017
 ## <a name="see-also"></a>참고 항목  
  [리플렉션](../../../docs/framework/reflection-and-codedom/reflection.md)   
  [Windows 스토어 앱용 .NET – 지원되는 API](http://go.microsoft.com/fwlink/?LinkID=225700)
+

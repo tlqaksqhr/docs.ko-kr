@@ -1,5 +1,5 @@
 ---
-title: "short(C# 참조) | Microsoft 문서"
+title: "short(C# 참조)"
 ms.date: 2017-03-14
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 400dfda51d978f35c3995f90840643aaff1b9c13
-ms.openlocfilehash: 14f9c66bb620e2ad35513abeeba77372904cc1f3
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ab3ccfdeb8d8a67b5fcd60b1ad6eee4dcafc9691
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/24/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="short-c-reference"></a>short(C# 참조)
@@ -47,7 +47,7 @@ ms.lasthandoff: 03/24/2017
   
 ## <a name="literals"></a>리터럴  
 
-10진수 리터럴, 16진수 리터럴 또는 (C# 7부터) 이진 리터럴을 할당하여 `short` 변수를 선언하고 초기화할 수 있습니다.  정수 리터럴이 `short`의 범위를 벗어난 경우(즉, <xref:System.Int16.MinValue?displayProperty=fullName>보다 작거나 <xref:System.Int16.MaxValue?displayProperty=fullName>보다 큰 경우) 컴파일 오류가 발생합니다. 
+10진수 리터럴, 16진수 리터럴 또는 (C# 7부터) 이진 리터럴을 할당하여 `short` 변수를 선언하고 초기화할 수 있습니다.  정수 리터럴이 `short` 범위를 벗어나는 경우(즉 <xref:System.Int16.MinValue?displayProperty=fullName>보다 작거나 <xref:System.Int16.MaxValue?displayProperty=fullName>보다 큰 경우) 컴파일 오류가 발생합니다. 
 
 다음 예제에서는 10진수, 16진수 및 이진 리터럴로 표현된 1,034와 같은 정수가 [int](../../../csharp/language-reference/keywords/int.md)에서 `short` 값으로 암시적으로 변환됩니다.  
   
@@ -117,7 +117,7 @@ short y = (short)3.0;   // OK: explicit conversion
  암시적 숫자 변환 규칙에 대한 자세한 내용은 [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)를 참조하세요.  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
- [!INCLUDE[CSharplangspec](../../../csharp/language-reference/keywords/includes/csharplangspec_md.md)]  
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Int16>   
@@ -128,3 +128,4 @@ short y = (short)3.0;   // OK: explicit conversion
  [기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)   
  [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
  [명시적 숫자 변환 표](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+

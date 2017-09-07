@@ -1,5 +1,5 @@
 ---
-title: "데스크톱 앱용 위성 어셈블리 만들기 | Microsoft Docs"
+title: "데스크톱 응용 프로그램용 위성 어셈블리 만들기"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -32,11 +32,11 @@ caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6f3dc4235c75d7438f019838cb22192f4dc7c41a
-ms.openlocfilehash: b4ae5474ebf910389148745105adbe9a0ae608bb
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: febb9d50bd61eef53f39bb0f36cd4e3a6049e9f5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>데스크톱 응용 프로그램용 위성 어셈블리 만들기
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/02/2017
   
  다음 그림은 [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)에 설치하지 않는 응용 프로그램에 대한 샘플 디렉터리 구조 및 위치 요구 사항을 보여 줍니다. .txt 및 .resources 확장명을 가진 항목은 최종 응용 프로그램과 함께 제공되지 않습니다. 이러한 중간 리소스 파일은 최종 위성 리소스 어셈블리를 만드는 데 사용됩니다. 이 예제에서는 .resx 파일을 .txt 파일로 대체할 수 있습니다. 자세한 내용은 [리소스 패키지 및 배포](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)를 참조하세요.  
   
- ![Satellite assemblies](../../../docs/framework/resources/media/satelliteassemblydir.gif "satelliteassemblydir")  
+ ![위성 어셈블리](../../../docs/framework/resources/media/satelliteassemblydir.gif "satelliteassemblydir")  
 위성 어셈블리 디렉터리  
   
 ## <a name="compiling-satellite-assemblies"></a>위성 어셈블리 컴파일  

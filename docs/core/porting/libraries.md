@@ -10,10 +10,10 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b7cce50df0862a93c8ce144cd30965fb5b5705ed
+ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
+ms.openlocfilehash: 7b51317b570fcabfe1847685a97c6deab32dcc5c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -32,10 +32,10 @@ ms.lasthandoff: 07/28/2017
 또한 다음 항목의 내용을 숙지해야 합니다.
 
 [.NET 표준](~/docs/standard/net-standard.md)   
-이 항목에서는 모든 .NET 런타임에서 사용할 수 있는 .NET API의 공식 사양에 관해 설명합니다.
+이 항목에서는 모든 .NET 구현에서 사용할 수 있는 .NET API의 공식 사양에 관해 설명합니다.
 
 [패키지, 메타패키지 및 프레임워크](~/docs/core/packages.md)   
-이 문서에서는 .NET Core가 패키지를 정의하고 사용하는 방법과 패키지가 여러 .NET 런타임에서 실행되는 코드를 지원하는 방법에 관해 설명합니다.
+이 문서에서는 .NET Core가 패키지를 정의하고 사용하는 방법과 패키지가 여러 .NET 구현에서 실행되는 코드를 지원하는 방법에 관해 설명합니다.
 
 [플랫폼 간 도구로 라이브러리 개발](~/docs/core/tutorials/libraries.md)   
 이 항목에서는 플랫폼 간 CLI 도구를 사용하여 .NET용 라이브러리를 작성하는 방법에 관해 설명합니다.

@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework의 병렬 프로그래밍 | Microsoft Docs"
+title: ".NET Framework의 병렬 프로그래밍"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -15,10 +15,11 @@ caps.latest.revision: 19
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: 6a163776f358691c0f61c90dce98c15bebe4052a
-ms.lasthandoff: 04/08/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: a3509229efc57b1f6b1244671df65b2f21964e65
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="parallel-programming-in-the-net-framework"></a>.NET Framework의 병렬 프로그래밍
@@ -30,10 +31,10 @@ ms.lasthandoff: 04/08/2017
   
 |기술|설명|  
 |----------------|-----------------|  
-|[TPL(작업 병렬 라이브러리)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|`For` 및 `ForEach` 루프의 병렬 버전을 포함하는 <xref:System.Threading.Tasks.Parallel?displayProperty=fullName> 클래스 및 비동기 작업을 표현하는 기본 방법을 나타내는 <xref:System.Threading.Tasks.Task?displayProperty=fullName> 클래스에 대한 설명서를 제공합니다.|  
+|[TPL(작업 병렬 라이브러리)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|<xref:System.Threading.Tasks.Parallel?displayProperty=fullName> 및 `For` 루프의 병렬 버전을 포함하는 `ForEach` 클래스 및 비동기 작업에 대한 선호되는 표현 방식을 나타내는 <xref:System.Threading.Tasks.Task?displayProperty=fullName> 클래스의 설명서를 제공합니다.|  
 |[PLINQ(병렬 LINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)|여러 시나리오에서 성능을 대폭 향상시키는 LINQ to Objects의 병렬 구현입니다.|  
 |[병렬 프로그래밍을 위한 데이터 구조](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)|스레드로부터 안전한 컬렉션 클래스, 간단한 동기화 형식 및 초기화 지연 관련 형식에 대한 설명서의 링크를 제공합니다.|  
-|[병렬 진단 도구](../../../docs/standard/parallel-programming/parallel-diagnostic-tools.md)|Visual Studio 디버거의 작업 및 병렬 스택 창에 대한 설명서와 병렬 코드의 디버깅 및 성능 튜닝에 사용 가능한 [!INCLUDE[vsprvsts](../../../includes/vsprvsts-md.md)] 프로파일러의 뷰 집합으로 구성되는 [Concurrency Visualizer](http://msdn.microsoft.com/library/ae5879a0-1e1a-455a-ba72-148e57f59289)에 대한 설명서의 링크를 제공합니다.|  
+|[병렬 진단 도구](../../../docs/standard/parallel-programming/parallel-diagnostic-tools.md)|Visual Studio 디버거의 작업 및 병렬 스택 창에 대한 설명서와 병렬 코드의 디버깅 및 성능 튜닝에 사용 가능한 [!INCLUDE[vsprvsts](../../../includes/vsprvsts-md.md)] 프로파일러의 뷰 집합으로 구성되는 [Concurrency Visualizer](/visualstudio/profiling/concurrency-visualizer)에 대한 설명서의 링크를 제공합니다.|  
 |[PLINQ 및 TPL에 대한 사용자 지정 파티셔너](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)|파티션 작동 방식 및 기본 파티션을 구성하거나 새 파티션을 만드는 방법에 대해 설명합니다.|  
 |[작업 스케줄러](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)|스케줄러 작동 방식 및 기본 스케줄러의 구성 방법에 대해 설명합니다.|  
 |[PLINQ 및 TPL의 람다 식](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)|C# 및 Visual Basic으로 작성된 람다 식의 간략한 개요를 제공하고, 람다 식이 PLINQ 및 작업 병렬 라이브러리에서 사용되는 방식을 보여 줍니다.|  
@@ -42,3 +43,4 @@ ms.lasthandoff: 04/08/2017
 ## <a name="see-also"></a>참고 항목  
  [병렬 프로그래밍 패턴: .NET Framework 4의 병렬 패턴 이해 및 적용](http://go.microsoft.com/fwlink/?LinkID=185142)   
  [NET Framework를 사용한 병렬 프로그래밍 샘플](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+

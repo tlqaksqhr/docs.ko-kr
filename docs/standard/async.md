@@ -1,6 +1,6 @@
 ---
 title: "비동기 개요"
-description: "비동기 개요"
+description: "비동기 프로그래밍이 다중 코어에서 차단 I/O 및 동시 작업을 간단하게 처리할 수 있게 해주는 주요 기술이 되는 방법을 알아봅니다."
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn
@@ -10,10 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-translationtype: Human Translation
-ms.sourcegitcommit: b967d8e55347f44a012e4ad8e916440ae228c8ec
-ms.openlocfilehash: db4c9721381a9675b06f0fc6b5381d987816e9a4
-ms.lasthandoff: 03/10/2017
+ms.translationtype: HT
+ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
+ms.openlocfilehash: bf0cc4ed21c92a57f3f5b2cfa27ac1f054e15172
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
 
 ---
 
@@ -28,17 +29,16 @@ ms.lasthandoff: 03/10/2017
 
 ## <a name="why-write-async-code"></a>비동기 코드를 작성하는 이유
 
-최신 앱은 파일 및 네트워킹 I/O를 광범위하게 사용합니다. 이전에는 I/O API가 기본적으로 차단되어, 어려운 패턴을 배우고 사용하지 않을 경우 사용자 환경 및 하드웨어 사용률이 좋지 않았습니다. 비동기 API 및 언어 수준의 비동기 프로그래밍 모델은 이 모델을 뒤집어 새로운 개념을 배우지 않고도 기본적으로 비동기 실행을 사용할 수 있게 합니다.
+최신 앱은 파일 및 네트워킹 I/O를 광범위하게 사용합니다. 이전에는 I/O API가 기본적으로 차단되어, 어려운 패턴을 배우고 사용하지 않을 경우 사용자 환경 및 하드웨어 사용률이 좋지 않았습니다. 작업 기반 비동기 API 및 언어 수준의 비동기 프로그래밍 모델은 이 모델을 뒤집어 새로운 개념을 배우지 않고도 기본적으로 비동기 실행을 사용할 수 있게 합니다.
 
 비동기 코드에는 다음과 같은 특성이 있습니다.
 
 * I/O 요청이 반환되기를 기다리는 동안 추가 요청을 처리할 수 있도록 스레드를 양도하여 더 많은 서버 요청을 처리합니다.
 * I/O 요청을 기다리는 동안 UI 조작에 스레드를 양도하고 장기 실행 작업을 다른 CPU 코어로 전환하여 UI 응답성을 개선합니다.
 * 대부분의 최신 .NET API는 비동기입니다.
-* .NET에서 비동기 코드를 작성하는 것은 매우 쉽습니다.
+* .NET에서 비동기 코드를 작성하는 것은 쉽습니다.
 
 ## <a name="whats-next"></a>새로운 기능
 
-비동기 개념 및 프로그래밍의 심층 탐구는 [비동기에 대한 자세한 설명](async-in-depth.md)을 참조하세요.
-
+비동기 개념 및 프로그래밍에 대한 자세한 내용은 [비동기에 대한 자세한 설명](async-in-depth.md) 및 [작업 기반 비동기 프로그래밍](~/docs/standard/parallel-programming/task-based-asynchronous-programming.md)을 참조하세요.
 

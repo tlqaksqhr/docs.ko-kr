@@ -1,5 +1,5 @@
 ---
-title: "-link(C# 컴파일러 옵션) | Microsoft 문서"
+title: "-link(C# 컴파일러 옵션)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -34,10 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3096dd622a0b7c5fae13412a95322b934bd38b76
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: c08f2e7f13a51fb1a350acadff5224cfa8d61aaa
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="link-c-compiler-options"></a>/link(C# 컴파일러 옵션)
@@ -45,7 +46,7 @@ ms.lasthandoff: 03/13/2017
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 /link:fileList  
 // -or-  
 /l:fileList  
@@ -65,7 +66,7 @@ ms.lasthandoff: 03/13/2017
 > [!NOTE]
 >  코드에서 포함된 COM 형식의 인스턴스를 만드는 경우 적절한 인터페이스를 사용하여 인스턴스를 만들어야 합니다. CoClass를 사용하여 포함된 COM 형식의 인스턴스를 만들려고 하면 오류가 발생합니다.  
   
- [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)]에서 `/link` 옵션을 설정하려면 어셈블리 참조를 추가하고 `Embed Interop Types` 속성을 **true**로 설정합니다. `Embed Interop Types` 속성의 기본값은 **false**입니다.  
+ [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]에서 `/link` 옵션을 설정하려면 어셈블리 참조를 추가하고 `Embed Interop Types` 속성을 **true**로 설정합니다. `Embed Interop Types` 속성의 기본값은 **false**입니다.  
   
  COM 어셈블리 자체가 또 다른 COM 어셈블리(어셈블리 B)를 참조하는 COM 어셈블리(어셈블리 A)에 연결하는 경우 다음 중 하나에 해당되면 어셈블리 B에도 연결해야 합니다.  
   
@@ -73,7 +74,7 @@ ms.lasthandoff: 03/13/2017
   
 -   어셈블리 B의 반환 형식이나 매개 변수 형식을 사용하는 필드, 속성, 이벤트 또는 메서드가 호출됩니다.  
   
- [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 컴파일러 옵션과 마찬가지로 `/link` 컴파일러 옵션은 Csc.rsp 지시 파일을 사용하며, 자주 사용되는 [!INCLUDE[dnprdnshort](../../../csharp/getting-started/includes/dnprdnshort_md.md)] 어셈블리를 참조합니다. 컴파일러에서 Csc.rsp 파일을 사용하지 않도록 하려면 [/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) 컴파일러 옵션을 사용하세요.  
+ [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 컴파일러 옵션과 마찬가지로 `/link` 컴파일러 옵션은 Csc.rsp 지시 파일을 사용하며, 자주 사용되는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 어셈블리를 참조합니다. 컴파일러에서 Csc.rsp 파일을 사용하지 않도록 하려면 [/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) 컴파일러 옵션을 사용하세요.  
   
  `/link`의 약식은 `/l`입니다.  
   
@@ -86,7 +87,7 @@ ms.lasthandoff: 03/13/2017
  [!code-cs[VbLinkCompilerCS#1](../../../csharp/language-reference/compiler-options/codesnippet/CSharp/link-compiler-option_1.cs)]  
   
 ### <a name="types-that-have-generic-parameters"></a>제네릭 매개 변수가 있는 형식  
- 형식이 interop 어셈블리에서 포함된 제네릭 매개 변수가 있는 형식은 해당 형식이 외부 어셈블리에서 제공된 경우 사용할 수 없습니다. 인터페이스에는 이 제한이 적용되지 않습니다. 예를 들어 <xref:Microsoft.Office.Interop.Excel> 어셈블리에 정의된 <xref:Microsoft.Office.Interop.Excel.Range> 인터페이스를 가정해 보세요. 다음 코드 예제와 같이 라이브러리가 <xref:Microsoft.Office.Interop.Excel> 어셈블리의 interop 형식을 포함하고 형식이 <xref:Microsoft.Office.Interop.Excel.Range> 인터페이스인 매개 변수가 있는 제네릭 형식을 반환하는 메서드를 노출하는 경우 해당 메서드는 제네릭 인터페이스를 반환해야 합니다.  
+ 형식이 interop 어셈블리에서 포함된 제네릭 매개 변수가 있는 형식은 해당 형식이 외부 어셈블리에서 제공된 경우 사용할 수 없습니다. 인터페이스에는 이 제한이 적용되지 않습니다. 예를 들어 <xref:Microsoft.Office.Interop.Excel> 어셈블리에 정의된 <xref:Microsoft.Office.Interop.Excel.Range> 인터페이스를 살펴보세요. 다음 코드 예제와 같이 라이브러리가 <xref:Microsoft.Office.Interop.Excel> 어셈블리의 interop 형식을 포함하고 형식이 <xref:Microsoft.Office.Interop.Excel.Range> 인터페이스인 매개 변수가 있는 제네릭 형식을 반환하는 메서드를 노출하는 경우 해당 메서드는 제네릭 인터페이스를 반환해야 합니다.  
   
  [!code-cs[VbLinkCompilerCS#2](../../../csharp/language-reference/compiler-options/codesnippet/CSharp/link-compiler-option_2.cs)]  
 [!code-cs[VbLinkCompilerCS#3](../../../csharp/language-reference/compiler-options/codesnippet/CSharp/link-compiler-option_3.cs)]  
@@ -110,3 +111,4 @@ csc /link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.cs
  [/noconfig(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)   
  [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)   
  [상호 운용성 개요](../../../csharp/programming-guide/interop/interoperability-overview.md)
+

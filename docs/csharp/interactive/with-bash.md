@@ -1,5 +1,5 @@
 ---
-title: "MacOS 또는 Linux Terminal과 함께 C# Interactive 사용 | C# 가이드"
+title: "MacOS 또는 Linux 터미널과 함께 C# Interactive 사용 - C# 가이드"
 description: "MacOS 또는 Linux 명령줄에서 C# Interactive Shell 탐색"
 keywords: ".NET, .NET Core, C#, REPL, 플랫폼 간"
 ms.date: 06/25/2016
@@ -8,11 +8,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 6312a76a-a298-49a0-9116-b9d9e6b3c7c3
-redirect_url: /dotnet/articles/csharp/index
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5ca4591fb1bb5143251c9e05af27392bd3fdc40d
-ms.lasthandoff: 03/13/2017
+redirect_url: /dotnet/csharp/index
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 5dc499d168b09f7911f0255d1d5c653676786911
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 

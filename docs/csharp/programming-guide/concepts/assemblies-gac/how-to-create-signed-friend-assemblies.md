@@ -1,5 +1,5 @@
 ---
-title: "방법: 서명된 Friend 어셈블리 만들기(C#) | Microsoft 문서"
+title: "방법: 서명된 Friend 어셈블리 만들기(C#)"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,10 +19,11 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 890cead4b28b8532dd7bd7f571defe7e280e4cdc
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: e9d56602eaffe73ff301ade95aaebeabab663be6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>방법: 서명된 Friend 어셈블리 만들기(C#)
@@ -113,3 +114,4 @@ ms.lasthandoff: 03/13/2017
  [Sn.exe(강력한 이름 도구)](https://msdn.microsoft.com/library/k5b5tt23)   
  [강력한 이름의 어셈블리 만들기 및 사용](https://msdn.microsoft.com/library/xwb8f617)   
  [C# 프로그래밍 가이드](../../../../csharp/programming-guide/index.md)
+

@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fffc3400-aeb9-4c07-9fea-83bc8dbdcbf3
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5c4d478d42f395cefdd38c796b19a1f875c4ef2e
+ms.sourcegitcommit: 434b27f6c2d44c63b4ce4deee094ac6c322cf2b5
+ms.openlocfilehash: 62de584fe5d7f1029e73e4c8c5f9b428c567751a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
@@ -162,7 +162,7 @@ echo "Hello World!"
 echo "Hello World"
 ```
 
-MacOS에서는 이 스크립트를 `dotnet-hello`으로 저장하고 `chmod +x dotnet-hello`을 사용하여 실행 파일 비트를 설정할 수 있습니다. 그런 다음 `ln -s dotnet-hello /usr/local/bin/` 명령을 사용하여 `/usr/local/bin`에 바로 가기 링크를 만들 수 있습니다. 그러면 `dotnet hello` 구문을 사용하여 명령을 호출할 수 있습니다.
+MacOS에서는 이 스크립트를 `dotnet-hello`으로 저장하고 `chmod +x dotnet-hello`을 사용하여 실행 파일 비트를 설정할 수 있습니다. 그런 다음 `ln -s <full_path>/dotnet-hello /usr/local/bin/` 명령을 사용하여 `/usr/local/bin`에 바로 가기 링크를 만들 수 있습니다. 그러면 `dotnet hello` 구문을 사용하여 명령을 호출할 수 있습니다.
 
 Windows에서는 이 스크립트를 `dotnet-hello.cmd`로 저장하고 시스템 경로에 있는 위치에 보관하거나 경로에 이미 있는 폴더에 추가할 수 있습니다. 그런 다음 `dotnet hello`를 사용하여 이 예제를 실행할 수 있습니다.
 

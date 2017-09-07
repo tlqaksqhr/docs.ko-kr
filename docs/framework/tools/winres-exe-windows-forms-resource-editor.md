@@ -1,5 +1,5 @@
 ---
-title: "Winres.exe(Windows Forms 리소스 편집기) | Microsoft Docs"
+title: "Winres.exe(Windows Forms 리소스 편집기)"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -27,11 +27,11 @@ caps.latest.revision: 23
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
-ms.openlocfilehash: 2149e21f82b224e40cc4b2dd80a7decd9988385d
+ms.translationtype: HT
+ms.sourcegitcommit: 934373d61407c8cc19b7d6424898a582880f9c21
+ms.openlocfilehash: e2a2121d97cd1f7de211a72ed95e2fdf24bfac60
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/02/2017
+ms.lasthandoff: 08/10/2017
 
 ---
 # <a name="winresexe-windows-forms-resource-editor"></a>Winres.exe(Windows Forms 리소스 편집기)
@@ -146,7 +146,7 @@ winres /?
   
 4.  .resx 또는 .resources 파일의 지역화된 버전을 저장하려면 **저장** 아이콘 또는 **파일** 메뉴에 있는 동일한 명령을 클릭합니다. **문화권 선택** 창이 표시됩니다.  
   
-5.  문화권 및 파일 모드를 적절히 선택한 다음 **확인**을 클릭합니다. 지역화된 리소스 파일에 대해 런타임에서 예상하는 명명 규칙을 사용하여 파일이 저장됩니다. 예를 들어, `TestApp.resources`를 독일어(독일)로 지역화하는 경우 이 도구는 파일을 `TestApp.de-DE.resources`로 저장하고 `TestApp.resx`를 독일어(독일)로 지역화하는 경우 `TestApp.de-DE.resx`로 저장합니다. 리소스 명명 규칙에 대한 자세한 내용은 [리소스 패키지 및 배포](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)를 참조하세요. 런타임에서 사용하는 미리 정의된 문화권 이름의 목록은 [CultureInfo Class](https://msdn.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx)(CultureInfo 클래스)를 참조하세요.  
+5.  문화권 및 파일 모드를 적절히 선택한 다음 **확인**을 클릭합니다. 지역화된 리소스 파일에 대해 런타임에서 예상하는 명명 규칙을 사용하여 파일이 저장됩니다. 예를 들어, `TestApp.resources`를 독일어(독일)로 지역화하는 경우 이 도구는 파일을 `TestApp.de-DE.resources`로 저장하고 `TestApp.resx`를 독일어(독일)로 지역화하는 경우 `TestApp.de-DE.resx`로 저장합니다. 리소스 명명 규칙에 대한 자세한 내용은 [리소스 패키지 및 배포](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)를 참조하세요. 런타임에서 사용하는 미리 정의된 문화권 이름의 목록은 <xref:System.Globalization.CultureInfo> 클래스를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.ComponentModel.LocalizableAttribute>   
@@ -157,3 +157,4 @@ winres /?
  [도구](../../../docs/framework/tools/index.md)   
  [데스크톱 앱의 리소스](../../../docs/framework/resources/index.md)   
  [전역화 및 지역화](../../../docs/standard/globalization-localization/index.md)
+

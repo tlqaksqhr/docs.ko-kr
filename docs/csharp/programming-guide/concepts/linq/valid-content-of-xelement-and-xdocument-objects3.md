@@ -1,5 +1,5 @@
 ---
-title: "XElement 및 XDocument 개체의 올바른 콘텐츠3 | Microsoft 문서"
+title: "XElement 및 XDocument 개체의 유효한 콘텐츠3"
 ms.custom: 
 ms.date: 2015-07-20
 ms.prod: .net
@@ -19,17 +19,18 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3db6b15d2b95016db0814f202143ec198425e2ad
-ms.lasthandoff: 03/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 2552c233961c13816fd91c79c5e6b589674985f6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="valid-content-of-xelement-and-xdocument-objects"></a>XElement 및 XDocument 개체의 올바른 콘텐츠
+# <a name="valid-content-of-xelement-and-xdocument-objects"></a>XElement 및 XDocument 개체의 유효한 콘텐츠
 이 항목에서는 생성자에 전달될 수 있는 유효한 인수에 대해 설명하고 내용을 요소와 문서에 추가하는 데 사용하는 메서드에 대한 정보를 제공합니다.  
   
 ## <a name="valid-content"></a>유효한 내용  
- 쿼리는 종종 <xref:System.Xml.Linq.XElement>의 <xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Xml.Linq.XAttribute>의 <xref:System.Collections.Generic.IEnumerable%601>로 평가됩니다. <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XAttribute> 개체의 컬렉션을 <xref:System.Xml.Linq.XElement> 생성자로 전달할 수 있습니다. 따라서 XML 트리를 채우는 데 사용하는 메서드와 생성자에 쿼리의 결과를 내용으로 전달하는 것이 편리합니다.  
+ 쿼리는 흔히 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement> 또는 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XAttribute>로 확인되며, <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XAttribute> 개체의 컬렉션은 <xref:System.Xml.Linq.XElement> 생성자로 전달할 수 있습니다. 따라서 XML 트리를 채우는 데 사용하는 메서드와 생성자에 쿼리의 결과를 내용으로 전달하는 것이 편리합니다.  
   
  간단한 내용을 추가할 때 다양한 형식이 이 메서드에 전달될 수 있습니다. 유효한 형식은 다음과 같습니다.  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 03/13/2017
   
 -   `Object.ToString`을 구현하는 임의의 형식  
   
--   <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 형식  
+-   <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 임의의 형식  
   
  복잡한 내용을 추가할 때 다양한 형식이 이 메서드에 전달될 수 있습니다.  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 03/13/2017
   
 -   <xref:System.Xml.Linq.XAttribute>  
   
--   <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 형식  
+-   <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 임의의 형식  
   
  개체가 <xref:System.Collections.Generic.IEnumerable%601>을 구현하는 경우 개체의 컬렉션이 열거되고 컬렉션의 모든 항목이 추가됩니다. 컬렉션에 <xref:System.Xml.Linq.XNode> 또는 <xref:System.Xml.Linq.XAttribute> 개체가 포함되어 있으면 컬렉션의 각 항목이 개별적으로 추가됩니다. 컬렉션에 텍스트(또는 텍스트로 변환된 개체)가 포함되어 있으면 컬렉션의 텍스트가 연결되어 단일 텍스트 노드로 추가됩니다.  
   
@@ -74,11 +75,11 @@ ms.lasthandoff: 03/13/2017
 ## <a name="valid-content-for-documents"></a>문서의 유효한 내용  
  특성과 간단한 내용은 문서에 추가될 수 없습니다.  
   
- <xref:System.Xml.Linq.XDocument>를 만들어야 하는 경우는 많지 않습니다. 대신 일반적으로 <xref:System.Xml.Linq.XElement> 루트 노드를 사용하여 XML 트리를 만들 수 있습니다. 문서를 만들어야 하는 특정 요구 사항(예를 들어, 최상위 수준에서 처리 명령과 주석을 만들어야 하거나 문서 형식을 지원해야 하는 경우)이 없는 한 <xref:System.Xml.Linq.XElement>를 루트 노드로 사용하는 것이 더 편리한 경우가 많습니다.  
+ <xref:System.Xml.Linq.XDocument>를 만들어야 하는 경우는 많지 않습니다. @FSHO3@대신 일반적으로 <xref:System.Xml.Linq.XElement> 루트 노드를 사용하여 XML 트리를 만들 수 있습니다. 문서를 만들어야 하는 특정 요구 사항(예를 들어, 최상위 수준에서 처리 명령과 주석을 만들어야 하거나 문서 형식을 지원해야 하는 경우)이 없는 한 <xref:System.Xml.Linq.XElement>를 루트 노드로 사용하는 것이 더 편리한 경우가 많습니다.  
   
  문서의 유효한 내용은 다음과 같습니다.  
   
--   0개나 1개의 <xref:System.Xml.Linq.XDocumentType> 개체 문서 형식이 요소 앞에 나와야 합니다.  
+-   0개나 1개의 <xref:System.Xml.Linq.XDocumentType> 개체. 문서 형식이 요소 앞에 나와야 합니다.  
   
 -   0개나 1개의 요소  
   
@@ -89,20 +90,21 @@ ms.lasthandoff: 03/13/2017
 -   공백만 포함된 0개 이상의 텍스트 노드  
   
 ## <a name="constructors-and-functions-that-allow-adding-content"></a>내용 추가를 허용하는 생성자 및 함수  
- 다음 메서드를 사용하면 자식 내용을 <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XDocument>에 추가할 수 있습니다.  
+ 다음 메서드를 사용하여 자식 내용을 <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XDocument>에 추가할 수 있습니다.  
   
 |메서드|설명|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.%23ctor%2A>|<xref:System.Xml.Linq.XElement>를 생성합니다.|  
 |<xref:System.Xml.Linq.XDocument.%23ctor%2A>|<xref:System.Xml.Linq.XDocument>를 생성합니다.|  
-|<xref:System.Xml.Linq.XContainer.Add%2A>|<xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XDocument>의 자식 내용 끝에 추가합니다.|  
+|<xref:System.Xml.Linq.XContainer.Add%2A>|<xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XDocument>의 자식 내용 끝 부분에 내용을 추가합니다.|  
 |<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|<xref:System.Xml.Linq.XNode> 뒤에 내용을 추가합니다.|  
 |<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|<xref:System.Xml.Linq.XNode> 앞에 내용을 추가합니다.|  
 |<xref:System.Xml.Linq.XContainer.AddFirst%2A>|<xref:System.Xml.Linq.XContainer>의 자식 내용 시작 부분에 내용을 추가합니다.|  
-|<xref:System.Xml.Linq.XElement.ReplaceAll%2A>|<xref:System.Xml.Linq.XElement>의 모든 내용(자식 노드와 특성)을 바꿉니다.|  
+|<xref:System.Xml.Linq.XElement.ReplaceAll%2A>|<xref:System.Xml.Linq.XElement>의 모든 내용(자식 노드 및 특성)을 바꿉니다.|  
 |<xref:System.Xml.Linq.XElement.ReplaceAttributes%2A>|<xref:System.Xml.Linq.XElement>의 특성을 바꿉니다.|  
 |<xref:System.Xml.Linq.XContainer.ReplaceNodes%2A>|자식 노드를 새 내용으로 바꿉니다.|  
 |<xref:System.Xml.Linq.XNode.ReplaceWith%2A>|노드를 새 내용으로 바꿉니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [XML 트리 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+

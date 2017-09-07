@@ -1,5 +1,5 @@
 ---
-title: "sizeof(C# 참조) | Microsoft 문서"
+title: "sizeof(C# 참조)"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -30,11 +30,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7a1944caceaba3ffb8d83a8f67e5ef2975bf9644
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 15d11071c369fad398d40cfef301e462c006d5e4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="sizeof-c-reference"></a>sizeof(C# 참조)
@@ -74,7 +74,7 @@ int intSize = sizeof(int);
 |`sizeof(decimal)`|16|  
 |`sizeof(bool)`|1|  
   
- 구조체를 비롯한 다른 모든 형식의 경우 `sizeof` 연산자는 안전하지 않은 코드 블록에서만 사용할 수 있습니다. <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=fullName> 메서드를 사용할 수도 있지만 이 메서드에서 반환된 값이 `sizeof`에서 반환된 값과 항상 같지는 않습니다. <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=fullName>은 형식이 마샬링된 후의 크기를 반환하는 반면, `sizeof`는 안쪽 여백을 포함하여 공용 언어 런타임에 의해 할당된 크기를 반환합니다.  
+ 구조체를 비롯한 다른 모든 형식의 경우 `sizeof` 연산자는 안전하지 않은 코드 블록에서만 사용할 수 있습니다. <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=fullName> 메서드를 사용할 수 있지만 이 메서드에서 반환된 값이 `sizeof`에서 반환된 값과 항상 같지는 않습니다. <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=fullName>는 형식이 마샬링된 후의 크기를 반환하는 반면, `sizeof`는 안쪽 여백을 포함하여 공용 언어 런타임에 의해 할당된 크기를 반환합니다.  
   
 ## <a name="example"></a>예제  
  [!code-cs[csrefKeywordsOperator#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/sizeof_1.cs)]  
@@ -91,3 +91,4 @@ int intSize = sizeof(int);
  [안전하지 않은 코드 및 포인터](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
  [구조체](../../../csharp/programming-guide/classes-and-structs/structs.md)   
  [상수](../../../csharp/programming-guide/classes-and-structs/constants.md)
+
