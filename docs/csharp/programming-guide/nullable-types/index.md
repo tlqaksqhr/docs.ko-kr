@@ -86,4 +86,3 @@ Nullable 형식은 <xref:System.Nullable%601?displayProperty=fullName> 구조체
  [C#](../../../csharp/index.md)   
  [C# 참조](../../../csharp/language-reference/index.md)   
  ['리프트'란 정확히 어떤 의미입니까?](http://go.microsoft.com/fwlink/?LinkId=112382)
-
