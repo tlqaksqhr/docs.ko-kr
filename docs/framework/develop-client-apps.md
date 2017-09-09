@@ -26,14 +26,14 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 969e02ea7a560a18f8c0f79ada089fd791362808
+ms.sourcegitcommit: aba9547bcd96b9e8038bc973aa9ef971bb82f698
+ms.openlocfilehash: 891c783429c069d7c807a9c31aff45d02f518eee
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>.NET Framework로 클라이언트 응용 프로그램 개발
-사용자의 컴퓨터나 장치에서 로컬로 실행되는 .NET Framework를 사용하여 Windows 기반 응용 프로그램을 개발하는 여러 가지 방법이 있습니다. 이 섹션에는 WPF(Windows Presentation Foundation) 또는 Windows Forms를 사용하여 Windows 기반 응용 프로그램을 만드는 방법을 설명하는 항목이 포함되어 있습니다. 그러나 .NET Framework를 사용하여 클라이언트 응용 프로그램을 만들고 브라우저에서 볼 수 있는 웹 응용 프로그램인 컴퓨터 또는 장치용 Windows 스토어 및 Windows Phone 스토어를 통해 사용자에게 제공하기도 합니다.  
+사용자의 컴퓨터나 장치에서 로컬로 실행되는 .NET Framework를 사용하여 Windows 기반 응용 프로그램을 개발하는 여러 가지 방법이 있습니다. 이 섹션에는 WPF(Windows Presentation Foundation) 또는 Windows Forms를 사용하여 Windows 기반 응용 프로그램을 만드는 방법을 설명하는 항목이 포함되어 있습니다. 그러나 .NET Framework를 사용하여 dnpq 응용 프로그램을 만들고 Windows 스토어 및 Windows Phone 스토어를 통해 사용할 수 있는 컴퓨터 또는 장치용 클라이언트 응용 프로그램을 만들 수 있습니다.  
   
 ## <a name="in-this-section"></a>단원 내용  
  [Windows Presentation Foundation](../../docs/framework/wpf/index.md)  

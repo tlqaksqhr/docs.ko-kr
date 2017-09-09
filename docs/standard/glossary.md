@@ -10,10 +10,10 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.translationtype: HT
-ms.sourcegitcommit: f8cf12317f1f0163028db003ff31604480da5d1c
-ms.openlocfilehash: d9a1b1aa2b19e80b885a2da87746667bff04e234
+ms.sourcegitcommit: 33b22ab80f9b4d42975f2c41c880543c615a3e01
+ms.openlocfilehash: c66f1b2b85d377c84712c0ad73682cdeeb7249fd
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 08/31/2017
 
 ---
 
@@ -141,13 +141,15 @@ Just-In-Time 컴파일러입니다.
 
 ## <a name="mono"></a>Mono
 
-.NET Framework에 대한 오픈 소스 대안입니다.
+Mono는 작은 런타임이 필요할 때 주로 사용되는 .NET 구현입니다. 이는 Android, Mac, iOS, tvOS 및 watchOS에서 Xamarin 응용 프로그램의 성능을 향상하는 런타임으로, 주로 작은 사용 공간이 필요한 앱에 초점을 맞춥니다.
 
-Mono는 .NET Framework가 처음 릴리스될 때 거의 동시에 시작되었습니다. .NET Framework가 오픈 소스가 아니었기 때문에 Mono는 처음부터 시작되어야 했으며, 따라서 공유 코드가 없는 .NET Framework의 완전한 다시 구현입니다.
+Mono는 현재 게시된 .NET Standard 버전을 모두 지원합니다.
 
-.NET Core가 MIT 라이선스에 따라 릴리스되었을 때 Microsoft는 [MIT 라이선스에 따라 대량의 .NET Framework](https://github.com/microsoft/referencesource)도 릴리스했습니다. 따라서 Mono 커뮤니티에서 .NET Framework가 사용하는 것과 동일한 코드를 사용하여 격차를 좁히고 동작의 차이를 방지할 수 있었습니다.
+지금까지 Mono는 .NET Framework의 더 큰 API를 구현하고 Unix에서 가장 인기 있는 기능 중 일부를 에뮬레이트했습니다. 경우에 따라 Unix에서 해당 기능을 사용하는 .NET 응용 프로그램을 실행하는 데도 사용됩니다.
 
-Mono는 Linux 및 macOS에서 .NET 응용 프로그램을 실행하는 데 주로 사용됩니다. 다른 플랫폼에 대한 Mono의 포트가 있습니다. [Mono's Supported Platforms](http://www.mono-project.com/docs/about-mono/supported-platforms/)(모노의 지원되는 플랫폼)를 참조하세요. Mono에는 WinForms, ASP.NET 및 `System.Drawing`의 구현이 있지만 반드시 완전하지는 않습니다.
+일반적으로 Mono는 Just-In-Time 컴파일러에서 사용되지만 iOS 같은 플랫폼에 사용되는 전체 정적 컴파일러(Ahead-Of-Time 컴파일) 기능도 제공합니다.
+
+Mono에 대한 자세한 내용은 [Mono 설명서](http://www.mono-project.com/docs/)를 참조하세요.
 
 ## <a name="net"></a>.NET
 
