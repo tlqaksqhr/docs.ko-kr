@@ -1,5 +1,6 @@
 ---
 title: "Visual C# 프로그래머를 위한 추가 리소스"
+description: "C# 및 .NET을 배우는 데 유용한 추가 리소스"
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -33,14 +34,14 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f843abd4ec891a7da17151140fc524acee72a346
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: dce2b9cbcc0e594f345e2a33ce7579f8546257d7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="additional-resources-for-visual-c-programmers"></a>Visual C# 프로그래머를 위한 추가 리소스
-다음 사이트를 참조하면 일반적인 문제에 대한 해답을 쉽게 찾을 수 있습니다.  
+다음 사이트를 참조하면 일반적인 문제에 대한 해답을 쉽게 찾을 수 있습니다.
   
 ## <a name="microsoft-resources"></a>Microsoft 리소스  
   
@@ -86,8 +87,7 @@ ms.lasthandoff: 07/28/2017
  MSDN 웹 사이트에서는 최신 타사 사이트 및 뉴스 그룹에 대한 정보를 제공합니다. 사용할 수 있는 리소스의 최신 목록을 보려면 [MSDN C# 커뮤니티 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=165945)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [C#](../../csharp/csharp.md)   
- [C# 시작](../../csharp/getting-started/getting-started-with-csharp.md)   
+ [C#](../../csharp/index.md) [C# 시작](index.md)   
  [편집기 사용자 지정](/visualstudio/ide/customizing-the-editor)   
  [방법: 개발자 커뮤니티에 참여](http://msdn.microsoft.com/library/f1503d98-7a64-41b6-a6c7-0e42a533e9c5)   
  [방법: 사용자 의견 보내기](http://msdn.microsoft.com/library/c9f1dd8f-bcb6-40ac-b896-1e9eca0bb209)   

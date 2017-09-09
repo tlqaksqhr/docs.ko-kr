@@ -1,5 +1,6 @@
 ---
 title: "C# 언어 및 .NET Framework 소개"
+description: "C# 및 .NET의 기본 사항에 대해 알아봅니다. C# 언어 및 .NET 에코시스템에 대한 개요를 확인합니다."
 ms.date: 2015-07-20
 ms.prod: .net
 ms.technology:
@@ -29,10 +30,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d828e5e1914e73193e6449d4fb6d8fb3f0d0775b
+ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
+ms.openlocfilehash: c7fac541dd233111bfffb9c0f67ba048f8d271be
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 언어 및 .NET Framework 소개
@@ -88,6 +89,5 @@ ms.lasthandoff: 07/28/2017
  .NET Framework에 대한 자세한 내용은 [Microsoft.NET Framework 개요](http://msdn.microsoft.com/en-us/d05daf50-00fe-45c7-8383-06fe41697355)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [C#](../../csharp/csharp.md)   
- [Visual C# 및 Visual Basic 시작](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+ [C#](../../csharp/index.md) [Visual C# 및 Visual Basic 시작](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
 
