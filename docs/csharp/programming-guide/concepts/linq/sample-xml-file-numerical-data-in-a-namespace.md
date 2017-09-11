@@ -26,10 +26,10 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-numerical-data-in-a-namespace"></a>샘플 XML 파일: 네임스페이스의 숫자 데이터
-다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다. 이 파일에는 합계 및 평균을 구하고 그룹화할 숫자 데이터가 포함되어 있습니다. XML은 네임스페이스에 있습니다.  
+# <a name="sample-xml-file-numerical-data-in-a-namespace"></a><span data-ttu-id="1c4f2-102">샘플 XML 파일: 네임스페이스의 숫자 데이터</span><span class="sxs-lookup"><span data-stu-id="1c4f2-102">Sample XML File: Numerical Data in a Namespace</span></span>
+<span data-ttu-id="1c4f2-103">다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="1c4f2-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="1c4f2-104">이 파일에는 합계 및 평균을 구하고 그룹화할 숫자 데이터가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1c4f2-104">This file contains numerical data for summing, averaging, and grouping.</span></span> <span data-ttu-id="1c4f2-105">XML은 네임스페이스에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1c4f2-105">The XML is in a namespace.</span></span>  
   
-## <a name="data"></a>데이터  
+## <a name="data"></a><span data-ttu-id="1c4f2-106">데이터</span><span class="sxs-lookup"><span data-stu-id="1c4f2-106">Data</span></span>  
   
 ```xml  
 <Root xmlns='http://www.adatum.com'>  
@@ -72,6 +72,6 @@ ms.lasthandoff: 07/28/2017
 </Root>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [샘플 XML 문서(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="1c4f2-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1c4f2-107">See Also</span></span>  
+ [<span data-ttu-id="1c4f2-108">샘플 XML 문서(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="1c4f2-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
 

@@ -62,21 +62,22 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6e112e7d221ef8e7a660094306bbb242c988e843
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 335306eca12070de456a72e918bcbba1e22ab55b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="type-characters-visual-basic"></a>형식 문자(Visual Basic)
-를 선언문의 데이터 형식을 지정 하는 것 외에도 일부 프로그래밍 요소와의 데이터 형식을 강제할 수는 *형식 문자*합니다. 형식 문자 어떠한 종류의 중간에 다른 문자 없이 요소를 다음에 나와야 합니다.  
+# <a name="type-characters-visual-basic"></a><span data-ttu-id="be8cf-102">형식 문자(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="be8cf-102">Type Characters (Visual Basic)</span></span>
+<span data-ttu-id="be8cf-103">를 선언문의 데이터 형식을 지정 하는 것 외에도 일부 프로그래밍 요소와의 데이터 형식을 강제할 수는 *형식 문자*합니다.</span><span class="sxs-lookup"><span data-stu-id="be8cf-103">In addition to specifying a data type in a declaration statement, you can force the data type of some programming elements with a *type character*.</span></span> <span data-ttu-id="be8cf-104">형식 문자 어떠한 종류의 중간에 다른 문자 없이 요소를 다음에 나와야 합니다.</span><span class="sxs-lookup"><span data-stu-id="be8cf-104">The type character must immediately follow the element, with no intervening characters of any kind.</span></span>  
   
- 형식 문자 요소 이름의 일부가 아닙니다. 형식 문자 없이 문자 형식으로 정의 된 요소를 참조할 수 있습니다.  
+ <span data-ttu-id="be8cf-105">형식 문자 요소 이름의 일부가 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="be8cf-105">The type character is not part of the name of the element.</span></span> <span data-ttu-id="be8cf-106">형식 문자 없이 문자 형식으로 정의 된 요소를 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="be8cf-106">An element defined with a type character can be referenced without the type character.</span></span>  
   
-## <a name="identifier-type-characters"></a>식별자 형식 문자  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]집합을 제공 *식별자 형식 문자*, 변수 또는 상수 데이터 형식을 지정 하는 선언에서 사용할 수 있는 합니다. 다음 표에서 사용할 수 있는 식별자 형식 문자 사용 예제를 보여 줍니다.  
+## <a name="identifier-type-characters"></a><span data-ttu-id="be8cf-107">식별자 형식 문자</span><span class="sxs-lookup"><span data-stu-id="be8cf-107">Identifier Type Characters</span></span>  
+ [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]<span data-ttu-id="be8cf-108">집합을 제공 *식별자 형식 문자*, 변수 또는 상수 데이터 형식을 지정 하는 선언에서 사용할 수 있는 합니다.</span><span class="sxs-lookup"><span data-stu-id="be8cf-108"> supplies a set of *identifier type characters*, which you can use in a declaration to specify the data type of a variable or constant.</span></span> <span data-ttu-id="be8cf-109">다음 표에서 사용할 수 있는 식별자 형식 문자 사용 예제를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="be8cf-109">The following table shows the available identifier type characters with examples of usage.</span></span>  
   
-|식별자 형식 문자|데이터 형식|예제|  
+|<span data-ttu-id="be8cf-110">식별자 형식 문자</span><span class="sxs-lookup"><span data-stu-id="be8cf-110">Identifier type character</span></span>|<span data-ttu-id="be8cf-111">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="be8cf-111">Data type</span></span>|<span data-ttu-id="be8cf-112">예제</span><span class="sxs-lookup"><span data-stu-id="be8cf-112">Example</span></span>|  
 |-------------------------------|---------------|-------------|  
 |`%`|`Integer`|`Dim L%`|  
 |`&`|`Long`|`Dim M&`|  
@@ -85,30 +86,30 @@ ms.lasthandoff: 03/13/2017
 |`#`|`Double`|`Dim X#`|  
 |`$`|`String`|`Dim V$ = "Secret"`|  
   
- 식별자 형식 문자가 없습니다는 `Boolean`, `Byte`, `Char`, `Date`, `Object`, `SByte`, `Short`, `UInteger`, `ULong`, 또는 `UShort` 데이터 형식 또는 배열 또는 구조체와 같은 복합 데이터 형식에 대 한 합니다.  
+ <span data-ttu-id="be8cf-113">식별자 형식 문자가 없습니다는 `Boolean`, `Byte`, `Char`, `Date`, `Object`, `SByte`, `Short`, `UInteger`, `ULong`, 또는 `UShort` 데이터 형식 또는 배열 또는 구조체와 같은 복합 데이터 형식에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="be8cf-113">No identifier type characters exist for the `Boolean`, `Byte`, `Char`, `Date`, `Object`, `SByte`, `Short`, `UInteger`, `ULong`, or `UShort` data types, or for any composite data types such as arrays or structures.</span></span>  
   
- 일부 경우에 추가할 수 있습니다는 `$` 문자를 한 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 함수 예를 들어 `Left$` 대신 `Left`형식의 반환된 값을 얻기 위해 `String`합니다.  
+ <span data-ttu-id="be8cf-114">일부 경우에 추가할 수 있습니다는 `$` 문자를 한 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 함수 예를 들어 `Left$` 대신 `Left`형식의 반환된 값을 얻기 위해 `String`합니다.</span><span class="sxs-lookup"><span data-stu-id="be8cf-114">In some cases, you can append the `$` character to a [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] function, for example `Left$` instead of `Left`, to obtain a returned value of type `String`.</span></span>  
   
- 모든 경우에 식별자 형식 문자 다음에 나와야 식별자 이름.  
+ <span data-ttu-id="be8cf-115">모든 경우에 식별자 형식 문자 다음에 나와야 식별자 이름.</span><span class="sxs-lookup"><span data-stu-id="be8cf-115">In all cases, the identifier type character must immediately follow the identifier name.</span></span>  
   
-## <a name="literal-type-characters"></a>리터럴 형식 문자  
- A *리터럴* 데이터 형식의 특정 값의 텍스트 표현입니다.  
+## <a name="literal-type-characters"></a><span data-ttu-id="be8cf-116">리터럴 형식 문자</span><span class="sxs-lookup"><span data-stu-id="be8cf-116">Literal Type Characters</span></span>  
+ <span data-ttu-id="be8cf-117">A *리터럴* 데이터 형식의 특정 값의 텍스트 표현입니다.</span><span class="sxs-lookup"><span data-stu-id="be8cf-117">A *literal* is a textual representation of a particular value of a data type.</span></span>  
   
-### <a name="default-literal-types"></a>기본 리터럴 형식  
- 리터럴 형태가 일반적으로 코드에 표시 된 대로 해당 데이터 형식을 결정 합니다. 다음 표에서 이러한 기본 유형을 보여 줍니다.  
+### <a name="default-literal-types"></a><span data-ttu-id="be8cf-118">기본 리터럴 형식</span><span class="sxs-lookup"><span data-stu-id="be8cf-118">Default Literal Types</span></span>  
+ <span data-ttu-id="be8cf-119">리터럴 형태가 일반적으로 코드에 표시 된 대로 해당 데이터 형식을 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="be8cf-119">The form of a literal as it appears in your code ordinarily determines its data type.</span></span> <span data-ttu-id="be8cf-120">다음 표에서 이러한 기본 유형을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="be8cf-120">The following table shows these default types.</span></span>  
   
-|리터럴 텍스트 형식|기본 데이터 형식|예제|  
+|<span data-ttu-id="be8cf-121">리터럴 텍스트 형식</span><span class="sxs-lookup"><span data-stu-id="be8cf-121">Textual form of literal</span></span>|<span data-ttu-id="be8cf-122">기본 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="be8cf-122">Default data type</span></span>|<span data-ttu-id="be8cf-123">예제</span><span class="sxs-lookup"><span data-stu-id="be8cf-123">Example</span></span>|  
 |-----------------------------|-----------------------|-------------|  
-|숫자, 더 소수 부분|`Integer`|`2147483647`|  
-|너무 커서 숫자, 더 소수 부분`Integer`|`Long`|`2147483648`|  
-|숫자, 소수 부분|`Double`|`1.2`|  
-|큰따옴표로 묶인|`String`|`"A"`|  
-|숫자 기호 사이 포함 된|`Date`|`#5/17/1993 9:32 AM#`|  
+|<span data-ttu-id="be8cf-124">숫자, 더 소수 부분</span><span class="sxs-lookup"><span data-stu-id="be8cf-124">Numeric, no fractional part</span></span>|`Integer`|`2147483647`|  
+|<span data-ttu-id="be8cf-125">너무 커서 숫자, 더 소수 부분`Integer`</span><span class="sxs-lookup"><span data-stu-id="be8cf-125">Numeric, no fractional part, too large for `Integer`</span></span>|`Long`|`2147483648`|  
+|<span data-ttu-id="be8cf-126">숫자, 소수 부분</span><span class="sxs-lookup"><span data-stu-id="be8cf-126">Numeric, fractional part</span></span>|`Double`|`1.2`|  
+|<span data-ttu-id="be8cf-127">큰따옴표로 묶인</span><span class="sxs-lookup"><span data-stu-id="be8cf-127">Enclosed in double quotation marks</span></span>|`String`|`"A"`|  
+|<span data-ttu-id="be8cf-128">숫자 기호 사이 포함 된</span><span class="sxs-lookup"><span data-stu-id="be8cf-128">Enclosed within number signs</span></span>|`Date`|`#5/17/1993 9:32 AM#`|  
   
-### <a name="forced-literal-types"></a>강제 리터럴 형식  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]집합을 제공 *리터럴 형식 문자*, 나타냅니다 강제로 형태로 아닌 데이터 형식을 취하도록 리터럴을 사용할 수 있습니다. 문자 리터럴의 끝에 추가 하 여이 작업을 수행 합니다. 다음 표에서 사용 예제를 사용할 수 있는 리터럴 형식 문자를 보여 줍니다.  
+### <a name="forced-literal-types"></a><span data-ttu-id="be8cf-129">강제 리터럴 형식</span><span class="sxs-lookup"><span data-stu-id="be8cf-129">Forced Literal Types</span></span>  
+ [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]<span data-ttu-id="be8cf-130">집합을 제공 *리터럴 형식 문자*, 나타냅니다 강제로 형태로 아닌 데이터 형식을 취하도록 리터럴을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="be8cf-130"> supplies a set of *literal type characters*, which you can use to force a literal to assume a data type other than the one its form indicates.</span></span> <span data-ttu-id="be8cf-131">문자 리터럴의 끝에 추가 하 여이 작업을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="be8cf-131">You do this by appending the character to the end of the literal.</span></span> <span data-ttu-id="be8cf-132">다음 표에서 사용 예제를 사용할 수 있는 리터럴 형식 문자를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="be8cf-132">The following table shows the available literal type characters with examples of usage.</span></span>  
   
-|리터럴 형식 문자|데이터 형식|예제|  
+|<span data-ttu-id="be8cf-133">리터럴 형식 문자</span><span class="sxs-lookup"><span data-stu-id="be8cf-133">Literal type character</span></span>|<span data-ttu-id="be8cf-134">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="be8cf-134">Data type</span></span>|<span data-ttu-id="be8cf-135">예제</span><span class="sxs-lookup"><span data-stu-id="be8cf-135">Example</span></span>|  
 |----------------------------|---------------|-------------|  
 |`S`|`Short`|`I = 347S`|  
 |`I`|`Integer`|`J = 347I`|  
@@ -121,34 +122,34 @@ ms.lasthandoff: 03/13/2017
 |`UL`|`ULong`|`N = 347UL`|  
 |`C`|`Char`|`Q = "."C`|  
   
- 리터럴 형식 문자가 없습니다는 `Boolean`, `Byte`, `Date`, `Object`, `SByte`, 또는 `String` 데이터 형식 또는 배열 또는 구조체와 같은 복합 데이터 형식에 대 한 합니다.  
+ <span data-ttu-id="be8cf-136">리터럴 형식 문자가 없습니다는 `Boolean`, `Byte`, `Date`, `Object`, `SByte`, 또는 `String` 데이터 형식 또는 배열 또는 구조체와 같은 복합 데이터 형식에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="be8cf-136">No literal type characters exist for the `Boolean`, `Byte`, `Date`, `Object`, `SByte`, or `String` data types, or for any composite data types such as arrays or structures.</span></span>  
   
- 리터럴 식별자 형식 문자를 사용할 수도 있습니다 (`%`, `&`, `@`, `!`, `#`, `$`), 변수, 상수 및 식입니다. 그러나 리터럴 형식 문자 (`S`, `I`, `L`, `D`, `F`, `R`, `C`) 리터럴에만 사용할 수 있습니다.  
+ <span data-ttu-id="be8cf-137">리터럴 식별자 형식 문자를 사용할 수도 있습니다 (`%`, `&`, `@`, `!`, `#`, `$`), 변수, 상수 및 식입니다.</span><span class="sxs-lookup"><span data-stu-id="be8cf-137">Literals can also use the identifier type characters (`%`, `&`, `@`, `!`, `#`, `$`), as can variables, constants, and expressions.</span></span> <span data-ttu-id="be8cf-138">그러나 리터럴 형식 문자 (`S`, `I`, `L`, `D`, `F`, `R`, `C`) 리터럴에만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="be8cf-138">However, the literal type characters (`S`, `I`, `L`, `D`, `F`, `R`, `C`) can be used only with literals.</span></span>  
   
- 모든 경우, 리터럴 형식 문자 다음에 나와야 리터럴 값입니다.  
+ <span data-ttu-id="be8cf-139">모든 경우, 리터럴 형식 문자 다음에 나와야 리터럴 값입니다.</span><span class="sxs-lookup"><span data-stu-id="be8cf-139">In all cases, the literal type character must immediately follow the literal value.</span></span>  
   
-## <a name="hexadecimal-and-octal-literals"></a>8 진수 및&16; 진 리터럴  
- 컴파일러는 일반적으로 10 진수 (밑수 10) 번호 시스템에는 정수 리터럴로 construes 합니다. 정수 리터럴을와 16 진수 (기 수 16)는 `&H` 접두사 및 있습니다 8 진수 (기 수 8) 사용 되도록 강제할 수는 `&O` 접두사입니다. 접두사 뒤의 숫자는 체계에 적합 해야 합니다. 다음 표에서이 보여 줍니다.  
+## <a name="hexadecimal-and-octal-literals"></a><span data-ttu-id="be8cf-140">8 진수 및&16; 진 리터럴</span><span class="sxs-lookup"><span data-stu-id="be8cf-140">Hexadecimal and Octal Literals</span></span>  
+ <span data-ttu-id="be8cf-141">컴파일러는 일반적으로 10 진수 (밑수 10) 번호 시스템에는 정수 리터럴로 construes 합니다.</span><span class="sxs-lookup"><span data-stu-id="be8cf-141">The compiler normally construes an integer literal to be in the decimal (base 10) number system.</span></span> <span data-ttu-id="be8cf-142">정수 리터럴을와 16 진수 (기 수 16)는 `&H` 접두사 및 있습니다 8 진수 (기 수 8) 사용 되도록 강제할 수는 `&O` 접두사입니다.</span><span class="sxs-lookup"><span data-stu-id="be8cf-142">You can force an integer literal to be hexadecimal (base 16) with the `&H` prefix, and you can force it to be octal (base 8) with the `&O` prefix.</span></span> <span data-ttu-id="be8cf-143">접두사 뒤의 숫자는 체계에 적합 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="be8cf-143">The digits that follow the prefix must be appropriate for the number system.</span></span> <span data-ttu-id="be8cf-144">다음 표에서이 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="be8cf-144">The following table illustrates this.</span></span>  
   
-|기 수|접두사|유효한 숫자 값|예제|  
+|<span data-ttu-id="be8cf-145">기 수</span><span class="sxs-lookup"><span data-stu-id="be8cf-145">Number base</span></span>|<span data-ttu-id="be8cf-146">접두사</span><span class="sxs-lookup"><span data-stu-id="be8cf-146">Prefix</span></span>|<span data-ttu-id="be8cf-147">유효한 숫자 값</span><span class="sxs-lookup"><span data-stu-id="be8cf-147">Valid digit values</span></span>|<span data-ttu-id="be8cf-148">예제</span><span class="sxs-lookup"><span data-stu-id="be8cf-148">Example</span></span>|  
 |-----------------|------------|------------------------|-------------|  
-|16진수|`&H`|0-9 및 A-F|`&HFFFF`|  
-|8진수|`&O`|0-7|`&O77`|  
+|<span data-ttu-id="be8cf-149">16진수</span><span class="sxs-lookup"><span data-stu-id="be8cf-149">Hexadecimal (base 16)</span></span>|`&H`|<span data-ttu-id="be8cf-150">0-9 및 A-F</span><span class="sxs-lookup"><span data-stu-id="be8cf-150">0-9 and A-F</span></span>|`&HFFFF`|  
+|<span data-ttu-id="be8cf-151">8진수</span><span class="sxs-lookup"><span data-stu-id="be8cf-151">Octal (base 8)</span></span>|`&O`|<span data-ttu-id="be8cf-152">0-7</span><span class="sxs-lookup"><span data-stu-id="be8cf-152">0-7</span></span>|`&O77`|  
   
- 리터럴 형식 문자 접두사가 붙은 리터럴을 따를 수 있습니다. 다음 예제에서는이 보여 줍니다.  
+ <span data-ttu-id="be8cf-153">리터럴 형식 문자 접두사가 붙은 리터럴을 따를 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="be8cf-153">You can follow a prefixed literal with a literal type character.</span></span> <span data-ttu-id="be8cf-154">다음 예제에서는이 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="be8cf-154">The following example shows this.</span></span>  
   
 ```  
 Dim counter As Short = &H8000S  
 Dim flags As UShort = &H8000US  
 ```  
   
- 앞의 예제에서 `counter` -32768&10; 진수 값 및 `flags`&10; 진수 값 +&32768;을 갖습니다.  
+ <span data-ttu-id="be8cf-155">앞의 예제에서 `counter` -32768&10; 진수 값 및 `flags`&10; 진수 값 +&32768;을 갖습니다.</span><span class="sxs-lookup"><span data-stu-id="be8cf-155">In the previous example, `counter` has the decimal value of -32768, and `flags` has the decimal value of +32768.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [기본 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)   
- [값 형식과 참조 형식](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
- [Visual Basic의 형식 변환](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)   
- [데이터 형식 문제 해결](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [변수 선언](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)   
- [데이터 형식](../../../../visual-basic/language-reference/data-types/data-type-summary.md)
+## <a name="see-also"></a><span data-ttu-id="be8cf-156">참고 항목</span><span class="sxs-lookup"><span data-stu-id="be8cf-156">See Also</span></span>  
+ <span data-ttu-id="be8cf-157">[데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/index.md) </span><span class="sxs-lookup"><span data-stu-id="be8cf-157">[Data Types](../../../../visual-basic/programming-guide/language-features/data-types/index.md) </span></span>  
+<span data-ttu-id="be8cf-158"> [기본 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md) </span><span class="sxs-lookup"><span data-stu-id="be8cf-158"> [Elementary Data Types](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md) </span></span>  
+<span data-ttu-id="be8cf-159"> [값 형식과 참조 형식](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md) </span><span class="sxs-lookup"><span data-stu-id="be8cf-159"> [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md) </span></span>  
+<span data-ttu-id="be8cf-160"> [Visual Basic의 형식 변환](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md) </span><span class="sxs-lookup"><span data-stu-id="be8cf-160"> [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md) </span></span>  
+<span data-ttu-id="be8cf-161"> [데이터 형식 문제 해결](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md) </span><span class="sxs-lookup"><span data-stu-id="be8cf-161"> [Troubleshooting Data Types](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md) </span></span>  
+<span data-ttu-id="be8cf-162"> [변수 선언](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md) </span><span class="sxs-lookup"><span data-stu-id="be8cf-162"> [Variable Declaration](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md) </span></span>  
+<span data-ttu-id="be8cf-163"> [데이터 형식](../../../../visual-basic/language-reference/data-types/data-type-summary.md)</span><span class="sxs-lookup"><span data-stu-id="be8cf-163"> [Data Types](../../../../visual-basic/language-reference/data-types/data-type-summary.md)</span></span>

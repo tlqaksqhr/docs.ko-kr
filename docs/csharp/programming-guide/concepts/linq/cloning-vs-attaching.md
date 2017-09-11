@@ -26,11 +26,11 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="cloning-vs-attaching-c"></a>복제와 연결(C#)
-<xref:System.Xml.Linq.XNode>(<xref:System.Xml.Linq.XElement> 포함) 또는 <xref:System.Xml.Linq.XAttribute> 개체를 새 트리에 추가할 때 새 내용에 부모가 없으면 개체가 XML 트리에 추가되기만 합니다. 새 내용에 이미 부모가 있고 다른 XML 트리의 일부이면 새 내용이 복제되고 새로 복제된 내용이 XML 트리에 추가됩니다.  
+# <a name="cloning-vs-attaching-c"></a><span data-ttu-id="0980e-102">복제와 연결(C#)</span><span class="sxs-lookup"><span data-stu-id="0980e-102">Cloning vs. Attaching (C#)</span></span>
+<span data-ttu-id="0980e-103"><xref:System.Xml.Linq.XNode>(<xref:System.Xml.Linq.XElement> 포함) 또는 <xref:System.Xml.Linq.XAttribute> 개체를 새 트리에 추가할 때 새 내용에 부모가 없으면 개체가 XML 트리에 추가되기만 합니다.</span><span class="sxs-lookup"><span data-stu-id="0980e-103">When adding <xref:System.Xml.Linq.XNode> (including <xref:System.Xml.Linq.XElement>) or <xref:System.Xml.Linq.XAttribute> objects to a new tree, if the new content has no parent, the objects are simply attached to the XML tree.</span></span> <span data-ttu-id="0980e-104">새 내용에 이미 부모가 있고 다른 XML 트리의 일부이면 새 내용이 복제되고</span><span class="sxs-lookup"><span data-stu-id="0980e-104">If the new content already is parented, and is part of another XML tree, the new content is cloned.</span></span> <span data-ttu-id="0980e-105">새로 복제된 내용이 XML 트리에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="0980e-105">The newly cloned content is then attached to the XML tree.</span></span>  
   
-## <a name="example"></a>예제  
- 다음 코드에서는 부모가 있는 요소를 트리에 추가할 때의 동작과 부모가 없는 요소를 트리에 추가할 때의 동작을 보여 줍니다.  
+## <a name="example"></a><span data-ttu-id="0980e-106">예제</span><span class="sxs-lookup"><span data-stu-id="0980e-106">Example</span></span>  
+ <span data-ttu-id="0980e-107">다음 코드에서는 부모가 있는 요소를 트리에 추가할 때의 동작과 부모가 없는 요소를 트리에 추가할 때의 동작을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0980e-107">The following code demonstrates the behavior when you add a parented element to a tree, and when you add an element with no parent to a tree.</span></span>  
   
 ```csharp  
 // Create a tree with a child element.  
@@ -58,13 +58,13 @@ Console.WriteLine("Child2 was {0}",
     "attached" : "cloned");  
 ```  
   
- 이 예제는 다음과 같은 출력을 생성합니다.  
+ <span data-ttu-id="0980e-108">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="0980e-108">This example produces the following output:</span></span>  
   
 ```  
 Child1 was cloned  
 Child2 was attached  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [XML 트리 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+## <a name="see-also"></a><span data-ttu-id="0980e-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="0980e-109">See Also</span></span>  
+ [<span data-ttu-id="0980e-110">XML 트리 만들기(C#)</span><span class="sxs-lookup"><span data-stu-id="0980e-110">Creating XML Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
 

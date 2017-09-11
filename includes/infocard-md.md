@@ -1,1 +1,1 @@
-CardSpace
+<span data-ttu-id="f8800-101">CardSpace</span><span class="sxs-lookup"><span data-stu-id="f8800-101">CardSpace</span></span>

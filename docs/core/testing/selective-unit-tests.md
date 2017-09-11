@@ -17,11 +17,11 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="running-selective-unit-tests"></a>선택적 단위 테스트 실행
+# <a name="running-selective-unit-tests"></a><span data-ttu-id="f34ca-104">선택적 단위 테스트 실행</span><span class="sxs-lookup"><span data-stu-id="f34ca-104">Running selective unit tests</span></span>
 
-다음 예제에서는 `dotnet test`를 사용합니다. `vstest.console.exe`를 사용하는 경우 `--filter `를 `--testcasefilter:`로 바꾸세요.
+<span data-ttu-id="f34ca-105">다음 예제에서는 `dotnet test`를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="f34ca-105">The following examples use `dotnet test`.</span></span> <span data-ttu-id="f34ca-106">`vstest.console.exe`를 사용하는 경우 `--filter `를 `--testcasefilter:`로 바꾸세요.</span><span class="sxs-lookup"><span data-stu-id="f34ca-106">If you're using `vstest.console.exe`, replace `--filter ` with `--testcasefilter:`.</span></span>
 
-## <a name="mstest"></a>MSTest
+## <a name="mstest"></a><span data-ttu-id="f34ca-107">MSTest</span><span class="sxs-lookup"><span data-stu-id="f34ca-107">MSTest</span></span>
 
 ```csharp
 namespace MSTestNamespace
@@ -47,24 +47,24 @@ namespace MSTestNamespace
 }
 ```
 
-| 식 | 결과 |
+| <span data-ttu-id="f34ca-108">식</span><span class="sxs-lookup"><span data-stu-id="f34ca-108">Expression</span></span> | <span data-ttu-id="f34ca-109">결과</span><span class="sxs-lookup"><span data-stu-id="f34ca-109">Result</span></span> |
 | ---------- | ------ |
-| `dotnet test --filter Method` | `FullyQualifiedName`에 `Method`가 포함된 테스트를 실행합니다. `vstest 15.1+`에서 사용 가능합니다. |
-| `dotnet test --filter Name~TestMethod1` | 이름에 `TestMethod1`이 포함된 테스트를 실행합니다. |
-| `dotnet test --filter ClassName=MSTestNamespace.UnitTestClass1` | 클래스 `MSTestNamespace.UnitTestClass1`에 속하는 테스트를 실행합니다.<br>**참고:** `ClassName` 값에는 네임스페이스가 있어야 하므로, `ClassName=UnitTestClass1`이 작동하지 않습니다. |
-| `dotnet test --filter FullyQualifiedName!=MSTestNamespace.UnitTestClass1.TestMethod1` | `MSTestNamespace.UnitTestClass1.TestMethod1`을 제외한 모든 테스트를 실행합니다. |
-| `dotnet test --filter TestCategory=CategoryA` | `[TestCategory("CategoryA")]`로 주석이 추가된 테스트를 실행합니다. |
-| `dotnet test --filter Priority=3` | `[Priority(3)]`로 주석이 추가된 테스트를 실행합니다.<br>**참고:** `Priority~3`는 문자열이 아니므로 잘못된 값입니다. |
+| `dotnet test --filter Method` | <span data-ttu-id="f34ca-110">`FullyQualifiedName`에 `Method`가 포함된 테스트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="f34ca-110">Runs tests whose `FullyQualifiedName` contains `Method`.</span></span> <span data-ttu-id="f34ca-111">`vstest 15.1+`에서 사용 가능합니다.</span><span class="sxs-lookup"><span data-stu-id="f34ca-111">Available in `vstest 15.1+`.</span></span> |
+| `dotnet test --filter Name~TestMethod1` | <span data-ttu-id="f34ca-112">이름에 `TestMethod1`이 포함된 테스트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="f34ca-112">Runs tests whose name contains `TestMethod1`.</span></span> |
+| `dotnet test --filter ClassName=MSTestNamespace.UnitTestClass1` | <span data-ttu-id="f34ca-113">클래스 `MSTestNamespace.UnitTestClass1`에 속하는 테스트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="f34ca-113">Runs tests which are in class `MSTestNamespace.UnitTestClass1`.</span></span><br><span data-ttu-id="f34ca-114">**참고:** `ClassName` 값에는 네임스페이스가 있어야 하므로, `ClassName=UnitTestClass1`이 작동하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f34ca-114">**Note:** The `ClassName` value should have a namespace, so `ClassName=UnitTestClass1` won't work.</span></span> |
+| `dotnet test --filter FullyQualifiedName!=MSTestNamespace.UnitTestClass1.TestMethod1` | <span data-ttu-id="f34ca-115">`MSTestNamespace.UnitTestClass1.TestMethod1`을 제외한 모든 테스트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="f34ca-115">Runs all tests except `MSTestNamespace.UnitTestClass1.TestMethod1`.</span></span> |
+| `dotnet test --filter TestCategory=CategoryA` | <span data-ttu-id="f34ca-116">`[TestCategory("CategoryA")]`로 주석이 추가된 테스트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="f34ca-116">Runs tests which are annotated with `[TestCategory("CategoryA")]`.</span></span> |
+| `dotnet test --filter Priority=3` | <span data-ttu-id="f34ca-117">`[Priority(3)]`로 주석이 추가된 테스트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="f34ca-117">Runs tests which are annotated with `[Priority(3)]`.</span></span><br><span data-ttu-id="f34ca-118">**참고:** `Priority~3`는 문자열이 아니므로 잘못된 값입니다.</span><span class="sxs-lookup"><span data-stu-id="f34ca-118">**Note:** `Priority~3` is an invalid value, as it isn't a string.</span></span> |
 
-**조건 연산자 | 및 &amp; 사용**
+<span data-ttu-id="f34ca-119">**조건 연산자 | 및 &amp; 사용**</span><span class="sxs-lookup"><span data-stu-id="f34ca-119">**Using conditional operators | and &amp;**</span></span>
 
-| 식 | 결과 |
+| <span data-ttu-id="f34ca-120">식</span><span class="sxs-lookup"><span data-stu-id="f34ca-120">Expression</span></span> | <span data-ttu-id="f34ca-121">결과</span><span class="sxs-lookup"><span data-stu-id="f34ca-121">Result</span></span> |
 | ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~UnitTestClass1&#124;TestCategory=CategoryA"</code> | `FullyQualifiedName`에 `UnitTestClass1`이 있거나 **** `TestCategory`가 `CategoryA`인 테스트를 실행합니다. |
-| `dotnet test --filter "FullyQualifiedName~UnitTestClass1&TestCategory=CategoryA"` | `FullyQualifiedName`에 `UnitTestClass1`이 있고 **** `TestCategory`가 `CategoryA`인 테스트를 실행합니다. |
-| <code>dotnet test --filter "(FullyQualifiedName~UnitTestClass1&TestCategory=CategoryA)&#124;Priority=1"</code> | `UnitTestClass1`을 포함하는 `FullyQualifiedName`이 있고 ****`TestCategory`가 `CategoryA`**이거나** `Priority`가 1인 테스트를 실행합니다. |
+| <code>dotnet test --filter "FullyQualifiedName~UnitTestClass1&#124;TestCategory=CategoryA"</code> | <span data-ttu-id="f34ca-122">`FullyQualifiedName`에 `UnitTestClass1`이 있거나 **** `TestCategory`가 `CategoryA`인 테스트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="f34ca-122">Runs tests which have `UnitTestClass1` in `FullyQualifiedName` **or** `TestCategory` is `CategoryA`.</span></span> |
+| `dotnet test --filter "FullyQualifiedName~UnitTestClass1&TestCategory=CategoryA"` | <span data-ttu-id="f34ca-123">`FullyQualifiedName`에 `UnitTestClass1`이 있고 **** `TestCategory`가 `CategoryA`인 테스트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="f34ca-123">Runs tests which have `UnitTestClass1` in `FullyQualifiedName` **and** `TestCategory` is `CategoryA`.</span></span> |
+| <code>dotnet test --filter "(FullyQualifiedName~UnitTestClass1&TestCategory=CategoryA)&#124;Priority=1"</code> | <span data-ttu-id="f34ca-124">`UnitTestClass1`을 포함하는 `FullyQualifiedName`이 있고 ****`TestCategory`가 `CategoryA`**이거나** `Priority`가 1인 테스트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="f34ca-124">Runs tests which have either `FullyQualifiedName` containing `UnitTestClass1` **and** `TestCategory` is `CategoryA` **or** `Priority` is 1.</span></span> |
 
-## <a name="xunit"></a>xUnit
+## <a name="xunit"></a><span data-ttu-id="f34ca-125">xUnit</span><span class="sxs-lookup"><span data-stu-id="f34ca-125">xUnit</span></span>
 
 ```csharp
 namespace XUnitNamespace
@@ -88,24 +88,24 @@ namespace XUnitNamespace
 }
 ```
 
-| 식 | 결과 |
+| <span data-ttu-id="f34ca-126">식</span><span class="sxs-lookup"><span data-stu-id="f34ca-126">Expression</span></span> | <span data-ttu-id="f34ca-127">결과</span><span class="sxs-lookup"><span data-stu-id="f34ca-127">Result</span></span> |
 | ---------- | ------ |
-| `dotnet test --filter DisplayName=XUnitNamespace.TestClass1.Test1` | `XUnitNamespace.TestClass1.Test1` 테스트를 하나만 실행합니다. |
-| `dotnet test --filter FullyQualifiedName!=XUnitNamespace.TestClass1.Test1` | `XUnitNamespace.TestClass1.Test1`을 제외한 모든 테스트를 실행합니다. |
-| `dotnet test --filter DisplayName~TestClass1` | 표시 이름에 `TestClass1`이 포함된 테스트를 실행합니다. |
+| `dotnet test --filter DisplayName=XUnitNamespace.TestClass1.Test1` | <span data-ttu-id="f34ca-128">`XUnitNamespace.TestClass1.Test1` 테스트를 하나만 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="f34ca-128">Runs only one test, `XUnitNamespace.TestClass1.Test1`.</span></span> |
+| `dotnet test --filter FullyQualifiedName!=XUnitNamespace.TestClass1.Test1` | <span data-ttu-id="f34ca-129">`XUnitNamespace.TestClass1.Test1`을 제외한 모든 테스트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="f34ca-129">Runs all tests except `XUnitNamespace.TestClass1.Test1`.</span></span> |
+| `dotnet test --filter DisplayName~TestClass1` | <span data-ttu-id="f34ca-130">표시 이름에 `TestClass1`이 포함된 테스트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="f34ca-130">Runs tests whose display name contains `TestClass1`.</span></span> |
 
-코드 예제에서 `Category` 및 `Priority` 키로 정의된 특성은 필터링에 사용할 수 있습니다.
+<span data-ttu-id="f34ca-131">코드 예제에서 `Category` 및 `Priority` 키로 정의된 특성은 필터링에 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f34ca-131">In the code example, the defined traits with keys `Category` and `Priority` can be used for filtering.</span></span>
 
-| 식 | 결과 |
+| <span data-ttu-id="f34ca-132">식</span><span class="sxs-lookup"><span data-stu-id="f34ca-132">Expression</span></span> | <span data-ttu-id="f34ca-133">결과</span><span class="sxs-lookup"><span data-stu-id="f34ca-133">Result</span></span> |
 | ---------- | ------ |
-| `dotnet test --filter XUnit` | `FullyQualifiedName`에 `XUnit`가 포함된 테스트를 실행합니다.  `vstest 15.1+`에서 사용 가능합니다. |
-| `dotnet test --filter Category=bvt` | `[Trait("Category", "bvt")]`가 있는 테스트를 실행합니다. |
+| `dotnet test --filter XUnit` | <span data-ttu-id="f34ca-134">`FullyQualifiedName`에 `XUnit`가 포함된 테스트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="f34ca-134">Runs tests whose `FullyQualifiedName` contains `XUnit`.</span></span>  <span data-ttu-id="f34ca-135">`vstest 15.1+`에서 사용 가능합니다.</span><span class="sxs-lookup"><span data-stu-id="f34ca-135">Available in `vstest 15.1+`.</span></span> |
+| `dotnet test --filter Category=bvt` | <span data-ttu-id="f34ca-136">`[Trait("Category", "bvt")]`가 있는 테스트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="f34ca-136">Runs tests which have `[Trait("Category", "bvt")]`.</span></span> |
 
-**조건 연산자 | 및 &amp; 사용**
+<span data-ttu-id="f34ca-137">**조건 연산자 | 및 &amp; 사용**</span><span class="sxs-lookup"><span data-stu-id="f34ca-137">**Using conditional operators | and &amp;**</span></span>
 
-| 식 | 결과 |
+| <span data-ttu-id="f34ca-138">식</span><span class="sxs-lookup"><span data-stu-id="f34ca-138">Expression</span></span> | <span data-ttu-id="f34ca-139">결과</span><span class="sxs-lookup"><span data-stu-id="f34ca-139">Result</span></span> |
 | ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=Nightly"</code> | `FullyQualifiedName`에 `TestClass1`이 있거나 ****`Category`가 `Nightly`인 테스트를 실행합니다. |
-| `dotnet test --filter "FullyQualifiedName~TestClass1&Category=Nightly"` | `FullyQualifiedName`에 `TestClass1`이 있고**** `Category`가 `Nightly`인 테스트를 실행합니다. |
-| <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=Nightly)&#124;Priority=1"</code> | `TestClass1`을 포함하는 `FullyQualifiedName`이 있고 ****`Category`가 `CategoryA`**이거나** `Priority`가 1인 테스트를 실행합니다. |
+| <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=Nightly"</code> | <span data-ttu-id="f34ca-140">`FullyQualifiedName`에 `TestClass1`이 있거나 ****`Category`가 `Nightly`인 테스트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="f34ca-140">Runs tests which has `TestClass1` in `FullyQualifiedName` **or** `Category` is `Nightly`.</span></span> |
+| `dotnet test --filter "FullyQualifiedName~TestClass1&Category=Nightly"` | <span data-ttu-id="f34ca-141">`FullyQualifiedName`에 `TestClass1`이 있고**** `Category`가 `Nightly`인 테스트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="f34ca-141">Runs tests which has `TestClass1` in `FullyQualifiedName` **and** `Category` is `Nightly`.</span></span> |
+| <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=Nightly)&#124;Priority=1"</code> | <span data-ttu-id="f34ca-142">`TestClass1`을 포함하는 `FullyQualifiedName`이 있고 ****`Category`가 `CategoryA`**이거나** `Priority`가 1인 테스트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="f34ca-142">Runs tests which have either `FullyQualifiedName` containing `TestClass1` **and** `Category` is `CategoryA` **or** `Priority` is 1.</span></span> |
 

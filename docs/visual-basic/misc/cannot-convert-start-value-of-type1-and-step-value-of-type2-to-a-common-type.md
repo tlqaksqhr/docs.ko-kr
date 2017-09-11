@@ -26,20 +26,21 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e01f3f93685916faf2348999b9a3d5c92c8e1d5a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 8b1a1eca9f75725cc75e6138941b7991416a69b2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="cannot-convert-start-value-of-type-39lttype1gt39-and-step-value-of-type-39lttype2gt39-to-a-common-type"></a>형식의 시작 값으로 변환할 수 없습니다 '&lt;type1&gt;'및' 형식의 단계 값&lt;type2&gt;'를 공용 형식
-지정된 `For...Next` 컨트롤 값의 형식이 서로 달라서 공통 형식으로 변환할 수 없으므로 유효하지 않습니다.  
+# <a name="cannot-convert-start-value-of-type-39lttype1gt39-and-step-value-of-type-39lttype2gt39-to-a-common-type"></a><span data-ttu-id="ae843-102">형식의 시작 값으로 변환할 수 없습니다 '&lt;type1&gt;'및' 형식의 단계 값&lt;type2&gt;'를 공용 형식</span><span class="sxs-lookup"><span data-stu-id="ae843-102">Cannot convert start value of type &#39;&lt;type1&gt;&#39; and step value of type &#39;&lt;type2&gt;&#39; to a common type</span></span>
+<span data-ttu-id="ae843-103">지정된 `For...Next` 컨트롤 값의 형식이 서로 달라서 공통 형식으로 변환할 수 없으므로 유효하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ae843-103">The specified `For...Next` control values have different types, and therefore are not valid because they cannot be converted to a common type.</span></span>  
   
-## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
+## <a name="to-correct-this-error"></a><span data-ttu-id="ae843-104">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="ae843-104">To correct this error</span></span>  
   
-1.  모든 값이 공통 형식으로 변환될 수 있도록 하나 이상의 값 형식을 변경합니다.  
+1.  <span data-ttu-id="ae843-105">모든 값이 공통 형식으로 변환될 수 있도록 하나 이상의 값 형식을 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="ae843-105">Change the type of one or more of the values so that all values can be converted to a common type.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [디버거를 사용 하 여 코드를 통해 탐색](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger)   
- [디버깅 Visual Basic.NET의에서 변경 내용](http://msdn.microsoft.com/en-us/0e82bb0d-8bb2-4fe8-87d1-75f24c7cfd75)   
- [For...Next 문](../../visual-basic/language-reference/statements/for-next-statement.md)
+## <a name="see-also"></a><span data-ttu-id="ae843-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ae843-106">See Also</span></span>  
+ <span data-ttu-id="ae843-107">[디버거를 사용 하 여 코드를 통해 탐색](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger) </span><span class="sxs-lookup"><span data-stu-id="ae843-107">[Navigating through Code with the Debugger](https://docs.microsoft.com/visualstudio/debugger/navigating-through-code-with-the-debugger) </span></span>  
+<span data-ttu-id="ae843-108"> [디버깅 Visual Basic.NET의에서 변경 내용](http://msdn.microsoft.com/en-us/0e82bb0d-8bb2-4fe8-87d1-75f24c7cfd75) </span><span class="sxs-lookup"><span data-stu-id="ae843-108"> [Debugging Changes in Visual Basic .NET](http://msdn.microsoft.com/en-us/0e82bb0d-8bb2-4fe8-87d1-75f24c7cfd75) </span></span>  
+<span data-ttu-id="ae843-109"> [For...Next 문](../../visual-basic/language-reference/statements/for-next-statement.md)</span><span class="sxs-lookup"><span data-stu-id="ae843-109"> [For...Next Statement](../../visual-basic/language-reference/statements/for-next-statement.md)</span></span>

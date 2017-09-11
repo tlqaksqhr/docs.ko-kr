@@ -1,1 +1,1 @@
-Windows 2000
+<span data-ttu-id="fb775-101">Windows 2000</span><span class="sxs-lookup"><span data-stu-id="fb775-101">Windows 2000</span></span>

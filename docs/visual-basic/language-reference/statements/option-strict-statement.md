@@ -36,155 +36,156 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3bf0d4939f24c38392d7ca4764c41d12366067b5
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 055565082757318334e89410d12ed7067e5814cb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="option-strict-statement"></a>Long
-확대 변환 으로만 암시적 데이터 형식 변환을 제한 하 고 런타임에 바인딩을 허용 하지 않습니다. 암시적 형식 지정을 허용 하지 않는 한 `Object` 유형입니다.  
+# <a name="option-strict-statement"></a><span data-ttu-id="9425d-102">Long</span><span class="sxs-lookup"><span data-stu-id="9425d-102">Option Strict Statement</span></span>
+<span data-ttu-id="9425d-103">확대 변환 으로만 암시적 데이터 형식 변환을 제한 하 고 런타임에 바인딩을 허용 하지 않습니다. 암시적 형식 지정을 허용 하지 않는 한 `Object` 유형입니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-103">Restricts implicit data type conversions to only widening conversions, disallows late binding, and disallows implicit typing that results in an `Object` type.</span></span>  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a><span data-ttu-id="9425d-104">구문</span><span class="sxs-lookup"><span data-stu-id="9425d-104">Syntax</span></span>  
   
 ```  
 Option Strict { On | Off }  
 ```  
   
-## <a name="parts"></a>요소  
+## <a name="parts"></a><span data-ttu-id="9425d-105">요소</span><span class="sxs-lookup"><span data-stu-id="9425d-105">Parts</span></span>  
   
-|용어|정의|  
+|<span data-ttu-id="9425d-106">용어</span><span class="sxs-lookup"><span data-stu-id="9425d-106">Term</span></span>|<span data-ttu-id="9425d-107">정의</span><span class="sxs-lookup"><span data-stu-id="9425d-107">Definition</span></span>|  
 |---|---|  
-|`On`|선택적 요소. 수 있도록 `Option Strict` 검사 합니다.|  
-|`Off`|선택적 요소. 사용 하지 않도록 설정 `Option Strict` 검사 합니다.|  
+|`On`|<span data-ttu-id="9425d-108">선택적 요소.</span><span class="sxs-lookup"><span data-stu-id="9425d-108">Optional.</span></span> <span data-ttu-id="9425d-109">수 있도록 `Option Strict` 검사 합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-109">Enables `Option Strict` checking.</span></span>|  
+|`Off`|<span data-ttu-id="9425d-110">선택적 요소.</span><span class="sxs-lookup"><span data-stu-id="9425d-110">Optional.</span></span> <span data-ttu-id="9425d-111">사용 하지 않도록 설정 `Option Strict` 검사 합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-111">Disables `Option Strict` checking.</span></span>|  
   
-## <a name="remarks"></a>설명  
- 때 `Option Strict On` 또는 `Option Strict` 다음 조건에는 컴파일 타임 오류가 발생 한 파일에 나타납니다.  
+## <a name="remarks"></a><span data-ttu-id="9425d-112">설명</span><span class="sxs-lookup"><span data-stu-id="9425d-112">Remarks</span></span>  
+ <span data-ttu-id="9425d-113">때 `Option Strict On` 또는 `Option Strict` 다음 조건에는 컴파일 타임 오류가 발생 한 파일에 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-113">When `Option Strict On` or `Option Strict` appears in a file, the following conditions cause a compile-time error:</span></span>  
   
--   암시적 축소 변환  
+-   <span data-ttu-id="9425d-114">암시적 축소 변환</span><span class="sxs-lookup"><span data-stu-id="9425d-114">Implicit narrowing conversions</span></span>  
   
--   런타임에 바인딩  
+-   <span data-ttu-id="9425d-115">런타임에 바인딩</span><span class="sxs-lookup"><span data-stu-id="9425d-115">Late binding</span></span>  
   
--   암시적 형식 지정 되도록 하는 `Object` 형식  
+-   <span data-ttu-id="9425d-116">암시적 형식 지정 되도록 하는 `Object` 형식</span><span class="sxs-lookup"><span data-stu-id="9425d-116">Implicit typing that results in an `Object` type</span></span>  
   
 > [!NOTE]
->  에 설정할 수 있는 경고 구성에는 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic), 컴파일 타임 오류가 발생 하는 세 가지 조건에 해당 하는 세 가지 설정이 있습니다. 이러한 설정을 사용 하는 방법에 대 한 정보를 참조 하십시오. [IDE에서 경고 구성을 설정 하려면](../../../visual-basic/language-reference/statements/option-strict-statement.md#conditions) 이 항목의 뒷부분에 나오는 합니다.  
+>  <span data-ttu-id="9425d-117">에 설정할 수 있는 경고 구성에는 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic), 컴파일 타임 오류가 발생 하는 세 가지 조건에 해당 하는 세 가지 설정이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-117">In the warning configurations that you can set on the [Compile Page, Project Designer (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic), there are three settings that correspond to the three conditions that cause a compile-time error.</span></span> <span data-ttu-id="9425d-118">이러한 설정을 사용 하는 방법에 대 한 정보를 참조 하십시오. [IDE에서 경고 구성을 설정 하려면](../../../visual-basic/language-reference/statements/option-strict-statement.md#conditions) 이 항목의 뒷부분에 나오는 합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-118">For information about how to use these settings, see [To set warning configurations in the IDE](../../../visual-basic/language-reference/statements/option-strict-statement.md#conditions) later in this topic.</span></span>  
   
- `Option Strict Off` 문을 해제 오류 및 경로 확인 세 조건을 모두에 대 한 연결 된 IDE 설정 오류 또는 경고를 설정 하도록 지정 하는 경우에 합니다. `Option Strict On` 문을 설정 오류 및 경로 확인 세 조건을 모두에 대 한 연결 된 IDE 설정 오류 또는 경고를 해제 하도록 지정 하는 경우에 합니다.  
+ <span data-ttu-id="9425d-119">`Option Strict Off` 문을 해제 오류 및 경로 확인 세 조건을 모두에 대 한 연결 된 IDE 설정 오류 또는 경고를 설정 하도록 지정 하는 경우에 합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-119">The `Option Strict Off` statement turns off error and warning checking for all three conditions, even if the associated IDE settings specify to turn on these errors or warnings.</span></span> <span data-ttu-id="9425d-120">`Option Strict On` 문을 설정 오류 및 경로 확인 세 조건을 모두에 대 한 연결 된 IDE 설정 오류 또는 경고를 해제 하도록 지정 하는 경우에 합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-120">The `Option Strict On` statement turns on error and warning checking for all three conditions, even if the associated IDE settings specify to turn off these errors or warnings.</span></span>  
   
- 사용 하는 경우는 `Option Strict` 문을 파일에 다른 코드 문 앞에 나타나야 합니다.  
+ <span data-ttu-id="9425d-121">사용 하는 경우는 `Option Strict` 문을 파일에 다른 코드 문 앞에 나타나야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-121">If used, the `Option Strict` statement must appear before any other code statements in a file.</span></span>  
   
- 설정한 경우 `Option Strict` 를 `On`, Visual Basic 데이터 형식 모든 프로그래밍 요소에 대해 지정 되어 있는지 확인 합니다. 데이터 형식은 명시적으로 또는 지역 형식 유추를 사용 하 여 지정할 수 있습니다. 모든 프로그래밍 요소에 대 한 데이터 형식을 지정 하는 것이 좋습니다, 다음과 같은 이유로:  
+ <span data-ttu-id="9425d-122">설정한 경우 `Option Strict` 를 `On`, Visual Basic 데이터 형식 모든 프로그래밍 요소에 대해 지정 되어 있는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-122">When you set `Option Strict` to `On`, Visual Basic checks that data types are specified for all programming elements.</span></span> <span data-ttu-id="9425d-123">데이터 형식은 명시적으로 또는 지역 형식 유추를 사용 하 여 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-123">Data types can be specified explicitly, or specified by using local type inference.</span></span> <span data-ttu-id="9425d-124">모든 프로그래밍 요소에 대 한 데이터 형식을 지정 하는 것이 좋습니다, 다음과 같은 이유로:</span><span class="sxs-lookup"><span data-stu-id="9425d-124">Specifying data types for all your programming elements is recommended, for the following reasons:</span></span>  
   
--   변수 및 매개 변수에 대 한 IntelliSense 지원도를 수 있습니다. 이렇게 하면 코드를 입력할 때 해당 속성 및 기타 멤버를 볼 수 있습니다.  
+-   <span data-ttu-id="9425d-125">변수 및 매개 변수에 대 한 IntelliSense 지원도를 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-125">It enables IntelliSense support for your variables and parameters.</span></span> <span data-ttu-id="9425d-126">이렇게 하면 코드를 입력할 때 해당 속성 및 기타 멤버를 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-126">This enables you to see their properties and other members as you type code.</span></span>  
   
--   컴파일러를에 형식 검사를 수행할 수 있습니다. 형식 검사를 사용 하면 런타임에 형식 변환 오류로 인해 실패할 수 있는 문을 찾을 수 있습니다. 또한 이러한 메서드를 지원 하지 않는 개체에 메서드 호출을 식별 합니다.  
+-   <span data-ttu-id="9425d-127">컴파일러를에 형식 검사를 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-127">It enables the compiler to perform type checking.</span></span> <span data-ttu-id="9425d-128">형식 검사를 사용 하면 런타임에 형식 변환 오류로 인해 실패할 수 있는 문을 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-128">Type checking helps you find statements that can fail at run time because of type conversion errors.</span></span> <span data-ttu-id="9425d-129">또한 이러한 메서드를 지원 하지 않는 개체에 메서드 호출을 식별 합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-129">It also identifies calls to methods on objects that do not support those methods.</span></span>  
   
--   코드의 실행 빨라집니다. 이 대 한 이유 중 하나는 경우 프로그래밍 요소에 대 한 데이터 형식을 지정 하지 않으면, Visual Basic 컴파일러에서 할당 되는 `Object` 유형입니다. 컴파일된 코드 사이 변환 해야 할 수 `Object` 및 다른 데이터 형식의 경우 성능이 떨어집니다.  
+-   <span data-ttu-id="9425d-130">코드의 실행 빨라집니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-130">It speeds up the execution of code.</span></span> <span data-ttu-id="9425d-131">이 대 한 이유 중 하나는 경우 프로그래밍 요소에 대 한 데이터 형식을 지정 하지 않으면, Visual Basic 컴파일러에서 할당 되는 `Object` 유형입니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-131">One reason for this is that if you do not specify a data type for a programming element, the Visual Basic compiler assigns it the `Object` type.</span></span> <span data-ttu-id="9425d-132">컴파일된 코드 사이 변환 해야 할 수 `Object` 및 다른 데이터 형식의 경우 성능이 떨어집니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-132">Compiled code might have to convert back and forth between `Object` and other data types, which reduces performance.</span></span>  
   
-## <a name="implicit-narrowing-conversion-errors"></a>암시적 축소 변환 오류  
- 암시적 축소 변환 오류에는 축소 변환 하는 암시적 데이터 형식 변환의 있을 때 발생 합니다.  
+## <a name="implicit-narrowing-conversion-errors"></a><span data-ttu-id="9425d-133">암시적 축소 변환 오류</span><span class="sxs-lookup"><span data-stu-id="9425d-133">Implicit Narrowing Conversion Errors</span></span>  
+ <span data-ttu-id="9425d-134">암시적 축소 변환 오류에는 축소 변환 하는 암시적 데이터 형식 변환의 있을 때 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-134">Implicit narrowing conversion errors occur when there is an implicit data type conversion that is a narrowing conversion.</span></span>  
   
- [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]다양 한 데이터 형식을 다른 데이터 형식으로 변환할 수 있습니다. 데이터 형식의 값이 적은 정밀도 나 용량이 있는 데이터 형식으로 변환 될 때 데이터 손실이 발생할 수 있습니다. 축소 변환에 실패 하면 런타임 오류가 발생 합니다. `Option Strict`사용 하면 컴파일 타임 알립니다 축소 변환의를 방지할 수 있습니다. 자세한 내용은 참조 [암시적 변환과 명시적 변환](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) 및 [확장 변환과 축소 변환](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)합니다.  
+ [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]<span data-ttu-id="9425d-135">다양 한 데이터 형식을 다른 데이터 형식으로 변환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-135"> can convert many data types to other data types.</span></span> <span data-ttu-id="9425d-136">데이터 형식의 값이 적은 정밀도 나 용량이 있는 데이터 형식으로 변환 될 때 데이터 손실이 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-136">Data loss can occur when the value of one data type is converted to a data type that has less precision or a smaller capacity.</span></span> <span data-ttu-id="9425d-137">축소 변환에 실패 하면 런타임 오류가 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-137">A run-time error occurs if such a narrowing conversion fails.</span></span> <span data-ttu-id="9425d-138">`Option Strict`사용 하면 컴파일 타임 알립니다 축소 변환의를 방지할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-138">`Option Strict` ensures compile-time notification of these narrowing conversions so that you can avoid them.</span></span> <span data-ttu-id="9425d-139">자세한 내용은 참조 [암시적 변환과 명시적 변환](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) 및 [확장 변환과 축소 변환](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-139">For more information, see [Implicit and Explicit Conversions](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) and [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).</span></span>  
   
- 식에서 발생 하는 암시적 변환이 포함 하는 오류가 발생할 수 있는 변환 됩니다. 자세한 내용은 다음 항목을 참조하세요.  
+ <span data-ttu-id="9425d-140">식에서 발생 하는 암시적 변환이 포함 하는 오류가 발생할 수 있는 변환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-140">Conversions that can cause errors include implicit conversions that occur in expressions.</span></span> <span data-ttu-id="9425d-141">자세한 내용은 다음 항목을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9425d-141">For more information, see the following topics:</span></span>  
   
--   [+ 연산자](../../../visual-basic/language-reference/operators/addition-operator.md)  
+-   [<span data-ttu-id="9425d-142">+ 연산자</span><span class="sxs-lookup"><span data-stu-id="9425d-142">+ Operator</span></span>](../../../visual-basic/language-reference/operators/addition-operator.md)  
   
--   [+= 연산자](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
+-   [<span data-ttu-id="9425d-143">+= 연산자</span><span class="sxs-lookup"><span data-stu-id="9425d-143">+= Operator</span></span>](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
   
--   [\ 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
+-   [<span data-ttu-id="9425d-144">\ 연산자 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9425d-144">\ Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
   
--   [/ = 연산자 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+-   [<span data-ttu-id="9425d-145">/ = 연산자 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9425d-145">/= Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
--   [Char 데이터 형식](../../../visual-basic/language-reference/data-types/char-data-type.md)  
+-   [<span data-ttu-id="9425d-146">Char 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="9425d-146">Char Data Type</span></span>](../../../visual-basic/language-reference/data-types/char-data-type.md)  
   
- 사용 하 여 문자열을 연결 하면는 [연산자 / /](../../../visual-basic/language-reference/operators/concatenation-operator.md), 문자열에 모든 변환은 확대 변환으로 간주 됩니다. 암시적 축소 변환 오류가, 경우에도 이러한 변환을 생성 하지 않는 하므로 `Option Strict` 켜져 있습니다.  
+ <span data-ttu-id="9425d-147">사용 하 여 문자열을 연결 하면는 [연산자 / /](../../../visual-basic/language-reference/operators/concatenation-operator.md), 문자열에 모든 변환은 확대 변환으로 간주 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-147">When you concatenate strings by using the [& Operator](../../../visual-basic/language-reference/operators/concatenation-operator.md), all conversions to the strings are considered to be widening.</span></span> <span data-ttu-id="9425d-148">암시적 축소 변환 오류가, 경우에도 이러한 변환을 생성 하지 않는 하므로 `Option Strict` 켜져 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-148">So these conversions do not generate an implicit narrowing conversion error, even if `Option Strict` is on.</span></span>  
   
- 데이터 형식이 해당 매개 변수에서 서로 다른 인수를 사용 하는 메서드를 호출 하면 축소 변환을 컴파일 타임 오류가 발생 `Option Strict` 켜져 있습니다. 확대 변환 또는 명시적 변환을 사용 하 여 컴파일 타임 오류를 방지할 수 있습니다.  
+ <span data-ttu-id="9425d-149">데이터 형식이 해당 매개 변수에서 서로 다른 인수를 사용 하는 메서드를 호출 하면 축소 변환을 컴파일 타임 오류가 발생 `Option Strict` 켜져 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-149">When you call a method that has an argument that has a data type different from the corresponding parameter, a narrowing conversion causes a compile-time error if `Option Strict` is on.</span></span> <span data-ttu-id="9425d-150">확대 변환 또는 명시적 변환을 사용 하 여 컴파일 타임 오류를 방지할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-150">You can avoid the compile-time error by using a widening conversion or an explicit conversion.</span></span>  
   
- 요소에서 변환에 대 한 컴파일 타임에 암시적 축소 변환 오류는 표시 되지 않습니다.는 `For Each…Next` 루프 제어 변수 컬렉션입니다. 이 경우에 `Option Strict` 켜져 있습니다. 자세한 내용은 "축소 변환" 섹션을 참조 하십시오. [각각에 대해... 다음 문](../../../visual-basic/language-reference/statements/for-each-next-statement.md)합니다.  
+ <span data-ttu-id="9425d-151">요소에서 변환에 대 한 컴파일 타임에 암시적 축소 변환 오류는 표시 되지 않습니다.는 `For Each…Next` 루프 제어 변수 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-151">Implicit narrowing conversion errors are suppressed at compile-time for conversions from the elements in a `For Each…Next` collection to the loop control variable.</span></span> <span data-ttu-id="9425d-152">이 경우에 `Option Strict` 켜져 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-152">This occurs even if `Option Strict` is on.</span></span> <span data-ttu-id="9425d-153">자세한 내용은 "축소 변환" 섹션을 참조 하십시오. [각각에 대해... 다음 문](../../../visual-basic/language-reference/statements/for-each-next-statement.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-153">For more information, see the "Narrowing Conversions" section in [For Each...Next Statement](../../../visual-basic/language-reference/statements/for-each-next-statement.md).</span></span>  
   
-## <a name="late-binding-errors"></a>런타임에 바인딩 오류  
- 개체 형식으로 선언 된 변수의 메서드나 속성에 할당 되 면 바인딩됩니다 `Object`합니다. 자세한 내용은 참조 [초기 바인딩 및 런타임에 바인딩](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)합니다.  
+## <a name="late-binding-errors"></a><span data-ttu-id="9425d-154">런타임에 바인딩 오류</span><span class="sxs-lookup"><span data-stu-id="9425d-154">Late Binding Errors</span></span>  
+ <span data-ttu-id="9425d-155">개체 형식으로 선언 된 변수의 메서드나 속성에 할당 되 면 바인딩됩니다 `Object`합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-155">An object is late bound when it is assigned to a property or method of a variable that is declared to be of type `Object`.</span></span> <span data-ttu-id="9425d-156">자세한 내용은 참조 [초기 바인딩 및 런타임에 바인딩](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-156">For more information, see [Early and Late Binding](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md).</span></span>  
   
-## <a name="implicit-object-type-errors"></a>암시적 개체 형식 오류  
- 적절 한 형식 수 없는 경우 암시적 개체 형식 오류가 발생 하므로 형식의 선언 된 변수에 대 한 유추 `Object` 유추 됩니다. 사용할 때 주로 발생이 `Dim` 문을 사용 하지 않고 변수를 선언 하는 `As` 절 및 `Option Infer` 꺼져 있습니다. 자세한 내용은 참조 [Option Infer 문](../../../visual-basic/language-reference/statements/option-infer-statement.md) 및 [Visual Basic 언어 사양](../../../visual-basic/reference/language-specification.md)합니다.  
+## <a name="implicit-object-type-errors"></a><span data-ttu-id="9425d-157">암시적 개체 형식 오류</span><span class="sxs-lookup"><span data-stu-id="9425d-157">Implicit Object Type Errors</span></span>  
+ <span data-ttu-id="9425d-158">적절 한 형식 수 없는 경우 암시적 개체 형식 오류가 발생 하므로 형식의 선언 된 변수에 대 한 유추 `Object` 유추 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-158">Implicit object type errors occur when an appropriate type cannot be inferred for a declared variable, so a type of `Object` is inferred.</span></span> <span data-ttu-id="9425d-159">사용할 때 주로 발생이 `Dim` 문을 사용 하지 않고 변수를 선언 하는 `As` 절 및 `Option Infer` 꺼져 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-159">This primarily occurs when you use a `Dim` statement to declare a variable without using an `As` clause, and `Option Infer` is off.</span></span> <span data-ttu-id="9425d-160">자세한 내용은 참조 [Option Infer 문](../../../visual-basic/language-reference/statements/option-infer-statement.md) 및 [Visual Basic 언어 사양](../../../visual-basic/reference/language-specification.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-160">For more information, see [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md) and the [Visual Basic Language Specification](../../../visual-basic/reference/language-specification.md).</span></span>  
   
- 메서드 매개 변수에 대 한는 `As` 절은 선택 사항 경우 `Option Strict` 꺼져 있습니다. 그러나 하나의 매개 변수를 사용 하는 경우는 `As` 절을 모두 사용 해야 합니다. 경우 `Option Strict` 켜져는 `As` 절은 모든 매개 변수 정의에 필요 합니다.  
+ <span data-ttu-id="9425d-161">메서드 매개 변수에 대 한는 `As` 절은 선택 사항 경우 `Option Strict` 꺼져 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-161">For method parameters, the `As` clause is optional if `Option Strict` is off.</span></span> <span data-ttu-id="9425d-162">그러나 하나의 매개 변수를 사용 하는 경우는 `As` 절을 모두 사용 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-162">However, if any one parameter uses an `As` clause, they all must use it.</span></span> <span data-ttu-id="9425d-163">경우 `Option Strict` 켜져는 `As` 절은 모든 매개 변수 정의에 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-163">If `Option Strict` is on, the `As` clause is required for every parameter definition.</span></span>  
   
- 사용 하지 않고 변수를 선언 하는 경우는 `As` 절으로 설정 하 고 `Nothing`, 변수 형식의 `Object`합니다. 컴파일 타임 오류가 발생 하지 않으면이 예제의 경우 `Option Strict` 에 및 `Option Infer` 켜져 있습니다. 이 작업의 예로 `Dim something = Nothing`합니다.  
+ <span data-ttu-id="9425d-164">사용 하지 않고 변수를 선언 하는 경우는 `As` 절으로 설정 하 고 `Nothing`, 변수 형식의 `Object`합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-164">If you declare a variable without using an `As` clause and set it to `Nothing`, the variable has a type of `Object`.</span></span> <span data-ttu-id="9425d-165">컴파일 타임 오류가 발생 하지 않으면이 예제의 경우 `Option Strict` 에 및 `Option Infer` 켜져 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-165">No compile-time error occurs in this case when `Option Strict` is on and `Option Infer` is on.</span></span> <span data-ttu-id="9425d-166">이 작업의 예로 `Dim something = Nothing`합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-166">An example of this is `Dim something = Nothing`.</span></span>  
   
-### <a name="default-data-types-and-values"></a>기본 데이터 형식 및 값  
- 다음 표에서 데이터 형식과 이니셜라이저를 지정 하는 다양 한 조합의 결과 [Dim](../../../visual-basic/language-reference/statements/dim-statement.md)합니다.  
+### <a name="default-data-types-and-values"></a><span data-ttu-id="9425d-167">기본 데이터 형식 및 값</span><span class="sxs-lookup"><span data-stu-id="9425d-167">Default Data Types and Values</span></span>  
+ <span data-ttu-id="9425d-168">다음 표에서 데이터 형식과 이니셜라이저를 지정 하는 다양 한 조합의 결과 [Dim](../../../visual-basic/language-reference/statements/dim-statement.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-168">The following table describes the results of various combinations of specifying the data type and initializer in a [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md).</span></span>  
   
-|데이터 형식 지정 여부|이니셜라이저 지정 여부|예제|결과|  
+|<span data-ttu-id="9425d-169">데이터 형식 지정 여부</span><span class="sxs-lookup"><span data-stu-id="9425d-169">Data type specified?</span></span>|<span data-ttu-id="9425d-170">이니셜라이저 지정 여부</span><span class="sxs-lookup"><span data-stu-id="9425d-170">Initializer specified?</span></span>|<span data-ttu-id="9425d-171">예제</span><span class="sxs-lookup"><span data-stu-id="9425d-171">Example</span></span>|<span data-ttu-id="9425d-172">결과</span><span class="sxs-lookup"><span data-stu-id="9425d-172">Result</span></span>|  
 |---|---|---|---|  
-|아니요|아니요|`Dim qty`|
-          `Option Strict`가 off(기본값)이면 변수는 `Nothing`으로 설정됩니다.<br /><br /> `Option Strict`가 on이면 컴파일 타임 오류가 발생합니다.|  
-|아니요|예|`Dim qty = 5`|`Option Infer`가 on(기본값)이면 변수가 이니셜라이저의 데이터 형식을 사용합니다. 참조 [지역 형식 유추](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)합니다.<br /><br /> `Option Infer`가 off이고 `Option Strict`고 off이면 변수가 `Object`의 데이터 형식을 사용합니다.<br /><br /> `Option Infer`가 off이고 `Option Strict`는 on이면 컴파일 타임 오류가 발생합니다.|  
-|예|아니요|`Dim qty As Integer`|변수는 데이터 형식의 기본값으로 초기화됩니다. 자세한 내용은 참조 [Dim](../../../visual-basic/language-reference/statements/dim-statement.md)합니다.|  
-|예|예|`Dim qty  As Integer = 5`|이니셜라이저의 데이터 형식을 지정한 데이터 형식으로 변환할 수 없으면 컴파일 시간 오류가 발생합니다.|  
+|<span data-ttu-id="9425d-173">아니요</span><span class="sxs-lookup"><span data-stu-id="9425d-173">No</span></span>|<span data-ttu-id="9425d-174">아니요</span><span class="sxs-lookup"><span data-stu-id="9425d-174">No</span></span>|`Dim qty`|<span data-ttu-id="9425d-175">
+          `Option Strict`가 off(기본값)이면 변수는 `Nothing`으로 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-175">If `Option Strict` is off (the default), the variable is set to `Nothing`.</span></span><br /><br /> <span data-ttu-id="9425d-176">`Option Strict`가 on이면 컴파일 타임 오류가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-176">If `Option Strict` is on, a compile-time error occurs.</span></span>|  
+|<span data-ttu-id="9425d-177">아니요</span><span class="sxs-lookup"><span data-stu-id="9425d-177">No</span></span>|<span data-ttu-id="9425d-178">예</span><span class="sxs-lookup"><span data-stu-id="9425d-178">Yes</span></span>|`Dim qty = 5`|<span data-ttu-id="9425d-179">`Option Infer`가 on(기본값)이면 변수가 이니셜라이저의 데이터 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-179">If `Option Infer` is on (the default), the variable takes the data type of the initializer.</span></span> <span data-ttu-id="9425d-180">참조 [지역 형식 유추](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-180">See [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).</span></span><br /><br /> <span data-ttu-id="9425d-181">`Option Infer`가 off이고 `Option Strict`고 off이면 변수가 `Object`의 데이터 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-181">If `Option Infer` is off and `Option Strict` is off, the variable takes the data type of `Object`.</span></span><br /><br /> <span data-ttu-id="9425d-182">`Option Infer`가 off이고 `Option Strict`는 on이면 컴파일 타임 오류가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-182">If `Option Infer` is off and `Option Strict` is on, a compile-time error occurs.</span></span>|  
+|<span data-ttu-id="9425d-183">예</span><span class="sxs-lookup"><span data-stu-id="9425d-183">Yes</span></span>|<span data-ttu-id="9425d-184">아니요</span><span class="sxs-lookup"><span data-stu-id="9425d-184">No</span></span>|`Dim qty As Integer`|<span data-ttu-id="9425d-185">변수는 데이터 형식의 기본값으로 초기화됩니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-185">The variable is initialized to the default value for the data type.</span></span> <span data-ttu-id="9425d-186">자세한 내용은 참조 [Dim](../../../visual-basic/language-reference/statements/dim-statement.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-186">For more information, see [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md).</span></span>|  
+|<span data-ttu-id="9425d-187">예</span><span class="sxs-lookup"><span data-stu-id="9425d-187">Yes</span></span>|<span data-ttu-id="9425d-188">예</span><span class="sxs-lookup"><span data-stu-id="9425d-188">Yes</span></span>|`Dim qty  As Integer = 5`|<span data-ttu-id="9425d-189">이니셜라이저의 데이터 형식을 지정한 데이터 형식으로 변환할 수 없으면 컴파일 시간 오류가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-189">If the data type of the initializer is not convertible to the specified data type, a compile-time error occurs.</span></span>|  
   
-## <a name="when-an-option-strict-statement-is-not-present"></a>Option Strict 문 현재 없는 경우  
- 소스 코드에 없는 경우는 `Option Strict` 문는 **Option strict** 에 설정 된 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 사용 됩니다. **컴파일 페이지** 에 오류를 생성 하는 조건에 대 한 추가 제어를 제공 하는 설정이 있습니다.  
+## <a name="when-an-option-strict-statement-is-not-present"></a><span data-ttu-id="9425d-190">Option Strict 문 현재 없는 경우</span><span class="sxs-lookup"><span data-stu-id="9425d-190">When an Option Strict Statement Is Not Present</span></span>  
+ <span data-ttu-id="9425d-191">소스 코드에 없는 경우는 `Option Strict` 문는 **Option strict** 에 설정 된 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-191">If the source code does not contain an `Option Strict` statement, the **Option strict** setting on the [Compile Page, Project Designer (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic) is used.</span></span> <span data-ttu-id="9425d-192">**컴파일 페이지** 에 오류를 생성 하는 조건에 대 한 추가 제어를 제공 하는 설정이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-192">The **Compile Page** has settings that provide additional control over the conditions that generate an error.</span></span>  
   
- 명령줄 컴파일러를 사용 하는 경우 사용할 수 있습니다는 [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) 컴파일러 옵션에 대 한 설정을 지정 하려면 `Option Strict`합니다.  
+ <span data-ttu-id="9425d-193">명령줄 컴파일러를 사용 하는 경우 사용할 수 있습니다는 [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) 컴파일러 옵션에 대 한 설정을 지정 하려면 `Option Strict`합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-193">If you are using the command-line compiler, you can use the [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) compiler option to specify a setting for `Option Strict`.</span></span>  
   
-### <a name="to-set-option-strict-in-the-ide"></a>IDE에서 Option Strict를 설정 하려면  
+### <a name="to-set-option-strict-in-the-ide"></a><span data-ttu-id="9425d-194">IDE에서 Option Strict를 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="9425d-194">To set Option Strict in the IDE</span></span>  
 [!INCLUDE[note_settings_general](../../../csharp/language-reference/compiler-messages/includes/note_settings_general_md.md)]  
   
-1.  **솔루션 탐색기**, 프로젝트를 선택 합니다. 에 **프로젝트** 메뉴를 클릭 하 여 **속성**합니다. 자세한 내용은 [프로젝트 디자이너 소개](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)를 참조하세요.  
+1.  <span data-ttu-id="9425d-195">**솔루션 탐색기**, 프로젝트를 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-195">In **Solution Explorer**, select a project.</span></span> <span data-ttu-id="9425d-196">에 **프로젝트** 메뉴를 클릭 하 여 **속성**합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-196">On the **Project** menu, click **Properties**.</span></span> <span data-ttu-id="9425d-197">자세한 내용은 [프로젝트 디자이너 소개](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9425d-197">For more information, see [Introduction to the Project Designer](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).</span></span>  
   
-2.  에 **컴파일** 탭에서 값을 설정의 **Option Strict** 상자입니다.  
+2.  <span data-ttu-id="9425d-198">에 **컴파일** 탭에서 값을 설정의 **Option Strict** 상자입니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-198">On the **Compile** tab, set the value in the **Option Strict** box.</span></span>  
   
-###  <a name="conditions"></a>IDE에서 경고 구성을 설정 하려면  
- 사용 하는 경우는 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 대신는 `Option Strict` 문을 제어할 수 추가 오류를 생성 하는 조건입니다. **경고 구성** 의 섹션은 **컴파일 페이지** 에 컴파일 타임 오류가 발생 하는 세 가지 조건에 해당 하는 설정이 때 `Option Strict` 에 있습니다. 다음은 이러한 설정입니다.  
+###  <span data-ttu-id="9425d-199"><a name="conditions"></a>IDE에서 경고 구성을 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="9425d-199"><a name="conditions"></a> To set warning configurations in the IDE</span></span>  
+ <span data-ttu-id="9425d-200">사용 하는 경우는 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 대신는 `Option Strict` 문을 제어할 수 추가 오류를 생성 하는 조건입니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-200">When you use the [Compile Page, Project Designer (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic) instead of an `Option Strict` statement, you have additional control over the conditions that generate errors.</span></span> <span data-ttu-id="9425d-201">**경고 구성** 의 섹션은 **컴파일 페이지** 에 컴파일 타임 오류가 발생 하는 세 가지 조건에 해당 하는 설정이 때 `Option Strict` 에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-201">The **Warning configurations** section of the **Compile Page** has settings that correspond to the three conditions that cause a compile-time error when `Option Strict` is on.</span></span> <span data-ttu-id="9425d-202">다음은 이러한 설정입니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-202">Following are these settings:</span></span>  
   
--   **암시적으로 변환**  
+-   <span data-ttu-id="9425d-203">**암시적으로 변환**</span><span class="sxs-lookup"><span data-stu-id="9425d-203">**Implicit conversion**</span></span>  
   
--   **런타임에 바인딩; 런타임 시 호출이 실패할 수 있음**  
+-   <span data-ttu-id="9425d-204">**런타임에 바인딩; 런타임 시 호출이 실패할 수 있음**</span><span class="sxs-lookup"><span data-stu-id="9425d-204">**Late binding; call could fail at run time**</span></span>  
   
--   **암시적 형식; 개체로 간주**  
+-   <span data-ttu-id="9425d-205">**암시적 형식; 개체로 간주**</span><span class="sxs-lookup"><span data-stu-id="9425d-205">**Implicit type; object assumed**</span></span>  
   
- 설정한 경우 **Option Strict** 를 **에**, 이러한 경고 구성 설정의 세 가지 모두로 설정 되어 **오류**합니다. 설정 하는 경우 **Option Strict** 를 **오프**, 세 가지 설정이 모두로 설정 된 **None**합니다.  
+ <span data-ttu-id="9425d-206">설정한 경우 **Option Strict** 를 **에**, 이러한 경고 구성 설정의 세 가지 모두로 설정 되어 **오류**합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-206">When you set **Option Strict** to **On**, all three of these warning configuration settings are set to **Error**.</span></span> <span data-ttu-id="9425d-207">설정 하는 경우 **Option Strict** 를 **오프**, 세 가지 설정이 모두로 설정 된 **None**합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-207">When you set **Option Strict** to **Off**, all three settings are set to **None**.</span></span>  
   
- 각 경고 구성 설정을 개별적으로 변경할 수 있습니다 **None**, **경고**, 또는 **오류**합니다. 세 가지 경고 구성 설정이 모두 설정 된 경우 **오류**, `On` 에 표시 된 `Option strict` 상자입니다. 세 가지 모두로 설정 된 경우 **None**, `Off` 이 상자에 나타납니다. 이러한 설정의 다른 조합에 대 한 **(사용자 지정)** 나타납니다.  
+ <span data-ttu-id="9425d-208">각 경고 구성 설정을 개별적으로 변경할 수 있습니다 **None**, **경고**, 또는 **오류**합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-208">You can individually change each warning configuration setting to **None**, **Warning**, or **Error**.</span></span> <span data-ttu-id="9425d-209">세 가지 경고 구성 설정이 모두 설정 된 경우 **오류**, `On` 에 표시 된 `Option strict` 상자입니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-209">If all three warning configuration settings are set to **Error**, `On` appears in the `Option strict` box.</span></span> <span data-ttu-id="9425d-210">세 가지 모두로 설정 된 경우 **None**, `Off` 이 상자에 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-210">If all three are set to **None**, `Off` appears in this box.</span></span> <span data-ttu-id="9425d-211">이러한 설정의 다른 조합에 대 한 **(사용자 지정)** 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-211">For any other combination of these settings, **(custom)** appears.</span></span>  
   
-### <a name="to-set-the-option-strict-default-setting-for-new-projects"></a>새 프로젝트의 Option Strict 기본 설정을 설정 하려면  
- 프로젝트를 만들 때는 **Option Strict** 설정에 **컴파일** 로 설정 되는 **Option Strict** 에서 설정는 **옵션** 대화 상자.  
+### <a name="to-set-the-option-strict-default-setting-for-new-projects"></a><span data-ttu-id="9425d-212">새 프로젝트의 Option Strict 기본 설정을 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="9425d-212">To set the Option Strict default setting for new projects</span></span>  
+ <span data-ttu-id="9425d-213">프로젝트를 만들 때는 **Option Strict** 설정에 **컴파일** 로 설정 되는 **Option Strict** 에서 설정는 **옵션** 대화 상자.</span><span class="sxs-lookup"><span data-stu-id="9425d-213">When you create a project, the **Option Strict** setting on the **Compile** tab is set to the **Option Strict** setting in the **Options** dialog box.</span></span>  
   
- 설정 하려면 `Option Strict` 이 대화 상자에서에 **도구** 메뉴를 클릭 하 여 **옵션**합니다. 에 **옵션** 대화 상자에서 **프로젝트 및 솔루션**를 클릭 하 고 **VB 기본값**합니다. 초기 기본 설정은 **VB 기본값** 는 `Off`합니다.  
+ <span data-ttu-id="9425d-214">설정 하려면 `Option Strict` 이 대화 상자에서에 **도구** 메뉴를 클릭 하 여 **옵션**합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-214">To set `Option Strict` in this dialog box, on the **Tools** menu, click **Options**.</span></span> <span data-ttu-id="9425d-215">에 **옵션** 대화 상자에서 **프로젝트 및 솔루션**를 클릭 하 고 **VB 기본값**합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-215">In the **Options** dialog box, expand **Projects and Solutions**, and then click **VB Defaults**.</span></span> <span data-ttu-id="9425d-216">초기 기본 설정은 **VB 기본값** 는 `Off`합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-216">The initial default setting in **VB Defaults** is `Off`.</span></span>  
   
-### <a name="to-set-option-strict-on-the-command-line"></a>명령줄에서 Option Strict를 설정 하려면  
- 포함은 [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) 컴파일러 옵션에는 **vbc** 명령입니다.  
+### <a name="to-set-option-strict-on-the-command-line"></a><span data-ttu-id="9425d-217">명령줄에서 Option Strict를 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="9425d-217">To set Option Strict on the command line</span></span>  
+ <span data-ttu-id="9425d-218">포함은 [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) 컴파일러 옵션에는 **vbc** 명령입니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-218">Include the [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) compiler option in the **vbc** command.</span></span>  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 암시적 형식 변환은 축소 변환에 의해 발생 한 컴파일 타임 오류를 보여 줍니다. 이 범주의 오류에 해당 하는 **암시적 변환** 조건이 **컴파일 페이지**합니다.  
+## <a name="example"></a><span data-ttu-id="9425d-219">예제</span><span class="sxs-lookup"><span data-stu-id="9425d-219">Example</span></span>  
+ <span data-ttu-id="9425d-220">다음 예제에서는 암시적 형식 변환은 축소 변환에 의해 발생 한 컴파일 타임 오류를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-220">The following examples demonstrate compile-time errors caused by implicit type conversions that are narrowing conversions.</span></span> <span data-ttu-id="9425d-221">이 범주의 오류에 해당 하는 **암시적 변환** 조건이 **컴파일 페이지**합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-221">This category of errors corresponds to the **Implicit conversion** condition on the **Compile Page**.</span></span>  
   
- [!code-vb[VbVbalrStatements #&161;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_1.vb)]  
+ <span data-ttu-id="9425d-222">[!code-vb[VbVbalrStatements #&161;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="9425d-222">[!code-vb[VbVbalrStatements#161](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_1.vb)]</span></span>  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 런타임에 바인딩하여 발생 하는 컴파일 타임 오류를 보여 줍니다. 이 범주의 오류에 해당 하는 **지연 바인딩; 호출이 런타임에 실패할 수 있음** 조건이 **컴파일 페이지**합니다.  
+## <a name="example"></a><span data-ttu-id="9425d-223">예제</span><span class="sxs-lookup"><span data-stu-id="9425d-223">Example</span></span>  
+ <span data-ttu-id="9425d-224">다음 예제에서는 런타임에 바인딩하여 발생 하는 컴파일 타임 오류를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-224">The following example demonstrates a compile-time error caused by late binding.</span></span> <span data-ttu-id="9425d-225">이 범주의 오류에 해당 하는 **지연 바인딩; 호출이 런타임에 실패할 수 있음** 조건이 **컴파일 페이지**합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-225">This category of errors corresponds to the **Late binding; call could fail at run time** condition on the **Compile Page**.</span></span>  
   
- [!code-vb[VbVbalrStatements #&162;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_2.vb)]  
+ <span data-ttu-id="9425d-226">[!code-vb[VbVbalrStatements #&162;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_2.vb)]</span><span class="sxs-lookup"><span data-stu-id="9425d-226">[!code-vb[VbVbalrStatements#162](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_2.vb)]</span></span>  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 암시적 유형으로 선언 된 변수에 의해 발생 한 오류를 보여 줍니다. `Object`합니다. 이 범주의 오류에 해당 하는 **암시적 형식; 개체로 간주** 조건이 **컴파일 페이지**합니다.  
+## <a name="example"></a><span data-ttu-id="9425d-227">예제</span><span class="sxs-lookup"><span data-stu-id="9425d-227">Example</span></span>  
+ <span data-ttu-id="9425d-228">다음 예제에서는 암시적 유형으로 선언 된 변수에 의해 발생 한 오류를 보여 줍니다. `Object`합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-228">The following examples demonstrate errors caused by variables that are declared with an implicit type of `Object`.</span></span> <span data-ttu-id="9425d-229">이 범주의 오류에 해당 하는 **암시적 형식; 개체로 간주** 조건이 **컴파일 페이지**합니다.</span><span class="sxs-lookup"><span data-stu-id="9425d-229">This category of errors corresponds to the **Implicit type; object assumed** condition on the **Compile Page**.</span></span>  
   
- [!code-vb[VbVbalrStatements #&163;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_3.vb)]  
+ <span data-ttu-id="9425d-230">[!code-vb[VbVbalrStatements #&163;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_3.vb)]</span><span class="sxs-lookup"><span data-stu-id="9425d-230">[!code-vb[VbVbalrStatements#163](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_3.vb)]</span></span>  
   
- [!code-vb[VbVbalrStatements #&164;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_4.vb)]  
+ <span data-ttu-id="9425d-231">[!code-vb[VbVbalrStatements #&164;](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_4.vb)]</span><span class="sxs-lookup"><span data-stu-id="9425d-231">[!code-vb[VbVbalrStatements#164](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-strict-statement_4.vb)]</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [확대 변환과 축소 변환](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)   
- [암시적 변환과 명시적 변환](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)   
- [프로젝트 디자이너, 컴파일 페이지(Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic)   
- [Option Explicit 문](../../../visual-basic/language-reference/statements/option-explicit-statement.md)   
- [형식 변환 함수](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [방법: 개체의 멤버에 액세스](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)   
- [XML의 포함된 식](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)   
- [완화 된 대리자 변환](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)   
- [Office 솔루션에서 런타임에 바인딩](https://msdn.microsoft.com/library/3xxe951d)   
- [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)   
- [옵션 대화 상자, 프로젝트, Visual Basic 기본값](https://docs.microsoft.com/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+## <a name="see-also"></a><span data-ttu-id="9425d-232">참고 항목</span><span class="sxs-lookup"><span data-stu-id="9425d-232">See Also</span></span>  
+ <span data-ttu-id="9425d-233">[확대 변환과 축소 변환](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) </span><span class="sxs-lookup"><span data-stu-id="9425d-233">[Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) </span></span>  
+<span data-ttu-id="9425d-234"> [암시적 변환과 명시적 변환](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) </span><span class="sxs-lookup"><span data-stu-id="9425d-234"> [Implicit and Explicit Conversions](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) </span></span>  
+<span data-ttu-id="9425d-235"> [프로젝트 디자이너, 컴파일 페이지(Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic) </span><span class="sxs-lookup"><span data-stu-id="9425d-235"> [Compile Page, Project Designer (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic) </span></span>  
+<span data-ttu-id="9425d-236"> [Option Explicit 문](../../../visual-basic/language-reference/statements/option-explicit-statement.md) </span><span class="sxs-lookup"><span data-stu-id="9425d-236"> [Option Explicit Statement](../../../visual-basic/language-reference/statements/option-explicit-statement.md) </span></span>  
+<span data-ttu-id="9425d-237"> [형식 변환 함수](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="9425d-237"> [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
+<span data-ttu-id="9425d-238"> [방법: 개체의 멤버에 액세스](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md) </span><span class="sxs-lookup"><span data-stu-id="9425d-238"> [How to: Access Members of an Object](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md) </span></span>  
+<span data-ttu-id="9425d-239"> [XML의 포함된 식](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md) </span><span class="sxs-lookup"><span data-stu-id="9425d-239"> [Embedded Expressions in XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md) </span></span>  
+<span data-ttu-id="9425d-240"> [완화 된 대리자 변환](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md) </span><span class="sxs-lookup"><span data-stu-id="9425d-240"> [Relaxed Delegate Conversion](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md) </span></span>  
+<span data-ttu-id="9425d-241"> [Office 솔루션에서 런타임에 바인딩](https://msdn.microsoft.com/library/3xxe951d) </span><span class="sxs-lookup"><span data-stu-id="9425d-241"> [Late Binding in Office Solutions](https://msdn.microsoft.com/library/3xxe951d) </span></span>  
+<span data-ttu-id="9425d-242"> [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) </span><span class="sxs-lookup"><span data-stu-id="9425d-242"> [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) </span></span>  
+<span data-ttu-id="9425d-243"> [옵션 대화 상자, 프로젝트, Visual Basic 기본값](https://docs.microsoft.com/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)</span><span class="sxs-lookup"><span data-stu-id="9425d-243"> [Visual Basic Defaults, Projects, Options Dialog Box](https://docs.microsoft.com/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)</span></span>

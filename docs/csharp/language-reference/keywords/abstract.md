@@ -37,77 +37,77 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="abstract-c-reference"></a>abstract(C# 참조)
-`abstract` 한정자는 수정되는 항목에 누락되거나 불완전한 구현이 있음을 나타냅니다. abstract 한정자는 클래스, 메서드, 속성, 인덱서 및 이벤트와 함께 사용될 수 있습니다. 클래스 선언에서 `abstract` 한정자를 사용하여 클래스가 다른 클래스의 기본 클래스로만 사용됨을 나타냅니다. abstract로 표시되거나 추상 클래스에 포함된 멤버는 추상 클래스에서 파생 클래스에 의해 구현되어야 합니다.  
+# <a name="abstract-c-reference"></a><span data-ttu-id="79535-102">abstract(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="79535-102">abstract (C# Reference)</span></span>
+<span data-ttu-id="79535-103">`abstract` 한정자는 수정되는 항목에 누락되거나 불완전한 구현이 있음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="79535-103">The `abstract` modifier indicates that the thing being modified has a missing or incomplete implementation.</span></span> <span data-ttu-id="79535-104">abstract 한정자는 클래스, 메서드, 속성, 인덱서 및 이벤트와 함께 사용될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="79535-104">The abstract modifier can be used with classes, methods, properties, indexers, and events.</span></span> <span data-ttu-id="79535-105">클래스 선언에서 `abstract` 한정자를 사용하여 클래스가 다른 클래스의 기본 클래스로만 사용됨을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="79535-105">Use the `abstract` modifier in a class declaration to indicate that a class is intended only to be a base class of other classes.</span></span> <span data-ttu-id="79535-106">abstract로 표시되거나 추상 클래스에 포함된 멤버는 추상 클래스에서 파생 클래스에 의해 구현되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="79535-106">Members marked as abstract, or included in an abstract class, must be implemented by classes that derive from the abstract class.</span></span>  
   
-## <a name="example"></a>예제  
- 이 예제에서 `Square` 클래스는 `ShapesClass`에서 파생되므로 `Area` 구현을 제공해야 합니다.  
+## <a name="example"></a><span data-ttu-id="79535-107">예제</span><span class="sxs-lookup"><span data-stu-id="79535-107">Example</span></span>  
+ <span data-ttu-id="79535-108">이 예제에서 `Square` 클래스는 `ShapesClass`에서 파생되므로 `Area` 구현을 제공해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="79535-108">In this example, the class `Square` must provide an implementation of `Area` because it derives from `ShapesClass`:</span></span>  
   
- [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_1.cs)]  
+ <span data-ttu-id="79535-109">[!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="79535-109">[!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_1.cs)]</span></span>  
   
- 다음 기능이 있는 추상 클래스:  
+ <span data-ttu-id="79535-110">다음 기능이 있는 추상 클래스:</span><span class="sxs-lookup"><span data-stu-id="79535-110">Abstract classes have the following features:</span></span>  
   
--   추상 클래스는 인스턴스화할 수 없습니다.  
+-   <span data-ttu-id="79535-111">추상 클래스는 인스턴스화할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="79535-111">An abstract class cannot be instantiated.</span></span>  
   
--   추상 클래스에 추상 메서드 및 접근자가 포함될 수 있습니다.  
+-   <span data-ttu-id="79535-112">추상 클래스에 추상 메서드 및 접근자가 포함될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="79535-112">An abstract class may contain abstract methods and accessors.</span></span>  
   
--   [sealed](../../../csharp/language-reference/keywords/sealed.md) 한정자를 사용하여 추상 클래스를 수정할 수는 없습니다. 두 한정자가 상반된 의미를 가지기 때문입니다. `sealed` 한정자를 사용하면 클래스가 상속되지 않고 `abstract` 한정자를 사용하려면 클래스가 상속되어야 합니다.  
+-   <span data-ttu-id="79535-113">[sealed](../../../csharp/language-reference/keywords/sealed.md) 한정자를 사용하여 추상 클래스를 수정할 수는 없습니다. 두 한정자가 상반된 의미를 가지기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="79535-113">It is not possible to modify an abstract class with the [sealed](../../../csharp/language-reference/keywords/sealed.md) modifier because the two modifers have opposite meanings.</span></span> <span data-ttu-id="79535-114">`sealed` 한정자를 사용하면 클래스가 상속되지 않고 `abstract` 한정자를 사용하려면 클래스가 상속되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="79535-114">The `sealed` modifier prevents a class from being inherited and the `abstract` modifier requires a class to be inherited.</span></span>  
   
--   추상 클래스에서 추상이 아닌 파생 클래스에는 모든 상속된 메서드 및 접근자의 실제 구현이 포함되어야 합니다.  
+-   <span data-ttu-id="79535-115">추상 클래스에서 추상이 아닌 파생 클래스에는 모든 상속된 메서드 및 접근자의 실제 구현이 포함되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="79535-115">A non-abstract class derived from an abstract class must include actual implementations of all inherited abstract methods and accessors.</span></span>  
   
- 메서드 또는 속성 선언에서 `abstract` 한정자를 사용하여 메서드 또는 속성에 구현이 포함되지 않음을 나타냅니다.  
+ <span data-ttu-id="79535-116">메서드 또는 속성 선언에서 `abstract` 한정자를 사용하여 메서드 또는 속성에 구현이 포함되지 않음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="79535-116">Use the `abstract` modifier in a method or property declaration to indicate that the method or property does not contain implementation.</span></span>  
   
- 추상 메서드에는 다음과 같은 기능이 있습니다.  
+ <span data-ttu-id="79535-117">추상 메서드에는 다음과 같은 기능이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="79535-117">Abstract methods have the following features:</span></span>  
   
--   추상 메서드는 암시적으로 가상 메서드입니다.  
+-   <span data-ttu-id="79535-118">추상 메서드는 암시적으로 가상 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="79535-118">An abstract method is implicitly a virtual method.</span></span>  
   
--   추상 메서드 선언은 추상 클래스에서만 허용됩니다.  
+-   <span data-ttu-id="79535-119">추상 메서드 선언은 추상 클래스에서만 허용됩니다.</span><span class="sxs-lookup"><span data-stu-id="79535-119">Abstract method declarations are only permitted in abstract classes.</span></span>  
   
--   추상 메서드 선언은 실제 구현을 제공하지 않으므로 메서드 본문이 없습니다. 메서드 선언은 세미콜론으로 끝나고 시그니처 뒤에 중괄호({ })가 없습니다. 예:  
+-   <span data-ttu-id="79535-120">추상 메서드 선언은 실제 구현을 제공하지 않으므로 메서드 본문이 없습니다. 메서드 선언은 세미콜론으로 끝나고 시그니처 뒤에 중괄호({ })가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="79535-120">Because an abstract method declaration provides no actual implementation, there is no method body; the method declaration simply ends with a semicolon and there are no curly braces ({ }) following the signature.</span></span> <span data-ttu-id="79535-121">예:</span><span class="sxs-lookup"><span data-stu-id="79535-121">For example:</span></span>  
   
     ```  
     public abstract void MyMethod();  
     ```  
   
-     구현은 추상이 아닌 클래스의 멤버인 재정의 메서드 [override](../../../csharp/language-reference/keywords/override.md)에 의해 제공됩니다.  
+     <span data-ttu-id="79535-122">구현은 추상이 아닌 클래스의 멤버인 재정의 메서드 [override](../../../csharp/language-reference/keywords/override.md)에 의해 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="79535-122">The implementation is provided by an overriding method[override](../../../csharp/language-reference/keywords/override.md), which is a member of a non-abstract class.</span></span>  
   
--   추상 메서드 선언에서 [static](../../../csharp/language-reference/keywords/static.md) 또는 [virtual](../../../csharp/language-reference/keywords/virtual.md) 한정자를 사용하는 것은 오류입니다.  
+-   <span data-ttu-id="79535-123">추상 메서드 선언에서 [static](../../../csharp/language-reference/keywords/static.md) 또는 [virtual](../../../csharp/language-reference/keywords/virtual.md) 한정자를 사용하는 것은 오류입니다.</span><span class="sxs-lookup"><span data-stu-id="79535-123">It is an error to use the [static](../../../csharp/language-reference/keywords/static.md) or [virtual](../../../csharp/language-reference/keywords/virtual.md) modifiers in an abstract method declaration.</span></span>  
   
- 선언 및 호출 구문의 차이점을 제외하고 추상 속성은 추상 메서드처럼 동작합니다.  
+ <span data-ttu-id="79535-124">선언 및 호출 구문의 차이점을 제외하고 추상 속성은 추상 메서드처럼 동작합니다.</span><span class="sxs-lookup"><span data-stu-id="79535-124">Abstract properties behave like abstract methods, except for the differences in declaration and invocation syntax.</span></span>  
   
--   정적 속성에서 `abstract` 한정자를 사용하는 것은 오류입니다.  
+-   <span data-ttu-id="79535-125">정적 속성에서 `abstract` 한정자를 사용하는 것은 오류입니다.</span><span class="sxs-lookup"><span data-stu-id="79535-125">It is an error to use the `abstract` modifier on a static property.</span></span>  
   
--   [override](../../../csharp/language-reference/keywords/override.md) 한정자를 사용하는 속성 선언을 포함하여 상속된 추상 속성을 파생 클래스에서 재정의할 수 있습니다.  
+-   <span data-ttu-id="79535-126">[override](../../../csharp/language-reference/keywords/override.md) 한정자를 사용하는 속성 선언을 포함하여 상속된 추상 속성을 파생 클래스에서 재정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="79535-126">An abstract inherited property can be overridden in a derived class by including a property declaration that uses the [override](../../../csharp/language-reference/keywords/override.md) modifier.</span></span>  
   
- 추상 클래스에 대한 자세한 내용은 [추상 및 봉인 클래스와 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)를 참조하세요.  
+ <span data-ttu-id="79535-127">추상 클래스에 대한 자세한 내용은 [추상 및 봉인 클래스와 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="79535-127">For more information about abstract classes, see [Abstract and Sealed Classes and Class Members](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).</span></span>  
   
- 추상 클래스는 모든 인터페이스 멤버에 대한 구현을 제공해야 합니다.  
+ <span data-ttu-id="79535-128">추상 클래스는 모든 인터페이스 멤버에 대한 구현을 제공해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="79535-128">An abstract class must provide implementation for all interface members.</span></span>  
   
- 인터페이스를 구현하는 추상 클래스는 인터페이스 메서드를 추상 메서드에 매핑할 수 있습니다. 예:  
+ <span data-ttu-id="79535-129">인터페이스를 구현하는 추상 클래스는 인터페이스 메서드를 추상 메서드에 매핑할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="79535-129">An abstract class that implements an interface might map the interface methods onto abstract methods.</span></span> <span data-ttu-id="79535-130">예:</span><span class="sxs-lookup"><span data-stu-id="79535-130">For example:</span></span>  
   
- [!code-cs[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_2.cs)]  
+ <span data-ttu-id="79535-131">[!code-cs[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="79535-131">[!code-cs[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_2.cs)]</span></span>  
   
-## <a name="example"></a>예제  
- 이 예제에서 `DerivedClass` 클래스는 추상 클래스 `BaseClass`에서 파생됩니다. 추상 클래스에는 추상 메서드 `AbstractMethod` 및 두 개의 추상 속성 `X` 및 `Y`가 포함됩니다.  
+## <a name="example"></a><span data-ttu-id="79535-132">예제</span><span class="sxs-lookup"><span data-stu-id="79535-132">Example</span></span>  
+ <span data-ttu-id="79535-133">이 예제에서 `DerivedClass` 클래스는 추상 클래스 `BaseClass`에서 파생됩니다.</span><span class="sxs-lookup"><span data-stu-id="79535-133">In this example, the class `DerivedClass` is derived from an abstract class `BaseClass`.</span></span> <span data-ttu-id="79535-134">추상 클래스에는 추상 메서드 `AbstractMethod` 및 두 개의 추상 속성 `X` 및 `Y`가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="79535-134">The abstract class contains an abstract method, `AbstractMethod`, and two abstract properties, `X` and `Y`.</span></span>  
   
- [!code-cs[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_3.cs)]  
+ <span data-ttu-id="79535-135">[!code-cs[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_3.cs)]</span><span class="sxs-lookup"><span data-stu-id="79535-135">[!code-cs[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_3.cs)]</span></span>  
   
- 앞의 예제에서 다음과 같이 문을 사용하여 추상 클래스를 인스턴스화하려고 하면,  
+ <span data-ttu-id="79535-136">앞의 예제에서 다음과 같이 문을 사용하여 추상 클래스를 인스턴스화하려고 하면,</span><span class="sxs-lookup"><span data-stu-id="79535-136">In the preceding example, if you attempt to instantiate the abstract class by using a statement like this:</span></span>  
   
 ```  
 BaseClass bc = new BaseClass();   // Error  
 ```  
   
- 컴파일러가 추상 클래스 'BaseClass'의 인스턴스를 만들 수 없다는 오류가 표시됩니다.  
+ <span data-ttu-id="79535-137">컴파일러가 추상 클래스 'BaseClass'의 인스턴스를 만들 수 없다는 오류가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="79535-137">you will get an error saying that the compiler cannot create an instance of the abstract class 'BaseClass'.</span></span>  
   
-## <a name="c-language-specification"></a>C# 언어 사양  
+## <a name="c-language-specification"></a><span data-ttu-id="79535-138">C# 언어 사양</span><span class="sxs-lookup"><span data-stu-id="79535-138">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [한정자](../../../csharp/language-reference/keywords/modifiers.md)   
- [virtual](../../../csharp/language-reference/keywords/virtual.md)   
- [override](../../../csharp/language-reference/keywords/override.md)   
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="79535-139">참고 항목</span><span class="sxs-lookup"><span data-stu-id="79535-139">See Also</span></span>  
+ <span data-ttu-id="79535-140">[C# 참조](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="79535-140">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="79535-141">[C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="79535-141">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="79535-142">[한정자](../../../csharp/language-reference/keywords/modifiers.md) </span><span class="sxs-lookup"><span data-stu-id="79535-142">[Modifiers](../../../csharp/language-reference/keywords/modifiers.md) </span></span>  
+ <span data-ttu-id="79535-143">[virtual](../../../csharp/language-reference/keywords/virtual.md) </span><span class="sxs-lookup"><span data-stu-id="79535-143">[virtual](../../../csharp/language-reference/keywords/virtual.md) </span></span>  
+ <span data-ttu-id="79535-144">[override](../../../csharp/language-reference/keywords/override.md) </span><span class="sxs-lookup"><span data-stu-id="79535-144">[override](../../../csharp/language-reference/keywords/override.md) </span></span>  
+ [<span data-ttu-id="79535-145">C# 키워드</span><span class="sxs-lookup"><span data-stu-id="79535-145">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
 

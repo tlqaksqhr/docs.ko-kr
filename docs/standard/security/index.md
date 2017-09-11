@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework의 보안 | Microsoft Docs"
+title: ".NET Framework의 보안"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -23,39 +23,39 @@ caps.latest.revision: 37
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1fabc43044b6e0fa765a7c2f225add8b7eb923f5
-ms.openlocfilehash: a1914325966fc1b65cf4677328a165fbe1e0f776
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b2c487c76a6a0b42370b7b70099d5baba58f42db
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 09/05/2017
 
 ---
-# <a name="security-in-the-net-framework"></a>.NET Framework의 보안
-공용 언어 런타임 및.NET Framework는 개발자가 쉽게 안전한 코드를 작성할 수 있게 해주고 시스템 관리자가 보호된 리소스에 액세스할 수 있도록 코드에 부여되는 권한을 사용자 지정할 수 있게 해주는 많은 유용한 클래스 및 서비스를 제공합니다. 또한 런타임 및 .NET Framework는 암호화 및 역할 기반 보안을 쉽게 사용할 수 있게 해주는 유용한 클래스 및 서비스를 제공합니다.  
+# <a name="security-in-the-net-framework"></a><span data-ttu-id="d3db2-102">.NET Framework의 보안</span><span class="sxs-lookup"><span data-stu-id="d3db2-102">Security in the .NET Framework</span></span>
+<span data-ttu-id="d3db2-103">공용 언어 런타임 및.NET Framework는 개발자가 쉽게 안전한 코드를 작성할 수 있게 해주고 시스템 관리자가 보호된 리소스에 액세스할 수 있도록 코드에 부여되는 권한을 사용자 지정할 수 있게 해주는 많은 유용한 클래스 및 서비스를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d3db2-103">The common language runtime and the .NET Framework provide many useful classes and services that enable developers to easily write secure code and enable system administrators to customize the permissions granted to code so that it can access protected resources.</span></span> <span data-ttu-id="d3db2-104">또한 런타임 및 .NET Framework는 암호화 및 역할 기반 보안을 쉽게 사용할 수 있게 해주는 유용한 클래스 및 서비스를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d3db2-104">In addition, the runtime and the .NET Framework provide useful classes and services that facilitate the use of cryptography and role-based security.</span></span>  
   
-## <a name="in-this-section"></a>단원 내용  
- [보안 변경 내용](../../../docs/framework/security/security-changes.md)  
- .NET Framework 보안 시스템과 관련된 중요 변경 내용을 설명합니다.  
+## <a name="in-this-section"></a><span data-ttu-id="d3db2-105">단원 내용</span><span class="sxs-lookup"><span data-stu-id="d3db2-105">In This Section</span></span>  
+ [<span data-ttu-id="d3db2-106">보안 변경 내용</span><span class="sxs-lookup"><span data-stu-id="d3db2-106">Security Changes</span></span>](../../../docs/framework/security/security-changes.md)  
+ <span data-ttu-id="d3db2-107">.NET Framework 보안 시스템과 관련된 중요 변경 내용을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d3db2-107">Describes important changes to the .NET Framework security system.</span></span>  
   
- [주요 보안 개념](../../../docs/standard/security/key-security-concepts.md)  
- 공용 언어 런타임 보안 기능에 대해 간략하게 설명합니다. 이 섹션은 개발자와 시스템 관리자에게 유용합니다.  
+ [<span data-ttu-id="d3db2-108">주요 보안 개념</span><span class="sxs-lookup"><span data-stu-id="d3db2-108">Key Security Concepts</span></span>](../../../docs/standard/security/key-security-concepts.md)  
+ <span data-ttu-id="d3db2-109">공용 언어 런타임 보안 기능에 대해 간략하게 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d3db2-109">Provides an overview of common language runtime security features.</span></span> <span data-ttu-id="d3db2-110">이 섹션은 개발자와 시스템 관리자에게 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="d3db2-110">This section is of interest to developers and system administrators.</span></span>  
   
- [역할 기반 보안](../../../docs/standard/security/role-based-security.md)  
- 코드에서 역할 기반 보안과 상호 작용하는 방법을 설명합니다. 이 섹션은 개발자에게 유용합니다.  
+ [<span data-ttu-id="d3db2-111">역할 기반 보안</span><span class="sxs-lookup"><span data-stu-id="d3db2-111">Role-Based Security</span></span>](../../../docs/standard/security/role-based-security.md)  
+ <span data-ttu-id="d3db2-112">코드에서 역할 기반 보안과 상호 작용하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d3db2-112">Describes how to interact with role-based security in your code.</span></span> <span data-ttu-id="d3db2-113">이 섹션은 개발자에게 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="d3db2-113">This section is of interest to developers.</span></span>  
   
- [암호화 모델](../../../docs/standard/security/cryptography-model.md)  
- .NET Framework에서 제공하는 암호화 서비스에 대해 간략하게 설명합니다. 이 섹션은 개발자에게 유용합니다.  
+ [<span data-ttu-id="d3db2-114">암호화 모델</span><span class="sxs-lookup"><span data-stu-id="d3db2-114">Cryptography Model</span></span>](../../../docs/standard/security/cryptography-model.md)  
+ <span data-ttu-id="d3db2-115">.NET Framework에서 제공하는 암호화 서비스에 대해 간략하게 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d3db2-115">Provides an overview of cryptographic services provided by the .NET Framework.</span></span> <span data-ttu-id="d3db2-116">이 섹션은 개발자에게 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="d3db2-116">This section is of interest to developers.</span></span>  
   
- [보안 코딩 지침](../../../docs/standard/security/secure-coding-guidelines.md)  
- 신뢰할 수 있는 .NET Framework 응용 프로그램을 만들기 위한 몇 가지 모범 사례를 설명합니다. 이 섹션은 개발자에게 유용합니다.  
+ [<span data-ttu-id="d3db2-117">보안 코딩 지침</span><span class="sxs-lookup"><span data-stu-id="d3db2-117">Secure Coding Guidelines</span></span>](../../../docs/standard/security/secure-coding-guidelines.md)  
+ <span data-ttu-id="d3db2-118">신뢰할 수 있는 .NET Framework 응용 프로그램을 만들기 위한 몇 가지 모범 사례를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d3db2-118">Describes some of the best practices for creating reliable .NET Framework applications.</span></span> <span data-ttu-id="d3db2-119">이 섹션은 개발자에게 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="d3db2-119">This section is of interest to developers.</span></span>  
   
- [비관리 코드에 대한 보안 코딩 지침](../../../docs/framework/security/secure-coding-guidelines-for-unmanaged-code.md)  
- 비관리 코드를 호출할 때 모범 사례 및 보안 고려 사항 중 일부에 대해 설명합니다.  
+ [<span data-ttu-id="d3db2-120">비관리 코드에 대한 보안 코딩 지침</span><span class="sxs-lookup"><span data-stu-id="d3db2-120">Secure Coding Guidelines for Unmanaged Code</span></span>](../../../docs/framework/security/secure-coding-guidelines-for-unmanaged-code.md)  
+ <span data-ttu-id="d3db2-121">비관리 코드를 호출할 때 모범 사례 및 보안 고려 사항 중 일부에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d3db2-121">Describes some of the best practices and security concerns when calling unmanaged code.</span></span>  
   
- [Windows Identity Foundation](../../../docs/framework/security/index.md)  
- 응용 프로그램에서 클레임 기반 ID를 구현하는 방법을 설명합니다.  
+ [<span data-ttu-id="d3db2-122">Windows Identity Foundation</span><span class="sxs-lookup"><span data-stu-id="d3db2-122">Windows Identity Foundation</span></span>](../../../docs/framework/security/index.md)  
+ <span data-ttu-id="d3db2-123">응용 프로그램에서 클레임 기반 ID를 구현하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d3db2-123">Describes how you can implement claims-based identity in your applications.</span></span>  
   
-## <a name="related-sections"></a>관련 단원  
- [개발 가이드](../../../docs/framework/development-guide.md)  
- 만들기, 구성, 디버깅, 보안, 응용 프로그램 배포, 동적 프로그래밍에 대한 정보, 상호 운용성, 확장성, 메모리 관리 및 스레딩을 포함하여 응용 프로그램 개발에 대한 모든 주요 기술 분야 및 작업에 대한 지침을 제공합니다.
+## <a name="related-sections"></a><span data-ttu-id="d3db2-124">관련 단원</span><span class="sxs-lookup"><span data-stu-id="d3db2-124">Related Sections</span></span>  
+ [<span data-ttu-id="d3db2-125">개발 가이드</span><span class="sxs-lookup"><span data-stu-id="d3db2-125">Development Guide</span></span>](../../../docs/framework/development-guide.md)  
+ <span data-ttu-id="d3db2-126">만들기, 구성, 디버깅, 보안, 응용 프로그램 배포, 동적 프로그래밍에 대한 정보, 상호 운용성, 확장성, 메모리 관리 및 스레딩을 포함하여 응용 프로그램 개발에 대한 모든 주요 기술 분야 및 작업에 대한 지침을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d3db2-126">Provides a guide to all key technology areas and tasks for application development, including creating, configuring, debugging, securing, and deploying your application, and information about dynamic programming, interoperability, extensibility, memory management, and threading.</span></span>
 

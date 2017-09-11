@@ -1,1 +1,1 @@
-Microsoft IIS(인터넷 정보 서비스) 6.0
+<span data-ttu-id="cddf0-101">Microsoft IIS(인터넷 정보 서비스) 6.0</span><span class="sxs-lookup"><span data-stu-id="cddf0-101">Microsoft Internet Information Services (IIS) 6.0</span></span>

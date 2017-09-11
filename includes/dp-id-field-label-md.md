@@ -1,1 +1,1 @@
-종속성 속성 식별자 필드:
+<span data-ttu-id="f356d-101">종속성 속성 식별자 필드:</span><span class="sxs-lookup"><span data-stu-id="f356d-101">Dependency property identifier field:</span></span>

@@ -20,16 +20,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5ec6bb31fa095786f7c507a66e831a90fd1c6e92
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 5697e52729287a09f1afe993c7b1c1d0c9a6507b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a>방법: 문자열 (LINQ) (Visual Basic)에서 단어 수 계산
-이 예제에서는 LINQ 쿼리는 문자열에서 지정 된 단어의 개수를 사용 하는 방법을 보여 줍니다. 먼저 계산을 수행 하는 <xref:System.String.Split%2A>메서드는 단어의 배열을 만듭니다.</xref:System.String.Split%2A> 에 성능 비용이 <xref:System.String.Split%2A>메서드.</xref:System.String.Split%2A> 사용을 고려해 야 작업만 문자열에서 단어 수를 계산 하려는 경우는 <xref:System.Text.RegularExpressions.Regex.Matches%2A>또는 <xref:System.String.IndexOf%2A>메서드 대신.</xref:System.String.IndexOf%2A> </xref:System.Text.RegularExpressions.Regex.Matches%2A> 그러나 성능이 중요 한 문제가 없거나 문장 위로 다른 유형의 쿼리를 수행 하기 위해 이미 분할 하는 경우 다음 편이 LINQ를 사용 하 여 단어 또는 구를 계산 합니다.  
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a><span data-ttu-id="6082d-102">방법: 문자열 (LINQ) (Visual Basic)에서 단어 수 계산</span><span class="sxs-lookup"><span data-stu-id="6082d-102">How to: Count Occurrences of a Word in a String (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="6082d-103">이 예제에서는 LINQ 쿼리는 문자열에서 지정 된 단어의 개수를 사용 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6082d-103">This example shows how to use a LINQ query to count the occurrences of a specified word in a string.</span></span> <span data-ttu-id="6082d-104">먼저 계산을 수행 하는 <xref:System.String.Split%2A>메서드는 단어의 배열을 만듭니다.</xref:System.String.Split%2A></span><span class="sxs-lookup"><span data-stu-id="6082d-104">Note that to perform the count, first the <xref:System.String.Split%2A> method is called to create an array of words.</span></span> <span data-ttu-id="6082d-105">에 성능 비용이 <xref:System.String.Split%2A>메서드.</xref:System.String.Split%2A></span><span class="sxs-lookup"><span data-stu-id="6082d-105">There is a performance cost to the <xref:System.String.Split%2A> method.</span></span> <span data-ttu-id="6082d-106">사용을 고려해 야 작업만 문자열에서 단어 수를 계산 하려는 경우는 <xref:System.Text.RegularExpressions.Regex.Matches%2A>또는 <xref:System.String.IndexOf%2A>메서드 대신.</xref:System.String.IndexOf%2A> </xref:System.Text.RegularExpressions.Regex.Matches%2A></span><span class="sxs-lookup"><span data-stu-id="6082d-106">If the only operation on the string is to count the words, you should consider using the <xref:System.Text.RegularExpressions.Regex.Matches%2A> or <xref:System.String.IndexOf%2A> methods instead.</span></span> <span data-ttu-id="6082d-107">그러나 성능이 중요 한 문제가 없거나 문장 위로 다른 유형의 쿼리를 수행 하기 위해 이미 분할 하는 경우 다음 편이 LINQ를 사용 하 여 단어 또는 구를 계산 합니다.</span><span class="sxs-lookup"><span data-stu-id="6082d-107">However, if performance is not a critical issue, or you have already split the sentence in order to perform other types of queries over it, then it makes sense to use LINQ to count the words or phrases as well.</span></span>  
   
-## <a name="example"></a>예제  
+## <a name="example"></a><span data-ttu-id="6082d-108">예제</span><span class="sxs-lookup"><span data-stu-id="6082d-108">Example</span></span>  
   
 ```vb  
 Class CountWords  
@@ -74,8 +75,8 @@ End Class
 ' 3 occurrence(s) of the search term "data" were found.  
 ```  
   
-## <a name="compiling-the-code"></a>코드 컴파일  
- .NET Framework 버전 3.5 이상 System.Core.dll에 대 한 참조를 대상으로 하는 프로젝트 만들기 및 `Imports` 는 System.Linq 네임 스페이스에 대 한 정보입니다.  
+## <a name="compiling-the-code"></a><span data-ttu-id="6082d-109">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="6082d-109">Compiling the Code</span></span>  
+ <span data-ttu-id="6082d-110">.NET Framework 버전 3.5 이상 System.Core.dll에 대 한 참조를 대상으로 하는 프로젝트 만들기 및 `Imports` 는 System.Linq 네임 스페이스에 대 한 정보입니다.</span><span class="sxs-lookup"><span data-stu-id="6082d-110">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a><span data-ttu-id="6082d-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="6082d-111">See Also</span></span>  
+ [<span data-ttu-id="6082d-112">LINQ 및 문자열 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6082d-112">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

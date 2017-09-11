@@ -34,34 +34,35 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 18d5c3e327e2e41f4786eda6c3e981125f87389d
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 5e0cd0a2a7e4c88df1087faee963f541c325b272
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="filealign"></a>/filealign
-출력 파일의 섹션에 맞출 위치를 지정합니다.  
+# <a name="filealign"></a><span data-ttu-id="3a573-102">/filealign</span><span class="sxs-lookup"><span data-stu-id="3a573-102">/filealign</span></span>
+<span data-ttu-id="3a573-103">출력 파일의 섹션에 맞출 위치를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3a573-103">Specifies where to align the sections of the output file.</span></span>  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a><span data-ttu-id="3a573-104">구문</span><span class="sxs-lookup"><span data-stu-id="3a573-104">Syntax</span></span>  
   
 ```  
 /filealign:number  
 ```  
   
-## <a name="arguments"></a>인수  
+## <a name="arguments"></a><span data-ttu-id="3a573-105">인수</span><span class="sxs-lookup"><span data-stu-id="3a573-105">Arguments</span></span>  
  `number`  
- 필수 요소. 출력 파일의 섹션 맞춤을 지정 하는 값입니다. 유효한 값에는 512, 1024, 2048, 4096, 8192은입니다. 이러한 값은 바이트입니다.  
+ <span data-ttu-id="3a573-106">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="3a573-106">Required.</span></span> <span data-ttu-id="3a573-107">출력 파일의 섹션 맞춤을 지정 하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="3a573-107">A value that specifies the alignment of sections in the output file.</span></span> <span data-ttu-id="3a573-108">유효한 값에는 512, 1024, 2048, 4096, 8192은입니다.</span><span class="sxs-lookup"><span data-stu-id="3a573-108">Valid values are 512, 1024, 2048, 4096, and 8192.</span></span> <span data-ttu-id="3a573-109">이러한 값은 바이트입니다.</span><span class="sxs-lookup"><span data-stu-id="3a573-109">These values are in bytes.</span></span>  
   
-## <a name="remarks"></a>설명  
- 사용할 수는 `/filealign` 출력 파일의 섹션 맞춤을 지정 하는 옵션입니다. 섹션은 코드 또는 데이터를 포함 하는 PE (이식 가능) 파일의 연속 된 메모리 블록입니다. `/filealign` 옵션으로 비표준 맞춤으로 응용 프로그램을 컴파일할 수 있습니다; 대부분의 개발자가이 옵션을 사용할 필요가 없습니다.  
+## <a name="remarks"></a><span data-ttu-id="3a573-110">설명</span><span class="sxs-lookup"><span data-stu-id="3a573-110">Remarks</span></span>  
+ <span data-ttu-id="3a573-111">사용할 수는 `/filealign` 출력 파일의 섹션 맞춤을 지정 하는 옵션입니다.</span><span class="sxs-lookup"><span data-stu-id="3a573-111">You can use the `/filealign` option to specify the alignment of sections in your output file.</span></span> <span data-ttu-id="3a573-112">섹션은 코드 또는 데이터를 포함 하는 PE (이식 가능) 파일의 연속 된 메모리 블록입니다.</span><span class="sxs-lookup"><span data-stu-id="3a573-112">Sections are blocks of contiguous memory in a Portable Executable (PE) file that contains either code or data.</span></span> <span data-ttu-id="3a573-113">`/filealign` 옵션으로 비표준 맞춤으로 응용 프로그램을 컴파일할 수 있습니다; 대부분의 개발자가이 옵션을 사용할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="3a573-113">The `/filealign` option lets you compile your application with a nonstandard alignment; most developers do not need to use this option.</span></span>  
   
- 각 섹션의 배수인 경계에 정렬 되는 `/filealign` 값입니다. 고정 기본값이 없습니다. 경우 `/filealign` 를 지정 하지 않으면 컴파일러는 컴파일 타임에 기본값을 선택 합니다.  
+ <span data-ttu-id="3a573-114">각 섹션의 배수인 경계에 정렬 되는 `/filealign` 값입니다.</span><span class="sxs-lookup"><span data-stu-id="3a573-114">Each section is aligned on a boundary that is a multiple of the `/filealign` value.</span></span> <span data-ttu-id="3a573-115">고정 기본값이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="3a573-115">There is no fixed default.</span></span> <span data-ttu-id="3a573-116">경우 `/filealign` 를 지정 하지 않으면 컴파일러는 컴파일 타임에 기본값을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="3a573-116">If `/filealign` is not specified, the compiler picks a default at compile time.</span></span>  
   
- 섹션 크기를 지정 하 여 출력 파일의 크기를 변경할 수 있습니다. 섹션 크기를 수정 하는 것은 소형 장치에서 실행 되는 프로그램에 유용할 수 있습니다.  
+ <span data-ttu-id="3a573-117">섹션 크기를 지정 하 여 출력 파일의 크기를 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3a573-117">By specifying the section size, you can change the size of the output file.</span></span> <span data-ttu-id="3a573-118">섹션 크기를 수정 하는 것은 소형 장치에서 실행 되는 프로그램에 유용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3a573-118">Modifying section size may be useful for programs that will run on smaller devices.</span></span>  
   
 > [!NOTE]
->  `/filealign` 옵션은 Visual Studio 개발 환경 내에서 사용할 수 없습니다; 명령줄에서 컴파일할 때에 사용할 수는 있습니다.  
+>  <span data-ttu-id="3a573-119">`/filealign` 옵션은 Visual Studio 개발 환경 내에서 사용할 수 없습니다; 명령줄에서 컴파일할 때에 사용할 수는 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3a573-119">The `/filealign` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
+## <a name="see-also"></a><span data-ttu-id="3a573-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="3a573-120">See Also</span></span>  
+ [<span data-ttu-id="3a573-121">Visual Basic 명령줄 컴파일러</span><span class="sxs-lookup"><span data-stu-id="3a573-121">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)

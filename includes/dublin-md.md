@@ -1,1 +1,1 @@
-Windows Server AppFabric 호스팅 기능
+<span data-ttu-id="f3090-101">Windows Server AppFabric 호스팅 기능</span><span class="sxs-lookup"><span data-stu-id="f3090-101">hosting features of Windows Server AppFabric</span></span>

@@ -1,1 +1,1 @@
-EMF(확장 메타파일)
+<span data-ttu-id="6b2ba-101">EMF(확장 메타파일)</span><span class="sxs-lookup"><span data-stu-id="6b2ba-101">Enhanced Metafile (EMF)</span></span>

@@ -34,24 +34,24 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="selection-statements-c-reference"></a>선택문(C# 참조)
-선택문을 사용하면 특정 조건이 `true`인지 여부에 따라 프로그램 제어가 특정 흐름에 전송됩니다.  
+# <a name="selection-statements-c-reference"></a><span data-ttu-id="96581-102">선택문(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="96581-102">Selection Statements (C# Reference)</span></span>
+<span data-ttu-id="96581-103">선택문을 사용하면 특정 조건이 `true`인지 여부에 따라 프로그램 제어가 특정 흐름에 전송됩니다.</span><span class="sxs-lookup"><span data-stu-id="96581-103">A selection statement causes the program control to be transferred to a specific flow based upon whether a certain condition is `true` or not.</span></span>  
   
- 선택문에서 사용되는 키워드는 다음과 같습니다.  
+ <span data-ttu-id="96581-104">선택문에서 사용되는 키워드는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="96581-104">The following keywords are used in selection statements:</span></span>  
   
--   [if](../../../csharp/language-reference/keywords/if-else.md)  
+-   [<span data-ttu-id="96581-105">if</span><span class="sxs-lookup"><span data-stu-id="96581-105">if</span></span>](../../../csharp/language-reference/keywords/if-else.md)  
   
--   [else](../../../csharp/language-reference/keywords/if-else.md)  
+-   [<span data-ttu-id="96581-106">else</span><span class="sxs-lookup"><span data-stu-id="96581-106">else</span></span>](../../../csharp/language-reference/keywords/if-else.md)  
   
--   [switch](../../../csharp/language-reference/keywords/switch.md)  
+-   [<span data-ttu-id="96581-107">switch</span><span class="sxs-lookup"><span data-stu-id="96581-107">switch</span></span>](../../../csharp/language-reference/keywords/switch.md)  
   
--   [case](../../../csharp/language-reference/keywords/switch.md)  
+-   [<span data-ttu-id="96581-108">case</span><span class="sxs-lookup"><span data-stu-id="96581-108">case</span></span>](../../../csharp/language-reference/keywords/switch.md)  
   
--   [default](../../../csharp/language-reference/keywords/switch.md)  
+-   [<span data-ttu-id="96581-109">default</span><span class="sxs-lookup"><span data-stu-id="96581-109">default</span></span>](../../../csharp/language-reference/keywords/switch.md)  
 
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
- [문 키워드](../../../csharp/language-reference/keywords/statement-keywords.md)
+## <a name="see-also"></a><span data-ttu-id="96581-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="96581-110">See Also</span></span>  
+ <span data-ttu-id="96581-111">[C# 참조](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="96581-111">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="96581-112">[C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="96581-112">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="96581-113">[C# 키워드](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="96581-113">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ [<span data-ttu-id="96581-114">문 키워드</span><span class="sxs-lookup"><span data-stu-id="96581-114">Statement Keywords</span></span>](../../../csharp/language-reference/keywords/statement-keywords.md)
 

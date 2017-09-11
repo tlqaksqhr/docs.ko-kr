@@ -32,26 +32,27 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5ab2041826f74fdc5aceab7b1ceb26563d9b3f0a
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: d792485f13e2b675858d82aa7219670a17fd974e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="39ltinterfacenamegtltmembernamegt39-is-already-implemented-by-the-base-class-39ltbaseclassnamegt39-re-implementation-of-lttypegt-assumed"></a>'&lt;interfacename&gt;.&lt; membername&gt;'가 이미 구현 된 기본 클래스에서 '&lt;baseclassname&gt;'. 재구현 &lt;형식&gt; 가정
-속성, 프로시저 또는 파생된 클래스에서 이벤트를 사용 하는 `Implements` 절을 기본 클래스에서 이미 구현 된 인터페이스 멤버를 지정 합니다.  
+# <a name="39ltinterfacenamegtltmembernamegt39-is-already-implemented-by-the-base-class-39ltbaseclassnamegt39-re-implementation-of-lttypegt-assumed"></a><span data-ttu-id="5f984-103">'&lt;interfacename&gt;.&lt; membername&gt;'가 이미 구현 된 기본 클래스에서 '&lt;baseclassname&gt;'.</span><span class="sxs-lookup"><span data-stu-id="5f984-103">&#39;&lt;interfacename&gt;.&lt;membername&gt;&#39; is already implemented by the base class &#39;&lt;baseclassname&gt;&#39;.</span></span> <span data-ttu-id="5f984-104">재구현 &lt;형식&gt; 가정</span><span class="sxs-lookup"><span data-stu-id="5f984-104">Re-implementation of &lt;type&gt; assumed</span></span>
+<span data-ttu-id="5f984-105">속성, 프로시저 또는 파생된 클래스에서 이벤트를 사용 하는 `Implements` 절을 기본 클래스에서 이미 구현 된 인터페이스 멤버를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="5f984-105">A property, procedure, or event in a derived class uses an `Implements` clause specifying an interface member that is already implemented in the base class.</span></span>  
   
- 파생 클래스는 기본 클래스에 의해 구현된 인터페이스 멤버를 다시 구현할 수 있습니다. 이는 기본 클래스 구현 재정의와 다릅니다. 자세한 내용은 참조 [구현](../../../visual-basic/language-reference/statements/implements-clause.md)합니다.  
+ <span data-ttu-id="5f984-106">파생 클래스는 기본 클래스에 의해 구현된 인터페이스 멤버를 다시 구현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5f984-106">A derived class can reimplement an interface member that is implemented by its base class.</span></span> <span data-ttu-id="5f984-107">이는 기본 클래스 구현 재정의와 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="5f984-107">This is not the same as overriding the base class implementation.</span></span> <span data-ttu-id="5f984-108">자세한 내용은 참조 [구현](../../../visual-basic/language-reference/statements/implements-clause.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="5f984-108">For more information, see [Implements](../../../visual-basic/language-reference/statements/implements-clause.md).</span></span>  
   
- 이 메시지는 기본적으로 경고입니다. 경고를 숨기거나 오류로 처리하는 방법에 대한 자세한 내용은 [Configuring Warnings in Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic)을 참조하세요.  
+ <span data-ttu-id="5f984-109">이 메시지는 기본적으로 경고입니다.</span><span class="sxs-lookup"><span data-stu-id="5f984-109">By default, this message is a warning.</span></span> <span data-ttu-id="5f984-110">경고를 숨기거나 오류로 처리하는 방법에 대한 자세한 내용은 [Configuring Warnings in Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="5f984-110">For information on hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](https://docs.microsoft.com/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- **오류 ID:** BC42015  
+ <span data-ttu-id="5f984-111">**오류 ID:** BC42015</span><span class="sxs-lookup"><span data-stu-id="5f984-111">**Error ID:** BC42015</span></span>  
   
-## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
+## <a name="to-correct-this-error"></a><span data-ttu-id="5f984-112">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="5f984-112">To correct this error</span></span>  
   
--   인터페이스 멤버를 다시 구현하려는 경우 어떤 조치도 취할 필요가 없습니다. 파생된 클래스에서 코드를 사용 하지 않으면 재구현된 멤버에 액세스는 `MyBase` 키워드를 기본 클래스 구현에 액세스 합니다.  
+-   <span data-ttu-id="5f984-113">인터페이스 멤버를 다시 구현하려는 경우 어떤 조치도 취할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="5f984-113">If you intend to reimplement the interface member, you do not need to take any action.</span></span> <span data-ttu-id="5f984-114">파생된 클래스에서 코드를 사용 하지 않으면 재구현된 멤버에 액세스는 `MyBase` 키워드를 기본 클래스 구현에 액세스 합니다.</span><span class="sxs-lookup"><span data-stu-id="5f984-114">Code in your derived class accesses the reimplemented member unless you use the `MyBase` keyword to access the base class implementation.</span></span>  
   
--   인터페이스 멤버를 다시 구현하지 않으려는 경우 속성, 프로시저 또는 이벤트 선언에서 `Implements` 절을 제거합니다.  
+-   <span data-ttu-id="5f984-115">인터페이스 멤버를 다시 구현하지 않으려는 경우 속성, 프로시저 또는 이벤트 선언에서 `Implements` 절을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="5f984-115">If you do not intend to reimplement the interface member, remove the `Implements` clause from the property, procedure, or event declaration.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [인터페이스](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a><span data-ttu-id="5f984-116">참고 항목</span><span class="sxs-lookup"><span data-stu-id="5f984-116">See Also</span></span>  
+ [<span data-ttu-id="5f984-117">인터페이스</span><span class="sxs-lookup"><span data-stu-id="5f984-117">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

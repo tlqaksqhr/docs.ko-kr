@@ -1,1 +1,1 @@
-1.1부터 사용할 수 있음
+<span data-ttu-id="b345f-101">1.1부터 사용할 수 있음</span><span class="sxs-lookup"><span data-stu-id="b345f-101">Available since 1.1</span></span>

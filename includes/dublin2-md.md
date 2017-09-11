@@ -1,1 +1,1 @@
-호스팅 기능
+<span data-ttu-id="f559c-101">호스팅 기능</span><span class="sxs-lookup"><span data-stu-id="f559c-101">hosting features</span></span>

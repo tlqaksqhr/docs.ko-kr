@@ -55,10 +55,15 @@
 <!-- .NET Core Content -->
 # [.NET Core 가이드](core/index.md)
 ## [시작](core/get-started.md)
-## [.NET Core의 새로운 기능](core/whats-new/index.md)
+### [C# 및 Visual Studio Code 시작](core/tutorials/with-visual-studio-code.md)
+### [Visual Studio 2017에서 .NET Core를 사용하여 C# Hello World 앱 빌드](core/tutorials/with-visual-studio.md)
+### [Visual Studio 2017에서 .NET Core를 사용하여 Visual Basic Hello World 앱 빌드](core/tutorials/vb-with-visual-studio.md)
+### [Visual Studio 2017에서 C# 및 .NET Core로 클래스 라이브러리 빌드](core/tutorials/library-with-visual-studio.md)
+### [Visual Studio 2017에서 Visual Basic 및 .NET Core로 클래스 라이브러리 빌드](core/tutorials/vb-library-with-visual-studio.md)
 ## [Windows 필수 조건](core/windows-prerequisites.md)
 ## [macOS 필수 조건](core/macos-prerequisites.md)
 ## [Linux 필수 구성 요소](core/linux-prerequisites.md)
+## [.NET Core의 새로운 기능](core/whats-new/index.md)
 ## [자습서](core/tutorials/index.md)
 ### [Visual Studio 2017을 사용하여 Windows에서 완전한 .NET Core 솔루션 구축](core/tutorials/using-on-windows-full-solution.md)
 ### [C# 및 Visual Studio Code 시작](core/tutorials/with-visual-studio-code.md)
@@ -187,6 +192,7 @@
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
 ## [C#의 새로운 기능](csharp/whats-new/index.md) 
+### [C# 7.1의 새로운 기능](csharp/whats-new/csharp-7-1.md)
 ### [C# 7의 새로운 기능](csharp/whats-new/csharp-7.md)
 ### [C# 6의 새로운 기능](csharp/whats-new/csharp-6.md)
 ### [언어와 프레임워크 간 관계](csharp/whats-new/relationships-between-language-and-library.md)

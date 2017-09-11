@@ -3069,33 +3069,34 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 406a53192e8ce2cd56280dad01ebce3165d7e377
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: a2bd46f4dd217e4f61f875d8df9cc9d6f0ee5ceb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>죄송 하지만 되지 않았지만 비슷하므로이 Visual Basic 오류에
-죄송합니다. 이 오류에 대한 구체적인 정보가 없습니다. 오류 번호와 메시지 텍스트를 검색하여 웹에서 정보를 찾을 수 있습니다. 또는 다음 포럼 중 하나에서 다른 개발자에게 질문을 할 수 있습니다.  
+# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a><span data-ttu-id="9bd4f-102">죄송 하지만 되지 않았지만 비슷하므로이 Visual Basic 오류에</span><span class="sxs-lookup"><span data-stu-id="9bd4f-102">Sorry, we don&#39;t have specifics on this Visual Basic error</span></span>
+<span data-ttu-id="9bd4f-103">죄송합니다. 이 오류에 대한 구체적인 정보가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="9bd4f-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="9bd4f-104">오류 번호와 메시지 텍스트를 검색하여 웹에서 정보를 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9bd4f-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="9bd4f-105">또는 다음 포럼 중 하나에서 다른 개발자에게 질문을 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9bd4f-105">Or, you can ask other developers using one of these forums:</span></span>  
   
- [Visual Basic 언어](http://go.microsoft.com/fwlink/?LinkId=145963)  
- [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 언어 구문 및 컴파일러와 관련된 질문과 일반적인 토론을 위한 포럼을 제공합니다.  
+ [<span data-ttu-id="9bd4f-106">Visual Basic 언어</span><span class="sxs-lookup"><span data-stu-id="9bd4f-106">Visual Basic Language</span></span>](http://go.microsoft.com/fwlink/?LinkId=145963)  
+ <span data-ttu-id="9bd4f-107">[!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 언어 구문 및 컴파일러와 관련된 질문과 일반적인 토론을 위한 포럼을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="9bd4f-107">Provides a forum for questions about and general discussions of the [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] language syntax and compiler.</span></span>  
   
- [Visual Basic Interop 및 업그레이드](http://go.microsoft.com/fwlink/?LinkId=145966)  
- [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]으로의 업그레이드 및 상호 운용성 기능 사용과 관련한 질문과 문제를 위한 포럼을 제공합니다.  
+ [<span data-ttu-id="9bd4f-108">Visual Basic Interop 및 업그레이드</span><span class="sxs-lookup"><span data-stu-id="9bd4f-108">Visual Basic Interop and Upgrade</span></span>](http://go.microsoft.com/fwlink/?LinkId=145966)  
+ <span data-ttu-id="9bd4f-109">[!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]으로의 업그레이드 및 상호 운용성 기능 사용과 관련한 질문과 문제를 위한 포럼을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="9bd4f-109">Provides a forum for questions about and issues with upgrading to [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] and working with interoperability features.</span></span>  
   
- [Visual Basic IDE](http://go.microsoft.com/fwlink/?LinkId=145971)  
- [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] 환경에서 작업하는 방법과 관련된 질문을 위한 포럼을 제공합니다.  
+ [<span data-ttu-id="9bd4f-110">Visual Basic IDE</span><span class="sxs-lookup"><span data-stu-id="9bd4f-110">Visual Basic IDE</span></span>](http://go.microsoft.com/fwlink/?LinkId=145971)  
+ <span data-ttu-id="9bd4f-111">[!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] 환경에서 작업하는 방법과 관련된 질문을 위한 포럼을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="9bd4f-111">Provides a forum for questions about how to work in the [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] environment.</span></span>  
   
- [Visual Basic 일반](http://go.microsoft.com/fwlink/?LinkId=145973)  
- 다른 포럼에서 다루지 않는 [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 관련 질문과 문제를 위한 포럼을 제공합니다.  
+ [<span data-ttu-id="9bd4f-112">Visual Basic 일반</span><span class="sxs-lookup"><span data-stu-id="9bd4f-112">Visual Basic General</span></span>](http://go.microsoft.com/fwlink/?LinkId=145973)  
+ <span data-ttu-id="9bd4f-113">다른 포럼에서 다루지 않는 [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 관련 질문과 문제를 위한 포럼을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="9bd4f-113">Provides a forum for questions about and issues with [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] that are not discussed in other forums.</span></span>  
   
- [스택 오버플로](http://stackoverflow.com/questions/tagged/vb.net)  
- [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 관련 질문과 문제를 위한 포럼을 제공합니다.  
+ [<span data-ttu-id="9bd4f-114">스택 오버플로</span><span class="sxs-lookup"><span data-stu-id="9bd4f-114">StackOverflow</span></span>](http://stackoverflow.com/questions/tagged/vb.net)  
+ <span data-ttu-id="9bd4f-115">[!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 관련 질문과 문제를 위한 포럼을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="9bd4f-115">Provides a forum for questions about and issues with [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span></span>  
   
- 다음 항목도 참조하세요.  
- [Visual Basic 프로그래머를 위한 추가 리소스](../../visual-basic/getting-started/additional-resources.md)  
+ <span data-ttu-id="9bd4f-116">다음 항목도 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9bd4f-116">Also see:</span></span>  
+<span data-ttu-id="9bd4f-117"> [Visual Basic 프로그래머를 위한 추가 리소스](../../visual-basic/getting-started/additional-resources.md)</span><span class="sxs-lookup"><span data-stu-id="9bd4f-117"> [Additional Resources for Visual Basic Programmers](../../visual-basic/getting-started/additional-resources.md)</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [Visual Basic 프로그래밍 가이드](../../visual-basic/programming-guide/index.md)   
- [Visual Basic 참조](../../visual-basic/reference/index.md)
+## <a name="see-also"></a><span data-ttu-id="9bd4f-118">참고 항목</span><span class="sxs-lookup"><span data-stu-id="9bd4f-118">See Also</span></span>  
+ <span data-ttu-id="9bd4f-119">[Visual Basic 프로그래밍 가이드](../../visual-basic/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="9bd4f-119">[Visual Basic Programming Guide](../../visual-basic/programming-guide/index.md) </span></span>  
+<span data-ttu-id="9bd4f-120"> [Visual Basic 참조](../../visual-basic/reference/index.md)</span><span class="sxs-lookup"><span data-stu-id="9bd4f-120"> [Visual Basic Reference](../../visual-basic/reference/index.md)</span></span>

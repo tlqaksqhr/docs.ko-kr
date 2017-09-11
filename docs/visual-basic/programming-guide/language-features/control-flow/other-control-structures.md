@@ -31,25 +31,26 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 639571b493037f26951bd8fbf140d7bce3244889
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 8f8bd57f193be0d7f410f7325355ffc47ab10e3f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="other-control-structures-visual-basic"></a>기타 제어 구조(Visual Basic)
-[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]제어 구조 데 도움이 되는 리소스를 삭제 또는 개체 참조를 반복 해야 할 횟수를 줄이고 제공 합니다.  
+# <a name="other-control-structures-visual-basic"></a><span data-ttu-id="77432-102">기타 제어 구조(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="77432-102">Other Control Structures (Visual Basic)</span></span>
+[!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]<span data-ttu-id="77432-103">제어 구조 데 도움이 되는 리소스를 삭제 또는 개체 참조를 반복 해야 할 횟수를 줄이고 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="77432-103"> provides control structures that help you dispose of a resource or reduce the number of times you have to repeat an object reference.</span></span>  
   
-## <a name="usingend-using-construction"></a>사용 하 여... 생성을 사용 하 여  
- `Using...End Using` 구문은 문 블록을 할 때 SQL 연결 같은 리소스를 사용 합니다. 사용 하 여 리소스를 선택적으로 가져올 수는 `Using` 문입니다. 종료 하는 경우는 `Using` 블록 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 사용 하 여 다른 코드에 사용할 수 있도록 리소스의 자동으로 삭제 합니다. 리소스는 로컬 이며 삭제할 이어야 합니다. 자세한 내용은 참조 [문을 사용 하 여](../../../../visual-basic/language-reference/statements/using-statement.md)합니다.  
+## <a name="usingend-using-construction"></a><span data-ttu-id="77432-104">사용 하 여... 생성을 사용 하 여</span><span class="sxs-lookup"><span data-stu-id="77432-104">Using...End Using Construction</span></span>  
+ <span data-ttu-id="77432-105">`Using...End Using` 구문은 문 블록을 할 때 SQL 연결 같은 리소스를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="77432-105">The `Using...End Using` construction establishes a statement block within which you make use of a resource such as a SQL connection.</span></span> <span data-ttu-id="77432-106">사용 하 여 리소스를 선택적으로 가져올 수는 `Using` 문입니다.</span><span class="sxs-lookup"><span data-stu-id="77432-106">You can optionally acquire the resource with the `Using` statement.</span></span> <span data-ttu-id="77432-107">종료 하는 경우는 `Using` 블록 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 사용 하 여 다른 코드에 사용할 수 있도록 리소스의 자동으로 삭제 합니다.</span><span class="sxs-lookup"><span data-stu-id="77432-107">When you exit the `Using` block, [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] automatically disposes of the resource so that it is available for other code to use.</span></span> <span data-ttu-id="77432-108">리소스는 로컬 이며 삭제할 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="77432-108">The resource must be local and disposable.</span></span> <span data-ttu-id="77432-109">자세한 내용은 참조 [문을 사용 하 여](../../../../visual-basic/language-reference/statements/using-statement.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="77432-109">For more information, see [Using Statement](../../../../visual-basic/language-reference/statements/using-statement.md).</span></span>  
   
-## <a name="withend-with-construction"></a>와... 생성과 함께 종료 합니다.  
- `With...End With` 생성을 사용 하면 개체 참조를 한 번만 지정할 수 다음 일련의 해당 멤버에 액세스 하는 문 실행 합니다. 이 코드를 간소화할 수 있으며 때문에 성능이 향상 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 멤버에 액세스 하는 각 문에 대 한 참조를 다시 설정할 필요가 없습니다. 자세한 내용은 참조 [와... 문을 사용 하 여 종료](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)합니다.  
+## <a name="withend-with-construction"></a><span data-ttu-id="77432-110">와... 생성과 함께 종료 합니다.</span><span class="sxs-lookup"><span data-stu-id="77432-110">With...End With Construction</span></span>  
+ <span data-ttu-id="77432-111">`With...End With` 생성을 사용 하면 개체 참조를 한 번만 지정할 수 다음 일련의 해당 멤버에 액세스 하는 문 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="77432-111">The `With...End With` construction lets you specify an object reference once and then run a series of statements that access its members.</span></span> <span data-ttu-id="77432-112">이 코드를 간소화할 수 있으며 때문에 성능이 향상 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 멤버에 액세스 하는 각 문에 대 한 참조를 다시 설정할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="77432-112">This can simplify your code and improve performance because [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] does not have to re-establish the reference for each statement that accesses it.</span></span> <span data-ttu-id="77432-113">자세한 내용은 참조 [와... 문을 사용 하 여 종료](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="77432-113">For more information, see [With...End With Statement](../../../../visual-basic/language-reference/statements/with-end-with-statement.md).</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [제어 흐름](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)   
- [판단 구조](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)   
- [루프 구조](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)   
- [중첩된 제어 구조](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)   
- [문을 사용 하 여](../../../../visual-basic/language-reference/statements/using-statement.md)   
- [With...End With 문](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+## <a name="see-also"></a><span data-ttu-id="77432-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="77432-114">See Also</span></span>  
+ <span data-ttu-id="77432-115">[제어 흐름](../../../../visual-basic/programming-guide/language-features/control-flow/index.md) </span><span class="sxs-lookup"><span data-stu-id="77432-115">[Control Flow](../../../../visual-basic/programming-guide/language-features/control-flow/index.md) </span></span>  
+<span data-ttu-id="77432-116"> [판단 구조](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md) </span><span class="sxs-lookup"><span data-stu-id="77432-116"> [Decision Structures](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md) </span></span>  
+<span data-ttu-id="77432-117"> [루프 구조](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md) </span><span class="sxs-lookup"><span data-stu-id="77432-117"> [Loop Structures](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md) </span></span>  
+<span data-ttu-id="77432-118"> [중첩된 제어 구조](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md) </span><span class="sxs-lookup"><span data-stu-id="77432-118"> [Nested Control Structures](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md) </span></span>  
+<span data-ttu-id="77432-119"> [문을 사용 하 여](../../../../visual-basic/language-reference/statements/using-statement.md) </span><span class="sxs-lookup"><span data-stu-id="77432-119"> [Using Statement](../../../../visual-basic/language-reference/statements/using-statement.md) </span></span>  
+<span data-ttu-id="77432-120"> [With...End With 문](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)</span><span class="sxs-lookup"><span data-stu-id="77432-120"> [With...End With Statement](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)</span></span>

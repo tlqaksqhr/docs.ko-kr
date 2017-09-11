@@ -29,22 +29,23 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 58403a9aacc00e659807aff83031fe2ac80bbb40
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 74c4472230a3a8c54859771c0b2f7fc954ac0966
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="variable-uses-an-automation-type-not-supported-in-visual-basic"></a>변수가 Visual Basic에서 지원되지 않는 자동화 형식 사용
-형식 라이브러리 또는에서 지원 되지 않습니다 데이터 형식이 있는 개체 라이브러리에서 정의 된 변수를 사용 하 려 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]합니다.  
+# <a name="variable-uses-an-automation-type-not-supported-in-visual-basic"></a><span data-ttu-id="b5d89-102">변수가 Visual Basic에서 지원되지 않는 자동화 형식 사용</span><span class="sxs-lookup"><span data-stu-id="b5d89-102">Variable uses an Automation type not supported in Visual Basic</span></span>
+<span data-ttu-id="b5d89-103">형식 라이브러리 또는에서 지원 되지 않습니다 데이터 형식이 있는 개체 라이브러리에서 정의 된 변수를 사용 하 려 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="b5d89-103">You tried to use a variable defined in a type library or object library that has a data type not supported by [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span></span>  
   
-## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
+## <a name="to-correct-this-error"></a><span data-ttu-id="b5d89-104">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="b5d89-104">To correct this error</span></span>  
   
--   인식 하는 형식의 변수를 사용 하 여 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]합니다.  
+-   <span data-ttu-id="b5d89-105">인식 하는 형식의 변수를 사용 하 여 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="b5d89-105">Use a variable of a type recognized by [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span></span>  
   
-     또는  
+     <span data-ttu-id="b5d89-106">또는</span><span class="sxs-lookup"><span data-stu-id="b5d89-106">-or-</span></span>  
   
--   사용 하는 동안이 오류가 발생 하는 경우 `FileGet` 또는 `FileGetOBject`를 해야 사용 하려는 파일으로 쓴와 `FilePut` 또는 `FilePutObject`합니다.  
+-   <span data-ttu-id="b5d89-107">사용 하는 동안이 오류가 발생 하는 경우 `FileGet` 또는 `FileGetOBject`를 해야 사용 하려는 파일으로 쓴와 `FilePut` 또는 `FilePutObject`합니다.</span><span class="sxs-lookup"><span data-stu-id="b5d89-107">If you encounter this error while using `FileGet` or `FileGetOBject`, make sure the file you are trying to use was written to with `FilePut` or `FilePutObject`.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [데이터 형식](../../../visual-basic/language-reference/data-types/data-type-summary.md)
+## <a name="see-also"></a><span data-ttu-id="b5d89-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b5d89-108">See Also</span></span>  
+ [<span data-ttu-id="b5d89-109">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="b5d89-109">Data Types</span></span>](../../../visual-basic/language-reference/data-types/data-type-summary.md)

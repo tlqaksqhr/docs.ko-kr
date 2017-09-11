@@ -32,24 +32,25 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 795b1d47c2fef7246d23260b5a866ede8f4cadb8
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 01152cdbce5db3379f25b58cb39e6c9c8446562b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="identifier-expected"></a>식별자가 필요합니다.
-인식할 수 있는 선언 된 요소 이름이 없는 프로그래밍 요소에는 컨텍스트 요소 이름에는 필요한 경우 발생 합니다. 한 가지 가능한 원인은 아닌 다른 특성 어딘가에 지정 된 문의 시작 부분에 있습니다.  
+# <a name="identifier-expected"></a><span data-ttu-id="4d090-102">식별자가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="4d090-102">Identifier expected</span></span>
+<span data-ttu-id="4d090-103">인식할 수 있는 선언 된 요소 이름이 없는 프로그래밍 요소에는 컨텍스트 요소 이름에는 필요한 경우 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="4d090-103">A programming element that is not a recognizable declared element name occurs where the context requires an element name.</span></span> <span data-ttu-id="4d090-104">한 가지 가능한 원인은 아닌 다른 특성 어딘가에 지정 된 문의 시작 부분에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4d090-104">One possible cause is that an attribute has been specified somewhere other than at the beginning of the statement.</span></span>  
   
- **오류 ID:** BC30203  
+ <span data-ttu-id="4d090-105">**오류 ID:** BC30203</span><span class="sxs-lookup"><span data-stu-id="4d090-105">**Error ID:** BC30203</span></span>  
   
-## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
+## <a name="to-correct-this-error"></a><span data-ttu-id="4d090-106">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="4d090-106">To correct this error</span></span>  
   
--   모든 문에 모든 특성은 시작 부분에서 확인 하십시오.  
+-   <span data-ttu-id="4d090-107">모든 문에 모든 특성은 시작 부분에서 확인 하십시오.</span><span class="sxs-lookup"><span data-stu-id="4d090-107">Verify that any attributes in the statement are all placed at the beginning.</span></span>  
   
--   문에 모든 요소 이름을 제대로 입력 했는지 확인 합니다.  
+-   <span data-ttu-id="4d090-108">문에 모든 요소 이름을 제대로 입력 했는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="4d090-108">Verify that all element names in the statement are spelled correctly.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [선언된 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)   
- [특성 개요](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+## <a name="see-also"></a><span data-ttu-id="4d090-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4d090-109">See Also</span></span>  
+ <span data-ttu-id="4d090-110">[선언된 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md) </span><span class="sxs-lookup"><span data-stu-id="4d090-110">[Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md) </span></span>  
+<span data-ttu-id="4d090-111"> [특성 개요](../../../visual-basic/programming-guide/concepts/attributes/index.md)</span><span class="sxs-lookup"><span data-stu-id="4d090-111"> [Attributes overview](../../../visual-basic/programming-guide/concepts/attributes/index.md)</span></span>
  

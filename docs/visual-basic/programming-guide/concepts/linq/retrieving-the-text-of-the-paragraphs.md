@@ -15,30 +15,31 @@ ms.assetid: 095fa0d9-7b1b-4cbb-9c13-e2c9d8923d31
 caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 147c8e60e44fd71869df84cbee9836213d96c0fd
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: e26537c9aab97b3e4d77d34d9432078cf4792ef6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/12/2017
 
 
 ---
-# <a name="retrieving-the-text-of-the-paragraphs-visual-basic"></a>(Visual Basic) 단락의 텍스트를 검색합니다.
-이 예제에서는 앞의 예에서 [단락 및 해당 스타일 (Visual Basic) 검색](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)합니다. 이 새 예제에서는 각 단락의 텍스트를 문자열로 검색합니다.  
+# <a name="retrieving-the-text-of-the-paragraphs-visual-basic"></a><span data-ttu-id="b09b0-102">(Visual Basic) 단락의 텍스트를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="b09b0-102">Retrieving the Text of the Paragraphs (Visual Basic)</span></span>
+<span data-ttu-id="b09b0-103">이 예제에서는 앞의 예에서 [단락 및 해당 스타일 (Visual Basic) 검색](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b09b0-103">This example builds on the previous example, [Retrieving the Paragraphs and Their Styles (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md).</span></span> <span data-ttu-id="b09b0-104">이 새 예제에서는 각 단락의 텍스트를 문자열로 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="b09b0-104">This new example retrieves the text of each paragraph as a string.</span></span>  
   
- 이 예제에서는 텍스트를 검색하기 위해 익명 형식의 컬렉션을 반복하는 추가 쿼리를 추가하고 새 멤버 `Text`가 추가된 익명 형식의 새 컬렉션을 프로젝션합니다. 사용 하 여는 <xref:System.Linq.Enumerable.Aggregate%2A>표준 쿼리 연산자를 여러 문자열을 하나의 문자열로 연결 합니다.</xref:System.Linq.Enumerable.Aggregate%2A>  
+ <span data-ttu-id="b09b0-105">이 예제에서는 텍스트를 검색하기 위해 익명 형식의 컬렉션을 반복하는 추가 쿼리를 추가하고 새 멤버 `Text`가 추가된 익명 형식의 새 컬렉션을 프로젝션합니다.</span><span class="sxs-lookup"><span data-stu-id="b09b0-105">To retrieve the text, this example adds an additional query that iterates through the collection of anonymous types and projects a new collection of an anonymous type with the addition of a new member, `Text`.</span></span> <span data-ttu-id="b09b0-106">사용 하 여는 <xref:System.Linq.Enumerable.Aggregate%2A>표준 쿼리 연산자를 여러 문자열을 하나의 문자열로 연결 합니다.</xref:System.Linq.Enumerable.Aggregate%2A></span><span class="sxs-lookup"><span data-stu-id="b09b0-106">It uses the <xref:System.Linq.Enumerable.Aggregate%2A> standard query operator to concatenate multiple strings into one string.</span></span>  
   
- 먼저 익명 형식의 컬렉션을 프로젝션한 다음 이 컬렉션을 사용하여 익명 형식의 새 컬렉션을 프로젝션하는 방법은 일반적이고 유용합니다. 이 쿼리는 첫 번째 익명 형식으로 프로젝션하지 않고 작성될 수도 있습니다. 그러나 지연 계산 때문에 이렇게 해도 추가 처리 능력이 많이 사용되지 않습니다. 이 방법은 힙에서 수명이 짧은 개체를 더 많이 만들지만 이로 인해 성능이 크게 저하되지는 않습니다.  
+ <span data-ttu-id="b09b0-107">먼저 익명 형식의 컬렉션을 프로젝션한 다음 이 컬렉션을 사용하여 익명 형식의 새 컬렉션을 프로젝션하는 방법은 일반적이고 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="b09b0-107">This technique (that is, first projecting to a collection of an anonymous type, then using this collection to project to a new collection of an anonymous type) is a common and useful idiom.</span></span> <span data-ttu-id="b09b0-108">이 쿼리는 첫 번째 익명 형식으로 프로젝션하지 않고 작성될 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b09b0-108">This query could have been written without projecting to the first anonymous type.</span></span> <span data-ttu-id="b09b0-109">그러나 지연 계산 때문에 이렇게 해도 추가 처리 능력이 많이 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b09b0-109">However, because of lazy evaluation, doing so does not use much additional processing power.</span></span> <span data-ttu-id="b09b0-110">이 방법은 힙에서 수명이 짧은 개체를 더 많이 만들지만 이로 인해 성능이 크게 저하되지는 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b09b0-110">The idiom creates more short lived objects on the heap, but this does not substantially degrade performance.</span></span>  
   
- 물론 단락, 각 단락의 스타일 및 각 단락의 텍스트를 검색하는 기능이 포함된 단일 쿼리를 작성할 수도 있습니다. 그러나 복잡한 쿼리를 여러 쿼리로 나누면 생성되는 코드가 더욱 모듈화되고 유지 관리가 쉬워지기 때문에 유용한 경우가 많습니다. 또한 쿼리의 일부를 다시 사용해야 하는 경우 쿼리가 이런 방식으로 작성되면 리팩터링하기가 더 쉽습니다.  
+ <span data-ttu-id="b09b0-111">물론 단락, 각 단락의 스타일 및 각 단락의 텍스트를 검색하는 기능이 포함된 단일 쿼리를 작성할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b09b0-111">Of course, it would be possible to write a single query that contains the functionality to retrieve the paragraphs, the style of each paragraph, and the text of each paragraph.</span></span> <span data-ttu-id="b09b0-112">그러나 복잡한 쿼리를 여러 쿼리로 나누면 생성되는 코드가 더욱 모듈화되고 유지 관리가 쉬워지기 때문에 유용한 경우가 많습니다.</span><span class="sxs-lookup"><span data-stu-id="b09b0-112">However, it often is useful to break up a more complicated query into multiple queries because the resulting code is more modular and easier to maintain.</span></span> <span data-ttu-id="b09b0-113">또한 쿼리의 일부를 다시 사용해야 하는 경우 쿼리가 이런 방식으로 작성되면 리팩터링하기가 더 쉽습니다.</span><span class="sxs-lookup"><span data-stu-id="b09b0-113">Furthermore, if you need to reuse a portion of the query, it is easier to refactor if the queries are written in this manner.</span></span>  
   
- 이러한 쿼리는 서로 연결 된 항목에서 자세히 살펴본 처리 모델을 사용 하 여 [자습서: 지연 된 실행 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)합니다.  
+ <span data-ttu-id="b09b0-114">이러한 쿼리는 서로 연결 된 항목에서 자세히 살펴본 처리 모델을 사용 하 여 [자습서: 지연 된 실행 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b09b0-114">These queries, which are chained together, use the processing model that is examined in detail in the topic [Tutorial: Deferred Execution (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md).</span></span>  
   
-## <a name="example"></a>예제  
- 이 예제에서는 WordprocessingML 문서를 처리하여 요소 노드, 스타일 이름 및 각 단락의 텍스트를 확인합니다. 이 예제는 이 자습서의 이전 예제를 기반으로 합니다. 새 쿼리는 아래에 있는 코드의 주석에서 호출됩니다.  
+## <a name="example"></a><span data-ttu-id="b09b0-115">예제</span><span class="sxs-lookup"><span data-stu-id="b09b0-115">Example</span></span>  
+ <span data-ttu-id="b09b0-116">이 예제에서는 WordprocessingML 문서를 처리하여 요소 노드, 스타일 이름 및 각 단락의 텍스트를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="b09b0-116">This example processes a WordprocessingML document, determining the element node, the style name, and the text of each paragraph.</span></span> <span data-ttu-id="b09b0-117">이 예제는 이 자습서의 이전 예제를 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="b09b0-117">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="b09b0-118">새 쿼리는 아래에 있는 코드의 주석에서 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="b09b0-118">The new query is called out in comments in the code below.</span></span>  
   
- 이 예제에 대 한 소스 문서를 만들기 위한 지침을 참조 하십시오. [원본 Office Open XML 문서 (Visual Basic)를 만드는](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)합니다.  
+ <span data-ttu-id="b09b0-119">이 예제에 대 한 소스 문서를 만들기 위한 지침을 참조 하십시오. [원본 Office Open XML 문서 (Visual Basic)를 만드는](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b09b0-119">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- 이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 형식을 사용는 <xref:System.IO.Packaging?displayProperty=fullName>네임 스페이스.</xref:System.IO.Packaging?displayProperty=fullName>  
+ <span data-ttu-id="b09b0-120">이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고</span><span class="sxs-lookup"><span data-stu-id="b09b0-120">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="b09b0-121">형식을 사용는 <xref:System.IO.Packaging?displayProperty=fullName>네임 스페이스.</xref:System.IO.Packaging?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="b09b0-121">It uses types in the <xref:System.IO.Packaging?displayProperty=fullName> namespace.</span></span>  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -129,7 +130,7 @@ Module Module1
 End Module  
 ```  
   
- 이 예제는 다음에 설명 된 문서에 적용 하면 출력을 생성 [원본 Office Open XML 문서 (Visual Basic)를 만드는](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)합니다.  
+ <span data-ttu-id="b09b0-122">이 예제는 다음에 설명 된 문서에 적용 하면 출력을 생성 [원본 Office Open XML 문서 (Visual Basic)를 만드는](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b09b0-122">This example produces the following output when applied to the document described in [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -149,11 +150,11 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
-## <a name="next-steps"></a>다음 단계  
- 다음 예제에서는 확장 메서드를 대신 사용 하는 방법을 <xref:System.Linq.Enumerable.Aggregate%2A>여러 문자열을 단일 문자열로 연결 하.</xref:System.Linq.Enumerable.Aggregate%2A>  
+## <a name="next-steps"></a><span data-ttu-id="b09b0-123">다음 단계</span><span class="sxs-lookup"><span data-stu-id="b09b0-123">Next Steps</span></span>  
+ <span data-ttu-id="b09b0-124">다음 예제에서는 확장 메서드를 대신 사용 하는 방법을 <xref:System.Linq.Enumerable.Aggregate%2A>여러 문자열을 단일 문자열로 연결 하.</xref:System.Linq.Enumerable.Aggregate%2A></span><span class="sxs-lookup"><span data-stu-id="b09b0-124">The next example shows how to use an extension method, instead of <xref:System.Linq.Enumerable.Aggregate%2A>, to concatenate multiple strings into a single string.</span></span>  
   
--   [확장 메서드 (Visual Basic)를 사용 하 여 리팩터링](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
+-   [<span data-ttu-id="b09b0-125">확장 메서드 (Visual Basic)를 사용 하 여 리팩터링</span><span class="sxs-lookup"><span data-stu-id="b09b0-125">Refactoring Using an Extension Method (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
   
-## <a name="see-also"></a>참고 항목  
- [자습서: WordprocessingML 문서 (Visual Basic)에서 내용 조작](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)   
- [지연 된 실행과 지연 계산은 linq to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="b09b0-126">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b09b0-126">See Also</span></span>  
+ <span data-ttu-id="b09b0-127">[자습서: WordprocessingML 문서 (Visual Basic)에서 내용 조작](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) </span><span class="sxs-lookup"><span data-stu-id="b09b0-127">[Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) </span></span>  
+<span data-ttu-id="b09b0-128"> [지연 된 실행과 지연 계산은 linq to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)</span><span class="sxs-lookup"><span data-stu-id="b09b0-128"> [Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)</span></span>

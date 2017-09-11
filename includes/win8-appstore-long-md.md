@@ -1,1 +1,1 @@
-Windows 스토어
+<span data-ttu-id="485b0-101">Windows 스토어</span><span class="sxs-lookup"><span data-stu-id="485b0-101">Windows Store</span></span>

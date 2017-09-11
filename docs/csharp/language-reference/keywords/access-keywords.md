@@ -34,20 +34,20 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="access-keywords-c-reference"></a>액세스 키워드(C# 참조)
-이 섹션에서는 다음과 같은 액세스 키워드를 소개합니다.  
+# <a name="access-keywords-c-reference"></a><span data-ttu-id="2409b-102">액세스 키워드(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="2409b-102">Access Keywords (C# Reference)</span></span>
+<span data-ttu-id="2409b-103">이 섹션에서는 다음과 같은 액세스 키워드를 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="2409b-103">This section introduces the following access keywords:</span></span>  
   
--   [base](../../../csharp/language-reference/keywords/base.md)  
+-   [<span data-ttu-id="2409b-104">base</span><span class="sxs-lookup"><span data-stu-id="2409b-104">base</span></span>](../../../csharp/language-reference/keywords/base.md)  
   
-     기본 클래스의 멤버에 액세스합니다.  
+     <span data-ttu-id="2409b-105">기본 클래스의 멤버에 액세스합니다.</span><span class="sxs-lookup"><span data-stu-id="2409b-105">Accesses the members of the base class.</span></span>  
   
--   [this](../../../csharp/language-reference/keywords/this.md)  
+-   [<span data-ttu-id="2409b-106">this</span><span class="sxs-lookup"><span data-stu-id="2409b-106">this</span></span>](../../../csharp/language-reference/keywords/this.md)  
   
-     클래스의 현재 인스턴스를 참조합니다.  
+     <span data-ttu-id="2409b-107">클래스의 현재 인스턴스를 참조합니다.</span><span class="sxs-lookup"><span data-stu-id="2409b-107">Refers to the current instance of the class.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [액세스 한정자](../../../csharp/language-reference/keywords/access-modifiers.md)   
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="2409b-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="2409b-108">See Also</span></span>  
+ <span data-ttu-id="2409b-109">[C# 참조](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="2409b-109">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="2409b-110">[C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="2409b-110">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="2409b-111">[액세스 한정자](../../../csharp/language-reference/keywords/access-modifiers.md) </span><span class="sxs-lookup"><span data-stu-id="2409b-111">[Access Modifiers](../../../csharp/language-reference/keywords/access-modifiers.md) </span></span>  
+ [<span data-ttu-id="2409b-112">C# 키워드</span><span class="sxs-lookup"><span data-stu-id="2409b-112">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
 

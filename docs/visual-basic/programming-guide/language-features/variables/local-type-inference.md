@@ -39,69 +39,70 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2bb673ce871b8e875f62c373404a849c139ab598
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: af8de63eb00db917771600f0fca8f200ec451afe
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="local-type-inference-visual-basic"></a>지역 형식 유추(Visual Basic)
-Visual Basic 컴파일러를 사용 하 여 *형식 유추* 없이 선언 된 지역 변수의 데이터 형식을 결정 하는 `As` 절. 컴파일러는 초기화 식의 형식에서 변수의 형식을 유추합니다. 그러면 다음 예제와 같이 형식을 명시적으로 선언 하지 않고 변수를 선언할 수 있습니다. 선언 결과로 모두 `num1` 및 `num2` 는 정수로 강력한 형식입니다.  
+# <a name="local-type-inference-visual-basic"></a><span data-ttu-id="6189a-102">지역 형식 유추(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6189a-102">Local Type Inference (Visual Basic)</span></span>
+<span data-ttu-id="6189a-103">Visual Basic 컴파일러를 사용 하 여 *형식 유추* 없이 선언 된 지역 변수의 데이터 형식을 결정 하는 `As` 절.</span><span class="sxs-lookup"><span data-stu-id="6189a-103">The Visual Basic compiler uses *type inference* to determine the data types of local variables declared without an `As` clause.</span></span> <span data-ttu-id="6189a-104">컴파일러는 초기화 식의 형식에서 변수의 형식을 유추합니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-104">The compiler infers the type of the variable from the type of the initialization expression.</span></span> <span data-ttu-id="6189a-105">그러면 다음 예제와 같이 형식을 명시적으로 선언 하지 않고 변수를 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-105">This enables you to declare variables without explicitly stating a type, as shown in the following example.</span></span> <span data-ttu-id="6189a-106">선언 결과로 모두 `num1` 및 `num2` 는 정수로 강력한 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-106">As a result of the declarations, both `num1` and `num2` are strongly typed as integers.</span></span>  
   
- [!code-vb[VbVbalrTypeInference #&1;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_1.vb)]  
+ <span data-ttu-id="6189a-107">[!code-vb[VbVbalrTypeInference #&1;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="6189a-107">[!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_1.vb)]</span></span>  
   
 > [!NOTE]
->  원하지 않는 경우 `num2` 로 입력 하도록 이전 예제에는 `Integer`, 같은 선언을 사용 하 여 다른 형식을 지정할 수 있습니다 `Dim num3 As Object = 3` 또는 `Dim num4 As Double = 3`합니다.  
+>  <span data-ttu-id="6189a-108">원하지 않는 경우 `num2` 로 입력 하도록 이전 예제에는 `Integer`, 같은 선언을 사용 하 여 다른 형식을 지정할 수 있습니다 `Dim num3 As Object = 3` 또는 `Dim num4 As Double = 3`합니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-108">If you do not want `num2` in the previous example to be typed as an `Integer`, you can specify another type by using a declaration like `Dim num3 As Object = 3` or `Dim num4 As Double = 3`.</span></span>  
   
- 지역 형식 유추는 프로시저 수준에서 적용 됩니다. (클래스, 구조체, 모듈 또는 인터페이스를 제외한 내 프로시저 또는 블록) 모듈 수준 변수를 선언 하는 사용할 수 없습니다. 경우 `num2` 이전 예제에서 프로시저의 지역 변수 대신 클래스의 필드에서 선언 된 오류를 발생 시키는 `Option Strict` , 분류 및 `num2` 로 `Object` 와 `Option Strict` 해제 합니다. 마찬가지로, 지역 형식 유추 프로시저 수준 변수로 선언에 적용 되지 않습니다 `Static`합니다.  
+ <span data-ttu-id="6189a-109">지역 형식 유추는 프로시저 수준에서 적용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-109">Local type inference applies at procedure level.</span></span> <span data-ttu-id="6189a-110">(클래스, 구조체, 모듈 또는 인터페이스를 제외한 내 프로시저 또는 블록) 모듈 수준 변수를 선언 하는 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-110">It cannot be used to declare variables at module level (within a class, structure, module, or interface but not within a procedure or block).</span></span> <span data-ttu-id="6189a-111">경우 `num2` 이전 예제에서 프로시저의 지역 변수 대신 클래스의 필드에서 선언 된 오류를 발생 시키는 `Option Strict` , 분류 및 `num2` 로 `Object` 와 `Option Strict` 해제 합니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-111">If `num2` in the previous example were a field of a class instead of a local variable in a procedure, the declaration would cause an error with `Option Strict` on, and would classify `num2` as an `Object` with `Option Strict` off.</span></span> <span data-ttu-id="6189a-112">마찬가지로, 지역 형식 유추 프로시저 수준 변수로 선언에 적용 되지 않습니다 `Static`합니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-112">Similarly, local type inference does not apply to procedure level variables declared as `Static`.</span></span>  
   
-## <a name="type-inference-vs-late-binding"></a>형식 유추와 런타임에 바인딩  
- 형식 유추를 사용 하는 코드에는 후기 바인딩을 사용 하는 코드와 유사 합니다. 그러나 형식 유추가 유지 하는 대신 변수를 강력한 형식 `Object`합니다. 컴파일러는 변수의 이니셜라이저를 사용 하 여 변수의 형식을 초기 바인딩 코드를 생성 하는 컴파일 타임에 결정. 앞의 예제에서 `num2`마찬가지로 `num1`로 형식화 되는 `Integer`.  
+## <a name="type-inference-vs-late-binding"></a><span data-ttu-id="6189a-113">형식 유추와 런타임에 바인딩</span><span class="sxs-lookup"><span data-stu-id="6189a-113">Type Inference vs. Late Binding</span></span>  
+ <span data-ttu-id="6189a-114">형식 유추를 사용 하는 코드에는 후기 바인딩을 사용 하는 코드와 유사 합니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-114">Code that uses type inference resembles code that relies on late binding.</span></span> <span data-ttu-id="6189a-115">그러나 형식 유추가 유지 하는 대신 변수를 강력한 형식 `Object`합니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-115">However, type inference strongly types the variable instead of leaving it as `Object`.</span></span> <span data-ttu-id="6189a-116">컴파일러는 변수의 이니셜라이저를 사용 하 여 변수의 형식을 초기 바인딩 코드를 생성 하는 컴파일 타임에 결정.</span><span class="sxs-lookup"><span data-stu-id="6189a-116">The compiler uses a variable's initializer to determine the variable's type at compile time to produce early-bound code.</span></span> <span data-ttu-id="6189a-117">앞의 예제에서 `num2`마찬가지로 `num1`로 형식화 되는 `Integer`.</span><span class="sxs-lookup"><span data-stu-id="6189a-117">In the previous example, `num2`, like `num1`, is typed as an `Integer`.</span></span>  
   
- 초기 바인딩된 변수 동작은 런타임에 바인딩된 변수를 실행할 때만 형식이 알려져의 구현과 다릅니다. 유형을 일찍 알면 컴파일러를에 실행 하기 전에 문제를 식별, 정확 하 게 메모리 할당 및 기타 최적화를 수행할 수 있습니다. 초기 바인딩에는 또한 Visual Basic 통합된 개발 환경을 (IDE) 개체의 멤버에 대 한 IntelliSense 도움말을 제공할 수 있습니다. 초기 바인딩 성능에 대 한 기본 설정 이기도합니다. 런타임에 바인딩된 변수에 저장 된 모든 데이터 형식으로 묶어야 하기 때문에 이것이 `Object`, 느린 프로그램을 사용 하면 런타임에 형식의 멤버에 액세스 하 고 있습니다.  
+ <span data-ttu-id="6189a-118">초기 바인딩된 변수 동작은 런타임에 바인딩된 변수를 실행할 때만 형식이 알려져의 구현과 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-118">The behavior of early-bound variables differs from that of late-bound variables, for which the type is known only at run time.</span></span> <span data-ttu-id="6189a-119">유형을 일찍 알면 컴파일러를에 실행 하기 전에 문제를 식별, 정확 하 게 메모리 할당 및 기타 최적화를 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-119">Knowing the type early enables the compiler to identify problems before execution, allocate memory precisely, and perform other optimizations.</span></span> <span data-ttu-id="6189a-120">초기 바인딩에는 또한 Visual Basic 통합된 개발 환경을 (IDE) 개체의 멤버에 대 한 IntelliSense 도움말을 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-120">Early binding also enables the Visual Basic integrated development environment (IDE) to provide IntelliSense Help about the members of an object.</span></span> <span data-ttu-id="6189a-121">초기 바인딩 성능에 대 한 기본 설정 이기도합니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-121">Early binding is also preferred for performance.</span></span> <span data-ttu-id="6189a-122">런타임에 바인딩된 변수에 저장 된 모든 데이터 형식으로 묶어야 하기 때문에 이것이 `Object`, 느린 프로그램을 사용 하면 런타임에 형식의 멤버에 액세스 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-122">This is because all data stored in a late-bound variable must be wrapped as type `Object`, and accessing members of the type at run time makes the program slower.</span></span>  
   
-## <a name="examples"></a>예제  
- 지역 변수를 선언 하지 경우 형식 유추는 `As` 절 하 고 초기화 합니다. 컴파일러는 변수의 형식으로 할당된 된 초기 값의 형식을 사용합니다. 예를 들어 형식의 변수를 선언 코드의 다음 줄은 각각 `String`합니다.  
+## <a name="examples"></a><span data-ttu-id="6189a-123">예제</span><span class="sxs-lookup"><span data-stu-id="6189a-123">Examples</span></span>  
+ <span data-ttu-id="6189a-124">지역 변수를 선언 하지 경우 형식 유추는 `As` 절 하 고 초기화 합니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-124">Type inference occurs when a local variable is declared without an `As` clause and initialized.</span></span> <span data-ttu-id="6189a-125">컴파일러는 변수의 형식으로 할당된 된 초기 값의 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-125">The compiler uses the type of the assigned initial value as the type of the variable.</span></span> <span data-ttu-id="6189a-126">예를 들어 형식의 변수를 선언 코드의 다음 줄은 각각 `String`합니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-126">For example, each of the following lines of code declares a variable of type `String`.</span></span>  
   
- [!code-vb[VbVbalrTypeInference #&2;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_2.vb)]  
+ <span data-ttu-id="6189a-127">[!code-vb[VbVbalrTypeInference #&2;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_2.vb)]</span><span class="sxs-lookup"><span data-stu-id="6189a-127">[!code-vb[VbVbalrTypeInference#2](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_2.vb)]</span></span>  
   
- 다음 코드에는 정수 배열을 만드는 데 두 해당 하는 방법을 보여 줍니다.  
+ <span data-ttu-id="6189a-128">다음 코드에는 정수 배열을 만드는 데 두 해당 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-128">The following code demonstrates two equivalent ways to create an array of integers.</span></span>  
   
- [!code-vb[VbVbalrTypeInference #&3;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_3.vb)]  
+ <span data-ttu-id="6189a-129">[!code-vb[VbVbalrTypeInference #&3;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_3.vb)]</span><span class="sxs-lookup"><span data-stu-id="6189a-129">[!code-vb[VbVbalrTypeInference#3](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_3.vb)]</span></span>  
   
- 형식 유추를 사용 하 여 루프 제어 변수 유형을 결정 하는 것이 유용 합니다. 다음 코드에서는 컴파일러에서 유추 하는 `number` 는 `Integer` 때문에 `someNumbers2` 이전 예제에서 정수 배열이 됩니다.  
+ <span data-ttu-id="6189a-130">형식 유추를 사용 하 여 루프 제어 변수 유형을 결정 하는 것이 유용 합니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-130">It is convenient to use type inference to determine the type of a loop control variable.</span></span> <span data-ttu-id="6189a-131">다음 코드에서는 컴파일러에서 유추 하는 `number` 는 `Integer` 때문에 `someNumbers2` 이전 예제에서 정수 배열이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-131">In the following code, the compiler infers that `number` is an `Integer` because `someNumbers2` from the previous example is an array of integers.</span></span>  
   
- [!code-vb[VbVbalrTypeInference #&4;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_4.vb)]  
+ <span data-ttu-id="6189a-132">[!code-vb[VbVbalrTypeInference #&4;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_4.vb)]</span><span class="sxs-lookup"><span data-stu-id="6189a-132">[!code-vb[VbVbalrTypeInference#4](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_4.vb)]</span></span>  
   
- 지역 형식 유추를 사용할 수 있습니다 `Using` 다음 예제 에서처럼 리소스 이름의 형식을 설정 하는 문입니다.  
+ <span data-ttu-id="6189a-133">지역 형식 유추를 사용할 수 있습니다 `Using` 다음 예제 에서처럼 리소스 이름의 형식을 설정 하는 문입니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-133">Local type inference can be used in `Using` statements to establish the type of the resource name, as the following example demonstrates.</span></span>  
   
- [!code-vb[VbVbalrTypeInference #&7;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_5.vb)]  
+ <span data-ttu-id="6189a-134">[!code-vb[VbVbalrTypeInference #&7;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_5.vb)]</span><span class="sxs-lookup"><span data-stu-id="6189a-134">[!code-vb[VbVbalrTypeInference#7](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_5.vb)]</span></span>  
   
- 다음 예제 에서처럼 함수의 반환 값에서 변수의 형식의 유추할 수도 있습니다. 둘 다 `pList1` 및 `pList2` 때문에 프로세스는 배열 `Process.GetProcesses` 프로세스의 배열을 반환 합니다.  
+ <span data-ttu-id="6189a-135">다음 예제 에서처럼 함수의 반환 값에서 변수의 형식의 유추할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-135">The type of a variable can also be inferred from the return values of functions, as the following example demonstrates.</span></span> <span data-ttu-id="6189a-136">둘 다 `pList1` 및 `pList2` 때문에 프로세스는 배열 `Process.GetProcesses` 프로세스의 배열을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-136">Both `pList1` and `pList2` are arrays of processes because `Process.GetProcesses` returns an array of processes.</span></span>  
   
- [!code-vb[VbVbalrTypeInference #&5;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_6.vb)]  
+ <span data-ttu-id="6189a-137">[!code-vb[VbVbalrTypeInference #&5;](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_6.vb)]</span><span class="sxs-lookup"><span data-stu-id="6189a-137">[!code-vb[VbVbalrTypeInference#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_6.vb)]</span></span>  
   
-## <a name="option-infer"></a>Option Infer  
- `Option Infer`지역 형식 유추 특정 파일에서 허용 되는지 여부를 지정할 수 있습니다. 사용 하거나 옵션을 차단 하는 파일의 시작 부분에 다음 문 중 하나를 입력 합니다.  
+## <a name="option-infer"></a><span data-ttu-id="6189a-138">Option Infer</span><span class="sxs-lookup"><span data-stu-id="6189a-138">Option Infer</span></span>  
+ <span data-ttu-id="6189a-139">`Option Infer`지역 형식 유추 특정 파일에서 허용 되는지 여부를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-139">`Option Infer` enables you specify whether local type inference is allowed in a particular file.</span></span> <span data-ttu-id="6189a-140">사용 하거나 옵션을 차단 하는 파일의 시작 부분에 다음 문 중 하나를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-140">To enable or to block the option, type one of the following statements at the start of the file.</span></span>  
   
  `Option Infer On`  
   
  `Option Infer Off`  
   
- 에 대 한 값을 지정 하지 않으면 경우 `Option Infer` 컴파일러 기본값은 코드에서 `Option Infer On`합니다. 업그레이드 된 프로젝트에 대해 [!INCLUDE[vb_orcas_long](../../../../visual-basic/misc/includes/vb_orcas_long_md.md)] 컴파일러 기본값은 이전에 또는 `Option Infer Off`합니다.  
+ <span data-ttu-id="6189a-141">에 대 한 값을 지정 하지 않으면 경우 `Option Infer` 컴파일러 기본값은 코드에서 `Option Infer On`합니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-141">If you do not specify a value for `Option Infer` in your code, the compiler default is `Option Infer On`.</span></span> <span data-ttu-id="6189a-142">업그레이드 된 프로젝트에 대해 [!INCLUDE[vb_orcas_long](../../../../visual-basic/misc/includes/vb_orcas_long_md.md)] 컴파일러 기본값은 이전에 또는 `Option Infer Off`합니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-142">For projects upgraded from [!INCLUDE[vb_orcas_long](../../../../visual-basic/misc/includes/vb_orcas_long_md.md)] or earlier, the compiler default is `Option Infer Off`.</span></span>  
   
- 파일에서 `Option Infer`에 대해 설정된 값이 IDE 또는 명령줄에 설정된 값과 충돌하는 경우에는 파일의 값이 우선적으로 적용됩니다.  
+ <span data-ttu-id="6189a-143">파일에서 `Option Infer`에 대해 설정된 값이 IDE 또는 명령줄에 설정된 값과 충돌하는 경우에는 파일의 값이 우선적으로 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-143">If the value set for `Option Infer` in a file conflicts with the value set in the IDE or on the command line, the value in the file has precedence.</span></span>  
   
- 자세한 내용은 참조 [Option Infer 문](../../../../visual-basic/language-reference/statements/option-infer-statement.md) 및 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic)합니다.  
+ <span data-ttu-id="6189a-144">자세한 내용은 참조 [Option Infer 문](../../../../visual-basic/language-reference/statements/option-infer-statement.md) 및 [컴파일 페이지, 프로젝트 디자이너 (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic)합니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-144">For more information, see [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md) and [Compile Page, Project Designer (Visual Basic)](https://docs.microsoft.com/visualstudio/ide/reference/compile-page-project-designer-visual-basic).</span></span>  
   
-## <a name="restrictions"></a>제한 사항  
- 형식 유추는 정적이 아닌 로컬 변수;에 사용할 수 있습니다. 클래스 필드, 속성 또는 함수 형식을 결정에 사용할 수 없습니다.  
+## <a name="restrictions"></a><span data-ttu-id="6189a-145">제한 사항</span><span class="sxs-lookup"><span data-stu-id="6189a-145">Restrictions</span></span>  
+ <span data-ttu-id="6189a-146">형식 유추는 정적이 아닌 로컬 변수;에 사용할 수 있습니다. 클래스 필드, 속성 또는 함수 형식을 결정에 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="6189a-146">Type inference can be used only for non-static local variables; it cannot be used to determine the type of class fields, properties, or functions.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [익명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)   
- [초기 바인딩 및 런타임에 바인딩](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)   
- [각각에 대해... Next 문](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)   
- [...에 대 한 Next 문](../../../../visual-basic/language-reference/statements/for-next-statement.md)   
- [Option Infer 문](../../../../visual-basic/language-reference/statements/option-infer-statement.md)   
- [/optioninfer](../../../../visual-basic/reference/command-line-compiler/optioninfer.md)   
- [Visual Basic의 LINQ 소개](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+## <a name="see-also"></a><span data-ttu-id="6189a-147">참고 항목</span><span class="sxs-lookup"><span data-stu-id="6189a-147">See Also</span></span>  
+ <span data-ttu-id="6189a-148">[익명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) </span><span class="sxs-lookup"><span data-stu-id="6189a-148">[Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) </span></span>  
+<span data-ttu-id="6189a-149"> [초기 바인딩 및 런타임에 바인딩](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md) </span><span class="sxs-lookup"><span data-stu-id="6189a-149"> [Early and Late Binding](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md) </span></span>  
+<span data-ttu-id="6189a-150"> [각각에 대해... Next 문](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) </span><span class="sxs-lookup"><span data-stu-id="6189a-150"> [For Each...Next Statement](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) </span></span>  
+<span data-ttu-id="6189a-151"> [...에 대 한 Next 문](../../../../visual-basic/language-reference/statements/for-next-statement.md) </span><span class="sxs-lookup"><span data-stu-id="6189a-151"> [For...Next Statement](../../../../visual-basic/language-reference/statements/for-next-statement.md) </span></span>  
+<span data-ttu-id="6189a-152"> [Option Infer 문](../../../../visual-basic/language-reference/statements/option-infer-statement.md) </span><span class="sxs-lookup"><span data-stu-id="6189a-152"> [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md) </span></span>  
+<span data-ttu-id="6189a-153"> [/optioninfer](../../../../visual-basic/reference/command-line-compiler/optioninfer.md) </span><span class="sxs-lookup"><span data-stu-id="6189a-153"> [/optioninfer](../../../../visual-basic/reference/command-line-compiler/optioninfer.md) </span></span>  
+<span data-ttu-id="6189a-154"> [Visual Basic의 LINQ 소개](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)</span><span class="sxs-lookup"><span data-stu-id="6189a-154"> [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)</span></span>

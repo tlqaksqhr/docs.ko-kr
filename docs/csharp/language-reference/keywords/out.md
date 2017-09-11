@@ -38,13 +38,13 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 08/23/2017
 
 ---
-# <a name="out-c-reference"></a>out(C# 참조)
-다음 두 가지 상황에서 `out` 컨텍스트 키워드를 사용할 수 있습니다.
+# <a name="out-c-reference"></a><span data-ttu-id="b265a-102">out(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="b265a-102">out (C# Reference)</span></span>
+<span data-ttu-id="b265a-103">다음 두 가지 상황에서 `out` 컨텍스트 키워드를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b265a-103">You can use the `out` contextual keyword in two contexts:</span></span>
 
-- 값이 아닌 참조로 메서드에 인수를 전달할 수 있도록 하는 [매개 변수 한정자](../../../csharp/language-reference/keywords/out-parameter-modifier.md)로 사용
+- <span data-ttu-id="b265a-104">값이 아닌 참조로 메서드에 인수를 전달할 수 있도록 하는 [매개 변수 한정자](../../../csharp/language-reference/keywords/out-parameter-modifier.md)로 사용</span><span class="sxs-lookup"><span data-stu-id="b265a-104">As a [parameter modifier](../../../csharp/language-reference/keywords/out-parameter-modifier.md), which lets you pass an argument to a method by reference rather than by value.</span></span>
 
-- 형식 매개 변수를 공변(covariant)으로 지정하는 인터페이스 및 대리자에 대한 [제네릭 형식 매개 변수 선언](../../../csharp/language-reference/keywords/out-generic-modifier.md)에서 사용
+- <span data-ttu-id="b265a-105">형식 매개 변수를 공변(covariant)으로 지정하는 인터페이스 및 대리자에 대한 [제네릭 형식 매개 변수 선언](../../../csharp/language-reference/keywords/out-generic-modifier.md)에서 사용</span><span class="sxs-lookup"><span data-stu-id="b265a-105">In [generic type parameter declarations](../../../csharp/language-reference/keywords/out-generic-modifier.md) for interfaces and delegates, which specifies that a type parameter is covariant.</span></span>
    
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)
+## <a name="see-also"></a><span data-ttu-id="b265a-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b265a-106">See Also</span></span>  
+ [<span data-ttu-id="b265a-107">C# 참조</span><span class="sxs-lookup"><span data-stu-id="b265a-107">C# Reference</span></span>](../../../csharp/language-reference/index.md)
 

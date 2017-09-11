@@ -36,8 +36,8 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="endregion-c-reference"></a>#endregion(C# 참조)
-`#endregion`은 [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md) 블록의 끝을 표시합니다. 예:  
+# <a name="endregion-c-reference"></a><span data-ttu-id="bcbaf-102">#endregion(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="bcbaf-102">#endregion (C# Reference)</span></span>
+<span data-ttu-id="bcbaf-103">`#endregion`은 [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md) 블록의 끝을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="bcbaf-103">`#endregion` marks the end of a [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md) block.</span></span> <span data-ttu-id="bcbaf-104">예:</span><span class="sxs-lookup"><span data-stu-id="bcbaf-104">For example:</span></span>  
   
 ```csharp
 #region MyClass definition  
@@ -50,8 +50,8 @@ class MyClass
 #endregion  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C# 전처리기 지시문](../../../csharp/language-reference/preprocessor-directives/index.md)
+## <a name="see-also"></a><span data-ttu-id="bcbaf-105">참고 항목</span><span class="sxs-lookup"><span data-stu-id="bcbaf-105">See Also</span></span>  
+ <span data-ttu-id="bcbaf-106">[C# 참조](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="bcbaf-106">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="bcbaf-107">[C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="bcbaf-107">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="bcbaf-108">C# 전처리기 지시문</span><span class="sxs-lookup"><span data-stu-id="bcbaf-108">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
 

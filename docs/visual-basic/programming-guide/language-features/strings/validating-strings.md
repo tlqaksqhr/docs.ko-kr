@@ -34,28 +34,29 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 845c81cec69b6095b05682917e07c5d578127e20
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: eacb7b69ac848ef5a44728dcd85aaf3857fa00eb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="validating-strings-in-visual-basic"></a>Visual Basic의 문자열 유효성 검사
-이 섹션에서 문자열의 유효성을 검사 하는 방법에 설명 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]합니다.  
+# <a name="validating-strings-in-visual-basic"></a><span data-ttu-id="cf4fa-102">Visual Basic의 문자열 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="cf4fa-102">Validating Strings in Visual Basic</span></span>
+<span data-ttu-id="cf4fa-103">이 섹션에서 문자열의 유효성을 검사 하는 방법에 설명 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="cf4fa-103">This section discusses how to validate strings in [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)].</span></span>  
   
-## <a name="in-this-section"></a>단원 내용  
- [방법: Visual Basic에서 파일 이름 및 경로 유효성 검사](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-file-names-and-paths.md)  
- 파일 이름이 나 경로가 문자열을 나타내는지 여부를 확인 하는 방법.  
+## <a name="in-this-section"></a><span data-ttu-id="cf4fa-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="cf4fa-104">In This Section</span></span>  
+ [<span data-ttu-id="cf4fa-105">방법: Visual Basic에서 파일 이름 및 경로 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="cf4fa-105">How to: Validate File Names and Paths in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-file-names-and-paths.md)  
+ <span data-ttu-id="cf4fa-106">파일 이름이 나 경로가 문자열을 나타내는지 여부를 확인 하는 방법.</span><span class="sxs-lookup"><span data-stu-id="cf4fa-106">How to determine whether a string represents a file name or path.</span></span>  
   
- [방법: 날짜 또는 시간을 나타내는 문자열 확인](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-strings-that-represent-dates-or-times.md)  
- 문자열이 유효한 날짜를 나타내는지 확인 하는 방법입니다.  
+ [<span data-ttu-id="cf4fa-107">방법: 날짜 또는 시간을 나타내는 문자열 확인</span><span class="sxs-lookup"><span data-stu-id="cf4fa-107">How to: Validate Strings That Represent Dates or Times</span></span>](../../../../visual-basic/programming-guide/language-features/strings/how-to-validate-strings-that-represent-dates-or-times.md)  
+ <span data-ttu-id="cf4fa-108">문자열이 유효한 날짜를 나타내는지 확인 하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="cf4fa-108">How to determine whether a string represents a valid date.</span></span>  
   
- [Visual Basic에서 MaskedTextBox 컨트롤과 함께 정규식 사용](../../../../visual-basic/programming-guide/language-features/strings/using-regular-expressions-with-the-maskedtextbox-control.md)  
- 간단한 정규식에 맞게 변환 하는 방법을 보여 줍니다는 <xref:System.Windows.Forms.MaskedTextBox>제어 합니다.</xref:System.Windows.Forms.MaskedTextBox>  
+ [<span data-ttu-id="cf4fa-109">Visual Basic에서 MaskedTextBox 컨트롤과 함께 정규식 사용</span><span class="sxs-lookup"><span data-stu-id="cf4fa-109">Using Regular Expressions with the MaskedTextBox Control in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/using-regular-expressions-with-the-maskedtextbox-control.md)  
+ <span data-ttu-id="cf4fa-110">간단한 정규식에 맞게 변환 하는 방법을 보여 줍니다는 <xref:System.Windows.Forms.MaskedTextBox>제어 합니다.</xref:System.Windows.Forms.MaskedTextBox></span><span class="sxs-lookup"><span data-stu-id="cf4fa-110">Demonstrates how to convert simple regular expressions to work with the <xref:System.Windows.Forms.MaskedTextBox> control.</span></span>  
   
- [연습: 암호의 복합성 검사](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-validating-that-passwords-are-complex.md)  
- 문자열에 강력한 암호의 특징에 있는지 여부를 확인 하는 방법.  
+ [<span data-ttu-id="cf4fa-111">연습: 암호의 복합성 검사</span><span class="sxs-lookup"><span data-stu-id="cf4fa-111">Walkthrough: Validating That Passwords Are Complex</span></span>](../../../../visual-basic/programming-guide/language-features/strings/walkthrough-validating-that-passwords-are-complex.md)  
+ <span data-ttu-id="cf4fa-112">문자열에 강력한 암호의 특징에 있는지 여부를 확인 하는 방법.</span><span class="sxs-lookup"><span data-stu-id="cf4fa-112">How to determine whether a string has the characteristics of a strong password.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [문자열](../../../../visual-basic/programming-guide/language-features/strings/index.md)   
- [MaskedTextBox 컨트롤](http://msdn.microsoft.com/library/235d6121-027d-481d-8d59-4f6794d15d0c)
+## <a name="see-also"></a><span data-ttu-id="cf4fa-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="cf4fa-113">See Also</span></span>  
+ <span data-ttu-id="cf4fa-114">[문자열](../../../../visual-basic/programming-guide/language-features/strings/index.md) </span><span class="sxs-lookup"><span data-stu-id="cf4fa-114">[Strings](../../../../visual-basic/programming-guide/language-features/strings/index.md) </span></span>  
+<span data-ttu-id="cf4fa-115"> [MaskedTextBox 컨트롤](http://msdn.microsoft.com/library/235d6121-027d-481d-8d59-4f6794d15d0c)</span><span class="sxs-lookup"><span data-stu-id="cf4fa-115"> [MaskedTextBox Control](http://msdn.microsoft.com/library/235d6121-027d-481d-8d59-4f6794d15d0c)</span></span>

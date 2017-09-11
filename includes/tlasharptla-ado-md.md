@@ -1,1 +1,1 @@
-Microsoft ADO(ActiveX Data Objects)
+<span data-ttu-id="72755-101">Microsoft ADO(ActiveX Data Objects)</span><span class="sxs-lookup"><span data-stu-id="72755-101">Microsoft ActiveX Data Objects (ADO)</span></span>

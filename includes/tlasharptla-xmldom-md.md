@@ -1,1 +1,1 @@
-XML DOM(문서 개체 모델)
+<span data-ttu-id="ed687-101">XML DOM(문서 개체 모델)</span><span class="sxs-lookup"><span data-stu-id="ed687-101">XML Document Object Model (DOM)</span></span>

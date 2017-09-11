@@ -37,15 +37,15 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="in-c-reference"></a>in(C# 참조)
-`in` 상황별 키워드는 다음 세 가지 컨텍스트에서 사용됩니다.  
+# <a name="in-c-reference"></a><span data-ttu-id="89e8e-102">in(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="89e8e-102">in (C# Reference)</span></span>
+<span data-ttu-id="89e8e-103">`in` 상황별 키워드는 다음 세 가지 컨텍스트에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="89e8e-103">The `in` contextual keyword is used in three contexts:</span></span>  
   
--   [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 문  
+-   <span data-ttu-id="89e8e-104">[foreach](../../../csharp/language-reference/keywords/foreach-in.md) 문</span><span class="sxs-lookup"><span data-stu-id="89e8e-104">[foreach](../../../csharp/language-reference/keywords/foreach-in.md) statements</span></span>  
   
--   쿼리 식의 [join 절](../../../csharp/language-reference/keywords/join-clause.md)  
+-   <span data-ttu-id="89e8e-105">쿼리 식의 [join 절](../../../csharp/language-reference/keywords/join-clause.md)</span><span class="sxs-lookup"><span data-stu-id="89e8e-105">[join clauses](../../../csharp/language-reference/keywords/join-clause.md) in query expressions</span></span>  
   
--   제네릭 인터페이스와 대리자의 [제네릭 형식 매개 변수](../../../csharp/language-reference/keywords/in-generic-modifier.md)  
+-   <span data-ttu-id="89e8e-106">제네릭 인터페이스와 대리자의 [제네릭 형식 매개 변수](../../../csharp/language-reference/keywords/in-generic-modifier.md)</span><span class="sxs-lookup"><span data-stu-id="89e8e-106">[generic type parameters](../../../csharp/language-reference/keywords/in-generic-modifier.md) in generic interfaces and delegates.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)
+## <a name="see-also"></a><span data-ttu-id="89e8e-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="89e8e-107">See Also</span></span>  
+ [<span data-ttu-id="89e8e-108">C# 참조</span><span class="sxs-lookup"><span data-stu-id="89e8e-108">C# Reference</span></span>](../../../csharp/language-reference/index.md)
 

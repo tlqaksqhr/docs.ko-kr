@@ -26,87 +26,87 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>실행 방식에 따라 표준 쿼리 연산자 분류(C#)
-표준 쿼리 연산자 메서드의 LINQ to Objects 구현은 즉시 실행 또는 지연된 실행의 두 가지 기본 방식 중 하나로 실행됩니다. 지연된 실행을 사용하는 쿼리 연산자는 스트리밍 및 비스트리밍의 두 가지 범주로 추가로 구분할 수 있습니다. 여러 쿼리 연산자가 어떻게 실행되는지 알고 있으면 제공된 쿼리에서 얻을 결과를 이해하는 데 도움이 될 수 있습니다. 데이터 소스가 변경되거나 다른 쿼리 위에 쿼리를 빌드할 경우 특히 도움이 됩니다. 이 항목에서는 실행 방식에 따라 표준 쿼리 연산자를 분류합니다.  
+# <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a><span data-ttu-id="1d92e-102">실행 방식에 따라 표준 쿼리 연산자 분류(C#)</span><span class="sxs-lookup"><span data-stu-id="1d92e-102">Classification of Standard Query Operators by Manner of Execution (C#)</span></span>
+<span data-ttu-id="1d92e-103">표준 쿼리 연산자 메서드의 LINQ to Objects 구현은 즉시 실행 또는 지연된 실행의 두 가지 기본 방식 중 하나로 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="1d92e-103">The LINQ to Objects implementations of the standard query operator methods execute in one of two main ways: immediate or deferred.</span></span> <span data-ttu-id="1d92e-104">지연된 실행을 사용하는 쿼리 연산자는 스트리밍 및 비스트리밍의 두 가지 범주로 추가로 구분할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1d92e-104">The query operators that use deferred execution can be additionally divided into two categories: streaming and non-streaming.</span></span> <span data-ttu-id="1d92e-105">여러 쿼리 연산자가 어떻게 실행되는지 알고 있으면 제공된 쿼리에서 얻을 결과를 이해하는 데 도움이 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1d92e-105">If you know how the different query operators execute, it may help you understand the results that you get from a given query.</span></span> <span data-ttu-id="1d92e-106">데이터 소스가 변경되거나 다른 쿼리 위에 쿼리를 빌드할 경우 특히 도움이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="1d92e-106">This is especially true if the data source is changing or if you are building a query on top of another query.</span></span> <span data-ttu-id="1d92e-107">이 항목에서는 실행 방식에 따라 표준 쿼리 연산자를 분류합니다.</span><span class="sxs-lookup"><span data-stu-id="1d92e-107">This topic classifies the standard query operators according to their manner of execution.</span></span>  
   
-## <a name="manners-of-execution"></a>실행 방식  
+## <a name="manners-of-execution"></a><span data-ttu-id="1d92e-108">실행 방식</span><span class="sxs-lookup"><span data-stu-id="1d92e-108">Manners of Execution</span></span>  
   
-### <a name="immediate"></a>직접 실행  
- 즉시 실행은 코드의 쿼리가 선언되는 지점에서 데이터 소스를 읽고 작업이 수행됨을 의미합니다. 하나의 비열거형 결과를 반환하는 모든 표준 쿼리 연산자는 즉시 실행됩니다.  
+### <a name="immediate"></a><span data-ttu-id="1d92e-109">직접 실행</span><span class="sxs-lookup"><span data-stu-id="1d92e-109">Immediate</span></span>  
+ <span data-ttu-id="1d92e-110">즉시 실행은 코드의 쿼리가 선언되는 지점에서 데이터 소스를 읽고 작업이 수행됨을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="1d92e-110">Immediate execution means that the data source is read and the operation is performed at the point in the code where the query is declared.</span></span> <span data-ttu-id="1d92e-111">하나의 비열거형 결과를 반환하는 모든 표준 쿼리 연산자는 즉시 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="1d92e-111">All the standard query operators that return a single, non-enumerable result execute immediately.</span></span>  
   
-### <a name="deferred"></a>연기됨  
- 지연된 실행은 코드의 쿼리가 선언되는 지점에서 작업이 수행되지 않음을 의미합니다. 예를 들어 `foreach` 문을 사용하여 쿼리 변수가 열거될 경우에만 작업이 수행됩니다. 즉, 쿼리 실행 결과는 쿼리가 정의될 때가 아니라 쿼리가 실행될 때 데이터 소스의 내용에 따라 달라집니다. 쿼리 변수가 여러 번 열거될 경우 매번 결과가 다를 수 있습니다. 반환 형식이 <xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Linq.IOrderedEnumerable%601>인 표준 쿼리 연산자는 대부분 지연 방식으로 실행됩니다.  
+### <a name="deferred"></a><span data-ttu-id="1d92e-112">연기됨</span><span class="sxs-lookup"><span data-stu-id="1d92e-112">Deferred</span></span>  
+ <span data-ttu-id="1d92e-113">지연된 실행은 코드의 쿼리가 선언되는 지점에서 작업이 수행되지 않음을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="1d92e-113">Deferred execution means that the operation is not performed at the point in the code where the query is declared.</span></span> <span data-ttu-id="1d92e-114">예를 들어 `foreach` 문을 사용하여 쿼리 변수가 열거될 경우에만 작업이 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="1d92e-114">The operation is performed only when the query variable is enumerated, for example by using a `foreach` statement.</span></span> <span data-ttu-id="1d92e-115">즉, 쿼리 실행 결과는 쿼리가 정의될 때가 아니라 쿼리가 실행될 때 데이터 소스의 내용에 따라 달라집니다.</span><span class="sxs-lookup"><span data-stu-id="1d92e-115">This means that the results of executing the query depend on the contents of the data source when the query is executed rather than when the query is defined.</span></span> <span data-ttu-id="1d92e-116">쿼리 변수가 여러 번 열거될 경우 매번 결과가 다를 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1d92e-116">If the query variable is enumerated multiple times, the results might differ every time.</span></span> <span data-ttu-id="1d92e-117">반환 형식이 <xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Linq.IOrderedEnumerable%601>인 표준 쿼리 연산자는 대부분 지연 방식으로 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="1d92e-117">Almost all the standard query operators whose return type is <xref:System.Collections.Generic.IEnumerable%601> or <xref:System.Linq.IOrderedEnumerable%601> execute in a deferred manner.</span></span>  
   
- 지연된 실행을 사용하는 쿼리 연산자는 스트리밍 및 비스트리밍으로 추가로 분류할 수 있습니다.  
+ <span data-ttu-id="1d92e-118">지연된 실행을 사용하는 쿼리 연산자는 스트리밍 및 비스트리밍으로 추가로 분류할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1d92e-118">Query operators that use deferred execution can be additionally classified as streaming or non-streaming.</span></span>  
   
-#### <a name="streaming"></a>스트리밍  
- 스트리밍 연산자는 요소를 생성하기 전에 모든 소스 데이터를 읽을 필요가 없습니다. 실행 시 스트리밍 연산자는 소스 요소를 읽을 때 각 소스 요소에 대해 작업을 수행하고 해당하는 경우 요소를 생성합니다. 스트리밍 연산자는 결과 요소가 생성될 때까지 소스 요소를 계속 읽습니다. 즉, 두 개 이상의 소스 요소를 읽어 하나의 결과 요소를 생성할 수 있습니다.  
+#### <a name="streaming"></a><span data-ttu-id="1d92e-119">스트리밍</span><span class="sxs-lookup"><span data-stu-id="1d92e-119">Streaming</span></span>  
+ <span data-ttu-id="1d92e-120">스트리밍 연산자는 요소를 생성하기 전에 모든 소스 데이터를 읽을 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="1d92e-120">Streaming operators do not have to read all the source data before they yield elements.</span></span> <span data-ttu-id="1d92e-121">실행 시 스트리밍 연산자는 소스 요소를 읽을 때 각 소스 요소에 대해 작업을 수행하고 해당하는 경우 요소를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="1d92e-121">At the time of execution, a streaming operator performs its operation on each source element as it is read and yields the element if appropriate.</span></span> <span data-ttu-id="1d92e-122">스트리밍 연산자는 결과 요소가 생성될 때까지 소스 요소를 계속 읽습니다.</span><span class="sxs-lookup"><span data-stu-id="1d92e-122">A streaming operator continues to read source elements until a result element can be produced.</span></span> <span data-ttu-id="1d92e-123">즉, 두 개 이상의 소스 요소를 읽어 하나의 결과 요소를 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1d92e-123">This means that more than one source element might be read to produce one result element.</span></span>  
   
-#### <a name="non-streaming"></a>비스트리밍  
- 비스트리밍 연산자는 결과 요소를 생성하기 전에 모든 소스 데이터를 읽어야 합니다. 정렬 또는 그룹화 등의 작업은 이 범주로 분류됩니다. 실행 시 비스트리밍 쿼리 연산자는 모든 소스 데이터를 읽고, 데이터 구조에 넣고, 작업을 수행하고, 결과 요소를 생성합니다.  
+#### <a name="non-streaming"></a><span data-ttu-id="1d92e-124">비스트리밍</span><span class="sxs-lookup"><span data-stu-id="1d92e-124">Non-Streaming</span></span>  
+ <span data-ttu-id="1d92e-125">비스트리밍 연산자는 결과 요소를 생성하기 전에 모든 소스 데이터를 읽어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1d92e-125">Non-streaming operators must read all the source data before they can yield a result element.</span></span> <span data-ttu-id="1d92e-126">정렬 또는 그룹화 등의 작업은 이 범주로 분류됩니다.</span><span class="sxs-lookup"><span data-stu-id="1d92e-126">Operations such as sorting or grouping fall into this category.</span></span> <span data-ttu-id="1d92e-127">실행 시 비스트리밍 쿼리 연산자는 모든 소스 데이터를 읽고, 데이터 구조에 넣고, 작업을 수행하고, 결과 요소를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="1d92e-127">At the time of execution, non-streaming query operators read all the source data, put it into a data structure, perform the operation, and yield the resulting elements.</span></span>  
   
-## <a name="classification-table"></a>분류 표  
- 다음 표에서는 실행 방법에 따라 각 표준 쿼리 연산자 메서드를 분류합니다.  
+## <a name="classification-table"></a><span data-ttu-id="1d92e-128">분류 표</span><span class="sxs-lookup"><span data-stu-id="1d92e-128">Classification Table</span></span>  
+ <span data-ttu-id="1d92e-129">다음 표에서는 실행 방법에 따라 각 표준 쿼리 연산자 메서드를 분류합니다.</span><span class="sxs-lookup"><span data-stu-id="1d92e-129">The following table classifies each standard query operator method according to its method of execution.</span></span>  
   
 > [!NOTE]
->  한 연산자가 두 개의 열에 표시되어 있으면 두 개의 입력 시퀀스가 작업에 포함되고 각 시퀀스는 다르게 계산됩니다. 이러한 경우에 지연된 스트리밍 방식으로 계산되는 것은 항상 매개 변수 목록의 첫 번째 시퀀스입니다.  
+>  <span data-ttu-id="1d92e-130">한 연산자가 두 개의 열에 표시되어 있으면 두 개의 입력 시퀀스가 작업에 포함되고 각 시퀀스는 다르게 계산됩니다.</span><span class="sxs-lookup"><span data-stu-id="1d92e-130">If an operator is marked in two columns, two input sequences are involved in the operation, and each sequence is evaluated differently.</span></span> <span data-ttu-id="1d92e-131">이러한 경우에 지연된 스트리밍 방식으로 계산되는 것은 항상 매개 변수 목록의 첫 번째 시퀀스입니다.</span><span class="sxs-lookup"><span data-stu-id="1d92e-131">In these cases, it is always the first sequence in the parameter list that is evaluated in a deferred, streaming manner.</span></span>  
   
-|표준 쿼리 연산자|반환 형식|즉시 실행|지연된 스트리밍 실행|지연된 비스트리밍 실행|  
+|<span data-ttu-id="1d92e-132">표준 쿼리 연산자</span><span class="sxs-lookup"><span data-stu-id="1d92e-132">Standard Query Operator</span></span>|<span data-ttu-id="1d92e-133">반환 형식</span><span class="sxs-lookup"><span data-stu-id="1d92e-133">Return Type</span></span>|<span data-ttu-id="1d92e-134">즉시 실행</span><span class="sxs-lookup"><span data-stu-id="1d92e-134">Immediate Execution</span></span>|<span data-ttu-id="1d92e-135">지연된 스트리밍 실행</span><span class="sxs-lookup"><span data-stu-id="1d92e-135">Deferred Streaming Execution</span></span>|<span data-ttu-id="1d92e-136">지연된 비스트리밍 실행</span><span class="sxs-lookup"><span data-stu-id="1d92e-136">Deferred Non-Streaming Execution</span></span>|  
 |-----------------------------|-----------------|-------------------------|----------------------------------|---------------------------------------|  
-|<xref:System.Linq.Enumerable.Aggregate%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.All%2A>|<xref:System.Boolean>|X|||  
-|<xref:System.Linq.Enumerable.Any%2A>|<xref:System.Boolean>|X|||  
-|<xref:System.Linq.Enumerable.AsEnumerable%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.Average%2A>|단일 숫자 값|X|||  
-|<xref:System.Linq.Enumerable.Cast%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.Concat%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.Contains%2A>|<xref:System.Boolean>|X|||  
-|<xref:System.Linq.Enumerable.Count%2A>|<xref:System.Int32>|X|||  
-|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.Distinct%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.ElementAt%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.Empty%2A>|<xref:System.Collections.Generic.IEnumerable%601>|X|||  
-|<xref:System.Linq.Enumerable.Except%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X|X|  
-|<xref:System.Linq.Enumerable.First%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.FirstOrDefault%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.GroupBy%2A>|<xref:System.Collections.Generic.IEnumerable%601>|||X|  
-|<xref:System.Linq.Enumerable.GroupJoin%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X|X|  
-<xref:System.Linq.Enumerable.Intersect%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X|X|  
-|<xref:System.Linq.Enumerable.Join%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X|X|  
-|<xref:System.Linq.Enumerable.Last%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.LastOrDefault%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.LongCount%2A>|<xref:System.Int64>|X|||  
-|<xref:System.Linq.Enumerable.Max%2A>|단일 숫자 값, TSource 또는 TResult|X|||  
-|<xref:System.Linq.Enumerable.Min%2A>|단일 숫자 값, TSource 또는 TResult|X|||  
-|<xref:System.Linq.Enumerable.OfType%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.OrderBy%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||X|  
-|<xref:System.Linq.Enumerable.OrderByDescending%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||X|  
-|<xref:System.Linq.Enumerable.Range%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.Repeat%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.Reverse%2A>|<xref:System.Collections.Generic.IEnumerable%601>|||X|  
-|<xref:System.Linq.Enumerable.Select%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.SelectMany%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.SequenceEqual%2A>|<xref:System.Boolean>|X|||  
-|<xref:System.Linq.Enumerable.Single%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.SingleOrDefault%2A>|TSource|X|||  
-|<xref:System.Linq.Enumerable.Skip%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.SkipWhile%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.Sum%2A>|단일 숫자 값|X|||  
-|<xref:System.Linq.Enumerable.Take%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-<xref:System.Linq.Enumerable.TakeWhile%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.ThenBy%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||X|  
-|<xref:System.Linq.Enumerable.ThenByDescending%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||X|  
-|<xref:System.Linq.Enumerable.ToArray%2A>|TSource 배열|X|||  
-|<xref:System.Linq.Enumerable.ToDictionary%2A>|<xref:System.Collections.Generic.Dictionary%602>|X|||  
-|<xref:System.Linq.Enumerable.ToList%2A>|<xref:System.Collections.Generic.IList%601>|X|||  
-|<xref:System.Linq.Enumerable.ToLookup%2A>|<xref:System.Linq.ILookup%602>|X|||  
-|<xref:System.Linq.Enumerable.Union%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
-|<xref:System.Linq.Enumerable.Where%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
+|<xref:System.Linq.Enumerable.Aggregate%2A>|<span data-ttu-id="1d92e-137">TSource</span><span class="sxs-lookup"><span data-stu-id="1d92e-137">TSource</span></span>|<span data-ttu-id="1d92e-138">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-138">X</span></span>|||  
+|<xref:System.Linq.Enumerable.All%2A>|<xref:System.Boolean>|<span data-ttu-id="1d92e-139">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-139">X</span></span>|||  
+|<xref:System.Linq.Enumerable.Any%2A>|<xref:System.Boolean>|<span data-ttu-id="1d92e-140">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-140">X</span></span>|||  
+|<xref:System.Linq.Enumerable.AsEnumerable%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="1d92e-141">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-141">X</span></span>||  
+|<xref:System.Linq.Enumerable.Average%2A>|<span data-ttu-id="1d92e-142">단일 숫자 값</span><span class="sxs-lookup"><span data-stu-id="1d92e-142">Single numeric value</span></span>|<span data-ttu-id="1d92e-143">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-143">X</span></span>|||  
+|<xref:System.Linq.Enumerable.Cast%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="1d92e-144">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-144">X</span></span>||  
+|<xref:System.Linq.Enumerable.Concat%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="1d92e-145">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-145">X</span></span>||  
+|<xref:System.Linq.Enumerable.Contains%2A>|<xref:System.Boolean>|<span data-ttu-id="1d92e-146">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-146">X</span></span>|||  
+|<xref:System.Linq.Enumerable.Count%2A>|<xref:System.Int32>|<span data-ttu-id="1d92e-147">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-147">X</span></span>|||  
+|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="1d92e-148">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-148">X</span></span>||  
+|<xref:System.Linq.Enumerable.Distinct%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="1d92e-149">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-149">X</span></span>||  
+|<xref:System.Linq.Enumerable.ElementAt%2A>|<span data-ttu-id="1d92e-150">TSource</span><span class="sxs-lookup"><span data-stu-id="1d92e-150">TSource</span></span>|<span data-ttu-id="1d92e-151">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-151">X</span></span>|||  
+|<xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|<span data-ttu-id="1d92e-152">TSource</span><span class="sxs-lookup"><span data-stu-id="1d92e-152">TSource</span></span>|<span data-ttu-id="1d92e-153">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-153">X</span></span>|||  
+|<xref:System.Linq.Enumerable.Empty%2A>|<xref:System.Collections.Generic.IEnumerable%601>|<span data-ttu-id="1d92e-154">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-154">X</span></span>|||  
+|<xref:System.Linq.Enumerable.Except%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="1d92e-155">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-155">X</span></span>|<span data-ttu-id="1d92e-156">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-156">X</span></span>|  
+|<xref:System.Linq.Enumerable.First%2A>|<span data-ttu-id="1d92e-157">TSource</span><span class="sxs-lookup"><span data-stu-id="1d92e-157">TSource</span></span>|<span data-ttu-id="1d92e-158">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-158">X</span></span>|||  
+|<xref:System.Linq.Enumerable.FirstOrDefault%2A>|<span data-ttu-id="1d92e-159">TSource</span><span class="sxs-lookup"><span data-stu-id="1d92e-159">TSource</span></span>|<span data-ttu-id="1d92e-160">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-160">X</span></span>|||  
+|<xref:System.Linq.Enumerable.GroupBy%2A>|<xref:System.Collections.Generic.IEnumerable%601>|||<span data-ttu-id="1d92e-161">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-161">X</span></span>|  
+|<xref:System.Linq.Enumerable.GroupJoin%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="1d92e-162">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-162">X</span></span>|<span data-ttu-id="1d92e-163">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-163">X</span></span>|  
+<xref:System.Linq.Enumerable.Intersect%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="1d92e-164">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-164">X</span></span>|<span data-ttu-id="1d92e-165">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-165">X</span></span>|  
+|<xref:System.Linq.Enumerable.Join%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="1d92e-166">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-166">X</span></span>|<span data-ttu-id="1d92e-167">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-167">X</span></span>|  
+|<xref:System.Linq.Enumerable.Last%2A>|<span data-ttu-id="1d92e-168">TSource</span><span class="sxs-lookup"><span data-stu-id="1d92e-168">TSource</span></span>|<span data-ttu-id="1d92e-169">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-169">X</span></span>|||  
+|<xref:System.Linq.Enumerable.LastOrDefault%2A>|<span data-ttu-id="1d92e-170">TSource</span><span class="sxs-lookup"><span data-stu-id="1d92e-170">TSource</span></span>|<span data-ttu-id="1d92e-171">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-171">X</span></span>|||  
+|<xref:System.Linq.Enumerable.LongCount%2A>|<xref:System.Int64>|<span data-ttu-id="1d92e-172">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-172">X</span></span>|||  
+|<xref:System.Linq.Enumerable.Max%2A>|<span data-ttu-id="1d92e-173">단일 숫자 값, TSource 또는 TResult</span><span class="sxs-lookup"><span data-stu-id="1d92e-173">Single numeric value, TSource, or TResult</span></span>|<span data-ttu-id="1d92e-174">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-174">X</span></span>|||  
+|<xref:System.Linq.Enumerable.Min%2A>|<span data-ttu-id="1d92e-175">단일 숫자 값, TSource 또는 TResult</span><span class="sxs-lookup"><span data-stu-id="1d92e-175">Single numeric value, TSource, or TResult</span></span>|<span data-ttu-id="1d92e-176">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-176">X</span></span>|||  
+|<xref:System.Linq.Enumerable.OfType%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="1d92e-177">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-177">X</span></span>||  
+|<xref:System.Linq.Enumerable.OrderBy%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||<span data-ttu-id="1d92e-178">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-178">X</span></span>|  
+|<xref:System.Linq.Enumerable.OrderByDescending%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||<span data-ttu-id="1d92e-179">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-179">X</span></span>|  
+|<xref:System.Linq.Enumerable.Range%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="1d92e-180">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-180">X</span></span>||  
+|<xref:System.Linq.Enumerable.Repeat%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="1d92e-181">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-181">X</span></span>||  
+|<xref:System.Linq.Enumerable.Reverse%2A>|<xref:System.Collections.Generic.IEnumerable%601>|||<span data-ttu-id="1d92e-182">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-182">X</span></span>|  
+|<xref:System.Linq.Enumerable.Select%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="1d92e-183">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-183">X</span></span>||  
+|<xref:System.Linq.Enumerable.SelectMany%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="1d92e-184">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-184">X</span></span>||  
+|<xref:System.Linq.Enumerable.SequenceEqual%2A>|<xref:System.Boolean>|<span data-ttu-id="1d92e-185">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-185">X</span></span>|||  
+|<xref:System.Linq.Enumerable.Single%2A>|<span data-ttu-id="1d92e-186">TSource</span><span class="sxs-lookup"><span data-stu-id="1d92e-186">TSource</span></span>|<span data-ttu-id="1d92e-187">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-187">X</span></span>|||  
+|<xref:System.Linq.Enumerable.SingleOrDefault%2A>|<span data-ttu-id="1d92e-188">TSource</span><span class="sxs-lookup"><span data-stu-id="1d92e-188">TSource</span></span>|<span data-ttu-id="1d92e-189">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-189">X</span></span>|||  
+|<xref:System.Linq.Enumerable.Skip%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="1d92e-190">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-190">X</span></span>||  
+|<xref:System.Linq.Enumerable.SkipWhile%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="1d92e-191">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-191">X</span></span>||  
+|<xref:System.Linq.Enumerable.Sum%2A>|<span data-ttu-id="1d92e-192">단일 숫자 값</span><span class="sxs-lookup"><span data-stu-id="1d92e-192">Single numeric value</span></span>|<span data-ttu-id="1d92e-193">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-193">X</span></span>|||  
+|<xref:System.Linq.Enumerable.Take%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="1d92e-194">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-194">X</span></span>||  
+<xref:System.Linq.Enumerable.TakeWhile%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="1d92e-195">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-195">X</span></span>||  
+|<xref:System.Linq.Enumerable.ThenBy%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||<span data-ttu-id="1d92e-196">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-196">X</span></span>|  
+|<xref:System.Linq.Enumerable.ThenByDescending%2A>|<xref:System.Linq.IOrderedEnumerable%601>|||<span data-ttu-id="1d92e-197">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-197">X</span></span>|  
+|<xref:System.Linq.Enumerable.ToArray%2A>|<span data-ttu-id="1d92e-198">TSource 배열</span><span class="sxs-lookup"><span data-stu-id="1d92e-198">TSource array</span></span>|<span data-ttu-id="1d92e-199">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-199">X</span></span>|||  
+|<xref:System.Linq.Enumerable.ToDictionary%2A>|<xref:System.Collections.Generic.Dictionary%602>|<span data-ttu-id="1d92e-200">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-200">X</span></span>|||  
+|<xref:System.Linq.Enumerable.ToList%2A>|<xref:System.Collections.Generic.IList%601>|<span data-ttu-id="1d92e-201">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-201">X</span></span>|||  
+|<xref:System.Linq.Enumerable.ToLookup%2A>|<xref:System.Linq.ILookup%602>|<span data-ttu-id="1d92e-202">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-202">X</span></span>|||  
+|<xref:System.Linq.Enumerable.Union%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="1d92e-203">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-203">X</span></span>||  
+|<xref:System.Linq.Enumerable.Where%2A>|<xref:System.Collections.Generic.IEnumerable%601>||<span data-ttu-id="1d92e-204">X</span><span class="sxs-lookup"><span data-stu-id="1d92e-204">X</span></span>||  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Linq.Enumerable>   
- [표준 쿼리 연산자 개요(C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [표준 쿼리 연산자의 쿼리 식 구문(C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)   
- [LINQ to Objects(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+## <a name="see-also"></a><span data-ttu-id="1d92e-205">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1d92e-205">See Also</span></span>  
+ <span data-ttu-id="1d92e-206"><xref:System.Linq.Enumerable></span><span class="sxs-lookup"><span data-stu-id="1d92e-206"><xref:System.Linq.Enumerable></span></span>   
+ <span data-ttu-id="1d92e-207">[표준 쿼리 연산자 개요(C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) </span><span class="sxs-lookup"><span data-stu-id="1d92e-207">[Standard Query Operators Overview (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) </span></span>  
+ <span data-ttu-id="1d92e-208">[표준 쿼리 연산자의 쿼리 식 구문(C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md) </span><span class="sxs-lookup"><span data-stu-id="1d92e-208">[Query Expression Syntax for Standard Query Operators (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md) </span></span>  
+ [<span data-ttu-id="1d92e-209">LINQ to Objects(C#)</span><span class="sxs-lookup"><span data-stu-id="1d92e-209">LINQ to Objects (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
 

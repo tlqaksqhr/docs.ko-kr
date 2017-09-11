@@ -1,1 +1,1 @@
-4부터 사용할 수 있음
+<span data-ttu-id="f7a4b-101">4부터 사용할 수 있음</span><span class="sxs-lookup"><span data-stu-id="f7a4b-101">Available since 4</span></span>

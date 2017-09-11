@@ -1,1 +1,1 @@
-Microsoft BITS(Background Intelligent Transfer Service)
+<span data-ttu-id="14a80-101">Microsoft BITS(Background Intelligent Transfer Service)</span><span class="sxs-lookup"><span data-stu-id="14a80-101">Microsoft Background Intelligent Transfer Service (BITS)</span></span>

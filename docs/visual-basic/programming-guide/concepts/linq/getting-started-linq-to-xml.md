@@ -20,25 +20,26 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d22aa3ee7001fb9bde7b81398959888074349cc8
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: f719affb54f0e0be13febdb695cce1ae86aee996
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="getting-started-linq-to-xml"></a>시작(LINQ to XML)
-다음 항목에는 LINQ to XML 소개합니다.  
+# <a name="getting-started-linq-to-xml"></a><span data-ttu-id="36368-102">시작(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="36368-102">Getting Started (LINQ to XML)</span></span>
+<span data-ttu-id="36368-103">다음 항목에는 LINQ to XML 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="36368-103">The following topics introduce LINQ to XML.</span></span>  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a><span data-ttu-id="36368-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="36368-104">In This Section</span></span>  
   
-|항목|설명|  
+|<span data-ttu-id="36368-105">항목</span><span class="sxs-lookup"><span data-stu-id="36368-105">Topic</span></span>|<span data-ttu-id="36368-106">설명</span><span class="sxs-lookup"><span data-stu-id="36368-106">Description</span></span>|  
 |-----------|-----------------|  
-|[LINQ to XML 개요 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-overview.md)|LINQ to XML 기술에 간략하게 설명 합니다.|  
-|[LINQ to XML과 DOM (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)|LINQ to XML 문서 개체 모델 (DOM)을 비교합니다.|  
-|[LINQ to XML과 기타 XML 기술 비교](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)|LINQ to XML 다른 XML 구문 분석 및 조작 기술과 비교: XmlReader, XSLT, MSXML 및 XmlLite와 합니다.|  
+|[<span data-ttu-id="36368-107">LINQ to XML 개요 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="36368-107">LINQ to XML Overview (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-overview.md)|<span data-ttu-id="36368-108">LINQ to XML 기술에 간략하게 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="36368-108">Provides an overview of the LINQ to XML technology.</span></span>|  
+|[<span data-ttu-id="36368-109">LINQ to XML과 DOM (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="36368-109">LINQ to XML vs. DOM (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)|<span data-ttu-id="36368-110">LINQ to XML 문서 개체 모델 (DOM)을 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="36368-110">Compares LINQ to XML to the Document Object Model (DOM).</span></span>|  
+|[<span data-ttu-id="36368-111">LINQ to XML과 기타 XML 기술 비교</span><span class="sxs-lookup"><span data-stu-id="36368-111">LINQ to XML vs. Other XML Technologies</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)|<span data-ttu-id="36368-112">LINQ to XML 다른 XML 구문 분석 및 조작 기술과 비교: XmlReader, XSLT, MSXML 및 XmlLite와 합니다.</span><span class="sxs-lookup"><span data-stu-id="36368-112">Compares LINQ to XML to other XML parsing and manipulation technologies: XmlReader, XSLT, MSXML, and XmlLite.</span></span>|  
   
-## <a name="see-also"></a>참고 항목  
- [참조 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/reference-linq-to-xml.md)   
- [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)   
- [Visual Basic의 LINQ to XML 개요](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)   
- [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+## <a name="see-also"></a><span data-ttu-id="36368-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="36368-113">See Also</span></span>  
+ <span data-ttu-id="36368-114">[참조 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/reference-linq-to-xml.md) </span><span class="sxs-lookup"><span data-stu-id="36368-114">[Reference (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/reference-linq-to-xml.md) </span></span>  
+<span data-ttu-id="36368-115"> [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) </span><span class="sxs-lookup"><span data-stu-id="36368-115"> [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) </span></span>  
+<span data-ttu-id="36368-116"> [Visual Basic의 LINQ to XML 개요](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md) </span><span class="sxs-lookup"><span data-stu-id="36368-116"> [Overview of LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md) </span></span>  
+<span data-ttu-id="36368-117"> [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)</span><span class="sxs-lookup"><span data-stu-id="36368-117"> [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)</span></span>

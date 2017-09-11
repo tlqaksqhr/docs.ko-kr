@@ -32,22 +32,23 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bf087a85710cbf19e490b3c8f335ea40dbc0d4f7
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 3ca2da6140dff3b1ef82c9546f4f1401ac1f1699
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="evaluation-of-expression-or-statement-timed-out"></a>식 또는 문 계산 시간이 초과되었습니다.
-식의 계산 시기 적절 하 게에서 완료 되지 않았습니다.  
+# <a name="evaluation-of-expression-or-statement-timed-out"></a><span data-ttu-id="f74ec-102">식 또는 문 계산 시간이 초과되었습니다.</span><span class="sxs-lookup"><span data-stu-id="f74ec-102">Evaluation of expression or statement timed out</span></span>
+<span data-ttu-id="f74ec-103">식의 계산 시기 적절 하 게에서 완료 되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="f74ec-103">The evaluation of an expression did not complete in a timely manner.</span></span>  
   
- **오류 ID:** BC30722  
+ <span data-ttu-id="f74ec-104">**오류 ID:** BC30722</span><span class="sxs-lookup"><span data-stu-id="f74ec-104">**Error ID:** BC30722</span></span>  
   
-## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
+## <a name="to-correct-this-error"></a><span data-ttu-id="f74ec-105">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="f74ec-105">To correct this error</span></span>  
   
-1.  입력 한 코드가 올바른지 확인 합니다.  
+1.  <span data-ttu-id="f74ec-106">입력 한 코드가 올바른지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="f74ec-106">Verify that the entered code is correct.</span></span>  
   
-2.  실행 하는 시간이 짧으므로 식을 단순화 합니다.  
+2.  <span data-ttu-id="f74ec-107">실행 하는 시간이 짧으므로 식을 단순화 합니다.</span><span class="sxs-lookup"><span data-stu-id="f74ec-107">Simplify your expression so that it takes less time to execute.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [Visual Studio의 디버깅](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio)
+## <a name="see-also"></a><span data-ttu-id="f74ec-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f74ec-108">See Also</span></span>  
+ [<span data-ttu-id="f74ec-109">Visual Studio의 디버깅</span><span class="sxs-lookup"><span data-stu-id="f74ec-109">Debugging in Visual Studio</span></span>](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio)

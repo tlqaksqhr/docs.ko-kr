@@ -34,16 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 5c74d37af74a3a463d856f1c0a019bb4ecd04ee6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: e8b75fe9d3a3372b86ec617c6eb2754c44dec0fd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="help--visual-basic"></a>/help, /? (Visual Basic)
-컴파일러 옵션을 표시합니다.  
+# <a name="help--visual-basic"></a><span data-ttu-id="afb6b-103">/help, /?</span><span class="sxs-lookup"><span data-stu-id="afb6b-103">/help, /?</span></span> <span data-ttu-id="afb6b-104">(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="afb6b-104">(Visual Basic)</span></span>
+<span data-ttu-id="afb6b-105">컴파일러 옵션을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="afb6b-105">Displays the compiler options.</span></span>  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a><span data-ttu-id="afb6b-106">구문</span><span class="sxs-lookup"><span data-stu-id="afb6b-106">Syntax</span></span>  
   
 ```  
 /help  
@@ -51,19 +52,19 @@ ms.lasthandoff: 03/13/2017
 /?  
 ```  
   
-## <a name="remarks"></a>주의  
- 컴파일에서이 옵션을 포함 하는 경우 출력 파일이 생성 되 고 없습니다 컴파일 수행 됩니다.  
+## <a name="remarks"></a><span data-ttu-id="afb6b-107">주의</span><span class="sxs-lookup"><span data-stu-id="afb6b-107">Remarks</span></span>  
+ <span data-ttu-id="afb6b-108">컴파일에서이 옵션을 포함 하는 경우 출력 파일이 생성 되 고 없습니다 컴파일 수행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="afb6b-108">If you include this option in a compilation, no output file is created and no compilation takes place.</span></span>  
   
 > [!NOTE]
->  `/help` 옵션 내에서 사용할 수 없는 [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] 개발 환경, 명령줄에서 컴파일할 때에 사용할 수는 있습니다.  
+>  <span data-ttu-id="afb6b-109">`/help` 옵션 내에서 사용할 수 없는 [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] 개발 환경, 명령줄에서 컴파일할 때에 사용할 수는 있습니다.</span><span class="sxs-lookup"><span data-stu-id="afb6b-109">The `/help` option is not available from within the [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] development environment; it is available only when compiling from the command line.</span></span>  
   
-## <a name="example"></a>예제  
- 다음 코드는 명령줄에서 도움말을 표시 합니다.  
+## <a name="example"></a><span data-ttu-id="afb6b-110">예제</span><span class="sxs-lookup"><span data-stu-id="afb6b-110">Example</span></span>  
+ <span data-ttu-id="afb6b-111">다음 코드는 명령줄에서 도움말을 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="afb6b-111">The following code displays help from the command line.</span></span>  
   
 ```  
 vbc /help  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)   
- [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="afb6b-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="afb6b-112">See Also</span></span>  
+ <span data-ttu-id="afb6b-113">[Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md) </span><span class="sxs-lookup"><span data-stu-id="afb6b-113">[Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md) </span></span>  
+<span data-ttu-id="afb6b-114"> [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)</span><span class="sxs-lookup"><span data-stu-id="afb6b-114"> [Sample Compilation Command Lines](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)</span></span>

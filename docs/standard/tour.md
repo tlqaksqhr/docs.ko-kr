@@ -18,135 +18,135 @@ ms.lasthandoff: 08/21/2017
 
 ---
 
-# <a name="tour-of-net"></a>.NET 둘러보기
+# <a name="tour-of-net"></a><span data-ttu-id="58769-104">.NET 둘러보기</span><span class="sxs-lookup"><span data-stu-id="58769-104">Tour of .NET</span></span>
 
-.NET은 범용 개발 플랫폼입니다. 여러 플랫폼에서 다양한 시나리오를 사용할 수 있는 여러 프로그래밍 언어 지원, 비동기 및 동시 실행 프로그래밍 모델 및 기본 상호 운용성과 같은 여러 중요한 특징이 있습니다.
+<span data-ttu-id="58769-105">.NET은 범용 개발 플랫폼입니다.</span><span class="sxs-lookup"><span data-stu-id="58769-105">.NET is a general purpose development platform.</span></span> <span data-ttu-id="58769-106">여러 플랫폼에서 다양한 시나리오를 사용할 수 있는 여러 프로그래밍 언어 지원, 비동기 및 동시 실행 프로그래밍 모델 및 기본 상호 운용성과 같은 여러 중요한 특징이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="58769-106">It has several key features, such as support for multiple programming languages, asynchronous and concurrent programming models, and native interoperability, which enable a wide range of scenarios across multiple platforms.</span></span>
 
-이 문서에서는 .NET의 몇 가지 주요 기능에 대해 살펴볼 수 있습니다. .NET의 구조적인 부분과 사용 목적에 대해 살펴보려면 [.NET 아키텍처 구성 요소](components.md) 항목을 참조하세요.
+<span data-ttu-id="58769-107">이 문서에서는 .NET의 몇 가지 주요 기능에 대해 살펴볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="58769-107">This article offers a guided tour through some of the key features of the .NET.</span></span> <span data-ttu-id="58769-108">.NET의 구조적인 부분과 사용 목적에 대해 살펴보려면 [.NET 아키텍처 구성 요소](components.md) 항목을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="58769-108">See the [.NET Architectural Components](components.md) topic to learn about the architectural pieces of .NET and what they're used for.</span></span>
 
-## <a name="how-to-run-the-code-samples"></a>코드 샘플을 실행하는 방법
+## <a name="how-to-run-the-code-samples"></a><span data-ttu-id="58769-109">코드 샘플을 실행하는 방법</span><span class="sxs-lookup"><span data-stu-id="58769-109">How to run the code samples</span></span>
 
-코드 샘플을 실행하도록 개발 환경을 설정하는 방법을 알아보려면 [시작](get-started.md) 항목을 참조하세요. 이 페이지의 코드 샘플을 복사하여 샘플을 실행할 환경에 붙여넣으세요. 
+<span data-ttu-id="58769-110">코드 샘플을 실행하도록 개발 환경을 설정하는 방법을 알아보려면 [시작](get-started.md) 항목을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="58769-110">To learn how to set up a development environment to run the code samples, see the [Getting Started](get-started.md) topic.</span></span> <span data-ttu-id="58769-111">이 페이지의 코드 샘플을 복사하여 샘플을 실행할 환경에 붙여넣으세요.</span><span class="sxs-lookup"><span data-stu-id="58769-111">Copy and paste code samples from this page into your environment to execute them.</span></span> 
 
-## <a name="programming-languages"></a>프로그래밍 언어
+## <a name="programming-languages"></a><span data-ttu-id="58769-112">프로그래밍 언어</span><span class="sxs-lookup"><span data-stu-id="58769-112">Programming languages</span></span>
 
-.NET은 여러 프로그래밍 언어를 지원합니다. .NET 구현은 무엇보다 언어와 관련이 없는 런타임과 언어 상호 운용성을 지정하는 [CLI(공용 언어 인프라)](https://www.visualstudio.com/license-terms/ecma-c-common-language-infrastructure-standards/)를 구현합니다. 즉 어떤 .NET 언어를 선택해도 .NET에서 앱과 서비스를 빌드할 수 있습니다.
+<span data-ttu-id="58769-113">.NET은 여러 프로그래밍 언어를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="58769-113">.NET supports multiple programming languages.</span></span> <span data-ttu-id="58769-114">.NET 구현은 무엇보다 언어와 관련이 없는 런타임과 언어 상호 운용성을 지정하는 [CLI(공용 언어 인프라)](https://www.visualstudio.com/license-terms/ecma-c-common-language-infrastructure-standards/)를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="58769-114">The .NET implementations implement the [Common Language Infrastructure (CLI)](https://www.visualstudio.com/license-terms/ecma-c-common-language-infrastructure-standards/), which among other things specifies a language-independent runtime and language interoperability.</span></span> <span data-ttu-id="58769-115">즉 어떤 .NET 언어를 선택해도 .NET에서 앱과 서비스를 빌드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="58769-115">This means that you choose any .NET language to build apps and services on .NET.</span></span>
 
-Microsoft는 C#, F# 및 VB(Visual Basic)라는 세 가지 .NET 언어를 적극적으로 개발하고 지원합니다. 
+<span data-ttu-id="58769-116">Microsoft는 C#, F# 및 VB(Visual Basic)라는 세 가지 .NET 언어를 적극적으로 개발하고 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="58769-116">Microsoft actively develops and supports three .NET languages: C#, F#, and Visual Basic (VB).</span></span> 
 
-* C#은 C 스타일 언어의 표현력과 우아함은 그대로 유지하면서 간단하고 형식이 안전한 개체 지향 언어입니다. C 및 이와 비슷한 언어에 익숙한 사용자라면 누구나 거의 문제 없이 C#을 사용할 수 있을 것입니다. C#에 대한 자세한 내용을 보려면 [C# 가이드](../csharp/index.md)를 참조하세요.
+* <span data-ttu-id="58769-117">C#은 C 스타일 언어의 표현력과 우아함은 그대로 유지하면서 간단하고 형식이 안전한 개체 지향 언어입니다.</span><span class="sxs-lookup"><span data-stu-id="58769-117">C# is simple, powerful, type-safe, and object-oriented, while retaining the expressiveness and elegance of C-style languages.</span></span> <span data-ttu-id="58769-118">C 및 이와 비슷한 언어에 익숙한 사용자라면 누구나 거의 문제 없이 C#을 사용할 수 있을 것입니다.</span><span class="sxs-lookup"><span data-stu-id="58769-118">Anyone familiar with C and similar languages finds few problems in adapting to C#.</span></span> <span data-ttu-id="58769-119">C#에 대한 자세한 내용을 보려면 [C# 가이드](../csharp/index.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="58769-119">Check out the [C# Guide](../csharp/index.md) to learn more about C#.</span></span>
 
-* F#은 일반적인 개체 지향 및 명령형 프로그래밍도 지원하는 플랫폼 간 기능 우선 프로그래밍 언어입니다. F#에 대한 자세한 내용을 보려면 [F# 가이드](../fsharp/index.md)를 참조하세요.
+* <span data-ttu-id="58769-120">F#은 일반적인 개체 지향 및 명령형 프로그래밍도 지원하는 플랫폼 간 기능 우선 프로그래밍 언어입니다.</span><span class="sxs-lookup"><span data-stu-id="58769-120">F# is a cross-platform, functional-first programming language that also supports traditional object-oriented and imperative programming.</span></span> <span data-ttu-id="58769-121">F#에 대한 자세한 내용을 보려면 [F# 가이드](../fsharp/index.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="58769-121">Check out the [F# Guide](../fsharp/index.md) to learn more about F#.</span></span>
 
-* Visual Basic은 .NET에서 실행되는 다양한 앱을 빌드하는 데 사용할 수 있는 배우기 쉬운 언어입니다. .NET 언어 중에서 VB 구문이 일반적인 인간 언어와 가장 유사하여 소프트웨어 개발이 처음인 사람도 쉽게 배울 수 있습니다.
+* <span data-ttu-id="58769-122">Visual Basic은 .NET에서 실행되는 다양한 앱을 빌드하는 데 사용할 수 있는 배우기 쉬운 언어입니다.</span><span class="sxs-lookup"><span data-stu-id="58769-122">Visual Basic is an easy language to learn that you use to build a variety of apps that run on .NET.</span></span> <span data-ttu-id="58769-123">.NET 언어 중에서 VB 구문이 일반적인 인간 언어와 가장 유사하여 소프트웨어 개발이 처음인 사람도 쉽게 배울 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="58769-123">Among the .NET languages, the syntax of VB is the closest to ordinary human language, often making it easier for people new to software development.</span></span>
 
-## <a name="automatic-memory-management"></a>자동 메모리 관리
+## <a name="automatic-memory-management"></a><span data-ttu-id="58769-124">자동 메모리 관리</span><span class="sxs-lookup"><span data-stu-id="58769-124">Automatic memory management</span></span>
 
-.NET에서는 [GC(가비지 수집)](garbagecollection/index.md)를 사용하여 프로그램에 대한 자동 메모리 관리를 제공합니다. GC는 메모리 관리에 대해 지연 방식으로 작동하며 메모리의 즉각적인 수집보다 앱 처리량을 우선합니다. .NET GC에 대한 자세한 내용을 살펴보려면 [GC(가비지 수집) 기본 사항](garbagecollection/fundamentals.md)을 확인하세요.
+<span data-ttu-id="58769-125">.NET에서는 [GC(가비지 수집)](garbagecollection/index.md)를 사용하여 프로그램에 대한 자동 메모리 관리를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="58769-125">.NET uses [garbage collection (GC)](garbagecollection/index.md) to provide automatic memory management for programs.</span></span> <span data-ttu-id="58769-126">GC는 메모리 관리에 대해 지연 방식으로 작동하며 메모리의 즉각적인 수집보다 앱 처리량을 우선합니다.</span><span class="sxs-lookup"><span data-stu-id="58769-126">The GC operates on a lazy approach to memory management, preferring app throughput to the immediate collection of memory.</span></span> <span data-ttu-id="58769-127">.NET GC에 대한 자세한 내용을 살펴보려면 [GC(가비지 수집) 기본 사항](garbagecollection/fundamentals.md)을 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="58769-127">To learn more about the .NET GC, check out [Fundamentals of garbage collection (GC)](garbagecollection/fundamentals.md).</span></span>
 
-다음 두 줄에서는 모두 메모리를 할당합니다.
+<span data-ttu-id="58769-128">다음 두 줄에서는 모두 메모리를 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="58769-128">The following two lines both allocate memory:</span></span>
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L1-L2)]
+<span data-ttu-id="58769-129">[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L1-L2)]</span><span class="sxs-lookup"><span data-stu-id="58769-129">[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L1-L2)]</span></span>
 
-할당 취소는 가비지 수집기에서 예약 실행을 통해 메모리를 회수할 때 자동으로 수행되기 때문에 메모리 할당을 취소하는 유사 키워드가 없습니다.
+<span data-ttu-id="58769-130">할당 취소는 가비지 수집기에서 예약 실행을 통해 메모리를 회수할 때 자동으로 수행되기 때문에 메모리 할당을 취소하는 유사 키워드가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="58769-130">There's no analogous keyword to de-allocate memory, as de-allocation happens automatically when the garbage collector reclaims the memory through its scheduled run.</span></span>
 
-가비지 수집기는 *메모리 안전성*을 보장해주는 서비스 중 하나입니다. 프로그램이 할당된 메모리에만 액세스하면 메모리가 안전합니다. 예를 들어 런타임은 앱이 배열의 범위를 넘어 할당되지 않은 메모리에 액세스하지 않도록 합니다.
+<span data-ttu-id="58769-131">가비지 수집기는 *메모리 안전성*을 보장해주는 서비스 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="58769-131">The garbage collector is one of the services that help ensure *memory safety*.</span></span> <span data-ttu-id="58769-132">프로그램이 할당된 메모리에만 액세스하면 메모리가 안전합니다.</span><span class="sxs-lookup"><span data-stu-id="58769-132">A program is memory safe if it accesses only allocated memory.</span></span> <span data-ttu-id="58769-133">예를 들어 런타임은 앱이 배열의 범위를 넘어 할당되지 않은 메모리에 액세스하지 않도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="58769-133">For instance, the runtime ensures that an app doesn't access unallocated memory beyond the bounds of an array.</span></span>
 
-다음 예제에서 런타임은 `InvalidIndexException` 예외를 throw하여 메모리 안전성을 강화합니다.
+<span data-ttu-id="58769-134">다음 예제에서 런타임은 `InvalidIndexException` 예외를 throw하여 메모리 안전성을 강화합니다.</span><span class="sxs-lookup"><span data-stu-id="58769-134">In the following example, the runtime throws an `InvalidIndexException` exception to enforce memory safety:</span></span>
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
+<span data-ttu-id="58769-135">[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]</span><span class="sxs-lookup"><span data-stu-id="58769-135">[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]</span></span>
 
-## <a name="working-with-unmanaged-resources"></a>관리되지 않는 리소스로 작업하기
+## <a name="working-with-unmanaged-resources"></a><span data-ttu-id="58769-136">관리되지 않는 리소스로 작업하기</span><span class="sxs-lookup"><span data-stu-id="58769-136">Working with unmanaged resources</span></span>
 
-일부 개체는 *관리되지 않는 리소스*를 참조합니다. 관리되지 않는 리소스는 .NET 런타임에서 자동 유지 관리되지 않는 리소스입니다. 예를 들어, 파일 핸들은 관리되지 않는 리소스입니다. <xref:System.IO.FileStream> 개체는 관리되는 개체이지만, 관리되지 않는 파일 핸들을 참조합니다. <xref:System.IO.FileStream> 사용을 마치면 파일 핸들을 릴리스해야 합니다.
+<span data-ttu-id="58769-137">일부 개체는 *관리되지 않는 리소스*를 참조합니다.</span><span class="sxs-lookup"><span data-stu-id="58769-137">Some objects reference *unmanaged resources*.</span></span> <span data-ttu-id="58769-138">관리되지 않는 리소스는 .NET 런타임에서 자동 유지 관리되지 않는 리소스입니다.</span><span class="sxs-lookup"><span data-stu-id="58769-138">Unmanaged resources are resources that aren't automatically maintained by the .NET runtime.</span></span> <span data-ttu-id="58769-139">예를 들어, 파일 핸들은 관리되지 않는 리소스입니다.</span><span class="sxs-lookup"><span data-stu-id="58769-139">For example, a file handle is an unmanaged resource.</span></span> <span data-ttu-id="58769-140"><xref:System.IO.FileStream> 개체는 관리되는 개체이지만, 관리되지 않는 파일 핸들을 참조합니다.</span><span class="sxs-lookup"><span data-stu-id="58769-140">A <xref:System.IO.FileStream> object is a managed object, but it references a file handle, which is unmanaged.</span></span> <span data-ttu-id="58769-141"><xref:System.IO.FileStream> 사용을 마치면 파일 핸들을 릴리스해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="58769-141">When you're done using the <xref:System.IO.FileStream>, you need to release the file handle.</span></span>
 
-.NET에서는 관리되지 않는 리소스를 참조하는 개체가 <xref:System.IDisposable> 인터페이스를 구현합니다. 개체 사용을 마치면 관리되지 않는 모든 리소스 릴리스를 담당하는 개체의 <xref:System.IDisposable.Dispose> 메서드를 호출합니다. 다음 예제와 같이 .NET 언어는 이러한 개체에 대해 편리한 `using` 구문을 제공합니다.
+<span data-ttu-id="58769-142">.NET에서는 관리되지 않는 리소스를 참조하는 개체가 <xref:System.IDisposable> 인터페이스를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="58769-142">In .NET, objects that reference unmanaged resources implement the <xref:System.IDisposable> interface.</span></span> <span data-ttu-id="58769-143">개체 사용을 마치면 관리되지 않는 모든 리소스 릴리스를 담당하는 개체의 <xref:System.IDisposable.Dispose> 메서드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="58769-143">When you're done using the object, you call the object's <xref:System.IDisposable.Dispose> method, which is responsible for releasing any unmanaged resources.</span></span> <span data-ttu-id="58769-144">다음 예제와 같이 .NET 언어는 이러한 개체에 대해 편리한 `using` 구문을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="58769-144">.NET languages provide a convenient `using` syntax for such objects, as shown in the following example:</span></span>
 
-[!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
+<span data-ttu-id="58769-145">[!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]</span><span class="sxs-lookup"><span data-stu-id="58769-145">[!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]</span></span>
 
-`using` 블록이 완료되면 .NET 런타임은 파일 핸들을 릴리스하는 `stream` 개체의 <xref:System.IDisposable.Dispose> 메서드를 자동으로 호출합니다. 예외로 인해 블록에 대한 제어가 없어지는 경우에도 런타임은 같은 방식으로 호출합니다.
+<span data-ttu-id="58769-146">`using` 블록이 완료되면 .NET 런타임은 파일 핸들을 릴리스하는 `stream` 개체의 <xref:System.IDisposable.Dispose> 메서드를 자동으로 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="58769-146">Once the `using` block completes, the .NET runtime automatically calls the `stream` object's <xref:System.IDisposable.Dispose> method, which releases the file handle.</span></span> <span data-ttu-id="58769-147">예외로 인해 블록에 대한 제어가 없어지는 경우에도 런타임은 같은 방식으로 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="58769-147">The runtime also does this if an exception causes control to leave the block.</span></span>
 
-자세한 내용은 다음 항목을 참조하세요.
+<span data-ttu-id="58769-148">자세한 내용은 다음 항목을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="58769-148">For more details, see the following topics:</span></span>
 
-* C#의 경우 [using 문(C# 참조)](../csharp/language-reference/keywords/using-statement.md) 항목을 참조하세요.
-* F#의 경우 [리소스 관리: use 키워드](../fsharp/language-reference/resource-management-the-use-keyword.md)를 참조하세요.
-* VB의 경우 [Using 문(Visual Basic)](../visual-basic/language-reference/statements/using-statement.md) 항목을 참조하세요.
+* <span data-ttu-id="58769-149">C#의 경우 [using 문(C# 참조)](../csharp/language-reference/keywords/using-statement.md) 항목을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="58769-149">For C#, see the [using Statement (C# Reference)](../csharp/language-reference/keywords/using-statement.md) topic.</span></span>
+* <span data-ttu-id="58769-150">F#의 경우 [리소스 관리: use 키워드](../fsharp/language-reference/resource-management-the-use-keyword.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="58769-150">For F#, see [Resource Management: The use Keyword](../fsharp/language-reference/resource-management-the-use-keyword.md).</span></span>
+* <span data-ttu-id="58769-151">VB의 경우 [Using 문(Visual Basic)](../visual-basic/language-reference/statements/using-statement.md) 항목을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="58769-151">For VB, see the [Using Statement (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md) topic.</span></span>
 
-## <a name="type-safety"></a>형식 안전성
+## <a name="type-safety"></a><span data-ttu-id="58769-152">형식 안전성</span><span class="sxs-lookup"><span data-stu-id="58769-152">Type safety</span></span>
 
-개체는 특정 형식의 인스턴스입니다. 지정된 개체에 허용되는 유일한 작업은 해당 형식의 작업입니다. `Dog` 형식에는 `Jump` 및 `WagTail` 메서드가 있을 수 있지만 `SumTotal` 메서드는 없습니다. 프로그램은 지정된 형식에 속하는 메서드만 호출합니다. 다른 모든 호출에서는 컴파일 시간 오류 또는 런타임 예외가 발생합니다(동적 기능 또는 `object`를 사용하는 경우).
+<span data-ttu-id="58769-153">개체는 특정 형식의 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="58769-153">An object is an instance of a specific type.</span></span> <span data-ttu-id="58769-154">지정된 개체에 허용되는 유일한 작업은 해당 형식의 작업입니다.</span><span class="sxs-lookup"><span data-stu-id="58769-154">The only operations allowed for a given object are those of its type.</span></span> <span data-ttu-id="58769-155">`Dog` 형식에는 `Jump` 및 `WagTail` 메서드가 있을 수 있지만 `SumTotal` 메서드는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="58769-155">A `Dog` type may have `Jump` and `WagTail` methods but not a `SumTotal` method.</span></span> <span data-ttu-id="58769-156">프로그램은 지정된 형식에 속하는 메서드만 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="58769-156">A program only calls the methods belonging to a given type.</span></span> <span data-ttu-id="58769-157">다른 모든 호출에서는 컴파일 시간 오류 또는 런타임 예외가 발생합니다(동적 기능 또는 `object`를 사용하는 경우).</span><span class="sxs-lookup"><span data-stu-id="58769-157">All other calls result in either a compile-time error or a run-time exception (in case of using dynamic features or `object`).</span></span>
 
-.NET 언어는 기본 및 파생 클래스의 계층 구조로 이루어진 개체 지향 언어입니다. .NET 런타임에서는 개체 계층 구조에 맞는 개체 캐스트 및 호출만 허용됩니다. .NET 언어에서 정의된 모든 형식은 기본 <xref:System.Object> 형식에서 파생됩니다.
+<span data-ttu-id="58769-158">.NET 언어는 기본 및 파생 클래스의 계층 구조로 이루어진 개체 지향 언어입니다.</span><span class="sxs-lookup"><span data-stu-id="58769-158">.NET languages are object-oriented with hierarchies of base and derived classes.</span></span> <span data-ttu-id="58769-159">.NET 런타임에서는 개체 계층 구조에 맞는 개체 캐스트 및 호출만 허용됩니다.</span><span class="sxs-lookup"><span data-stu-id="58769-159">The .NET runtime only allows object casts and calls that align with the object hierarchy.</span></span> <span data-ttu-id="58769-160">.NET 언어에서 정의된 모든 형식은 기본 <xref:System.Object> 형식에서 파생됩니다.</span><span class="sxs-lookup"><span data-stu-id="58769-160">Remember that every type defined in any .NET language derives from the base <xref:System.Object> type.</span></span>
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L19-L23)]
+<span data-ttu-id="58769-161">[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L19-L23)]</span><span class="sxs-lookup"><span data-stu-id="58769-161">[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L19-L23)]</span></span>
 
-또한 형식 안전성은 접근자 키워드의 충실도를 보장하여 캡슐화 적용을 지원하는 데 사용됩니다. 접근자 키워드는 다른 코드에서 지정된 형식의 멤버에 대한 액세스를 제어하는 아티팩트입니다. 일반적으로 형식 내에서 해당 동작을 관리하는 데 사용하는 다양한 종류의 데이터에 사용됩니다.
+<span data-ttu-id="58769-162">또한 형식 안전성은 접근자 키워드의 충실도를 보장하여 캡슐화 적용을 지원하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="58769-162">Type safety is also used to help enforce encapsulation by guaranteeing the fidelity of the accessor keywords.</span></span> <span data-ttu-id="58769-163">접근자 키워드는 다른 코드에서 지정된 형식의 멤버에 대한 액세스를 제어하는 아티팩트입니다.</span><span class="sxs-lookup"><span data-stu-id="58769-163">Accessor keywords are artifacts which control access to members of a given type by other code.</span></span> <span data-ttu-id="58769-164">일반적으로 형식 내에서 해당 동작을 관리하는 데 사용하는 다양한 종류의 데이터에 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="58769-164">These are usually used for various kinds of data within a type that are used to manage its behavior.</span></span>
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
+<span data-ttu-id="58769-165">[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]</span><span class="sxs-lookup"><span data-stu-id="58769-165">[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]</span></span>
 
-C#, VB 및 F#은 지역 *형식 유추*를 지원합니다. 형식 유추는 컴파일러가 오른쪽에 있는 식에서 왼쪽에 있는 식의 형식을 유추함을 의미합니다. 형식 안전성이 손상되거나 무시되는 것은 아닙니다. 결과 형식은 강력한 형식이며 수반되는 모든 특성을 포함합니다. 이전 예제에서 `dog` 및 `cat`은 형식 유추를 도입하도록 다시 작성하고 나머지는 변경하지 않습니다.
+<span data-ttu-id="58769-166">C#, VB 및 F#은 지역 *형식 유추*를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="58769-166">C#, VB, and F# support local *type inference*.</span></span> <span data-ttu-id="58769-167">형식 유추는 컴파일러가 오른쪽에 있는 식에서 왼쪽에 있는 식의 형식을 유추함을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="58769-167">Type inference means that the compiler deduces the type of the expression on the left-hand side from the expression on the right-hand side.</span></span> <span data-ttu-id="58769-168">형식 안전성이 손상되거나 무시되는 것은 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="58769-168">This doesn't mean that the type safety is broken or avoided.</span></span> <span data-ttu-id="58769-169">결과 형식은 강력한 형식이며 수반되는 모든 특성을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="58769-169">The resulting type does have a strong type with everything that implies.</span></span> <span data-ttu-id="58769-170">이전 예제에서 `dog` 및 `cat`은 형식 유추를 도입하도록 다시 작성하고 나머지는 변경하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="58769-170">From the previous example, `dog` and `cat` are rewritten to introduce type inference, and the remainder of the example is unchanged:</span></span>
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
+<span data-ttu-id="58769-171">[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]</span><span class="sxs-lookup"><span data-stu-id="58769-171">[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]</span></span>
 
-F#에는 C# 및 VB에 있는 메서드-지역 형식 유추보다 더 심화된 형식 유추 기능이 있습니다. 자세한 내용은 [형식 유추](../fsharp/language-reference/type-inference.md)를 참조하세요.
+<span data-ttu-id="58769-172">F#에는 C# 및 VB에 있는 메서드-지역 형식 유추보다 더 심화된 형식 유추 기능이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="58769-172">F# has even further type inference capabilities than the method-local type inference found in C# and VB.</span></span> <span data-ttu-id="58769-173">자세한 내용은 [형식 유추](../fsharp/language-reference/type-inference.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="58769-173">To learn more, see [Type Inference](../fsharp/language-reference/type-inference.md).</span></span>
 
-## <a name="delegates-and-lambdas"></a>대리자 및 람다 식
+## <a name="delegates-and-lambdas"></a><span data-ttu-id="58769-174">대리자 및 람다 식</span><span class="sxs-lookup"><span data-stu-id="58769-174">Delegates and lambdas</span></span>
 
-대리자는 메서드 시그니처로 표시됩니다. 해당 시그니처가 있는 모든 메서드는 대리자에 할당할 수 있으며 대리자가 호출될 때 실행됩니다.
+<span data-ttu-id="58769-175">대리자는 메서드 시그니처로 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="58769-175">A delegate is represented by a method signature.</span></span> <span data-ttu-id="58769-176">해당 시그니처가 있는 모든 메서드는 대리자에 할당할 수 있으며 대리자가 호출될 때 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="58769-176">Any method with that signature can be assigned to the delegate and is executed when the delegate is invoked.</span></span>
 
-대리자는 형식이 안전하다는 점을 제외하면 C++ 함수 포인터와 유사합니다. 대리자는 CLR 형식 시스템 내에서 일종의 연결이 끊긴 메서드입니다. 일반 메서드는 클래스에 연결되고 정적 또는 인스턴스 호출 규칙을 통해서만 직접 호출할 수 있습니다.
+<span data-ttu-id="58769-177">대리자는 형식이 안전하다는 점을 제외하면 C++ 함수 포인터와 유사합니다.</span><span class="sxs-lookup"><span data-stu-id="58769-177">Delegates are like C++ function pointers except that they're type safe.</span></span> <span data-ttu-id="58769-178">대리자는 CLR 형식 시스템 내에서 일종의 연결이 끊긴 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="58769-178">They're a kind of disconnected method within the CLR type system.</span></span> <span data-ttu-id="58769-179">일반 메서드는 클래스에 연결되고 정적 또는 인스턴스 호출 규칙을 통해서만 직접 호출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="58769-179">Regular methods are attached to a class and are only directly callable through static or instance calling conventions.</span></span>
 
-.NET에서 대리자는 이벤트 처리기에서, 비동기 작업을 정의할 때, LINQ의 토대인 람다 식에서 일반적으로 사용됩니다. 자세한 내용은 [대리자 및 람다 식](delegates-lambdas.md) 항목을 참조하세요.
+<span data-ttu-id="58769-180">.NET에서 대리자는 이벤트 처리기에서, 비동기 작업을 정의할 때, LINQ의 토대인 람다 식에서 일반적으로 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="58769-180">In .NET, delegates are commonly used in event handlers, in defining asynchronous operations, and in lambda expressions, which are a cornerstone of LINQ.</span></span> <span data-ttu-id="58769-181">자세한 내용은 [대리자 및 람다 식](delegates-lambdas.md) 항목을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="58769-181">Learn more in the [Delegates and lambdas](delegates-lambdas.md) topic.</span></span>
 
-## <a name="generics"></a>제네릭
+## <a name="generics"></a><span data-ttu-id="58769-182">제네릭</span><span class="sxs-lookup"><span data-stu-id="58769-182">Generics</span></span>
 
-제네릭은 프로그래머가 해당 클래스를 디자인할 때 *형식 매개 변수*를 도입할 수 있게 합니다. 이렇게 하면 클라이언트 코드(형식의 사용자)에서 형식 매개 변수 대신 사용할 형식을 정확하게 지정할 수 있습니다.
+<span data-ttu-id="58769-183">제네릭은 프로그래머가 해당 클래스를 디자인할 때 *형식 매개 변수*를 도입할 수 있게 합니다. 이렇게 하면 클라이언트 코드(형식의 사용자)에서 형식 매개 변수 대신 사용할 형식을 정확하게 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="58769-183">Generics allow the programmer to introduce a *type parameter* when designing their classes that allows the client code (the users of the type) to specify the exact type to use in place of the type parameter.</span></span>
 
-제네릭은 프로그래머가 제네릭 데이터 구조를 구현할 수 있도록 돕기 위해 추가되었습니다. 제네릭이 도입되기 전에는 `List` 같은 형식을 제네릭으로 만들기 위해 `object` 형식인 요소로 작업해야 했습니다. 따라서 미묘한 런타임 오류와 함께 다양한 성능 및 의미 체계 문제가 발생했습니다. 후자의 경우 가장 심각한 문제는 예를 들어 데이터 구조에 정수와 문자열이 둘 다 포함되어 있을 때 목록의 멤버로 작업하면 `InvalidCastException`이 throw되는 것입니다.
+<span data-ttu-id="58769-184">제네릭은 프로그래머가 제네릭 데이터 구조를 구현할 수 있도록 돕기 위해 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="58769-184">Generics were added to help programmers implement generic data structures.</span></span> <span data-ttu-id="58769-185">제네릭이 도입되기 전에는 `List` 같은 형식을 제네릭으로 만들기 위해 `object` 형식인 요소로 작업해야 했습니다.</span><span class="sxs-lookup"><span data-stu-id="58769-185">Before their arrival in order for a type such as the `List` type to be generic, it would have to work with elements that were of type `object`.</span></span> <span data-ttu-id="58769-186">따라서 미묘한 런타임 오류와 함께 다양한 성능 및 의미 체계 문제가 발생했습니다.</span><span class="sxs-lookup"><span data-stu-id="58769-186">This had various performance and semantic problems, along with possible subtle runtime errors.</span></span> <span data-ttu-id="58769-187">후자의 경우 가장 심각한 문제는 예를 들어 데이터 구조에 정수와 문자열이 둘 다 포함되어 있을 때 목록의 멤버로 작업하면 `InvalidCastException`이 throw되는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="58769-187">The most notorious of the latter is when a data structure contains, for instance, both integers and strings, and an `InvalidCastException` is thrown on working with the list's members.</span></span>
 
-다음 샘플에서는 <xref:System.Collections.Generic.List%601> 형식 인스턴스를 사용하여 실행 중인 기본 프로그램을 보여 줍니다.
+<span data-ttu-id="58769-188">다음 샘플에서는 <xref:System.Collections.Generic.List%601> 형식 인스턴스를 사용하여 실행 중인 기본 프로그램을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="58769-188">The following sample shows a basic program running using an instance of <xref:System.Collections.Generic.List%601> types:</span></span>
 
-[!code-csharp[GenericsShort](../../samples/csharp/snippets/tour/GenericsShort.csx)]
+<span data-ttu-id="58769-189">[!code-csharp[GenericsShort](../../samples/csharp/snippets/tour/GenericsShort.csx)]</span><span class="sxs-lookup"><span data-stu-id="58769-189">[!code-csharp[GenericsShort](../../samples/csharp/snippets/tour/GenericsShort.csx)]</span></span>
 
-자세한 내용은 [제네릭 형식(제네릭) 개요](generics.md) 항목을 참조하세요.
+<span data-ttu-id="58769-190">자세한 내용은 [제네릭 형식(제네릭) 개요](generics.md) 항목을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="58769-190">For more information, see the [Generic types (Generics) overview](generics.md) topic.</span></span>
 
-## <a name="async-programming"></a>비동기 프로그래밍
+## <a name="async-programming"></a><span data-ttu-id="58769-191">비동기 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="58769-191">Async programming</span></span>
 
-비동기 프로그래밍은 런타임, 프레임워크 라이브러리 및 .NET 언어 구문의 비동기 지원을 포함하는 .NET 내의 최고급 개념입니다. 내부적으로 운영 체제를 활용하여 I/O 바인딩된 작업을 최대한 효율적으로 수행하는 개체(예: `Task`)를 기반으로 합니다.
+<span data-ttu-id="58769-192">비동기 프로그래밍은 런타임, 프레임워크 라이브러리 및 .NET 언어 구문의 비동기 지원을 포함하는 .NET 내의 최고급 개념입니다.</span><span class="sxs-lookup"><span data-stu-id="58769-192">Async programming is a first-class concept within .NET with async support in the runtime, framework libraries, and .NET language constructs.</span></span> <span data-ttu-id="58769-193">내부적으로 운영 체제를 활용하여 I/O 바인딩된 작업을 최대한 효율적으로 수행하는 개체(예: `Task`)를 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="58769-193">Internally, they're based on objects (such as `Task`), which take advantage of the operating system to perform I/O-bound jobs as efficiently as possible.</span></span>
 
-.NET의 비동기 프로그래밍에 대해 자세히 알아보려면 [비동기 개요](async.md) 항목부터 살펴보세요.
+<span data-ttu-id="58769-194">.NET의 비동기 프로그래밍에 대해 자세히 알아보려면 [비동기 개요](async.md) 항목부터 살펴보세요.</span><span class="sxs-lookup"><span data-stu-id="58769-194">To learn more about async programming in .NET, start with the [Async overview](async.md) topic.</span></span>
 
-## <a name="language-integrated-query-linq"></a>LINQ(Language-Integrated Query)
+## <a name="language-integrated-query-linq"></a><span data-ttu-id="58769-195">LINQ(Language-Integrated Query)</span><span class="sxs-lookup"><span data-stu-id="58769-195">Language Integrated Query (LINQ)</span></span>
 
-LINQ는 데이터에 적용할 간단하고 선언적인 코드를 작성할 수 있게 해주는 C# 및 VB에 대한 강력한 기능 집합입니다. 데이터는 다양한 형식(예: 메모리 내 개체, SQL 데이터베이스 또는 XML 문서)일 수 있지만 작성하는 LINQ 코드는 일반적으로 각 데이터 소스마다 다르게 표시되지 않습니다.
+<span data-ttu-id="58769-196">LINQ는 데이터에 적용할 간단하고 선언적인 코드를 작성할 수 있게 해주는 C# 및 VB에 대한 강력한 기능 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="58769-196">LINQ is a powerful set of features for C# and VB that allow you to write simple, declarative code for operating on data.</span></span> <span data-ttu-id="58769-197">데이터는 다양한 형식(예: 메모리 내 개체, SQL 데이터베이스 또는 XML 문서)일 수 있지만 작성하는 LINQ 코드는 일반적으로 각 데이터 소스마다 다르게 표시되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="58769-197">The data can be in many forms (such as in-memory objects, a SQL database, or an XML document), but the LINQ code you write typically doesn't differ by data source.</span></span>
 
-자세히 알아보고 몇 가지 샘플을 확인하려면 [LINQ(Language-Integrated Query)](using-linq.md) 항목을 참조하세요.
+<span data-ttu-id="58769-198">자세히 알아보고 몇 가지 샘플을 확인하려면 [LINQ(Language-Integrated Query)](using-linq.md) 항목을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="58769-198">To learn more and see some samples, see the [LINQ (Language Integrated Query)](using-linq.md) topic.</span></span>
 
-## <a name="native-interoperability"></a>기본 상호 운용성
+## <a name="native-interoperability"></a><span data-ttu-id="58769-199">기본 상호 운용성</span><span class="sxs-lookup"><span data-stu-id="58769-199">Native interoperability</span></span>
 
-모든 운영 체제에는 시스템 서비스를 제공하는 API(응용 프로그래밍 인터페이스)가 있습니다. .NET은 이러한 API를 호출하는 여러 가지 방법을 제공합니다.
+<span data-ttu-id="58769-200">모든 운영 체제에는 시스템 서비스를 제공하는 API(응용 프로그래밍 인터페이스)가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="58769-200">Every operating system includes an application programming interface (API) that provides system services.</span></span> <span data-ttu-id="58769-201">.NET은 이러한 API를 호출하는 여러 가지 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="58769-201">.NET provides several ways to call those APIs.</span></span>
 
-기본 상호 운용성은 대체로 “플랫폼 호출” 또는 줄여서 P/Invoke를 통해 수행되며, Linux 및 Windows 플랫폼에서 지원됩니다. 기본 상호 운용성을 수행하는 Windows 전용 방법은 “COM interop”라고 하며, 관리 코드에서 [COM 구성 요소](https://msdn.microsoft.com/library/bwa2bx93.aspx)로 작업하는 데 사용됩니다. 이 방법은 P/Invoke 인프라를 기반으로 하지만 약간 다른 방식으로 작동합니다.
+<span data-ttu-id="58769-202">기본 상호 운용성은 대체로 “플랫폼 호출” 또는 줄여서 P/Invoke를 통해 수행되며, Linux 및 Windows 플랫폼에서 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="58769-202">The main way to do native interoperability is via "platform invoke" or P/Invoke for short, which is supported across Linux and Windows platforms.</span></span> <span data-ttu-id="58769-203">기본 상호 운용성을 수행하는 Windows 전용 방법은 “COM interop”라고 하며, 관리 코드에서 [COM 구성 요소](https://msdn.microsoft.com/library/bwa2bx93.aspx)로 작업하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="58769-203">A Windows-only way of doing native interoperability is known as "COM interop," which is used to work with [COM components](https://msdn.microsoft.com/library/bwa2bx93.aspx) in managed code.</span></span> <span data-ttu-id="58769-204">이 방법은 P/Invoke 인프라를 기반으로 하지만 약간 다른 방식으로 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="58769-204">It's built on top of the P/Invoke infrastructure, but it works in subtly different ways.</span></span>
 
-Java 및 Objective-C에 대한 Mono(및 Xamarin)의 상호 운용성 지원은 대부분 비슷하게 작성되었습니다. 즉, 동일한 원칙을 사용합니다.
+<span data-ttu-id="58769-205">Java 및 Objective-C에 대한 Mono(및 Xamarin)의 상호 운용성 지원은 대부분 비슷하게 작성되었습니다. 즉, 동일한 원칙을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="58769-205">Most of Mono's (and thus Xamarin's) interoperability support for Java and Objective-C are built similarly, that is, they use the same principles.</span></span>
 
-기본 상호 운용성에 대한 자세한 내용은 [기본 상호 운용성](native-interop.md) 항목을 참조하세요.
+<span data-ttu-id="58769-206">기본 상호 운용성에 대한 자세한 내용은 [기본 상호 운용성](native-interop.md) 항목을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="58769-206">Read more about it native interoperability in the [Native interoperability](native-interop.md) topic.</span></span>
 
-## <a name="unsafe-code"></a>안전하지 않은 코드
+## <a name="unsafe-code"></a><span data-ttu-id="58769-207">안전하지 않은 코드</span><span class="sxs-lookup"><span data-stu-id="58769-207">Unsafe code</span></span>
 
-언어 지원에 따라 CLR에서는 기본 메모리에 액세스하고 `unsafe` 코드를 통해 포인터 연산을 수행할 수 있습니다. 이러한 작업은 특정 알고리즘 및 시스템 상호 운용성에 필요합니다. 강력하기는 하지만, 시스템 API와의 상호 운용하거나 가장 효율적인 알고리즘을 구현하는 데 필요한 경우가 아니면 안전하지 않은 코드는 사용하지 않는 것이 좋습니다. 안전하지 않은 코드는 환경에 따라 다르게 실행될 수도 있고 가비지 수집기 및 형식 안전성의 이점을 잃을 수도 있습니다. 안전하지 않은 코드를 최대한 제한 및 중앙 집중화하고 해당 코드를 철저히 테스트하는 것이 좋습니다.
+<span data-ttu-id="58769-208">언어 지원에 따라 CLR에서는 기본 메모리에 액세스하고 `unsafe` 코드를 통해 포인터 연산을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="58769-208">Depending on language support, the CLR lets you access native memory and do pointer arithmetic via `unsafe` code.</span></span> <span data-ttu-id="58769-209">이러한 작업은 특정 알고리즘 및 시스템 상호 운용성에 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="58769-209">These operations are needed for certain algorithms and system interoperability.</span></span> <span data-ttu-id="58769-210">강력하기는 하지만, 시스템 API와의 상호 운용하거나 가장 효율적인 알고리즘을 구현하는 데 필요한 경우가 아니면 안전하지 않은 코드는 사용하지 않는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="58769-210">Although powerful, use of unsafe code is discouraged unless it's necessary to interop with system APIs or implement the most efficient algorithm.</span></span> <span data-ttu-id="58769-211">안전하지 않은 코드는 환경에 따라 다르게 실행될 수도 있고 가비지 수집기 및 형식 안전성의 이점을 잃을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="58769-211">Unsafe code may not execute the same way in different environments and also loses the benefits of a garbage collector and type safety.</span></span> <span data-ttu-id="58769-212">안전하지 않은 코드를 최대한 제한 및 중앙 집중화하고 해당 코드를 철저히 테스트하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="58769-212">It's recommended to confine and centralize unsafe code as much as possible and test that code thoroughly.</span></span>
 
-다음 예제에서는 `StringBuilder` 클래스에서 `ToString()` 메서드의 수정된 버전입니다. `unsafe` 코드를 통해 메모리 청크를 직접 이동하여 알고리즘을 효율적으로 구현할 수 있는 방법을 보여 줍니다.
+<span data-ttu-id="58769-213">다음 예제에서는 `StringBuilder` 클래스에서 `ToString()` 메서드의 수정된 버전입니다.</span><span class="sxs-lookup"><span data-stu-id="58769-213">The following example is a modified version of the `ToString()` method from the `StringBuilder` class.</span></span> <span data-ttu-id="58769-214">`unsafe` 코드를 통해 메모리 청크를 직접 이동하여 알고리즘을 효율적으로 구현할 수 있는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="58769-214">It illustrates how using `unsafe` code can efficiently implement an algorithm by moving around chunks of memory directly:</span></span>
 
-[!code-csharp[Unsafe](../../samples/csharp/snippets/tour/Unsafe.csx)]
+<span data-ttu-id="58769-215">[!code-csharp[Unsafe](../../samples/csharp/snippets/tour/Unsafe.csx)]</span><span class="sxs-lookup"><span data-stu-id="58769-215">[!code-csharp[Unsafe](../../samples/csharp/snippets/tour/Unsafe.csx)]</span></span>
 
-## <a name="next-steps"></a>다음 단계
+## <a name="next-steps"></a><span data-ttu-id="58769-216">다음 단계</span><span class="sxs-lookup"><span data-stu-id="58769-216">Next steps</span></span>
 
-C# 기능을 살펴보고 싶은 경우 [C# 둘러보기](../csharp/tour-of-csharp/index.md)를 확인하세요.
+<span data-ttu-id="58769-217">C# 기능을 살펴보고 싶은 경우 [C# 둘러보기](../csharp/tour-of-csharp/index.md)를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="58769-217">If you're interested in a tour of C# features, check out [Tour of C#](../csharp/tour-of-csharp/index.md).</span></span>
 
-F# 기능을 살펴보고 싶은 경우 [F# 둘러보기](../fsharp/tour.md)를 참조하세요.
+<span data-ttu-id="58769-218">F# 기능을 살펴보고 싶은 경우 [F# 둘러보기](../fsharp/tour.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="58769-218">If you're interested in a tour of F# features, see [Tour of F#](../fsharp/tour.md).</span></span>
 
-사용자가 직접 코드 작성을 시작하려는 경우에는 [시작](get-started.md)을 방문하세요.
+<span data-ttu-id="58769-219">사용자가 직접 코드 작성을 시작하려는 경우에는 [시작](get-started.md)을 방문하세요.</span><span class="sxs-lookup"><span data-stu-id="58769-219">If you want to get started with writing code of your own, visit [Getting Started](get-started.md).</span></span>
 
-.NET의 중요한 구성 요소에 대해 알아보려면 [.NET 아키텍처 구성 요소](components.md)를 확인하세요.
+<span data-ttu-id="58769-220">.NET의 중요한 구성 요소에 대해 알아보려면 [.NET 아키텍처 구성 요소](components.md)를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="58769-220">To learn about important components of .NET, check out [.NET Architectural Components](components.md).</span></span>
 

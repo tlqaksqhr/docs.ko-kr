@@ -26,10 +26,10 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>샘플 XML 파일: 네임스페이스에서 일반적인 구매 주문
-다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다. 이 파일은 일반적인 구매 주문입니다. XML은 네임스페이스에 있습니다.  
+# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a><span data-ttu-id="d2772-102">샘플 XML 파일: 네임스페이스에서 일반적인 구매 주문</span><span class="sxs-lookup"><span data-stu-id="d2772-102">Sample XML File: Typical Purchase Order in a Namespace</span></span>
+<span data-ttu-id="d2772-103">다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="d2772-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="d2772-104">이 파일은 일반적인 구매 주문입니다.</span><span class="sxs-lookup"><span data-stu-id="d2772-104">This file is a typical purchase order.</span></span> <span data-ttu-id="d2772-105">XML은 네임스페이스에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d2772-105">The XML is in a namespace.</span></span>  
   
-## <a name="purchaseorderinnamespacexml"></a>PurchaseOrderInNamespace.xml  
+## <a name="purchaseorderinnamespacexml"></a><span data-ttu-id="d2772-106">PurchaseOrderInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="d2772-106">PurchaseOrderInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -71,6 +71,6 @@ ms.lasthandoff: 07/28/2017
 </aw:PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [샘플 XML 문서(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="d2772-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d2772-107">See Also</span></span>  
+ [<span data-ttu-id="d2772-108">샘플 XML 문서(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="d2772-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
 

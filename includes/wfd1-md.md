@@ -1,1 +1,1 @@
-Windows 워크플로 디자이너
+<span data-ttu-id="f42fe-101">Windows 워크플로 디자이너</span><span class="sxs-lookup"><span data-stu-id="f42fe-101">Windows Workflow Designer</span></span>

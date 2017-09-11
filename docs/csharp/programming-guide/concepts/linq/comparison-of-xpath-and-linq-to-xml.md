@@ -21,87 +21,87 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="comparison-of-xpath-and-linq-to-xml"></a>XPath 및 LINQ to XML 비교
-XPath와 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]은 유사한 기능을 제공합니다. XML 트리를 쿼리하여 결과를 요소 컬렉션, 특성 컬렉션, 노드 컬렉션 또는 요소나 특성의 값으로 반환하는 데 사용할 수 있습니다. 하지만 차이점도 있습니다.  
+# <a name="comparison-of-xpath-and-linq-to-xml"></a><span data-ttu-id="ee313-102">XPath 및 LINQ to XML 비교</span><span class="sxs-lookup"><span data-stu-id="ee313-102">Comparison of XPath and LINQ to XML</span></span>
+<span data-ttu-id="ee313-103">XPath와 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]은 유사한 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-103">XPath and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] offer some similar functionality.</span></span> <span data-ttu-id="ee313-104">XML 트리를 쿼리하여 결과를 요소 컬렉션, 특성 컬렉션, 노드 컬렉션 또는 요소나 특성의 값으로 반환하는 데 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-104">Both can be used to query an XML tree, returning such results as a collection of elements, a collection of attributes, a collection of nodes, or the value of an element or attribute.</span></span> <span data-ttu-id="ee313-105">하지만 차이점도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-105">However, there are also some differences.</span></span>  
   
-## <a name="differences-between-xpath-and-linq-to-xml"></a>XPath와 LINQ to XML의 차이점  
- XPath는 새 형식의 프로젝션을 허용하지 않습니다. XPath는 트리에서 노드 컬렉션만 반환할 수 있지만, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]은 쿼리를 실행하고 개체 그래프나 XML 트리를 새 모양으로 프로젝션할 수 있습니다. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리는 훨씬 많은 기능을 포함하며 XPath 식보다 훨씬 더 강력합니다.  
+## <a name="differences-between-xpath-and-linq-to-xml"></a><span data-ttu-id="ee313-106">XPath와 LINQ to XML의 차이점</span><span class="sxs-lookup"><span data-stu-id="ee313-106">Differences Between XPath and LINQ to XML</span></span>  
+ <span data-ttu-id="ee313-107">XPath는 새 형식의 프로젝션을 허용하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-107">XPath does not allow projection of new types.</span></span> <span data-ttu-id="ee313-108">XPath는 트리에서 노드 컬렉션만 반환할 수 있지만, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]은 쿼리를 실행하고 개체 그래프나 XML 트리를 새 모양으로 프로젝션할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-108">It can only return collections of nodes from the tree, whereas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] can execute a query and project an object graph or an XML tree in a new shape.</span></span> [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="ee313-109"> 쿼리는 훨씬 많은 기능을 포함하며 XPath 식보다 훨씬 더 강력합니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-109"> queries encompass much more functionality and are much more powerful than XPath expressions.</span></span>  
   
- XPath 식은 문자열 내에 분리되어 존재합니다. C# 컴파일러는 컴파일 시간에 XPath 식의 구문을 분석할 수 없습니다. 이와 반대로 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리는 C# 컴파일러에서 구문이 분석되고 컴파일됩니다. 컴파일러에서는 많은 쿼리 오류를 catch할 수 있습니다.  
+ <span data-ttu-id="ee313-110">XPath 식은 문자열 내에 분리되어 존재합니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-110">XPath expressions exist in isolation within a string.</span></span> <span data-ttu-id="ee313-111">C# 컴파일러는 컴파일 시간에 XPath 식의 구문을 분석할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-111">The C# compiler cannot help parse the XPath expression at compile time.</span></span> <span data-ttu-id="ee313-112">이와 반대로 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리는 C# 컴파일러에서 구문이 분석되고 컴파일됩니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-112">By contrast, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries are parsed and compiled by the C# compiler.</span></span> <span data-ttu-id="ee313-113">컴파일러에서는 많은 쿼리 오류를 catch할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-113">The compiler is able to catch many query errors.</span></span>  
   
- XPath 결과는 강력한 형식이 아닙니다. 많은 경우에 XPath 식의 계산 결과는 개체이며 적절한 형식을 결정하고 필요한 경우 결과를 캐스팅하는 것은 개발자에게 달려 있습니다. 이와 반대로 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리의 프로젝션은 강력한 형식입니다.  
+ <span data-ttu-id="ee313-114">XPath 결과는 강력한 형식이 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-114">XPath results are not strongly typed.</span></span> <span data-ttu-id="ee313-115">많은 경우에 XPath 식의 계산 결과는 개체이며 적절한 형식을 결정하고 필요한 경우 결과를 캐스팅하는 것은 개발자에게 달려 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-115">In a number of circumstances, the result of evaluating an XPath expression is an object, and it is up to the developer to determine the proper type and cast the result as necessary.</span></span> <span data-ttu-id="ee313-116">이와 반대로 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리의 프로젝션은 강력한 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-116">By contrast, the projections from a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query are strongly typed.</span></span>  
   
-## <a name="result-ordering"></a>결과 정렬  
- XPath 1.0 권장 사항에는 XPath 식의 계산 결과인 컬렉션이 정렬되지 않는다고 나와 있습니다.  
+## <a name="result-ordering"></a><span data-ttu-id="ee313-117">결과 정렬</span><span class="sxs-lookup"><span data-stu-id="ee313-117">Result Ordering</span></span>  
+ <span data-ttu-id="ee313-118">XPath 1.0 권장 사항에는 XPath 식의 계산 결과인 컬렉션이 정렬되지 않는다고 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-118">The XPath 1.0 Recommendation states that a collection that is the result of evaluating an XPath expression is unordered.</span></span>  
   
- 그러나 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] XPath 축 메서드에서 반환하는 컬렉션을 반복할 때 컬렉션의 노드는 문서 순서로 반환됩니다. 이는 조건자가 `preceding` 및 `preceding-sibling`과 같이 문서 순서의 역순으로 표현되는 XPath 축에 액세스하는 경우에도 해당됩니다.  
+ <span data-ttu-id="ee313-119">그러나 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] XPath 축 메서드에서 반환하는 컬렉션을 반복할 때 컬렉션의 노드는 문서 순서로 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-119">However, when iterating through a collection returned by a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] XPath axis method, the nodes in the collection are returned in document order.</span></span> <span data-ttu-id="ee313-120">이는 조건자가 `preceding` 및 `preceding-sibling`과 같이 문서 순서의 역순으로 표현되는 XPath 축에 액세스하는 경우에도 해당됩니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-120">This is the case even when accessing the XPath axes where predicates are expressed in terms of reverse document order, such as `preceding` and `preceding-sibling`.</span></span>  
   
- 이와 반대로 대부분의 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 축은 문서 순서로 컬렉션을 반환하지만 그 중 <xref:System.Xml.Linq.XNode.Ancestors%2A> 및 <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>는 문서 순서의 역순으로 컬렉션을 반환합니다. 다음 표에서는 축을 열거하고 각 축의 컬렉션 순서를 나타냅니다.  
+ <span data-ttu-id="ee313-121">이와 반대로 대부분의 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 축은 문서 순서로 컬렉션을 반환하지만 그 중 <xref:System.Xml.Linq.XNode.Ancestors%2A> 및 <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>는 문서 순서의 역순으로 컬렉션을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-121">By contrast, most of the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] axes return collections in document order, but two of them, <xref:System.Xml.Linq.XNode.Ancestors%2A> and <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>, return collections in reverse document order.</span></span> <span data-ttu-id="ee313-122">다음 표에서는 축을 열거하고 각 축의 컬렉션 순서를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-122">The following table enumerates the axes, and indicates collection order for each:</span></span>  
   
-|LINQ to XML 축|정렬|  
+|<span data-ttu-id="ee313-123">LINQ to XML 축</span><span class="sxs-lookup"><span data-stu-id="ee313-123">LINQ to XML axis</span></span>|<span data-ttu-id="ee313-124">정렬</span><span class="sxs-lookup"><span data-stu-id="ee313-124">Ordering</span></span>|  
 |----------------------|--------------|  
-|XContainer.DescendantNodes|문서 순서|  
-|XContainer.Descendants|문서 순서|  
-|XContainer.Elements|문서 순서|  
-|XContainer.Nodes|문서 순서|  
-|XContainer.NodesAfterSelf|문서 순서|  
-|XContainer.NodesBeforeSelf|문서 순서|  
-|XElement.AncestorsAndSelf|문서 순서의 역순|  
-|XElement.Attributes|문서 순서|  
-|XElement.DescendantNodesAndSelf|문서 순서|  
-|XElement.DescendantsAndSelf|문서 순서|  
-|XNode.Ancestors|문서 순서의 역순|  
-|XNode.ElementsAfterSelf|문서 순서|  
-|XNode.ElementsBeforeSelf|문서 순서|  
-|XNode.NodesAfterSelf|문서 순서|  
-|XNode.NodesBeforeSelf|문서 순서|  
+|<span data-ttu-id="ee313-125">XContainer.DescendantNodes</span><span class="sxs-lookup"><span data-stu-id="ee313-125">XContainer.DescendantNodes</span></span>|<span data-ttu-id="ee313-126">문서 순서</span><span class="sxs-lookup"><span data-stu-id="ee313-126">Document order</span></span>|  
+|<span data-ttu-id="ee313-127">XContainer.Descendants</span><span class="sxs-lookup"><span data-stu-id="ee313-127">XContainer.Descendants</span></span>|<span data-ttu-id="ee313-128">문서 순서</span><span class="sxs-lookup"><span data-stu-id="ee313-128">Document order</span></span>|  
+|<span data-ttu-id="ee313-129">XContainer.Elements</span><span class="sxs-lookup"><span data-stu-id="ee313-129">XContainer.Elements</span></span>|<span data-ttu-id="ee313-130">문서 순서</span><span class="sxs-lookup"><span data-stu-id="ee313-130">Document order</span></span>|  
+|<span data-ttu-id="ee313-131">XContainer.Nodes</span><span class="sxs-lookup"><span data-stu-id="ee313-131">XContainer.Nodes</span></span>|<span data-ttu-id="ee313-132">문서 순서</span><span class="sxs-lookup"><span data-stu-id="ee313-132">Document order</span></span>|  
+|<span data-ttu-id="ee313-133">XContainer.NodesAfterSelf</span><span class="sxs-lookup"><span data-stu-id="ee313-133">XContainer.NodesAfterSelf</span></span>|<span data-ttu-id="ee313-134">문서 순서</span><span class="sxs-lookup"><span data-stu-id="ee313-134">Document order</span></span>|  
+|<span data-ttu-id="ee313-135">XContainer.NodesBeforeSelf</span><span class="sxs-lookup"><span data-stu-id="ee313-135">XContainer.NodesBeforeSelf</span></span>|<span data-ttu-id="ee313-136">문서 순서</span><span class="sxs-lookup"><span data-stu-id="ee313-136">Document order</span></span>|  
+|<span data-ttu-id="ee313-137">XElement.AncestorsAndSelf</span><span class="sxs-lookup"><span data-stu-id="ee313-137">XElement.AncestorsAndSelf</span></span>|<span data-ttu-id="ee313-138">문서 순서의 역순</span><span class="sxs-lookup"><span data-stu-id="ee313-138">Reverse document order</span></span>|  
+|<span data-ttu-id="ee313-139">XElement.Attributes</span><span class="sxs-lookup"><span data-stu-id="ee313-139">XElement.Attributes</span></span>|<span data-ttu-id="ee313-140">문서 순서</span><span class="sxs-lookup"><span data-stu-id="ee313-140">Document order</span></span>|  
+|<span data-ttu-id="ee313-141">XElement.DescendantNodesAndSelf</span><span class="sxs-lookup"><span data-stu-id="ee313-141">XElement.DescendantNodesAndSelf</span></span>|<span data-ttu-id="ee313-142">문서 순서</span><span class="sxs-lookup"><span data-stu-id="ee313-142">Document order</span></span>|  
+|<span data-ttu-id="ee313-143">XElement.DescendantsAndSelf</span><span class="sxs-lookup"><span data-stu-id="ee313-143">XElement.DescendantsAndSelf</span></span>|<span data-ttu-id="ee313-144">문서 순서</span><span class="sxs-lookup"><span data-stu-id="ee313-144">Document order</span></span>|  
+|<span data-ttu-id="ee313-145">XNode.Ancestors</span><span class="sxs-lookup"><span data-stu-id="ee313-145">XNode.Ancestors</span></span>|<span data-ttu-id="ee313-146">문서 순서의 역순</span><span class="sxs-lookup"><span data-stu-id="ee313-146">Reverse document order</span></span>|  
+|<span data-ttu-id="ee313-147">XNode.ElementsAfterSelf</span><span class="sxs-lookup"><span data-stu-id="ee313-147">XNode.ElementsAfterSelf</span></span>|<span data-ttu-id="ee313-148">문서 순서</span><span class="sxs-lookup"><span data-stu-id="ee313-148">Document order</span></span>|  
+|<span data-ttu-id="ee313-149">XNode.ElementsBeforeSelf</span><span class="sxs-lookup"><span data-stu-id="ee313-149">XNode.ElementsBeforeSelf</span></span>|<span data-ttu-id="ee313-150">문서 순서</span><span class="sxs-lookup"><span data-stu-id="ee313-150">Document order</span></span>|  
+|<span data-ttu-id="ee313-151">XNode.NodesAfterSelf</span><span class="sxs-lookup"><span data-stu-id="ee313-151">XNode.NodesAfterSelf</span></span>|<span data-ttu-id="ee313-152">문서 순서</span><span class="sxs-lookup"><span data-stu-id="ee313-152">Document order</span></span>|  
+|<span data-ttu-id="ee313-153">XNode.NodesBeforeSelf</span><span class="sxs-lookup"><span data-stu-id="ee313-153">XNode.NodesBeforeSelf</span></span>|<span data-ttu-id="ee313-154">문서 순서</span><span class="sxs-lookup"><span data-stu-id="ee313-154">Document order</span></span>|  
   
-## <a name="positional-predicates"></a>위치 조건자  
- XPath 식에서 위치 조건자는 많은 축의 경우 문서 순서로 표현되지만 `preceding`, `preceding-sibling`, `ancestor` 및 `ancestor-or-self`와 같은 역방향 축의 경우에는 문서 순서의 역순으로 표현됩니다. 예를 들어, XPath 식 `preceding-sibling::*[1]`은 바로 이전 형제를 반환합니다. 이는 최종 결과 집합이 문서 순서로 제공되는 경우에도 해당됩니다.  
+## <a name="positional-predicates"></a><span data-ttu-id="ee313-155">위치 조건자</span><span class="sxs-lookup"><span data-stu-id="ee313-155">Positional Predicates</span></span>  
+ <span data-ttu-id="ee313-156">XPath 식에서 위치 조건자는 많은 축의 경우 문서 순서로 표현되지만 `preceding`, `preceding-sibling`, `ancestor` 및 `ancestor-or-self`와 같은 역방향 축의 경우에는 문서 순서의 역순으로 표현됩니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-156">Within an XPath expression, positional predicates are expressed in terms of document order for many axes, but are expressed in reverse document order for reverse axes, which are `preceding`, `preceding-sibling`, `ancestor`, and `ancestor-or-self`.</span></span> <span data-ttu-id="ee313-157">예를 들어, XPath 식 `preceding-sibling::*[1]`은 바로 이전 형제를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-157">For example, the XPath expression `preceding-sibling::*[1]` returns the immediately preceding sibling.</span></span> <span data-ttu-id="ee313-158">이는 최종 결과 집합이 문서 순서로 제공되는 경우에도 해당됩니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-158">This is the case even though the final result set is presented in document order.</span></span>  
   
- 이와 반대로 LINQ to XML의 모든 위치 조건자는 항상 축의 순서로 표현됩니다. 예를 들어, `anElement.ElementsBeforeSelf().ToList()[0]`은 바로 이전 형제가 아니라 쿼리된 요소에 대한 부모의 첫 번째 자식 요소를 반환합니다. 또 다른 예로, `anElement.Ancestors().ToList()[0]`은 부모 요소를 반환합니다.  
+ <span data-ttu-id="ee313-159">이와 반대로 LINQ to XML의 모든 위치 조건자는 항상 축의 순서로 표현됩니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-159">By contrast, all positional predicates in LINQ to XML are always expressed in terms of the order of the axis.</span></span> <span data-ttu-id="ee313-160">예를 들어, `anElement.ElementsBeforeSelf().ToList()[0]`은 바로 이전 형제가 아니라 쿼리된 요소에 대한 부모의 첫 번째 자식 요소를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-160">For example, `anElement.ElementsBeforeSelf().ToList()[0]` returns the first child element of the parent of the queried element, not the immediate preceding sibling.</span></span> <span data-ttu-id="ee313-161">또 다른 예로, `anElement.Ancestors().ToList()[0]`은 부모 요소를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-161">Another example: `anElement.Ancestors().ToList()[0]` returns the parent element.</span></span>  
   
- 위의 방법은 전체 컬렉션을 유형화합니다. 이 방법이 해당 쿼리를 가장 효율적으로 작성하는 방법은 아닙니다. 해당 쿼리는 위치 조건자의 동작을 보여 주기 위해 이 방법으로 작성되었습니다. 동일한 쿼리를 작성하는 데 더욱 적합한 방법은 <xref:System.Linq.Enumerable.First%2A>와 같이 `anElement.ElementsBeforeSelf().First()` 메서드를 사용하는 것입니다.  
+ <span data-ttu-id="ee313-162">위의 방법은 전체 컬렉션을 유형화합니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-162">Note that the above approach materializes the entire collection.</span></span> <span data-ttu-id="ee313-163">이 방법이 해당 쿼리를 가장 효율적으로 작성하는 방법은 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-163">This is not the most efficient way to write that query.</span></span> <span data-ttu-id="ee313-164">해당 쿼리는 위치 조건자의 동작을 보여 주기 위해 이 방법으로 작성되었습니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-164">It was written in that way to demonstrate the behavior of positional predicates.</span></span> <span data-ttu-id="ee313-165">동일한 쿼리를 작성하는 데 더욱 적합한 방법은 <xref:System.Linq.Enumerable.First%2A>와 같이 `anElement.ElementsBeforeSelf().First()` 메서드를 사용하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-165">A more appropriate way to write the same query is to use the <xref:System.Linq.Enumerable.First%2A> method, as follows: `anElement.ElementsBeforeSelf().First()`.</span></span>  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서 바로 이전 요소를 찾으려는 경우 다음 식을 작성할 수 있습니다.  
+ <span data-ttu-id="ee313-166">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서 바로 이전 요소를 찾으려는 경우 다음 식을 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-166">If you wanted to find the immediately preceding element in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], you would write the following expression:</span></span>  
   
  `ElementsBeforeSelf().Last()`  
   
-## <a name="performance-differences"></a>성능 차이점  
- 
-          [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서 XPath 기능을 사용하는 XPath 쿼리의 성능은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리의 성능보다 낮습니다.  
+## <a name="performance-differences"></a><span data-ttu-id="ee313-167">성능 차이점</span><span class="sxs-lookup"><span data-stu-id="ee313-167">Performance Differences</span></span>  
+ <span data-ttu-id="ee313-168">
+          [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서 XPath 기능을 사용하는 XPath 쿼리의 성능은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리의 성능보다 낮습니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-168">XPath queries that use the XPath functionality in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] will not perform as well as [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries.</span></span>  
   
-## <a name="comparison-of-composition"></a>구성 비교  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리의 구성은 XPath 식의 구성과 다소 비슷하지만 구문은 매우 다릅니다.  
+## <a name="comparison-of-composition"></a><span data-ttu-id="ee313-169">구성 비교</span><span class="sxs-lookup"><span data-stu-id="ee313-169">Comparison of Composition</span></span>  
+ <span data-ttu-id="ee313-170">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리의 구성은 XPath 식의 구성과 다소 비슷하지만 구문은 매우 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-170">Composition of a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query is somewhat parallel to composition of an XPath expression, although very different in syntax.</span></span>  
   
- 예를 들어, `customers`라는 변수에 요소가 있고 `CompanyName`라는 모든 자식 요소 아래에서 `Customer`이라는 손자 요소를 찾으려는 경우 다음과 같이 XPath 식을 작성할 수 있습니다.  
+ <span data-ttu-id="ee313-171">예를 들어, `customers`라는 변수에 요소가 있고 `CompanyName`라는 모든 자식 요소 아래에서 `Customer`이라는 손자 요소를 찾으려는 경우 다음과 같이 XPath 식을 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-171">For example, if you have an element in a variable named `customers`, and you want to find a grandchild element named `CompanyName` under all child elements named `Customer`, you would write an XPath expression as follows:</span></span>  
   
 ```csharp  
 customers.XPathSelectElements("./Customer/CompanyName");  
 ```  
   
- 동일한 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리는 다음과 같습니다.  
+ <span data-ttu-id="ee313-172">동일한 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-172">The equivalent [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query is:</span></span>  
   
 ```csharp  
 customers.Element("Customer").Elements("CompanyName");  
 ```  
   
- 각 XPath 축과 유사한 LINQ to XML 축은 다음과 같습니다.  
+ <span data-ttu-id="ee313-173">각 XPath 축과 유사한 LINQ to XML 축은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="ee313-173">There are similar parallels for each of the XPath axes.</span></span>  
   
-|XPath 축|LINQ to XML 축|  
+|<span data-ttu-id="ee313-174">XPath 축</span><span class="sxs-lookup"><span data-stu-id="ee313-174">XPath axis</span></span>|<span data-ttu-id="ee313-175">LINQ to XML 축</span><span class="sxs-lookup"><span data-stu-id="ee313-175">LINQ to XML axis</span></span>|  
 |----------------|----------------------|  
-|child(기본 축)|<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName>|  
-|Parent(..)|<xref:System.Xml.Linq.XObject.Parent%2A?displayProperty=fullName>|  
-|attribute axis(@)|<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=fullName><br /><br /> 또는<br /><br /> <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=fullName>|  
-|ancestor 축|<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=fullName>|  
-|ancestor-or-self 축|<xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A?displayProperty=fullName>|  
-|descendant 축(//)|<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=fullName><br /><br /> 또는<br /><br /> <xref:System.Xml.Linq.XContainer.DescendantNodes%2A?displayProperty=fullName>|  
-|descendant-or-self|<xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A?displayProperty=fullName><br /><br /> 또는<br /><br /> <xref:System.Xml.Linq.XElement.DescendantNodesAndSelf%2A?displayProperty=fullName>|  
-|following-sibling|<xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A?displayProperty=fullName><br /><br /> 또는<br /><br /> <xref:System.Xml.Linq.XNode.NodesAfterSelf%2A?displayProperty=fullName>|  
-|preceding-sibling|<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName><br /><br /> 또는<br /><br /> <xref:System.Xml.Linq.XNode.NodesBeforeSelf%2A?displayProperty=fullName>|  
-|following|직접적으로 해당하는 축이 없음|  
-|preceding|직접적으로 해당하는 축이 없음|  
+|<span data-ttu-id="ee313-176">child(기본 축)</span><span class="sxs-lookup"><span data-stu-id="ee313-176">child (the default axis)</span></span>|<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName>|  
+|<span data-ttu-id="ee313-177">Parent(..)</span><span class="sxs-lookup"><span data-stu-id="ee313-177">Parent (..)</span></span>|<xref:System.Xml.Linq.XObject.Parent%2A?displayProperty=fullName>|  
+|<span data-ttu-id="ee313-178">attribute axis(@)</span><span class="sxs-lookup"><span data-stu-id="ee313-178">attribute axis (@)</span></span>|<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=fullName><br /><br /> <span data-ttu-id="ee313-179">또는</span><span class="sxs-lookup"><span data-stu-id="ee313-179">or</span></span><br /><br /> <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=fullName>|  
+|<span data-ttu-id="ee313-180">ancestor 축</span><span class="sxs-lookup"><span data-stu-id="ee313-180">ancestor axis</span></span>|<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=fullName>|  
+|<span data-ttu-id="ee313-181">ancestor-or-self 축</span><span class="sxs-lookup"><span data-stu-id="ee313-181">ancestor-or-self axis</span></span>|<xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A?displayProperty=fullName>|  
+|<span data-ttu-id="ee313-182">descendant 축(//)</span><span class="sxs-lookup"><span data-stu-id="ee313-182">descendant axis (//)</span></span>|<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=fullName><br /><br /> <span data-ttu-id="ee313-183">또는</span><span class="sxs-lookup"><span data-stu-id="ee313-183">or</span></span><br /><br /> <xref:System.Xml.Linq.XContainer.DescendantNodes%2A?displayProperty=fullName>|  
+|<span data-ttu-id="ee313-184">descendant-or-self</span><span class="sxs-lookup"><span data-stu-id="ee313-184">descendant-or-self</span></span>|<xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A?displayProperty=fullName><br /><br /> <span data-ttu-id="ee313-185">또는</span><span class="sxs-lookup"><span data-stu-id="ee313-185">or</span></span><br /><br /> <xref:System.Xml.Linq.XElement.DescendantNodesAndSelf%2A?displayProperty=fullName>|  
+|<span data-ttu-id="ee313-186">following-sibling</span><span class="sxs-lookup"><span data-stu-id="ee313-186">following-sibling</span></span>|<xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A?displayProperty=fullName><br /><br /> <span data-ttu-id="ee313-187">또는</span><span class="sxs-lookup"><span data-stu-id="ee313-187">or</span></span><br /><br /> <xref:System.Xml.Linq.XNode.NodesAfterSelf%2A?displayProperty=fullName>|  
+|<span data-ttu-id="ee313-188">preceding-sibling</span><span class="sxs-lookup"><span data-stu-id="ee313-188">preceding-sibling</span></span>|<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName><br /><br /> <span data-ttu-id="ee313-189">또는</span><span class="sxs-lookup"><span data-stu-id="ee313-189">or</span></span><br /><br /> <xref:System.Xml.Linq.XNode.NodesBeforeSelf%2A?displayProperty=fullName>|  
+|<span data-ttu-id="ee313-190">following</span><span class="sxs-lookup"><span data-stu-id="ee313-190">following</span></span>|<span data-ttu-id="ee313-191">직접적으로 해당하는 축이 없음</span><span class="sxs-lookup"><span data-stu-id="ee313-191">No direct equivalent.</span></span>|  
+|<span data-ttu-id="ee313-192">preceding</span><span class="sxs-lookup"><span data-stu-id="ee313-192">preceding</span></span>|<span data-ttu-id="ee313-193">직접적으로 해당하는 축이 없음</span><span class="sxs-lookup"><span data-stu-id="ee313-193">No direct equivalent.</span></span>|  
   
-## <a name="see-also"></a>참고 항목  
- [XPath 사용자를 위한 LINQ to XML(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="ee313-194">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ee313-194">See Also</span></span>  
+ [<span data-ttu-id="ee313-195">XPath 사용자를 위한 LINQ to XML(C#)</span><span class="sxs-lookup"><span data-stu-id="ee313-195">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
 

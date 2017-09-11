@@ -1,1 +1,1 @@
-UI(사용자 인터페이스)
+<span data-ttu-id="aef86-101">UI(사용자 인터페이스)</span><span class="sxs-lookup"><span data-stu-id="aef86-101">user interface (UI)</span></span>

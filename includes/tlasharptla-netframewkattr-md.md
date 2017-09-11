@@ -1,1 +1,1 @@
-.NET Framework 특성
+<span data-ttu-id="9ea13-101">.NET Framework 특성</span><span class="sxs-lookup"><span data-stu-id="9ea13-101">.NET Framework attribute</span></span>

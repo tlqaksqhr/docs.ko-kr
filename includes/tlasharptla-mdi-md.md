@@ -1,1 +1,1 @@
-MDI(다중 문서 인터페이스)
+<span data-ttu-id="2e0ca-101">MDI(다중 문서 인터페이스)</span><span class="sxs-lookup"><span data-stu-id="2e0ca-101">multiple-document interface (MDI)</span></span>

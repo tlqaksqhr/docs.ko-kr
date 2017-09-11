@@ -37,30 +37,30 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="decimal-c-reference"></a>decimal(C# 참조)
-`decimal` 키워드는 128비트 데이터 형식을 나타냅니다. `decimal` 형식은 부동 소수점 형식보다 전체 자릿수는 크고 범위는 작아서 재무 및 통화 계산에 적합합니다. 다음 표에서는 `decimal` 형식의 대략적인 범위와 전체 자릿수를 보여 줍니다.  
+# <a name="decimal-c-reference"></a><span data-ttu-id="49f3f-102">decimal(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="49f3f-102">decimal (C# Reference)</span></span>
+<span data-ttu-id="49f3f-103">`decimal` 키워드는 128비트 데이터 형식을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="49f3f-103">The `decimal` keyword indicates a 128-bit data type.</span></span> <span data-ttu-id="49f3f-104">`decimal` 형식은 부동 소수점 형식보다 전체 자릿수는 크고 범위는 작아서 재무 및 통화 계산에 적합합니다.</span><span class="sxs-lookup"><span data-stu-id="49f3f-104">Compared to other floating-point types, the `decimal` type has more precision and a smaller range, which makes it appropriate for financial and monetary calculations.</span></span> <span data-ttu-id="49f3f-105">다음 표에서는 `decimal` 형식의 대략적인 범위와 전체 자릿수를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="49f3f-105">The approximate range and precision for the `decimal` type are shown in the following table.</span></span>  
   
-|형식|근사 범위|전체 자릿수|.NET Framework 형식|  
+|<span data-ttu-id="49f3f-106">형식</span><span class="sxs-lookup"><span data-stu-id="49f3f-106">Type</span></span>|<span data-ttu-id="49f3f-107">근사 범위</span><span class="sxs-lookup"><span data-stu-id="49f3f-107">Approximate Range</span></span>|<span data-ttu-id="49f3f-108">전체 자릿수</span><span class="sxs-lookup"><span data-stu-id="49f3f-108">Precision</span></span>|<span data-ttu-id="49f3f-109">.NET Framework 형식</span><span class="sxs-lookup"><span data-stu-id="49f3f-109">.NET Framework type</span></span>|  
 |----------|-----------------------|---------------|-------------------------|  
-|`decimal`|(-7.9 x 10<sup>28</sup> ~ 7.9 x 10<sup>28</sup>) / (10<sup>0</sup> ~ 10<sup>28</sup>)|28-29개의 유효 자릿수|<xref:System.Decimal?displayProperty=fullName>|  
+|`decimal`|<span data-ttu-id="49f3f-110">(-7.9 x 10<sup>28</sup> ~ 7.9 x 10<sup>28</sup>) / (10<sup>0</sup> ~ 10<sup>28</sup>)</span><span class="sxs-lookup"><span data-stu-id="49f3f-110">(-7.9 x 10<sup>28</sup> to 7.9 x 10<sup>28</sup>) / (10<sup>0</sup> to 10<sup>28</sup>)</span></span>|<span data-ttu-id="49f3f-111">28-29개의 유효 자릿수</span><span class="sxs-lookup"><span data-stu-id="49f3f-111">28-29 significant digits</span></span>|<xref:System.Decimal?displayProperty=fullName>|  
   
-## <a name="literals"></a>리터럴  
- 숫자 형식의 실수 리터럴이 `decimal`로 처리되게 하려면 다음과 같이 접미사 m 또는 M을 사용합니다.  
+## <a name="literals"></a><span data-ttu-id="49f3f-112">리터럴</span><span class="sxs-lookup"><span data-stu-id="49f3f-112">Literals</span></span>  
+ <span data-ttu-id="49f3f-113">숫자 형식의 실수 리터럴이 `decimal`로 처리되게 하려면 다음과 같이 접미사 m 또는 M을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="49f3f-113">If you want a numeric real literal to be treated as `decimal`, use the suffix m or M, for example:</span></span>  
   
 ```csharp
 decimal myMoney = 300.5m;  
 ```  
   
- m 접미사가 없으면 숫자가 [double](../../../csharp/language-reference/keywords/double.md)로 처리되어 컴파일러 오류가 발생합니다.  
+ <span data-ttu-id="49f3f-114">m 접미사가 없으면 숫자가 [double](../../../csharp/language-reference/keywords/double.md)로 처리되어 컴파일러 오류가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="49f3f-114">Without the suffix m, the number is treated as a [double](../../../csharp/language-reference/keywords/double.md) and generates a compiler error.</span></span>  
   
-## <a name="conversions"></a>변환  
- 정수 형식은 암시적으로 `decimal`로 변환되어 계산 결과가 `decimal`로 나타납니다. 따라서 접미사를 붙이지 않고 정수 리터럴을 사용하여 decimal 변수를 초기화할 수 있습니다. 예를 들면 다음과 같습니다.  
+## <a name="conversions"></a><span data-ttu-id="49f3f-115">변환</span><span class="sxs-lookup"><span data-stu-id="49f3f-115">Conversions</span></span>  
+ <span data-ttu-id="49f3f-116">정수 형식은 암시적으로 `decimal`로 변환되어 계산 결과가 `decimal`로 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="49f3f-116">The integral types are implicitly converted to `decimal` and the result evaluates to `decimal`.</span></span> <span data-ttu-id="49f3f-117">따라서 접미사를 붙이지 않고 정수 리터럴을 사용하여 decimal 변수를 초기화할 수 있습니다. 예를 들면 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="49f3f-117">Therefore you can initialize a decimal variable using an integer literal, without the suffix, as follows:</span></span>  
   
 ```csharp
 decimal myMoney = 300;  
 ```  
   
- 다른 부동 소수점 형식과 `decimal` 형식 간의 암시적 변환은 없습니다. 따라서 이 두 형식 간의 변환에는 캐스트를 사용해야 합니다. 예:  
+ <span data-ttu-id="49f3f-118">다른 부동 소수점 형식과 `decimal` 형식 간의 암시적 변환은 없습니다. 따라서 이 두 형식 간의 변환에는 캐스트를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="49f3f-118">There is no implicit conversion between other floating-point types and the `decimal` type; therefore, a cast must be used to convert between these two types.</span></span> <span data-ttu-id="49f3f-119">예:</span><span class="sxs-lookup"><span data-stu-id="49f3f-119">For example:</span></span>  
   
 ```csharp
 decimal myMoney = 99.9m;  
@@ -68,17 +68,17 @@ double x = (double)myMoney;
 myMoney = (decimal)x;  
 ```  
   
- 또한 같은 식에서 `decimal`과 숫자 정수 형식을 혼합할 수 있습니다. 그러나 캐스트를 사용하지 않고 `decimal`과 다른 부동 소수점 형식을 혼합하면 컴파일 오류가 발생합니다.  
+ <span data-ttu-id="49f3f-120">또한 같은 식에서 `decimal`과 숫자 정수 형식을 혼합할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="49f3f-120">You can also mix `decimal` and numeric integral types in the same expression.</span></span> <span data-ttu-id="49f3f-121">그러나 캐스트를 사용하지 않고 `decimal`과 다른 부동 소수점 형식을 혼합하면 컴파일 오류가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="49f3f-121">However, mixing `decimal` and other floating-point types without a cast causes a compilation error.</span></span>  
   
- 암시적 숫자 변환에 대한 자세한 내용은 [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)를 참조하세요.  
+ <span data-ttu-id="49f3f-122">암시적 숫자 변환에 대한 자세한 내용은 [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="49f3f-122">For more information about implicit numeric conversions, see [Implicit Numeric Conversions Table](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).</span></span>  
   
- 명시적 숫자 변환에 대한 자세한 내용은 [명시적 숫자 변환 표](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)를 참조하세요.  
+ <span data-ttu-id="49f3f-123">명시적 숫자 변환에 대한 자세한 내용은 [명시적 숫자 변환 표](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="49f3f-123">For more information about explicit numeric conversions, see [Explicit Numeric Conversions Table](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md).</span></span>  
   
-## <a name="formatting-decimal-output"></a>Decimal 출력 서식 지정  
- `String.Format` 메서드를 사용하거나 <xref:System.Console.Write%2A?displayProperty=fullName>을 호출하는 `String.Format()` 메서드를 통해 결과의 서식을 지정할 수 있습니다. 통화 서식은 이 문서 뒷부분에 있는 두 번째 예제처럼 표준 통화 서식 문자열 “C” 또는 “c”를 사용하여 지정합니다. `String.Format` 메서드에 대한 자세한 내용은 <xref:System.String.Format%2A?displayProperty=fullName>을 참조하세요.  
+## <a name="formatting-decimal-output"></a><span data-ttu-id="49f3f-124">Decimal 출력 서식 지정</span><span class="sxs-lookup"><span data-stu-id="49f3f-124">Formatting Decimal Output</span></span>  
+ <span data-ttu-id="49f3f-125">`String.Format` 메서드를 사용하거나 <xref:System.Console.Write%2A?displayProperty=fullName>을 호출하는 `String.Format()` 메서드를 통해 결과의 서식을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="49f3f-125">You can format the results by using the `String.Format` method, or through the <xref:System.Console.Write%2A?displayProperty=fullName> method, which calls `String.Format()`.</span></span> <span data-ttu-id="49f3f-126">통화 서식은 이 문서 뒷부분에 있는 두 번째 예제처럼 표준 통화 서식 문자열 “C” 또는 “c”를 사용하여 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="49f3f-126">The currency format is specified by using the standard currency format string "C" or "c," as shown in the second example later in this article.</span></span> <span data-ttu-id="49f3f-127">`String.Format` 메서드에 대한 자세한 내용은 <xref:System.String.Format%2A?displayProperty=fullName>을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="49f3f-127">For more information about the `String.Format` method, see <xref:System.String.Format%2A?displayProperty=fullName>.</span></span>  
   
-## <a name="example"></a>예제  
- 다음은 [double](../../../csharp/language-reference/keywords/double.md) 및 `decimal` 변수를 추가하려고 시도하여 컴파일러 오류가 발생하는 예제입니다.  
+## <a name="example"></a><span data-ttu-id="49f3f-128">예제</span><span class="sxs-lookup"><span data-stu-id="49f3f-128">Example</span></span>  
+ <span data-ttu-id="49f3f-129">다음은 [double](../../../csharp/language-reference/keywords/double.md) 및 `decimal` 변수를 추가하려고 시도하여 컴파일러 오류가 발생하는 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="49f3f-129">The following example causes a compiler error by trying to add [double](../../../csharp/language-reference/keywords/double.md) and `decimal` variables.</span></span>  
   
 ```csharp  
 double dub = 9;  
@@ -91,30 +91,30 @@ Console.WriteLine(dec + (decimal)dub);
 Console.WriteLine((double)dec + dub);  
 ```  
   
- 다음 오류가 발생합니다.  
+ <span data-ttu-id="49f3f-130">다음 오류가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="49f3f-130">The result is the following error:</span></span>  
   
  `Operator '+' cannot be applied to operands of type 'double' and 'decimal'`  
   
- 이 예제에서는 같은 식에 `decimal`과 [int](../../../csharp/language-reference/keywords/int.md)가 혼합되어 있습니다. 계산 결과는 `decimal` 형식입니다.  
+ <span data-ttu-id="49f3f-131">이 예제에서는 같은 식에 `decimal`과 [int](../../../csharp/language-reference/keywords/int.md)가 혼합되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="49f3f-131">In this example, a `decimal` and an [int](../../../csharp/language-reference/keywords/int.md) are mixed in the same expression.</span></span> <span data-ttu-id="49f3f-132">계산 결과는 `decimal` 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="49f3f-132">The result evaluates to the `decimal` type.</span></span>  
   
- [!code-cs[csrefKeywordsTypes#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/decimal_1.cs)]  
+ <span data-ttu-id="49f3f-133">[!code-cs[csrefKeywordsTypes#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/decimal_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="49f3f-133">[!code-cs[csrefKeywordsTypes#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/decimal_1.cs)]</span></span>  
   
-## <a name="example"></a>예제  
- 이 예제에서는 통화 서식 문자열을 사용하여 출력 서식을 지정합니다. `x`는 소수 자릿수가 $0.99를 초과하기 때문에 반올림됩니다. 최대 자릿수를 나타내는 변수 `y`는 올바른 서식으로 정확하게 표시됩니다.  
+## <a name="example"></a><span data-ttu-id="49f3f-134">예제</span><span class="sxs-lookup"><span data-stu-id="49f3f-134">Example</span></span>  
+ <span data-ttu-id="49f3f-135">이 예제에서는 통화 서식 문자열을 사용하여 출력 서식을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="49f3f-135">In this example, the output is formatted by using the currency format string.</span></span> <span data-ttu-id="49f3f-136">`x`는 소수 자릿수가 $0.99를 초과하기 때문에 반올림됩니다.</span><span class="sxs-lookup"><span data-stu-id="49f3f-136">Notice that `x` is rounded because the decimal places exceed $0.99.</span></span> <span data-ttu-id="49f3f-137">최대 자릿수를 나타내는 변수 `y`는 올바른 서식으로 정확하게 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="49f3f-137">The variable `y`, which represents the maximum exact digits, is displayed exactly in the correct format.</span></span>  
   
- [!code-cs[csrefKeywordsTypes#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/decimal_2.cs)]  
+ <span data-ttu-id="49f3f-138">[!code-cs[csrefKeywordsTypes#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/decimal_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="49f3f-138">[!code-cs[csrefKeywordsTypes#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/decimal_2.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>C# 언어 사양  
+## <a name="c-language-specification"></a><span data-ttu-id="49f3f-139">C# 언어 사양</span><span class="sxs-lookup"><span data-stu-id="49f3f-139">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Decimal>   
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
- [정수 형식 표](../../../csharp/language-reference/keywords/integral-types-table.md)   
- [기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
- [명시적 숫자 변환 표](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)   
- [표준 숫자 형식 문자열](../../../standard/base-types/standard-numeric-format-strings.md)
+## <a name="see-also"></a><span data-ttu-id="49f3f-140">참고 항목</span><span class="sxs-lookup"><span data-stu-id="49f3f-140">See Also</span></span>  
+ <span data-ttu-id="49f3f-141"><xref:System.Decimal></span><span class="sxs-lookup"><span data-stu-id="49f3f-141"><xref:System.Decimal></span></span>   
+ <span data-ttu-id="49f3f-142">[C# 참조](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="49f3f-142">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="49f3f-143">[C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="49f3f-143">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="49f3f-144">[C# 키워드](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="49f3f-144">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ <span data-ttu-id="49f3f-145">[정수 형식 표](../../../csharp/language-reference/keywords/integral-types-table.md) </span><span class="sxs-lookup"><span data-stu-id="49f3f-145">[Integral Types Table](../../../csharp/language-reference/keywords/integral-types-table.md) </span></span>  
+ <span data-ttu-id="49f3f-146">[기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md) </span><span class="sxs-lookup"><span data-stu-id="49f3f-146">[Built-In Types Table](../../../csharp/language-reference/keywords/built-in-types-table.md) </span></span>  
+ <span data-ttu-id="49f3f-147">[암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md) </span><span class="sxs-lookup"><span data-stu-id="49f3f-147">[Implicit Numeric Conversions Table](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md) </span></span>  
+ <span data-ttu-id="49f3f-148">[명시적 숫자 변환 표](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md) </span><span class="sxs-lookup"><span data-stu-id="49f3f-148">[Explicit Numeric Conversions Table](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md) </span></span>  
+ [<span data-ttu-id="49f3f-149">표준 숫자 형식 문자열</span><span class="sxs-lookup"><span data-stu-id="49f3f-149">Standard Numeric Format Strings</span></span>](../../../standard/base-types/standard-numeric-format-strings.md)
 

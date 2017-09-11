@@ -21,19 +21,19 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>방법: 관련 요소 찾기(XPath 및 LINQ to XML)(C#)
-이 항목에서는 다른 요소의 값에 의해 참조되는 특성을 기준으로 선택하여 요소를 가져오는 방법을 비교합니다.  
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a><span data-ttu-id="fad10-102">방법: 관련 요소 찾기(XPath 및 LINQ to XML)(C#)</span><span class="sxs-lookup"><span data-stu-id="fad10-102">How to: Find Related Elements (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="fad10-103">이 항목에서는 다른 요소의 값에 의해 참조되는 특성을 기준으로 선택하여 요소를 가져오는 방법을 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="fad10-103">This topic shows how to get an element selecting on an attribute that is referred to by the value of another element.</span></span>  
   
- XPath 식은 다음과 같습니다.  
+ <span data-ttu-id="fad10-104">XPath 식은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="fad10-104">The XPath expression is:</span></span>  
   
  `.//Customer[@CustomerID=/Root/Orders/Order[12]/CustomerID]`  
   
-## <a name="example"></a>예제  
- 이 예제에서는 12번째 `Order` 요소를 찾은 다음 해당 주문의 고객을 찾습니다.  
+## <a name="example"></a><span data-ttu-id="fad10-105">예제</span><span class="sxs-lookup"><span data-stu-id="fad10-105">Example</span></span>  
+ <span data-ttu-id="fad10-106">이 예제에서는 12번째 `Order` 요소를 찾은 다음 해당 주문의 고객을 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="fad10-106">This example finds the 12th `Order` element, and then finds the customer for that order.</span></span>  
   
- .Net에서 목록의 인덱싱은 0부터 시작하고 XPath 조건자에서 노드 컬렉션의 인덱싱은 1부터 시작합니다. 이 예제에서는 이 차이를 반영합니다.  
+ <span data-ttu-id="fad10-107">.Net에서 목록의 인덱싱은 0부터 시작하고</span><span class="sxs-lookup"><span data-stu-id="fad10-107">Note that indexing into a list in .Net is 'zero' based.</span></span> <span data-ttu-id="fad10-108">XPath 조건자에서 노드 컬렉션의 인덱싱은 1부터 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="fad10-108">Indexing into a collection of nodes in an XPath predicate is 'one' based.</span></span> <span data-ttu-id="fad10-109">이 예제에서는 이 차이를 반영합니다.</span><span class="sxs-lookup"><span data-stu-id="fad10-109">This example reflects this difference.</span></span>  
   
- 이 예제에서는 XML 문서 [샘플 XML 파일: 고객 및 주문(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)을 사용합니다.  
+ <span data-ttu-id="fad10-110">이 예제에서는 XML 문서 [샘플 XML 파일: 고객 및 주문(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="fad10-110">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>  
   
 ```csharp  
 XDocument co = XDocument.Load("CustomersOrders.xml");  
@@ -76,7 +76,7 @@ else
 Console.WriteLine(customer1);  
 ```  
   
- 이 예제는 다음과 같은 출력을 생성합니다.  
+ <span data-ttu-id="fad10-111">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="fad10-111">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -96,6 +96,6 @@ Results are identical
 </Customer>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [XPath 사용자를 위한 LINQ to XML(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a><span data-ttu-id="fad10-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="fad10-112">See Also</span></span>  
+ [<span data-ttu-id="fad10-113">XPath 사용자를 위한 LINQ to XML(C#)</span><span class="sxs-lookup"><span data-stu-id="fad10-113">LINQ to XML for XPath Users (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
 

@@ -9,27 +9,27 @@ ms.topic: article
 ms.prod: .net-framework
 ms.devlang: dotnet
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b88bb367afb2fc481b7d9b7da619b2b7fe2ca6e4
+ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
+ms.openlocfilehash: ee3ca640db4dedf7d3f38a978ac138cec6a2428e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 
-# <a name="installation-guide"></a>설치 가이드
+# <a name="installation-guide"></a><span data-ttu-id="890a6-104">설치 가이드</span><span class="sxs-lookup"><span data-stu-id="890a6-104">Installation guide</span></span>
 
-## <a name="supported-windows-versions"></a>지원되는 Windows 버전
+## <a name="supported-windows-versions"></a><span data-ttu-id="890a6-105">지원되는 Windows 버전</span><span class="sxs-lookup"><span data-stu-id="890a6-105">Supported Windows versions</span></span>
 
-- [Windows 10 또는 Windows Server 2016](on-windows-10.md)
-- [Windows 8 또는 Windows Server 2012](on-windows-8.md)
-- [Windows 7 또는 Windows Server 2008](on-windows-7.md)
-- [Windows Vista 또는 Windows Server 2003](on-windows-vista.md)
+- [<span data-ttu-id="890a6-106">Windows 10 또는 Windows Server 2016</span><span class="sxs-lookup"><span data-stu-id="890a6-106">Windows 10 or Windows Server 2016</span></span>](on-windows-10.md)
+- [<span data-ttu-id="890a6-107">Windows 8 또는 Windows Server 2012</span><span class="sxs-lookup"><span data-stu-id="890a6-107">Windows 8 or Windows Server 2012</span></span>](on-windows-8.md)
+- [<span data-ttu-id="890a6-108">Windows 7 또는 Windows Server 2008</span><span class="sxs-lookup"><span data-stu-id="890a6-108">Windows 7 or Windows Server 2008</span></span>](on-windows-7.md)
+- [<span data-ttu-id="890a6-109">Windows Vista 또는 Windows Server 2003</span><span class="sxs-lookup"><span data-stu-id="890a6-109">Windows Vista or Windows Server 2003</span></span>](on-windows-vista.md)
 
-## <a name="unsupported-windows-versions"></a>지원되지 않는 Windows 버전
+## <a name="unsupported-windows-versions"></a><span data-ttu-id="890a6-110">지원되지 않는 Windows 버전</span><span class="sxs-lookup"><span data-stu-id="890a6-110">Unsupported Windows versions</span></span>
 
-- [Windows XP](on-windows-xp.md)
+- [<span data-ttu-id="890a6-111">Windows XP</span><span class="sxs-lookup"><span data-stu-id="890a6-111">Windows XP</span></span>](on-windows-xp.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a><span data-ttu-id="890a6-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="890a6-112">See also</span></span>
 
-[.NET Framework 개발 가이드](../development-guide.md)
+[<span data-ttu-id="890a6-113">.NET Framework 개발 가이드</span><span class="sxs-lookup"><span data-stu-id="890a6-113">.NET Framework Development Guide</span></span>](../development-guide.md)
 

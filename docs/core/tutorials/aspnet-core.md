@@ -17,7 +17,7 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="getting-started-with-aspnet-core"></a>ASP.NET Core 시작    
+# <a name="getting-started-with-aspnet-core"></a><span data-ttu-id="e2062-104">ASP.NET Core 시작</span><span class="sxs-lookup"><span data-stu-id="e2062-104">Getting started with ASP.NET Core</span></span>    
     
-ASP.NET Core 웹 응용 프로그램 개발에 대한 자습서는 [ASP.NET Core 설명서](/aspnet/core/)를 참조하세요.
+<span data-ttu-id="e2062-105">ASP.NET Core 웹 응용 프로그램 개발에 대한 자습서는 [ASP.NET Core 설명서](/aspnet/core/)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e2062-105">For tutorials about developing ASP.NET Core web applications, we suggest you head over to [ASP.NET Core documentation](/aspnet/core/).</span></span>
 

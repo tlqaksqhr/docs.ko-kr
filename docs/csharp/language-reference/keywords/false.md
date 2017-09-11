@@ -37,15 +37,15 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="false-c-reference"></a>false(C# 참조)
-오버로드된 연산자 또는 리터럴로 사용됩니다.  
+# <a name="false-c-reference"></a><span data-ttu-id="24323-102">false(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="24323-102">false (C# Reference)</span></span>
+<span data-ttu-id="24323-103">오버로드된 연산자 또는 리터럴로 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="24323-103">Used as an overloaded operator or as a literal:</span></span>  
   
--   [false 연산자](../../../csharp/language-reference/keywords/false-operator.md)  
+-   [<span data-ttu-id="24323-104">false 연산자</span><span class="sxs-lookup"><span data-stu-id="24323-104">false Operator</span></span>](../../../csharp/language-reference/keywords/false-operator.md)  
   
--   [false 리터럴](../../../csharp/language-reference/keywords/false-literal.md)  
+-   [<span data-ttu-id="24323-105">false 리터럴</span><span class="sxs-lookup"><span data-stu-id="24323-105">false Literal</span></span>](../../../csharp/language-reference/keywords/false-literal.md)  
   
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="24323-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="24323-106">See Also</span></span>  
+ <span data-ttu-id="24323-107">[C# 참조](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="24323-107">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="24323-108">[C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="24323-108">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="24323-109">C# 키워드</span><span class="sxs-lookup"><span data-stu-id="24323-109">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
 

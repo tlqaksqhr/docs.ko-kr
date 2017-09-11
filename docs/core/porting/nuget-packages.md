@@ -16,15 +16,15 @@ ms.lasthandoff: 07/28/2017
 
 ---
 
-# <a name="-porting-to-net-core---nuget-packages"></a>🔧 .NET Core로 이식 - NuGet 패키지
+# <a name="-porting-to-net-core---nuget-packages"></a><span data-ttu-id="acb94-104">🔧 .NET Core로 이식 - NuGet 패키지</span><span class="sxs-lookup"><span data-stu-id="acb94-104">🔧 Porting to .NET Core - NuGet packages</span></span>
 
-> **참고:**
+> <span data-ttu-id="acb94-105">**참고:**</span><span class="sxs-lookup"><span data-stu-id="acb94-105">**Note**</span></span>
 > 
-> 이 항목은 아직 작성되지 않았습니다! 
+> <span data-ttu-id="acb94-106">이 항목은 아직 작성되지 않았습니다!</span><span class="sxs-lookup"><span data-stu-id="acb94-106">This topic hasn’t been written yet!</span></span> 
 >
-> 범위와 방법을 구성하는 데 도움이 될 의견을 환영합니다.
+> <span data-ttu-id="acb94-107">범위와 방법을 구성하는 데 도움이 될 의견을 환영합니다.</span><span class="sxs-lookup"><span data-stu-id="acb94-107">We welcome your input to help shape the scope and approach.</span></span>
 > 
-> [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md)에 기여할 수 있는 방법에 대해 자세히 알아보세요.
+> <span data-ttu-id="acb94-108">[GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md)에 기여할 수 있는 방법에 대해 자세히 알아보세요.</span><span class="sxs-lookup"><span data-stu-id="acb94-108">Learn more about how you can contribute on [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md).</span></span>
 >
         
   

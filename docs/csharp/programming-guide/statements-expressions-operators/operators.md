@@ -37,121 +37,121 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="operators-c-programming-guide"></a>연산자(C# 프로그래밍 가이드)
-C#에서 *연산자* 는 식 또는 문에서 하나 이상의 *피연산자* 에 적용되는 프로그램 요소입니다. 증가 연산자(`++`)나 `new`같이 피연산자 하나를 사용하는 연산자를 *단항* 연산자라고 합니다. 산술 연산자(`+`,`-`,`*`,`/`) 같이 피연산자 두 개를 사용하는 연산자를 *이항* 연산자라고 합니다. 조건 연산자(`?:`)는 피연산자 세 개를 사용하며 이는 C#에서 유일한 삼진 연산자입니다.  
+# <a name="operators-c-programming-guide"></a><span data-ttu-id="329c8-102">연산자(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="329c8-102">Operators (C# Programming Guide)</span></span>
+<span data-ttu-id="329c8-103">C#에서 *연산자* 는 식 또는 문에서 하나 이상의 *피연산자* 에 적용되는 프로그램 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-103">In C#, an *operator* is a program element that is applied to one or more *operands* in an expression or statement.</span></span> <span data-ttu-id="329c8-104">증가 연산자(`++`)나 `new`같이 피연산자 하나를 사용하는 연산자를 *단항* 연산자라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-104">Operators that take one operand, such as the increment operator (`++`) or `new`, are referred to as *unary* operators.</span></span> <span data-ttu-id="329c8-105">산술 연산자(`+`,`-`,`*`,`/`) 같이 피연산자 두 개를 사용하는 연산자를 *이항* 연산자라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-105">Operators that take two operands, such as arithmetic operators (`+`,`-`,`*`,`/`), are referred to as *binary* operators.</span></span> <span data-ttu-id="329c8-106">조건 연산자(`?:`)는 피연산자 세 개를 사용하며 이는 C#에서 유일한 삼진 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-106">One operator, the conditional operator (`?:`), takes three operands and is the sole ternary operator in C#.</span></span>  
   
- 다음 C# 문에는 단항 연산자 하나와 피연산자 하나가 들어 있습니다. 증가 연산자 `++`는 피연산자 `y`의 값을 수정합니다.  
+ <span data-ttu-id="329c8-107">다음 C# 문에는 단항 연산자 하나와 피연산자 하나가 들어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-107">The following C# statement contains a single unary operator and a single operand.</span></span> <span data-ttu-id="329c8-108">증가 연산자 `++`는 피연산자 `y`의 값을 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-108">The increment operator, `++`, modifies the value of the operand `y`.</span></span>  
   
- [!code-cs[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]  
+ <span data-ttu-id="329c8-109">[!code-cs[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="329c8-109">[!code-cs[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]</span></span>  
   
- 다음 C# 문에는 이항 연산자가 두 개 있습니다. 각 연산자는 피연산자를 두 개씩 사용합니다. 할당 연산자 `=`에는 정수 변수 `y` 와 식 `2 + 3` 이 피연산자로 사용됩니다. 식 `2 + 3` 자체는 더하기 연산자와 두 개의 피연산자, `2` 및 `3`으로 구성됩니다.  
+ <span data-ttu-id="329c8-110">다음 C# 문에는 이항 연산자가 두 개 있습니다. 각 연산자는 피연산자를 두 개씩 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-110">The following C# statement contains two binary operators, each with two operands.</span></span> <span data-ttu-id="329c8-111">할당 연산자 `=`에는 정수 변수 `y` 와 식 `2 + 3` 이 피연산자로 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-111">The assignment operator, `=`, has the integer variable `y` and the expression `2 + 3` as operands.</span></span> <span data-ttu-id="329c8-112">식 `2 + 3` 자체는 더하기 연산자와 두 개의 피연산자, `2` 및 `3`으로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-112">The expression `2 + 3` itself consists of the addition operator and two operands, `2` and `3`.</span></span>  
   
- [!code-cs[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
+ <span data-ttu-id="329c8-113">[!code-cs[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="329c8-113">[!code-cs[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]</span></span>  
   
-## <a name="operators-evaluation-and-operator-precedence"></a>연산자, 평가, 및 연산자 우선 순위  
- 피연산자는 모든 길이의 코드로 구성된 유효한 식이 될 수 있으며 모든 개수의 하위 식으로 구성될 수 있습니다. 여러 연산자를 포함하는 식에서 연산자가 적용되는 순서는 *operator precedence*, *associativity*및 괄호로 결정됩니다.  
+## <a name="operators-evaluation-and-operator-precedence"></a><span data-ttu-id="329c8-114">연산자, 평가, 및 연산자 우선 순위</span><span class="sxs-lookup"><span data-stu-id="329c8-114">Operators, Evaluation, and Operator Precedence</span></span>  
+ <span data-ttu-id="329c8-115">피연산자는 모든 길이의 코드로 구성된 유효한 식이 될 수 있으며 모든 개수의 하위 식으로 구성될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-115">An operand can be a valid expression that is composed of any length of code, and it can comprise any number of sub expressions.</span></span> <span data-ttu-id="329c8-116">여러 연산자를 포함하는 식에서 연산자가 적용되는 순서는 *operator precedence*, *associativity*및 괄호로 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-116">In an expression that contains multiple operators, the order in which the operators are applied is determined by *operator precedence*, *associativity*, and parentheses.</span></span>  
   
- 각 연산자에는 정의된 우선 순위가 있습니다. 다른 우선 순위 수준을 가진 여러 연산자가 포함된 식에서 연산자의 우선 순위는 연산자가 평가되는 순서를 결정합니다. 예를 들어, 다음 문은 `n1`에 3을 할당합니다.  
+ <span data-ttu-id="329c8-117">각 연산자에는 정의된 우선 순위가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-117">Each operator has a defined precedence.</span></span> <span data-ttu-id="329c8-118">다른 우선 순위 수준을 가진 여러 연산자가 포함된 식에서 연산자의 우선 순위는 연산자가 평가되는 순서를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-118">In an expression that contains multiple operators that have different precedence levels, the precedence of the operators determines the order in which the operators are evaluated.</span></span> <span data-ttu-id="329c8-119">예를 들어, 다음 문은 `n1`에 3을 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-119">For example, the following statement assigns 3 to `n1`.</span></span>  
   
  `n1 = 11 - 2 * 4;`  
   
- 곱셈은 뺄셈보다 우선하기 때문에 곱하기가 가장 먼저 실행됩니다.  
+ <span data-ttu-id="329c8-120">곱셈은 뺄셈보다 우선하기 때문에 곱하기가 가장 먼저 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-120">The multiplication is executed first because multiplication takes precedence over subtraction.</span></span>  
   
- 다음 표에서는 연산자를 각각 수행하는 연산의 종류에 따라 범주별로 구분하여 보여 줍니다. 이 범주는 우선 순위에 따라 나열되어 있습니다.  
+ <span data-ttu-id="329c8-121">다음 표에서는 연산자를 각각 수행하는 연산의 종류에 따라 범주별로 구분하여 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-121">The following table separates the operators into categories based on the type of operation they perform.</span></span> <span data-ttu-id="329c8-122">이 범주는 우선 순위에 따라 나열되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-122">The categories are listed in order of precedence.</span></span>  
   
- **기본 연산자**  
+ <span data-ttu-id="329c8-123">**기본 연산자**</span><span class="sxs-lookup"><span data-stu-id="329c8-123">**Primary Operators**</span></span>  
   
-|식|설명|  
+|<span data-ttu-id="329c8-124">식</span><span class="sxs-lookup"><span data-stu-id="329c8-124">Expression</span></span>|<span data-ttu-id="329c8-125">설명</span><span class="sxs-lookup"><span data-stu-id="329c8-125">Description</span></span>|  
 |----------------|-----------------|  
-|x[.](../../../csharp/language-reference/operators/member-access-operator.md)y<br /><br /> x?.y|멤버 액세스<br /><br /> 조건부 멤버 액세스|  
-|f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)|메서드 및 대리자 호출|  
-|a[&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md)<br /><br /> a?[x]|배열 및 인덱서 액세스<br /><br /> 조건부 배열 및 인덱서 액세스|  
-|x[++](../../../csharp/language-reference/operators/increment-operator.md)|후위 증가|  
-|x[--](../../../csharp/language-reference/operators/decrement-operator.md)|후위 감소|  
-|[new](../../../csharp/language-reference/keywords/new-operator.md) T(...)|개체 및 대리자 생성|  
-|`new` T(...){...}|이니셜라이저를 사용한 개체 생성. [개체 이니셜라이저 및 컬렉션 이니셜라이저](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)를 참조하세요.|  
-|`new` {...}|익명 개체 이니셜라이저. [무명 형식](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)을 참조하세요.|  
-|`new` T[...]|배열 생성. [배열](../../../csharp/programming-guide/arrays/index.md)을 참조하세요.|  
-|[typeof](../../../csharp/language-reference/keywords/typeof.md)(T)|T에 대한 System.Type 개체 가져오기|  
-|[checked](../../../csharp/language-reference/keywords/checked.md)(x)|checked 컨텍스트에서 식 계산|  
-|[unchecked](../../../csharp/language-reference/keywords/unchecked.md)(x)|unchecked 컨텍스트에서 식 계산|  
-|[default](../../../csharp/language-reference/keywords/default.md) (T)|T 형식의 기본값 가져오기|  
-|[delegate](../../../csharp/language-reference/keywords/delegate.md) {}|익명 함수(무명 메서드)|  
+|<span data-ttu-id="329c8-126">x[.](../../../csharp/language-reference/operators/member-access-operator.md)y</span><span class="sxs-lookup"><span data-stu-id="329c8-126">x[.](../../../csharp/language-reference/operators/member-access-operator.md)y</span></span><br /><br /> <span data-ttu-id="329c8-127">x?.y</span><span class="sxs-lookup"><span data-stu-id="329c8-127">x?.y</span></span>|<span data-ttu-id="329c8-128">멤버 액세스</span><span class="sxs-lookup"><span data-stu-id="329c8-128">Member access</span></span><br /><br /> <span data-ttu-id="329c8-129">조건부 멤버 액세스</span><span class="sxs-lookup"><span data-stu-id="329c8-129">Conditional member access</span></span>|  
+|<span data-ttu-id="329c8-130">f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)</span><span class="sxs-lookup"><span data-stu-id="329c8-130">f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)</span></span>|<span data-ttu-id="329c8-131">메서드 및 대리자 호출</span><span class="sxs-lookup"><span data-stu-id="329c8-131">Method and delegate invocation</span></span>|  
+|<span data-ttu-id="329c8-132">a[&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md)</span><span class="sxs-lookup"><span data-stu-id="329c8-132">a[&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md)</span></span><br /><br /> <span data-ttu-id="329c8-133">a?[x]</span><span class="sxs-lookup"><span data-stu-id="329c8-133">a?[x]</span></span>|<span data-ttu-id="329c8-134">배열 및 인덱서 액세스</span><span class="sxs-lookup"><span data-stu-id="329c8-134">Array and indexer access</span></span><br /><br /> <span data-ttu-id="329c8-135">조건부 배열 및 인덱서 액세스</span><span class="sxs-lookup"><span data-stu-id="329c8-135">Conditional array and indexer access</span></span>|  
+|<span data-ttu-id="329c8-136">x[++](../../../csharp/language-reference/operators/increment-operator.md)</span><span class="sxs-lookup"><span data-stu-id="329c8-136">x[++](../../../csharp/language-reference/operators/increment-operator.md)</span></span>|<span data-ttu-id="329c8-137">후위 증가</span><span class="sxs-lookup"><span data-stu-id="329c8-137">Post-increment</span></span>|  
+|<span data-ttu-id="329c8-138">x[--](../../../csharp/language-reference/operators/decrement-operator.md)</span><span class="sxs-lookup"><span data-stu-id="329c8-138">x[--](../../../csharp/language-reference/operators/decrement-operator.md)</span></span>|<span data-ttu-id="329c8-139">후위 감소</span><span class="sxs-lookup"><span data-stu-id="329c8-139">Post-decrement</span></span>|  
+|<span data-ttu-id="329c8-140">[new](../../../csharp/language-reference/keywords/new-operator.md) T(...)</span><span class="sxs-lookup"><span data-stu-id="329c8-140">[new](../../../csharp/language-reference/keywords/new-operator.md) T(...)</span></span>|<span data-ttu-id="329c8-141">개체 및 대리자 생성</span><span class="sxs-lookup"><span data-stu-id="329c8-141">Object and delegate creation</span></span>|  
+|<span data-ttu-id="329c8-142">`new` T(...){...}</span><span class="sxs-lookup"><span data-stu-id="329c8-142">`new` T(...){...}</span></span>|<span data-ttu-id="329c8-143">이니셜라이저를 사용한 개체 생성.</span><span class="sxs-lookup"><span data-stu-id="329c8-143">Object creation with initializer.</span></span> <span data-ttu-id="329c8-144">[개체 이니셜라이저 및 컬렉션 이니셜라이저](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="329c8-144">See [Object and Collection Initializers](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).</span></span>|  
+|<span data-ttu-id="329c8-145">`new` {...}</span><span class="sxs-lookup"><span data-stu-id="329c8-145">`new` {...}</span></span>|<span data-ttu-id="329c8-146">익명 개체 이니셜라이저.</span><span class="sxs-lookup"><span data-stu-id="329c8-146">Anonymous object initializer.</span></span> <span data-ttu-id="329c8-147">[무명 형식](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="329c8-147">See [Anonymous Types](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span></span>|  
+|<span data-ttu-id="329c8-148">`new` T[...]</span><span class="sxs-lookup"><span data-stu-id="329c8-148">`new` T[...]</span></span>|<span data-ttu-id="329c8-149">배열 생성.</span><span class="sxs-lookup"><span data-stu-id="329c8-149">Array creation.</span></span> <span data-ttu-id="329c8-150">[배열](../../../csharp/programming-guide/arrays/index.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="329c8-150">See [Arrays](../../../csharp/programming-guide/arrays/index.md).</span></span>|  
+|<span data-ttu-id="329c8-151">[typeof](../../../csharp/language-reference/keywords/typeof.md)(T)</span><span class="sxs-lookup"><span data-stu-id="329c8-151">[typeof](../../../csharp/language-reference/keywords/typeof.md)(T)</span></span>|<span data-ttu-id="329c8-152">T에 대한 System.Type 개체 가져오기</span><span class="sxs-lookup"><span data-stu-id="329c8-152">Obtain System.Type object for T</span></span>|  
+|<span data-ttu-id="329c8-153">[checked](../../../csharp/language-reference/keywords/checked.md)(x)</span><span class="sxs-lookup"><span data-stu-id="329c8-153">[checked](../../../csharp/language-reference/keywords/checked.md)(x)</span></span>|<span data-ttu-id="329c8-154">checked 컨텍스트에서 식 계산</span><span class="sxs-lookup"><span data-stu-id="329c8-154">Evaluate expression in checked context</span></span>|  
+|<span data-ttu-id="329c8-155">[unchecked](../../../csharp/language-reference/keywords/unchecked.md)(x)</span><span class="sxs-lookup"><span data-stu-id="329c8-155">[unchecked](../../../csharp/language-reference/keywords/unchecked.md)(x)</span></span>|<span data-ttu-id="329c8-156">unchecked 컨텍스트에서 식 계산</span><span class="sxs-lookup"><span data-stu-id="329c8-156">Evaluate expression in unchecked context</span></span>|  
+|<span data-ttu-id="329c8-157">[default](../../../csharp/language-reference/keywords/default.md) (T)</span><span class="sxs-lookup"><span data-stu-id="329c8-157">[default](../../../csharp/language-reference/keywords/default.md) (T)</span></span>|<span data-ttu-id="329c8-158">T 형식의 기본값 가져오기</span><span class="sxs-lookup"><span data-stu-id="329c8-158">Obtain default value of type T</span></span>|  
+|<span data-ttu-id="329c8-159">[delegate](../../../csharp/language-reference/keywords/delegate.md) {}</span><span class="sxs-lookup"><span data-stu-id="329c8-159">[delegate](../../../csharp/language-reference/keywords/delegate.md) {}</span></span>|<span data-ttu-id="329c8-160">익명 함수(무명 메서드)</span><span class="sxs-lookup"><span data-stu-id="329c8-160">Anonymous function (anonymous method)</span></span>|  
   
- **단항 연산자**  
+ <span data-ttu-id="329c8-161">**단항 연산자**</span><span class="sxs-lookup"><span data-stu-id="329c8-161">**Unary Operators**</span></span>  
   
-|식|설명|  
+|<span data-ttu-id="329c8-162">식</span><span class="sxs-lookup"><span data-stu-id="329c8-162">Expression</span></span>|<span data-ttu-id="329c8-163">설명</span><span class="sxs-lookup"><span data-stu-id="329c8-163">Description</span></span>|  
 |----------------|-----------------|  
-|[+](../../../csharp/language-reference/operators/addition-operator.md)x|ID|  
-|[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|부정|  
-|[!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|논리 부정|  
-|[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|비트 부정 연산|  
-|[++](../../../csharp/language-reference/operators/increment-operator.md)x|전위 증가|  
-|[--](../../../csharp/language-reference/operators/decrement-operator.md)x|전위 감소|  
-|[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x|x를 T 형식으로 명시적 변환|  
+|<span data-ttu-id="329c8-164">[+](../../../csharp/language-reference/operators/addition-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="329c8-164">[+](../../../csharp/language-reference/operators/addition-operator.md)x</span></span>|<span data-ttu-id="329c8-165">ID</span><span class="sxs-lookup"><span data-stu-id="329c8-165">Identity</span></span>|  
+|<span data-ttu-id="329c8-166">[-](../../../csharp/language-reference/operators/subtraction-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="329c8-166">[-](../../../csharp/language-reference/operators/subtraction-operator.md)x</span></span>|<span data-ttu-id="329c8-167">부정</span><span class="sxs-lookup"><span data-stu-id="329c8-167">Negation</span></span>|  
+|[!]<span data-ttu-id="329c8-168">(../../../csharp/language-reference/operators/logical-negation-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="329c8-168">(../../../csharp/language-reference/operators/logical-negation-operator.md)x</span></span>|<span data-ttu-id="329c8-169">논리 부정</span><span class="sxs-lookup"><span data-stu-id="329c8-169">Logical negation</span></span>|  
+|<span data-ttu-id="329c8-170">[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="329c8-170">[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x</span></span>|<span data-ttu-id="329c8-171">비트 부정 연산</span><span class="sxs-lookup"><span data-stu-id="329c8-171">Bitwise negation</span></span>|  
+|<span data-ttu-id="329c8-172">[++](../../../csharp/language-reference/operators/increment-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="329c8-172">[++](../../../csharp/language-reference/operators/increment-operator.md)x</span></span>|<span data-ttu-id="329c8-173">전위 증가</span><span class="sxs-lookup"><span data-stu-id="329c8-173">Pre-increment</span></span>|  
+|<span data-ttu-id="329c8-174">[--](../../../csharp/language-reference/operators/decrement-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="329c8-174">[--](../../../csharp/language-reference/operators/decrement-operator.md)x</span></span>|<span data-ttu-id="329c8-175">전위 감소</span><span class="sxs-lookup"><span data-stu-id="329c8-175">Pre-decrement</span></span>|  
+|<span data-ttu-id="329c8-176">[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x</span><span class="sxs-lookup"><span data-stu-id="329c8-176">[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x</span></span>|<span data-ttu-id="329c8-177">x를 T 형식으로 명시적 변환</span><span class="sxs-lookup"><span data-stu-id="329c8-177">Explicitly convert x to type T</span></span>|  
   
- **곱하기 연산자**  
+ <span data-ttu-id="329c8-178">**곱하기 연산자**</span><span class="sxs-lookup"><span data-stu-id="329c8-178">**Multiplicative Operators**</span></span>  
   
-|식|설명|  
+|<span data-ttu-id="329c8-179">식</span><span class="sxs-lookup"><span data-stu-id="329c8-179">Expression</span></span>|<span data-ttu-id="329c8-180">설명</span><span class="sxs-lookup"><span data-stu-id="329c8-180">Description</span></span>|  
 |----------------|-----------------|  
-|[*](../../../csharp/language-reference/operators/multiplication-operator.md)|곱하기|  
-|[/](../../../csharp/language-reference/operators/division-operator.md)|나눗셈 기호|  
-|[%](../../../csharp/language-reference/operators/modulus-operator.md)|나머지|  
+|[*](../../../csharp/language-reference/operators/multiplication-operator.md)|<span data-ttu-id="329c8-181">곱하기</span><span class="sxs-lookup"><span data-stu-id="329c8-181">Multiplication</span></span>|  
+|[/](../../../csharp/language-reference/operators/division-operator.md)|<span data-ttu-id="329c8-182">나눗셈 기호</span><span class="sxs-lookup"><span data-stu-id="329c8-182">Division</span></span>|  
+|[%](../../../csharp/language-reference/operators/modulus-operator.md)|<span data-ttu-id="329c8-183">나머지</span><span class="sxs-lookup"><span data-stu-id="329c8-183">Remainder</span></span>|  
   
- **더하기 연산자**  
+ <span data-ttu-id="329c8-184">**더하기 연산자**</span><span class="sxs-lookup"><span data-stu-id="329c8-184">**Additive Operators**</span></span>  
   
-|식|설명|  
+|<span data-ttu-id="329c8-185">식</span><span class="sxs-lookup"><span data-stu-id="329c8-185">Expression</span></span>|<span data-ttu-id="329c8-186">설명</span><span class="sxs-lookup"><span data-stu-id="329c8-186">Description</span></span>|  
 |----------------|-----------------|  
-|x [+](../../../csharp/language-reference/operators/addition-operator.md) y|더하기, 문자열 연결, 대리자 결합|  
-|x [-](../../../csharp/language-reference/operators/subtraction-operator.md) y|빼기, 대리자 제거|  
+|<span data-ttu-id="329c8-187">x [+](../../../csharp/language-reference/operators/addition-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="329c8-187">x [+](../../../csharp/language-reference/operators/addition-operator.md) y</span></span>|<span data-ttu-id="329c8-188">더하기, 문자열 연결, 대리자 결합</span><span class="sxs-lookup"><span data-stu-id="329c8-188">Addition, string concatenation, delegate combination</span></span>|  
+|<span data-ttu-id="329c8-189">x [-](../../../csharp/language-reference/operators/subtraction-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="329c8-189">x [-](../../../csharp/language-reference/operators/subtraction-operator.md) y</span></span>|<span data-ttu-id="329c8-190">빼기, 대리자 제거</span><span class="sxs-lookup"><span data-stu-id="329c8-190">Subtraction, delegate removal</span></span>|  
   
- **시프트 연산자**  
+ <span data-ttu-id="329c8-191">**시프트 연산자**</span><span class="sxs-lookup"><span data-stu-id="329c8-191">**Shift Operators**</span></span>  
   
-|식|설명|  
+|<span data-ttu-id="329c8-192">식</span><span class="sxs-lookup"><span data-stu-id="329c8-192">Expression</span></span>|<span data-ttu-id="329c8-193">설명</span><span class="sxs-lookup"><span data-stu-id="329c8-193">Description</span></span>|  
 |----------------|-----------------|  
-|x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y|왼쪽 시프트|  
-|x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y|오른쪽 시프트|  
+|<span data-ttu-id="329c8-194">x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="329c8-194">x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y</span></span>|<span data-ttu-id="329c8-195">왼쪽 시프트</span><span class="sxs-lookup"><span data-stu-id="329c8-195">Shift left</span></span>|  
+|<span data-ttu-id="329c8-196">x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="329c8-196">x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y</span></span>|<span data-ttu-id="329c8-197">오른쪽 시프트</span><span class="sxs-lookup"><span data-stu-id="329c8-197">Shift right</span></span>|  
   
- **관계 및 형식 연산자**  
+ <span data-ttu-id="329c8-198">**관계 및 형식 연산자**</span><span class="sxs-lookup"><span data-stu-id="329c8-198">**Relational and Type Operators**</span></span>  
   
-|식|설명|  
+|<span data-ttu-id="329c8-199">식</span><span class="sxs-lookup"><span data-stu-id="329c8-199">Expression</span></span>|<span data-ttu-id="329c8-200">설명</span><span class="sxs-lookup"><span data-stu-id="329c8-200">Description</span></span>|  
 |----------------|-----------------|  
-|x [\<](../../../csharp/language-reference/operators/less-than-operator.md) y|보다 작음|  
-|x [>](../../../csharp/language-reference/operators/greater-than-operator.md) y|보다 큼|  
-|x [\<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) y|작거나 같음|  
-|x [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) y|크거나 같음|  
-|x [is](../../../csharp/language-reference/keywords/is.md) T|x가 T이면 true를 반환하고, 그렇지 않으면 false를 반환합니다.|  
-|x [as](../../../csharp/language-reference/keywords/as.md) T|T로 형식화된 x 또는 null(x를 T로 형식화할 수 없는 경우)을 반환합니다.|  
+|<span data-ttu-id="329c8-201">x [\<](../../../csharp/language-reference/operators/less-than-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="329c8-201">x [\<](../../../csharp/language-reference/operators/less-than-operator.md) y</span></span>|<span data-ttu-id="329c8-202">보다 작음</span><span class="sxs-lookup"><span data-stu-id="329c8-202">Less than</span></span>|  
+|<span data-ttu-id="329c8-203">x [>](../../../csharp/language-reference/operators/greater-than-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="329c8-203">x [>](../../../csharp/language-reference/operators/greater-than-operator.md) y</span></span>|<span data-ttu-id="329c8-204">보다 큼</span><span class="sxs-lookup"><span data-stu-id="329c8-204">Greater than</span></span>|  
+|<span data-ttu-id="329c8-205">x [\<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="329c8-205">x [\<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) y</span></span>|<span data-ttu-id="329c8-206">작거나 같음</span><span class="sxs-lookup"><span data-stu-id="329c8-206">Less than or equal</span></span>|  
+|<span data-ttu-id="329c8-207">x [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="329c8-207">x [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md) y</span></span>|<span data-ttu-id="329c8-208">크거나 같음</span><span class="sxs-lookup"><span data-stu-id="329c8-208">Greater than or equal</span></span>|  
+|<span data-ttu-id="329c8-209">x [is](../../../csharp/language-reference/keywords/is.md) T</span><span class="sxs-lookup"><span data-stu-id="329c8-209">x [is](../../../csharp/language-reference/keywords/is.md) T</span></span>|<span data-ttu-id="329c8-210">x가 T이면 true를 반환하고, 그렇지 않으면 false를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-210">Return true if x is a T, false otherwise</span></span>|  
+|<span data-ttu-id="329c8-211">x [as](../../../csharp/language-reference/keywords/as.md) T</span><span class="sxs-lookup"><span data-stu-id="329c8-211">x [as](../../../csharp/language-reference/keywords/as.md) T</span></span>|<span data-ttu-id="329c8-212">T로 형식화된 x 또는 null(x를 T로 형식화할 수 없는 경우)을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-212">Return x typed as T, or null if x is not a T</span></span>|  
   
- **같음 연산자**  
+ <span data-ttu-id="329c8-213">**같음 연산자**</span><span class="sxs-lookup"><span data-stu-id="329c8-213">**Equality Operators**</span></span>  
   
-|식|설명|  
+|<span data-ttu-id="329c8-214">식</span><span class="sxs-lookup"><span data-stu-id="329c8-214">Expression</span></span>|<span data-ttu-id="329c8-215">설명</span><span class="sxs-lookup"><span data-stu-id="329c8-215">Description</span></span>|  
 |----------------|-----------------|  
-|x [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) y|Equal|  
-|x [!=](../../../csharp/language-reference/operators/not-equal-operator.md) y|같지 않음|  
+|<span data-ttu-id="329c8-216">x [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="329c8-216">x [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) y</span></span>|<span data-ttu-id="329c8-217">Equal</span><span class="sxs-lookup"><span data-stu-id="329c8-217">Equal</span></span>|  
+|<span data-ttu-id="329c8-218">x [!=](../../../csharp/language-reference/operators/not-equal-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="329c8-218">x [!=](../../../csharp/language-reference/operators/not-equal-operator.md) y</span></span>|<span data-ttu-id="329c8-219">같지 않음</span><span class="sxs-lookup"><span data-stu-id="329c8-219">Not equal</span></span>|  
   
- **논리, 조건 및 null 연산자**  
+ <span data-ttu-id="329c8-220">**논리, 조건 및 null 연산자**</span><span class="sxs-lookup"><span data-stu-id="329c8-220">**Logical, Conditional, and Null Operators**</span></span>  
   
-|범주|식|설명|  
+|<span data-ttu-id="329c8-221">범주</span><span class="sxs-lookup"><span data-stu-id="329c8-221">Category</span></span>|<span data-ttu-id="329c8-222">식</span><span class="sxs-lookup"><span data-stu-id="329c8-222">Expression</span></span>|<span data-ttu-id="329c8-223">설명</span><span class="sxs-lookup"><span data-stu-id="329c8-223">Description</span></span>|  
 |--------------|----------------|-----------------|  
-|논리적 AND|x [&](../../../csharp/language-reference/operators/and-operator.md) y|정수 비트 AND, 부울 논리곱 AND|  
-|논리 XOR|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|정수 비트 XOR, 부울 논리곱 XOR|  
-|논리적 OR|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|정수 비트 OR, 부울 논리곱 OR|  
-|조건부 AND|x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y|x가 true인 경우에만 y를 계산합니다.|  
-|조건부 OR|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|x가 false인 경우에만 y를 계산합니다.|  
-|Null 결합|x [??](../../../csharp/language-reference/operators/null-conditional-operator.md) y|x가 null인 경우 y로 계산하고, 그렇지 않으면 x로 계산합니다.|  
-|조건|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y : z|x가 true이면 y로 계산되고 false이면 z로 계산됩니다.|  
+|<span data-ttu-id="329c8-224">논리적 AND</span><span class="sxs-lookup"><span data-stu-id="329c8-224">Logical AND</span></span>|<span data-ttu-id="329c8-225">x [&](../../../csharp/language-reference/operators/and-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="329c8-225">x [&](../../../csharp/language-reference/operators/and-operator.md) y</span></span>|<span data-ttu-id="329c8-226">정수 비트 AND, 부울 논리곱 AND</span><span class="sxs-lookup"><span data-stu-id="329c8-226">Integer bitwise AND, Boolean logical AND</span></span>|  
+|<span data-ttu-id="329c8-227">논리 XOR</span><span class="sxs-lookup"><span data-stu-id="329c8-227">Logical XOR</span></span>|<span data-ttu-id="329c8-228">x [^](../../../csharp/language-reference/operators/xor-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="329c8-228">x [^](../../../csharp/language-reference/operators/xor-operator.md) y</span></span>|<span data-ttu-id="329c8-229">정수 비트 XOR, 부울 논리곱 XOR</span><span class="sxs-lookup"><span data-stu-id="329c8-229">Integer bitwise XOR, boolean logical XOR</span></span>|  
+|<span data-ttu-id="329c8-230">논리적 OR</span><span class="sxs-lookup"><span data-stu-id="329c8-230">Logical OR</span></span>|<span data-ttu-id="329c8-231">x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="329c8-231">x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y</span></span>|<span data-ttu-id="329c8-232">정수 비트 OR, 부울 논리곱 OR</span><span class="sxs-lookup"><span data-stu-id="329c8-232">Integer bitwise OR, boolean logical OR</span></span>|  
+|<span data-ttu-id="329c8-233">조건부 AND</span><span class="sxs-lookup"><span data-stu-id="329c8-233">Conditional AND</span></span>|<span data-ttu-id="329c8-234">x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="329c8-234">x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y</span></span>|<span data-ttu-id="329c8-235">x가 true인 경우에만 y를 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-235">Evaluates y only if x is true</span></span>|  
+|<span data-ttu-id="329c8-236">조건부 OR</span><span class="sxs-lookup"><span data-stu-id="329c8-236">Conditional OR</span></span>|<span data-ttu-id="329c8-237">x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="329c8-237">x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y</span></span>|<span data-ttu-id="329c8-238">x가 false인 경우에만 y를 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-238">Evaluates y only if x is false</span></span>|  
+|<span data-ttu-id="329c8-239">Null 결합</span><span class="sxs-lookup"><span data-stu-id="329c8-239">Null coalescing</span></span>|<span data-ttu-id="329c8-240">x [??](../../../csharp/language-reference/operators/null-conditional-operator.md)</span><span class="sxs-lookup"><span data-stu-id="329c8-240">x [??](../../../csharp/language-reference/operators/null-conditional-operator.md)</span></span> <span data-ttu-id="329c8-241">y</span><span class="sxs-lookup"><span data-stu-id="329c8-241">y</span></span>|<span data-ttu-id="329c8-242">x가 null인 경우 y로 계산하고, 그렇지 않으면 x로 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-242">Evaluates to y if x is null, to x otherwise</span></span>|  
+|<span data-ttu-id="329c8-243">조건</span><span class="sxs-lookup"><span data-stu-id="329c8-243">Conditional</span></span>|<span data-ttu-id="329c8-244">x [?](../../../csharp/language-reference/operators/conditional-operator.md)</span><span class="sxs-lookup"><span data-stu-id="329c8-244">x [?](../../../csharp/language-reference/operators/conditional-operator.md)</span></span> <span data-ttu-id="329c8-245">y : z</span><span class="sxs-lookup"><span data-stu-id="329c8-245">y : z</span></span>|<span data-ttu-id="329c8-246">x가 true이면 y로 계산되고 false이면 z로 계산됩니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-246">Evaluates to y if x is true, z if x is false</span></span>|  
   
- **할당 및 익명 연산자**  
+ <span data-ttu-id="329c8-247">**할당 및 익명 연산자**</span><span class="sxs-lookup"><span data-stu-id="329c8-247">**Assignment and Anonymous Operators**</span></span>  
   
-|식|설명|  
+|<span data-ttu-id="329c8-248">식</span><span class="sxs-lookup"><span data-stu-id="329c8-248">Expression</span></span>|<span data-ttu-id="329c8-249">설명</span><span class="sxs-lookup"><span data-stu-id="329c8-249">Description</span></span>|  
 |----------------|-----------------|  
-|[=](../../../csharp/language-reference/operators/assignment-operator.md)|할당|  
-|x op= y|복합 할당. 다음 연산자를 지원합니다. [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../csharp/language-reference/operators/division-assignment-operator.md), [%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [!=](../../../csharp/language-reference/operators/not-equal-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
-|(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y|익명 함수(람다 식)|  
+|[=](../../../csharp/language-reference/operators/assignment-operator.md)|<span data-ttu-id="329c8-250">할당</span><span class="sxs-lookup"><span data-stu-id="329c8-250">Assignment</span></span>|  
+|<span data-ttu-id="329c8-251">x op= y</span><span class="sxs-lookup"><span data-stu-id="329c8-251">x op= y</span></span>|<span data-ttu-id="329c8-252">복합 할당.</span><span class="sxs-lookup"><span data-stu-id="329c8-252">Compound assignment.</span></span> <span data-ttu-id="329c8-253">다음 연산자를 지원합니다. [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../csharp/language-reference/operators/division-assignment-operator.md), [%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [!=](../../../csharp/language-reference/operators/not-equal-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)</span><span class="sxs-lookup"><span data-stu-id="329c8-253">Supports these operators: [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../csharp/language-reference/operators/division-assignment-operator.md), [%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [!=](../../../csharp/language-reference/operators/not-equal-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)</span></span>|  
+|<span data-ttu-id="329c8-254">(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y</span><span class="sxs-lookup"><span data-stu-id="329c8-254">(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y</span></span>|<span data-ttu-id="329c8-255">익명 함수(람다 식)</span><span class="sxs-lookup"><span data-stu-id="329c8-255">Anonymous function (lambda expression)</span></span>|  
   
-## <a name="associativity"></a>associativity  
- 우선 순위가 동일한 연산자 두 개 이상이 식 하나에 있으면 두 연산자의 결합성에 따라 연산 순서가 결정됩니다. 왼쪽 결합성이 있는 연산자는 왼쪽에서 오른쪽으로 계산됩니다. 예를 들어, `x * y / z` 는 `(x * y) / z`로 계산됩니다. 오른쪽 결합성이 있는 연산자는 오른쪽에서 왼쪽으로 계산됩니다. 예를 들어, 할당 연산자는 오른쪽 결합성이 있는 연산자입니다. 아닌 경우 다음 코드 오류가 발생합니다.  
+## <a name="associativity"></a><span data-ttu-id="329c8-256">associativity</span><span class="sxs-lookup"><span data-stu-id="329c8-256">Associativity</span></span>  
+ <span data-ttu-id="329c8-257">우선 순위가 동일한 연산자 두 개 이상이 식 하나에 있으면 두 연산자의 결합성에 따라 연산 순서가 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-257">When two or more operators that have the same precedence are present in an expression, they are evaluated based on associativity.</span></span> <span data-ttu-id="329c8-258">왼쪽 결합성이 있는 연산자는 왼쪽에서 오른쪽으로 계산됩니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-258">Left-associative operators are evaluated in order from left to right.</span></span> <span data-ttu-id="329c8-259">예를 들어, `x * y / z` 는 `(x * y) / z`로 계산됩니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-259">For example, `x * y / z` is evaluated as `(x * y) / z`.</span></span> <span data-ttu-id="329c8-260">오른쪽 결합성이 있는 연산자는 오른쪽에서 왼쪽으로 계산됩니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-260">Right-associative operators are evaluated in order from right to left.</span></span> <span data-ttu-id="329c8-261">예를 들어, 할당 연산자는 오른쪽 결합성이 있는 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-261">For example, the assignment operator is right associative.</span></span> <span data-ttu-id="329c8-262">아닌 경우 다음 코드 오류가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-262">If it were not, the following code would result in an error.</span></span>  
   
 ```csharp  
 int a, b, c;  
@@ -164,35 +164,35 @@ a = (b = c);
 //(a = b) = c;  
 ```  
   
- 또 다른 예로, 3개로 구성된 연산자([?:](../../../csharp/language-reference/operators/conditional-operator.md))는 오른쪽 결합형이고, 대부분의 이항 연산자는 왼쪽 결합형입니다.  
+ <span data-ttu-id="329c8-263">또 다른 예로, 3개로 구성된 연산자([?:](../../../csharp/language-reference/operators/conditional-operator.md))는 오른쪽 결합형이고,</span><span class="sxs-lookup"><span data-stu-id="329c8-263">As another example the ternary operator ([?:](../../../csharp/language-reference/operators/conditional-operator.md)) is right associative.</span></span> <span data-ttu-id="329c8-264">대부분의 이항 연산자는 왼쪽 결합형입니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-264">Most binary operators are left associative.</span></span>  
   
- 식에서 연산자가 왼쪽 결합성인지, 오른쪽 결합성인지에 따라 각 식의 피연산자가 먼저 평가됩니다. 다음 예제는 연산자와 피연산자의 계산 순서를 보여 줍니다.  
+ <span data-ttu-id="329c8-265">식에서 연산자가 왼쪽 결합성인지, 오른쪽 결합성인지에 따라 각 식의 피연산자가 먼저 평가됩니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-265">Whether the operators in an expression are left associative or right associative, the operands of each expression are evaluated first, from left to right.</span></span> <span data-ttu-id="329c8-266">다음 예제는 연산자와 피연산자의 계산 순서를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-266">The following examples illustrate the order of evaluation of operators and operands.</span></span>  
   
-|문|계산 순서|  
+|<span data-ttu-id="329c8-267">문</span><span class="sxs-lookup"><span data-stu-id="329c8-267">Statement</span></span>|<span data-ttu-id="329c8-268">계산 순서</span><span class="sxs-lookup"><span data-stu-id="329c8-268">Order of evaluation</span></span>|  
 |---------------|-------------------------|  
-|`a = b`|a, b, =|  
-|`a = b + c`|a, b, c, +, =|  
-|`a = b + c * d`|a, b, c, d, *, +, =|  
-|`a = b * c + d`|a, b, c, *, d, +, =|  
-|`a = b - c + d`|a, b, c, -, d, +, =|  
-|`a += b -= c`|a, b, c, -=, +=|  
+|`a = b`|<span data-ttu-id="329c8-269">a, b, =</span><span class="sxs-lookup"><span data-stu-id="329c8-269">a, b, =</span></span>|  
+|`a = b + c`|<span data-ttu-id="329c8-270">a, b, c, +, =</span><span class="sxs-lookup"><span data-stu-id="329c8-270">a, b, c, +, =</span></span>|  
+|`a = b + c * d`|<span data-ttu-id="329c8-271">a, b, c, d, *, +, =</span><span class="sxs-lookup"><span data-stu-id="329c8-271">a, b, c, d, *, +, =</span></span>|  
+|`a = b * c + d`|<span data-ttu-id="329c8-272">a, b, c, *, d, +, =</span><span class="sxs-lookup"><span data-stu-id="329c8-272">a, b, c, *, d, +, =</span></span>|  
+|`a = b - c + d`|<span data-ttu-id="329c8-273">a, b, c, -, d, +, =</span><span class="sxs-lookup"><span data-stu-id="329c8-273">a, b, c, -, d, +, =</span></span>|  
+|`a += b -= c`|<span data-ttu-id="329c8-274">a, b, c, -=, +=</span><span class="sxs-lookup"><span data-stu-id="329c8-274">a, b, c, -=, +=</span></span>|  
   
-## <a name="adding-parentheses"></a>괄호 추가  
- 괄호를 사용하여 연산자 우선 순위와 연결을 통해 부과된 실행 순서를 변경할 수 있습니다. 예를 들어, `2 + 3 * 2` 는 일반적으로 승제 연산자가 가감 연산자보다 우선하기 때문에 8로 평가됩니다. 그러나 식을 `(2 + 3) * 2`처럼 작성하는 경우 곱셈 전에 덧셈이 계산되고 결과는 10입니다. 다음 예제는 괄호로 묶인 식의 계산 순서를 보여 줍니다. 이전 예제에서와 같이 피연산자는 연산자가 적용되기 전에 평가됩니다.  
+## <a name="adding-parentheses"></a><span data-ttu-id="329c8-275">괄호 추가</span><span class="sxs-lookup"><span data-stu-id="329c8-275">Adding Parentheses</span></span>  
+ <span data-ttu-id="329c8-276">괄호를 사용하여 연산자 우선 순위와 연결을 통해 부과된 실행 순서를 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-276">You can change the order imposed by operator precedence and associativity by using parentheses.</span></span> <span data-ttu-id="329c8-277">예를 들어, `2 + 3 * 2` 는 일반적으로 승제 연산자가 가감 연산자보다 우선하기 때문에 8로 평가됩니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-277">For example, `2 + 3 * 2` ordinarily evaluates to 8, because multiplicative operators take precedence over additive operators.</span></span> <span data-ttu-id="329c8-278">그러나 식을 `(2 + 3) * 2`처럼 작성하는 경우 곱셈 전에 덧셈이 계산되고 결과는 10입니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-278">However, if you write the expression as `(2 + 3) * 2`, the addition is evaluated before the multiplication, and the result is 10.</span></span> <span data-ttu-id="329c8-279">다음 예제는 괄호로 묶인 식의 계산 순서를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-279">The following examples illustrate the order of evaluation in parenthesized expressions.</span></span> <span data-ttu-id="329c8-280">이전 예제에서와 같이 피연산자는 연산자가 적용되기 전에 평가됩니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-280">As in previous examples, the operands are evaluated before the operator is applied.</span></span>  
   
-|문|계산 순서|  
+|<span data-ttu-id="329c8-281">문</span><span class="sxs-lookup"><span data-stu-id="329c8-281">Statement</span></span>|<span data-ttu-id="329c8-282">계산 순서</span><span class="sxs-lookup"><span data-stu-id="329c8-282">Order of evaluation</span></span>|  
 |---------------|-------------------------|  
-|`a = (b + c) * d`|a, b, c, +, d, *, =|  
-|`a = b - (c + d)`|a, b, c, d, +, -, =|  
-|`a = (b + c) * (d - e)`|a, b, c, +, d, e, -, *, =|  
+|`a = (b + c) * d`|<span data-ttu-id="329c8-283">a, b, c, +, d, *, =</span><span class="sxs-lookup"><span data-stu-id="329c8-283">a, b, c, +, d, *, =</span></span>|  
+|`a = b - (c + d)`|<span data-ttu-id="329c8-284">a, b, c, d, +, -, =</span><span class="sxs-lookup"><span data-stu-id="329c8-284">a, b, c, d, +, -, =</span></span>|  
+|`a = (b + c) * (d - e)`|<span data-ttu-id="329c8-285">a, b, c, +, d, e, -, *, =</span><span class="sxs-lookup"><span data-stu-id="329c8-285">a, b, c, +, d, e, -, *, =</span></span>|  
   
-## <a name="operator-overloading"></a>연산자 오버로드  
- 사용자 지정 클래스 및 구조체에서 연산자의 동작을 변경할 수 있습니다. 이러한 과정을 *연산자 오버로드*라고 합니다. 자세한 내용은 [오버로드할 수 있는 연산자](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)를 참조하세요.  
+## <a name="operator-overloading"></a><span data-ttu-id="329c8-286">연산자 오버로드</span><span class="sxs-lookup"><span data-stu-id="329c8-286">Operator Overloading</span></span>  
+ <span data-ttu-id="329c8-287">사용자 지정 클래스 및 구조체에서 연산자의 동작을 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-287">You can change the behavior of operators for custom classes and structs.</span></span> <span data-ttu-id="329c8-288">이러한 과정을 *연산자 오버로드*라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="329c8-288">This process is referred to as *operator overloading*.</span></span> <span data-ttu-id="329c8-289">자세한 내용은 [오버로드할 수 있는 연산자](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="329c8-289">For more information, see [Overloadable Operators](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md).</span></span>  
   
-## <a name="related-sections"></a>관련 단원  
- 자세한 내용은 [연산자 키워드](../../../csharp/language-reference/keywords/operator-keywords.md) 및 [C# 연산자](../../../csharp/language-reference/operators/index.md)를 참조하세요.  
+## <a name="related-sections"></a><span data-ttu-id="329c8-290">관련 단원</span><span class="sxs-lookup"><span data-stu-id="329c8-290">Related Sections</span></span>  
+ <span data-ttu-id="329c8-291">자세한 내용은 [연산자 키워드](../../../csharp/language-reference/keywords/operator-keywords.md) 및 [C# 연산자](../../../csharp/language-reference/operators/index.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="329c8-291">For more information, see [Operator Keywords](../../../csharp/language-reference/keywords/operator-keywords.md) and [C# Operators](../../../csharp/language-reference/operators/index.md).</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [문, 식, 연산자](../../../csharp/programming-guide/statements-expressions-operators/index.md)
+## <a name="see-also"></a><span data-ttu-id="329c8-292">참고 항목</span><span class="sxs-lookup"><span data-stu-id="329c8-292">See Also</span></span>  
+ <span data-ttu-id="329c8-293">[C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="329c8-293">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="329c8-294">문, 식, 연산자</span><span class="sxs-lookup"><span data-stu-id="329c8-294">Statements, Expressions, and Operators</span></span>](../../../csharp/programming-guide/statements-expressions-operators/index.md)
 

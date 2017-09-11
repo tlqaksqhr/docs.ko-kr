@@ -26,10 +26,10 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-books-linq-to-xml"></a>샘플 XML 파일: Books(LINQ to XML)
-다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다. 이 파일에는 책에 대한 정보가 포함되어 있습니다.  
+# <a name="sample-xml-file-books-linq-to-xml"></a><span data-ttu-id="c6903-102">샘플 XML 파일: Books(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="c6903-102">Sample XML File: Books (LINQ to XML)</span></span>
+<span data-ttu-id="c6903-103">다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="c6903-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="c6903-104">이 파일에는 책에 대한 정보가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c6903-104">The file contains information about books.</span></span>  
   
-## <a name="booksxml"></a>books.xml  
+## <a name="booksxml"></a><span data-ttu-id="c6903-105">books.xml</span><span class="sxs-lookup"><span data-stu-id="c6903-105">books.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -56,6 +56,6 @@ ms.lasthandoff: 07/28/2017
 </Catalog>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [샘플 XML 문서(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="c6903-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c6903-106">See Also</span></span>  
+ [<span data-ttu-id="c6903-107">샘플 XML 문서(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="c6903-107">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
 

@@ -32,34 +32,35 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a0e309a80082f19fb47ccbbb43c00f22c8addd3b
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: fe03c36f46717248269c9aaec13b40569161b0e0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="nologo-visual-basic"></a>/nologo(Visual Basic)
-컴파일하는 동안 저작권 배너 및 정보 메시지 표시를 하지 않습니다.  
+# <a name="nologo-visual-basic"></a><span data-ttu-id="1a275-102">/nologo(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1a275-102">/nologo (Visual Basic)</span></span>
+<span data-ttu-id="1a275-103">컴파일하는 동안 저작권 배너 및 정보 메시지 표시를 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="1a275-103">Suppresses display of the copyright banner and informational messages during compilation.</span></span>  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a><span data-ttu-id="1a275-104">구문</span><span class="sxs-lookup"><span data-stu-id="1a275-104">Syntax</span></span>  
   
 ```  
 /nologo  
 ```  
   
-## <a name="remarks"></a>설명  
- 지정 하는 경우 `/nologo`, 컴파일러 저작권 배너를 표시 하지 않습니다. 기본적으로 `/nologo`은 적용되지 않습니다.  
+## <a name="remarks"></a><span data-ttu-id="1a275-105">설명</span><span class="sxs-lookup"><span data-stu-id="1a275-105">Remarks</span></span>  
+ <span data-ttu-id="1a275-106">지정 하는 경우 `/nologo`, 컴파일러 저작권 배너를 표시 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="1a275-106">If you specify `/nologo`, the compiler does not display a copyright banner.</span></span> <span data-ttu-id="1a275-107">기본적으로 `/nologo`은 적용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="1a275-107">By default, `/nologo` is not in effect.</span></span>  
   
 > [!NOTE]
->  `/nologo` 옵션은 Visual Studio 개발 환경 내에서 사용할 수 없습니다; 명령줄에서 컴파일할 때에 사용할 수는 있습니다.  
+>  <span data-ttu-id="1a275-108">`/nologo` 옵션은 Visual Studio 개발 환경 내에서 사용할 수 없습니다; 명령줄에서 컴파일할 때에 사용할 수는 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1a275-108">The `/nologo` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
   
-## <a name="example"></a>예제  
- 다음 코드에서는 `T2.vb` 를 저작권 배너를 표시 하지 않습니다.  
+## <a name="example"></a><span data-ttu-id="1a275-109">예제</span><span class="sxs-lookup"><span data-stu-id="1a275-109">Example</span></span>  
+ <span data-ttu-id="1a275-110">다음 코드에서는 `T2.vb` 를 저작권 배너를 표시 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="1a275-110">The following code compiles `T2.vb` and does not display a copyright banner.</span></span>  
   
 ```  
 vbc /nologo t2.vb  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)   
- [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="1a275-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1a275-111">See Also</span></span>  
+ <span data-ttu-id="1a275-112">[Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md) </span><span class="sxs-lookup"><span data-stu-id="1a275-112">[Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md) </span></span>  
+<span data-ttu-id="1a275-113"> [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)</span><span class="sxs-lookup"><span data-stu-id="1a275-113"> [Sample Compilation Command Lines](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)</span></span>

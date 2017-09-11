@@ -43,46 +43,46 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 08/01/2017
 
 ---
-# <a name="switch-c-reference"></a>switch(C# 참조)
-`switch`는 *일치 식*을 사용한 패턴 일치를 기반으로 하여 후보 목록에서 실행할 *switch 섹션* 하나를 선택하는 선택 문입니다. 
+# <a name="switch-c-reference"></a><span data-ttu-id="ed22a-102">switch(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="ed22a-102">switch (C# Reference)</span></span>
+<span data-ttu-id="ed22a-103">`switch`는 *일치 식*을 사용한 패턴 일치를 기반으로 하여 후보 목록에서 실행할 *switch 섹션* 하나를 선택하는 선택 문입니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-103">`switch` is a selection statement that chooses a single *switch section* to execute from a list of candidates based on a pattern match with the *match expression*.</span></span> 
   
- [!code-cs[switch#1](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]  
+ <span data-ttu-id="ed22a-104">[!code-cs[switch#1](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]</span><span class="sxs-lookup"><span data-stu-id="ed22a-104">[!code-cs[switch#1](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]</span></span>  
 
-단일 식을 3개 이상의 조건에 대해 테스트하는 경우 `switch` 문이 [if-else](if-else.md) 구문 대신 사용되는 경우가 많습니다. 예를 들어 다음 `switch` 문은 `Color` 형식의 변수에 다음 세 가지 값 중 하나가 있는지 여부를 확인합니다. 
+<span data-ttu-id="ed22a-105">단일 식을 3개 이상의 조건에 대해 테스트하는 경우 `switch` 문이 [if-else](if-else.md) 구문 대신 사용되는 경우가 많습니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-105">The `switch` statement is often used as an alternative to an [if-else](if-else.md) construct if a single expression is tested against three or more conditions.</span></span> <span data-ttu-id="ed22a-106">예를 들어 다음 `switch` 문은 `Color` 형식의 변수에 다음 세 가지 값 중 하나가 있는지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-106">For example, the following `switch` statement determines whether a variable of type `Color` has one of three values:</span></span> 
 
-[!code-cs[switch#3](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)] 
+<span data-ttu-id="ed22a-107">[!code-cs[switch#3](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)]</span><span class="sxs-lookup"><span data-stu-id="ed22a-107">[!code-cs[switch#3](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)]</span></span> 
 
-이 문은 `if`-`else` 구문을 사용하는 다음 예제와 같습니다. 
+<span data-ttu-id="ed22a-108">이 문은 `if`-`else` 구문을 사용하는 다음 예제와 같습니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-108">It is equivalent to the following example that uses an `if`-`else` construct.</span></span> 
 
-[!code-cs[switch#3a](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)] 
+<span data-ttu-id="ed22a-109">[!code-cs[switch#3a](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)]</span><span class="sxs-lookup"><span data-stu-id="ed22a-109">[!code-cs[switch#3a](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)]</span></span> 
 
-## <a name="the-match-expression"></a>일치 식
+## <a name="the-match-expression"></a><span data-ttu-id="ed22a-110">일치 식</span><span class="sxs-lookup"><span data-stu-id="ed22a-110">The match expression</span></span>
 
-일치 식은 `case` 레이블의 패턴과 일치시킬 값을 제공합니다. 사용되는 구문은 다음과 같습니다.
+<span data-ttu-id="ed22a-111">일치 식은 `case` 레이블의 패턴과 일치시킬 값을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-111">The match expression provides the value to match against the patterns in `case` labels.</span></span> <span data-ttu-id="ed22a-112">사용되는 구문은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-112">Its syntax is:</span></span>
 
 ```csharp
    switch (expr)
 ```
 
-C# 6에서 일치 식은 다음 형식의 값을 반환하는 식이어야 합니다.
+<span data-ttu-id="ed22a-113">C# 6에서 일치 식은 다음 형식의 값을 반환하는 식이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-113">In C# 6, the match expression must be an expression that returns a value of the following types:</span></span>
 
-- [char](char.md)
-- [string](string.md)
-- [bool](bool.md) 
-- [int](int.md) 또는 [long](long.md)과 같은 정수 계열 값
-- [enum](enum.md) 값
+- <span data-ttu-id="ed22a-114">[char](char.md)</span><span class="sxs-lookup"><span data-stu-id="ed22a-114">a [char](char.md).</span></span>
+- <span data-ttu-id="ed22a-115">[string](string.md)</span><span class="sxs-lookup"><span data-stu-id="ed22a-115">a [string](string.md).</span></span>
+- <span data-ttu-id="ed22a-116">[bool](bool.md)</span><span class="sxs-lookup"><span data-stu-id="ed22a-116">a [bool](bool.md).</span></span> 
+- <span data-ttu-id="ed22a-117">[int](int.md) 또는 [long](long.md)과 같은 정수 계열 값</span><span class="sxs-lookup"><span data-stu-id="ed22a-117">an integral value, such as an [int](int.md) or a [long](long.md).</span></span>
+- <span data-ttu-id="ed22a-118">[enum](enum.md) 값</span><span class="sxs-lookup"><span data-stu-id="ed22a-118">an [enum](enum.md) value.</span></span>
 
-C# 7부터 일치 식은 null이 아닌 모든 식일 수 있습니다.
+<span data-ttu-id="ed22a-119">C# 7부터 일치 식은 null이 아닌 모든 식일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-119">Starting with C# 7, the match expression can be any non-null expression.</span></span>
  
-## <a name="the-switch-section"></a>switch 섹션
+## <a name="the-switch-section"></a><span data-ttu-id="ed22a-120">switch 섹션</span><span class="sxs-lookup"><span data-stu-id="ed22a-120">The switch section</span></span>
  
- `switch` 문에는 스위치 섹션이 하나 이상 포함됩니다. 각 switch 섹션에는 하나 이상의 *case 레이블* 및 하나 이상의 문이 있습니다. 다음 예제에서는 세 개의 스위치 섹션이 있는 간단한 `switch` 문을 보여 줍니다. 각 스위치 섹션에는 `case 1:`과 같은 하나의 case 레이블과 두 개의 문이 있습니다.
+ <span data-ttu-id="ed22a-121">`switch` 문에는 스위치 섹션이 하나 이상 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-121">A `switch` statement includes one or more switch sections.</span></span> <span data-ttu-id="ed22a-122">각 switch 섹션에는 하나 이상의 *case 레이블* 및 하나 이상의 문이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-122">Each switch section contains one or more *case labels* followed by one or more statements.</span></span> <span data-ttu-id="ed22a-123">다음 예제에서는 세 개의 스위치 섹션이 있는 간단한 `switch` 문을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-123">The following example shows a simple `switch` statement that has three switch sections.</span></span> <span data-ttu-id="ed22a-124">각 스위치 섹션에는 `case 1:`과 같은 하나의 case 레이블과 두 개의 문이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-124">Each switch section has one case label, such as `case 1:`, and two statements.</span></span>
  
-  `switch` 문에 포함할 수 있는 switch 섹션 수에는 제한이 없으며 각 섹션에 하나 이상의 case 레이블을 포함할 수 있습니다(다음 예제 참조). 하지만 두 case 레이블에 동일한 식을 포함할 수는 없습니다.  
+  <span data-ttu-id="ed22a-125">`switch` 문에 포함할 수 있는 switch 섹션 수에는 제한이 없으며 각 섹션에 하나 이상의 case 레이블을 포함할 수 있습니다(다음 예제 참조).</span><span class="sxs-lookup"><span data-stu-id="ed22a-125">A `switch` statement can include any number of switch sections, and each section can have one or more case labels, as shown in the following example.</span></span> <span data-ttu-id="ed22a-126">하지만 두 case 레이블에 동일한 식을 포함할 수는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-126">However, no two case labels may contain the same expression.</span></span>  
 
- [!code-cs[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]  
+ <span data-ttu-id="ed22a-127">[!code-cs[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]</span><span class="sxs-lookup"><span data-stu-id="ed22a-127">[!code-cs[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]</span></span>  
 
- switch 문에서 하나의 switch 섹션만 실행됩니다. C#은 한 switch 섹션에서 다음 switch 섹션으로 계속 실행하도록 허용하지 않습니다. 이 때문에 다음 코드는 컴파일러 오류 CS0163: "한 case 레이블(<case label>)에서 다른 case 레이블로 제어를 이동할 수 없습니다."를 생성합니다.   
+ <span data-ttu-id="ed22a-128">switch 문에서 하나의 switch 섹션만 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-128">Only one switch section in a switch statement executes.</span></span> <span data-ttu-id="ed22a-129">C#은 한 switch 섹션에서 다음 switch 섹션으로 계속 실행하도록 허용하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-129">C# does not allow execution to continue from one switch section to the next.</span></span> <span data-ttu-id="ed22a-130">이 때문에 다음 코드는 컴파일러 오류 CS0163: "한 case 레이블(<case label>)에서 다른 case 레이블로 제어를 이동할 수 없습니다."를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-130">Because of this, the following code generates a compiler error, CS0163: "Control cannot fall through from one case label (<case label>) to another."</span></span>   
 
 ```csharp  
 switch (caseSwitch)  
@@ -96,128 +96,128 @@ switch (caseSwitch)
         break;  
 }  
 ```  
-이 요구 사항은 일반적으로 [break](break.md), [goto](goto.md) 또는 [return](return.md) 문을 통해 switch 섹션을 명시적으로 종료하여 충족됩니다. 그러나 다음 코드는 프로그램 제어가 `default` switch 섹션으로 이동할 수 없도록 하기 때문에 유효합니다.
+<span data-ttu-id="ed22a-131">이 요구 사항은 일반적으로 [break](break.md), [goto](goto.md) 또는 [return](return.md) 문을 통해 switch 섹션을 명시적으로 종료하여 충족됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-131">This requirement is usually met by explicitly exiting the switch section by using a [break](break.md), [goto](goto.md), or [return](return.md) statement.</span></span> <span data-ttu-id="ed22a-132">그러나 다음 코드는 프로그램 제어가 `default` switch 섹션으로 이동할 수 없도록 하기 때문에 유효합니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-132">However, the following code is also valid, because it ensures that program control cannot fall through to the `default` switch section.</span></span>
   
- [!code-cs[switch#4](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]    
+ <span data-ttu-id="ed22a-133">[!code-cs[switch#4](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]</span><span class="sxs-lookup"><span data-stu-id="ed22a-133">[!code-cs[switch#4](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]</span></span>    
   
- case 레이블이 일치 식과 일치하는 switch 섹션에서 문 목록의 실행은 첫 번째 문으로 시작하고 일반적으로 `break`, `goto case`, `goto label`, `return` 또는 `throw` 같은 점프 문에 도달할 때까지 문 목록 전체를 진행합니다. 이 경우 `switch` 문 외부 또는 다른 case 레이블로 제어를 보냅니다. 사용되는 경우 `goto` 문은 constant 레이블에 컨트롤을 전달해야 합니다. 이 제한 사항이 필요합니다. constant가 아닌 레이블에 컨트롤을 전달하려고 하면 코드의 의도치 않은 위치에 컨트롤을 전달하거나 무한 루프를 만드는 것과 같은 원치 않는 부작용이 발생할 수 있기 때문입니다.
+ <span data-ttu-id="ed22a-134">case 레이블이 일치 식과 일치하는 switch 섹션에서 문 목록의 실행은 첫 번째 문으로 시작하고 일반적으로 `break`, `goto case`, `goto label`, `return` 또는 `throw` 같은 점프 문에 도달할 때까지 문 목록 전체를 진행합니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-134">Execution of the statement list in the switch section with a case label that matches the match expression begins with the first statement and proceeds through the statement list, typically until a jump statement, such as a `break`, `goto case`, `goto label`, `return`, or `throw`, is reached.</span></span> <span data-ttu-id="ed22a-135">이 경우 `switch` 문 외부 또는 다른 case 레이블로 제어를 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-135">At that point, control is transferred outside the `switch` statement or to another case label.</span></span> <span data-ttu-id="ed22a-136">사용되는 경우 `goto` 문은 constant 레이블에 컨트롤을 전달해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-136">A `goto` statement, if it is used, must transfer control to a constant label.</span></span> <span data-ttu-id="ed22a-137">이 제한 사항이 필요합니다. constant가 아닌 레이블에 컨트롤을 전달하려고 하면 코드의 의도치 않은 위치에 컨트롤을 전달하거나 무한 루프를 만드는 것과 같은 원치 않는 부작용이 발생할 수 있기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-137">This restriction is necessary, since attempting to transfer control to a non-constant label can have undesirable side-effects, such transferring control to an unintended location in code or creating an endless loop.</span></span>
 
-## <a name="case-labels"></a>case 레이블
+## <a name="case-labels"></a><span data-ttu-id="ed22a-138">case 레이블</span><span class="sxs-lookup"><span data-stu-id="ed22a-138">Case labels</span></span>
 
- 각 case 레이블은 일치 식과 비교할 패턴(이전 예제의 `caseSwitch` 변수)을 지정합니다. 일치하는 경우 제어가 일치하는 **첫 번째** case 레이블을 포함하는 switch 섹션으로 전송됩니다. 일치 식과 일치하는 case 레이블 패턴이 없는 경우 제어가 `default` case 레이블을 포함하는 섹션으로 전송됩니다(있는 경우). `default` case가 없는 경우 switch 섹션의 문이 실행되지 않으며, 제어가 `switch` 문 외부로 전송됩니다.
+ <span data-ttu-id="ed22a-139">각 case 레이블은 일치 식과 비교할 패턴(이전 예제의 `caseSwitch` 변수)을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-139">Each case label specifies a pattern to compare to the match expression (the `caseSwitch` variable in the previous examples).</span></span> <span data-ttu-id="ed22a-140">일치하는 경우 제어가 일치하는 **첫 번째** case 레이블을 포함하는 switch 섹션으로 전송됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-140">If they match, control is transferred to the switch section that contains the **first** matching case label.</span></span> <span data-ttu-id="ed22a-141">일치 식과 일치하는 case 레이블 패턴이 없는 경우 제어가 `default` case 레이블을 포함하는 섹션으로 전송됩니다(있는 경우).</span><span class="sxs-lookup"><span data-stu-id="ed22a-141">If no case label pattern matches the match expression, control is transfered to the section with the `default` case label, if there is one.</span></span> <span data-ttu-id="ed22a-142">`default` case가 없는 경우 switch 섹션의 문이 실행되지 않으며, 제어가 `switch` 문 외부로 전송됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-142">If there is no `default` case, no statements in any switch section are executed, and control is transferred outside the `switch` statement.</span></span>
 
- `switch` 문과 패턴 일치에 대한 자세한 내용은 [`switch` 문을 사용한 패턴 일치](#pattern) 섹션을 참조하세요.
+ <span data-ttu-id="ed22a-143">`switch` 문과 패턴 일치에 대한 자세한 내용은 [`switch` 문을 사용한 패턴 일치](#pattern) 섹션을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ed22a-143">For information on the `switch` statement and pattern matching, see the [Pattern matching with the `switch` statement](#pattern) section.</span></span>
 
- C# 6에서 상수 패턴만 지원하고 상수 값의 반복을 허용하지 않는 경우 case 레이블은 상호 배타적인 값을 정의하며 하나의 패턴만 일치 식과 일치할 수 있습니다. 따라서 `case` 문이 표시되는 순서는 중요하지 않습니다.
+ <span data-ttu-id="ed22a-144">C# 6에서 상수 패턴만 지원하고 상수 값의 반복을 허용하지 않는 경우 case 레이블은 상호 배타적인 값을 정의하며 하나의 패턴만 일치 식과 일치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-144">Because C# 6 supports only the constant pattern and does not allow the repetition of constant values, case labels define mutually exclusive values, and only one pattern can match the match expression.</span></span> <span data-ttu-id="ed22a-145">따라서 `case` 문이 표시되는 순서는 중요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-145">As a result, the order in which `case` statements appear is unimportant.</span></span>
 
- 그러나 C# 7에서는 다른 패턴도 지원되므로 case 레이블에서 상호 배타적인 값을 정의할 필요가 없으며 여러 패턴이 일치 식과 일치할 수 있습니다. 첫 번째 일치 패턴을 포함하는 switch 섹션의 문만 실행되기 때문에 이제 `case` 문이 나타나는 순서가 중요합니다. C#에서 case 문이 이전 문과 같거나 이전 문의 하위 집합인 switch 섹션을 검색할 경우 컴파일러 오류, CS8120, "Switch case가 이전 case에서 이미 처리되었습니다."를 생성합니다. 
+ <span data-ttu-id="ed22a-146">그러나 C# 7에서는 다른 패턴도 지원되므로 case 레이블에서 상호 배타적인 값을 정의할 필요가 없으며 여러 패턴이 일치 식과 일치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-146">In C# 7, however, because other patterns are supported, case labels need not define mutually exclusive values, and multiple patterns can match the match expression.</span></span> <span data-ttu-id="ed22a-147">첫 번째 일치 패턴을 포함하는 switch 섹션의 문만 실행되기 때문에 이제 `case` 문이 나타나는 순서가 중요합니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-147">Because only the statements in the switch section that contains the first matching pattern are executed, the order in which `case` statements appear is now important.</span></span> <span data-ttu-id="ed22a-148">C#에서 case 문이 이전 문과 같거나 이전 문의 하위 집합인 switch 섹션을 검색할 경우 컴파일러 오류, CS8120, "Switch case가 이전 case에서 이미 처리되었습니다."를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-148">If C# detects a switch section whose case statement or statements are equivalent to or are subsets of previous statements, it generates a compiler error, CS8120, "The switch case has already been handled by a previous case."</span></span> 
 
- 다음 예제에서는 상호 배타적이 아닌 다양한 패턴을 사용하는 `switch` 문을 보여 줍니다. 더 이상 `switch` 문의 첫 번째 섹션이 아니도록 `case 0:` switch 섹션을 이동하는 경우 해당 값이 0인 정수는 `case int val` 문에 정의된 패턴인 모든 정수의 하위 집합이므로 C#에서 컴파일러 오류를 생성합니다.
+ <span data-ttu-id="ed22a-149">다음 예제에서는 상호 배타적이 아닌 다양한 패턴을 사용하는 `switch` 문을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-149">The following example illustrates a `switch` statement that uses a variety of non-mutually exclusive patterns.</span></span> <span data-ttu-id="ed22a-150">더 이상 `switch` 문의 첫 번째 섹션이 아니도록 `case 0:` switch 섹션을 이동하는 경우 해당 값이 0인 정수는 `case int val` 문에 정의된 패턴인 모든 정수의 하위 집합이므로 C#에서 컴파일러 오류를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-150">If you move the `case 0:` switch section so that it is no longer the first section in the `switch` statement, C# generates a compiler error because an integer whose value is zero is a subset of all integers, which is the pattern defined by the `case int val` statement.</span></span>
 
- [!code-cs[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]    
+ <span data-ttu-id="ed22a-151">[!code-cs[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]</span><span class="sxs-lookup"><span data-stu-id="ed22a-151">[!code-cs[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]</span></span>    
 
-이 문제를 해결하고 다음 두 가지 방법 중 하나로 컴파일러 경고를 제거할 수 있습니다.
+<span data-ttu-id="ed22a-152">이 문제를 해결하고 다음 두 가지 방법 중 하나로 컴파일러 경고를 제거할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-152">You can correct this issue and eliminate the compiler warning in one of two ways:</span></span>
 
-- switch 섹션의 순서 변경 
+- <span data-ttu-id="ed22a-153">switch 섹션의 순서 변경</span><span class="sxs-lookup"><span data-stu-id="ed22a-153">By changing the order of the switch sections.</span></span> 
  
-- `case` 레이블에 </a name="when">when clause</a> 사용
+- <span data-ttu-id="ed22a-154">`case` 레이블에 </a name="when">when clause</a> 사용</span><span class="sxs-lookup"><span data-stu-id="ed22a-154">By using a </a name="when">when clause</a> in the `case` label.</span></span>
  
-## <a name="the-default-case"></a>`default` case
+## <a name="the-default-case"></a><span data-ttu-id="ed22a-155">`default` case</span><span class="sxs-lookup"><span data-stu-id="ed22a-155">The `default` case</span></span>
 
-`default` case는 일치 식이 다른 `case` 레이블과 일치하지 않는 경우 실행할 switch 섹션을 지정합니다. `default` case가 없고 일치 식이 다른 `case` 레이블과 일치하지 않는 경우 프로그램 제어가 `switch` 문으로 이동합니다.
+<span data-ttu-id="ed22a-156">`default` case는 일치 식이 다른 `case` 레이블과 일치하지 않는 경우 실행할 switch 섹션을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-156">The `default` case specifies the switch section to execute if the match expression does not match any other `case` label.</span></span> <span data-ttu-id="ed22a-157">`default` case가 없고 일치 식이 다른 `case` 레이블과 일치하지 않는 경우 프로그램 제어가 `switch` 문으로 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-157">If a `default` case is not present and the match expression does not match any other `case` label, program flow falls through the `switch` statement.</span></span>
 
-`default` case는 `switch` 문에 임의 순서로 표시될 수 있습니다. 소스 코드에서의 해당 순서에 관계없이 항상 모든 `case` 레이블이 평가된 후 마지막에 평가됩니다.
+<span data-ttu-id="ed22a-158">`default` case는 `switch` 문에 임의 순서로 표시될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-158">The `default` case can appear in any order in the `switch` statement.</span></span> <span data-ttu-id="ed22a-159">소스 코드에서의 해당 순서에 관계없이 항상 모든 `case` 레이블이 평가된 후 마지막에 평가됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-159">Regardless of its order in the source code, it is always evaluated last, after all `case` labels have been evaluated.</span></span>
 
-## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a>`switch` 문을 사용한 <a name="pattern" /> 패턴 일치
+## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a><span data-ttu-id="ed22a-160">`switch` 문을 사용한 <a name="pattern" /> 패턴 일치</span><span class="sxs-lookup"><span data-stu-id="ed22a-160"><a name="pattern" /> Pattern matching with the `switch` statement</span></span>
   
-각 `case` 문은 일치 식과 일치할 경우 포함하는 switch 섹션이 실행되는 패턴을 정의합니다. 상수 패턴은 모든 버전의 C#에서 지원됩니다. 나머지 패턴은 C# 7부터 지원됩니다. 
+<span data-ttu-id="ed22a-161">각 `case` 문은 일치 식과 일치할 경우 포함하는 switch 섹션이 실행되는 패턴을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-161">Each `case` statement defines a pattern that, if it matches the match expression, causes its  containing switch section to be executed.</span></span> <span data-ttu-id="ed22a-162">상수 패턴은 모든 버전의 C#에서 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-162">All versions of C# support the constant pattern.</span></span> <span data-ttu-id="ed22a-163">나머지 패턴은 C# 7부터 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-163">The remaining patterns are supported beginning with C# 7.</span></span> 
   
-### <a name="constant-pattern"></a>상수 패턴 
+### <a name="constant-pattern"></a><span data-ttu-id="ed22a-164">상수 패턴</span><span class="sxs-lookup"><span data-stu-id="ed22a-164">Constant pattern</span></span> 
 
-상수 패턴은 일치 식이 지정된 상수와 같은지 여부를 테스트합니다. 사용되는 구문은 다음과 같습니다.
+<span data-ttu-id="ed22a-165">상수 패턴은 일치 식이 지정된 상수와 같은지 여부를 테스트합니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-165">The constant pattern tests whether the match expression equals a specified constant.</span></span> <span data-ttu-id="ed22a-166">사용되는 구문은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-166">Its syntax is:</span></span>
 
 ```csharp
    case constant:
 ```
 
-여기서 *constant*는 테스트할 값입니다. *constant*는 다음 상수 식 중 하나가 될 수 있습니다. 
+<span data-ttu-id="ed22a-167">여기서 *constant*는 테스트할 값입니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-167">where *constant* is the value to test for.</span></span> <span data-ttu-id="ed22a-168">*constant*는 다음 상수 식 중 하나가 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-168">*constant* can be any of the following constant expressions:</span></span> 
 
-- [bool](bool.md) 리터럴(`true` 또는 `false`)
-- [int](int.md), [long](long.md) 또는 [byte](byte.md)와 같은 모든 정수 계열 상수 
-- 선언된 `const` 변수의 이름
-- 열거형 상수
-- [char](char.md) 리터럴
-- [string](string.md) 리터럴
+- <span data-ttu-id="ed22a-169">[bool](bool.md) 리터럴(`true` 또는 `false`)</span><span class="sxs-lookup"><span data-stu-id="ed22a-169">A [bool](bool.md) literal, either `true` or `false`.</span></span>
+- <span data-ttu-id="ed22a-170">[int](int.md), [long](long.md) 또는 [byte](byte.md)와 같은 모든 정수 계열 상수</span><span class="sxs-lookup"><span data-stu-id="ed22a-170">Any integral constant, such as an [int](int.md), a [long](long.md), or a [byte](byte.md).</span></span> 
+- <span data-ttu-id="ed22a-171">선언된 `const` 변수의 이름</span><span class="sxs-lookup"><span data-stu-id="ed22a-171">The name of a declared `const` variable.</span></span>
+- <span data-ttu-id="ed22a-172">열거형 상수</span><span class="sxs-lookup"><span data-stu-id="ed22a-172">An enumeration constant.</span></span>
+- <span data-ttu-id="ed22a-173">[char](char.md) 리터럴</span><span class="sxs-lookup"><span data-stu-id="ed22a-173">A [char](char.md) literal.</span></span>
+- <span data-ttu-id="ed22a-174">[string](string.md) 리터럴</span><span class="sxs-lookup"><span data-stu-id="ed22a-174">A [string](string.md) literal.</span></span>
 
-상수 식은 다음과 같이 계산됩니다.
+<span data-ttu-id="ed22a-175">상수 식은 다음과 같이 계산됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-175">The constant expression is evaluated as follows:</span></span>
 
-- *expr* 및 *constant*가 정수 형식인 경우 C# 같음 연산자는 식에서 `true`를 반환하는지 여부 즉, `expr == constant`인지 여부를 확인합니다.
+- <span data-ttu-id="ed22a-176">*expr* 및 *constant*가 정수 형식인 경우 C# 같음 연산자는 식에서 `true`를 반환하는지 여부 즉, `expr == constant`인지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-176">If *expr* and *constant* are integral types, the C# equality operator determines whether the expression returns `true` (that is, whether `expr == constant`).</span></span>
 
-- 정수 형식이 아니면 static [Object.Equals(expr, constant)](xref:System.Object.Equals(System.Object,System.Object)) 메서드 호출을 통해 식의 값이 결정됩니다.  
+- <span data-ttu-id="ed22a-177">정수 형식이 아니면 static [Object.Equals(expr, constant)](xref:System.Object.Equals(System.Object,System.Object)) 메서드 호출을 통해 식의 값이 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-177">Otherwise, the value of the expression is determined by a call to the static [Object.Equals(expr, constant)](xref:System.Object.Equals(System.Object,System.Object)) method.</span></span>  
 
-다음 예제에서는 상수 패턴을 사용하여 특정 날짜가 주말인지, 작업 주의 첫째 날인지, 작업 주의 마지막 날인지 또는 작업 주의 중간인지를 확인합니다. 현재 날짜의 [DateTime.DayOfWeek](xref:System.DateTime.DayOfWeek) 속성을 @System.DayOfWeek 열거형의 멤버와 비교해서 평가합니다. 
+<span data-ttu-id="ed22a-178">다음 예제에서는 상수 패턴을 사용하여 특정 날짜가 주말인지, 작업 주의 첫째 날인지, 작업 주의 마지막 날인지 또는 작업 주의 중간인지를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-178">The following example uses the constant pattern to determine whether a particular date is a weekend, the first day of the work week, the last day of the work week, or the middle of the work week.</span></span> <span data-ttu-id="ed22a-179">현재 날짜의 [DateTime.DayOfWeek](xref:System.DateTime.DayOfWeek) 속성을 @System.DayOfWeek 열거형의 멤버와 비교해서 평가합니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-179">It evaluates the [DateTime.DayOfWeek](xref:System.DateTime.DayOfWeek) property of the current day against the members of the @System.DayOfWeek enumeration.</span></span> 
 
-[!code-cs[switch#7](../../../../samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
+<span data-ttu-id="ed22a-180">[!code-cs[switch#7](../../../../samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]</span><span class="sxs-lookup"><span data-stu-id="ed22a-180">[!code-cs[switch#7](../../../../samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]</span></span>
 
-다음 예제에서는 상수 패턴을 사용하여 자동 커피 머신을 시뮬레이트하는 콘솔 응용 프로그램의 사용자 입력을 처리합니다.
+<span data-ttu-id="ed22a-181">다음 예제에서는 상수 패턴을 사용하여 자동 커피 머신을 시뮬레이트하는 콘솔 응용 프로그램의 사용자 입력을 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-181">The following example uses the constant pattern to handle user input in a console application that simulates an automatic coffee machine.</span></span>
   
- [!code-cs[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]  
+ <span data-ttu-id="ed22a-182">[!code-cs[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]</span><span class="sxs-lookup"><span data-stu-id="ed22a-182">[!code-cs[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]</span></span>  
 
-### <a name="type-pattern"></a>형식 패턴
+### <a name="type-pattern"></a><span data-ttu-id="ed22a-183">형식 패턴</span><span class="sxs-lookup"><span data-stu-id="ed22a-183">Type pattern</span></span>
 
-형식 패턴은 간결한 형식 평가 및 변환을 사용하도록 설정합니다. `switch` 문과 함께 사용하여 패턴 일치를 수행하는 경우 식을 지정된 형식으로 변환할 수 있는지 여부를 테스트하고, 변환할 수 있으면 해당 형식의 변수로 캐스팅합니다. 사용되는 구문은 다음과 같습니다.
+<span data-ttu-id="ed22a-184">형식 패턴은 간결한 형식 평가 및 변환을 사용하도록 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-184">The type pattern enables concise type evaluation and conversion.</span></span> <span data-ttu-id="ed22a-185">`switch` 문과 함께 사용하여 패턴 일치를 수행하는 경우 식을 지정된 형식으로 변환할 수 있는지 여부를 테스트하고, 변환할 수 있으면 해당 형식의 변수로 캐스팅합니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-185">When used with the `switch` statement to perform pattern matching, it tests whether an expression can be converted to a specified type and, if it can be, casts it to a variable of that type.</span></span> <span data-ttu-id="ed22a-186">사용되는 구문은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-186">Its syntax is:</span></span>
 
 ```csharp
    case type varname 
 ```
-여기서 *type*은 *expr*의 결과가 변환되는 형식의 이름이고, *varname*은 일치에 성공할 경우 *expr*의 결과가 변환되는 개체입니다. 
+<span data-ttu-id="ed22a-187">여기서 *type*은 *expr*의 결과가 변환되는 형식의 이름이고, *varname*은 일치에 성공할 경우 *expr*의 결과가 변환되는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-187">where *type* is the name of the type to which the result of *expr* is to be converted, and *varname* is the object to which the result of *expr* is converted if the match succeeds.</span></span> 
 
-다음 중 하나가 true일 경우 `case` 식은 `true`입니다.
+<span data-ttu-id="ed22a-188">다음 중 하나가 true일 경우 `case` 식은 `true`입니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-188">The `case` expression is `true` if any of the following is true:</span></span>
 
-- *expr*이 *type*과 동일한 형식의 인스턴스입니다.
+- <span data-ttu-id="ed22a-189">*expr*이 *type*과 동일한 형식의 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-189">*expr* is an instance of the same type as *type*.</span></span>
 
-- *expr*이 *type*에서 파생된 형식의 인스턴스입니다. 즉, *expr*의 결과를 *type*의 인스턴스로 업캐스트할 수 있습니다.
+- <span data-ttu-id="ed22a-190">*expr*이 *type*에서 파생된 형식의 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-190">*expr* is an instance of a type that derives from *type*.</span></span> <span data-ttu-id="ed22a-191">즉, *expr*의 결과를 *type*의 인스턴스로 업캐스트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-191">In other words, the result of *expr* can be upcast to an instance of *type*.</span></span>
 
-- *expr*의 컴파일 시간 형식은 *type*의 기본 클래스이고 *expr*의 런타임 형식은 *type*이거나 *type*에서 파생됩니다. 변수의 *컴파일 시간 형식*은 해당 형식 선언에 정의된 변수의 형식입니다. 변수의 *런타임 형식*은 해당 변수에 할당된 인스턴스의 형식입니다.
+- <span data-ttu-id="ed22a-192">*expr*의 컴파일 시간 형식은 *type*의 기본 클래스이고 *expr*의 런타임 형식은 *type*이거나 *type*에서 파생됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-192">*expr* has a compile-time type that is a base class of *type*, and *expr* has a runtime type that is *type* or is derived from *type*.</span></span> <span data-ttu-id="ed22a-193">변수의 *컴파일 시간 형식*은 해당 형식 선언에 정의된 변수의 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-193">The *compile-time type* of a variable is the variable's type as defined in its type declaration.</span></span> <span data-ttu-id="ed22a-194">변수의 *런타임 형식*은 해당 변수에 할당된 인스턴스의 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-194">The *runtime type* of a variable is the type of the instance that is assigned to that variable.</span></span>
 
-- *expr*이 *type* 인터페이스를 구현하는 형식의 인스턴스입니다.
+- <span data-ttu-id="ed22a-195">*expr*이 *type* 인터페이스를 구현하는 형식의 인스턴스입니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-195">*expr* is an instance of a type that implements the *type* interface.</span></span>
 
-case 식이 true이면 *varname*이 한정적으로 할당되고 switch 섹션 내의 로컬 범위만 갖습니다.
+<span data-ttu-id="ed22a-196">case 식이 true이면 *varname*이 한정적으로 할당되고 switch 섹션 내의 로컬 범위만 갖습니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-196">If the case expression is true, *varname* is definitely assigned and has local scope within the switch section only.</span></span>
 
-`null`은 형식과 일치하지 않습니다. `null`과 일치하려면 다음 `case` 레이블을 사용합니다.
+<span data-ttu-id="ed22a-197">`null`은 형식과 일치하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-197">Note that `null` does not match a type.</span></span> <span data-ttu-id="ed22a-198">`null`과 일치하려면 다음 `case` 레이블을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-198">To match a `null`, you use the following `case` label:</span></span>
 
 ```csharp
 case null:
 ```
  
-다음 예제에서는 형식 패턴을 사용하여 다양한 종류의 컬렉션 형식에 대한 정보를 제공합니다.
+<span data-ttu-id="ed22a-199">다음 예제에서는 형식 패턴을 사용하여 다양한 종류의 컬렉션 형식에 대한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-199">The following example uses the type pattern to provide information about various kinds of collection types.</span></span>
 
-[!code-cs[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
+<span data-ttu-id="ed22a-200">[!code-cs[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]</span><span class="sxs-lookup"><span data-stu-id="ed22a-200">[!code-cs[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]</span></span>
 
-패턴 일치를 사용하지 않을 경우 이 코드를 다음과 같이 작성할 수 있습니다. 형식 패턴 일치를 사용하면 변환 결과가 `null`인지 여부를 테스트하거나 반복된 캐스트를 수행할 필요가 없으므로 더욱 단순하고 읽기 쉬운 코드가 생성됩니다.  
+<span data-ttu-id="ed22a-201">패턴 일치를 사용하지 않을 경우 이 코드를 다음과 같이 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-201">Without pattern matching, this code might be written as follows.</span></span> <span data-ttu-id="ed22a-202">형식 패턴 일치를 사용하면 변환 결과가 `null`인지 여부를 테스트하거나 반복된 캐스트를 수행할 필요가 없으므로 더욱 단순하고 읽기 쉬운 코드가 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-202">The use of type pattern matching produces more compact, readable code by eliminating the need to test whether the result of a conversion is a `null` or to perform repeated casts.</span></span>  
 
-[!code-cs[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
+<span data-ttu-id="ed22a-203">[!code-cs[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]</span><span class="sxs-lookup"><span data-stu-id="ed22a-203">[!code-cs[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]</span></span>
 
-## <a name="the-case-statement-and-the-when-clause"></a>`case` 문과 `when` 절
+## <a name="the-case-statement-and-the-when-clause"></a><span data-ttu-id="ed22a-204">`case` 문과 `when` 절</span><span class="sxs-lookup"><span data-stu-id="ed22a-204">The `case` statement and the `when` clause</span></span>
 
-C# 7부터 case 문이 상호 배타적일 필요가 없으므로 `when` 절을 사용하여 case 문이 true로 평가되기 위해 충족해야 하는 추가 조건을 지정할 수 있습니다. `when` 절은 부울 값을 반환하는 모든 식일 수 있습니다. `when` 절의 보다 일반적인 사용 중 하나는 일치 식의 값이 `null`일 때 switch 섹션이 실행되지 않도록 하는 것입니다. 
+<span data-ttu-id="ed22a-205">C# 7부터 case 문이 상호 배타적일 필요가 없으므로 `when` 절을 사용하여 case 문이 true로 평가되기 위해 충족해야 하는 추가 조건을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-205">Starting with C# 7, because case statements need not be mutually exclusive, you can use add a `when` clause to specify an additional condition that must be satisfied for the case statement to evaluate to true.</span></span> <span data-ttu-id="ed22a-206">`when` 절은 부울 값을 반환하는 모든 식일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-206">The `when` clause can be any expression that returns a Boolean value.</span></span> <span data-ttu-id="ed22a-207">`when` 절의 보다 일반적인 사용 중 하나는 일치 식의 값이 `null`일 때 switch 섹션이 실행되지 않도록 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-207">One of the more common uses for the `when` clause is used to prevent a switch section from executing when the value of a match expression is `null`.</span></span> 
 
- 다음 예제에서는 기본 `Shape` 클래스, `Shape`에서 파생된 `Rectangle` 클래스 및 `Rectangle`에서 파생된 `Square` 클래스를 정의합니다. `when` 절을 사용하여 `ShowShapeInfo`에서 `Square` 개체로 인스턴스화되지 않은 경우에도 동일한 길이 및 너비가 할당된 `Rectangle` 개체를 `Square`로 처리하도록 합니다. 이 메서드는 `null`인 개체나 면적이 0인 도형에 대한 정보를 표시하지 않습니다. 
+ <span data-ttu-id="ed22a-208">다음 예제에서는 기본 `Shape` 클래스, `Shape`에서 파생된 `Rectangle` 클래스 및 `Rectangle`에서 파생된 `Square` 클래스를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-208">The following example defines a base `Shape` class, a `Rectangle` class that derives from `Shape`, and a `Square` class that derives from `Rectangle`.</span></span> <span data-ttu-id="ed22a-209">`when` 절을 사용하여 `ShowShapeInfo`에서 `Square` 개체로 인스턴스화되지 않은 경우에도 동일한 길이 및 너비가 할당된 `Rectangle` 개체를 `Square`로 처리하도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-209">It uses the `when` clause to ensure that the `ShowShapeInfo` treats a `Rectangle` object that has been assigned equal lengths and widths as a `Square` even if is has not been instantiated as a `Square` object.</span></span> <span data-ttu-id="ed22a-210">이 메서드는 `null`인 개체나 면적이 0인 도형에 대한 정보를 표시하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-210">The method does not attempt to display information either about an object that is `null` or a shape whose area is zero.</span></span> 
 
-[!code-cs[switch#8](../../../../samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
+<span data-ttu-id="ed22a-211">[!code-cs[switch#8](../../../../samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]</span><span class="sxs-lookup"><span data-stu-id="ed22a-211">[!code-cs[switch#8](../../../../samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]</span></span>
   
-`Shape` 개체가 `null`인지 여부를 테스트하는 예제의 `when` 절은 실행되지 않습니다. `null`인지 테스트하는 올바른 형식 패턴은 `case null:`입니다.
+<span data-ttu-id="ed22a-212">`Shape` 개체가 `null`인지 여부를 테스트하는 예제의 `when` 절은 실행되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-212">Note that the `when` clause in the example that attempts to test whether a `Shape` object is `null` does not execute.</span></span> <span data-ttu-id="ed22a-213">`null`인지 테스트하는 올바른 형식 패턴은 `case null:`입니다.</span><span class="sxs-lookup"><span data-stu-id="ed22a-213">The correct type pattern to test for a `null` is `case null:`.</span></span>
 
-## <a name="c-language-specification"></a>C# 언어 사양  
+## <a name="c-language-specification"></a><span data-ttu-id="ed22a-214">C# 언어 사양</span><span class="sxs-lookup"><span data-stu-id="ed22a-214">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a><span data-ttu-id="ed22a-215">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ed22a-215">See Also</span></span>  
 
- [C# 참조](../index.md)   
- [C# 프로그래밍 가이드](../../programming-guide/index.md)   
- [C# 키워드](index.md)   
- [if-else](if-else.md)   
- [패턴 일치](../../pattern-matching.md)   
+ <span data-ttu-id="ed22a-216">[C# 참조](../index.md) </span><span class="sxs-lookup"><span data-stu-id="ed22a-216">[C# Reference](../index.md) </span></span>  
+ <span data-ttu-id="ed22a-217">[C# 프로그래밍 가이드](../../programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="ed22a-217">[C# Programming Guide](../../programming-guide/index.md) </span></span>  
+ <span data-ttu-id="ed22a-218">[C# 키워드](index.md) </span><span class="sxs-lookup"><span data-stu-id="ed22a-218">[C# Keywords](index.md) </span></span>  
+ <span data-ttu-id="ed22a-219">[if-else](if-else.md) </span><span class="sxs-lookup"><span data-stu-id="ed22a-219">[if-else](if-else.md) </span></span>  
+ [<span data-ttu-id="ed22a-220">패턴 일치</span><span class="sxs-lookup"><span data-stu-id="ed22a-220">Pattern Matching</span></span>](../../pattern-matching.md)   
  
 
  

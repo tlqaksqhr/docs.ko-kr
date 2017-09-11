@@ -1,1 +1,1 @@
-DIB(장치 독립적 비트맵)
+<span data-ttu-id="c2331-101">DIB(장치 독립적 비트맵)</span><span class="sxs-lookup"><span data-stu-id="c2331-101">device-independent bitmap (DIB)</span></span>

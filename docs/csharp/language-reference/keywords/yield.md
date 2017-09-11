@@ -37,49 +37,49 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="yield-c-reference"></a>yield(C# 참조)
-문에 `yield` 키워드를 사용하는 경우 해당 메서드, 연산자, 또는 이 키워드가 나타나는 `get` 접근자가 반복기임을 나타냅니다. `yield`를 사용하여 반복기를 정의할 경우 사용자 지정 컬렉션 형식에 <xref:System.Collections.Generic.IEnumerator%601> 및 <xref:System.Collections.IEnumerable> 패턴을 구현하면 명시적 추가 클래스(열거형의 상태를 보관하는 클래스, 예제는 <xref:System.Collections.IEnumerator> 참조)를 사용하지 않아도 됩니다.  
+# <a name="yield-c-reference"></a><span data-ttu-id="fd612-102">yield(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="fd612-102">yield (C# Reference)</span></span>
+<span data-ttu-id="fd612-103">문에 `yield` 키워드를 사용하는 경우 해당 메서드, 연산자, 또는 이 키워드가 나타나는 `get` 접근자가 반복기임을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-103">When you use the `yield` keyword in a statement, you indicate that the method, operator, or `get` accessor in which it appears is an iterator.</span></span> <span data-ttu-id="fd612-104">`yield`를 사용하여 반복기를 정의할 경우 사용자 지정 컬렉션 형식에 <xref:System.Collections.Generic.IEnumerator%601> 및 <xref:System.Collections.IEnumerable> 패턴을 구현하면 명시적 추가 클래스(열거형의 상태를 보관하는 클래스, 예제는 <xref:System.Collections.IEnumerator> 참조)를 사용하지 않아도 됩니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-104">Using `yield` to define an iterator removes the need for an explicit extra class (the class that holds the state for an enumeration, see <xref:System.Collections.Generic.IEnumerator%601> for an example) when you implement the <xref:System.Collections.IEnumerable> and <xref:System.Collections.IEnumerator> pattern for a custom collection type.</span></span>  
   
- 다음 예제에서는 두 가지 형태의 `yield` 문을 보여줍니다.  
+ <span data-ttu-id="fd612-105">다음 예제에서는 두 가지 형태의 `yield` 문을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-105">The following example shows the two forms of the `yield` statement.</span></span>  
   
 ```csharp  
 yield return <expression>;  
 yield break;  
 ```  
   
-## <a name="remarks"></a>설명  
- `yield return` 문을 사용하여 각 요소를 따로따로 반환할 수 있습니다.  
+## <a name="remarks"></a><span data-ttu-id="fd612-106">설명</span><span class="sxs-lookup"><span data-stu-id="fd612-106">Remarks</span></span>  
+ <span data-ttu-id="fd612-107">`yield return` 문을 사용하여 각 요소를 따로따로 반환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-107">You use a `yield return` statement to return each element one at a time.</span></span>  
   
- [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 문 또는 LINQ 쿼리를 이용하여 반복기 메서드를 사용합니다. 각각의 `foreach` 루프의 반복이 반복기 메서드를 호출합니다. `yield return` 문이 반복기 메서드에 도달하면 `expression` 이 반환되고 코드에서 현재 위치는 유지됩니다. 다음에 반복기 함수가 호출되면 해당 위치에서 실행이 다시 시작됩니다.  
+ <span data-ttu-id="fd612-108">[foreach](../../../csharp/language-reference/keywords/foreach-in.md) 문 또는 LINQ 쿼리를 이용하여 반복기 메서드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-108">You consume an iterator method by using a [foreach](../../../csharp/language-reference/keywords/foreach-in.md) statement or LINQ query.</span></span> <span data-ttu-id="fd612-109">각각의 `foreach` 루프의 반복이 반복기 메서드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-109">Each iteration of the `foreach` loop calls the iterator method.</span></span> <span data-ttu-id="fd612-110">`yield return` 문이 반복기 메서드에 도달하면 `expression` 이 반환되고 코드에서 현재 위치는 유지됩니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-110">When a `yield return` statement is reached in the iterator method, `expression` is returned, and the current location in code is retained.</span></span> <span data-ttu-id="fd612-111">다음에 반복기 함수가 호출되면 해당 위치에서 실행이 다시 시작됩니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-111">Execution is restarted from that location the next time that the iterator function is called.</span></span>  
   
- `yield break` 문을 사용하여 반복기를 종료할 수 있습니다.  
+ <span data-ttu-id="fd612-112">`yield break` 문을 사용하여 반복기를 종료할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-112">You can use a `yield break` statement to end the iteration.</span></span>  
   
- 반복기에 대한 자세한 내용은 [반복기](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)를 참조하세요.  
+ <span data-ttu-id="fd612-113">반복기에 대한 자세한 내용은 [반복기](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="fd612-113">For more information about iterators, see [Iterators](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).</span></span>  
   
-## <a name="iterator-methods-and-get-accessors"></a>반복기 메서드 및 Get 접근자  
- 반복기 선언은 다음과 같은 요구 사항을 충족해야 합니다.  
+## <a name="iterator-methods-and-get-accessors"></a><span data-ttu-id="fd612-114">반복기 메서드 및 Get 접근자</span><span class="sxs-lookup"><span data-stu-id="fd612-114">Iterator Methods and get Accessors</span></span>  
+ <span data-ttu-id="fd612-115">반복기 선언은 다음과 같은 요구 사항을 충족해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-115">The declaration of an iterator must meet the following requirements:</span></span>  
   
--   반환 형식은 <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, 또는 <xref:System.Collections.Generic.IEnumerator%601>여야 합니다.  
+-   <span data-ttu-id="fd612-116">반환 형식은 <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, 또는 <xref:System.Collections.Generic.IEnumerator%601>여야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-116">The return type must be <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, or <xref:System.Collections.Generic.IEnumerator%601>.</span></span>  
   
--   선언에 [ref](../../../csharp/language-reference/keywords/ref.md) 또는 [out](../../../csharp/language-reference/keywords/out.md) 매개 변수가 허용되지 않습니다.  
+-   <span data-ttu-id="fd612-117">선언에 [ref](../../../csharp/language-reference/keywords/ref.md) 또는 [out](../../../csharp/language-reference/keywords/out.md) 매개 변수가 허용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-117">The declaration can't have any [ref](../../../csharp/language-reference/keywords/ref.md) or [out](../../../csharp/language-reference/keywords/out.md) parameters.</span></span>  
   
- `yield` 또는 <xref:System.Collections.IEnumerable>를 반환하는 반복기의 <xref:System.Collections.IEnumerator> 형식은 `object`입니다.  반복기가 <xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Collections.Generic.IEnumerator%601>를 반환할 경우 `yield return` 문의 식 형식에서 제네릭 형식 매개 변수로 암시적 변환이 있어야 합니다.  
+ <span data-ttu-id="fd612-118">`yield` 또는 <xref:System.Collections.IEnumerable>를 반환하는 반복기의 <xref:System.Collections.IEnumerator> 형식은 `object`입니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-118">The `yield` type of an iterator that returns <xref:System.Collections.IEnumerable> or <xref:System.Collections.IEnumerator> is `object`.</span></span>  <span data-ttu-id="fd612-119">반복기가 <xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Collections.Generic.IEnumerator%601>를 반환할 경우 `yield return` 문의 식 형식에서 제네릭 형식 매개 변수로 암시적 변환이 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-119">If the iterator returns <xref:System.Collections.Generic.IEnumerable%601> or <xref:System.Collections.Generic.IEnumerator%601>, there must be an implicit conversion from the type of the expression in the `yield return` statement to the generic type parameter .</span></span>  
   
- `yield return` 또는 `yield break` 문은 다음과 같은 특징이 있는 메서드에 사용할 수 없습니다.  
+ <span data-ttu-id="fd612-120">`yield return` 또는 `yield break` 문은 다음과 같은 특징이 있는 메서드에 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-120">You can't include a `yield return` or `yield break` statement in methods that have the following characteristics:</span></span>  
   
--   무명 메서드 자세한 내용은 [무명 메서드](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)를 참조하세요.  
+-   <span data-ttu-id="fd612-121">무명 메서드</span><span class="sxs-lookup"><span data-stu-id="fd612-121">Anonymous methods.</span></span> <span data-ttu-id="fd612-122">자세한 내용은 [무명 메서드](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="fd612-122">For more information, see [Anonymous Methods](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md).</span></span>  
   
--   안전하지 않은 블록을 포함하는 메서드 자세한 내용은 [unsafe](../../../csharp/language-reference/keywords/unsafe.md)를 참조하세요.  
+-   <span data-ttu-id="fd612-123">안전하지 않은 블록을 포함하는 메서드</span><span class="sxs-lookup"><span data-stu-id="fd612-123">Methods that contain unsafe blocks.</span></span> <span data-ttu-id="fd612-124">자세한 내용은 [unsafe](../../../csharp/language-reference/keywords/unsafe.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="fd612-124">For more information, see [unsafe](../../../csharp/language-reference/keywords/unsafe.md).</span></span>  
   
-## <a name="exception-handling"></a>예외 처리  
- `yield return` 문은 try-catch 블록에서 찾을 수 없습니다. `yield return` 문은 try-finally 문의 try 블록에서 찾을 수 있습니다.  
+## <a name="exception-handling"></a><span data-ttu-id="fd612-125">예외 처리</span><span class="sxs-lookup"><span data-stu-id="fd612-125">Exception Handling</span></span>  
+ <span data-ttu-id="fd612-126">`yield return` 문은 try-catch 블록에서 찾을 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-126">A `yield return` statement can't be located in a try-catch block.</span></span> <span data-ttu-id="fd612-127">`yield return` 문은 try-finally 문의 try 블록에서 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-127">A `yield return` statement can be located in the try block of a try-finally statement.</span></span>  
   
- `yield break` 문은 try 블록이나 catch 블록에서 찾을 수 있지만 finally 블록에서는 찾을 수 없습니다.  
+ <span data-ttu-id="fd612-128">`yield break` 문은 try 블록이나 catch 블록에서 찾을 수 있지만 finally 블록에서는 찾을 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-128">A `yield break` statement can be located in a try block or a catch block but not a finally block.</span></span>  
   
- `foreach` 본문(반복기 메서드 외부)에서 예외를 throw한 경우, 반복기 메서드의 `finally` 블록이 실행됩니다.  
+ <span data-ttu-id="fd612-129">`foreach` 본문(반복기 메서드 외부)에서 예외를 throw한 경우, 반복기 메서드의 `finally` 블록이 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-129">If the `foreach` body (outside of the iterator method) throws an exception, a `finally` block in the iterator method is executed.</span></span>  
   
-## <a name="technical-implementation"></a>기술 구현  
- 다음 코드는 반복기 메서드에서 `IEnumerable<string>`을 반환하고 해당 요소를 반복합니다.  
+## <a name="technical-implementation"></a><span data-ttu-id="fd612-130">기술 구현</span><span class="sxs-lookup"><span data-stu-id="fd612-130">Technical Implementation</span></span>  
+ <span data-ttu-id="fd612-131">다음 코드는 반복기 메서드에서 `IEnumerable<string>`을 반환하고 해당 요소를 반복합니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-131">The following code returns an `IEnumerable<string>` from an iterator method and then iterates through its elements.</span></span>  
   
 ```csharp  
 IEnumerable<string> elements = MyIteratorMethod();  
@@ -89,30 +89,30 @@ foreach (string element in elements)
 }  
 ```  
   
- `MyIteratorMethod` 호출은 메서드의 본문을 실행하지 않습니다. 대신에 `IEnumerable<string>` 변수에 `elements`을 반환합니다.  
+ <span data-ttu-id="fd612-132">`MyIteratorMethod` 호출은 메서드의 본문을 실행하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-132">The call to `MyIteratorMethod` doesn't execute the body of the method.</span></span> <span data-ttu-id="fd612-133">대신에 `IEnumerable<string>` 변수에 `elements`을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-133">Instead the call returns an `IEnumerable<string>` into the `elements` variable.</span></span>  
   
- `foreach` 루프 반복에서 <xref:System.Collections.IEnumerator.MoveNext%2A>에 대한 `elements` 메서드가 호출됩니다. 이 호출은 다음 `MyIteratorMethod` 문에 도달할 때까지 `yield return` 본문을 실행합니다. `yield return` 문에서 반환하는 식은 루프 본문에서 사용하는 `element` 변수 값뿐만 아니라 요소의 <xref:System.Collections.Generic.IEnumerator%601.Current%2A> 속성인 `IEnumerable<string>`도 결정합니다.  
+ <span data-ttu-id="fd612-134">`foreach` 루프 반복에서 <xref:System.Collections.IEnumerator.MoveNext%2A>에 대한 `elements` 메서드가 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-134">On an iteration of the `foreach` loop, the <xref:System.Collections.IEnumerator.MoveNext%2A> method is called for `elements`.</span></span> <span data-ttu-id="fd612-135">이 호출은 다음 `MyIteratorMethod` 문에 도달할 때까지 `yield return` 본문을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-135">This call executes the body of `MyIteratorMethod` until the next `yield return` statement is reached.</span></span> <span data-ttu-id="fd612-136">`yield return` 문에서 반환하는 식은 루프 본문에서 사용하는 `element` 변수 값뿐만 아니라 요소의 <xref:System.Collections.Generic.IEnumerator%601.Current%2A> 속성인 `IEnumerable<string>`도 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-136">The expression returned by the `yield return` statement determines not only the value of the `element` variable for consumption by the loop body but also the <xref:System.Collections.Generic.IEnumerator%601.Current%2A> property of elements, which is an `IEnumerable<string>`.</span></span>  
   
- 이후에 `foreach` 루프가 반복될 때마다 중지되었던 위치에서 반복기 본문 실행이 계속되고 `yield return` 문에 도달하면 다시 중지됩니다. `foreach` 루프는 반복기 메서드가 종료되거나 `yield break` 문에 도달하면 완료됩니다.  
+ <span data-ttu-id="fd612-137">이후에 `foreach` 루프가 반복될 때마다 중지되었던 위치에서 반복기 본문 실행이 계속되고 `yield return` 문에 도달하면 다시 중지됩니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-137">On each subsequent iteration of the `foreach` loop, the execution of the iterator body continues from where it left off, again stopping when it reaches a `yield return` statement.</span></span> <span data-ttu-id="fd612-138">`foreach` 루프는 반복기 메서드가 종료되거나 `yield break` 문에 도달하면 완료됩니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-138">The `foreach` loop completes when the end of the iterator method or a `yield break` statement is reached.</span></span>  
   
-## <a name="example"></a>예제  
- 다음 예제에는 `yield return` 루프 내에 `for` 문이 있습니다. `foreach`에서 `Process` 문의 본문을 반복할 때마다 `Power` 반복기 함수에 대한 호출이 생성됩니다. 반복기 함수를 호출할 때마다 다음에 `yield return` 루프를 반복하는 도중에 `for` 문이 실행됩니다.  
+## <a name="example"></a><span data-ttu-id="fd612-139">예제</span><span class="sxs-lookup"><span data-stu-id="fd612-139">Example</span></span>  
+ <span data-ttu-id="fd612-140">다음 예제에는 `yield return` 루프 내에 `for` 문이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-140">The following example has a `yield return` statement that's inside a `for` loop.</span></span> <span data-ttu-id="fd612-141">`foreach`에서 `Process` 문의 본문을 반복할 때마다 `Power` 반복기 함수에 대한 호출이 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-141">Each iteration of the `foreach` statement body in `Process` creates a call to the `Power` iterator function.</span></span> <span data-ttu-id="fd612-142">반복기 함수를 호출할 때마다 다음에 `yield return` 루프를 반복하는 도중에 `for` 문이 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-142">Each call to the iterator function proceeds to the next execution of the `yield return` statement, which occurs during the next iteration of the `for` loop.</span></span>  
   
- 반복기 메서드의 반환 형식은 반복기 인터페이스 형식인 <xref:System.Collections.IEnumerable>입니다. 반복기 메서드가 호출되면 숫자의 거듭제곱이 들어 있는 열거형 개체를 반환합니다.  
+ <span data-ttu-id="fd612-143">반복기 메서드의 반환 형식은 반복기 인터페이스 형식인 <xref:System.Collections.IEnumerable>입니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-143">The return type of the iterator method is <xref:System.Collections.IEnumerable>, which is an iterator interface type.</span></span> <span data-ttu-id="fd612-144">반복기 메서드가 호출되면 숫자의 거듭제곱이 들어 있는 열거형 개체를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-144">When the iterator method is called, it returns an enumerable object that contains the powers of a number.</span></span>  
   
- [!code-cs[csrefKeywordsContextual#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/yield_1.cs)]  
+ <span data-ttu-id="fd612-145">[!code-cs[csrefKeywordsContextual#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/yield_1.cs)]</span><span class="sxs-lookup"><span data-stu-id="fd612-145">[!code-cs[csrefKeywordsContextual#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/yield_1.cs)]</span></span>  
   
-## <a name="example"></a>예제  
- 다음 예제는 반복기인 `get` 접근자에 대해 설명합니다. 이 예제에서는 각 `yield return` 문이 사용자 정의 클래스의 인스턴스를 반환합니다.  
+## <a name="example"></a><span data-ttu-id="fd612-146">예제</span><span class="sxs-lookup"><span data-stu-id="fd612-146">Example</span></span>  
+ <span data-ttu-id="fd612-147">다음 예제는 반복기인 `get` 접근자에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-147">The following example demonstrates a `get` accessor that is an iterator.</span></span> <span data-ttu-id="fd612-148">이 예제에서는 각 `yield return` 문이 사용자 정의 클래스의 인스턴스를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="fd612-148">In the example, each `yield return` statement returns an instance of a user-defined class.</span></span>  
   
- [!code-cs[csrefKeywordsContextual#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/yield_2.cs)]  
+ <span data-ttu-id="fd612-149">[!code-cs[csrefKeywordsContextual#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/yield_2.cs)]</span><span class="sxs-lookup"><span data-stu-id="fd612-149">[!code-cs[csrefKeywordsContextual#21](../../../csharp/language-reference/keywords/codesnippet/CSharp/yield_2.cs)]</span></span>  
   
-## <a name="c-language-specification"></a>C# 언어 사양  
+## <a name="c-language-specification"></a><span data-ttu-id="fd612-150">C# 언어 사양</span><span class="sxs-lookup"><span data-stu-id="fd612-150">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)   
- [반복기](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)
+## <a name="see-also"></a><span data-ttu-id="fd612-151">참고 항목</span><span class="sxs-lookup"><span data-stu-id="fd612-151">See Also</span></span>  
+ <span data-ttu-id="fd612-152">[C# 참조](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="fd612-152">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="fd612-153">[C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="fd612-153">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="fd612-154">[foreach, in](../../../csharp/language-reference/keywords/foreach-in.md) </span><span class="sxs-lookup"><span data-stu-id="fd612-154">[foreach, in](../../../csharp/language-reference/keywords/foreach-in.md) </span></span>  
+ [<span data-ttu-id="fd612-155">반복기</span><span class="sxs-lookup"><span data-stu-id="fd612-155">Iterators</span></span>](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)
 

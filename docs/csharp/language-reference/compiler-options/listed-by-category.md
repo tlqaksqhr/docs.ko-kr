@@ -36,103 +36,103 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 08/14/2017
 
 ---
-# <a name="c-compiler-options-listed-by-category"></a>C# 컴파일러 옵션 범주별 목록
-여기에서는 컴파일러 옵션을 범주별로 정렬합니다. 사전순 목록은 [C# 컴파일러 옵션 사전순 목록](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)을 참조하세요.  
+# <a name="c-compiler-options-listed-by-category"></a><span data-ttu-id="24049-102">C# 컴파일러 옵션 범주별 목록</span><span class="sxs-lookup"><span data-stu-id="24049-102">C# Compiler Options Listed by Category</span></span>
+<span data-ttu-id="24049-103">여기에서는 컴파일러 옵션을 범주별로 정렬합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-103">The following compiler options are sorted by category.</span></span> <span data-ttu-id="24049-104">사전순 목록은 [C# 컴파일러 옵션 사전순 목록](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="24049-104">For an alphabetical list, see [C# Compiler Options Listed Alphabetically](../../../csharp/language-reference/compiler-options/listed-alphabetically.md).</span></span>  
   
-### <a name="optimization"></a>최적화  
+### <a name="optimization"></a><span data-ttu-id="24049-105">최적화</span><span class="sxs-lookup"><span data-stu-id="24049-105">Optimization</span></span>  
   
-|옵션|용도|  
+|<span data-ttu-id="24049-106">옵션</span><span class="sxs-lookup"><span data-stu-id="24049-106">Option</span></span>|<span data-ttu-id="24049-107">용도</span><span class="sxs-lookup"><span data-stu-id="24049-107">Purpose</span></span>|  
 |------------|-------------|  
-|[/filealign](../../../csharp/language-reference/compiler-options/filealign-compiler-option.md)|출력 파일에 있는 섹션의 크기를 지정합니다.|  
-|[/optimize](../../../csharp/language-reference/compiler-options/optimize-compiler-option.md)|최적화를 사용하거나 사용하지 않도록 설정합니다.|  
+|[<span data-ttu-id="24049-108">/filealign</span><span class="sxs-lookup"><span data-stu-id="24049-108">/filealign</span></span>](../../../csharp/language-reference/compiler-options/filealign-compiler-option.md)|<span data-ttu-id="24049-109">출력 파일에 있는 섹션의 크기를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-109">Specifies the size of sections in the output file.</span></span>|  
+|[<span data-ttu-id="24049-110">/optimize</span><span class="sxs-lookup"><span data-stu-id="24049-110">/optimize</span></span>](../../../csharp/language-reference/compiler-options/optimize-compiler-option.md)|<span data-ttu-id="24049-111">최적화를 사용하거나 사용하지 않도록 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-111">Enables/disables optimizations.</span></span>|  
   
-### <a name="output-files"></a>출력 파일  
+### <a name="output-files"></a><span data-ttu-id="24049-112">출력 파일</span><span class="sxs-lookup"><span data-stu-id="24049-112">Output Files</span></span>  
   
-|옵션|용도|  
+|<span data-ttu-id="24049-113">옵션</span><span class="sxs-lookup"><span data-stu-id="24049-113">Option</span></span>|<span data-ttu-id="24049-114">용도</span><span class="sxs-lookup"><span data-stu-id="24049-114">Purpose</span></span>|  
 |------------|-------------|  
-|[/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)|처리된 문서 주석을 작성할 XML 파일을 지정합니다.|  
-|[/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md)|출력 파일을 지정합니다.|  
-|[/pdb](../../../csharp/language-reference/compiler-options/pdb-compiler-option.md)|.pdb 파일의 이름과 위치를 지정합니다.|  
-|[/platform](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)|출력 플랫폼을 지정합니다.|  
-|[/preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|컴파일러 출력 언어를 지정합니다.|  
-|[/refout](refout-compiler-option.md)|주 어셈블리 외에도 참조 어셈블리를 생성합니다.|  
-|[/refonly](refonly-compiler-option.md)|주 어셈블리를 대신 참조 어셈블리를 생성합니다.|  
-|[/target](../../../csharp/language-reference/compiler-options/target-compiler-option.md)|다섯 가지 옵션([/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md), [/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md), [/target:library](../../../csharp/language-reference/compiler-options/target-library-compiler-option.md), [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md), [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)) 중 하나를 사용하여 출력 파일 형식을 지정합니다.|  
-|/modulename:\<string>|소스 모듈의 이름을 지정합니다.|  
+|[<span data-ttu-id="24049-115">/doc</span><span class="sxs-lookup"><span data-stu-id="24049-115">/doc</span></span>](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)|<span data-ttu-id="24049-116">처리된 문서 주석을 작성할 XML 파일을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-116">Specifies an XML file where processed documentation comments are to be written.</span></span>|  
+|[<span data-ttu-id="24049-117">/out</span><span class="sxs-lookup"><span data-stu-id="24049-117">/out</span></span>](../../../csharp/language-reference/compiler-options/out-compiler-option.md)|<span data-ttu-id="24049-118">출력 파일을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-118">Specifies the output file.</span></span>|  
+|[<span data-ttu-id="24049-119">/pdb</span><span class="sxs-lookup"><span data-stu-id="24049-119">/pdb</span></span>](../../../csharp/language-reference/compiler-options/pdb-compiler-option.md)|<span data-ttu-id="24049-120">.pdb 파일의 이름과 위치를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-120">Specifies the file name and location of the .pdb file.</span></span>|  
+|[<span data-ttu-id="24049-121">/platform</span><span class="sxs-lookup"><span data-stu-id="24049-121">/platform</span></span>](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)|<span data-ttu-id="24049-122">출력 플랫폼을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-122">Specify the output platform.</span></span>|  
+|[<span data-ttu-id="24049-123">/preferreduilang</span><span class="sxs-lookup"><span data-stu-id="24049-123">/preferreduilang</span></span>](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|<span data-ttu-id="24049-124">컴파일러 출력 언어를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-124">Specify a language for compiler output.</span></span>|  
+|[<span data-ttu-id="24049-125">/refout</span><span class="sxs-lookup"><span data-stu-id="24049-125">/refout</span></span>](refout-compiler-option.md)|<span data-ttu-id="24049-126">주 어셈블리 외에도 참조 어셈블리를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-126">Generate a reference assembly in addition to the primary assembly.</span></span>|  
+|[<span data-ttu-id="24049-127">/refonly</span><span class="sxs-lookup"><span data-stu-id="24049-127">/refonly</span></span>](refonly-compiler-option.md)|<span data-ttu-id="24049-128">주 어셈블리를 대신 참조 어셈블리를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-128">Generate a reference assembly instead of a primary assembly.</span></span>|  
+|[<span data-ttu-id="24049-129">/target</span><span class="sxs-lookup"><span data-stu-id="24049-129">/target</span></span>](../../../csharp/language-reference/compiler-options/target-compiler-option.md)|<span data-ttu-id="24049-130">다섯 가지 옵션([/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md), [/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md), [/target:library](../../../csharp/language-reference/compiler-options/target-library-compiler-option.md), [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md), [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)) 중 하나를 사용하여 출력 파일 형식을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-130">Specifies the format of the output file using one of five options: [/target:appcontainerexe](../../../csharp/language-reference/compiler-options/target-appcontainerexe-compiler-option.md), [/target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md), [/target:library](../../../csharp/language-reference/compiler-options/target-library-compiler-option.md), [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), [/target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md), or [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md).</span></span>|  
+|<span data-ttu-id="24049-131">/modulename:\<string></span><span class="sxs-lookup"><span data-stu-id="24049-131">/modulename:\<string></span></span>|<span data-ttu-id="24049-132">소스 모듈의 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-132">Specify the name of the source module</span></span>|  
   
-### <a name="net-framework-assemblies"></a>.NET Framework 어셈블리  
+### <a name="net-framework-assemblies"></a><span data-ttu-id="24049-133">.NET Framework 어셈블리</span><span class="sxs-lookup"><span data-stu-id="24049-133">.NET Framework Assemblies</span></span>  
   
-|옵션|용도|  
+|<span data-ttu-id="24049-134">옵션</span><span class="sxs-lookup"><span data-stu-id="24049-134">Option</span></span>|<span data-ttu-id="24049-135">용도</span><span class="sxs-lookup"><span data-stu-id="24049-135">Purpose</span></span>|  
 |------------|-------------|  
-|[/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md)|이 어셈블리의 일부가 될 모듈을 하나 이상 지정합니다.|  
-|[/delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md)|공개 키를 추가하고 어셈블리는 서명되지 않은 채 두도록 컴파일러에 지시합니다.|  
-|[/keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md)|암호화 키 컨테이너의 이름을 지정합니다.|  
-|[/keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)|암호화 키를 포함하는 파일 이름을 지정합니다.|  
-|[/lib](../../../csharp/language-reference/compiler-options/lib-compiler-option.md)|[/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)를 통해 참조되는 어셈블리의 위치를 지정합니다.|  
-|[/nostdlib](../../../csharp/language-reference/compiler-options/nostdlib-compiler-option.md)|표준 라이브러리(mscorlib.dll)를 가져오지 않도록 컴파일러에 지시합니다.|  
-|[/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)|어셈블리를 포함하는 파일에서 메타데이터를 가져옵니다.|  
-|/analyzer|이 어셈블리에서 분석기를 실행합니다(약식: /a).|  
-|/additionalfile|코드 생성에 직접 영향을 주지 않지만 오류 또는 경고를 생성하기 위해 분석기에서 사용할 수 있는 추가 파일에 이름을 지정합니다.|  
+|[<span data-ttu-id="24049-136">/addmodule</span><span class="sxs-lookup"><span data-stu-id="24049-136">/addmodule</span></span>](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md)|<span data-ttu-id="24049-137">이 어셈블리의 일부가 될 모듈을 하나 이상 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-137">Specifies one or more modules to be part of this assembly.</span></span>|  
+|[<span data-ttu-id="24049-138">/delaysign</span><span class="sxs-lookup"><span data-stu-id="24049-138">/delaysign</span></span>](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md)|<span data-ttu-id="24049-139">공개 키를 추가하고 어셈블리는 서명되지 않은 채 두도록 컴파일러에 지시합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-139">Instructs the compiler to add the public key but to leave the assembly unsigned.</span></span>|  
+|[<span data-ttu-id="24049-140">/keycontainer</span><span class="sxs-lookup"><span data-stu-id="24049-140">/keycontainer</span></span>](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md)|<span data-ttu-id="24049-141">암호화 키 컨테이너의 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-141">Specifies the name of the cryptographic key container.</span></span>|  
+|[<span data-ttu-id="24049-142">/keyfile</span><span class="sxs-lookup"><span data-stu-id="24049-142">/keyfile</span></span>](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)|<span data-ttu-id="24049-143">암호화 키를 포함하는 파일 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-143">Specifies the filename containing the cryptographic key.</span></span>|  
+|[<span data-ttu-id="24049-144">/lib</span><span class="sxs-lookup"><span data-stu-id="24049-144">/lib</span></span>](../../../csharp/language-reference/compiler-options/lib-compiler-option.md)|<span data-ttu-id="24049-145">[/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)를 통해 참조되는 어셈블리의 위치를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-145">Specifies the location of assemblies referenced by means of [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).</span></span>|  
+|[<span data-ttu-id="24049-146">/nostdlib</span><span class="sxs-lookup"><span data-stu-id="24049-146">/nostdlib</span></span>](../../../csharp/language-reference/compiler-options/nostdlib-compiler-option.md)|<span data-ttu-id="24049-147">표준 라이브러리(mscorlib.dll)를 가져오지 않도록 컴파일러에 지시합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-147">Instructs the compiler not to import the standard library (mscorlib.dll).</span></span>|  
+|[<span data-ttu-id="24049-148">/reference</span><span class="sxs-lookup"><span data-stu-id="24049-148">/reference</span></span>](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)|<span data-ttu-id="24049-149">어셈블리를 포함하는 파일에서 메타데이터를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="24049-149">Imports metadata from a file that contains an assembly.</span></span>|  
+|<span data-ttu-id="24049-150">/analyzer</span><span class="sxs-lookup"><span data-stu-id="24049-150">/analyzer</span></span>|<span data-ttu-id="24049-151">이 어셈블리에서 분석기를 실행합니다(약식: /a).</span><span class="sxs-lookup"><span data-stu-id="24049-151">Run the analyzers from this assembly (Short form: /a)</span></span>|  
+|<span data-ttu-id="24049-152">/additionalfile</span><span class="sxs-lookup"><span data-stu-id="24049-152">/additionalfile</span></span>|<span data-ttu-id="24049-153">코드 생성에 직접 영향을 주지 않지만 오류 또는 경고를 생성하기 위해 분석기에서 사용할 수 있는 추가 파일에 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-153">Names additional files that don't directly affect code generation but may be used by analyzers for producing errors or warnings.</span></span>|  
   
-### <a name="debuggingerror-checking"></a>디버깅/오류 검사  
+### <a name="debuggingerror-checking"></a><span data-ttu-id="24049-154">디버깅/오류 검사</span><span class="sxs-lookup"><span data-stu-id="24049-154">Debugging/Error Checking</span></span>  
   
-|옵션|용도|  
+|<span data-ttu-id="24049-155">옵션</span><span class="sxs-lookup"><span data-stu-id="24049-155">Option</span></span>|<span data-ttu-id="24049-156">용도</span><span class="sxs-lookup"><span data-stu-id="24049-156">Purpose</span></span>|  
 |------------|-------------|  
-|[/bugreport](../../../csharp/language-reference/compiler-options/bugreport-compiler-option.md)|쉽게 버그를 보고할 수 있도록 정보가 포함된 파일을 만듭니다.|  
-|[/checked](../../../csharp/language-reference/compiler-options/checked-compiler-option.md)|데이터 형식 범위를 오버플로하는 정수 연산이 있는 경우 런타임에 예외가 발생되는지 여부를 지정합니다.|  
-|[/debug](../../../csharp/language-reference/compiler-options/debug-compiler-option.md)|디버깅 정보를 내보내도록 컴파일러에 지시합니다.|  
-|[/errorreport](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)|오류 보고 동작을 설정합니다.|  
-|[/fullpaths](../../../csharp/language-reference/compiler-options/fullpaths-compiler-option.md)|컴파일러 출력에서 파일의 절대 경로를 지정합니다.|  
-|[/nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md)|지정한 경고가 컴파일러에서 생성되지 않도록 합니다.|  
-|[/warn](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)|경고 수준을 설정합니다.|  
-|[/warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md)|경고를 오류로 승격합니다.|  
-|/ruleset:\<file>|특정 진단을 사용하지 않는 규칙 집합 파일을 지정합니다.|  
+|[<span data-ttu-id="24049-157">/bugreport</span><span class="sxs-lookup"><span data-stu-id="24049-157">/bugreport</span></span>](../../../csharp/language-reference/compiler-options/bugreport-compiler-option.md)|<span data-ttu-id="24049-158">쉽게 버그를 보고할 수 있도록 정보가 포함된 파일을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="24049-158">Creates a file that contains information that makes it easy to report a bug.</span></span>|  
+|[<span data-ttu-id="24049-159">/checked</span><span class="sxs-lookup"><span data-stu-id="24049-159">/checked</span></span>](../../../csharp/language-reference/compiler-options/checked-compiler-option.md)|<span data-ttu-id="24049-160">데이터 형식 범위를 오버플로하는 정수 연산이 있는 경우 런타임에 예외가 발생되는지 여부를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-160">Specifies whether integer arithmetic that overflows the bounds of the data type will cause an exception at run time.</span></span>|  
+|[<span data-ttu-id="24049-161">/debug</span><span class="sxs-lookup"><span data-stu-id="24049-161">/debug</span></span>](../../../csharp/language-reference/compiler-options/debug-compiler-option.md)|<span data-ttu-id="24049-162">디버깅 정보를 내보내도록 컴파일러에 지시합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-162">Instruct the compiler to emit debugging information.</span></span>|  
+|[<span data-ttu-id="24049-163">/errorreport</span><span class="sxs-lookup"><span data-stu-id="24049-163">/errorreport</span></span>](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)|<span data-ttu-id="24049-164">오류 보고 동작을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-164">Sets error reporting behavior.</span></span>|  
+|[<span data-ttu-id="24049-165">/fullpaths</span><span class="sxs-lookup"><span data-stu-id="24049-165">/fullpaths</span></span>](../../../csharp/language-reference/compiler-options/fullpaths-compiler-option.md)|<span data-ttu-id="24049-166">컴파일러 출력에서 파일의 절대 경로를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-166">Specifies the absolute path to the file in compiler output.</span></span>|  
+|[<span data-ttu-id="24049-167">/nowarn</span><span class="sxs-lookup"><span data-stu-id="24049-167">/nowarn</span></span>](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md)|<span data-ttu-id="24049-168">지정한 경고가 컴파일러에서 생성되지 않도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-168">Suppresses the compiler's generation of specified warnings.</span></span>|  
+|[<span data-ttu-id="24049-169">/warn</span><span class="sxs-lookup"><span data-stu-id="24049-169">/warn</span></span>](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)|<span data-ttu-id="24049-170">경고 수준을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-170">Sets the warning level.</span></span>|  
+|[<span data-ttu-id="24049-171">/warnaserror</span><span class="sxs-lookup"><span data-stu-id="24049-171">/warnaserror</span></span>](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md)|<span data-ttu-id="24049-172">경고를 오류로 승격합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-172">Promotes warnings to errors.</span></span>|  
+|<span data-ttu-id="24049-173">/ruleset:\<file></span><span class="sxs-lookup"><span data-stu-id="24049-173">/ruleset:\<file></span></span>|<span data-ttu-id="24049-174">특정 진단을 사용하지 않는 규칙 집합 파일을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-174">Specify a ruleset file that disables specific diagnostics.</span></span>|  
   
-### <a name="preprocessor"></a>전처리기  
+### <a name="preprocessor"></a><span data-ttu-id="24049-175">전처리기</span><span class="sxs-lookup"><span data-stu-id="24049-175">Preprocessor</span></span>  
   
-|옵션|용도|  
+|<span data-ttu-id="24049-176">옵션</span><span class="sxs-lookup"><span data-stu-id="24049-176">Option</span></span>|<span data-ttu-id="24049-177">용도</span><span class="sxs-lookup"><span data-stu-id="24049-177">Purpose</span></span>|  
 |------------|-------------|  
-|[/define](../../../csharp/language-reference/compiler-options/define-compiler-option.md)|전처리기 기호를 정의합니다.|  
+|[<span data-ttu-id="24049-178">/define</span><span class="sxs-lookup"><span data-stu-id="24049-178">/define</span></span>](../../../csharp/language-reference/compiler-options/define-compiler-option.md)|<span data-ttu-id="24049-179">전처리기 기호를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-179">Defines preprocessor symbols.</span></span>|  
   
-### <a name="resources"></a>리소스  
+### <a name="resources"></a><span data-ttu-id="24049-180">리소스</span><span class="sxs-lookup"><span data-stu-id="24049-180">Resources</span></span>  
   
-|옵션|용도|  
+|<span data-ttu-id="24049-181">옵션</span><span class="sxs-lookup"><span data-stu-id="24049-181">Option</span></span>|<span data-ttu-id="24049-182">용도</span><span class="sxs-lookup"><span data-stu-id="24049-182">Purpose</span></span>|  
 |------------|-------------|  
-|[/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md)|지정된 어셈블리의 COM 형식 정보를 프로젝트에 사용할 수 있도록 합니다.|  
-|[/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)|관리되는 리소스에 대한 링크를 만듭니다.|  
-|[/resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md)|.NET Framework 리소스를 출력 파일에 포함합니다.|  
-|[/win32icon](../../../csharp/language-reference/compiler-options/win32icon-compiler-option.md)|출력 파일에 삽입할 .ico 파일을 지정합니다.|  
-|[/win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md)|출력 파일에 삽입할 Win32 리소스를 지정합니다.|  
+|[<span data-ttu-id="24049-183">/link</span><span class="sxs-lookup"><span data-stu-id="24049-183">/link</span></span>](../../../csharp/language-reference/compiler-options/link-compiler-option.md)|<span data-ttu-id="24049-184">지정된 어셈블리의 COM 형식 정보를 프로젝트에 사용할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-184">Makes COM type information in specified assemblies available to the project.</span></span>|  
+|[<span data-ttu-id="24049-185">/linkresource</span><span class="sxs-lookup"><span data-stu-id="24049-185">/linkresource</span></span>](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md)|<span data-ttu-id="24049-186">관리되는 리소스에 대한 링크를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="24049-186">Creates a link to a managed resource.</span></span>|  
+|[<span data-ttu-id="24049-187">/resource</span><span class="sxs-lookup"><span data-stu-id="24049-187">/resource</span></span>](../../../csharp/language-reference/compiler-options/resource-compiler-option.md)|<span data-ttu-id="24049-188">.NET Framework 리소스를 출력 파일에 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-188">Embeds a .NET Framework resource into the output file.</span></span>|  
+|[<span data-ttu-id="24049-189">/win32icon</span><span class="sxs-lookup"><span data-stu-id="24049-189">/win32icon</span></span>](../../../csharp/language-reference/compiler-options/win32icon-compiler-option.md)|<span data-ttu-id="24049-190">출력 파일에 삽입할 .ico 파일을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-190">Specifies an .ico file to insert into the output file.</span></span>|  
+|[<span data-ttu-id="24049-191">/win32res</span><span class="sxs-lookup"><span data-stu-id="24049-191">/win32res</span></span>](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md)|<span data-ttu-id="24049-192">출력 파일에 삽입할 Win32 리소스를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-192">Specifies a Win32 resource to insert into the output file.</span></span>|  
   
-### <a name="miscellaneous"></a>기타  
+### <a name="miscellaneous"></a><span data-ttu-id="24049-193">기타</span><span class="sxs-lookup"><span data-stu-id="24049-193">Miscellaneous</span></span>  
   
-|옵션|용도|  
+|<span data-ttu-id="24049-194">옵션</span><span class="sxs-lookup"><span data-stu-id="24049-194">Option</span></span>|<span data-ttu-id="24049-195">용도</span><span class="sxs-lookup"><span data-stu-id="24049-195">Purpose</span></span>|  
 |------------|-------------|  
-|[@](../../../csharp/language-reference/compiler-options/response-file-compiler-option.md)|지시 파일을 지정합니다.|  
-|[/?](../../../csharp/language-reference/compiler-options/help-compiler-option.md)|stdout에 컴파일러 옵션을 나열합니다.|  
-|[/baseaddress](../../../csharp/language-reference/compiler-options/baseaddress-compiler-option.md)|DLL을 로드할 기본 설정 기준 주소를 지정합니다.|  
-|[/codepage](../../../csharp/language-reference/compiler-options/codepage-compiler-option.md)|컴파일할 때 모든 소스 코드 파일에 사용할 코드 페이지를 지정합니다.|  
-|[/help](../../../csharp/language-reference/compiler-options/help-compiler-option.md)|stdout에 컴파일러 옵션을 나열합니다.|  
-|[/highentropyva](../../../csharp/language-reference/compiler-options/highentropyva-compiler-option.md)|실행 파일이 ASLR(주소 공간 레이아웃 불규칙화)을 지원하도록 지정합니다.|  
-|[/langversion](../../../csharp/language-reference/compiler-options/langversion-compiler-option.md)|언어 버전 모드(Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1 또는 최신)를 지정합니다. |  
-|[/main](../../../csharp/language-reference/compiler-options/main-compiler-option.md)|**Main** 메서드의 위치를 지정합니다.|  
-|[/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)|csc.rsp를 사용하여 컴파일하지 않도록 컴파일러에 지시합니다.|  
-|[/nologo](../../../csharp/language-reference/compiler-options/nologo-compiler-option.md)|컴파일러 배너 정보를 표시하지 않습니다.|  
-|[/recurse](../../../csharp/language-reference/compiler-options/recurse-compiler-option.md)|하위 디렉터리에서 컴파일할 소스 파일을 검색합니다.|  
-|[/subsystemversion](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)|실행 파일이 사용할 수 있는 하위 시스템의 최소 버전을 지정합니다.|  
-|[/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md)|[unsafe](../../../csharp/language-reference/keywords/unsafe.md) 키워드를 사용하는 코드를 컴파일할 수 있도록 설정합니다.|  
-|[/utf8output](../../../csharp/language-reference/compiler-options/utf8output-compiler-option.md)|UTF-8 인코딩을 사용하여 컴파일러 출력을 표시합니다.|  
-|/parallel[+&#124;-]|동시 빌드(+)를 사용할지 여부를 지정합니다.|  
-|/checksumalgorithm:\<alg>|PDB에 저장된 소스 파일 체크섬을 계산하기 위한 알고리즘을 지정합니다.  지원되는 값은 SHA1(기본값) 또는 SHA256입니다.|  
+|[@](../../../csharp/language-reference/compiler-options/response-file-compiler-option.md)|<span data-ttu-id="24049-196">지시 파일을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-196">Specifies a response file.</span></span>|  
+|[<span data-ttu-id="24049-197">/?</span><span class="sxs-lookup"><span data-stu-id="24049-197">/?</span></span>](../../../csharp/language-reference/compiler-options/help-compiler-option.md)|<span data-ttu-id="24049-198">stdout에 컴파일러 옵션을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-198">Lists compiler options to stdout.</span></span>|  
+|[<span data-ttu-id="24049-199">/baseaddress</span><span class="sxs-lookup"><span data-stu-id="24049-199">/baseaddress</span></span>](../../../csharp/language-reference/compiler-options/baseaddress-compiler-option.md)|<span data-ttu-id="24049-200">DLL을 로드할 기본 설정 기준 주소를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-200">Specifies the preferred base address at which to load a DLL.</span></span>|  
+|[<span data-ttu-id="24049-201">/codepage</span><span class="sxs-lookup"><span data-stu-id="24049-201">/codepage</span></span>](../../../csharp/language-reference/compiler-options/codepage-compiler-option.md)|<span data-ttu-id="24049-202">컴파일할 때 모든 소스 코드 파일에 사용할 코드 페이지를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-202">Specifies the code page to use for all source code files in the compilation.</span></span>|  
+|[<span data-ttu-id="24049-203">/help</span><span class="sxs-lookup"><span data-stu-id="24049-203">/help</span></span>](../../../csharp/language-reference/compiler-options/help-compiler-option.md)|<span data-ttu-id="24049-204">stdout에 컴파일러 옵션을 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-204">Lists compiler options to stdout.</span></span>|  
+|[<span data-ttu-id="24049-205">/highentropyva</span><span class="sxs-lookup"><span data-stu-id="24049-205">/highentropyva</span></span>](../../../csharp/language-reference/compiler-options/highentropyva-compiler-option.md)|<span data-ttu-id="24049-206">실행 파일이 ASLR(주소 공간 레이아웃 불규칙화)을 지원하도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-206">Specifies that the executable file supports address space layout randomization (ASLR).</span></span>|  
+|[<span data-ttu-id="24049-207">/langversion</span><span class="sxs-lookup"><span data-stu-id="24049-207">/langversion</span></span>](../../../csharp/language-reference/compiler-options/langversion-compiler-option.md)|<span data-ttu-id="24049-208">언어 버전 모드(Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1 또는 최신)를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-208">Specify language version mode: Default, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, or Latest</span></span> |  
+|[<span data-ttu-id="24049-209">/main</span><span class="sxs-lookup"><span data-stu-id="24049-209">/main</span></span>](../../../csharp/language-reference/compiler-options/main-compiler-option.md)|<span data-ttu-id="24049-210">**Main** 메서드의 위치를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-210">Specifies the location of the **Main** method.</span></span>|  
+|[<span data-ttu-id="24049-211">/noconfig</span><span class="sxs-lookup"><span data-stu-id="24049-211">/noconfig</span></span>](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)|<span data-ttu-id="24049-212">csc.rsp를 사용하여 컴파일하지 않도록 컴파일러에 지시합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-212">Instructs the compiler not to compile with csc.rsp.</span></span>|  
+|[<span data-ttu-id="24049-213">/nologo</span><span class="sxs-lookup"><span data-stu-id="24049-213">/nologo</span></span>](../../../csharp/language-reference/compiler-options/nologo-compiler-option.md)|<span data-ttu-id="24049-214">컴파일러 배너 정보를 표시하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="24049-214">Suppresses compiler banner information.</span></span>|  
+|[<span data-ttu-id="24049-215">/recurse</span><span class="sxs-lookup"><span data-stu-id="24049-215">/recurse</span></span>](../../../csharp/language-reference/compiler-options/recurse-compiler-option.md)|<span data-ttu-id="24049-216">하위 디렉터리에서 컴파일할 소스 파일을 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-216">Searches subdirectories for source files to compile.</span></span>|  
+|[<span data-ttu-id="24049-217">/subsystemversion</span><span class="sxs-lookup"><span data-stu-id="24049-217">/subsystemversion</span></span>](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)|<span data-ttu-id="24049-218">실행 파일이 사용할 수 있는 하위 시스템의 최소 버전을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-218">Specifies the minimum version of the subsystem that the executable file can use.</span></span>|  
+|[<span data-ttu-id="24049-219">/unsafe</span><span class="sxs-lookup"><span data-stu-id="24049-219">/unsafe</span></span>](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md)|<span data-ttu-id="24049-220">[unsafe](../../../csharp/language-reference/keywords/unsafe.md) 키워드를 사용하는 코드를 컴파일할 수 있도록 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-220">Enables compilation of code that uses the [unsafe](../../../csharp/language-reference/keywords/unsafe.md) keyword.</span></span>|  
+|[<span data-ttu-id="24049-221">/utf8output</span><span class="sxs-lookup"><span data-stu-id="24049-221">/utf8output</span></span>](../../../csharp/language-reference/compiler-options/utf8output-compiler-option.md)|<span data-ttu-id="24049-222">UTF-8 인코딩을 사용하여 컴파일러 출력을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-222">Displays compiler output using UTF-8 encoding.</span></span>|  
+|<span data-ttu-id="24049-223">/parallel[+&#124;-]</span><span class="sxs-lookup"><span data-stu-id="24049-223">/parallel[+&#124;-]</span></span>|<span data-ttu-id="24049-224">동시 빌드(+)를 사용할지 여부를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-224">Specifies whether to use concurrent build (+).</span></span>|  
+|<span data-ttu-id="24049-225">/checksumalgorithm:\<alg></span><span class="sxs-lookup"><span data-stu-id="24049-225">/checksumalgorithm:\<alg></span></span>|<span data-ttu-id="24049-226">PDB에 저장된 소스 파일 체크섬을 계산하기 위한 알고리즘을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-226">Specify the algorithm for calculating the source file checksum stored in PDB.</span></span>  <span data-ttu-id="24049-227">지원되는 값은 SHA1(기본값) 또는 SHA256입니다.</span><span class="sxs-lookup"><span data-stu-id="24049-227">Supported values are: SHA1 (default) or SHA256.</span></span>|  
   
-## <a name="obsolete-options"></a>사용되지 않는 옵션  
+## <a name="obsolete-options"></a><span data-ttu-id="24049-228">사용되지 않는 옵션</span><span class="sxs-lookup"><span data-stu-id="24049-228">Obsolete Options</span></span>  
   
-|옵션|용도|  
+|<span data-ttu-id="24049-229">옵션</span><span class="sxs-lookup"><span data-stu-id="24049-229">Option</span></span>|<span data-ttu-id="24049-230">용도</span><span class="sxs-lookup"><span data-stu-id="24049-230">Purpose</span></span>|  
 |---|---|  
-|/incremental|증분 컴파일을 사용하도록 설정합니다.|  
+|<span data-ttu-id="24049-231">/incremental</span><span class="sxs-lookup"><span data-stu-id="24049-231">/incremental</span></span>|<span data-ttu-id="24049-232">증분 컴파일을 사용하도록 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="24049-232">Enables incremental compilation.</span></span>|  
   
-## <a name="see-also"></a>참고 항목  
- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)   
- [사전순 C# 컴파일러 옵션 목록](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)   
- [방법: Visual Studio 명령줄에 필요한 환경 변수 설정](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+## <a name="see-also"></a><span data-ttu-id="24049-233">참고 항목</span><span class="sxs-lookup"><span data-stu-id="24049-233">See Also</span></span>  
+ <span data-ttu-id="24049-234">[C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md) </span><span class="sxs-lookup"><span data-stu-id="24049-234">[C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md) </span></span>  
+ <span data-ttu-id="24049-235">[사전순 C# 컴파일러 옵션 목록](../../../csharp/language-reference/compiler-options/listed-alphabetically.md) </span><span class="sxs-lookup"><span data-stu-id="24049-235">[C# Compiler Options Listed Alphabetically](../../../csharp/language-reference/compiler-options/listed-alphabetically.md) </span></span>  
+ [<span data-ttu-id="24049-236">방법: Visual Studio 명령줄에 필요한 환경 변수 설정</span><span class="sxs-lookup"><span data-stu-id="24049-236">How to: Set Environment Variables for the Visual Studio Command Line</span></span>](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 

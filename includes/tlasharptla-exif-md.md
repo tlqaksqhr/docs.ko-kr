@@ -1,1 +1,1 @@
-EXIF(교환 이미지 파일 형식)
+<span data-ttu-id="a4d23-101">EXIF(교환 이미지 파일 형식)</span><span class="sxs-lookup"><span data-stu-id="a4d23-101">Exchangeable image file (Exif)</span></span>

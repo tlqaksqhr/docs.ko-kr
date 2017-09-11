@@ -37,15 +37,15 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="true-c-reference"></a>true(C# 참조)
-오버로드된 연산자 또는 리터럴로 사용됩니다.  
+# <a name="true-c-reference"></a><span data-ttu-id="9a57b-102">true(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="9a57b-102">true (C# Reference)</span></span>
+<span data-ttu-id="9a57b-103">오버로드된 연산자 또는 리터럴로 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="9a57b-103">Used as an overloaded operator or as a literal:</span></span>  
   
- [true 연산자](../../../csharp/language-reference/keywords/true-operator.md)  
+ [<span data-ttu-id="9a57b-104">true 연산자</span><span class="sxs-lookup"><span data-stu-id="9a57b-104">true Operator</span></span>](../../../csharp/language-reference/keywords/true-operator.md)  
   
- [true 리터럴](../../../csharp/language-reference/keywords/true-literal.md)  
+ [<span data-ttu-id="9a57b-105">true 리터럴</span><span class="sxs-lookup"><span data-stu-id="9a57b-105">true Literal</span></span>](../../../csharp/language-reference/keywords/true-literal.md)  
   
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="9a57b-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="9a57b-106">See Also</span></span>  
+ <span data-ttu-id="9a57b-107">[C# 참조](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="9a57b-107">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="9a57b-108">[C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="9a57b-108">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="9a57b-109">C# 키워드</span><span class="sxs-lookup"><span data-stu-id="9a57b-109">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
 

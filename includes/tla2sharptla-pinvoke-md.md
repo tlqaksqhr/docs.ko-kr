@@ -1,1 +1,1 @@
-PInvoke
+<span data-ttu-id="4211c-101">PInvoke</span><span class="sxs-lookup"><span data-stu-id="4211c-101">PInvoke</span></span>

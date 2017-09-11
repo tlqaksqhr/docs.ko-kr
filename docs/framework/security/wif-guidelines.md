@@ -21,11 +21,11 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 08/21/2017
 
 ---
-# <a name="wif-guidelines"></a>WIF 지침
--   [WIF 3.5를 사용하여 빌드된 응용 프로그램을 WIF 4.5로 마이그레이션하는 지침](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)  
+# <a name="wif-guidelines"></a><span data-ttu-id="35cf8-102">WIF 지침</span><span class="sxs-lookup"><span data-stu-id="35cf8-102">WIF Guidelines</span></span>
+-   [<span data-ttu-id="35cf8-103">WIF 3.5를 사용하여 빌드된 응용 프로그램을 WIF 4.5로 마이그레이션하는 지침</span><span class="sxs-lookup"><span data-stu-id="35cf8-103">Guidelines for Migrating an Application Built Using WIF 3.5 to WIF 4.5</span></span>](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)  
   
--   [WIF 3.5와 WIF 4.5 간의 네임스페이스 매핑](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
+-   [<span data-ttu-id="35cf8-104">WIF 3.5와 WIF 4.5 간의 네임스페이스 매핑</span><span class="sxs-lookup"><span data-stu-id="35cf8-104">Namespace Mapping between WIF 3.5 and WIF 4.5</span></span>](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
   
-## <a name="see-also"></a>참고 항목  
- [Windows Identity Foundation](../../../docs/framework/security/index.md)
+## <a name="see-also"></a><span data-ttu-id="35cf8-105">참고 항목</span><span class="sxs-lookup"><span data-stu-id="35cf8-105">See Also</span></span>  
+ [<span data-ttu-id="35cf8-106">Windows Identity Foundation</span><span class="sxs-lookup"><span data-stu-id="35cf8-106">Windows Identity Foundation</span></span>](../../../docs/framework/security/index.md)
 

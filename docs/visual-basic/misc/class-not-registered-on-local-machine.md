@@ -27,19 +27,20 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 89b3d9022b9ea7b105970d683526d1b7e791d1a2
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: ef77f5396f45bc645806522ff5a2b389b267b81c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="class-not-registered-on-local-machine"></a>클래스가 로컬 컴퓨터에 등록되지 않았습니다.
-이 오류는 일반적으로 손상된 파일로 인해 발생합니다. 다시 설치 해야 [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)]합니다.  
+# <a name="class-not-registered-on-local-machine"></a><span data-ttu-id="79f25-102">클래스가 로컬 컴퓨터에 등록되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="79f25-102">Class not registered on local machine</span></span>
+<span data-ttu-id="79f25-103">이 오류는 일반적으로 손상된 파일로 인해 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="79f25-103">This error is usually encountered as a result of a corrupted file.</span></span> <span data-ttu-id="79f25-104">다시 설치 해야 [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="79f25-104">You may need to reinstall [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)].</span></span>  
   
-## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
+## <a name="to-correct-this-error"></a><span data-ttu-id="79f25-105">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="79f25-105">To correct this error</span></span>  
   
--   다시 설치 [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)]합니다.  
+-   <span data-ttu-id="79f25-106">다시 설치 [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="79f25-106">Reinstall [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)].</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [오류 형식](../../visual-basic/programming-guide/language-features/error-types.md)   
- [PAVEOVER 제품 지원 및 내게 필요한 옵션](http://msdn.microsoft.com/en-us/14e1d293-7b6d-40a6-bf3e-a92f8ee6c88c)
+## <a name="see-also"></a><span data-ttu-id="79f25-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="79f25-107">See Also</span></span>  
+ <span data-ttu-id="79f25-108">[오류 형식](../../visual-basic/programming-guide/language-features/error-types.md) </span><span class="sxs-lookup"><span data-stu-id="79f25-108">[Error Types](../../visual-basic/programming-guide/language-features/error-types.md) </span></span>  
+<span data-ttu-id="79f25-109"> [PAVEOVER 제품 지원 및 내게 필요한 옵션](http://msdn.microsoft.com/en-us/14e1d293-7b6d-40a6-bf3e-a92f8ee6c88c)</span><span class="sxs-lookup"><span data-stu-id="79f25-109"> [PAVEOVER Product Support and Accessibility](http://msdn.microsoft.com/en-us/14e1d293-7b6d-40a6-bf3e-a92f8ee6c88c)</span></span>

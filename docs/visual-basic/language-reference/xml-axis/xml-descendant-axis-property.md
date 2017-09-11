@@ -35,74 +35,75 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 434dc90c643381bdc27b2da54a7418e39bf15e98
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: e84a8bb989ebbed57595ebf93cef620027a04328
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="xml-descendant-axis-property-visual-basic"></a>XML 하위 항목 축 속성(Visual Basic)
-다음의 하위 항목에 대 한 액세스를 제공:는 <xref:System.Xml.Linq.XElement>개체는 <xref:System.Xml.Linq.XDocument>개체, 컬렉션을 <xref:System.Xml.Linq.XElement>개체 또는 컬렉션을 <xref:System.Xml.Linq.XDocument>개체.</xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement>  
+# <a name="xml-descendant-axis-property-visual-basic"></a><span data-ttu-id="c2fc7-102">XML 하위 항목 축 속성(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c2fc7-102">XML Descendant Axis Property (Visual Basic)</span></span>
+<span data-ttu-id="c2fc7-103">다음의 하위 항목에 대 한 액세스를 제공:는 <xref:System.Xml.Linq.XElement>개체는 <xref:System.Xml.Linq.XDocument>개체, 컬렉션을 <xref:System.Xml.Linq.XElement>개체 또는 컬렉션을 <xref:System.Xml.Linq.XDocument>개체.</xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement></span><span class="sxs-lookup"><span data-stu-id="c2fc7-103">Provides access to the descendants of the following: an <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, a collection of <xref:System.Xml.Linq.XElement> objects, or a collection of <xref:System.Xml.Linq.XDocument> objects.</span></span>  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a><span data-ttu-id="c2fc7-104">구문</span><span class="sxs-lookup"><span data-stu-id="c2fc7-104">Syntax</span></span>  
   
 ```  
   
 object...<descendant>  
 ```  
   
-## <a name="parts"></a>요소  
+## <a name="parts"></a><span data-ttu-id="c2fc7-105">요소</span><span class="sxs-lookup"><span data-stu-id="c2fc7-105">Parts</span></span>  
  `object`  
- 필수 요소. <xref:System.Xml.Linq.XElement>개체는 <xref:System.Xml.Linq.XDocument>개체, 컬렉션을 <xref:System.Xml.Linq.XElement>개체 또는 컬렉션을 <xref:System.Xml.Linq.XDocument>개체.</xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement>  
+ <span data-ttu-id="c2fc7-106">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="c2fc7-106">Required.</span></span> <span data-ttu-id="c2fc7-107"><xref:System.Xml.Linq.XElement>개체는 <xref:System.Xml.Linq.XDocument>개체, 컬렉션을 <xref:System.Xml.Linq.XElement>개체 또는 컬렉션을 <xref:System.Xml.Linq.XDocument>개체.</xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement></span><span class="sxs-lookup"><span data-stu-id="c2fc7-107">An <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, a collection of <xref:System.Xml.Linq.XElement> objects, or a collection of <xref:System.Xml.Linq.XDocument> objects.</span></span>  
   
- ...<  
- 필수 요소. 하위 항목 축 속성의 시작을 나타냅니다.  
+ <span data-ttu-id="c2fc7-108">...<</span><span class="sxs-lookup"><span data-stu-id="c2fc7-108">...<</span></span>  
+ <span data-ttu-id="c2fc7-109">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="c2fc7-109">Required.</span></span> <span data-ttu-id="c2fc7-110">하위 항목 축 속성의 시작을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="c2fc7-110">Denotes the start of a descendant axis property.</span></span>  
   
  `descendant`  
- 필수 요소. 폼에 액세스 하려면 하위 노드의 이름 [`prefix``:`]`name`합니다.  
+ <span data-ttu-id="c2fc7-111">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="c2fc7-111">Required.</span></span> <span data-ttu-id="c2fc7-112">폼에 액세스 하려면 하위 노드의 이름 [`prefix``:`]`name`합니다.</span><span class="sxs-lookup"><span data-stu-id="c2fc7-112">Name of the descendant nodes to access, of the form [`prefix``:`]`name`.</span></span>  
   
-|파트|설명|  
+|<span data-ttu-id="c2fc7-113">파트</span><span class="sxs-lookup"><span data-stu-id="c2fc7-113">Part</span></span>|<span data-ttu-id="c2fc7-114">설명</span><span class="sxs-lookup"><span data-stu-id="c2fc7-114">Description</span></span>|  
 |----------|-----------------|  
-|`prefix`|선택적 요소. 하위 노드에 대 한 XML 네임 스페이스 접두사입니다. 사용 하 여 정의 된 전역 XML 네임 스페이스 여야는 `Imports` 문입니다.|  
-|`name`|필수 요소. 하위 노드의 로컬 이름입니다. 참조 [선언 된 XML 요소 및 특성의 이름을](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)합니다.|  
+|`prefix`|<span data-ttu-id="c2fc7-115">선택적 요소.</span><span class="sxs-lookup"><span data-stu-id="c2fc7-115">Optional.</span></span> <span data-ttu-id="c2fc7-116">하위 노드에 대 한 XML 네임 스페이스 접두사입니다.</span><span class="sxs-lookup"><span data-stu-id="c2fc7-116">XML namespace prefix for the descendant node.</span></span> <span data-ttu-id="c2fc7-117">사용 하 여 정의 된 전역 XML 네임 스페이스 여야는 `Imports` 문입니다.</span><span class="sxs-lookup"><span data-stu-id="c2fc7-117">Must be a global XML namespace that is defined by using an `Imports` statement.</span></span>|  
+|`name`|<span data-ttu-id="c2fc7-118">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="c2fc7-118">Required.</span></span> <span data-ttu-id="c2fc7-119">하위 노드의 로컬 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="c2fc7-119">Local name of the descendant node.</span></span> <span data-ttu-id="c2fc7-120">참조 [선언 된 XML 요소 및 특성의 이름을](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="c2fc7-120">See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).</span></span>|  
   
  \>  
- 필수 요소. 하위 항목 축 속성의 끝을 나타냅니다.  
+ <span data-ttu-id="c2fc7-121">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="c2fc7-121">Required.</span></span> <span data-ttu-id="c2fc7-122">하위 항목 축 속성의 끝을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="c2fc7-122">Denotes the end of a descendant axis property.</span></span>  
   
-## <a name="return-value"></a>반환 값  
- 컬렉션을 <xref:System.Xml.Linq.XElement>개체.</xref:System.Xml.Linq.XElement>  
+## <a name="return-value"></a><span data-ttu-id="c2fc7-123">반환 값</span><span class="sxs-lookup"><span data-stu-id="c2fc7-123">Return Value</span></span>  
+ <span data-ttu-id="c2fc7-124">컬렉션을 <xref:System.Xml.Linq.XElement>개체.</xref:System.Xml.Linq.XElement></span><span class="sxs-lookup"><span data-stu-id="c2fc7-124">A collection of <xref:System.Xml.Linq.XElement> objects.</span></span>  
   
-## <a name="remarks"></a>주의  
- XML 하위 항목 축 속성을 사용 하 여 하위 노드 이름을 사용 하 여 액세스는 <xref:System.Xml.Linq.XElement>또는 <xref:System.Xml.Linq.XDocument>개체 또는 컬렉션에서 <xref:System.Xml.Linq.XElement>또는 <xref:System.Xml.Linq.XDocument>개체.</xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement> XML을 사용 하 여 `Value` 반환된 된 컬렉션의 첫 번째 하위 노드의 값에 액세스 하는 속성입니다. 자세한 내용은 참조 [XML 값 속성](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)합니다.  
+## <a name="remarks"></a><span data-ttu-id="c2fc7-125">주의</span><span class="sxs-lookup"><span data-stu-id="c2fc7-125">Remarks</span></span>  
+ <span data-ttu-id="c2fc7-126">XML 하위 항목 축 속성을 사용 하 여 하위 노드 이름을 사용 하 여 액세스는 <xref:System.Xml.Linq.XElement>또는 <xref:System.Xml.Linq.XDocument>개체 또는 컬렉션에서 <xref:System.Xml.Linq.XElement>또는 <xref:System.Xml.Linq.XDocument>개체.</xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XDocument> </xref:System.Xml.Linq.XElement></span><span class="sxs-lookup"><span data-stu-id="c2fc7-126">You can use an XML descendant axis property to access descendant nodes by name from an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object, or from a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> objects.</span></span> <span data-ttu-id="c2fc7-127">XML을 사용 하 여 `Value` 반환된 된 컬렉션의 첫 번째 하위 노드의 값에 액세스 하는 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="c2fc7-127">Use the XML `Value` property to access the value of the first descendant node in the returned collection.</span></span> <span data-ttu-id="c2fc7-128">자세한 내용은 참조 [XML 값 속성](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="c2fc7-128">For more information, see [XML Value Property](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).</span></span>  
   
- [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 컴파일러는 하위 항목 축 속성에 대 한 호출으로 변환 된 <xref:System.Xml.Linq.XContainer.Descendants%2A>메서드.</xref:System.Xml.Linq.XContainer.Descendants%2A>  
+ <span data-ttu-id="c2fc7-129">[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 컴파일러는 하위 항목 축 속성에 대 한 호출으로 변환 된 <xref:System.Xml.Linq.XContainer.Descendants%2A>메서드.</xref:System.Xml.Linq.XContainer.Descendants%2A></span><span class="sxs-lookup"><span data-stu-id="c2fc7-129">The [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] compiler converts descendant axis properties into calls to the <xref:System.Xml.Linq.XContainer.Descendants%2A> method.</span></span>  
   
-## <a name="xml-namespaces"></a>XML 네임스페이스  
- 하위 항목 축 속성의 이름은 전역적으로 선언 된 XML 네임 스페이스만 사용할 수는 `Imports` 문입니다. XML 요소 리터럴 내에서 로컬로 선언 된 XML 네임 스페이스를 사용할 수 없습니다. 자세한 내용은 참조 [Imports 문 (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)합니다.  
+## <a name="xml-namespaces"></a><span data-ttu-id="c2fc7-130">XML 네임스페이스</span><span class="sxs-lookup"><span data-stu-id="c2fc7-130">XML Namespaces</span></span>  
+ <span data-ttu-id="c2fc7-131">하위 항목 축 속성의 이름은 전역적으로 선언 된 XML 네임 스페이스만 사용할 수는 `Imports` 문입니다.</span><span class="sxs-lookup"><span data-stu-id="c2fc7-131">The name in a descendant axis property can use only XML namespaces declared globally with the `Imports` statement.</span></span> <span data-ttu-id="c2fc7-132">XML 요소 리터럴 내에서 로컬로 선언 된 XML 네임 스페이스를 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="c2fc7-132">It cannot use XML namespaces declared locally within XML element literals.</span></span> <span data-ttu-id="c2fc7-133">자세한 내용은 참조 [Imports 문 (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="c2fc7-133">For more information, see [Imports Statement (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).</span></span>  
   
-## <a name="example"></a>예제  
- 다음 예제에 라는 첫 번째 하위 노드의 값에 액세스 하는 방법을 보여 줍니다 `name` 및 명명 된 모든 하위 노드의 값 `phone` 에서 `contacts` 개체입니다.  
+## <a name="example"></a><span data-ttu-id="c2fc7-134">예제</span><span class="sxs-lookup"><span data-stu-id="c2fc7-134">Example</span></span>  
+ <span data-ttu-id="c2fc7-135">다음 예제에 라는 첫 번째 하위 노드의 값에 액세스 하는 방법을 보여 줍니다 `name` 및 명명 된 모든 하위 노드의 값 `phone` 에서 `contacts` 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="c2fc7-135">The following example shows how to access the value of the first descendant node named `name` and the values of all descendant nodes named `phone` from the `contacts` object.</span></span>  
   
- [!code-vb[VbXMLSamples #&25;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-descendant-axis-property_1.vb)]  
+ <span data-ttu-id="c2fc7-136">[!code-vb[VbXMLSamples #&25;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-descendant-axis-property_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="c2fc7-136">[!code-vb[VbXMLSamples#25](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-descendant-axis-property_1.vb)]</span></span>  
   
- 이 코드의 텍스트는 다음과 같습니다.  
+ <span data-ttu-id="c2fc7-137">이 코드의 텍스트는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="c2fc7-137">This code displays the following text:</span></span>  
   
  `Name: Patrick Hines`  
   
  `Home Phone = 206-555-0144`  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 `ns`를 XML 네임스페이스 접두사로 선언한 다음 다음 네임 스페이스의 접두사는 XML 리터럴을 만들고 정규화 된 이름 가진 첫 번째 자식 노드 값에 액세스를 사용 하 여 `ns:name`합니다.  
+## <a name="example"></a><span data-ttu-id="c2fc7-138">예제</span><span class="sxs-lookup"><span data-stu-id="c2fc7-138">Example</span></span>  
+ <span data-ttu-id="c2fc7-139">다음 예제에서는 `ns`를 XML 네임스페이스 접두사로 선언한 다음</span><span class="sxs-lookup"><span data-stu-id="c2fc7-139">The following example declares `ns` as an XML namespace prefix.</span></span> <span data-ttu-id="c2fc7-140">다음 네임 스페이스의 접두사는 XML 리터럴을 만들고 정규화 된 이름 가진 첫 번째 자식 노드 값에 액세스를 사용 하 여 `ns:name`합니다.</span><span class="sxs-lookup"><span data-stu-id="c2fc7-140">It then uses the prefix of the namespace to create an XML literal and access the value of the first child node with the qualified name `ns:name`.</span></span>  
   
- [!code-vb[VbXMLSamples #&26;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-descendant-axis-property_2.vb)]  
+ <span data-ttu-id="c2fc7-141">[!code-vb[VbXMLSamples #&26;](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-descendant-axis-property_2.vb)]</span><span class="sxs-lookup"><span data-stu-id="c2fc7-141">[!code-vb[VbXMLSamples#26](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-descendant-axis-property_2.vb)]</span></span>  
   
- 이 코드의 텍스트는 다음과 같습니다.  
+ <span data-ttu-id="c2fc7-142">이 코드의 텍스트는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="c2fc7-142">This code displays the following text:</span></span>  
   
  `Name: Patrick Hines`  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Xml.Linq.XElement>   
- [XML 축 속성](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)   
- [XML 리터럴](../../../visual-basic/language-reference/xml-literals/index.md)   
- [Visual Basic에서 XML 만들기](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)   
- [선언된 XML 요소 및 특성의 이름](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+## <a name="see-also"></a><span data-ttu-id="c2fc7-143">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c2fc7-143">See Also</span></span>  
+ <span data-ttu-id="c2fc7-144"><xref:System.Xml.Linq.XElement></span><span class="sxs-lookup"><span data-stu-id="c2fc7-144"><xref:System.Xml.Linq.XElement></span></span>   
+<span data-ttu-id="c2fc7-145"> [XML 축 속성](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md) </span><span class="sxs-lookup"><span data-stu-id="c2fc7-145"> [XML Axis Properties](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md) </span></span>  
+<span data-ttu-id="c2fc7-146"> [XML 리터럴](../../../visual-basic/language-reference/xml-literals/index.md) </span><span class="sxs-lookup"><span data-stu-id="c2fc7-146"> [XML Literals](../../../visual-basic/language-reference/xml-literals/index.md) </span></span>  
+<span data-ttu-id="c2fc7-147"> [Visual Basic에서 XML 만들기](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md) </span><span class="sxs-lookup"><span data-stu-id="c2fc7-147"> [Creating XML in Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md) </span></span>  
+<span data-ttu-id="c2fc7-148"> [선언된 XML 요소 및 특성의 이름](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)</span><span class="sxs-lookup"><span data-stu-id="c2fc7-148"> [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)</span></span>

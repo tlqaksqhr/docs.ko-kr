@@ -39,21 +39,21 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="nologo-c-compiler-options"></a>/nologo(C# 컴파일러 옵션)
-**/nologo** 옵션은 컴파일러가 시작될 때 나타나는 시작 배너와 컴파일하는 동안 나타나는 정보 메시지를 표시하지 않습니다.  
+# <a name="nologo-c-compiler-options"></a><span data-ttu-id="62d68-102">/nologo(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="62d68-102">/nologo (C# Compiler Options)</span></span>
+<span data-ttu-id="62d68-103">**/nologo** 옵션은 컴파일러가 시작될 때 나타나는 시작 배너와 컴파일하는 동안 나타나는 정보 메시지를 표시하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="62d68-103">The **/nologo** option suppresses display of the sign-on banner when the compiler starts up and display of informational messages during compiling.</span></span>  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a><span data-ttu-id="62d68-104">구문</span><span class="sxs-lookup"><span data-stu-id="62d68-104">Syntax</span></span>  
   
 ```console  
 /nologo  
 ```  
   
-## <a name="remarks"></a>설명  
- 개발 환경 내에서는 이 옵션을 사용할 수 없습니다. 명령줄에서 컴파일하는 경우에만 사용할 수 있습니다.  
+## <a name="remarks"></a><span data-ttu-id="62d68-105">설명</span><span class="sxs-lookup"><span data-stu-id="62d68-105">Remarks</span></span>  
+ <span data-ttu-id="62d68-106">개발 환경 내에서는 이 옵션을 사용할 수 없습니다. 명령줄에서 컴파일하는 경우에만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="62d68-106">This option is not available from within the development environment; it is only available when compiling from the command line.</span></span>  
   
- 이 컴파일러 옵션은 Visual Studio에서 사용할 수 없으며 프로그래밍 방식으로 변경할 수 없습니다.  
+ <span data-ttu-id="62d68-107">이 컴파일러 옵션은 Visual Studio에서 사용할 수 없으며 프로그래밍 방식으로 변경할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="62d68-107">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)   
- [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)
+## <a name="see-also"></a><span data-ttu-id="62d68-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="62d68-108">See Also</span></span>  
+ <span data-ttu-id="62d68-109">[C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md) </span><span class="sxs-lookup"><span data-stu-id="62d68-109">[C# Compiler Options](../../../csharp/language-reference/compiler-options/index.md) </span></span>  
+ [<span data-ttu-id="62d68-110">프로젝트 및 솔루션 속성 관리</span><span class="sxs-lookup"><span data-stu-id="62d68-110">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
 

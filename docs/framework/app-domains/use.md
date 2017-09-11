@@ -25,56 +25,56 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="using-application-domains"></a>응용 프로그램 도메인 사용
-응용 프로그램 도메인은 공용 언어 런타임에 대한 격리 단위를 제공하고 프로세스 내에서 생성되고 실행됩니다. 응용 프로그램 도메인은 대개 런타임을 프로세스로 로드하고 응용 프로그램 도메인 내에서 사용자 코드를 실행하는 응용 프로그램인 런타임 호스트에서 만들어집니다. 런타임 호스트는 프로세스와 기본 응용 프로그램 도메인을 만들고 그 내부에서 관리 코드를 실행합니다. 런타임 호스트에는 ASP.NET, Microsoft Internet Explorer 및 Windows 셸이 포함됩니다.  
+# <a name="using-application-domains"></a><span data-ttu-id="501cc-102">응용 프로그램 도메인 사용</span><span class="sxs-lookup"><span data-stu-id="501cc-102">Using Application Domains</span></span>
+<span data-ttu-id="501cc-103">응용 프로그램 도메인은 공용 언어 런타임에 대한 격리 단위를 제공하고</span><span class="sxs-lookup"><span data-stu-id="501cc-103">Application domains provide a unit of isolation for the common language runtime.</span></span> <span data-ttu-id="501cc-104">프로세스 내에서 생성되고 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="501cc-104">They are created and run inside a process.</span></span> <span data-ttu-id="501cc-105">응용 프로그램 도메인은 대개 런타임을 프로세스로 로드하고 응용 프로그램 도메인 내에서 사용자 코드를 실행하는 응용 프로그램인 런타임 호스트에서 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="501cc-105">Application domains are usually created by a runtime host, which is an application responsible for loading the runtime into a process and executing user code within an application domain.</span></span> <span data-ttu-id="501cc-106">런타임 호스트는 프로세스와 기본 응용 프로그램 도메인을 만들고 그 내부에서 관리 코드를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="501cc-106">The runtime host creates a process and a default application domain, and runs managed code inside it.</span></span> <span data-ttu-id="501cc-107">런타임 호스트에는 ASP.NET, Microsoft Internet Explorer 및 Windows 셸이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="501cc-107">Runtime hosts include ASP.NET, Microsoft Internet Explorer, and the Windows shell.</span></span>  
   
- 대부분 응용 프로그램의 경우 자체적인 응용 프로그램 도메인을 만들 필요가 없습니다. 런타임 호스트에서 필요한 응용 프로그램 도메인을 만듭니다. 그러나 응용 프로그램이 코드를 분리하거나 DLL을 사용하고 언로드해야 할 경우 직접 추가적인 응용 프로그램 도메인을 만들고 구성할 수 있습니다.  
+ <span data-ttu-id="501cc-108">대부분 응용 프로그램의 경우 자체적인 응용 프로그램 도메인을 만들 필요가 없습니다. 런타임 호스트에서 필요한 응용 프로그램 도메인을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="501cc-108">For most applications, you do not need to create your own application domain; the runtime host creates any necessary application domains for you.</span></span> <span data-ttu-id="501cc-109">그러나 응용 프로그램이 코드를 분리하거나 DLL을 사용하고 언로드해야 할 경우 직접 추가적인 응용 프로그램 도메인을 만들고 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="501cc-109">However, you can create and configure additional application domains if your application needs to isolate code or to use and unload DLLs.</span></span>  
   
-## <a name="in-this-section"></a>단원 내용  
- [방법: 응용 프로그램 도메인 만들기](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
- 응용 프로그램 도메인을 프로그래밍 방식으로 만드는 방법을 설명합니다.  
+## <a name="in-this-section"></a><span data-ttu-id="501cc-110">단원 내용</span><span class="sxs-lookup"><span data-stu-id="501cc-110">In This Section</span></span>  
+ [<span data-ttu-id="501cc-111">방법: 응용 프로그램 도메인 만들기</span><span class="sxs-lookup"><span data-stu-id="501cc-111">How to: Create an Application Domain</span></span>](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
+ <span data-ttu-id="501cc-112">응용 프로그램 도메인을 프로그래밍 방식으로 만드는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="501cc-112">Describes how to programmatically create an application domain.</span></span>  
   
- [방법: 응용 프로그램 도메인 언로드](../../../docs/framework/app-domains/how-to-unload-an-application-domain.md)  
- 응용 프로그램 도메인을 프로그래밍 방식으로 언로드하는 방법을 설명합니다.  
+ [<span data-ttu-id="501cc-113">방법: 응용 프로그램 도메인 언로드</span><span class="sxs-lookup"><span data-stu-id="501cc-113">How to: Unload an Application Domain</span></span>](../../../docs/framework/app-domains/how-to-unload-an-application-domain.md)  
+ <span data-ttu-id="501cc-114">응용 프로그램 도메인을 프로그래밍 방식으로 언로드하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="501cc-114">Describes how to programmatically unload an application domain.</span></span>  
   
- [방법: 응용 프로그램 도메인 구성](../../../docs/framework/app-domains/how-to-configure-an-application-domain.md)  
- 응용 프로그램 도메인을 구성하는 방법을 소개합니다.  
+ [<span data-ttu-id="501cc-115">방법: 응용 프로그램 도메인 구성</span><span class="sxs-lookup"><span data-stu-id="501cc-115">How to: Configure an Application Domain</span></span>](../../../docs/framework/app-domains/how-to-configure-an-application-domain.md)  
+ <span data-ttu-id="501cc-116">응용 프로그램 도메인을 구성하는 방법을 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="501cc-116">Provides an introduction to configuring an application domain.</span></span>  
   
- [응용 프로그램 도메인에서 설치 정보 검색](../../../docs/framework/app-domains/retrieve-setup-information.md)  
- 응용 프로그램 도메인에서 설정 정보를 검색하는 방법을 설명합니다.  
+ [<span data-ttu-id="501cc-117">응용 프로그램 도메인에서 설치 정보 검색</span><span class="sxs-lookup"><span data-stu-id="501cc-117">Retrieving Setup Information from an Application Domain</span></span>](../../../docs/framework/app-domains/retrieve-setup-information.md)  
+ <span data-ttu-id="501cc-118">응용 프로그램 도메인에서 설정 정보를 검색하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="501cc-118">Describes how to retrieve setup information from an application domain.</span></span>  
   
- [방법: 응용 프로그램 도메인에 어셈블리 로드](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
- 어셈블리를 응용 프로그램 도메인으로 로드하는 방법을 설명합니다.  
+ [<span data-ttu-id="501cc-119">방법: 응용 프로그램 도메인에 어셈블리 로드</span><span class="sxs-lookup"><span data-stu-id="501cc-119">How to: Load Assemblies into an Application Domain</span></span>](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
+ <span data-ttu-id="501cc-120">어셈블리를 응용 프로그램 도메인으로 로드하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="501cc-120">Describes how to load an assembly into an application domain.</span></span>  
   
- [방법: 어셈블리에서 형식 및 멤버 정보 가져오기](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
- 어셈블리에 대한 정보를 검색하는 방법을 설명합니다.  
+ [<span data-ttu-id="501cc-121">방법: 어셈블리에서 형식 및 멤버 정보 가져오기</span><span class="sxs-lookup"><span data-stu-id="501cc-121">How to: Obtain Type and Member Information from an Assembly</span></span>](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
+ <span data-ttu-id="501cc-122">어셈블리에 대한 정보를 검색하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="501cc-122">Describes how to retrieve information about an assembly.</span></span>  
   
- [어셈블리 섀도 복사](../../../docs/framework/app-domains/shadow-copy-assemblies.md)  
- 어셈블리가 사용되는 동안 섀도 복사를 통해 어셈블리 업데이트를 허용하는 방법과 섀도 복사를 구성하는 방법을 설명합니다.  
+ [<span data-ttu-id="501cc-123">어셈블리 섀도 복사</span><span class="sxs-lookup"><span data-stu-id="501cc-123">Shadow Copying Assemblies</span></span>](../../../docs/framework/app-domains/shadow-copy-assemblies.md)  
+ <span data-ttu-id="501cc-124">어셈블리가 사용되는 동안 섀도 복사를 통해 어셈블리 업데이트를 허용하는 방법과 섀도 복사를 구성하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="501cc-124">Describes how shadow copying allows updates to assemblies while they are in use, and how to configure shadow copying.</span></span>  
   
- [방법: 첫째 예외 알림 받기](../../../docs/framework/app-domains/how-to-receive-first-chance-exception-notifications.md)  
- 공용 언어 런타임이 예외 처리기 검색을 시작하기 전에 예외가 throw되었다는 알림을 받을 수 있는 방법을 설명합니다.  
+ [<span data-ttu-id="501cc-125">방법: 첫째 예외 알림 받기</span><span class="sxs-lookup"><span data-stu-id="501cc-125">How to: Receive First-Chance Exception Notifications</span></span>](../../../docs/framework/app-domains/how-to-receive-first-chance-exception-notifications.md)  
+ <span data-ttu-id="501cc-126">공용 언어 런타임이 예외 처리기 검색을 시작하기 전에 예외가 throw되었다는 알림을 받을 수 있는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="501cc-126">Explains how you can receive a notification that an exception has been thrown, before the common language runtime has begun searching for exception handlers.</span></span>  
   
- [어셈블리 로드 해결](../../../docs/framework/app-domains/resolve-assembly-loads.md)  
- <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 이벤트를 사용하여 어셈블리 로드 실패를 해결하는 방법에 대한 지침을 제공합니다.  
+ [<span data-ttu-id="501cc-127">어셈블리 로드 해결</span><span class="sxs-lookup"><span data-stu-id="501cc-127">Resolving Assembly Loads</span></span>](../../../docs/framework/app-domains/resolve-assembly-loads.md)  
+ <span data-ttu-id="501cc-128"><xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 이벤트를 사용하여 어셈블리 로드 실패를 해결하는 방법에 대한 지침을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="501cc-128">Provides guidance on using the <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> event to resolve assembly load failures.</span></span>  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a><span data-ttu-id="501cc-129">참조</span><span class="sxs-lookup"><span data-stu-id="501cc-129">Reference</span></span>  
  <xref:System.AppDomain>  
- 응용 프로그램 도메인을 나타냅니다. 응용 프로그램 도메인을 만들고 제어하기 위한 메서드를 제공합니다.  
+ <span data-ttu-id="501cc-130">응용 프로그램 도메인을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="501cc-130">Represents an application domain.</span></span> <span data-ttu-id="501cc-131">응용 프로그램 도메인을 만들고 제어하기 위한 메서드를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="501cc-131">Provides methods for creating and controlling application domains.</span></span>  
   
-## <a name="related-sections"></a>관련 단원  
- [공용 언어 런타임의 어셈블리](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- 어셈블리가 실행하는 함수의 개요를 제공합니다.  
+## <a name="related-sections"></a><span data-ttu-id="501cc-132">관련 단원</span><span class="sxs-lookup"><span data-stu-id="501cc-132">Related Sections</span></span>  
+ [<span data-ttu-id="501cc-133">공용 언어 런타임의 어셈블리</span><span class="sxs-lookup"><span data-stu-id="501cc-133">Assemblies in the Common Language Runtime</span></span>](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ <span data-ttu-id="501cc-134">어셈블리가 실행하는 함수의 개요를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="501cc-134">Provides an overview of the functions performed by assemblies.</span></span>  
   
- [어셈블리를 사용한 프로그래밍](../../../docs/framework/app-domains/programming-with-assemblies.md)  
- 어셈블리를 만들고, 서명하고, 특성을 설정하는 방법에 대해 설명합니다.  
+ [<span data-ttu-id="501cc-135">어셈블리를 사용한 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="501cc-135">Programming with Assemblies</span></span>](../../../docs/framework/app-domains/programming-with-assemblies.md)  
+ <span data-ttu-id="501cc-136">어셈블리를 만들고, 서명하고, 특성을 설정하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="501cc-136">Describes how to create, sign, and set attributes on assemblies.</span></span>  
   
- [동적 메서드 및 어셈블리 내보내기](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
- 동적 어셈블리를 만드는 방법에 대해 설명합니다.  
+ [<span data-ttu-id="501cc-137">동적 메서드 및 어셈블리 내보내기</span><span class="sxs-lookup"><span data-stu-id="501cc-137">Emitting Dynamic Methods and Assemblies</span></span>](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
+ <span data-ttu-id="501cc-138">동적 어셈블리를 만드는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="501cc-138">Describes how to create dynamic assemblies.</span></span>  
   
- [응용 프로그램 도메인](../../../docs/framework/app-domains/application-domains.md)  
- 응용 프로그램 도메인에 대해 개념적으로 설명합니다.  
+ [<span data-ttu-id="501cc-139">응용 프로그램 도메인</span><span class="sxs-lookup"><span data-stu-id="501cc-139">Application Domains</span></span>](../../../docs/framework/app-domains/application-domains.md)  
+ <span data-ttu-id="501cc-140">응용 프로그램 도메인에 대해 개념적으로 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="501cc-140">Provides a conceptual overview of application domains.</span></span>  
   
- [리플렉션 개요](../../../docs/framework/reflection-and-codedom/reflection.md)  
- **Reflection** 클래스를 사용하여 어셈블리에 대한 정보를 얻는 방법을 설명합니다.
+ [<span data-ttu-id="501cc-141">리플렉션 개요</span><span class="sxs-lookup"><span data-stu-id="501cc-141">Reflection Overview</span></span>](../../../docs/framework/reflection-and-codedom/reflection.md)  
+ <span data-ttu-id="501cc-142">**Reflection** 클래스를 사용하여 어셈블리에 대한 정보를 얻는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="501cc-142">Describes how to use the **Reflection** class to obtain information about an assembly.</span></span>
 

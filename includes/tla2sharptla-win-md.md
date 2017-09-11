@@ -1,1 +1,1 @@
-창
+<span data-ttu-id="47c49-101">창</span><span class="sxs-lookup"><span data-stu-id="47c49-101">Windows</span></span>

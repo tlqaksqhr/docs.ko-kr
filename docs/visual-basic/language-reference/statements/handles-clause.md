@@ -33,57 +33,57 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7c79935e7f15f31abca7efddbc443239d5db2f58
+ms.sourcegitcommit: 14abadaf548e228244a1ff7ca72fa3896ef4eb5d
+ms.openlocfilehash: cd5dec12312e05242551d5aff112028a8e1ff8b3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
+ms.lasthandoff: 05/23/2017
 
 ---
-# <a name="handles-clause-visual-basic"></a>Handles 절(Visual Basic)
-지정된 이벤트를 처리하는 프로시저를 선언합니다.  
+# <a name="handles-clause-visual-basic"></a><span data-ttu-id="45f98-102">Handles 절(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="45f98-102">Handles Clause (Visual Basic)</span></span>
+<span data-ttu-id="45f98-103">지정된 이벤트를 처리하는 프로시저를 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="45f98-103">Declares that a procedure handles a specified event.</span></span>  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a><span data-ttu-id="45f98-104">구문</span><span class="sxs-lookup"><span data-stu-id="45f98-104">Syntax</span></span>  
   
 ```  
 proceduredeclaration Handles eventlist  
 ```  
   
-## <a name="parts"></a>요소  
+## <a name="parts"></a><span data-ttu-id="45f98-105">요소</span><span class="sxs-lookup"><span data-stu-id="45f98-105">Parts</span></span>  
  `proceduredeclaration`  
- 이벤트를 처리할 프로시저에 대한 `Sub` 프로시저 선언입니다.  
+ <span data-ttu-id="45f98-106">이벤트를 처리할 프로시저에 대한 `Sub` 프로시저 선언입니다.</span><span class="sxs-lookup"><span data-stu-id="45f98-106">The `Sub` procedure declaration for the procedure that will handle the event.</span></span>  
   
  `eventlist`  
- 처리할 `proceduredeclaration`에 대한 이벤트 목록으로, 쉼표로 구분합니다. 이벤트는 현재 클래스에 대한 기본 클래스 또는 `WithEvents` 키워드를 사용하여 선언된 개체에 의해 발생해야 합니다.  
+ <span data-ttu-id="45f98-107">처리할 `proceduredeclaration`에 대한 이벤트 목록으로, 쉼표로 구분합니다.</span><span class="sxs-lookup"><span data-stu-id="45f98-107">List of the events for `proceduredeclaration` to handle, separated by commas.</span></span> <span data-ttu-id="45f98-108">이벤트는 현재 클래스에 대한 기본 클래스 또는 `WithEvents` 키워드를 사용하여 선언된 개체에 의해 발생해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="45f98-108">The events must be raised by either the base class for the current class, or by an object declared using the `WithEvents` keyword.</span></span>  
   
-## <a name="remarks"></a>주의  
- 프로시저 선언의 끝에서 `Handles` 키워드를 사용하여 `WithEvents` 키워드로 선언된 개체 변수에 의해 발생된 이벤트를 처리합니다. `Handles` 키워드는 파생 클래스에서 기본 클래스의 이벤트를 처리하는 데도 사용할 수 있습니다.  
+## <a name="remarks"></a><span data-ttu-id="45f98-109">주의</span><span class="sxs-lookup"><span data-stu-id="45f98-109">Remarks</span></span>  
+ <span data-ttu-id="45f98-110">프로시저 선언의 끝에서 `Handles` 키워드를 사용하여 `WithEvents` 키워드로 선언된 개체 변수에 의해 발생된 이벤트를 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="45f98-110">Use the `Handles` keyword at the end of a procedure declaration to cause it to handle events raised by an object variable declared using the `WithEvents` keyword.</span></span> <span data-ttu-id="45f98-111">`Handles` 키워드는 파생 클래스에서 기본 클래스의 이벤트를 처리하는 데도 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="45f98-111">The `Handles` keyword can also be used in a derived class to handle events from a base class.</span></span>  
   
- `Handles` 키워드와 `AddHandler` 문 모두 특정 프로시저에서 특정 이벤트를 처리하도록 지정하는 데 사용할 수 있지만 차이가 있습니다. 특정 이벤트를 처리하도록 지정하는 프로시저를 정의할 때 `Handles` 키워드를 사용합니다. `AddHandler` 문은 런타임에 프로시저를 이벤트에 연결합니다. 자세한 내용은 참조 [AddHandler 문](../../../visual-basic/language-reference/statements/addhandler-statement.md)합니다.  
+ <span data-ttu-id="45f98-112">`Handles` 키워드와 `AddHandler` 문 모두 특정 프로시저에서 특정 이벤트를 처리하도록 지정하는 데 사용할 수 있지만 차이가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="45f98-112">The `Handles` keyword and the `AddHandler` statement both allow you to specify that particular procedures handle particular events, but there are differences.</span></span> <span data-ttu-id="45f98-113">특정 이벤트를 처리하도록 지정하는 프로시저를 정의할 때 `Handles` 키워드를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="45f98-113">Use the `Handles` keyword when defining a procedure to specify that it handles a particular event.</span></span> <span data-ttu-id="45f98-114">`AddHandler` 문은 런타임에 프로시저를 이벤트에 연결합니다.</span><span class="sxs-lookup"><span data-stu-id="45f98-114">The `AddHandler` statement connects procedures to events at run time.</span></span> <span data-ttu-id="45f98-115">자세한 내용은 참조 [AddHandler 문](../../../visual-basic/language-reference/statements/addhandler-statement.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="45f98-115">For more information, see [AddHandler Statement](../../../visual-basic/language-reference/statements/addhandler-statement.md).</span></span>  
   
- 사용자 지정 이벤트의 경우 응용 프로그램은 이벤트 처리기로 프로시저를 추가할 때 이벤트의 `AddHandler` 접근자를 호출합니다. 사용자 지정 이벤트에 대 한 자세한 내용은 참조 하십시오. [Event 문](../../../visual-basic/language-reference/statements/event-statement.md)합니다.  
+ <span data-ttu-id="45f98-116">사용자 지정 이벤트의 경우 응용 프로그램은 이벤트 처리기로 프로시저를 추가할 때 이벤트의 `AddHandler` 접근자를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="45f98-116">For custom events, the application invokes the event's `AddHandler` accessor when it adds the procedure as an event handler.</span></span> <span data-ttu-id="45f98-117">사용자 지정 이벤트에 대 한 자세한 내용은 참조 하십시오. [Event 문](../../../visual-basic/language-reference/statements/event-statement.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="45f98-117">For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).</span></span>  
   
-## <a name="example"></a>예제  
- [!code-vb[VbVbalrEvents #&2;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_1.vb)]  
+## <a name="example"></a><span data-ttu-id="45f98-118">예제</span><span class="sxs-lookup"><span data-stu-id="45f98-118">Example</span></span>  
+ <span data-ttu-id="45f98-119">[!code-vb[VbVbalrEvents #&2;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="45f98-119">[!code-vb[VbVbalrEvents#2](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_1.vb)]</span></span>  
   
- 다음 예제에서는 파생 클래스가 `Handles` 문을 사용하여 기본 클래스의 이벤트를 처리하는 방법을 보여 줍니다.  
+ <span data-ttu-id="45f98-120">다음 예제에서는 파생 클래스가 `Handles` 문을 사용하여 기본 클래스의 이벤트를 처리하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="45f98-120">The following example demonstrates how a derived class can use the `Handles` statement to handle an event from a base class.</span></span>  
   
- [!code-vb[VbVbalrEvents #&3;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_2.vb)]  
+ <span data-ttu-id="45f98-121">[!code-vb[VbVbalrEvents #&3;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_2.vb)]</span><span class="sxs-lookup"><span data-stu-id="45f98-121">[!code-vb[VbVbalrEvents#3](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_2.vb)]</span></span>  
   
-## <a name="example"></a>예제  
- 다음 예제에 대 한 두 명의 단추 이벤트 처리기는 **WPF 응용 프로그램** 프로젝트입니다.  
+## <a name="example"></a><span data-ttu-id="45f98-122">예제</span><span class="sxs-lookup"><span data-stu-id="45f98-122">Example</span></span>  
+ <span data-ttu-id="45f98-123">다음 예제에 대 한 두 명의 단추 이벤트 처리기는 **WPF 응용 프로그램** 프로젝트입니다.</span><span class="sxs-lookup"><span data-stu-id="45f98-123">The following example contains two button event handlers for a **WPF Application** project.</span></span>  
   
- [!code-vb[VbVbalrEvents #&41;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_3.vb)]  
+ <span data-ttu-id="45f98-124">[!code-vb[VbVbalrEvents #&41;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_3.vb)]</span><span class="sxs-lookup"><span data-stu-id="45f98-124">[!code-vb[VbVbalrEvents#41](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_3.vb)]</span></span>  
   
-## <a name="example"></a>예제  
- 다음 예제는 이전 예제와 동일합니다. `Handles` 절의 `eventlist`에는 두 단추에 대한 이벤트가 포함되어 있습니다.  
+## <a name="example"></a><span data-ttu-id="45f98-125">예제</span><span class="sxs-lookup"><span data-stu-id="45f98-125">Example</span></span>  
+ <span data-ttu-id="45f98-126">다음 예제는 이전 예제와 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="45f98-126">The following example is equivalent to the previous example.</span></span> <span data-ttu-id="45f98-127">`Handles` 절의 `eventlist`에는 두 단추에 대한 이벤트가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="45f98-127">The `eventlist` in the `Handles` clause contains the events for both buttons.</span></span>  
   
- [!code-vb[VbVbalrEvents #&42;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_4.vb)]  
+ <span data-ttu-id="45f98-128">[!code-vb[VbVbalrEvents #&42;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_4.vb)]</span><span class="sxs-lookup"><span data-stu-id="45f98-128">[!code-vb[VbVbalrEvents#42](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/handles-clause_4.vb)]</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)   
- [AddHandler 문](../../../visual-basic/language-reference/statements/addhandler-statement.md)   
- [RemoveHandler 문](../../../visual-basic/language-reference/statements/removehandler-statement.md)   
- [Event 문](../../../visual-basic/language-reference/statements/event-statement.md)   
- [RaiseEvent 문](../../../visual-basic/language-reference/statements/raiseevent-statement.md)   
- [이벤트](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="45f98-129">참고 항목</span><span class="sxs-lookup"><span data-stu-id="45f98-129">See Also</span></span>  
+ <span data-ttu-id="45f98-130">[WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md) </span><span class="sxs-lookup"><span data-stu-id="45f98-130">[WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md) </span></span>  
+<span data-ttu-id="45f98-131"> [AddHandler 문](../../../visual-basic/language-reference/statements/addhandler-statement.md) </span><span class="sxs-lookup"><span data-stu-id="45f98-131"> [AddHandler Statement](../../../visual-basic/language-reference/statements/addhandler-statement.md) </span></span>  
+<span data-ttu-id="45f98-132"> [RemoveHandler 문](../../../visual-basic/language-reference/statements/removehandler-statement.md) </span><span class="sxs-lookup"><span data-stu-id="45f98-132"> [RemoveHandler Statement](../../../visual-basic/language-reference/statements/removehandler-statement.md) </span></span>  
+<span data-ttu-id="45f98-133"> [Event 문](../../../visual-basic/language-reference/statements/event-statement.md) </span><span class="sxs-lookup"><span data-stu-id="45f98-133"> [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md) </span></span>  
+<span data-ttu-id="45f98-134"> [RaiseEvent 문](../../../visual-basic/language-reference/statements/raiseevent-statement.md) </span><span class="sxs-lookup"><span data-stu-id="45f98-134"> [RaiseEvent Statement](../../../visual-basic/language-reference/statements/raiseevent-statement.md) </span></span>  
+<span data-ttu-id="45f98-135"> [이벤트](../../../visual-basic/programming-guide/language-features/events/index.md)</span><span class="sxs-lookup"><span data-stu-id="45f98-135"> [Events](../../../visual-basic/programming-guide/language-features/events/index.md)</span></span>
 

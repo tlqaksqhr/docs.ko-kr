@@ -1,1 +1,1 @@
-CLS(공용 언어 사양)
+<span data-ttu-id="c5f3a-101">CLS(공용 언어 사양)</span><span class="sxs-lookup"><span data-stu-id="c5f3a-101">Common Language Specification (CLS)</span></span>

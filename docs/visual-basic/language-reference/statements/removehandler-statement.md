@@ -34,39 +34,40 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d35de576bd9e267800acc2a9bfd5761dd977622f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 6e614a1dce4894dcd18509854f3cae149665cbf0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="removehandler-statement"></a>RemoveHandler 문
-이벤트와 이벤트 처리기의 연결을 제거합니다.  
+# <a name="removehandler-statement"></a><span data-ttu-id="e9f55-102">RemoveHandler 문</span><span class="sxs-lookup"><span data-stu-id="e9f55-102">RemoveHandler Statement</span></span>
+<span data-ttu-id="e9f55-103">이벤트와 이벤트 처리기의 연결을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="e9f55-103">Removes the association between an event and an event handler.</span></span>  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a><span data-ttu-id="e9f55-104">구문</span><span class="sxs-lookup"><span data-stu-id="e9f55-104">Syntax</span></span>  
   
 ```  
 RemoveHandler event, AddressOf eventhandler  
 ```  
   
-## <a name="parts"></a>요소  
+## <a name="parts"></a><span data-ttu-id="e9f55-105">요소</span><span class="sxs-lookup"><span data-stu-id="e9f55-105">Parts</span></span>  
   
-|용어|정의|  
+|<span data-ttu-id="e9f55-106">용어</span><span class="sxs-lookup"><span data-stu-id="e9f55-106">Term</span></span>|<span data-ttu-id="e9f55-107">정의</span><span class="sxs-lookup"><span data-stu-id="e9f55-107">Definition</span></span>|  
 |---|---|  
-|`event`|처리 중인 이벤트의 이름입니다.|  
-|`eventhandler`|현재 이벤트를 처리 하는 프로시저의 이름입니다.|  
+|`event`|<span data-ttu-id="e9f55-108">처리 중인 이벤트의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="e9f55-108">The name of the event being handled.</span></span>|  
+|`eventhandler`|<span data-ttu-id="e9f55-109">현재 이벤트를 처리 하는 프로시저의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="e9f55-109">The name of the procedure currently handling the event.</span></span>|  
   
-## <a name="remarks"></a>설명  
- `AddHandler` 및 `RemoveHandler` 문을 사용 하면 시작 하 고 프로그램 실행 중 언제 든 지 특정 이벤트에 대 한 이벤트 처리를 중지 합니다.  
+## <a name="remarks"></a><span data-ttu-id="e9f55-110">설명</span><span class="sxs-lookup"><span data-stu-id="e9f55-110">Remarks</span></span>  
+ <span data-ttu-id="e9f55-111">`AddHandler` 및 `RemoveHandler` 문을 사용 하면 시작 하 고 프로그램 실행 중 언제 든 지 특정 이벤트에 대 한 이벤트 처리를 중지 합니다.</span><span class="sxs-lookup"><span data-stu-id="e9f55-111">The `AddHandler` and `RemoveHandler` statements allow you to start and stop event handling for a specific event at any time during program execution.</span></span>  
   
 > [!NOTE]
->  사용자 지정 이벤트는 `RemoveHandler` 문은 이벤트의 호출 `RemoveHandler` 접근자입니다. 사용자 지정 이벤트에 대 한 자세한 내용은 참조 하십시오. [Event 문](../../../visual-basic/language-reference/statements/event-statement.md)합니다.  
+>  <span data-ttu-id="e9f55-112">사용자 지정 이벤트는 `RemoveHandler` 문은 이벤트의 호출 `RemoveHandler` 접근자입니다.</span><span class="sxs-lookup"><span data-stu-id="e9f55-112">For custom events, the `RemoveHandler` statement invokes the event's `RemoveHandler` accessor.</span></span> <span data-ttu-id="e9f55-113">사용자 지정 이벤트에 대 한 자세한 내용은 참조 하십시오. [Event 문](../../../visual-basic/language-reference/statements/event-statement.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="e9f55-113">For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).</span></span>  
   
-## <a name="example"></a>예제  
- [!code-vb[VbVbalrEvents #&17;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/removehandler-statement_1.vb)]  
+## <a name="example"></a><span data-ttu-id="e9f55-114">예제</span><span class="sxs-lookup"><span data-stu-id="e9f55-114">Example</span></span>  
+ <span data-ttu-id="e9f55-115">[!code-vb[VbVbalrEvents #&17;](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/removehandler-statement_1.vb)]</span><span class="sxs-lookup"><span data-stu-id="e9f55-115">[!code-vb[VbVbalrEvents#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/removehandler-statement_1.vb)]</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [AddHandler 문](../../../visual-basic/language-reference/statements/addhandler-statement.md)   
- [핸들](../../../visual-basic/language-reference/statements/handles-clause.md)   
- [Event 문](../../../visual-basic/language-reference/statements/event-statement.md)   
- [이벤트](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="e9f55-116">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e9f55-116">See Also</span></span>  
+ <span data-ttu-id="e9f55-117">[AddHandler 문](../../../visual-basic/language-reference/statements/addhandler-statement.md) </span><span class="sxs-lookup"><span data-stu-id="e9f55-117">[AddHandler Statement](../../../visual-basic/language-reference/statements/addhandler-statement.md) </span></span>  
+<span data-ttu-id="e9f55-118"> [핸들](../../../visual-basic/language-reference/statements/handles-clause.md) </span><span class="sxs-lookup"><span data-stu-id="e9f55-118"> [Handles](../../../visual-basic/language-reference/statements/handles-clause.md) </span></span>  
+<span data-ttu-id="e9f55-119"> [Event 문](../../../visual-basic/language-reference/statements/event-statement.md) </span><span class="sxs-lookup"><span data-stu-id="e9f55-119"> [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md) </span></span>  
+<span data-ttu-id="e9f55-120"> [이벤트](../../../visual-basic/programming-guide/language-features/events/index.md)</span><span class="sxs-lookup"><span data-stu-id="e9f55-120"> [Events](../../../visual-basic/programming-guide/language-features/events/index.md)</span></span>

@@ -21,11 +21,11 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>방법: 파일 시스템에서 XML 트리 채우기(C#)
-일반적으로 XML 트리는 계층적인 이름/값 데이터 저장소로 유용하게 사용될 수 있습니다. 계층적 데이터로 XML 트리를 채운 다음 쿼리 및 변환하고 필요한 경우 serialize할 수 있습니다. 이 사용 시나리오에서 네임스페이스 및 공백 동작과 같은 많은 XML 관련 의미는 중요하지 않습니다. 대신 XML 트리를 한 사용자가 사용하는 작고 계층적인 메모리 내 데이터베이스로 사용합니다.  
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a><span data-ttu-id="cb322-102">방법: 파일 시스템에서 XML 트리 채우기(C#)</span><span class="sxs-lookup"><span data-stu-id="cb322-102">How to: Populate an XML Tree from the File System (C#)</span></span>
+<span data-ttu-id="cb322-103">일반적으로 XML 트리는 계층적인 이름/값 데이터 저장소로 유용하게 사용될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb322-103">A common and useful application of XML trees is as a hierarchical name/value data store.</span></span> <span data-ttu-id="cb322-104">계층적 데이터로 XML 트리를 채운 다음 쿼리 및 변환하고 필요한 경우 serialize할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb322-104">You can populate an XML tree with hierarchical data, and then query it, transform it, and if necessary, serialize it.</span></span> <span data-ttu-id="cb322-105">이 사용 시나리오에서 네임스페이스 및 공백 동작과 같은 많은 XML 관련 의미는 중요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="cb322-105">In this usage scenario, many of the XML specific semantics, such as namespaces and white space behavior, are not important.</span></span> <span data-ttu-id="cb322-106">대신 XML 트리를 한 사용자가 사용하는 작고 계층적인 메모리 내 데이터베이스로 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="cb322-106">Instead, you are using the XML tree as a small, in memory, single user hierarchical database.</span></span>  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 재귀를 사용하여 로컬 파일 시스템에서 XML 트리를 채운 다음 트리를 쿼리하고 트리에 있는 모든 파일의 총 크기를 계산합니다.  
+## <a name="example"></a><span data-ttu-id="cb322-107">예제</span><span class="sxs-lookup"><span data-stu-id="cb322-107">Example</span></span>  
+ <span data-ttu-id="cb322-108">다음 예제에서는 재귀를 사용하여 로컬 파일 시스템에서 XML 트리를 채운 다음</span><span class="sxs-lookup"><span data-stu-id="cb322-108">The following example populates an XML tree from the local file system using recursion.</span></span> <span data-ttu-id="cb322-109">트리를 쿼리하고 트리에 있는 모든 파일의 총 크기를 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="cb322-109">It then queries the tree, calculating the total of the sizes of all files in the tree.</span></span>  
   
 ```csharp  
 class Program  
@@ -58,7 +58,7 @@ class Program
 }  
 ```  
   
- 이 예제의 결과는 다음과 유사합니다.  
+ <span data-ttu-id="cb322-110">이 예제의 결과는 다음과 유사합니다.</span><span class="sxs-lookup"><span data-stu-id="cb322-110">This example produces output similar to the following:</span></span>  
   
 ```xml  
 <Dir Name="Tmp">  
@@ -128,6 +128,6 @@ class Program
 Total File Size:59089  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [고급 쿼리 기술(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="cb322-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="cb322-111">See Also</span></span>  
+ [<span data-ttu-id="cb322-112">고급 쿼리 기술(LINQ to XML)(C#)</span><span class="sxs-lookup"><span data-stu-id="cb322-112">Advanced Query Techniques (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
 

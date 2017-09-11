@@ -36,21 +36,21 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="floating-point-types-table-c-reference"></a>부동 소수점 형식 표(C# 참조)
-다음 표는 부동 소수점 형식의 자릿수와 근사 범위를 보여 줍니다.  
+# <a name="floating-point-types-table-c-reference"></a><span data-ttu-id="88ed7-102">부동 소수점 형식 표(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="88ed7-102">Floating-Point Types Table (C# Reference)</span></span>
+<span data-ttu-id="88ed7-103">다음 표는 부동 소수점 형식의 자릿수와 근사 범위를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="88ed7-103">The following table shows the precision and approximate ranges for the floating-point types.</span></span>  
   
-|형식|근사 범위|전체 자릿수|  
+|<span data-ttu-id="88ed7-104">형식</span><span class="sxs-lookup"><span data-stu-id="88ed7-104">Type</span></span>|<span data-ttu-id="88ed7-105">근사 범위</span><span class="sxs-lookup"><span data-stu-id="88ed7-105">Approximate range</span></span>|<span data-ttu-id="88ed7-106">전체 자릿수</span><span class="sxs-lookup"><span data-stu-id="88ed7-106">Precision</span></span>|  
 |----------|-----------------------|---------------|  
-|[float](float.md)|±1.5e−45 ~ ±3.4e38|7개의 자릿수|  
-|[double](double.md)|±5.0e−324 ~ ±1.7e308|15-16자리|  
+|[<span data-ttu-id="88ed7-107">float</span><span class="sxs-lookup"><span data-stu-id="88ed7-107">float</span></span>](float.md)|<span data-ttu-id="88ed7-108">±1.5e−45 ~ ±3.4e38</span><span class="sxs-lookup"><span data-stu-id="88ed7-108">±1.5e−45 to ±3.4e38</span></span>|<span data-ttu-id="88ed7-109">7개의 자릿수</span><span class="sxs-lookup"><span data-stu-id="88ed7-109">7 digits</span></span>|  
+|[<span data-ttu-id="88ed7-110">double</span><span class="sxs-lookup"><span data-stu-id="88ed7-110">double</span></span>](double.md)|<span data-ttu-id="88ed7-111">±5.0e−324 ~ ±1.7e308</span><span class="sxs-lookup"><span data-stu-id="88ed7-111">±5.0e−324 to ±1.7e308</span></span>|<span data-ttu-id="88ed7-112">15-16자리</span><span class="sxs-lookup"><span data-stu-id="88ed7-112">15-16 digits</span></span>|  
   
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [기본값 표](default-values-table.md)   
- [기본 제공 형식 표](built-in-types-table.md)   
- [정수 형식 표](integral-types-table.md)   
- [숫자 결과 형식 지정 표](formatting-numeric-results-table.md)   
- [형식 참조 테이블](reference-tables-for-types.md)   
- [decimal](decimal.md)
+## <a name="see-also"></a><span data-ttu-id="88ed7-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="88ed7-113">See Also</span></span>  
+ <span data-ttu-id="88ed7-114">[C# 참조](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="88ed7-114">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="88ed7-115">[C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="88ed7-115">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="88ed7-116">[기본값 표](default-values-table.md) </span><span class="sxs-lookup"><span data-stu-id="88ed7-116">[Default Values Table](default-values-table.md) </span></span>  
+ <span data-ttu-id="88ed7-117">[기본 제공 형식 표](built-in-types-table.md) </span><span class="sxs-lookup"><span data-stu-id="88ed7-117">[Built-In Types Table](built-in-types-table.md) </span></span>  
+ <span data-ttu-id="88ed7-118">[정수 형식 표](integral-types-table.md) </span><span class="sxs-lookup"><span data-stu-id="88ed7-118">[Integral Types Table](integral-types-table.md) </span></span>  
+ <span data-ttu-id="88ed7-119">[숫자 결과 형식 지정 표](formatting-numeric-results-table.md) </span><span class="sxs-lookup"><span data-stu-id="88ed7-119">[Formatting Numeric Results Table](formatting-numeric-results-table.md) </span></span>  
+ <span data-ttu-id="88ed7-120">[형식 참조 테이블](reference-tables-for-types.md) </span><span class="sxs-lookup"><span data-stu-id="88ed7-120">[Reference Tables for Types](reference-tables-for-types.md) </span></span>  
+ [<span data-ttu-id="88ed7-121">decimal</span><span class="sxs-lookup"><span data-stu-id="88ed7-121">decimal</span></span>](decimal.md)
 

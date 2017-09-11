@@ -36,8 +36,8 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="endif-c-reference"></a>#endif(C# 참조)
-`#endif`는 [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) 지시문으로 시작한 조건부 지시문의 끝을 지정합니다. 예를 들면 다음과 같습니다.  
+# <a name="endif-c-reference"></a><span data-ttu-id="a88d1-102">#endif(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="a88d1-102">#endif (C# Reference)</span></span>
+<span data-ttu-id="a88d1-103">`#endif`는 [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) 지시문으로 시작한 조건부 지시문의 끝을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="a88d1-103">`#endif` specifies the end of a conditional directive, which began with the [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) directive.</span></span> <span data-ttu-id="a88d1-104">예를 들면 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="a88d1-104">For example,</span></span>  
   
 ```csharp
 #define DEBUG  
@@ -47,11 +47,11 @@ ms.lasthandoff: 07/28/2017
 #endif  
 ```  
   
-## <a name="remarks"></a>설명  
- `#if` 지시문으로 시작되는 조건부 지시문은 `#endif` 지시문을 사용하여 명시적으로 종료해야 합니다. `#endif`를 사용하는 방법에 대한 예제는 [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)를 참조하세요.  
+## <a name="remarks"></a><span data-ttu-id="a88d1-105">설명</span><span class="sxs-lookup"><span data-stu-id="a88d1-105">Remarks</span></span>  
+ <span data-ttu-id="a88d1-106">`#if` 지시문으로 시작되는 조건부 지시문은 `#endif` 지시문을 사용하여 명시적으로 종료해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a88d1-106">A conditional directive, beginning with a `#if` directive, must explicitly be terminated with a `#endif` directive.</span></span> <span data-ttu-id="a88d1-107">`#endif`를 사용하는 방법에 대한 예제는 [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="a88d1-107">See [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) for an example of how to use `#endif`.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C# 전처리기 지시문](../../../csharp/language-reference/preprocessor-directives/index.md)
+## <a name="see-also"></a><span data-ttu-id="a88d1-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a88d1-108">See Also</span></span>  
+ <span data-ttu-id="a88d1-109">[C# 참조](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="a88d1-109">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="a88d1-110">[C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="a88d1-110">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="a88d1-111">C# 전처리기 지시문</span><span class="sxs-lookup"><span data-stu-id="a88d1-111">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
 

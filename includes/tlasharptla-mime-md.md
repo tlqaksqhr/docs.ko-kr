@@ -1,1 +1,1 @@
-MIME(Multipurpose Internet Mail Extensions)
+<span data-ttu-id="24680-101">MIME(Multipurpose Internet Mail Extensions)</span><span class="sxs-lookup"><span data-stu-id="24680-101">Multipurpose Internet Mail Extensions (MIME)</span></span>

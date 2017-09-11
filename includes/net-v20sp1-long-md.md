@@ -1,1 +1,1 @@
-.NET Framework 2.0 서비스 팩 1
+<span data-ttu-id="549ab-101">.NET Framework 2.0 서비스 팩 1</span><span class="sxs-lookup"><span data-stu-id="549ab-101">.NET Framework 2.0 Service Pack 1</span></span>

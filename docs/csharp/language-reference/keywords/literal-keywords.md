@@ -34,19 +34,19 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="literal-keywords-c-reference"></a>리터럴 키워드(C# 참조)
-C#에는 다음과 같은 리터럴 키워드가 있습니다.  
+# <a name="literal-keywords-c-reference"></a><span data-ttu-id="8f3aa-102">리터럴 키워드(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="8f3aa-102">Literal Keywords (C# Reference)</span></span>
+<span data-ttu-id="8f3aa-103">C#에는 다음과 같은 리터럴 키워드가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8f3aa-103">C# has the following literal keywords:</span></span>  
   
--   [null](../../../csharp/language-reference/keywords/null.md)  
+-   [<span data-ttu-id="8f3aa-104">null</span><span class="sxs-lookup"><span data-stu-id="8f3aa-104">null</span></span>](../../../csharp/language-reference/keywords/null.md)  
   
--   [true](../../../csharp/language-reference/keywords/true.md)  
+-   [<span data-ttu-id="8f3aa-105">true</span><span class="sxs-lookup"><span data-stu-id="8f3aa-105">true</span></span>](../../../csharp/language-reference/keywords/true.md)  
   
--   [false](../../../csharp/language-reference/keywords/false.md)  
+-   [<span data-ttu-id="8f3aa-106">false</span><span class="sxs-lookup"><span data-stu-id="8f3aa-106">false</span></span>](../../../csharp/language-reference/keywords/false.md)  
   
--   [default](../../../csharp/language-reference/keywords/default.md)  
+-   [<span data-ttu-id="8f3aa-107">default</span><span class="sxs-lookup"><span data-stu-id="8f3aa-107">default</span></span>](../../../csharp/language-reference/keywords/default.md)  
   
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="8f3aa-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8f3aa-108">See Also</span></span>  
+ <span data-ttu-id="8f3aa-109">[C# 참조](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="8f3aa-109">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="8f3aa-110">[C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="8f3aa-110">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="8f3aa-111">C# 키워드</span><span class="sxs-lookup"><span data-stu-id="8f3aa-111">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
 

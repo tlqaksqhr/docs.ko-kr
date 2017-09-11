@@ -20,23 +20,24 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3247af177066e9b50d5028766f99e7bf6589050f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 5bfc825ca32aaa365b7cc2d0347834a796d3598b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a>방법: 읽기 및 쓰기 인코딩된 문서 (Visual Basic)
-인코딩된 XML 문서를 만들려면 추가 하는 <xref:System.Xml.Linq.XDeclaration>XML 트리를 원하는 코드 페이지 이름으로 인코딩을 설정 합니다.</xref:System.Xml.Linq.XDeclaration>  
+# <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a><span data-ttu-id="28ee3-102">방법: 읽기 및 쓰기 인코딩된 문서 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="28ee3-102">How to: Read and Write an Encoded Document (Visual Basic)</span></span>
+<span data-ttu-id="28ee3-103">인코딩된 XML 문서를 만들려면 추가 하는 <xref:System.Xml.Linq.XDeclaration>XML 트리를 원하는 코드 페이지 이름으로 인코딩을 설정 합니다.</xref:System.Xml.Linq.XDeclaration></span><span class="sxs-lookup"><span data-stu-id="28ee3-103">To create an encoded XML document, you add an <xref:System.Xml.Linq.XDeclaration> to the XML tree, setting the encoding to the desired code page name.</span></span>  
   
- 반환 된 값 <xref:System.Text.Encoding.WebName%2A>은 유효한 값입니다.</xref:System.Text.Encoding.WebName%2A>  
+ <span data-ttu-id="28ee3-104">반환 된 값 <xref:System.Text.Encoding.WebName%2A>은 유효한 값입니다.</xref:System.Text.Encoding.WebName%2A></span><span class="sxs-lookup"><span data-stu-id="28ee3-104">Any value returned by <xref:System.Text.Encoding.WebName%2A> is a valid value.</span></span>  
   
- 인코딩된 문서를 읽는 경우의 <xref:System.Xml.Linq.XDeclaration.Encoding%2A>속성이 코드 페이지 이름으로 설정 됩니다.</xref:System.Xml.Linq.XDeclaration.Encoding%2A>  
+ <span data-ttu-id="28ee3-105">인코딩된 문서를 읽는 경우의 <xref:System.Xml.Linq.XDeclaration.Encoding%2A>속성이 코드 페이지 이름으로 설정 됩니다.</xref:System.Xml.Linq.XDeclaration.Encoding%2A></span><span class="sxs-lookup"><span data-stu-id="28ee3-105">If you read an encoded document, the <xref:System.Xml.Linq.XDeclaration.Encoding%2A> property will be set to the code page name.</span></span>  
   
- 설정한 경우 <xref:System.Xml.Linq.XDeclaration.Encoding%2A>을 유효한 코드 페이지 이름으로 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 지정 된 인코딩을 사용 하 여이 serialize 합니다.</xref:System.Xml.Linq.XDeclaration.Encoding%2A>  
+ <span data-ttu-id="28ee3-106">설정한 경우 <xref:System.Xml.Linq.XDeclaration.Encoding%2A>을 유효한 코드 페이지 이름으로 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 지정 된 인코딩을 사용 하 여이 serialize 합니다.</xref:System.Xml.Linq.XDeclaration.Encoding%2A></span><span class="sxs-lookup"><span data-stu-id="28ee3-106">If you set <xref:System.Xml.Linq.XDeclaration.Encoding%2A> to a valid code page name, [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] will serialize with the specified encoding.</span></span>  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 UTF-8 인코딩을 사용하여 문서를 하나 만들고 UTF-16 인코딩을 사용하여 문서를 하나 만든 다음 그런 다음 문서를 로드하고 인코딩을 콘솔에 출력합니다.  
+## <a name="example"></a><span data-ttu-id="28ee3-107">예제</span><span class="sxs-lookup"><span data-stu-id="28ee3-107">Example</span></span>  
+ <span data-ttu-id="28ee3-108">다음 예제에서는 UTF-8 인코딩을 사용하여 문서를 하나 만들고 UTF-16 인코딩을 사용하여 문서를 하나 만든 다음</span><span class="sxs-lookup"><span data-stu-id="28ee3-108">The following example creates two documents, one with utf-8 encoding, and one with utf-16 encoding.</span></span> <span data-ttu-id="28ee3-109">그런 다음 문서를 로드하고 인코딩을 콘솔에 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="28ee3-109">It then loads the documents and prints the encoding to the console.</span></span>  
   
 ```vb  
 Console.WriteLine("Creating a document with utf-8 encoding")  
@@ -71,7 +72,7 @@ Console.WriteLine()
 Console.WriteLine("Encoding of loaded document is:{0}", newDoc16.Declaration.Encoding)  
 ```  
   
- 이 예제는 다음과 같은 출력을 생성합니다.  
+ <span data-ttu-id="28ee3-110">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="28ee3-110">This example produces the following output:</span></span>  
   
 ```  
 Creating a document with utf-8 encoding  
@@ -93,6 +94,6 @@ Encoded document:
 Encoding of loaded document is:utf-16  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=fullName></xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=fullName>   
- [고급 LINQ to XML 프로그래밍 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a><span data-ttu-id="28ee3-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="28ee3-111">See Also</span></span>  
+ <span data-ttu-id="28ee3-112"><xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=fullName></xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=fullName></span><span class="sxs-lookup"><span data-stu-id="28ee3-112"><xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=fullName></span></span>   
+<span data-ttu-id="28ee3-113"> [고급 LINQ to XML 프로그래밍 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)</span><span class="sxs-lookup"><span data-stu-id="28ee3-113"> [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)</span></span>

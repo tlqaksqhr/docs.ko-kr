@@ -1,1 +1,1 @@
-3차원
+<span data-ttu-id="f5d6b-101">3차원</span><span class="sxs-lookup"><span data-stu-id="f5d6b-101">3-D</span></span>

@@ -1,1 +1,1 @@
-BAML(이진 XAML)
+<span data-ttu-id="b6607-101">BAML(이진 XAML)</span><span class="sxs-lookup"><span data-stu-id="b6607-101">binary XAML (BAML)</span></span>

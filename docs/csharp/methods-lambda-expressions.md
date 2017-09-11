@@ -17,16 +17,16 @@ ms.lasthandoff: 08/11/2017
 
 ---
 
-# <a name="methods-and-lambda-expressions"></a>메서드 및 람다 식
+# <a name="methods-and-lambda-expressions"></a><span data-ttu-id="88e5d-105">메서드 및 람다 식</span><span class="sxs-lookup"><span data-stu-id="88e5d-105">Methods and Lambda Expressions</span></span>
 
-> **참고:**
+> <span data-ttu-id="88e5d-106">**참고:**</span><span class="sxs-lookup"><span data-stu-id="88e5d-106">**Note**</span></span>
 > 
-> 이 항목은 아직 작성되지 않았습니다! 
+> <span data-ttu-id="88e5d-107">이 항목은 아직 작성되지 않았습니다!</span><span class="sxs-lookup"><span data-stu-id="88e5d-107">This topic hasn’t been written yet!</span></span> 
 >
-> 범위와 방법을 구성하는 데 도움이 될 의견을 환영합니다. GitHub에서 상태를 추적하고 이 [문제](https://github.com/dotnet/docs/issues/488)에 대한 의견을 제공할 수 있습니다.
+> <span data-ttu-id="88e5d-108">범위와 방법을 구성하는 데 도움이 될 의견을 환영합니다.</span><span class="sxs-lookup"><span data-stu-id="88e5d-108">We welcome your input to help shape the scope and approach.</span></span> <span data-ttu-id="88e5d-109">GitHub에서 상태를 추적하고 이 [문제](https://github.com/dotnet/docs/issues/488)에 대한 의견을 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="88e5d-109">You can track the status and provide input on this [issue](https://github.com/dotnet/docs/issues/488) at GitHub.</span></span>
 > 
-> 이 항목의 초기 초안 및 개요를 검토하려면 문제에서 연락처 정보가 포함된 메모를 남겨 주세요.
+> <span data-ttu-id="88e5d-110">이 항목의 초기 초안 및 개요를 검토하려면 문제에서 연락처 정보가 포함된 메모를 남겨 주세요.</span><span class="sxs-lookup"><span data-stu-id="88e5d-110">If you would like to review early drafts and outlines of this topic, please leave a note with your contact information in the issue.</span></span>
 >
-> [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md)에 기여할 수 있는 방법에 대해 자세히 알아보세요.
+> <span data-ttu-id="88e5d-111">[GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md)에 기여할 수 있는 방법에 대해 자세히 알아보세요.</span><span class="sxs-lookup"><span data-stu-id="88e5d-111">Learn more about how you can contribute on [GitHub](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md).</span></span>
 >
 

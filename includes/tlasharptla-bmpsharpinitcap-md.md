@@ -1,1 +1,1 @@
-BMP(비트맵)
+<span data-ttu-id="edebc-101">BMP(비트맵)</span><span class="sxs-lookup"><span data-stu-id="edebc-101">Bitmap (BMP)</span></span>

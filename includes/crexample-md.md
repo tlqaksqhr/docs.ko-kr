@@ -1,1 +1,1 @@
-예제 정보
+<span data-ttu-id="f2241-101">예제 정보</span><span class="sxs-lookup"><span data-stu-id="f2241-101">For an example of</span></span>

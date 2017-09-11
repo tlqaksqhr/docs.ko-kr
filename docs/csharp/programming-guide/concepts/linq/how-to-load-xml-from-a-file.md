@@ -26,20 +26,20 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-load-xml-from-a-file-c"></a>방법: 파일에서 XML 로드(C#)
-이 항목에서는 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName> 메서드를 사용하여 URI에서 XML을 로드하는 방법을 보여 줍니다.  
+# <a name="how-to-load-xml-from-a-file-c"></a><span data-ttu-id="5276a-102">방법: 파일에서 XML 로드(C#)</span><span class="sxs-lookup"><span data-stu-id="5276a-102">How to: Load XML from a File (C#)</span></span>
+<span data-ttu-id="5276a-103">이 항목에서는 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName> 메서드를 사용하여 URI에서 XML을 로드하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="5276a-103">This topic shows how to load XML from a URI by using the <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName> method.</span></span>  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 파일에서 XML 문서를 로드하는 방법을 보여 줍니다. 다음 예제에서는 books.xml을 로드하고 XML 트리를 콘솔에 출력합니다.  
+## <a name="example"></a><span data-ttu-id="5276a-104">예제</span><span class="sxs-lookup"><span data-stu-id="5276a-104">Example</span></span>  
+ <span data-ttu-id="5276a-105">다음 예제에서는 파일에서 XML 문서를 로드하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="5276a-105">The following example shows how to load an XML document from a file.</span></span> <span data-ttu-id="5276a-106">다음 예제에서는 books.xml을 로드하고 XML 트리를 콘솔에 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="5276a-106">The following example loads books.xml and outputs the XML tree to the console.</span></span>  
   
- 이 예제에서는 XML 문서 [샘플 XML 파일: Books(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)를 사용합니다.  
+ <span data-ttu-id="5276a-107">이 예제에서는 XML 문서 [샘플 XML 파일: Books(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="5276a-107">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XElement booksFromFile = XElement.Load(@"books.xml");  
 Console.WriteLine(booksFromFile);  
 ```  
   
- 이 코드의 결과는 다음과 같습니다.  
+ <span data-ttu-id="5276a-108">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="5276a-108">This code produces the following output:</span></span>  
   
 ```xml  
 <Catalog>  
@@ -65,6 +65,6 @@ Console.WriteLine(booksFromFile);
 </Catalog>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [XML 구문 분석(C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a><span data-ttu-id="5276a-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="5276a-109">See Also</span></span>  
+ [<span data-ttu-id="5276a-110">XML 구문 분석(C#)</span><span class="sxs-lookup"><span data-stu-id="5276a-110">Parsing XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
 

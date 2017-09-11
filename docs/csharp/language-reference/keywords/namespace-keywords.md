@@ -34,24 +34,24 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="namespace-keywords-c-reference"></a>네임스페이스 키워드(C# 참조)
-이 섹션에서는 네임스페이스 사용과 관련된 키워드 및 연산자를 설명합니다.  
+# <a name="namespace-keywords-c-reference"></a><span data-ttu-id="24b55-102">네임스페이스 키워드(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="24b55-102">Namespace Keywords (C# Reference)</span></span>
+<span data-ttu-id="24b55-103">이 섹션에서는 네임스페이스 사용과 관련된 키워드 및 연산자를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="24b55-103">This section describes the keywords and operators that are associated with using namespaces:</span></span>  
   
--   [namespace](../../../csharp/language-reference/keywords/namespace.md)  
+-   [<span data-ttu-id="24b55-104">namespace</span><span class="sxs-lookup"><span data-stu-id="24b55-104">namespace</span></span>](../../../csharp/language-reference/keywords/namespace.md)  
   
--   [using](../../../csharp/language-reference/keywords/using.md)  
+-   [<span data-ttu-id="24b55-105">using</span><span class="sxs-lookup"><span data-stu-id="24b55-105">using</span></span>](../../../csharp/language-reference/keywords/using.md)  
  
--   [using static](using-static.md)
+-   [<span data-ttu-id="24b55-106">using static</span><span class="sxs-lookup"><span data-stu-id="24b55-106">using static</span></span>](using-static.md)
   
--   [. 연산자](../../../csharp/language-reference/operators/member-access-operator.md)  
+-   [<span data-ttu-id="24b55-107">. 연산자</span><span class="sxs-lookup"><span data-stu-id="24b55-107">. Operator</span></span>](../../../csharp/language-reference/operators/member-access-operator.md)  
   
--   [:: 연산자](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+-   [<span data-ttu-id="24b55-108">:: 연산자</span><span class="sxs-lookup"><span data-stu-id="24b55-108">:: Operator</span></span>](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
   
--   [extern alias](../../../csharp/language-reference/keywords/extern-alias.md)  
+-   [<span data-ttu-id="24b55-109">extern alias</span><span class="sxs-lookup"><span data-stu-id="24b55-109">extern alias</span></span>](../../../csharp/language-reference/keywords/extern-alias.md)  
   
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
- [네임스페이스](../../../csharp/programming-guide/namespaces/index.md)
+## <a name="see-also"></a><span data-ttu-id="24b55-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="24b55-110">See Also</span></span>  
+ <span data-ttu-id="24b55-111">[C# 참조](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="24b55-111">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="24b55-112">[C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="24b55-112">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ <span data-ttu-id="24b55-113">[C# 키워드](../../../csharp/language-reference/keywords/index.md) </span><span class="sxs-lookup"><span data-stu-id="24b55-113">[C# Keywords](../../../csharp/language-reference/keywords/index.md) </span></span>  
+ [<span data-ttu-id="24b55-114">네임스페이스</span><span class="sxs-lookup"><span data-stu-id="24b55-114">Namespaces</span></span>](../../../csharp/programming-guide/namespaces/index.md)
 

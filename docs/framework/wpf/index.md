@@ -26,20 +26,21 @@ caps.latest.revision: 97
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-translationtype: Human Translation
-ms.sourcegitcommit: c50b3e328998b65ec47efe6d7457b36116813c77
-ms.openlocfilehash: d12492626a57fd4f09c25f97fb5a12c8bbf22ea1
-ms.lasthandoff: 04/08/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 47f68a3410eda53c2f5505b17aa319d516df335d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 05/02/2017
 
 ---
-# <a name="windows-presentation-foundation"></a>Windows Presentation Foundation
-Visual Studio 2015의 WPF(Windows Presentation Foundation)는 Windows에서 최신 LOB(기간 업무) 데스크톱 응용 프로그램을 빌드할 수 있는 통합된 프로그래밍 모델을 개발자에게 제공합니다.  
+# <a name="windows-presentation-foundation"></a><span data-ttu-id="37a6f-102">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="37a6f-102">Windows Presentation Foundation</span></span>
+<span data-ttu-id="37a6f-103">Visual Studio 2015의 WPF(Windows Presentation Foundation)는 Windows에서 최신 LOB(기간 업무) 데스크톱 응용 프로그램을 빌드할 수 있는 통합된 프로그래밍 모델을 개발자에게 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="37a6f-103">Windows Presentation Foundation (WPF) in Visual Studio 2015 provides developers with a unified programming model for building modern line-of-business desktop applications on Windows.</span></span>  
   
 > [!NOTE]
->  Mozilla Firefox 브라우저는 Microsoft Framework Assistant 확장을 비활성화합니다. Firefox에서 확장을 제거하는 방법에 대한 내용은 [Firefox용 .NET Framework Assistant를 제거하는 방법](https://support.microsoft.com/en-us/kb/963707)을 참조하세요.  
+>  <span data-ttu-id="37a6f-104">Mozilla Firefox 브라우저는 Microsoft Framework Assistant 확장을 비활성화합니다.</span><span class="sxs-lookup"><span data-stu-id="37a6f-104">The Mozilla Firefox browser disables the Microsoft Framework Assistant extension.</span></span> <span data-ttu-id="37a6f-105">Firefox에서 확장을 제거하는 방법에 대한 내용은 [Firefox용 .NET Framework Assistant를 제거하는 방법](https://support.microsoft.com/en-us/kb/963707)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="37a6f-105">See [How to remove the .NET Framework Assistant for Firefox](https://support.microsoft.com/en-us/kb/963707) for information on how to remove the extension from Firefox.</span></span>  
   
- [Windows Presentation Foundation으로 최신 데스크톱 응용 프로그램 만들기](http://msdn.microsoft.com/library/8d6c7295-ff64-4681-b01c-5056e8504569)  
+ [<span data-ttu-id="37a6f-106">Windows Presentation Foundation으로 최신 데스크톱 응용 프로그램 만들기</span><span class="sxs-lookup"><span data-stu-id="37a6f-106">Create Modern Desktop Applications with Windows Presentation Foundation</span></span>](http://msdn.microsoft.com/library/8d6c7295-ff64-4681-b01c-5056e8504569)  
   
- [Visual Studio 및 Blend for Visual Studio에서 XAML 디자인](http://msdn.microsoft.com/library/288e2415-9fcf-408e-bc35-9848315e14fd)  
+ [<span data-ttu-id="37a6f-107">Visual Studio 및 Blend for Visual Studio에서 XAML 디자인</span><span class="sxs-lookup"><span data-stu-id="37a6f-107">Designing XAML in Visual Studio and Blend for Visual Studio</span></span>](http://msdn.microsoft.com/library/288e2415-9fcf-408e-bc35-9848315e14fd)  
   
- [Visual Studio 가져오기](https://www.visualstudio.com/features/wpf-vs)
+ [<span data-ttu-id="37a6f-108">Visual Studio 가져오기</span><span class="sxs-lookup"><span data-stu-id="37a6f-108">Get Visual Studio</span></span>](https://www.visualstudio.com/features/wpf-vs)

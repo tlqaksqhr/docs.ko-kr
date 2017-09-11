@@ -1,1 +1,1 @@
-CLR
+<span data-ttu-id="7b6ec-101">CLR</span><span class="sxs-lookup"><span data-stu-id="7b6ec-101">CLR</span></span>

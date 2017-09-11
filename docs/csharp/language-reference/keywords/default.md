@@ -38,19 +38,19 @@ ms.lasthandoff: 08/29/2017
 
 ---
 
-# <a name="default-c-reference"></a>default(C# 참조)
+# <a name="default-c-reference"></a><span data-ttu-id="da8a4-102">default(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="da8a4-102">default (C# Reference)</span></span>
 
-`default` 키워드입니다.
+<span data-ttu-id="da8a4-103">`default` 키워드입니다.</span><span class="sxs-lookup"><span data-stu-id="da8a4-103">The `default` keyword.</span></span>
 
-`default` 키워드는 `switch` 문이나 기본값 식에 사용할 수 있습니다.
+<span data-ttu-id="da8a4-104">`default` 키워드는 `switch` 문이나 기본값 식에 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="da8a4-104">The `default` keyword can be used in the `switch` statement or in a default value expression:</span></span>
 
-- [switch 문](switch.md): 기본 레이블을 지정합니다.
+- <span data-ttu-id="da8a4-105">[switch 문](switch.md): 기본 레이블을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="da8a4-105">[The switch statement](switch.md): Specifies the default label.</span></span>
 
-- [기본값 식](../../programming-guide/statements-expressions-operators/default-value-expressions.md): 형식의 기본값을 생성합니다. 기본값은 참조 형식의 경우 null, 값 형식의 경우 0, 구조체의 경우 0비트 패턴입니다.
+- <span data-ttu-id="da8a4-106">[기본값 식](../../programming-guide/statements-expressions-operators/default-value-expressions.md): 형식의 기본값을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="da8a4-106">[Default value expressions](../../programming-guide/statements-expressions-operators/default-value-expressions.md): Produces the default value of the type.</span></span> <span data-ttu-id="da8a4-107">기본값은 참조 형식의 경우 null, 값 형식의 경우 0, 구조체의 경우 0비트 패턴입니다.</span><span class="sxs-lookup"><span data-stu-id="da8a4-107">This will be null for reference types and zero for value types, and the 0 bit pattern for structs.</span></span>
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a><span data-ttu-id="da8a4-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="da8a4-108">See Also</span></span>
 
- [C# 참조](../index.md)   
- [C# 프로그래밍 가이드](../../programming-guide/index.md)   
- [C# 키워드](index.md)   
+ <span data-ttu-id="da8a4-109">[C# 참조](../index.md) </span><span class="sxs-lookup"><span data-stu-id="da8a4-109">[C# Reference](../index.md) </span></span>  
+ <span data-ttu-id="da8a4-110">[C# 프로그래밍 가이드](../../programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="da8a4-110">[C# Programming Guide](../../programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="da8a4-111">C# 키워드</span><span class="sxs-lookup"><span data-stu-id="da8a4-111">C# Keywords</span></span>](index.md)   
 

@@ -897,32 +897,33 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
 ms.openlocfilehash: d1f8fb48a1f3b64d7e11a0ef57d1ef1d23ef9ae5
+ms.contentlocale: ko-kr
 ms.lasthandoff: 03/13/2017
 
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>죄송 합니다.이 C# 오류에 대 한 구체적인 정보가 없습니다 했습니다
-죄송합니다. 이 오류에 대한 구체적인 정보가 없습니다. 오류 번호와 메시지 텍스트를 검색하여 웹에서 정보를 찾을 수 있습니다. 또는 다음 포럼 중 하나에서 다른 개발자에게 질문을 할 수 있습니다.  
+# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a><span data-ttu-id="b63f4-102">죄송 합니다.이 C# 오류에 대 한 구체적인 정보가 없습니다 했습니다</span><span class="sxs-lookup"><span data-stu-id="b63f4-102">Sorry, we don&#39;t have specifics on this C# error</span></span>
+<span data-ttu-id="b63f4-103">죄송합니다. 이 오류에 대한 구체적인 정보가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b63f4-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="b63f4-104">오류 번호와 메시지 텍스트를 검색하여 웹에서 정보를 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b63f4-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="b63f4-105">또는 다음 포럼 중 하나에서 다른 개발자에게 질문을 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b63f4-105">Or, you can ask other developers using one of these forums:</span></span>  
   
- [Visual C# 언어](http://go.microsoft.com/fwlink/?LinkId=146921)  
- [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] 언어 구문 및 컴파일러와 관련된 질문과 일반적인 토론을 위한 포럼을 제공합니다.  
+ [<span data-ttu-id="b63f4-106">Visual C# 언어</span><span class="sxs-lookup"><span data-stu-id="b63f4-106">Visual C# Language</span></span>](http://go.microsoft.com/fwlink/?LinkId=146921)  
+ <span data-ttu-id="b63f4-107">[!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] 언어 구문 및 컴파일러와 관련된 질문과 일반적인 토론을 위한 포럼을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b63f4-107">Provides a forum for questions about and general discussions of the [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] language syntax and compiler.</span></span>  
   
- [Visual C# IDE](http://go.microsoft.com/fwlink/?LinkId=146922)  
- [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] 환경에서 작업하는 방법과 관련된 질문을 위한 포럼을 제공합니다.  
+ [<span data-ttu-id="b63f4-108">Visual C# IDE</span><span class="sxs-lookup"><span data-stu-id="b63f4-108">Visual C# IDE</span></span>](http://go.microsoft.com/fwlink/?LinkId=146922)  
+ <span data-ttu-id="b63f4-109">[!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] 환경에서 작업하는 방법과 관련된 질문을 위한 포럼을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b63f4-109">Provides a forum for questions about how to work in the [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] environment.</span></span>  
   
- [Visual C# 일반](http://go.microsoft.com/fwlink/?LinkId=146920)  
- 다른 포럼에서 다루지 않는 [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] 관련 질문과 문제를 위한 포럼을 제공합니다.  
+ [<span data-ttu-id="b63f4-110">Visual C# 일반</span><span class="sxs-lookup"><span data-stu-id="b63f4-110">Visual C# General</span></span>](http://go.microsoft.com/fwlink/?LinkId=146920)  
+ <span data-ttu-id="b63f4-111">다른 포럼에서 다루지 않는 [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] 관련 질문과 문제를 위한 포럼을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b63f4-111">Provides a forum for questions about and issues with [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] that are not discussed in other forums.</span></span>  
   
- [스택 오버플로](http://stackoverflow.com/questions/tagged/c%23)  
- [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] 관련 질문과 문제를 위한 포럼을 제공합니다.  
+ [<span data-ttu-id="b63f4-112">스택 오버플로</span><span class="sxs-lookup"><span data-stu-id="b63f4-112">StackOverflow</span></span>](http://stackoverflow.com/questions/tagged/c%23)  
+ <span data-ttu-id="b63f4-113">[!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)] 관련 질문과 문제를 위한 포럼을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b63f4-113">Provides a forum for questions about and issues with [!INCLUDE[csprcs](../../csharp/includes/csprcs_md.md)].</span></span>  
   
- 다음 항목도 참조하세요.  
- [Visual C# 프로그래머를 위한 추가 리소스](../../csharp/getting-started/additional-resources.md)  
+ <span data-ttu-id="b63f4-114">다음 항목도 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b63f4-114">Also see:</span></span>  
+<span data-ttu-id="b63f4-115"> [Visual C# 프로그래머를 위한 추가 리소스](../../csharp/getting-started/additional-resources.md)</span><span class="sxs-lookup"><span data-stu-id="b63f4-115"> [Additional Resources for Visual C# Programmers](../../csharp/getting-started/additional-resources.md)</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../csharp/programming-guide/index.md)   
- [C# 참조](../../csharp/language-reference/index.md)   
- [의견 보내기](https://docs.microsoft.com/visualstudio/ide/talk-to-us)   
- [의견 보내기](https://docs.microsoft.com/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a><span data-ttu-id="b63f4-116">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b63f4-116">See Also</span></span>  
+ <span data-ttu-id="b63f4-117">[C# 프로그래밍 가이드](../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="b63f4-117">[C# Programming Guide](../../csharp/programming-guide/index.md) </span></span>  
+<span data-ttu-id="b63f4-118"> [C# 참조](../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="b63f4-118"> [C# Reference](../../csharp/language-reference/index.md) </span></span>  
+<span data-ttu-id="b63f4-119"> [의견 보내기](https://docs.microsoft.com/visualstudio/ide/talk-to-us) </span><span class="sxs-lookup"><span data-stu-id="b63f4-119"> [Talk to Us](https://docs.microsoft.com/visualstudio/ide/talk-to-us) </span></span>  
+<span data-ttu-id="b63f4-120"> [의견 보내기](https://docs.microsoft.com/visualstudio/ide/talk-to-us)</span><span class="sxs-lookup"><span data-stu-id="b63f4-120"> [Talk to Us](https://docs.microsoft.com/visualstudio/ide/talk-to-us)</span></span>

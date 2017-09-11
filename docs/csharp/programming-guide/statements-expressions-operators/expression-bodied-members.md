@@ -19,94 +19,94 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="expression-bodied-members-c-programming-guide"></a>식 본문 멤버(C# 프로그래밍 가이드)
-식 본문 정의를 사용하면 간결하고 읽을 수 있는 형식으로 멤버 구현을 제공할 수 있습니다. 메서드 또는 속성과 같은 지원되는 멤버에 대한 논리가 단일 식으로 구성된 경우 식 본문 정의를 사용할 수 있습니다. 식 본문 정의의 일반 구문은 다음과 같습니다.
+# <a name="expression-bodied-members-c-programming-guide"></a><span data-ttu-id="beefd-102">식 본문 멤버(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="beefd-102">Expression-bodied members (C# programming guide)</span></span>
+<span data-ttu-id="beefd-103">식 본문 정의를 사용하면 간결하고 읽을 수 있는 형식으로 멤버 구현을 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="beefd-103">Expression body definitions let you provide a member's implementation in a very concise, readable form.</span></span> <span data-ttu-id="beefd-104">메서드 또는 속성과 같은 지원되는 멤버에 대한 논리가 단일 식으로 구성된 경우 식 본문 정의를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="beefd-104">You can use an expression body definition whenever the logic for any supported member, such as a method or property, consists of a single expression.</span></span> <span data-ttu-id="beefd-105">식 본문 정의의 일반 구문은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="beefd-105">An expression body definition has the following general syntax:</span></span>
 
 ```csharp
 member => expression;
 ```
 
-여기서 *expression*은 유효한 식입니다. 
+<span data-ttu-id="beefd-106">여기서 *expression*은 유효한 식입니다.</span><span class="sxs-lookup"><span data-stu-id="beefd-106">where *expression* is a valid expression.</span></span> 
 
-C# 6에서는 메서드 및 속성 가져오기 접근자에 대해 식 본문 정의 지원이 도입되었으며 C# 7에서는 지원이 확장되었습니다. 다음 표에 나열된 형식 멤버와 함께 식 본문 정의를 사용할 수 있습니다. 
+<span data-ttu-id="beefd-107">C# 6에서는 메서드 및 속성 가져오기 접근자에 대해 식 본문 정의 지원이 도입되었으며 C# 7에서는 지원이 확장되었습니다.</span><span class="sxs-lookup"><span data-stu-id="beefd-107">Support for expression body definitions was introduced for methods and property get accessors in C# 6 and was expanded in C# 7.</span></span> <span data-ttu-id="beefd-108">다음 표에 나열된 형식 멤버와 함께 식 본문 정의를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="beefd-108">Expression body definitions can be used with the type members listed in the following table:</span></span> 
 
-|멤버  |지원 버전 |
+|<span data-ttu-id="beefd-109">멤버</span><span class="sxs-lookup"><span data-stu-id="beefd-109">Member</span></span>  |<span data-ttu-id="beefd-110">지원 버전</span><span class="sxs-lookup"><span data-stu-id="beefd-110">Supported as of...</span></span> |
 |---------|---------|
-|[메서드](#methods)  |C# 6 |
-|[생성자](#constructors)   |C# 7 |
-|[종료자](#finalizers)     |C# 7 |
-|[속성 가져오기](#property-get-statements)  |C# 6 |
-|[속성 설정](#property-set-statements)  |C# 7 |
-|[인덱서](#indexers)       |C# 7 |
+|[<span data-ttu-id="beefd-111">메서드</span><span class="sxs-lookup"><span data-stu-id="beefd-111">Method</span></span>](#methods)  |<span data-ttu-id="beefd-112">C# 6</span><span class="sxs-lookup"><span data-stu-id="beefd-112">C# 6</span></span> |
+|[<span data-ttu-id="beefd-113">생성자</span><span class="sxs-lookup"><span data-stu-id="beefd-113">Constructor</span></span>](#constructors)   |<span data-ttu-id="beefd-114">C# 7</span><span class="sxs-lookup"><span data-stu-id="beefd-114">C# 7</span></span> |
+|[<span data-ttu-id="beefd-115">종료자</span><span class="sxs-lookup"><span data-stu-id="beefd-115">Finalizer</span></span>](#finalizers)     |<span data-ttu-id="beefd-116">C# 7</span><span class="sxs-lookup"><span data-stu-id="beefd-116">C# 7</span></span> |
+|[<span data-ttu-id="beefd-117">속성 가져오기</span><span class="sxs-lookup"><span data-stu-id="beefd-117">Property Get</span></span>](#property-get-statements)  |<span data-ttu-id="beefd-118">C# 6</span><span class="sxs-lookup"><span data-stu-id="beefd-118">C# 6</span></span> |
+|[<span data-ttu-id="beefd-119">속성 설정</span><span class="sxs-lookup"><span data-stu-id="beefd-119">Property Set</span></span>](#property-set-statements)  |<span data-ttu-id="beefd-120">C# 7</span><span class="sxs-lookup"><span data-stu-id="beefd-120">C# 7</span></span> |
+|[<span data-ttu-id="beefd-121">인덱서</span><span class="sxs-lookup"><span data-stu-id="beefd-121">Indexer</span></span>](#indexers)       |<span data-ttu-id="beefd-122">C# 7</span><span class="sxs-lookup"><span data-stu-id="beefd-122">C# 7</span></span> |
 
-## <a name="methods"></a>메서드
+## <a name="methods"></a><span data-ttu-id="beefd-123">메서드</span><span class="sxs-lookup"><span data-stu-id="beefd-123">Methods</span></span>
 
-식 본문 메서드는 형식이 메서드의 반환 형식과 일치하는 값을 반환하거나 `void`을(를) 반환하는 메서드의 경우 일부 작업을 수행하는 단일 식으로 구성됩니다. 예를 들어 <xref:System.Object.ToString%2A> 메서드를 재정의하는 형식에는 일반적으로 현재 개체의 문자열 표현을 반환하는 단일 식이 포함되어 있습니다. 
+<span data-ttu-id="beefd-124">식 본문 메서드는 형식이 메서드의 반환 형식과 일치하는 값을 반환하거나 `void`을(를) 반환하는 메서드의 경우 일부 작업을 수행하는 단일 식으로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="beefd-124">An expression-bodied method consists of a single expression that returns a value whose type matches the method's return type, or, for methods that return `void`, that performs some operation.</span></span> <span data-ttu-id="beefd-125">예를 들어 <xref:System.Object.ToString%2A> 메서드를 재정의하는 형식에는 일반적으로 현재 개체의 문자열 표현을 반환하는 단일 식이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="beefd-125">For example, types that override the <xref:System.Object.ToString%2A> method typically include a single expression that returns the string representation of the current object.</span></span> 
 
-다음 예제에서 <xref:System.Object.ToString%2A> 메서드를 식 본문 정의로 재정의하는 `Person` 클래스를 정의합니다. 또한 이름을 콘솔에 표시하는 `Show` 메서드를 정의합니다. `return` 키워드는 `ToString` 식 본문 정의에 사용되지 않습니다.
+<span data-ttu-id="beefd-126">다음 예제에서 <xref:System.Object.ToString%2A> 메서드를 식 본문 정의로 재정의하는 `Person` 클래스를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="beefd-126">The following example defines a `Person` class that overrides the <xref:System.Object.ToString%2A> method with an expression body definition.</span></span> <span data-ttu-id="beefd-127">또한 이름을 콘솔에 표시하는 `Show` 메서드를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="beefd-127">It also defines a `Show` method that displays a name to the console.</span></span> <span data-ttu-id="beefd-128">`return` 키워드는 `ToString` 식 본문 정의에 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="beefd-128">Note that the `return` keyword is not used in the `ToString` expression body definition.</span></span>
 
-[!code-cs[expression-bodied-methods](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-methods.cs)]  
+<span data-ttu-id="beefd-129">[!code-cs[expression-bodied-methods](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-methods.cs)]</span><span class="sxs-lookup"><span data-stu-id="beefd-129">[!code-cs[expression-bodied-methods](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-methods.cs)]</span></span>  
 
-자세한 내용은 [메서드(C# 프로그래밍 가이드)](../classes-and-structs/methods.md)를 참조하세요.
+<span data-ttu-id="beefd-130">자세한 내용은 [메서드(C# 프로그래밍 가이드)](../classes-and-structs/methods.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="beefd-130">For more information, see [Methods (C# Programming Guide)](../classes-and-structs/methods.md).</span></span>
  
-## <a name="constructors"></a>생성자
+## <a name="constructors"></a><span data-ttu-id="beefd-131">생성자</span><span class="sxs-lookup"><span data-stu-id="beefd-131">Constructors</span></span>
 
-생성자에 대한 식 본문 정의는 일반적으로 생성자의 인수를 처리하거나 인스턴스 상태를 초기화하는 단일 할당 식 또는 메서드 호출로 구성됩니다. 
+<span data-ttu-id="beefd-132">생성자에 대한 식 본문 정의는 일반적으로 생성자의 인수를 처리하거나 인스턴스 상태를 초기화하는 단일 할당 식 또는 메서드 호출로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="beefd-132">An expression body definition for a constructor typically consists of a single assignment expression or a method call that handles the constructor's arguments or initializes instance state.</span></span> 
 
-다음 예제에서는 생성자에 *name*이라는 단일 문자열 매개 변수가 있는 `Location` 클래스를 정의합니다. 식 본문 정의에서 `Name` 속성에 인수를 할당합니다.
+<span data-ttu-id="beefd-133">다음 예제에서는 생성자에 *name*이라는 단일 문자열 매개 변수가 있는 `Location` 클래스를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="beefd-133">The following example defines a `Location` class whose constructor has a single string parameter named *name*.</span></span> <span data-ttu-id="beefd-134">식 본문 정의에서 `Name` 속성에 인수를 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="beefd-134">The expression body definition assigns the argument to the `Name` property.</span></span>
 
-[!code-cs[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
+<span data-ttu-id="beefd-135">[!code-cs[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]</span><span class="sxs-lookup"><span data-stu-id="beefd-135">[!code-cs[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]</span></span>  
 
-자세한 내용은 [생성자(C# 프로그래밍 가이드)](../classes-and-structs/constructors.md)를 참조하세요.
+<span data-ttu-id="beefd-136">자세한 내용은 [생성자(C# 프로그래밍 가이드)](../classes-and-structs/constructors.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="beefd-136">For more information, see [Constructors (C# Programming Guide)](../classes-and-structs/constructors.md).</span></span>
 
-## <a name="finalizers"></a>종료자
+## <a name="finalizers"></a><span data-ttu-id="beefd-137">종료자</span><span class="sxs-lookup"><span data-stu-id="beefd-137">Finalizers</span></span>
 
-종료자에 대한 식 본문 정의에는 일반적으로 관리되지 않는 리소스를 해제하는 문 등의 정리 문이 포함되어 있습니다.
+<span data-ttu-id="beefd-138">종료자에 대한 식 본문 정의에는 일반적으로 관리되지 않는 리소스를 해제하는 문 등의 정리 문이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="beefd-138">An expression body definition for a finalizer typically contains cleanup statements, such as statements that release unmanaged resources.</span></span>
 
-다음 예제에서는 식 본문 정의를 사용하여 종료자가 호출되었음을 나타내는 종료자를 정의합니다.
+<span data-ttu-id="beefd-139">다음 예제에서는 식 본문 정의를 사용하여 종료자가 호출되었음을 나타내는 종료자를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="beefd-139">The following example defines a finalizer that uses an expression body definition to indicate that the finalizer has been called.</span></span>
 
-[!code-cs[expression-bodied-finalizer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-destructor.cs#1)]  
+<span data-ttu-id="beefd-140">[!code-cs[expression-bodied-finalizer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-destructor.cs#1)]</span><span class="sxs-lookup"><span data-stu-id="beefd-140">[!code-cs[expression-bodied-finalizer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-destructor.cs#1)]</span></span>  
 
-자세한 내용은 [종료자(C# 프로그래밍 가이드)](../classes-and-structs/destructors.md)를 참조하세요.
+<span data-ttu-id="beefd-141">자세한 내용은 [종료자(C# 프로그래밍 가이드)](../classes-and-structs/destructors.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="beefd-141">For more information, see [Finalizers (C# Programming Guide)](../classes-and-structs/destructors.md).</span></span>
 
-## <a name="property-get-statements"></a>속성 가져오기 문
+## <a name="property-get-statements"></a><span data-ttu-id="beefd-142">속성 가져오기 문</span><span class="sxs-lookup"><span data-stu-id="beefd-142">Property get statements</span></span>
 
-속성 가져오기 접근자를 직접 구현하려는 경우 단순히 속성 값을 반환하는 단일 식에 대해 식 본문 정의를 사용할 수 있습니다. `return` 문은 사용되지 않습니다.
+<span data-ttu-id="beefd-143">속성 가져오기 접근자를 직접 구현하려는 경우 단순히 속성 값을 반환하는 단일 식에 대해 식 본문 정의를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="beefd-143">If you choose to implement a property get accessor yourself, you can use an expression body definition for single expressions that simply return the property value.</span></span> <span data-ttu-id="beefd-144">`return` 문은 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="beefd-144">Note that the `return` statement isn't used.</span></span>
 
-다음 예제에서는 `Location.Name` 속성을 정의합니다. 이 속성의 속성 가져오기 접근자는 해당 속성을 지원하는 private `locationName` 필드의 값을 반환합니다. 
+<span data-ttu-id="beefd-145">다음 예제에서는 `Location.Name` 속성을 정의합니다. 이 속성의 속성 가져오기 접근자는 해당 속성을 지원하는 private `locationName` 필드의 값을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="beefd-145">The following example defines a `Location.Name` property whose property get accessor returns the value of the private `locationName` field that backs the property.</span></span> 
 
-[!code-cs[expression-bodied-property-getter](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
+<span data-ttu-id="beefd-146">[!code-cs[expression-bodied-property-getter](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]</span><span class="sxs-lookup"><span data-stu-id="beefd-146">[!code-cs[expression-bodied-property-getter](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]</span></span>  
 
-식 본문 정의를 사용하는 읽기 전용 속성은 명시적 `set` 문 없이 구현할 수 있습니다. 사용되는 구문은 다음과 같습니다.
+<span data-ttu-id="beefd-147">식 본문 정의를 사용하는 읽기 전용 속성은 명시적 `set` 문 없이 구현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="beefd-147">Read-only properties that use an expression body definition can be implemented without an explicit `set` statement.</span></span> <span data-ttu-id="beefd-148">사용되는 구문은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="beefd-148">The syntax is:</span></span>
 
 ```csharp
 PropertyName => returnValue;
 ```
 
-다음 예제에서는 `Location` 클래스를 정의합니다. 이 클래스의 읽기 전용 `Name` 속성은 private `locationName` 필드의 값을 반환하는 식 본문 정의로 구현됩니다.
+<span data-ttu-id="beefd-149">다음 예제에서는 `Location` 클래스를 정의합니다. 이 클래스의 읽기 전용 `Name` 속성은 private `locationName` 필드의 값을 반환하는 식 본문 정의로 구현됩니다.</span><span class="sxs-lookup"><span data-stu-id="beefd-149">The following example defines a `Location` class whose read-only `Name` property is implemented as an expression body definition that returns the value of the private `locationName` field.</span></span>
 
-[!code-cs[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-readonly.cs#1)]  
+<span data-ttu-id="beefd-150">[!code-cs[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-readonly.cs#1)]</span><span class="sxs-lookup"><span data-stu-id="beefd-150">[!code-cs[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-readonly.cs#1)]</span></span>  
 
-자세한 내용은 [속성(C# 프로그래밍 가이드)](../classes-and-structs/properties.md)을 참조하세요.
+<span data-ttu-id="beefd-151">자세한 내용은 [속성(C# 프로그래밍 가이드)](../classes-and-structs/properties.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="beefd-151">For more information, see [Properties (C# Programming Guide)](../classes-and-structs/properties.md).</span></span>
 
-## <a name="property-set-statements"></a>속성 설정 문
+## <a name="property-set-statements"></a><span data-ttu-id="beefd-152">속성 설정 문</span><span class="sxs-lookup"><span data-stu-id="beefd-152">Property set statements</span></span>
 
-속성 설정 접근자를 직접 구현하려는 경우 속성을 지원하는 필드에 값을 할당하는 한 줄 식에 대해 식 본문 정의를 사용할 수 있습니다.
+<span data-ttu-id="beefd-153">속성 설정 접근자를 직접 구현하려는 경우 속성을 지원하는 필드에 값을 할당하는 한 줄 식에 대해 식 본문 정의를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="beefd-153">If you choose to implement a property set accessor yourself, you can use an expression body definition for a single-line expression that assigns a value to the field that backs the property.</span></span>
 
-다음 예제에서는 `Location.Name` 속성을 정의합니다. 이 속성의 속성 설정 문은 해당 속성을 지원하는 private `locationName` 필드에 입력 인수를 할당합니다.
+<span data-ttu-id="beefd-154">다음 예제에서는 `Location.Name` 속성을 정의합니다. 이 속성의 속성 설정 문은 해당 속성을 지원하는 private `locationName` 필드에 입력 인수를 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="beefd-154">The following example defines a `Location.Name` property whose property set statement assigns its input argument to the private `locationName` field that backs the property.</span></span>
 
-[!code-cs[expression-bodied-property-setter](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
+<span data-ttu-id="beefd-155">[!code-cs[expression-bodied-property-setter](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]</span><span class="sxs-lookup"><span data-stu-id="beefd-155">[!code-cs[expression-bodied-property-setter](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]</span></span>  
 
-자세한 내용은 [속성(C# 프로그래밍 가이드)](../classes-and-structs/properties.md)을 참조하세요.
+<span data-ttu-id="beefd-156">자세한 내용은 [속성(C# 프로그래밍 가이드)](../classes-and-structs/properties.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="beefd-156">For more information, see [Properties (C# Programming Guide)](../classes-and-structs/properties.md).</span></span>
 
-## <a name="indexers"></a>인덱서
+## <a name="indexers"></a><span data-ttu-id="beefd-157">인덱서</span><span class="sxs-lookup"><span data-stu-id="beefd-157">Indexers</span></span>
 
-속성과 마찬가지로, get 접근자가 값을 반환하는 단일 문으로 구성되거나 set 접근자가 단순 할당을 수행하는 경우 인덱서의 get 및 set 접근자는 식 본문 정의로 구성됩니다.
+<span data-ttu-id="beefd-158">속성과 마찬가지로, get 접근자가 값을 반환하는 단일 문으로 구성되거나 set 접근자가 단순 할당을 수행하는 경우 인덱서의 get 및 set 접근자는 식 본문 정의로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="beefd-158">Like properties, an indexer's get and set accessors consist of expression body definitions if the get accessor consists of a single statement that returns a value or the set accessor performs a simple assignment.</span></span>
 
-다음 예제에서는 다양한 스포츠의 이름이 포함된 내부 <xref:System.String> 배열을 포함하는 `Sports`(이)라는 클래스를 정의합니다. 인덱서의 get 및 set 접근자는 둘 다 식 본문 정의로 구현됩니다.
+<span data-ttu-id="beefd-159">다음 예제에서는 다양한 스포츠의 이름이 포함된 내부 <xref:System.String> 배열을 포함하는 `Sports`(이)라는 클래스를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="beefd-159">The following example defines a class named `Sports` that includes an internal <xref:System.String> array that contains the names of a number of sports.</span></span> <span data-ttu-id="beefd-160">인덱서의 get 및 set 접근자는 둘 다 식 본문 정의로 구현됩니다.</span><span class="sxs-lookup"><span data-stu-id="beefd-160">Both the indexer's get and set accessors are implemented as expression body definitions.</span></span>
 
-[!code-cs[expression-bodied-indexer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-indexers.cs#1)] 
+<span data-ttu-id="beefd-161">[!code-cs[expression-bodied-indexer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-indexers.cs#1)]</span><span class="sxs-lookup"><span data-stu-id="beefd-161">[!code-cs[expression-bodied-indexer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-indexers.cs#1)]</span></span> 
 
-자세한 내용은 [인덱서(C# 프로그래밍 가이드)](../indexers/index.md)를 참조하세요.
+<span data-ttu-id="beefd-162">자세한 내용은 [인덱서(C# 프로그래밍 가이드)](../indexers/index.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="beefd-162">For more information, see [Indexers (C# Programming Guide)](../indexers/index.md).</span></span>
 
 

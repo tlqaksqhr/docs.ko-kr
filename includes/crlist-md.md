@@ -1,1 +1,1 @@
-목록은
+<span data-ttu-id="e319f-101">목록은</span><span class="sxs-lookup"><span data-stu-id="e319f-101">For a list of</span></span>

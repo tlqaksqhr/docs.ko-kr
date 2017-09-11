@@ -1,1 +1,1 @@
-IFD(이미지 파일 디렉터리)
+<span data-ttu-id="df188-101">IFD(이미지 파일 디렉터리)</span><span class="sxs-lookup"><span data-stu-id="df188-101">image file directory (IFD)</span></span>

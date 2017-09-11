@@ -26,11 +26,11 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="how-to-parse-a-string-c"></a>방법: 문자열 구문 분석(C#)
-이 항목에서는 C#에서 문자열의 구문을 분석하여 XML 트리를 만드는 방법을 보여 줍니다.  
+# <a name="how-to-parse-a-string-c"></a><span data-ttu-id="0ac45-102">방법: 문자열 구문 분석(C#)</span><span class="sxs-lookup"><span data-stu-id="0ac45-102">How to: Parse a String (C#)</span></span>
+<span data-ttu-id="0ac45-103">이 항목에서는 C#에서 문자열의 구문을 분석하여 XML 트리를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0ac45-103">This topic shows how to parse a string to create an XML tree in C#.</span></span>  
   
-## <a name="example"></a>예제  
- 다음 C# 코드에서는 문자열의 구문을 분석하는 방법을 보여 줍니다.  
+## <a name="example"></a><span data-ttu-id="0ac45-104">예제</span><span class="sxs-lookup"><span data-stu-id="0ac45-104">Example</span></span>  
+ <span data-ttu-id="0ac45-105">다음 C# 코드에서는 문자열의 구문을 분석하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0ac45-105">The following C# code shows how to parse a string.</span></span>  
   
 ```csharp  
 XElement contacts = XElement.Parse(  
@@ -62,6 +62,6 @@ XElement contacts = XElement.Parse(
 Console.WriteLine(contacts);  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [XML 구문 분석(C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a><span data-ttu-id="0ac45-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="0ac45-106">See Also</span></span>  
+ [<span data-ttu-id="0ac45-107">XML 구문 분석(C#)</span><span class="sxs-lookup"><span data-stu-id="0ac45-107">Parsing XML (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
 

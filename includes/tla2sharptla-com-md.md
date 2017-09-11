@@ -1,1 +1,1 @@
-COM
+<span data-ttu-id="f3c7c-101">COM</span><span class="sxs-lookup"><span data-stu-id="f3c7c-101">COM</span></span>

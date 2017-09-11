@@ -20,18 +20,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 00fbffa99ade302db536f7e56a4d004071efb2c6
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: 753f4c5035a642175cf47a5b0af32158c3eb44dd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>방법: 그룹 (LINQ) (Visual Basic)를 사용 하 여 파일을 여러 파일로 분할
-이 예제에서는 두 파일의 내용을 병합 하 고 다음 새로운 방식으로 데이터를 구성 하는 새 파일의 집합을 만들 하는 방법을 보여 줍니다.  
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a><span data-ttu-id="e2e7b-102">방법: 그룹 (LINQ) (Visual Basic)를 사용 하 여 파일을 여러 파일로 분할</span><span class="sxs-lookup"><span data-stu-id="e2e7b-102">How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="e2e7b-103">이 예제에서는 두 파일의 내용을 병합 하 고 다음 새로운 방식으로 데이터를 구성 하는 새 파일의 집합을 만들 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e2e7b-103">This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.</span></span>  
   
-### <a name="to-create-the-data-files"></a>데이터 파일을 만들려면  
+### <a name="to-create-the-data-files"></a><span data-ttu-id="e2e7b-104">데이터 파일을 만들려면</span><span class="sxs-lookup"><span data-stu-id="e2e7b-104">To create the data files</span></span>  
   
-1.  이러한 이름을 names1.txt 라는 텍스트 파일에 복사 하 고 프로젝트 폴더에 저장 합니다.  
+1.  <span data-ttu-id="e2e7b-105">이러한 이름을 names1.txt 라는 텍스트 파일에 복사 하 고 프로젝트 폴더에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="e2e7b-105">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```  
     Bankov, Peter  
@@ -46,7 +47,7 @@ ms.lasthandoff: 03/13/2017
     Garcia, Debra  
     ```  
   
-2.  프로젝트 폴더에 이러한 이름을 저장 하 고 names2.txt 라는 텍스트 파일에 복사 합니다: 두 파일은 사용할 일부 공통 이름을 지정 합니다.  
+2.  <span data-ttu-id="e2e7b-106">프로젝트 폴더에 이러한 이름을 저장 하 고 names2.txt 라는 텍스트 파일에 복사 합니다: 두 파일은 사용할 일부 공통 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="e2e7b-106">Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.</span></span>  
   
     ```  
     Liu, Jinghao  
@@ -61,7 +62,7 @@ ms.lasthandoff: 03/13/2017
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a><span data-ttu-id="e2e7b-107">예제</span><span class="sxs-lookup"><span data-stu-id="e2e7b-107">Example</span></span>  
   
 ```vb  
 Class SplitWithGroups  
@@ -130,11 +131,11 @@ End Class
 '    Toyoshima, Tim  
 ```  
   
- 프로그램은 데이터 파일과 같은 폴더에 각 그룹에 대 한 별도 파일을 씁니다.  
+ <span data-ttu-id="e2e7b-108">프로그램은 데이터 파일과 같은 폴더에 각 그룹에 대 한 별도 파일을 씁니다.</span><span class="sxs-lookup"><span data-stu-id="e2e7b-108">The program writes a separate file for each group in the same folder as the data files.</span></span>  
   
-## <a name="compiling-the-code"></a>코드 컴파일  
- .NET Framework 버전 3.5 이상 System.Core.dll에 대 한 참조를 대상으로 하는 프로젝트 만들기 및 `Imports` System.Linq 네임 스페이스에 대 한 정보입니다.  
+## <a name="compiling-the-code"></a><span data-ttu-id="e2e7b-109">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="e2e7b-109">Compiling the Code</span></span>  
+ <span data-ttu-id="e2e7b-110">.NET Framework 버전 3.5 이상 System.Core.dll에 대 한 참조를 대상으로 하는 프로젝트 만들기 및 `Imports` System.Linq 네임 스페이스에 대 한 정보입니다.</span><span class="sxs-lookup"><span data-stu-id="e2e7b-110">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ 및 파일 디렉터리 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="e2e7b-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e2e7b-111">See Also</span></span>  
+ <span data-ttu-id="e2e7b-112">[LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md) </span><span class="sxs-lookup"><span data-stu-id="e2e7b-112">[LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md) </span></span>  
+<span data-ttu-id="e2e7b-113"> [LINQ 및 파일 디렉터리 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span><span class="sxs-lookup"><span data-stu-id="e2e7b-113"> [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span></span>

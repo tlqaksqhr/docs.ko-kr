@@ -1,77 +1,64 @@
 ---
-title: "표준 시간대 개요 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/10/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "조정 규칙[.NET Framework]"
-  - "모호한 시간[.NET Framework]"
-  - "일광 절약 시간[.NET Framework]"
-  - "고정 규칙[.NET Framework]"
-  - "유동 규칙[.NET Framework]"
-  - "잘못된 시간[.NET Framework]"
-  - "표준 시간대[.NET Framework], 표준 시간대 정보"
-  - "표준 시간대[.NET Framework], 만들기"
-  - "표준 시간대[.NET Framework], 용어"
-  - "TimeZoneInfo 클래스, TimeZoneInfo 클래스 정보"
-  - "전환 시간[.NET Framework]"
-ms.assetid: c4b7ed01-5e38-4959-a3b6-ef9765d6ccf1
-caps.latest.revision: 11
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 11
+title: "표준 시간대 개요"
+description: "표준 시간대 개요"
+keywords: .NET, .NET Core
+author: stevehoag
+ms.author: shoag
+ms.date: 08/16/2016
+ms.topic: article
+ms.prod: .net
+ms.technology: dotnet-standard
+ms.devlang: dotnet
+ms.assetid: e3a10f62-d403-4441-8621-adc964e32c07
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90fe68f7f3c4b46502b5d3770b1a2d57c6af748a
+ms.openlocfilehash: 200d502d12750a28d2a54058f53b4bbef78973c7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 03/02/2017
+
 ---
-# 표준 시간대 개요
-<xref:System.TimeZoneInfo> 클래스를 사용하면 표준 시간대 인식 응용 프로그램을 쉽게 만들 수 있습니다.  <xref:System.TimeZone> 클래스는 현지 표준 시간대 및 UTC\(협정 세계시\)를 사용한 작업을 지원합니다.  <xref:System.TimeZoneInfo> 클래스는 이러한 두 표준 시간대는 물론 레지스트리에 정보가 미리 정의되어 있는 모든 표준 시간대를 지원합니다.  또한 <xref:System.TimeZoneInfo>를 사용하여 시스템에 해당 정보가 없는 사용자 지정 표준 시간대를 정의할 수 있습니다.  
-  
-## 표준 시간대 주요 사항  
- 표준 시간대는 같은 시간이 사용되는 지역입니다.  항상 그런 것은 아니지만 일반적으로 인접한 표준 시간대의 간격은 한 시간입니다.  전 세계 어떤 표준 시간대의 시간도 UTC\(협정 세계시\)에서의 오프셋으로 나타낼 수 있습니다.  
-  
- 전 세계 대부분의 표준 시간대는 일광 절약 시간을 지원합니다.  일광 절약 시간에서는 봄 또는 초여름에는 한 시간 앞당기고, 늦은 여름 또는 가을에는 보통 시간이나 표준 시간으로 돌려 일광 시간을 최대한 늘리려고 합니다.  이렇게 표준 시간에서 다른 시간으로 변경하거나 다른 시간에서 표준 시간으로 변경하는 것을 조정 규칙이라고 합니다.  
-  
- 특정 표준 시간대에 일광 절약 시간에서 전환하거나 일광 절약 시간으로 전환하는 작업은 고정 조정 규칙 또는 유동 조정 규칙을 통해 정의할 수 있습니다.  고정 조정 규칙은 매년 이러한 일광 절약 시간 전환이 수행되는 특정 날짜를 설정합니다.  예를 들어 매년 10월 25일에 수행되는 일광 절약 시간에서 표준 시간으로의 전환은 고정 조정 규칙을 따릅니다.  보다 일반적인 조정 규칙은 유동 조정 규칙으로, 이 규칙은 일광 절약 시간 전환이 수행될 특정 월, 주, 일을 설정합니다.  예를 들어 3월 셋째 일요일에 수행되는 표준 시간에서 일광 절약 시간으로의 전환은 유동 조정 규칙을 따릅니다.  
-  
- 조정 규칙을 지원하는 표준 시간대의 경우 일광 절약 시간 전환을 수행하면 두 가지 예외적인 시간인 잘못된 시간과 모호한 시간이 생성됩니다.  잘못된 시간은 표준 시간에서 일광 절약 시간으로 전환할 때 생성되는 존재하지 않는 시간입니다.  예를 들어 특정 일의 오전 2시에 이러한 전환이 수행 되어 및 시간을 변경 하려면, 오전 3시로 변경을 야기합니다. 오전 2시와 오전 2:59:99 사이의 각 시간 간격은 유효 하지 않습니다.  모호한 시간은 단일 표준 시간대의 서로 다른 두 가지 시간으로 매핑될 수 있는 시간입니다.  이 시간은 일광 절약 시간에서 표준 시간으로 전환할 때 생성됩니다.  예를 들어, 특정 일의 오전 2시에 이러한 전환이 수행 되어 시간을 오전 1시로 변경한다면, 오전 1시와 오전 1:59:99 사이의 각 시간 간격은 오전 표준 시간 또는 일광 절약 시간으로 해석할 수 있습니다.  
-  
-## 표준 시간대 용어  
- 다음 표에서는 표준 시간대를 사용하여 작업하고 표준 시간대 인식 응용 프로그램을 개발할 때 일반적으로 사용되는 용어를 정의합니다.  
-  
-|용어|정의|  
-|--------|--------|  
-|조정 규칙|표준 시간에서 일광 절약 시간으로 전환하고 다시 일광 절약 시간에서 표준 시간으로 전환할 때 정의하는 규칙입니다.  각 조정 규칙에는 규칙이 적용되는 시기\(예: 1986년 1월 1일에서 2006년 12월 31일까지의 조정 규칙\)를 정의하는 시작 및 종료 날짜, 델타\(조정 규칙 적용 결과로 변경되는 표준 시간 간격\), 조정 기간 동안 전환이 수행될 특정 날짜 및 시간에 대한 정보가 들어 있습니다.  전환은 고정 규칙 또는 유동 규칙을 따를 수 있습니다.|  
-|모호한 시간|단일 표준 시간대의 서로 다른 두 가지 시간으로 매핑될 수 있는 시간입니다.  표준 시간대의 일광 절약 시간에서 표준 시간으로의 전환과 같이 클럭 시간이 제시간에 원래 시간으로 맞춰질 때 이러한 시간이 발생합니다.  예를 들어, 특정 일의 오전 2시에 이러한 전환이 수행 되어 시간을 오전 1시로 변경한다면, 오전 1시와 오전 1:59:99 사이의 각 시간 간격은 오전 표준 시간 또는 일광 절약 시간으로 해석할 수 있습니다.|  
-|고정 규칙|일광 절약 시간 전환이 수행될 특정 날짜를 설정하는 조정 규칙입니다.  예를 들어 매년 10월 25일에 수행되는 일광 절약 시간에서 표준 시간으로의 전환은 고정 조정 규칙을 따릅니다.|  
-|유동 규칙|일광 절약 시간 전환이 수행될 특정 월, 주, 일을 설정하는 조정 규칙입니다.  예를 들어 3월 셋째 일요일에 수행되는 표준 시간에서 일광 절약 시간으로의 전환은 유동 조정 규칙을 따릅니다.|  
-|잘못된 시간|표준 시간에서 일광 절약 시간으로의 전환에 대한 아티팩트인 존재하지 않는 시간입니다.  표준 시간대의 표준 시간에서 일광 절약 시간으로의 전환과 같이 클럭 시간이 제시간에 원래 시간으로 맞춰질 때 이러한 시간이 발생합니다.  예를 들어 특정 일의 오전 2시에 이러한 전환이 수행 되어 및 시간을 변경 하려면, 오전 3시로 변경을 야기합니다. 오전 2시와 오전 2:59:99 사이의 각 시간 간격은 유효 하지 않습니다.|  
-|전환 시간|특정 표준 시간대에서의 일광 절약 시간에서 표준 시간으로, 표준 시간에서 일광 절약 시간으로의 변경과 같은 특정 시간 변경에 대한 정보입니다.|  
-  
-## 표준 시간대와 TimeZoneInfo 클래스  
- .NET Framework에서 <xref:System.TimeZoneInfo> 개체는 표준 시간대를 나타냅니다.  <xref:System.TimeZoneInfo> 클래스에는 <xref:System.TimeZoneInfo.AdjustmentRule> 개체의 배열을 반환하는 <xref:System.TimeZoneInfo.GetAdjustmentRules%2A> 메서드가 포함되어 있습니다.  이 배열의 각 요소는 특정 기간 동안의 일광 절약 시간 전환에 대한 정보를 제공합니다. 일광 절약 시간을 지원하지 않는 표준 시간대의 경우 이 메서드는 빈 배열을 반환합니다. 각 <xref:System.TimeZoneInfo.AdjustmentRule> 개체에는 일광 절약 시간 전환이 수행되는 특정 날짜 및 시간을 정의하는 <xref:System.TimeZoneInfo.AdjustmentRule.DaylightTransitionStart%2A> 및 <xref:System.TimeZoneInfo.AdjustmentRule.DaylightTransitionEnd%2A> 속성이 있습니다.  <xref:System.TimeZoneInfo.TransitionTime.IsFixedDateRule%2A> 속성은 전환이 고정인지, 아니면 유동인지를 나타냅니다.  
-  
- .NET Framework는 레지스트리에 저장되어 있고 Windows 운영 체제에서 제공하는 표준 시간대 정보를 사용합니다.  전 세계적으로 표준 시간대가 많이 있으므로 기존 표준 시간대가 모두 레지스트리에 나타나는 것은 아닙니다.  또한 레지스트리는 동적 구조이므로 미리 정의된 표준 시간대를 레지스트리에 추가하거나 레지스트리에서 제거할 수 있습니다.  결국 레지스트리에 기록 표준 시간대 데이터를 포함하지 않아도 됩니다.  예를 들어 Windows XP 레지스트리에는 단일 표준 시간대 조정 집합에 대한 데이터만 포함되어 있습니다.  Windows Vista에서는 동적 표준 시간대 데이터를 지원하므로 단일 표준 시간대에서 특정 연 간격에 적용되는 여러 조정 규칙을 사용할 수 있습니다.  그러나 Windows Vista 레지스트리에 정의되어 있으며 일광 절약 시간을 지원하는 대부분의 표준 시간대는 하나 또는 두 개의 미리 정의된 조정 규칙만 사용합니다.  
-  
- 레지스트리에 대한 <xref:System.TimeZoneInfo> 클래스의 독립성으로 인해 표준 시간대 인식 응용 프로그램의 경우 레지스트리에 특정 표준 시간대가 정의되어 있다고 확신할 수 없습니다.  따라서 현지 표준 시간대 또는 UTC를 나타내는 표준 시간대가 아닌 특정 표준 시간대를 인스턴스화하려고 할 때 예외 처리를 사용해야 합니다.  또한 레지스트리에서 필수 <xref:System.TimeZoneInfo> 개체를 인스턴스화할 수 없는 경우 응용 프로그램을 계속 진행하는 데 사용되는 일부 메서드를 제공해야 합니다.  
-  
- 필수 표준 시간대가 없는 경우를 위해 레지스트리에서 찾을 수 없는 사용자 지정 표준 시간대를 만드는 데 사용할 수 있는 <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> 메서드가 <xref:System.TimeZoneInfo> 클래스에 포함되어 있습니다.  사용자 지정 표준 시간대 만들기에 대한 자세한 내용은 [방법: 조정 규칙을 사용하지 않고 표준 시간대 만들기](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) 및 [방법: 조정 규칙을 사용하여 표준 시간대 만들기](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)를 참조하십시오.  또한 <xref:System.TimeZoneInfo.ToSerializedString%2A> 메서드를 사용하면 새로 만든 표준 시간대를 문자열로 변환한 다음 데이터베이스, 텍스트 파일, 레지스트리 또는 응용 프로그램 리소스 등의 데이터 저장소에 저장할 수 있습니다.  그리고 나서 <xref:System.TimeZoneInfo.FromSerializedString%2A> 메서드를 사용하여 이 문자열을 <xref:System.TimeZoneInfo> 개체로 다시 변환할 수 있습니다.  자세한 내용은 [방법: 포함 리소스에 표준 시간대 저장](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) 및 [방법: 포함 리소스에서 표준 시간대 복원](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)을 참조하십시오.  
-  
- 각 표준 시간대의 특성은 UTC에서의 기본 오프셋은 물론 기존 조정 규칙을 반영하는 UTC에서의 오프셋을 통해 지정되므로 한 표준 시간대의 시간을 다른 표준 시간대의 시간으로 쉽게 변환할 수 있습니다.  이를 위해  <xref:System.TimeZoneInfo> 개체에 다음을 비롯한 여러 변환 메서드가 포함되어 있습니다.  
-  
--   UTC를 지정한 표준 시간대의 시간으로 변환하는 <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A>  
-  
--   지정한 표준 시간대의 시간을 UTC로 변환하는 <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A>  
-  
--   한 지정한 표준 시간대의 시간을 다른 지정한 표준 시간대의 시간으로 변환하는 <xref:System.TimeZoneInfo.ConvertTime%2A>  
-  
--   <xref:System.TimeZoneInfo> 개체 대신 표준 시간대 식별자를 매개 변수로 사용하여 한 지정한 표준 시간대의 시간을 다른 지정한 표준 시간대의 시간으로 변환하는 <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A>  
-  
- 표준 시간대 간의 시간 변환에 대한 자세한 내용은 [표준 시간대 간에 시간 변환](../../../docs/standard/datetime/converting-between-time-zones.md)을 참조하십시오.  
-  
-## 참고 항목  
- [날짜, 시간 및 표준 시간대](../../../docs/standard/datetime/index.md)
+
+# <a name="time-zone-overview"></a><span data-ttu-id="ea7b4-104">표준 시간대 개요</span><span class="sxs-lookup"><span data-stu-id="ea7b4-104">Time zone overview</span></span>
+
+<span data-ttu-id="ea7b4-105">[System.TimeZoneInfo](xref:System.TimeZoneInfo) 클래스는 표준 시간대 인식 응용 프로그램을 만드는 과정을 간소화합니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-105">The [System.TimeZoneInfo](xref:System.TimeZoneInfo) class simplifies the creation of time zone-aware applications.</span></span> <span data-ttu-id="ea7b4-106">[TimeZoneInfo](xref:System.TimeZoneInfo) 클래스는 레지스트리에서 미리 정의된 정보에 대한 표준 시간대뿐만 아니라 현지 표준 시간대와 UTC(협정 세계시)를 사용하도록 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-106">The [TimeZoneInfo](xref:System.TimeZoneInfo) class supports working with the local time zone and Coordinated Universal Time (UTC), as well as any time zone about which information is predefined in the registry.</span></span> <span data-ttu-id="ea7b4-107">[TimeZoneInfo](xref:System.TimeZoneInfo)를 사용하여 시스템에 해당 정보가 없는 사용자 지정 표준 시간대를 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-107">You can also use [TimeZoneInfo](xref:System.TimeZoneInfo) to define custom time zones that the system has no information about.</span></span>
+
+## <a name="time-zone-essentials"></a><span data-ttu-id="ea7b4-108">표준 시간대 Essentials</span><span class="sxs-lookup"><span data-stu-id="ea7b4-108">Time Zone Essentials</span></span>
+
+<span data-ttu-id="ea7b4-109">표준 시간대는 동일한 시간이 사용되는 지리적 영역입니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-109">A time zone is a geographical region in which the same time is used.</span></span> <span data-ttu-id="ea7b4-110">항상 그렇지는 않지만 일반적으로 인접한 표준 시간대는&1;시간 간격입니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-110">Typically, but not always, adjacent time zones are one hour apart.</span></span> <span data-ttu-id="ea7b4-111">전세계 표준 시간대의 시간은 UTC(협정 세계시) 오프셋으로 표현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-111">The time in any of the world's time zones can be expressed as an offset from Coordinated Universal Time (UTC).</span></span>
+
+<span data-ttu-id="ea7b4-112">전세계 표준 시간대는 대부분 일광 절약 시간을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-112">Many of the world's time zones support daylight saving time.</span></span> <span data-ttu-id="ea7b4-113">일광 절약 시간제는 봄이나 초기 여름에 시간을 한 시간 앞으로 이동하고 늦은 여름이나 가을에 일반(또는 표준) 시간으로 돌아와서 일광 시간을 극대화하려고 합니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-113">Daylight saving time tries to maximize daylight hours by advancing the time forward by one hour in the spring or early summer, and returning to the normal (or standard) time in the late summer or fall.</span></span> <span data-ttu-id="ea7b4-114">표준 시간 간의 이러한 변경 내용은 조정 규칙으로 알려져 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-114">These changes to and from standard time are known as adjustment rules.</span></span>
+
+<span data-ttu-id="ea7b4-115">특정 표준 시간대의 일광 절약 시간 간의 전환은 고정 또는 부동 조정 규칙에서 정의될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-115">The transition to and from daylight saving time in a particular time zone can be defined either by a fixed or a floating adjustment rule.</span></span> <span data-ttu-id="ea7b4-116">고정 조정 규칙은 일광 절약 시간 간의 전환이 매년 발생하는 특정 날짜를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-116">A fixed adjustment rule sets a particular date on which the transition to or from daylight saving time occurs each year.</span></span> <span data-ttu-id="ea7b4-117">예를 들어, 매년 10월 25일에 발생하는 일광 절약 시간에서 표준 시간으로의 전환은 고정 조정 규칙을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-117">For example, a transition from daylight saving time to standard time that occurs each year on October 25 follows a fixed adjustment rule.</span></span> <span data-ttu-id="ea7b4-118">보다 일반적인 규칙은 유동 조정 규칙으로, 일광 절약 시간 간의 전환에 대한 특정 월, 주, 날짜를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-118">Much more common are floating adjustment rules, which set a particular day of a particular week of a particular month for the transition to or from daylight saving time.</span></span> <span data-ttu-id="ea7b4-119">예를 들어&3;월의 세 번째 일요일에 발생하는 표준 시간에서 일광 절약 시간으로의 전환은 부동 조정 규칙을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-119">For example, a transition from standard time to daylight saving time that occurs on the third Sunday of March follows a floating adjustment rule.</span></span>
+
+<span data-ttu-id="ea7b4-120">조정 규칙을 지원하는 표준 시간대의 경우 일광 절약 시간제 간의 전환으로 인해 잘못된 시간과 모호한 시간이라는 두 가지 예외적인 시간이 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-120">For time zones that support adjustment rules, the transition to and from daylight saving time creates two kinds of anomalous times: invalid times and ambiguous times.</span></span> <span data-ttu-id="ea7b4-121">잘못된 시간은 표준 시간에서 일광 절약 시간으로의 전환에서 만든 존재하지 않는 시간입니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-121">An invalid time is a nonexistent time created by the transition from standard time to daylight saving time.</span></span> <span data-ttu-id="ea7b4-122">예를 들어 특정 일의 오전 2시에 이 전환이 발생하고</span><span class="sxs-lookup"><span data-stu-id="ea7b4-122">For example, if this transition occurs on a particular day at 2:00 A.M.</span></span> <span data-ttu-id="ea7b4-123">시간이 오전 3시로 변경되면 오전 2시와</span><span class="sxs-lookup"><span data-stu-id="ea7b4-123">and causes the time to change to 3:00 A.M., each time interval between 2:00 A.M.</span></span> <span data-ttu-id="ea7b4-124">오전 2시 59분 99초 사이의 시간 간격은</span><span class="sxs-lookup"><span data-stu-id="ea7b4-124">and 2:59:99 A.M.</span></span> <span data-ttu-id="ea7b4-125">잘못되었습니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-125">is invalid.</span></span> <span data-ttu-id="ea7b4-126">모호한 시간은 단일 표준 시간대에서 두 개의 서로 다른 시간에 매핑될 수 있는 시간입니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-126">An ambiguous time is a time that can be mapped to two different times in a single time zone.</span></span> <span data-ttu-id="ea7b4-127">일광 절약 시간에서 표준 시간으로의 전환에서 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-127">It is created by the transition from daylight saving time to standard time.</span></span> <span data-ttu-id="ea7b4-128">예를 들어 특정 일의 오전 2시에 이 전환이 발생하고</span><span class="sxs-lookup"><span data-stu-id="ea7b4-128">For example, if this transition occurs on a particular day at 2:00 A.M.</span></span> <span data-ttu-id="ea7b4-129">시간이 오전 1시로 변경되면 오전 1시와</span><span class="sxs-lookup"><span data-stu-id="ea7b4-129">and causes the time to change to 1:00 A.M., each time interval between 1:00 A.M.</span></span> <span data-ttu-id="ea7b4-130">오전 1시 59분 99초 사이의</span><span class="sxs-lookup"><span data-stu-id="ea7b4-130">and 1:59:99 A.M.</span></span> <span data-ttu-id="ea7b4-131">각 시간 간격은 표준 시간이나 일광 절약 시간으로 해석될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-131">can be interpreted as either a standard time or a daylight saving time.</span></span> 
+
+## <a name="time-zone-terminology"></a><span data-ttu-id="ea7b4-132">표준 시간대 용어</span><span class="sxs-lookup"><span data-stu-id="ea7b4-132">Time Zone Terminology</span></span>
+
+<span data-ttu-id="ea7b4-133">다음 테이블에서는 표준 시간대를 사용하고 표준 시간대 인식 응용 프로그램을 개발할 때 일반적으로 사용되는 용어를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-133">The following table defines terms commonly used when working with time zones and developing time zone-aware applications.</span></span>
+
+<span data-ttu-id="ea7b4-134">용어</span><span class="sxs-lookup"><span data-stu-id="ea7b4-134">Term</span></span> | <span data-ttu-id="ea7b4-135">정의</span><span class="sxs-lookup"><span data-stu-id="ea7b4-135">Definition</span></span>
+---- | ----------
+<span data-ttu-id="ea7b4-136">조정 규칙</span><span class="sxs-lookup"><span data-stu-id="ea7b4-136">Adjustment rule</span></span> | <span data-ttu-id="ea7b4-137">표준 시간에서 일광 절약 시간으로의 전환 및 일광 절약 시간에서 표준 시간으로의 전환이 발생하는 시기를 정의하는 규칙입니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-137">A rule that defines when the transition from standard time to daylight saving time and back from daylight saving time to standard time occurs.</span></span> <span data-ttu-id="ea7b4-138">규칙 적용 시기(예: 조정 규칙은 1986년 1월 1일에서 2020년 12월 31일까지 적용됨), 델타(표준 시간이 조정 규칙 응용 프로그램의 결과로 변경되는 시간의 양) 및 조정 기간 중에 발생하는 전환의 특정 날짜와 시간에 대한 정보를 정의하는 시작 및 종료 날짜가 각 조정 규칙에 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-138">Each adjustment rule has a start and end date that defines when the rule is in place (for example, the adjustment rule is in place from January 1, 1986, to December 31, 2020), a delta (the amount of time by which the standard time changes as a result of the application of the adjustment rule), and information about the specific date and time that the transitions are to occur during the adjustment period.</span></span> <span data-ttu-id="ea7b4-139">전환은 고정 규칙 또는 유동 규칙을 따르면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-139">Transitions can follow either a fixed rule or a floating rule.</span></span>
+<span data-ttu-id="ea7b4-140">모호한 시간</span><span class="sxs-lookup"><span data-stu-id="ea7b4-140">Ambiguous time</span></span> | <span data-ttu-id="ea7b4-141">단일 표준 시간대에서 두 개의 서로 다른 시간에 매핑될 수 있는 시간입니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-141">A time that can be mapped to two different times in a single time zone.</span></span> <span data-ttu-id="ea7b4-142">표준 시간대의 일광 절약 시간에서 표준 시간으로 전환하는 것과 같이 클록 시간을 뒤로 조정하는 경우 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-142">It occurs when the clock time is adjusted back in time, such as during the transition from a time zone's daylight saving time to its standard time.</span></span> <span data-ttu-id="ea7b4-143">예를 들어 특정 일의 오전 2시에 이 전환이 발생하고</span><span class="sxs-lookup"><span data-stu-id="ea7b4-143">For example, if this transition occurs on a particular day at 2:00 A.M.</span></span> <span data-ttu-id="ea7b4-144">시간이 오전 1시로 변경되면 오전 1시와</span><span class="sxs-lookup"><span data-stu-id="ea7b4-144">and causes the time to change to 1:00 A.M., each time interval between 1:00 A.M.</span></span> <span data-ttu-id="ea7b4-145">오전 1시 59분 99초 사이의</span><span class="sxs-lookup"><span data-stu-id="ea7b4-145">and 1:59:99 A.M.</span></span> <span data-ttu-id="ea7b4-146">각 시간 간격은 표준 시간이나 일광 절약 시간으로 해석될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-146">can be interpreted as either a standard time or a daylight saving time.</span></span> 
+<span data-ttu-id="ea7b4-147">고정 규칙</span><span class="sxs-lookup"><span data-stu-id="ea7b4-147">Fixed rule</span></span> | <span data-ttu-id="ea7b4-148">조정 규칙은 일광 절약 시간 간의 전환에 대한 특정 날짜를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-148">An adjustment rule that sets a particular date for the transition to or from daylight saving time.</span></span> <span data-ttu-id="ea7b4-149">예를 들어, 매년 10월 25일에 발생하는 일광 절약 시간에서 표준 시간으로의 전환은 고정 조정 규칙을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-149">For example, a transition from daylight saving time to standard time that occurs each year on October 25 follows a fixed adjustment rule.</span></span>
+<span data-ttu-id="ea7b4-150">유동 규칙</span><span class="sxs-lookup"><span data-stu-id="ea7b4-150">Floating rule</span></span> | <span data-ttu-id="ea7b4-151">조정 규칙은 일광 절약 시간 간의 전환에 대한 특정 월, 주, 날짜를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-151">An adjustment rule that sets a particular day of a particular week of a particular month for the transition to or from daylight saving time.</span></span> <span data-ttu-id="ea7b4-152">예를 들어&3;월의 세 번째 일요일에 발생하는 표준 시간에서 일광 절약 시간으로의 전환은 부동 조정 규칙을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-152">For example, a transition from standard time to daylight saving time that occurs on the third Sunday of March follows a floating adjustment rule.</span></span>
+<span data-ttu-id="ea7b4-153">잘못된 형식</span><span class="sxs-lookup"><span data-stu-id="ea7b4-153">Invalid time</span></span> | <span data-ttu-id="ea7b4-154">표준 시간에서 일광 절약 시간으로의 전환 아티팩트인 존재하지 않는 시간입니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-154">A nonexistent time that is an artifact of the transition from standard time to daylight saving time.</span></span> <span data-ttu-id="ea7b4-155">표준 시간대의 표준 시간에서 일광 절약 시간으로 전환하는 것과 같이 클록 시간을 앞으로 조정하는 경우 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-155">It occurs when the clock time is adjusted forward in time, such as during the transition from a time zone's standard time to its daylight saving time.</span></span> <span data-ttu-id="ea7b4-156">예를 들어 특정 일의 오전 2시에 이 전환이 발생하고</span><span class="sxs-lookup"><span data-stu-id="ea7b4-156">For example, if this transition occurs on a particular day at 2:00 A.M.</span></span> <span data-ttu-id="ea7b4-157">시간이 오전 3시로 변경되면 오전 2시와</span><span class="sxs-lookup"><span data-stu-id="ea7b4-157">and causes the time to change to 3:00 A.M., each time interval between 2:00 A.M.</span></span> <span data-ttu-id="ea7b4-158">오전 2시 59분 99초 사이의 시간 간격은</span><span class="sxs-lookup"><span data-stu-id="ea7b4-158">and 2:59:99 A.M.</span></span> <span data-ttu-id="ea7b4-159">잘못되었습니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-159">is invalid.</span></span>
+<span data-ttu-id="ea7b4-160">전환 시간</span><span class="sxs-lookup"><span data-stu-id="ea7b4-160">Transition time</span></span> | <span data-ttu-id="ea7b4-161">특정 표준 시간대에서 일광 절약 시간제를 표준 시간으로 변경하거나 그 반대의 경우와 같은 특정 시간 변경에 대한 정보입니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-161">Information about a specific time change, such as the change from daylight saving time to standard time or vice versa, in a particular time zone.</span></span>
+
+## <a name="time-zones-and-the-timezoneinfo-class"></a><span data-ttu-id="ea7b4-162">표준 시간대 및 TimeZoneInfo 클래스</span><span class="sxs-lookup"><span data-stu-id="ea7b4-162">Time Zones and the TimeZoneInfo Class</span></span>
+
+<span data-ttu-id="ea7b4-163">.NET에서 [System.TimeZoneInfo](xref:System.TimeZoneInfo) 개체는 운영 체제에서 제공하는 정보에 따라 표준 시간대를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-163">In .NET, a [System.TimeZoneInfo](xref:System.TimeZoneInfo) object represents a time zone, based on information provided by the operating system.</span></span> <span data-ttu-id="ea7b4-164">운영 체제에 대한 [TimeZoneInfo](xref:System.TimeZoneInfo) 클래스의 종속성이란 표준 시간대 인식 응용 프로그램이 특정 표준 시간대를 모든 운영 체제에 정의했는지 확신할 수 없음을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-164">The dependence of the [TimeZoneInfo](xref:System.TimeZoneInfo) class on the operating system means that a time zone-aware application cannot be certain that a particular time zone is defined on all operating systems.</span></span> <span data-ttu-id="ea7b4-165">결과적으로 현지 표준 시간대 또는 UTC를 나타내는 표준 시간대 이외의 특정 표준 시간대를 인스턴스화하려면 예외 처리를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-165">As a result, the attempt to instantiate a specific time zone (other than the local time zone or the time zone that represents UTC) should use exception handling.</span></span> <span data-ttu-id="ea7b4-166">또한 필수 [TimeZoneInfo](xref:System.TimeZoneInfo) 개체를 인스턴스화할 수 없는 경우 응용 프로그램을 계속 진행하는 메서드를 제공해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-166">It should also provide some method of letting the application to continue if a required [TimeZoneInfo](xref:System.TimeZoneInfo) object cannot be instantiated.</span></span>
+
+<span data-ttu-id="ea7b4-167">각 표준 시간대가 기존 조정 규칙을 반영하는 UTC의 오프셋뿐만 아니라 UTC의 기본 오프셋을 특징으로 하기 때문에 표준 시간대의 시간은 다른 표준 시간대의 시간으로 쉽게 변환될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-167">Because each time zone is characterized by a base offset from UTC, as well as by an offset from UTC that reflects any existing adjustment rules, a time in one time zone can be easily converted to the time in another time zone.</span></span> <span data-ttu-id="ea7b4-168">이를 위해 [TimeZoneInfo](xref:System.TimeZoneInfo) 개체는 다음을 비롯한 여러 가지 변환 메서드를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-168">For this purpose, the [TimeZoneInfo](xref:System.TimeZoneInfo) object includes several conversion methods, including:</span></span>
+
+* <span data-ttu-id="ea7b4-169">[ConvertTime(DateTime, TimeZoneInfo)](xref:System.TimeZoneInfo.ConvertTime(System.DateTime,System.TimeZoneInfo)), [System.DateTime](xref:System.DateTime)을 특정 표준 시간대의 시간으로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-169">[ConvertTime(DateTime, TimeZoneInfo)](xref:System.TimeZoneInfo.ConvertTime(System.DateTime,System.TimeZoneInfo)), which converts a [System.DateTime](xref:System.DateTime) to the time in a particular time zone.</span></span>
+
+* <span data-ttu-id="ea7b4-170">[ConvertTime(DateTime, TimeZoneInfo, TimeZoneInfo)](xref:System.TimeZoneInfo.ConvertTime(System.DateTime,System.TimeZoneInfo,System.TimeZoneInfo)), [DateTime](xref:System.DateTime)을 한 표준 시간대에서 다른 표준 시간대로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-170">[ConvertTime(DateTime, TimeZoneInfo, TimeZoneInfo)](xref:System.TimeZoneInfo.ConvertTime(System.DateTime,System.TimeZoneInfo,System.TimeZoneInfo)), which converts a [DateTime](xref:System.DateTime) from one time zone to another.</span></span>
+
+* <span data-ttu-id="ea7b4-171">[ConvertTime(DateTimeOffset, TimeZoneInfo)](xref:System.TimeZoneInfo.ConvertTime(System.DateTimeOffset,System.TimeZoneInfo)), [System.DateTimeOffset](xref:System.DateTimeOffset)을 특정 표준 시간대의 시간으로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-171">[ConvertTime(DateTimeOffset, TimeZoneInfo)](xref:System.TimeZoneInfo.ConvertTime(System.DateTimeOffset,System.TimeZoneInfo)), which converts a [System.DateTimeOffset](xref:System.DateTimeOffset) to the time in a particular time zone.</span></span> 
+
+<span data-ttu-id="ea7b4-172">표준 시간대 간의 시간 변환에 대한 세부 정보는 [표준 시간대 간의 시간 변환](converting-between-time-zones.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ea7b4-172">For details on converting times between time zones, see [Converting times between time zones](converting-between-time-zones.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="ea7b4-173">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ea7b4-173">See Also</span></span>
+
+[<span data-ttu-id="ea7b4-174">날짜, 시간 및 표준 시간대</span><span class="sxs-lookup"><span data-stu-id="ea7b4-174">Dates, times, and time zones</span></span>](index.md)

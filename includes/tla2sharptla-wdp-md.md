@@ -1,1 +1,1 @@
-Windows 미디어 사진
+<span data-ttu-id="3423d-101">Windows 미디어 사진</span><span class="sxs-lookup"><span data-stu-id="3423d-101">Windows Media Photo</span></span>

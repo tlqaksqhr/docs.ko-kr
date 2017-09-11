@@ -37,20 +37,20 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="new-c-reference"></a>new(C# 참조)
-C#에서는 `new` 키워드를 연산자, 한정자 또는 제약 조건으로 사용할 수 있습니다.  
+# <a name="new-c-reference"></a><span data-ttu-id="07d71-102">new(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="07d71-102">new (C# Reference)</span></span>
+<span data-ttu-id="07d71-103">C#에서는 `new` 키워드를 연산자, 한정자 또는 제약 조건으로 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07d71-103">In C#, the `new` keyword can be used as an operator, a modifier, or a constraint.</span></span>  
   
- [new 연산자](../../../csharp/language-reference/keywords/new-operator.md)  
- 개체를 만들고 생성자를 호출하는 데 사용됩니다.  
+ [<span data-ttu-id="07d71-104">new 연산자</span><span class="sxs-lookup"><span data-stu-id="07d71-104">new Operator</span></span>](../../../csharp/language-reference/keywords/new-operator.md)  
+ <span data-ttu-id="07d71-105">개체를 만들고 생성자를 호출하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="07d71-105">Used to create objects and invoke constructors.</span></span>  
   
- [new 한정자](../../../csharp/language-reference/keywords/new-modifier.md)  
- 기본 클래스 멤버에서 상속된 멤버를 숨기는 데 사용됩니다.  
+ [<span data-ttu-id="07d71-106">new 한정자</span><span class="sxs-lookup"><span data-stu-id="07d71-106">new Modifier</span></span>](../../../csharp/language-reference/keywords/new-modifier.md)  
+ <span data-ttu-id="07d71-107">기본 클래스 멤버에서 상속된 멤버를 숨기는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="07d71-107">Used to hide an inherited member from a base class member.</span></span>  
   
- [new 제약 조건](../../../csharp/language-reference/keywords/new-constraint.md)  
- 제네릭 선언의 형식 매개 변수에 대한 인수로 사용할 수 있는 형식을 제한하는 데 사용됩니다.  
+ [<span data-ttu-id="07d71-108">new 제약 조건</span><span class="sxs-lookup"><span data-stu-id="07d71-108">new Constraint</span></span>](../../../csharp/language-reference/keywords/new-constraint.md)  
+ <span data-ttu-id="07d71-109">제네릭 선언의 형식 매개 변수에 대한 인수로 사용할 수 있는 형식을 제한하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="07d71-109">Used to restrict types that might be used as arguments for a type parameter in a generic declaration.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="07d71-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="07d71-110">See Also</span></span>  
+ <span data-ttu-id="07d71-111">[C# 참조](../../../csharp/language-reference/index.md) </span><span class="sxs-lookup"><span data-stu-id="07d71-111">[C# Reference](../../../csharp/language-reference/index.md) </span></span>  
+ <span data-ttu-id="07d71-112">[C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="07d71-112">[C# Programming Guide](../../../csharp/programming-guide/index.md) </span></span>  
+ [<span data-ttu-id="07d71-113">C# 키워드</span><span class="sxs-lookup"><span data-stu-id="07d71-113">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)
 

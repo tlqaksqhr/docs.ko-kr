@@ -28,20 +28,20 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 06/08/2017
 
 ---
-# <a name="advanced-windows-presentation-foundation"></a>고급(Windows Presentation Foundation)
-이 섹션의 WPF에서 일부 고급 영역을 설명합니다.  
+# <a name="advanced-windows-presentation-foundation"></a><span data-ttu-id="b81ac-102">고급(Windows Presentation Foundation)</span><span class="sxs-lookup"><span data-stu-id="b81ac-102">Advanced (Windows Presentation Foundation)</span></span>
+<span data-ttu-id="b81ac-103">이 섹션의 WPF에서 일부 고급 영역을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="b81ac-103">This section describes some of the advanced areas in WPF.</span></span>  
   
-## <a name="in-this-section"></a>단원 내용  
- [WPF 아키텍처](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
- [기본 요소](../../../../docs/framework/wpf/advanced/base-elements.md)  
- [요소 트리 및 Serialization](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
- [끌어서 놓기](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
- [문서](../../../../docs/framework/wpf/advanced/documents.md)  
- [전역화 및 지역화](../../../../docs/framework/wpf/advanced/globalization-and-localization.md)  
- [마이그레이션 및 상호 운용성](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- [성능](../../../../docs/framework/wpf/advanced/performance.md)  
- [스레딩 모델](../../../../docs/framework/wpf/advanced/threading-model.md)  
- [WPF 추가 기능 개요](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)  
- [관리되지 않는 WPF API 참조](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)  
+## <a name="in-this-section"></a><span data-ttu-id="b81ac-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="b81ac-104">In This Section</span></span>  
+ [<span data-ttu-id="b81ac-105">WPF 아키텍처</span><span class="sxs-lookup"><span data-stu-id="b81ac-105">WPF Architecture</span></span>](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
+<span data-ttu-id="b81ac-106"> [기본 요소](../../../../docs/framework/wpf/advanced/base-elements.md)</span><span class="sxs-lookup"><span data-stu-id="b81ac-106"> [Base Elements](../../../../docs/framework/wpf/advanced/base-elements.md)</span></span>  
+<span data-ttu-id="b81ac-107"> [요소 트리 및 Serialization](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)</span><span class="sxs-lookup"><span data-stu-id="b81ac-107"> [Element Tree and Serialization](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)</span></span>  
+<span data-ttu-id="b81ac-108"> [끌어서 놓기](../../../../docs/framework/wpf/advanced/drag-and-drop.md)</span><span class="sxs-lookup"><span data-stu-id="b81ac-108"> [Drag and Drop](../../../../docs/framework/wpf/advanced/drag-and-drop.md)</span></span>  
+<span data-ttu-id="b81ac-109"> [문서](../../../../docs/framework/wpf/advanced/documents.md)</span><span class="sxs-lookup"><span data-stu-id="b81ac-109"> [Documents](../../../../docs/framework/wpf/advanced/documents.md)</span></span>  
+<span data-ttu-id="b81ac-110"> [전역화 및 지역화](../../../../docs/framework/wpf/advanced/globalization-and-localization.md)</span><span class="sxs-lookup"><span data-stu-id="b81ac-110"> [Globalization and Localization](../../../../docs/framework/wpf/advanced/globalization-and-localization.md)</span></span>  
+<span data-ttu-id="b81ac-111"> [마이그레이션 및 상호 운용성](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)</span><span class="sxs-lookup"><span data-stu-id="b81ac-111"> [Migration and Interoperability](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)</span></span>  
+<span data-ttu-id="b81ac-112"> [성능](../../../../docs/framework/wpf/advanced/performance.md)</span><span class="sxs-lookup"><span data-stu-id="b81ac-112"> [Performance](../../../../docs/framework/wpf/advanced/performance.md)</span></span>  
+<span data-ttu-id="b81ac-113"> [스레딩 모델](../../../../docs/framework/wpf/advanced/threading-model.md)</span><span class="sxs-lookup"><span data-stu-id="b81ac-113"> [Threading Model](../../../../docs/framework/wpf/advanced/threading-model.md)</span></span>  
+<span data-ttu-id="b81ac-114"> [WPF 추가 기능 개요](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)</span><span class="sxs-lookup"><span data-stu-id="b81ac-114"> [WPF Add-Ins Overview](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)</span></span>  
+<span data-ttu-id="b81ac-115"> [관리되지 않는 WPF API 참조](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)</span><span class="sxs-lookup"><span data-stu-id="b81ac-115"> [Unmanaged WPF API Reference](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)</span></span>  
   
-## <a name="related-sections"></a>관련 단원
+## <a name="related-sections"></a><span data-ttu-id="b81ac-116">관련 단원</span><span class="sxs-lookup"><span data-stu-id="b81ac-116">Related Sections</span></span>

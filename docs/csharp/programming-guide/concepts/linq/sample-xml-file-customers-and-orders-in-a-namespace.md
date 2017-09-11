@@ -26,10 +26,10 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/28/2017
 
 ---
-# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>샘플 XML 파일: 네임스페이스의 Customers 및 Orders
-다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다. 이 파일에는 고객과 주문이 포함되어 있습니다. XML은 네임스페이스에 있습니다.  
+# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a><span data-ttu-id="bcfe8-102">샘플 XML 파일: 네임스페이스의 Customers 및 Orders</span><span class="sxs-lookup"><span data-stu-id="bcfe8-102">Sample XML File: Customers and Orders in a Namespace</span></span>
+<span data-ttu-id="bcfe8-103">다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="bcfe8-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="bcfe8-104">이 파일에는 고객과 주문이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bcfe8-104">This file contains customers and orders.</span></span> <span data-ttu-id="bcfe8-105">XML은 네임스페이스에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bcfe8-105">The XML is in a namespace.</span></span>  
   
-## <a name="customersordersinnamespacexml"></a>CustomersOrdersInNamespace.xml  
+## <a name="customersordersinnamespacexml"></a><span data-ttu-id="bcfe8-106">CustomersOrdersInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="bcfe8-106">CustomersOrdersInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -447,6 +447,6 @@ ms.lasthandoff: 07/28/2017
 </Root>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [샘플 XML 문서(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="bcfe8-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="bcfe8-107">See Also</span></span>  
+ [<span data-ttu-id="bcfe8-108">샘플 XML 문서(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="bcfe8-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
 

@@ -20,18 +20,19 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: b037b1aca378dc8a765fdc54746ace27703cee9f
-ms.lasthandoff: 03/13/2017
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 9f5b8ebb69c9206ff90b05e748c64d29d82f7a16
+ms.openlocfilehash: c2b512695052485e6c19f44d3e53cd14b04d0f07
+ms.contentlocale: ko-kr
+ms.lasthandoff: 04/12/2017
 
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>방법: 문자열 컬렉션 (Visual Basic) (LINQ) 결합 및 비교
-이 예제에는 다음 결과 정렬 및 텍스트 줄을 포함 하는 파일을 병합 하는 방법을 보여 줍니다. 특히, 텍스트 줄의 두 집합에는 간단한 연결, 공용 구조체 및 교차를 수행 하는 방법을 보여 줍니다.  
+# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a><span data-ttu-id="ce21c-102">방법: 문자열 컬렉션 (Visual Basic) (LINQ) 결합 및 비교</span><span class="sxs-lookup"><span data-stu-id="ce21c-102">How to: Combine and Compare String Collections (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="ce21c-103">이 예제에는 다음 결과 정렬 및 텍스트 줄을 포함 하는 파일을 병합 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ce21c-103">This example shows how to merge files that contain lines of text and then sort the results.</span></span> <span data-ttu-id="ce21c-104">특히, 텍스트 줄의 두 집합에는 간단한 연결, 공용 구조체 및 교차를 수행 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ce21c-104">Specifically, it shows how to perform a simple concatenation, a union, and an intersection on the two sets of text lines.</span></span>  
   
-### <a name="to-set-up-the-project-and-the-text-files"></a>프로젝트 및 텍스트 파일을 설정 하려면  
+### <a name="to-set-up-the-project-and-the-text-files"></a><span data-ttu-id="ce21c-105">프로젝트 및 텍스트 파일을 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="ce21c-105">To set up the project and the text files</span></span>  
   
-1.  Names1.txt 라는 텍스트 파일에이 이름을 복사 하 고 프로젝트 폴더에 저장 합니다.  
+1.  <span data-ttu-id="ce21c-106">Names1.txt 라는 텍스트 파일에이 이름을 복사 하 고 프로젝트 폴더에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="ce21c-106">Copy these names into a text file that is named names1.txt and save it in your project folder:</span></span>  
   
     ```  
     Bankov, Peter  
@@ -46,7 +47,7 @@ ms.lasthandoff: 03/13/2017
     Garcia, Debra  
     ```  
   
-2.  Names2.txt 라는 텍스트 파일에이 이름을 복사 하 고 프로젝트 폴더에 저장 합니다. 두 파일 이름이 지 몇 가지 공통 참고 합니다.  
+2.  <span data-ttu-id="ce21c-107">Names2.txt 라는 텍스트 파일에이 이름을 복사 하 고 프로젝트 폴더에 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="ce21c-107">Copy these names into a text file that is named names2.txt and save it in your project folder.</span></span> <span data-ttu-id="ce21c-108">두 파일 이름이 지 몇 가지 공통 참고 합니다.</span><span class="sxs-lookup"><span data-stu-id="ce21c-108">Note that the two files have some names in common.</span></span>  
   
     ```  
     Liu, Jinghao  
@@ -61,7 +62,7 @@ ms.lasthandoff: 03/13/2017
     El Yassir, Mehdi  
     ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a><span data-ttu-id="ce21c-109">예제</span><span class="sxs-lookup"><span data-stu-id="ce21c-109">Example</span></span>  
   
 ```vb  
 Class ConcatenateStrings  
@@ -179,9 +180,9 @@ End Class
 ' 2 total names in list  
 ```  
   
-## <a name="compiling-the-code"></a>코드 컴파일  
- .NET Framework 버전 3.5 이상 System.Core.dll에 대 한 참조를 대상으로 하는 프로젝트 만들기 및 `Imports` 는 System.Linq 네임 스페이스에 대 한 정보입니다.  
+## <a name="compiling-the-code"></a><span data-ttu-id="ce21c-110">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="ce21c-110">Compiling the Code</span></span>  
+ <span data-ttu-id="ce21c-111">.NET Framework 버전 3.5 이상 System.Core.dll에 대 한 참조를 대상으로 하는 프로젝트 만들기 및 `Imports` 는 System.Linq 네임 스페이스에 대 한 정보입니다.</span><span class="sxs-lookup"><span data-stu-id="ce21c-111">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ 및 파일 디렉터리 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="ce21c-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ce21c-112">See Also</span></span>  
+ <span data-ttu-id="ce21c-113">[LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md) </span><span class="sxs-lookup"><span data-stu-id="ce21c-113">[LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md) </span></span>  
+<span data-ttu-id="ce21c-114"> [LINQ 및 파일 디렉터리 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span><span class="sxs-lookup"><span data-stu-id="ce21c-114"> [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)</span></span>
