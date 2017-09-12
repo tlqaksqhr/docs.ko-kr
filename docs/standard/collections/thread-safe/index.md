@@ -16,10 +16,10 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8d0fa0af8f6a78a6d209fdb4956cbbe9448b5204
+ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
+ms.openlocfilehash: 19ecc67b38e2eab52994fb278211c6d9ff67ae7e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="thread-safe-collections"></a>스레드로부터 안전한 컬렉션
@@ -55,7 +55,7 @@ ms.lasthandoff: 07/28/2017
   
 |제목|설명|  
 |-----------|-----------------|  
-|[BlockingCollection 개요](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)|<xref:System.Collections.Concurrent.BlockingCollection%601> 형식에서 제공하는 기능에 관해 설명합니다.|  
+|[BlockingCollection 개요](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)|<xref:System.Collections.Concurrent.BlockingCollection%601> 형식에서 제공하는 기능에 대해 설명합니다.|  
 |[방법: ConcurrentDictionary에서 항목 추가 및 제거](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|<xref:System.Collections.Concurrent.ConcurrentDictionary%602>에서 요소를 추가하고 제거하는 방법에 관해 설명합니다.|  
 |[방법: BlockingCollection에서 개별적으로 항목 추가 및 가져오기](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)|읽기 전용 열거자를 사용하지 않고 차단 컬렉션에서 항목을 추가하고 검색하는 방법에 대해 설명합니다.|  
 |[방법: 컬렉션에 경계 및 차단 기능 추가](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md)|컬렉션 클래스를 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601> 컬렉션에 대한 기본 저장소 메커니즘으로 사용하는 방법에 대해 설명합니다.|  
