@@ -20,7 +20,7 @@ ms.lasthandoff: 08/29/2017
 
 .NET Core는 [Windows](#windows), [Linux](#linux) 및 [macOS/OS X](#os-x--macos)에서 실행됩니다.
 
-## <a name="windows"></a>창
+## <a name="windows"></a>Windows
 
 [Windows](https://www.microsoft.com/net/core#windows)에 .NET Core를 설치합니다. 
 
