@@ -13,10 +13,10 @@ caps.latest.revision: 69
 author: mairaw
 ms.author: mairaw
 ms.translationtype: HT
-ms.sourcegitcommit: 20b0c1b36f705deb2f46ef4ab23653f829faf7ca
-ms.openlocfilehash: 8a0395e28c01363eed27f327ea623feb4832c844
+ms.sourcegitcommit: 93f77dd5c3ca61935ae98ddef15f9c5cf7644bbb
+ms.openlocfilehash: e9c8dcfacff689761d9ec891db8a1a4756acece0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 08/08/2017
   
 - [.NET Framework 3.5 설치 관리자 다운로드](http://www.microsoft.com/en-us/download/details.aspx?id=21) (참고: Windows 업데이트를 호출하는 설치 관리자로 .NET Framework를 직접 다운로드하지 않습니다.)  
   
-설치 중 0x800f0906, 0x800f0907 또는 0x800f081f 오류가 발생할 수 있습니다. 이 경우 [.NET Framework 3.5 설치 오류: 0x800f0906, 0x800f0907 또는 0x800f081f](https://support.microsoft.com/en-us/kb/2734782)를 참조하세요. [보안 업데이트 3005628](https://support.microsoft.com/kb/3005628)을 설치하여 이러한 오류를 해결할 수 있습니다.  
+설치 중 0x800f0906, 0x800f0907 또는 0x800f081f 오류가 발생할 수 있습니다. 이 경우 [.NET Framework 3.5 설치 오류: 0x800f0906, 0x800f0907 또는 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09)를 참조하세요. [보안 업데이트 3005628](https://support.microsoft.com/kb/3005628)을 설치하여 이러한 오류를 해결할 수 있습니다.  
   
 위의 방법이 실패하거나 인터넷에 연결되지 않은 경우 Windows 설치 미디어를 사용해야 할 수 있습니다. 자세한 내용은 [.NET Framework 3.5 설치 오류 문서](https://support.microsoft.com/en-us/kb/2734782)에서 오류 0x800f0906에 대한 방법 3을 참조하세요. 설치 미디어가 없는 경우 [Windows 8.1용 설치 미디어 만들기](http://windows.microsoft.com/en-US/windows-8/create-reset-refresh-media?woldogcb=0)를 참조하세요.  
   
