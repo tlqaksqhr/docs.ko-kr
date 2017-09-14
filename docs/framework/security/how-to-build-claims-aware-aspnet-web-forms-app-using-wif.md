@@ -1,73 +1,79 @@
 ---
-title: "방법: WIF를 사용하여 클레임 인식 ASP.NET Web Forms 응용 프로그램 빌드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "방법: WIF를 사용하여 클레임 인식 ASP.NET Web Forms 응용 프로그램 빌드"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 caps.latest.revision: 7
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d5b81e20ed1b39c7750329718729905484eb7fa1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
+
 ---
-# 방법: WIF를 사용하여 클레임 인식 ASP.NET Web Forms 응용 프로그램 빌드
-## 적용 대상  
+# <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>방법: WIF를 사용하여 클레임 인식 ASP.NET Web Forms 응용 프로그램 빌드
+## <a name="applies-to"></a>적용 대상  
   
--   Microsoft ® Windows ® Identity Foundation \(소리치 더\)  
+-   Microsoft® Windows® Identity Foundation(WIF)  
   
 -   ASP.NET® Web Forms  
   
-## 요약  
- 이 방법 간단한 클레임 인식 ASP.NET Web Forms 응용 프로그램을 만들기 위한 자세한 단계별 절차를 제공 합니다.  또한 클레임 인식 간단한 ASP.NET Web Forms 응용 프로그램을 페더레이션된 인증의 성공적인 구현 테스트 하는 방법에 대 한 지침을 제공 합니다.  이 보안 토큰 서비스 \(STS\)을 만드는 방법을 자세하게 설명 하지 않은 방법과 STS를 이미 구성한 것으로 가정 합니다.  
+## <a name="summary"></a>요약  
+ 이 방법은 간단한 클레임 인식 ASP.NET Web Forms 응용 프로그램을 만들기 위한 자세한 단계별 프로시저를 제공합니다. 또한 페더레이션 인증을 성공적으로 구현하기 위해 간단한 클레임 인식 ASP.NET Web Forms 응용 프로그램을 테스트하는 방법에 대한 지침을 제공합니다. 이 방법에 STS(보안 토큰 서비스)를 만들기 위한 자세한 지침은 없으며, STS를 이미 구성했다고 가정합니다.  
   
-## 내용  
+## <a name="contents"></a>목차  
   
 -   목표  
   
 -   단계 요약  
   
--   1 단계 – 간단한 ASP.NET 웹 폼 응용 프로그램 만들기  
+-   1단계 – 간단한 ASP.NET Web Forms 응용 프로그램 만들기  
   
--   2 단계 – ASP.NET 웹 폼 응용 프로그램에 클레임 기반 인증 구성  
+-   2단계 – 클레임 기반 인증에 대한 ASP.NET Web Forms 응용 프로그램 구성  
   
--   3 단계 – 솔루션 테스트  
+-   3단계 - 솔루션 테스트  
   
-## 목표  
+## <a name="objectives"></a>목표  
   
--   ASP.NET Web Forms 응용 프로그램에 클레임 기반 인증 구성  
+-   클레임 기반 인증에 대한 ASP.NET Web Forms 응용 프로그램 구성  
   
--   클레임 인식 ASP.NET Web Forms 응용 프로그램을 테스트 합니다.  
+-   성공적인 클레임 인식 ASP.NET Web Forms 응용 프로그램 테스트  
   
-## 단계 요약  
+## <a name="summary-of-steps"></a>단계 요약  
   
--   1 단계 – 간단한 ASP.NET 웹 폼 응용 프로그램 만들기  
+-   1단계 – 간단한 ASP.NET Web Forms 응용 프로그램 만들기  
   
--   2 단계 – ASP.NET 웹 폼 응용 프로그램을 페더레이션 인증 구성  
+-   2단계 - 페더레이션 인증에 대한 ASP.NET Web Forms 응용 프로그램 구성  
   
--   3 단계 – 솔루션 테스트  
+-   3단계 - 솔루션 테스트  
   
-## 1 단계 – 간단한 ASP.NET 웹 폼 응용 프로그램 만들기  
- 이 단계에서는 새 ASP.NET Web Forms 응용 프로그램을 만듭니다.  
+## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>1단계 – 간단한 ASP.NET Web Forms 응용 프로그램 만들기  
+ 이 단계에서는 새로운 ASP.NET Web Forms 응용 프로그램을 만듭니다.  
   
-#### 간단한 ASP.NET 응용 프로그램을 만들려면  
+#### <a name="to-create-a-simple-aspnet-application"></a>간단한 ASP.NET 응용 프로그램을 만들려면  
   
-1.  Visual Studio 시작 하 고 클릭  **파일**,  **New**, 다음  **프로젝트**.  
+1.  Visual Studio를 시작하고 **파일**, **새로 만들기**, **프로젝트**를 차례로 클릭합니다.  
   
-2.  에  **새 프로젝트** 창에서 클릭  **ASP.NET 웹 폼 응용 프로그램**.  
+2.  **새 프로젝트** 창에서 **ASP.NET Web Forms 응용 프로그램**을 클릭합니다.  
   
-3.  In **Name**, enter `TestApp` and press **OK**.  
+3.  **이름**에서 `TestApp`을 입력하고 **확인**을 누릅니다.  
   
-## 2 단계 – ASP.NET 웹 폼 응용 프로그램에 클레임 기반 인증 구성  
- 이 단계에서는 구성 항목을 추가 합니다에  *Web.config* 클레임 인식 하도록 ASP.NET Web Forms 응용 프로그램의 구성 파일입니다.  
+## <a name="step-2--configure-aspnet-web-forms-application-for-claims-based-authentication"></a>2단계 – 클레임 기반 인증에 대한 ASP.NET Web Forms 응용 프로그램 구성  
+ 이 단계에서는 ASP.NET Web Forms 응용 프로그램의 *Web.config* 구성 파일에 구성 항목을 추가하여 클레임을 인식하도록 설정합니다.  
   
-#### ASP.NET 응용 프로그램에 클레임 기반 인증을 구성 하려면  
+#### <a name="to-configure-aspnet-application-for-claims-based-authentication"></a>클레임 기반 인증에 대한 ASP.NET 응용 프로그램을 구성하려면  
   
-1.  구성 섹션 항목 추가  *Web.config* 구성 파일 바로 뒤에 있는  **\<configuration\>** 시작 요소:  
+1.  *Web.config* 구성 파일의 **\<configuration>** 여는 요소 바로 뒤에 다음 구성 섹션 항목을 추가합니다.  
   
     ```xml  
     <configSections>  
@@ -76,7 +82,7 @@ caps.handback.revision: 7
     </configSections>  
     ```  
   
-2.  추가 된  **\<location\>** 요소는 응용 프로그램의 페더레이션 메타 데이터에 액세스할 수 있습니다.  
+2.  응용 프로그램의 페더레이션 메타데이터에 액세스할 수 있는 **\<location>** 요소를 추가합니다.  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -88,7 +94,7 @@ caps.handback.revision: 7
     </location>  
     ```  
   
-3.  다음 구성 항목에 추가 된  **\<system.web\>** 기본 인증을 사용 하지 않도록 설정 하 고 소리치 더 인증을 관리할 수 있도록 사용자를 거부 하는 요소.  
+3.  **\<system.web>** 요소 내에 다음 구성 항목을 추가하여 사용자를 거부하고, 기본 인증을 사용하지 않도록 설정하고, WIF로 인증을 관리합니다.  
   
     ```xml  
     <authorization>  
@@ -97,9 +103,9 @@ caps.handback.revision: 7
     <authentication mode="None" />  
     ```  
   
-4.  추가 된  **\<system.webServer\>** 페더레이션 인증 모듈을 정의 하는 요소입니다.  참고는   은  특성으로 동일 해야는   은  특성에 대 한의  **\<configSections\>** 항목 앞에 추가:  
+4.  페더레이션 인증에 대한 모듈을 정의하는 **\<system.webServer>** 요소를 추가합니다. *PublicKeyToken* 특성은 이전에 추가된 **\<configSections>** 항목에 대한 *PublicKeyToken* 특성과 동일해야 합니다.  
   
-    ```  
+    ```xml  
     <system.webServer>  
       <modules>  
         <add name="WSFederationAuthenticationModule" type="System.IdentityModel.Services.WSFederationAuthenticationModule, System.IdentityModel.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" preCondition="managedHandler" />  
@@ -108,7 +114,7 @@ caps.handback.revision: 7
     </system.webServer>  
     ```  
   
-5.  다음 Windows Identity 토대 관련 구성 항목 및 ASP.NET 응용 프로그램의 URL 및 포트 번호의 값과 일치 하는지 확인 하십시오 추가  **\<audienceUris\>** 항목을  **영역** 특성의는  **\<wsFederation\>** 요소와  **회신** 특성의의  **\<wsFederation\>** 요소.  또한 확인을  **발급자** 값에 맞는 보안 토큰 서비스 \(STS\) URL을.  
+5.  다음 Windows Identity Foundation 관련 구성 항목을 추가하고 ASP.NET 응용 프로그램의 URL 및 포트 번호가 **\<audienceUris>** 항목, **\<wsFederation>** 요소의 **realm** 특성 및 **\<wsFederation>** 요소의 **reply** 특성 값과 일치하는지 확인합니다. 또한 **issuer** 값이 STS(보안 토큰 서비스) URL과 일치하는지 확인합니다.  
   
     ```xml  
     <system.identityModel>  
@@ -132,16 +138,16 @@ caps.handback.revision: 7
     </system.identityModel.services>  
     ```  
   
-6.  추가 참조 하는 [System.IdentityModel](assetId:///System.IdentityModel?qualifyHint=False&amp;autoUpgrade=True) 어셈블리.  
+6.  <xref:System.IdentityModel> 어셈블리에 대한 참조를 추가합니다.  
   
-7.  오류가 있는지 확인 하는 솔루션을 컴파일하십시오.  
+7.  솔루션을 컴파일하여 오류가 없는지 확인합니다.  
   
-## 3 단계 – 솔루션 테스트  
- 이 단계에서 클레임 기반 인증을 위해 구성 ASP.NET Web Forms 응용 프로그램을 테스트 합니다.  기본 테스트를 수행 하려면 클레임 토큰이 발급 된 보안 토큰 서비스 \(STS에서\)를 표시 하는 코드를 추가 합니다.  
+## <a name="step-3--test-your-solution"></a>3단계 - 솔루션 테스트  
+ 이 단계에서는 클레임 기반 인증에 대해 구성된 ASP.NET Web Forms 응용 프로그램을 테스트합니다. 기본 테스트를 수행하려면 STS(보안 토큰 서비스)에서 발급된 토큰에 클레임을 표시하는 코드를 추가합니다.  
   
-#### 클레임 기반 인증을 위한 ASP.NET Web Form 응용 프로그램을 테스트 하려면  
+#### <a name="to-test-your-aspnet-web-form-application-for-claims-based-authentication"></a>클레임 기반 인증에 대한 ASP.NET Web Forms 응용 프로그램을 테스트하려면  
   
-1.  열기는  **Default.aspx** 파일에서  **TestApp** 프로젝트와 해당 기존 태그를 다음 태그로 바꿉니다.  
+1.  **TestApp** 프로젝트 아래에서 **Default.aspx** 파일을 열고 기존 태그를 다음 태그로 바꿉니다.  
   
     ```  
     %@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
@@ -163,12 +169,12 @@ caps.handback.revision: 7
     </html>  
     ```  
   
-2.  저장  **Default.aspx**를 클릭 한 다음 해당 코드 숨김 파일을 열고  **Default.aspx.cs**.  
+2.  **Default.aspx**를 저장하고 나서 **Default.aspx.cs**라는 코드 숨김 파일을 엽니다.  
   
     > [!NOTE]
-    >  **Default.aspx.cs** 아래에 숨겨져 있을 수 있습니다  **Default.aspx** 솔루션 탐색기에서입니다.  경우  **Default.aspx.cs** 표시 되지 확장  **Default.aspx** 옆에 있는 삼각형을 클릭 합니다.  
+    >  **Default.aspx.cs**는 솔루션 탐색기에서 **Default.aspx** 아래에 숨겨질 수 있습니다. **Default.aspx.cs**가 표시되지 않으면 옆에 있는 삼각형을 클릭하여 **Default.aspx**를 확장합니다.  
   
-3.  기존 코드를 대체는  **Page\_Load** 메서드의  **Default.aspx.cs** 다음 코드를:  
+3.  **Default.aspx.cs**의 **Page_Load** 메서드에 있는 기존 코드를 다음 코드로 바꿉니다.  
   
     ```csharp  
     using System;  
@@ -207,8 +213,9 @@ caps.handback.revision: 7
     }  
     ```  
   
-4.  저장  **Default.aspx.cs**, 및 솔루션을 빌드합니다.  
+4.  **Default.aspx.cs**를 저장하고 솔루션을 빌드합니다.  
   
-5.  키를 눌러 솔루션을 실행할의  **F5** 키.  
+5.  **F5** 키를 눌러 솔루션을 실행합니다.  
   
-6.  클레임을 보안 토큰 서비스에서 발급 된 토큰에 표시 된 페이지에 표시 됩니다.
+6.  STS(보안 토큰 서비스)에서 발급된 토큰에 클레임을 표시하는 페이지가 표시되어야 합니다.
+

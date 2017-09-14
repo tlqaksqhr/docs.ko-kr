@@ -1,56 +1,61 @@
 ---
-title: "openGenericCERCall MDA | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "MDAs (managed debugging assistants), CER calls"
-  - "open generic CER calls"
-  - "constrained execution regions"
-  - "openGenericCERCall MDA"
-  - "CER calls"
-  - "managed debugging assistants (MDAs), CER calls"
-  - "generics [.NET Framework], open generic CER calls"
+title: openGenericCERCall MDA
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- MDAs (managed debugging assistants), CER calls
+- open generic CER calls
+- constrained execution regions
+- openGenericCERCall MDA
+- CER calls
+- managed debugging assistants (MDAs), CER calls
+- generics [.NET Framework], open generic CER calls
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
 caps.latest.revision: 13
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 13
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 347f9efcf1b0cdaf9cd37bcf6045a42341e4f643
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
+
 ---
-# openGenericCERCall MDA
-루트 메서드에서 제네릭 형식 변수를 가진 CER\(제약이 있는 실행 영역\) 그래프가 JIT 컴파일 또는 네이티브 이미지 생성 시간에 처리되는 중이며, 하나 이상의 제네릭 형식 변수가 개체 참조 형식임을 경고하기 위해 `openGenericCERCall` MDA\(관리 디버깅 도우미\)가 활성화됩니다.  
+# <a name="opengenericcercall-mda"></a>openGenericCERCall MDA
+루트 메서드에서 제네릭 형식 변수를 사용하는 제약이 있는 실행 지역(CER) 그래프가 JIT 컴파일 또는 네이티브 이미지 생성 시에 처리되며 제네릭 형식 변수 중 하나 이상의 개체 참조 형식임을 경고하기 위해 `openGenericCERCall` 관리 디버깅 도우미가 활성화됩니다.  
   
-## 증상  
- 스레드가 중단되거나 응용 프로그램 도메인이 언로드될 때 CER 코드가 실행되지 않습니다.  
+## <a name="symptoms"></a>증상  
+ 스레드가 중단되거나 응용 프로그램 도메인이 언로드되면 CER 코드가 실행되지 않습니다.  
   
-## 원인  
- JIT 컴파일 시간에 개체 참조 형식이 들어 있는 인스턴스는 결과 코드가 공유되므로 하나의 표현일 뿐이며 각 개체 참조 형식 변수는 임의의 모든 개체 참조 형식이 될 수 있습니다.  이렇게 하면 일부 런타임 리소스의 준비를 미리 하지 않아도 됩니다.  
+## <a name="cause"></a>원인  
+ 결과적으로 생성되는 코드는 공유되며 각 개체 참조 형식 변수는 임의 개체 참조 형식일 수 있으므로 JIT 컴파일 시 개체 참조 형식을 포함하는 인스턴스는 대표일 뿐입니다. 따라서 런타임 리소스를 미리 준비하지 못할 수 있습니다.  
   
- 특히 제네릭 형식 변수가 있는 메서드는 백그라운드에서 리소스를 나중에 할당할 수 있습니다.  이러한 메서드를 제네릭 사전 항목이라고 합니다.  예를 들어 `List<T> list = new List<T>();` 문\(여기서 `T`는 제네릭 형식 변수임\)의 경우 런타임은 정확한 인스턴스\(예: `List<Object>, List<String>` `` 등\)를 조회하고 만들어야 합니다.  이 작업은 메모리 부족과 같은 개발자가 제어할 수 없는 다양한 이유로 인해 실패할 수 있습니다.  
+ 특히 제네릭 형식 변수를 사용하는 메서드는 백그라운드에서 리소스 할당을 지연시킬 수 있습니다. 이러한 항목은 제네릭 사전 항목이라고 합니다. 예를 들어, `T`가 제네릭 형식 변수인 `List<T> list = new List<T>();` 문의 경우 런타임 시 인스턴스를 검색하고 정확하게 생성해야 할 수도 있습니다(예: `List<Object>, List<String>` 등). 메모리 부족과 같이 개발자가 제어할 수 없는 다양한 이유 때문일 수 있습니다.  
   
- 이 MDA는 정확한 인스턴스가 있는 경우가 아닌 JIT 컴파일 시간에만 활성화되어야 합니다.  
+ 이 MDA는 정확한 인스턴스가 있을 때가 아니라 JIT 컴파일 시에만 활성화되어야 합니다.  
   
- 이 MDA가 활성화되면 잘못된 인스턴스에 대해 CER가 작동하지 않는 증상이 나타날 수 있습니다.  사실상 런타임은 MDA가 활성화되는 환경에서 CER를 구현하지 않습니다.  따라서 개발자가 CER의 공유 인스턴스를 사용하는 경우 사용되는 CER 영역 내에서 JIT 컴파일 오류, 제네릭 형식 로딩 오류 또는 스레드 중단은 확인되지 않습니다.  
+ 이 MDA가 활성화되면 잘못된 인스턴스에 대해 CER이 작동하지 않는 증상이 발생할 가능성이 큽니다. 실제로 MDA를 활성화하게 한 환경에서 런타임 시 CER을 구현하지 않았습니다. 따라서 개발자가 CER의 공유 인스턴스를 사용하는 경우, 의도된 CER 지역 내의 JIT 컴파일 오류, 제네릭 형식 로딩 오류 또는 스레드 중단이 발견되지 않습니다.  
   
-## 해결  
- CER가 포함되어 있을 수 있는 메서드에 개체 참조 형식으로 된 제네릭 형식 변수는 사용하지 마십시오.  
+## <a name="resolution"></a>해결  
+ CER을 포함할 수 있는 메서드의 개체 참조 형식인 제네릭 형식 변수를 사용하지 마세요.  
   
-## 런타임 효과  
- 이 MDA는 CLR에 아무런 영향을 주지 않습니다.  
+## <a name="effect-on-the-runtime"></a>런타임에 대한 영향  
+ 이 MDA는 CLR에 아무런 영향을 미치지 않습니다.  
   
-## Output  
+## <a name="output"></a>출력  
  다음은 이 MDA의 출력 샘플입니다.  
   
  `Method 'GenericMethodWithCer', which contains at least one constrained execution region, cannot be prepared automatically since it has one or more unbound generic type parameters.`  
@@ -61,9 +66,9 @@ caps.handback.revision: 13
   
  `declaringType name="OpenGenericCERCall"`  
   
-## Configuration  
+## <a name="configuration"></a>구성  
   
-```  
+```xml  
 <mdaConfig>  
   <assistants>  
     <openGenericCERCall/>  
@@ -71,7 +76,7 @@ caps.handback.revision: 13
 </mdaConfig>  
 ```  
   
-## 예제  
+## <a name="example"></a>예제  
  CER 코드가 실행되지 않습니다.  
   
 ```  
@@ -116,7 +121,8 @@ class Program
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>   
  <xref:System.Runtime.ConstrainedExecution>   
- [Diagnosing Errors with Managed Debugging Assistants](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+ [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+

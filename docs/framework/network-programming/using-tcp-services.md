@@ -1,43 +1,48 @@
 ---
-title: "TCP 서비스 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "인터넷에서 데이터 요청, TCP"
-  - "데이터 받기, TCP"
-  - "TcpClient 클래스, TcpClient 클래스 정보"
-  - "데이터 요청, TCP"
-  - "응용 프로그램 프로토콜, TCP"
-  - "네트워크 리소스, TCP"
-  - "데이터 보내기, TCP"
-  - "TCP"
-  - "프로토콜, TCP "
-  - "인터넷, TCP"
+title: "TCP 서비스 사용"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- requesting data from Internet, TCP
+- receiving data, TCP
+- TcpClient class, about TcpClient class
+- data requests, TCP
+- application protocols, TCP
+- network resources, TCP
+- sending data, TCP
+- TCP
+- protocols, TCP
+- Internet, TCP
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
 caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: f462e99ecc78ddd6bcf3f231f712da8b04c71850
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
+
 ---
-# TCP 서비스 사용
-<xref:System.Net.Sockets.TcpClient> 클래스는 TCP를 사용 하 여 인터넷 리소스에서 데이터를 요청 합니다.  메서드 및 속성의  **TcpClient** 만들기에 대 한 세부 정보를 추상화는 <xref:System.Net.Sockets.Socket> 요청 및 TCP를 사용 하 여 데이터를 수신 합니다.  원격 장치에 연결을 스트림으로 표시 되므로 데이터 읽기 및.NET Framework 스트림을 처리 하는 방법에 기록 합니다.  
+# <a name="using-tcp-services"></a>TCP 서비스 사용
+<xref:System.Net.Sockets.TcpClient> 클래스는 TCP를 사용하여 인터넷 리소스의 데이터를 요청합니다. **TcpClient**의 메서드 및 속성은 TCP를 사용하여 데이터를 요청 및 수신하는 <xref:System.Net.Sockets.Socket>을 만들기 위한 세부 정보를 추상화합니다. 원격 장치에 대한 연결은 스트림으로 표현되므로 .NET Framework 스트림 처리 기법을 사용하여 데이터를 읽고 쓸 수 있습니다.  
   
- TCP 프로토콜은 원격 끝점과 연결 및 다음 해당 연결을 사용 하 여 데이터 패킷을 주고받을 수 있습니다.  TCP는 데이터 패킷을 끝점에 전송 되며 도착 하면 올바른 순서로 어셈블 할 책임입니다.  
+ TCP 프로토콜은 원격 끝점에 연결한 후 해당 연결을 사용하여 데이터 패킷을 주고받습니다. TCP는 데이터 패킷이 끝점으로 전송되고 도착 시 올바른 순서로 어셈블되도록 합니다.  
   
- TCP 연결을 설정 하려면 필요한 서비스를 호스팅하는 네트워크 장치의 주소를 알고 있어야 하 고 통신 하는 서비스를 사용 하는 TCP 포트를 알아야 합니다.  인터넷 할당 번호 기관 \(Iana\) 공통 서비스 \(www.iana.org\/assignments\/port\-numbers 참조\)에 대 한 포트 번호를 정의 합니다.  Iana 목록에 없는 서비스 포트 번호는 1024에서 65535 범위에 있을 수 있습니다.  
+ TCP 연결을 설정하려면 필요한 서비스를 호스트하는 네트워크 장치의 주소를 알고 있어야 하고 서비스가 통신에 사용하는 TCP 포트를 알고 있어야 합니다. Iana(Internet Assigned Numbers Authority)는 공통 서비스의 포트 번호를 정의합니다(www.iana.org/assignments/port-numbers 참조). Iana 목록에 없는 서비스에는 1,024~65,535 범위의 포트 번호를 사용할 수 있습니다.  
   
- 설정 하는 다음 예제를 보여 줍니다.를  **TcpClient** TCP 포트 13 시간 서버에 연결 합니다.  
+ 다음 예제에서는 TCP 포트 13에서 시간 서버에 연결하도록 **TcpClient**를 설정하는 방법을 보여 줍니다.  
   
 ```vb  
 Imports System  
@@ -74,7 +79,6 @@ Public Class TcpTimeClient
         Return 0  
     End Function 'Main  
 End Class 'TcpTimeClient  
-  
 ```  
   
 ```csharp  
@@ -108,9 +112,9 @@ public class TcpTimeClient {
 }  
 ```  
   
- <xref:System.Net.Sockets.TcpListener>들어오는 요청에 대 한 TCP 포트를 모니터링 하 고 하나를 만드는 데는  **소켓** 또는  **TcpClient** 는 클라이언트 연결을 관리 합니다.  <xref:System.Net.Sockets.TcpListener.Start%2A> 메서드 있습니다 수신, 및 <xref:System.Net.Sockets.TcpListener.Stop%2A> 메서드를 사용 하지 않도록 설정 포트에서 수신 대기 합니다.  <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> 메서드는 들어오는 연결 요청을 받아 만듭니다는  **TcpClient** 요청을 처리 하 고 <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> 메서드는 들어오는 연결 요청을 받아 만듭니다는  **소켓** 요청을 처리할 수.  
+ <xref:System.Net.Sockets.TcpListener>는 TCP 포트에서 들어오는 요청을 모니터링한 다음 클라이언트에 대한 연결을 관리하는 **Socket** 또는 **TcpClient**를 만드는 데 사용됩니다. <xref:System.Net.Sockets.TcpListener.Start%2A> 메서드는 수신 대기를 사용하도록 설정하고, <xref:System.Net.Sockets.TcpListener.Stop%2A> 메서드는 포트에서 수신 대기를 사용하지 않도록 설정합니다. <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> 메서드는 들어오는 연결 요청을 허용하고 **TcpClient**를 만들어 요청을 처리하며, <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> 메서드는 들어오는 연결 요청을 허용하고 **Socket**을 만들어 요청을 처리합니다.  
   
- 다음 예제에서는 사용 하 여 네트워크 시간 서버를 만드는 방법을 보여 줍니다.을  **TcpListener** TCP 포트 13을 모니터링 합니다.  들어오는 연결 요청을 수락할 때 시간 서버 호스트 서버에서 현재 날짜와 시간으로 응답 합니다.  
+ 다음 예제에서는 **TcpListener**를 사용해서 네트워크 시간 서버를 만들어 TCP 포트 13을 모니터링하는 방법을 보여 줍니다. 들어오는 연결 요청이 허용되면 시간 서버가 호스트 서버의 현재 날짜 및 시간을 사용하여 응답합니다.  
   
 ```vb  
 Imports System  
@@ -202,5 +206,6 @@ public class TcpTimeServer {
 }  
 ```  
   
-## 참고 항목  
- [TCP\/UDP](../../../docs/framework/network-programming/tcp-udp.md)
+## <a name="see-also"></a>참고 항목  
+ 
+

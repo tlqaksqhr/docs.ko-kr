@@ -1,42 +1,47 @@
 ---
-title: "방법: COM에서 .NET 형식 참조 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "COM interop, 형식 라이브러리 가져오기"
-  - "COM interop, .NET 형식 참조"
-  - "형식 라이브러리 가져오기"
-  - "비관리 코드와의 상호 운용, 형식 라이브러리 가져오기"
-  - "비관리 코드와의 상호 운용, .NET 형식 참조"
-  - ".NET 형식 참조"
-  - "형식 라이브러리"
+title: "방법: COM에서 .NET 형식 참조"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- importing type library
+- COM interop, referencing .NET types
+- interoperation with unmanaged code, referencing .NET types
+- referencing .NET types
+- interoperation with unmanaged code, importing type library
+- type libraries
+- COM interop, importing type library
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
 caps.latest.revision: 7
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 7
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 345a698a4d45093dfb873a8303712a7bff5046cd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
+
 ---
-# 방법: COM에서 .NET 형식 참조
-클라이언트 및 서버 코드에서 COM과 .NET Framework 간의 차이는 거의 표시되지 않습니다.  이 때문에 Microsoft Visual Basic 클라이언트에서는 개체 메서드나 구문, 속성 필드 등을 다른 COM 개체와 마찬가지로 표시하는 개체 브라우저에서 .NET 개체를 볼 수 있습니다.  
+# <a name="how-to-reference-net-types-from-com"></a>방법: COM에서 .NET 형식 참조
+클라이언트 및 서버 코드의 관점에서 COM과 .NET Framework의 차이점은 크게 눈에 띄지 않습니다. Microsoft Visual Basic 클라이언트는 개체 메서드와 구문, 속성 및 필드를 정확히 다른 COM 개체인 것처럼 노출하는 개체 브라우저에서 .NET 개체를 볼 수 있습니다.  
   
- COM 형식 라이브러리에 메타데이터를 내보내는 데 동일한 도구를 사용하지만, C\+\+ 클라이언트의 경우에는 형식 라이브러리를 가져오는 프로세스가 조금 더 복잡합니다.  관리되지 않는 C\+\+ 클라이언트에서 .NET 개체 멤버를 참조하려면 **\#import** 지시문을 사용하여 TLB 파일\(Tlbexp.exe를 사용하여 만든 파일\)을 참조해야 합니다.  C\+\+에서 형식 라이브러리를 참조할 때는 **raw\_interfaces\_only** 옵션을 지정하거나 기본 클래스 라이브러리의 정의인 Mscorlib.tlb를 가져와야 합니다.  
+ 동일한 도구를 사용하여 메타데이터를 COM 형식 라이브러리로 내보내지만 C++ 클라이언트의 경우 형식 라이브러리를 가져오는 프로세스가 약간 더 복잡합니다. 관리되지 않는 C++ 클라이언트에서 .NET 개체 멤버를 참조하려면 **#import** 지시문을 사용하여 TLB 파일(Tlbexp.exe로 생성됨)을 참조합니다. C++에서 형식 라이브러리를 참조할 경우 **raw_interfaces_only** 옵션을 지정하거나 기본 클래스 라이브러리 Mscorlib.tlb의 정의를 가져와야 합니다.  
   
-### 라이브러리를 가져오려면  
+### <a name="to-import-a-library"></a>라이브러리를 가져오려면  
   
--   **\#import** 지시문에서 **raw\_interfaces\_only** 옵션을 지정합니다.  예를 들면 다음과 같습니다.  
+-   **#import** 지시문에서 **raw_interfaces_only** 옵션을 지정합니다. 예:  
   
     ```cpp  
     #import "..\LoanLib\LoanLib.tlb" raw_interfaces_only  
@@ -44,15 +49,16 @@ caps.handback.revision: 7
   
      또는  
   
--   Mscorlib.tlb에 대해 \#import 지시문을 포함합니다.  예를 들면 다음과 같습니다.  
+-   Mscorlib.tlb에 대한 #import 지시문을 포함합니다. 예:  
   
     ```cpp  
     #import "mscorlib.tlb"  
     #import "..\LoanLib\LoanLib.tlb"  
     ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [.NET Framework 구성 요소를 COM에 노출](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)   
  [COM에 어셈블리 등록](../../../docs/framework/interop/registering-assemblies-with-com.md)   
- [Calling a .NET Object](http://msdn.microsoft.com/ko-kr/40c9626c-aea6-4bad-b8f0-c1de462efd33)   
- [Deploying an Application for COM Access](http://msdn.microsoft.com/ko-kr/fb63564c-c1b9-4655-a094-a235625882ce)
+ [.NET 개체 호출](http://msdn.microsoft.com/en-us/40c9626c-aea6-4bad-b8f0-c1de462efd33)   
+ [COM 액세스를 위해 응용 프로그램 배포](http://msdn.microsoft.com/en-us/fb63564c-c1b9-4655-a094-a235625882ce)
+

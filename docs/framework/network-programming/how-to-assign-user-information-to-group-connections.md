@@ -1,30 +1,35 @@
 ---
-title: "방법: 그룹 연결에 사용자 정보 할당 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "방법: 그룹 연결에 사용자 정보 할당"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b148066a9de0d41c0f798ca35d94737a78746598
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
+
 ---
-# 방법: 그룹 연결에 사용자 정보 할당
-[코드 샘플](#tskhowtoassignuserinformationtogroupconnectionsanchor1)  
+# <a name="how-to-assign-user-information-to-group-connections"></a>방법: 그룹 연결에 사용자 정보 할당
+
   
- 다음 예제에서는 응용 프로그램 변수를 설정 한다고 가정 하 고 그룹 연결에 사용자 정보를 지정 하는 방법을 보여 줍니다.  *사용자 이름*,  *SecurelyStoredPassword*, 및  *도메인* 이 섹션의 코드를 호출 하기 전에 하는  *사용자 이름* 고유 합니다.  
+ 다음 예제에서는 이 코드 섹션이 호출되기 전에 응용 프로그램이 *UserName*, *SecurelyStoredPassword* 및 *Domain* 변수를 설정하고 *UserName*이 고유하다고 가정하여 사용자 정보를 그룹 연결에 할당하는 방법을 보여 줍니다.  
   
-### 그룹 연결에 사용자 정보 할당  
+### <a name="to-assign-user-information-to-a-group-connection"></a>그룹 연결에 사용자 정보를 할당하려면  
   
 1.  연결 그룹 이름을 만듭니다.  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 8
     Dim secureGroupName As [String] = Encoding.Default.GetString(updHash)  
     ```  
   
-2.  특정 URL에 대 한 요청을 만듭니다.  예를 들어, 다음 코드 URL에 대 한 요청을 만듭니다.`http://www.contoso.com.`  
+2.  특정 URL에 대한 요청을 만듭니다. 예를 들어 다음 코드는 URL `http://www.contoso.com.`에 대한 요청을 만듭니다.  
   
     ```csharp  
     WebRequest myWebRequest=WebRequest.Create("http://www.contoso.com");  
@@ -50,7 +55,7 @@ caps.handback.revision: 8
     Dim myWebRequest As WebRequest = WebRequest.Create("http://www.contoso.com")  
     ```  
   
-3.  웹 요청 및 통화에 대 한 자격 증명과 연결 그룹을 설정  **GetResponse**  를 검색 하는  **WebResponse** 개체입니다.  
+3.  웹 요청에 대한 자격 증명 및 연결 그룹 이름을 설정하고 **GetResponse**를 호출하여 **WebResponse** 개체를 검색합니다.  
   
     ```csharp  
     myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);   
@@ -64,14 +69,12 @@ caps.handback.revision: 8
     myWebRequest.ConnectionGroupName = secureGroupName  
   
     Dim myWebResponse As WebResponse = myWebRequest.GetResponse()  
-  
     ```  
   
-4.  응답 스트림을 WebRespose 개체를 사용한 후 닫습니다.  
+4.  WebRespose 개체를 사용한 후 응답 스트림을 닫습니다.  
   
     ```csharp  
     MyWebResponse.Close();  
-  
     ```  
   
     ```vb  
@@ -97,7 +100,6 @@ WebResponse myWebResponse=myWebRequest.GetResponse();
 // Insert the code that uses myWebResponse.  
   
 MyWebResponse.Close();  
-  
 ```  
   
 ```vb  
@@ -118,6 +120,7 @@ Dim myWebResponse As WebResponse = myWebRequest.GetResponse()
 MyWebResponse.Close()  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [연결 관리](../../../docs/framework/network-programming/managing-connections.md)   
  [연결 그룹화](../../../docs/framework/network-programming/connection-grouping.md)
+

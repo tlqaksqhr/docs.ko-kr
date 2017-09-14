@@ -1,36 +1,41 @@
 ---
-title: "COM Interop 샘플: .NET 클라이언트 및 COM 서버 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "COM interop, 샘플"
-  - "비관리 코드와의 상호 운용, 샘플"
+title: "COM Interop 샘플: .NET 클라이언트 및 COM 서버"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- interoperation with unmanaged code, samples
+- COM interop, samples
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
 caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 04e8f0297dca2099a793c4224898b7ffdaa16fba
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
+
 ---
-# COM Interop 샘플: .NET 클라이언트 및 COM 서버
-이 샘플에서는 [COM 서버](#cpconcominteropsamplenetclientcomserveranchor2)에 액세스하도록 빌드된 [.NET 클라이언트](#cpconcominteropsamplenetclientcomserveranchor1)에서 COM coclass의 인스턴스를 만들고 클래스 멤버를 호출하여 저당 계산을 수행하는 방법을 보여 줍니다.  
+# <a name="com-interop-sample-net-client-and-com-server"></a>COM Interop 샘플: .NET 클라이언트 및 COM 서버
+이 샘플에서는 [COM 서버](#cpconcominteropsamplenetclientcomserveranchor2)에 액세스하도록 빌드된 [.NET 클라이언트](#cpconcominteropsamplenetclientcomserveranchor1)가 COM coclass 인스턴스를 만들고 클래스 멤버를 호출하여 담보 대출 계산을 수행하는 방법을 보여 줍니다.  
   
- 이 예제에서, 클라이언트는 **Loan** coclass의 인스턴스를 만들어 호출한 후, 네 개의 인수\(이들 인수 중 하나는 0임\)를 인스턴스에 전달하고, 계산 내용을 보여 줍니다.  이 샘플의 코드 부분은 이 단원 전체에 사용됩니다.  
+ 이 예제에서 클라이언트는 **Loan** coclass 인스턴스를 만들고 호출한 다음 4개의 인수(4개 중 하나는 0임)를 인스턴스에 전달하고 계산 내용을 표시합니다. 이 샘플의 코드 조각이 이 섹션 전반에 표시됩니다.  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor1"></a>   
-## .NET 클라이언트  
+## <a name="net-client"></a>.NET 클라이언트  
   
 ```vb  
 Imports System  
@@ -101,7 +106,6 @@ Public Class LoanApp
         End While  
     End Sub  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -161,7 +165,7 @@ public class LoanApp {
 ```  
   
 <a name="cpconcominteropsamplenetclientcomserveranchor2"></a>   
-## COM Server  
+## <a name="com-server"></a>COM 서버  
   
 ```cpp  
 // Loan.cpp : Implementation of CLoan  
@@ -306,5 +310,6 @@ static double Round(double value, short digits)
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [.NET Framework에 COM 구성 요소 노출](../../../docs/framework/interop/exposing-com-components.md)
+

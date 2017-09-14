@@ -1,42 +1,47 @@
 ---
-title: "방법: 응용 프로그램에 대해 위치 기반 캐시 정책 설정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "명시적 캐시 동작 정의"
-  - "위치 기반 캐시 정책"
-  - "로컬 캐시"
-  - "요청 캐시 정책"
-  - "캐시[.NET Framework], 위치 기반 정책"
+title: "방법: 응용 프로그램에 대해 위치 기반 캐시 정책 설정"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- expliciting defining cache behavior
+- location-based cache policies
+- local cache
+- request cache policies
+- cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
 caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bcfd166b108dc0cf99381869e39952b09fcfca6b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
+
 ---
-# 방법: 응용 프로그램에 대해 위치 기반 캐시 정책 설정
-위치 기반 캐시 정책은 요청한 리소스의 위치를 기준으로 캐싱 동작을 명시적으로 정의 하는 응용 프로그램을 수 있습니다.  이 항목에서는 캐시 정책을 프로그래밍 방식으로 설정 하는 방법을 보여 줍니다.  정책 구성 파일을 사용 하 여 응용 프로그램 설정에 대 한 내용은 [\<requestCaching\> 요소\(네트워크 설정\)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md).  
+# <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>방법: 응용 프로그램에 대해 위치 기반 캐시 정책 설정
+위치 기반 캐시 정책을 사용하면 응용 프로그램이 요청된 리소스의 위치를 기반으로 캐싱 동작을 명시적으로 정의할 수 있습니다. 이 항목에서는 캐시 정책을 프로그래밍 방식으로 설정하는 방법을 보여 줍니다. 구성 파일을 사용하여 응용 프로그램에 대한 정책을 설정하는 방법에 대한 자세한 내용은 [\<requestCaching> 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)를 참조하세요.  
   
-### 응용 프로그램에 대 한 위치 기반 캐시 정책을 설정 하려면  
+### <a name="to-set-a-location-based-cache-policy-for-an-application"></a>응용 프로그램에 대해 위치 기반 캐시 정책을 설정하려면  
   
-1.  Create a <xref:System.Net.Cache.RequestCachePolicy> or <xref:System.Net.Cache.HttpRequestCachePolicy> object.  
+1.  <xref:System.Net.Cache.RequestCachePolicy> 또는 <xref:System.Net.Cache.HttpRequestCachePolicy> 개체를 만듭니다.  
   
-2.  정책 개체가 응용 프로그램 도메인의 기본값으로 설정 합니다.  
+2.  정책 개체를 응용 프로그램 도메인의 기본값으로 설정합니다.  
   
-### 캐시에서 요청 된 리소스를 사용 하는 정책을 설정 하려면  
+### <a name="to-set-a-policy-that-takes-requested-resources-from-a-cache"></a>캐시에서 요청된 리소스를 가져오는 정책을 설정하려면  
   
--   가능한 경우 캐시에서 요청한 리소스를 사용 하 고 그렇지 않은 경우 캐시 레벨을 설정 하 여 서버에 요청 전송 하는 정책을 만드는 <xref:System.Net.Cache.HttpRequestCacheLevel>.  모든 캐시 클라이언트와 서버, 원격 캐시를 포함 하 여 요청을 완료할 수 있습니다.  
+-   캐시를 사용할 수 있으면 캐시에서 요청된 리소스를 가져오는 정책을 만듭니다. 사용할 수 없으면 캐시 수준을 <xref:System.Net.Cache.HttpRequestCacheLevel.CacheIfAvailable>로 설정하여 요청을 서버에 보냅니다. 원격 캐시를 포함하여 클라이언트와 서버 간에 캐시를 통해 요청을 수행할 수 있습니다.  
   
     ```csharp  
     public static void UseCacheIfAvailable()  
@@ -45,7 +50,6 @@ caps.handback.revision: 10
             (HttpRequestCacheLevel.CacheIfAvailable);  
         HttpWebRequest.DefaultCachePolicy = policy;  
     }  
-  
     ```  
   
     ```vb  
@@ -56,9 +60,9 @@ caps.handback.revision: 10
     End Sub  
     ```  
   
-### 캐시 된 리소스를 제공 하는 것을 금지 하는 정책을 설정 하려면  
+### <a name="to-set-a-policy-that-prevents-any-cache-from-supplying-resources"></a>캐시가 리소스를 제공하지 못하도록 제한하는 정책을 설정하려면  
   
--   모든 캐시 캐시 레벨을 설정 하 여 요청 된 리소스를 제공 하는 것을 금지 하는 정책을 만드는 <xref:System.Net.Cache.HttpRequestCacheLevel>.  이 정책 수준 존재 하 고 원격 캐시 하는 자원도 제거 해야 함을 나타냅니다 로컬 캐시에서 리소스를 제거 합니다.  
+-   캐시 수준을 <xref:System.Net.Cache.HttpRequestCacheLevel.NoCacheNoStore>로 설정하여 캐시가 요청된 리소스를 제공하지 못하도록 제한하는 정책을 만듭니다. 이 정책 수준은 캐시가 있는 경우 로컬 캐시에서 리소스를 제거하고 원격 캐시에서도 리소스를 제거해야 함을 나타냅니다.  
   
     ```csharp  
     public static void DoNotUseCache()  
@@ -77,9 +81,9 @@ caps.handback.revision: 10
     End Sub  
     ```  
   
-### 로컬 캐시에 있는 경우에 요청한 리소스를 반환 하는 정책을 설정 하려면  
+### <a name="to-set-a-policy-that-returns-requested-resources-only-if-they-are-in-the-local-cache"></a>리소스가 로컬 캐시에 있는 경우에만 요청된 리소스를 반환하는 정책을 설정하려면  
   
--   로컬 캐시에 캐시 레벨을 설정 하 여 있는 경우에 요청한 리소스를 반환 하는 정책을 만드는 <xref:System.Net.Cache.HttpRequestCacheLevel>.  요청 된 리소스가 캐시에 없는 경우는 <xref:System.Net.WebException> 예외가 throw 됩니다.  
+-   캐시 수준을 <xref:System.Net.Cache.HttpRequestCacheLevel.CacheOnly>로 설정하여 리소스가 로컬 캐시에 있는 경우에만 요청된 리소스를 반환하는 정책을 만듭니다. 요청된 리소스가 캐시에 없으면 <xref:System.Net.WebException> 예외가 throw됩니다.  
   
     ```csharp  
     public static void OnlyUseCache()  
@@ -98,9 +102,9 @@ caps.handback.revision: 10
     End Sub  
     ```  
   
-### 로컬 캐시에서 리소스를 제공 하지 못하도록 하는 정책을 설정 하려면  
+### <a name="to-set-a-policy-that-prevents-the-local-cache-from-supplying-resources"></a>로컬 캐시가 리소스를 제공하지 못하도록 제한하는 정책을 설정하려면  
   
--   로컬 캐시의 캐시 수준으로 설정 하 여 요청 된 리소스를 제공 하지 못하도록 하는 정책을 만드는 <xref:System.Net.Cache.HttpRequestCacheLevel>.  중간 캐시에서 요청 된 리소스의 유효성 검사 하므로 성공적으로 경우 중간 캐시는 요청한 리소스를 제공할 수 있습니다.  
+-   캐시 수준을 <xref:System.Net.Cache.HttpRequestCacheLevel.Refresh>로 설정하여 로컬 캐시가 요청된 리소스를 제공하지 못하도록 제한하는 정책을 만듭니다. 요청된 리소스가 중간 캐시에 있고 성공적으로 유효성이 다시 검증된 경우 중간 캐시는 요청된 리소스를 제공할 수 있습니다.  
   
     ```csharp  
     public static void DoNotUseLocalCache()  
@@ -119,9 +123,9 @@ caps.handback.revision: 10
     End Sub  
     ```  
   
-### 요청한 리소스를 캐시에서 제공 하는 것을 금지 하는 정책을 설정 하려면  
+### <a name="to-set-a-policy-that-prevents-any-cache-from-supplying-requested-resources"></a>캐시가 요청된 리소스를 제공하지 못하도록 제한하는 정책을 설정하려면  
   
--   모든 캐시 캐시 레벨을 설정 하 여 요청 된 리소스를 제공 하는 것을 금지 하는 정책을 만드는 <xref:System.Net.Cache.HttpRequestCacheLevel>.  서버에서 반환한 리소스를 캐시에 저장할 수 있습니다.  
+-   캐시 수준을 <xref:System.Net.Cache.HttpRequestCacheLevel.Reload>로 설정하여 캐시가 요청된 리소스를 제공하지 못하도록 제한하는 정책을 만듭니다. 서버에서 반환된 리소스를 캐시에 저장할 수 있습니다.  
   
     ```csharp  
     public static void SendToServer()  
@@ -140,9 +144,9 @@ caps.handback.revision: 10
     End Sub  
     ```  
   
-### 서버의 리소스가 캐시 된 복사본 보다 최신 이면 요청 된 리소스를 제공 하는 캐시 정책 설정  
+### <a name="to-set-a-policy-that-allows-any-cache-to-supply-requested-resources-if-the-resource-on-the-server-is-not-newer-than-the-cached-copy"></a>서버의 리소스가 캐시된 복사본보다 최신 버전이 아닐 경우 캐시가 요청된 리소스를 제공하도록 허용하는 정책을 설정하려면  
   
--   서버의 리소스가 캐시 레벨을 설정 하 여 캐시 된 복사본 보다 오래 된 경우 요청 된 리소스를 제공 하는 캐시 정책 만들기 <xref:System.Net.Cache.HttpRequestCacheLevel>.  
+-   캐시 수준을 <xref:System.Net.Cache.HttpRequestCacheLevel.Revalidate>로 설정하여 서버의 리소스가 캐시된 복사본보다 최신 버전이 아닐 경우 캐시가 요청된 리소스를 제공하도록 허용하는 정책을 만듭니다.  
   
     ```csharp  
     public static void CheckServer()  
@@ -161,9 +165,10 @@ caps.handback.revision: 10
     End Sub  
     ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [네트워크 응용 프로그램에 대한 캐시 관리](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
  [캐시 정책](../../../docs/framework/network-programming/cache-policy.md)   
  [위치 기반 캐시 정책](../../../docs/framework/network-programming/location-based-cache-policies.md)   
  [시간 기반 캐시 정책](../../../docs/framework/network-programming/time-based-cache-policies.md)   
- [\<requestCaching\> 요소\(네트워크 설정\)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+ [\<requestCaching> 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+

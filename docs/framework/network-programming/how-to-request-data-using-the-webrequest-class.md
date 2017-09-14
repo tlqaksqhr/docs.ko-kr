@@ -1,36 +1,41 @@
 ---
-title: "방법: WebRequest 클래스를 사용하여 데이터 요청 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "인터넷 리소스 다운로드, 단계"
-  - "인터넷에서 데이터 요청, 단계"
-  - "WebRequest 클래스, 데이터 받기"
-  - "데이터 받기, WebRequest 클래스 사용"
-  - "인터넷, 데이터 요청"
+title: "방법: WebRequest 클래스를 사용하여 데이터 요청"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- downloading Internet resources, steps
+- requesting data from Internet, steps
+- WebRequest class, receiving data
+- receiving data, using WebRequest class
+- Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
 caps.latest.revision: 8
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 0a16860c9095c182de2e67013cae46fa05bc1da5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
+
 ---
-# 방법: WebRequest 클래스를 사용하여 데이터 요청
-웹 페이지 또는 파일, 리소스는 서버에서 요청 하는 데 필요한 단계는 다음 절차를 따르십시오.  리소스는 URI로 식별 되어야 합니다.  
+# <a name="how-to-request-data-using-the-webrequest-class"></a>방법: WebRequest 클래스를 사용하여 데이터 요청
+다음 프로시저에서는 서버의 웹 페이지 또는 파일과 같은 리소스를 요청하는 데 사용되는 단계를 설명합니다. 리소스는 URI로 식별되어야 합니다.  
   
-### 호스트 서버에서 데이터를 요청 합니다.  
+### <a name="to-request-data-from-a-host-server"></a>호스트 서버의 데이터를 요청하려면  
   
-1.  만들기는 <xref:System.Net.WebRequest> 인스턴스를 호출 하 여 <xref:System.Net.WebRequest.Create%2A> 리소스의 URI를 사용 합니다.  
+1.  리소스 URI를 통해 <xref:System.Net.WebRequest.Create%2A>를 호출하여 <xref:System.Net.WebRequest> 인스턴스를 만듭니다.  
   
     ```csharp  
     WebRequest request = WebRequest.Create("http://www.contoso.com/");  
@@ -38,13 +43,12 @@ caps.handback.revision: 8
   
     ```vb  
     Dim request as WebRequest = WebRequest.Create("http://www.contoso.com/")  
-  
     ```  
   
     > [!NOTE]
-    >  .NET Framework 파생 된 프로토콜별 클래스가 제공  **WebRequest** 및  **WebResponse** 로 시작 하는 Uri에 대 한 "http:", "https:", "ftp:", 및 "파일:".  다른 프로토콜을 사용 하 여 리소스에 액세스 하려면 프로토콜 관련 클래스를 파생 구현  **WebRequest** 및  **WebResponse**.  자세한 내용은 [플러그형 프로토콜 프로그래밍](../../../docs/framework/network-programming/programming-pluggable-protocols.md)을 참조하십시오.  
+    >  .NET Framework에서는 “http:”, “https:”, “ftp:” 및 “file:”으로 시작하는 URI에 대해 **WebRequest** 및 **WebResponse**에서 파생된 프로토콜별 클래스를 제공합니다. 다른 프로토콜을 사용하는 리소스에 액세스하려면 **WebRequest** 및 **WebResponse**에서 파생되는 프로토콜별 클래스를 구현해야 합니다. 자세한 내용은 [플러그형 프로토콜 프로그래밍](../../../docs/framework/network-programming/programming-pluggable-protocols.md)을 참조하세요.  
   
-2.  설정에 필요한 모든 속성 값은  **WebRequest**.  예를 들어, 인증을 설정 하려면 설정의  **자격 증명** 인스턴스에 속성의 <xref:System.Net.NetworkCredential> 클래스.  
+2.  **WebRequest**에서 필요한 속성 값을 설정합니다. 예를 들어 인증을 사용하도록 설정하려면 **Credentials** 속성을 <xref:System.Net.NetworkCredential> 클래스의 인스턴스로 설정합니다.  
   
     ```csharp  
     request.Credentials = CredentialCache.DefaultCredentials;  
@@ -54,7 +58,7 @@ caps.handback.revision: 8
     request.Credentials = CredentialCache.DefaultCredentials  
     ```  
   
-     대부분의 경우에  **WebRequest** 클래스는 데이터를 수신 하는 데 충분 합니다.  하지만 프로토콜 관련 속성을 설정 하는 경우를 캐스팅 해야는  **WebRequest** 프로토콜 관련 형식입니다.  예를 들어, 액세스 HTTP 관련 속성에 <xref:System.Net.HttpWebRequest>, 캐스팅는  **WebRequest** 에  **HttpWebRequest** 참조.  다음 코드 예제에서는 HTTP 관련 설정 하는 방법을 보여 줍니다. <xref:System.Net.HttpWebRequest.UserAgent%2A> 속성.  
+     대부분의 경우 데이터를 수신하는 데는 **WebRequest**로 충분합니다. 그러나 프로토콜별 속성을 설정해야 할 경우 **WebRequest**를 프로토콜별 형식으로 캐스팅해야 합니다. 예를 들어 <xref:System.Net.HttpWebRequest>의 HTTP 관련 속성에 액세스하려면 **WebRequest**를 **HttpWebRequest** 참조로 캐스팅해야 합니다. 다음 코드 예제에서는 HTTP 관련 <xref:System.Net.HttpWebRequest.UserAgent%2A> 속성을 설정하는 방법을 보여 줍니다.  
   
     ```csharp  
     ((HttpWebRequest)request).UserAgent = ".NET Framework Example Client";  
@@ -62,10 +66,9 @@ caps.handback.revision: 8
   
     ```vb  
     Ctype(request,HttpWebRequest).UserAgent = ".NET Framework Example Client"  
-  
     ```  
   
-3.  서버에 요청을 보내려면 호출 <xref:System.Net.HttpWebRequest.GetResponse%2A>.  반환 되는 실제 형식  **WebResponse** 요청 된 URI의 스키마로 개체를 결정 합니다.  
+3.  요청을 서버에 보내려면 <xref:System.Net.HttpWebRequest.GetResponse%2A>를 호출합니다. 반환된 **WebResponse** 개체의 실제 형식은 요청된 URI 구성표에 따라 결정됩니다.  
   
     ```csharp  
     WebResponse response = request.GetResponse();  
@@ -73,13 +76,12 @@ caps.handback.revision: 8
   
     ```vb  
     Dim response As WebResponse = request.GetResponse()  
-  
     ```  
   
     > [!NOTE]
-    >  마친 후에 <xref:System.Net.WebResponse> 개체를 닫아야이 호출 하 여이 <xref:System.Net.WebResponse.Close%2A> 메서드.  응답 스트림을 응답 개체 로부터 있습니다 또는 스트림 호출 하 여 닫을 수 있습니다는 <xref:System.IO.Stream.Close%2A?displayProperty=fullName> 메서드.  응답 또는 스트림을 닫지 않으면 응용 프로그램 서버에 연결에서 실행 하 고 추가 요청을 처리할 수 없게 수 있습니다.  
+    >  <xref:System.Net.WebResponse> 개체가 필요 없게 되면 <xref:System.Net.WebResponse.Close%2A> 메서드를 호출하여 개체를 닫아야 합니다. 또는 응답 개체에서 응답 스트림을 이미 가져온 경우 <xref:System.IO.Stream.Close%2A?displayProperty=fullName> 메서드를 호출하여 스트림을 닫을 수 있습니다. 응답이나 스트림을 닫지 않으면 응용 프로그램이 서버에 대한 연결을 모두 사용하여 추가 요청을 처리하지 못하게 될 수 있습니다.  
   
-4.  속성에 액세스할 수 있습니다는  **WebResponse** 또는 캐스팅는  **WebResponse** 프로토콜 특정 인스턴스에 프로토콜 관련 속성을 읽을 수 있습니다.  예를 들어, 액세스 HTTP 관련 속성에 <xref:System.Net.HttpWebResponse>, 캐스팅는  **WebResponse** 에  **HttpWebResponse** 참조.  다음 코드 예제에서는 응답과 함께 전송 된 상태 정보를 표시 하는 방법을 보여 줍니다.  
+4.  **WebResponse**의 속성에 액세스하거나 **WebResponse**를 프로토콜별 인스턴스로 캐스팅하여 프로토콜별 속성을 읽을 수 있습니다. 예를 들어 <xref:System.Net.HttpWebResponse>의 HTTP 관련 속성에 액세스하려면 **WebResponse**를 **HttpWebResponse** 참조로 캐스팅해야 합니다. 다음 코드 예제에서는 응답과 함께 전송된 상태 정보를 표시하는 방법을 보여 줍니다.  
   
     ```csharp  
     Console.WriteLine (((HttpWebResponse)response).StatusDescription);  
@@ -89,7 +91,7 @@ caps.handback.revision: 8
     Console.WriteLine(CType(response,HttpWebResponse).StatusDescription)  
     ```  
   
-5.  서버에서 보낸 응답 데이터를 포함 하는 스트림을 가져올 수 있는 <xref:System.Net.HttpWebResponse.GetResponseStream%2A> 메서드는  **WebResponse**.  
+5.  서버에서 전송된 응답 데이터를 포함하는 스트림을 가져오려면 **WebResponse**의 <xref:System.Net.HttpWebResponse.GetResponseStream%2A> 메서드를 사용합니다.  
   
     ```csharp  
     Stream dataStream = response.GetResponseStream ();  
@@ -97,10 +99,9 @@ caps.handback.revision: 8
   
     ```vb  
     Dim dataStream As Stream = response.GetResponseStream()  
-  
     ```  
   
-6.  응답에서 데이터를 읽은 후에 사용 하 여 응답 스트림을 닫아야 합니다의  **Stream.Close** 메서드 또는 닫기 사용 하 여 응답을  **WebResponse.Close** 메서드.  호출할 필요가 없는  **닫기** 메서드는 응답 스트림 및  **WebResponse**, 있지만 이렇게 하면 유해한 이므로 아닙니다.  **WebResponse.Close** 전화  **Stream.Close** 응답을 닫을 때.  
+6.  응답에서 데이터를 읽은 후 **Stream.Close** 메서드를 사용하여 응답 스트림을 닫거나 **WebResponse.Close** 메서드를 사용하여 응답을 닫아야 합니다. 응답 스트림 및 **WebResponse**에서 둘 다 **Close** 메서드를 호출할 필요가 없지만 호출해도 문제가 되지 않습니다. **WebResponse.Close**는 응답을 닫을 때 **Stream.Close**를 호출합니다.  
   
     ```csharp  
     response.Close();  
@@ -108,10 +109,9 @@ caps.handback.revision: 8
   
     ```vb  
     response.Close()  
-  
     ```  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```csharp  
 using System;  
@@ -184,9 +184,10 @@ Namespace Examples.System.Net
 End Namespace  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [인터넷 요청 만들기](../../../docs/framework/network-programming/creating-internet-requests.md)   
  [네트워크에서 스트림 사용](../../../docs/framework/network-programming/using-streams-on-the-network.md)   
  [프록시를 통해 인터넷 액세스](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)   
  [데이터 요청](../../../docs/framework/network-programming/requesting-data.md)   
  [방법: WebRequest 클래스를 사용하여 데이터 보내기](../../../docs/framework/network-programming/how-to-send-data-using-the-webrequest-class.md)
+

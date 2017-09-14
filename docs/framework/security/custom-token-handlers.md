@@ -1,28 +1,34 @@
 ---
-title: "사용자 지정 토큰 처리기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "사용자 지정 토큰 처리기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
 caps.latest.revision: 4
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 4
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d471e860e74c9a01770c95671401bdbbc23643cb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
+
 ---
-# 사용자 지정 토큰 처리기
-이 항목에서는 소리치 더 및 토큰 처리에 사용 되는 토큰 처리기에 설명 합니다.  주제는 또한 소리치 더에서 기본적으로 지원 하지 않는 형식 토큰에 대 한 사용자 지정 토큰 처리기를 작성 하는 데 필요한 무엇입니까 설명 합니다.  
+# <a name="custom-token-handlers"></a>사용자 지정 토큰 처리기
+이 항목에서는 WIF의 토큰 처리기 및 토큰 처리기를 사용하여 토큰을 처리하는 방법을 설명합니다. WIF에서 기본적으로 지원되지 않는 토큰 형식에 대한 사용자 지정 토큰 처리기를 만드는 데 필요한 항목에 대해서도 설명합니다.  
   
-## 토큰 처리기에서 소리치 더 소개  
- 소리치 더 만들기, 읽기, 쓰기 및 신뢰 당사자 \(RP\) 응용 프로그램 또는 보안 토큰 서비스 \(STS\)에 대 한 토큰의 유효성을 검사 하는 보안 토큰 처리기를 사용 합니다.  토큰 처리기 확장성 포인트로 소리치 더 파이프라인에 사용자 지정 토큰 처리기를 추가 하거나 기존 토큰 처리기 토큰을 관리 하는 방식을 사용자 지정할 수 있습니다.  소리치 더 수정 하거나 전적으로 필요에 따라 기능을 변경 하려면 재정의 하는 9 명의 기본 제공 보안 토큰 처리기를 제공 합니다.  
+## <a name="introduction-to-token-handlers-in-wif"></a>WIF의 토큰 처리기 소개  
+ WIF는 보안 토큰 처리기를 사용하여 RP(신뢰 당사자) 응용 프로그램이나 STS(보안 토큰 서비스)에 대한 토큰을 만들고, 읽고, 쓰고, 유효성을 검사합니다. 토큰 처리기는 WIF 파이프라인에서 사용자 지정 토큰 처리기를 추가하거나 기존 토큰 처리기가 토큰을 관리하는 방법을 사용자 지정할 수 있는 확장성 지점입니다. WIF는 필요에 따라 기능을 변경하도록 수정하거나 전체적으로 재정의할 수 있는 9개의 기본 제공 보안 토큰 처리기를 제공합니다.  
   
-## 기본 제공 보안 토큰 처리기에서 소리치 더  
- 소리치 더 4.5 추상 기본 클래스에서 파생 하는 9 개의 보안 토큰 처리기 클래스를 포함 합니다. <xref:System.IdentityModel.Tokens.SecurityTokenHandler>.  
+## <a name="built-in-security-token-handlers-in-wif"></a>WIF의 기본 제공 보안 토큰 처리기  
+ WIF 4.5에는 추상 기본 클래스 <xref:System.IdentityModel.Tokens.SecurityTokenHandler>에서 파생되는 9개의 보안 토큰 처리기 클래스가 포함됩니다.  
   
 -   <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>  
   
@@ -42,14 +48,14 @@ caps.handback.revision: 4
   
 -   <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>  
   
-## 사용자 지정 토큰 처리기를 추가합니다.  
- 간단한 웹 토큰 \(SWT\) JSON 웹 토큰 \(JWT\) 등 일부 토큰 형식 기본 제공 토큰 처리기가 소리치 더 제공 되지 않았습니다.  이러한 토큰 형식 및 다른 기본 제공 처리기가 없는 사용자 지정 토큰 처리기를 만들려면 다음 단계를 수행 해야 합니다.  
+## <a name="adding-a-custom-token-handler"></a>사용자 지정 토큰 처리기 추가  
+ SWT(단순 웹 토큰) 및 JWT(JSON Web Token)와 같은 일부 토큰 형식에는 WIF에서 제공하는 기본 제공 토큰 처리기가 없습니다. 이러한 토큰 형식 및 기본 제공 처리기가 없는 다른 토큰 형식의 경우 사용자 지정 토큰 처리기를 만들려면 다음 단계를 수행해야 합니다.  
   
-#### 사용자 지정 토큰 처리기를 추가합니다.  
+#### <a name="adding-a-custom-token-handler"></a>사용자 지정 토큰 처리기 추가  
   
-1.  파생 된 새 클래스를 만들려면 <xref:System.IdentityModel.Tokens.SecurityTokenHandler>.  
+1.  <xref:System.IdentityModel.Tokens.SecurityTokenHandler>에서 파생되는 새 클래스를 만듭니다.  
   
-2.  다음 메서드를 재정의 하 고 사용자 고유의 구현을 제공:  
+2.  다음 메서드를 재정의하고 고유한 구현을 제공합니다.  
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
   
@@ -63,9 +69,9 @@ caps.handback.revision: 4
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
   
-3.  새 사용자 지정 토큰 처리기에 대 한 참조를 추가  *Web.config* 또는  *App.config* 파일 내에  **\<system.identityModel\>** 소리치 더에 적용 되는 섹션.  예를 들어, 다음 구성 태그 라는 새 토큰 처리기 지정  **MyCustomTokenHandler** 에 위치 하는  **CustomToken** 네임 스페이스.  
+3.  *Web.config* 또는 *App.config* 파일에서 WIF에 적용되는 **\<system.identityModel>** 섹션 내에 새 사용자 지정 토큰 처리기에 대한 참조를 추가합니다. 예를 들어 다음 구성 태그는 **CustomToken** 네임스페이스에 있는 **MyCustomTokenHandler**라는 새 토큰 처리기를 지정합니다.  
   
-    ```  
+    ```xml  
     <system.identityModel>  
         <identityConfiguration saveBootstrapContext="true">  
             <securityTokenHandlers>  
@@ -75,15 +81,16 @@ caps.handback.revision: 4
     </system.identityModel>  
     ```  
   
-     토큰 형식을 기본 제공 토큰 처리기가 이미 처리 하도록 직접 토큰 처리기를 제공 하는 경우 추가 할 참고는  **\<remove\>** 삭제 기본 처리기 대신 사용자 지정 오류 처리기를 사용 하는 요소.  예를 들어, 다음 구성 기본값을 대체 <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> 사용자 지정 토큰 처리기를 사용 합니다.  
+     이미 기본 제공 토큰 처리기가 있는 토큰 형식을 처리하기 위해 고유한 토큰 처리기를 제공할 경우 기본 처리기를 삭제하고 사용자 지정 처리기를 대신 사용하려면 **\<remove>** 요소를 추가해야 합니다. 예를 들어 다음 구성은 기본 <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>를 사용자 지정 토큰 처리기로 바꿉니다.  
   
-    ```  
+    ```xml  
     <system.identityModel>  
         <identityConfiguration saveBootstrapContext="true">  
             <securityTokenHandlers>  
-                <remove type=”System.IdentityModel.Tokens.SamlSecurityTokenHandler, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=abcdefg123456789”>  
+                <remove type="System.IdentityModel.Tokens.SamlSecurityTokenHandler, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=abcdefg123456789">  
                 <add type="CustomToken.MyCustomTokenHandler, CustomToken" />  
             </securityTokenHandlers>  
         </identityConfiguration>  
     </system.identityModel>  
     ```
+

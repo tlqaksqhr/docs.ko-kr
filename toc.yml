@@ -22,7 +22,7 @@
             - name: 특성을 사용하여 메타데이터 확장
               tocHref: /dotnet/standard/attributes/
               topicHref: /dotnet/standard/attributes/index
-            - name: .NET Framework에서 기본 형식 작업
+            - name: .NET의 기본 형식 작업
               tocHref: /dotnet/standard/base-types/
               topicHref: /dotnet/standard/base-types/index
             - name: 컬렉션 및 데이터 구조
@@ -32,7 +32,7 @@
                 - name: 스레드로부터 안전한 컬렉션
                   tocHref: /dotnet/standard/collections/thread-safe/
                   topicHref: /dotnet/standard/collections/thread-safe/index
-            - name: .NET Framework로 여러 플랫폼 개발
+            - name: .NET으로 여러 플랫폼 개발
               tocHref: /dotnet/standard/cross-platform/
               topicHref: /dotnet/standard/cross-platform/index
             - name: XML 문서 및 데이터
@@ -53,16 +53,16 @@
             - name: 가비지 컬렉션
               tocHref: /dotnet/standard/garbage-collection/
               topicHref: /dotnet/standard/garbage-collection/index
-            - name: .NET Framework의 제네릭
+            - name: .NET의 제네릭
               tocHref: /dotnet/standard/generics/
               topicHref: /dotnet/standard/generics/index
-            - name: '세계화 및 지역화, .NET Framework 응용 프로그램 전역화 및 지역화'
+            - name: 전역화 및 지역화
               tocHref: /dotnet/standard/globalization-localization/
               topicHref: /dotnet/standard/globalization-localization/index
             - name: 파일 및 스트림 I/O
               tocHref: /dotnet/standard/io/
               topicHref: /dotnet/standard/io/index
-            - name: .NET Framework의 병렬 프로그래밍
+            - name: .NET으로 병렬 프로그래밍
               tocHref: /dotnet/standard/parallel-programming/
               topicHref: /dotnet/standard/parallel-programming/index
             - name: .NET의 보안
@@ -91,10 +91,10 @@
             - name: 추가 클래스 라이브러리 및 API
               tocHref: /dotnet/framework/additional-steps/
               topicHref: /dotnet/framework/additional-steps/index
-            - name: 응용 프로그램 도메인 및 어셈블리를 사용한 프로그래밍
+            - name: 응용 프로그램 도메인 및 어셈블리
               tocHref: /dotnet/framework/app-domains/
               topicHref: /dotnet/framework/app-domains/index
-            - name: .NET Framework의 일반 클라이언트 기술
+            - name: 일반 클라이언트 기술
               tocHref: /dotnet/framework/common-client-technologies/
               topicHref: /dotnet/framework/common-client-technologies/index
             - name: 구성 파일을 사용하여 앱 구성
@@ -169,7 +169,7 @@
                 - name: '트랜잭션 처리 '
                   tocHref: /dotnet/framework/data/transactions/
                   topicHref: /dotnet/framework/data/transactions/index
-                - name: WCF Data Services 4.5
+                - name: WCF Data Services
                   tocHref: /dotnet/framework/data/wcf/
                   topicHref: /dotnet/framework/data/wcf/index
             - name: '디버깅, 추적 및 프로파일링'
@@ -193,7 +193,7 @@
             - name: MEF(Managed Extensibility Framework)
               tocHref: /dotnet/framework/mef/
               topicHref: /dotnet/framework/mef/index
-            - name: .NET Framework 4.6 및 4.5 마이그레이션 가이드
+            - name: 마이그레이션 가이드
               tocHref: /dotnet/framework/migration-guide/
               topicHref: /dotnet/framework/migration-guide/index
             - name: .NET 네이티브로 앱 컴파일

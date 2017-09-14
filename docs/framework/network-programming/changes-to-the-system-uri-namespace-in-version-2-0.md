@@ -1,33 +1,38 @@
 ---
-title: "버전 2.0에서 System.Uri 네임스페이스 변경 내용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "버전 2.0에서 System.Uri 네임스페이스 변경 내용"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
 ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7ce81e348b3e5de285a3517d70b8bc477198d3e4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
+
 ---
-# 버전 2.0에서 System.Uri 네임스페이스 변경 내용
-몇 가지 변경 된는 <xref:System.Uri?displayProperty=fullName> 클래스입니다.  이러한 변경 내용을 잘못 된 동작이 수정 유용성을 강화 하 고 보안 강화.  
+# <a name="changes-to-the-systemuri-namespace-in-version-20"></a>버전 2.0에서 System.Uri 네임스페이스 변경 내용
+<xref:System.Uri?displayProperty=fullName> 클래스에 몇 가지 변경 내용이 적용되었습니다. 이러한 변경 내용은 잘못된 동작을 수정하고, 유용성을 개선하고, 보안을 강화했습니다.  
   
-## 오래 되어 사용 되지 않는 멤버  
+## <a name="obsolete-and-deprecated-members"></a>더 이상 사용되지 않는 멤버  
  생성자:  
   
--   모든 생성자는 `dontEscape` 매개 변수.  
+-   `dontEscape` 매개 변수가 있는 모든 생성자.  
   
- 방법:  
+ 메서드:  
   
 -   <xref:System.Uri.CheckSecurity%2A>  
   
@@ -45,39 +50,40 @@ caps.handback.revision: 9
   
 -   <xref:System.Uri.EscapeString%2A>  
   
-## 변경 내용  
+## <a name="changes"></a>변경 내용  
   
--   쿼리 부분 \(파일, ftp 및 기타\)이 없는 것으로 알려진 URI 체계를 '?' 문자는 항상 이스케이프 및 부분으로 간주 되지 않습니다는 <xref:System.Uri.Query%2A> 파트.  
+-   쿼리 부분(file, ftp 등)이 없는 것으로 알려진 URI 체계에서는 ‘?’ 문자가 항상 이스케이프되고 <xref:System.Uri.Query%2A> 부분의 시작으로 간주되지 않습니다.  
   
--   전체 이스케이프 해제 하면 요청 되지 않는 경우 암시적 파일 Uri \(폼 "c:\\directory\\file@name.txt"\)의 조각 문자 \('\#'\)를 항상 이스케이프 됩니다 또는 <xref:System.Uri.LocalPath%2A> 는 `true`.  
+-   암시적 파일 URI(“c:\directory\file@name.txt” 형식)의 경우 전체 이스케이프 취소가 요청되거나 <xref:System.Uri.LocalPath%2A>가 `true`인 경우가 아니면 조각 문자(‘#’)가 항상 이스케이프됩니다.  
   
--   UNC 호스트 이름 지원 제거 되었습니다. 국제 호스트 이름을 나타내는 IDN 사양이 채택 되었습니다.  
+-   UNC 호스트 이름 지원이 제거되었습니다. 국제 호스트 이름을 나타내기 위한 IDN 사양이 채택되었습니다.  
   
--   <xref:System.Uri.LocalPath%2A>항상 완전히 이스케이프 해제 된 문자열을 반환합니다.  
+-   <xref:System.Uri.LocalPath%2A>는 항상 완전히 이스케이프 해제된 문자열을 반환합니다.  
   
--   <xref:System.Uri.ToString%2A>이스케이프 된 '%'를 이스케이프 해제 되지 않습니다 '?', '\#' 문자.  
+-   <xref:System.Uri.ToString%2A>은 이스케이프된 ‘%’, ‘?’ 또는 ‘#’ 문자의 이스케이프를 해제하지 않습니다.  
   
--   <xref:System.Uri.Equals%2A>이제 포함의 <xref:System.Uri.Query%2A> 여부 검사에서 부.  
+-   이제 <xref:System.Uri.Equals%2A>의 동등성 검사에 <xref:System.Uri.Query%2A> 부분이 포함됩니다.  
   
--   연산자 "\= \="및"\! \=" 재정의 하 고 연결 하는 <xref:System.Uri.Equals%2A> 메서드.  
+-   연산자 “= =” 및 “!=”가 재정의되고 <xref:System.Uri.Equals%2A> 메서드에 연결됩니다.  
   
--   <xref:System.Uri.IsLoopback%2A>이제 일관성 있는 결과 생성합니다.  
+-   이제 <xref:System.Uri.IsLoopback%2A>에서 일관된 결과를 생성합니다.  
   
--   URI "`file:///path`" 더 이상 "file:\/\/path"로 변환 됩니다.  
+-   URI “`file:///path`”가 더 이상 “file://path”로 변환되지 않습니다.  
   
--   "\#"은 이제는 호스트 이름 종결자로 인식 됩니다.  즉, "http:\/\/consoto.com\#fragment"는 이제 "http:\/\/contoso.com\/\#fragment"으로 변환 됩니다.  
+-   아재 “#”이 호스트 이름 종결자로 인식됩니다. 즉, “http://consoto.com#fragment”가 “http://contoso.com/#fragment”로 변환됩니다.  
   
--   기본 URI와 단편 결합 하면 버그가 수정 되었습니다.  
+-   기본 URI와 조각을 결합할 때 발생하는 버그가 수정되었습니다.  
   
--   버그에서 <xref:System.Uri.HostNameType%2A> 고정 됩니다.  
+-   <xref:System.Uri.HostNameType%2A>의 버그가 수정되었습니다.  
   
--   NNTP 구문 분석 버그 해결 되었습니다.  
+-   NNTP 구문 분석의 버그가 수정되었습니다.  
   
--   HTTP:contoso.com 폼의 URI는 이제는 구문 분석 예외가 throw 됩니다.  
+-   이제 HTTP:contoso.com 형식의 URI가 구문 분석 예외를 throw합니다.  
   
--   프레임 워크는 URI의 사용자 정보를 올바르게 처리합니다.  
+-   프레임워크에서 URI의 사용자 정보를 올바르게 처리합니다.  
   
--   URI 경로 압축 끊어진된 URI 루트 위의 파일 시스템을 통과할 수 없습니다 수정 됩니다.  
+-   끊어진 URI가 루트 위의 파일 시스템을 트래버스할 수 없도록 URI 경로 압축이 수정되었습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  <xref:System.Uri?displayProperty=fullName>
+

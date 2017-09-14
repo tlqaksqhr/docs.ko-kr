@@ -1,46 +1,51 @@
 ---
-title: "SSL(Secure Sockets Layer) 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "네트워킹"
-  - "SSL"
-  - "SSL(Secure Sockets Layer)"
-  - "인터넷에서 데이터 요청, SSL(Secure Sockets Layer)"
-  - "데이터 보내기, SSL(Secure Sockets Layer)"
-  - "네트워크 리소스"
-  - "데이터 요청, SSL(Secure Sockets Layer)"
-  - "데이터 받기, SSL(Secure Sockets Layer)"
-  - "인터넷, SSL(Secure Sockets Layer)"
+title: "SSL(Secure Sockets Layer) 사용"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Networking
+- SSL
+- Secure Sockets Layer
+- requesting data from Internet, Secure Sockets Layer
+- sending data, Secure Sockets Layer
+- Network Resources
+- data requests, Secure Sockets Layer
+- receiving data, Secure Sockets Layer
+- Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
 caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 14
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cb625971f0c0b52bcdcfc9b41d4c0f88814aef08
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
+
 ---
-# SSL(Secure Sockets Layer) 사용
-<xref:System.Net> 클래스 보안 소켓 계층 \(SSL\) 사용 하 여 여러 네트워크 프로토콜에 대 한 연결을 암호화 합니다.  
+# <a name="using-secure-sockets-layer"></a>SSL(Secure Sockets Layer) 사용
+<xref:System.Net> 클래스는 SSL(Secure Sockets Layer)을 사용하여 여러 네트워크 프로토콜에 대한 연결을 암호화합니다.  
   
- Http 연결에 대 한의 <xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse> 클래스 SSL 사용 하 여 SSL을 지 원하는 웹 호스트와 통신할 수 있습니다.  SSL을 사용 하 여 결정 되는 <xref:System.Net.WebRequest> 클래스에는 지정 된 URI에 따라.  URI로 시작 하는 경우 "https:", SSL을 사용 합니다. URI로 시작 하는 경우 "http:", 암호화 되지 않은 연결에 사용 됩니다.  
+ HTTP 연결의 경우 <xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse> 클래스는 SSL을 사용하여 SSL을 지원하는 웹 호스트와 통신합니다. 제공된 URI에 따라 <xref:System.Net.WebRequest> 클래스가 SSL 사용을 결정합니다. URI가 “https:”로 시작하는 경우 SSL이 사용됩니다. URI가 “http:”로 시작하는 경우에는 암호화되지 않은 연결이 사용됩니다.  
   
- FTP \(파일 전송 프로토콜 사용\) SSL을 사용 하도록 설정 된 <xref:System.Net.FtpWebRequest.EnableSsl> 속성을 true로 호출 하기 전에 <xref:System.Net.FtpWebRequest.GetResponse>.  마찬가지로 단순 메일 전송 프로토콜 \(SMTP 사용\) SSL을 사용 하도록 설정 된 <xref:System.Net.Mail.SmtpClient.EnableSsl> 속성을 true로 전자 메일을 보내기 전에.  
+ FTP(파일 전송 프로토콜)와 함께 SSL을 사용하려면 <xref:System.Net.FtpWebRequest.GetResponse>를 호출하기 전에 <xref:System.Net.FtpWebRequest.EnableSsl> 속성을 true로 설정합니다. 마찬가지로, SMTP(Simple Mail Transfer Protocol)와 함께 SSL을 사용하려면 전자 메일을 보내기 전에 <xref:System.Net.Mail.SmtpClient.EnableSsl> 속성을 true로 설정합니다.  
   
- <xref:System.Net.Security.SslStream> 클래스 SSL에 대 한 스트림 기반 추상화를 제공 하 고 SSL 핸드셰이크를 구성할 수 있습니다.  
+ <xref:System.Net.Security.SslStream> 클래스는 SSL에 대한 스트림 기반 추상화를 제공하고 SSL 핸드셰이크를 구성할 수 있는 여러 가지 방법을 제공합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
-### 코드  
+### <a name="code"></a>코드  
   
 ```vb  
 Dim MyURI As String = "https://www.contoso.com/"  
@@ -64,12 +69,13 @@ request.Method = WebRequestMethods.Ftp.DeleteFile;
 FtpWebResponse response = (FtpWebResponse)request.GetResponse();  
 ```  
   
-## 코드 컴파일  
+## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   참조 하는  **System.Net** 네임 스페이스입니다.  
+-   **System.Net** 네임스페이스에 대한 참조.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [네트워크 프로그래밍의 보안](../../../docs/framework/network-programming/security-in-network-programming.md)   
  [.NET Framework의 네트워크 프로그래밍](../../../docs/framework/network-programming/index.md)   
  [인증서 선택 및 유효성 검사](../../../docs/framework/network-programming/certificate-selection-and-validation.md)
+

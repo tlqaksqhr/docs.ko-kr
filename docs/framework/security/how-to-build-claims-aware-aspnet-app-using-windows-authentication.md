@@ -1,31 +1,37 @@
 ---
-title: "방법: Windows 인증을 사용하여 클레임 인식 ASP.NET 응용 프로그램 빌드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "방법: Windows 인증을 사용하여 클레임 인식 ASP.NET 응용 프로그램 빌드"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 caps.latest.revision: 5
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 5
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 676a03678cbdf6fe08e628806df2a1853fb71718
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
+
 ---
-# 방법: Windows 인증을 사용하여 클레임 인식 ASP.NET 응용 프로그램 빌드
-## 적용 대상  
+# <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>방법: Windows 인증을 사용하여 클레임 인식 ASP.NET 응용 프로그램 빌드
+## <a name="applies-to"></a>적용 대상  
   
--   Microsoft ® Windows ® Identity Foundation \(소리치 더\)  
+-   Microsoft® Windows® Identity Foundation(WIF)  
   
 -   ASP.NET® Web Forms  
   
-## 요약  
- 이 방법 Windows 인증을 사용 하는 간단한 클레임 인식 ASP.NET Web Forms 응용 프로그램을 만들기 위한 자세한 단계별 절차를 제공 합니다.  또한 사용자는 Windows 인증을 사용 하 여 서명 하면 클레임 나와 확인 하려면 응용 프로그램을 테스트 하는 방법에 대 한 지침을 제공 합니다.  
+## <a name="summary"></a>요약  
+ 이 방법은 Windows 인증을 사용하는 간단한 클레임 인식 ASP.NET Web Forms 응용 프로그램을 만들기 위한 자세한 단계별 프로시저를 제공합니다. 또한 응용 프로그램을 테스트하여 사용자가 Windows 인증으로 로그인할 때 클레임이 제공되는지 확인하는 방법에 대한 지침을 제공합니다.  
   
-## 내용  
+## <a name="contents"></a>목차  
   
 -   목표  
   
@@ -33,53 +39,53 @@ caps.handback.revision: 5
   
 -   단계 요약  
   
--   1 단계 – 간단한 ASP.NET 웹 폼 응용 프로그램 만들기  
+-   1단계 – 간단한 ASP.NET Web Forms 응용 프로그램 만들기  
   
--   2 단계 – ASP.NET 웹 폼 응용 프로그램에 대 한 Windows 인증을 사용 하 여 클레임 구성  
+-   2단계 – Windows 인증을 사용하여 클레임에 대한 ASP.NET Web Forms 응용 프로그램 구성  
   
--   3 단계 – 솔루션 테스트  
+-   3단계 - 솔루션 테스트  
   
-## 목표  
+## <a name="objectives"></a>목표  
   
--   ASP.NET Web Forms 응용 프로그램이 Windows 인증을 사용 하는 클레임에 대 한 구성  
+-   Windows 인증을 사용하여 클레임에 대한 ASP.NET Web Forms 응용 프로그램 구성  
   
--   ASP.NET Web Forms 응용 프로그램에서 제대로 작동 하는지 테스트 합니다.  
+-   ASP.NET Web Forms 응용 프로그램 테스트하여 제대로 작동하는지 확인  
   
-## 개요  
- .NET 4.5에서 소리치 더 및 해당 클레임 기반 권한 부여 프레임 워크의 필수적인 부분으로 포함 되었습니다.  이전에 ASP.NET 사용자는 클레임을 원한다 면 소리치 더를 설치할 필요는, 다음 캐스트 보안 주체를 개체 같은 인터페이스 `Thread.CurrentPrincipal` 또는 `HttpContext.Current.User`.  이제 클레임 자동으로 이러한 사용자가 개체 처리 됩니다.  
+## <a name="overview"></a>개요  
+ .NET 4.5에서 WIF 및 해당 클레임 기반 권한 부여는 프레임워크의 필수적인 부분으로 포함되었습니다. 이전에는 ASP.NET 사용자의 클레임을 원할 경우 WIF를 설치하고 나서 인터페이스를 주체 개체(예: `Thread.CurrentPrincipal` 또는 `HttpContext.Current.User`)로 캐스팅해야 했습니다. 이제 클레임은 이러한 주체 개체를 통해 자동으로 제공됩니다.  
   
- 자동으로 Windows 자격 증명으로 인증 된 모든 사용자가 해당 클레임 없으므로.net 4.5에 소리치 더의 포함에서 Windows 인증이 높아졌습니다.  이 방법에서 볼 수 있듯이 이러한 클레임 ASP.NET 응용 프로그램에서 Windows 인증을 사용 하 여 바로 사용을 시작할 수 있습니다.  
+ Windows 자격 증명으로 인증된 모든 사용자에게 연결된 클레임이 자동으로 포함되므로 .NET 4.5에 포함된 WIF를 Windows 인증에 활용할 수 있습니다. 이 방법에서 설명하는 것처럼 Windows 인증을 사용하는 ASP.NET 응용 프로그램에서 즉시 이러한 클레임을 사용하기 시작할 수 있습니다.  
   
-## 단계 요약  
+## <a name="summary-of-steps"></a>단계 요약  
   
--   1 단계 – 간단한 ASP.NET 웹 폼 응용 프로그램 만들기  
+-   1단계 – 간단한 ASP.NET Web Forms 응용 프로그램 만들기  
   
--   2 단계 – ASP.NET 웹 폼 응용 프로그램에 대 한 Windows 인증을 사용 하 여 클레임 구성  
+-   2단계 – Windows 인증을 사용하여 클레임에 대한 ASP.NET Web Forms 응용 프로그램 구성  
   
--   3 단계 – 솔루션 테스트  
+-   3단계 - 솔루션 테스트  
   
-## 1 단계 – 간단한 ASP.NET 웹 폼 응용 프로그램 만들기  
- 이 단계에서는 새 ASP.NET Web Forms 응용 프로그램을 만듭니다.  
+## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>1단계 – 간단한 ASP.NET Web Forms 응용 프로그램 만들기  
+ 이 단계에서는 새로운 ASP.NET Web Forms 응용 프로그램을 만듭니다.  
   
-#### 간단한 ASP.NET 응용 프로그램을 만들려면  
+#### <a name="to-create-a-simple-aspnet-application"></a>간단한 ASP.NET 응용 프로그램을 만들려면  
   
-1.  Visual Studio 시작 하 고 클릭  **파일**,  **New**, 다음  **프로젝트**.  
+1.  Visual Studio를 시작하고 **파일**, **새로 만들기**, **프로젝트**를 차례로 클릭합니다.  
   
-2.  에  **새 프로젝트** 창에서 클릭  **ASP.NET 웹 폼 응용 프로그램**.  
+2.  **새 프로젝트** 창에서 **ASP.NET Web Forms 응용 프로그램**을 클릭합니다.  
   
-3.  In **Name**, enter `TestApp` and press **OK**.  
+3.  **이름**에서 `TestApp`을 입력하고 **확인**을 누릅니다.  
   
-4.  다음은  **TestApp** 프로젝트 작성 되었습니다를 클릭  **솔루션 탐색기**.  프로젝트의 속성에는  **속성** 창 아래  **솔루션 탐색기**.  설정 된  **Windows 인증** 속성을  **사용**.  
+4.  **TestApp** 프로젝트가 만들어진 후 **솔루션 탐색기**에서 해당 프로젝트를 클릭합니다. 프로젝트의 속성이 **솔루션 탐색기** 아래 **속성** 창에 나타납니다. **Windows 인증** 속성을 **사용**으로 설정합니다.  
   
     > [!WARNING]
-    >  수동으로 설정 해야 하므로 Windows 인증 새 ASP.NET 응용 프로그램에서 기본적으로 사용할 수 없습니다.  
+    >  Windows 인증은 새 ASP.NET 응용 프로그램에서 기본적으로 사용되지 않으므로 수동으로 사용하도록 설정해야 합니다.  
   
-## 2 단계 – ASP.NET 웹 폼 응용 프로그램에 대 한 Windows 인증을 사용 하 여 클레임 구성  
- 이 단계에서는 구성 항목을 추가 합니다의  *Web.config* 구성 파일을 수정 하 고는  *Default.aspx* 파일을 계정에 대 한 정보를 주장.  
+## <a name="step-2--configure-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>2단계 – Windows 인증을 사용하여 클레임에 대한 ASP.NET Web Forms 응용 프로그램 구성  
+ 이 단계에서는 *Web.config* 구성 파일에 구성 항목을 추가하고 *Default.aspx* 파일을 수정하여 계정에 대한 클레임 정보를 표시합니다.  
   
-#### Windows 인증을 사용 하는 클레임에 대 한 ASP.NET 응용 프로그램을 구성 하려면  
+#### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a>Windows 인증을 사용하여 클레임에 대한 ASP.NET 응용 프로그램을 구성하려면  
   
-1.  에  **TestApp** 프로젝트의  *Default.aspx* 파일, 기존 태그를 다음 코드로 바꿉니다:  
+1.  **TestApp** 프로젝트의 *Default.aspx* 파일에서 기존 태그를 다음으로 바꿉니다.  
   
     ```  
     <%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"  
@@ -97,12 +103,11 @@ caps.handback.revision: 5
             </asp:GridView>  
         </p>  
     </asp:Content>  
-  
     ```  
   
-     이 단계는 GridView 컨트롤을  *Default.aspx* 클레임을 채워야 하는 페이지에서 Windows 인증 검색.  
+     이 단계에서는 Windows 인증에서 검색된 클레임으로 채워질 *Default.aspx* 페이지에 GridView 컨트롤을 추가합니다.  
   
-2.  저장 된  *Default.aspx* 파일을 다음 코드 숨김 파일을 열고  *Default.aspx.cs*.  기존 코드를 다음 코드로 바꿉니다.  
+2.  *Default.aspx* 파일을 저장하고 나서 *Default.aspx.cs*라는 코드 숨김 파일을 엽니다. 기존 코드를 다음으로 바꿉니다.  
   
     ```csharp  
     using System;  
@@ -123,25 +128,26 @@ caps.handback.revision: 5
     }  
     ```  
   
-     위의 코드는 인증 된 사용자에 대 한 클레임을 표시 합니다.  
+     위 코드는 인증된 사용자에 대한 클레임을 표시합니다.  
   
-3.  응용 프로그램의 인증 형식을 변경 하려면 수정의  **\<authentication\>** 차단  **\<system.web\>** 섹션의 루트 프로젝트의  *Web.config* 단지 다음 구성 항목이 포함 되도록 파일:  
+3.  응용 프로그램의 인증 형식을 변경하려면 다음 구성 항목만 포함하도록 프로젝트의 루트 *Web.config* 파일에서 **\<system.web>** 섹션의 **\<authentication>** 블록을 수정합니다.  
   
-    ```  
+    ```xml  
     <authentication mode="Windows" />  
     ```  
   
-4.  마지막으로 수정의  **\<authorization\>** 차단  **\<system.web\>** 동일한 섹션  *Web.config* 인증 할 파일:  
+4.  마지막으로 동일한 *Web.config* 파일에서 **\<system.web>** 섹션의 **\<authorization>** 블록을 수정하여 인증을 적용합니다.  
   
-    ```  
+    ```xml  
     <authorization>  
         <deny users="?" />  
     </authorization>  
     ```  
   
-## 3 단계 – 솔루션 테스트  
- 이 단계에서 사용자는 Windows 인증을 사용 하 여 서명 하면 클레임 나와 확인 하 고 ASP.NET Web Forms 응용 프로그램을 테스트 합니다.  
+## <a name="step-3--test-your-solution"></a>3단계 - 솔루션 테스트  
+ 이 단계에서는 ASP.NET Web Forms 응용 프로그램을 테스트하고 사용자가 Windows 인증으로 로그인할 때 클레임이 제공되는지 확인합니다.  
   
-#### Windows 인증을 사용 하는 클레임에 대 한 ASP.NET Web Forms 응용 프로그램을 테스트 하려면  
+#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Windows 인증을 사용하여 클레임에 대한 ASP.NET Web Forms 응용 프로그램을 테스트하려면  
   
-1.  **F5** 키를 눌러 응용 프로그램을 빌드하고 실행합니다.  제공 될 해야  *Default.aspx*, 및 Windows 계정 이름 \(도메인 이름 포함\) 이미 인증 된 사용자는 위쪽에 표시 됩니다 오른쪽.  콘텐츠 페이지의 Windows 계정에서 검색할 클레임으로 채워진 테이블을 포함 해야 합니다.
+1.  **F5** 키를 눌러 응용 프로그램을 빌드하고 실행합니다. *Default.aspx*가 있어야 하고 Windows 계정 이름(도메인 이름)이 페이지의 오른쪽 위에 인증된 사용자로 표시되어 있어야 합니다. 페이지의 콘텐츠에 Windows 계정에서 검색된 클레임으로 채워진 표가 포함되어야 합니다.
+

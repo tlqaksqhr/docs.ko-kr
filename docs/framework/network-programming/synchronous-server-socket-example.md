@@ -1,30 +1,35 @@
 ---
-title: "동기 서버 소켓 예제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "동기 서버 소켓"
-  - "소켓, 코드 예제"
-  - "소켓, 동기 서버 소켓"
+title: "동기 서버 소켓 예제"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- synchronous server sockets
+- sockets, code examples
+- sockets, synchronous server sockets
 ms.assetid: 5916c764-879f-4716-99fb-1d21c6237f1c
 caps.latest.revision: 8
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6918042ac04a24f646ce8fd10a86d64c2aa4fd39
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
+
 ---
-# 동기 서버 소켓 예제
-다음 예제에서는 프로그램이 클라이언트로부터 연결 요청을 수신 하는 서버를 만듭니다.  클라이언트 로부터의 연결을 기다리는 동안 서버 응용 프로그램의 실행이 일시 중단 되어 있으므로 서버 동기 소켓을 기반으로 합니다.  응용 프로그램 클라이언트에서 문자열을 받는 문자열을 콘솔에 표시 하 고 문자열을 클라이언트에 다시 에코 합니다.  문자열은 클라이언트에서 문자열 "\<EOF\> 메시지의 끝에" 있어야 합니다.  
+# <a name="synchronous-server-socket-example"></a>동기 서버 소켓 예제
+다음 예제 프로그램은 클라이언트의 연결 요청을 수신하는 서버를 만듭니다. 이 서버는 동기 소켓으로 빌드되므로 클라이언트의 연결을 대기하는 동안 서버 응용 프로그램의 실행이 일시 중단됩니다. 응용 프로그램은 클라이언트에서 문자열을 받아 콘솔에 문자열을 표시한 다음 문자열을 클라이언트에 다시 에코합니다. 클라이언트의 문자열에는 메시지의 끝을 알리는 “\<EOF >” 문자열이 포함되어야 합니다.  
   
 ```vb  
 Imports System  
@@ -86,7 +91,6 @@ Public Class SynchronousSocketListener
     End Sub  
   
 End Class 'SynchronousSocketListener  
-  
 ```  
   
 ```csharp  
@@ -165,7 +169,8 @@ public class SynchronousSocketListener {
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [동기 클라이언트 소켓 예제](../../../docs/framework/network-programming/synchronous-client-socket-example.md)   
  [동기 서버 소켓 사용](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)   
  [소켓 코드 예제](../../../docs/framework/network-programming/socket-code-examples.md)
+

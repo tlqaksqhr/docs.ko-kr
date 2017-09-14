@@ -1,50 +1,56 @@
 ---
-title: "네트워크 응용 프로그램에 대한 캐시 관리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "캐시[.NET Framework], 네트워크 응용 프로그램"
-  - "네트워크 리소스, 캐싱"
-  - "인터넷, 캐싱"
+title: "네트워크 응용 프로그램에 대한 캐시 관리"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- cache [.NET Framework], network applications
+- network resources, caching
+- Internet, caching
 ms.assetid: fc258a40-f370-434f-ae09-4a8cb11ddaeb
 caps.latest.revision: 13
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: bdd1416de418dfb9b8b5c68da205817ae6d6225b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
+
 ---
-# 네트워크 응용 프로그램에 대한 캐시 관리
-이 주제와 관련된 하위 주제가 캐싱을 사용 하 여 가져온 리소스에 대 한 설명의 <xref:System.Net.WebClient>, <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest>, 및 <xref:System.Net.FtpWebRequest> 클래스입니다.  
+# <a name="cache-management-for-network-applications"></a>네트워크 응용 프로그램에 대한 캐시 관리
+이 항목 및 관련 하위 항목에서는 <xref:System.Net.WebClient>, <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest> 및 <xref:System.Net.FtpWebRequest> 클래스를 사용하여 얻은 리소스에 대한 캐싱을 설명합니다.  
   
- 캐시는 응용 프로그램에서 요청한 리소스의 임시 저장소를 제공합니다.  응용 프로그램 같은 리소스를 두 번 이상 요청 하면이 서버에서 re\-requesting 오버 헤드를 방지 하는 캐시에서 리소스를 반환할 수 있습니다.  캐싱은 요청한 리소스를 가져오는 데 필요한 시간이 줄어들어 응용 프로그램 성능이 향상 됩니다.  캐싱 또한 네트워크 트래픽을 서버 방문 횟수를 줄임으로써 줄일 수 있습니다.  캐싱 성능이 향상 되는 동안 리소스를 반환 하는 위험 증가 프로그램인 부실 리소스 캐싱 사용 했던 경우에 서버에서 전송 된 동일한 없음을 의미 합니다.  
+ 캐시는 응용 프로그램에서 요청된 리소스의 임시 저장소를 제공합니다. 응용 프로그램이 동일한 리소스를 두 번 이상 요청하는 경우 캐시에서 리소스를 반환하여 서버에서 다시 요청하는 오버헤드를 방지할 수 있습니다. 캐싱은 요청된 리소스를 가져오는 데 필요한 시간을 줄여 응용 프로그램 성능을 향상시킬 수 있습니다. 또한 캐싱은 서버로의 트립 수를 줄여 네트워크 트래픽을 줄일 수 있습니다. 캐싱은 성능을 개선하지만 응용 프로그램에 반환되는 리소스가 부실할 위험, 즉 캐싱을 사용하지 않을 경우 서버에서 전송될 리소스와 동일하지 않을 위험이 증가합니다.  
   
- 캐싱 권한이 없는 사용자 또는 프로세스가 중요 한 데이터를 읽을 수 있습니다.  캐시 된 인증된 응답은 추가 권한 부여 없이 캐시에서 가져올 수 있습니다.  캐싱이 설정 되 면 변경 <xref:System.Net.WebRequest.CachePolicy%2A> 에 <xref:System.Net.Cache.RequestCacheLevel> 또는 <xref:System.Net.Cache.RequestCacheLevel> 이 요청에 대 한 캐싱을 사용 하지 않도록 설정 합니다.  
+ 캐싱으로 인해 권한 없는 사용자 또는 프로세스가 중요한 데이터를 읽을 수도 있습니다. 캐시된 인증된 응답을 추가 인증 없이 캐시에서 검색할 수 있습니다. 캐싱을 사용하는 경우 <xref:System.Net.WebRequest.CachePolicy%2A>를 <xref:System.Net.Cache.RequestCacheLevel.BypassCache> 또는 <xref:System.Net.Cache.RequestCacheLevel.NoCacheNoStore>로 변경하여 이 요청에 대해 캐싱을 사용하지 않도록 설정합니다.  
   
- 보안 문제로 인해 캐시 된  **하지** 중간 계층 시나리오에서는 권장 합니다.  
+ 보안 문제로 인해 중간 계층 시나리오에는 캐싱이 권장되지 **않습니다**.  
   
-## 단원 내용  
+## <a name="in-this-section"></a>단원 내용  
  [캐시 정책](../../../docs/framework/network-programming/cache-policy.md)  
- 설명 하는 캐시 정책을 정의 하는 방법 이며.  
+ 캐시 정책이란 무엇이고 어떻게 정의하는지를 설명합니다.  
   
  [위치 기반 캐시 정책](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- 위치 기반 캐시 정책 하이퍼텍스트 전송 프로토콜 \(http 및 https\) 리소스를 사용할 수 있는 각 유형을 정의합니다.  
+ Hypertext Transfer Protocol(http 및 https) 리소스에 사용 가능한 각 위치 기반 캐시 정책 형식을 정의합니다.  
   
  [시간 기반 캐시 정책](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- 시간 기반 캐시 정책을 사용자 지정 하는 데 사용할 수 있는 조건을 설명 합니다.  
+ 시간 기반 캐시 정책을 사용자 지정하는 데 사용할 수 있는 조건을 설명합니다.  
   
  [네트워크 응용 프로그램에서 캐싱 구성](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
- 캐싱을 사용 하는 요청 및 캐시 정책을 프로그래밍 방식으로 만드는 방법에 설명 합니다.  
+ 프로그래밍 방식으로 캐시 정책 및 캐싱을 사용하는 요청을 만드는 방법을 설명합니다.  
   
-## 참조  
+## <a name="reference"></a>참조  
  <xref:System.Net.Cache>  
- 정의 형식 및 열거형을 사용 하 여 가져온 리소스에 대 한 캐시 정책을 정의 하는 데는 <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest>, 및 <xref:System.Net.FtpWebRequest> 클래스입니다.
+ <xref:System.Net.WebRequest>, <xref:System.Net.HttpWebRequest> 및 <xref:System.Net.FtpWebRequest> 클래스를 사용하여 얻은 리소스에 대한 캐시 정책을 정의하는 데 사용되는 형식과 열거형을 정의합니다.
+
