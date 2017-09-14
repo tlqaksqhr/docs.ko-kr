@@ -24,7 +24,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 76645ae43ce6754ffdf505729ec1198785a71561
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/14/2017
 
 ---
 # <a name="compiling-apps-with-net-native"></a>.NET 네이티브로 앱 컴파일
