@@ -11,10 +11,10 @@ ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6b5e01f7244b8b7b83fbc76a80eae0c1432c936a
+ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
+ms.openlocfilehash: df8733c5c4532dc188ceb95d7bf236bcd2182b9f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/14/2017
 
 ---
 # <a name="methods"></a>메서드 #
@@ -22,7 +22,7 @@ ms.lasthandoff: 07/28/2017
 메서드는 일련의 문을 포함하는 코드 블록입니다. 프로그램을 통해 메서드를 호출하고 필요한 메서드 인수를 지정하여 문을 실행합니다. C#에서는 실행된 모든 명령이 메서드의 컨텍스트에서 수행됩니다. `Main` 메서드는 모든 C# 응용 프로그램의 진입점이고 프로그램이 시작될 때 CLR(공용 언어 런타임)에서 호출됩니다.
 
 > [!NOTE]
-> 이 항목에서는 명명된 메서드에 대해 설명합니다. 익명 함수에 대한 자세한 내용은 [익명 함수](https://msdn.microsoft.com/library/bb882516.aspx)를 참조하세요.
+> 이 항목에서는 명명된 메서드에 대해 설명합니다. 익명 함수에 대한 자세한 내용은 [익명 함수](programming-guide/statements-expressions-operators/anonymous-functions.md)를 참조하세요.
 
 이 항목에는 다음과 같은 단원이 포함되어 있습니다.
 
@@ -252,14 +252,14 @@ if (person != null)
 
 확장 메서드를 사용하면 형식 자체를 수정하거나 상속된 형식에서 새 메서드를 구현하지 않고 기존 형식에 메서드를 "추가"할 수 있습니다. 또한 확장 메서드는 확장하는 형식과 동일한 어셈블리에 있지 않아도 됩니다. 형식의 정의된 멤버인 것처럼 확장 메서드를 호출합니다.
 
-자세한 내용은 [확장 메서드](https://msdn.microsoft.com/library/bb383977.aspx)를 참조하세요.
+자세한 내용은 [확장 메서드](programming-guide/classes-and-structs/extension-methods.md)를 참조하세요.
 
 <a name="async"></a>
 ## <a name="async-methods"></a>비동기 메서드 ##
 
 비동기 기능을 사용하면 명시적 콜백을 사용하거나 수동으로 여러 메서드 또는 람다 식에 코드를 분할하지 않고도 비동기 메서드를 호출할 수 있습니다.
 
-메서드에 [async](https://msdn.microsoft.com/library/hh156513.aspx) 한정자를 표시하면 메서드에서 [await](https://msdn.microsoft.com/library/hh156528.aspx) 연산자를 사용할 수 있습니다. 제어가 비동기 메서드의 `await` 식에 도달하면 대기된 작업이 완료되지 않은 경우 제어가 호출자로 반환되고, 대기된 작업이 완료될 때까지 `await` 키워드가 있는 메서드의 진행이 일시 중단됩니다. 작업이 완료되면 메서드가 실행이 다시 시작될 수 있습니다.
+메서드에 [async](language-reference/keywords/async.md) 한정자를 표시하면 메서드에서 [await](language-reference/keywords/await.md) 연산자를 사용할 수 있습니다. 제어가 비동기 메서드의 `await` 식에 도달하면 대기된 작업이 완료되지 않은 경우 제어가 호출자로 반환되고, 대기된 작업이 완료될 때까지 `await` 키워드가 있는 메서드의 진행이 일시 중단됩니다. 작업이 완료되면 메서드가 실행이 다시 시작될 수 있습니다.
 
 > [!NOTE]
 > 비동기 메서드는 아직 완료되지 않은 첫 번째 대기된 개체를 검색할 때나 비동기 메서드의 끝에 도달할 때 중에서 먼저 발생하는 시점에 호출자에게 반환됩니다.
@@ -270,9 +270,9 @@ if (person != null)
 
 [!code-csharp[csSnippets.Methods#102](../../samples/snippets/csharp/concepts/methods/async1.cs#102)]
 
-비동기 메서드는 [ref](https://msdn.microsoft.com/library/14akc2c7.aspx) 또는 [out](https://msdn.microsoft.com/library/t3c3bfhx.aspx) 매개 변수를 선언할 수 없지만, 이러한 매개 변수가 있는 메서드를 호출할 수는 있습니다.
+비동기 메서드는 [ref](language-reference/keywords/ref.md) 또는 [out](language-reference/keywords/out.md) 매개 변수를 선언할 수 없지만, 이러한 매개 변수가 있는 메서드를 호출할 수는 있습니다.
 
- 비동기 메서드에 대한 자세한 내용은 [Async 및 Await를 사용한 비동기 프로그래밍](https://msdn.microsoft.com/library/mt674882.aspx), [비동기 프로그램의 제어 흐름](https://msdn.microsoft.com/library/mt674892.aspx) 및 [비동기 반환 형식](https://msdn.microsoft.com/library/mt674893.aspx)을 참조하세요.
+ 비동기 메서드에 대한 자세한 내용은 [Async 및 Await를 사용한 비동기 프로그래밍](async.md), [비동기 프로그램의 제어 흐름](programming-guide/concepts/async/control-flow-in-async-programs.md) 및 [비동기 반환 형식](programming-guide/concepts/async/async-return-types.md)을 참조하세요.
 
 <a name="expr"></a>
 ## <a name="expression-bodied-members"></a>식 본문 멤버 ##
@@ -293,20 +293,20 @@ public Customer this[long id] => store.LookupCustomer(id);
 <a name="iterators"></a>
 ## <a name="iterators"></a>반복기 ##
 
-반복기는 배열 목록과 같은 컬렉션에 대해 사용자 지정 반복을 수행합니다. 반복기는 [yield return](https://msdn.microsoft.com/library/9k7k7cf0.aspx) 문을 사용하여 각 요소를 한 번에 하나씩 반환합니다. `yield return` 문에 도달하면 호출자가 시퀀스의 다음 요소를 요청할 수 있도록 현재 위치가 기억됩니다.
+반복기는 배열 목록과 같은 컬렉션에 대해 사용자 지정 반복을 수행합니다. 반복기는 [yield return](language-reference/keywords/yield.md) 문을 사용하여 각 요소를 한 번에 하나씩 반환합니다. `yield return` 문에 도달하면 호출자가 시퀀스의 다음 요소를 요청할 수 있도록 현재 위치가 기억됩니다.
 
 반복기의 반환 형식은 @System.Collections.IEnumerable, @System.Collections.Generic.IEnumerable%601, @System.Collections.IEnumerator 또는 @System.Collections.Generic.IEnumerator%601일 수 있습니다.
 
-자세한 내용은 [반복기](https://msdn.microsoft.com/library/mt639331.aspx)를 참조하세요.
+자세한 내용은 [반복기](programming-guide/concepts/iterators.md)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목 ##
 
-[액세스 한정자](https://msdn.microsoft.com/library/wxh6fsc7.aspx)   
-[정적 클래스 및 정적 클래스 멤버](https://msdn.microsoft.com/library/79b3xss3.aspx)   
-[상속](https://msdn.microsoft.com/library/ms173149.aspx)   
-[추상 및 봉인 클래스와 클래스 멤버](https://msdn.microsoft.com/library/ms173150.aspx)   
-[params](https://msdn.microsoft.com/library/w5zay9db.aspx)   
-[out](https://msdn.microsoft.com/library/t3c3bfhx.aspx)   
-[ref](https://msdn.microsoft.com/library/14akc2c7.aspx)   
-[매개 변수 전달](https://msdn.microsoft.com/library/0f66670z.aspx)
+[액세스 한정자](language-reference/keywords/access-modifiers.md)   
+[정적 클래스 및 정적 클래스 멤버](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
+[상속](programming-guide/classes-and-structs/inheritance.md)   
+[추상 및 봉인 클래스와 클래스 멤버](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
+[params](language-reference/keywords/params.md)   
+[out](language-reference/keywords/out.md)   
+[ref](language-reference/keywords/ref.md)   
+[매개 변수 전달](programming-guide/classes-and-structs/passing-parameters.md)
 
