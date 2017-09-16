@@ -21,10 +21,10 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1c77754efcfa626c2907fd57740133a0db4737d4
+ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
+ms.openlocfilehash: 223174392019e0958360858740d7cae37d934f4c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Hashtable 및 Dictionary 컬렉션 형식
@@ -42,7 +42,7 @@ ms.lasthandoff: 07/28/2017
   
  예를 들어 문자열에 대한 해시 함수는 문자열에 포함된 각 문자의 ASCII 코드를 받은 다음 함께 결합하여 해시 코드를 생성합니다. 문자열 "picnic"은 문자열 "basket"의 해시 코드와 다른 해시 코드를 가지므로 문자열 "picnic"과 "basket"은 다른 버킷에 있습니다. 반면, "stressed"와 "desserts"는 동일한 해시 코드를 가지므로 동일한 버킷에 있습니다.  
   
- <xref:System.Collections.Generic.Dictionary%602> 및 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 클래스는 <xref:System.Collections.Hashtable> 클래스와 기능이 동일합니다. 특정 형식(<xref:System.Object> 이외)의 <xref:System.Collections.Generic.Dictionary%602>는 값 형식의 <xref:System.Collections.Hashtable>보다 더 나은 성능을 제공합니다. 이는 <xref:System.Collections.Hashtable>의 요소가 <xref:System.Object> 형식이기 때문입니다. 따라서 boxing 및 unboxing은 일반적으로 값 형식을 저장하거나 검색할 때 발생합니다. <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 클래스는 여러 스레드가 컬렉션에 동시에 액세스할 수 있는 경우에 사용해야 합니다.  
+ <xref:System.Collections.Generic.Dictionary%602> 및 <xref:System.Collections.Concurrent.ConcurrentDictionary%602>클래스는 <xref:System.Collections.Hashtable> 클래스와 동일한 기능을 갖습니다. 특정 형식(<xref:System.Object> 이외)의 <xref:System.Collections.Generic.Dictionary%602>는 값 형식의 <xref:System.Collections.Hashtable>보다 더 나은 성능을 제공합니다. 이는 <xref:System.Collections.Hashtable>의 요소가 <xref:System.Object> 형식이기 때문입니다. 따라서 boxing 및 unboxing은 일반적으로 값 형식을 저장하거나 검색할 때 발생합니다. <xref:System.Collections.Concurrent.ConcurrentDictionary%602>클래스는 여러 스레드가 컬렉션에 동시에 액세스할 수 있는 경우에 사용해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Collections.Hashtable>   
