@@ -10,10 +10,10 @@ ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: cb788dcf-2120-467f-9c34-c02a90e1f68f
 ms.translationtype: HT
-ms.sourcegitcommit: 6500a14839b14d75d09d8d807c943553dbe09b47
-ms.openlocfilehash: 991a5f4419e6aadc2580f34c97dc74a42dc8cbe6
+ms.sourcegitcommit: 03d1e3f0897713e25be7d7f893861a3eb4dac211
+ms.openlocfilehash: 303219086339a059a905e303a4ecd490e91ba7cc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 09/11/2017
 
 ---
 # <a name="welcome-to-net"></a>.NET 시작
