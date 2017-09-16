@@ -1,46 +1,52 @@
 ---
-title: "공용 언어 런타임의 ETW 이벤트 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CLR ETW 이벤트"
-  - "ETW, CLR 이벤트"
-  - "ETW, 공용 언어 런타임"
+title: "공용 언어 런타임의 ETW 이벤트"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CLR ETW events
+- ETW, common language runtime
+- ETW, CLR events
 ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
 caps.latest.revision: 7
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 7
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6a6b97bf8ce9075ee5fc8877fed65bd4a23f1ce5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
+
 ---
-# 공용 언어 런타임의 ETW 이벤트
-CLR\(공용 언어 런타임\)은 다양한 디버깅 및 프로파일링 이벤트를 통해 유용한 ETW\(Windows용 이벤트 추적\) 진단 정보를 제공합니다.  CLR ETW 이벤트는 Windows ETW 추적 시스템을 활용하여 공용 런타임 언어가 제공하는 기존 프로파일링 및 디버깅 지원을 향상시킵니다.  
+# <a name="etw-events-in-the-common-language-runtime"></a>공용 언어 런타임의 ETW 이벤트
+CLR(공용 언어 런타임)은 다양한 디버깅 및 프로파일링 이벤트를 통해 ETW(Windows용 이벤트 추적) 진단 정보에 대한 유용한 이벤트 추적을 제공합니다. CLR ETW 이벤트는 Windows ETW 추적 시스템을 사용하여 공용 언어 런타임에서 제공되는 기존 프로파일링 및 디버깅 지원을 확장합니다.  
   
- ETW에 대한 자세한 내용은 MSDN의 [Improve Debugging and Performance Tuning with ETW](http://go.microsoft.com/fwlink/?LinkID=161142)을 참조하십시오.  Xperf에 대한 자세한 내용은 NTDebugging 블로그의 [Windows Performance Toolkit \- Xperf](http://go.microsoft.com/fwlink/?LinkID=161144) 항목에서 찾을 수 있습니다.  
+ ETW에 대한 자세한 내용은 MSDN의 [Improve Debugging and Performance Tuning with ETW](http://go.microsoft.com/fwlink/?LinkID=161142)(ETW를 사용한 디버깅 및 성능 조정 개선)를 참조하세요. Xperf에 대한 자세한 내용은 NTDebugging 블로그의 [Windows Performance Toolkit - Xperf](http://go.microsoft.com/fwlink/?LinkID=161144)(Windows 성능 도구 키트 - Xperf) 항목에서 찾을 수 있습니다.  
   
- 추가 CLR ETW 도구는 사용 가능 해지는 대로 [CodePlex Web site](http://go.microsoft.com/fwlink/?LinkID=111138)에 제공될 예정입니다.  
+ 추가적인 CLR ETW 도구를 사용할 수 있게 되면 [CodePlex 웹 사이트](http://go.microsoft.com/fwlink/?LinkID=111138)에서 제공됩니다.  
   
- [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 또는 이후 버전이 필요 모든 설명 된 이벤트는 이벤트 항목입니다.  Windows Vista 운영 체제는 최소 지원 되는 클라이언트 및 Windows Server 2008은 최소 지원 되는 서버입니다.  
+ 이벤트 항목에 설명된 모든 이벤트를 지원하려면 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 이상이 필요합니다. Windows Vista 운영 체제가 최소 지원 클라이언트이고, Windows Server 2008이 최소 지원 서버입니다.  
   
-## 단원 내용  
+## <a name="in-this-section"></a>단원 내용  
  [.NET Framework 로깅 제어](../../../docs/framework/performance/controlling-logging.md)  
- ETW 이벤트 캡처 및 확인을 위한 도구와 명령에 대해 설명합니다.  
+ ETW 이벤트를 캡처하고 보기 위한 도구와 명령을 설명합니다.  
   
  [CLR ETW 공급자](../../../docs/framework/performance/clr-etw-providers.md)  
- 런타임 및 런다운 공급자에 대한 정보를 제공하고, 이러한 공급자를 ETW 데이터 수집에 사용할 수 있는 방법에 대해 설명합니다.  
+ 런타임 및 런다운 공급자와 ETW 데이터 수집에 이러한 공급자를 사용하는 방법을 설명합니다.  
   
  [CLR ETW 키워드 및 수준](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)  
- 범주별로 이벤트를 필터링할 수 있게 하는 런타임 및 런다운 공급자 키워드에 대해 설명합니다.  
+ 범주별 이벤트 필터링을 가능하게 하는 런타임 및 런다운 공급자에 대한 키워드를 설명합니다.  
   
  [CLR ETW 이벤트](../../../docs/framework/performance/clr-etw-events.md)  
- CLR ETW 이벤트, 이벤트의 키워드, 수준 및 이벤트 데이터에 대한 자세한 정보를 제공합니다.  
+ CLR ETW 이벤트, 해당 키워드 및 이벤트 데이터를 자세히 설명합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [.NET Framework의 ETW 이벤트](../../../docs/framework/performance/etw-events.md)
+

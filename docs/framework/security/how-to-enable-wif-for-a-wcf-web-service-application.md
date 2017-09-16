@@ -1,31 +1,37 @@
 ---
-title: "방법: WCF 웹 서비스 응용 프로그램에 WIF 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "방법: WCF 웹 서비스 응용 프로그램에 WIF 사용"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bfc64b3d-64e9-4093-a6a4-72e933917af7
 caps.latest.revision: 6
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 6
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 7db69de994770e122dd4a4233b9a44d572c32344
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
+
 ---
-# 방법: WCF 웹 서비스 응용 프로그램에 WIF 사용
-## 적용 대상  
+# <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>방법: WCF 웹 서비스 응용 프로그램에 WIF 사용
+## <a name="applies-to"></a>적용 대상  
   
--   Microsoft® Windows® Identity Foundation\(WIF\)  
+-   Microsoft® Windows® Identity Foundation(WIF)  
   
--   Microsoft® Windows® Communication Foundation\(WCF\)  
+-   Microsoft® Windows® Communication Foundation(WCF)  
   
-## 요약  
- 이 방법 설명에서는 WCF 웹 서비스에서 WIF를 사용하기 위한 자세한 단계별 절차를 소개합니다.  또한, 응용 프로그램이 실행될 때 웹 서비스가 클레임을 올바로 표시하는지 확인하기 위해 응용 프로그램을 테스트하는 방법에 대한 지침을 제공합니다.  이 방법 설명에 보안 토큰 서비스\(STS\)를 만들기 위한 자세한 지침은 없으며, 그 대신 ID 및 액세스 도구와 함께 제공되는 개발 STS를 사용합니다.  개발 STS가 실제 인증을 수행하는 것은 아니며, 테스트 목적으로만 사용됩니다.  이 방법을 완료하려면 ID 및 액세스 도구를 설치해야 합니다.  [ID 및 액세스 도구](http://go.microsoft.com/fwlink/?LinkID=245849)에서 다운로드할 수 있습니다.  
+## <a name="summary"></a>요약  
+ 이 방법 설명에서는 WCF 웹 서비스에서 WIF를 사용하기 위한 자세한 단계별 절차를 소개합니다. 또한, 응용 프로그램이 실행될 때 웹 서비스가 클레임을 올바로 표시하는지 확인하기 위해 응용 프로그램을 테스트하는 방법에 대한 지침을 제공합니다. 이 방법 설명에 보안 토큰 서비스(STS)를 만들기 위한 자세한 지침은 없으며, 그 대신 ID 및 액세스 도구와 함께 제공되는 개발 STS를 사용합니다. 개발 STS가 실제 인증을 수행하는 것은 아니며, 테스트 목적으로만 사용됩니다. 이 방법을 완료하려면 ID 및 액세스 도구를 설치해야 합니다. [ID 및 액세스 도구](http://go.microsoft.com/fwlink/?LinkID=245849)에서 다운로드할 수 있습니다.  
   
-## 콘텐츠  
+## <a name="contents"></a>목차  
   
 -   목표  
   
@@ -33,20 +39,20 @@ caps.handback.revision: 6
   
 -   단계 요약  
   
--   1단계 \- 간단한 WCF 서비스 만들기  
+-   1단계 - 간단한 WCF 서비스 만들기  
   
--   2단계 \- WCF 서비스용 클라이언트 응용 프로그램 만들기  
+-   2단계 - WCF 서비스용 클라이언트 응용 프로그램 만들기  
   
--   3단계 \- 솔루션 테스트  
+-   3단계 - 솔루션 테스트  
   
-## 목표  
+## <a name="objectives"></a>목표  
   
 -   발행된 토큰을 요구하는 WCF 서비스 만들기  
   
 -   STS로부터 토큰을 요청하고 WCF 서비스로 토큰을 전달하는 WCF 클라이언트 만들기  
   
-## 개요  
- 이 방법은 WCF 서비스를 개발할 때 개발자가 페더레이션 인증을 사용할 수 있는 방법을 보여주기 위한 것입니다.  WCF 서비스에서 페더레이션을 사용할 때의 이점은 다음과 같습니다.  
+## <a name="overview"></a>개요  
+ 이 방법은 WCF 서비스를 개발할 때 개발자가 페더레이션 인증을 사용할 수 있는 방법을 보여주기 위한 것입니다. WCF 서비스에서 페더레이션을 사용할 때의 이점은 다음과 같습니다.  
   
 1.  WCF 서비스 코드에서 인증 논리 제외  
   
@@ -58,18 +64,18 @@ caps.handback.revision: 6
   
  WIF와 관련 ID 및 액세스 도구는 다음 단계에서 설명하는 바와 같이 페더레이션된 인증을 사용하여 WCF 서비스를 더욱 쉽게 개발하고 테스트할 수 있게 해줍니다.  
   
-## 단계 요약  
+## <a name="summary-of-steps"></a>단계 요약  
   
--   1단계 \- 간단한 WCF 서비스 만들기  
+-   1단계 - 간단한 WCF 서비스 만들기  
   
--   2단계 \- WCF 서비스용 클라이언트 응용 프로그램 만들기  
+-   2단계 - WCF 서비스용 클라이언트 응용 프로그램 만들기  
   
--   3단계 \- 솔루션 테스트  
+-   3단계 - 솔루션 테스트  
   
-## 1단계 \- 간단한 WCF 서비스 만들기  
+## <a name="step-1--create-a-simple-wcf-service"></a>1단계 - 간단한 WCF 서비스 만들기  
  이 단계에서는 ID 및 액세스 도구에 포함되어 있는 개발 STS를 사용하는 새 WCF 서비스를 만듭니다.  
   
-#### 간단한 WCF 서비스를 만들려면  
+#### <a name="to-create-a-simple-wcf-service"></a>간단한 WCF 서비스를 만들려면  
   
 1.  관리자로 승격된 모드에서 Visual Studio를 시작합니다.  
   
@@ -79,11 +85,11 @@ caps.handback.revision: 6
   
 4.  **이름**에서 `TestService`를 입력하고 **확인**을 누릅니다.  
   
-5.  **솔루션 탐색기**에서 **TestService** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음, **ID 및 액세스**를 선택합니다.  
+5.  **솔루션 탐색기**에서 **TestService** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **ID 및 액세스**를 선택합니다.  
   
-6.  **ID 및 액세스** 창이 나타납니다.  **공급자**에서 **로컬 개발 STS로 응용 프로그램 테스트**를 선택한 다음, **적용**을 클릭합니다.  ID 및 액세스 도구는 *Web.config* 파일에 구성 요소를 추가하여 WIF를 사용하고 로컬 개발 STS\(**LocalSTS**\)로 인증을 아웃소싱하도록 서비스를 구성합니다.  
+6.  **ID 및 액세스** 창이 나타납니다. **공급자**에서 **로컬 개발 STS로 응용 프로그램 테스트**를 선택한 다음 **적용**을 클릭합니다. ID 및 액세스 도구는 *Web.config* 파일에 구성 요소를 추가하여 WIF를 사용하고 로컬 개발 STS(**LocalSTS**)로 인증을 아웃소싱하도록 서비스를 구성합니다.  
   
-7.  *Service1.svc.cs* 파일에서 **System.Security.Claims** 네임스페이스에 대한 `using` 지시문을 추가하고 기존 코드를 다음으로 바꾼 다음, 파일을 저장합니다.  
+7.  *Service1.svc.cs* 파일에서 **System.Security.Claims** 네임스페이스에 대한 `using` 지시문을 추가하고 기존 코드를 다음으로 바꾼 다음 파일을 저장합니다.  
   
     ```csharp  
     public class Service1 : IService1  
@@ -133,28 +139,28 @@ caps.handback.revision: 6
   
 9. 프로젝트를 빌드합니다.  
   
-10. **Ctrl\-F5** 키를 눌러 디버거를 시작하지 않고 서비스를 실행합니다.  서비스를 위한 웹 페이지가 열려야 하고 알림 영역\(시스템 트레이\)을 보고 **LocalSTS**가 실행 중인지 확인할 수 있습니다.  
+10. **Ctrl-F5** 키를 눌러 디버거를 시작하지 않고 서비스를 실행합니다. 서비스를 위한 웹 페이지가 열려야 하고 알림 영역(시스템 트레이)을 보고 **LocalSTS**가 실행 중인지 확인할 수 있습니다.  
   
     > [!IMPORTANT]
     >  다음 단계에서 클라이언트 응용 프로그램에 서비스 참조를 추가할 때 **TestService**와 **LocalSTS**가 모두 실행 중이어야 합니다.  
   
-## 2단계 \- WCF 서비스용 클라이언트 응용 프로그램 만들기  
+## <a name="step-2--create-a-client-application-for-the-wcf-service"></a>2단계 - WCF 서비스용 클라이언트 응용 프로그램 만들기  
  이 단계에서는 개발 STS를 사용하여 이전 단계에서 만든 WCF 서비스로 인증하는 콘솔 응용 프로그램을 만듭니다.  
   
-#### 클라이언트 응용 프로그램을 만들려면  
+#### <a name="to-create-a-client-application"></a>클라이언트 응용 프로그램을 만들려면  
   
-1.  Visual Studio에서 솔루션을 마우스 오른쪽 단추로 클릭하고, **추가**를 클릭한 다음, **새 프로젝트**를 클릭합니다.  
+1.  Visual Studio에서 솔루션을 마우스 오른쪽 단추로 클릭하고, **추가**, **새 프로젝트**를 차례로 클릭합니다.  
   
-2.  **새 프로젝트 추가** 창의 **Visual C\#** 템플릿 목록에서 **콘솔 응용 프로그램**을 선택하고, `Client`를 입력한 다음, **확인**을 누릅니다.  새 프로젝트가 솔루션 폴더에 생성됩니다.  
+2.  **새 프로젝트 추가** 창의 **Visual C#** 템플릿 목록에서 **콘솔 응용 프로그램**을 선택하고, `Client`를 입력한 다음, **확인**을 누릅니다. 새 프로젝트가 솔루션 폴더에 생성됩니다.  
   
-3.  **클라이언트** 프로젝트에서 **참조**를 마우스 오른쪽 단추로 클릭한 다음, **서비스 참조 추가**를 클릭합니다.  
+3.  **클라이언트** 프로젝트에서 **참조**를 마우스 오른쪽 단추로 클릭한 다음 **서비스 참조 추가**를 클릭합니다.  
   
-4.  **서비스 참조 추가** 창에서 **검색** 단추의 드롭다운 화살표를 클릭하고 **솔루션의 서비스**를 클릭합니다.  **주소**에는 앞서 만든 WCF 서비스가 자동으로 채워지고 **네임스페이스**는 **ServiceReference1**로 설정됩니다.  **확인**을 클릭합니다.  
+4.  **서비스 참조 추가** 창에서 **검색** 단추의 드롭다운 화살표를 클릭하고 **솔루션의 서비스**를 클릭합니다. **주소**에는 앞서 만든 WCF 서비스가 자동으로 채워지고 **네임스페이스**는 **ServiceReference1**로 설정됩니다. **확인**을 클릭합니다.  
   
     > [!IMPORTANT]
     >  클라이언트에 서비스 참조를 추가할 때 **TestService**와 **LocalSTS**가 모두 실행 중이어야 합니다.  
   
-5.  Visual Studio는 WCF 서비스를 위한 프록시 클래스를 생성하고 필요한 참조 정보를 모두 추가합니다.  또한, *App.config* 파일에 요소를 추가하여 클라이언트가 STS에서 토큰을 받아 서비스에 인증하도록 구성합니다.  이 프로세스가 완료되면 **Program.cs** 파일이 열립니다.  **System.ServiceModel**에 대한 `using` 지시문과 **Client.ServiceReference1**에 대한 다른 지시문을 추가하고, **Main** 메서드를 다음 코드로 바꾼 다음, 파일을 저장합니다.  
+5.  Visual Studio는 WCF 서비스를 위한 프록시 클래스를 생성하고 필요한 참조 정보를 모두 추가합니다. 또한, *App.config* 파일에 요소를 추가하여 클라이언트가 STS에서 토큰을 받아 서비스에 인증하도록 구성합니다. 이 프로세스가 완료되면 **Program.cs** 파일이 열립니다. **System.ServiceModel**에 대한 `using` 지시문과 **Client.ServiceReference1**에 대한 다른 지시문을 추가하고, **Main** 메서드를 다음 코드로 바꾼 다음, 파일을 저장합니다.  
   
     ```csharp  
     static void Main(string[] args)  
@@ -216,7 +222,7 @@ caps.handback.revision: 6
   
 6.  *App.config* 파일을 열고, 다음 XML을 `<system.serviceModel>` 요소 아래의 첫 번째 자식 요소로 추가한 다음, 파일을 저장합니다.  
   
-    ```  
+    ```xml  
     <behaviors>  
        <endpointBehaviors>  
          <behavior>  
@@ -228,23 +234,22 @@ caps.handback.revision: 6
          </behavior>  
        </endpointBehaviors>  
      </behaviors>  
-  
     ```  
   
      이렇게 하면 인증서 유효성 검사를 사용하지 않습니다.  
   
-7.  **TestService** 솔루션을 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트 설정**을 클릭합니다.  **시작 프로젝트** 속성 페이지가 열립니다.  **시작 프로젝트** 속성 페이지에서 **여러 개의 시작 프로젝트**를 선택한 다음, 각 프로젝트에 대한 **작업** 필드를 클릭하고, 드롭다운 메뉴에서 **시작**을 선택합니다.  **확인**을 클릭하여 설정을 저장합니다.  
+7.  **TestService** 솔루션을 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트 설정**을 클릭합니다. **시작 프로젝트** 속성 페이지가 열립니다. **시작 프로젝트** 속성 페이지에서 **여러 개의 시작 프로젝트**를 선택한 다음, 각 프로젝트에 대한 **작업** 필드를 클릭하고, 드롭다운 메뉴에서 **시작**을 선택합니다. **확인**을 클릭하여 설정을 저장합니다.  
   
 8.  솔루션을 빌드합니다.  
   
-## 3단계 \- 솔루션 테스트  
+## <a name="step-3--test-your-solution"></a>3단계 - 솔루션 테스트  
  이 단계에서 WIF를 사용하는 WCF 응용 프로그램을 테스트하고 클레임이 표시되는지 확인합니다.  
   
-#### 클레임에 대해 WIF를 사용하는 WCF 응용 프로그램을 테스트하려면  
+#### <a name="to-test-your-wif-enabled-wcf-application-for-claims"></a>클레임에 대해 WIF를 사용하는 WCF 응용 프로그램을 테스트하려면  
   
-1.  **F5** 키를 눌러 응용 프로그램을 빌드하고 실행합니다.  콘솔 창과 **서비스를 호출하려면 Enter 키를 누르고, 응용 프로그램을 종료하려면 다른 키를 누르십시오.** 텍스트가 표시되어야 합니다.  
+1.  **F5** 키를 눌러 응용 프로그램을 빌드하고 실행합니다. 콘솔 창과 서비스를 호출하려면 Enter 키를 누르고, **응용 프로그램을 종료하려면 다른 키를 누르세요.** 텍스트가 표시됩니다.  
   
-2.  **Enter** 키를 누르면 콘솔에 다음 클레임 정보가 나타나야 합니다.  
+2.  **Enter** 키를 누르면 콘솔에 다음 클레임 정보가 나타납니다.  
   
     ```  
     Computed by Service1  
@@ -259,6 +264,7 @@ caps.handback.revision: 6
     ```  
   
     > [!IMPORTANT]
-    >  **Enter** 키를 누르기 전에 **TestService**와 **LocalSTS**가 모두 실행 중이어야 합니다.  서비스를 위한 웹 페이지가 열려야 하고 알림 영역\(시스템 트레이\)을 보고 **LocalSTS**가 실행 중인지 확인할 수 있습니다.  
+    >  **Enter** 키를 누르기 전에 **TestService**와 **LocalSTS**가 모두 실행 중이어야 합니다. 서비스를 위한 웹 페이지가 열려야 하고 알림 영역(시스템 트레이)을 보고 **LocalSTS**가 실행 중인지 확인할 수 있습니다.  
   
 3.  이러한 클레임이 콘솔에 나타나는 경우, WCF 서비스에서 클레임을 표시하도록 STS 인증에 성공한 것입니다.
+

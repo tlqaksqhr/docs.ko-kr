@@ -1,33 +1,36 @@
 ---
-title: "&lt;필드&gt; 요소(.NET 네이티브) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;필드&gt; 요소(.NET 네이티브)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6a14125f-1a8d-41a1-8a32-659ca0ad12de
 caps.latest.revision: 9
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 9
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 84b0e28fb09f730999a8cad6e5002338957ef6a2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
+
 ---
-# &lt;필드&gt; 요소(.NET 네이티브)
+# <a name="ltfieldgt-element-net-native"></a>&lt;필드&gt; 요소(.NET 네이티브)
 런타임 리플렉션 정책을 필드에 적용합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```xml  
-  
 <Field Name="field_name"  
        Browse="policy_type"  
        Dynamic="policy_type"  
        Serialize="policy_type" />  
-  
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
@@ -46,13 +49,13 @@ caps.handback.revision: 9
   
 |값|설명|  
 |-----------|-----------------|  
-|*method_name*|필드 이름입니다. 필드의 형식은 부모에 의해 정의 됩니다 [ <> \> ](../../../docs/framework/net-native/type-element-net-native.md) 또는 [ <> \> ](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 요소입니다.|  
+|*method_name*|필드 이름입니다. 필드의 형식은 부모 [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) 또는 [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 요소로 정의됩니다.|  
   
 ## <a name="all-other-attributes"></a>기타 모든 특성  
   
 |값|설명|  
 |-----------|-----------------|  
-|*policy_setting*|필드에 대해 이 정책 형식에 적용할 설정입니다. 가능한 값은 `Auto`, `Excluded`, `Included` 및 `Required`입니다. 자세한 내용은 참조 [런타임 지시문 정책 설정](../../../docs/framework/net-native/runtime-directive-policy-settings.md)합니다.|  
+|*policy_setting*|필드에 대해 이 정책 형식에 적용할 설정입니다. 가능한 값은 `Auto`, `Excluded`, `Included` 및 `Required`입니다. 자세한 내용은 [런타임 지시문 정책 설정](../../../docs/framework/net-native/runtime-directive-policy-settings.md)을 참조하세요.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -61,13 +64,14 @@ caps.handback.revision: 9
   
 |요소|설명|  
 |-------------|-----------------|  
-|[<>\>](../../../docs/framework/net-native/type-element-net-native.md)|형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
-|[<>\>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|생성된 제네릭 형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
+|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|생성된 제네릭 형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
   
 ## <a name="remarks"></a>설명  
  필드의 정책이 명시적으로 정의되어 있지 않으면 부모 요소의 런타임 정책을 상속합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [런타임 지시문 요소](../../../docs/framework/net-native/runtime-directive-elements.md)   
- [런타임 지시문 (rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
+ [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
  [런타임 지시문 정책 설정](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+

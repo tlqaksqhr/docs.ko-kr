@@ -1,44 +1,50 @@
 ---
-title: "System.Net 클래스에 대한 모범 사례 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "데이터 보내기, 모범 사례"
-  - "인터넷에서 데이터 요청, 모범 사례"
-  - "WebRequest 클래스, 모범 사례"
-  - "데이터 요청, 모범 사례"
-  - "WebResponse 클래스, 모범 사례"
-  - "모범 사례, 데이터 요청"
-  - "데이터 받기, 모범 사례"
+title: "System.Net 클래스에 대한 모범 사례"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- sending data, best practices
+- requesting data from Internet, best practices
+- WebRequest class, best practices
+- data requests, best practices
+- WebResponse class, best practices
+- best practices, data requests
+- receiving data, best practices
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4fb997efc1ba23620cad4a63bd7fa683020a9056
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
+
 ---
-# System.Net 클래스에 대한 모범 사례
-다음 권장 사항에 포함 된 클래스를 사용 하는 데 도움이 됩니다 <xref:System.Net> 최상의 이용 합니다.  
+# <a name="best-practices-for-systemnet-classes"></a>System.Net 클래스에 대한 모범 사례
+다음 권장 사항은 <xref:System.Net>에 포함된 클래스를 최대한 활용하는 데 도움이 됩니다.  
   
--   사용 <xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse> 하위 클래스 형식 캐스팅 하지 않고 가능 합니다.  사용 하는 응용 프로그램  **WebRequest** 및  **WebResponse** 새 인터넷 프로토콜의 광범위 한 코드 변경 없이 이용할 수 있습니다.  
+-   가능한 경우 하위 클래스에 대한 형식 캐스팅 대신 <xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse>를 사용합니다. **WebRequest** 및 **WebResponse**를 사용하는 응용 프로그램은 광범위한 코드 변경 없이 새 인터넷 프로토콜을 활용할 수 있습니다.  
   
--   사용 하는 서버에서 실행 되는 ASP.NET 응용 프로그램을 작성할 때의  **System.Net** 클래스,이 비동기 메서드를 사용 하는 성능 측면에서 향상, <xref:System.Net.WebRequest.GetResponse%2A> 및 <xref:System.Net.WebResponse.GetResponseStream%2A>.  
+-   **System.Net** 클래스를 사용하여 서버에서 실행되는 ASP.NET 응용 프로그램을 작성할 때는 성능 관점에서 대체로 <xref:System.Net.WebRequest.GetResponse%2A> 및 <xref:System.Net.WebResponse.GetResponseStream%2A>에 대해 비동기 메서드를 사용하는 것이 좋습니다.  
   
--   열 인터넷 리소스에 연결 된 네트워크 성능 및 처리량에 상당한 영향을 가질 수 있습니다.  **System.Net** 기본적으로 응용 프로그램 마다 호스트 마다 두 개의 연결을 사용 합니다.  설정 하는 <xref:System.Net.ServicePoint.ConnectionLimit%2A> 속성에는 <xref:System.Net.ServicePoint> 응용 프로그램은 특정 호스트에 대 한이 수를 늘릴 수 있습니다에 대 한.  설정 하는 <xref:System.Net.ServicePointManager.DefaultPersistentConnectionLimit?displayProperty=fullName> 속성이 모든 호스트에 대 한이 기본이 늘어날 수 있습니다.  
+-   인터넷 리소스에 대해 열린 연결 수는 네트워크 성능 및 처리량에 상당한 영향을 줄 수 있습니다. **System.Net**은 기본적으로 호스트당 응용 프로그램마다 두 개의 연결을 사용합니다. 응용 프로그램에 대한 <xref:System.Net.ServicePoint>의 <xref:System.Net.ServicePoint.ConnectionLimit%2A> 속성을 설정하면 특정 호스트에 대해 이 개수를 늘릴 수 있습니다. <xref:System.Net.ServicePointManager.DefaultPersistentConnectionLimit?displayProperty=fullName> 속성을 설정하면 모든 호스트에 대해 이 기본값을 늘릴 수 있습니다.  
   
--   소켓 수준의 프로토콜을 작성할 때 사용 하려고  [TCPClient](frlrfsystemnetsocketstcpclientclasstopic) 또는  [UDPClient](frlrfsystemnetsocketsudpclientclasstopic) 가능 하면 직접 쓰는 대신에 <xref:System.Net.Sockets.Socket>.  이 두 클라이언트 클래스 연결 세부 사항을 처리할 필요 없이 TCP 및 UDP 소켓의 생성을 캡슐화 합니다.  
+-   소켓 수준 프로토콜을 작성할 때는 가능한 경우 <xref:System.Net.Sockets.Socket>에 직접 작성하는 대신 <xref:System.Net.Sockets.TcpClient> 또는 <xref:System.Net.Sockets.UdpClient>를 사용합니다. 이러한 두 클라이언트 클래스는 연결의 세부 정보를 처리할 필요 없이 TCP 및 UDP 소켓 생성을 캡슐화합니다.  
   
--   자격 증명을 요구 하는 사이트에 액세스할 때 사용 하는 <xref:System.Net.CredentialCache> 클래스를 제공 하 여 모든 요청에 대해 대신 자격 증명의 캐시를 만듭니다.  **CredentialCache** 클래스 검색 찾기 요청을 만들고 URL을 기반으로 하는 자격을 증명 하는 책임의 선도에 제공할 적절 한 자격 증명을 캐시 합니다.  
+-   자격 증명을 요구하는 사이트에 액세스하는 경우 요청할 때마다 자격 증명을 제공하는 대신 <xref:System.Net.CredentialCache> 클래스를 사용하여 자격 증명 캐시를 만듭니다. **CredentialCache** 클래스는 캐시를 검색하여 요청과 함께 제공할 적절한 자격 증명을 찾아 URL을 기준으로 자격 증명을 만들고 제공해야 하는 부담을 덜어줍니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [.NET Framework의 네트워크 프로그래밍](../../../docs/framework/network-programming/index.md)
+

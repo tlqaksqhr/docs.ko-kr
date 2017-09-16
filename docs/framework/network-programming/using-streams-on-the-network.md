@@ -1,48 +1,53 @@
 ---
-title: "네트워크에서 스트림 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "인터넷에서 데이터 요청, 스트림"
-  - "네트워킹"
-  - "인터넷 요청에 응답, 스트림"
-  - "네트워크 리소스, 스트림 기능"
-  - "데이터 받기, 스트림 기능"
-  - "네트워크 리소스"
-  - "데이터 보내기, 스트림 기능"
-  - "인터넷 리소스 다운로드, 스트림"
-  - "스트림, 기능"
-  - "인터넷, 스트림"
-  - "스트림"
+title: "네트워크에서 스트림 사용"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- requesting data from Internet, streams
+- Networking
+- response to Internet request, streams
+- network resources, stream capabilities
+- receiving data, stream capabilities
+- Network Resources
+- sending data, stream capabilities
+- downloading Internet resources, streams
+- streams, capabilities
+- Internet, streams
+- streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
 caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fa27a458e05254a14cf9f6408422f1d824b5a32c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
+
 ---
-# 네트워크에서 스트림 사용
-네트워크 리소스는.NET Framework 스트림으로 표현 됩니다.  .NET Framework 스트림 일반적으로 취급 하 여, 다음과 같은 기능을 제공 합니다.  
+# <a name="using-streams-on-the-network"></a>네트워크에서 스트림 사용
+네트워크 리소스는 .NET Framework에서 스트림으로 표현됩니다. 스트림을 일반적으로 처리하여 .NET Framework는 다음과 같은 기능을 제공합니다.  
   
--   웹 데이터를 송수신 하는 일반적인 방법입니다.  어떤 실제 내용을 파일\-HTML, XML 또는 다른\-응용 프로그램을 사용 <xref:System.IO.Stream.Write%2A?displayProperty=fullName> 및 <xref:System.IO.Stream.Read%2A?displayProperty=fullName> 데이터를 주고받을 수 있습니다.  
+-   웹 데이터를 송수신하는 일반적인 방법. 파일의 실제 내용에 관계없이(HTML, XML 또는 기타 모든 항목) 응용 프로그램은 <xref:System.IO.Stream.Write%2A?displayProperty=fullName> 및 <xref:System.IO.Stream.Read%2A?displayProperty=fullName>를 사용하여 데이터를 주고받습니다.  
   
--   스트림을 통해.NET Framework의 호환성입니다.  스트림 전체를 처리 하는 풍부한 인프라에 있는.NET Framework 사용 합니다.  예를 들어, XML 데이터를 읽는 응용 프로그램을 수정할 수는 <xref:System.IO.FileStream> 에서 데이터를 읽을 수는 <xref:System.Net.Sockets.NetworkStream> 대신으로 스트림을 초기화 하는 몇 줄의 코드로 변경.  주요 차이점 사이  **NetworkStream** 클래스와 다른 스트림 되는  **NetworkStream** 를 찾을 수 없기는 <xref:System.Net.Sockets.NetworkStream.CanSeek%2A> 속성은 항상 반환  **false**, 및 <xref:System.Net.Sockets.NetworkStream.Seek%2A> 및 <xref:System.Net.Sockets.NetworkStream.Position%2A> 메서드가 throw는 <xref:System.NotSupportedException>.  
+-   .NET Framework 전체에서 스트림과 호환성. 스트림은 처리를 위한 풍부한 인프라가 있는 .NET Framework 전체에서 사용됩니다. 예를 들어 스트림을 초기화하는 코드 몇 줄만 변경하여 <xref:System.IO.FileStream>에서 XML 데이터를 읽는 응용 프로그램을 <xref:System.Net.Sockets.NetworkStream>에서 데이터를 읽도록 수정할 수 있습니다. **NetworkStream** 클래스와 다른 스트림 간의 주요 차이점은 **NetworkStream**은 검색할 수 없고, <xref:System.Net.Sockets.NetworkStream.CanSeek%2A> 속성은 항상 **false**를 반환하고, <xref:System.Net.Sockets.NetworkStream.Seek%2A> 및 <xref:System.Net.Sockets.NetworkStream.Position%2A> 메서드는 <xref:System.NotSupportedException>을 throw한다는 것입니다.  
   
--   이 데이터의 처리에 도착합니다.  강제로 응용 프로그램을 다운로드 하는 전체 데이터 집합에 대 한 대기 하지 않고 네트워크에서 들어오면 스트림 데이터 액세스를 제공 합니다.  
+-   데이터 도착 시 처리. 스트림은 전체 데이터 집합이 다운로드될 때까지 응용 프로그램을 강제로 대기시키는 대신 네트워크에서 도착하는 대로 데이터에 대한 액세스를 제공합니다.  
   
- <xref:System.Net.Sockets> 네임 스페이스를 포함 한  **NetworkStream** 구현 하는 클래스는 <xref:System.IO.Stream> 클래스 네트워크 리소스를 사용할.  클래스에 <xref:System.Net.Sockets> 네임 스페이스 사용을  **NetworkStream** 스트림을 나타내는 클래스.  
+ <xref:System.Net.Sockets> 네임스페이스에는 네트워크 리소스에 사용할 수 있도록 특별히 고안된 <xref:System.IO.Stream> 클래스를 구현하는 **NetworkStream** 클래스가 포함되어 있습니다. <xref:System.Net.Sockets> 네임스페이스에 있는 클래스는 **NetworkStream** 클래스를 사용하여 스트림을 나타냅니다.  
   
- 반환 된 스트림을 사용 하 여 네트워크에 데이터를 보내기 위해 호출 <xref:System.Net.WebRequest.GetRequestStream%2A> 에 <xref:System.Net.WebRequest>.  **WebRequest** ; 서버에 보낼 요청 헤더 호출 하 여 네트워크 리소스에 데이터를 보낼 수 있습니다 다음은 <xref:System.IO.Stream.BeginWrite%2A>, <xref:System.IO.Stream.EndWrite%2A>, 또는 <xref:System.IO.Stream.Write%2A> 메서드는 반환 된 스트림.  HTTP와 같은 일부 프로토콜에서는 데이터를 보내기 전에 프로토콜 관련 속성을 설정 하려면 필요할 수 있습니다.  다음 코드 예제에서는 데이터를 보내는 HTTP 관련 속성을 설정 하는 방법을 보여 줍니다.  이 가정 변수 `sendData` 보낼 데이터를 포함 하 고 변수 `sendLength` 보낼 데이터의 바이트 수입니다.  
+ 반환된 스트림을 사용하여 데이터를 네트워크에 보내려면 <xref:System.Net.WebRequest>에서 <xref:System.Net.WebRequest.GetRequestStream%2A>을 호출합니다. **WebRequest**는 요청 헤더를 서버에 보냅니다. 그러면 반환된 스트림에서 <xref:System.IO.Stream.BeginWrite%2A>, <xref:System.IO.Stream.EndWrite%2A> 또는 <xref:System.IO.Stream.Write%2A> 메서드를 호출하여 데이터를 네트워크 리소스에 보낼 수 있습니다. HTTP와 같은 일부 프로토콜의 경우 데이터를 보내기 전에 프로토콜 관련 속성을 설정해야 할 수도 있습니다. 다음 코드 예제에서는 데이터 전송을 위한 HTTP 관련 속성을 설정하는 방법을 보여 줍니다. `sendData` 변수에 보낼 데이터가 들어 있고 `sendLength` 변수는 보낼 데이터의 바이트 수라고 가정합니다.  
   
 ```csharp  
 HttpWebRequest request =   
@@ -59,7 +64,6 @@ catch
 {  
    // Handle errors . . .  
 }  
-  
 ```  
   
 ```vb  
@@ -76,19 +80,19 @@ Catch
 End Try  
 ```  
   
- 네트워크에서 데이터를 받으려면 호출 <xref:System.Net.WebResponse.GetResponseStream%2A> 에 <xref:System.Net.WebResponse>.  다음 데이터 네트워크 리소스에서 호출 하 여 읽을 수 있는 <xref:System.IO.Stream.BeginRead%2A>, <xref:System.IO.Stream.EndRead%2A>, 또는 <xref:System.IO.Stream.Read%2A> 메서드는 반환 된 스트림.  
+ 네트워크에서 데이터를 수신하려면 <xref:System.Net.WebResponse>에서 <xref:System.Net.WebResponse.GetResponseStream%2A>을 호출합니다. 반환된 스트림에서 <xref:System.IO.Stream.BeginRead%2A>, <xref:System.IO.Stream.EndRead%2A> 또는 <xref:System.IO.Stream.Read%2A> 메서드를 호출하여 네트워크 리소스에서 데이터를 읽을 수 있습니다.  
   
- 네트워크 리소스에서 스트림을 사용 하는 경우 다음 사항에 유의 하십시오.  
+ 네트워크 리소스의 스트림을 사용하는 경우 다음 사항에 유의하세요.  
   
--   **CanSeek** 속성은 항상 반환  **false** 때문에  **NetworkStream** 클래스 스트림 내의 위치를 변경할 수 없습니다.  **검색** 및  **위치** 메서드가 throw 한  **NotSupportedException**.  
+-   **NetworkStream** 클래스가 스트림 내의 위치를 변경할 수 없기 때문에 **CanSeek** 속성은 항상 **false**를 반환합니다. **Seek** 및 **Position** 메서드는 **NotSupportedException**을 throw합니다.  
   
--   사용 하는 경우  **WebRequest** 및  **WebResponse**, 스트림 인스턴스를 호출 하 여 만든  **GetResponseStream** 읽기 전용 이며 스트림 인스턴스를 호출 하 여 만든  **GetRequestStream** 쓰기 전용입니다.  
+-   **WebRequest** 및 **WebResponse**를 사용하는 경우 **GetResponseStream**을 호출하여 만든 스트림 인스턴스는 읽기 전용이고 **GetRequestStream**을 호출하여 만든 스트림 인스턴스는 쓰기 전용입니다.  
   
--   사용 된 <xref:System.IO.StreamReader> 인코딩을 간편 하 게 하는 클래스입니다.  다음 코드 예제에서는 사용 하는  **StreamReader** ASCII로 인코딩된 스트림에서 읽을 수 있는  **WebResponse**  \(이 예제에서는 요청을 만드는 표시 되지 않습니다\).  
+-   <xref:System.IO.StreamReader> 클래스를 사용하여 인코딩을 용이하게 합니다. 다음 코드 예제에서는 **StreamReader**를 사용하여 **WebResponse**에서 ASCII로 인코드된 스트림을 읽습니다(예제에는 요청을 만드는 방법이 포함되지 않음).  
   
--   호출을  **GetResponse** 네트워크 리소스를 사용할 수 없는 경우를 차단할 수 있습니다.  비동기 요청을 사용 하 여 고려해 야 할의 <xref:System.Net.WebRequest.BeginGetResponse%2A> 및 <xref:System.Net.WebRequest.EndGetResponse%2A> 방법.  
+-   네트워크 리소스를 사용할 수 없는 경우 **GetResponse** 호출이 차단할 수 있습니다. <xref:System.Net.WebRequest.BeginGetResponse%2A> 및 <xref:System.Net.WebRequest.EndGetResponse%2A> 메서드와 함께 비동기 요청을 사용하는 것이 좋습니다.  
   
--   호출을  **GetRequestStream** 서버에 연결을 만드는 동안 차단할 수 있습니다.  스트림에 대 한 비동기 요청을 사용 하 여 고려해 야 할의 <xref:System.Net.WebRequest.BeginGetRequestStream%2A> 및 <xref:System.Net.WebRequest.EndGetRequestStream%2A> 방법.  
+-   서버에 연결하는 동안 **GetRequestStream** 호출이 차단할 수 있습니다. <xref:System.Net.WebRequest.BeginGetRequestStream%2A> 및 <xref:System.Net.WebRequest.EndGetRequestStream%2A> 메서드와 함께 스트림에 대한 비동기 요청을 사용하는 것이 좋습니다.  
   
 ```csharp  
 // Create a response object.  
@@ -110,6 +114,7 @@ Dim sr As _
 sr.Close()  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [방법: WebRequest 클래스를 사용하여 데이터 요청](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)   
  [데이터 요청](../../../docs/framework/network-programming/requesting-data.md)
+

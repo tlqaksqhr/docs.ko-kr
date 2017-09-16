@@ -1,51 +1,56 @@
 ---
-title: "연결 관리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "인터넷, 연결"
-  - "HTTP, 연결을 위한 클래스"
-  - "인터넷에서 데이터 요청, 연결"
-  - "데이터 보내기, 연결"
-  - "데이터 받기, 연결"
-  - "ServicePoint 클래스, ServicePoint 클래스"
-  - "인터넷 요청에 대한 응답, 연결"
-  - "연결[.NET Framework], 클래스"
-  - "네트워크 리소스, 연결"
-  - "인터넷 리소스 다운로드, 연결"
-  - "ServicePointManager 클래스, ServicePointManager 클래스 정보"
+title: "연결 관리"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Internet, connections
+- HTTP, classes for connecting
+- requesting data from Internet, connections
+- sending data, connections
+- receiving data, connections
+- ServicePoint class, about ServicePoint class
+- response to Internet request, connections
+- connections [.NET Framework], classes
+- network resources, connections
+- downloading Internet resources, connections
+- ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 53170432e108a6d866bc2b96ef1ebf8b5bee6f28
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
+
 ---
-# 연결 관리
-HTTP를 사용 하 여 데이터 리소스에 연결 하는 응용 프로그램의.NET Framework 사용할 수 있는 <xref:System.Net.ServicePoint> 및 <xref:System.Net.ServicePointManager> 최적 배율 및 성능을 얻을 수 있도록 하 고 인터넷 연결을 관리 하는 클래스입니다.  
+# <a name="managing-connections"></a>연결 관리
+HTTP를 사용하여 데이터 리소스에 연결하는 응용 프로그램은 .NET Framework의 <xref:System.Net.ServicePoint> 및 <xref:System.Net.ServicePointManager> 클래스를 사용하여 인터넷에 대한 연결을 관리하고 최적의 규모 및 성능을 달성하도록 지원합니다.  
   
- **ServicePoint** 응용 프로그램 끝점을 응용 프로그램에 연결할 수 있습니다 인터넷 리소스에 액세스할 수 있는 클래스를 제공 합니다.  각  **ServicePoint** 통해 성능을 향상 시키는 연결 간에 최적화 정보를 공유 하 여 인터넷 서버와 연결을 최적화 하는 정보가 들어 있습니다.  
+ **ServicePoint** 클래스는 응용 프로그램이 인터넷 리소스에 액세스하기 위해 연결할 수 있는 끝점을 제공합니다. 각 **ServicePoint**에는 성능을 향상시키기 위해 연결 간 최적화 정보를 공유하여 인터넷 서버와의 연결을 최적화시킬 수 있는 정보가 들어 있습니다.  
   
- 각  **ServicePoint** 동일한 리소스 식별자 \(URI\)로 식별 되 고 체계 식별자 및 호스트 조각의 URI에 따라 분류 됩니다.  예를 들어, 동일한  **ServicePoint** 인스턴스 요청 Uri http:\/\/www.contoso.com\/index.htm 및 http:\/\/www.contoso.com\/news.htm?date\=today 제공 같은 체계 식별자 \(http\) 및 호스트 \(www.contoso.com\) 조각 들 때문입니다.  이미 응용 프로그램이 서버 www.contoso.com에 영구 연결 되어 있으면 해당 연결을 사용 하 여 두 개의 연결을 만들 필요 없이 요청을 검색할 수 있습니다.  
+ 각 **ServicePoint**는 URI(Uniform Resource Identifier)로 식별되며 URI의 구성표 식별자 및 호스트 조각에 따라 분류됩니다. 예를 들어 동일한 **ServicePoint** 인스턴스에는 동일한 구성표 식별자(http) 및 호스트 조각(www.contoso.com)이 있으므로 이 인스턴스에서는 URI(http://www.contoso.com/index.htm and http://www.contoso.com/news.htm?date=today)에 요청을 제공합니다. 응용 프로그램이 이미 www.contoso.com 서버에 영구적으로 연결되어 있는 경우 해당 연결을 사용하여 두 요청을 모두 검색하므로 두 연결을 만들 필요가 없습니다.  
   
- **ServicePointManager** 의 생성 및 소멸을 관리 하는 정적 클래스는  **ServicePoint** 인스턴스.  **ServicePointManager** 생성 한  **ServicePoint** 응용 프로그램의 기존 컬렉션에는 인터넷 리소스를 요청할 때  **ServicePoint** 인스턴스.  **ServicePoint** 인스턴스는 소멸은 최대 유휴 시간 초과 또는 때 기존  **ServicePoint** 인스턴스의 최대 수가 초과  **ServicePoint** 인스턴스 응용 프로그램.  모두 기본 최대 유휴 시간 및 최대 개수를 제어할 수 있습니다  **ServicePoint**  를 설정 하 여 인스턴스는 <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A> 및 <xref:System.Net.ServicePointManager.MaxServicePoints%2A> 속성에는  **ServicePointManager**.  
+ **ServicePointManager**는 **ServicePoint** 인스턴스의 생성과 소멸을 관리하는 정적 클래스입니다. 응용 프로그램에서 기존 **ServicePoint** 인스턴스의 컬렉션에 없는 인터넷 리소스를 요청하면 **ServicePointManager**에서 **ServicePoint**를 만듭니다. **ServicePoint** 인스턴스는 최대 유휴 시간이 초과되거나 기존 **ServicePoint** 인스턴스의 수가 응용 프로그램의 **ServicePoint** 인스턴스 최대 수를 초과할 때 소멸됩니다. **ServicePointManager**에서 <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A> 및 <xref:System.Net.ServicePointManager.MaxServicePoints%2A> 속성을 설정하여 유휴 시간의 기본 최대값과 **ServicePoint** 인스턴스의 최대 수를 모두 제어할 수 있습니다.  
   
- 클라이언트와 서버 간의 연결 수를 응용 프로그램의 처리량에 크게 영향을 가질 수 있습니다.  기본적으로 사용 하 여 응용 프로그램의 <xref:System.Net.HttpWebRequest> 클래스는 지정 된 서버에 영구 연결을 두 최대 사용 하지만 각 응용 프로그램 별로 최대 연결 수를 설정할 수 있습니다.  
+ 클라이언트와 서버 사이의 연결 수는 응용 프로그램 처리량에 상당한 영향을 미칠 수 있습니다. 기본적으로 <xref:System.Net.HttpWebRequest> 클래스를 사용하는 응용 프로그램에서는 지정된 서버에 대한 영구적 연결을 최대 2개 사용하지만 응용 프로그램별로 최대 연결 수를 설정할 수 있습니다.  
   
 > [!NOTE]
->  HTTP\/1.1 사양 서버당 2 개의 연결 응용 프로그램에서 연결 수를 제한합니다.  
+>  HTTP/1.1 사양에 따르면 응용 프로그램으로부터의 연결은 서버당 두 개의 연결로 제한됩니다.  
   
- 최적의 연결 수는 응용 프로그램이 실행 되는 실제 조건에 따라 달라 집니다.  응용 프로그램에 사용할 수 있는 연결 개수를 늘리면 응용 프로그램 성능에 영향을 수 있습니다.  더 많은 연결의 영향을 확인 하려면 연결 수를 변경 하는 동안 성능 테스트를 실행 합니다.  정적을 변경 하 여 응용 프로그램을 사용 하 여 연결 수를 변경할 수 있습니다 <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> 속성에는  **ServicePointManager** 는 다음 코드 예제 에서처럼 응용 프로그램 초기화 시 클래스.  
+ 최적의 연결 수는 응용 프로그램이 실행되는 실제 조건에 따라 달라집니다. 응용 프로그램에 사용 가능한 연결 수를 늘려도 응용 프로그램 성능에 영향을 미치지 않을 수 있습니다. 연결이 추가되는 경우 미치는 영향을 판별하려면 연결 수를 변경하면서 성능 테스트를 실행합니다. 다음 코드 샘플에 표시된 대로 응용 프로그램 초기화 시 **ServicePointManager** 클래스의 정적 <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> 속성을 변경하여 해당 응용 프로그램에서 사용하는 연결 수를 변경할 수 있습니다.  
   
 ```csharp  
 // Set the maximum number of connections per server to 4.  
@@ -57,7 +62,7 @@ ServicePointManager.DefaultConnectionLimit = 4;
 ServicePointManager.DefaultConnectionLimit = 4  
 ```  
   
- 변경 된  **ServicePointManager.DefaultConnectionLimit** 속성 초기화 이전에 미치지 않습니다  **ServicePoint** 인스턴스.  다음 코드에서 기존 연결 제한을 변경 하는 방법을 보여 줍니다  **ServicePoint** 는 서버 http:\/\/www.contoso.com에 저장 된 값에 대 한 `newLimit`.  
+ **ServicePointManager.DefaultConnectionLimit** 속성을 변경해도 이전에 초기화된 **ServicePoint** 인스턴스에는 영향을 미치지 않습니다. 다음 코드에서는 http://www.contoso.com 서버의 기존 **ServicePoint**에 대한 연결 한계를 `newLimit`에 저장된 값으로 변경합니다.  
   
 ```csharp  
 Uri uri = new Uri("http://www.contoso.com/");  
@@ -71,6 +76,7 @@ Dim sp As ServicePoint = ServicePointManager.FindServicePoint(uri)
 sp.ConnectionLimit = newLimit  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [연결 그룹화](../../../docs/framework/network-programming/connection-grouping.md)   
  [응용 프로그램 프로토콜 사용](../../../docs/framework/network-programming/using-application-protocols.md)
+

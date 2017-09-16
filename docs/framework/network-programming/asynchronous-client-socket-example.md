@@ -1,30 +1,35 @@
 ---
-title: "비동기 클라이언트 소켓 예제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "비동기 클라이언트 소켓"
-  - "소켓, 코드 예제"
-  - "소켓, 비동기 클라이언트 소켓"
+title: "비동기 클라이언트 소켓 예제"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- asynchronous client sockets
+- sockets, code examples
+- sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
 caps.latest.revision: 8
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 42ef1745942f5c91a979e352d66c111cf7e52973
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
+
 ---
-# 비동기 클라이언트 소켓 예제
-다음 예제에서는 프로그램 서버에 연결 하는 클라이언트를 만듭니다.  서버는 응답을 반환 하는 동안 클라이언트 응용 프로그램의 실행을 일시 중지 하도록 클라이언트는 비동기 소켓으로 빌드됩니다.  응용 프로그램 서버에 문자열을 보냅니다 및 다음 콘솔에 서버에서 반환 하는 문자열을 표시 합니다.  
+# <a name="asynchronous-client-socket-example"></a>비동기 클라이언트 소켓 예제
+다음 예제 프로그램에서는 서버에 연결하는 클라이언트를 만듭니다. 이 클라이언트는 비동기 소켓으로 빌드되므로 서버에서 응답을 반환하는 동안 클라이언트 응용 프로그램의 실행이 일시 중단되지 않습니다. 응용 프로그램은 서버에 문자열을 보낸 다음 서버에서 반환된 문자열을 콘솔에 표시합니다.  
   
 ```vb  
 Imports System  
@@ -328,7 +333,8 @@ public class AsynchronousClient {
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [비동기 서버 소켓 예제](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)   
  [동기 서버 소켓 사용](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)   
  [소켓 코드 예제](../../../docs/framework/network-programming/socket-code-examples.md)
+

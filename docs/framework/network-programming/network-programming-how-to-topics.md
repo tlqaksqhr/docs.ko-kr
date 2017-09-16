@@ -1,33 +1,38 @@
 ---
-title: "네트워크 프로그래밍 방법 항목 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "네트워크 리소스"
-  - "네트워크[.NET Framework], 프로그래밍 방법"
-  - "네트워킹 방법[.NET Framework]"
-  - "네트워크"
+title: "네트워크 프로그래밍 방법 항목"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- network resources
+- networks [.NET Framework], programming how-tos
+- networking how-tos [.NET Framework]
+- network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
 caps.latest.revision: 6
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 6
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 6e63c65f0ebef37e854bd3cfd62a33e396470a57
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
+
 ---
-# 네트워크 프로그래밍 방법 항목
-다음은 네트워크 프로그래밍에 대 한 개념 설명서에 나와 있는 방법 항목에 대 한 링크가 포함 되어 있습니다.  
+# <a name="network-programming-how-to-topics"></a>네트워크 프로그래밍 방법 항목
+다음 목록에는 네트워크 프로그래밍 개념 문서에 나와 있는 방법 항목에 대한 링크가 들어 있습니다.  
   
- **데이터를 요청 합니다.**  
+ **데이터 요청:**  
   
 -   [방법: 웹 페이지 요청 및 결과를 스트림으로 검색](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 6
   
 -   [방법: FTP로 디렉터리 내용 나열](../../../docs/framework/network-programming/how-to-list-directory-contents-with-ftp.md)  
   
- **인터넷 프로토콜 버전 6.**  
+ **인터넷 프로토콜 버전 6:**  
   
 -   [방법: IPv6 지원을 사용하도록 컴퓨터 구성 파일 수정](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)  
   
@@ -79,7 +84,7 @@ caps.handback.revision: 6
   
 -   [방법: 전역 프록시 선택 재정의](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
   
- **네트워크 정보:**  
+ **네트워크 정보**  
   
 -   [방법: 네트워크 가용성 및 주소 변경 검색](../../../docs/framework/network-programming/how-to-detect-network-availability-and-address-changes.md)  
   
@@ -87,7 +92,8 @@ caps.handback.revision: 6
   
 -   [방법: 호스트 Ping](../../../docs/framework/network-programming/how-to-ping-a-host.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [.NET Framework의 네트워크 프로그래밍](../../../docs/framework/network-programming/index.md)   
  [네트워크 프로그래밍 샘플](../../../docs/framework/network-programming/network-programming-samples.md)   
- [MSDN 코드 갤러리에서.net 네트워킹 샘플](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+ [MSDN 코드 갤러리의 .NET용 네트워킹 샘플](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+

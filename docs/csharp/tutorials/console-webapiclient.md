@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3dcf0204d57861543743fee4de9523231465d24c
+ms.translationtype: HT
+ms.sourcegitcommit: b647c5dc4e565f9813212d75fab4a2e46c1a47b9
+ms.openlocfilehash: 8c747f65dca44fcca25fe67dccaa897561eefcc7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 
@@ -68,7 +68,7 @@ GitHub에서 REST 서비스에 HTTP 요청을 실행하는 응용 프로그램�
 이제 웹에서 데이터 검색을 시작할 준비가 되었습니다. 이 응용 프로그램에서는 [GitHub API](https://developer.github.com/v3/)에서 정보를 읽게 됩니다. [.NET Foundation](http://www.dotnetfoundation.org/) 상위 항목 아래에서 프로젝트에 대한 정보를 읽어 보겠습니다. 먼저 GitHub API에 대해 요청을 수행하여 프로젝트에 대한 정보를 검색합니다. 사용하게 될 끝점은 [https://api.github.com/orgs/dotnet/repos](https://api.github.com/orgs/dotnet/repos)입니다. 이러한 프로젝트에 대해 모든 정보를 검색하려고 하므로 HTTP GET 요청을 사용합니다.
 브라우저도 HTTP GET 요청을 사용하므로 해당 URL을 브라우저에 붙여 넣어 수신되고 처리 중인 정보를 볼 수 있습니다.
 
-@System.Net.Http.HttpClient 클래스를 사용하여 웹 요청을 수행합니다. 모든 최신 .NET API와 마찬가지로 @System.Net.Http.HttpClient는 장기 실행되는 API에 대해 비동기 메서드만 지원합니다.
+@System.Net.Http.HttpClient 클래스를 사용하여 웹 요청을 수행합니다. 모든 최신 .NET API와 마찬가지로 @System.Net.Http.HttpClient 는 장기 실행되는 API에 대해 비동기 메서드만 지원합니다.
 먼저 비동기 메서드를 만들어 보겠습니다. 응용 프로그램의 기능을 빌드할 때 구현을 채웁니다. 먼저 프로젝트 디렉터리에서 `program.cs` 파일을 열고 `Program` 클래스에 다음 메서드를 추가합니다.
 
 ```csharp
@@ -172,9 +172,9 @@ var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos
 var repositories = serializer.ReadObject(await streamTask) as List<repo>;
 ```
 
-이제 @System.Net.Http.HttpClient.GetStringAsync(System.String) 대신 @System.Net.Http.HttpClient.GetStreamAsync(System.String)를 사용하게 됩니다. serializer는 해당 소스로 문자열 대신 스트림을 사용합니다. 위의 두 번째 줄에서 사용되는 C# 언어의 몇 가지 기능에 대해 설명해 보겠습니다. @System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)의 인수는 `await` 식입니다. 지금까지는 대입문의 일부로만 볼 수 있었지만 Await 식은 코드의 거의 모든 위치에 나올 수 있습니다.
+이제 @System.Net.Http.HttpClient.GetStringAsync(System.String) 대신 @System.Net.Http.HttpClient.GetStreamAsync(System.String) 를 사용하게 됩니다. serializer는 해당 소스로 문자열 대신 스트림을 사용합니다. 위의 두 번째 줄에서 사용되는 C# 언어의 몇 가지 기능에 대해 설명해 보겠습니다. @System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream) 의 인수는 `await` 식입니다. 지금까지는 대입문의 일부로만 볼 수 있었지만 Await 식은 코드의 거의 모든 위치에 나올 수 있습니다.
 
-둘째로 `as` 연산자는 컴파일 타임 형식 `object`에서 `List<repo>`로 변환합니다. @System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream) 선언은 <xref:System.Object?displayProperty=fullName> 형식의 개체로 반환됨을 선언합니다. @System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)는 사용자가 생성 시에 지정한 형식을 반환합니다(이 자습서에서는 `List<repo>`). 변환이 성공하지 못하면 `as` 연산자는 예외를 throw하는 대신 `null`을 계산합니다.
+둘째로 `as` 연산자는 컴파일 타임 형식 `object`에서 `List<repo>`로 변환합니다. @System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream) 선언은 <xref:System.Object?displayProperty=fullName> 형식의 개체로 반환됨을 선언합니다. @System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream) 는 사용자가 생성 시에 지정한 형식을 반환합니다(이 자습서에서는 `List<repo>`). 변환이 성공하지 못하면 `as` 연산자는 예외를 throw하는 대신 `null`을 계산합니다.
 
 이 섹션이 거의 완료되었습니다. JSON을 C# 개체로 변환했으므로 각 리포지토리의 이름을 표시해 보겠습니다. 다음 줄을
 
@@ -211,7 +211,7 @@ foreach (var repo in repositories)
 public class Repository
 ```
 
-@System.Runtime.Serialization.DataContractAttribute는 @System.Runtime.Serialization 네임스페이스의 멤버이므로 파일 맨 위에 해당 `using` 문을 추가해야 합니다.
+@System.Runtime.Serialization.DataContractAttribute 는  @System.Runtime.Serialization 네임스페이스의 멤버이므로 파일 맨 위에 해당 `using` 문을 추가해야 합니다.
 
 ```csharp
 using System.Runtime.Serialization;
@@ -337,7 +337,7 @@ foreach (var repo in repositories)
 private string JsonDate { get; set; }
 ```
 
-`DataMember` 특성은 공용 멤버가 아니어도 처리되어야 함을 serializer에 알려줍니다. 다음에는 문자열을 유효한 @System.DateTime 개체로 변환한 후 해당 @System.DateTime:을 반환하는 공용 읽기 전용 속성을 작성해야 합니다.
+`DataMember` 특성은 공용 멤버가 아니어도 처리되어야 함을 serializer에 알려줍니다. 다음에는 문자열을 유효한 @System.DateTime 개체로 변환한 후 해당 @System.DateTime: 을 반환하는 공용 읽기 전용 속성을 작성해야 합니다.
 
 ```csharp
 [IgnoreDataMember]
@@ -352,7 +352,7 @@ public DateTime LastPush
 
 위의 새 구문을 살펴 보겠습니다. `IgnoreDataMember` 특성은 이 형식을 임의 JSON 개체에 쓰거나 이 개체에서 읽지 않아야 함을 serializer에 알려줍니다. 이 속성은 `get` 접근자만 포함합니다. `set` 접근자가 없습니다. 바로 C#에서 *읽기 전용* 속성을 정의하는 방식입니다. (C#에서 *쓰기 전용* 속성을 만들 수 있지만 해당 값은 제한됩니다.) @System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider) 메서드는 제공된 날짜 형식을 사용하여 문자열을 구문 분석하고 @System.DateTime 개체를 만들고, `CultureInfo` 개체를 사용하여 `DateTime`에 메타데이터를 더 추가합니다. 구문 분석 작업이 실패하는 경우 속성 접근자가 예외를 throw합니다.
 
-@System.Globalization.CultureInfo.InvariantCulture를 사용하려면 `repo.cs`의 `using` 문에 @System.Globalization 네임스페이스를 추가해야 합니다.
+@System.Globalization.CultureInfo.InvariantCulture 를 사용하려면 `repo.cs`의 `using` 문에 @System.Globalization 네임스페이스를 추가해야 합니다.
 
 ```csharp
 using System.Globalization;

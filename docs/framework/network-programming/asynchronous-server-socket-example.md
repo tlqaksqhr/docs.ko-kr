@@ -1,30 +1,35 @@
 ---
-title: "비동기 서버 소켓 예제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "소켓, 비동기 서버 소켓"
-  - "소켓, 코드 예제"
-  - "비동기 서버 소켓"
+title: "비동기 서버 소켓 예제"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- sockets, asynchronous server sockets
+- sockets, code examples
+- asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
 caps.latest.revision: 10
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 9cf150a1ac5465a898ca9e330b186659ec6423f0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
+
 ---
-# 비동기 서버 소켓 예제
-다음 예제에서는 프로그램이 클라이언트로부터 연결 요청을 수신 하는 서버를 만듭니다.  클라이언트에서 연결을 기다리는 동안 서버 응용 프로그램의 실행을 일시 중지 하도록 서버는 비동기 소켓에 빌드됩니다.  응용 프로그램 클라이언트에서 문자열을 받는 문자열을 콘솔에 표시 하 고 문자열을 클라이언트에 다시 에코 합니다.  문자열은 클라이언트에서 문자열 "\<EOF\> 메시지의 끝에" 있어야 합니다.  
+# <a name="asynchronous-server-socket-example"></a>비동기 서버 소켓 예제
+다음 예제 프로그램은 클라이언트의 연결 요청을 수신하는 서버를 만듭니다. 이 서버는 비동기 소켓으로 빌드되므로 클라이언트의 연결을 대기하는 동안 서버 응용 프로그램의 실행이 일시 중단되지 않습니다. 응용 프로그램은 클라이언트에서 문자열을 받아 콘솔에 문자열을 표시한 다음 문자열을 클라이언트에 다시 에코합니다. 클라이언트의 문자열에는 메시지의 끝을 알리는 “\<EOF >” 문자열이 포함되어야 합니다.  
   
 ```vb  
 Imports System  
@@ -302,7 +307,8 @@ public class AsynchronousSocketListener {
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [비동기 클라이언트 소켓 예제](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)   
  [비동기 서버 소켓 사용](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)   
  [소켓 코드 예제](../../../docs/framework/network-programming/socket-code-examples.md)
+

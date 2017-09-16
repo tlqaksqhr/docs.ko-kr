@@ -1,38 +1,43 @@
 ---
-title: "프록시를 통해 인터넷 액세스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "네트워킹"
-  - "전역 프록시 인스턴스"
-  - "데이터 요청, 프록시 인스턴스"
-  - "데이터 보내기, 프록시 인스턴스"
-  - "웹 프록시"
-  - "데이터 받기, 프록시 인스턴스"
-  - "인터넷에서 데이터 요청, 프록시 인스턴스"
-  - "인터넷, 프록시 인스턴스"
-  - "네트워크 리소스"
+title: "프록시를 통해 인터넷 액세스"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Networking
+- global proxy instances
+- data requests, proxy instances
+- sending data, proxy instances
+- Web proxy
+- receiving data, proxy instances
+- requesting data from Internet, proxy instances
+- Internet, proxy instances
+- Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
 caps.latest.revision: 8
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 8
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: ec177366c955e2ac555519f32fe48ddbc1aba5a0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
+
 ---
-# 프록시를 통해 인터넷 액세스
-사이트에 인터넷 액세스를 제공 하는 프록시를 사용 하는 경우 통신 웹 프록시를 사용 하 여 응용 프로그램을 사용 하는 프록시 인스턴스를 구성 해야 합니다.  
+# <a name="accessing-the-internet-through-a-proxy"></a>프록시를 통해 인터넷 액세스
+사이트가 프록시를 사용하여 인터넷에 대한 액세스를 제공하는 경우 응용 프로그램이 웹 프록시와 통신할 수 있도록 프록시 인스턴스를 구성해야 합니다.  
   
- 이 단원에는 다음과 같은 항목이 있습니다.  
+ 이 단원에 포함된 항목은 다음과 같습니다.  
   
 -   [프록시 구성](../../../docs/framework/network-programming/proxy-configuration.md)  
   
@@ -42,6 +47,7 @@ caps.handback.revision: 8
   
 -   [방법: 전역 프록시 선택 재정의](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [응용 프로그램 프로토콜 사용](../../../docs/framework/network-programming/using-application-protocols.md)   
  [.NET Framework의 네트워크 프로그래밍](../../../docs/framework/network-programming/index.md)
+

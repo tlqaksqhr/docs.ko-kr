@@ -4,17 +4,17 @@ description: "Visual Studio 2017에서 C#을 사용하여 간단한 .NET Core �
 keywords: ".NET Core, .NET Core 콘솔 응용 프로그램, Visual Studio 2017"
 author: BillWagner
 ms.author: wiwagn
-ms.date: 08/07/2017
+ms.date: 09/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
 ms.translationtype: HT
-ms.sourcegitcommit: 9b3a2f38b981dd5e7c3535c8212125a147aab122
-ms.openlocfilehash: 37b81a6d4cf53dcf17158ccc4df6aca488f9a26b
+ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
+ms.openlocfilehash: 86c772bd98978fe06f648eec9ca750b86ab2bfec
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/14/2017
 
 ---
 
@@ -62,7 +62,7 @@ ms.lasthandoff: 08/29/2017
 
 사용자에게 이름을 입력하라는 메시지를 표시한 다음 사용자 이름을 날짜 및 시간과 함께 표시하도록 응용 프로그램을 개선합니다. 프로그램을 수정하고 테스트하려면 다음을 수행합니다.
 
-1. 코드 창에서 `public static void Main(string[] args)` 줄 다음에 오는 여는 중괄호 바로 뒤, 첫 번째 닫는 중괄호 앞에 다음 C# 코드를 입력합니다.
+1. 코드 창에서 `static void Main(string[] args)` 줄 다음에 오는 여는 중괄호 바로 뒤, 첫 번째 닫는 중괄호 앞에 다음 C# 코드를 입력합니다.
 
    [!code-csharp[GettingStarted#1](../../../samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
 

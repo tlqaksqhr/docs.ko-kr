@@ -1,5 +1,5 @@
 ---
-title: .NET Core
+title: ".NET Core 가이드"
 description: ".NET Core는 Windows, Linux 및 Mac 앱을 만들기 위한 모듈식 고성능 .NET 구현입니다. 시작하려면 .NET Core에 관해 알아봅니다."
 keywords: .NET, .NET Core
 author: richlander
@@ -10,14 +10,14 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f2b312cb-f80c-4b0d-9101-93908f06a6fa
 ms.translationtype: HT
-ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
-ms.openlocfilehash: 51f21e49623231f08d2c4a72e9b99c1141563e5e
+ms.sourcegitcommit: 9f2128080d34e78733cec926e59ee5dbe9b98a0d
+ms.openlocfilehash: 14e72dad71b8d99cea947e14f2ac77aedcfb5672
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/07/2017
 
 ---
 
-# <a name="net-core"></a>.NET Core
+# <a name="net-core-guide"></a>.NET Core 가이드
 
 > 간단한 .NET Core 응용 프로그램을 만드는 방법을 알아보려면 ["시작" 자습서](get-started.md)를 확인하세요. 첫 번째 앱을 만들고 실행하는 데 몇 분밖에 걸리지 않습니다.
 

@@ -1,31 +1,37 @@
 ---
-title: "방법: 토큰 재생 검색 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "방법: 토큰 재생을 검색하도록 설정"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5a9f5771-f5f6-4100-8501-406aa20d731a
 caps.latest.revision: 4
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 4
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cde32407f072f3d29af4a8d1aae559e46057ae3a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
+
 ---
-# 방법: 토큰 재생 검색 사용
-## 적용 대상  
+# <a name="how-to-enable-token-replay-detection"></a>방법: 토큰 재생을 검색하도록 설정
+## <a name="applies-to"></a>적용 대상  
   
--   Microsoft ® Windows ® Identity Foundation \(소리치 더\)  
+-   Microsoft® Windows® Identity Foundation(WIF)  
   
 -   ASP.NET® Web Forms  
   
-## 요약  
- 이 방법 소리치 더 사용 하는 ASP.NET 응용 프로그램에서 토큰 재생 검색 사용에 대 한 상세한 단계별 절차를 제공 합니다.  또한 토큰 재생 검색 설정 되어 있는지 확인 하려면 응용 프로그램을 테스트 하는 방법에 대 한 지침을 제공 합니다.  이 방법에는 보안 토큰 서비스 \(STS\)을 만들기에 대 한 자세한 없고 대신 Id 및 액세스 도구와 함께 제공 되는 개발 STS를 사용 하 여.  개발 STS 실제 인증을 수행 하지 않습니다 및 테스트 목적 으로만 사용 됩니다.  이 방법 완료 Id 및 액세스 도구를 설치 해야 합니다.  다음 위치에서 다운로드할 수 있습니다: [Id 및 액세스 도구](http://go.microsoft.com/fwlink/?LinkID=245849)  
+## <a name="summary"></a>요약  
+ 이 방법은 WIF를 사용하는 ASP.NET 응용 프로그램에서 토큰 재생 검색을 사용하도록 설정하기 위한 자세한 단계별 프로시저를 제공합니다. 또한 토큰 재생 검색이 사용되는지 확인하기 위해 응용 프로그램을 테스트하는 방법에 대한 지침을 제공합니다. 이 방법 설명에 보안 토큰 서비스(STS)를 만들기 위한 자세한 지침은 없으며, 그 대신 ID 및 액세스 도구와 함께 제공되는 개발 STS를 사용합니다. 개발 STS가 실제 인증을 수행하는 것은 아니며, 테스트 목적으로만 사용됩니다. 이 방법을 완료하려면 ID 및 액세스 도구를 설치해야 합니다. [ID 및 액세스 도구](http://go.microsoft.com/fwlink/?LinkID=245849)에서 다운로드할 수 있습니다.  
   
-## 내용  
+## <a name="contents"></a>목차  
   
 -   목표  
   
@@ -33,57 +39,58 @@ caps.handback.revision: 4
   
 -   단계 요약  
   
--   1 단계 – 간단한 ASP.NET 웹 폼 응용 프로그램 및 사용 재생 검색 만들기  
+-   1단계 – 간단한 ASP.NET Web Forms 응용 프로그램 만들기 및 재생 검색 사용  
   
--   2 단계 – 솔루션 테스트  
+-   2단계 - 솔루션 테스트  
   
-## 목표  
+## <a name="objectives"></a>목표  
   
--   소리치 더 개발 STS에서 Id 및 액세스 도구를 사용 하는 간단한 ASP.NET 응용 프로그램 만들기  
+-   ID 및 액세스 도구에서 WIF 및 개발 STS를 사용하는 간단한 ASP.NET 응용 프로그램 만들기  
   
--   토큰 재생 검색을 사용 하 고 작동 하는지 확인 합니다.  
+-   토큰 재생 검색 사용 및 작동하는지 확인  
   
-## 개요  
- 클라이언트는 상대가 이미 사용한 클라이언트는 STS 토큰을 인증 하려고 하면 재생 공격이 발생 합니다.  이 공격을 방지 하려면 소리치 더 재생 검색 캐시를 이전에 사용한 STS 토큰을 포함 합니다.  사용 하는 경우 재생 검색 토큰의 들어오는 요청을 검사 및 토큰 사용 이전에 있는지 확인 합니다.  토큰이 이미 사용 된 경우 요청을 거부 하는 <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> 예외가 throw 됩니다.  
+## <a name="overview"></a>개요  
+ 클라이언트에서 이미 사용한 STS 토큰을 사용하여 신뢰 당사자에 대해 인증을 시도할 경우 재생 공격이 발생합니다. 이 공격을 방지하기 위해 WIF에는 이전에 사용된 STS 토큰의 재생 검색 캐시가 포함됩니다. 사용하도록 설정된 재생 검색은 들어오는 요청의 토큰을 확인하고 토큰이 이전에 사용되었는지 여부를 확인합니다. 토큰이 이미 사용된 경우 요청이 거부되고 <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> 예외가 throw됩니다.  
   
- 재생 검색을 사용 하려면 필요한 구성 변경 다음 단계를 보여 줍니다.  
+ 다음 단계에서는 재생 검색을 사용하는 데 필요한 구성 변경 내용을 보여 줍니다.  
   
-## 단계 요약  
+## <a name="summary-of-steps"></a>단계 요약  
   
--   1 단계 – 간단한 ASP.NET 웹 폼 응용 프로그램 및 사용 재생 검색 만들기  
+-   1단계 – 간단한 ASP.NET Web Forms 응용 프로그램 만들기 및 재생 검색 사용  
   
--   2 단계 – 솔루션 테스트  
+-   2단계 - 솔루션 테스트  
   
-## 1 단계 – 간단한 ASP.NET 웹 폼 응용 프로그램 및 사용 재생 검색 만들기  
- 이 단계에서는 새 ASP.NET Web Forms 응용 프로그램 만들기 및 수정 되는  *Web.config* 재생 검색을 사용 하는 파일.  
+## <a name="step-1--create-a-simple-aspnet-web-forms-application-and-enable-replay-detection"></a>1단계 – 간단한 ASP.NET Web Forms 응용 프로그램 만들기 및 재생 검색 사용  
+ 이 단계에서는 새 ASP.NET Web Forms 응용 프로그램을 만들고 *Web.config* 파일을 수정하여 재생 검색을 사용하도록 설정합니다.  
   
-#### 간단한 ASP.NET 응용 프로그램을 만들려면  
+#### <a name="to-create-a-simple-aspnet-application"></a>간단한 ASP.NET 응용 프로그램을 만들려면  
   
-1.  Visual Studio 시작 하 고 클릭  **파일**,  **New**, 다음  **프로젝트**.  
+1.  Visual Studio를 시작하고 **파일**, **새로 만들기**, **프로젝트**를 차례로 클릭합니다.  
   
-2.  에  **새 프로젝트** 창에서 클릭  **ASP.NET 웹 폼 응용 프로그램**.  
+2.  **새 프로젝트** 창에서 **ASP.NET Web Forms 응용 프로그램**을 클릭합니다.  
   
-3.  In **Name**, enter `TestApp` and press **OK**.  
+3.  **이름**에서 `TestApp`을 입력하고 **확인**을 누릅니다.  
   
-4.  마우스의  **TestApp** 프로젝트에서  **솔루션 탐색기**, 선택  **Id 및 액세스**.  
+4.  **솔루션 탐색기**에서 **TestApp** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **ID 및 액세스**를 선택합니다.  
   
-5.  **Id 및 액세스** 창이 나타납니다.  아래  **공급자**,  **테스트 응용 프로그램에 로컬 개발 STS**, 누른 다음  **적용**.  
+5.  **ID 및 액세스** 창이 나타납니다. **공급자**에서 **로컬 개발 STS로 응용 프로그램 테스트**를 선택한 다음 **적용**을 클릭합니다.  
   
-6.  다음 추가  **\<tokenReplayDetection\>** 요소에는  *Web.config* 바로 다음 구성 파일은  **\<system.identityModel\>** 및  **\<identityConfiguration\>** 요소를 다음과 같이 표시:  
+6.  표시된 것처럼 다음 **\<tokenReplayDetection>** 요소를 *Web.config* 구성 파일의 **\<system.identityModel>** 및 **\<identityConfiguration>** 요소 바로 뒤에 추가합니다.  
   
-    ```  
+    ```xml  
     <system.identityModel>  
         <identityConfiguration>  
-            <tokenReplayDetection enabled=”true”/>  
+            <tokenReplayDetection enabled="true"/>  
     ```  
   
-## 2 단계 – 솔루션 테스트  
- 이 단계에서는 재생 검색 설정 되어 있는지 확인 하려면 ASP.NET 소리치 더 사용이 가능한 응용 프로그램을 테스트 합니다.  
+## <a name="step-2--test-your-solution"></a>2단계 - 솔루션 테스트  
+ 이 단계에서는 WIF 사용 가능 ASP.NET 응용 프로그램을 테스트하여 재생 검색이 사용하도록 설정되었는지 확인합니다.  
   
-#### 재생 검색에 대 한 ASP.NET 소리치 더 사용이 가능한 응용 프로그램을 테스트 하려면  
+#### <a name="to-test-your-wif-enabled-aspnet-application-for-replay-detection"></a>재생 검색에 대한 WIF 사용 가능 ASP.NET 응용 프로그램을 테스트하려면  
   
-1.  키를 눌러 솔루션을 실행할의  **F5** 키.  기본 홈 페이지 ASP.NET 두고 자동으로 사용자를 인증 해야  *김동훈*을, 개발 STS에서 반환 되는 기본 사용자입니다.  
+1.  **F5** 키를 눌러 솔루션을 실행합니다. 기본 ASP.NET 홈페이지가 표시되고 개발 STS에서 반환되는 기본 사용자인 사용자 이름 *Terry*로 자동으로 인증되어야 합니다.  
   
-2.  브라우저의 키를  **다시** 단추.  제공 될 해야는  **서버 오류 '\/' 응용 프로그램** 페이지 다음 설명과 함께:  *ID1062: 재생에 대 한 검색 되었습니다: 토큰: 'System.IdentityModel.Tokens.SamlSecurityToken'*가 오고 그 뒤에  *AssertionId* 및  *발급자*.  
+2.  브라우저의 **뒤로** 단추를 누릅니다. *ID1062: 토큰: ‘System.IdentityModel.Tokens.SamlSecurityToken’에 대해 재생이 검색되었습니다.*라는 설명에 이어 *AssertionId* 및 *Issuer*가 포함된 **‘/’ 응용 프로그램 서버 오류** 페이지가 표시되어야 합니다.  
   
-     때문에이 오류 페이지를 볼 수 있습니다 예외 형식의 <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> 토큰 재생 검색 되었을 때 발생 합니다.  토큰을 먼저 표시 하는 경우 초기 POST 요청을 다시 보내도록 시도 하기 때문에이 오류가 발생 합니다.  **다시** 단추 없습니다 하면이 문제가 후속 요청을 서버에.
+     토큰 재생이 검색될 때 <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> 형식의 예외가 throw되었으므로 이 오류 페이지가 표시됩니다. 토큰이 먼저 제공된 경우 초기 POST 요청을 다시 보내려고 하므로 이 오류가 발생합니다. **뒤로** 단추를 선택해도 서버에 대한 후속 요청에서 이 동작이 수행되지 않습니다.
+

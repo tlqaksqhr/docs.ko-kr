@@ -1,38 +1,45 @@
 ---
-title: "WIF 코드 샘플 인덱스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WIF 코드 샘플 인덱스"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6711f01a-4743-43ce-95ab-5e2302a363ea
 caps.latest.revision: 3
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 3
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: d5ec81864fca8ec9c83fd294f722e890f002e510
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/14/2017
+
 ---
-# WIF 코드 샘플 인덱스
-Windows Identity Foundation 4.5에 대 한 코드 샘플은 다음과 같습니다.  
+# <a name="wif-code-sample-index"></a>WIF 코드 샘플 인덱스
+Windows Identity Foundation 4.5에 대한 코드 샘플은 다음과 같습니다.  
   
--   [ClaimsAwareWebApp](란?LinkID%20=%20248405) \-이 externalization 인증의 기본적인 사용법 \(로컬 보안 토큰 서비스에서 테스트 Id와 액세스 도구 Visual Studio 11에 대 한\)에 클래식 ASP 샘플입니다.NET 응용 프로그램 \(대조적으로 웹 사이트\).  
+-   [ClaimsAwareWebApp](http://go.microsoft.com/fwlink/?LinkID=248405) - 이 샘플에서는 웹 사이트 대비 클래식 ASP.NET 응용 프로그램에서 Visual Studio 11용 ID 및 액세스 도구의 로컬 테스트 보안 토큰 서비스에 대한 인증 외부화의 기본적인 사용 방법을 보여 줍니다.  
   
--   [ClaimsAwareWebService](란?LinkID%20=%20248406) \-이 샘플 인증 externalization 클래식 WCF 서비스에서의 기본 사용 방법을 보여 줍니다.  
+-   [ClaimsAwareWebService](http://go.microsoft.com/fwlink/?LinkID=248406) - 이 샘플에서는 클래식 WCF 서비스에 대한 인증 외부화의 기본적인 사용 방법을 보여 줍니다.  
   
--   [ClaimsAwareMvcApplication](란?LinkID%20=%20248407) \-이 샘플 싸 우 자 비 블 랭 킷 보호를 포함 하 여 MVC와 통합 하는 방법 및 폼 인증을 사용 하는 코드는 로그온 컨트롤러에 리디렉션합니다.  
+-   [ClaimsAwareMvcApplication](http://go.microsoft.com/fwlink/?LinkID=248407) - 이 샘플에서는 인증이 LogOn 컨트롤러에서 리디렉션하는 폼 인증을 적용하는 코드 및 비무차별 보호를 포함하여 WIF를 MVC와 통합하는 방법을 보여 줍니다.  
   
--   [ClaimsAwareWebFarm](란?LinkID%20=%20248408) \-큰 쿠키를 교환 하는 대신 참조에 의해 세션을 사용할 수 있도록이 샘플 팜 준비 세션 캐시 \(대조적으로 tokenreplycache\)을 보여 줍니다.  더 쉬운 방법이 쿠키 팜의 보안 방법을 보여 줍니다.  
+-   [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) - 이 샘플에서는 큰 쿠키를 교환하는 대신 참조로 세션을 사용할 수 있도록 tokenreplycache와 비교해서 팜 준비 세션 캐시를 보여 줍니다. 또한 팜의 쿠키를 보호하는 보다 손쉬운 방법을 보여 줍니다.  
   
--   [ClaimsAwareFormsAuthentication](란?LinkID%20=%20248409) \-이 매우 간단한 예제에서는 방법을 보여 줍니다.NET에서 사용자를 인증 하는 방식에 관계 없이 사용자 주체 클레임을 얻을 4.5.  
+-   [ClaimsAwareFormsAuthentication](http://go.microsoft.com/fwlink/?LinkID=248409) - 이 간단한 샘플에서는 .NET 4.5에서 사용자 인증 방법에 관계없이 보안 주체에 클레임을 가져오는 방법을 보여 줍니다.  
   
--   [ClaimsBasedAuthorization](란?LinkID%20=%20248410)\-이 사용자의 권한 부여 정책을 적용 하기 위한 CLaimsAuthorizationManager 클래스 및 Claimsauthorizationmodule를 사용 하는 방법을 보여 줍니다.  
+-   [ClaimsBasedAuthorization](http://go.microsoft.com/fwlink/?LinkID=248410) - 이 샘플에서는 CLaimsAuthorizationManager 클래스 및 ClaimsAuthorizationModule을 사용하여 고유한 권한 부여 정책을 적용하는 방법을 보여 줍니다.  
   
--   [FederationMetadata](란?LinkID%20=%20248411) –이 샘플 \(사용자 지정 STS\)의 동적 생성 및 동적 소비 \(신뢰 파티 응용 프로그램\)에서 메타 데이터 문서를 보여 줍니다.  
+-   [FederationMetadata](http://go.microsoft.com/fwlink/?LinkID=248411) – 이 샘플에서는 메타데이터 문서의 동적 생성(사용자 지정 STS) 및 동적 사용(신뢰 당사자 응용 프로그램)을 둘 다 보여 줍니다.  
   
--   [CustomToken](란?LinkID%20=%20248412) –이 샘플 간단한 웹 토큰 \(SWT\)는 사용자 지정 토큰 형식을 빌드하는 방법을 보여 줍니다.  
+-   [CustomToken](http://go.microsoft.com/fwlink/?LinkID=248412) – 이 샘플에서는 사용자 지정 SWT(단순 웹 토큰) 토큰 형식을 빌드하는 방법을 보여 줍니다.  
   
-## 참고 항목  
- [Windows Identity Foundation](../../../docs/framework/security/windows-identity-foundation.md)
+## <a name="see-also"></a>참고 항목  
+ [Windows Identity Foundation](../../../docs/framework/security/index.md)
+

@@ -1,42 +1,47 @@
 ---
-title: "비동기 서버 소켓 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "응용 프로그램 프로토콜, 소켓"
-  - "데이터 보내기, 소켓"
-  - "소켓 클래스, 비동기 서버 소켓"
-  - "데이터 요청, 소켓"
-  - "소켓, 비동기 서버 소켓"
-  - "인터넷에서 데이터 요청, 소켓"
-  - "서버 소켓"
-  - "데이터 받기, 소켓"
-  - "비동기 서버 소켓"
-  - "프로토콜, 소켓"
-  - "인터넷, 소켓"
+title: "비동기 서버 소켓 사용"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- application protocols, sockets
+- sending data, sockets
+- Socket class, asynchronous server sockets
+- data requests, sockets
+- sockets, asynchronous server sockets
+- requesting data from Internet, sockets
+- server sockets
+- receiving data, sockets
+- asynchronous server sockets
+- protocols, sockets
+- Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
 caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 79a95a4a8aaeb46d218836f9ad2fb74897ae3803
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
+
 ---
-# 비동기 서버 소켓 사용
-비동기 서버 소켓 네트워크 서비스 요청을 처리 하는.NET Framework 비동기 프로그래밍 모델을 사용 합니다.  <xref:System.Net.Sockets.Socket> 클래스 뒤에 표준.NET Framework 비동기 명명 패턴입니다. 예를 들어,는 동기 <xref:System.Net.Sockets.Socket.Accept%2A> 메서드는 비동기 해당 <xref:System.Net.Sockets.Socket.BeginAccept%2A> 및 <xref:System.Net.Sockets.Socket.EndAccept%2A> 방법.  
+# <a name="using-an-asynchronous-server-socket"></a>비동기 서버 소켓 사용
+비동기 서버 소켓은 .NET Framework 비동기 프로그래밍 모델을 사용하여 네트워크 서비스 요청을 처리합니다. <xref:System.Net.Sockets.Socket> 클래스는 표준 .NET Framework 비동기 명명 패턴을 따릅니다. 예를 들어 동기 <xref:System.Net.Sockets.Socket.Accept%2A> 메서드는 비동기 <xref:System.Net.Sockets.Socket.BeginAccept%2A> 및 <xref:System.Net.Sockets.Socket.EndAccept%2A> 메서드에 해당합니다.  
   
- 데이터를 받는 종료 콜백 메서드, 연결 요청을 처리 하 고 네트워크에서 데이터를 받을 콜백 메서드는 네트워크에서 연결 요청 수락을 시작 하는 메서드는 비동기 서버 소켓을 해야 합니다.  이러한 모든 방법을 설명 하는이 섹션에 추가 합니다.  
+ 비동기 서버 소켓에는 네트워크의 연결 요청 허용을 시작하는 메서드, 연결 요청을 처리하고 네트워크에서 데이터 수신을 시작하는 콜백 메서드, 데이터 수신을 종료하는 콜백 메서드가 필요합니다. 이 섹션에서는 이러한 모든 메서드에 대해 자세히 설명합니다.  
   
- 메서드는 네트워크에서 연결 요청을 수락 하려면 다음 예제에서 `StartListening` 초기화는  **소켓** 다음 사용 하는  **BeginAccept** 메서드를 새 연결을 받아들이지 시작 합니다.  소켓에서 새 연결 요청을 받으면 accept 콜백 메서드가 호출 됩니다.  담당자는  **소켓** 인스턴스에 연결 하는 처리를 처리  **소켓** 요청을 처리 하는 스레드를 해제 합니다.  Accept 콜백 메서드를 구현 된 <xref:System.AsyncCallback> 위임. void를 반환 하 고 형식의 단일 매개 변수 사용 <xref:System.IAsyncResult>.  다음 예제는 accept 콜백 메서드의 셸입니다.  
+ 다음 예제에서 네트워크의 연결 요청 허용을 시작하기 위해 `StartListening` 메서드는 **Socket**을 초기화한 다음 **BeginAccept** 메서드를 사용하여 새 연결 허용을 시작합니다. 소켓에 새 연결 요청을 받으면 허용 콜백 메서드가 호출됩니다. 이 메서드는 연결을 처리할 **소켓** 인스턴스를 가져온 다음 요청을 처리할 스레드에 해당 **Socket**을 전달합니다. 허용 콜백 메서드는 <xref:System.AsyncCallback> 대리자를 구현합니다. void를 반환하고 <xref:System.IAsyncResult> 형식의 단일 매개 변수를 사용합니다. 다음 예제는 허용 콜백 메서드의 셸입니다.  
   
 ```vb  
 Sub acceptCallback(ar As IAsyncResult)  
@@ -50,7 +55,7 @@ void acceptCallback( IAsyncResult ar) {
 }  
 ```  
   
- **BeginAccept** 메서드에서 사용 하는 두 개의 매개 변수는  **연속화** accept 콜백 메서드 및 상태 정보를 콜백 메서드에 전달 하는 데 사용 되는 개체를 가리키는 대리자입니다.  다음 예제에서는 수신 하는  **소켓** 콜백 메서드를 통해 전달 되는  *상태* 매개 변수.  이 예제는  **연속화** 대리자 및 네트워크에서 연결을 받아들이지 시작 합니다.  
+ **BeginAccept** 메서드는 허용 콜백 메서드를 가리키는 **AsyncCallback** 대리자와 상태 정보를 콜백 메서드에 전달하는 데 사용되는 개체 등 두 개의 매개 변수를 사용합니다. 다음 예제에서 수신 대기하는 **Socket**은 *state* 매개 변수를 통해 콜백 메서드에 전달됩니다. 이 예제에서는 **AsyncCallback** 대리자를 만들고 네트워크 연결 허용을 시작합니다.  
   
 ```vb  
 listener.BeginAccept( _  
@@ -64,9 +69,9 @@ listener.BeginAccept(
     listener);  
 ```  
   
- 비동기 소켓 들어오는 연결을 처리 하는 시스템 스레드 풀에서 스레드를 사용 합니다.  스레드 연결을 허용 하기 위해 담당, 들어오는 각 연결을 처리 하도록 다른 스레드를 사용 하 고 다른 스레드는 연결에서 데이터를 받기 위해 담당.  이 따라 스레드를 스레드 풀에서 할당 된 동일한 스레드 수 있습니다.  다음 예에서는 <xref:System.Threading.ManualResetEvent?displayProperty=fullName> 클래스 주 스레드의 실행을 일시 중지 하 고 실행을 계속할 경우 신호.  
+ 비동기 소켓은 시스템 스레드 풀의 스레드를 사용하여 들어오는 연결을 처리합니다. 한 스레드는 연결을 허용하고, 다른 스레드는 들어오는 각 연결을 처리하는 데 사용되고, 마지막 스레드는 연결에서 데이터를 받습니다. 스레드 풀에서 할당된 스레드에 따라 세 스레드는 동일한 스레드일 수 있습니다. 다음 예제에서 <xref:System.Threading.ManualResetEvent?displayProperty=fullName> 클래스는 주 스레드의 실행을 일시 중단하고 실행을 계속할 수 있으면 알려줍니다.  
   
- 다음 예제에서는 로컬 컴퓨터에서 비동기 TCP\/IP 소켓을 생성 하 고 연결을 받아들이지 시작 하는 비동기 메서드를 보여 줍니다.  전역 있다고 가정  **스레드가** 라는 `allDone`, 멤버 라는 클래스의 메서드입니다 `SocketListener`, 및 콜백 메서드를 지정 합니다. `acceptCallback` 정의 됩니다.  
+ 다음 예제에서는 로컬 컴퓨터에 비동기 TCP/IP 소켓을 만들고 연결 허용을 시작하는 비동기 메서드를 보여 줍니다. `allDone`이라는 전역 **ManualResetEvent**가 있고, 메서드는 `SocketListener`라는 클래스의 멤버이고, `acceptCallback`이라는 콜백 메서드가 정의되어 있다고 가정합니다.  
   
 ```vb  
 Public Sub StartListening()  
@@ -97,7 +102,6 @@ Public Sub StartListening()
     End Try  
     Console.WriteLine("Closing the listener...")  
 End Sub 'StartListening  
-  
 ```  
   
 ```csharp  
@@ -132,7 +136,7 @@ public void StartListening() {
 }  
 ```  
   
- Accept 콜백 메서드 \(`acceptCallback` 앞의 예제에서\)의 데이터는 클라이언트에서 읽은 신호 주 응용 프로그램 스레드를 처리 하 고 클라이언트와의 연결을 설정 하 고 비동기 시작 하려면 담당 합니다.  다음 예제에서는 구현 하는 첫 번째 부분입니다의 `acceptCallback` 메서드.  메서드는이 부분의 신호를 주 응용 프로그램 스레드에 처리를 계속 및 클라이언트 연결 합니다.  전역 가정  **스레드가** 라는 `allDone`.  
+ 허용 콜백 메서드(앞의 예제에서 `acceptCallback`)는 주 응용 프로그램 스레드에 처리를 계속하도록 알리고, 클라이언트에 연결하고, 클라이언트에서 비동기 데이터 읽기를 시작합니다. 다음 예제에서는 `acceptCallback` 메서드 구현의 첫 번째 부분을 보여 줍니다. 이 메서드 섹션은 주 응용 프로그램 스레드에 처리를 계속하도록 알리고 클라이언트에 연결합니다. `allDone`이라는 전역 **ManualResetEvent**를 가정합니다.  
   
 ```vb  
 Public Sub acceptCallback(ar As IAsyncResult)  
@@ -156,7 +160,7 @@ public void acceptCallback(IAsyncResult ar) {
 }  
 ```  
   
- 클라이언트 소켓에서 데이터를 읽는 상태 개체는 비동기 호출 사이의 값을 전달 해야 합니다.  다음 예제에서는 원격 클라이언트로부터 문자열 수신 상태 개체를 구현 합니다.  클라이언트 소켓에서 데이터를 받는 데이터 버퍼에 대 한 필드를 포함 하는 <xref:System.Text.StringBuilder> 클라이언트에서 보낸 데이터 문자열을 만들기 위한.  상태 개체에 이들이 필드 배치 값을 클라이언트 소켓에서 데이터를 읽을 수 있는 여러 호출 간에 유지 될 수 있습니다.  
+ 클라이언트 소켓에서 데이터를 읽으려면 비동기 호출 간에 값을 전달하는 상태 개체가 필요합니다. 다음 예제에서는 원격 클라이언트에서 문자열을 수신하는 상태 개체를 구현합니다. 클라이언트 소켓에 대한 필드, 데이터 수신을 위한 데이터 버퍼, 클라이언트에서 보낸 데이터 문자열을 수신하기 위한 <xref:System.Text.StringBuilder>가 포함되어 있습니다. 이러한 필드를 상태 개체에 배치하면 여러 호출 간에 개체 값을 보존하여 클라이언트 소켓에서 데이터를 읽을 수 있습니다.  
   
 ```vb  
 Public Class StateObject  
@@ -176,9 +180,9 @@ public class StateObject {
 }  
 ```  
   
- 섹션의의 `acceptCallback` 클라이언트 소켓에서 데이터를 받기 시작 하는 메서드는 인스턴스를 먼저 초기화는 `StateObject` 클래스와 호출의 <xref:System.Net.Sockets.Socket.BeginReceive%2A> 메서드는 클라이언트 소켓에서 데이터를 비동기적으로 읽기 시작 합니다.  
+ 클라이언트 소켓에서 데이터 수신을 시작하는 `acceptCallback` 메서드 섹션은 먼저 `StateObject` 클래스의 인스턴스를 초기화한 다음 <xref:System.Net.Sockets.Socket.BeginReceive%2A> 메서드를 호출하여 클라이언트 소켓에서 비동기적으로 데이터 읽기를 시작합니다.  
   
- 다음 예제는 완전 `acceptCallback` 메서드.  전역 있다고 가정  **스레드가** 라는 `allDone,` 는 `StateObject` 클래스를 정의 하 고는 `readCallback` 라는 클래스에 메서드를 정의 `SocketListener`.  
+ 다음 예제에서는 전체 `acceptCallback` 메서드를 보여 줍니다. `allDone,`이라는 전역 **ManualResetEvent**가 있고, `StateObject`가 정의되어 있고, `readCallback` 메서드가 `SocketListener`라는 클래스에 정의되어 있다고 가정합니다.  
   
 ```vb  
 Public Shared Sub acceptCallback(ar As IAsyncResult)  
@@ -195,7 +199,6 @@ Public Shared Sub acceptCallback(ar As IAsyncResult)
     handler.BeginReceive(state.buffer, 0, state.BufferSize, 0, _  
         AddressOf AsynchronousSocketListener.readCallback, state)  
 End Sub 'acceptCallback  
-  
 ```  
   
 ```csharp  
@@ -215,9 +218,9 @@ public static void acceptCallback(IAsyncResult ar) {
 }  
 ```  
   
- 비동기 소켓 서버를 구현 해야 하는 마지막 메서드는 클라이언트에서 보낸 데이터를 반환 하는 읽기 콜백 메서드가입니다.  Accept 콜백 메서드를 다음과 같이 읽기 콜백 메서드입니다는  **연속화** 위임 합니다.  이 메서드는 클라이언트 소켓에서 하나 이상의 바이트를 데이터 버퍼로 읽습니다 고 다음 호출을  **BeginReceive** 메서드는 클라이언트에서 보낸 데이터를 다시 때까지 완료 됩니다.  전체 메시지는 클라이언트에서 읽은 문자열이 콘솔에 표시 됩니다 하 고 연결 하는 클라이언트 처리 서버 소켓이 닫힙니다.  
+ 비동기 소켓 서버에 대해 구현해야 하는 최종 메서드는 클라이언트에서 보낸 데이터를 반환하는 읽기 콜백 메서드입니다. 허용 콜백 메서드와 마찬가지로 읽기 콜백 메서드는 **AsyncCallback** 대리자입니다. 이 메서드는 클라이언트 소켓에서 1바이트 이상을 데이터 버퍼로 읽어온 다음 클라이언트에서 보낸 데이터가 완료될 때까지 **BeginReceive** 메서드를 다시 호출합니다. 클라이언트에서 전체 메시지를 읽은 후 문자열이 콘솔에 표시되고 클라이언트에 대한 연결을 처리하는 서버 소켓이 닫힙니다.  
   
- 다음 샘플 구현 된 `readCallback` 메서드.  이 가정은 `StateObject` 클래스에서 정의 됩니다.  
+ 다음 샘플에서는 `readCallback` 메서드를 구현합니다. `StateObject` 클래스가 정의되어 있다고 가정합니다.  
   
 ```vb  
 Public Shared Sub readCallback(ar As IAsyncResult)  
@@ -242,7 +245,6 @@ Public Shared Sub readCallback(ar As IAsyncResult)
         End If  
     End If  
 End Sub 'readCallback  
-  
 ```  
   
 ```csharp  
@@ -271,8 +273,9 @@ public static void readCallback(IAsyncResult ar) {
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [동기 서버 소켓 사용](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)   
  [비동기 서버 소켓 예제](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)   
- [Threading](../../../docs/standard/threading/index.md)   
+ [스레딩](../../../docs/standard/threading/index.md)   
  [소켓으로 수신](../../../docs/framework/network-programming/listening-with-sockets.md)
+

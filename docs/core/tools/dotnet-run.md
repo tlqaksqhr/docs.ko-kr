@@ -8,10 +8,10 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: 30dd1a7715c8573062837aaf71344258d0036b5d
+ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
+ms.openlocfilehash: c98a69ced3c309da0ff035efb5c76e7034d54e79
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="dotnet-run"></a>dotnet run
@@ -80,7 +80,7 @@ dotnet myapp.dll
 
 `--launch-profile <NAME>`
 
-응용 프로그램을 시작할 때 사용할 시작 프로필(있는 경우)의 이름입니다. 시작 프로필은 *launchSettings.json* 파일에서 정의되고 일반적으로 `Development`, `Staging` 및 `Production`이라고 합니다. 자세한 내용은 [여러 환경 사용](/aspnetcore/fundamentals/environments)을 참조하세요.
+응용 프로그램을 시작할 때 사용할 시작 프로필(있는 경우)의 이름입니다. 시작 프로필은 *launchSettings.json* 파일에서 정의되고 일반적으로 `Development`, `Staging` 및 `Production`이라고 합니다. 자세한 내용은 [여러 환경 사용](/aspnet/core/fundamentals/environments)을 참조하세요.
 
 `--no-build`
 

@@ -3,15 +3,15 @@ title: "dotnet help 명령 - .NET Core CLI"
 description: "dotnet help 명령은 지정된 명령에 대한 자세한 온라인 설명서를 표시합니다."
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
+ms.date: 08/17/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: b33d21d7578bb4c1b33c655103f720b32aaf2203
+ms.sourcegitcommit: ca7c88675d54d99fdb3526244daaeffe32f32d45
+ms.openlocfilehash: 0d43db0bb0a62bb598f7db50c3b8e37936451550
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="dotnet-help-reference"></a>dotnet help reference
@@ -24,7 +24,7 @@ ms.lasthandoff: 08/14/2017
 
 ## <a name="synopsis"></a>개요
 
-`dotnet list <COMMAND_NAME> [-h|--help]`
+`dotnet help <COMMAND_NAME> [-h|--help]`
 
 ## <a name="description"></a>설명
 
@@ -44,11 +44,7 @@ ms.lasthandoff: 08/14/2017
 
 ## <a name="examples"></a>예제
 
-지정된 프로젝트에 대한 프로젝트 참조를 나열합니다.
+[dotnet new](dotnet-new.md) 명령에 대한 설명서 페이지를 엽니다.
 
-`dotnet list app/app.csproj reference`
-
-현재 디렉터리에 있는 프로젝트에 대한 프로젝트 참조를 나열합니다.
-
-`dotnet list reference`
+`dotnet help new`
 

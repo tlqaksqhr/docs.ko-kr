@@ -1,31 +1,36 @@
 ---
-title: "방법: 요청에 캐시 정책 설정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "요청 캐시 정책"
+title: "방법: 요청에 캐시 정책 설정"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
 caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 11
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 4acef4b118422a8276260d083a5c31c41472eb68
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
+
 ---
-# 방법: 요청에 캐시 정책 설정
-다음 예제에서는 요청에 대 한 캐시 정책을 설정 하는 방법을 보여 줍니다.  예제 입력 같은 http:\/\/www.contoso.com\/ URI입니다.  
+# <a name="how-to-set-cache-policy-for-a-request"></a>방법: 요청에 캐시 정책 설정
+다음 예제에서는 요청에 대한 캐시 정책을 설정하는 방법을 보여 줍니다. 예제 입력은 http://www.contoso.com/ 등의 URI입니다.  
   
-## 예제  
- 다음 코드 예제에서는 요청한 리소스가 하루 이상 캐시에서 되어 있는 경우 캐시에서 사용할 수 있도록 하는 캐시 정책을 만듭니다.  리소스를 캐시에서 사용 된 여부를 나타내는 메시지를 표시 하는 예제\-예를 들어, `"The response was retrieved from the cache : False."`\-다음 리소스를 표시 합니다.  클라이언트와 서버 사이의 캐시에서 요청을 완료할 수 있습니다.  
+## <a name="example"></a>예제  
+ 다음 코드 예제에서는 리소스가 캐시에 포함된 기간이 하루를 초과하지 않으면 캐시에서 요청된 리소스를 사용하도록 허용하는 캐시 정책을 만듭니다. 예제에서는 리소스가 캐시에서 사용되었는지 여부를 나타내는 메시지(예: `"The response was retrieved from the cache : False."`)를 표시하고 나서 리소스를 표시합니다. 클라이언트와 서버 간에 캐시를 통해 요청을 수행할 수 있습니다.  
   
 ```csharp  
 using System;  
@@ -110,12 +115,12 @@ Namespace Examples.System.Net.Cache
         End Sub  
     End Class  
 End Namespace  
-  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [네트워크 응용 프로그램에 대한 캐시 관리](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
  [캐시 정책](../../../docs/framework/network-programming/cache-policy.md)   
  [위치 기반 캐시 정책](../../../docs/framework/network-programming/location-based-cache-policies.md)   
  [시간 기반 캐시 정책](../../../docs/framework/network-programming/time-based-cache-policies.md)   
- [\<requestCaching\> 요소\(네트워크 설정\)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+ [\<requestCaching> 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+

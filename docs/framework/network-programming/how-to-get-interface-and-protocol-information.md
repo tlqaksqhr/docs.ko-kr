@@ -1,25 +1,30 @@
 ---
-title: "방법: 인터페이스 및 프로토콜 정보 가져오기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "네트워크"
+title: "방법: 인터페이스 및 프로토콜 정보 가져오기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- Network
 ms.assetid: fd88d26c-4063-495e-a253-736ac3e6b23f
 caps.latest.revision: 4
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 4
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: 41d7e88de47067da4c96723ca3465f16595f4291
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/21/2017
+
 ---
 # 방법: 인터페이스 및 프로토콜 정보 가져오기
 이 샘플은 네트워크 인터페이스의 TCP 통계를 읽는 방법을 보여 줍니다.  
@@ -82,4 +87,5 @@ public static void ShowTcpStatistics(NetworkInterfaceComponent version)
 ## 코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   참조 하는  **System.Net** 네임 스페이스입니다.
+-   **System.Net** 네임스페이스에 대한 참조.
+

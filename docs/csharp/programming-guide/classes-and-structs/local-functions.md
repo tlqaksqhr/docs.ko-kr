@@ -12,10 +12,10 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5a4b84756be7d33c478d8115b812795dba182cdf
+ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
+ms.openlocfilehash: 069a6411e3d89fa1c2dba57f0b83badff1342763
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="local-functions-c-programming-guide"></a>로컬 함수(C# 프로그래밍 가이드)
@@ -54,7 +54,7 @@ C# 7부터 C#에서는 *로컬 함수*를 지원합니다. 로컬 함수는 다�
 
 - 멤버 액세스 한정자. 모든 로컬 함수는 private이므로 `private` 키워드 등의 액세스 한정자를 포함하면 컴파일러 오류 CS0106,“이 항목의 ‘private’ 한정자가 유효하지 않습니다.”가 생성됩니다.
  
-- [static](..\..\language-reference\keywords\static.md) 키워드입니다. `static` 키워드를 포함하면 컴파일러 오류 CS0106, “이 항목의 ‘static’ 한정자가 유효하지 않습니다.”가 생성됩니다.
+- [static](../../language-reference/keywords/static.md) 키워드입니다. `static` 키워드를 포함하면 컴파일러 오류 CS0106, “이 항목의 ‘static’ 한정자가 유효하지 않습니다.”가 생성됩니다.
 
 또한 로컬 함수나 해당 매개 변수 및 형식 매개 변수에는 특성을 적용할 수 없습니다. 
  
