@@ -1,24 +1,30 @@
 ---
-title: "Windows Identity Foundation 구성 스키마 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Windows Identity Foundation 구성 스키마"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4d4f6d76-49a5-4bad-b345-097b2e2844e9
 caps.latest.revision: 6
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 6
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: b2ac7e97627eba85013e1effdc4f856f3df79089
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/05/2017
+
 ---
-# Windows Identity Foundation 구성 스키마
-이 단원의 항목에서는 Windows Identity 파운데이션 \(싸 우 자\)의 구성 스키마에 대 한 정보를 제공합니다.  싸 우 자 사용 하 여 프레임 워크에서 노출 하는 클래스를 통해 응용 프로그램이 구성할 수도 있습니다.  이러한 클래스는 관련 요소를 스키마에서 처리 되는 섹션에서 언급 되어 있습니다.  싸 우 자 구성 스키마에 노출 된 구조를 태그를 기본 XML 다음 보여 줍니다.  특성이 생략 됩니다.  강조 표시 된 주석 스키마의 주요 구성 요소를 나타냅니다.  
+# <a name="windows-identity-foundation-configuration-schema"></a>Windows Identity Foundation 구성 스키마
+이 섹션의 항목에서는 WIF(Windows Identity Foundation) 구성 스키마에 대한 정보를 제공합니다. 또한 프레임워크에 의해 노출된 클래스를 통해 WIF를 사용하도록 응용 프로그램을 구성할 수도 있습니다. 이러한 클래스는 스키마의 관련 요소를 다루는 섹션에 설명되어 있습니다. 다음은 WIF 구성 스키마에 의해 노출된 기본 XML 태그 구조를 보여 줍니다. 특성은 생략됩니다. 강조 표시된 주석은 스키마의 주요 구성 요소를 나타냅니다.  
   
-```  
+```xml  
 <system.identityModel>  
     <!-- Service Configuration -->  
     <identityConfiguration>  
@@ -111,10 +117,11 @@ caps.handback.revision: 6
 </system.identityModel.services>  
 ```  
   
-## 단원 내용  
- [\<system.identityModel\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)싸 우 자 옵션을 응용 프로그램에서 사용 하는 구성을 제공 합니다.  
+## <a name="in-this-section"></a>단원 내용  
+ [\<system.identityModel>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) 응용 프로그램에서 WIF 옵션을 활성화하는 데 필요한 구성을 제공합니다.  
   
- [\<system.identityModel.services\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)싸 우 자 사용 하는 패시브 페더레이션 구성을 제공 합니다.  세션 인증 모듈 \(SAM\) 및 페더레이션된 인증 모듈 \(WSFAM\)를 구성합니다.  
+ [\<system.identityModel.services>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) WIF를 사용하는 수동 페더레이션에 대한 구성을 제공합니다. SAM(Session Authentication Module) 및 WSFAM(Federated Authentication Module)을 구성합니다.  
   
-## 관련 단원  
- [Configuration, Administration, And Management](http://msdn.microsoft.com/ko-kr/1e03c389-de2c-4096-aaff-86b087e1bea0)싸 우 자 응용 프로그램 및 서비스를 관리 하 고 구성 하는 방법에 설명 합니다.
+## <a name="related-sections"></a>관련 단원  
+ [Configuration, Administration, And Management](http://msdn.microsoft.com/en-us/1e03c389-de2c-4096-aaff-86b087e1bea0)(구성 및 관리) WIF 응용 프로그램 및 서비스를 구성하고 관리하는 방법을 설명합니다.
+

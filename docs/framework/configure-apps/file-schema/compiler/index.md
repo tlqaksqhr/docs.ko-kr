@@ -1,58 +1,63 @@
 ---
-title: "컴파일러 및 언어 공급자 설정 스키마 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "컴파일러 구성 요소"
-  - "컴파일러 구성 요소, 스키마"
-  - "컴파일러 구성 설정"
-  - "컴파일러 구성 설정, 스키마"
-  - "구성 스키마[.NET Framework], 컴파일러 설정"
-  - "구성 설정[.NET Framework], 컴파일러"
-  - "언어 공급자"
-  - "언어 공급자, 설정 스키마"
+title: "컴파일러 및 언어 공급자 설정 스키마"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- VB
+- CSharp
+- C++
+- jsharp
+helpviewer_keywords:
+- configuration settings [.NET Framework], compilers
+- compiler configuration elements, schema
+- compiler configuration elements
+- language providers
+- compiler configuration settings, schema
+- configuration schema [.NET Framework], compiler settings
+- language providers, settings schema
+- compiler configuration settings
 ms.assetid: c020b139-8699-4f0d-9ac9-70d0c5b2a8c8
 caps.latest.revision: 9
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 9
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: cb1eb3078714e0de5416fc4c7f9695f52bab3a96
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/05/2017
+
 ---
-# 컴파일러 및 언어 공급자 설정 스키마
-컴파일러 및 언어 공급자 설정은 사용 가능한 언어 공급자의 컴파일러 구성 요소를 지정합니다.  각 컴파일러 구성 요소는 코드 공급자 형식 이름, 컴파일러 매개 변수, 지원되는 언어 이름 및 지원되는 파일 확장명을 지정합니다.  
+# <a name="compiler-and-language-provider-settings-schema"></a>컴파일러 및 언어 공급자 설정 스키마
+컴파일러 및 언어 공급자 설정은 사용 가능한 언어 공급자에 대한 컴파일러 구성 요소를 지정합니다. 각 컴파일러 구성 요소는 코드 공급자 형식 이름, 컴파일러 매개 변수, 지원되는 언어 이름 및 지원되는 파일 확장명을 지정합니다.  
   
- .NET Framework는 컴퓨터 구성 파일\(Machine.config\)의 초기 컴파일러 설정을 정의합니다.  개발자 및 컴파일러 공급업체에서는 새 <xref:System.CodeDom.Compiler.CodeDomProvider> 구현을 위한 구성 설정을 추가할 수 있습니다.  언어 공급자와 컴퓨터의 컴파일러 구성 설정을 프로그래밍 방식으로 나열하려면 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=fullName> 메서드를 사용합니다.  
+ .NET Framework는 컴퓨터 구성 파일(Machine.config)의 초기 컴파일러 설정을 정의합니다. 개발자 및 컴파일러 공급업체는 새로운 <xref:System.CodeDom.Compiler.CodeDomProvider> 구현에 대한 구성 설정을 추가할 수 있습니다. <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=fullName> 메서드를 사용하여 컴퓨터에서 언어 공급자 및 컴파일러 구성 설정을 프로그래밍 방식으로 열거할 수 있습니다.  
   
- [\<configuration\> 요소](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [\<configuration> 요소](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
- [\<system.codedom\>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)  
+ [\<system.codedom>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)  
   
- [\<컴파일러\>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)  
+ [\<compilers>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)  
   
- [\<컴파일러\>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)  
+ [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)  
   
 |요소|설명|  
-|--------|--------|  
-|[\<system.codedom\>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|사용 가능한 언어 공급자의 컴파일러 구성 설정을 지정합니다.|  
-|[\<컴파일러\>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|컴파일러 구성 요소의 컨테이너로, 0개 이상의 [\<compiler\>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) 요소가 포함됩니다.|  
-|[\<컴파일러\>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|언어 공급자의 컴파일러 구성 특성을 지정합니다.|  
+|-------------|-----------------|  
+|[\<system.codedom>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|사용 가능한 언어 공급자에 대한 컴파일러 구성 설정을 지정합니다.|  
+|[\<compilers>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|컴파일러 구성 요소용 컨테이너입니다. 0개 이상의 [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) 요소가 포함되어 있습니다.|  
+|[\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|언어 공급자에 대한 컴파일러 구성 특성을 지정합니다.|  
   
-## 예제  
- 다음 예제에서는 일반적인 컴파일러 구성 요소를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 예제는 일반적인 컴파일러 구성 요소를 보여 줍니다.  
   
-```  
+```xml  
 <configuration>  
    <system.codedom>  
      <compilers>  
@@ -68,8 +73,9 @@ caps.handback.revision: 9
 </configuration>  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  <xref:System.CodeDom.Compiler.CompilerInfo>   
  <xref:System.CodeDom.Compiler.CodeDomProvider>   
  [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [\<compiler\> 요소](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
+ [\<compiler> 요소](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
+
