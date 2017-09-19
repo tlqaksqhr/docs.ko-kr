@@ -18,7 +18,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 70bd8f52971115a36626961c2c605f2f93c1ae6b
 ms.openlocfilehash: ed376960e0b3bb793b377cc8fac2fdefa030dcc0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="how-to-compare-strings-c-programming-guide"></a>방법: 문자열 비교(C# 프로그래밍 가이드)

@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 8e8d01587ccde967b8484b3b61916f8cf437f6c0
 ms.openlocfilehash: 8a32dcab0a64fdb715871806088825e227f08abb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>C# 컴파일러 옵션 사전순 목록
