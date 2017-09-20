@@ -21,7 +21,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: b29b402e859688dcced6bd4429b18298070fb5e4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="how-to-determine-which-net-framework-updates-are-installed"></a>방법: 설치된 .NET Framework 업데이트 확인
@@ -44,7 +44,8 @@ ms.lasthandoff: 07/28/2017
 ## <a name="example"></a>예제  
  다음 코드는 컴퓨터에 설치된 .NET Framework 업데이트를 프로그래밍 방식으로 확인합니다. 이 예제를 실행하려면 관리자 자격 증명이 있어야 합니다.  
   
- [!code-csharp[ListUpdates#1](../../../samples/snippets/csharp/VS_Snippets_CLR/listupdates/cs/program.cs#1)] [!code-vb[ListUpdates#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/listupdates/vb/program.vb#1)]  
+ [!code-csharp[ListUpdates#1](../../../samples/snippets/csharp/VS_Snippets_CLR/listupdates/cs/program.cs#1)]
+ [!code-vb[ListUpdates#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/listupdates/vb/program.vb#1)]  
   
  이 예제는 다음과 유사한 출력 결과를 표시합니다.  
   

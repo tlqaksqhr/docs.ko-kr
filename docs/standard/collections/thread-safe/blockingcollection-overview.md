@@ -19,7 +19,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 10e59c246914c17c4a0803de52cf891b2e0d3a3f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="blockingcollection-overview"></a>BlockingCollection 개요
@@ -50,7 +50,8 @@ ms.lasthandoff: 07/28/2017
   
  다중 스레드 또는 작업은 동시에 항목을 컬렉션에 추가할 수 있습니다. 컬렉션이 지정된 최대 용량에 도달하는 경우 항목 하나를 제거할 때까지 공급자 스레드를 차단합니다. 여러 소비자에서 항목을 동시에 제거할 수 있습니다. 컬렉션이 비어 있는 경우 공급자가 항목 하나를 추가할 때까지 소비자 스레드를 차단합니다. 공급자 스레드는 <xref:System.Collections.Concurrent.BlockingCollection%601.CompleteAdding%2A>을 호출하여 더 이상 추가할 항목이 없음을 나타낼 수 있습니다. 소비자 스레드는 컬렉션이 비어 있고 항목이 더 이상 추가되지 않는 시점을 파악하기 위해 <xref:System.Collections.Concurrent.BlockingCollection%601.IsCompleted%2A> 속성을 모니터링합니다. 다음 예제에서는 한계 용량이 100인 간단한 simple BlockingCollection을 보여 줍니다. 공급자 작업에서는 일부 외부 조건이 true이면 항목을 컬렉션에 추가한 다음 <xref:System.Collections.Concurrent.BlockingCollection%601.CompleteAdding%2A>을 호출합니다. 소비자 작업에서는 <xref:System.Collections.Concurrent.BlockingCollection%601.IsCompleted%2A> 속성이 true일 때까지 항목을 가져옵니다.  
   
- [!code-csharp[CDS_BlockingCollection#04](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/blockingcollection.cs#04)] [!code-vb[CDS_BlockingCollection#04](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/introsnippetsbc.vb#04)]  
+ [!code-csharp[CDS_BlockingCollection#04](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/blockingcollection.cs#04)]
+ [!code-vb[CDS_BlockingCollection#04](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/introsnippetsbc.vb#04)]  
   
  완전한 예제는 [방법: BlockingCollection에서 개별적으로 항목 추가 및 가져오기](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)를 참조하십시오.  
   
@@ -60,7 +61,8 @@ ms.lasthandoff: 07/28/2017
 ## <a name="cancelling-add-and-take-operations"></a>추가 및 가져오기 작업 취소  
  추가 및 가져오기 작업은 일반적으로 루프에서 수행됩니다. <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A> 또는 <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> 메서드에 <xref:System.Threading.CancellationToken>을 전달한 다음, 각 반복마다 이 토큰의 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 속성 값을 확인하여 루프를 취소할 수 있습니다. 이 속성 값이 true이면 사용자가 모든 리소스를 정리하고 루프를 종료하여 취소 요청에 응답해야 합니다. 다음 예제에서는 취소 토큰을 사용하는 <xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A>의 오버로드 및 이 오버로드를 사용하는 코드를 보여 줍니다.  
   
- [!code-csharp[CDS_BlockingCollection#05](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/blockingcollection.cs#05)] [!code-vb[CDS_BlockingCollection#05](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/introsnippetsbc.vb#05)]  
+ [!code-csharp[CDS_BlockingCollection#05](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/blockingcollection.cs#05)]
+ [!code-vb[CDS_BlockingCollection#05](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/introsnippetsbc.vb#05)]  
   
  취소 지원을 추가하는 방법에 대한 예제는 [방법: BlockingCollection에서 개별적으로 항목 추가 및 가져오기](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)에 있는 두 번째 예제를 참조하세요.  
   
