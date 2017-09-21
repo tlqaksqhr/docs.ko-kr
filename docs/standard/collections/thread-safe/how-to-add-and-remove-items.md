@@ -19,7 +19,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 40291d424916c2f87a2070a9a8a6e49243ac083a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>방법: ConcurrentDictionary에서 항목 추가 및 제거
@@ -36,7 +36,8 @@ ms.lasthandoff: 07/28/2017
 ## <a name="example"></a>예제  
  다음 예제에서는 두 <xref:System.Threading.Tasks.Task> 인스턴스를 사용하여 일부 요소를 <xref:System.Collections.Concurrent.ConcurrentDictionary%602>에 동시에 추가한 다음 모든 콘텐츠를 출력하여 해당 요소가 성공적으로 추가되었음을 보여 줍니다. 또한 이 예제에서는 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>, <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> 및 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> 메서드를 사용하여 컬렉션의 항목을 추가, 업데이트 및 검색하는 방법을 보여 줍니다.  
   
- [!code-csharp[CDS#16](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds_dictionaryhowto.cs#16)] [!code-vb[CDS#16](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/cds_concdict.vb#16)]  
+ [!code-csharp[CDS#16](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds_dictionaryhowto.cs#16)]
+ [!code-vb[CDS#16](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/cds_concdict.vb#16)]  
   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602>는 다중 스레드 시나리오를 위해 설계되었습니다. 이 컬렉션에서 항목을 추가하거나 제거하기 위해 코드에 잠금을 사용할 필요는 없습니다. 그러나 동일한 키에 새 값을 지정하여 한 스레드에서 값을 검색하고 다른 스레드에서 컬렉션을 바로 업데이트하는 것은 언제든지 가능합니다.  
   

@@ -66,7 +66,6 @@
 ## [.NET Core의 새로운 기능](core/whats-new/index.md)
 ## [자습서](core/tutorials/index.md)
 ### [Visual Studio 2017을 사용하여 Windows에서 완전한 .NET Core 솔루션 구축](core/tutorials/using-on-windows-full-solution.md)
-### [C# 및 Visual Studio Code 시작](core/tutorials/with-visual-studio-code.md)
 ### [macOS에서 .NET Core 시작](core/tutorials/using-on-macos.md)
 ### [Visual Studio for Mac을 사용하여 macOS에서 .NET Core 시작](core/tutorials/using-on-mac-vs.md)
 ### [Visual Studio for Mac을 사용하여 macOS에서 완전한 .NET Core 솔루션 빌드](core/tutorials/using-on-mac-vs-full-solution.md)
@@ -96,7 +95,10 @@
 ## [단위 테스트](core/testing/index.md)
 ### [dotnet 테스트 및 xUnit을 사용한 유닛 테스트](core/testing/unit-testing-with-dotnet-test.md)
 ### [dotnet 테스트 및 MSTest를 사용한 유닛 테스트](core/testing/unit-testing-with-mstest.md)
+### [dotnet 테스트 및 xUnit을 사용한 F# 유닛 테스트]()
+### [dotnet 테스트 및 MSTest를 사용한 F# 유닛 테스트]()
 ### [선택적 단위 테스트 실행](core/testing/selective-unit-tests.md)
+### [Visual Studio를 사용한 Live Unit Testing .NET Core 프로젝트]()
 ## [버전 관리](core/versions/index.md)
 ### [.NET Core 지원](core/versions/lts-current.md)
 <!--### [🔧 Servicing](core/versions/servicing.md)-->

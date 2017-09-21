@@ -30,7 +30,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 934373d61407c8cc19b7d6424898a582880f9c21
 ms.openlocfilehash: 6ab1d59ec9ce4f77b3ded2951d01f675f096069f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/10/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>런타임에서 어셈블리를 찾는 방법

@@ -1,5 +1,5 @@
 ---
-title: "파일 및 스트림 I/O | Microsoft Docs"
+title: "파일 및 스트림 I/O"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -20,11 +20,11 @@ caps.latest.revision: 33
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1fabc43044b6e0fa765a7c2f225add8b7eb923f5
-ms.openlocfilehash: 1d0c203313b33aeba26aded268467b1a1b181118
+ms.translationtype: HT
+ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
+ms.openlocfilehash: fbd31e6bff5502291fd24b57b55c81046da330d3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/08/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="file-and-stream-io"></a>파일 및 스트림 I/O
@@ -62,21 +62,21 @@ ms.lasthandoff: 06/08/2017
   
 -   검색 - 스트림 내에서 현재 위치를 쿼리하고 수정합니다.  
   
- 내부 데이터 소스 또는 리포지토리에 따라 스트림에서 이러한 기능 중 일부만 지원할 수도 있습니다. 예를 들어 <xref:System.IO.Pipes.PipeStream> 클래스는 검색을 지원하지 않습니다. 스트림의 <xref:System.IO.Stream.CanRead%2A>, <xref:System.IO.Stream.CanWrite%2A> 및 <xref:System.IO.Stream.CanSeek%2A> 속성은 스트림이 지원하는 작업을 지정합니다.  
+ 내부 데이터 소스 또는 리포지토리에 따라 스트림에서 이러한 기능 중 일부만 지원할 수도 있습니다. 예를 들어, <xref:System.IO.Pipes.PipeStream> 클래스는 검색을 지원하지 않습니다. <xref:System.IO.Stream.CanRead%2A>, <xref:System.IO.Stream.CanWrite%2A>, <xref:System.IO.Stream.CanSeek%2A> 스트림 속성은 스트림이 지원하는 작업을 지정합니다.  
   
  다음은 몇 가지 자주 사용되는 스트림 클래스입니다.  
   
--   <xref:System.IO.FileStream> – 파일을 읽고 파일에 쓰는 데 사용됩니다.  
+-   <xref:System.IO.FileStream> – 파일을 읽고 쓰는 데 사용됩니다.  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> – 격리된 저장소에서 파일을 읽고 파일을 쓰는 데 사용됩니다.  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> – 격리된 저장소의 파일을 읽고 파일에 기록하는 데 사용됩니다.  
   
 -   <xref:System.IO.MemoryStream> – 메모리를 백업 저장소로 읽고 여기에 기록하는 데 사용됩니다.  
   
 -   <xref:System.IO.BufferedStream> – 읽기 및 쓰기 작업의 성능을 향상시키는 데 사용됩니다.  
   
--   <xref:System.Net.Sockets.NetworkStream> – 네트워크 소켓을 통한 읽기 및 쓰기에 사용됩니다.  
+-   <xref:System.Net.Sockets.NetworkStream> – 네트워크 소켓을 통한 읽기 및 쓰기를 지원합니다.  
   
--   <xref:System.IO.Pipes.PipeStream> – 익명 및 명명된 파이프를 통한 읽기 및 쓰기에 사용됩니다.  
+-   <xref:System.IO.Pipes.PipeStream> – 익명 및 명명된 파이프를 통한 읽기와 쓰기를 지원합니다.  
   
 -   <xref:System.Security.Cryptography.CryptoStream> – 데이터 스트림을 암호화 변환에 연결하는 데 사용됩니다.  
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 06/08/2017
   
 -   <xref:System.IO.StreamReader> 및 <xref:System.IO.StreamWriter> – 인코딩 값을 사용하여 바이트에서 문자, 문자에서 바이트로 변환함으로써 문자를 읽고 쓰는 데 사용됩니다.  
   
--   <xref:System.IO.StringReader>및 <xref:System.IO.StringWriter> – 문자열에서 문자를 읽고 문자를 쓰는 데 사용됩니다.  
+-   <xref:System.IO.StringReader> 및 <xref:System.IO.StringWriter> – 문자열에서 문자를, 문자에서 문자열을 읽고 쓰는 데 사용됩니다.  
   
 -   <xref:System.IO.TextReader> 및 <xref:System.IO.TextWriter> – 이진 데이터가 아닌 문자 및 문자열을 읽고 쓰는 다른 판독기와 작성기에 대한 추상 기본 클래스로 사용됩니다.  
   
@@ -100,24 +100,24 @@ ms.lasthandoff: 06/08/2017
 ## <a name="asynchronous-io-operations"></a>비동기 I/O 작업  
  많은 양의 데이터를 읽거나 쓸 때 리소스가 많이 사용될 수 있습니다. 이러한 작업은 응용 프로그램 사용자에게 응답을 유지해야 하는 경우 비동기적으로 수행해야 합니다. 동기 I/O 작업에서 UI 스레드는 리소스 집약적인 작업이 완료될 때까지 차단됩니다.  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램을 개발할 때 비동기 I/O 작업을 사용하여 응용 프로그램이 작동을 멈춘 것처럼 보이지 않게 해줍니다.  
   
- 비동기 멤버에는 <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.FlushAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> 및 <xref:System.IO.Stream.WriteAsync%2A> 메서드와 같이 해당 이름에 `Async`가 포함되어 있습니다. 이러한 메서드는 `async` 및 `await` 키워드와 함께 사용합니다.  
+ 비동기 멤버의 이름에는 `Async`가 포함됩니다(예: <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.FlushAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> 및 <xref:System.IO.Stream.WriteAsync%2A> 메서드). 이러한 메서드는 `async` 및 `await` 키워드와 함께 사용합니다.  
   
  자세한 내용은 [비동기 파일 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)를 참조하세요.  
   
 ## <a name="compression"></a>압축  
- 압축은 저장소에 맞춰 파일 크기를 줄이는 프로세스를 가리킵니다. 압축 해제는 압축된 파일의 내용을 사용 가능한 형식으로 추출하는 프로세스입니다. <xref:System.IO.Compression?displayProperty=fullName> 네임스페이스에는 파일 및 스트림을 압축하고 압축을 풀기 위한 형식이 포함되어 있습니다.  
+ 압축은 저장소에 맞춰 파일 크기를 줄이는 프로세스를 가리킵니다. 압축 해제는 압축된 파일의 내용을 사용 가능한 형식으로 추출하는 프로세스입니다. <xref:System.IO.Compression?displayProperty=fullName> 네임스페이스는 파일 및 스트림을 압축하고 압축을 푸는 형식을 포함합니다.  
   
  다음 클래스는 파일과 스트림을 압축하고 압축 해제할 때 자주 사용됩니다.  
   
--   <xref:System.IO.Compression.ZipArchive> – zip 보관 파일에서 항목을 만들고 검색하는 데 사용됩니다.  
+-   <xref:System.IO.Compression.ZipArchive> – zip 보관 파일에 항목을 만들고 이를 검색하는 데 사용됩니다.  
   
--   <xref:System.IO.Compression.ZipArchiveEntry> – 압축된 파일을 나타내는 데 사용됩니다.  
+-   <xref:System.IO.Compression.ZipArchiveEntry> – 압축된 파일을 표시할 때 사용됩니다.  
   
 -   <xref:System.IO.Compression.ZipFile> – 압축된 패키지를 만들고 추출하고 여는 데 사용됩니다.  
   
--   <xref:System.IO.Compression.ZipFileExtensions> – 항목을 압축된 패키지로 만들고 압축을 푸는 데 사용됩니다.  
+-   <xref:System.IO.Compression.ZipFileExtensions> – 압축된 패키지에 항목을 만들고 추출하는 데 사용됩니다.  
   
--   <xref:System.IO.Compression.DeflateStream> – Deflate 알고리즘을 사용하여 스트림을 압축하고 압축을 푸는 데 사용됩니다.  
+-   <xref:System.IO.Compression.DeflateStream> – Deflate 알고리즘을 사용하여 스트림을 압축 및 압축 해제하는 데 사용됩니다.  
   
 -   <xref:System.IO.Compression.GZipStream> – gzip 데이터 형식의 스트림을 압축 및 압축 해제하는 데 사용됩니다.  
   
@@ -134,7 +134,7 @@ ms.lasthandoff: 06/08/2017
   
 -   <xref:System.IO.IsolatedStorage.IsolatedStorageFile> – 파일 및 디렉터리를 포함하는 격리된 저장소 영역을 제공합니다.  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> – 격리된 저장소 내에서 파일을 노출합니다.  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> - 격리된 저장소 내에서 파일을 노출시킵니다.  
   
  [격리된 저장소](../../../docs/standard/io/isolated-storage.md)를 참조하세요.  
   
@@ -143,11 +143,11 @@ ms.lasthandoff: 06/08/2017
   
  다음은 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 I/O 작업을 사용할 때 알아야 할 몇 가지 중요한 차이점입니다.  
   
--   <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> 및 <xref:System.IO.DirectoryInfo>와 같이 파일 작업과 특별히 관련된 형식은 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]에 포함되어 있지 않습니다. 대신에 [!INCLUDE[wrt](../../../includes/wrt-md.md)]의 [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) 네임스페이스에 있는 형식(예: [StorageFile](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) 및 [StorageFolder](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx))을 사용합니다.  
+-   특히 파일 작업에 관련된 형식(예: <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> 및 <xref:System.IO.DirectoryInfo>)은 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]에 포함되지 않습니다. 대신에 [!INCLUDE[wrt](../../../includes/wrt-md.md)]의 [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) 네임스페이스에 있는 형식(예: [StorageFile](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) 및 [StorageFolder](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx))을 사용합니다.  
   
 -   격리된 저장소는 사용할 수 없습니다. 대신에 [응용 프로그램 데이터](http://go.microsoft.com/fwlink/?LinkId=229175)를 사용합니다.  
   
--   <xref:System.IO.Stream.ReadAsync%2A> 및 <xref:System.IO.Stream.WriteAsync%2A>와 같은 비동기 메서드를 사용하여 UI 스레드가 차단되지 않도록 합니다.  
+-   비동기 메서드(예: <xref:System.IO.Stream.ReadAsync%2A> 및 <xref:System.IO.Stream.WriteAsync%2A>)를 사용하여 UI 스레드를 차단하지 못하게 합니다.  
   
 -   경로 기반 압축 형식 <xref:System.IO.Compression.ZipFile> 및 <xref:System.IO.Compression.ZipFileExtensions>는 사용할 수 없습니다. 대신에, [Windows.Storage.Compression](http://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx) 네임스페이스에서 형식을 사용합니다.  
   
@@ -156,7 +156,7 @@ ms.lasthandoff: 06/08/2017
  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 I/O 작업에 대한 자세한 내용은 Windows 개발자 센터에서 [퀵 스타트: 파일 읽기 및 쓰기](http://go.microsoft.com/fwlink/p/?LinkId=243072)를 참조하세요.  
   
 ## <a name="io-and-security"></a>I/O와 보안  
- <xref:System.IO?displayProperty=fullName> 네임스페이스에서 클래스를 사용할 때, 파일 및 디렉터리에 대한 액세스를 제어하기 위해 액세스 제어 목록(ACL)과 같은 운영 체제 보안 요구 사항을 따라야 합니다. 이 요구 사항은 <xref:System.Security.Permissions.FileIOPermission> 요구 사항 외에 추가로 제공됩니다. ACL은 프로그래밍 방식으로 관리할 수 있습니다. 자세한 내용은 [방법: Access Control 목록 항목 추가 또는 제거](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md)를 참조하세요.  
+ <xref:System.IO?displayProperty=fullName> 네임스페이스에서 클래스를 사용할 때, 파일 및 디렉터리에 대한 액세스를 제어하기 위해 액세스 제어 목록(ACL)과 같은 운영 체제 보안 요구 사항을 따라야 합니다. <xref:System.Security.Permissions.FileIOPermission> 요구 사항에 이 요구 사항이 추가됩니다. ACL은 프로그래밍 방식으로 관리할 수 있습니다. 자세한 내용은 [방법: Access Control 목록 항목 추가 또는 제거](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md)를 참조하세요.  
   
  기본 보안 정책은 인터넷 또는 인트라넷 응용 프로그램에서 사용자의 컴퓨터에 있는 파일의 액세스를 방지합니다. 따라서 실제 파일의 경로를 인터넷이나 인트라넷을 통해 다운로드되는 코드를 작성할 때 필요한 I/O 클래스를 사용하지 마세요. 대신에 기존의 .NET Framework 응용 프로그램의 경우 [격리된 저장소](../../../docs/standard/io/isolated-storage.md)를 사용하거나 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램의 경우 [응용 프로그램 데이터](http://go.microsoft.com/fwlink/?LinkId=229175)를 사용합니다.  
   

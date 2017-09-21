@@ -23,7 +23,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 1033d7ec64641dd5904372bc05bd2076efe60d39
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>컬렉션 내에서 비교 및 정렬
@@ -61,7 +61,8 @@ ms.lasthandoff: 07/28/2017
 ## <a name="equality-and-sort-example"></a>같음 및 정렬 예제  
  다음 코드에서는 간단한 비즈니스 개체에 대한 <xref:System.IEquatable%601> 및 <xref:System.IComparable%601> 의 구현을 보여 줍니다. 또한 개체를 목록에 저장하고 정렬할 때 <xref:System.Collections.Generic.List%601.Sort> 메서드를 호출하면 `Part` 형식에 대해 기본 비교자가 사용되며, 무명 메서드를 사용하여 <xref:System.Collections.Generic.List%601.Sort%28System.Comparison%7B%600%7D%29> 메서드가 구현됩니다.  
   
- [!code-csharp[System.Collections.Generic.List.Sort#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.list.sort/cs/program.cs#1)] [!code-vb[System.Collections.Generic.List.Sort#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.list.sort/vb/module1.vb#1)]  
+ [!code-csharp[System.Collections.Generic.List.Sort#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.list.sort/cs/program.cs#1)]
+ [!code-vb[System.Collections.Generic.List.Sort#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.list.sort/vb/module1.vb#1)]  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Collections.IComparer>   
