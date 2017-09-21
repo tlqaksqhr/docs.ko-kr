@@ -4,15 +4,15 @@ description: "Docker 이미지 및 .NET Core 이해"
 keywords: .NET, .NET Core, Docker
 author: spboyer
 ms.author: shboyer
-ms.date: 08/29/2016
+ms.date: 09/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 ms.translationtype: HT
-ms.sourcegitcommit: 9dc52f3a8c74c1aa575a83cb3bbd579b93fae9ae
-ms.openlocfilehash: 0e679ffc22f52de5e2ce8194942efbb2f5299ee4
+ms.sourcegitcommit: a0b6edbc13fddd8558f6677d25ce279147d761c3
+ms.openlocfilehash: efec7e390f029d2f0ab952e316976ad1c6408b0f
 ms.contentlocale: ko-kr
 ms.lasthandoff: 09/06/2017
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 09/06/2017
 
  
 > [!IMPORTANT]
-> .NET Core 2.0에 대한 업데이트 중입니다. 아래 지침은 만료되었습니다. 불편을 끼쳐드려서 죄송합니다.
+> 이 문서에서 .NET Core 2.0 관련 내용을 업데이트하는 중입니다. 다음 지침은 최신이 아닙니다. 불편을 끼쳐드려서 죄송합니다.
 
 .NET Core와 Docker를 함께 사용하는 방법을 이해하려면 먼저 제공되는 다양한 Docker 이미지와 올바른 사용 시기에 대해 알고 있어야 합니다. 여기서는 제공되는 변형 이미지를 살펴보고, ASP.NET Core Web API를 빌드하며, Yeoman Docker 도구를 사용하여 디버깅 가능한 컨테이너를 만들 뿐만 아니라 Visual Studio Code가 이 프로세스에 어떻게 도움이 되는지를 살펴봅니다. 
 

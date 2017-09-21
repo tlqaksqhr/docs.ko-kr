@@ -11,10 +11,10 @@ ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: 335902f26148d8201b7311b57370fd37280c68dd
+ms.sourcegitcommit: a7af88d8d7b19e201c0f7829915e817daa61c838
+ms.openlocfilehash: d64881380febee08414f57a36ed92079e8d69ed6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="dotnet-new"></a>dotnet new
@@ -137,6 +137,10 @@ dotnet new [-h|--help]
 `-u|--uninstall <PATH|NUGET_ID>`
 
 제공된 `PATH` 또는 `NUGET_ID`에서 소스 또는 템플릿 팩을 제거합니다.
+
+> [!NOTE]
+> `PATH`를 사용하여 템플릿을 제거하려면 경로를 정규화해야 합니다. 예를 들어 *C:/Users/\<사용자>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp*는 작동하지만 상위 폴더의 *./GarciaSoftware.ConsoleTemplate.CSharp*는 작동하지 않습니다.
+> 마지막의 종료하는 디렉터리 슬래시도 템플릿 경로에 포함하지 마세요.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 

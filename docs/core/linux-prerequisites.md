@@ -4,16 +4,16 @@ description: "Linux 컴퓨터에서 .NET Core 응용 프로그램을 개발, 배
 keywords: .NET, .NET Core, Linux, debian, ubuntu, RHEL, centOS,
 author: jralexander
 ms.author: johalex
-ms.date: 09/01/2017
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
 ms.translationtype: HT
-ms.sourcegitcommit: 7bbb8405f39a52d2798fd1dbc78f3116cb3bedbb
-ms.openlocfilehash: 9864ffa31caa007cb649a9e6e8913863d9cb2c35
+ms.sourcegitcommit: 1b0379156f44b0a3e765f8d832c7a1ca74ee3598
+ms.openlocfilehash: d9da6ea27293e95e36ff8edc42ef8bafbc86c8ec
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/05/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 09/05/2017
 
 .NET Core 2.0은 단일 운영 체제로 Linux를 처리합니다. 지원되는 Linux 배포판에 대한 단일 Linux 빌드(칩 아키텍처 당)가 있습니다.
 
-.NET Core 2.x는 다음 Linux x64 배포/버전에서 지원됩니다.
+.NET Core 2.x는 다음 Linux 64비트(`x86_64` 또는 `amd64`) 배포/버전에서 지원됩니다.
 
  * Red Hat Enterprise Linux 7
  * CentOS 7
@@ -46,7 +46,7 @@ ms.lasthandoff: 09/05/2017
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-.NET Core 1.x는 다음 Linux x64 배포/버전에서 지원됩니다.
+.NET Core 1.x는 다음 Linux 64비트(`x86_64` 또는 `amd64`) 배포/버전에서 지원됩니다.
 
 * Red Hat Enterprise Linux 7
 * CentOS 7
@@ -325,7 +325,7 @@ Debian 8 또는 Debian 9(64비트)에 .NET Core를 설치하려면:
    sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-jessie-prod jessie main" > /etc/apt/sources.list.d/dotnetdev.list'
    ```
    
-5. .NET Core SDK 이전 파일을 추출합니다.
+5. .NET Core SDK를 설치합니다.
 
    ```bash
    sudo apt-get update
@@ -337,6 +337,13 @@ Debian 8 또는 Debian 9(64비트)에 .NET Core를 설치하려면:
    ```bash
    export PATH=$PATH:$HOME/dotnet
    ```
+   
+7. `dotnet --version` 명령을 실행하여 설치 성공을 증명합니다.
+
+   ```bash
+   dotnet --version
+   ```   
+  
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -364,17 +371,17 @@ Debian 8 또는 Debian 9(64비트)에 .NET Core를 설치하려면:
    sudo ln -s /opt/dotnet/dotnet /usr/local/bin
    ```
 
----
-
 6. `dotnet --version` 명령을 실행하여 설치 성공을 증명합니다.
 
    ```bash
    dotnet --version
    ```
 
+---
+
 ## <a name="install-net-core-for-fedora-24-fedora-25-or-fedora-26-64-bit"></a>Fedora 24, Fedora 25 또는 Fedora 26(64비트)에 대한 .NET Core 설치
 
-Fedora 26, Fedora 25(.NET Core 2.x) 또는 Fedora 24(.NET Core 1.x)에 대한 .NET Core를 설치하려면:
+Fedora 26 또는 Fedora 25에 .NET Core 2.x를 설치하거나 Fedora 24에 .NET Core 1.x를 설치하려면:
 
 1. 시스템에서 .NET Core의 **이전 미리 보기** 버전을 제거하세요.
 
@@ -449,7 +456,7 @@ Fedora 26, Fedora 25(.NET Core 2.x) 또는 Fedora 24(.NET Core 1.x)에 대한 .N
 
 ## <a name="install-net-core-for-centos-71-64-bit--oracle-linux-71-64-bit"></a>CentOS 7.1(64비트) 및 Oracle Linux 7.1(64비트)에 대한 .NET Core 설치
 
-CentOS 7.1(64비트) 및 Oracle Linux 7.1(64비트)에 대한 .NET Core를 설치하려면:
+CentOS 7.1(64비트) 및 Oracle Linux 7.1(64비트)용 .NET Core를 설치하려면:
 
 1. 시스템에서 .NET Core의 **이전 미리 보기** 버전을 제거하세요.
 
@@ -520,7 +527,7 @@ CentOS 7.1(64비트) 및 Oracle Linux 7.1(64비트)에 대한 .NET Core를 설�
 
 ## <a name="install-net-core-for-suse-linux-enterprise-server-64-bit"></a>SUSE Linux Enterprise Server(64비트)에 대한 .NET Core 설치
 
-SLES(SUSE Linux Enterprise Server) 12 SP2(64비트)에 대한 .NET Core 2.x을 설치하려면:
+SLES(SUSE Linux Enterprise Server) 12 SP2(64비트)용 .NET Core 2.x을 설치하려면:
 
 1. 시스템에서 .NET Core의 **이전 미리 보기** 버전을 제거하세요.
 
