@@ -39,8 +39,8 @@ ms.lasthandoff: 07/28/2017
   
 |메서드 이름|설명|C# 쿼리 식 구문|추가 정보|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|OfType|지정된 형식으로 캐스트할 수 있는지 여부에 따라 값을 선택합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=fullName>|  
-|Where|조건자 함수를 기반으로 하는 값을 선택합니다.|`where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=fullName>|  
+|OfType|지정된 형식으로 캐스트할 수 있는지 여부에 따라 값을 선택합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
+|Where|조건자 함수를 기반으로 하는 값을 선택합니다.|`where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>쿼리 식 구문 예제  
  다음 예제에서는 `where` 절을 사용하여 배열에서 특정 길이의 문자열을 필터링합니다.  

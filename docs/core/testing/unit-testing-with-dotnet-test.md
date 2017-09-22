@@ -1,28 +1,31 @@
 ---
-title: "Dotnet 테스트 및 xUnit을 사용하여 .NET Core에서 단위 테스트"
-description: "dotnet test 및 xUnit을 사용하여 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 .NET Core의 단위 테스트 개념을 알아봅니다."
+title: "dotnet test 및 xUnit을 사용하여 .NET Core에서 C# 코드 유닛 테스트"
+description: "dotnet test 및 xUnit을 사용하여 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 C# 및 .NET Core의 단위 테스트 개념을 알아봅니다."
 author: ardalis
 ms.author: wiwagn
-ms.date: 03/21/2017
+ms.date: 09/08/2017
 ms.topic: article
 ms.prod: .net-core
 ms.translationtype: HT
-ms.sourcegitcommit: 867f9eb286fa7ff5ef3e9167c1ab944c81161216
-ms.openlocfilehash: d989ee731d7ffd0439bac69afe1458e2aa10733a
+ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
+ms.openlocfilehash: 89657d766771bc73777a62c14e10cde3b4f6f75f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 09/14/2017
 
 ---
-# <a name="unit-testing-in-net-core-using-dotnet-test-and-xunit"></a>Dotnet 테스트 및 xUnit을 사용하여 .NET Core에서 단위 테스트
+# <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>dotnet test 및 xUnit을 사용하여 .NET Core에서 C# 유닛 테스트
 
 이 자습서에서는 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 단위 테스트 개념을 알아볼 수 있습니다. 미리 빌드된 솔루션을 사용하여 이 자습서를 진행하려는 경우 시작하기 전에 [샘플 코드를 보거나 다운로드](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test/). 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
 
 ## <a name="creating-the-source-project"></a>소스 프로젝트 만들기
 
-셸 창을 엽니다. 솔루션을 저장하기 위한 *unit-testing-using-dotnet-test*라는 디렉터리를 만듭니다. 이 새로운 디렉터리 내에 *PrimeService* 디렉터리를 만듭니다. 따라서 지금까지의 디렉터리 구조는 다음과 같습니다.
+셸 창을 엽니다. 솔루션을 저장하기 위한 *unit-testing-using-dotnet-test*라는 디렉터리를 만듭니다.
+이 새 디렉터리 내에서 [`dotnet new sln`](../tools/dotnet-new.md)을 실행하여 새 솔루션을 만듭니다. 이렇게 하면 클래스 라이브러리와 단위 테스트 프로젝트를 모두 쉽게 관리할 수 있습니다.
+솔루션 디렉터리 내에 *PrimeService* 디렉터리를 만듭니다. 따라서 지금까지의 디렉터리 및 파일 구조는 다음과 같습니다.
 
 ```
 /unit-testing-using-dotnet-test
+    unit-testing-using-dotnet-test.sln
     /PrimeService
 ```
 
@@ -43,12 +46,15 @@ namespace Prime.Services
 }
 ```
 
+디렉터리를 다시 *unit-testing-using-dotnet-test* 디렉터리로 변경합니다. [`dotnet sln add .\PrimeService\PrimeService.csproj`](../tools/dotnet-sln.md)를 실행하여 클래스 라이브러리 프로젝트를 솔루션에 추가합니다.
+
 ## <a name="creating-the-test-project"></a>테스트 프로젝트 만들기
 
-디렉터리를 다시 *unit-testing-using-dotnet-test* 디렉터리로 변경하고 *PrimeService.Tests* 디렉터리를 만듭니다. 디렉터리 구조는 다음과 같습니다.
+다음으로 *PrimeService.Tests* 디렉터리를 만듭니다. 다음 개요에는 디렉터리 구조가 나와 있습니다.
 
 ```
 /unit-testing-using-dotnet-test
+    unit-testing-using-dotnet-test.sln
     /PrimeService
         Source Files
         PrimeService.csproj
@@ -59,7 +65,7 @@ namespace Prime.Services
 
 ```xml
 <ItemGroup>
-  <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
+  <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0-preview-20170628-02" />
   <PackageReference Include="xunit" Version="2.2.0" />
   <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />
 </ItemGroup>
@@ -71,33 +77,26 @@ namespace Prime.Services
 dotnet add reference ../PrimeService/PrimeService.csproj
 ```
 
-또 다른 옵션은 *PrimeService.Tests.csproj* 파일을 편집하는 것입니다. 첫 번째 `<ItemGroup>` 노드 바로 아래에서 참조와 함께 다른 `<ItemGroup>` 노드를 라이브러리 프로젝트에 추가합니다.
-
-```xml
-<ItemGroup>
-  <ProjectReference Include="..\PrimeService\PrimeService.csproj" />
-</ItemGroup>
-```
-
 GitHub의 [샘플 리포지토리](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService.Tests.csproj)에서 전체 파일을 볼 수 있습니다.
 
 최종 솔루션 레이아웃은 다음과 같습니다.
 
 ```
-/unit-testing-using-mstest
+/unit-testing-using-dotnet-test
+    unit-testing-using-dotnet-test.sln
     /PrimeService
         Source Files
         PrimeService.csproj
     /PrimeService.Tests
-        PrimeService
+        Test Source Files
         PrimeServiceTests.csproj
 ```
 
+*unit-testing-using-dotnet-test* 디렉터리에서 [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj`](../tools/dotnet-sln.md)를 실행합니다. 
+
 ## <a name="creating-the-first-test"></a>첫 번째 테스트 만들기
 
-라이브러리 또는 테스트를 빌드하기 전에 *PrimeService.Tests* 디렉터리에서 [`dotnet restore`](../tools/dotnet-restore.md)을 실행합니다. 이 명령은 각 프로젝트에 대해 필요한 모든 NuGet 패키지를 복원합니다.
-
-TDD 접근 방식에서는 하나의 실패 테스트를 작성하고, 통과시키고, 이 프로세스를 반복해야 합니다. *PrimeService.Tests* 디렉터리에서 *UnitTest1.cs*를 제거하고 다음과 같은 내용으로 새 C# 파일 *PrimeService_IsPrimeShould.cs*를 만듭니다.
+TDD 접근 방식에서는 하나의 실패 테스트를 작성하고, 통과시키고, 이 프로세스를 반복해야 합니다. *PrimeService.Tests* 디렉터리에서 *UnitTest1.cs*를 제거하고 새 C# 파일 *PrimeService_IsPrimeShould.cs*를 만듭니다. 다음 코드를 추가합니다.
 
 ```csharp
 using Xunit;
@@ -119,34 +118,34 @@ namespace Prime.UnitTests.Services
         {
             var result = _primeService.IsPrime(1);
 
-            Assert.False(result, $"1 should not be prime");
+            Assert.False(result, "1 should not be prime");
         }
     }
 }
 ```
 
-`[Fact]` 특성은 메서드를 단일 테스트로 나타냅니다. [`dotnet test`](../tools/dotnet-test.md)를 실행하여 테스트 및 클래스 라이브러리를 빌드한 다음 테스트를 실행합니다. xUnit Test Runner에는 테스트를 실행할 프로그램 진입점이 포함되어 있습니다. `dotnet test`는 Test Runner를 시작하고, 테스트가 포함된 어셈블리를 나타내는 Test Runner에 명령줄 인수를 제공합니다.
+`[Fact]` 특성은 Test Runner에서 실행하는 테스트 메서드를 나타냅니다. *unit-testing-using-dotnet-test*에서 [`dotnet test`](../tools/dotnet-test.md)를 실행하여 테스트 및 클래스 라이브러리를 빌드한 다음 테스트를 실행합니다. xUnit Test Runner에는 테스트를 실행할 프로그램 진입점이 포함되어 있습니다. `dotnet test`는 만든 단위 테스트 프로젝트를 사용하여 Test Runner를 시작합니다.
 
-테스트가 실패합니다. 구현은 아직 만들지 않았습니다. 이 테스트를 통과시킬 가장 간단한 코드를 `PrimeService` 클래스에 작성합니다.
+테스트가 실패합니다. 구현은 아직 만들지 않았습니다. `PrimeService` 클래스에서 작동하는 가장 간단한 코드를 작성하여 이 테스트를 만듭니다.
 
 ```csharp
-public bool IsPrime(int candidate) 
+public bool IsPrime(int candidate)
 {
-    if (candidate == 1) 
-    { 
+    if (candidate == 1)
+    {
         return false;
-    } 
+    }
     throw new NotImplementedException("Please create a test first");
-} 
+}
 ```
 
-*PrimeService.Tests* 디렉터리에서 `dotnet test`를 다시 실행합니다. `dotnet test` 명령은 `PrimeService` 프로젝트에 대한 빌드를 실행한 다음 `PrimeService.Tests` 프로젝트에 대한 빌드를 실행합니다. 두 프로젝트를 모두 빌드한 후 이 단일 테스트를 실행합니다. 전달합니다.
+*unit-testing-using-dotnet-test* 디렉터리에서 `dotnet test`를 다시 실행합니다. `dotnet test` 명령은 `PrimeService` 프로젝트에 대한 빌드를 실행한 다음 `PrimeService.Tests` 프로젝트에 대한 빌드를 실행합니다. 두 프로젝트를 모두 빌드한 후 이 단일 테스트를 실행합니다. 통과합니다.
 
 ## <a name="adding-more-features"></a>더 많은 기능 추가
 
-이제 하나의 테스트를 통과했으므로 더 작성할 수 있습니다. 소수에 대한 몇 가지 다른 간단한 사례가 있습니다(0, -1). 이들을 `[Fact]` 특성과 함께 새 테스트로 추가할 수도 있지만, 이렇게 하면 금방 지루해질 수 있습니다. 비슷한 테스트 모음을 작성하는 데 사용할 수 있는 다른 xUnit 특성이 있습니다.  `[Theory]` 특성은 같은 코드를 실행하는 테스트 모음을 나타내지만, 서로 다른 입력 인수를 가지고 있습니다. `[InlineData]` 특성을 사용하여 그러한 입력의 값을 지정할 수 있습니다. 
- 
-새 테스트를 만드는 대신 이 두 가지 특성을 사용하여 2보다 작은 일부 값(가장 낮은 소수)을 테스트하는 단일 이론을 만듭니다.
+이제 하나의 테스트를 통과했으므로 더 작성할 수 있습니다. 소수에 대한 몇 가지 다른 간단한 사례가 있습니다(0, -1). 이러한 사례를 `[Fact]` 특성과 함께 새 테스트로 추가할 수도 있지만, 이렇게 하면 금방 지루해질 수 있습니다. 비슷한 테스트 모음을 작성하는 데 사용할 수 있는 다른 xUnit 특성이 있습니다.  `[Theory]` 특성은 같은 코드를 실행하는 테스트 모음을 나타내지만, 서로 다른 입력 인수를 가지고 있습니다. `[InlineData]` 특성을 사용하여 그러한 입력의 값을 지정할 수 있습니다.
+
+새 테스트를 만드는 대신 이러한 두 특성을 적용하여 단일 이론을 만듭니다. 이 이론은 가장 작은 소수인 2보다 작은 몇 가지 값을 테스트하는 메서드입니다.
 
 [!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
@@ -156,7 +155,7 @@ public bool IsPrime(int candidate)
 if (candidate < 2)
 ```
 
-기본 라이브러리에서 더 많은 테스트, 더 많은 이론, 더 많은 코드를 추가하여 계속 반복합니다. [테스트의 완료된 버전](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs) 및 [라이브러리의 완전한 구현](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService/PrimeService.cs)으로 종료하게 됩니다.
+기본 라이브러리에서 더 많은 테스트, 더 많은 이론, 더 많은 코드를 추가하여 계속 반복합니다. [테스트의 완료된 버전](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs) 및 [라이브러리의 완전한 구현](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService/PrimeService.cs)을 얻게 됩니다.
 
-작은 라이브러리 및 이 라이브러리에 대한 단위 테스트 집합을 작성했습니다. 새 패키지 및 테스트가 원활하게 진행되도록 솔루션을 구성했으므로 응용 프로그램의 목표를 해결하는 데 시간과 노력을 집중할 수 있습니다.
+작은 라이브러리 및 이 라이브러리에 대한 단위 테스트 집합을 작성했습니다. 새 패키지 및 테스트 추가가 현재 워크플로를 따르도록 솔루션을 구조화했습니다. 응용 프로그램의 목표를 해결하는 데 대부분의 시간과 노력을 들였습니다.
 

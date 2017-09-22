@@ -36,13 +36,13 @@ ms.lasthandoff: 07/28/2017
 ## <a name="white-space-behavior-of-methods-that-serialize-xml-trees"></a>XML 트리를 serialize하는 메서드의 공백 동작  
  <xref:System.Xml.Linq.XElement> 및 <xref:System.Xml.Linq.XDocument> 클래스의 다음 메서드는 XML 트리를 serialize합니다. XML 트리를 파일, <xref:System.IO.TextReader> 또는 <xref:System.Xml.XmlReader>로 serialize할 수 있습니다. `ToString` 메서드는 문자열로 serialize합니다.  
   
--   <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=fullName>  
+-   <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=fullName>  
+-   <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XElement.ToString%2A?displayProperty=fullName>  
+-   <xref:System.Xml.Linq.XElement.ToString%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XDocument.ToString%2A?displayProperty=fullName>  
+-   <xref:System.Xml.Linq.XDocument.ToString%2A?displayProperty=nameWithType>  
   
  이 메서드는 <xref:System.Xml.Linq.SaveOptions>를 인수로 사용하지 않는 경우 serialize된 XML의 서식을 지정합니다(들여씁니다). 이 경우 XML 트리의 모든 무효 공백이 삭제됩니다.  
   

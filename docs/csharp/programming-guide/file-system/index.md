@@ -62,5 +62,5 @@ ms.lasthandoff: 07/28/2017
   
  [파일, 폴더 및 드라이브](../../../csharp/programming-guide/file-system/index.md)  
   
- <xref:System.IO?displayProperty=fullName>
+ <xref:System.IO?displayProperty=nameWithType>
 

@@ -37,34 +37,34 @@ XML 트리를 만들거나 XML 문서를 XML 트리에 로드한 후 XML 트리�
   
 |메서드|설명|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=fullName>|이 요소의 상위 요소에 대한 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement>을 반환합니다. 오버로드는 지정된 <xref:System.Collections.Generic.IEnumerable%601>을 가진 상위 요소에 대한 <xref:System.Xml.Linq.XElement>의 <xref:System.Xml.Linq.XName>을 반환합니다.|  
-|<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=fullName>|이 요소의 하위 요소에 대한 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement>을 반환합니다. 오버로드는 지정된 <xref:System.Collections.Generic.IEnumerable%601>을 가진 하위 요소에 대한 <xref:System.Xml.Linq.XElement>의 <xref:System.Xml.Linq.XName>을 반환합니다.|  
-|<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName>|이 요소의 자식 요소에 대한 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement>을 반환합니다. 오버로드는 지정된 <xref:System.Collections.Generic.IEnumerable%601>을 가진 자식 요소에 대한 <xref:System.Xml.Linq.XElement>의 <xref:System.Xml.Linq.XName>을 반환합니다.|  
-|<xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A?displayProperty=fullName>|이 요소 뒤에 나오는 요소에 대한 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement>을 반환합니다. 오버로드는 지정된 <xref:System.Collections.Generic.IEnumerable%601>을 가진 이 요소 뒤에 나오는 요소에 대한 <xref:System.Xml.Linq.XElement>의 <xref:System.Xml.Linq.XName>을 반환합니다.|  
-|<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=fullName>|이 요소 앞에 나오는 요소에 대한 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement>을 반환합니다. 오버로드는 지정된 <xref:System.Collections.Generic.IEnumerable%601>을 가진 이 요소 앞에 나오는 요소에 대한 <xref:System.Xml.Linq.XElement>의 <xref:System.Xml.Linq.XName>을 반환합니다.|  
-|<xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A?displayProperty=fullName>|이 요소와 해당 상위 요소에 대한 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement>을 반환합니다. 오버로드는 지정된 <xref:System.Collections.Generic.IEnumerable%601>을 가진 요소에 대한 <xref:System.Xml.Linq.XElement>의 <xref:System.Xml.Linq.XName>을 반환합니다.|  
-|<xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A?displayProperty=fullName>|이 요소와 해당 하위 요소에 대한 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement>을 반환합니다. 오버로드는 지정된 <xref:System.Collections.Generic.IEnumerable%601>을 가진 요소에 대한 <xref:System.Xml.Linq.XElement>의 <xref:System.Xml.Linq.XName>을 반환합니다.|  
+|<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=nameWithType>|이 요소의 상위 요소에 대한 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement>을 반환합니다. 오버로드는 지정된 <xref:System.Collections.Generic.IEnumerable%601>을 가진 상위 요소에 대한 <xref:System.Xml.Linq.XElement>의 <xref:System.Xml.Linq.XName>을 반환합니다.|  
+|<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType>|이 요소의 하위 요소에 대한 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement>을 반환합니다. 오버로드는 지정된 <xref:System.Collections.Generic.IEnumerable%601>을 가진 하위 요소에 대한 <xref:System.Xml.Linq.XElement>의 <xref:System.Xml.Linq.XName>을 반환합니다.|  
+|<xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>|이 요소의 자식 요소에 대한 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement>을 반환합니다. 오버로드는 지정된 <xref:System.Collections.Generic.IEnumerable%601>을 가진 자식 요소에 대한 <xref:System.Xml.Linq.XElement>의 <xref:System.Xml.Linq.XName>을 반환합니다.|  
+|<xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A?displayProperty=nameWithType>|이 요소 뒤에 나오는 요소에 대한 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement>을 반환합니다. 오버로드는 지정된 <xref:System.Collections.Generic.IEnumerable%601>을 가진 이 요소 뒤에 나오는 요소에 대한 <xref:System.Xml.Linq.XElement>의 <xref:System.Xml.Linq.XName>을 반환합니다.|  
+|<xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType>|이 요소 앞에 나오는 요소에 대한 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement>을 반환합니다. 오버로드는 지정된 <xref:System.Collections.Generic.IEnumerable%601>을 가진 이 요소 앞에 나오는 요소에 대한 <xref:System.Xml.Linq.XElement>의 <xref:System.Xml.Linq.XName>을 반환합니다.|  
+|<xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A?displayProperty=nameWithType>|이 요소와 해당 상위 요소에 대한 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement>을 반환합니다. 오버로드는 지정된 <xref:System.Collections.Generic.IEnumerable%601>을 가진 요소에 대한 <xref:System.Xml.Linq.XElement>의 <xref:System.Xml.Linq.XName>을 반환합니다.|  
+|<xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A?displayProperty=nameWithType>|이 요소와 해당 하위 요소에 대한 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement>을 반환합니다. 오버로드는 지정된 <xref:System.Collections.Generic.IEnumerable%601>을 가진 요소에 대한 <xref:System.Xml.Linq.XElement>의 <xref:System.Xml.Linq.XName>을 반환합니다.|  
   
 ## <a name="method-for-retrieving-a-single-element"></a>단일 요소를 검색하는 메서드  
  다음 메서드는 <xref:System.Xml.Linq.XElement> 개체에서 단일 자식을 검색합니다.  
   
 |메서드|설명|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XContainer.Element%2A?displayProperty=fullName>|지정된 <xref:System.Xml.Linq.XElement>을 가진 첫 번째 자식 <xref:System.Xml.Linq.XName> 개체를 반환합니다.|  
+|<xref:System.Xml.Linq.XContainer.Element%2A?displayProperty=nameWithType>|지정된 <xref:System.Xml.Linq.XElement>을 가진 첫 번째 자식 <xref:System.Xml.Linq.XName> 개체를 반환합니다.|  
   
 ## <a name="method-for-retrieving-a-collection-of-attributes"></a>특성 컬렉션을 검색하는 메서드  
  다음 메서드는 <xref:System.Xml.Linq.XElement> 개체에서 특성을 검색합니다.  
   
 |메서드|설명|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=fullName>|모든 특성에 대한 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XAttribute>을 반환합니다.|  
+|<xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>|모든 특성에 대한 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XAttribute>을 반환합니다.|  
   
 ## <a name="method-for-retrieving-a-single-attribute"></a>단일 특성을 검색하는 메서드  
  다음 메서드는 <xref:System.Xml.Linq.XElement> 개체에서 단일 특성을 검색합니다.  
   
 |메서드|설명|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=fullName>|지정된 <xref:System.Xml.Linq.XAttribute>을 가진 <xref:System.Xml.Linq.XName>를 반환합니다.|  
+|<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>|지정된 <xref:System.Xml.Linq.XAttribute>을 가진 <xref:System.Xml.Linq.XName>를 반환합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [LINQ to XML 축(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)

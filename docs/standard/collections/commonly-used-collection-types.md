@@ -50,19 +50,19 @@ ms.lasthandoff: 09/06/2017
 |[제네릭](../../../docs/standard/generics/index.md)|[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서 제공하는 제네릭 컬렉션, 대리자 및 인터페이스를 비롯한 제네릭 기능에 대해 설명합니다. C#, Visual Basic 및 Visual C++의 기능 설명서 링크와 지원 기술(예: 리플렉션) 링크를 제공합니다.|  
   
 ## <a name="reference"></a>참조  
- <xref:System.Collections?displayProperty=fullName>  
+ <xref:System.Collections?displayProperty=nameWithType>  
   
- <xref:System.Collections.Generic?displayProperty=fullName>  
+ <xref:System.Collections.Generic?displayProperty=nameWithType>  
   
- <xref:System.Collections.ICollection?displayProperty=fullName>  
+ <xref:System.Collections.ICollection?displayProperty=nameWithType>  
   
- <xref:System.Collections.Generic.ICollection%601?displayProperty=fullName>  
+ <xref:System.Collections.Generic.ICollection%601?displayProperty=nameWithType>  
   
- <xref:System.Collections.IList?displayProperty=fullName>  
+ <xref:System.Collections.IList?displayProperty=nameWithType>  
   
- <xref:System.Collections.Generic.IList%601?displayProperty=fullName>  
+ <xref:System.Collections.Generic.IList%601?displayProperty=nameWithType>  
   
- <xref:System.Collections.IDictionary?displayProperty=fullName>  
+ <xref:System.Collections.IDictionary?displayProperty=nameWithType>  
   
- <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>
+ <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>
 

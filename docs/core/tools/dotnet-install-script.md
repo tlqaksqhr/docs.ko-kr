@@ -4,17 +4,17 @@ description: ".NET Core CLI 도구 및 공유 런타임을 설치하는 dotnet-i
 keywords: "dotnet-install, dotnet-install 스크립트, .NET Core"
 author: blackdwarf
 ms.author: mairaw
-ms.date: 08/28/2017
+ms.date: 09/11/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: b64e7e6f-ffb4-4fc8-b43b-5731c89479c2
 ms.translationtype: HT
-ms.sourcegitcommit: c6e199800a86bc8b275fed4e3ba3ea6f77c7d2fa
-ms.openlocfilehash: 92c2b4dcd446d3bf68783768db25ad55b14fac44
+ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
+ms.openlocfilehash: 2f15f37016fe824d76b501e4793e0b28bbdbe167
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/14/2017
 
 ---
 
@@ -143,6 +143,16 @@ Windows:
 macOS/Linux:
 
 `./dotnet-install.sh --shared-runtime --version 1.1.0`
+
+스크립트 가져와서 .NET Core CLI one-liner 예제를 설치합니다.
+
+Windows:
+
+`@powershell -NoProfile -ExecutionPolicy unrestricted -Command "&([scriptblock]::Create((Invoke-WebRequest -useb 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"`
+
+macOS/Linux:
+
+`curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>`
 
 ## <a name="see-also"></a>참고 항목
 
