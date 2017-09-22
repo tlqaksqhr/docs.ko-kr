@@ -45,13 +45,13 @@ ms.lasthandoff: 08/21/2017
 ## <a name="trace-levels"></a>추적 수준  
  **TraceSwitch**를 사용하는 경우 추가로 고려해야 할 사항이 있습니다. **TraceSwitch** 개체에는 스위치가 특정 수준 이상으로 설정되었는지 여부를 나타내는 **부울** 값을 반환하는 다음 4가지 속성이 있습니다.  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceError%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceError%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceWarning%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceInfo%2A?displayProperty=nameWithType>  
   
--   <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A?displayProperty=fullName>  
+-   <xref:System.Diagnostics.TraceSwitch.TraceVerbose%2A?displayProperty=nameWithType>  
   
  수준을 통해 수신하는 추적 정보의 양을 문제 해결에 필요한 정보로만 제한할 수 있습니다. 추적 스위치를 적절한 추적 수준으로 설정하고 구성하여 추적 출력에 표시할 세부 정보 수준을 지정합니다. 오류 메시지, 경고 메시지, 정보 메시지, 자세한 추적 메시지를 수신하거나 메시지를 수신하지 않을 수 있습니다.  
   

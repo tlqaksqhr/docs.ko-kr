@@ -76,10 +76,10 @@ ms.lasthandoff: 08/21/2017
   
 |클래스|설명|  
 |-----------|-----------------|  
-|<xref:System.Diagnostics.PerformanceCounter?displayProperty=fullName>|Windows NT 성능 카운터 구성 요소를 나타냅니다. 이 클래스를 사용하여 기존의 미리 정의된 카운터 또는 사용자 지정 카운터를 읽고 성능 데이터를 사용자 지정 카운터에 쓰거나 게시할 수 있습니다.|  
-|<xref:System.Diagnostics.PerformanceCounterCategory?displayProperty=fullName>|컴퓨터에서 카운터 및 카운터 범주를 조작하기 위한 여러 메서드를 제공합니다.|  
-|<xref:System.Diagnostics.PerformanceCounterInstaller?displayProperty=fullName>|`PerformanceCounter` 구성 요소에 대해 설치 관리자를 지정합니다.|  
-|<xref:System.Diagnostics.PerformanceCounterType?displayProperty=fullName>|`NextValue` 에 대한 `PerformanceCounter`메서드를 계산하는 수식을 지정합니다.|  
+|<xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType>|Windows NT 성능 카운터 구성 요소를 나타냅니다. 이 클래스를 사용하여 기존의 미리 정의된 카운터 또는 사용자 지정 카운터를 읽고 성능 데이터를 사용자 지정 카운터에 쓰거나 게시할 수 있습니다.|  
+|<xref:System.Diagnostics.PerformanceCounterCategory?displayProperty=nameWithType>|컴퓨터에서 카운터 및 카운터 범주를 조작하기 위한 여러 메서드를 제공합니다.|  
+|<xref:System.Diagnostics.PerformanceCounterInstaller?displayProperty=nameWithType>|`PerformanceCounter` 구성 요소에 대해 설치 관리자를 지정합니다.|  
+|<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|`NextValue` 에 대한 `PerformanceCounter`메서드를 계산하는 수식을 지정합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)

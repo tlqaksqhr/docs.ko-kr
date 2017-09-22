@@ -52,10 +52,10 @@ ms.lasthandoff: 07/28/2017
  언어의 모든 측면에 대한 상세 정보를 포함하는 전체 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 언어 사양에 대한 링크를 제공합니다.  
   
 ## <a name="reference"></a>참조  
- <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=fullName>  
+ <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=nameWithType>  
  이 네임스페이스에는 Visual Basic Power Packs 컨트롤의 클래스가 포함되어 있습니다. Visual Basic Power Packs 컨트롤은 추가 Windows Forms 컨트롤입니다.  
   
- <xref:Microsoft.VisualBasic.PowerPacks.Printing?displayProperty=fullName>  
+ <xref:Microsoft.VisualBasic.PowerPacks.Printing?displayProperty=nameWithType>  
  이 네임스페이스는 화면에 표시되는 대로 폼의 팩스를 인쇄하는 데 사용할 수 있는 구성 요소를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 단원  

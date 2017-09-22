@@ -39,7 +39,7 @@ ms.lasthandoff: 07/28/2017
   
 |메서드 이름|설명|C# 쿼리 식 구문|추가 정보|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|Concat|두 시퀀스를 연결하여 하나의 시퀀스를 구성합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=fullName>|  
+|Concat|두 시퀀스를 연결하여 하나의 시퀀스를 구성합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Linq>   

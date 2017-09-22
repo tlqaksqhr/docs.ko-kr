@@ -33,7 +33,7 @@ ms.lasthandoff: 07/28/2017
   
 |메서드 이름|설명|C# 쿼리 식 구문|추가 정보|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|SequenceEqual|쌍 단위 방식으로 요소를 비교하여 두 시퀀스가 서로 같은지 확인합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=fullName><br /><br /> <xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=fullName>|  
+|SequenceEqual|쌍 단위 방식으로 요소를 비교하여 두 시퀀스가 서로 같은지 확인합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Linq>   
