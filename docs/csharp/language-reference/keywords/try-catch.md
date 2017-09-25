@@ -35,10 +35,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b7ec6c96ac21ba2115d1e7eead5700b6dbfcc952
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: 47e4c298c20e7adde0e427f0a547904db2f96d37
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="try-catch-c-reference"></a>try-catch(C# 참조)
@@ -57,7 +57,7 @@ try
 }  
 ```  
   
- `catch` 절은 예외 형식을 catch하는 인수 없이 사용할 수 있지만 이 사용은 권장되지 않습니다. 일반적으로 복구하는 방법을 알고 있는 예외만 catch해야 합니다. 따라서 항상 <xref:System.Exception?displayProperty=fullName>에서 파생된 개체 인수를 지정해야 합니다. 예를 들면 다음과 같습니다.  
+ `catch` 절은 예외 형식을 catch하는 인수 없이 사용할 수 있지만 이 사용은 권장되지 않습니다. 일반적으로 복구하는 방법을 알고 있는 예외만 catch해야 합니다. 따라서 항상 <xref:System.Exception?displayProperty=nameWithType>에서 파생된 개체 인수를 지정해야 합니다. 예를 들면 다음과 같습니다.  
   
 ```csharp  
 catch (InvalidCastException e)   
@@ -150,7 +150,7 @@ static void Main()
   
  예외를 catch하려면 `try` 블록에서 작업을 기다리고 연결된 `catch` 블록에서 예외를 catch합니다. 예제에 대해서는 "예제" 섹션을 참조하세요.  
   
- 대기 중인 비동기 메서드에서 여러 예외가 발생했기 때문에 작업이 오류 상태에 있을 수 있습니다. 예를 들어 작업은 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> 호출의 결과일 수 있습니다. 작업을 기다릴 때 예외 중 하나만 catch되고 catch될 예외를 예상할 수 없습니다. 예제에 대해서는 "예제" 섹션을 참조하세요.  
+ 대기 중인 비동기 메서드에서 여러 예외가 발생했기 때문에 작업이 오류 상태에 있을 수 있습니다. 예를 들어 작업은 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 호출의 결과일 수 있습니다. 작업을 기다릴 때 예외 중 하나만 catch되고 catch될 예외를 예상할 수 없습니다. 예제에 대해서는 "예제" 섹션을 참조하세요.  
   
 ## <a name="example"></a>예제  
  다음 예제에서 `try` 블록에는 예외를 가져올 수 있는 `ProcessString` 메서드에 대한 호출이 포함됩니다. `catch` 절에는 화면에 메시지만 표시하는 예외 처리기가 포함됩니다. `throw` 문이 `MyMethod` 내부에서 호출되면 시스템에서는 `catch` 문을 검색하고 메시지 `Exception caught`를 표시합니다.  
@@ -176,9 +176,9 @@ static void Main()
  [!code-cs[csAsyncExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_3.cs)]  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 여러 작업에서 여러 예외가 발생할 수 있는 경우 예외 처리를 보여 줍니다. `try` 블록은 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>에 대한 호출에서 반환된 작업을 기다립니다. WhenAll이 적용된 작업 세 개가 완료되면 작업이 완료됩니다.  
+ 다음 예제에서는 여러 작업에서 여러 예외가 발생할 수 있는 경우 예외 처리를 보여 줍니다. `try` 블록은 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>에 대한 호출에서 반환된 작업을 기다립니다. WhenAll이 적용된 작업 세 개가 완료되면 작업이 완료됩니다.  
   
- 세 작업에서 각각 예외가 발생합니다. `catch` 블록은 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>에서 반환된 작업의 `Exception.InnerExceptions` 속성에 있는 예외를 반복합니다.  
+ 세 작업에서 각각 예외가 발생합니다. `catch` 블록은 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>에서 반환된 작업의 `Exception.InnerExceptions` 속성에 있는 예외를 반복합니다.  
   
  [!code-cs[csAsyncExceptions#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_4.cs)]  
   

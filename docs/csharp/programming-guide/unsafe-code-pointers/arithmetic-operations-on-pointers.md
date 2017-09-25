@@ -31,7 +31,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: d40d44f8be590a909ff059b0fa84efb598fcf263
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="arithmetic-operations-on-pointers-c-programming-guide"></a>포인터에 대한 산술 연산(C# 프로그래밍 가이드)

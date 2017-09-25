@@ -33,10 +33,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 955f6d87614e0b452ace162e79e34aec9decad54
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: 77f44a43b80c4cf1f12baadaaf6861b3b53244d9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="throw-c-reference"></a>throw(C# 참조)
@@ -49,7 +49,7 @@ ms.lasthandoff: 07/28/2017
 ```csharp
 throw [e]
 ```
-여기서 `e`는 <xref:System.Exception?displayProperty=fullName>에서 파생된 클래스의 인스턴스입니다. 다음 예제에서는 `throw` 문을 사용하여 `GetNumber`라는 메서드에 전달된 인수가 내부 배열의 유효한 인덱스에 해당하지 않는 경우 @System.IndexOutOfRangeException을 throw합니다.
+여기서 `e`는 <xref:System.Exception?displayProperty=nameWithType>에서 파생된 클래스의 인스턴스입니다. 다음 예제에서는 `throw` 문을 사용하여 `GetNumber`라는 메서드에 전달된 인수가 내부 배열의 유효한 인덱스에 해당하지 않는 경우 @System.IndexOutOfRangeException을 throw합니다.
 
 [!code-cs[csrefKeyword#1](../../../../samples/snippets/csharp/language-reference/keywords/throw/throw-1.cs#1)]  
 

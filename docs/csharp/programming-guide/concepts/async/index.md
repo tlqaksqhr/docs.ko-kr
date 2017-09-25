@@ -17,10 +17,10 @@ translation.priority.mt:
 - pt-br
 - tr-tr
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d087951ce3e3f05c7f1e8f9c99529eab2f76b8d5
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: 2f26f83bea90d13a91a747e531ad29db788e2101
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>async 및 await를 사용한 비동기 프로그래밍(C#)
@@ -159,9 +159,9 @@ string urlContents = await client.GetStringAsync();
 ##  <a name="BKMK_Threads"></a> 스레드  
 비동기 메서드는 비차단 작업입니다. 비동기 메서드의 `await` 식은 대기한 작업이 실행되는 동안 현재 스레드를 차단하지 않습니다. 대신에 이 식은 메서드의 나머지를 연속으로 등록하고 제어 기능을 비동기 메서드 호출자에게 반환합니다.  
   
-`async` 및 `await` 키워드로 인해 추가 스레드가 생성되지 않습니다. 비동기 메서드는 자체 스레드에서 실행되지 않으므로 다중 스레드가 필요하지 않습니다. 메서드는 현재 동기화 컨텍스트에서 실행되고 메서드가 활성화된 경우에만 스레드에서 시간을 사용합니다. <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=fullName>을 사용하여 CPU 바인딩 작업을 백그라운드 스레드로 이동할 수 있지만 백그라운드 스레드는 프로세스를 지원하지 않고 결과를 사용할 수 있을 때까지 기다립니다.  
+`async` 및 `await` 키워드로 인해 추가 스레드가 생성되지 않습니다. 비동기 메서드는 자체 스레드에서 실행되지 않으므로 다중 스레드가 필요하지 않습니다. 메서드는 현재 동기화 컨텍스트에서 실행되고 메서드가 활성화된 경우에만 스레드에서 시간을 사용합니다. <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType>을 사용하여 CPU 바인딩 작업을 백그라운드 스레드로 이동할 수 있지만 백그라운드 스레드는 프로세스를 지원하지 않고 결과를 사용할 수 있을 때까지 기다립니다.  
   
-비동기 프로그래밍에 대한 비동기 기반 접근 방법은 거의 모든 경우에 기존 방법보다 선호됩니다. 특히, 이 접근 방식은 코드가 더 간단하고 경합 조건을 방지할 필요가 없기 때문에 IO 바인딩 작업의 <xref:System.ComponentModel.BackgroundWorker> 클래스보다 효과적입니다. 비동기 프로그래밍은 코드 실행에 대한 조합 세부 정보를 `Task.Run`가 스레드 풀로 변환하는 작업과 구분하기 때문에 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=fullName> 메서드를 함께 사용하는 비동기 프로그래밍은 CPU 바인딩 작업을 위한 <xref:System.ComponentModel.BackgroundWorker>보다 효과가 뛰어납니다.  
+비동기 프로그래밍에 대한 비동기 기반 접근 방법은 거의 모든 경우에 기존 방법보다 선호됩니다. 특히, 이 접근 방식은 코드가 더 간단하고 경합 조건을 방지할 필요가 없기 때문에 IO 바인딩 작업의 <xref:System.ComponentModel.BackgroundWorker> 클래스보다 효과적입니다. 비동기 프로그래밍은 코드 실행에 대한 조합 세부 정보를 `Task.Run`가 스레드 풀로 변환하는 작업과 구분하기 때문에 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> 메서드를 함께 사용하는 비동기 프로그래밍은 CPU 바인딩 작업을 위한 <xref:System.ComponentModel.BackgroundWorker>보다 효과가 뛰어납니다.  
   
 ##  <a name="BKMK_AsyncandAwait"></a> async 및 await  
  [async](../../../../csharp/language-reference/keywords/async.md) 한정자를 사용해서 메서드를 비동기 메서드로 지정하면 다음 두 기능이 활성화됩니다.  
@@ -253,7 +253,7 @@ Windows 런타임 프로그래밍의 비동기 API에는 작업과 유사한 다
 |제목|설명|샘플|  
 |-----------|-----------------|------------|  
 |[연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)|동기 WPF 솔루션을 비동기 WPF 솔루션으로 변환하는 방법을 보여줍니다. 이 응용 프로그램은 일련의 웹 사이트를 다운로드합니다.|[Async 샘플: 웹 연습에 액세스](http://go.microsoft.com/fwlink/p/?LinkID=255191&clcid=0x409)|  
-|[방법: Task.WhenAll을 사용하여 비동기 연습 확장(C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|이전 연습에 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>을 추가합니다. `WhenAll`을 사용하면 모든 다운로드가 동시에 시작됩니다.||  
+|[방법: Task.WhenAll을 사용하여 비동기 연습 확장(C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)|이전 연습에 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>을 추가합니다. `WhenAll`을 사용하면 모든 다운로드가 동시에 시작됩니다.||  
 |[방법: Async 및 Await를 사용하여 병렬로 여러 웹 요청 만들기(C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)|동시에 여러 작업을 시작하는 방법을 보여줍니다.|[Async 샘플: 여러 웹 요청을 병렬로 만들기](http://go.microsoft.com/fwlink/p/?LinkID=254906&clcid=0x409)|  
 |[비동기 반환 형식(C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)|비동기 메서드에서 반환할 수 있는 형식을 설명하고 각 형식이 언제 적절한가를 설명합니다.||  
 |[비동기 프로그램의 제어 흐름(C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)|비동기 프로그램에서 연속적 await 표현을 통한 컨트롤의 흐름을 자세히 추적합니다.|[Async 샘플: 비동기 프로그램의 제어 흐름](http://go.microsoft.com/fwlink/p/?LinkID=255285&clcid=0x409)|  

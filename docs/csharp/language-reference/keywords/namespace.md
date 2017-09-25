@@ -35,7 +35,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: d2cef3949d9a41db36406db059218f7a204172ea
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="namespace-c-reference"></a>namespace(C# 참조)
@@ -43,7 +43,7 @@ ms.lasthandoff: 07/28/2017
   
  [!code-cs[csrefKeywordsNamespace#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_1.cs)]  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  네임스페이스 내에서 다음 형식 중 하나 이상을 선언할 수 있습니다.  
   
 -   다른 네임스페이스  

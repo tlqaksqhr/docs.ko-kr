@@ -27,10 +27,10 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.translationtype: HT
-ms.sourcegitcommit: 934373d61407c8cc19b7d6424898a582880f9c21
-ms.openlocfilehash: 6ab1d59ec9ce4f77b3ded2951d01f675f096069f
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: 75353ad43d76ceecd60bb9edd207c56c759e52c2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>런타임에서 어셈블리를 찾는 방법
@@ -42,13 +42,13 @@ ms.lasthandoff: 09/19/2017
 >  [에 포함된](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)어셈블리 바인딩 로그 뷰어(Fuslogvw.exe) [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]를 사용하여 로그 파일의 바인딩 정보를 볼 수 있습니다.  
   
 ## <a name="initiating-the-bind"></a>바인딩 시작  
- 런타임에서 다른 어셈블리에 대한 참조를 확인하려고 시도하면 어셈블리를 찾아서 바인딩하는 프로세스가 시작됩니다. 이 참조는 정적이거나 동적일 수 있습니다. 컴파일러는 빌드 타임에 정적 참조를 어셈블리 매니페스트 메타데이터에 기록합니다. 동적 참조는 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>와 같은 다양한 메서드의 호출 결과로 즉석에서 생성됩니다.  
+ 런타임에서 다른 어셈블리에 대한 참조를 확인하려고 시도하면 어셈블리를 찾아서 바인딩하는 프로세스가 시작됩니다. 이 참조는 정적이거나 동적일 수 있습니다. 컴파일러는 빌드 타임에 정적 참조를 어셈블리 매니페스트 메타데이터에 기록합니다. 동적 참조는 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>와 같은 다양한 메서드의 호출 결과로 즉석에서 생성됩니다.  
   
  어셈블리를 참조할 때는 어셈블리 이름, 버전, 문화권 및 공개 키 토큰(있는 경우)을 포함하여 전체 참조를 사용하는 것이 좋습니다. 런타임은 이 섹션의 뒷부분에 설명된 단계에 따라 이 정보를 사용하여 어셈블리를 찾습니다. 런타임은 정적 또는 동적 어셈블리에 대한 참조인지에 관계없이 동일한 확인 프로세스를 사용합니다.  
   
- 어셈블리 이름만 지정하는 등 호출 메서드에 어셈블리에 대한 부분 정보만 제공하여 어셈블리에 대한 동적 참조를 만들 수도 있습니다. 이 경우 응용 프로그램 디렉터리에서만 어셈블리가 검색되고 다른 검사는 수행되지 않습니다. <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 또는 <xref:System.AppDomain.Load%2A?displayProperty=fullName>와 같은 다양한 어셈블리 로드 메서드 중 하나를 사용하여 부분 참조를 만듭니다.  
+ 어셈블리 이름만 지정하는 등 호출 메서드에 어셈블리에 대한 부분 정보만 제공하여 어셈블리에 대한 동적 참조를 만들 수도 있습니다. 이 경우 응용 프로그램 디렉터리에서만 어셈블리가 검색되고 다른 검사는 수행되지 않습니다. <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 또는 <xref:System.AppDomain.Load%2A?displayProperty=nameWithType>와 같은 다양한 어셈블리 로드 메서드 중 하나를 사용하여 부분 참조를 만듭니다.  
   
- <xref:System.Reflection.Assembly.Load*?displayProperty=fullName> 등의 메서드를 사용하여 동적 참조를 만들고 부분 정보만 제공할 수 있습니다. 그런 다음 응용 프로그램 구성 파일에서 [\<qualifyAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md) 요소를 사용하여 참조를 한정할 수 있습니다. 코드 대신 응용 프로그램 구성 파일에서 이 요소를 통해 전체 참조 정보(이름, 버전, 문화권 및 해당하는 경우 공개 키 토큰)를 제공할 수 있습니다. 응용 프로그램 디렉터리 외부의 어셈블리에 대한 참조를 정규화하려는 경우 또는 전역 어셈블리 캐시에서 어셈블리를 참조하려고 하지만 코드 대신 구성 파일에서 전체 참조를 편리하게 지정하려는 경우 이 기술을 사용합니다.  
+ <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> 등의 메서드를 사용하여 동적 참조를 만들고 부분 정보만 제공할 수 있습니다. 그런 다음 응용 프로그램 구성 파일에서 [\<qualifyAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md) 요소를 사용하여 참조를 한정할 수 있습니다. 코드 대신 응용 프로그램 구성 파일에서 이 요소를 통해 전체 참조 정보(이름, 버전, 문화권 및 해당하는 경우 공개 키 토큰)를 제공할 수 있습니다. 응용 프로그램 디렉터리 외부의 어셈블리에 대한 참조를 정규화하려는 경우 또는 전역 어셈블리 캐시에서 어셈블리를 참조하려고 하지만 코드 대신 구성 파일에서 전체 참조를 편리하게 지정하려는 경우 이 기술을 사용합니다.  
   
 > [!NOTE]
 >  이 형식의 부분 참조는 여러 응용 프로그램 간에 공유되는 어셈블리와 함께 사용하면 안 됩니다. 어셈블리 단위가 아니라 응용 프로그램 단위로 구성 설정이 적용되기 때문에 이 형식의 부분 참조를 사용하는 공유 어셈블리에서는 공유 어셈블리를 사용하는 각 응용 프로그램의 구성 파일에 적격한 정보가 있어야 합니다.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 09/19/2017
   
 4.  다음 단계를 사용하여[어셈블리를 검색](#step4) 합니다.  
   
-    1.  구성 및 게시자 정책이 원래 참조 영향을 주지 않고 바인딩 요청이 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> 메서드를 사용하여 만들어진 경우 런타임에서 위치 힌트를 확인합니다.  
+    1.  구성 및 게시자 정책이 원래 참조 영향을 주지 않고 바인딩 요청이 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 메서드를 사용하여 만들어진 경우 런타임에서 위치 힌트를 확인합니다.  
   
     2.  구성 파일에 코드베이스가 있을 경우 런타임에서 이 위치만 확인합니다. 이 검색이 실패하면 런타임에서 바인딩 요청이 실패했다고 결정하며 다른 검색이 수행되지 않습니다.  
   
@@ -258,7 +258,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ```  
   
 #### <a name="other-locations-probed"></a>검색되는 기타 위치  
- 현재 바인딩 컨텍스트를 사용하여 어셈블리 위치를 결정할 수도 있습니다. 이러한 경우는 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> 메서드가 사용될 때 및 COM interop 시나리오에서 자주 발생합니다. 어셈블리가 <xref:System.Reflection.Assembly.LoadFrom%2A> 메서드를 사용하여 다른 어셈블리를 참조하는 경우 호출 어셈블리의 위치는 참조된 어셈블리를 찾을 수 있는 위치에 대한 힌트로 간주됩니다. 일치 항목이 있으면 해당 어셈블리가 로드됩니다. 일치 항목이 없으면 런타임이 해당 검색 의미 체계를 계속하고 Windows Installer에 어셈블리를 제공하도록 쿼리합니다. 바인딩 요청과 일치하는 어셈블리가 제공되지 않으면 예외가 발생합니다. 이 예외는 형식이 참조된 경우 관리 코드의 <xref:System.TypeLoadException> 이거나, 로드되는 어셈블리가 없는 경우 <xref:System.IO.FileNotFoundException> 입니다.  
+ 현재 바인딩 컨텍스트를 사용하여 어셈블리 위치를 결정할 수도 있습니다. 이러한 경우는 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 메서드가 사용될 때 및 COM interop 시나리오에서 자주 발생합니다. 어셈블리가 <xref:System.Reflection.Assembly.LoadFrom%2A> 메서드를 사용하여 다른 어셈블리를 참조하는 경우 호출 어셈블리의 위치는 참조된 어셈블리를 찾을 수 있는 위치에 대한 힌트로 간주됩니다. 일치 항목이 있으면 해당 어셈블리가 로드됩니다. 일치 항목이 없으면 런타임이 해당 검색 의미 체계를 계속하고 Windows Installer에 어셈블리를 제공하도록 쿼리합니다. 바인딩 요청과 일치하는 어셈블리가 제공되지 않으면 예외가 발생합니다. 이 예외는 형식이 참조된 경우 관리 코드의 <xref:System.TypeLoadException> 이거나, 로드되는 어셈블리가 없는 경우 <xref:System.IO.FileNotFoundException> 입니다.  
   
  예를 들어 Assembly1이 Assembly2를 참조하고 Assembly1이 http://www.code.microsoft.com/utils에서 다운로드된 경우 해당 위치가 Assembly2.dll을 찾을 수 있는 위치에 대한 힌트로 간주됩니다. 그러면 런타임이 http://www.code.microsoft.com/utils/Assembly2.dll 및 http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll에서 어셈블리를 검색합니다. Assembly2가 이러한 위치 중 하나에  없으면 런타임에서 Windows Installer를 쿼리합니다.  
   

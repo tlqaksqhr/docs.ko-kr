@@ -30,16 +30,16 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: 56e22638457017688ff380f6683b463b47c53a17
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: 6d99bffc74cbcce04d725b8f225a4a4b175973be
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/02/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="nullable-types-c-programming-guide"></a>nullable 형식(C# 프로그래밍 가이드)
-Nullable 형식은 <xref:System.Nullable%601?displayProperty=fullName> 구조체의 인스턴스입니다. Null 허용 형식은 해당 내부 형식의 올바른 값 범위와 추가 `null` 값을 나타낼 수 있습니다. 예를 들어 "Nullable of Int32"로도 나타내는 `Nullable<Int32>`에는 -2147483648에서 2147483647까지 값이 할당되거나 `null` 값이 할당될 수 있습니다. `Nullable<bool>`에는 [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md) 또는 [null](../../../csharp/language-reference/keywords/null.md) 값이 할당될 수 있습니다. 숫자 및 부울 형식에 `null`을 할당하는 기능은 값을 할당할 수 없는 요소를 포함하는 데이터베이스 및 기타 데이터 형식을 처리할 때 특히 유용합니다. 예를 들어 데이터베이스의 부울 필드는 값 `true` 또는 `false`를 저장하거나 정의되지 않을 수 있습니다. 
+Nullable 형식은 <xref:System.Nullable%601?displayProperty=nameWithType> 구조체의 인스턴스입니다. Null 허용 형식은 해당 내부 형식의 올바른 값 범위와 추가 `null` 값을 나타낼 수 있습니다. 예를 들어 "Nullable of Int32"로도 나타내는 `Nullable<Int32>`에는 -2147483648에서 2147483647까지 값이 할당되거나 `null` 값이 할당될 수 있습니다. `Nullable<bool>`에는 [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md) 또는 [null](../../../csharp/language-reference/keywords/null.md) 값이 할당될 수 있습니다. 숫자 및 부울 형식에 `null`을 할당하는 기능은 값을 할당할 수 없는 요소를 포함하는 데이터베이스 및 기타 데이터 형식을 처리할 때 특히 유용합니다. 예를 들어 데이터베이스의 부울 필드는 값 `true` 또는 `false`를 저장하거나 정의되지 않을 수 있습니다. 
   
-[!code-cs[nullable-형식](../../../../samples/snippets/csharp/programming-guide/nullable-types/nullable-ex1.cs)]  
+[!code-cs[nullable-types](../../../../samples/snippets/csharp/programming-guide/nullable-types/nullable-ex1.cs)]  
   
 추가 예제를 보려면 [Null 허용 형식 사용](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)을 참조하세요.  
   
@@ -52,13 +52,13 @@ Nullable 형식은 <xref:System.Nullable%601?displayProperty=fullName> 구조체
   
 -   일반 값 형식의 경우처럼 null 허용 형식에 값을 할당합니다(예: `int? x = 10;` 또는 `double? d = 4.108`). null 허용 형식에 값 `null`을 할당할 수도 있습니다. `int? x = null.`  
   
--   <xref:System.Nullable%601.GetValueOrDefault%2A?displayProperty=fullName> 메서드를 사용하여 할당된 값 또는 내부 형식의 기본값(값이 `null`인 경우)을 반환합니다(예: `int j = x.GetValueOrDefault();`).  
+-   <xref:System.Nullable%601.GetValueOrDefault%2A?displayProperty=nameWithType> 메서드를 사용하여 할당된 값 또는 내부 형식의 기본값(값이 `null`인 경우)을 반환합니다(예: `int j = x.GetValueOrDefault();`).  
   
 -   다음 예제와 같이 <xref:System.Nullable%601.HasValue%2A> 및 <xref:System.Nullable%601.Value%2A> 읽기 전용 속성을 사용하여 null인지 테스트하고 값을 검색합니다. `if(x.HasValue) j = x.Value;`  
   
     -   `HasValue` 속성은 변수에 값이 있으면 `true`를, `null`이면 `false`를 반환합니다.  
   
-    -   `Value` 속성은 할당된 값이 있으면 해당 값을 반환합니다. 그렇지 않으면 <xref:System.InvalidOperationException?displayProperty=fullName>이 throw됩니다.  
+    -   `Value` 속성은 할당된 값이 있으면 해당 값을 반환합니다. 그렇지 않으면 <xref:System.InvalidOperationException?displayProperty=nameWithType>이 throw됩니다.  
   
     -   `HasValue`의 기본값은 `false`입니다. `Value` 속성에는 기본값이 없습니다.  
   
@@ -86,3 +86,4 @@ Nullable 형식은 <xref:System.Nullable%601?displayProperty=fullName> 구조체
  [C#](../../../csharp/index.md)   
  [C# 참조](../../../csharp/language-reference/index.md)   
  ['리프트'란 정확히 어떤 의미입니까?](http://go.microsoft.com/fwlink/?LinkId=112382)
+
