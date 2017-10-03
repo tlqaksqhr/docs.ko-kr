@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 8e81640ee56ed672bb09242a070fdf167740874b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where(제네릭 형식 제약 조건)(C# 참조)
@@ -51,7 +51,7 @@ public class MyGenericClass<T> where T:IComparable { }
   
  [!code-cs[csrefKeywordsContextual#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_1.cs)]  
   
- `where` 절에 생성자 제약 조건이 포함될 수도 있습니다. 새 연산자를 사용하여 형식 매개 변수의 인스턴스를 만들 수 있습니다. 그러나 그렇게 하려면 생성자 제약 조건 `new()`(으)로 형식 매개 변수를 제한해야 합니다. [new () 제약 조건](../../../csharp/language-reference/keywords/new-constraint.md)을 사용하면 컴파일러는 제공된 형식 인수에는 액세스 가능하며 매개 변수가 없는 생성자(또는 기본 생성자)가 있어야 한다는 것을 알게 됩니다. 예:  
+ `where` 절에 생성자 제약 조건이 포함될 수도 있습니다. 새 연산자를 사용하여 형식 매개 변수의 인스턴스를 만들 수 있습니다. 그러나 그렇게 하려면 생성자 제약 조건 `new()`로 형식 매개 변수를 제한해야 합니다. [new () 제약 조건](../../../csharp/language-reference/keywords/new-constraint.md)을 사용하면 컴파일러는 제공된 인수에 액세스 가능하고 매개 변수가 없는 생성자(또는 기본 생성자)가 있어야 한다는 것을 알게 됩니다. 예:  
   
  [!code-cs[csrefKeywordsContextual#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/where-generic-type-constraint_2.cs)]  
   

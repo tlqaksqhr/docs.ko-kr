@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 1035caae15b64d1311305cfe4c1f1a74c80ed19a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="arrays-c-programming-guide"></a>배열(C# 프로그래밍 가이드)
@@ -42,7 +42,7 @@ ms.lasthandoff: 07/28/2017
   
  다음 예제에서는 단일 차원, 다차원 및 가변 배열을 만듭니다.  
   
- [!code-cs[csProgGuideArrays #1](../../../csharp/programming-guide/arrays/codesnippet/CSharp/index_1.cs)]  
+ [!code-cs[csProgGuideArrays#1](../../../csharp/programming-guide/arrays/codesnippet/CSharp/index_1.cs)]  
   
 ## <a name="array-overview"></a>배열 개요  
  배열에는 다음과 같은 속성이 있습니다.  

@@ -31,10 +31,10 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cf12724ec9e450a2bc237db614f235d7f03a4a7e
+ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
+ms.openlocfilehash: fbadbcf92a6ac8ed46c3e81fa9eda1ceac8f6631
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="enum-c-reference"></a>enum(C# 참조)
@@ -77,7 +77,7 @@ enum Days : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 int x = (int)Days.Sun;  
 ```  
   
- 일부 요소가 비트 <xref:System.FlagsAttribute?displayProperty=fullName> 연산으로 결합될 수 있는 열거형에 `OR` 를 적용하면 일부 도구에서 이 열거형을 사용할 때 해당 특성이 `enum` 의 동작에 영향을 줍니다. <xref:System.Console> 클래스 메서드 및 식 계산기 등의 도구를 사용할 때 이러한 변경 사항을 확인할 수 있습니다. 세 번째 예제를 참조하세요.  
+ 일부 요소가 비트 <xref:System.FlagsAttribute?displayProperty=nameWithType> 연산으로 결합될 수 있는 열거형에 `OR` 를 적용하면 일부 도구에서 이 열거형을 사용할 때 해당 특성이 `enum` 의 동작에 영향을 줍니다. <xref:System.Console> 클래스 메서드 및 식 계산기 등의 도구를 사용할 때 이러한 변경 사항을 확인할 수 있습니다. 세 번째 예제를 참조하세요.  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
  다른 상수와 마찬가지로, 컴파일 시간에 열거형의 개별 값에 대한 모든 참조는 숫자 리터럴로 변환됩니다. 따라서 [상수](../../../csharp/programming-guide/classes-and-structs/constants.md)에서 설명하는 버전 문제가 발생할 가능성이 있습니다.  
@@ -97,7 +97,7 @@ int x = (int)Days.Sun;
  [!code-cs[csrefKeywordsTypes#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_2.cs)]  
   
 ## <a name="example"></a>예제  
- 다음 코드 예제에서는 <xref:System.FlagsAttribute?displayProperty=fullName> 선언에 `enum` 특성을 사용하는 방법과 그 결과를 보여 줍니다.  
+ 다음 코드 예제에서는 <xref:System.FlagsAttribute?displayProperty=nameWithType> 선언에 `enum` 특성을 사용하는 방법과 그 결과를 보여 줍니다.  
   
  [!code-cs[csrefKeywordsTypes#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_3.cs)]  
   
