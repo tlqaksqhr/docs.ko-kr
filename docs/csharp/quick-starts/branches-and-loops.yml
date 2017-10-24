@@ -1,0 +1,214 @@
+### YamlMime:YamlDocument
+documentType: Tutorial
+title: <span data-ttu-id="b7e76-101">분기 및 루프</span><span class="sxs-lookup"><span data-stu-id="b7e76-101">Branches and loops</span></span>
+metadata:
+  title: <span data-ttu-id="b7e76-102">분기 및 루프</span><span class="sxs-lookup"><span data-stu-id="b7e76-102">Branches and loops</span></span>
+  description: '<span data-ttu-id="b7e76-103">분기 및 루프에 대한 이 자습서에서는 브라우저를 사용하여 C#을 대화형으로 학습할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-103">In this tutorial about branches and loops, you''ll use your browser to learn C# interactively.</span></span> <span data-ttu-id="b7e76-104">C# 코드를 작성하고 브라우저에서 직접 코드를 컴파일하고 실행한 결과를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-104">You''re going to write C# code and see the results of compiling and running your code directly in the browser.</span></span>'
+  audience: Developer
+  level: Beginner
+  displayType: two-column
+  interactive: csharp
+  nextTutorialHref: arrays-and-collections
+  nextTutorialTitle: 'Arrays and colletions in C#'
+items:
+  - durationInMinutes: 1
+    content: |
+      <span data-ttu-id="b7e76-105">이 자습서에서는 변수를 검사하고 해당 변수에 따라 실행 경로를 변경하는 코드를 작성하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-105">This tutorial teaches you about how to write code that examines variables and changes execution path based on those variables.</span></span> <span data-ttu-id="b7e76-106">브라우저를 사용하여 C#을 작성하고 코드를 컴파일하고 실행한 결과를 확인하여, C#을 대화형으로 작성해 봅니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-106">You'll write C# interactively, using your browser to write C# and see the results of compiling and running your code.</span></span> <span data-ttu-id="b7e76-107">여기에는 C#에서 분기 및 루프 구문을 살펴보는 일련의 단원이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-107">It contains a series of lessons that explore branching and looping constructs in C#.</span></span> <span data-ttu-id="b7e76-108">이러한 단원에서는 C# 언어의 기본 사항을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-108">These lessons teach you the fundamentals of the C# language.</span></span>
+  - title: <span data-ttu-id="b7e76-109">if 문을 사용하여 결정하기</span><span class="sxs-lookup"><span data-stu-id="b7e76-109">Make decisions using the if statement</span></span>
+    durationInMinutes: 4
+    content: |
+      <span data-ttu-id="b7e76-110">대화형 창에서 다음 코드를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-110">Run the following code in the interactive window.</span></span> <span data-ttu-id="b7e76-111">그렇게 하려면 대화형 창에 다음 코드 블록을 입력하고 **실행** 단추를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-111">To do that, type the following code block in the interactive window and click the **Run** button:</span></span>
+
+      ```csharp
+      int a = 5;
+      int b = 6;
+      if (a + b > 10)
+          Console.WriteLine("The answer is greater than 10.");
+      ```
+
+      <span data-ttu-id="b7e76-112">합계가 10보다 작도록 `b`의 선언을 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-112">Modify the declaration of `b` so that the sum is less than 10:</span></span> 
+
+      ```csharp
+      int b = 3;
+      ```
+
+      <span data-ttu-id="b7e76-113">**실행** 단추를 다시 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-113">Click the **Run** button again.</span></span> <span data-ttu-id="b7e76-114">답이 10보다 작기 때문에 아무것도 출력되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-114">Because the answer is less than 10, nothing is printed.</span></span> <span data-ttu-id="b7e76-115">테스트하는 **조건**은 false입니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-115">The **condition** you're testing is false.</span></span> <span data-ttu-id="b7e76-116">`if` 문에 대해 가능한 분기 중 하나(true 분기)만 작성했기 때문에 실행할 코드가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-116">You don't have any code to execute because you've only written one of the possible branches for an `if` statement: the true branch.</span></span>
+
+      > [!TIP]
+      > <span data-ttu-id="b7e76-117">C# (또는 다른 프로그래밍 언어)를 살펴보면서 코드를 작성할 때 실수를 하게 될 것입니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-117">As you explore C# (or any programming language), you'll make mistakes when you write code.</span></span> <span data-ttu-id="b7e76-118">**컴파일러**는 그러한 오류를 찾아 사용자에게 보고합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-118">The **compiler** will find those errors and report them to you.</span></span> <span data-ttu-id="b7e76-119">출력에 오류 메시지가 포함되어 있으면 예제 코드와 대화형 창의 코드를 자세히 살펴보고 수정 사항을 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="b7e76-119">When the output contains error messages, look closely at the example code, and the code in the interactive window to see what to fix.</span></span>
+      > <span data-ttu-id="b7e76-120">이 연습은 C# 코드의 구조를 학습하는 데 도움이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-120">That exercise will help you learn the structure of C# code.</span></span>     
+
+      <span data-ttu-id="b7e76-121">이 첫 번째 샘플에서는 `if`의 기능과 부울 형식을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-121">This first sample shows the power of `if` and boolean types.</span></span> <span data-ttu-id="b7e76-122">*부울*은 `true` 또는 `false`의 두 값 중 하나를 가질 수 있는 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-122">A *boolean* is a variable that can have one of two values: `true` or `false`.</span></span> <span data-ttu-id="b7e76-123">C#은 부울 변수에 대한 특수 형식 `bool`을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-123">C# defines a special type, `bool` for boolean variables.</span></span> <span data-ttu-id="b7e76-124">`if` 문은 `bool`의 값을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-124">The `if` statement checks the value of a `bool`.</span></span> <span data-ttu-id="b7e76-125">값이 `true`인 경우 `if` 뒤의 문이 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-125">When the value is `true`, the statement following the `if` executes.</span></span> <span data-ttu-id="b7e76-126">그러하지 않으면 건너뜁니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-126">Otherwise, it is skipped.</span></span> 
+
+      <span data-ttu-id="b7e76-127">조건을 확인하고 해당 조건에 따라 문을 실행하는 이 프로세스는 아주 강력합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-127">This process of checking conditions and executing statements based on those conditions is very powerful.</span></span> <span data-ttu-id="b7e76-128">더 자세히 살펴보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-128">Let's explore more.</span></span>
+
+      > [!NOTE]
+      > <span data-ttu-id="b7e76-129">이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-129">This online coding experience is in preview mode.</span></span> <span data-ttu-id="b7e76-130">문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.</span><span class="sxs-lookup"><span data-stu-id="b7e76-130">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+  - title: <span data-ttu-id="b7e76-131">if와 else를 함께 사용하기</span><span class="sxs-lookup"><span data-stu-id="b7e76-131">Make if and else work together</span></span>
+    durationInMinutes: 10
+    content: |
+
+      <span data-ttu-id="b7e76-132">true 분기와 false 분기의 여러 코드를 실행하려면 조건이 false일 때 실행되는 `else` 분기를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-132">To execute different code in both the true and false branches, you create an `else` branch that executes when the condition is false.</span></span> <span data-ttu-id="b7e76-133">다음과 같이 해보세요.</span><span class="sxs-lookup"><span data-stu-id="b7e76-133">Try this:</span></span>
+
+      ```csharp
+      int a = 5;
+      int b = 3;
+      if (a + b > 10)
+          Console.WriteLine("The answer is greater than 10");
+      else
+          Console.WriteLine("The answer is not greater than 10");
+      ```
+
+      <span data-ttu-id="b7e76-134">`else` 키워드 뒤의 문은 테스트하는 조건이 `false`인 경우에만 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-134">The statement following the `else` keyword executes only when the condition being tested is `false`.</span></span> <span data-ttu-id="b7e76-135">`if` 및 `else`를 부울 조건과 결합하면 필요한 모든 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-135">Combining `if` and `else` with boolean conditions provides all the power you need.</span></span>
+
+      > [!IMPORTANT]
+      > <span data-ttu-id="b7e76-136">`if` 및 `else` 문 아래의 들여쓰기는 사용자가 보기 편하도록 하기 위함입니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-136">The indentation under the `if` and `else` statements is for human readers.</span></span>
+      > <span data-ttu-id="b7e76-137">C# 언어는 들여쓰기 또는 공백을 중요하게 취급하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-137">The C# language doesn't treat indentation or whitespace as significant.</span></span> <span data-ttu-id="b7e76-138">`if` 또는 `else` 키워드 뒤의 문은 조건에 따라 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-138">The statement following the `if` or `else` keyword will be executed based on the condition.</span></span> <span data-ttu-id="b7e76-139">이 자습서의 모든 샘플에서는 실행을 기준으로 줄을 들여쓰는 일반적인 방법을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-139">All the samples in this tutorial follow a common practice to indent lines based on execution.</span></span>
+
+      <span data-ttu-id="b7e76-140">들여쓰기는 중요하지 않기 때문에 `{` 및 `}`를 사용하여 두 개 이상의 문이 조건부로 실행되는 블록의 일부가 되는 시기를 나타내야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-140">Because indentation is not significant, you need to use `{` and `}` to indicate when you want more than one statement to be part of the block that executes conditionally.</span></span> <span data-ttu-id="b7e76-141">C# 프로그래머는 일반적으로 모든 `if` 및 `else` 절에서 중괄호를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-141">C# programmers typically use those braces on all `if` and `else` clauses.</span></span> <span data-ttu-id="b7e76-142">다음 예제는 방금 작성한 코드와 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-142">The following example is the same as what you just created.</span></span> <span data-ttu-id="b7e76-143">연습해 보세요.</span><span class="sxs-lookup"><span data-stu-id="b7e76-143">Try it.</span></span>
+
+      ```csharp
+      int a = 5;
+      int b = 3;
+      if (a + b > 10)
+      {
+          Console.WriteLine("The answer is greater than 10");
+      }
+      else
+      {
+          Console.WriteLine("The answer is not greater than 10");
+      }
+      ```
+
+      > [!TIP]
+      > <span data-ttu-id="b7e76-144">이 자습서의 나머지 부분에서 코드 샘플에는 일반적인 방법에 따라 모두 중괄호가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-144">Through the rest of this tutorial, the code samples all include the braces, following accepted practices.</span></span>
+
+      <span data-ttu-id="b7e76-145">다음과 같이 더 복잡한 조건을 테스트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-145">You can test more complicated conditions:</span></span>
+
+      ```csharp
+      int a = 5;
+      int b = 3;
+      int c = 4;
+      if ((a + b + c > 10) && (a > b))
+      {
+          Console.WriteLine("The answer is greater than 10");
+          Console.WriteLine("And the first number is greater than the second");
+      }
+      else
+      {
+          Console.WriteLine("The answer is not greater than 10");
+          Console.WriteLine("Or the first number is not greater than the second");
+      }
+      ```
+
+      <span data-ttu-id="b7e76-146">`&&`는 “and”를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-146">The `&&` represents "and".</span></span> <span data-ttu-id="b7e76-147">true 분기에서 문을 실행하려면 두 조건이 모두 true여야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-147">It means both conditions must be true to execute the statement in the true branch.</span></span>  <span data-ttu-id="b7e76-148">이러한 예제에서는 `{` 및 `}`로 문을 묶으면 각 조건부 분기에 여러 문을 가질 수 있음도 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-148">These examples also show that you can have multiple statements in each conditional branch, provided you enclose them in `{` and `}`.</span></span>
+
+      <span data-ttu-id="b7e76-149">`||`을 사용하여 “or”을 나타낼 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-149">You can also use  `||` to represent "or":</span></span>
+
+      ```csharp
+      int a = 5;
+      int b = 3;
+      int c = 4;
+      if ((a + b + c > 10) || (a > b))
+      {
+          Console.WriteLine("The answer is greater than 10");
+          Console.WriteLine("Or the first number is greater than the second");
+      }
+      else
+      {
+          Console.WriteLine("The answer is not greater than 10");
+          Console.WriteLine("And the first number is not greater than the second");
+      }
+      ```
+
+      > [!NOTE]
+      > <span data-ttu-id="b7e76-150">이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-150">This online coding experience is in preview mode.</span></span> <span data-ttu-id="b7e76-151">문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.</span><span class="sxs-lookup"><span data-stu-id="b7e76-151">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+  - title: <span data-ttu-id="b7e76-152">루프를 사용하여 작업 반복</span><span class="sxs-lookup"><span data-stu-id="b7e76-152">Use loops to repeat operations</span></span>
+    durationInMinutes: 6
+    content: |
+      <span data-ttu-id="b7e76-153">대규모 프로그램을 만드는 또 다른 중요한 개념은 **루프**입니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-153">Another important concept to create larger programs is **loops**.</span></span> <span data-ttu-id="b7e76-154">루프를 사용하여 두 번 이상 실행하려는 문을 반복합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-154">You'll use loops to repeat statements that you want executed more than once.</span></span> <span data-ttu-id="b7e76-155">대화형 창에서 다음 코드를 사용해 보세요.</span><span class="sxs-lookup"><span data-stu-id="b7e76-155">Try this code in the interactive window:</span></span>
+
+      ```csharp
+      int counter = 0;
+      while (counter < 10)
+      {
+        Console.WriteLine("Hello World! The counter is " + counter);
+        counter++;
+      }
+      ```
+
+      <span data-ttu-id="b7e76-156">`while` 문은 조건을 확인하고 `while` 뒤의 문을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-156">The `while` statement checks a condition and executes the statement following the `while`.</span></span> <span data-ttu-id="b7e76-157">조건이 false가 될 때까지 조건 확인 및 문 실행을 반복합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-157">It will repeat checking the condition and executing those statements until the condition is false.</span></span>
+
+      <span data-ttu-id="b7e76-158">이 예제에서는 다른 새 연산자가 하나 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-158">There's one other new operator in this example.</span></span> <span data-ttu-id="b7e76-159">`counter` 변수 뒤의 `++`는 **증가** 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-159">The `++` after the `counter` variable is the **increment** operator.</span></span> <span data-ttu-id="b7e76-160">카운터 값에 1을 더하고 카운터 변수에 해당 값을 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-160">It adds 1 to the value of counter, and stores that value in the counter variable.</span></span>
+
+      > [!IMPORTANT]
+      > <span data-ttu-id="b7e76-161">코드를 실행할 때 `while` 루프 조건이 false로 전환되는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-161">Make sure that the `while` loop condition does switch to false as you execute the code.</span></span> <span data-ttu-id="b7e76-162">그러하지 않으면 프로그램이 종료되지 않는 **무한 루프**를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-162">Otherwise, you create an **infinite loop** where your program never ends.</span></span> <span data-ttu-id="b7e76-163">코드를 실행하는 엔진이 제한 시간을 초과하고 프로그램에서 아무것도 출력하지 않을 것이기 때문에 시연하지 않겠습니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-163">Let's not demonstrate that, because the engine that runs your code will time out and you'll see no output from your program.</span></span>
+
+      <span data-ttu-id="b7e76-164">`while` 루프는 `while` 뒤에 코드를 실행하기 전에 조건을 테스트합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-164">The `while` loop tests the condition before executing the code following the `while`.</span></span> <span data-ttu-id="b7e76-165">`do` ... `while` 루프는 코드를 먼저 실행한 후 조건을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-165">The `do` ... `while` loop executes the code first, and then checks the condition.</span></span> <span data-ttu-id="b7e76-166">예를 들면 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-166">It looks like this:</span></span>
+
+      ```csharp
+      int counter = 0;
+      do
+      {
+        Console.WriteLine("Hello World! The counter is " + counter);
+        counter++;
+      } while (counter < 10);
+      ```
+
+      <span data-ttu-id="b7e76-167">이 `do` 루프와 이전 `while` 루프는 동일하게 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-167">This `do` loop and the earlier `while` loop work the same.</span></span> 
+
+      <span data-ttu-id="b7e76-168">마지막 루프 문으로 넘어가겠습니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-168">Let's move on to one last loop statement.</span></span>
+
+      > [!NOTE]
+      > <span data-ttu-id="b7e76-169">이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-169">This online coding experience is in preview mode.</span></span> <span data-ttu-id="b7e76-170">문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.</span><span class="sxs-lookup"><span data-stu-id="b7e76-170">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+  - title: <span data-ttu-id="b7e76-171">for 루프 작업</span><span class="sxs-lookup"><span data-stu-id="b7e76-171">Work with the for loop</span></span>
+    durationInMinutes: 5
+    content: |
+      <span data-ttu-id="b7e76-172">C# 코드에서 볼 수 있는 또 다른 일반적인 루프 문은 `for` 루프입니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-172">Another common loop statement that you'll see in C# code is the `for` loop.</span></span> <span data-ttu-id="b7e76-173">대화형 창에서 다음 코드를 사용해 보세요.</span><span class="sxs-lookup"><span data-stu-id="b7e76-173">Try this code in the interactive window:</span></span>
+
+      ```csharp
+      for(int counter = 0; counter < 10; counter++)
+      {
+        Console.WriteLine("Hello World! The counter is " + counter);
+      } 
+      ```
+
+      <span data-ttu-id="b7e76-174">`while` 루프 및 이미 사용한 `do` 루프와 동일한 작업을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-174">This does the same work as the `while` loop and the `do` loop you've already used.</span></span> <span data-ttu-id="b7e76-175">`for` 문에는 작동 방식을 제어하는 세 부분이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-175">The `for` statement has three parts that control how it works.</span></span> 
+
+      <span data-ttu-id="b7e76-176">첫 번째 부분은 **for 이니셜라이저입니다**. `for counter = 0;`은 `counter`가 루프 변수임을 선언하고 첫 번째 값을 `0`으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-176">The first part is the **for initializer**: `for counter = 0;` declares that `counter` is the loop variable, and sets its initial value to `0`.</span></span>
+
+      <span data-ttu-id="b7e76-177">중간 부분은 **for 조건입니다**. `counter < 10`은 이 `for` 루프가 카운터 값이 10보다 작으면 계속 실행됨을 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-177">The middle part is the **for condition**: `counter < 10` declares that this `for` loop continues to execute as long as the value of counter is less than 10.</span></span>
+
+      <span data-ttu-id="b7e76-178">마지막 부분은 **for 반복기입니다**. `counter++`는 `for` 문 다음의 블록을 실행한 후 루프 변수를 수정하는 방법을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-178">The final part is the **for iterator**: `counter++` specifies how to modify the loop variable after executing the block following the `for` statement.</span></span> <span data-ttu-id="b7e76-179">여기서 `counter`는 블록이 실행될 때마다 1씩 증가하도록 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-179">Here, it specifies that `counter` should be incremented by 1 each time the block executes.</span></span>
+
+      <span data-ttu-id="b7e76-180">직접 실습해 보세요.</span><span class="sxs-lookup"><span data-stu-id="b7e76-180">Experiment with these yourself.</span></span> <span data-ttu-id="b7e76-181">다음 각각을 시도해 보세요.</span><span class="sxs-lookup"><span data-stu-id="b7e76-181">Try each of the following:</span></span>
+
+      - <span data-ttu-id="b7e76-182">다른 값으로 시작하도록 이니셜라이저를 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-182">Change the initializer to start at a different value.</span></span>
+      - <span data-ttu-id="b7e76-183">다른 값에서 중지하도록 조건을 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-183">Change the condition to stop at a different value.</span></span>
+
+      <span data-ttu-id="b7e76-184">완료하면, 학습한 내용을 토대로 직접 코드를 작성해 보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-184">When you're done, let's move on to write some code yourself to use what you've learned.</span></span>
+
+      > [!NOTE]
+      > <span data-ttu-id="b7e76-185">이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-185">This online coding experience is in preview mode.</span></span> <span data-ttu-id="b7e76-186">문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.</span><span class="sxs-lookup"><span data-stu-id="b7e76-186">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+  - title: <span data-ttu-id="b7e76-187">분기 및 루프 결합</span><span class="sxs-lookup"><span data-stu-id="b7e76-187">Combining branches and loops</span></span>
+    durationInMinutes: 12
+    content: |
+      <span data-ttu-id="b7e76-188">이제 C# 언어로 된 `if` 문과 루프 구조를 확인했습니다. C# 코드를 작성하여 3으로 나눌 수 있는, 1에서 20까지의 모든 정수의 합계를 찾을 수 있는지 확인해 보세요.</span><span class="sxs-lookup"><span data-stu-id="b7e76-188">Now that you've seen the `if` statement and the looping constructs in the C# language, see if you can write C# code to find the sum of all integers 1 through 20 that are divisible by 3.</span></span>  <span data-ttu-id="b7e76-189">다음은 몇 가지 힌트입니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-189">Here are a few hints:</span></span>
+
+      - <span data-ttu-id="b7e76-190">`%` 연산자는 나누기 연산의 나머지를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-190">The `%` operator gives you the remainder of a division operation.</span></span>
+      - <span data-ttu-id="b7e76-191">`if` 문은 숫자가 합계의 일부여야 하는지 여부를 확인하는 조건을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-191">The `if` statement givesx you the condition to see if a number should be part of the sum.</span></span>
+      - <span data-ttu-id="b7e76-192">`for` 루프는 1에서 20까지의 모든 숫자에 대해 일련의 단계를 반복하는 데 도움이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-192">The `for` loop can help you repeat a series of steps for all the numbers 1 through 20.</span></span>
+
+      <span data-ttu-id="b7e76-193">직접 시도해 보세요.</span><span class="sxs-lookup"><span data-stu-id="b7e76-193">Try it yourself.</span></span> <span data-ttu-id="b7e76-194">그런 다음 어떻게 했는지 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="b7e76-194">Then check how you did.</span></span>
+
+      > [!NOTE]
+      > <span data-ttu-id="b7e76-195">이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-195">This online coding experience is in preview mode.</span></span> <span data-ttu-id="b7e76-196">문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.</span><span class="sxs-lookup"><span data-stu-id="b7e76-196">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+  - title: <span data-ttu-id="b7e76-197">과제 완료</span><span class="sxs-lookup"><span data-stu-id="b7e76-197">Complete challenge</span></span>
+    durationInMinutes: 1
+    content: |
+      <span data-ttu-id="b7e76-198">“분기 및 루프” 자습서를 완료했습니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-198">You've completed the "branches and loops" tutorial.</span></span> <span data-ttu-id="b7e76-199">다음 항목에서는 해당 개념에 대해 더 자세히 알아볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b7e76-199">You can learn more about these concepts in these topics:</span></span>
+
+      <span data-ttu-id="b7e76-200">[If 및 else 문](../language-reference/keywords/if-else.md) </span><span class="sxs-lookup"><span data-stu-id="b7e76-200">[If and else statement](../language-reference/keywords/if-else.md) </span></span>  
+      <span data-ttu-id="b7e76-201">[While 문](../language-reference/keywords/while.md) </span><span class="sxs-lookup"><span data-stu-id="b7e76-201">[While statement](../language-reference/keywords/while.md) </span></span>  
+      <span data-ttu-id="b7e76-202">[Do 문](../language-reference/keywords/do.md) </span><span class="sxs-lookup"><span data-stu-id="b7e76-202">[Do statement](../language-reference/keywords/do.md) </span></span>  
+      [<span data-ttu-id="b7e76-203">For 문</span><span class="sxs-lookup"><span data-stu-id="b7e76-203">For statement</span></span>](../language-reference/keywords/for.md)
