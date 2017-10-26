@@ -52,7 +52,7 @@ ms.lasthandoff: 09/25/2017
   
 -   [interface](../../../csharp/language-reference/keywords/interface.md)  
   
--   [truct](../../../csharp/language-reference/keywords/struct.md)  
+-   [struct](../../../csharp/language-reference/keywords/struct.md)  
   
 -   [enum](../../../csharp/language-reference/keywords/enum.md)  
   
