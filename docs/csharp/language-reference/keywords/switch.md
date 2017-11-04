@@ -1,47 +1,28 @@
 ---
 title: "switch 키워드(C# 참조)"
-ms.date: 2017-03-07
+ms.date: 03/07/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - switch_CSharpKeyword
 - switch
 - case
 - case_CSharpKeyword
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - switch statement [C#]
 - switch keyword [C#]
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 66528c9804b74b0bba088627b3116be804c65eb0
+ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
 ms.translationtype: HT
-ms.sourcegitcommit: 387c8c7e44ab818ca97e686330746f50df091bb9
-ms.openlocfilehash: 5c151e3bbd46212f1234d46ff05d389f2384ca0e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="switch-c-reference"></a>switch(C# 참조)
 `switch`는 *일치 식*을 사용한 패턴 일치를 기반으로 하여 후보 목록에서 실행할 *switch 섹션* 하나를 선택하는 선택 문입니다. 
@@ -155,7 +136,7 @@ switch (caseSwitch)
 
 - 정수 형식이 아니면 static [Object.Equals(expr, constant)](xref:System.Object.Equals(System.Object,System.Object)) 메서드 호출을 통해 식의 값이 결정됩니다.  
 
-다음 예제에서는 상수 패턴을 사용하여 특정 날짜가 주말인지, 작업 주의 첫째 날인지, 작업 주의 마지막 날인지 또는 작업 주의 중간인지를 확인합니다. 현재 날짜의 [DateTime.DayOfWeek](xref:System.DateTime.DayOfWeek) 속성을 @System.DayOfWeek 열거형의 멤버와 비교해서 평가합니다. 
+다음 예제에서는 상수 패턴을 사용하여 특정 날짜가 주말인지, 작업 주의 첫째 날인지, 작업 주의 마지막 날인지 또는 작업 주의 중간인지를 확인합니다. 현재 날짜의 <xref:System.DateTime.DayOfWeek?displayProperty=nameWithType> 속성을 <xref:System.DayOfWeek> 열거형의 멤버와 비교해서 평가합니다. 
 
 [!code-cs[switch#7](../../../../samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
 
@@ -209,7 +190,7 @@ C# 7부터 case 문이 상호 배타적일 필요가 없으므로 `when` 절을 
 `Shape` 개체가 `null`인지 여부를 테스트하는 예제의 `when` 절은 실행되지 않습니다. `null`인지 테스트하는 올바른 형식 패턴은 `case null:`입니다.
 
 ## <a name="c-language-specification"></a>C# 언어 사양  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+ [!INCLUDE[CSharplangspec](../../../../includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
 
@@ -221,4 +202,3 @@ C# 7부터 case 문이 상호 배타적일 필요가 없으므로 `when` 절을 
  
 
  
-
