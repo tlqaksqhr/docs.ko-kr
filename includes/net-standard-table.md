@@ -7,8 +7,8 @@
 | Xamarin.iOS                               | 10.0  | 10.0   | 10.0  | 10.0  | 10.0  | 10.0   | 10.0   | 10.14 |
 | Xamarin.Mac                               | 3.0   | 3.0    | 3.0   | 3.0   | 3.0   | 3.0    | 3.0    | 3.8   |
 | Xamarin.Android                           | 7.0   | 7.0    | 7.0   | 7.0   | 7.0   | 7.0    | 7.0    | 8.0   |
-| 범용 Windows 플랫폼                | 10.0  | 10.0   | 10.0  | 10.0  | 10.0  | vNext  | vNext  | vNext |
-| 창                                   | 8.0   | 8.0    | 8.1   |       |       |        |        |       |
+| 유니버설 Windows 플랫폼                | 10.0  | 10.0   | 10.0  | 10.0  | 10.0  | vNext  | vNext  | vNext |
+| Windows                                   | 8.0   | 8.0    | 8.1   |       |       |        |        |       |
 | Windows Phone                             | 8.1   | 8.1    | 8.1   |       |       |        |        |       |
 | Windows Phone Silverlight                 | 8.0   |        |       |       |       |        |        |       |
 
