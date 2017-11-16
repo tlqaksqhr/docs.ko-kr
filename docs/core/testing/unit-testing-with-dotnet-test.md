@@ -1,5 +1,5 @@
 ---
-title: "dotnet test 및 xUnit을 사용하여 .NET Core에서 C# 코드 유닛 테스트"
+title: "dotnet 테스트 및 xUnit을 사용하여 .NET Core에서 C# 단위 테스트"
 description: "dotnet test 및 xUnit을 사용하여 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 C# 및 .NET Core의 단위 테스트 개념을 알아봅니다."
 author: ardalis
 ms.author: wiwagn
@@ -13,7 +13,7 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 09/14/2017
 
 ---
-# <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>dotnet test 및 xUnit을 사용하여 .NET Core에서 C# 유닛 테스트
+# <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>dotnet 테스트 및 xUnit을 사용하여 .NET Core에서 C# 단위 테스트
 
 이 자습서에서는 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 단위 테스트 개념을 알아볼 수 있습니다. 미리 빌드된 솔루션을 사용하여 이 자습서를 진행하려는 경우 시작하기 전에 [샘플 코드를 보거나 다운로드](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-dotnet-test/). 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
 
