@@ -1,40 +1,42 @@
 ---
-title: "메서드 기반 쿼리 구문 예제: 요소 연산자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "메서드 기반 쿼리 구문 예제: ELEMENT 연산자"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 8438b995-bd07-4223-b22d-13adadef33fb
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 2ba75d8462e44c7432406139557ac90fa53369f1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 메서드 기반 쿼리 구문 예제: 요소 연산자
-이 항목의 예제에서는 <xref:System.Linq.Enumerable.First%2A> 메서드를 사용하여 메서드 기반 쿼리 구문으로 [AdventureWorks Sales 모델](http://msdn.microsoft.com/ko-kr/f16cd988-673f-4376-b034-129ca93c7832)을 쿼리하는 방법을 보여 줍니다.  이 예제에서 사용하는 AdventureWorks Sales 모델에서는 AdventureWorks 샘플 데이터베이스의 Contact, Address, Product, SalesOrderHeader 및 SalesOrderDetail 테이블을 사용합니다.  
+# <a name="method-based-query-syntax-examples-element-operators"></a><span data-ttu-id="78eef-102">메서드 기반 쿼리 구문 예제: ELEMENT 연산자</span><span class="sxs-lookup"><span data-stu-id="78eef-102">Method-Based Query Syntax Examples: Element Operators</span></span>
+<span data-ttu-id="78eef-103">이 항목의 예제에 사용 하는 방법을 보여 주기는 <xref:System.Linq.Enumerable.First%2A> 메서드 쿼리를는 [AdventureWorks Sales 모델](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832) 메서드 기반 쿼리 구문을 사용 하 여 합니다.</span><span class="sxs-lookup"><span data-stu-id="78eef-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.First%2A> method to query the [AdventureWorks Sales Model](http://msdn.microsoft.com/en-us/f16cd988-673f-4376-b034-129ca93c7832) using method-based query syntax.</span></span> <span data-ttu-id="78eef-104">이 예제에서 사용하는 AdventureWorks Sales 모델에서는 AdventureWorks 샘플 데이터베이스의 Contact, Address, Product, SalesOrderHeader 및 SalesOrderDetail 테이블을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="78eef-104">The AdventureWorks Sales Model used in these examples is built from the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
   
- 이 항목의 예제에서는 다음과 같은 `using`\/`Imports` 문을 사용합니다.  
+ <span data-ttu-id="78eef-105">이 항목의 예제에서는 다음 `using` / `Imports` 문:</span><span class="sxs-lookup"><span data-stu-id="78eef-105">The example in this topic uses the following `using`/`Imports` statements:</span></span>  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
   
-## First  
+## <a name="first"></a><span data-ttu-id="78eef-106">First</span><span class="sxs-lookup"><span data-stu-id="78eef-106">First</span></span>  
   
-### 예제  
- 다음 예제에서는 <xref:System.Linq.Enumerable.First%2A> 메서드를 사용하여 'caroline'으로 시작하는 첫 번째 전자 메일 주소를 가져옵니다.  
+### <a name="example"></a><span data-ttu-id="78eef-107">예제</span><span class="sxs-lookup"><span data-stu-id="78eef-107">Example</span></span>  
+ <span data-ttu-id="78eef-108">다음 예제에서는 <xref:System.Linq.Enumerable.First%2A> 메서드를 사용하여 'caroline'으로 시작하는 첫 번째 전자 메일 주소를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="78eef-108">The following example uses the <xref:System.Linq.Enumerable.First%2A> method to find the first e-mail address that starts with 'caroline'.</span></span>  
   
  [!code-csharp[DP L2E Examples#FirstCondition_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#firstcondition_mq)]
  [!code-vb[DP L2E Examples#FirstCondition_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#firstcondition_mq)]  
   
-## 참고 항목  
- [LINQ to Entities의 쿼리](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a><span data-ttu-id="78eef-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="78eef-109">See Also</span></span>  
+ [<span data-ttu-id="78eef-110">LINQ to Entities에서 쿼리</span><span class="sxs-lookup"><span data-stu-id="78eef-110">Queries in LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

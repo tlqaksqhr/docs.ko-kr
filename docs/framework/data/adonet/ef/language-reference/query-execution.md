@@ -1,104 +1,106 @@
 ---
-title: "쿼리 실행 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "쿼리 실행"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: c0e6cf23-63ac-47dd-bfe9-d5bdca826fac
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: c29b590e1e8e046ad9d052dff561661a87932e00
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 쿼리 실행
-LINQ 쿼리가 사용자에 의해 작성되고 나면 명령 트리로 변환됩니다.  명령 트리란 Entity Framework에 호환되는 쿼리 표현입니다.  변환된 명령 트리는 데이터 소스에 대해 실행됩니다.  쿼리 실행 시 모든 쿼리 식, 다시 말해서 쿼리의 모든 구성 요소가 계산되며 여기에는 결과 구체화에서 사용되는 식도 포함됩니다.  
+# <a name="query-execution"></a><span data-ttu-id="26018-102">쿼리 실행</span><span class="sxs-lookup"><span data-stu-id="26018-102">Query Execution</span></span>
+<span data-ttu-id="26018-103">LINQ 쿼리가 사용자에 의해 작성되고 나면 명령 트리로 변환됩니다.</span><span class="sxs-lookup"><span data-stu-id="26018-103">After a LINQ query is created by a user, it is converted to a command tree.</span></span> <span data-ttu-id="26018-104">명령 트리란 Entity Framework에 호환되는 쿼리 표현입니다.</span><span class="sxs-lookup"><span data-stu-id="26018-104">A command tree is a representation of a query that is compatible with the Entity Framework.</span></span> <span data-ttu-id="26018-105">변환된 명령 트리는 데이터 소스에 대해 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="26018-105">The command tree is then executed against the data source.</span></span> <span data-ttu-id="26018-106">쿼리 실행 시 모든 쿼리 식, 다시 말해서 쿼리의 모든 구성 요소가 계산되며 여기에는 결과 구체화에서 사용되는 식도 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="26018-106">At query execution time, all query expressions (that is, all components of the query) are evaluated, including those expressions that are used in result materialization.</span></span>  
   
- 쿼리 식이 실행되는 시점은 다양할 수 있습니다.  LINQ 쿼리는 쿼리 변수가 만들어질 때 실행되는 것이 아니라 쿼리 변수가 반복될 때마다 실행됩니다.  이를 *지연된 실행*이라고 합니다.  쿼리를 즉시 실행할 수도 있습니다. 이 방법은 쿼리 결과를 캐시하는 데 유용합니다.  쿼리 즉시 실행에 대해서는 이 항목 뒷부분에서 설명합니다.  
+ <span data-ttu-id="26018-107">쿼리 식이 실행되는 시점은 다양할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="26018-107">At what point query expressions are executed can vary.</span></span> <span data-ttu-id="26018-108">LINQ 쿼리는 쿼리 변수가 만들어질 때 실행되는 것이 아니라 쿼리 변수가 반복될 때마다 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="26018-108">LINQ queries are always executed when the query variable is iterated over, not when the query variable is created.</span></span> <span data-ttu-id="26018-109">이 라고 *지연 된 실행*합니다.</span><span class="sxs-lookup"><span data-stu-id="26018-109">This is called *deferred execution*.</span></span> <span data-ttu-id="26018-110">쿼리를 즉시 실행할 수도 있습니다. 이 방법은 쿼리 결과를 캐시하는 데 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="26018-110">You can also force a query to execute immediately, which is useful for caching query results.</span></span> <span data-ttu-id="26018-111">쿼리 즉시 실행에 대해서는 이 항목 뒷부분에서 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="26018-111">This is described later in this topic.</span></span>  
   
- LINQ to Entities 쿼리를 실행하면 쿼리의 일부 식은 서버에서 실행되고 일부 식은 클라이언트에서 로컬로 실행될 수 있습니다.  식에 대한 클라이언트 쪽 계산은 쿼리가 서버에서 실행되기 전에 수행됩니다.  식이 클라이언트에서 계산되면 계산 결과로 쿼리의 식이 대체된 다음 서버에서 쿼리가 실행됩니다.  쿼리가 데이터 소스에서 실행되므로 데이터 소스 구성이 클라이언트에 지정된 동작을 재정의합니다.  예를 들어, null 값 처리 및 숫자의 전체 자릿수는 서버 설정에 따라 달라집니다.  서버에서 쿼리를 실행하는 중에 throw되는 모든 예외는 클라이언트에 직접 전달됩니다.  
+ <span data-ttu-id="26018-112">LINQ to Entities 쿼리를 실행하면 쿼리의 일부 식은 서버에서 실행되고 일부 식은 클라이언트에서 로컬로 실행될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="26018-112">When a LINQ to Entities query is executed, some expressions in the query might be executed on the server and some parts might be executed locally on the client.</span></span> <span data-ttu-id="26018-113">식에 대한 클라이언트 쪽 계산은 쿼리가 서버에서 실행되기 전에 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="26018-113">Client-side evaluation of an expression takes place before the query is executed on the server.</span></span> <span data-ttu-id="26018-114">식이 클라이언트에서 계산되면 계산 결과로 쿼리의 식이 대체된 다음 서버에서 쿼리가 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="26018-114">If an expression is evaluated on the client, the result of that evaluation is substituted for the expression in the query, and the query is then executed on the server.</span></span> <span data-ttu-id="26018-115">쿼리가 데이터 소스에서 실행되므로 데이터 소스 구성이 클라이언트에 지정된 동작을 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="26018-115">Because queries are executed on the data source, the data source configuration overrides the behavior specified in the client.</span></span> <span data-ttu-id="26018-116">예를 들어, null 값 처리 및 숫자의 전체 자릿수는 서버 설정에 따라 달라집니다.</span><span class="sxs-lookup"><span data-stu-id="26018-116">For example, null value handling and numerical precision depend on the server settings.</span></span> <span data-ttu-id="26018-117">서버에서 쿼리를 실행하는 중에 throw되는 모든 예외는 클라이언트에 직접 전달됩니다.</span><span class="sxs-lookup"><span data-stu-id="26018-117">Any exceptions thrown during query execution on the server are passed directly up to the client.</span></span>  
   
-## 지연된 쿼리 실행  
- 값 시퀀스를 반환하는 쿼리의 경우 쿼리 변수 자체에는 쿼리 결과가 저장되지 않고 쿼리 명령만 저장됩니다.  쿼리 실행은 `foreach` 또는 `For Each` 루프에서 쿼리 변수가 반복될 때까지 지연됩니다.  쿼리가 구성된 다음 쿼리가 실행되므로 *지연된 실행*이라고 합니다.  즉, 원하는 때에 언제라도 쿼리를 실행할 수 있습니다.  예를 들어, 이 기능은 다른 응용 프로그램에서 업데이트되는 데이터베이스가 있을 때 유용합니다.  사용자의 응용 프로그램에서 최신 정보를 검색하는 쿼리를 만든 다음 쿼리를 반복적으로 실행하여 업데이트된 정보를 항상 반환할 수 있습니다.  
+## <a name="deferred-query-execution"></a><span data-ttu-id="26018-118">지연된 쿼리 실행</span><span class="sxs-lookup"><span data-stu-id="26018-118">Deferred query execution</span></span>  
+ <span data-ttu-id="26018-119">값 시퀀스를 반환하는 쿼리의 경우 쿼리 변수 자체에는 쿼리 결과가 저장되지 않고 쿼리 명령만 저장됩니다.</span><span class="sxs-lookup"><span data-stu-id="26018-119">In a query that returns a sequence of values, the query variable itself never holds the query results and only stores the query commands.</span></span> <span data-ttu-id="26018-120">쿼리 실행은 `foreach` 또는 `For Each` 루프에서 쿼리 변수가 반복될 때까지 지연됩니다.</span><span class="sxs-lookup"><span data-stu-id="26018-120">Execution of the query is deferred until the query variable is iterated over in a `foreach` or `For Each` loop.</span></span> <span data-ttu-id="26018-121">로 알려져 *지연 된 실행*; 즉, 쿼리가 실행 된 쿼리가 구성 된 후 일정 시간입니다.</span><span class="sxs-lookup"><span data-stu-id="26018-121">This is known as *deferred execution*; that is, query execution occurs some time after the query is constructed.</span></span> <span data-ttu-id="26018-122">즉, 원하는 때에 언제라도 쿼리를 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="26018-122">This means that you can execute a query as frequently as you want to.</span></span> <span data-ttu-id="26018-123">예를 들어, 이 기능은 다른 응용 프로그램에서 업데이트되는 데이터베이스가 있을 때 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="26018-123">This is useful when, for example, you have a database that is being updated by other applications.</span></span> <span data-ttu-id="26018-124">사용자의 응용 프로그램에서 최신 정보를 검색하는 쿼리를 만든 다음 쿼리를 반복적으로 실행하여 업데이트된 정보를 항상 반환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="26018-124">In your application, you can create a query to retrieve the latest information and repeatedly execute the query, returning the updated information every time.</span></span>  
   
- 지연된 실행은 여러 쿼리를 결합하거나 하나의 쿼리를 확장 가능하게 합니다.  확장된 쿼리는 새 작업을 포함할 수 있도록 수정되며, 실행 결과에 변경 사항이 반영됩니다.  다음 예제의 첫 번째 쿼리에서는 모든 제품을 반환합니다.  두 번째 쿼리에서는 `Where`를 사용하여 첫 번째 쿼리를 확장하고 크기가 "L"인 모든 제품을 반환합니다.  
+ <span data-ttu-id="26018-125">지연된 실행은 여러 쿼리를 결합하거나 하나의 쿼리를 확장 가능하게 합니다.</span><span class="sxs-lookup"><span data-stu-id="26018-125">Deferred execution enables multiple queries to be combined or a query to be extended.</span></span> <span data-ttu-id="26018-126">확장된 쿼리는 새 작업을 포함할 수 있도록 수정되며, 실행 결과에 변경 사항이 반영됩니다.</span><span class="sxs-lookup"><span data-stu-id="26018-126">When a query is extended, it is modified to include the new operations, and the eventual execution will reflect the changes.</span></span> <span data-ttu-id="26018-127">다음 예제의 첫 번째 쿼리에서는 모든 제품을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="26018-127">In the following example, the first query returns all the products.</span></span> <span data-ttu-id="26018-128">두 번째 쿼리에서는 `Where`를 사용하여 첫 번째 쿼리를 확장하고 크기가 "L"인 모든 제품을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="26018-128">The second query extends the first by using `Where` to return all the products of size "L":</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#Composing1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#composing1)]
  [!code-vb[DP L2E Conceptual Examples#Composing1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#composing1)]  
   
- 쿼리를 실행한 이후의 모든 쿼리에서는 메모리 내 LINQ 연산자를 사용합니다.  `foreach` 또는 `For Each` 문을 사용하거나 LINQ 변환 연산자를 호출하는 방법으로 쿼리 변수를 반복하면 즉시 실행됩니다.  이러한 변환 연산자에는 <xref:System.Linq.Enumerable.ToList%2A>, <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToLookup%2A> 및 <xref:System.Linq.Enumerable.ToDictionary%2A>가 있습니다.  
+ <span data-ttu-id="26018-129">쿼리를 실행한 이후의 모든 쿼리에서는 메모리 내 LINQ 연산자를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="26018-129">After a query has been executed all successive queries will use the in-memory LINQ operators.</span></span> <span data-ttu-id="26018-130">`foreach` 또는 `For Each` 문을 사용하거나 LINQ 변환 연산자를 호출하는 방법으로 쿼리 변수를 반복하면 즉시 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="26018-130">Iterating over the query variable by using a `foreach` or `For Each` statement or by calling one of the LINQ conversion operators will cause immediate execution.</span></span> <span data-ttu-id="26018-131">이러한 변환 연산자에는 <xref:System.Linq.Enumerable.ToList%2A>, <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToLookup%2A> 및 <xref:System.Linq.Enumerable.ToDictionary%2A>가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="26018-131">These conversion operators include the following: <xref:System.Linq.Enumerable.ToList%2A>, <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToLookup%2A>, and <xref:System.Linq.Enumerable.ToDictionary%2A>.</span></span>  
   
-## 즉시 쿼리 실행  
- 값 시퀀스를 반환하는 쿼리의 지연된 실행과는 달리, singleton 값을 반환하는 쿼리는 즉시 실행됩니다.  singleton 쿼리의 예로는 <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.First%2A> 및 <xref:System.Linq.Enumerable.Max%2A>가 있습니다.  singleton 결과를 계산하려면 쿼리에서 시퀀스를 생성해야 하므로 이러한 쿼리는 즉시 실행됩니다.  즉시 실행을 강제할 수도 있습니다.  이 기능은 쿼리 결과를 캐시하려는 경우에 유용합니다.  singleton 값을 생성하지 않는 쿼리를 즉시 실행하려면 쿼리나 쿼리 변수에 대해 <xref:System.Linq.Enumerable.ToList%2A> 메서드, <xref:System.Linq.Enumerable.ToDictionary%2A> 메서드 또는 <xref:System.Linq.Enumerable.ToArray%2A> 메서드를 호출하면 됩니다.  다음 예제에서는 <xref:System.Linq.Enumerable.ToArray%2A> 메서드로 시퀀스를 즉시 계산하여 배열에 넣습니다.  
+## <a name="immediate-query-execution"></a><span data-ttu-id="26018-132">즉시 쿼리 실행</span><span class="sxs-lookup"><span data-stu-id="26018-132">Immediate Query Execution</span></span>  
+ <span data-ttu-id="26018-133">값 시퀀스를 반환하는 쿼리의 지연된 실행과는 달리, singleton 값을 반환하는 쿼리는 즉시 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="26018-133">In contrast to the deferred execution of queries that produce a sequence of values, queries that return a singleton value are executed immediately.</span></span> <span data-ttu-id="26018-134">singleton 쿼리의 예로는 <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.First%2A> 및 <xref:System.Linq.Enumerable.Max%2A>가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="26018-134">Some examples of singleton queries are <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.First%2A>, and <xref:System.Linq.Enumerable.Max%2A>.</span></span> <span data-ttu-id="26018-135">singleton 결과를 계산하려면 쿼리에서 시퀀스를 생성해야 하므로 이러한 쿼리는 즉시 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="26018-135">These execute immediately because the query must produce a sequence to calculate the singleton result.</span></span> <span data-ttu-id="26018-136">즉시 실행을 강제할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="26018-136">You can also force immediate execution.</span></span> <span data-ttu-id="26018-137">이 기능은 쿼리 결과를 캐시하려는 경우에 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="26018-137">This is useful when you want to cache the results of a query.</span></span> <span data-ttu-id="26018-138">singleton 값을 생성하지 않는 쿼리를 즉시 실행하려면 쿼리나 쿼리 변수에 대해 <xref:System.Linq.Enumerable.ToList%2A> 메서드, <xref:System.Linq.Enumerable.ToDictionary%2A> 메서드 또는 <xref:System.Linq.Enumerable.ToArray%2A> 메서드를 호출하면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="26018-138">To force immediate execution of a query that does not produce a singleton value, you can call the <xref:System.Linq.Enumerable.ToList%2A> method, the <xref:System.Linq.Enumerable.ToDictionary%2A> method, or the <xref:System.Linq.Enumerable.ToArray%2A> method on a query or query variable.</span></span> <span data-ttu-id="26018-139">다음 예제에서는 <xref:System.Linq.Enumerable.ToArray%2A> 메서드로 시퀀스를 즉시 계산하여 배열에 넣습니다.</span><span class="sxs-lookup"><span data-stu-id="26018-139">The following example uses the <xref:System.Linq.Enumerable.ToArray%2A> method to immediately evaluate a sequence into an array.</span></span>  
   
  [!code-csharp[DP L2E Examples#ToArray](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#toarray)]
  [!code-vb[DP L2E Examples#ToArray](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#toarray)]  
   
- 쿼리 식 바로 다음에 `foreach` 또는 `For Each` 루프를 배치하는 방법으로 강제 실행할 수도 있습니다. 하지만 <xref:System.Linq.Enumerable.ToList%2A> 또는 <xref:System.Linq.Enumerable.ToArray%2A>를 호출하면 모든 데이터를 단일 컬렉션 개체에 캐시하게 됩니다.  
+ <span data-ttu-id="26018-140">쿼리 식 바로 다음에 `foreach` 또는 `For Each` 루프를 배치하는 방법으로 강제 실행할 수도 있습니다. 하지만 <xref:System.Linq.Enumerable.ToList%2A> 또는 <xref:System.Linq.Enumerable.ToArray%2A>를 호출하면 모든 데이터를 단일 컬렉션 개체에 캐시하게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="26018-140">You could also force execution by putting the `foreach` or `For Each` loop immediately after the query expression, but by calling <xref:System.Linq.Enumerable.ToList%2A> or <xref:System.Linq.Enumerable.ToArray%2A> you cache all the data in a single collection object.</span></span>  
   
-## 저장소 실행  
- 일반적으로 LINQ to Entities의 식은 서버에서 계산되며, 식의 동작은 CLR\(공용 언어 런타임\) 의미 체계가 아니라 데이터 소소의 의미 체계를 따릅니다.  하지만 식을 클라이언트에서 실행하는 경우 등에서는 예외가 있습니다.  이런 경우 서버와 클라이언트의 시간대가 다르면 예기치 않은 결과가 나올 수 있습니다.  
+## <a name="store-execution"></a><span data-ttu-id="26018-141">저장소 실행</span><span class="sxs-lookup"><span data-stu-id="26018-141">Store Execution</span></span>  
+ <span data-ttu-id="26018-142">일반적으로 LINQ to Entities의 식은 서버에서 계산되며, 식의 동작은 CLR(공용 언어 런타임) 의미 체계가 아니라 데이터 소소의 의미 체계를 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="26018-142">In general, expressions in LINQ to Entities are evaluated on the server, and the behavior of the expression should not be expected to follow common language runtime (CLR) semantics, but those of the data source.</span></span> <span data-ttu-id="26018-143">하지만 식을 클라이언트에서 실행하는 경우 등에서는 예외가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="26018-143">There are exceptions to this, however, such as when the expression is executed on the client.</span></span> <span data-ttu-id="26018-144">이런 경우 서버와 클라이언트의 시간대가 다르면 예기치 않은 결과가 나올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="26018-144">This could cause unexpected results, for example when the server and client are in different time zones.</span></span>  
   
- 쿼리의 일부 식은 클라이언트에서 실행될 수 있습니다.  일반적으로 쿼리 실행은 대부분 서버에서 발생합니다.  데이터 소스에 매핑된 쿼리 요소에 대해 실행되는 메서드와 별도로 로컬에서 실행 가능한 쿼리 식이 종종 있습니다.  쿼리 식을 로컬에서 실행하면 쿼리 실행 또는 결과 생성에 사용할 수 있는 값이 반환됩니다.  
+ <span data-ttu-id="26018-145">쿼리의 일부 식은 클라이언트에서 실행될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="26018-145">Some expressions in the query might be executed on the client.</span></span> <span data-ttu-id="26018-146">일반적으로 쿼리 실행은 대부분 서버에서 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="26018-146">In general, most query execution is expected to occur on the server.</span></span> <span data-ttu-id="26018-147">데이터 소스에 매핑된 쿼리 요소에 대해 실행되는 메서드와 별도로 로컬에서 실행 가능한 쿼리 식이 종종 있습니다.</span><span class="sxs-lookup"><span data-stu-id="26018-147">Aside from methods executed against query elements mapped to the data source, there are often expressions in the query that can be executed locally.</span></span> <span data-ttu-id="26018-148">쿼리 식을 로컬에서 실행하면 쿼리 실행 또는 결과 생성에 사용할 수 있는 값이 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="26018-148">Local execution of a query expression yields a value that can be used in the query execution or result construction.</span></span>  
   
- 클로저의 값, 하위 식, 하위 쿼리 바인딩 및 개체를 쿼리 결과로 구체화하는 작업 등 특정 작업은 항상 클라이언트에서 실행됩니다.  이렇게 하면 실행 과정에서 매개 변수 값과 같은 요소가 업데이트될 수 없습니다.  익명 형식이 인라인으로 데이터 소스에 생성될 수 있지만 그럴 것이라고 가정하지 않는 것이 좋습니다.  데이터 소스에서 인라인 그룹화를 생성할 수도 있지만 모든 인스턴스에서 그럴 것이라고 가정하면 안 됩니다.  일반적으로 서버에서 생성되는 항목에 대해 어떤 가정도 하지 않는 것이 좋습니다.  
+ <span data-ttu-id="26018-149">클로저의 값, 하위 식, 하위 쿼리 바인딩 및 개체를 쿼리 결과로 구체화하는 작업 등 특정 작업은 항상 클라이언트에서 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="26018-149">Certain operations are always executed on the client, such as binding of values, sub expressions, sub queries from closures, and materialization of objects into query results.</span></span> <span data-ttu-id="26018-150">이렇게 하면 실행 과정에서 매개 변수 값과 같은 요소가 업데이트될 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="26018-150">The net effect of this is that these elements (for example, parameter values) cannot be updated during the execution.</span></span> <span data-ttu-id="26018-151">익명 형식이 인라인으로 데이터 소스에 생성될 수 있지만 그럴 것이라고 가정하지 않는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="26018-151">Anonymous types can be constructed inline on the data source, but should not be assumed to do so.</span></span> <span data-ttu-id="26018-152">데이터 소스에서 인라인 그룹화를 생성할 수도 있지만 모든 인스턴스에서 그럴 것이라고 가정하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="26018-152">Inline groupings can be constructed in the data source, as well, but this should not be assumed in every instance.</span></span> <span data-ttu-id="26018-153">일반적으로 서버에서 생성되는 항목에 대해 어떤 가정도 하지 않는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="26018-153">In general, it is best not to make any assumptions about what is constructed on the server.</span></span>  
   
- 이 단원에서는 코드가 클라이언트에서 로컬로 실행되는 시나리오에 대해 설명합니다.  로컬에서 실행되는 식의 형식에 대한 자세한 내용은 [LINQ to Entities 쿼리의 식](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)을 참조하세요.  
+ <span data-ttu-id="26018-154">이 단원에서는 코드가 클라이언트에서 로컬로 실행되는 시나리오에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="26018-154">This section describes the scenarios in which code is executed locally on the client.</span></span> <span data-ttu-id="26018-155">유형의 식 로컬로 실행에 대 한 자세한 내용은 참조 하십시오. [LINQ to Entities 쿼리 식](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="26018-155">For more information about which types of expressions are executed locally, see [Expressions in LINQ to Entities Queries](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md).</span></span>  
   
-### 리터럴 및 매개 변수  
- 다음 예제의 `orderID` 변수와 같은 지역 변수는 클라이언트에서 계산됩니다.  
+### <a name="literals-and-parameters"></a><span data-ttu-id="26018-156">리터럴 및 매개 변수</span><span class="sxs-lookup"><span data-stu-id="26018-156">Literals and Parameters</span></span>  
+ <span data-ttu-id="26018-157">다음 예제의 `orderID` 변수와 같은 지역 변수는 클라이언트에서 계산됩니다.</span><span class="sxs-lookup"><span data-stu-id="26018-157">Local variables, such as the `orderID` variable in the following example, are evaluated on the client.</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#LiteralParameter1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#literalparameter1)]
  [!code-vb[DP L2E Conceptual Examples#LiteralParameter1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#literalparameter1)]  
   
- 메서드 매개 변수 또한 클라이언트에서 계산됩니다.  다음에서 `MethodParameterExample` 메서드에 전달된 `orderID` 매개 변수를 예제로 들 수 있습니다.  
+ <span data-ttu-id="26018-158">메서드 매개 변수 또한 클라이언트에서 계산됩니다.</span><span class="sxs-lookup"><span data-stu-id="26018-158">Method parameters are also evaluated on the client.</span></span> <span data-ttu-id="26018-159">다음에서 `orderID` 메서드에 전달된 `MethodParameterExample` 매개 변수를 예제로 들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="26018-159">The `orderID` parameter passed into the `MethodParameterExample` method, below, is an example.</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#MethodParameterExample](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#methodparameterexample)]
  [!code-vb[DP L2E Conceptual Examples#MethodParameterExample](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#methodparameterexample)]  
   
-### 클라이언트에서 리터럴 캐스팅  
- `null`에서 CLR 형식으로의 캐스팅이 클라이언트에서 실행됩니다.  
+### <a name="casting-literals-on-the-client"></a><span data-ttu-id="26018-160">클라이언트에서 리터럴 캐스팅</span><span class="sxs-lookup"><span data-stu-id="26018-160">Casting Literals on the Client</span></span>  
+ <span data-ttu-id="26018-161">`null`에서 CLR 형식으로의 캐스팅이 클라이언트에서 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="26018-161">Casting from `null` to a CLR type is executed on the client:</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#NullCastToString](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#nullcasttostring)]
  [!code-vb[DP L2E Conceptual Examples#NullCastToString](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#nullcasttostring)]  
   
- 특정 형식\(예: null을 허용하는 <xref:System.Decimal>\)으로의 캐스팅이 클라이언트에서 실행됩니다.  
+ <span data-ttu-id="26018-162">특정 형식(예: null을 허용하는 <xref:System.Decimal>)으로의 캐스팅이 클라이언트에서 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="26018-162">Casting to a type, such as a nullable <xref:System.Decimal>, is executed on the client:</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#CastToNullable](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#casttonullable)]
  [!code-vb[DP L2E Conceptual Examples#CastToNullable](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#casttonullable)]  
   
-### 리터럴의 생성자  
- 개념적 모델 형식으로 매핑 가능한 새로운 CLR 형식이 클라이언트에서 실행됩니다.  
+### <a name="constructors-for-literals"></a><span data-ttu-id="26018-163">리터럴의 생성자</span><span class="sxs-lookup"><span data-stu-id="26018-163">Constructors for Literals</span></span>  
+ <span data-ttu-id="26018-164">개념적 모델 형식으로 매핑 가능한 새로운 CLR 형식이 클라이언트에서 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="26018-164">New CLR types that can be mapped to conceptual model types are executed on the client:</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#ConstructorForLiteral](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#constructorforliteral)]
  [!code-vb[DP L2E Conceptual Examples#ConstructorForLiteral](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#constructorforliteral)]  
   
- 새 배열 또한 클라이언트에서 실행됩니다.  
+ <span data-ttu-id="26018-165">새 배열 또한 클라이언트에서 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="26018-165">New arrays are also executed on the client.</span></span>  
   
-## 저장소 예외  
- 쿼리 실행 과정에서 발생하는 저장소 오류는 클라이언트에 전달되며 매핑이나 처리가 이루어지지 않습니다.  
+## <a name="store-exceptions"></a><span data-ttu-id="26018-166">저장소 예외</span><span class="sxs-lookup"><span data-stu-id="26018-166">Store Exceptions</span></span>  
+ <span data-ttu-id="26018-167">쿼리 실행 과정에서 발생하는 저장소 오류는 클라이언트에 전달되며 매핑이나 처리가 이루어지지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="26018-167">Any store errors that are encountered during query execution are passed up to the client, and are not mapped or handled.</span></span>  
   
-## 저장소 구성  
- 쿼리가 저장소에 대해 실행되면 저장소 구성이 모든 클라이언트 동작을 재정의하며 모든 연산과 식에 대해 저장소 의미 체계가 표현됩니다.  이로 인해 null 비교, GUID 정렬, 명확하지 않은 데이터 형식\(예: 부동 소수점 형식 또는 <xref:System.DateTime>\) 연산의 정밀도와 정확도, 문자열 작업 등의 영역에서 CLR 실행과 저장소 실행의 동작이 서로 다를 수 있습니다.  쿼리 결과를 검토할 때는 이 점을 염두에 두어야 합니다.  
+## <a name="store-configuration"></a><span data-ttu-id="26018-168">저장소 구성</span><span class="sxs-lookup"><span data-stu-id="26018-168">Store Configuration</span></span>  
+ <span data-ttu-id="26018-169">쿼리가 저장소에 대해 실행되면 저장소 구성이 모든 클라이언트 동작을 재정의하며 모든 연산과 식에 대해 저장소 의미 체계가 표현됩니다.</span><span class="sxs-lookup"><span data-stu-id="26018-169">When the query executes on the store, the store configuration overrides all client behaviors, and store semantics are expressed for all operations and expressions.</span></span> <span data-ttu-id="26018-170">이로 인해 null 비교, GUID 정렬, 명확하지 않은 데이터 형식(예: 부동 소수점 형식 또는 <xref:System.DateTime>) 연산의 정밀도와 정확도, 문자열 작업 등의 영역에서 CLR 실행과 저장소 실행의 동작이 서로 다를 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="26018-170">This can result in a difference in behavior between CLR and store execution in areas such as null comparisons, GUID ordering, precision and accuracy of operations involving non-precise data types (such as floating point types or <xref:System.DateTime>), and string operations.</span></span> <span data-ttu-id="26018-171">쿼리 결과를 검토할 때는 이 점을 염두에 두어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="26018-171">It is important to keep this in mind when examining query results.</span></span>  
   
- 예를 들어 다음은 CLR과 SQL Server 사이의 몇 가지 동작 차이점입니다.  
+ <span data-ttu-id="26018-172">예를 들어 다음은 CLR과 SQL Server 사이의 몇 가지 동작 차이점입니다.</span><span class="sxs-lookup"><span data-stu-id="26018-172">For example, the following are some differences in behavior between the CLR and SQL Server:</span></span>  
   
--   SQL Server의 GUID 정렬은 CLR에서와 다릅니다.  
+-   <span data-ttu-id="26018-173">SQL Server의 GUID 정렬은 CLR에서와 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="26018-173">SQL Server orders GUIDs differently than the CLR.</span></span>  
   
--   SQL Server에서 Decimal 형식을 처리할 때 결과 전체 자릿수도 다를 수 있습니다.  이것은 SQL Server Decimal 형식의 고정 전체 자릿수 요구 사항 때문입니다.  예를 들어, <xref:System.Decimal> 값 0.0, 0.0, 1.0의 평균은 클라이언트 메모리에서 0.3333333333333333333333333333이지만 저장소에서는 SQL Server의 Decimal 형식에 대한 기본 전체 자릿수에 따라 0.333333입니다.  
+-   <span data-ttu-id="26018-174">SQL Server에서 Decimal 형식을 처리할 때 결과 전체 자릿수도 다를 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="26018-174">There can also be differences in result precision when dealing with the Decimal type on SQL Server.</span></span> <span data-ttu-id="26018-175">이것은 SQL Server Decimal 형식의 고정 전체 자릿수 요구 사항 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="26018-175">This is due to the fixed precision requirements of the SQL Server decimal type.</span></span> <span data-ttu-id="26018-176">예를 들어, <xref:System.Decimal> 값 0.0, 0.0, 1.0의 평균은 클라이언트 메모리에서 0.3333333333333333333333333333이지만 저장소에서는 SQL Server의 Decimal 형식에 대한 기본 전체 자릿수에 따라 0.333333입니다.</span><span class="sxs-lookup"><span data-stu-id="26018-176">For example, the average of <xref:System.Decimal> values 0.0, 0.0, and 1.0 is 0.3333333333333333333333333333 in memory on the client, but 0.333333 in the store (based on the default precision for SQL Server’s decimal type).</span></span>  
   
--   일부 문자열 비교 연산도 SQL Server와 CLR에서 다르게 처리됩니다.  문자열 비교 동작은 서버의 정렬 설정에 따라 달라집니다.  
+-   <span data-ttu-id="26018-177">일부 문자열 비교 연산도 SQL Server와 CLR에서 다르게 처리됩니다.</span><span class="sxs-lookup"><span data-stu-id="26018-177">Some string comparison operations are also handled differently in SQL Server than in the CLR.</span></span> <span data-ttu-id="26018-178">문자열 비교 동작은 서버의 정렬 설정에 따라 달라집니다.</span><span class="sxs-lookup"><span data-stu-id="26018-178">String comparison behavior depends on the collation settings on the server.</span></span>  
   
--   LINQ to Entities 쿼리에 포함된 함수 또는 메서드 호출은 Entity Framework의 정식 함수에 매핑된 후 Transact\-SQL로 변환되어 SQL Server 데이터베이스에서 실행됩니다.  이런 매핑된 함수의 동작이 기본 클래스 라이브러리에 구현된 것과 다른 경우가 있습니다.  예를 들어, 빈 문자열을 매개 변수로 하여 <xref:System.String.Contains%2A>, <xref:System.String.StartsWith%2A> 및 <xref:System.String.EndsWith%2A> 메서드를 호출하면 CLR에서 실행했을 때는 `true`가, SQL Server에서 실행했을 때는 `false`가 반환됩니다.  <xref:System.String.EndsWith%2A> 메서드 역시 다른 결과를 반환할 수 있으며, 이는 SQL Server에서는 후행 공백만 다르면 두 문자열을 동일한 것으로 간주하는 데 비하여 CLR에서는 동일하지 않은 것으로 간주하기 때문입니다.  다음 예제에서 이를 확인할 수 있습니다.  
+-   <span data-ttu-id="26018-179">LINQ to Entities 쿼리에 포함된 함수 또는 메서드 호출은 Entity Framework의 정식 함수에 매핑된 후 Transact-SQL로 변환되어 SQL Server 데이터베이스에서 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="26018-179">Function or method calls, when included in a LINQ to Entities query, are mapped to canonical functions in the Entity Framework, which are then translated to Transact-SQL and executed on the SQL Server database.</span></span> <span data-ttu-id="26018-180">이런 매핑된 함수의 동작이 기본 클래스 라이브러리에 구현된 것과 다른 경우가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="26018-180">There are cases when the behavior these mapped functions exhibit might differ from the implementation in the base class libraries.</span></span> <span data-ttu-id="26018-181">예를 들어, 빈 문자열을 매개 변수로 하여 <xref:System.String.Contains%2A>, <xref:System.String.StartsWith%2A> 및 <xref:System.String.EndsWith%2A> 메서드를 호출하면 CLR에서 실행했을 때는 `true`가, SQL Server에서 실행했을 때는 `false`가 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="26018-181">For example, calling the <xref:System.String.Contains%2A>, <xref:System.String.StartsWith%2A>, and <xref:System.String.EndsWith%2A> methods with an empty string as a parameter will return `true` when executed in the CLR, but will return `false` when executed in SQL Server.</span></span> <span data-ttu-id="26018-182"><xref:System.String.EndsWith%2A> 메서드 역시 다른 결과를 반환할 수 있으며, 이는 SQL Server에서는 후행 공백만 다르면 두 문자열을 동일한 것으로 간주하는 데 비하여 CLR에서는 동일하지 않은 것으로 간주하기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="26018-182">The <xref:System.String.EndsWith%2A> method can also return different results because SQL Server considers two strings to be equal if they only differ in trailing white space, whereas the CLR considers them to be not equal.</span></span> <span data-ttu-id="26018-183">다음 예제에서 이를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="26018-183">This is illustrated by the following example:</span></span>  
   
  [!code-csharp[DP L2E Conceptual Examples#CanonicalFuncVsCLRBaseType](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#canonicalfuncvsclrbasetype)]
  [!code-vb[DP L2E Conceptual Examples#CanonicalFuncVsCLRBaseType](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#canonicalfuncvsclrbasetype)]

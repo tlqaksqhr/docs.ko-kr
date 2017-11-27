@@ -1,63 +1,66 @@
 ---
-title: "메시지 보안의 동작 추적 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "메시지 보안의 동작 추적"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 68862534-3b2e-4270-b097-8121b12a2c97
-caps.latest.revision: 7
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 60156e284c55d765de417fe891185d1aba720816
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 메시지 보안의 동작 추적
-이 항목에서는 보안 처리에 대한 동작 추적에 대해 설명합니다. 동작 추적은 다음과 같은 세 가지 단계로 발생합니다.  
+# <a name="activity-tracing-in-message-security"></a><span data-ttu-id="672f1-102">메시지 보안의 동작 추적</span><span class="sxs-lookup"><span data-stu-id="672f1-102">Activity Tracing in Message Security</span></span>
+<span data-ttu-id="672f1-103">이 항목에서는 보안 처리에 대한 동작 추적에 대해 설명합니다. 동작 추적은 다음과 같은 세 가지 단계로 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-103">This topic describes activity tracing for security processing, which happens in the following three phases.</span></span>  
   
--   협상\/SCT 교환.이 단계는 전송 계층\(이진 데이터 교환 사용\) 또는 메시지 계층\(SOAP 메시지 교환 사용\)에서 발생할 수 있습니다.  
+-   <span data-ttu-id="672f1-104">협상/SCT 교환.</span><span class="sxs-lookup"><span data-stu-id="672f1-104">Negotiation/SCT exchange.</span></span> <span data-ttu-id="672f1-105">이 단계는 전송 계층(이진 데이터 교환 사용) 또는 메시지 계층(SOAP 메시지 교환 사용)에서 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-105">This can happen at the transport later (through binary data exchange) or message layer (through SOAP message exchanges).</span></span>  
   
--   서명 확인 및 인증을 통한 메시지 암호화\/해독.추적이 앰비언트 동작\(일반적으로 "Process Action"\)에 나타납니다.  
+-   <span data-ttu-id="672f1-106">서명 확인 및 인증을 통한 메시지 암호화/해독.</span><span class="sxs-lookup"><span data-stu-id="672f1-106">Message encryption/decryption, with signature verification and authentication.</span></span> <span data-ttu-id="672f1-107">추적이 앰비언트 동작(일반적으로 "Process Action")에 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-107">Traces appear in the ambient activity, typically "Process Action."</span></span>  
   
--   권한 부여 및 확인.끝점 간에 통신할 때 또는 로컬로 발생할 수 있습니다.  
+-   <span data-ttu-id="672f1-108">권한 부여 및 확인.</span><span class="sxs-lookup"><span data-stu-id="672f1-108">Authorization and verification.</span></span> <span data-ttu-id="672f1-109">끝점 간에 통신할 때 또는 로컬로 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-109">This can happen locally or when communicating between endpoints.</span></span>  
   
-## 협상\/SCT 교환  
- 협상\/SCT 교환 단계에서는 클라이언트에서 "Set up Secure Session" 및 "Close Secure Session"의 두 가지 동작 유형이 만들어집니다. "Set up Secure Session"은 RST\/RSTR\/SCT 메시지 교환에 대한 추적을 포함하고, "Close Secure Session"은 취소 메시지에 대한 추적을 포함합니다.  
+## <a name="negotiationsct-exchange"></a><span data-ttu-id="672f1-110">협상/SCT 교환</span><span class="sxs-lookup"><span data-stu-id="672f1-110">Negotiation/SCT exchange</span></span>  
+ <span data-ttu-id="672f1-111">협상/SCT 교환 단계에서는 클라이언트에서 "Set up Secure Session" 및 "Close Secure Session"의 두 가지 동작 유형이 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-111">In the negotiation/SCT exchange phase, two activity types are created on the client: "Set up Secure Session" and "Close Secure Session."</span></span> <span data-ttu-id="672f1-112">"Set up Secure Session"은 RST/RSTR/SCT 메시지 교환에 대한 추적을 포함하고, "Close Secure Session"은 취소 메시지에 대한 추적을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-112">"Set up Secure Session" encompasses traces for the RST/RSTR/SCT message exchanges, while "Close Secure Session" includes traces for the Cancel message.</span></span>  
   
- 서버에서 RST\/RSTR\/SCT에 대한 각 요청\/회신이 자체 동작에 표시됩니다.서버와 클라이언트에서 모두 `propagateActivity`\=`true`이면 서버의 동작이 동일한 ID를 사용하고 Service Trace Viewer에서 볼 때 "Set up Secure Session"에 함께 표시됩니다.  
+ <span data-ttu-id="672f1-113">서버에서 RST/RSTR/SCT에 대한 각 요청/회신이 자체 동작에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-113">On the server, each request/reply for the RST/RSTR/SCT appears in its own activity.</span></span> <span data-ttu-id="672f1-114">경우 `propagateActivity` = `true` 서버와 클라이언트, 서버에 대 한 작업 id는 동일 하 고는 "Setup Secure Session" Service Trace Viewer에서 볼 때에 함께 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-114">If `propagateActivity`=`true` on both the server and client, activities on the server have the same ID, and appear together in the "Setup Secure Session" when viewed through Service Trace Viewer.</span></span>  
   
- 이 동작 추적 모델은 사용자 이름\/암호 인증, 인증서 인증 및 NTML 인증에 사용할 수 있습니다.  
+ <span data-ttu-id="672f1-115">이 동작 추적 모델은 사용자 이름/암호 인증, 인증서 인증 및 NTML 인증에 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-115">This activity tracing model is valid for user name/password authentication, certificate authentication, and NTLM authentication.</span></span>  
   
- 다음 표에서는 협상 및 SCT 교환에 대한 동작과 추적을 보여 줍니다.  
+ <span data-ttu-id="672f1-116">다음 표에서는 협상 및 SCT 교환에 대한 동작과 추적을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-116">The following table lists the activities and traces for negotiation and SCT exchange.</span></span>  
   
-||협상\/SCT 교환 발생 시기|동작|추적|  
-|-|----------------------|--------|--------|  
-|보안 전송<br /><br /> \(HTTPS, SSL\)|첫 번째 메시지를 수신했을 때|앰비언트 동작에서 추적을 내보냅니다.|-   교환 추적<br />-   보안 채널 설정<br />-   가져온 비밀을 공유합니다.|  
-|보안 메시지 계층<br /><br /> \(WSHTTP\)|첫 번째 메시지를 수신했을 때|클라이언트 측:<br /><br /> -   RST\/RSTR\/SCT의 각 요청\/회신에 대한 첫 번째 메시지의 "Process Action" 중 "Setup Secure Session"<br />-   "Close Proxy activity"에서 CANCEL 교환에 대한 "Close Secure Session". 이 동작은 보안 세션이 닫힌 시간에 따라 일부 다른 앰비언트 동작에서 발생할 수 있습니다.<br /><br /> 서버 측:<br /><br /> -   서버에서 RST\/SCT\/Cancel의 각 요청\/회신에 대한 하나의 "Process Action" 동작.`propagateActivity`\=`true`이면 서버에서 RST\/RSTR\/SCT 동작이 "Set up Security Session"과 병합되고, Cancel은 "Close" 동작과 병합됩니다.<br /><br /> "Set up Secure Session"에는 다음과 같은 두 가지 단계가 있습니다.<br /><br /> 1.  인증 협상.클라이언트에 이미 적절한 자격 증명이 있는 경우 선택 사항입니다.이 단계는 보안 전송 또는 메시지 교환을 통해 수행할 수 있습니다.메시지 교환을 통해 수행할 경우 하나 또는 두 개의 RST\/RSTR 교환이 발생할 수 있습니다.이러한 교환에 대해 앞에서 설명한 대로 새 요청\/회신 동작에서 추적을 내보냅니다.<br />2.  보안 세션 설정\(SCT\). 여기서는 하나의 RST\/RSTR 교환이 발생합니다.이 단계에는 앞에서 설명한 것과 동일한 앰비언트 동작이 있습니다.|-   교환 추적<br />-   보안 채널 설정<br />-   가져온 비밀을 공유합니다.|  
-  
-> [!NOTE]
->  혼합 보안 모드의 경우 이진 교환에서는 협상 인증이 발생하지만 메시지 교환에서는 SCT가 발생합니다.순수 전송 모드의 경우에는 추가 동작이 없는 전송에서만 협상이 발생합니다.  
-  
-## 메시지 암호화 및 해독  
- 다음 표에서는 메시지 암호화\/해독 및 서명 인증에 대한 활동과 추적을 보여 줍니다.  
-  
-||보안 전송<br /><br /> \(HTTPS, SSL\) 및 보안 메시지 계층<br /><br /> \(WSHTTP\)|  
-|-|---------------------------------------------------------|  
-|메시지 암호화\/해독 및 서명 인증 발생 시기|메시지를 수신했을 때|  
-|활동|클라이언트 및 서버의 ProcessAction 동작에서 추적을 내보냅니다.|  
-|추적|-   sendSecurityHeader\(발신자\):<br />-   메시지 서명<br />-   요청 데이터 암호화<br />-   receiveSecurityHeader\(수신자\):<br />-   서명 확인<br />-   응답 데이터 해독<br />-   인증|  
+||<span data-ttu-id="672f1-117">협상/SCT 교환 발생 시기</span><span class="sxs-lookup"><span data-stu-id="672f1-117">Time when Negotiation/SCT exchange happens</span></span>|<span data-ttu-id="672f1-118">작업</span><span class="sxs-lookup"><span data-stu-id="672f1-118">Activities</span></span>|<span data-ttu-id="672f1-119">추적</span><span class="sxs-lookup"><span data-stu-id="672f1-119">Traces</span></span>|  
+|-|-------------------------------------------------|----------------|------------|  
+|<span data-ttu-id="672f1-120">보안 전송</span><span class="sxs-lookup"><span data-stu-id="672f1-120">Secure Transport</span></span><br /><br /> <span data-ttu-id="672f1-121">(HTTPS, SSL)</span><span class="sxs-lookup"><span data-stu-id="672f1-121">(HTTPS, SSL)</span></span>|<span data-ttu-id="672f1-122">첫 번째 메시지를 수신했을 때</span><span class="sxs-lookup"><span data-stu-id="672f1-122">On first message received.</span></span>|<span data-ttu-id="672f1-123">앰비언트 동작에서 추적을 내보냅니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-123">Traces are emitted in the ambient activity.</span></span>|<span data-ttu-id="672f1-124">교환 추적</span><span class="sxs-lookup"><span data-stu-id="672f1-124">-   Exchange traces</span></span><br /><span data-ttu-id="672f1-125">보안 채널 설정</span><span class="sxs-lookup"><span data-stu-id="672f1-125">-   Secure channel established</span></span><br /><span data-ttu-id="672f1-126">-가져온 비밀을 공유 합니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-126">-   Share secrets obtained.</span></span>|  
+|<span data-ttu-id="672f1-127">보안 메시지 계층</span><span class="sxs-lookup"><span data-stu-id="672f1-127">Secure Message Layer</span></span><br /><br /> <span data-ttu-id="672f1-128">(WSHTTP)</span><span class="sxs-lookup"><span data-stu-id="672f1-128">(WSHTTP)</span></span>|<span data-ttu-id="672f1-129">첫 번째 메시지를 수신했을 때</span><span class="sxs-lookup"><span data-stu-id="672f1-129">On first message received.</span></span>|<span data-ttu-id="672f1-130">클라이언트에서:</span><span class="sxs-lookup"><span data-stu-id="672f1-130">On the client:</span></span><br /><br /> <span data-ttu-id="672f1-131">-RST/RSTR/SCT에 대 한 "setup Secure Session" 해당 첫 번째 메시지의 "Process action" 각각에 대해 요청/회신 합니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-131">-   "Setup Secure Session" out of "Process Action" of that first message, for each request/reply for RST/RSTR/SCT.</span></span><br /><span data-ttu-id="672f1-132">-"Close Proxy activity."에서 CANCEL 교환에 대 한 "close Secure Session"</span><span class="sxs-lookup"><span data-stu-id="672f1-132">-   "Close Secure Session" for the CANCEL exchange, out of the "Close Proxy activity."</span></span> <span data-ttu-id="672f1-133">이 동작은 보안 세션이 닫힌 시간에 따라 일부 다른 앰비언트 동작에서 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-133">This activity may happen out of some other ambient activity, depending on when the secure session is closed.</span></span><br /><br /> <span data-ttu-id="672f1-134">서버측:</span><span class="sxs-lookup"><span data-stu-id="672f1-134">On the server:</span></span><br /><br /> <span data-ttu-id="672f1-135">-각 요청/회신 RST/SCT/Cancel에 대 한 서버에 대 한 하나의 "Process Action" 동작.</span><span class="sxs-lookup"><span data-stu-id="672f1-135">-   One "Process Action" activity for each request/reply for RST/SCT/Cancel on the server.</span></span> <span data-ttu-id="672f1-136">경우 `propagateActivity` = `true`RST/RSTR/SCT 동작이 "Set up Security Session"와 병합 하는, 및 Cancel 클라이언트로부터 "Close" 동작과 병합 됩니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-136">If `propagateActivity`=`true`, RST/RSTR/SCT activities are merged with "Set up Security Session", and Cancel is merged with the "Close" activity from the client.</span></span><br /><br /> <span data-ttu-id="672f1-137">"Set up Secure Session"에는 다음과 같은 두 가지 단계가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-137">There are two stages for "Set up Secure Session":</span></span><br /><br /> <span data-ttu-id="672f1-138">1.  인증 협상.</span><span class="sxs-lookup"><span data-stu-id="672f1-138">1.  Authentication negotiation.</span></span> <span data-ttu-id="672f1-139">클라이언트에 이미 적절한 자격 증명이 있는 경우 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-139">This is optional if the client already has the proper credentials.</span></span> <span data-ttu-id="672f1-140">이 단계는 보안 전송 또는 메시지 교환을 통해 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-140">This phase can be done through secure transport, or through message exchanges.</span></span> <span data-ttu-id="672f1-141">메시지 교환을 통해 수행할 경우 하나 또는 두 개의 RST/RSTR 교환이 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-141">In the latter case, 1 or 2 RST/RSTR exchanges can happen.</span></span> <span data-ttu-id="672f1-142">이러한 교환에 대해 앞에서 설명한 대로 새 요청/회신 동작에서 추적을 내보냅니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-142">For these exchanges, traces are emitted in new request/reply activities as previously designed.</span></span><br /><span data-ttu-id="672f1-143">2.  보안 세션 설정(SCT). 여기서는 하나의 RST/RSTR 교환이 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-143">2.  Secure session establishment (SCT), in which one RST/RSTR exchange happens here.</span></span> <span data-ttu-id="672f1-144">이 단계에는 앞에서 설명한 것과 동일한 앰비언트 동작이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-144">This has the same ambient activities as described previously.</span></span>|<span data-ttu-id="672f1-145">교환 추적</span><span class="sxs-lookup"><span data-stu-id="672f1-145">-   Exchange traces</span></span><br /><span data-ttu-id="672f1-146">보안 채널 설정</span><span class="sxs-lookup"><span data-stu-id="672f1-146">-   Secure channel established</span></span><br /><span data-ttu-id="672f1-147">-가져온 비밀을 공유 합니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-147">-   Share secrets obtained.</span></span>|  
   
 > [!NOTE]
->  순수 전송 모드에서는 추가 동작이 없는 전송에서만 메시지 암호화\/해독이 발생합니다.  
+>  <span data-ttu-id="672f1-148">혼합 보안 모드의 경우 이진 교환에서는 협상 인증이 발생하지만 메시지 교환에서는 SCT가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-148">In mixed security mode, negotiation authentication happens in binary exchanges, but SCT happens in message exchange.</span></span> <span data-ttu-id="672f1-149">순수 전송 모드의 경우에는 추가 동작이 없는 전송에서만 협상이 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-149">In pure transport mode, negotiation happens only in transport with no additional activities.</span></span>  
   
-## 권한 부여 및 확인.  
- 다음 표에서는 권한 부여에 대한 동작과 추적을 보여 줍니다.  
+## <a name="message-encryption-and-decryption"></a><span data-ttu-id="672f1-150">메시지 암호화 및 해독</span><span class="sxs-lookup"><span data-stu-id="672f1-150">Message Encryption and Decryption</span></span>  
+ <span data-ttu-id="672f1-151">다음 표에서는 메시지 암호화/해독 및 서명 인증에 대한 활동과 추적을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-151">The following table lists the activities and traces for message encryption/decryption, as well as signature authentication.</span></span>  
   
-||권한 부여 발생 시기|활동|추적|  
-|-|-----------------|--------|--------|  
-|로컬\(기본값\)|서버에서 메시지가 해독된 후|서버의 ProcessAction 동작에서 추적을 내보냅니다.|사용자에게 권한이 부여되었습니다.|  
-|원격|서버에서 메시지가 해독된 후|ProcessAction 동작에 의해 호출된 새로운 동작에서 추적을 내보냅니다.|사용자에게 권한이 부여되었습니다.|
+||<span data-ttu-id="672f1-152">보안 전송</span><span class="sxs-lookup"><span data-stu-id="672f1-152">Secure Transport</span></span><br /><br /> <span data-ttu-id="672f1-153">(HTTPS, SSL) 및 보안 메시지 계층</span><span class="sxs-lookup"><span data-stu-id="672f1-153">(HTTPS, SSL) and Secure Message Layer</span></span><br /><br /> <span data-ttu-id="672f1-154">(WSHTTP)</span><span class="sxs-lookup"><span data-stu-id="672f1-154">(WSHTTP)</span></span>|  
+|-|---------------------------------------------------------------------------------|  
+|<span data-ttu-id="672f1-155">메시지 암호화/해독 및 서명 인증 발생 시기</span><span class="sxs-lookup"><span data-stu-id="672f1-155">Time when message encryption/decryption, as well as signature authentication happens</span></span>|<span data-ttu-id="672f1-156">메시지를 수신했을 때</span><span class="sxs-lookup"><span data-stu-id="672f1-156">On message received</span></span>|  
+|<span data-ttu-id="672f1-157">작업</span><span class="sxs-lookup"><span data-stu-id="672f1-157">Activities</span></span>|<span data-ttu-id="672f1-158">클라이언트 및 서버의 ProcessAction 동작에서 추적을 내보냅니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-158">Traces are emitted in the ProcessAction activity on the client and server.</span></span>|  
+|<span data-ttu-id="672f1-159">추적</span><span class="sxs-lookup"><span data-stu-id="672f1-159">Traces</span></span>|<span data-ttu-id="672f1-160">-sendSecurityHeader (발신자):</span><span class="sxs-lookup"><span data-stu-id="672f1-160">-   sendSecurityHeader (sender):</span></span><br /><span data-ttu-id="672f1-161">-메시지에 서명</span><span class="sxs-lookup"><span data-stu-id="672f1-161">-   Sign message</span></span><br /><span data-ttu-id="672f1-162">-요청 데이터를 암호화 합니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-162">-   Encrypt request data</span></span><br /><span data-ttu-id="672f1-163">-receiveSecurityHeader (수신자):</span><span class="sxs-lookup"><span data-stu-id="672f1-163">-   receiveSecurityHeader (receiver):</span></span><br /><span data-ttu-id="672f1-164">-서명을 확인 하십시오.</span><span class="sxs-lookup"><span data-stu-id="672f1-164">-   Verify signature</span></span><br /><span data-ttu-id="672f1-165">-응답 데이터 해독</span><span class="sxs-lookup"><span data-stu-id="672f1-165">-   Decrypt response data</span></span><br /><span data-ttu-id="672f1-166">-인증</span><span class="sxs-lookup"><span data-stu-id="672f1-166">-   Authentication</span></span>|  
+  
+> [!NOTE]
+>  <span data-ttu-id="672f1-167">순수 전송 모드에서는 추가 동작이 없는 전송에서만 메시지 암호화/해독이 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-167">In pure transport mode, message encryption/decryption happens only in transport with no additional activities.</span></span>  
+  
+## <a name="authorization-and-verification"></a><span data-ttu-id="672f1-168">권한 부여 및 확인.</span><span class="sxs-lookup"><span data-stu-id="672f1-168">Authorization and Verification</span></span>  
+ <span data-ttu-id="672f1-169">다음 표에서는 권한 부여에 대한 동작과 추적을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-169">The following table lists the activities and traces for authorization.</span></span>  
+  
+||<span data-ttu-id="672f1-170">권한 부여 발생 시기</span><span class="sxs-lookup"><span data-stu-id="672f1-170">Time when authorization happens</span></span>|<span data-ttu-id="672f1-171">작업</span><span class="sxs-lookup"><span data-stu-id="672f1-171">Activities</span></span>|<span data-ttu-id="672f1-172">추적</span><span class="sxs-lookup"><span data-stu-id="672f1-172">Traces</span></span>|  
+|-|-------------------------------------|----------------|------------|  
+|<span data-ttu-id="672f1-173">로컬(기본값)</span><span class="sxs-lookup"><span data-stu-id="672f1-173">Local (default)</span></span>|<span data-ttu-id="672f1-174">서버에서 메시지가 해독된 후</span><span class="sxs-lookup"><span data-stu-id="672f1-174">After the message is decrypted on the server</span></span>|<span data-ttu-id="672f1-175">서버의 ProcessAction 동작에서 추적을 내보냅니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-175">Traces are emitted in the ProcessAction activity at the server.</span></span>|<span data-ttu-id="672f1-176">사용자에게 권한이 부여되었습니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-176">User authorized.</span></span>|  
+|<span data-ttu-id="672f1-177">원격</span><span class="sxs-lookup"><span data-stu-id="672f1-177">Remote</span></span>|<span data-ttu-id="672f1-178">서버에서 메시지가 해독된 후</span><span class="sxs-lookup"><span data-stu-id="672f1-178">After the message is decrypted on the server</span></span>|<span data-ttu-id="672f1-179">ProcessAction 동작에 의해 호출된 새로운 동작에서 추적을 내보냅니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-179">Traces are emitted in a new activity invoked by the ProcessAction activity.</span></span>|<span data-ttu-id="672f1-180">사용자에게 권한이 부여되었습니다.</span><span class="sxs-lookup"><span data-stu-id="672f1-180">User authorized.</span></span>|
