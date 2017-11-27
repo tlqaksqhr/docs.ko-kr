@@ -1,12 +1,9 @@
 ---
 title: "Visual Basic 언어 참조"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic language reference
 - run-time libraries, Visual Basic
@@ -16,29 +13,14 @@ helpviewer_keywords:
 - language reference, Visual Basic
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1ac47bde27397e80993a6bb5d2512715f44acfc1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 2524df987bfea25b294c6e24abe5a6d8ff548df1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="visual-basic-language-reference"></a>Visual Basic 언어 참조
 이 섹션에서는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 언어의 다양한 측면에 대한 참조 정보를 제공합니다.  
@@ -48,7 +30,7 @@ ms.lasthandoff: 07/28/2017
  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 설명서에서 언어의 키워드, 자리 표시자 및 기타 요소에 대한 서식을 지정하는 방법을 요약합니다.  
   
  [Visual Basic 런타임 라이브러리 멤버](../../visual-basic/language-reference/runtime-library-members.md)  
- <xref:Microsoft.VisualBasic?displayProperty=fullName> 네임스페이스의 클래스 및 모듈을 멤버 함수, 메서드, 속성, 상수, 열거형의 링크와 함께 나열합니다.  
+ <xref:Microsoft.VisualBasic?displayProperty=nameWithType> 네임스페이스의 클래스 및 모듈을 멤버 함수, 메서드, 속성, 상수, 열거형의 링크와 함께 나열합니다.  
   
  [키워드](../../visual-basic/language-reference/keywords/index.md)  
  모든 Visual Basic 키워드를 나열하고 추가 정보의 링크를 제공합니다.  
@@ -110,4 +92,3 @@ ms.lasthandoff: 07/28/2017
   
  [Visual Basic 명령줄 컴파일러](../../visual-basic/reference/command-line-compiler/index.md)  
  [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] IDE(통합 개발 환경) 내에서 프로그램을 컴파일하는 대신 명령줄 컴파일러를 사용하는 방법을 설명합니다.
-

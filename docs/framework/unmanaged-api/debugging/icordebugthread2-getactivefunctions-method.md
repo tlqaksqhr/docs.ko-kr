@@ -1,0 +1,68 @@
+---
+title: "ICorDebugThread2::GetActiveFunctions 메서드"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+api_name: ICorDebugThread2.GetActiveFunctions
+api_location: mscordbi.dll
+api_type: COM
+f1_keywords: ICorDebugThread2::GetActiveFunctions
+helpviewer_keywords:
+- GetActiveFunctions method [.NET Framework debugging]
+- ICorDebugThread2::GetActiveFunctions method [.NET Framework debugging]
+ms.assetid: 27fae01a-ecec-423a-973e-24f8de55826c
+topic_type: apiref
+caps.latest.revision: "12"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: d1f7f416a5441b788394e93a98d274d02fa2ec2f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
+---
+# <a name="icordebugthread2getactivefunctions-method"></a>ICorDebugThread2::GetActiveFunctions 메서드
+각이 스레드 프레임에서 현재 함수에 대 한 정보를 가져옵니다.  
+  
+## <a name="syntax"></a>구문  
+  
+```  
+HRESULT GetActiveFunctions (  
+    [in]   ULONG32             cFunctions,  
+    [out]  ULONG32             *pcFunctions,  
+    [in, out, size_is(cFunctions), length_is(*pcFunctions)]  
+        COR_ACTIVE_FUNCTION    pFunctions[]  
+);  
+```  
+  
+#### <a name="parameters"></a>매개 변수  
+ `cFunctions`  
+ [in] `pFunctions` 배열의 크기입니다.  
+  
+ `pcFunctions`  
+ [out] 반환 되는 개체의 수에 대 한 포인터는 `pFunctions` 배열입니다. 반환 된 개체 수는 관리 되는 스택 프레임의 수와 같지 됩니다.  
+  
+ `pFunctions`  
+ [out에서] 이 스레드 프레임에서 현재 함수에 대 한 정보를 포함 하며 각 COR_ACTIVE_FUNCTION 개체의 배열입니다.  
+  
+ 리프 프레임 및 스택 루트까지 이어집니다에 대 한 첫 번째 요소를 사용 됩니다.  
+  
+## <a name="remarks"></a>설명  
+ 경우 `pFunctions` 입력 시 null `GetActiveFunctions` 스택에 있는 함수의 수만 반환 합니다. 즉, 경우 `pFunctions` 입력 시 null `GetActiveFunctions` 값을 반환에 `pcFunctions`합니다.  
+  
+ `GetActiveFunctions` 메서드는 스택 추적에는 프레임에서 동일한 정보를 가져오는 최적화로 위한 것 이며 프레임 했지만 이제 ICorDebugILFrame 개체에는 전체 스택 추적을 포함 합니다.  
+  
+## <a name="requirements"></a>요구 사항  
+ **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+  
+ **헤더:** CorDebug.idl, CorDebug.h  
+  
+ **라이브러리:** CorGuids.lib  
+  
+ **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

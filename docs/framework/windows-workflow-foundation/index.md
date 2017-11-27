@@ -11,16 +11,15 @@ helpviewer_keywords:
 - WF [WF]
 - Windows Workflow Foundation [WF]
 ms.assetid: 9a23ea6b-d600-483e-89cd-8889cfec5f66
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: d01680c038f075db4bdb9151a86d51820615a068
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/05/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="windows-workflow-foundation"></a>Windows Workflow Foundation
 이 단원에서는 [!INCLUDE[wf](../../../includes/wf-md.md)]의 프로그래밍 모델, 샘플 및 도구에 대해 설명합니다.  
@@ -55,4 +54,3 @@ ms.lasthandoff: 09/05/2017
   
  [Windows 워크플로 샘플](../../../docs/framework/windows-workflow-foundation/samples/index.md)  
  WF의 기능과 시나리오를 보여 주는 샘플 응용 프로그램을 제공합니다.
-

@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ff8b0014-c5d4-4614-90f0-13fcc0ba777a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: d7aa4e4010da70f90bb18db9cd4e8179925bb58d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="downloading-the-validating-issuer-name-registry-package"></a>발급자 이름 레지스트리 유효성 검사 패키지 다운로드
 이 항목에서는 VINR(발급자 이름 레지스트리 유효성 검사)을 다운로드하고 프로젝트에서 사용하는 방법을 설명합니다.  
@@ -50,4 +48,3 @@ ms.lasthandoff: 08/21/2017
     ```  
   
 3.  최신 VINR 어셈블리가 다운로드되고 프로젝트에 추가됩니다.
-

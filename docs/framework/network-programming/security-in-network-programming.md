@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - sending data, Internet security
 - protocols, Internet security
@@ -23,16 +18,15 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 ms.assetid: afb07899-2707-49ab-a57f-e0caf20d0171
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c8adacd11aa256cd5d807cc92ec1a9c3c154ad77
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 0908dd50c870c26284c1ef90d8433122b00e7be1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="security-in-network-programming"></a>네트워크 프로그래밍의 보안
 .NET Framework <xref:System.Net> 네임스페이스 클래스에서는 가장 인기 있는 인터넷 응용 프로그램 인증 메커니즘과 .NET Framework 코드 액세스 권한을 기본적으로 지원합니다.  
@@ -50,4 +44,3 @@ ms.lasthandoff: 08/21/2017
 ## <a name="related-sections"></a>관련 단원  
  [.NET Framework의 네트워크 프로그래밍](../../../docs/framework/network-programming/index.md)  
  <xref:System.Net> 및 <xref:System.Net.Sockets> 네임스페이스의 클래스를 소개합니다.
-

@@ -5,28 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- Code contracts
+- csharp
+- vb
+helpviewer_keywords: Code contracts
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 78553d77ea9a669f7cebdd9187e2436d3b095a75
-ms.openlocfilehash: c0eca978f32c4f96ad976718584c0bf92bf638ec
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ce74cfb9c4e0eb759fb8160ab06fa6fbde60081b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="code-contracts"></a>코드 계약
 코드 계약을 통해 코드에서 사전 조건, 사후 조건 및 개체 고정을 지정할 수 있습니다. 사전 조건은 메서드 또는 속성을 입력할 때 충족해야 하는 요구 사항입니다. 사후 조건은 메서드 또는 속성 코드가 종료될 때의 예상을 설명합니다. 개체 고정은 양호한 상태인 클래스의 예상 상태를 설명합니다.  
@@ -50,7 +45,7 @@ ms.lasthandoff: 08/21/2017
  코드 계약을 사용하기 위한 도구 및 자세한 지침은 MSDN DevLabs 웹 사이트의 [코드 계약](http://go.microsoft.com/fwlink/?LinkId=152461)을 참조하세요.  
   
 ## <a name="preconditions"></a>사전 조건  
- <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=fullName> 메서드를 사용하여 사전 조건을 표현할 수 있습니다. 사전 조건은 메서드가 호출될 때의 상태를 지정합니다. 일반적으로 유효한 매개 변수 값을 지정하는 데 사용됩니다. 사전 조건에 언급된 모든 멤버는 최소한 메서드 자체만큼 액세스 가능해야 합니다. 그러지 않으면 메서드의 일부 호출자가 사전 조건을 이해하지 못할 수 있습니다. 조건에 파생 작업이 없어야 합니다. 실패한 사전 조건의 런타임 동작은 런타임 분석기에 의해 결정됩니다.  
+ <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType> 메서드를 사용하여 사전 조건을 표현할 수 있습니다. 사전 조건은 메서드가 호출될 때의 상태를 지정합니다. 일반적으로 유효한 매개 변수 값을 지정하는 데 사용됩니다. 사전 조건에 언급된 모든 멤버는 최소한 메서드 자체만큼 액세스 가능해야 합니다. 그러지 않으면 메서드의 일부 호출자가 사전 조건을 이해하지 못할 수 있습니다. 조건에 파생 작업이 없어야 합니다. 실패한 사전 조건의 런타임 동작은 런타임 분석기에 의해 결정됩니다.  
   
  예를 들어 다음 사전 조건은 `x` 매개 변수가 null이 아니어야 한다고 표현합니다.  
   
@@ -67,7 +62,7 @@ ms.lasthandoff: 08/21/2017
   
 -   이러한 문의 전체 집합 뒤에는 <xref:System.Diagnostics.Contracts.Contract.Requires%2A>, <xref:System.Diagnostics.Contracts.Contract.Ensures%2A>, <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A> 또는 <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A> 메서드 호출과 같은 명시적 <xref:System.Diagnostics.Contracts.Contract> 메서드 호출이 나옵니다.  
   
- `if`-`then`-`throw` 문이 이 형태로 나타나는 경우 도구에서 레거시 `requires` 문으로 인식합니다. `if`-`then`-`throw` 시퀀스 뒤에 나오는 다른 계약이 없는 경우 <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A?displayProperty=fullName> 메서드를 사용하여 코드를 끝냅니다.  
+ `if`-`then`-`throw` 문이 이 형태로 나타나는 경우 도구에서 레거시 `requires` 문으로 인식합니다. `if`-`then`-`throw` 시퀀스 뒤에 나오는 다른 계약이 없는 경우 <xref:System.Diagnostics.Contracts.Contract.EndContractBlock%2A?displayProperty=nameWithType> 메서드를 사용하여 코드를 끝냅니다.  
   
 ```  
 if ( x == null ) throw new ...  
@@ -87,7 +82,7 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
  `Contract.Ensures( this.F > 0 );`  
   
 ### <a name="exceptional-postconditions"></a>예외 사후 조건  
- 예외 사후 조건은 메서드에서 특정 예외가 발생할 때 `true`여야 하는 사후 조건입니다. 다음 예제에 같이 <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A?displayProperty=fullName> 메서드를 사용하여 이러한 사후 조건을 지정할 수 있습니다.  
+ 예외 사후 조건은 메서드에서 특정 예외가 발생할 때 `true`여야 하는 사후 조건입니다. 다음 예제에 같이 <xref:System.Diagnostics.Contracts.Contract.EnsuresOnThrow%2A?displayProperty=nameWithType> 메서드를 사용하여 이러한 사후 조건을 지정할 수 있습니다.  
   
  `Contract.EnsuresOnThrow<T>( this.F > 0 );`  
   
@@ -193,7 +188,7 @@ Contract.Invariant(this.x > this.y);
   
 -   정규화된 이름이 "System.Diagnostics.Contracts.Contract", "System.String", "System.IO.Path" 또는 "System.Type"으로 시작하는 모든 메서드  
   
--   호출된 대리자(대리자 형식 자체가 <xref:System.Diagnostics.Contracts.PureAttribute> 특성을 가진 경우) 대리자 형식 <xref:System.Predicate%601?displayProperty=fullName> 및 <xref:System.Comparison%601?displayProperty=fullName>은 순수하다고 간주됩니다.  
+-   호출된 대리자(대리자 형식 자체가 <xref:System.Diagnostics.Contracts.PureAttribute> 특성을 가진 경우) 대리자 형식 <xref:System.Predicate%601?displayProperty=nameWithType> 및 <xref:System.Comparison%601?displayProperty=nameWithType>은 순수하다고 간주됩니다.  
   
 <a name="visibility"></a>   
 ### <a name="visibility"></a>표시 유형  
@@ -202,5 +197,5 @@ Contract.Invariant(this.x > this.y);
 ## <a name="example"></a>예제  
  다음 예제에서는 코드 계약을 사용하는 방법을 보여 줍니다.  
   
- [!code-csharp[ContractExample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/contractexample/cs/program.cs#1)] [!code-vb[ContractExample#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/contractexample/vb/program.vb#1)]
-
+ [!code-csharp[ContractExample#1](../../../samples/snippets/csharp/VS_Snippets_CLR/contractexample/cs/program.cs#1)]
+ [!code-vb[ContractExample#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/contractexample/vb/program.vb#1)]

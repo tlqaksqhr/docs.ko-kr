@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Web.config configuration file [ASP.NET]
 - ASP.NET configuration system, Web settings schema
@@ -22,16 +16,15 @@ helpviewer_keywords:
 - configuration files [ASP.NET]
 - configuration schema [.NET Framework], Web settings
 ms.assetid: ae1ac356-267d-4753-8d7a-7a04eb45a9be
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fb6a19f5fb03c17f4ac5f3627f7c02ca354ddb1f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: efdfba94bd2d2a64b3434c97f30a035f210fda9a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="web-settings-schema"></a>웹 설정 스키마
 웹 설정은 CPU와 ASP.NET 호스팅 계층에서 관리하는 프로세스 전반 동작에 적용되는 실행 수준 ASP.NET 설정을 지정합니다. 이러한 설정은 ASP.NET 응용 프로그램의 Web.config 파일에서 지정된 응용 프로그램 도메인 유형 설정과 다릅니다.  
@@ -55,4 +48,3 @@ ms.lasthandoff: 09/05/2017
   
 ## <a name="see-also"></a>참고 항목  
  [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
-

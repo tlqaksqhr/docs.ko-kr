@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - XML serialization, defined
 - binary serialization
@@ -19,16 +14,15 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 ms.assetid: 4d1111c0-9447-4231-a997-96a2b74b3453
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 4aaef3337c9ee2464925ed4dc31c075a4e68a9dc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/14/2017
-
+ms.openlocfilehash: 6c97dc9b98f90af31c86af5295a7a4ad9894b428
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="serialization-in-net"></a>.NET의 Serialization
 serialization은 지속시키거나 전송할 수 있는 형태로 개체 상태를 변환하는 프로세스입니다. serialization과 짝을 이루는 것은 스트림을 개체로 변환하는 deserialization입니다. 이 두 프로세스를 통해 데이터를 쉽게 저장하고 전송할 수 있습니다.  

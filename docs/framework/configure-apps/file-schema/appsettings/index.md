@@ -2,14 +2,8 @@
 title: "앱 설정 스키마"
 ms.date: 05/01/2017
 ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - schema app settings
 - app settings, schema [Windows Forms]
@@ -19,14 +13,12 @@ ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
 author: guardrex
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 16d43acc3a26c8ce7212d100e0792d40de6fa2fd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: 1d51d06895e61be60bbe9153eacb2028cb32a1fa
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="app-settings-schema"></a>앱 설정 스키마
 
 파일 경로, XML Web services URL 또는 응용 프로그램의 기타 사용자 지정 구성 정보와 같은 사용자 지정 응용 프로그램 설정이 포함되어 있습니다.
@@ -85,4 +77,3 @@ ms.lasthandoff: 09/05/2017
 
 [응용 프로그램 설정 개요](~/docs/framework/winforms/advanced/application-settings-overview.md)   
 [응용 프로그램 설정 아키텍처](~/docs/framework/winforms/advanced/application-settings-architecture.md)
-

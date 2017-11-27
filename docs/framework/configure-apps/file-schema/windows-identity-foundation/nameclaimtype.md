@@ -1,64 +1,75 @@
 ---
-title: "&lt;nameClaimType&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;nameClaimType&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 17514d95-f0f5-4789-8e28-346640dc227c
-caps.latest.revision: 4
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: e910333084aae9e47153cfe3ee4b5cd943a37f71
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;nameClaimType&gt;
-지정 하는 클레임 형식을 설정 하는 <xref:System.Security.Principal.IIdentity.Name%2A> 속성.  클레임 형식에 대 한 검색에 사용 되는 <xref:System.Security.Claims.Claim> 컬렉션의 <xref:System.Security.Claims.ClaimsIdentity> 반환한 개체는 <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> 이 토큰 처리기 메서드.  일치 하는 클레임의 값은 다음 이름으로 설정 되어 있는 <xref:System.Security.Principal.IIdentity> 이 토큰 처리기에서 생성 합니다.  
+# <a name="ltnameclaimtypegt"></a>&lt;nameClaimType&gt;
+클레임 유형을 지정 하는 설정의 <xref:System.Security.Principal.IIdentity.Name%2A> 속성입니다. 클레임 유형을 검색 하기 위해 사용 되는 <xref:System.Security.Claims.Claim> 의 컬렉션에서 <xref:System.Security.Claims.ClaimsIdentity> 에서 반환 된 개체는 <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> 이 토큰 처리기의 메서드. 일치 하는 클레임 값의 이름으로 설정 됩니다는 <xref:System.Security.Principal.IIdentity> 토큰 처리기에서 생성 합니다.  
   
-## 구문  
+ \<system.identityModel >  
+\<identityConfiguration >  
+\<securityTokenHandlers >  
+\<add>  
+\<samlSecurityTokenRequirement >  
+\<nameClaimType >  
   
-```  
+## <a name="syntax"></a>구문  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <securityTokenHandlers>  
-      <add>  
-        <samlSecurityTokenRequirement>  
-          <nameClaimType value=xs:string>  
-          </nameClaimType>  
-        </samlSecurityTokenRequirement>  
-      </add>  
-    </securityTokenHandlers>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <securityTokenHandlers>  
+      <add>  
+        <samlSecurityTokenRequirement>  
+          <nameClaimType value=xs:string>  
+          </nameClaimType>  
+        </samlSecurityTokenRequirement>  
+      </add>  
+    </securityTokenHandlers>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## 특성 및 요소  
+## <a name="attributes-and-elements"></a>특성 및 요소  
  다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
-### 특성  
+### <a name="attributes"></a>특성  
   
 |특성|설명|  
-|--------|--------|  
-|value|클레임 유형을 사용 하는 클레임을 나타내는 URI를 지정 하는 문자열을 <xref:System.Security.Principal.IIdentity.Name%2A> 속성.  필수 요소.|  
+|---------------|-----------------|  
+|값|에 사용할 클레임의 클레임 형식을 나타내는 URI를 지정 하는 문자열은 <xref:System.Security.Principal.IIdentity.Name%2A> 속성입니다. 필수 요소.|  
   
-### 자식 요소  
+### <a name="child-elements"></a>자식 요소  
  없음  
   
-### 부모 요소  
+### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
-|--------|--------|  
-|[\<samlSecurityTokenRequirement\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|구성에 대 한 제공의 <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> 클래스는 <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> 클래스 또는이 클래스의 파생된 클래스.|  
+|-------------|-----------------|  
+|[\<samlSecurityTokenRequirement >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/samlsecuritytokenrequirement.md)|에 대 한 구성을 제공 된 <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> 클래스는 <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> 클래스나 파생된 클래스의 이러한 클래스 중 하나입니다.|  
   
-## 설명  
- `<nameClaimType>` 요소 집합의 <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A> 속성 경우는 <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> 에서 구성 개체를 초기화 합니다.  
+## <a name="remarks"></a>설명  
+ `<nameClaimType>` 요소 집합에서 <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A> 속성 때는 <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> 개체 구성에서 초기화 됩니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
-```  
+```xml  
 <add type="System.IdentityModel.Tokens.SamlSecurityTokenHandler, System.IdentityModel">  
     <samlSecurityTokenRequirement>  
         <nameClaimType value="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name" />  
@@ -66,5 +77,5 @@ caps.handback.revision: 4
 </add>  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.NameClaimType%2A>

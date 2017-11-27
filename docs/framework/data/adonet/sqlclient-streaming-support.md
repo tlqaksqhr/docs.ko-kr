@@ -1,23 +1,26 @@
 ---
-title: "SqlClient 스트리밍 지원 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SqlClient 스트리밍 지원"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 85999a6aa15b04ffa2751d7312f71aaab1582ea3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# SqlClient 스트리밍 지원
-[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]와 응용 프로그램 간의 스트리밍 지원\([!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]의 새로운 기능\)을 통해 서버 측의 구조화되지 않은 데이터\(문서, 이미지 및 미디어 파일\)가 지원됩니다.  [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 데이터베이스는 BLOB\(Binary Large Object\)를 저장할 수 있지만 BLOB를 검색할 때 많은 메모리가 사용될 수 있습니다.  
+# <a name="sqlclient-streaming-support"></a>SqlClient 스트리밍 지원
+[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]와 응용 프로그램 간의 스트리밍 지원([!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]의 새로운 기능)을 통해 서버 측의 구조화되지 않은 데이터(문서, 이미지 및 미디어 파일)가 지원됩니다. [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 데이터베이스는 BLOB(Binary Large Object)를 저장할 수 있지만 BLOB를 검색할 때 많은 메모리가 사용될 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]로의 스트리밍과 그 반대로의 스트리밍이 지원되면 데이터를 메모리에 완전하게 로드하지 않고 데이터를 스트리밍함으로써 메모리 오버플로 예외가 보다 적게 발생하는 응용 프로그램을 간단하게 작성할 수 있습니다.  
   
@@ -26,16 +29,16 @@ caps.handback.revision: 14
 > [!WARNING]
 >  응용 프로그램에서 `Context Connection` 연결 문자열 키워드도 사용하는 경우에는 비동기 호출이 지원되지 않습니다.  
 >   
->  스트리밍을 지원하기 위해 추가된 멤버는 쿼리에서 데이터를 검색하고 쿼리 및 저장 프로시저에 매개 변수를 전달하는 데 사용됩니다.  스트리밍 기능은 기본 OLTP 및 데이터 마이그레이션 시나리오를 처리하며 온\-프레미스 및 오프\-프레미스 데이터 마이그레이션 환경에 적용할 수 있습니다.  
+>  스트리밍을 지원하기 위해 추가된 멤버는 쿼리에서 데이터를 검색하고 쿼리 및 저장 프로시저에 매개 변수를 전달하는 데 사용됩니다. 스트리밍 기능은 기본 OLTP 및 데이터 마이그레이션 시나리오를 처리하며 온-프레미스 및 오프-프레미스 데이터 마이그레이션 환경에 적용할 수 있습니다.  
   
-## [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에서의 스트리밍 지원  
- [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에서의 스트리밍 지원은 <xref:System.Data.Common.DbDataReader> 및 <xref:System.Data.SqlClient.SqlDataReader> 클래스에 새로운 기능을 도입함으로써 <xref:System.IO.Stream>, <xref:System.Xml.XmlReader> 및 <xref:System.IO.TextReader> 개체를 가져오고 이러한 개체에 반응할 수 있습니다.  이러한 클래스는 쿼리에서 데이터를 검색하는 데 사용됩니다.  따라서 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에서의 스트리밍 지원은 OLTP 시나리오를 처리하며 온\-프레미스 및 오프\-프레미스 환경에 적용됩니다.  
+## <a name="streaming-support-from-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에서의 스트리밍 지원  
+ [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에서의 스트리밍 지원은 <xref:System.Data.Common.DbDataReader> 및 <xref:System.Data.SqlClient.SqlDataReader> 클래스에 새로운 기능을 도입함으로써 <xref:System.IO.Stream>, <xref:System.Xml.XmlReader> 및 <xref:System.IO.TextReader> 개체를 가져오고 이러한 개체에 반응할 수 있습니다.  이러한 클래스는 쿼리에서 데이터를 검색하는 데 사용됩니다. 따라서 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에서의 스트리밍 지원은 OLTP 시나리오를 처리하며 온-프레미스 및 오프-프레미스 환경에 적용됩니다.  
   
  <xref:System.Data.SqlClient.SqlDataReader>에서의 스트리밍 지원을 활성화하기 위해 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에 추가된 메서드는 다음과 같습니다.  
   
 1.  <xref:System.Data.SqlClient.SqlDataReader.IsDBNullAsync%2A>  
   
-2.  <xref:System.Data.SqlClient.SqlDataReader.GetFieldValue%2A?displayProperty=fullName>  
+2.  <xref:System.Data.SqlClient.SqlDataReader.GetFieldValue%2A?displayProperty=nameWithType>  
   
 3.  <xref:System.Data.SqlClient.SqlDataReader.GetFieldValueAsync%2A>  
   
@@ -53,10 +56,10 @@ caps.handback.revision: 14
   
 3.  <xref:System.Data.Common.DbDataReader.GetTextReader%2A>  
   
-## [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]로의 스트리밍 지원  
- [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]로의 스트리밍 지원은 <xref:System.Data.SqlClient.SqlParameter> 클래스에 새로운 기능을 도입함으로써 <xref:System.Xml.XmlReader>, <xref:System.IO.Stream> 및 <xref:System.IO.TextReader> 개체를 받아들이고 이러한 개체에 반응할 수 있습니다.  <xref:System.Data.SqlClient.SqlParameter>는 쿼리 및 저장 프로시저에 매개 변수를 전달하는 데 사용됩니다.  
+## <a name="streaming-support-to-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]로의 스트리밍 지원  
+ [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]로의 스트리밍 지원은 <xref:System.Data.SqlClient.SqlParameter> 클래스에 새로운 기능을 도입함으로써 <xref:System.Xml.XmlReader>, <xref:System.IO.Stream> 및 <xref:System.IO.TextReader> 개체를 받아들이고 이러한 개체에 반응할 수 있습니다. <xref:System.Data.SqlClient.SqlParameter>는 쿼리 및 저장 프로시저에 매개 변수를 전달하는 데 사용됩니다.  
   
- <xref:System.Data.SqlClient.SqlCommand> 개체를 삭제하거나 <xref:System.Data.SqlClient.SqlCommand.Cancel%2A>을 호출할 때는 모든 스트리밍 작업이 취소되어야 합니다.  응용 프로그램에서 <xref:System.Threading.CancellationToken>을 전송하면 취소되지 않을 수 있습니다.  
+ <xref:System.Data.SqlClient.SqlCommand> 개체를 삭제하거나 <xref:System.Data.SqlClient.SqlCommand.Cancel%2A>을 호출할 때는 모든 스트리밍 작업이 취소되어야 합니다. 응용 프로그램에서 <xref:System.Threading.CancellationToken>을 전송하면 취소되지 않을 수 있습니다.  
   
  다음 <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 형식에서는 <xref:System.Data.SqlClient.SqlParameter.Value%2A>의 <xref:System.IO.Stream>를 받아들입니다.  
   
@@ -74,13 +77,13 @@ caps.handback.revision: 14
   
 -   **Xml**  
   
- **Xml** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 형식에서는 <xref:System.Data.SqlClient.SqlParameter.Value%2A>의 <xref:System.Xml.XmlReader>를 받아들입니다.  
+ **Xml** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> 형식에 허용 된 <xref:System.Data.SqlClient.SqlParameter.Value%2A> 의 <xref:System.Xml.XmlReader>합니다.  
   
  <xref:System.Data.SqlClient.SqlParameter.SqlValue%2A>는 <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> 및 <xref:System.IO.Stream> 형식의 값만 받아들일 수 있습니다.  
   
  <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> 및 <xref:System.IO.Stream> 개체는 <xref:System.Data.SqlClient.SqlParameter.Size%2A>에 정의된 값까지 전송됩니다.  
   
-## 샘플 \- [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에서의 스트리밍  
+## <a name="sample----streaming-from-includessnoversionincludesssnoversion-mdmd"></a>샘플 - [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에서의 스트리밍  
  다음 [!INCLUDE[tsql](../../../../includes/tsql-md.md)]에 따라 샘플 데이터베이스를 작성할 수 있습니다.  
   
 ```  
@@ -110,7 +113,7 @@ GO
   
 -   [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에서 데이터를 검색합니다.  
   
--   메모리를 지나치게 소모하지 않으면서 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 데이터베이스 간에 큰 파일\(BLOB\)을 전송합니다.  
+-   메모리를 지나치게 소모하지 않으면서 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 데이터베이스 간에 큰 파일(BLOB)을 전송합니다.  
   
 ```  
 using System;  
@@ -299,10 +302,9 @@ namespace StreamingFromServer {
       }  
    }  
 }  
-  
 ```  
   
-## 샘플 \- [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]로의 스트리밍  
+## <a name="sample----streaming-to-includessnoversionincludesssnoversion-mdmd"></a>샘플 - [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]로의 스트리밍  
  다음 [!INCLUDE[tsql](../../../../includes/tsql-md.md)]에 따라 샘플 데이터베이스를 작성할 수 있습니다.  
   
 ```  
@@ -456,10 +458,9 @@ namespace StreamingToServer {
       }  
    }  
 }  
-  
 ```  
   
-## 샘플 \- 한 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에서 다른 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]로의 스트리밍  
+## <a name="sample----streaming-from-one-includessnoversionincludesssnoversion-mdmd-to-another-includessnoversionincludesssnoversion-mdmd"></a>샘플 - 한 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에서 다른 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]로의 스트리밍  
  이 샘플에서는 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 간에 큰 BLOB를 비동기적으로 스트리밍하는 방법을 보여 줍니다.  
   
 ```  
@@ -523,8 +524,7 @@ namespace StreamingFromServerToAnother {
       }  
    }  
 }  
-  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [ADO.NET에서 데이터 검색 및 수정](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)

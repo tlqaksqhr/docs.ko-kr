@@ -1,31 +1,22 @@
 ---
 title: "특성 개요(Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0464de06390a9899cbe312b16cbad41d0b6639eb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: f1d5399da42b224908fa9c23893eec5d424dd685
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="attributes-overview-visual-basic"></a>특성 개요(Visual Basic)
 특성은 메타데이터 또는 선언적 정보를 코드(어셈블리, 형식, 메서드, 속성 등)에 연결하는 강력한 방법을 제공합니다. 특성이 프로그램 엔터티와 연결되면 *리플렉션*이라는 기법을 사용하여 런타임에 특성이 쿼리될 수 있습니다. 자세한 내용은 [리플렉션(Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)을 참조하세요.  
@@ -161,7 +152,6 @@ Module: CLSCompliant(True)>
 -   [호출자 정보(Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [Visual Basic 프로그래밍 가이드](../../../../visual-basic/programming-guide/index.md)   
- [리플렉션(Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)   
+ [Visual Basic 프로그래밍 가이드](../../../../visual-basic/programming-guide/index.md)  
+ [리플렉션(Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
  [특성](https://msdn.microsoft.com/library/5x6cd29c)
-

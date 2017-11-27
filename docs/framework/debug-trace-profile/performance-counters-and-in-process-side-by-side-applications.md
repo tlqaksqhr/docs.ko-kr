@@ -5,31 +5,27 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - performance counters
 - performance counters,and in-process side-by-side applications
 - performance,.NET Framework applications
 - performance monitoring,counters
 ms.assetid: 6888f9be-c65b-4b03-a07b-df7ebdee2436
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 713aa3a870c42014de01d6782d7452ab60792cc4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 16c43545b24f8c0290bfe993d91b7e4203ac11fa
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>성능 카운터 및 In-Process Side-By-Side 응용 프로그램
 성능 모니터(Perfmon.exe)를 사용하면 런타임별로 성능 카운터를 구분할 수 있습니다. 이 항목에서는 이 기능을 사용하는 데 필요한 레지스트리 변경 사항에 대해 설명합니다.  
@@ -59,7 +55,8 @@ ms.lasthandoff: 08/21/2017
   
  다음 예제에서는 프로그래밍 방식으로 `ProcessNameFormat` 값을 변경하는 방법을 보여 줍니다.  
   
- [!code-csharp[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/cs/regsetting1.cs#1)] [!code-vb[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/vb/regsetting1.vb#1)]  
+ [!code-csharp[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/cs/regsetting1.cs#1)]
+ [!code-vb[Conceptual.PerfCounters.InProSxS#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.perfcounters.inprosxs/vb/regsetting1.vb#1)]  
   
  이와 같이 레지스트리를 변경하면 Perfmon.exe에서 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]을 대상으로 하는 응용 프로그램의 이름을 *application*_`p`*processID*\_`r`*runtimeID*로 표시합니다. 여기서 *application*은 응용 프로그램의 이름이고, *processID*는 응용 프로그램의 프로세스 식별자이며, *runtimeID*는 공용 언어 런타임 ID입니다. 예를 들어 myapp.exe라는 응용 프로그램에서 공용 언어 런타임의 인스턴스를 두 개 로드하는 경우 Perfmon.exe에서는 하나의 인스턴스를 myapp_p1416_r10으로 식별하고 두 번째는 myapp_p3160_r10으로 식별합니다. 런타임 ID는 프로세스에 있는 런타임만 구분합니다. 런타임에 대한 다른 정보는 제공하지 않습니다. (예를 들어, 런타임 ID는 버전이나 런타임의 SKU와 아무 관계가 없습니다.)  
   
@@ -69,4 +66,3 @@ ms.lasthandoff: 08/21/2017
 >  프로세스 식별자를 사용하면 이전 버전의 런타임을 사용하는 이름이 동일한 두 응용 프로그램을 확인할 때 모호성이 제거됩니다. 이전 버전의 공용 언어 런타임에서는 병렬 시나리오를 지원하지 않으므로 이전 버전에는 런타임 ID가 필요하지 않습니다.  
   
  [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]이 없거나 설치되지 않은 경우 레지스트리 키를 설정해도 영향을 미치지 않습니다. 즉, 이름이 같은 두 개의 응용 프로그램이 Perfmon.exe에 계속 *application* 및 *application#1*(예: **myapp** 및 **myapp#1**)로 표시됩니다.
-
