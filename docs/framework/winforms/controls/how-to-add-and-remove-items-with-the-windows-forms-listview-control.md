@@ -1,45 +1,49 @@
 ---
-title: "방법: Windows Forms ListView 컨트롤을 사용하여 항목 추가 및 제거 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "목록 보기, 목록 항목 추가"
-  - "ListView 컨트롤[Windows Forms], 목록 항목 추가"
-  - "ListView 컨트롤[Windows Forms], 채우기"
+title: "방법: Windows Forms ListView 컨트롤을 사용하여 항목 추가 및 제거"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ListView control [Windows Forms], populating
+- list views [Windows Forms], adding list items
+- ListView control [Windows Forms], adding list items
 ms.assetid: 1b35a80a-edd8-495f-a807-a28c4aae52c6
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4b7c9d92e4ba58ae5c5f2cbff1c79fd7a3ae673a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: Windows Forms ListView 컨트롤을 사용하여 항목 추가 및 제거
-Windows Forms <xref:System.Windows.Forms.ListView> 컨트롤에 항목을 추가하는 프로세스는 주로 항목을 지정하고 이 항목에 속성을 할당하는 프로세스로 구성됩니다.  언제든지 목록 항목을 추가하거나 제거할 수 있습니다.  
+# <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control"></a>방법: Windows Forms ListView 컨트롤을 사용하여 항목 추가 및 제거
+Windows Forms에 항목을 추가 하는 프로세스 <xref:System.Windows.Forms.ListView> 제어 이루어져 주로 항목을 지정 하 고 속성을 할당 합니다. 목록 항목 추가 또는 제거를 언제 든 지 수행할 수 있습니다.  
   
-### 항목을 프로그래밍 방식으로 추가하려면  
+### <a name="to-add-items-programmatically"></a>프로그래밍 방식으로 항목을 추가 하려면  
   
-1.  <xref:System.Windows.Forms.ListView.Items%2A> 속성의 <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> 메서드를 사용합니다.  
+1.  사용 하 여는 <xref:System.Windows.Forms.ListView.ListViewItemCollection.Add%2A> 의 메서드는 <xref:System.Windows.Forms.ListView.Items%2A> 속성입니다.  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#11)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#11)]  
   
-### 프로그래밍 방식으로 항목을 제거하려면  
+### <a name="to-remove-items-programmatically"></a>프로그래밍 방식으로 항목을 제거 하려면  
   
-1.  <xref:System.Windows.Forms.ListView.Items%2A> 속성의 <xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A> 또는 <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> 메서드를 사용합니다.  <xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A> 메서드는 항목 하나를 제거하며 <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> 메서드는 목록에 있는 항목을 모두 제거합니다.  
+1.  사용 하 여는 <xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A> 또는 <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> 의 메서드는 <xref:System.Windows.Forms.ListView.Items%2A> 속성입니다. <xref:System.Windows.Forms.ListView.ListViewItemCollection.RemoveAt%2A> 단일 항목을 제거 하는 메서드, <xref:System.Windows.Forms.ListView.ListViewItemCollection.Clear%2A> 메서드 목록에서 모든 항목을 제거 합니다.  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#12](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#12)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#12](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#12)]  
   
-## 참고 항목  
- <xref:System.Windows.Forms.ListView>   
- [ListView 컨트롤](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)   
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Windows.Forms.ListView>  
+ [ListView 컨트롤](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
  [ListView 컨트롤 개요](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)

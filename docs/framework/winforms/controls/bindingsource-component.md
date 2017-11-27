@@ -1,35 +1,36 @@
 ---
-title: "BindingSource 구성 요소 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "BindingSource 구성 요소[Windows Forms]"
-  - "데이터 바인딩, Windows Forms"
-  - "Windows Forms, 데이터 바인딩 컨트롤"
+title: "BindingSource 구성 요소"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data binding [Windows Forms], Windows Forms
+- Windows Forms, data binding control
+- BindingSource component [Windows Forms]
 ms.assetid: 3e2faf4c-f5b8-4fa6-9fbc-f59c37ec2fb9
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 006cafafdf8e3c3f4da77394d6155fa52e113b58
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/22/2017
 ---
-# BindingSource 구성 요소
-Encapsulates a data source for binding to controls.  
+# <a name="bindingsource-component"></a>BindingSource 구성 요소
+컨트롤에 바인딩할 데이터 소스를 캡슐화합니다.  
   
- <xref:System.Windows.Forms.BindingSource> 구성 요소는 두가지 용도로 사용됩니다.  첫째, 폼의 컨트롤을 데이터에 바인딩할 때 간접 참조 계층을 제공합니다.  이 작업은 <xref:System.Windows.Forms.BindingSource> 구성 요소를 데이터 소스에 바인딩한 다음 폼의 컨트롤을 <xref:System.Windows.Forms.BindingSource> 구성 요소에 바인딩하여 수행됩니다.  탐색, 정렬, 필터링, 업데이트 등 데이터와의 모든 상호 작용은 <xref:System.Windows.Forms.BindingSource> 구성 요소를 호출하여 수행됩니다.  
+ <xref:System.Windows.Forms.BindingSource> 구성 요소는 두가지 용도로 사용됩니다. 첫째, 폼의 컨트롤을 데이터에 바인딩할 때 간접 참조 계층을 제공합니다. 이 작업은 <xref:System.Windows.Forms.BindingSource> 구성 요소를 데이터 소스에 바인딩한 다음 폼의 컨트롤을 <xref:System.Windows.Forms.BindingSource> 구성 요소에 바인딩하여 수행됩니다. 탐색, 정렬, 필터링, 업데이트 등 데이터와의 모든 상호 작용은 <xref:System.Windows.Forms.BindingSource> 구성 요소를 호출하여 수행됩니다.  
   
- 둘째, <xref:System.Windows.Forms.BindingSource> 구성 요소는 강력한 형식의 데이터 소스로 사용될 수 있습니다.  <xref:System.Windows.Forms.BindingSource.Add%2A> 메서드를 통해 <xref:System.Windows.Forms.BindingSource> 구성 요소에 형식을 추가하면 해당 형식의 목록이 만들어집니다.  
+ 둘째, <xref:System.Windows.Forms.BindingSource> 구성 요소는 강력한 형식의 데이터 소스로 사용될 수 있습니다. <xref:System.Windows.Forms.BindingSource.Add%2A> 메서드를 통해 <xref:System.Windows.Forms.BindingSource> 구성 요소에 형식을 추가하면 해당 형식의 목록이 만들어집니다.  
   
-## 단원 내용  
+## <a name="in-this-section"></a>단원 내용  
  [BindingSource 구성 요소 개요](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)  
  데이터 소스를 컨트롤에 바인딩할 수 있게 해주는 <xref:System.Windows.Forms.BindingSource> 구성 요소의 일반적인 개념을 소개합니다.  
   
@@ -63,18 +64,18 @@ Encapsulates a data source for binding to controls.
  [방법: BindingSource가 있는 Windows Forms 컨트롤에 데이터 소스 업데이트 내용 반영](../../../../docs/framework/winforms/controls/reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)  
  <xref:System.Windows.Forms.BindingSource> 구성 요소를 사용하여 데이터 소스의 변경 내용에 응답하는 방법을 보여 줍니다.  
   
- [방법: BindingSource 구성 요소를 사용하여 폼 간에 바인딩된 데이터 공유](../../../../docs/framework/winforms/controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)  
+ [방법: BindingSource 구성 요소를 사용하여 양식 간에 바인딩된 데이터 공유](../../../../docs/framework/winforms/controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)  
  <xref:System.Windows.Forms.BindingSource>를 사용하여 여러 개의 폼을 동일한 데이터 소스에 바인딩하는 방법을 보여 줍니다.  
   
-## 참조  
+## <a name="reference"></a>참조  
  <xref:System.Windows.Forms.BindingSource>  
  <xref:System.Windows.Forms.BindingSource> 구성 요소에 대한 참조 설명서를 제공합니다.  
   
  <xref:System.Windows.Forms.BindingNavigator>  
  <xref:System.Windows.Forms.BindingNavigator> 컨트롤에 대한 참조 설명서를 제공합니다.  
   
-## 관련 단원  
+## <a name="related-sections"></a>관련 단원  
  [Windows Forms 데이터 바인딩](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
  Windows Forms 데이터 바인딩 아키텍처를 설명하는 항목의 링크를 포함합니다.  
   
- [Visual Studio에서 데이터에 컨트롤 바인딩](../Topic/Bind%20controls%20to%20data%20in%20Visual%20Studio.md)을 참조하세요.
+ [Visual Studio에서 데이터에 컨트롤 바인딩](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)도 참조하세요.

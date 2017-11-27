@@ -1,54 +1,52 @@
 ---
-title: "Continue Statement (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.continue"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Continue statement [Visual Basic]"
-  - "loops, transferring to next iteration"
+title: "Continue 문(Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.continue
+helpviewer_keywords:
+- Continue statement [Visual Basic]
+- loops, transferring to next iteration
 ms.assetid: 3ad00103-358b-4af3-a3a8-1b9ea0e995d3
-caps.latest.revision: 21
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 4a47819600a6c1d58f09c2f8ed3443632e9dab68
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Continue Statement (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-루프의 다음 반복으로 제어가 바로 이동합니다.  
+# <a name="continue-statement-visual-basic"></a>Continue 문(Visual Basic)
+루프의 다음 반복으로 즉시 제어를 전송 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
-Continue { Do | For | While }  
+Continue { Do | For | While }  
 ```  
   
-## 설명  
- `Do`, `For` 또는 `While` 루프 내부에서 해당 루프의 다음 반복으로 이동할 수 있습니다.  제어가 루프 조건 테스트로 바로 전달됩니다. 이는 `For` 또는 `While` 문이나 `Until` 또는 `While` 절을 포함하고 있는 `Do` 또는 `Loop` 문으로 이동하는 것과 같습니다.  
+## <a name="remarks"></a>설명  
+ 전송할 수 내부는 `Do`, `For`, 또는 `While` 해당 루프의 다음 반복으로 루프입니다. 제어를 전송 하는 것과 같은 루프 조건 테스트를 즉시 전달은 `For` 또는 `While` 문, 또는 `Do` 또는 `Loop` 문을 포함 하는 `Until` 또는 `While` 절.  
   
- 이동이 허용되는 루프 내의 모든 위치에서 `Continue`를 사용할 수 있습니다.  제어의 이동 규칙은 [GoTo Statement](../../../visual-basic/language-reference/statements/goto-statement.md)의 규칙과 같습니다.  
+ 사용할 수 있습니다 `Continue` 이동이 허용 되는 루프 내의 모든 위치에서 합니다. 컨트롤을 전송할 수 있도록 하는 규칙은와 동일 하 게는 [GoTo 문](../../../visual-basic/language-reference/statements/goto-statement.md)합니다.  
   
- 예를 들어, 루프가 `Try` 블록, `Catch` 블록 또는 `Finally` 블록 내에 완전히 포함되어 있는 경우 `Continue`를 사용하여 루프의 외부로 이동할 수 있습니다.  한편 `Try`...`End Try` 구조가 루프 내에 포함되어 있는 경우에는 `Finally` 블록의 외부로 제어를 이동하는 데 `Continue`를 사용할 수 없으며 `Try`...`End Try` 구조의 외부로 완전히 이동하는 경우에만 `Try` 또는 `Catch` 블록의 외부로 이동하는 데 사용할 수 있습니다.  
+ 예를 들어, 루프 내에 완전히 포함 되어는 `Try` 블록은 `Catch` 블록 또는 `Finally` 블록을 사용할 수 있습니다 `Continue` 루프 밖으로 전송할 수 있습니다. 반대로, if는 `Try`... `End Try` 구조 루프 내에 포함 된, 사용할 수 없습니다 `Continue` 밖으로 제어를 전송 하는 `Finally` 블록 및 있습니다 사용할 수의 전송 하는 `Try` 또는 `Catch` 부재 중 완전히 전송 하는 경우에 차단는 `Try`... `End Try` 구조입니다.  
   
- 예를 들어, `Do` 루프가 다른 `Do` 루프 내에 있는 경우처럼 같은 형식의 루프가 중첩되어 있으면 `Continue Do` 문은 이 루프를 포함하고 있는 가장 안쪽의 `Do` 루프의 다음 반복으로 건너뜁니다.  같은 형식을 포함하고 있는 루프의 다음 반복으로 건너뛰는 데 `Continue`를 사용할 수 없습니다.  
+ 동일한 형식의 중첩 된 루프 예를 들어 있으면는 `Do` 루프 내에 다른 `Do` 루프는 `Continue Do` 가장 안쪽의 다음 반복으로 문을 건너뜁니다 `Do` 포함 된 루프입니다. 사용할 수 없습니다 `Continue` 같은 유형의 포함 하는 루프의 다음 반복 이동 합니다.  
   
- 예를 들어, `Do` 루프가 `For` 루프 내에 있는 경우처럼 다른 형식의 루프가 중첩되어 있으면 `Continue Do` 또는 `Continue For`를 사용하여 두 루프 중 하나의 다음 반복으로 건너뛸 수 있습니다.  
+ 다양 한 유형의 중첩 된 루프 예를 들어 있으면는 `Do` 내에서 반복을 `For` 루프를 사용 하 여 두 루프의 다음 반복으로 건너뛸 수 없다 `Continue Do` 또는 `Continue For`합니다.  
   
-## 예제  
- 다음 코드 예제에서는 `Continue While` 문을 사용하여 제수가 0인 경우 배열의 다음 열으로 건너뜁니다.  `Continue While`은 `For` 루프 내부에 있으며  `While col < lastcol` 문으로 이동합니다. 즉, `For` 루프를 포함하고 있는 가장 안쪽의 `While` 루프의 다음 반복으로 이동합니다.  
+## <a name="example"></a>예제  
+ 다음 코드 예제에서는 `Continue While` 문을 제수가 0 인 경우 배열의 다음 열을 이동 합니다. `Continue While` 내는 `For` 루프입니다. 전송 하는 `While col < lastcol` 가장 안쪽의 다음 반복 문을 `While` 루프를 포함 하는 `For` 루프입니다.  
   
  [!code-vb[VbVbalrStatements#14](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/continue-statement_1.vb)]  
   
-## 참고 항목  
- [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md)   
- [For...Next 문](../../../visual-basic/language-reference/statements/for-next-statement.md)   
- [While...End While Statement](../../../visual-basic/language-reference/statements/while-end-while-statement.md)   
- [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+## <a name="see-also"></a>참고 항목  
+ [Do...Loop 문](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
+ [For...Next 문](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [While...End While 문](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  
+ [Try...Catch...Finally 문](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

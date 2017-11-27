@@ -1,22 +1,25 @@
 ---
-title: "System.Convert 메서드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "System.Convert 메서드"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3ca6c5b6-ea5d-4ab0-b675-f082135b342c
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 7f4ed9cc6ae4668fe978b0e7f685e360f1044e6b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# System.Convert 메서드
+# <a name="systemconvert-methods"></a>System.Convert 메서드
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서는 다음 <xref:System.Convert> 메서드를 지원하지 않습니다.  
   
 -   <xref:System.IFormatProvider> 매개 변수를 사용하는 버전  
@@ -33,15 +36,15 @@ caps.handback.revision: 2
   
 -   다음과 같은 메서드  
   
-    -   `public static <Type2> To<Type2>(<Type1> value);`  
+    -   `public static <Type2> To<Type2>(<Type1> value);`   
   
-         여기서 `Type1` 및 `Type2`은\(는\) 각각 `sbyte`, `uint`, `ulong` 또는 `ushort` 중 하나입니다.  
+         여기서 `Type1` 및 `Type2`은(는) 각각 `sbyte`, `uint`, `ulong` 또는 `ushort` 중 하나입니다.  
   
-    -   C\#:  
+    -   C#:   
   
          `int To<int type>(string value, int fromBase),`  
   
-         `ToString(...  value, int toBase)`  
+         `ToString(... value, int toBase)`  
   
     -   Visual Basic:  
   
@@ -55,5 +58,5 @@ caps.handback.revision: 2
   
     -   <xref:System.Convert.ChangeType%2A>  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 형식 및 함수](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a3355d78-2a88-4109-8521-830d7cae260a
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d247b2ea8a1b6a908e3eee5082638813545f144d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 37e3ff3e792b8067b6d9409d799cf6e30350606a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltmethodinstantiationgt-element-net-native"></a>&lt;MethodInstantiation&gt; 요소(.NET 네이티브)
 생성된 제네릭 메서드에 런타임 리플렉션 정책을 적용합니다.  
@@ -85,8 +83,7 @@ ms.lasthandoff: 08/21/2017
  `<MethodInstantiation>` 요소는 해당 개방형 제네릭 메서드의 런타임 리플렉션 정책을 재정의합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [런타임 지시문 요소](../../../docs/framework/net-native/runtime-directive-elements.md)   
- [런타임 지시문 정책 설정](../../../docs/framework/net-native/runtime-directive-policy-settings.md)   
+ [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [런타임 지시문 요소](../../../docs/framework/net-native/runtime-directive-elements.md)  
+ [런타임 지시문 정책 설정](../../../docs/framework/net-native/runtime-directive-policy-settings.md)  
  [\<Method> 요소](../../../docs/framework/net-native/method-element-net-native.md)
-

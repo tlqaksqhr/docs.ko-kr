@@ -8,24 +8,21 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: e988b7b56fca3f7e71c94155086bd242f8f9637b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 76b6006c34b29e17ea725a5f7d104c1b085b5edc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-serialize-an-object"></a>방법: 개체 Serialize
 개체를 serialize하려면 먼저 serialize될 개체를 만들고 해당 public 속성과 필드를 설정합니다. 이렇게 하려면 XML 스트림이 저장될 전송 형식을 스트림 또는 파일 중에서 결정합니다. 예를 들어 XML 스트림을 영구적 형태로 저장해야 하는 경우에는 <xref:System.IO.FileStream> 개체를 만듭니다.  
@@ -63,6 +60,5 @@ ms.lasthandoff: 08/21/2017
     ```  
   
 ## <a name="see-also"></a>참고 항목  
- [XML serialization 소개](../../../docs/standard/serialization/introducing-xml-serialization.md)   
+ [XML serialization 소개](../../../docs/standard/serialization/introducing-xml-serialization.md)  
  [방법: 개체 deserialize](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-

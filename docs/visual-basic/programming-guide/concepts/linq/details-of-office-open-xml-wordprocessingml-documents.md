@@ -1,28 +1,24 @@
 ---
-title: "세부 정보는 Office Open XML WordprocessingML 문서 (Visual Basic) | Microsoft 문서"
+title: "세부 정보를 Office Open XML WordprocessingML 문서 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 6b1e155c-7174-4244-a6de-0fddf9a0b0d7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e0389952d4d36241ce87d14241e4d8f13f66329f
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 36d397853f042454fd14b888029dee7dbe383f68
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="details-of-office-open-xml-wordprocessingml-documents-visual-basic"></a>세부 정보는 Office Open XML WordprocessingML 문서 (Visual Basic)
+# <a name="details-of-office-open-xml-wordprocessingml-documents-visual-basic"></a>세부 정보를 Office Open XML WordprocessingML 문서 (Visual Basic)
 이 단원에서는 Office Open XML WordprocessingML 문서에 대한 상세한 정보를 제공하고 Open XML 문서의 문서 부분과 스타일 부분에 대한 예제를 보여 줍니다.  
   
 ## <a name="in-this-section"></a>단원 내용  

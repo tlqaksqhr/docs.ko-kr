@@ -1,58 +1,58 @@
 ---
-title: "방법: Windows Forms에 컨트롤 도킹 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "컨트롤[Windows Forms], 도킹"
-  - "Dock 속성"
-  - "탐색기 스타일 응용 프로그램, 만들기"
-  - "Windows Forms 컨트롤, 클라이언트 영역 채우기"
+title: "방법: Windows Forms에 컨트롤 도킹"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls [Windows Forms], docking
+- Explorer-style applications [Windows Forms], creating
+- Windows Forms controls, filling client area
 ms.assetid: bc11f2e4-e90a-4830-b0e2-f43b6e2b8bec
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4897a195dcafb8264bbab619f1a46118a829f44e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: Windows Forms에 컨트롤 도킹
-폼의 가장자리에 컨트롤을 도킹하거나 컨트롤의 컨테이너\(폼 또는 컨테이너 컨트롤\)에 컨트롤을 채울 수 있습니다.  예를 들어 Windows 탐색기는 <xref:System.Windows.Forms.TreeView> 컨트롤을 창의 왼쪽에 도킹하고 <xref:System.Windows.Forms.ListView> 컨트롤을 창의 오른쪽에 도킹합니다.  표시할 수 있는 모든 Windows Forms 컨트롤은 <xref:System.Windows.Forms.Control.Dock%2A> 속성을 사용하여 도킹 모드를 정의할 수 있습니다.  
+# <a name="how-to-dock-controls-on-windows-forms"></a>방법: Windows Forms에 컨트롤 도킹
+폼의 가장자리에 컨트롤을 도킹 하거나 컨트롤의 컨테이너 (폼 또는 컨테이너 컨트롤)을 채울 수 있습니다. Windows 탐색기 창을 도킹 하는 예를 들어 해당 <xref:System.Windows.Forms.TreeView> 컨트롤 창의 왼쪽 가장자리와 해당 <xref:System.Windows.Forms.ListView> 컨트롤 창의 왼쪽에서 오른쪽으로 합니다. 사용 된 <xref:System.Windows.Forms.Control.Dock%2A> 표시 하는 모든 Windows Forms 컨트롤 도킹 모드를 정의 하는 속성입니다.  
   
 > [!NOTE]
->  컨트롤은 Z 순서의 역순으로 도킹됩니다.  
+>  역방향 z-순서에 컨트롤 도킹 됩니다.  
   
- <xref:System.Windows.Forms.Control.Dock%2A> 속성은 <xref:System.Windows.Forms.Control.AutoSize%2A> 속성과 상호 작용합니다.  자세한 내용은 [AutoSize 속성 개요](../../../../docs/framework/winforms/controls/autosize-property-overview.md)를 참조하십시오.  
+ <xref:System.Windows.Forms.Control.Dock%2A> 속성와 상호 작용 하는 <xref:System.Windows.Forms.Control.AutoSize%2A> 속성입니다. 자세한 내용은 참조 [AutoSize 속성 개요](../../../../docs/framework/winforms/controls/autosize-property-overview.md)합니다.  
   
-### 컨트롤을 도킹하려면  
+### <a name="to-dock-a-control"></a>컨트롤을 도킹 하려면  
   
-1.  도킹할 컨트롤을 선택합니다.  
+1.  컨트롤을 도킹 하려면 선택 합니다.  
   
-2.  속성 창에서 <xref:System.Windows.Forms.Control.Dock%2A> 속성의 오른쪽에 있는 화살표를 클릭합니다.  
+2.  속성 창에서 오른쪽의 화살표를 클릭 하 고 <xref:System.Windows.Forms.Control.Dock%2A> 속성입니다.  
   
-     폼의 가장자리와 가운데를 나타내는 일련의 상자가 표시된 편집기가 나타납니다.  
+     일련의 가장자리와 폼의 중심을 나타내는 상자를 표시 하는 편집기가 표시 됩니다.  
   
-3.  도킹하려는 가장자리에 해당하는 단추를 클릭합니다.  컨트롤을 포함하는 폼이나 컨테이너 컨트롤의 내용을 채우려면 가운데 상자를 클릭합니다.  도킹을 사용하지 않으려면 **\(없음\)**을 클릭합니다.  
+3.  도킹 된 컨트롤을 폼의 가장자리를 나타내는 단추를 클릭 합니다. 컨트롤의 폼 이나 컨테이너 컨트롤의 내용을 채울 센터 상자를 클릭 합니다. 클릭 **(없음)** 도킹 하지 않으려면입니다.  
   
-     컨트롤의 크기는 도킹된 가장자리 경계에 맞게 자동으로 조정됩니다.  
+     컨트롤은 자동으로 도킹된 된 가장자리의 경계에 맞게 크기가 조정 됩니다.  
   
     > [!NOTE]
-    >  상속된 컨트롤을 도킹하려면 `Protected`를 설정해야 합니다.  컨트롤의 액세스 수준을 변경하려면 속성 창에서 컨트롤의 **Modifier** 속성을 설정합니다.  
+    >  상속 된 컨트롤 이어야 합니다 `Protected` 도킹 될 수 있습니다. 컨트롤의 액세스 수준을 변경 하려면 해당 **한정자** 속성 창에서 속성입니다.  
   
-## 참고 항목  
- [Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/index.md)   
- [Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)   
- [개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)   
- [Windows Forms에 사용할 수 있는 컨트롤](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)   
- [기능별 Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)   
- [방법: FlowLayoutPanel 컨트롤의 자식 컨트롤 고정 및 도킹](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)   
- [방법: TableLayoutPanel 컨트롤의 자식 컨트롤 고정 및 도킹](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)   
- [AutoSize 속성 개요](../../../../docs/framework/winforms/controls/autosize-property-overview.md)   
+## <a name="see-also"></a>참고 항목  
+ [Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/index.md)  
+ [Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [개별 Windows Forms 컨트롤 레이블 지정 및 바로 가기 제공](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
+ [Windows Forms에 사용할 수 있는 컨트롤](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [기능별 Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
+ [방법: FlowLayoutPanel 컨트롤의 자식 컨트롤 고정 및 도킹](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)  
+ [방법: TableLayoutPanel 컨트롤의 자식 컨트롤 고정 및 도킹](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
+ [AutoSize 속성 개요](../../../../docs/framework/winforms/controls/autosize-property-overview.md)  
  [방법: Windows Forms에서 컨트롤 고정](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)

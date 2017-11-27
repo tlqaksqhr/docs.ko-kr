@@ -1,51 +1,55 @@
 ---
-title: "방법: 자동 배율 조정 없이 성능 향상 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "자동 크기 조정"
-  - "이미지[Windows Forms], 성능 향상"
-  - "이미지[Windows Forms], 자동 크기 조정 없이 사용"
-  - "성능, 이미지 향상"
+title: "방법: 자동 배율 조정 없이 성능 향상"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- automatic scaling
+- images [Windows Forms], improving performance
+- images [Windows Forms], using without automatic scaling
+- performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0130e0745dfca20da5dc723bb7cc84748bb0b148
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 자동 배율 조정 없이 성능 향상
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]에서는 사용자가 이미지를 그릴 때 이미지 배율을 자동으로 조정할 수 있습니다. 이 경우 성능이 저하됩니다.  또한 대상 사각형의 크기를 <xref:System.Drawing.Graphics.DrawImage%2A> 메서드에 전달하여 이미지의 배율을 제어할 수 있습니다.  
+# <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>방법: 자동 배율 조정 없이 성능 향상
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]그릴 때, 성능 저하가 발생 하는 이미지의 배율을 조정 자동으로 될 수 있습니다. 이미지의 배율에 대상 사각형의 크기를 전달 하 여 제어할 수 또는 <xref:System.Drawing.Graphics.DrawImage%2A> 메서드.  
   
- 예를 들어, <xref:System.Drawing.Graphics.DrawImage%2A> 메서드에 대한 아래의 호출에서는 왼쪽 위 모퉁이를 \(50, 30\)으로 지정하고 대상 사각형은 지정하지 않았습니다.  
+ 다음을 호출 하는 예를 들어는 <xref:System.Drawing.Graphics.DrawImage%2A> 의 왼쪽 위 모퉁이 지정 하는 메서드 (50, 30) 하지만 대상 사각형을 지정 하지 않습니다.  
   
  [!code-csharp[System.Drawing.WorkingWithImages#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.WorkingWithImages#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#31)]  
   
- 이 방법은 <xref:System.Drawing.Graphics.DrawImage%2A> 메서드를 호출하는 데 있어 필요한 인수의 개수가 적다는 점에서는 간편하지만 가장 효율적이지는 않습니다.  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]에 사용되는 해상도\(일반적으로 96dpi\)가 <xref:System.Drawing.Image> 개체에 저장된 해상도와 다를 경우 <xref:System.Drawing.Graphics.DrawImage%2A> 메서드에 의해 이미지 배율이 조정됩니다.  예를 들어, <xref:System.Drawing.Image> 개체의 너비가 216픽셀이고 저장된 가로 해상도 값이 72dpi일 수 있습니다.  216\/72는 3이므로 <xref:System.Drawing.Graphics.DrawImage%2A>에 의해 3인치의 너비가 96dpi인 해상도가 되도록 이미지 배율이 조정됩니다.  즉, <xref:System.Drawing.Graphics.DrawImage%2A>에 의해 너비가 96x3 \= 288픽셀인 이미지가 표시됩니다.  
+ 이 가장 쉬운 버전의는 <xref:System.Drawing.Graphics.DrawImage%2A> 메서드 반드시 가장 효율적인 아니므로 필요한 인수 수를 기준으로 합니다. 해결 방법을 사용 하는 경우 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] (일반적으로 96dpi)에 저장 된 해상도와 다른는 <xref:System.Drawing.Image> 개체 면 <xref:System.Drawing.Graphics.DrawImage%2A> 메서드 이미지 크기를 조정 합니다. 예를 들어 한 <xref:System.Drawing.Image> 개체에 216 픽셀 너비와 72 인 저장된 수평 해상도 값입니다. 216/72 3, 이므로 <xref:System.Drawing.Graphics.DrawImage%2A> 을 갖도록 3 인치 너비 96dpi의 해상도 이미지 배율을 조정 합니다. 즉, <xref:System.Drawing.Graphics.DrawImage%2A> 96 x 3 = 288의 너비는 이미지가 표시 됩니다 (픽셀)입니다.  
   
- 사용자 화면 해상도가 96dpi와 다르더라도 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]에 의해 화면 해상도가 96dpi인 것처럼 이미지 배율이 조정됩니다.  다시 말해서 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> 개체는 장치 컨텍스트에 연결되기 때문에 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]에 의해 장치 컨텍스트에 화면 해상도에 대한 쿼리가 이루어질 때 실제 화면 해상도에 관계없이 결과는 항상 96입니다.  <xref:System.Drawing.Graphics.DrawImage%2A> 메서드에 대항 사각형을 지정하여 자동 배율 조정을 수행하지 않을 수 있습니다.  
+ 화면 해상도 96dpi와에서 다른 경우에 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 할 배율 이미지 하면 화면 해상도 96dpi 인 것 처럼 합니다. 때문는 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> 개체가 장치 컨텍스트와 연결 된 시기 및 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 화면 해상도 결과 대 한 장치 컨텍스트는 실제 화면 해상도 관계 없이 96 일반적으로 쿼리 합니다. 대상 사각형을 지정 하 여 자동 크기 조정 작업을 방지할 수 있습니다는 <xref:System.Drawing.Graphics.DrawImage%2A> 메서드.  
   
-## 예제  
- 아래 예제에서는 동일한 이미지를 두 번 그립니다.  첫 번째 이미지에서는 대상 사각형의 너비와 높이를 지정하지 않으므로 이미지의 배율이 자동으로 조정됩니다.  두 번째 이미지에서는 원래 이미지의 너비 및 높이와 동일하게 픽셀 단위로 대상 사각형의 너비와 높이를 지정합니다.  아래 그림에서는 두 번에 걸쳐 렌더링된 이미지를 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 두 번 동일한 이미지를 그립니다. 첫 번째 경우에서 대상 사각형의 높이 너비 지정 되지 않은 및 이미지가 자동으로 크기가 조정 됩니다. 두 번째 경우에 너비와 대상 사각형의 높이 (픽셀 단위)를 원본 이미지의 높이 너비와 동일 하 게 지정 됩니다. 다음 그림에서는 두 번 렌더링 되는 이미지를 보여 줍니다.  
   
- ![배율 조정된 질감](../../../../docs/framework/winforms/advanced/media/csscaledtexture1.png "csscaledtexture1")  
+ ![질감 크기가 조정](../../../../docs/framework/winforms/advanced/media/csscaledtexture1.png "csscaledtexture1")  
   
  [!code-csharp[System.Drawing.WorkingWithImages#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.WorkingWithImages#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#32)]  
   
-## 코드 컴파일  
- 앞의 예제는 Windows Forms에서 사용해야 하며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`를 필요로 합니다.  Texture.jpg를 시스템에서 사용할 수 있는 이미지 이름 및 경로로 바꿉니다.  
+## <a name="compiling-the-code"></a>코드 컴파일  
+ 앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`가 필요합니다. 이미지 이름 및 시스템에 유효한 경로 Texture.jpg를 대체 합니다.  
   
-## 참고 항목  
- [이미지, 비트맵 및 메타파일](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)   
+## <a name="see-also"></a>참고 항목  
+ [이미지, 비트맵 및 메타파일](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
  [이미지, 비트맵, 아이콘 및 메타파일 사용](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

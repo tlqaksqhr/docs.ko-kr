@@ -5,15 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - tracing [.NET Framework], trace switches
 - trace switches, about trace switches
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - trace switches
 - trace switches, creating custom
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6a9ba07fb064444ffa0ab73183f25f7352901480
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 082d84fe0ac4193f3da5ac9be52789432bde76aa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="trace-switches"></a>추적 스위치
 추적 스위치를 사용하여 추적 출력을 활성화, 비활성화 및 필터링할 수 있습니다. 코드에 존재하며 .config 파일을 통해 외부에서 구성할 수 있는 개체입니다. .NET Framework에서 제공되는 세 가지 유형의 추적 스위치( <xref:System.Diagnostics.BooleanSwitch> 클래스, <xref:System.Diagnostics.TraceSwitch> 클래스 및 <xref:System.Diagnostics.SourceSwitch> 클래스)가 있습니다. <xref:System.Diagnostics.BooleanSwitch> 클래스는 다양한 trace 문을 사용하거나 사용하지 않도록 설정하는 토글 스위치 역할을 합니다. <xref:System.Diagnostics.TraceSwitch> 및 <xref:System.Diagnostics.SourceSwitch> 클래스를 통해 특정 추적 수준에 대한 추적 스위치를 사용하도록 설정하여 해당 수준 및 그 아래의 모든 수준에 대해 지정된 <xref:System.Diagnostics.Trace> 또는 <xref:System.Diagnostics.TraceSource> 메시지를 표시할 수 있습니다. 스위치를 사용하지 않도록 설정하면 추적 메시지가 나타나지 않습니다. 이러한 모든 클래스는 사용자 개발 스위치와 마찬가지로 추상(**MustInherit**) 클래스 **Switch**에서 파생됩니다.  
@@ -96,7 +92,6 @@ MessageBox.Show(myTraceSwitch.TraceVerbose.ToString());
  **BooleanSwitch** 및 **TraceSwitch**를 제공하는 것 외에도 **Switch** 클래스에서 상속하고 기본 클래스 메서드를 사용자 지정 메서드로 재정의하여 고유한 스위치를 정의할 수 있습니다. 개발자 정의 스위치를 만드는 방법에 대한 자세한 내용은 .NET Framework 참조에서 <xref:System.Diagnostics.Switch> 클래스를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [추적 수신기](../../../docs/framework/debug-trace-profile/trace-listeners.md)   
- [방법: 응용 프로그램 코드에 Trace 문 추가](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)   
+ [추적 수신기](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
+ [방법: 응용 프로그램 코드에 Trace 문 추가](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
  [응용 프로그램 추적 및 조율](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-

@@ -1,47 +1,48 @@
 ---
-title: "PictureBox 컨트롤(Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "이미지 컨트롤[Windows Forms]"
-  - "이미지[Windows Forms], PictureBox 컨트롤에 추가"
-  - "PictureBox 컨트롤[Windows Forms]"
+title: "PictureBox 컨트롤(Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PictureBox control [Windows Forms]
+- image controls [Windows Forms]
+- images [Windows Forms], adding to PictureBox control
 ms.assetid: f900eb93-25d5-40e5-b5df-b3cea0e831b6
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0438ff11577e74d7de0b0ca30abab74fcab953e0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# PictureBox 컨트롤(Windows Forms)
-Windows Forms `PictureBox` 컨트롤은 비트맵, GIF, JPEG, 메타파일 또는 아이콘 형식의 그래픽을 표시하는 데 사용됩니다.  
+# <a name="picturebox-control-windows-forms"></a>PictureBox 컨트롤(Windows Forms)
+Windows Forms `PictureBox` 컨트롤은 그래픽 비트맵, GIF, JPEG, 메타 파일 또는 아이콘으로 표시 하는 데 사용 합니다.  
   
-## 단원 내용  
+## <a name="in-this-section"></a>단원 내용  
  [PictureBox 컨트롤 개요](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)  
- 이 컨트롤의 정의, 주요 기능 및 속성을 설명합니다.  
+ 이 컨트롤의 정의와 주요 기능 및 속성을 설명합니다.  
   
  [방법: 런타임에 그림의 크기 또는 위치 수정](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
- <xref:System.Windows.Forms.PictureBox.SizeMode%2A> 속성의 기능과 이 속성을 설정하는 방법을 설명합니다.  
+ 파악할 수는 <xref:System.Windows.Forms.PictureBox.SizeMode%2A> 속성 설정 하는 방법과 않습니다.  
   
  [방법: 런타임에 그림 설정](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)  
- 런타임에 그림을 표시하고 지우는 방법에 대해 설명합니다.  
+ 표시 하 고 런타임에 그림의 선택을 취소 하는 방법에 설명 합니다.  
   
- [How to: Load a Picture Using the Designer](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)  
- 디자인 타임에 그림을 폼에 로드하고 표시하는 방법에 대해 설명합니다.  
+ [방법: 디자이너를 사용하여 그림 로드](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)  
+ 로드 하 고 디자인 타임에 폼에 그림을 표시 하는 방법에 설명 합니다.  
   
-## 참조  
+## <a name="reference"></a>참조  
  <xref:System.Windows.Forms.PictureBox>  
- 이 클래스를 설명하며 이 클래스의 모든 멤버에 대한 링크가 포함되어 있습니다.  
+ 이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.  
   
-## 관련 단원  
+## <a name="related-sections"></a>관련 단원  
  [Windows Forms에 사용할 수 있는 컨트롤](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Windows Forms 컨트롤의 전체 목록을 제공하고 컨트롤 사용 정보에 대한 링크를 포함합니다.
+ 사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.

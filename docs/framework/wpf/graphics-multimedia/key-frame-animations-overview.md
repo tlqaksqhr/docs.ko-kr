@@ -1,76 +1,69 @@
 ---
-title: "키 프레임 애니메이션 개요 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "애니메이션, 키 프레임"
-  - "키 프레임[WPF], 키 프레임 애니메이션 정보"
-  - "여러 애니메이션 대상 값"
+title: "키 프레임 애니메이션 개요"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- animation [WPF], key-frame
+- key frames [WPF], about key-frame animations
+- multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-caps.latest.revision: 29
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 24
+caps.latest.revision: "29"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8c4f4179087679ff891c705cf16693fc69c808d8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 키 프레임 애니메이션 개요
-이 항목에서는 키 프레임 애니메이션에 대해 소개합니다.  키 프레임 애니메이션을 사용하면 세 개 이상의 대상 값을 사용하여 애니메이션 효과를 주고 애니메이션의 보간 방법을 제어할 수 있습니다.  
-  
- 이 항목에는 다음 단원이 포함되어 있습니다.  
-  
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
--   [사전 요구 사항](#prerequisites)  
-  
--   [키 프레임 애니메이션 사용](#keyframeanimations)  
-  
--   [관련 항목](#seeAlsoToggle)  
+# <a name="key-frame-animations-overview"></a>키 프레임 애니메이션 개요
+이 항목에서는 키 프레임 애니메이션을 소개합니다. 키 프레임 애니메이션을 사용하면 두 개 이상의 대상 값을 사용하여 애니메이션 효과를 주고 애니메이션의 보간 방법을 제어할 수 있습니다.  
   
 <a name="prerequisites"></a>   
-## 사전 요구 사항  
- 이 개요를 이해하려면 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 애니메이션 및 시간 표시 막대에 대해 잘 알고 있어야 합니다.  애니메이션에 대한 소개는 [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)를 참조하십시오. 또한 From\/To\/By 애니메이션에 대해 익숙하면 이 내용을 이해하는 데 도움이 됩니다.  자세한 내용은 [From\/To\/By 애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/from-to-by-animations-overview.md)을 참조하십시오.  
+## <a name="prerequisites"></a>필수 구성 요소  
+ 이 개요를 이해하려면 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 애니메이션 및 타임라인을 잘 알고 있어야 입니다. 애니메이션 소개를 보려면 [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)를 참조하세요. From/To/By 애니메이션을 잘 알고 있어도 도움이 됩니다. 자세한 내용은 From/To/By 애니메이션 개요를 참조하세요.  
   
 <a name="whatisakeyframeanimation"></a>   
-## 키 프레임 애니메이션  
- From\/To\/By 애니메이션처럼 키 프레임 애니메이션에서도 대상 속성 값에 애니메이션 효과를 줍니다.  해당 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 동안 대상 값 간에 전환되는 효과를 만듭니다.  그러나 From\/To\/By 애니메이션에서는 두 값 사이의 전환을 만드는 반면 단일 키 프레임 애니메이션에서는 원하는 수의 대상 값 사이에서 전환을 만듭니다.  From\/To\/By 애니메이션과 달리 키 프레임 애니메이션에는 대상 값을 설정하는 데 사용하는 From, To 또는 By 속성이 없습니다.  키 프레임 애니메이션의 대상 값은 키 프레임 개체\(이후에는 "키 프레임 애니메이션"\)를 사용하여 지정합니다.  애니메이션의 대상 값을 지정하려면 키 프레임 개체를 만들어 애니메이션의 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> 컬렉션에 추가합니다.  애니메이션을 실행하면 애니메이션이 지정한 프레임 간에 전환됩니다.  
+## <a name="what-is-a-key-frame-animation"></a>키 프레임 애니메이션이란?  
+ From/To/By 애니메이션처럼 키 프레임 애니메이션도 대상 속성의 값에 애니메이션 효과를 줍니다. 대상 값 간에 전환을 만듭니다 해당 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>합니다. 그러나 From/To/By 애니메이션은 두 값 사이에 전환을 만들지만 단일 키 프레임 애니메이션은 원하는 수의 대상 값 사이에 전환을 만들 수 있습니다. From/To/By 애니메이션과 달리, 키 프레임 애니메이션에는 해당 대상 값을 설정하는 데 사용할 From, To 또는 By 속성이 없습니다. 키 프레임 애니메이션의 대상 값은 키 프레임 개체를 사용하여 설명합니다(그래서 "키 프레임 애니메이션"이라고 지칭함). 애니메이션의 대상 값을 지정 하려면 키 프레임 개체를 만들고 애니메이션의에 추가할 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> 컬렉션입니다. 이 애니메이션은 실행될 때 지정된 프레임 간에 전환됩니다.  
   
- 일부 키 프레임 방법에서는 여러 대상 값을 지원하는 것뿐 아니라 여러 보간 방법도 지원합니다.  애니메이션의 보간 방법에서는 애니메이션이 한 값에서 다음 값으로 전환되는 방식을 정의합니다.  세 가지의 보간 형식으로 [discrete](GTMT), [linear](GTMT) 및 [splined](GTMT)가 있습니다.  
+ 일부 키 프레임 메서드는 여러 대상 값을 지원할 뿐만 아니라 여러 보간 방법도 지원합니다. 애니메이션의 보간 방법은 한 값에서 다음 값으로 전환되는 방식을 정의합니다. 보간에는 불연속, 선형 및 스플라인의 세 가지 유형이 있습니다.  
   
- 키 프레임 애니메이션을 사용하여 애니메이션 효과를 주려면 다음 단계를 수행합니다.  
+ 키 프레임 애니메이션으로 애니메이션 효과를 주려면 다음 단계를 완료합니다.  
   
--   From\/To\/By 애니메이션처럼 애니메이션을 선언하고 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>을 지정합니다.  
+-   애니메이션을 선언 하 고 지정 해당 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>에서/하/여 애니메이션에 대 한와 마찬가지로, 합니다.  
   
--   각 대상 값에 대해 적절한 형식의 키 프레임을 만들고 해당 값 및 <xref:System.Windows.Media.Animation.KeyTime>을 설정한 다음 애니메이션의 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> 컬렉션에 추가합니다.  
+-   각 대상 값에 대 한 적절 한 유형의 키 프레임을 만들고, 해당 값을 설정 하 고 <xref:System.Windows.Media.Animation.KeyTime>, 애니메이션의에 추가 하려면 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> 컬렉션입니다.  
   
--   From\/To\/By 애니메이션처럼 애니메이션을 속성과 연결합니다.  스토리보드를 사용하여 속성에 애니메이션을 적용하는 방법에 대한 자세한 내용은 [Storyboard 개요](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)를 참조하십시오.  
+-   From/To/By 애니메이션의 경우처럼 애니메이션을 속성에 연결합니다. storyboard를 사용하여 속성에 애니메이션을 적용하는 방법에 대한 자세한 내용은 [Storyboard 개요](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)를 참조하세요.  
   
- 다음 예제에서는 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>를 사용하여 <xref:System.Windows.Shapes.Rectangle> 요소에 애니메이션 효과를 주어 네 개의 다른 위치로 움직입니다.  
+ 다음 예제에서는 한 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 애니메이션 효과를 주는 <xref:System.Windows.Shapes.Rectangle> 요소 4 개의 서로 다른 위치를 합니다.  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#BasicKeyFrameExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  
   
- From\/To\/By 애니메이션처럼 키 프레임 애니메이션도 태그 및 코드에서 <xref:System.Windows.Media.Animation.Storyboard>를 사용하거나 코드에서 <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> 메서드를 사용하여 속성에 적용할 수 있습니다.  또한 키 프레임 애니메이션을 사용하여 <xref:System.Windows.Media.Animation.AnimationClock>을 만들고 하나 이상의 속성에 적용할 수 있습니다.  애니메이션을 적용하는 다양한 방법에 대한 자세한 내용은 [속성 애니메이션 기술 개요](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)를 참조하십시오.  
+ From/하/By와 같은 애니메이션 키 프레임 애니메이션을 적용할 수 속성을 사용 하 여 한 <xref:System.Windows.Media.Animation.Storyboard> 태그와 코드 또는 사용 하 여는 <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> 코드에서 메서드. 만들려는 키 프레임 애니메이션을 사용할 수도 있습니다는 <xref:System.Windows.Media.Animation.AnimationClock> 하나 이상의 속성에 적용 합니다. 애니메이션 효과를 주기 위한 여러 다양한 방법에 대한 자세한 내용은 [속성 애니메이션 기술 개요](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)를 참조하세요.  
   
 <a name="animation_types"></a>   
-## 키 프레임 애니메이션 형식  
- 애니메이션은 속성 값을 생성하므로 속성 형식에 따라 애니메이션의 형식도 달라집니다.  요소의 <xref:System.Windows.FrameworkElement.Width%2A> 속성과 같이 <xref:System.Double>을 사용하는 속성에 애니메이션 효과를 적용하려면 <xref:System.Double> 값을 생성하는 애니메이션을 사용합니다.  <xref:System.Windows.Point>를 사용하는 속성에 애니메이션 효과를 적용하려면 <xref:System.Windows.Point> 값 등을 생성하는 애니메이션을 사용합니다.  
+## <a name="key-frame-animation-types"></a>키 프레임 애니메이션 형식  
+ 애니메이션은 속성 값을 생성하므로 속성 형식이 다르면 애니메이션 형식도 다릅니다. 사용 하는 속성에 애니메이션 효과를 줄는 <xref:System.Double> (요소의 같은 <xref:System.Windows.FrameworkElement.Width%2A> 속성)를 생성 하는 애니메이션을 사용 하 여 <xref:System.Double> 값입니다. 사용 하는 속성에 애니메이션 효과를 주는 <xref:System.Windows.Point>를 생성 하는 애니메이션을 사용 하 여 <xref:System.Windows.Point> 값, 및 기타 등등.  
   
- 키 프레임 애니메이션 클래스는 <xref:System.Windows.Media.Animation> 네임스페이스에 속하며 다음 명명 규칙을 따릅니다.  
+ 키 프레임 애니메이션 클래스에 속해는 <xref:System.Windows.Media.Animation> 네임 스페이스 및 다음 명명 규칙을 따릅니다.  
   
- *\<Type\>* `AnimationUsingKeyFrames`  
+ *\<Type>* `AnimationUsingKeyFrames`  
   
- 여기서 *\<Type\>*은 클래스가 애니메이션 효과를 주는 값의 형식입니다.  
+ 여기서 *\<Type>*은 클래스가 애니메이션을 적용하는 값의 형식입니다.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 다음과 같은 키 프레임 애니메이션 클래스를 제공합니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서는 다음 키 프레임 애니메이션 클래스를 제공합니다.  
   
-|속성 형식|해당 From\/To\/By 애니메이션 클래스|지원되는 보간 방법|  
-|-----------|-------------------------------|----------------|  
+|속성 형식|해당 From/To/By 애니메이션 클래스|지원되는 보간 방법|  
+|-------------------|------------------------------------------------|-------------------------------------|  
 |<xref:System.Boolean>|<xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames>|불연속|  
 |<xref:System.Byte>|<xref:System.Windows.Media.Animation.ByteAnimationUsingKeyFrames>|불연속, 선형, 스플라인|  
 |<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|불연속, 선형, 스플라인|  
@@ -93,55 +86,54 @@ caps.handback.revision: 24
 |<xref:System.Windows.Vector>|<xref:System.Windows.Media.Animation.VectorAnimationUsingKeyFrames>|불연속, 선형, 스플라인|  
   
 <a name="animation_target_values"></a>   
-## 대상 값\(키 프레임\) 및 키 시간  
- 다른 속성 값에 애니메이션 효과를 적용하기 위해 서로 다른 형식의 키 프레임 애니메이션을 사용하는 것처럼 키 프레임 개체도 애니메이션 효과를 적용하는 값의 각 형식과 지원되는 보간 방법에 대해 서로 다른 형식을 사용합니다.  키 프레임 형식에서는 다음 명명 규칙을 따릅니다.  
+## <a name="target-values-key-frames-and-key-times"></a>대상 값(키 프레임) 및 키 시간  
+ 다양한 속성 형식에 애니메이션 효과를 주기 위한 다양한 형식의 키 프레임 애니메이션이 있는 것처럼, 애니메이션 효과가 적용되는 각 형식의 값 및 지원되는 보간 방법에 따라 다양한 형식의 키 프레임 개체가 사용됩니다. 키 프레임 형식은 다음과 같은 명명 규칙을 따릅니다.  
   
- *\<InterpolationMethod\>\<Type\>* `KeyFrame`  
+ *\<InterpolationMethod>\<Type>* `KeyFrame`  
   
- 여기서 *\<InterpolationMethod\>*는 키 프레임에서 사용하는 보간 방법이고 *\<Type\>*은 클래스에서 애니메이션 효과를 적용하는 값의 형식입니다.  세 가지의 보간 방법을 모두 지원하는 키 프레임 애니메이션에서는 세 가지의 키 프레임 형식을 사용할 수 있습니다.  예를 들어 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>에서는 <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>, <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> 및 <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>의 세 가지 키 프레임 형식을 사용할 수 있습니다.  보간 방법에 대해서는 뒷부분에 나오는 단원에서 자세히 설명합니다.  
+ 여기서 *\<InterpolationMethod>*는 키 프레임이 사용하는 보간 방법이고 *\<Type>*은 클래스가 애니메이션 효과를 주는 값의 형식입니다. 세 가지 보간 방법을 모두 지원하는 키 프레임 애니메이션에는 사용할 수 있는 세 가지 키 프레임 형식이 있습니다. 예를 들어 세 개의 키 프레임 형식을 사용할 수 있습니다는 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>: <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>, <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>, 및 <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>합니다. (보간 방법은 뒤에 나오는 섹션에 자세히 설명되어 있습니다.)  
   
- 키 프레임의 주요 용도는 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 및 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>를 지정하는 것입니다.  모든 키 프레임 형식에서는 이 두 속성을 지정합니다.  
+ 키 프레임의 주요 목적은 지정 하는 것을 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 및 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>합니다. 모든 키 프레임 형식은 이러한 두 가지 속성을 제공합니다.  
   
--   <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 속성은 해당 키 프레임의 대상 값을 지정합니다.  
+-   <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 속성 키 프레임에 대 한 대상 값을 지정 합니다.  
   
--   <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 속성은 애니메이션의 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 내에서 키 프레임의 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>에 도달하는 때를 지정합니다.  
+-   <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 시점을 지정 하는 속성 (애니메이션의 내 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>) 키 프레임의 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 에 도달 합니다.  
   
- 키 프레임 애니메이션이 시작되면 해당 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 속성에서 정의한 순서대로 키 프레임이 반복됩니다.  
+ 에 정의 된 순서 대로 키 프레임이을 반복 하는 키 프레임 애니메이션 시작 되 면 해당 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 속성입니다.  
   
--   시간 0에 키 프레임이 없으면 애니메이션에서 대상 속성의 현재 값과 첫 번째 키 프레임의 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 간에 전환이 만들어지고, 그렇지 않으면 애니메이션의 출력 값이 첫 번째 키 프레임의 값이 됩니다.  
+-   애니메이션 대상 속성의 현재 값 간의 전환을 만듭니다 0 시간에 키 프레임이 있는 경우와 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> ; 첫 번째 키 프레임의 그렇지 않은 경우 애니메이션의 출력 값은 첫 번째 키 프레임의 값입니다.  
   
--   애니메이션에서 두 번째 키 프레임으로 지정한 보간 방법을 사용하여 첫 번째 및 두 번째 키 프레임의 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 간 전환을 만듭니다.  이 전환은 첫 번째 프레임의 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>에서 시작되고 두 번째 키 프레임의 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>에 도달하면 끝납니다.  
+-   애니메이션 간 전환을 만듭니다는 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 두 번째 키 프레임으로 지정한 보간 메서드를 사용 하 여 첫 번째 및 두 번째 키 프레임의 합니다. 첫 번째 키 프레임에서 전환을 시작 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 종료 될 때 두 번째 키 프레임의 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 에 도달 합니다.  
   
--   애니메이션에서 계속해서 이후의 각 키 프레임과 그 앞의 키 프레임 간을 전환합니다.  
+-   애니메이션이 지속되면서 각 후속 키 프레임 및 해당 이전 키 프레임 간에 전환이 생성됩니다.  
   
--   마지막으로 키 시간이 가장 큰 키 프레임 즉, 애니메이션의 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>보다 작거나 같은 키 프레임의 값으로 애니메이션이 전환됩니다.  
+-   마지막으로, 가장 큰 키 시간을 사용 하 여 키 프레임의 값에 애니메이션이 전환 하는 애니메이션의 보다 작거나 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>합니다.  
   
- 애니메이션의 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>이 <xref:System.Windows.Duration.Automatic%2A>이거나 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>이 마지막 키 프레임의 시간과 동일한 경우 애니메이션이 끝납니다.  그렇지 않고 애니메이션의 <xref:System.Windows.Duration>이 마지막 키 프레임의 키 시간보다 큰 경우 애니메이션이 <xref:System.Windows.Duration>의 끝에 도달할 때까지 키 프레임 값을 보유합니다.  모든 애니메이션과 마찬가지로 키 프레임 애니메이션에서도 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 속성을 통해 활성 기간의 끝에 도달할 때 최종 값을 보유할지 여부를 확인합니다.  자세한 내용은 [타이밍 동작 개요](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)을 참조하십시오.  
+ 경우 애니메이션의 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 은 <xref:System.Windows.Duration.Automatic%2A> 나 해당 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 마지막 키 프레임 애니메이션 끝 시간 같습니다. 그렇지 않은 경우, 애니메이션의 <xref:System.Windows.Duration> 의 마지막 키 프레임 애니메이션 보류 될 때까지 키 프레임 값의 끝에 도달 하면 키 시간 보다 크면 해당 <xref:System.Windows.Duration>합니다. 키 프레임 애니메이션 마찬가지로 모든 애니메이션을 사용 하 여 해당 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 속성을 포함 하는지 여부를 것이 최종 값 활성 기간의 끝에 도달 하면 확인 합니다. 자세한 내용은 [타이밍 동작 개요](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)를 참조하세요.  
   
- 다음 예제에서는 앞의 예제에서 정의한 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 개체를 사용하여 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 및 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 속성의 작동 방식을 보여 줍니다.  
+ 다음 예제에서는 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 보여 주기 위해 앞의 예제에 정의 된 개체는 어떻게 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 및 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 속성의 작동 합니다.  
   
--   첫 번째 키 프레임은 곧바로 애니메이션의 출력 값을 0으로 설정합니다.  
+-   첫 번째 키 프레임은 애니메이션의 출력 값을 0으로 즉시 설정합니다.  
   
--   두 번째 키 프레임은 0에서 350 사이에 애니메이션 효과를 적용합니다.  첫 번째 키 프레임이 끝난 후 시작되고\(시간 \= 0초\) 2초 동안 재생된 다음 시간 0:0:2에 끝납니다.  
+-   두 번째 키 프레임은 0에서 350으로 애니메이션 효과를 줍니다. 이 키 프레임은 첫 번째 키 프레임이 종료된 후(시간 = 0초) 시작되고 2초 동안 재생된 후 시간 = 0:0:2에 종료됩니다.  
   
--   세 번째 키 프레임은 350에서 50 사이에 애니메이션 효과를 적용합니다.  두 번째 키 프레임이 끝난 후 시작되고\(시간 \= 2초\) 5초 동안 재생된 다음 시간 0:0:7에 끝납니다.  
+-   세 번째 키 프레임은 350에서 50으로 애니메이션 효과를 줍니다. 이 키 프레임은 두 번째 키 프레임이 종료된 후(시간 = 2초) 시작되고 5초 동안 재생된 후 시간 = 0:0:7에 종료됩니다.  
   
--   네 번째 키 프레임은 50에서 200 사이에 애니메이션 효과를 적용합니다.  세 번째 키 프레임이 끝난 후 시작되고\(시간 \= 7초\) 1초 동안 재생된 다음 시간 0:0:8에 끝납니다.  
+-   네 번째 키 프레임은 50에서 200으로 애니메이션 효과를 줍니다. 이 키 프레임은 세 번째 키 프레임이 종료된 후(시간 = 7초) 시작되고 1초 동안 재생된 후 시간 = 0:0:8에 종료됩니다.  
   
--   애니메이션의 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 속성을 10초로 설정했으므로 애니메이션에서는 시간 0:0:10에 끝나기 전에 2초 동안 최종 값을 보유합니다.  
+-   때문에 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 애니메이션의 속성을 10 초로 설정 된, 끝나기 전에 2 초에 대 한 최종 값을 보유 하는 애니메이션 시간 = 0:0:10입니다.  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#BasicKeyFrameExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#BasicKeyFrameExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  
   
 <a name="interpolationmethods"></a>   
-## 보간 방법  
- 앞의 단원에서 일부 키 프레임 애니메이션은 여러 보간 방법을 지원한다고 설명했습니다.  애니메이션의 보간은 애니메이션에서 해당 지속 시간 동안 값 사이를 전환하는 방법을 말합니다.  애니메이션에서 사용할 키 프레임 형식을 선택하면 해당 키 프레임 세그먼트에 대한 보간 방법을 정의할 수 있습니다.  보간 방법에는 세 가지 형식으로 선형, 불연속 및 스플라인이 있습니다.  
+## <a name="interpolation-methods"></a>보간 방법  
+ 이전 섹션에서는 일부 키 프레임 애니메이션이 여러 보간 방법을 지원한다고 언급했습니다. 애니메이션의 보간은 애니메이션이 지속 기간 동안 값 사이에서 전환되는 방식을 설명합니다. 애니메이션에서 사용하는 키 프레임 형식을 선택하여 해당 키 프레임 세그먼트에 대한 보간 방법을 정의할 수 있습니다. 보간 방법 종류에는 선형, 불연속 및 스플라인의 세 가지가 있습니다.  
   
-### 선형 보간  
- [linear interpolation](GTMT)을 사용하면 애니메이션이 세그먼트 지속 시간의 일정 비율로 진행됩니다.  예를 들어 키 프레임 세그먼트가 5초의 지속 시간 동안 0에서 10 사이를 전환하면 애니메이션에서는 지정한 시간에 다음 값을 출력합니다.  
+### <a name="linear-interpolation"></a>선형 보간  
+ 선형 보간을 사용하면 애니메이션이 세그먼트 기간에 일정한 속도로 진행됩니다. 예를 들어 키 프레임 세그먼트가 5초 동안 0에서 10으로 전환되면 애니메이션은 지정된 시간에 다음 값을 출력합니다.  
   
 |시간|출력 값|  
-|--------|----------|  
+|----------|------------------|  
 |0|0|  
 |1|2|  
 |2|4|  
@@ -151,11 +143,11 @@ caps.handback.revision: 24
 |4.5|9|  
 |5|10|  
   
-### 불연속 보간  
- [discrete interpolation](GTMT)을 사용하면 애니메이션 기능이 보간 없이 한 값에서 다음 값으로 이동합니다.  키 프레임 세그먼트가 5초의 지속 시간 동안 0에서 10 사이를 전환하면 애니메이션에서는 지정한 시간에 다음 값을 출력합니다.  
+### <a name="discrete-interpolation"></a>불연속 보간  
+ 불연속 보간을 사용하면 애니메이션 함수가 보간 없이 한 값에서 다음 값으로 이동합니다. 키 프레임 세그먼트가 5초 동안 0에서 10으로 전환되면 애니메이션은 지정된 시간에 다음 값을 출력합니다.  
   
 |시간|출력 값|  
-|--------|----------|  
+|----------|------------------|  
 |0|0|  
 |1|0|  
 |2|0|  
@@ -165,158 +157,149 @@ caps.handback.revision: 24
 |4.5|0|  
 |5|10|  
   
- 애니메이션에서는 세그먼트 지속 시간의 끝에 도달할 때까지 출력 값을 변경하지 않습니다.  
+ 세그먼트 기간의 거의 끝날 때까지 애니메이션이 출력 값을 변경하지 않는 방식을 살펴보세요.  
   
- [Splined interpolation](GTMT)은 좀 더 복잡합니다.  이 보간 방법에 대해서는 다음 단원에서 설명합니다.  
+ 스플라인 보간은 좀 더 복잡합니다. 이 방식은 다음 섹션에서 설명합니다.  
   
 <a name="anim_spline"></a>   
-### 스플라인 보간  
- 스플라인 보간을 사용하면 더 실감나는 타이밍 효과를 얻을 수 있습니다.  애니메이션은 실제 세계에서 일어나는 효과를 모방하는 데 사용되는 경우가 많으므로 개발자는 개체의 가속 및 감속을 미세 조정하고 타이밍 세그먼트를 긴밀히 조작해야 할 수 있습니다.  스플라인 키 프레임을 사용하면 스프라인 보간과 함께 애니메이션 효과를 적용할 수 있습니다.  다른 키 프레임에서는 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 및 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>을 지정합니다.  또한 스플라인 키 프레임에서는 <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A>도 지정합니다.  다음 예제에서는 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>의 단일 스플라인 키 프레임을 보여 줍니다.  <xref:System.Windows.Media.Animation.KeySpline> 속성이 바로 스플라인 키 프레임을 다른 형식의 키 프레임과 구별되게 만드는 속성입니다.  
+### <a name="splined-interpolation"></a>스플라인 보간  
+ 스플라인 보간은 보다 실제적인 타이밍 효과를 얻기 위해 사용할 수 있습니다. 애니메이션은 실제 환경에서 발생하는 효과를 모방하는 데 주로 사용되므로 개발자는 개체의 가속 및 감속을 보다 세밀하게 제어하고 타이밍 세그먼트를 면밀히 조작해야 할 수 있습니다. 스플라인 키 프레임을 사용하면 스플라인 보간을 사용하여 애니메이션 효과를 줄 수 있습니다. 다른 키 프레임으로 지정 된 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 및 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>합니다. 스플라인 키 프레임으로도 지정 된 <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A>합니다. 다음 예제에서는 단일 스플라인 키 프레임에 대 한는 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>합니다. 공지는 <xref:System.Windows.Media.Animation.KeySpline> 속성; 스플라인 키 프레임의 키 프레임의 다른 형식에서 다른 구성입니다.  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#SingleSplineKeyFrameExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  
   
- [cubic Bezier curve](GTMT)은 시작점과 끝점, 그리고 두 개의 제어점으로 정의됩니다.  스플라인 키 프레임의 <xref:System.Windows.Media.Animation.KeySpline> 속성은 \(0,0\)에서 \(1,1\)에 이르는 베지어 곡선의 제어점 두 개를 정의합니다.  첫 번째 제어점은 베지어 곡선의 처음 절반에 대한 곡선 인수를 제어하고, 두 번째 제어점은 베지어 세그먼트의 나머지 절반에 대한 곡선 인수를 제어합니다.  결과 곡선에서는 해당 스플라인 키 프레임의 변경 속도를 보여 줍니다.  곡선이 가파를수록 키 프레임의 값이 더 빠르게 변경됩니다.  곡선의 경사가 완만할수록 키 프레임의 값이 더 느리게 변경됩니다.  
+ 입방형 3차원 곡선은 시작점, 끝점 및 두 개의 제어점에 의해 정의됩니다. <xref:System.Windows.Media.Animation.KeySpline> 스플라인 키 프레임의 속성 (0, 0)에서 (1, 1)를 확장 하는 베 지 어 곡선의 제어점 두 개를 정의 합니다. 첫 번째 제어점은 3차원 곡선의 첫 번째 절반 부분에 대한 곡선 요소를 제어하 고 두 번째 제어점은 3차원 곡선의 두 번째 절반 부분에 대한 곡선 요소를 제어합니다. 결과 곡선은 해당 스플라인 키 프레임의 변동률을 설명합니다. 곡선이 더 가파를수록 키 프레임 값이 더 빠르게 변경됩니다. 곡선이 평평해지면 키 프레임은 값을 더 느리게 변경합니다.  
   
- <xref:System.Windows.Media.Animation.KeySpline>을 사용하면 떨어지는 물이나 튀는 공과 같은 실제 궤도를 시뮬레이션하거나 동작 애니메이션에 "점점 가까이" 및 "점점 멀리" 효과를 적용할 수 있습니다.  배경 페이드나 컨트롤 단추 다시 바인딩과 같은 사용자 상호 작용 효과의 경우 스플라인 보간을 적용하여 애니메이션의 변경 속도를 특정 방식으로 높이거나 줄일 수 있습니다.  
+ 사용할 수 있습니다 <xref:System.Windows.Media.Animation.KeySpline> 을 떨어지는 물 또는 공, 반송와 같은 물리적 궤도 시뮬레이션 하거나 동작 애니메이션을 다른 "점점" 및 "감속" 효과 적용 합니다. 배경 페이드 또는 컨트롤 단추 리바운드와 같은 사용자 상호 작용 효과의 경우 스플라인 보간을 적용하여 특정한 방식으로 애니메이션의 변동률을 빠르게 하거나 느리게 할 수 있습니다.  
   
- 다음 예제에서는 <xref:System.Windows.Media.Animation.KeySpline>을 0,1 1,0으로 지정하여 다음과 같은 베지어 곡선을 만듭니다.  
+ 다음 예에서는 지정 된 <xref:System.Windows.Media.Animation.KeySpline> 의 0, 1 1, 0, 다음 베 지 어 곡선을 만듭니다.  
   
- ![3차원 곡선](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyspline-0-1-1-0.png "graphicsmm\_keyspline\_0\_1\_1\_0")  
-제어점 \(0.0, 1.0\) 및 \(1.0, 0.0\)을 사용한 키 스플라인  
+ ![베 지 어 곡선](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyspline-0-1-1-0.png "graphicsmm_keyspline_0_1_1_0")  
+제어점 (0.0, 1.0) 및 (1.0, 0.0)을 갖는 키 스플라인  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#SingleSplineKeyFrameExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  
   
- 이 키 프레임의 애니메이션 효과는 시작할 때 빠르고 느려졌다가 끝나기 전에 다시 빨라집니다.  
+ 이 키 프레임을 사용하면 애니메이션이 시작할 때 빨라졌다가 느려진 후 끝나기 전에 다시 빨라집니다.  
   
- 다음 예제에서는 <xref:System.Windows.Media.Animation.KeySpline>을 0.5,0.25 0.75,1.0으로 지정하여 다음과 같은 베지어 곡선을 만듭니다.  
+ 다음 예에서는 지정 된 <xref:System.Windows.Media.Animation.KeySpline> 의 0.5,0.25 0.75, 1.0으로 다음 베 지 어 곡선을 만듭니다.  
   
- ![3차원 곡선](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyspline-025-050-075-10.png "graphicsmm\_keyspline\_025\_050\_075\_10")  
-제어점 \(0.25, 0.5\) 및 \(0.75, 1.0\)을 사용한 키 스플라인  
+ ![베 지 어 곡선](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-keyspline-025-050-075-10.png "graphicsmm_keyspline_025_050_075_10")  
+제어점 (0.25, 0.5) 및 (0.75, 1.0)을 갖는 키 스플라인  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExampleInline3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexampleinline3)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SingleSplineKeyFrameExampleInline3](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#singlesplinekeyframeexampleinline3)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#SingleSplineKeyFrameExampleInline3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexampleinline3)]  
   
- 베지어 곡선의 곡률이 거의 변경되지 않으므로 이 키 프레임의 애니메이션 효과는 거의 일정한 속도로 적용되다가 끝에 이르러 약간 느려집니다.  
+ 이 3차원 곡선의 곡률은 거의 변경되지 않으므로 이 키 프레임 애니메이션은 거의 일정한 속도를 유지하다가 끝에서는 다소 느려집니다.  
   
- 다음 예제에서는 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>를 직사각형의 위치에 애니메이션 효과를 적용합니다.  <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>에서는 <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> 개체를 사용하므로 각 키 프레임 값 사이의 전환에는 스플라인 보간이 사용됩니다.  
+ 다음 예제에서는 한 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 사각형의 위치에 애니메이션 효과를 주는 합니다. 때문에 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 사용 하 여 <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> 각 키 프레임 값 간을 전환 스플라인 보간을 사용 하 여 개체입니다.  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SplinedInterpolationExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#splinedinterpolationexample)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#SplinedInterpolationExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#splinedinterpolationexample)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#SplinedInterpolationExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#splinedinterpolationexample)]  
   
- 스플라인 보간은 이해하기 까다로울 수 있으므로 여러 설정을 실험해 보면 도움이 될 수 있습니다.  [Key Spline Animation 샘플](http://go.microsoft.com/fwlink/?LinkID=160011)에서는 키 스플라인 값을 변경하고 애니메이션에 미치는 영향을 확인할 수 있습니다.  
+ 스플라인 보간은 이해하기 어려울 수 있으므로 다른 설정을 사용해서 시험해보면 도움이 될 수 있습니다. [키 스플라인 애니메이션 샘플](http://go.microsoft.com/fwlink/?LinkID=160011)을 사용하여 키 스플라인 값을 변경하고 애니메이션에 나타나는 결과를 볼 수 있습니다.  
   
 <a name="combininginterpolationmethods"></a>   
-### 보간 방법 조합  
- 키 프레임을 사용할 때 하나의 키 프레임 애니메이션에서 여러 보간 유형을 함께 사용할 수 있습니다.  서로 다른 보간을 사용하는 두 개의 키 프레임 애니메이션이 이어지면 두 번째 키 프레임의 보간 방법을 사용하여 첫 번째 값에서 두 번째 값으로의 전환을 만듭니다.  
+### <a name="combining-interpolation-methods"></a>보간 방법 조합  
+ 단일 키 프레임 애니메이션에서 여러 다른 보간 형식을 갖는 키 프레임을 사용할 수 있습니다. 다른 보간을 사용하는 두 개의 키 프레임 애니메이션이 서로를 따라 진행되면 두 번째 키 프레임의 보간 방법이 첫 번째 값에서 두 번째 값으로의 전환을 만드는 데 사용됩니다.  
   
- 다음 예제에서는 선형, 스플라인 및 불연속 보간을 사용하는 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>를 만듭니다.  
+ 다음 예제에서는 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> 해당 사용 하 여 선형 스플라인 및 불연속 보간을 만들어집니다.  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#ComboInterpolationExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/InterpolationMethodsExample.xaml#combointerpolationexample)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#ComboInterpolationExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/InterpolationMethodsExample.xaml#combointerpolationexample)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#ComboInterpolationExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#combointerpolationexample)]  
   
 <a name="keytimes"></a>   
-## 지속 시간 및 키 시간에 대한 추가 정보  
- 다른 애니메이션과 마찬가지로 키 프레임 애니메이션에는 <xref:System.Windows.Duration> 속성이 있습니다.  애니메이션의 <xref:System.Windows.Duration>을 지정하는 동시에 해당 지속 시간의 어느 만큼을 각 키 프레임에 부여할 것인지 지정해야 합니다.  이렇게 하려면 각 애니메이션 키 프레임의 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>을 지정합니다.  각 키 프레임의 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>은 해당 키 프레임이 끝나는 시간을 지정합니다.  
+## <a name="more-about-duration-and-key-times"></a>기간 및 키 시간에 대한 추가 정보  
+ 마찬가지로 다른 애니메이션 키 프레임 애니메이션에는 한 <xref:System.Windows.Duration> 속성입니다. 애니메이션의 지정 외에도 <xref:System.Windows.Duration>, 해당 기간의 부분 각 키 프레임에 제공 되어 지정 해야 합니다. 설명 하 여 이렇게 한 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 각 애니메이션의 키 프레임에 대 한 합니다. 각 키 프레임의 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 해당 키 프레임이 끝나는 시기를 지정 합니다.  
   
- <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 속성은 키 시간이 재생되는 길이는 지정하지 않습니다.  키 프레임이 재생되는 시간은 키 프레임이 끝나는 시간, 이전 키 프레임이 끝난 시간 및 애니메이션의 지속 시간에 따라 결정됩니다.  키 시간은 시간 값, 백분율, 특수 값\(<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> 또는 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>\) 등으로 지정할 수 있습니다.  
+ <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 속성 재생 하는 길이 키 시간을 지정 하지 않습니다. 키 프레임이 재생되는 기간은 키 프레임이 끝나는 시점, 이전 키 프레임 끝난 시점 및 애니메이션의 지속 시간에 의해 결정됩니다. 특수 값 또는 백분율을 시간 값으로 키 시간을 지정할 수 있습니다 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> 또는 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>합니다.  
   
- 다음 목록에서는 키 시간을 지정하는 여러 방법을 보여 줍니다.  
+ 다음 목록에서는 키 시간을 지정하는 여러 가지 방법을 설명합니다.  
   
-### TimeSpan 값  
- <xref:System.TimeSpan> 값을 사용하여 <xref:System.Windows.Media.Animation.KeyTime>을 지정할 수 있습니다.  이 값은 0보다 크거나 같고 애니메이션의 지속 시간보다 작거나 같아야 합니다.  다음 예제에서는 지속 시간이 10초이고 키 시간을 시간 값으로 지정한 네 개의 키 프레임이 있는 애니메이션을 보여 줍니다.  
+### <a name="timespan-values"></a>TimeSpan 값  
+ 사용할 수 있습니다 <xref:System.TimeSpan> 지정 하는 값을 <xref:System.Windows.Media.Animation.KeyTime>합니다. 값은 0보다 크거나 같고 애니메이션의 지속 시간보다 작거나 같아야 합니다. 다음 예제에서는 기간이 10초이고 해당 키 시간이 시간 값으로 지정된 4개의 키 프레임을 갖는 애니메이션을 보여 줍니다.  
   
--   첫 번째 키 프레임은 기준 값에서 100 사이에 처음 3초 동안 애니메이션 효과를 적용하며 시간 0:0:03에 끝납니다.  
+-   첫 번째 키 프레임은 처음 3초 동안 기준 값에서 100까지 애니메이션 효과를 준 다음 시간 = 0:0:03에서 끝납니다.  
   
--   두 번째 키 프레임은 100에서 200 사이에 애니메이션 효과를 적용합니다.  첫 번째 키 프레임이 끝난 후 시작되고\(시간 \= 3초\) 5초 동안 재생된 다음 시간 0:0:8에 끝납니다.  
+-   두 번째 키 프레임은 100에서 200으로 애니메이션 효과를 줍니다. 이 키 프레임은 첫 번째 키 프레임이 종료된 후(시간 = 3초) 시작되고 5초 동안 재생된 후 시간 = 0:0:8에 종료됩니다.  
   
--   세 번째 키 프레임은 200에서 500 사이에 애니메이션 효과를 적용합니다.  두 번째 키 프레임이 끝난 후 시작되고\(시간 \= 8초\) 1초 동안 재생된 다음 시간 0:0:9에 끝납니다.  
+-   세 번째 키 프레임은 200에서 500으로 애니메이션 효과를 줍니다. 이 키 프레임은 두 번째 키 프레임이 종료된 후(시간 = 8초) 시작되고 1초 동안 재생된 후 시간 = 0:0:9에 종료됩니다.  
   
--   네 번째 키 프레임은 500에서 600 사이에 애니메이션 효과를 적용합니다.  세 번째 키 프레임이 끝난 후 시작되고\(시간 \= 9초\) 1초 동안 재생된 다음 시간 0:0:10에 끝납니다.  
+-   네 번째 키 프레임은 500에서 600으로 애니메이션 효과를 줍니다. 이 키 프레임은 세 번째 키 프레임이 종료된 후(시간 = 9초) 시작되고 1초 동안 재생된 후 시간 = 0:0:10에 종료됩니다.  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#TimeSpanKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#timespankeytimeexample)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#TimeSpanKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#timespankeytimeexample)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#TimeSpanKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#timespankeytimeexample)]  
   
-### 백분율 값  
- 백분율 값은 키 프레임이 애니메이션 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>의 일정 비율에 끝나도록 지정합니다.  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서는 백분율을 숫자로 지정하고 뒤에 `%` 기호를 붙입니다.  코드에서는 <xref:System.Windows.Media.Animation.KeyTime.FromPercent%2A> 메서드를 사용하고 이 메서드에 백분율을 나타내는 <xref:System.Double>을 전달합니다.  이 값은 0보다 크거나 같고 100%보다 작거나 같아야 합니다.  다음 예제에서는 지속 시간이 10초이고 키 시간을 백분율로 지정한 네 개의 키 프레임이 있는 애니메이션을 보여 줍니다.  
+### <a name="percentage-values"></a>백분율 값  
+ 백분율 값을 키 프레임 애니메이션의 일정 비율 끝나는 지정 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>합니다. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서는 숫자를 입력한 후 `%` 기호를 입력하여 백분율을 지정합니다. 코드를 사용 하 여는 <xref:System.Windows.Media.Animation.KeyTime.FromPercent%2A> 메서드 전달는 <xref:System.Double> 백분율을 나타내는입니다. 값은 0보다 크거나 같고 100%보다 작거나 같아야 합니다. 다음 예제에서는 기간이 10초이고 해당 키 시간이 백분율로 지정된 4개의 키 프레임을 갖는 애니메이션을 보여 줍니다.  
   
--   첫 번째 키 프레임은 기준 값에서 100 사이에 처음 3초 동안 애니메이션 효과를 적용하며 시간 0:0:3에 끝납니다.  
+-   첫 번째 키 프레임은 처음 3초 동안 기준 값에서 100까지 애니메이션 효과를 준 다음 시간 = 0:0:3에서 끝납니다.  
   
--   두 번째 키 프레임은 100에서 200 사이에 애니메이션 효과를 적용합니다.  첫 번째 키 프레임이 끝난 후 시작되고\(시간 \= 3초\) 5초 동안 재생된 다음 시간 0:0:8\(0.8 \* 10 \= 8\)에 끝납니다.  
+-   두 번째 키 프레임은 100에서 200으로 애니메이션 효과를 줍니다. 이 키 프레임은 첫 번째 키 프레임이 종료된 후(시간 = 3초) 시작되고 5초 동안 재생된 후 시간 = 0:0:8(0.8 * 10 = 8)에 종료됩니다.  
   
--   세 번째 키 프레임은 200에서 500 사이에 애니메이션 효과를 적용합니다.  두 번째 키 프레임이 끝난 후 시작되고\(시간 \= 8초\) 1초 동안 재생된 다음 시간 0:0:9\(0.9 \* 10 \= 9\)에 끝납니다.  
+-   세 번째 키 프레임은 200에서 500으로 애니메이션 효과를 줍니다. 이 키 프레임은 두 번째 키 프레임이 종료된 후(시간 = 8초) 시작되고 1초 동안 재생된 후 시간 = 0:0:9(0.9 * 10 = 9)에 종료됩니다.  
   
--   네 번째 키 프레임은 500에서 600 사이에 애니메이션 효과를 적용합니다.  세 번째 키 프레임이 끝난 후 시작되고\(시간 \= 9초\) 1초 동안 재생된 다음 시간 0:0:10\(1 \* 10 \= 10\)에 끝납니다.  
+-   네 번째 키 프레임은 500에서 600으로 애니메이션 효과를 줍니다. 이 키 프레임은 세 번째 키 프레임이 종료된 후(시간 = 9초) 시작되고 1초 동안 재생된 후 시간 = 0:0:10(1 * 10 = 10)에 종료됩니다.  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#PercentageKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#percentagekeytimeexample)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#PercentageKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#percentagekeytimeexample)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#PercentageKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#percentagekeytimeexample)]  
   
-### 특수 값, Uniform  
- 각 키 프레임이 동일한 시간을 사용하도록 하려면 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> 타이밍을 사용합니다.  
+### <a name="special-value-uniform"></a>특수 값, Uniform  
+ 사용 하 여 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> 시간의 동일한 시간을 각 키 프레임을 원하는 경우 시간을 계산 합니다.  
   
- <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> 키 시간에서는 사용 가능한 시간을 키 프레임의 수로 균일하게 나누어 각 키 프레임의 종료 시간을 지정합니다.  다음 예제에서는 지속 시간이 10초이고 키 시간을 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>으로 지정한 네 개의 키 프레임이 있는 애니메이션을 보여 줍니다.  
+ A <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> 키 시간 나눈 사용 가능한 시간 동일 하 게 각 키 프레임의 종료 시간을 결정 하는 키 프레임 수입니다. 다음 예제에서는 10 초 동안 애니메이션 및으로 지정 된 키를 가진 시간이 네 개의 키 프레임이 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>합니다.  
   
--   첫 번째 키 프레임은 기준 값에서 100 사이에 처음 2.5초 동안 애니메이션 효과를 적용하며 시간 0:0:2.5에 끝납니다.  
+-   첫 번째 키 프레임은 처음 2.5초 동안 기준 값에서 100까지 애니메이션 효과를 준 다음 시간 = 0:0:2.5에서 끝납니다.  
   
--   두 번째 키 프레임은 100에서 200 사이에 애니메이션 효과를 적용합니다.  첫 번째 키 프레임이 끝난 후 시작되고\(시간 \= 2.5초\) 약 2.5초 동안 재생된 다음 시간 0:0:5에 끝납니다.  
+-   두 번째 키 프레임은 100에서 200으로 애니메이션 효과를 줍니다. 이 키 프레임은 첫 번째 키 프레임이 종료된 후(시간 = 2.5초) 시작되고 약 2.5초 동안 재생된 후 시간 = 0:0:5에 종료됩니다.  
   
--   세 번째 키 프레임은 200에서 500 사이에 애니메이션 효과를 적용합니다.  두 번째 키 프레임이 끝난 후 시작되고\(시간 \= 5초\) 2.5초 동안 재생된 다음 시간 0:0:7.5에 끝납니다.  
+-   세 번째 키 프레임은 200에서 500으로 애니메이션 효과를 줍니다. 이 키 프레임은 두 번째 키 프레임이 종료된 후(시간 = 5초) 시작되고 2.5초 동안 재생된 후 시간 = 0:0:7.5에 종료됩니다.  
   
--   네 번째 키 프레임은 500에서 600 사이에 애니메이션 효과를 적용합니다.  두 번째 키 프레임이 끝난 후 시작되고\(시간 \= 7.5초\) 2.5초 동안 재생된 다음 시간 0:0:1에 끝납니다.  
+-   네 번째 키 프레임은 500에서 600으로 애니메이션 효과를 줍니다. 이 키 프레임은 두 번째 키 프레임이 종료된 후(시간 = 7.5초) 시작되고 2.5초 동안 재생된 후 시간 = 0:0:1에 종료됩니다.  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#UniformKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#uniformkeytimeexample)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#UniformKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#uniformkeytimeexample)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#UniformKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#uniformkeytimeexample)]  
   
-### 특수 값, Paced  
- 일정 속도로 애니메이션 효과를 적용하려면 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> 타이밍을 사용합니다.  
+### <a name="special-value-paced"></a>특수 값, Paced  
+ 사용 하 여 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> 일정 한 비율로에 애니메이션 효과 적용할 때 시간을 계산 합니다.  
   
- <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> 키 시간에서는 사용 가능한 시간을 각 키 프레임 길이에 따라 할당하여 각 프레임의 지속 시간을 지정합니다.  그러면 애니메이션의 속도를 일정하게 유지하는 동작이 만들어집니다.  다음 예제에서는 지속 시간이 10초이고 키 시간을 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>로 지정한 네 개의 키 프레임이 있는 애니메이션을 보여 줍니다.  
+ A <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> 키 시간은 각 각 프레임의 기간을 결정 하는 키 프레임의 길이 따라 사용할 수 있는 시간을 할당 합니다.  이를 통해 애니메이션의 속도가 일정하게 유지되는 동작이 제공됩니다.  다음 예제에서는 10 초 동안 애니메이션으로 지정 된 키를 가진 시간이 세 가지 키 프레임 및 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>합니다.  
   
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#PacedKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snip/CS/KeyTimesExample.xaml#pacedkeytimeexample)]  -->
- <!-- TODO: review snippet reference [!code-xml[keyframes_ovw_snip#PacedKeyTimeExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_ovw_snip/XAML/KeyTimesExample.xaml#pacedkeytimeexample)]  -->  
+ [!code-xaml[keyframes_ovw_snippet#PacedKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#pacedkeytimeexample)]  
   
- 마지막 키 프레임의 키 시간이 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> 또는 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>이면 확인된 키 시간이 100%로 설정됩니다.  여러 프레임 애니메이션의 첫 번째 키 프레임이 Paced이면 확인된 키 시간이 0으로 설정됩니다.  키 프레임 컬렉션에 하나의 키 프레임만 포함되어 있고 Paced 키 프레임인 경우에는 확인된 키 시간이 100%로 설정됩니다.  
+ 키 시간은 마지막 키 프레임의 경우 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> 또는 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>, 확인 된 키 시간이 100%로 설정 됩니다. 다중 프레임 애니메이션의 첫 번째 키 프레임 속도가 지정되면 확인된 키 시간이 0으로 설정됩니다. (키 프레임 컬렉션에 단일 키 프레임만 포함되며 속도가 지정된 키 프레임인 경우 확인된 키 시간이 100%로 설정됩니다.)  
   
- 하나의 키 프레임 애니메이션 내의 다른 키 프레임에서는 서로 다른 키 시간 형식을 사용할 수 있습니다.  
+ 단일 키 프레임 애니메이션 내의 다른 키 프레임은 다른 키 시간 형식을 사용할 수 있습니다.  
   
 <a name="combiningkeytimes"></a>   
-## 키 시간, 순서가 잘못된 키 프레임 결합  
- 키 프레임을 사용할 때 동일한 애니메이션에서 여러 <xref:System.Windows.Media.Animation.KeyTime> 값 형식을 사용할 수 있습니다.  그리고 키 프레임을 재생할 순서대로 추가하는 것이 좋지만 그렇게 하지 않아도 됩니다.  애니메이션 및 타이밍 시스템에서는 순서가 잘못된 키 프레임을 해결할 수 있습니다.  키 시간이 잘못된 키 프레임은 무시됩니다.  
+## <a name="combining-key-times-out-of-order-key-frames"></a>키 시간 결합, 정렬되지 않은 키 프레임  
+ 키 프레임을 사용 하 여 서로 다른 <xref:System.Windows.Media.Animation.KeyTime> 동일한 애니메이션의 값 형식이 있습니다. 또한 키 프레임을 재생되는 순서대로 추가하는 것이 좋지만 반드시 그래야 할 필요는 없습니다. 애니메이션 및 타이밍 시스템은 정렬되지 않은 키 프레임을 확인할 수 있습니다. 잘못된 키 프레임을 갖는 키 시간은 무시됩니다.  
   
- 다음 목록에서는 키 프레임 애니메이션의 키 프레임에 대한 키 시간을 확인하는 절차를 보여 줍니다.  
+ 다음 목록에서는 키 프레임 애니메이션의 키 프레임에 대한 키 시간을 확인하는 절차를 설명합니다.  
   
-1.  <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> 값을 확인합니다.  
+1.  해결 <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> 값입니다.  
   
-2.  애니메이션의 총 보간 시간 즉, 키 프레임 애니메이션에서 정방향 반복을 완료하는 데 걸리는 총 시간을 확인합니다.  
+2.  키 프레임 애니메이션이 정방향 반복을 완료하는 데 걸리는 총 시간을 나타내는 애니메이션의 *총 보간 시간*을 확인합니다.  
   
-    1.  애니메이션의 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>이 <xref:System.Windows.Duration.Automatic%2A> 또는 <xref:System.Windows.Duration.Forever%2A>가 아니면 총 보간 시간은 애니메이션의 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 속성 값입니다.  
+    1.  경우 애니메이션의 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 않습니다 <xref:System.Windows.Duration.Automatic%2A> 또는 <xref:System.Windows.Duration.Forever%2A>, 총 보간 시간은 애니메이션의 값인 <xref:System.Windows.Media.Animation.Timeline.Duration%2A> 속성입니다.  
   
-    2.  그렇지 않으면 총 보간 시간은 키 프레임 사이에서 지정한 가장 큰 <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> 값\(있는 경우\)입니다.  
+    2.  그렇지 않으면 총 보간 시간은 가장 큰 <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> 하나라도 해당 하는 경우 키 프레임 간에 지정 된 값입니다.  
   
-    3.  그 외의 경우 총 보간 시간은 1초입니다.  
+    3.  이 값이 없으면 총 보간 시간은 1초입니다.  
   
-3.  총 보간 시간 값을 사용하여 <xref:System.Windows.Media.Animation.KeyTimeType> <xref:System.Windows.Media.Animation.KeyTime> 값을 확인합니다.  
+3.  총 보간 시간 값을 사용 하 여 해결 하려면 <xref:System.Windows.Media.Animation.KeyTimeType.Percent> <xref:System.Windows.Media.Animation.KeyTime> 값입니다.  
   
-4.  앞의 단계에서 확인하지 않은 경우 마지막 키 프레임을 확인합니다.  마지막 키 프레임의 <xref:System.Windows.Media.Animation.KeyTime>이 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> 또는 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>이면 확인된 키 시간은 총 보간 시간과 동일합니다.  
+4.  이전 단계에서 확인하지 않은 경우 마지막 키 프레임을 확인합니다. 경우는 <xref:System.Windows.Media.Animation.KeyTime> 은 마지막 키 프레임이 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> 또는 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, 확인 된 시간이 총 보간 시간은 같게 됩니다.  
   
-     첫 번째 키 프레임의 <xref:System.Windows.Media.Animation.KeyTime>이 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>이고 이 애니메이션에 두 개 이상의 키 프레임이 있으면 해당 <xref:System.Windows.Media.Animation.KeyTime> 값이 0으로 확인됩니다. 키 프레임이 하나뿐이고 해당 <xref:System.Windows.Media.Animation.KeyTime> 값이 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>이면 앞의 단계에서 설명한 대로 이 값이 총 보간 시간으로 확인됩니다.  
+     경우는 <xref:System.Windows.Media.Animation.KeyTime> 은 첫 번째 키 프레임의 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> 이 애니메이션에 개 이상의 키 프레임의 문제를 해결 하 고 해당 <xref:System.Windows.Media.Animation.KeyTime> 하나만 키 프레임 이면 0입니다; 값 및 해당 <xref:System.Windows.Media.Animation.KeyTime> 값은 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, 총 해결 되었기 이전 단계에 설명 된 대로 보간 시간입니다.  
   
-5.  나머지 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> 값을 확인합니다. 각 값에는 사용 가능한 시간의 동일한 몫이 할당됩니다.  이 프로세스 동안 확인되지 않은 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> 값은 임시로 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> 값으로 처리되고 임시로 확인된 시간을 가집니다.  
+5.  남은 해결 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> 값: 각 제공 된 사용 가능한 시간을 균등 합니다.  이 과정에서 확인 되지 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> 값으로 일시적으로 처리 됩니다 <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> 값, 그리고 get 임시 해결 시간입니다.  
   
-6.  근처에 있는 키 프레임 중 <xref:System.Windows.Media.Animation.KeyTime> 값이 확인된 키 프레임을 사용하여 키 시간이 지정되지 않은 키 프레임의 <xref:System.Windows.Media.Animation.KeyTime> 값을 확인합니다.  
+6.  해결 된 <xref:System.Windows.Media.Animation.KeyTime> 된 키 프레임의 값 키 시간을 지정 하지 않으면 해결 된으로 가장 가까운 된 키 프레임을 사용 하 여 <xref:System.Windows.Media.Animation.KeyTime> 값입니다.  
   
-7.  나머지 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> 값을 확인합니다.  <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime>에서는 이웃 키 프레임의 <xref:System.Windows.Media.Animation.KeyTime> 값을 사용하여 확인되지 않은 시간을 결정합니다.  목표는 키 프레임의 확인된 시간 주위에서 애니메이션 속도가 일정하도록 만드는 것입니다.  
+7.  남은 해결 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> 값입니다. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime> 사용은 <xref:System.Windows.Media.Animation.KeyTime> 는 인접 값 키 프레임의 해결된 시간을 결정 합니다.  이것은 이 키 프레임의 확인된 시간 동안 애니메이션의 속도가 일정한지 확인하기 위한 것입니다.  
   
-8.  확인된 시간\(기본 키\)의 순서 및 선언\(보조 키\)의 순서대로 키 프레임을 정렬합니다. 즉, 확인된 키 프레임 <xref:System.Windows.Media.Animation.KeyTime> 값을 기준으로 한 안정적인 정렬을 사용합니다.  
+8.  즉, 해결 된 시간 (기본 키)의 순서 및 (보조 키), 선언 순서 대로 키 프레임 정렬, 확인 된 키 프레임을 기준으로 사용 하 여 안정적인 정렬 <xref:System.Windows.Media.Animation.KeyTime> 값입니다.  
   
-## 참고 항목  
- <xref:System.Windows.Media.Animation.KeyTime>   
- <xref:System.Windows.Media.Animation.KeySpline>   
- <xref:System.Windows.Media.Animation.Timeline>   
- [Key Spline Animation 샘플](http://go.microsoft.com/fwlink/?LinkID=160011)   
- [KeyFrame Animation 샘플](http://go.microsoft.com/fwlink/?LinkID=160012)   
- [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [Storyboard 개요](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)   
- [키 프레임 애니메이션 방법 항목](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)   
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Windows.Media.Animation.KeyTime>  
+ <xref:System.Windows.Media.Animation.KeySpline>  
+ <xref:System.Windows.Media.Animation.Timeline>  
+ [키 스플라인 애니메이션 샘플](http://go.microsoft.com/fwlink/?LinkID=160011)  
+ [키 프레임 애니메이션 샘플](http://go.microsoft.com/fwlink/?LinkID=160012)  
+ [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Storyboard 개요](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
+ [키 프레임 방법 항목](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)  
  [타이밍 동작 개요](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)

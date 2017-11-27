@@ -1,35 +1,38 @@
 ---
-title: "57396 - ThrowingException | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 57396 - ThrowingException
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4f865de5-62c1-443c-9dcd-1675ca127334
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 73af1cda67d5c9af2850368e2932b0a1a5ddecc7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 57396 - ThrowingException
-## 속성  
+# <a name="57396---throwingexception"></a>57396 - ThrowingException
+## <a name="properties"></a>속성  
   
 |||  
 |-|-|  
 |ID|57396|  
 |키워드가|인프라|  
 |수준|경고|  
-|채널|Microsoft\-Windows\-응용 프로그램 서버\-응용 프로그램\/분석|  
+|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석|  
   
-## 설명  
+## <a name="description"></a>설명  
  이 이벤트는 예외를 throw할 때 내보내집니다.  
   
-## 메시지  
- 예외를 throw하고 있습니다.  원본: %1.  
+## <a name="message"></a>메시지  
+ 예외를 throw하고 있습니다. 원본: %1.  
   
-## 세부 정보
+## <a name="details"></a>세부 정보

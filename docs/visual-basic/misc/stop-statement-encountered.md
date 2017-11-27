@@ -1,36 +1,19 @@
 ---
-title: "Stop 문 발생 | Microsoft 문서"
-ms.date: 2015-07-20
+title: "Stop 문을 발견했습니다."
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrID999
+f1_keywords: vbrID999
 ms.assetid: 4ef7216c-761a-41dc-a20c-ba133f4f1d18
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9849428343d130bd363b8b53c8d143c4b8bf996a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 740382c4317287696c96c01e20c590a4910d8e0a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="stop-statement-encountered"></a>Stop 문을 발견했습니다.
 실행을 중지하는 `Stop` 문을 발견했습니다.  
@@ -40,6 +23,6 @@ ms.lasthandoff: 03/13/2017
 1.  `Stop` 문을 제거합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Stop 문](../../visual-basic/language-reference/statements/stop-statement.md)   
- [제어 흐름 요약](../../visual-basic/language-reference/keywords/control-flow-summary.md)   
- [Visual Basic의 Stop 문](https://docs.microsoft.com/visualstudio/debugger/stop-statements-in-visual-basic)
+ [Stop 문](../../visual-basic/language-reference/statements/stop-statement.md)  
+ [제어 흐름 요약](../../visual-basic/language-reference/keywords/control-flow-summary.md)  
+ [Visual Basic의 Stop 문](/visualstudio/debugger/stop-statements-in-visual-basic)

@@ -1,35 +1,33 @@
 ---
-title: "&#39;&lt;membername&gt;&#39; is ambiguous across the inherited interfaces &#39;&lt;interfacename1&gt;&#39; and &#39;&lt;interfacename2&gt;&#39; | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30685"
-  - "bc30685"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30685"
+title: "&#39; &lt;membername&gt;&#39; 모호 합니다. 상속 된 인터페이스 &#39; 걸쳐&lt; interfacename1&gt;&#39; 및 &#39;&lt; interfacename2&gt;&#39;"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30685
+- bc30685
+helpviewer_keywords: BC30685
 ms.assetid: 756add7a-23d5-4b4f-a48d-8297d6459c73
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 0bf4a9c263fd197cdd5d5b4886ee18e2ff112488
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# &#39;&lt;membername&gt;&#39; is ambiguous across the inherited interfaces &#39;&lt;interfacename1&gt;&#39; and &#39;&lt;interfacename2&gt;&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-인터페이스가 여러 인터페이스에서 동일한 이름으로 둘 이상의 멤버를 상속했습니다.  
+# <a name="39ltmembernamegt39-is-ambiguous-across-the-inherited-interfaces-39ltinterfacename1gt39-and-39ltinterfacename2gt39"></a>&#39; &lt;membername&gt;&#39; 모호 합니다. 상속 된 인터페이스 &#39; 걸쳐&lt; interfacename1&gt;&#39; 및 &#39;&lt; interfacename2&gt;&#39;
+동일한 이름 가진 둘 이상의 멤버가 여러 인터페이스에서 상속 합니다.  
   
  **오류 ID:** BC30685  
   
-### 이 오류를 해결하려면  
+## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   사용하고자 하는 기본 인터페이스에 대한 값을 캐스팅합니다. 예를 들면 다음과 같습니다.  
+-   기본 인터페이스에 사용할; 값 캐스팅 예를 들어:  
   
     ```  
     Interface Left  
@@ -54,5 +52,5 @@ caps.handback.revision: 8
     End Module  
     ```  
   
-## 참고 항목  
- [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>참고 항목  
+ [인터페이스](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

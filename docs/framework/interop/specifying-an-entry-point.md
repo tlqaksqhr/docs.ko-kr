@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - EntryPoint field
 - platform invoke, attribute fields
 - attribute fields in platform invoke, EntryPoint
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f8d8f4a561248b7022b08ee15c9a726a58b80318
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 7406e256acaea0c535c222386c529c4087bbdc6f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="specifying-an-entry-point"></a>진입점 지정
 진입점은 DLL에서 함수의 위치를 식별합니다. 관리되는 프로젝트 내에서 대상 함수의 원래 이름이나 서수 진입점은 상호 운용 경계 간에 해당 함수를 식별합니다. 또한 진입점을 다른 이름에 매핑하여 효과적으로 함수 이름을 바꿀 수 있습니다.  
@@ -46,7 +39,7 @@ ms.lasthandoff: 08/21/2017
  이 항목에는 관리 코드에서 DLL 함수 이름을 바꾸는 방법을 보여 줍니다.  
   
 ## <a name="renaming-a-function-in-visual-basic"></a>Visual Basic에서 함수 이름 바꾸기  
- Visual Basic에서는 **Declare** 문에 **Function** 키워드를 사용하여 <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=fullName> 필드를 설정합니다. 다음 예제에서는 기본 선언을 보여 줍니다.  
+ Visual Basic에서는 **Declare** 문에 **Function** 키워드를 사용하여 <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> 필드를 설정합니다. 다음 예제에서는 기본 선언을 보여 줍니다.  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -71,7 +64,7 @@ End Class
 ```  
   
 ## <a name="renaming-a-function-in-c-and-c"></a>C# 및 C++에서 함수 이름 바꾸기  
- <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=fullName> 필드를 사용하여 DLL 함수를 이름 또는 서수로 지정할 수 있습니다. 메서드 정의의 함수 이름이 DLL의 진입점과 같으면 **EntryPoint** 필드를 사용하여 함수를 명시적으로 식별할 필요가 없습니다. 그러지 않으면 다음 특성 형식 중 하나를 사용하여 이름 또는 서수를 나타냅니다.  
+ <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> 필드를 사용하여 DLL 함수를 이름 또는 서수로 지정할 수 있습니다. 메서드 정의의 함수 이름이 DLL의 진입점과 같으면 **EntryPoint** 필드를 사용하여 함수를 명시적으로 식별할 필요가 없습니다. 그러지 않으면 다음 특성 형식 중 하나를 사용하여 이름 또는 서수를 나타냅니다.  
   
 ```  
 [DllImport("dllname", EntryPoint="Functionname")]  
@@ -104,8 +97,7 @@ extern "C" int MsgBox(HWND hWnd,
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.InteropServices.DllImportAttribute>   
- [관리 코드에서 프로토타입 만들기](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)   
- [플랫폼 호출 예제](../../../docs/framework/interop/platform-invoke-examples.md)   
+ <xref:System.Runtime.InteropServices.DllImportAttribute>  
+ [관리 코드에서 프로토타입 만들기](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
+ [플랫폼 호출 예제](../../../docs/framework/interop/platform-invoke-examples.md)  
  [플랫폼 호출을 사용하여 데이터 마샬링](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
-

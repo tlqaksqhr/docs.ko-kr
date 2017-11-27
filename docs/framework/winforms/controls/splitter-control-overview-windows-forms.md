@@ -1,37 +1,36 @@
 ---
-title: "Splitter 컨트롤 개요(Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Splitter"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Splitter 컨트롤[Windows Forms], Splitter 컨트롤 정보"
+title: "Splitter 컨트롤 개요(Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Splitter
+helpviewer_keywords: Splitter control [Windows Forms], about Splitter control
 ms.assetid: e2b6ab83-dfdd-40ec-9762-850702c82dcb
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e4602796a1a7740adb9a352d0a21fb6c2a58959d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Splitter 컨트롤 개요(Windows Forms)
+# <a name="splitter-control-overview-windows-forms"></a>Splitter 컨트롤 개요(Windows Forms)
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.SplitContainer>는 이전 버전의 <xref:System.Windows.Forms.Splitter> 컨트롤에 새로운 기능이 추가된 것으로, 이전 컨트롤을 대체합니다. 그러나 이전 버전과의 호환성 및 앞으로의 사용 가능성을 고려하여 <xref:System.Windows.Forms.Splitter>를 유지하도록 선택할 수 있습니다.  
+>  하지만 <xref:System.Windows.Forms.SplitContainer> 대체 하 고 여기에 새로운 기능이 추가 된 <xref:System.Windows.Forms.Splitter> 이전 버전의 <xref:System.Windows.Forms.Splitter> 선택 하는 경우 이전 버전과 호환성을 유지 합니다.  
   
- Windows Forms <xref:System.Windows.Forms.Splitter> 컨트롤은 런타임에 도킹된 컨트롤의 크기를 조정하는 데 사용됩니다.  <xref:System.Windows.Forms.Splitter> 컨트롤은 데이터 창에 표시되는 정보의 너비가 수시로 변하는 Windows 탐색기와 같이 제공할 데이터의 길이가 변하는 컨트롤을 가진 폼에 자주 사용됩니다.  
+ Windows Forms <xref:System.Windows.Forms.Splitter> 컨트롤은 실행된 시간에 도킹 된 컨트롤 크기를 조정 하는 데 사용 됩니다. <xref:System.Windows.Forms.Splitter> 컨트롤은 Windows 탐색기와 서로 다른 시간에 너비가 다양 한 정보를 포함 하는 데이터 창 표시 하는 데이터의 길이 다양 한 컨트롤과 폼에 자주 사용 됩니다.  
   
-## 분할자 컨트롤 사용  
- 분할자 컨트롤로 크기를 조정할 수 있는 컨트롤의 도킹되지 않은 가장자리에 마우스 포인터를 가져가면 컨트롤의 크기를 조정할 수 있도록 포인터 모양이 변경됩니다.  분할자 컨트롤을 사용하면 분할자 컨트롤의 바로 앞에 도킹된 컨트롤의 크기를 조정할 수 있습니다.  따라서 런타임에서 도킹된 컨트롤의 크기를 조정하려면 컨테이너의 한쪽 가장자리에 크기 조정할 컨트롤을 도킹한 다음 분할자 컨트롤을 해당 컨테이너의 같은 쪽에 도킹합니다.  
+## <a name="working-with-the-splitter-control"></a>Splitter 컨트롤 사용  
+ Splitter 컨트롤 크기를 조정할 수 있는 컨트롤의 도킹 되지 않은 가장자리 마우스 포인터를 가리키는 사용자, 포인터를 컨트롤의 크기를 조정할 수 있음을 나타내는 모양이 변경 합니다. 분할자 컨트롤 사용자 바로 앞에 도킹 된 컨트롤을 크기입니다. 따라서 런타임에 도킹된 된 컨트롤 크기를 조정 하려면을 활성화 하려면는 컨테이너의 가장자리에 컨트롤 도킹 하 고 해당 컨테이너의 같은 쪽에 분할자 컨트롤을 도킹 합니다.  
   
-## 참고 항목  
- <xref:System.Windows.Forms.SplitContainer>   
- [방법: Windows Forms에 컨트롤 도킹](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)   
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Windows.Forms.SplitContainer>  
+ [방법: Windows Forms에서 컨트롤 고정](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
  [Windows Forms에 사용할 수 있는 컨트롤](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

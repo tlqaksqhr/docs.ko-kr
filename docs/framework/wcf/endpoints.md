@@ -1,27 +1,29 @@
 ---
-title: "Windows Communication Foundation 끝점 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "끝점[WCF]"
+title: "Windows Communication Foundation 끝점"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: endpoints [WCF]
 ms.assetid: bd0c310f-dd9f-4081-9be2-3db5909850b6
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4ac3d1f16d860ea01217d0d1d35d0588da0c8d87
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# Windows Communication Foundation 끝점
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스와의 모든 통신은 서비스의 *끝점*을 통해 수행됩니다.  끝점은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스에서 제공하는 기능에 대한 클라이언트 액세스를 제공합니다.  
+# <a name="windows-communication-foundation-endpoints"></a>Windows Communication Foundation 끝점
+와 모든 통신은 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 서비스를 통해 발생 된 *끝점* 서비스의 합니다. 끝점은 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스에서 제공하는 기능에 대한 클라이언트 액세스를 제공합니다.  
   
- 끝점을 만드는 방법에 대한 개요는 [끝점 만들기 개요](../../../docs/framework/wcf/endpoint-creation-overview.md)를 참조하세요.  각 끝점에는 다음이 포함되어 있습니다.  
+ 끝점을 만드는 방법에 대 한 개요를 참조 하십시오. [끝점 만들기 개요](../../../docs/framework/wcf/endpoint-creation-overview.md)합니다. 각 끝점에는 다음이 포함되어 있습니다.  
   
 -   끝점을 찾을 위치를 나타내는 주소  
   
@@ -37,7 +39,7 @@ caps.handback.revision: 13
   
 -   [서비스 디자인 및 구현](../../../docs/framework/wcf/designing-and-implementing-services.md)  
   
-## 단원 내용  
+## <a name="in-this-section"></a>단원 내용  
  [끝점 만들기 개요](../../../docs/framework/wcf/endpoint-creation-overview.md)  
  끝점의 구조에 대해 설명하고 구성 및 코드에서 끝점을 정의하는 방법을 간략하게 설명합니다. 또한 런타임에서 제공하는 기본 끝점, 바인딩 및 동작을 사용하는 방법에 대해서도 설명합니다.  
   
@@ -53,8 +55,8 @@ caps.handback.revision: 13
  [메타데이터 끝점 게시](../../../docs/framework/wcf/publishing-metadata-endpoints.md)  
  구성 및 코드에서 메타데이터 끝점을 게시하여 메타데이터를 게시하는 방법을 보여 줍니다.  
   
-## 참조  
+## <a name="reference"></a>참조  
  <xref:System.ServiceModel.EndpointAddress>  
   
-## 관련 단원  
+## <a name="related-sections"></a>관련 단원  
  [기본 프로그래밍 수명 주기](../../../docs/framework/wcf/basic-programming-lifecycle.md)

@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - downloading Internet resources, steps
 - requesting data from Internet, steps
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - receiving data, using WebRequest class
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0a16860c9095c182de2e67013cae46fa05bc1da5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e831f3c305716afe11df6c0b1e21db1ed5a4f01e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-request-data-using-the-webrequest-class"></a>방법: WebRequest 클래스를 사용하여 데이터 요청
 다음 프로시저에서는 서버의 웹 페이지 또는 파일과 같은 리소스를 요청하는 데 사용되는 단계를 설명합니다. 리소스는 URI로 식별되어야 합니다.  
@@ -79,7 +76,7 @@ ms.lasthandoff: 08/21/2017
     ```  
   
     > [!NOTE]
-    >  <xref:System.Net.WebResponse> 개체가 필요 없게 되면 <xref:System.Net.WebResponse.Close%2A> 메서드를 호출하여 개체를 닫아야 합니다. 또는 응답 개체에서 응답 스트림을 이미 가져온 경우 <xref:System.IO.Stream.Close%2A?displayProperty=fullName> 메서드를 호출하여 스트림을 닫을 수 있습니다. 응답이나 스트림을 닫지 않으면 응용 프로그램이 서버에 대한 연결을 모두 사용하여 추가 요청을 처리하지 못하게 될 수 있습니다.  
+    >  <xref:System.Net.WebResponse> 개체가 필요 없게 되면 <xref:System.Net.WebResponse.Close%2A> 메서드를 호출하여 개체를 닫아야 합니다. 또는 응답 개체에서 응답 스트림을 이미 가져온 경우 <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> 메서드를 호출하여 스트림을 닫을 수 있습니다. 응답이나 스트림을 닫지 않으면 응용 프로그램이 서버에 대한 연결을 모두 사용하여 추가 요청을 처리하지 못하게 될 수 있습니다.  
   
 4.  **WebResponse**의 속성에 액세스하거나 **WebResponse**를 프로토콜별 인스턴스로 캐스팅하여 프로토콜별 속성을 읽을 수 있습니다. 예를 들어 <xref:System.Net.HttpWebResponse>의 HTTP 관련 속성에 액세스하려면 **WebResponse**를 **HttpWebResponse** 참조로 캐스팅해야 합니다. 다음 코드 예제에서는 응답과 함께 전송된 상태 정보를 표시하는 방법을 보여 줍니다.  
   
@@ -185,9 +182,8 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [인터넷 요청 만들기](../../../docs/framework/network-programming/creating-internet-requests.md)   
- [네트워크에서 스트림 사용](../../../docs/framework/network-programming/using-streams-on-the-network.md)   
- [프록시를 통해 인터넷 액세스](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)   
- [데이터 요청](../../../docs/framework/network-programming/requesting-data.md)   
+ [인터넷 요청 만들기](../../../docs/framework/network-programming/creating-internet-requests.md)  
+ [네트워크에서 스트림 사용](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
+ [프록시를 통해 인터넷 액세스](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
+ [데이터 요청](../../../docs/framework/network-programming/requesting-data.md)  
  [방법: WebRequest 클래스를 사용하여 데이터 보내기](../../../docs/framework/network-programming/how-to-send-data-using-the-webrequest-class.md)
-

@@ -1,36 +1,32 @@
 ---
-title: "순수 함수 (Visual Basic)를 사용 하 여 리팩터링 | Microsoft 문서"
+title: "순수 함수 (Visual Basic)를 사용 하 여 리팩터링"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9a60f55513aa30e4f221c45f4be506d6f0507406
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 7a8114dcfde7adbbdb1016bae4f2916dc28b6854
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="refactoring-using-a-pure-function-visual-basic"></a>순수 함수 (Visual Basic)를 사용 하 여 리팩터링
-다음 예제에서는 앞의 예제를 리팩터링하여 [확장 메서드 (Visual Basic)를 사용 하 여 리팩터링](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md),이 예제에서는 순수 정적 메서드를 이동 단락의 텍스트를 찾기 위해 코드를 순수 함수를 사용 하 여 `ParagraphText`합니다.  
+다음 예제에서는 앞의 예에서 리팩터링 [확장 메서드 (Visual Basic)를 사용 하 여 리팩터링](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)순수 정적 메서드에 이동단락의텍스트를찾기위해코드를이예제에서는순수함수를사용하려면`ParagraphText`.  
   
 ## <a name="example"></a>예제  
  이 예제에서는 WordprocessingML 문서를 처리하여 WordprocessingML 문서에서 단락 노드를 검색합니다. 또한 각 단락의 스타일도 식별합니다. 이 예제는 이 자습서의 이전 예제를 기반으로 합니다. 리팩터링된 코드는 아래에 있는 코드의 주석에서 호출됩니다.  
   
- 이 예제에 대 한 소스 문서를 만들기 위한 지침을 참조 하십시오. [원본 Office Open XML 문서 (Visual Basic)를 만드는](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)합니다.  
+ 이 예제에 대 한 소스 문서를 만들기 위한 지침은 [원본 Office Open XML 문서 (Visual Basic)를 만드는](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)합니다.  
   
- 이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 형식을 사용는 <xref:System.IO.Packaging?displayProperty=fullName>네임 스페이스.</xref:System.IO.Packaging?displayProperty=fullName>  
+ 이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -186,6 +182,6 @@ StyleName:Code >Hello World<
 -   [(Visual Basic)을 다른 모양으로 XML 프로젝션](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [자습서: WordprocessingML 문서 (Visual Basic)에서 내용 조작](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)   
- [확장 메서드 (Visual Basic)를 사용 하 여 리팩터링](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)   
+ [자습서: WordprocessingML 문서 (Visual Basic)에서 내용 조작](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
+ [확장 메서드 (Visual Basic)를 사용 하 여 리팩터링](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
  [(Visual Basic) 순수 함수로 리팩터링](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

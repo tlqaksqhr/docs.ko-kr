@@ -1,30 +1,31 @@
 ---
-title: "ToolStrip 컨트롤(Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "도구 모음[Windows Forms]"
-  - "ToolStrip 컨트롤[Windows Forms]"
+title: "ToolStrip 컨트롤(Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- toolbars [Windows Forms]
+- ToolStrip control [Windows Forms]
 ms.assetid: e5ef455a-e049-429c-8005-30c93132fb79
-caps.latest.revision: 28
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1ce887d47e82a3981eb745f23c881d54c38927e1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# ToolStrip 컨트롤(Windows Forms)
+# <a name="toolstrip-control-windows-forms"></a>ToolStrip 컨트롤(Windows Forms)
 <xref:System.Windows.Forms.ToolStrip> 컨트롤은 Windows Forms 응용 프로그램에서 메뉴, 컨트롤 및 사용자 정의 컨트롤을 호스트할 수 있는 도구 모음입니다.  
   
-## 단원 내용  
+## <a name="in-this-section"></a>단원 내용  
  [ToolStrip 컨트롤 개요](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
  이 컨트롤의 정의와 주요 기능 및 속성을 설명합니다.  
   
@@ -46,14 +47,14 @@ caps.handback.revision: 28
  [방법: ToolStripControlHost를 사용하여 Windows Forms 컨트롤 래핑](../../../../docs/framework/winforms/controls/how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md)  
  <xref:System.Windows.Forms.ToolStripControlHost>에서 <xref:System.Windows.Forms.MonthCalendar> 컨트롤을 호스트하는 방법을 보여 줍니다.  
   
- [방법: Windows Forms의 ToolStrip 컨트롤에 대한 사용자 지정 렌더러 만들기 및 설정](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
+ [방법: Windows Forms의 ToolStrip 컨트롤에 대한 사용자 지정 렌더러를 설정하고 만들기](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
  <xref:System.Windows.Forms.ToolStrip> 컨트롤에서 표준 및 사용자 지정 그리기를 수행하는 방법을 설명합니다.  
   
  [방법: ToolStrip 컨트롤 그리기 사용자 지정](../../../../docs/framework/winforms/controls/how-to-custom-draw-a-toolstrip-control.md)  
- <xref:System.Windows.Forms.ToolStrip> 컨트롤에서 사용자 지정\(소유자\) 그리기의 다양한 측면을 설명합니다.  
+ <xref:System.Windows.Forms.ToolStrip> 컨트롤에서 사용자 지정(소유자) 그리기의 다양한 측면을 설명합니다.  
   
- [방법: ToolStrip 컨트롤에 설정\/해제 단추 만들기](../../../../docs/framework/winforms/controls/how-to-create-toggle-buttons-in-toolstrip-controls.md)  
- 설정\/해제 <xref:System.Windows.Forms.ToolStripButton>을 만드는 방법을 설명합니다.  
+ [방법: ToolStrip 컨트롤에 설정/해제 단추 만들기](../../../../docs/framework/winforms/controls/how-to-create-toggle-buttons-in-toolstrip-controls.md)  
+ 설정/해제 <xref:System.Windows.Forms.ToolStripButton>을 만드는 방법을 설명합니다.  
   
  [방법: ToolStrip 컨트롤의 도구 설명 사용](../../../../docs/framework/winforms/controls/how-to-use-tooltips-in-toolstrip-controls.md)  
  <xref:System.Windows.Forms.ToolStrip> 항목에 대한 도구 설명을 정의하는 방법을 설명합니다.  
@@ -71,18 +72,18 @@ caps.handback.revision: 28
  다양한 마우스 이벤트를 동기화할 필요 없이 마우스가 <xref:System.Windows.Forms.ToolStrip> 항목을 가리킬 때 항목이 감지되도록 해당 항목을 설정하는 방법을 설명합니다.  
   
  [방법: ToolStripPanel 컨트롤을 사용하여 MDI 폼 만들기](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-toolstrippanel-controls.md)  
- <xref:System.Windows.Forms.ToolStripPanel> 컨트롤을 사용하여 MDI\(다중 문서 인터페이스\)를 만드는 방법을 설명합니다.  
+ <xref:System.Windows.Forms.ToolStripPanel> 컨트롤을 사용하여 MDI(다중 문서 인터페이스)를 만드는 방법을 설명합니다.  
   
  [방법: 메뉴 병합 및 ToolStrip 컨트롤을 사용하여 MDI 폼 만들기](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
  <xref:System.Windows.Forms.ToolStrip> 컨트롤과 메뉴 병합을 지원하는 MDI 폼을 만드는 방법을 설명합니다.  
   
  [방법: 전문적인 스타일의 ToolStrip 컨트롤 만들기](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md)  
- <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 클래스를 사용하여 Microsoft® Outlook®에서 제공한 **탐색 창**과 비슷한 복합 컨트롤을 만드는 방법을 설명합니다.  
+ 사용 하는 방법에 설명 된 <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 모방 하는 합성 컨트롤을 만드는 클래스는 **탐색 창** Microsoft® Outlook®에서 제공 합니다.  
   
  [방법: 사용자 지정 ToolStripRenderer 구현](../../../../docs/framework/winforms/controls/how-to-implement-a-custom-toolstriprenderer.md)  
  <xref:System.Windows.Forms.ToolStripRenderer>에서 파생된 클래스를 구현하여 <xref:System.Windows.Forms.ToolStrip> 컨트롤의 모양을 사용자 지정하는 방법을 설명합니다.  
   
--   [방법: 디자이너를 사용하여 표준 항목을 포함하는 기본 Windows Forms ToolStrip 만들기](http://msdn.microsoft.com/library/571c1z99\(v=vs.110\))  
+-   [방법: 디자이너를 사용 하 여 표준 항목을 포함 하는 기본 Windows Forms ToolStrip 만들기](http://msdn.microsoft.com/library/571c1z99\(v=vs.110\))  
   
 -   [방법: ToolStripContainer의 ToolStrip을 폼으로 이동](http://msdn.microsoft.com/library/ms171701\(v=vs.110\))  
   
@@ -94,7 +95,7 @@ caps.handback.revision: 28
   
 -   [ToolStrip 항목 컬렉션 편집기](http://msdn.microsoft.com/library/ms233643\(v=vs.110\))  
   
-## 참조  
+## <a name="reference"></a>참조  
  <xref:System.Windows.Forms.ToolStrip> 클래스  
  이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.  
   
@@ -104,6 +105,6 @@ caps.handback.revision: 28
  <xref:System.Windows.Forms.ToolStripItem>  
  <xref:System.Windows.Forms.ToolStripItem> 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.  
   
-## 관련 단원  
+## <a name="related-sections"></a>관련 단원  
  [Windows Forms에 사용할 수 있는 컨트롤](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.

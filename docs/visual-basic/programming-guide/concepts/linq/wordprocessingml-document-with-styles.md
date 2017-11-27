@@ -1,33 +1,29 @@
 ---
-title: "Styles2 사용 된 WordprocessingML 문서 | Microsoft 문서"
+title: "Styles2 사용 된 WordprocessingML 문서"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a9136e4d-c368-4661-8049-7d45c679a236
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ae85aef4ab2f5e1be5b62b038f5f09faf29480e3
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: ac833daca2e4ba12d61a1ee3c9526b7368baee74
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="wordprocessingml-document-with-styles"></a>스타일이 사용된 WordprocessingML 문서
 더 복잡한 WordprocessingML 문서에는 스타일로 서식이 지정된 단락이 있습니다.  
   
  WordprocessingML 문서의 구성에 대한 몇 가지 정보를 알아 두면 유용합니다. WordprocessingML 문서는 패키지로 저장됩니다. 패키지에는 여러 부분이 있습니다. 부분은 패키지의 컨텍스트에서 사용될 때 명시적 의미를 갖습니다. 부분은 패키지를 구성하기 위해 함께 압축된 파일입니다. 문서에 스타일로 서식이 지정된 단락이 포함되어 있으면 스타일이 적용된 단락이 포함된 문서 부분이 있습니다. 또한 문서에 의해 참조되는 스타일이 포함된 스타일 부분도 있습니다.  
   
- 패키지에 액세스할 때 임의의 경로를 사용하는 대신 부분 간 관계를 통해 액세스해야 합니다. WordprocessingML 문서 자습서에서 내용 조작의 범위를 벗어납니다이 문제는 있지만이 자습서에 포함 된 예제 프로그램에서는 올바른 방법을 보여 줍니다.  
+ 패키지에 액세스할 때 임의의 경로를 사용하는 대신 부분 간 관계를 통해 액세스해야 합니다. 이 문제는 WordprocessingML 문서의 내용 조작 자습서의 범위를 벗어나지만 이 자습서에 포함된 예제 프로그램에서는 올바른 방법을 보여 줍니다.  
   
 ## <a name="a-document-that-uses-styles"></a>스타일을 사용하는 문서  
  제공 하는 WordML 예제는 [WordprocessingML 문서의 모양 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) 항목은 매우 단순 합니다. 다음 문서는 더 복잡합니다. 이 문서에는 스타일로 서식이 지정된 단락이 있습니다. Office Open XML 문서를 구성 하는 XML 실행 하는 것을 확인 하는 가장 쉬운 방법은 [예제 해당 출력 Office Open XML 문서 요소 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md)합니다.  
@@ -151,4 +147,4 @@ ms.lasthandoff: 03/13/2017
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [세부 정보는 Office Open XML WordprocessingML 문서 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+ [세부 정보를 Office Open XML WordprocessingML 문서 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

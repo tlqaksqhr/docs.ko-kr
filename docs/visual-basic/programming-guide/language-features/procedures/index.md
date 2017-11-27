@@ -1,45 +1,27 @@
 ---
 title: "Visual Basic의 프로시저"
 ms.custom: 
-ms.date: 2017-04-28
+ms.date: 04/28/2017
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- procedures, structured code
+- procedures [Visual Basic], structured code
 - Visual Basic code, procedures
-- procedures, types of
-- structured code, procedures
+- procedures [Visual Basic], types of
+- structured code [Visual Basic], procedures
 - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fd1a369ecfc1fa23cba694941fa47ab872ca1368
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 5487dc7dbe9be50e065610cfd61815242bb74ac0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic의 프로시저
 *프로시저*란 선언문(`Function`, `Sub`, `Operator`, `Get`, `Set`) 및 일치하는 `End` 문으로 감싼 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 문의 블록입니다. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]의 모든 실행문은 프로시저 내에 있어야 합니다.  
@@ -88,14 +70,13 @@ ms.lasthandoff: 07/28/2017
 -   한 프로그램에서 사용하기 위해 프로시저를 개발한 후, 거의 또는 전혀 수정하지 않고 종종 다른 프로그램에서 사용할 수 있습니다. 이를 통해 코드 중복을 방지할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [방법: 프로시저 만들기](./how-to-create-a-procedure.md)   
- [Sub 프로시저](./sub-procedures.md)   
- [Function 프로시저](./function-procedures.md)   
- [Property 프로시저](./property-procedures.md)   
- [연산자 프로시저](./operator-procedures.md)   
- [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)   
- [재귀 프로시저](./recursive-procedures.md)   
- [프로시저 오버로딩](./procedure-overloading.md)   
- [Visual Basic의 제네릭 프로시저](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)   
+ [방법: 프로시저 만들기](./how-to-create-a-procedure.md)  
+ [Sub 프로시저](./sub-procedures.md)  
+ [Function 프로시저](./function-procedures.md)  
+ [속성 프로시저](./property-procedures.md)  
+ [연산자 프로시저](./operator-procedures.md)  
+ [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)  
+ [재귀 프로시저](./recursive-procedures.md)  
+ [프로시저 오버로딩](./procedure-overloading.md)  
+ [Visual Basic의 제네릭 프로시저](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
  [개체 및 클래스](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-

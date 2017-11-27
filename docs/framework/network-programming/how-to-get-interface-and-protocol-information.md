@@ -7,29 +7,22 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- Network
+helpviewer_keywords: Network
 ms.assetid: fd88d26c-4063-495e-a253-736ac3e6b23f
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 41d7e88de47067da4c96723ca3465f16595f4291
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 968727dbdc8897ebe3f88af2f7b7c28c481d8783
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 방법: 인터페이스 및 프로토콜 정보 가져오기
+# <a name="how-to-get-interface-and-protocol-information"></a>방법: 인터페이스 및 프로토콜 정보 가져오기
 이 샘플은 네트워크 인터페이스의 TCP 통계를 읽는 방법을 보여 줍니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 public static void ShowTcpStatistics(NetworkInterfaceComponent version)  
@@ -84,8 +77,7 @@ public static void ShowTcpStatistics(NetworkInterfaceComponent version)
 }  
 ```  
   
-## 코드 컴파일  
+## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
 -   **System.Net** 네임스페이스에 대한 참조.
-

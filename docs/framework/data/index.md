@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,15 @@ helpviewer_keywords:
 - data access [.NET Framework], about .NET Framework data access
 - data [.NET Framework], accessing
 ms.assetid: 8c37635d-e2c1-4b64-a258-61d9e87405e6
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 3edf0cbe10361b456469714747c074ba054e16a4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/05/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>.NET Framework의 데이터 및 모델링
 이 단원에서는 ADO.NET, LINQ(Language Integrated Query), WCF Data Services 및 XML을 사용하여 데이터에 액세스하는 방법에 대한 정보를 제공합니다.  
@@ -56,4 +54,3 @@ ms.lasthandoff: 09/05/2017
   
  [보안](../../../docs/standard/security/index.md)  
  안전한 응용 프로그램 개발을 용이하게 하는 .NET Framework와 공용 언어 런타임의 클래스 및 서비스에 대한 자세한 내용을 볼 수 있는 링크를 제공합니다.
-

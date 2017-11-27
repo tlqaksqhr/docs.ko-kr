@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d12b3f5b-f1f1-4a9d-a159-0c13e5976c90
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: d3821ff1da945df7c6e07e5baf69730173eacc87
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="downloading-the-json-web-token-handler-package"></a>JSON 웹 토큰 처리기 패키지 다운로드
 이 항목에서는 JSON Web Token 처리기를 다운로드하고 프로젝트에서 사용하는 방법을 설명합니다.  
@@ -50,4 +48,3 @@ ms.lasthandoff: 08/21/2017
     ```  
   
 3.  최신 JSON Web Token 처리기 어셈블리가 다운로드되고 프로젝트에 추가됩니다.
-

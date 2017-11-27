@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - asynchronous thread aborts
 - AsynchronousThreadAbort MDA
@@ -21,16 +15,15 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - MDAs (managed debugging assistants), asynchronous thread aborts
 ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9a80b0cdd762a9dc26089aa450cf998b1832dbc1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 6f7bfee4375a14a4456493333e65a953d406c732
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="asynchronousthreadabort-mda"></a>asynchronousThreadAbort MDA
 `asynchronousThreadAbort` MDA(관리 디버깅 도우미)는 스레드가 비동기 중단을 다른 스레드에 도입하려고 할 때 활성화됩니다. 동기 스레드 중단은 `asynchronousThreadAbort` MDA를 활성화하지 않습니다.
@@ -43,7 +36,7 @@ ms.lasthandoff: 08/21/2017
  문제에 상속되는 임의성으로 인해 증상이 크게 달라질 수 있습니다.
 
 ## <a name="cause"></a>원인
- 한 스레드의 코드에서 대상 스레드에 대해 <xref:System.Threading.Thread.Abort%2A?displayProperty=fullName> 메서드를 호출하여 비동기 스레드 중단을 도입했습니다. <xref:System.Threading.Thread.Abort%2A>를 호출하는 코드가 중단 작업의 대상이 아닌 다른 스레드에서 실행되고 있으므로 스레드 중단은 비동기입니다. <xref:System.Threading.Thread.Abort%2A>를 수행하는 스레드는 응용 프로그램 상태가 일치하는 안전한 검사점에서만 작업했기 때문에 동기 스레드 중단으로 인한 문제가 발생하지 않아야 합니다.
+ 한 스레드의 코드에서 대상 스레드에 대해 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 메서드를 호출하여 비동기 스레드 중단을 도입했습니다. <xref:System.Threading.Thread.Abort%2A>를 호출하는 코드가 중단 작업의 대상이 아닌 다른 스레드에서 실행되고 있으므로 스레드 중단은 비동기입니다. <xref:System.Threading.Thread.Abort%2A>를 수행하는 스레드는 응용 프로그램 상태가 일치하는 안전한 검사점에서만 작업했기 때문에 동기 스레드 중단으로 인한 문제가 발생하지 않아야 합니다.
 
  비동기 스레드 중단은 대상 스레드 실행 중 예기치 않은 지점에서 처리되므로 문제를 일으킵니다. 이를 방지하려면 이런 방식으로 중단될 수 있는 스레드에서 실행되도록 작성된 코드는 거의 모든 코드 줄에서 <xref:System.Threading.ThreadAbortException>을 처리하고 응용 프로그램 데이터를 다시 일치 상태로 만들어야 합니다. 이 문제를 염두에 두고 코드가 작성되기를 기대하거나 가능한 모든 상황으로부터 보호하는 코드를 작성하는 것은 어렵습니다.
 
@@ -87,4 +80,3 @@ void FireMda()
 
 ## <a name="see-also"></a>참고 항목
  <xref:System.Threading.Thread>[관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-

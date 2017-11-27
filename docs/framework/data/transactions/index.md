@@ -8,16 +8,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: effdc8e6-accf-41eb-98a5-431603ba218b
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 5248dd3a4da450e411dd5d9a7843df6c9263026e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/05/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="transaction-processing"></a>트랜잭션 처리 
 온라인 서점에서 책을 구입하는 경우 책과 교환하여 신용 지불 형식으로 돈을 지불합니다. 신용이 좋으면 일련의 관련된 작업을 통해 책을 구입할 수 있으며 서점은 돈을 받을 수 있습니다. 그러나 교환 중에 시리즈 중 하나의 작업이 실패하면 전체 교환이 실패합니다. 책을 구입할 수 없고 서점도 돈을 받을 수 없습니다.  
@@ -38,4 +37,3 @@ ms.lasthandoff: 09/05/2017
 ## <a name="reference"></a>참조  
  <xref:System.Transactions>  
  코드가 트랜잭션에 참여할 수 있도록 하는 클래스를 제공합니다. 이 클래스는 분산된 여러 참가자, 여러 단계의 알림 및 지속적인 인리스트먼트가 있는 트랜잭션을 지원합니다.
-

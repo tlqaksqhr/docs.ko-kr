@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - managed debugging assistants (MDAs), hashcode modulus
 - Modulo object hash code
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - GetHashCode method
 - modulus of hashcodes
 ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b9732af6c84a2f7af70512ea9ce73a8afc74bbbc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 1a3062365f41247c579f5420497946128b183a88
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="moduloobjecthashcode-mda"></a>moduloObjectHashcode MDA
 `moduloObjectHashcode` MDA(관리 디버깅 도우미)가 <xref:System.Object> 클래스의 동작을 변경하여 <xref:System.Object.GetHashCode%2A> 메서드에서 반환한 해시 코드에서 모듈로 작업을 수행합니다. 이 MDA의 기본 모듈러스는 1이므로, <xref:System.Object.GetHashCode%2A>에서 모든 개체에 대해 0을 반환합니다.  
@@ -54,7 +47,7 @@ ms.lasthandoff: 08/21/2017
  키의 해시 코드를 계산하는 데 사용하는 알고리즘이 변경되면 <xref:System.Collections.Hashtable>의 열거형 순서가 런타임 버전 간 변경될 수 있습니다. 프로그램이 해시 테이블의 값 또는 키의 열거형 순서에 종속되는지 테스트하려면 이 MDA를 사용하도록 설정할 수 있습니다.  
   
 ## <a name="resolution"></a>해결  
- 개체 ID의 대안으로 해시 코드를 사용하지 마세요. 해시 코드를 비교하지 않도록 <xref:System.Object.Equals%2A?displayProperty=fullName> 메서드의 재정의를 구현합니다.  
+ 개체 ID의 대안으로 해시 코드를 사용하지 마세요. 해시 코드를 비교하지 않도록 <xref:System.Object.Equals%2A?displayProperty=nameWithType> 메서드의 재정의를 구현합니다.  
   
  해시 테이블에 있는 값 또는 키의 열거형 순서에 대한 종속성을 만들지 마세요.  
   
@@ -76,7 +69,6 @@ ms.lasthandoff: 08/21/2017
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Object.GetHashCode%2A?displayProperty=fullName>   
- <xref:System.Object.Equals%2A?displayProperty=fullName>   
+ <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>  
+ <xref:System.Object.Equals%2A?displayProperty=nameWithType>  
  [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-

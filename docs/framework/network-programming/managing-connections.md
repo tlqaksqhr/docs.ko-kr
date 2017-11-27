@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - Internet, connections
 - HTTP, classes for connecting
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - downloading Internet resources, connections
 - ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 53170432e108a6d866bc2b96ef1ebf8b5bee6f28
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f3a8900aca9ebfa14fbf49d4d3634bc486793c0a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="managing-connections"></a>연결 관리
 HTTP를 사용하여 데이터 리소스에 연결하는 응용 프로그램은 .NET Framework의 <xref:System.Net.ServicePoint> 및 <xref:System.Net.ServicePointManager> 클래스를 사용하여 인터넷에 대한 연결을 관리하고 최적의 규모 및 성능을 달성하도록 지원합니다.  
@@ -77,6 +74,5 @@ sp.ConnectionLimit = newLimit
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [연결 그룹화](../../../docs/framework/network-programming/connection-grouping.md)   
+ [연결 그룹화](../../../docs/framework/network-programming/connection-grouping.md)  
  [응용 프로그램 프로토콜 사용](../../../docs/framework/network-programming/using-application-protocols.md)
-

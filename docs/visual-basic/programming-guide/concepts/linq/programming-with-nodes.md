@@ -1,40 +1,31 @@
 ---
-title: "노드 (Visual Basic)를 사용한 프로그래밍 | Microsoft 문서"
+title: "노드 (Visual Basic)를 사용한 프로그래밍"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: d8422a9b-dd37-44a3-8aac-2237ed9561e0
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 52fb60b95b869a79900f84c2a1a7a6151bb5b58f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 5f56e98d4a732b6cc69dde87d0efe8e87506b48b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="programming-with-nodes-visual-basic"></a>노드 (Visual Basic)를 사용한 프로그래밍
-XML 편집기, 변환 시스템 또는 보고서 작성기와 같은 프로그램을 작성해야 하는 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 개발자는 요소와 특성보다 세부적인 단위에서 작업하는 프로그램을 작성해야 하는 경우가 많습니다. LINQ to XML 개발자는 흔히 노드 수준에서 작업하여 텍스트 노드, 처리 명령 및 주석을 조작해야 합니다. 이 항목에서는 노드 수준의 프로그래밍에 대해 자세히 설명합니다.  
+XML 편집기, 변환 시스템 또는 보고서 작성기와 같은 프로그램을 작성해야 하는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 개발자는 요소와 특성보다 세부적인 단위에서 작업하는 프로그램을 작성해야 하는 경우가 많습니다. LINQ to XML 개발자는 흔히 노드 수준에서 작업하여 텍스트 노드, 처리 명령 및 주석을 조작해야 합니다. 이 항목에서는 노드 수준의 프로그래밍에 대해 자세히 설명합니다.  
   
 ## <a name="node-details"></a>노드 정보  
  노드 수준에서 작업하는 프로그래머가 알고 있어야 하는 프로그래밍 세부 정보가 많이 있습니다.  
   
 ### <a name="parent-property-of-children-nodes-of-xdocument-is-set-to-null"></a>XDocument에 대한 자식 노드의 부모 속성이 Null로 설정됨  
- <xref:System.Xml.Linq.XObject.Parent%2A>부모를 포함 하는 속성 <xref:System.Xml.Linq.XElement>, 부모 노드가 아니라.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XObject.Parent%2A> 자식 노드는 <xref:System.Xml.Linq.XDocument>부모가 없습니다 <xref:System.Xml.Linq.XElement>.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XDocument> 부모는 문서를 않으므로 <xref:System.Xml.Linq.XObject.Parent%2A>노드 속성은 null로.</xref:System.Xml.Linq.XObject.Parent%2A>  
+ <xref:System.Xml.Linq.XObject.Parent%2A> 속성에는 부모 노드가 아니라 부모 <xref:System.Xml.Linq.XElement>가 포함되어 있습니다. <xref:System.Xml.Linq.XDocument>의 자식 노드에는 부모 <xref:System.Xml.Linq.XElement>가 없습니다. 이러한 노드의 부모는 문서이므로 해당 노드의 <xref:System.Xml.Linq.XObject.Parent%2A> 속성은 null로 설정됩니다.  
   
  다음은 이에 대한 예입니다.  
   
@@ -52,7 +43,7 @@ True
 ```  
   
 ### <a name="adjacent-text-nodes-are-possible"></a>인접 텍스트 노드가 가능함  
- 많은 XML 프로그래밍 모델에서 인접 텍스트 노드는 항상 병합됩니다. 이를 텍스트 노드의 표준화라고 합니다. [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]에서는 텍스트 노드를 표준화하지 않습니다. 동일한 요소에 두 텍스트 노드를 추가하는 경우 인접 텍스트 노드가 생성됩니다. 그러나 아니라 문자열로 지정 된 콘텐츠를 추가 하는 경우는 <xref:System.Xml.Linq.XText>노드를 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 에서는 인접 텍스트 노드를 사용 하 여 문자열을 병합할 수 있습니다.</xref:System.Xml.Linq.XText>  
+ 많은 XML 프로그래밍 모델에서 인접 텍스트 노드는 항상 병합됩니다. 이를 텍스트 노드의 표준화라고 합니다. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 텍스트 노드를 표준화하지 않습니다. 동일한 요소에 두 텍스트 노드를 추가하는 경우 인접 텍스트 노드가 생성됩니다. 그러나 <xref:System.Xml.Linq.XText> 노드가 아니라 문자열로 지정된 내용을 추가하는 경우 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 인접 텍스트 노드를 사용하여 문자열을 병합할 수 있습니다.  
   
  다음은 이에 대한 예입니다.  
   
@@ -111,15 +102,15 @@ Console.WriteLine(child2)
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```xml  
 <Child1></Child1>  
 <Child2 />  
 ```  
   
 ### <a name="namespaces-are-attributes-in-the-linq-to-xml-tree"></a>네임스페이스가 LINQ to XML 트리의 특성임  
- 네임스페이스 선언의 구문은 특성의 구문과 동일하지만 XSLT 및 XPath와 같은 일부 프로그래밍 인터페이스에서 네임스페이스 선언은 특성으로 간주되지 않습니다. 그러나 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], 네임 스페이스로 저장 됩니다 <xref:System.Xml.Linq.XAttribute>XML 트리의 개체.</xref:System.Xml.Linq.XAttribute> 네임스페이스 선언이 포함된 요소의 특성을 반복하는 경우 네임스페이스 선언이 반환된 컬렉션의 항목 중 하나로 나타납니다.  
+ 네임스페이스 선언의 구문은 특성의 구문과 동일하지만 XSLT 및 XPath와 같은 일부 프로그래밍 인터페이스에서 네임스페이스 선언은 특성으로 간주되지 않습니다. 그러나 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서 네임스페이스는 XML 트리에서 <xref:System.Xml.Linq.XAttribute> 개체로 저장됩니다. 네임스페이스 선언이 포함된 요소의 특성을 반복하는 경우 네임스페이스 선언이 반환된 컬렉션의 항목 중 하나로 나타납니다.  
   
- <xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A>속성 특성 네임 스페이스 선언 인지를 나타냅니다.</xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A>  
+ <xref:System.Xml.Linq.XAttribute.IsNamespaceDeclaration%2A> 속성은 특성이 네임스페이스 선언인지 여부를 나타냅니다.  
   
 ```vb  
 Dim root As XElement = _   
@@ -142,7 +133,7 @@ AnAttribute="abc"  IsNamespaceDeclaration:False
 ```  
   
 ### <a name="xpath-axis-methods-do-not-return-child-white-space-of-xdocument"></a>XPath 축 메서드에서 XDocument의 자식 공백을 반환하지 않음  
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]자식 텍스트 노드 수는 <xref:System.Xml.Linq.XDocument>로 텍스트 노드에 공백만 포함 되어 있습니다.</xref:System.Xml.Linq.XDocument> 그러나 XPath 개체 모델에서는 하지 포함 공백은 문서의 자식 노드로 않으므로의 자식을 반복할 때는 <xref:System.Xml.Linq.XDocument>를 사용 하는 <xref:System.Xml.Linq.XContainer.Nodes%2A>축 공백 텍스트 노드가 반환 됩니다.</xref:System.Xml.Linq.XContainer.Nodes%2A> </xref:System.Xml.Linq.XDocument> 그러나 반복할 때의 자식을 <xref:System.Xml.Linq.XDocument>XPath 축 메서드를 사용 하 여 공백 텍스트 노드가 반환 되지 것입니다.</xref:System.Xml.Linq.XDocument>  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 텍스트 노드에 공백만 포함되어 있는 경우 <xref:System.Xml.Linq.XDocument>의 자식 텍스트 노드를 허용합니다. 그러나 XPath 개체 모델에서는 문서의 자식 노드로 공백을 포함하지 않으므로 <xref:System.Xml.Linq.XDocument> 축을 사용하여 <xref:System.Xml.Linq.XContainer.Nodes%2A>의 자식을 반복할 때 공백 텍스트 노드가 반환됩니다. 그러나 XPath 축 메서드를 사용하여 <xref:System.Xml.Linq.XDocument>의 자식을 반복하는 경우에는 공백 텍스트 노드가 반환되지 않습니다.  
   
 ```vb  
 ' Create a document with some white space child nodes of the document.  
@@ -167,7 +158,7 @@ Console.WriteLine(nodes.OfType(Of XText)().Count())
 ```  
   
 ### <a name="xdeclaration-objects-are-not-nodes"></a>XDeclaration 개체는 노드가 아님  
- 자식 노드를 반복할 때는 <xref:System.Xml.Linq.XDocument>, XML 선언 개체가 표시 되지 것입니다.</xref:System.Xml.Linq.XDocument> XML 선언 개체는 문서의 자식 노드가 아니라 문서의 속성입니다.  
+ <xref:System.Xml.Linq.XDocument>의 자식 노드를 반복할 때 XML 선언 개체가 표시되지 않습니다. XML 선언 개체는 문서의 자식 노드가 아니라 문서의 속성입니다.  
   
 ```vb  
 Dim doc As XDocument = _  
@@ -183,7 +174,7 @@ Console.WriteLine(doc.Nodes().Count())
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
 <Root />  
 1  
@@ -191,4 +182,3 @@ Console.WriteLine(doc.Nodes().Count())
   
 ## <a name="see-also"></a>참고 항목  
  [고급 LINQ to XML 프로그래밍 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
-

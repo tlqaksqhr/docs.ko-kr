@@ -1,36 +1,28 @@
 ---
-title: "XmlReader (XSLT 호출)로 직렬화 하는 작업 (Visual Basic) | Microsoft 문서"
+title: "XmlReader (XSLT 호출)에 대 한 직렬화 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 8b64f95a-e8f6-40f7-99f9-a8002c63af96
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: bca1e63bbe5b3ccd13f183c3cc6081917624ad94
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: ea4a8a17e938b22d6e307ebe307c69481e44e6d9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="serializing-to-an-xmlreader-invoking-xslt-visual-basic"></a>XmlReader (XSLT 호출)로 직렬화 하는 작업 (Visual Basic)
-사용 하는 경우는 <xref:System.Xml?displayProperty=fullName>의 상호 운용성 기능 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)], <xref:System.Xml.Linq.XNode.CreateReader%2A> <xref:System.Xml.XmlReader>.</xref:System.Xml.XmlReader> 를 만드는 데</xref:System.Xml.Linq.XNode.CreateReader%2A> 사용할 수</xref:System.Xml?displayProperty=fullName> 읽는 모듈 <xref:System.Xml.XmlReader>XML 트리에서 노드를 읽고 하 고 적절 하 게 처리 합니다.</xref:System.Xml.XmlReader>  
+# <a name="serializing-to-an-xmlreader-invoking-xslt-visual-basic"></a>XmlReader (XSLT 호출)에 대 한 직렬화 (Visual Basic)
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]의 <xref:System.Xml?displayProperty=nameWithType> 상호 운용성 기능을 사용할 때 <xref:System.Xml.Linq.XNode.CreateReader%2A>를 사용하여 <xref:System.Xml.XmlReader>를 만들 수 있습니다. 만들어진 <xref:System.Xml.XmlReader>에서 읽는 모듈은 XML 트리에서 노드를 읽고 적절하게 처리합니다.  
   
 ## <a name="invoking-an-xslt-transformation"></a>XSLT 변환 호출  
- 이 메서드를 사용할 수 있는 한 가지 경우는 XSLT 변환을 호출할 때입니다. 만들고 XML 트리를 만들 수는 <xref:System.Xml.XmlReader>에서 XML 트리를 새 문서를 만든 다음 만들고는 <xref:System.Xml.XmlWriter>새 문서에 쓸 수 있습니다.</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlReader> 그런 다음 <xref:System.Xml.XmlReader>및 <xref:System.Xml.XmlWriter>.</xref:System.Xml.XmlWriter> </xref:System.Xml.XmlReader> 에 전달 하 여 XSLT 변환을 호출할 수 있습니다. 변환이 성공적으로 완료된 후 새 XML 트리가 변환의 결과로 채워집니다.  
+ 이 메서드를 사용할 수 있는 한 가지 경우는 XSLT 변환을 호출할 때입니다. XML 트리를 만들고 XML 트리에서 <xref:System.Xml.XmlReader>를 만든 다음 새 문서를 만들고 새 문서에 쓸 <xref:System.Xml.XmlWriter>를 만들 수 있습니다. 그런 다음 XSLT 변환을 호출하여 <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter>를 전달할 수 있습니다. 변환이 성공적으로 완료된 후 새 XML 트리가 변환의 결과로 채워집니다.  
   
 ```vb  
 Dim xslMarkup As XDocument = _  

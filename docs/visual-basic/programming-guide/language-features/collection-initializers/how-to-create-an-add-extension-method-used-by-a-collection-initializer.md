@@ -1,32 +1,30 @@
 ---
-title: "How to: Create an Add Extension Method Used by a Collection Initializer (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "collection initializers [Visual Basic]"
+title: "방법: 컬렉션 이니셜라이저에 사용되는 확장명 추가 메서드 만들기(Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords: collection initializers [Visual Basic]
 ms.assetid: f64b52c7-8b11-4410-93a6-cb3aeebcc772
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: d19ac8b03b992eb9b09b5cb45fdcceadad3a822a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Create an Add Extension Method Used by a Collection Initializer (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-컬렉션 이니셜라이저를 사용하여 컬렉션을 만들 경우 Visual Basic 컴파일러는 `Add` 메서드의 매개 변수가 컬렉션 이니셜라이저의 값 형식과 일치하는 컬렉션 형식의 `Add` 메서드를 검색합니다.  이 `Add` 메서드는 컬렉션을 컬렉션 이니셜라이저의 값으로 채우는 데 사용됩니다.  
+# <a name="how-to-create-an-add-extension-method-used-by-a-collection-initializer-visual-basic"></a>방법: 컬렉션 이니셜라이저에 사용되는 확장명 추가 메서드 만들기(Visual Basic)
+Visual Basic 컴파일러에 대 한 검색 컬렉션 이니셜라이저를 사용 하 여 컬렉션을 만들 수는 `Add` 컬렉션 형식의 메서드를 대 한 매개 변수는 `Add` 컬렉션 이니셜라이저에 있는 값의 형식과 일치 하는 메서드. 이 `Add` 메서드 값을 해당 컬렉션 이니셜라이저를 사용 하 여 컬렉션을 채우는 데 사용 됩니다.  
   
- 일치하는 `Add` 메서드가 없고 컬렉션에 대한 코드를 수정할 수 없는 경우에는 컬렉션 이니셜라이저에 필요한 매개 변수를 받아들이는 확장 메서드 `Add`를 추가할 수 있습니다.  이 작업은 대개 제네릭 컬렉션에 컬렉션 이니셜라이저를 사용할 때 필요합니다.  
+ 일치 하는 경우 `Add` 메서드 및 컬렉션에 대 한 코드를 수정할 수 없습니다, 확장 메서드를 추가할 수 있습니다 `Add` 컬렉션 이니셜라이저에 필요한 매개 변수를 사용 하는 합니다. 일반적으로 제네릭 컬렉션에 대 한 컬렉션 이니셜라이저를 사용 하는 경우 수행 해야 하는 기능입니다.  
   
-## 예제  
- 다음 예제에서는 컬렉션 이니셜라이저를 사용하여 `Employee` 형식의 개체를 추가할 수 있도록 확장 메서드를 제네릭 <xref:System.Collections.Generic.List%601> 형식에 추가하는 방법을 보여 줍니다.  확장 메서드를 통해 약식 컬렉션 이니셜라이저 구문을 사용할 수 있습니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 원본에는 확장 메서드를 추가 하는 방법을 보여 줍니다 <xref:System.Collections.Generic.List%601> 유형의 개체를 추가 하는 컬렉션 이니셜라이저를 사용할 수 있도록 입력 `Employee`합니다. 확장 메서드를 사용 하면 약식된 컬렉션 이니셜라이저 구문을 사용할 수 있습니다.  
   
  [!code-vb[VbVbalrCollectionInitializersHowTo1#1](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/VisualBasic/how-to-create-an-add-extension-method-used-by-a-collection-initializer_1.vb)]  
   
@@ -34,6 +32,6 @@ caps.handback.revision: 8
   
  [!code-vb[VbVbalrCollectionInitializersHowTo1#3](../../../../visual-basic/programming-guide/language-features/collection-initializers/codesnippet/VisualBasic/how-to-create-an-add-extension-method-used-by-a-collection-initializer_3.vb)]  
   
-## 참고 항목  
- [Collection Initializers](../../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)   
- [How to: Create a Collection Used by a Collection Initializer](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)
+## <a name="see-also"></a>참고 항목  
+ [컬렉션 이니셜라이저](../../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
+ [방법: 컬렉션 이니셜라이저에 사용되는 컬렉션 만들기](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)

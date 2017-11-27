@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - performance [.NET Framework]
 - reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 1d1e1de5637dbb955dd72ed0291da1f4f537ce28
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="net-framework-performance"></a>.NET Framework 성능
 성능이 우수한 앱을 만들려면 앱의 다른 모든 기능을 디자인하는 것처럼 성능을 디자인하고 계획해야 합니다. 앱의 성능을 측정할 수 있도록 Microsoft에서 제공하는 도구를 사용하고 필요한 경우 메모리 사용, 코드 처리량 및 응답성을 향상시킬 수 있습니다. 이 항목에는 Microsoft에서 제공하는 성능 분석 도구가 나열되어 있으며, 앱 개발의 특정 영역에 대한 성능을 설명하는 다른 항목의 링크가 제공되어 있습니다.  
@@ -71,4 +69,3 @@ ms.lasthandoff: 09/14/2017
 |[초기화 지연](../../../docs/framework/performance/lazy-initialization.md)|필요한 대로 개체를 초기화하여 성능을 향상시키는 방법을 설명합니다(특히, 앱 시작 시).|  
 |[안정성](../../../docs/framework/performance/reliability.md)|서버 환경에서의 비동기 예외 방지에 대한 정보를 제공합니다.|  
 |[대형 응답성 .NET Framework 앱 작성](../../../docs/framework/performance/writing-large-responsive-apps.md)|C# 및 Visual Basic 컴파일러를 관리 코드로 다시 작성하면서 수집한 성능 팁을 제공하고, C# 컴파일러의 실제 몇 가지 예가 포함되어 있습니다.|
-

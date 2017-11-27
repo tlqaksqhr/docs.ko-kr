@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - managed debugging assistants (MDAs), handles
 - release handle failed
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - SafeHandle class, run-time errors
 - MDAs (managed debugging assistants), handles
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8270c69ae6d38c0ab9493cfed4f4b376191aaac0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: cbd6e2a52eb576f321dfa7dda5682d325f554158
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed MDA
 <xref:System.Runtime.InteropServices.SafeHandle> 또는 <xref:System.Runtime.InteropServices.CriticalHandle>에서 파생된 클래스의 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 메서드가 `false`를 반환하면 `releaseHandleFailed` MDA(관리 디버깅 도우미)가 활성화되고 개발자에게 알립니다.  
@@ -106,7 +99,6 @@ bool ReleaseHandle()
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
- [Interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)
-
+ <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
+ [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ [interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)

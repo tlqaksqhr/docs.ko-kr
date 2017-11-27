@@ -1,115 +1,119 @@
 ---
-title: "TextElement 콘텐츠 모델 개요 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "문서, 유동 문서"
-  - "유동 콘텐츠 요소[WPF], TextElement 콘텐츠 모델"
-  - "유동 문서"
-  - "TextElement 콘텐츠 모델"
+title: "TextElement 콘텐츠 모델 개요"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- documents [WPF], flow documents
+- TextElement content model [WPF]
+- flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 81f95ea4582230fe66c59655ab9b98a405c1e173
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# TextElement 콘텐츠 모델 개요
-이 콘텐츠 모델 개요에서는 <xref:System.Windows.Documents.TextElement>에 대해 지원되는 콘텐츠를 설명합니다.  <xref:System.Windows.Documents.Paragraph> 클래스는 <xref:System.Windows.Documents.TextElement> 형식입니다.  콘텐츠 모델은 다른 부분에 포함할 수 있는 개체\/요소에 대해 설명합니다.  이 개요에서는 <xref:System.Windows.Documents.TextElement>에서 파생된 개체에 대해 사용된 콘텐츠 모델을 요약하여 보여 줍니다.  자세한 내용은 [유동 문서 개요](../../../../docs/framework/wpf/advanced/flow-document-overview.md)를 참조하십시오.  
+# <a name="textelement-content-model-overview"></a>TextElement 콘텐츠 모델 개요
+에 대 한 지원 되는 콘텐츠를 설명 하는이 콘텐츠 모델 개요는 <xref:System.Windows.Documents.TextElement>합니다. <xref:System.Windows.Documents.Paragraph> 클래스는 유형의 <xref:System.Windows.Documents.TextElement>합니다. 콘텐츠 모델은 어떤 개체/요소가 다른 개체/요소에 포함될 수 있는지를 설명합니다. 이 개요에서 파생 된 개체에 사용 되는 콘텐츠 모델을 요약 <xref:System.Windows.Documents.TextElement>합니다. 자세한 내용은 참조 [문서 개요 흐름](../../../../docs/framework/wpf/advanced/flow-document-overview.md)합니다.  
   
-   
   
 <a name="text_element_classes"></a>   
-## 콘텐츠 모델 다이어그램  
- 다음 다이어그램에서는 <xref:System.Windows.Documents.TextElement>에서 파생된 클래스에 대한 콘텐츠 모델을 비롯하여 다른 비 `TextElement` 클래스가 이 모델에 맞추는 방법을 요약하여 보여 줍니다.  
+## <a name="content-model-diagram"></a>콘텐츠 모델 다이어그램  
+ 다음 다이어그램에서 파생 된 클래스에 대 한 콘텐츠 모델을 요약 <xref:System.Windows.Documents.TextElement> 뿐만 아니라 다른 비- `TextElement` 클래스가이 모델에 적합 합니다.  
   
- ![다이어그램: 유동 콘텐츠 포함 스키마](../../../../docs/framework/wpf/advanced/media/flow-content-schema.png "Flow\_Content\_Schema")  
+ ![다이어그램: 유동 콘텐츠 포함 스키마](../../../../docs/framework/wpf/advanced/media/flow-content-schema.png "Flow_Content_Schema")  
   
- 앞의 다이어그램에서 볼 수 있듯이 요소에 허용되는 자식은 클래스가 <xref:System.Windows.Documents.Block> 클래스에서 파생된 것인지 아니면 <xref:System.Windows.Documents.Inline> 클래스에서 파생된 것인지 여부에 따라서만 결정되는 것은 아닙니다.  예를 들어 <xref:System.Windows.Documents.Span>\(<xref:System.Windows.Documents.Inline> 파생 클래스\)은 <xref:System.Windows.Documents.Inline> 자식 요소만 가질 수 있지만 <xref:System.Windows.Documents.Figure>\(<xref:System.Windows.Documents.Inline> 파생 클래스\)는 <xref:System.Windows.Documents.Block> 자식 요소만 가질 수 있습니다.  따라서 다이어그램은 다른 요소에 포함할 수 있는 요소를 신속하게 확인하는 데 유용합니다.  예를 들어 <xref:System.Windows.Controls.RichTextBox>의 유동 콘텐츠를 생성하는 방법을 확인하기 위해 다이어그램을 사용해 보겠습니다.  
+ 위의 다이어그램에서 볼 수 있듯이 요소에 대해 허용 되는 자식이 반드시 의해 결정 되지 않습니다는 클래스에서 파생 된 여부는 <xref:System.Windows.Documents.Block> 클래스 또는 <xref:System.Windows.Documents.Inline> 클래스입니다. 예를 들어는 <xref:System.Windows.Documents.Span> (한 <xref:System.Windows.Documents.Inline>-파생 클래스) 하나만 사용할 수 있습니다 <xref:System.Windows.Documents.Inline> 자식 요소 하지만 <xref:System.Windows.Documents.Figure> (또한는 <xref:System.Windows.Documents.Inline>-파생 클래스) 하나만 사용할 수 있습니다 <xref:System.Windows.Documents.Block> 자식 요소입니다. 그러므로 이 다이어그램은 다른 요소에 포함될 수 있는 요소를 신속하게 판별하는 데 유용합니다. 예를 들어 다이어그램을 사용해 보겠습니다의 유동 콘텐츠를 생성 하는 방법을 결정 하는 <xref:System.Windows.Controls.RichTextBox>합니다.  
   
-1.  <xref:System.Windows.Controls.RichTextBox>는 <xref:System.Windows.Documents.Block> 파생 개체를 포함해야 하는 <xref:System.Windows.Documents.FlowDocument>를 포함해야 합니다.  다음은 이전 다이어그램의 해당 세그먼트입니다.  
+1.  A <xref:System.Windows.Controls.RichTextBox> 포함 해야 합니다는 <xref:System.Windows.Documents.FlowDocument> 를 포함 해야는 <xref:System.Windows.Documents.Block>-파생 된 개체입니다. 이전 다이어그램에 해당하는 세그먼트는 다음과 같습니다.  
   
-     ![다이어그램: RichTextBox 포함 규칙](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough1.png "Flow\_Ovw\_SchemaWalkThrough1")  
+     ![다이어그램: RichTextBox 포함 규칙](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough1.png "Flow_Ovw_SchemaWalkThrough1")  
   
-     따라서 지금까지의 태그는 다음과 같습니다.  
+     따라서 지금까지 태그는 다음과 같을 수 있습니다.  
   
-     [!code-xml[FlowOvwSnippets_snip#SchemaWalkThrough1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough1)]  
+     [!code-xaml[FlowOvwSnippets_snip#SchemaWalkThrough1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough1)]  
   
-2.  다이어그램에 따르면 <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.Table>, <xref:System.Windows.Documents.List> 및 <xref:System.Windows.Documents.BlockUIContainer>를 비롯하여 선택할 여러 <xref:System.Windows.Documents.Block> 요소가 있습니다\(이전 다이어그램에서 Block 파생 클래스 참조\).  <xref:System.Windows.Documents.Table>이 필요하다고 가정해 봅니다.  이전 다이어그램에 따르면 <xref:System.Windows.Documents.Table>에는 <xref:System.Windows.Documents.TableRow> 요소를 포함하는 <xref:System.Windows.Documents.TableRowGroup>이 있으며 여기에는 <xref:System.Windows.Documents.Block> 파생 개체를 포함하는 <xref:System.Windows.Documents.TableCell> 요소가 포함됩니다.  다음은 이전 다이어그램에서 가져온 <xref:System.Windows.Documents.Table>에 대한 해당 세그먼트입니다.  
+2.  다이어그램에 따라 몇 가지 <xref:System.Windows.Documents.Block> 비롯 하 여 선택할 요소 <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.Table>, <xref:System.Windows.Documents.List>, 및 <xref:System.Windows.Documents.BlockUIContainer> (위 다이어그램에 블록 파생 클래스 참조). 원하는 경우를 가정해는 <xref:System.Windows.Documents.Table>합니다. 위의 다이어그램에 따라는 <xref:System.Windows.Documents.Table> 포함는 <xref:System.Windows.Documents.TableRowGroup> 포함 된 <xref:System.Windows.Documents.TableRow> 포함 하는 요소 <xref:System.Windows.Documents.TableCell> 포함 하는 요소는 <xref:System.Windows.Documents.Block>-파생 개체입니다. 다음은 해당 하는 세그먼트에 대 한 <xref:System.Windows.Documents.Table> 위의 다이어그램에서 가져옵니다.  
   
-     ![다이어그램: Table에 대한 부모&#47;자식 스키마](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough2.png "Flow\_Ovw\_SchemaWalkThrough2")  
+     ![다이어그램: 테이블의 부모&#47;자식 스키마](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough2.png "Flow_Ovw_SchemaWalkThrough2")  
   
      다음은 해당 태그입니다.  
   
-     [!code-xml[FlowOvwSnippets_snip#SchemaWalkThrough2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough2)]  
+     [!code-xaml[FlowOvwSnippets_snip#SchemaWalkThrough2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough2)]  
   
-3.  이 경우에도 <xref:System.Windows.Documents.TableCell> 아래에 하나 이상의 <xref:System.Windows.Documents.Block> 요소가 필요합니다.  간단하게 약간의 텍스트를 셀 안에 배치해 보겠습니다.  이렇게 하려면 <xref:System.Windows.Documents.Run> 요소와 함께 <xref:System.Windows.Documents.Paragraph>를 사용하면 됩니다.  다음은 <xref:System.Windows.Documents.Paragraph>가 <xref:System.Windows.Documents.Inline> 요소를 사용할 수 있고 <xref:System.Windows.Documents.Run>\(<xref:System.Windows.Documents.Inline> 요소\)이 일반 텍스트만 사용할 수 있다는 것을 보여 주는 다이어그램의 해당 세그먼트입니다.  
+3.  마찬가지로 하나 이상의 <xref:System.Windows.Documents.Block> 아래 필요한 요소는 <xref:System.Windows.Documents.TableCell>합니다. 간단하게 셀 안에 텍스트를 배치해 보겠습니다. 사용 하 여 수행할 수 있습니다는 <xref:System.Windows.Documents.Paragraph> 와 <xref:System.Windows.Documents.Run> 요소입니다. 다음의 해당 세그먼트를 보여 주는 다이어그램은 <xref:System.Windows.Documents.Paragraph> 걸릴 수 있습니다는 <xref:System.Windows.Documents.Inline> 요소를 한 <xref:System.Windows.Documents.Run> (한 <xref:System.Windows.Documents.Inline> 요소) 일반 텍스트만 사용할 수 있습니다.  
   
-     ![다이어그램: Paragraph에 대한 부모&#47;자식 스키마](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough3.png "Flow\_Ovw\_SchemaWalkThrough3")  
+     ![다이어그램: 단락의 부모&#47;자식 스키마](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough3.png "Flow_Ovw_SchemaWalkThrough3")  
   
-     ![다이어그램: Run에 대한 부모&#47;자식 스키마](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough4.png "Flow\_Ovw\_SchemaWalkThrough4")  
+     ![다이어그램: 실행을 위한 부모&#47;자식 스키마](../../../../docs/framework/wpf/advanced/media/flow-ovw-schemawalkthrough4.png "Flow_Ovw_SchemaWalkThrough4")  
   
  다음은 태그의 전체 예제입니다.  
   
- [!code-xml[FlowOvwSnippets_snip#SchemaExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/SchemaExample.xaml#schemaexamplewholepage)]  
+ [!code-xaml[FlowOvwSnippets_snip#SchemaExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/SchemaExample.xaml#schemaexamplewholepage)]  
   
 <a name="Using_the_Content_Property"></a>   
-## 프로그래밍 방식으로 TextElement 콘텐츠 작업  
- <xref:System.Windows.Documents.TextElement>의 콘텐츠는 컬렉션에 의해 구성되므로 이러한 컬렉션을 사용하여 <xref:System.Windows.Documents.TextElement> 개체의 콘텐츠를 프로그래밍 방식으로 조작할 수 있습니다.  <xref:System.Windows.Documents.TextElement> 파생 클래스에 의해 사용되는 다양한 컬렉션은 다음 세 가지입니다.  
+## <a name="working-with-textelement-content-programmatically"></a>프로그래밍 방식으로 TextElement 콘텐츠 작업  
+ 콘텐츠는 <xref:System.Windows.Documents.TextElement> 컬렉션 등의 콘텐츠를 프로그래밍 방식으로 조작 하 여 구성 된 <xref:System.Windows.Documents.TextElement> 개체는 이러한 컬렉션을 사용 하 여 수행 됩니다. 사용 하는 세 가지 서로 다른 컬렉션 <xref:System.Windows.Documents.TextElement> -파생 된 클래스:  
   
--   <xref:System.Windows.Documents.InlineCollection>: <xref:System.Windows.Documents.Inline> 요소의 컬렉션을 나타냅니다.  <xref:System.Windows.Documents.InlineCollection>은 <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span> 및 <xref:System.Windows.Controls.TextBlock> 요소의 사용할 수 있는 자식 콘텐츠를 정의합니다.  
+-   <xref:System.Windows.Documents.InlineCollection>:의 컬렉션을 나타냅니다 <xref:System.Windows.Documents.Inline> 요소입니다. <xref:System.Windows.Documents.InlineCollection>사용할 수 있는 자식 콘텐츠를 정의 고 <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span>, 및 <xref:System.Windows.Controls.TextBlock> 요소입니다.  
   
--   <xref:System.Windows.Documents.BlockCollection>: <xref:System.Windows.Documents.Block> 요소의 컬렉션을 나타냅니다.  <xref:System.Windows.Documents.BlockCollection>은 <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater> 및 <xref:System.Windows.Documents.Figure> 요소의 사용할 수 있는 자식 콘텐츠를 정의합니다.  
+-   <xref:System.Windows.Documents.BlockCollection>:의 컬렉션을 나타냅니다 <xref:System.Windows.Documents.Block> 요소입니다. <xref:System.Windows.Documents.BlockCollection>은 <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater> 및 <xref:System.Windows.Documents.Figure> 요소의 사용할 수 있는 자식 콘텐츠를 정의합니다.  
   
--   <xref:System.Windows.Documents.ListItemCollection>: 순서가 지정되거나 순서가 지정되지 않은 <xref:System.Windows.Documents.List>의 특정 콘텐츠 항목을 나타내는 유동 콘텐츠 요소입니다.  
+-   <xref:System.Windows.Documents.ListItemCollection>순서 있는 특정 콘텐츠 항목을 나타내는: 유동 콘텐츠 요소 또는 순서가 지정 되지 않은 <xref:System.Windows.Documents.List>합니다.  
   
- 이러한 컬렉션에서 **Inlines**, **Blocks** 및 **ListItems**의 각 속성을 사용하여 조작\(항목 추가 또는 제거\)할 수 있습니다.  다음 예제에서는 **Inlines** 속성을 사용하여 Span의 콘텐츠를 조작하는 방법을 보여 줍니다.  
+ 조작할 수 있습니다 (추가 또는 제거 항목)의 해당 속성을 사용 하 여 이러한 컬렉션에서 **인라인**, **블록**, 및 **ListItems**합니다. 다음 예제는 범위를 사용 하 여의 내용을 조작 하는 방법을 보여 줍니다는 **인라인** 속성입니다.  
   
 > [!NOTE]
->  테이블에서는 여러 컬렉션을 사용하여 해당 콘텐츠를 조작하지만 여기서는 다루지 않습니다.  자세한 내용은 [표 개요](../../../../docs/framework/wpf/advanced/table-overview.md)를 참조하십시오.  
+>  테이블에서는 콘텐츠를 조작하는 데 여러 컬렉션을 사용하지만 이러한 컬렉션은 여기에서 다루지 않습니다. 자세한 내용은 참조 [테이블 개요](../../../../docs/framework/wpf/advanced/table-overview.md)합니다.  
   
- 다음 예제에서는 새 <xref:System.Windows.Documents.Span> 개체를 만든 다음 `Add` 메서드를 사용하여 두 텍스트 런\(Text Run\)을 <xref:System.Windows.Documents.Span>의 콘텐츠 자식으로 실행할 추가합니다.  
+ 다음 예제에서는 새 <xref:System.Windows.Documents.Span> 개체, 한 다음 사용 하는 `Add` 두 텍스트를 추가 하는 방법을의 콘텐츠 자식으로 실행 되는 <xref:System.Windows.Documents.Span>합니다.  
   
  [!code-csharp[SpanSnippets#_SpanInlinesAdd](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinesadd)]
  [!code-vb[SpanSnippets#_SpanInlinesAdd](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesadd)]  
   
- 다음 예제에서는 새 <xref:System.Windows.Documents.Run> 요소를 만들어 <xref:System.Windows.Documents.Span>의 시작 부분에 삽입합니다.  
+ 다음 예제에서는 새 <xref:System.Windows.Documents.Run> 요소를 맨 앞에 삽입 하는 <xref:System.Windows.Documents.Span>합니다.  
   
  [!code-csharp[SpanSnippets#_SpanInlinesInsert](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinesinsert)]
  [!code-vb[SpanSnippets#_SpanInlinesInsert](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesinsert)]  
   
- 다음 예제에서는 <xref:System.Windows.Documents.Span>에서 마지막 <xref:System.Windows.Documents.Inline> 요소를 삭제합니다.  
+ 다음 예에서는 삭제 마지막 <xref:System.Windows.Documents.Inline> 요소에는 <xref:System.Windows.Documents.Span>합니다.  
   
  [!code-csharp[SpanSnippets#_SpanInlinesRemoveLast](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinesremovelast)]
  [!code-vb[SpanSnippets#_SpanInlinesRemoveLast](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesremovelast)]  
   
- 다음 예제에서는 <xref:System.Windows.Documents.Span>에서 모든 콘텐츠\(<xref:System.Windows.Documents.Inline> 요소\)를 지웁니다.  
+ 다음 예제에서는 모든 내용을 지웁니다 (<xref:System.Windows.Documents.Inline> 요소)에서 고 <xref:System.Windows.Documents.Span>합니다.  
   
  [!code-csharp[SpanSnippets#_SpanInlinesClear](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml.cs#_spaninlinesclear)]
  [!code-vb[SpanSnippets#_SpanInlinesClear](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesclear)]  
   
 <a name="Types_that_Share_this_Content_Model"></a>   
-## 이 콘텐츠 모델을 공유하는 형식  
- 다음 형식은 <xref:System.Windows.Documents.TextElement> 클래스에서 상속되며 이 개요에서 설명한 콘텐츠를 표시하는 데 사용될 수 있습니다.  
+## <a name="types-that-share-this-content-model"></a>이 콘텐츠 모델을 공유하는 형식  
+ 다음 형식에서 상속 된 <xref:System.Windows.Documents.TextElement> 클래스 및이 개요에 설명 된 콘텐츠를 표시 하는 데 사용 될 수 있습니다.  
   
  <xref:System.Windows.Documents.Bold>, <xref:System.Windows.Documents.Figure>, <xref:System.Windows.Documents.Floater>, <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Documents.InlineUIContainer>, <xref:System.Windows.Documents.Italic>, <xref:System.Windows.Documents.LineBreak>, <xref:System.Windows.Documents.List>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Run>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.Span>, <xref:System.Windows.Documents.Table>, <xref:System.Windows.Documents.Underline>.  
   
- 이 목록에는 [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]와 함께 배포되는 비추상 형식만 포함됩니다.  <xref:System.Windows.Documents.TextElement>에서 상속되는 다른 형식을 사용할 수 있습니다.  
+ 이 목록에만 함께 배포 하는 비추상 형식 포함는 [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]합니다. 상속 하는 다른 형식을 사용할 수 있습니다 <xref:System.Windows.Documents.TextElement>합니다.  
   
 <a name="Types_that_Can_Contain_ContentControl_Objects"></a>   
-## TextElement 개체를 포함할 수 있는 형식  
- [WPF 콘텐츠 모델](../../../../docs/framework/wpf/controls/wpf-content-model.md)를 참조하십시오.  
+## <a name="types-that-can-contain-textelement-objects"></a>TextElement 개체를 포함할 수 있는 형식  
+ 참조 [WPF 콘텐츠 모델](../../../../docs/framework/wpf/controls/wpf-content-model.md)합니다.  
   
-## 참고 항목  
- [Blocks 속성을 통한 FlowDocument 조작](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)   
- [Blocks 속성을 통한 유동 콘텐츠 요소 조작](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-blocks-property.md)   
- [Blocks 속성을 통한 FlowDocument 조작](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)   
- [Columns 속성을 통해 표의 열 조작](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)   
- [RowGroups 속성을 통한 표의 행 그룹 조작](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+## <a name="see-also"></a>참고 항목  
+ [Blocks 속성을 통한 FlowDocument 조작](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
+ [Blocks 속성을 통한 유동 콘텐츠 요소 조작](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-blocks-property.md)  
+ [Blocks 속성을 통한 FlowDocument 조작](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
+ [Columns 속성을 통해 테이블의 열 조작](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
+ [RowGroups 속성을 통한 테이블의 행 그룹 조작](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)

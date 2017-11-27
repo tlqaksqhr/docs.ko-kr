@@ -1,25 +1,28 @@
 ---
-title: "NamedPipeTransportBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: NamedPipeTransportBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c201309c-c528-4b92-a53c-4d48151c5749
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 65bb13575d770c3ecd3596094e42aac2620692e7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# NamedPipeTransportBindingElement
+# <a name="namedpipetransportbindingelement"></a>NamedPipeTransportBindingElement
 NamedPipeTransportBindingElement  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 class NamedPipeTransportBindingElement : ConnectionOrientedTransportBindingElement  
@@ -28,24 +31,24 @@ class NamedPipeTransportBindingElement : ConnectionOrientedTransportBindingEleme
 };  
 ```  
   
-## 메서드  
+## <a name="methods"></a>메서드  
  NamedPipeTransportBindingElement 클래스는 메서드를 정의하지 않습니다.  
   
-## 속성  
+## <a name="properties"></a>속성  
  NamedPipeTransportBindingElement 클래스에는 다음 속성이 있습니다.  
   
-### ConnectionPoolSettings  
+### <a name="connectionpoolsettings"></a>ConnectionPoolSettings  
  데이터 형식: NamedPipeConnectionPoolSettings  
   
  액세스 형식: 읽기 전용  
   
  연결 풀 설정입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |MOF|Servicemodel.mof에 선언되어 있습니다.|  
-|---------|----------------------------------|  
-|네임스페이스|root\\ServiceModel에 정의되어 있습니다.|  
+|---------|-----------------------------------|  
+|네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>

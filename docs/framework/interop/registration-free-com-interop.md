@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - assemblies [.NET Framework], interop
 - COM interop, registration-free COM interop
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - object activation
 - registration-free COM interop, about registration-free COM interop
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: dd08f4d4466582b1e6ff1f80f586482cd3e2ec0c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 28ecb3419bddcc8e9a192b240a7bf90474314c1f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="registration-free-com-interop"></a>등록이 필요 없는 COM Interop
 등록이 필요 없는 COM interop는 Windows 레지스트리를 사용하여 어셈블리 정보를 저장하지 않고 구성 요소를 활성화합니다. 배포 중 컴퓨터에 구성 요소를 등록하는 대신 바인딩 및 활성화 정보를 포함하는 Win32 스타일의 매니페스트 파일을 디자인 타임에 만듭니다. 레지스트리 키 대신 이러한 매니페스트 파일에서 개체 활성화를 지시합니다.  
@@ -60,15 +53,14 @@ ms.lasthandoff: 08/21/2017
   
 ### <a name="configuring-com-components-for-registration-free-activation"></a>등록이 필요 없는 활성화를 위한 COM 구성 요소 구성  
   
-1.  COM 구성 요소가 등록이 필요 없는 활성화에 참여하려면 Side-by-side 어셈블리로 배포되어야 합니다. Side-by-side 어셈블리는 관리되지 않는 어셈블리입니다.  자세한 내용은 MSDN 라이브러리에서 “Side-by-side 어셈블리 사용”을 참조하세요.  
+1.  COM 구성 요소가 등록이 필요 없는 활성화에 참여하려면 Side-by-side 어셈블리로 배포되어야 합니다. Side-by-side 어셈블리는 관리되지 않는 어셈블리입니다.  자세한 내용은 참조 [side-by-side-어셈블리 사용](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx)합니다.  
   
      COM Side-by-side-어셈블리를 사용하려면 .NET 기반 응용 프로그램 개발자가 바인딩 및 활성화 정보를 포함하는 응용 프로그램 매니페스트를 제공해야 합니다. 관리되지 않는 Side-by-side 어셈블리에 대한 지원은 Windows XP 운영 체제에 기본 제공됩니다. 운영 체제에서 지원하는 COM 런타임은 활성화되는 구성 요소가 레지스트리에 없는 경우 응용 프로그램 매니페스트에서 활성화 정보를 검색합니다.  
   
-     Windows XP에 설치된 COM 구성 요소의 경우 등록이 필요 없는 활성화는 선택 사항입니다. Side-by-side 어셈블리를 응용 프로그램에 추가하는 방법에 대한 자세한 내용을 보려면 MSDN 라이브러리에서 "Side-by-side 어셈블리 사용"을 검색하세요.  
+     Windows XP에 설치된 COM 구성 요소의 경우 등록이 필요 없는 활성화는 선택 사항입니다. Side-by-side-어셈블리를 응용 프로그램에 추가 하는 방법에 대 한 자세한 지침을 참조 하십시오. [side-by-side-어셈블리 사용](https://msdn.microsoft.com/library/windows/desktop/aa376618.aspx)합니다.  
   
     > [!NOTE]
     >  Side-by-side 실행은 여러 버전의 런타임 및 특정 런타임 버전을 사용하는 여러 버전의 응용 프로그램 및 구성 요소가 동시에 같은 컴퓨터에서 실행될 수 있도록 하는 .NET Framework 기능입니다. Side-by-side 실행 및 Side-by-side 어셈블리는 Side-by-side 기능을 제공하는 서로 다른 메커니즘입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [방법: 등록이 필요 없는 활성화를 위한 .NET Framework 기반 COM 구성 요소 구성](../../../docs/framework/interop/configure-net-framework-based-com-components-for-reg.md)
-

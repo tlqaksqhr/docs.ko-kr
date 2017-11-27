@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 98a3e029-1a9b-4e0c-b5d0-29d3f23f5b15
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 987157bc3663330d9c610c1016787890e9dc6137
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a>방법: 양식 기반 인증을 사용하여 클레임 인식 ASP.NET 응용 프로그램 빌드
 ## <a name="applies-to"></a>적용 대상  
@@ -138,4 +136,3 @@ ms.lasthandoff: 08/21/2017
 2.  **등록** 페이지에서 사용자 계정을 만든 다음 **등록**을 클릭합니다. Forms 인증을 사용하여 계정이 만들어지며, 자동으로 로그인됩니다.  
   
 3.  홈페이지로 리디렉션된 후 계정에 대한 **Issuer**, **OriginalIssuer**, **Type**, **Value** 및 **ValueType** 클레임 정보를 포함하는 표가 **클레임** 제목 아래에 표시됩니다.
-

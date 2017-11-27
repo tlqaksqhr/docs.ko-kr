@@ -1,28 +1,36 @@
 ---
-title: "&lt;wsFederationHttpBinding&gt;의 &lt;security&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;wsFederationHttpBinding&gt;의 &lt;security&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a8e5e854-b8dc-4921-843d-34b6a4a6a8ba
-caps.latest.revision: 15
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: dd4f517c17efce85f7a83d7d8545cf58322d5373
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;wsFederationHttpBinding&gt;의 &lt;security&gt;
-[\<wsFederationHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)의 보안 설정을 정의합니다.  
+# <a name="ltsecuritygt-of-ltwsfederationhttpbindinggt"></a>&lt;wsFederationHttpBinding&gt;의 &lt;security&gt;
+보안 설정을 정의 [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)합니다.  
   
-## 구문  
+ \<시스템입니다. ServiceModel >  
+\<바인딩 >  
+\<wsFederatedBinding >  
+\<바인딩 >  
+\<보안 >  
   
-```  
+## <a name="syntax"></a>구문  
   
+```xml  
 <wsFederationBinding>  
     <binding >  
        <security mode="None/Message/TransportWithMessageCredential">  
@@ -81,44 +89,44 @@ caps.handback.revision: 15
 </wsFederationBinding>  
 ```  
   
-## 특성 및 요소  
+## <a name="attributes-and-elements"></a>특성 및 요소  
  다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
-### 특성  
+### <a name="attributes"></a>특성  
   
 |특성|설명|  
-|--------|--------|  
-|모드|선택 사항입니다.  적용되는 보안 형식을 지정합니다.  기본값은 `Message`입니다.  이 특성은 <xref:System.ServiceModel.WSFederationHttpSecurityMode> 형식입니다.|  
+|---------------|-----------------|  
+|모드|선택 사항입니다. 적용되는 보안 형식을 지정합니다. 기본값은 `Message`입니다. 이 특성은 <xref:System.ServiceModel.WSFederationHttpSecurityMode> 형식입니다.|  
   
-## Mode 특성  
+## <a name="mode-attribute"></a>Mode 특성  
   
 |값|설명|  
-|-------|--------|  
+|-----------|-----------------|  
 |없음|SOAP 메시지의 경우 전송 중에는 안전하지 않습니다.|  
-|메시지|SOAP 메시지 보안을 사용하여 무결성, 기밀성, 서버 인증 및 클라이언트 인증을 제공합니다.  기본적으로 본문에는 암호화 및 서명이 수행됩니다.  서비스는 인증서로 구성해야 합니다.  클라이언트 인증은 보안 토큰 서비스가 클라이언트에 발급한 토큰에 따라 수행됩니다.|  
-|TransportWithMessageCredential|HTTPS를 사용하여 무결성, 기밀성 및 서버 인증을 제공합니다.  서비스는 인증서로 구성해야 합니다.  클라이언트 인증은 SOAP 메시지 보안을 통해 제공되며 보안 토큰 서비스가 클라이언트에 발급한 토큰에 따라 수행됩니다.|  
+|메시지|SOAP 메시지 보안을 사용하여 무결성, 기밀성, 서버 인증 및 클라이언트 인증을 제공합니다. 기본적으로 본문에는 암호화 및 서명이 수행됩니다. 서비스는 인증서로 구성해야 합니다. 클라이언트 인증은 보안 토큰 서비스가 클라이언트에 발급한 토큰에 따라 수행됩니다.|  
+|TransportWithMessageCredential|HTTPS를 사용하여 무결성, 기밀성 및 서버 인증을 제공합니다. 서비스는 인증서로 구성해야 합니다. 클라이언트 인증은 SOAP 메시지 보안을 통해 제공되며 보안 토큰 서비스가 클라이언트에 발급한 토큰에 따라 수행됩니다.|  
   
-### 자식 요소  
-  
-|요소|설명|  
-|--------|--------|  
-|[\<message\>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-wsfederationhttpbinding.md)|메시지 수준 보안 설정을 정의합니다.  이 요소는 <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement> 형식입니다.|  
-  
-### 부모 요소  
+### <a name="child-elements"></a>자식 요소  
   
 |요소|설명|  
-|--------|--------|  
-|[\<binding\>](../../../../../docs/framework/misc/binding.md)|[\<wsDualHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)의 모든 바인딩 기능을 정의합니다.|  
+|-------------|-----------------|  
+|[\<메시지 >](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-wsfederationhttpbinding.md)|메시지 수준 보안 설정을 정의합니다. 이 요소는 <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement> 형식입니다.|  
   
-## 참고 항목  
- <xref:System.ServiceModel.WSFederationHttpSecurity>   
- <xref:System.ServiceModel.WSFederationHttpBinding.Security%2A>   
- <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement.Security%2A>   
- <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>   
- [방법: WSFederationHttpBinding 만들기](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)   
- [서비스 및 클라이언트에 보안 설정](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [자격 증명 형식 선택](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)   
- [바인딩](../../../../../docs/framework/wcf/bindings.md)   
- [시스템 제공 바인딩 구성](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/ko-kr/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<binding\>](../../../../../docs/framework/misc/binding.md)
+### <a name="parent-elements"></a>부모 요소  
+  
+|요소|설명|  
+|-------------|-----------------|  
+|[\<바인딩 >](../../../../../docs/framework/misc/binding.md)|모든 바인딩 기능을 정의 [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)합니다.|  
+  
+## <a name="see-also"></a>참고 항목  
+ <xref:System.ServiceModel.WSFederationHttpSecurity>  
+ <xref:System.ServiceModel.WSFederationHttpBinding.Security%2A>  
+ <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement.Security%2A>  
+ <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>  
+ [방법: WSFederationHttpBinding 만들기](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
+ [서비스 및 클라이언트 보안 설정](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [자격 증명 유형 선택](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
+ [바인딩](../../../../../docs/framework/wcf/bindings.md)  
+ [시스템 제공 바인딩 구성](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [바인딩을 사용 하 여 Windows Communication Foundation 서비스 및 클라이언트 구성](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<바인딩 >](../../../../../docs/framework/misc/binding.md)

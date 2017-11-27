@@ -1,58 +1,62 @@
 ---
-title: "방법: 이미지 회전, 반사 및 기울이기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "이미지[Windows Forms], 반사"
-  - "이미지[Windows Forms], 회전"
-  - "이미지[Windows Forms], 기울이기"
+title: "방법: 이미지 회전, 반사 및 기울이기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- images [Windows Forms], reflecting
+- images [Windows Forms], rotating
+- images [Windows Forms], skewing
 ms.assetid: a3bf97eb-63ed-425a-ba07-dcc65efb567c
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: eaa6286731d196dad387e1648644ca3e8103da03
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/22/2017
 ---
-# 방법: 이미지 회전, 반사 및 기울이기
-원래 이미지의 왼쪽 위, 오른쪽 위 및 왼쪽 아래 모퉁이에 대한 대상 지점을 지정하여 이미지를 회전하고 반사하고 기울일 수 있습니다.  세 개의 대상 지점에 따라 원래의 사각형 이미지를 평행 사변형으로 매핑하는 상관 변환이 결정됩니다.  
+# <a name="how-to-rotate-reflect-and-skew-images"></a>방법: 이미지 회전, 반사 및 기울이기
+있습니다 수 회전, 반사 및 기울이기 이미지 원본 이미지의 왼쪽 위, 오른쪽 위 및 왼쪽 아래 모퉁이 대 한 대상 지점을 지정 하 여 합니다. 세 개의 대상 지점 평행 사변형에 원본 사각형이 이미지 매핑되는 3x3 유사 변형을 결정 합니다.  
   
-## 예제  
- 예를 들어, 원래 이미지의 왼쪽 위 모퉁이가 \(0, 0\), 오른쪽 위 모퉁이가 \(100, 0\), 왼쪽 아래 모퉁이가 \(0, 50\)인 사각형이 있습니다.  이제 이 세 지점을 다음과 같이 대상 지점에 매핑한다고 가정합니다.  
+## <a name="example"></a>예제  
+ 예를 들어, 원본 이미지는 왼쪽 위 모퉁이에 있는 사각형 (0, 0)에서 오른쪽 위 모서리 (100, 0) 및 왼쪽 아래 모퉁이에 (0, 50). 이제 이러한 매핑 한다고 가정 3 개를 가리킵니다 대상 점은 다음과 같습니다.  
   
 |원래 지점|대상 지점|  
-|-----------|-----------|  
-|왼쪽 위\(0, 0\)|\(200, 20\)|  
-|오른쪽 위\(100, 0\)|\(110, 100\)|  
-|왼쪽 아래\(0, 50\)|\(250, 30\)|  
+|--------------------|-----------------------|  
+|왼쪽 위 (0, 0)|(200, 20)|  
+|오른쪽 위 (100, 0)|(110, 100)|  
+|왼쪽 아래 (0, 50)|(250, 30)|  
   
- 아래 그림에서는 원래 이미지 및 평행 사변형으로 매핑된 이미지를 보여 줍니다.  여기서는 원래 이미지를 기울이고, 반사하고, 회전 및 이동했습니다.  원래 이미지의 위쪽 가장자리에 있는 x 축은 \(200, 20\)에서 \(110, 100\)까지 연결하는 선에 매핑됩니다.  원래 이미지의 왼쪽 가장자리에 있는 y 축은 \(200, 20\)에서 \(250, 30\)을 지나는 선에 매핑됩니다.  
+ 다음은 원본 이미지와 평행 사변형에 매핑되는 이미지입니다. 원본 이미지 왜곡, 반영, 회전, 되었으며 변환 합니다. 통해 실행 되는 줄에 매핑된 원본 이미지의 위쪽 가장자리를 따라 x 축 (200, 20) 및 (110, 100). 통해 실행 되는 줄에 매핑된 원본 이미지의 왼쪽된 가장자리를 따라 y 축 (200, 20) 및 (250, 30).  
   
- ![스트라이프](../../../../docs/framework/winforms/advanced/media/stripes1.gif "Stripes1")  
+ ![줄무늬](../../../../docs/framework/winforms/advanced/media/stripes1.gif "Stripes1")  
   
- 아래 그림에서는 이와 유사한 변환을 사진 이미지에 적용한 결과를 보여 줍니다.  
+ 다음 그림과 비슷한 변환을 사진 이미지에 적용 합니다.  
   
- ![변환된 오르기](../../../../docs/framework/winforms/advanced/media/transformedclimber.png "TransformedClimber")  
+ ![오르기 변환](../../../../docs/framework/winforms/advanced/media/transformedclimber.png "TransformedClimber")  
   
- 아래 그림에서는 이와 유사한 변환을 메타파일에 적용한 결과를 보여 줍니다.  
+ 다음 그림과 비슷한 변환을 메타 파일에 적용 합니다.  
   
- ![변환된 메타파일](../../../../docs/framework/winforms/advanced/media/transformedmetafile.png "TransformedMetafile")  
+ ![메타 파일 변환](../../../../docs/framework/winforms/advanced/media/transformedmetafile.png "TransformedMetafile")  
   
- 아래 예제에서는 첫 번째 그림에 나타난 이미지를 만듭니다.  
+ 다음 예에서는 첫 번째 그림에 표시 된 이미지를 생성 합니다.  
   
  [!code-csharp[System.Drawing.WorkingWithImages#61](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#61)]
  [!code-vb[System.Drawing.WorkingWithImages#61](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#61)]  
   
-## 코드 컴파일  
- 앞의 예제는 Windows Forms에서 사용해야 하며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`를 필요로 합니다.  `Stripes.bmp`를 시스템에서 사용할 수 있는 이미지에 대한 경로로 바꿔야 합니다.  
+## <a name="compiling-the-code"></a>코드 컴파일  
+ 앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.PaintEventArgs> 이벤트 처리기의 매개 변수인 `e`<xref:System.Windows.Forms.Control.Paint>가 필요합니다. 대체 해야 `Stripes.bmp` 은 시스템에서 사용할 수 있는 이미지의 경로 사용 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [이미지, 비트맵, 아이콘 및 메타파일 사용](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

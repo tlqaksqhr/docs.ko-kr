@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,15 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: tdykstra
 ms.author: tdykstra
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7886b3bfe8299b64277d6062ab481136caafbde0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 69e6ea6a95ffdea8f7a21540106d4817119a7cb3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="caching-in-net-framework-applications"></a>.NET Framework 응용 프로그램에서 캐싱
 캐싱을 사용하면 빠른 액세스를 위해 데이터를 메모리에 저장할 수 있습니다. 데이터에 다시 액세스할 때 응용 프로그램은 원래 소스에서 검색하는 대신 캐시에서 데이터를 가져올 수 있습니다. 이 경우 성능과 확장성이 향상됩니다. 또한 캐싱을 사용하면 데이터 소스를 일시적으로 사용할 수 없는 경우에도 데이터를 사용할 수 있습니다.  
@@ -88,8 +86,7 @@ ms.lasthandoff: 08/21/2017
  자세한 내용은 Scott Guthrie 블로그의 [Extensible Output Caching with ASP.NET 4 (VS 2010 and .NET 4.0 Series)](http://go.microsoft.com/fwlink/?LinkId=185772)(ASP.NET 4(VS 2010 및 .NET 4.0 시리즈)에서 확장 가능한 출력 캐싱) 항목을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.Caching.ObjectCache>   
- <xref:System.Runtime.Caching.MemoryCache>   
- [연습: WPF 응용 프로그램에서 응용 프로그램 데이터 캐싱](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)   
+ <xref:System.Runtime.Caching.ObjectCache>  
+ <xref:System.Runtime.Caching.MemoryCache>  
+ [연습: WPF 응용 프로그램에서 응용 프로그램 데이터 캐싱](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)  
  [연습: ASP.NET에서 응용 프로그램 데이터 캐싱](http://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23)
-

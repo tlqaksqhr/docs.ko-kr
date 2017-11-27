@@ -1,45 +1,46 @@
 ---
-title: "Windows Forms의 마우스 포인터 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "커서, 설정[Windows Forms]"
-  - "마우스 커서"
-  - "마우스 포인터"
-  - "마우스 포인터, 설정[Windows Forms]"
-  - "마우스, 커서"
-  - "포인터, 설정[Windows Forms]"
+title: "Windows Forms의 마우스 포인터"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- pointers [Windows Forms], setting
+- mouse pointers
+- mouse cursors
+- mouse pointers [Windows Forms], setting
+- cursors [Windows Forms], setting
+- mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4fb0e193ccbced719f30ede91cb59cd51dd349a9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Windows Forms의 마우스 포인터
-커서라고도 하는 마우스 *포인터*는 사용자가 화면에서 마우스로 입력할 때 포커스 점을 지정하는 비트맵입니다.  이 항목에서는 Windows Forms의 마우스 포인터에 대한 개요와 마우스 포인터를 수정 및 제어하는 몇 가지 방법에 대해 설명합니다.  
+# <a name="mouse-pointers-in-windows-forms"></a>Windows Forms의 마우스 포인터
+마우스 *포인터*, 마우스를 사용 하 여 사용자 입력에 대 한 화면에 포커스가 위치를 지정 하는 비트맵은 커서 참조 되는 경우에 따라 있는 합니다. 이 항목 Windows Forms에서 마우스 포인터의 개요를 제공 하 고 수정 하 고 마우스 포인터를 제어 하는 방법 중 일부에 대해 설명 합니다.  
   
-## 마우스 포인터에 액세스  
- 마우스 포인터는 <xref:System.Windows.Forms.Cursor> 클래스로 나타내며 각 <xref:System.Windows.Forms.Control>에는 해당 컨트롤에 대한 포인터를 지정하는 <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=fullName> 속성이 있습니다.  <xref:System.Windows.Forms.Cursor> 클래스에는 <xref:System.Windows.Forms.Cursor.Position%2A> 및 <xref:System.Windows.Forms.Cursor.HotSpot%2A> 속성과 같이 포인터를 설명하는 속성과 <xref:System.Windows.Forms.Cursor.Show%2A>, <xref:System.Windows.Forms.Cursor.Hide%2A> 및 <xref:System.Windows.Forms.Cursor.DrawStretched%2A> 메서드와 같이 포인터의 모양을 수정할 수 있는 메서드가 들어 있습니다.  
+## <a name="accessing-the-mouse-pointer"></a>마우스 포인터에 액세스  
+ 마우스 포인터가 나타내는 <xref:System.Windows.Forms.Cursor> 클래스 및 각 <xref:System.Windows.Forms.Control> 에 <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> 해당 컨트롤에 대 한 포인터를 지정 하는 속성입니다. <xref:System.Windows.Forms.Cursor> 클래스와 같은 포인터를 설명 하는 속성이 포함 된 <xref:System.Windows.Forms.Cursor.Position%2A> 및 <xref:System.Windows.Forms.Cursor.HotSpot%2A> 속성과 같은 포인터의 모양을 수정할 수 있는 메서드는 <xref:System.Windows.Forms.Cursor.Show%2A>, <xref:System.Windows.Forms.Cursor.Hide%2A>, 및 <xref:System.Windows.Forms.Cursor.DrawStretched%2A> 메서드를 합니다.  
   
-## 마우스 포인터 제어  
- 마우스 포인터를 사용할 수 있는 영역을 제한하거나 마우스의 위치를 변경해야 하는 경우가 있습니다.  <xref:System.Windows.Forms.Cursor>의 <xref:System.Windows.Forms.Cursor.Position%2A> 속성을 사용하여 마우스의 현재 위치를 가져오거나 설정할 수 있습니다.  또한 <xref:System.Windows.Forms.Cursor.Clip%2A> 속성을 설정하여 마우스 포인터를 사용할 수 있는 영역을 제한할 수 있습니다.  기본적으로 전체 화면이 클리핑 영역입니다.  
+## <a name="controlling-the-mouse-pointer"></a>마우스 포인터를 제어합니다.  
+ 경우에 따라 다음 마우스 포인터 사용할 수 있거나 마우스 위치를 변경할 영역을 제한 하는 것이 좋습니다. 가져오거나 사용 하 여 마우스의 현재 위치를 설정할 수는 <xref:System.Windows.Forms.Cursor.Position%2A> 의 속성은 <xref:System.Windows.Forms.Cursor>합니다. 마우스 포인터를 사용할 수 있습니다 영역을 제한할 수는 또한 설정 수는 <xref:System.Windows.Forms.Cursor.Clip%2A> 속성입니다. 기본적으로의 클립 영역에는 전체 화면입니다.  
   
-## 마우스 포인터 변경  
- 사용자에게 피드백을 줄 수 있는 가장 좋은 방법은 마우스 포인터를 변경하는 것입니다.  예를 들어, <xref:System.Windows.Forms.Control.MouseEnter> 및 <xref:System.Windows.Forms.Control.MouseLeave> 이벤트의 처리기에서 마우스 포인터를 수정하여 계산이 수행되고 있음을 사용자에게 알리고 컨트롤에서 사용자 상호 작용을 제한할 수 있습니다.  응용 프로그램에서 끌어서 놓기 작업이 수행되고 있을 때와 같이 시스템 이벤트 때문에 마우스 포인터가 변경되는 경우도 있습니다.  
+## <a name="changing-the-mouse-pointer"></a>마우스 포인터 변경  
+ 사용자에 게 피드백을 제공 하는 중요 한 차이점은 마우스 포인터를 변경 합니다. 예를 들어의 처리기에서 마우스 포인터를 수정할 수 있습니다는 <xref:System.Windows.Forms.Control.MouseEnter> 및 <xref:System.Windows.Forms.Control.MouseLeave> 계산이 수행 되는 사용자에 게 알림를 제한 하 고 컨트롤의 사용자 상호 작용 하는 이벤트입니다. 경우에 따라 끌어서 놓기 작업에서 응용 프로그램은 포함 하는 경우와 같은 시스템 이벤트 때문에 마우스 포인터 변경 됩니다.  
   
- 마우스 포인터를 변경하는 기본적인 방법은 컨트롤의 <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=fullName> 또는 <xref:System.Windows.Forms.Control.DefaultCursor%2A> 속성을 새 <xref:System.Windows.Forms.Cursor>로 설정하는 것입니다.  마우스 포인터를 변경하는 예제를 보려면 <xref:System.Windows.Forms.Cursor> 클래스의 코드 예제를 참조하십시오.  또한 <xref:System.Windows.Forms.Cursors> 클래스는 손 모양의 포인터와 같은 여러 형식의 포인터에 대한 <xref:System.Windows.Forms.Cursor> 개체 집합을 노출합니다.  마우스 포인터가 컨트롤에 있을 때 항상 모래 시계 모양의 대기 포인터를 표시하려면 <xref:System.Windows.Forms.Control> 클래스의 <xref:System.Windows.Forms.Control.UseWaitCursor%2A> 속성을 사용합니다.  
+ 설정 된 경우 마우스 포인터를 변경 하는 기본적인 방법은 <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> 또는 <xref:System.Windows.Forms.Control.DefaultCursor%2A> 새 컨트롤의 속성 <xref:System.Windows.Forms.Cursor>합니다. 마우스 포인터 변경의 예의 코드 예제를 참조 하십시오.는 <xref:System.Windows.Forms.Cursor> 클래스입니다. 또한는 <xref:System.Windows.Forms.Cursors> 클래스 집합을 노출 <xref:System.Windows.Forms.Cursor> 다양 한 유형의 손 모양 유사한 포인터와 같은 포인터에 대 한 개체입니다. 사용 하 여는 경우 언제 든 지 마우스 포인터가 컨트롤에는 모래 시계과 비슷한, 대기 포인터의 표시는 <xref:System.Windows.Forms.Control.UseWaitCursor%2A> 속성의는 <xref:System.Windows.Forms.Control> 클래스.  
   
-## 참고 항목  
- <xref:System.Windows.Forms.Cursor>   
- [Windows Forms 응용 프로그램의 마우스 입력](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)   
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Windows.Forms.Cursor>  
+ [Windows Forms 응용 프로그램의 마우스 입력](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)  
  [Windows Forms에서의 끌어서 놓기 기능](../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)

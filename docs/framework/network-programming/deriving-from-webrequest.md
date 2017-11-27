@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - WebRequest class, pluggable protocols
 - protocol-specific request handler
@@ -21,26 +16,25 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2ea66dd7fcb474977511b872ba3f917eee90ed2f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 56a536ccdd9b4ad67bc6a07f4a6d2a225f6fa565
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="deriving-from-webrequest"></a>WebRequest에서 파생
 <xref:System.Net.WebRequest> 클래스는 .NET Framework 플러그형 프로토콜 모델에 적합한 프로토콜별 요청 처리기를 만들기 위한 기본 메서드 및 속성을 제공하는 추상 기본 클래스입니다. **WebRequest** 클래스를 사용하는 응용 프로그램은 사용되는 프로토콜을 지정할 필요 없이 지원되는 모든 프로토콜을 사용하여 데이터를 요청할 수 있습니다.  
   
- 프로토콜별 클래스를 플러그형 프로토콜로 사용하려면 다음 두 가지 조건을 충족해야 합니다. 클래스는 <xref:System.Net.IWebRequestCreate> 인터페이스를 구현하고 <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=fullName> 메서드에 등록되어야 합니다. 클래스는 플러그형 인터페이스를 제공하도록 **WebRequest**의 모든 추상 메서드 및 속성을 재정의해야 합니다.  
+ 프로토콜별 클래스를 플러그형 프로토콜로 사용하려면 다음 두 가지 조건을 충족해야 합니다. 클래스는 <xref:System.Net.IWebRequestCreate> 인터페이스를 구현하고 <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType> 메서드에 등록되어야 합니다. 클래스는 플러그형 인터페이스를 제공하도록 **WebRequest**의 모든 추상 메서드 및 속성을 재정의해야 합니다.  
   
  **WebRequest** 인스턴스는 일회용입니다. 또 다른 요청을 만들려면 새 **WebRequest**를 만듭니다. **WebRequest**는 개발자가 템플릿 **WebRequest**를 직렬화하고 나서 추가 요청을 위한 템플릿을 다시 구성할 수 있도록 <xref:System.Runtime.Serialization.ISerializable> 인터페이스를 지원합니다.  
   
 ## <a name="iwebrequest-create-method"></a>IWebRequest Create 메서드  
- <xref:System.Net.IWebRequestCreate.Create%2A> 메서드는 프로토콜별 클래스의 새 인스턴스를 초기화해야 합니다. 새 **WebRequest**가 생성되면 <xref:System.Net.WebRequest.Create%2A?displayProperty=fullName> 메서드는 요청된 URI를 **RegisterPrefix** 메서드에 등록된 URI 접두사와 일치시킵니다. 적절한 프로토콜별 하위 항목의 **Create** 메서드는 프로토콜별 필드를 수정할 필요 없이 프로토콜에 대한 표준 요청/응답 트랜잭션을 수행할 수 있는 하위 항목의 초기화된 인스턴스를 반환해야 합니다.  
+ <xref:System.Net.IWebRequestCreate.Create%2A> 메서드는 프로토콜별 클래스의 새 인스턴스를 초기화해야 합니다. 새 **WebRequest**가 생성되면 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> 메서드는 요청된 URI를 **RegisterPrefix** 메서드에 등록된 URI 접두사와 일치시킵니다. 적절한 프로토콜별 하위 항목의 **Create** 메서드는 프로토콜별 필드를 수정할 필요 없이 프로토콜에 대한 표준 요청/응답 트랜잭션을 수행할 수 있는 하위 항목의 초기화된 인스턴스를 반환해야 합니다.  
   
 ## <a name="connectiongroupname-property"></a>ConnectionGroupName 속성  
  <xref:System.Net.WebRequest.ConnectionGroupName%2A> 속성을 사용하여 단일 연결을 통해 여러 요청이 생성될 수 있도록 리소스 연결 그룹의 이름을 지정합니다. 연결 공유를 구현하려면 연결 풀링 및 할당에 대한 프로토콜별 메서드를 사용해야 합니다. 예를 들어 제공된 <xref:System.Net.ServicePointManager> 클래스는 <xref:System.Net.HttpWebRequest> 클래스에 대한 연결 공유를 구현합니다. **ServicePointManager** 클래스는 각 연결 그룹의 특정 서버에 대한 연결을 제공하는 <xref:System.Net.ServicePoint>를 만듭니다.  
@@ -59,7 +53,7 @@ ms.lasthandoff: 08/21/2017
 ## <a name="headers-property"></a>Headers 속성  
  <xref:System.Net.WebRequest.Headers%2A> 속성에는 요청과 연결된 메타데이터 이름/값 쌍의 임의 컬렉션이 포함됩니다. 이름/값 쌍으로 표시될 수 있는 프로토콜에 필요한 모든 메타데이터가 **Headers** 속성에 포함될 수 있습니다. 일반적으로 이 정보는 <xref:System.Net.WebRequest.GetRequestStream%2A> 또는 <xref:System.Net.WebRequest.GetResponse%2A> 메서드를 호출하기 전에 설정해야 합니다. 요청이 생성된 후에는 메타데이터를 읽기 전용으로 간주합니다.  
   
- 헤더 메타데이터를 사용하기 위해 **Headers** 속성을 사용할 필요가 없습니다. 프로토콜별 메타데이터는 속성으로 노출됩니다. 예를 들어 <xref:System.Net.HttpWebRequest.UserAgent%2A?displayProperty=fullName> 속성은 **User-Agent** HTTP 헤더를 노출합니다. 헤더 메타데이터를 속성으로 노출할 경우 **Headers** 속성을 사용하여 동일한 속성을 설정하도록 허용하면 안 됩니다.  
+ 헤더 메타데이터를 사용하기 위해 **Headers** 속성을 사용할 필요가 없습니다. 프로토콜별 메타데이터는 속성으로 노출됩니다. 예를 들어 <xref:System.Net.HttpWebRequest.UserAgent%2A?displayProperty=nameWithType> 속성은 **User-Agent** HTTP 헤더를 노출합니다. 헤더 메타데이터를 속성으로 노출할 경우 **Headers** 속성을 사용하여 동일한 속성을 설정하도록 허용하면 안 됩니다.  
   
 ## <a name="method-property"></a>Method 속성  
  <xref:System.Net.WebRequest.Method%2A> 속성에는 요청을 통해 서버에서 수행하도록 요청할 동사 또는 작업이 포함됩니다. **Method** 속성의 기본값은 프로토콜별 속성을 설정할 필요 없이 표준 요청/응답 작업을 사용하도록 설정해야 합니다. 예를 들어 <xref:System.Net.HttpWebResponse.Method%2A> 메서드는 기본적으로 웹 서버에서 리소스를 요청하고 응답을 반환하는 GET으로 설정됩니다.  
@@ -104,9 +98,8 @@ ms.lasthandoff: 08/21/2017
  **GetResponse** 메서드는 들어오는 응답을 포함할 적절한 **WebResponse** 하위 항목을 만들어야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Net.WebRequest>   
- <xref:System.Net.HttpWebRequest>   
- <xref:System.Net.FileWebRequest>   
- [플러그형 프로토콜 프로그래밍](../../../docs/framework/network-programming/programming-pluggable-protocols.md)   
+ <xref:System.Net.WebRequest>  
+ <xref:System.Net.HttpWebRequest>  
+ <xref:System.Net.FileWebRequest>  
+ [플러그형 프로토콜 프로그래밍](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
  [WebResponse에서 파생](../../../docs/framework/network-programming/deriving-from-webresponse.md)
-

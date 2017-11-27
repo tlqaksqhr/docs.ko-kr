@@ -1,40 +1,47 @@
 ---
-title: "방법: StackPanel과 DockPanel 중 선택 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "컨트롤[WPF], DockPanel"
-  - "컨트롤[WPF], StackPanel"
-  - "DockPanel 컨트롤, StackPanel 컨트롤 비교 대상"
-  - "StackPanel 컨트롤, DockPanel 컨트롤 비교 대상"
+title: "방법: StackPanel과 DockPanel 중 선택"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- controls [WPF], DockPanel
+- DockPanel control [WPF], StackPanel control compared to
+- StackPanel control [WPF], DockPanel control compared to
+- controls [WPF], StackPanel
 ms.assetid: f9239086-451f-42e6-81f7-ef89ef349742
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 40d99e090a0599c98560e4102d18d35ee7174259
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: StackPanel과 DockPanel 중 선택
-이 예제에서는 <xref:System.Windows.Controls.Panel>에 내용을 배치할 때 <xref:System.Windows.Controls.StackPanel>과 <xref:System.Windows.Controls.DockPanel> 중 어떤 것을 사용할지 선택하는 방법을 보여 줍니다.  
+# <a name="how-to-choose-between-stackpanel-and-dockpanel"></a>방법: StackPanel과 DockPanel 중 선택
+사용 하 여 중에서 선택 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.StackPanel> 또는 <xref:System.Windows.Controls.DockPanel> 의 콘텐츠를 스택 하는 <xref:System.Windows.Controls.Panel>합니다.  
   
-## 예제  
- <xref:System.Windows.Controls.DockPanel> 또는 <xref:System.Windows.Controls.StackPanel>을 사용하여 자식 요소를 배치할 수 있지만 경우에 따라 이 두 컨트롤의 결과가 다를 수 있습니다.  예를 들어 자식 요소를 배치하는 순서가 <xref:System.Windows.Controls.DockPanel>에서는 자식 요소의 크기에 영향을 주지만 <xref:System.Windows.Controls.StackPanel>에서는 그렇지 않을 수 있습니다.  <xref:System.Windows.Controls.StackPanel>은 <xref:System.Double>.<xref:System.Double.PositiveInfinity>에서 배치하는 방향으로 측정되지만, <xref:System.Windows.Controls.DockPanel>은 사용 가능한 크기만 측정하기 때문에 이러한 동작 차이가 발생합니다.  
+## <a name="example"></a>예제  
+ 하나를 사용할 수 있지만 <xref:System.Windows.Controls.DockPanel> 또는 <xref:System.Windows.Controls.StackPanel> 자식 요소를 스택 하는 두 컨트롤을 생성 하지 않을 동일한 결과입니다. 자식 요소를 배치 하는 순서에 있는 자식 요소의 크기 영향을 줄 수는 예를 들어 한 <xref:System.Windows.Controls.DockPanel> 아니라는 <xref:System.Windows.Controls.StackPanel>합니다. 이 다른 동작이 발생 하기 때문에 <xref:System.Windows.Controls.StackPanel> 에서 쌓는 방향으로 측정 <xref:System.Double>.<xref:System.Double.PositiveInfinity>소비량이 적어지지만 <xref:System.Windows.Controls.DockPanel> 만 사용할 수 있는 크기를 측정 합니다.  
   
- 다음 예제에서는 <xref:System.Windows.Controls.DockPanel>과 <xref:System.Windows.Controls.StackPanel>의 이러한 주요 차이를 보여 줍니다.  
+ 다음 예제에서는 이러한 주요 차이 <xref:System.Windows.Controls.DockPanel> 및 <xref:System.Windows.Controls.StackPanel>합니다.  
   
  [!code-cpp[StackPanelOvw4#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/StackPanelOvw4/CPP/StackPanel_Ovw_Sample4.cpp#1)]
  [!code-csharp[StackPanelOvw4#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StackPanelOvw4/CSharp/StackPanel_Ovw_Sample4.cs#1)]
  [!code-vb[StackPanelOvw4#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StackPanelOvw4/VisualBasic/StackPanelSamp.vb#1)]
- [!code-xml[StackPanelOvw4#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/StackPanelOvw4/XAML/default.xaml#1)]  
+ [!code-xaml[StackPanelOvw4#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/StackPanelOvw4/XAML/default.xaml#1)]  
   
-## 참고 항목  
- <xref:System.Windows.Controls.StackPanel>   
- <xref:System.Windows.Controls.DockPanel>   
- [Panel 개요](../../../../docs/framework/wpf/controls/panels-overview.md)
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Windows.Controls.StackPanel>  
+ <xref:System.Windows.Controls.DockPanel>  
+ [패널 개요](../../../../docs/framework/wpf/controls/panels-overview.md)

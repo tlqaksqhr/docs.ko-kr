@@ -1,30 +1,22 @@
 ---
-title: "함수형 프로그래밍과 절차적 프로그래밍 비교 (LINQ to XML) (Visual Basic) | Microsoft 문서"
+title: "함수형 프로그래밍과 절차적 프로그래밍 비교 (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: ea1015a5-d4c8-4d79-8e1e-ba17a40a4f39
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9d5afe31c8c81f4b099853a5e6e274156a1baa7f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7e47ff583146ab4258e219537cdc01821009e965
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-visual-basic"></a>함수형 프로그래밍과 절차적 프로그래밍 비교 (LINQ to XML) (Visual Basic)
 다양한 유형의 XML 응용 프로그램이 있습니다.  
@@ -53,7 +45,7 @@ ms.lasthandoff: 03/13/2017
   
  두 방법 중 하나로 LINQ to XML을 사용할 수 있습니다. 두 방법은 동일한 클래스를 사용하며 경우에 따라 동일한 메서드를 사용합니다. 그러나 두 방법의 구조와 목표는 매우 다릅니다. 예를 들어 상황에 따라 성능이 높고 메모리를 적게 사용하는 방법이 달라집니다. 또한 유지 관리하기가 더 쉬운 코드를 작성하고 생성하는 것이 용이한 방법도 상황에 따라 다릅니다.  
   
- 대조 하는 두 가지 방법, 참조 [메모리 내 XML 트리 수정과 합니다. 함수 생성 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction.md)합니다.  
+ 두 방법을 대조하는 내용을 보려면 [메모리 내 XML 트리 수정과 함수 생성 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction.md)합니다.  
   
  함수 변환을 작성에 대 한 자습서를 참조 하십시오. [순수 함수 변환의 XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)합니다.  
   

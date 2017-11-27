@@ -1,6 +1,6 @@
 ---
 title: "값(F#)"
-description: "값(F#)"
+description: "F #의 값은 특정 유형이 있는 수량 방법에 대해 알아봅니다."
 keywords: "visual f#, f#, 함수형 프로그래밍"
 author: cartermp
 ms.author: phcart
@@ -10,13 +10,12 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 5e1e73c3-5adb-4bba-9976-d57f1ff6cd8d
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: 31d28a5ff1bb7d9a88949bcaee895a405a5e7014
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: a1e077552ba39a483be3129c89af48b547219733
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="values"></a>값
 
 F#의 값은 특정 형식을 가진 수량이며, 값은 정수 또는 부동 소수점 숫자, 문자 또는 텍스트, 목록, 시퀀스, 배열, 튜플, 구분된 공용 구조체, 레코드, 클래스 형식 또는 함수 값이 될 수 있습니다.
@@ -50,11 +49,10 @@ F#은 순수 함수형 언어가 아니지만 함수형 프로그래밍을 완�
 
 |제목|설명|
 |-----|-----------|
-|[let 바인딩](../functions/let-bindings.md)|`let` 키워드를 사용하여 이름을 값 및 변수에 바인딩하는 방법에 대해 설명합니다.|
+|[let 바인딩](../functions/let-bindings.md)|사용 하는 방법에 대 한 정보를 제공는 `let` 이름 값과 변수에 바인딩할 키워드입니다.|
 |[함수](../functions/index.md)|F#의 함수를 간략하게 설명합니다.|
 
 ## <a name="see-also"></a>참고 항목
 [Null 값](null-Values.md)
 
 [F# 언어 참조](../index.md)
-

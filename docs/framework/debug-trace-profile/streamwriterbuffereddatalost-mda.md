@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - StreamWriter class, data buffering problems
 - managed debugging assistants (MDAs), StreamWriter data buffering
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - data buffering problems
 - streamWriterBufferedDataLost MDA
 ms.assetid: 6e5c07be-bc5b-437a-8398-8779e23126ab
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3903e2814cc15ac2678a0a5102046445d332ce75
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: fa6b64d37052c40dbef83a25b622e415f6946c1e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="streamwriterbuffereddatalost-mda"></a>streamWriterBufferedDataLost MDA
 `streamWriterBufferedDataLost` MDA(관리 디버깅 도우미)는 <xref:System.IO.StreamWriter>가 기록될 때 활성화되지만 <xref:System.IO.StreamWriter> 인스턴스가 소멸되기 전에 <xref:System.IO.StreamWriter.Flush%2A> 또는 <xref:System.IO.StreamWriter.Close%2A> 메서드가 이후에 호출되지 않습니다. 이 MDA를 사용하도록 설정하면 런타임이 버퍼링된 데이터가 여전히 <xref:System.IO.StreamWriter> 내에 있는지 여부를 확인합니다. 버퍼링된 데이터가 있으면 MDA가 활성화됩니다. <xref:System.GC.Collect%2A> 및 <xref:System.GC.WaitForPendingFinalizers%2A> 메서드를 호출하면 종료자를 강제로 실행할 수 있습니다. 그러지 않으면 종료자가 임의 시간에 실행되고 프로세스 종료 시 실행되지 않을 수 있습니다. 이 MDA를 사용하도록 설정하여 명시적으로 종료자를 실행하면 이러한 유형의 문제를 보다 안정적으로 재현하는 데 도움이 됩니다.  
@@ -120,6 +113,5 @@ static WriteToFile()
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.IO.StreamWriter>   
+ <xref:System.IO.StreamWriter>  
  [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-

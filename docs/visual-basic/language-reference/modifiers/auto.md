@@ -1,46 +1,44 @@
 ---
-title: "Auto (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Auto"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Auto keyword, external references"
-  - "Declare statement, marshaling strings"
-  - "Auto keyword"
-  - "Auto keyword, marshaling strings"
+title: Auto(Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.Auto
+helpviewer_keywords:
+- Auto keyword [Visual Basic], external references
+- Declare statement [Visual Basic], marshaling strings
+- Auto keyword [Visual Basic]
+- Auto keyword [Visual Basic], marshaling strings
 ms.assetid: bf79ba95-a62c-48a5-916f-0ac7a52c13ec
-caps.latest.revision: 19
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 1e32c4c910567829a4f5c59b48020db4dfbbeb7b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Auto (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-선언되는 외부 프로시저의 외부 이름을 기반으로 .NET Framework 규칙에 따라 Visual Basic에서 문자열을 마샬링하도록 지정합니다.  
+# <a name="auto-visual-basic"></a>Auto(Visual Basic)
+Visual Basic 선언 되는 외부 프로시저의 외부 이름을 기반으로 하는.NET Framework 규칙에 따라 문자열을 마샬링하고 있는지를 지정 합니다.  
   
- 프로젝트 외부에서 정의된 프로시저를 호출하면 Visual Basic 컴파일러가 해당 프로시저를 제대로 호출하는 데 필요한 정보에 액세스할 수 없습니다.  이 정보에는 프로시저의 위치, 식별 방법, 호출 시퀀스 및 반환 형식, 사용한 문자열 문자 집합 등이 포함됩니다.  [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)은 외부 프로시저에 대한 참조를 만들고 이와 같은 필요한 정보를 제공합니다.  
+ 프로젝트 외부에 정의 된 프로시저를 호출 하는 경우 Visual Basic 컴파일러는 프로시저를 올바르게 호출 하는 데 필요한 정보에 액세스할 수 없는 경우 문자열 문자 집합 및이 정보에는 프로시저의 위치, 식별 되는 방법, 호출 시퀀스 및 반환 형식으로 포함 됩니다. [선언 문의](../../../visual-basic/language-reference/statements/declare-statement.md) 외부 프로시저에 대 한 참조를 만들고이 필요한 정보를 제공 합니다.  
   
- `Declare` 문의 `charsetmodifier` 부분은 외부 프로시저를 호출하는 동안 문자열을 마샬링하는 데 사용할 문자 집합 정보를 제공합니다.  또한 외부 파일에서 외부 프로시저 이름을 검색하는 방법에도 영향을 줍니다.  `Auto` 한정자는 Visual Basic에서 .NET Framework 규칙에 따라 문자열을 마샬링하도록 지정하며, 런타임 플랫폼의 기본 문자 집합을 결정하고 초기 검색이 실패할 경우 외부 프로시저 이름을 수정하도록 지정합니다.  자세한 내용은 [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)의 "문자 집합"을 참조하십시오.  
+ `charsetmodifier` 부분은 `Declare` 문은 외부 프로시저를 호출 하는 동안 문자열을 마샬링 한 문자 집합 정보를 제공 합니다. Visual Basic에서 외부 프로시저 이름에 대 한 외부 파일을 검색 하는 방법도 적용 됩니다. `Auto` 한정자는 Visual Basic.NET Framework 규칙에 따라 문자열을 마샬링할 하 고 기본 문자 및 런타임 플랫폼의 집합을 결정 하는 초기 검색 하는 경우 외부 프로시저 이름을 수정 해야 하도록 지정 오류가 발생합니다. 자세한 내용은의 "문자 집합" 참조 [선언 문의](../../../visual-basic/language-reference/statements/declare-statement.md)합니다.  
   
- 문자 집합 한정자가 지정되어 있지 않으면 `Ansi`가 기본값입니다.  
+ 문자 집합 자가 지정 된 경우 `Ansi` 값이 기본값입니다.  
   
-## 설명  
- `Auto` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ `Auto` 한정자는이 컨텍스트에서 사용할 수 있습니다.  
   
- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare 문](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-## 스마트 장치 개발자 참고 사항  
- 이 키워드는 지원되지 않습니다.  
+## <a name="smart-device-developer-notes"></a>스마트 장치 개발자 노트  
+ 이 키워드는 지원 되지 않습니다.  
   
-## 참고 항목  
- [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)   
- [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)   
+## <a name="see-also"></a>참고 항목  
+ [ANSI](../../../visual-basic/language-reference/modifiers/ansi.md)  
+ [유니코드](../../../visual-basic/language-reference/modifiers/unicode.md)  
  [키워드](../../../visual-basic/language-reference/keywords/index.md)

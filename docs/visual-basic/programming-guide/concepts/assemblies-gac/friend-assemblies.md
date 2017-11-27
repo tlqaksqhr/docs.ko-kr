@@ -1,43 +1,35 @@
 ---
-title: "Friend 어셈블리 (Visual Basic) | Microsoft 문서"
+title: "Friend 어셈블리 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 9b3d5716-e6e4-47a7-a3e9-084d7fba5c28
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: c6e01ae91b9d5d875bb618993cd9eda82db59399
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: d3a37629582e4fc2606afaf606735464c0d247a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="friend-assemblies-visual-basic"></a>Friend 어셈블리 (Visual Basic)
-A *friend 어셈블리* 어셈블리가 다른 어셈블리에 액세스할 수 있는 [친구](../../../../visual-basic/language-reference/modifiers/friend.md) 형식 및 멤버입니다. Friend 어셈블리와 어셈블리를 식별 하는 경우에 더 이상 형식 및 멤버를 표시 하려면 해당에서 공용으로 다른 어셈블리에서 액세스할 수 없습니다. 다음과 같은 시나리오에서 특히 유용 합니다.  
+A *friend 어셈블리* 은 다른 어셈블리에 액세스할 수 있는 어셈블리 [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) 형식 및 멤버입니다. 어셈블리를 friend 어셈블리로 식별하는 경우 다른 어셈블리에서 액세스할 수 있도록 하기 위해 더 이상 형식 및 멤버를 public으로 표시할 필요가 없습니다. 다음과 같은 시나리오에서 특히 편리합니다.  
   
--   단위 테스트 동안 테스트 코드에서 실행 하는 경우 별도 어셈블리를 사용할 수 있지만 필요으로 표시 되는 테스트 중인 어셈블리의 멤버에 대 `Friend`합니다.  
+-   단위 테스트 동안 테스트 코드에서 실행 될 때 별도 어셈블리를 사용할 수 있지만 필요으로 표시 된 테스트 중인 어셈블리의 멤버에 액세스 `Friend`합니다.  
   
--   클래스 라이브러리를 개발 하는 시점과 라이브러리에 추가 된 별도 어셈블리에 포함 되어 있지만로 표시 된 기존 어셈블리의 멤버에 대 한 액세스 권한이 필요한 `Friend`합니다.  
+-   클래스 라이브러리를 개발 하는 시점과 라이브러리에 대 한 추가 별도 어셈블리에 포함 되어 있지만으로 표시 된 기존 어셈블리의 멤버에 대 한 액세스 권한이 필요한 `Friend`합니다.  
   
-## <a name="remarks"></a>주의  
- 사용할 수는 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>지정된 된 어셈블리에 대 한 하나 이상의 friend 어셈블리를 식별 하는 특성입니다.</xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 다음 예제에서는 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>어셈블리 A에에서 특성을 어셈블리를 지정 `AssemblyB` friend 어셈블리로.</xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 이렇게 하면 어셈블리 `AssemblyB` 모든 형식과 멤버 변수로 표시 되는 어셈블리에 대 한 액세스 `Friend`합니다.  
+## <a name="remarks"></a>설명  
+ <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성을 사용하여 지정된 어셈블리에 대해 하나 이상의 friend 어셈블리를 식별할 수 있습니다. 다음 예제에서는 어셈블리 A에서 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성을 사용하고 `AssemblyB` 어셈블리를 friend 어셈블리로 지정합니다. 그러면 `AssemblyB` 어셈블리가 어셈블리 A에서 `Friend`로 표시된 모든 형식 및 멤버에 액세스할 수 있습니다.  
   
 > [!NOTE]
->  어셈블리를 컴파일할 때 (어셈블리 `AssemblyB`) 액세스 하는 어셈블리 내부 형식이 나 다른 어셈블리의 내부 멤버 (어셈블리 *A*)를 사용 하 여 출력 파일 (.exe 또는.dll)의 이름을 명시적으로 지정 해야는 **/출력** 컴파일러 옵션. 컴파일러가 외부 참조에서 바인딩할 때 구성 하는 어셈블리의 이름을 아직 생성 되지 않은 때문에 이것이 필요 합니다. 자세한 내용은 참조 [/out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md)합니다.  
+>  다른 어셈블리(어셈블리 *A*)의 내부 형식이나 내부 멤버에 액세스하는 어셈블리(어셈블리 `AssemblyB`)를 컴파일하는 경우 **/out** 컴파일러 옵션을 사용하여 출력 파일(.exe 또는 .dll)의 이름을 명시적으로 지정해야 합니다. 컴파일러가 외부 참조에 바인딩할 때 작성하고 있는 어셈블리에 대해 이름을 생성하지 않았기 때문에 이 과정이 필요합니다. 자세한 내용은 참조 [/out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md)합니다.  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -57,35 +49,34 @@ Public Class ClassWithFriendMethod
         Console.WriteLine("Sample Method")  
     End Sub  
 End Class  
-  
 ```  
   
- 친구에 액세스할 수 대로 명시적으로 지정 하는 어셈블리만 `Friend` 형식 및 멤버입니다. 예를 들어, 어셈블리 B가 어셈블리 A 및 어셈블리 C 참조 어셈블리 B의 친구, C 없는 경우에 대 한 액세스 `Friend` A에는 형식  
+ friend로 명시적으로 지정하는 어셈블리만 `Friend` 형식 및 멤버에 액세스할 수 있습니다. 예를 들어 어셈블리 B가 어셈블리 A 및 어셈블리 C 참조 어셈블리 B의 friend인 경우 C는 A의 `Friend` 형식에 액세스할 수 없습니다.  
   
- 컴파일러에 전달 된 friend 어셈블리 이름의 몇 가지 기본 유효성 검사는 수행 된 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>특성.</xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 하는 경우 어셈블리 *A* 선언 *B* friend 어셈블리와 유효성 검사 규칙은 다음과 같습니다.  
+ 컴파일러는 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성에 전달된 friend 어셈블리 이름에 대해 몇 가지 기본적인 유효성 검사를 수행합니다. 어셈블리 *A*에서 *B*를 friend 어셈블리로 선언하는 경우 유효성 검사 규칙은 다음과 같습니다.  
   
--   하는 경우 어셈블리 *A* 은 강력한 이름, 어셈블리 *B* 또한 강력한 이름을 지정 해야 합니다. 특성에 전달 되는 friend 어셈블리 이름은 어셈블리 이름 및 어셈블리에 서명 하는 데 사용 되는 강력한 이름 키의 공개 키의 이루어져야 *B*합니다.  
+-   어셈블리 *A*에 강력한 이름을 지정한 경우 어셈블리 *B*에도 강력한 이름을 지정해야 합니다. 특성에 전달되는 friend 어셈블리 이름은 어셈블리 이름과 어셈블리 *B*에 서명하는 데 사용되는 강력한 이름 키의 공개 키로 구성되어야 합니다.  
   
-     에 전달 되는 friend 어셈블리 이름은 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>특성에는 어셈블리의 강력한 이름 수 없습니다 *B*: 어셈블리 버전, 문화권, 아키텍처 또는 공개 키 토큰을 포함 하지 마십시오.</xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+     <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성에 전달되는 friend 어셈블리 이름은 어셈블리 *B*의 강력한 이름이 될 수 없습니다. 어셈블리 버전, 문화권, 아키텍처 또는 공개 키 토큰을 포함하지 마세요.  
   
--   하는 경우 어셈블리 *A* 강력한 이름이 지정 되지 않은, friend 어셈블리 이름은 어셈블리 이름만으로 구성 되어야 합니다. 자세한 내용은 참조 [하는 방법: 만들 서명 되지 않은 Friend 어셈블리 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)합니다.  
+-   어셈블리 *A*에 강력한 이름을 지정하지 않은 경우 friend 어셈블리 이름은 어셈블리 이름만으로 구성되어야 합니다. 자세한 내용은 참조 [하는 방법: 만들 서명 되지 않은 Friend 어셈블리 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)합니다.  
   
--   하는 경우 어셈블리 *B* 강하고 라는 어셈블리에 대 한 강력한 이름 키를 지정 해야 *B* 프로젝트 설정이 나 명령줄을 사용 하 여 `/keyfile` 컴파일러 옵션입니다. 자세한 내용은 참조 [하는 방법: 서명 된 Friend 어셈블리 만들기 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)합니다.  
+-   어셈블리 *B*에 강력한 이름을 지정하는 경우 프로젝트 설정이나 명령줄 `/keyfile` 컴파일러 옵션을 사용하여 어셈블리 *B*에 강력한 이름 키를 지정해야 합니다. 자세한 내용은 참조 [하는 방법: 서명 된 Friend 어셈블리 만들기 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)합니다.  
   
- <xref:System.Security.Permissions.StrongNameIdentityPermission>클래스는 다음과 같은 차이점이와 형식을 공유 하는 기능도 제공:</xref:System.Security.Permissions.StrongNameIdentityPermission>  
+ <xref:System.Security.Permissions.StrongNameIdentityPermission> 클래스도 형식을 공유하는 기능을 제공하지만 다음과 같은 차이점이 있습니다.  
   
--   <xref:System.Security.Permissions.StrongNameIdentityPermission>friend 어셈블리는 전체 어셈블리에 적용 하는 동안은 개별 형식에 적용 됩니다.</xref:System.Security.Permissions.StrongNameIdentityPermission>  
+-   <xref:System.Security.Permissions.StrongNameIdentityPermission>은 개별 형식에 적용되는 반면 friend 어셈블리는 전체 어셈블리에 적용됩니다.  
   
--   어셈블리에서 형식의 수백 경우 *A* 어셈블리와 공유 하려는 *B*을 추가 해야 <xref:System.Security.Permissions.StrongNameIdentityPermission>모든 사람이.</xref:System.Security.Permissions.StrongNameIdentityPermission> Friend 어셈블리를 사용 하는 경우 친구 관계를 한 번 선언 해야 합니다.  
+-   어셈블리 *A*에 어셈블리 *B*와 공유하려는 수백 개의 형식이 있는 경우 모든 형식에 <xref:System.Security.Permissions.StrongNameIdentityPermission>을 추가해야 합니다. friend 어셈블리를 사용하는 경우에는 friend 관계를 한 번만 선언하면 됩니다.  
   
--   사용 하는 경우 <xref:System.Security.Permissions.StrongNameIdentityPermission>를 공유 하려는 형식 public으로 선언 해야 합니다.</xref:System.Security.Permissions.StrongNameIdentityPermission> 공유 형식으로 선언 된 friend 어셈블리를 사용 하는 경우 `Friend`합니다.  
+-   <xref:System.Security.Permissions.StrongNameIdentityPermission>을 사용하는 경우 공유하려는 형식을 public으로 선언해야 합니다. friend 어셈블리를 사용하는 경우에는 공유 형식이 `Friend`로 선언됩니다.  
   
- 어셈블리의 액세스 하는 방법에 대 한 내용은 `Friend` 형식 및 메서드는 모듈 파일 (.netmodule 확장 파일)에서 참조 [/moduleassemblyname (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)합니다.  
+ 어셈블리의 액세스 하는 방법에 대 한 내용은 `Friend` 형식 및 모듈 파일 (확장명.netmodule 파일)에서 메서드 참조 [/moduleassemblyname (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute></xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>   
- <xref:System.Security.Permissions.StrongNameIdentityPermission></xref:System.Security.Permissions.StrongNameIdentityPermission>   
- [방법: 서명 되지 않은 Friend 어셈블리 (Visual Basic) 만들기](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)   
- [방법: 서명 된 Friend 어셈블리 (Visual Basic) 만들기](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)   
- [어셈블리 및 전역 어셈블리 캐시 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)   
+ <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+ <xref:System.Security.Permissions.StrongNameIdentityPermission>  
+ [방법: 서명 되지 않은 Friend 어셈블리 (Visual Basic) 만들기](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
+ [방법: 서명 된 Friend 어셈블리 (Visual Basic) 만들기](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
+ [어셈블리와 전역 어셈블리 캐시(Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [프로그래밍 개념](../../../../visual-basic/programming-guide/concepts/index.md)

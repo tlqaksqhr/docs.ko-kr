@@ -1,22 +1,28 @@
 ---
-title: "WCF 배포 개체 모델을 Atom 및 RSS로 매핑하는 방법 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WCF 배포 개체 모델을 Atom 및 RSS로 매핑하는 방법"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
-caps.latest.revision: 18
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9e6af3dc911cdf67e7290d339122821c00fe6bc6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# WCF 배포 개체 모델을 Atom 및 RSS로 매핑하는 방법
+# <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>WCF 배포 개체 모델을 Atom 및 RSS로 매핑하는 방법
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 배포 서비스를 개발할 때 다음 클래스를 사용하여 피드 및 항목을 만듭니다.  
   
 -   <xref:System.ServiceModel.Syndication.SyndicationFeed>  
@@ -35,9 +41,9 @@ caps.handback.revision: 18
   
 -   <xref:System.ServiceModel.Syndication.XmlSyndicationContent>  
   
- <xref:System.ServiceModel.Syndication.SyndicationFeed>를 포맷터가 정의된 배포로 serialize할 수 있습니다.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> 및 <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>의 두 가지 포맷터가 제공됩니다.  
+ <xref:System.ServiceModel.Syndication.SyndicationFeed>를 포맷터가 정의된 배포로 serialize할 수 있습니다. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 <xref:System.ServiceModel.Syndication.Atom10FeedFormatter> 및 <xref:System.ServiceModel.Syndication.Rss20FeedFormatter>의 두 가지 포맷터가 제공됩니다.  
   
- <xref:System.ServiceModel.Syndication.SyndicationFeed> 및 <xref:System.ServiceModel.Syndication.SyndicationItem>에 대한 개체 모델은 RSS 2.0 사양보다는 Atom 1.0 사양에 더 가깝습니다.이는 Atom 1.0이 RSS 2.0 사양에서 모호하거나 생략된 요소를 정의하는 실질적인 사양이기 때문입니다.따라서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 배포 개체 모델의 많은 항목에는 RSS 2.0 사양의 직접적인 표현이 없습니다.<xref:System.ServiceModel.Syndication.SyndicationFeed> 및 <xref:System.ServiceModel.Syndication.SyndicationItem> 개체를 RSS 2.0으로 serialize할 때 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 사용하면 Atom 특정 데이터 요소를 Atom 사양을 따르는 네임스페이스로 한정된 확장 요소로 serialize할 수 있습니다.<xref:System.ServiceModel.Syndication.Rss20FeedFormatter> 생성자에 전달된 매개 변수를 사용하여 이 작업을 제어할 수 있습니다.  
+ <xref:System.ServiceModel.Syndication.SyndicationFeed> 및 <xref:System.ServiceModel.Syndication.SyndicationItem>에 대한 개체 모델은 RSS 2.0 사양보다는 Atom 1.0 사양에 더 가깝습니다. 이는 Atom 1.0이 RSS 2.0 사양에서 모호하거나 생략된 요소를 정의하는 실질적인 사양이기 때문입니다. 따라서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 배포 개체 모델의 많은 항목에는 RSS 2.0 사양의 직접적인 표현이 없습니다. <xref:System.ServiceModel.Syndication.SyndicationFeed> 및 <xref:System.ServiceModel.Syndication.SyndicationItem> 개체를 RSS 2.0으로 serialize할 때 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 사용하면 Atom 특정 데이터 요소를 Atom 사양을 따르는 네임스페이스로 한정된 확장 요소로 serialize할 수 있습니다. <xref:System.ServiceModel.Syndication.Rss20FeedFormatter> 생성자에 전달된 매개 변수를 사용하여 이 작업을 제어할 수 있습니다.  
   
  이 항목의 코드 샘플에서는 여기에 정의된 두 개 메서드 중 하나를 사용하여 실제 serialization을 수행합니다.  
   
@@ -51,7 +57,7 @@ caps.handback.revision: 18
  [!code-csharp[SyndicationMapping#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#11)]
  [!code-vb[SyndicationMapping#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#11)]  
   
-## SyndicationFeed  
+## <a name="syndicationfeed"></a>SyndicationFeed  
  다음 코드 예제에서는 <xref:System.ServiceModel.Syndication.SyndicationFeed> 클래스를 Atom 1.0 및 RSS 2.0으로 serialize하는 방법을 보여 줍니다.  
   
  [!code-csharp[SyndicationMapping#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#0)]
@@ -59,7 +65,7 @@ caps.handback.revision: 18
   
  다음 XML에서는 <xref:System.ServiceModel.Syndication.SyndicationFeed>가 Atom 1.0으로 serialize되는 방법을 보여 줍니다.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <feed xml:lang="EN-US" xmlns="http://www.w3.org/2005/Atom">  
   <title type="text">My Feed Title</title>  
@@ -108,7 +114,7 @@ caps.handback.revision: 18
   
  다음 XML에서는 <xref:System.ServiceModel.Syndication.SyndicationFeed>가 RSS 2.0으로 serialize되는 방법을 보여 줍니다.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <rss xmlns:a10="http://www.w3.org/2005/Atom" version="2.0">  
   <channel>  
@@ -148,15 +154,15 @@ caps.handback.revision: 18
 </rss>  
 ```  
   
-## SyndicationItem  
+## <a name="syndicationitem"></a>SyndicationItem  
  다음 코드 예제에서는 <xref:System.ServiceModel.Syndication.SyndicationItem> 클래스를 Atom 1.0 및 RSS 2.0으로 serialize하는 방법을 보여 줍니다.  
   
  [!code-csharp[SyndicationMapping#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#1)]
  [!code-vb[SyndicationMapping#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#1)]  
   
- 다음 XML에서는 <xref:System.ServiceModel.Syndication.SyndicationItem>이 Atom 1.0으로 serialize되는 방법을 보여 줍니다.  
+ 다음 XML에서는 <xref:System.ServiceModel.Syndication.SyndicationItem>가 Atom 1.0으로 serialize되는 방법을 보여 줍니다.  
   
-```  
+```xml  
 <entry xmlns="http://www.w3.org/2005/Atom">  
   <id>ItemID</id>  
   <title type="text">Item Title</title>  
@@ -196,9 +202,9 @@ caps.handback.revision: 18
 </entry>  
 ```  
   
- 다음 XML에서는 <xref:System.ServiceModel.Syndication.SyndicationItem>이 RSS 2.0으로 serialize되는 방법을 보여 줍니다.  
+ 다음 XML에서는 <xref:System.ServiceModel.Syndication.SyndicationItem>가 RSS 2.0으로 serialize되는 방법을 보여 줍니다.  
   
-```  
+```xml  
 <item>  
   <guid isPermaLink="false">ItemID</guid>  
   <link>http://myitemuri/</link>  
@@ -234,15 +240,15 @@ caps.handback.revision: 18
 </item>  
 ```  
   
-## SyndicationPerson  
+## <a name="syndicationperson"></a>SyndicationPerson  
  다음 코드 예제에서는 <xref:System.ServiceModel.Syndication.SyndicationPerson> 클래스를 Atom 1.0 및 RSS 2.0으로 serialize하는 방법을 보여 줍니다.  
   
  [!code-csharp[SyndicationMapping#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#2)]
  [!code-vb[SyndicationMapping#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#2)]  
   
- 다음 XML에서는 <xref:System.ServiceModel.Syndication.SyndicationPerson>이 Atom 1.0으로 serialize되는 방법을 보여 줍니다.  
+ 다음 XML에서는 <xref:System.ServiceModel.Syndication.SyndicationPerson>가 Atom 1.0으로 serialize되는 방법을 보여 줍니다.  
   
-```  
+```xml  
   <author>  
     <name>Jesper Aaberg</name>  
     <uri>http://Contoso/Aaberg</uri>  
@@ -255,9 +261,9 @@ caps.handback.revision: 18
   </contributor>  
 ```  
   
- 다음 XML에서는 <xref:System.ServiceModel.Syndication.SyndicationPerson>이 `Authors` 또는 `Contributors` 컬렉션에 각각 하나만 있는 경우 <xref:System.ServiceModel.Syndication.SyndicationPerson> 클래스가 RSS 2.0으로 serialize되는 방법을 보여 줍니다.  
+ 다음 XML에서는 <xref:System.ServiceModel.Syndication.SyndicationPerson>이 <xref:System.ServiceModel.Syndication.SyndicationPerson> 또는 `Authors` 컬렉션에 각각 하나만 있는 경우 `Contributors` 클래스가 RSS 2.0으로 serialize되는 방법을 보여 줍니다.  
   
-```  
+```xml  
 <author>Jesper.Aaberg@contoso.com</author>  
 <a10:contributor>  
     <a10:name>Lene Aaling</a10:name>  
@@ -266,9 +272,9 @@ caps.handback.revision: 18
 </a10:contributor>  
 ```  
   
- 다음 XML에서는 <xref:System.ServiceModel.Syndication.SyndicationPerson>이 `Authors` 또는 `Contributors` 컬렉션에 각각 두 개 이상 있는 경우 <xref:System.ServiceModel.Syndication.SyndicationPerson> 클래스가 RSS 2.0으로 serialize되는 방법을 보여 줍니다.  
+ 다음 XML에서는 <xref:System.ServiceModel.Syndication.SyndicationPerson>이 <xref:System.ServiceModel.Syndication.SyndicationPerson> 또는 `Authors` 컬렉션에 각각 두 개 이상 있는 경우 `Contributors` 클래스가 RSS 2.0으로 serialize되는 방법을 보여 줍니다.  
   
-```  
+```xml  
 <a10:author>  
     <a10:name>Jesper Aaberg</a10:name>  
     <a10:uri>http://Contoso/Aaberg</a10:uri>  
@@ -291,7 +297,7 @@ caps.handback.revision: 18
 </a10:contributor>  
 ```  
   
-## SyndicationLink  
+## <a name="syndicationlink"></a>SyndicationLink  
  다음 코드 예제에서는 <xref:System.ServiceModel.Syndication.SyndicationLink> 클래스를 Atom 1.0 및 RSS 2.0으로 serialize하는 방법을 보여 줍니다.  
   
  [!code-csharp[SyndicationMapping#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#3)]
@@ -305,7 +311,7 @@ caps.handback.revision: 18
   
  `<a10:link rel="alternate" type="text/html" title="My Link Title" length="2048" href="http://contoso/MyLink" />`  
   
-## SyndicationCategory  
+## <a name="syndicationcategory"></a>SyndicationCategory  
  다음 코드 예제에서는 <xref:System.ServiceModel.Syndication.SyndicationCategory> 클래스를 Atom 1.0 및 RSS 2.0으로 serialize하는 방법을 보여 줍니다.  
   
  [!code-csharp[SyndicationMapping#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#4)]
@@ -319,7 +325,7 @@ caps.handback.revision: 18
   
  `<category domain="categoryScheme">categoryName</category>`  
   
-## TextSyndicationContent  
+## <a name="textsyndicationcontent"></a>TextSyndicationContent  
  다음 코드 예제에서는 <xref:System.ServiceModel.Syndication.TextSyndicationContent>가 HTML 콘텐츠로 만들어진 경우 <xref:System.ServiceModel.Syndication.TextSyndicationContent> 클래스를 Atom 1.0 및 RSS 2.0으로 serialize하는 방법을 보여 줍니다.  
   
  [!code-csharp[SyndicationMapping#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#5)]
@@ -363,7 +369,7 @@ caps.handback.revision: 18
   
  `<description><html> some xhtml </html></description>`  
   
-## UrlSyndicationContent  
+## <a name="urlsyndicationcontent"></a>UrlSyndicationContent  
  다음 코드 예제에서는 <xref:System.ServiceModel.Syndication.UrlSyndicationContent> 클래스를 Atom 1.0 및 RSS 2.0으로 serialize하는 방법을 보여 줍니다.  
   
  [!code-csharp[SyndicationMapping#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#8)]
@@ -379,7 +385,7 @@ caps.handback.revision: 18
   
  `<content type="audio" src="http://Contoso/someurl/" xmlns="http://www.w3.org/2005/Atom" />`  
   
-## XmlSyndicationContent  
+## <a name="xmlsyndicationcontent"></a>XmlSyndicationContent  
  다음 코드 예제에서는 <xref:System.ServiceModel.Syndication.XmlSyndicationContent> 클래스를 Atom 1.0 및 RSS 2.0으로 serialize하는 방법을 보여 줍니다.  
   
  [!code-csharp[SyndicationMapping#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#9)]
@@ -401,9 +407,9 @@ caps.handback.revision: 18
   
  `</content>`  
   
-## 참고 항목  
- [WCF 배포 개요](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)   
- [배포 아키텍처](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)   
- [방법: 기본 RSS 피드 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)   
- [방법: 기본 Atom 피드 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)   
- [방법: Atom 및 RSS로 피드 공개](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)
+## <a name="see-also"></a>참고 항목  
+ [WCF 배포 개요](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)  
+ [배포 아키텍처](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)  
+ [방법: 기본 RSS 피드 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)  
+ [방법: 기본 Atom 피드 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)  
+ [방법: 두 Atom로 피드 공개 및 RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)

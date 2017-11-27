@@ -1,0 +1,83 @@
+---
+title: "IValidator::Validate 메서드"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+api_name: IValidator.Validate
+api_location: mscoree.dll
+api_type: COM
+f1_keywords: Validate
+helpviewer_keywords:
+- IValidator::Validate method [.NET Framework hosting]
+- Validate method, IValidator interface [.NET Framework hosting]
+ms.assetid: 7d68666a-fb73-4455-bebd-908d49a16abc
+topic_type: apiref
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 722c6acc7e152a78ba28bc2730b2fdc7e0c45eb0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
+---
+# <a name="ivalidatorvalidate-method"></a>IValidator::Validate 메서드
+지정 된 pe (이식 가능) 또는 Microsoft MSIL (intermediate language) 파일의 유효성을 검사 합니다.  
+  
+## <a name="syntax"></a>구문  
+  
+```  
+HRESULT Validate (  
+    [in] IVEHandler            *veh,  
+    [in] IUnknown              *pAppDomain,  
+    [in] unsigned long          ulFlags,  
+    [in] unsigned long          ulMaxError,  
+    [in] unsigned long          token,  
+    [in] LPWSTR                 fileName,  
+    [in, size_is(ulSize)] BYTE *pe,  
+    [in] unsigned long          ulSize  
+);  
+```  
+  
+#### <a name="parameters"></a>매개 변수  
+ `veh`  
+ [in] 에 대 한 포인터는 `IVEHandler` 유효성 검사 오류를 처리 하는 인스턴스입니다.  
+  
+ `pAppDomain`  
+ [in] 파일이 로드 된 응용 프로그램 도메인에 대 한 포인터입니다.  
+  
+ `ulFlags`  
+ [in] 비트 조합 [ValidatorFlags](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md) 수행 해야 하는 유효성 검사를 나타내는 값입니다.  
+  
+ `ulMaxError`  
+ [in] 유효성 검사를 종료 하기 전까지 허용 오류의 최대 수입니다.  
+  
+ `token`  
+ [in] 사용 되지 않습니다.  
+  
+ `fileName`  
+ [in] 유효성을 검사할 파일의 이름을 지정 하는 문자열입니다.  
+  
+ `pe`  
+ [in] 파일이 저장 된 메모리 버퍼에 대 한 포인터입니다.  
+  
+ `ulSize`  
+ [in] 유효성을 검사할 파일의 바이트 크기입니다.  
+  
+## <a name="requirements"></a>요구 사항  
+ **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+  
+ **헤더:** IValidator.idl, IValidator.h  
+  
+ **라이브러리:** MSCorEE.dll에 리소스로 포함  
+  
+ **.NET framework 버전:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+  
+## <a name="see-also"></a>참고 항목  
+ 

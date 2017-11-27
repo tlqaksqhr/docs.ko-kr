@@ -1,34 +1,30 @@
 ---
-title: "함수형 프로그래밍과 명령형 프로그래밍 비교 (Visual Basic) | Microsoft 문서"
+title: "함수형 프로그래밍과 명령형 프로그래밍 비교 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7fd7a2defabe2d03b658977cc0106e3bbf985202
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 8519ca7fcda63e73e29d33a768c589829aafa0b1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a>함수형 프로그래밍과 명령형 프로그래밍 비교 (Visual Basic)
 이 항목에서는 함수형 프로그래밍을 더욱 일반적인 명령형(절차적) 프로그래밍과 비교하고 대조합니다.  
   
 ## <a name="functional-programming-vs-imperative-programming"></a>함수형 프로그래밍과 명령형 프로그래밍 비교  
- *함수형 프로그래밍* 패러다임은 순수 함수 접근 방법으로 문제를 해결을 지원 하기 위해 만들어졌습니다. 함수형 프로그래밍의 형태입니다 *선언적 프로그래밍*합니다. C#, Visual Basic, c + + 및 Java와 같은 개체 지향 프로그래밍 (OOP) 언어를 비롯 한 대부분의 주류 언어는 주로 지원 하도록 설계 하는 반면, *명령적* (절차적) 프로그래밍 합니다.  
+ *함수형 프로그래밍* 패러다임은 순수하게 함수적인 접근 방법으로 문제를 해결하는 것을 지원하기 위해 만들어졌습니다. 함수형 프로그래밍은 *선언적 프로그래밍*의 형태로 표현됩니다. 이와 대조적으로 C#, Visual Basic, C++ 및 Java와 같은 OOP(개체 지향 프로그래밍) 언어를 비롯한 대부분의 주류 언어는 주로 *명령형*(절차적) 프로그래밍을 지원하기 위해 디자인되었습니다.  
   
- 명령형 방법을 사용하는 경우 개발자는 컴퓨터에서 목표를 이루기 위해 수행해야 하는 단계를 매우 자세히 설명하는 코드를 작성합니다. 이 라고도 *알고리즘* 프로그래밍 합니다. 이와 대조적으로 함수형 방법에는 실행할 일련의 함수로 문제를 구성하는 작업이 포함됩니다. 이 경우 각 함수에 대한 입력과 각 함수가 반환하는 항목을 신중하게 정의합니다. 다음 표에서는 이러한 두 방법의 일반적인 차이점에 대해 설명합니다.  
+ 명령형 방법을 사용하는 경우 개발자는 컴퓨터에서 목표를 이루기 위해 수행해야 하는 단계를 매우 자세히 설명하는 코드를 작성합니다. 이러한 프로그래밍을 *알고리즘* 프로그래밍이라고도 합니다. 이와 대조적으로 함수형 방법에는 실행할 일련의 함수로 문제를 구성하는 작업이 포함됩니다. 이 경우 각 함수에 대한 입력과 각 함수가 반환하는 항목을 신중하게 정의합니다. 다음 표에서는 이러한 두 방법의 일반적인 차이점에 대해 설명합니다.  
   
 |특성|명령형 방법|함수형 방법|  
 |--------------------|-------------------------|-------------------------|  
@@ -41,9 +37,9 @@ ms.lasthandoff: 03/13/2017
  대부분의 언어가 특정 프로그래밍 패러다임을 지원하도록 디자인되었지만 대부분의 일반 언어도 다양한 패러다임을 지원할 수 있습니다. 예를 들어, 함수 포인터가 있는 언어로 함수형 프로그래밍을 수행할 수 있습니다. 또한 Visual Basic 명시적 언어 확장이 람다 식을 비롯 한 함수형 프로그래밍을 지원 하 고 형식 유추를 포함 합니다. LINQ 기술은 선언적 함수형 프로그래밍의 형태입니다.  
   
 ## <a name="functional-programming-using-xslt"></a>XSLT를 사용하는 함수형 프로그래밍  
- 많은 XSLT 개발자는 순수 함수형 방법에 익숙합니다. XSLT 스타일시트를 개발하는 가장 효과적인 방법은 각 템플릿을 구성 가능한 분리된 변환으로 처리하는 것입니다. 실행 순서는 완전히 무시됩니다. XSLT는 절차적 코드 실행에 대한 이스케이프 메커니즘으로 인해 비순수 함수가 생성되는 의도하지 않은 결과를 발생시킬 수 있는 점을 제외하고 의도하지 않은 결과를 허용하지 않습니다. XSLT가 효과적인 도구이긴 하지만 일부 특징은 최적이 아닙니다. 예를 들어, XML로 프로그래밍 구문을 표현하면 비교적 상세한 코드가 생성되므로 코드를 유지 관리하기가 어렵습니다. 또한 재귀에 크게 의존하여 흐름을 제어하면 읽기 어려운 코드가 생성될 수 있습니다. XSLT에 대 한 자세한 내용은 참조 [XSLT 변환을](http://msdn.microsoft.com/library/202f8820-224c-494f-b61e-cd127eac6e03)합니다.  
+ 많은 XSLT 개발자는 순수 함수형 방법에 익숙합니다. XSLT 스타일시트를 개발하는 가장 효과적인 방법은 각 템플릿을 구성 가능한 분리된 변환으로 처리하는 것입니다. 실행 순서는 완전히 무시됩니다. XSLT는 절차적 코드 실행에 대한 이스케이프 메커니즘으로 인해 비순수 함수가 생성되는 의도하지 않은 결과를 발생시킬 수 있는 점을 제외하고 의도하지 않은 결과를 허용하지 않습니다. XSLT가 효과적인 도구이긴 하지만 일부 특징은 최적이 아닙니다. 예를 들어, XML로 프로그래밍 구문을 표현하면 비교적 상세한 코드가 생성되므로 코드를 유지 관리하기가 어렵습니다. 또한 재귀에 크게 의존하여 흐름을 제어하면 읽기 어려운 코드가 생성될 수 있습니다. XSLT에 대한 자세한 내용은 [XSLT 변환](../../../../standard/data/xml/xslt-transformations.md)을 참조하세요.  
   
- 그러나 XSLT는 XML의 모양을 변형하는 데 순수 함수형 방법을 사용하는 경우의 가치를 입증합니다. LINQ to XML을 사용하는 순수 함수형 프로그래밍은 많은 부분이 XSLT와 유사합니다. 그러나 LINQ to XML 및 Visual Basic에 도입 된 프로그래밍 구문을 사용 하면 더 읽기 쉽고 XSLT 보다는 순수 함수 변환을 작성할 수 있습니다.  
+ 그러나 XSLT는 XML의 모양을 변환하는 데 순수 함수형 방법을 사용하는 경우의 가치를 입증합니다. LINQ to XML을 사용하는 순수 함수형 프로그래밍은 많은 부분이 XSLT와 유사합니다. 그러나 LINQ to XML 및 Visual Basic에 도입 된 프로그래밍 구문을 사용 하면 더 읽기 쉽고 XSLT 보다는 순수 함수 변형을 작성할 수 있습니다.  
   
 ## <a name="advantages-of-pure-functions"></a>순수 함수의 이점  
  함수 변환을 순수 함수로 구현하는 기본적인 이유는 순수 함수가 구성 가능하기 때문입니다. 즉, 순수 함수는 상태 비저장, 자체 포함 함수입니다. 이러한 특징은 다음과 같은 여러 가지 이점을 제공합니다.  
@@ -61,9 +57,9 @@ ms.lasthandoff: 03/13/2017
   
  이와 대조적으로 함수형 프로그래밍에서는 계산 문제를 데이터 컬렉션의 순수 함수 변환에 대한 계산에서의 실행으로 취급합니다. 함수형 프로그래밍에서는 상태와 변경 가능한 데이터를 사용하지 않으며 대신 함수의 적용을 강조합니다.  
   
- 다행히 Visual Basic 명령형 방법과 함수형 프로그래밍 방법을 지원 하기 때문에 함수형 프로그래밍으로 완전히 전환할이 필요 하지 않습니다. 개발자는 특정 시나리오에 가장 적합한 방법을 선택할 수 있습니다. 실제로 프로그램에는 흔히 두 방법이 결합되어 있습니다.  
+ 다행히도 Visual Basic 명령형 방법과 함수형 프로그래밍 방법을 지원 하기 때문에 함수형 프로그래밍으로 완전히 전환할이 필요 하지 않습니다. 개발자는 특정 시나리오에 가장 적합한 방법을 선택할 수 있습니다. 실제로 프로그램에는 흔히 두 방법이 결합되어 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [순수 함수 변환 (Visual Basic) 소개](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)   
- [XSLT 변환](http://msdn.microsoft.com/library/202f8820-224c-494f-b61e-cd127eac6e03)   
+ [순수 함수 변환 (Visual Basic) 소개](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+ [XSLT 변환](../../../../standard/data/xml/xslt-transformations.md)  
  [(Visual Basic) 순수 함수로 리팩터링](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
