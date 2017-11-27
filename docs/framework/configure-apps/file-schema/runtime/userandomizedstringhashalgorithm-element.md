@@ -1,110 +1,109 @@
 ---
-title: "&lt;UseRandomizedStringHashAlgorithm&gt; 요소 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<UseRandomizedStringHashAlgorithm> 요소"
-  - "UseRandomizedStringHashAlgorithm 요소"
+title: "&lt;UseRandomizedStringHashAlgorithm&gt; 요소"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- UseRandomizedStringHashAlgorithm element
+- <UseRandomizedStringHashAlgorithm> element
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
-caps.latest.revision: 12
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 7cd561cf0e0a9e080b150bdaa412686126423c91
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;UseRandomizedStringHashAlgorithm&gt; 요소
-공용 언어 런타임이 응용 프로그램 도메인당 기준으로 문자열의 해시 코드를 계산하는지 여부를 결정합니다.  
+# <a name="ltuserandomizedstringhashalgorithmgt-element"></a><span data-ttu-id="20a5b-102">&lt;UseRandomizedStringHashAlgorithm&gt; 요소</span><span class="sxs-lookup"><span data-stu-id="20a5b-102">&lt;UseRandomizedStringHashAlgorithm&gt; Element</span></span>
+<span data-ttu-id="20a5b-103">공용 언어 런타임에서 문자열에 대 한 해시 코드를 계산할지 여부를 결정 한 응용 프로그램 도메인 단위로.</span><span class="sxs-lookup"><span data-stu-id="20a5b-103">Determines whether the common language runtime calculates hash codes for strings on a per application domain basis.</span></span>  
   
-## 구문  
+ <span data-ttu-id="20a5b-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="20a5b-104">\<configuration></span></span>  
+<span data-ttu-id="20a5b-105">\<런타임 ></span><span class="sxs-lookup"><span data-stu-id="20a5b-105">\<runtime></span></span>  
+<span data-ttu-id="20a5b-106">\<UseRandomizedStringHashAlgorithm ></span><span class="sxs-lookup"><span data-stu-id="20a5b-106">\<UseRandomizedStringHashAlgorithm></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="20a5b-107">구문</span><span class="sxs-lookup"><span data-stu-id="20a5b-107">Syntax</span></span>  
+  
+```xml  
 <UseRandomizedStringHashAlgorithm   
    enabled=0|1 />  
 ```  
   
-## 특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="20a5b-108">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="20a5b-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="20a5b-109">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="20a5b-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 특성  
+### <a name="attributes"></a><span data-ttu-id="20a5b-110">특성</span><span class="sxs-lookup"><span data-stu-id="20a5b-110">Attributes</span></span>  
   
-|특성|설명|  
-|--------|--------|  
-|`enabled`|필수 특성입니다.<br /><br /> 응용 프로그램 도메인별로 문자열에 대한 해시 코드를 계산할지 여부를 지정합니다.|  
+|<span data-ttu-id="20a5b-111">특성</span><span class="sxs-lookup"><span data-stu-id="20a5b-111">Attribute</span></span>|<span data-ttu-id="20a5b-112">설명</span><span class="sxs-lookup"><span data-stu-id="20a5b-112">Description</span></span>|  
+|---------------|-----------------|  
+|`enabled`|<span data-ttu-id="20a5b-113">필수 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="20a5b-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="20a5b-114">문자열에 대 한 해시 코드에서 계산 되 고 있는지 여부를 지정 된 응용 프로그램 도메인 단위로.</span><span class="sxs-lookup"><span data-stu-id="20a5b-114">Specifies whether hash codes for strings are calculated on a per application domain basis.</span></span>|  
   
-## enabled 특성  
+## <a name="enabled-attribute"></a><span data-ttu-id="20a5b-115">enabled 특성</span><span class="sxs-lookup"><span data-stu-id="20a5b-115">enabled Attribute</span></span>  
   
-|값|설명|  
-|-------|--------|  
-|`0`|공용 언어 런타임에서 응용 프로그램 도메인의 문자열에 대한 해시 코드를 계산 하지 않습니다. 단일 알고리즘은 문자열의 해시 코드를 계산하는 데 사용됩니다.  이 값이 기본값입니다.|  
-|`1`|공용 언어 런타임은 응용 프로그램 도메인에 따라 문자열에 대한 해시 코드를 계산합니다.  다른 응용 프로그램 도메인 및 다른 프로세스에서 같은 문자열은 서로 다른 해시 코드를 갖습니다.|  
+|<span data-ttu-id="20a5b-116">값</span><span class="sxs-lookup"><span data-stu-id="20a5b-116">Value</span></span>|<span data-ttu-id="20a5b-117">설명</span><span class="sxs-lookup"><span data-stu-id="20a5b-117">Description</span></span>|  
+|-----------|-----------------|  
+|`0`|<span data-ttu-id="20a5b-118">공용 언어 런타임에서 문자열에 대 한 해시 코드를 계산 하지 않습니다는 응용 프로그램 도메인 단위로; 문자열 해시 코드를 계산 하는 단일 알고리즘 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="20a5b-118">The common language runtime does not compute hash codes for strings on a per application domain basis; a single algorithm is used to calculate string hash codes.</span></span> <span data-ttu-id="20a5b-119">이 값이 기본값입니다.</span><span class="sxs-lookup"><span data-stu-id="20a5b-119">This is the default.</span></span>|  
+|`1`|<span data-ttu-id="20a5b-120">문자열에 대 한 해시 코드를 계산 하는 공용 언어 런타임에서 응용 프로그램 도메인 단위로.</span><span class="sxs-lookup"><span data-stu-id="20a5b-120">The common language runtime computes hash codes for strings on a per application domain basis.</span></span> <span data-ttu-id="20a5b-121">서로 다른 프로세스와 다른 응용 프로그램 도메인에 동일한 문자열 다른 해시 코드를 갖습니다.</span><span class="sxs-lookup"><span data-stu-id="20a5b-121">Identical strings in different application domains and in different processes will have different hash codes.</span></span>|  
   
-### 자식 요소  
- 없음  
+### <a name="child-elements"></a><span data-ttu-id="20a5b-122">자식 요소</span><span class="sxs-lookup"><span data-stu-id="20a5b-122">Child Elements</span></span>  
+ <span data-ttu-id="20a5b-123">없음</span><span class="sxs-lookup"><span data-stu-id="20a5b-123">None.</span></span>  
   
-### 부모 요소  
+### <a name="parent-elements"></a><span data-ttu-id="20a5b-124">부모 요소</span><span class="sxs-lookup"><span data-stu-id="20a5b-124">Parent Elements</span></span>  
   
-|요소|설명|  
-|--------|--------|  
-|`configuration`|공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
-|`runtime`|런타임 초기화 옵션에 대한 정보를 포함합니다.|  
+|<span data-ttu-id="20a5b-125">요소</span><span class="sxs-lookup"><span data-stu-id="20a5b-125">Element</span></span>|<span data-ttu-id="20a5b-126">설명</span><span class="sxs-lookup"><span data-stu-id="20a5b-126">Description</span></span>|  
+|-------------|-----------------|  
+|`configuration`|<span data-ttu-id="20a5b-127">공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="20a5b-127">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="20a5b-128">런타임 초기화 옵션에 대한 정보를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="20a5b-128">Contains information about runtime initialization options.</span></span>|  
   
-## 설명  
- <xref:System.StringComparer> 클래스와 <xref:System.String.GetHashCode%2A?displayProperty=fullName> 메서드는 응용 프로그램 도메인 전반에 걸쳐 일관된 해시 코드를 생성하는 단일 해싱 알고리즘을 기본적으로 사용합니다.  이는 `<UseRandomizedStringHashAlgorithm>` 요소의 `enabled` 특성을 `0`로 설정하는 것과 같습니다.  이는 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]에서 사용되는 해시 알고리즘입니다.  
+## <a name="remarks"></a><span data-ttu-id="20a5b-129">설명</span><span class="sxs-lookup"><span data-stu-id="20a5b-129">Remarks</span></span>  
+ <span data-ttu-id="20a5b-130">기본적으로는 <xref:System.StringComparer> 클래스 및 <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> 메서드에서 응용 프로그램 도메인 간에 일관 된 해시 코드를 생성 하는 단일 해시 알고리즘을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="20a5b-130">By default, the <xref:System.StringComparer> class and the <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> method use a single hashing algorithm that produces a consistent hash code across application domains.</span></span> <span data-ttu-id="20a5b-131">이 설정에 해당 하는 `enabled` 특성에는 `<UseRandomizedStringHashAlgorithm>` 요소를 `0`합니다.</span><span class="sxs-lookup"><span data-stu-id="20a5b-131">This is equivalent to setting the `enabled` attribute of the `<UseRandomizedStringHashAlgorithm>` element to `0`.</span></span> <span data-ttu-id="20a5b-132">이에서 사용 되는 해시 알고리즘의 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="20a5b-132">This is the hashing algorithm used in the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].</span></span>  
   
- <xref:System.StringComparer> 클래스와 <xref:System.String.GetHashCode%2A?displayProperty=fullName> 메서드는 응용 프로그램 도메인에 따라 해시 코드를 계산하는 다른 해시 알고리즘도 사용할 수 있습니다.  따라서 동일한 문자열에 대한 해시 코드는 응용 프로그램 도메인 간에 다릅니다.  이는 옵트인 기능입니다. 이 기능을 사용하려면 `<UseRandomizedStringHashAlgorithm>` 요소의 `enabled` 특성을 `1`로 설정해야 합니다.  
+ <span data-ttu-id="20a5b-133"><xref:System.StringComparer> 클래스 및 <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> 메서드에 해시 코드를 계산 하는 다른 해싱 알고리즘을 사용할 수도 있습니다는 응용 프로그램 도메인 단위로.</span><span class="sxs-lookup"><span data-stu-id="20a5b-133">The <xref:System.StringComparer> class and the <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> method can also use a different hashing algorithm that computes hash codes on a per application domain basis.</span></span> <span data-ttu-id="20a5b-134">결과적으로, 해당 하는 문자열에 대 한 해시 코드는 응용 프로그램 도메인 간에 달라 집니다.</span><span class="sxs-lookup"><span data-stu-id="20a5b-134">As a result, hash codes for equivalent strings will differ across application domains.</span></span> <span data-ttu-id="20a5b-135">이 기능은 옵트인 기능이; 것을 활용 하려면 설정 해야 합니다는 `enabled` 특성에는 `<UseRandomizedStringHashAlgorithm>` 요소를 `1`합니다.</span><span class="sxs-lookup"><span data-stu-id="20a5b-135">This is an opt-in feature; to take advantage of it, you must set the `enabled` attribute of the `<UseRandomizedStringHashAlgorithm>` element to `1`.</span></span>  
   
- 해시 테이블에서 문자열 조회는 일반적으로 O\(1\) 작업입니다.  그러나 많은 충돌이 발생하는 경우 조회는 O\(n<sup>2</sup>\) 작업이 될 수 있습니다.  `<UseRandomizedStringHashAlgorithm>` 구성 요소를 사용하여 응용 프로그램 도메인당 임의 해싱 알고리즘을 생성할 수 있습니다. 그럴 경우 특히 해시 코드가 계산되는 키가 사용자 데이터 입력을 기준으로 하는 경우 잠재적 충돌 수가 제한됩니다.  
+ <span data-ttu-id="20a5b-136">문자열 조회는 해시 테이블에서 일반적으로 o (1) 연산입니다.</span><span class="sxs-lookup"><span data-stu-id="20a5b-136">The string lookup in a hash table is typically an O(1) operation.</span></span> <span data-ttu-id="20a5b-137">그러나 많은 수의 충돌이 발생 하는 경우 조회 될 수 있습니다는 O (n<sup>2</sup>) 작업입니다.</span><span class="sxs-lookup"><span data-stu-id="20a5b-137">However, when a large number of collisions occur, the lookup can become an O(n<sup>2</sup>) operation.</span></span> <span data-ttu-id="20a5b-138">사용할 수는 `<UseRandomizedStringHashAlgorithm>` 다시 해시 코드 계산 되는 키 데이터 입력에 기반 하는 경우에 특히 잠재적 충돌 수를 제한 하는 응용 프로그램 도메인, 임의의 해시 알고리즘을 생성 하는 구성 요소 사용자가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="20a5b-138">You can use the `<UseRandomizedStringHashAlgorithm>` configuration element to generate a random hashing algorithm per application domain, which in turn limits the number of potential collisions, particularly when the keys from which the hash codes are calculated are based on data input by users.</span></span>  
   
-## 예제  
- 다음 예제에서는 그 값이 "This is a string"인 private 문자열 상수 `s`가 포함된 `DisplayString` 클래스를 정의합니다. 메서드를 실행하는 응용 프로그램 도메인의 이름과 함께 문자열 값 및 해시 코드를 표시하는 `ShowStringHashCode` 메서드도 포함합니다.  
+## <a name="example"></a><span data-ttu-id="20a5b-139">예제</span><span class="sxs-lookup"><span data-stu-id="20a5b-139">Example</span></span>  
+ <span data-ttu-id="20a5b-140">다음 예제에서는 정의 `DisplayString` 개인 문자열 상수를 포함 하는 클래스 `s`, 해당 값은 "는 문자열입니다."</span><span class="sxs-lookup"><span data-stu-id="20a5b-140">The following example defines a `DisplayString` class that includes a private string constant, `s`, whose value is "This is a string."</span></span> <span data-ttu-id="20a5b-141">또한 포함는 `ShowStringHashCode` 문자열 값 및 메서드가 실행 되는 응용 프로그램 도메인의 이름과 함께 해시 코드를 표시 하는 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="20a5b-141">It also includes a `ShowStringHashCode` method that displays the string value and its hash code along with the name of the application domain in which the method is executing.</span></span>  
   
  [!code-csharp[System.String.GetHashCode#2](../../../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.String.GetHashCode/CS/perdomain.cs#2)]
  [!code-vb[System.String.GetHashCode#2](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.String.GetHashCode/VB/perdomain.vb#2)]  
   
- 구성 파일을 지정하지 않고 이 예제를 실행할 경우 다음과 유사한 출력이 표시됩니다.  문자열의 해시 코드는 두 응용 프로그램 도메인에서 동일합니다.  
+ <span data-ttu-id="20a5b-142">예제 구성 파일을 제공 하지 않고 실행 하면 다음과 유사한 출력이 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="20a5b-142">When you run the example without supplying a configuration file, it displays output similar to the following.</span></span> <span data-ttu-id="20a5b-143">참고 두 응용 프로그램 도메인에서 문자열에 대 한 해시 코드는 동일 합니다.</span><span class="sxs-lookup"><span data-stu-id="20a5b-143">Note that the hash codes for the string are identical in the two application domains.</span></span>  
   
 ```  
-  
 String 'This is a string.' in domain 'PerDomain.exe': 941BCEAC  
 String 'This is a string.' in domain 'NewDomain': 941BCEAC  
-  
 ```  
   
- 하지만 샘플 디렉터리에 다음의 구성을 추가하고 샘플을 실행하는 경우 동일 문자열의 해시 코드는 응용 프로그램 도메인에 의해 달라집니다.  
+ <span data-ttu-id="20a5b-144">그러나 디렉터리의 예에 다음 구성 파일을 추가 하 고 다음 예제를 실행 하는 경우 동일한 문자열에 대 한 해시 코드 응용 프로그램 도메인 별로 달라 집니다.</span><span class="sxs-lookup"><span data-stu-id="20a5b-144">However, if you add the following configuration file to the example's directory and then run the example, the hash codes for the same string will differ by application domain.</span></span>  
   
-```  
-  
+```xml  
 <?xml version ="1.0"?>  
 <configuration>  
    <runtime>  
       <UseRandomizedStringHashAlgorithm enabled="1" />  
    </runtime>  
 </configuration>  
-  
 ```  
   
- 구성 파일이 있는 경우 예제는 다음과 같은 출력을 표시합니다.  
+ <span data-ttu-id="20a5b-145">구성 파일에 있는 경우의 예제는 다음과 같은 출력을 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="20a5b-145">When the configuration file is present, the example displays the following output:</span></span>  
   
 ```  
-  
 String 'This is a string.' in domain 'PerDomain.exe': 5435776D  
 String 'This is a string.' in domain 'NewDomain': 75CC8236  
-  
 ```  
   
-## 참고 항목  
- <xref:System.StringComparer.GetHashCode%2A?displayProperty=fullName>   
- <xref:System.String.GetHashCode%2A?displayProperty=fullName>   
- <xref:System.Object.GetHashCode%2A?displayProperty=fullName>
+## <a name="see-also"></a><span data-ttu-id="20a5b-146">참고 항목</span><span class="sxs-lookup"><span data-stu-id="20a5b-146">See Also</span></span>  
+ <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>  
+ <xref:System.String.GetHashCode%2A?displayProperty=nameWithType>  
+ <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>

@@ -1,15 +1,12 @@
 ---
-title: "배열 문제 해결 (Visual Basic) | Microsoft 문서"
+title: "배열 문제 해결(Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - troubleshooting arrays
 - arrays [Visual Basic], initialization errors
@@ -18,36 +15,22 @@ helpviewer_keywords:
 - arrays [Visual Basic], declaration errors
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: db38c0c2a4f8b74a6b862f86f426b4d8837f4424
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 0417ae8d37642a65b14cc81ae9dcf3a3c32d63ce
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="troubleshooting-arrays-visual-basic"></a>배열 문제 해결(Visual Basic)
-이 페이지는 배열을 사용할 때 발생할 수 있는 몇 가지 일반적인 문제를 나열 합니다.  
+# <a name="troubleshooting-arrays-visual-basic"></a><span data-ttu-id="f2780-102">배열 문제 해결(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f2780-102">Troubleshooting Arrays (Visual Basic)</span></span>
+<span data-ttu-id="f2780-103">이 페이지는 배열에서 작업할 때 발생할 수 있는 몇 가지 일반적인 문제를 나열 합니다.</span><span class="sxs-lookup"><span data-stu-id="f2780-103">This page lists some common problems that can occur when working with arrays.</span></span>  
   
-## <a name="compilation-errors-declaring-and-initializing-an-array"></a>컴파일 오류를 선언 하 고 배열을 초기화 합니다.  
- 선언, 만들기 및 배열 초기화에 대 한 오해에서 컴파일 오류가 발생할 수 있습니다. 오류의 가장 일반적인 원인은 다음과 같습니다.  
+## <a name="compilation-errors-declaring-and-initializing-an-array"></a><span data-ttu-id="f2780-104">컴파일 오류를 선언 하 고 배열을 초기화 하는 중</span><span class="sxs-lookup"><span data-stu-id="f2780-104">Compilation Errors Declaring and Initializing an Array</span></span>  
+ <span data-ttu-id="f2780-105">선언 만들고 배열 초기화에 대 한 규칙의 잘못 이해에서 컴파일 오류가 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f2780-105">Compilation errors can arise from misunderstanding of the rules for declaring, creating, and initializing arrays.</span></span> <span data-ttu-id="f2780-106">오류의 가장 일반적인 원인은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="f2780-106">The most common causes of errors are the following:</span></span>  
   
--   제공 된 [New 연산자](../../../../visual-basic/language-reference/operators/new-operator.md) 차원 길이 지정 하는 배열 변수 선언 뒤에 절. 다음 코드 줄에는 이러한 종류의 잘못 된 선언을 보여 줍니다.  
+-   <span data-ttu-id="f2780-107">제공 된 [New 연산자](../../../../visual-basic/language-reference/operators/new-operator.md) 차원 길이 지정 하는 배열 변수 선언 뒤에 절.</span><span class="sxs-lookup"><span data-stu-id="f2780-107">Supplying a [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) clause after specifying dimension lengths in the array variable declaration.</span></span> <span data-ttu-id="f2780-108">다음 코드 줄에는 이러한 종류의 잘못 된 선언을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f2780-108">The following code lines show invalid declarations of this type.</span></span>  
   
      `Dim INVALIDsingleDimByteArray(2) As Byte = New Byte()`  
   
@@ -55,15 +38,15 @@ ms.lasthandoff: 03/13/2017
   
      `Dim INVALIDjaggedByteArray(1)() As Byte = New Byte()()`  
   
--   가변 배열의 최상위 배열 보다 차원 길이 지정 합니다. 다음 코드 줄에는 이러한 종류의 잘못 된 선언을 보여 줍니다.  
+-   <span data-ttu-id="f2780-109">가변 배열의 최상위 배열 보다 그 이상 차원 길이 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="f2780-109">Specifying dimension lengths for more than the top-level array of a jagged array.</span></span> <span data-ttu-id="f2780-110">다음 코드 줄에는 이러한 종류의 잘못 된 선언을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f2780-110">The following code line shows an invalid declaration of this type.</span></span>  
   
      `Dim INVALIDjaggedByteArray(1)(1) As Byte`  
   
--   생략 된 `New` 키워드 요소 값을 지정 하는 경우. 다음 코드 줄에는 이러한 종류의 잘못 된 선언을 보여 줍니다.  
+-   <span data-ttu-id="f2780-111">생략 된 `New` 요소 값을 지정할 때 키워드입니다.</span><span class="sxs-lookup"><span data-stu-id="f2780-111">Omitting the `New` keyword when specifying the element values.</span></span> <span data-ttu-id="f2780-112">다음 코드 줄에는 이러한 종류의 잘못 된 선언을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f2780-112">The following code line shows an invalid declaration of this type.</span></span>  
   
      `Dim INVALIDoneDimShortArray() As Short = Short() {0, 1, 2, 3}`  
   
--   제공 된 `New` 괄호 없이 절 (`{}`). 다음 코드 줄에는 이러한 종류의 잘못 된 선언을 보여 줍니다.  
+-   <span data-ttu-id="f2780-113">제공 된 `New` 중괄호 없이 절 (`{}`).</span><span class="sxs-lookup"><span data-stu-id="f2780-113">Supplying a `New` clause without braces (`{}`).</span></span> <span data-ttu-id="f2780-114">다음 코드 줄에는 이러한 종류의 잘못 된 선언을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f2780-114">The following code lines show invalid declarations of this type.</span></span>  
   
      `Dim INVALIDsingleDimByteArray() As Byte = New Byte()`  
   
@@ -73,15 +56,15 @@ ms.lasthandoff: 03/13/2017
   
      `Dim INVALIDtwoDimShortArray(,) As Short = New Short(1, 1)`  
   
-## <a name="accessing-an-array-out-of-bounds"></a>범위 밖으로 배열 액세스  
- 배열을 초기화 하는 프로세스 각 차원에는 상한값 및 하한값을 할당 합니다. 배열의 요소에 대 한 모든 액세스는 유효한 인덱스 또는 모든 차원에 대해 아래 첨자를 지정 해야 합니다. 모든 인덱스는 하한값 아래 또는 해당 상한을 초과 하는 경우는 <xref:System.IndexOutOfRangeException>예외 결과.</xref:System.IndexOutOfRangeException> 런타임 시 오류가 발생 컴파일러는 이러한 오류를 검색할 수 없습니다.  
+## <a name="accessing-an-array-out-of-bounds"></a><span data-ttu-id="f2780-115">범위를 벗어난 배열 액세스</span><span class="sxs-lookup"><span data-stu-id="f2780-115">Accessing an Array Out of Bounds</span></span>  
+ <span data-ttu-id="f2780-116">배열을 초기화 하는 프로세스에서 각 차원에 상한값 및 하한값을 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="f2780-116">The process of initializing an array assigns an upper bound and a lower bound to each dimension.</span></span> <span data-ttu-id="f2780-117">배열의 요소에 대 한 모든 액세스 유효한 인덱스 또는 모든 차원에 대해 아래 첨자를 지정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f2780-117">Every access to an element of the array must specify a valid index, or subscript, for every dimension.</span></span> <span data-ttu-id="f2780-118">인덱스 보다 또는 해당 상한을 초과 경우는 <xref:System.IndexOutOfRangeException> 예외가 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="f2780-118">If any index is below its lower bound or above its upper bound, an <xref:System.IndexOutOfRangeException> exception results.</span></span> <span data-ttu-id="f2780-119">컴파일러 실행 시 오류가 발생 하므로 이러한 오류를 검색할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="f2780-119">The compiler cannot detect such an error, so an error occurs at run time.</span></span>  
   
-### <a name="determining-bounds"></a>범위 결정  
- 다른 구성 요소 코드를 배열에 전달 하는 경우 예를 들어 프로시저 인수로 알 수 없는 배열의 크기 또는 차원의 길이입니다. 항상 모든 요소에 액세스 하려고 하기 전에 모든 차원 배열에 대 한 상한을 결정 해야 합니다. 배열을 만든 수단으로 이외의 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] `New` 절 하한값 0 이외의 것 이므로 해당 한도를 결정 하는 것이 가장 안전 합니다.  
+### <a name="determining-bounds"></a><span data-ttu-id="f2780-120">범위 결정</span><span class="sxs-lookup"><span data-stu-id="f2780-120">Determining Bounds</span></span>  
+ <span data-ttu-id="f2780-121">다른 구성 요소 코드를 배열에 전달 하는 경우 예를 들어 프로시저 인수로 모르는 해당 배열의 크기 또는 차원의 길이입니다.</span><span class="sxs-lookup"><span data-stu-id="f2780-121">If another component passes an array to your code, for example as a procedure argument, you do not know the size of that array or the lengths of its dimensions.</span></span> <span data-ttu-id="f2780-122">요소에 액세스 하기 전에 항상 배열의 모든 차원에 대 한 상한을 결정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f2780-122">You should always determine the upper bound for every dimension of an array before you attempt to access any elements.</span></span> <span data-ttu-id="f2780-123">배열의 만든 방법으로 이외의 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] `New` 절 하한값 0 이외의 있으며 것도 해당 하한값을 확인 하는 것이 가장 안전 합니다.</span><span class="sxs-lookup"><span data-stu-id="f2780-123">If the array has been created by some means other than a [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] `New` clause, the lower bound might be something other than 0, and it is safest to determine that lower bound as well.</span></span>  
   
-### <a name="specifying-the-dimension"></a>차원 지정  
- 다차원 배열의 차수와 범위를 결정할 때는 주의 해야 치수를 지정 하는 방법입니다. `dimension` 의 매개 변수는 <xref:System.Array.GetLowerBound%2A>및 <xref:System.Array.GetUpperBound%2A>메서드는 0부터 시작 하는 동안는 `Rank` 의 매개 변수는 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] <xref:Microsoft.VisualBasic.Information.LBound%2A>및 <xref:Microsoft.VisualBasic.Information.UBound%2A>함수는 1부터 시작 합니다.</xref:Microsoft.VisualBasic.Information.UBound%2A> </xref:Microsoft.VisualBasic.Information.LBound%2A> </xref:System.Array.GetUpperBound%2A> </xref:System.Array.GetLowerBound%2A>  
+### <a name="specifying-the-dimension"></a><span data-ttu-id="f2780-124">차원 지정</span><span class="sxs-lookup"><span data-stu-id="f2780-124">Specifying the Dimension</span></span>  
+ <span data-ttu-id="f2780-125">다차원 배열의 범위를 결정할 때는 주의 해야 차원을 지정 하는 방법은 합니다.</span><span class="sxs-lookup"><span data-stu-id="f2780-125">When determining the bounds of a multidimensional array, take care how you specify the dimension.</span></span> <span data-ttu-id="f2780-126">`dimension` 의 매개 변수는 <xref:System.Array.GetLowerBound%2A> 및 <xref:System.Array.GetUpperBound%2A> 메서드는 0부터 시작 하는 동안는 `Rank` 의 매개 변수는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Information.LBound%2A> 및 <xref:Microsoft.VisualBasic.Information.UBound%2A> 함수는 1부터 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="f2780-126">The `dimension` parameters of the <xref:System.Array.GetLowerBound%2A> and <xref:System.Array.GetUpperBound%2A> methods are 0-based, while the `Rank` parameters of the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] <xref:Microsoft.VisualBasic.Information.LBound%2A> and <xref:Microsoft.VisualBasic.Information.UBound%2A> functions are 1-based.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [배열](../../../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [방법: Visual Basic에서 배열 변수 초기화](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
+## <a name="see-also"></a><span data-ttu-id="f2780-127">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f2780-127">See Also</span></span>  
+ [<span data-ttu-id="f2780-128">배열</span><span class="sxs-lookup"><span data-stu-id="f2780-128">Arrays</span></span>](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [<span data-ttu-id="f2780-129">방법: Visual Basic에서 배열 변수 초기화</span><span class="sxs-lookup"><span data-stu-id="f2780-129">How to: Initialize an Array Variable in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)

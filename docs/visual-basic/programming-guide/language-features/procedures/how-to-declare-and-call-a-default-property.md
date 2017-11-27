@@ -1,119 +1,102 @@
 ---
-title: "방법: 선언 하 고 Visual Basic의 기본 속성을 호출 | Microsoft 문서"
+title: "방법: Visual Basic에서 기본 속성 선언 및 호출"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- defaults, properties
+- defaults [Visual Basic], properties
 - properties [Visual Basic], default
-- procedures, defining
-- default properties, in Visual Basic
+- procedures [Visual Basic], defining
+- default properties [Visual Basic], in Visual Basic
 - Visual Basic code, procedures
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ce98e7fe72a395f6c4cde481feaa60be28c6fcc3
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 8baa03e37325a6ad7065ec1a60052b3ea6a46c6f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>방법: Visual Basic에서 기본 속성 선언 및 호출
-A *기본 속성* 지정 하지 않고 코드에 액세스할 수 있는 클래스 또는 구조체 속성입니다. 클래스 또는 구조 있지만 속성이 아닌 이름을 지정 코드를 호출 하 고는 컨텍스트 속성에 대 한 액세스를 통해 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 있을 경우 해당 클래스 또는 구조체의 기본 속성에 대 한 액세스를 확인 합니다.  
+# <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a><span data-ttu-id="82fc1-102">방법: Visual Basic에서 기본 속성 선언 및 호출</span><span class="sxs-lookup"><span data-stu-id="82fc1-102">How to: Declare and Call a Default Property in Visual Basic</span></span>
+<span data-ttu-id="82fc1-103">A *기본 속성* 지정 하지 않고 코드에 액세스할 수 있는 클래스 또는 구조체 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="82fc1-103">A *default property* is a class or structure property that your code can access without specifying it.</span></span> <span data-ttu-id="82fc1-104">클래스 또는 구조 있지만 속성이 아니라 이름을 코드 호출 지정 하 고 컨텍스트 속성에 대 한 액세스를 허용 하는 경우 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 있을 경우 해당 클래스 또는 구조체의 기본 속성에 대 한 액세스를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="82fc1-104">When calling code names a class or structure but not a property, and the context allows access to a property, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] resolves the access to that class or structure's default property if one exists.</span></span>  
   
- 클래스 또는 구조체 개뿐입니다 최대 하나의 기본 속성. 그러나 기본 속성을 오버 로드할 수 있으며의 버전이 여러 개 있을 수 있습니다.  
+ <span data-ttu-id="82fc1-105">클래스 또는 구조체 수 최대 하나의 기본 속성이 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="82fc1-105">A class or structure can have at most one default property.</span></span> <span data-ttu-id="82fc1-106">그러나 기본 속성을 오버 로드 수 있으며 버전을 여러 개 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="82fc1-106">However, you can overload a default property and have more than one version of it.</span></span>  
   
- 자세한 내용은 참조 [기본](../../../../visual-basic/language-reference/modifiers/default.md)합니다.  
+ <span data-ttu-id="82fc1-107">자세한 내용은 참조 [기본](../../../../visual-basic/language-reference/modifiers/default.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="82fc1-107">For more information, see [Default](../../../../visual-basic/language-reference/modifiers/default.md).</span></span>  
   
-### <a name="to-declare-a-default-property"></a>기본 속성을 선언 하려면  
+### <a name="to-declare-a-default-property"></a><span data-ttu-id="82fc1-108">기본 속성을 선언 하려면</span><span class="sxs-lookup"><span data-stu-id="82fc1-108">To declare a default property</span></span>  
   
-1.  일반적인 방법으로 속성을 선언 합니다. 지정 하지 않으면는 `Shared` 또는 `Private` 키워드입니다.  
+1.  <span data-ttu-id="82fc1-109">일반적인 방법으로 속성을 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="82fc1-109">Declare the property in the normal way.</span></span> <span data-ttu-id="82fc1-110">지정 하지 않으면는 `Shared` 또는 `Private` 키워드입니다.</span><span class="sxs-lookup"><span data-stu-id="82fc1-110">Do not specify the `Shared` or `Private` keyword.</span></span>  
   
-2.  포함 된 `Default` 속성 선언에는 키워드입니다.  
+2.  <span data-ttu-id="82fc1-111">포함 된 `Default` 속성 선언에서 키워드입니다.</span><span class="sxs-lookup"><span data-stu-id="82fc1-111">Include the `Default` keyword in the property declaration.</span></span>  
   
-3.  속성에 대 한 하나 이상의 매개 변수를 지정 합니다. 하나 이상의 인수를 사용 하지 않는 기본 속성을 정의할 수 없습니다.  
+3.  <span data-ttu-id="82fc1-112">속성에 대 한 하나 이상의 매개 변수를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="82fc1-112">Specify at least one parameter for the property.</span></span> <span data-ttu-id="82fc1-113">하나 이상의 인수를 사용 하지 않는 기본 속성을 정의할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="82fc1-113">You cannot define a default property that does not take at least one argument.</span></span>  
   
-     [!code-vb[VbVbcnProcedures #&17;](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_1.vb)]  
+     [!code-vb[VbVbcnProcedures#17](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_1.vb)]  
   
-### <a name="to-call-a-default-property"></a>기본 속성을 호출 하려면  
+### <a name="to-call-a-default-property"></a><span data-ttu-id="82fc1-114">기본 속성을 호출 하려면</span><span class="sxs-lookup"><span data-stu-id="82fc1-114">To call a default property</span></span>  
   
-1.  포함 하는 클래스 또는 구조체 형식의 변수를 선언 합니다.  
+1.  <span data-ttu-id="82fc1-115">포함 하는 클래스 또는 구조체 형식의 변수를 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="82fc1-115">Declare a variable of the containing class or structure type.</span></span>  
   
-     [!code-vb[VbVbcnProcedures #&16;](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_2.vb)]  
+     [!code-vb[VbVbcnProcedures#16](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_2.vb)]  
   
-2.  속성 이름은 일반적으로 포함 위치는 식에 변수 이름만을 사용 합니다.  
+2.  <span data-ttu-id="82fc1-116">속성 이름은 일반적으로 포함 위치 식에서 변수 이름만을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="82fc1-116">Use the variable name alone in an expression where you would normally include the property name.</span></span>  
   
-     [!code-vb[VbVbcnProcedures #&21;](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_3.vb)]  
+     [!code-vb[VbVbcnProcedures#21](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_3.vb)]  
   
-3.  괄호 안에 인수 목록과 함께 변수 이름을 뒤에 있습니다. 기본 속성을 하나 이상의 인수를 사용 해야 합니다.  
+3.  <span data-ttu-id="82fc1-117">에 인수 목록 괄호로 묶어 변수 이름을 뒤에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="82fc1-117">Follow the variable name with an argument list in parentheses.</span></span> <span data-ttu-id="82fc1-118">기본 속성은 하나 이상의 인수를 사용 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="82fc1-118">A default property must take at least one argument.</span></span>  
   
-     [!code-vb[VbVbcnProcedures #&20;](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_4.vb)]  
+     [!code-vb[VbVbcnProcedures#20](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_4.vb)]  
   
-4.  기본 속성 값을 검색 하려면 변수 이름으로 인수 목록과 식에서 또는 등호 다음 함께 사용 하 여 (`=`) 대입문에 로그인 합니다.  
+4.  <span data-ttu-id="82fc1-119">기본 속성 값을 검색 하려면 변수 이름 또는 등호 따라 식에서 인수 목록과 함께 사용 하 여 (`=`) 대입문에 로그인 합니다.</span><span class="sxs-lookup"><span data-stu-id="82fc1-119">To retrieve the default property value, use the variable name, with an argument list, in an expression or following the equal (`=`) sign in an assignment statement.</span></span>  
   
-     [!code-vb[VbVbcnProcedures #&15;](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_5.vb)]  
+     [!code-vb[VbVbcnProcedures#15](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_5.vb)]  
   
-5.  기본 속성 값을 설정 하려면 대입문의 왼쪽에는 인수 목록을 가진 변수 이름으로 사용 합니다.  
+5.  <span data-ttu-id="82fc1-120">기본 속성 값을 설정 하려면 대입문의 왼쪽에는 인수 목록을 사용 하 여 변수 이름으로 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="82fc1-120">To set the default property value, use the variable name, with an argument list, on the left side of an assignment statement.</span></span>  
   
-     [!code-vb[VbVbcnProcedures #&14;](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_6.vb)]  
+     [!code-vb[VbVbcnProcedures#14](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_6.vb)]  
   
-6.  방금와 같은 다른 속성에 액세스 하려면 항상 기본 속성 이름은 변수 이름과 함께 지정할 수 있습니다.  
+6.  <span data-ttu-id="82fc1-121">다른 속성에 액세스 하려면 수행한 것 처럼 항상 기본 속성 이름은 변수 이름과 함께 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="82fc1-121">You can always specify the default property name together with the variable name, just as you would do to access any other property.</span></span>  
   
-     [!code-vb[VbVbcnProcedures #&19;](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_7.vb)]  
+     [!code-vb[VbVbcnProcedures#19](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_7.vb)]  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 클래스에는 기본 속성을 선언합니다.  
+## <a name="example"></a><span data-ttu-id="82fc1-122">예제</span><span class="sxs-lookup"><span data-stu-id="82fc1-122">Example</span></span>  
+ <span data-ttu-id="82fc1-123">다음 예제에서는 클래스에 기본 속성을 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="82fc1-123">The following example declares a default property on a class.</span></span>  
   
- [!code-vb[VbVbcnProcedures #&12;](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_8.vb)]  
+ [!code-vb[VbVbcnProcedures#12](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_8.vb)]  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 기본 속성을 호출 하는 방법을 `myProperty` 클래스에 `class1`합니다. 값을 저장 하는 세 개의 대입문 `myProperty`, 및 <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>통화 값을 읽습니다.</xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>  
+## <a name="example"></a><span data-ttu-id="82fc1-124">예제</span><span class="sxs-lookup"><span data-stu-id="82fc1-124">Example</span></span>  
+ <span data-ttu-id="82fc1-125">다음 예제에서는 기본 속성을 호출 하는 방법을 `myProperty` 클래스에 `class1`합니다.</span><span class="sxs-lookup"><span data-stu-id="82fc1-125">The following example demonstrates how to call the default property `myProperty` on class `class1`.</span></span> <span data-ttu-id="82fc1-126">에 값을 저장 하는 세 개의 대입문 `myProperty`, 및 <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> 통화 값을 읽습니다.</span><span class="sxs-lookup"><span data-stu-id="82fc1-126">The three assignment statements store values in `myProperty`, and the <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> call reads the values.</span></span>  
   
- [!code-vb[VbVbcnProcedures #&13;](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_9.vb)]  
+ [!code-vb[VbVbcnProcedures#13](./codesnippet/VisualBasic/how-to-declare-and-call-a-default-property_9.vb)]  
   
- 기본 속성의 가장 일반적인 사용은는 <xref:Microsoft.VisualBasic.Collection.Item%2A>다양 한 컬렉션 클래스에는 속성입니다.</xref:Microsoft.VisualBasic.Collection.Item%2A>  
+ <span data-ttu-id="82fc1-127">기본 속성의 가장 일반적으로 사용 되는 <xref:Microsoft.VisualBasic.Collection.Item%2A> 다양 한 컬렉션 클래스는 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="82fc1-127">The most common use of a default property is the <xref:Microsoft.VisualBasic.Collection.Item%2A> property on various collection classes.</span></span>  
   
-## <a name="robust-programming"></a>강력한 프로그래밍  
- 기본 속성 소스 코드의 문자를 약간 저하 될 수 있지만 코드를 읽을 수 더 어렵게 만들 수 있습니다. 클래스 또는 구조체 이름에 대 한 참조를 수행할 때 호출 코드에서 클래스 또는 구조체에 익숙하지 않은 경우 수 없습니다 특정 참조 하는 클래스 또는 구조체 자체를 기본 속성에 액세스 하는지 여부. 이 경우 컴파일러 오류 또는 미묘한 런타임 논리 오류가 발생할 수 있습니다.  
+## <a name="robust-programming"></a><span data-ttu-id="82fc1-128">강력한 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="82fc1-128">Robust Programming</span></span>  
+ <span data-ttu-id="82fc1-129">기본 속성 소스 코드 문자가 약간 저하 될 수 있지만 코드를 읽기 더 어렵게 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="82fc1-129">Default properties can result in a small reduction in source code-characters, but they can make your code more difficult to read.</span></span> <span data-ttu-id="82fc1-130">클래스 또는 구조체 이름에 대 한 참조는 시 호출 코드에서 클래스 또는 구조체에 익숙하지 않은 경우 않아야 특정 참조 하는 클래스 또는 구조체를 자체 또는 기본 속성에 액세스 하는지 여부입니다.</span><span class="sxs-lookup"><span data-stu-id="82fc1-130">If the calling code is not familiar with your class or structure, when it makes a reference to the class or structure name it cannot be certain whether that reference accesses the class or structure itself, or a default property.</span></span> <span data-ttu-id="82fc1-131">컴파일러 오류 또는 미묘한 런타임에 논리 오류가 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="82fc1-131">This can lead to compiler errors or subtle run-time logic errors.</span></span>  
   
- 항상 사용 하 여 기본 속성 오류 가능성을을 다소 줄일 수는 [Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md) 컴파일러 형식 검사를 설정 하려면 `On`합니다.  
+ <span data-ttu-id="82fc1-132">항상 사용 하 여 기본 속성 오류의 가능성을 어느 정도 줄일 수 있습니다는 [Option Strict 문](../../../../visual-basic/language-reference/statements/option-strict-statement.md) 컴파일러 형식 검사를 설정 하려면 `On`합니다.</span><span class="sxs-lookup"><span data-stu-id="82fc1-132">You can somewhat reduce the chance of default property errors by always using the [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) to set compiler type checking to `On`.</span></span>  
   
- 에서 사용 하는 미리 정의 된 클래스 또는 구조체에서 코드를 결정 해야 기본 속성이 있는지 여부 그리고 있다면 하고자 한다면 어떤 이름은입니다.  
+ <span data-ttu-id="82fc1-133">에서 사용 하는 미리 정의 된 클래스 또는 구조체 코드를 결정 해야 기본 속성이 여부와 그럴 경우 계획 이라면 해당 이름이 무엇 인지 합니다.</span><span class="sxs-lookup"><span data-stu-id="82fc1-133">If you are planning to use a predefined class or structure in your code, you must determine whether it has a default property, and if so, what its name is.</span></span>  
   
- 이러한 단점 때문에 기본 속성을 정의 하지 않는 고려해 야 합니다. 또한 항상 모든 속성에 명시적으로 참조를 고려해 해야 코드 가독성을 기본 속성까지 하세요.  
+ <span data-ttu-id="82fc1-134">이러한 단점으로 인해 기본 속성을 정의 하지 않는 고려해 야 합니다.</span><span class="sxs-lookup"><span data-stu-id="82fc1-134">Because of these disadvantages, you should consider not defining default properties.</span></span> <span data-ttu-id="82fc1-135">코드의 가독성을 높이기 위해 또한 항상 모든 속성에 명시적으로 참조를 고려 해야, 심지어 기본 속성 키를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="82fc1-135">For code readability, you should also consider always referring to all properties explicitly, even default properties.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [속성 프로시저](./property-procedures.md)   
- [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)   
- [Property 문](../../../../visual-basic/language-reference/statements/property-statement.md)   
- [기본값](../../../../visual-basic/language-reference/modifiers/default.md)   
- [Visual Basic에서 속성과 변수의 차이점](./differences-between-properties-and-variables.md)   
- [방법: 속성 만들기](./how-to-create-a-property.md)   
- [방법: 액세스 수준이 혼합된 된 속성 선언](./how-to-declare-a-property-with-mixed-access-levels.md)   
- [방법: 속성 프로시저 호출](./how-to-call-a-property-procedure.md)   
- [방법: 속성 값 입력](./how-to-put-a-value-in-a-property.md)   
- [방법: 속성에서 값 가져오기](./how-to-get-a-value-from-a-property.md)
+## <a name="see-also"></a><span data-ttu-id="82fc1-136">참고 항목</span><span class="sxs-lookup"><span data-stu-id="82fc1-136">See Also</span></span>  
+ [<span data-ttu-id="82fc1-137">속성 프로시저</span><span class="sxs-lookup"><span data-stu-id="82fc1-137">Property Procedures</span></span>](./property-procedures.md)  
+ [<span data-ttu-id="82fc1-138">프로시저 매개 변수 및 인수</span><span class="sxs-lookup"><span data-stu-id="82fc1-138">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)  
+ [<span data-ttu-id="82fc1-139">Property 문</span><span class="sxs-lookup"><span data-stu-id="82fc1-139">Property Statement</span></span>](../../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="82fc1-140">기본</span><span class="sxs-lookup"><span data-stu-id="82fc1-140">Default</span></span>](../../../../visual-basic/language-reference/modifiers/default.md)  
+ [<span data-ttu-id="82fc1-141">Visual Basic에서 속성과 변수의 차이점</span><span class="sxs-lookup"><span data-stu-id="82fc1-141">Differences Between Properties and Variables in Visual Basic</span></span>](./differences-between-properties-and-variables.md)  
+ [<span data-ttu-id="82fc1-142">방법: 속성 만들기</span><span class="sxs-lookup"><span data-stu-id="82fc1-142">How to: Create a Property</span></span>](./how-to-create-a-property.md)  
+ [<span data-ttu-id="82fc1-143">방법: 액세스 수준이 혼합된 속성 선언</span><span class="sxs-lookup"><span data-stu-id="82fc1-143">How to: Declare a Property with Mixed Access Levels</span></span>](./how-to-declare-a-property-with-mixed-access-levels.md)  
+ [<span data-ttu-id="82fc1-144">방법: 속성 프로시저 호출</span><span class="sxs-lookup"><span data-stu-id="82fc1-144">How to: Call a Property Procedure</span></span>](./how-to-call-a-property-procedure.md)  
+ [<span data-ttu-id="82fc1-145">방법: 속성 값 입력</span><span class="sxs-lookup"><span data-stu-id="82fc1-145">How to: Put a Value in a Property</span></span>](./how-to-put-a-value-in-a-property.md)  
+ [<span data-ttu-id="82fc1-146">방법: 속성에서 값 가져오기</span><span class="sxs-lookup"><span data-stu-id="82fc1-146">How to: Get a Value from a Property</span></span>](./how-to-get-a-value-from-a-property.md)

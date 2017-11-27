@@ -1,36 +1,32 @@
 ---
-title: "순수 함수 (Visual Basic)를 사용 하 여 리팩터링 | Microsoft 문서"
+title: "순수 함수 (Visual Basic)를 사용 하 여 리팩터링"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9a60f55513aa30e4f221c45f4be506d6f0507406
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 7a8114dcfde7adbbdb1016bae4f2916dc28b6854
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="refactoring-using-a-pure-function-visual-basic"></a>순수 함수 (Visual Basic)를 사용 하 여 리팩터링
-다음 예제에서는 앞의 예제를 리팩터링하여 [확장 메서드 (Visual Basic)를 사용 하 여 리팩터링](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md),이 예제에서는 순수 정적 메서드를 이동 단락의 텍스트를 찾기 위해 코드를 순수 함수를 사용 하 여 `ParagraphText`합니다.  
+# <a name="refactoring-using-a-pure-function-visual-basic"></a><span data-ttu-id="12676-102">순수 함수 (Visual Basic)를 사용 하 여 리팩터링</span><span class="sxs-lookup"><span data-stu-id="12676-102">Refactoring Using a Pure Function (Visual Basic)</span></span>
+<span data-ttu-id="12676-103">다음 예제에서는 앞의 예에서 리팩터링 [확장 메서드 (Visual Basic)를 사용 하 여 리팩터링](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)순수 정적 메서드에 이동단락의텍스트를찾기위해코드를이예제에서는순수함수를사용하려면`ParagraphText`.</span><span class="sxs-lookup"><span data-stu-id="12676-103">The following example refactors the previous example, [Refactoring Using an Extension Method (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), to use a pure function In this example, the code to find the text of a paragraph is moved to the pure static method `ParagraphText`.</span></span>  
   
-## <a name="example"></a>예제  
- 이 예제에서는 WordprocessingML 문서를 처리하여 WordprocessingML 문서에서 단락 노드를 검색합니다. 또한 각 단락의 스타일도 식별합니다. 이 예제는 이 자습서의 이전 예제를 기반으로 합니다. 리팩터링된 코드는 아래에 있는 코드의 주석에서 호출됩니다.  
+## <a name="example"></a><span data-ttu-id="12676-104">예제</span><span class="sxs-lookup"><span data-stu-id="12676-104">Example</span></span>  
+ <span data-ttu-id="12676-105">이 예제에서는 WordprocessingML 문서를 처리하여 WordprocessingML 문서에서 단락 노드를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="12676-105">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="12676-106">또한 각 단락의 스타일도 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="12676-106">It also identifies the style of each paragraph.</span></span> <span data-ttu-id="12676-107">이 예제는 이 자습서의 이전 예제를 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="12676-107">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="12676-108">리팩터링된 코드는 아래에 있는 코드의 주석에서 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="12676-108">The refactored code is called out in comments in the code below.</span></span>  
   
- 이 예제에 대 한 소스 문서를 만들기 위한 지침을 참조 하십시오. [원본 Office Open XML 문서 (Visual Basic)를 만드는](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)합니다.  
+ <span data-ttu-id="12676-109">이 예제에 대 한 소스 문서를 만들기 위한 지침은 [원본 Office Open XML 문서 (Visual Basic)를 만드는](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="12676-109">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- 이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 형식을 사용는 <xref:System.IO.Packaging?displayProperty=fullName>네임 스페이스.</xref:System.IO.Packaging?displayProperty=fullName>  
+ <span data-ttu-id="12676-110">이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고</span><span class="sxs-lookup"><span data-stu-id="12676-110">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="12676-111"><xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="12676-111">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -160,7 +156,7 @@ Module Module1
 End Module   
 ```  
   
- 이 예제의 결과는 리팩터링하기 전의 결과와 동일합니다.  
+ <span data-ttu-id="12676-112">이 예제의 결과는 리팩터링하기 전의 결과와 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="12676-112">This example produces the same output as before the refactoring:</span></span>  
   
 ```  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
@@ -180,12 +176,12 @@ StyleName:Normal ><
 StyleName:Code >Hello World<  
 ```  
   
-### <a name="next-steps"></a>다음 단계  
- 다음 예제에서는 XML을 다른 모양으로 프로젝션하는 방법을 보여 줍니다.  
+### <a name="next-steps"></a><span data-ttu-id="12676-113">다음 단계</span><span class="sxs-lookup"><span data-stu-id="12676-113">Next Steps</span></span>  
+ <span data-ttu-id="12676-114">다음 예제에서는 XML을 다른 모양으로 프로젝션하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="12676-114">The next example shows how to project XML into a different shape:</span></span>  
   
--   [(Visual Basic)을 다른 모양으로 XML 프로젝션](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+-   [<span data-ttu-id="12676-115">(Visual Basic)을 다른 모양으로 XML 프로젝션</span><span class="sxs-lookup"><span data-stu-id="12676-115">Projecting XML in a Different Shape (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
-## <a name="see-also"></a>참고 항목  
- [자습서: WordprocessingML 문서 (Visual Basic)에서 내용 조작](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)   
- [확장 메서드 (Visual Basic)를 사용 하 여 리팩터링](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)   
- [(Visual Basic) 순수 함수로 리팩터링](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a><span data-ttu-id="12676-116">참고 항목</span><span class="sxs-lookup"><span data-stu-id="12676-116">See Also</span></span>  
+ [<span data-ttu-id="12676-117">자습서: WordprocessingML 문서 (Visual Basic)에서 내용 조작</span><span class="sxs-lookup"><span data-stu-id="12676-117">Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
+ [<span data-ttu-id="12676-118">확장 메서드 (Visual Basic)를 사용 하 여 리팩터링</span><span class="sxs-lookup"><span data-stu-id="12676-118">Refactoring Using an Extension Method (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
+ [<span data-ttu-id="12676-119">(Visual Basic) 순수 함수로 리팩터링</span><span class="sxs-lookup"><span data-stu-id="12676-119">Refactoring Into Pure Functions (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

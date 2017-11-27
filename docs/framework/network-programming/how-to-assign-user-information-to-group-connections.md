@@ -8,30 +8,27 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b148066a9de0d41c0f798ca35d94737a78746598
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: c9a89b8164fce02f74ddbabae3d54eb8af830dec
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-assign-user-information-to-group-connections"></a>방법: 그룹 연결에 사용자 정보 할당
+# <a name="how-to-assign-user-information-to-group-connections"></a><span data-ttu-id="7da3e-102">방법: 그룹 연결에 사용자 정보 할당</span><span class="sxs-lookup"><span data-stu-id="7da3e-102">How to: Assign User Information to Group Connections</span></span>
 
   
- 다음 예제에서는 이 코드 섹션이 호출되기 전에 응용 프로그램이 *UserName*, *SecurelyStoredPassword* 및 *Domain* 변수를 설정하고 *UserName*이 고유하다고 가정하여 사용자 정보를 그룹 연결에 할당하는 방법을 보여 줍니다.  
+ <span data-ttu-id="7da3e-103">다음 예제에서는 이 코드 섹션이 호출되기 전에 응용 프로그램이 *UserName*, *SecurelyStoredPassword* 및 *Domain* 변수를 설정하고 *UserName*이 고유하다고 가정하여 사용자 정보를 그룹 연결에 할당하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="7da3e-103">The following example demonstrates how to assign user information to group connections, assuming that the application sets the variables *UserName*, *SecurelyStoredPassword*, and *Domain* before this section of code is called and that *UserName* is unique.</span></span>  
   
-### <a name="to-assign-user-information-to-a-group-connection"></a>그룹 연결에 사용자 정보를 할당하려면  
+### <a name="to-assign-user-information-to-a-group-connection"></a><span data-ttu-id="7da3e-104">그룹 연결에 사용자 정보를 할당하려면</span><span class="sxs-lookup"><span data-stu-id="7da3e-104">To assign user information to a group connection</span></span>  
   
-1.  연결 그룹 이름을 만듭니다.  
+1.  <span data-ttu-id="7da3e-105">연결 그룹 이름을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="7da3e-105">Create a connection group name.</span></span>  
   
     ```csharp  
     SHA1Managed Sha1 = new SHA1Managed();  
@@ -45,7 +42,7 @@ ms.lasthandoff: 08/21/2017
     Dim secureGroupName As [String] = Encoding.Default.GetString(updHash)  
     ```  
   
-2.  특정 URL에 대한 요청을 만듭니다. 예를 들어 다음 코드는 URL `http://www.contoso.com.`에 대한 요청을 만듭니다.  
+2.  <span data-ttu-id="7da3e-106">특정 URL에 대한 요청을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="7da3e-106">Create a request for a specific URL.</span></span> <span data-ttu-id="7da3e-107">예를 들어 다음 코드는 URL `http://www.contoso.com.`에 대한 요청을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="7da3e-107">For example, the following code creates a request for the URL `http://www.contoso.com.`</span></span>  
   
     ```csharp  
     WebRequest myWebRequest=WebRequest.Create("http://www.contoso.com");  
@@ -55,7 +52,7 @@ ms.lasthandoff: 08/21/2017
     Dim myWebRequest As WebRequest = WebRequest.Create("http://www.contoso.com")  
     ```  
   
-3.  웹 요청에 대한 자격 증명 및 연결 그룹 이름을 설정하고 **GetResponse**를 호출하여 **WebResponse** 개체를 검색합니다.  
+3.  <span data-ttu-id="7da3e-108">웹 요청에 대한 자격 증명 및 연결 그룹 이름을 설정하고 **GetResponse**를 호출하여 **WebResponse** 개체를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="7da3e-108">Set the credentials and Connection GroupName for the Web request, and call **GetResponse** to retrieve a **WebResponse** object.</span></span>  
   
     ```csharp  
     myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);   
@@ -71,7 +68,7 @@ ms.lasthandoff: 08/21/2017
     Dim myWebResponse As WebResponse = myWebRequest.GetResponse()  
     ```  
   
-4.  WebRespose 개체를 사용한 후 응답 스트림을 닫습니다.  
+4.  <span data-ttu-id="7da3e-109">WebRespose 개체를 사용한 후 응답 스트림을 닫습니다.</span><span class="sxs-lookup"><span data-stu-id="7da3e-109">Close the response stream after using the WebRespose object.</span></span>  
   
     ```csharp  
     MyWebResponse.Close();  
@@ -81,7 +78,7 @@ ms.lasthandoff: 08/21/2017
     MyWebResponse.Close()  
     ```  
   
- 예제  
+ <span data-ttu-id="7da3e-110">예제</span><span class="sxs-lookup"><span data-stu-id="7da3e-110">Example</span></span>  
   
 ```csharp  
 // Create a connection group name.  
@@ -120,7 +117,6 @@ Dim myWebResponse As WebResponse = myWebRequest.GetResponse()
 MyWebResponse.Close()  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [연결 관리](../../../docs/framework/network-programming/managing-connections.md)   
- [연결 그룹화](../../../docs/framework/network-programming/connection-grouping.md)
-
+## <a name="see-also"></a><span data-ttu-id="7da3e-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="7da3e-111">See Also</span></span>  
+ [<span data-ttu-id="7da3e-112">연결 관리</span><span class="sxs-lookup"><span data-stu-id="7da3e-112">Managing Connections</span></span>](../../../docs/framework/network-programming/managing-connections.md)  
+ [<span data-ttu-id="7da3e-113">연결 그룹화</span><span class="sxs-lookup"><span data-stu-id="7da3e-113">Connection Grouping</span></span>](../../../docs/framework/network-programming/connection-grouping.md)

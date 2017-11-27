@@ -1,34 +1,37 @@
 ---
-title: "XSD(XML 스키마)에서 DataSet 관계 생성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "XSD(XML 스키마)에서 데이터 집합 관계 생성"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: bda9ff0052c6dc2462f007e3febb3cbf9ca7d5ac
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# XSD(XML 스키마)에서 DataSet 관계 생성
-<xref:System.Data.DataSet>에서는 부모\-자식 관계를 만들어 둘 이상의 열을 연결시킵니다.  XSD\(XML 스키마 정의 언어\) 스키마에서는 다음 세 가지 방법으로 **DataSet** 관계를 표현합니다.  
+# <a name="generating-dataset-relations-from-xml-schema-xsd"></a><span data-ttu-id="cdc8d-102">XSD(XML 스키마)에서 데이터 집합 관계 생성</span><span class="sxs-lookup"><span data-stu-id="cdc8d-102">Generating DataSet Relations from XML Schema (XSD)</span></span>
+<span data-ttu-id="cdc8d-103"><xref:System.Data.DataSet>에서는 부모-자식 관계를 만들어 둘 이상의 열을 연결시킵니다.</span><span class="sxs-lookup"><span data-stu-id="cdc8d-103">In a <xref:System.Data.DataSet>, you form an association between two or more columns by creating a parent-child relation.</span></span> <span data-ttu-id="cdc8d-104">세 가지 방법으로 나타내는 데는 **DataSet** XML 스키마 정의 언어 (XSD) 스키마 내에서 관계:</span><span class="sxs-lookup"><span data-stu-id="cdc8d-104">There are three ways to represent a **DataSet** relation within an XML Schema definition language (XSD) schema:</span></span>  
   
--   중첩된 복합 형식을 지정합니다.  
+-   <span data-ttu-id="cdc8d-105">중첩된 복합 형식을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="cdc8d-105">Specify nested complex types.</span></span>  
   
--   **msdata:Relationship** 주석을 사용합니다.  
+-   <span data-ttu-id="cdc8d-106">사용 하 여 **msdata: relationship** 주석입니다.</span><span class="sxs-lookup"><span data-stu-id="cdc8d-106">Use the **msdata:Relationship** annotation.</span></span>  
   
--   **msdata:ConstraintOnly** 주석을 사용하지 않고 **xs:keyref**를 지정합니다.  
+-   <span data-ttu-id="cdc8d-107">지정 된 **xs: keyref** 없이 **사용** 주석입니다.</span><span class="sxs-lookup"><span data-stu-id="cdc8d-107">Specify an **xs:keyref** without the **msdata:ConstraintOnly** annotation.</span></span>  
   
-## 중첩된 복합 형식  
- 스키마에서 중첩된 복합 형식의 정의는 요소의 부모\-자식 관계를 나타냅니다.  다음 XML 스키마 조각에서는 **OrderDetail**이 **Order** 요소의 자식 요소임을 보여 줍니다.  
+## <a name="nested-complex-types"></a><span data-ttu-id="cdc8d-108">중첩된 복합 형식</span><span class="sxs-lookup"><span data-stu-id="cdc8d-108">Nested Complex Types</span></span>  
+ <span data-ttu-id="cdc8d-109">스키마에서 중첩된 복합 형식의 정의는 요소의 부모-자식 관계를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="cdc8d-109">Nested complex type definitions in a schema indicate the parent-child relationships of the elements.</span></span> <span data-ttu-id="cdc8d-110">다음 XML 스키마의 일부분을 보여 줍니다 **OrderDetail** 의 자식 요소는 **순서** 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="cdc8d-110">The following XML Schema fragment shows that **OrderDetail** is a child element of the **Order** element.</span></span>  
   
-```  
+```xml  
 <xs:element name="Order">  
   <xs:complexType>  
      <xs:sequence>          
@@ -40,25 +43,24 @@ caps.handback.revision: 4
 </xs:element>  
 ```  
   
- XML 스키마 매핑 프로세스에서는 스키마의 중첩된 복합 형식에 대응하는 **DataSet**의 테이블을 만듭니다.  또한 생성된 테이블에 대한 부모**\-**자식 열로 사용되는 추가 열을 만듭니다.  이러한 부모**\-**자식 열에서는 관계를 지정하는데 이것은 기본 키\/외래 키 제약 조건을 지정하는 것과는 다릅니다.  
+ <span data-ttu-id="cdc8d-111">XML 스키마 매핑 프로세스에 테이블을 만듭니다는 **DataSet** 스키마에서 중첩된 된 복합 형식에 해당 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="cdc8d-111">The XML Schema mapping process creates tables in the **DataSet** that correspond to the nested complex types in the schema.</span></span> <span data-ttu-id="cdc8d-112">또한 부모도 사용 되는 추가 열을 만듭니다**-**생성된 된 테이블에 대 한 자식 열입니다.</span><span class="sxs-lookup"><span data-stu-id="cdc8d-112">It also creates additional columns that are used as parent**-**child columns for the generated tables.</span></span> <span data-ttu-id="cdc8d-113">이러한 부모는**-**자식 열에서는 되지 않는 기본 키/외래 키 제약 조건을 지정할 때와 동일한 관계를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="cdc8d-113">Note that these parent**-**child columns specify relationships, which is not the same as specifying primary key/foreign key constraints.</span></span>  
   
-## msdata:Relationship 주석  
- **msdata:Relationship** 주석을 사용하여 중첩되지 않은 스키마의 요소 간에 부모\-자식 관계를 명시적으로 지정할 수 있습니다.  다음 예제에서는 **Relationship** 요소의 구조를 보여 줍니다.  
+## <a name="msdatarelationship-annotation"></a><span data-ttu-id="cdc8d-114">msdata:Relationship 주석</span><span class="sxs-lookup"><span data-stu-id="cdc8d-114">msdata:Relationship Annotation</span></span>  
+ <span data-ttu-id="cdc8d-115">**msdata: relationship** 주석 명시적으로 중첩 되지 않은 스키마의 요소 간의 부모-자식 관계를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cdc8d-115">The **msdata:Relationship** annotation allows you to explicitly specify parent-child relationships between elements in the schema that are not nested.</span></span> <span data-ttu-id="cdc8d-116">다음 예제에서는의 구조는 **관계** 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="cdc8d-116">The following example shows the structure of the **Relationship** element.</span></span>  
   
-```  
-  
-  <msdata:Relationship name="CustOrderRelationship"    
-msdata:parent=""    
-msdata:child=""    
-msdata:parentkey=""    
+```xml  
+<msdata:Relationship name="CustOrderRelationship"    
+msdata:parent=""    
+msdata:child=""    
+msdata:parentkey=""    
 msdata:childkey="" />  
 ```  
   
- **msdata:Relationship** 주석의 특성에서는 부모\-자식 관계에 포함된 요소뿐만 아니라 이 관계에 포함된 **parentkey** 및 **childkey** 요소와 특성도 식별합니다.  매핑 프로세스에서는 이 정보를 사용하여 **DataSet**에 테이블을 생성하고 이러한 테이블 간에 기본 키\/외래 키 관계를 만듭니다.  
+ <span data-ttu-id="cdc8d-117">특성은 **msdata: relationship** 으로 부모-자식 관계에 관련 된 요소를 식별 하는 주석에서 **parentkey** 및 **childkey** 요소 및 특성 관계를 맺고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cdc8d-117">The attributes of the **msdata:Relationship** annotation identify the elements involved in the parent-child relationship, as well as the **parentkey** and **childkey** elements and attributes involved in the relationship.</span></span> <span data-ttu-id="cdc8d-118">매핑 프로세스에서는이 정보를 사용 하 여 테이블에서 생성 하는 **데이터 집합** 고 이러한 테이블 간에 기본 키/외래 키 관계를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cdc8d-118">The mapping process uses this information to generate tables in the **DataSet** and to create the primary key/foreign key relationship between these tables.</span></span>  
   
- 예를 들어, 다음 스키마 조각에서는 중첩되지 않은 같은 수준의 **Order** 및 **OrderDetail** 요소를 지정합니다.  이 스키마에서는 **msdata:Relationship** 주석을 지정하는데, 이 주석은 이러한 두 요소 간의 부모\-자식 관계를 지정합니다.  이 경우 반드시 **msdata:Relationship** 주석을 사용하여 명시적 관계를 지정해야 합니다.  
+ <span data-ttu-id="cdc8d-119">예를 들어 다음 스키마 조각 지정 **순서** 및 **OrderDetail** 동일한 수준에 있는 요소 (안에 있는 경우).</span><span class="sxs-lookup"><span data-stu-id="cdc8d-119">For example, the following schema fragment specifies **Order** and **OrderDetail** elements at the same level (not nested).</span></span> <span data-ttu-id="cdc8d-120">스키마 지정는 **msdata: relationship** 주석으로,이 두 요소 간의 부모-자식 관계를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="cdc8d-120">The schema specifies an **msdata:Relationship** annotation, which specifies the parent-child relationship between these two elements.</span></span> <span data-ttu-id="cdc8d-121">사용 하 여 명시적 관계를 지정 해야이 경우에 **msdata: relationship** 주석입니다.</span><span class="sxs-lookup"><span data-stu-id="cdc8d-121">In this case, an explicit relationship must be specified using the **msdata:Relationship** annotation.</span></span>  
   
-```  
+```xml  
  <xs:element name="MyDataSet" msdata:IsDataSet="true">  
   <xs:complexType>  
     <xs:choice maxOccurs="unbounded">  
@@ -84,27 +86,26 @@ msdata:childkey="" />
           msdata:childkey="OrderNo"/>  
      </xs:appinfo>  
   </xs:annotation>  
-  
 ```  
   
- 이 매핑 프로세스에서는 **Relationship** 요소를 사용하여 **DataSet**에 **Order** 테이블의 **OrderNumber** 열과 **OrderDetail** 테이블의 **OrderNo** 열 간에 부모\-자식 관계를 만듭니다.  매핑 프로세스에서는 관계만 지정합니다. 즉, 관계형 데이터베이스의 기본 키\/외래 키 제약 조건처럼 이러한 열의 값에 대해 제약 조건을 자동으로 지정하지는 않습니다.  
+ <span data-ttu-id="cdc8d-122">사용 하 여 매핑 프로세스는 **관계** 요소 간의 부모-자식 관계를 만들 수는 **OrderNumber** 열에는 **순서** 테이블과 **OrderNo** 열에는 **OrderDetail** 테이블에 **DataSet**합니다.</span><span class="sxs-lookup"><span data-stu-id="cdc8d-122">The mapping process uses the **Relationship** element to create a parent-child relationship between the **OrderNumber** column in the **Order** table and the **OrderNo** column in the **OrderDetail** table in the **DataSet**.</span></span> <span data-ttu-id="cdc8d-123">매핑 프로세스에서는 관계만 지정합니다. 즉, 관계형 데이터베이스의 기본 키/외래 키 제약 조건처럼 이러한 열의 값에 대해 제약 조건을 자동으로 지정하지는 않습니다.</span><span class="sxs-lookup"><span data-stu-id="cdc8d-123">The mapping process only specifies the relationship; it does not automatically specify any constraints on the values in these columns, as do the primary key/foreign key constraints in relational databases.</span></span>  
   
-### 단원 내용  
- [중첩된 스키마 요소 간의 암시적 관계 매핑](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)  
- XML 스키마에 중첩된 요소가 있을 경우 **DataSet**에서 암시적으로 만들어지는 제약 조건 및 관계에 대해 설명합니다.  
+### <a name="in-this-section"></a><span data-ttu-id="cdc8d-124">단원 내용</span><span class="sxs-lookup"><span data-stu-id="cdc8d-124">In This Section</span></span>  
+ [<span data-ttu-id="cdc8d-125">중첩 된 스키마 요소 간의 암시적 관계 매핑</span><span class="sxs-lookup"><span data-stu-id="cdc8d-125">Map Implicit Relations Between Nested Schema Elements</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)  
+ <span data-ttu-id="cdc8d-126">제약 조건 및에 암시적으로 만들어진 관계에 설명 된 **DataSet** 중첩 된 요소가 XML 스키마에서 발생 하는 경우.</span><span class="sxs-lookup"><span data-stu-id="cdc8d-126">Describes the constraints and relations that are implicitly created in a **DataSet** when nested elements are encountered in XML Schema.</span></span>  
   
- [중첩된 요소에 지정된 관계 매핑](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-relations-specified-for-nested-elements.md)  
- **DataSet**에서 XML 스키마의 중첩된 요소에 대해 관계를 명시적으로 설정하는 방법을 설명합니다.  
+ [<span data-ttu-id="cdc8d-127">중첩 된 요소에 지정 된 관계 매핑</span><span class="sxs-lookup"><span data-stu-id="cdc8d-127">Map Relations Specified for Nested Elements</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-relations-specified-for-nested-elements.md)  
+ <span data-ttu-id="cdc8d-128">관계를 명시적으로 설정 하는 방법을 설명는 **DataSet** XML 스키마의 중첩 된 요소에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="cdc8d-128">Describes how to explicitly set relations in a **DataSet** for nested elements in XML Schema.</span></span>  
   
- [중첩되지 않은 요소 간의 관계 지정](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/specify-relations-between-elements-with-no-nesting.md)  
- **DataSet**에서 중첩되지 않은 XML 스키마 요소 간에 관계를 만드는 방법을 설명합니다.  
+ [<span data-ttu-id="cdc8d-129">중첩 되지 않은 요소 사이 관계 지정</span><span class="sxs-lookup"><span data-stu-id="cdc8d-129">Specify Relations Between Elements with No Nesting</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/specify-relations-between-elements-with-no-nesting.md)  
+ <span data-ttu-id="cdc8d-130">관계를 만드는 방법에 설명 된 **데이터 집합** 중첩 되지 않은 XML 스키마 요소 간에 합니다.</span><span class="sxs-lookup"><span data-stu-id="cdc8d-130">Describes how to create relations in a **DataSet** between XML Schema elements that are not nested.</span></span>  
   
-### 관련 단원  
- [XSD\(XML 스키마\)에서 DataSet 관계형 구조 파생](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
- XSD\(XML 스키마 정의 언어\) 스키마에서 만들어지는 **DataSet**의 관계 구조 또는 스키마에 대해 설명합니다.  
+### <a name="related-sections"></a><span data-ttu-id="cdc8d-131">관련 단원</span><span class="sxs-lookup"><span data-stu-id="cdc8d-131">Related Sections</span></span>  
+ [<span data-ttu-id="cdc8d-132">XML 스키마 (XSD)에서 데이터 집합 관계형 구조 파생</span><span class="sxs-lookup"><span data-stu-id="cdc8d-132">Deriving DataSet Relational Structure from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ <span data-ttu-id="cdc8d-133">관계 구조 또는 스키마에 설명 된 **데이터 집합** XML 스키마 정의 언어 (XSD) 스키마에서 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="cdc8d-133">Describes the relational structure, or schema, of a **DataSet** that is created from XML Schema definition language (XSD) schema.</span></span>  
   
- [DataSet 제약 조건에 XSD\(XML 스키마\) 제약 조건 매핑](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- **DataSet**에서 고유 및 외래 키 제약 조건을 만드는 데 사용되는 XML 스키마 요소에 대해 설명합니다.  
+ [<span data-ttu-id="cdc8d-134">데이터 집합 제약 조건에 XML 스키마 (XSD) 제약 조건 매핑</span><span class="sxs-lookup"><span data-stu-id="cdc8d-134">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ <span data-ttu-id="cdc8d-135">고유 및 외래 키 제약 조건을 만드는 데 사용 되는 XML 스키마 요소에 설명 된 **DataSet**합니다.</span><span class="sxs-lookup"><span data-stu-id="cdc8d-135">Describes the XML Schema elements used to create unique and foreign key constraints in a **DataSet**.</span></span>  
   
-## 참고 항목  
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="cdc8d-136">참고 항목</span><span class="sxs-lookup"><span data-stu-id="cdc8d-136">See Also</span></span>  
+ [<span data-ttu-id="cdc8d-137">ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터</span><span class="sxs-lookup"><span data-stu-id="cdc8d-137">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

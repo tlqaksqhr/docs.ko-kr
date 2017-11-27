@@ -1,35 +1,27 @@
 ---
-title: "방법: 지정된 된 단어 (LINQ) (Visual Basic) 집합이 들어 있는 문장 쿼리 | Microsoft 문서"
+title: "방법: 지정된 단어 집합이 들어 있는 문장 쿼리(LINQ)(Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a5ae8ced-61fe-4c10-bb8a-95630e50f603
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 31561d586c9c05f502002efdfc455acb55159fed
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 523b1e681c97e14f1d0e49b82a426b0e0e54fa1e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-visual-basic"></a>방법: 지정된 단어 집합이 들어 있는 문장 쿼리(LINQ)(Visual Basic)
-이 예제에는 각 단어의 지정된 된 집합에 대 한 일치 항목을 포함 하는 텍스트 파일에 문장을 찾는 방법을 보여 줍니다. 이 예에서 하드 코드 된 검색어의 배열 이지만 것 채울 수도 동적으로 런타임에 합니다. 이 예제에서는 쿼리에서 반환 문장을 "지금" 단어가 포함 된 "데이터" 및 "통합"입니다.  
+# <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-visual-basic"></a><span data-ttu-id="d80bd-102">방법: 지정된 단어 집합이 들어 있는 문장 쿼리(LINQ)(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d80bd-102">How to: Query for Sentences that Contain a Specified Set of Words (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="d80bd-103">이 예제에서는 지정된 각 단어 집합과 일치하는 항목이 포함된 문장을 텍스트 파일에서 찾는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d80bd-103">This example shows how to find sentences in a text file that contain matches for each of a specified set of words.</span></span> <span data-ttu-id="d80bd-104">이 예제에서는 검색어 배열이 하드 코드되어 있지만 런타임에 동적으로 채워질 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d80bd-104">Although the array of search terms is hard-coded in this example, it could also be populated dynamically at runtime.</span></span> <span data-ttu-id="d80bd-105">이 예제에서 쿼리는 "Historically", "data" 및 "integrated" 단어가 포함된 문장을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="d80bd-105">In this example, the query returns the sentences that contain the words "Historically," "data," and "integrated."</span></span>  
   
-## <a name="example"></a>예제  
+## <a name="example"></a><span data-ttu-id="d80bd-106">예제</span><span class="sxs-lookup"><span data-stu-id="d80bd-106">Example</span></span>  
   
 ```vb  
 Class FindSentences  
@@ -75,12 +67,12 @@ End Class
 ' Historically, the world of data and the world of objects have not been well integrated  
 ```  
   
- 쿼리는 먼저 문장을 분할할 분할 한 다음 문장의 각 단어를 포함 하는 문자열의 배열에 의해 작동 합니다. 이러한 배열 각각에 대 한는 <xref:System.Linq.Enumerable.Distinct%2A>메서드는 모든 중복 단어를 제거 하 고 다음 쿼리를 수행는 <xref:System.Linq.Enumerable.Intersect%2A>단어 배열에서 작업 및 `wordsToMatch` 배열.</xref:System.Linq.Enumerable.Intersect%2A> </xref:System.Linq.Enumerable.Distinct%2A> 경우 교차로의 개수는 수와 동일 하 게는 `wordsToMatch` 배열 하는 모든 단어는 단어에서 찾은 및 원래 문장이 반환 됩니다.  
+ <span data-ttu-id="d80bd-107">쿼리에서는 먼저 텍스트를 문장으로 분할한 다음 문장을 각 단어가 포함된 문자열 배열로 분할합니다.</span><span class="sxs-lookup"><span data-stu-id="d80bd-107">The query works by first splitting the text into sentences, and then splitting the sentences into an array of strings that hold each word.</span></span> <span data-ttu-id="d80bd-108">각 배열에 대해 <xref:System.Linq.Enumerable.Distinct%2A> 메서드가 모든 중복 단어를 제거한 다음 쿼리가 단어 배열 및 `wordsToMatch` 배열에 대해 <xref:System.Linq.Enumerable.Intersect%2A> 작업을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="d80bd-108">For each of these arrays, the <xref:System.Linq.Enumerable.Distinct%2A> method removes all duplicate words, and then the query performs an <xref:System.Linq.Enumerable.Intersect%2A> operation on the word array and the `wordsToMatch` array.</span></span> <span data-ttu-id="d80bd-109">교집합의 개수가 `wordsToMatch` 배열의 개수와 같으면 단어에서 모든 단어가 발견된 것이며 원래 문장이 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="d80bd-109">If the count of the intersection is the same as the count of the `wordsToMatch` array, all words were found in the words and the original sentence is returned.</span></span>  
   
- 에 대 한 호출에서 <xref:System.String.Split%2A>, 문장 부호는 문자열에서 제거 하기 위해 구분 기호로 사용 됩니다.</xref:System.String.Split%2A> 예를 들어 문자열 "지금" 있을 수 있습니다이 수행 하지 않은 경우는 일치 하지 않습니다 "지금"에 `wordsToMatch` 배열입니다. 소스 텍스트에서 찾은 문장 부호의 유형에 따라 추가 구분 기호를 사용 해야 합니다.  
+ <span data-ttu-id="d80bd-110"><xref:System.String.Split%2A> 호출에서는 문자열의 구분 기호를 제거하기 위해 문장 부호가 구분 기호로 사용되었습니다.</span><span class="sxs-lookup"><span data-stu-id="d80bd-110">In the call to <xref:System.String.Split%2A>, the punctuation marks are used as separators in order to remove them from the string.</span></span> <span data-ttu-id="d80bd-111">이렇게 하지 않았다면, 예를 들어 `wordsToMatch` 배열의 "Historically"와 일치하지 않는 "Historically," 문자열이 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d80bd-111">If you did not do this, for example you could have a string "Historically," that would not match "Historically" in the `wordsToMatch` array.</span></span> <span data-ttu-id="d80bd-112">소스 텍스트에서 찾은 문장 부호 유형에 따라 추가 구분 기호를 사용해야 할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d80bd-112">You may have to use additional separators, depending on the types of punctuation found in the source text.</span></span>  
   
-## <a name="compiling-the-code"></a>코드 컴파일  
- .NET Framework 버전 3.5 이상 System.Core.dll에 대 한 참조를 대상으로 하는 프로젝트 만들기 및 `Imports` System.Linq 네임 스페이스에 대 한 정보입니다.  
+## <a name="compiling-the-code"></a><span data-ttu-id="d80bd-113">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="d80bd-113">Compiling the Code</span></span>  
+ <span data-ttu-id="d80bd-114">System.Core.dll에 대한 참조와 System.Linq 네임스페이스에 대한 `Imports` 문을 사용하여 .NET Framework 버전 3.5 이상을 대상으로 하는 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="d80bd-114">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a><span data-ttu-id="d80bd-115">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d80bd-115">See Also</span></span>  
+ [<span data-ttu-id="d80bd-116">LINQ 및 문자열 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d80bd-116">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

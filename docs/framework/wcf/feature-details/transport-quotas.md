@@ -1,123 +1,125 @@
 ---
-title: "전송 할당량 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "전송 할당량 [WCF]"
+title: "전송 할당량"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-caps.latest.revision: 11
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 78a7b421b2ac1a7ef8323a5ab31e536a489f09e0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 전송 할당량
-전송 할당량은 연결이 과도한 리소스를 사용하는 경우를 결정하는 정책 메커니즘입니다.할당량은 할당량 값을 초과하면 추가 리소스를 사용하지 못하도록 설정된 절대 한계입니다.전송 할당량은 악의적이거나 의도하지 않은 서비스 거부 공격을 방지합니다.  
+# <a name="transport-quotas"></a><span data-ttu-id="d1417-102">전송 할당량</span><span class="sxs-lookup"><span data-stu-id="d1417-102">Transport Quotas</span></span>
+<span data-ttu-id="d1417-103">전송 할당량은 연결이 과도한 리소스를 사용하는 경우를 결정하는 정책 메커니즘입니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-103">Transport quotas are a policy mechanism for deciding when a connection is consuming excessive resources.</span></span> <span data-ttu-id="d1417-104">할당량은 할당량 값을 초과하면 추가 리소스를 사용하지 못하도록 설정된 절대 한계입니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-104">A quota is a hard limit that prevents the use of additional resources once the quota value is exceeded.</span></span> <span data-ttu-id="d1417-105">전송 할당량은 악의적이거나 의도하지 않은 서비스 거부 공격을 방지합니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-105">Transport quotas prevent either malicious or unintentional denial of service attacks.</span></span>  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 전송은 신중한 리소스 할당을 기준으로 하는 기본 할당량 값을 가집니다.이러한 기본값은 개발 환경 및 소규모 설치 시나리오에 적합합니다.설치로 인해 리소스가 부족해지거나 추가 리소스를 사용할 수 있더라도 연결이 제한되는 경우 서비스 관리자는 전송 할당량을 검토하고 개별 할당량 값을 조정해야 합니다.  
+ [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="d1417-106"> 전송은 신중한 리소스 할당을 기준으로 하는 기본 할당량 값을 가집니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-106"> transports have default quota values that are based on a conservative allocation of resources.</span></span> <span data-ttu-id="d1417-107">이러한 기본값은 개발 환경 및 소규모 설치 시나리오에 적합합니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-107">These default values are suitable for development environments and small installation scenarios.</span></span> <span data-ttu-id="d1417-108">설치로 인해 리소스가 부족해지거나 추가 리소스를 사용할 수 있더라도 연결이 제한되는 경우 서비스 관리자는 전송 할당량을 검토하고 개별 할당량 값을 조정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-108">Service administrators should review transport quotas and tune individual quota values if an installation is running out of resources or if connections are being limited despite the availability of additional resources.</span></span>  
   
-## 전송 할당량 유형  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 전송에는 다음과 같은 세 가지 유형의 할당량이 있습니다.  
+## <a name="types-of-transport-quotas"></a><span data-ttu-id="d1417-109">전송 할당량 유형</span><span class="sxs-lookup"><span data-stu-id="d1417-109">Types of Transport Quotas</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="d1417-110"> 전송에는 다음과 같은 세 가지 유형의 할당량이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-110"> transports have three types of quotas:</span></span>  
   
--   *시간 제한*은 장기간 동안 제한된 리소스에 의존하는 DOS\(서비스 거부\) 공격을 줄일 수 있습니다.  
+-   <span data-ttu-id="d1417-111">*시간 제한을* 제한 된 오랜 시간에 대 한 리소스를 사용 하는 서비스 공격의 거부 완화 합니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-111">*Timeouts* mitigate denial of service attacks that rely on tying up resources for an extended period of time.</span></span>  
   
--   *메모리 할당 제한*은 단일 연결이 시스템 메모리를 집중적으로 사용하거나 다른 연결에 대한 서비스를 거부하지 않도록 합니다.  
+-   <span data-ttu-id="d1417-112">*메모리 할당 제한* 은 단일 연결이 시스템 메모리 소모 대 한 다른 연결에 대 한 서비스 거부를 방지 합니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-112">*Memory allocation limits* prevent a single connection from exhausting system memory and denying service to other connections.</span></span>  
   
--   *컬렉션 크기 제한*은 간접적으로 메모리를 할당하거나 제한된 공급 상태에 있는 리소스 사용을 바인딩합니다.  
+-   <span data-ttu-id="d1417-113">*컬렉션 크기 제한* 간접적으로 메모리를 할당 하거나 제한 된 공급 상태에 있는 리소스 사용을 바인딩합니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-113">*Collection size limits* bound the consumption of resources that indirectly allocate memory or are in limited supply.</span></span>  
   
-## 전송 할당량 설명  
- 이 단원에서는 표준 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 전송 즉, HTTP\(S\), TCP\/IP 및 명명된 파이프에서 사용할 수 있는 전송 할당량에 대해 설명합니다.사용자 지정 전송은 이 목록에 포함되지 않은 구성 가능한 할당량을 노출할 수 있습니다.할당량에 대한 자세한 내용은 사용자 지정 전송 설명서를 참조하십시오.  
+## <a name="transport-quota-descriptions"></a><span data-ttu-id="d1417-114">전송 할당량 설명</span><span class="sxs-lookup"><span data-stu-id="d1417-114">Transport Quota Descriptions</span></span>  
+ <span data-ttu-id="d1417-115">이 단원에서는 표준 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 전송 즉, HTTP(S), TCP/IP 및 명명된 파이프에서 사용할 수 있는 전송 할당량에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-115">This section describes the transport quotas available for the standard [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] transports: HTTP(S), TCP/IP, and named pipes.</span></span> <span data-ttu-id="d1417-116">사용자 지정 전송은 이 목록에 포함되지 않은 구성 가능한 할당량을 노출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-116">Custom transports can expose their own configurable quotas not included in this list.</span></span> <span data-ttu-id="d1417-117">할당량에 대한 자세한 내용은 사용자 지정 전송 설명서를 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="d1417-117">Consult the documentation for a custom transport to find out about its quotas.</span></span>  
   
- 각 할당량 설정에는 형식, 최소값 및 기본값이 있습니다.할당량의 최대값은 형식에 의해 제한됩니다.시스템 제한으로 인해 할당량을 최대값으로 설정할 수 없는 경우도 있습니다.  
+ <span data-ttu-id="d1417-118">각 할당량 설정에는 형식, 최소값 및 기본값이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-118">Each quota setting has a type, minimum value, and default value.</span></span> <span data-ttu-id="d1417-119">할당량의 최대값은 형식에 의해 제한됩니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-119">The maximum value of a quota is limited by its type.</span></span> <span data-ttu-id="d1417-120">시스템 제한으로 인해 할당량을 최대값으로 설정할 수 없는 경우도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-120">Due to machine limitations, it is not always possible to set a quota to its maximum value.</span></span>  
   
-|이름|형식|최소<br /><br /> value|Default<br /><br /> value|설명|  
-|--------|--------|------------------|-----------------------|--------|  
-|`ChannelInitializationTimeout`|TimeSpan|1틱|5초|처음에 읽는 동안 프리앰블을 보내기 위해 연결을 기다리는 최대 시간입니다.이 데이터는 인증이 발생되기 전에 수신됩니다.일반적으로 이 설정은 `ReceiveTimeout` 할당량 값보다 상당히 작습니다.|  
-|`CloseTimeout`|TimeSpan|0|1분|전송에서 예외가 발생되기 전에 연결을 닫을 때까지 기다리는 최대 시간입니다.|  
-|`ConnectionBufferSize`|Integer|1|8KB|기본 전송의 전송 및 수신 버퍼 크기\(바이트\)입니다.버퍼 크기를 늘리면 대용량 메시지 전송 시 처리량이 향상될 수 있습니다.|  
-|`IdleTimeout`|TimeSpan|0|2분|풀 연결이 닫히기 전에 유휴 상태로 유지될 수 있는 최대 시간입니다.<br /><br /> 이 설정은 풀 연결에만 적용됩니다.|  
-|`LeaseTimeout`|TimeSpan|0|5분|활성 풀 연결의 최대 수명입니다.지정된 시간이 경과한 후 현재 요청이 서비스되면 연결이 닫힙니다.<br /><br /> 이 설정은 풀 연결에만 적용됩니다.|  
-|`ListenBacklog`|Integer|1|10|해당 끝점에 대한 추가 연결이 거부되기 전에 수신기에서 지원할 수 없는 최대 연결 수입니다.|  
-|`MaxBufferPoolSize`|Long|0|512KB|전송이 재사용 가능한 메시지 버퍼 풀링에 사용할 수 있는 최대 메모리\(바이트\)입니다.풀이 메시지 버퍼를 제공할 수 없는 경우 임시로 새 버퍼를 할당하여 사용합니다.<br /><br /> 여러 채널 팩터리 또는 수신기를 만드는 설치에서 버퍼 풀에 대해 대용량 메모리를 할당할 수 있습니다.이 시나리오에서 이 버퍼 크기를 줄이면 메모리 사용량을 상당히 줄일 수 있습니다.|  
-|`MaxBufferSize`|Integer|1|64KB|데이터 스트리밍에 사용되는 버퍼의 최대 크기\(바이트\)입니다.이 전송 할당량을 설정하지 않았거나 전송이 스트리밍을 사용하지 않는 경우 할당량 값은 `MaxReceivedMessageSize` 할당량 값 및 <xref:System.Int32.MaxValue> 중 작은 값과 동일합니다.|  
-|`MaxOutboundConnectionsPerEndpoint`|Integer|1|10|특정 끝점에 연결할 수 있는 나가는 연결의 최대 수입니다.<br /><br /> 이 설정은 풀 연결에만 적용됩니다.|  
-|`MaxOutputDelay`|TimeSpan|0|200밀리초|단일 작업에서 추가 메시지를 일괄 처리하기 위한 전송 작업 후 기다리는 최대 시간입니다.메시지는 기본 전송 버퍼가 가득 차기 전에 전송됩니다.추가 메시지를 전송하더라도 지연 기간이 다시 설정되지 않습니다.|  
-|`MaxPendingAccepts`|Integer|1|1|수신기에서 수락될 때까지 대기할 수 있는 최대 채널 수입니다.<br /><br /> 수락 완료 및 새 수락 시작 사이에 시간 간격이 있습니다.이 컬렉션 크기가 증가하면 이 간격 동안 연결된 클라이언트가 연결이 끊기지 않도록 할 수 있습니다.|  
-|`MaxPendingConnections`|Integer|1|10|응용 프로그램에서 수락할 때까지 수신기에서 기다릴 수 있는 최대 연결 수입니다.이 할당량 값을 초과하면 새 들어 오는 연결은 수락될 때까지 기다리지 않고 연결이 끊깁니다.<br /><br /> 메시지 보안과 같은 연결 기능을 통해 클라이언트가 둘 이상의 연결을 열 수 있습니다.서비스 관리자는 이 할당량 값을 설정할 때 이러한 추가 연결을 고려해야 합니다.|  
-|`MaxReceivedMessageSize`|Long|1|64KB|전송에서 예외가 발생하기 전에 헤더를 포함하여 받은 메시지의 최대 크기\(바이트\)입니다.|  
-|`OpenTimeout`|TimeSpan|0|1분|전송에서 예외가 발생되기 전에 연결을 설정할 때까지 기다리는 최대 시간입니다.|  
-|`ReceiveTimeout`|TimeSpan|0|10분|전송에서 예외가 발생되기 전에 읽기 작업이 완료될 때까지 기다리는 최대 시간입니다.|  
-|`SendTimeout`|Timespan|0|1분|전송에서 예외가 발생되기 전에 쓰기 작업이 완료될 때까지 기다리는 최대 시간입니다.|  
+|<span data-ttu-id="d1417-121">이름</span><span class="sxs-lookup"><span data-stu-id="d1417-121">Name</span></span>|<span data-ttu-id="d1417-122">형식</span><span class="sxs-lookup"><span data-stu-id="d1417-122">Type</span></span>|<span data-ttu-id="d1417-123">최소</span><span class="sxs-lookup"><span data-stu-id="d1417-123">Min.</span></span><br /><br /> <span data-ttu-id="d1417-124">값</span><span class="sxs-lookup"><span data-stu-id="d1417-124">value</span></span>|<span data-ttu-id="d1417-125">기본값</span><span class="sxs-lookup"><span data-stu-id="d1417-125">Default</span></span><br /><br /> <span data-ttu-id="d1417-126">값</span><span class="sxs-lookup"><span data-stu-id="d1417-126">value</span></span>|<span data-ttu-id="d1417-127">설명</span><span class="sxs-lookup"><span data-stu-id="d1417-127">Description</span></span>|  
+|----------|----------|--------------------|-----------------------|-----------------|  
+|`ChannelInitializationTimeout`|<span data-ttu-id="d1417-128">TimeSpan</span><span class="sxs-lookup"><span data-stu-id="d1417-128">TimeSpan</span></span>|<span data-ttu-id="d1417-129">1틱</span><span class="sxs-lookup"><span data-stu-id="d1417-129">1 tick</span></span>|<span data-ttu-id="d1417-130">5 초</span><span class="sxs-lookup"><span data-stu-id="d1417-130">5 sec</span></span>|<span data-ttu-id="d1417-131">처음에 읽는 동안 프리앰블을 보내기 위해 연결을 기다리는 최대 시간입니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-131">Maximum time to wait for a connection to send the preamble during the initial read.</span></span> <span data-ttu-id="d1417-132">이 데이터는 인증이 발생되기 전에 수신됩니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-132">This data is received before authentication occurs.</span></span> <span data-ttu-id="d1417-133">일반적으로 이 설정은 `ReceiveTimeout` 할당량 값보다 상당히 작습니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-133">This setting is generally much smaller than the `ReceiveTimeout` quota value.</span></span>|  
+|`CloseTimeout`|<span data-ttu-id="d1417-134">TimeSpan</span><span class="sxs-lookup"><span data-stu-id="d1417-134">TimeSpan</span></span>|<span data-ttu-id="d1417-135">0</span><span class="sxs-lookup"><span data-stu-id="d1417-135">0</span></span>|<span data-ttu-id="d1417-136">1분</span><span class="sxs-lookup"><span data-stu-id="d1417-136">1 min</span></span>|<span data-ttu-id="d1417-137">전송에서 예외가 발생되기 전에 연결을 닫을 때까지 기다리는 최대 시간입니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-137">Maximum time to wait for a connection to close before the transport raises an exception.</span></span>|  
+|`ConnectionBufferSize`|<span data-ttu-id="d1417-138">정수</span><span class="sxs-lookup"><span data-stu-id="d1417-138">Integer</span></span>|<span data-ttu-id="d1417-139">1</span><span class="sxs-lookup"><span data-stu-id="d1417-139">1</span></span>|<span data-ttu-id="d1417-140">8KB</span><span class="sxs-lookup"><span data-stu-id="d1417-140">8 KB</span></span>|<span data-ttu-id="d1417-141">기본 전송의 전송 및 수신 버퍼 크기(바이트)입니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-141">Size, in bytes, of the transmit and receive buffers of the underlying transport.</span></span> <span data-ttu-id="d1417-142">버퍼 크기를 늘리면 대용량 메시지 전송 시 처리량이 향상될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-142">Increasing the buffer size can improve throughput when sending large messages.</span></span>|  
+|`IdleTimeout`|<span data-ttu-id="d1417-143">TimeSpan</span><span class="sxs-lookup"><span data-stu-id="d1417-143">TimeSpan</span></span>|<span data-ttu-id="d1417-144">0</span><span class="sxs-lookup"><span data-stu-id="d1417-144">0</span></span>|<span data-ttu-id="d1417-145">2분</span><span class="sxs-lookup"><span data-stu-id="d1417-145">2 min</span></span>|<span data-ttu-id="d1417-146">풀 연결이 닫히기 전에 유휴 상태로 유지될 수 있는 최대 시간입니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-146">Maximum time a pooled connection can remain idle before being closed.</span></span><br /><br /> <span data-ttu-id="d1417-147">이 설정은 풀 연결에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-147">This setting only applies to pooled connections.</span></span>|  
+|`LeaseTimeout`|<span data-ttu-id="d1417-148">TimeSpan</span><span class="sxs-lookup"><span data-stu-id="d1417-148">TimeSpan</span></span>|<span data-ttu-id="d1417-149">0</span><span class="sxs-lookup"><span data-stu-id="d1417-149">0</span></span>|<span data-ttu-id="d1417-150">5분</span><span class="sxs-lookup"><span data-stu-id="d1417-150">5 min</span></span>|<span data-ttu-id="d1417-151">활성 풀 연결의 최대 수명입니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-151">Maximum lifetime of an active pooled connection.</span></span> <span data-ttu-id="d1417-152">지정된 시간이 경과한 후 현재 요청이 서비스되면 연결이 닫힙니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-152">After the specified time elapses, the connection closes once the current request is serviced.</span></span><br /><br /> <span data-ttu-id="d1417-153">이 설정은 풀 연결에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-153">This setting only applies to pooled connections.</span></span>|  
+|`ListenBacklog`|<span data-ttu-id="d1417-154">정수</span><span class="sxs-lookup"><span data-stu-id="d1417-154">Integer</span></span>|<span data-ttu-id="d1417-155">1</span><span class="sxs-lookup"><span data-stu-id="d1417-155">1</span></span>|<span data-ttu-id="d1417-156">10</span><span class="sxs-lookup"><span data-stu-id="d1417-156">10</span></span>|<span data-ttu-id="d1417-157">해당 끝점에 대한 추가 연결이 거부되기 전에 수신기에서 지원할 수 없는 최대 연결 수입니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-157">Maximum number of connections that the listener can have unserviced before additional connections to that endpoint are denied.</span></span>|  
+|`MaxBufferPoolSize`|<span data-ttu-id="d1417-158">Long</span><span class="sxs-lookup"><span data-stu-id="d1417-158">Long</span></span>|<span data-ttu-id="d1417-159">0</span><span class="sxs-lookup"><span data-stu-id="d1417-159">0</span></span>|<span data-ttu-id="d1417-160">512KB</span><span class="sxs-lookup"><span data-stu-id="d1417-160">512 KB</span></span>|<span data-ttu-id="d1417-161">전송이 재사용 가능한 메시지 버퍼 풀링에 사용할 수 있는 최대 메모리(바이트)입니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-161">Maximum memory, in bytes, that the transport devotes to pooling reusable message buffers.</span></span> <span data-ttu-id="d1417-162">풀이 메시지 버퍼를 제공할 수 없는 경우 임시로 새 버퍼를 할당하여 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-162">When the pool cannot supply a message buffer, a new buffer is allocated for temporary use.</span></span><br /><br /> <span data-ttu-id="d1417-163">여러 채널 팩터리 또는 수신기를 만드는 설치에서 버퍼 풀에 대해 대용량 메모리를 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-163">Installations that create many channel factories or listeners can allocate large amounts of memory for buffer pools.</span></span> <span data-ttu-id="d1417-164">이 시나리오에서 이 버퍼 크기를 줄이면 메모리 사용량을 상당히 줄일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-164">Reducing this buffer size can greatly reduce memory usage in this scenario.</span></span>|  
+|`MaxBufferSize`|<span data-ttu-id="d1417-165">정수</span><span class="sxs-lookup"><span data-stu-id="d1417-165">Integer</span></span>|<span data-ttu-id="d1417-166">1</span><span class="sxs-lookup"><span data-stu-id="d1417-166">1</span></span>|<span data-ttu-id="d1417-167">64 KB</span><span class="sxs-lookup"><span data-stu-id="d1417-167">64 KB</span></span>|<span data-ttu-id="d1417-168">데이터 스트리밍에 사용되는 버퍼의 최대 크기(바이트)입니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-168">Maximum size, in bytes, of a buffer used for streaming data.</span></span> <span data-ttu-id="d1417-169">이 전송 할당량을 설정하지 않았거나 전송이 스트리밍을 사용하지 않는 경우 할당량 값은 `MaxReceivedMessageSize` 할당량 값 및 <xref:System.Int32.MaxValue> 중 작은 값과 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-169">If this transport quota is not set, or the transport is not using streaming, then the quota value is the same as the smaller of the `MaxReceivedMessageSize` quota value and <xref:System.Int32.MaxValue>.</span></span>|  
+|`MaxOutboundConnectionsPerEndpoint`|<span data-ttu-id="d1417-170">정수</span><span class="sxs-lookup"><span data-stu-id="d1417-170">Integer</span></span>|<span data-ttu-id="d1417-171">1</span><span class="sxs-lookup"><span data-stu-id="d1417-171">1</span></span>|<span data-ttu-id="d1417-172">10</span><span class="sxs-lookup"><span data-stu-id="d1417-172">10</span></span>|<span data-ttu-id="d1417-173">특정 끝점에 연결할 수 있는 나가는 연결의 최대 수입니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-173">Maximum number of outgoing connections that can be associated with a particular endpoint.</span></span><br /><br /> <span data-ttu-id="d1417-174">이 설정은 풀 연결에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-174">This setting only applies to pooled connections.</span></span>|  
+|`MaxOutputDelay`|<span data-ttu-id="d1417-175">TimeSpan</span><span class="sxs-lookup"><span data-stu-id="d1417-175">TimeSpan</span></span>|<span data-ttu-id="d1417-176">0</span><span class="sxs-lookup"><span data-stu-id="d1417-176">0</span></span>|<span data-ttu-id="d1417-177">200밀리초</span><span class="sxs-lookup"><span data-stu-id="d1417-177">200 ms</span></span>|<span data-ttu-id="d1417-178">단일 작업에서 추가 메시지를 일괄 처리하기 위한 전송 작업 후 기다리는 최대 시간입니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-178">Maximum time to wait after a send operation for batching additional messages in a single operation.</span></span> <span data-ttu-id="d1417-179">메시지는 기본 전송 버퍼가 가득 차기 전에 전송됩니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-179">Messages are sent earlier if the buffer of the underlying transport becomes full.</span></span> <span data-ttu-id="d1417-180">추가 메시지를 전송하더라도 지연 기간이 다시 설정되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-180">Sending additional messages does not reset the delay period.</span></span>|  
+|`MaxPendingAccepts`|<span data-ttu-id="d1417-181">정수</span><span class="sxs-lookup"><span data-stu-id="d1417-181">Integer</span></span>|<span data-ttu-id="d1417-182">1</span><span class="sxs-lookup"><span data-stu-id="d1417-182">1</span></span>|<span data-ttu-id="d1417-183">1</span><span class="sxs-lookup"><span data-stu-id="d1417-183">1</span></span>|<span data-ttu-id="d1417-184">수신기에서 수락될 때까지 대기할 수 있는 최대 채널 수입니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-184">Maximum number of accepts for channels that the listener can have waiting.</span></span><br /><br /> <span data-ttu-id="d1417-185">수락 완료 및 새 수락 시작 사이에 시간 간격이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-185">There is an interval of time between the accept completing and a new accept starting.</span></span> <span data-ttu-id="d1417-186">이 컬렉션 크기가 증가하면 이 간격 동안 연결된 클라이언트가 연결이 끊기지 않도록 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-186">Increasing this collection size can prevent clients that connect during this interval from being dropped.</span></span>|  
+|`MaxPendingConnections`|<span data-ttu-id="d1417-187">정수</span><span class="sxs-lookup"><span data-stu-id="d1417-187">Integer</span></span>|<span data-ttu-id="d1417-188">1</span><span class="sxs-lookup"><span data-stu-id="d1417-188">1</span></span>|<span data-ttu-id="d1417-189">10</span><span class="sxs-lookup"><span data-stu-id="d1417-189">10</span></span>|<span data-ttu-id="d1417-190">응용 프로그램에서 수락할 때까지 수신기에서 기다릴 수 있는 최대 연결 수입니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-190">Maximum number of connections that the listener can have waiting to be accepted by the application.</span></span> <span data-ttu-id="d1417-191">이 할당량 값을 초과하면 새 들어 오는 연결은 수락될 때까지 기다리지 않고 연결이 끊깁니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-191">When this quota value is exceeded, new incoming connections are dropped rather than waiting to be accepted.</span></span><br /><br /> <span data-ttu-id="d1417-192">메시지 보안과 같은 연결 기능을 통해 클라이언트가 둘 이상의 연결을 열 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-192">Connection features such as message security can cause a client to open more than one connection.</span></span> <span data-ttu-id="d1417-193">서비스 관리자는 이 할당량 값을 설정할 때 이러한 추가 연결을 고려해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-193">Service administrators should account for these additional connections when setting this quota value.</span></span>|  
+|`MaxReceivedMessageSize`|<span data-ttu-id="d1417-194">Long</span><span class="sxs-lookup"><span data-stu-id="d1417-194">Long</span></span>|<span data-ttu-id="d1417-195">1</span><span class="sxs-lookup"><span data-stu-id="d1417-195">1</span></span>|<span data-ttu-id="d1417-196">64 KB</span><span class="sxs-lookup"><span data-stu-id="d1417-196">64 KB</span></span>|<span data-ttu-id="d1417-197">전송에서 예외가 발생하기 전에 헤더를 포함하여 받은 메시지의 최대 크기(바이트)입니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-197">Maximum size, in bytes, of a received message, including headers, before the transport raises an exception.</span></span>|  
+|`OpenTimeout`|<span data-ttu-id="d1417-198">TimeSpan</span><span class="sxs-lookup"><span data-stu-id="d1417-198">TimeSpan</span></span>|<span data-ttu-id="d1417-199">0</span><span class="sxs-lookup"><span data-stu-id="d1417-199">0</span></span>|<span data-ttu-id="d1417-200">1분</span><span class="sxs-lookup"><span data-stu-id="d1417-200">1 min</span></span>|<span data-ttu-id="d1417-201">전송에서 예외가 발생되기 전에 연결을 설정할 때까지 기다리는 최대 시간입니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-201">Maximum time to wait for a connection to be established before the transport raises an exception.</span></span>|  
+|`ReceiveTimeout`|<span data-ttu-id="d1417-202">TimeSpan</span><span class="sxs-lookup"><span data-stu-id="d1417-202">TimeSpan</span></span>|<span data-ttu-id="d1417-203">0</span><span class="sxs-lookup"><span data-stu-id="d1417-203">0</span></span>|<span data-ttu-id="d1417-204">10분</span><span class="sxs-lookup"><span data-stu-id="d1417-204">10 min</span></span>|<span data-ttu-id="d1417-205">전송에서 예외가 발생되기 전에 읽기 작업이 완료될 때까지 기다리는 최대 시간입니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-205">Maximum time to wait for a read operation to complete before the transport raises an exception.</span></span>|  
+|`SendTimeout`|<span data-ttu-id="d1417-206">Timespan</span><span class="sxs-lookup"><span data-stu-id="d1417-206">Timespan</span></span>|<span data-ttu-id="d1417-207">0</span><span class="sxs-lookup"><span data-stu-id="d1417-207">0</span></span>|<span data-ttu-id="d1417-208">1분</span><span class="sxs-lookup"><span data-stu-id="d1417-208">1 min</span></span>|<span data-ttu-id="d1417-209">전송에서 예외가 발생되기 전에 쓰기 작업이 완료될 때까지 기다리는 최대 시간입니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-209">Maximum time to wait for a write operation to complete before the transport raises an exception.</span></span>|  
   
- 전송 할당량 `MaxPendingConnections` 및 `MaxOutboundConnectionsPerEndpoint`는 바인딩 또는 구성을 통해 설정될 때 `MaxConnections`라는 단일 전송 할당량에 결합됩니다.바인딩 요소만 이러한 할당량 값을 개별적으로 설정할 수 있습니다.`MaxConnections` 전송 할당량의 최소값 및 기본값은 동일합니다.  
+ <span data-ttu-id="d1417-210">전송 할당량 `MaxPendingConnections` 및 `MaxOutboundConnectionsPerEndpoint`는 바인딩 또는 구성을 통해 설정될 때 `MaxConnections`라는 단일 전송 할당량에 결합됩니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-210">The transport quotas `MaxPendingConnections` and `MaxOutboundConnectionsPerEndpoint` are combined into a single transport quota called `MaxConnections` when set through the binding or configuration.</span></span> <span data-ttu-id="d1417-211">바인딩 요소만 이러한 할당량 값을 개별적으로 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-211">Only the binding element allows setting these quota values individually.</span></span> <span data-ttu-id="d1417-212">`MaxConnections` 전송 할당량의 최소값 및 기본값은 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-212">The `MaxConnections` transport quota has the same minimum and default values.</span></span>  
   
-## 전송 할당량 설정  
- 전송 할당량은 전송 바인딩 요소, 전송 바인딩, 응용 프로그램 구성 또는 호스트 정책을 통해 설정됩니다.이 문서에서는 호스트 정책을 통한 전송 설정에 대해서는 설명하지 않습니다.호스트 정책 할당량에 대한 설정에 대해서는 기본 전송 설명서를 참조하십시오.[HTTP 및 HTTPS 구성](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md) 항목에서는 Http.sys 드라이버의 할당량 설정에 대해 설명합니다.HTTP, TCP\/IP 및 명명된 파이프 연결과 관련하여 Windows 제한 구성에 대한 자세한 내용은 Microsoft 기술 자료를 검색하십시오.  
+## <a name="setting-transport-quotas"></a><span data-ttu-id="d1417-213">전송 할당량 설정</span><span class="sxs-lookup"><span data-stu-id="d1417-213">Setting Transport Quotas</span></span>  
+ <span data-ttu-id="d1417-214">전송 할당량은 전송 바인딩 요소, 전송 바인딩, 응용 프로그램 구성 또는 호스트 정책을 통해 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-214">Transport quotas are set through the transport binding element, the transport binding, application configuration, or host policy.</span></span> <span data-ttu-id="d1417-215">이 문서에서는 호스트 정책을 통한 전송 설정에 대해서는 설명하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-215">This document does not cover setting transports through host policy.</span></span> <span data-ttu-id="d1417-216">호스트 정책 할당량에 대한 설정에 대해서는 기본 전송 설명서를 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="d1417-216">Consult the documentation for the underlying transport to discover the settings for host policy quotas.</span></span> <span data-ttu-id="d1417-217">[HTTP 및 HTTPS 구성](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md) Http.sys 드라이버에 대 한 할당량 설정에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-217">The [Configuring HTTP and HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md) topic describes quota settings for the Http.sys driver.</span></span> <span data-ttu-id="d1417-218">HTTP, TCP/IP 및 명명된 파이프 연결과 관련하여 Windows 제한 구성에 대한 자세한 내용은 Microsoft 기술 자료를 검색하십시오.</span><span class="sxs-lookup"><span data-stu-id="d1417-218">Search the Microsoft Knowledge Base for more information about configuring Windows limits on HTTP, TCP/IP, and named pipe connections.</span></span>  
   
- 기타 유형의 할당량은 전송에 간접적으로 적용됩니다.메시지를 바이트로 변환하기 위해 전송에서 사용하는 메시지 인코더에서 자체 할당량 설정을 구성할 수 있습니다.그러나 이러한 할당량은 사용하는 전송 형식에 독립적입니다.  
+ <span data-ttu-id="d1417-219">기타 유형의 할당량은 전송에 간접적으로 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-219">Other types of quotas apply indirectly to transports.</span></span> <span data-ttu-id="d1417-220">메시지를 바이트로 변환하기 위해 전송에서 사용하는 메시지 인코더에서 자체 할당량 설정을 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-220">The message encoder that the transport uses to transform a message into bytes can have its own quota settings.</span></span> <span data-ttu-id="d1417-221">그러나 이러한 할당량은 사용하는 전송 형식에 독립적입니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-221">However, these quotas are independent of the type of transport being used.</span></span>  
   
-### 바인딩 요소에서 전송 할당량 제어  
- 바인딩 요소를 통한 전송 할당량 설정은 전송 동작 제어 시 뛰어난 유연성을 제공합니다.Close, Open, Receive 및 Send 작업에 대한 기본 시간 제한은 채널 작성 시 바인딩에서 가져옵니다.  
+### <a name="controlling-transport-quotas-from-the-binding-element"></a><span data-ttu-id="d1417-222">바인딩 요소에서 전송 할당량 제어</span><span class="sxs-lookup"><span data-stu-id="d1417-222">Controlling Transport Quotas from the Binding Element</span></span>  
+ <span data-ttu-id="d1417-223">바인딩 요소를 통한 전송 할당량 설정은 전송 동작 제어 시 뛰어난 유연성을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-223">Setting transport quotas through the binding element offers the greatest flexibility in controlling the transport's behavior.</span></span> <span data-ttu-id="d1417-224">Close, Open, Receive 및 Send 작업에 대한 기본 시간 제한은 채널 작성 시 바인딩에서 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-224">The default timeouts for Close, Open, Receive, and Send operations are taken from the binding when a channel is built.</span></span>  
   
-|이름|HTTP|TCP\/IP|명명된 파이프|  
-|--------|----------|-------------|-------------|  
-|`ChannelInitializationTimeout`||X|X|  
+|<span data-ttu-id="d1417-225">이름</span><span class="sxs-lookup"><span data-stu-id="d1417-225">Name</span></span>|<span data-ttu-id="d1417-226">HTTP</span><span class="sxs-lookup"><span data-stu-id="d1417-226">HTTP</span></span>|<span data-ttu-id="d1417-227">TCP/IP</span><span class="sxs-lookup"><span data-stu-id="d1417-227">TCP/IP</span></span>|<span data-ttu-id="d1417-228">명명된 파이프</span><span class="sxs-lookup"><span data-stu-id="d1417-228">Named pipe</span></span>|  
+|----------|----------|-------------|----------------|  
+|`ChannelInitializationTimeout`||<span data-ttu-id="d1417-229">X</span><span class="sxs-lookup"><span data-stu-id="d1417-229">X</span></span>|<span data-ttu-id="d1417-230">X</span><span class="sxs-lookup"><span data-stu-id="d1417-230">X</span></span>|  
 |`CloseTimeout`||||  
-|`ConnectionBufferSize`||X|X|  
-|`IdleTimeout`||X|X|  
-|`LeaseTimeout`||X||  
-|`ListenBacklog`||X||  
-|`MaxBufferPoolSize`|X|X|X|  
-|`MaxBufferSize`|X|X|X|  
-|`MaxOutboundConnectionsPerEndpoint`||X|X|  
-|`MaxOutputDelay`||X|X|  
-|`MaxPendingAccepts`||X|X|  
-|`MaxPendingConnections`||X|X|  
-|`MaxReceivedMessageSize`|X|X|X|  
+|`ConnectionBufferSize`||<span data-ttu-id="d1417-231">X</span><span class="sxs-lookup"><span data-stu-id="d1417-231">X</span></span>|<span data-ttu-id="d1417-232">X</span><span class="sxs-lookup"><span data-stu-id="d1417-232">X</span></span>|  
+|`IdleTimeout`||<span data-ttu-id="d1417-233">X</span><span class="sxs-lookup"><span data-stu-id="d1417-233">X</span></span>|<span data-ttu-id="d1417-234">X</span><span class="sxs-lookup"><span data-stu-id="d1417-234">X</span></span>|  
+|`LeaseTimeout`||<span data-ttu-id="d1417-235">X</span><span class="sxs-lookup"><span data-stu-id="d1417-235">X</span></span>||  
+|`ListenBacklog`||<span data-ttu-id="d1417-236">X</span><span class="sxs-lookup"><span data-stu-id="d1417-236">X</span></span>||  
+|`MaxBufferPoolSize`|<span data-ttu-id="d1417-237">X</span><span class="sxs-lookup"><span data-stu-id="d1417-237">X</span></span>|<span data-ttu-id="d1417-238">X</span><span class="sxs-lookup"><span data-stu-id="d1417-238">X</span></span>|<span data-ttu-id="d1417-239">X</span><span class="sxs-lookup"><span data-stu-id="d1417-239">X</span></span>|  
+|`MaxBufferSize`|<span data-ttu-id="d1417-240">X</span><span class="sxs-lookup"><span data-stu-id="d1417-240">X</span></span>|<span data-ttu-id="d1417-241">X</span><span class="sxs-lookup"><span data-stu-id="d1417-241">X</span></span>|<span data-ttu-id="d1417-242">X</span><span class="sxs-lookup"><span data-stu-id="d1417-242">X</span></span>|  
+|`MaxOutboundConnectionsPerEndpoint`||<span data-ttu-id="d1417-243">X</span><span class="sxs-lookup"><span data-stu-id="d1417-243">X</span></span>|<span data-ttu-id="d1417-244">X</span><span class="sxs-lookup"><span data-stu-id="d1417-244">X</span></span>|  
+|`MaxOutputDelay`||<span data-ttu-id="d1417-245">X</span><span class="sxs-lookup"><span data-stu-id="d1417-245">X</span></span>|<span data-ttu-id="d1417-246">X</span><span class="sxs-lookup"><span data-stu-id="d1417-246">X</span></span>|  
+|`MaxPendingAccepts`||<span data-ttu-id="d1417-247">X</span><span class="sxs-lookup"><span data-stu-id="d1417-247">X</span></span>|<span data-ttu-id="d1417-248">X</span><span class="sxs-lookup"><span data-stu-id="d1417-248">X</span></span>|  
+|`MaxPendingConnections`||<span data-ttu-id="d1417-249">X</span><span class="sxs-lookup"><span data-stu-id="d1417-249">X</span></span>|<span data-ttu-id="d1417-250">X</span><span class="sxs-lookup"><span data-stu-id="d1417-250">X</span></span>|  
+|`MaxReceivedMessageSize`|<span data-ttu-id="d1417-251">X</span><span class="sxs-lookup"><span data-stu-id="d1417-251">X</span></span>|<span data-ttu-id="d1417-252">X</span><span class="sxs-lookup"><span data-stu-id="d1417-252">X</span></span>|<span data-ttu-id="d1417-253">X</span><span class="sxs-lookup"><span data-stu-id="d1417-253">X</span></span>|  
 |`OpenTimeout`||||  
 |`ReceiveTimeout`||||  
 |`SendTimeout`||||  
   
-### 바인딩에서 전송 할당량 제어  
- 바인딩을 통한 전송 할당량 설정에서는 가장 일반적인 할당량 값에 대한 액세스를 제공하는 동시에 선택할 수 있는 간단한 할당량 집합을 제공합니다.  
+### <a name="controlling-transport-quotas-from-the-binding"></a><span data-ttu-id="d1417-254">바인딩에서 전송 할당량 제어</span><span class="sxs-lookup"><span data-stu-id="d1417-254">Controlling Transport Quotas from the Binding</span></span>  
+ <span data-ttu-id="d1417-255">바인딩을 통한 전송 할당량 설정에서는 가장 일반적인 할당량 값에 대한 액세스를 제공하는 동시에 선택할 수 있는 간단한 할당량 집합을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-255">Setting transport quotas through the binding offers a simplified set of quotas to choose from while still giving access to the most common quota values.</span></span>  
   
-|이름|HTTP|TCP\/IP|명명된 파이프|  
-|--------|----------|-------------|-------------|  
+|<span data-ttu-id="d1417-256">이름</span><span class="sxs-lookup"><span data-stu-id="d1417-256">Name</span></span>|<span data-ttu-id="d1417-257">HTTP</span><span class="sxs-lookup"><span data-stu-id="d1417-257">HTTP</span></span>|<span data-ttu-id="d1417-258">TCP/IP</span><span class="sxs-lookup"><span data-stu-id="d1417-258">TCP/IP</span></span>|<span data-ttu-id="d1417-259">명명된 파이프</span><span class="sxs-lookup"><span data-stu-id="d1417-259">Named pipe</span></span>|  
+|----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||||  
-|`CloseTimeout`|X|X|X|  
+|`CloseTimeout`|<span data-ttu-id="d1417-260">X</span><span class="sxs-lookup"><span data-stu-id="d1417-260">X</span></span>|<span data-ttu-id="d1417-261">X</span><span class="sxs-lookup"><span data-stu-id="d1417-261">X</span></span>|<span data-ttu-id="d1417-262">X</span><span class="sxs-lookup"><span data-stu-id="d1417-262">X</span></span>|  
 |`ConnectionBufferSize`||||  
 |`IdleTimeout`||||  
 |`LeaseTimeout`||||  
-|`ListenBacklog`||X||  
-|`MaxBufferPoolSize`|X|X|X|  
-|`MaxBufferSize`|1|X|X|  
-|`MaxOutboundConnectionsPerEndpoint`||2|2|  
+|`ListenBacklog`||<span data-ttu-id="d1417-263">X</span><span class="sxs-lookup"><span data-stu-id="d1417-263">X</span></span>||  
+|`MaxBufferPoolSize`|<span data-ttu-id="d1417-264">X</span><span class="sxs-lookup"><span data-stu-id="d1417-264">X</span></span>|<span data-ttu-id="d1417-265">X</span><span class="sxs-lookup"><span data-stu-id="d1417-265">X</span></span>|<span data-ttu-id="d1417-266">X</span><span class="sxs-lookup"><span data-stu-id="d1417-266">X</span></span>|  
+|`MaxBufferSize`|<span data-ttu-id="d1417-267">1</span><span class="sxs-lookup"><span data-stu-id="d1417-267">1</span></span>|<span data-ttu-id="d1417-268">X</span><span class="sxs-lookup"><span data-stu-id="d1417-268">X</span></span>|<span data-ttu-id="d1417-269">X</span><span class="sxs-lookup"><span data-stu-id="d1417-269">X</span></span>|  
+|`MaxOutboundConnectionsPerEndpoint`||<span data-ttu-id="d1417-270">2</span><span class="sxs-lookup"><span data-stu-id="d1417-270">2</span></span>|<span data-ttu-id="d1417-271">2</span><span class="sxs-lookup"><span data-stu-id="d1417-271">2</span></span>|  
 |`MaxOutputDelay`||||  
 |`MaxPendingAccepts`||||  
-|`MaxPendingConnections`||2|2|  
-|`MaxReceivedMessageSize`|X|X|X|  
-|`OpenTimeout`|X|X|X|  
-|`ReceiveTimeout`|X|X|X|  
-|`SendTimeout`|X|X|X|  
+|`MaxPendingConnections`||<span data-ttu-id="d1417-272">2</span><span class="sxs-lookup"><span data-stu-id="d1417-272">2</span></span>|<span data-ttu-id="d1417-273">2</span><span class="sxs-lookup"><span data-stu-id="d1417-273">2</span></span>|  
+|`MaxReceivedMessageSize`|<span data-ttu-id="d1417-274">X</span><span class="sxs-lookup"><span data-stu-id="d1417-274">X</span></span>|<span data-ttu-id="d1417-275">X</span><span class="sxs-lookup"><span data-stu-id="d1417-275">X</span></span>|<span data-ttu-id="d1417-276">X</span><span class="sxs-lookup"><span data-stu-id="d1417-276">X</span></span>|  
+|`OpenTimeout`|<span data-ttu-id="d1417-277">X</span><span class="sxs-lookup"><span data-stu-id="d1417-277">X</span></span>|<span data-ttu-id="d1417-278">X</span><span class="sxs-lookup"><span data-stu-id="d1417-278">X</span></span>|<span data-ttu-id="d1417-279">X</span><span class="sxs-lookup"><span data-stu-id="d1417-279">X</span></span>|  
+|`ReceiveTimeout`|<span data-ttu-id="d1417-280">X</span><span class="sxs-lookup"><span data-stu-id="d1417-280">X</span></span>|<span data-ttu-id="d1417-281">X</span><span class="sxs-lookup"><span data-stu-id="d1417-281">X</span></span>|<span data-ttu-id="d1417-282">X</span><span class="sxs-lookup"><span data-stu-id="d1417-282">X</span></span>|  
+|`SendTimeout`|<span data-ttu-id="d1417-283">X</span><span class="sxs-lookup"><span data-stu-id="d1417-283">X</span></span>|<span data-ttu-id="d1417-284">X</span><span class="sxs-lookup"><span data-stu-id="d1417-284">X</span></span>|<span data-ttu-id="d1417-285">X</span><span class="sxs-lookup"><span data-stu-id="d1417-285">X</span></span>|  
   
-1.  `MaxBufferSize` 전송 할당량은 `BasicHttp` 바인딩에서만 사용할 수 있습니다.`WSHttp` 바인딩은 스트리밍된 전송 모드를 지원하지 않는 시나리오에 적용됩니다.  
+1.  <span data-ttu-id="d1417-286">`MaxBufferSize` 전송 할당량은 `BasicHttp` 바인딩에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-286">The `MaxBufferSize` transport quota is only available on the `BasicHttp` binding.</span></span> <span data-ttu-id="d1417-287">`WSHttp` 바인딩은 스트리밍된 전송 모드를 지원하지 않는 시나리오에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-287">The `WSHttp` bindings are for scenarios that do not support streamed transport modes.</span></span>  
   
-2.  전송 할당량 `MaxPendingConnections` 및 `MaxOutboundConnectionsPerEndpoint`는 `MaxConnections`라는 단일 전송 할당량에 결합됩니다.  
+2.  <span data-ttu-id="d1417-288">전송 할당량 `MaxPendingConnections` 및 `MaxOutboundConnectionsPerEndpoint`는 `MaxConnections`라는 단일 전송 할당량에 결합됩니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-288">The transport quotas `MaxPendingConnections` and `MaxOutboundConnectionsPerEndpoint` are combined into a single transport quota called `MaxConnections`.</span></span>  
   
-### 구성에서 전송 할당량 제어  
- 응용 프로그램 구성 시 바인딩의 속성에 직접 액세스할 때와 동일한 전송 할당량을 설정할 수 있습니다.구성 파일에서 전송 할당량의 이름은 항상 소문자로 시작합니다.예를 들어 바인딩의 `CloseTimeout` 속성은 구성에서 `closeTimeout` 설정에 해당하고 바인딩의 `MaxConnections` 속성은 구성의 `maxConnections` 설정에 해당합니다.  
+### <a name="controlling-transport-quotas-from-configuration"></a><span data-ttu-id="d1417-289">구성에서 전송 할당량 제어</span><span class="sxs-lookup"><span data-stu-id="d1417-289">Controlling Transport Quotas from Configuration</span></span>  
+ <span data-ttu-id="d1417-290">응용 프로그램 구성 시 바인딩의 속성에 직접 액세스할 때와 동일한 전송 할당량을 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-290">Application configuration can set the same transport quotas as directly accessing properties on a binding.</span></span> <span data-ttu-id="d1417-291">구성 파일에서 전송 할당량의 이름은 항상 소문자로 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-291">In configuration files, the name of a transport quota always starts with a lowercase letter.</span></span> <span data-ttu-id="d1417-292">예를 들어 바인딩의 `CloseTimeout` 속성은 구성에서 `closeTimeout` 설정에 해당하고 바인딩의 `MaxConnections` 속성은 구성의 `maxConnections` 설정에 해당합니다.</span><span class="sxs-lookup"><span data-stu-id="d1417-292">For example, the `CloseTimeout` property on a binding corresponds to the `closeTimeout` setting in configuration and the `MaxConnections` property on a binding corresponds to the `maxConnections` setting in configuration.</span></span>  
   
-## 참고 항목  
- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>   
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>   
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>   
- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>   
- <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>   
+## <a name="see-also"></a><span data-ttu-id="d1417-293">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d1417-293">See Also</span></span>  
+ <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
+ <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
+ <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
+ <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
+ <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
  <xref:System.ServiceModel.Channels.TransportBindingElement>

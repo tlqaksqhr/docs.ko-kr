@@ -1,67 +1,64 @@
 ---
-title: "Out (Generic Modifier) (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.VarianceOut"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Out keyword [Visual Basic]"
-  - "covariance, Out keyword [Visual Basic]"
+title: "Out(제네릭 한정자)(Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.VarianceOut
+helpviewer_keywords:
+- Out keyword [Visual Basic]
+- covariance, Out keyword [Visual Basic]
 ms.assetid: c4418369-1518-4a46-9a1e-054c61038eca
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 94d18200e6d7ce0ad63a229223ae77d99302e0e6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Out (Generic Modifier) (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-제네릭 형식 매개 변수의 경우 `Out` 키워드는 형식이 공변\(covariant\)임을 나타냅니다.  
+# <a name="out-generic-modifier-visual-basic"></a><span data-ttu-id="40cb8-102">Out(제네릭 한정자)(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="40cb8-102">Out (Generic Modifier) (Visual Basic)</span></span>
+<span data-ttu-id="40cb8-103">제네릭 형식 매개 변수에 `Out` 키워드 형식이 공변 (covariant) 임을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="40cb8-103">For generic type parameters, the `Out` keyword specifies that the type is covariant.</span></span>  
   
-## 설명  
- 공 분산을 사용하면 제네릭 매개 변수로 지정된 형식보다 더 많이 파생된 형식을 사용할 수 있습니다.  이 경우 variant 인터페이스를 구현하는 클래스의 암시적 변환과 대리자 형식의 암시적 변환이 가능합니다.  
+## <a name="remarks"></a><span data-ttu-id="40cb8-104">설명</span><span class="sxs-lookup"><span data-stu-id="40cb8-104">Remarks</span></span>  
+ <span data-ttu-id="40cb8-105">공변성(covariance)을 통해 제네릭 매개 변수에 지정된 것보다 많은 파생 형식을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="40cb8-105">Covariance enables you to use a more derived type than that specified by the generic parameter.</span></span> <span data-ttu-id="40cb8-106">따라서 variant 인터페이스를 구현하는 클래스의 암시적 변환과 대리자 형식의 암시적 변환이 허용됩니다.</span><span class="sxs-lookup"><span data-stu-id="40cb8-106">This allows for implicit conversion of classes that implement variant interfaces and implicit conversion of delegate types.</span></span>  
   
- 자세한 내용은 [공 분산 및 반공 분산](../Topic/Covariance%20and%20Contravariance%20\(C%23%20and%20Visual%20Basic\).md)을 참조하십시오.  
+ <span data-ttu-id="40cb8-107">자세한 내용은 [공변성(Covariance) 및 반공변성(Contravariance)](../../programming-guide/concepts/covariance-contravariance/index.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="40cb8-107">For more information, see [Covariance and Contravariance](../../programming-guide/concepts/covariance-contravariance/index.md).</span></span>  
   
-## 규칙  
- 제네릭 인터페이스와 대리자에서 `Out` 키워드를 사용할 수 있습니다.  
+## <a name="rules"></a><span data-ttu-id="40cb8-108">규칙</span><span class="sxs-lookup"><span data-stu-id="40cb8-108">Rules</span></span>  
+ <span data-ttu-id="40cb8-109">제네릭 인터페이스 및 대리자에서 `Out` 키워드를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="40cb8-109">You can use the `Out` keyword in generic interfaces and delegates.</span></span>  
   
- 제네릭 인터페이스에서 다음 조건을 충족하는 경우 형식 매개 변수를 공변\(covariant\)으로 선언할 수 있습니다.  
+ <span data-ttu-id="40cb8-110">제네릭 인터페이스에서 형식 매개 변수가 다음 조건을 충족하는 경우 공변(covariant)으로 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="40cb8-110">In a generic interface, a type parameter can be declared covariant if it satisfies the following conditions:</span></span>  
   
--   형식 매개 변수가 인터페이스 메서드의 반환 형식으로만 사용되고 메서드 인수의 형식으로 사용되지 않는 경우.  
+-   <span data-ttu-id="40cb8-111">형식 매개 변수는 인터페이스 메서드의 반환 형식으로만 사용되고 메서드 인수의 형식으로 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="40cb8-111">The type parameter is used only as a return type of interface methods and not used as a type of method arguments.</span></span>  
   
     > [!NOTE]
-    >  그러나 이 규칙에는 한 가지 예외가 있습니다.  공변\(covariant\) 인터페이스에서 반공변\(contravariant\) 제네릭 대리자가 메서드 매개 변수인 경우에는 공변\(covariant\) 형식을 이 대리자에 대한 제네릭 형식 매개 변수로 사용할 수 있습니다.  공변\(covariant\) 및 반공변\(contravariant\) 제네릭 대리자에 대한 자세한 내용은 [대리자의 가변성](../Topic/Variance%20in%20Delegates%20\(C%23%20and%20Visual%20Basic\).md) 및 [Func 및 Action 제네릭 대리자에 가변성 사용](../Topic/Using%20Variance%20for%20Func%20and%20Action%20Generic%20Delegates%20\(C%23%20and%20Visual%20Basic\).md)을 참조하십시오.  
+    >  <span data-ttu-id="40cb8-112">그러나 이 규칙에는 한 가지 예외가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="40cb8-112">There is one exception to this rule.</span></span> <span data-ttu-id="40cb8-113">공변(covariant) 인터페이스에 메서드 매개 변수로 반공변(contravariant) 제네릭 대리자가 있는 경우 공변(covariant) 형식을 이 대리자에 대한 제네릭 형식 매개 변수로 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="40cb8-113">If in a covariant interface you have a contravariant generic delegate as a method parameter, you can use the covariant type as a generic type parameter for this delegate.</span></span> <span data-ttu-id="40cb8-114">공변(covariant) 및 반공변(contravariant) 제네릭 대리자에 대한 자세한 내용은 [대리자의 가변성](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca) 및 [Func 및 Action 제네릭 대리자에 가변성 사용](http://msdn.microsoft.com/library/e69c4f39-09aa-4c6d-a752-08cc767d8290)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="40cb8-114">For more information about covariant and contravariant generic delegates, see [Variance in Delegates](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca) and [Using Variance for Func and Action Generic Delegates](http://msdn.microsoft.com/library/e69c4f39-09aa-4c6d-a752-08cc767d8290).</span></span>  
   
--   형식 매개 변수가 인터페이스 메서드에 대한 제네릭 제약 조건으로 사용되지 않는 경우  
+-   <span data-ttu-id="40cb8-115">형식 매개 변수는 인터페이스 메서드에 대한 제네릭 제약 조건으로 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="40cb8-115">The type parameter is not used as a generic constraint for the interface methods.</span></span>  
   
- 제네릭 대리자에서 형식 매개 변수가 메서드 반환 형식으로만 사용되고 메서드 인수로는 사용되지 않는 경우에만 공변\(covariant\)으로 선언될 수 있습니다.  
+ <span data-ttu-id="40cb8-116">제네릭 대리자 형식 매개 변수를 선언할 수 공변 (covariant) 메서드 반환 형식 으로만 사용 되 고 메서드 인수에 사용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="40cb8-116">In a generic delegate, a type parameter can be declared covariant if it is used only as a method return type and not used for method arguments.</span></span>  
   
- 공 분산 및 반공 분산은 참조 형식에만 지원되고 값 형식에는 지원되지 않습니다.  
+ <span data-ttu-id="40cb8-117">공변성(Covariance) 및 반공변성(Contravariance)은 참조 형식에 대해 지원되고 값 형식에 대해서는 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="40cb8-117">Covariance and contravariance are supported for reference types, but they are not supported for value types.</span></span>  
   
- Visual Basic에서는 대리자 형식을 지정하지 않으면 공변\(covariant\) 인터페이스에서 이벤트를 선언할 수 없습니다.  또한 공변\(covariant\) 인터페이스에서는 중첩 클래스, 열거형 또는 구조체를 사용할 수 없고 중첩 인터페이스만 사용할 수 있습니다.  
+ <span data-ttu-id="40cb8-118">Visual Basic에서 대리자 형식을 지정 하지 않고 공변 (covariant) 인터페이스의 이벤트를 선언할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="40cb8-118">In Visual Basic, you cannot declare events in covariant interfaces without specifying the delegate type.</span></span> <span data-ttu-id="40cb8-119">또한 공변 인터페이스 클래스, 열거형 또는 구조에 중첩 없습니다 되지만 인터페이스 중첩 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="40cb8-119">Also, covariant interfaces cannot have nested classes, enums, or structures, but they can have nested interfaces.</span></span>  
   
-## 동작  
- 공변\(covariant\) 형식 매개 변수가 있는 인터페이스의 메서드는 형식 매개 변수로 지정된 형식보다 더 많이 파생된 형식을 반환할 수 있습니다.  예를 들어, .NET Framework 4의 <xref:System.Collections.Generic.IEnumerable%601>에서 형식 T가 공변\(covariant\)이므로 특수 변환 메서드를 사용하지 않고도 `IEnumerabe(Of String)` 형식의 개체를 `IEnumerable(Of Object)` 형식의 개체에 할당할 수 있습니다.  
+## <a name="behavior"></a><span data-ttu-id="40cb8-120">동작</span><span class="sxs-lookup"><span data-stu-id="40cb8-120">Behavior</span></span>  
+ <span data-ttu-id="40cb8-121">공변(covariant) 형식 매개 변수가 있는 인터페이스는 해당 메서드가 형식 인터페이스에 지정된 것보다 많은 파생 형식을 반환할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="40cb8-121">An interface that has a covariant type parameter enables its methods to return more derived types than those specified by the type parameter.</span></span> <span data-ttu-id="40cb8-122">예를 들어 .NET Framework 4의 <xref:System.Collections.Generic.IEnumerable%601>에서 T 형식은 공변(covariant)이므로 특수 변환 메서드를 사용하지 않고 `IEnumerabe(Of String)` 형식의 개체를 `IEnumerable(Of Object)` 형식의 개체에 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="40cb8-122">For example, because in .NET Framework 4, in <xref:System.Collections.Generic.IEnumerable%601>, type T is covariant, you can assign an object of the `IEnumerabe(Of String)` type to an object of the `IEnumerable(Of Object)` type without using any special conversion methods.</span></span>  
   
- 공변\(covariant\) 대리자는 같은 형식이지만 더 많이 파생된 제네릭 형식 매개 변수를 사용하는 다른 대리자에게 할당할 수 있습니다.  
+ <span data-ttu-id="40cb8-123">공변(covariant) 대리자에 동일한 형식의 다른 대리자를 할당할 수 있지만 더 파생된 제네릭 형식 매개 변수가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="40cb8-123">A covariant delegate can be assigned another delegate of the same type, but with a more derived generic type parameter.</span></span>  
   
-## 예제  
- 다음 예제에서는 공변\(covariant\) 제네릭 인터페이스를 선언, 확장 및 구현하는 방법을 보여 줍니다.  또한 공변\(covariant\) 인터페이스를 구현하는 클래스의 암시적 변환을 사용하는 방법도 보여 줍니다.  
+## <a name="example"></a><span data-ttu-id="40cb8-124">예제</span><span class="sxs-lookup"><span data-stu-id="40cb8-124">Example</span></span>  
+ <span data-ttu-id="40cb8-125">다음 예제에서는 공변(covariant) 제네릭 인터페이스를 선언, 확장 및 구현하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="40cb8-125">The following example shows how to declare, extend, and implement a covariant generic interface.</span></span> <span data-ttu-id="40cb8-126">또한 공변(covariant) 인터페이스를 구현하는 클래스에 대해 암시적 변환을 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="40cb8-126">It also shows how to use implicit conversion for classes that implement a covariant interface.</span></span>  
   
  [!code-vb[vbVarianceKeywords#3](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/out-generic-modifier_1.vb)]  
   
-## 예제  
- 다음 예제에서는 공변\(covariant\) 제네릭 대리자를 선언, 인스턴스화 및 호출하는 방법을 보여 줍니다.  또한 대리자 형식을 암시적으로 변환하는 방법도 보여 줍니다.  
+## <a name="example"></a><span data-ttu-id="40cb8-127">예제</span><span class="sxs-lookup"><span data-stu-id="40cb8-127">Example</span></span>  
+ <span data-ttu-id="40cb8-128">다음 예제에서는 공변(covariant) 제네릭 대리자를 선언, 인스턴스화 및 호출하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="40cb8-128">The following example shows how to declare, instantiate, and invoke a covariant generic delegate.</span></span> <span data-ttu-id="40cb8-129">또한 대리자 형식에 대 한 암시적 변환을 사용 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="40cb8-129">It also shows how you can use implicit conversion for delegate types.</span></span>  
   
  [!code-vb[vbVarianceKeywords#4](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/out-generic-modifier_2.vb)]  
   
-## 참고 항목  
- [제네릭 인터페이스의 가변성](../Topic/Variance%20in%20Generic%20Interfaces%20\(C%23%20and%20Visual%20Basic\).md)   
- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+## <a name="see-also"></a><span data-ttu-id="40cb8-130">참고 항목</span><span class="sxs-lookup"><span data-stu-id="40cb8-130">See Also</span></span>  
+ [<span data-ttu-id="40cb8-131">제네릭 인터페이스의 가변성</span><span class="sxs-lookup"><span data-stu-id="40cb8-131">Variance in Generic Interfaces</span></span>](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
+ [<span data-ttu-id="40cb8-132">In</span><span class="sxs-lookup"><span data-stu-id="40cb8-132">In</span></span>](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)

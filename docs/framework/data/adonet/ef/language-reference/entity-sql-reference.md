@@ -1,145 +1,144 @@
 ---
-title: "Entity SQL 참조 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "엔터티 SQL 참조"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 776a2a93f559ba54651adc49e6b609c8156e9e31
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# Entity SQL 참조
-이 단원에서는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 참조 항목을 제공하고, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 연산자 요약 및 범주별로 그룹화합니다.  
+# <a name="entity-sql-reference"></a><span data-ttu-id="a4d43-102">엔터티 SQL 참조</span><span class="sxs-lookup"><span data-stu-id="a4d43-102">Entity SQL Reference</span></span>
+<span data-ttu-id="a4d43-103">이 단원에는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 참조 항목이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-103">This section contains [!INCLUDE[esql](../../../../../../includes/esql-md.md)] reference topics.</span></span> <span data-ttu-id="a4d43-104">이 항목에는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 작업이 요약되고 범주별로 그룹화되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-104">This topic summarizes and groups the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operators by category.</span></span>  
   
-## 산술 연산자  
- 산술 연산자는 하나 이상의 숫자 데이터 형식으로 구성된 두 식에 대해 수치 연산을 수행합니다.  다음 표에서는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 산술 연산자를 보여 줍니다.  
+## <a name="arithmetic-operators"></a><span data-ttu-id="a4d43-105">산술 연산자</span><span class="sxs-lookup"><span data-stu-id="a4d43-105">Arithmetic Operators</span></span>  
+ <span data-ttu-id="a4d43-106">산술 연산자는 하나 이상의 숫자 데이터 형식으로 구성된 두 식에 대해 수치 연산을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-106">Arithmetic operators perform mathematical operations on two expressions of one or more numeric data types.</span></span> <span data-ttu-id="a4d43-107">다음 표에서는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 산술 연산자를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-107">The following table lists the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] arithmetic operators.</span></span>  
   
-|연산자|기능|  
-|---------|--------|  
-|[\+ \(추가\)](../../../../../../docs/framework/data/adonet/ef/language-reference/add.md)|더하기|  
-|[\/ \(나누기\)](../../../../../../docs/framework/data/adonet/ef/language-reference/divide-entity-sql.md)|나누기|  
-|[% \(Modulo\)](../../../../../../docs/framework/data/adonet/ef/language-reference/modulo-entity-sql.md)|나누기의 나머지를 반환합니다.|  
-|[\* \(곱하기\)](../../../../../../docs/framework/data/adonet/ef/language-reference/multiply-entity-sql.md)|곱하기|  
-|[\- \(부정\)](../../../../../../docs/framework/data/adonet/ef/language-reference/negative-entity-sql.md)|부정|  
-|[\- \(빼기\)](../../../../../../docs/framework/data/adonet/ef/language-reference/subtract-entity-sql.md)|빼기|  
+|<span data-ttu-id="a4d43-108">연산자</span><span class="sxs-lookup"><span data-stu-id="a4d43-108">Operator</span></span>|<span data-ttu-id="a4d43-109">기능</span><span class="sxs-lookup"><span data-stu-id="a4d43-109">Use</span></span>|  
+|--------------|---------|  
+|[<span data-ttu-id="a4d43-110">+ (더하기)</span><span class="sxs-lookup"><span data-stu-id="a4d43-110">+ (Add)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/add.md)|<span data-ttu-id="a4d43-111">더하기</span><span class="sxs-lookup"><span data-stu-id="a4d43-111">Addition.</span></span>|  
+|<span data-ttu-id="a4d43-112">"/ (나누기)"</span><span class="sxs-lookup"><span data-stu-id="a4d43-112">"/ (Divide)"</span></span>|<span data-ttu-id="a4d43-113">나누기</span><span class="sxs-lookup"><span data-stu-id="a4d43-113">Division.</span></span>|  
+|[<span data-ttu-id="a4d43-114">% (모듈로)</span><span class="sxs-lookup"><span data-stu-id="a4d43-114">% (Modulo)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/modulo-entity-sql.md)|<span data-ttu-id="a4d43-115">나누기의 나머지를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-115">Returns the remainder of a division.</span></span>|  
+|[<span data-ttu-id="a4d43-116">* (곱하기)</span><span class="sxs-lookup"><span data-stu-id="a4d43-116">* (Multiply)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/multiply-entity-sql.md)|<span data-ttu-id="a4d43-117">곱하기</span><span class="sxs-lookup"><span data-stu-id="a4d43-117">Multiplication.</span></span>|  
+|[<span data-ttu-id="a4d43-118">-(음수)</span><span class="sxs-lookup"><span data-stu-id="a4d43-118">- (Negative)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/negative-entity-sql.md)|<span data-ttu-id="a4d43-119">부정</span><span class="sxs-lookup"><span data-stu-id="a4d43-119">Negation.</span></span>|  
+|[<span data-ttu-id="a4d43-120">-(빼기)</span><span class="sxs-lookup"><span data-stu-id="a4d43-120">- (Subtract)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/subtract-entity-sql.md)|<span data-ttu-id="a4d43-121">빼기</span><span class="sxs-lookup"><span data-stu-id="a4d43-121">Subtraction.</span></span>|  
   
-## 정식 함수  
- 정식 함수는 모든 데이터 공급자에서 지원되며 모든 쿼리 기술에 사용될 수 있습니다.  다음 표에서는 정식 함수를 보여 줍니다.  
+## <a name="canonical-functions"></a><span data-ttu-id="a4d43-122">정식 함수</span><span class="sxs-lookup"><span data-stu-id="a4d43-122">Canonical Functions</span></span>  
+ <span data-ttu-id="a4d43-123">정식 함수는 모든 데이터 공급자에서 지원되며 모든 쿼리 기술에 사용될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-123">Canonical functions are supported by all data providers and can be used by all querying technologies.</span></span> <span data-ttu-id="a4d43-124">다음 표에서는 정식 함수를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-124">The following table lists the canonical functions.</span></span>  
   
-|함수|형식|  
-|--------|--------|  
-|[집계 Entity SQL 정식 함수](../../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|집계 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 정식 함수에 대해 설명합니다.|  
-|[수학 정식 함수](../../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|수식 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 정식 함수에 대해 설명합니다.|  
-|[문자열 정식 함수](../../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|문자열 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 정식 함수에 대해 설명합니다.|  
-|[날짜 및 시간 정식 함수](../../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|날짜 및 시간 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 정식 함수에 대해 설명합니다.|  
-|[비트 정식 함수](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|비트 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 정식 함수에 대해 설명합니다.|  
-|[기타 정식 함수](../../../../../../docs/framework/data/adonet/ef/language-reference/other-canonical-functions.md)|비트, 날짜\/시간, 문자열, 수식, 집계 등으로 분류되지 않는 함수에 대해 설명합니다.|  
+|<span data-ttu-id="a4d43-125">함수</span><span class="sxs-lookup"><span data-stu-id="a4d43-125">Function</span></span>|<span data-ttu-id="a4d43-126">형식</span><span class="sxs-lookup"><span data-stu-id="a4d43-126">Type</span></span>|  
+|--------------|----------|  
+|[<span data-ttu-id="a4d43-127">집계 Entity SQL 정식 함수</span><span class="sxs-lookup"><span data-stu-id="a4d43-127">Aggregate Entity SQL Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|<span data-ttu-id="a4d43-128">집계 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 정식 함수에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-128">Discusses aggregate [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>|  
+|[<span data-ttu-id="a4d43-129">수학 정식 함수</span><span class="sxs-lookup"><span data-stu-id="a4d43-129">Math Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|<span data-ttu-id="a4d43-130">수식 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 정식 함수에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-130">Discusses math [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>|  
+|[<span data-ttu-id="a4d43-131">문자열 정식 함수</span><span class="sxs-lookup"><span data-stu-id="a4d43-131">String Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|<span data-ttu-id="a4d43-132">문자열 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 정식 함수에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-132">Discusses string [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>|  
+|[<span data-ttu-id="a4d43-133">날짜 및 시간 정식 함수</span><span class="sxs-lookup"><span data-stu-id="a4d43-133">Date and Time Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|<span data-ttu-id="a4d43-134">날짜 및 시간 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 정식 함수에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-134">Discusses date and time [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>|  
+|[<span data-ttu-id="a4d43-135">비트 정식 함수</span><span class="sxs-lookup"><span data-stu-id="a4d43-135">Bitwise Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|<span data-ttu-id="a4d43-136">비트 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 정식 함수에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-136">Discusses bitwise [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>|  
+|[<span data-ttu-id="a4d43-137">기타 정식 함수</span><span class="sxs-lookup"><span data-stu-id="a4d43-137">Other Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/other-canonical-functions.md)|<span data-ttu-id="a4d43-138">비트, 날짜/시간, 문자열, 수식, 집계 등으로 분류되지 않는 함수에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-138">Discusses functions not classified as bitwise, date/time, string, math, or aggregate.</span></span>|  
   
-## 비교 연산자  
- 비교 연산자는 `Byte`, `Int16`, `Int32`, `Int64`, `Double`, `Single`, `Decimal`, `String`, `DateTime`, `Date`, `Time`, `DateTimeOffset` 형식에 대해 정의됩니다.  비교 연산자를 적용하기 전에 피연산자에 대해 암시적 형식 승격이 발생합니다.  비교 연산자는 항상 부울 값을 생성합니다.  피연산자 중 하나 이상이 `null`이면 결과는 `null`입니다.  
+## <a name="comparison-operators"></a><span data-ttu-id="a4d43-139">비교 연산자</span><span class="sxs-lookup"><span data-stu-id="a4d43-139">Comparison Operators</span></span>  
+ <span data-ttu-id="a4d43-140">비교 연산자는 `Byte`, `Int16`, `Int32`, `Int64`, `Double`, `Single`, `Decimal`, `String`, `DateTime`, `Date`, `Time`, `DateTimeOffset` 형식에 대해 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-140">Comparison operators are defined for the following types: `Byte`, `Int16`, `Int32`, `Int64`, `Double`, `Single`, `Decimal`, `String`, `DateTime`, `Date`, `Time`, `DateTimeOffset`.</span></span> <span data-ttu-id="a4d43-141">비교 연산자를 적용하기 전에 피연산자에 대해 암시적 형식 승격이 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-141">Implicit type promotion occurs for the operands before the comparison operator is applied.</span></span> <span data-ttu-id="a4d43-142">비교 연산자는 항상 부울 값을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-142">Comparison operators always yield Boolean values.</span></span> <span data-ttu-id="a4d43-143">피연산자 중 하나 이상이 `null`이면 결과는 `null`입니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-143">When at least one of the operands is `null`, the result is `null`.</span></span>  
   
- `Boolean` 형식과 같이 ID를 가진 모든 개체 형식에 대해 같음 및 다름이 정의됩니다.  ID를 가진 기본 개체가 아닌 개체가 같은 ID를 공유할 경우 서로 같다고 간주됩니다.  다음 표에는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 비교 연산자가 나와 있습니다.  
+ <span data-ttu-id="a4d43-144">`Boolean` 형식과 같이 ID를 가진 모든 개체 형식에 대해 같음 및 다름이 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-144">Equality and inequality are defined for any object type that has identity, such as the `Boolean` type.</span></span> <span data-ttu-id="a4d43-145">ID를 가진 기본 개체가 아닌 개체가 같은 ID를 공유할 경우 서로 같다고 간주됩니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-145">Non-primitive objects with identity are considered equal if they share the same identity.</span></span> <span data-ttu-id="a4d43-146">다음 표에는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 비교 연산자가 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-146">The following table lists the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] comparison operators.</span></span>  
   
-|연산자|설명|  
-|---------|--------|  
-|[\= \(같음\)](../../../../../../docs/framework/data/adonet/ef/language-reference/equals-entity-sql.md)|두 식이 같은지 비교합니다.|  
-|[\> \(보다 큼\)](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-entity-sql.md)|두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값보다 큰지 여부를 결정합니다.|  
-|[\>\= \(크거나 같음\)](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-or-equal-to-entity-sql.md)|두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값보다 크거나 같은지 여부를 결정합니다.|  
-|[IS &#91;NOT&#93; NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|쿼리 식이 null인지 여부를 결정합니다.|  
-|[\< \(보다 작음\)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-entity-sql.md)|두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값보다 작은지 여부를 결정합니다.|  
-|[\<\= \(작거나 같음\)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-or-equal-to-entity-sql.md)|두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값보다 작거나 같은지 여부를 결정합니다.|  
-|[&#91;NOT&#93; BETWEEN](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|식의 결과 값이 지정된 범위에 속하는지 여부를 결정합니다.|  
-|[\!\= \(같지 않음\)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-equal-to-entity-sql.md)|두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값과 다른지 여부를 결정합니다.|  
-|[&#91;NOT&#93; LIKE](../../../../../../docs/framework/data/adonet/ef/language-reference/like-entity-sql.md)|특정 문자열이 지정된 패턴과 일치하는지 여부를 결정합니다.|  
+|<span data-ttu-id="a4d43-147">연산자</span><span class="sxs-lookup"><span data-stu-id="a4d43-147">Operator</span></span>|<span data-ttu-id="a4d43-148">설명</span><span class="sxs-lookup"><span data-stu-id="a4d43-148">Description</span></span>|  
+|--------------|-----------------|  
+|[<span data-ttu-id="a4d43-149">= (같음)</span><span class="sxs-lookup"><span data-stu-id="a4d43-149">= (Equals)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/equals-entity-sql.md)|<span data-ttu-id="a4d43-150">두 식이 같은지 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-150">Compares the equality of two expressions.</span></span>|  
+|[<span data-ttu-id="a4d43-151">> (보다 큼)</span><span class="sxs-lookup"><span data-stu-id="a4d43-151">> (Greater Than)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-entity-sql.md)|<span data-ttu-id="a4d43-152">두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값보다 큰지 여부를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-152">Compares two expressions to determine whether the left expression has a value greater than the right expression.</span></span>|  
+|[<span data-ttu-id="a4d43-153">> = (크거나 같음)</span><span class="sxs-lookup"><span data-stu-id="a4d43-153">>= (Greater Than or Equal To)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-or-equal-to-entity-sql.md)|<span data-ttu-id="a4d43-154">두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값보다 크거나 같은지 여부를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-154">Compares two expressions to determine whether the left expression has a value greater than or equal to the right expression.</span></span>|  
+|[<span data-ttu-id="a4d43-155">&#91; 하지 &#93; NULL</span><span class="sxs-lookup"><span data-stu-id="a4d43-155">IS &#91;NOT&#93; NULL</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|<span data-ttu-id="a4d43-156">쿼리 식이 null인지 여부를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-156">Determines if a query expression is null.</span></span>|  
+|[<span data-ttu-id="a4d43-157">< (보다 작음)</span><span class="sxs-lookup"><span data-stu-id="a4d43-157">< (Less Than)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-entity-sql.md)|<span data-ttu-id="a4d43-158">두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값보다 작은지 여부를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-158">Compares two expressions to determine whether the left expression has a value less than the right expression.</span></span>|  
+|[<span data-ttu-id="a4d43-159">< = (작거나 같음)</span><span class="sxs-lookup"><span data-stu-id="a4d43-159"><= (Less Than or Equal To)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-or-equal-to-entity-sql.md)|<span data-ttu-id="a4d43-160">두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값보다 작거나 같은지 여부를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-160">Compares two expressions to determine whether the left expression has a value less than or equal to the right expression.</span></span>|  
+|[<span data-ttu-id="a4d43-161">&#91; 하지 &#93; 사이</span><span class="sxs-lookup"><span data-stu-id="a4d43-161">&#91;NOT&#93; BETWEEN</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|<span data-ttu-id="a4d43-162">식의 결과 값이 지정된 범위에 속하는지 여부를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-162">Determines whether an expression results in a value in a specified range.</span></span>|  
+|[! = (같지 않음)]<span data-ttu-id="a4d43-163">(../../../../../../docs/framework/data/adonet/ef/language-reference/not-equal-to-entity-sql.md)</span><span class="sxs-lookup"><span data-stu-id="a4d43-163">(../../../../../../docs/framework/data/adonet/ef/language-reference/not-equal-to-entity-sql.md)</span></span>|<span data-ttu-id="a4d43-164">두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값과 다른지 여부를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-164">Compares two expressions to determine whether the left expression is not equal to the right expression.</span></span>|  
+|[<span data-ttu-id="a4d43-165">&#91; 하지 &#93; 와 같은</span><span class="sxs-lookup"><span data-stu-id="a4d43-165">&#91;NOT&#93; LIKE</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/like-entity-sql.md)|<span data-ttu-id="a4d43-166">특정 문자열이 지정된 패턴과 일치하는지 여부를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-166">Determines whether a specific character string matches a specified pattern.</span></span>|  
   
-## 논리 및 Case 식 연산자  
- 논리 연산자는 조건의 진위 여부를 테스트합니다.  CASE 식은 부울 식 집합을 계산하여 결과를 결정합니다.  다음 표에서는 논리 및 CASE 식 연산자를 보여 줍니다.  
+## <a name="logical-and-case-expression-operators"></a><span data-ttu-id="a4d43-167">논리 및 Case 식 연산자</span><span class="sxs-lookup"><span data-stu-id="a4d43-167">Logical and Case Expression Operators</span></span>  
+ <span data-ttu-id="a4d43-168">논리 연산자는 조건의 진위 여부를 테스트합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-168">Logical operators test for the truth of a condition.</span></span> <span data-ttu-id="a4d43-169">CASE 식은 부울 식 집합을 계산하여 결과를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-169">The CASE expression evaluates a set of Boolean expressions to determine the result.</span></span> <span data-ttu-id="a4d43-170">다음 표에서는 논리 및 CASE 식 연산자를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-170">The following table lists the logical and CASE expression operators.</span></span>  
   
-|연산자|설명|  
-|---------|--------|  
-|[&& \(논리적 AND\)](../../../../../../docs/framework/data/adonet/ef/language-reference/and-entity-sql.md)|논리적 AND|  
-|[\!  \(논리적 NOT\)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)|논리적 NOT|  
-|[&#124;&#124;\(논리적 OR\)](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|논리적 OR|  
-|[CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)|부울 식 집합을 계산하여 결과를 확인합니다.|  
-|[THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|[WHEN](http://msdn.microsoft.com/ko-kr/6233fe9f-00b0-460e-8372-64e138a5f998) 절이 true로 평가될 때의 결과입니다.|  
+|<span data-ttu-id="a4d43-171">연산자</span><span class="sxs-lookup"><span data-stu-id="a4d43-171">Operator</span></span>|<span data-ttu-id="a4d43-172">설명</span><span class="sxs-lookup"><span data-stu-id="a4d43-172">Description</span></span>|  
+|--------------|-----------------|  
+|[<span data-ttu-id="a4d43-173">& & (논리적 AND)</span><span class="sxs-lookup"><span data-stu-id="a4d43-173">&& (Logical AND)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/and-entity-sql.md)|<span data-ttu-id="a4d43-174">논리적 AND</span><span class="sxs-lookup"><span data-stu-id="a4d43-174">Logical AND.</span></span>|  
+|[! (논리적 NOT)]<span data-ttu-id="a4d43-175">(../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)</span><span class="sxs-lookup"><span data-stu-id="a4d43-175">(../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)</span></span>|<span data-ttu-id="a4d43-176">논리적 NOT</span><span class="sxs-lookup"><span data-stu-id="a4d43-176">Logical NOT.</span></span>|  
+|[<span data-ttu-id="a4d43-177">&#124; &#124; (논리적 OR)</span><span class="sxs-lookup"><span data-stu-id="a4d43-177">&#124;&#124; (Logical OR)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|<span data-ttu-id="a4d43-178">논리적 OR</span><span class="sxs-lookup"><span data-stu-id="a4d43-178">Logical OR.</span></span>|  
+|[<span data-ttu-id="a4d43-179">대/소문자</span><span class="sxs-lookup"><span data-stu-id="a4d43-179">CASE</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)|<span data-ttu-id="a4d43-180">부울 식 집합을 계산하여 결과를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-180">Evaluates a set of Boolean expressions to determine the result.</span></span>|  
+|[<span data-ttu-id="a4d43-181">그런 다음</span><span class="sxs-lookup"><span data-stu-id="a4d43-181">THEN</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|<span data-ttu-id="a4d43-182">결과 [때](http://msdn.microsoft.com/en-us/6233fe9f-00b0-460e-8372-64e138a5f998) true로 평가 될 때 절.</span><span class="sxs-lookup"><span data-stu-id="a4d43-182">The result of a [WHEN](http://msdn.microsoft.com/en-us/6233fe9f-00b0-460e-8372-64e138a5f998) clause when it evaluates to true.</span></span>|  
   
-## 쿼리 연산자  
- 쿼리 연산자는 엔터티 데이터를 반환하는 쿼리 식을 정의하는 데 사용됩니다.  다음 표에서는 쿼리 연산자를 보여 줍니다.  
+## <a name="query-operators"></a><span data-ttu-id="a4d43-183">쿼리 연산자</span><span class="sxs-lookup"><span data-stu-id="a4d43-183">Query Operators</span></span>  
+ <span data-ttu-id="a4d43-184">쿼리 연산자는 엔터티 데이터를 반환하는 쿼리 식을 정의하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-184">Query operators are used to define query expressions that return entity data.</span></span> <span data-ttu-id="a4d43-185">다음 표에서는 쿼리 연산자를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-185">The following table lists query operators.</span></span>  
   
-|연산자|기능|  
-|---------|--------|  
-|[FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md)|[SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) 문에서 사용되는 컬렉션을 지정합니다.|  
-|[GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md)|쿼리 식\([SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)\)을 통해 반환되는 개체가 배치될 그룹을 지정합니다.|  
-|[GroupPartition](../../../../../../docs/framework/data/adonet/ef/language-reference/grouppartition-entity-sql.md)|집계가 관련되는 그룹 파티션에서 예측된 인수 값의 컬렉션을 반환합니다.|  
-|[HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md)|그룹이나 집계에 대한 검색 조건을 지정합니다.|  
-|[LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)|수행된 물리적 페이징에 대해 [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) 절과 함께 사용됩니다.|  
-|[ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)|[SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) 문에서 반환되는 개체에 사용되는 정렬 순서를 지정합니다.|  
-|[SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)|쿼리 결과로 반환되는 프로젝션의 요소를 지정합니다.|  
-|[SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)|수행된 물리적 페이징에 대해 [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) 절과 함께 사용됩니다.|  
-|[TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)|쿼리 결과에서 첫 번째 행 집합만 반환됨을 지정합니다.|  
-|[WHERE](../../../../../../docs/framework/data/adonet/ef/language-reference/where-entity-sql.md)|쿼리에서 반환된 데이터를 조건에 따라 필터링합니다.|  
+|<span data-ttu-id="a4d43-186">연산자</span><span class="sxs-lookup"><span data-stu-id="a4d43-186">Operator</span></span>|<span data-ttu-id="a4d43-187">기능</span><span class="sxs-lookup"><span data-stu-id="a4d43-187">Use</span></span>|  
+|--------------|---------|  
+|[<span data-ttu-id="a4d43-188">보낸 사람</span><span class="sxs-lookup"><span data-stu-id="a4d43-188">FROM</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md)|<span data-ttu-id="a4d43-189">사용 되는 컬렉션을 지정 [선택](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) 문.</span><span class="sxs-lookup"><span data-stu-id="a4d43-189">Specifies the collection that is used in [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) statements.</span></span>|  
+|[<span data-ttu-id="a4d43-190">기준으로 그룹화</span><span class="sxs-lookup"><span data-stu-id="a4d43-190">GROUP BY</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md)|<span data-ttu-id="a4d43-191">쿼리에 의해 반환 된 개체를 그룹 지정 ([선택](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) 배치 하는 식입니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-191">Specifies groups into which objects that are returned by a query ([SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) expression are to be placed.</span></span>|  
+|[<span data-ttu-id="a4d43-192">GroupPartition</span><span class="sxs-lookup"><span data-stu-id="a4d43-192">GroupPartition</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/grouppartition-entity-sql.md)|<span data-ttu-id="a4d43-193">집계가 관련되는 그룹 파티션에서 예측된 인수 값의 컬렉션을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-193">Returns a collection of argument values, projected off the group partition to which the aggregate is related.</span></span>|  
+|[<span data-ttu-id="a4d43-194">필요</span><span class="sxs-lookup"><span data-stu-id="a4d43-194">HAVING</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md)|<span data-ttu-id="a4d43-195">그룹이나 집계에 대한 검색 조건을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-195">Specifies a search condition for a group or an aggregate.</span></span>|  
+|[<span data-ttu-id="a4d43-196">제한</span><span class="sxs-lookup"><span data-stu-id="a4d43-196">LIMIT</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)|<span data-ttu-id="a4d43-197">함께 사용 된 [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) 수행된 된 물리적 페이징 절.</span><span class="sxs-lookup"><span data-stu-id="a4d43-197">Used with the [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) clause to performed physical paging.</span></span>|  
+|[<span data-ttu-id="a4d43-198">ORDER BY</span><span class="sxs-lookup"><span data-stu-id="a4d43-198">ORDER BY</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)|<span data-ttu-id="a4d43-199">반환 되는 개체에 사용 되는 정렬 순서를 지정 된 [선택](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) 문.</span><span class="sxs-lookup"><span data-stu-id="a4d43-199">Specifies the sort order that is used on objects returned in a [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) statement.</span></span>|  
+|[<span data-ttu-id="a4d43-200">선택</span><span class="sxs-lookup"><span data-stu-id="a4d43-200">SELECT</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)|<span data-ttu-id="a4d43-201">쿼리 결과로 반환되는 프로젝션의 요소를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-201">Specifies the elements in the projection that are returned by a query.</span></span>|  
+|[<span data-ttu-id="a4d43-202">건너뛰기</span><span class="sxs-lookup"><span data-stu-id="a4d43-202">SKIP</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)|<span data-ttu-id="a4d43-203">함께 사용 된 [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) 수행된 된 물리적 페이징 절.</span><span class="sxs-lookup"><span data-stu-id="a4d43-203">Used with the [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) clause to performed physical paging.</span></span>|  
+|[<span data-ttu-id="a4d43-204">맨 위로</span><span class="sxs-lookup"><span data-stu-id="a4d43-204">TOP</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)|<span data-ttu-id="a4d43-205">쿼리 결과에서 첫 번째 행 집합만 반환됨을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-205">Specifies that only the first set of rows will be returned from the query result.</span></span>|  
+|[<span data-ttu-id="a4d43-206">여기서</span><span class="sxs-lookup"><span data-stu-id="a4d43-206">WHERE</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/where-entity-sql.md)|<span data-ttu-id="a4d43-207">쿼리에서 반환된 데이터를 조건에 따라 필터링합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-207">Conditionally filters data that is returned by a query.</span></span>|  
   
-## 참조 연산자  
- 참조는 특정 엔터티 집합 내의 특정 엔터티를 가리키는 논리 포인터\(외래 키\)입니다.  [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 참조를 통한 생성, 해체 및 탐색에 사용되는 다음 연산자를 지원합니다.  
+## <a name="reference-operators"></a><span data-ttu-id="a4d43-208">참조 연산자</span><span class="sxs-lookup"><span data-stu-id="a4d43-208">Reference Operators</span></span>  
+ <span data-ttu-id="a4d43-209">참조는 특정 엔터티 집합 내의 특정 엔터티를 가리키는 논리 포인터(외래 키)입니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-209">A reference is a logical pointer (foreign key) to a specific entity in a specific entity set.</span></span> [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="a4d43-210">다음 연산자를 생성, 해체 및 참조를 통해 탐색을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-210"> supports the following operators to construct, deconstruct, and navigate through references.</span></span>  
   
-|연산자|기능|  
-|---------|--------|  
-|[CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)|엔터티 집합의 엔터티에 대한 참조를 만듭니다.|  
-|[DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)|참조 값을 역참조하고 이 역참조의 결과를 생성합니다.|  
-|[KEY](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)|참조 또는 엔터티 식의 키를 추출합니다.|  
-|[NAVIGATE](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md)|엔터티 형식 간의 관계를 탐색할 수 있습니다.|  
-|[REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)|엔터티 인스턴스에 대한 참조를 반환합니다.|  
+|<span data-ttu-id="a4d43-211">연산자</span><span class="sxs-lookup"><span data-stu-id="a4d43-211">Operator</span></span>|<span data-ttu-id="a4d43-212">기능</span><span class="sxs-lookup"><span data-stu-id="a4d43-212">Use</span></span>|  
+|--------------|---------|  
+|[<span data-ttu-id="a4d43-213">CREATEREF</span><span class="sxs-lookup"><span data-stu-id="a4d43-213">CREATEREF</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)|<span data-ttu-id="a4d43-214">엔터티 집합의 엔터티에 대한 참조를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-214">Creates references to an entity in an entity set.</span></span>|  
+|[<span data-ttu-id="a4d43-215">DEREF</span><span class="sxs-lookup"><span data-stu-id="a4d43-215">DEREF</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)|<span data-ttu-id="a4d43-216">참조 값을 역참조하고 이 역참조의 결과를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-216">Dereferences a reference value and produces the result of that dereference.</span></span>|  
+|[<span data-ttu-id="a4d43-217">키</span><span class="sxs-lookup"><span data-stu-id="a4d43-217">KEY</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)|<span data-ttu-id="a4d43-218">참조 또는 엔터티 식의 키를 추출합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-218">Extracts the key of a reference or of an entity expression.</span></span>|  
+|[<span data-ttu-id="a4d43-219">이동</span><span class="sxs-lookup"><span data-stu-id="a4d43-219">NAVIGATE</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md)|<span data-ttu-id="a4d43-220">엔터티 형식 간의 관계를 탐색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-220">Allows you to navigate over the relationship from one entity type to another</span></span>|  
+|[<span data-ttu-id="a4d43-221">REF</span><span class="sxs-lookup"><span data-stu-id="a4d43-221">REF</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)|<span data-ttu-id="a4d43-222">엔터티 인스턴스에 대한 참조를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-222">Returns a reference to an entity instance.</span></span>|  
   
-## 집합 연산자  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 여러 가지 강력한 집합 연산을 제공합니다.  여기에는 UNION, INTERSECT, EXCEPT, EXISTS 등과 같은 Transact\-SQL 연산자와 유사한 집합 연산자가 포함됩니다.  [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 중복 항목 제거\(SET\), 멤버 자격 테스트\(IN\), 조인\(JOIN\) 등을 위한 연산자도 지원합니다.  다음 표에서는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 집합 연산자를 보여 줍니다.  
+## <a name="set-operators"></a><span data-ttu-id="a4d43-223">집합 연산자</span><span class="sxs-lookup"><span data-stu-id="a4d43-223">Set Operators</span></span>  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="a4d43-224">에서는 여러 가지 강력한 집합 연산을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-224"> provides various powerful set operations.</span></span> <span data-ttu-id="a4d43-225">집합 연산자 UNION, INTERSECT, EXCEPT, 같은 TRANSACT-SQL 연산자와 유사한 것 여기에 및 EXISTS입니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-225">This includes set operators similar to Transact-SQL  operators such as UNION, INTERSECT, EXCEPT, and EXISTS.</span></span> [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="a4d43-226">에서는 중복 항목 제거(SET), 멤버 자격 테스트(IN), 조인(JOIN) 등을 위한 연산자도 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-226"> also supports operators for duplicate elimination (SET), membership testing (IN), and joins (JOIN).</span></span> <span data-ttu-id="a4d43-227">다음 표에서는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 집합 연산자를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-227">The following table lists the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] set operators.</span></span>  
   
-|연산자|기능|  
-|---------|--------|  
-|[ANYELEMENT](../../../../../../docs/framework/data/adonet/ef/language-reference/anyelement-entity-sql.md)|다중값 컬렉션에서 요소를 추출합니다.|  
-|[EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)|EXCEPT 피연산자 오른쪽 쿼리 식에서 반환되지 않은 모든 고유한 값 컬렉션을 EXCEPT 피연산자 왼쪽에 있는 쿼리 식에서 반환합니다.|  
-|[&#91;NOT&#93; EXISTS](../../../../../../docs/framework/data/adonet/ef/language-reference/exists-entity-sql.md)|컬렉션이 비어 있는지 확인합니다.|  
-|[FLATTEN](../../../../../../docs/framework/data/adonet/ef/language-reference/flatten-entity-sql.md)|여러 컬렉션의 컬렉션을 하나의 결합된 컬렉션으로 변환합니다.|  
-|[&#91;NOT&#93; IN](../../../../../../docs/framework/data/adonet/ef/language-reference/in-entity-sql.md)|컬렉션에 일치하는 값이 있는지 여부를 확인합니다.|  
-|[INTERSECT](../../../../../../docs/framework/data/adonet/ef/language-reference/intersect-entity-sql.md)|INTERSECT 피연산자의 왼쪽과 오른쪽에 있는 두 쿼리 식에서 반환된 고유한 값의 컬렉션을 반환합니다.|  
-|[OVERLAPS](../../../../../../docs/framework/data/adonet/ef/language-reference/overlaps-entity-sql.md)|두 컬렉션에 공통 요소가 있는지 여부를 확인합니다.|  
-|[SET](../../../../../../docs/framework/data/adonet/ef/language-reference/set-entity-sql.md)|중복 요소가 모두 제거된 새 컬렉션을 생성하여 개체 컬렉션을 집합으로 변환하는 데 사용됩니다.|  
-|[UNION](../../../../../../docs/framework/data/adonet/ef/language-reference/union-entity-sql.md)|두 개 이상의 쿼리 결과를 단일 컬렉션으로 결합합니다.|  
+|<span data-ttu-id="a4d43-228">연산자</span><span class="sxs-lookup"><span data-stu-id="a4d43-228">Operator</span></span>|<span data-ttu-id="a4d43-229">기능</span><span class="sxs-lookup"><span data-stu-id="a4d43-229">Use</span></span>|  
+|--------------|---------|  
+|[<span data-ttu-id="a4d43-230">ANYELEMENT</span><span class="sxs-lookup"><span data-stu-id="a4d43-230">ANYELEMENT</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/anyelement-entity-sql.md)|<span data-ttu-id="a4d43-231">다중값 컬렉션에서 요소를 추출합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-231">Extracts an element from a multivalued collection.</span></span>|  
+|[<span data-ttu-id="a4d43-232">제외 하</span><span class="sxs-lookup"><span data-stu-id="a4d43-232">EXCEPT</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)|<span data-ttu-id="a4d43-233">EXCEPT 피연산자 오른쪽 쿼리 식에서 반환되지 않은 모든 고유한 값 컬렉션을 EXCEPT 피연산자 왼쪽에 있는 쿼리 식에서 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-233">Returns a collection of any distinct values from the query expression to the left of the EXCEPT operand that are not also returned from the query expression to the right of the EXCEPT operand.</span></span>|  
+|[<span data-ttu-id="a4d43-234">&#91; 하지 &#93; 존재</span><span class="sxs-lookup"><span data-stu-id="a4d43-234">&#91;NOT&#93; EXISTS</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/exists-entity-sql.md)|<span data-ttu-id="a4d43-235">컬렉션이 비어 있는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-235">Determines if a collection is empty.</span></span>|  
+|[<span data-ttu-id="a4d43-236">병합</span><span class="sxs-lookup"><span data-stu-id="a4d43-236">FLATTEN</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/flatten-entity-sql.md)|<span data-ttu-id="a4d43-237">여러 컬렉션의 컬렉션을 하나의 결합된 컬렉션으로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-237">Converts a collection of collections into a flattened collection.</span></span>|  
+|[<span data-ttu-id="a4d43-238">&#91; 하지 &#93; IN</span><span class="sxs-lookup"><span data-stu-id="a4d43-238">&#91;NOT&#93; IN</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/in-entity-sql.md)|<span data-ttu-id="a4d43-239">컬렉션에 일치하는 값이 있는지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-239">Determines whether a value matches any value in a collection.</span></span>|  
+|[<span data-ttu-id="a4d43-240">교차</span><span class="sxs-lookup"><span data-stu-id="a4d43-240">INTERSECT</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/intersect-entity-sql.md)|<span data-ttu-id="a4d43-241">INTERSECT 피연산자의 왼쪽과 오른쪽에 있는 두 쿼리 식에서 반환된 고유한 값의 컬렉션을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-241">Returns a collection of any distinct values that are returned by both the query expressions on the left and right sides of the INTERSECT operand.</span></span>|  
+|[<span data-ttu-id="a4d43-242">겹치는 항목이 있습니다</span><span class="sxs-lookup"><span data-stu-id="a4d43-242">OVERLAPS</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/overlaps-entity-sql.md)|<span data-ttu-id="a4d43-243">두 컬렉션에 공통 요소가 있는지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-243">Determines whether two collections have common elements.</span></span>|  
+|[<span data-ttu-id="a4d43-244">설정</span><span class="sxs-lookup"><span data-stu-id="a4d43-244">SET</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/set-entity-sql.md)|<span data-ttu-id="a4d43-245">중복 요소가 모두 제거된 새 컬렉션을 생성하여 개체 컬렉션을 집합으로 변환하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-245">Used to convert a collection of objects into a set by yielding a new collection with all duplicate elements removed.</span></span>|  
+|[<span data-ttu-id="a4d43-246">UNION</span><span class="sxs-lookup"><span data-stu-id="a4d43-246">UNION</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/union-entity-sql.md)|<span data-ttu-id="a4d43-247">두 개 이상의 쿼리 결과를 단일 컬렉션으로 결합합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-247">Combines the results of two or more queries into a single collection.</span></span>|  
   
-## 형식 연산자  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 해당 형식의 식\(값\)을 생성하고, 쿼리하고, 조작할 수 있는 연산이 제공됩니다.  다음 표에서는 형식에 사용되는 연산자를 보여 줍니다.  
+## <a name="type-operators"></a><span data-ttu-id="a4d43-248">형식 연산자</span><span class="sxs-lookup"><span data-stu-id="a4d43-248">Type Operators</span></span>  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="a4d43-249">생성, 쿼리 및 조작 하는 식 (값)의 형식을 허용 하는 작업을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-249"> provides operations that allow the type of an expression (value) to be constructed, queried, and manipulated.</span></span> <span data-ttu-id="a4d43-250">다음 표에서는 형식에 사용되는 연산자를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-250">The following table lists operators that are used to work with types.</span></span>  
   
-|연산자|기능|  
-|---------|--------|  
-|[CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)|데이터 형식의 식을 다른 형식의 식으로 변환합니다.|  
-|[COLLECTION](../../../../../../docs/framework/data/adonet/ef/language-reference/collection-entity-sql.md)|[FUNCTION](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) 연산에 사용되어 엔터티 형식 또는 복합 형식의 컬렉션을 선언합니다.|  
-|[IS &#91;NOT&#93; OF](../../../../../../docs/framework/data/adonet/ef/language-reference/isof-entity-sql.md)|식의 형식이 지정된 형식 또는 그 하위 형식인지 여부를 확인합니다.|  
-|[OFTYPE](../../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md)|쿼리 식에서 특정 형식을 가진 개체 컬렉션을 반환합니다.|  
-|[명명된 형식 생성자](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)|엔터티 형식이나 복합 형식의 인스턴스를 만드는 데 사용됩니다.|  
-|[MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md)|값 목록에서 multiset 인스턴스를 만듭니다.|  
-|[ROW](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md)|값 하나 이상을 기반으로 하여 구조적으로 형식화된 익명 레코드를 생성합니다.|  
-|[TREAT](../../../../../../docs/framework/data/adonet/ef/language-reference/treat-entity-sql.md)|특정 기본 형식의 개체를 지정된 파생 형식의 개체로 처리합니다.|  
+|<span data-ttu-id="a4d43-251">연산자</span><span class="sxs-lookup"><span data-stu-id="a4d43-251">Operator</span></span>|<span data-ttu-id="a4d43-252">기능</span><span class="sxs-lookup"><span data-stu-id="a4d43-252">Use</span></span>|  
+|--------------|---------|  
+|[<span data-ttu-id="a4d43-253">캐스트</span><span class="sxs-lookup"><span data-stu-id="a4d43-253">CAST</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)|<span data-ttu-id="a4d43-254">데이터 형식의 식을 다른 형식의 식으로 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-254">Converts an expression of one data type to another.</span></span>|  
+|[<span data-ttu-id="a4d43-255">컬렉션</span><span class="sxs-lookup"><span data-stu-id="a4d43-255">COLLECTION</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/collection-entity-sql.md)|<span data-ttu-id="a4d43-256">에 사용 되는 [함수](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) 작업의 엔터티 형식 또는 복합 형식의 컬렉션을 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-256">Used in a [FUNCTION](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) operation to declare a collection of entity types or complex types.</span></span>|  
+|[<span data-ttu-id="a4d43-257">&#91; 하지 &#93; 의</span><span class="sxs-lookup"><span data-stu-id="a4d43-257">IS &#91;NOT&#93; OF</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/isof-entity-sql.md)|<span data-ttu-id="a4d43-258">식의 형식이 지정된 형식 또는 그 하위 형식인지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-258">Determines whether the type of an expression is of the specified type or one of its subtypes.</span></span>|  
+|[<span data-ttu-id="a4d43-259">OFTYPE</span><span class="sxs-lookup"><span data-stu-id="a4d43-259">OFTYPE</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md)|<span data-ttu-id="a4d43-260">쿼리 식에서 특정 형식을 가진 개체 컬렉션을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-260">Returns a collection of objects from a query expression that is of a specific type.</span></span>|  
+|[<span data-ttu-id="a4d43-261">명명 된 형식 생성자</span><span class="sxs-lookup"><span data-stu-id="a4d43-261">Named Type Constructor</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)|<span data-ttu-id="a4d43-262">엔터티 형식이나 복합 형식의 인스턴스를 만드는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-262">Used to create instances of entity types or complex types.</span></span>|  
+|[<span data-ttu-id="a4d43-263">MULTISET</span><span class="sxs-lookup"><span data-stu-id="a4d43-263">MULTISET</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md)|<span data-ttu-id="a4d43-264">값 목록에서 multiset 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-264">Creates an instance of a multiset from a list of values.</span></span>|  
+|[<span data-ttu-id="a4d43-265">행</span><span class="sxs-lookup"><span data-stu-id="a4d43-265">ROW</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md)|<span data-ttu-id="a4d43-266">값 하나 이상을 기반으로 하여 구조적으로 형식화된 익명 레코드를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-266">Constructs anonymous, structurally typed records from one or more values.</span></span>|  
+|[<span data-ttu-id="a4d43-267">처리</span><span class="sxs-lookup"><span data-stu-id="a4d43-267">TREAT</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/treat-entity-sql.md)|<span data-ttu-id="a4d43-268">특정 기본 형식의 개체를 지정된 파생 형식의 개체로 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-268">Treats an object of a particular base type as an object of the specified derived type.</span></span>|  
   
-## 기타 연산자  
- 다음 표에서는 기타 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 연산자를 보여 줍니다.  
+## <a name="other-operators"></a><span data-ttu-id="a4d43-269">기타 연산자</span><span class="sxs-lookup"><span data-stu-id="a4d43-269">Other Operators</span></span>  
+ <span data-ttu-id="a4d43-270">다음 표에서 다른 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-270">The following table lists other [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operators.</span></span>  
   
-|연산자|기능|  
-|---------|--------|  
-|[\+ \(문자열 연결\)](../../../../../../docs/framework/data/adonet/ef/language-reference/string-concatenation-entity-sql.md)|[!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서 문자열을 연결하는 데 사용됩니다.|  
-|[.  \(멤버 액세스\)](../../../../../../docs/framework/data/adonet/ef/language-reference/member-access-entity-sql.md)|구조 개념적 모델 형식 인스턴스의 속성 또는 필드 값에 액세스하는 데 사용됩니다.|  
-|[\-\- \(주석\)](../../../../../../docs/framework/data/adonet/ef/language-reference/comment-entity-sql.md)|[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 주석을 포함합니다.|  
-|[함수](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md)|Entity SQL 쿼리에서 실행할 수 있는 인라인 함수를 정의합니다.|  
+|<span data-ttu-id="a4d43-271">연산자</span><span class="sxs-lookup"><span data-stu-id="a4d43-271">Operator</span></span>|<span data-ttu-id="a4d43-272">기능</span><span class="sxs-lookup"><span data-stu-id="a4d43-272">Use</span></span>|  
+|--------------|---------|  
+|[<span data-ttu-id="a4d43-273">+ (문자열 연결)</span><span class="sxs-lookup"><span data-stu-id="a4d43-273">+ (String Concatenation)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/string-concatenation-entity-sql.md)|<span data-ttu-id="a4d43-274">[!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서 문자열을 연결하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-274">Used to concatenate strings in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].</span></span>|  
+|[<span data-ttu-id="a4d43-275">. (멤버 액세스)</span><span class="sxs-lookup"><span data-stu-id="a4d43-275">. (Member Access)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/member-access-entity-sql.md)|<span data-ttu-id="a4d43-276">구조 개념적 모델 형식 인스턴스의 속성 또는 필드 값에 액세스하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-276">Used to access the value of a property or field of an instance of structural conceptual model type.</span></span>|  
+|[<span data-ttu-id="a4d43-277">-(주석)</span><span class="sxs-lookup"><span data-stu-id="a4d43-277">-- (Comment)</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/comment-entity-sql.md)|<span data-ttu-id="a4d43-278">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 주석을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-278">Include [!INCLUDE[esql](../../../../../../includes/esql-md.md)] comments.</span></span>|  
+|[<span data-ttu-id="a4d43-279">함수</span><span class="sxs-lookup"><span data-stu-id="a4d43-279">FUNCTION</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md)|<span data-ttu-id="a4d43-280">Entity SQL 쿼리에서 실행할 수 있는 인라인 함수를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="a4d43-280">Defines an inline function that can be executed in an Entity SQL query.</span></span>|  
   
-## 참고 항목  
- [@FSHO2@Entity SQL 언어](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+## <a name="see-also"></a><span data-ttu-id="a4d43-281">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a4d43-281">See Also</span></span>  
+ [<span data-ttu-id="a4d43-282">Entity SQL 언어</span><span class="sxs-lookup"><span data-stu-id="a4d43-282">Entity SQL Language</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)

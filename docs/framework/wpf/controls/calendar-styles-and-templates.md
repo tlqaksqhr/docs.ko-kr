@@ -1,148 +1,146 @@
 ---
-title: "Calendar 스타일 및 템플릿 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "달력[WPF], 스타일 및 템플릿"
-  - "ControlTemplate[WPF], Calendar"
-  - "요소[WPF], Calendar"
-  - "상태[WPF], Calendar"
-  - "스타일[WPF], Calendar"
-  - "템플릿[WPF], Calendar"
+title: "Calendar 스타일 및 템플릿"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- styles [WPF], Calendar
+- templates [WPF], Calendar
+- states [WPF], Calendar
+- parts [WPF], Calendar
+- Calendar [WPF], styles and templates
+- ControlTemplate [WPF], Calendar
 ms.assetid: f4fcf046-7a8f-41b8-b5a8-534b64e0345c
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8b27049c63faa9bf84dc5febd210a29a530f175a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Calendar 스타일 및 템플릿
-이 항목에서는 <xref:System.Windows.Controls.Calendar> 컨트롤의 스타일 및 템플릿에 대해 설명합니다.  기본 <xref:System.Windows.Controls.ControlTemplate>을 수정하여 컨트롤에 고유한 모양을 지정할 수 있습니다.  자세한 내용은 [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)을 참조하십시오.  
+# <a name="calendar-styles-and-templates"></a><span data-ttu-id="f9d81-102">Calendar 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="f9d81-102">Calendar Styles and Templates</span></span>
+<span data-ttu-id="f9d81-103">이 항목에서는 스타일 및 서식 파일에 대 한 설명의 <xref:System.Windows.Controls.Calendar> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-103">This topic describes the styles and templates for the <xref:System.Windows.Controls.Calendar> control.</span></span> <span data-ttu-id="f9d81-104">기본값을 수정할 수 <xref:System.Windows.Controls.ControlTemplate> 고유한 모양을 제어할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-104">You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance.</span></span> <span data-ttu-id="f9d81-105">자세한 내용은 [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="f9d81-105">For more information, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span></span>  
   
-## Calendar 요소  
- 다음 표에서는 <xref:System.Windows.Controls.Calendar> 컨트롤의 명명된 요소를 보여 줍니다.  
+## <a name="calendar-parts"></a><span data-ttu-id="f9d81-106">일정 부분</span><span class="sxs-lookup"><span data-stu-id="f9d81-106">Calendar Parts</span></span>  
+ <span data-ttu-id="f9d81-107">다음 표에서 명명된 된 요소를 나열는 <xref:System.Windows.Controls.Calendar> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-107">The following table lists the named parts for the <xref:System.Windows.Controls.Calendar> control.</span></span>  
   
-||||  
+|<span data-ttu-id="f9d81-108">파트</span><span class="sxs-lookup"><span data-stu-id="f9d81-108">Part</span></span>|<span data-ttu-id="f9d81-109">형식</span><span class="sxs-lookup"><span data-stu-id="f9d81-109">Type</span></span>|<span data-ttu-id="f9d81-110">설명</span><span class="sxs-lookup"><span data-stu-id="f9d81-110">Description</span></span>|  
 |-|-|-|  
-|파트|형식|설명|  
-|PART\_CalendarItem|<xref:System.Windows.Controls.Primitives.CalendarItem>|<xref:System.Windows.Controls.Calendar>에 현재 표시된 월 또는 연도입니다.|  
-|PART\_Root|<xref:System.Windows.Controls.Panel>|<xref:System.Windows.Controls.Primitives.CalendarItem>이 들어 있는 패널입니다.|  
+|<span data-ttu-id="f9d81-111">PART_CalendarItem</span><span class="sxs-lookup"><span data-stu-id="f9d81-111">PART_CalendarItem</span></span>|<xref:System.Windows.Controls.Primitives.CalendarItem>|<span data-ttu-id="f9d81-112">현재 표시 된 월 또는 연도 <xref:System.Windows.Controls.Calendar>합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-112">The currently displayed month or year on the <xref:System.Windows.Controls.Calendar>.</span></span>|  
+|<span data-ttu-id="f9d81-113">PART_Root</span><span class="sxs-lookup"><span data-stu-id="f9d81-113">PART_Root</span></span>|<xref:System.Windows.Controls.Panel>|<span data-ttu-id="f9d81-114">포함 된 패널의 <xref:System.Windows.Controls.Primitives.CalendarItem>합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-114">The panel that contains the <xref:System.Windows.Controls.Primitives.CalendarItem>.</span></span>|  
   
-## Calendar 상태  
- 다음 표에서는 <xref:System.Windows.Controls.Calendar> 컨트롤의 시각적 상태를 보여 줍니다.  
+## <a name="calendar-states"></a><span data-ttu-id="f9d81-115">일정 상태</span><span class="sxs-lookup"><span data-stu-id="f9d81-115">Calendar States</span></span>  
+ <span data-ttu-id="f9d81-116">다음 표에서 시각적 상태를 나열는 <xref:System.Windows.Controls.Calendar> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-116">The following table lists the visual states for the <xref:System.Windows.Controls.Calendar> control.</span></span>  
   
-|VisualState 이름|VisualStateGroup 이름|설명|  
-|--------------------|-------------------------|--------|  
-|Valid|ValidationStates|이 컨트롤은 <xref:System.Windows.Controls.Validation> 클래스를 사용하며 연결된 속성 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>는 `false`입니다.|  
-|InvalidFocused|ValidationStates|컨트롤에 포커스가 있는 경우 연결된 속성 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>는 `true`입니다.|  
-|InvalidUnfocused|ValidationStates|컨트롤에 포커스가 없는 경우 연결된 속성 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>는 `true`입니다.|  
+|<span data-ttu-id="f9d81-117">VisualState 이름</span><span class="sxs-lookup"><span data-stu-id="f9d81-117">VisualState Name</span></span>|<span data-ttu-id="f9d81-118">VisualStateGroup 이름</span><span class="sxs-lookup"><span data-stu-id="f9d81-118">VisualStateGroup Name</span></span>|<span data-ttu-id="f9d81-119">설명</span><span class="sxs-lookup"><span data-stu-id="f9d81-119">Description</span></span>|  
+|----------------------|---------------------------|-----------------|  
+|<span data-ttu-id="f9d81-120">유효</span><span class="sxs-lookup"><span data-stu-id="f9d81-120">Valid</span></span>|<span data-ttu-id="f9d81-121">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-121">ValidationStates</span></span>|<span data-ttu-id="f9d81-122">컨트롤이 사용 하는 <xref:System.Windows.Controls.Validation> 클래스 및 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성은 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-122">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="f9d81-123">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="f9d81-123">InvalidFocused</span></span>|<span data-ttu-id="f9d81-124">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-124">ValidationStates</span></span>|<span data-ttu-id="f9d81-125"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성을 `true` 가 컨트롤에 포커스가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-125">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="f9d81-126">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="f9d81-126">InvalidUnfocused</span></span>|<span data-ttu-id="f9d81-127">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-127">ValidationStates</span></span>|<span data-ttu-id="f9d81-128"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성을 `true` 가 컨트롤에 포커스가 없으면 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-128">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## CalendarItem 요소  
- 다음 표에서는 <xref:System.Windows.Controls.Primitives.CalendarItem> 컨트롤의 명명된 요소를 보여 줍니다.  
+## <a name="calendaritem-parts"></a><span data-ttu-id="f9d81-129">CalendarItem 부분</span><span class="sxs-lookup"><span data-stu-id="f9d81-129">CalendarItem Parts</span></span>  
+ <span data-ttu-id="f9d81-130">다음 표에서 명명된 된 요소를 나열는 <xref:System.Windows.Controls.Primitives.CalendarItem> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-130">The following table lists the named parts for the <xref:System.Windows.Controls.Primitives.CalendarItem> control.</span></span>  
   
-||||  
+|<span data-ttu-id="f9d81-131">파트</span><span class="sxs-lookup"><span data-stu-id="f9d81-131">Part</span></span>|<span data-ttu-id="f9d81-132">형식</span><span class="sxs-lookup"><span data-stu-id="f9d81-132">Type</span></span>|<span data-ttu-id="f9d81-133">설명</span><span class="sxs-lookup"><span data-stu-id="f9d81-133">Description</span></span>|  
 |-|-|-|  
-|파트|형식|설명|  
-|PART\_Root|<xref:System.Windows.FrameworkElement>|컨트롤의 루트입니다.|  
-|PART\_PreviousButton|<xref:System.Windows.Controls.Button>|클릭하면 달력의 이전 페이지를 표시하는 단추입니다.|  
-|PART\_NextButton|<xref:System.Windows.Controls.Button>|클릭하면 달력의 다음 페이지를 표시하는 단추입니다.|  
-|PART\_HeaderButton|<xref:System.Windows.Controls.Button>|월 모드, 년 모드, 10년 모드 간을 전환하는 데 사용할 수 있는 단추입니다.|  
-|PART\_MonthView|<xref:System.Windows.Controls.Grid>|월 모드에서 콘텐츠를 호스팅합니다.|  
-|PART\_YearView|<xref:System.Windows.Controls.Grid>|년 모드 또는 10년 모드에서 콘텐츠를 호스팅합니다.|  
-|PART\_DisabledVisual|<xref:System.Windows.FrameworkElement>|사용하지 않도록 설정된 상태의 오버레이입니다.|  
-|DayTitleTemplate|<xref:System.Windows.DataTemplate>|시각적 구조를 설명하는 <xref:System.Windows.DataTemplate>입니다.|  
+|<span data-ttu-id="f9d81-134">PART_Root</span><span class="sxs-lookup"><span data-stu-id="f9d81-134">PART_Root</span></span>|<xref:System.Windows.FrameworkElement>|<span data-ttu-id="f9d81-135">컨트롤의 루트입니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-135">The root of the control.</span></span>|  
+|<span data-ttu-id="f9d81-136">PART_PreviousButton</span><span class="sxs-lookup"><span data-stu-id="f9d81-136">PART_PreviousButton</span></span>|<xref:System.Windows.Controls.Button>|<span data-ttu-id="f9d81-137">클릭할 때 달력의 이전 페이지를 표시 하는 단추입니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-137">The button that displays the previous page of the calendar when it is clicked.</span></span>|  
+|<span data-ttu-id="f9d81-138">PART_NextButton</span><span class="sxs-lookup"><span data-stu-id="f9d81-138">PART_NextButton</span></span>|<xref:System.Windows.Controls.Button>|<span data-ttu-id="f9d81-139">클릭할 때 달력의 다음 페이지를 표시 하는 단추입니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-139">The button that displays the next page of the calendar when it is clicked.</span></span>|  
+|<span data-ttu-id="f9d81-140">PART_HeaderButton</span><span class="sxs-lookup"><span data-stu-id="f9d81-140">PART_HeaderButton</span></span>|<xref:System.Windows.Controls.Button>|<span data-ttu-id="f9d81-141">월 모드, 연 모드 및 10 년 모드 간의 전환을 허용 하는 단추입니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-141">The button that allows switching between month mode, year mode, and decade mode.</span></span>|  
+|<span data-ttu-id="f9d81-142">PART_MonthView</span><span class="sxs-lookup"><span data-stu-id="f9d81-142">PART_MonthView</span></span>|<xref:System.Windows.Controls.Grid>|<span data-ttu-id="f9d81-143">월 모드에 있을 때 콘텐츠를 호스트 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-143">Hosts the content when in month mode.</span></span>|  
+|<span data-ttu-id="f9d81-144">PART_YearView</span><span class="sxs-lookup"><span data-stu-id="f9d81-144">PART_YearView</span></span>|<xref:System.Windows.Controls.Grid>|<span data-ttu-id="f9d81-145">또는 10 년 모드에 있을 때 콘텐츠를 호스트 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-145">Hosts the content when in year or decade mode.</span></span>|  
+|<span data-ttu-id="f9d81-146">PART_DisabledVisual</span><span class="sxs-lookup"><span data-stu-id="f9d81-146">PART_DisabledVisual</span></span>|<xref:System.Windows.FrameworkElement>|<span data-ttu-id="f9d81-147">사용할 수 없는 상태에 대 한 오버레이입니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-147">The overlay for the disabled state.</span></span>|  
+|<span data-ttu-id="f9d81-148">DayTitleTemplate</span><span class="sxs-lookup"><span data-stu-id="f9d81-148">DayTitleTemplate</span></span>|<xref:System.Windows.DataTemplate>|<span data-ttu-id="f9d81-149"><xref:System.Windows.DataTemplate> 시각적 구조를 설명 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-149">The <xref:System.Windows.DataTemplate> that describes the visual structure.</span></span>|  
   
-## CalendarItem 상태  
- 다음 표에서는 <xref:System.Windows.Controls.Primitives.CalendarItem> 컨트롤의 시각적 상태를 보여 줍니다.  
+## <a name="calendaritem-states"></a><span data-ttu-id="f9d81-150">CalendarItem 상태</span><span class="sxs-lookup"><span data-stu-id="f9d81-150">CalendarItem States</span></span>  
+ <span data-ttu-id="f9d81-151">다음 표에서 시각적 상태를 나열는 <xref:System.Windows.Controls.Primitives.CalendarItem> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-151">The following table lists the visual states for the <xref:System.Windows.Controls.Primitives.CalendarItem> control.</span></span>  
   
-||||  
+|<span data-ttu-id="f9d81-152">VisualState 이름</span><span class="sxs-lookup"><span data-stu-id="f9d81-152">VisualState Name</span></span>|<span data-ttu-id="f9d81-153">VisualStateGroup 이름</span><span class="sxs-lookup"><span data-stu-id="f9d81-153">VisualStateGroup Name</span></span>|<span data-ttu-id="f9d81-154">설명</span><span class="sxs-lookup"><span data-stu-id="f9d81-154">Description</span></span>|  
 |-|-|-|  
-|VisualState 이름|VisualStateGroup 이름|설명|  
-|Normal 상태|CommonStates|기본 상태입니다.|  
-|Disabled 상태|CommonStates|<xref:System.Windows.UIElement.IsEnabled%2A> 속성이 `false`인 경우 달력의 상태입니다.|  
-|Valid|ValidationStates|이 컨트롤은 <xref:System.Windows.Controls.Validation> 클래스를 사용하며 연결된 속성 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>는 `false`입니다.|  
-|InvalidFocused|ValidationStates|컨트롤에 포커스가 있는 경우 연결된 속성 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>는 `true`입니다.|  
-|InvalidUnfocused|ValidationStates|컨트롤에 포커스가 없는 경우 연결된 속성 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>는 `true`입니다.|  
-|Valid|ValidationStates|이 컨트롤은 <xref:System.Windows.Controls.Validation> 클래스를 사용하며 연결된 속성 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>는 `false`입니다.|  
-|InvalidFocused|ValidationStates|컨트롤에 포커스가 있는 경우 연결된 속성 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>는 `true`입니다.|  
-|InvalidUnfocused|ValidationStates|컨트롤에 포커스가 없는 경우 연결된 속성 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>는 `true`입니다.|  
+|<span data-ttu-id="f9d81-155">기본 상태</span><span class="sxs-lookup"><span data-stu-id="f9d81-155">Normal State</span></span>|<span data-ttu-id="f9d81-156">CommonStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-156">CommonStates</span></span>|<span data-ttu-id="f9d81-157">기본 상태입니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-157">The default state.</span></span>|  
+|<span data-ttu-id="f9d81-158">사용 안 함 상태</span><span class="sxs-lookup"><span data-stu-id="f9d81-158">Disabled State</span></span>|<span data-ttu-id="f9d81-159">CommonStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-159">CommonStates</span></span>|<span data-ttu-id="f9d81-160">달력의 상태는 경우는 <xref:System.Windows.UIElement.IsEnabled%2A> 속성은 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-160">The state of the calendar when the <xref:System.Windows.UIElement.IsEnabled%2A> property is `false`.</span></span>|  
+|<span data-ttu-id="f9d81-161">유효</span><span class="sxs-lookup"><span data-stu-id="f9d81-161">Valid</span></span>|<span data-ttu-id="f9d81-162">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-162">ValidationStates</span></span>|<span data-ttu-id="f9d81-163">컨트롤이 사용 하는 <xref:System.Windows.Controls.Validation> 클래스 및 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성은 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-163">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="f9d81-164">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="f9d81-164">InvalidFocused</span></span>|<span data-ttu-id="f9d81-165">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-165">ValidationStates</span></span>|<span data-ttu-id="f9d81-166"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성을 `true` 가 컨트롤에 포커스가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-166">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="f9d81-167">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="f9d81-167">InvalidUnfocused</span></span>|<span data-ttu-id="f9d81-168">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-168">ValidationStates</span></span>|<span data-ttu-id="f9d81-169"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성을 `true` 가 컨트롤에 포커스가 없으면 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-169">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
+|<span data-ttu-id="f9d81-170">유효</span><span class="sxs-lookup"><span data-stu-id="f9d81-170">Valid</span></span>|<span data-ttu-id="f9d81-171">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-171">ValidationStates</span></span>|<span data-ttu-id="f9d81-172">컨트롤이 사용 하는 <xref:System.Windows.Controls.Validation> 클래스 및 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성은 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-172">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="f9d81-173">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="f9d81-173">InvalidFocused</span></span>|<span data-ttu-id="f9d81-174">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-174">ValidationStates</span></span>|<span data-ttu-id="f9d81-175"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성을 `true` 가 컨트롤에 포커스가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-175">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="f9d81-176">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="f9d81-176">InvalidUnfocused</span></span>|<span data-ttu-id="f9d81-177">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-177">ValidationStates</span></span>|<span data-ttu-id="f9d81-178"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성을 `true` 가 컨트롤에 포커스가 없으면 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-178">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## CalendarDayButton 요소  
- <xref:System.Windows.Controls.Primitives.CalendarDayButton> 컨트롤에는 명명된 요소가 없습니다.  
+## <a name="calendardaybutton-parts"></a><span data-ttu-id="f9d81-179">CalendarDayButton 부분</span><span class="sxs-lookup"><span data-stu-id="f9d81-179">CalendarDayButton Parts</span></span>  
+ <span data-ttu-id="f9d81-180"><xref:System.Windows.Controls.Primitives.CalendarDayButton> 컨트롤에는 명명된 된 요소가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-180">The <xref:System.Windows.Controls.Primitives.CalendarDayButton> control does not have any named parts.</span></span>  
   
-## CalendarDayButton 상태  
- 다음 표에서는 <xref:System.Windows.Controls.Primitives.CalendarDayButton> 컨트롤의 시각적 상태를 보여 줍니다.  
+## <a name="calendardaybutton-states"></a><span data-ttu-id="f9d81-181">CalendarDayButton 상태</span><span class="sxs-lookup"><span data-stu-id="f9d81-181">CalendarDayButton States</span></span>  
+ <span data-ttu-id="f9d81-182">다음 표에서 시각적 상태를 나열는 <xref:System.Windows.Controls.Primitives.CalendarDayButton> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-182">The following table lists the visual states for the <xref:System.Windows.Controls.Primitives.CalendarDayButton> control.</span></span>  
   
-||||  
+|<span data-ttu-id="f9d81-183">VisualState 이름</span><span class="sxs-lookup"><span data-stu-id="f9d81-183">VisualState Name</span></span>|<span data-ttu-id="f9d81-184">VisualStateGroup 이름</span><span class="sxs-lookup"><span data-stu-id="f9d81-184">VisualStateGroup Name</span></span>|<span data-ttu-id="f9d81-185">설명</span><span class="sxs-lookup"><span data-stu-id="f9d81-185">Description</span></span>|  
 |-|-|-|  
-|VisualState 이름|VisualStateGroup 이름|설명|  
-|보통|CommonStates|기본 상태입니다.|  
-|Disabled|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarDayButton>을 사용할 수 없습니다.|  
-|MouseOver|CommonStates|마우스 포인터가 <xref:System.Windows.Controls.Primitives.CalendarDayButton> 위에 있습니다.|  
-|Pressed|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarDayButton>을 눌렀습니다.|  
-|선택함|SelectionStates|단추가 선택되어 있습니다.|  
-|선택하지 않음|SelectionStates|단추가 선택되어 있지 않습니다.|  
-|CalendarButtonFocused|CalendarButtonFocusStates|단추에 포커스가 있습니다.|  
-|CalendarButtonUnfocused|CalendarButtonFocusStates|단추에 포커스가 없습니다.|  
-|Focused|FocusStates|단추에 포커스가 있습니다.|  
-|Unfocused|FocusStates|단추에 포커스가 없습니다.|  
-|Active|ActiveStates|단추가 활성 상태입니다.|  
-|Inactive|ActiveStates|단추가 비활성 상태입니다.|  
-|RegularDay|DayStates|단추가 <xref:System.DateTime.Today%2A?displayProperty=fullName>를 나타내지 않습니다.|  
-|Today|DayStates|단추가 <xref:System.DateTime.Today%2A?displayProperty=fullName>를 나타냅니다.|  
-|NormalDay|BlackoutDayStates|선택할 수 있는 일을 나타내는 단추입니다.|  
-|BlackoutDay|BlackoutDayStates|선택할 수 없는 일을 나타내는 단추입니다.|  
-|Valid|ValidationStates|이 컨트롤은 <xref:System.Windows.Controls.Validation> 클래스를 사용하며 연결된 속성 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>는 `false`입니다.|  
-|InvalidFocused|ValidationStates|컨트롤에 포커스가 있는 경우 연결된 속성 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>는 `true`입니다.|  
-|InvalidUnfocused|ValidationStates|컨트롤에 포커스가 없는 경우 연결된 속성 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>는 `true`입니다.|  
+|<span data-ttu-id="f9d81-186">보통</span><span class="sxs-lookup"><span data-stu-id="f9d81-186">Normal</span></span>|<span data-ttu-id="f9d81-187">CommonStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-187">CommonStates</span></span>|<span data-ttu-id="f9d81-188">기본 상태입니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-188">The default state.</span></span>|  
+|<span data-ttu-id="f9d81-189">사용 안 함</span><span class="sxs-lookup"><span data-stu-id="f9d81-189">Disabled</span></span>|<span data-ttu-id="f9d81-190">CommonStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-190">CommonStates</span></span>|<span data-ttu-id="f9d81-191"><xref:System.Windows.Controls.Primitives.CalendarDayButton> 을 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-191">The <xref:System.Windows.Controls.Primitives.CalendarDayButton> is disabled.</span></span>|  
+|<span data-ttu-id="f9d81-192">MouseOver</span><span class="sxs-lookup"><span data-stu-id="f9d81-192">MouseOver</span></span>|<span data-ttu-id="f9d81-193">CommonStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-193">CommonStates</span></span>|<span data-ttu-id="f9d81-194">마우스 포인터가 위에 <xref:System.Windows.Controls.Primitives.CalendarDayButton>합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-194">The mouse pointer is positioned over the <xref:System.Windows.Controls.Primitives.CalendarDayButton>.</span></span>|  
+|<span data-ttu-id="f9d81-195">누름</span><span class="sxs-lookup"><span data-stu-id="f9d81-195">Pressed</span></span>|<span data-ttu-id="f9d81-196">CommonStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-196">CommonStates</span></span>|<span data-ttu-id="f9d81-197"><xref:System.Windows.Controls.Primitives.CalendarDayButton> 눌려질 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-197">The <xref:System.Windows.Controls.Primitives.CalendarDayButton> is pressed.</span></span>|  
+|<span data-ttu-id="f9d81-198">선택함</span><span class="sxs-lookup"><span data-stu-id="f9d81-198">Selected</span></span>|<span data-ttu-id="f9d81-199">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-199">SelectionStates</span></span>|<span data-ttu-id="f9d81-200">단추가 선택 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-200">The button is selected.</span></span>|  
+|<span data-ttu-id="f9d81-201">선택 취소</span><span class="sxs-lookup"><span data-stu-id="f9d81-201">Unselected</span></span>|<span data-ttu-id="f9d81-202">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-202">SelectionStates</span></span>|<span data-ttu-id="f9d81-203">단추를 선택 하지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-203">The button is not selected.</span></span>|  
+|<span data-ttu-id="f9d81-204">CalendarButtonFocused</span><span class="sxs-lookup"><span data-stu-id="f9d81-204">CalendarButtonFocused</span></span>|<span data-ttu-id="f9d81-205">CalendarButtonFocusStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-205">CalendarButtonFocusStates</span></span>|<span data-ttu-id="f9d81-206">단추에 포커스가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-206">The button has focus.</span></span>|  
+|<span data-ttu-id="f9d81-207">CalendarButtonUnfocused</span><span class="sxs-lookup"><span data-stu-id="f9d81-207">CalendarButtonUnfocused</span></span>|<span data-ttu-id="f9d81-208">CalendarButtonFocusStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-208">CalendarButtonFocusStates</span></span>|<span data-ttu-id="f9d81-209">단추에 포커스가 없으면 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-209">The button does not have focus.</span></span>|  
+|<span data-ttu-id="f9d81-210">포커스 있음</span><span class="sxs-lookup"><span data-stu-id="f9d81-210">Focused</span></span>|<span data-ttu-id="f9d81-211">FocusStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-211">FocusStates</span></span>|<span data-ttu-id="f9d81-212">단추에 포커스가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-212">The button has focus.</span></span>|  
+|<span data-ttu-id="f9d81-213">포커스 없음</span><span class="sxs-lookup"><span data-stu-id="f9d81-213">Unfocused</span></span>|<span data-ttu-id="f9d81-214">FocusStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-214">FocusStates</span></span>|<span data-ttu-id="f9d81-215">단추에 포커스가 없으면 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-215">The button does not have focus.</span></span>|  
+|<span data-ttu-id="f9d81-216">활성</span><span class="sxs-lookup"><span data-stu-id="f9d81-216">Active</span></span>|<span data-ttu-id="f9d81-217">ActiveStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-217">ActiveStates</span></span>|<span data-ttu-id="f9d81-218">단추가 활성화 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-218">The button is active.</span></span>|  
+|<span data-ttu-id="f9d81-219">비활성</span><span class="sxs-lookup"><span data-stu-id="f9d81-219">Inactive</span></span>|<span data-ttu-id="f9d81-220">ActiveStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-220">ActiveStates</span></span>|<span data-ttu-id="f9d81-221">단추가 활성화 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-221">The button is inactive.</span></span>|  
+|<span data-ttu-id="f9d81-222">RegularDay</span><span class="sxs-lookup"><span data-stu-id="f9d81-222">RegularDay</span></span>|<span data-ttu-id="f9d81-223">DayStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-223">DayStates</span></span>|<span data-ttu-id="f9d81-224">단추를 나타내지 않는 <xref:System.DateTime.Today%2A?displayProperty=nameWithType>합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-224">The button does not represent <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.</span></span>|  
+|<span data-ttu-id="f9d81-225">오늘</span><span class="sxs-lookup"><span data-stu-id="f9d81-225">Today</span></span>|<span data-ttu-id="f9d81-226">DayStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-226">DayStates</span></span>|<span data-ttu-id="f9d81-227">나타내는 단추 <xref:System.DateTime.Today%2A?displayProperty=nameWithType>합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-227">The button represents <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.</span></span>|  
+|<span data-ttu-id="f9d81-228">NormalDay</span><span class="sxs-lookup"><span data-stu-id="f9d81-228">NormalDay</span></span>|<span data-ttu-id="f9d81-229">BlackoutDayStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-229">BlackoutDayStates</span></span>|<span data-ttu-id="f9d81-230">단추가 선택할 수 있는 날을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-230">The button represents a day that can be selected.</span></span>|  
+|<span data-ttu-id="f9d81-231">BlackoutDay</span><span class="sxs-lookup"><span data-stu-id="f9d81-231">BlackoutDay</span></span>|<span data-ttu-id="f9d81-232">BlackoutDayStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-232">BlackoutDayStates</span></span>|<span data-ttu-id="f9d81-233">단추 선택할 수 없는 일을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-233">The button represents a day that cannot be selected.</span></span>|  
+|<span data-ttu-id="f9d81-234">유효</span><span class="sxs-lookup"><span data-stu-id="f9d81-234">Valid</span></span>|<span data-ttu-id="f9d81-235">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-235">ValidationStates</span></span>|<span data-ttu-id="f9d81-236">컨트롤이 사용 하는 <xref:System.Windows.Controls.Validation> 클래스 및 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성은 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-236">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="f9d81-237">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="f9d81-237">InvalidFocused</span></span>|<span data-ttu-id="f9d81-238">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-238">ValidationStates</span></span>|<span data-ttu-id="f9d81-239"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성을 `true` 가 컨트롤에 포커스가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-239">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="f9d81-240">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="f9d81-240">InvalidUnfocused</span></span>|<span data-ttu-id="f9d81-241">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-241">ValidationStates</span></span>|<span data-ttu-id="f9d81-242"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성을 `true` 가 컨트롤에 포커스가 없으면 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-242">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## CalendarButton 요소  
- <xref:System.Windows.Controls.Primitives.CalendarButton> 컨트롤에는 명명된 요소가 없습니다.  
+## <a name="calendarbutton-parts"></a><span data-ttu-id="f9d81-243">CalendarButton 부분</span><span class="sxs-lookup"><span data-stu-id="f9d81-243">CalendarButton Parts</span></span>  
+ <span data-ttu-id="f9d81-244"><xref:System.Windows.Controls.Primitives.CalendarButton> 컨트롤에는 명명된 된 요소가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-244">The <xref:System.Windows.Controls.Primitives.CalendarButton> control does not have any named parts.</span></span>  
   
-## CalendarButton 상태  
- 다음 표에서는 <xref:System.Windows.Controls.Primitives.CalendarButton> 컨트롤의 시각적 상태를 보여 줍니다.  
+## <a name="calendarbutton-states"></a><span data-ttu-id="f9d81-245">CalendarButton 상태</span><span class="sxs-lookup"><span data-stu-id="f9d81-245">CalendarButton States</span></span>  
+ <span data-ttu-id="f9d81-246">다음 표에서 시각적 상태를 나열는 <xref:System.Windows.Controls.Primitives.CalendarButton> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-246">The following table lists the visual states for the <xref:System.Windows.Controls.Primitives.CalendarButton> control.</span></span>  
   
-||||  
+|<span data-ttu-id="f9d81-247">VisualState 이름</span><span class="sxs-lookup"><span data-stu-id="f9d81-247">VisualState Name</span></span>|<span data-ttu-id="f9d81-248">VisualStateGroup 이름</span><span class="sxs-lookup"><span data-stu-id="f9d81-248">VisualStateGroup Name</span></span>|<span data-ttu-id="f9d81-249">설명</span><span class="sxs-lookup"><span data-stu-id="f9d81-249">Description</span></span>|  
 |-|-|-|  
-|VisualState 이름|VisualStateGroup 이름|설명|  
-|보통|CommonStates|기본 상태입니다.|  
-|Disabled|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarButton>을 사용할 수 없습니다.|  
-|MouseOver|CommonStates|마우스 포인터가 <xref:System.Windows.Controls.Primitives.CalendarButton> 위에 있습니다.|  
-|Pressed|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarButton>을 눌렀습니다.|  
-|선택함|SelectionStates|단추가 선택되어 있습니다.|  
-|선택하지 않음|SelectionStates|단추가 선택되어 있지 않습니다.|  
-|CalendarButtonFocused|CalendarButtonFocusStates|단추에 포커스가 있습니다.|  
-|CalendarButtonUnfocused|CalendarButtonFocusStates|단추에 포커스가 없습니다.|  
-|Focused|FocusStates|단추에 포커스가 있습니다.|  
-|Unfocused|FocusStates|단추에 포커스가 없습니다.|  
-|Active|ActiveStates|단추가 활성 상태입니다.|  
-|Inactive|ActiveStates|단추가 비활성 상태입니다.|  
-|Valid|ValidationStates|이 컨트롤은 <xref:System.Windows.Controls.Validation> 클래스를 사용하며 연결된 속성 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>는 `false`입니다.|  
-|InvalidFocused|ValidationStates|컨트롤에 포커스가 있는 경우 연결된 속성 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>는 `true`입니다.|  
-|InvalidUnfocused|ValidationStates|컨트롤에 포커스가 없는 경우 연결된 속성 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>는 `true`입니다.|  
+|<span data-ttu-id="f9d81-250">보통</span><span class="sxs-lookup"><span data-stu-id="f9d81-250">Normal</span></span>|<span data-ttu-id="f9d81-251">CommonStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-251">CommonStates</span></span>|<span data-ttu-id="f9d81-252">기본 상태입니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-252">The default state.</span></span>|  
+|<span data-ttu-id="f9d81-253">사용 안 함</span><span class="sxs-lookup"><span data-stu-id="f9d81-253">Disabled</span></span>|<span data-ttu-id="f9d81-254">CommonStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-254">CommonStates</span></span>|<span data-ttu-id="f9d81-255"><xref:System.Windows.Controls.Primitives.CalendarButton> 을 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-255">The <xref:System.Windows.Controls.Primitives.CalendarButton> is disabled.</span></span>|  
+|<span data-ttu-id="f9d81-256">MouseOver</span><span class="sxs-lookup"><span data-stu-id="f9d81-256">MouseOver</span></span>|<span data-ttu-id="f9d81-257">CommonStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-257">CommonStates</span></span>|<span data-ttu-id="f9d81-258">마우스 포인터가 위에 <xref:System.Windows.Controls.Primitives.CalendarButton>합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-258">The mouse pointer is positioned over the <xref:System.Windows.Controls.Primitives.CalendarButton>.</span></span>|  
+|<span data-ttu-id="f9d81-259">누름</span><span class="sxs-lookup"><span data-stu-id="f9d81-259">Pressed</span></span>|<span data-ttu-id="f9d81-260">CommonStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-260">CommonStates</span></span>|<span data-ttu-id="f9d81-261"><xref:System.Windows.Controls.Primitives.CalendarButton> 눌려질 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-261">The <xref:System.Windows.Controls.Primitives.CalendarButton> is pressed.</span></span>|  
+|<span data-ttu-id="f9d81-262">선택함</span><span class="sxs-lookup"><span data-stu-id="f9d81-262">Selected</span></span>|<span data-ttu-id="f9d81-263">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-263">SelectionStates</span></span>|<span data-ttu-id="f9d81-264">단추가 선택 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-264">The button is selected.</span></span>|  
+|<span data-ttu-id="f9d81-265">선택 취소</span><span class="sxs-lookup"><span data-stu-id="f9d81-265">Unselected</span></span>|<span data-ttu-id="f9d81-266">SelectionStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-266">SelectionStates</span></span>|<span data-ttu-id="f9d81-267">단추를 선택 하지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-267">The button is not selected.</span></span>|  
+|<span data-ttu-id="f9d81-268">CalendarButtonFocused</span><span class="sxs-lookup"><span data-stu-id="f9d81-268">CalendarButtonFocused</span></span>|<span data-ttu-id="f9d81-269">CalendarButtonFocusStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-269">CalendarButtonFocusStates</span></span>|<span data-ttu-id="f9d81-270">단추에 포커스가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-270">The button has focus.</span></span>|  
+|<span data-ttu-id="f9d81-271">CalendarButtonUnfocused</span><span class="sxs-lookup"><span data-stu-id="f9d81-271">CalendarButtonUnfocused</span></span>|<span data-ttu-id="f9d81-272">CalendarButtonFocusStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-272">CalendarButtonFocusStates</span></span>|<span data-ttu-id="f9d81-273">단추에 포커스가 없으면 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-273">The button does not have focus.</span></span>|  
+|<span data-ttu-id="f9d81-274">포커스 있음</span><span class="sxs-lookup"><span data-stu-id="f9d81-274">Focused</span></span>|<span data-ttu-id="f9d81-275">FocusStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-275">FocusStates</span></span>|<span data-ttu-id="f9d81-276">단추에 포커스가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-276">The button has focus.</span></span>|  
+|<span data-ttu-id="f9d81-277">포커스 없음</span><span class="sxs-lookup"><span data-stu-id="f9d81-277">Unfocused</span></span>|<span data-ttu-id="f9d81-278">FocusStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-278">FocusStates</span></span>|<span data-ttu-id="f9d81-279">단추에 포커스가 없으면 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-279">The button does not have focus.</span></span>|  
+|<span data-ttu-id="f9d81-280">활성</span><span class="sxs-lookup"><span data-stu-id="f9d81-280">Active</span></span>|<span data-ttu-id="f9d81-281">ActiveStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-281">ActiveStates</span></span>|<span data-ttu-id="f9d81-282">단추가 활성화 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-282">The button is active.</span></span>|  
+|<span data-ttu-id="f9d81-283">비활성</span><span class="sxs-lookup"><span data-stu-id="f9d81-283">Inactive</span></span>|<span data-ttu-id="f9d81-284">ActiveStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-284">ActiveStates</span></span>|<span data-ttu-id="f9d81-285">단추가 활성화 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-285">The button is inactive.</span></span>|  
+|<span data-ttu-id="f9d81-286">유효</span><span class="sxs-lookup"><span data-stu-id="f9d81-286">Valid</span></span>|<span data-ttu-id="f9d81-287">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-287">ValidationStates</span></span>|<span data-ttu-id="f9d81-288">컨트롤이 사용 하는 <xref:System.Windows.Controls.Validation> 클래스 및 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성은 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-288">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="f9d81-289">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="f9d81-289">InvalidFocused</span></span>|<span data-ttu-id="f9d81-290">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-290">ValidationStates</span></span>|<span data-ttu-id="f9d81-291"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성을 `true` 가 컨트롤에 포커스가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-291">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="f9d81-292">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="f9d81-292">InvalidUnfocused</span></span>|<span data-ttu-id="f9d81-293">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="f9d81-293">ValidationStates</span></span>|<span data-ttu-id="f9d81-294"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성을 `true` 가 컨트롤에 포커스가 없으면 합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-294">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## Calendar ControlTemplate 예제  
- 다음 예제에서는 <xref:System.Windows.Controls.Calendar> 컨트롤과 해당 연결 형식의 <xref:System.Windows.Controls.ControlTemplate>을 정의하는 방법을 보여 줍니다.  
+## <a name="calendar-controltemplate-example"></a><span data-ttu-id="f9d81-295">달력 ControlTemplate 예</span><span class="sxs-lookup"><span data-stu-id="f9d81-295">Calendar ControlTemplate Example</span></span>  
+ <span data-ttu-id="f9d81-296">다음 예제에서는 정의 하는 방법을 보여 줍니다.는 <xref:System.Windows.Controls.ControlTemplate> 에 대 한는 <xref:System.Windows.Controls.Calendar> 컨트롤과 연결 된 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-296">The following example shows how to define a <xref:System.Windows.Controls.ControlTemplate> for the <xref:System.Windows.Controls.Calendar> control and associated types.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Calendar](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/calendar.xaml#calendar)]  
+ [!code-xaml[ControlTemplateExamples#Calendar](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/calendar.xaml#calendar)]  
   
- 앞의 예제에서는 다음 리소스를 하나 이상 사용합니다.  
+ <span data-ttu-id="f9d81-297">앞의 예제에서는 다음 리소스를 하나 이상 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="f9d81-297">The preceding example uses one or more of the following resources.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- 전체 샘플을 보려면          [Styling with ControlTemplates 샘플](http://go.microsoft.com/fwlink/?LinkID=160041)을 참조하십시오.  
+ <span data-ttu-id="f9d81-298">전체 샘플을 보려면 [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041)(ControlTemplate으로 스타일 지정 샘플)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="f9d81-298">For the complete sample, see [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041).</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Control 스타일 및 템플릿](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [컨트롤 사용자 지정](../../../../docs/framework/wpf/controls/control-customization.md)   
- [스타일 지정 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a><span data-ttu-id="f9d81-299">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f9d81-299">See Also</span></span>  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [<span data-ttu-id="f9d81-300">Control 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="f9d81-300">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [<span data-ttu-id="f9d81-301">컨트롤 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="f9d81-301">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [<span data-ttu-id="f9d81-302">스타일 지정 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="f9d81-302">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="f9d81-303">ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="f9d81-303">Customizing the Appearance of an Existing Control by Creating a ControlTemplate</span></span>](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

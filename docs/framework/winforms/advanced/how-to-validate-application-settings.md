@@ -1,60 +1,64 @@
 ---
-title: "방법: 응용 프로그램 설정 유효성 검사 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "응용 프로그램 설정, 유효성 검사"
-  - "응용 프로그램 설정, Windows Forms"
-  - "응용 프로그램 설정 유효성 검사"
+title: "방법: 응용 프로그램 설정 유효성 검사"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- validating application settings
+- application settings [Windows Forms], Windows Forms
+- application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 309429c2481bad3a8dff4708d9e2ea8a03057a4e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 응용 프로그램 설정 유효성 검사
-이 항목에서는 응용 프로그램 설정을 유지하기 전에 유효성을 검사하는 방법을 보여 줍니다.  
+# <a name="how-to-validate-application-settings"></a><span data-ttu-id="50f81-102">방법: 응용 프로그램 설정 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="50f81-102">How to: Validate Application Settings</span></span>
+<span data-ttu-id="50f81-103">이 항목에서는 응용 프로그램 설정이 유지되기 전에 유효성을 검사하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-103">This topic demonstrates how to validate application settings before they are persisted.</span></span>  
   
- 응용 프로그램 설정은 강력한 형식이므로 사용자는 지정된 설정에 잘못된 형식의 데이터를 할당할 수 없습니다.  그러나 사용자가 허용되는 범위 밖의 값을 설정에 할당하려고 시도할 수 있습니다. 예를 들면, 생일을 오늘 이후 날짜로 입력할 수 있습니다.  모든 응용 프로그램 설정 클래스의 부모 클래스인 <xref:System.Configuration.ApplicationSettingsBase>는 이러한 범위를 검사할 수 있는 네 가지 이벤트를 노출합니다.  이 세 가지 이벤트를 처리하면 모든 유효성 검사 코드가 프로젝트 전체에 분산되지 않고 한 곳에 배치됩니다.  
+ <span data-ttu-id="50f81-104">응용 프로그램 설정이 강력한 형식이기 때문에 사용자가 지정된 설정에 잘못된 형식의 데이터를 할당할 수 없다는 점이 어느 정도 보장됩니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-104">Because application settings are strongly typed, you have some confidence that users cannot assign data of an incorrect type to a given setting.</span></span> <span data-ttu-id="50f81-105">그러나 사용자가 설정에 허용 가능한 범위 밖의 값을 할당하려고 시도할 수 있습니다(예: 미래의 생년월일 제공).</span><span class="sxs-lookup"><span data-stu-id="50f81-105">However, a user still may attempt to assign a value to a setting that falls outside of acceptable bounds—for example, supplying a birth date that occurs in the future.</span></span> <span data-ttu-id="50f81-106"><xref:System.Configuration.ApplicationSettingsBase>이러한 범위를 검사할 수 있도록 4 개의 이벤트를 노출 하는 모든 응용 프로그램 설정 클래스의 부모 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-106"><xref:System.Configuration.ApplicationSettingsBase>, the parent class of all application settings classes, exposes four events to enable such bounds checking.</span></span> <span data-ttu-id="50f81-107">이러한 이벤트를 처리하면 모든 유효성 검사 코드를 프로젝트 전체에 분산하지 않고 단일 위치에 배치합니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-107">Handling these events puts all of your validation code in a single location, rather than scattering it throughout your project.</span></span>  
   
- 다음 표에 설명된 대로 설정의 유효성을 검사해야 하는 시점에 따라 사용할 이벤트가 달라집니다.  
+ <span data-ttu-id="50f81-108">다음 표에 설명된 대로 사용할 이벤트는 설정의 유효성을 검사해야 하는 경우에 따라 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-108">The event you use depends upon when you need to validate your settings, as described in the following table.</span></span>  
   
-|Event|발생 및 용도|  
-|-----------|-------------|  
-|<xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>|설정 속성 그룹을 처음 로드한 후에 발생합니다.<br /><br /> 전체 속성 그룹의 초기 값을 응용 프로그램 내에서 사용하기 전에 유효성을 검사하려면 이 이벤트를 사용합니다.|  
-|<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>|단일 설정 속성 값을 변경하기 전에 발생합니다.<br /><br /> 단일 속성을 변경하기 전에 유효성을 검사하려면 이 이벤트를 사용합니다.  이 이벤트는 해당 작업 및 선택 항목에 대한 즉각적인 피드백을 사용자에게 제공할 수 있습니다.|  
-|<xref:System.Configuration.ApplicationSettingsBase.PropertyChanged>|단일 설정 속성 값을 변경한 후에 발생합니다.<br /><br /> 단일 속성을 변경한 후에 유효성을 검사하려면 이 이벤트를 사용합니다.  시간이 오래 걸리는 비동기 유효성 검사 프로세스가 필요한 경우가 아니면 이 이벤트는 유효성 검사에 거의 사용되지 않습니다.|  
-|<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>|설정 속성 그룹을 저장하기 전에 발생합니다.<br /><br /> 전체 속성 그룹의 값을 디스크에 유지하기 전에 유효성을 검사하려면 이 이벤트를 사용합니다.|  
+|<span data-ttu-id="50f81-109">이벤트</span><span class="sxs-lookup"><span data-stu-id="50f81-109">Event</span></span>|<span data-ttu-id="50f81-110">발생 및 사용</span><span class="sxs-lookup"><span data-stu-id="50f81-110">Occurrence and use</span></span>|  
+|-----------|------------------------|  
+|<xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>|<span data-ttu-id="50f81-111">설정 속성 그룹을 초기 로드한 이후에 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-111">Occurs after the initial loading of a settings property group.</span></span><br /><br /> <span data-ttu-id="50f81-112">이 이벤트를 사용하여 전체 속성 그룹 초기 값을 응용 프로그램 내에서 사용하기 전에 유효성을 검사합니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-112">Use this event to validate initial values for the entire property group before they are used within the application.</span></span>|  
+|<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>|<span data-ttu-id="50f81-113">단일 설정 속성의 값이 변경되기 전에 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-113">Occurs before the value of a single settings property is changed.</span></span><br /><br /> <span data-ttu-id="50f81-114">이 이벤트를 사용하여 단일 속성을 변경하기 전에 유효성을 검사합니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-114">Use this event to validate a single property before it is changed.</span></span> <span data-ttu-id="50f81-115">해당 작업 및 선택 항목에 관한 즉각적인 피드백을 사용자에게 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-115">It can provide immediate feedback to users regarding their actions and choices.</span></span>|  
+|<xref:System.Configuration.ApplicationSettingsBase.PropertyChanged>|<span data-ttu-id="50f81-116">단일 설정 속성의 값이 변경된 후에 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-116">Occurs after the value of a single settings property is changed.</span></span><br /><br /> <span data-ttu-id="50f81-117">이 이벤트를 사용하여 단일 속성을 변경한 후에 유효성을 검사합니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-117">Use this event to validate a single property after it is changed.</span></span> <span data-ttu-id="50f81-118">이 이벤트는 시간이 오래 걸리는 비동기 유효성 검사 프로세스가 필요한 경우가 아니면 거의 유효성 검사에 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-118">This event is rarely used for validation unless a lengthy, asynchronous validation process is required.</span></span>|  
+|<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>|<span data-ttu-id="50f81-119">설정 속성 그룹이 저장되기 전에 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-119">Occurs before the settings property group is stored.</span></span><br /><br /> <span data-ttu-id="50f81-120">이 이벤트를 사용하여 전체 속성 그룹 값을 디스크에 유지하기 전에 유효성을 검사합니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-120">Use this event to validate values for the entire property group before they are persisted to disk.</span></span>|  
   
- 일반적으로 동일한 응용 프로그램 내에서 유효성 검사를 위해 이러한 이벤트를 모두 사용하지는 않습니다.  예를 들어, <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> 이벤트만 처리해도 모든 유효성 검사 요구 사항이 충족되는 경우가 많습니다.  
+ <span data-ttu-id="50f81-121">일반적으로 유효성을 검사하기 위해 동일한 응용 프로그램 내에서 이러한 모든 이벤트를 사용하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-121">Typically, you will not use all of these events within the same application for validation purposes.</span></span> <span data-ttu-id="50f81-122">예를 들어 된 수만 처리 하 여 모든 유효성 검사 요구 사항을 충족 하는 <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-122">For example, it is often possible to fulfill all validation requirements by handling only the <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> event.</span></span>  
   
- 일반적으로 이벤트 처리기는 잘못된 값을 발견할 경우 다음 작업 중 하나를 수행합니다.  
+ <span data-ttu-id="50f81-123">이벤트 처리기가 잘못된 값을 감지하면 일반적으로 다음 작업 중 하나를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-123">An event handler generally performs one of the following actions when it detects an invalid value:</span></span>  
   
--   기본값과 같은 올바른 값을 자동으로 적용합니다.  
+-   <span data-ttu-id="50f81-124">기본 값과 같이 올바른 것으로 알려진 값을 자동으로 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-124">Automatically supplies a value known to be correct, such as the default value.</span></span>  
   
--   정보에 대한 서버 코드의 사용자를 다시 쿼리합니다.  
+-   <span data-ttu-id="50f81-125">정보에 대한 서버 코드의 사용자를 다시 쿼리합니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-125">Re-queries the user of server code for information.</span></span>  
   
--   <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> 및 <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>과 같이 관련된 작업보다 먼저 발생하는 이벤트에서는 <xref:System.ComponentModel.CancelEventArgs> 인수를 사용하여 작업을 취소합니다.  
+-   <span data-ttu-id="50f81-126">와 같은 관련된 작업, 하기 전에 발생 한 이벤트에 대 한 <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> 및 <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>를 사용 하 여는 <xref:System.ComponentModel.CancelEventArgs> 작업을 취소 하는 인수입니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-126">For events raised before their associated actions, such as <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> and <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>, uses the <xref:System.ComponentModel.CancelEventArgs> argument to cancel the operation.</span></span>  
   
- 이벤트 처리에 대한 자세한 내용은 [이벤트 처리기 개요](../../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)를 참조하십시오.  
+ <span data-ttu-id="50f81-127">이벤트를 처리하는 방법에 대한 자세한 내용은 [이벤트 처리기 개요](../../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="50f81-127">For more information about event handling, see [Event Handlers Overview](../../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).</span></span>  
   
- 다음 프로시저에서는 <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> 또는 <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> 이벤트를 사용하여 생일이 올바른지 테스트하는 방법을 보여 줍니다.  응용 프로그램 설정은 이미 만들어져 있는 것으로 전제하고 작성한 프로시저입니다. 이 예제에서는 `DateOfBirth`라는 설정에 대한 범위를 검사합니다.  설정 만들기에 대한 자세한 내용은 [방법: 응용 프로그램 설정 만들기](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)를 참조하십시오.  
+ <span data-ttu-id="50f81-128">다음 절차 중 하나를 사용 하 여 올바른 생년월일에 대 한 테스트 하는 방법을 보여는 <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> 또는 <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-128">The following procedures show how to test for a valid birth date using either the <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> or the <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> event.</span></span> <span data-ttu-id="50f81-129">프로시저는 응용 프로그램 설정을 이미 만들었다는 가정 하에서 작성되었습니다. 이 예제에서는 `DateOfBirth`라는 설정에 대한 범위 검사를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-129">The procedures were written under the assumption that you have already created your application settings; in this example, we will perform bounds checking on a setting named `DateOfBirth`.</span></span> <span data-ttu-id="50f81-130">설정을 만드는 방법에 대한 자세한 내용은 [방법: 응용 프로그램 설정 만들기](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="50f81-130">For more information about creating settings, see [How to: Create Application Settings](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).</span></span>  
   
-### 응용 프로그램 설정 개체를 가져오려면  
+### <a name="to-obtain-the-application-settings-object"></a><span data-ttu-id="50f81-131">응용 프로그램 설정 개체를 가져오려면</span><span class="sxs-lookup"><span data-stu-id="50f81-131">To obtain the application settings object</span></span>  
   
--   다음 글머리 기호 항목 중 하나를 수행하여 응용 프로그램 설정 개체\(래퍼 인스턴스\)에 대한 참조를 가져옵니다.  
+-   <span data-ttu-id="50f81-132">다음 글머리 기호 항목 중 하나를 완료하여 응용 프로그램 설정 개체(래퍼 인스턴스)에 대한 참조를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-132">Obtain a reference to the application settings object (the wrapper instance) by completing one of the following bulleted items:</span></span>  
   
-    -   **속성 편집기**에서 Visual Studio 응용 프로그램 설정 대화 상자를 사용하여 설정을 만들었으면 다음 식을 통해 해당 언어에 대해 생성된 기본 설정 개체를 검색할 수 있습니다.  
+    -   <span data-ttu-id="50f81-133">**속성 편집기**에서 Visual Studio 응용 프로그램 설정 대화 상자를 사용하여 설정을 만든 경우 다음 식을 통해 언어에 대해 생성된 기본 설정 개체를 검색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-133">If you created your settings using the Visual Studio Application Settings dialog box in the **Property Editor**, you can retrieve the default settings object generated for your language through the following expression.</span></span>  
   
         ```csharp  
         Configuration.Settings.Default   
@@ -64,13 +68,13 @@ caps.handback.revision: 17
         MySettings.Default   
         ```  
   
-         또는  
+         <span data-ttu-id="50f81-134">또는</span><span class="sxs-lookup"><span data-stu-id="50f81-134">-or-</span></span>  
   
-    -   Visual Basic 개발자가 프로젝트 디자이너를 사용하여 응용 프로그램 설정을 만들었으면 [My.Settings 개체](../../../../ocs/visual-basic/language-reference/objects/my-settings-object.md)를 사용하여 설정을 검색할 수 있습니다.  
+    -   <span data-ttu-id="50f81-135">사용자가 Visual Basic 개발자이며 프로젝트 디자이너를 사용하여 응용 프로그램 설정을 만든 경우 [My.Settings 개체](~/docs/visual-basic/language-reference/objects/my-settings-object.md)를 사용하여 설정을 검색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-135">If you are a Visual Basic developer and you created your application settings using the Project Designer, you can retrieve your settings by using the [My.Settings Object](~/docs/visual-basic/language-reference/objects/my-settings-object.md).</span></span>  
   
-         또는  
+         <span data-ttu-id="50f81-136">또는</span><span class="sxs-lookup"><span data-stu-id="50f81-136">-or-</span></span>  
   
-    -   <xref:System.Configuration.ApplicationSettingsBase>에서 직접 파생시켜 설정을 만들었으면 클래스를 수동으로 인스턴스화해야 합니다.  
+    -   <span data-ttu-id="50f81-137">파생 하 여 설정을 만든 경우 <xref:System.Configuration.ApplicationSettingsBase> 를 직접 클래스를 수동으로 인스턴스화해야 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-137">If you created your settings by deriving from <xref:System.Configuration.ApplicationSettingsBase> directly, you need to instantiate your class manually.</span></span>  
   
         ```csharp  
         MyCustomSettings settings = new MyCustomSettings();  
@@ -80,15 +84,15 @@ caps.handback.revision: 17
         Dim Settings as New MyCustomSettings()  
         ```  
   
- 다음 프로시저는 이 프로시저의 마지막 글머리 기호 항목을 수행하여 응용 프로그램 설정을 가져온 것으로 가정한 상태에서 작성되었습니다.  
+ <span data-ttu-id="50f81-138">다음 절차는 이 절차에서 마지막 글머리 기호 항목을 완료하여 응용 프로그램 설정 개체를 가져왔다는 가정 하에서 작성되었습니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-138">The following procedures were written under the assumption that the application settings object was obtained by completing the last bulleted item in this procedure.</span></span>  
   
-### 설정을 변경할 때 응용 프로그램 설정의 유효성을 검사하려면  
+### <a name="to-validate-application-settings-when-a-setting-is-changing"></a><span data-ttu-id="50f81-139">설정이 변경될 때 응용 프로그램 설정 유효성을 검사하려면</span><span class="sxs-lookup"><span data-stu-id="50f81-139">To validate Application Settings when a setting is changing</span></span>  
   
-1.  C\# 개발자는 폼이나 컨트롤의 `Load` 이벤트에 <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> 이벤트에 대한 이벤트 처리기를 추가합니다.  
+1.  <span data-ttu-id="50f81-140">폼 이나 컨트롤의 C# 개발자를 모르는 경우 `Load` 이벤트를 이벤트 처리기에 대 한 추가 <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-140">If you are a C# developer, in your form or control's `Load` event, add an event handler for the <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> event.</span></span>  
   
-     또는  
+     <span data-ttu-id="50f81-141">또는</span><span class="sxs-lookup"><span data-stu-id="50f81-141">-or-</span></span>  
   
-     Visual Basic 개발자는 `WithEvents` 키워드를 사용하여 `Settings` 변수를 선언해야 합니다.  
+     <span data-ttu-id="50f81-142">사용자가 Visual Basic 개발자인 경우 `WithEvents` 키워드를 사용하여 `Settings` 변수를 선언해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-142">If you are a Visual Basic developer, you should declare the `Settings` variable using the `WithEvents` keyword.</span></span>  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -103,7 +107,7 @@ caps.handback.revision: 17
     End Sub   
     ```  
   
-2.  이벤트 처리기를 정의하고 이 처리기 내부에 코드를 작성하여 생일의 범위를 검사합니다.  
+2.  <span data-ttu-id="50f81-143">이벤트 처리기를 정의하고 내부에 코드를 작성하여 생년월일에 대한 범위 검사를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-143">Define the event handler, and write the code inside of it to perform bounds checking on the birth date.</span></span>  
   
     ```csharp  
     private void MyCustomSettings_SettingChanging(Object sender, SettingChangingEventArgs e)  
@@ -130,9 +134,9 @@ caps.handback.revision: 17
     End Sub  
     ```  
   
-### 저장이 발생할 때 응용 프로그램 설정의 유효성을 검사하려면  
+### <a name="to-validate-application-settings-when-a-save-occurs"></a><span data-ttu-id="50f81-144">저장이 발생할 때 응용 프로그램 설정의 유효성을 검사하려면</span><span class="sxs-lookup"><span data-stu-id="50f81-144">To validate Application Settings when a Save occurs</span></span>  
   
-1.  폼이나 컨트롤의 `Load` 이벤트에 <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> 이벤트에 대한 이벤트 처리기를 추가합니다.  
+1.  <span data-ttu-id="50f81-145">폼 이나 컨트롤의 `Load` 이벤트를 이벤트 처리기에 대 한 추가 <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-145">In your form or control's `Load` event, add an event handler for the <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> event.</span></span>  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -147,7 +151,7 @@ caps.handback.revision: 17
     End Sub  
     ```  
   
-2.  이벤트 처리기를 정의하고 이 처리기 내부에 코드를 작성하여 생일의 범위를 검사합니다.  
+2.  <span data-ttu-id="50f81-146">이벤트 처리기를 정의하고 내부에 코드를 작성하여 생년월일에 대한 범위 검사를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="50f81-146">Define the event handler, and write the code inside of it to perform bounds checking on the birth date.</span></span>  
   
     ```csharp  
     private void MyCustomSettings_SettingsSaving(Object sender, SettingsSavingEventArgs e)  
@@ -166,6 +170,6 @@ caps.handback.revision: 17
     End Sub  
     ```  
   
-## 참고 항목  
- [Windows Forms에서 이벤트 처리기 만들기](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)   
- [방법: 응용 프로그램 설정 만들기](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)
+## <a name="see-also"></a><span data-ttu-id="50f81-147">참고 항목</span><span class="sxs-lookup"><span data-stu-id="50f81-147">See Also</span></span>  
+ [<span data-ttu-id="50f81-148">Windows Forms에서 이벤트 처리기 만들기</span><span class="sxs-lookup"><span data-stu-id="50f81-148">Creating Event Handlers in Windows Forms</span></span>](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
+ [<span data-ttu-id="50f81-149">방법: 응용 프로그램 설정 만들기</span><span class="sxs-lookup"><span data-stu-id="50f81-149">How to: Create Application Settings</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)

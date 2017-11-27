@@ -1,126 +1,124 @@
 ---
-title: "Structure Statement | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Structure"
-  - "Structure"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "user-defined types, Structure statement"
-  - "compound data types"
-  - "Structure keyword"
-  - "Structure statement"
-  - "UDT (user-defined types)"
-  - "types [Visual Basic], user-defined"
+title: "Structure 문"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Structure
+- Structure
+helpviewer_keywords:
+- user-defined types [Visual Basic], Structure statement
+- compound data types [Visual Basic]
+- Structure keyword [Visual Basic]
+- Structure statement [Visual Basic]
+- UDT (user-defined types)
+- types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
-caps.latest.revision: 28
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 28
+caps.latest.revision: "28"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 43211bb10793acf3bfe0c1d7a35791114170ee7d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Structure Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-구조체의 이름을 선언하고 구조체를 구성하는 변수, 속성, 이벤트 및 프로시저의 정의를 소개합니다.  
+# <a name="structure-statement"></a><span data-ttu-id="a8ef4-102">Structure 문</span><span class="sxs-lookup"><span data-stu-id="a8ef4-102">Structure Statement</span></span>
+<span data-ttu-id="a8ef4-103">구조의 이름을 선언 하 고 변수, 속성, 이벤트 및 구조를 구성 하는 프로시저의 정의 소개 합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-103">Declares the name of a structure and introduces the definition of the variables, properties, events, and procedures that the structure comprises.</span></span>  
   
-## 구문  
+## <a name="syntax"></a><span data-ttu-id="a8ef4-104">구문</span><span class="sxs-lookup"><span data-stu-id="a8ef4-104">Syntax</span></span>  
   
 ```  
-[ <attributelist> ] [ accessmodifier ] [ Shadows ] [ Partial ] _  
-Structure name [ ( Of typelist ) ]  
-    [ Implements interfacenames ]  
+[ <attributelist> ] [ accessmodifier ] [ Shadows ] [ Partial ] _  
+Structure name [ ( Of typelist ) ]  
+    [ Implements interfacenames ]  
     [ datamemberdeclarations ]  
-    [ methodmemberdeclarations ]  
+    [ methodmemberdeclarations ]  
 End Structure  
 ```  
   
-## 요소  
+## <a name="parts"></a><span data-ttu-id="a8ef4-105">요소</span><span class="sxs-lookup"><span data-stu-id="a8ef4-105">Parts</span></span>  
   
-|||  
-|-|-|  
-|용어|정의|  
-|`attributelist`|선택적 요소.  [특성 목록](../../../visual-basic/language-reference/statements/attribute-list.md)을 참조하십시오.|  
-|`accessmodifier`|선택적 요소.  다음 중 하나일 수 있습니다.<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 자세한 내용은 [Access Levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)를 참조하십시오.|  
-|`Shadows`|선택적 요소.  [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)를 참조하십시오.|  
-|`Partial`|선택적 요소.  구조체의 부분 정의를 나타냅니다.  자세한 내용은 [Partial](../../../visual-basic/language-reference/modifiers/partial.md)를 참조하십시오.|  
-|`name`|필수 요소.  이 구조체의 이름입니다.  [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)를 참조하십시오.|  
-|`Of`|선택적 요소.  이 구조체를 제네릭 구조체로 지정합니다.|  
-|`typelist`|[Of](../../../visual-basic/language-reference/statements/of-clause.md) 키워드를 사용하는 경우 필수적 요소입니다.  이 구조체에 대한 형식 매개 변수 목록입니다.  [형식 목록](../../../visual-basic/language-reference/statements/type-list.md)을 참조하십시오.|  
-|`Implements`|선택적 요소.  이 구조체가 인터페이스의 멤버를 구현한다는 것을 나타냅니다.  자세한 내용은 [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md)를 참조하십시오.|  
-|`interfacenames`|`Implements` 문을 사용하는 경우 필수적 요소입니다.  이 구조체가 구현하는 인터페이스의 이름입니다.|  
-|`datamemberdeclarations`|필수 요소.  구조체의 *데이터 멤버* 를 선언하는 0 이상의 `Const`, `Dim`, `Enum` 또는 `Event` 문입니다.|  
-|`methodmemberdeclarations`|선택적 요소.  구조체의 *메서드 멤버* 로 사용되는 0개 이상의 `Function`, `Operator`, `Property` 또는 `Sub` 프로시저의 선언입니다.|  
-|`End Structure`|필수 요소.  `Structure` 정의를 종료합니다.|  
+|<span data-ttu-id="a8ef4-106">용어</span><span class="sxs-lookup"><span data-stu-id="a8ef4-106">Term</span></span>|<span data-ttu-id="a8ef4-107">정의</span><span class="sxs-lookup"><span data-stu-id="a8ef4-107">Definition</span></span>|  
+|---|---|  
+|`attributelist`|<span data-ttu-id="a8ef4-108">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-108">Optional.</span></span> <span data-ttu-id="a8ef4-109">참조 [특성 목록](../../../visual-basic/language-reference/statements/attribute-list.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-109">See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).</span></span>|  
+|`accessmodifier`|<span data-ttu-id="a8ef4-110">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-110">Optional.</span></span> <span data-ttu-id="a8ef4-111">다음 중 하나일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-111">Can be one of the following:</span></span><br /><br /> <span data-ttu-id="a8ef4-112">-   [공개](../../../visual-basic/language-reference/modifiers/public.md)</span><span class="sxs-lookup"><span data-stu-id="a8ef4-112">-   [Public](../../../visual-basic/language-reference/modifiers/public.md)</span></span><br /><span data-ttu-id="a8ef4-113">-   [보호](../../../visual-basic/language-reference/modifiers/protected.md)</span><span class="sxs-lookup"><span data-stu-id="a8ef4-113">-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)</span></span><br /><span data-ttu-id="a8ef4-114">-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)</span><span class="sxs-lookup"><span data-stu-id="a8ef4-114">-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)</span></span><br /><span data-ttu-id="a8ef4-115">-   [개인](../../../visual-basic/language-reference/modifiers/private.md)</span><span class="sxs-lookup"><span data-stu-id="a8ef4-115">-   [Private](../../../visual-basic/language-reference/modifiers/private.md)</span></span><br />-   `Protected Friend`<br /><br /> <span data-ttu-id="a8ef4-116">참조 [액세스 수준을 Visual Basic의](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-116">See [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>|  
+|`Shadows`|<span data-ttu-id="a8ef4-117">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-117">Optional.</span></span> <span data-ttu-id="a8ef4-118">참조 [그림자](../../../visual-basic/language-reference/modifiers/shadows.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-118">See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).</span></span>|  
+|`Partial`|<span data-ttu-id="a8ef4-119">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-119">Optional.</span></span> <span data-ttu-id="a8ef4-120">구조체의 부분 정의 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-120">Indicates a partial definition of the structure.</span></span> <span data-ttu-id="a8ef4-121">참조 [부분](../../../visual-basic/language-reference/modifiers/partial.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-121">See [Partial](../../../visual-basic/language-reference/modifiers/partial.md).</span></span>|  
+|`name`|<span data-ttu-id="a8ef4-122">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-122">Required.</span></span> <span data-ttu-id="a8ef4-123">이 구조체의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-123">Name of this structure.</span></span> <span data-ttu-id="a8ef4-124">참조 [선언 된 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-124">See [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span></span>|  
+|`Of`|<span data-ttu-id="a8ef4-125">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-125">Optional.</span></span> <span data-ttu-id="a8ef4-126">제네릭 구조체 임을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-126">Specifies that this is a generic structure.</span></span>|  
+|`typelist`|<span data-ttu-id="a8ef4-127">사용 하는 경우 필요는 [의](../../../visual-basic/language-reference/statements/of-clause.md) 키워드입니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-127">Required if you use the [Of](../../../visual-basic/language-reference/statements/of-clause.md) keyword.</span></span> <span data-ttu-id="a8ef4-128">이 구조에 대 한 형식 매개 변수의 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-128">List of type parameters for this structure.</span></span> <span data-ttu-id="a8ef4-129">참조 [목록을 입력](../../../visual-basic/language-reference/statements/type-list.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-129">See [Type List](../../../visual-basic/language-reference/statements/type-list.md).</span></span>|  
+|`Implements`|<span data-ttu-id="a8ef4-130">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-130">Optional.</span></span> <span data-ttu-id="a8ef4-131">이 구조에 하나 이상의 인터페이스 멤버 구현 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-131">Indicates that this structure implements the members of one or more interfaces.</span></span> <span data-ttu-id="a8ef4-132">참조 [문을 구현](../../../visual-basic/language-reference/statements/implements-statement.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-132">See [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md).</span></span>|  
+|`interfacenames`|<span data-ttu-id="a8ef4-133">사용 하는 경우 필요는 `Implements` 문.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-133">Required if you use the `Implements` statement.</span></span> <span data-ttu-id="a8ef4-134">이 구조를 구현 하는 인터페이스의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-134">The names of the interfaces this structure implements.</span></span>|  
+|`datamemberdeclarations`|<span data-ttu-id="a8ef4-135">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-135">Required.</span></span> <span data-ttu-id="a8ef4-136">0 개 이상의 `Const`, `Dim`, `Enum`, 또는 `Event` 선언 문을 *데이터 멤버* 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-136">Zero or more `Const`, `Dim`, `Enum`, or `Event` statements declaring *data members* of the structure.</span></span>|  
+|`methodmemberdeclarations`|<span data-ttu-id="a8ef4-137">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-137">Optional.</span></span> <span data-ttu-id="a8ef4-138">0 개 이상의 선언 `Function`, `Operator`, `Property`, 또는 `Sub` 역할을 하는 프로시저 *메서드 멤버* 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-138">Zero or more declarations of `Function`, `Operator`, `Property`, or `Sub` procedures, which serve as *method members* of the structure.</span></span>|  
+|`End Structure`|<span data-ttu-id="a8ef4-139">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-139">Required.</span></span> <span data-ttu-id="a8ef4-140">종료는 `Structure` 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-140">Terminates the `Structure` definition.</span></span>|  
   
-## 설명  
- `Structure` 문은 사용자 지정할 수 있는 합성 값 형식을 정의합니다.  *구조체* 는 이전 버전의 Visual Basic에서 지원되던 UDT\(사용자 정의 형식\)를 일반화한 것입니다.  자세한 내용은 [Structures](../../../visual-basic/programming-guide/language-features/data-types/structures.md)을 참조하십시오.  
+## <a name="remarks"></a><span data-ttu-id="a8ef4-141">설명</span><span class="sxs-lookup"><span data-stu-id="a8ef4-141">Remarks</span></span>  
+ <span data-ttu-id="a8ef4-142">`Structure` 문은 사용자 지정할 수 있는 복합 값 형식을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-142">The `Structure` statement defines a composite value type that you can customize.</span></span> <span data-ttu-id="a8ef4-143">A *구조* 이전 버전의 Visual Basic의 사용자 정의 형식의 (UDT) 일반화 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-143">A *structure* is a generalization of the user-defined type (UDT) of previous versions of Visual Basic.</span></span> <span data-ttu-id="a8ef4-144">자세한 내용은 참조 [구조](../../../visual-basic/programming-guide/language-features/data-types/structures.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-144">For more information, see [Structures](../../../visual-basic/programming-guide/language-features/data-types/structures.md).</span></span>  
   
- 클래스에서 지원되는 많은 기능이 구조체에서도 지원됩니다.  예를 들어, 구조체는 속성과 프로시저를 포함할 수 있으며 인터페이스를 구현하고 매개 변수화된 생성자를 포함할 수 있습니다.  그러나 상속, 선언 및 용도에 있어 구조체와 클래스 사이에는 상당한 차이가 있습니다.  또한 클래스는 참조 형식이고 구조체는 값 형식입니다.  자세한 내용은 [Structures and Classes](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)을 참조하십시오.  
+ <span data-ttu-id="a8ef4-145">구조 여러 클래스와 동일한 기능을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-145">Structures support many of the same features as classes.</span></span> <span data-ttu-id="a8ef4-146">예를 들어 구조 속성 및 절차를 가질 수 인터페이스를 구현 하 고 있습니다 사용할 수 있다는 이점을 합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-146">For example, structures can have properties and procedures, they can implement interfaces, and they can have parameterized constructors.</span></span> <span data-ttu-id="a8ef4-147">그러나, 상속, 선언 및 사용과 같은 영역에서 구조체와 클래스 간의 중요 한 차이점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-147">However, there are significant differences between structures and classes in areas such as inheritance, declarations, and usage.</span></span> <span data-ttu-id="a8ef4-148">또한 클래스는 참조 형식 및 구조체는 값 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-148">Also, classes are reference types and structures are value types.</span></span> <span data-ttu-id="a8ef4-149">자세한 내용은 참조 [구조체와 클래스](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-149">For more information, see [Structures and Classes](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md).</span></span>  
   
- `Structure` 는 네임스페이스 수준이나 모듈 수준에서만 사용할 수 있습니다.  즉, 구조체의 *선언 컨텍스트* 는 소스 파일, 네임스페이스, 클래스, 구조체, 모듈 또는 인터페이스이어야 하며 프로시저 또는 블록일 수는 없습니다.  자세한 내용은 [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)을 참조하십시오.  
+ <span data-ttu-id="a8ef4-150">사용할 수 있습니다 `Structure` 네임 스페이스 또는 모듈 수준에만 합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-150">You can use `Structure` only at namespace or module level.</span></span> <span data-ttu-id="a8ef4-151">즉,는 *선언 컨텍스트* 구조체 소스 파일, 네임 스페이스, 클래스, 구조체, 모듈 또는 인터페이스를 이어야 하며 블록 또는 프로시저일 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-151">This means the *declaration context* for a structure must be a source file, namespace, class, structure, module, or interface, and cannot be a procedure or block.</span></span> <span data-ttu-id="a8ef4-152">자세한 내용은 [선언 컨텍스트 및 기본 액세스 수준](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-152">For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span></span>  
   
- 구조체는 기본적으로 [Friend](../../../visual-basic/language-reference/modifiers/friend.md) 액세스입니다.  액세스 한정자를 사용하여 액세스 수준을 조정할 수 있습니다.  자세한 내용은 [Access Levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)을 참조하십시오.  
+ <span data-ttu-id="a8ef4-153">구조체는 기본적으로 [Friend](../../../visual-basic/language-reference/modifiers/friend.md) 액세스 합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-153">Structures default to [Friend](../../../visual-basic/language-reference/modifiers/friend.md) access.</span></span> <span data-ttu-id="a8ef4-154">액세스 한정자로 액세스 수준을 조정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-154">You can adjust their access levels with the access modifiers.</span></span> <span data-ttu-id="a8ef4-155">자세한 내용은 참조 [액세스 수준을 Visual Basic의](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-155">For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
   
-## 규칙  
+## <a name="rules"></a><span data-ttu-id="a8ef4-156">규칙</span><span class="sxs-lookup"><span data-stu-id="a8ef4-156">Rules</span></span>  
   
--   **중첩.** 한 구조체 내에 다른 구조체를 정의할 수 있습니다.  외부 구조체를 *포함하는 구조체*라고 하고 내부 구조체를 *중첩 구조체*라고 합니다.  그러나 포함하는 구조체를 통해 중첩 구조체의 멤버에 액세스할 수는 없습니다.  대신 중첩 구조체의 데이터 형식에 대한 변수를 선언해야 합니다.  
+-   <span data-ttu-id="a8ef4-157">**중첩입니다.**</span><span class="sxs-lookup"><span data-stu-id="a8ef4-157">**Nesting.**</span></span> <span data-ttu-id="a8ef4-158">내에서 다른 한 구조를 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-158">You can define one structure within another.</span></span> <span data-ttu-id="a8ef4-159">외부 구조체 라고는 *구조가 포함*, 내부 구조체 라고는 *구조에 중첩*합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-159">The outer structure is called the *containing structure*, and the inner structure is called a *nested structure*.</span></span> <span data-ttu-id="a8ef4-160">그러나 중첩 된 구조체의 멤버를 포함 하는 구조체를 통해 액세스할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-160">However, you cannot access a nested structure's members through the containing structure.</span></span> <span data-ttu-id="a8ef4-161">대신, 중첩 된 구조를 데이터 형식의 변수를 선언 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-161">Instead, you must declare a variable of the nested structure's data type.</span></span>  
   
--   **멤버 선언.** 구조체의 모든 멤버를 선언해야 합니다.  구조체에서는 아무 것도 상속할 수 없으므로 구조체 멤버는 [Protected](../../../visual-basic/language-reference/modifiers/protected.md) 또는 `Protected Friend` 가 될 수 없습니다.  그러나 구조체 자체는 `Protected` 또는 `Protected Friend`가 될 수 있습니다.  
+-   <span data-ttu-id="a8ef4-162">**멤버 선언입니다.**</span><span class="sxs-lookup"><span data-stu-id="a8ef4-162">**Member Declaration.**</span></span> <span data-ttu-id="a8ef4-163">구조체의 모든 멤버를 선언 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-163">You must declare every member of a structure.</span></span> <span data-ttu-id="a8ef4-164">구조체 멤버 수 없습니다 [Protected](../../../visual-basic/language-reference/modifiers/protected.md) 또는 `Protected Friend` 구조체를 상속할 수 nothing입니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-164">A structure member cannot be [Protected](../../../visual-basic/language-reference/modifiers/protected.md) or `Protected Friend` because nothing can inherit from a structure.</span></span> <span data-ttu-id="a8ef4-165">그러나 구조체 자체를 수 `Protected` 또는 `Protected Friend`합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-165">The structure itself, however, can be `Protected` or `Protected Friend`.</span></span>  
   
-     0 개 이상의 비공유 변수 또는 구조체의 비공유 사용자 이벤트를 선언할 수 있습니다.  그 중 일부가 공유되지 않더라도 상수, 속성 또는 프로시저만 사용할 수 없습니다.  
+     <span data-ttu-id="a8ef4-166">구조체에는 0개 이상의 비공유 변수 또는 비공유, 비사용자 정의 이벤트를 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-166">You can declare zero or more nonshared variables or nonshared, noncustom events in a structure.</span></span> <span data-ttu-id="a8ef4-167">그 중 일부는 공유 되지 않는 경우에 상수, 속성 및 프로시저 수는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-167">You cannot have only constants, properties, and procedures, even if some of them are nonshared.</span></span>  
   
--   **초기화.** 구조체의 공유되지 않는 데이터 멤버 값을 해당 선언의 일부로 초기화할 수 없습니다.  구조체의 매개 변수화된 생성자를 사용하여 데이터 멤버를 초기화하거나 구조체의 인스턴스를 만든 다음 해당 멤버에 값을 할당해야 합니다.  
+-   <span data-ttu-id="a8ef4-168">**초기화 합니다.**</span><span class="sxs-lookup"><span data-stu-id="a8ef4-168">**Initialization.**</span></span> <span data-ttu-id="a8ef4-169">선언의 일부로 구조체의 공유 되지 않는 데이터 멤버의 값을 초기화할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-169">You cannot initialize the value of any nonshared data member of a structure as part of its declaration.</span></span> <span data-ttu-id="a8ef4-170">구조에서 매개 변수가 있는 생성자를 사용 하 여 이러한 데이터 멤버를 초기화 해야 하거나 구조체의 인스턴스를 만든 다음 멤버에 값을 할당 합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-170">You must either initialize such a data member by means of a parameterized constructor on the structure, or assign a value to the member after you have created an instance of the structure.</span></span>  
   
--   **상속.** 구조체는 모든 구조체가 상속하는 <xref:System.ValueType> 이외의 형식에 상속될 수 없습니다.  특히 한 구조체는 다른 구조체에 상속될 수 없습니다.  
+-   <span data-ttu-id="a8ef4-171">**상속.**</span><span class="sxs-lookup"><span data-stu-id="a8ef4-171">**Inheritance.**</span></span> <span data-ttu-id="a8ef4-172">구조체 이외의 다른 모든 형식에서 상속할 수 없습니다 <xref:System.ValueType>에서 모든 구조 상속 합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-172">A structure cannot inherit from any type other than <xref:System.ValueType>, from which all structures inherit.</span></span> <span data-ttu-id="a8ef4-173">특히, 한 구조에서 다른 상속할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-173">In particular, one structure cannot inherit from another.</span></span>  
   
-     <xref:System.ValueType>을 지정하는 경우에도 구조체 정의에 [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md) 을 사용할 수 없습니다.  
+     <span data-ttu-id="a8ef4-174">사용할 수 없습니다는 [Inherits 문은](../../../visual-basic/language-reference/statements/inherits-statement.md) 지정 하려면도 구조 정의에 <xref:System.ValueType>합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-174">You cannot use the [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md) in a structure definition, even to specify <xref:System.ValueType>.</span></span>  
   
--   **구현.** 구조체에서 [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md)을 사용하는 경우 `interfacenames`에 지정한 모든 인터페이스에 의해 정의된 모든 멤버를 구현해야 합니다.  
+-   <span data-ttu-id="a8ef4-175">**구현입니다.**</span><span class="sxs-lookup"><span data-stu-id="a8ef4-175">**Implementation.**</span></span> <span data-ttu-id="a8ef4-176">구조를 사용 하는 경우는 [Implements 문](../../../visual-basic/language-reference/statements/implements-statement.md)에 지정 하는 모든 인터페이스에 의해 정의 된 모든 멤버를 구현 해야 `interfacenames`합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-176">If the structure uses the [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md), you must implement every member defined by every interface you specify in `interfacenames`.</span></span>  
   
--   **기본 속성.** 구조체는 [Default](../../../visual-basic/language-reference/modifiers/default.md) 한정자를 사용하여 하나의 속성을 해당 *기본 속성*으로 지정할 수 있습니다.  자세한 내용은 [Default](../../../visual-basic/language-reference/modifiers/default.md)을 참조하십시오.  
+-   <span data-ttu-id="a8ef4-177">**기본 속성입니다.**</span><span class="sxs-lookup"><span data-stu-id="a8ef4-177">**Default Property.**</span></span> <span data-ttu-id="a8ef4-178">구조체에는 최대 하나의 속성으로 지정할 수는 *기본 속성*를 사용 하 여는 [기본](../../../visual-basic/language-reference/modifiers/default.md) 한정자입니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-178">A structure can specify at most one property as its *default property*, using the [Default](../../../visual-basic/language-reference/modifiers/default.md) modifier.</span></span> <span data-ttu-id="a8ef4-179">자세한 내용은 참조 [기본](../../../visual-basic/language-reference/modifiers/default.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-179">For more information, see [Default](../../../visual-basic/language-reference/modifiers/default.md).</span></span>  
   
-## 동작  
+## <a name="behavior"></a><span data-ttu-id="a8ef4-180">동작</span><span class="sxs-lookup"><span data-stu-id="a8ef4-180">Behavior</span></span>  
   
--   **액세스 수준.** 구조체 내에서는 각 멤버를 고유한 액세스 수준으로 선언할 수 있습니다.  모든 구조체 멤버는 기본적으로 [Public](../../../visual-basic/language-reference/modifiers/public.md) 액세스입니다.  구조체 자체에 보다 제한된 액세스 수준이 지정되어 있을 경우 액세스 수준을 액세스 한정자로 조정해도 해당 멤버에 대한 액세스가 자동으로 제한됩니다.  
+-   <span data-ttu-id="a8ef4-181">**액세스 수준입니다.**</span><span class="sxs-lookup"><span data-stu-id="a8ef4-181">**Access Level.**</span></span> <span data-ttu-id="a8ef4-182">구조체에 자체 액세스 수준으로 각 멤버를 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-182">Within a structure, you can declare each member with its own access level.</span></span> <span data-ttu-id="a8ef4-183">모든 구조 멤버는 기본적으로 [공용](../../../visual-basic/language-reference/modifiers/public.md) 액세스 합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-183">All structure members default to [Public](../../../visual-basic/language-reference/modifiers/public.md) access.</span></span> <span data-ttu-id="a8ef4-184">참고는 구조 자체에 좀 더 제한 된 액세스 수준이 있는 경우이 자동으로 액세스를 제한 해당 멤버에 대 한 액세스 한정자가 포함 된 액세스 수준을 조정 하는 경우에 합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-184">Note that if the structure itself has a more restricted access level, this automatically restricts access to its members, even if you adjust their access levels with the access modifiers.</span></span>  
   
--   **범위.** 구조체는 포함하는 해당 네임스페이스, 클래스, 구조체 또는 모듈 전반에서 범위 안에 있습니다.  
+-   <span data-ttu-id="a8ef4-185">**범위입니다.**</span><span class="sxs-lookup"><span data-stu-id="a8ef4-185">**Scope.**</span></span> <span data-ttu-id="a8ef4-186">구조체는 해당 포함 된 네임 스페이스, 클래스, 구조체 또는 모듈 전체에서 범위에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-186">A structure is in scope throughout its containing namespace, class, structure, or module.</span></span>  
   
-     모든 구조체 멤버의 범위는 전체 구조체입니다.  
+     <span data-ttu-id="a8ef4-187">모든 구조 멤버의 범위는 전체 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-187">The scope of every structure member is the entire structure.</span></span>  
   
--   **수명.** 구조체 자체에는 수명이 없지만  해당 구조체의 각 인스턴스에는 다른 모든 인스턴스와는 독립적인 수명이 있습니다.  
+-   <span data-ttu-id="a8ef4-188">**수명입니다.**</span><span class="sxs-lookup"><span data-stu-id="a8ef4-188">**Lifetime.**</span></span> <span data-ttu-id="a8ef4-189">구조체는 하지 자체는 수명을 가집니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-189">A structure does not itself have a lifetime.</span></span> <span data-ttu-id="a8ef4-190">대신, 해당 구조체의 각 인스턴스 독립적인 수명이 다른 모든 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-190">Rather, each instance of that structure has a lifetime independent of all other instances.</span></span>  
   
-     인스턴스의 수명은 인스턴스가 [New Operator](../../../visual-basic/language-reference/operators/new-operator.md) 절로 생성됨과 동시에 시작되고  해당 인스턴스를 보유하는 변수의 수명이 다되면 끝납니다.  
+     <span data-ttu-id="a8ef4-191">인스턴스의 수명은에서 만들어질 때 시작 되는 [New 연산자](../../../visual-basic/language-reference/operators/new-operator.md) 절.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-191">The lifetime of an instance begins when it is created by a [New Operator](../../../visual-basic/language-reference/operators/new-operator.md) clause.</span></span> <span data-ttu-id="a8ef4-192">보유 하는 변수의 수명이 끝날 때 종료 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-192">It ends when the lifetime of the variable that holds it ends.</span></span>  
   
-     구조체 인스턴스의 수명은 연장할 수 없습니다.  정적 구조체 기능에 대한 근사값은 모듈에서 제공합니다.  자세한 내용은 [Module Statement](../../../visual-basic/language-reference/statements/module-statement.md)을 참조하십시오.  
+     <span data-ttu-id="a8ef4-193">구조 인스턴스의 수명을 확장할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-193">You cannot extend the lifetime of a structure instance.</span></span> <span data-ttu-id="a8ef4-194">정적 구조 기능에 대 한 근사값 모듈에 의해 제공 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-194">An approximation to static structure functionality is provided by a module.</span></span> <span data-ttu-id="a8ef4-195">자세한 내용은 참조 [Module 문](../../../visual-basic/language-reference/statements/module-statement.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-195">For more information, see [Module Statement](../../../visual-basic/language-reference/statements/module-statement.md).</span></span>  
   
-     구조체 멤버는 선언된 방법과 위치에 따라 수명이 달라집니다.  자세한 내용은 [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md)의 "수명"을 참조하십시오.  
+     <span data-ttu-id="a8ef4-196">구조체 멤버 선언 방법 및 위치에 따라 수명이 합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-196">Structure members have lifetimes depending on how and where they are declared.</span></span> <span data-ttu-id="a8ef4-197">자세한 내용은의 "수명" 참조 [Class 문](../../../visual-basic/language-reference/statements/class-statement.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-197">For more information, see "Lifetime" in [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md).</span></span>  
   
--   **한정자.** 구조체 외부에 있는 코드는 멤버의 이름을 해당 구조체의 이름으로 한정해야 합니다.  
+-   <span data-ttu-id="a8ef4-198">**검증 합니다.**</span><span class="sxs-lookup"><span data-stu-id="a8ef4-198">**Qualification.**</span></span> <span data-ttu-id="a8ef4-199">코드 구조는 외부 멤버의 이름을 해당 구조체의 이름으로 한 정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-199">Code outside a structure must qualify a member's name with the name of that structure.</span></span>  
   
-     중첩 구조체 내에 있는 코드가 프로그래밍 요소에 대한 비정규화된 참조를 만들면 Visual Basic에서는 먼저 중첩 구조체에서 요소를 검색하고 이를 포함하는 해당 구조체에서 검색한 다음 계속해서 가장 바깥쪽 포함하는 요소로 범위를 넓혀가며 검색합니다.  자세한 내용은 [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)을 참조하십시오.  
+     <span data-ttu-id="a8ef4-200">중첩된 된 구조 내의 코드는 프로그래밍 요소에 대 한 정규화 되지 않은 참조를 만드는 경우 Visual Basic 요소에 대해 먼저 검색에서 중첩 된 구조를 포함 하 여 구조를 찾은 다음에서 등 포함 하는 가장 바깥쪽 요소를 합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-200">If code inside a nested structure makes an unqualified reference to a programming element, Visual Basic searches for the element first in the nested structure, then in its containing structure, and so on out to the outermost containing element.</span></span> <span data-ttu-id="a8ef4-201">자세한 내용은 참조 [선언 된 요소에 대 한 참조](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-201">For more information, see [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).</span></span>  
   
--   **메모리 사용.** 모든 복합 데이터 형식과 마찬가지로 해당 멤버의 일반 저장소 할당량을 모두 더하는 것만으로 구조체의 총 메모리 사용량을 정확히 계산할 수는 없습니다.  또한 메모리에서 저장소의 순서가 사용자의 선언 순서와 동일하다고 가정할 수도 없습니다.  구조체의 저장소 레이아웃을 제어해야 할 경우 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 특성을 `Structure` 문에 적용할 수 있습니다.  
+-   <span data-ttu-id="a8ef4-202">**메모리 소비 합니다.**</span><span class="sxs-lookup"><span data-stu-id="a8ef4-202">**Memory Consumption.**</span></span> <span data-ttu-id="a8ef4-203">복합 데이터 형식을 모두와 마찬가지로 해당 멤버의 일반 저장소 할당량을 함께 추가 하 여 구조체의 총 메모리 사용량을 안전 하 게 계산할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-203">As with all composite data types, you cannot safely calculate the total memory consumption of a structure by adding together the nominal storage allocations of its members.</span></span> <span data-ttu-id="a8ef4-204">또한 가정할 수 없습니다 메모리에는 저장소의 순서는 사용자의 선언 순서와 같습니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-204">Furthermore, you cannot safely assume that the order of storage in memory is the same as your order of declaration.</span></span> <span data-ttu-id="a8ef4-205">구조체의 저장소 레이아웃을 제어 해야 하는 경우 적용할 수 있습니다는 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 특성을 `Structure` 문.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-205">If you need to control the storage layout of a structure, you can apply the <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute to the `Structure` statement.</span></span>  
   
-## 예제  
- 다음 예제에서는 `Structure` 문을 사용하여 직원과 관련된 데이터 집합을 정의합니다.  데이터 항목의 민감도를 반영하기 위해 `Public`, `Friend` 및 `Private` 멤버도 사용합니다.  또한 프로시저, 속성 및 이벤트 멤버를 보여 줍니다.  
+## <a name="example"></a><span data-ttu-id="a8ef4-206">예제</span><span class="sxs-lookup"><span data-stu-id="a8ef4-206">Example</span></span>  
+ <span data-ttu-id="a8ef4-207">다음 예제에서는 `Structure` 을 직원에 대 한 관련 된 데이터 집합을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-207">The following example uses the `Structure` statement to define a set of related data for an employee.</span></span> <span data-ttu-id="a8ef4-208">사용법을 보여줍니다 `Public`, `Friend`, 및 `Private` 데이터 항목의 민감도 반영 하도록 멤버입니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-208">It shows the use of `Public`, `Friend`, and `Private` members to reflect the sensitivity of the data items.</span></span> <span data-ttu-id="a8ef4-209">또한 프로시저, 속성 및 이벤트 멤버를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a8ef4-209">It also shows procedure, property, and event members.</span></span>  
   
  [!code-vb[VbVbalrStatements#57](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/structure-statement_1.vb)]  
   
-## 참고 항목  
- [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md)   
- [Interface Statement](../../../visual-basic/language-reference/statements/interface-statement.md)   
- [Module Statement](../../../visual-basic/language-reference/statements/module-statement.md)   
- [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md)   
- [Const Statement](../../../visual-basic/language-reference/statements/const-statement.md)   
- [Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md)   
- [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md)   
- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)   
- [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)   
- [Structures and Classes](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
+## <a name="see-also"></a><span data-ttu-id="a8ef4-210">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a8ef4-210">See Also</span></span>  
+ [<span data-ttu-id="a8ef4-211">Class 문</span><span class="sxs-lookup"><span data-stu-id="a8ef4-211">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [<span data-ttu-id="a8ef4-212">Interface 문</span><span class="sxs-lookup"><span data-stu-id="a8ef4-212">Interface Statement</span></span>](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [<span data-ttu-id="a8ef4-213">Module 문</span><span class="sxs-lookup"><span data-stu-id="a8ef4-213">Module Statement</span></span>](../../../visual-basic/language-reference/statements/module-statement.md)  
+ [<span data-ttu-id="a8ef4-214">Dim 문</span><span class="sxs-lookup"><span data-stu-id="a8ef4-214">Dim Statement</span></span>](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [<span data-ttu-id="a8ef4-215">Const 문</span><span class="sxs-lookup"><span data-stu-id="a8ef4-215">Const Statement</span></span>](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [<span data-ttu-id="a8ef4-216">Enum 문</span><span class="sxs-lookup"><span data-stu-id="a8ef4-216">Enum Statement</span></span>](../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [<span data-ttu-id="a8ef4-217">Event 문</span><span class="sxs-lookup"><span data-stu-id="a8ef4-217">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)  
+ [<span data-ttu-id="a8ef4-218">Operator 문</span><span class="sxs-lookup"><span data-stu-id="a8ef4-218">Operator Statement</span></span>](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [<span data-ttu-id="a8ef4-219">Property 문</span><span class="sxs-lookup"><span data-stu-id="a8ef4-219">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="a8ef4-220">구조체와 클래스</span><span class="sxs-lookup"><span data-stu-id="a8ef4-220">Structures and Classes</span></span>](../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)

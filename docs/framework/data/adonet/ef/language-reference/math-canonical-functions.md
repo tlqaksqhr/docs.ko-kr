@@ -1,45 +1,44 @@
 ---
-title: "수식 정식 함수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "수학 정식 함수"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: b6e69a9dbc204cfa8f0abc7e641b0784a08d747c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 수식 정식 함수
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]에는 수식 정식 함수가 포함됩니다.  
+# <a name="math-canonical-functions"></a><span data-ttu-id="3b7d7-102">수학 정식 함수</span><span class="sxs-lookup"><span data-stu-id="3b7d7-102">Math Canonical Functions</span></span>
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="3b7d7-103">에는 수식 정식 함수가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="3b7d7-103"> includes math canonical functions.</span></span>  
   
- 다음 표에서는 수식 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 정식 함수를 보여 줍니다.  
+ <span data-ttu-id="3b7d7-104">다음 표에서는 수식 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 정식 함수를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3b7d7-104">The following table shows the math [!INCLUDE[esql](../../../../../../includes/esql-md.md)] canonical functions.</span></span>  
   
-|함수|설명|  
-|--------|--------|  
-|`Abs(` `value` `)`|`value`의 절대값을 반환합니다.<br /><br /> **인수**<br /><br /> `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double` 및 `Decimal`입니다.<br /><br /> **반환 값**<br /><br /> `value`의 형식입니다.<br /><br /> **예제**<br /><br /> `Abs(-2)`|  
-|`Ceiling(` `value` `)`|`value`보다 작지 않은 가장 작은 정수를 반환합니다.<br /><br /> **인수**<br /><br /> `Single`,  `Double` 및 `Decimal`입니다.<br /><br /> **반환 값**<br /><br /> `value`의 형식입니다.<br /><br /> **예제**<br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_CEILING](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_ceiling)]
+|<span data-ttu-id="3b7d7-105">함수</span><span class="sxs-lookup"><span data-stu-id="3b7d7-105">Function</span></span>|<span data-ttu-id="3b7d7-106">설명</span><span class="sxs-lookup"><span data-stu-id="3b7d7-106">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="3b7d7-107">`Abs(` `value` `)`</span><span class="sxs-lookup"><span data-stu-id="3b7d7-107">`Abs(` `value` `)`</span></span>|<span data-ttu-id="3b7d7-108">`value`의 절대값을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="3b7d7-108">Returns the absolute value of `value`.</span></span><br /><br /> <span data-ttu-id="3b7d7-109">**인수**</span><span class="sxs-lookup"><span data-stu-id="3b7d7-109">**Arguments**</span></span><br /><br /> <span data-ttu-id="3b7d7-110">`Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, 및 `Decimal`합니다.</span><span class="sxs-lookup"><span data-stu-id="3b7d7-110">An `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, and `Decimal`.</span></span><br /><br /> <span data-ttu-id="3b7d7-111">**반환 값**</span><span class="sxs-lookup"><span data-stu-id="3b7d7-111">**Return Value**</span></span><br /><br /> <span data-ttu-id="3b7d7-112">`value`의 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="3b7d7-112">The type of `value`.</span></span><br /><br /> <span data-ttu-id="3b7d7-113">**예제**</span><span class="sxs-lookup"><span data-stu-id="3b7d7-113">**Example**</span></span><br /><br /> `Abs(-2)`|  
+|<span data-ttu-id="3b7d7-114">`Ceiling(` `value` `)`</span><span class="sxs-lookup"><span data-stu-id="3b7d7-114">`Ceiling(` `value` `)`</span></span>|<span data-ttu-id="3b7d7-115">`value`보다 작지 않은 가장 작은 정수를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="3b7d7-115">Returns the smallest integer that is not less than `value`.</span></span><br /><br /> <span data-ttu-id="3b7d7-116">**인수**</span><span class="sxs-lookup"><span data-stu-id="3b7d7-116">**Arguments**</span></span><br /><br /> <span data-ttu-id="3b7d7-117">A `Single`, `Double`, 및 `Decimal`합니다.</span><span class="sxs-lookup"><span data-stu-id="3b7d7-117">A `Single`, `Double`, and `Decimal`.</span></span><br /><br /> <span data-ttu-id="3b7d7-118">**반환 값**</span><span class="sxs-lookup"><span data-stu-id="3b7d7-118">**Return Value**</span></span><br /><br /> <span data-ttu-id="3b7d7-119">`value`의 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="3b7d7-119">The type of `value`.</span></span><br /><br /> <span data-ttu-id="3b7d7-120">**예제**</span><span class="sxs-lookup"><span data-stu-id="3b7d7-120">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_CEILING](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_ceiling)]
  [!code-sql[DP EntityServices Concepts#EDM_CEILING](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_ceiling)]|  
-|`Floor(` `value` `)`|`value`보다 크지 않은 가장 큰 정수를 반환합니다.<br /><br /> **인수**<br /><br /> `Single`,  `Double` 및 `Decimal`입니다.<br /><br /> **반환 값**<br /><br /> `value`의 형식입니다.<br /><br /> **예제**<br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_FLOOR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_floor)]
+|<span data-ttu-id="3b7d7-121">`Floor(` `value` `)`</span><span class="sxs-lookup"><span data-stu-id="3b7d7-121">`Floor(` `value` `)`</span></span>|<span data-ttu-id="3b7d7-122">`value`보다 크지 않은 가장 큰 정수를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="3b7d7-122">Returns the largest integer that is not greater than `value`.</span></span><br /><br /> <span data-ttu-id="3b7d7-123">**인수**</span><span class="sxs-lookup"><span data-stu-id="3b7d7-123">**Arguments**</span></span><br /><br /> <span data-ttu-id="3b7d7-124">A `Single`, `Double`, 및 `Decimal`합니다.</span><span class="sxs-lookup"><span data-stu-id="3b7d7-124">A `Single`, `Double`, and `Decimal`.</span></span><br /><br /> <span data-ttu-id="3b7d7-125">**반환 값**</span><span class="sxs-lookup"><span data-stu-id="3b7d7-125">**Return Value**</span></span><br /><br /> <span data-ttu-id="3b7d7-126">`value`의 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="3b7d7-126">The type of `value`.</span></span><br /><br /> <span data-ttu-id="3b7d7-127">**예제**</span><span class="sxs-lookup"><span data-stu-id="3b7d7-127">**Example**</span></span><br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_FLOOR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_floor)]
  [!code-sql[DP EntityServices Concepts#EDM_FLOOR](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_floor)]|  
-|`Power(` `value`, `exponent``)`|지정된 `exponent`에 대해 지정된 `value`의 결과를 반환합니다.<br /><br /> **인수**<br /><br /> `value`: `Int32, Int64, Double` 또는 `Decimal`입니다.<br /><br /> `exponent`: `Int64``, Double` 또는 `Decimal`입니다.<br /><br /> **반환 값**<br /><br /> `value`의 형식입니다.<br /><br /> **예제**<br /><br /> `Power(748.58,2)`|  
-|`Round(` `value` `)`|`value`의 정수 부분을 가장 가까운 정수로 반올림하여 반환합니다.<br /><br /> **인수**<br /><br /> `Single`,  `Double` 및 `Decimal`입니다.<br /><br /> **반환 값**<br /><br /> `value`의 형식입니다.<br /><br /> **예제**<br /><br /> `Round(748.58)`|  
-|`Round(` `value`, `digits``)`|`value`를 지정된 `digits` 중 가장 가까운 숫자로 반올림하여 반환합니다.<br /><br /> **인수**<br /><br /> `value`: `Double` 또는 `Decimal`입니다.<br /><br /> `digits`: `Int16` 또는 `Int32`입니다.<br /><br /> **반환 값**<br /><br /> `value`의 형식입니다.<br /><br /> **예제**<br /><br /> `Round(748.58,1)`|  
-|`Truncate(` `value`, `digits``)`|`value`를 지정된 `digits` 중 가장 가까운 숫자로 잘라 반환합니다.<br /><br /> **인수**<br /><br /> `value`: `Double` 또는 `Decimal`입니다.<br /><br /> `digits`: `Int16` 또는 `Int32`입니다.<br /><br /> **반환 값**<br /><br /> `value`의 형식입니다.<br /><br /> **예제**<br /><br /> `Truncate(748.58,1)`|  
+|<span data-ttu-id="3b7d7-128">`Power(` `value`, `exponent``)`</span><span class="sxs-lookup"><span data-stu-id="3b7d7-128">`Power(` `value`, `exponent``)`</span></span>|<span data-ttu-id="3b7d7-129">지정된 `value`에 대해 지정된 `exponent`의 결과를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="3b7d7-129">Returns the result of the specified `value` to the specified `exponent`.</span></span><br /><br /> <span data-ttu-id="3b7d7-130">**인수**</span><span class="sxs-lookup"><span data-stu-id="3b7d7-130">**Arguments**</span></span><br /><br /> <span data-ttu-id="3b7d7-131">`value`: `Int32, Int64, Double`, 또는 `Decimal`합니다.</span><span class="sxs-lookup"><span data-stu-id="3b7d7-131">`value`: An `Int32, Int64, Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="3b7d7-132">`exponent`: `Int64``, Double`, 또는 `Decimal`합니다.</span><span class="sxs-lookup"><span data-stu-id="3b7d7-132">`exponent`: An `Int64``, Double`, or `Decimal`.</span></span><br /><br /> <span data-ttu-id="3b7d7-133">**반환 값**</span><span class="sxs-lookup"><span data-stu-id="3b7d7-133">**Return Value**</span></span><br /><br /> <span data-ttu-id="3b7d7-134">`value`의 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="3b7d7-134">The type of `value`.</span></span><br /><br /> <span data-ttu-id="3b7d7-135">**예제**</span><span class="sxs-lookup"><span data-stu-id="3b7d7-135">**Example**</span></span><br /><br /> `Power(748.58,2)`|  
+|<span data-ttu-id="3b7d7-136">`Round(` `value` `)`</span><span class="sxs-lookup"><span data-stu-id="3b7d7-136">`Round(` `value` `)`</span></span>|<span data-ttu-id="3b7d7-137">`value`의 정수 부분을 가장 가까운 정수로 반올림하여 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="3b7d7-137">Returns the integer portion of `value`, rounded to the nearest integer.</span></span><br /><br /> <span data-ttu-id="3b7d7-138">**인수**</span><span class="sxs-lookup"><span data-stu-id="3b7d7-138">**Arguments**</span></span><br /><br /> <span data-ttu-id="3b7d7-139">A `Single`, `Double`, 및 `Decimal`합니다.</span><span class="sxs-lookup"><span data-stu-id="3b7d7-139">A `Single`, `Double`, and `Decimal`.</span></span><br /><br /> <span data-ttu-id="3b7d7-140">**반환 값**</span><span class="sxs-lookup"><span data-stu-id="3b7d7-140">**Return Value**</span></span><br /><br /> <span data-ttu-id="3b7d7-141">`value`의 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="3b7d7-141">The type of `value`.</span></span><br /><br /> <span data-ttu-id="3b7d7-142">**예제**</span><span class="sxs-lookup"><span data-stu-id="3b7d7-142">**Example**</span></span><br /><br /> `Round(748.58)`|  
+|<span data-ttu-id="3b7d7-143">`Round(` `value`, `digits``)`</span><span class="sxs-lookup"><span data-stu-id="3b7d7-143">`Round(` `value`, `digits``)`</span></span>|<span data-ttu-id="3b7d7-144">`value`를 지정된 `digits` 중 가장 가까운 숫자로 반올림하여 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="3b7d7-144">Returns the `value`, rounded to the nearest specified `digits`.</span></span><br /><br /> <span data-ttu-id="3b7d7-145">**인수**</span><span class="sxs-lookup"><span data-stu-id="3b7d7-145">**Arguments**</span></span><br /><br /> <span data-ttu-id="3b7d7-146">`value`: `Double` 또는 `Decimal`입니다.</span><span class="sxs-lookup"><span data-stu-id="3b7d7-146">`value`: `Double` or `Decimal`.</span></span><br /><br /> <span data-ttu-id="3b7d7-147">`digits`: `Int16` 또는 `Int32`입니다.</span><span class="sxs-lookup"><span data-stu-id="3b7d7-147">`digits`: `Int16` or `Int32`.</span></span><br /><br /> <span data-ttu-id="3b7d7-148">**반환 값**</span><span class="sxs-lookup"><span data-stu-id="3b7d7-148">**Return Value**</span></span><br /><br /> <span data-ttu-id="3b7d7-149">`value`의 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="3b7d7-149">The type of `value`.</span></span><br /><br /> <span data-ttu-id="3b7d7-150">**예제**</span><span class="sxs-lookup"><span data-stu-id="3b7d7-150">**Example**</span></span><br /><br /> `Round(748.58,1)`|  
+|<span data-ttu-id="3b7d7-151">`Truncate(` `value`, `digits``)`</span><span class="sxs-lookup"><span data-stu-id="3b7d7-151">`Truncate(` `value`, `digits``)`</span></span>|<span data-ttu-id="3b7d7-152">`value`를 지정된 `digits` 중 가장 가까운 숫자로 잘라 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="3b7d7-152">Returns the `value`, truncated to the nearest specified `digits`.</span></span><br /><br /> <span data-ttu-id="3b7d7-153">**인수**</span><span class="sxs-lookup"><span data-stu-id="3b7d7-153">**Arguments**</span></span><br /><br /> <span data-ttu-id="3b7d7-154">`value`: `Double` 또는 `Decimal`입니다.</span><span class="sxs-lookup"><span data-stu-id="3b7d7-154">`value`: `Double` or `Decimal`.</span></span><br /><br /> <span data-ttu-id="3b7d7-155">`digits`: `Int16` 또는 `Int32`입니다.</span><span class="sxs-lookup"><span data-stu-id="3b7d7-155">`digits`: `Int16` or `Int32`.</span></span><br /><br /> <span data-ttu-id="3b7d7-156">**반환 값**</span><span class="sxs-lookup"><span data-stu-id="3b7d7-156">**Return Value**</span></span><br /><br /> <span data-ttu-id="3b7d7-157">`value`의 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="3b7d7-157">The type of `value`.</span></span><br /><br /> <span data-ttu-id="3b7d7-158">**예제**</span><span class="sxs-lookup"><span data-stu-id="3b7d7-158">**Example**</span></span><br /><br /> `Truncate(748.58,1)`|  
   
- 이러한 함수는 `null`이 입력되면 `null`을 반환합니다.  
+ <span data-ttu-id="3b7d7-159">이러한 함수는 `null`이 입력되면 `null`을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="3b7d7-159">These functions will return `null` if given `null` input.</span></span>  
   
- 동일한 기능을 Microsoft SQL 클라이언트 관리 공급자에서 사용할 수 있습니다.  자세한 내용은 [Entity Framework 함수용 SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)을 참조하세요.  
+ <span data-ttu-id="3b7d7-160">동일한 기능을 Microsoft SQL 클라이언트 관리 공급자에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3b7d7-160">Equivalent functionality is available in the Microsoft SQL Client Managed Provider.</span></span> <span data-ttu-id="3b7d7-161">자세한 내용은 참조 [엔터티 프레임 워크 함수에 대 한 SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="3b7d7-161">For more information, see [SqlClient for Entity Framework Functions](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).</span></span>  
   
-## 참고 항목  
- [정식 함수](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+## <a name="see-also"></a><span data-ttu-id="3b7d7-162">참고 항목</span><span class="sxs-lookup"><span data-stu-id="3b7d7-162">See Also</span></span>  
+ [<span data-ttu-id="3b7d7-163">정식 함수</span><span class="sxs-lookup"><span data-stu-id="3b7d7-163">Canonical Functions</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)

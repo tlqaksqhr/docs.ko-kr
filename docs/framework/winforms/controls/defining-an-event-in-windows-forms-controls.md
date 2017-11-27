@@ -1,30 +1,34 @@
 ---
-title: "Windows Forms 컨트롤에서 이벤트 정의 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "사용자 지정 컨트롤[Windows Forms], 코드를 사용하는 이벤트"
-  - "이벤트[Windows Forms], Windows Forms 사용자 지정 컨트롤 내에서 정의"
+title: "Windows Forms 컨트롤에서 이벤트 정의"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- events [Windows Forms], defining within Windows Forms custom controls
+- custom controls [Windows Forms], events using code
 ms.assetid: d89f1096-8061-42e2-a855-a1f053f1940a
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 592efefecb0428f87e5ac612c8fb162aa2fe85dd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Windows Forms 컨트롤에서 이벤트 정의
-사용자 지정 이벤트 정의에 대한 자세한 내용은 [이벤트](../../../../docs/standard/events/index.md)을 참조하세요.  연결된 데이터가 없는 이벤트를 정의하는 경우에는 이벤트 데이터의 기본 형식인 <xref:System.EventArgs>를 사용하고 이벤트 대리자로 <xref:System.EventHandler>를 사용합니다.  그 후에는 이벤트를 발생시키는 보호된 `On`*EventName* 메서드와 이벤트 멤버만 정의하면 됩니다.  
+# <a name="defining-an-event-in-windows-forms-controls"></a><span data-ttu-id="047f1-102">Windows Forms 컨트롤에서 이벤트 정의</span><span class="sxs-lookup"><span data-stu-id="047f1-102">Defining an Event in Windows Forms Controls</span></span>
+<span data-ttu-id="047f1-103">사용자 지정 이벤트를 정의 하는 방법에 대 한 세부 정보를 참조 하십시오. [이벤트](../../../../docs/standard/events/index.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="047f1-103">For details about defining custom events, see [Events](../../../../docs/standard/events/index.md).</span></span> <span data-ttu-id="047f1-104">연결된 데이터가 없는 이벤트를 정의하는 경우에는 이벤트 데이터의 기본 형식인 <xref:System.EventArgs>를 사용하고 이벤트 대리자로 <xref:System.EventHandler>를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="047f1-104">If you define an event that does not have any associated data, use the base type for event data, <xref:System.EventArgs>, and use <xref:System.EventHandler> as the event delegate.</span></span> <span data-ttu-id="047f1-105">이벤트 멤버 및 보호 된 정의를 작업을 수행 하는 남게 됩니다 `On` *EventName* 이벤트를 발생 시키는 메서드.</span><span class="sxs-lookup"><span data-stu-id="047f1-105">All that remains to do is to define an event member and a protected `On`*EventName* method that raises the event.</span></span>  
   
- 다음 코드 조각은 `FlashTrackBar` 사용자 지정 컨트롤이 사용자 지정 이벤트 `ValueChanged`를 정의하는 방법을 보여줍니다.  `FlashTrackBar` 샘플의 전체 코드는 [방법: 진행률을 보여 주는 Windows Forms 컨트롤 만들기](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)를 참조하세요.  
+ <span data-ttu-id="047f1-106">다음 코드 조각은 `FlashTrackBar` 사용자 지정 컨트롤이 사용자 지정 이벤트 `ValueChanged`를 정의하는 방법을 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="047f1-106">The following code fragment shows how the `FlashTrackBar` custom control defines a custom event, `ValueChanged`.</span></span> <span data-ttu-id="047f1-107">에 대 한 전체 코드에 대 한는 `FlashTrackBar` 예제를 참조는 [하는 방법: Windows Forms 컨트롤을 표시 진행률 만들기](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="047f1-107">For the complete code for the `FlashTrackBar` sample, see the [How to: Create a Windows Forms Control That Shows Progress](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md).</span></span>  
   
 ```vb  
 Option Explicit  
@@ -83,7 +87,7 @@ public class FlashTrackBar : Control {
 }  
 ```  
   
-## 참고 항목  
- [Windows Forms 컨트롤의 이벤트](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)   
- [이벤트](../../../../docs/standard/events/index.md)   
- [이벤트](../../../../docs/standard/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="047f1-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="047f1-108">See Also</span></span>  
+ [<span data-ttu-id="047f1-109">Windows Forms 컨트롤의 이벤트</span><span class="sxs-lookup"><span data-stu-id="047f1-109">Events in Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)  
+ [<span data-ttu-id="047f1-110">이벤트</span><span class="sxs-lookup"><span data-stu-id="047f1-110">Events</span></span>](../../../../docs/standard/events/index.md)  
+ [<span data-ttu-id="047f1-111">이벤트</span><span class="sxs-lookup"><span data-stu-id="047f1-111">Events</span></span>](../../../../docs/standard/events/index.md)

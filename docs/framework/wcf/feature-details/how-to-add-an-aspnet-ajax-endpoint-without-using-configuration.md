@@ -1,35 +1,38 @@
 ---
-title: "방법: 구성을 사용하지 않고 ASP.NET AJAX 끝점 추가 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "방법: 구성을 사용하지 않고 ASP.NET AJAX 끝점 추가"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b05c1742-8d0a-4673-9d71-725b18a3008e
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e71e8f8f9b4c6f2a407febc8ba8ac045ecc0e239
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 구성을 사용하지 않고 ASP.NET AJAX 끝점 추가
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]를 통해 클라이언트 웹 사이트의 JavaScript에서 호출할 수 있는 ASP.NET AJAX 사용 끝점을 노출하는 서비스를 만들 수 있습니다. 이와 같은 끝점을 만들려면 다른 모든 WCF 끝점에서처럼 구성 파일을 사용하거나 구성 요소가 필요하지 않은 메서드를 사용할 수 있습니다. 이 항목에서는 두 번째 접근 방법을 보여 줍니다.  
+# <a name="how-to-add-an-aspnet-ajax-endpoint-without-using-configuration"></a><span data-ttu-id="51377-102">방법: 구성을 사용하지 않고 ASP.NET AJAX 끝점 추가</span><span class="sxs-lookup"><span data-stu-id="51377-102">How to: Add an ASP.NET AJAX Endpoint Without Using Configuration</span></span>
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="51377-103">를 통해 클라이언트 웹 사이트의 JavaScript에서 호출할 수 있는 ASP.NET AJAX 사용 끝점을 노출하는 서비스를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="51377-103"> allows you to create a service that exposes an ASP.NET AJAX-enabled endpoint that can be called from JavaScript on a client Web site.</span></span> <span data-ttu-id="51377-104">이와 같은 끝점을 만들려면 다른 모든 WCF 끝점에서처럼 구성 파일을 사용하거나 구성 요소가 필요하지 않은 메서드를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="51377-104">To create such an endpoint, you can either use a configuration file, as with all other WCF endpoints, or use a method that does not require any configuration elements.</span></span> <span data-ttu-id="51377-105">이 항목에서는 두 번째 접근 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="51377-105">This topic demonstrates the second approach.</span></span>  
   
- 구성 없이 ASP.NET AJAX 끝점을 사용하여 서비스를 만들려면 서비스는 IIS(인터넷 정보 서비스)에 의해 호스팅되어야 합니다. 이 방법을 사용 하 여 ASP.NET AJAX 끝점을 활성화 하려면 지정는 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> 팩터리 매개 변수로 [ @ServiceHost ](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) .svc 파일에 지시문입니다. 이 사용자 지정 팩터리는 클라이언트 웹 사이트의 JavaScript에서 호출할 수 있도록 ASP.NET AJAX 끝점을 자동으로 구성하는 구성 요소입니다.  
+ <span data-ttu-id="51377-106">구성 없이 ASP.NET AJAX 끝점을 사용하여 서비스를 만들려면 서비스는 IIS(인터넷 정보 서비스)에 의해 호스팅되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51377-106">To create services with ASP.NET AJAX endpoints without configuration, the services must be hosted by Internet Information Services (IIS).</span></span> <span data-ttu-id="51377-107">이 방식을 사용 하 여 ASP.NET AJAX 끝점을 활성화 하려면 지정 된 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> 에서 공장 매개 변수로 [ @ServiceHost ](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) .svc 파일에 지시문.</span><span class="sxs-lookup"><span data-stu-id="51377-107">To activate an ASP.NET AJAX endpoint using this approach, specify the <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> as the Factory parameter in the [@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) directive in the .svc file.</span></span> <span data-ttu-id="51377-108">이 사용자 지정 팩터리는 클라이언트 웹 사이트의 JavaScript에서 호출할 수 있도록 ASP.NET AJAX 끝점을 자동으로 구성하는 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="51377-108">This custom factory is the component that automatically configures an ASP.NET AJAX endpoint so that it can be called from JavaScript on a client Web site.</span></span>  
   
- 작업 예제를 참조 하십시오.는 [구성 하지 않고 AJAX 서비스](../../../../docs/framework/wcf/samples/ajax-service-without-configuration.md)합니다.  
+ <span data-ttu-id="51377-109">작업 예제를 참조 하십시오.는 [구성 하지 않고 AJAX 서비스](../../../../docs/framework/wcf/samples/ajax-service-without-configuration.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="51377-109">For a working example, see the [AJAX Service Without Configuration](../../../../docs/framework/wcf/samples/ajax-service-without-configuration.md).</span></span>  
   
- 구성 요소를 사용 하 여 ASP.NET AJAX 끝점을 구성 하는 방법의 개요를 참조 하십시오. [하는 방법: 구성을 사용 하는 ASP.NET AJAX 끝점 추가](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)합니다.  
+ <span data-ttu-id="51377-110">구성 요소를 사용 하 여 ASP.NET AJAX 끝점을 구성 하는 방법의 개요를 참조 하십시오. [하는 방법: ASP.NET AJAX 끝점 추가를 사용 하 여 구성](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="51377-110">For an outline of how to configure an ASP.NET AJAX endpoint using configuration elements, see [How to: Use Configuration to Add an ASP.NET AJAX Endpoint](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md).</span></span>  
   
-### <a name="to-create-a-basic-wcf-service"></a>기본 WCF 서비스를 만들려면  
+### <a name="to-create-a-basic-wcf-service"></a><span data-ttu-id="51377-111">기본 WCF 서비스를 만들려면</span><span class="sxs-lookup"><span data-stu-id="51377-111">To create a basic WCF service</span></span>  
   
-1.  기본 정의 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 으로 서비스 계약 인터페이스와 함께 표시는 <xref:System.ServiceModel.ServiceContractAttribute> 특성입니다. 표시 된 각 작업은 <xref:System.ServiceModel.OperationContractAttribute>합니다. 로 설정 해야는 <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> 속성입니다.  
+1.  <span data-ttu-id="51377-112">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 특성으로 표시된 인터페이스를 사용하여 기본 <xref:System.ServiceModel.ServiceContractAttribute> 서비스 계약을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="51377-112">Define a basic [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service contract with an interface marked with the <xref:System.ServiceModel.ServiceContractAttribute> attribute.</span></span> <span data-ttu-id="51377-113">각 작업을 <xref:System.ServiceModel.OperationContractAttribute>로 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="51377-113">Mark each operation with the <xref:System.ServiceModel.OperationContractAttribute>.</span></span> <span data-ttu-id="51377-114"><xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> 속성을 설정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51377-114">Be sure to set the <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> property.</span></span>  
   
-    ```  
+    ```csharp  
     [ServiceContract(Namespace = "MyService")]]  
     public interface ICalculator  
     {  
@@ -42,9 +45,9 @@ caps.handback.revision: 14
     }  
     ```  
   
-2.  `ICalculator`를 사용하여 `CalculatorService` 서비스 계약을 구현합니다.  
+2.  <span data-ttu-id="51377-115">`ICalculator`를 사용하여 `CalculatorService` 서비스 계약을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="51377-115">Implement the `ICalculator` service contract with a `CalculatorService`.</span></span>  
   
-    ```  
+    ```csharp  
     public class CalculatorService : ICalculator  
     {  
         public double Add(double n1, double n2)  
@@ -55,18 +58,18 @@ caps.handback.revision: 14
     //Other operations omitted…  
     ```  
   
-3.  네임스페이스 블록에 `ICalculator` 및 `CalculatorService` 구현을 래핑하여 이러한 구현에 대한 네임스페이스를 정의합니다.  
+3.  <span data-ttu-id="51377-116">네임스페이스 블록에 `ICalculator` 및 `CalculatorService` 구현을 래핑하여 이러한 구현에 대한 네임스페이스를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="51377-116">Define a namespace for the `ICalculator` and `CalculatorService` implementations by wrapping them in a namespace block.</span></span>  
   
-    ```  
+    ```csharp  
     Namespace Microsoft.Ajax.Samples  
     {  
         //Include the code for ICalculator and Caculator here.  
     }  
     ```  
   
-### <a name="to-host-the-service-in-internet-information-services-without-configuration"></a>구성 없이 인터넷 정보 서비스에서 서비스를 호스팅하려면  
+### <a name="to-host-the-service-in-internet-information-services-without-configuration"></a><span data-ttu-id="51377-117">구성 없이 인터넷 정보 서비스에서 서비스를 호스팅하려면</span><span class="sxs-lookup"><span data-stu-id="51377-117">To host the service in Internet Information Services without configuration</span></span>  
   
-1.  응용 프로그램에서 .svc 확장명이 있는 service라는 새 파일을 만듭니다. 적절 한 추가 하 여이 파일을 편집 [ @ServiceHost ](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) 서비스에 대 한 지시문 정보입니다. 지정 하는 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> 에 사용 되는 [ @ServiceHost ](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) 지시문을 자동으로 ASP.NET AJAX 끝점을 구성 합니다.  
+1.  <span data-ttu-id="51377-118">응용 프로그램에서 .svc 확장명이 있는 service라는 새 파일을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="51377-118">Create a new file named service with a .svc extension in the application.</span></span> <span data-ttu-id="51377-119">적절 한 추가 하 여이 파일을 편집 [ @ServiceHost ](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) 서비스에 대 한 지시문 정보입니다.</span><span class="sxs-lookup"><span data-stu-id="51377-119">Edit this file by adding the appropriate [@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) directive information for the service.</span></span> <span data-ttu-id="51377-120">지정 하는 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> 에 사용 되는 [ @ServiceHost ](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) 지시문을 자동으로 ASP.NET AJAX 끝점을 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="51377-120">Specify that the <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> is to be used in the [@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) directive to automatically configure an ASP.NET AJAX endpoint.</span></span>  
   
     ```  
     <%@ServiceHost   
@@ -77,33 +80,32 @@ caps.handback.revision: 14
     %>  
     ```  
   
-2.  서비스를 빌드하고 클라이언트에서 호출합니다. 호출하면 IIS(인터넷 정보 서비스)가 해당 서비스를 활성화합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]IIS에서 호스팅 참조 [하는 방법: IIS에서 WCF 서비스 호스팅](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)합니다.  
+2.  <span data-ttu-id="51377-121">서비스를 빌드하고 클라이언트에서 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="51377-121">Build the service and call it from the client.</span></span> <span data-ttu-id="51377-122">호출하면 IIS(인터넷 정보 서비스)가 해당 서비스를 활성화합니다.</span><span class="sxs-lookup"><span data-stu-id="51377-122">Internet Information Services (IIS) activates the service when called.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="51377-123">IIS에서 호스팅 참조 [하는 방법: IIS에서 WCF 서비스 호스팅](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="51377-123"> hosting in IIS, see [How to: Host a WCF Service in IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).</span></span>  
   
-### <a name="to-call-the-service"></a>서비스를 호출하려면  
+### <a name="to-call-the-service"></a><span data-ttu-id="51377-124">서비스를 호출하려면</span><span class="sxs-lookup"><span data-stu-id="51377-124">To call the service</span></span>  
   
-1.  따라서 서비스를 사용할 수 있으며 요청을 보내서 전송 하 여 호출할 수 있습니다 끝점은.svc 파일을 기준으로 빈 주소에 구성 됩니다<> \</> \> service.svc/Add에 대 한 예는 `Add` 작업 합니다. 서비스 URL을 ASP.NET AJAX Script Manager 컨트롤의 스크립트 컬렉션에 입력하여 사용할 수 있습니다. 예를 들어 참조는 [구성 하지 않고 AJAX 서비스](../../../../docs/framework/wcf/samples/ajax-service-without-configuration.md)합니다.  
+1.  <span data-ttu-id="51377-125">서비스를 사용 하 고 요청을 보내서 전송 하 여 호출할 수 있도록 끝점은.svc 파일을 기준으로 빈 주소에 구성 됩니다\<작업 >-예를 들어에 대 한 service.svc/Add는 `Add` 작업 합니다.</span><span class="sxs-lookup"><span data-stu-id="51377-125">The endpoint is configured at an empty address relative to the .svc file, so the service is now available and can be invoked by sending requests to service.svc/\<operation> - for example, service.svc/Add for the `Add` operation.</span></span> <span data-ttu-id="51377-126">서비스 URL을 ASP.NET AJAX Script Manager 컨트롤의 스크립트 컬렉션에 입력하여 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="51377-126">You can use it by entering the service URL into the Scripts collection of the ASP.NET AJAX Script Manager control.</span></span> <span data-ttu-id="51377-127">예를 들어 참조는 [구성 하지 않고 AJAX 서비스](../../../../docs/framework/wcf/samples/ajax-service-without-configuration.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="51377-127">For an example, see the [AJAX Service Without Configuration](../../../../docs/framework/wcf/samples/ajax-service-without-configuration.md).</span></span>  
   
-## <a name="example"></a>예제  
-<!-- TODO: review snippet reference  [!CODE [Microsoft.Win32.RegistryKey#4](Microsoft.Win32.RegistryKey#4)]  -->  
+## <a name="example"></a><span data-ttu-id="51377-128">예제</span><span class="sxs-lookup"><span data-stu-id="51377-128">Example</span></span>  
   
- 자동으로 구성된 끝점은 기본 URL을 기준으로 비어 있는 주소에 생성됩니다. 또한 구성 파일을 추가하여 이 접근 방법으로 사용할 수 있습니다. 구성 파일에 끝점 정의가 포함된 경우 이러한 끝점은 자동으로 구성된 끝점에 추가됩니다.  
+ <span data-ttu-id="51377-129">자동으로 구성된 끝점은 기본 URL을 기준으로 비어 있는 주소에 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="51377-129">The automatically-configured endpoint is created at an empty address relative to the base URL.</span></span> <span data-ttu-id="51377-130">또한 구성 파일을 추가하여 이 접근 방법으로 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="51377-130">A configuration file can also be added and used with this approach.</span></span> <span data-ttu-id="51377-131">구성 파일에 끝점 정의가 포함된 경우 이러한 끝점은 자동으로 구성된 끝점에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="51377-131">If the configuration file contains endpoint definitions, these endpoints are added to the automatically-configured endpoint.</span></span>  
   
- 예를 들어, service.svc 사용는 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> 서비스 디렉터리 사용 하 여 동일한 서비스에 대 한 끝점을 정의 하는 Web.config 파일을 포함 하 고는 <xref:System.ServiceModel.BasicHttpBinding> "soap" 상대 주소에 있습니다. 이 경우 서비스는 두 개의 끝점을 포함합니다. 한 끝점은 ASP.NET AJAX 요청에 응답하는 service.svc에 위치하고 다른 끝점은 SOAP 요청에 응답하는 service.svc/soap에 위치합니다.  
+ <span data-ttu-id="51377-132">예를 들어, service.svc는 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>를 사용하고 서비스 디렉터리에는 "soap" 상대 주소에서 <xref:System.ServiceModel.BasicHttpBinding>을 사용하여 동일한 서비스에 대해 끝점을 정의하는 Web.config 파일이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="51377-132">For example, service.svc uses the <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> and the service directory contains a Web.config file that defines an endpoint for the same service using the <xref:System.ServiceModel.BasicHttpBinding> at the "soap" relative address.</span></span> <span data-ttu-id="51377-133">이 경우 서비스는 두 개의 끝점을 포함합니다. 한 끝점은 ASP.NET AJAX 요청에 응답하는 service.svc에 위치하고 다른 끝점은 SOAP 요청에 응답하는 service.svc/soap에 위치합니다.</span><span class="sxs-lookup"><span data-stu-id="51377-133">In this case, the service contains two endpoints: one at service.svc (which responds to ASP.NET AJAX requests) and another at service.svc/soap (which responds to SOAP requests).</span></span>  
   
- 구성 파일이 비어 있는 상대 주소에 끝점을 정의 하는 경우와 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> 되는 예외가 throw 되 고 서비스가 시작 되지 않거나 사용 합니다.  
+ <span data-ttu-id="51377-134">구성 파일이 비어 있는 상대 주소에 끝점을 정의하고 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>가 사용되는 경우 예외가 throw되어 서비스를 시작할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="51377-134">If the configuration file defines an endpoint at an empty relative address and the <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> is used, an exception is thrown and the service fails to start.</span></span>  
   
- 구성을 사용하여 자동으로 구성된 끝점에서 설정을 수정할 수 없습니다. 모든 설정 (예: 판독기 할당량) 해야 하는 경우 수정에 사용 하면 안 구성 않는 접근 방법을 제거 하 여는 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> 끝점에 대 한 구성 항목을 만들어.svc 파일에서.  
+ <span data-ttu-id="51377-135">구성을 사용하여 자동으로 구성된 끝점에서 설정을 수정할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="51377-135">You cannot use configuration to modify settings on the automatically-configured endpoint.</span></span> <span data-ttu-id="51377-136">판독기 할당량과 같은 설정을 수정해야 하는 경우 .svc 파일에서 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>를 제거하고 끝점에 대한 구성 항목을 만들어 구성을 사용하지 않는 접근 방법을 사용하지 말아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51377-136">If any setting (such as a reader quota) must be modified, you must not use the configuration-free approach by removing the <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> from the .svc file and creating a configuration entry for the endpoint.</span></span>  
   
- 서비스에 필요한 경우 ASP.NET 호환 모드-예를 들어 사용 하는 경우는 <xref:System.Web.HttpContext> 클래스 또는 ASP.NET 인증 메커니즘에서 구성 파일을이 모드를 설정 하는 데 필요 합니다. 필요한 구성 요소는 [ <> \> ](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) 요소를 다음과 같이 추가 되어야 합니다.  
+ <span data-ttu-id="51377-137">서비스를 사용하려면 ASP.NET 호환 모드가 필요합니다. 예를 들어, <xref:System.Web.HttpContext> 클래스 또는 ASP.NET 인증 메커니즘을 사용하는 경우 이 모드를 사용하도록 설정하려면 구성 파일이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="51377-137">If your service requires ASP.NET Compatibility Mode - for example, if it uses the <xref:System.Web.HttpContext> class or ASP.NET authorization mechanisms - a configuration file is still required to turn on this mode.</span></span> <span data-ttu-id="51377-138">필수 구성 요소는 [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) 요소를 다음과 같이 추가 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="51377-138">The configuration element required is the [\<serviceHostingEnvironment>](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) element, which must be added as follows.</span></span>  
   
  `<system.serviceModel>`  
   
- `<serviceHostingEnvironment aspNetCompatibilityEnabled=”true” /> </system.serviceModel>`  
+ `<serviceHostingEnvironment aspNetCompatibilityEnabled="true" /> </system.serviceModel>`  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][WCF 서비스 및 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md) 항목입니다.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="51377-139">[WCF 서비스 및 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md) 항목입니다.</span><span class="sxs-lookup"><span data-stu-id="51377-139"> the [WCF Services and ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md) topic.</span></span>  
   
- <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> 클래스의 파생된 클래스는 <xref:System.ServiceModel.Activation.ServiceHostFactory>합니다. 서비스 호스트 팩터리 메커니즘에 대 한 자세한 내용은 참조 하십시오.는 [호스팅를 사용 하 여 ServiceHostFactory 확장](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md) 항목입니다.  
+ <span data-ttu-id="51377-140"><xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> 클래스가 <xref:System.ServiceModel.Activation.ServiceHostFactory>의 파생 클래스인 경우</span><span class="sxs-lookup"><span data-stu-id="51377-140">The <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> class is a derived class of <xref:System.ServiceModel.Activation.ServiceHostFactory>.</span></span> <span data-ttu-id="51377-141">서비스 호스트 팩터리 메커니즘에 대 한 자세한 내용은 참조 하십시오.는 [호스팅를 사용 하 여 ServiceHostFactory 확장](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md) 항목입니다.</span><span class="sxs-lookup"><span data-stu-id="51377-141">For a detailed explanation of the service host factory mechanism, see the [Extending Hosting Using ServiceHostFactory](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md) topic.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [ASP.NET AJAX 용 WCF 서비스 만들기](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)   
- [방법: AJAX 사용 ASP.NET 웹 서비스를 WCF로 마이그레이션](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)
+## <a name="see-also"></a><span data-ttu-id="51377-142">참고 항목</span><span class="sxs-lookup"><span data-stu-id="51377-142">See Also</span></span>  
+ [<span data-ttu-id="51377-143">ASP.NET AJAX 용 WCF 서비스 만들기</span><span class="sxs-lookup"><span data-stu-id="51377-143">Creating WCF Services for ASP.NET AJAX</span></span>](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  
+ [<span data-ttu-id="51377-144">방법: AJAX 사용 ASP.NET 웹 서비스를 WCF로 마이그레이션</span><span class="sxs-lookup"><span data-stu-id="51377-144">How to: Migrate AJAX-Enabled ASP.NET Web Services to WCF</span></span>](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

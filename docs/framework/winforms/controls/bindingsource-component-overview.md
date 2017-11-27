@@ -1,76 +1,77 @@
 ---
-title: "BindingSource 구성 요소 개요 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "BindingSource 구성 요소[Windows Forms], BindingSource 구성 요소 정보"
-  - "컨트롤[Windows Forms], 데이터에 바인딩"
-  - "데이터 바인딩, BindingSource 구성 요소"
-  - "Windows Forms, 데이터 바인딩"
+title: "BindingSource 구성 요소 개요"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Windows Forms, data binding
+- controls [Windows Forms], binding to data
+- BindingSource component [Windows Forms], about BindingSource component
+- data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
-caps.latest.revision: 26
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cf46a3d5207f3414bc8abd5fd7bdb904e91f07d2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# BindingSource 구성 요소 개요
-<xref:System.Windows.Forms.BindingSource> 구성 요소는 내부 데이터 소스에 컨트롤을 바인딩하는 프로세스를 간소화하도록 설계되었습니다.  <xref:System.Windows.Forms.BindingSource> 구성 요소는 바인딩하는 다른 컨트롤에 대한 통로 및 데이터 소스 역할을 합니다.  내부 데이터 목록에 명령을 전달하는 동안 폼의 데이터 연결에 대한 추상화를 제공합니다.  또한 구성 요소 자체가 데이터 소스 역할을 하도록 데이터를 직접 추가할 수 있습니다.  
+# <a name="bindingsource-component-overview"></a><span data-ttu-id="976bb-102">BindingSource 구성 요소 개요</span><span class="sxs-lookup"><span data-stu-id="976bb-102">BindingSource Component Overview</span></span>
+<span data-ttu-id="976bb-103"><xref:System.Windows.Forms.BindingSource> 구성 요소는 내부 데이터 소스에 컨트롤을 바인딩하는 프로세스를 간소화하도록 설계되었습니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-103">The <xref:System.Windows.Forms.BindingSource> component is designed to simplify the process of binding controls to an underlying data source.</span></span> <span data-ttu-id="976bb-104"><xref:System.Windows.Forms.BindingSource> 구성 요소는 바인딩하는 다른 컨트롤에 대한 통로 및 데이터 소스 역할을 합니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-104">The <xref:System.Windows.Forms.BindingSource> component acts as both a conduit and a data source for other controls to bind to.</span></span> <span data-ttu-id="976bb-105">내부 데이터 목록에 명령을 전달하는 동안 폼의 데이터 연결에 대한 추상화를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-105">It provides an abstraction of your form's data connection while passing through commands to the underlying list of data.</span></span> <span data-ttu-id="976bb-106">또한 구성 요소 자체가 데이터 소스 역할을 하도록 데이터를 직접 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-106">Additionally, you can add data directly to it, so that the component itself functions as a data source.</span></span>  
   
-## 중개자로 작동하는 BindingSource 구성 요소  
- <xref:System.Windows.Forms.BindingSource> 구성 요소는 폼의 일부 또는 모든 컨트롤에 대한 데이터 소스 역할을 합니다.  Visual Studio에서는 **속성** 창에서 액세스할 수 있는 `DataBindings` 속성을 통해 <xref:System.Windows.Forms.BindingSource>를 컨트롤에 바인딩할 수 있습니다.  [방법: 디자이너를 사용하여 Windows Forms 컨트롤에 BindingSource 구성 요소 바인딩](../../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)을 참조하세요.  
+## <a name="bindingsource-component-as-an-intermediary"></a><span data-ttu-id="976bb-107">중개자로 작동하는 BindingSource 구성 요소</span><span class="sxs-lookup"><span data-stu-id="976bb-107">BindingSource Component as an Intermediary</span></span>  
+ <span data-ttu-id="976bb-108"><xref:System.Windows.Forms.BindingSource> 구성 요소는 폼의 일부 또는 모든 컨트롤에 대한 데이터 소스 역할을 합니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-108">The <xref:System.Windows.Forms.BindingSource> component acts as the data source for some or all of the controls on the form.</span></span> <span data-ttu-id="976bb-109">Visual Studio에서의 <xref:System.Windows.Forms.BindingSource> 방법으로 컨트롤에 바인딩할 수는 `DataBindings` 에서 액세스할 수 있는 속성의 **속성** 창.</span><span class="sxs-lookup"><span data-stu-id="976bb-109">In Visual Studio, the <xref:System.Windows.Forms.BindingSource> can be bound to a control by means of the `DataBindings` property, which is accessible from the **Properties** window.</span></span> <span data-ttu-id="976bb-110">[방법: 디자이너를 사용하여 Windows Forms 컨트롤에 BindingSource 구성 요소 바인딩](../../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="976bb-110">Also see [How to: Bind Windows Forms Controls with the BindingSource Component Using the Designer](../../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md).</span></span>  
   
- 개체의 단순 속성이나 기본 컬렉션\(예: <xref:System.Collections.ArrayList>\)과 같은 간단한 데이터 소스 및 데이터베이스 테이블과 같은 복잡한 데이터 소스 둘 다에 <xref:System.Windows.Forms.BindingSource> 구성 요소를 바인딩할 수 있습니다.  <xref:System.Windows.Forms.BindingSource> 구성 요소는 바인딩 및 통화 관리 서비스를 제공하는 중간자 역할을 합니다.  디자인 타임 또는 런타임에 해당 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 및 <xref:System.Windows.Forms.BindingSource.DataMember%2A> 속성을 각각 데이터베이스와 테이블로 설정하여 <xref:System.Windows.Forms.BindingSource> 구성 요소를 복잡한 데이터 소스에 바인딩할 수 있습니다.  다음 그림에서는 <xref:System.Windows.Forms.BindingSource> 구성 요소가 기존 데이터 바인딩 아키텍처에 들어가는 위치를 보여 줍니다.  
+ <span data-ttu-id="976bb-111">개체의 단순 속성이나 기본 컬렉션(예: <xref:System.Collections.ArrayList>)과 같은 간단한 데이터 소스 및 데이터베이스 테이블과 같은 복잡한 데이터 소스 둘 다에 <xref:System.Windows.Forms.BindingSource> 구성 요소를 바인딩할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-111">You can bind the <xref:System.Windows.Forms.BindingSource> component to both simple data sources, like a single property of an object or a basic collection like <xref:System.Collections.ArrayList>, and complex data sources, like a database table.</span></span> <span data-ttu-id="976bb-112"><xref:System.Windows.Forms.BindingSource> 구성 요소는 바인딩 및 통화 관리 서비스를 제공하는 중간자 역할을 합니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-112">The <xref:System.Windows.Forms.BindingSource> component acts as an intermediary that provides binding and currency management services.</span></span> <span data-ttu-id="976bb-113">디자인 타임 또는 런타임에 해당 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 및 <xref:System.Windows.Forms.BindingSource.DataMember%2A> 속성을 각각 데이터베이스와 테이블로 설정하여 <xref:System.Windows.Forms.BindingSource> 구성 요소를 복잡한 데이터 소스에 바인딩할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-113">At design time or run time, you can bind a <xref:System.Windows.Forms.BindingSource> component to a complex data source by setting its <xref:System.Windows.Forms.BindingSource.DataSource%2A> and <xref:System.Windows.Forms.BindingSource.DataMember%2A> properties to the database and table, respectively.</span></span> <span data-ttu-id="976bb-114">다음 그림에서는 <xref:System.Windows.Forms.BindingSource> 구성 요소가 기존 데이터 바인딩 아키텍처에 들어가는 위치를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-114">The following illustration demonstrates where the <xref:System.Windows.Forms.BindingSource> component fits into the existing data-binding architecture.</span></span>  
   
- ![바인딩 소스 및 데이터 바인딩 아키텍처](../../../../docs/framework/winforms/controls/media/net-bindsrcdatabindarch.gif "NET\_BindSrcDataBindArch")  
+ <span data-ttu-id="976bb-115">![BindingSource 및 데이터 바인딩 아키텍처](../../../../docs/framework/winforms/controls/media/net-bindsrcdatabindarch.gif "NET_BindSrcDataBindArch")</span><span class="sxs-lookup"><span data-stu-id="976bb-115">![Binding Source and Data Binding Architecture](../../../../docs/framework/winforms/controls/media/net-bindsrcdatabindarch.gif "NET_BindSrcDataBindArch")</span></span>  
   
 > [!NOTE]
->  디자인 타임에 데이터 창에서 빈 폼으로 데이터베이스 테이블 끌기와 같은 일부 작업은 <xref:System.Windows.Forms.BindingSource> 구성 요소를 만들고, 내부 데이터 소스에 바인딩한 다음 하나의 작업에서 모든 데이터 인식 컨트롤을 추가합니다.  [Visual Studio에서 데이터에 Windows Forms 컨트롤 바인딩](../Topic/Bind%20Windows%20Forms%20controls%20to%20data%20in%20Visual%20Studio.md)을 참조하세요.  
+>  <span data-ttu-id="976bb-116">디자인 타임에 데이터 창에서 빈 폼으로 데이터베이스 테이블 끌기와 같은 일부 작업은 <xref:System.Windows.Forms.BindingSource> 구성 요소를 만들고, 내부 데이터 소스에 바인딩한 다음 하나의 작업에서 모든 데이터 인식 컨트롤을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-116">At design time, some actions, like dragging a database table from a data window onto a blank form, will create the <xref:System.Windows.Forms.BindingSource> component, bind it to the underlying data source, and add data-aware controls all in one operation.</span></span> <span data-ttu-id="976bb-117">[Visual Studio에서 데이터에 Windows Forms 컨트롤 바인딩](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="976bb-117">Also see [Bind Windows Forms controls to data in Visual Studio](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio).</span></span>  
   
-## 데이터 소스로 작동하는 BindingSource 구성 요소  
- 먼저 바인딩할 목록을 지정하지 않고 <xref:System.Windows.Forms.BindingSource> 구성 요소에 항목 추가를 시작하는 경우 구성 요소는 목록 스타일 데이터 소스처럼 작동하며 이러한 추가된 항목을 수락합니다.  
+## <a name="bindingsource-component-as-a-data-source"></a><span data-ttu-id="976bb-118">데이터 소스로 작동하는 BindingSource 구성 요소</span><span class="sxs-lookup"><span data-stu-id="976bb-118">BindingSource Component as a Data Source</span></span>  
+ <span data-ttu-id="976bb-119">먼저 바인딩할 목록을 지정하지 않고 <xref:System.Windows.Forms.BindingSource> 구성 요소에 항목 추가를 시작하는 경우 구성 요소는 목록 스타일 데이터 소스처럼 작동하며 이러한 추가된 항목을 수락합니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-119">If you start adding items to the <xref:System.Windows.Forms.BindingSource> component without first specifying a list to be bound to, the component will act like a list-style data source and accept these added items.</span></span>  
   
- 또한 항목이 목록에 추가되기 전에 <xref:System.Windows.Forms.BindingSource.AddingNew> 메서드를 호출할 때 발생하는 <xref:System.Windows.Forms.BindingSource.AddNew%2A> 이벤트를 통해 사용자 지정 "AddNew" 기능을 제공하는 코드를 작성할 수 있습니다.  자세한 내용은 [BindingSource 구성 요소 아키텍처](../../../../docs/framework/winforms/controls/bindingsource-component-architecture.md)를 참조하세요.  
+ <span data-ttu-id="976bb-120">또한 항목이 목록에 추가되기 전에 <xref:System.Windows.Forms.BindingSource.AddingNew> 메서드를 호출할 때 발생하는 <xref:System.Windows.Forms.BindingSource.AddNew%2A> 이벤트를 통해 사용자 지정 "AddNew" 기능을 제공하는 코드를 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-120">Additionally, you can write code to provide custom "AddNew" functionality by means of the <xref:System.Windows.Forms.BindingSource.AddingNew> event, which is raised when the <xref:System.Windows.Forms.BindingSource.AddNew%2A> method is called prior to the item being added to the list.</span></span> <span data-ttu-id="976bb-121">자세한 내용은 [BindingSource 구성 요소 아키텍처](../../../../docs/framework/winforms/controls/bindingsource-component-architecture.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="976bb-121">For more information, see [BindingSource Component Architecture](../../../../docs/framework/winforms/controls/bindingsource-component-architecture.md).</span></span>  
   
-## 탐색  
- 폼에서 데이터를 탐색해야 하는 사용자의 경우 <xref:System.Windows.Forms.BindingNavigator> 구성 요소를 사용하면 <xref:System.Windows.Forms.BindingSource> 구성 요소에 따라 데이터를 탐색 및 조작할 수 있습니다.  자세한 내용은 [BindingNavigator 컨트롤](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)을 참조하세요.  
+## <a name="navigation"></a><span data-ttu-id="976bb-122">탐색</span><span class="sxs-lookup"><span data-stu-id="976bb-122">Navigation</span></span>  
+ <span data-ttu-id="976bb-123">폼에서 데이터를 탐색해야 하는 사용자의 경우 <xref:System.Windows.Forms.BindingNavigator> 구성 요소를 사용하면 <xref:System.Windows.Forms.BindingSource> 구성 요소에 따라 데이터를 탐색 및 조작할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-123">For users that need to navigate the data on a form, the <xref:System.Windows.Forms.BindingNavigator> component enables you to navigate and manipulate data, in coordination with a <xref:System.Windows.Forms.BindingSource> component.</span></span> <span data-ttu-id="976bb-124">자세한 내용은 [BindingNavigator 컨트롤](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="976bb-124">For more information, see [BindingNavigator Control](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md).</span></span>  
   
-## 데이터 조작  
- <xref:System.Windows.Forms.BindingSource>는 모든 바인딩에 대한 <xref:System.Windows.Forms.CurrencyManager> 역할을 하므로 데이터 소스와 관련해서 통화 및 위치 정보에 대한 액세스를 제공합니다.  다음 표에서는 <xref:System.Windows.Forms.BindingSource> 구성 요소가 내부 데이터 액세스 및 조작을 위해 제공하는 멤버를 보여 줍니다.  
+## <a name="data-manipulation"></a><span data-ttu-id="976bb-125">데이터 조작</span><span class="sxs-lookup"><span data-stu-id="976bb-125">Data Manipulation</span></span>  
+ <span data-ttu-id="976bb-126"><xref:System.Windows.Forms.BindingSource>는 모든 바인딩에 대한 <xref:System.Windows.Forms.CurrencyManager> 역할을 하므로 데이터 소스와 관련해서 통화 및 위치 정보에 대한 액세스를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-126">The: <xref:System.Windows.Forms.BindingSource> acts as a <xref:System.Windows.Forms.CurrencyManager> for all of its bindings and can, therefore, provide access to currency and position information regarding the data source.</span></span> <span data-ttu-id="976bb-127">다음 표에서는 <xref:System.Windows.Forms.BindingSource> 구성 요소가 내부 데이터 액세스 및 조작을 위해 제공하는 멤버를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-127">The following table shows the members that the <xref:System.Windows.Forms.BindingSource> component provides for accessing and manipulating the underlying data.</span></span>  
   
-|멤버|설명|  
-|--------|--------|  
-|<xref:System.Windows.Forms.BindingSource.Current%2A> 속성|데이터 소스의 현재 항목을 가져옵니다.|  
-|<xref:System.Windows.Forms.BindingSource.Position%2A> 속성|내부 목록에서 현재 위치를 가져오거나 설정합니다.|  
-|<xref:System.Windows.Forms.BindingSource.List%2A> 속성|<xref:System.Windows.Forms.BindingSource.DataSource%2A> 및 <xref:System.Windows.Forms.BindingSource.DataMember%2A>의 평가인 목록을 가져옵니다.  <xref:System.Windows.Forms.BindingSource.DataMember%2A>가 설정되지 않은 경우 <xref:System.Windows.Forms.BindingSource.DataSource%2A>에 지정된 목록을 반환합니다.|  
-|<xref:System.Windows.Forms.BindingSource.Insert%2A> 메서드|목록의 지정된 인덱스에 항목을 삽입합니다.|  
-|<xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> 메서드|목록에서 현재 항목을 제거합니다.|  
-|<xref:System.Windows.Forms.BindingSource.EndEdit%2A> 메서드|내부 데이터 소스에 보류 중인 변경 내용을 적용합니다.|  
-|<xref:System.Windows.Forms.BindingSource.CancelEdit%2A> 메서드|현재 편집 작업을 취소합니다.|  
-|<xref:System.Windows.Forms.BindingSource.AddNew%2A> 메서드|내부 목록에 새 항목을 추가합니다.  데이터 소스가 <xref:System.ComponentModel.IBindingList>를 구현하고 <xref:System.Windows.Forms.BindingSource.AddingNew> 이벤트에서 항목을 반환하는 경우 이 항목을 추가합니다.  그러지 않으면 요청이 목록의 <xref:System.ComponentModel.IBindingList.AddNew%2A> 메서드에 전달됩니다.  내부 목록이 <xref:System.ComponentModel.IBindingList>가 아닌 경우 public 기본 생성자를 통해 항목이 자동으로 만들어집니다.|  
+|<span data-ttu-id="976bb-128">멤버</span><span class="sxs-lookup"><span data-stu-id="976bb-128">Member</span></span>|<span data-ttu-id="976bb-129">설명</span><span class="sxs-lookup"><span data-stu-id="976bb-129">Description</span></span>|  
+|------------|-----------------|  
+|<span data-ttu-id="976bb-130"><xref:System.Windows.Forms.BindingSource.Current%2A> 속성</span><span class="sxs-lookup"><span data-stu-id="976bb-130"><xref:System.Windows.Forms.BindingSource.Current%2A> property</span></span>|<span data-ttu-id="976bb-131">데이터 소스의 현재 항목을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-131">Gets the current item of the data source.</span></span>|  
+|<span data-ttu-id="976bb-132"><xref:System.Windows.Forms.BindingSource.Position%2A> 속성</span><span class="sxs-lookup"><span data-stu-id="976bb-132"><xref:System.Windows.Forms.BindingSource.Position%2A> property</span></span>|<span data-ttu-id="976bb-133">내부 목록에서 현재 위치를 가져오거나 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-133">Gets or sets the current position in the underlying list.</span></span>|  
+|<span data-ttu-id="976bb-134"><xref:System.Windows.Forms.BindingSource.List%2A> 속성</span><span class="sxs-lookup"><span data-stu-id="976bb-134"><xref:System.Windows.Forms.BindingSource.List%2A> property</span></span>|<span data-ttu-id="976bb-135"><xref:System.Windows.Forms.BindingSource.DataSource%2A> 및 <xref:System.Windows.Forms.BindingSource.DataMember%2A>의 평가인 목록을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-135">Gets the list that is the evaluation of the <xref:System.Windows.Forms.BindingSource.DataSource%2A> and <xref:System.Windows.Forms.BindingSource.DataMember%2A> evaluation.</span></span> <span data-ttu-id="976bb-136"><xref:System.Windows.Forms.BindingSource.DataMember%2A>가 설정되지 않은 경우 <xref:System.Windows.Forms.BindingSource.DataSource%2A>에 지정된 목록을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-136">If <xref:System.Windows.Forms.BindingSource.DataMember%2A> is not set, returns the list specified by <xref:System.Windows.Forms.BindingSource.DataSource%2A>.</span></span>|  
+|<span data-ttu-id="976bb-137"><xref:System.Windows.Forms.BindingSource.Insert%2A> 메서드</span><span class="sxs-lookup"><span data-stu-id="976bb-137"><xref:System.Windows.Forms.BindingSource.Insert%2A> method</span></span>|<span data-ttu-id="976bb-138">목록의 지정된 인덱스에 항목을 삽입합니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-138">Inserts an item in the list at the specified index.</span></span>|  
+|<span data-ttu-id="976bb-139"><xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> 메서드</span><span class="sxs-lookup"><span data-stu-id="976bb-139"><xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> method</span></span>|<span data-ttu-id="976bb-140">목록에서 현재 항목을 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-140">Removes the current item from the list.</span></span>|  
+|<span data-ttu-id="976bb-141"><xref:System.Windows.Forms.BindingSource.EndEdit%2A> 메서드</span><span class="sxs-lookup"><span data-stu-id="976bb-141"><xref:System.Windows.Forms.BindingSource.EndEdit%2A> method</span></span>|<span data-ttu-id="976bb-142">내부 데이터 소스에 보류 중인 변경 내용을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-142">Applies pending changes to the underlying data source.</span></span>|  
+|<span data-ttu-id="976bb-143"><xref:System.Windows.Forms.BindingSource.CancelEdit%2A> 메서드</span><span class="sxs-lookup"><span data-stu-id="976bb-143"><xref:System.Windows.Forms.BindingSource.CancelEdit%2A> method</span></span>|<span data-ttu-id="976bb-144">현재 편집 작업을 취소합니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-144">Cancels the current edit operation.</span></span>|  
+|<span data-ttu-id="976bb-145"><xref:System.Windows.Forms.BindingSource.AddNew%2A> 메서드</span><span class="sxs-lookup"><span data-stu-id="976bb-145"><xref:System.Windows.Forms.BindingSource.AddNew%2A> method</span></span>|<span data-ttu-id="976bb-146">내부 목록에 새 항목을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-146">Adds a new item to the underlying list.</span></span> <span data-ttu-id="976bb-147">데이터 소스가 <xref:System.ComponentModel.IBindingList>를 구현하고 <xref:System.Windows.Forms.BindingSource.AddingNew> 이벤트에서 항목을 반환하는 경우 이 항목을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-147">If the data source implements <xref:System.ComponentModel.IBindingList> and returns an item from the <xref:System.Windows.Forms.BindingSource.AddingNew> event, adds this item.</span></span> <span data-ttu-id="976bb-148">그러지 않으면 요청이 목록의 <xref:System.ComponentModel.IBindingList.AddNew%2A> 메서드에 전달됩니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-148">Otherwise, the request is passed to the list's <xref:System.ComponentModel.IBindingList.AddNew%2A> method.</span></span> <span data-ttu-id="976bb-149">내부 목록이 <xref:System.ComponentModel.IBindingList>가 아닌 경우 public 기본 생성자를 통해 항목이 자동으로 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-149">If the underlying list is not an <xref:System.ComponentModel.IBindingList>, the item is automatically created through its public default constructor.</span></span>|  
   
-## 정렬 및 필터링  
- 일반적으로 데이터 소스의 정렬 또는 필터링된 뷰를 사용해야 합니다.  다음 표에서는 <xref:System.Windows.Forms.BindingSource> 구성 요소 데이터 소스가 제공하는 멤버를 보여 줍니다.  
+## <a name="sorting-and-filtering"></a><span data-ttu-id="976bb-150">정렬 및 필터링</span><span class="sxs-lookup"><span data-stu-id="976bb-150">Sorting and Filtering</span></span>  
+ <span data-ttu-id="976bb-151">일반적으로 데이터 소스의 정렬 또는 필터링된 뷰를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-151">Usually, you should work with an ordered or filtered view of the data source.</span></span> <span data-ttu-id="976bb-152">다음 표에서는 <xref:System.Windows.Forms.BindingSource> 구성 요소 데이터 소스가 제공하는 멤버를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-152">The following table shows the members that the <xref:System.Windows.Forms.BindingSource> component data source provides.</span></span>  
   
-|멤버|설명|  
-|--------|--------|  
-|<xref:System.Windows.Forms.BindingSource.Sort%2A> 속성|데이터 소스가 <xref:System.ComponentModel.IBindingList>인 경우 정렬에 사용되는 열 이름과 정렬 순서 정보를 가져오거나 설정합니다.  데이터 소스가 <xref:System.ComponentModel.IBindingListView>이고 고급 정렬을 지원하는 경우 정렬에 사용되는 여러 개의 열 이름과 정렬 순서 정보를 가져옵니다.|  
-|<xref:System.Windows.Forms.BindingSource.Filter%2A> 속성|데이터 소스가 <xref:System.ComponentModel.IBindingListView>인 경우 표시할 행을 필터링하는 데 사용하는 식을 가져오거나 설정합니다.|  
+|<span data-ttu-id="976bb-153">멤버</span><span class="sxs-lookup"><span data-stu-id="976bb-153">Member</span></span>|<span data-ttu-id="976bb-154">설명</span><span class="sxs-lookup"><span data-stu-id="976bb-154">Description</span></span>|  
+|------------|-----------------|  
+|<span data-ttu-id="976bb-155"><xref:System.Windows.Forms.BindingSource.Sort%2A> 속성</span><span class="sxs-lookup"><span data-stu-id="976bb-155"><xref:System.Windows.Forms.BindingSource.Sort%2A> property</span></span>|<span data-ttu-id="976bb-156">데이터 소스가 <xref:System.ComponentModel.IBindingList>인 경우 정렬에 사용되는 열 이름과 정렬 순서 정보를 가져오거나 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-156">If the data source is an <xref:System.ComponentModel.IBindingList>, gets or sets a column name used for sorting and sort order information.</span></span> <span data-ttu-id="976bb-157">데이터 소스가 <xref:System.ComponentModel.IBindingListView>이고 고급 정렬을 지원하는 경우 정렬에 사용되는 여러 개의 열 이름과 정렬 순서 정보를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-157">If the data source is an <xref:System.ComponentModel.IBindingListView> and supports advanced sorting, gets multiple column names used for sorting and sort order information</span></span>|  
+|<span data-ttu-id="976bb-158"><xref:System.Windows.Forms.BindingSource.Filter%2A> 속성</span><span class="sxs-lookup"><span data-stu-id="976bb-158"><xref:System.Windows.Forms.BindingSource.Filter%2A> property</span></span>|<span data-ttu-id="976bb-159">데이터 소스가 <xref:System.ComponentModel.IBindingListView>인 경우 표시할 행을 필터링하는 데 사용하는 식을 가져오거나 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="976bb-159">If the data source is an <xref:System.ComponentModel.IBindingListView>, gets or sets the expression used to filter which rows are viewed.</span></span>|  
   
-## 참고 항목  
- <xref:System.Windows.Forms.BindingSource>   
- <xref:System.Windows.Forms.BindingNavigator>   
- [BindingSource 구성 요소 아키텍처](../../../../docs/framework/winforms/controls/bindingsource-component-architecture.md)   
- [BindingSource 구성 요소](../../../../docs/framework/winforms/controls/bindingsource-component.md)   
- [BindingNavigator 컨트롤](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)   
- [Windows Forms 데이터 바인딩](../../../../docs/framework/winforms/windows-forms-data-binding.md)   
- [Windows Forms에 사용할 수 있는 컨트롤](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="976bb-160">참고 항목</span><span class="sxs-lookup"><span data-stu-id="976bb-160">See Also</span></span>  
+ <xref:System.Windows.Forms.BindingSource>  
+ <xref:System.Windows.Forms.BindingNavigator>  
+ [<span data-ttu-id="976bb-161">BindingSource 구성 요소 아키텍처</span><span class="sxs-lookup"><span data-stu-id="976bb-161">BindingSource Component Architecture</span></span>](../../../../docs/framework/winforms/controls/bindingsource-component-architecture.md)  
+ [<span data-ttu-id="976bb-162">BindingSource 구성 요소</span><span class="sxs-lookup"><span data-stu-id="976bb-162">BindingSource Component</span></span>](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
+ [<span data-ttu-id="976bb-163">BindingNavigator 컨트롤</span><span class="sxs-lookup"><span data-stu-id="976bb-163">BindingNavigator Control</span></span>](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
+ [<span data-ttu-id="976bb-164">Windows Forms 데이터 바인딩</span><span class="sxs-lookup"><span data-stu-id="976bb-164">Windows Forms Data Binding</span></span>](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ [<span data-ttu-id="976bb-165">Windows Forms에 사용할 수 있는 컨트롤</span><span class="sxs-lookup"><span data-stu-id="976bb-165">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

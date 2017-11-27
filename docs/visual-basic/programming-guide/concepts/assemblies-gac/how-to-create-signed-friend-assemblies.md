@@ -1,55 +1,47 @@
 ---
-title: "방법: 서명 된 Friend 어셈블리 (Visual Basic) 만들기 | Microsoft 문서"
+title: "방법: 서명 된 Friend 어셈블리 (Visual Basic) 만들기"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 1a69f7e833800ec7417bc35fad763f1001b3e7f9
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f87f816992bdfa9ed347c35ba651c59187551772
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>방법: 서명 된 Friend 어셈블리 (Visual Basic) 만들기
-이 예제에는 어셈블리에 강력한 이름을 갖고 friend 어셈블리를 사용 하는 방법을 보여 줍니다. 두 어셈블리는 강력한 이름을 지정 해야 합니다. 이 예에서 두 어셈블리가 모두 동일한 키를 사용 하지만 두 어셈블리에 대 한 서로 다른 키를 사용할 수 있습니다.  
+# <a name="how-to-create-signed-friend-assemblies-visual-basic"></a><span data-ttu-id="fc8e0-102">방법: 서명 된 Friend 어셈블리 (Visual Basic) 만들기</span><span class="sxs-lookup"><span data-stu-id="fc8e0-102">How to: Create Signed Friend Assemblies (Visual Basic)</span></span>
+<span data-ttu-id="fc8e0-103">이 예제에서는 강력한 이름을 가진 어셈블리와 함께 friend 어셈블리를 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="fc8e0-103">This example shows how to use friend assemblies with assemblies that have strong names.</span></span> <span data-ttu-id="fc8e0-104">두 어셈블리에 모두 강력한 이름을 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fc8e0-104">Both assemblies must be strong named.</span></span> <span data-ttu-id="fc8e0-105">이 예제의 두 어셈블리는 모두 동일한 키를 사용하지만 두 어셈블리에 서로 다른 키를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fc8e0-105">Although both assemblies in this example use the same keys, you could use different keys for two assemblies.</span></span>  
   
-### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>서명된 된 어셈블리 및 friend 어셈블리를 만들려면  
+### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a><span data-ttu-id="fc8e0-106">서명된 어셈블리 및 friend 어셈블리를 만들려면</span><span class="sxs-lookup"><span data-stu-id="fc8e0-106">To create a signed assembly and a friend assembly</span></span>  
   
-1.  명령 프롬프트를 엽니다.  
+1.  <span data-ttu-id="fc8e0-107">명령 프롬프트를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="fc8e0-107">Open a command prompt.</span></span>  
   
-2.  키 파일을 생성 하 고 해당 공개 키를 표시 하려면 다음 명령 시퀀스를 사용 하 여 강력한 이름 도구. 자세한 내용은 [Sn.exe(강력한 이름 도구)](https://msdn.microsoft.com/library/k5b5tt23)를 참조하세요.  
+2.  <span data-ttu-id="fc8e0-108">강력한 이름 도구와 함께 다음 명령 시퀀스를 사용하여 키 파일을 생성하고 해당 공개 키를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="fc8e0-108">Use the following sequence of commands with the Strong Name tool to generate a keyfile and to display its public key.</span></span> <span data-ttu-id="fc8e0-109">자세한 내용은 [Sn.exe(강력한 이름 도구)](https://msdn.microsoft.com/library/k5b5tt23)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="fc8e0-109">For more information, see [Sn.exe (Strong Name Tool)](https://msdn.microsoft.com/library/k5b5tt23).</span></span>  
   
-    1.  이 예제에 대 한 강력한 이름 키를 생성 하 고 FriendAssemblies.snk 파일에 저장 합니다.  
+    1.  <span data-ttu-id="fc8e0-110">이 예제에 대한 강력한 이름 키를 생성하고 FriendAssemblies.snk 파일에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="fc8e0-110">Generate a strong-name key for this example and store it in the file FriendAssemblies.snk:</span></span>  
   
          `sn -k FriendAssemblies.snk`  
   
-    2.  FriendAssemblies.snk에서 공개 키를 추출 하 고 FriendAssemblies.publickey에 넣습니다.  
+    2.  <span data-ttu-id="fc8e0-111">FriendAssemblies.snk에서 공개 키를 추출하고 FriendAssemblies.publickey에 넣습니다.</span><span class="sxs-lookup"><span data-stu-id="fc8e0-111">Extract the public key from FriendAssemblies.snk and put it into FriendAssemblies.publickey:</span></span>  
   
          `sn -p FriendAssemblies.snk FriendAssemblies.publickey`  
   
-    3.  FriendAssemblies.publickey 파일에 저장 된 공개 키를 표시 합니다.  
+    3.  <span data-ttu-id="fc8e0-112">FriendAssemblies.publickey 파일에 저장된 공개 키를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="fc8e0-112">Display the public key stored in the file FriendAssemblies.publickey:</span></span>  
   
          `sn -tp FriendAssemblies.publickey`  
   
-3.  라는 Visual Basic 파일을 만듭니다 `friend_signed_A` 하는 다음 코드를 포함 합니다. 코드를 사용 하는 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>friend_signed_B friend 어셈블리 선언 하는 특성입니다.</xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+3.  <span data-ttu-id="fc8e0-113">Visual Basic 파일을 만듭니다 `friend_signed_A` 다음 코드가 들어 있는입니다.</span><span class="sxs-lookup"><span data-stu-id="fc8e0-113">Create a Visual Basic file named `friend_signed_A` that contains the following code.</span></span> <span data-ttu-id="fc8e0-114">코드에서는 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성을 사용하여 friend_signed_B를 friend 어셈블리로 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="fc8e0-114">The code uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to declare friend_signed_B as a friend assembly.</span></span>  
   
-     강력한 이름 도구를 실행할 때마다 새 공개 키를 생성 합니다. 따라서 다음 예제와 같이 방금 생성 한 공개 키도 다음 코드에 공개 키를 대체 해야 있습니다.  
+     <span data-ttu-id="fc8e0-115">강력한 이름 도구는 실행할 때마다 새 공개 키를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="fc8e0-115">The Strong Name tool generates a new public key every time it runs.</span></span> <span data-ttu-id="fc8e0-116">따라서 다음 예제와 같이 다음 코드의 공개 키를 방금 생성한 공개 키로 대체해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fc8e0-116">Therefore, you must replace the public key in the following code with the public key you just generated, as shown in the following example.</span></span>  
   
     ```vb  
     ' friend_signed_A.vb  
@@ -66,13 +58,13 @@ ms.lasthandoff: 03/13/2017
     End Class  
     ```  
   
-4.  컴파일 및 friend_signed_A 다음 명령을 사용 하 여 로그인 합니다.  
+4.  <span data-ttu-id="fc8e0-117">다음 명령을 사용하여 friend_signed_A를 컴파일하고 서명합니다.</span><span class="sxs-lookup"><span data-stu-id="fc8e0-117">Compile and sign friend_signed_A by using the following command.</span></span>  
   
     ```vb  
     Vbc /target:library /keyfile:FriendAssemblies.snk friend_signed_A.vb  
     ```  
   
-5.  라는 Visual Basic 파일 만들기 `friend_signed_B` 다음 코드를 포함 합니다. Friend_signed_B의 코드에 액세스할 수 friend_signed_A friend_signed_B friend 어셈블리를 지정 하므로 `Friend` 형식과 friend_signed_A에서 멤버입니다. 다음 코드를 포함 하는 파일.  
+5.  <span data-ttu-id="fc8e0-118">라는 Visual Basic 파일 만들기 `friend_signed_B` 다음 코드를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="fc8e0-118">Create a Visual Basic file that is named `friend_signed_B` and contains the following code.</span></span> <span data-ttu-id="fc8e0-119">friend_signed_A는 friend_signed_B를 friend 어셈블리로 지정하기 때문에 friend_signed_B의 코드는 friend_signed_A의 `Friend` 형식과 멤버에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fc8e0-119">Because friend_signed_A specifies friend_signed_B as a friend assembly, the code in friend_signed_B can access `Friend` types and members from friend_signed_A.</span></span> <span data-ttu-id="fc8e0-120">파일에는 다음 코드가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fc8e0-120">The file contains the following code.</span></span>  
   
     ```vb  
     ' friend_signed_B.vb  
@@ -86,27 +78,27 @@ ms.lasthandoff: 03/13/2017
     End Module  
     ```  
   
-6.  컴파일 및 friend_signed_B 다음 명령을 사용 하 여 로그인 합니다.  
+6.  <span data-ttu-id="fc8e0-121">다음 명령을 사용하여 friend_signed_B를 컴파일하고 서명합니다.</span><span class="sxs-lookup"><span data-stu-id="fc8e0-121">Compile and sign friend_signed_B by using the following command.</span></span>  
   
     ```vb  
     Vbc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll friend_signed_B.vb  
     ```  
   
-     컴파일러에서 생성 된 어셈블리의 이름에 전달 된 friend 어셈블리 이름과 같아야 합니다.는 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>특성.</xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 사용 하 여 어셈블리를 명시적으로 설정할 수는 `/out` 컴파일러 옵션입니다. 자세한 내용은 참조 [/out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md)합니다.  
+     <span data-ttu-id="fc8e0-122">컴파일러에서 생성된 어셈블리 이름은 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성에 전달된 friend 어셈블리 이름과 일치해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fc8e0-122">The name of the assembly generated by the compiler must match the friend assembly name passed to the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute.</span></span> <span data-ttu-id="fc8e0-123">사용 하 여 어셈블리를 명시적으로 설정할 수는 `/out` 컴파일러 옵션입니다.</span><span class="sxs-lookup"><span data-stu-id="fc8e0-123">You can explicitly set the assembly by using the `/out` compiler option.</span></span> <span data-ttu-id="fc8e0-124">자세한 내용은 참조 [/out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="fc8e0-124">For more information, see [/out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md).</span></span>  
   
-7.  Friend_signed_B.exe 파일을 실행 합니다.  
+7.  <span data-ttu-id="fc8e0-125">friend_signed_B.exe 파일을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="fc8e0-125">Run the friend_signed_B.exe file.</span></span>  
   
-     프로그램은 문자열 "Class1.Test"를 인쇄합니다.  
+     <span data-ttu-id="fc8e0-126">프로그램에서 "Class1.Test" 문자열을 인쇄합니다.</span><span class="sxs-lookup"><span data-stu-id="fc8e0-126">The program prints the string "Class1.Test".</span></span>  
   
-## <a name="net-framework-security"></a>.NET Framework 보안  
- 가 유사성 사이는 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>특성 및 <xref:System.Security.Permissions.StrongNameIdentityPermission>클래스가 있습니다.</xref:System.Security.Permissions.StrongNameIdentityPermission> </xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 주요 차이점은 <xref:System.Security.Permissions.StrongNameIdentityPermission>반면 코드의 특정 섹션을 실행 하는 보안 권한을 요구할 수 있습니다는 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>특성의 표시 유형을 제어 `Friend` 형식 및 멤버.</xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> </xref:System.Security.Permissions.StrongNameIdentityPermission>  
+## <a name="net-framework-security"></a><span data-ttu-id="fc8e0-127">.NET Framework 보안</span><span class="sxs-lookup"><span data-stu-id="fc8e0-127">.NET Framework Security</span></span>  
+ <span data-ttu-id="fc8e0-128"><xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성과 <xref:System.Security.Permissions.StrongNameIdentityPermission> 클래스 간에는 유사점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fc8e0-128">There are similarities between the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute and the <xref:System.Security.Permissions.StrongNameIdentityPermission> class.</span></span> <span data-ttu-id="fc8e0-129">주요 차이점은 <xref:System.Security.Permissions.StrongNameIdentityPermission>은 코드의 특정 섹션을 실행하는 보안 권한을 요구할 수 있는 반면, <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성은 `Friend` 형식 및 멤버의 표시 유형을 제어한다는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="fc8e0-129">The main difference is that <xref:System.Security.Permissions.StrongNameIdentityPermission> can demand security permissions to run a particular section of code, whereas the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute controls the visibility of `Friend` types and members.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute></xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>   
- [어셈블리 및 전역 어셈블리 캐시 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)   
- [Friend 어셈블리 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)   
- [방법: 서명 되지 않은 Friend 어셈블리 (Visual Basic) 만들기](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)   
- [/keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)   
- [Sn.exe (강력한 이름 도구)](https://msdn.microsoft.com/library/k5b5tt23)   
- [강력한 이름의 어셈블리 만들기 및 사용](https://msdn.microsoft.com/library/xwb8f617)   
- [프로그래밍 개념](../../../../visual-basic/programming-guide/concepts/index.md)
+## <a name="see-also"></a><span data-ttu-id="fc8e0-130">참고 항목</span><span class="sxs-lookup"><span data-stu-id="fc8e0-130">See Also</span></span>  
+ <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+ [<span data-ttu-id="fc8e0-131">어셈블리와 전역 어셈블리 캐시(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fc8e0-131">Assemblies and the Global Assembly Cache (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+ [<span data-ttu-id="fc8e0-132">Friend 어셈블리 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fc8e0-132">Friend Assemblies (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+ [<span data-ttu-id="fc8e0-133">방법: 서명 되지 않은 Friend 어셈블리 (Visual Basic) 만들기</span><span class="sxs-lookup"><span data-stu-id="fc8e0-133">How to: Create Unsigned Friend Assemblies (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
+ [<span data-ttu-id="fc8e0-134">/keyfile</span><span class="sxs-lookup"><span data-stu-id="fc8e0-134">/keyfile</span></span>](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
+ [<span data-ttu-id="fc8e0-135">Sn.exe(강력한 이름 도구)</span><span class="sxs-lookup"><span data-stu-id="fc8e0-135">Sn.exe (Strong Name Tool)</span></span>](https://msdn.microsoft.com/library/k5b5tt23)  
+ [<span data-ttu-id="fc8e0-136">강력한 이름의 어셈블리 만들기 및 사용</span><span class="sxs-lookup"><span data-stu-id="fc8e0-136">Creating and Using Strong-Named Assemblies</span></span>](https://msdn.microsoft.com/library/xwb8f617)  
+ [<span data-ttu-id="fc8e0-137">프로그래밍 개념</span><span class="sxs-lookup"><span data-stu-id="fc8e0-137">Programming Concepts</span></span>](../../../../visual-basic/programming-guide/concepts/index.md)

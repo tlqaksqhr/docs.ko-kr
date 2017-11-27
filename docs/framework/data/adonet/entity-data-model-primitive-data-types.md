@@ -1,50 +1,53 @@
 ---
-title: "엔터티 데이터 모델: 기본 데이터 형식 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "엔터티 데이터 모델: 기본 데이터 형식"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7635168e-0566-4fdd-8391-7941b0d9f787
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 0bfd6a1f2ab938468cc1aa02d6cf4b1eb4d7c530
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 엔터티 데이터 모델: 기본 데이터 형식
-EDM\(엔터티 데이터 모델\)에서는 개념적 모델에서 [속성](../../../../docs/framework/data/adonet/property.md)을 정의하는 데 사용되는 추상 기본 데이터 형식\(예: String, Boolean, Int32 등\) 집합을 지원합니다.  이러한 기본 데이터 형식은 SQL Server 데이터베이스나 CLR\(공용 언어 런타임\)과 같은 저장소 또는 호스팅 환경에서 지원되는 실제 기본 데이터 형식의 프록시입니다.  EDM에서는 기본 데이터 형식에 대한 작업 또는 변환의 의미 체계를 정의하지 않습니다. 이러한 의미 체계는 저장소 또는 호스팅 환경에서 정의됩니다.  일반적으로 EDM의 기본 데이터 형식은 저장소 또는 호스팅 환경에서 해당하는 기본 데이터 형식에 매핑됩니다.  Entity Framework에서 EDM의 기본 형식을 SQL Server 데이터 형식에 매핑하는 방식에 대한 자세한 내용은 [Entity FrameworkTypes용 SqlClient](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)를 참조하세요.  
+# <a name="entity-data-model-primitive-data-types"></a><span data-ttu-id="3e5a9-102">엔터티 데이터 모델: 기본 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="3e5a9-102">Entity Data Model: Primitive Data Types</span></span>
+<span data-ttu-id="3e5a9-103">(EDM (엔터티 데이터 모델) 집합을 정의 하는 데 사용 되는 추상 기본 데이터 형식 (예: 문자열, Boolean, Int32, 및 등)을 지원 [속성](../../../../docs/framework/data/adonet/property.md) 개념적 모델에서.</span><span class="sxs-lookup"><span data-stu-id="3e5a9-103">The Entity Data Model (EDM) supports a set of abstract primitive data types (such as String, Boolean, Int32, and so on) that are used to define [properties](../../../../docs/framework/data/adonet/property.md) in a conceptual model.</span></span> <span data-ttu-id="3e5a9-104">이러한 기본 데이터 형식은 SQL Server 데이터베이스나 CLR(공용 언어 런타임)과 같은 저장소 또는 호스팅 환경에서 지원되는 실제 기본 데이터 형식의 프록시입니다.</span><span class="sxs-lookup"><span data-stu-id="3e5a9-104">These primitive data types are proxies for actual primitive data types that are supported in the storage or hosting environment, such as a SQL Server database or the common language runtime (CLR).</span></span> <span data-ttu-id="3e5a9-105">EDM에서는 기본 데이터 형식에 대한 작업 또는 변환의 의미 체계를 정의하지 않습니다. 이러한 의미 체계는 저장소 또는 호스팅 환경에서 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="3e5a9-105">The EDM does not define the semantics of operations or conversions over primitive data types; these semantics are defined by the storage or hosting environment.</span></span> <span data-ttu-id="3e5a9-106">일반적으로 EDM의 기본 데이터 형식은 저장소 또는 호스팅 환경에서 해당하는 기본 데이터 형식에 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="3e5a9-106">Typically, primitive data types in the EDM are mapped to corresponding primitive data types in the storage or hosting environment.</span></span> <span data-ttu-id="3e5a9-107">Entity Framework 매핑되는 방법을 EDM의 기본 형식은 SQL Server 데이터 형식에 대 한 정보를 참조 하십시오. [Entity FrameworkTypes 용 SqlClient](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="3e5a9-107">For information about how the Entity Framework maps primitive types in the EDM to SQL Server data types, see [SqlClient for Entity FrameworkTypes](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).</span></span>  
   
 > [!NOTE]
->  EDM에서는 기본 데이터 형식 컬렉션을 지원하지 않습니다.  
+>  <span data-ttu-id="3e5a9-108">EDM에서는 기본 데이터 형식 컬렉션을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3e5a9-108">The EDM does not support collections of primitive data types.</span></span>  
   
- EDM의 구조적 데이터 형식에 대한 자세한 내용은 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md) 및 [복합 형식](../../../../docs/framework/data/adonet/complex-type.md)을 참조하세요.  
+ <span data-ttu-id="3e5a9-109">EDM의 구조화 된 데이터 형식에 대 한 정보를 참조 하십시오. [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md) 및 [복합 형식](../../../../docs/framework/data/adonet/complex-type.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="3e5a9-109">For information about structured data types in the EDM, see [entity type](../../../../docs/framework/data/adonet/entity-type.md) and [complex type](../../../../docs/framework/data/adonet/complex-type.md).</span></span>  
   
-## 엔터티 데이터 모델에서 지원되는 기본 데이터 형식  
- 다음 표에서는 EDM에서 지원하는 기본 데이터 형식을 보여 줍니다.  또한 각 기본 데이터 형식에 적용할 수 있는 [패싯](../../../../docs/framework/data/adonet/facet.md)을 보여 줍니다.  
+## <a name="primitive-data-types-supported-in-the-entity-data-model"></a><span data-ttu-id="3e5a9-110">엔터티 데이터 모델에서 지원되는 기본 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="3e5a9-110">Primitive Data Types Supported in the Entity Data Model</span></span>  
+ <span data-ttu-id="3e5a9-111">다음 표에서는 EDM에서 지원하는 기본 데이터 형식을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3e5a9-111">The table below lists the primitive data types supported by the EDM.</span></span> <span data-ttu-id="3e5a9-112">표에 나와 [패싯](../../../../docs/framework/data/adonet/facet.md) 각 기본 데이터 형식에 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3e5a9-112">The table also lists the [facets](../../../../docs/framework/data/adonet/facet.md) that can be applied to each primitive data type.</span></span>  
   
-|기본 데이터 형식|설명|적용 가능한 패싯|  
-|---------------|--------|---------------|  
-|이항|이진 데이터를 포함합니다.|MaxLength, FixedLength, Nullable, Default|  
-|Boolean|`true` 또는 `false` 값을 포함합니다.|Nullable, Default|  
-|Byte|부호 없는 8비트 정수 값을 포함합니다.|Precision, Nullable, Default|  
-|DateTime|날짜 및 시간을 나타냅니다.|Precision, Nullable, Default|  
-|DateTimeOffset|날짜 및 시간을 GMT에서의 오프셋\(분\)으로 포함합니다.|Precision, Nullable, Default|  
-|Decimal|고정 전체 자릿수와 소수 자릿수가 있는 숫자 값을 포함합니다.|Precision, Nullable, Default|  
-|Double|전체 자릿수가 15자리인 부동 소수점 숫자를 포함합니다.|Precision, Nullable, Default|  
-|Float|전체 자릿수가 7자리인 부동 소수점 숫자를 포함합니다.|Precision, Nullable, Default|  
-|Guid|16바이트 고유 식별자를 포함합니다.|Precision, Nullable, Default|  
-|Int16|부호 있는 16비트 정수 값을 포함합니다.|Precision, Nullable, Default|  
-|Int32|부호 있는 32비트 정수 값을 포함합니다.|Precision, Nullable, Default|  
-|Int64|부호 있는 64비트 정수 값을 포함합니다.|Precision, Nullable, Default|  
-|SByte|부호 있는 8비트 정수 값을 포함합니다.|Precision, Nullable, Default|  
-|문자열|문자 데이터를 포함합니다.|Unicode, FixedLength, MaxLength, Collation, Precision, Nullable, Default|  
-|시간|시간을 포함합니다.|Precision, Nullable, Default|  
+|<span data-ttu-id="3e5a9-113">기본 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="3e5a9-113">Primitive Data Type</span></span>|<span data-ttu-id="3e5a9-114">설명</span><span class="sxs-lookup"><span data-stu-id="3e5a9-114">Description</span></span>|<span data-ttu-id="3e5a9-115">적용 가능한 패싯</span><span class="sxs-lookup"><span data-stu-id="3e5a9-115">Applicable Facets</span></span>|  
+|-------------------------|-----------------|-----------------------|  
+|<span data-ttu-id="3e5a9-116">이항</span><span class="sxs-lookup"><span data-stu-id="3e5a9-116">Binary</span></span>|<span data-ttu-id="3e5a9-117">이진 데이터를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="3e5a9-117">Contains binary data.</span></span>|<span data-ttu-id="3e5a9-118">MaxLength, FixedLength, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="3e5a9-118">MaxLength, FixedLength, Nullable, Default</span></span>|  
+|<span data-ttu-id="3e5a9-119">Boolean</span><span class="sxs-lookup"><span data-stu-id="3e5a9-119">Boolean</span></span>|<span data-ttu-id="3e5a9-120">`true` 또는 `false` 값을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="3e5a9-120">Contains the value `true` or `false`.</span></span>|<span data-ttu-id="3e5a9-121">Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="3e5a9-121">Nullable, Default</span></span>|  
+|<span data-ttu-id="3e5a9-122">Byte</span><span class="sxs-lookup"><span data-stu-id="3e5a9-122">Byte</span></span>|<span data-ttu-id="3e5a9-123">부호 없는 8비트 정수 값을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="3e5a9-123">Contains an unsigned 8-bit integer value.</span></span>|<span data-ttu-id="3e5a9-124">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="3e5a9-124">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="3e5a9-125">DateTime</span><span class="sxs-lookup"><span data-stu-id="3e5a9-125">DateTime</span></span>|<span data-ttu-id="3e5a9-126">날짜 및 시간을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="3e5a9-126">Represents a date and time.</span></span>|<span data-ttu-id="3e5a9-127">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="3e5a9-127">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="3e5a9-128">DateTimeOffset</span><span class="sxs-lookup"><span data-stu-id="3e5a9-128">DateTimeOffset</span></span>|<span data-ttu-id="3e5a9-129">날짜 및 시간을 GMT에서의 오프셋(분)으로 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="3e5a9-129">Contains a date and time as an offset in minutes from GMT.</span></span>|<span data-ttu-id="3e5a9-130">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="3e5a9-130">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="3e5a9-131">Decimal</span><span class="sxs-lookup"><span data-stu-id="3e5a9-131">Decimal</span></span>|<span data-ttu-id="3e5a9-132">고정 전체 자릿수와 소수 자릿수가 있는 숫자 값을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="3e5a9-132">Contains a numeric value with fixed precision and scale.</span></span>|<span data-ttu-id="3e5a9-133">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="3e5a9-133">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="3e5a9-134">Double</span><span class="sxs-lookup"><span data-stu-id="3e5a9-134">Double</span></span>|<span data-ttu-id="3e5a9-135">전체 자릿수가 15자리인 부동 소수점 숫자를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="3e5a9-135">Contains a floating point number with 15 digit precision.</span></span>|<span data-ttu-id="3e5a9-136">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="3e5a9-136">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="3e5a9-137">Float</span><span class="sxs-lookup"><span data-stu-id="3e5a9-137">Float</span></span>|<span data-ttu-id="3e5a9-138">전체 자릿수가 7자리인 부동 소수점 숫자를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="3e5a9-138">Contains a floating point number with seven digit precision.</span></span>|<span data-ttu-id="3e5a9-139">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="3e5a9-139">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="3e5a9-140">Guid</span><span class="sxs-lookup"><span data-stu-id="3e5a9-140">Guid</span></span>|<span data-ttu-id="3e5a9-141">16바이트 고유 식별자를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="3e5a9-141">Contains a 16-byte unique identifier.</span></span>|<span data-ttu-id="3e5a9-142">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="3e5a9-142">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="3e5a9-143">Int16</span><span class="sxs-lookup"><span data-stu-id="3e5a9-143">Int16</span></span>|<span data-ttu-id="3e5a9-144">부호 있는 16비트 정수 값을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="3e5a9-144">Contains a signed 16-bit integer value.</span></span>|<span data-ttu-id="3e5a9-145">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="3e5a9-145">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="3e5a9-146">Int32</span><span class="sxs-lookup"><span data-stu-id="3e5a9-146">Int32</span></span>|<span data-ttu-id="3e5a9-147">부호 있는 32비트 정수 값을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="3e5a9-147">Contains a signed 32-bit integer value.</span></span>|<span data-ttu-id="3e5a9-148">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="3e5a9-148">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="3e5a9-149">Int64</span><span class="sxs-lookup"><span data-stu-id="3e5a9-149">Int64</span></span>|<span data-ttu-id="3e5a9-150">부호 있는 64비트 정수 값을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="3e5a9-150">Contains a signed 64-bit integer value.</span></span>|<span data-ttu-id="3e5a9-151">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="3e5a9-151">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="3e5a9-152">SByte</span><span class="sxs-lookup"><span data-stu-id="3e5a9-152">SByte</span></span>|<span data-ttu-id="3e5a9-153">부호 있는 8비트 정수 값을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="3e5a9-153">Contains a signed 8-bit integer value.</span></span>|<span data-ttu-id="3e5a9-154">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="3e5a9-154">Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="3e5a9-155">문자열</span><span class="sxs-lookup"><span data-stu-id="3e5a9-155">String</span></span>|<span data-ttu-id="3e5a9-156">문자 데이터를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="3e5a9-156">Contains character data.</span></span>|<span data-ttu-id="3e5a9-157">Unicode, FixedLength, MaxLength, Collation, Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="3e5a9-157">Unicode, FixedLength, MaxLength, Collation, Precision, Nullable, Default</span></span>|  
+|<span data-ttu-id="3e5a9-158">시간</span><span class="sxs-lookup"><span data-stu-id="3e5a9-158">Time</span></span>|<span data-ttu-id="3e5a9-159">시간을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="3e5a9-159">Contains a time of day.</span></span>|<span data-ttu-id="3e5a9-160">Precision, Nullable, Default</span><span class="sxs-lookup"><span data-stu-id="3e5a9-160">Precision, Nullable, Default</span></span>|  
   
-## 참고 항목  
- [엔터티 데이터 모델의 주요 개념](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)   
- [엔터티 데이터 모델](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a><span data-ttu-id="3e5a9-161">참고 항목</span><span class="sxs-lookup"><span data-stu-id="3e5a9-161">See Also</span></span>  
+ [<span data-ttu-id="3e5a9-162">엔터티 데이터 모델의 주요 개념</span><span class="sxs-lookup"><span data-stu-id="3e5a9-162">Entity Data Model Key Concepts</span></span>](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
+ [<span data-ttu-id="3e5a9-163">엔터티 데이터 모델</span><span class="sxs-lookup"><span data-stu-id="3e5a9-163">Entity Data Model</span></span>](../../../../docs/framework/data/adonet/entity-data-model.md)

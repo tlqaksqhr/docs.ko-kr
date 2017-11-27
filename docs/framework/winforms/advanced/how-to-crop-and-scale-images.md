@@ -1,46 +1,50 @@
 ---
-title: "방법: 이미지 자르기 및 배율 조정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "이미지[Windows Forms], 자르기"
-  - "이미지[Windows Forms], 배율"
+title: "방법: 이미지 자르기 및 배율 조정"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- images [Windows Forms], cropping
+- images [Windows Forms], scaling
 ms.assetid: 053e3360-bca0-4b25-9afa-0e77a6f17b03
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8fb5d527cd1047197f370c4a9a9b1f8f33461653
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 이미지 자르기 및 배율 조정
-<xref:System.Drawing.Graphics> 클래스에는 몇 가지 <xref:System.Drawing.Graphics.DrawImage%2A> 메서드가 있으며, 그 중 일부에는 이미지를 자르고 배율을 조정하는 데 사용할 수 있는 원본 및 대상 사각형 매개 변수가 있습니다.  
+# <a name="how-to-crop-and-scale-images"></a><span data-ttu-id="4907f-102">방법: 이미지 자르기 및 배율 조정</span><span class="sxs-lookup"><span data-stu-id="4907f-102">How to: Crop and Scale Images</span></span>
+<span data-ttu-id="4907f-103"><xref:System.Drawing.Graphics> 클래스에는 일부의 <xref:System.Drawing.Graphics.DrawImage%2A> 메서드 중 일부는 원본 및 대상 사각형 하는 매개 변수가 이미지 자르기 및 배율에 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4907f-103">The <xref:System.Drawing.Graphics> class provides several <xref:System.Drawing.Graphics.DrawImage%2A> methods, some of which have source and destination rectangle parameters that you can use to crop and scale images.</span></span>  
   
-## 예제  
- 아래 예제에서는 디스크에 있는 Apple.gif 파일을 사용하여 <xref:System.Drawing.Image> 개체를 만듭니다.  이 코드에서는 원래 크기로 전체 사과 이미지를 그린 다음,  <xref:System.Drawing.Graphics> 개체의 <xref:System.Drawing.Graphics.DrawImage%2A> 메서드를 호출하여 원래 사과 이미지보다 큰 대상 사각형에 사과의 일부분을 그립니다.  
+## <a name="example"></a><span data-ttu-id="4907f-104">예제</span><span class="sxs-lookup"><span data-stu-id="4907f-104">Example</span></span>  
+ <span data-ttu-id="4907f-105">다음 구성 예제는 <xref:System.Drawing.Image> 있는 Apple.gif 디스크 파일에서 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="4907f-105">The following example constructs an <xref:System.Drawing.Image> object from the disk file Apple.gif.</span></span> <span data-ttu-id="4907f-106">코드는 원래 크기로 전체 apple 이미지를 그립니다.</span><span class="sxs-lookup"><span data-stu-id="4907f-106">The code draws the entire apple image in its original size.</span></span> <span data-ttu-id="4907f-107">호출 된 <xref:System.Drawing.Graphics.DrawImage%2A> 의 메서드는 <xref:System.Drawing.Graphics> 원래 apple 이미지 보다 큰 대상 사각형에 apple 이미지의 일부를 그릴 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="4907f-107">The code then calls the <xref:System.Drawing.Graphics.DrawImage%2A> method of a <xref:System.Drawing.Graphics> object to draw a portion of the apple image in a destination rectangle that is larger than the original apple image.</span></span>  
   
- <xref:System.Drawing.Graphics.DrawImage%2A> 메서드에서는 세 번째, 네 번째, 다섯 번째 및 여섯 번째 인수에 지정된 원본 사각형을 조사하여 사과의 어느 부분을 그릴지 결정합니다.  이 예제에서는 사과를 원래 너비 및 높이의 75%로 자릅니다.  
+ <span data-ttu-id="4907f-108"><xref:System.Drawing.Graphics.DrawImage%2A> 메서드 다섯 번째 및 여섯 번째 인수는 세 번째, 네 번째, 지정 된 원본 사각형을 확인 하 여 그리는 데 apple의 어떤 부분을 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="4907f-108">The <xref:System.Drawing.Graphics.DrawImage%2A> method determines which portion of the apple to draw by looking at the source rectangle, which is specified by the third, fourth, fifth, and sixth arguments.</span></span> <span data-ttu-id="4907f-109">이 경우 apple 너비의 75% 및 높이의 75%로 잘립니다.</span><span class="sxs-lookup"><span data-stu-id="4907f-109">In this case, the apple is cropped to 75 percent of its width and 75 percent of its height.</span></span>  
   
- <xref:System.Drawing.Graphics.DrawImage%2A> 메서드에서는 두 번째 인수에 지정된 대상 사각형을 조사하여 자른 사과를 그릴 위치 및 배율을 결정합니다.  이 예제에서 대상 사각형은 원래 이미지보다 너비 및 높이가 30% 더 큽니다.  
+ <span data-ttu-id="4907f-110"><xref:System.Drawing.Graphics.DrawImage%2A> 메서드를 자른된 apple를 그릴 위치와 대상 사각형을 살펴보면 자른된 apple 있도록 최대 크기를 결정은 두 번째 인수로 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="4907f-110">The <xref:System.Drawing.Graphics.DrawImage%2A> method determines where to draw the cropped apple and how big to make the cropped apple by looking at the destination rectangle, which is specified by the second argument.</span></span> <span data-ttu-id="4907f-111">이 경우 대상 사각형에는 더 넓은 30%, 30% 보다 원래 이미지 크기입니다.</span><span class="sxs-lookup"><span data-stu-id="4907f-111">In this case, the destination rectangle is 30 percent wider and 30 percent taller than the original image.</span></span>  
   
- 아래 그림에서는 원래 사과 및 일부를 잘라 배율을 조정한 사과를 보여 줍니다.  
+ <span data-ttu-id="4907f-112">다음 그림에서 원래 apple 및 확장 된 잘라 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="4907f-112">The following illustration shows the original apple and the scaled, cropped apple.</span></span>  
   
- ![자르기 및 배율 조정](../../../../docs/framework/winforms/advanced/media/cscropscale1.png "csCropScale1")  
+ <span data-ttu-id="4907f-113">![자르기 및 배율 조정](../../../../docs/framework/winforms/advanced/media/cscropscale1.png "csCropScale1")</span><span class="sxs-lookup"><span data-stu-id="4907f-113">![Crop & Scale](../../../../docs/framework/winforms/advanced/media/cscropscale1.png "csCropScale1")</span></span>  
   
  [!code-csharp[System.Drawing.WorkingWithImages#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.WorkingWithImages#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#11)]  
   
-## 코드 컴파일  
- 앞의 예제는 Windows Forms에서 사용해야 하며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`를 필요로 합니다.  `Apple.gif`를 시스템에서 사용할 수 있는 이미지 파일 이름 및 경로로 바꿔야 합니다.  
+## <a name="compiling-the-code"></a><span data-ttu-id="4907f-114">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="4907f-114">Compiling the Code</span></span>  
+ <span data-ttu-id="4907f-115">앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="4907f-115">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span> <span data-ttu-id="4907f-116">대체 해야 `Apple.gif` 있는 이미지 파일 이름 및 시스템에서 사용할 수 있는 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="4907f-116">Make sure to replace `Apple.gif` with an image file name and path that are valid on your system.</span></span>  
   
-## 참고 항목  
- [이미지, 비트맵 및 메타파일](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)   
- [이미지, 비트맵, 아이콘 및 메타파일 사용](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a><span data-ttu-id="4907f-117">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4907f-117">See Also</span></span>  
+ [<span data-ttu-id="4907f-118">이미지, 비트맵 및 메타파일</span><span class="sxs-lookup"><span data-stu-id="4907f-118">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [<span data-ttu-id="4907f-119">이미지, 비트맵, 아이콘 및 메타파일 사용</span><span class="sxs-lookup"><span data-stu-id="4907f-119">Working with Images, Bitmaps, Icons, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

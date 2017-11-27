@@ -1,35 +1,38 @@
 ---
-title: "3337 - ChannelReceiveStart | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3337 - ChannelReceiveStart
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: aa0d226a-3862-4a16-87e6-3bb601084203
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 57dfb56ad65e179cde9d946bc9571b227e4ede27
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 3337 - ChannelReceiveStart
-## 속성  
+# <a name="3337---channelreceivestart"></a><span data-ttu-id="456e9-102">3337 - ChannelReceiveStart</span><span class="sxs-lookup"><span data-stu-id="456e9-102">3337 - ChannelReceiveStart</span></span>
+## <a name="properties"></a><span data-ttu-id="456e9-103">속성</span><span class="sxs-lookup"><span data-stu-id="456e9-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|3337|  
-|키워드가|채널|  
-|수준|Verbose|  
-|채널|Microsoft\-Windows\-응용 프로그램 서버\-응용 프로그램\/디버그|  
+|<span data-ttu-id="456e9-104">ID</span><span class="sxs-lookup"><span data-stu-id="456e9-104">ID</span></span>|<span data-ttu-id="456e9-105">3337</span><span class="sxs-lookup"><span data-stu-id="456e9-105">3337</span></span>|  
+|<span data-ttu-id="456e9-106">키워드가</span><span class="sxs-lookup"><span data-stu-id="456e9-106">Keywords</span></span>|<span data-ttu-id="456e9-107">채널</span><span class="sxs-lookup"><span data-stu-id="456e9-107">Channel</span></span>|  
+|<span data-ttu-id="456e9-108">수준</span><span class="sxs-lookup"><span data-stu-id="456e9-108">Level</span></span>|<span data-ttu-id="456e9-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="456e9-109">Verbose</span></span>|  
+|<span data-ttu-id="456e9-110">채널</span><span class="sxs-lookup"><span data-stu-id="456e9-110">Channel</span></span>|<span data-ttu-id="456e9-111">Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그</span><span class="sxs-lookup"><span data-stu-id="456e9-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## 설명  
- 이 이벤트는 채널 수신이 시작될 때 내보내집니다.  
+## <a name="description"></a><span data-ttu-id="456e9-112">설명</span><span class="sxs-lookup"><span data-stu-id="456e9-112">Description</span></span>  
+ <span data-ttu-id="456e9-113">이 이벤트는 채널 수신이 시작될 때 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="456e9-113">This event is emitted when the channel receive starts.</span></span>  
   
-## 메시지  
- ChannelHandlerId:%1 \- 메시지 수신 루프가 시작되었습니다.  
+## <a name="message"></a><span data-ttu-id="456e9-114">메시지</span><span class="sxs-lookup"><span data-stu-id="456e9-114">Message</span></span>  
+ <span data-ttu-id="456e9-115">ChannelHandlerId:%1 - 메시지 수신 루프가 시작되었습니다.</span><span class="sxs-lookup"><span data-stu-id="456e9-115">ChannelHandlerId:%1 - Message receive loop started.</span></span>  
   
-## 세부 정보
+## <a name="details"></a><span data-ttu-id="456e9-116">세부 정보</span><span class="sxs-lookup"><span data-stu-id="456e9-116">Details</span></span>

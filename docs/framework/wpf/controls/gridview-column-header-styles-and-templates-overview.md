@@ -1,48 +1,51 @@
 ---
-title: "GridView 열 머리글 스타일 및 템플릿 개요 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "열 머리글, 사용자 지정"
-  - "컨트롤, ListView"
-  - "GridView 보기 모드, 열 머리글 사용자 지정"
-  - "머리글, 사용자 지정"
-  - "ListView 컨트롤[WPF], GridView 열 머리글 스타일"
+title: "GridView 열 머리글 스타일 및 템플릿 개요"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- column headers [WPF], customizing
+- ListView controls [WPF], GridView column header styles
+- controls [WPF], ListView
+- headers [WPF], customizing
+- GridView view mode [WPF], customizing column headers
 ms.assetid: 74835674-a39e-4ab5-9418-ad7f6ab7b956
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ad0f7cacc8256e060bb12611bd1818b694e1e6dc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# GridView 열 머리글 스타일 및 템플릿 개요
-이 개요에서는 <xref:System.Windows.Controls.ListView>의 <xref:System.Windows.Controls.GridView> 뷰 모드에서 컨트롤의 열 머리글을 사용자 지정하는 데 사용하는 속성의 우선 순위에 대해 설명합니다.  
+# <a name="gridview-column-header-styles-and-templates-overview"></a><span data-ttu-id="7cc54-102">GridView 열 머리글 스타일 및 템플릿 개요</span><span class="sxs-lookup"><span data-stu-id="7cc54-102">GridView Column Header Styles and Templates Overview</span></span>
+<span data-ttu-id="7cc54-103">이 개요에서는의 열 머리글에 사용자 지정 하는 속성에 대 한 우선 순위는 <xref:System.Windows.Controls.GridView> 의 보기 모드는 <xref:System.Windows.Controls.ListView> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="7cc54-103">This overview discusses the order of precedence for properties that you use to customize a column header in the <xref:System.Windows.Controls.GridView> view mode of a <xref:System.Windows.Controls.ListView> control.</span></span>  
   
-## GridView에서 열 머리글 사용자 지정  
- <xref:System.Windows.Controls.GridView>에서 열 머리글의 콘텐츠, 레이아웃 및 스타일을 정의하는 속성은 관련된 많은 클래스에서 찾을 수 있습니다.  이러한 속성 중 일부는 그 기능이 비슷하거나 같습니다.  
+## <a name="customizing-a-column-header-in-a-gridview"></a><span data-ttu-id="7cc54-104">GridView에서 열 머리글을 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="7cc54-104">Customizing a Column Header in a GridView</span></span>  
+ <span data-ttu-id="7cc54-105">내용, 레이아웃 및 열 머리글의 스타일을 정의 하는 속성은 <xref:System.Windows.Controls.GridView> 여러 관련된 클래스에는 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7cc54-105">The properties that define the content, layout, and style of a column header in a <xref:System.Windows.Controls.GridView> are found on many related classes.</span></span> <span data-ttu-id="7cc54-106">이러한 속성 중 일부는 동일 하거나 유사한 기능을 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="7cc54-106">Some of these properties have functionality that is similar or the same.</span></span>  
   
- 다음 표의 행에서는 동일한 기능을 수행하는 속성 그룹을 보여 줍니다.  이러한 속성을 사용하여 <xref:System.Windows.Controls.GridView>의 열 머리글을 사용자 지정할 수 있습니다.  관련된 속성의 우선 순위는 왼쪽에서 오른쪽으로 갈수록 높아지며 맨 오른쪽 열의 속성이 우선 순위가 가장 높습니다.  예를 들어 <xref:System.Windows.Controls.GridViewColumnHeader> 개체에 <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>이 설정되고 관련된 <xref:System.Windows.Controls.GridViewColumn>에 <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A>가 설정된 경우 <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>의 우선 순위가 더 높습니다.  이 시나리오에서는 <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A>가 아무런 영향을 주지 않습니다.  
+ <span data-ttu-id="7cc54-107">다음 테이블에 행 그룹은 동일한 기능을 수행 하는 속성을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="7cc54-107">The rows in the following table show groups of properties that perform the same function.</span></span> <span data-ttu-id="7cc54-108">열 머리글을 사용자 지정 하려면 이러한 속성을 사용할 수는 <xref:System.Windows.Controls.GridView>합니다.</span><span class="sxs-lookup"><span data-stu-id="7cc54-108">You can use these properties to customize the column headers in a <xref:System.Windows.Controls.GridView>.</span></span> <span data-ttu-id="7cc54-109">가장 멀리 오른쪽 열에 속성의 가장 높은 우선 순위에 있는 오른쪽에서 왼쪽으로의 관련된 속성에 대 한 우선 순위는 합니다.</span><span class="sxs-lookup"><span data-stu-id="7cc54-109">The order of precedence for related properties is from right to left where the property in the farthest right column has the highest precedence.</span></span> <span data-ttu-id="7cc54-110">예를 들어 경우는 <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> 에 설정 되어는 <xref:System.Windows.Controls.GridViewColumnHeader> 개체 및 <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> 연결 설정 <xref:System.Windows.Controls.GridViewColumn>, <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> 우선적으로 적용 합니다.</span><span class="sxs-lookup"><span data-stu-id="7cc54-110">For example, if a <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> is set on the <xref:System.Windows.Controls.GridViewColumnHeader> object and the <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> is set on the associated <xref:System.Windows.Controls.GridViewColumn>, the <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> takes precedence.</span></span> <span data-ttu-id="7cc54-111">이 시나리오는 <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> 영향을 주지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="7cc54-111">In this scenario, the <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A> has no effect.</span></span>  
   
- **GridView의 열 머리글과 관련된 속성**  
+ <span data-ttu-id="7cc54-112">**GridView에서 열 머리글에 대 한 관련된 속성**</span><span class="sxs-lookup"><span data-stu-id="7cc54-112">**Related properties for column headers in a GridView**</span></span>  
   
 |||||  
 |-|-|-|-|  
-|**클래스**|<xref:System.Windows.Controls.GridView>|<xref:System.Windows.Controls.GridViewColumn>|<xref:System.Windows.Controls.GridViewColumnHeader>|  
-|**Context Menu 속성**|<xref:System.Windows.Controls.GridView.ColumnHeaderContextMenu%2A>|해당 없음|<xref:System.Windows.FrameworkElement.ContextMenu%2A>|  
-|**ToolTip**<br /><br /> **속성**|<xref:System.Windows.Controls.GridView.ColumnHeaderToolTip%2A>|해당 없음|<xref:System.Windows.FrameworkElement.ToolTip%2A>|  
-|**Header Template**<br /><br /> **속성**|<xref:System.Windows.Controls.GridView.ColumnHeaderTemplate%2A> <sup>1</sup>\/<br /><br /> <xref:System.Windows.Controls.GridView.ColumnHeaderTemplateSelector%2A>|<xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A> <sup>1</sup>\/<br /><br /> <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A>|<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> <sup>1</sup>\/<br /><br /> <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>|  
-|**Style 속성**|<xref:System.Windows.Controls.GridView.ColumnHeaderContainerStyle%2A>|<xref:System.Windows.Controls.GridViewColumn.HeaderContainerStyle%2A>|<xref:System.Windows.FrameworkElement.Style%2A>|  
+|<span data-ttu-id="7cc54-113">**클래스**</span><span class="sxs-lookup"><span data-stu-id="7cc54-113">**Classes**</span></span>|<xref:System.Windows.Controls.GridView>|<xref:System.Windows.Controls.GridViewColumn>|<xref:System.Windows.Controls.GridViewColumnHeader>|  
+|<span data-ttu-id="7cc54-114">**상황에 맞는 메뉴 속성**</span><span class="sxs-lookup"><span data-stu-id="7cc54-114">**Context Menu Properties**</span></span>|<xref:System.Windows.Controls.GridView.ColumnHeaderContextMenu%2A>|<span data-ttu-id="7cc54-115">적용할 수 없음</span><span class="sxs-lookup"><span data-stu-id="7cc54-115">Not applicable</span></span>|<xref:System.Windows.FrameworkElement.ContextMenu%2A>|  
+|<span data-ttu-id="7cc54-116">**ToolTip**</span><span class="sxs-lookup"><span data-stu-id="7cc54-116">**ToolTip**</span></span><br /><br /> <span data-ttu-id="7cc54-117">**속성**</span><span class="sxs-lookup"><span data-stu-id="7cc54-117">**Properties**</span></span>|<xref:System.Windows.Controls.GridView.ColumnHeaderToolTip%2A>|<span data-ttu-id="7cc54-118">적용할 수 없음</span><span class="sxs-lookup"><span data-stu-id="7cc54-118">Not applicable</span></span>|<xref:System.Windows.FrameworkElement.ToolTip%2A>|  
+|<span data-ttu-id="7cc54-119">**헤더 서식 파일**</span><span class="sxs-lookup"><span data-stu-id="7cc54-119">**Header Template**</span></span><br /><br /> <span data-ttu-id="7cc54-120">**속성**</span><span class="sxs-lookup"><span data-stu-id="7cc54-120">**Properties**</span></span>|<span data-ttu-id="7cc54-121"><xref:System.Windows.Controls.GridView.ColumnHeaderTemplate%2A> <sup>1</sup>/</span><span class="sxs-lookup"><span data-stu-id="7cc54-121"><xref:System.Windows.Controls.GridView.ColumnHeaderTemplate%2A> <sup>1</sup>/</span></span><br /><br /> <xref:System.Windows.Controls.GridView.ColumnHeaderTemplateSelector%2A>|<span data-ttu-id="7cc54-122"><xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A> <sup>1</sup>/</span><span class="sxs-lookup"><span data-stu-id="7cc54-122"><xref:System.Windows.Controls.GridViewColumn.HeaderTemplate%2A> <sup>1</sup>/</span></span><br /><br /> <xref:System.Windows.Controls.GridViewColumn.HeaderTemplateSelector%2A>|<span data-ttu-id="7cc54-123"><xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> <sup>1</sup>/</span><span class="sxs-lookup"><span data-stu-id="7cc54-123"><xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> <sup>1</sup>/</span></span><br /><br /> <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>|  
+|<span data-ttu-id="7cc54-124">**스타일 속성**</span><span class="sxs-lookup"><span data-stu-id="7cc54-124">**Style Properties**</span></span>|<xref:System.Windows.Controls.GridView.ColumnHeaderContainerStyle%2A>|<xref:System.Windows.Controls.GridViewColumn.HeaderContainerStyle%2A>|<xref:System.Windows.FrameworkElement.Style%2A>|  
   
- <sup>1</sup> **Header Template 속성**의 경우 템플릿 속성과 템플릿 선택자 속성을 둘 다 설정하는 경우 템플릿 속성의 우선 순위가 더 높습니다.  예를 들어 <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> 속성과 <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> 속성을 둘 다 설정하면 <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> 속성의 우선 순위가 더 높습니다.  
+ <span data-ttu-id="7cc54-125"><sup>1</sup>에 대 한 **헤더 템플릿 속성**템플릿을 템플릿 선택기 속성, 서식 파일 속성은 우선 순위를 설정 하는 경우, 합니다.</span><span class="sxs-lookup"><span data-stu-id="7cc54-125"><sup>1</sup>For **Header Template Properties**, if you set both the template and template selector properties, the template property takes precedence.</span></span> <span data-ttu-id="7cc54-126">예를 들어, 모두 설정 하면는 <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> 및 <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> 속성는 <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> 속성이 우선 합니다.</span><span class="sxs-lookup"><span data-stu-id="7cc54-126">For example, if you set both the <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> and <xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A> properties, the <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> property takes precedence.</span></span>  
   
-## 참고 항목  
- [방법 항목](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)   
- [ListView 개요](../../../../docs/framework/wpf/controls/listview-overview.md)   
- [GridView 개요](../../../../docs/framework/wpf/controls/gridview-overview.md)
+## <a name="see-also"></a><span data-ttu-id="7cc54-127">참고 항목</span><span class="sxs-lookup"><span data-stu-id="7cc54-127">See Also</span></span>  
+ [<span data-ttu-id="7cc54-128">방법 항목</span><span class="sxs-lookup"><span data-stu-id="7cc54-128">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [<span data-ttu-id="7cc54-129">ListView 개요</span><span class="sxs-lookup"><span data-stu-id="7cc54-129">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)  
+ [<span data-ttu-id="7cc54-130">GridView 개요</span><span class="sxs-lookup"><span data-stu-id="7cc54-130">GridView Overview</span></span>](../../../../docs/framework/wpf/controls/gridview-overview.md)

@@ -1,47 +1,53 @@
 ---
-title: "방법: 코드에서 바인딩 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 바인딩, 만들기"
-  - "데이터 바인딩(data binding), 만들기"
+title: "방법: 코드에서 바인딩 만들기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- binding data [WPF], creating
+- data binding [WPF], creating
 ms.assetid: 1a606db9-cf5f-42ed-a1c5-9e4722ec77a0
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e6279de3b892d64bc48b4f67c9f08bd89dd1b7d7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 코드에서 바인딩 만들기
-이 예제에서는 코드로 <xref:System.Windows.Data.Binding>을 만들고 설정하는 방법을 보여 줍니다.  
+# <a name="how-to-create-a-binding-in-code"></a><span data-ttu-id="b6529-102">방법: 코드에서 바인딩 만들기</span><span class="sxs-lookup"><span data-stu-id="b6529-102">How to: Create a Binding in Code</span></span>
+<span data-ttu-id="b6529-103">만들고 설정 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Data.Binding> 코드에서입니다.</span><span class="sxs-lookup"><span data-stu-id="b6529-103">This example shows how to create and set a <xref:System.Windows.Data.Binding> in code.</span></span>  
   
-## 예제  
- <xref:System.Windows.FrameworkElement> 클래스와 <xref:System.Windows.FrameworkContentElement> 클래스는 둘 다 `SetBinding` 메서드를 노출합니다.  이러한 클래스 중 하나를 상속하는 요소를 바인딩하는 경우에는 <xref:System.Windows.FrameworkElement.SetBinding%2A> 메서드를 직접 호출할 수 있습니다.  
+## <a name="example"></a><span data-ttu-id="b6529-104">예제</span><span class="sxs-lookup"><span data-stu-id="b6529-104">Example</span></span>  
+ <span data-ttu-id="b6529-105"><xref:System.Windows.FrameworkElement> 클래스 및 <xref:System.Windows.FrameworkContentElement> 둘 다 노출 하는 클래스는 `SetBinding` 메서드.</span><span class="sxs-lookup"><span data-stu-id="b6529-105">The <xref:System.Windows.FrameworkElement> class and the <xref:System.Windows.FrameworkContentElement> class both expose a `SetBinding` method.</span></span> <span data-ttu-id="b6529-106">이러한 클래스 중 하나를 상속 하는 요소에 바인딩하는 경우 호출할 수 있습니다는 <xref:System.Windows.FrameworkElement.SetBinding%2A> 메서드를 직접 합니다.</span><span class="sxs-lookup"><span data-stu-id="b6529-106">If you are binding an element that inherits either of these classes, you can call the <xref:System.Windows.FrameworkElement.SetBinding%2A> method directly.</span></span>  
   
- 다음 예제에서는 `MyDataProperty` 속성을 포함하는 `MyData` 클래스를 만듭니다.  
+ <span data-ttu-id="b6529-107">다음 예제에서는 명명 된 인스턴스인지 클래스 `MyData`, 라는 속성이 포함 된 `MyDataProperty`합니다.</span><span class="sxs-lookup"><span data-stu-id="b6529-107">The following example creates a class named, `MyData`, which contains a property named `MyDataProperty`.</span></span>  
   
  [!code-csharp[CodeOnlyBinding#DataObject](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/MyData.cs#dataobject)]
  [!code-vb[CodeOnlyBinding#DataObject](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/MyData.vb#dataobject)]  
   
- 다음 예제에서는 바인딩 개체를 만들어 바인딩의 소스를 설정하는 방법을 보여 줍니다.  이 예제에서는<xref:System.Windows.FrameworkElement.SetBinding%2A>을 사용하여 <xref:System.Windows.Controls.TextBlock> 컨트롤인 `myText`의 <xref:System.Windows.Controls.TextBlock.Text%2A> 속성을 `MyDataProperty`에 바인딩합니다.  
+ <span data-ttu-id="b6529-108">다음 예제에서는 바인딩의 원본을 설정 하려면 바인딩 개체를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b6529-108">The following example shows how to create a binding object to set the source of the binding.</span></span>  <span data-ttu-id="b6529-109">이 예에서는 사용 <xref:System.Windows.FrameworkElement.SetBinding%2A> 바인딩할는 <xref:System.Windows.Controls.TextBlock.Text%2A> 속성 `myText`, 변수인는 <xref:System.Windows.Controls.TextBlock> 컨트롤과 `MyDataProperty`합니다.</span><span class="sxs-lookup"><span data-stu-id="b6529-109">The example uses <xref:System.Windows.FrameworkElement.SetBinding%2A> to bind the <xref:System.Windows.Controls.TextBlock.Text%2A> property of `myText`, which is a <xref:System.Windows.Controls.TextBlock> control, to `MyDataProperty`.</span></span>  
   
  [!code-csharp[CodeOnlyBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#1)]
  [!code-vb[CodeOnlyBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#1)]  
   
- 샘플의 전체 코드를 보려면 [Code\-only Binding Sample](http://msdn.microsoft.com/ko-kr/764aaf0b-2216-4941-9548-9c98da18d1a6)을 참조하십시오.  
+ <span data-ttu-id="b6529-110">전체 코드 샘플을 보려면 [코드 전용 Binding 샘플](http://msdn.microsoft.com/en-us/764aaf0b-2216-4941-9548-9c98da18d1a6)합니다.</span><span class="sxs-lookup"><span data-stu-id="b6529-110">For the complete code sample, see [Code-only Binding Sample](http://msdn.microsoft.com/en-us/764aaf0b-2216-4941-9548-9c98da18d1a6).</span></span>  
   
- <xref:System.Windows.FrameworkElement.SetBinding%2A>을 호출하는 대신 <xref:System.Windows.Data.BindingOperations> 클래스의 <xref:System.Windows.Data.BindingOperations.SetBinding%2A> 정적 메서드를 사용할 수 있습니다.  다음 예제에서는 <xref:System.Windows.FrameworkElement.SetBinding%2A?displayProperty=fullName> 대신 <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=fullName>을 호출하여 `myText`를 `myDataProperty`에 바인딩합니다.  
+ <span data-ttu-id="b6529-111">호출 하는 대신 <xref:System.Windows.FrameworkElement.SetBinding%2A>를 사용할 수 있습니다는 <xref:System.Windows.Data.BindingOperations.SetBinding%2A> 의 정적 메서드는 <xref:System.Windows.Data.BindingOperations> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="b6529-111">Instead of calling <xref:System.Windows.FrameworkElement.SetBinding%2A>, you can use the <xref:System.Windows.Data.BindingOperations.SetBinding%2A> static method of the <xref:System.Windows.Data.BindingOperations> class.</span></span> <span data-ttu-id="b6529-112">다음 예제에서는 호출 <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType> 대신 <xref:System.Windows.FrameworkElement.SetBinding%2A?displayProperty=nameWithType> 바인딩할 `myText` 를 `myDataProperty`합니다.</span><span class="sxs-lookup"><span data-stu-id="b6529-112">The following example, calls <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType> instead of <xref:System.Windows.FrameworkElement.SetBinding%2A?displayProperty=nameWithType> to bind `myText` to `myDataProperty`.</span></span>  
   
  [!code-csharp[CodeOnlyBinding#BOSetBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#bosetbinding)]
  [!code-vb[CodeOnlyBinding#BOSetBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#bosetbinding)]  
   
-## 참고 항목  
- [데이터 바인딩 개요](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [방법 항목](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="b6529-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b6529-113">See Also</span></span>  
+ [<span data-ttu-id="b6529-114">데이터 바인딩 개요</span><span class="sxs-lookup"><span data-stu-id="b6529-114">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="b6529-115">방법 항목</span><span class="sxs-lookup"><span data-stu-id="b6529-115">How-to Topics</span></span>](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

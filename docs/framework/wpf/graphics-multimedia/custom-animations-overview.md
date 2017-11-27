@@ -1,144 +1,145 @@
 ---
-title: "사용자 지정 애니메이션 개요 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "애니메이션, 사용자 지정 클래스"
-  - "사용자 지정 애니메이션 클래스"
-  - "사용자 지정 클래스, 애니메이션"
-  - "사용자 지정 키 프레임"
-  - "키 프레임, 사용자 지정"
+title: "사용자 지정 애니메이션 개요"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- custom classes [WPF], animation
+- key frames [WPF], custom
+- custom key frames [WPF]
+- animation [WPF], custom classes
+- custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a206e0234f4e6365e76f73977beda1688c036a79
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 사용자 지정 애니메이션 개요
-이 항목에서는 사용자 지정 키 프레임, 애니메이션 클래스를 만들거나 이를 건너뛰기 위한 프레임당 콜백을 사용하여 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션 시스템을 확장하는 방법과 시점에 대해 설명합니다.  
+# <a name="custom-animations-overview"></a><span data-ttu-id="9a17c-102">사용자 지정 애니메이션 개요</span><span class="sxs-lookup"><span data-stu-id="9a17c-102">Custom Animations Overview</span></span>
+<span data-ttu-id="9a17c-103">이 항목에서는 사용자 지정 키 프레임, 애니메이션 클래스를 만들거나, 프레임당 콜백을 사용하여 애니메이션 시스템을 무시하는 방식으로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션 시스템을 확장하는 방법 및 시기에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-103">This topic describes how and when to extend the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animation system by creating custom key frames, animation classes, or by using per-frame callback to bypass it.</span></span>  
   
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
 <a name="prerequisites"></a>   
-## 사전 요구 사항  
- 이 항목을 이해하려면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 제공하는 다른 애니메이션 형식에 익숙해야 합니다.  자세한 내용은 [From\/To\/By 애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/from-to-by-animations-overview.md), [키 프레임 애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md) 및 [경로 애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)를 참조하십시오.  
+## <a name="prerequisites"></a><span data-ttu-id="9a17c-104">필수 구성 요소</span><span class="sxs-lookup"><span data-stu-id="9a17c-104">Prerequisites</span></span>  
+ <span data-ttu-id="9a17c-105">이 항목을 이해하려면 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 제공하는 다양한 형식의 애니메이션에 대해 잘 알고 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-105">To understand this topic, you should be familiar with the different types of animations provided by the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="9a17c-106">자세한 내용은 From/To/By 애니메이션 개요, [키 프레임 애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md) 및 [경로 애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9a17c-106">For more information, see the From/To/By Animations Overview, the [Key-Frame Animations Overview](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md), and the [Path Animations Overview](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md).</span></span>  
   
- 애니메이션 클래스는 <xref:System.Windows.Freezable> 클래스에서 상속하기 때문에 <xref:System.Windows.Freezable> 개체와 <xref:System.Windows.Freezable>에서 상속하는 방법에 익숙해야 합니다.  자세한 내용은 [Freezable 개체 개요](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)을 참조하십시오.  
+ <span data-ttu-id="9a17c-107">애니메이션 클래스에서 상속 하기 때문에 <xref:System.Windows.Freezable> 클래스를 잘 알고 있어야와 <xref:System.Windows.Freezable> 개체 및에서 상속 하는 방법을 <xref:System.Windows.Freezable>합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-107">Because the animation classes inherit from the <xref:System.Windows.Freezable> class, you should be familiar with <xref:System.Windows.Freezable> objects and how to inherit from <xref:System.Windows.Freezable>.</span></span> <span data-ttu-id="9a17c-108">자세한 내용은 [Freezable 개체 개요](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9a17c-108">For more information, see the [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md).</span></span>  
   
 <a name="extendingtheanimationsystem"></a>   
-## 애니메이션 시스템 확장  
- 사용할 기본 제공 기능의 수준에 따라 여러 가지 방법으로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션 시스템을 확장할 수 있습니다.  다음은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션 엔진에서의 세 가지 기본 확장성 지점입니다.  
+## <a name="extending-the-animation-system"></a><span data-ttu-id="9a17c-109">애니메이션 시스템 확장</span><span class="sxs-lookup"><span data-stu-id="9a17c-109">Extending the Animation System</span></span>  
+ <span data-ttu-id="9a17c-110">사용하려는 기본 제공 기능 수준에 따라, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션 시스템을 확장하는 다양한 방법이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-110">There are a number of ways to extend the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animation system, depending on the level of built-in functionality you want to use.</span></span>  <span data-ttu-id="9a17c-111">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션 엔진에는 다음과 같은 세 가지 기본 확장 지점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-111">There are three primary extensibility points in the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animation engine:</span></span>  
   
--   <xref:System.Windows.Media.Animation.DoubleKeyFrame>과 같은 *\<Type\>*KeyFrame 클래스 중 하나에서 상속하여 사용자 지정 키 프레임 개체를 만듭니다.  이 방법은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션 엔진의 기본 제공 기능을 대부분 사용합니다.  
+-   <span data-ttu-id="9a17c-112">중 하나에서 상속 하 여 사용자 지정 키 프레임 개체 만들기는  *\<유형 >*키프레임와 같은 클래스 <xref:System.Windows.Media.Animation.DoubleKeyFrame>합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-112">Create a custom key frame object by inheriting from one of the *\<Type>*KeyFrame classes, such as <xref:System.Windows.Media.Animation.DoubleKeyFrame>.</span></span> <span data-ttu-id="9a17c-113">이 방법은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션 엔진의 기본 제공 기능 대부분을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-113">This approach uses most of the built-in functionality of the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animation engine.</span></span>  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline>에서 상속하거나 *\<Type\>*AnimationBase 클래스 중 하나에서 상속하여 자체적인 애니메이션 클래스를 만듭니다.  
+-   <span data-ttu-id="9a17c-114">상속 하 여 애니메이션 클래스를 직접 만들 <xref:System.Windows.Media.Animation.AnimationTimeline> 또는 중 하나는  *\<유형 >*AnimationBase 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-114">Create your own animation class by inheriting from <xref:System.Windows.Media.Animation.AnimationTimeline> or one of the *\<Type>*AnimationBase classes.</span></span>  
   
--   프레임당 콜백을 사용하여 프레임당 기준으로 애니메이션을 생성합니다.  이 방법은 애니메이션 및 타이밍 시스템을 완전히 건너뜁니다.  
+-   <span data-ttu-id="9a17c-115">프레임당 콜백을 사용하여 프레임별로 애니메이션을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-115">Use per-frame callback to generate animations on a per-frame basis.</span></span> <span data-ttu-id="9a17c-116">이 방법은 애니메이션 및 타이밍 시스템을 완전히 무시합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-116">This approach completely bypasses the animation and timing system.</span></span>  
   
- 다음 표에서는 애니메이션 시스템을 확장하기 위한 몇 가지 시나리오를 설명합니다.  
+ <span data-ttu-id="9a17c-117">다음 표에서는 애니메이션 시스템을 확장하기 위한 몇 가지 시나리오에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-117">The following table describes some the scenarios for extending the animation system.</span></span>  
   
-|원하는 작업|사용할 방법|  
-|------------|------------|  
-|해당하는 *\<Type\>*AnimationUsingKeyFrames가 있는 형식 값 사이의 보간 사용자 지정|사용자 지정 키 프레임을 만듭니다.  자세한 내용은 [사용자 지정 키 프레임 만들기](#createacustomkeyframe) 단원을 참조하십시오.|  
-|해당하는 *\<Type\>*Animation이 있는 형식 값 사이의 보간 외에 다른 항목 사용자 지정|애니메이션 효과를 지정할 형식에 해당하는 *\<Type\>*AnimationBase 클래스에서 상속하는 사용자 지정 애니메이션 클래스를 만듭니다.  자세한 내용은 [사용자 지정 애니메이션 클래스 만들기](#createcustomanimationtype) 단원을 참조하십시오.|  
-|해당하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션이 없는 형식에 애니메이션 효과 지정|<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>를 사용하거나 <xref:System.Windows.Media.Animation.AnimationTimeline>에서 상속하는 클래스를 만듭니다.  자세한 내용은 [사용자 지정 애니메이션 클래스 만들기](#createcustomanimationtype) 단원을 참조하십시오.|  
-|값이 각 프레임에서 계산되며 마지막 개체 상호 작용 집합을 기준으로 하는 다수 개체에 애니메이션 효과 지정|프레임당 콜백을 사용합니다.  자세한 내용은 [프레임당 콜백 사용 만들기](#useperframecallback) 단원을 참조하십시오.|  
+|<span data-ttu-id="9a17c-118">원하는 작업...</span><span class="sxs-lookup"><span data-stu-id="9a17c-118">When you want to...</span></span>|<span data-ttu-id="9a17c-119">사용하는 방법</span><span class="sxs-lookup"><span data-stu-id="9a17c-119">Use this approach</span></span>|  
+|-------------------------|-----------------------|  
+|<span data-ttu-id="9a17c-120">해당 *\<Type>*AnimationUsingKeyFrames를 갖는 형식에 대한 값 사이의 보간 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="9a17c-120">Customize the interpolation between values of a type that has a corresponding *\<Type>*AnimationUsingKeyFrames</span></span>|<span data-ttu-id="9a17c-121">사용자 지정 키 프레임을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-121">Create a custom key frame.</span></span> <span data-ttu-id="9a17c-122">자세한 내용은 [사용자 지정 키 프레임 만들기](#createacustomkeyframe) 섹션을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9a17c-122">For more information, see the [Create a Custom Key Frame](#createacustomkeyframe) section.</span></span>|  
+|<span data-ttu-id="9a17c-123">해당 *\<Type>*Animation을 갖는 형식에 대한 값 사이의 보간 이상을 사용자 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-123">Customize more than just the interpolation between values of a type that has a corresponding *\<Type>*Animation.</span></span>|<span data-ttu-id="9a17c-124">애니메이션 효과를 적용할 형식에 해당하는 *\<Type>*AnimationBase 클래스에서 상속하는 사용자 지정 애니메이션 클래스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-124">Create a custom animation class that inherits from the *\<Type>*AnimationBase class that corresponds to the type you want to animate.</span></span> <span data-ttu-id="9a17c-125">자세한 내용은 [사용자 지정 애니메이션 클래스 만들기](#createacustomanimationtype) 섹션을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9a17c-125">For more information, see the [Create a Custom Animation Class](#createacustomanimationtype) section.</span></span>|  
+|<span data-ttu-id="9a17c-126">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션이 없는 형식에 애니메이션 효과 적용</span><span class="sxs-lookup"><span data-stu-id="9a17c-126">Animate a type that has no corresponding [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animation</span></span>|<span data-ttu-id="9a17c-127">사용 하 여 프로그램 <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> 에서 상속 되는 클래스를 만들거나 <xref:System.Windows.Media.Animation.AnimationTimeline>합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-127">Use an <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> or create a class that inherits from <xref:System.Windows.Media.Animation.AnimationTimeline>.</span></span> <span data-ttu-id="9a17c-128">자세한 내용은 [사용자 지정 애니메이션 클래스 만들기](#createacustomanimationtype) 섹션을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9a17c-128">For more information, see the [Create a Custom Animation Class](#createacustomanimationtype) section.</span></span>|  
+|<span data-ttu-id="9a17c-129">프레임별로 계산되고 개체 상호 작용의 마지막 집합을 기준으로 하는 값을 사용하여 여러 개체에 애니메이션 효과 적용</span><span class="sxs-lookup"><span data-stu-id="9a17c-129">Animate multiple objects with values that are computed each frame and are based on the last set of object interactions</span></span>|<span data-ttu-id="9a17c-130">프레임당 콜백을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-130">Use per-frame callback.</span></span> <span data-ttu-id="9a17c-131">자세한 내용은 [프레임당 콜백 사용 만들기](#useperframecallback) 섹션을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9a17c-131">For more information, see the [Create a Use Per-Frame Callback](#useperframecallback) section.</span></span>|  
   
 <a name="createacustomkeyframe"></a>   
-## 사용자 지정 키 프레임 만들기  
- 사용자 지정 키 프레임 클래스를 만드는 것이 애니메이션 시스템을 확장하는 가장 간단한 방법입니다.  키 프레임 애니메이션에 서로 다른 보간 방법을 사용하려고 할 때 이 방법을 사용하십시오.  [키 프레임 애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)에 설명된 대로 키 프레임 애니메이션은 키 프레임 개체를 사용하여 해당 출력 값을 생성합니다.  각 키 프레임 개체는 세 가지 기능을 수행합니다.  
+## <a name="create-a-custom-key-frame"></a><span data-ttu-id="9a17c-132">사용자 지정 키 프레임 만들기</span><span class="sxs-lookup"><span data-stu-id="9a17c-132">Create a Custom Key Frame</span></span>  
+ <span data-ttu-id="9a17c-133">사용자 지정 키 프레임 클래스를 만드는 것은 애니메이션 시스템을 확장하는 가장 간단한 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-133">Creating a custom key frame class is the simplest way to extend the animation system.</span></span> <span data-ttu-id="9a17c-134">이 방법은 키 프레임 애니메이션에 대해 다른 보간 방법을 사용하려는 경우에 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-134">Use this approach when you want to a different interpolation method for a key-frame animation.</span></span>  <span data-ttu-id="9a17c-135">[키 프레임 애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)에 설명된 것처럼 키 프레임 애니메이션은 키 프레임 개체를 사용하여 해당 출력 값을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-135">As described in the [Key-Frame Animations Overview](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md), a key-frame animation uses key frame objects to generate its output values.</span></span> <span data-ttu-id="9a17c-136">각 키 프레임 개체는 다음 세 가지 기능을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-136">Each key frame object performs three functions:</span></span>  
   
--   해당 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 속성을 사용하여 대상 값을 지정합니다.  
+-   <span data-ttu-id="9a17c-137">사용 하 여 대상 값 지정 해당 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-137">Specifies a target value using its <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> property.</span></span>  
   
--   해당 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 속성을 사용하여 값에 도달해야 하는 시간을 지정합니다.  
+-   <span data-ttu-id="9a17c-138">해당 값에 도달 해야를 사용 하 여 시간을 지정 해당 <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-138">Specifies the time at which that value should be reached using its <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> property.</span></span>  
   
--   InterpolateValueCore 메서드를 구현하여 이전 키 프레임의 값과 자체 값 사이를 보간합니다.  
+-   <span data-ttu-id="9a17c-139">InterpolateValueCore 메서드를 구현하여 이전 키 프레임의 값과 고유한 값 간을 보간합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-139">Interpolates between the value of the previous key frame and its own value by implementing the InterpolateValueCore method.</span></span>  
   
- **구현 지침**  
+ <span data-ttu-id="9a17c-140">**구현 지침**</span><span class="sxs-lookup"><span data-stu-id="9a17c-140">**Implementation Instructions**</span></span>  
   
- *\<Type\>*KeyFrame 추상 클래스에서 파생시키고 InterpolateValueCore 메서드를 구현합니다.  InterpolateValueCore 메서드는 키 프레임의 현재 값을 반환합니다.  이전 키 프레임의 값과 0에서 1 사이의 진행률 값에 해당하는 두 개의 매개 변수가 사용됩니다.  진행률 값 0은 키 프레임이 방금 시작했음을 나타내고, 값 1은 키 프레임이 방금 완료되었으며 해당 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 속성에 의해 지정된 값을 반환해야 함을 나타냅니다.  
+ <span data-ttu-id="9a17c-141">*\<Type>*KeyFrame 추상 클래스에서 파생하고 InterpolateValueCore 메서드를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-141">Derive from the *\<Type>*KeyFrame abstract class and implement the InterpolateValueCore method.</span></span> <span data-ttu-id="9a17c-142">InterpolateValueCore 메서드는 키 프레임의 현재 값을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-142">The InterpolateValueCore method returns the current value of the key frame.</span></span> <span data-ttu-id="9a17c-143">두 개의 매개 변수, 즉 이전 키 프레임의 값과 0~1 사이의 진행률 값을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-143">It takes two parameters: the value of the previous key frame and a progress value that ranges from 0 to 1.</span></span> <span data-ttu-id="9a17c-144">0의 진행률 나타냅니다 키 프레임의 시작에, 한 값이 1 키 프레임 완료 하 고 지정 된 값을 반환 해야 해당 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-144">A progress of 0 indicates the key frame has just started, and a value of 1 indicates that the key frame has just completed and should return the value specified by its <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> property.</span></span>  
   
- *\<Type\>*KeyFrame 클래스는 <xref:System.Windows.Freezable> 클래스에서 상속하므로 <xref:System.Windows.Freezable.CreateInstanceCore%2A> 코어를 재정의하여 클래스의 새 인스턴스를 반환해야 합니다.  클래스에서 데이터를 저장하기 위해 [종속성 속성](GTMT)을 사용하지 않거나 생성 후 추가로 초기화 작업을 수행해야 하는 경우 추가 메서드를 재정의해야 할 수도 있습니다. 자세한 내용은 [Freezable 개체 개요](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)를 참조하십시오.  
+ <span data-ttu-id="9a17c-145">때문에  *\<유형 >*KeyFrame 클래스에서 상속 된 <xref:System.Windows.Freezable> 클래스를 재정의 해야 <xref:System.Windows.Freezable.CreateInstanceCore%2A> 핵심 클래스의 새 인스턴스를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-145">Because the *\<Type>*KeyFrame classes inherit from the <xref:System.Windows.Freezable> class, you must also override <xref:System.Windows.Freezable.CreateInstanceCore%2A> core to return a new instance of your class.</span></span> <span data-ttu-id="9a17c-146">이 클래스가 데이터를 저장하는 데 종속성 속성을 사용하지 않거나 생성 후 추가 초기화를 요구할 경우 추가 메서드를 재정의해야 할 수 있습니다. 자세한 내용은 [Freezable 개체 개요](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9a17c-146">If the class does not use dependency properties to store its data or it requires extra initialization after creation, you might need to override additional methods; see the [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) for more information.</span></span>  
   
- 사용자 지정 *\<Type\>*KeyFrame 애니메이션을 만든 후에는 해당 유형에 대한 *\<Type\>*AnimationUsingKeyFrames와 함께 사용할 수 있습니다.  
+ <span data-ttu-id="9a17c-147">사용자 지정 *\<Type>*KeyFrame 애니메이션을 만든 후에 해당 형식에 대한 *\<Type>*AnimationUsingKeyFrames와 함께 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-147">After you've created your custom *\<Type>*KeyFrame animation, you can use it with the *\<Type>*AnimationUsingKeyFrames for that type.</span></span>  
   
 <a name="createacustomanimationtype"></a>   
-## 사용자 지정 애니메이션 클래스 만들기  
- 자체적인 애니메이션 형식을 만들면 개체에 애니메이션 효과를 주는 방법을 보다 세부적으로 제어할 수 있습니다.  자체 애니메이션 형식을 만들기 위한 두 가지 권장 방법이 있습니다. 하나는 <xref:System.Windows.Media.Animation.AnimationTimeline> 클래스에서 파생시키는 방법이며, 다른 하나는 *\<Type\>*AnimationBase 클래스에서 파생시키는 방법입니다.  *\<Type\>*Animation 또는 *\<Type\>*AnimationUsingKeyFrames 클래스에서 파생시키는 방법은 사용하지 않는 것이 좋습니다.  
+## <a name="create-a-custom-animation-class"></a><span data-ttu-id="9a17c-148">사용자 지정 애니메이션 클래스 만들기</span><span class="sxs-lookup"><span data-stu-id="9a17c-148">Create a Custom Animation Class</span></span>  
+ <span data-ttu-id="9a17c-149">애니메이션 형식을 직접 만들면 개체에 애니메이션 효과를 적용하는 방식을 보다 강력하게 제어할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-149">Creating your own animation type gives you more control over how an object in animated.</span></span> <span data-ttu-id="9a17c-150">사용자 고유의 애니메이션 형식을 두 가지 권장 방법이:에서 파생 될 수는 <xref:System.Windows.Media.Animation.AnimationTimeline> 클래스 또는  *\<유형 >*AnimationBase 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-150">There are two recommended ways to create your own animation type: you can derive from the <xref:System.Windows.Media.Animation.AnimationTimeline> class or the *\<Type>*AnimationBase class.</span></span> <span data-ttu-id="9a17c-151">*\<Type>*Animation 또는 *\<Type>*AnimationUsingKeyFrames 클래스에서 파생하는 것은 권장되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-151">Deriving from the *\<Type>*Animation or *\<Type>*AnimationUsingKeyFrames classes is not recommended.</span></span>  
   
-### \<Type\>AnimationBase에서 파생  
- *\<Type\>*AnimationBase 클래스에서 파생시키는 것이 새 애니메이션 형식을 만드는 가장 간단한 방법입니다.  해당하는 *\<Type\>*AnimationBase 클래스가 이미 있는 형식에 대해 새 애니메이션을 만들 때 이 방법을 사용하십시오.  
+### <a name="derive-from-typeanimationbase"></a><span data-ttu-id="9a17c-152">\<Type>AnimationBase에서 파생</span><span class="sxs-lookup"><span data-stu-id="9a17c-152">Derive from \<Type>AnimationBase</span></span>  
+ <span data-ttu-id="9a17c-153">*\<Type>*AnimationBase 클래스에서 파생하는 것이 새 애니메이션 형식을 만드는 가장 간단한 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-153">Deriving from a *\<Type>*AnimationBase class is the simplest way to create a new animation type.</span></span> <span data-ttu-id="9a17c-154">이 방법은 해당하는 *\<Type>*AnimationBase 클래스가 이미 있는 형식에 대해 새 애니메이션을 만들려는 경우에 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-154">Use this approach when you want to create a new animation for type that already has a corresponding *\<Type>*AnimationBase class.</span></span>  
   
- **구현 지침**  
+ <span data-ttu-id="9a17c-155">**구현 지침**</span><span class="sxs-lookup"><span data-stu-id="9a17c-155">**Implementation Instructions**</span></span>  
   
- *\<Type\>*Animation 클래스에서 파생시키고 GetCurrentValueCore 메서드를 구현합니다.  GetCurrentValueCore 메서드는 애니메이션의 현재 값을 반환합니다.  세 가지 매개 변수인 제안된 시작 값, 제안된 끝 값, <xref:System.Windows.Media.Animation.AnimationClock>\(애니메이션 진행률을 확인하는 데 사용\)이 사용됩니다.  
+ <span data-ttu-id="9a17c-156">*\<Type>*Animation 클래스에서 파생하고 GetCurrentValueCore 메서드를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-156">Derive from a *\<Type>*Animation class and implement the GetCurrentValueCore method.</span></span> <span data-ttu-id="9a17c-157">GetCurrentValueCore 메서드는 애니메이션의 현재 값을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-157">The GetCurrentValueCore method returns the current value of the animation.</span></span> <span data-ttu-id="9a17c-158">세 개의 매개 변수를 사용: 제안 된 시작 값, 제안 된 끝 값 및 <xref:System.Windows.Media.Animation.AnimationClock>, 애니메이션의 진행 상태를 확인 하는 데 사용할 수 있는 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-158">It takes three parameters: a suggested starting value, a suggested ending value, and an <xref:System.Windows.Media.Animation.AnimationClock>, which you use to determine the progress of the animation.</span></span>  
   
- *\<Type\>*AnimationBase 클래스는 <xref:System.Windows.Freezable> 클래스에서 상속하므로 <xref:System.Windows.Freezable.CreateInstanceCore%2A> 코어를 재정의하여 클래스의 새 인스턴스를 반환해야 합니다.  클래스에서 데이터를 저장하기 위해 [종속성 속성](GTMT)을 사용하지 않거나 생성 후 추가로 초기화 작업을 수행해야 하는 경우 추가 메서드를 재정의해야 할 수도 있습니다. 자세한 내용은 [Freezable 개체 개요](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)를 참조하십시오.  
+ <span data-ttu-id="9a17c-159">때문에  *\<유형 >*AnimationBase 클래스에서 상속 된 <xref:System.Windows.Freezable> 클래스를 재정의 해야 <xref:System.Windows.Freezable.CreateInstanceCore%2A> 핵심 클래스의 새 인스턴스를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-159">Because the *\<Type>*AnimationBase classes inherit from the <xref:System.Windows.Freezable> class, you must also override <xref:System.Windows.Freezable.CreateInstanceCore%2A> core to return a new instance of your class.</span></span> <span data-ttu-id="9a17c-160">이 클래스가 데이터를 저장하는 데 종속성 속성을 사용하지 않거나 생성 후 추가 초기화를 요구할 경우 추가 메서드를 재정의해야 할 수 있습니다. 자세한 내용은 [Freezable 개체 개요](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9a17c-160">If the class does not use dependency properties to store its data or it requires extra initialization after creation, you might need to override additional methods; see the [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) for more information.</span></span>  
   
- 자세한 내용은 애니메이션 효과를 지정할 형식의 *\<Type\>*AnimationBase 클래스에 대한 GetCurrentValueCore 메서드 설명서를 참조하십시오.  예제를 보려면 [Custom Animation 샘플](http://go.microsoft.com/fwlink/?LinkID=159981)을 참조하십시오.  
+ <span data-ttu-id="9a17c-161">자세한 내용은 애니메이션 효과를 적용할 형식의 *\<Type>*AnimationBase 클래스에 대한 GetCurrentValueCore 메서드 설명서를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9a17c-161">For more information, see the GetCurrentValueCore method documentation for the *\<Type>*AnimationBase class for the type that you want to animate.</span></span> <span data-ttu-id="9a17c-162">예제를 보려면 [사용자 지정 애니메이션 샘플](http://go.microsoft.com/fwlink/?LinkID=159981)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9a17c-162">For an example, see the [Custom Animation Sample](http://go.microsoft.com/fwlink/?LinkID=159981)</span></span>  
   
- **다른 방법**  
+ <span data-ttu-id="9a17c-163">**대체 방법**</span><span class="sxs-lookup"><span data-stu-id="9a17c-163">**Alternative Approaches**</span></span>  
   
- 애니메이션 값이 보간되는 방법만 변경하려면 *\<Type\>*KeyFrame 클래스 중 하나에서 파생시키는 방법을 고려해 보십시오.  직접 만든 키 프레임을 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 제공하는 해당 *\<Type\>*AnimationUsingKeyFrames와 함께 사용할 수 있습니다.  
+ <span data-ttu-id="9a17c-164">애니메이션 값이 보간되는 방식을 변경하려면 *\<Type>*KeyFrame 클래스 중 하나에서 파생하는 것을 고려하세요.</span><span class="sxs-lookup"><span data-stu-id="9a17c-164">If you simply want to change how animation values are interpolated, considering deriving from one of the *\<Type>*KeyFrame classes.</span></span> <span data-ttu-id="9a17c-165">만드는 키 프레임은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 제공하는 해당 *\<Type>*AnimationUsingKeyFrames와 함께 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-165">The key frame you create can be used with the corresponding *\<Type>*AnimationUsingKeyFrames provided by [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span>  
   
-### AnimationTimeline에서 파생  
- 일치하는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션이 아직 없는 형식에 대한 애니메이션을 만들거나 강력한 형식이 아닌 애니메이션을 만들 때는 <xref:System.Windows.Media.Animation.AnimationTimeline> 클래스에서 파생시키십시오.  
+### <a name="derive-from-animationtimeline"></a><span data-ttu-id="9a17c-166">AnimationTimeline에서 파생</span><span class="sxs-lookup"><span data-stu-id="9a17c-166">Derive from AnimationTimeline</span></span>  
+ <span data-ttu-id="9a17c-167">파생 되는 <xref:System.Windows.Media.Animation.AnimationTimeline> 에 지문이 아직 없으면 일치 하는 형식에 대 한 애니메이션을 만들 때 클래스 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 강력한 형식화 되지 않은 하는 애니메이션을 만들려고 할 애니메이션 또는 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-167">Derive from the <xref:System.Windows.Media.Animation.AnimationTimeline> class when you want to create an animation for a type that doesn't already have a matching [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animation, or you want to create an animation that is not strongly typed.</span></span>  
   
- **구현 지침**  
+ <span data-ttu-id="9a17c-168">**구현 지침**</span><span class="sxs-lookup"><span data-stu-id="9a17c-168">**Implementation Instructions**</span></span>  
   
- <xref:System.Windows.Media.Animation.AnimationTimeline> 클래스에서 파생시키고 다음 멤버를 재정의합니다.  
+ <span data-ttu-id="9a17c-169">파생 되는 <xref:System.Windows.Media.Animation.AnimationTimeline> 클래스 및 멤버를 재정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-169">Derive from the <xref:System.Windows.Media.Animation.AnimationTimeline> class and override the following members:</span></span>  
   
--   <xref:System.Windows.Freezable.CreateInstanceCore%2A> – 새 클래스가 구체적 클래스인 경우 <xref:System.Windows.Freezable.CreateInstanceCore%2A>를 재정의하여 클래스의 새 인스턴스를 반환해야 합니다.  
+-   <span data-ttu-id="9a17c-170"><xref:System.Windows.Freezable.CreateInstanceCore%2A>–를 재정의 해야 새 클래스를 구체적인 경우 <xref:System.Windows.Freezable.CreateInstanceCore%2A> 클래스의 새 인스턴스를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-170"><xref:System.Windows.Freezable.CreateInstanceCore%2A> – If your new class is concrete, you must override <xref:System.Windows.Freezable.CreateInstanceCore%2A> to return a new instance of your class.</span></span>  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> – 이 메서드를 재정의하여 애니메이션의 현재 값을 반환합니다.  이 메서드는 세 개의 매개 변수, 즉 기본 원점 값, 기본 대상 값 및 <xref:System.Windows.Media.Animation.AnimationClock>을 사용합니다.  애니메이션의 현재 시간 또는 진행률을 가져오려면 <xref:System.Windows.Media.Animation.AnimationClock>을 사용합니다.  기본 원점 값과 기본 대상 값은 사용 여부를 선택할 수 있습니다.  
+-   <span data-ttu-id="9a17c-171"><xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>– 애니메이션의 현재 값을 반환 하려면이 메서드를 재정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-171"><xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> – Override this method to return the current value of your animation.</span></span> <span data-ttu-id="9a17c-172">세 개의 매개 변수를 걸리는: 기본 원점 값, 기본 대상 값 및 <xref:System.Windows.Media.Animation.AnimationClock>합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-172">It takes three parameters: a default origin value, a default destination value, and an <xref:System.Windows.Media.Animation.AnimationClock>.</span></span> <span data-ttu-id="9a17c-173">사용 하 여는 <xref:System.Windows.Media.Animation.AnimationClock> 현재 시간 또는 애니메이션에 대 한 진행률을 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-173">Use the <xref:System.Windows.Media.Animation.AnimationClock> to obtain the current time or progress for the animation.</span></span> <span data-ttu-id="9a17c-174">기본 원본 및 대상 값을 사용할 것인지 여부를 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-174">You can choose whether to use the default origin and destination values.</span></span>  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> – 이 속성을 재정의하여 애니메이션에서 <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> 메서드로 지정되는 기본 대상 값을 사용할지 여부를 나타냅니다.  
+-   <span data-ttu-id="9a17c-175"><xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A>– 애니메이션 기본 대상 값으로 지정 된 사용 하는지 여부를 나타내도록이 속성을 재정의 <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="9a17c-175"><xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> – Override this property to indicate whether your animation uses the default destination value specified by the <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> method.</span></span>  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> – 이 속성을 정의하여 애니메이션에서 생성하는 출력의 <xref:System.Type>을 나타냅니다.  
+-   <span data-ttu-id="9a17c-176"><xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A>– 나타내도록이 속성을 재정의 <xref:System.Type> 애니메이션의 출력 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-176"><xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> – Override this property to indicate the <xref:System.Type> of output your animation produces.</span></span>  
   
- 클래스에서 데이터를 저장하기 위해 [종속성 속성](GTMT)을 사용하지 않거나 생성 후 추가로 초기화 작업을 수행해야 하는 경우 추가 메서드를 재정의해야 할 수도 있습니다. 자세한 내용은 [Freezable 개체 개요](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)를 참조하십시오.  
+ <span data-ttu-id="9a17c-177">이 클래스가 데이터를 저장하는 데 종속성 속성을 사용하지 않거나 생성 후 추가 초기화를 요구할 경우 추가 메서드를 재정의해야 할 수 있습니다. 자세한 내용은 [Freezable 개체 개요](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9a17c-177">If the class does not use dependency properties to store its data or it requires extra initialization after creation, you might need to override additional methods; see the [Freezable Objects Overview](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md) for more information.</span></span>  
   
- 권장되는 패러다임\([!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션에서 사용\)은 두 상속 수준을 사용하는 것입니다.  
+ <span data-ttu-id="9a17c-178">권장되는 패러다임([!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션에서 사용)은 다음 두 상속 수준을 사용하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-178">The recommended paradigm (used by [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animations) is to use two inheritance levels:</span></span>  
   
-1.  <xref:System.Windows.Media.Animation.AnimationTimeline>에서 파생되는 추상 *\<Type\>*AnimationBase 클래스를 만듭니다.  이 클래스는 <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> 메서드를 재정의해야 합니다.  또한 새 추상 메서드 GetCurrentValueCore를 도입하고 <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>를 재정의하여 기본 원점 값 및 기본 대상 값 매개 변수 형식의 유효성을 검사한 다음 GetCurrentValueCore를 호출하도록 합니다.  
+1.  <span data-ttu-id="9a17c-179">추상 만들기  *\<유형 >*AnimationBase 클래스에서 파생 된 <xref:System.Windows.Media.Animation.AnimationTimeline>합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-179">Create an abstract *\<Type>*AnimationBase class that derives from <xref:System.Windows.Media.Animation.AnimationTimeline>.</span></span> <span data-ttu-id="9a17c-180">이 클래스를 재정의 해야는 <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="9a17c-180">This class should override the <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> method.</span></span> <span data-ttu-id="9a17c-181">또한 새로운 추상 메서드를 GetCurrentValueCore를 소개 하 고 재정의 <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> GetCurrentValueCore 원점 기본값 및 기본 대상 값 매개 변수 형식, 유효한 지 확인 하도록 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-181">It should also introduce a new abstract method, GetCurrentValueCore, and override <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> so that it validates the types of the default origin value and default destination value parameters, then calls GetCurrentValueCore.</span></span>  
   
-2.  새 *\<Type\>*AnimationBase 클래스에서 상속하는 또 다른 클래스를 만들고 <xref:System.Windows.Freezable.CreateInstanceCore%2A> 메서드, 도입한 GetCurrentValueCore 메서드 및 <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> 속성을 재정의합니다.  
+2.  <span data-ttu-id="9a17c-182">상속 되는 다른 클래스 만들기에서 새  *\<유형 >*AnimationBase 클래스 및 재정의 <xref:System.Windows.Freezable.CreateInstanceCore%2A> 메서드를 도입 하면 GetCurrentValueCore 메서드 및 <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-182">Create another class that inherits from your new *\<Type>*AnimationBase class and overrides the <xref:System.Windows.Freezable.CreateInstanceCore%2A> method, the GetCurrentValueCore method that you introduced, and the <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> property.</span></span>  
   
- **다른 방법**  
+ <span data-ttu-id="9a17c-183">**대체 방법**</span><span class="sxs-lookup"><span data-stu-id="9a17c-183">**Alternative Approaches**</span></span>  
   
- 해당하는 From\/To\/By 애니메이션 또는 키 프레임 애니메이션이 없는 형식에 애니메이션 효과를 지정하려면 <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>를 사용하는 것을 고려해 보십시오.  약한 형식이기 때문에 <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>가 모든 값 형식에 애니메이션 효과를 지정할 수 있습니다.  이 방법의 단점은 <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>가 [불연속 보간](GTMT)만 지원한다는 것입니다.  
+ <span data-ttu-id="9a17c-184">사용 하 여 형식 없거나 해당 From/하/By 애니메이션 키 프레임 애니메이션에 애니메이션 효과 적용 하려는 경우 고려해는 <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-184">If you want to animate a type that has no corresponding From/To/By animation or key-frame animation, consider using an <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>.</span></span> <span data-ttu-id="9a17c-185">이기 때문에 약하게 형식화 된 <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> 모든 유형의 값에 애니메이션을 적용 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-185">Because it is weakly typed, an <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> can animate any type of value.</span></span> <span data-ttu-id="9a17c-186">이 방식의 단점은 <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> 불연속 보간을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-186">The drawback to this approach is that <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> only supports discrete interpolation.</span></span>  
   
 <a name="useperframecallback"></a>   
-## 프레임당 콜백 사용  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션 시스템을 완전히 건너뛰어야 할 때 이 방법을 사용하십시오.  이 방법의 한 가지 시나리오는 물리학 애니메이션입니다. 여기에서는 각 애니메이션 단계에 있는 애니메이션 효과가 지정된 개체의 새 방향 또는 위치를 마지막 개체 상호 작용 집합을 기준으로 다시 계산해야 합니다.  
+## <a name="use-per-frame-callback"></a><span data-ttu-id="9a17c-187">프레임당 콜백 사용</span><span class="sxs-lookup"><span data-stu-id="9a17c-187">Use Per-Frame Callback</span></span>  
+ <span data-ttu-id="9a17c-188">이 접근 방법은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 애니메이션 시스템을 완전히 무시해야 할 때 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-188">Use this approach when you need to completely bypass the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animation system.</span></span> <span data-ttu-id="9a17c-189">이 방법에 대한 한 가지 시나리오는 각 애니메이션이 새 방향으로 단계별로 이동하거나 애니메이션 개체의 위치가 개체 상호 작용의 마지막 집합에 따라 다시 계산되어야 하는 물리학 애니메이션입니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-189">One scenario for this approach is physics animations, where at each animation step a new direction or position of animated objects needs to be recomputed based on the  last set of object interactions.</span></span>  
   
- **구현 지침**  
+ <span data-ttu-id="9a17c-190">**구현 지침**</span><span class="sxs-lookup"><span data-stu-id="9a17c-190">**Implementation Instructions**</span></span>  
   
- 이 개요에 설명된 다른 방법과 달리 프레임당 콜백을 사용하기 위해서는 사용자 지정 애니메이션이나 키 프레임 클래스를 만들 필요가 없습니다.  
+ <span data-ttu-id="9a17c-191">이 개요에 설명된 다른 방법과 달리, 프레임당 콜백을 사용하기 위해 사용자 지정 애니메이션 또는 키 프레임 클래스를 만들 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-191">Unlike the other approaches described in this overview, to use per-frame callback you don't need to create a custom animation or key frame class.</span></span>  
   
- 대신 애니메이션 효과를 지정할 개체가 들어 있는 개체의 <xref:System.Windows.Media.CompositionTarget.Rendering> 이벤트를 등록하십시오.  이 이벤트 처리기 메서드는 프레임당 한 번씩 호출됩니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]가 [시각적 트리](GTMT)에 있는 일관된 렌더링 데이터를 컴포지션 트리를 통해 마샬링하는 경우 이벤트 처리기 메서드가 호출됩니다.  
+ <span data-ttu-id="9a17c-192">에 대해 등록 하는 대신,는 <xref:System.Windows.Media.CompositionTarget.Rendering> 애니메이션 효과 적용할 개체를 포함 하는 개체의 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-192">Instead, you register for the <xref:System.Windows.Media.CompositionTarget.Rendering> event of the object that contains the objects you want to animate.</span></span> <span data-ttu-id="9a17c-193">이 이벤트 처리기 메서드는 프레임마다 한 번씩 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-193">This event handler method gets called once per frame.</span></span> <span data-ttu-id="9a17c-194">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]가 시각적 트리의 지속되는 렌더링 데이터를 컴퍼지션 트리로 마샬링할 때마다 이벤트 처리기 메서드가 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-194">Each time that [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] marshals the persisted rendering data in the visual tree across to the composition tree, your event handler method is called.</span></span>  
   
- 이벤트 처리기에서 애니메이션 효과에 필요한 모든 계산을 수행하고 애니메이션 효과를 지정할 개체의 속성을 해당 값으로 설정하십시오.  
+ <span data-ttu-id="9a17c-195">이벤트 처리기에서 애니메이션 효과에 필요한 계산을 수행하고 이러한 값을 사용하여 애니메이션 효과를 적용하려는 개체의 속성을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-195">In your event handler, perform your whatever calculations necessary for your animation effect and set the properties of the objects you want to animate with these values.</span></span>  
   
- 현재 프레임의 표시 시간을 얻기 위해 이 이벤트와 연결된 <xref:System.EventArgs>가 <xref:System.Windows.Media.RenderingEventArgs>로 캐스팅되어 현재 프레임의 렌더링 시간을 얻는 데 사용할 수 있는 <xref:System.Windows.Media.RenderingEventArgs.RenderingTime%2A> 속성을 제공합니다.  
+ <span data-ttu-id="9a17c-196">현재 프레임의 프레젠테이션 시간을 얻기 위해는 <xref:System.EventArgs> 와 연결 된 이벤트로 캐스팅 될 수 <xref:System.Windows.Media.RenderingEventArgs>, 제공 하는 한 <xref:System.Windows.Media.RenderingEventArgs.RenderingTime%2A> 현재 프레임을 얻는 데 사용할 수 있는 속성의 렌더링 시간입니다.</span><span class="sxs-lookup"><span data-stu-id="9a17c-196">To obtain the presentation time of the current frame, the <xref:System.EventArgs> associated with this event can be cast as <xref:System.Windows.Media.RenderingEventArgs>, which provide a <xref:System.Windows.Media.RenderingEventArgs.RenderingTime%2A> property that you can use to obtain the current frame's rendering time.</span></span>  
   
- 자세한 내용은 <xref:System.Windows.Media.CompositionTarget.Rendering> 페이지를 참조하십시오.  
+ <span data-ttu-id="9a17c-197">자세한 내용은 참조는 <xref:System.Windows.Media.CompositionTarget.Rendering> 페이지.</span><span class="sxs-lookup"><span data-stu-id="9a17c-197">For more information, see the <xref:System.Windows.Media.CompositionTarget.Rendering> page.</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Media.Animation.AnimationTimeline>   
- <xref:System.Windows.Media.Animation.IKeyFrame>   
- [속성 애니메이션 기술 개요](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)   
- [Freezable 개체 개요](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)   
- [From\/To\/By 애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/from-to-by-animations-overview.md)   
- [키 프레임 애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)   
- [경로 애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)   
- [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)   
- [애니메이션 및 타이밍 시스템 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)   
- [Custom Animation 샘플](http://go.microsoft.com/fwlink/?LinkID=159981)
+## <a name="see-also"></a><span data-ttu-id="9a17c-198">참고 항목</span><span class="sxs-lookup"><span data-stu-id="9a17c-198">See Also</span></span>  
+ <xref:System.Windows.Media.Animation.AnimationTimeline>  
+ <xref:System.Windows.Media.Animation.IKeyFrame>  
+ [<span data-ttu-id="9a17c-199">속성 애니메이션 기술 개요</span><span class="sxs-lookup"><span data-stu-id="9a17c-199">Property Animation Techniques Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)  
+ [<span data-ttu-id="9a17c-200">Freezable 개체 개요</span><span class="sxs-lookup"><span data-stu-id="9a17c-200">Freezable Objects Overview</span></span>](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
+ [<span data-ttu-id="9a17c-201">키 프레임 애니메이션 개요</span><span class="sxs-lookup"><span data-stu-id="9a17c-201">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [<span data-ttu-id="9a17c-202">경로 애니메이션 개요</span><span class="sxs-lookup"><span data-stu-id="9a17c-202">Path Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)  
+ [<span data-ttu-id="9a17c-203">애니메이션 개요</span><span class="sxs-lookup"><span data-stu-id="9a17c-203">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="9a17c-204">애니메이션 및 타이밍 시스템 개요</span><span class="sxs-lookup"><span data-stu-id="9a17c-204">Animation and Timing System Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
+ [<span data-ttu-id="9a17c-205">사용자 지정 애니메이션 샘플</span><span class="sxs-lookup"><span data-stu-id="9a17c-205">Custom Animation Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=159981)

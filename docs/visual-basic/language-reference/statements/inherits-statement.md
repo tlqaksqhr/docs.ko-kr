@@ -1,80 +1,78 @@
 ---
-title: "Inherits Statement | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Inherits"
-  - "Inherits"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Inherits statement"
-  - "Inherits statement, syntax"
+title: Inherits Statement
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Inherits
+- Inherits
+helpviewer_keywords:
+- Inherits statement [Visual Basic]
+- Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ae9ba54c3fd1ec3332c9f6260bc19a1293270ad8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Inherits Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-현재 클래스나 인터페이스가 다른 클래스나 인터페이스 집합에서 특성, 변수, 속성, 프로시저 및 이벤트를 상속하도록 합니다.  
+# <a name="inherits-statement"></a><span data-ttu-id="0b160-102">Inherits Statement</span><span class="sxs-lookup"><span data-stu-id="0b160-102">Inherits Statement</span></span>
+<span data-ttu-id="0b160-103">현재 클래스 또는 인터페이스가 다른 클래스나 인터페이스 집합에서 특성, 변수, 속성, 프로시저 및 이벤트를 상속 하도록 하면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="0b160-103">Causes the current class or interface to inherit the attributes, variables, properties, procedures, and events from another class or set of interfaces.</span></span>  
   
-## 구문  
+## <a name="syntax"></a><span data-ttu-id="0b160-104">구문</span><span class="sxs-lookup"><span data-stu-id="0b160-104">Syntax</span></span>  
   
 ```  
 Inherits basetypenames  
 ```  
   
-## 요소  
+## <a name="parts"></a><span data-ttu-id="0b160-105">요소</span><span class="sxs-lookup"><span data-stu-id="0b160-105">Parts</span></span>  
   
-|||  
-|-|-|  
-|용어|정의|  
-|`basetypenames`|필수 요소.  이 클래스가 파생되는 클래스의 이름입니다.<br /><br /> 또는<br /><br /> 이 인터페이스가 파생되는 인터페이스의 이름입니다.  여러 이름을 구분하려면 쉼표를 사용합니다.|  
+|<span data-ttu-id="0b160-106">용어</span><span class="sxs-lookup"><span data-stu-id="0b160-106">Term</span></span>|<span data-ttu-id="0b160-107">정의</span><span class="sxs-lookup"><span data-stu-id="0b160-107">Definition</span></span>|  
+|---|---|  
+|`basetypenames`|<span data-ttu-id="0b160-108">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="0b160-108">Required.</span></span> <span data-ttu-id="0b160-109">이 클래스가 파생 되는 클래스의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="0b160-109">The name of the class from which this class derives.</span></span><br /><br /> <span data-ttu-id="0b160-110">또는</span><span class="sxs-lookup"><span data-stu-id="0b160-110">-or-</span></span><br /><br /> <span data-ttu-id="0b160-111">이 인터페이스가 파생 되는 인터페이스의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="0b160-111">The names of the interfaces from which this interface derives.</span></span> <span data-ttu-id="0b160-112">여러 이름을 구분 하려면 쉼표를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="0b160-112">Use commas to separate multiple names.</span></span>|  
   
-## 설명  
- `Inherits` 문을 사용하는 경우 이 문은 클래스 또는 인터페이스 정의에서 공백 또는 주석이 없는 첫 번째 줄이어야 합니다.  또한 `Class` 문이나 `Interface` 문 바로 다음에 나와야 합니다.  
+## <a name="remarks"></a><span data-ttu-id="0b160-113">설명</span><span class="sxs-lookup"><span data-stu-id="0b160-113">Remarks</span></span>  
+ <span data-ttu-id="0b160-114">을 사용 하는 경우는 `Inherits` 문은 클래스 또는 인터페이스 정의에서 공백 및 주석이 아닌 첫 번째 줄 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0b160-114">If used, the `Inherits` statement must be the first non-blank, non-comment line in a class or interface definition.</span></span> <span data-ttu-id="0b160-115">다음에 나와야는 `Class` 또는 `Interface` 문.</span><span class="sxs-lookup"><span data-stu-id="0b160-115">It should immediately follow the `Class` or `Interface` statement.</span></span>  
   
- `Inherits`는 클래스나 인터페이스에만 사용할 수 있습니다.  즉, 상속의 선언 컨텍스트는 소스 파일, 네임스페이스, 구조체, 모듈, 프로시저 또는 블록일 수 없습니다.  
+ <span data-ttu-id="0b160-116">사용할 수 있습니다 `Inherits` 클래스 또는 인터페이스에만 합니다.</span><span class="sxs-lookup"><span data-stu-id="0b160-116">You can use `Inherits` only in a class or interface.</span></span> <span data-ttu-id="0b160-117">즉, 소스 파일, 네임 스페이스, 구조체, 모듈, 프로시저 또는 블록 상속에 대 한 선언 컨텍스트 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="0b160-117">This means the declaration context for an inheritance cannot be a source file, namespace, structure, module, procedure, or block.</span></span>  
   
-## 규칙  
+## <a name="rules"></a><span data-ttu-id="0b160-118">규칙</span><span class="sxs-lookup"><span data-stu-id="0b160-118">Rules</span></span>  
   
--   **클래스 상속.** 클래스가 `Inherits` 문을 사용하는 경우에는 하나의 기본 클래스만 지정할 수 있습니다.  
+-   <span data-ttu-id="0b160-119">**클래스를 상속 합니다.**</span><span class="sxs-lookup"><span data-stu-id="0b160-119">**Class Inheritance.**</span></span> <span data-ttu-id="0b160-120">클래스를 사용 하는 경우는 `Inherits` 문을 하나의 기본 클래스를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0b160-120">If a class uses the `Inherits` statement, you can specify only one base class.</span></span>  
   
-     클래스는 해당 클래스 내에 중첩된 클래스에서 상속될 수 없습니다.  
+     <span data-ttu-id="0b160-121">클래스는 그 안에 중첩 된 클래스에서 상속할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="0b160-121">A class cannot inherit from a class nested within it.</span></span>  
   
--   **인터페이스 상속.** 인터페이스가 `Inherits` 문을 사용하는 경우 하나 이상의 기본 인터페이스를 지정할 수 있습니다.  두 인터페이스가 동일한 이름의 멤버를 각각 정의해도 이러한 두 인터페이스에서 상속할 수 있습니다.  상속할 경우 구현하는 코드는 이름 한정을 사용하여 구현하는 멤버를 지정해야 합니다.  
+-   <span data-ttu-id="0b160-122">**인터페이스 상속 합니다.**</span><span class="sxs-lookup"><span data-stu-id="0b160-122">**Interface Inheritance.**</span></span> <span data-ttu-id="0b160-123">인터페이스를 사용 하는 경우는 `Inherits` 문에서 하나 이상의 기본 인터페이스를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0b160-123">If an interface uses the `Inherits` statement, you can specify one or more base interfaces.</span></span> <span data-ttu-id="0b160-124">동일한 이름 가진 멤버를 정의 하는 경우에 두 인터페이스에서 상속할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0b160-124">You can inherit from two interfaces even if they each define a member with the same name.</span></span> <span data-ttu-id="0b160-125">이렇게 하면 구현 코드는 구현 하는 멤버를 지정 하려면 이름 한정을 사용 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0b160-125">If you do so, the implementing code must use name qualification to specify which member it is implementing.</span></span>  
   
-     인터페이스는 액세스 수준이 보다 제한적인 다른 인터페이스에서 상속할 수 없습니다.  예를 들어 `Public` 인터페이스는 `Friend` 인터페이스에서 상속할 수 없습니다.  
+     <span data-ttu-id="0b160-126">인터페이스는 더 제한적인 액세스 수준 가진 다른 인터페이스에서 상속할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="0b160-126">An interface cannot inherit from another interface with a more restrictive access level.</span></span> <span data-ttu-id="0b160-127">예를 들어 한 `Public` 인터페이스에서 상속할 수 없습니다는 `Friend` 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="0b160-127">For example, a `Public` interface cannot inherit from a `Friend` interface.</span></span>  
   
-     인터페이스는 해당 인터페이스 내에 중첩된 인터페이스에서 상속할 수 없습니다.  
+     <span data-ttu-id="0b160-128">인터페이스 내에 중첩 된 인터페이스에서 상속할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="0b160-128">An interface cannot inherit from an interface nested within it.</span></span>  
   
- .NET Framework 클래스 상속의 예로 <xref:System.SystemException> 클래스에서 상속하는 <xref:System.ArgumentException> 클래스를 들 수 있습니다.  이 클래스는 <xref:System.Exception.Message%2A> 속성 및 <xref:System.Exception.ToString%2A> 메서드와 같이 시스템 예외에 필요한 미리 정의된 모든 속성과 프로시저를 <xref:System.ArgumentException>에 제공합니다.  
+ <span data-ttu-id="0b160-129">.NET Framework에서 클래스 상속의 예로 <xref:System.ArgumentException> 클래스에서 상속 되는 <xref:System.SystemException> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="0b160-129">An example of class inheritance in the .NET Framework is the <xref:System.ArgumentException> class, which inherits from the <xref:System.SystemException> class.</span></span> <span data-ttu-id="0b160-130">이 제공에 <xref:System.ArgumentException> 미리 정의 된 모든 속성과 같은 시스템 예외에 필요한 절차는 <xref:System.Exception.Message%2A> 속성 및 <xref:System.Exception.ToString%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="0b160-130">This provides to <xref:System.ArgumentException> all the predefined properties and procedures required by system exceptions, such as the <xref:System.Exception.Message%2A> property and the <xref:System.Exception.ToString%2A> method.</span></span>  
   
- .NET Framework 인터페이스 상속의 예로 <xref:System.Collections.IEnumerable> 인터페이스에서 상속하는 <xref:System.Collections.ICollection> 인터페이스를 들 수 있습니다.  이 인터페이스는 <xref:System.Collections.ICollection>이 컬렉션을 이동하는 데 필요한 열거자 정의를 상속하도록 합니다.  
+ <span data-ttu-id="0b160-131">.NET framework에서 인터페이스 상속의 예로 <xref:System.Collections.ICollection> 인터페이스에서 상속 되는 <xref:System.Collections.IEnumerable> 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="0b160-131">An example of interface inheritance in the .NET Framework is the <xref:System.Collections.ICollection> interface, which inherits from the <xref:System.Collections.IEnumerable> interface.</span></span> <span data-ttu-id="0b160-132">이 인해 <xref:System.Collections.ICollection> 컬렉션을 이동 하는 데 필요한 열거자의 정의 상속 하도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="0b160-132">This causes <xref:System.Collections.ICollection> to inherit the definition of the enumerator required to traverse a collection.</span></span>  
   
-## 예제  
- 다음 예제에서는 `Inherits` 문을 사용하여 `thisClass`라는 클래스가 `anotherClass`라는 기본 클래스의 모든 멤버를 상속하는 방법을 보여 줍니다.  
+## <a name="example"></a><span data-ttu-id="0b160-133">예제</span><span class="sxs-lookup"><span data-stu-id="0b160-133">Example</span></span>  
+ <span data-ttu-id="0b160-134">다음 예제에서는 `Inherits` 라는 클래스를 표시 하는 문을 `thisClass` 라는 기본 클래스의 모든 멤버를 상속할 수 `anotherClass`합니다.</span><span class="sxs-lookup"><span data-stu-id="0b160-134">The following example uses the `Inherits` statement to show how a class named `thisClass` can inherit all the members of a base class named `anotherClass`.</span></span>  
   
  [!code-vb[VbVbalrStatements#37](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/inherits-statement_1.vb)]  
   
-## 예제  
- 다음 예제에서는 여러 인스턴스의 상속을 보여 줍니다.  
+## <a name="example"></a><span data-ttu-id="0b160-135">예제</span><span class="sxs-lookup"><span data-stu-id="0b160-135">Example</span></span>  
+ <span data-ttu-id="0b160-136">다음 예제에서는 여러 인터페이스의 상속을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0b160-136">The following example shows inheritance of multiple interfaces.</span></span>  
   
  [!code-vb[VbVbalrStatements#38](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/inherits-statement_2.vb)]  
   
- `thisInterface`라는 인터페이스는 이제 <xref:System.IComparable>, <xref:System.IDisposable> 및 <xref:System.IFormattable> 인터페이스의 모든 정의를 포함합니다. 상속된 멤버는 두 개체의 형식 관련 비교를 각각 제공하여 할당된 리소스를 해제하고 개체의 값을 `String`으로 나타냅니다.  `thisInterface`를 구현하는 클래스는 모든 기본 인터페이스의 모든 멤버를 구현해야 합니다.  
+ <span data-ttu-id="0b160-137">이라는 인터페이스 `thisInterface` 이제에서 정의 모두 포함 됩니다는 <xref:System.IComparable>, <xref:System.IDisposable>, 및 <xref:System.IFormattable> 상속 된 멤버 각각에 대 한 제공 두 개체의 형식 고유의 비교를 해제 하는 인터페이스에 할당 된 리소스 및 개체의 값을 한 `String`합니다.</span><span class="sxs-lookup"><span data-stu-id="0b160-137">The interface named `thisInterface` now includes all the definitions in the <xref:System.IComparable>, <xref:System.IDisposable>, and <xref:System.IFormattable> interfaces The inherited members provide respectively for type-specific comparison of two objects, releasing allocated resources, and expressing the value of an object as a `String`.</span></span> <span data-ttu-id="0b160-138">구현 하는 클래스 `thisInterface` 모든 기본 인터페이스의 모든 멤버를 구현 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0b160-138">A class that implements `thisInterface` must implement every member of every base interface.</span></span>  
   
-## 참고 항목  
- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)   
- [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)   
- [Objects and Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)   
- [Inheritance Basics](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)   
- [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a><span data-ttu-id="0b160-139">참고 항목</span><span class="sxs-lookup"><span data-stu-id="0b160-139">See Also</span></span>  
+ [<span data-ttu-id="0b160-140">MustInherit</span><span class="sxs-lookup"><span data-stu-id="0b160-140">MustInherit</span></span>](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
+ [<span data-ttu-id="0b160-141">NotInheritable</span><span class="sxs-lookup"><span data-stu-id="0b160-141">NotInheritable</span></span>](../../../visual-basic/language-reference/modifiers/notinheritable.md)  
+ [<span data-ttu-id="0b160-142">개체 및 클래스</span><span class="sxs-lookup"><span data-stu-id="0b160-142">Objects and Classes</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
+ [<span data-ttu-id="0b160-143">상속 기본 사항</span><span class="sxs-lookup"><span data-stu-id="0b160-143">Inheritance Basics</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
+ [<span data-ttu-id="0b160-144">인터페이스</span><span class="sxs-lookup"><span data-stu-id="0b160-144">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

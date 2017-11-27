@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,82 +13,80 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: tdykstra
 ms.author: tdykstra
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7886b3bfe8299b64277d6062ab481136caafbde0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 69e6ea6a95ffdea8f7a21540106d4817119a7cb3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="caching-in-net-framework-applications"></a>.NET Framework 응용 프로그램에서 캐싱
-캐싱을 사용하면 빠른 액세스를 위해 데이터를 메모리에 저장할 수 있습니다. 데이터에 다시 액세스할 때 응용 프로그램은 원래 소스에서 검색하는 대신 캐시에서 데이터를 가져올 수 있습니다. 이 경우 성능과 확장성이 향상됩니다. 또한 캐싱을 사용하면 데이터 소스를 일시적으로 사용할 수 없는 경우에도 데이터를 사용할 수 있습니다.  
+# <a name="caching-in-net-framework-applications"></a><span data-ttu-id="fa0f3-102">.NET Framework 응용 프로그램에서 캐싱</span><span class="sxs-lookup"><span data-stu-id="fa0f3-102">Caching in .NET Framework Applications</span></span>
+<span data-ttu-id="fa0f3-103">캐싱을 사용하면 빠른 액세스를 위해 데이터를 메모리에 저장할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-103">Caching enables you to store data in memory for rapid access.</span></span> <span data-ttu-id="fa0f3-104">데이터에 다시 액세스할 때 응용 프로그램은 원래 소스에서 검색하는 대신 캐시에서 데이터를 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-104">When the data is accessed again, applications can get the data from the cache instead of retrieving it from the original source.</span></span> <span data-ttu-id="fa0f3-105">이 경우 성능과 확장성이 향상됩니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-105">This can improve performance and scalability.</span></span> <span data-ttu-id="fa0f3-106">또한 캐싱을 사용하면 데이터 소스를 일시적으로 사용할 수 없는 경우에도 데이터를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-106">In addition, caching makes data available when the data source is temporarily unavailable.</span></span>  
   
- .NET Framework에서는 ASP.NET을 포함하여 Windows 클라이언트와 서버 응용 프로그램 둘 다의 성능과 확장성을 개선하는 데 사용할 수 있는 캐싱 기능을 제공합니다.  
-  
-> [!NOTE]
->  [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 및 이전 버전에서는 ASP.NET이 <xref:System.Web.Caching> 네임스페이스에 메모리 내 캐시 구현을 제공했습니다. 이전 버전의 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 캐싱을 <xref:System.Web> 네임스페이스에서만 사용할 수 있었기 때문에 ASP.NET 클래스에 대한 종속성이 필요했습니다. .NET Framework 4에서는 <xref:System.Runtime.Caching> 네임스페이스에 웹 응용 프로그램과 비웹 응용 프로그램 둘 다에 사용 가능한 API가 포함되어 있습니다.  
-  
-## <a name="caching-data"></a>데이터 캐싱  
- <xref:System.Runtime.Caching> 네임스페이스의 클래스를 사용하여 정보를 캐시할 수 있습니다. 이 네임스페이스의 캐싱 클래스는 다음과 같은 기능을 제공합니다.  
-  
--   사용자 지정 캐시 구현을 만들기 위한 기초를 제공하는 추상 형식  
-  
--   구체적인 메모리 내 개체 캐시 구현  
-  
- 추상 기본 캐싱 클래스(<xref:System.Runtime.Caching.ObjectCache>)는 다음과 같은 캐싱 작업을 정의합니다.  
-  
--   캐시 항목 만들기 및 관리  
-  
--   만료 및 제거 정보 지정  
-  
--   캐시 항목의 변경 내용에 대한 응답으로 발생하는 이벤트 트리거  
-  
- <xref:System.Runtime.Caching.MemoryCache> 클래스는 <xref:System.Runtime.Caching.ObjectCache> 클래스의 메모리 내 개체 캐시 구현입니다. 대부분의 캐싱 작업에 <xref:System.Runtime.Caching.MemoryCache> 클래스를 사용할 수 있습니다.  
+ <span data-ttu-id="fa0f3-107">.NET Framework에서는 ASP.NET을 포함하여 Windows 클라이언트와 서버 응용 프로그램 둘 다의 성능과 확장성을 개선하는 데 사용할 수 있는 캐싱 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-107">The .NET Framework provides caching functionality that you can use to improve the performance and scalability of both Windows client and server applications, including ASP.NET.</span></span>  
   
 > [!NOTE]
->  <xref:System.Runtime.Caching.MemoryCache> 클래스는 <xref:System.Web.Caching> 네임스페이스에 정의된 ASP.NET 캐시 개체에서 모델링됩니다. 따라서 내부 캐싱 논리가 이전 버전의 ASP.NET에서 제공된 논리와 유사합니다.  
+>  <span data-ttu-id="fa0f3-108">[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 및 이전 버전에서는 ASP.NET이 <xref:System.Web.Caching> 네임스페이스에 메모리 내 캐시 구현을 제공했습니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-108">In the [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] and earlier versions, ASP.NET provided an in-memory cache implementation in the <xref:System.Web.Caching> namespace.</span></span> <span data-ttu-id="fa0f3-109">이전 버전의 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서는 캐싱을 <xref:System.Web> 네임스페이스에서만 사용할 수 있었기 때문에 ASP.NET 클래스에 대한 종속성이 필요했습니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-109">In previous versions of the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], caching was available only in the <xref:System.Web> namespace and therefore required a dependency on ASP.NET classes.</span></span> <span data-ttu-id="fa0f3-110">.NET Framework 4에서는 <xref:System.Runtime.Caching> 네임스페이스에 웹 응용 프로그램과 비웹 응용 프로그램 둘 다에 사용 가능한 API가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-110">In the .NET Framework 4, the <xref:System.Runtime.Caching> namespace contains APIs that are designed for both Web and non-Web applications.</span></span>  
   
- WPF 응용 프로그램에서 캐싱을 사용하는 방법의 예제는 [연습: WPF 응용 프로그램에서 응용 프로그램 데이터 캐싱](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)을 참조하세요.  
+## <a name="caching-data"></a><span data-ttu-id="fa0f3-111">데이터 캐싱</span><span class="sxs-lookup"><span data-stu-id="fa0f3-111">Caching Data</span></span>  
+ <span data-ttu-id="fa0f3-112"><xref:System.Runtime.Caching> 네임스페이스의 클래스를 사용하여 정보를 캐시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-112">You can cache information by using classes in the <xref:System.Runtime.Caching> namespace.</span></span> <span data-ttu-id="fa0f3-113">이 네임스페이스의 캐싱 클래스는 다음과 같은 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-113">The caching classes in this namespace provide the following features:</span></span>  
   
-## <a name="caching-in-aspnet-applications"></a>ASP.NET 응용 프로그램의 캐싱  
- <xref:System.Runtime.Caching> 네임스페이스의 캐싱 클래스는 ASP.NET에서 데이터를 캐시하기 위한 기능을 제공합니다.  
+-   <span data-ttu-id="fa0f3-114">사용자 지정 캐시 구현을 만들기 위한 기초를 제공하는 추상 형식</span><span class="sxs-lookup"><span data-stu-id="fa0f3-114">Abstract types that provide the foundation for creating custom cache implementations.</span></span>  
+  
+-   <span data-ttu-id="fa0f3-115">구체적인 메모리 내 개체 캐시 구현</span><span class="sxs-lookup"><span data-stu-id="fa0f3-115">A concrete in-memory object cache implementation.</span></span>  
+  
+ <span data-ttu-id="fa0f3-116">추상 기본 캐싱 클래스(<xref:System.Runtime.Caching.ObjectCache>)는 다음과 같은 캐싱 작업을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-116">The abstract base caching class (<xref:System.Runtime.Caching.ObjectCache>) defines the following caching tasks:</span></span>  
+  
+-   <span data-ttu-id="fa0f3-117">캐시 항목 만들기 및 관리</span><span class="sxs-lookup"><span data-stu-id="fa0f3-117">Creating and managing cache entries.</span></span>  
+  
+-   <span data-ttu-id="fa0f3-118">만료 및 제거 정보 지정</span><span class="sxs-lookup"><span data-stu-id="fa0f3-118">Specifying expiration and eviction information.</span></span>  
+  
+-   <span data-ttu-id="fa0f3-119">캐시 항목의 변경 내용에 대한 응답으로 발생하는 이벤트 트리거</span><span class="sxs-lookup"><span data-stu-id="fa0f3-119">Triggering events that are raised in response to changes in cache entries.</span></span>  
+  
+ <span data-ttu-id="fa0f3-120"><xref:System.Runtime.Caching.MemoryCache> 클래스는 <xref:System.Runtime.Caching.ObjectCache> 클래스의 메모리 내 개체 캐시 구현입니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-120">The <xref:System.Runtime.Caching.MemoryCache> class is an in-memory object cache implementation of the <xref:System.Runtime.Caching.ObjectCache> class.</span></span> <span data-ttu-id="fa0f3-121">대부분의 캐싱 작업에 <xref:System.Runtime.Caching.MemoryCache> 클래스를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-121">You can use the <xref:System.Runtime.Caching.MemoryCache> class for most caching tasks.</span></span>  
   
 > [!NOTE]
->  응용 프로그램이 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 또는 이전 버전을 대상으로 하는 경우 <xref:System.Web.Caching> 네임스페이스에 정의된 캐싱 클래스를 사용해야 합니다. 자세한 내용은 [ASP.NET 캐싱 개요](http://msdn.microsoft.com/library/5ec28012-4972-4dc3-b3e8-9d20401fe11d)를 참조하세요.  
+>  <span data-ttu-id="fa0f3-122"><xref:System.Runtime.Caching.MemoryCache> 클래스는 <xref:System.Web.Caching> 네임스페이스에 정의된 ASP.NET 캐시 개체에서 모델링됩니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-122">The <xref:System.Runtime.Caching.MemoryCache> class is modeled on the ASP.NET cache object that is defined in the <xref:System.Web.Caching> namespace.</span></span> <span data-ttu-id="fa0f3-123">따라서 내부 캐싱 논리가 이전 버전의 ASP.NET에서 제공된 논리와 유사합니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-123">Therefore, the internal caching logic similar to the logic that was provided in earlier versions of ASP.NET.</span></span>  
+  
+ <span data-ttu-id="fa0f3-124">WPF 응용 프로그램에서 캐싱을 사용하는 방법의 예제는 [연습: WPF 응용 프로그램에서 응용 프로그램 데이터 캐싱](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-124">For an example of how to use to caching in a WPF application, see [Walkthrough: Caching Application Data in a WPF Application](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md).</span></span>  
+  
+## <a name="caching-in-aspnet-applications"></a><span data-ttu-id="fa0f3-125">ASP.NET 응용 프로그램의 캐싱</span><span class="sxs-lookup"><span data-stu-id="fa0f3-125">Caching in ASP.NET Applications</span></span>  
+ <span data-ttu-id="fa0f3-126"><xref:System.Runtime.Caching> 네임스페이스의 캐싱 클래스는 ASP.NET에서 데이터를 캐시하기 위한 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-126">The caching classes in the <xref:System.Runtime.Caching> namespace provide functionality for caching data in ASP.NET.</span></span>  
   
 > [!NOTE]
->  새 응용 프로그램을 개발하는 경우 <xref:System.Runtime.Caching.MemoryCache> 클래스를 사용하는 것이 좋습니다. <xref:System.Runtime.Caching> 네임스페이스에 제공된 API는 <xref:System.Web.Caching.Cache> 네임스페이스에 제공된 API와 비슷합니다. 따라서 이전 버전의 ASP.NET에서 캐싱을 사용한 경우 API가 익숙할 것입니다. ASP.NET 응용 프로그램에서 캐싱을 사용하는 방법의 예제는 [연습: ASP.NET에서 응용 프로그램 데이터 캐싱](http://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23)을 참조하세요.  
+>  <span data-ttu-id="fa0f3-127">응용 프로그램이 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 또는 이전 버전을 대상으로 하는 경우 <xref:System.Web.Caching> 네임스페이스에 정의된 캐싱 클래스를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-127">If your application targets the [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] or earlier, you must use the caching classes that are defined in the <xref:System.Web.Caching> namespace.</span></span> <span data-ttu-id="fa0f3-128">자세한 내용은 [ASP.NET 캐싱 개요](http://msdn.microsoft.com/library/5ec28012-4972-4dc3-b3e8-9d20401fe11d)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-128">For more information, see [ASP.NET Caching Overview](http://msdn.microsoft.com/library/5ec28012-4972-4dc3-b3e8-9d20401fe11d).</span></span>  
   
-### <a name="output-caching"></a>출력 캐싱  
- 응용 프로그램 데이터를 수동으로 캐시하려면 ASP.NET의 <xref:System.Runtime.Caching.MemoryCache> 클래스를 사용할 수 있습니다. ASP.NET은 페이지, 컨트롤 및 HTTP 응답의 생성된 출력을 메모리에 저장하는 출력 캐싱도 지원합니다. ASP.NET 웹 페이지에서 선언적으로 또는 Web.config 파일의 설정을 사용하여 출력 캐싱을 구성할 수 있습니다. 자세한 내용은 [caching 요소에 대한 outputCache 요소(ASP.NET 설정 스키마)](http://msdn.microsoft.com/en-us/47cd2b47-316f-4dfd-bbf8-539be3066fee)를 참조하세요.  
+> [!NOTE]
+>  <span data-ttu-id="fa0f3-129">새 응용 프로그램을 개발하는 경우 <xref:System.Runtime.Caching.MemoryCache> 클래스를 사용하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-129">When you develop new applications, we recommend that you use the <xref:System.Runtime.Caching.MemoryCache> class.</span></span> <span data-ttu-id="fa0f3-130"><xref:System.Runtime.Caching> 네임스페이스에 제공된 API는 <xref:System.Web.Caching.Cache> 네임스페이스에 제공된 API와 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-130">The API that is provided in the <xref:System.Runtime.Caching> namespace is like the API that is provided in the <xref:System.Web.Caching.Cache> namespace.</span></span> <span data-ttu-id="fa0f3-131">따라서 이전 버전의 ASP.NET에서 캐싱을 사용한 경우 API가 익숙할 것입니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-131">Therefore, the API will be familiar if you used caching in earlier versions of ASP.NET.</span></span> <span data-ttu-id="fa0f3-132">ASP.NET 응용 프로그램에서 캐싱을 사용하는 방법의 예제는 [연습: ASP.NET에서 응용 프로그램 데이터 캐싱](http://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-132">For an example of how to use caching in ASP.NET applications, see [Walkthrough: Caching Application Data in ASP.NET](http://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23).</span></span>  
   
- ASP.NET에서는 사용자 지정 출력 캐시 공급자를 만들어 출력 캐싱을 확장할 수 있습니다. 사용자 지정 공급자를 사용하면 디스크, 클라우드 저장소, 분산된 캐시 엔진 등의 다른 저장소 장치를 사용하여 캐시된 콘텐츠를 저장할 수 있습니다. 사용자 지정 출력 캐시 공급자를 만들려면 <xref:System.Web.Caching.OutputCacheProvider> 클래스에서 파생되는 클래스를 만들고 사용자 지정 출력 캐시 공급자를 사용하도록 응용 프로그램을 구성합니다.  
+### <a name="output-caching"></a><span data-ttu-id="fa0f3-133">출력 캐싱</span><span class="sxs-lookup"><span data-stu-id="fa0f3-133">Output Caching</span></span>  
+ <span data-ttu-id="fa0f3-134">응용 프로그램 데이터를 수동으로 캐시하려면 ASP.NET의 <xref:System.Runtime.Caching.MemoryCache> 클래스를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-134">To manually cache application data, you can use the <xref:System.Runtime.Caching.MemoryCache> class in ASP.NET.</span></span> <span data-ttu-id="fa0f3-135">ASP.NET은 페이지, 컨트롤 및 HTTP 응답의 생성된 출력을 메모리에 저장하는 출력 캐싱도 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-135">ASP.NET also supports output caching, which stores the generated output of pages, controls, and HTTP responses in memory.</span></span> <span data-ttu-id="fa0f3-136">ASP.NET 웹 페이지에서 선언적으로 또는 Web.config 파일의 설정을 사용하여 출력 캐싱을 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-136">You can configure output caching declaratively in an ASP.NET Web page or by using settings in the Web.config file.</span></span> <span data-ttu-id="fa0f3-137">자세한 내용은 [caching 요소에 대한 outputCache 요소(ASP.NET 설정 스키마)](http://msdn.microsoft.com/en-us/47cd2b47-316f-4dfd-bbf8-539be3066fee)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-137">For more information, see [outputCache Element for caching (ASP.NET Settings Schema)](http://msdn.microsoft.com/en-us/47cd2b47-316f-4dfd-bbf8-539be3066fee).</span></span>  
   
-## <a name="caching-in-wcf-rest-services"></a>WCF REST 서비스의 캐싱  
- WCF REST 서비스의 경우 .NET Framework를 통해 ASP.NET에서 사용 가능한 선언적 출력 캐싱을 활용할 수 있습니다. 이렇게 하면 WCF REST 서비스 작업의 응답을 캐시할 수 있습니다. 사용자가 캐시용으로 구성된 서비스에 HTTP GET 요청을 보내면 ASP.NET이 캐시된 응답을 다시 보내고 서비스 메서드가 호출되지 않습니다. 캐시가 만료된 후 다음에 사용자가 HTTP GET 요청을 보낼 때 서비스 메서드가 호출되고 응답이 다시 캐시됩니다.  
+ <span data-ttu-id="fa0f3-138">ASP.NET에서는 사용자 지정 출력 캐시 공급자를 만들어 출력 캐싱을 확장할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-138">ASP.NET lets you extend output caching by creating custom output-cache providers.</span></span> <span data-ttu-id="fa0f3-139">사용자 지정 공급자를 사용하면 디스크, 클라우드 저장소, 분산된 캐시 엔진 등의 다른 저장소 장치를 사용하여 캐시된 콘텐츠를 저장할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-139">By using custom providers, you can store cached content using other storage devices such as disks, cloud storage, and distributed cache engines.</span></span> <span data-ttu-id="fa0f3-140">사용자 지정 출력 캐시 공급자를 만들려면 <xref:System.Web.Caching.OutputCacheProvider> 클래스에서 파생되는 클래스를 만들고 사용자 지정 출력 캐시 공급자를 사용하도록 응용 프로그램을 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-140">To create a custom output cache provider, you create a class that derives from the <xref:System.Web.Caching.OutputCacheProvider> class and configure the application to use the custom output cache provider.</span></span>  
   
- .NET Framework를 사용하면 조건부 HTTP GET 캐싱을 구현할 수도 있습니다. REST 시나리오에서 조건부 HTTP GET 요청은 [HTTP 사양](http://go.microsoft.com/fwlink/?LinkId=165800)에 설명된 것처럼 지능적인 HTTP 캐싱을 구현하기 위해 서비스에서 자주 사용됩니다. 자세한 내용은 [WCF 웹 HTTP 서비스에 대한 캐싱 지원](http://go.microsoft.com/fwlink/?LinkId=184598)을 참조하세요.  
+## <a name="caching-in-wcf-rest-services"></a><span data-ttu-id="fa0f3-141">WCF REST 서비스의 캐싱</span><span class="sxs-lookup"><span data-stu-id="fa0f3-141">Caching in WCF REST Services</span></span>  
+ <span data-ttu-id="fa0f3-142">WCF REST 서비스의 경우 .NET Framework를 통해 ASP.NET에서 사용 가능한 선언적 출력 캐싱을 활용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-142">For WCF REST services, the .NET Framework enables you to take advantage of the declarative output caching that is available in ASP.NET.</span></span> <span data-ttu-id="fa0f3-143">이렇게 하면 WCF REST 서비스 작업의 응답을 캐시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-143">This enables you to cache responses from your WCF REST service operations.</span></span> <span data-ttu-id="fa0f3-144">사용자가 캐시용으로 구성된 서비스에 HTTP GET 요청을 보내면 ASP.NET이 캐시된 응답을 다시 보내고 서비스 메서드가 호출되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-144">When a user sends an HTTP GET request to a service that is configured for caching, ASP.NET sends back the cached response, and the service method is not called.</span></span> <span data-ttu-id="fa0f3-145">캐시가 만료된 후 다음에 사용자가 HTTP GET 요청을 보낼 때 서비스 메서드가 호출되고 응답이 다시 캐시됩니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-145">After the cache expires, the next time that a user sends an HTTP GET request, your service method is called and the response is again cached.</span></span>  
   
-## <a name="extending-caching-in-the-net-framework"></a>.NET Framework의 캐싱 기능 확장  
- .NET Framework의 캐싱 기능은 확장 가능하도록 설계되었습니다. <xref:System.Runtime.Caching.ObjectCache> 클래스를 사용하여 사용자 지정 캐시 구현을 만들 수 있습니다. 이 클래스는 Windows Forms, WPF(Windows Presentation Foundation), WCF(Windows Communications Foundation) 등 관리되는 모든 응용 프로그램에서 사용할 수 있는 멤버를 제공합니다. 다른 저장소 메커니즘을 사용하는 캐시 클래스를 만들기 위해 또는 캐시 작업을 보다 세부적으로 제어하려는 경우 이 작업을 수행하는 것이 좋습니다.  
+ <span data-ttu-id="fa0f3-146">.NET Framework를 사용하면 조건부 HTTP GET 캐싱을 구현할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-146">The .NET Framework also enables you to implement conditional HTTP GET caching.</span></span> <span data-ttu-id="fa0f3-147">REST 시나리오에서 조건부 HTTP GET 요청은 [HTTP 사양](http://go.microsoft.com/fwlink/?LinkId=165800)에 설명된 것처럼 지능적인 HTTP 캐싱을 구현하기 위해 서비스에서 자주 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-147">In REST scenarios, a conditional HTTP GET request is often used by services to implement intelligent HTTP caching as described in the [HTTP Specification](http://go.microsoft.com/fwlink/?LinkId=165800).</span></span> <span data-ttu-id="fa0f3-148">자세한 내용은 [WCF 웹 HTTP 서비스에 대한 캐싱 지원](http://go.microsoft.com/fwlink/?LinkId=184598)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-148">For more information, see [Caching Support for WCF Web HTTP Services](http://go.microsoft.com/fwlink/?LinkId=184598).</span></span>  
   
- 캐싱을 확장하려면 다음 작업을 수행할 수 있습니다.  
+## <a name="extending-caching-in-the-net-framework"></a><span data-ttu-id="fa0f3-149">.NET Framework의 캐싱 기능 확장</span><span class="sxs-lookup"><span data-stu-id="fa0f3-149">Extending Caching in the .NET Framework</span></span>  
+ <span data-ttu-id="fa0f3-150">.NET Framework의 캐싱 기능은 확장 가능하도록 설계되었습니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-150">Caching in the .NET Framework is designed to be extensible.</span></span> <span data-ttu-id="fa0f3-151"><xref:System.Runtime.Caching.ObjectCache> 클래스를 사용하여 사용자 지정 캐시 구현을 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-151">The <xref:System.Runtime.Caching.ObjectCache> class enables you to create a custom cache implementation.</span></span> <span data-ttu-id="fa0f3-152">이 클래스는 Windows Forms, WPF(Windows Presentation Foundation), WCF(Windows Communications Foundation) 등 관리되는 모든 응용 프로그램에서 사용할 수 있는 멤버를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-152">This class provides members that are available to all managed applications, including Windows Forms, Windows Presentation Foundation (WPF), and Windows Communications Foundation (WCF).</span></span> <span data-ttu-id="fa0f3-153">다른 저장소 메커니즘을 사용하는 캐시 클래스를 만들기 위해 또는 캐시 작업을 보다 세부적으로 제어하려는 경우 이 작업을 수행하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-153">You might do this in order to create a cache class that uses a different storage mechanism, or if you want granular control over cache operations.</span></span>  
   
--   <xref:System.Runtime.Caching.ObjectCache> 클래스에서 파생되는 사용자 지정 클래스를 만든 다음 파생 클래스에 사용자 지정 캐시 구현을 제공합니다.  
+ <span data-ttu-id="fa0f3-154">캐싱을 확장하려면 다음 작업을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-154">To extend caching you can do the following:</span></span>  
   
--   <xref:System.Runtime.Caching.MemoryCache> 클래스에서 파생되는 클래스를 만들고 파생 클래스를 사용자 지정하거나 확장합니다. 이 작업을 수행하는 방법의 예제는 [ASP.NET 응용 프로그램에서 여러 캐시 개체를 사용하여 응용 프로그램 데이터 캐시](http://blogs.msdn.com/aspnetue/archive/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application.aspx)를 참조하세요.  
+-   <span data-ttu-id="fa0f3-155"><xref:System.Runtime.Caching.ObjectCache> 클래스에서 파생되는 사용자 지정 클래스를 만든 다음 파생 클래스에 사용자 지정 캐시 구현을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-155">Create a custom class that derives from the <xref:System.Runtime.Caching.ObjectCache> class and then provide a custom cache implementation in the derived class.</span></span>  
   
--   <xref:System.Web.Caching.OutputCacheProvider> 클래스에서 파생되는 클래스를 만들고 사용자 지정 출력 캐시 공급자를 사용하도록 응용 프로그램을 구성합니다.  
+-   <span data-ttu-id="fa0f3-156"><xref:System.Runtime.Caching.MemoryCache> 클래스에서 파생되는 클래스를 만들고 파생 클래스를 사용자 지정하거나 확장합니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-156">Create a class that derives from <xref:System.Runtime.Caching.MemoryCache> class and customize or extend the derived class.</span></span> <span data-ttu-id="fa0f3-157">이 작업을 수행하는 방법의 예제는 [ASP.NET 응용 프로그램에서 여러 캐시 개체를 사용하여 응용 프로그램 데이터 캐시](http://blogs.msdn.com/aspnetue/archive/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application.aspx)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-157">For an example of how to do this, see [Caching Application Data by Using Multiple Cache Objects in an ASP.NET Application](http://blogs.msdn.com/aspnetue/archive/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application.aspx).</span></span>  
   
- 자세한 내용은 Scott Guthrie 블로그의 [Extensible Output Caching with ASP.NET 4 (VS 2010 and .NET 4.0 Series)](http://go.microsoft.com/fwlink/?LinkId=185772)(ASP.NET 4(VS 2010 및 .NET 4.0 시리즈)에서 확장 가능한 출력 캐싱) 항목을 참조하세요.  
+-   <span data-ttu-id="fa0f3-158"><xref:System.Web.Caching.OutputCacheProvider> 클래스에서 파생되는 클래스를 만들고 사용자 지정 출력 캐시 공급자를 사용하도록 응용 프로그램을 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-158">Create a class that derives from the <xref:System.Web.Caching.OutputCacheProvider> class and configure the application to use the custom output cache provider.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.Caching.ObjectCache>   
- <xref:System.Runtime.Caching.MemoryCache>   
- [연습: WPF 응용 프로그램에서 응용 프로그램 데이터 캐싱](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)   
- [연습: ASP.NET에서 응용 프로그램 데이터 캐싱](http://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23)
-
+ <span data-ttu-id="fa0f3-159">자세한 내용은 Scott Guthrie 블로그의 [Extensible Output Caching with ASP.NET 4 (VS 2010 and .NET 4.0 Series)](http://go.microsoft.com/fwlink/?LinkId=185772)(ASP.NET 4(VS 2010 및 .NET 4.0 시리즈)에서 확장 가능한 출력 캐싱) 항목을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="fa0f3-159">For more information, see the entry [Extensible Output Caching with ASP.NET 4 (VS 2010 and .NET 4.0 Series)](http://go.microsoft.com/fwlink/?LinkId=185772) on Scott Guthrie's blog.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="fa0f3-160">참고 항목</span><span class="sxs-lookup"><span data-stu-id="fa0f3-160">See Also</span></span>  
+ <xref:System.Runtime.Caching.ObjectCache>  
+ <xref:System.Runtime.Caching.MemoryCache>  
+ [<span data-ttu-id="fa0f3-161">연습: WPF 응용 프로그램에서 응용 프로그램 데이터 캐싱</span><span class="sxs-lookup"><span data-stu-id="fa0f3-161">Walkthrough: Caching Application Data in a WPF Application</span></span>](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)  
+ [<span data-ttu-id="fa0f3-162">연습: ASP.NET에서 응용 프로그램 데이터 캐싱</span><span class="sxs-lookup"><span data-stu-id="fa0f3-162">Walkthrough: Caching Application Data in ASP.NET</span></span>](http://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23)

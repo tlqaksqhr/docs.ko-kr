@@ -1,43 +1,47 @@
 ---
-title: "워크플로 관리 끝점 샘플 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "워크플로 관리 끝점 샘플"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3ac6e08f-c43d-4bb7-83c3-e3890a4dac03
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9d13d1d2af449631f93dd4df29ff41113ffbbfec
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 워크플로 관리 끝점 샘플
-이 샘플에서는 워크플로 제어 끝점을 사용하여 로컬 및 원격으로 워크플로를 만들고 실행하는 방법과제어 끝점을 호스팅하고 제어 끝점을 호출하여 워크플로 인스턴스를 만들고 실행하는 클라이언트를 작성하는 방법을 보여 줍니다.워크플로는 서비스가 아닙니다.  
+# <a name="workflow-management-endpoint-sample"></a><span data-ttu-id="6fb3f-102">워크플로 관리 끝점 샘플</span><span class="sxs-lookup"><span data-stu-id="6fb3f-102">Workflow Management Endpoint Sample</span></span>
+<span data-ttu-id="6fb3f-103">이 샘플에서는 워크플로 제어 끝점을 사용하여 로컬 및 원격으로 워크플로를 만들고 실행하는 방법과</span><span class="sxs-lookup"><span data-stu-id="6fb3f-103">This sample shows how a workflow control endpoint can be used to create and run workflows both locally and remotely.</span></span> <span data-ttu-id="6fb3f-104">제어 끝점을 호스트하고 제어 끝점을 호출하여 워크플로 인스턴스를 만들고 실행하는 클라이언트를 작성하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6fb3f-104">The sample demonstrates how to host a control endpoint and write clients that call the control endpoint to create and run the instance of a workflow.</span></span> <span data-ttu-id="6fb3f-105">워크플로는 서비스가 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="6fb3f-105">The workflow is not a service.</span></span>  
   
- 샘플의 서비스 쪽에서 워크플로가 WorkflowServiceHost로 호스팅되고 WorkflowControlEndpoint가 추가되므로 클라이언트는 일시 중단, 시작 등의 제어 작업을 수행할 수 있습니다.사용자 정의 CreationEndpoint도 추가되어 워크플로를 만들 수 있습니다.그런 다음 서비스는 이러한 끝점을 사용하여 일시 중단 상태의 워크플로를 시작한 후 워크플로를 다시 시작합니다.클라이언트는 동일한 작업을 클라이언트 코드에서 수행합니다.이러한 인터페이스에 대한 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]는 [워크플로 제어 끝점](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md) 및 [방법: IIS에서 서비스가 아닌 워크플로 호스팅](../../../../docs/framework/wcf/feature-details/how-to-host-a-non-service-workflow-in-iis.md)을 참조하십시오.  
+ <span data-ttu-id="6fb3f-106">샘플의 서비스 쪽에서 워크플로가 WorkflowServiceHost로 호스트되고 WorkflowControlEndpoint가 추가되므로 클라이언트는 일시 중단, 시작 등의 제어 작업을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6fb3f-106">On the service side of the sample a workflow is hosted with WorkflowServiceHost and a WorkflowControlEndpoint is added so that clients can perform control operations (Suspend, Start, etc).</span></span> <span data-ttu-id="6fb3f-107">사용자 정의 CreationEndpoint도 추가되어 워크플로를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6fb3f-107">A user-defined CreationEndpoint is also added to allow the workflow to be created.</span></span> <span data-ttu-id="6fb3f-108">그런 다음 서비스는 이러한 끝점을 사용하여 일시 중단 상태의 워크플로를 시작한 후 워크플로를 다시 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="6fb3f-108">The service then uses these endpoints to start the workflow in a suspended state and then resume the workflow.</span></span> <span data-ttu-id="6fb3f-109">클라이언트는 동일한 작업을 클라이언트 코드에서 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="6fb3f-109">The client performs the same operations but from the client code.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="6fb3f-110">이러한 인터페이스 참조 [워크플로 제어 끝점](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md) 및 [하는 방법: IIS에서 서비스가 아닌 워크플로 호스팅](../../../../docs/framework/wcf/feature-details/how-to-host-a-non-service-workflow-in-iis.md)</span><span class="sxs-lookup"><span data-stu-id="6fb3f-110"> these interfaces see, [Workflow Control Endpoint](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md) and [How to: Host a non-service workflow in IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-non-service-workflow-in-iis.md)</span></span>  
   
-#### 이 샘플을 실행하려면  
+#### <a name="to-run-the-sample"></a><span data-ttu-id="6fb3f-111">이 샘플을 실행하려면</span><span class="sxs-lookup"><span data-stu-id="6fb3f-111">To run the sample</span></span>  
   
-1.  관리자 권한으로 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]을 실행합니다.  
+1.  <span data-ttu-id="6fb3f-112">관리자 권한으로 [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="6fb3f-112">Run [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] with administrator privileges.</span></span>  
   
-2.  [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]에서 ManagementEndpoint.sln 솔루션을 엽니다.  
+2.  <span data-ttu-id="6fb3f-113">[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]에서 ManagementEndpoint.sln 솔루션을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="6fb3f-113">Open the ManagementEndpoint.sln solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-3.  솔루션을 빌드하려면 Ctrl\+Shift\+B를 누르거나 **빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.  
+3.  <span data-ttu-id="6fb3f-114">솔루션을 빌드하려면 CTRL + SHIFT + B 키를 누르거나 선택 **솔루션 빌드** 에서 **빌드** 메뉴.</span><span class="sxs-lookup"><span data-stu-id="6fb3f-114">To build the solution, press CTRL+SHIFT+B or select **Build Solution** from the **Build** menu.</span></span>  
   
-4.  ManagementEndpoint.exe 응용 프로그램을 시작합니다.  
+4.  <span data-ttu-id="6fb3f-115">ManagementEndpoint.exe 응용 프로그램을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="6fb3f-115">Start the ManagementEndpoint.exe application.</span></span>  
   
-5.  Client.exe 응용 프로그램을 시작합니다.  
+5.  <span data-ttu-id="6fb3f-116">Client.exe 응용 프로그램을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="6fb3f-116">Start the Client.exe application.</span></span>  
   
 > [!IMPORTANT]
->  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.계속하기 전에 다음\(기본\) 디렉터리를 확인하십시오.  
+>  <span data-ttu-id="6fb3f-117">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6fb3f-117">The samples may already be installed on your computer.</span></span> <span data-ttu-id="6fb3f-118">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="6fb3f-118">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780)로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하십시오.이 샘플은 다음 디렉터리에 있습니다.  
+>  <span data-ttu-id="6fb3f-119">이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요.</span><span class="sxs-lookup"><span data-stu-id="6fb3f-119">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="6fb3f-120">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6fb3f-120">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\ManagementEndpoint`  
   
-## 참고 항목
+## <a name="see-also"></a><span data-ttu-id="6fb3f-121">참고 항목</span><span class="sxs-lookup"><span data-stu-id="6fb3f-121">See Also</span></span>

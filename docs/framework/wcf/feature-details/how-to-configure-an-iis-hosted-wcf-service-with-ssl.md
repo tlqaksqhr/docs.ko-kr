@@ -1,77 +1,80 @@
 ---
-title: "방법: SSL을 사용하여 IIS에서 호스트되는 WCF 서비스 구성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "방법: SSL을 사용하여 IIS에서 호스트되는 WCF 서비스 구성"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: cb6a0b7913434be70efdc5af780980b971b5bc6f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: SSL을 사용하여 IIS에서 호스트되는 WCF 서비스 구성
-이 항목에서는 HTTP 전송 보안을 사용하도록 IIS에서 호스트되는 WCF 서비스를 설정하는 방법에 대해 설명합니다.  HTTP 전송 보안에는 IIS에 등록할 SSL 인증서가 필요합니다.  SSL 인증서가 없는 경우에는 IIS를 사용하여 테스트 인증서를 생성할 수 있습니다.  그런 다음 SSL 바인딩을 웹 사이트에 추가하고 웹 사이트의 인증 속성을 구성해야 합니다.  마지막으로, HTTPS를 사용하도록 WCF 서비스를 구성해야 합니다.  
+# <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a><span data-ttu-id="2180a-102">방법: SSL을 사용하여 IIS에서 호스트되는 WCF 서비스 구성</span><span class="sxs-lookup"><span data-stu-id="2180a-102">How to: Configure an IIS-hosted WCF service with SSL</span></span>
+<span data-ttu-id="2180a-103">이 항목에서는 HTTP 전송 보안을 사용하도록 IIS에서 호스트되는 WCF 서비스를 설정하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="2180a-103">This topic describes how to set up an IIS-hosted WCF service to use HTTP transport security.</span></span> <span data-ttu-id="2180a-104">HTTP 전송 보안에는 IIS에 등록할 SSL 인증서가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="2180a-104">HTTP transport security requires an SSL certificate to be registered with IIS.</span></span> <span data-ttu-id="2180a-105">SSL 인증서가 없는 경우에는 IIS를 사용하여 테스트 인증서를 생성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2180a-105">If you do not have an SSL certificate you can use IIS to generate a test certificate.</span></span> <span data-ttu-id="2180a-106">그런 다음 SSL 바인딩을 웹 사이트에 추가하고 웹 사이트의 인증 속성을 구성해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2180a-106">Next you must add an SSL binding to the web site and configure the web site’s authentication properties.</span></span> <span data-ttu-id="2180a-107">마지막으로, HTTPS를 사용하도록 WCF 서비스를 구성해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="2180a-107">Finally you need to configure the WCF service to use HTTPS.</span></span>  
   
-### 자체 서명된 인증서 만들기  
+### <a name="creating-a-self-signed-certificate"></a><span data-ttu-id="2180a-108">자체 서명된 인증서 만들기</span><span class="sxs-lookup"><span data-stu-id="2180a-108">Creating a Self-Signed Certificate</span></span>  
   
-1.  인터넷 정보 서비스 관리자\(inetmgr.exe\)를 열고 왼쪽 트리 뷰에서 컴퓨터 이름을 선택합니다.  화면 오른쪽에서 서버 인증서를 선택합니다.  
+1.  <span data-ttu-id="2180a-109">인터넷 정보 서비스 관리자(inetmgr.exe)를 열고 왼쪽 트리 뷰에서 컴퓨터 이름을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="2180a-109">Open Internet Information Services Manager (inetmgr.exe), and select your computer name in the left-hand tree view.</span></span> <span data-ttu-id="2180a-110">화면 오른쪽에서 서버 인증서를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="2180a-110">On the right-hand side of the screen select Server Certificates</span></span>  
   
-     ![IIS Manager 홈 화면](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg\_INetMgrHome")  
+     <span data-ttu-id="2180a-111">![IIS Manager 홈 화면](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg_INetMgrHome")</span><span class="sxs-lookup"><span data-stu-id="2180a-111">![IIS Manager Home Screen](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg_INetMgrHome")</span></span>  
   
-2.  서버 인증서 창에서 **자체 서명된 인증서 만들기...** 링크를 클릭합니다.  
+2.  <span data-ttu-id="2180a-112">서버 인증서 창에서 클릭 된 **자체 서명 된 인증서 만들기...**</span><span class="sxs-lookup"><span data-stu-id="2180a-112">In the Server Certificates window click the **Create Self-Signed Certificate….**</span></span> <span data-ttu-id="2180a-113">링크를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="2180a-113">Link.</span></span>  
   
-     ![IIS를 사용하여 자체 서명된 인증서 만들기](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg\_CreateSelfSignedCert")  
+     <span data-ttu-id="2180a-114">![IIS와 인증서를 서명 자체 &#45; 만들기](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")</span><span class="sxs-lookup"><span data-stu-id="2180a-114">![Creating a self&#45;signed certificate with IIS](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")</span></span>  
   
-3.  자체 서명된 인증서의 이름을 입력하고 **확인**을 클릭합니다.  
+3.  <span data-ttu-id="2180a-115">자체 서명 된 인증서에 사용할 이름을 입력 하 고 클릭 **확인**합니다.</span><span class="sxs-lookup"><span data-stu-id="2180a-115">Enter a friendly name for the self-signed certificate and click **OK**.</span></span>  
   
-     ![자체 서명된 인증서 만들기 대화 상자](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg\_MyCert")  
+     <span data-ttu-id="2180a-116">![만들기 자체 &#45; 서명 인증서 대화 상자](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")</span><span class="sxs-lookup"><span data-stu-id="2180a-116">![Create Self&#45;Signed Certificate Dialog](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")</span></span>  
   
-     이제 새로 만든 자체 서명된 인증서 정보가 **서버 인증서** 창에 표시됩니다.  
+     <span data-ttu-id="2180a-117">새로 만든된 자체 서명 된 인증서 세부 정보에 표시 됩니다는 **서버 인증서** 창.</span><span class="sxs-lookup"><span data-stu-id="2180a-117">The newly created self-signed certificate details are now shown in the **Server Certificates** window.</span></span>  
   
-     ![서버 인증서 창](../../../../docs/framework/wcf/feature-details/media/mg-servercertificatewindow.jpg "mg\_ServerCertificateWindow")  
+     <span data-ttu-id="2180a-118">![서버 인증서 창](../../../../docs/framework/wcf/feature-details/media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")</span><span class="sxs-lookup"><span data-stu-id="2180a-118">![Server Certificate Window](../../../../docs/framework/wcf/feature-details/media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")</span></span>  
   
-     생성된 인증서는 신뢰할 수 있는 루트 인증 기관 저장소에 설치됩니다.  
+     <span data-ttu-id="2180a-119">생성된 인증서는 신뢰할 수 있는 루트 인증 기관 저장소에 설치됩니다.</span><span class="sxs-lookup"><span data-stu-id="2180a-119">The generated certificate is installed in the Trusted Root Certification Authorities store.</span></span>  
   
-### SSL 바인딩 추가  
+### <a name="add-ssl-binding"></a><span data-ttu-id="2180a-120">SSL 바인딩 추가</span><span class="sxs-lookup"><span data-stu-id="2180a-120">Add SSL Binding</span></span>  
   
-1.  인터넷 정보 서비스 관리자에서 **사이트** 폴더를 확장한 다음 화면 왼쪽의 트리 뷰에서 **기본 웹 사이트** 폴더를 확장합니다.  
+1.  <span data-ttu-id="2180a-121">인터넷 정보 서비스 관리자에서 확장 하 고는 **사이트** 폴더 차례로 **기본 웹 사이트** 화면 왼쪽의 트리 보기에서 폴더입니다.</span><span class="sxs-lookup"><span data-stu-id="2180a-121">Still in Internet Information Services Manager, expand the **Sites** folder and then the **Default Web Site** folder in the tree view on the left-hand side of the screen.</span></span>  
   
-2.  창 오른쪽 상단의 **동작** 섹션에서 **바인딩...** 링크를 클릭합니다.  
+2.  <span data-ttu-id="2180a-122">클릭는 **바인딩...**</span><span class="sxs-lookup"><span data-stu-id="2180a-122">Click the **Bindings….**</span></span> <span data-ttu-id="2180a-123">연결에 **동작** 창의 오른쪽 상단 부분에는 섹션입니다.</span><span class="sxs-lookup"><span data-stu-id="2180a-123">Link in the **Actions** section in the upper right hand portion of the window.</span></span>  
   
-     ![SSL 바인딩 추가](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg\_AddSSLBinding")  
+     <span data-ttu-id="2180a-124">![SSL 바인딩 추가](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg_AddSSLBinding")</span><span class="sxs-lookup"><span data-stu-id="2180a-124">![Adding an SSL binding](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg_AddSSLBinding")</span></span>  
   
-3.  사이트 바인딩 창에서 **추가** 단추를 클릭합니다.  
+3.  <span data-ttu-id="2180a-125">사이트 바인딩 창에서 클릭 된 **추가** 단추입니다.</span><span class="sxs-lookup"><span data-stu-id="2180a-125">In the Site Bindings window click the **Add** button.</span></span>  
   
-     ![사이트 바인딩 대화 상자](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg\_SiteBindingsDialog")  
+     <span data-ttu-id="2180a-126">![사이트 바인딩 대화 상자](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")</span><span class="sxs-lookup"><span data-stu-id="2180a-126">![Site Bindings Dialog](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")</span></span>  
   
-4.  **사이트 바인딩 추가** 대화 상자에서 방금 만든 자체 서명된 인증서의 이름 및 형식에 대한 https를 선택합니다.  
+4.  <span data-ttu-id="2180a-127">에 **사이트 바인딩 추가** 대화 상자에서 만든 https를 선택 형식과 방금 자체 서명 된 인증서의 이름에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="2180a-127">In the **Add Site Binding** dialog, select https for the type and the friendly name of the self-signed certificate you just created.</span></span>  
   
-     ![사이트 바인딩 예제](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "mg\_MyCertBinding")  
+     <span data-ttu-id="2180a-128">![사이트 바인딩 예제](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "mg_MyCertBinding")</span><span class="sxs-lookup"><span data-stu-id="2180a-128">![Site binding example](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "mg_MyCertBinding")</span></span>  
   
-### SSL용 가상 디렉터리 구성  
+### <a name="configure-virtual-directory-for-ssl"></a><span data-ttu-id="2180a-129">SSL용 가상 디렉터리 구성</span><span class="sxs-lookup"><span data-stu-id="2180a-129">Configure Virtual Directory for SSL</span></span>  
   
-1.  인터넷 정보 서비스 관리자에서 WCF 보안 서비스를 포함하는 가상 디렉터리를 선택합니다.  
+1.  <span data-ttu-id="2180a-130">인터넷 정보 서비스 관리자에서 WCF 보안 서비스를 포함하는 가상 디렉터리를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="2180a-130">Still in Internet Information Services Manager, select the virtual directory that contains your WCF secure service.</span></span>  
   
-2.  창의 가운데 창에 있는 IIS 섹션에서 **SSL 설정**을 선택합니다.  
+2.  <span data-ttu-id="2180a-131">창의 가운데 창에서 선택 **SSL 설정** IIS 섹션에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2180a-131">In the center pane of the window, select **SSL Settings** in the IIS section.</span></span>  
   
-     ![가상 디렉터리에 대한 SSL 설정](../../../../docs/framework/wcf/feature-details/media/mg-sslsettingsforvdir.jpg "mg\_SSLSettingsForVDir")  
+     <span data-ttu-id="2180a-132">![가상 디렉터리에 대 한 SSL 설정을](../../../../docs/framework/wcf/feature-details/media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")</span><span class="sxs-lookup"><span data-stu-id="2180a-132">![SSL Settings for virtual directory](../../../../docs/framework/wcf/feature-details/media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")</span></span>  
   
-3.  SSL 설정 창에서 **SSL 필요** 확인란을 선택하고 화면 오른쪽의 **동작** 섹션에서 **적용** 링크를 클릭합니다.  
+3.  <span data-ttu-id="2180a-133">SSL 설정 창에서 선택는 **SSL 필요** 확인란을 클릭 하 고는 **적용** 연결에 **작업** 화면 오른쪽에 섹션 합니다.</span><span class="sxs-lookup"><span data-stu-id="2180a-133">In the SSL Settings pane, select the **Require SSL** checkbox and click the **Apply** link in the **Actions** section on the right hand side of the screen.</span></span>  
   
-     ![가상 디렉터리 SSL 설정](../../../../docs/framework/wcf/feature-details/media/mg-vdirsslsettings.JPG "mg\_VDirSSLSettings")  
+     <span data-ttu-id="2180a-134">![가상 디렉터리 SSL 설정](../../../../docs/framework/wcf/feature-details/media/mg-vdirsslsettings.JPG "mg_VDirSSLSettings")</span><span class="sxs-lookup"><span data-stu-id="2180a-134">![Virtual directory SSL settings](../../../../docs/framework/wcf/feature-details/media/mg-vdirsslsettings.JPG "mg_VDirSSLSettings")</span></span>  
   
-### HTTP 전송 보안을 위한 WCF 서비스 구성  
+### <a name="configure-wcf-service-for-http-transport-security"></a><span data-ttu-id="2180a-135">HTTP 전송 보안을 위한 WCF 서비스 구성</span><span class="sxs-lookup"><span data-stu-id="2180a-135">Configure WCF Service for HTTP Transport Security</span></span>  
   
-1.  WCF 서비스의 web.config에서 다음 XML에 표시된 것처럼 전송 보안을 사용하도록 HTTP 바인딩을 구성합니다.  
+1.  <span data-ttu-id="2180a-136">WCF 서비스의 web.config에서 다음 XML에 표시된 것처럼 전송 보안을 사용하도록 HTTP 바인딩을 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="2180a-136">In the WCF service’s web.config configure the HTTP binding to use transport security as shown in the following XML.</span></span>  
   
-    ```  
+    ```xml  
     <bindings>  
           <basicHttpBinding>  
             <binding name="secureHttpBinding">  
@@ -80,13 +83,12 @@ caps.handback.revision: 3
               </security>  
             </binding>  
           </basicHttpBinding>  
-        </bindings>  
-  
+    </bindings>  
     ```  
   
-2.  다음 XML에 표시된 것처럼 서비스 및 서비스 끝점을 지정합니다.  
+2.  <span data-ttu-id="2180a-137">다음 XML에 표시된 것처럼 서비스 및 서비스 끝점을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="2180a-137">Specify your service and service endpoint as shown in the following XML.</span></span>  
   
-    ```  
+    ```xml  
     <services>  
           <service name="MySecureWCFService.Service1">  
             <endpoint address=""  
@@ -98,14 +100,13 @@ caps.handback.revision: 3
                       binding="mexHttpsBinding"  
                       contract="IMetadataExchange" />  
           </service>  
-        </services>  
-  
+    </services>  
     ```  
   
-## 예제  
- 다음은 HTTP 전송 보안을 사용하는 WCF 서비스에 대한 web.config 파일의 전체 예제입니다.  
+## <a name="example"></a><span data-ttu-id="2180a-138">예제</span><span class="sxs-lookup"><span data-stu-id="2180a-138">Example</span></span>  
+ <span data-ttu-id="2180a-139">다음은 HTTP 전송 보안을 사용하는 WCF 서비스에 대한 web.config 파일의 전체 예제입니다.</span><span class="sxs-lookup"><span data-stu-id="2180a-139">The following is a complete example of a web.config file for a WCF service using HTTP transport security</span></span>  
   
-```  
+```xml  
 <?xml version="1.0"?>  
 <configuration>  
   
@@ -146,18 +147,15 @@ caps.handback.revision: 3
     </behaviors>  
     <serviceHostingEnvironment multipleSiteBindingsEnabled="true" />  
   </system.serviceModel>  
- <system.webServer>  
+  <system.webServer>  
     <modules runAllManagedModulesForAllRequests="true"/>  
   </system.webServer>  
   
 </configuration>  
-  
 ```  
   
-<!-- TODO: review snippet reference  [!CODE [Microsoft.Win32.RegistryKey#4](Microsoft.Win32.RegistryKey#4)]  -->  
-  
-## 참고 항목  
- [인터넷 정보 서비스에서의 호스팅](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)   
- [인터넷 정보 서비스 호스팅 지침](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)   
- [인터넷 정보 서비스 호스팅을 위한 최선의 방법](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)   
- [인라인 코드를 사용한 IIS 호스팅](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)
+## <a name="see-also"></a><span data-ttu-id="2180a-140">참고 항목</span><span class="sxs-lookup"><span data-stu-id="2180a-140">See Also</span></span>  
+ [<span data-ttu-id="2180a-141">인터넷 정보 서비스에서 호스팅</span><span class="sxs-lookup"><span data-stu-id="2180a-141">Hosting in Internet Information Services</span></span>](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+ [<span data-ttu-id="2180a-142">인터넷 정보 서비스 호스팅 지침</span><span class="sxs-lookup"><span data-stu-id="2180a-142">Internet Information Service Hosting Instructions</span></span>](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
+ [<span data-ttu-id="2180a-143">인터넷 정보 서비스 호스팅을 위한 최선의 방법</span><span class="sxs-lookup"><span data-stu-id="2180a-143">Internet Information Services Hosting Best Practices</span></span>](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+ [<span data-ttu-id="2180a-144">인라인 코드를 사용한 IIS 호스팅</span><span class="sxs-lookup"><span data-stu-id="2180a-144">IIS Hosting Using Inline Code</span></span>](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)

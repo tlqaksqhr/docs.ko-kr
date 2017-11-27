@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.Security.SecurityServerSessionCloseReceived | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Security.SecurityServerSessionCloseReceived
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1260f9e8-78d9-4ccf-9912-3189ff5951e0
-caps.latest.revision: 4
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: b3cd4f3ea65102bc6068d24992171689dda48a54
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Security.SecurityServerSessionCloseReceived
-System.ServiceModel.Security.SecurityServerSessionCloseResponseReceived  
+# <a name="systemservicemodelsecuritysecurityserversessionclosereceived"></a><span data-ttu-id="0df10-102">System.ServiceModel.Security.SecurityServerSessionCloseReceived</span><span class="sxs-lookup"><span data-stu-id="0df10-102">System.ServiceModel.Security.SecurityServerSessionCloseReceived</span></span>
+<span data-ttu-id="0df10-103">System.ServiceModel.Security.SecurityServerSessionCloseResponseReceived</span><span class="sxs-lookup"><span data-stu-id="0df10-103">System.ServiceModel.Security.SecurityServerSessionCloseResponseReceived</span></span>  
   
-## 설명  
- 서버 보안 세션이 클라이언트로부터 닫기 응답 메시지를 받았습니다.  
+## <a name="description"></a><span data-ttu-id="0df10-104">설명</span><span class="sxs-lookup"><span data-stu-id="0df10-104">Description</span></span>  
+ <span data-ttu-id="0df10-105">서버 보안 세션이 클라이언트로부터 닫기 응답 메시지를 받았습니다.</span><span class="sxs-lookup"><span data-stu-id="0df10-105">The server security session received a Close response message from client.</span></span>  
   
-## 참고 항목  
- [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [추적을 사용하여 응용 프로그램 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [관리 및 진단](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="0df10-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="0df10-106">See Also</span></span>  
+ [<span data-ttu-id="0df10-107">추적</span><span class="sxs-lookup"><span data-stu-id="0df10-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="0df10-108">추적을 사용 하 여 응용 프로그램 문제를 해결 하려면</span><span class="sxs-lookup"><span data-stu-id="0df10-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="0df10-109">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="0df10-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -1,27 +1,30 @@
 ---
-title: "방법: WCF URL 예약을 제한된 예약으로 바꾸기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "방법: WCF URL 예약을 제한된 예약으로 바꾸기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9dd631f08f9367576adf97f9139348bfce69a92f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 방법: WCF URL 예약을 제한된 예약으로 바꾸기
-URL 예약을 사용하여 URL 또는 URL 집합에서 메시지를 수신할 수 있는 사용자를 제한할 수 있습니다.예약은 URL 템플릿, ACL\(액세스 제어 목록\) 및 플래그 집합으로 이루어집니다.URL 템플릿은 예약이 영향을 미치는 URL을 정의합니다.URL 템플릿 처리 방식에 대한 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]는 [들어오는 요청 라우팅](http://go.microsoft.com/fwlink/?LinkId=136764)\(영문 페이지일 수 있음\)을 참조하십시오.ACL은 지정된 URL에서 메시지를 수신하도록 허용할 사용자 또는 사용자 그룹을 제어합니다.플래그는 예약이 사용자 또는 그룹에게 URL에서 직접 수신 대기할 수 있는 권한을 제공하는지 또는 일부 다른 프로세스에 수신 대기 권한을 위임할 수 있는 권한을 제공하는지를 나타냅니다.  
+# <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a><span data-ttu-id="f45d4-102">방법: WCF URL 예약을 제한된 예약으로 바꾸기</span><span class="sxs-lookup"><span data-stu-id="f45d4-102">How to: Replace the WCF URL Reservation with a Restricted Reservation</span></span>
+<span data-ttu-id="f45d4-103">URL 예약을 사용하여 URL 또는 URL 집합에서 메시지를 수신할 수 있는 사용자를 제한할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-103">A URL reservation allows you to restrict who can receive messages from a URL or a set of URLs.</span></span> <span data-ttu-id="f45d4-104">예약은 URL 템플릿, ACL(액세스 제어 목록) 및 플래그 집합으로 이루어집니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-104">A reservation consists of a URL template, an access control list (ACL), and a set of flags.</span></span> <span data-ttu-id="f45d4-105">URL 템플릿은 예약이 영향을 미치는 URL을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-105">The URL template defines which URLs the reservation affects.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="f45d4-106">URL 템플릿 처리 되며, 참조 [들어오는 요청 라우팅](http://go.microsoft.com/fwlink/?LinkId=136764)합니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-106"> how URL templates are processed, see [Routing Incoming Requests](http://go.microsoft.com/fwlink/?LinkId=136764).</span></span> <span data-ttu-id="f45d4-107">ACL은 지정된 URL에서 메시지를 수신하도록 허용할 사용자 또는 사용자 그룹을 제어합니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-107">The ACL controls what user or group of users is permitted to receive messages from the specified URLs.</span></span> <span data-ttu-id="f45d4-108">플래그는 예약이 사용자 또는 그룹에게 URL에서 직접 수신 대기할 수 있는 권한을 제공하는지 또는 일부 다른 프로세스에 수신 대기 권한을 위임할 수 있는 권한을 제공하는지를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-108">The flags indicate whether the reservation is to give a user or group permission to listen on the URL directly or to delegate the permission to listen to some other process.</span></span>  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 포트 80에 모든 사용자가 이중 통신에 이중 HTTP 바인딩을 사용하는 응용 프로그램을 실행하도록 허용하는 전역 액세스가 가능한 예약을 만듭니다.이 예약의 ACL은 모든 사용자를 위한 것이므로 관리자는 URL 또는 URL 집합에서 수신 대기할 수 있는 권한을 명시적으로 허용하거나 허용하지 않을 수 없습니다.이 항목에서는 이 예약을 삭제하고 제한된 ACL로 예약을 다시 만드는 방법에 대해 설명합니다.  
+ <span data-ttu-id="f45d4-109">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]는 포트 80에 모든 사용자가 이중 통신에 이중 HTTP 바인딩을 사용하는 응용 프로그램을 실행하도록 허용하는 전역 액세스가 가능한 예약을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-109">As part of the default operating system configuration, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] creates a globally accessible reservation for port 80 to enable all users to run applications that use a dual HTTP binding for duplex communication.</span></span> <span data-ttu-id="f45d4-110">이 예약의 ACL은 모든 사용자를 위한 것이므로 관리자는 URL 또는 URL 집합에서 수신 대기할 수 있는 권한을 명시적으로 허용하거나 허용하지 않을 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-110">Because the ACL on this reservation is for everyone, administrators cannot explicitly allow or disallow permission to listen on a URL or set of URLs.</span></span> <span data-ttu-id="f45d4-111">이 항목에서는 이 예약을 삭제하고 제한된 ACL로 예약을 다시 만드는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-111">This topic explains how to delete this reservation and how to re-create the reservation with a restricted ACL.</span></span>  
   
- [!INCLUDE[wv](../../../../includes/wv-md.md)] 또는 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]에서는 고급 명령 프롬프트에서 `netsh http show urlacl`을 입력하여 모든 HTTP URL 예약을 볼 수 있습니다.다음 예에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] URL 예약의 사용 예를 보여 줍니다.  
+ <span data-ttu-id="f45d4-112">[!INCLUDE[wv](../../../../includes/wv-md.md)] 또는 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]에서는 고급 명령 프롬프트에서 `netsh http show urlacl`을 입력하여 모든 HTTP URL 예약을 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-112">On [!INCLUDE[wv](../../../../includes/wv-md.md)] or [!INCLUDE[lserver](../../../../includes/lserver-md.md)] you can view all of the HTTP URL reservations from an elevated command prompt by typing `netsh http show urlacl`.</span></span>  <span data-ttu-id="f45d4-113">다음 예에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] URL 예약의 사용 예를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-113">The following example shows what a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] URL reservation should resemble.</span></span>  
   
 ```  
 Reserved URL : http://+:80/Temporary_Listen_Addresses/  
@@ -31,37 +34,37 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
             SDDL: D:(A;;GX;;;WD)  
 ```  
   
- 예약은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램이 이중 통신에 HTTP 이중 바인딩을 사용하는 경우 사용되는 URL 템플릿으로 이루어집니다.이러한 형식의 URL은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서 HTTP 이중 바인딩을 통해 통신할 때 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트로 다시 메시지를 전송하는 데 사용됩니다.모든 사용자가 URL에서 수신 대기할 수 있지만 다른 프로세스에 수신 권한을 위임할 수는 없습니다.마지막으로 ACL은 SSDL\(Security Descriptor Definition Language\) 형식으로 지정됩니다.SSDL[!INCLUDE[crabout](../../../../includes/crabout-md.md)][SSDL](http://go.microsoft.com/fwlink/?LinkId=136789)을 참조하십시오.  
+ <span data-ttu-id="f45d4-114">예약은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램이 이중 통신에 HTTP 이중 바인딩을 사용하는 경우 사용되는 URL 템플릿으로 이루어집니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-114">The reservation consists of a URL template used when a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] application is using an HTTP dual binding for duplex communication.</span></span> <span data-ttu-id="f45d4-115">이러한 형식의 URL은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스에서 HTTP 이중 바인딩을 통해 통신할 때 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트로 다시 메시지를 전송하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-115">URLs of this form are used for a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service to send messages back to the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client when communicating over a HTTP dual binding.</span></span> <span data-ttu-id="f45d4-116">모든 사용자가 URL에서 수신 대기할 수 있지만 다른 프로세스에 수신 권한을 위임할 수는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-116">Everyone is given permission to listen on the URL but not to delegate listening to another process.</span></span> <span data-ttu-id="f45d4-117">마지막으로 ACL은 SSDL(Security Descriptor Definition Language) 형식으로 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-117">Finally, the ACL is described in Security Descriptor Definition Language (SSDL).</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="f45d4-118">SSDL, 참조 [SSDL](http://go.microsoft.com/fwlink/?LinkId=136789)</span><span class="sxs-lookup"><span data-stu-id="f45d4-118"> SSDL, see [SSDL](http://go.microsoft.com/fwlink/?LinkId=136789)</span></span>  
   
-### WCF URL 예약을 삭제하려면  
+### <a name="to-delete-the-wcf-url-reservation"></a><span data-ttu-id="f45d4-119">WCF URL 예약을 삭제하려면</span><span class="sxs-lookup"><span data-stu-id="f45d4-119">To delete the WCF URL reservation</span></span>  
   
-1.  **시작**을 클릭하고 **모든 프로그램**을 가리킨 후 **보조프로그램**을 클릭하고 **명령 프롬프트**를 마우스 오른쪽 단추로 클릭한 다음 표시되는 상황에 맞는 메뉴에서 **관리자 권한으로 실행**을 클릭합니다.계속할 수 있는 권한을 요청하는 UAC\(사용자 계정 컨트롤\) 창에서 **계속**을 클릭합니다.  
+1.  <span data-ttu-id="f45d4-120">클릭 **시작**, 가리킨 **모든 프로그램**, 클릭 **액세서리**를 마우스 오른쪽 단추로 클릭 **명령 프롬프트** 클릭 **계정으로 실행 관리자** 에서 비롯 되는 상황에 맞는 메뉴에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-120">Click **Start**, point to **All Programs**, click **Accessories**, right-click **Command Prompt** and click **Run as Administrator** on the context menu that comes up.</span></span> <span data-ttu-id="f45d4-121">클릭 **계속** 궁금할 것 계속 하려면 관리 권한이 있는 사용자 계정 컨트롤 (UAC) 창에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-121">Click **Continue** on the User Account Control (UAC) window that might ask permissions to continue.</span></span>  
   
-2.  명령 프롬프트 창에 **netsh http delete urlacl url\=http:\/\/\+:80\/Temporary\_Listen\_Addresses\/**를 입력합니다.  
+2.  <span data-ttu-id="f45d4-122">에 입력 **urlacl url을 삭제 하는 netsh http = http: / / +:80/Temporary_Listen_Addresses/** 명령 프롬프트 창에서.</span><span class="sxs-lookup"><span data-stu-id="f45d4-122">Type in **netsh http delete urlacl url=http://+:80/Temporary_Listen_Addresses/** in the command prompt window.</span></span>  
   
-3.  예약이 삭제되면 다음 메시지가 표시됩니다.**URL reservation successfully deleted**  
+3.  <span data-ttu-id="f45d4-123">예약이 삭제되면 다음 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-123">If the reservation is deleted successfully, the following message is displayed.</span></span> <span data-ttu-id="f45d4-124">**성공적으로 삭제 하는 URL 예약**</span><span class="sxs-lookup"><span data-stu-id="f45d4-124">**URL reservation successfully deleted**</span></span>  
   
-## 새 보안 그룹 및 새 제한된 URL 예약 만들기  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] URL 예약을 제한된 예약으로 바꾸려면 먼저 새 보안 그룹을 만들어야 합니다.이 작업은 명령 프롬프트 또는 컴퓨터 관리 콘솔에서 수행할 수 있습니다.한 가지만 수행하면 됩니다.  
+## <a name="creating-a-new-security-group-and-new-restricted-url-reservation"></a><span data-ttu-id="f45d4-125">새 보안 그룹 및 새 제한된 URL 예약 만들기</span><span class="sxs-lookup"><span data-stu-id="f45d4-125">Creating a New Security Group and New Restricted URL Reservation</span></span>  
+ <span data-ttu-id="f45d4-126">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] URL 예약을 제한된 예약으로 바꾸려면 먼저 새 보안 그룹을 만들어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-126">To replace the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] URL reservation with a restricted reservation you must first create a new security group.</span></span> <span data-ttu-id="f45d4-127">이 작업은 명령 프롬프트 또는 컴퓨터 관리 콘솔에서 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-127">You can do this in one of two ways: from a command prompt or from the computer management console.</span></span> <span data-ttu-id="f45d4-128">한 가지만 수행하면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-128">You only have to do one.</span></span>  
   
-#### 명령 프롬프트에서 새 보안 그룹을 만들려면  
+#### <a name="to-create-a-new-security-group-from-a-command-prompt"></a><span data-ttu-id="f45d4-129">명령 프롬프트에서 새 보안 그룹을 만들려면</span><span class="sxs-lookup"><span data-stu-id="f45d4-129">To create a new security group from a command prompt</span></span>  
   
-1.  **시작**을 클릭하고 **모든 프로그램**을 가리킨 후 **보조프로그램**을 클릭하고 **명령 프롬프트**를 마우스 오른쪽 단추로 클릭한 다음 표시되는 상황에 맞는 메뉴에서 **관리자 권한으로 실행**을 클릭합니다.계속할 수 있는 권한을 요청하는 UAC\(사용자 계정 컨트롤\) 창에서 **계속**을 클릭합니다.  
+1.  <span data-ttu-id="f45d4-130">클릭 **시작**, 가리킨 **모든 프로그램**, 클릭 **액세서리**를 마우스 오른쪽 단추로 클릭 **명령 프롬프트** 클릭 **계정으로 실행 관리자** 에서 비롯 되는 상황에 맞는 메뉴에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-130">Click **Start**, point to **All Programs**, click **Accessories**, right-click **Command Prompt** and click **Run as Administrator** on the context menu that comes up.</span></span> <span data-ttu-id="f45d4-131">클릭 **계속** 궁금할 것 계속 하려면 관리 권한이 있는 사용자 계정 컨트롤 (UAC) 창에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-131">Click **Continue** on the User Account Control (UAC) window that might ask permissions to continue.</span></span>  
   
-2.  명령 프롬프트에 **net localgroup "\<security group name\>" \/comment:"\<security group description\>" \/add**를 입력합니다.여기서 **\<security group name\>**은 원하는 보안 그룹 이름으로 바꾸고 **\<security group description\>**은 보안 그룹에 대한 적절한 설명으로 바꿉니다.  
+2.  <span data-ttu-id="f45d4-132">에 입력 **net localgroup "\<보안 그룹 이름 >" / 주석: "\<보안 그룹 설명 >"] / [추가** 명령 프롬프트입니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-132">Type in **net localgroup "\<security group name>" /comment:"\<security group description>" /add** at the command prompt.</span></span> <span data-ttu-id="f45d4-133">교체  **\<보안 그룹 이름 >** 만들 보안 그룹의 이름으로 및  **\<보안 그룹 설명 >** 에 대 한 적절 한 설명으로는 보안 그룹입니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-133">Replacing **\<security group name>** with the name of the security group you want to create and **\<security group description>** with a suitable description for the security group.</span></span>  
   
-3.  보안 그룹이 만들어지면 다음 메시지가 표시됩니다.**The command completed successfully.**  
+3.  <span data-ttu-id="f45d4-134">보안 그룹이 만들어지면 다음 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-134">If the security group is created successfully, the following message is displayed.</span></span> <span data-ttu-id="f45d4-135">**명령이 성공적으로 완료 합니다.**</span><span class="sxs-lookup"><span data-stu-id="f45d4-135">**The command completed successfully.**</span></span>  
   
-#### 컴퓨터 관리 콘솔에서 새 보안 그룹을 만들려면  
+#### <a name="to-create-a-new-security-group-from-the-computer-management-console"></a><span data-ttu-id="f45d4-136">컴퓨터 관리 콘솔에서 새 보안 그룹을 만들려면</span><span class="sxs-lookup"><span data-stu-id="f45d4-136">To create a new security group from the computer management console</span></span>  
   
-1.  **시작**, **제어판**, **관리 도구**, **컴퓨터 관리**를 차례로 클릭하여 컴퓨터 관리 콘솔을 엽니다.계속할 수 있는 권한을 요청하는 UAC\(사용자 계정 컨트롤\) 창에서 **계속**을 클릭합니다.  
+1.  <span data-ttu-id="f45d4-137">클릭 **시작**, 클릭 **제어판**, 클릭 **관리 도구**를 클릭 하 고 **컴퓨터 관리** 컴퓨터를 열려면 관리 콘솔입니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-137">Click **Start**, click **Control Panel**, click **Administrative Tools**, and click **Computer Management** to open up the Computer Management Console.</span></span> <span data-ttu-id="f45d4-138">클릭 **계속** 궁금할 것 계속 하려면 관리 권한이 있는 사용자 계정 컨트롤 (UAC) 창에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-138">Click **Continue** on the User Account Control (UAC) window that might ask permissions to continue.</span></span>  
   
-2.  **시스템 도구**, **로컬 사용자 및 그룹**을 차례로 클릭하고 **그룹** 폴더를 마우스 오른쪽 단추로 클릭하고 표시되는 상황에 맞는 메뉴에서 **새 그룹**을 클릭합니다.이 새 보안 그룹에 대해 원하는 **그룹 이름**, **설명** 및 기타 세부 사항을 입력하고 **만들기** 단추를 클릭하여 보안 그룹을 만듭니다.  
+2.  <span data-ttu-id="f45d4-139">클릭 **시스템 도구**, 클릭 **로컬 사용자 및 그룹**를 마우스 오른쪽 단추로 클릭 **그룹** 폴더 **새 그룹** 상황에 맞는 메뉴에 있는 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-139">Click **System Tools**, click **Local Users and Groups**, right-click **Groups** folder and click **New Group** on the context menu that comes up.</span></span> <span data-ttu-id="f45d4-140">형식에서 원하는 **그룹 이름**, **설명** 및 기타 세부 사항을이 새 보안 그룹을 클릭은 **만들기** 단추 보안 그룹을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-140">Type in the desired **Group Name**, **Description** and other details of this new security group and click the **Create** button to create the security group.</span></span>  
   
-#### 제한된 URL 예약을 만들려면  
+#### <a name="to-create-the-restricted-url-reservation"></a><span data-ttu-id="f45d4-141">제한된 URL 예약을 만들려면</span><span class="sxs-lookup"><span data-stu-id="f45d4-141">To create the restricted URL reservation</span></span>  
   
-1.  **시작**을 클릭하고 **모든 프로그램**을 가리킨 후 **보조프로그램**을 클릭하고 **명령 프롬프트**를 마우스 오른쪽 단추로 클릭한 다음 표시되는 상황에 맞는 메뉴에서 **관리자 권한으로 실행**을 클릭합니다.계속할 수 있는 권한을 요청하는 UAC\(사용자 계정 컨트롤\) 창에서 **계속**을 클릭합니다.  
+1.  <span data-ttu-id="f45d4-142">클릭 **시작**, 가리킨 **모든 프로그램**, 클릭 **액세서리**를 마우스 오른쪽 단추로 클릭 **명령 프롬프트** 클릭 **계정으로 실행 관리자** 에서 비롯 되는 상황에 맞는 메뉴에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-142">Click **Start**, point to **All Programs**, click **Accessories**, right-click **Command Prompt** and click **Run as Administrator** on the context menu that comes up.</span></span> <span data-ttu-id="f45d4-143">클릭 **계속** 궁금할 것 계속 하려면 관리 권한이 있는 사용자 계정 컨트롤 (UAC) 창에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-143">Click **Continue** on the User Account Control (UAC) window that might ask permissions to continue.</span></span>  
   
-2.  명령 프롬프트에 **netsh http add urlacl url\=http:\/\/\+:80\/Temporary\_Listen\_Addresses\/ user\="\<machine name\>\\\<security group name\>**을 입력합니다.여기서 **\<machine name\>**은 그룹에서 만들 컴퓨터 이름으로 바꾸고 **\<security group name\>**은 이전에 만든 보안 그룹 이름으로 바꿉니다.  
+2.  <span data-ttu-id="f45d4-144">에 입력 **netsh http urlacl url 추가 = http: / / +: 80/Temporary_Listen_Addresses/사용자 = "\<컴퓨터 이름 >\\< 보안 그룹 이름이\>**  명령 프롬프트입니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-144">Type in **netsh http add urlacl url=http://+:80/Temporary_Listen_Addresses/ user="\<machine name>\\<security group name\>** at the command prompt.</span></span> <span data-ttu-id="f45d4-145">교체  **\<컴퓨터 이름 >** 기반이 여 그룹을 만들 컴퓨터 이름으로 및  **\<보안 그룹 이름 >** 만든 보안 그룹의 이름으로 이전에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-145">Replacing **\<machine name>** with the computer name on which the group must be created and **\<security group name>** with the name of the security group you created previously.</span></span>  
   
-3.  예약이 만들어지면 다음 메시지가 표시됩니다.**URL reservation successfully added**.
+3.  <span data-ttu-id="f45d4-146">예약이 만들어지면 다음 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-146">If the reservation is created successfully, the following message is displayed.</span></span> <span data-ttu-id="f45d4-147">**성공적으로 추가 하는 URL 예약은**합니다.</span><span class="sxs-lookup"><span data-stu-id="f45d4-147">**URL reservation successfully added**.</span></span>

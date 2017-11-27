@@ -1,62 +1,63 @@
 ---
-title: "잉크 렌더링 사용자 지정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "클래스, DynamicRenderer"
-  - "클래스, InkCanvas"
-  - "클래스, 스트로크"
-  - "잉크 사용자 지정 렌더링"
-  - "DynamicRenderer 클래스"
-  - "잉크, 사용자 지정 렌더링"
-  - "InkCanvas 클래스"
-  - "Stroke 클래스"
+title: "잉크 렌더링 사용자 지정"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- custom-rendering ink
+- ink [WPF], custom-rendering
+- classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 90d2ab68f76bef8d8f437a7dd6096011889303fa
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/22/2017
 ---
-# 잉크 렌더링 사용자 지정
-스트로크의 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> 속성을 사용하여 크기, 색, 형태 등 스트로크의 모양을 지정할 수 있습니다. 하지만 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A>로 가능한 것보다 더 많이 모양을 사용자 지정하려는 경우가 있을 수 있습니다.  에어 브러시, 유성 물감 등의 다른 많은 효과로 잉크를 렌더링하여 잉크 모양을 사용자 지정하려는 경우도 있을 수 있습니다.  [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]에서는 사용자 지정 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 및 <xref:System.Windows.Ink.Stroke> 개체를 구현하여 잉크 렌더링을 사용자 지정할 수 있습니다.  
+# <a name="custom-rendering-ink"></a><span data-ttu-id="1d2c8-102">잉크 렌더링 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="1d2c8-102">Custom Rendering Ink</span></span>
+<span data-ttu-id="1d2c8-103"><xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> 선의 속성을 사용 하면 크기, 색, 모양, 같은 선의 모양을 지정할 수 있지만 기능 이외의 모양을 사용자 지정 하려는 경우가 있을 수 있습니다 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> 허용 합니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-103">The <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> property of a stroke allows you to specify the appearance of a stroke, such as its size, color, and shape, but there may be times that you want to customize the appearance beyond what <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> allow.</span></span> <span data-ttu-id="1d2c8-104">에어브러시, 오일 페인트 및 다른 많은 효과가 있는 모양을 렌더링하여 잉크 모양을 사용자 지정하려는 경우도 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-104">You may want to customize the appearance of ink by rendering in the appearance of an air brush, oil paint, and many other effects.</span></span> <span data-ttu-id="1d2c8-105">[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 사용자 지정을 구현 하 여 잉크를 렌더링 하면 사용자 지정을 사용 하면 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 및 <xref:System.Windows.Ink.Stroke> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-105">The [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] allows you to custom render ink by implementing a custom <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> and <xref:System.Windows.Ink.Stroke> object.</span></span>  
   
- 이 항목에는 다음과 같은 하위 단원이 포함되어 있습니다.  
+ <span data-ttu-id="1d2c8-106">이 항목에는 다음과 같은 하위 단원이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-106">This topic contains the following subsections:</span></span>  
   
--   [아키텍처](#Architecture)  
+-   [<span data-ttu-id="1d2c8-107">아키텍처</span><span class="sxs-lookup"><span data-stu-id="1d2c8-107">Architecture</span></span>](#Architecture)  
   
--   [DynamicRenderer 구현](#ImplementingADynamicRenderer)  
+-   [<span data-ttu-id="1d2c8-108">동적 렌더러 구현</span><span class="sxs-lookup"><span data-stu-id="1d2c8-108">Implementing a Dynamic Renderer</span></span>](#ImplementingADynamicRenderer)  
   
--   [Implementing a Custom Stroke](#ImplementingACustomStroke)  
+-   [<span data-ttu-id="1d2c8-109">사용자 지정 스트로크 구현</span><span class="sxs-lookup"><span data-stu-id="1d2c8-109">Implementing Custom Strokes</span></span>](#ImplementingCustomStrokes)  
   
--   [사용자 지정 InkCanvas 구현](#ImplementingACustomInkCanvas)  
+-   [<span data-ttu-id="1d2c8-110">사용자 지정 InkCanvas 구현</span><span class="sxs-lookup"><span data-stu-id="1d2c8-110">Implementing a Custom InkCanvas</span></span>](#ImplementingACustomInkCanvas)  
   
--   [결론](#Conclusion)  
+-   [<span data-ttu-id="1d2c8-111">결론</span><span class="sxs-lookup"><span data-stu-id="1d2c8-111">Conclusion</span></span>](#Conclusion)  
   
 <a name="Architecture"></a>   
-## 아키텍처  
- 잉크 렌더링은 사용자가 잉크 표면에 잉크를 쓸 때 한 번 발생하고 잉크 지원 표면에 스트로크가 추가된 후에 다시 한 번 발생합니다.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>는 사용자가 디지타이저에서 태블릿 펜을 이동할 때 잉크를 렌더링하고 <xref:System.Windows.Ink.Stroke>는 요소에 추가된 후 자동으로 렌더링됩니다.  
+## <a name="architecture"></a><span data-ttu-id="1d2c8-112">아키텍처</span><span class="sxs-lookup"><span data-stu-id="1d2c8-112">Architecture</span></span>  
+ <span data-ttu-id="1d2c8-113">잉크 렌더링은 두 번 발생합니다. 사용자가 잉크 입력 표면에 잉크를 쓸 때 한 번 발생하고 잉크 지원 표면에 스트로크가 추가된 후에 다시 한 번 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-113">Ink rendering occurs two times; when a user writes ink to an inking surface, and again after the stroke is added to the ink-enabled surface.</span></span> <span data-ttu-id="1d2c8-114"><xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 사용자가 디지타이저에서 태블릿 펜 잉크를 렌더링 및 <xref:System.Windows.Ink.Stroke> 요소에 추가 되 면 자체를 렌더링 합니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-114">The <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> renders the ink when the user moves the tablet pen on the digitizer, and the <xref:System.Windows.Ink.Stroke> renders itself once it is added to an element.</span></span>  
   
- 동적으로 잉크를 렌더링하는 경우 세 가지 클래스를 구현해야 합니다.  
+ <span data-ttu-id="1d2c8-115">동적으로 잉크를 렌더링하는 경우 세 가지 클래스를 구현해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-115">There are three classes to implement when dynamically rendering ink.</span></span>  
   
-1.  **DynamicRenderer**: <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>에서 파생되는 클래스를 구현합니다.  이 클래스는 스트로크를 그릴 때 이를 렌더링하는 특수 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>입니다.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>는 별도의 스레드에서 렌더링을 수행하므로 응용 프로그램 UI\(사용자 인터페이스\) 스레드가 차단된 경우에도 잉크 표면이 잉크를 수집할 수 있습니다.  스레딩 모델에 대한 자세한 내용은 [잉크 스레딩 모델](../../../../docs/framework/wpf/advanced/the-ink-threading-model.md)을 참조하십시오.  스트로크를 동적으로 렌더링하도록 사용자 지정하려면 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> 메서드를 재정의합니다.  
+1.  <span data-ttu-id="1d2c8-116">**DynamicRenderer**:에서 파생 되는 클래스를 구현 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>합니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-116">**DynamicRenderer**: Implement a class that derives from <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>.</span></span> <span data-ttu-id="1d2c8-117">이 클래스는 특수화 된 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> 를 그릴 때 스트로크를 렌더링 합니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-117">This class is a specialized <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> that renders the stroke as it is drawn.</span></span> <span data-ttu-id="1d2c8-118"><xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 므로 잉크 표면에 잉크를 응용 프로그램 사용자 인터페이스 (UI) 스레드가 차단 되는 경우에 수집할 수 나타납니다 별도 스레드에서 렌더링을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-118">The <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> does the rendering on a separate thread, so the inking surface appears to collect ink even when the application user interface (UI) thread is blocked.</span></span> <span data-ttu-id="1d2c8-119">스레딩 모델에 대한 자세한 내용은 [잉크 스레딩 모델](../../../../docs/framework/wpf/advanced/the-ink-threading-model.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-119">For more information about the threading model, see [The Ink Threading Model](../../../../docs/framework/wpf/advanced/the-ink-threading-model.md).</span></span> <span data-ttu-id="1d2c8-120">스트로크를 동적으로 렌더링을 사용자 지정 하려면 재정의 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-120">To customize dynamically rendering a stroke, override the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> method.</span></span>  
   
-2.  **Stroke**: <xref:System.Windows.Ink.Stroke>에서 파생되는 클래스를 구현합니다.  이 클래스는 <xref:System.Windows.Input.StylusPoint> 데이터가 <xref:System.Windows.Ink.Stroke> 개체로 변환된 후 이를 정적으로 렌더링하는 작업을 담당합니다.  스트로크의 정적 렌더링과 동적 렌더링을 일관되게 하려면 <xref:System.Windows.Ink.Stroke.DrawCore%2A> 메서드를 재정의합니다.  
+2.  <span data-ttu-id="1d2c8-121">**스트로크**:에서 파생 되는 클래스를 구현 <xref:System.Windows.Ink.Stroke>합니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-121">**Stroke**: Implement a class that derives from <xref:System.Windows.Ink.Stroke>.</span></span> <span data-ttu-id="1d2c8-122">이 클래스는 정적으로 렌더링 된 <xref:System.Windows.Input.StylusPoint> 변환 된 후의 데이터는 <xref:System.Windows.Ink.Stroke> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-122">This class is responsible for static rendering of the <xref:System.Windows.Input.StylusPoint> data after it has been converted into a <xref:System.Windows.Ink.Stroke> object.</span></span> <span data-ttu-id="1d2c8-123">재정의 <xref:System.Windows.Ink.Stroke.DrawCore%2A> 획 해당 정적으로 렌더링 되도록 메서드는 동적 렌더링와 일치 합니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-123">Override the <xref:System.Windows.Ink.Stroke.DrawCore%2A> method to ensure that static rendering of the stroke is consistent with dynamic rendering.</span></span>  
   
-3.  **InkCanvas:** <xref:System.Windows.Controls.InkCanvas>에서 파생되는 클래스를 구현합니다.  <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> 속성에 사용자 지정 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>를 할당합니다.  <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> 메서드를 재정의하고 <xref:System.Windows.Controls.InkCanvas.Strokes%2A> 속성에 사용자 지정 스트로크를 추가합니다.  이를 통해 잉크 모양이 일관되게 유지됩니다.  
+3.  <span data-ttu-id="1d2c8-124">**InkCanvas:** 에서 파생 되는 클래스를 구현 <xref:System.Windows.Controls.InkCanvas>합니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-124">**InkCanvas:** Implement a class that derives from <xref:System.Windows.Controls.InkCanvas>.</span></span> <span data-ttu-id="1d2c8-125">사용자 지정 된 할당 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 에 <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-125">Assign the customized <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> to the <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> property.</span></span> <span data-ttu-id="1d2c8-126">재정의 <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> 메서드를 사용자 지정 선을 추가 하 고는 <xref:System.Windows.Controls.InkCanvas.Strokes%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-126">Override the <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> method and add a custom stroke to the <xref:System.Windows.Controls.InkCanvas.Strokes%2A> property.</span></span> <span data-ttu-id="1d2c8-127">이를 통해 잉크 모양이 일관되게 유지됩니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-127">This ensures that the appearance of the ink is consistent.</span></span>  
   
 <a name="ImplementingADynamicRenderer"></a>   
-## DynamicRenderer 구현  
- <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 클래스가 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 표준 요소이기는 하지만 보다 전문적인 렌더링을 수행하려면 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>에서 파생되는 사용자 지정 DynamicRenderer를 만들고 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> 메서드를 재정의해야 합니다.  
+## <a name="implementing-a-dynamic-renderer"></a><span data-ttu-id="1d2c8-128">동적 렌더러 구현</span><span class="sxs-lookup"><span data-stu-id="1d2c8-128">Implementing a Dynamic Renderer</span></span>  
+ <span data-ttu-id="1d2c8-129">하지만 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 클래스는의 척도로 활발 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], 전문적인 렌더링을 수행 하려면,에서 파생 되는 사용자 지정 된 동적 렌더러를 만들어야 합니다는 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 재정의 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-129">Although the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> class is a standard part of [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], to perform more specialized rendering, you must create a customized dynamic renderer that derives from the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> and override the <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> method.</span></span>  
   
- 다음 예제에서는 선형 그라데이션 브러시 효과를 사용하여 잉크를 그리는 사용자 지정 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>를 보여 줍니다.  
+ <span data-ttu-id="1d2c8-130">다음 예제에서는 사용자 지정 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 선형 그라데이션 브러시 효과 사용 하 여 잉크를 그립니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-130">The following example demonstrates a customized <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> that draws ink with a linear gradient brush effect.</span></span>  
   
  [!code-csharp[AdvancedInkTopicsSamples#19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
  [!code-vb[AdvancedInkTopicsSamples#19](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
@@ -64,14 +65,14 @@ caps.handback.revision: 8
 [!code-vb[AdvancedInkTopicsSamples#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#1)]  
   
 <a name="ImplementingCustomStrokes"></a>   
-## 사용자 지정 Stroke 구현  
- <xref:System.Windows.Ink.Stroke>에서 파생되는 클래스를 구현합니다.  이 클래스는 <xref:System.Windows.Input.StylusPoint> 데이터가 <xref:System.Windows.Ink.Stroke> 개체로 변환된 후 이를 렌더링하는 작업을 담당합니다.  실제 그리기를 수행하도록 <xref:System.Windows.Ink.Stroke.DrawCore%2A> 클래스를 재정의합니다.  
+## <a name="implementing-custom-strokes"></a><span data-ttu-id="1d2c8-131">사용자 지정 스트로크 구현</span><span class="sxs-lookup"><span data-stu-id="1d2c8-131">Implementing Custom Strokes</span></span>  
+ <span data-ttu-id="1d2c8-132"><xref:System.Windows.Ink.Stroke>에서 파생되는 클래스를 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-132">Implement a class that derives from <xref:System.Windows.Ink.Stroke>.</span></span> <span data-ttu-id="1d2c8-133">이 클래스는 렌더링 <xref:System.Windows.Input.StylusPoint> 변환 된 후의 데이터는 <xref:System.Windows.Ink.Stroke> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-133">This class is responsible for rendering <xref:System.Windows.Input.StylusPoint> data after it has been converted into a <xref:System.Windows.Ink.Stroke> object.</span></span> <span data-ttu-id="1d2c8-134">재정의 <xref:System.Windows.Ink.Stroke.DrawCore%2A> 실제 그리기를 수행 하는 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-134">Override the <xref:System.Windows.Ink.Stroke.DrawCore%2A> class to do the actual drawing.</span></span>  
   
- <xref:System.Windows.Ink.Stroke.AddPropertyData%2A> 메서드를 사용하면 사용자 지정 Stroke 클래스에 사용자 지정 데이터를 저장할 수도 있습니다.  이 데이터는 보관된 스트로크 데이터와 함께 저장됩니다.  
+ <span data-ttu-id="1d2c8-135">Stroke 클래스를 사용 하 여 사용자 지정 데이터를 저장할 수도 수는 <xref:System.Windows.Ink.Stroke.AddPropertyData%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-135">Your Stroke class can also store custom data by using the <xref:System.Windows.Ink.Stroke.AddPropertyData%2A> method.</span></span> <span data-ttu-id="1d2c8-136">이 데이터는 스트로크 데이터와 함께 저장되어 유지됩니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-136">This data is stored with the stroke data when persisted.</span></span>  
   
- <xref:System.Windows.Ink.Stroke> 클래스로 적중 테스트를 수행할 수도 있습니다.  현재 클래스에 <xref:System.Windows.Ink.Stroke.HitTest%2A> 메서드를 재정의하여 고유의 적중 테스트 알고리즘을 구현할 수도 있습니다.  
+ <span data-ttu-id="1d2c8-137"><xref:System.Windows.Ink.Stroke> 클래스 적중 테스트를 수행할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-137">The <xref:System.Windows.Ink.Stroke> class can also perform hit testing.</span></span> <span data-ttu-id="1d2c8-138">고유의 적중 알고리즘을 재정의 하 여 테스트를 구현할 수도 있습니다는 <xref:System.Windows.Ink.Stroke.HitTest%2A> 현재 클래스에 메서드.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-138">You can also implement your own hit testing algorithm by overriding the <xref:System.Windows.Ink.Stroke.HitTest%2A> method in the current class.</span></span>  
   
- 다음 C\# 코드는 <xref:System.Windows.Input.StylusPoint> 데이터를 3차원 스트로크로 렌더링하는 사용자 지정 <xref:System.Windows.Ink.Stroke> 클래스를 보여 줍니다.  
+ <span data-ttu-id="1d2c8-139">다음 C# 코드에서는 사용자 지정 <xref:System.Windows.Ink.Stroke> 렌더링 하는 클래스 <xref:System.Windows.Input.StylusPoint> 획 3 차원으로 데이터입니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-139">The following C# code demonstrates a custom <xref:System.Windows.Ink.Stroke> class that renders <xref:System.Windows.Input.StylusPoint> data as a 3-D stroke.</span></span>  
   
  [!code-csharp[AdvancedInkTopicsSamples#19](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
  [!code-vb[AdvancedInkTopicsSamples#19](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  
@@ -79,26 +80,26 @@ caps.handback.revision: 8
 [!code-vb[AdvancedInkTopicsSamples#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#2)]  
   
 <a name="ImplementingACustomInkCanvas"></a>   
-## 사용자 지정 InkCanvas 구현  
- 사용자 지정 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>와 스트로크를 사용하는 가장 쉬운 방법은 <xref:System.Windows.Controls.InkCanvas>에서 파생되는 클래스를 구현하여 사용하는 것입니다.  <xref:System.Windows.Controls.InkCanvas>에는 사용자가 스트로크를 그릴 때 스트로크가 렌더링되는 방법을 지정하는 <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> 속성이 있습니다.  
+## <a name="implementing-a-custom-inkcanvas"></a><span data-ttu-id="1d2c8-140">사용자 지정 InkCanvas 구현</span><span class="sxs-lookup"><span data-stu-id="1d2c8-140">Implementing a Custom InkCanvas</span></span>  
+ <span data-ttu-id="1d2c8-141">사용자 지정을 사용 하는 가장 쉬운 방법은 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 에서 파생 되는 클래스를 구현 하는 선 및 <xref:System.Windows.Controls.InkCanvas> 이러한 클래스를 사용 하 여 합니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-141">The easiest way to use your customized <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> and stroke is to implement a class that derives from <xref:System.Windows.Controls.InkCanvas> and uses these classes.</span></span> <span data-ttu-id="1d2c8-142"><xref:System.Windows.Controls.InkCanvas> 에 <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> 획 사용자 그릴 때 렌더링 되는 방식을 지정 하는 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-142">The <xref:System.Windows.Controls.InkCanvas> has a <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> property that specifies how the stroke is rendered when the user is drawing it.</span></span>  
   
- <xref:System.Windows.Controls.InkCanvas>의 스트로크 렌더링을 사용자 지정하려면 다음을 수행합니다.  
+ <span data-ttu-id="1d2c8-143">사용자 지정 선에서 렌더링 되는 <xref:System.Windows.Controls.InkCanvas> 에서 다음을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-143">To custom render strokes on an <xref:System.Windows.Controls.InkCanvas> do the following:</span></span>  
   
--   <xref:System.Windows.Controls.InkCanvas>에서 파생되는 클래스를 만듭니다.  
+-   <span data-ttu-id="1d2c8-144">파생 되는 클래스를 만듭니다는 <xref:System.Windows.Controls.InkCanvas>합니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-144">Create a class that derives from the <xref:System.Windows.Controls.InkCanvas>.</span></span>  
   
--   <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A?displayProperty=fullName> 속성에 사용자 지정 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>를 할당합니다.  
+-   <span data-ttu-id="1d2c8-145">사용자 지정 할당 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 에 <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A?displayProperty=nameWithType> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-145">Assign your customized <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> to the <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A?displayProperty=nameWithType> property.</span></span>  
   
--   <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> 메서드를 재정의합니다.  이 메서드에서 InkCanvas에 추가된 원래 스트로크를 제거합니다.  그런 다음 사용자 지정 스트로크를 만들어 <xref:System.Windows.Controls.InkCanvas.Strokes%2A> 속성에 추가하고, 사용자 지정 스트로크가 포함된 새 <xref:System.Windows.Controls.InkCanvasStrokeCollectedEventArgs>를 사용하여 기본 클래스를 호출합니다.  
+-   <span data-ttu-id="1d2c8-146"><xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> 메서드를 재정의합니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-146">Override the <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> method.</span></span> <span data-ttu-id="1d2c8-147">이 메서드에서 InkCanvas에 추가된 원래 스트로크를 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-147">In this method, remove the original stroke that was added to the InkCanvas.</span></span> <span data-ttu-id="1d2c8-148">그런 다음 사용자 지정 스트로크를 만들고에 추가 <xref:System.Windows.Controls.InkCanvas.Strokes%2A> 속성과 기본 클래스를 새 호출 <xref:System.Windows.Controls.InkCanvasStrokeCollectedEventArgs> 사용자 지정 스트로크를 포함 하 합니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-148">Then create a custom stroke, add it to the <xref:System.Windows.Controls.InkCanvas.Strokes%2A> property, and call the base class with a new <xref:System.Windows.Controls.InkCanvasStrokeCollectedEventArgs> that contains the custom stroke.</span></span>  
   
- 다음 C\# 코드는 사용자 지정 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>를 사용하여 사용자 지정 스트로크를 수집하는 사용자 지정 <xref:System.Windows.Controls.InkCanvas> 클래스를 보여 줍니다.  
+ <span data-ttu-id="1d2c8-149">다음 C# 코드에서는 사용자 지정 <xref:System.Windows.Controls.InkCanvas> 사용자 지정을 사용 하는 클래스 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 하 고 사용자 지정 스트로크를 수집 합니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-149">The following C# code demonstrates a custom <xref:System.Windows.Controls.InkCanvas> class that uses a customized <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> and collects custom strokes.</span></span>  
   
  [!code-csharp[AdvancedInkTopicsSamples#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/Window1.xaml.cs#9)]  
   
- <xref:System.Windows.Controls.InkCanvas>는 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>를 두 개 이상 가질 수 있습니다.  원하는 개체를 <xref:System.Windows.UIElement.StylusPlugIns%2A> 속성에 추가하여 여러 개의 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 개체를 <xref:System.Windows.Controls.InkCanvas>에 추가할 수 있습니다.  
+ <span data-ttu-id="1d2c8-150"><xref:System.Windows.Controls.InkCanvas> 둘 이상의 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>합니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-150">An <xref:System.Windows.Controls.InkCanvas> can have more than one <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>.</span></span> <span data-ttu-id="1d2c8-151">여러 개 추가할 수 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 개체는 <xref:System.Windows.Controls.InkCanvas> 에 추가 하 여는 <xref:System.Windows.UIElement.StylusPlugIns%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-151">You can add multiple <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> objects to the <xref:System.Windows.Controls.InkCanvas> by adding them to the <xref:System.Windows.UIElement.StylusPlugIns%2A> property.</span></span>  
   
 <a name="Conclusion"></a>   
-## 결론  
- 고유의 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, <xref:System.Windows.Ink.Stroke>, 및 <xref:System.Windows.Controls.InkCanvas> 클래스를 파생시켜 잉크의 모양을 사용자 지정할 수 있습니다.  이러한 클래스는 모두 사용자가 스트로크를 그릴 때와 스트로크가 수집된 후의 모양이 일관되도록 만듭니다.  
+## <a name="conclusion"></a><span data-ttu-id="1d2c8-152">결론</span><span class="sxs-lookup"><span data-stu-id="1d2c8-152">Conclusion</span></span>  
+ <span data-ttu-id="1d2c8-153">사용자 고유의 파생 하 여 잉크의 모양을 사용자 지정할 수 있습니다 <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, <xref:System.Windows.Ink.Stroke>, 및 <xref:System.Windows.Controls.InkCanvas> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-153">You can customize the appearance of ink by deriving your own <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, <xref:System.Windows.Ink.Stroke>, and <xref:System.Windows.Controls.InkCanvas> classes.</span></span> <span data-ttu-id="1d2c8-154">이와 함께 이러한 클래스는 사용자가 스트로크를 그릴 때와 스트로크가 수집된 후의 모양이 일관되도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="1d2c8-154">Together, these classes ensure that the appearance of the stroke is consistent when the user draws the stroke and after it is collected.</span></span>  
   
-## 참고 항목  
- [고급 잉크 처리](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+## <a name="see-also"></a><span data-ttu-id="1d2c8-155">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1d2c8-155">See Also</span></span>  
+ [<span data-ttu-id="1d2c8-156">고급 잉크 처리</span><span class="sxs-lookup"><span data-stu-id="1d2c8-156">Advanced Ink Handling</span></span>](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)

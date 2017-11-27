@@ -1,43 +1,46 @@
 ---
-title: "SQL-CLR 사용자 지정 형식 매핑 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL-CLR 사용자 지정 대/소문자 매핑"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d916c7fb-4b56-4214-acbe-5e23365047b2
-caps.latest.revision: 2
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 82456bf5b892bc32a6eba0d3cf074b4adc76a305
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# SQL-CLR 사용자 지정 형식 매핑
-SQL Server와 CLR\(공용 언어 런타임\) 간의 형식 매핑은 SQLMetal 명령줄 도구 또는 개체 관계형 디자이너\(O\/R 디자이너\)를 사용할 때 자동으로 지정됩니다.  
+# <a name="sql-clr-custom-type-mappings"></a><span data-ttu-id="ce774-102">SQL-CLR 사용자 지정 대/소문자 매핑</span><span class="sxs-lookup"><span data-stu-id="ce774-102">SQL-CLR Custom Type Mappings</span></span>
+<span data-ttu-id="ce774-103">SQL Server와 CLR(공용 언어 런타임) 간의 형식 매핑은 SQLMetal 명령줄 도구 또는 개체 관계형 디자이너(O/R 디자이너)를 사용할 때 자동으로 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="ce774-103">Type mapping between SQL Server and the common language runtime (CLR) is automatically specified when you use the SQLMetal command-line tool, Object Relational Designer (O/R Designer).</span></span>  
   
- 사용자 지정 매핑을 수행하지 않는 경우 이러한 도구는 [SQL\-CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)에 설명된 대로 기본 형식 매핑을 할당합니다.  기본 매핑과 다른 형식 매핑을 사용하려는 경우에는 해당 형식 매핑을 사용자 지정해야 합니다.  
+ <span data-ttu-id="ce774-104">사용자 지정 된 매핑이 수행 될 때 이러한 도구 기본 형식 매핑을 할당에 설명 된 대로 [SQL-CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ce774-104">When no customized mapping is performed, these tools assign default type mappings as described in [SQL-CLR Type Mapping](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).</span></span> <span data-ttu-id="ce774-105">기본 매핑과 다른 형식 매핑을 사용하려는 경우에는 해당 형식 매핑을 사용자 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ce774-105">If you want to type mappings differently from these defaults, you need to do some customization of the type mappings.</span></span>  
   
- 형식 매핑을 사용자 지정할 때는 중간 DBML 파일을 변경하는 것이 좋습니다.  그런 다음 SQLMetal 또는 O\/R 디자이너에서 코드 및 매핑 파일을 만들 때 사용자 지정된 DBML 파일을 사용해야 합니다.  
+ <span data-ttu-id="ce774-106">형식 매핑을 사용자 지정할 때는 중간 DBML 파일을 변경하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="ce774-106">When customizing type mappings, the recommended approach is to make the changes in an intermediary DBML file.</span></span> <span data-ttu-id="ce774-107">그런 다음 SQLMetal 또는 O/R 디자이너에서 코드 및 매핑 파일을 만들 때 사용자 지정된 DBML 파일을 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ce774-107">Then, your customized DBML file should be used when you create you code and mapping files with SQLMetal or O/R Designer.</span></span>  
   
- 코드 및 매핑 파일에서 <xref:System.Data.Linq.DataContext> 개체를 인스턴스화하면 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=fullName> 메서드는 지정된 형식 매핑을 기반으로 데이터베이스를 생성합니다.  매핑에 CLR `type` 특성이 지정되지 않은 경우에는 기본 형식 매핑이 사용됩니다.  
+ <span data-ttu-id="ce774-108">코드 및 매핑 파일에서 <xref:System.Data.Linq.DataContext> 개체를 인스턴스화하면 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 메서드는 지정된 형식 매핑을 기반으로 데이터베이스를 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="ce774-108">Once you instantiate the <xref:System.Data.Linq.DataContext> object from the code and mapping files, the <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> method creates a database based on the type mappings that are specified.</span></span> <span data-ttu-id="ce774-109">매핑에 CLR `type` 특성이 지정되지 않은 경우에는 기본 형식 매핑이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="ce774-109">If there are no CLR `type` attributes specified in the mappings, the default type mappings will be used.</span></span>  
   
-## SQLMetal 또는 O\/R 디자이너 사용자 지정  
- SQLMetal 및 O\/R 디자이너를 사용할 때 코드 파일 내부 또는 외부의 형식 매핑 정보를 포함하는 개체 모델을 자동으로 만들 수 있습니다.  이러한 파일은 SQLMetal 또는 O\/R 디자이너에서 덮어쓰므로 매핑을 다시 만들 때마다 DBML 파일을 사용자 지정하여 사용자 형식 매핑을 지정하는 것이 좋습니다.  
+## <a name="customization-with-sqlmetal-or-or-designer"></a><span data-ttu-id="ce774-110">SQLMetal 또는 O/R 디자이너 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="ce774-110">Customization with SQLMetal or O/R Designer</span></span>  
+ <span data-ttu-id="ce774-111">SQLMetal 및 O/R 디자이너를 사용할 때 코드 파일 내부 또는 외부의 형식 매핑 정보를 포함하는 개체 모델을 자동으로 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ce774-111">With SQLMetal and O/R Designer, you can automatically create an object model that includes the type mapping information inside or outside the code file.</span></span> <span data-ttu-id="ce774-112">이러한 파일은 SQLMetal 또는 O/R 디자이너에서 덮어쓰므로 매핑을 다시 만들 때마다 DBML 파일을 사용자 지정하여 사용자 형식 매핑을 지정하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="ce774-112">Because these files are overwritten by SQLMetal or O/R Designer, each time you recreate your mappings, the recommended approach to specifying custom type mappings is to customize a DBML file.</span></span>  
   
- SQLMetal 또는 O\/R 디자이너를 사용하여 형식 매핑을 사용자 지정하려면 먼저 DBML 파일을 생성합니다.  그런 다음 코드 파일 또는 매핑 파일을 생성하기 전에 DBML 파일을 수정하여 원하는 형식 매핑을 확인합니다.  SQLMetal을 사용하는 경우 DBML 파일에서 `Type` 및 `DbType` 특성을 직접 변경하여 형식 매핑을 사용자 지정해야 합니다.  O\/R 디자이너를 사용하는 경우에는 디자이너 내부에서 변경할 수 있습니다.  O\/R 디자이너를 사용하는 방법에 대한 자세한 내용은 [LINQ to SQL 도구 Visual Studio에서](../Topic/LINQ%20to%20SQL%20Tools%20in%20Visual%20Studio2.md)를 참조하세요.  
+ <span data-ttu-id="ce774-113">SQLMetal 또는 O/R 디자이너를 사용하여 형식 매핑을 사용자 지정하려면 먼저 DBML 파일을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="ce774-113">To customize type mappings with SQLMetal or O/R Designer, first generate a DBML file.</span></span> <span data-ttu-id="ce774-114">그런 다음 코드 파일 또는 매핑 파일을 생성하기 전에 DBML 파일을 수정하여 원하는 형식 매핑을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="ce774-114">Then, before generating the code file or mapping file, modify the DBML file to identify the desired type mappings.</span></span> <span data-ttu-id="ce774-115">SQLMetal을 사용하는 경우 DBML 파일에서 `Type` 및 `DbType` 특성을 직접 변경하여 형식 매핑을 사용자 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ce774-115">With SQLMetal, you have to manually change the `Type` and `DbType` attributes in the DBML file to make your type mapping customizations.</span></span> <span data-ttu-id="ce774-116">O/R 디자이너를 사용하는 경우에는 디자이너 내부에서 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ce774-116">With O/R Designer, you can make your changes within the Designer.</span></span> <span data-ttu-id="ce774-117">O/R 디자이너를 사용 하는 방법에 대 한 자세한 내용은 참조 [LINQ to SQL 도구 Visual Studio에서](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)합니다.</span><span class="sxs-lookup"><span data-stu-id="ce774-117">For more information about using the O/R Designer, see [LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).</span></span>  
   
 > [!NOTE]
->  일부 형식 매핑의 경우 데이터베이스 관련 변환 과정에서 오버플로 또는 데이터 손실 예외가 발생할 수 있습니다.  사용자 지정을 수행하기 전에 [SQL\-CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)에서 형식 매핑 런타임 동작 매트릭스를 신중하게 검토하세요.  
+>  <span data-ttu-id="ce774-118">일부 형식 매핑의 경우 데이터베이스 관련 변환 과정에서 오버플로 또는 데이터 손실 예외가 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ce774-118">Some type mappings may result in overflow or data loss exceptions while translating to or from the database.</span></span> <span data-ttu-id="ce774-119">에 형식 매핑 런타임 동작 매트릭스를 주의 깊게 검토 [SQL-CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) 모든 사용자 지정 하기 전에.</span><span class="sxs-lookup"><span data-stu-id="ce774-119">Carefully review the Type Mapping Run-time Behavior Matrix in [SQL-CLR Type Mapping](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) before making any customizations.</span></span>  
   
- SQLMetal 또는 O\/R 디자이너에서 형식 매핑 사용자 지정을 인식하게 하려면 코드 파일 또는 외부 매핑 파일을 생성할 때 사용자 지정 DBML 파일에 대한 경로가 이러한 도구에 제공되어야 합니다.  형식 매핑 사용자 지정을 위해 반드시 필요한 것은 아니지만, 항상 형식 매핑 정보를 코드 파일과 분리하고 추가 외부 형식 매핑 파일을 생성하는 것이 좋습니다.  이렇게 하면 유연성이 개선되어 코드 파일 재컴파일의 필요성이 줄어듭니다.  
+ <span data-ttu-id="ce774-120">SQLMetal 또는 O/R 디자이너에서 형식 매핑 사용자 지정을 인식하게 하려면 코드 파일 또는 외부 매핑 파일을 생성할 때 사용자 지정 DBML 파일에 대한 경로가 이러한 도구에 제공되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ce774-120">In order for your type mapping customizations to be recognized by SQLMetal or O/R Designer, you need to make sure that these tools are supplied with the path to your custom DBML file when you generate your code file or external mapping file.</span></span> <span data-ttu-id="ce774-121">형식 매핑 사용자 지정을 위해 반드시 필요한 것은 아니지만, 항상 형식 매핑 정보를 코드 파일과 분리하고 추가 외부 형식 매핑 파일을 생성하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="ce774-121">Although not required for type mapping customization, it is recommended that you always separate your type mapping information from your code file and generate the additional external type mapping file.</span></span> <span data-ttu-id="ce774-122">이렇게 하면 유연성이 개선되어 코드 파일 재컴파일의 필요성이 줄어듭니다.</span><span class="sxs-lookup"><span data-stu-id="ce774-122">Doing so will leave some flexibility by not requiring that the code file be recompiled.</span></span>  
   
-## 데이터베이스 변경 내용 통합  
- 데이터베이스를 변경할 경우 이러한 변경 내용이 반영되도록 DBML 파일을 업데이트해야 합니다.  DBML 파일을 업데이트하는 한 가지 방법은 자동으로 새 DBML 파일이 만들어지면 형식 매핑 사용자 지정을 다시 수행하는 것입니다.  또는 새 DBML 파일과 사용자 지정된 DBML 파일 간의 차이점을 비교하여 데이터베이스 변경 내용이 반영되도록 사용자 지정 DBML 파일을 수동으로 업데이트할 수 있습니다.  
+## <a name="incorporating-database-changes"></a><span data-ttu-id="ce774-123">데이터베이스 변경 내용 통합</span><span class="sxs-lookup"><span data-stu-id="ce774-123">Incorporating Database Changes</span></span>  
+ <span data-ttu-id="ce774-124">데이터베이스를 변경할 경우 이러한 변경 내용이 반영되도록 DBML 파일을 업데이트해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ce774-124">When your database changes, you will need to update your DBML file to reflect those changes.</span></span> <span data-ttu-id="ce774-125">DBML 파일을 업데이트하는 한 가지 방법은 자동으로 새 DBML 파일이 만들어지면 형식 매핑 사용자 지정을 다시 수행하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="ce774-125">One way to do this is to automatically create a new DBML file and then re-do your type mapping customizations.</span></span> <span data-ttu-id="ce774-126">또는 새 DBML 파일과 사용자 지정된 DBML 파일 간의 차이점을 비교하여 데이터베이스 변경 내용이 반영되도록 사용자 지정 DBML 파일을 수동으로 업데이트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ce774-126">Alternatively, you could compare the differences between your new DBML file and your customized DBML file and update your custom DBML file manually to reflect the database change.</span></span>  
   
-## 참고 항목  
- [SQL\-CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)   
- [LINQ to SQL의 코드 생성](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
+## <a name="see-also"></a><span data-ttu-id="ce774-127">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ce774-127">See Also</span></span>  
+ [<span data-ttu-id="ce774-128">SQL-CLR 형식 매핑</span><span class="sxs-lookup"><span data-stu-id="ce774-128">SQL-CLR Type Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
+ [<span data-ttu-id="ce774-129">LINQ to SQL에서에서 코드 생성</span><span class="sxs-lookup"><span data-stu-id="ce774-129">Code Generation in LINQ to SQL</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)

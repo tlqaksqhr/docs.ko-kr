@@ -1,46 +1,50 @@
 ---
-title: "GDI+의 카디널 스플라인 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "카디널 스플라인"
-  - "GDI+, 카디널 스플라인"
-  - "스플라인, 카디널"
+title: "GDI+의 카디널 스플라인"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- splines [Windows Forms], cardinal
+- GDI+, cardinal splines
+- cardinal splines
 ms.assetid: 09b3797a-6294-422d-9adf-a5a0a7695c0c
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0ad417ee61026f6573f19e70409511e0b28e4d78
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# GDI+의 카디널 스플라인
-카디널 스플라인은 대형 곡선을 형성하는 개별 곡선 순서 집합입니다.  스플라인은 점 배열과 장력 매개 변수에 의해 지정됩니다.  카디널 스플라인은 배열의 각 점을 매끄럽게 통과합니다. 날카로운 모퉁이가 없고 곡선의 팽팽한 정도가 갑작스럽게 변하지도 않습니다.  다음 그림은 점 집합과 이 집합의 각 점을 모두 통과하는 카디널 스플라인을 보여 줍니다.  
+# <a name="cardinal-splines-in-gdi"></a><span data-ttu-id="e9fea-102">GDI+의 카디널 스플라인</span><span class="sxs-lookup"><span data-stu-id="e9fea-102">Cardinal Splines in GDI+</span></span>
+<span data-ttu-id="e9fea-103">카디널 스플라인에 더 큰 곡선을 형성 하는 개별 곡선 시퀀스입니다.</span><span class="sxs-lookup"><span data-stu-id="e9fea-103">A cardinal spline is a sequence of individual curves joined to form a larger curve.</span></span> <span data-ttu-id="e9fea-104">스플라인을은 포인트와 장력 매개 변수 배열에 의해 지정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e9fea-104">The spline is specified by an array of points and a tension parameter.</span></span> <span data-ttu-id="e9fea-105">카디널 스플라인; 배열에서 각 지점 매끄럽게 통과 날카로운 모퉁이가 없고 및 곡선의 다듬기에 급격 한 변경 내용이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e9fea-105">A cardinal spline passes smoothly through each point in the array; there are no sharp corners and no abrupt changes in the tightness of the curve.</span></span> <span data-ttu-id="e9fea-106">다음 그림의 점과 집합의 각 요소를 통해 전달 되는 카디널 스플라인을 집합을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e9fea-106">The following illustration shows a set of points and a cardinal spline that passes through each point in the set.</span></span>  
   
- ![카디널 스플라인](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art09.png "Aboutgdip02\_art09")  
+ <span data-ttu-id="e9fea-107">![카디널 스플라인](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art09.gif "Aboutgdip02_art09")</span><span class="sxs-lookup"><span data-stu-id="e9fea-107">![Cardinal Spline](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art09.gif "Aboutgdip02_art09")</span></span>  
   
-## 물리적 스플라인과 수학적 스플라인  
- 물리적인 스플라인은 나무 또는 기타 유연한 재질의 얇은 조각입니다.  수학적 스플라인이 나타나기 전에는 디자이너들이 물리적 스플라인을 사용하여 곡선을 그렸습니다.  디자이너는 스플라인을 종이에 올려 놓고 이를 일련의 점에 맞추어 고정시켰습니다.  그런 다음 펜이나 연필을 사용하여 스플라인을 따라 곡선을 그렸습니다.  주어진 점 집합은 물리적 스플라인의 특성에 따라 다양한 곡선을 만들어냈습니다.  예를 들어, 잘 휘지 않는 스플라인은 매우 유연한 스플라인과는 다른 곡선을 만들었을 것입니다.  
+## <a name="physical-and-mathematical-splines"></a><span data-ttu-id="e9fea-108">물리적 및 수학 곡선 스플라인</span><span class="sxs-lookup"><span data-stu-id="e9fea-108">Physical and Mathematical Splines</span></span>  
+ <span data-ttu-id="e9fea-109">실제 스플라인은 목재 또는 유연한 기타 자료의 씬.</span><span class="sxs-lookup"><span data-stu-id="e9fea-109">A physical spline is a thin piece of wood or other flexible material.</span></span> <span data-ttu-id="e9fea-110">수학 스플라인 도입 되기 전에 디자이너는 곡선을 그리는 물리적 스플라인을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="e9fea-110">Before the advent of mathematical splines, designers used physical splines to draw curves.</span></span> <span data-ttu-id="e9fea-111">디자이너는 스플라인 종이에 배치 하 고 주어진된 점의 집합에 고정할 게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e9fea-111">A designer would place the spline on a piece of paper and anchor it to a given set of points.</span></span> <span data-ttu-id="e9fea-112">디자이너 만들 수는 곡선 스플라인 따라 그리는 방식으로 펜 또는 연필을 사용.</span><span class="sxs-lookup"><span data-stu-id="e9fea-112">The designer could then create a curve by drawing along the spline with a pen or pencil.</span></span> <span data-ttu-id="e9fea-113">지정 된 일련의 점으로 다양 한 물리적 스플라인의 속성에 따라 곡선을 향상 시킬 합니다.</span><span class="sxs-lookup"><span data-stu-id="e9fea-113">A given set of points could yield a variety of curves, depending on the properties of the physical spline.</span></span> <span data-ttu-id="e9fea-114">예를 들어 만들었을 높은 저항 잘 매우 유연한 스플라인 보다 다른 곡선을 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="e9fea-114">For example, a spline with a high resistance to bending would produce a different curve than an extremely flexible spline.</span></span>  
   
- 수학적 스플라인의 수식은 유연한 막대의 특성을 기반으로 하므로 수학적 스플라인에 의해 만들어진 곡선은 이전에 물리적 스플라인에 의해 만들어졌던 곡선과 유사합니다.  장력이 다른 물리적 스플라인이 주어진 점 집합을 통과하는 상이한 곡선을 만들듯이 장력 매개 변수가 다른 수학적 스플라인 또한 주어진 점 집합을 통과하는 상이한 곡선을 만듭니다.  다음 그림은 같은 점 집합을 통과하는 네 개의 카디널 스플라인을 보여 줍니다.  각 스플라인의 장력이 표시됩니다.  장력이 0이면 물리적 장력이 무한하다는 의미이므로 점 사이를 연결하는 최단 곡선인 직선을 만듭니다.  장력이 1이면 물리적 장력이 없다는 의미이며, 총 구부림이 가장 적은 스플라인을 만듭니다.  장력 값이 1보다 크면 곡선은 더 긴 행로를 갖도록 압축된 스프링처럼 작동합니다.  
+ <span data-ttu-id="e9fea-115">수학 스플라인에 대 한 수식은 수학적 스플라인에 의해 만들어진 곡선의 곡선 물리적 스플라인으로 만들어 졌 던 비슷합니다 되므로 유연한 막대의 속성에 기반 합니다.</span><span class="sxs-lookup"><span data-stu-id="e9fea-115">The formulas for mathematical splines are based on the properties of flexible rods, so the curves produced by mathematical splines are similar to the curves that were once produced by physical splines.</span></span> <span data-ttu-id="e9fea-116">장력이 다른 물리적 스플라인 주어진된 점의 집합을 통해 다른 곡선을 생성 합니다, 처럼 수학 스플라인 장력 매개 변수에 대해 서로 다른 값으로는 주어진된 점의 집합을 통해 다른 곡선을 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="e9fea-116">Just as physical splines of different tension will produce different curves through a given set of points, mathematical splines with different values for the tension parameter will produce different curves through a given set of points.</span></span> <span data-ttu-id="e9fea-117">다음 그림에서는 동일한 점 집합을 통해 전달 되는 4 개의 카디널 스플라인 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e9fea-117">The following illustration shows four cardinal splines passing through the same set of points.</span></span> <span data-ttu-id="e9fea-118">각 스플라인 장력이 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e9fea-118">The tension is shown for each spline.</span></span> <span data-ttu-id="e9fea-119">0의 장력 점 간 최단 방식으로 (직선)를 사용 하 여 물리적 장력이 무한에 해당 합니다.</span><span class="sxs-lookup"><span data-stu-id="e9fea-119">A tension of 0 corresponds to infinite physical tension, forcing the curve to take the shortest way (straight lines) between points.</span></span> <span data-ttu-id="e9fea-120">1의 장력 스플라인을 이상 총 벤드는 경로 없음 물리적 장력에 해당 합니다.</span><span class="sxs-lookup"><span data-stu-id="e9fea-120">A tension of 1 corresponds to no physical tension, allowing the spline to take the path of least total bend.</span></span> <span data-ttu-id="e9fea-121">장력 값이 1 보다 큰, 곡선 긴 경로에 푸시 압축된 spring 처럼 동작 합니다.</span><span class="sxs-lookup"><span data-stu-id="e9fea-121">With tension values greater than 1, the curve behaves like a compressed spring, pushed to take a longer path.</span></span>  
   
- ![카디널 스플라인](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art10.png "Aboutgdip02\_art10")  
+ <span data-ttu-id="e9fea-122">![카디널 스플라인](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art10.gif "Aboutgdip02_art10")</span><span class="sxs-lookup"><span data-stu-id="e9fea-122">![Cardinal Splines](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art10.gif "Aboutgdip02_art10")</span></span>  
   
- 이전 그림에 나오는 네 개의 스플라인은 시작점에서 하나의 접선을 공유합니다.  접선은 시작점에서 곡선의 다음점으로 그린 선입니다.  마찬가지로, 끝점의 공유 접선은 끝점에서 곡선의 이전 점으로 그린 선입니다.  
+ <span data-ttu-id="e9fea-123">앞의 그림에 4 개의 스플라인 시작 지점에 동일한 탄젠트 라인을 공유 합니다.</span><span class="sxs-lookup"><span data-stu-id="e9fea-123">The four splines in the preceding illustration share the same tangent line at the starting point.</span></span> <span data-ttu-id="e9fea-124">탄젠트는 곡선을 따라 다음 점으로 시작 지점에서 가져온 선입니다.</span><span class="sxs-lookup"><span data-stu-id="e9fea-124">The tangent is the line drawn from the starting point to the next point along the curve.</span></span> <span data-ttu-id="e9fea-125">마찬가지로, 공유의 탄젠트 끝점은 곡선의 끝점에서 이전 지점으로 그린 선입니다.</span><span class="sxs-lookup"><span data-stu-id="e9fea-125">Likewise, the shared tangent at the ending point is the line drawn from the ending point to the previous point on the curve.</span></span>  
   
- 카디널 스플라인을 그리려면 <xref:System.Drawing.Graphics> 클래스 인스턴스, <xref:System.Drawing.Pen> 및 <xref:System.Drawing.Point> 개체 배열이 필요합니다. <xref:System.Drawing.Graphics> 클래스 인스턴스는 스플라인을 그리는 <xref:System.Drawing.Graphics.DrawCurve%2A> 메서드를 제공하고 <xref:System.Drawing.Pen> 개체에는 선 색과 두께 같은 스플라인 특성이 저장됩니다.  <xref:System.Drawing.Point> 개체 배열에는 곡선이 통과할 점이 저장됩니다.  다음 코드 예제에서는  `myPointArray`의 점을 통과하는 카디널 스플라인을 그리는 방법을 보여 줍니다.  세 번째 매개 변수는 장력입니다.  
+ <span data-ttu-id="e9fea-126">카디널 스플라인 그리기, 하려면의 인스턴스는 <xref:System.Drawing.Graphics> 클래스는 <xref:System.Drawing.Pen>, 및의 배열을 <xref:System.Drawing.Point> 개체의 인스턴스는 <xref:System.Drawing.Graphics> 클래스를 제공는 <xref:System.Drawing.Graphics.DrawCurve%2A> 스플라인을 그립니다, 메서드 및 <xref:System.Drawing.Pen> 선 두께 및 색 등 스플라인의 특성을 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="e9fea-126">To draw a cardinal spline, you need an instance of the <xref:System.Drawing.Graphics> class, a <xref:System.Drawing.Pen>, and an array of <xref:System.Drawing.Point> objects The instance of the <xref:System.Drawing.Graphics> class provides the <xref:System.Drawing.Graphics.DrawCurve%2A> method, which draws the spline, and the <xref:System.Drawing.Pen> stores attributes of the spline, such as line width and color.</span></span> <span data-ttu-id="e9fea-127">배열 <xref:System.Drawing.Point> 곡선은 통과 하는 지점을 저장 하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="e9fea-127">The array of <xref:System.Drawing.Point> objects stores the points that the curve will pass through.</span></span> <span data-ttu-id="e9fea-128">다음 코드 예제에는에 있는 요소를 통해 전달 되는 카디널 스플라인의 그리는 방법을 보여 줍니다 `myPointArray`합니다.</span><span class="sxs-lookup"><span data-stu-id="e9fea-128">The following code example shows how to draw a cardinal spline that passes through the points in `myPointArray`.</span></span> <span data-ttu-id="e9fea-129">세 번째 매개 변수는 장력 합니다.</span><span class="sxs-lookup"><span data-stu-id="e9fea-129">The third parameter is the tension.</span></span>  
   
  [!code-csharp[LinesCurvesAndShapes#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#31)]
  [!code-vb[LinesCurvesAndShapes#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#31)]  
   
-## 참고 항목  
- [선, 곡선 및 도형](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)   
- [곡선 구성 및 그리기](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)
+## <a name="see-also"></a><span data-ttu-id="e9fea-130">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e9fea-130">See Also</span></span>  
+ [<span data-ttu-id="e9fea-131">선, 곡선 및 도형</span><span class="sxs-lookup"><span data-stu-id="e9fea-131">Lines, Curves, and Shapes</span></span>](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [<span data-ttu-id="e9fea-132">곡선 구성 및 그리기</span><span class="sxs-lookup"><span data-stu-id="e9fea-132">Constructing and Drawing Curves</span></span>](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)

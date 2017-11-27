@@ -1,53 +1,57 @@
 ---
-title: "전역 변환 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "그래픽, 표준 변환"
-  - "표준 변환, 예제"
+title: "전역 변형 사용"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- graphics [Windows Forms], world transformation
+- world transformation [Windows Forms], examples
 ms.assetid: 1e717711-1361-448e-aa49-0f3ec43110c9
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b5b2a8de0644e71a5e6ae1a5ca796f580f0c4f23
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 전역 변환 사용
-전역 변환은 <xref:System.Drawing.Graphics> 클래스의 속성입니다.  전역 변환을 지정하는 숫자는 3×3 매트릭스를 나타내는 <xref:System.Drawing.Drawing2D.Matrix> 개체에 저장됩니다.  <xref:System.Drawing.Drawing2D.Matrix> 클래스와 <xref:System.Drawing.Graphics> 클래스에는 전역 변환 매트릭스에 숫자를 설정하기 위한 메서드가 여러 개 있습니다.  
+# <a name="using-the-world-transformation"></a><span data-ttu-id="97d4a-102">전역 변형 사용</span><span class="sxs-lookup"><span data-stu-id="97d4a-102">Using the World Transformation</span></span>
+<span data-ttu-id="97d4a-103">월드 변형을의 속성인는 <xref:System.Drawing.Graphics> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="97d4a-103">The world transformation is a property of the <xref:System.Drawing.Graphics> class.</span></span> <span data-ttu-id="97d4a-104">월드 변형과 지정 하는 숫자는 저장 된 <xref:System.Drawing.Drawing2D.Matrix> 3 × 3 행렬을 나타내는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="97d4a-104">The numbers that specify the world transformation are stored in a <xref:System.Drawing.Drawing2D.Matrix> object, which represents a 3×3 matrix.</span></span> <span data-ttu-id="97d4a-105"><xref:System.Drawing.Drawing2D.Matrix> 및 <xref:System.Drawing.Graphics> 클래스에는 여러 가지 방법을 월드 변형 매트릭스에 숫자를 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="97d4a-105">The <xref:System.Drawing.Drawing2D.Matrix> and <xref:System.Drawing.Graphics> classes have several methods for setting the numbers in the world transformation matrix.</span></span>  
   
-## 여러 종류의 변환  
- 다음 예제의 코드에서는 먼저 50×50 사각형을 만들어 원점\(0, 0\)에 배치합니다.  원점은 클라이언트 영역의 왼쪽 위 모퉁이에 있습니다.  
+## <a name="different-types-of-transformations"></a><span data-ttu-id="97d4a-106">여러 종류의 변환</span><span class="sxs-lookup"><span data-stu-id="97d4a-106">Different Types of Transformations</span></span>  
+ <span data-ttu-id="97d4a-107">다음 예제에서 코드는 먼저 50 × 50 사각형을 만들어 원점 (0, 0)에 배치 합니다.</span><span class="sxs-lookup"><span data-stu-id="97d4a-107">In the following example, the code first creates a 50×50 rectangle and locates it at the origin (0, 0).</span></span> <span data-ttu-id="97d4a-108">원점은 클라이언트 영역의 왼쪽 위 모퉁이에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="97d4a-108">The origin is at the upper-left corner of the client area.</span></span>  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.MiscLegacyTopics#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#11)]  
   
- 아래 코드에서는 사각형을 x 방향으로 1.75배 확장하고 y 방향으로 0.5배 축소하는 배율 조정 변환을 적용합니다.  
+ <span data-ttu-id="97d4a-109">다음 코드에는 x 방향의 1.75의 비율로 사각형을 확장 하 고 사각형 y 방향의 0.5의 비율로 감소 하는 크기 조정 변환을 적용 합니다.</span><span class="sxs-lookup"><span data-stu-id="97d4a-109">The following code applies a scaling transformation that expands the rectangle by a factor of 1.75 in the x direction and shrinks the rectangle by a factor of 0.5 in the y direction:</span></span>  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#12](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#12)]
  [!code-vb[System.Drawing.MiscLegacyTopics#12](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#12)]  
   
- 이 코드를 실행하면 원래의 사각형보다 x 방향은 더 길고 y 방향은 더 짧은 사각형이 만들어집니다.  
+ <span data-ttu-id="97d4a-110">결과 사각형 x 방향의 길고 짧은 y 방향으로 원본 보다입니다.</span><span class="sxs-lookup"><span data-stu-id="97d4a-110">The result is a rectangle that is longer in the x direction and shorter in the y direction than the original.</span></span>  
   
- 배율을 조정하지 않고 사각형을 회전하려면 아래의 코드를 사용합니다.  
+ <span data-ttu-id="97d4a-111">크기로 조정 하지 않고 사각형을 회전 하려면 다음 코드를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="97d4a-111">To rotate the rectangle instead of scaling it, use the following code:</span></span>  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#13](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#13)]
  [!code-vb[System.Drawing.MiscLegacyTopics#13](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#13)]  
   
- 사각형을 이동하려면 아래의 코드를 사용합니다.  
+ <span data-ttu-id="97d4a-112">사각형을 이동 하려면 다음 코드를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="97d4a-112">To translate the rectangle, use the following code:</span></span>  
   
  [!code-csharp[System.Drawing.MiscLegacyTopics#14](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#14)]
  [!code-vb[System.Drawing.MiscLegacyTopics#14](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#14)]  
   
-## 참고 항목  
- <xref:System.Drawing.Drawing2D.Matrix>   
- [좌표계 및 변환](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)   
- [관리 GDI\+에서 변환 사용](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)
+## <a name="see-also"></a><span data-ttu-id="97d4a-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="97d4a-113">See Also</span></span>  
+ <xref:System.Drawing.Drawing2D.Matrix>  
+ [<span data-ttu-id="97d4a-114">좌표계 및 변형</span><span class="sxs-lookup"><span data-stu-id="97d4a-114">Coordinate Systems and Transformations</span></span>](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
+ [<span data-ttu-id="97d4a-115">관리 GDI+에서 변형 사용</span><span class="sxs-lookup"><span data-stu-id="97d4a-115">Using Transformations in Managed GDI+</span></span>](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)

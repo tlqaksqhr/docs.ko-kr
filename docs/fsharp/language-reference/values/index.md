@@ -1,6 +1,6 @@
 ---
 title: "값(F#)"
-description: "값(F#)"
+description: "F #의 값은 특정 유형이 있는 수량 방법에 대해 알아봅니다."
 keywords: "visual f#, f#, 함수형 프로그래밍"
 author: cartermp
 ms.author: phcart
@@ -10,51 +10,49 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 5e1e73c3-5adb-4bba-9976-d57f1ff6cd8d
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: 31d28a5ff1bb7d9a88949bcaee895a405a5e7014
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: a1e077552ba39a483be3129c89af48b547219733
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="values"></a><span data-ttu-id="f4c1d-104">값</span><span class="sxs-lookup"><span data-stu-id="f4c1d-104">Values</span></span>
 
-# <a name="values"></a>값
-
-F#의 값은 특정 형식을 가진 수량이며, 값은 정수 또는 부동 소수점 숫자, 문자 또는 텍스트, 목록, 시퀀스, 배열, 튜플, 구분된 공용 구조체, 레코드, 클래스 형식 또는 함수 값이 될 수 있습니다.
+<span data-ttu-id="f4c1d-105">F#의 값은 특정 형식을 가진 수량이며, 값은 정수 또는 부동 소수점 숫자, 문자 또는 텍스트, 목록, 시퀀스, 배열, 튜플, 구분된 공용 구조체, 레코드, 클래스 형식 또는 함수 값이 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f4c1d-105">Values in F# are quantities that have a specific type; values can be integral or floating point numbers, characters or text, lists, sequences, arrays, tuples, discriminated unions, records, class types, or function values.</span></span>
 
 
-## <a name="binding-a-value"></a>값 바인딩
-*바인딩*이란 용어는 이름과 정의를 연결하는 것을 의미합니다. `let` 키워드는 다음 예제와 같이 값을 바인딩합니다.
+## <a name="binding-a-value"></a><span data-ttu-id="f4c1d-106">값 바인딩</span><span class="sxs-lookup"><span data-stu-id="f4c1d-106">Binding a Value</span></span>
+<span data-ttu-id="f4c1d-107">*바인딩*이란 용어는 이름과 정의를 연결하는 것을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="f4c1d-107">The term *binding* means associating a name with a definition.</span></span> <span data-ttu-id="f4c1d-108">`let` 키워드는 다음 예제와 같이 값을 바인딩합니다.</span><span class="sxs-lookup"><span data-stu-id="f4c1d-108">The `let` keyword binds a value, as in the following examples:</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet601.fs)]
 
-특정 값의 형식은 정의에서 유추됩니다. 정수 또는 부동 소수점 숫자와 같은 기본 형식의 경우 형식은 리터럴 형식에서 결정됩니다. 따라서 앞의 예제에서 컴파일러는 `b`의 형식을 `unsigned int`로 유추하는 반면 컴파일러는 `a`의 형식을 `int`로 유추합니다. 함수 값의 형식은 함수 본문의 반환 값에서 결정됩니다. 함수 값 형식에 대한 자세한 내용은 [함수](../functions/index.md)를 참조하세요. 리터럴 형식에 대한 자세한 내용은 [리터럴](../literals.md)을 참조하세요.
+<span data-ttu-id="f4c1d-109">특정 값의 형식은 정의에서 유추됩니다.</span><span class="sxs-lookup"><span data-stu-id="f4c1d-109">The type of a value is inferred from the definition.</span></span> <span data-ttu-id="f4c1d-110">정수 또는 부동 소수점 숫자와 같은 기본 형식의 경우 형식은 리터럴 형식에서 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="f4c1d-110">For a primitive type, such as an integral or floating point number, the type is determined from the type of the literal.</span></span> <span data-ttu-id="f4c1d-111">따라서 앞의 예제에서 컴파일러는 `b`의 형식을 `unsigned int`로 유추하는 반면 컴파일러는 `a`의 형식을 `int`로 유추합니다.</span><span class="sxs-lookup"><span data-stu-id="f4c1d-111">Therefore, in the previous example, the compiler infers the type of `b` to be `unsigned int`, whereas the compiler infers the type of `a` to be `int`.</span></span> <span data-ttu-id="f4c1d-112">함수 값의 형식은 함수 본문의 반환 값에서 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="f4c1d-112">The type of a function value is determined from the return value in the function body.</span></span> <span data-ttu-id="f4c1d-113">함수 값 형식에 대한 자세한 내용은 [함수](../functions/index.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="f4c1d-113">For more information about function value types, see [Functions](../functions/index.md).</span></span> <span data-ttu-id="f4c1d-114">리터럴 형식에 대한 자세한 내용은 [리터럴](../literals.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="f4c1d-114">For more information about literal types, see [Literals](../literals.md).</span></span>
 
 
-## <a name="why-immutable"></a>변경할 수 없는 이유
-변경할 수 없는 값은 프로그램의 실행 과정에서 변경할 수 없는 값입니다. C++, Visual Basic, C# 등의 언어를 사용하는 경우, 프로그램의 실행 과정에서 F#이 새 값을 할당할 수 있는 변수보다 변경할 수 없는 값에 우선 순위를 두는 것이 낯설게 여겨질 수 있습니다. 변경 불가능한 데이터는 함수형 프로그래밍의 중요한 요소입니다. 다중 스레드 환경에서 여러 다양한 스레드에 의해 변경될 수 있는 공유 가변 변수는 관리하기가 어렵습니다. 또한 변경 가능한 변수를 사용할 경우 다른 함수에 전달되는 변수를 변경할 수 있는지 여부를 구분하는 것이 때로 어렵습니다.
+## <a name="why-immutable"></a><span data-ttu-id="f4c1d-115">변경할 수 없는 이유</span><span class="sxs-lookup"><span data-stu-id="f4c1d-115">Why Immutable?</span></span>
+<span data-ttu-id="f4c1d-116">변경할 수 없는 값은 프로그램의 실행 과정에서 변경할 수 없는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="f4c1d-116">Immutable values are values that cannot be changed throughout the course of a program's execution.</span></span> <span data-ttu-id="f4c1d-117">C++, Visual Basic, C# 등의 언어를 사용하는 경우, 프로그램의 실행 과정에서 F#이 새 값을 할당할 수 있는 변수보다 변경할 수 없는 값에 우선 순위를 두는 것이 낯설게 여겨질 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f4c1d-117">If you are used to languages such as C++, Visual Basic, or C#, you might find it surprising that F# puts primacy over immutable values rather than variables that can be assigned new values during the execution of a program.</span></span> <span data-ttu-id="f4c1d-118">변경 불가능한 데이터는 함수형 프로그래밍의 중요한 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="f4c1d-118">Immutable data is an important element of functional programming.</span></span> <span data-ttu-id="f4c1d-119">다중 스레드 환경에서 여러 다양한 스레드에 의해 변경될 수 있는 공유 가변 변수는 관리하기가 어렵습니다.</span><span class="sxs-lookup"><span data-stu-id="f4c1d-119">In a multithreaded environment, shared mutable variables that can be changed by many different threads are difficult to manage.</span></span> <span data-ttu-id="f4c1d-120">또한 변경 가능한 변수를 사용할 경우 다른 함수에 전달되는 변수를 변경할 수 있는지 여부를 구분하는 것이 때로 어렵습니다.</span><span class="sxs-lookup"><span data-stu-id="f4c1d-120">Also, with mutable variables, it can sometimes be hard to tell if a variable might be changed when it is passed to another function.</span></span>
 
-순수 함수형 언어에서는, 변수가 없으며 함수는 수학 함수로 엄격하게 동작합니다. 프로시저 언어의 코드는 변수 할당을 사용하여 값을 변경하는 경우, 함수형 언어의 해당하는 코드에는 변경할 수 없는 값(입력), 변경할 수 없는 함수 및 여러 변경할 수 없는 값(출력)이 있습니다. 이러한 수학적 엄격성은 프로그램의 동작에 대한 트리거 추론을 허용합니다. 이러한 트리거 추론이 바로 컴파일러에서 코드를 보다 엄격하게 확인하고 보다 효과적으로 최적화할 수 있는 요인이며, 이를 통해 개발자는 올바른 코드를 쉽게 이해하고 작성할 수 있습니다. 따라서 함수형 코드는 일반적인 프로시저 코드보다 디버깅하기 쉬울 수 있습니다.
+<span data-ttu-id="f4c1d-121">순수 함수형 언어에서는, 변수가 없으며 함수는 수학 함수로 엄격하게 동작합니다.</span><span class="sxs-lookup"><span data-stu-id="f4c1d-121">In pure functional languages, there are no variables, and functions behave strictly as mathematical functions.</span></span> <span data-ttu-id="f4c1d-122">프로시저 언어의 코드는 변수 할당을 사용하여 값을 변경하는 경우, 함수형 언어의 해당하는 코드에는 변경할 수 없는 값(입력), 변경할 수 없는 함수 및 여러 변경할 수 없는 값(출력)이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f4c1d-122">Where code in a procedural language uses a variable assignment to alter a value, the equivalent code in a functional language has an immutable value that is the input, an immutable function, and different immutable values as the output.</span></span> <span data-ttu-id="f4c1d-123">이러한 수학적 엄격성은 프로그램의 동작에 대한 트리거 추론을 허용합니다.</span><span class="sxs-lookup"><span data-stu-id="f4c1d-123">This mathematical strictness allows for tighter reasoning about the behavior of the program.</span></span> <span data-ttu-id="f4c1d-124">이러한 트리거 추론이 바로 컴파일러에서 코드를 보다 엄격하게 확인하고 보다 효과적으로 최적화할 수 있는 요인이며, 이를 통해 개발자는 올바른 코드를 쉽게 이해하고 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f4c1d-124">This tighter reasoning is what enables compilers to check code more stringently and to optimize more effectively, and helps make it easier for developers to understand and write correct code.</span></span> <span data-ttu-id="f4c1d-125">따라서 함수형 코드는 일반적인 프로시저 코드보다 디버깅하기 쉬울 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f4c1d-125">Functional code is therefore likely to be easier to debug than ordinary procedural code.</span></span>
 
-F#은 순수 함수형 언어가 아니지만 함수형 프로그래밍을 완전하게 지원합니다. 변경할 수 없는 값을 사용하면 코드가 함수형 프로그래밍의 중요한 측면에서 이점을 얻을 수 있으므로 그렇게 하는 것이 좋습니다.
+<span data-ttu-id="f4c1d-126">F#은 순수 함수형 언어가 아니지만 함수형 프로그래밍을 완전하게 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="f4c1d-126">F# is not a pure functional language, yet it fully supports functional programming.</span></span> <span data-ttu-id="f4c1d-127">변경할 수 없는 값을 사용하면 코드가 함수형 프로그래밍의 중요한 측면에서 이점을 얻을 수 있으므로 그렇게 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="f4c1d-127">Using immutable values is a good practice because doing this allows your code to benefit from an important aspect of functional programming.</span></span>
 
 
-## <a name="mutable-variables"></a>변경 가능한 변수
-`mutable` 키워드를 사용하여 변경할 수 있는 변수를 지정할 수 있습니다. F#의 변경 가능한 변수에는 일반적으로 특정 형식의 필드로 또는 로컬 값의 제한된 범위가 있어야 합니다. 제한된 범위의 변경 가능한 변수는 더 쉽게 제어할 수 있으므로 잘못된 방법으로 수정하는 경우가 더 적습니다.
+## <a name="mutable-variables"></a><span data-ttu-id="f4c1d-128">변경 가능한 변수</span><span class="sxs-lookup"><span data-stu-id="f4c1d-128">Mutable Variables</span></span>
+<span data-ttu-id="f4c1d-129">`mutable` 키워드를 사용하여 변경할 수 있는 변수를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f4c1d-129">You can use the keyword `mutable` to specify a variable that can be changed.</span></span> <span data-ttu-id="f4c1d-130">F#의 변경 가능한 변수에는 일반적으로 특정 형식의 필드로 또는 로컬 값의 제한된 범위가 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f4c1d-130">Mutable variables in F# should generally have a limited scope, either as a field of a type or as a local value.</span></span> <span data-ttu-id="f4c1d-131">제한된 범위의 변경 가능한 변수는 더 쉽게 제어할 수 있으므로 잘못된 방법으로 수정하는 경우가 더 적습니다.</span><span class="sxs-lookup"><span data-stu-id="f4c1d-131">Mutable variables with a limited scope are easier to control and are less likely to be modified in incorrect ways.</span></span>
 
-값을 정의할 때와 동일한 방식으로 `let` 키워드를 사용하여 변경 가능한 변수에 초기 값을 할당할 수 있습니다. 그러나 다음 예제와 같이, 이후에 `<-` 연산자를 사용하여 변경 가능한 변수에 새 값을 할당할 수 있다는 점이 다릅니다.
+<span data-ttu-id="f4c1d-132">값을 정의할 때와 동일한 방식으로 `let` 키워드를 사용하여 변경 가능한 변수에 초기 값을 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f4c1d-132">You can assign an initial value to a mutable variable by using the `let` keyword in the same way as you would define a value.</span></span> <span data-ttu-id="f4c1d-133">그러나 다음 예제와 같이, 이후에 `<-` 연산자를 사용하여 변경 가능한 변수에 새 값을 할당할 수 있다는 점이 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="f4c1d-133">However, the difference is that you can subsequently assign new values to mutable variables by using the `<-` operator, as in the following example.</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
     
-## <a name="related-topics"></a>관련 항목
+## <a name="related-topics"></a><span data-ttu-id="f4c1d-134">관련 항목</span><span class="sxs-lookup"><span data-stu-id="f4c1d-134">Related Topics</span></span>
 
 
-|제목|설명|
+|<span data-ttu-id="f4c1d-135">제목</span><span class="sxs-lookup"><span data-stu-id="f4c1d-135">Title</span></span>|<span data-ttu-id="f4c1d-136">설명</span><span class="sxs-lookup"><span data-stu-id="f4c1d-136">Description</span></span>|
 |-----|-----------|
-|[let 바인딩](../functions/let-bindings.md)|`let` 키워드를 사용하여 이름을 값 및 변수에 바인딩하는 방법에 대해 설명합니다.|
-|[함수](../functions/index.md)|F#의 함수를 간략하게 설명합니다.|
+|[<span data-ttu-id="f4c1d-137">let 바인딩</span><span class="sxs-lookup"><span data-stu-id="f4c1d-137">let Bindings</span></span>](../functions/let-bindings.md)|<span data-ttu-id="f4c1d-138">사용 하는 방법에 대 한 정보를 제공는 `let` 이름 값과 변수에 바인딩할 키워드입니다.</span><span class="sxs-lookup"><span data-stu-id="f4c1d-138">Provides information about using the `let` keyword to bind names to values and functions.</span></span>|
+|[<span data-ttu-id="f4c1d-139">함수</span><span class="sxs-lookup"><span data-stu-id="f4c1d-139">Functions</span></span>](../functions/index.md)|<span data-ttu-id="f4c1d-140">F#의 함수를 간략하게 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="f4c1d-140">Provides an overview of functions in F#.</span></span>|
 
-## <a name="see-also"></a>참고 항목
-[Null 값](null-Values.md)
+## <a name="see-also"></a><span data-ttu-id="f4c1d-141">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f4c1d-141">See Also</span></span>
+[<span data-ttu-id="f4c1d-142">Null 값</span><span class="sxs-lookup"><span data-stu-id="f4c1d-142">Null Values</span></span>](null-Values.md)
 
-[F# 언어 참조](../index.md)
-
+[<span data-ttu-id="f4c1d-143">F# 언어 참조</span><span class="sxs-lookup"><span data-stu-id="f4c1d-143">F# Language Reference</span></span>](../index.md)

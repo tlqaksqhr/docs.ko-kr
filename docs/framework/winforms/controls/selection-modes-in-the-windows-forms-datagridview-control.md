@@ -1,62 +1,63 @@
 ---
-title: "Windows Forms DataGridView 컨트롤의 선택 모드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "DataGridView 컨트롤[Windows Forms], 선택 모드"
-  - "선택, DataGridView 컨트롤의 모드"
+title: "Windows Forms DataGridView 컨트롤의 선택 모드"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- selection [Windows Forms], modes in DataGridView control
+- DataGridView control [Windows Forms], selection mode
 ms.assetid: a3ebfd3d-0525-479d-9d96-d9e017289b36
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4f6b603382382971249b08cddd482566ec6e5fa5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Windows Forms DataGridView 컨트롤의 선택 모드
-응용 프로그램에서 <xref:System.Windows.Forms.DataGridView> 컨트롤 내의 사용자 선택에 따라 작업을 수행해야 하는 경우도 있습니다.  작업에 따라 사용할 수 있는 선택의 종류를 제한할 수 있습니다.  예를 들어, 응용 프로그램에서 현재 선택된 레코드에 대한 보고서를 인쇄할 수 있는 경우  행의 어느 부분을 클릭해도 항상 전체 행이 선택되고 한 번에 한 개의 행만 선택할 수 있도록 <xref:System.Windows.Forms.DataGridView> 컨트롤을 구성할 수 있습니다.  
+# <a name="selection-modes-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="b3e18-102">Windows Forms DataGridView 컨트롤의 선택 모드</span><span class="sxs-lookup"><span data-stu-id="b3e18-102">Selection Modes in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="b3e18-103">응용 프로그램 내의 사용자 선택에 따라 작업을 수행 하려는 경우에 따라 한 <xref:System.Windows.Forms.DataGridView> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-103">Sometimes you want your application to perform actions based on user selections within a <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="b3e18-104">작업에 따라 가능한 선택 항목의 종류를 제한 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-104">Depending on the actions, you may want to restrict the kinds of selection that are possible.</span></span> <span data-ttu-id="b3e18-105">예를 들어, 응용 프로그램에서 현재 선택 된 레코드에 대 한 보고서를 인쇄할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-105">For example, suppose your application can print a report for the currently selected record.</span></span> <span data-ttu-id="b3e18-106">이 경우 구성 해야 할 수는 <xref:System.Windows.Forms.DataGridView> 컨트롤 항상 행 내에서 아무 곳 이나 클릭 하 여 전체 행을 선택한 한 번에 해당 행을 하나만 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-106">In this case, you may want to configure the <xref:System.Windows.Forms.DataGridView> control so that clicking anywhere within a row always selects the entire row, and so that only one row at a time can be selected.</span></span>  
   
- <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=fullName> 속성을 다음 <xref:System.Windows.Forms.DataGridViewSelectionMode> 열거형 값 중 하나로 설정하여 허용되는 선택을 지정할 수 있습니다.  
+ <span data-ttu-id="b3e18-107">허용을 설정 하 여 선택 항목을 지정할 수는 <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType> 속성을 다음 중 하나로 <xref:System.Windows.Forms.DataGridViewSelectionMode> 열거형 값입니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-107">You can specify the selections allowed by setting the <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType> property to one of the following <xref:System.Windows.Forms.DataGridViewSelectionMode> enumeration values.</span></span>  
   
-|DataGridViewSelectionMode 값|설명|  
-|---------------------------------|--------|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode>|셀을 클릭하여 해당 셀을 선택합니다.  행 및 열 머리글은 선택에 사용할 수 없습니다.|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode>|셀을 클릭하여 해당 셀을 선택합니다.  열 머리글을 클릭하여 전체 열을 선택합니다.  열 머리글은 정렬에 사용할 수 없습니다.|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode>|셀이나 열 머리글을 클릭하여 전체 열을 선택합니다.  열 머리글은 정렬에 사용할 수 없습니다.|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode>|셀이나 행 머리글을 클릭하여 전체 행을 선택합니다.|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode>|기본 선택 모드입니다.  셀을 클릭하여 해당 셀을 선택합니다.  행 머리글을 클릭하여 전체 행을 선택합니다.|  
+|<span data-ttu-id="b3e18-108">DataGridViewSelectionMode 값</span><span class="sxs-lookup"><span data-stu-id="b3e18-108">DataGridViewSelectionMode value</span></span>|<span data-ttu-id="b3e18-109">설명</span><span class="sxs-lookup"><span data-stu-id="b3e18-109">Description</span></span>|  
+|-------------------------------------|-----------------|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>|<span data-ttu-id="b3e18-110">셀을 클릭 하 고 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-110">Clicking a cell selects it.</span></span> <span data-ttu-id="b3e18-111">행 및 열 머리글 선택에 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-111">Row and column headers cannot be used for selection.</span></span>|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>|<span data-ttu-id="b3e18-112">셀을 클릭 하 고 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-112">Clicking a cell selects it.</span></span> <span data-ttu-id="b3e18-113">열 머리글을 클릭 하면 전체 열을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-113">Clicking a column header selects the entire column.</span></span> <span data-ttu-id="b3e18-114">정렬에 열 머리글을 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-114">Column headers cannot be used for sorting.</span></span>|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>|<span data-ttu-id="b3e18-115">셀 또는 열 머리글을 클릭 하면 전체 열을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-115">Clicking a cell or a column header selects the entire column.</span></span> <span data-ttu-id="b3e18-116">정렬에 열 머리글을 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-116">Column headers cannot be used for sorting.</span></span>|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect>|<span data-ttu-id="b3e18-117">셀 또는 행 머리글을 클릭 하면 전체 행을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-117">Clicking a cell or a row header selects the entire row.</span></span>|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect>|<span data-ttu-id="b3e18-118">기본 선택 모드입니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-118">Default selection mode.</span></span> <span data-ttu-id="b3e18-119">셀을 클릭 하 고 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-119">Clicking a cell selects it.</span></span> <span data-ttu-id="b3e18-120">행 머리글을 클릭 하 여 전체 행을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-120">Clicking a row header selects the entire row.</span></span>|  
   
 > [!NOTE]
->  런타임에 선택 모드를 변경하면 현재 선택이 자동으로 지워집니다.  
+>  <span data-ttu-id="b3e18-121">현재 선택을 해제 런타임 시 자동으로 선택 모드를 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-121">Changing the selection mode at run time automatically clears the current selection.</span></span>  
   
- 기본적으로 사용자는 마우스를 끌거나, Ctrl 키나 또는 Shift 키를 누른 채로 선택 영역을 확장 또는 수정하거나, 왼쪽 위 머리글을 클릭하여 컨트롤의 모든 셀을 선택하여 여러 행, 열 또는 셀을 선택할 수 있습니다.  이 동작이 실행되지 않게 하려면 <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> 속성을 `false`로 설정합니다.  
+ <span data-ttu-id="b3e18-122">기본적으로 사용자가 선택할 수 여러 행, 열 또는 셀의 마우스을 확장 하거나 수정 선택 항목을 선택 하거나 컨트롤의 모든 셀을 선택 하려면 왼쪽 위 머리글 셀을 클릭 하는 동안 CTRL 또는 shift 키를 누르면.</span><span class="sxs-lookup"><span data-stu-id="b3e18-122">By default, users can select multiple rows, columns, or cells by dragging with the mouse, pressing CTRL or SHIFT while selecting to extend or modify a selection, or clicking the top-left header cell to select all cells in the control.</span></span> <span data-ttu-id="b3e18-123">이 문제를 방지 하려면 설정는 <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> 속성을 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-123">To prevent this behavior, set the <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> property to `false`.</span></span>  
   
- <xref:System.Windows.Forms.DataGridViewSelectionMode> 및 <xref:System.Windows.Forms.DataGridViewSelectionMode> 모드에서 사용자는 행을 선택한 다음 Delete 키를 눌러 행을 삭제할 수 있습니다.  사용자는 현재 셀이 편집 모드에 있지 않고, <xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A> 속성이 `true`로 설정되어 있으며, 내부 데이터 소스에서 사용자 기반 행 삭제를 지원하는 경우에만 행을 삭제할 수 있습니다.  이러한 설정은 프로그래밍 방식의 행 삭제에 영향을 주지 않습니다.  
+ <span data-ttu-id="b3e18-124"><xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> 및 <xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect> 모드 선택 하 고 DELETE 키를 눌러 행을 삭제 하려면 사용자가 허용 합니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-124">The <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> and <xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect> modes allow users to delete rows by selecting them and pressing the DELETE key.</span></span> <span data-ttu-id="b3e18-125">현재 셀이 편집 모드에 있는 경우에 사용자가 행을 삭제할 수는 <xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A> 속성이로 설정 되어 `true`, 데이터 원본 사용자 기반 행 삭제 작업을 지원 하 고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-125">Users can delete rows only when the current cell is not in edit mode, the <xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A> property is set to `true`, and the underlying data source supports user-driven row deletion.</span></span> <span data-ttu-id="b3e18-126">이러한 설정을 프로그래밍 방식으로 행을 삭제 해도 참고 합니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-126">Note that these settings do not prevent programmatic row deletion.</span></span>  
   
-## 프로그래밍 방식 선택  
- 현재 선택 모드는 사용자 선택뿐만 아니라 프로그래밍 방식 선택의 동작도 제한합니다.  <xref:System.Windows.Forms.DataGridView> 컨트롤에 있는 셀, 행 또는 열의 `Selected` 속성을 설정하여 현재 선택을 프로그래밍 방식으로 변경할 수 있습니다.  또한 선택 모드에 따라 <xref:System.Windows.Forms.DataGridView.SelectAll%2A> 메서드를 통해 컨트롤의 모든 셀을 선택할 수 있습니다.  선택을 취소하려면 <xref:System.Windows.Forms.DataGridView.ClearSelection%2A> 메서드를 사용합니다.  
+## <a name="programmatic-selection"></a><span data-ttu-id="b3e18-127">프로그래밍 방식 선택</span><span class="sxs-lookup"><span data-stu-id="b3e18-127">Programmatic Selection</span></span>  
+ <span data-ttu-id="b3e18-128">현재 선택 모드도 프로그래밍 방식 선택 사용자 선택 동작을 제한합니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-128">The current selection mode restricts the behavior of programmatic selection as well as user selection.</span></span> <span data-ttu-id="b3e18-129">현재 선택 영역을 설정 하 여 프로그래밍 방식으로 변경할 수 있습니다는 `Selected` 속성의 모든 셀, 행 또는 열에는 <xref:System.Windows.Forms.DataGridView> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-129">You can change the current selection programmatically by setting the `Selected` property of any cells, rows, or columns present in the <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="b3e18-130">통해 컨트롤에 모든 셀을 선택할 수도 있습니다는 <xref:System.Windows.Forms.DataGridView.SelectAll%2A> 선택 모드에 따라 메서드.</span><span class="sxs-lookup"><span data-stu-id="b3e18-130">You can also select all cells in the control through the <xref:System.Windows.Forms.DataGridView.SelectAll%2A> method, depending on the selection mode.</span></span> <span data-ttu-id="b3e18-131">사용 하 여 선택을 <xref:System.Windows.Forms.DataGridView.ClearSelection%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="b3e18-131">To clear the selection, use the <xref:System.Windows.Forms.DataGridView.ClearSelection%2A> method.</span></span>  
   
- <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> 속성이 `true`로 설정된 경우에는 <xref:System.Windows.Forms.DataGridView> 요소의 `Selected` 속성을 변경하여 이 요소를 선택에 추가하거나 제거할 수 있습니다.  그렇지 않은 경우, 한 요소의 `Selected` 속성을 `true`로 설정하면 다른 요소가 선택에서 자동으로 제거됩니다.  
+ <span data-ttu-id="b3e18-132">경우는 <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> 속성이로 설정 되어 `true`를 추가할 수 있습니다 <xref:System.Windows.Forms.DataGridView> 요소를 하거나 변경 하 여 선택 영역에서 제거는 `Selected` 요소의 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-132">If the <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> property is set to `true`, you can add <xref:System.Windows.Forms.DataGridView> elements to or remove them from the selection by changing the `Selected` property of the element.</span></span> <span data-ttu-id="b3e18-133">그렇지 않은 경우 설정의 `Selected` 속성을 `true` 요소가 두 개 선택에서 다른 요소를 자동으로 제거에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-133">Otherwise, setting the `Selected` property to `true` for one element automatically removes other elements from the selection.</span></span>  
   
- <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> 속성 값을 변경하더라도 현재 선택은 바뀌지 않습니다.  
+ <span data-ttu-id="b3e18-134">값을 변경는 <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> 속성은 현재 선택 영역을 변경 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-134">Note that changing the value of the <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> property does not alter the current selection.</span></span>  
   
- <xref:System.Windows.Forms.DataGridView> 컨트롤의 <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>, <xref:System.Windows.Forms.DataGridView.SelectedRows%2A> 및 <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> 속성을 통해 현재 선택된 셀, 행 또는 열의 컬렉션을 검색할 수 있습니다.  컨트롤의 모든 셀이 선택된 경우 이러한 속성에 액세스하는 것은 비효율적입니다.  이 경우 성능 저하를 방지하려면 먼저 <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A> 메서드를 사용합니다.  또한 선택된 셀, 행 또는 열의 수를 확인하기 위해 이러한 컬렉션에 액세스하는 것도 비효율적일 수 있습니다.  대신 <xref:System.Windows.Forms.DataGridView.GetCellCount%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.GetRowCount%2A> 또는 <xref:System.Windows.Forms.DataGridViewColumnCollection.GetColumnCount%2A> 메서드를 사용하여 <xref:System.Windows.Forms.DataGridViewElementStates> 값을 전달하는 것이 좋습니다.  
+ <span data-ttu-id="b3e18-135">현재 선택 된 셀, 행 또는 열을 통해의 컬렉션을 검색할 수 있습니다는 <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>, <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>, 및 <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> 의 속성은 <xref:System.Windows.Forms.DataGridView> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-135">You can retrieve a collection of the currently selected cells, rows, or columns through the <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>, <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>, and <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> properties of the <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="b3e18-136">이러한 속성에 액세스지 않습니다 효율적인 컨트롤의 모든 셀을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-136">Accessing these properties is inefficient when every cell in the control is selected.</span></span> <span data-ttu-id="b3e18-137">이 경우, 성능 저하를 방지 하려면 사용 된 <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A> 메서드 첫 번째입니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-137">To avoid a performance penalty in this case, use the <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A> method first.</span></span> <span data-ttu-id="b3e18-138">또한 선택 된 셀의 수를 확인 하려면 이러한 컬렉션에 대 한 액세스, 행 또는 열 수 있습니다 수. 있습니다</span><span class="sxs-lookup"><span data-stu-id="b3e18-138">Additionally, accessing these collections to determine the number of selected cells, rows, or columns can be inefficient.</span></span> <span data-ttu-id="b3e18-139">를 대신 사용 해야는 <xref:System.Windows.Forms.DataGridView.GetCellCount%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.GetRowCount%2A>, 또는 <xref:System.Windows.Forms.DataGridViewColumnCollection.GetColumnCount%2A> 전달 하는 메서드는 <xref:System.Windows.Forms.DataGridViewElementStates.Selected> 값입니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-139">Instead, you should use the <xref:System.Windows.Forms.DataGridView.GetCellCount%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.GetRowCount%2A>, or <xref:System.Windows.Forms.DataGridViewColumnCollection.GetColumnCount%2A> method, passing in the <xref:System.Windows.Forms.DataGridViewElementStates.Selected> value.</span></span>  
   
 > [!TIP]
->  선택한 셀을 프로그래밍 방식으로 사용하는 방법을 보여 주는 예제 코드는 <xref:System.Windows.Forms.DataGridView> 클래스 개요에서 찾을 수 있습니다.  
+>  <span data-ttu-id="b3e18-140">선택 된 셀의 프로그래밍 방식으로 사용 하는 예제 코드에서 확인할 수 있습니다는 <xref:System.Windows.Forms.DataGridView> 클래스 개요입니다.</span><span class="sxs-lookup"><span data-stu-id="b3e18-140">Example code that demonstrates the programmatic use of selected cells can be found in the <xref:System.Windows.Forms.DataGridView> class overview.</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>   
- <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>   
- <xref:System.Windows.Forms.DataGridViewSelectionMode>   
- [Windows Forms DataGridView 컨트롤에서 선택 및 클립보드 사용](../../../../docs/framework/winforms/controls/selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)   
- [방법: Windows Forms DataGridView 컨트롤의 선택 모드 설정](../../../../docs/framework/winforms/controls/how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="b3e18-141">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b3e18-141">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>  
+ <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>  
+ <xref:System.Windows.Forms.DataGridViewSelectionMode>  
+ [<span data-ttu-id="b3e18-142">Windows Forms DataGridView 컨트롤에서 선택 및 클립보드 사용</span><span class="sxs-lookup"><span data-stu-id="b3e18-142">Selection and Clipboard Use with the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="b3e18-143">방법: Windows Forms DataGridView 컨트롤의 선택 모드 설정</span><span class="sxs-lookup"><span data-stu-id="b3e18-143">How to: Set the Selection Mode of the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)

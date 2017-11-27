@@ -1,106 +1,109 @@
 ---
-title: "데이터 액세스 보안 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "보안 데이터 액세스"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: c713cc8e5f3d7e81b196820e0a25fde0018b6c80
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 데이터 액세스 보안
-보안 ADO.NET 코드를 쓰려면 내부 데이터 저장소 또는 데이터베이스에서 사용할 수 있는 보안 메커니즘을 알아야 합니다.  또한, 응용 프로그램에 포함된 다른 기능이나 구성 요소의 보안 문제도 고려해야 합니다.  
+# <a name="secure-data-access"></a><span data-ttu-id="6583a-102">보안 데이터 액세스</span><span class="sxs-lookup"><span data-stu-id="6583a-102">Secure Data Access</span></span>
+<span data-ttu-id="6583a-103">보안 ADO.NET 코드를 쓰려면 내부 데이터 저장소 또는 데이터베이스에서 사용할 수 있는 보안 메커니즘을 알아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-103">To write secure ADO.NET code, you have to understand the security mechanisms available in the underlying data store, or database.</span></span> <span data-ttu-id="6583a-104">또한, 응용 프로그램에 포함된 다른 기능이나 구성 요소의 보안 문제도 고려해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-104">You also need to consider the security implications of other features or components that your application may contain.</span></span>  
   
-## 인증, 권한 부여 및 사용 권한  
- Microsoft SQL Server에 연결하는 경우에는 Windows 인증, 즉 소위 말하는 통합 보안을 사용할 수 있습니다. 이 경우 사용자 ID와 암호가 전달되는 것이 아니라 현재 활성 Windows 사용자의 ID가 사용됩니다.  Windows 인증은 사용자 자격 증명이 연결 문자열에 노출되지 않기 때문에 적극 권장되는 방식입니다.  Windows 인증을 사용하여 SQL Server에 연결할 수 없는 경우에는 <xref:System.Data.SqlClient.SqlConnectionStringBuilder>를 사용하여 런타임에 연결 문자열을 만드는 방법을 고려해 보세요.  
+## <a name="authentication-authorization-and-permissions"></a><span data-ttu-id="6583a-105">인증, 권한 부여 및 사용 권한</span><span class="sxs-lookup"><span data-stu-id="6583a-105">Authentication, Authorization and Permissions</span></span>  
+ <span data-ttu-id="6583a-106">Microsoft SQL Server에 연결하는 경우에는 Windows 인증, 즉 소위 말하는 통합 보안을 사용할 수 있습니다. 이 경우 사용자 ID와 암호가 전달되는 것이 아니라 현재 활성 Windows 사용자의 ID가 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-106">When connecting to Microsoft SQL Server, you can use Windows Authentication, also known as Integrated Security, which uses the identity of the current active Windows user rather than passing a user ID and password.</span></span> <span data-ttu-id="6583a-107">Windows 인증은 사용자 자격 증명이 연결 문자열에 노출되지 않기 때문에 적극 권장되는 방식입니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-107">Using Windows Authentication is highly recommended because user credentials are not exposed in the connection string.</span></span> <span data-ttu-id="6583a-108">Windows 인증을 사용하여 SQL Server에 연결할 수 없는 경우에는 <xref:System.Data.SqlClient.SqlConnectionStringBuilder>를 사용하여 런타임에 연결 문자열을 만드는 방법을 고려해 보세요.</span><span class="sxs-lookup"><span data-stu-id="6583a-108">If you cannot use Windows Authentication to connect to SQL Server, then consider creating connection strings at run time using the <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.</span></span>  
   
- 인증에 사용되는 자격 증명은 응용 프로그램의 종류에 따라 다르게 처리해야 합니다.  예를 들어, Windows Forms 응용 프로그램에서는 인증 정보를 입력하라는 메시지가 표시되거나 사용자의 Windows 자격 증명이 사용될 수 있습니다.  그러나 웹 응용 프로그램의 경우 주로 사용자 입력을 통해서가 아닌 응용 프로그램에서 제공하는 자격 증명을 사용하여 데이터에 액세스합니다.  
+ <span data-ttu-id="6583a-109">인증에 사용되는 자격 증명은 응용 프로그램의 종류에 따라 다르게 처리해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-109">The credentials used for authentication need to be handled differently based on the type of application.</span></span> <span data-ttu-id="6583a-110">예를 들어, Windows Forms 응용 프로그램에서는 인증 정보를 입력하라는 메시지가 표시되거나 사용자의 Windows 자격 증명이 사용될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-110">For example, in a Windows Forms application, the user can be prompted to supply authentication information, or the user's Windows credentials can be used.</span></span> <span data-ttu-id="6583a-111">그러나 웹 응용 프로그램의 경우 주로 사용자 입력을 통해서가 아닌 응용 프로그램에서 제공하는 자격 증명을 사용하여 데이터에 액세스합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-111">However, a Web application often accesses data using credentials supplied by the application itself rather than by the user.</span></span>  
   
- 인증된 후 사용자가 수행할 수 있는 작업의 범위는 각자에게 부여된 권한에 따라 다릅니다.  항상 최소 권한의 원칙에 따라 꼭 필요한 권한만 부여해야 합니다.  
+ <span data-ttu-id="6583a-112">인증된 후 사용자가 수행할 수 있는 작업의 범위는 각자에게 부여된 권한에 따라 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-112">Once users have been authenticated, the scope of their actions depends on the permissions that have been granted to them.</span></span> <span data-ttu-id="6583a-113">항상 최소 권한의 원칙에 따라 꼭 필요한 권한만 부여해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-113">Always follow the principle of least privilege and grant only permissions that are absolutely necessary.</span></span>  
   
- 자세한 내용은 다음 리소스를 참조하세요.  
+ <span data-ttu-id="6583a-114">자세한 내용은 다음 리소스를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="6583a-114">For more information, see the following resources.</span></span>  
   
-|리소스|설명|  
-|---------|--------|  
-|[연결 정보 보호](../../../../docs/framework/data/adonet/protecting-connection-information.md)|보호되는 구성을 사용하여 연결 문자열을 암호화하는 것과 같이 연결 정보를 보호하는 기술과 최상의 보안 방법에 대해 설명합니다.|  
-|[Recommendations for Data Access Strategies](http://msdn.microsoft.com/ko-kr/72411f32-d12a-4de8-b961-e54fca7faaf5)|데이터 액세스 및 데이터베이스 작업 수행에 대한 권장 방법을 제공합니다.|  
-|[연결 문자열 작성기](../../../../docs/framework/data/adonet/connection-string-builders.md)|런타임에 사용자 입력을 기반으로 연결 문자열을 만드는 방법에 대해 설명합니다.|  
-|[SQL Server 보안 개요](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|SQL Server 보안 아키텍처에 대해 설명합니다.|  
+|<span data-ttu-id="6583a-115">리소스</span><span class="sxs-lookup"><span data-stu-id="6583a-115">Resource</span></span>|<span data-ttu-id="6583a-116">설명</span><span class="sxs-lookup"><span data-stu-id="6583a-116">Description</span></span>|  
+|--------------|-----------------|  
+|[<span data-ttu-id="6583a-117">연결 정보 보호</span><span class="sxs-lookup"><span data-stu-id="6583a-117">Protecting Connection Information</span></span>](../../../../docs/framework/data/adonet/protecting-connection-information.md)|<span data-ttu-id="6583a-118">보호되는 구성을 사용하여 연결 문자열을 암호화하는 것과 같이 연결 정보를 보호하는 기술과 최상의 보안 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-118">Describes security best practices and techniques for protecting connection information, such as using protected configuration to encrypt connection strings.</span></span>|  
+|[<span data-ttu-id="6583a-119">데이터 액세스 전략에 대 한 권장 사항</span><span class="sxs-lookup"><span data-stu-id="6583a-119">Recommendations for Data Access Strategies</span></span>](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)|<span data-ttu-id="6583a-120">데이터 액세스 및 데이터베이스 작업 수행에 대한 권장 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-120">Provides recommendations for accessing data and performing database operations.</span></span>|  
+|[<span data-ttu-id="6583a-121">연결 문자열 작성기</span><span class="sxs-lookup"><span data-stu-id="6583a-121">Connection String Builders</span></span>](../../../../docs/framework/data/adonet/connection-string-builders.md)|<span data-ttu-id="6583a-122">런타임에 사용자 입력을 기반으로 연결 문자열을 만드는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-122">Describes how to build connection strings from user input at run time.</span></span>|  
+|[<span data-ttu-id="6583a-123">SQL Server 보안 개요</span><span class="sxs-lookup"><span data-stu-id="6583a-123">Overview of SQL Server Security</span></span>](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|<span data-ttu-id="6583a-124">SQL Server 보안 아키텍처에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-124">Describes the SQL Server security architecture.</span></span>|  
   
-## 매개 변수화된 명령 및 SQL 삽입  
- 매개 변수화된 명령을 사용하면 공격자가 SQL 문에 명령을 삽입하여 서버의 보안을 손상시키는 SQL 삽입 공격을 막을 수 있습니다.  매개 변수화된 명령에서는 외부 소스에서 가져온 값이 Transact\-SQL 문의 일부가 아닌 값으로만 전달되도록 하여 SQL 삽입 공격으로부터 보호합니다.  따라서 값에 삽입된 Transact\-SQL 명령이 데이터 소스에서 실행되지 않으며  매개 변수 값으로만 평가됩니다.  매개 변수화된 명령은 이러한 보안상의 장점뿐만 아니라 Transact\-SQL 문과 함께 전달되거나 저장 프로시저에 전달되는 값을 구성할 수 있는 편리한 방법을 제공합니다.  
+## <a name="parameterized-commands-and-sql-injection"></a><span data-ttu-id="6583a-125">매개 변수화된 명령 및 SQL 삽입</span><span class="sxs-lookup"><span data-stu-id="6583a-125">Parameterized Commands and SQL Injection</span></span>  
+ <span data-ttu-id="6583a-126">매개 변수화된 명령을 사용하면 공격자가 SQL 문에 명령을 삽입하여 서버의 보안을 손상시키는 SQL 삽입 공격을 막을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-126">Using parameterized commands helps guard against SQL injection attacks, in which an attacker "injects" a command into a SQL statement that compromises security on the server.</span></span> <span data-ttu-id="6583a-127">매개 변수화된 명령에서는 외부 소스에서 가져온 값이 Transact-SQL 문의 일부가 아닌 값으로만 전달되도록 하여 SQL 삽입 공격으로부터 보호합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-127">Parameterized commands guard against a SQL injection attack by ensuring that values received from an external source are passed as values only, and not part of the Transact-SQL statement.</span></span> <span data-ttu-id="6583a-128">따라서 값에 삽입된 Transact-SQL 명령이 데이터 소스에서 실행되지 않으며</span><span class="sxs-lookup"><span data-stu-id="6583a-128">As a result, Transact-SQL commands inserted into a value are not executed at the data source.</span></span> <span data-ttu-id="6583a-129">매개 변수 값으로만 평가됩니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-129">Rather, they are evaluated solely as a parameter value.</span></span> <span data-ttu-id="6583a-130">매개 변수화된 명령은 이러한 보안상의 장점뿐만 아니라 Transact-SQL 문과 함께 전달되거나 저장 프로시저에 전달되는 값을 구성할 수 있는 편리한 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-130">In addition to the security benefits, parameterized commands provide a convenient method for organizing values passed with a Transact-SQL statement or to a stored procedure.</span></span>  
   
- 매개 변수화된 명령 사용에 대한 자세한 내용은 다음 리소스를 참조하세요.  
+ <span data-ttu-id="6583a-131">매개 변수화된 명령 사용에 대한 자세한 내용은 다음 리소스를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="6583a-131">For more information on using parameterized commands, see the following resources.</span></span>  
   
-|리소스|설명|  
-|---------|--------|  
-|[DataAdapter 매개 변수](../../../../docs/framework/data/adonet/dataadapter-parameters.md)|`DataAdapter`와 함께 매개 변수를 사용하는 방법에 대해 설명합니다.|  
-|[저장 프로시저로 데이터 수정](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)|매개 변수를 지정하고 반환 값을 가져오는 방법에 대해 설명합니다.|  
-|[SQL Server에서 저장 프로시저로 권한 관리](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|SQL Server 저장 프로시저를 사용하여 데이터 액세스를 캡슐화하는 방법에 대해 설명합니다.|  
+|<span data-ttu-id="6583a-132">리소스</span><span class="sxs-lookup"><span data-stu-id="6583a-132">Resource</span></span>|<span data-ttu-id="6583a-133">설명</span><span class="sxs-lookup"><span data-stu-id="6583a-133">Description</span></span>|  
+|--------------|-----------------|  
+|[<span data-ttu-id="6583a-134">DataAdapter 매개 변수</span><span class="sxs-lookup"><span data-stu-id="6583a-134">DataAdapter Parameters</span></span>](../../../../docs/framework/data/adonet/dataadapter-parameters.md)|<span data-ttu-id="6583a-135">`DataAdapter`와 함께 매개 변수를 사용하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-135">Describes how to use parameters with a `DataAdapter`.</span></span>|  
+|[<span data-ttu-id="6583a-136">저장된 프로시저를 사용 하 여 데이터 수정</span><span class="sxs-lookup"><span data-stu-id="6583a-136">Modifying Data with Stored Procedures</span></span>](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)|<span data-ttu-id="6583a-137">매개 변수를 지정하고 반환 값을 가져오는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-137">Describes how to specify parameters and obtain a return value.</span></span>|  
+|[<span data-ttu-id="6583a-138">SQL Server에서 저장된 프로시저와 함께 권한 관리</span><span class="sxs-lookup"><span data-stu-id="6583a-138">Managing Permissions with Stored Procedures in SQL Server</span></span>](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|<span data-ttu-id="6583a-139">SQL Server 저장 프로시저를 사용하여 데이터 액세스를 캡슐화하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-139">Describes how to use SQL Server stored procedures to encapsulate data access.</span></span>|  
   
-## 스크립트 악용  
- 스크립트 악용은 웹 페이지에 삽입된 악의적 문자를 사용하는 또 다른 형태의 삽입 공격입니다.  브라우저에서는 삽입된 문자의 유효성을 검사하지 않고 문자를 페이지의 일부로 처리합니다.  
+## <a name="script-exploits"></a><span data-ttu-id="6583a-140">스크립트 악용</span><span class="sxs-lookup"><span data-stu-id="6583a-140">Script Exploits</span></span>  
+ <span data-ttu-id="6583a-141">스크립트 악용은 웹 페이지에 삽입된 악의적 문자를 사용하는 또 다른 형태의 삽입 공격입니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-141">A script exploit is another form of injection that uses malicious characters inserted into a Web page.</span></span> <span data-ttu-id="6583a-142">브라우저에서는 삽입된 문자의 유효성을 검사하지 않고 문자를 페이지의 일부로 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-142">The browser does not validate the inserted characters and will process them as part of the page.</span></span>  
   
- 자세한 내용은 다음 리소스를 참조하세요.  
+ <span data-ttu-id="6583a-143">자세한 내용은 다음 리소스를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="6583a-143">For more information, see the following resources.</span></span>  
   
-|리소스|설명|  
-|---------|--------|  
-|[Script Exploits Overview](../Topic/Script%20Exploits%20Overview.md)|스크립팅 및 SQL 문 악용으로부터 보호하는 방법에 대해 설명합니다.|  
+|<span data-ttu-id="6583a-144">리소스</span><span class="sxs-lookup"><span data-stu-id="6583a-144">Resource</span></span>|<span data-ttu-id="6583a-145">설명</span><span class="sxs-lookup"><span data-stu-id="6583a-145">Description</span></span>|  
+|--------------|-----------------|  
+|[<span data-ttu-id="6583a-146">스크립트 악용 개요</span><span class="sxs-lookup"><span data-stu-id="6583a-146">Script Exploits Overview</span></span>](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)|<span data-ttu-id="6583a-147">스크립팅 및 SQL 문 악용으로부터 보호하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-147">Describes how to guard against scripting and SQL statement exploits.</span></span>|  
   
-## 검색 공격  
- 공격자는 흔히 예외에서 얻은 서버, 데이터베이스, 테이블 이름 등의 정보를 사용하여 시스템에 대한 공격을 준비합니다.  예외에는 응용 프로그램이나 데이터 소스에 대한 특정 정보가 포함될 수 있으므로 클라이언트에 꼭 필요한 정보만 노출함으로써 응용 프로그램 및 데이터 소스를 보다 안전하게 보호할 수 있습니다.  
+## <a name="probing-attacks"></a><span data-ttu-id="6583a-148">검색 공격</span><span class="sxs-lookup"><span data-stu-id="6583a-148">Probing Attacks</span></span>  
+ <span data-ttu-id="6583a-149">공격자는 흔히 예외에서 얻은 서버, 데이터베이스, 테이블 이름 등의 정보를 사용하여 시스템에 대한 공격을 준비합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-149">Attackers often use information from an exception, such as the name of your server, database, or table, to mount an attack on your system.</span></span> <span data-ttu-id="6583a-150">예외에는 응용 프로그램이나 데이터 소스에 대한 특정 정보가 포함될 수 있으므로 클라이언트에 꼭 필요한 정보만 노출함으로써 응용 프로그램 및 데이터 소스를 보다 안전하게 보호할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-150">Because exceptions can contain specific information about your application or data source, you can help keep your application and data source better protected by only exposing essential information to the client.</span></span>  
   
- 자세한 내용은 다음 리소스를 참조하세요.  
+ <span data-ttu-id="6583a-151">자세한 내용은 다음 리소스를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="6583a-151">For more information, see the following resources.</span></span>  
   
-|리소스|설명|  
-|---------|--------|  
-|[예외 처리 기본 사항](../../../../docs/standard/exceptions/exception-handling-fundamentals.md)|try\/catch\/finally 구조적 예외 처리의 기본 형태에 대해 설명합니다.|  
-|[최선의 예외 구현 방법](../../../../docs/standard/exceptions/best-practices-for-exceptions.md)|최상의 예외 처리 방법에 대해 설명합니다.|  
+|<span data-ttu-id="6583a-152">리소스</span><span class="sxs-lookup"><span data-stu-id="6583a-152">Resource</span></span>|<span data-ttu-id="6583a-153">설명</span><span class="sxs-lookup"><span data-stu-id="6583a-153">Description</span></span>|  
+|--------------|-----------------|  
+|[<span data-ttu-id="6583a-154">예외 처리 기본 사항</span><span class="sxs-lookup"><span data-stu-id="6583a-154">Exception Handling Fundamentals</span></span>](../../../../docs/standard/exceptions/exception-handling-fundamentals.md)|<span data-ttu-id="6583a-155">try/catch/finally 구조적 예외 처리의 기본 형태에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-155">Describes the basic forms of try/catch/finally structured exception handling.</span></span>|  
+|[<span data-ttu-id="6583a-156">예외에 대한 모범 사례</span><span class="sxs-lookup"><span data-stu-id="6583a-156">Best Practices for Exceptions</span></span>](../../../../docs/standard/exceptions/best-practices-for-exceptions.md)|<span data-ttu-id="6583a-157">최상의 예외 처리 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-157">Describes best practices for handling exceptions.</span></span>|  
   
-## Microsoft Access 및 Excel 데이터 소스 보호  
- 보안 요구 사항이 최소 수준이거나 없는 경우 Microsoft Access와 Microsoft Excel을 ADO.NET 응용 프로그램의 데이터 저장소로 사용할 수 있습니다.  두 프로그램의 보안 기능으로 어느 정도의 저지 효과는 볼 수 있지만 무분별한 사용자의 악의적인 장난을 막는 것 이상의 효과는 기대할 수 없습니다.  Access 및 Excel의 실제 데이터 파일은 파일 시스템에 존재하며 모든 사용자가 액세스할 수 있습니다.  따라서 파일을 복사하거나 변경하기가 쉬워 도난이나 데이터 손실을 야기하는 공격에 취약합니다.  강력한 보안이 필요한 경우에는 파일 시스템에서 실제 데이터 파일을 읽을 수 없는 SQL Server나 다른 서버 기반 데이터베이스를 사용해야 합니다.  
+## <a name="protecting-microsoft-access-and-excel-data-sources"></a><span data-ttu-id="6583a-158">Microsoft Access 및 Excel 데이터 소스 보호</span><span class="sxs-lookup"><span data-stu-id="6583a-158">Protecting Microsoft Access and Excel Data Sources</span></span>  
+ <span data-ttu-id="6583a-159">보안 요구 사항이 최소 수준이거나 없는 경우 Microsoft Access와 Microsoft Excel을 ADO.NET 응용 프로그램의 데이터 저장소로 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-159">Microsoft Access and Microsoft Excel can act as a data store for an ADO.NET application when security requirements are minimal or nonexistent.</span></span> <span data-ttu-id="6583a-160">두 프로그램의 보안 기능으로 어느 정도의 저지 효과는 볼 수 있지만 무분별한 사용자의 악의적인 장난을 막는 것 이상의 효과는 기대할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-160">Their security features are effective for deterrence, but should not be relied upon to do more than discourage meddling by uninformed users.</span></span> <span data-ttu-id="6583a-161">Access 및 Excel의 실제 데이터 파일은 파일 시스템에 존재하며 모든 사용자가 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-161">The physical data files for Access and Excel exist on the file system, and must be accessible to all users.</span></span> <span data-ttu-id="6583a-162">따라서 파일을 복사하거나 변경하기가 쉬워 도난이나 데이터 손실을 야기하는 공격에 취약합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-162">This makes them vulnerable to attacks that could result in theft or data loss since the files can be easily copied or altered.</span></span> <span data-ttu-id="6583a-163">강력한 보안이 필요한 경우에는 파일 시스템에서 실제 데이터 파일을 읽을 수 없는 SQL Server나 다른 서버 기반 데이터베이스를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-163">When robust security is required, use SQL Server or another server-based database where the physical data files are not readable from the file system.</span></span>  
   
- Access 및 Excel 데이터 보호에 대한 자세한 내용은 다음 리소스를 참조하세요.  
+ <span data-ttu-id="6583a-164">Access 및 Excel 데이터 보호에 대한 자세한 내용은 다음 리소스를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="6583a-164">For more information on protecting Access and Excel data, see the following resources.</span></span>  
   
-|리소스|설명|  
-|---------|--------|  
-|[Access 2007에 대한 보안 고려 사항 및 지침](http://go.microsoft.com/fwlink/?LinkId=98354)\(영문\)|파일 암호화, 암호 관리, 새로운 ACCDB 및 ACCDE 형식으로 데이터베이스 변환, 기타 보안 옵션 사용 등 Access 2007의 보안 기술에 대해 설명합니다.|  
-|[사용자 수준 보안\(MDB\)으로 Access 데이터베이스 보호 지원](http://go.microsoft.com/fwlink/?LinkId=47697)|Access 2003에 적용됩니다.  Access 2003의 데이터를 보호할 수 있는 사용자 수준의 보안을 구현하기 위한 지침을 제공합니다.|  
-|[Access 보안의 작업 그룹 정보 파일 역할 이해](http://support.microsoft.com/kb/305542)|Access 2003 보안에서 작업 그룹 정보 파일의 역할 및 관계에 대해 설명합니다.|  
-|[Microsoft Access 버전 2.0 ~ 2000의 Microsoft Access 보안에 대한 FAQ](http://go.microsoft.com/fwlink/?LinkId=47698)\(영문\)|Microsoft Access Security FAQ의 다운로드 버전입니다.|  
-|[보안 및 보호 문제 해결](http://go.microsoft.com/fwlink/?LinkId=47703)|Excel 2003의 일반적인 보안 관련 문제에 대한 해결책을 제공합니다.|  
+|<span data-ttu-id="6583a-165">리소스</span><span class="sxs-lookup"><span data-stu-id="6583a-165">Resource</span></span>|<span data-ttu-id="6583a-166">설명</span><span class="sxs-lookup"><span data-stu-id="6583a-166">Description</span></span>|  
+|--------------|-----------------|  
+|[<span data-ttu-id="6583a-167">보안 고려 사항 및 Access 2007에 대 한 지침</span><span class="sxs-lookup"><span data-stu-id="6583a-167">Security Considerations and Guidance for Access 2007</span></span>](http://go.microsoft.com/fwlink/?LinkId=98354)|<span data-ttu-id="6583a-168">파일 암호화, 암호 관리, 새로운 ACCDB 및 ACCDE 형식으로 데이터베이스 변환, 기타 보안 옵션 사용 등 Access 2007의 보안 기술에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-168">Describes security techniques for Access 2007 such encrypting files, administering passwords, converting databases to the new ACCDB and ACCDE formats, and using other security options.</span></span>|  
+|[<span data-ttu-id="6583a-169">사용자 수준 보안 (MDB)으로 Access 데이터베이스 보호 지원</span><span class="sxs-lookup"><span data-stu-id="6583a-169">Help Protect an Access database with User-Level Security (MDB)</span></span>](http://go.microsoft.com/fwlink/?LinkId=47697)|<span data-ttu-id="6583a-170">Access 2003에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-170">Applies to Access 2003.</span></span> <span data-ttu-id="6583a-171">Access 2003의 데이터를 보호할 수 있는 사용자 수준의 보안을 구현하기 위한 지침을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-171">Provides instructions for implementing user-level security to protect data in Access 2003.</span></span>|  
+|[<span data-ttu-id="6583a-172">액세스 보안의 작업 그룹 정보 파일의 역할 이해</span><span class="sxs-lookup"><span data-stu-id="6583a-172">Understanding the Role of Workgroup Information Files in Access Security</span></span>](http://support.microsoft.com/kb/305542)|<span data-ttu-id="6583a-173">Access 2003 보안에서 작업 그룹 정보 파일의 역할 및 관계에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-173">Explains the role and relationship of the workgroup information file in Access 2003 security.</span></span>|  
+|[<span data-ttu-id="6583a-174">자주 묻는 질문에 대 한 Microsoft Access 보안에 Microsoft Access 버전 2.0 ~ 2000</span><span class="sxs-lookup"><span data-stu-id="6583a-174">Frequently Asked Questions About Microsoft Access Security for Microsoft Access versions 2.0 through 2000</span></span>](http://go.microsoft.com/fwlink/?LinkId=47698)|<span data-ttu-id="6583a-175">Microsoft Access Security FAQ의 다운로드 버전입니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-175">Downloadable version of the Microsoft Access Security FAQ.</span></span>|  
+|[<span data-ttu-id="6583a-176">보안 및 보호 문제 해결</span><span class="sxs-lookup"><span data-stu-id="6583a-176">Troubleshoot Security and Protection</span></span>](http://go.microsoft.com/fwlink/?LinkId=47703)|<span data-ttu-id="6583a-177">Excel 2003의 일반적인 보안 관련 문제에 대한 해결책을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-177">Presents solutions to common problems with security in Excel 2003.</span></span>|  
   
-## 엔터프라이즈 서비스  
- COM\+에는 Windows NT 계정 및 프로세스\/스레드 가장을 사용하는 고유의 보안 모델이 포함되어 있습니다.  <xref:System.EnterpriseServices> 네임스페이스에서는 <xref:System.EnterpriseServices.ServicedComponent> 클래스를 통해 .NET 응용 프로그램에서 관리 코드를 COM\+ 보안 서비스와 통합할 수 있도록 하는 래퍼를 제공합니다.  
+## <a name="enterprise-services"></a><span data-ttu-id="6583a-178">엔터프라이즈 서비스</span><span class="sxs-lookup"><span data-stu-id="6583a-178">Enterprise Services</span></span>  
+ <span data-ttu-id="6583a-179">COM+에는 Windows NT 계정 및 프로세스/스레드 가장을 사용하는 고유의 보안 모델이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-179">COM+ contains its own security model that relies on Windows NT accounts and process/thread impersonation.</span></span> <span data-ttu-id="6583a-180"><xref:System.EnterpriseServices> 네임스페이스에서는 <xref:System.EnterpriseServices.ServicedComponent> 클래스를 통해 .NET 응용 프로그램에서 관리 코드를 COM+ 보안 서비스와 통합할 수 있도록 하는 래퍼를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-180">The <xref:System.EnterpriseServices> namespace provides wrappers that allow .NET applications to integrate managed code with COM+ security services through the <xref:System.EnterpriseServices.ServicedComponent> class.</span></span>  
   
- 자세한 내용은 다음 리소스를 참조하세요.  
+ <span data-ttu-id="6583a-181">자세한 내용은 다음 리소스를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="6583a-181">For more information, see the following resource.</span></span>  
   
-|리소스|설명|  
-|---------|--------|  
-|[COM\+ Role\-Based Security and the .NET Framework](http://msdn.microsoft.com/ko-kr/02ab22ef-e5e2-4d29-b33a-6e03d94c4981)|COM\+ 보안 서비스를 사용하여 관리 코드를 통합하는 방법에 대해 설명합니다.|  
+|<span data-ttu-id="6583a-182">리소스</span><span class="sxs-lookup"><span data-stu-id="6583a-182">Resource</span></span>|<span data-ttu-id="6583a-183">설명</span><span class="sxs-lookup"><span data-stu-id="6583a-183">Description</span></span>|  
+|--------------|-----------------|  
+|[<span data-ttu-id="6583a-184">COM + 역할 기반 보안 및.NET Framework</span><span class="sxs-lookup"><span data-stu-id="6583a-184">COM+ Role-Based Security and the .NET Framework</span></span>](http://msdn.microsoft.com/en-us/02ab22ef-e5e2-4d29-b33a-6e03d94c4981)|<span data-ttu-id="6583a-185">COM+ 보안 서비스를 사용하여 관리 코드를 통합하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-185">Discusses how to integrate managed code with COM+ security services.</span></span>|  
   
-## 비관리 코드와의 상호 운용  
- .NET Framework는 비관리 코드와의 상호 작용을 위해 COM 구성 요소, COM\+ 서비스, 외부 형식 라이브러리, 다양한 운영 체제 서비스 등을 제공합니다.  비관리 코드를 사용하려면 관리 코드에 대한 보안 경계 외부로 나가야 합니다.  코드와 코드를 호출하는 다른 코드 모두에 비관리 코드 권한\(<xref:System.Security.Permissions.SecurityPermissionFlag> 플래그가 지정된 <xref:System.Security.Permissions.SecurityPermission>\)이 있어야 합니다.  비관리 코드로 인해 응용 프로그램에 의도하지 않았던 보안상 취약한 부분이 생길 수 있습니다.  따라서 꼭 필요한 경우가 아니면 비관리 코드와의 상호 운용 작업은 피하는 것이 좋습니다.  
+## <a name="interoperating-with-unmanaged-code"></a><span data-ttu-id="6583a-186">비관리 코드와의 상호 운용</span><span class="sxs-lookup"><span data-stu-id="6583a-186">Interoperating with Unmanaged Code</span></span>  
+ <span data-ttu-id="6583a-187">.NET Framework는 비관리 코드와의 상호 작용을 위해 COM 구성 요소, COM+ 서비스, 외부 형식 라이브러리, 다양한 운영 체제 서비스 등을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-187">The .NET Framework provides for interaction with unmanaged code, including COM components, COM+ services, external type libraries, and many operating system services.</span></span> <span data-ttu-id="6583a-188">비관리 코드를 사용하려면 관리 코드에 대한 보안 경계 외부로 나가야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-188">Working with unmanaged code involves going outside the security perimeter for managed code.</span></span> <span data-ttu-id="6583a-189">코드와 코드를 호출하는 다른 코드 모두에 비관리 코드 권한(<xref:System.Security.Permissions.SecurityPermission> 플래그가 지정된 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>)이 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-189">Both your code and any code that calls it must have unmanaged code permission (<xref:System.Security.Permissions.SecurityPermission> with the <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> flag specified).</span></span> <span data-ttu-id="6583a-190">비관리 코드로 인해 응용 프로그램에 의도하지 않았던 보안상 취약한 부분이 생길 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-190">Unmanaged code can introduce unintended security vulnerabilities into your application.</span></span> <span data-ttu-id="6583a-191">따라서 꼭 필요한 경우가 아니면 비관리 코드와의 상호 운용 작업은 피하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-191">Therefore, you should avoid interoperating with unmanaged code unless it is absolutely necessary.</span></span>  
   
- 자세한 내용은 다음 리소스를 참조하세요.  
+ <span data-ttu-id="6583a-192">자세한 내용은 다음 리소스를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="6583a-192">For more information, see the following resources.</span></span>  
   
-|리소스|설명|  
-|---------|--------|  
-|[비관리 코드와의 상호 운용](../../../../docs/framework/interop/index.md)|COM 구성 요소를 .NET Framework에 노출하는 방법과 .NET Framework 구성 요소를 COM에 노출하는 방법에 대해 설명하는 항목을 제공합니다.|  
-|[Advanced COM Interoperability](http://msdn.microsoft.com/ko-kr/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|주 interop 어셈블리, 스레딩 및 사용자 지정 마샬링 등에 대해 설명하는 고급 항목을 제공합니다.|  
+|<span data-ttu-id="6583a-193">리소스</span><span class="sxs-lookup"><span data-stu-id="6583a-193">Resource</span></span>|<span data-ttu-id="6583a-194">설명</span><span class="sxs-lookup"><span data-stu-id="6583a-194">Description</span></span>|  
+|--------------|-----------------|  
+|[<span data-ttu-id="6583a-195">비관리 코드와의 상호 운용</span><span class="sxs-lookup"><span data-stu-id="6583a-195">Interoperating with Unmanaged Code</span></span>](../../../../docs/framework/interop/index.md)|<span data-ttu-id="6583a-196">COM 구성 요소를 .NET Framework에 노출하는 방법과 .NET Framework 구성 요소를 COM에 노출하는 방법에 대해 설명하는 항목을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-196">Contains topics describing how to expose COM components to the .NET Framework and how to expose .NET Framework components to COM.</span></span>|  
+|[<span data-ttu-id="6583a-197">고급 COM 상호 운용성</span><span class="sxs-lookup"><span data-stu-id="6583a-197">Advanced COM Interoperability</span></span>](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|<span data-ttu-id="6583a-198">주 interop 어셈블리, 스레딩 및 사용자 지정 마샬링 등에 대해 설명하는 고급 항목을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="6583a-198">Contains advanced topics such as primary interop assemblies, threading and custom marshaling.</span></span>|  
   
-## 참고 항목  
- [ADO.NET 응용 프로그램 보안](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [SQL Server 보안](../../../../docs/framework/data/adonet/sql/sql-server-security.md)   
- [Recommendations for Data Access Strategies](http://msdn.microsoft.com/ko-kr/72411f32-d12a-4de8-b961-e54fca7faaf5)   
- [연결 정보 보호](../../../../docs/framework/data/adonet/protecting-connection-information.md)   
- [연결 문자열 작성기](../../../../docs/framework/data/adonet/connection-string-builders.md)   
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="6583a-199">참고 항목</span><span class="sxs-lookup"><span data-stu-id="6583a-199">See Also</span></span>  
+ [<span data-ttu-id="6583a-200">ADO.NET 응용 프로그램 보안</span><span class="sxs-lookup"><span data-stu-id="6583a-200">Securing ADO.NET Applications</span></span>](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [<span data-ttu-id="6583a-201">SQL Server 보안</span><span class="sxs-lookup"><span data-stu-id="6583a-201">SQL Server Security</span></span>](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
+ [<span data-ttu-id="6583a-202">데이터 액세스 전략에 대 한 권장 사항</span><span class="sxs-lookup"><span data-stu-id="6583a-202">Recommendations for Data Access Strategies</span></span>](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)  
+ [<span data-ttu-id="6583a-203">연결 정보 보호</span><span class="sxs-lookup"><span data-stu-id="6583a-203">Protecting Connection Information</span></span>](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
+ [<span data-ttu-id="6583a-204">연결 문자열 작성기</span><span class="sxs-lookup"><span data-stu-id="6583a-204">Connection String Builders</span></span>](../../../../docs/framework/data/adonet/connection-string-builders.md)  
+ [<span data-ttu-id="6583a-205">ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터</span><span class="sxs-lookup"><span data-stu-id="6583a-205">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

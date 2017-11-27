@@ -1,47 +1,48 @@
 ---
-title: "공통 데이터 유형(관리되지 않는 API 참조) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: "공통 데이터 유형(관리되지 않는 API 참조)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
-caps.latest.revision: 4
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 03350825b3de4515a0d30e8644f34df71efa25db
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 공통 데이터 유형(관리되지 않는 API 참조)
-이 항목에서는 C\/C\+\+ `typedef` 문에 의해 정의되는 .NET Framework용 관리되지 않는 API에서 사용하는 단순 데이터 형식을 소개합니다. 이러한 데이터 형식은 보통 C\/C\+\+ 원시 데이터 형식의 별칭입니다. 일반적으로 이러한 데이터 형식의 값은 불투명합니다. 즉, 이러한 값은 수정하지 않고도 다른 함수나 메서드로 전달할 수 있도록 특정 함수나 메서드에서 반환됩니다.  
+# <a name="common-data-types-unmanaged-api-reference"></a><span data-ttu-id="4307f-102">공통 데이터 유형(관리되지 않는 API 참조)</span><span class="sxs-lookup"><span data-stu-id="4307f-102">Common Data Types (Unmanaged API Reference)</span></span>
+<span data-ttu-id="4307f-103">이 항목에서는 C/C++ `typedef` 문에 의해 정의되는 .NET Framework용 관리되지 않는 API에서 사용하는 단순 데이터 형식을 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="4307f-103">This topic lists simple data types used by the unmanaged APIs for the .NET Framework that are defined by C/C++ `typedef` statements.</span></span> <span data-ttu-id="4307f-104">이러한 데이터 형식은 보통 C/C++ 원시 데이터 형식의 별칭입니다.</span><span class="sxs-lookup"><span data-stu-id="4307f-104">These data types are typically aliases for C/C++ primitive data types.</span></span> <span data-ttu-id="4307f-105">일반적으로 이러한 데이터 형식의 값은 불투명합니다. 즉, 이러한 값은 수정하지 않고도 다른 함수나 메서드로 전달할 수 있도록 특정 함수나 메서드에서 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="4307f-105">Typically, the values of these data types are opaque; that is, they are returned by a particular function or method so that they can be passed to other functions or methods without modification.</span></span>  
   
-|데이터 형식|정의|정의 위치|설명|  
-|------------|--------|-----------|--------|  
-|AppDomainID|`typedef UINT_PTR AppDomainID;`|corprof.h|응용 프로그램 도메인의 식별자입니다.|  
-|AssemblyID|`typedef UINT_PTR AssemblyID;`|corprof.h|어셈블리의 식별자입니다.|  
-|ClassID|`typedef UINT_PTR ClassID;`|corprof.h|관리되는 클래스의 식별자입니다.|  
-|CONNID|`typedef DWORD CONNID;`|cordebug.h, mscoree.h|Microsoft SQL Server 인스턴스에 연결되는 스레드의 연결 식별자입니다.|  
-|ContextID|`typedef UINT_PTR ContextID;`|corprof.h|특정 관리되는 스레드와 연결된 컨텍스트의 식별자입니다.|  
-|COR\_PRF\_ELT\_INFO|`typedef UINT_PTR COR_PRF_ELT_INFO;`|corprof.h|특정 스택 프레임에 대한 정보를 나타내는 불투명 핸들입니다.|  
-|COR\_PRF\_FRAME\_INFO|`typedef UINT_PTR COR_PRF_FRAME_INFO;`|corprof.h|스택 프레임을 가리키는 불투명 핸들로, 전달된 콜백 중에만 유효합니다.|  
-|CORDB\_ADDRESS|`typedef ULONG64 CORDB_ADDRESS;`|cordebug.h|메모리의 주소입니다.|  
-|CORDB\_CONTINUE\_STATUS|`typedef DWORD CORDB_CONTINUE_STATUS;`|cordebug.h|연속 상태입니다.|  
-|CORDB\_REGISTER|`typedef ULONG64 CORDB_REGISTER;`|cordebug.h|CPU 레지스터의 값입니다.|  
-|FunctionID|`typedef UINT_PTR FunctionID;`|corprof.h|함수 또는 메서드의 식별자입니다.|  
-|GCHandleID|`typedef UINT_PTR GCHandleID;`|corprof.h|가비지 수집 핸들입니다.|  
-|mdToken|`typedef UINT32 mdToken;`|corprof.h|메타데이터 토큰입니다\(메타데이터 테이블의 행\).|  
-|ModuleID|`typedef UINT_PTR ModuleID;`|corprof.h|어셈블리 모듈의 식별자입니다.|  
-|ObjectID|`typedef UINT_PTR ObjectID;`|corprof.h|개체의 식별자입니다.|  
-|ProcessID|`typedef UINT_PTR ProcessID;`|corprof.h|관리되는 프로세스의 식별자입니다.|  
-|ReJITID|`typedef UINT_PTR ReJITID;`|corprof.h|JIT된 함수의 식별자입니다.|  
-|TASKID|`typedef UINT64 TASKID;`|cordebug.h, mscoree.h|[ICLRTask](../../../ocs/framework/unmanaged-api/hosting/iclrtask-interface.md) 인스턴스의 식별자입니다.|  
-|ThreadID|`typedef UINT_PTR ThreadID;`|corprof.h|관리되는 스레드의 식별자입니다.|  
+|<span data-ttu-id="4307f-106">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="4307f-106">Data type</span></span>|<span data-ttu-id="4307f-107">정의</span><span class="sxs-lookup"><span data-stu-id="4307f-107">Definition</span></span>|<span data-ttu-id="4307f-108">정의 위치</span><span class="sxs-lookup"><span data-stu-id="4307f-108">Defined in</span></span>|<span data-ttu-id="4307f-109">설명</span><span class="sxs-lookup"><span data-stu-id="4307f-109">Description</span></span>|  
+|---------------|----------------|----------------|-----------------|  
+|<span data-ttu-id="4307f-110">AppDomainID</span><span class="sxs-lookup"><span data-stu-id="4307f-110">AppDomainID</span></span>|`typedef UINT_PTR AppDomainID;`|<span data-ttu-id="4307f-111">corprof.h</span><span class="sxs-lookup"><span data-stu-id="4307f-111">corprof.h</span></span>|<span data-ttu-id="4307f-112">응용 프로그램 도메인의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="4307f-112">The identifier of an application domain.</span></span>|  
+|<span data-ttu-id="4307f-113">AssemblyID</span><span class="sxs-lookup"><span data-stu-id="4307f-113">AssemblyID</span></span>|`typedef UINT_PTR AssemblyID;`|<span data-ttu-id="4307f-114">corprof.h</span><span class="sxs-lookup"><span data-stu-id="4307f-114">corprof.h</span></span>|<span data-ttu-id="4307f-115">어셈블리의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="4307f-115">The identifier of an assembly.</span></span>|  
+|<span data-ttu-id="4307f-116">ClassID</span><span class="sxs-lookup"><span data-stu-id="4307f-116">ClassID</span></span>|`typedef UINT_PTR ClassID;`|<span data-ttu-id="4307f-117">corprof.h</span><span class="sxs-lookup"><span data-stu-id="4307f-117">corprof.h</span></span>|<span data-ttu-id="4307f-118">관리되는 클래스의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="4307f-118">The identifier of a managed class.</span></span>|  
+|<span data-ttu-id="4307f-119">CONNID</span><span class="sxs-lookup"><span data-stu-id="4307f-119">CONNID</span></span>|`typedef DWORD CONNID;`|<span data-ttu-id="4307f-120">cordebug.h, mscoree.h</span><span class="sxs-lookup"><span data-stu-id="4307f-120">cordebug.h, mscoree.h</span></span>|<span data-ttu-id="4307f-121">Microsoft SQL Server 인스턴스에 연결되는 스레드의 연결 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="4307f-121">The connection identifier for a thread that is connected to an instance of Microsoft SQL Server.</span></span>|  
+|<span data-ttu-id="4307f-122">ContextID</span><span class="sxs-lookup"><span data-stu-id="4307f-122">ContextID</span></span>|`typedef UINT_PTR ContextID;`|<span data-ttu-id="4307f-123">corprof.h</span><span class="sxs-lookup"><span data-stu-id="4307f-123">corprof.h</span></span>|<span data-ttu-id="4307f-124">특정 관리되는 스레드와 연결된 컨텍스트의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="4307f-124">The identifier of the context associated with a particular managed thread.</span></span>|  
+|<span data-ttu-id="4307f-125">COR_PRF_ELT_INFO</span><span class="sxs-lookup"><span data-stu-id="4307f-125">COR_PRF_ELT_INFO</span></span>|`typedef UINT_PTR COR_PRF_ELT_INFO;`|<span data-ttu-id="4307f-126">corprof.h</span><span class="sxs-lookup"><span data-stu-id="4307f-126">corprof.h</span></span>|<span data-ttu-id="4307f-127">특정 스택 프레임에 대한 정보를 나타내는 불투명 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="4307f-127">An opaque handle that represents information about a particular stack frame.</span></span>|  
+|<span data-ttu-id="4307f-128">COR_PRF_FRAME_INFO</span><span class="sxs-lookup"><span data-stu-id="4307f-128">COR_PRF_FRAME_INFO</span></span>|`typedef UINT_PTR COR_PRF_FRAME_INFO;`|<span data-ttu-id="4307f-129">corprof.h</span><span class="sxs-lookup"><span data-stu-id="4307f-129">corprof.h</span></span>|<span data-ttu-id="4307f-130">스택 프레임을 가리키는 불투명 핸들로,</span><span class="sxs-lookup"><span data-stu-id="4307f-130">An opaque handle that points to a stack frame.</span></span> <span data-ttu-id="4307f-131">전달된 콜백 중에만 유효합니다.</span><span class="sxs-lookup"><span data-stu-id="4307f-131">It is valid only during the callback to which it is passed.</span></span>|  
+|<span data-ttu-id="4307f-132">CORDB_ADDRESS</span><span class="sxs-lookup"><span data-stu-id="4307f-132">CORDB_ADDRESS</span></span>|`typedef ULONG64 CORDB_ADDRESS;`|<span data-ttu-id="4307f-133">cordebug.h</span><span class="sxs-lookup"><span data-stu-id="4307f-133">cordebug.h</span></span>|<span data-ttu-id="4307f-134">메모리의 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="4307f-134">An address in memory.</span></span>|  
+|<span data-ttu-id="4307f-135">CORDB_CONTINUE_STATUS</span><span class="sxs-lookup"><span data-stu-id="4307f-135">CORDB_CONTINUE_STATUS</span></span>|`typedef DWORD CORDB_CONTINUE_STATUS;`|<span data-ttu-id="4307f-136">cordebug.h</span><span class="sxs-lookup"><span data-stu-id="4307f-136">cordebug.h</span></span>|<span data-ttu-id="4307f-137">연속 상태입니다.</span><span class="sxs-lookup"><span data-stu-id="4307f-137">The continuation status.</span></span>|  
+|<span data-ttu-id="4307f-138">CORDB_REGISTER</span><span class="sxs-lookup"><span data-stu-id="4307f-138">CORDB_REGISTER</span></span>|`typedef ULONG64 CORDB_REGISTER;`|<span data-ttu-id="4307f-139">cordebug.h</span><span class="sxs-lookup"><span data-stu-id="4307f-139">cordebug.h</span></span>|<span data-ttu-id="4307f-140">CPU 레지스터의 값입니다.</span><span class="sxs-lookup"><span data-stu-id="4307f-140">The value of a CPU register.</span></span>|  
+|<span data-ttu-id="4307f-141">FunctionID</span><span class="sxs-lookup"><span data-stu-id="4307f-141">FunctionID</span></span>|`typedef UINT_PTR FunctionID;`|<span data-ttu-id="4307f-142">corprof.h</span><span class="sxs-lookup"><span data-stu-id="4307f-142">corprof.h</span></span>|<span data-ttu-id="4307f-143">함수 또는 메서드의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="4307f-143">The identifier of a function or method.</span></span>|  
+|<span data-ttu-id="4307f-144">GCHandleID</span><span class="sxs-lookup"><span data-stu-id="4307f-144">GCHandleID</span></span>|`typedef UINT_PTR GCHandleID;`|<span data-ttu-id="4307f-145">corprof.h</span><span class="sxs-lookup"><span data-stu-id="4307f-145">corprof.h</span></span>|<span data-ttu-id="4307f-146">가비지 수집 핸들입니다.</span><span class="sxs-lookup"><span data-stu-id="4307f-146">A garbage collection handle.</span></span>|  
+|<span data-ttu-id="4307f-147">mdToken</span><span class="sxs-lookup"><span data-stu-id="4307f-147">mdToken</span></span>|`typedef UINT32 mdToken;`|<span data-ttu-id="4307f-148">corprof.h</span><span class="sxs-lookup"><span data-stu-id="4307f-148">corprof.h</span></span>|<span data-ttu-id="4307f-149">메타데이터 토큰입니다(메타데이터 테이블의 행).</span><span class="sxs-lookup"><span data-stu-id="4307f-149">A   metadata token (a row in a metadata table).</span></span>|  
+|<span data-ttu-id="4307f-150">ModuleID</span><span class="sxs-lookup"><span data-stu-id="4307f-150">ModuleID</span></span>|`typedef UINT_PTR ModuleID;`|<span data-ttu-id="4307f-151">corprof.h</span><span class="sxs-lookup"><span data-stu-id="4307f-151">corprof.h</span></span>|<span data-ttu-id="4307f-152">어셈블리 모듈의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="4307f-152">The identifier of an assembly module.</span></span>|  
+|<span data-ttu-id="4307f-153">ObjectID</span><span class="sxs-lookup"><span data-stu-id="4307f-153">ObjectID</span></span>|`typedef UINT_PTR ObjectID;`|<span data-ttu-id="4307f-154">corprof.h</span><span class="sxs-lookup"><span data-stu-id="4307f-154">corprof.h</span></span>|<span data-ttu-id="4307f-155">개체의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="4307f-155">The identifier of an object.</span></span>|  
+|<span data-ttu-id="4307f-156">ProcessID</span><span class="sxs-lookup"><span data-stu-id="4307f-156">ProcessID</span></span>|`typedef UINT_PTR ProcessID;`|<span data-ttu-id="4307f-157">corprof.h</span><span class="sxs-lookup"><span data-stu-id="4307f-157">corprof.h</span></span>|<span data-ttu-id="4307f-158">관리되는 프로세스의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="4307f-158">The identifier of a managed process.</span></span>|  
+|<span data-ttu-id="4307f-159">ReJITID</span><span class="sxs-lookup"><span data-stu-id="4307f-159">ReJITID</span></span>|`typedef UINT_PTR ReJITID;`|<span data-ttu-id="4307f-160">corprof.h</span><span class="sxs-lookup"><span data-stu-id="4307f-160">corprof.h</span></span>|<span data-ttu-id="4307f-161">JIT된 함수의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="4307f-161">The identifier of a jitted function.</span></span>|  
+|<span data-ttu-id="4307f-162">TASKID</span><span class="sxs-lookup"><span data-stu-id="4307f-162">TASKID</span></span>|`typedef UINT64 TASKID;`|<span data-ttu-id="4307f-163">cordebug.h, mscoree.h</span><span class="sxs-lookup"><span data-stu-id="4307f-163">cordebug.h, mscoree.h</span></span>|<span data-ttu-id="4307f-164">식별자는 [ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="4307f-164">The identifier of an [ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instance.</span></span>|  
+|<span data-ttu-id="4307f-165">ThreadID</span><span class="sxs-lookup"><span data-stu-id="4307f-165">ThreadID</span></span>|`typedef UINT_PTR ThreadID;`|<span data-ttu-id="4307f-166">corprof.h</span><span class="sxs-lookup"><span data-stu-id="4307f-166">corprof.h</span></span>|<span data-ttu-id="4307f-167">관리되는 스레드의 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="4307f-167">The identifier of a managed thread.</span></span>|  
   
-## 참고 항목  
- [관리되지 않는 API 참조](../../../docs/framework/unmanaged-api/index.md)
+## <a name="see-also"></a><span data-ttu-id="4307f-168">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4307f-168">See Also</span></span>  
+ [<span data-ttu-id="4307f-169">관리되지 않는 API 참조</span><span class="sxs-lookup"><span data-stu-id="4307f-169">Unmanaged API Reference</span></span>](../../../docs/framework/unmanaged-api/index.md)
