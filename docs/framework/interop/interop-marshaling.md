@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - marshaling, COM interop
 - interop marshaling
 - interop marshaling, about interop marshaling
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ebe7d3aa48fa77287f20781938a0b9863f60de5f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 381eccc42d5abb85cde618f4710f044f172295d5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="interop-marshaling"></a>Interop 마샬링
 <a name="top"></a> Interop 마샬링은 호출 중 관리되는 메모리와 관리되지 않는 메모리 간에 메서드 인수와 반환 값을 통해 데이터를 전달하는 방법을 제어합니다. Interop 마샬링은 공용 언어 런타임 마샬링 서비스에서 수행하는 런타임 작업입니다.  
@@ -88,7 +81,7 @@ ms.lasthandoff: 08/21/2017
  관리되는 서버를 내보내려는 경우 COM 클라이언트가 서버의 아파트를 결정하는 것에 주의합니다. MTA로 초기화된 COM 클라이언트에서 호출하는 관리되는 서버는 스레드로부터 안전해야 합니다.  
   
 ### <a name="managed-clients-and-com-servers"></a>관리되는 클라이언트 및 COM 서버  
- 관리되는 클라이언트 아파트에 대한 기본 설정은 MTA입니다. 그러나 .NET 클라이언트의 응용 프로그램 형식을 통해 기본 설정을 변경할 수 있습니다. 예를 들어 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 클라이언트 아파트 설정은 STA입니다. <xref:System.STAThreadAttribute?displayProperty=fullName>, <xref:System.MTAThreadAttribute?displayProperty=fullName>, <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=fullName> 속성 또는 <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=fullName> 속성을 사용하여 관리되는 클라이언트의 아파트 설정을 검사하고 변경할 수 있습니다.  
+ 관리되는 클라이언트 아파트에 대한 기본 설정은 MTA입니다. 그러나 .NET 클라이언트의 응용 프로그램 형식을 통해 기본 설정을 변경할 수 있습니다. 예를 들어 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 클라이언트 아파트 설정은 STA입니다. <xref:System.STAThreadAttribute?displayProperty=nameWithType>, <xref:System.MTAThreadAttribute?displayProperty=nameWithType>, <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> 속성 또는 <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> 속성을 사용하여 관리되는 클라이언트의 아파트 설정을 검사하고 변경할 수 있습니다.  
   
  구성 요소의 작성자가 COM 서버의 스레드 선호도를 설정합니다. 다음 표에서는 .NET 클라이언트 및 COM 서버에 대한 아파트 설정의 조합을 보여 줍니다. 또한 조합에 대한 마샬링 요구 사항을 보여 줍니다.  
   
@@ -174,7 +167,6 @@ SOAP 또는 TcpChannel 클래스를 사용하는 방화벽을 통한 원격 호�
   
 <a name="reference"></a>   
 ## <a name="reference"></a>참조  
- <xref:System.Runtime.InteropServices?displayProperty=fullName>  
+ <xref:System.Runtime.InteropServices?displayProperty=nameWithType>  
   
  [맨 위로 이동](#top)
-

@@ -5,15 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - initializing trace listeners
 - trace listeners, creating
@@ -21,19 +18,18 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 38b2240f3f245e01f3aefaec14f5b7510a67ceae
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: d48c8f64a4dbdc7f1254a2cc2f0857f2714d6b2d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-and-initialize-trace-listeners"></a>방법: 추적 수신기 만들기 및 초기화
-<xref:System.Diagnostics.Debug?displayProperty=fullName> 및 <xref:System.Diagnostics.Trace?displayProperty=fullName> 클래스는 메시지를 수신하고 처리하는 수신기라는 개체에 메시지를 보냅니다. 추적이나 디버깅을 사용하면 이러한 수신기 중 하나인 <xref:System.Diagnostics.DefaultTraceListener?displayProperty=fullName>가 자동으로 만들어지고 초기화됩니다. <xref:System.Diagnostics.Trace> 또는 <xref:System.Diagnostics.Debug> 출력을 추가 소스에 보내려면 추가 추적 수신기를 만들고 초기화해야 합니다.  
+<xref:System.Diagnostics.Debug?displayProperty=nameWithType> 및 <xref:System.Diagnostics.Trace?displayProperty=nameWithType> 클래스는 메시지를 수신하고 처리하는 수신기라는 개체에 메시지를 보냅니다. 추적이나 디버깅을 사용하면 이러한 수신기 중 하나인 <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>가 자동으로 만들어지고 초기화됩니다. <xref:System.Diagnostics.Trace> 또는 <xref:System.Diagnostics.Debug> 출력을 추가 소스에 보내려면 추가 추적 수신기를 만들고 초기화해야 합니다.  
   
  수신기를 만들 때는 응용 프로그램에 필요한 내용을 반영해야 합니다. 예를 들어 모든 추적 출력의 텍스트 레코드가 필요하면 사용될 경우 모든 출력을 새 텍스트 파일에 쓰는 <xref:System.Diagnostics.TextWriterTraceListener> 수신기를 만듭니다. 반면에 응용 프로그램 실행 중에만 출력을 보려면 모든 출력을 콘솔 창으로 보내는 <xref:System.Diagnostics.ConsoleTraceListener> 수신기를 만듭니다. <xref:System.Diagnostics.EventLogTraceListener>는 추적 출력을 이벤트 로그에 보낼 수 있습니다. 자세한 내용은 [추적 수신기](../../../docs/framework/debug-trace-profile/trace-listeners.md)를 참조하세요.  
   
@@ -107,8 +103,7 @@ ms.lasthandoff: 08/21/2017
     ```  
   
 ## <a name="see-also"></a>참고 항목  
- [추적 수신기](../../../docs/framework/debug-trace-profile/trace-listeners.md)   
- [추적 스위치](../../../docs/framework/debug-trace-profile/trace-switches.md)   
- [방법: 응용 프로그램 코드에 Trace 문 추가](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)   
+ [추적 수신기](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
+ [추적 스위치](../../../docs/framework/debug-trace-profile/trace-switches.md)  
+ [방법: 응용 프로그램 코드에 Trace 문 추가](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
  [응용 프로그램 추적 및 조율](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-

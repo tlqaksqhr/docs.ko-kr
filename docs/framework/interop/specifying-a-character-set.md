@@ -5,33 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - platform invoke, attribute fields
 - attribute fields in platform invoke, CharSet
 - CharSet field
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a1b0e444ef73deac6f6e353c8e1b67d1cf361ab2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3e97c640472156c1a47ad125bffeaf39b8eb0762
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="specifying-a-character-set"></a>문자 집합 지정
-<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName> 필드는 문자열 마샬링을 제어하고 플랫폼 호출이 DLL에서 함수 이름을 찾는 방법을 결정합니다. 이 항목에서는 두 동작에 대해 모두 설명합니다.  
+<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 필드는 문자열 마샬링을 제어하고 플랫폼 호출이 DLL에서 함수 이름을 찾는 방법을 결정합니다. 이 항목에서는 두 동작에 대해 모두 설명합니다.  
   
  일부 API는 문자열 인수를 사용하는 함수의 두 가지 버전인 narrow(ANSI) 및 wide(Unicode)를 내보냅니다. 예를 들어 Win32 API에는 **MessageBox** 함수에 대한 다음 진입점 이름이 포함됩니다.  
   
@@ -54,7 +51,7 @@ ms.lasthandoff: 08/21/2017
   
 -   이름 일치  
   
-     <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=fullName> 필드가 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]의 기본값인 **true**이면 플랫폼 호출이 지정한 이름만 검색합니다. 예를 들어 **MessageBox**를 지정하는 경우 플랫폼 호출은 **MessageBox**를 검색하고, 정확한 철자를 찾을 수 없으면 실패합니다.  
+     <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType> 필드가 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]의 기본값인 **true**이면 플랫폼 호출이 지정한 이름만 검색합니다. 예를 들어 **MessageBox**를 지정하는 경우 플랫폼 호출은 **MessageBox**를 검색하고, 정확한 철자를 찾을 수 없으면 실패합니다.  
   
      **ExactSpelling** 필드가 C++ 및 C#의 기본값인 **false**이면 플랫폼 호출은 올바른 별칭(**MessageBox**)을 먼저 검색한 다음, 올바른 별칭을 찾을 수 없는 경우 잘못된 이름(**MessageBoxA**)을 검색합니다. ANSI 이름 일치 동작은 유니코드 이름 일치 동작과 다릅니다.  
   
@@ -77,7 +74,7 @@ ms.lasthandoff: 08/21/2017
 ## <a name="specifying-a-character-set-in-visual-basic"></a>Visual Basic에서 문자 집합 지정  
  다음 예제에서는 매번 서로 다른 문자 집합 동작을 사용하여 **MessageBox** 함수를 세 번 선언합니다. **Ansi**, **유니코드** 또는 **자동** 키워드를 선언문에 추가하여 Visual Basic에서 문자 집합 동작을 지정할 수 있습니다.  
   
- 첫 번째 선언문과 같이 문자 집합 키워드를 생략하면 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName> 필드는 기본적으로 ANSI 문자 집합으로 설정됩니다. 예제에서 두 번째 문과 세 번째 문은 키워드를 사용해서 명시적으로 문자 집합을 지정합니다.  
+ 첫 번째 선언문과 같이 문자 집합 키워드를 생략하면 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 필드는 기본적으로 ANSI 문자 집합으로 설정됩니다. 예제에서 두 번째 문과 세 번째 문은 키워드를 사용해서 명시적으로 문자 집합을 지정합니다.  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -98,7 +95,7 @@ End Class
 ```  
   
 ## <a name="specifying-a-character-set-in-c-and-c"></a>C# 및 C++에서 문자 집합 지정  
- <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=fullName> 필드는 기본 문자 집합을 ANSI 또는 유니코드로 식별합니다. 문자 집합은 메서드에 대한 문자열 인수를 마샬링하는 방법을 제어합니다. 다음 형식 중 하나를 사용하여 문자 집합을 나타냅니다.  
+ <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 필드는 기본 문자 집합을 ANSI 또는 유니코드로 식별합니다. 문자 집합은 메서드에 대한 문자열 인수를 마샬링하는 방법을 제어합니다. 다음 형식 중 하나를 사용하여 문자 집합을 나타냅니다.  
   
 ```csharp  
 [DllImport("dllname", CharSet=CharSet.Ansi)]  
@@ -152,8 +149,7 @@ extern "C" int MessageBox(HWND hWnd,
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.InteropServices.DllImportAttribute>   
- [관리 코드에서 프로토타입 만들기](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)   
- [플랫폼 호출 예제](../../../docs/framework/interop/platform-invoke-examples.md)   
+ <xref:System.Runtime.InteropServices.DllImportAttribute>  
+ [관리 코드에서 프로토타입 만들기](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
+ [플랫폼 호출 예제](../../../docs/framework/interop/platform-invoke-examples.md)  
  [플랫폼 호출을 사용하여 데이터 마샬링](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
-

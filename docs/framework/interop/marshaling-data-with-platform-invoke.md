@@ -5,30 +5,24 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+dev_langs: cpp
 helpviewer_keywords:
 - platform invoke, marshaling data
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 70383e7623852935c0192e700b798a5f0ec554aa
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 71a4962029c0056287e97ea56dc02ae6cef8b603
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>플랫폼 호출을 사용하여 데이터 마샬링
 관리되지 않는 라이브러리에서 내보낸 함수를 호출하려면 .NET Framework 응용 프로그램의 관리 코드에 관리되지 않는 함수를 나타내는 함수 프로토타입이 필요합니다. 데이터를 제대로 마샬링하도록 플랫폼에서 호출할 수 있는 프로토타입을 만들려면 다음을 수행해야 합니다.  
@@ -46,24 +40,24 @@ ms.lasthandoff: 08/21/2017
   
 |Wtypes.h의 관리되지 않는 형식|관리되지 않는 C 언어 형식|관리되지 않는 클래스 이름|설명|  
 |--------------------------------|-------------------------------|------------------------|-----------------|  
-|**HANDLE**|**void\***|<xref:System.IntPtr?displayProperty=fullName>|32비트 Windows 운영 체제의 32비트, 64비트 운영 체제의 64비트.|  
-|**BYTE**|**unsigned char**|<xref:System.Byte?displayProperty=fullName>|8비트|  
-|**SHORT**|**short**|<xref:System.Int16?displayProperty=fullName>|16비트|  
-|**WORD**|**unsigned short**|<xref:System.UInt16?displayProperty=fullName>|16비트|  
-|**INT**|**int**|<xref:System.Int32?displayProperty=fullName>|32비트|  
-|**UINT**|**unsigned int**|<xref:System.UInt32?displayProperty=fullName>|32비트|  
-|**LONG**|**long**|<xref:System.Int32?displayProperty=fullName>|32비트|  
+|**HANDLE**|**void\***|<xref:System.IntPtr?displayProperty=nameWithType>|32비트 Windows 운영 체제의 32비트, 64비트 운영 체제의 64비트.|  
+|**BYTE**|**unsigned char**|<xref:System.Byte?displayProperty=nameWithType>|8비트|  
+|**SHORT**|**short**|<xref:System.Int16?displayProperty=nameWithType>|16비트|  
+|**WORD**|**unsigned short**|<xref:System.UInt16?displayProperty=nameWithType>|16비트|  
+|**INT**|**int**|<xref:System.Int32?displayProperty=nameWithType>|32비트|  
+|**UINT**|**unsigned int**|<xref:System.UInt32?displayProperty=nameWithType>|32비트|  
+|**LONG**|**long**|<xref:System.Int32?displayProperty=nameWithType>|32비트|  
 |**BOOL**|**long**|<xref:System.Byte>|32비트|  
-|**DWORD**|**unsigned long**|<xref:System.UInt32?displayProperty=fullName>|32비트|  
-|**ULONG**|**unsigned long**|<xref:System.UInt32?displayProperty=fullName>|32비트|  
-|**CHAR**|**char**|<xref:System.Char?displayProperty=fullName>|ANSI로 데코레이트합니다.|  
-|**WCHAR**|**wchar_t**|<xref:System.Char?displayProperty=fullName>|유니코드로 데코레이트합니다.|  
-|**LPSTR**|**char\***|<xref:System.String?displayProperty=fullName> 또는 <xref:System.Text.StringBuilder?displayProperty=fullName>|ANSI로 데코레이트합니다.|  
-|**LPCSTR**|**Const char\***|<xref:System.String?displayProperty=fullName> 또는 <xref:System.Text.StringBuilder?displayProperty=fullName>|ANSI로 데코레이트합니다.|  
-|**LPWSTR**|**wchar_t\***|<xref:System.String?displayProperty=fullName> 또는 <xref:System.Text.StringBuilder?displayProperty=fullName>|유니코드로 데코레이트합니다.|  
-|**LPCWSTR**|**Const wchar_t\***|<xref:System.String?displayProperty=fullName> 또는 <xref:System.Text.StringBuilder?displayProperty=fullName>|유니코드로 데코레이트합니다.|  
-|**FLOAT**|**Float**|<xref:System.Single?displayProperty=fullName>|32비트|  
-|**DOUBLE**|**Double**|<xref:System.Double?displayProperty=fullName>|64비트|  
+|**DWORD**|**unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|32비트|  
+|**ULONG**|**unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|32비트|  
+|**CHAR**|**char**|<xref:System.Char?displayProperty=nameWithType>|ANSI로 데코레이트합니다.|  
+|**WCHAR**|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|유니코드로 데코레이트합니다.|  
+|**LPSTR**|**char\***|<xref:System.String?displayProperty=nameWithType> 또는 <xref:System.Text.StringBuilder?displayProperty=nameWithType>|ANSI로 데코레이트합니다.|  
+|**LPCSTR**|**Const char\***|<xref:System.String?displayProperty=nameWithType> 또는 <xref:System.Text.StringBuilder?displayProperty=nameWithType>|ANSI로 데코레이트합니다.|  
+|**LPWSTR**|**wchar_t\***|<xref:System.String?displayProperty=nameWithType> 또는 <xref:System.Text.StringBuilder?displayProperty=nameWithType>|유니코드로 데코레이트합니다.|  
+|**LPCWSTR**|**Const wchar_t\***|<xref:System.String?displayProperty=nameWithType> 또는 <xref:System.Text.StringBuilder?displayProperty=nameWithType>|유니코드로 데코레이트합니다.|  
+|**FLOAT**|**Float**|<xref:System.Single?displayProperty=nameWithType>|32비트|  
+|**DOUBLE**|**Double**|<xref:System.Double?displayProperty=nameWithType>|64비트|  
   
  [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# 및 C++의 해당하는 형식에 대해서는 [.NET Framework 클래스 라이브러리 소개](../../../docs/standard/class-library-overview.md)를 참조하세요.  
   
@@ -74,4 +68,3 @@ ms.lasthandoff: 08/21/2017
  [!code-cpp[PInvokeLib#1](../../../samples/snippets/cpp/VS_Snippets_CLR/pinvokelib/cpp/pinvokelib.cpp#1)]  
   
  [!code-cpp[PInvokeLib#2](../../../samples/snippets/cpp/VS_Snippets_CLR/pinvokelib/cpp/pinvokelib.h#2)]
-

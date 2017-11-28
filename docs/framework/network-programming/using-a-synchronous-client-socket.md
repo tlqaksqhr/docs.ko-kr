@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - application protocols, sockets
 - sending data, sockets
@@ -25,21 +23,20 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8562670aad8a20a28eddcd2ebbe434a0402aff59
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ecd08b708b8725ae7b53bfee26b1d4d8668756cd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-a-synchronous-client-socket"></a>동기 클라이언트 소켓 사용
 동기 클라이언트 소켓은 네트워크 작업이 완료되는 동안 응용 프로그램을 일시 중단합니다. 동기 소켓은 네트워크를 작업에 많이 사용하는 응용 프로그램에 적합하지 않지만 다른 응용 프로그램의 네트워크 서비스에 대한 간단한 액세스를 가능하게 합니다.  
   
- 데이터를 보내려면 바이트 배열을 <xref:System.Net.Sockets.Socket> 클래스의 데이터 전송 메서드(<xref:System.Net.Sockets.Socket.Send%2A> 및 <xref:System.Net.Sockets.Socket.SendTo%2A>) 중 하나에 전달합니다. 다음 예제에서는 <xref:System.Text.Encoding.ASCII%2A?displayProperty=fullName> 속성을 사용하여 문자열을 바이트 배열 버퍼로 인코드한 다음 **Send** 메서드를 사용하여 버퍼를 네트워크 장치에 전송합니다. **Send** 메서드는 네트워크 장치에 전송된 바이트 수를 반환합니다.  
+ 데이터를 보내려면 바이트 배열을 <xref:System.Net.Sockets.Socket> 클래스의 데이터 전송 메서드(<xref:System.Net.Sockets.Socket.Send%2A> 및 <xref:System.Net.Sockets.Socket.SendTo%2A>) 중 하나에 전달합니다. 다음 예제에서는 <xref:System.Text.Encoding.ASCII%2A?displayProperty=nameWithType> 속성을 사용하여 문자열을 바이트 배열 버퍼로 인코드한 다음 **Send** 메서드를 사용하여 버퍼를 네트워크 장치에 전송합니다. **Send** 메서드는 네트워크 장치에 전송된 바이트 수를 반환합니다.  
   
 ```vb  
 Dim msg As Byte() = _  
@@ -83,7 +80,6 @@ s.Close();
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [비동기 클라이언트 소켓 사용](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)   
- [소켓으로 수신](../../../docs/framework/network-programming/listening-with-sockets.md)   
+ [비동기 클라이언트 소켓 사용](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
+ [소켓으로 수신](../../../docs/framework/network-programming/listening-with-sockets.md)  
  [동기 클라이언트 소켓 예제](../../../docs/framework/network-programming/synchronous-client-socket-example.md)
-

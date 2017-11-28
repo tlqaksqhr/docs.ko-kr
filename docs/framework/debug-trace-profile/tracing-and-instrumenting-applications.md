@@ -5,15 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - tracing [.NET Framework]
 - debugging [.NET Framework], instrumentation
@@ -23,19 +20,18 @@ helpviewer_keywords:
 - performance monitoring, tracing code
 - Trace class, instrumentation for .NET applications
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 899776c29fc0d0c6a43f28c089c51b9695a1ef6f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 932fef22681aeb2a68d7852884127155757e4099
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="tracing-and-instrumenting-applications"></a>응용 프로그램 추적 및 조율
-추적은 실행되는 동안 응용 프로그램의 실행을 모니터링할 수 있는 방법입니다. 개발할 때 .NET Framework 응용 프로그램에 추적 및 디버깅 계측을 추가할 수 있으며, 응용 프로그램을 개발하는 동안 및 배포한 후에 해당 계측을 모두 사용할 수 있습니다. <xref:System.Diagnostics.Trace?displayProperty=fullName>, <xref:System.Diagnostics.Debug?displayProperty=fullName> 및 <xref:System.Diagnostics.TraceSource?displayProperty=fullName> 클래스를 사용하여 나중에 분석할 수 있도록 오류 및 응용 프로그램 실행 정보를 로그, 텍스트 파일 또는 다른 장치에 기록할 수 있습니다.  
+추적은 실행되는 동안 응용 프로그램의 실행을 모니터링할 수 있는 방법입니다. 개발할 때 .NET Framework 응용 프로그램에 추적 및 디버깅 계측을 추가할 수 있으며, 응용 프로그램을 개발하는 동안 및 배포한 후에 해당 계측을 모두 사용할 수 있습니다. <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 및 <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> 클래스를 사용하여 나중에 분석할 수 있도록 오류 및 응용 프로그램 실행 정보를 로그, 텍스트 파일 또는 다른 장치에 기록할 수 있습니다.  
   
  *계측*이란 용어는 제품의 성능 수준을 모니터링하거나 측정하고 오류를 진단하는 기능을 가리킵니다. 프로그래밍에서 이 용어는 다음을 통합하는 응용 프로그램 기능을 의미합니다.  
   
@@ -126,7 +122,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  런타임 중에 사용하기 위해 trace 문을 배치할 때는 특별히 주의해야 합니다. 가능한 모든 추적 시나리오가 적절하게 처리되도록 배포된 응용 프로그램에서 필요할 가능성이 큰 추적 정보를 고려해야 합니다. 그러나 추적을 사용하는 응용 프로그램은 매우 광범위하기 대문에 추적의 전략적 배치에 대한 일반적인 지침은 없습니다. trace 문 배치에 대한 자세한 내용은 [방법: 응용 프로그램 코드에 Trace 문 추가](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)를 참조하세요.  
   
 ## <a name="output-from-tracing"></a>추적 출력  
- 추적 출력은 *수신기*라는 개체에 의해 수집됩니다. 수신기는 추적 출력을 받아 출력 장치(일반적으로 창, 로그 또는 텍스트 파일)에 쓰는 개체입니다. 새로 만든 추적 수신기는 일반적으로 <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=fullName> 컬렉션에 추가되므로 수신기가 모든 추적 출력을 받을 수 있습니다.  
+ 추적 출력은 *수신기*라는 개체에 의해 수집됩니다. 수신기는 추적 출력을 받아 출력 장치(일반적으로 창, 로그 또는 텍스트 파일)에 쓰는 개체입니다. 새로 만든 추적 수신기는 일반적으로 <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> 컬렉션에 추가되므로 수신기가 모든 추적 출력을 받을 수 있습니다.  
   
  추적 정보는 최소한 기본 <xref:System.Diagnostics.Trace> 출력 대상인 <xref:System.Diagnostics.DefaultTraceListener>에는 항상 기록됩니다. 어떤 이유로든 다른 수신기를 <xref:System.Diagnostics.DefaultTraceListener> 컬렉션에 추가하지 않고 <xref:System.Diagnostics.Trace.Listeners%2A>를 삭제한 경우에는 추적 메시지를 받지 못하게 됩니다. 자세한 내용은 [추적 수신기](../../../docs/framework/debug-trace-profile/trace-listeners.md)를 참조하세요.  
   
@@ -154,15 +150,14 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  ASP.NET 응용 프로그램을 배포하기 전에 추적 및 디버깅을 사용하지 않도록 설정하지 않으면 응용 프로그램이 해당 정보를 노출하여 악성 프로그램에서 악용될 수 있습니다. 자세한 내용은 [방법: 추적 및 디버그를 사용한 조건부 컴파일](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md), [컴파일 및 빌드](/visualstudio/ide/compiling-and-building-in-visual-studio) 및 [방법: 추적 스위치 만들기, 초기화 및 구성](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)을 참조하세요. IIS(인터넷 정보 서비스)를 통해 디버깅을 구성할 수도 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Diagnostics.Trace>   
- <xref:System.Diagnostics.TraceSource>   
- [코드 계약](../../../docs/framework/debug-trace-profile/code-contracts.md)   
- [C#, F# 및 Visual Basic 프로젝트 형식](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)   
- [방법: 응용 프로그램 코드에 Trace 문 추가](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)   
- [방법: 추적 및 디버그를 사용한 조건부 컴파일](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)   
- [방법: 추적 스위치 만들기, 초기화 및 구성](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)   
- [방법: 추적 소스 생성 및 초기화](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)   
- [방법: 추적 수신기와 함께 TraceSource 및 필터 사용](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)   
- [추적 수신기](../../../docs/framework/debug-trace-profile/trace-listeners.md)   
+ <xref:System.Diagnostics.Trace>  
+ <xref:System.Diagnostics.TraceSource>  
+ [코드 계약](../../../docs/framework/debug-trace-profile/code-contracts.md)  
+ [C#, F#, and Visual Basic Project Types](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)(C#, F# 및 Visual Basic 프로젝트 형식)  
+ [방법: 응용 프로그램 코드에 Trace 문 추가](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
+ [방법: 추적 및 디버그를 사용한 조건부 컴파일](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)  
+ [방법: 만들기, 초기화 및 추적 스위치 구성](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
+ [방법: 추적 소스 생성 및 초기화](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
+ [방법: 추적 수신기와 함께 TraceSource 및 필터 사용](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)  
+ [추적 수신기](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
  [추적 스위치](../../../docs/framework/debug-trace-profile/trace-switches.md)
-

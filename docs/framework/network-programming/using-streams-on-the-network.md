@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - requesting data from Internet, streams
 - Networking
@@ -25,21 +23,20 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fa27a458e05254a14cf9f6408422f1d824b5a32c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f9e011b304a7f6c7d0d07761677c0368efcfcf4b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-streams-on-the-network"></a>네트워크에서 스트림 사용
 네트워크 리소스는 .NET Framework에서 스트림으로 표현됩니다. 스트림을 일반적으로 처리하여 .NET Framework는 다음과 같은 기능을 제공합니다.  
   
--   웹 데이터를 송수신하는 일반적인 방법. 파일의 실제 내용에 관계없이(HTML, XML 또는 기타 모든 항목) 응용 프로그램은 <xref:System.IO.Stream.Write%2A?displayProperty=fullName> 및 <xref:System.IO.Stream.Read%2A?displayProperty=fullName>를 사용하여 데이터를 주고받습니다.  
+-   웹 데이터를 송수신하는 일반적인 방법. 파일의 실제 내용에 관계없이(HTML, XML 또는 기타 모든 항목) 응용 프로그램은 <xref:System.IO.Stream.Write%2A?displayProperty=nameWithType> 및 <xref:System.IO.Stream.Read%2A?displayProperty=nameWithType>를 사용하여 데이터를 주고받습니다.  
   
 -   .NET Framework 전체에서 스트림과 호환성. 스트림은 처리를 위한 풍부한 인프라가 있는 .NET Framework 전체에서 사용됩니다. 예를 들어 스트림을 초기화하는 코드 몇 줄만 변경하여 <xref:System.IO.FileStream>에서 XML 데이터를 읽는 응용 프로그램을 <xref:System.Net.Sockets.NetworkStream>에서 데이터를 읽도록 수정할 수 있습니다. **NetworkStream** 클래스와 다른 스트림 간의 주요 차이점은 **NetworkStream**은 검색할 수 없고, <xref:System.Net.Sockets.NetworkStream.CanSeek%2A> 속성은 항상 **false**를 반환하고, <xref:System.Net.Sockets.NetworkStream.Seek%2A> 및 <xref:System.Net.Sockets.NetworkStream.Position%2A> 메서드는 <xref:System.NotSupportedException>을 throw한다는 것입니다.  
   
@@ -115,6 +112,5 @@ sr.Close()
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [방법: WebRequest 클래스를 사용하여 데이터 요청](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)   
+ [방법: WebRequest 클래스를 사용하여 데이터 요청](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)  
  [데이터 요청](../../../docs/framework/network-programming/requesting-data.md)
-

@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BillWagner
 ms.author: wiwagn
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5ec275cb904b90b87193e3ed72ef89a127d1fbea
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3cb06be8d7cc4ee6d3b604f6057b5f5274773daf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>대형 응답성 .NET Framework 응용 프로그램 작성
 이 문서에서는 규모가 큰 .NET Framework 앱이나 파일 또는 데이터베이스와 같이 많은 양의 데이터를 처리하는 앱의 성능을 향상시키기 위한 팁을 제공합니다. 이러한 팁은 C# 및 Visual Basic 컴파일러를 관리 코드로 다시 작성하면서 수집되었으며, C# 컴파일러의 실제 몇 가지 예를 포함하고 있습니다.  
@@ -33,7 +31,8 @@ ms.lasthandoff: 08/21/2017
   
  최종 사용자는 앱과 상호 작용할 때 앱이 응답성을 유지할 것을 기대합니다.  입력이나 명령 처리가 차단되어서는 안 됩니다.  사용자가 입력을 계속하면 도움말은 신속하게 나타나거나 표시되지 않아야 합니다.  앱은 앱이 느리다고 느끼게 하는 오랜 계산으로 UI 스레드를 차단하는 것을 피해야 합니다.  
   
- 새 컴파일러에 대한 자세한 내용은 [.NET 컴파일러 플랫폼(“Roslyn”) 오픈 소스 프로젝트](http://roslyn.codeplex.com/)를 참조하세요.  
+ Roslyn 컴파일러에 대 한 자세한 내용은 참조는 [dotnet/roslyn](https://github.com/dotnet/roslyn) GitHub의 리포지토리 합니다.
+ <!-- TODO: replace with link to Roslyn conceptual docs once that's published -->
   
 ## <a name="just-the-facts"></a>팩트  
  성능을 조정하고 응답성 있는 .NET Framework 앱을 만들 때는 다음 팩트를 고려하세요.  
@@ -62,7 +61,7 @@ ms.lasthandoff: 08/21/2017
 ### <a name="boxing"></a>boxing  
  [Boxing](~/docs/csharp/programming-guide/types/boxing-and-unboxing.md)은 일반적으로 스택 또는 데이터 구조에 있는 값 형식이 개체에 래핑되면 발생합니다.  즉, 데이터를 유지하기 위한 개체를 할당한 다음 개체에 대한 포인터를 반환합니다.  .NET Framework는 경우에 따라 메서드 시그니처 또는 저장소 위치 형식 때문에 값을 boxing합니다.  값 형식을 개체에 래핑하면 메모리 할당이 발생합니다.  boxing 작업이 많으면 앱에 대한 MB 또는 GB의 메모리 할당이 발생할 수 있습니다. 즉, 앱으로 인해 많은 GC가 발생합니다. .NET Framework 및 언어 컴파일러는 가능한 한 boxing을 피하지만, 경우에 따라 전혀 예기치 않게 boxing이 발생하기도 합니다.  
   
- PerfView에서 boxing을 보려면 추적을 열고 앱의 프로세스 이름 아래에서 GC Heap Alloc Stacks를 검토합니다(PerfView는 모든 프로세스에 대해 보고한다는 사실에 주의).  할당 아래에 <xref:System.Int32?displayProperty=fullName> 및 <xref:System.Char?displayProperty=fullName>과 같은 형식이 보이면 값 형식을 boxing하고 있는 것입니다.  이러한 형식 중 하나를 선택하면 해당 형식이 boxing된 스택 및 함수가 표시됩니다.  
+ PerfView에서 boxing을 보려면 추적을 열고 앱의 프로세스 이름 아래에서 GC Heap Alloc Stacks를 검토합니다(PerfView는 모든 프로세스에 대해 보고한다는 사실에 주의).  할당 아래에 <xref:System.Int32?displayProperty=nameWithType> 및 <xref:System.Char?displayProperty=nameWithType>과 같은 형식이 보이면 값 형식을 boxing하고 있는 것입니다.  이러한 형식 중 하나를 선택하면 해당 형식이 boxing된 스택 및 함수가 표시됩니다.  
   
  **예제 1: 문자열 메서드 및 값 형식 인수**  
   
@@ -135,7 +134,7 @@ public class BoxingExample
 ((int)color).GetHashCode()  
 ```  
   
- 열거형 형식에 대한 boxing의 또 다른 일반적인 소스는 <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=fullName> 메서드입니다.  <xref:System.Enum.HasFlag%28System.Enum%29>으로 전달된 인수는 boxing되어야 합니다.  대부분의 경우 <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=fullName>에 대한 호출을 비트 테스트로 바꾸면 보다 간단하고 할당도 발생하지 않습니다.  
+ 열거형 형식에 대한 boxing의 또 다른 일반적인 소스는 <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=nameWithType> 메서드입니다.  <xref:System.Enum.HasFlag%28System.Enum%29>으로 전달된 인수는 boxing되어야 합니다.  대부분의 경우 <xref:System.Enum.HasFlag%28System.Enum%29?displayProperty=nameWithType>에 대한 호출을 비트 테스트로 바꾸면 보다 간단하고 할당도 발생하지 않습니다.  
   
  첫 번째 성능 팩트를 염두에 두고(즉, 너무 이르게 최적화하지 말 것) 서둘러 이 방식으로 모든 코드를 다시 작성하려고는 하지 마세요.    이러한 boxing 비용에 주의하되 앱을 프로파일링하고 핫 스폿을 찾은 다음에만 코드를 변경하세요.  
   
@@ -334,7 +333,7 @@ var predicate = new Func<Symbol, bool>(l.Evaluate);
   
  이제 두 `new` 할당(환경 클래스에 대한 할당 하나와 대리자에 대한 할당 하나)은 명시적입니다.  
   
- 이제 `FirstOrDefault`에 대한 호출을 살펴봅니다. <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> 형식에 대한 이 확장 메서드는 할당도 발생시킵니다.  `FirstOrDefault`는 해당 첫 번째 인수로 <xref:System.Collections.Generic.IEnumerable%601> 개체를 사용하기 때문에 다음 코드에 대한 호출을 확장할 수 있습니다(설명을 위해 약간 단순화되어 있음).  
+ 이제 `FirstOrDefault`에 대한 호출을 살펴봅니다. <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 형식에 대한 이 확장 메서드는 할당도 발생시킵니다.  `FirstOrDefault`는 해당 첫 번째 인수로 <xref:System.Collections.Generic.IEnumerable%601> 개체를 사용하기 때문에 다음 코드에 대한 호출을 확장할 수 있습니다(설명을 위해 약간 단순화되어 있음).  
   
 ```csharp  
 // Expanded return symbols.FirstOrDefault(predicate) ...  
@@ -421,7 +420,7 @@ class Compilation { /*...*/
   
  **예제 6에 대한 해결 방법**  
   
- 완료된 <xref:System.Threading.Tasks.Task> 할당을 제거하려면 완료된 결과로 Task 개체를 캐시하면 됩니다.  
+ 완료 된 제거 하려면 <xref:System.Threading.Tasks.Task> 할당을 완료 된 결과로 Task 개체를 캐시할 수 있습니다.  
   
 ```csharp  
 class Compilation { /*...*/  
@@ -471,13 +470,12 @@ class Compilation { /*...*/
 -   결국은 모두 할당에 관련된 문제임 – 이 부분이 바로 컴파일러 플랫폼 팀이 새 컴파일러의 성능을 향상시키기 위해 대부분의 시간을 사용하는 부분입니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [이 항목의 프레젠테이션 비디오](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)   
- [초보자를 위한 성능 프로파일링 지침](/visualstudio/profiling/beginners-guide-to-performance-profiling)   
- [성능](../../../docs/framework/performance/index.md)   
- [.NET 성능 팁](http://msdn.microsoft.com/library/ms973839.aspx)   
- [Windows Phone 성능 분석 도구](http://msdn.microsoft.com/magazine/hh781024.aspx)   
- [Visual Studio 프로파일러를 사용한 응용 프로그램 병목 지점 찾기](http://msdn.microsoft.com/magazine/cc337887.aspx)   
- [채널 9 PerfView 자습서](http://channel9.msdn.com/Series/PerfView-Tutorial)   
- [개괄적인 성능 팁](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)   
- [.NET 컴파일러 플랫폼(“Roslyn”) 오픈 소스 프로젝트](http://roslyn.codeplex.com/)
-
+ [이 항목의 표현의 비디오](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
+ [초보자를 위한 성능 프로파일링 지침](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
+ [성능](../../../docs/framework/performance/index.md)  
+ [.NET 성능 팁](http://msdn.microsoft.com/library/ms973839.aspx)  
+ [Windows Phone 성능 분석 도구](http://msdn.microsoft.com/magazine/hh781024.aspx)  
+ [Visual Studio 프로파일러를 사용한 응용 프로그램 병목 지점 찾기](http://msdn.microsoft.com/magazine/cc337887.aspx)  
+ [채널 9 PerfView 자습서](http://channel9.msdn.com/Series/PerfView-Tutorial)  
+ [상위 수준 성능 팁](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
+ [GitHub의 리포지토리 dotnet/roslyn](https://github.com/dotnet/roslyn)

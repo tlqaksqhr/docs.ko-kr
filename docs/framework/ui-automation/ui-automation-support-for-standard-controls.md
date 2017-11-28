@@ -1,44 +1,47 @@
 ---
-title: "UI Automation Support for Standard Controls | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "controls, UI Automation support for"
-  - "UI Automation, support for standard controls"
+title: "표준 컨트롤에 대한 UI 자동화 지원"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- controls, UI Automation support for
+- UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-caps.latest.revision: 11
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 10
+caps.latest.revision: "11"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 71a5a2e4319debf1a4d8ddd08d7f0979443682b9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# UI Automation Support for Standard Controls
+# <a name="ui-automation-support-for-standard-controls"></a>표준 컨트롤에 대한 UI 자동화 지원
 > [!NOTE]
->  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](http://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.  
+>  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](http://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.  
   
- 이 항목에는 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 및 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 프레임워크용으로 개발된 응용 프로그램에서 표준 컨트롤에 대한 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 지원 정보가 들어 있습니다.  
+ 이 항목에는 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] , [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]및 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]프레임워크용으로 개발된 응용 프로그램에서 표준 컨트롤에 대한 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 지원 정보가 들어 있습니다.  
   
 <a name="Windows_Presentation_Foundation_Controls"></a>   
-## WPF\(Windows Presentation Foundation\) 컨트롤  
+## <a name="windows-presentation-foundation-controls"></a>WPF(Windows Presentation Foundation) 컨트롤  
  사용자 상호 작용 지원 또는 정보를 제공하는 모든 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 컨트롤 요소에는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 전체 기본 지원이 있습니다. 패널 등과 같은 기타 요소는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 표시되지 않습니다.  
   
 <a name="Win32_Controls"></a>   
-## Win32 컨트롤  
- 대부분의 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 컨트롤은 UIAutomationClientsideProviders.dll의 클라이언트쪽 공급자를 통해 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]에 노출됩니다. 이 어셈블리는 UI 자동화 클라이언트 응용 프로그램과 함께 사용할 수 있도록 자동으로 등록됩니다.  
+## <a name="win32-controls"></a>Win32 컨트롤  
+ 대부분의 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 컨트롤은 UIAutomationClientsideProviders.dll의 클라이언트쪽 공급자를 통해 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 에 노출됩니다. 이 어셈블리는 UI 자동화 클라이언트 응용 프로그램과 함께 사용할 수 있도록 자동으로 등록됩니다.  
   
- 전체 지원은 ComCtrl32.dll 버전 6의 컨트롤에만 제공됩니다\([!INCLUDE[TLA#tla_winxp](../../../includes/tlasharptla-winxp-md.md)] 이상에서 사용 가능\).  
+ 전체 지원은 ComCtrl32.dll 버전 6의 컨트롤에만 제공됩니다( [!INCLUDE[TLA#tla_winxp](../../../includes/tlasharptla-winxp-md.md)] 이상에서 사용 가능).  
   
  다음과 같은 컨트롤이 지원됩니다.  
   
 |클래스 이름|컨트롤 종류|  
-|------------|------------|  
+|----------------|------------------|  
 |단추|단추|  
 |단추|RadioButton|  
 |단추|그룹화|  
@@ -54,22 +57,22 @@ caps.handback.revision: 10
 |정적|텍스트|  
 |정적|이미지|  
 |SysIPAddress32|사용자 지정|  
-|SysHeader32|Header\/HeaderItem|  
+|SysHeader32|Header/HeaderItem|  
 |SysListView32|DataGrid|  
 |SysListView32|목록|  
 |ListBox|목록|  
 |ListBox|ListItem|  
-|\#32768|메뉴|  
-|\#32768|MenuItem|  
-|msctls\_progress32|ProgressBar|  
+|#32768|메뉴|  
+|#32768|MenuItem|  
+|msctls_progress32|ProgressBar|  
 |RichEdit|문서. 메모를 참조하세요.|  
 |RichEdit20A|문서|  
 |RichEdit20W|문서|  
 |RichEdit50W|문서|  
 |ScrollBar|슬라이더|  
-|msctls\_trackbar32|슬라이더|  
-|msctls\_updown32|Spinner|  
-|msctls\_statusbar32|StatusBar|  
+|msctls_trackbar32|슬라이더|  
+|msctls_updown32|Spinner|  
+|msctls_statusbar32|StatusBar|  
 |SysTabControl32|탭|  
 |SysTabControl32|TabItem|  
 |ToolbarWindow32|ToolBar|  
@@ -78,35 +81,35 @@ caps.handback.revision: 10
 |ToolbarWindow32|CheckBox|  
 |ToolbarWindow32|RadioButton|  
 |ToolbarWindow32|구분 기호|  
-|tooltips\_class32|도구 설명|  
-|\#32774|도구 설명|  
-|ReBarWindow32|Toolbar|  
+|tooltips_class32|도구 설명|  
+|#32774|도구 설명|  
+|ReBarWindow32|ToolBar|  
 |SysTreeView32|Tree|  
 |SysTreeView32|TreeItem|  
   
- **참고** RichEdit 컨트롤은 [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)]와 함께 제공된 버전에서만 지원됩니다\(RichEd20.dll 버전 3.1 이상 및 MsftEdit.dll 버전 4.1 이상\).  
+ **참고** RichEdit 컨트롤은 [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] 와 함께 제공된 버전에서만 지원됩니다(RichEd20.dll 버전 3.1 이상 및 MsftEdit.dll 버전 4.1 이상).  
   
  다음 컨트롤은 지원되지 않습니다.  
   
-|클래스 이름|컨트롤 형식|  
-|------------|------------|  
+|클래스 이름|컨트롤 종류|  
+|----------------|------------------|  
 |SysAnimate32|이미지|  
 |SysPager|Spinner|  
 |SysDateTimePick32|사용자 지정|  
 |SysMonthCal32|일정|  
-|MS\_WINNOTE|도구 설명|  
+|MS_WINNOTE|도구 설명|  
 |VBBubble|도구 설명|  
-|스크롤 막대\(독립 실행형 컨트롤로 사용되는 경우\)|슬라이더|  
+|스크롤 막대(독립 실행형 컨트롤로 사용되는 경우)|슬라이더|  
 |SuperGrid|사용자 지정|  
   
 <a name="Windows_Forms_Controls"></a>   
-## Windows Forms 컨트롤  
- [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)] 컨트롤은 UIAutomationClientsideProviders.dll의 클라이언트쪽 공급자를 통해 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]에 노출됩니다. 이 어셈블리는 UI 자동화 클라이언트 응용 프로그램과 함께 사용할 수 있도록 자동으로 등록됩니다.  
+## <a name="windows-forms-controls"></a>Windows Forms 컨트롤  
+ [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)] 컨트롤은 UIAutomationClientsideProviders.dll의 클라이언트쪽 공급자를 통해 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 에 노출됩니다. 이 어셈블리는 UI 자동화 클라이언트 응용 프로그램과 함께 사용할 수 있도록 자동으로 등록됩니다.  
   
- 일반적으로, [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 공통 컨트롤의 관리되는 래퍼인 [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)] 컨트롤은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서 지원됩니다. 다음과 같은 컨트롤이 지원됩니다.  
+ 일반적으로, [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)] 공통 컨트롤의 관리되는 래퍼인 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 컨트롤은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서 지원됩니다. 다음과 같은 컨트롤이 지원됩니다.  
   
 |클래스 이름|  
-|------------|  
+|----------------|  
 |단추|  
 |CheckBox|  
 |CheckedListBox|  
@@ -120,7 +123,7 @@ caps.handback.revision: 10
 |레이블|  
 |ListBox|  
 |ListView|  
-|MainMenu\/ContextMenu|  
+|MainMenu/ContextMenu|  
 |MonthCalendar|  
 |NotifyIcon|  
 |OpenFileDialog|  
@@ -133,20 +136,20 @@ caps.handback.revision: 10
 |ScrollableControl|  
 |SoundPlayer|  
 |StatusBar|  
-|TabControl\/TabPage|  
+|TabControl/TabPage|  
 |TextBox|  
 |Timer|  
-|Toolbar|  
+|ToolBar|  
 |도구 설명|  
 |TrackBar|  
 |TreeView|  
 |VscrollBar|  
 |웹 브라우저|  
   
- 다음 컨트롤은 [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]에 대한 지원을 통해서만 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]에 노출됩니다. 일부 기능은 사용하지 못할 수도 있습니다.  
+ 다음 컨트롤은 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 에 대한 지원을 통해서만 [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]에 노출됩니다. 일부 기능은 사용하지 못할 수도 있습니다.  
   
 |컨트롤 이름|  
-|------------|  
+|------------------|  
 |BindingSource|  
 |DataGrid|  
 |DataGridView|  
@@ -158,21 +161,21 @@ caps.handback.revision: 10
 |LinkLabel|  
 |HelpProvider|  
 |MaskedTextBox|  
-|MenuStrip\/ContextMenuStrip|  
+|MenuStrip/ContextMenuStrip|  
 |NumericUpDown|  
 |패널|  
 |PictureBox|  
 |PrintDocument|  
-|PrintPreview\-Control|  
-|PrintPreview\-Dialog|  
+|PrintPreview-Control|  
+|PrintPreview-Dialog|  
 |PropertyGrid|  
 |UserControl|  
 |ToolStrip|  
 |TableLayoutPanel|  
-|SplitContainer\/SplitterPanel|  
+|SplitContainer/SplitterPanel|  
 |분할자|  
 |RaftingContainer|  
 |StatusStrip|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [UI Automation Control Types](../../../docs/framework/ui-automation/ui-automation-control-types.md)

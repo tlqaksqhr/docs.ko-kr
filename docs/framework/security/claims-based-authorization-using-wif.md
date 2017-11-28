@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: f1086958a56aadbddf54f20295b91e885adf71c4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="claims-based-authorization-using-wif"></a>WIF를 사용하여 클레임 기반 권한 부여
 신뢰 당사자 응용 프로그램에서 권한 부여에 따라 인증된 ID가 액세스할 수 있도록 허용되는 리소스 및 이러한 리소스에서 수행할 수 있도록 허용되는 작업이 결정됩니다. 권한 부여가 부적절하거나 취약한 상태인 경우 정보가 노출되거나 데이터가 변조될 수 있습니다. 이 항목에서는 WIF(Windows Identity Foundation) 및 STS(보안 토큰 서비스)를 사용하여 클레임 인식 ASP.NET 웹 응용 프로그램과 서비스에 대한 권한 부여를 구현하기 위해 사용할 수 있는 방법에 대해 간략하게 설명합니다.  
@@ -72,4 +70,3 @@ ms.lasthandoff: 08/21/2017
 5.  결과가 true이면 액세스가 허용되고 false인 경우에는 거부됩니다. 예를 들어, 규칙은 사용자가 21세 이상이고 워싱턴 주에 거주하는 것일 수 있습니다.  
   
  <xref:System.Security.Claims.ClaimsAuthorizationManager>는 응용 프로그램에서 클레임 기반 권한 부여를 위한 의사 결정 논리를 표면화하는 데 유용합니다. ClaimsAuthorizationManager는 .NET 4.5의 일부로 제공되는 WIF 구성 요소입니다. ClaimsAuthorizationManager를 사용하면 들어오는 요청을 가로채고 들어오는 클레임에 따라 권한 부여 결정을 수행하도록 선택 항목의 논리를 구현할 수 있습니다. 이는 권한 부여 논리를 변경해야 하는 경우 중요합니다. 이러한 경우 ClaimsAuthorizationManager를 사용해도 응용 프로그램의 무결성에 영향을 미치지 않으므로, 변경으로 인해 응용 프로그램에 오류가 발생할 가능성이 줄어듭니다. ClaimsAuthorizationManager를 사용하여 클레임 기반 액세스 제어를 구현하는 방법에 대한 자세한 내용은 [방법: WIF 및 ACS를 사용하여 클레임 인식 ASP.NET 응용 프로그램에서 클레임 권한 부여 구현](http://go.microsoft.com/fwlink/?LinkID=247446)을 참조하세요.
-

@@ -1,26 +1,22 @@
 ---
-title: "Office Open XML 문서 요소 (Visual Basic)를 출력 하는 예제 | Microsoft 문서"
+title: "Office Open XML 문서 요소 (Visual Basic)를 출력 하는 예제"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a951925b-c985-48ed-b215-2a68b58f1ae5
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 72e8cd6126cd049cafff6e18e1ef609f600cf7c9
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 96596c86674f5df2b9949a07adab2f313a07633d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Office Open XML 문서 요소 (Visual Basic)를 출력 하는 예제
 이 항목에서는 Office Open XML 문서를 열고 문서 안의 부분에 액세스하는 방법을 보여 줍니다.  
@@ -28,7 +24,7 @@ ms.lasthandoff: 03/13/2017
 ## <a name="example"></a>예제  
  다음 예제에서는 Office Open XML 문서를 열고 문서 부분과 스타일 부분을 콘솔에 출력합니다.  
   
- 이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 형식을 사용는 <xref:System.IO.Packaging?displayProperty=fullName>네임 스페이스.</xref:System.IO.Packaging?displayProperty=fullName>  
+ 이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.  
   
 ```vb  
 Const fileName As String = "SampleDoc.docx"  
@@ -78,4 +74,4 @@ End Using
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [세부 정보는 Office Open XML WordprocessingML 문서 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+ [세부 정보를 Office Open XML WordprocessingML 문서 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

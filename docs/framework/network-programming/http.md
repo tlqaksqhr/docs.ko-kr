@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - protocols, HTTP
 - sending data, HTTP
@@ -24,19 +19,18 @@ helpviewer_keywords:
 - HTTP, about HTTP
 - HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 124e383efbe6cf6bb459d013b9689bf5da287cf1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 701ff252380ef93dbe3668c8aca73f08a8425d6b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="http"></a>HTTP
-.NET Framework에서는 <xref:System.Net.HttpWebRequest> 및 <xref:System.Net.HttpWebResponse> 클래스를 사용하여 모든 인터넷 트래픽의 대부분을 구성하는 HTTP 프로토콜을 포괄적으로 지원합니다. <xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse>에서 파생된 이러한 클래스는 기본적으로 정적 메서드 <xref:System.Net.WebRequest.Create%2A?displayProperty=fullName>가 “http” 또는 “https”로 시작하는 URI를 발견할 때마다 반환됩니다. 대부분의 경우 **WebRequest** 및 **WebResponse** 클래스는 요청을 만드는 데 필요한 모든 것을 제공하지만, 속성으로 노출되는 HTTP별 기능에 액세스해야 할 경우 이러한 클래스를 **HttpWebRequest** 또는 **HttpWebResponse**로 형식 캐스팅해야 합니다.  
+.NET Framework와 대부분의 모든 인터넷 트래픽에 구성 하는 HTTP 프로토콜에 대 한 포괄적인 지원을 제공는 <xref:System.Net.HttpWebRequest> 및 <xref:System.Net.HttpWebResponse> 클래스입니다. <xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse>에서 파생된 이러한 클래스는 기본적으로 정적 메서드 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>가 “http” 또는 “https”로 시작하는 URI를 발견할 때마다 반환됩니다. 대부분의 경우 **WebRequest** 및 **WebResponse** 클래스는 요청을 만드는 데 필요한 모든 것을 제공하지만, 속성으로 노출되는 HTTP별 기능에 액세스해야 할 경우 이러한 클래스를 **HttpWebRequest** 또는 **HttpWebResponse**로 형식 캐스팅해야 합니다.  
   
  **HttpWebRequest** 및 **HttpWebResponse**는 표준 HTTP 요청 및 응답 트랜잭션을 캡슐화하고 일반 HTTP 헤더에 대한 액세스를 제공합니다. 이러한 클래스는 청크로 데이터 파이프라이닝/보내기/받기, 인증, 사전 인증, 암호화, 프록시 지원, 서버 인증서 유효성 검사, 연결 관리를 포함한 대부분의 HTTP 1.1 기능을 지원합니다. 사용자 지정 헤더 및 속성을 통해 제공되지 않는 헤더는 **Headers** 속성에 저장하고 이 속성을 통해 액세스할 수 있습니다.  
   
@@ -47,7 +41,6 @@ ms.lasthandoff: 08/21/2017
  응용 프로그램은 <xref:System.Net.WebException.Status%2A>가 <xref:System.Net.WebExceptionStatus>로 설정된 <xref:System.Net.WebException>을 catch하여 HTTP 프로토콜 오류를 수신합니다. <xref:System.Net.WebException.Response%2A> 속성은 서버에서 보낸 **WebResponse**를 포함하고 발생한 실제 HTTP 오류를 나타냅니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [프록시를 통해 인터넷 액세스](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)   
- [응용 프로그램 프로토콜 사용](../../../docs/framework/network-programming/using-application-protocols.md)   
+ [프록시를 통해 인터넷 액세스](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
+ [응용 프로그램 프로토콜 사용](../../../docs/framework/network-programming/using-application-protocols.md)  
  [방법: HTTP 관련 속성에 액세스](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)
-

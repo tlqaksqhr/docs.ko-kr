@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Internet Protocol version 6, addresses in
 - Neighbor Discovery
@@ -37,16 +32,15 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6d810d9fdf6f0e464147e639d9a3acf2ebc148d9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: be73fe51e6b3a52ccb2717f0216ab82b90dd9841
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ipv6-addressing"></a>IPv6 주소 지정
 IPv6(인터넷 프로토콜 버전 6)에서 주소의 길이는 128비트입니다. 주소 공간이 이렇게 큰 하나의 이유는 사용 가능한 주소를 인터넷 토폴로지를 반영하는 라우팅 도메인 계층 구조로 세분화하기 위한 것입니다. 또 다른 이유는 장치를 네트워크에 연결하는 네트워크 어댑터(또는 인터페이스)의 주소를 매핑하기 위한 것입니다. IPv6은 최하위 수준인 네트워크 인터페이스 수준에서 주소를 확인하는 고유한 기능과 자동 구성 기능을 제공합니다.  
@@ -88,6 +82,5 @@ IPv6(인터넷 프로토콜 버전 6)에서 주소의 길이는 128비트입니�
  일반적으로 노드에는 항상 링크-로컬 주소가 포함됩니다. 사이트-로컬 주소 및 하나 이상의 전역 주소가 포함될 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [인터넷 프로토콜 버전 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)   
+ [인터넷 프로토콜 버전 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
  [소켓](../../../docs/framework/network-programming/sockets.md)
-

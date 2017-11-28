@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 39b16b82-4ec6-4eff-8031-67e026870961
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 59fa9c4a5a296ee3a0663cce6f77a8c12c5955c2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 1c39ca0a4437016b8b718bd5d3cf988029556fb8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltbasichttpcontextbindinggt"></a>&lt;basicHttpContextBinding&gt;
 HTTP 쿠키를 교환 메커니즘으로 사용하도록 설정하여 교환할 <xref:System.ServiceModel.BasicHttpBinding>의 컨텍스트를 제공하는 바인딩을 지정합니다.  
@@ -105,13 +103,12 @@ HTTP 쿠키를 교환 메커니즘으로 사용하도록 설정하여 교환할 
  이 바인딩 요소는 `BasicHttpBinding` 컨텍스트의 일부로 보호 수준과 교환 메커니즘을 제공합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.BasicHttpBinding>   
- <xref:System.ServiceModel.BasicHttpContextBinding>   
- <xref:System.ServiceModel.Configuration.BasicHttpContextBindingElement>   
- <xref:System.ServiceModel.Channels.ContextBindingElement>   
- [바인딩](../../../../../docs/framework/wcf/bindings.md)   
- [시스템 제공 바인딩 구성](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [바인딩을 사용 하 여 Windows Communication Foundation 서비스 및 클라이언트 구성](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<바인딩 >](../../../../../docs/framework/misc/binding.md)   
+ <xref:System.ServiceModel.BasicHttpBinding>  
+ <xref:System.ServiceModel.BasicHttpContextBinding>  
+ <xref:System.ServiceModel.Configuration.BasicHttpContextBindingElement>  
+ <xref:System.ServiceModel.Channels.ContextBindingElement>  
+ [바인딩](../../../../../docs/framework/wcf/bindings.md)  
+ [시스템 제공 바인딩 구성](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [바인딩을 사용 하 여 Windows Communication Foundation 서비스 및 클라이언트 구성](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [\<바인딩 >](../../../../../docs/framework/misc/binding.md)  
  [\<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)
-

@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 265615d6-4423-4b5d-8626-752e456f4f4e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9f20dd62b5b872b932639a10df1e1636798ba963
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 752b354df897fa37bc45c1bbd1969cf93aac87ed
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="pnrp-in-application-development"></a>응용 프로그램 개발의 PNRP
 Windows Vista에서 네트워킹 응용 프로그램은 단순화된 PNRP API(응용 프로그래밍 인터페이스)를 통해 PNRP 이름 게시 및 확인 기능에 액세스할 수 있습니다.  
@@ -36,4 +30,3 @@ Windows Vista에서 네트워킹 응용 프로그램은 단순화된 PNRP API(�
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Net.PeerToPeer>
-

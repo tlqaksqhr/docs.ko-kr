@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: dee5dd53a88bdd108b84d05cfb75799630836033
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 9edb87cf1ee35ac6848a478552cf8d0732177a81
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="enabling-and-disabling-ipv6"></a>IPv6 사용 및 사용 안 함
 IPv6 프로토콜을 사용하려면 IPv6을 지원하는 운영 체제 버전을 실행 중인지 확인하고 운영 체제와 네트워킹 클래스가 제대로 구성되어 있는지 확인합니다.  
@@ -51,13 +45,12 @@ IPv6 프로토콜을 사용하려면 IPv6을 지원하는 운영 체제 버전�
 </system.net>  
 ```  
   
- .NET Framework 버전 1.1 이하의 경우 **ipv6 enabled** 구성 스위치 값은 <xref:System.Net.Dns?displayProperty=fullName> 클래스의 멤버가 IPv6 주소를 반환하는지 여부를 지정합니다.  
+ .NET Framework 버전 1.1 이하의 경우 **ipv6 enabled** 구성 스위치 값은 <xref:System.Net.Dns?displayProperty=nameWithType> 클래스의 멤버가 IPv6 주소를 반환하는지 여부를 지정합니다.  
   
- .NET Framework 버전 2.0 이상의 경우 Windows에서 IPv6을 지원하면 <xref:System.Net.Dns?displayProperty=fullName> 클래스의 멤버(예: <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=fullName> 메서드)는 한 가지 제한과 함께 IPv6 주소를 반환합니다. DNS <xref:System.Net.Dns?displayProperty=fullName>의 사용되지 않는 멤버(예: <xref:System.Net.Dns.Resolve%2A?displayProperty=fullName> 메서드)는 구성 파일에서 ipv6 enabled 설정에 대한 값을 읽고 인식합니다.  
+ .NET Framework 버전 2.0 이상의 경우 Windows에서 IPv6을 지원하면 <xref:System.Net.Dns?displayProperty=nameWithType> 클래스의 멤버(예: <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=nameWithType> 메서드)는 한 가지 제한과 함께 IPv6 주소를 반환합니다. DNS <xref:System.Net.Dns?displayProperty=nameWithType>의 사용되지 않는 멤버(예: <xref:System.Net.Dns.Resolve%2A?displayProperty=nameWithType> 메서드)는 구성 파일에서 ipv6 enabled 설정에 대한 값을 읽고 인식합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [인터넷 프로토콜 버전 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)   
- [소켓](../../../docs/framework/network-programming/sockets.md)   
- [네트워크 설정 스키마](../../../docs/framework/configure-apps/file-schema/network/index.md)   
+ [인터넷 프로토콜 버전 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
+ [소켓](../../../docs/framework/network-programming/sockets.md)  
+ [네트워크 설정 스키마](../../../docs/framework/configure-apps/file-schema/network/index.md)  
  [\<ipv6> 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)
-

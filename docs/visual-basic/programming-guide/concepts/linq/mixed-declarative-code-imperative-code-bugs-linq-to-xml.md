@@ -1,39 +1,30 @@
 ---
-title: "혼합 된 선언적 코드 명령적 코드 버그 (LINQ to XML) (Visual Basic) | Microsoft 문서"
+title: "혼합 된 선언적 코드 명령적 코드 버그 (LINQ to XML) (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: f12b1ab4-bb92-4b92-a648-0525e45b3ce7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 08edcabc3f0238c499f87c713f205ee5a517a1ea
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 2d5d50b5444a9aca429eb5ddb682cd23c468a1e3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-visual-basic"></a>혼합 된 선언적 코드/명령적 코드 버그 (LINQ to XML) (Visual Basic)
-[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]에는 XML 트리를 직접 수정하는 데 사용할 수 있는 다양한 메서드가 포함되어 있습니다. 요소를 추가 및 삭제하고, 요소의 내용을 변경하고, 특성을 추가하는 등의 작업을 수행할 수 있습니다. 이 프로그래밍 인터페이스에 설명 된 [XML 트리 수정 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)합니다. 경우 반복 하는 축 중 하나를 통해 같은 <xref:System.Xml.Linq.XContainer.Elements%2A>, 및 축 반복 하면서 XML 트리를 수정 하는, 결국 이상한 버그가 발생할 수 있습니다.</xref:System.Xml.Linq.XContainer.Elements%2A>  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에는 XML 트리를 직접 수정하는 데 사용할 수 있는 다양한 메서드가 포함되어 있습니다. 요소를 추가 및 삭제하고, 요소의 내용을 변경하고, 특성을 추가하는 등의 작업을 수행할 수 있습니다. 이 프로그래밍 인터페이스에 설명 된 [XML 트리 수정 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)합니다. <xref:System.Xml.Linq.XContainer.Elements%2A>와 같은 축 중 하나를 반복하면서 XML 트리를 수정하면 이상한 버그가 발생할 수 있습니다.  
   
  이 문제를 "할로윈 문제"라고도 합니다.  
   
 ## <a name="definition-of-the-problem"></a>문제에 대한 정의  
- LINQ를 사용하여 컬렉션을 반복하는 코드를 작성하는 경우 선언적 스타일로 코드를 작성할 수 있습니다. 하는 것을 설명 하는 것과 유사 *어떤* 아니라 원하는 *어떻게* 작업을 수행 하려면. 1) 첫 번째 요소를 가져오고 2) 특정 조건에 대해 테스트한 다음 3) 요소를 수정하고 4) 요소를 다시 목록에 배치하는 코드를 작성하는 경우 코드는 명령적 코드일 수 있습니다. 컴퓨터에 지시 하면 *어떻게* 를 수행할 수 있습니다.  
+ LINQ를 사용하여 컬렉션을 반복하는 코드를 작성하는 경우 선언적 스타일로 코드를 작성할 수 있습니다. 이는 작업을 수행하는 *방법*이 아니라 원하는 *작업*을 설명하는 것과 유사합니다. 1) 첫 번째 요소를 가져오고 2) 특정 조건에 대해 테스트한 다음 3) 요소를 수정하고 4) 요소를 다시 목록에 배치하는 코드를 작성하는 경우 코드는 명령적 코드일 수 있습니다. 즉, 작업을 수행할 *방법*을 컴퓨터에 지시합니다.  
   
  이러한 스타일의 코드를 동일한 작업에서 혼합하면 문제가 발생할 수 있습니다. 다음을 살펴보세요.  
   
@@ -66,7 +57,7 @@ Next
   
  이 코드는 무한 루프에 들어갑니다. `foreach` 문은 `Elements()` 축을 반복하여 새 요소를 `doc` 요소에 추가합니다. 따라서 방금 추가한 요소도 반복하게 됩니다. 루프를 반복할 때마다 새 개체를 할당하기 때문에 결국 사용 가능한 모든 메모리를 사용하게 됩니다.  
   
- 컬렉션에 사용 하 여 메모리에 가져오는 방법으로이 문제를 해결할 수는 <xref:System.Linq.Enumerable.ToList%2A>다음과 같이 표준 쿼리 연산자:</xref:System.Linq.Enumerable.ToList%2A>  
+ 다음과 같이 <xref:System.Linq.Enumerable.ToList%2A> 표준 쿼리 연산자를 사용하여 컬렉션을 메모리에 가져오는 방법으로 이 문제를 해결할 수 있습니다.  
   
 ```vb  
 Dim root As XElement = _  
@@ -121,7 +112,7 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
- 솔루션 다시 호출 하는 <xref:System.Linq.Enumerable.ToList%2A>다음과 같이 컬렉션을 구체화 하는:</xref:System.Linq.Enumerable.ToList%2A>  
+ 여기에서도 해결 방법은 다음과 같이 <xref:System.Linq.Enumerable.ToList%2A>을 호출하여 컬렉션을 구체화하는 것입니다.  
   
 ```vb  
 Dim root As XElement = _  
@@ -142,7 +133,7 @@ Console.WriteLine(root)
 <Root />  
 ```  
   
- 또는 모두 제거할 수 있습니다 반복 호출 하 여 <xref:System.Xml.Linq.XElement.RemoveAll%2A>부모 요소에:</xref:System.Xml.Linq.XElement.RemoveAll%2A>  
+ 또는 부모 요소에 대해 <xref:System.Xml.Linq.XElement.RemoveAll%2A>을 호출하여 반복을 모두 제거할 수 있습니다.  
   
 ```vb  
 Dim root As XElement = _  
@@ -196,4 +187,3 @@ Console.WriteLine(newRoot)
   
 ## <a name="see-also"></a>참고 항목  
  [고급 LINQ to XML 프로그래밍 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
-

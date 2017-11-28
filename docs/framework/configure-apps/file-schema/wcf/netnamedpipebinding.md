@@ -5,24 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
 ms.assetid: 00a8580b-face-47a4-838d-b9fed48e72df
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a5854b3f2630c1e27ec77976eccfe6765acefcab
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 7a582f009719245483bdfe9192d775347c1f1a29
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt;
 프로세스 간 시스템 통신에 적합한, 안전하고 신뢰할 수 있는 바인딩을 정의합니다. 기본적으로 이 바인딩에서는 안정성을 위한 WS-ReliableMessaging, 전송 보안을 위한 전송 보안, 메시지 배달을 위한 명명된 파이프 및 이진 메시지 인코딩을 지원하는 런타임 통신 스택을 생성합니다.  
@@ -158,10 +153,9 @@ ms.lasthandoff: 09/25/2017
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement>   
- <xref:System.ServiceModel.NetNamedPipeBinding>   
- [\<바인딩 >](../../../../../docs/framework/misc/binding.md)   
- [바인딩](../../../../../docs/framework/wcf/bindings.md)   
- [시스템 제공 바인딩 구성](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
+ <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement>  
+ <xref:System.ServiceModel.NetNamedPipeBinding>  
+ [\<바인딩 >](../../../../../docs/framework/misc/binding.md)  
+ [바인딩](../../../../../docs/framework/wcf/bindings.md)  
+ [시스템 제공 바인딩 구성](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
  [바인딩을 사용 하 여 Windows Communication Foundation 서비스 및 클라이언트 구성](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)
-
