@@ -1,1 +1,1 @@
-.NET Framework 3.5 서비스 팩 1
+<span data-ttu-id="d9457-101">.NET Framework 3.5 서비스 팩 1</span><span class="sxs-lookup"><span data-stu-id="d9457-101">.NET Framework 3.5 Service Pack 1</span></span>

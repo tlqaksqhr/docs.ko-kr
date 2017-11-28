@@ -1,1 +1,1 @@
-Itanium
+<span data-ttu-id="cd404-101">Itanium</span><span class="sxs-lookup"><span data-stu-id="cd404-101">Itanium</span></span>

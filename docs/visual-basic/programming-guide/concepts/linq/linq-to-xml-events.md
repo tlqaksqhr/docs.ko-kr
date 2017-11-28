@@ -1,59 +1,51 @@
 ---
-title: "LINQ to XML 이벤트 (Visual Basic) | Microsoft 문서"
+title: "LINQ to XML 이벤트 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 34923928-b99c-4004-956e-38f6db25e910
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2b7756845f155c4683015d54b41f2ecc09b29333
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b19d8f19f9feb1d385f9900d76d2a7af8e89bbeb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="linq-to-xml-events-visual-basic"></a>LINQ to XML 이벤트 (Visual Basic)
-[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]이벤트를 사용 하는 XML 트리가 변경 될 때 알림을 받을 수 있습니다.  
+# <a name="linq-to-xml-events-visual-basic"></a><span data-ttu-id="4f748-102">LINQ to XML 이벤트 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4f748-102">LINQ to XML Events (Visual Basic)</span></span>
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="4f748-103"> 이벤트를 통해 XML 트리가 변경될 때 알림을 받을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4f748-103"> events enable you to be notified when an XML tree is altered.</span></span>  
   
- 모든 <xref:System.Xml.Linq.XObject>.</xref:System.Xml.Linq.XObject> 의 인스턴스에 이벤트를 추가할 수 있습니다. 그런 다음 이벤트 처리기가 수정에 대 한 이벤트 수신 <xref:System.Xml.Linq.XObject>와 해당 하위 항목의.</xref:System.Xml.Linq.XObject> 예를 들어, 이벤트 처리기를 트리의 루트에 추가하고 해당 이벤트 처리기에서 트리의 모든 수정을 처리할 수 있습니다.  
+ <span data-ttu-id="4f748-104"><xref:System.Xml.Linq.XObject>의 인스턴스에 이벤트를 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4f748-104">You can add events to an instance of any <xref:System.Xml.Linq.XObject>.</span></span> <span data-ttu-id="4f748-105">이벤트 처리기는 이 <xref:System.Xml.Linq.XObject>와 해당 하위 항목의 수정에 대한 이벤트를 받습니다.</span><span class="sxs-lookup"><span data-stu-id="4f748-105">The event handler will then receive events for modifications to that <xref:System.Xml.Linq.XObject> and any of its descendants.</span></span> <span data-ttu-id="4f748-106">예를 들어, 이벤트 처리기를 트리의 루트에 추가하고 해당 이벤트 처리기에서 트리의 모든 수정을 처리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4f748-106">For example, you can add an event handler to the root of the tree, and handle all modifications to the tree from that event handler.</span></span>  
   
- 에 대 한 예제 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] <xref:System.Xml.Linq.XObject.Changing>및 <xref:System.Xml.Linq.XObject.Changed>.</xref:System.Xml.Linq.XObject.Changed> </xref:System.Xml.Linq.XObject.Changing> 이벤트 참조  
+ <span data-ttu-id="4f748-107">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 이벤트의 예제는 <xref:System.Xml.Linq.XObject.Changing> 및 <xref:System.Xml.Linq.XObject.Changed>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="4f748-107">For examples of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] events, see <xref:System.Xml.Linq.XObject.Changing> and <xref:System.Xml.Linq.XObject.Changed>.</span></span>  
   
-## <a name="types-and-events"></a>형식 및 이벤트  
- 이벤트 작업을 할 때 다음 형식을 사용할 수 있습니다.  
+## <a name="types-and-events"></a><span data-ttu-id="4f748-108">형식 및 이벤트</span><span class="sxs-lookup"><span data-stu-id="4f748-108">Types and Events</span></span>  
+ <span data-ttu-id="4f748-109">이벤트 작업을 할 때 다음 형식을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4f748-109">You use the following types when working with events:</span></span>  
   
-|형식|설명|  
+|<span data-ttu-id="4f748-110">형식</span><span class="sxs-lookup"><span data-stu-id="4f748-110">Type</span></span>|<span data-ttu-id="4f748-111">설명</span><span class="sxs-lookup"><span data-stu-id="4f748-111">Description</span></span>|  
 |----------|-----------------|  
-|<xref:System.Xml.Linq.XObjectChange></xref:System.Xml.Linq.XObjectChange>|<xref:System.Xml.Linq.XObject>.</xref:System.Xml.Linq.XObject> 에 대 한 이벤트가 발생할 때 이벤트 형식을 지정합니다|  
-|<xref:System.Xml.Linq.XObjectChangeEventArgs></xref:System.Xml.Linq.XObjectChangeEventArgs>|에 대 한 데이터를 제공 된 <xref:System.Xml.Linq.XObject.Changing>및 <xref:System.Xml.Linq.XObject.Changed>이벤트.</xref:System.Xml.Linq.XObject.Changed> </xref:System.Xml.Linq.XObject.Changing>|  
+|<xref:System.Xml.Linq.XObjectChange>|<span data-ttu-id="4f748-112"><xref:System.Xml.Linq.XObject>에 대한 이벤트가 발생할 때 이벤트 형식을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4f748-112">Specifies the event type when an event is raised for an <xref:System.Xml.Linq.XObject>.</span></span>|  
+|<xref:System.Xml.Linq.XObjectChangeEventArgs>|<span data-ttu-id="4f748-113"><xref:System.Xml.Linq.XObject.Changing> 및 <xref:System.Xml.Linq.XObject.Changed> 이벤트에 대한 데이터를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="4f748-113">Provides data for the <xref:System.Xml.Linq.XObject.Changing> and <xref:System.Xml.Linq.XObject.Changed> events.</span></span>|  
   
- 다음 이벤트는 XML 트리를 수정할 때 발생합니다.  
+ <span data-ttu-id="4f748-114">다음 이벤트는 XML 트리를 수정할 때 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="4f748-114">The following events are raised when you modify an XML tree:</span></span>  
   
-|Event|설명|  
+|<span data-ttu-id="4f748-115">Event</span><span class="sxs-lookup"><span data-stu-id="4f748-115">Event</span></span>|<span data-ttu-id="4f748-116">설명</span><span class="sxs-lookup"><span data-stu-id="4f748-116">Description</span></span>|  
 |-----------|-----------------|  
-|<xref:System.Xml.Linq.XObject.Changing></xref:System.Xml.Linq.XObject.Changing>|이 바로 전에 발생 <xref:System.Xml.Linq.XObject>또는 해당 하위 항목이 변경 되기.</xref:System.Xml.Linq.XObject>|  
-|<xref:System.Xml.Linq.XObject.Changed></xref:System.Xml.Linq.XObject.Changed>|발생 경우는 <xref:System.Xml.Linq.XObject>변경 되거나 해당 하위 항목의 변경 된.</xref:System.Xml.Linq.XObject>|  
+|<xref:System.Xml.Linq.XObject.Changing>|<span data-ttu-id="4f748-117">이 <xref:System.Xml.Linq.XObject> 또는 해당 하위 항목이 변경되기 직전에 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="4f748-117">Occurs just before this <xref:System.Xml.Linq.XObject> or any of its descendants is going to change.</span></span>|  
+|<xref:System.Xml.Linq.XObject.Changed>|<span data-ttu-id="4f748-118"><xref:System.Xml.Linq.XObject>가 변경되거나 해당 하위 항목이 변경될 때 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="4f748-118">Occurs when an <xref:System.Xml.Linq.XObject> has changed or any of its descendants have changed.</span></span>|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a><span data-ttu-id="4f748-119">예제</span><span class="sxs-lookup"><span data-stu-id="4f748-119">Example</span></span>  
   
-### <a name="description"></a>설명  
- XML 트리에 특정 집계 정보를 유지 관리하려는 경우 이벤트가 유용합니다. 예를 들어, 청구서의 개별 품목에 대한 합계인 청구서 총계를 유지 관리하려고 할 수 있습니다. 이 예제에서는 이벤트를 사용하여 복합 요소 `Items` 아래의 모든 자식 요소에 대한 총계를 유지 관리합니다.  
+### <a name="description"></a><span data-ttu-id="4f748-120">설명</span><span class="sxs-lookup"><span data-stu-id="4f748-120">Description</span></span>  
+ <span data-ttu-id="4f748-121">XML 트리에 특정 집계 정보를 유지 관리하려는 경우 이벤트가 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="4f748-121">Events are useful when you want to maintain some aggregate information in an XML tree.</span></span> <span data-ttu-id="4f748-122">예를 들어, 청구서의 개별 품목에 대한 합계인 청구서 총계를 유지 관리하려고 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4f748-122">For example, you may want maintain an invoice total that is the sum of the line items of the invoice.</span></span> <span data-ttu-id="4f748-123">이 예제에서는 이벤트를 사용하여 복합 요소 `Items` 아래의 모든 자식 요소에 대한 총계를 유지 관리합니다.</span><span class="sxs-lookup"><span data-stu-id="4f748-123">This example uses events to maintain the total of all of the child elements under the complex element `Items`.</span></span>  
   
-### <a name="code"></a>코드  
+### <a name="code"></a><span data-ttu-id="4f748-124">코드</span><span class="sxs-lookup"><span data-stu-id="4f748-124">Code</span></span>  
   
 ```vb  
 Module Module1  
@@ -109,8 +101,8 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a>설명  
- 이 코드의 결과는 다음과 같습니다.  
+### <a name="comments"></a><span data-ttu-id="4f748-125">설명</span><span class="sxs-lookup"><span data-stu-id="4f748-125">Comments</span></span>  
+ <span data-ttu-id="4f748-126">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="4f748-126">This code produces the following output:</span></span>  
   
 ```  
 Changed System.Xml.Linq.XElement Add  
@@ -131,5 +123,5 @@ Total:308
 </Root>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [고급 LINQ to XML 프로그래밍 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a><span data-ttu-id="4f748-127">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4f748-127">See Also</span></span>  
+ [<span data-ttu-id="4f748-128">고급 LINQ to XML 프로그래밍 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4f748-128">Advanced LINQ to XML Programming (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

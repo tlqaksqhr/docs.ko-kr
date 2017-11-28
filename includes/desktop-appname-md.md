@@ -1,1 +1,1 @@
-데스크톱
+<span data-ttu-id="8b16c-101">데스크톱</span><span class="sxs-lookup"><span data-stu-id="8b16c-101">desktop</span></span>

@@ -1,89 +1,72 @@
 ---
-title: "XML 리터럴 개요 (Visual Basic) | Microsoft 문서"
+title: "XML 리터럴 개요(Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - XML literals [Visual Basic], about XML literals
 - declaring XML literals [Visual Basic]
 - LINQ to XML [Visual Basic], XML literals
 - literals [Visual Basic], XML
 ms.assetid: 37987c15-4ab8-471b-bd45-399816bfb57f
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 57d036910ba9e49385caca28de222a8a8e28ec56
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 59ce79995025692428263120f9c21c7baf5cf231
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="xml-literals-overview-visual-basic"></a>XML 리터럴 개요(Visual Basic)
-*XML 리터럴* 으로 XML을 직접 통합할 수 여 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 코드입니다. XML 리터럴 구문을 나타내는 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 개체는 XML 1.0 구문을 비슷합니다. 이렇게 하면 보다 쉽게 코드에 동일한 최종 XML 구조 때문에 XML 요소와 문서를 프로그래밍 방식으로 만들 수 있습니다.  
+# <a name="xml-literals-overview-visual-basic"></a><span data-ttu-id="242ed-102">XML 리터럴 개요(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="242ed-102">XML Literals Overview (Visual Basic)</span></span>
+<span data-ttu-id="242ed-103">*XML 리터럴에* 으로 XML을 직접 통합할 수 있습니다 프로그램 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-103">An *XML literal* allows you to incorporate XML directly into your [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] code.</span></span> <span data-ttu-id="242ed-104">XML 리터럴 구문을 나타내는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 개체는 XML 1.0 구문을 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-104">The XML literal syntax represents [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects, and it is the similar to the XML 1.0 syntax.</span></span> <span data-ttu-id="242ed-105">이렇게 하면 더 쉽게 코드에 최종 XML 구조가 동일 하기 때문에 XML 요소 및 문서를 프로그래밍 방식으로 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-105">This makes it easier to create XML elements and documents programmatically because your code has the same structure as the final XML.</span></span>  
   
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]XML 리터럴을에 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 개체입니다. [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]와 잘 통합 만들고 XML을 조작 하기 위한 간단한 개체 모델 및이 모델을 제공 [!INCLUDE[vbteclinqext](../../../../csharp/getting-started/includes/vbteclinqext_md.md)]합니다. 자세한 내용은 <xref:System.Xml.Linq.XElement>.</xref:System.Xml.Linq.XElement> 을 참조 하십시오.  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="242ed-106">XML 리터럴을 컴파일합니다 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-106"> compiles XML literals into [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects.</span></span> [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="242ed-107">와 잘 통합 만들고 XML을 조작 하기 위한 간단한 개체 모델 및이 모델을 제공 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-107"> provides a simple object model for creating and manipulating XML, and this model integrates well with [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].</span></span> <span data-ttu-id="242ed-108">자세한 내용은 <xref:System.Xml.Linq.XElement>을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="242ed-108">For more information, see <xref:System.Xml.Linq.XElement>.</span></span>  
   
- 포함할 수는 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] XML 리터럴에 식입니다. 런타임 시 응용 프로그램 만들기는 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 각 리터럴, 포함된 된 식의 값을 통합에 대 한 개체입니다. 이렇게 하면 XML 리터럴 내 동적 콘텐츠를 지정할 수 있습니다. 자세한 내용은 참조 [XML의 포함 식](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)합니다.  
+ <span data-ttu-id="242ed-109">포함할 수는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] XML 리터럴에 식입니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-109">You can embed a [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] expression in an XML literal.</span></span> <span data-ttu-id="242ed-110">응용 프로그램 실행 시 만든는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 포함된 된 식의 값을 통합 하는 각 리터럴에 대 한 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-110">At run time, your application creates a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object for each literal, incorporating the values of the embedded expressions.</span></span> <span data-ttu-id="242ed-111">이렇게 하면 XML 리터럴 내 동적 콘텐츠를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-111">This lets you specify dynamic content inside an XML literal.</span></span> <span data-ttu-id="242ed-112">자세한 내용은 참조 [XML의 포함 식](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-112">For more information, see [Embedded Expressions in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).</span></span>  
   
- XML 리터럴 구문 및 XML 1.0 구문 차이점에 대 한 자세한 내용은 참조 [XML 리터럴 및 XML 1.0 사양](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)합니다.  
+ <span data-ttu-id="242ed-113">XML 리터럴 구문 및 XML 1.0 구문 차이점에 대 한 자세한 내용은 참조 [XML 리터럴 및 XML 1.0 사양](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-113">For more information about the differences between the XML literal syntax and the XML 1.0 syntax, see [XML Literals and the XML 1.0 Specification](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md).</span></span>  
   
-## <a name="simple-literals"></a>단순 리터럴  
- 만들 수는 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 개체 프로그램 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 유효한 XML에 입력 하거나 붙여 하 여 코드입니다. XML 요소 리터럴 반환는 <xref:System.Xml.Linq.XElement>개체.</xref:System.Xml.Linq.XElement> 자세한 내용은 참조 [XML 요소 리터럴](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) 및 [XML 리터럴 및 XML 1.0 사양](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)합니다. 다음 예제에서는 여러 자식 요소가 있는 XML 요소를 만듭니다.  
+## <a name="simple-literals"></a><span data-ttu-id="242ed-114">단순 리터럴</span><span class="sxs-lookup"><span data-stu-id="242ed-114">Simple Literals</span></span>  
+ <span data-ttu-id="242ed-115">만들 수는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 개체 프로그램 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 에 유효한 XML을 입력 하거나 붙여 하 여 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-115">You can create a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object in your [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] code by typing or pasting in valid XML.</span></span> <span data-ttu-id="242ed-116">XML 요소 리터럴의 반환는 <xref:System.Xml.Linq.XElement> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-116">An XML element literal returns an <xref:System.Xml.Linq.XElement> object.</span></span> <span data-ttu-id="242ed-117">자세한 내용은 참조 [XML 요소 리터럴](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) 및 [XML 리터럴 및 XML 1.0 사양](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-117">For more information, see [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) and [XML Literals and the XML 1.0 Specification](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md).</span></span> <span data-ttu-id="242ed-118">다음 예제에서는 여러 자식 요소가 있는 XML 요소를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-118">The following example creates an XML element that has several child elements.</span></span>  
   
- [!code-vb[VbXMLSamples #&5;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_1.vb)]  
+ [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_1.vb)]  
   
- XML 리터럴을 사용을 시작 하 여 XML 문서를 만들 수 `<?xml version="1.0"?>`다음 예제와 같이 합니다. XML 문서 리터럴 반환는 <xref:System.Xml.Linq.XDocument>개체.</xref:System.Xml.Linq.XDocument> 자세한 내용은 참조 [XML 문서 리터럴](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)합니다.  
+ <span data-ttu-id="242ed-119">XML 리터럴을 사용을 시작 하 여 XML 문서를 만들 수 `<?xml version="1.0"?>`다음 예제에 나온 것 처럼 합니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-119">You can create an XML document by starting an XML literal with `<?xml version="1.0"?>`, as shown in the following example.</span></span> <span data-ttu-id="242ed-120">XML 문서 리터럴의 반환는 <xref:System.Xml.Linq.XDocument> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-120">An XML document literal returns an <xref:System.Xml.Linq.XDocument> object.</span></span> <span data-ttu-id="242ed-121">자세한 내용은 참조 [XML 문서 리터럴](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-121">For more information, see [XML Document Literal](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).</span></span>  
   
- [!code-vb[VbXMLSamples #&6;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_2.vb)]  
+ [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_2.vb)]  
   
 > [!NOTE]
->  XML 리터럴 구문을 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] XML 1.0 사양에 대 한 구문에 일치 하지 않습니다. 자세한 내용은 참조 [XML 리터럴 및 XML 1.0 사양](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)합니다.  
+>  <span data-ttu-id="242ed-122">XML 리터럴 구문을 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] XML 1.0 사양에 대 한 구문에서와 동일 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-122">The XML literal syntax in [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] is not identical to the syntax in the XML 1.0 specification.</span></span> <span data-ttu-id="242ed-123">자세한 내용은 참조 [XML 리터럴 및 XML 1.0 사양](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-123">For more information, see [XML Literals and the XML 1.0 Specification](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md).</span></span>  
   
-## <a name="line-continuation"></a>줄 연속 문자  
- XML 리터럴은 줄 연속 문자 (공백 밑줄 enter 시퀀스)를 사용 하지 않고 여러 줄으로 나타날 수 있습니다. 이렇게 하면 보다 쉽게 XML 문서를 사용 하 여 코드에서 XML 리터럴의 비교할 수 있습니다.  
+## <a name="line-continuation"></a><span data-ttu-id="242ed-124">줄 연속</span><span class="sxs-lookup"><span data-stu-id="242ed-124">Line Continuation</span></span>  
+ <span data-ttu-id="242ed-125">XML 리터럴은 줄 연속 문자 (공백 밑줄 enter 시퀀스)를 사용 하지 않고 여러 줄으로 나타날 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-125">An XML literal can span multiple lines without using line continuation characters (the space-underscore-enter sequence).</span></span> <span data-ttu-id="242ed-126">이렇게 하면 보다 쉽게 XML 문서를 사용 하 여 코드에서 XML 리터럴의 비교할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-126">This makes it easier to compare XML literals in code with XML documents.</span></span>  
   
- 컴파일러는 XML 리터럴을의 일부로 줄 연속 문자를 처리합니다. 따라서를 사용 해야 공간 밑줄 입력 시퀀스에 포함 되어 있는 경우에는 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 개체입니다.  
+ <span data-ttu-id="242ed-127">컴파일러는 XML 리터럴을의 일부로 줄 연속 문자를 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-127">The compiler treats line continuation characters as part of an XML literal.</span></span> <span data-ttu-id="242ed-128">따라서 사용할지 공간 밑줄 입력 시퀀스에 속해 있는 경우에는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-128">Therefore, you should use the space-underscore-enter sequence only when it belongs in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object.</span></span>  
   
- 그러나, 여러 줄의 식이 포함된 된 식에 있는 경우 줄 연속 문자가 필요 합니다. 자세한 내용은 참조 [XML의 포함 식](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)합니다.  
+ <span data-ttu-id="242ed-129">그러나 여러 줄의 식이 포함된 된 식에 있는 경우에 줄 연속 문자 필요지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-129">However, you do need line continuation characters if you have a multiline expression in an embedded expression.</span></span> <span data-ttu-id="242ed-130">자세한 내용은 참조 [XML의 포함 식](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-130">For more information, see [Embedded Expressions in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).</span></span>  
   
-## <a name="embedding-queries-in-xml-literals"></a>XML 리터럴에 쿼리를 포함합니다.  
- 포함된 된 식에는 쿼리를 사용할 수 있습니다. 이렇게 하면 쿼리에서 반환 되는 요소는 XML 요소에 추가 됩니다. 이 방법으로 xml 리터럴에서 사용자의 쿼리 결과 같은 동적 콘텐츠를 추가할 수 있습니다.  
+## <a name="embedding-queries-in-xml-literals"></a><span data-ttu-id="242ed-131">XML 리터럴에 쿼리 포함</span><span class="sxs-lookup"><span data-stu-id="242ed-131">Embedding Queries in XML Literals</span></span>  
+ <span data-ttu-id="242ed-132">포함된 된 식에는 쿼리를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-132">You can use a query in an embedded expression.</span></span> <span data-ttu-id="242ed-133">이렇게 하면 쿼리에서 반환 하는 요소는 XML 요소에 추가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-133">When you do this, the elements returned by the query are added to the XML element.</span></span> <span data-ttu-id="242ed-134">이렇게 하면 XML 리터럴을에 사용자의 쿼리 결과 같은 동적 콘텐츠를 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-134">This lets you add dynamic content, such as the result of a user's query, to an XML literal.</span></span>  
   
- 예를 들어 다음 코드를 사용 하 여 포함 된 쿼리는의 멤버에서 XML 요소를 만드는 `phoneNumbers2` 배열 하 고 다음 요소 자식으로 추가 `contact2`합니다.  
+ <span data-ttu-id="242ed-135">예를 들어 다음 코드를 사용 하 여 포함 된 쿼리의 멤버에서 XML 요소를 만드는 `phoneNumbers2` 배열 하 고 다음의 자식으로 해당 요소를 추가 `contact2`합니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-135">For example, the following code uses an embedded query to create XML elements from the members of the `phoneNumbers2` array and then add those elements as children of `contact2`.</span></span>  
   
- [!code-vb[VbXMLSamples #&7;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_3.vb)]  
+ [!code-vb[VbXMLSamples#7](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_3.vb)]  
   
-## <a name="how-the-compiler-creates-objects-from-xml-literals"></a>컴파일러에서 XML 리터럴을 개체를 만드는 방법  
- [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 컴파일러는 XML 리터럴을 해당 하는 호출으로 변환 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 생성자 작성 하는 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] 개체입니다. 예를 들어는 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 컴파일러에 대 한 호출에 다음 코드 예제에서는 변환 됩니다는 <xref:System.Xml.Linq.XProcessingInstruction>XML 버전 명령에 대 한 생성자를 호출 하는 <xref:System.Xml.Linq.XElement>에 대 한 생성자는 `<contact>`, `<name>`, 및 `<phone>` 요소 및에 대 한 호출의 <xref:System.Xml.Linq.XAttribute>에 대 한 생성자는 `type` 특성.</xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XProcessingInstruction> 특히, 다음 샘플에 특성을 지정 된는 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 컴파일러를 호출 하는 <xref:System.Xml.Linq.XAttribute.%23ctor%28System.Xml.Linq.XName%2CSystem.Object%29>생성자를 두 번.</xref:System.Xml.Linq.XAttribute.%23ctor%28System.Xml.Linq.XName%2CSystem.Object%29> 첫 번째 값을 전달 합니다 `type` 에 대 한는 `name` 매개 변수와 값은 `home` 에 대 한는 `value` 매개 변수입니다. 두 번째는 값을 전달 합니다 `type` 에 대 한는 `name` 매개 변수를 하지만 값 `work` 에 대 한는 `value` 매개 변수입니다.  
+## <a name="how-the-compiler-creates-objects-from-xml-literals"></a><span data-ttu-id="242ed-136">컴파일러가는 XML 리터럴에서 개체를 만드는 방법</span><span class="sxs-lookup"><span data-stu-id="242ed-136">How the Compiler Creates Objects from XML Literals</span></span>  
+ <span data-ttu-id="242ed-137">[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러에 해당 하는 호출으로 XML 리터럴을 변환 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 생성자를 작성 하는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-137">The [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compiler translates XML literals into calls to the equivalent [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] constructors to build up the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] object.</span></span> <span data-ttu-id="242ed-138">예를 들어는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러는 다음 코드 예제에 대 한 호출으로 변환는 <xref:System.Xml.Linq.XProcessingInstruction> XML 버전 명령에 대 한 생성자를 호출 하는 <xref:System.Xml.Linq.XElement> 에 대 한 생성자는 `<contact>`, `<name>`, 및 `<phone>`요소 및에 대 한 호출에서 <xref:System.Xml.Linq.XAttribute> 에 대 한 생성자는 `type` 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-138">For example, the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compiler will translate the following code example into a call to the <xref:System.Xml.Linq.XProcessingInstruction> constructor for the XML version instruction, calls to the <xref:System.Xml.Linq.XElement> constructor for the `<contact>`, `<name>`, and `<phone>` elements, and calls to the <xref:System.Xml.Linq.XAttribute> constructor for the `type` attribute.</span></span> <span data-ttu-id="242ed-139">구체적으로, 다음 샘플에 특성을 지정 된 된 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러를 호출 합니다는 <xref:System.Xml.Linq.XAttribute.%23ctor%28System.Xml.Linq.XName%2CSystem.Object%29> 생성자를 두 번입니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-139">Specifically, given the attributes in the following sample, the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] compiler will call the <xref:System.Xml.Linq.XAttribute.%23ctor%28System.Xml.Linq.XName%2CSystem.Object%29> constructor twice.</span></span> <span data-ttu-id="242ed-140">첫 번째 값을 전달 합니다 `type` 에 대 한는 `name` 매개 변수와 값 `home` 에 대 한는 `value` 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-140">The first will pass the value `type` for the `name` parameter and the value `home` for the `value` parameter.</span></span> <span data-ttu-id="242ed-141">두 번째 값을 전달 합니다는 `type` 에 대 한는 `name` 매개 변수를 하지만 값 `work` 에 대 한는 `value` 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="242ed-141">The second will also pass the value `type` for the `name` parameter, but the value `work` for the `value` parameter.</span></span>  
   
- [!code-vb[VbXMLSamples #&6;](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_2.vb)]  
+ [!code-vb[VbXMLSamples#6](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-literals-overview_2.vb)]  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Xml.Linq.XElement>   
- [Visual Basic에서 XML 만들기](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)   
- [XML의 포함된 식](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)   
- [XML 문서 리터럴](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)   
- [XML 요소 리터럴](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)   
- [XML 리터럴](../../../../visual-basic/language-reference/xml-literals/index.md)
+## <a name="see-also"></a><span data-ttu-id="242ed-142">참고 항목</span><span class="sxs-lookup"><span data-stu-id="242ed-142">See Also</span></span>  
+ <xref:System.Xml.Linq.XElement>  
+ [<span data-ttu-id="242ed-143">Visual Basic에서 XML 만들기</span><span class="sxs-lookup"><span data-stu-id="242ed-143">Creating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
+ [<span data-ttu-id="242ed-144">XML의 포함 식</span><span class="sxs-lookup"><span data-stu-id="242ed-144">Embedded Expressions in XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)  
+ [<span data-ttu-id="242ed-145">XML 문서 리터럴</span><span class="sxs-lookup"><span data-stu-id="242ed-145">XML Document Literal</span></span>](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)  
+ [<span data-ttu-id="242ed-146">XML 요소 리터럴</span><span class="sxs-lookup"><span data-stu-id="242ed-146">XML Element Literal</span></span>](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
+ [<span data-ttu-id="242ed-147">XML 리터럴</span><span class="sxs-lookup"><span data-stu-id="242ed-147">XML Literals</span></span>](../../../../visual-basic/language-reference/xml-literals/index.md)
