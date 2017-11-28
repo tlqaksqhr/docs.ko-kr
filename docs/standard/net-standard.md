@@ -1,5 +1,5 @@
 ---
-title: ".NET 표준 | Microsoft 문서"
+title: ".NET 표준"
 description: ".NET Standard, 해당 버전 및 .NET Standard를 지원하는 .NET 구현에 대해 알아봅니다."
 keywords: ".NET 표준, PCL, .NET"
 author: mairaw
@@ -10,12 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
+ms.openlocfilehash: ccb44b94f1b3ce2fb369de368454679b25ed351f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b47d4c74a01b99d743b69328c201096bc8d89794
-ms.openlocfilehash: eaae98ce0f7a1b49669098812193ae1b629584a4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="net-standard"></a>.NET 표준
 
@@ -151,4 +150,3 @@ NuGet 패키지는 하나 이상의 [프레임워크](frameworks.md)를 대상�
 
 ## <a name="see-also"></a>참고 항목
 [.NET Standard Versions](https://github.com/dotnet/standard/blob/master/docs/versions.md)(.NET 표준 버전)
-

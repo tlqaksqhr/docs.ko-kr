@@ -1,35 +1,30 @@
 ---
-title: "방법: LINQ to XML 축 메서드 (Visual Basic) 작성 | Microsoft 문서"
+title: "방법: LINQ to XML 축 메서드 (Visual Basic) 작성"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: b676f025-a24c-4076-8713-aa809b2b8ce0
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6749c2eee72cdc24c5dc3957e00a8bab54ce226b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: d0c0c61514e6f51b060c3ccd431920c3a9adc418
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>방법: LINQ to XML 축 메서드 (Visual Basic) 작성
 XML 트리에서 컬렉션을 검색하는 축 메서드를 작성할 수 있습니다. 축 메서드를 작성하는 가장 좋은 방법 중 하나는 요소나 특성의 컬렉션을 반환하는 확장 메서드를 작성하는 것입니다. 응용 프로그램의 요구 사항에 따라 요소나 특성의 특정 하위 집합을 반환하는 확장명 메서드를 작성할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 두 가지 확장명 메서드를 사용합니다. 첫 번째 확장 메서드에 `GetXPath`에 대해 작동 <xref:System.Xml.Linq.XObject>, 평가 될 때 XPath 식을 반환 하 고 노드 또는 특성을 반환 합니다.</xref:System.Xml.Linq.XObject> 두 번째 확장 메서드인 `Find`, <xref:System.Xml.Linq.XElement>.</xref:System.Xml.Linq.XElement> 에서 작동 합니다. 컬렉션을 반환 <xref:System.Xml.Linq.XAttribute>개체 및 <xref:System.Xml.Linq.XElement>일부를 포함 하는 개체 텍스트를 지정 합니다.</xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XAttribute>  
+ 다음 예제에서는 두 가지 확장명 메서드를 사용합니다. 첫 번째 확장 메서드인 `GetXPath`는 <xref:System.Xml.Linq.XObject>에 대해 작동하며 계산될 때 노드나 특성을 반환할 XPath 식을 반환합니다. 두 번째 확장 메서드인 `Find`는 <xref:System.Xml.Linq.XElement>에 대해 작동하며 지정된 일부 텍스트가 포함된 <xref:System.Xml.Linq.XAttribute> 개체와 <xref:System.Xml.Linq.XElement> 개체의 컬렉션을 반환합니다.  
   
- 이 예제에서는 다음 XML 문서: [샘플 XML 파일: 여러 구매 주문 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)합니다.  
+ 이 예제에서는 XML 문서 [샘플 XML 파일: 여러 구매 주문(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)을 사용합니다.  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -231,4 +226,3 @@ End Module
   
 ## <a name="see-also"></a>참고 항목  
  [고급 쿼리 기술 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
-

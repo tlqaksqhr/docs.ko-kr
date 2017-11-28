@@ -17,6 +17,3 @@
 ### [방법: XML 자식 요소 액세스](how-to-access-xml-child-elements.md)
 ### [방법: XML 특성 액세스](how-to-access-xml-attributes.md)
 ### [방법: XML 네임스페이스 접두사 선언 및 사용](how-to-declare-and-use-xml-namespace-prefixes.md)
-## [XML IntelliSense](xml-intellisense.md)
-### [XML IntelliSense 사용](how-to-enable-xml-intellisense.md)
-### [XML to Schema 마법사](xml-to-schema-wizard.md)

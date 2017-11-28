@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
-ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
 ms.openlocfilehash: 263662c1c7f22c84e0de14c6480fa9807b46b2f2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="what-is-managed-code"></a>"관리 코드"란?
 
 .NET Framework로 작업하는 경우 “관리 코드”라는 용어를 자주 발견하게 됩니다. 이 문서에서는 이 용어의 의미 및 관련된 추가 정보를 설명합니다.
@@ -47,4 +45,3 @@ ms.lasthandoff: 08/21/2017
 *   [.NET Framework 개념 개요](https://msdn.microsoft.com/library/zw4w595w.aspx)
 *   [안전하지 않은 코드 및 포인터](https://msdn.microsoft.com/library/t2yzs44b.aspx)
 *   [상호 운용성(C# 프로그래밍 가이드)](https://msdn.microsoft.com/library/ms173184.aspx)
-

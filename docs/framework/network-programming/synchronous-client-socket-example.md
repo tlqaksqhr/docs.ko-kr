@@ -8,25 +8,22 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - sockets, code examples
 - synchronous client sockets
 - sockets, synchronous client sockets
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 759585d1029742f6f45e9f7253282af05accc82e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f7cf48f98b60d287cea1615cc8aefef6151c805c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="synchronous-client-socket-example"></a>동기 클라이언트 소켓 예제
 다음 예제 프로그램에서는 서버에 연결하는 클라이언트를 만듭니다. 이 클라이언트는 동기 소켓으로 빌드되므로 서버에서 응답을 반환할 때까지 클라이언트 응용 프로그램의 실행이 일시 중단됩니다. 응용 프로그램은 서버에 문자열을 보낸 다음 서버에서 반환된 문자열을 콘솔에 표시합니다.  
@@ -47,12 +44,12 @@ Public Class SynchronousSocketClient
   
         ' Establish the remote endpoint for the socket.  
         ' This example uses port 11000 on the local computer.  
-        Dim ipHostInfo As IPHostEntry = Dns.Resolve(Dns.GetHostName())  
+        Dim ipHostInfo As IPHostEntry = Dns.GetHostEntry(Dns.GetHostName())  
         Dim ipAddress As IPAddress = ipHostInfo.AddressList(0)  
         Dim remoteEP As New IPEndPoint(ipAddress, 11000)  
   
         ' Create a TCP/IP socket.  
-        Dim sender As New Socket(AddressFamily.InterNetwork, _  
+        Dim sender As New Socket(ipAddress.AddressFamily, _  
             SocketType.Stream, ProtocolType.Tcp)  
   
         ' Connect the socket to the remote endpoint.  
@@ -97,12 +94,12 @@ public class SynchronousSocketClient {
         try {  
             // Establish the remote endpoint for the socket.  
             // This example uses port 11000 on the local computer.  
-            IPHostEntry ipHostInfo = Dns.Resolve(Dns.GetHostName());  
+            IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());  
             IPAddress ipAddress = ipHostInfo.AddressList[0];  
             IPEndPoint remoteEP = new IPEndPoint(ipAddress,11000);  
   
             // Create a TCP/IP  socket.  
-            Socket sender = new Socket(AddressFamily.InterNetwork,   
+            Socket sender = new Socket(ipAddress.AddressFamily,   
                 SocketType.Stream, ProtocolType.Tcp );  
   
             // Connect the socket to the remote endpoint. Catch any errors.  
@@ -148,7 +145,6 @@ public class SynchronousSocketClient {
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [동기 서버 소켓 예제](../../../docs/framework/network-programming/synchronous-server-socket-example.md)   
- [동기 클라이언트 소켓 사용](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)   
+ [동기 서버 소켓 예제](../../../docs/framework/network-programming/synchronous-server-socket-example.md)  
+ [동기 클라이언트 소켓 사용](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
  [소켓 코드 예제](../../../docs/framework/network-programming/socket-code-examples.md)
-
