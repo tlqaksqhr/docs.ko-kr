@@ -1,48 +1,50 @@
 ---
-title: "방법: 하드웨어 암호화 장치 액세스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "암호화"
-  - "CspParameters"
-  - "암호화"
-  - "하드웨어 암호화"
-  - "키 카드"
+title: "방법: 하드웨어 암호화 장치 액세스"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- encryption
+- key card
+- cryptography
+- hardware encryption
+- CspParameters
 ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
-caps.latest.revision: 9
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 5156316387f94d434301e2d5286bd325d7e04320
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 방법: 하드웨어 암호화 장치 액세스
-<xref:System.Security.Cryptography.CspParameters> 클래스를 사용하여 하드웨어 암호화 장치에 액세스할 수 있습니다.  예를 들어 이 클래스를 사용하여 스마트 카드, 하드웨어 난수 생성기 또는 특정 암호화 알고리즘의 하드웨어 구현과 응용 프로그램을 통합할 수 있습니다.  
+# <a name="how-to-access-hardware-encryption-devices"></a>방법: 하드웨어 암호화 장치 액세스
+<xref:System.Security.Cryptography.CspParameters> 클래스를 사용하여 하드웨어 암호화 장치에 액세스할 수 있습니다. 예를 들어 이 클래스를 사용하여 스마트 카드, 하드웨어 난수 생성기 또는 특정 암호화 알고리즘의 하드웨어 구현과 응용 프로그램을 통합할 수 있습니다.  
   
- <xref:System.Security.Cryptography.CspParameters> 클래스는 제대로 설치된 하드웨어 암호화 장치에 액세스하는 CSP\(암호화 서비스 공급자\)를 만듭니다.  레지스트리 편집기\(Regedit.exe\)를 통해 다음 레지스트리 키를 검사하여 CSP의 가용성을 확인할 수 있습니다. HKEY\_LOCAL\_MACHINE\\Software\\Microsoft\\Cryptography\\Defaults\\Provider.  
+ <xref:System.Security.Cryptography.CspParameters> 클래스는 제대로 설치된 하드웨어 암호화 장치에 액세스하는 CSP(암호화 서비스 공급자)를 만듭니다.  레지스트리 편집기(Regedit.exe)를 통해 다음 레지스트리 키를 검사하여 CSP의 가용성을 확인할 수 있습니다. HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Defaults\Provider.  
   
-### 키 카드를 사용하여 데이터에 서명하려면  
+### <a name="to-sign-data-using-a-key-card"></a>키 카드를 사용하여 데이터에 서명하려면  
   
 1.  정수 공급자 형식과 공급자 이름을 생성자에 전달하여 <xref:System.Security.Cryptography.CspParameters> 클래스의 새 인스턴스를 만듭니다.  
   
-2.  새로 만든 <xref:System.Security.Cryptography.CspParameters> 개체의 <xref:System.Security.Cryptography.CspParameters.Flags%2A> 속성에 적절한 플래그를 전달합니다.  예를 들어 <xref:System.Security.Cryptography.CspProviderFlags> 플래그를 전달합니다.  
+2.  새로 만든 <xref:System.Security.Cryptography.CspParameters> 개체의 <xref:System.Security.Cryptography.CspParameters.Flags%2A> 속성에 적절한 플래그를 전달합니다.  예를 들어 <xref:System.Security.Cryptography.CspProviderFlags.UseDefaultKeyContainer> 플래그를 전달합니다.  
   
-3.  <xref:System.Security.Cryptography.CspParameters> 개체를 생성자에 전달하여 <xref:System.Security.Cryptography.AsymmetricAlgorithm> 클래스\(예: <xref:System.Security.Cryptography.RSACryptoServiceProvider> 클래스\)의 새 인스턴스를 만듭니다.  
+3.  <xref:System.Security.Cryptography.CspParameters> 개체를 생성자에 전달하여 <xref:System.Security.Cryptography.AsymmetricAlgorithm> 클래스(예: <xref:System.Security.Cryptography.RSACryptoServiceProvider> 클래스)의 새 인스턴스를 만듭니다.  
   
 4.  `Sign` 메서드 중 하나를 사용하여 데이터에 서명하고 `Verify` 메서드 중 하나를 사용하여 데이터를 확인합니다.  
   
-### 하드웨어 난수 생성기를 사용하여 난수를 생성하려면  
+### <a name="to-generate-a-random-number-using-a-hardware-random-number-generator"></a>하드웨어 난수 생성기를 사용하여 난수를 생성하려면  
   
 1.  정수 공급자 형식과 공급자 이름을 생성자에 전달하여 <xref:System.Security.Cryptography.CspParameters> 클래스의 새 인스턴스를 만듭니다.  
   
@@ -50,14 +52,14 @@ caps.handback.revision: 9
   
 3.  <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetBytes%2A> 또는 <xref:System.Security.Cryptography.RNGCryptoServiceProvider.GetNonZeroBytes%2A> 메서드를 사용하여 난수를 만듭니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 스마트 카드를 사용하여 데이터에 서명하는 방법을 보여 줍니다.  코드 예제에서는 스마트 카드를 노출하는 <xref:System.Security.Cryptography.CspParameters> 개체를 만든 다음 CSP를 사용하여 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 개체를 초기화합니다.  그런 다음 일부 데이터에 서명하고 확인합니다.  
   
  [!code-cpp[Cryptography.SmartCardCSP#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Cryptography.SmartCardCSP/CPP/Cryptography.SmartCardCSP.cpp#1)]
  [!code-csharp[Cryptography.SmartCardCSP#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Cryptography.SmartCardCSP/CS/example.cs#1)]
  [!code-vb[Cryptography.SmartCardCSP#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Cryptography.SmartCardCSP/VB/example.vb#1)]  
   
-## 코드 컴파일  
+## <a name="compiling-the-code"></a>코드 컴파일  
   
 -   <xref:System> 및 <xref:System.Security.Cryptography> 네임스페이스를 포함합니다.  
   

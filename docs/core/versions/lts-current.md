@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: fedc7025-f320-4cba-957b-ef74885f66de
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 254611ef05af22eea616fcfe3288239a744e0ccc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-core-support"></a>.NET Core 지원
 
 .NET Core 지원에 대한 일반적인 설명입니다.
@@ -43,4 +41,3 @@ LTS 릴리스:
 ### <a name="further-reading"></a>추가 정보
 * [.NET Core Support Lifecycle Fact Sheet](https://www.microsoft.com/net/core/support)(.NET Core 지원 수명 주기 팩트 시트)
 * [Currently supported operating systems and versions](https://github.com/dotnet/core/blob/master/roadmap.md)(현재 지원되는 운영 체제 및 버전)
-

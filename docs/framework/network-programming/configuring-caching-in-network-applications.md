@@ -7,24 +7,17 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- cache [.NET Framework], configuring
+helpviewer_keywords: cache [.NET Framework], configuring
 ms.assetid: 3f694a1c-de5d-47cf-a6eb-cfc369fb8a9f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ea36db46b79c890b0b26cfc39e2aab5bc0e88e03
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3c06c05f2d5102d1822aa11c81f2814090e10ff6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="configuring-caching-in-network-applications"></a>네트워크 응용 프로그램에서 캐싱 구성
 캐싱을 구성하려면 응용 프로그램 또는 <xref:System.Net.WebRequest> 수준에서 캐시 정책을 지정해야 합니다. 다음 항목에서는 캐싱을 사용하도록 응용 프로그램 및 요청을 구성하는 방법을 보여 주는 코드 예제를 제공합니다.  
@@ -40,8 +33,7 @@ ms.lasthandoff: 08/21/2017
  응용 프로그램 또는 컴퓨터 구성 파일을 사용하여 캐시 정책을 구성할 수도 있습니다. 자세한 내용은 [\<requestCaching> 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [네트워크 응용 프로그램에 대한 캐시 관리](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [캐시 정책](../../../docs/framework/network-programming/cache-policy.md)   
- [위치 기반 캐시 정책](../../../docs/framework/network-programming/location-based-cache-policies.md)   
+ [네트워크 응용 프로그램에 대한 캐시 관리](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [캐시 정책](../../../docs/framework/network-programming/cache-policy.md)  
+ [위치 기반 캐시 정책](../../../docs/framework/network-programming/location-based-cache-policies.md)  
  [시간 기반 캐시 정책](../../../docs/framework/network-programming/time-based-cache-policies.md)
-

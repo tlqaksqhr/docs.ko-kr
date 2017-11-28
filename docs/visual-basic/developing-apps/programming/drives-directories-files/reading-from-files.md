@@ -1,45 +1,27 @@
 ---
 title: "Visual Basic에서 파일 읽기"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - data [Visual Basic], reading from files
 - I/O [Visual Basic], reading from files
 - examples [Visual Basic], reading from files
-- files, reading
-- reading files
+- files [Visual Basic], reading
+- reading files [Visual Basic]
 ms.assetid: ad831a1b-7d01-4f07-a47b-799f3037df19
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 29eddd4abbadd2b4dfa12c19213612f4822bbb3f
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 298f821cc2dd6e8152db71206669b243112b6a6a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="reading-from-files-in-visual-basic"></a>Visual Basic에서 파일 읽기
 이 섹션에서는 파일 읽기와 관련된 작업을 수행하는 방법을 설명합니다.  
@@ -91,4 +73,3 @@ ms.lasthandoff: 07/28/2017
   
  [연습: .NET Framework 메서드를 사용하여 파일 조작](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  파일과 디렉터리에서 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 메서드를 사용하는 방법을 보여 줍니다.
-

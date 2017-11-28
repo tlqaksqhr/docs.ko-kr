@@ -5,28 +5,20 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- wrappers, creating manually
+helpviewer_keywords: wrappers, creating manually
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 218e92b379d562be66c72cb731654907766f2ec4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 19f605203a79f8435d414fb3c2eb7041c9824640
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-wrappers-manually"></a>방법: 수동으로 래퍼 만들기
 관리 소스 코드에서 COM 형식을 수동으로 선언하도록 결정할 경우 기존 IDL(Interface Definition Language) 파일 또는 형식 라이브러리에서 시작하는 것이 좋습니다. IDL 파일이 없거나 형식 라이브러리 파일을 생성할 수 없으면 관리되는 선언을 만들고 결과 어셈블리를 형식 라이브러리에 내보내는 방식으로 COM 형식을 시뮬레이트할 수 있습니다.  
@@ -101,9 +93,9 @@ namespace SAServer
  }   
  [ComImport]  
  [Guid("116CCA1E-7E39-4515-9849-90790DA6431E")]  
- [ClassInterface(ClassInterfaceType.None)]   
+ [ClassInterface(ClassInterfaceType.None)]  
  [TypeLibType(TypeLibTypeFlags.FCanCreate)]  
- public class SATest : ISATest   
+ public class SATest : ISATest  
  {  
   [DispId(1)]  
   [MethodImpl(MethodImplOptions.InternalCall,   
@@ -115,10 +107,9 @@ namespace SAServer
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [런타임 호출 가능 래퍼 사용자 지정](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be)   
- [COM 데이터 형식](http://msdn.microsoft.com/en-us/f93ae35d-a416-4218-8700-c8218cc90061)   
- [방법: interop 어셈블리 편집](http://msdn.microsoft.com/en-us/16aacb20-2269-42bf-a812-b6a7df17e277)   
- [형식 라이브러리를 어셈블리로 변환 요약](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)   
- [Tlbimp.exe(형식 라이브러리 가져오기)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)   
+ [런타임 호출 가능 래퍼 사용자 지정](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be)  
+ [COM 데이터 형식](http://msdn.microsoft.com/en-us/f93ae35d-a416-4218-8700-c8218cc90061)  
+ [방법: Interop 어셈블리 편집](http://msdn.microsoft.com/en-us/16aacb20-2269-42bf-a812-b6a7df17e277)  
+ [형식 라이브러리를 어셈블리로 변환 요약](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
+ [Tlbimp.exe(형식 라이브러리 가져오기)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
  [Tlbexp.exe(형식 라이브러리 내보내기)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)
-

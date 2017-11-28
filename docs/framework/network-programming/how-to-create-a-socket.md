@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - application protocols, sockets
 - Networking
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - Internet, sockets
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 02b02b2fbc5398d7afda8884a04eafdaee12aef4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 721839e0e27682477f7ba3739d3c666208fae417
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-a-socket"></a>방법: 소켓 만들기
 소켓을 사용하여 원격 장치와 통신하려면 먼저 프로토콜 및 네트워크 주소 정보를 사용하여 소켓을 초기화해야 합니다. <xref:System.Net.Sockets.Socket> 클래스에 대한 생성자에는 소켓이 연결을 만드는 데 사용하는 주소 패밀리, 소켓 형식 및 프로토콜 형식을 지정하는 매개 변수가 있습니다.  
@@ -73,6 +70,5 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
  **소켓**이 만들어진 후 원격 끝점에 대한 연결을 시작하거나 원격 장치에서 연결을 수신할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [클라이언트 소켓 사용](../../../docs/framework/network-programming/using-client-sockets.md)   
+ [클라이언트 소켓 사용](../../../docs/framework/network-programming/using-client-sockets.md)  
  [소켓으로 수신](../../../docs/framework/network-programming/listening-with-sockets.md)
-

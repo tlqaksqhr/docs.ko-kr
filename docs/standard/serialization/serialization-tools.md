@@ -8,16 +8,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 593b675f-938c-44ff-807b-0ca9fea30103
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
 ms.openlocfilehash: cf1ad835d6fcebee6a048c0f7059eac8af15a89f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="serialization-tools"></a>Serialization 도구
 이 단원에는 serialization 도구에 대한 자세한 설명이 들어 있습니다. 명령줄에서 모든 도구를 실행할 수 있습니다.  
@@ -34,4 +33,3 @@ ms.lasthandoff: 08/21/2017
   
 ## <a name="see-also"></a>참고 항목  
  [도구](../../../docs/framework/tools/index.md)
-

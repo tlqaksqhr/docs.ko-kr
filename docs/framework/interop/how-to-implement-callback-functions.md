@@ -5,28 +5,24 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- callback function, implementing
+- csharp
+- vb
+- cpp
+helpviewer_keywords: callback function, implementing
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d4382c956bf3d56426be485897cdda75453b4910
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 5be0dbb6666da88897ceedf0757e2af720705a07
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-implement-callback-functions"></a>방법: 콜백 함수 구현
 다음 절차 및 예제에서는 관리되는 응용 프로그램이 플랫폼 호출을 사용하여 로컬 컴퓨터에서 각 창에 대한 핸들 값을 인쇄하는 방법을 보여 줍니다. 특히 프로시저 및 예제에서는 **EnumWindows** 함수를 사용하여 창 목록을 단계별로 실행하고 관리되는 콜백 함수(CallBack)를 사용하여 창 핸들 값을 인쇄합니다.  
@@ -141,6 +137,5 @@ int main()
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [콜백 함수](../../../docs/framework/interop/callback-functions.md)   
+ [콜백 함수](../../../docs/framework/interop/callback-functions.md)  
  [DLL 함수 호출](../../../docs/framework/interop/calling-a-dll-function.md)
-

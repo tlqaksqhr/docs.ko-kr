@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c46d4b8f6b9e3620c313e9737b556a6050da0126
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 0332bca146041aa955ea000cfeee78d3f5287036
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ipv6-auto-configuration"></a>IPv6 자동 구성
 IPv6의 중요한 목표 중 하나는 노드 플러그 앤 플레이를 지원하는 것입니다. 즉, 노드를 IPv6 네트워크에 플러그하여 사용자가 개입하지 않고 자동으로 구성되도록 해야 합니다.  
@@ -40,6 +34,5 @@ IPv6의 중요한 목표 중 하나는 노드 플러그 앤 플레이를 지원�
  모바일 장치가 확산됨에 따라 새로운 요구 사항이 제기되었습니다. 장치에서 IPv6 인터넷의 위치를 임의로 변경하고 기존 연결은 여전히 유지할 수 있어야 합니다. 이 기능을 제공하기 위해 모바일 노드에 언제나 도달할 수 있는 홈 주소가 할당됩니다. 모바일 노드가 홈에 있으면 홈 링크에 연결하고 홈 주소를 사용합니다. 모바일 노드가 항상 홈 외부에 있으면 일반적으로 라우터인 홈 에이전트에서 모바일 노드 및 이 노드와 통신하는 노드 간에 메시지를 릴레이합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [인터넷 프로토콜 버전 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)   
+ [인터넷 프로토콜 버전 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
  [소켓](../../../docs/framework/network-programming/sockets.md)
-
