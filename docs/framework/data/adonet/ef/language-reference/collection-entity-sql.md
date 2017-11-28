@@ -1,42 +1,44 @@
 ---
-title: "COLLECTION(Entity SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: COLLECTION(Entity SQL)
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 03228bfa-be3a-4ccc-82f8-eee429f85cf1
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 8d078749d20740cdade323edab975ce221e72cfa
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# COLLECTION(Entity SQL)
-COLLECTION 키워드는 인라인 함수의 정의에만 사용됩니다. 컬렉션 함수는 값 컬렉션에 대해 작업을 수행하고 스칼라 출력을 생성하는 함수입니다.  
+# <a name="collection-entity-sql"></a><span data-ttu-id="d29a5-102">COLLECTION(Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="d29a5-102">COLLECTION (Entity SQL)</span></span>
+<span data-ttu-id="d29a5-103">COLLECTION 키워드는 인라인 함수의 정의에만 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="d29a5-103">The COLLECTION keyword is only used in the definition of an inline function.</span></span> <span data-ttu-id="d29a5-104">컬렉션 함수는 값 컬렉션에 대해 작업을 수행하고 스칼라 출력을 생성하는 함수입니다.</span><span class="sxs-lookup"><span data-stu-id="d29a5-104">Collection functions are functions that operate on a collection of values and produce a scalar output.</span></span>  
   
-## 구문  
+## <a name="syntax"></a><span data-ttu-id="d29a5-105">구문</span><span class="sxs-lookup"><span data-stu-id="d29a5-105">Syntax</span></span>  
   
 ```  
-  
 COLLECTION(type_definition)   
 ```  
   
-## 인수  
+## <a name="arguments"></a><span data-ttu-id="d29a5-106">인수</span><span class="sxs-lookup"><span data-stu-id="d29a5-106">Arguments</span></span>  
  `type_definition`  
- 지원되는 형식, 행 또는 참조 컬렉션을 반환하는 식입니다.  
+ <span data-ttu-id="d29a5-107">지원되는 형식, 행 또는 참조 컬렉션을 반환하는 식입니다.</span><span class="sxs-lookup"><span data-stu-id="d29a5-107">An expression that returns a collection of supported types, rows, or references.</span></span>  
   
-## 설명  
- COLLECTION 키워드에 대한 자세한 내용은 [형식 정의](../../../../../../docs/framework/data/adonet/ef/language-reference/type-definitions-entity-sql.md) 항목을 참조하세요.  
+## <a name="remarks"></a><span data-ttu-id="d29a5-108">설명</span><span class="sxs-lookup"><span data-stu-id="d29a5-108">Remarks</span></span>  
+ <span data-ttu-id="d29a5-109">COLLECTION 키워드에 대한 자세한 내용은 [Type Definitions](../../../../../../docs/framework/data/adonet/ef/language-reference/type-definitions-entity-sql.md)항목을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="d29a5-109">For more information about the COLLECTION keyword, see [Type Definitions](../../../../../../docs/framework/data/adonet/ef/language-reference/type-definitions-entity-sql.md).</span></span>  
   
-## 예제  
- 다음 샘플에서는 COLLECTION 키워드를 사용하여 10진수 컬렉션을 인라인 쿼리 함수의 인수로 선언하는 방법을 보여 줍니다.  
+## <a name="example"></a><span data-ttu-id="d29a5-110">예제</span><span class="sxs-lookup"><span data-stu-id="d29a5-110">Example</span></span>  
+ <span data-ttu-id="d29a5-111">다음 샘플에서는 COLLECTION 키워드를 사용하여 10진수 컬렉션을 인라인 쿼리 함수의 인수로 선언하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d29a5-111">The following sample shows how to use the COLLECTION keyword to declare a collection of decimals as an argument for an inline query function.</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#Collection_GroupPartition](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#collection_grouppartition)]  
   
-## 참고 항목  
- [Entity SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="d29a5-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d29a5-112">See Also</span></span>  
+ [<span data-ttu-id="d29a5-113">엔터티 SQL 참조</span><span class="sxs-lookup"><span data-stu-id="d29a5-113">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
