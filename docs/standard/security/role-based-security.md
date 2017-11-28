@@ -1,51 +1,49 @@
 ---
-title: "역할 기반 보안 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "인증[.NET Framework], 보안 주체"
-  - "사용 권한[.NET Framework], 보안 주체"
-  - "주체[.NET Framework]"
-  - "역할 기반 보안, 역할 기반 보안 정보"
-  - "역할 기반 보안, 보안 주체"
-  - "보안[.NET Framework], 역할 기반"
-  - "사용자 인증, 보안 주체"
+title: "역할 기반 보안"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- role-based security, about role-based security
+- user authentication, principals
+- principals [.NET Framework]
+- security [.NET Framework], role-based
+- permissions [.NET Framework], principals
+- authentication [.NET Framework], principals
+- role-based security, principals
 ms.assetid: 578cc32b-5654-4d8b-9d8c-ebcbc5c75390
-caps.latest.revision: 13
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 83a3f58fc13eb1aaacb99a3f35c3149d78451c23
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 역할 기반 보안
-역할은 재무 또는 비즈니스 응용 프로그램에서 정책을 적용하는 데 자주 사용됩니다.  예를 들어 요청을 수행하는 사용자가 지정된 역할의 멤버인지 여부에 따라 응용 프로그램이 처리되는 트랜잭션의 크기에 제한을 적용할 수 있습니다.  점원은 지정된 임계값보다 작은 트랜잭션을 처리할 수 있는 권한이 있고, 관리자는 더 높은 한도가 적용될 수 있고, 부사장은 이보다 더 높은 한도\(또는 제한 없음\)가 적용될 수 있습니다.  응용 프로그램에서 작업을 완료하는 데 여러 승인이 필요한 경우에도 역할 기반 보안을 사용할 수 있습니다.  이러한 경우로 모든 직원이 구매 요청을 생성할 수 있지만 구매 담당자만 해당 요청을 공급자에게 보낼 수 있는 구매 주문으로 변환할 수 있는 구매 시스템이 있습니다.  
+# <a name="role-based-security"></a><span data-ttu-id="b92db-102">역할 기반 보안</span><span class="sxs-lookup"><span data-stu-id="b92db-102">Role-Based Security</span></span>
+<span data-ttu-id="b92db-103">역할은 재무 또는 비즈니스 응용 프로그램에서 정책을 적용하는 데 자주 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="b92db-103">Roles are often used in financial or business applications to enforce policy.</span></span> <span data-ttu-id="b92db-104">예를 들어 요청을 수행하는 사용자가 지정된 역할의 멤버인지 여부에 따라 응용 프로그램이 처리되는 트랜잭션의 크기에 제한을 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b92db-104">For example, an application might impose limits on the size of the transaction being processed depending on whether the user making the request is a member of a specified role.</span></span> <span data-ttu-id="b92db-105">점원은 지정된 임계값보다 작은 트랜잭션을 처리할 수 있는 권한이 있고, 관리자는 더 높은 한도가 적용될 수 있고, 부사장은 이보다 더 높은 한도(또는 제한 없음)가 적용될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b92db-105">Clerks might have authorization to process transactions that are less than a specified threshold, supervisors might have a higher limit, and vice-presidents might have a still higher limit (or no limit at all).</span></span> <span data-ttu-id="b92db-106">응용 프로그램에서 작업을 완료하는 데 여러 승인이 필요한 경우에도 역할 기반 보안을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b92db-106">Role-based security can also be used when an application requires multiple approvals to complete an action.</span></span> <span data-ttu-id="b92db-107">이러한 경우로 모든 직원이 구매 요청을 생성할 수 있지만 구매 담당자만 해당 요청을 공급자에게 보낼 수 있는 구매 주문으로 변환할 수 있는 구매 시스템이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b92db-107">Such a case might be a purchasing system in which any employee can generate a purchase request, but only a purchasing agent can convert that request into a purchase order that can be sent to a supplier.</span></span>  
   
- .NET framework 역할 기반 보안은 관련된 ID에서 생성된 보안 주체에 대한 정보를 현재 스레드에서 사용할 수 있도록 하여 권한 부여를 지원합니다.  ID\(및 이 ID를 통해 정의되는 보안 주체\)는 Windows 계정을 기반으로 하거나 Windows 계정과 관련이 없는 사용자 지정 ID일 수 있습니다.  .NET framework 응용 프로그램은 보안 주체의 ID, 역할 멤버 자격 또는 둘 다에 따라 권한 부여 결정을 내릴 수 있습니다.  역할은 보안과 관련해서 동일한 권한을 가진 명명된 보안 주체 집합\(예: 계산원 또는 관리자\)입니다.  보안 주체는 하나 이상 역할의 멤버일 수 있습니다.  따라서 응용 프로그램은 역할 멤버 자격을 사용하여 보안 주체가 요청된 작업을 수행할 수 있는 권한이 있는지 확인할 수 있습니다.  
+ <span data-ttu-id="b92db-108">.NET framework 역할 기반 보안은 관련된 ID에서 생성된 보안 주체에 대한 정보를 현재 스레드에서 사용할 수 있도록 하여 권한 부여를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="b92db-108">.NET Framework role-based security supports authorization by making information about the principal, which is constructed from an associated identity, available to the current thread.</span></span> <span data-ttu-id="b92db-109">ID(및 이 ID를 통해 정의되는 보안 주체)는 Windows 계정을 기반으로 하거나 Windows 계정과 관련이 없는 사용자 지정 ID일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b92db-109">The identity (and the principal it helps to define) can be either based on a Windows account or be a custom identity unrelated to a Windows account.</span></span> <span data-ttu-id="b92db-110">.NET framework 응용 프로그램은 보안 주체의 ID, 역할 멤버 자격 또는 둘 다에 따라 권한 부여 결정을 내릴 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b92db-110">.NET Framework applications can make authorization decisions based on the principal's identity or role membership, or both.</span></span> <span data-ttu-id="b92db-111">역할은 보안과 관련해서 동일한 권한을 가진 명명된 보안 주체 집합(예: 계산원 또는 관리자)입니다.</span><span class="sxs-lookup"><span data-stu-id="b92db-111">A role is a named set of principals that have the same privileges with respect to security (such as a teller or a manager).</span></span> <span data-ttu-id="b92db-112">보안 주체는 하나 이상 역할의 멤버일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b92db-112">A principal can be a member of one or more roles.</span></span> <span data-ttu-id="b92db-113">따라서 응용 프로그램은 역할 멤버 자격을 사용하여 보안 주체가 요청된 작업을 수행할 수 있는 권한이 있는지 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b92db-113">Therefore, applications can use role membership to determine whether a principal is authorized to perform a requested action.</span></span>  
   
- 코드 액세스 보안을 사용하여 사용 편의성 및 일관성을 제공하기 위해 .NET Framework 역할 기반 보안은 공용 언어 런타임이 코드 액세스 보안 검사와 비슷한 방식으로 권한 부여를 수행할 수 있게 해주는 <xref:System.Security.Permissions.PrincipalPermission?displayProperty=fullName> 개체를 제공합니다.  <xref:System.Security.Permissions.PrincipalPermission> 클래스는 보안 주체가 일치해야 하는 ID 또는 역할을 나타내며 선언적 보안 검사 및 명령적 보안 검사 둘 다와 호환됩니다.  필요한 경우 보안 주체의 ID 정보에 직접 액세스하고 코드에서 역할 및 ID 검사를 수행할 수도 있습니다.  
+ <span data-ttu-id="b92db-114">코드 액세스 보안을 사용하여 사용 편의성 및 일관성을 제공하기 위해 .NET Framework 역할 기반 보안은 공용 언어 런타임이 코드 액세스 보안 검사와 비슷한 방식으로 권한 부여를 수행할 수 있게 해주는 <xref:System.Security.Permissions.PrincipalPermission?displayProperty=nameWithType> 개체를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b92db-114">To provide ease of use and consistency with code access security, .NET Framework role-based security provides <xref:System.Security.Permissions.PrincipalPermission?displayProperty=nameWithType> objects that enable the common language runtime to perform authorization in a way that is similar to code access security checks.</span></span> <span data-ttu-id="b92db-115"><xref:System.Security.Permissions.PrincipalPermission> 클래스는 보안 주체가 일치해야 하는 ID 또는 역할을 나타내며 선언적 보안 검사 및 명령적 보안 검사 둘 다와 호환됩니다.</span><span class="sxs-lookup"><span data-stu-id="b92db-115">The <xref:System.Security.Permissions.PrincipalPermission> class represents the identity or role that the principal must match and is compatible with both declarative and imperative security checks.</span></span> <span data-ttu-id="b92db-116">필요한 경우 보안 주체의 ID 정보에 직접 액세스하고 코드에서 역할 및 ID 검사를 수행할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b92db-116">You can also access a principal's identity information directly and perform role and identity checks in your code when needed.</span></span>  
   
- .NET Framework는 다양한 응용 프로그램의 요구를 충족할 수 있을 만큼 유연하고 확장 가능한 역할 기반 보안 지원을 제공합니다.  COM \+ 1.0 서비스와 같은 기존 인증 인프라와 상호 운용되거나 사용자 지정 인증 시스템을 만들도록 선택할 수 있습니다.  역할 기반 보안은 주로 서버에서 처리되는 ASP.NET 웹 응용 프로그램에서 사용하기에 특히 적합합니다.  그러나.NET Framework 역할 기반 보안은 클라이언트 또는 서버 중 하나에서 사용할 수 있습니다.  
+ <span data-ttu-id="b92db-117">.NET Framework는 다양한 응용 프로그램의 요구를 충족할 수 있을 만큼 유연하고 확장 가능한 역할 기반 보안 지원을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="b92db-117">The .NET Framework provides role-based security support that is flexible and extensible enough to meet the needs of a wide spectrum of applications.</span></span> <span data-ttu-id="b92db-118">COM + 1.0 서비스와 같은 기존 인증 인프라와 상호 운용되거나 사용자 지정 인증 시스템을 만들도록 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b92db-118">You can choose to interoperate with existing authentication infrastructures, such as COM+ 1.0 Services, or to create a custom authentication system.</span></span> <span data-ttu-id="b92db-119">역할 기반 보안은 주로 서버에서 처리되는 ASP.NET 웹 응용 프로그램에서 사용하기에 특히 적합합니다.</span><span class="sxs-lookup"><span data-stu-id="b92db-119">Role-based security is particularly well-suited for use in ASP.NET Web applications, which are processed primarily on the server.</span></span> <span data-ttu-id="b92db-120">그러나.NET Framework 역할 기반 보안은 클라이언트 또는 서버 중 하나에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b92db-120">However, .NET Framework role-based security can be used on either the client or the server.</span></span>  
   
- 이 섹션을 읽기 전에 [주요 보안 개념](../../../docs/standard/security/key-security-concepts.md)에 제공된 내용을 이해해야 합니다.  
+ <span data-ttu-id="b92db-121">이 섹션을 읽기 전에 확인의 내용을 이해 해야 [주요 보안 개념](../../../docs/standard/security/key-security-concepts.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b92db-121">Before reading this section, make sure that you understand the material presented in [Key Security Concepts](../../../docs/standard/security/key-security-concepts.md).</span></span>  
   
-## 관련 항목  
+## <a name="related-topics"></a><span data-ttu-id="b92db-122">관련 항목</span><span class="sxs-lookup"><span data-stu-id="b92db-122">Related Topics</span></span>  
   
-|제목|설명|  
-|--------|--------|  
-|[Principal 개체 및 Identity 개체](../../../docs/standard/security/principal-and-identity-objects.md)|Windows 및 제네릭 ID와 보안 주체를 설정 및 관리하는 방법을 설명합니다.|  
-|[주요 보안 개념](../../../docs/standard/security/key-security-concepts.md)|.NET Framework 보안을 사용하기 전에 이해해야 할 기본 개념을 소개합니다.|  
+|<span data-ttu-id="b92db-123">제목</span><span class="sxs-lookup"><span data-stu-id="b92db-123">Title</span></span>|<span data-ttu-id="b92db-124">설명</span><span class="sxs-lookup"><span data-stu-id="b92db-124">Description</span></span>|  
+|-----------|-----------------|  
+|[<span data-ttu-id="b92db-125">Principal 개체 및 Identity 개체</span><span class="sxs-lookup"><span data-stu-id="b92db-125">Principal and Identity Objects</span></span>](../../../docs/standard/security/principal-and-identity-objects.md)|<span data-ttu-id="b92db-126">Windows 및 제네릭 ID와 보안 주체를 설정 및 관리하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="b92db-126">Explains how to set up and manage both Windows and generic identities and principals.</span></span>|  
+|[<span data-ttu-id="b92db-127">주요 보안 개념</span><span class="sxs-lookup"><span data-stu-id="b92db-127">Key Security Concepts</span></span>](../../../docs/standard/security/key-security-concepts.md)|<span data-ttu-id="b92db-128">.NET Framework 보안을 사용하기 전에 이해해야 할 기본 개념을 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="b92db-128">Introduces fundamental concepts you must understand before using .NET Framework security.</span></span>|  
   
-## 참조  
- <xref:System.Security.Permissions.PrincipalPermission?displayProperty=fullName>
+## <a name="reference"></a><span data-ttu-id="b92db-129">참조</span><span class="sxs-lookup"><span data-stu-id="b92db-129">Reference</span></span>  
+ <xref:System.Security.Permissions.PrincipalPermission?displayProperty=nameWithType>

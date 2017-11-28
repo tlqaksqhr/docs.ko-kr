@@ -1,41 +1,44 @@
 ---
-title: "서비스: Security Validation and Authentication Failures Per Second | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "서비스: Security Validation and Authentication Failures Per Second"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4af18009-e778-490b-9ba6-e76485285830
-caps.latest.revision: 9
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 007bc3b38ef5b635a85e4c13f9bc9a6424fc36ad
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 서비스: Security Validation and Authentication Failures Per Second
-카운터 이름: Security Validation and Authentication Failures Per Second  
+# <a name="service-security-validation-and-authentication-failures-per-second"></a><span data-ttu-id="dd4e0-102">서비스: Security Validation and Authentication Failures Per Second</span><span class="sxs-lookup"><span data-stu-id="dd4e0-102">Service: Security Validation and Authentication Failures Per Second</span></span>
+<span data-ttu-id="dd4e0-103">카운터 이름: Security Validation and Authentication Failures Per Second</span><span class="sxs-lookup"><span data-stu-id="dd4e0-103">Counter name: Security Validation and Authentication Failures Per Second.</span></span>  
   
-## 설명  
- 이 카운터는 "Security Calls Not Authorized" 카운터로 처리되지 않는 보안 문제 때문에 메시지가 거부될 때마다 증가합니다.이러한 문제는 다음과 같습니다.  
+## <a name="description"></a><span data-ttu-id="dd4e0-104">설명</span><span class="sxs-lookup"><span data-stu-id="dd4e0-104">Description</span></span>  
+ <span data-ttu-id="dd4e0-105">이 카운터는 "Security Calls Not Authorized" 카운터로 처리되지 않는 보안 문제 때문에 메시지가 거부될 때마다 증가합니다.</span><span class="sxs-lookup"><span data-stu-id="dd4e0-105">This counter is incremented whenever a message is rejected due to a security problem not covered by the "Security Calls Not Authorized" counter.</span></span> <span data-ttu-id="dd4e0-106">이러한 문제는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="dd4e0-106">Such problems include:</span></span>  
   
--   클라이언트 토큰을 메시지에서 읽을 수 없습니다.  
+-   <span data-ttu-id="dd4e0-107">클라이언트 토큰을 메시지에서 읽을 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="dd4e0-107">Client token cannot be read from the message.</span></span>  
   
--   클라이언트 토큰에서 인증에 실패했습니다\(예: 잘못된 암호\).  
+-   <span data-ttu-id="dd4e0-108">클라이언트 토큰에서 인증에 실패했습니다(예: 잘못된 암호).</span><span class="sxs-lookup"><span data-stu-id="dd4e0-108">Client token has failed authentication (for example, bad password).</span></span>  
   
--   서명 확인에 실패했습니다\(예: 메시지 변조\).  
+-   <span data-ttu-id="dd4e0-109">서명 확인에 실패했습니다(예: 메시지 변조).</span><span class="sxs-lookup"><span data-stu-id="dd4e0-109">Signature verification has failed (for example, the message has been tampered).</span></span>  
   
--   메시지가 이전 메시지와 중복됩니다. 이러한 현상은 재생 공격 중에 나타날 수 있습니다.  
+-   <span data-ttu-id="dd4e0-110">메시지가 이전 메시지와 중복됩니다. 이러한 현상은 재생 공격 중에 나타날 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dd4e0-110">The message is a duplicate from a previous one, which can happen during a replay attack.</span></span>  
   
--   해독 오류가 발생했습니다.  
+-   <span data-ttu-id="dd4e0-111">해독 오류가 발생했습니다.</span><span class="sxs-lookup"><span data-stu-id="dd4e0-111">A decryption failure has occurred.</span></span>  
   
--   일부 필수 요소\(예: 타임스탬프 또는 암호화된 데이터 블록\)가 메시지에 없습니다.  
+-   <span data-ttu-id="dd4e0-112">일부 필수 요소(예: 타임스탬프 또는 암호화된 데이터 블록)가 메시지에 없습니다.</span><span class="sxs-lookup"><span data-stu-id="dd4e0-112">Some required elements (for example, missing timestamp or encrypted data block) are missing from the message.</span></span>  
   
--   TLSNEGO\/SPNEGO 핸드셰이크 중에 오류가 발생했습니다.  
+-   <span data-ttu-id="dd4e0-113">TLSNEGO/SPNEGO 핸드셰이크 중에 오류가 발생했습니다.</span><span class="sxs-lookup"><span data-stu-id="dd4e0-113">Errors have occurred during TLSNEGO/SPNEGO handshake.</span></span>  
   
- 이 카운터는 성능 카운터 형식 [PERF\_COUNTER\_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649)로 되어 있습니다. 이 형식의 값은 다음과 같은 수식으로 계산됩니다.  
+ <span data-ttu-id="dd4e0-114">이 카운터는 성능 카운터 형식 [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), 값은 다음과 같은 수식으로 계산</span><span class="sxs-lookup"><span data-stu-id="dd4e0-114">This counter is of performance counter type [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula,</span></span>  
   
- \(N 1 \- N 0 \) \/ \( \(D 1 \-D 0 \) \/ F\)
+ <span data-ttu-id="dd4e0-115">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="dd4e0-115">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>

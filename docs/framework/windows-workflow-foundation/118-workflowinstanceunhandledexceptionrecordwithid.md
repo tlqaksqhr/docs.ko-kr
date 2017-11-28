@@ -1,50 +1,54 @@
 ---
-title: "118 - WorkflowInstanceUnhandledExceptionRecordWithId | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 118 - WorkflowInstanceUnhandledExceptionRecordWithId
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2ce4b193-e141-4cc4-86a3-2e8c984c110d
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a1c20182b5f53a188e95a31124e30f04418eb909
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 118 - WorkflowInstanceUnhandledExceptionRecordWithId
-## 속성  
+# <a name="118---workflowinstanceunhandledexceptionrecordwithid"></a><span data-ttu-id="a4a71-102">118 - WorkflowInstanceUnhandledExceptionRecordWithId</span><span class="sxs-lookup"><span data-stu-id="a4a71-102">118 - WorkflowInstanceUnhandledExceptionRecordWithId</span></span>
+## <a name="properties"></a><span data-ttu-id="a4a71-103">속성</span><span class="sxs-lookup"><span data-stu-id="a4a71-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|118|  
-|키워드|HealthMonitoring, WFTracking|  
-|수준|오류|  
-|채널|Microsoft\-Windows\-응용 프로그램 서버\-응용 프로그램\/분석|  
+|<span data-ttu-id="a4a71-104">ID</span><span class="sxs-lookup"><span data-stu-id="a4a71-104">ID</span></span>|<span data-ttu-id="a4a71-105">118</span><span class="sxs-lookup"><span data-stu-id="a4a71-105">118</span></span>|  
+|<span data-ttu-id="a4a71-106">키워드</span><span class="sxs-lookup"><span data-stu-id="a4a71-106">Keywords</span></span>|<span data-ttu-id="a4a71-107">HealthMonitoring, WFTracking</span><span class="sxs-lookup"><span data-stu-id="a4a71-107">HealthMonitoring, WFTracking</span></span>|  
+|<span data-ttu-id="a4a71-108">수준</span><span class="sxs-lookup"><span data-stu-id="a4a71-108">Level</span></span>|<span data-ttu-id="a4a71-109">오류</span><span class="sxs-lookup"><span data-stu-id="a4a71-109">Error</span></span>|  
+|<span data-ttu-id="a4a71-110">채널</span><span class="sxs-lookup"><span data-stu-id="a4a71-110">Channel</span></span>|<span data-ttu-id="a4a71-111">Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석</span><span class="sxs-lookup"><span data-stu-id="a4a71-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## 설명  
- 워크플로 인스턴스가 WorkflowInstanceUnhandledExceptionRecord를 내보내면 ETW 추적 참가자가 이 이벤트를 내보냅니다.  
+## <a name="description"></a><span data-ttu-id="a4a71-112">설명</span><span class="sxs-lookup"><span data-stu-id="a4a71-112">Description</span></span>  
+ <span data-ttu-id="a4a71-113">워크플로 인스턴스가 WorkflowInstanceUnhandledExceptionRecord를 내보내면 ETW 추적 참가자가 이 이벤트를 내보냅니다.</span><span class="sxs-lookup"><span data-stu-id="a4a71-113">This event is emitted by the ETW tracking participant when a workflow instance emits WorkflowInstanceUnhandledExceptionRecord.</span></span>  
   
-## 메시지  
- TrackRecord \= WorkflowInstanceUnhandledExceptionRecord, InstanceID \= %1, RecordNumber \= %2, EventTime \= %3, ActivityDefinitionId \= %4, SourceName \= %5, SourceId \= %6, SourceInstanceId \= %7, SourceTypeName\=%8, Exception\=%9, Annotations\= %10, ProfileName \= %11, WorkflowDefinitionIdentity \= %12  
+## <a name="message"></a><span data-ttu-id="a4a71-114">메시지</span><span class="sxs-lookup"><span data-stu-id="a4a71-114">Message</span></span>  
+ <span data-ttu-id="a4a71-115">TrackRecord = WorkflowInstanceUnhandledExceptionRecord, InstanceID %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, SourceName = %5, SourceId = %6, SourceInstanceId = %7, SourceTypeName = = %8, Exception = %9, Annotations = %10, ProfileName = %11, WorkflowDefinitionIdentity = %12</span><span class="sxs-lookup"><span data-stu-id="a4a71-115">TrackRecord = WorkflowInstanceUnhandledExceptionRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, SourceName = %5, SourceId = %6, SourceInstanceId = %7, SourceTypeName=%8, Exception=%9,  Annotations= %10, ProfileName = %11, WorkflowDefinitionIdentity = %12</span></span>  
   
-## 설명  
+## <a name="details"></a><span data-ttu-id="a4a71-116">세부 정보</span><span class="sxs-lookup"><span data-stu-id="a4a71-116">Details</span></span>  
   
-|데이터 항목 이름|데이터 항목 형식|설명|  
-|---------------|---------------|--------|  
-|InstanceId|xs:GUID|워크플로의 인스턴스 ID|  
-|RecordNumber|xs:long|내보낸 레코드의 시퀀스 번호|  
-|EventTime|xs:dateTime|이벤트를 내보낸 시간\(UTC\)|  
-|ActivityDefinitionId|xs:string|워크플로의 루트 활동 이름|  
-|SourceName|xs:string|오류로 인해 unhandledException을 일으킨 소스 활동의 이름|  
-|SourceId|xs:string|오류 소스 활동의 활동 ID|  
-|SourceInstanceId|xs:string|오류 소스 활동의 활동 인스턴스 ID|  
-|SourceTypeName|xs:string|오류로 인해 unhandledException을 일으킨 소스 활동의 형식 이름|  
-|예외|xs:string|처리되지 않은 예외에 대한 예외 정보|  
-|상태|xs:string|워크플로의 현재 상태|  
-|주석|xs:string|이 이벤트에 추가된 주석입니다.  값은 xml 요소에 \<items\>\< item name \= "annotationName" type\="System.String"\>annotationValue\<\/item\>\<\/items\> 형식으로 저장됩니다.  주석을 지정하지 않으면 문자열에 \<items\/\>가 포함됩니다.  ETW 이벤트 크기는 ETW 버퍼 크기 또는 ETW 이벤트의 최대 페이로드에 따라 제한됩니다.  이벤트 크기가 ETW 제한을 초과하면 주석을 삭제하고 주석 값을 \<items\>...\<\/items\>로 대체하여 이벤트를 자릅니다.|  
-|ProfileName|xs:string|이 이벤트를 내보낸 이름 또는 추적 프로필|  
-|WorkflowDefinitionIdentity|xs:string|워크플로 정의 ID입니다.|  
-|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName에서 반환되는 문자열입니다.|
+|<span data-ttu-id="a4a71-117">데이터 항목 이름</span><span class="sxs-lookup"><span data-stu-id="a4a71-117">Data Item Name</span></span>|<span data-ttu-id="a4a71-118">데이터 항목 형식</span><span class="sxs-lookup"><span data-stu-id="a4a71-118">Data Item Type</span></span>|<span data-ttu-id="a4a71-119">설명</span><span class="sxs-lookup"><span data-stu-id="a4a71-119">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="a4a71-120">InstanceId</span><span class="sxs-lookup"><span data-stu-id="a4a71-120">InstanceId</span></span>|<span data-ttu-id="a4a71-121">xs:GUID</span><span class="sxs-lookup"><span data-stu-id="a4a71-121">xs:GUID</span></span>|<span data-ttu-id="a4a71-122">워크플로의 인스턴스 ID</span><span class="sxs-lookup"><span data-stu-id="a4a71-122">The instance id for the workflow</span></span>|  
+|<span data-ttu-id="a4a71-123">RecordNumber</span><span class="sxs-lookup"><span data-stu-id="a4a71-123">RecordNumber</span></span>|<span data-ttu-id="a4a71-124">xs:long</span><span class="sxs-lookup"><span data-stu-id="a4a71-124">xs:long</span></span>|<span data-ttu-id="a4a71-125">내보낸 레코드의 시퀀스 번호</span><span class="sxs-lookup"><span data-stu-id="a4a71-125">The sequence number of the emitted record</span></span>|  
+|<span data-ttu-id="a4a71-126">EventTime</span><span class="sxs-lookup"><span data-stu-id="a4a71-126">EventTime</span></span>|<span data-ttu-id="a4a71-127">xs:dateTime</span><span class="sxs-lookup"><span data-stu-id="a4a71-127">xs:dateTime</span></span>|<span data-ttu-id="a4a71-128">이벤트를 내보낸 시간(UTC)</span><span class="sxs-lookup"><span data-stu-id="a4a71-128">The time in UTC when the event was emitted</span></span>|  
+|<span data-ttu-id="a4a71-129">ActivityDefinitionId</span><span class="sxs-lookup"><span data-stu-id="a4a71-129">ActivityDefinitionId</span></span>|<span data-ttu-id="a4a71-130">xs:string</span><span class="sxs-lookup"><span data-stu-id="a4a71-130">xs:string</span></span>|<span data-ttu-id="a4a71-131">워크플로의 루트 활동 이름</span><span class="sxs-lookup"><span data-stu-id="a4a71-131">The name of the root activity in the workflow</span></span>|  
+|<span data-ttu-id="a4a71-132">SourceName</span><span class="sxs-lookup"><span data-stu-id="a4a71-132">SourceName</span></span>|<span data-ttu-id="a4a71-133">xs:string</span><span class="sxs-lookup"><span data-stu-id="a4a71-133">xs:string</span></span>|<span data-ttu-id="a4a71-134">오류로 인해 unhandledException을 일으킨 소스 활동의 이름</span><span class="sxs-lookup"><span data-stu-id="a4a71-134">The source activity name that faulted resulting in the unhandledException</span></span>|  
+|<span data-ttu-id="a4a71-135">SourceId</span><span class="sxs-lookup"><span data-stu-id="a4a71-135">SourceId</span></span>|<span data-ttu-id="a4a71-136">xs:string</span><span class="sxs-lookup"><span data-stu-id="a4a71-136">xs:string</span></span>|<span data-ttu-id="a4a71-137">오류 소스 활동의 활동 ID</span><span class="sxs-lookup"><span data-stu-id="a4a71-137">The activity id of the fault source activity</span></span>|  
+|<span data-ttu-id="a4a71-138">SourceInstanceId</span><span class="sxs-lookup"><span data-stu-id="a4a71-138">SourceInstanceId</span></span>|<span data-ttu-id="a4a71-139">xs:string</span><span class="sxs-lookup"><span data-stu-id="a4a71-139">xs:string</span></span>|<span data-ttu-id="a4a71-140">오류 소스 활동의 활동 인스턴스 ID</span><span class="sxs-lookup"><span data-stu-id="a4a71-140">The activity instance id of the fault source activity</span></span>|  
+|<span data-ttu-id="a4a71-141">SourceTypeName</span><span class="sxs-lookup"><span data-stu-id="a4a71-141">SourceTypeName</span></span>|<span data-ttu-id="a4a71-142">xs:string</span><span class="sxs-lookup"><span data-stu-id="a4a71-142">xs:string</span></span>|<span data-ttu-id="a4a71-143">오류로 인해 unhandledException을 일으킨 소스 활동의 형식 이름</span><span class="sxs-lookup"><span data-stu-id="a4a71-143">The source activity type name that faulted resulting in the unhandledException</span></span>|  
+|<span data-ttu-id="a4a71-144">예외</span><span class="sxs-lookup"><span data-stu-id="a4a71-144">Exception</span></span>|<span data-ttu-id="a4a71-145">xs:string</span><span class="sxs-lookup"><span data-stu-id="a4a71-145">xs:string</span></span>|<span data-ttu-id="a4a71-146">처리되지 않은 예외에 대한 예외 정보</span><span class="sxs-lookup"><span data-stu-id="a4a71-146">The exception details for the unhandled exception</span></span>|  
+|<span data-ttu-id="a4a71-147">상태</span><span class="sxs-lookup"><span data-stu-id="a4a71-147">State</span></span>|<span data-ttu-id="a4a71-148">xs:string</span><span class="sxs-lookup"><span data-stu-id="a4a71-148">xs:string</span></span>|<span data-ttu-id="a4a71-149">워크플로의 현재 상태</span><span class="sxs-lookup"><span data-stu-id="a4a71-149">The current state of the Workflow.</span></span>|  
+|<span data-ttu-id="a4a71-150">주석</span><span class="sxs-lookup"><span data-stu-id="a4a71-150">Annotations</span></span>|<span data-ttu-id="a4a71-151">xs:string</span><span class="sxs-lookup"><span data-stu-id="a4a71-151">xs:string</span></span>|<span data-ttu-id="a4a71-152">이 이벤트에 추가된 주석입니다.</span><span class="sxs-lookup"><span data-stu-id="a4a71-152">The annotations that were added to this event.</span></span> <span data-ttu-id="a4a71-153">값 형식으로 xml 요소에 저장 됩니다 \<항목 >\< 항목 이름 = "annotationName" type = "> annotationValue\<항목/>\<항목/>입니다.</span><span class="sxs-lookup"><span data-stu-id="a4a71-153">The values are stored in an xml element in the format \<items>\< item name = "annotationName" type="System.String">annotationValue\</item>\</items>.</span></span> <span data-ttu-id="a4a71-154">주석을 지정 하지 않으면 문자열을 포함 하는 경우 \<항목 / >입니다.</span><span class="sxs-lookup"><span data-stu-id="a4a71-154">If no annotations are specified then the string contains \<items/>.</span></span> <span data-ttu-id="a4a71-155">ETW 이벤트 크기는 ETW 버퍼 크기 또는 ETW 이벤트의 최대 페이로드에 따라 제한됩니다.</span><span class="sxs-lookup"><span data-stu-id="a4a71-155">The ETW event size is limited by the ETW buffer size or the max payload for an ETW event.</span></span> <span data-ttu-id="a4a71-156">이벤트 크기가 ETW 제한을 초과 하면 주석을 삭제 하 고 주석 값으로 바꿔 이벤트 잘립니다 경우 \<항목 >... \<항목/>입니다.</span><span class="sxs-lookup"><span data-stu-id="a4a71-156">If the size of the event exceeds the ETW limits, then the event is truncated by dropping the annotations and replacing the annotation value with \<items>...\</items>.</span></span>|  
+|<span data-ttu-id="a4a71-157">ProfileName</span><span class="sxs-lookup"><span data-stu-id="a4a71-157">ProfileName</span></span>|<span data-ttu-id="a4a71-158">xs:string</span><span class="sxs-lookup"><span data-stu-id="a4a71-158">xs:string</span></span>|<span data-ttu-id="a4a71-159">이 이벤트를 내보낸 이름 또는 추적 프로필</span><span class="sxs-lookup"><span data-stu-id="a4a71-159">The name or the tracking profile that resulted in this event being emitted</span></span>|  
+|<span data-ttu-id="a4a71-160">WorkflowDefinitionIdentity</span><span class="sxs-lookup"><span data-stu-id="a4a71-160">WorkflowDefinitionIdentity</span></span>|<span data-ttu-id="a4a71-161">xs:string</span><span class="sxs-lookup"><span data-stu-id="a4a71-161">xs:string</span></span>|<span data-ttu-id="a4a71-162">워크플로 정의 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="a4a71-162">The workflow definition id</span></span>|  
+|<span data-ttu-id="a4a71-163">AppDomain</span><span class="sxs-lookup"><span data-stu-id="a4a71-163">AppDomain</span></span>|<span data-ttu-id="a4a71-164">xs:string</span><span class="sxs-lookup"><span data-stu-id="a4a71-164">xs:string</span></span>|<span data-ttu-id="a4a71-165">AppDomain.CurrentDomain.FriendlyName에서 반환되는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="a4a71-165">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

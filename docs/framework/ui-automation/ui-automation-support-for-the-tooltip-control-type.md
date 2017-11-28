@@ -1,96 +1,99 @@
 ---
-title: "UI Automation Support for the ToolTip Control Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "UI Automation, ToolTip control type"
-  - "ToolTip control type"
-  - "control types, ToolTip"
+title: "ToolTip 컨트롤 형식에 대한 UI 자동화 지원"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- UI Automation, ToolTip control type
+- ToolTip control type
+- control types, ToolTip
 ms.assetid: c3779d78-3164-43ae-8dae-bfaeafffdd65
-caps.latest.revision: 22
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 2040020ba32aed97c613260948f0772355c1287f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Support for the ToolTip Control Type
+# <a name="ui-automation-support-for-the-tooltip-control-type"></a><span data-ttu-id="9c563-102">ToolTip 컨트롤 형식에 대한 UI 자동화 지원</span><span class="sxs-lookup"><span data-stu-id="9c563-102">UI Automation Support for the ToolTip Control Type</span></span>
 > [!NOTE]
->  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](http://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.  
+>  <span data-ttu-id="9c563-103">이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="9c563-104">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](http://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9c563-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 이 항목에서는 ToolTip 컨트롤 형식에 대한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 지원 정보를 제공합니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서, 컨트롤 형식은 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 속성을 사용하기 위해 컨트롤이 충족해야 하는 조건 집합입니다. 이 조건에는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 값, 컨트롤 패턴에 대한 특정 지침이 포함됩니다.  
+ <span data-ttu-id="9c563-105">이 항목에서는 ToolTip 컨트롤 형식에 대한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 지원 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-105">This topic provides information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] support for the ToolTip control type.</span></span> <span data-ttu-id="9c563-106">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서, 컨트롤 형식은 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 속성을 사용하기 위해 컨트롤이 충족해야 하는 조건 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-106">In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], a control type is a set of conditions that a control must meet in order to use the <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> property.</span></span> <span data-ttu-id="9c563-107">이 조건에는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 값, 컨트롤 패턴에 대한 특정 지침이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-107">The conditions include specific guidelines for [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] property values and control patterns.</span></span>  
   
- 도구 설명 컨트롤은 텍스트가 포함된 팝업 창입니다.  
+ <span data-ttu-id="9c563-108">도구 설명 컨트롤은 텍스트가 포함된 팝업 창입니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-108">Tool tip controls are pop-up windows that contain text.</span></span>  
   
- 다음 섹션에서는 ToolTip 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]의 모든 도구 설명 컨트롤에 적용됩니다.  
+ <span data-ttu-id="9c563-109">다음 섹션에서는 ToolTip 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-109">The following sections define the required [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, properties, control patterns, and events for the ToolTip control type.</span></span> <span data-ttu-id="9c563-110">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]의 모든 도구 설명 컨트롤에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-110">The [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requirements apply to all tool tip controls, whether [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], or [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].</span></span>  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
-## 필요한 UI 자동화 트리 구조  
- 다음 표는 도구 설명 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 대한 자세한 내용은 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)를 참조하세요.  
+## <a name="required-ui-automation-tree-structure"></a><span data-ttu-id="9c563-111">필요한 UI 자동화 트리 구조</span><span class="sxs-lookup"><span data-stu-id="9c563-111">Required UI Automation Tree Structure</span></span>  
+ <span data-ttu-id="9c563-112">다음 표는 도구 설명 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-112">The following table depicts the control view and the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree that pertains to tool tip controls and describes what can be contained in each view.</span></span> <span data-ttu-id="9c563-113">대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리, 참조 [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-113">For more information on the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree, see [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).</span></span>  
   
-|컨트롤 뷰|콘텐츠 뷰|  
-|-----------|-----------|  
-|도구 설명<br /><br /> -   Text\(0개 이상\)<br />-   Image\(0개 이상\)|도구 설명|  
+|<span data-ttu-id="9c563-114">컨트롤 뷰</span><span class="sxs-lookup"><span data-stu-id="9c563-114">Control View</span></span>|<span data-ttu-id="9c563-115">콘텐츠 뷰</span><span class="sxs-lookup"><span data-stu-id="9c563-115">Content View</span></span>|  
+|------------------|------------------|  
+|<span data-ttu-id="9c563-116">도구 설명</span><span class="sxs-lookup"><span data-stu-id="9c563-116">ToolTip</span></span><br /><br /> <span data-ttu-id="9c563-117">텍스트 (0 개 이상)</span><span class="sxs-lookup"><span data-stu-id="9c563-117">-   Text (0 or more)</span></span><br /><span data-ttu-id="9c563-118">-이미지 (0 개 이상)</span><span class="sxs-lookup"><span data-stu-id="9c563-118">-   Image (0 or more)</span></span>|<span data-ttu-id="9c563-119">도구 설명</span><span class="sxs-lookup"><span data-stu-id="9c563-119">ToolTip</span></span>|  
   
- 도구 설명 컨트롤은 키보드 포커스를 받을 수 있는 경우 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 콘텐츠 뷰에만 나타납니다. 그렇지 않으면, 도구 설명이 참조하는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요소의 `HelpTextProperty`에서 모든 도구 설명의 정보를 사용할 수 있습니다.  
+ <span data-ttu-id="9c563-120">도구 설명 컨트롤은 키보드 포커스를 받을 수 있는 경우 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 콘텐츠 뷰에만 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-120">Tool tip controls appear only in the Content View of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree if they can receive keyboard focus.</span></span> <span data-ttu-id="9c563-121">그렇지 않으면, 도구 설명이 참조하는 `HelpTextProperty` 요소의 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 에서 모든 도구 설명의 정보를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-121">Otherwise, all of the tool tip's information is available from the `HelpTextProperty` on the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] element that the tool tip is referring to.</span></span>  
   
- 도구 설명은 정보가 참조하는 컨트롤 아래에 나타납니다. 클라이언트는 `ToolTipOpenedEvent`를 수신 대기해야 도구 설명에 포함된 정보를 지속적으로 가져올 수 있습니다.  
+ <span data-ttu-id="9c563-122">도구 설명은 정보가 참조하는 컨트롤 아래에 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-122">Tool tips should appear beneath the control that their information is referring to.</span></span> <span data-ttu-id="9c563-123">클라이언트는 `ToolTipOpenedEvent` 를 수신 대기해야 도구 설명에 포함된 정보를 지속적으로 가져올 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-123">Clients must listen for the `ToolTipOpenedEvent` to ensure that they consistently obtain information contained in tool tips.</span></span>  
   
 <a name="Required_UI_Automation_Properties"></a>   
-## 필요한 UI 자동화 속성  
- 다음 표에서는 값 또는 정의가 도구 설명 컨트롤과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여줍니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성에 대한 자세한 내용은 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)를 참조하세요.  
+## <a name="required-ui-automation-properties"></a><span data-ttu-id="9c563-124">필요한 UI 자동화 속성</span><span class="sxs-lookup"><span data-stu-id="9c563-124">Required UI Automation Properties</span></span>  
+ <span data-ttu-id="9c563-125">다음 표에서는 값 또는 정의가 도구 설명 컨트롤과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-125">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties whose value or definition is especially relevant to tool tip controls.</span></span> <span data-ttu-id="9c563-126">에 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 참조 [클라이언트에 대 한 UI 자동화 속성](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-126">For more information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성|값|노트|  
-|------------------------------------------------------------------------------|-------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|메모를 참조하세요.|이 속성의 값은 응용 프로그램의 모든 컨트롤에서 고유해야 합니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|메모를 참조하세요.|전체 컨트롤이 포함된 가장 바깥쪽 사각형입니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|메모를 참조하세요.|클릭 가능한 지점은 컨트롤을 해제하는 도구 설명의 일부여야 합니다. 일부 도구 설명에는 이 기능이 없기 때문에 클릭 가능한 지점이 없습니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|메모를 참조하세요.|컨트롤이 키보드 포커스를 받을 수 있으면 해당 컨트롤은 이 속성을 지원해야 합니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|메모를 참조하세요.|도구 설명 컨트롤의 이름은 도구 설명 내에 표시되는 텍스트입니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|도구 설명 컨트롤은 콘텐츠에 의해 항상 자체적으로 레이블이 지정됩니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|도구 설명|이 값은 모든 UI 프레임워크에 대해 동일합니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"tool tip"|ToolTip 컨트롤 형식에 해당하는 지역화된 문자열입니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|종속|도구 설명 컨트롤이 키보드 포커스를 받을 수 있는 경우 트리의 콘텐츠 뷰에 있어야 합니다. 텍스트만 있는 경우에는 해당 컨트롤에서 HelpTextProperty로 사용할 수 있습니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|도구 설명 컨트롤이 항상 컨트롤이어야 합니다.|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="9c563-127"> 속성</span><span class="sxs-lookup"><span data-stu-id="9c563-127"> Property</span></span>|<span data-ttu-id="9c563-128">값</span><span class="sxs-lookup"><span data-stu-id="9c563-128">Value</span></span>|<span data-ttu-id="9c563-129">노트</span><span class="sxs-lookup"><span data-stu-id="9c563-129">Notes</span></span>|  
+|------------------------------------------------------------------------------------|-----------|-----------|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|<span data-ttu-id="9c563-130">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9c563-130">See notes.</span></span>|<span data-ttu-id="9c563-131">이 속성의 값은 응용 프로그램의 모든 컨트롤에서 고유해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-131">The value of this property needs to be unique across all controls in an application.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|<span data-ttu-id="9c563-132">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9c563-132">See notes.</span></span>|<span data-ttu-id="9c563-133">전체 컨트롤이 포함된 가장 바깥쪽 사각형입니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-133">The outermost rectangle that contains the whole control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|<span data-ttu-id="9c563-134">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9c563-134">See notes.</span></span>|<span data-ttu-id="9c563-135">클릭 가능한 지점은 컨트롤을 해제하는 도구 설명의 일부여야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-135">The clickable point should be the part of the tool tip that will dismiss the control.</span></span> <span data-ttu-id="9c563-136">일부 도구 설명에는 이 기능이 없기 때문에 클릭 가능한 지점이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-136">Some tool tips do not have this ability and will not have a clickable point.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|<span data-ttu-id="9c563-137">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9c563-137">See notes.</span></span>|<span data-ttu-id="9c563-138">컨트롤이 키보드 포커스를 받을 수 있으면 해당 컨트롤은 이 속성을 지원해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-138">If the control can receive keyboard focus, it must support this property.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|<span data-ttu-id="9c563-139">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9c563-139">See notes.</span></span>|<span data-ttu-id="9c563-140">도구 설명 컨트롤의 이름은 도구 설명 내에 표시되는 텍스트입니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-140">The name of the tool tip control is the text that is displayed within the tool tip.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`|<span data-ttu-id="9c563-141">도구 설명 컨트롤은 콘텐츠에 의해 항상 자체적으로 레이블이 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-141">Tool tip controls are always self-labeled by their contents.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|<span data-ttu-id="9c563-142">도구 설명</span><span class="sxs-lookup"><span data-stu-id="9c563-142">ToolTip</span></span>|<span data-ttu-id="9c563-143">이 값은 모든 UI 프레임워크에 대해 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-143">This value is the same for all UI frameworks.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|<span data-ttu-id="9c563-144">"tool tip"</span><span class="sxs-lookup"><span data-stu-id="9c563-144">"tool tip"</span></span>|<span data-ttu-id="9c563-145">ToolTip 컨트롤 형식에 해당하는 지역화된 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-145">Localized string corresponding to the ToolTip control type.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|<span data-ttu-id="9c563-146">종속</span><span class="sxs-lookup"><span data-stu-id="9c563-146">Depends</span></span>|<span data-ttu-id="9c563-147">도구 설명 컨트롤이 키보드 포커스를 받을 수 있는 경우 트리의 콘텐츠 뷰에 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-147">If the tool tip control can receive keyboard focus, it must be in the Content View of the tree.</span></span> <span data-ttu-id="9c563-148">텍스트만 있는 경우에는 해당 컨트롤에서 HelpTextProperty로 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-148">If it is text only, then it is available as the HelpTextProperty from the control that raised it.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|<span data-ttu-id="9c563-149">True</span><span class="sxs-lookup"><span data-stu-id="9c563-149">True</span></span>|<span data-ttu-id="9c563-150">도구 설명 컨트롤이 항상 컨트롤이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-150">The tool tip control must always be a control.</span></span>|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
-## 필요한 UI 자동화 컨트롤 패턴  
- 다음 표에서는 도구 설명 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴을 나열하여 보여줍니다. 컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)를 참조하세요.  
+## <a name="required-ui-automation-control-patterns"></a><span data-ttu-id="9c563-151">필요한 UI 자동화 컨트롤 패턴</span><span class="sxs-lookup"><span data-stu-id="9c563-151">Required UI Automation Control Patterns</span></span>  
+ <span data-ttu-id="9c563-152">다음 표에서는 도구 설명 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴을 나열하여 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-152">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] control patterns required to be supported by tool tip controls.</span></span> <span data-ttu-id="9c563-153">컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9c563-153">For more information on control patterns, see [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).</span></span>  
   
-|컨트롤 패턴|지원|노트|  
-|------------|--------|--------|  
-|<xref:System.Windows.Automation.Provider.IWindowProvider>|종속|UI 항목을 클릭하여 닫을 수 있는 도구 설명은 WindowPattern을 지원해야 자동으로 닫을 수 있습니다.|  
-|<xref:System.Windows.Automation.Provider.ITextProvider>|종속|접근성 향상을 위해, 도구 설명은 Text 컨트롤 패턴을 지원할 수 있지만 반드시 필요한 것은 아닙니다. Text 컨트롤 패턴은 텍스트에 다양한 스타일과 특성\(예: 색, 굵은 글꼴, 기울임꼴\)이 있을 때 유용합니다.|  
+|<span data-ttu-id="9c563-154">컨트롤 패턴</span><span class="sxs-lookup"><span data-stu-id="9c563-154">Control Pattern</span></span>|<span data-ttu-id="9c563-155">지원</span><span class="sxs-lookup"><span data-stu-id="9c563-155">Support</span></span>|<span data-ttu-id="9c563-156">노트</span><span class="sxs-lookup"><span data-stu-id="9c563-156">Notes</span></span>|  
+|---------------------|-------------|-----------|  
+|<xref:System.Windows.Automation.Provider.IWindowProvider>|<span data-ttu-id="9c563-157">종속</span><span class="sxs-lookup"><span data-stu-id="9c563-157">Depends</span></span>|<span data-ttu-id="9c563-158">UI 항목을 클릭하여 닫을 수 있는 도구 설명은 WindowPattern을 지원해야 자동으로 닫을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-158">Tool tips that can be closed by clicking a UI item must support WindowPattern so that they can closed automatically.</span></span>|  
+|<xref:System.Windows.Automation.Provider.ITextProvider>|<span data-ttu-id="9c563-159">종속</span><span class="sxs-lookup"><span data-stu-id="9c563-159">Depends</span></span>|<span data-ttu-id="9c563-160">접근성 향상을 위해, 도구 설명은 Text 컨트롤 패턴을 지원할 수 있지만 반드시 필요한 것은 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-160">For better accessibility, a tool tip control can support the Text control pattern, although it is not required.</span></span> <span data-ttu-id="9c563-161">Text 컨트롤 패턴은 텍스트에 다양한 스타일과 특성(예: 색, 굵은 글꼴, 기울임꼴)이 있을 때 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-161">The Text control pattern is useful when the text has rich style and attributes (for example, color, bold, and italics).</span></span>|  
   
 <a name="Required_UI_Automation_Events"></a>   
-## 필요한 UI 자동화 이벤트  
- 도구 설명 컨트롤이 화면에 표시되면 `ToolTipOpenedEvent`가 발생해야 합니다. 이 이벤트에는 도구 설명 자체의 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요소에 대한 참조가 포함됩니다.  
+## <a name="required-ui-automation-events"></a><span data-ttu-id="9c563-162">필요한 UI 자동화 이벤트</span><span class="sxs-lookup"><span data-stu-id="9c563-162">Required UI Automation Events</span></span>  
+ <span data-ttu-id="9c563-163">도구 설명 컨트롤이 화면에 표시되면 `ToolTipOpenedEvent` 가 발생해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-163">Tool tip controls must raise the `ToolTipOpenedEvent` when they appear on the screen.</span></span> <span data-ttu-id="9c563-164">이 이벤트에는 도구 설명 자체의 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요소에 대한 참조가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-164">The event will include a reference to the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] element of the tool tip itself.</span></span>  
   
- 다음 표에서는 모든 도구 설명 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여줍니다. 이벤트에 대한 자세한 내용은 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)를 참조하세요.  
+ <span data-ttu-id="9c563-165">다음 표에서는 모든 도구 설명 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여줍니다.</span><span class="sxs-lookup"><span data-stu-id="9c563-165">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events required to be supported by all tool tip controls.</span></span> <span data-ttu-id="9c563-166">이벤트에 대한 자세한 내용은 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9c563-166">For more information about events, see [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|지원|노트|  
-|-------------------------------------------------------------------------------|--------|--------|  
-|<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|종속|없음|  
-|<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|종속|없음|  
-|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowClosedEvent>|종속|없음|  
-|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowOpenedEvent>|종속|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ToolTipOpenedEvent>|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ToolTipClosedEvent>|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 속성 변경 이벤트.|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 속성 변경 이벤트.|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 속성 변경 이벤트.|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> 속성 변경 이벤트.|필수|없음|  
-|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowVisualStateProperty> 속성 변경 이벤트.|종속|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|필수|없음|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="9c563-167"> 이벤트</span><span class="sxs-lookup"><span data-stu-id="9c563-167"> Event</span></span>|<span data-ttu-id="9c563-168">지원</span><span class="sxs-lookup"><span data-stu-id="9c563-168">Support</span></span>|<span data-ttu-id="9c563-169">노트</span><span class="sxs-lookup"><span data-stu-id="9c563-169">Notes</span></span>|  
+|---------------------------------------------------------------------------------|-------------|-----------|  
+|<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|<span data-ttu-id="9c563-170">종속</span><span class="sxs-lookup"><span data-stu-id="9c563-170">Depends</span></span>|<span data-ttu-id="9c563-171">없음</span><span class="sxs-lookup"><span data-stu-id="9c563-171">None</span></span>|  
+|<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|<span data-ttu-id="9c563-172">종속</span><span class="sxs-lookup"><span data-stu-id="9c563-172">Depends</span></span>|<span data-ttu-id="9c563-173">없음</span><span class="sxs-lookup"><span data-stu-id="9c563-173">None</span></span>|  
+|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowClosedEvent>|<span data-ttu-id="9c563-174">종속</span><span class="sxs-lookup"><span data-stu-id="9c563-174">Depends</span></span>|<span data-ttu-id="9c563-175">없음</span><span class="sxs-lookup"><span data-stu-id="9c563-175">None</span></span>|  
+|<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowOpenedEvent>|<span data-ttu-id="9c563-176">종속</span><span class="sxs-lookup"><span data-stu-id="9c563-176">Depends</span></span>|<span data-ttu-id="9c563-177">없음</span><span class="sxs-lookup"><span data-stu-id="9c563-177">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ToolTipOpenedEvent>|<span data-ttu-id="9c563-178">필수</span><span class="sxs-lookup"><span data-stu-id="9c563-178">Required</span></span>|<span data-ttu-id="9c563-179">없음</span><span class="sxs-lookup"><span data-stu-id="9c563-179">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ToolTipClosedEvent>|<span data-ttu-id="9c563-180">필수</span><span class="sxs-lookup"><span data-stu-id="9c563-180">Required</span></span>|<span data-ttu-id="9c563-181">없음</span><span class="sxs-lookup"><span data-stu-id="9c563-181">None</span></span>|  
+|<span data-ttu-id="9c563-182"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 속성 변경 이벤트.</span><span class="sxs-lookup"><span data-stu-id="9c563-182"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> property-changed event.</span></span>|<span data-ttu-id="9c563-183">필수</span><span class="sxs-lookup"><span data-stu-id="9c563-183">Required</span></span>|<span data-ttu-id="9c563-184">없음</span><span class="sxs-lookup"><span data-stu-id="9c563-184">None</span></span>|  
+|<span data-ttu-id="9c563-185"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 속성 변경 이벤트.</span><span class="sxs-lookup"><span data-stu-id="9c563-185"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> property-changed event.</span></span>|<span data-ttu-id="9c563-186">필수</span><span class="sxs-lookup"><span data-stu-id="9c563-186">Required</span></span>|<span data-ttu-id="9c563-187">없음</span><span class="sxs-lookup"><span data-stu-id="9c563-187">None</span></span>|  
+|<span data-ttu-id="9c563-188"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 속성 변경 이벤트.</span><span class="sxs-lookup"><span data-stu-id="9c563-188"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> property-changed event.</span></span>|<span data-ttu-id="9c563-189">필수</span><span class="sxs-lookup"><span data-stu-id="9c563-189">Required</span></span>|<span data-ttu-id="9c563-190">없음</span><span class="sxs-lookup"><span data-stu-id="9c563-190">None</span></span>|  
+|<span data-ttu-id="9c563-191"><xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> 속성 변경 이벤트.</span><span class="sxs-lookup"><span data-stu-id="9c563-191"><xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> property-changed event.</span></span>|<span data-ttu-id="9c563-192">필수</span><span class="sxs-lookup"><span data-stu-id="9c563-192">Required</span></span>|<span data-ttu-id="9c563-193">없음</span><span class="sxs-lookup"><span data-stu-id="9c563-193">None</span></span>|  
+|<span data-ttu-id="9c563-194"><xref:System.Windows.Automation.WindowPatternIdentifiers.WindowVisualStateProperty> 속성 변경 이벤트.</span><span class="sxs-lookup"><span data-stu-id="9c563-194"><xref:System.Windows.Automation.WindowPatternIdentifiers.WindowVisualStateProperty> property-changed event.</span></span>|<span data-ttu-id="9c563-195">종속</span><span class="sxs-lookup"><span data-stu-id="9c563-195">Depends</span></span>|<span data-ttu-id="9c563-196">없음</span><span class="sxs-lookup"><span data-stu-id="9c563-196">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|<span data-ttu-id="9c563-197">필수</span><span class="sxs-lookup"><span data-stu-id="9c563-197">Required</span></span>|<span data-ttu-id="9c563-198">없음</span><span class="sxs-lookup"><span data-stu-id="9c563-198">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|<span data-ttu-id="9c563-199">필수</span><span class="sxs-lookup"><span data-stu-id="9c563-199">Required</span></span>|<span data-ttu-id="9c563-200">없음</span><span class="sxs-lookup"><span data-stu-id="9c563-200">None</span></span>|  
   
-## 참고 항목  
- <xref:System.Windows.Automation.ControlType.ToolTip>   
- [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)   
- [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="9c563-201">참고 항목</span><span class="sxs-lookup"><span data-stu-id="9c563-201">See Also</span></span>  
+ <xref:System.Windows.Automation.ControlType.ToolTip>  
+ [<span data-ttu-id="9c563-202">UI 자동화 컨트롤 형식 개요</span><span class="sxs-lookup"><span data-stu-id="9c563-202">UI Automation Control Types Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [<span data-ttu-id="9c563-203">UI 자동화 개요</span><span class="sxs-lookup"><span data-stu-id="9c563-203">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)

@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - Internet, WebRequest and WebResponse classes exceptions
 - Status property
@@ -39,48 +37,47 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ca755d123589f4ee07ea9caadf8bd420c94adae4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: aad78fb509f98a01b5ca072ad476d901fdd1d4d3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="handling-errors"></a>오류 처리
-<xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse> 클래스는 시스템 예외(예: <xref:System.ArgumentException>) 및 웹 관련 예외(<xref:System.Net.WebRequest.GetResponse%2A> 메서드에서 throw된 <xref:System.Net.WebException>)를 둘 다 throw합니다.  
+# <a name="handling-errors"></a><span data-ttu-id="0f1ae-102">오류 처리</span><span class="sxs-lookup"><span data-stu-id="0f1ae-102">Handling Errors</span></span>
+<span data-ttu-id="0f1ae-103"><xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse> 클래스는 시스템 예외(예: <xref:System.ArgumentException>) 및 웹 관련 예외(<xref:System.Net.WebRequest.GetResponse%2A> 메서드에서 throw된 <xref:System.Net.WebException>)를 둘 다 throw합니다.</span><span class="sxs-lookup"><span data-stu-id="0f1ae-103">The <xref:System.Net.WebRequest> and <xref:System.Net.WebResponse> classes throw both system exceptions (such as <xref:System.ArgumentException>) and Web-specific exceptions (which are <xref:System.Net.WebException> thrown by the <xref:System.Net.WebRequest.GetResponse%2A> method).</span></span>  
   
- 각 **WebException**에는 <xref:System.Net.WebExceptionStatus> 열거형의 값을 포함하는 <xref:System.Net.WebException.Status%2A> 속성이 포함됩니다. **Status** 속성을 검사하여 발생한 오류를 확인하고 적절한 단계를 수행하여 오류를 해결할 수 있습니다.  
+ <span data-ttu-id="0f1ae-104">각 **WebException**에는 <xref:System.Net.WebExceptionStatus> 열거형의 값을 포함하는 <xref:System.Net.WebException.Status%2A> 속성이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="0f1ae-104">Each **WebException** includes a <xref:System.Net.WebException.Status%2A> property that contains a value from the <xref:System.Net.WebExceptionStatus> enumeration.</span></span> <span data-ttu-id="0f1ae-105">**Status** 속성을 검사하여 발생한 오류를 확인하고 적절한 단계를 수행하여 오류를 해결할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0f1ae-105">You can examine the **Status** property to determine the error that occurred and take the proper steps to resolve the error.</span></span>  
   
- 다음 표에서는 **Status** 속성의 가능한 값을 설명합니다.  
+ <span data-ttu-id="0f1ae-106">다음 표에서는 **Status** 속성의 가능한 값을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="0f1ae-106">The following table describes the possible values for the **Status** property.</span></span>  
   
-|상태|설명|  
+|<span data-ttu-id="0f1ae-107">상태</span><span class="sxs-lookup"><span data-stu-id="0f1ae-107">Status</span></span>|<span data-ttu-id="0f1ae-108">설명</span><span class="sxs-lookup"><span data-stu-id="0f1ae-108">Description</span></span>|  
 |------------|-----------------|  
-|ConnectFailure|원격 서비스가 전송 수준에서 연결될 수 없습니다.|  
-|ConnectionClosed|연결이 조기에 닫혔습니다.|  
-|KeepAliveFailure|서버가 연결 유지 헤더 집합을 통해 설정된 연결을 닫았습니다.|  
-|NameResolutionFailure|이름 서비스가 호스트 이름을 확인할 수 없습니다.|  
-|ProtocolError|서버에서 받은 응답이 완료되었으나 프로토콜 수준에서 오류를 나타냈습니다.|  
-|ReceiveFailure|전체 응답이 원격 서버에서 수신되지 않았습니다.|  
-|RequestCanceled|요청이 취소되었습니다.|  
-|SecureChannelFailure|보안 채널 링크에서 오류가 발생했습니다.|  
-|SendFailure|전체 요청을 원격 서버로 보낼 수 없습니다.|  
-|ServerProtocolViolation|서버 응답이 유효한 HTTP 응답이 아니었습니다.|  
-|성공|오류가 발생하지 않았습니다.|  
-|시간 제한|요청에 대해 설정된 시간 제한 내에 응답이 수신되지 않았습니다.|  
-|TrustFailure|서버 인증서를 유효성 검사할 수 없습니다.|  
-|MessageLengthLimitExceeded|요청을 보내거나 서버에서 응답을 받을 때 지정된 제한을 초과한 메시지를 받았습니다.|  
-|보류 중|내부 비동기 요청이 보류 중입니다.|  
-|PipelineFailure|이 값은 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.|  
-|ProxyNameResolutionFailure|이름 확인자 서비스가 프록시 호스트 이름을 확인할 수 없습니다.|  
-|UnknownError|알 수 없는 형식의 예외가 발생했습니다.|  
+|<span data-ttu-id="0f1ae-109">ConnectFailure</span><span class="sxs-lookup"><span data-stu-id="0f1ae-109">ConnectFailure</span></span>|<span data-ttu-id="0f1ae-110">원격 서비스가 전송 수준에서 연결될 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="0f1ae-110">The remote service could not be contacted at the transport level.</span></span>|  
+|<span data-ttu-id="0f1ae-111">ConnectionClosed</span><span class="sxs-lookup"><span data-stu-id="0f1ae-111">ConnectionClosed</span></span>|<span data-ttu-id="0f1ae-112">연결이 조기에 닫혔습니다.</span><span class="sxs-lookup"><span data-stu-id="0f1ae-112">The connection was closed prematurely.</span></span>|  
+|<span data-ttu-id="0f1ae-113">KeepAliveFailure</span><span class="sxs-lookup"><span data-stu-id="0f1ae-113">KeepAliveFailure</span></span>|<span data-ttu-id="0f1ae-114">서버가 연결 유지 헤더 집합을 통해 설정된 연결을 닫았습니다.</span><span class="sxs-lookup"><span data-stu-id="0f1ae-114">The server closed a connection made with the Keep-alive header set.</span></span>|  
+|<span data-ttu-id="0f1ae-115">NameResolutionFailure</span><span class="sxs-lookup"><span data-stu-id="0f1ae-115">NameResolutionFailure</span></span>|<span data-ttu-id="0f1ae-116">이름 서비스가 호스트 이름을 확인할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="0f1ae-116">The name service could not resolve the host name.</span></span>|  
+|<span data-ttu-id="0f1ae-117">ProtocolError</span><span class="sxs-lookup"><span data-stu-id="0f1ae-117">ProtocolError</span></span>|<span data-ttu-id="0f1ae-118">서버에서 받은 응답이 완료되었으나 프로토콜 수준에서 오류를 나타냈습니다.</span><span class="sxs-lookup"><span data-stu-id="0f1ae-118">The response received from the server was complete but indicated an error at the protocol level.</span></span>|  
+|<span data-ttu-id="0f1ae-119">ReceiveFailure</span><span class="sxs-lookup"><span data-stu-id="0f1ae-119">ReceiveFailure</span></span>|<span data-ttu-id="0f1ae-120">전체 응답이 원격 서버에서 수신되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="0f1ae-120">A complete response was not received from the remote server.</span></span>|  
+|<span data-ttu-id="0f1ae-121">RequestCanceled</span><span class="sxs-lookup"><span data-stu-id="0f1ae-121">RequestCanceled</span></span>|<span data-ttu-id="0f1ae-122">요청이 취소되었습니다.</span><span class="sxs-lookup"><span data-stu-id="0f1ae-122">The request was canceled.</span></span>|  
+|<span data-ttu-id="0f1ae-123">SecureChannelFailure</span><span class="sxs-lookup"><span data-stu-id="0f1ae-123">SecureChannelFailure</span></span>|<span data-ttu-id="0f1ae-124">보안 채널 링크에서 오류가 발생했습니다.</span><span class="sxs-lookup"><span data-stu-id="0f1ae-124">An error occurred in a secure channel link.</span></span>|  
+|<span data-ttu-id="0f1ae-125">SendFailure</span><span class="sxs-lookup"><span data-stu-id="0f1ae-125">SendFailure</span></span>|<span data-ttu-id="0f1ae-126">전체 요청을 원격 서버로 보낼 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="0f1ae-126">A complete request could not be sent to the remote server.</span></span>|  
+|<span data-ttu-id="0f1ae-127">ServerProtocolViolation</span><span class="sxs-lookup"><span data-stu-id="0f1ae-127">ServerProtocolViolation</span></span>|<span data-ttu-id="0f1ae-128">서버 응답이 유효한 HTTP 응답이 아니었습니다.</span><span class="sxs-lookup"><span data-stu-id="0f1ae-128">The server response was not a valid HTTP response.</span></span>|  
+|<span data-ttu-id="0f1ae-129">성공</span><span class="sxs-lookup"><span data-stu-id="0f1ae-129">Success</span></span>|<span data-ttu-id="0f1ae-130">오류가 발생하지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="0f1ae-130">No error was encountered.</span></span>|  
+|<span data-ttu-id="0f1ae-131">시간 제한</span><span class="sxs-lookup"><span data-stu-id="0f1ae-131">Timeout</span></span>|<span data-ttu-id="0f1ae-132">요청에 대해 설정된 시간 제한 내에 응답이 수신되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="0f1ae-132">No response was received within the time-out set for the request.</span></span>|  
+|<span data-ttu-id="0f1ae-133">TrustFailure</span><span class="sxs-lookup"><span data-stu-id="0f1ae-133">TrustFailure</span></span>|<span data-ttu-id="0f1ae-134">서버 인증서를 유효성 검사할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="0f1ae-134">A server certificate could not be validated.</span></span>|  
+|<span data-ttu-id="0f1ae-135">MessageLengthLimitExceeded</span><span class="sxs-lookup"><span data-stu-id="0f1ae-135">MessageLengthLimitExceeded</span></span>|<span data-ttu-id="0f1ae-136">요청을 보내거나 서버에서 응답을 받을 때 지정된 제한을 초과한 메시지를 받았습니다.</span><span class="sxs-lookup"><span data-stu-id="0f1ae-136">A message was received that exceeded the specified limit when sending a request or receiving a response from the server.</span></span>|  
+|<span data-ttu-id="0f1ae-137">보류 중</span><span class="sxs-lookup"><span data-stu-id="0f1ae-137">Pending</span></span>|<span data-ttu-id="0f1ae-138">내부 비동기 요청이 보류 중입니다.</span><span class="sxs-lookup"><span data-stu-id="0f1ae-138">An internal asynchronous request is pending.</span></span>|  
+|<span data-ttu-id="0f1ae-139">PipelineFailure</span><span class="sxs-lookup"><span data-stu-id="0f1ae-139">PipelineFailure</span></span>|<span data-ttu-id="0f1ae-140">이 값은 .NET Framework 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="0f1ae-140">This value supports the .NET Framework infrastructure and is not intended to be used directly in your code.</span></span>|  
+|<span data-ttu-id="0f1ae-141">ProxyNameResolutionFailure</span><span class="sxs-lookup"><span data-stu-id="0f1ae-141">ProxyNameResolutionFailure</span></span>|<span data-ttu-id="0f1ae-142">이름 확인자 서비스가 프록시 호스트 이름을 확인할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="0f1ae-142">The name resolver service could not resolve the proxy host name.</span></span>|  
+|<span data-ttu-id="0f1ae-143">UnknownError</span><span class="sxs-lookup"><span data-stu-id="0f1ae-143">UnknownError</span></span>|<span data-ttu-id="0f1ae-144">알 수 없는 형식의 예외가 발생했습니다.</span><span class="sxs-lookup"><span data-stu-id="0f1ae-144">An exception of unknown type has occurred.</span></span>|  
   
- **Status** 속성이 **WebExceptionStatus.ProtocolError**이면 서버의 응답이 포함된 **WebResponse**를 사용할 수 있습니다. 이 응답을 검사하여 프로토콜 오류의 실제 소스를 확인합니다.  
+ <span data-ttu-id="0f1ae-145">**Status** 속성이 **WebExceptionStatus.ProtocolError**이면 서버의 응답이 포함된 **WebResponse**를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0f1ae-145">When the **Status** property is **WebExceptionStatus.ProtocolError**, a **WebResponse** that contains the response from the server is available.</span></span> <span data-ttu-id="0f1ae-146">이 응답을 검사하여 프로토콜 오류의 실제 소스를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="0f1ae-146">You can examine this response to determine the actual source of the protocol error.</span></span>  
   
- 다음 예제에서는 **WebException**을 catch하는 방법을 보여 줍니다.  
+ <span data-ttu-id="0f1ae-147">다음 예제에서는 **WebException**을 catch하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0f1ae-147">The following example shows how to catch a **WebException**.</span></span>  
   
 ```csharp  
 try   
@@ -175,11 +172,10 @@ Catch e As Exception
 End Try  
 ```  
   
- <xref:System.Net.Sockets.Socket> 클래스를 사용하는 응용 프로그램은 Windows 소켓에서 오류가 발생할 경우 <xref:System.Net.Sockets.SocketException>을 throw합니다. <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> 및 <xref:System.Net.Sockets.UdpClient> 클래스는 **Socket** 클래스의 맨 위에 빌드되고 **SocketExceptions**도 throw합니다.  
+ <span data-ttu-id="0f1ae-148"><xref:System.Net.Sockets.Socket> 클래스를 사용하는 응용 프로그램은 Windows 소켓에서 오류가 발생할 경우 <xref:System.Net.Sockets.SocketException>을 throw합니다.</span><span class="sxs-lookup"><span data-stu-id="0f1ae-148">Applications that use the <xref:System.Net.Sockets.Socket> class throw <xref:System.Net.Sockets.SocketException> when errors occur on the Windows socket.</span></span> <span data-ttu-id="0f1ae-149"><xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> 및 <xref:System.Net.Sockets.UdpClient> 클래스는 **Socket** 클래스의 맨 위에 빌드되고 **SocketExceptions**도 throw합니다.</span><span class="sxs-lookup"><span data-stu-id="0f1ae-149">The <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener>, and <xref:System.Net.Sockets.UdpClient> classes are built on top of the **Socket** class and throw **SocketExceptions** as well.</span></span>  
   
- **SocketException**이 throw되면 **SocketException** 클래스는 마지막으로 발생한 운영 체제 소켓 오류로 <xref:System.Net.Sockets.SocketException.ErrorCode%2A> 속성을 설정합니다. 소켓 오류 코드에 대한 자세한 내용은 MSDN에서 Winsock 2.0 API 오류 코드 문서를 참조하세요.  
+ <span data-ttu-id="0f1ae-150">**SocketException**이 throw되면 **SocketException** 클래스는 마지막으로 발생한 운영 체제 소켓 오류로 <xref:System.Net.Sockets.SocketException.ErrorCode%2A> 속성을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="0f1ae-150">When a **SocketException** is thrown, the **SocketException** class sets the <xref:System.Net.Sockets.SocketException.ErrorCode%2A> property to the last operating system socket error that occurred.</span></span> <span data-ttu-id="0f1ae-151">소켓 오류 코드에 대한 자세한 내용은 MSDN에서 Winsock 2.0 API 오류 코드 문서를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="0f1ae-151">For more information about socket error codes, see the Winsock 2.0 API error code documentation in MSDN.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [예외 처리 기본 사항](../../../docs/standard/exceptions/exception-handling-fundamentals.md)   
- [데이터 요청](../../../docs/framework/network-programming/requesting-data.md)
-
+## <a name="see-also"></a><span data-ttu-id="0f1ae-152">참고 항목</span><span class="sxs-lookup"><span data-stu-id="0f1ae-152">See Also</span></span>  
+ [<span data-ttu-id="0f1ae-153">예외 처리 기본 사항</span><span class="sxs-lookup"><span data-stu-id="0f1ae-153">Exception Handling Fundamentals</span></span>](../../../docs/standard/exceptions/exception-handling-fundamentals.md)  
+ [<span data-ttu-id="0f1ae-154">데이터 요청</span><span class="sxs-lookup"><span data-stu-id="0f1ae-154">Requesting Data</span></span>](../../../docs/framework/network-programming/requesting-data.md)

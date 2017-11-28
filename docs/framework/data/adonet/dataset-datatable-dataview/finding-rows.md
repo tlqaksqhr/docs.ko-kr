@@ -1,33 +1,39 @@
 ---
-title: "행 찾기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "행 찾기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 5da300e2-74c0-4d13-9202-fc20ed8212d8
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 96a65761cb6ddf31c0bb4c14077aed37336183f9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 행 찾기
-<xref:System.Data.DataView>의 <xref:System.Data.DataView.Find%2A> 및 <xref:System.Data.DataView.FindRows%2A> 메서드를 사용하여 행의 정렬 키 값에 따라 행을 검색할 수 있습니다.  **Find** 및 **FindRows** 메서드에서 검색 값의 대\/소문자 구분은 원본 <xref:System.Data.DataTable>의 **CaseSensitive** 속성에 의해 결정됩니다.  검색 값이 기존 정렬 키 값 전체와 일치해야 결과를 반환할 수 있습니다.  
+# <a name="finding-rows"></a><span data-ttu-id="e7079-102">행 찾기</span><span class="sxs-lookup"><span data-stu-id="e7079-102">Finding Rows</span></span>
+<span data-ttu-id="e7079-103"><xref:System.Data.DataView.Find%2A>의 <xref:System.Data.DataView.FindRows%2A> 및 <xref:System.Data.DataView> 메서드를 사용하여 행의 정렬 키 값에 따라 행을 검색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e7079-103">You can search for rows according to their sort key values by using the <xref:System.Data.DataView.Find%2A> and <xref:System.Data.DataView.FindRows%2A> methods of the <xref:System.Data.DataView>.</span></span> <span data-ttu-id="e7079-104">검색의 대/소문자 구분 값에 **찾을** 및 **FindRows** 메서드에 의해 결정 됩니다는 **CaseSensitive** 속성은 기본 <xref:System.Data.DataTable>합니다.</span><span class="sxs-lookup"><span data-stu-id="e7079-104">The case sensitivity of search values in the **Find** and **FindRows** methods is determined by the **CaseSensitive** property of the underlying <xref:System.Data.DataTable>.</span></span> <span data-ttu-id="e7079-105">검색 값이 기존 정렬 키 값 전체와 일치해야 결과를 반환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e7079-105">Search values must match existing sort key values in their entirety in order to return a result.</span></span>  
   
- **Find** 메서드는 검색 기준과 일치하는 <xref:System.Data.DataRowView>의 인덱스와 함께 정수를 반환합니다.  두 개 이상의 행이 검색 기준과 일치하는 경우, 처음 일치하는 **DataRowView**의 인덱스만 반환됩니다.  일치하는 행이 없으면 **Find**에서는 \-1을 반환합니다.  
+ <span data-ttu-id="e7079-106">**찾을** 의 인덱스를 사용 하는 정수를 반환 하는 메서드는 <xref:System.Data.DataRowView> 검색 조건과 일치 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="e7079-106">The **Find** method returns an integer with the index of the <xref:System.Data.DataRowView> that matches the search criteria.</span></span> <span data-ttu-id="e7079-107">둘 이상의 행 검색 조건과 일치 하는 첫 번째 인덱스에만 일치 하는 경우 **DataRowView** 반환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e7079-107">If more than one row matches the search criteria, only the index of the first matching **DataRowView** is returned.</span></span> <span data-ttu-id="e7079-108">일치 하는 경우 **찾을** -1을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="e7079-108">If no matches are found, **Find** returns -1.</span></span>  
   
- 여러 행과 일치하는 검색 결과를 반환하려면 **FindRows** 메서드를 사용합니다.  **FindRows**는 **DataView**의 일치하는 모든 행을 참조하는 **DataRowView** 배열을 반환하는 것을 제외하면, **Find** 메서드와 똑같이 동작합니다.  일치하는 행이 없으면 **DataRowView** 배열은 비어 있게 됩니다.  
+ <span data-ttu-id="e7079-109">사용 하 여 여러 행과 일치 하는 검색 결과 반환 하려면는 **FindRows** 메서드.</span><span class="sxs-lookup"><span data-stu-id="e7079-109">To return search results that match multiple rows, use the **FindRows** method.</span></span> <span data-ttu-id="e7079-110">**FindRows** 처럼 작동은 **찾을** 메서드를 반환 한다는 점을 제외 하 고는 **DataRowView** 배열에 일치 하는 모든 행을 참조 하는 **DataView**합니다.</span><span class="sxs-lookup"><span data-stu-id="e7079-110">**FindRows** works just like the **Find** method, except that it returns a **DataRowView** array that references all matching rows in the **DataView**.</span></span> <span data-ttu-id="e7079-111">일치 하는 경우는 **DataRowView** 배열은 비어 있게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e7079-111">If no matches are found, the **DataRowView** array will be empty.</span></span>  
   
- **Find** 또는 **FindRows** 메서드를 사용하려면 **ApplyDefaultSort**를 **true**로 설정하거나 **Sort** 속성을 사용하여 정렬 순서를 지정해야 합니다.  정렬 순서를 지정하지 않으면 예외가 throw됩니다.  
+ <span data-ttu-id="e7079-112">사용 하는 **찾을** 또는 **FindRows** 정렬을 지정 해야 하는 방법을 설정 하거나 순서 **ApplyDefaultSort** 를 **true** 또는 사용 하 여는 **정렬** 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="e7079-112">To use the **Find** or **FindRows** methods you must specify a sort order either by setting **ApplyDefaultSort** to **true** or by using the **Sort** property.</span></span> <span data-ttu-id="e7079-113">정렬 순서를 지정하지 않으면 예외가 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="e7079-113">If no sort order is specified, an exception is thrown.</span></span>  
   
- **Find** 및 **FindRows** 메서드에서는 값 배열을 입력으로 사용하며, 해당 배열의 길이는 정렬 순서에 있는 열의 수와 일치합니다.  하나의 열에 대해 정렬하는 경우에는 하나의 값을 전달할 수 있습니다.  정렬 순서에 여러 열이 포함된 경우에는 개체 배열을 전달합니다.  여러 열에 대해 정렬하는 경우, 개체 배열의 값은 **DataView**의 **Sort** 속성에 지정된 열의 순서와 일치해야 합니다.  
+ <span data-ttu-id="e7079-114">**찾을** 및 **FindRows** 메서드 값의 배열을 길이가 정렬 순서에 있는 열의 수와 일치 하는 입력으로 변수를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="e7079-114">The **Find** and **FindRows** methods take an array of values as input whose length matches the number of columns in the sort order.</span></span> <span data-ttu-id="e7079-115">하나의 열에 대해 정렬하는 경우에는 하나의 값을 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e7079-115">In the case of a sort on a single column, you can pass a single value.</span></span> <span data-ttu-id="e7079-116">정렬 순서에 여러 열이 포함된 경우에는 개체 배열을 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="e7079-116">For sort orders containing multiple columns, you pass an array of objects.</span></span> <span data-ttu-id="e7079-117">여러 열에 대해 정렬, 개체 배열의 값와 일치 해야에 지정 된 열의 순서는 **정렬** 의 속성은 **DataView**합니다.</span><span class="sxs-lookup"><span data-stu-id="e7079-117">Note that for a sort on multiple columns, the values in the object array must match the order of the columns specified in the **Sort** property of the **DataView**.</span></span>  
   
- 다음 코드 예제에서는 하나의 열 정렬 순서를 가진 **DataView**에 **Find** 메서드를 호출하는 방법을 보여 줍니다.  
+ <span data-ttu-id="e7079-118">다음 코드 예제는 **찾을** 메서드를 호출 하는 **DataView** 단일 열 정렬 순서를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="e7079-118">The following code example shows the **Find** method being called against a **DataView** with a single column sort order.</span></span>  
   
 ```vb  
 Dim custView As DataView = _  
@@ -43,7 +49,6 @@ Else
     custView(rowIndex)("CustomerID").ToString(), _  
     custView(rowIndex)("CompanyName").ToString())  
 End If  
-  
 ```  
   
 ```csharp  
@@ -60,7 +65,7 @@ else
     custView[rowIndex]["CompanyName"].ToString());  
 ```  
   
- 다음 코드 예제와 같이, **Sort** 속성에서 여러 열을 지정할 경우에는 **Sort** 속성에서 지정한 순서대로 각 열에 대한 검색 값을 사용하여 개체 배열을 전달해야 합니다.  
+ <span data-ttu-id="e7079-119">경우에 **정렬** 여러 열을 지정 하는 속성, 각 열에 대 한 검색 값이 포함 된 개체 배열에서 지정 된 순서 대로 전달 해야는 **정렬** 다음 코드 예제와 같이 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="e7079-119">If your **Sort** property specifies multiple columns, you must pass an object array with the search values for each column in the order specified by the **Sort** property, as in the following code example.</span></span>  
   
 ```vb  
 Dim custView As DataView = _  
@@ -80,7 +85,6 @@ Else
       myDRV("CompanyName").ToString(), myDRV("ContactName").ToString())  
   Next  
 End If  
-  
 ```  
   
 ```csharp  
@@ -99,8 +103,8 @@ else
       myDRV["ContactName"].ToString());  
 ```  
   
-## 참고 항목  
- <xref:System.Data.DataTable>   
- <xref:System.Data.DataView>   
- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)   
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="e7079-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e7079-120">See Also</span></span>  
+ <xref:System.Data.DataTable>  
+ <xref:System.Data.DataView>  
+ [<span data-ttu-id="e7079-121">DataView</span><span class="sxs-lookup"><span data-stu-id="e7079-121">DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [<span data-ttu-id="e7079-122">ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터</span><span class="sxs-lookup"><span data-stu-id="e7079-122">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

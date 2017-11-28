@@ -1,28 +1,37 @@
 ---
-title: "&lt;ws2007HttpBinding&gt;의 &lt;message&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;ws2007HttpBinding&gt;의 &lt;message&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9ffd8db6-84a8-4b38-a9fe-2cb1a87a1c97
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d0be3fce43e87f5b6ab4eeba0e1e65f23056f8da
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;ws2007HttpBinding&gt;의 &lt;message&gt;
-[\<ws2007HttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) 요소의 메시지 수준 보안 설정을 정의합니다.  
+# <a name="ltmessagegt-of-ltws2007httpbindinggt"></a><span data-ttu-id="07551-102">&lt;ws2007HttpBinding&gt;의 &lt;message&gt;</span><span class="sxs-lookup"><span data-stu-id="07551-102">&lt;message&gt; of &lt;ws2007HttpBinding&gt;</span></span>
+<span data-ttu-id="07551-103">메시지 수준 보안 설정을 정의 [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="07551-103">Defines settings for message-level security of the [\<ws2007HttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) element.</span></span>  
   
-## 구문  
+ <span data-ttu-id="07551-104">\<시스템입니다. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="07551-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="07551-105">\<바인딩 ></span><span class="sxs-lookup"><span data-stu-id="07551-105">\<bindings></span></span>  
+<span data-ttu-id="07551-106">\<ws2007HttpBinding ></span><span class="sxs-lookup"><span data-stu-id="07551-106">\<ws2007HttpBinding></span></span>  
+<span data-ttu-id="07551-107">\<바인딩 ></span><span class="sxs-lookup"><span data-stu-id="07551-107">\<binding></span></span>  
+<span data-ttu-id="07551-108">\<보안 ></span><span class="sxs-lookup"><span data-stu-id="07551-108">\<security></span></span>  
+<span data-ttu-id="07551-109">\<메시지 ></span><span class="sxs-lookup"><span data-stu-id="07551-109">\<message></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="07551-110">구문</span><span class="sxs-lookup"><span data-stu-id="07551-110">Syntax</span></span>  
   
+```xml  
 <ws2007HttpBinding>  
  <binding >  
   <security>  
@@ -37,68 +46,68 @@ caps.handback.revision: 9
 </ws2007HttpBinding>  
 ```  
   
-## 형식  
+## <a name="type"></a><span data-ttu-id="07551-111">형식</span><span class="sxs-lookup"><span data-stu-id="07551-111">Type</span></span>  
  <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>  
   
-## 특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="07551-112">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="07551-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="07551-113">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="07551-113">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 특성  
+### <a name="attributes"></a><span data-ttu-id="07551-114">특성</span><span class="sxs-lookup"><span data-stu-id="07551-114">Attributes</span></span>  
   
-|특성|설명|  
-|--------|--------|  
-|`algorithmSuite`|메시지 암호화 및 키 래핑 알고리즘을 설정합니다.  알고리즘과 키 크기는 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 클래스로 결정됩니다.  이러한 알고리즘은 WS\-SecurityPolicy\(Security Policy Language\) 사양에 지정된 알고리즘에 매핑됩니다.<br /><br /> 기본값은 Basic256입니다.|  
-|`clientCredentialType`|선택 사항입니다.  `Message` 또는 `TransportWithMessageCredentials` 보안 모드를 사용하여 클라이언트 인증을 수행할 때 사용되는 자격 증명의 형식을 지정합니다.  다음 표에서 열거형 값을 참조하세요.  기본값은 Windows입니다.<br /><br /> 이 특성은 <xref:System.ServiceModel.MessageCredentialType> 형식입니다.|  
-|`establishSecurityContext`|보안 채널이 보안 세션을 설정할지 여부를 결정하는 값입니다.  보안 세션은 응용 프로그램 메시지를 교환하기 전에 SCT\(보안 컨텍스트 토큰\)를 설정합니다.  SCT가 설정되면 보안 채널은 상위 채널에 대한 <xref:System.ServiceModel.Channels.ISession> 인터페이스를 제공합니다.  보안 세션을 사용하는 방법은 [방법: 보안 세션 만들기](../../../../../docs/framework/wcf/feature-details/how-to-create-a-secure-session.md)를 참조하세요.<br /><br /> 기본값은 `true`입니다.|  
-|`negotiateServiceCredential`|선택 사항입니다.  서비스 자격 증명이 클라이언트에서 out\-of\-band 방식으로 제공되는지 아니면 협상 프로세스를 통해 서비스에서 클라이언트로 전달되는지를 지정하는 값입니다.  그러한 협상은 일반적인 메시지 교환에 앞서 수행됩니다.<br /><br /> `clientCredentialType` 특성이 None, Username 또는 Certificate일 경우 이 특성을 `false`로 설정하면 클라이언트에서 out\-of\-band 방식으로 서비스 자격 증명을 사용할 수 있으며 클라이언트는 [\<serviceCredentials\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) 서비스 동작에서 [\<serviceCertificate\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)를 사용하여 서비스 인증서를 지정해야 합니다.  이 모드는 WS\-Trust 및 WS\-SecureConversation을 구현하는 SOAP 스택과 상호 운용할 수 있습니다.<br /><br /> `ClientCredentialType` 특성이 `Windows`로 설정된 경우 이 특성을 `false`로 설정하면 Kerberos 기반 인증이 지정됩니다.  이것은 클라이언트와 서비스가 동일한 Kerberos 도메인에 속해야 함을 의미합니다.  이 모드는 Kerberos 토큰 프로필\(OASIS WSS TC에서 정의\) 그리고 WS\-Trust 및 WS\-SecureConversation을 구현하는 SOAP 스택과 상호 운용할 수 있습니다.<br /><br /> 이 특성이 `true`일 경우 SOAP 메시지를 통한 <xref:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes.Spnego%2A> 교환을 터널링하는 .NET SOAP 협상이 수행됩니다.<br /><br /> 기본값은 `true`입니다.|  
+|<span data-ttu-id="07551-115">특성</span><span class="sxs-lookup"><span data-stu-id="07551-115">Attribute</span></span>|<span data-ttu-id="07551-116">설명</span><span class="sxs-lookup"><span data-stu-id="07551-116">Description</span></span>|  
+|---------------|-----------------|  
+|`algorithmSuite`|<span data-ttu-id="07551-117">메시지 암호화 및 키 래핑 알고리즘을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="07551-117">Sets the message encryption and key-wrap algorithms.</span></span> <span data-ttu-id="07551-118">알고리즘과 키 크기는 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 클래스로 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="07551-118">The algorithms and the key sizes are determined by the <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> class.</span></span> <span data-ttu-id="07551-119">이러한 알고리즘은 WS-SecurityPolicy(Security Policy Language) 사양에 지정된 알고리즘에 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="07551-119">These algorithms map to those specified in the Security Policy Language (WS-SecurityPolicy) specification.</span></span><br /><br /> <span data-ttu-id="07551-120">기본값은 Basic256입니다.</span><span class="sxs-lookup"><span data-stu-id="07551-120">The default value is Basic256.</span></span>|  
+|`clientCredentialType`|<span data-ttu-id="07551-121">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="07551-121">Optional.</span></span> <span data-ttu-id="07551-122">`Message` 또는 `TransportWithMessageCredentials` 보안 모드를 사용하여 클라이언트 인증을 수행할 때 사용되는 자격 증명의 형식을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="07551-122">Specifies the type of credential to be used when performing client authentication using the security mode `Message` or `TransportWithMessageCredentials`.</span></span> <span data-ttu-id="07551-123">다음 표에서 열거형 값을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="07551-123">See the enumeration values in the following table.</span></span> <span data-ttu-id="07551-124">기본값은 Windows입니다.</span><span class="sxs-lookup"><span data-stu-id="07551-124">The default is Windows.</span></span><br /><br /> <span data-ttu-id="07551-125">이 특성은 <xref:System.ServiceModel.MessageCredentialType> 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="07551-125">This attribute is of type <xref:System.ServiceModel.MessageCredentialType>.</span></span>|  
+|`establishSecurityContext`|<span data-ttu-id="07551-126">보안 채널이 보안 세션을 설정할지 여부를 결정하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="07551-126">A value that determines whether the security channel establishes a secure session.</span></span> <span data-ttu-id="07551-127">보안 세션은 응용 프로그램 메시지를 교환하기 전에 SCT(보안 컨텍스트 토큰)를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="07551-127">A secure session establishes a security context token (SCT) before exchanging the application messages.</span></span> <span data-ttu-id="07551-128">SCT가 설정되면 보안 채널은 상위 채널에 대한 <xref:System.ServiceModel.Channels.ISession> 인터페이스를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="07551-128">When the SCT is established, the security channel offers a <xref:System.ServiceModel.Channels.ISession> interface to the upper channels.</span></span> <span data-ttu-id="07551-129">보안 세션을 사용 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: 보안 세션 만들기](../../../../../docs/framework/wcf/feature-details/how-to-create-a-secure-session.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="07551-129">For more information about using secure sessions, see [How to: Create a Secure Session](../../../../../docs/framework/wcf/feature-details/how-to-create-a-secure-session.md).</span></span><br /><br /> <span data-ttu-id="07551-130">기본값은 `true`입니다.</span><span class="sxs-lookup"><span data-stu-id="07551-130">The default value is `true`.</span></span>|  
+|`negotiateServiceCredential`|<span data-ttu-id="07551-131">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="07551-131">Optional.</span></span> <span data-ttu-id="07551-132">서비스 자격 증명이 클라이언트에서 out-of-band 방식으로 제공되는지 아니면 협상 프로세스를 통해 서비스에서 클라이언트로 전달되는지를 지정하는 값입니다.</span><span class="sxs-lookup"><span data-stu-id="07551-132">A value that specifies whether the service credential is provisioned at the client out of band, or is obtained from the service to the client through a process of negotiation.</span></span> <span data-ttu-id="07551-133">그러한 협상은 일반적인 메시지 교환에 앞서 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="07551-133">Such a negotiation is a precursor to the usual message exchange.</span></span><br /><br /> <span data-ttu-id="07551-134">경우는 `clientCredentialType` None, 인증서를이 특성을 설정 또는 사용자 이름에 같고 특성이 `false` 서비스 인증서를 대역 외 클라이언트에서 사용할 수 있는지와 클라이언트가 ( 에서사용하여서비스인증서를지정해야[ \<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md))에 [ \<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) 서비스 동작입니다.</span><span class="sxs-lookup"><span data-stu-id="07551-134">If the `clientCredentialType` attribute equals to None, Username, or Certificate, setting this attribute to `false` implies that the service certificate is available at the client out of band and that the client must specify the service certificate (using the [\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) in the [\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) service behavior.</span></span> <span data-ttu-id="07551-135">이 모드는 WS-Trust 및 WS-SecureConversation을 구현하는 SOAP 스택과 상호 운용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07551-135">This mode is interoperable with SOAP stacks that implement WS-Trust and WS-SecureConversation.</span></span><br /><br /> <span data-ttu-id="07551-136">`ClientCredentialType` 특성이 `Windows`로 설정된 경우 이 특성을 `false`로 설정하면 Kerberos 기반 인증이 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="07551-136">If the `ClientCredentialType` attribute is set to `Windows`, setting this attribute to `false` specifies Kerberos based authentication.</span></span> <span data-ttu-id="07551-137">이것은 클라이언트와 서비스가 동일한 Kerberos 도메인에 속해야 함을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="07551-137">This means that the client and service must be part of the same Kerberos domain.</span></span> <span data-ttu-id="07551-138">이 모드는 Kerberos 토큰 프로필(OASIS WSS TC에서 정의) 그리고 WS-Trust 및 WS-SecureConversation을 구현하는 SOAP 스택과 상호 운용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07551-138">This mode is interoperable with SOAP stacks that implement the Kerberos token profile (as defined at OASIS WSS TC) as well as WS-Trust and WS-SecureConversation.</span></span><br /><br /> <span data-ttu-id="07551-139">이 특성이 `true`일 경우 SOAP 메시지를 통한 <xref:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes.Spnego%2A> 교환을 터널링하는 .NET SOAP 협상이 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="07551-139">When this attribute is `true`, it causes a .NET SOAP negotiation that tunnels <xref:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes.Spnego%2A> exchange over SOAP messages.</span></span><br /><br /> <span data-ttu-id="07551-140">기본값은 `true`입니다.</span><span class="sxs-lookup"><span data-stu-id="07551-140">The default is `true`.</span></span>|  
   
-## algorithmSuite 특성  
+## <a name="algorithmsuite-attribute"></a><span data-ttu-id="07551-141">algorithmSuite 특성</span><span class="sxs-lookup"><span data-stu-id="07551-141">algorithmSuite Attribute</span></span>  
   
-|값|설명|  
-|-------|--------|  
-|Basic128|Aes128 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa\-oaep\-mgf1p를 사용합니다.|  
-|Basic192|Aes192 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa\-oaep\-mgf1p를 사용합니다.|  
-|Basic256|Aes256 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa\-oaep\-mgf1p를 사용합니다.|  
-|Basic256Rsa15|메시지 암호화의 경우 Aes256, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa15를 사용합니다.|  
-|Basic192Rsa15|메시지 암호화의 경우 Aes192, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa15를 사용합니다.|  
-|TripleDes|TripleDes 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa\-oaep\-mgf1p를 사용합니다.|  
-|Basic128Rsa15|메시지 암호화의 경우 Aes128, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa15를 사용합니다.|  
-|TripleDesRsa15|TripleDes 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa15를 사용합니다.|  
-|Basic128Sha256|메시지 암호화의 경우 Aes256, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa\-oaep\-mgf1p를 사용합니다.|  
-|Basic192Sha256|메시지 암호화의 경우 Aes192, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa\-oaep\-mgf1p를 사용합니다.|  
-|Basic256Sha256|메시지 암호화의 경우 Aes256, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa\-oaep\-mgf1p를 사용합니다.|  
-|TripleDesSha256|메시지 암호화의 경우 TripleDes, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa\-oaep\-mgf1p를 사용합니다.|  
-|Basic128Sha256Rsa15|메시지 암호화의 경우 Aes128, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa15를 사용합니다.|  
-|Basic192Sha256Rsa15|메시지 암호화의 경우 Aes192, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa15를 사용합니다.|  
-|Basic256Sha256Rsa15|메시지 암호화의 경우 Aes256, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa15를 사용합니다.|  
-|TripleDesSha256Rsa15|메시지 암호화의 경우 TripleDes, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa15를 사용합니다.|  
+|<span data-ttu-id="07551-142">값</span><span class="sxs-lookup"><span data-stu-id="07551-142">Value</span></span>|<span data-ttu-id="07551-143">설명</span><span class="sxs-lookup"><span data-stu-id="07551-143">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="07551-144">Basic128</span><span class="sxs-lookup"><span data-stu-id="07551-144">Basic128</span></span>|<span data-ttu-id="07551-145">Aes128 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa-oaep-mgf1p를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="07551-145">Use Aes128 encryption, Sha1 for message digest, and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="07551-146">Basic192</span><span class="sxs-lookup"><span data-stu-id="07551-146">Basic192</span></span>|<span data-ttu-id="07551-147">Aes192 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa-oaep-mgf1p를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="07551-147">Use Aes192 encryption, Sha1 for message digest, Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="07551-148">Basic256</span><span class="sxs-lookup"><span data-stu-id="07551-148">Basic256</span></span>|<span data-ttu-id="07551-149">Aes256 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa-oaep-mgf1p를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="07551-149">Use Aes256 encryption, Sha1 for message digest, Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="07551-150">Basic256Rsa15</span><span class="sxs-lookup"><span data-stu-id="07551-150">Basic256Rsa15</span></span>|<span data-ttu-id="07551-151">메시지 암호화의 경우 Aes256, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa15를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="07551-151">Use Aes256 for message encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="07551-152">Basic192Rsa15</span><span class="sxs-lookup"><span data-stu-id="07551-152">Basic192Rsa15</span></span>|<span data-ttu-id="07551-153">메시지 암호화의 경우 Aes192, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa15를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="07551-153">Use Aes192 for message encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="07551-154">TripleDes</span><span class="sxs-lookup"><span data-stu-id="07551-154">TripleDes</span></span>|<span data-ttu-id="07551-155">TripleDes 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa-oaep-mgf1p를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="07551-155">Use TripleDes encryption, Sha1 for message digest, Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="07551-156">Basic128Rsa15</span><span class="sxs-lookup"><span data-stu-id="07551-156">Basic128Rsa15</span></span>|<span data-ttu-id="07551-157">메시지 암호화의 경우 Aes128, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa15를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="07551-157">Use Aes128 for message encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="07551-158">TripleDesRsa15</span><span class="sxs-lookup"><span data-stu-id="07551-158">TripleDesRsa15</span></span>|<span data-ttu-id="07551-159">TripleDes 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa15를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="07551-159">Use TripleDes encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="07551-160">Basic128Sha256</span><span class="sxs-lookup"><span data-stu-id="07551-160">Basic128Sha256</span></span>|<span data-ttu-id="07551-161">메시지 암호화의 경우 Aes256, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa-oaep-mgf1p를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="07551-161">Use Aes256 for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="07551-162">Basic192Sha256</span><span class="sxs-lookup"><span data-stu-id="07551-162">Basic192Sha256</span></span>|<span data-ttu-id="07551-163">메시지 암호화의 경우 Aes192, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa-oaep-mgf1p를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="07551-163">Use Aes192 for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="07551-164">Basic256Sha256</span><span class="sxs-lookup"><span data-stu-id="07551-164">Basic256Sha256</span></span>|<span data-ttu-id="07551-165">메시지 암호화의 경우 Aes256, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa-oaep-mgf1p를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="07551-165">Use Aes256 for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="07551-166">TripleDesSha256</span><span class="sxs-lookup"><span data-stu-id="07551-166">TripleDesSha256</span></span>|<span data-ttu-id="07551-167">메시지 암호화의 경우 TripleDes, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa-oaep-mgf1p를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="07551-167">Use TripleDes for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="07551-168">Basic128Sha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="07551-168">Basic128Sha256Rsa15</span></span>|<span data-ttu-id="07551-169">메시지 암호화의 경우 Aes128, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa15를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="07551-169">Use Aes128 for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="07551-170">Basic192Sha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="07551-170">Basic192Sha256Rsa15</span></span>|<span data-ttu-id="07551-171">메시지 암호화의 경우 Aes192, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa15를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="07551-171">Use Aes192 for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="07551-172">Basic256Sha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="07551-172">Basic256Sha256Rsa15</span></span>|<span data-ttu-id="07551-173">메시지 암호화의 경우 Aes256, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa15를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="07551-173">Use Aes256 for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="07551-174">TripleDesSha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="07551-174">TripleDesSha256Rsa15</span></span>|<span data-ttu-id="07551-175">메시지 암호화의 경우 TripleDes, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa15를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="07551-175">Use TripleDes for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
   
-## clientCredentialType 특성  
+## <a name="clientcredentialtype-attribute"></a><span data-ttu-id="07551-176">clientCredentialType 특성</span><span class="sxs-lookup"><span data-stu-id="07551-176">clientCredentialType Attribute</span></span>  
   
-|값|설명|  
-|-------|--------|  
-|`None`|이를 통해 서비스와 익명 클라이언트가 상호 작용할 수 있습니다.  서비스 쪽에서는 서비스가 클라이언트 자격 증명을 요구하지 않음을 의미하고  클라이언트 쪽에서는 클라이언트가 클라이언트 자격 증명을 제공하지 않음을 의미합니다.|  
-|`Certificate`|서비스에서 인증서를 사용하여 클라이언트를 인증하도록 요구할 수 있습니다.  `message` 보안 모드가 사용되고 `negotiateServiceCredential` 특성이 `false`로 설정되면 서비스 인증서를 사용하여 클라이언트를 구축해야 합니다.|  
-|`IssuedToken`|일반적으로 STS\(보안 토큰 서비스\)에서 발급하는 사용자 지정 토큰을 지정합니다.|  
-|`UserName`|서비스에서 `UserName` 자격 증명을 사용하여 클라이언트를 인증하도록 요구할 수 있습니다.  [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]는 암호 다이제스트를 보내거나 암호를 사용하여 키를 파생하고 메시지 보안에 이러한 키를 사용하는 것을 지원하지 않습니다.  따라서 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에서는 `UserName` 자격 증명을 사용할 때 전송에 보안을 적용합니다.  이 자격 증명 모드에서는 상호 운용이 가능한 교환 또는 `negotiateServiceCredential` 특성을 기반으로 하는 상호 운용이 불가능한 협상이 수행됩니다.|  
-|`Windows`|`Windows` 자격 증명의 인증된 컨텍스트에서 SOAP 교환을 수행할 수 있습니다.  `negotiateServiceCredential` 특성이 `true`로 설정되면 SSPI 협상 또는 Kerberos\(상호 운용 가능 표준\)가 수행됩니다.|  
+|<span data-ttu-id="07551-177">값</span><span class="sxs-lookup"><span data-stu-id="07551-177">Value</span></span>|<span data-ttu-id="07551-178">설명</span><span class="sxs-lookup"><span data-stu-id="07551-178">Description</span></span>|  
+|-----------|-----------------|  
+|`None`|<span data-ttu-id="07551-179">이를 통해 서비스와 익명 클라이언트가 상호 작용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07551-179">This allows the service to interact with anonymous clients.</span></span> <span data-ttu-id="07551-180">서비스 쪽에서는 서비스가 클라이언트 자격 증명을 요구하지 않음을 의미하고</span><span class="sxs-lookup"><span data-stu-id="07551-180">On the service, this indicates that the service does not require any client credential.</span></span> <span data-ttu-id="07551-181">클라이언트 쪽에서는 클라이언트가 클라이언트 자격 증명을 제공하지 않음을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="07551-181">On the client, this indicates that the client does not provide any client credential.</span></span>|  
+|`Certificate`|<span data-ttu-id="07551-182">서비스에서 인증서를 사용하여 클라이언트를 인증하도록 요구할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07551-182">Allows the service to require that the client be authenticated using a certificate.</span></span> <span data-ttu-id="07551-183">`message` 보안 모드가 사용되고 `negotiateServiceCredential` 특성이 `false`로 설정되면 서비스 인증서를 사용하여 클라이언트를 구축해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="07551-183">If `message` security mode is used and the `negotiateServiceCredential` attribute is set to `false`, the client must be provisioned with the service certificate.</span></span>|  
+|`IssuedToken`|<span data-ttu-id="07551-184">일반적으로 STS(보안 토큰 서비스)에서 발급하는 사용자 지정 토큰을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="07551-184">Specifies a custom token, usually issued by a Security Token Service (STS).</span></span>|  
+|`UserName`|<span data-ttu-id="07551-185">서비스에서 `UserName` 자격 증명을 사용하여 클라이언트를 인증하도록 요구할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07551-185">Allows the service to require that the client be authenticated using a `UserName` credential.</span></span> [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]<span data-ttu-id="07551-186">는 암호 다이제스트를 보내거나 암호를 사용하여 키를 파생하고 메시지 보안에 이러한 키를 사용하는 것을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="07551-186"> does not support sending a password digest or deriving keys using password and using such keys for message security.</span></span> <span data-ttu-id="07551-187">따라서 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에서는 `UserName` 자격 증명을 사용할 때 전송에 보안을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="07551-187">As such, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] enforces that the transport is secured when using `UserName` credentials.</span></span> <span data-ttu-id="07551-188">이 자격 증명 모드에서는 상호 운용이 가능한 교환 또는 `negotiateServiceCredential` 특성을 기반으로 하는 상호 운용이 불가능한 협상이 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="07551-188">This credential mode results in either an interoperable exchange or a non-interoperable negotiation based on the `negotiateServiceCredential` attribute.</span></span>|  
+|`Windows`|<span data-ttu-id="07551-189">`Windows` 자격 증명의 인증된 컨텍스트에서 SOAP 교환을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07551-189">Allows the SOAP exchanges to be under the authenticated context of a `Windows` credential.</span></span> <span data-ttu-id="07551-190">`negotiateServiceCredential` 특성이 `true`로 설정되면 SSPI 협상 또는 Kerberos(상호 운용 가능 표준)가 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="07551-190">If the `negotiateServiceCredential` attribute is set to `true`, this either performs an SSPI negotiation or Kerberos (an interoperable standard).</span></span>|  
   
-### 자식 요소  
- 없음  
+### <a name="child-elements"></a><span data-ttu-id="07551-191">자식 요소</span><span class="sxs-lookup"><span data-stu-id="07551-191">Child Elements</span></span>  
+ <span data-ttu-id="07551-192">없음</span><span class="sxs-lookup"><span data-stu-id="07551-192">None</span></span>  
   
-### 부모 요소  
+### <a name="parent-elements"></a><span data-ttu-id="07551-193">부모 요소</span><span class="sxs-lookup"><span data-stu-id="07551-193">Parent Elements</span></span>  
   
-|요소|설명|  
-|--------|--------|  
-|[\<security\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|[\<ws2007HttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)에 대한 보안 설정을 정의합니다.|  
+|<span data-ttu-id="07551-194">요소</span><span class="sxs-lookup"><span data-stu-id="07551-194">Element</span></span>|<span data-ttu-id="07551-195">설명</span><span class="sxs-lookup"><span data-stu-id="07551-195">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="07551-196">\<보안 ></span><span class="sxs-lookup"><span data-stu-id="07551-196">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|<span data-ttu-id="07551-197">에 대 한 보안 설정을 정의 [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="07551-197">Defines the security settings for a [\<ws2007HttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md).</span></span>|  
   
-## 참고 항목  
- <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>   
- <xref:System.ServiceModel.Configuration.WSHttpSecurityElement.Message%2A>   
- <xref:System.ServiceModel.WSHttpSecurity.Message%2A>   
- <xref:System.ServiceModel.Configuration.NonDualMessageSecurityOverHttpElement>   
- [서비스 및 클라이언트에 보안 설정](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [바인딩](../../../../../docs/framework/wcf/bindings.md)   
- [시스템 제공 바인딩 구성](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/ko-kr/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<binding\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a><span data-ttu-id="07551-198">참고 항목</span><span class="sxs-lookup"><span data-stu-id="07551-198">See Also</span></span>  
+ <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>  
+ <xref:System.ServiceModel.Configuration.WSHttpSecurityElement.Message%2A>  
+ <xref:System.ServiceModel.WSHttpSecurity.Message%2A>  
+ <xref:System.ServiceModel.Configuration.NonDualMessageSecurityOverHttpElement>  
+ [<span data-ttu-id="07551-199">서비스 및 클라이언트 보안 설정</span><span class="sxs-lookup"><span data-stu-id="07551-199">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="07551-200">바인딩</span><span class="sxs-lookup"><span data-stu-id="07551-200">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="07551-201">시스템 제공 바인딩 구성</span><span class="sxs-lookup"><span data-stu-id="07551-201">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="07551-202">바인딩을 사용 하 여 Windows Communication Foundation 서비스 및 클라이언트 구성</span><span class="sxs-lookup"><span data-stu-id="07551-202">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="07551-203">\<바인딩 ></span><span class="sxs-lookup"><span data-stu-id="07551-203">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

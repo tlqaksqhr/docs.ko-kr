@@ -1,38 +1,41 @@
 ---
-title: "DataSet 제약 조건에 key XSD(XML 스키마) 제약 조건 매핑 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "데이터 집합 제약 조건에 키 XSD(XML 스키마) 제약 조건 매핑"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: f5247d0ccfd2ceec641ff29d29b889a55c1a5e12
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# DataSet 제약 조건에 key XSD(XML 스키마) 제약 조건 매핑
-스키마에서 **key** 요소를 사용하여 요소나 특성에 key 제약 조건을 지정할 수 있습니다.  KEY 제약 조건이 지정된 요소 또는 특성은 모든 스키마 인스턴스에서 고유한 값을 가져야 하며 null 값을 가져서는 안 됩니다.  
+# <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a><span data-ttu-id="117db-102">데이터 집합 제약 조건에 키 XSD(XML 스키마) 제약 조건 매핑</span><span class="sxs-lookup"><span data-stu-id="117db-102">Map key XML Schema (XSD) Constraints to DataSet Constraints</span></span>
+<span data-ttu-id="117db-103">스키마에서는 요소에 대 한 key 제약 조건을 지정 하거나 사용 하 여 특성 수는 **키** 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="117db-103">In a schema, you can specify a key constraint on an element or attribute using the **key** element.</span></span> <span data-ttu-id="117db-104">KEY 제약 조건이 지정된 요소 또는 특성은 모든 스키마 인스턴스에서 고유한 값을 가져야 하며 null 값을 가져서는 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="117db-104">The element or attribute on which a key constraint is specified must have unique values in any schema instance, and cannot have null values.</span></span>  
   
- KEY 제약 조건이 정의된 열이 null 값을 가질 수 없다는 것을 제외하면, key 제약 조건은 UNIQUE 제약 조건과 유사합니다.  
+ <span data-ttu-id="117db-105">KEY 제약 조건이 정의된 열이 null 값을 가질 수 없다는 것을 제외하면, key 제약 조건은 UNIQUE 제약 조건과 유사합니다.</span><span class="sxs-lookup"><span data-stu-id="117db-105">The key constraint is similar to the unique constraint, except that the column on which a key constraint is defined cannot have null values.</span></span>  
   
- 다음 표에서는 **key** 요소에 지정할 수 있는 **msdata** 특성에 대해 간략히 설명합니다.  
+ <span data-ttu-id="117db-106">다음 표에서 윤곽선은 **msdata** 에서 지정할 수 있는 특성의 **키** 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="117db-106">The following table outlines the **msdata** attributes that you can specify in the **key** element.</span></span>  
   
-|특성 이름|설명|  
-|-----------|--------|  
-|**msdata:ConstraintName**|이 특성을 지정하면 해당 값이 제약 조건 이름으로 사용됩니다.  그렇지 않으면 **name** 특성에서 제약 조건 이름의 값을 제공합니다.|  
-|**msdata:PrimaryKey**|`PrimaryKey="true"`가 있으면 **IsPrimaryKey** 제약 조건 속성이 **true**로 설정되므로 해당 요소가 기본 키가 됩니다.  기본 키는 null 값을 포함할 수 없기 때문에 **AllowDBNull** 열 속성은 **false**로 설정됩니다.|  
+|<span data-ttu-id="117db-107">특성 이름</span><span class="sxs-lookup"><span data-stu-id="117db-107">Attribute name</span></span>|<span data-ttu-id="117db-108">설명</span><span class="sxs-lookup"><span data-stu-id="117db-108">Description</span></span>|  
+|--------------------|-----------------|  
+|<span data-ttu-id="117db-109">**msdata:ConstraintName**</span><span class="sxs-lookup"><span data-stu-id="117db-109">**msdata:ConstraintName**</span></span>|<span data-ttu-id="117db-110">이 특성을 지정하면 해당 값이 제약 조건 이름으로 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="117db-110">If this attribute is specified, its value is used as the constraint name.</span></span> <span data-ttu-id="117db-111">그렇지 않은 경우는 **이름** 특성에서 제약 조건 이름의 값을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="117db-111">Otherwise, the **name** attribute provides the value of the constraint name.</span></span>|  
+|<span data-ttu-id="117db-112">**msdata: primarykey**</span><span class="sxs-lookup"><span data-stu-id="117db-112">**msdata:PrimaryKey**</span></span>|<span data-ttu-id="117db-113">경우 `PrimaryKey="true"` 가 있으면는 **IsPrimaryKey** 제약 조건 속성이로 설정 되어 **true**, 있기 때문에 기본 키입니다.</span><span class="sxs-lookup"><span data-stu-id="117db-113">If `PrimaryKey="true"` is present, the **IsPrimaryKey** constraint property is set to **true**, thus making it a primary key.</span></span> <span data-ttu-id="117db-114">**AllowDBNull** 열 속성이로 설정 되어 **false**이므로 기본 키는 null 값을 가질 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="117db-114">The **AllowDBNull** column property is set to **false**, because primary keys cannot have null values.</span></span>|  
   
- KEY 제약 조건이 지정되어 있는 스키마를 변환할 때, 매핑 프로세스에서는 제약 조건의 각 열에 대해 **AllowDBNull** 열 속성을 **false**로 설정하면서 해당 테이블의 UNIQUE 제약 조건을 만듭니다.  **key** 요소에 `msdata:PrimaryKey="true"`를 지정하지 않은 경우에는 UNIQUE 제약 조건의 **IsPrimaryKey** 속성도 **false**로 설정됩니다.  이것은 `PrimaryKey="true"`인 스키마의 UNIQUE 제약 조건에도 마찬가지로 적용됩니다.  
+ <span data-ttu-id="117db-115">Key 제약 조건을 지정 하는 스키마를 변환 매핑 프로세스에서는 포함 된 테이블에 unique 제약 조건을 만듭니다는 **AllowDBNull** 열 속성이로 설정 **false** 각 열에 제약 조건입니다.</span><span class="sxs-lookup"><span data-stu-id="117db-115">In converting schema in which a key constraint is specified, the mapping process creates a unique constraint on the table with the **AllowDBNull** column property set to **false** for each column in the constraint.</span></span> <span data-ttu-id="117db-116">**IsPrimaryKey** unique 제약 조건의 속성이 **false** 지정 하기 전 까지는 `msdata:PrimaryKey="true"` 에 **키** 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="117db-116">The **IsPrimaryKey** property of the unique constraint is also set to **false** unless you have specified `msdata:PrimaryKey="true"` on the **key** element.</span></span> <span data-ttu-id="117db-117">이것은 `PrimaryKey="true"`인 스키마의 UNIQUE 제약 조건에도 마찬가지로 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="117db-117">This is identical to a unique constraint in the schema in which `PrimaryKey="true"`.</span></span>  
   
- 다음 스키마 예제에서 **key** 요소는 **CustomerID** 요소에 대한 KEY 제약 조건을 지정합니다.  
+ <span data-ttu-id="117db-118">다음 스키마 예제에서는 **키** 요소에 키 제약 조건을 지정 된 **CustomerID** 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="117db-118">In the following schema example, the **key** element specifies the key constraint on the **CustomerID** element.</span></span>  
   
-```  
+```xml  
 <xs:schema id="cod"  
             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
@@ -61,16 +64,15 @@ caps.handback.revision: 4
 </xs:schema>   
 ```  
   
- **key** 요소에서는 **Customers** 요소의 **CustomerID** 자식 요소 값이 고유한 값이고 null 값을 포함할 수 없도록 지정합니다.  XSD\(XML 스키마 정의 언어\) 스키마를 변환할 때 매핑 프로세스에서는 다음 테이블을 만듭니다.  
+ <span data-ttu-id="117db-119">**키** 요소를 지정 하는 값은 **CustomerID** 의 자식 요소는 **고객** 요소는 고유 값 이어야 하 고 null 값을 가질 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="117db-119">The **key** element specifies that the values of the **CustomerID** child element of the **Customers** element must have unique values and cannot have null values.</span></span> <span data-ttu-id="117db-120">XSD(XML 스키마 정의 언어) 스키마를 변환할 때 매핑 프로세스에서는 다음 테이블을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="117db-120">In translating the XML Schema definition language (XSD) schema, the mapping process creates the following table:</span></span>  
   
 ```  
 Customers(CustomerID, CompanyName, Phone)  
 ```  
   
- 또한 XML 스키마 매핑에서는 다음 <xref:System.Data.DataSet>과 같이 **CustomerID** 열에 대해 **UniqueConstraint**를 만듭니다.  여기에서는 편의를 위해 관련 속성만 보여 줍니다.  
+ <span data-ttu-id="117db-121">XML 스키마 매핑도 만듭니다.는 **UniqueConstraint** 에 **CustomerID** 열에서 다음에 표시 된 대로 <xref:System.Data.DataSet>합니다.</span><span class="sxs-lookup"><span data-stu-id="117db-121">The XML Schema mapping also creates a **UniqueConstraint** on the **CustomerID** column, as shown in the following <xref:System.Data.DataSet>.</span></span> <span data-ttu-id="117db-122">여기에서는 편의를 위해 관련 속성만 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="117db-122">(For simplicity, only relevant properties are shown.)</span></span>  
   
 ```  
-  
       DataSetName: MyDataSet  
 TableName: customers  
   ColumnName: CustomerID  
@@ -82,11 +84,11 @@ TableName: customers
       IsPrimaryKey: True  
 ```  
   
- 생성된 **DataSet**에서는 스키마에서 **key** 요소에 `msdata:PrimaryKey="true"`를 지정하기 때문에 **UniqueConstraint**의 **IsPrimaryKey** 속성이 **true**로 설정됩니다.  
+ <span data-ttu-id="117db-123">에 **데이터 집합** 생성 하는 **IsPrimaryKey** 의 속성에서 **UniqueConstraint** 로 설정 되어 **true** 때문에 스키마 지정 `msdata:PrimaryKey="true"` 에 **키** 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="117db-123">In the **DataSet** that is generated, the **IsPrimaryKey** property of the **UniqueConstraint** is set to **true** because the schema specifies `msdata:PrimaryKey="true"` in the **key** element.</span></span>  
   
- **DataSet**에서 **UniqueConstraint**의 **ConstraintName** 속성 값은 스키마의 **key** 요소에 지정된 **msdata:ConstraintName** 특성 값입니다.  
+ <span data-ttu-id="117db-124">값은 **ConstraintName** 속성은 **UniqueConstraint** 에 **데이터 집합** 의 값이는 **msdata:ConstraintName** 에 지정 된 특성의 **키** 스키마의 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="117db-124">The value of the **ConstraintName** property of the **UniqueConstraint** in the **DataSet** is the value of the **msdata:ConstraintName** attribute specified in the **key** element in the schema.</span></span>  
   
-## 참고 항목  
- [DataSet 제약 조건에 XSD\(XML 스키마\) 제약 조건 매핑](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)   
- [XSD\(XML 스키마\)에서 DataSet 관계 생성](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)   
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="117db-125">참고 항목</span><span class="sxs-lookup"><span data-stu-id="117db-125">See Also</span></span>  
+ [<span data-ttu-id="117db-126">데이터 집합 제약 조건에 XML 스키마 (XSD) 제약 조건 매핑</span><span class="sxs-lookup"><span data-stu-id="117db-126">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [<span data-ttu-id="117db-127">XML 스키마 (XSD)에서 데이터 집합 관계 생성</span><span class="sxs-lookup"><span data-stu-id="117db-127">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [<span data-ttu-id="117db-128">ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터</span><span class="sxs-lookup"><span data-stu-id="117db-128">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

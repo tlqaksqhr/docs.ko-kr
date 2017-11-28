@@ -7,52 +7,45 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3e0e648fb14e07b62f70c614af84a98a256f6095
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 1d4746e2303949ddeabee36e4875e7480467f33e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="socket-performance-enhancements-in-version-35"></a>버전 3.5의 소켓 성능 향상
-<xref:System.Net.Sockets.Socket?displayProperty=fullName> 클래스는 비동기 네트워크 I/O를 통해 성능을 최적화하는 응용 프로그램에서 사용하기 위해 버전 3.5에서 개선되었습니다. 특수화된 고성능 소켓 응용 프로그램에서 사용할 수 있는 대체 비동기 패턴을 제공하는 <xref:System.Net.Sockets.Socket> 클래스에 대한 향상된 기능 집합의 일부로 일련의 새로운 클래스가 추가되었습니다. 이러한 개선 사항은 특히 높은 성능이 필요한 네트워크 서버 응용 프로그램용으로 설계되었습니다. 응용 프로그램은 향상된 비동기 패턴을 단독으로 사용하거나, 응용 프로그램의 대상 핫 영역에서만 사용할 수 있습니다(예: 많은 양의 데이터를 수신하는 경우).  
+# <a name="socket-performance-enhancements-in-version-35"></a><span data-ttu-id="e2b2d-102">버전 3.5의 소켓 성능 향상</span><span class="sxs-lookup"><span data-stu-id="e2b2d-102">Socket Performance Enhancements in Version 3.5</span></span>
+<span data-ttu-id="e2b2d-103"><xref:System.Net.Sockets.Socket?displayProperty=nameWithType> 클래스는 비동기 네트워크 I/O를 통해 성능을 최적화하는 응용 프로그램에서 사용하기 위해 버전 3.5에서 개선되었습니다.</span><span class="sxs-lookup"><span data-stu-id="e2b2d-103">The <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> class has been enhanced in Version 3.5 for use by applications that use asynchronous network I/O to achieve the highest performance.</span></span> <span data-ttu-id="e2b2d-104">특수화된 고성능 소켓 응용 프로그램에서 사용할 수 있는 대체 비동기 패턴을 제공하는 <xref:System.Net.Sockets.Socket> 클래스에 대한 향상된 기능 집합의 일부로 일련의 새로운 클래스가 추가되었습니다.</span><span class="sxs-lookup"><span data-stu-id="e2b2d-104">A series of new classes have been added as part of a set of enhancements to the <xref:System.Net.Sockets.Socket> class that provide an alternative asynchronous pattern that can be used by specialized high-performance socket applications.</span></span> <span data-ttu-id="e2b2d-105">이러한 개선 사항은 특히 높은 성능이 필요한 네트워크 서버 응용 프로그램용으로 설계되었습니다.</span><span class="sxs-lookup"><span data-stu-id="e2b2d-105">These enhancements were specifically designed for network server applications that require high performance.</span></span> <span data-ttu-id="e2b2d-106">응용 프로그램은 향상된 비동기 패턴을 단독으로 사용하거나, 응용 프로그램의 대상 핫 영역에서만 사용할 수 있습니다(예: 많은 양의 데이터를 수신하는 경우).</span><span class="sxs-lookup"><span data-stu-id="e2b2d-106">An application can use the enhanced asynchronous pattern exclusively, or only in targeted hot areas of their application (when receiving large amounts of data, for example).</span></span>  
   
-## <a name="class-enhancements"></a>클래스 개선 사항  
- 이러한 개선 사항의 주요 기능은 대량 비동기 소켓 I/O 중 개체의 반복 할당 및 동기화를 방지할 수 있습니다. 현재 비동기 소켓 I/O에 대해 <xref:System.Net.Sockets.Socket> 클래스에서 구현되는 Begin/End 디자인 패턴에서는 각 비동기 소켓 작업에 대해 <xref:System.IAsyncResult?displayProperty=fullName> 개체가 할당되어야 합니다.  
+## <a name="class-enhancements"></a><span data-ttu-id="e2b2d-107">클래스 개선 사항</span><span class="sxs-lookup"><span data-stu-id="e2b2d-107">Class Enhancements</span></span>  
+ <span data-ttu-id="e2b2d-108">이러한 개선 사항의 주요 기능은 대량 비동기 소켓 I/O 중 개체의 반복 할당 및 동기화를 방지할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2b2d-108">The main feature of these enhancements is the avoidance of the repeated allocation and synchronization of objects during high-volume asynchronous socket I/O.</span></span> <span data-ttu-id="e2b2d-109">현재 비동기 소켓 I/O에 대해 <xref:System.Net.Sockets.Socket> 클래스에서 구현되는 Begin/End 디자인 패턴에서는 각 비동기 소켓 작업에 대해 <xref:System.IAsyncResult?displayProperty=nameWithType> 개체가 할당되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e2b2d-109">The Begin/End design pattern currently implemented by the <xref:System.Net.Sockets.Socket> class for asynchronous socket I/O requires a <xref:System.IAsyncResult?displayProperty=nameWithType> object be allocated for each asynchronous socket operation.</span></span>  
   
- 새 <xref:System.Net.Sockets.Socket> 클래스 개선 사항에서 비동기 소켓 작업은 응용 프로그램에서 할당하고 유지 관리하는 다시 사용할 수 있는 <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=fullName> 클래스 개체를 통해 설명됩니다. 고성능 소켓 응용 프로그램은 유지해야 하는 겹쳐진 소켓 작업량을 가장 잘 알고 있습니다. 응용 프로그램은 <xref:System.Net.Sockets.SocketAsyncEventArgs> 개체를 필요한 개수만큼 만들 수 있습니다. 예를 들어 서버 응용 프로그램이 들어오는 클라이언트 연결 속도를 지원하기 위해 항상 15개의 소켓 허용 작업을 처리 중이어야 하는 경우 해당 용도로 다시 사용할 수 있는 <xref:System.Net.Sockets.SocketAsyncEventArgs> 개체 15개를 미리 할당할 수 있습니다.  
+ <span data-ttu-id="e2b2d-110">새 <xref:System.Net.Sockets.Socket> 클래스 개선 사항에서 비동기 소켓 작업은 응용 프로그램에서 할당하고 유지 관리하는 다시 사용할 수 있는 <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType> 클래스 개체를 통해 설명됩니다.</span><span class="sxs-lookup"><span data-stu-id="e2b2d-110">In the new <xref:System.Net.Sockets.Socket> class enhancements, asynchronous socket operations are described by reusable <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType> class objects allocated and maintained by the application.</span></span> <span data-ttu-id="e2b2d-111">고성능 소켓 응용 프로그램은 유지해야 하는 겹쳐진 소켓 작업량을 가장 잘 알고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2b2d-111">High-performance socket applications know best the amount of overlapped socket operations that must be sustained.</span></span> <span data-ttu-id="e2b2d-112">응용 프로그램은 <xref:System.Net.Sockets.SocketAsyncEventArgs> 개체를 필요한 개수만큼 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2b2d-112">The application can create as many of the <xref:System.Net.Sockets.SocketAsyncEventArgs> objects that it needs.</span></span> <span data-ttu-id="e2b2d-113">예를 들어 서버 응용 프로그램이 들어오는 클라이언트 연결 속도를 지원하기 위해 항상 15개의 소켓 허용 작업을 처리 중이어야 하는 경우 해당 용도로 다시 사용할 수 있는 <xref:System.Net.Sockets.SocketAsyncEventArgs> 개체 15개를 미리 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2b2d-113">For example, if a server application needs to have 15 socket accept operations outstanding at all times to support incoming client connection rates, it can allocate 15 reusable <xref:System.Net.Sockets.SocketAsyncEventArgs> objects in advance for that purpose.</span></span>  
   
- 이 클래스를 사용하여 비동기 소켓 작업을 수행하기 위한 패턴은 다음 단계로 구성됩니다.  
+ <span data-ttu-id="e2b2d-114">이 클래스를 사용하여 비동기 소켓 작업을 수행하기 위한 패턴은 다음 단계로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="e2b2d-114">The pattern for performing an asynchronous socket operation with this class consists of the following steps:</span></span>  
   
-1.  새 <xref:System.Net.Sockets.SocketAsyncEventArgs> 컨텍스트 개체를 할당하거나 응용 프로그램 풀에서 무료 개체를 가져옵니다.  
+1.  <span data-ttu-id="e2b2d-115">새 <xref:System.Net.Sockets.SocketAsyncEventArgs> 컨텍스트 개체를 할당하거나 응용 프로그램 풀에서 무료 개체를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="e2b2d-115">Allocate a new <xref:System.Net.Sockets.SocketAsyncEventArgs> context object, or get a free one from an application pool.</span></span>  
   
-2.  컨텍스트 개체의 속성을 수행할 작업으로 설정합니다(예: 콜백 대리자 메서드 및 데이터 버퍼).  
+2.  <span data-ttu-id="e2b2d-116">컨텍스트 개체의 속성을 수행할 작업으로 설정합니다(예: 콜백 대리자 메서드 및 데이터 버퍼).</span><span class="sxs-lookup"><span data-stu-id="e2b2d-116">Set properties on the context object to the operation about to be performed (the callback delegate method and data buffer, for example).</span></span>  
   
-3.  적절한 소켓 메서드(xxxAsync)를 호출하여 비동기 작업을 시작합니다.  
+3.  <span data-ttu-id="e2b2d-117">적절한 소켓 메서드(xxxAsync)를 호출하여 비동기 작업을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="e2b2d-117">Call the appropriate socket method (xxxAsync) to initiate the asynchronous operation.</span></span>  
   
-4.  비동기 소켓 메서드(xxxAsync)가 콜백에서 true를 반환하는 경우 컨텍스트 속성에서 완료 상태를 쿼리합니다.  
+4.  <span data-ttu-id="e2b2d-118">비동기 소켓 메서드(xxxAsync)가 콜백에서 true를 반환하는 경우 컨텍스트 속성에서 완료 상태를 쿼리합니다.</span><span class="sxs-lookup"><span data-stu-id="e2b2d-118">If the asynchronous socket method (xxxAsync) returns true in the callback, query the context properties for completion status.</span></span>  
   
-5.  비동기 소켓 메서드(xxxAsync)가 콜백에서 false를 반환하는 경우 작업이 동기적으로 완료됩니다. 컨텍스트 속성에서 작업 결과를 쿼리할 수 있습니다.  
+5.  <span data-ttu-id="e2b2d-119">비동기 소켓 메서드(xxxAsync)가 콜백에서 false를 반환하는 경우 작업이 동기적으로 완료됩니다.</span><span class="sxs-lookup"><span data-stu-id="e2b2d-119">If the asynchronous socket method (xxxAsync) returns false in the callback, the operation completed synchronously.</span></span> <span data-ttu-id="e2b2d-120">컨텍스트 속성에서 작업 결과를 쿼리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e2b2d-120">The context properties may be queried for the operation result.</span></span>  
   
-6.  컨텍스트를 다른 작업에 다시 사용하거나, 풀에 다시 넣거나, 삭제합니다.  
+6.  <span data-ttu-id="e2b2d-121">컨텍스트를 다른 작업에 다시 사용하거나, 풀에 다시 넣거나, 삭제합니다.</span><span class="sxs-lookup"><span data-stu-id="e2b2d-121">Reuse the context for another operation, put it back in the pool, or discard it.</span></span>  
   
- 새 비동기 소켓 작업 컨텍스트 개체의 수명은 응용 프로그램 코드와 비동기 I/O 참조에서 참조를 통해 결정됩니다. 비동기 소켓 작업 방법 중 하나에 매개 변수로 제출된 후 응용 프로그램이 비동기 소켓 작업 컨텍스트 개체에 대한 참조를 유지할 필요는 없습니다. 완료 콜백이 반환될 때까지 참조된 상태로 유지됩니다. 그러나 이후 비동기 소켓 작업에 다시 사용할 수 있도록 응용 프로그램에서 컨텍스트 개체에 대한 참조를 유지하는 것이 좋습니다.  
+ <span data-ttu-id="e2b2d-122">새 비동기 소켓 작업 컨텍스트 개체의 수명은 응용 프로그램 코드와 비동기 I/O 참조에서 참조를 통해 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="e2b2d-122">The lifetime of the new asynchronous socket operation context object is determined by references in the application code and asynchronous I/O references.</span></span> <span data-ttu-id="e2b2d-123">비동기 소켓 작업 방법 중 하나에 매개 변수로 제출된 후 응용 프로그램이 비동기 소켓 작업 컨텍스트 개체에 대한 참조를 유지할 필요는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e2b2d-123">It is not necessary for the application to retain a reference to an asynchronous socket operation context object after it is submitted as a parameter to one of the asynchronous socket operation methods.</span></span> <span data-ttu-id="e2b2d-124">완료 콜백이 반환될 때까지 참조된 상태로 유지됩니다.</span><span class="sxs-lookup"><span data-stu-id="e2b2d-124">It will remain referenced until the completion callback returns.</span></span> <span data-ttu-id="e2b2d-125">그러나 이후 비동기 소켓 작업에 다시 사용할 수 있도록 응용 프로그램에서 컨텍스트 개체에 대한 참조를 유지하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="e2b2d-125">However it is advantageous for the application to retain the reference to the context object so that it can be reused for a future asynchronous socket operation.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Net.Sockets.Socket?displayProperty=fullName>   
- <xref:System.Net.Sockets.SendPacketsElement?displayProperty=fullName>   
- <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=fullName>   
- <xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=fullName>   
- [네트워크 프로그래밍 샘플](../../../docs/framework/network-programming/network-programming-samples.md)   
- [소켓 성능 기술 샘플](http://go.microsoft.com/fwlink/?LinkID=179570)
-
+## <a name="see-also"></a><span data-ttu-id="e2b2d-126">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e2b2d-126">See Also</span></span>  
+ <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>  
+ <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>  
+ <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>  
+ <xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=nameWithType>  
+ [<span data-ttu-id="e2b2d-127">네트워크 프로그래밍 샘플</span><span class="sxs-lookup"><span data-stu-id="e2b2d-127">Network Programming Samples</span></span>](../../../docs/framework/network-programming/network-programming-samples.md)  
+ [<span data-ttu-id="e2b2d-128">소켓 성능 기술 샘플</span><span class="sxs-lookup"><span data-stu-id="e2b2d-128">Socket Performance Technology Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=179570)

@@ -1,28 +1,37 @@
 ---
-title: "&lt;wsDualHttpBinding&gt;의 &lt;message&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;wsDualHttpBinding&gt;의 &lt;message&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 75101744-eed8-4d61-91f4-5fc4473a21f2
-caps.latest.revision: 12
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c2d4eda0a1975da4518d077b6cfa779a8e764a66
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;wsDualHttpBinding&gt;의 &lt;message&gt;
-[\<wsDualHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)의 메시지 보안 수준을 정의합니다.  
+# <a name="ltmessagegt-of-ltwsdualhttpbindinggt"></a><span data-ttu-id="821eb-102">&lt;wsDualHttpBinding&gt;의 &lt;message&gt;</span><span class="sxs-lookup"><span data-stu-id="821eb-102">&lt;message&gt; of &lt;wsDualHttpBinding&gt;</span></span>
+<span data-ttu-id="821eb-103">에 대 한 메시지 수준 보안 정의 [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-103">Defines message-level security for the [\<wsDualHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span></span>  
   
-## 구문  
+ <span data-ttu-id="821eb-104">\<시스템입니다. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="821eb-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="821eb-105">\<바인딩 ></span><span class="sxs-lookup"><span data-stu-id="821eb-105">\<bindings></span></span>  
+<span data-ttu-id="821eb-106">\<wsDualHttpBinding ></span><span class="sxs-lookup"><span data-stu-id="821eb-106">\<wsDualHttpBinding></span></span>  
+<span data-ttu-id="821eb-107">\<바인딩 ></span><span class="sxs-lookup"><span data-stu-id="821eb-107">\<binding></span></span>  
+<span data-ttu-id="821eb-108">\<보안 ></span><span class="sxs-lookup"><span data-stu-id="821eb-108">\<security></span></span>  
+<span data-ttu-id="821eb-109">\<메시지 ></span><span class="sxs-lookup"><span data-stu-id="821eb-109">\<message></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="821eb-110">구문</span><span class="sxs-lookup"><span data-stu-id="821eb-110">Syntax</span></span>  
   
+```xml  
 <message   
       clientCredentialType="None/Windows/UserName/Certificate/CardSpace"  
      negotiateServiceCredential="Boolean"  
@@ -30,67 +39,67 @@ caps.handback.revision: 12
 </message>  
 ```  
   
-## 형식  
+## <a name="type"></a><span data-ttu-id="821eb-111">형식</span><span class="sxs-lookup"><span data-stu-id="821eb-111">Type</span></span>  
  <xref:System.ServiceModel.MessageSecurityOverHttp>  
   
-## 특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="821eb-112">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="821eb-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="821eb-113">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-113">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### 특성  
+### <a name="attributes"></a><span data-ttu-id="821eb-114">특성</span><span class="sxs-lookup"><span data-stu-id="821eb-114">Attributes</span></span>  
   
-|특성|설명|  
-|--------|--------|  
-|algorithmSuite|선택 사항입니다.  메시지 암호화 및 키 래핑 알고리즘을 설정합니다.  알고리즘과 키 크기는 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 클래스로 결정됩니다.  이러한 알고리즘은 WS\-SecurityPolicy\(Security Policy Language\) 사양에 지정된 알고리즘에 매핑됩니다.<br /><br /> 다음은 사용 가능한 값입니다.  기본값은 `Basic256`입니다.|  
-|clientCredentialType|선택 사항입니다.  보안 모드를 사용하여 클라이언트 인증을 수행할 때 사용되는 자격 증명의 형식이 `Message`임을 지정합니다.  다음은 사용 가능한 값입니다.  기본값은 `Windows`입니다.<br /><br /> 이 특성은 <xref:System.ServiceModel.MessageCredentialType> 형식입니다.|  
-|negotiateServiceCredential|선택 사항입니다.  서비스 자격 증명이 클라이언트에서 out of band 방식으로 제공되는지 아니면 협상 프로세스를 통해 서비스에서 클라이언트로 전달되는지를 지정하는 부울 값입니다.  그러한 협상은 일반적인 메시지 교환에 앞서 수행됩니다.<br /><br /> `clientCredentialType` 특성이 None, Username 또는 Certificate일 경우 이 특성을 `false`로 설정하면 클라이언트에서 out of band 방식으로 서비스 자격 증명을 사용할 수 있으며 클라이언트는 [\<serviceCredentials\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) 서비스 동작에서 [\<serviceCertificate\>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)를 사용하여 서비스 인증서를 지정해야 합니다.  이 모드는 WS\-Trust 및 WS\-SecureConversation을 구현하는 SOAP 스택과 상호 운용될 수 있습니다.<br /><br /> `ClientCredentialType` 특성이 `Windows`로 설정된 경우 이 특성을 `false`로 설정하면 Kerberos 기반 인증이 지정됩니다.  이것은 클라이언트와 서비스가 동일한 Kerberos 도메인에 속해야 함을 의미합니다.  이 모드는 Kerberos 토큰 프로필\(OASIS WSS TC에서 정의\) 그리고 WS\-Trust 및 WS\-SecureConversation을 구현하는 SOAP 스택과 상호 운용될 수 있습니다.  이 특성이 `true`일 경우 SOAP 메시지를 통한 SPNego 교환을 터널링하는 .NET SOAP 협상이 수행됩니다.<br /><br /> 기본값은 `true`입니다.|  
+|<span data-ttu-id="821eb-115">특성</span><span class="sxs-lookup"><span data-stu-id="821eb-115">Attribute</span></span>|<span data-ttu-id="821eb-116">설명</span><span class="sxs-lookup"><span data-stu-id="821eb-116">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="821eb-117">algorithmSuite</span><span class="sxs-lookup"><span data-stu-id="821eb-117">algorithmSuite</span></span>|<span data-ttu-id="821eb-118">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-118">Optional.</span></span> <span data-ttu-id="821eb-119">메시지 암호화 및 키 래핑 알고리즘을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-119">Sets the message encryption and key-wrap algorithms.</span></span> <span data-ttu-id="821eb-120">알고리즘과 키 크기는 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 클래스로 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-120">The algorithms and the key sizes are determined by the <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> class.</span></span> <span data-ttu-id="821eb-121">이러한 알고리즘은 WS-SecurityPolicy(Security Policy Language) 사양에 지정된 알고리즘에 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-121">These algorithms map to those specified in the Security Policy Language (WS-SecurityPolicy) specification.</span></span><br /><br /> <span data-ttu-id="821eb-122">다음은 사용 가능한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-122">See below for possible values.</span></span> <span data-ttu-id="821eb-123">기본값은 `Basic256`입니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-123">The default value is `Basic256`.</span></span>|  
+|<span data-ttu-id="821eb-124">clientCredentialType</span><span class="sxs-lookup"><span data-stu-id="821eb-124">clientCredentialType</span></span>|<span data-ttu-id="821eb-125">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-125">Optional.</span></span> <span data-ttu-id="821eb-126">보안 모드를 사용하여 클라이언트 인증을 수행할 때 사용되는 자격 증명의 형식이 `Message`임을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-126">Specifies the type of credential to be used when performing client authentication using the security mode is `Message`.</span></span> <span data-ttu-id="821eb-127">다음은 사용 가능한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-127">See below for possible values.</span></span> <span data-ttu-id="821eb-128">기본값은 `Windows`입니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-128">The default is `Windows`.</span></span><br /><br /> <span data-ttu-id="821eb-129">이 특성은 <xref:System.ServiceModel.MessageCredentialType> 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-129">This attribute is of type <xref:System.ServiceModel.MessageCredentialType>.</span></span>|  
+|<span data-ttu-id="821eb-130">negotiateServiceCredential</span><span class="sxs-lookup"><span data-stu-id="821eb-130">negotiateServiceCredential</span></span>|<span data-ttu-id="821eb-131">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-131">Optional.</span></span> <span data-ttu-id="821eb-132">서비스 자격 증명이 클라이언트에서 out of band 방식으로 제공되는지 아니면 협상 프로세스를 통해 서비스에서 클라이언트로 전달되는지를 지정하는 부울 값입니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-132">A Boolean value that specifies whether the service credential is provisioned at the client out of band or is obtained from the service to the client through a process of negotiation.</span></span> <span data-ttu-id="821eb-133">그러한 협상은 일반적인 메시지 교환에 앞서 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-133">Such a negotiation is a precursor to the usual message exchange.</span></span><br /><br /> <span data-ttu-id="821eb-134">경우는 `clientCredentialType` None, 인증서를이 특성을 설정 또는 사용자 이름에 같고 특성이 `false` 서비스 인증서는 대역 외 클라이언트에서 사용할 수 있으며 클라이언트 서비스 인증서를 지정 해야 한다는 의미 (사용 하는 [ \<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md))에 [ \<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) 서비스 동작입니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-134">If the `clientCredentialType` attribute equals to None, Username, or Certificate, setting this attribute to `false` implies that the service certificate is available at the client out of band and that the client needs to specify the service certificate (using the [\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) in the [\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) service behavior.</span></span> <span data-ttu-id="821eb-135">이 모드는 WS-Trust 및 WS-SecureConversation을 구현하는 SOAP 스택과 상호 운용될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-135">This mode is interoperable with SOAP stacks which implement WS-Trust and WS-SecureConversation.</span></span><br /><br /> <span data-ttu-id="821eb-136">`ClientCredentialType` 특성이 `Windows`로 설정된 경우 이 특성을 `false`로 설정하면 Kerberos 기반 인증이 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-136">If the `ClientCredentialType` attribute is set to `Windows`, setting this attribute to `false` specifies Kerberos based authentication.</span></span> <span data-ttu-id="821eb-137">이것은 클라이언트와 서비스가 동일한 Kerberos 도메인에 속해야 함을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-137">This means that the client and service must be part of the same Kerberos domain.</span></span> <span data-ttu-id="821eb-138">이 모드는 Kerberos 토큰 프로필(OASIS WSS TC에서 정의) 그리고 WS-Trust 및 WS-SecureConversation을 구현하는 SOAP 스택과 상호 운용될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-138">This mode is interoperable with SOAP stacks which implement the Kerberos token profile (as defined at OASIS WSS TC) as well as WS-Trust and WS-SecureConversation.</span></span> <span data-ttu-id="821eb-139">이 특성이 `true`일 경우 SOAP 메시지를 통한 SPNego 교환을 터널링하는 .NET SOAP 협상이 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-139">When this attribute is `true`, it causes a .NET SOAP negotiation that tunnels SPNego exchange over SOAP messages.</span></span><br /><br /> <span data-ttu-id="821eb-140">기본값은 `true`입니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-140">The default is `true`.</span></span>|  
   
-## algorithmSuite 특성  
+## <a name="algorithmsuite-attribute"></a><span data-ttu-id="821eb-141">algorithmSuite 특성</span><span class="sxs-lookup"><span data-stu-id="821eb-141">algorithmSuite Attribute</span></span>  
   
-|값|설명|  
-|-------|--------|  
-|Basic128|Aes128 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa\-oaep\-mgf1p를 사용합니다.|  
-|Basic192|Aes192 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa\-oaep\-mgf1p를 사용합니다.|  
-|Basic256|Aes256 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa\-oaep\-mgf1p를 사용합니다.|  
-|Basic256Rsa15|메시지 암호화의 경우 Aes256, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa15를 사용합니다.|  
-|Basic192Rsa15|메시지 암호화의 경우 Aes192, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa15를 사용합니다.|  
-|TripleDes|TripleDes 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa\-oaep\-mgf1p를 사용합니다.|  
-|Basic128Rsa15|메시지 암호화의 경우 Aes128, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa15를 사용합니다.|  
-|TripleDesRsa15|TripleDes 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa15를 사용합니다.|  
-|Basic128Sha256|메시지 암호화의 경우 Aes256, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa\-oaep\-mgf1p를 사용합니다.|  
-|Basic192Sha256|메시지 암호화의 경우 Aes192, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa\-oaep\-mgf1p를 사용합니다.|  
-|Basic256Sha256|메시지 암호화의 경우 Aes256, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa\-oaep\-mgf1p를 사용합니다.|  
-|TripleDesSha256|메시지 암호화의 경우 TripleDes, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa\-oaep\-mgf1p를 사용합니다.|  
-|Basic128Sha256Rsa15|메시지 암호화의 경우 Aes128, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa15를 사용합니다.|  
-|Basic192Sha256Rsa15|메시지 암호화의 경우 Aes192, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa15를 사용합니다.|  
-|Basic256Sha256Rsa15|메시지 암호화의 경우 Aes256, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa15를 사용합니다.|  
-|TripleDesSha256Rsa15|메시지 암호화의 경우 TripleDes, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa15를 사용합니다.|  
+|<span data-ttu-id="821eb-142">값</span><span class="sxs-lookup"><span data-stu-id="821eb-142">Value</span></span>|<span data-ttu-id="821eb-143">설명</span><span class="sxs-lookup"><span data-stu-id="821eb-143">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="821eb-144">Basic128</span><span class="sxs-lookup"><span data-stu-id="821eb-144">Basic128</span></span>|<span data-ttu-id="821eb-145">Aes128 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa-oaep-mgf1p를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-145">Use Aes128 encryption, Sha1 for message digest, and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="821eb-146">Basic192</span><span class="sxs-lookup"><span data-stu-id="821eb-146">Basic192</span></span>|<span data-ttu-id="821eb-147">Aes192 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa-oaep-mgf1p를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-147">Use Aes192 encryption, Sha1 for message digest, Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="821eb-148">Basic256</span><span class="sxs-lookup"><span data-stu-id="821eb-148">Basic256</span></span>|<span data-ttu-id="821eb-149">Aes256 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa-oaep-mgf1p를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-149">Use Aes256 encryption, Sha1 for message digest, Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="821eb-150">Basic256Rsa15</span><span class="sxs-lookup"><span data-stu-id="821eb-150">Basic256Rsa15</span></span>|<span data-ttu-id="821eb-151">메시지 암호화의 경우 Aes256, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa15를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-151">Use Aes256 for message encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="821eb-152">Basic192Rsa15</span><span class="sxs-lookup"><span data-stu-id="821eb-152">Basic192Rsa15</span></span>|<span data-ttu-id="821eb-153">메시지 암호화의 경우 Aes192, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa15를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-153">Use Aes192 for message encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="821eb-154">TripleDes</span><span class="sxs-lookup"><span data-stu-id="821eb-154">TripleDes</span></span>|<span data-ttu-id="821eb-155">TripleDes 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa-oaep-mgf1p를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-155">Use TripleDes encryption, , Sha1 for message digest, Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="821eb-156">Basic128Rsa15</span><span class="sxs-lookup"><span data-stu-id="821eb-156">Basic128Rsa15</span></span>|<span data-ttu-id="821eb-157">메시지 암호화의 경우 Aes128, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa15를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-157">Use Aes128 for message encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="821eb-158">TripleDesRsa15</span><span class="sxs-lookup"><span data-stu-id="821eb-158">TripleDesRsa15</span></span>|<span data-ttu-id="821eb-159">TripleDes 암호화, 메시지 다이제스트의 경우 Sha1, 키 래핑의 경우 Rsa15를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-159">Use TripleDes encryption, Sha1 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="821eb-160">Basic128Sha256</span><span class="sxs-lookup"><span data-stu-id="821eb-160">Basic128Sha256</span></span>|<span data-ttu-id="821eb-161">메시지 암호화의 경우 Aes256, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa-oaep-mgf1p를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-161">Use Aes256 for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="821eb-162">Basic192Sha256</span><span class="sxs-lookup"><span data-stu-id="821eb-162">Basic192Sha256</span></span>|<span data-ttu-id="821eb-163">메시지 암호화의 경우 Aes192, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa-oaep-mgf1p를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-163">Use Aes192 for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="821eb-164">Basic256Sha256</span><span class="sxs-lookup"><span data-stu-id="821eb-164">Basic256Sha256</span></span>|<span data-ttu-id="821eb-165">메시지 암호화의 경우 Aes256, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa-oaep-mgf1p를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-165">Use Aes256 for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="821eb-166">TripleDesSha256</span><span class="sxs-lookup"><span data-stu-id="821eb-166">TripleDesSha256</span></span>|<span data-ttu-id="821eb-167">메시지 암호화의 경우 TripleDes, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa-oaep-mgf1p를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-167">Use TripleDes for message encryption, Sha256 for message digest and Rsa-oaep-mgf1p for key wrap.</span></span>|  
+|<span data-ttu-id="821eb-168">Basic128Sha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="821eb-168">Basic128Sha256Rsa15</span></span>|<span data-ttu-id="821eb-169">메시지 암호화의 경우 Aes128, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa15를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-169">Use Aes128 for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="821eb-170">Basic192Sha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="821eb-170">Basic192Sha256Rsa15</span></span>|<span data-ttu-id="821eb-171">메시지 암호화의 경우 Aes192, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa15를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-171">Use Aes192 for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="821eb-172">Basic256Sha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="821eb-172">Basic256Sha256Rsa15</span></span>|<span data-ttu-id="821eb-173">메시지 암호화의 경우 Aes256, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa15를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-173">Use Aes256 for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
+|<span data-ttu-id="821eb-174">TripleDesSha256Rsa15</span><span class="sxs-lookup"><span data-stu-id="821eb-174">TripleDesSha256Rsa15</span></span>|<span data-ttu-id="821eb-175">메시지 암호화의 경우 TripleDes, 메시지 다이제스트의 경우 Sha256, 키 래핑의 경우 Rsa15를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-175">Use TripleDes for message encryption, Sha256 for message digest and Rsa15 for key wrap.</span></span>|  
   
-## clientCredentialType 특성  
+## <a name="clientcredentialtype-attribute"></a><span data-ttu-id="821eb-176">clientCredentialType 특성</span><span class="sxs-lookup"><span data-stu-id="821eb-176">clientCredentialType Attribute</span></span>  
   
-|값|설명|  
-|-------|--------|  
-|없음|이를 통해 서비스와 익명 클라이언트가 상호 작용할 수 있습니다.  서비스 쪽에서는 서비스가 클라이언트 자격 증명을 요구하지 않음을 의미하고  클라이언트 쪽에서는 클라이언트가 클라이언트 자격 증명을 제공하지 않음을 의미합니다.|  
-|Windows|Windows 자격 증명의 인증된 컨텍스트에서 SOAP 교환을 수행할 수 있습니다.  `negotiateServiceCredential` 특성이 `true`로 설정되면 SSPI 협상 또는 Kerberos\(상호 운용 가능 표준\)가 수행됩니다.|  
-|UserName|서비스에서 UserName 자격 증명을 사용하여 클라이언트를 인증하도록 요구할 수 있습니다.  [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]는 암호 다이제스트를 보내거나 암호를 사용하여 키를 파생하고 메시지 보안에 이러한 키를 사용하는 것을 지원하지 않습니다.  따라서 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에서는 UserName 자격 증명을 사용할 때 전송에 보안을 적용합니다.  이 자격 증명 모드에서는 상호 운용이 가능한 교환 또는 `negotiateServiceCredential` 특성을 기반으로 하는 상호 운용이 불가능한 협상이 수행됩니다.|  
-|인증서|서비스에서 인증서를 사용하여 클라이언트를 인증하도록 요구할 수 있습니다.  메시지 보안 모드가 사용되고 `negotiateServiceCredential` 특성이 `false`로 설정되면 서비스 인증서를 사용하여 클라이언트를 구축해야 합니다.|  
-|IssuedToken|일반적으로 보안 토큰 서비스가 발급하는 사용자 지정 토큰을 지정합니다.|  
+|<span data-ttu-id="821eb-177">값</span><span class="sxs-lookup"><span data-stu-id="821eb-177">Value</span></span>|<span data-ttu-id="821eb-178">설명</span><span class="sxs-lookup"><span data-stu-id="821eb-178">Description</span></span>|  
+|-----------|-----------------|  
+|<span data-ttu-id="821eb-179">없음</span><span class="sxs-lookup"><span data-stu-id="821eb-179">None</span></span>|<span data-ttu-id="821eb-180">이를 통해 서비스와 익명 클라이언트가 상호 작용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-180">This allows the service to interact with anonymous clients.</span></span> <span data-ttu-id="821eb-181">서비스 쪽에서는 서비스가 클라이언트 자격 증명을 요구하지 않음을 의미하고</span><span class="sxs-lookup"><span data-stu-id="821eb-181">On the service side, this indicates that the service does not require any client credential.</span></span> <span data-ttu-id="821eb-182">클라이언트 쪽에서는 클라이언트가 클라이언트 자격 증명을 제공하지 않음을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-182">On the client, this indicates that the client does not provide any client credential.</span></span>|  
+|<span data-ttu-id="821eb-183">Windows</span><span class="sxs-lookup"><span data-stu-id="821eb-183">Windows</span></span>|<span data-ttu-id="821eb-184">Windows 자격 증명의 인증된 컨텍스트에서 SOAP 교환을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-184">Allows the SOAP exchanges to be under the authenticated context of a Windows credential.</span></span> <span data-ttu-id="821eb-185">`negotiateServiceCredential` 특성이 `true`로 설정되면 SSPI 협상 또는 Kerberos(상호 운용 가능 표준)가 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-185">If the `negotiateServiceCredential` attribute is set to `true`, this either performs an SSPI Negotiation or Kerberos (an interoperable standard).</span></span>|  
+|<span data-ttu-id="821eb-186">UserName</span><span class="sxs-lookup"><span data-stu-id="821eb-186">UserName</span></span>|<span data-ttu-id="821eb-187">서비스에서 UserName 자격 증명을 사용하여 클라이언트를 인증하도록 요구할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-187">Allows the service to require that the client be authenticated using a UserName credential.</span></span> [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]<span data-ttu-id="821eb-188">는 암호 다이제스트를 보내거나 암호를 사용하여 키를 파생하고 메시지 보안에 이러한 키를 사용하는 것을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-188"> does not support sending a password digest or deriving keys using password and using such keys for message security.</span></span> <span data-ttu-id="821eb-189">따라서 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]에서는 UserName 자격 증명을 사용할 때 전송에 보안을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-189">As such, [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] enforces that the transport is secured when using UserName credentials.</span></span> <span data-ttu-id="821eb-190">이 자격 증명 모드에서는 상호 운용이 가능한 교환 또는 `negotiateServiceCredential` 특성을 기반으로 하는 상호 운용이 불가능한 협상이 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-190">This credential mode results in either an interoperable exchange or a non-interoperable negotiation based on the `negotiateServiceCredential` attribute.</span></span>|  
+|<span data-ttu-id="821eb-191">인증서</span><span class="sxs-lookup"><span data-stu-id="821eb-191">Certificate</span></span>|<span data-ttu-id="821eb-192">서비스에서 인증서를 사용하여 클라이언트를 인증하도록 요구할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-192">Allows the service to require that the client be authenticated using a certificate.</span></span> <span data-ttu-id="821eb-193">메시지 보안 모드가 사용되고 `negotiateServiceCredential` 특성이 `false`로 설정되면 서비스 인증서를 사용하여 클라이언트를 구축해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-193">If message security mode is used and the `negotiateServiceCredential` attribute is set to `false`, the client needs to be provisioned with the service certificate.</span></span>|  
+|<span data-ttu-id="821eb-194">IssuedToken</span><span class="sxs-lookup"><span data-stu-id="821eb-194">IssuedToken</span></span>|<span data-ttu-id="821eb-195">일반적으로 보안 토큰 서비스가 발급하는 사용자 지정 토큰을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-195">Specifies a custom token, usually issued by a Security Token Service.</span></span>|  
   
-### 자식 요소  
- 없음  
+### <a name="child-elements"></a><span data-ttu-id="821eb-196">자식 요소</span><span class="sxs-lookup"><span data-stu-id="821eb-196">Child Elements</span></span>  
+ <span data-ttu-id="821eb-197">없음</span><span class="sxs-lookup"><span data-stu-id="821eb-197">None.</span></span>  
   
-### 부모 요소  
+### <a name="parent-elements"></a><span data-ttu-id="821eb-198">부모 요소</span><span class="sxs-lookup"><span data-stu-id="821eb-198">Parent Elements</span></span>  
   
-|요소|설명|  
-|--------|--------|  
-|[\<security\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsdualhttpbinding.md)|[\<wsDualHttpBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)의 보안 기능을 정의합니다.|  
+|<span data-ttu-id="821eb-199">요소</span><span class="sxs-lookup"><span data-stu-id="821eb-199">Element</span></span>|<span data-ttu-id="821eb-200">설명</span><span class="sxs-lookup"><span data-stu-id="821eb-200">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="821eb-201">\<보안 ></span><span class="sxs-lookup"><span data-stu-id="821eb-201">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsdualhttpbinding.md)|<span data-ttu-id="821eb-202">보안 기능을 정의 [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="821eb-202">Defines the security capabilities of the [\<wsDualHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).</span></span>|  
   
-## 참고 항목  
- <xref:System.ServiceModel.Configuration.WSDualHttpSecurityElement.Message%2A>   
- <xref:System.ServiceModel.WSDualHttpSecurity.Message%2A>   
- <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>   
- <xref:System.ServiceModel.MessageSecurityOverHttp>   
- [서비스 및 클라이언트에 보안 설정](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [바인딩](../../../../../docs/framework/wcf/bindings.md)   
- [시스템 제공 바인딩 구성](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/ko-kr/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<binding\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a><span data-ttu-id="821eb-203">참고 항목</span><span class="sxs-lookup"><span data-stu-id="821eb-203">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.WSDualHttpSecurityElement.Message%2A>  
+ <xref:System.ServiceModel.WSDualHttpSecurity.Message%2A>  
+ <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>  
+ <xref:System.ServiceModel.MessageSecurityOverHttp>  
+ [<span data-ttu-id="821eb-204">서비스 및 클라이언트 보안 설정</span><span class="sxs-lookup"><span data-stu-id="821eb-204">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="821eb-205">바인딩</span><span class="sxs-lookup"><span data-stu-id="821eb-205">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="821eb-206">시스템 제공 바인딩 구성</span><span class="sxs-lookup"><span data-stu-id="821eb-206">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="821eb-207">바인딩을 사용 하 여 Windows Communication Foundation 서비스 및 클라이언트 구성</span><span class="sxs-lookup"><span data-stu-id="821eb-207">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="821eb-208">\<바인딩 ></span><span class="sxs-lookup"><span data-stu-id="821eb-208">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

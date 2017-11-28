@@ -5,92 +5,89 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d5b3d13e-689f-4584-8ba6-44f5167a8590
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6089336f0b4c37e0bf867fbb18376705848b4104
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e477a870107a8d4d8fbac9a3d4fb10a285158280
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="missingruntimeartifactexception-class-net-native"></a>MissingRuntimeArtifactException 클래스(.NET 네이티브)
-**Windows 10의 Windows 앱용 .NET, [!INCLUDE[net_native](../../../includes/net-native-md.md)]에만 해당**  
+# <a name="missingruntimeartifactexception-class-net-native"></a><span data-ttu-id="21d29-102">MissingRuntimeArtifactException 클래스(.NET 네이티브)</span><span class="sxs-lookup"><span data-stu-id="21d29-102">MissingRuntimeArtifactException Class (.NET Native)</span></span>
+<span data-ttu-id="21d29-103">**Windows 10의 Windows 앱용 .NET, [!INCLUDE[net_native](../../../includes/net-native-md.md)]에만 해당**</span><span class="sxs-lookup"><span data-stu-id="21d29-103">**.NET for Windows apps for Windows 10, [!INCLUDE[net_native](../../../includes/net-native-md.md)] only**</span></span>  
   
- 형식 또는 형식 멤버의 메타데이터를 사용할 수는 있지만 해당 구현이 제거된 경우 throw되는 예외입니다.  
+ <span data-ttu-id="21d29-104">형식 또는 형식 멤버의 메타데이터를 사용할 수는 있지만 해당 구현이 제거된 경우 throw되는 예외입니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-104">The exception that is thrown when metadata for a type or type member is available but its implementation has been removed.</span></span>  
   
- **네임스페이스:** System.Reflection  
+ <span data-ttu-id="21d29-105">**네임스페이스:** System.Reflection</span><span class="sxs-lookup"><span data-stu-id="21d29-105">**Namespace:** System.Reflection</span></span>  
   
 > [!IMPORTANT]
->  `MissingRuntimeArtifactException` 클래스는 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 도구 체인에서 내부용으로만 사용됩니다. 이 클래스는 타사 코드에서 사용하면 안 되고 응용 프로그램 코드에서 예외를 처리하면 안 됩니다. 대신, [런타임 지시문 파일](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)에 항목을 추가하여 예외를 제거합니다. 자세한 내용은 설명 섹션을 참조하세요.  
+>  <span data-ttu-id="21d29-106">`MissingRuntimeArtifactException` 클래스는 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 도구 체인에서 내부용으로만 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-106">The `MissingRuntimeArtifactException` class is intended solely for internal use by the [!INCLUDE[net_native](../../../includes/net-native-md.md)] tool chain.</span></span> <span data-ttu-id="21d29-107">이 클래스는 타사 코드에서 사용하면 안 되고 응용 프로그램 코드에서 예외를 처리하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-107">It is not intended for use in third-party code, nor should you handle the exception in your application code.</span></span> <span data-ttu-id="21d29-108">대신, [런타임 지시문 파일](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)에 항목을 추가하여 예외를 제거합니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-108">Instead, you eliminate the exception by adding entries to your [runtime directives file](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).</span></span> <span data-ttu-id="21d29-109">자세한 내용은 설명 섹션을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="21d29-109">For more information, see the Remarks section.</span></span>  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a><span data-ttu-id="21d29-110">구문</span><span class="sxs-lookup"><span data-stu-id="21d29-110">Syntax</span></span>  
  [!code-csharp[ProjectN#22](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missingruntimeartifactexception_syntax1.cs#22)]  
   
- `MissingRuntimeArtifactException` 클래스가 <xref:System.MemberAccessException>에서 파생되는지 확인합니다.  
+ <span data-ttu-id="21d29-111">`MissingRuntimeArtifactException` 클래스가 <xref:System.MemberAccessException>에서 파생되는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-111">Note that the `MissingRuntimeArtifactException` class derives from <xref:System.MemberAccessException>.</span></span>  
   
- `MissingRuntimeArtifactException` 클래스의 멤버는 다음과 같습니다.  
+ <span data-ttu-id="21d29-112">`MissingRuntimeArtifactException` 클래스의 멤버는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-112">The `MissingRuntimeArtifactException` class has the following members:</span></span>  
   
-## <a name="constructors"></a>생성자  
+## <a name="constructors"></a><span data-ttu-id="21d29-113">생성자</span><span class="sxs-lookup"><span data-stu-id="21d29-113">Constructors</span></span>  
   
-|생성자|설명|  
+|<span data-ttu-id="21d29-114">생성자</span><span class="sxs-lookup"><span data-stu-id="21d29-114">Constructor</span></span>|<span data-ttu-id="21d29-115">설명</span><span class="sxs-lookup"><span data-stu-id="21d29-115">Description</span></span>|  
 |-----------------|-----------------|  
-|`public MissingRuntimeArtifactException()`|오류를 설명하는 시스템 제공 메시지를 사용하여 `MissingRuntimeArtifactException` 클래스의 새 인스턴스를 초기화합니다.<br /><br /> 이 생성자는 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 도구 체인에서 내부용으로만 사용됩니다.|  
-|`public MissingRuntimeArtifactException(String message)`|지정된 오류 메시지를 사용하여 `MissingRuntimeArtifactException` 클래스의 새 인스턴스를 초기화합니다.<br /><br /> 이 생성자는 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 도구 체인에서 내부용으로만 사용됩니다.|  
+|`public MissingRuntimeArtifactException()`|<span data-ttu-id="21d29-116">오류를 설명하는 시스템 제공 메시지를 사용하여 `MissingRuntimeArtifactException` 클래스의 새 인스턴스를 초기화합니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-116">Initializes a new instance of the `MissingRuntimeArtifactException` class by using a system-supplied message that describes the error.</span></span><br /><br /> <span data-ttu-id="21d29-117">이 생성자는 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 도구 체인에서 내부용으로만 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-117">This constructor is for internal use by the [!INCLUDE[net_native](../../../includes/net-native-md.md)] tool chain only.</span></span>|  
+|`public MissingRuntimeArtifactException(String message)`|<span data-ttu-id="21d29-118">지정된 오류 메시지를 사용하여 `MissingRuntimeArtifactException` 클래스의 새 인스턴스를 초기화합니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-118">Initializes a new instance of the `MissingRuntimeArtifactException` class with a specified error message.</span></span><br /><br /> <span data-ttu-id="21d29-119">이 생성자는 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 도구 체인에서 내부용으로만 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-119">This constructor is for internal use by the [!INCLUDE[net_native](../../../includes/net-native-md.md)] tool chain only.</span></span>|  
   
-## <a name="properties"></a>속성  
+## <a name="properties"></a><span data-ttu-id="21d29-120">속성</span><span class="sxs-lookup"><span data-stu-id="21d29-120">Properties</span></span>  
   
-|속성|설명|  
+|<span data-ttu-id="21d29-121">속성</span><span class="sxs-lookup"><span data-stu-id="21d29-121">Property</span></span>|<span data-ttu-id="21d29-122">설명</span><span class="sxs-lookup"><span data-stu-id="21d29-122">Description</span></span>|  
 |--------------|-----------------|  
-|`public IDictionary Data { get; }`|예외에 대한 사용자 정의 추가 정보를 제공하는 키/값 쌍의 컬렉션을 가져옵니다. <xref:System.Exception?displayProperty=fullName>에서 상속됩니다.|  
-|`public string HelpLink { get; set; }`|이 예외와 연결된 도움말 파일에 대한 링크를 가져오거나 설정합니다. <xref:System.Exception?displayProperty=fullName>에서 상속됩니다.|  
-|`public int HResult { get; protected set; }`|특정 예외에 할당되는 코딩된 숫자 값인 `HRESULT`를 가져오거나 설정합니다. <xref:System.Exception?displayProperty=fullName>에서 상속됩니다.|  
-|`public Exception InnerException { get; }`|현재 예외를 발생시킨 예외를 가져옵니다. <xref:System.Exception?displayProperty=fullName>에서 상속됩니다.|  
-|`public string Message { get; }`|현재 예외를 설명하는 메시지를 가져옵니다. <xref:System.Exception?displayProperty=fullName>에서 상속됩니다.|  
-|`public string Source { get; set; }`|오류를 발생시킨 응용 프로그램 또는 개체의 이름을 가져오거나 설정합니다. <xref:System.Exception?displayProperty=fullName>에서 상속됩니다.|  
-|`public string StackTrace { get; }`|호출 스택의 직접 실행 프레임 문자열 표현을 가져옵니다. <xref:System.Exception?displayProperty=fullName>에서 상속됩니다.|  
-|`public MethodBase TargetSite { get; }`|현재 예외가 throw된 메서드를 가져옵니다. <xref:System.Exception?displayProperty=fullName>에서 상속됩니다.|  
+|`public IDictionary Data { get; }`|<span data-ttu-id="21d29-123">예외에 대한 사용자 정의 추가 정보를 제공하는 키/값 쌍의 컬렉션을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-123">Gets a collection of key/value pairs that provide additional user-defined information about the exception.</span></span> <span data-ttu-id="21d29-124"><xref:System.Exception?displayProperty=nameWithType>에서 상속됩니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-124">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
+|`public string HelpLink { get; set; }`|<span data-ttu-id="21d29-125">이 예외와 연결된 도움말 파일에 대한 링크를 가져오거나 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-125">Gets or sets a link to the help file associated with this exception.</span></span> <span data-ttu-id="21d29-126"><xref:System.Exception?displayProperty=nameWithType>에서 상속됩니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-126">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
+|`public int HResult { get; protected set; }`|<span data-ttu-id="21d29-127">특정 예외에 할당되는 코딩된 숫자 값인 `HRESULT`를 가져오거나 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-127">Gets or sets the `HRESULT`, a coded numeric value that is assigned to a specific exception.</span></span> <span data-ttu-id="21d29-128"><xref:System.Exception?displayProperty=nameWithType>에서 상속됩니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-128">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
+|`public Exception InnerException { get; }`|<span data-ttu-id="21d29-129">현재 예외를 발생시킨 예외를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-129">Gets the exception that caused the current exception.</span></span> <span data-ttu-id="21d29-130"><xref:System.Exception?displayProperty=nameWithType>에서 상속됩니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-130">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
+|`public string Message { get; }`|<span data-ttu-id="21d29-131">현재 예외를 설명하는 메시지를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-131">Gets a message that describes the current exception.</span></span> <span data-ttu-id="21d29-132"><xref:System.Exception?displayProperty=nameWithType>에서 상속됩니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-132">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
+|`public string Source { get; set; }`|<span data-ttu-id="21d29-133">오류를 발생시킨 응용 프로그램 또는 개체의 이름을 가져오거나 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-133">Gets or sets the name of the application or object that caused the error.</span></span> <span data-ttu-id="21d29-134"><xref:System.Exception?displayProperty=nameWithType>에서 상속됩니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-134">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
+|`public string StackTrace { get; }`|<span data-ttu-id="21d29-135">호출 스택의 직접 실행 프레임 문자열 표현을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-135">Gets a string representation of the immediate frames on the call stack.</span></span> <span data-ttu-id="21d29-136"><xref:System.Exception?displayProperty=nameWithType>에서 상속됩니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-136">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
+|`public MethodBase TargetSite { get; }`|<span data-ttu-id="21d29-137">현재 예외가 throw된 메서드를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-137">Gets the method that threw the current exception.</span></span> <span data-ttu-id="21d29-138"><xref:System.Exception?displayProperty=nameWithType>에서 상속됩니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-138">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
   
-## <a name="methods"></a>메서드  
+## <a name="methods"></a><span data-ttu-id="21d29-139">메서드</span><span class="sxs-lookup"><span data-stu-id="21d29-139">Methods</span></span>  
   
-|메서드|설명|  
+|<span data-ttu-id="21d29-140">메서드</span><span class="sxs-lookup"><span data-stu-id="21d29-140">Method</span></span>|<span data-ttu-id="21d29-141">설명</span><span class="sxs-lookup"><span data-stu-id="21d29-141">Description</span></span>|  
 |------------|-----------------|  
-|`public bool Equals(Object obj)`|지정한 개체와 현재 개체가 같은지 여부를 확인합니다.  <xref:System.Object>에서 상속됩니다.|  
-|`protected void Finalize()`|가비지 수집기가 회수하기 전에 개체가 리소스를 해제하고 다른 정리 작업을 수행할 수 있게 합니다. <xref:System.Object>에서 상속됩니다.|  
-|`public Exception GetBaseException()`|후속 예외 하나 이상의 근본 원인이 되는 예외를 반환합니다. <xref:System.Exception?displayProperty=fullName>에서 상속됩니다.|  
-|`public int GetHashCode()`|`MissingRuntimeArtifactException` 인스턴스의 해시 코드를 반환합니다.   <xref:System.Object>에서 상속됩니다.|  
-|`public void GetObjectData(SerializationInfo info, StreamingContext context)`|예외에 대한 정보를 사용하여 <xref:System.Runtime.Serialization.SerializationInfo> 개체를 설정합니다.  <xref:System.Exception?displayProperty=fullName>에서 상속됩니다.|  
-|`public Type GetType()`|현재 인스턴스의 런타임 형식을 가져옵니다. <xref:System.Exception?displayProperty=fullName>에서 상속됩니다.|  
-|`protected Object MemberwiseClone()`|현재 개체의 부분 복사본을 만듭니다. <xref:System.Object>에서 상속됩니다.|  
-|`public string ToString()`|현재 예외의 문자열 표현을 반환합니다. <xref:System.Exception?displayProperty=fullName>에서 상속됩니다.|  
+|`public bool Equals(Object obj)`|<span data-ttu-id="21d29-142">지정한 개체와 현재 개체가 같은지 여부를 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-142">Determines whether the specified object is equal to the current object.</span></span>  <span data-ttu-id="21d29-143"><xref:System.Object>에서 상속됩니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-143">(Inherited from <xref:System.Object>.)</span></span>|  
+|`protected void Finalize()`|<span data-ttu-id="21d29-144">가비지 수집기가 회수하기 전에 개체가 리소스를 해제하고 다른 정리 작업을 수행할 수 있게 합니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-144">Allows an object to try to free resources and perform other cleanup operations before it is reclaimed by garbage collection.</span></span> <span data-ttu-id="21d29-145"><xref:System.Object>에서 상속됩니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-145">(Inherited from <xref:System.Object>.)</span></span>|  
+|`public Exception GetBaseException()`|<span data-ttu-id="21d29-146">후속 예외 하나 이상의 근본 원인이 되는 예외를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-146">Returns the exception that is the root cause of one or more subsequent exceptions.</span></span> <span data-ttu-id="21d29-147"><xref:System.Exception?displayProperty=nameWithType>에서 상속됩니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-147">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
+|`public int GetHashCode()`|<span data-ttu-id="21d29-148">`MissingRuntimeArtifactException` 인스턴스의 해시 코드를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-148">Returns a hash code for a `MissingRuntimeArtifactException` instance.</span></span>   <span data-ttu-id="21d29-149"><xref:System.Object>에서 상속됩니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-149">(Inherited from <xref:System.Object>.)</span></span>|  
+|`public void GetObjectData(SerializationInfo info, StreamingContext context)`|<span data-ttu-id="21d29-150">예외에 대한 정보를 사용하여 <xref:System.Runtime.Serialization.SerializationInfo> 개체를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-150">Sets a <xref:System.Runtime.Serialization.SerializationInfo> object with information about the exception.</span></span>  <span data-ttu-id="21d29-151"><xref:System.Exception?displayProperty=nameWithType>에서 상속됩니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-151">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
+|`public Type GetType()`|<span data-ttu-id="21d29-152">현재 인스턴스의 런타임 형식을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-152">Gets the runtime type of the current instance.</span></span> <span data-ttu-id="21d29-153"><xref:System.Exception?displayProperty=nameWithType>에서 상속됩니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-153">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
+|`protected Object MemberwiseClone()`|<span data-ttu-id="21d29-154">현재 개체의 부분 복사본을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-154">Creates a shallow copy of the current object.</span></span> <span data-ttu-id="21d29-155"><xref:System.Object>에서 상속됩니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-155">(Inherited from <xref:System.Object>.)</span></span>|  
+|`public string ToString()`|<span data-ttu-id="21d29-156">현재 예외의 문자열 표현을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-156">Returns the string representation of the current exception.</span></span> <span data-ttu-id="21d29-157"><xref:System.Exception?displayProperty=nameWithType>에서 상속됩니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-157">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
   
-## <a name="events"></a>이벤트  
+## <a name="events"></a><span data-ttu-id="21d29-158">이벤트</span><span class="sxs-lookup"><span data-stu-id="21d29-158">Events</span></span>  
   
-|Event|설명|  
+|<span data-ttu-id="21d29-159">Event</span><span class="sxs-lookup"><span data-stu-id="21d29-159">Event</span></span>|<span data-ttu-id="21d29-160">설명</span><span class="sxs-lookup"><span data-stu-id="21d29-160">Description</span></span>|  
 |-----------|-----------------|  
-|`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|예외에 대한 serialize된 데이터를 포함하는 예외 상태 개체를 만들기 위해 예외를 serialize할 때 발생합니다. <xref:System.Exception?displayProperty=fullName>에서 상속됩니다.|  
+|`protected event EventHandler<SafeSerializationEventArgs> SerializeObjectState`|<span data-ttu-id="21d29-161">예외에 대한 serialize된 데이터를 포함하는 예외 상태 개체를 만들기 위해 예외를 serialize할 때 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-161">Occurs when an exception is serialized to create an exception state object that contains serialized data about the exception.</span></span> <span data-ttu-id="21d29-162"><xref:System.Exception?displayProperty=nameWithType>에서 상속됩니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-162">(Inherited from <xref:System.Exception?displayProperty=nameWithType>.)</span></span>|  
   
-## <a name="usage-details"></a>자세한 용도  
- 형식 또는 멤버의 메타데이터는 있는데 해당 구현은 제거된 경우 형식을 인스턴스화하거나 형식 멤버를 호출하려고 하면 `MissingRuntimeArtifactException` 예외가 throw됩니다.  
+## <a name="usage-details"></a><span data-ttu-id="21d29-163">자세한 용도</span><span class="sxs-lookup"><span data-stu-id="21d29-163">Usage Details</span></span>  
+ <span data-ttu-id="21d29-164">형식 또는 멤버의 메타데이터는 있는데 해당 구현은 제거된 경우 형식을 인스턴스화하거나 형식 멤버를 호출하려고 하면 `MissingRuntimeArtifactException` 예외가 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-164">The `MissingRuntimeArtifactException` exception is thrown when an attempt is made to instantiate a type or invoke a type member and, although the type or member's metadata is present, its implementation has been removed.</span></span>  
   
- 메서드를 동적으로 실행하기 위한 구현 코드와 메타데이터를 앱에서 런타임에 사용할 수 있는지 여부는 런타임 지시문(XML 구성) 파일인 *.rd.xml에 의해 정의됩니다. 앱에서 이 예외가 throw되지 않도록 하려면 형식 또는 형식 멤버에 필요한 메타데이터가 런타임에 제공되도록 \*.rd.xml을 수정해야 합니다. \*.rd.xml 파일의 형식에 대한 자세한 내용은 [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)를 확인하세요.  
+ <span data-ttu-id="21d29-165">메서드를 동적으로 실행하기 위한 구현 코드와 메타데이터를 앱에서 런타임에 사용할 수 있는지 여부는 런타임 지시문(XML 구성) 파일인 *.rd.xml에 의해 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-165">Whether metadata and the implementation code to dynamically execute a method are available to an app at run time is defined by the runtime directives (XML configuration) file, *.rd.xml.</span></span> <span data-ttu-id="21d29-166">앱에서 이 예외가 throw되지 않도록 하려면 형식 또는 형식 멤버에 필요한 메타데이터가 런타임에 제공되도록 \*.rd.xml을 수정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-166">To prevent your app from throwing this exception, you must modify \*.rd.xml to ensure that the metadata needed by a type or type member is present at run time.</span></span> <span data-ttu-id="21d29-167">\*.rd.xml 파일의 형식에 대한 자세한 내용은 [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="21d29-167">For information about the format of the \*.rd.xml file, see [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).</span></span>  
   
 > [!IMPORTANT]
->  이 예외는 응용 프로그램에 필요한 구현 코드를 런타임에 사용할 수 없음을 나타내므로 `try`/`catch` 블록에서 이 예외를 처리하면 안 됩니다. 대신 예외의 원인을 진단하고 런타임 지시문 파일을 사용하여 예외를 방지해야 합니다. 일반적으로는 런타임 지시문 파일(*.rd.xml 파일)에서 프로그램 요소에 대해 적절한 `Activate` 또는 `Dynamic` 정책을 지정하여 이 예외를 방지합니다. 예외를 제거하는 런타임 지시문 파일에 추가할 수 있는 항목을 가져오려면 두 문제 해결사 중 하나를 사용할 수 있습니다.  
+>  <span data-ttu-id="21d29-168">이 예외는 응용 프로그램에 필요한 구현 코드를 런타임에 사용할 수 없음을 나타내므로 `try`/`catch` 블록에서 이 예외를 처리하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-168">Because this exception indicates that the implementation code needed by your application isn’t available at run time, you shouldn’t handle this exception in a `try`/`catch` block.</span></span> <span data-ttu-id="21d29-169">대신 예외의 원인을 진단하고 런타임 지시문 파일을 사용하여 예외를 방지해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-169">Instead, you should diagnose the cause of the exception and eliminate it by using a runtime directives file.</span></span> <span data-ttu-id="21d29-170">일반적으로는 런타임 지시문 파일(*.rd.xml 파일)에서 프로그램 요소에 대해 적절한 `Activate` 또는 `Dynamic` 정책을 지정하여 이 예외를 방지합니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-170">Typically, you eliminate this exception by specifying the appropriate `Activate` or `Dynamic` policy for a program element in the runtime directives file (*.rd.xml file).</span></span> <span data-ttu-id="21d29-171">예외를 제거하는 런타임 지시문 파일에 추가할 수 있는 항목을 가져오려면 두 문제 해결사 중 하나를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-171">To get the entry that you can add to your runtime directives file that eliminates the exception, you can use one of two troubleshooters:</span></span>  
 >   
->  -   형식의 경우 [MissingMetadataException 문제 해결사](http://dotnet.github.io/native/troubleshooter/type.html) 입니다.  
-> -   메서드의 경우 [MissingMetadataException 문제 해결사](http://dotnet.github.io/native/troubleshooter/method.html) 입니다.  
+>  -   <span data-ttu-id="21d29-172">형식의 경우 [MissingMetadataException 문제 해결사](http://dotnet.github.io/native/troubleshooter/type.html) 입니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-172">The [MissingMetadataException troubleshooter](http://dotnet.github.io/native/troubleshooter/type.html) for types.</span></span>  
+> -   <span data-ttu-id="21d29-173">메서드의 경우 [MissingMetadataException 문제 해결사](http://dotnet.github.io/native/troubleshooter/method.html) 입니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-173">The [MissingMetadataException troubleshooter](http://dotnet.github.io/native/troubleshooter/method.html) for methods.</span></span>  
   
- `MissingRuntimeArtifactException` 클래스는 고유한 멤버를 포함하지 않으며 모든 멤버는 <xref:System.MemberAccessException>에서 상속됩니다.  
+ <span data-ttu-id="21d29-174">`MissingRuntimeArtifactException` 클래스는 고유한 멤버를 포함하지 않으며 모든 멤버는 <xref:System.MemberAccessException>에서 상속됩니다.</span><span class="sxs-lookup"><span data-stu-id="21d29-174">The `MissingRuntimeArtifactException` class contains no unique members; all of its members are inherited from its base class, <xref:System.MemberAccessException>.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [런타임 지시문 정책 설정](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-
+## <a name="see-also"></a><span data-ttu-id="21d29-175">참고 항목</span><span class="sxs-lookup"><span data-stu-id="21d29-175">See Also</span></span>  
+ [<span data-ttu-id="21d29-176">런타임 지시문(rd.xml) 구성 파일 참조</span><span class="sxs-lookup"><span data-stu-id="21d29-176">Runtime Directives (rd.xml) Configuration File Reference</span></span>](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [<span data-ttu-id="21d29-177">런타임 지시문 정책 설정</span><span class="sxs-lookup"><span data-stu-id="21d29-177">Runtime Directive Policy Settings</span></span>](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

@@ -1,31 +1,36 @@
 ---
-title: "&lt;httpTransport&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: '&lt;httpTransport&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8b30c065-b32a-4fa3-8eb4-5537a9c6b897
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6aacdb254b12e5c1b344b43c2fbf2e94681c1f6f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;httpTransport&gt;
-사용자 지정 바인딩의 SOAP 메시지 전송을 위한 HTTP 전송을 지정합니다.  
+# <a name="lthttptransportgt"></a><span data-ttu-id="4b797-102">&lt;httpTransport&gt;</span><span class="sxs-lookup"><span data-stu-id="4b797-102">&lt;httpTransport&gt;</span></span>
+<span data-ttu-id="4b797-103">사용자 지정 바인딩의 SOAP 메시지 전송을 위한 HTTP 전송을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-103">Specifies an HTTP transport for transmitting SOAP messages for a custom binding.</span></span>  
   
-## 구문  
+ <span data-ttu-id="4b797-104">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="4b797-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="4b797-105">\<바인딩 ></span><span class="sxs-lookup"><span data-stu-id="4b797-105">\<bindings></span></span>  
+<span data-ttu-id="4b797-106">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="4b797-106">\<customBinding></span></span>  
+<span data-ttu-id="4b797-107">\<바인딩 ></span><span class="sxs-lookup"><span data-stu-id="4b797-107">\<binding></span></span>  
+<span data-ttu-id="4b797-108">\<httpTransport ></span><span class="sxs-lookup"><span data-stu-id="4b797-108">\<httpTransport></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="4b797-109">구문</span><span class="sxs-lookup"><span data-stu-id="4b797-109">Syntax</span></span>  
   
+```xml  
 <httpTransport  
     allowCookies=Boolean"  
     authenticationScheme="Digest/Negotiate/Ntlm/Basic/Anonymous"  
@@ -42,46 +47,46 @@ IntegratedWindowsAuthentication: Specifies Windows authentication"
         useDefaultWebProxy="Boolean" />  
 ```  
   
-## 특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="4b797-110">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="4b797-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="4b797-111">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 특성  
+### <a name="attributes"></a><span data-ttu-id="4b797-112">특성</span><span class="sxs-lookup"><span data-stu-id="4b797-112">Attributes</span></span>  
   
-|특성|설명|  
-|--------|--------|  
-|allowCookies|클라이언트가 쿠키를 수락하고 이를 앞으로의 요청에서 전파할지 여부를 지정하는 부울 값입니다.  기본값은 `false`입니다.<br /><br /> 쿠키를 사용하는 ASMX 웹 서비스와 상호 작용할 때 이 특성을 사용할 수 있습니다.  그러면 서버에서 반환된 쿠키가 해당 서비스에 대한 이후의 모든 클라이언트 요청에 자동으로 복사되도록 할 수 있습니다.|  
-|authenticationScheme|HTTP 수신기가 처리하는 클라이언트 요청을 인증하는 데 사용되는 프로토콜을 지정합니다.  유효한 값은 다음과 같습니다.<br /><br /> -   Digest: 다이제스트 인증을 지정합니다.<br />-   Negotiate: 클라이언트와 협상하여 인증 체계를 결정합니다.  클라이언트와 서버 모두 Kerberos를 지원하면 이 인증 체계가 사용되고, 그렇지 않으면 NTLM이 사용됩니다.<br />-   Ntlm: NTLM 인증을 지정합니다.<br />-   Basic: 기본 인증을 지정합니다.<br />-   Anonymous: 익명 인증을 지정합니다.<br /><br /> 기본값은 Anonymous입니다.  이 특성은 <xref:System.Net.AuthenticationSchemes> 형식입니다.  이 특성은 한 번만 설정할 수 있습니다.|  
-|bypassProxyOnLocal|로컬 주소에 대해 프록시 서버를 사용하지 않을 것인지 여부를 나타내는 부울 값입니다.  기본값은 `false`입니다.<br /><br /> 로컬 주소는 로컬 LAN 또는 인트라넷에 있는 주소입니다.<br /><br /> 서비스 주소가 http:\/\/localhost로 시작되는 경우 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]은 항상 프록시를 무시합니다.<br /><br /> 클라이언트가 동일한 시스템의 서비스와 통신할 때 프록시를 통하게 하려면 localhost 대신 호스트 이름을 사용해야 합니다.|  
-|hostnameComparisonMode|URI 구문 분석에 사용되는 HTTP 호스트 이름 비교 모드를 지정합니다.  유효한 값은 다음과 같습니다.<br /><br /> -   StrongWildcard: \("\+"\)는 지정한 스키마, 포트 및 상대 URI의 컨텍스트에서 일치하는 모든 호스트 이름을 검색합니다.<br />-   Exact: 와일드카드 없음<br />-   WeakWildcard: \("\*"\)는 지정한 체계, 포트 및 상대 URI의 컨텍스트에서 또는 강력한 와일드카드 메커니즘을 통해 명시적으로 일치하지 않는 가능한 모든 호스트 이름을 검색합니다.<br /><br /> 기본값은 StrongWildcard입니다.  이 특성은 <xref:System.ServiceModel.HostnameComparisonMode> 형식입니다.|  
-|keepAliveEnabled|인터넷 리소스에 영구 연결을 할 것인지 여부를 지정하는 부울 값입니다.|  
-|maxBufferSize|버퍼의 최대 크기를 지정하는 양의 정수입니다.  기본값은 524288입니다.|  
-|proxyAddress|HTTP 프록시의 주소를 지정하는 URI입니다.  `useSystemWebProxy`가 `true`일 경우 이 설정은 `null`이어야 합니다.  기본값은 `null`입니다.|  
-|proxyAuthenticationScheme|HTTP 프록시가 처리하는 클라이언트 요청을 인증하는 데 사용되는 프로토콜을 지정합니다.  유효한 값은 다음과 같습니다.<br /><br /> -   None: 인증이 수행되지 않습니다.<br />-   Digest: 다이제스트 인증을 지정합니다.<br />-   Negotiate: 클라이언트와 협상하여 인증 체계를 결정합니다.  클라이언트와 서버 모두 Kerberos를 지원하면 이 인증 체계가 사용되고, 그렇지 않으면 NTLM이 사용됩니다.<br />-   Ntlm: NTLM 인증을 지정합니다.<br />-   Basic: 기본 인증을 지정합니다.<br />-   Anonymous: 익명 인증을 지정합니다.<br />-   IntegratedWindowsAuthentication: Windows 인증을 지정합니다.<br /><br /> 기본값은 Anonymous입니다.  이 특성은 <xref:System.Net.AuthenticationSchemes> 형식입니다.|  
-|realm|프록시\/서버에서 사용할 영역을 지정하는 문자열입니다.  기본값은 빈 문자열입니다.<br /><br /> 서버에서는 보호되는 리소스를 분할할 때 영역을 사용합니다.  각 파티션에는 자체 인증 체계 및\/또는 권한 부여 데이터베이스가 있을 수 있습니다.  영역은 기본 및 다이제스트 인증에만 사용됩니다.  클라이언트가 성공적으로 인증되면 이 인증은 지정된 영역의 모든 리소스에 대해 유효합니다.  영역에 대한 자세한 내용은 http:\/\/www.ietf.org의 RFC 2617을 참조하세요.|  
-|transferMode|메시지가 버퍼링되거나 스트리밍되는지 또는 요청이나 응답인지를 지정합니다.  유효한 값은 다음과 같습니다.<br /><br /> -   Buffered: 요청 및 응답 메시지가 버퍼링됩니다.<br />-   Streamed: 요청 및 응답 메시지가 스트리밍됩니다.<br />-   StreamedRequest: 요청 메시지는 스트리밍되고 응답 메시지는 버퍼링됩니다.<br />-   StreamedResponse: 요청 메시지는 버퍼링되고 응답 메시지는 스트리밍됩니다.<br /><br /> 기본값은 Buffered입니다.  이 특성은 <xref:System.ServiceModel.TransferMode> 형식입니다.|  
-|unsafeConnectionNtlmAuthentication|서버에서 안전하지 않은 연결 공유를 사용할 수 있는지 여부를 지정하는 부울 값입니다.  기본값은 `false`입니다.  사용할 경우 각 TCP 연결에서 NTLM 인증이 한 번씩 수행됩니다.|  
-|useDefaultWebProxy|사용자별 설정이 아닌 시스템 수준의 프록시 설정을 사용할지 여부를 지정하는 부울 값입니다.  기본값은 `true`입니다.|  
+|<span data-ttu-id="4b797-113">특성</span><span class="sxs-lookup"><span data-stu-id="4b797-113">Attribute</span></span>|<span data-ttu-id="4b797-114">설명</span><span class="sxs-lookup"><span data-stu-id="4b797-114">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="4b797-115">allowCookies</span><span class="sxs-lookup"><span data-stu-id="4b797-115">allowCookies</span></span>|<span data-ttu-id="4b797-116">클라이언트가 쿠키를 수락하고 이를 앞으로의 요청에서 전파할지 여부를 지정하는 부울 값입니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-116">A Boolean value that specifies whether the client accepts cookies and propagates them on future requests.</span></span> <span data-ttu-id="4b797-117">기본값은 `false`입니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-117">The default is `false`.</span></span><br /><br /> <span data-ttu-id="4b797-118">쿠키를 사용하는 ASMX 웹 서비스와 상호 작용할 때 이 특성을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-118">You can use this attribute when you interact with ASMX Web services that use cookies.</span></span> <span data-ttu-id="4b797-119">그러면 서버에서 반환된 쿠키가 해당 서비스에 대한 이후의 모든 클라이언트 요청에 자동으로 복사되도록 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-119">In this way, you can be sure that the cookies returned from the server are automatically copied to all future client requests for that service.</span></span>|  
+|<span data-ttu-id="4b797-120">authenticationScheme</span><span class="sxs-lookup"><span data-stu-id="4b797-120">authenticationScheme</span></span>|<span data-ttu-id="4b797-121">HTTP 수신기가 처리하는 클라이언트 요청을 인증하는 데 사용되는 프로토콜을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-121">Specifies the protocol used to authenticate client requests being processed by an HTTP listener.</span></span> <span data-ttu-id="4b797-122">유효한 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-122">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="4b797-123">다이제스트: 다이제스트 인증을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-123">-   Digest: Specifies digest authentication.</span></span><br /><span data-ttu-id="4b797-124">-Negotiate: 인증 체계를 결정 하는 클라이언트와 협상 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-124">-   Negotiate: Negotiates with the client to determine the authentication scheme.</span></span> <span data-ttu-id="4b797-125">클라이언트와 서버 모두 Kerberos를 지원하면 이 인증 체계가 사용되고, 그렇지 않으면 NTLM이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-125">If both client and server support Kerberos, it is used; otherwise, NTLM is used.</span></span><br /><span data-ttu-id="4b797-126">-Ntlm: NTLM 인증을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-126">-   Ntlm: Specifies NTLM authentication.</span></span><br /><span data-ttu-id="4b797-127">-기본: 기본 인증을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-127">-   Basic: Specifies basic authentication.</span></span><br /><span data-ttu-id="4b797-128">-Anonymous: 익명 인증을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-128">-   Anonymous: Specifies anonymous authentication.</span></span><br /><br /> <span data-ttu-id="4b797-129">기본값은 Anonymous입니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-129">The default is Anonymous.</span></span> <span data-ttu-id="4b797-130">이 특성은 <xref:System.Net.AuthenticationSchemes> 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-130">This attribute is of type <xref:System.Net.AuthenticationSchemes>.</span></span> <span data-ttu-id="4b797-131">이 특성은 한 번만 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-131">This attribute can only be set once.</span></span>|  
+|<span data-ttu-id="4b797-132">bypassProxyOnLocal</span><span class="sxs-lookup"><span data-stu-id="4b797-132">bypassProxyOnLocal</span></span>|<span data-ttu-id="4b797-133">로컬 주소에 대해 프록시 서버를 사용하지 않을 것인지 여부를 나타내는 부울 값입니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-133">A Boolean value that indicates whether to bypass the proxy server for local addresses.</span></span> <span data-ttu-id="4b797-134">기본값은 `false`입니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-134">The default is `false`.</span></span><br /><br /> <span data-ttu-id="4b797-135">로컬 주소는 로컬 LAN 또는 인트라넷에 있는 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-135">A local address is one that is on the local LAN or intranet.</span></span><br /><br /> <span data-ttu-id="4b797-136">서비스 주소가 http://localhost로 시작되는 경우 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]은 항상 프록시를 무시합니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-136">[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] always ignores the proxy if the service address begins with http://localhost.</span></span><br /><br /> <span data-ttu-id="4b797-137">클라이언트가 동일한 시스템의 서비스와 통신할 때 프록시를 통하게 하려면 localhost 대신 호스트 이름을 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-137">You should use the host name rather than localhost if you want clients to go through a proxy when talking to services on the same machine.</span></span>|  
+|<span data-ttu-id="4b797-138">hostnameComparisonMode</span><span class="sxs-lookup"><span data-stu-id="4b797-138">hostnameComparisonMode</span></span>|<span data-ttu-id="4b797-139">URI 구문 분석에 사용되는 HTTP 호스트 이름 비교 모드를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-139">Specifies the HTTP hostname comparison mode used to parse URIs.</span></span> <span data-ttu-id="4b797-140">유효한 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-140">Valid values are,</span></span><br /><br /> <span data-ttu-id="4b797-141">-StrongWildcard: ("+")는 지정한 체계, 포트 및 상대 URI의 컨텍스트에서 모든 호스트 이름을 일치 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-141">-   StrongWildcard: ("+") matches all possible hostnames in the context of the specified scheme, port and relative URI.</span></span><br /><span data-ttu-id="4b797-142">비슷한: 와일드 카드</span><span class="sxs-lookup"><span data-stu-id="4b797-142">-   Exact: no wildcards</span></span><br /><span data-ttu-id="4b797-143">-WeakWildcard: ("*") 컨텍스트에서 지정 된 체계, 포트 및 상대 UIR 명시적으로 일치 하지 않는 또는 강력한 와일드 카드 메커니즘을 통해 가능한 모든 호스트 이름과 일치 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-143">-   WeakWildcard: ("*") matches all possible hostname in the context of the specified scheme, port and relative UIR that have not been matched explicitly or through the strong wildcard mechanism.</span></span><br /><br /> <span data-ttu-id="4b797-144">기본값은 StrongWildcard입니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-144">The default is StrongWildcard.</span></span> <span data-ttu-id="4b797-145">이 특성은 `System.ServiceModel.HostnameComparisonMode` 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-145">This attribute is of type `System.ServiceModel.HostnameComparisonMode`.</span></span>|  
+|<span data-ttu-id="4b797-146">keepAliveEnabled</span><span class="sxs-lookup"><span data-stu-id="4b797-146">keepAliveEnabled</span></span>|<span data-ttu-id="4b797-147">인터넷 리소스에 영구 연결을 할 것인지 여부를 지정하는 부울 값입니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-147">A Boolean value that specifies whether to make a persistent connection to the internet resource.</span></span>|  
+|<span data-ttu-id="4b797-148">maxBufferSize</span><span class="sxs-lookup"><span data-stu-id="4b797-148">maxBufferSize</span></span>|<span data-ttu-id="4b797-149">버퍼의 최대 크기를 지정하는 양의 정수입니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-149">A positive integer that specifies the maximum size of the buffer.</span></span> <span data-ttu-id="4b797-150">기본값은 524288입니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-150">The default is 524288</span></span>|  
+|<span data-ttu-id="4b797-151">proxyAddress</span><span class="sxs-lookup"><span data-stu-id="4b797-151">proxyAddress</span></span>|<span data-ttu-id="4b797-152">HTTP 프록시의 주소를 지정하는 URI입니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-152">A URI that specifies the address of the HTTP proxy.</span></span> <span data-ttu-id="4b797-153">`useSystemWebProxy`가 `true`일 경우 이 설정은 `null`이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-153">If `useSystemWebProxy` is `true`, this setting must be `null`.</span></span> <span data-ttu-id="4b797-154">기본값은 `null`입니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-154">The default is `null`.</span></span>|  
+|<span data-ttu-id="4b797-155">proxyAuthenticationScheme</span><span class="sxs-lookup"><span data-stu-id="4b797-155">proxyAuthenticationScheme</span></span>|<span data-ttu-id="4b797-156">HTTP 프록시가 처리하는 클라이언트 요청을 인증하는 데 사용되는 프로토콜을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-156">Specifies the protocol used for authenticating client requests being processed by an HTTP proxy.</span></span> <span data-ttu-id="4b797-157">유효한 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-157">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="4b797-158">-None: 인증이 수행 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-158">-   None: No authentication is performed.</span></span><br /><span data-ttu-id="4b797-159">다이제스트: 다이제스트 인증을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-159">-   Digest: Specifies digest authentication.</span></span><br /><span data-ttu-id="4b797-160">-Negotiate: 인증 체계를 결정 하는 클라이언트와 협상 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-160">-   Negotiate: Negotiates with the client to determine the authentication scheme.</span></span> <span data-ttu-id="4b797-161">클라이언트와 서버 모두 Kerberos를 지원하면 이 인증 체계가 사용되고, 그렇지 않으면 NTLM이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-161">If both client and server support Kerberos, it is used; otherwise, NTLM is used.</span></span><br /><span data-ttu-id="4b797-162">-Ntlm: NTLM 인증을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-162">-   Ntlm: Specifies NTLM authentication.</span></span><br /><span data-ttu-id="4b797-163">-기본: 기본 인증을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-163">-   Basic: Specifies basic authentication.</span></span><br /><span data-ttu-id="4b797-164">-Anonymous: 익명 인증을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-164">-   Anonymous: Specifies anonymous authentication.</span></span><br /><span data-ttu-id="4b797-165">-IntegratedWindowsAuthentication: Windows 인증을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-165">-   IntegratedWindowsAuthentication: Specifies Windows authentication.</span></span><br /><br /> <span data-ttu-id="4b797-166">기본값은 Anonymous입니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-166">The default is Anonymous.</span></span> <span data-ttu-id="4b797-167">이 특성은 <xref:System.Net.AuthenticationSchemes> 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-167">This attribute is of type <xref:System.Net.AuthenticationSchemes>.</span></span>|  
+|<span data-ttu-id="4b797-168">realm</span><span class="sxs-lookup"><span data-stu-id="4b797-168">realm</span></span>|<span data-ttu-id="4b797-169">프록시/서버에서 사용할 영역을 지정하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-169">A string that specifies the realm to use on the proxy/server.</span></span> <span data-ttu-id="4b797-170">기본값은 빈 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-170">The default is an empty string.</span></span><br /><br /> <span data-ttu-id="4b797-171">서버에서는 보호되는 리소스를 분할할 때 영역을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-171">Servers use realms to partition protected resources.</span></span> <span data-ttu-id="4b797-172">각 파티션에는 자체 인증 체계 및/또는 권한 부여 데이터베이스가 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-172">Each partition can have its own authentication scheme and/or authorization database.</span></span> <span data-ttu-id="4b797-173">영역은 기본 및 다이제스트 인증에만 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-173">Realms are used only for basic and digest authentication.</span></span> <span data-ttu-id="4b797-174">클라이언트가 성공적으로 인증되면 이 인증은 지정된 영역의 모든 리소스에 대해 유효합니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-174">After a client successfully authenticates, the authentication is valid for all resources in a given realm.</span></span> <span data-ttu-id="4b797-175">영역에 대한 자세한 내용은 http://www.ietf.org의 RFC 2617을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="4b797-175">For a detailed description of realms, see RFC 2617 at http://www.ietf.org.</span></span>|  
+|<span data-ttu-id="4b797-176">transferMode</span><span class="sxs-lookup"><span data-stu-id="4b797-176">transferMode</span></span>|<span data-ttu-id="4b797-177">메시지가 버퍼링되거나 스트리밍되는지 또는 요청이나 응답인지를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-177">Specifies whether messages are buffered or streamed or a request or response.</span></span> <span data-ttu-id="4b797-178">유효한 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-178">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="4b797-179">-Buffered: 요청 및 응답 메시지가 버퍼링 됩니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-179">-   Buffered: The request and response messages are buffered.</span></span><br /><span data-ttu-id="4b797-180">스트리밍: 요청 및 응답 메시지가 스트리밍됩니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-180">-   Streamed: The request and response messages are streamed.</span></span><br /><span data-ttu-id="4b797-181">-StreamedRequest: 요청 메시지는 스트리밍되고 응답 메시지는 버퍼링 됩니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-181">-   StreamedRequest: The request message is streamed and the response message is buffered.</span></span><br /><span data-ttu-id="4b797-182">-StreamedResponse: 요청 메시지는 버퍼링 하 고 응답 메시지는 스트리밍됩니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-182">-   StreamedResponse: The request message is buffered and the response message is streamed.</span></span><br /><br /> <span data-ttu-id="4b797-183">기본값은 Buffered입니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-183">The default is Buffered.</span></span> <span data-ttu-id="4b797-184">이 특성은 <xref:System.ServiceModel.TransferMode> 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-184">This attribute is of type <xref:System.ServiceModel.TransferMode> .</span></span>|  
+|<span data-ttu-id="4b797-185">unsafeConnectionNtlmAuthentication</span><span class="sxs-lookup"><span data-stu-id="4b797-185">unsafeConnectionNtlmAuthentication</span></span>|<span data-ttu-id="4b797-186">서버에서 안전하지 않은 연결 공유를 사용할 수 있는지 여부를 지정하는 부울 값입니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-186">A Boolean value that specifies whether Unsafe Connection Sharing is enabled on the server.</span></span> <span data-ttu-id="4b797-187">기본값은 `false`입니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-187">The default is `false`.</span></span> <span data-ttu-id="4b797-188">사용할 경우 각 TCP 연결에서 NTLM 인증이 한 번씩 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-188">If enabled, NTLM authentication is performed once on each TCP connection.</span></span>|  
+|<span data-ttu-id="4b797-189">useDefaultWebProxy</span><span class="sxs-lookup"><span data-stu-id="4b797-189">useDefaultWebProxy</span></span>|<span data-ttu-id="4b797-190">사용자별 설정이 아닌 시스템 수준의 프록시 설정을 사용할지 여부를 지정하는 부울 값입니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-190">A Boolean value that specifies whether the machine-wide proxy settings are used rather than the user specific settings.</span></span> <span data-ttu-id="4b797-191">기본값은 `true`입니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-191">The default is `true`.</span></span>|  
   
-### 자식 요소  
- 없음  
+### <a name="child-elements"></a><span data-ttu-id="4b797-192">자식 요소</span><span class="sxs-lookup"><span data-stu-id="4b797-192">Child Elements</span></span>  
+ <span data-ttu-id="4b797-193">없음</span><span class="sxs-lookup"><span data-stu-id="4b797-193">None</span></span>  
   
-### 부모 요소  
+### <a name="parent-elements"></a><span data-ttu-id="4b797-194">부모 요소</span><span class="sxs-lookup"><span data-stu-id="4b797-194">Parent Elements</span></span>  
   
-|요소|설명|  
-|--------|--------|  
-|[\<binding\>](../../../../../docs/framework/misc/binding.md)|사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.|  
+|<span data-ttu-id="4b797-195">요소</span><span class="sxs-lookup"><span data-stu-id="4b797-195">Element</span></span>|<span data-ttu-id="4b797-196">설명</span><span class="sxs-lookup"><span data-stu-id="4b797-196">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="4b797-197">\<바인딩 ></span><span class="sxs-lookup"><span data-stu-id="4b797-197">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="4b797-198">사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-198">Defines all binding capabilities of the custom binding.</span></span>|  
   
-## 설명  
- `httpTransport` 요소는 HTTP 전송 프로토콜을 구현하는 사용자 지정 바인딩을 만들기 위한 시작점입니다.  HTTP는 상호 운용성을 위해 사용되는 기본 전송입니다.  이 전송은 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]에서 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 외의 다른 웹 서비스 스택과의 상호 운용성을 보장하기 위해 지원됩니다.  
+## <a name="remarks"></a><span data-ttu-id="4b797-199">설명</span><span class="sxs-lookup"><span data-stu-id="4b797-199">Remarks</span></span>  
+ <span data-ttu-id="4b797-200">`httpTransport` 요소는 HTTP 전송 프로토콜을 구현하는 사용자 지정 바인딩을 만들기 위한 시작점입니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-200">The `httpTransport` element is the starting point for creating a custom binding that implements the HTTP transport protocol.</span></span> <span data-ttu-id="4b797-201">HTTP는 상호 운용성을 위해 사용되는 기본 전송입니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-201">HTTP is the primary transport used for interoperability purposes.</span></span> <span data-ttu-id="4b797-202">이 전송은 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]에서 [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] 외의 다른 웹 서비스 스택과의 상호 운용성을 보장하기 위해 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="4b797-202">This transport is supported by the [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] to ensure interoperability with other non-[!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Web services stacks.</span></span>  
   
-## 참고 항목  
- <xref:System.ServiceModel.Configuration.HttpTransportElement>   
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>   
- <xref:System.ServiceModel.Channels.TransportBindingElement>   
- <xref:System.ServiceModel.Channels.CustomBinding>   
- [전송](../../../../../docs/framework/wcf/feature-details/transports.md)   
- [전송 선택](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)   
- [바인딩](../../../../../docs/framework/wcf/bindings.md)   
- [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
- [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
- [\<customBinding\>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a><span data-ttu-id="4b797-203">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4b797-203">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.HttpTransportElement>  
+ <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
+ <xref:System.ServiceModel.Channels.TransportBindingElement>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ [<span data-ttu-id="4b797-204">전송</span><span class="sxs-lookup"><span data-stu-id="4b797-204">Transports</span></span>](../../../../../docs/framework/wcf/feature-details/transports.md)  
+ [<span data-ttu-id="4b797-205">전송 선택</span><span class="sxs-lookup"><span data-stu-id="4b797-205">Choosing a Transport</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
+ [<span data-ttu-id="4b797-206">바인딩</span><span class="sxs-lookup"><span data-stu-id="4b797-206">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="4b797-207">바인딩 확장</span><span class="sxs-lookup"><span data-stu-id="4b797-207">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [<span data-ttu-id="4b797-208">사용자 지정 바인딩</span><span class="sxs-lookup"><span data-stu-id="4b797-208">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [<span data-ttu-id="4b797-209">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="4b797-209">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

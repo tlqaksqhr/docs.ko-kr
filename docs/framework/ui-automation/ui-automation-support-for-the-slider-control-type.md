@@ -1,87 +1,90 @@
 ---
-title: "UI Automation Support for the Slider Control Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-bcl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "control types, Slider"
-  - "UI Automation, Slider control type"
-  - "Slider control type"
+title: "Slider 컨트롤 형식에 대한 UI 자동화 지원"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-bcl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control types, Slider
+- UI Automation, Slider control type
+- Slider control type
 ms.assetid: 045ea62f-7b50-46cf-a5a9-8eb97704355f
-caps.latest.revision: 18
-author: "Xansky"
-ms.author: "mhopkins"
-manager: "markl"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: Xansky
+ms.author: mhopkins
+manager: markl
+ms.openlocfilehash: 292a6a51d7b9079f0904786e237afd150649b0a2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# UI Automation Support for the Slider Control Type
+# <a name="ui-automation-support-for-the-slider-control-type"></a><span data-ttu-id="e6d63-102">Slider 컨트롤 형식에 대한 UI 자동화 지원</span><span class="sxs-lookup"><span data-stu-id="e6d63-102">UI Automation Support for the Slider Control Type</span></span>
 > [!NOTE]
->  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](http://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.  
+>  <span data-ttu-id="e6d63-103">이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="e6d63-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="e6d63-104">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](http://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e6d63-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- 이 항목에서는 Slider 컨트롤 형식에 대한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 지원 정보를 제공합니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서, 컨트롤 형식은 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 속성을 사용하기 위해 컨트롤이 충족해야 하는 조건 집합입니다. 이 조건에는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 값, 컨트롤 형식에 대한 특정 지침이 포함됩니다.  
+ <span data-ttu-id="e6d63-105">이 항목에서는 Slider 컨트롤 형식에 대한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 지원 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="e6d63-105">This topic provides information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] support for the Slider control type.</span></span> <span data-ttu-id="e6d63-106">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서, 컨트롤 형식은 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 속성을 사용하기 위해 컨트롤이 충족해야 하는 조건 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="e6d63-106">In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], a control type is a set of conditions that a control must meet in order to use the <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> property.</span></span> <span data-ttu-id="e6d63-107">이 조건에는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 값, 컨트롤 형식에 대한 특정 지침이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="e6d63-107">The conditions include specific guidelines for [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] property values and control types.</span></span>  
   
- 슬라이더 컨트롤은 사용자가 마우스를 사용하여 숫자 범위를 설정하거나 항목 집합에서 선택할 수 있도록 하는 단추가 있는 복합 컨트롤입니다.  
+ <span data-ttu-id="e6d63-108">슬라이더 컨트롤은 사용자가 마우스를 사용하여 숫자 범위를 설정하거나 항목 집합에서 선택할 수 있도록 하는 단추가 있는 복합 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="e6d63-108">The Slider control is a composite control with buttons that enable a user with a mouse to set a numerical range or select from a set of items.</span></span>  
   
- 다음 섹션에서는 Slider 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]의 모든 슬라이더 컨트롤에 적용됩니다.  
+ <span data-ttu-id="e6d63-109">다음 섹션에서는 Slider 컨트롤 형식에 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, 속성, 컨트롤 패턴, 이벤트를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="e6d63-109">The following sections define the required [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree structure, properties, control patterns, and events for the Slider control type.</span></span> <span data-ttu-id="e6d63-110">[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요구 사항은 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]또는 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]의 모든 슬라이더 컨트롤에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="e6d63-110">The [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] requirements apply to all slider controls, whether [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], or [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].</span></span>  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
-## 필요한 UI 자동화 트리 구조  
- 다음 표는 슬라이더 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 대한 자세한 내용은 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)를 참조하세요.  
+## <a name="required-ui-automation-tree-structure"></a><span data-ttu-id="e6d63-111">필요한 UI 자동화 트리 구조</span><span class="sxs-lookup"><span data-stu-id="e6d63-111">Required UI Automation Tree Structure</span></span>  
+ <span data-ttu-id="e6d63-112">다음 표는 슬라이더 컨트롤과 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰 및 콘텐츠 뷰를 보여주고 각 뷰에 포함될 수 있는 내용에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e6d63-112">The following table depicts the Control View and the Content View of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree that pertains to slider controls and describes what can be contained in each view.</span></span> <span data-ttu-id="e6d63-113">대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리, 참조 [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="e6d63-113">For more information on the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree, see [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).</span></span>  
   
-|컨트롤 뷰|콘텐츠 뷰|  
-|-----------|-----------|  
-|슬라이더<br /><br /> -   Button\(2 또는 4개\)<br />-   Thumb\(1개만\)<br />-   List Item\(0개 이상\)|슬라이더<br /><br /> -   List Item\(0개 이상\)|  
+|<span data-ttu-id="e6d63-114">컨트롤 뷰</span><span class="sxs-lookup"><span data-stu-id="e6d63-114">Control View</span></span>|<span data-ttu-id="e6d63-115">콘텐츠 뷰</span><span class="sxs-lookup"><span data-stu-id="e6d63-115">Content View</span></span>|  
+|------------------|------------------|  
+|<span data-ttu-id="e6d63-116">슬라이더</span><span class="sxs-lookup"><span data-stu-id="e6d63-116">Slider</span></span><br /><br /> <span data-ttu-id="e6d63-117">-Button (2 또는 4)</span><span class="sxs-lookup"><span data-stu-id="e6d63-117">-   Button (2 or 4)</span></span><br /><span data-ttu-id="e6d63-118">-Thumb (1 개만)</span><span class="sxs-lookup"><span data-stu-id="e6d63-118">-   Thumb (only 1)</span></span><br /><span data-ttu-id="e6d63-119">-List Item (0 개 이상)</span><span class="sxs-lookup"><span data-stu-id="e6d63-119">-   List Item (0 or more)</span></span>|<span data-ttu-id="e6d63-120">슬라이더</span><span class="sxs-lookup"><span data-stu-id="e6d63-120">Slider</span></span><br /><br /> <span data-ttu-id="e6d63-121">-List Item (0 개 이상)</span><span class="sxs-lookup"><span data-stu-id="e6d63-121">-   List Item (0 or more)</span></span>|  
   
 <a name="Required_UI_Automation_Properties"></a>   
-## 필요한 UI 자동화 속성  
- 다음 표에서는 값 또는 정의가 Slider 컨트롤 형식과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여 줍니다.[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성에 대한 자세한 내용은 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)를 참조하세요.  
+## <a name="required-ui-automation-properties"></a><span data-ttu-id="e6d63-122">필요한 UI 자동화 속성</span><span class="sxs-lookup"><span data-stu-id="e6d63-122">Required UI Automation Properties</span></span>  
+ <span data-ttu-id="e6d63-123">다음 표에서는 값 또는 정의가 Slider 컨트롤 형식과 특별히 관련된 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성을 나열하여 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e6d63-123">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties whose value or definition is especially relevant to the Slider control type.</span></span> <span data-ttu-id="e6d63-124">대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 참조 [클라이언트에 대 한 UI 자동화 속성](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="e6d63-124">For more information on [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties, see [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성|값|노트|  
-|------------------------------------------------------------------------------|-------|--------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|메모를 참조하세요.|이 속성의 값은 응용 프로그램의 모든 컨트롤에서 고유해야 합니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|메모를 참조하세요.|전체 컨트롤이 포함된 가장 바깥쪽 사각형입니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|메모를 참조하세요.|슬라이더 컨트롤의 전체 경계 사각형은 자식 컨트롤이 차지하기 때문에 대부분의 슬라이더 컨트롤은 <xref:System.Windows.Automation.NoClickablePointException>을 발생시켜야 합니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|메모를 참조하세요.|컨트롤이 키보드 포커스를 받을 수 있으면 해당 컨트롤은 이 속성을 지원해야 합니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|메모를 참조하세요.|편집 컨트롤의 이름은 일반적으로 정적 텍스트 레이블에서 생성됩니다. 정적 텍스트 레이블이 없는 경우 응용 프로그램 개발자가 `Name`의 속성 값을 할당해야 합니다.`Name` 속성에는 편집 컨트롤의 텍스트 내용이 포함되지 않아야 합니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|메모를 참조하세요.|컨트롤과 연결된 정적 텍스트 레이블이 있는 경우, 이 속성은 해당 컨트롤에 대한 참조를 노출해야 합니다. 텍스트 컨트롤이 다른 컨트롤의 하위 구성 요소일 경우 이 컨트롤에 `LabeledBy` 속성 집합이 없습니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|슬라이더|이 값은 모든 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 프레임워크에 대해 동일합니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"slider"|Edit 컨트롤 형식에 해당하는 지역화된 문자열입니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|편집 컨트롤이 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 콘텐츠 뷰에 항상 포함됩니다.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|편집 컨트롤이 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰에 항상 포함됩니다.|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="e6d63-125"> 속성</span><span class="sxs-lookup"><span data-stu-id="e6d63-125"> Property</span></span>|<span data-ttu-id="e6d63-126">값</span><span class="sxs-lookup"><span data-stu-id="e6d63-126">Value</span></span>|<span data-ttu-id="e6d63-127">노트</span><span class="sxs-lookup"><span data-stu-id="e6d63-127">Notes</span></span>|  
+|------------------------------------------------------------------------------------|-----------|-----------|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|<span data-ttu-id="e6d63-128">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e6d63-128">See notes.</span></span>|<span data-ttu-id="e6d63-129">이 속성의 값은 응용 프로그램의 모든 컨트롤에서 고유해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e6d63-129">The value of this property needs to be unique across all controls in an application.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|<span data-ttu-id="e6d63-130">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e6d63-130">See notes.</span></span>|<span data-ttu-id="e6d63-131">전체 컨트롤이 포함된 가장 바깥쪽 사각형입니다.</span><span class="sxs-lookup"><span data-stu-id="e6d63-131">The outermost rectangle that contains the whole control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|<span data-ttu-id="e6d63-132">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e6d63-132">See notes</span></span>|<span data-ttu-id="e6d63-133">슬라이더 컨트롤의 전체 경계 사각형은 자식 컨트롤이 차지하기 때문에 대부분의 슬라이더 컨트롤은 <xref:System.Windows.Automation.NoClickablePointException> 을 발생시켜야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e6d63-133">The majority of slider controls must raise the <xref:System.Windows.Automation.NoClickablePointException> because the entire bounding rectangle of the slider control is occupied by child controls.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|<span data-ttu-id="e6d63-134">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e6d63-134">See notes.</span></span>|<span data-ttu-id="e6d63-135">컨트롤이 키보드 포커스를 받을 수 있으면 해당 컨트롤은 이 속성을 지원해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e6d63-135">If the control can receive keyboard focus, it must support this property.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|<span data-ttu-id="e6d63-136">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e6d63-136">See notes.</span></span>|<span data-ttu-id="e6d63-137">편집 컨트롤의 이름은 일반적으로 정적 텍스트 레이블에서 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="e6d63-137">The name of the edit control is typically generated from a static text label.</span></span> <span data-ttu-id="e6d63-138">정적 텍스트 레이블이 없는 경우 응용 프로그램 개발자가 `Name` 의 속성 값을 할당해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e6d63-138">If there is not a static text label, a property value for `Name` must be assigned by the application developer.</span></span> <span data-ttu-id="e6d63-139">`Name` 속성에는 편집 컨트롤의 텍스트 내용이 포함되지 않아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e6d63-139">The `Name` property should never contain the textual contents of the edit control.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|<span data-ttu-id="e6d63-140">메모를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e6d63-140">See notes.</span></span>|<span data-ttu-id="e6d63-141">컨트롤과 연결된 정적 텍스트 레이블이 있는 경우, 이 속성은 해당 컨트롤에 대한 참조를 노출해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e6d63-141">If there is a static text label associated with the control, then this property must expose a reference to that control.</span></span> <span data-ttu-id="e6d63-142">텍스트 컨트롤이 다른 컨트롤의 하위 구성 요소일 경우 이 컨트롤에 `LabeledBy` 속성 집합이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="e6d63-142">If the text control is a subcomponent of another control, it will not have a `LabeledBy` property set.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|<span data-ttu-id="e6d63-143">슬라이더</span><span class="sxs-lookup"><span data-stu-id="e6d63-143">Slider</span></span>|<span data-ttu-id="e6d63-144">이 값은 모든 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 프레임워크에 대해 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="e6d63-144">This value is the same for all [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] frameworks.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|<span data-ttu-id="e6d63-145">"slider"</span><span class="sxs-lookup"><span data-stu-id="e6d63-145">"slider"</span></span>|<span data-ttu-id="e6d63-146">Edit 컨트롤 형식에 해당하는 지역화된 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="e6d63-146">Localized string corresponding to the Edit Control Type.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|<span data-ttu-id="e6d63-147">True</span><span class="sxs-lookup"><span data-stu-id="e6d63-147">True</span></span>|<span data-ttu-id="e6d63-148">편집 컨트롤이 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 콘텐츠 뷰에 항상 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="e6d63-148">The edit control is always included in the content view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree.</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|<span data-ttu-id="e6d63-149">True</span><span class="sxs-lookup"><span data-stu-id="e6d63-149">True</span></span>|<span data-ttu-id="e6d63-150">편집 컨트롤이 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리의 컨트롤 뷰에 항상 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="e6d63-150">The edit control is always included in the control view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree.</span></span>|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
-## 필요한 UI 자동화 컨트롤 패턴  
- 다음 표에서는 모든 슬라이더 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴을 나열하여 보여 줍니다. 컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)를 참조하세요.  
+## <a name="required-ui-automation-control-patterns"></a><span data-ttu-id="e6d63-151">필요한 UI 자동화 컨트롤 패턴</span><span class="sxs-lookup"><span data-stu-id="e6d63-151">Required UI Automation Control Patterns</span></span>  
+ <span data-ttu-id="e6d63-152">다음 표에서는 모든 슬라이더 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 컨트롤 패턴을 나열하여 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e6d63-152">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] control patterns required to be supported by all slider controls.</span></span> <span data-ttu-id="e6d63-153">컨트롤 패턴에 대한 자세한 내용은 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e6d63-153">For more information on control patterns, see [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).</span></span>  
   
-|컨트롤 패턴|지원|노트|  
-|------------|--------|--------|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider>|종속|콘텐츠가 불연속 옵션 집합의 값 중 하나를 나타내는 경우 슬라이더는 Selection 컨트롤 패턴을 지원해야 합니다. Selection 컨트롤 패턴이 지원되면 해당 선택은 슬라이더의 자식 목록 항목 중 하나 이상으로 노출되어야 합니다.|  
-|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|종속|콘텐츠를 숫자 범위 내에 있는 값으로 설정할 수 있는 경우 슬라이더는 RangeValue 컨트롤 패턴을 지원해야 합니다.|  
-|<xref:System.Windows.Automation.Provider.IValueProvider>|종속|콘텐츠가 불연속 옵션 집합의 값 중 하나를 나타내는 경우 슬라이더 Value 컨트롤 패턴을 지원 해야 합니다.|  
+|<span data-ttu-id="e6d63-154">컨트롤 패턴</span><span class="sxs-lookup"><span data-stu-id="e6d63-154">Control Pattern</span></span>|<span data-ttu-id="e6d63-155">지원</span><span class="sxs-lookup"><span data-stu-id="e6d63-155">Support</span></span>|<span data-ttu-id="e6d63-156">노트</span><span class="sxs-lookup"><span data-stu-id="e6d63-156">Notes</span></span>|  
+|---------------------|-------------|-----------|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider>|<span data-ttu-id="e6d63-157">종속</span><span class="sxs-lookup"><span data-stu-id="e6d63-157">Depends</span></span>|<span data-ttu-id="e6d63-158">콘텐츠가 불연속 옵션 집합의 값 중 하나를 나타내는 경우 슬라이더는 Selection 컨트롤 패턴을 지원해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e6d63-158">A slider should support the Selection control pattern if the content represents one value among a discrete set of options.</span></span> <span data-ttu-id="e6d63-159">Selection 컨트롤 패턴이 지원되면 해당 선택은 슬라이더의 자식 목록 항목 중 하나 이상으로 노출되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e6d63-159">When the Selection control pattern is supported, the corresponding selection must be exposed as one or more child list items of the slider.</span></span>|  
+|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|<span data-ttu-id="e6d63-160">종속</span><span class="sxs-lookup"><span data-stu-id="e6d63-160">Depends</span></span>|<span data-ttu-id="e6d63-161">콘텐츠를 숫자 범위 내에 있는 값으로 설정할 수 있는 경우 슬라이더는 RangeValue 컨트롤 패턴을 지원해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e6d63-161">A slider should support the RangeValue control pattern if the content can be set to a value within a numerical range.</span></span>|  
+|<xref:System.Windows.Automation.Provider.IValueProvider>|<span data-ttu-id="e6d63-162">종속</span><span class="sxs-lookup"><span data-stu-id="e6d63-162">Depends</span></span>|<span data-ttu-id="e6d63-163">콘텐츠가 불연속 옵션 집합의 값 중 하나를 나타내는 경우 슬라이더 Value 컨트롤 패턴을 지원 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e6d63-163">A slider should support the Value control pattern if the content represents one value among a discrete set of options.</span></span>|  
   
 <a name="Required_UI_Automation_Events"></a>   
-## 필요한 UI 자동화 이벤트  
- 다음 표에서는 모든 슬라이더 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여 줍니다.  
+## <a name="required-ui-automation-events"></a><span data-ttu-id="e6d63-164">필요한 UI 자동화 이벤트</span><span class="sxs-lookup"><span data-stu-id="e6d63-164">Required UI Automation Events</span></span>  
+ <span data-ttu-id="e6d63-165">다음 표에서는 모든 슬라이더 컨트롤에서 지원되는 데 필요한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트를 나열하여 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e6d63-165">The following table lists the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] events required to be supported by all slider controls.</span></span>  
   
- 이벤트에 대한 자세한 내용은 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)를 참조하세요.  
+ <span data-ttu-id="e6d63-166">이벤트에 대한 자세한 내용은 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e6d63-166">For more information on events, see [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).</span></span>  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 이벤트|지원|노트|  
-|-------------------------------------------------------------------------------|--------|--------|  
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|종속|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 속성 변경 이벤트|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 속성 변경 이벤트|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 속성 변경 이벤트|필수|없음|  
-|<xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> 속성 변경 이벤트|종속|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|필수|없음|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|필수|없음|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]<span data-ttu-id="e6d63-167"> 이벤트</span><span class="sxs-lookup"><span data-stu-id="e6d63-167"> Event</span></span>|<span data-ttu-id="e6d63-168">지원</span><span class="sxs-lookup"><span data-stu-id="e6d63-168">Support</span></span>|<span data-ttu-id="e6d63-169">노트</span><span class="sxs-lookup"><span data-stu-id="e6d63-169">Notes</span></span>|  
+|---------------------------------------------------------------------------------|-------------|-----------|  
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|<span data-ttu-id="e6d63-170">종속</span><span class="sxs-lookup"><span data-stu-id="e6d63-170">Depends</span></span>|<span data-ttu-id="e6d63-171">없음</span><span class="sxs-lookup"><span data-stu-id="e6d63-171">None</span></span>|  
+|<span data-ttu-id="e6d63-172"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 속성 변경 이벤트</span><span class="sxs-lookup"><span data-stu-id="e6d63-172"><xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> property-changed event</span></span>|<span data-ttu-id="e6d63-173">필수</span><span class="sxs-lookup"><span data-stu-id="e6d63-173">Required</span></span>|<span data-ttu-id="e6d63-174">없음</span><span class="sxs-lookup"><span data-stu-id="e6d63-174">None</span></span>|  
+|<span data-ttu-id="e6d63-175"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 속성 변경 이벤트</span><span class="sxs-lookup"><span data-stu-id="e6d63-175"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> property-changed event</span></span>|<span data-ttu-id="e6d63-176">필수</span><span class="sxs-lookup"><span data-stu-id="e6d63-176">Required</span></span>|<span data-ttu-id="e6d63-177">없음</span><span class="sxs-lookup"><span data-stu-id="e6d63-177">None</span></span>|  
+|<span data-ttu-id="e6d63-178"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 속성 변경 이벤트</span><span class="sxs-lookup"><span data-stu-id="e6d63-178"><xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> property-changed event</span></span>|<span data-ttu-id="e6d63-179">필수</span><span class="sxs-lookup"><span data-stu-id="e6d63-179">Required</span></span>|<span data-ttu-id="e6d63-180">없음</span><span class="sxs-lookup"><span data-stu-id="e6d63-180">None</span></span>|  
+|<span data-ttu-id="e6d63-181"><xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> 속성 변경 이벤트</span><span class="sxs-lookup"><span data-stu-id="e6d63-181"><xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> property-changed event</span></span>|<span data-ttu-id="e6d63-182">종속</span><span class="sxs-lookup"><span data-stu-id="e6d63-182">Depends</span></span>|<span data-ttu-id="e6d63-183">없음</span><span class="sxs-lookup"><span data-stu-id="e6d63-183">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|<span data-ttu-id="e6d63-184">필수</span><span class="sxs-lookup"><span data-stu-id="e6d63-184">Required</span></span>|<span data-ttu-id="e6d63-185">없음</span><span class="sxs-lookup"><span data-stu-id="e6d63-185">None</span></span>|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|<span data-ttu-id="e6d63-186">필수</span><span class="sxs-lookup"><span data-stu-id="e6d63-186">Required</span></span>|<span data-ttu-id="e6d63-187">없음</span><span class="sxs-lookup"><span data-stu-id="e6d63-187">None</span></span>|  
   
-## 참고 항목  
- <xref:System.Windows.Automation.ControlType.Slider>   
- [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)   
- [UI Automation Overview](../../../docs/framework/ui-automation/ui-automation-overview.md)
+## <a name="see-also"></a><span data-ttu-id="e6d63-188">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e6d63-188">See Also</span></span>  
+ <xref:System.Windows.Automation.ControlType.Slider>  
+ [<span data-ttu-id="e6d63-189">UI 자동화 컨트롤 형식 개요</span><span class="sxs-lookup"><span data-stu-id="e6d63-189">UI Automation Control Types Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [<span data-ttu-id="e6d63-190">UI 자동화 개요</span><span class="sxs-lookup"><span data-stu-id="e6d63-190">UI Automation Overview</span></span>](../../../docs/framework/ui-automation/ui-automation-overview.md)
