@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - public keys, signing files
 - Strong Name tool
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: e303246737d52f76d893074973804710b2dc9b71
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 49bedaddc34685bdec1ad857b1f20a76b9abbd06
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe(강력한 이름 도구)
 강력한 이름 도구(Sn.exe)를 사용하면 [강력한 이름](../../../docs/framework/app-domains/strong-named-assemblies.md)으로 어셈블리에 서명할 수 있습니다. Sn.exe를 실행하면 키 관리, 서명 생성 및 서명 확인을 위한 옵션이 제공됩니다.  
@@ -135,8 +128,7 @@ sn -d MyContainer
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [도구](../../../docs/framework/tools/index.md)   
- [Al.exe(어셈블리 링커)](../../../docs/framework/tools/al-exe-assembly-linker.md)   
- [강력한 이름의 어셈블리](../../../docs/framework/app-domains/strong-named-assemblies.md)   
+ [도구](../../../docs/framework/tools/index.md)  
+ [Al.exe(어셈블리 링커)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
+ [강력한 이름의 어셈블리](../../../docs/framework/app-domains/strong-named-assemblies.md)  
  [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

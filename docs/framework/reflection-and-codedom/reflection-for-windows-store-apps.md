@@ -5,24 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - reflection, Windows Store apps
 - .NET for Windows Store apps, TypeInfo class
 ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 80429810a46438cdbf7cf2993e5f3b0779d300c1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fd9f8dc3b17dee946155986fe9c66a4f4c4e1353
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Windows 스토어 앱에 대한 .NET Framework의 리플렉션
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]부터 .NET Framework에는 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱에서 사용하기 위한 리플렉션 형식 및 멤버 집합이 포함되어 있습니다. 이러한 형식과 멤버는 전체 .NET Framework 및 [Windows 스토어 앱용 .NET](http://go.microsoft.com/fwlink/?LinkID=225700)에서 사용할 수 있습니다. 이 문서에서는 이러한 항목과 .NET Framework 4 이전 버전에 있는 해당 항목 간의 주요 차이점을 설명합니다.  
@@ -45,9 +46,9 @@ ms.lasthandoff: 07/28/2017
 ## <a name="example"></a>예제  
  이 예제에서는 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]의 리플렉션 형식 및 멤버를 사용하여 상속된 메서드 및 속성을 비롯한 <xref:System.Globalization.Calendar> 형식의 메서드 및 속성을 검색합니다. 이 코드를 실행하려면 리플렉션 프로젝트에서 `textblock1`이라는 [Windows.UI.Xaml.Controls.Textblock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx) 컨트롤을 포함하는 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 페이지에 대한 코드 파일에 코드를 붙여넣습니다. 다른 이름을 사용하여 프로젝트에 이 코드를 붙여넣는 경우 프로젝트와 일치하도록 네임스페이스 이름을 변경해야 합니다.  
   
- [!code-csharp[System.ReflectionWinStoreApp#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflectionwinstoreapp/cs/mainpage.xaml.cs#1)] [!code-vb[System.ReflectionWinStoreApp#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflectionwinstoreapp/vb/mainpage.xaml.vb#1)]  
+ [!code-csharp[System.ReflectionWinStoreApp#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflectionwinstoreapp/cs/mainpage.xaml.cs#1)]
+ [!code-vb[System.ReflectionWinStoreApp#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflectionwinstoreapp/vb/mainpage.xaml.vb#1)]  
   
 ## <a name="see-also"></a>참고 항목  
- [리플렉션](../../../docs/framework/reflection-and-codedom/reflection.md)   
+ [리플렉션](../../../docs/framework/reflection-and-codedom/reflection.md)  
  [Windows 스토어 앱용 .NET – 지원되는 API](http://go.microsoft.com/fwlink/?LinkID=225700)
-

@@ -5,26 +5,28 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - strong-named assemblies, signing with strong names
 - signing assemblies
 - assemblies [.NET Framework], signing
 - assemblies [.NET Framework], strong-named
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: babd0f6a9b1babf02677d6c6c41c664e0a6541b4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7758871a22b8b58d7df5cf2df481db185c07a987
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>방법: 강력한 이름으로 어셈블리 서명
 강력한 이름으로 어셈블리에 서명하는 여러 가지 방법이 있습니다.  
@@ -76,16 +78,18 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
   
 #### <a name="to-sign-an-assembly-with-a-strong-name-by-using-attributes"></a>특성을 사용하여 강력한 이름으로 어셈블리를 서명하려면  
   
-1.  <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=fullName> 또는 <xref:System.Reflection.AssemblyKeyNameAttribute> 특성을 소스 코드 모듈에 추가하고, 강력한 이름으로 어셈블리를 서명할 때 사용할 키 쌍이 포함된 컨테이너 또는 파일의 이름을 지정합니다.  
+1.  <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=nameWithType> 또는 <xref:System.Reflection.AssemblyKeyNameAttribute> 특성을 소스 코드 모듈에 추가하고, 강력한 이름으로 어셈블리를 서명할 때 사용할 키 쌍이 포함된 컨테이너 또는 파일의 이름을 지정합니다.  
   
 2.  소스 코드 파일을 정상적으로 컴파일합니다.  
   
 > [!NOTE]
 >  C# 및 Visual Basic 컴파일러에서는 소스 코드에 <xref:System.Reflection.AssemblyKeyFileAttribute> 또는 <xref:System.Reflection.AssemblyKeyNameAttribute> 특성이 나올 때 컴파일러 경고(각각 CS1699 및 BC41008)를 발생시킵니다. 이런 경고는 무시할 수 있습니다.  
   
- 다음 코드 예제에서는 어셈블리가 컴파일된 디렉터리에 있는 <xref:System.Reflection.AssemblyKeyFileAttribute>라는 키 파일과 함께 `keyfile.snk` 특성을 사용합니다.  
+ 다음 코드 예제에서는 어셈블리가 컴파일된 디렉터리에 있는 <xref:System.Reflection.AssemblyKeyFileAttribute> 라는 키 파일과 함께 `keyfile.snk`특성을 사용합니다.  
   
- [!code-cpp[AssemblyName_KeyPair#21](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_KeyPair/CPP/keyfileattrib.cpp#21)] [!code-csharp[AssemblyName_KeyPair#21](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_KeyPair/CS/keyfileattrib.cs#21)] [!code-vb[AssemblyName_KeyPair#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyName_KeyPair/VB/keyfileattrib.vb#21)]  
+ [!code-cpp[AssemblyName_KeyPair#21](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_KeyPair/CPP/keyfileattrib.cpp#21)]
+ [!code-csharp[AssemblyName_KeyPair#21](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_KeyPair/CS/keyfileattrib.cs#21)]
+ [!code-vb[AssemblyName_KeyPair#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyName_KeyPair/VB/keyfileattrib.vb#21)]  
   
  또한, 소스 파일을 컴파일할 때 어셈블리 서명을 연기할 수 있습니다. 자세한 내용은 [어셈블리 서명 연기](../../../docs/framework/app-domains/delay-sign-assembly.md)를 참조하십시오.  
   
@@ -102,10 +106,9 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
     ```  
   
 ## <a name="see-also"></a>참고 항목  
- [강력한 이름의 어셈블리 만들기 및 사용](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)   
- [방법: 공개/개인 키 쌍 만들기](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)   
- [Al.exe(어셈블리 링커)](../../../docs/framework/tools/al-exe-assembly-linker.md)   
- [어셈블리 서명 연기](../../../docs/framework/app-domains/delay-sign-assembly.md)   
- [어셈블리 및 매니페스트 서명 관리](/visualstudio/ide/managing-assembly-and-manifest-signing)   
+ [강력한 이름의 어셈블리 만들기 및 사용](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
+ [방법: 공개/개인 키 쌍 만들기](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
+ [Al.exe(어셈블리 링커)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
+ [어셈블리 서명 연기](../../../docs/framework/app-domains/delay-sign-assembly.md)  
+ [어셈블리 및 매니페스트 서명 관리](/visualstudio/ide/managing-assembly-and-manifest-signing)  
  [프로젝트 디자이너, 서명 페이지](https://msdn.microsoft.com/library/0k50fs3b)
-

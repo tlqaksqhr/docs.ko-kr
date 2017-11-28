@@ -1,41 +1,22 @@
 ---
 title: "volatile(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - volatile_CSharpKeyword
 - volatile
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- volatile keyword [C#]
+helpviewer_keywords: volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 1cefa39313c3c551e8d05fbc31e528b86c6888d9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c8f9fba15991197be885a973435089098a57db87
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="volatile-c-reference"></a>volatile(C# 참조)
 `volatile` 키워드는 동시에 실행되는 여러 스레드에 의해 필드가 수정될 수 있음을 나타냅니다. `volatile`로 선언된 필드에는 단일 스레드에 의한 액세스를 가정하는 컴파일러 최적화가 적용되지 않습니다. 이렇게 하면 필드에 항상 최신 값이 표시됩니다.  
@@ -61,19 +42,18 @@ ms.lasthandoff: 09/25/2017
 ## <a name="example"></a>예제  
  다음 예제에서는 공용 필드 변수를 `volatile`로 선언하는 방법을 보여 줍니다.  
   
- [!code-cs[csrefKeywordsModifiers#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_1.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_1.cs)]  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 보조 또는 작업자 스레드를 만들어 기본 스레드와 병렬로 처리하는 데 사용하는 방법을 보여줍니다. 다중 스레딩에 대한 배경 정보는 [관리되는 스레딩](../../../standard/threading/index.md) 및 [스레딩](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)을 참조하세요.  
+ 다음 예제에서는 보조 또는 작업자 스레드를 만들어 기본 스레드와 병렬로 처리하는 데 사용하는 방법을 보여줍니다. 다중 스레딩에 대한 배경 정보는 [관리되는 스레딩](../../../standard/threading/index.md) 및 [스레딩](../../programming-guide/concepts/threading/index.md)을 참조하세요.  
   
- [!code-cs[csProgGuideThreading#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_2.cs)]  
+ [!code-csharp[csProgGuideThreading#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_2.cs)]  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
  [한정자](../../../csharp/language-reference/keywords/modifiers.md)
-

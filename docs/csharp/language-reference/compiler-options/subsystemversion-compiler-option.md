@@ -1,36 +1,18 @@
 ---
 title: "-subsystemversion(C# 컴파일러 옵션)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: bfb398c960d3aa1aa8c9c6638e1bd8fe5dba4a98
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c7992086eb33577d795496025820ed8f7bb51c24
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="subsystemversion-c-compiler-options"></a>/subsystemversion(C# 컴파일러 옵션)
 생성된 실행 파일을 실행할 수 있는 하위 시스템의 최소 버전을 지정하여 실행 파일을 실행할 수 있는 Windows 버전을 결정합니다. 가장 일반적으로, 이 옵션은 실행 파일이 이전 버전의 Windows에서 사용할 수 없는 특정 보안 기능을 활용할 수 있도록 합니다.  
@@ -83,4 +65,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>참고 항목  
  [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)
-

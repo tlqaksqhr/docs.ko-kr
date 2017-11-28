@@ -1,30 +1,21 @@
 ---
 title: "방법: 파일이 어셈블리인지 확인(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 3994dfc7a8c4e615072bf415d0497399309072e3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ee402e28374040ab22173788dce421345b2ef3b5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>방법: 파일이 어셈블리인지 확인(C#)
 파일은 관리되고 해당 메타데이터에 어셈블리 항목을 포함하는 경우에만 어셈블리입니다. 어셈블리 및 메타데이터에 대한 자세한 내용은 [어셈블리 매니페스트](https://msdn.microsoft.com/library/1w45z383) 항목을 참조하세요.  
@@ -84,7 +75,6 @@ class TestAssembly
  <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 메서드는 테스트 파일을 로드한 다음 정보를 읽고 나면 해제합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Reflection.AssemblyName>   
- [C# 프로그래밍 가이드](../../../../csharp/programming-guide/index.md)   
+ <xref:System.Reflection.AssemblyName>  
+ [C# 프로그래밍 가이드](../../../../csharp/programming-guide/index.md)  
  [어셈블리 및 전역 어셈블리 캐시(C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
-

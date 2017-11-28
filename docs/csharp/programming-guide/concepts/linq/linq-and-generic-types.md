@@ -1,44 +1,25 @@
 ---
 title: "LINQ 및 제네릭 형식(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - LINQ [C#], generic types
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: e62a1573fa5ebf51a5f0f23b133c274730cfbeb6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 177db64491d58b31ca50cef0bb2eda8c2cb65078
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ 및 제네릭 형식(C#)
 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 버전 2.0에서 도입된 제네릭 형식을 기반으로 합니다. 제네릭에 대한 세부 지식이 없어도 쿼리 작성을 시작할 수 있습니다. 그러나 다음 두 가지 기본 개념은 이해하는 것이 좋습니다.  
@@ -52,18 +33,17 @@ ms.lasthandoff: 07/28/2017
 ## <a name="ienumerablet-variables-in-linq-queries"></a>LINQ 쿼리의 IEnumerable<T\> 변수  
  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리 변수는 <xref:System.Collections.Generic.IEnumerable%601> 또는 파생 형식(예: <xref:System.Linq.IQueryable%601>)으로 형식화됩니다. 형식이 `IEnumerable<Customer>`인 쿼리 변수가 표시되면 쿼리가 실행될 때 0개 이상의 `Customer` 개체 시퀀스를 생성한다는 의미입니다.  
   
- [!code-cs[csLINQGettingStarted#34](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/linq-and-generic-types_1.cs)]  
+ [!code-csharp[csLINQGettingStarted#34](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/linq-and-generic-types_1.cs)]  
   
  자세한 내용은 [LINQ 쿼리 작업의 형식 관계](../../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)를 참조하세요.  
   
 ## <a name="letting-the-compiler-handle-generic-type-declarations"></a>컴파일러에서 제네릭 형식 선언을 처리하도록 허용  
  원하는 경우 [var](../../../../csharp/language-reference/keywords/var.md) 키워드를 사용하여 제네릭 구문을 방지할 수 있습니다. `var` 키워드는 `from` 절에 지정된 데이터 소스를 확인하여 쿼리 변수의 형식을 유추하도록 컴파일러에 지시합니다. 다음 예제에서는 이전 예제와 동일하게 컴파일된 코드를 생성합니다.  
   
- [!code-cs[csLINQGettingStarted#35](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/linq-and-generic-types_2.cs)]  
+ [!code-csharp[csLINQGettingStarted#35](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/linq-and-generic-types_2.cs)]  
   
  `var` 키워드는 변수의 형식이 명확하거나 그룹 쿼리에 의해 생성되는 형식과 같이 중첩된 제네릭 형식을 명시적으로 지정하는 것이 중요하지 않은 경우에 유용합니다. 일반적으로 `var`을 사용하는 경우 다른 사용자가 코드를 읽기가 더 어려워질 수 있습니다. 자세한 내용은 [암시적으로 형식화된 지역 변수](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [C#에서 LINQ 시작](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)   
+ [C#에서 LINQ 시작](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
  [제네릭](../../../../csharp/programming-guide/generics/index.md)
-

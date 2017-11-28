@@ -8,19 +8,20 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- thread-safe collections, blocking dictionary
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: thread-safe collections, blocking dictionary
 ms.assetid: 38f2f3d8-15e5-4bf4-9c83-2b5b6f22bad1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: b365d6d3236919f65c840343ec3b33edebea758b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 66b4e921a4c7285976694f4633ce1eeaadcb7cf9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-add-and-take-items-individually-from-a-blockingcollection"></a>방법: BlockingCollection에서 개별적으로 항목 추가 및 가져오기
 이 예제에서는 차단 및 비차단 방식으로 <xref:System.Collections.Concurrent.BlockingCollection%601> 에서 항목을 추가하고 제거하는 방법을 보여 줍니다. <xref:System.Collections.Concurrent.BlockingCollection%601>에 대한 자세한 내용은 [BlockingCollection 개요](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)를 참조하십시오.  
@@ -40,6 +41,5 @@ ms.lasthandoff: 09/19/2017
  [!code-vb[CDS_BlockingCollection#02](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/nonblockingbc.vb#02)]  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Collections.Concurrent?displayProperty=fullName>   
+ <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
  [BlockingCollection 개요](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)
-

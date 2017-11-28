@@ -5,26 +5,20 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-helpviewer_keywords:
-- basicHttpBinding Element
+helpviewer_keywords: basicHttpBinding Element
 ms.assetid: 85cf1a4f-26c2-48c7-bda6-6c960d5d3fb3
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1551802b3d946de7b1198244ab9d7056e3e74e78
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 5956969c5d308ca075923a2d41630496bf0f7d78
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt;
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 서비스가 ASMX 기반 웹 서비스 및 클라이언트, 그리고 WS-I Basic Profile 1.1을 따르는 기타 서비스와 통신할 수 있는 끝점을 구성 및 노출하는 데 사용할 수 있는 바인딩을 나타냅니다.  
@@ -193,12 +187,11 @@ ms.lasthandoff: 09/25/2017
  기본 구성 및 이름이 없는 바인딩 및 동작에 대 한 자세한 내용은 참조 [단순화 된 구성](../../../../../docs/framework/wcf/simplified-configuration.md) 및 [WCF 서비스에 대 한 구성을 단순화](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Channels.Binding>   
- <xref:System.ServiceModel.Channels.BindingElement>   
- <xref:System.ServiceModel.BasicHttpBinding>   
- <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>   
- [바인딩](../../../../../docs/framework/wcf/bindings.md)   
- [시스템 제공 바인딩 구성](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [바인딩을 사용 하 여 Windows Communication Foundation 서비스 및 클라이언트 구성](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
+ <xref:System.ServiceModel.Channels.Binding>  
+ <xref:System.ServiceModel.Channels.BindingElement>  
+ <xref:System.ServiceModel.BasicHttpBinding>  
+ <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
+ [바인딩](../../../../../docs/framework/wcf/bindings.md)  
+ [시스템 제공 바인딩 구성](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [바인딩을 사용 하 여 Windows Communication Foundation 서비스 및 클라이언트 구성](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<바인딩 >](../../../../../docs/framework/misc/binding.md)
-

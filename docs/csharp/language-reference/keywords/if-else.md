@@ -1,50 +1,31 @@
 ---
 title: "if-else(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - if_CSharpKeyword
 - else
 - else_CSharpKeyword
 - if
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - else keyword [C#]
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: a0ecc915af00caffeba92a8308a60bc24198d477
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 694761a9b03fadf2dff97e61e37c0af52658f9e4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="if-else-c-reference"></a>if-else(C# 참조)
 `if` 문은 `Boolean` 식의 값에 따라 실행할 문을 식별합니다. 다음 예제에서는 `Boolean` 변수 `result` 가 `true` 로 설정된 다음 `if` 문에서 확인됩니다. 출력은 `The condition is true`입니다.  
   
- [!code-cs[csrefKeywordsSelection#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_1.cs)]  
+ [!code-csharp[csrefKeywordsSelection#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_1.cs)]  
   
  콘솔 앱의 `Main` 메서드에 배치하여 이 항목의 예제를 실행할 수 있습니다.  
   
@@ -78,28 +59,28 @@ if (condition)
   
  `then-statement` 및 `else-statement` 의 문은 원래 `if` 문 내부에 중첩된 다른 `if` 문을 포함하여 모든 종류일 수 있습니다. 중첩된 `if` 문에서 각 `else` 절은 해당 `if` 가 없는 마지막 `else`에 속합니다. 다음 예제에서 `Result1` 및 `m > 10` 이 둘 다 true이면 `n > 20` 이 나타납니다. `m > 10` 이 true이지만 `n > 20` 이 false이면 `Result2` 가 나타납니다.  
   
- [!code-cs[csrefKeywordsSelection#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_2.cs)]  
+ [!code-csharp[csrefKeywordsSelection#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_2.cs)]  
   
  `Result2` 이 false일 때 `(m > 10)` 를 대신 표시하려는 경우 다음 예제와 같이 중괄호로 중첩된 `if` 문의 시작 및 끝을 설정하여 해당 연결을 지정할 수 있습니다.  
   
- [!code-cs[csrefKeywordsSelection#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_3.cs)]  
+ [!code-csharp[csrefKeywordsSelection#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_3.cs)]  
   
  조건 `(m > 10)`이 false이면 `Result2`가 나타납니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 키보드에서 문자 하나를 입력하며, 프로그램이 중첩된 `if` 문을 사용하여 입력 문자가 영문자인지 여부를 확인합니다. 입력 문자가 영문자이면 프로그램에서 입력 문자가 소문자인지 대문자인지를 확인합니다. 각 경우에 대한 메시지가 나타납니다.  
   
- [!code-cs[csrefKeywordsSelection#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_4.cs)]  
+ [!code-csharp[csrefKeywordsSelection#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_4.cs)]  
   
 ## <a name="example"></a>예제  
  다음 부분 코드와 같이 `if` 문을 else 블록 안에 중첩할 수도 있습니다. 예제에서는 `if` 문을 else 블록 2개와 then 블록 1개 안에 중첩합니다. 주석은 각 블록에서 true 또는 false인 조건을 지정합니다.  
   
- [!code-cs[csrefKeywordsSelection#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_5.cs)]  
+ [!code-csharp[csrefKeywordsSelection#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_5.cs)]  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 입력 문자가 소문자, 대문자 또는 숫자인지를 확인합니다. 세 가지 조건이 모두 false이면 문자는 영숫자 문자가 아닙니다. 예제에서는 각 경우에 대한 메시지가 표시됩니다.  
   
- [!code-cs[csrefKeywordsSelection#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_6.cs)]  
+ [!code-csharp[csrefKeywordsSelection#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/if-else_6.cs)]  
   
  else 블록 또는 then 블록의 문이 유효한 모든 문일 수 있는 것과 마찬가지로 유효한 모든 부울 식을 조건에 대해 사용할 수 있습니다. [&&](../../../csharp/language-reference/operators/conditional-and-operator.md), [&](../../../csharp/language-reference/operators/and-operator.md), [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md), [&#124;](../../../csharp/language-reference/operators/or-operator.md) 및 [!](../../../csharp/language-reference/operators/logical-negation-operator.md)와 같은 논리 연산자를 사용할 수 있습니다. 와 같은 논리 연산자를 사용하여 복합 조건을 만들 수 있습니다. 다음 코드는 예제를 보여 줍니다.  
   
@@ -154,10 +135,9 @@ if (!(m >= n || m >= p))
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
- [?: 연산자](../../../csharp/language-reference/operators/conditional-operator.md)   
- [if-else 문(C++)](/cpp/cpp/if-else-statement-cpp)   
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
+ [?: 연산자](../../../csharp/language-reference/operators/conditional-operator.md)  
+ [if-else 문(C++)](/cpp/cpp/if-else-statement-cpp)  
  [switch](../../../csharp/language-reference/keywords/switch.md)
-

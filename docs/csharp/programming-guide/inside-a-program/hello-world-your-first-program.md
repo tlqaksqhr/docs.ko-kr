@@ -1,42 +1,24 @@
 ---
 title: "Hello World -- 프로그램 처음 만들기(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: get-started-article
 f1_keywords:
 - cs.program
 - vs.csharp.startpage.firstapplication
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c17dcce921f3a6ff1a9c547c5ff5d34c3dbbf28d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: b7cb84362c96dac50ae5136334138b55ed1ce00b
-ms.openlocfilehash: 03891f83885cf41ab157ebd78ef7e72767b4b163
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- 프로그램 처음 만들기(C# 프로그래밍 가이드)
 다음 절차에서는 기존 "Hello World!" 프로그램의 C# 버전을 만듭니다. 이 프로그램은 문자열 `Hello World!`를 표시합니다.  
@@ -63,7 +45,7 @@ ms.lasthandoff: 07/31/2017
   
 6.  Program.cs의 내용을 다음 코드로 바꿉니다.  
   
-     [!code-cs[csProgGuide#21](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_1.cs)]  
+     [!code-csharp[csProgGuide#21](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_1.cs)]  
   
 7.  F5 키를 선택하여 프로젝트를 실행합니다. `Hello World!` 줄이 포함된 명령 프롬프트 창이 나타납니다.  
   
@@ -72,11 +54,11 @@ ms.lasthandoff: 07/31/2017
 ## <a name="comments"></a>설명  
  첫 번째 줄에는 설명이 포함됩니다. `//` 문자는 줄의 나머지 부분을 설명으로 변환합니다.  
   
- [!code-cs[csProgGuide#32](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_2.cs)]  
+ [!code-csharp[csProgGuide#32](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_2.cs)]  
   
  텍스트 블록을 `/*` 및 `*/` 문자 사이에 포함하여 주석으로 처리할 수도 있습니다. 다음 예제에서 이를 확인할 수 있습니다.  
   
- [!code-cs[csProgGuide#33](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_3.cs)]  
+ [!code-csharp[csProgGuide#33](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_3.cs)]  
   
 ## <a name="main-method"></a>Main 메서드  
  C# 콘솔 응용 프로그램에는 시작 및 끝을 제어하는 `Main` 메서드가 포함되어야 합니다. `Main` 메서드에서 개체를 만들고 다른 메서드를 실행합니다.  
@@ -85,19 +67,19 @@ ms.lasthandoff: 07/31/2017
   
 -   이 메서드는 `void`를 반환합니다.  
   
-     [!code-cs[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_4.cs)]  
+     [!code-csharp[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_4.cs)]  
   
 -   정수를 반환할 수도 있습니다.  
   
-     [!code-cs[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_5.cs)]  
+     [!code-csharp[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_5.cs)]  
   
 -   반환 형식은 각각 인수를 사용할 수 있습니다.  
   
-     [!code-cs[csProgGuideMain#19](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_6.cs)]  
+     [!code-csharp[csProgGuideMain#19](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_6.cs)]  
   
      또는  
   
-     [!code-cs[csProgGuideMain#18](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_7.cs)]  
+     [!code-csharp[csProgGuideMain#18](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_7.cs)]  
   
  `Main` 메서드의 매개 변수 `args`는 프로그램을 호출하는 데 사용된 명령줄 인수가 포함된 `string` 배열입니다. C++의 경우와는 달리 배열에 실행(exe) 파일의 이름이 포함되지 않습니다.  
   
@@ -108,9 +90,9 @@ ms.lasthandoff: 07/31/2017
 ## <a name="input-and-output"></a>입력 및 출력  
  일반적으로 C# 프로그램에서는 .NET Framework의 런타임 라이브러리에서 제공되는 입출력 서비스를 사용합니다. `System.Console.WriteLine("Hello World!");` 문은 <xref:System.Console.WriteLine%2A> 메서드를 사용합니다. 이 메서드는 런타임 라이브러리에 있는 <xref:System.Console> 클래스의 출력 메서드 중 하나입니다. 이 메서드는 표준 출력 스트림에 문자열 매개 변수를 표시하고 이어서 새 줄을 표시합니다. 기타 <xref:System.Console> 메서드는 다양한 입력 및 출력 작업에 사용할 수 있습니다. 프로그램 시작 부분에 `using System;` 지시문을 포함하면 <xref:System> 클래스 및 메서드를 정규화하지 않고 바로 사용할 수 있습니다. 예를 들어 `System.Console.WriteLine` 대신 `Console.WriteLine`을 호출할 수 있습니다.  
   
- [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_8.cs)]  
+ [!code-csharp[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_8.cs)]  
   
- [!code-cs[csProgGuide#23](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_9.cs)]  
+ [!code-csharp[csProgGuide#23](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/hello-world-your-first-program_9.cs)]  
   
  입출력 메서드에 대한 자세한 내용은 <xref:System.IO>를 참조하세요.  
   
@@ -150,11 +132,10 @@ ms.lasthandoff: 07/31/2017
  C# 컴파일러 및 관련 옵션에 대한 자세한 내용은 [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)을 참조하세요.
   
 ## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C# 프로그램 내부](../../../csharp/programming-guide/inside-a-program/index.md)   
- [문자열](../../../csharp/programming-guide/strings/index.md)   
- [\<paveover>C# 샘플 응용 프로그램](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)   
- [C# 참조](../../../csharp/language-reference/index.md)   
- [Main()과 명령줄 인수](../../../csharp/programming-guide/main-and-command-args/index.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [C# 프로그램 내부](../../../csharp/programming-guide/inside-a-program/index.md)  
+ [문자열](../../../csharp/programming-guide/strings/index.md)  
+ [\<paveover>C# 샘플 응용 프로그램](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [Main()과 명령줄 인수](../../../csharp/programming-guide/main-and-command-args/index.md)  
  [Visual C# 및 Visual Basic 시작](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
-

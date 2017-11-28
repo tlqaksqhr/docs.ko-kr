@@ -1,46 +1,28 @@
 ---
 title: "암시적으로 형식화된 지역 변수(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 26a4460acf70ff3748f12d74442f0ca568a587b5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cc02c0f7ef5fbbbf3c60188426a8027f6a60fb89
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>암시적으로 형식화된 지역 변수(C# 프로그래밍 가이드)
 명시적 형식을 제공하지 않고 지역 변수를 선언할 수 있습니다. `var` 키워드는 초기화 문의 오른쪽에 있는 식에서 변수의 형식을 유추하도록 컴파일러에 지시합니다. 유추된 형식은 기본 제공 형식, 무명 형식, 사용자 정의 형식 또는 .NET Framework 클래스 라이브러리에 정의된 형식일 수 있습니다. `var`을 사용하여 배열을 초기화하는 방법에 대한 자세한 내용은 [암시적으로 형식화된 배열](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)을 참조하세요.  
   
  다음 예제에서는 `var`을 사용하여 지역 변수를 선언하는 다양한 방법을 보여 줍니다.  
   
- [!code-cs[csProgGuideLINQ#43](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-local-variables_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#43](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-local-variables_1.cs)]  
   
  `var` 키워드는 "variant"를 의미하지 않고 변수가 느슨하게 형식화되었거나 런타임에 바인딩되었음을 나타내지도 않습니다. 단지 컴파일러가 가장 적절한 형식을 결정하고 할당함을 의미합니다.  
   
@@ -73,7 +55,7 @@ ms.lasthandoff: 07/28/2017
   
  소스 코드의 관점에서 무명 형식에는 이름이 없습니다. 따라서 쿼리 변수가 `var`로 초기화된 경우 반환된 개체 시퀀스의 속성에 액세스하는 유일한 방법은 `var`을 `foreach` 문의 반복 변수 형식으로 사용하는 것입니다.  
   
- [!code-cs[csProgGuideLINQ#44](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-local-variables_2.cs)]  
+ [!code-csharp[csProgGuideLINQ#44](../../../csharp/programming-guide/arrays/codesnippet/CSharp/implicitly-typed-local-variables_2.cs)]  
   
 ## <a name="remarks"></a>설명  
  암시적 형식 변수 선언에는 다음과 같은 제한 사항이 적용됩니다.  
@@ -92,20 +74,19 @@ ms.lasthandoff: 07/28/2017
   
  또한 `var` 키워드는 변수의 특정 형식이 키보드에서 입력하기 번거롭거나, 명확하거나, 코드의 가독성에 도움이 되지 않는 경우에 유용할 수 있습니다. 이런 방식으로 `var`이 유용한 한 가지 예로 그룹 작업에 사용되는 경우 등의 중첩된 제네릭 형식이 있습니다. 다음 쿼리에서 쿼리 변수의 형식은 `IEnumerable<IGrouping<string, Student>>`입니다. 사용자나 코드를 유지 관리해야 하는 다른 사용자가 이 점을 이해하기만 하면 편리하고 간단하도록 암시적 형식을 사용하는 데 문제가 없습니다.  
   
- [!code-cs[cscsrefQueryKeywords#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/implicitly-typed-local-variables_3.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/implicitly-typed-local-variables_3.cs)]  
   
  그러나 `var`을 사용하면 최소한 다른 개발자가 코드를 이해하기 더 어려워질 수 있습니다. 이런 이유로, C# 문서에서는 일반적으로 필요한 경우에만 `var`을 사용합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [암시적으로 형식화된 배열](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)   
- [방법: 쿼리 식에서 암시적 형식 지역 변수 및 배열 사용](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)   
- [무명 형식](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)   
- [개체 이니셜라이저 및 컬렉션 이니셜라이저](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)   
- [var](../../../csharp/language-reference/keywords/var.md)   
- [LINQ 쿼리 식](../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [LINQ(Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)   
- [for](../../../csharp/language-reference/keywords/for.md)   
- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)   
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [암시적으로 형식화된 배열](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)  
+ [방법: 쿼리 식에서 암시적 형식 지역 변수 및 배열 사용](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)  
+ [익명 형식](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+ [개체 이니셜라이저 및 컬렉션 이니셜라이저](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+ [var](../../../csharp/language-reference/keywords/var.md)  
+ [LINQ 쿼리 식](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+ [LINQ(Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [for](../../../csharp/language-reference/keywords/for.md)  
+ [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
  [using 문](../../../csharp/language-reference/keywords/using-statement.md)
-

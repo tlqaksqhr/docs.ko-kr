@@ -8,12 +8,11 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
+ms.openlocfilehash: a6fc2f4c963d857be06e194468e2f8514437dd1d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: a1041938891219fd2e3b17d004bb40b544b8ceaa
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="implementing-resilient-applications"></a>복원력 있는 응용 프로그램 구현
 
@@ -28,4 +27,3 @@ ms.lasthandoff: 09/05/2017
 
 >[!div class="step-by-step"]
 [이전] (../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md) [다음] (handle-partial-failure.md)
-

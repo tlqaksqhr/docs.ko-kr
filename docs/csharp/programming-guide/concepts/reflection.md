@@ -1,27 +1,18 @@
 ---
 title: "리플렉션(C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: f80a2362-953b-4e8e-9759-cd5f334190d4
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: f567eb47d93fcd95e5895b4b44e1c89fb0b901b4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fa0aee4a0580ea28e3f0c70528dabaaf6f635f71
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="reflection-c"></a>리플렉션(C#)
 리플렉션은 어셈블리, 모듈 및 형식을 설명하는 개체(<xref:System.Type> 형식)를 제공합니다. 리플렉션을 사용하면 동적으로 형식 인스턴스를 만들거나, 형식을 기존 개체에 바인딩하거나, 기존 개체에서 형식을 가져와 해당 메서드를 호출하거나, 필드 및 속성에 액세스할 수 있습니다. 코드에서 특성을 사용하는 경우 리플렉션은 특성에 대한 액세스를 제공합니다. 자세한 내용은 [특성](https://msdn.microsoft.com/library/5x6cd29c)을 참조하세요.  
@@ -79,6 +70,5 @@ System.Console.WriteLine(info);
 -   [특성에 저장된 정보 검색](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
  [공용 언어 런타임의 어셈블리](https://msdn.microsoft.com/library/k3677y81)
-

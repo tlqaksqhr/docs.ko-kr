@@ -5,32 +5,28 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - objects, interop marshaling
 - interop marshaling, objects
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 67d05a21d537bfca92bc76473fb6f6048865ef8c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: c5bfafcad5f1f60e7e763b69f220188517d29f17
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="default-marshaling-for-objects"></a>개체에 대한 마샬링
-<xref:System.Object?displayProperty=fullName>로 형식화된 매개 변수와 필드는 비관리 코드에 다음 형식 하나로 표시할 수 있습니다.  
+<xref:System.Object?displayProperty=nameWithType>로 형식화된 매개 변수와 필드는 비관리 코드에 다음 형식 하나로 표시할 수 있습니다.  
   
 -   개체가 매개 변수인 경우 변형.  
   
@@ -151,37 +147,37 @@ struct ObjectHolder {
   
 -   개체가 다음 표에 나열된 형식의 인스턴스이면 결과 변형 형식은 표에 나와 있는 대로 마샬러에 기본 제공된 규칙에 따라 결정됩니다.  
   
--   마샬링 동작을 명시적으로 제어해야 하는 기타 개체는 <xref:System.IConvertible> 인터페이스를 구현합니다. 이 경우 변형 형식은 <xref:System.IConvertible.GetTypeCode%2A?displayProperty=fullName> 메서드에서 반환된 형식 코드에 의해 결정됩니다. 이외의 경우에는 개체가 **VT_UNKNOWN** 형식 변형으로 마샬링됩니다.  
+-   마샬링 동작을 명시적으로 제어해야 하는 기타 개체는 <xref:System.IConvertible> 인터페이스를 구현합니다. 이 경우 변형 형식은 <xref:System.IConvertible.GetTypeCode%2A?displayProperty=nameWithType> 메서드에서 반환된 형식 코드에 의해 결정됩니다. 이외의 경우에는 개체가 **VT_UNKNOWN** 형식 변형으로 마샬링됩니다.  
   
 ### <a name="marshaling-system-types-to-variant"></a>변형에 시스템 형식 마샬링  
- 다음 표에서는 관리 개체 형식 및 해당 COM 변형 형식을 보여 줍니다. 이러한 형식은 호출되는 메서드의 시그니처가 <xref:System.Object?displayProperty=fullName> 형식인 경우에만 변환됩니다.  
+ 다음 표에서는 관리 개체 형식 및 해당 COM 변형 형식을 보여 줍니다. 이러한 형식은 호출되는 메서드의 시그니처가 <xref:System.Object?displayProperty=nameWithType> 형식인 경우에만 변환됩니다.  
   
 |개체 형식|COM 변형 형식|  
 |-----------------|----------------------|  
 |Null 개체 참조(Visual Basic의 경우 **Nothing**).|**VT_EMPTY**|  
-|<xref:System.DBNull?displayProperty=fullName>|**VT_NULL**|  
-|<xref:System.Runtime.InteropServices.ErrorWrapper?displayProperty=fullName>|**VT_ERROR**|  
-|<xref:System.Reflection.Missing?displayProperty=fullName>|**VT_ERROR**(**E_PARAMNOTFOUND** 포함)|  
-|<xref:System.Runtime.InteropServices.DispatchWrapper?displayProperty=fullName>|**VT_DISPATCH**|  
-|<xref:System.Runtime.InteropServices.UnknownWrapper?displayProperty=fullName>|**VT_UNKNOWN**|  
-|<xref:System.Runtime.InteropServices.CurrencyWrapper?displayProperty=fullName>|**VT_CY**|  
-|<xref:System.Boolean?displayProperty=fullName>|**VT_BOOL**|  
-|<xref:System.SByte?displayProperty=fullName>|**VT_I1**|  
-|<xref:System.Byte?displayProperty=fullName>|**VT_UI1**|  
-|<xref:System.Int16?displayProperty=fullName>|**VT_I2**|  
-|<xref:System.UInt16?displayProperty=fullName>|**VT_UI2**|  
-|<xref:System.Int32?displayProperty=fullName>|**VT_I4**|  
-|<xref:System.UInt32?displayProperty=fullName>|**VT_UI4**|  
-|<xref:System.Int64?displayProperty=fullName>|**VT_I8**|  
-|<xref:System.UInt64?displayProperty=fullName>|**VT_UI8**|  
-|<xref:System.Single?displayProperty=fullName>|**VT_R4**|  
-|<xref:System.Double?displayProperty=fullName>|**VT_R8**|  
-|<xref:System.Decimal?displayProperty=fullName>|**VT_DECIMAL**|  
-|<xref:System.DateTime?displayProperty=fullName>|**VT_DATE**|  
-|<xref:System.String?displayProperty=fullName>|**VT_BSTR**|  
-|<xref:System.IntPtr?displayProperty=fullName>|**VT_INT**|  
-|<xref:System.UIntPtr?displayProperty=fullName>|**VT_UINT**|  
-|<xref:System.Array?displayProperty=fullName>|**VT_ARRAY**|  
+|<xref:System.DBNull?displayProperty=nameWithType>|**VT_NULL**|  
+|<xref:System.Runtime.InteropServices.ErrorWrapper?displayProperty=nameWithType>|**VT_ERROR**|  
+|<xref:System.Reflection.Missing?displayProperty=nameWithType>|**VT_ERROR**(**E_PARAMNOTFOUND** 포함)|  
+|<xref:System.Runtime.InteropServices.DispatchWrapper?displayProperty=nameWithType>|**VT_DISPATCH**|  
+|<xref:System.Runtime.InteropServices.UnknownWrapper?displayProperty=nameWithType>|**VT_UNKNOWN**|  
+|<xref:System.Runtime.InteropServices.CurrencyWrapper?displayProperty=nameWithType>|**VT_CY**|  
+|<xref:System.Boolean?displayProperty=nameWithType>|**VT_BOOL**|  
+|<xref:System.SByte?displayProperty=nameWithType>|**VT_I1**|  
+|<xref:System.Byte?displayProperty=nameWithType>|**VT_UI1**|  
+|<xref:System.Int16?displayProperty=nameWithType>|**VT_I2**|  
+|<xref:System.UInt16?displayProperty=nameWithType>|**VT_UI2**|  
+|<xref:System.Int32?displayProperty=nameWithType>|**VT_I4**|  
+|<xref:System.UInt32?displayProperty=nameWithType>|**VT_UI4**|  
+|<xref:System.Int64?displayProperty=nameWithType>|**VT_I8**|  
+|<xref:System.UInt64?displayProperty=nameWithType>|**VT_UI8**|  
+|<xref:System.Single?displayProperty=nameWithType>|**VT_R4**|  
+|<xref:System.Double?displayProperty=nameWithType>|**VT_R8**|  
+|<xref:System.Decimal?displayProperty=nameWithType>|**VT_DECIMAL**|  
+|<xref:System.DateTime?displayProperty=nameWithType>|**VT_DATE**|  
+|<xref:System.String?displayProperty=nameWithType>|**VT_BSTR**|  
+|<xref:System.IntPtr?displayProperty=nameWithType>|**VT_INT**|  
+|<xref:System.UIntPtr?displayProperty=nameWithType>|**VT_UINT**|  
+|<xref:System.Array?displayProperty=nameWithType>|**VT_ARRAY**|  
   
  다음 코드 예제에서는 이전 예제에서 정의된 `MarshalObject` 인터페이스를 사용하여 다양한 변형 형식을 COM 서버에 전달하는 방법을 보여 줍니다.  
   
@@ -234,7 +230,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
  래퍼 클래스는 <xref:System.Runtime.InteropServices> 네임스페이스에서 정의됩니다.  
   
 ### <a name="marshaling-the-iconvertible-interface-to-variant"></a>변형에 IConvertible 인터페이스 마샬링  
- 이전 섹션에 나와 있지 않은 형식의 경우 <xref:System.IConvertible> 인터페이스를 구현하여 형식을 마샬링하는 방법을 제어할 수 있습니다. 개체가 **IConvertible** 인터페이스를 구현할 경우 COM 변형 형식은 런타임에 <xref:System.IConvertible.GetTypeCode%2A?displayProperty=fullName> 메서드에서 반환된 <xref:System.TypeCode> 열거형 값에 따라 결정됩니다.  
+ 이전 섹션에 나와 있지 않은 형식의 경우 <xref:System.IConvertible> 인터페이스를 구현하여 형식을 마샬링하는 방법을 제어할 수 있습니다. 개체가 **IConvertible** 인터페이스를 구현할 경우 COM 변형 형식은 런타임에 <xref:System.IConvertible.GetTypeCode%2A?displayProperty=nameWithType> 메서드에서 반환된 <xref:System.TypeCode> 열거형 값에 따라 결정됩니다.  
   
  다음 표에서는 **TypeCode** 열거형의 가능한 값과 각 값에 대한 일치하는 COM 변형 형식을 보여 줍니다.  
   
@@ -274,32 +270,32 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |COM 변형 형식|개체 유형|  
 |----------------------|-----------------|  
 |**VT_EMPTY**|Null 개체 참조(Visual Basic의 경우 **Nothing**).|  
-|**VT_NULL**|<xref:System.DBNull?displayProperty=fullName>|  
+|**VT_NULL**|<xref:System.DBNull?displayProperty=nameWithType>|  
 |**VT_DISPATCH**|**System.__ComObject** 또는 null((pdispVal == null)인 경우)|  
 |**VT_UNKNOWN**|**System.__ComObject** 또는 null((punkVal == null)인 경우)|  
-|**VT_ERROR**|<xref:System.UInt32?displayProperty=fullName>|  
-|**VT_BOOL**|<xref:System.Boolean?displayProperty=fullName>|  
-|**VT_I1**|<xref:System.SByte?displayProperty=fullName>|  
-|**VT_UI1**|<xref:System.Byte?displayProperty=fullName>|  
-|**VT_I2**|<xref:System.Int16?displayProperty=fullName>|  
-|**VT_UI2**|<xref:System.UInt16?displayProperty=fullName>|  
-|**VT_I4**|<xref:System.Int32?displayProperty=fullName>|  
-|**VT_UI4**|<xref:System.UInt32?displayProperty=fullName>|  
-|**VT_I8**|<xref:System.Int64?displayProperty=fullName>|  
-|**VT_UI8**|<xref:System.UInt64?displayProperty=fullName>|  
-|**VT_R4**|<xref:System.Single?displayProperty=fullName>|  
-|**VT_R8**|<xref:System.Double?displayProperty=fullName>|  
-|**VT_DECIMAL**|<xref:System.Decimal?displayProperty=fullName>|  
-|**VT_DATE**|<xref:System.DateTime?displayProperty=fullName>|  
-|**VT_BSTR**|<xref:System.String?displayProperty=fullName>|  
-|**VT_INT**|<xref:System.Int32?displayProperty=fullName>|  
-|**VT_UINT**|<xref:System.UInt32?displayProperty=fullName>|  
-|**VT_ARRAY** &#124; **VT_\***|<xref:System.Array?displayProperty=fullName>|  
-|**VT_CY**|<xref:System.Decimal?displayProperty=fullName>|  
+|**VT_ERROR**|<xref:System.UInt32?displayProperty=nameWithType>|  
+|**VT_BOOL**|<xref:System.Boolean?displayProperty=nameWithType>|  
+|**VT_I1**|<xref:System.SByte?displayProperty=nameWithType>|  
+|**VT_UI1**|<xref:System.Byte?displayProperty=nameWithType>|  
+|**VT_I2**|<xref:System.Int16?displayProperty=nameWithType>|  
+|**VT_UI2**|<xref:System.UInt16?displayProperty=nameWithType>|  
+|**VT_I4**|<xref:System.Int32?displayProperty=nameWithType>|  
+|**VT_UI4**|<xref:System.UInt32?displayProperty=nameWithType>|  
+|**VT_I8**|<xref:System.Int64?displayProperty=nameWithType>|  
+|**VT_UI8**|<xref:System.UInt64?displayProperty=nameWithType>|  
+|**VT_R4**|<xref:System.Single?displayProperty=nameWithType>|  
+|**VT_R8**|<xref:System.Double?displayProperty=nameWithType>|  
+|**VT_DECIMAL**|<xref:System.Decimal?displayProperty=nameWithType>|  
+|**VT_DATE**|<xref:System.DateTime?displayProperty=nameWithType>|  
+|**VT_BSTR**|<xref:System.String?displayProperty=nameWithType>|  
+|**VT_INT**|<xref:System.Int32?displayProperty=nameWithType>|  
+|**VT_UINT**|<xref:System.UInt32?displayProperty=nameWithType>|  
+|**VT_ARRAY** &#124; **VT_\***|<xref:System.Array?displayProperty=nameWithType>|  
+|**VT_CY**|<xref:System.Decimal?displayProperty=nameWithType>|  
 |**VT_RECORD**|일치하는 boxed 값 형식.|  
 |**VT_VARIANT**|지원되지 않습니다.|  
   
- COM에서 관리 코드에 전달된 다음 다시 COM에 전달되는 변형 형식은 호출하는 동안 동일한 변형 형식을 유지할 수 없습니다. **VT_DISPATCH** 형식 변형이 COM에서 .NET Framework에 전달될 경우 어떤 일이 나타나는지 살펴봅니다. 마샬링하는 동안 변형은 <xref:System.Object?displayProperty=fullName>로 변환됩니다. **Object**가 다시 COM에 전달되면 다시 **VT_UNKNOWN** 형식 변형에 마샬링됩니다. 개체가 관리 코드에서 COM에 마샬링될 때 생성된 변형이 처음에 개체를 생성하는 데 사용되는 변형과 같은 형식이라는 보장은 없습니다.  
+ COM에서 관리 코드에 전달된 다음 다시 COM에 전달되는 변형 형식은 호출하는 동안 동일한 변형 형식을 유지할 수 없습니다. **VT_DISPATCH** 형식 변형이 COM에서 .NET Framework에 전달될 경우 어떤 일이 나타나는지 살펴봅니다. 마샬링하는 동안 변형은 <xref:System.Object?displayProperty=nameWithType>로 변환됩니다. **Object**가 다시 COM에 전달되면 다시 **VT_UNKNOWN** 형식 변형에 마샬링됩니다. 개체가 관리 코드에서 COM에 마샬링될 때 생성된 변형이 처음에 개체를 생성하는 데 사용되는 변형과 같은 형식이라는 보장은 없습니다.  
   
 <a name="cpcondefaultmarshalingforobjectsanchor6"></a>   
 ## <a name="marshaling-byref-variants"></a>ByRef 변형 마샬링  
@@ -343,8 +339,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |**변형**  *v***(VT_BYREF** *&#124;* **VT_)**|**Ref 개체**  *o*|형식이 변경되지 않은 경우에만.|  
   
 ## <a name="see-also"></a>참고 항목  
- [기본 마샬링 동작](../../../docs/framework/interop/default-marshaling-behavior.md)   
- [Blittable 형식 및 비 Blittable 형식](../../../docs/framework/interop/blittable-and-non-blittable-types.md)   
- [방향 특성](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)   
+ [기본 마샬링 동작](../../../docs/framework/interop/default-marshaling-behavior.md)  
+ [Blittable 형식 및 비 Blittable 형식](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
+ [방향 특성](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
  [복사 및 고정](../../../docs/framework/interop/copying-and-pinning.md)
-

@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - trace compiler options
 - trace statements
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ee67d687b52bd911597fb99e6f1316e8a9cf5fe0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f3907888ebcda9c5c6c498cbff39956391f7e213
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>방법: 추적 및 디버그를 사용한 조건부 컴파일
 개발 중에 응용 프로그램을 디버그하는 동안 추적 및 디버깅 출력은 둘 다 Visual Studio의 출력 창으로 이동합니다. 그러나 배포된 응용 프로그램에 추적 기능을 포함하려면 **TRACE** 컴파일러 지시문을 사용하도록 설정하여 계측된 응용 프로그램을 컴파일해야 합니다. 이렇게 하면 추적 코드를 응용 프로그램의 릴리스 버전으로 컴파일할 수 있습니다. **TRACE** 지시문을 사용하지 않으면 모든 추적 코드가 컴파일 중에 무시되고 배포할 실행 코드에 포함되지 않습니다.  
@@ -111,11 +104,10 @@ ms.lasthandoff: 08/21/2017
     >  컴파일할 준비가 되면 **빌드** 메뉴에서 **빌드**를 선택하거나, **d:**을 입력하지 않고 명령줄 메서드를 사용하여 조건부 컴파일 기호를 정의합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [응용 프로그램 추적 및 조율](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)   
- [방법: 추적 스위치 만들기, 초기화 및 구성](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)   
- [추적 스위치](../../../docs/framework/debug-trace-profile/trace-switches.md)   
- [추적 수신기](../../../docs/framework/debug-trace-profile/trace-listeners.md)   
- [방법: 응용 프로그램 코드에 Trace 문 추가](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)   
- [방법: Visual Studio 명령줄에 필요한 환경 변수 설정](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)   
+ [응용 프로그램 추적 및 조율](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  
+ [방법: 만들기, 초기화 및 추적 스위치 구성](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)  
+ [추적 스위치](../../../docs/framework/debug-trace-profile/trace-switches.md)  
+ [추적 수신기](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
+ [방법: 응용 프로그램 코드에 Trace 문 추가](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
+ [방법: Visual Studio 명령줄에 필요한 환경 변수 설정](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
  [방법: 명령줄 컴파일러 호출](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)
-

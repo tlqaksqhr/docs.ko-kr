@@ -1,37 +1,40 @@
 ---
-title: "방법: AJAX 사용 WCF 서비스 및 해당 서비스에 액세스하는 ASP.NET 클라이언트 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "방법: AJAX 사용 WCF 서비스 및 해당 서비스에 액세스하는 ASP.NET 클라이언트 만들기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: a45a186b0d281976f3d6ad554d75742ba0f1cd50
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 방법: AJAX 사용 WCF 서비스 및 해당 서비스에 액세스하는 ASP.NET 클라이언트 만들기
+# <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>방법: AJAX 사용 WCF 서비스 및 해당 서비스에 액세스하는 ASP.NET 클라이언트 만들기
 이 항목에서는 Visual Studio 2008을 사용하여 AJAX 사용 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 서비스 및 해당 서비스에 액세스하는 ASP.NET 클라이언트를 만드는 방법을 보여 줍니다. 서비스 및 클라이언트 코드의 경우 절차 단원에서 서비스 및 클라이언트를 만드는 단계에 대해 설명한 다음 예제 단원에서 설명합니다.  
   
 ### <a name="to-create-the-aspnet-client-application"></a>ASP.NET 클라이언트 응용 프로그램을 만들려면  
   
 1.  [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]를 엽니다.  
   
-2.  **파일** 메뉴에서 **새로**, 다음 **프로젝트**, 다음 **웹**, 선택한 다음 **ASP.NET 웹 응용 프로그램**합니다.  
+2.  **파일** 메뉴 선택 **새로**, 다음 **프로젝트**, 다음 **웹**를 선택한 후 **ASP.NET 웹 응용 프로그램**.  
   
 3.  프로젝트 이름을 `SandwichServices` 클릭 **확인**합니다.  
   
 ### <a name="to-create-the-wcf-ajax-enabled-service"></a>WCF AJAX 사용 서비스를 만들려면  
   
-1.  마우스 오른쪽 단추로 클릭는 `SandwichServices` 프로젝트는 **솔루션 탐색기** 창과 선택 **추가**, 다음 **새 항목**, 차례로 **AJAX 사용 WCF 서비스**합니다.  
+1.  마우스 오른쪽 단추로 클릭는 `SandwichServices` 프로젝트에 **솔루션 탐색기** 창과 선택 **추가**, 다음 **새 항목**, 차례로 **AJAX 사용 WCF 서비스** .  
   
-2.  서비스 이름을 `CostService` 에 **이름** 클릭 **추가**합니다.  
+2.  서비스 이름을 `CostService` 에 **이름** 상자 한 클릭 **추가**합니다.  
   
 3.  CostService.svc.cs 파일을 엽니다.  
   
@@ -49,7 +52,7 @@ caps.handback.revision: 9
      }  
     ```  
   
-5.  서비스에서 작업을 구현합니다. 추가 된 <xref:System.ServiceModel.OperationContractAttribute> 각 계약의 일부임을 나타내기 위해 작업을 합니다. 다음 예제에서는 지정된 샌드위치 개수에 대한 비용을 반환하는 메서드를 구현합니다.  
+5.  서비스에서 작업을 구현합니다. 각 작업에 <xref:System.ServiceModel.OperationContractAttribute>를 추가하여 계약의 일부라는 것을 나타냅니다. 다음 예제에서는 지정된 샌드위치 개수에 대한 비용을 반환하는 메서드를 구현합니다.  
   
     ```  
     public class CostService  
@@ -68,25 +71,25 @@ caps.handback.revision: 9
   
 1.  Default.aspx 페이지를 열고 선택 된 **디자인** 보기.  
   
-2.  **보기** 메뉴 **도구 상자**합니다.  
+2.  **보기** 메뉴 선택 **도구 상자**합니다.  
   
-3.  확장의 **AJAX 확장** 노드 및 끌어서 놓기는 **ScriptManager** Default.aspx 페이지에 로그온 합니다.  
+3.  확장 하 고는 **AJAX 확장** 노드 및 끌어서 놓기는 **ScriptManager** Default.aspx 페이지에 로그온 합니다.  
   
-4.  마우스 오른쪽 단추로 클릭는 **ScriptManager** 선택한 **속성**합니다.  
+4.  마우스 오른쪽 단추로 클릭는 **ScriptManager** 선택 **속성**합니다.  
   
-5.  확장 된 **서비스** 컬렉션에는 **속성** 창을 열어는 **ServiceReference 컬렉션 편집기** 창.  
+5.  확장 된 **서비스** 컬렉션에는 **속성** 창을 엽니다는 **ServiceReference 컬렉션 편집기** 창.  
   
-6.  클릭 **추가**, 지정 `CostService.svc` 으로 **경로** 참조 하 고 클릭 **확인**합니다.  
+6.  클릭 **추가**, 지정 `CostService.svc` 로 **경로** 참조 되는 대시와 **확인**합니다.  
   
-7.  확장 하 고는 **HTML** 에서 노드는 **도구 상자** 및 끌어서 놓기는 **입력 (단추)** Default.aspx 페이지에 로그온 합니다.  
+7.  확장의 **HTML** 에서 노드는 **도구 상자** 및 끌어서 놓기는 **입력 (단추)** 를 Default.aspx 페이지로 합니다.  
   
-8.  마우스 오른쪽 단추로 클릭는 **단추** 선택한 **속성**합니다.  
+8.  마우스 오른쪽 단추로 클릭는 **단추** 선택 **속성**합니다.  
   
 9. 변경 된 **값** 필드를 `Price for 3 Sandwiches`합니다.  
   
 10. 두 번 클릭은 **단추** JavaScript 코드에 액세스할 수 있습니다.  
   
-11. 내에서 다음 JavaScript 코드에 전달 된 `script`> 요소입니다.  
+11. 내에서 다음 JavaScript 코드에 전달 된 <`script`> 요소입니다.  
   
     ```  
     function Button1_onclick() {  
@@ -101,7 +104,7 @@ caps.handback.revision: 9
   
 ### <a name="to-access-the-service-from-the-client"></a>클라이언트에서 서비스에 액세스하려면  
   
-1.  Ctrl +F5를 사용하여 서비스 및 웹 클라이언트를 시작합니다. 클릭 된 **Price for 3 Grilled Sandwiches** 예상된 출력 "3.75"를 생성 하는 단추입니다.  
+1.  Ctrl +F5를 사용하여 서비스 및 웹 클라이언트를 시작합니다. 클릭는 **Price for 3 Grilled Sandwiches** 예상된 출력 "3.75"를 생성 하는 단추입니다.  
   
 ## <a name="example"></a>예제  
  이 예제에는 WCFService.svc.cs 파일에 포함된 서비스 코드 및 Default.aspx 파일에 포함된 클라이언트 코드가 있습니다.  
@@ -175,7 +178,4 @@ alert(result);
         <input id="Button1" type="button" value="Price for 3 Sandwiches" onclick="return Button1_onclick()" /></p>  
 </body>  
 </html>  
-  
-```  
-  
-<!-- TODO: review snippet reference  [!CODE [Microsoft.Win32.RegistryKey#4](Microsoft.Win32.RegistryKey#4)]  -->
+```     

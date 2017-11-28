@@ -7,16 +7,14 @@ manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: 2bf0c397-13fb-4f68-bc2b-531c6c88a167
+ms.openlocfilehash: 376bd461bfeb51653471fd374a2215aa15872976
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9ce4a4ca62bb476b2414ec8b93d5633faca53b59
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="handle-exceptions-in-query-expressions"></a>쿼리 식의 예외 처리
 
@@ -28,7 +26,7 @@ ms.lasthandoff: 08/11/2017
 
  다음 예제에서는 예외 처리 코드를 쿼리 식 외부로 이동하는 방법을 보여 줍니다. 이 작업은 메서드가 쿼리에 로컬인 변수에 의존하지 않는 경우에만 가능합니다.  
   
- [!code-cs[csProgGuideLINQ#10](../../../samples/snippets/csharp/concepts/linq/how-to-handle-exceptions-in-query-expressions_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#10](../../../samples/snippets/csharp/concepts/linq/how-to-handle-exceptions-in-query-expressions_1.cs)]  
   
 ## <a name="example"></a>예제 
 
@@ -36,9 +34,8 @@ ms.lasthandoff: 08/11/2017
   
  `try` 블록은 쿼리 자체가 아니라 `foreach` 루프를 포함합니다. 이는 쿼리가 실제로 실행되는 지점이 `foreach` 루프이기 때문입니다. 자세한 내용은 [LINQ 쿼리 소개](../programming-guide/concepts/linq/introduction-to-linq-queries.md)를 참조하세요.  
   
- [!code-cs[csProgGuideLINQ#12](../../../samples/snippets/csharp/concepts/linq/how-to-handle-exceptions-in-query-expressions_2.cs)]  
+ [!code-csharp[csProgGuideLINQ#12](../../../samples/snippets/csharp/concepts/linq/how-to-handle-exceptions-in-query-expressions_2.cs)]  
   
 
 ## <a name="see-also"></a>참고 항목  
  [LINQ 쿼리 식](index.md)
-

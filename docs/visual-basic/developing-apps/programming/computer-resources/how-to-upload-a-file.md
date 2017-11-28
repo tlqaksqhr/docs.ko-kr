@@ -1,45 +1,27 @@
 ---
 title: "방법: Visual Basic에서 파일 업로드"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - networks, uploading files
-- files, uploading
-- uploading files
-- UploadFile method
+- files [Visual Basic], uploading
+- uploading files [Visual Basic]
+- UploadFile method [Visual Basic]
 - My.Computer.Network.UploadFile method
 ms.assetid: a8b37924-c523-4fd3-b5ca-cb0074df29cd
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 8a0fab9b812ddff1f56e9fa203bd297fd70bc47d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 29baf1f420cece6e0b05f9638b30a326178a013d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-upload-a-file-in-visual-basic"></a>방법: Visual Basic에서 파일 업로드
 <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> 메서드는 파일을 업로드하고 원격 위치에 저장하는 데 사용될 수 있습니다. `ShowUI` 매개 변수를 `True`로 설정하면 업로드 진행률을 표시하고 사용자가 작업을 취소할 수 있도록 하는 대화 상자가 표시됩니다.  
@@ -72,8 +54,7 @@ ms.lasthandoff: 07/28/2017
 -   연결 시간이 초과된 경우(<xref:System.TimeoutException>)  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=fullName>   
- <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>   
- [방법: 파일 다운로드](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)   
+ <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=nameWithType>  
+ <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>  
+ [방법: 파일 다운로드](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
  [방법: 파일 경로의 구문 분석](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
-

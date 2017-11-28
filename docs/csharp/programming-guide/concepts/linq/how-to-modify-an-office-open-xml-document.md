@@ -1,25 +1,21 @@
 ---
 title: "방법: Office Open XML 문서 수정(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 481e0751c45054a9f99b8302ed3c2d12abc052ea
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 21a82e6ff71c9f8c4882eeab266275627e2c2cd0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-modify-an-office-open-xml-document-c"></a>방법: Office Open XML 문서 수정(C#)
 이 항목에서는 Office Open XML 문서를 열고, 수정하고, 저장하는 예제를 제공합니다.  
@@ -29,7 +25,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="example"></a>예제  
  이 예제에서는 문서의 첫 번째 단락 요소를 찾고 단락에서 텍스트를 검색한 다음 단락의 모든 텍스트 실행을 삭제합니다. 또한 대문자로 변환된 첫 번째 단락 텍스트로 구성된 새로운 텍스트 실행을 만들고 변경된 XML을 Open XML 패키지로 serialize한 후 닫습니다.  
   
- 이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=fullName> 네임스페이스의 형식을 사용합니다.  
+ 이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -161,4 +157,3 @@ New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<
   
 ## <a name="see-also"></a>참고 항목  
  [고급 쿼리 기술(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
-

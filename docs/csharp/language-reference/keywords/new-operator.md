@@ -1,38 +1,19 @@
 ---
 title: "new 연산자(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- new operator keyword [C#]
+helpviewer_keywords: new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 3c2b484b9872a54ce42520de77a723b9edb441a9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 59e1cc2006548df9a7a10283a34044040e5c2fef
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="new-operator-c-reference"></a>new 연산자(C# 참조)
 개체를 만들고 생성자를 호출하는 데 사용됩니다. 예:  
@@ -73,7 +54,7 @@ int i = 0;
 ## <a name="example"></a>예제  
  다음 예제에서는 `new` 연산자를 사용하여 `struct` 개체 및 클래스 개체가 생성 및 초기화된 다음 값이 할당됩니다. 기본값과 할당된 값이 표시됩니다.  
   
- [!code-cs[csrefKeywordsOperator#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-operator_1.cs)]  
+ [!code-csharp[csrefKeywordsOperator#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-operator_1.cs)]  
   
  예제에서는 문자열의 기본값이 `null`이므로 표시되지 않습니다.  
   
@@ -81,10 +62,9 @@ int i = 0;
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
- [연산자 키워드](../../../csharp/language-reference/keywords/operator-keywords.md)   
- [new](../../../csharp/language-reference/keywords/new.md)   
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
+ [연산자 키워드](../../../csharp/language-reference/keywords/operator-keywords.md)  
+ [new](../../../csharp/language-reference/keywords/new.md)  
  [익명 형식](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
-

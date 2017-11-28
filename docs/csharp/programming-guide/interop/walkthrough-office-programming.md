@@ -1,40 +1,25 @@
 ---
 title: "연습: Office 프로그래밍(C# 및 Visual Basic)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 dev_langs:
-- CSharp
+- csharp
+- vb
 helpviewer_keywords:
 - Office, programming in Visual Basic and C#
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 862f445107e0f58e8e00fba1708156c747165def
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
-ms.openlocfilehash: 8c1195289d70e111d5c3551d004708de7722c8e9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>연습: Office 프로그래밍(C# 및 Visual Basic)
 Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 Visual Basic의 기능을 제공합니다. 유용한 C# 기능으로는 명명된 인수 및 선택적 인수, `dynamic` 형식의 반환 값 등이 있습니다. COM 프로그래밍에서 `ref` 키워드를 생략하면 인덱싱된 속성에 액세스할 수 있게 됩니다. Visual Basic의 기능으로는 자동 구현 속성, 람다 식의 문, 컬렉션 이니셜라이저 등이 있습니다.
@@ -83,7 +68,7 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
   
 2.  다음 `Imports` 문(Visual Basic) 또는 `using` 지시문(C#)이 없으면 코드 파일 맨 위에 추가합니다.  
   
-     [!code-cs[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_1.cs)]
+     [!code-csharp[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_1.cs)]
 
      [!code-vb[csOfficeWalkthrough#1](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_1.vb)]
   
@@ -93,13 +78,13 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
   
 2.  `Account` 클래스 정의를 다음 코드로 바꿉니다. 클래스 정의는 *자동으로 구현된 속성*을 사용합니다. 자세한 내용은 [자동으로 구현된 속성](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)을 참조하세요.  
   
-     [!code-cs[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_2.cs)]
+     [!code-csharp[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_2.cs)]
 
      [!code-vb[csOfficeWalkthrough#2](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_2.vb)]  
   
 3.  계좌 2개가 포함된 `bankAccounts` 목록을 만들려면 *ThisAddIn.vb* 또는 *ThisAddIn.cs*의 `ThisAddIn_Startup` 메서드에 다음 코드를 추가합니다. 목록 선언은 *컬렉션 이니셜라이저*를 사용합니다. 자세한 내용은 [컬렉션 이니셜라이저](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)를 참조하세요.  
   
-     [!code-cs[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_3.cs)]
+     [!code-csharp[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_3.cs)]
 
      [!code-vb[csOfficeWalkthrough#3](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_3.vb)]  
   
@@ -107,7 +92,7 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
   
 1.  같은 파일에서 `ThisAddIn` 클래스에 다음 메서드를 추가합니다. 이 메서드는 Excel 통합 문서를 설정하고 데이터를 해당 통합 문서로 내보냅니다.  
   
-     [!code-cs[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_4.cs)]
+     [!code-csharp[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_4.cs)]
 
      [!code-vb[csOfficeWalkthrough#4](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_4.vb)]  
   
@@ -119,11 +104,11 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
   
     -   [범위](http://go.microsoft.com/fwlink/?LinkId=210911) 개체의 `Range` 및 `Offset` 속성은 *인덱싱된 속성* 기능을 사용합니다. 이 기능을 사용하면 다음과 같은 일반적인 C# 구문을 통해 COM 형식에서 이러한 속성을 사용할 수 있습니다. 또한 인덱싱된 속성에서는 `Value` 개체의 `Range` 속성을 사용할 수 있으므로 `Value2` 속성을 사용할 필요가 없습니다. `Value` 속성은 인덱싱된 속성이지만 인덱스는 선택 사항입니다. 다음 예제에서는 선택적 인수와 인덱싱된 속성이 함께 사용됩니다.  
   
-         [!code-cs[csOfficeWalkthrough#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_5.cs)]  
+         [!code-csharp[csOfficeWalkthrough#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_5.cs)]  
   
          이전 버전의 언어에서는 다음과 같은 특수 구문을 사용해야 했습니다.  
   
-         [!code-cs[csOfficeWalkthrough#6](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_6.cs)]  
+         [!code-csharp[csOfficeWalkthrough#6](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_6.cs)]  
   
          인덱싱된 속성을 직접 만들 수는 없습니다. 이 기능은 기존 인덱싱된 속성의 사용만을 지원합니다.  
   
@@ -131,7 +116,7 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
   
 2.  열 너비를 콘텐츠에 맞게 조정하려면 `DisplayInExcel` 끝에 다음 코드를 추가합니다.  
   
-     [!code-cs[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_7.cs)]
+     [!code-csharp[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_7.cs)]
 
      [!code-vb[csOfficeWalkthrough#7](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_7.vb)]  
   
@@ -139,7 +124,7 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
   
      예를 들어 `excelApp.Columns[1]`는 `Object`를 반환하고, `AutoFit`는 Excel [범위](http://go.microsoft.com/fwlink/?LinkId=210911) 메서드입니다. `dynamic`을 사용하지 않는 경우에는 `excelApp.Columns[1]` 메서드를 호출하기 전에 `Range`에서 반환하는 개체를 `AutoFit` 인스턴스로 캐스팅해야 합니다.  
   
-     [!code-cs[csOfficeWalkthrough#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_8.cs)]  
+     [!code-csharp[csOfficeWalkthrough#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_8.cs)]  
   
      Interop 형식 포함에 대한 자세한 내용은 이 항목 뒷부분의 "PIA 참조를 찾으려면" 및 "PIA 종속성을 복원하려면" 절차를 참조하세요. `dynamic`에 대한 자세한 내용은 [dynamic](../../../csharp/language-reference/keywords/dynamic.md) 또는 [dynamic 형식 사용](../../../csharp/programming-guide/types/using-type-dynamic.md)을 참조하세요.  
   
@@ -147,7 +132,7 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
   
 1.  `ThisAddIn_StartUp` 메서드의 끝에 다음 코드를 추가합니다. `DisplayInExcel` 호출에는 두 개의 인수가 포함됩니다. 첫 번째 인수는 처리할 계좌 목록의 이름이고, 두 번째 인수는 데이터 처리 방법을 정의하는 여러 줄 람다 식입니다. 각 계좌의 `ID` 및 `balance` 값은 인접 셀에 표시되며 잔액이 0보다 작으면 행은 빨간색으로 표시됩니다. 자세한 내용은 [람다 식](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)을 참조하세요.  
   
-     [!code-cs[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_9.cs)]
+     [!code-csharp[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_9.cs)]
 
      [!code-vb[csOfficeWalkthrough#9](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_9.vb)]  
   
@@ -157,7 +142,7 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
   
 1.  `ThisAddIn_StartUp` 메서드 끝에 다음 코드를 추가하여 Excel 통합 문서에 대한 링크가 포함된 Word 문서를 만듭니다.  
   
-     [!code-cs[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_10.cs)]
+     [!code-csharp[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_10.cs)]
 
      [!code-vb[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_10.vb)]  
   
@@ -211,22 +196,21 @@ Visual Studio에서는 Microsoft Office 프로그래밍을 개선하는 C# 및 V
 8.  Visual Studio의 **빌드** 메뉴에서 **솔루션 정리**를 클릭하여 완성된 프로젝트를 정리합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [자동으로 구현된 속성](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)   
- [자동으로 구현된 속성](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)   
- [컬렉션 이니셜라이저](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)   
- [개체 이니셜라이저 및 컬렉션 이니셜라이저](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)   
- [선택적 매개 변수](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)   
- [위치 및 이름으로 인수 전달](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)   
- [명명된 인수 및 선택적 인수](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)   
- [초기 바인딩 및 런타임에 바인딩](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)   
- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)   
- [dynamic 형식 사용](../../../csharp/programming-guide/types/using-type-dynamic.md)   
- [람다 식](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)   
- [람다 식](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
- [방법: COM Interop 프로그래밍에서 인덱싱된 속성 사용](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)   
- [연습: Microsoft Office 어셈블리의 형식 정보 포함](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)   
- [연습: 관리되는 어셈블리의 형식 포함](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)   
- [연습: Excel용 첫 VSTO 추가 기능 만들기](http://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)   
- [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)   
+ [자동으로 구현된 속성](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
+ [자동으로 구현된 속성](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
+ [컬렉션 이니셜라이저](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
+ [개체 이니셜라이저 및 컬렉션 이니셜라이저](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+ [선택적 매개 변수](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
+ [위치 및 이름으로 인수 전달](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)  
+ [명명된 인수 및 선택적 인수](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
+ [초기 바인딩 및 런타임에 바인딩](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
+ [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
+ [dynamic 형식 사용](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+ [람다 식](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
+ [람다 식](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+ [방법: COM Interop 프로그래밍에서 인덱싱된 속성 사용](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
+ [연습: Microsoft Office 어셈블리의 형식 정보 포함](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)  
+ [연습: 관리되는 어셈블리의 형식 포함](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+ [연습: Excel용 첫 VSTO 추가 기능 만들기](http://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)  
+ [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)  
  [상호 운용성](../../../csharp/programming-guide/interop/index.md)
-

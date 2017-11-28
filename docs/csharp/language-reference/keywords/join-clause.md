@@ -1,42 +1,24 @@
 ---
 title: "join 절(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - join
 - join_CSharpKeyword
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - join clause [C#]
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 17c8f7f5ff6d1266421cdb87ae562028c61ae97f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3368ba14101eda38ed8e3ee2bdc81bcab74a9b82
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="join-clause-c-reference"></a>join 절(C# 참조)
 `join` 절은 개체 모델에서 직접적인 관계가 없는 서로 다른 소스 시퀀스의 요소를 연결하는 데 유용합니다. 각 소스의 요소가 같은지 비교할 수 있는 일부 값을 공유하기만 하면 됩니다. 예를 들어 식품 유통업체에는 특정 제품의 공급업체 목록과 구매자 목록이 있을 수 있습니다. 예를 들어 `join` 절은 모두 동일한 지역에 있는, 해당 제품의 공급업체 및 구매자 목록을 만드는 데 사용할 수 있습니다.  
@@ -52,14 +34,14 @@ ms.lasthandoff: 07/28/2017
 ## <a name="inner-join"></a>내부 조인  
  다음 예제에서는 간단한 내부 동등 조인을 보여 줍니다. 이 쿼리는 "제품 이름/범주" 쌍의 기본 시퀀스를 생성합니다. 동일한 범주 문자열이 여러 요소에 나타납니다. `categories`의 요소에 일치하는 `products`가 없는 경우 해당 범주는 결과에 나타나지 않습니다.  
   
- [!code-cs[cscsrefQueryKeywords#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_1.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_1.cs)]  
   
  자세한 내용은 [방법: 내부 조인 수행](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)을 참조하세요.  
   
 ## <a name="group-join"></a>그룹 조인  
  `into` 식을 포함한 `join` 절을 그룹 조인이라고 합니다.  
   
- [!code-cs[cscsrefQueryKeywords#25](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_2.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#25](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_2.cs)]  
   
  그룹 조인은 왼쪽 소스 시퀀스의 요소를 오른쪽 소스 시퀀스에서 일치하는 하나 이상의 요소와 연결하는 계층적 결과 시퀀스를 생성합니다. 관계적인 측면에서 그룹 조인에는 해당 항목이 없으며, 그룹 조인은 기본적으로 개체 배열의 시퀀스입니다.  
   
@@ -69,14 +51,14 @@ ms.lasthandoff: 07/28/2017
   
  또한 그룹 조인의 결과를 또 다른 하위 쿼리의 생성기로 사용할 수도 있습니다.  
   
- [!code-cs[cscsrefQueryKeywords#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_3.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_3.cs)]  
   
  자세한 내용은 [방법: 그룹화 조인 수행](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)을 참조하세요.  
   
 ## <a name="left-outer-join"></a>왼쪽 우선 외부 조인  
  왼쪽 우선 외부 조인에서는 오른쪽 시퀀스에 일치하는 요소가 없는 경우에도 왼쪽 소스 시퀀스의 모든 요소가 반환됩니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]에서 왼쪽 우선 외부 조인을 수행하려면 그룹 조인과 함께 `DefaultIfEmpty` 메서드를 사용하여 왼쪽 요소에 일치하는 요소가 없을 경우 생성할 기본 오른쪽 요소를 지정합니다. `null`을 모든 참조 형식의 기본값으로 사용하거나 사용자 정의 기본 형식을 지정할 수 있습니다. 다음 예제에서는 사용자 정의 기본 형식을 보여 줍니다.  
   
- [!code-cs[cscsrefQueryKeywords#27](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_4.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#27](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_4.cs)]  
   
  자세한 내용은 [방법: 왼쪽 우선 외부 조인 수행](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)을 참조하세요.  
   
@@ -97,20 +79,19 @@ ms.lasthandoff: 07/28/2017
 ## <a name="example"></a>예제  
  다음 예제에서는 동일한 데이터 소스에서 동일한 일치하는 키를 사용하여 내부 조인, 그룹 조인 및 왼쪽 우선 외부 조인의 결과를 비교합니다. 콘솔 디스플레이에 결과를 명확하게 나타내기 위해 이러한 예제에 몇 가지 추가 코드를 추가합니다.  
   
- [!code-cs[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_5.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/join-clause_5.cs)]  
   
 ## <a name="remarks"></a>설명  
  뒤에 `into`가 오지 않는 `join` 절은 <xref:System.Linq.Enumerable.Join%2A> 메서드 호출로 변환됩니다. 뒤에 `into`가 오는 `join` 절은 <xref:System.Linq.Enumerable.GroupJoin%2A> 메서드 호출로 변환됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [쿼리 키워드(LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   
- [LINQ 쿼리 식](../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [조인 작업](http://msdn.microsoft.com/library/442d176d-028c-4beb-8d22-407d4ef89107)   
- [group 절](../../../csharp/language-reference/keywords/group-clause.md)   
- [방법: 왼쪽 우선 외부 조인 수행](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)   
- [방법: 내부 조인 수행](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)   
- [방법: 그룹화 조인 수행](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)   
- [방법: Join 절 결과를 순서대로 정렬](../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)   
- [방법: 복합 키를 사용하여 조인](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)   
- [방법: 샘플 데이터베이스 설치](http://msdn.microsoft.com/library/ed1291f6-604c-4972-ae22-0345c6dea12e)
-
+ [쿼리 키워드(LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
+ [LINQ 쿼리 식](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+ [조인 작업](../../programming-guide/concepts/linq/join-operations.md)  
+ [group 절](../../../csharp/language-reference/keywords/group-clause.md)  
+ [방법: 왼쪽 우선 외부 조인 수행](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)  
+ [방법: 내부 조인 수행](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)  
+ [방법: 그룹화 조인 수행](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)  
+ [방법: Join 절 결과를 순서대로 정렬](../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)  
+ [방법: 복합 키를 사용하여 조인](../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)  
+ [방법: 샘플 데이터베이스 설치](/visualstudio/data-tools/installing-database-systems-tools-and-samples)

@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
+ms.openlocfilehash: 7b7e321e6554818924a8a2b68afa4c787807bcba
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 155804dd212d8eda8d81ce7e296a9fe308e9c69b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="expressions"></a>식
 
 *식*은 *피연산자* 및 *연산자*로 생성됩니다. 식의 연산자는 피연산자에 적용할 연산을 나타냅니다. 연산자의 예로 `+`, `-`, `*`, `/` 및 `new`가 있습니다. 피연산자의 예로는 리터럴, 필드, 지역 변수 및 식이 있습니다.
@@ -45,7 +43,7 @@ ms.lasthandoff: 07/28/2017
     - `new T(...){...}`: 이니셜라이저를 사용한 개체 생성
     - `new {...}`: 익명 개체 이니셜라이저
     - `new T[...]`: 배열 생성
-    - `typeof(T)`: `T`에 대한 @System.Type 개체 가져오기
+    - `typeof(T)`: `T`에 대한 <xref:System.Type> 개체 가져오기
     - `checked(x)`: checked 컨텍스트에서 식 계산
     - `unchecked(x)`: unchecked 컨텍스트에서 식 계산
     - `default(T)`: `T` 형식의 기본값 가져오기
@@ -102,4 +100,3 @@ ms.lasthandoff: 07/28/2017
 >[!div class="step-by-step"]
 [이전](types-and-variables.md)
 [다음](statements.md)
-

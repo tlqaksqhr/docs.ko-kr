@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - resource files, .resources files
 - resource files, .resx files
@@ -28,16 +22,15 @@ helpviewer_keywords:
 - binary resources files
 - embedding files in runtime binary executable
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: c9ece6deab2fa414861bdb7c76a2093464156395
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5dcafccd1046bd47616ae42c6ce8a117f341a83f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe(리소스 파일 생성기)
 리소스 파일 생성기(Resgen.exe)를 사용하면 텍스트 파일(.txt 또는 .restext)과 XML 기반 리소스 형식 파일(.resx)을 런타임 이진 실행 파일에 포함하거나 위성 어셈블리에 포함할 수 있는 공용 언어 런타임의 이진 파일(.resources)로 변환할 수 있습니다. [리소스 파일 만들기](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)를 참조하세요.  
@@ -345,9 +338,8 @@ resgen StringResources.txt /str:vb,,StringResources
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [도구](../../../docs/framework/tools/index.md)   
- [데스크톱 앱의 리소스](../../../docs/framework/resources/index.md)   
- [리소스 파일 만들기](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)   
- [Al.exe(어셈블리 링커)](../../../docs/framework/tools/al-exe-assembly-linker.md)   
+ [도구](../../../docs/framework/tools/index.md)  
+ [데스크톱 앱의 리소스](../../../docs/framework/resources/index.md)  
+ [리소스 파일 만들기](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  
+ [Al.exe(어셈블리 링커)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
  [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

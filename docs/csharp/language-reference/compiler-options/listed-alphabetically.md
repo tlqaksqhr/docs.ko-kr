@@ -1,41 +1,23 @@
 ---
 title: "C# 컴파일러 옵션 사전순 목록"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - compiler options [C#], listed alpabetically
 - C# language, compiler options listed alphabitically
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 590253cc2899bc9efac9ce742d864195963a2b1c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 8e8d01587ccde967b8484b3b61916f8cf437f6c0
-ms.openlocfilehash: 8a32dcab0a64fdb715871806088825e227f08abb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>C# 컴파일러 옵션 사전순 목록
 여기에서는 컴파일러 옵션을 사전순으로 정렬합니다. 범주별 목록을 보려면 [C# 컴파일러 옵션 범주별 목록](../../../csharp/language-reference/compiler-options/listed-by-category.md)을 참조하세요.  
@@ -100,8 +82,7 @@ ms.lasthandoff: 09/19/2017
 |[/win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md)|win32 리소스 파일(.res)을 지정합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)   
- [범주별 C# 컴파일러 옵션 목록](../../../csharp/language-reference/compiler-options/listed-by-category.md)   
- [방법: Visual Studio 명령줄에 필요한 환경 변수 설정](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)   
+ [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)  
+ [범주별 C# 컴파일러 옵션 목록](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
+ [방법: Visual Studio 명령줄에 필요한 환경 변수 설정](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
  [\<compiler> 요소](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)
-

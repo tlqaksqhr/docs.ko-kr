@@ -1,40 +1,22 @@
 ---
 title: "종료자(C# 프로그래밍 가이드)"
-ms.date: 2017-05-10
+ms.date: 05/10/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - ~ [C#], in finalizers
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: b1efe92c371e44eb2d650eb07facc3e7030e9766
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 43bb7e6488da5eda863e7ad70b25c9bf55bebb52
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="finalizers-c-programming-guide"></a>종료자(C# 프로그래밍 가이드)
 종료자는 클래스의 인스턴스를 소멸하는 데 사용됩니다.  
@@ -53,11 +35,11 @@ ms.lasthandoff: 07/28/2017
   
  예를 들어 다음은 `Car` 클래스에 대한 종료자의 선언입니다.
   
- [!code-cs[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_1.cs)]  
+ [!code-csharp[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_1.cs)]  
 
 다음 예제와 같이 종료자를 식 본문 정의로 구현할 수도 있습니다.
 
-[!code-cs[expression-bodied-finalizer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-destructor.cs#1)]  
+[!code-csharp[expression-bodied-finalizer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-destructor.cs#1)]  
   
  종료자는 개체의 기본 클래스에서 <xref:System.Object.Finalize%2A>를 암시적으로 호출합니다. 따라서 종료자 호출은 다음 코드로 암시적으로 변환됩니다.  
   
@@ -101,14 +83,13 @@ protected override void Finalize()
 ## <a name="example"></a>예제  
  다음 예제에서는 상속 체인을 구성하는 세 가지 클래스를 만듭니다. `First` 클래스는 기본 클래스이고, `Second`는 `First`에서 파생되며, `Third`는 `Second`에서 파생됩니다. 세 클래스 모두 종료자가 있습니다. `Main`에서 최다 파생 클래스의 인스턴스가 만들어집니다. 프로그램이 실행되면 세 클래스에 대한 종료자가 최다 파생부터 최소 파생까지 순서대로 자동으로 호출됩니다.  
   
- [!code-cs[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
+ [!code-csharp[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.IDisposable>   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [생성자](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
+ <xref:System.IDisposable>  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [생성자](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
  [가비지 수집](../../../standard/garbage-collection/index.md)
-

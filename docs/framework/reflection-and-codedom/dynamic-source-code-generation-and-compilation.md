@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - source code in multiple languages
 - languages, multiple language support by CodeDOM
 ms.assetid: d077a3e8-bd81-4bdf-b6a3-323857ea30fb
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: f1eb17af8fef96f42973e65859bd17b1e835fa98
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dynamic-source-code-generation-and-compilation"></a>동적 소스 코드 생성 및 컴파일
 .NET Framework에는 소스 코드를 내보내는 프로그램 개발자가 렌더링할 코드를 나타내는 단일 모델을 기반으로 런타임에 여러 가지 프로그래밍 언어로 소스 코드를 생성할 수 있는 CodeDOM(코드 문서 개체 모델) 메커니즘이 포함됩니다.  
@@ -63,4 +61,3 @@ ms.lasthandoff: 07/28/2017
 ## <a name="related-sections"></a>관련 단원  
  [CodeDOM 빠른 참조](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524)  
  개발자가 소스 코드 요소를 나타내는 CodeDOM 요소를 빠르게 찾을 수 있는 방법을 제공합니다.
-

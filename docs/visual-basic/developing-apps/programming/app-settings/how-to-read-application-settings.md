@@ -1,43 +1,25 @@
 ---
 title: "방법: Visual Basic에서 응용 프로그램 설정 읽기"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - reading application settings
-- My.Settings object, reading application settings
-- application settings, reading
+- My.Settings object [Visual Basic], reading application settings
+- application settings [Visual Basic], reading
 ms.assetid: eb3428ef-115e-49a8-a878-e0613183fee0
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: ea6cfc529262053daf7c8111271de2c51e9cab4e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e18c1da475ac7945a8bf080aad3ba2905d5d8658
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-read-application-settings-in-visual-basic"></a>방법: Visual Basic에서 응용 프로그램 설정 읽기
 `My.Settings` 개체에서 설정의 속성에 액세스하여 사용자 설정을 읽을 수 있습니다.  
@@ -52,9 +34,8 @@ ms.lasthandoff: 07/28/2017
  이 예제가 작동하려면 응용 프로그램에 `String` 형식의 `Nickname` 설정이 있어야 합니다. 자세한 내용은 [응용 프로그램 설정 관리(.NET)](/visualstudio/ide/managing-application-settings-dotnet)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [My.Settings 개체](../../../../visual-basic/language-reference/objects/my-settings-object.md)   
- [방법: Visual Basic에서 사용자 설정 변경](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)   
- [방법: Visual Basic에서 사용자 설정 유지](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)   
- [방법: Visual Basic에서 사용자 설정의 속성 표 만들기](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)   
+ [My.Settings 개체](../../../../visual-basic/language-reference/objects/my-settings-object.md)  
+ [방법: Visual Basic에서 사용자 설정 변경](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)  
+ [방법: Visual Basic에서 사용자 설정 유지](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)  
+ [방법: Visual Basic에서 사용자 설정의 속성 표 만들기](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)  
  [응용 프로그램 설정 관리(.NET)](/visualstudio/ide/managing-application-settings-dotnet)
-

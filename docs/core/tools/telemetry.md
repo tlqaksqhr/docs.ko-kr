@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 480df976-7568-4df4-9d26-9911357b5a31
+ms.openlocfilehash: 34183792a235391f66fbec211ff00f06f85134fa
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: c58ed1b3c09f1e358d0b66f6cf7186821601fd69
-ms.openlocfilehash: 8ea8ee44a58c6aabfd09afbc7ef53239a9029c57
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-core-cli-tools-telemetry"></a>.NET Core CLI 도구 원격 분석
 
 [.NET Core SDK](index.md)에는 사용 정보를 수집하는 [원격 분석 기능](https://github.com/dotnet/cli/pull/2145)이 포함되어 있습니다. .NET 팀이 개선을 위해 도구 사용 방법을 이해하는 것이 중요합니다. 자세한 내용은 [What we've learned from .NET Core SDK Telemetry](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/)(.NET Core SDK 원격 분석에서 배운 내용)를 참조하세요.
@@ -39,6 +37,7 @@ ms.lasthandoff: 08/12/2017
 - `dotnet pack`
 - `dotnet restore`
 - `dotnet run`
+
 
 ## <a name="behavior"></a>동작
 
@@ -135,4 +134,3 @@ You can read more about .NET Core tools telemetry @ https://aka.ms/dotnet-cli-te
 [What we've learned from .NET Core SDK Telemetry](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/)(.NET Core SDK 원격 분석에서 배운 내용)  
 [Telemetry reference source (dotnet/cli repo; release/2.0.0 branch)](https://github.com/dotnet/cli/blob/release/2.0.0/src/dotnet/Telemetry.cs) (원격 분석 참조 소스(dotnet/cli 리포지토리, 릴리스/2.0.0 분기))  
 [.NET Core SDK Usage Data](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)(.NET Core SDK 사용 데이터)
-

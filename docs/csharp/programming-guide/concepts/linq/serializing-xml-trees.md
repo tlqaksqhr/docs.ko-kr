@@ -1,30 +1,21 @@
 ---
 title: "XML 트리 serialize(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: b3937e54-4ce9-4236-ac96-14e7972aa594
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 27001dbc92afddc35be12b593f5ba082c29af5f0
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f3b8ee68065a056cccbf02d96bf5f21e7ccea16b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="serializing-xml-trees-c"></a>XML 트리 serialize(C#)
 XML 트리를 serialize하는 것은 XML 트리에서 XML을 생성하는 것을 의미합니다. 파일, <xref:System.IO.TextWriter> 클래스의 구체적 구현 또는 <xref:System.Xml.XmlWriter>의 구체적 구현으로 serialize할 수 있습니다.  
@@ -42,4 +33,3 @@ XML 트리를 serialize하는 것은 XML 트리에서 XML을 생성하는 것을
   
 ## <a name="see-also"></a>참고 항목  
  [프로그래밍 가이드(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
-

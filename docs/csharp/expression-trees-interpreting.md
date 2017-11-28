@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: e7c5f7404546c6f3812fc5cc3d0320c77816634d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="interpreting-expressions"></a>식 해석
 
 [이전 -- 식 실행](expression-trees-execution.md)
@@ -58,7 +56,7 @@ The value of the constant value is 24
 Expression<Func<int>> sum = () => 1 + 2;
 ```
 
-> `var`을(를) 사용하여 이 식 트리를 선언하지 않습니다. 왜냐하면 할당의 오른쪽이 암시적으로 형식화되어 있기 때문에 그렇게 할 수 없습니다. 이 사항을 좀더 자세히 이해하려면 [여기](implicitly-typed-lambda-expressions.md)를 읽어보세요.
+> `var`을 사용하여 이 식 트리를 선언하지 않습니다. 왜냐하면 할당의 오른쪽이 암시적으로 형식화되어 있기 때문에 그렇게 할 수 없습니다. 이 사항을 좀더 자세히 이해하려면 [여기](implicitly-typed-lambda-expressions.md)를 읽어보세요.
 
 루트 노드는 `LambdaExpression`입니다. `=>` 연산자의 오른쪽에서 흥미로운 코드를 가져오려면 `LambdaExpression`의 자식 중 하나를 찾아야 합니다. 이 섹션에서는 모든 식을 사용하여 찾습니다. 부모 노드는 `LambdaExpression`의 반환 형식을 찾는 데 도움이 됩니다.
 
@@ -529,4 +527,3 @@ The expression body is:
 이러한 제한 사항에도 불구하고 식 트리를 읽고 이해하는 알고리즘 작성을 완료해야 합니다.
 
 [다음 -- 식 작성](expression-trees-building.md)
-

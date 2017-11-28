@@ -1,33 +1,25 @@
 ---
-title: "전역 네임 스페이스 (Visual Basic) (LINQ to XML) 작업 | Microsoft 문서"
+title: "전역 네임스페이스 작업(Visual Basic)(LINQ to XML)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 0a8064d5-e02f-4315-ad48-6deaa443a2f0
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e20d0c0b670d63ebe2be137a48dc1a1a9a861b9f
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 376a6d2dfbca22fb8efc6395f478839d716e14d4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>전역 네임스페이스 작업(Visual Basic)(LINQ to XML)
-사용 하 여 XML 네임 스페이스를 선언 하는 기능에는 Visual Basic에서 XML 리터럴의 주요 기능 중 하나는 `Imports` 문입니다. 이 기능을 사용하여 접두사를 사용하는 XML 네임스페이스를 선언하거나 기본 XML 네임스페이스를 선언할 수 있습니다.  
+사용 하 여 XML 네임 스페이스를 선언 하는 기능에는 Visual Basic에서 XML 리터럴의 주요 기능 중 하나는 `Imports` 문. 이 기능을 사용하여 접두사를 사용하는 XML 네임스페이스를 선언하거나 기본 XML 네임스페이스를 선언할 수 있습니다.  
   
  이 기능은 두 가지 상황에서 유용합니다. 첫째, XML 리터럴에서 선언된 네임스페이스는 포함 식에까지 영향을 미치지 않습니다. 전역 네임스페이스를 선언하면 네임스페이스와 함께 포함 식을 사용하기 위해 수행해야 하는 작업량이 줄어듭니다. 둘째, XML 속성과 함께 네임스페이스를 사용하기 위해 전역 네임스페이스를 선언해야 합니다.  
   
@@ -35,10 +27,10 @@ ms.lasthandoff: 03/13/2017
   
  전역적으로 선언된 네임스페이스에 있는 XML 속성이나 XML 리터럴을 사용하는 경우 Visual Studio에서 XML 속성이나 XML 리터럴을 마우스로 가리키면 확장된 이름을 볼 수 있습니다. 도구 설명에 확장된 이름이 표시됩니다.  
   
- 가져올 수는 <xref:System.Xml.Linq.XNamespace>사용 하 여 전역 네임 스페이스에 해당 하는 개체는 `GetXmlNamespace` 메서드.</xref:System.Xml.Linq.XNamespace>  
+ <xref:System.Xml.Linq.XNamespace> 메서드를 사용하여 전역 네임스페이스에 해당하는 `GetXmlNamespace` 개체를 가져올 수 있습니다.  
   
 ## <a name="examples-of-global-namespaces"></a>전역 네임스페이스의 예제  
- 사용 하 여 기본 전역 네임 스페이스를 선언 하는 다음 예제는 `Imports` 문 및 XML 리터럴을 사용 하 여 초기화 하는 <xref:System.Xml.Linq.XElement>해당 네임 스페이스의 개체:</xref:System.Xml.Linq.XElement>  
+ 다음 예제에서는 `Imports` 문을 사용하여 기본 전역 네임스페이스를 선언한 다음 XML 리터럴을 사용하여 해당 네임스페이스에서 <xref:System.Xml.Linq.XElement> 개체를 초기화합니다.  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -194,7 +186,7 @@ End Module
 ```  
   
 ## <a name="xnamespace-and-global-namespaces"></a>XNamespace 및 전역 네임스페이스  
- 가져올 수는 <xref:System.Xml.Linq.XNamespace>사용 하 여 개체는 `GetXmlNamespace` 메서드:</xref:System.Xml.Linq.XNamespace>  
+ <xref:System.Xml.Linq.XNamespace> 메서드를 사용하여 `GetXmlNamespace` 개체를 가져올 수 있습니다.  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  

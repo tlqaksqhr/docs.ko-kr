@@ -11,16 +11,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 92d2de20-79be-4df1-b182-144143a8866a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 8749e2d7b91e611ee153c6f36708fa34a44ecccd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: caaaafaff44f2a679b16fe3f1aae59bcf717388e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="mitigation-pool-blocking-period"></a>완화: 풀 차단 기간
 Azure SQL 데이터베이스 연결에 대한 연결 풀 차단 기간이 제거되었습니다.  
@@ -34,7 +33,7 @@ Azure SQL 데이터베이스 연결에 대한 연결 풀 차단 기간이 제거
  이 변경은 Azure SQL 데이터베이스에 대한 연결 열기 시도를 즉시 다시 시도하도록 하여 클라우드 지원 응용 프로그램의 성능을 향상시킵니다.  
   
 ## <a name="mitigation"></a>완화  
- 이 변경으로 인해 문제가 발생하는 앱의 경우 새로운 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A> 속성을 설정하여 연결 풀 차단 기간을 구성할 수 있습니다.  속성의 값은 다음의 세 값 중 하나를 사용할 수 있는 <xref:System.Data.SqlClient.PoolBlockingPeriod?displayProperty=fullName> 열거형의 멤버입니다.  
+ 이 변경으로 인해 문제가 발생하는 앱의 경우 새로운 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A> 속성을 설정하여 연결 풀 차단 기간을 구성할 수 있습니다.  속성의 값은 다음의 세 값 중 하나를 사용할 수 있는 <xref:System.Data.SqlClient.PoolBlockingPeriod?displayProperty=nameWithType> 열거형의 멤버입니다.  
   
 -   `PoolBlockingPeriod.AlwaysBlock` 
   
@@ -46,4 +45,3 @@ Azure SQL 데이터베이스 연결에 대한 연결 풀 차단 기간이 제거
   
 ## <a name="see-also"></a>참고 항목  
  [런타임 변경 내용](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6-2.md)
-

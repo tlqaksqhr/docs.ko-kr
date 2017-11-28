@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - MSIL generators
 - metadata, MSIL Assembler
@@ -24,16 +18,15 @@ helpviewer_keywords:
 - Ilasm.exe
 - verifying MSIL performance
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 4b95f3d70c7329efd1affcb333ac6eee08cc29d3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fba6c6a912cc9d2df9e1b9b11790840f782922d5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe(IL 어셈블러)
 
@@ -248,4 +241,3 @@ public class Hello
 [*Ildasm.exe* (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)(Ildasm.exe(IL 디스어셈블러))  
 [관리되는 실행 프로세스](../../../docs/standard/managed-execution-process.md)  
 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

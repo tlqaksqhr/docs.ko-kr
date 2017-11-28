@@ -7,12 +7,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: d66738593a1542affc956e08bbc38a3b2b1841b9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: f56b571e61f82132718ecf5890024c0f1c177227
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core CLI(명령줄 인터페이스) 도구
 
@@ -122,6 +121,7 @@ dotnet build --output /build_output
 dotnet /build_output/my_app.dll
 ```
 
+
 ---
 
 ### <a name="driver"></a>드라이버
@@ -150,5 +150,5 @@ Preview 2 도구를 사용하여 *project.json* 기반 프로젝트를 생성하
 
 ## <a name="see-also"></a>참고 항목
 
- [dotnet/CLI GitHub 리포지토리](https://github.com/dotnet/cli/)   
- [.NET Core 설치 가이드](https://aka.ms/dotnetcoregs)   
+ [dotnet/CLI GitHub 리포지토리](https://github.com/dotnet/cli/)  
+ [.NET Core 설치 가이드](https://aka.ms/dotnetcoregs)  

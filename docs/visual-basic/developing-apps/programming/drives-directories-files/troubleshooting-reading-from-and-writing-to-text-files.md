@@ -1,46 +1,28 @@
 ---
 title: "문제 해결: 텍스트 파일 읽기 및 쓰기(Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - troubleshooting file I/O
-- writing text to files, troubleshooting
+- writing text to files [Visual Basic], troubleshooting
 - troubleshooting Visual Basic, text files
 - I/O [Visual Basic], troubleshooting text files
-- writing to files, troubleshooting
-- reading text files, troubleshooting
+- writing to files [Visual Basic], troubleshooting
+- reading text files [Visual Basic], troubleshooting
 ms.assetid: a8e9b44d-facb-4718-8c0f-466537171182
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e836f79cd05dbaa180cc7bf5413ce57004e3500b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7f1d26df53445ee9711ebb2840071d2560c5380d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="troubleshooting-reading-from-and-writing-to-text-files-visual-basic"></a>문제 해결: 텍스트 파일 읽기 및 쓰기(Visual Basic)
 이 항목에서는 텍스트 파일로 작업할 때 발생하는 일반적인 문제를 설명하고 각 문제에 대한 접근 방법을 제안합니다.  
@@ -58,8 +40,7 @@ ms.lasthandoff: 07/28/2017
  파일 경로, 특히 상대 경로를 구문 분석할 때 잘못된 데이터를 제공하기 쉽습니다. 올바른 경로를 제공하면 많은 문제를 해결할 수 있습니다. 자세한 내용은 [방법: 파일 경로의 구문 분석](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>   
- [파일 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)   
- [파일에 쓰기](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)   
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
+ [파일 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
+ [파일에 쓰기](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
  [TextFieldParser 개체를 사용하여 텍스트 파일 구문 분석](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
-

@@ -1,42 +1,24 @@
 ---
 title: "방법: 디렉터리 트리 반복(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c4851938aafefd93aa9189aecbb3f5cdd9a09ea0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 562431f525cc58b5d630671c9015e30a14ea06ee
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>방법: 디렉터리 트리 반복(C# 프로그래밍 가이드)
-"디렉터리 트리 반복" 구는 지정된 루트 폴더 아래의 임의 깊이까지 중첩된 각 하위 디렉터리에 있는 각 파일에 대한 액세스를 의미합니다. 반드시 각 파일을 열 필요는 없습니다. 단순히 파일 또는 하위 디렉터리의 이름을 `string`으로 검색하거나, <xref:System.IO.FileInfo?displayProperty=fullName> 또는 <xref:System.IO.DirectoryInfo?displayProperty=fullName> 개체의 형태로 추가 정보를 검색할 수 있습니다.  
+"디렉터리 트리 반복" 구는 지정된 루트 폴더 아래의 임의 깊이까지 중첩된 각 하위 디렉터리에 있는 각 파일에 대한 액세스를 의미합니다. 반드시 각 파일을 열 필요는 없습니다. 단순히 파일 또는 하위 디렉터리의 이름을 `string`으로 검색하거나, <xref:System.IO.FileInfo?displayProperty=nameWithType> 또는 <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> 개체의 형태로 추가 정보를 검색할 수 있습니다.  
   
 > [!NOTE]
 >  Windows에서 "디렉터리" 및 "폴더" 용어는 같은 의미로 사용됩니다. 대부분의 설명서와 사용자 인터페이스 텍스트는 "폴더"라는 용어를 사용하지만 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 클래스 라이브러리는 "디렉터리"라는 용어를 사용합니다.  
@@ -63,14 +45,14 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
   
  처리되는 특정 예외와 각 파일 또는 폴더에서 수행되는 특정 작업은 예로만 제공됩니다. 특정 요구 사항에 맞게 이 코드를 수정해야 합니다. 자세한 내용은 코드 주석을 참조하세요.  
   
- [!code-cs[csFilesandFolders#1](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_1.cs)]  
+ [!code-csharp[csFilesandFolders#1](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_1.cs)]  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 재귀를 사용하지 않고 디렉터리 트리의 파일 및 폴더를 반복하는 방법을 보여 줍니다. 이 기술은 LIFO(후입선출) 스택인 제네릭 <xref:System.Collections.Generic.Stack%601> 컬렉션 형식을 사용합니다.  
   
  처리되는 특정 예외와 각 파일 또는 폴더에서 수행되는 특정 작업은 예로만 제공됩니다. 특정 요구 사항에 맞게 이 코드를 수정해야 합니다. 자세한 내용은 코드 주석을 참조하세요.  
   
- [!code-cs[csFilesandFolders#2](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_2.cs)]  
+ [!code-csharp[csFilesandFolders#2](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_2.cs)]  
   
  일반적으로 모든 폴더를 테스트하여 응용 프로그램에 폴더를 열 수 있는 권한이 있는지 확인하려면 너무 많은 시간이 걸립니다. 따라서 코드 예제에서는 해당 작업 부분을 `try/catch` 블록으로 묶습니다. 폴더에 대한 액세스가 거부될 경우 사용 권한을 높인 후 다시 액세스를 시도하도록 `catch` 블록을 수정할 수 있습니다. 일반적으로 응용 프로그램을 알 수 없는 상태로 유지하지 않고 처리할 수 있는 예외만 catch합니다.  
   
@@ -80,7 +62,6 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  강력한 파일 반복 코드는 파일 시스템의 여러 복잡성을 고려해야 합니다. 자세한 내용은 [NTFS 기술 참조](http://go.microsoft.com/fwlink/?LinkId=79488)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.IO>   
- [LINQ 및 파일 디렉터리](http://msdn.microsoft.com/library/5a5d516c-0279-4a84-ac84-b87f54caa808)   
+ <xref:System.IO>  
+ [LINQ 및 파일 디렉터리](http://msdn.microsoft.com/library/5a5d516c-0279-4a84-ac84-b87f54caa808)  
  [파일 시스템 및 레지스트리(C# 프로그래밍 가이드)](../../../csharp/programming-guide/file-system/index.md)
-

@@ -1,42 +1,22 @@
 ---
 title: "방법: 문자열을 DateTime으로 변환(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- strings [C#], converting to DateTIme
+helpviewer_keywords: strings [C#], converting to DateTIme
 ms.assetid: 88abef11-3a06-4b49-8dd2-61ed0e876fc3
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: b459f245f0090fff16918bceb12a0082f6944331
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 15ef1ec4debf242cdabc42f26add890bd4b61507
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="how-to-convert-a-string-to-a-datetime-c-programming-guide"></a>방법: 문자열을 DateTime으로 변환(C# 프로그래밍 가이드)
-사용자가 날짜를 문자열 값으로 입력할 수 있도록 하는 프로그램에서 일반적으로 사용됩니다. 문자열 기반 날짜를 <xref:System.DateTime?displayProperty=fullName> 개체로 변환하려면 다음 예제와 같이 <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName> 메서드 또는 <xref:System.DateTime.Parse%28System.String%29?displayProperty=fullName> 정적 메서드를 사용할 수 있습니다.  
+사용자가 날짜를 문자열 값으로 입력할 수 있도록 하는 프로그램에서 일반적으로 사용됩니다. 문자열 기반 날짜를 <xref:System.DateTime?displayProperty=nameWithType> 개체로 변환하려면 다음 예제와 같이 <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=nameWithType> 메서드 또는 <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> 정적 메서드를 사용할 수 있습니다.  
   
  **문화권**.  세계의 각 문화권은 서로 다른 방법으로 날짜 문자열을 작성합니다.  예를 들어 미국에서 01/20/2008은 2008년 1월 20일입니다.  프랑스에서는 InvalidFormatException이 발생합니다. 이는 프랑스에서는 날짜-시간을 일/월/연도로 읽고 미국에서는 월/일/연도이기 때문입니다.  
   
@@ -46,7 +26,7 @@ ms.lasthandoff: 07/28/2017
   
  문자열을 dateTime으로 변환하는 간단한 예는 아래 예제를 참조하세요.  
   
- 날짜 문자열의 자세한 예는 <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=fullName>을 참조하세요.  
+ 날짜 문자열의 자세한 예는 <xref:System.Convert.ToDateTime%28System.String%29?displayProperty=nameWithType>을 참조하세요.  
   
 ```csharp  
 string dateTime = "01/08/2008 14:50:50.42";  
@@ -70,8 +50,7 @@ Press any key to continue . . .
 ```  
   
 ## <a name="example"></a>예제  
- [!code-cs[csProgGuideStrings#13](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-convert-a-string-to-a-datetime_1.cs)]  
+ [!code-csharp[csProgGuideStrings#13](../../../csharp/programming-guide/strings/codesnippet/CSharp/how-to-convert-a-string-to-a-datetime_1.cs)]  
   
 ## <a name="see-also"></a>참고 항목  
  [문자열](../../../csharp/programming-guide/strings/index.md)
-

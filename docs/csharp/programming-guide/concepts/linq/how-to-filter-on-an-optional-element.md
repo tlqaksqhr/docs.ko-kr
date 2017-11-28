@@ -1,25 +1,21 @@
 ---
 title: "방법: 선택적 요소로 필터링(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: dc1b5384add88db209a71ec56dc1c5edf4caecb3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d0d849bb8c6174408810f2d2192faea6db6afd5b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-filter-on-an-optional-element-c"></a>방법: 선택적 요소로 필터링(C#)
 요소가 XML 문서에 있는지 확실하지 않은 경우에도 해당 요소를 기준으로 필터링하려는 경우가 있습니다. 특정 요소에 자식 요소가 없는 경우 이 요소를 기준으로 필터링하여 null 참조 예외를 트리거하지 않도록 검색을 수행해야 합니다. 다음 예제에서는 `Child5` 요소에 `Type` 자식 요소가 없지만 쿼리가 여전히 제대로 실행됩니다.  
@@ -108,10 +104,9 @@ Child Four Text
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=fullName>   
- <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=fullName>   
- <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=fullName>   
- [기본 쿼리(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)   
- [표준 쿼리 연산자 개요(C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
+ <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>  
+ <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>  
+ <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>  
+ [기본 쿼리(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
+ [표준 쿼리 연산자 개요(C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
  [프로젝션 작업(C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
-

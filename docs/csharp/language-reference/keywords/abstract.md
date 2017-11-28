@@ -1,41 +1,22 @@
 ---
 title: "abstract(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - abstract
 - abstract_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- abstract keyword [C#]
+helpviewer_keywords: abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 785c23294abdbfa0684560a38fbd0279200a7d02
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a109a8e37f84a2e91229bfce789a69cdc26adba9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="abstract-c-reference"></a>abstract(C# 참조)
 `abstract` 한정자는 수정되는 항목에 누락되거나 불완전한 구현이 있음을 나타냅니다. abstract 한정자는 클래스, 메서드, 속성, 인덱서 및 이벤트와 함께 사용될 수 있습니다. 클래스 선언에서 `abstract` 한정자를 사용하여 클래스가 다른 클래스의 기본 클래스로만 사용됨을 나타냅니다. abstract로 표시되거나 추상 클래스에 포함된 멤버는 추상 클래스에서 파생 클래스에 의해 구현되어야 합니다.  
@@ -43,7 +24,7 @@ ms.lasthandoff: 09/25/2017
 ## <a name="example"></a>예제  
  이 예제에서 `Square` 클래스는 `ShapesClass`에서 파생되므로 `Area` 구현을 제공해야 합니다.  
   
- [!code-cs[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_1.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_1.cs)]  
   
  다음 기능이 있는 추상 클래스:  
   
@@ -85,12 +66,12 @@ ms.lasthandoff: 09/25/2017
   
  인터페이스를 구현하는 추상 클래스는 인터페이스 메서드를 추상 메서드에 매핑할 수 있습니다. 예:  
   
- [!code-cs[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_2.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_2.cs)]  
   
 ## <a name="example"></a>예제  
  이 예제에서 `DerivedClass` 클래스는 추상 클래스 `BaseClass`에서 파생됩니다. 추상 클래스에는 추상 메서드 `AbstractMethod` 및 두 개의 추상 속성 `X` 및 `Y`가 포함됩니다.  
   
- [!code-cs[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_3.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/abstract_3.cs)]  
   
  앞의 예제에서 다음과 같이 문을 사용하여 추상 클래스를 인스턴스화하려고 하면,  
   
@@ -104,10 +85,9 @@ BaseClass bc = new BaseClass();   // Error
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [한정자](../../../csharp/language-reference/keywords/modifiers.md)   
- [virtual](../../../csharp/language-reference/keywords/virtual.md)   
- [override](../../../csharp/language-reference/keywords/override.md)   
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [한정자](../../../csharp/language-reference/keywords/modifiers.md)  
+ [virtual](../../../csharp/language-reference/keywords/virtual.md)  
+ [override](../../../csharp/language-reference/keywords/override.md)  
  [C# 키워드](../../../csharp/language-reference/keywords/index.md)
-

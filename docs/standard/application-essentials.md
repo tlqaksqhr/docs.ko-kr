@@ -8,19 +8,17 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- .NET Framework development
+helpviewer_keywords: .NET Framework development
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 318bf7a77748dfcee5f28243409d31e8d3e5c9ff
 ms.openlocfilehash: 00bc12a16418038c74a5e8858a77818e66982727
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="net-framework-application-essentials"></a>.NET Framework 응용 프로그램 주요 사항
 .NET Framework 설명서의 이 섹션은 .NET Framework의 기본 응용 프로그램 개발 작업에 대한 정보를 제공합니다.  
@@ -77,4 +75,3 @@ ms.lasthandoff: 08/21/2017
   
  [보안](../../docs/standard/security/index.md)  
  안전한 응용 프로그램 개발을 용이하게 하는 .NET Framework와 공용 언어 런타임의 클래스 및 서비스에 대한 정보를 제공합니다.
-

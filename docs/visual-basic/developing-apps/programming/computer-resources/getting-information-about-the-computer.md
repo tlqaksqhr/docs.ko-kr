@@ -1,41 +1,22 @@
 ---
 title: "컴퓨터에 대한 정보 가져오기(Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- My.Computer.Info object, tasks
+helpviewer_keywords: My.Computer.Info object [Visual Basic], tasks
 ms.assetid: 13c145bc-5c85-4fea-a5dd-2ca8681a0252
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 8644392270993c32fb2ee57d59437d72ba28220d
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8dee43f87a7a09f9b5cd77d5df5c2d0d8c6d4062
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/22/2017
 ---
 # <a name="getting-information-about-the-computer-visual-basic"></a>컴퓨터에 대한 정보 가져오기(Visual Basic)
 `My.Computer.Info` 개체는 컴퓨터의 메모리, 로드된 어셈블리, 이름 및 운영 체제에 대한 정보를 가져오기 위한 속성을 제공합니다.  
@@ -53,4 +34,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.VisualBasic.Devices.ServerComputer.Info%2A>
-

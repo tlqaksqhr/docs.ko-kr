@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - application protocols, sockets
 - sending data, sockets
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6d18e1f2575481522e54c6c50256418ac026dfb7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 3df78be14da96d0bb7b8875a5c7532c003d1dbc8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-client-sockets"></a>클라이언트 소켓 사용
 <xref:System.Net.Sockets.Socket>을 통해 대화를 시작하려면 먼저 응용 프로그램과 원격 장치 간에 데이터 파이프를 만들어야 합니다. 다른 네트워크 주소 패밀리 및 프로토콜이 있어도 이 예제에서는 원격 서비스에 대한 TCP/IP 연결을 만드는 방법을 보여 줍니다.  
@@ -90,8 +87,7 @@ try {
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [동기 클라이언트 소켓 사용](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)   
- [비동기 클라이언트 소켓 사용](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)   
- [방법: 소켓 만들기](../../../docs/framework/network-programming/how-to-create-a-socket.md)   
+ [동기 클라이언트 소켓 사용](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
+ [비동기 클라이언트 소켓 사용](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
+ [방법: 소켓 만들기](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
  [소켓](../../../docs/framework/network-programming/sockets.md)
-

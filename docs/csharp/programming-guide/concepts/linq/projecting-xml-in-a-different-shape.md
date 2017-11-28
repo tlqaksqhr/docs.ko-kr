@@ -1,25 +1,21 @@
 ---
 title: "여러 모양으로 XML 프로젝션(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 54eb890e37634362af715c132bfe43b7addb20b4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e5de9010f35ee5a7537e99f19369d0b84422df03
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>여러 모양으로 XML 프로젝션(C#)
 이 항목에서는 소스 XML과 다른 모양으로 XML을 프로젝션하는 예제를 보여 줍니다.  
@@ -31,7 +27,7 @@ ms.lasthandoff: 07/28/2017
   
  이 예제의 소스 문서 만들기에 대한 지침은 [원본 Office Open XML 문서 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)를 참조하세요.  
   
- 이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=fullName> 네임스페이스의 형식을 사용합니다.  
+ 이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -249,4 +245,3 @@ class Program
   
 ## <a name="see-also"></a>참고 항목  
  [자습서: WordprocessingML 문서에서 내용 조작(C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-

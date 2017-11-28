@@ -1,30 +1,21 @@
 ---
 title: "공통 특성(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: aded9c9b2e8c253eebd6c71782f0bff6ca0104ea
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 98bb21ef0b5582202578b72fd6eaf459801747cc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="common-attributes-c"></a>공통 특성(C#)
 이 항목에서는 C# 프로그램에서 가장 일반적으로 사용되는 특성을 설명합니다.  
@@ -67,7 +58,7 @@ ms.lasthandoff: 07/28/2017
 |<xref:System.Reflection.AssemblyFlagsAttribute>|어셈블리가 같은 컴퓨터, 같은 프로세스 또는 같은 응용 프로그램 도메인에서 Side-by-side 실행을 지원하는지 지정합니다.|  
   
 ### <a name="informational-attributes"></a>정보 특성  
- 정보 특성을 사용하여 어셈블리에 대한 추가 회사 또는 제품 정보를 제공할 수 있습니다. 다음 표에서는 <xref:System.Reflection?displayProperty=fullName> 네임스페이스에 정의된 정보 특성을 보여 줍니다.  
+ 정보 특성을 사용하여 어셈블리에 대한 추가 회사 또는 제품 정보를 제공할 수 있습니다. 다음 표에서는 <xref:System.Reflection?displayProperty=nameWithType> 네임스페이스에 정의된 정보 특성을 보여 줍니다.  
   
 |특성|용도|  
 |---------------|-------------|  
@@ -80,7 +71,7 @@ ms.lasthandoff: 07/28/2017
 |<xref:System.CLSCompliantAttribute>|어셈블리가 CLS(공용 언어 사양)을 준수하는지 여부를 나타냅니다.|  
   
 ### <a name="assembly-manifest-attributes"></a>어셈블리 매니페스트 특성  
- 어셈블리 매니페스트 특성을 사용하여 어셈블리 매니페스트의 정보를 제공할 수 있습니다. 정보에는 제목, 설명, 기본 별칭 및 구성이 포함됩니다. 다음 표에서는 <xref:System.Reflection?displayProperty=fullName> 네임스페이스에 정의된 어셈블리 매니페스트 특성을 보여 줍니다.  
+ 어셈블리 매니페스트 특성을 사용하여 어셈블리 매니페스트의 정보를 제공할 수 있습니다. 정보에는 제목, 설명, 기본 별칭 및 구성이 포함됩니다. 다음 표에서는 <xref:System.Reflection?displayProperty=nameWithType> 네임스페이스에 정의된 어셈블리 매니페스트 특성을 보여 줍니다.  
   
 |특성|용도|  
 |---------------|-------------|  
@@ -236,7 +227,7 @@ class SampleClass
 ##  <a name="CallerInfo"></a> 호출자 정보 특성  
  호출자 정보 특성을 사용하여 메서드 호출자에 대한 정보를 얻을 수 있습니다. 소스 코드 파일 경로, 소스 코드 줄 번호 및 호출자의 멤버 이름을 얻을 수 있습니다.  
   
- 멤버 호출자 정보를 얻으려면 선택적 매개 변수에 적용되는 특성을 사용합니다. 각 선택적 매개 변수는 기본값을 지정합니다. 다음 표에서는 <xref:System.Runtime.CompilerServices?displayProperty=fullName> 네임스페이스에 정의된 호출자 정보 특성을 보여줍니다.  
+ 멤버 호출자 정보를 얻으려면 선택적 매개 변수에 적용되는 특성을 사용합니다. 각 선택적 매개 변수는 기본값을 지정합니다. 다음 표에서는 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 네임스페이스에 정의된 호출자 정보 특성을 보여줍니다.  
   
 |특성|설명|형식|  
 |---|---|---|  
@@ -247,10 +238,9 @@ class SampleClass
  호출자 정보 특성에 대한 자세한 내용은 [호출자 정보(C#)](../../../../csharp/programming-guide/concepts/caller-information.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Reflection>   
- <xref:System.Attribute>   
- [C# 프로그래밍 가이드](../../../../csharp/programming-guide/index.md)   
- [특성](https://msdn.microsoft.com/library/5x6cd29c)   
- [리플렉션(C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
+ <xref:System.Reflection>  
+ <xref:System.Attribute>  
+ [C# 프로그래밍 가이드](../../../../csharp/programming-guide/index.md)  
+ [특성](https://msdn.microsoft.com/library/5x6cd29c)  
+ [리플렉션(C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
  [리플렉션을 사용하여 특성 액세스(C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
-

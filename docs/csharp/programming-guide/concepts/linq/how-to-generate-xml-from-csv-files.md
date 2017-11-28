@@ -1,25 +1,21 @@
 ---
 title: "방법: CSV 파일에서 XML 생성(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 9ec534c53445a1c0568dae36d54d9140e0220057
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 749919868364d0f35bd60246460013b07c004643
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-generate-xml-from-csv-files-c"></a>방법: CSV 파일에서 XML 생성(C#)
 이 예제에서는 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 및 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]을 사용하여 CSV(쉼표로 구분된 값) 파일에서 XML 파일을 생성하는 방법을 보여 줍니다.  
@@ -121,4 +117,3 @@ Console.WriteLine(cust);
   
 ## <a name="see-also"></a>참고 항목  
  [프로젝션 및 변환(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
-

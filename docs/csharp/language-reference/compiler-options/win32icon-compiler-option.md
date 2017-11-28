@@ -1,42 +1,23 @@
 ---
 title: "-win32icon(C# 컴파일러 옵션)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /win32icon
-dev_langs:
-- CSharp
+f1_keywords: /win32icon
 helpviewer_keywords:
 - win32icon compiler option [C#]
 - /win32icon compiler option [C#]
 - -win32icon compiler option [C#]
 ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 3f9419470d2f00a9f69aae24e925fea53d90cf10
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: af5b9c3a44163167d932d378cbac4976e07eacbf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="win32icon-c-compiler-options"></a>/win32icon(C# 컴파일러 옵션)
 **/win32icon** 옵션은 .ico 파일을 출력 파일에 삽입하여 파일 탐색기에서 출력 파일을 원하는 모양으로 표시합니다.  
@@ -64,7 +45,7 @@ ms.lasthandoff: 07/28/2017
   
 3.  **응용 프로그램 아이콘** 속성을 수정합니다.  
   
- 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.ApplicationIcon%2A>을 참조하세요.  
+ 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.ApplicationIcon%2A>를 참조하세요.  
   
 ## <a name="example"></a>예제  
  `in.cs`를 컴파일하고 .ico 파일 `rf.ico`를 첨부하여 `in.exe`를 생성합니다.  
@@ -74,6 +55,5 @@ csc /win32icon:rf.ico in.cs
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)   
+ [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)  
  [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)
-

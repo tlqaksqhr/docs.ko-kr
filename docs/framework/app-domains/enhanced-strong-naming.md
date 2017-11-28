@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - strong-named assemblies
 - strong naming [.NET Framework], enhanced
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 429a54340cef6d608692abd71311c012afe9a3d0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="enhanced-strong-naming"></a>향상된 강력한 이름 지정
 강력한 이름 시그니처는 어셈블리를 식별하기 위한 .NET Framework의 ID 메커니즘입니다. 일반적으로 작성기(서명자)에서 수신자(검증 도구)로 전달되는 데이터의 무결성을 검사하는 데 사용되는 공개 키 디지털 시그니처입니다. 이 시그니처는 어셈블리의 고유 ID로 사용되고 어셈블리에 대한 참조가 모호하지 않은지 확인합니다. 어셈블리는 빌드 프로세스의 일부로 서명되고 나서 로드 시 확인됩니다.  
@@ -117,4 +115,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>참고 항목  
  [강력한 이름의 어셈블리 만들기 및 사용](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
-

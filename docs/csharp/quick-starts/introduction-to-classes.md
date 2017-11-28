@@ -8,11 +8,12 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: c2b267562f78b359d5ceaa696ff9a9bdcffa5821
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.custom: mvc
+ms.openlocfilehash: ff7cd60619f8583376442c202f27a4309790fff8
+ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="introduction-to-classes"></a>클래스 소개
 
@@ -149,7 +150,7 @@ using System.Collections.Generic;
 
 [!code-csharp[DepositAndWithdrawal](../../../samples/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal "Make deposits and withdrawals")]
 
-[`throw`](../language-reference/throw.md) 문은 예외를 **throw**합니다. 현재 메서드 실행이 끝나고 일치하는 `catch` 블록이 발견되면 메서드가 다시 실행됩니다. `catch` 블록을 추가하여 나중에 이 코드를 테스트합니다.
+[`throw`](../language-reference/keywords/throw.md) 문은 예외를 **throw**합니다. 현재 메서드 실행이 끝나고 일치하는 `catch` 블록이 발견되면 메서드가 다시 실행됩니다. `catch` 블록을 추가하여 나중에 이 코드를 테스트합니다.
 
 생성자는 잔액을 직접 업데이트하지 않고 초기 트랜잭션을 추가하도록 변경해야 합니다. `MakeDeposit` 메서드를 이미 작성했으므로 생성자에서 호출합니다. 완성된 생성자는 다음과 같아야 합니다.
 

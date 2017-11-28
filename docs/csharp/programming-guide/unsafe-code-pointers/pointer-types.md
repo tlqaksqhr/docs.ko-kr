@@ -1,39 +1,21 @@
 ---
 title: "포인터 형식(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
 ms.assetid: 3319faf9-336d-4148-9af2-1da2579cdd1e
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0699793e91199cc623c0d13e42937c8b919e992a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1a4ebc69762f18dc630100b544c18df0f43734ac
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="pointer-types-c-programming-guide"></a>포인터 형식(C# 프로그래밍 가이드)
 안전하지 않은 컨텍스트에서는 형식이 포인터 형식, 값 형식 또는 참조 형식이 될 수 있습니다. 포인터 형식 선언은 다음 형식 중 하나를 사용합니다.  
@@ -151,13 +133,12 @@ Console.ReadLine();
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [안전하지 않은 코드 및 포인터](../../../csharp/programming-guide/unsafe-code-pointers/index.md)   
- [포인터 변환](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md)   
- [포인터 식](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)   
- [형식](../../../csharp/language-reference/keywords/types.md)   
- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)   
- [fixed 문](../../../csharp/language-reference/keywords/fixed-statement.md)   
- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [안전하지 않은 코드 및 포인터](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
+ [포인터 변환](../../../csharp/programming-guide/unsafe-code-pointers/pointer-conversions.md)  
+ [포인터 식](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
+ [유형](../../../csharp/language-reference/keywords/types.md)  
+ [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
+ [fixed 문](../../../csharp/language-reference/keywords/fixed-statement.md)  
+ [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)  
  [boxing 및 unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
-

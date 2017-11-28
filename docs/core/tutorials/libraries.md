@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 9f6e8679-bd7e-4317-b3f9-7255a260d9cf
+ms.openlocfilehash: 21f8a4f4862cabd21ab9017056f3f71706e8e9a1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
-ms.openlocfilehash: c0525462ac5efaa8d96ac2bf4c12a823ef40df31
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="developing-libraries-with-cross-platform-tools"></a>플랫폼 간 도구로 라이브러리 개발
 
 이 문서에서는 플랫폼 간 CLI 도구를 사용하여 .NET용 라이브러리를 작성하는 방법을 다룹니다. CLI는 지원되는 운영 체제에서 작동하는 효율적인 하위 수준 환경을 제공합니다. Visual Studio로 라이브러리를 빌드할 수 있습니다. 그러한 환경을 선호하는 경우 [Visual Studio 설명서를 참조하세요](libraries-with-vs.md).
@@ -260,6 +258,8 @@ netstandard1.4/
    dotnet build
    ```
 
+   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 1. `dotnet test` 명령을 실행하여 xUnit가 실행되는지 확인합니다. MSTest를 사용하도록 선택한 경우 MSTest 콘솔 실행기가 대신 실행되어야 합니다.
     
 됐습니다! 이제 명령줄 도구를 사용하여 모든 플랫폼 라이브러리를 테스트할 수 있습니다. 이제 모든 것이 설정되어 계속해서 테스트하려는 경우 라이브러리 테스트는 매우 간단합니다.
@@ -342,4 +342,3 @@ $ dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ### <a name="structuring-a-solution"></a>솔루션 구성
 
 다중 프로젝트 솔루션의 또 다른 중요한 측면은 전체 프로젝트 구조를 올바르게 설정하는 것입니다. 코드를 원하는 대로 구성할 수 있으며, `dotnet sln add`를 사용하여 각 프로젝트를 솔루션 파일에 연결하기만 하면 솔루션 수준에서 `dotnet restore` 및 `dotnet build`를 실행할 수 있습니다.
-

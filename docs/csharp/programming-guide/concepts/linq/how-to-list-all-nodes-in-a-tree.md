@@ -1,25 +1,21 @@
 ---
 title: "방법: 트리의 모든 노드 나열(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 0db9d8f895bec9e4806bb267c91a1b9fc4500689
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ae2f34e085b0084d5cb589cfdd14562ca6f50bc1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-c"></a>방법: 트리의 모든 노드 나열(C#)
 경우에 따라 트리의 모든 노드를 나열하는 것이 유용합니다. 이것은 메서드나 속성이 트리에 미치는 영향을 정확히 확인할 때 유용할 수 있습니다. 텍스트 형식으로 모든 노드를 나열하는 한 가지 방법은 트리의 노드를 정확하고 특정하게 식별하는 XPath 식을 생성하는 것입니다.  
@@ -362,4 +358,3 @@ class Program
   
 ## <a name="see-also"></a>참고 항목  
  [고급 쿼리 기술(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
-

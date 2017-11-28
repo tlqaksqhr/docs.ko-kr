@@ -1,42 +1,24 @@
 ---
 title: "&lt;returns&gt;(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - returns
 - <returns>
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - <returns> C# XML tag
 - returns C# XML tag
 ms.assetid: bb2d9958-62fc-47c7-9511-6311171f119f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0313e9584ae6a94469db17e15f8b6b509b8aebd5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0a4001894ab9af104173088ca0110270f76bda8d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltreturnsgt-c-programming-guide"></a>&lt;returns&gt;(C# 프로그래밍 가이드)
 ## <a name="syntax"></a>구문  
@@ -55,9 +37,8 @@ ms.lasthandoff: 07/28/2017
  [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
 ## <a name="example"></a>예제  
- [!code-cs[csProgGuideDocComments#10](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/returns_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#10](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/returns_1.cs)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
  [문서 주석에 대한 권장 태그](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
-

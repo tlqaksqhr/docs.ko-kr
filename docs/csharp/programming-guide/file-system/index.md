@@ -1,40 +1,22 @@
 ---
 title: "파일 시스템 및 레지스트리(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - file system [C#]
 - registry [C#]
 - files [C#]
 ms.assetid: 0f2511cf-2b02-4b41-b001-b1754677c38f
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 3d1b4e3fa9b6c6da89abd242be855e9fb7c16dd6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6a9130fa666f8b2bce7762c5bd4a8b263d619aba
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="file-system-and-the-registry-c-programming-guide"></a>파일 시스템 및 레지스트리(C# 프로그래밍 가이드)
 다음 항목에서는 C# 및 .NET Framework를 사용하여 파일, 폴더 및 레지스트리에 대한 다양한 기본 작업을 수행하는 방법을 보여 줍니다.  
@@ -63,4 +45,3 @@ ms.lasthandoff: 07/28/2017
  [파일, 폴더 및 드라이브](../../../csharp/programming-guide/file-system/index.md)  
   
  <xref:System.IO?displayProperty=nameWithType>
-

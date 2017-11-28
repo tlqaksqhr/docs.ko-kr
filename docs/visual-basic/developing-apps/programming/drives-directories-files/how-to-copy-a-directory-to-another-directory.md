@@ -1,44 +1,26 @@
 ---
 title: "방법: Visual Basic에서 디렉터리를 다른 디렉터리에 복사"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - I/O [Visual Basic], copying directories
 - I/O [Visual Basic], copying folders
 - folders [Visual Basic], copying
 - directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 72f20ee767902395439f420f14fc2e352297ad31
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7bcc7f924d26247b0d0ab30a9ea0fc6d6333b652
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>방법: Visual Basic에서 디렉터리를 다른 디렉터리에 복사
 <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> 메서드를 사용하여 디렉터리를 다른 디렉터리에 복사합니다. 이 메서드는 디렉터리 자체뿐만 아니라 디렉터리 내용을 복사합니다. 대상 디렉터리가 없는 경우 새로 만듭니다. 같은 이름의 디렉터리가 대상 위치에 있고 `overwrite`가 `False`로 설정된 경우 두 디렉터리의 내용이 병합됩니다. 작업 중에 디렉터리의 새 이름을 지정할 수 있습니다.  
@@ -87,7 +69,6 @@ ms.lasthandoff: 07/28/2017
 -   대상 파일이 있지만 액세스할 수 없는 경우(<xref:System.UnauthorizedAccessException>)  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>   
- [방법: 특정 패턴의 하위 디렉터리 찾기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)   
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A>  
+ [방법: 특정 패턴의 하위 디렉터리 찾기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)  
  [방법: 디렉터리의 파일 컬렉션 가져오기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
-

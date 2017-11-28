@@ -1,48 +1,29 @@
 ---
 title: "double(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - double
 - double_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- double data type [C#]
+helpviewer_keywords: double data type [C#]
 ms.assetid: 0980e11b-6004-4102-abcf-cfc280fc6991
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 232dd97e152f943137604074f24b5de779168e59
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d5588f8391157fb56a5e5067bb8e11f9269fe733
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="double-c-reference"></a>double(C# 참조)
 `double` 키워드는 64비트 부동 소수점 값을 저장하는 단순 형식을 나타냅니다. 다음 표에서는 `double` 형식의 전체 자릿수와 근사 범위를 보여 줍니다.  
   
 |형식|근사 범위|전체 자릿수|.NET Framework 형식|  
 |----------|-----------------------|---------------|-------------------------|  
-|`double`|±5.0 × 10<sup>−324</sup> ~ ±1.7 × 10<sup>308</sup>|15-16자리|<xref:System.Double?displayProperty=fullName>|  
+|`double`|±5.0 × 10<sup>−324</sup> ~ ±1.7 × 10<sup>308</sup>|15-16자리|<xref:System.Double?displayProperty=nameWithType>|  
   
 ## <a name="literals"></a>리터럴  
  기본적으로 대입 연산자 오른쪽의 실수 리터럴은 `double`로 처리됩니다. 그러나 정수가 `double`로 처리되도록 하려면 접미사 d 또는 D를 사용하세요. 예를 들면 다음과 같습니다.  
@@ -68,23 +49,22 @@ double x = 3D;
   
 -   한정된 0이 아닌 값의 집합.  
   
- 이러한 값에 대한 자세한 내용은 [IEEE](http://go.microsoft.com/fwlink/?LinkId=26269) 웹 사이트에서 제공되는 이진 부동 소수점 연산에 대한 IEEE 표준을 참조하세요.  
+ 이러한 값에 대한 자세한 내용은 [IEEE](http://www.ieee.org) 웹 사이트에서 제공되는 이진 부동 소수점 연산에 대한 IEEE 표준을 참조하세요.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 [int](../../../csharp/language-reference/keywords/int.md), [short](../../../csharp/language-reference/keywords/short.md), [float](../../../csharp/language-reference/keywords/float.md) 및 `double`을 함께 더하여 `double` 결과를 제공합니다.  
   
- [!code-cs[csrefKeywordsTypes#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/double_1.cs)]  
+ [!code-csharp[csrefKeywordsTypes#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/double_1.cs)]  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
- [기본값 표](../../../csharp/language-reference/keywords/default-values-table.md)   
- [기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [부동 소수점 형식 표](../../../csharp/language-reference/keywords/floating-point-types-table.md)   
- [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
+ [기본값 표](../../../csharp/language-reference/keywords/default-values-table.md)  
+ [기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [부동 소수점 형식 표](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
+ [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
  [명시적 숫자 변환 표](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
-

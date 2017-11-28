@@ -1,33 +1,24 @@
 ---
 title: "비동기 작업을 여러 개 시작하고 완료될 때마다 처리(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: bf70bd5e79e962d8edaea2dc037f191707f4e047
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 770655005a3cf9cd13eb13cff1ca1d7e291e54e8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>비동기 작업을 여러 개 시작하고 완료될 때마다 처리(C#)
-<xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName>를 사용하면 시작된 순서대로 처리하는 대신 동시에 여러 작업을 시작하고 완료 시 하나씩 처리할 수 있습니다.  
+<xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>를 사용하면 시작된 순서대로 처리하는 대신 동시에 여러 작업을 시작하고 완료 시 하나씩 처리할 수 있습니다.  
   
  다음 예제에서는 쿼리를 사용하여 작업 컬렉션을 만듭니다. 각 작업은 지정된 웹 사이트의 콘텐츠를 다운로드합니다. while 루프의 각 반복에서 대기된 `WhenAny` 호출은 다운로드를 먼저 완료하는 작업 컬렉션의 작업을 반환합니다. 해당 작업은 컬렉션에서 제거되고 처리됩니다. 컬렉션에 더 이상 작업이 없을 때까지 루프가 반복됩니다.  
   
@@ -67,7 +58,7 @@ IEnumerable<Task<int>> downloadTasksQuery =
   
  프로젝트의 MainWindow.xaml.cs 파일에서 `AccessTheWebAsync` 메서드를 다음과 같이 변경합니다.  
   
--   <xref:System.Linq.Enumerable.ToArray%2A> 대신 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName>를 적용하여 쿼리를 실행합니다.  
+-   <xref:System.Linq.Enumerable.ToArray%2A> 대신 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>를 적용하여 쿼리를 실행합니다.  
   
     ```csharp  
     List<Task<int>> downloadTasks = downloadTasksQuery.ToList();  
@@ -243,8 +234,7 @@ namespace ProcessTasksAsTheyFinish
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Threading.Tasks.Task.WhenAny%2A>   
- [Async 응용 프로그램 미세 조정(C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
- [async 및 await를 사용한 비동기 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/async/index.md)   
+ <xref:System.Threading.Tasks.Task.WhenAny%2A>  
+ [Async 응용 프로그램 미세 조정(C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
+ [async 및 await를 사용한 비동기 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
  [Async 샘플: 응용 프로그램 미세 조정](http://go.microsoft.com/fwlink/?LinkId=255046)
-

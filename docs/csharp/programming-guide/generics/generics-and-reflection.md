@@ -1,39 +1,21 @@
 ---
 title: "제네릭 및 리플렉션(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: cc2363eea7d5c601fc73f5f9eb14b4b07ad14cb8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 201806cca08be0633d41e10ecb7641a0f03c975b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>제네릭 및 리플렉션(C# 프로그래밍 가이드)
 CLR(공용 언어 런타임)은 런타임에 제네릭 형식 정보에 액세스할 수 있으므로 제네릭이 아닌 형식에 대한 방법과 동일한 방법으로 리플렉션을 사용하여 제네릭 형식에 대한 정보를 가져올 수 있습니다. 자세한 내용은 [런타임의 제네릭](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)을 참조하세요.  
@@ -68,8 +50,7 @@ CLR(공용 언어 런타임)은 런타임에 제네릭 형식 정보에 액세�
 |<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>|현재 제네릭 메서드 정의의 형식 매개 변수를 형식 배열의 요소로 대체하고, 결과로 생성된 메서드를 나타내는 <xref:System.Reflection.MethodInfo> 개체를 반환합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [제네릭](../../../csharp/programming-guide/generics/index.md)   
- [리플렉션 및 제네릭 형식](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [제네릭](../../../csharp/programming-guide/generics/index.md)  
+ [리플렉션 및 제네릭 형식](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
  [제네릭](~/docs/standard/generics/index.md)
-

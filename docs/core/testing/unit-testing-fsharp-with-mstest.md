@@ -5,13 +5,13 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.topic: article
+dev_langs: fsharp
 ms.prod: .net-core
+ms.openlocfilehash: f8ea697596f144fdd6d50c871399388a075ba935
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
-ms.openlocfilehash: f07569a4d352162f9d6e9a13ab1c5eb921077416
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>dotnet test 및 MSTest를 사용하여 .NET Core에서 F# 라이브러리 유닛 테스트
 
@@ -129,7 +129,7 @@ let sumOfSquares xs =
     Seq.empty<int> |> Seq.toList
 ```
 
-*unit-testing-with-fsharp* 디렉터리에서 `dotnet test`를 다시 실행합니다. `dotnet test` 명령은 `MathService` 프로젝트에 대한 빌드를 실행한 다음 `MathService.Tests` 프로젝트에 대한 빌드를 실행합니다. 두 프로젝트를 모두 빌드한 후 이 단일 테스트를 실행합니다. 통과합니다.
+*unit-testing-with-fsharp* 디렉터리에서 `dotnet test`를 다시 실행합니다. `dotnet test` 명령은 `MathService` 프로젝트에 대한 빌드를 실행한 다음 `MathService.Tests` 프로젝트에 대한 빌드를 실행합니다. 두 프로젝트를 모두 빌드한 후 이 단일 테스트를 실행합니다. 전달합니다.
 
 ## <a name="completing-the-requirements"></a>요구 사항 완료
 
@@ -179,4 +179,3 @@ let sumOfSquares xs =
 ```
 
 작은 라이브러리 및 이 라이브러리에 대한 단위 테스트 집합을 작성했습니다. 새 패키지 및 테스트 추가가 정상 워크플로에 포함되도록 솔루션을 구조화했습니다. 응용 프로그램의 목표를 해결하는 데 대부분의 시간과 노력을 들였습니다.
-

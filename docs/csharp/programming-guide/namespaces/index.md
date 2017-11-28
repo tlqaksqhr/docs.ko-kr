@@ -1,56 +1,38 @@
 ---
 title: "네임스페이스(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 3eb645f5beb61d3cec97a70a54e660c65be52091
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a45339a4c3320a92c0339b1cad6345a2555ed920
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="namespaces-c-programming-guide"></a>네임스페이스(C# 프로그래밍 가이드)
 네임스페이스는 C# 프로그래밍에서 두 가지 방법으로 많이 사용됩니다. 첫째, .NET Framework는 네임스페이스를 사용하여 다음과 같이 많은 클래스를 구성합니다.  
   
- [!code-cs[csProgGuide#22](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_1.cs)]  
+ [!code-csharp[csProgGuide#22](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_1.cs)]  
   
  `System`은 네임스페이스이고 `Console`은 해당 네임스페이스의 클래스입니다. 전체 키워드가 필요하지 않으므로 다음 예처럼 `using` 키워드를 사용할 수 있습니다.  
   
- [!code-cs[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_2.cs)]  
+ [!code-csharp[csProgGuide#1](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_2.cs)]  
   
- [!code-cs[csProgGuide#25](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_3.cs)]  
+ [!code-csharp[csProgGuide#25](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/index_3.cs)]  
   
  자세한 내용은 [using 지시문](../../../csharp/language-reference/keywords/using-directive.md)을 참조하세요.  
   
  둘째, 고유한 네임스페이스를 선언하면 대규모 프로그래밍 프로젝트에서 클래스 및 메서드 이름의 범위를 제어할 수 있습니다. 다음 예와 같이 [네임스페이스](../../../csharp/language-reference/keywords/namespace.md) 키워드를 사용하여 네임스페이스를 선언합니다.  
   
- [!code-cs[csProgGuideNamespaces#6](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/index_4.cs)]  
+ [!code-csharp[csProgGuideNamespaces#6](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/index_4.cs)]  
   
 ## <a name="namespaces-overview"></a>네임스페이스 개요  
  네임스페이스에는 다음과 같은 속성이 있습니다.  
@@ -76,9 +58,8 @@ ms.lasthandoff: 07/28/2017
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [네임스페이스 키워드](../../../csharp/language-reference/keywords/namespace-keywords.md)   
- [using 지시문](../../../csharp/language-reference/keywords/using-directive.md)   
- [:: 연산자](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [네임스페이스 키워드](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+ [using 지시문](../../../csharp/language-reference/keywords/using-directive.md)  
+ [:: 연산자](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
  [. 연산자](../../../csharp/language-reference/operators/member-access-operator.md)
-

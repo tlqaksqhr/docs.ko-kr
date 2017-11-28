@@ -1,51 +1,56 @@
 ---
-title: "방법: 이미 시작된 Storyboard 제어 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "스토리보드, 시작 후 제어"
+title: "방법: 이미 시작된 Storyboard 제어"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: Storyboards [WPF], controlling after start
 ms.assetid: 040f13f0-69f9-4ab5-be2b-079f4f80c7c0
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b28cdf3b653925a5856c0bc9def5aebb9fdc6c14
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/22/2017
 ---
-# 방법: 이미 시작된 Storyboard 제어
-이 예제에서는 이미 시작된 <xref:System.Windows.Media.Animation.Storyboard>를 코드를 사용하여 제어하는 방법을 보여 줍니다.  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에서는 <xref:System.Windows.Trigger> 및 <xref:System.Windows.TriggerAction> 개체를 사용하여 Storyboard를 제어합니다. 예제를 보려면 [Storyboard를 시작한 후 이벤트 트리거를 사용하여 제어](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)를 참조하십시오.  
+# <a name="how-to-control-a-storyboard-after-it-starts"></a>방법: 이미 시작된 Storyboard 제어
+컨트롤에 코드를 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Animation.Storyboard> 시작 된 후입니다. 스토리 보드를 제어 하려면 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]를 사용 하 여 <xref:System.Windows.Trigger> 및 <xref:System.Windows.TriggerAction> 개체, 예를 들어 참조 [이벤트 트리거는 스토리 보드 후 시작을 제어를 사용 하 여](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)합니다.  
   
- Storyboard를 시작하려면 <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 메서드를 사용합니다. 이 메서드는 애니메이션 효과를 적용할 속성에 Storyboard의 애니메이션을 배포한 다음 Storyboard를 시작합니다.  
+ 스토리 보드를 시작 하려면 사용 해당 <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 메서드를 스토리 보드의 애니메이션 속성에 애니메이션을 적용 하 고 스토리 보드 시작을 배포 합니다.  
   
- Storyboard를 제어 가능하게 하려면 <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 메서드를 사용하고 두 번째 매개 변수를 **true**로 지정합니다.  그런 후 Storyboard의 대화형 메서드를 사용하여 Storyboard를 일시 중지, 다시 시작, 이동, 중지, 빠르게 재생 또는 느리게 재생하거나, 전체 기간의 끝으로 진행할 수 있습니다.  다음은 Storyboard의 대화형 메서드 목록입니다.  
+ 스토리 보드를 제어할 수 있도록 하려면 사용 된 <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 메서드를 지정 하 고 **true** 두 번째 매개 변수로 합니다. 그런 다음 일시 중지, 다시 시작할 seek, 중지, 속도, 또는 스토리 보드 속도가 저하 또는 채우기 기간으로 진행 스토리 보드의 대화형 메서드를 사용할 수 있습니다. 다음은 스토리 보드의 대화형 메서드 목록입니다.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>: Storyboard를 일시 중지합니다.  
+-   <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>: 스토리 보드를 일시 중지 됩니다.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>: 일시 중지한 Storyboard를 다시 시작합니다.  
+-   <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>: 일시 중지 된 스토리 보드를 다시 시작합니다.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SetSpeedRatio%2A>: Storyboard의 속도를 대화형으로 설정합니다.  
+-   <xref:System.Windows.Media.Animation.Storyboard.SetSpeedRatio%2A>: 스토리 보드의 대화형 속도 설정합니다.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>: Storyboard의 지정한 위치로 이동합니다.  
+-   <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>: 키 스토리 보드 지정된 된 위치를 찾습니다.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A>: Storyboard의 지정한 위치로 이동합니다.  <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> 메서드와 달리 이 작업은 다음 틱 전에서만 처리됩니다.  
+-   <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A>: 지정된 된 위치에 스토리 보드를 찾습니다. 와 달리는 <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> 이 작업 메서드를 다음 틱 보다 먼저 처리 됩니다.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>: Storyboard를 해당 전체 기간\(있는 경우\)의 끝으로 진행합니다.  
+-   <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>: 있는 경우 채우기 기간에 스토리 보드를 이동 합니다.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>: Storyboard를 중지합니다.  
+-   <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>: 스토리 보드를 중지합니다.  
   
- 다음 예제에서는 몇 가지 Storyboard 메서드를 사용하여 대화형으로 Storyboard를 제어합니다.  
+ 다음 예제에서를 스토리 보드를 대화형으로 제어할 스토리 보드는 여러 가지 방법은 사용 됩니다.  
   
- **참고:**  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]을 사용하여 트리거로 Storyboard를 제어하는 예제를 보려면 [Storyboard를 시작한 후 이벤트 트리거를 사용하여 제어](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)를 참조하십시오.  
+ **참고:** 트리거를 사용 하 여 스토리 보드를 제어 합니다. 예를 보려면 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], 참조 [한 스토리 보드 후 시작을 제어 하려면 이벤트 트리거를 사용 하 여](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  [!code-csharp[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/ControlStoryboardExample.cs#controlstoryboardexampleusingwholepage)]
  [!code-vb[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/controlstoryboardexample.vb#controlstoryboardexampleusingwholepage)]  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Storyboard를 시작한 후 이벤트 트리거를 사용하여 제어](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)

@@ -16,16 +16,15 @@ helpviewer_keywords:
 - streams, I/O
 - data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 48a3c0e0e00e9fd55dd3e4dfde8e20522b801bc8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fbd31e6bff5502291fd24b57b55c81046da330d3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="file-and-stream-io"></a>파일 및 스트림 I/O
 파일 및 스트림 I/O(입/출력)는 저장 매체로 데이터를 전송하거나 저장 매체로부터 데이터를 전송 받습니다. .NET Framework에서 [System.IO](http://go.microsoft.com/fwlink/?LinkId=231142) 네임스페이스는 데이터 스트림과 파일에서 읽기 및 쓰기를 동기적 및 비동기적으로 사용하는 형식을 포함합니다. 이러한 네임스페이스는 파일의 압축 및 압축 풀기 기능을 수행하는 형식 및 파이프 및 직렬 포트를 통한 통신을 가능하도록 하는 형식을 포함합니다.  
@@ -33,7 +32,7 @@ ms.lasthandoff: 09/05/2017
  파일은 정돈되고 이름이 지정된 컬렉션의 바이트이며, 이 컬렉션에는 영구 저장소가 있습니다. 사용자가 파일을 사용할 때, 디렉터리 경로, 디스크 저장소 및 파일과 디렉터리 이름을 다룹니다. 반대로, 스트림은 여러 가지 저장 매체 중 하나인 백업 저장소(예를 들어, 디스크 또는 메모리)에서 읽고 사용할 수 있는 바이트 시퀀스입니다. 디스크 외에 여러 백업 저장소가 존재하듯이, 파이프 스트림 외에 여러 종류의 스트림, 예를 들어 네트워크, 메모리, 파일 스트림도 존재합니다.  
   
 ## <a name="files-and-directories"></a>파일 및 디렉터리  
- 사용자는 이 형식들을 <xref:System.IO?displayProperty=fullName> 네임스페이스에서 파일 및 디렉터리와 상호 작용하기 위해 사용할 수 있습니다. 예를 들어, 파일 및 디렉터리에 대한 속성을 가져오고 설정할 수 있고, 검색 조건에 따라 파일 및 디렉터리의 컬렉션을 검색할 수 있습니다.  
+ 사용자는 이 형식들을 <xref:System.IO?displayProperty=nameWithType> 네임스페이스에서 파일 및 디렉터리와 상호 작용하기 위해 사용할 수 있습니다. 예를 들어, 파일 및 디렉터리에 대한 속성을 가져오고 설정할 수 있고, 검색 조건에 따라 파일 및 디렉터리의 컬렉션을 검색할 수 있습니다.  
   
  다음은 몇 가지 흔히 사용되는 파일 및 디렉터리 클래스입니다.  
   
@@ -47,7 +46,7 @@ ms.lasthandoff: 09/05/2017
   
 -   <xref:System.IO.Path> - 플랫폼 간에 호환되는 방식으로 디렉터리 문자열을 처리하기 위한 메서드와 속성을 제공합니다.  
   
- Visual Basic 사용자는 이러한 클래스를 사용하는 것 외에도, 파일 I/O에 대한 <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=fullName> 클래스에서 제공하는 메서드와 속성을 사용할 수 있습니다.  
+ Visual Basic 사용자는 이러한 클래스를 사용하는 것 외에도, 파일 I/O에 대한 <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> 클래스에서 제공하는 메서드와 속성을 사용할 수 있습니다.  
   
  [방법: 디렉터리 복사](../../../docs/standard/io/how-to-copy-directories.md), [방법: 디렉터리 목록 만들기](http://msdn.microsoft.com/en-us/4d2772b1-b991-4532-a8a6-6ef733277e69) 및 [방법: 디렉터리 및 파일 열거](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)를 참조하세요.  
   
@@ -83,7 +82,7 @@ ms.lasthandoff: 09/05/2017
  스트림의 비동기화 작업에 대한 예제는 [비동기 파일 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)를 참조하세요.  
   
 ## <a name="readers-and-writers"></a>판독기 및 작성기  
- 또한 <xref:System.IO?displayProperty=fullName> 네임스페이스는 스트림으로부터 인코딩된 문자를 읽고 이를 스트림에 쓰기 위한 형식을 제공합니다. 일반적으로 스트림은 바이트 입력 및 출력용으로 디자인됩니다. 판독기 및 작성기 형식은 스트림 작업을 완료할 수 있도록 인코딩된 문자와 바이트의 변환을 처리합니다. 각 판독기 및 작성기 클래스는 스트림과 연결되어 있고, 이것은 클래스의 `BaseStream` 속성을 통해 검색될 수 있습니다.  
+ 또한 <xref:System.IO?displayProperty=nameWithType> 네임스페이스는 스트림으로부터 인코딩된 문자를 읽고 이를 스트림에 쓰기 위한 형식을 제공합니다. 일반적으로 스트림은 바이트 입력 및 출력용으로 디자인됩니다. 판독기 및 작성기 형식은 스트림 작업을 완료할 수 있도록 인코딩된 문자와 바이트의 변환을 처리합니다. 각 판독기 및 작성기 클래스는 스트림과 연결되어 있고, 이것은 클래스의 `BaseStream` 속성을 통해 검색될 수 있습니다.  
   
  일부 자주 사용되는 판독기 및 작성기 클래스는 다음과 같습니다.  
   
@@ -105,7 +104,7 @@ ms.lasthandoff: 09/05/2017
  자세한 내용은 [비동기 파일 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)를 참조하세요.  
   
 ## <a name="compression"></a>압축  
- 압축은 저장소에 맞춰 파일 크기를 줄이는 프로세스를 가리킵니다. 압축 해제는 압축된 파일의 내용을 사용 가능한 형식으로 추출하는 프로세스입니다. <xref:System.IO.Compression?displayProperty=fullName> 네임스페이스는 파일 및 스트림을 압축하고 압축을 푸는 형식을 포함합니다.  
+ 압축은 저장소에 맞춰 파일 크기를 줄이는 프로세스를 가리킵니다. 압축 해제는 압축된 파일의 내용을 사용 가능한 형식으로 추출하는 프로세스입니다. <xref:System.IO.Compression?displayProperty=nameWithType> 네임스페이스는 파일 및 스트림을 압축하고 압축을 푸는 형식을 포함합니다.  
   
  다음 클래스는 파일과 스트림을 압축하고 압축 해제할 때 자주 사용됩니다.  
   
@@ -156,7 +155,7 @@ ms.lasthandoff: 09/05/2017
  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 I/O 작업에 대한 자세한 내용은 Windows 개발자 센터에서 [퀵 스타트: 파일 읽기 및 쓰기](http://go.microsoft.com/fwlink/p/?LinkId=243072)를 참조하세요.  
   
 ## <a name="io-and-security"></a>I/O와 보안  
- <xref:System.IO?displayProperty=fullName> 네임스페이스에서 클래스를 사용할 때, 파일 및 디렉터리에 대한 액세스를 제어하기 위해 액세스 제어 목록(ACL)과 같은 운영 체제 보안 요구 사항을 따라야 합니다. <xref:System.Security.Permissions.FileIOPermission> 요구 사항에 이 요구 사항이 추가됩니다. ACL은 프로그래밍 방식으로 관리할 수 있습니다. 자세한 내용은 [방법: Access Control 목록 항목 추가 또는 제거](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md)를 참조하세요.  
+ <xref:System.IO?displayProperty=nameWithType> 네임스페이스에서 클래스를 사용할 때, 파일 및 디렉터리에 대한 액세스를 제어하기 위해 액세스 제어 목록(ACL)과 같은 운영 체제 보안 요구 사항을 따라야 합니다. <xref:System.Security.Permissions.FileIOPermission> 요구 사항에 이 요구 사항이 추가됩니다. ACL은 프로그래밍 방식으로 관리할 수 있습니다. 자세한 내용은 [방법: Access Control 목록 항목 추가 또는 제거](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md)를 참조하세요.  
   
  기본 보안 정책은 인터넷 또는 인트라넷 응용 프로그램에서 사용자의 컴퓨터에 있는 파일의 액세스를 방지합니다. 따라서 실제 파일의 경로를 인터넷이나 인트라넷을 통해 다운로드되는 코드를 작성할 때 필요한 I/O 클래스를 사용하지 마세요. 대신에 기존의 .NET Framework 응용 프로그램의 경우 [격리된 저장소](../../../docs/standard/io/isolated-storage.md)를 사용하거나 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램의 경우 [응용 프로그램 데이터](http://go.microsoft.com/fwlink/?LinkId=229175)를 사용합니다.  
   
@@ -183,4 +182,3 @@ ms.lasthandoff: 09/05/2017
 -   [메모리 매핑된 파일](../../../docs/standard/io/memory-mapped-files.md)  
   
  가상 메모리의 디스크에 있는 파일의 내용을 포함하는 메모리 매핑된 파일에 대해 설명합니다. 메모리 매핑된 파일을 사용하면 매우 큰 파일을 편집하고 프로세스 간 통신을 위한 공유 메모리를 만들 수 있습니다.
-

@@ -1,27 +1,18 @@
 ---
 title: "async 및 await를 사용한 비동기 프로그래밍(C#)"
-ms.date: 2017-05-22
+ms.date: 05/22/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 9ece88b666547677eba64b9d6976f1e4cc89e6b7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: 2f26f83bea90d13a91a747e531ad29db788e2101
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>async 및 await를 사용한 비동기 프로그래밍(C#)
 비동기 프로그래밍을 사용하여 성능 병목 현상을 방지하고 응용 프로그램의 전체적인 응답성을 향상할 수 있습니다. 그러나 비동기 응용 프로그램을 쓰는 일반적인 기술이 복잡하여 해당 응용 프로그램을 쓰고, 디버깅하고, 유지 관리하기 어려울 수 있습니다.  
@@ -349,6 +340,5 @@ namespace AsyncFirstExample
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [async](../../../../csharp/language-reference/keywords/async.md)   
+ [async](../../../../csharp/language-reference/keywords/async.md)  
  [await](../../../../csharp/language-reference/keywords/await.md)
-

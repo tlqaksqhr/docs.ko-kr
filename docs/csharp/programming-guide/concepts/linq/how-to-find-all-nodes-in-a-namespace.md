@@ -1,25 +1,21 @@
 ---
 title: "방법: 네임스페이스에서 모든 노드 찾기(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 766b0b4ff535703e6acdfeb409a51bb09a265e43
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e3a132834527f3a13a678fc56a593f7b442deb56
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-c"></a>방법: 네임스페이스에서 모든 노드 찾기(C#)
 해당 특정 네임스페이스에서 모든 노드를 찾기 위해 각 요소나 특성의 네임스페이스를 기준으로 필터링할 수 있습니다.  
@@ -109,4 +105,3 @@ Console.WriteLine(newTree);
   
 ## <a name="see-also"></a>참고 항목  
  [기본 쿼리(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-

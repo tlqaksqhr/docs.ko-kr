@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - code, verification process
 - verification testing code
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 7a41a6bf29ec9310d88778b55aa0c27672ba0568
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 46b25b9eb518d2dadb3ec069c5d4d61a929262f2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="application-domains"></a>응용 프로그램 도메인
 운영 체제와 런타임 환경은 일반적으로 응용 프로그램 간에 몇 가지 형식의 격리를 제공합니다. 예를 들어 Windows에서는 프로세스를 사용하여 응용 프로그램을 격리합니다. 격리는 한 응용 프로그램에서 실행 중인 코드가 서로 관련 없는 다른 응용 프로그램에 나쁜 영향을 주지 않도록 하기 위해 필요합니다.  
@@ -65,7 +63,7 @@ ms.lasthandoff: 07/28/2017
     > [!NOTE]
     >  개별 어셈블리 또는 형식은 언로드할 수 없습니다. 전체 도메인만 언로드할 수 있습니다.  
   
--   한 응용 프로그램에서 실행 중인 코드가 다른 응용 프로그램의 코드 또는 리소스에 직접 액세스할 수 없습니다. 공용 언어 런타임은 다른 응용 프로그램 도메인의 개체를 서로 직접 호출할 수 없도록 하여 이러한 격리를 적용합니다. 도메인 사이를 통과하는 개체는 복사되거나 프록시에 의해 액세스됩니다. 개체가 복사되는 경우 해당 개체에 대한 호출은 로컬입니다. 즉, 참조되는 개체와 호출자 둘 다 같은 응용 프로그램 도메인에 있습니다. 프록시를 통해 개체가 액세스되는 경우 해당 개체에 대한 호출은 원격입니다. 이 경우 참조되는 개체와 호출자는 서로 다른 응용 프로그램 도메인에 있습니다. 크로스 도메인 호출은 두 프로세스 또는 두 컴퓨터 사이의 호출과 동일한 원격 호출 인프라를 사용합니다. 따라서 메서드 호출을 올바르게 JIT로 컴파일할 수 있도록 하기 위해 참조되는 개체의 메타데이터를 두 응용 프로그램 도메인에서 모두 사용할 수 있어야 합니다. 호출하는 도메인이 호출되는 개체의 메타데이터에 액세스할 수 없는 경우 **System.IO.FileNotFound** 형식의 예외가 발생하여 컴파일할 수 없습니다. 자세한 내용은 [원격 개체](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58)를 참조하세요. 도메인 사이에서 개체에 액세스할 수 있는 방법을 결정하는 메커니즘은 개체에 의해 결정됩니다. 자세한 내용은 <xref:System.MarshalByRefObject?displayProperty=fullName>을 참조하십시오.  
+-   한 응용 프로그램에서 실행 중인 코드가 다른 응용 프로그램의 코드 또는 리소스에 직접 액세스할 수 없습니다. 공용 언어 런타임은 다른 응용 프로그램 도메인의 개체를 서로 직접 호출할 수 없도록 하여 이러한 격리를 적용합니다. 도메인 사이를 통과하는 개체는 복사되거나 프록시에 의해 액세스됩니다. 개체가 복사되는 경우 해당 개체에 대한 호출은 로컬입니다. 즉, 참조되는 개체와 호출자 둘 다 같은 응용 프로그램 도메인에 있습니다. 프록시를 통해 개체가 액세스되는 경우 해당 개체에 대한 호출은 원격입니다. 이 경우 참조되는 개체와 호출자는 서로 다른 응용 프로그램 도메인에 있습니다. 크로스 도메인 호출은 두 프로세스 또는 두 컴퓨터 사이의 호출과 동일한 원격 호출 인프라를 사용합니다. 따라서 메서드 호출을 올바르게 JIT로 컴파일할 수 있도록 하기 위해 참조되는 개체의 메타데이터를 두 응용 프로그램 도메인에서 모두 사용할 수 있어야 합니다. 호출하는 도메인이 호출되는 개체의 메타데이터에 액세스할 수 없는 경우 **System.IO.FileNotFound** 형식의 예외가 발생하여 컴파일할 수 없습니다. 자세한 내용은 [원격 개체](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58)를 참조하세요. 도메인 사이에서 개체에 액세스할 수 있는 방법을 결정하는 메커니즘은 개체에 의해 결정됩니다. 자세한 내용은 <xref:System.MarshalByRefObject?displayProperty=nameWithType>을 참조하십시오.  
   
 -   코드의 동작 범위는 해당 코드가 실행되는 응용 프로그램에 의해 지정됩니다. 즉, 응용 프로그램 도메인은 응용 프로그램 버전 정책, 액세스하는 원격 어셈블리의 위치, 도메인으로 로드하는 어셈블리를 찾을 위치 관련 정보 등의 구성 설정을 제공합니다.  
   
@@ -110,12 +108,12 @@ ms.lasthandoff: 07/28/2017
   
  응용 프로그램 도메인과 스레드 간에는 일대일 상관 관계가 없습니다. 일부 스레드는 어느 시점에서든 단일 응용 프로그램 도메인에서 실행될 수 있으며, 특정 스레드는 단일 응용 프로그램 도메인으로 제한되지 않습니다. 즉, 스레드는 크로스 응용 프로그램 도메인 경계에 종속되지 않고 각 응용 프로그램 도메인에 대해 새 스레드가 만들어지지 않습니다.  
   
- 어느 시점에서든 모든 스레드는 단일 응용 프로그램 도메인에서 실행됩니다. 지정된 응용 프로그램 도메인에서 0개, 한 개 또는 여러 개의 스레드가 실행 중일 수 있습니다. 런타임은 응용 프로그램 도메인에서 실행 중인 스레드를 추적하므로 사용자는 언제든지 <xref:System.Threading.Thread.GetDomain%2A?displayProperty=fullName> 메서드를 호출하여 스레드가 실행되고 있는 도메인을 찾을 수 있습니다.  
+ 어느 시점에서든 모든 스레드는 단일 응용 프로그램 도메인에서 실행됩니다. 지정된 응용 프로그램 도메인에서 0개, 한 개 또는 여러 개의 스레드가 실행 중일 수 있습니다. 런타임은 응용 프로그램 도메인에서 실행 중인 스레드를 추적하므로 사용자는 언제든지 <xref:System.Threading.Thread.GetDomain%2A?displayProperty=nameWithType> 메서드를 호출하여 스레드가 실행되고 있는 도메인을 찾을 수 있습니다.  
   
 ### <a name="application-domains-and-cultures"></a>응용 프로그램 도메인 및 문화권  
- 스레드와 연결된 <xref:System.Globalization.CultureInfo> 개체로 표현되는 문화권입니다. <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> 속성을 사용하여 현재 실행 중인 스레드와 연결된 문화권을 가져오고 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=fullName> 속성을 사용하여 현재 실행 중인 스레드와 연결된 문화권을 가져오거나 설정할 수 있습니다. 스레드와 연결된 문화권을 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=fullName> 속성을 사용하여 명시적으로 설정한 경우, 스레드가 응용 프로그램 도메인 경계를 넘나들 때 해당 스레드와 계속해서 연결됩니다. 어느 시점에서 문화권이 스레드와 연결되어 있는지 여부는 스레드가 실행 중인 응용 프로그램 도메인의 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=fullName> 속성 값에 의해 결정됩니다.  
+ 스레드와 연결된 <xref:System.Globalization.CultureInfo> 개체로 표현되는 문화권입니다. <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 속성을 사용하여 현재 실행 중인 스레드와 연결된 문화권을 가져오고 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 속성을 사용하여 현재 실행 중인 스레드와 연결된 문화권을 가져오거나 설정할 수 있습니다. 스레드와 연결된 문화권을 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 속성을 사용하여 명시적으로 설정한 경우, 스레드가 응용 프로그램 도메인 경계를 넘나들 때 해당 스레드와 계속해서 연결됩니다. 어느 시점에서 문화권이 스레드와 연결되어 있는지 여부는 스레드가 실행 중인 응용 프로그램 도메인의 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> 속성 값에 의해 결정됩니다.  
   
--   속성 값이 `null`이 아닌 경우, 속성에 의해 반환되는 문화권은 스레드와 연결되어 있습니다. 따라서 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=fullName> 및 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=fullName> 속성에 의해 반환됩니다.  
+-   속성 값이 `null`이 아닌 경우, 속성에 의해 반환되는 문화권은 스레드와 연결되어 있습니다. 따라서 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 및 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 속성에 의해 반환됩니다.  
   
 -   속성 값이 `null`인 경우 현재 시스템 문화권이 스레드와 연결되어 있습니다.  
   
@@ -171,5 +169,4 @@ Value (to append) = COMPLUS_LoaderOptimization=1
   
 <a name="reference"></a>   
 ## <a name="reference"></a>참조  
- <xref:System.MarshalByRefObject?displayProperty=fullName>
-
+ <xref:System.MarshalByRefObject?displayProperty=nameWithType>

@@ -1,40 +1,19 @@
 ---
 title: Visual Basic
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - programming, Visual Basic
 - Visual Basic
-ms.assetid: 5cc578fe-d9e5-4015-937d-b34b83207072
-caps.latest.revision: 37
-author: dotnet-bot
-ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 38ccf61b488a40d100895d0dd2bb4bdecca7eba5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 64a6edc4c58e96132f20848a066542be57e8667f
-ms.openlocfilehash: cae4d2571bc9bde6239e1324dbe4e725ef5e12c7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="visual-basic-guide"></a>Visual Basic 가이드
 
@@ -42,10 +21,10 @@ Visual Basic은 형식이 안전한 개체 지향 응용 프로그램을 생산�
   
  Visual Basic 이번 버전에는 .NET Framework 기반 응용 프로그램을 만드는 쉽고 빠른 방법을 제공하는 전통 방식이 계속됩니다.  
   
- Visual Basic이 아직 없다면, [Visual Studio](https://www.visualstudio.com/products/free-developer-offers-vs) 사이트에서 무료 Visual Basic을 포함하는 Visual Studio 버전을 얻을 수 있습니다.  
+ Visual Basic이 아직 없다면, [Visual Studio](https://www.visualstudio.com/products/downloads) 사이트에서 무료 Visual Basic을 포함하는 Visual Studio 버전을 얻을 수 있습니다.  
   
 ## <a name="in-this-section"></a>단원 내용  
- [시작](../visual-basic/getting-started/index.md)   
+ [시작](../visual-basic/getting-started/index.md)  
  다양한 버전의 제품에서 사용할 수 있는 기능과 새로운 기능이 나열되어 있기 때문에 작업을 시작하는 데 도움이 됩니다.  
    
  [프로그래밍 개념](../visual-basic/programming-guide/concepts/index.md) Visual Basic 프로그래머에게 가장 유용한 언어 개념을 제공합니다.
@@ -77,4 +56,3 @@ Visual Basic은 형식이 안전한 개체 지향 응용 프로그램을 생산�
   
  [.NET Framework 클래스 라이브러리](http://go.microsoft.com/fwlink/?LinkID=227195)  
  Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK에 포함된 클래스, 인터페이스, 값 형식 라이브러리에 대한 입문 정보를 제공합니다.
-

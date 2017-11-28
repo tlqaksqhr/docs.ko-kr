@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
 ms.openlocfilehash: 9652986491f087b8fa175e2b4041063c71211178
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="native-interoperability"></a>기본 상호 운용성
 
 이 문서에서는 .NET에서 사용할 수 있는 “기본 상호 운용성”을 수행하는 세 가지 방법을 좀 더 자세히 살펴보겠습니다.
@@ -342,4 +340,3 @@ public class StatClass {
 *   [PInvoke.net wiki](http://www.pinvoke.net)는 일반적인 Win32 API 및 호출 방법에 대한 정보가 포함된 우수한 Wiki입니다.
 *   [MSDN의 P/Invoke](https://msdn.microsoft.com/library/zbz07712.aspx)
 *   [P/Invoke에 대한 Mono 설명서](http://www.mono-project.com/docs/advanced/pinvoke/)
-

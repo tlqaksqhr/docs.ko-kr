@@ -1,5 +1,5 @@
 ---
-title: Iterators
+title: "반복기"
 description: "기본 제공 C# 반복기를 사용하는 방법 및 사용자 지정 반복기 메서드를 만드는 방법을 알아봅니다."
 keywords: .NET, .NET Core
 author: BillWagner
@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 18a5819402c752f32aecd0cd4c3bd5a490292ebf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="iterators"></a>반복기
 
 작성하는 거의 모든 프로그램에서 컬렉션을 반복해야 하는 경우가 있습니다. 컬렉션에 있는 모든 항목을 조사하는 코드를 작성합니다. 
@@ -246,6 +244,5 @@ finally
 ```
 
 다행히도 이러한 세부 정보를 모두 기억할 필요가 없습니다. `foreach` 문에서 이러한 차이를 모두 처리합니다. 컴파일러는 이러한 구문에 대한 올바른 코드를 생성합니다. 
-
 
 

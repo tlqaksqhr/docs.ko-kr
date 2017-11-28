@@ -1,41 +1,22 @@
 ---
 title: "enum(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - enum
 - enum_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- enum keyword [C#]
+helpviewer_keywords: enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 00ae9b555ae73db445fe4a4facf00753bf8c759a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: fbadbcf92a6ac8ed46c3e81fa9eda1ceac8f6631
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="enum-c-reference"></a>enum(C# 참조)
 `enum` 키워드는 열거자 목록이라고 하는 명명된 상수 집합으로 구성된 고유 형식인 열거형을 선언하는 데 사용됩니다.  
@@ -89,17 +70,17 @@ int x = (int)Days.Sun;
 ## <a name="example"></a>예제  
  다음 예제에서는 열거형 `Days`를 선언합니다. 두 개의 열거자를 명시적으로 정수로 변환하여 정수 변수에 대입합니다.  
   
- [!code-cs[csrefKeywordsTypes#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_1.cs)]  
+ [!code-csharp[csrefKeywordsTypes#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_1.cs)]  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 base-type 옵션을 사용하여 멤버가 `enum` 형식인 `long`을 선언합니다. 열거형의 기본 형식이 `long`인 경우에도 캐스트를 사용하여 열거형 멤버를 `long` 형식으로 명시적으로 변환해야 합니다.  
   
- [!code-cs[csrefKeywordsTypes#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_2.cs)]  
+ [!code-csharp[csrefKeywordsTypes#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_2.cs)]  
   
 ## <a name="example"></a>예제  
  다음 코드 예제에서는 <xref:System.FlagsAttribute?displayProperty=nameWithType> 선언에 `enum` 특성을 사용하는 방법과 그 결과를 보여 줍니다.  
   
- [!code-cs[csrefKeywordsTypes#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_3.cs)]  
+ [!code-csharp[csrefKeywordsTypes#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_3.cs)]  
   
 ## <a name="comments"></a>설명  
  `Flags`를 제거하면 예에 다음 값이 표시됩니다.  
@@ -112,11 +93,10 @@ int x = (int)Days.Sun;
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [열거형 형식](../../../csharp/programming-guide/enumeration-types.md)   
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
- [정수 형식 표](../../../csharp/language-reference/keywords/integral-types-table.md)   
- [기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)   
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [열거형 형식](../../../csharp/programming-guide/enumeration-types.md)  
+ [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
+ [정수 계열 형식 표](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
  [명시적 숫자 변환 표](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
-

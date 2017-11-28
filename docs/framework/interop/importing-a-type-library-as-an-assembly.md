@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - importing type library
 - type metadata
@@ -28,16 +22,15 @@ helpviewer_keywords:
 - COM interop, importing type library
 - COM interop, exposing COM components
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a907e75785bb0eb9ced43466ef5e51e598d4f629
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: a7657540991099cca29dc911c8e42e5ddcd22802
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>형식 라이브러리를 어셈블리로 가져오기
 COM 형식 정의는 일반적으로 형식 라이브러리에 있습니다. 반면 CLS 규격 컴파일러는 어셈블리에서 형식 메타데이터를 생성합니다. 형식 정보의 두 가지 소스는 약간 다릅니다. 이 항목에서는 형식 라이브러리에서 메타데이터를 생성하기 위한 기술을 설명합니다. 결과 어셈블리를 interop 어셈블리라고 하고 포함된 형식 정보를 통해 .NET Framework 응용 프로그램이 COM 형식을 사용할 수 있습니다.  
@@ -65,7 +58,7 @@ COM 형식 정의는 일반적으로 형식 라이브러리에 있습니다. 반
   
      형식 라이브러리 가져오기는 결과 interop 파일에서 메타데이터를 조정하고, 기존 형식 라이브러리에서 형식을 가져오고, interop 어셈블리 및 네임스페이스를 생성하기 위한 명령줄 옵션을 제공합니다. 자세한 내용은 [방법: 형식 라이브러리에서 Interop 어셈블리 생성](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)을 참조하세요.  
   
--   <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=fullName> 클래스  
+-   <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType> 클래스  
   
      이 클래스는 형식 라이브러리의 coclass 및 인터페이스를 어셈블리 내의 메타데이터로 변환하기 위한 메서드를 제공합니다. 이 클래스는 Tlbimp.exe와 동일한 메타데이터 출력을 생성합니다. 그러나 Tlbimp.exe와 달리 <xref:System.Runtime.InteropServices.TypeLibConverter> 클래스는 메모리 내 형식 라이브러리를 메타데이터로 변환할 수 있습니다.  
   
@@ -86,15 +79,14 @@ COM 형식 정의는 일반적으로 형식 라이브러리에 있습니다. 반
  COM interop 가져오기 프로세스에 대한 자세한 내용은 [형식 라이브러리를 어셈블리로 변환 요약](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.InteropServices.TypeLibConverter>   
- [.NET Framework에 COM 구성 요소 노출](../../../docs/framework/interop/exposing-com-components.md)   
- [형식 라이브러리를 어셈블리로 변환 요약](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)   
- [Tlbimp.exe(형식 라이브러리 가져오기)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)   
- [표준 래퍼 사용자 지정](http://msdn.microsoft.com/en-us/c40d089b-6a3c-41b5-a20d-d760c215e49d)   
- [관리 코드에서 COM 형식 사용](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)   
- [Interop 프로젝트 컴파일](../../../docs/framework/interop/compiling-an-interop-project.md)   
- [Interop 응용 프로그램 배포](../../../docs/framework/interop/deploying-an-interop-application.md)   
- [방법: 형식 라이브러리에 참조 추가](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)   
- [방법: 형식 라이브러리에서 Interop 어셈블리 생성](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)   
+ <xref:System.Runtime.InteropServices.TypeLibConverter>  
+ [.NET Framework에 COM 구성 요소 노출](../../../docs/framework/interop/exposing-com-components.md)  
+ [형식 라이브러리를 어셈블리로 변환 요약](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
+ [Tlbimp.exe(형식 라이브러리 가져오기)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
+ [표준 래퍼 사용자 지정](http://msdn.microsoft.com/en-us/c40d089b-6a3c-41b5-a20d-d760c215e49d)  
+ [관리 코드에서 COM 형식을 사용 하 여](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)  
+ [Interop 프로젝트 컴파일](../../../docs/framework/interop/compiling-an-interop-project.md)  
+ [Interop 응용 프로그램 배포](../../../docs/framework/interop/deploying-an-interop-application.md)  
+ [방법: 형식 라이브러리에 참조 추가](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)  
+ [방법: 형식 라이브러리에서 Interop 어셈블리 생성](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)  
  [연습: Microsoft Office 어셈블리의 형식 정보 포함](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)
-

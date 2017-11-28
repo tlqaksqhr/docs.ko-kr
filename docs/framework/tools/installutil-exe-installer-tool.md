@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - uninstalling server resources
 - removing server resources
@@ -26,16 +20,15 @@ helpviewer_keywords:
 - progress information for installation
 - reporting installation progress
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 611df94890200f442e8e2b0f5d1442eb44f25c70
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8660d2c87936f6fa7a8b9b86872300911c1ae99d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe(설치 관리자 도구)
 설치 관리자 도구는 특정 어셈블리에서 설치 관리자 구성 요소를 실행하는 방법으로 서버 리소스를 설치하고 제거하는 데 사용할 수 있는 명령줄 유틸리티입니다. 이 도구는 <xref:System.Configuration.Install> 네임스페이스의 클래스와 함께 사용됩니다.  
@@ -62,7 +55,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 |옵션|설명|  
 |------------|-----------------|  
 |`/h[elp]`<br /><br /> 또는<br /><br /> `/?`|이 도구의 명령 구문 및 옵션을 표시합니다.|  
-|`/help` *assembly*<br /><br /> 또는<br /><br /> `/?` *assembly*|InstallUtil.exe에 대한 명령 구문 및 옵션과 함께 지정된 어셈블리 내의 개별 설치 프로그램에서 재구성한 추가 옵션을 표시합니다. 이 옵션은 각 설치 관리자 구성 요소의 <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=fullName> 속성에서 반환되는 텍스트를 InstallUtil.exe의 도움말 텍스트에 추가합니다.|  
+|`/help` *assembly*<br /><br /> 또는<br /><br /> `/?` *assembly*|InstallUtil.exe에 대한 명령 구문 및 옵션과 함께 지정된 어셈블리 내의 개별 설치 프로그램에서 재구성한 추가 옵션을 표시합니다. 이 옵션은 각 설치 관리자 구성 요소의 <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> 속성에서 반환되는 텍스트를 InstallUtil.exe의 도움말 텍스트에 추가합니다.|  
 |`/AssemblyName` "*assemblyName*<br /><br /> ,Version=*major.minor.build.revision*<br /><br /> ,Culture=*locale*<br /><br /> ,PublicKeyToken=*publicKeyToken*"|전역 어셈블리 캐시에 등록해야 하는 어셈블리의 이름 또는 강력한 이름을 지정합니다. 어셈블리의 버전, 문화권 및 공개 키 토큰을 사용하여 어셈블리 이름을 정규화해야 합니다. 정규화된 어셈블리 이름은 따옴표로 묶어야 합니다.<br /><br /> 예를 들어, "myAssembly, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0"은 정규화된 어셈블리 이름입니다.|  
 |`/InstallStateDir=[` *directoryName* `]`|어셈블리를 제거하는 데 사용한 데이터가 포함된 .InstallState 파일의 디렉터리를 지정합니다. 기본 디렉터리는 어셈블리가 들어 있는 디렉터리입니다.|  
 |`/LogFile=`[*filename*]|설치 진행 정보가 기록되는 로그 파일의 이름을 지정합니다. 기본적으로 `/LogFile` 옵션을 생략하면 *assemblyname*.InstallLog라는 로그 파일이 생성됩니다. *filename*을 생략하면 로그 파일이 생성되지 않습니다.|  
@@ -75,7 +68,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
  어셈블리 내에서 사용되는 개별 설치 관리자는 [옵션](#options) 섹션에서 나열한 옵션 이외의 옵션도 인식할 수 있습니다. 이 옵션에 대해 자세히 알아보려면 InstallUtil.exe를 `/?` 또는 `/help` 옵션에 따라 명령줄에서 어셈블리 경로와 함께 실행합니다. 이러한 옵션을 지정하려면 InstallUtil.exe에서 인식하는 옵션과 함께 명령줄에 이 옵션을 포함합니다.  
   
 > [!NOTE]
->  개별 설치 관리자 구성 요소에서 지원하는 옵션에 대한 도움말 텍스트는 <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=fullName> 속성에서 반환됩니다. 명령줄에 입력한 개별 옵션은 <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=fullName> 속성에서 프로그래밍 방식으로 액세스할 수 있습니다.  
+>  개별 설치 관리자 구성 요소에서 지원하는 옵션에 대한 도움말 텍스트는 <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> 속성에서 반환됩니다. 명령줄에 입력한 개별 옵션은 <xref:System.Configuration.Install.Installer.Context%2A?displayProperty=nameWithType> 속성에서 프로그래밍 방식으로 액세스할 수 있습니다.  
   
  모든 옵션 및 명령줄 매개 변수는 설치 로그 파일에 기록됩니다. 그러나 일부 설치 관리자 구성 요소에서 인식되는 `/Password` 매개 변수를 사용하는 경우 암호 정보는 8개의 별표(*)로 대체되며 로그 파일에는 나타나지 않습니다.  
   
@@ -95,7 +88,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
   
 -   *assemblyname*.InstallState - 어셈블리를 제거하는 데 사용되는 데이터가 포함되어 있습니다.  
   
- Installutil.exe에서 리플렉션을 사용하여 지정된 어셈블리를 검사하고 <xref:System.Configuration.Install.Installer>에 대한 <xref:System.ComponentModel.RunInstallerAttribute?displayProperty=fullName> 특성 집합을 가지는 모든 `true` 형식을 찾습니다. 그런 다음 도구는 <xref:System.Configuration.Install.Installer.Install%2A?displayProperty=fullName> 형식의 각 인스턴스에서 <xref:System.Configuration.Install.Installer.Uninstall%2A?displayProperty=fullName> 또는 <xref:System.Configuration.Install.Installer> 메서드를 실행합니다. Installutil.exe를 사용하면 트랜잭션 방식으로 설치를 수행할 수도 있습니다. 즉, 어셈블리가 하나라도 설치되지 않으면 다른 모든 어셈블리의 설치도 롤백됩니다. 그러나 제거 시에는 트랜잭션 방식이 사용되지 않습니다.  
+ Installutil.exe에서 리플렉션을 사용하여 지정된 어셈블리를 검사하고 <xref:System.Configuration.Install.Installer>에 대한 <xref:System.ComponentModel.RunInstallerAttribute?displayProperty=nameWithType> 특성 집합을 가지는 모든 `true` 형식을 찾습니다. 그런 다음 도구는 <xref:System.Configuration.Install.Installer.Install%2A?displayProperty=nameWithType> 형식의 각 인스턴스에서 <xref:System.Configuration.Install.Installer.Uninstall%2A?displayProperty=nameWithType> 또는 <xref:System.Configuration.Install.Installer> 메서드를 실행합니다. Installutil.exe를 사용하면 트랜잭션 방식으로 설치를 수행할 수도 있습니다. 즉, 어셈블리가 하나라도 설치되지 않으면 다른 모든 어셈블리의 설치도 롤백됩니다. 그러나 제거 시에는 트랜잭션 방식이 사용되지 않습니다.  
   
  Installutil.exe를 사용하면 서명이 연기된 어셈블리를 설치하거나 제거할 수 없지만 강력한 이름의 어셈블리는 설치하거나 제거할 수 있습니다.  
   
@@ -110,7 +103,7 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 installutil /?  
 ```  
   
- 다음 명령은 InstallUtil.exe에 대한 옵션 및 명령 구문에 대한 설명을 표시합니다. 도움말 텍스트가 설치 관리자의 <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=fullName> 속성에 지정된 경우 `myAssembly.exe`의 설치 관리자 구성 요소에 의해 지원되는 옵션 목록 및 설명도 표시됩니다.  
+ 다음 명령은 InstallUtil.exe에 대한 옵션 및 명령 구문에 대한 설명을 표시합니다. 도움말 텍스트가 설치 관리자의 <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> 속성에 지정된 경우 `myAssembly.exe`의 설치 관리자 구성 요소에 의해 지원되는 옵션 목록 및 설명도 표시됩니다.  
   
 ```  
 installutil /? myAssembly.exe  
@@ -177,7 +170,6 @@ installutil /LogFile=myLog.InstallLog myAssembly.exe /LogFile=myTestLog.InstallL
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Configuration.Install>   
- [도구](../../../docs/framework/tools/index.md)   
+ <xref:System.Configuration.Install>  
+ [도구](../../../docs/framework/tools/index.md)  
  [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

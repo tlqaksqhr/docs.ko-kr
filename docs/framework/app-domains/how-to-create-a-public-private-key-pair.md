@@ -5,10 +5,13 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - key pairs for strong-named assemblies
 - signing assemblies
@@ -19,16 +22,15 @@ helpviewer_keywords:
 - .snk files
 - strong-named assemblies, key pairs
 ms.assetid: 05026813-f3bd-4d7c-9e0b-fc588eb3d114
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: a0d1f54b417a9752ae96e52f78d9df7d2d60cbec
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 772bcae9c3467553e4ca90989a82798155ee034c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-create-a-public-private-key-pair"></a>방법: 공개/개인 키 쌍 만들기
 강력한 이름으로 어셈블리를 서명하려면 공개/개인 키 쌍이 있어야 합니다. 이 공개/개인 암호화 키 쌍은 컴파일 중에 강력한 이름의 어셈블리를 만드는 데 사용됩니다. [Sn.exe(강력한 이름 도구)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)를 사용하여 키 쌍을 만들 수 있습니다. 대개 키 쌍 파일의 확장명은 .snk입니다.  
@@ -68,8 +70,9 @@ sn -p keypair.snk public.snk
   
  프로젝트 속성에 **서명** 탭이 없는 이전 버전의 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]를 사용하는 경우 키 파일의 위치를 다음과 같이 지정된 파일 특성(FileAttribute)을 가진 프로젝트 디렉터리로 지정하는 것이 좋습니다.  
   
- [!code-cpp[AssemblyName_KeyPair#21](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_KeyPair/CPP/keyfileattrib.cpp#21)] [!code-csharp[AssemblyName_KeyPair#21](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_KeyPair/CS/keyfileattrib.cs#21)] [!code-vb[AssemblyName_KeyPair#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyName_KeyPair/VB/keyfileattrib.vb#21)]  
+ [!code-cpp[AssemblyName_KeyPair#21](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyName_KeyPair/CPP/keyfileattrib.cpp#21)]
+ [!code-csharp[AssemblyName_KeyPair#21](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyName_KeyPair/CS/keyfileattrib.cs#21)]
+ [!code-vb[AssemblyName_KeyPair#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyName_KeyPair/VB/keyfileattrib.vb#21)]  
   
 ## <a name="see-also"></a>참고 항목  
  [강력한 이름의 어셈블리 만들기 및 사용](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
-

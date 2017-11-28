@@ -1,40 +1,22 @@
 ---
 title: "C# 컴파일러 옵션 범주별 목록"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - Visual C# compiler, options listed by category
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c95c5c3d1c7ea2461e9bda9a1d58464e97ccc688
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 8e8d01587ccde967b8484b3b61916f8cf437f6c0
-ms.openlocfilehash: 584d0cb249644e6b4ffe15e115c49256f5fa2716
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="c-compiler-options-listed-by-category"></a>C# 컴파일러 옵션 범주별 목록
 여기에서는 컴파일러 옵션을 범주별로 정렬합니다. 사전순 목록은 [C# 컴파일러 옵션 사전순 목록](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)을 참조하세요.  
@@ -132,7 +114,6 @@ ms.lasthandoff: 08/14/2017
 |/incremental|증분 컴파일을 사용하도록 설정합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)   
- [사전순 C# 컴파일러 옵션 목록](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)   
+ [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)  
+ [사전순 C# 컴파일러 옵션 목록](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
  [방법: Visual Studio 명령줄에 필요한 환경 변수 설정](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
-

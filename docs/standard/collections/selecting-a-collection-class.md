@@ -16,16 +16,15 @@ helpviewer_keywords:
 - Collections classes
 - grouping data in collections, selecting collection class
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 64b50839a5500b671a4bd5dd92eec2f0db9787a1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
-ms.openlocfilehash: 01abb535567429780a8a0776aebecaf64307950d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="selecting-a-collection-class"></a>Collection 클래스 선택
 컬렉션 클래스를 신중하게 선택해야 합니다. 잘못된 형식을 사용하면 컬렉션 사용이 제한될 수 있습니다. 일반적으로, .NET Framework 버전 1.1을 대상으로 하지 않는 한 <xref:System.Collections> 네임스페이스의 형식을 사용하지 마세요. 형식 안전성이 더 크고 기타 향상된 기능이 있는 제네릭 버전과 동시 버전의 컬렉션을 사용하는 것이 좋습니다.  
@@ -88,8 +87,7 @@ ms.lasthandoff: 09/06/2017
  PLINQ는 다중 코어 컴퓨터의 보다 효율적인 사용을 통해 많은 시나리오에서 더 빠른 쿼리 실행을 제공할 수 있는 LINQ to Objects의 병렬 구현을 제공합니다. 자세한 내용은 [PLINQ(병렬 LINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Collections>   
- <xref:System.Collections.Specialized>   
- <xref:System.Collections.Generic>   
+ <xref:System.Collections>  
+ <xref:System.Collections.Specialized>  
+ <xref:System.Collections.Generic>  
  [스레드로부터 안전한 컬렉션](../../../docs/standard/collections/thread-safe/index.md)
-

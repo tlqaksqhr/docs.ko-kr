@@ -1,25 +1,21 @@
 ---
 title: "방법: 두 컬렉션 조인(LINQ to XML)(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 7b817ede-911a-4cff-9dd3-639c3fc228c9
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 9fdbd442e0974dfcf5183a237eecd94c4c925ee4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1ca088637629453b9d9f801b576ff195844c0bd1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-join-two-collections-linq-to-xml-c"></a>방법: 두 컬렉션 조인(LINQ to XML)(C#)
 XML 문서의 요소나 특성은 때때로 다른 요소나 특성을 참조할 수 있습니다. 예를 들어 [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md) XML 문서에는 고객 목록과 주문 목록이 포함되어 있습니다. 각 `Customer` 요소에는 `CustomerID` 특성이 포함되어 있고, 각 `Order` 요소에는 `CustomerID` 요소가 포함되어 있습니다. 각 주문의 `CustomerID` 요소는 고객의 `CustomerID` 특성을 참조합니다.  
@@ -138,4 +134,3 @@ Attempting to validate, custOrdDoc validated
   
 ## <a name="see-also"></a>참고 항목  
  [고급 쿼리 기술(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
-

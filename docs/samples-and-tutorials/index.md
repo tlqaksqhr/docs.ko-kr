@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 5c8b6e2d14a14724a040bed5cc58c5ffef3ce520
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="samples-and-tutorials"></a>샘플 및 자습서
 
 .NET 설명서에는 .NET에 대해 설명하는 샘플 및 자습서 집합이 포함되어 있습니다. 이 항목에서는 .NET Core, ASP.NET Core 및 C# 샘플 및 자습서를 찾고, 보고, 다운로드하는 방법을 설명합니다. F# 프로그래밍 언어를 학습하기 위한 리소스는 [F# Foundation 사이트](http://fsharp.org/learn.html)에서 찾을 수 있습니다. 온라인 코드 편집기를 사용하여 C#을 살펴보려는 경우 이러한 [대화형 자습서](http://go.microsoft.com/fwlink/p/?LinkId=817234)를 사용해 보세요. 샘플 코드를 보고 다운로드 하는 방법에 대한 지침은 [샘플 보기 및 다운로드](#viewing-and-downloading-samples) 섹션을 참조하세요.
@@ -117,4 +115,3 @@ ms.lasthandoff: 07/28/2017
    * [Visual Studio](https://www.visualstudio.com/) 또는 [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/) 사용: 메뉴 모음에서 **파일 > 열기 > 프로젝트/솔루션**을 선택하여 샘플을 열고 샘플 프로젝트 폴더로 이동하여 프로젝트 파일(*.csproj* 또는 *.fsproj*)을 선택합니다.
    * [Visual Studio 코드](https://code.visualstudio.com/) 사용: 메뉴 모음에서 **파일 > 폴더 열기**를 선택하고 샘플의 프로젝트 폴더를 선택하여 샘플을 엽니다.
    * .NET Core 프로젝트를 지원하는 다른 IDE를 사용합니다.
-

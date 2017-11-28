@@ -1,38 +1,19 @@
 ---
 title: "C++ 템플릿과 C# 제네릭의 차이점(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- generics [C#], vs. C++ templates
+helpviewer_keywords: generics [C#], vs. C++ templates
 ms.assetid: 1da6beeb-d4a4-4da0-87b7-0cfbe04920b7
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: aea1b51c26a8f3de56ea66b9cf89e75bfeb59d81
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 483d33531141127e083c5b75789f405427e46890
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="differences-between-c-templates-and-c-generics-c-programming-guide"></a>C++ 템플릿과 C# 제네릭의 차이점(C# 프로그래밍 가이드)
 C# 제네릭 및 C++ 템플릿은 둘 다 매개 변수가 있는 형식을 지원하는 언어 기능입니다. 그러나 둘 사이에는 많은 차이가 있습니다. 구문 수준에서 C# 제네릭은 매개 변수가 있는 형식에 대한 더 간단한 접근 방식으로, C++ 템플릿의 복잡함이 없습니다. 또한 C#은 C++ 템플릿에서 제공하는 기능 중 일부를 제공하지 않습니다. 구현 수준에서 주요 차이점은 런타임에 C# 제네릭 형식 대체가 수행되어 인스턴스화된 개체에 대해 제네릭 형식 정보가 유지된다는 점입니다. 자세한 내용은 [런타임의 제네릭](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)을 참조하세요.  
@@ -56,7 +37,6 @@ C# 제네릭 및 C++ 템플릿은 둘 다 매개 변수가 있는 형식을 지�
 -   C++에서는 템플릿의 일부 형식 매개 변수에 적합하지 않아 형식 매개 변수로 사용되는 특정 형식을 확인하는 코드를 허용합니다. C#에서는 제약 조건을 충족하는 모든 형식에서 작동하는 방식으로 작성할 코드가 클래스에 필요합니다. 예를 들어 C++에서는 산술 연산자 `+` 및 `-`를 사용하는 함수를 형식 매개 변수의 개체에서 작성하여 이러한 연산자를 지원하지 않는 형식으로 템플릿을 인스턴스화할 때 오류를 생성할 수 있습니다. C#에서는 이를 허용하지 않습니다. 허용되는 유일한 언어 구문은 제약 조건에서 추론할 수 있는 구문입니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [제네릭 소개](../../../csharp/programming-guide/generics/introduction-to-generics.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [제네릭 소개](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
  [템플릿](/cpp/cpp/templates-cpp)
-

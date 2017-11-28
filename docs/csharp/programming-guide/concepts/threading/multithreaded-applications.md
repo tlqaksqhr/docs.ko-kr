@@ -1,30 +1,21 @@
 ---
 title: "다중 스레드 응용 프로그램(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: b7015cfb-d506-4eac-b2f8-b2caaa9cc977
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 48b056172e3260952155eb40a1a393d86da78344
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: dfe0f9c6e911295270df8464d1070a524412466d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="multithreaded-applications-c"></a>다중 스레드 응용 프로그램(C#)
 C#에서는 동시에 여러 작업을 수행하는 응용 프로그램을 작성할 수 있습니다. 다른 작업을 지연시킬 수 있는 작업은 별도 스레드에서 실행할 수 있으며, 이 프로세스를 *다중 스레딩* 또는 *자유 스레딩*이라고 합니다.  
@@ -91,8 +82,7 @@ newThread.Abort();
  *포그라운드 스레드*는 무기한 실행되는 반면, *백그라운드 스레드*는 마지막 포그라운드 스레드가 중지되는 즉시 중지됩니다. <xref:System.Threading.Thread.IsBackground%2A> 속성을 사용하여 스레드의 백그라운드 상태를 확인하거나 변경할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Threading.Thread>   
- [스레드 동기화(C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)   
- [다중 스레드 프로시저의 매개 변수 및 반환 값(C#)](../../../../csharp/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)   
+ <xref:System.Threading.Thread>  
+ [스레드 동기화(C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)  
+ [다중 스레드 프로시저의 매개 변수 및 반환 값(C#)](../../../../csharp/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)  
  [스레딩(C#)](../../../../csharp/programming-guide/concepts/threading/index.md)
-

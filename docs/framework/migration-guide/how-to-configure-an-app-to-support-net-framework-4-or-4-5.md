@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,15 @@ helpviewer_keywords:
 - .NET Framework 4, configuring apps
 - .NET Framework 4.5, configuring apps
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 95266f9f28d5054db3ea8552ebb45e5a83aba060
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3fea03fd2b660368b72ad111effffe7a64e381f2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-45"></a>방법: .NET Framework 4 또는 4.5를 지원하도록 앱 구성
 CLR(공용 언어 런타임)을 호스트하는 모든 응용 프로그램에서 관리 코드를 실행하기 위해서는 CLR을 시작하거나 *활성화*해야 합니다. 일반적으로 .NET Framework 응용 프로그램은 빌드된 CLR 버전에서 실행되지만 응용 프로그램 구성 파일(app.config 파일이라고도 함)을 사용하여 데스크톱 응용 프로그램에 대해 이 동작을 변경할 수 있습니다. 그러나 응용 프로그램 구성 파일을 사용하여 Windows 스토어 앱 또는 Windows Phone 앱에 대한 기본 활성화 동작을 변경할 수는 없습니다. 이 문서에서는 다른 버전의 .NET Framework에서 데스크톱 응용 프로그램을 실행하도록 설정하는 방법을 설명하고 버전 4 또는 4.5를 대상으로 하는 방법에 대한 예제를 제공합니다.  
@@ -92,6 +90,5 @@ CLR(공용 언어 런타임)을 호스트하는 모든 응용 프로그램에서
  \* 이 오류 메시지와 이 오류를 방지하는 방법에 대한 자세한 내용은 [.NET Framework 초기화 오류: 사용자 환경 관리](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [.NET Framework 1.1에서 마이그레이션](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)   
+ [.NET Framework 1.1에서 마이그레이션](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)  
  [마이그레이션 가이드](../../../docs/framework/migration-guide/index.md)
-

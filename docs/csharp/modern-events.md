@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: cf69cbe0a7adbd274d1cb9e9544dda77d9fa1740
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="the-updated-net-core-event-pattern"></a>업데이트된 .NET Core 이벤트 패턴
 
 [이전](event-pattern.md)
@@ -89,4 +87,3 @@ worker.StartWorking += async (sender, eventArgs) =>
 이 시리즈의 다음 문서는 디자인에 `delegates`를 사용하는 경우와 `events`를 사용하는 경우를 구분하는 데 도움이 됩니다. 비슷한 개념이며 해당 문서를 통해 프로그램에 대한 최상의 결정을 내릴 수 있습니다.
 
 [다음](distinguish-delegates-events.md)
-

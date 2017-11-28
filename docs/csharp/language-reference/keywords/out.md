@@ -1,42 +1,24 @@
 ---
 title: "out(C# 참조)"
-ms.date: 2017-03-01
+ms.date: 03/01/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - out_CSharpKeyword
 - out
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - out [C#]
 - out keyword [C#]
 ms.assetid: 7e911a0c-3f98-4536-87be-d539b7536ca8
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 1e36a29bb06a8dc66a1a8f2681235335f72734ba
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 710c1a8031a9f598b1879ebb6306ba3a072a7de1
-ms.openlocfilehash: bcd8e7ad1b60f520536653cdcb67192da470699a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/23/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="out-c-reference"></a>out(C# 참조)
 다음 두 가지 상황에서 `out` 컨텍스트 키워드를 사용할 수 있습니다.
@@ -47,4 +29,3 @@ ms.lasthandoff: 08/23/2017
    
 ## <a name="see-also"></a>참고 항목  
  [C# 참조](../../../csharp/language-reference/index.md)
-

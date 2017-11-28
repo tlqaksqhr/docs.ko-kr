@@ -7,12 +7,11 @@ ms.date: 08/23/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
-ms.translationtype: HT
-ms.sourcegitcommit: 1b028e5880f9e57e87c16eabeb442e0a46a369da
 ms.openlocfilehash: ce3368f4c34a8e4b20a7deb2a6c6e4d163927cd4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/23/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="net-architectural-components"></a>.NET 아키텍처 구성 요소
 
@@ -94,5 +93,4 @@ UWP에 대한 자세한 내용은 [유니버설 Windows 플랫폼 소개](https:
 [C# 가이드](../csharp/index.md)  
 [F# 가이드](../fsharp/index.md)  
 [VB.NET 가이드](../visual-basic/index.md)  
-
 

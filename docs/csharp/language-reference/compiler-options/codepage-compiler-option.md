@@ -1,42 +1,23 @@
 ---
 title: "-codepage(C# 컴파일러 옵션)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /codepage
-dev_langs:
-- CSharp
+f1_keywords: /codepage
 helpviewer_keywords:
 - /codepage compiler option [C#]
 - codepage compiler option [C#]
 - -codepage compiler option [C#]
 ms.assetid: 75942989-b69a-4308-90a0-840c73d2c478
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 37f40312f1218b8e666eae7cb2de6c768ee32108
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b80f6fcf8891d2f0b921af01cc094f624d807aa1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="codepage-c-compiler-options"></a>/codepage(C# 컴파일러 옵션)
 이 옵션은 필수 페이지가 시스템에 대한 현재 기본 코드 페이지가 아닌 경우 컴파일 중에 사용할 코드 페이지를 지정합니다.  
@@ -61,6 +42,5 @@ ms.lasthandoff: 07/28/2017
  이 컴파일러 옵션은 Visual Studio에서 사용할 수 없으며 프로그래밍 방식으로 변경할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)   
+ [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)  
  [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)
-

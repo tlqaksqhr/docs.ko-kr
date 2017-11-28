@@ -1,25 +1,21 @@
 ---
 title: "방법: 하위 요소 찾기(XPath 및 LINQ to XML)(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: b318da39-bb8b-4c56-a019-e13b12b01831
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 3d3551054b345d9ec1d18b33f697cf5c139bfab6
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 27b9b08fea2cfed476f4caf10b65b2b7e5eb74c5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a>방법: 하위 요소 찾기(XPath 및 LINQ to XML)(C#)
 이 항목에서는 특정 이름을 가진 하위 요소를 가져오는 방법을 보여 줍니다.  
@@ -63,4 +59,3 @@ Results are identical
   
 ## <a name="see-also"></a>참고 항목  
  [XPath 사용자를 위한 LINQ to XML(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
-

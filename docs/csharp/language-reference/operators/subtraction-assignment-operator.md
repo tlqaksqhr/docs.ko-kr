@@ -1,41 +1,22 @@
 ---
 title: "-= 연산자(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- -=_CSharpKeyword
-dev_langs:
-- CSharp
+f1_keywords: -=_CSharpKeyword
 helpviewer_keywords:
 - subtraction assignment operator (-=) [C#]
 - -= operator (subtraction assignment ) [C#]
 ms.assetid: 05c7d68a-423f-4de8-891b-cf24e8fb6ed7
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 443f0d717288a491838d23eaa63218150bd346d5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d7f26ae1fce54eb0d03a314a83ce523baeb3f348
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="--operator-c-reference"></a>-= 연산자(C# 참조)
 빼기 대입 연산자입니다.  
@@ -60,10 +41,9 @@ x = x - y
  또한 -= 연산자는 C#에서 이벤트 구독을 취소하는 데 사용됩니다. 자세한 내용은 [방법: 이벤트 구독 및 구독 취소](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)를 참조하세요.  
   
 ## <a name="example"></a>예제  
- [!code-cs[csRefOperators#6](codesnippet/CSharp/subtraction-assignment-operator_1.cs)]  
+ [!code-csharp[csRefOperators#6](codesnippet/CSharp/subtraction-assignment-operator_1.cs)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
  [C# 연산자](../../../csharp/language-reference/operators/index.md)
-

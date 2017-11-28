@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a315b111-8e48-446c-ab19-acb6405894a7
-ms.translationtype: HT
-ms.sourcegitcommit: 934373d61407c8cc19b7d6424898a582880f9c21
 ms.openlocfilehash: 08b8de2fe17a0032a1c1180667f39b1d6ce0feb6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="generic-types-generics-overview"></a>제네릭 형식(제네릭) 개요
 
 암시적이든 명시적이든 C#에서는 항상 제네릭을 사용합니다. C#에서 LINQ를 사용할 때 IEnumerable<T>로 작업하고 있다는 것을 알아차리셨나요? 또는 Entity Framework를 사용하여 데이터베이스에 통신하기 위한 “제네릭 리포지토리”의 온라인 샘플을 본 적이 있다면 대부분의 메서드가 IQueryable<T>를 반환하는 것을 보셨나요? 이러한 예제에서 **T**가 무엇이고 왜 사용되는지 궁금하게 여겼을 수도 있습니다.
@@ -75,4 +73,3 @@ Non-Generic Sort: System.Collections.ArrayList Time taken: 2.4324ms
 
 *   [C# 제네릭 소개](https://msdn.microsoft.com/library/ms379564.aspx)
 *   [C# 프로그래밍 가이드 - 제네릭](https://msdn.microsoft.com/library/512aeb7t.aspx)
-

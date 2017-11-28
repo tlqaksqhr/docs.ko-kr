@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - names [.NET Framework], assemblies
 - assemblies [.NET Framework], names
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 624cc6ad264f32b9a43917d9bae751f57b4421a8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7029fb2b436c9ba49f2dfd3da07c5147222fbeaf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="assembly-names"></a>어셈블리 이름
 어셈블리 이름은 메타데이터에 저장되고 어셈블리 범위 및 응용 프로그램에 의한 사용에 상당한 영향을 미칩니다. 강력한 이름의 어셈블리에는 어셈블리의 이름, 문화권, 공개 키 및 버전 번호가 포함된 정규화된 이름이 있습니다. 이 이름을 보통 표시 이름이라고 하고 로드된 어셈블리의 경우 <xref:System.Reflection.Assembly.FullName%2A> 속성을 사용하여 가져올 수 있습니다.  
@@ -34,7 +32,7 @@ myTypes, Version=1.0.1234.0, Culture=en-US, PublicKeyToken=b77a5c561934e089c, Pr
 ```  
   
 > [!NOTE]
->  .NET Framework 버전 2.0에서는 어셈블리의 프로세서별 버전을 허용하기 위해 프로세서 아키텍처가 어셈블리 ID에 추가됩니다. 프로세서 아키텍처를 통해서만 ID가 다른 어셈블리의 버전을 만들 수 있습니다(예: 32비트 및 64비트 프로세서별 버전). 강력한 이름에는 프로세서 아키텍처가 필요하지 않습니다. 자세한 내용은 <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=fullName>을 참조하십시오.  
+>  .NET Framework 버전 2.0에서는 어셈블리의 프로세서별 버전을 허용하기 위해 프로세서 아키텍처가 어셈블리 ID에 추가됩니다. 프로세서 아키텍처를 통해서만 ID가 다른 어셈블리의 버전을 만들 수 있습니다(예: 32비트 및 64비트 프로세서별 버전). 강력한 이름에는 프로세서 아키텍처가 필요하지 않습니다. 자세한 내용은 <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=nameWithType>을 참조하십시오.  
   
  이 예제에서 정규화된 이름은 `myTypes` 어셈블리에 공개 키 토큰과 함께 강력한 이름이 있고, 영어(미국)에 대한 문화권 값이 있고, 버전 번호 1.0.1234.0이 있음을 나타냅니다. 해당 프로세서 아키텍처는 "msil"이며, 이는 운영 체제 및 프로세서에 따라 32비트 코드 또는 64비트 코드로 JIT(Just-In-Time) 컴파일될 것임을 의미합니다.  
   
@@ -60,7 +58,7 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 ## <a name="naming-application-components"></a>응용 프로그램 구성 요소 이름 지정  
  런타임은 어셈블리 ID를 확인할 때 파일 이름을 고려하지 않습니다. 어셈블리 이름, 버전, 문화권 및 강력한 이름으로 구성된 어셈블리 ID는 런타임에 대해 분명해야 합니다.  
   
- 예를 들어 myAssembly.dll 어셈블리를 참조하는 myAssembly.exe 어셈블리가 있는 경우 myAssembly.exe를 실행하면 바인딩이 올바르게 수행됩니다. 하지만 또 다른 응용 프로그램이 <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=fullName> 메서드를 사용하여 myAssembly.exe를 실행하면 런타임은 myAssembly.exe가 "myAssembly"에 대한 바인딩을 요청할 때 "myAssembly"가 이미 로드되었다고 판단합니다. 이 경우 myAssembly.dll은 로드되지 않습니다. myAssembly.exe에 요청된 형식이 포함되어 있지 않으므로 <xref:System.TypeLoadException>이 발생합니다.  
+ 예를 들어 myAssembly.dll 어셈블리를 참조하는 myAssembly.exe 어셈블리가 있는 경우 myAssembly.exe를 실행하면 바인딩이 올바르게 수행됩니다. 하지만 또 다른 응용 프로그램이 <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> 메서드를 사용하여 myAssembly.exe를 실행하면 런타임은 myAssembly.exe가 "myAssembly"에 대한 바인딩을 요청할 때 "myAssembly"가 이미 로드되었다고 판단합니다. 이 경우 myAssembly.dll은 로드되지 않습니다. myAssembly.exe에 요청된 형식이 포함되어 있지 않으므로 <xref:System.TypeLoadException>이 발생합니다.  
   
  이 문제를 방지하려면 응용 프로그램을 구성하는 어셈블리의 이름을 서로 다르게 지정하거나 같은 이름을 가진 어셈블리를 서로 다른 디렉터리에 포함하세요.  
   
@@ -68,10 +66,9 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 >  강력한 이름의 어셈블리를 전역 어셈블리 캐시에 포함할 경우 어셈블리의 파일 이름은 어셈블리 이름(.exe 또는 .dll 등의 파일 이름 확장명 제외)과 일치해야 합니다. 예를 들어 어셈블리의 파일 이름이 myAssembly.dll이면 어셈블리 이름은 myAssembly여야 합니다. 루트 응용 프로그램 디렉터리에만 배포된 전용 어셈블리의 이름은 파일 이름과 다를 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [방법: 어셈블리의 정규화된 이름 식별](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)   
- [어셈블리 만들기](../../../docs/framework/app-domains/create-assemblies.md)   
- [강력한 이름의 어셈블리](../../../docs/framework/app-domains/strong-named-assemblies.md)   
- [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)   
- [런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
+ [방법: 어셈블리의 정규화된 이름 식별](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
+ [어셈블리 만들기](../../../docs/framework/app-domains/create-assemblies.md)  
+ [강력한 이름의 어셈블리](../../../docs/framework/app-domains/strong-named-assemblies.md)  
+ [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)  
+ [런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [어셈블리를 사용한 프로그래밍](../../../docs/framework/app-domains/programming-with-assemblies.md)
-

@@ -1,15 +1,12 @@
 ---
 title: "데이터를 클립보드에 저장하고 클립보드에서 읽기(Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Clipboard, storing data to (My.Computer.Clipboard)
 - Clipboard, reading from (My.Computer.Clipboard)
@@ -18,29 +15,14 @@ helpviewer_keywords:
 - data [Visual Basic], Clipboard
 - reading data, from Clipboard
 ms.assetid: f690119a-4378-4f7d-b20e-d9377ef49496
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e7bb4ad56f0a039aa7b23d7f0612aaab9366cb9e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3b60942cf3e3a7f588a7838bcae0cb7b6fae2278
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a>데이터를 클립보드에 저장하고 클립보드에서 읽기(Visual Basic)
 클립보드를 사용하여 텍스트 및 이미지와 같은 데이터를 저장할 수 있습니다. 클립보드는 모든 활성 프로세스에서 공유되기 때문에 프로세스 간에 데이터를 전송하는 데 사용할 수 있습니다. `My.Computer.Clipboard` 개체를 사용하면 클립보드에 쉽게 액세스하고 읽고 쓸 수 있습니다.  
@@ -95,9 +77,8 @@ ms.lasthandoff: 07/28/2017
 >  다른 사용자가 클립보드에 액세스할 수 있기 때문에 클립보드를 사용하여 암호 또는 기밀 데이터와 같은 중요한 정보를 저장하지 마세요.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>   
- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetAudioStream%2A>   
- <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetDataObject%2A>   
- [방법: XML 파일에서 개체 데이터 읽기](../../../programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)   
+ <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>  
+ <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetAudioStream%2A>  
+ <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetDataObject%2A>  
+ [방법: XML 파일에서 개체 데이터 읽기](../../../programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
  [방법: XML 파일에 개체 데이터 쓰기](../../../programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
-

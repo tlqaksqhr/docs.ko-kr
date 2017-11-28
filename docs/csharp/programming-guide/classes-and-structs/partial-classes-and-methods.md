@@ -1,40 +1,22 @@
 ---
 title: "Partial 클래스 및 메서드(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - partial methods [C#]
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 662b3308c3baa429ed29adca750cbb9b143b79dc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 41b07af83faa6af23695f3719aae29183c35a417
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Partial 클래스 및 메서드(C# 프로그래밍 가이드)
 [클래스](../../../csharp/language-reference/keywords/class.md) 또는 [구조체](../../../csharp/language-reference/keywords/struct.md), [인터페이스](../../../csharp/language-reference/keywords/interface.md) 또는 메서드의 정의를 둘 이상의 소스 파일에 분할할 수 있습니다. 각 소스 파일에는 형식 또는 메서드 정의 섹션이 있으며 모든 부분은 응용 프로그램이 컴파일될 때 결합됩니다.  
@@ -48,7 +30,7 @@ ms.lasthandoff: 09/25/2017
   
 -   클래스 정의를 분할하려면 다음과 같이 [partial](../../../csharp/language-reference/keywords/partial-type.md) 키워드 한정자를 사용합니다.  
   
- [!code-cs[csProgGuideObjects#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_1.cs)]  
+ [!code-csharp[csProgGuideObjects#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_1.cs)]  
   
  `partial` 키워드는 클래스, 구조체 또는 인터페이스의 다른 부분을 네임스페이스에서 정의할 수 있음을 나타냅니다. 모든 부분은 `partial` 키워드를 사용해야 합니다. 최종 형식을 생성하려면 컴파일 시간에 모든 부분을 사용할 수 있어야 합니다. 모든 부분에 `public`, `private` 등의 동일한 액세스 가능성이 있어야 합니다.  
   
@@ -61,15 +43,15 @@ ms.lasthandoff: 09/25/2017
   
  다음 예제에서는 중첩된 대상 형식 자체는 부분이 아니어도 중첩된 형식이 부분일 수 있음을 보여 줍니다.  
   
- [!code-cs[csProgGuideObjects#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_2.cs)]  
+ [!code-csharp[csProgGuideObjects#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_2.cs)]  
   
  컴파일 시간에 부분 형식(Partial Type) 정의의 특성이 병합됩니다. 예를 들어 다음 선언을 살펴보세요.  
   
- [!code-cs[csProgGuideObjects#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_3.cs)]  
+ [!code-csharp[csProgGuideObjects#23](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_3.cs)]  
   
  이러한 선언은 다음 선언과 동일합니다.  
   
- [!code-cs[csProgGuideObjects#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_4.cs)]  
+ [!code-csharp[csProgGuideObjects#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_4.cs)]  
   
  다음은 모든 부분 형식(Partial Type) 정의에서 병합됩니다.  
   
@@ -85,24 +67,24 @@ ms.lasthandoff: 09/25/2017
   
  예를 들어 다음 선언을 살펴보세요.  
   
- [!code-cs[csProgGuideObjects#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_5.cs)]  
+ [!code-csharp[csProgGuideObjects#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_5.cs)]  
   
  이러한 선언은 다음 선언과 동일합니다.  
   
- [!code-cs[csProgGuideObjects#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_6.cs)]  
+ [!code-csharp[csProgGuideObjects#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_6.cs)]  
   
 ### <a name="restrictions"></a>제한  
  partial 클래스 정의로 작업할 때 따라야 할 몇 가지 규칙이 있습니다.  
   
 -   동일한 형식의 일부로 작성된 모든 부분 형식(Partial Type) 정의를 `partial`로 수정해야 합니다. 예를 들어 다음 클래스 선언은 오류를 생성합니다.  
   
-     [!code-cs[csProgGuideObjects#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_7.cs)]  
+     [!code-csharp[csProgGuideObjects#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_7.cs)]  
   
 -   `partial` 한정자는 `class`, `struct` 또는 `interface` 키워드 바로 앞에만 올 수 있습니다.  
   
 -   다음 예제와 같이 부분 형식(Partial Type) 정의에 중첩된 부분 형식(Partial Type)을 사용할 수 있습니다.  
   
-     [!code-cs[csProgGuideObjects#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_8.cs)]  
+     [!code-csharp[csProgGuideObjects#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_8.cs)]  
   
 -   동일한 형식의 일부로 작성된 모든 부분 형식(Partial Type) 정의는 동일한 어셈블리와 동일한 모듈(.exe 또는 .dll 파일)에서 정의해야 합니다. 부분 정의는 여러 모듈에 걸쳐 있을 수 없습니다.  
   
@@ -136,7 +118,7 @@ ms.lasthandoff: 09/25/2017
  다음 예제에서는 `CoOrds` 클래스의 생성자 및 필드가 하나의 partial 클래스 정의에서 선언되고 `PrintCoOrds` 멤버가 다른 partial 클래스 정의에서 선언됩니다.  
   
 ### <a name="code"></a>코드  
- [!code-cs[csProgGuideObjects#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_9.cs)]  
+ [!code-csharp[csProgGuideObjects#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_9.cs)]  
   
 ## <a name="example-2"></a>예제 2  
   
@@ -144,7 +126,7 @@ ms.lasthandoff: 09/25/2017
  다음 예제에서는 partial 구조체와 인터페이스도 개발할 수 있음을 보여 줍니다.  
   
 ### <a name="code"></a>코드  
- [!code-cs[csProgGuideObjects#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_10.cs)]  
+ [!code-csharp[csProgGuideObjects#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/partial-classes-and-methods_10.cs)]  
   
 ## <a name="partial-methods"></a>부분 메서드  
  partial 클래스 또는 구조체에는 부분 메서드(Partial Method)가 포함될 수 있습니다. 클래스의 한 부분에는 메서드의 시그니처가 포함되어 있습니다. 동일한 부분이나 다른 부분에서 선택적 구현을 정의할 수 있습니다. 구현을 제공하지 않으면 메서드와 모든 메서드 호출이 컴파일 시간에 제거됩니다.  
@@ -184,9 +166,8 @@ partial void onNameChanged()
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [클래스](../../../csharp/programming-guide/classes-and-structs/classes.md)   
- [구조체](../../../csharp/programming-guide/classes-and-structs/structs.md)   
- [인터페이스](../../../csharp/programming-guide/interfaces/index.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [클래스](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+ [구조체](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+ [인터페이스](../../../csharp/programming-guide/interfaces/index.md)  
  [partial(형식)](../../../csharp/language-reference/keywords/partial-type.md)
-

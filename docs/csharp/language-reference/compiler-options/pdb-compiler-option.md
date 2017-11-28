@@ -1,42 +1,23 @@
 ---
 title: "-pdb(C# 컴파일러 옵션)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /pdb
-dev_langs:
-- CSharp
+f1_keywords: /pdb
 helpviewer_keywords:
 - -pdb compiler option [C#]
 - pdb compiler option [C#]
 - /pdb compiler option [C#]
 ms.assetid: e9d0f96a-5b75-45d6-9765-92538dd5f823
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 108244d7de49c2ff4df1ac7202e77958743b32df
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7c72c12347a9096aeed063b84310356cb07b49c3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="pdb-c-compiler-options"></a>/pdb(C# 컴파일러 옵션)
 **/pdb** 컴파일러 옵션은 디버그 기호 파일의 이름 및 위치를 지정합니다.  
@@ -66,6 +47,5 @@ csc /debug /pdb:tt t.cs
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)   
+ [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)  
  [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)
-

@@ -8,12 +8,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f684b1-1d2c-4105-8376-7c1959e23803
-ms.translationtype: HT
-ms.sourcegitcommit: 02cfb7708959057de593506db55e4f31f5ab4fd0
 ms.openlocfilehash: 48343ad8d42ad576b1975e81cd764b4ec6f5bc76
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="net-core-versioning"></a>.NET Core 버전 관리
 
@@ -255,4 +254,3 @@ GitHub의 .NET Core 리포지토리에는 매일 많은 라이브러리의 새�
 [.NET Core 배포 패키징](../build/distribution-packaging.md)   
 [.NET Core 지원 수명 주기 팩트 시트](https://www.microsoft.com/net/core/support)   
 [.NET Core 2+ 버전 바인딩](https://github.com/dotnet/designs/issues/3)   
-

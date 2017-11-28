@@ -10,12 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
+ms.openlocfilehash: 2bb94b3f1f4966ed44b2a5d4f14dfeee29707059
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 863940512f33568ee10569da4712e7e646bc3ba7
-ms.openlocfilehash: ad0ed6568da073683545727ef47f6a223942c8d6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>튜플 및 기타 형식 분해 #
 
@@ -99,11 +98,10 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
 클래스, 구조체 또는 인터페이스의 만든 이가 아니더라도 하나 이상의 `Deconstruct` [확장 메서드](programming-guide/classes-and-structs/extension-methods.md) 구현을 통해 해당 형식의 개체를 분해하여 관심 있는 값을 반환할 수 있습니다. 
 
-다음 예제에서는 <xref:System.Reflection.PropertyInfo?displayProperty=fullName> 클래스에 대한 두 개의 `Deconstruct` 확장 메서드를 정의합니다. 첫 번째 메서드는 속성의 형식, 정적 속성인지 인스턴스 속성인지 여부, 읽기 전용인지 여부, 인덱싱되었는지 여부 등 속성의 특성을 나타내는 값 집합을 반환합니다. 두 번째 메서드는 속성의 접근성을 나타냅니다. get 및 set 접근자의 접근성이 다를 수 있으므로 부울 값은 속성에 별도의 get 및 set 접근자가 있는지 여부와 있는 경우 접근성이 동일한지 여부를 나타냅니다. 접근자가 하나만 있거나 get 및 set 접근자 모두 접근성이 동일한 경우 `access` 변수는 속성 전체의 접근성을 나타냅니다. 그러지 않으면 get 및 set 접근자의 접근성이 `getAccess` 및 `setAccess` 변수로 표시됩니다.
+다음 예제에서는 <xref:System.Reflection.PropertyInfo?displayProperty=nameWithType> 클래스에 대한 두 개의 `Deconstruct` 확장 메서드를 정의합니다. 첫 번째 메서드는 속성의 형식, 정적 속성인지 인스턴스 속성인지 여부, 읽기 전용인지 여부, 인덱싱되었는지 여부 등 속성의 특성을 나타내는 값 집합을 반환합니다. 두 번째 메서드는 속성의 접근성을 나타냅니다. get 및 set 접근자의 접근성이 다를 수 있으므로 부울 값은 속성에 별도의 get 및 set 접근자가 있는지 여부와 있는 경우 접근성이 동일한지 여부를 나타냅니다. 접근자가 하나만 있거나 get 및 set 접근자 모두 접근성이 동일한 경우 `access` 변수는 속성 전체의 접근성을 나타냅니다. 그러지 않으면 get 및 set 접근자의 접근성이 `getAccess` 및 `setAccess` 변수로 표시됩니다.
 
 [!code-csharp[Extension-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-extension1.cs)]
  
 ## <a name="see-also"></a>참고 항목
 [무시 항목](discards.md)   
 [튜플](tuples.md)  
-

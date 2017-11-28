@@ -1,30 +1,26 @@
 ---
 title: "방법: 요소 값 검색(LINQ to XML)(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: ceb803eff68f72378ca195120ed96990d62d3593
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 70e60c799157c7aa577bb8abd1fa6aaad746d3d1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>방법: 요소 값 검색(LINQ to XML)(C#)
-이 항목에서는 요소의 값을 가져오는 방법을 보여 줍니다. 두 가지 주요 방법으로 요소의 값을 가져올 수 있습니다. 한 가지 방법은 <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XAttribute>를 원하는 형식으로 캐스팅하는 것입니다. 명시적 변환 연산자는 요소나 특성의 내용을 지정된 형식으로 변환하고 변수에 할당합니다. 또는 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=fullName> 속성이나 <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=fullName> 속성을 사용할 수 있습니다.  
+이 항목에서는 요소의 값을 가져오는 방법을 보여 줍니다. 두 가지 주요 방법으로 요소의 값을 가져올 수 있습니다. 한 가지 방법은 <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XAttribute>를 원하는 형식으로 캐스팅하는 것입니다. 명시적 변환 연산자는 요소나 특성의 내용을 지정된 형식으로 변환하고 변수에 할당합니다. 또는 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 속성이나 <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> 속성을 사용할 수 있습니다.  
   
- 그러나 C#에서는 캐스팅이 대개 더 나은 방법입니다. 요소나 특성을 nullable 형식으로 캐스팅하면 존재하지 않을 수도 있는 요소나 특성의 값을 검색하는 경우 코드를 더 간단하게 작성할 수 있습니다. 이 항목의 마지막 예제에서는 이에 대해 보여 줍니다. 그러나 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=fullName> 속성을 통해 설정할 수 있는 것처럼 캐스팅을 통해 요소의 내용을 설정할 수는 없습니다.  
+ 그러나 C#에서는 캐스팅이 대개 더 나은 방법입니다. 요소나 특성을 nullable 형식으로 캐스팅하면 존재하지 않을 수도 있는 요소나 특성의 값을 검색하는 경우 코드를 더 간단하게 작성할 수 있습니다. 이 항목의 마지막 예제에서는 이에 대해 보여 줍니다. 그러나 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 속성을 통해 설정할 수 있는 것처럼 캐스팅을 통해 요소의 내용을 설정할 수는 없습니다.  
   
 ## <a name="example"></a>예제  
  요소의 값을 검색하려면 <xref:System.Xml.Linq.XElement> 개체를 원하는 형식으로 캐스팅하기만 하면 됩니다. 다음과 같이 요소를 문자열로 항상 캐스팅할 수 있습니다.  
@@ -159,4 +155,3 @@ v4:element does not exist
   
 ## <a name="see-also"></a>참고 항목  
  [LINQ to XML 축(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
-

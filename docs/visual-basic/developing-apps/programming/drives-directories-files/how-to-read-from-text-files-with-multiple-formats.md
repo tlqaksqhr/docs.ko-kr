@@ -1,48 +1,30 @@
 ---
 title: "방법: Visual Basic에서 여러 형식의 텍스트 파일 읽기"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - TextFieldParser object, reading from a file
 - TextFieldType enumeration
 - My.Computer.FileSystem.WriteAllText method, parsing structured text files
-- WriteAllText method, parsing structured text files
-- PeekChars method, determining format of text
-- reading text files, multiple formats
+- WriteAllText method [Visual Basic], parsing structured text files
+- PeekChars method [Visual Basic], determining format of text
+- reading text files [Visual Basic], multiple formats
 - I/O [Visual Basic], reading text files
-- text files, reading
+- text files [Visual Basic], reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 12362f932561bf16412e5beb364f785778c58814
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: be085e5a0f7a57890893ba310db3c66480b300da
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a>방법: Visual Basic에서 여러 형식의 텍스트 파일 읽기
 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> 개체는 로그와 같은 구조적 텍스트 파일을 쉽고 효율적으로 구문 분석하는 방법을 제공합니다. 파일을 구문 분석할 때 `PeekChars` 메서드를 사용하여 각 줄의 형식을 확인하면 여러 형식이 포함된 파일을 처리할 수 있습니다.  
@@ -95,13 +77,12 @@ ms.lasthandoff: 07/28/2017
 -   사용자에게 파일에 액세스할 수 있는 권한이 없는 경우(<xref:System.UnauthorizedAccessException>)  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=fullName>   
- <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.PeekChars%2A>   
- <xref:Microsoft.VisualBasic.FileIO.MalformedLineException>   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>   
- <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.EndOfData%2A>   
- <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.TextFieldType%2A>   
- [방법: 쉼표로 구분된 텍스트 파일에서 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)   
- [방법: 고정 너비 텍스트 파일에서 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)   
+ <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>  
+ <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.PeekChars%2A>  
+ <xref:Microsoft.VisualBasic.FileIO.MalformedLineException>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>  
+ <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.EndOfData%2A>  
+ <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.TextFieldType%2A>  
+ [방법: 쉼표로 구분된 텍스트 파일에서 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)  
+ [방법: 고정 너비 텍스트 파일에서 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)  
  [TextFieldParser 개체를 사용하여 텍스트 파일 구문 분석](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
-

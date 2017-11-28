@@ -15,16 +15,15 @@ helpviewer_keywords:
 - JIT compilation, 64-bit
 - RyuJIT compiler
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 091b83cc0d7829c8ff078e6397aa480895b7a115
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b67c622531321e5cd1efa7db657d62d94c0f73e4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>마이그레이션: 새로운 64비트 JIT 컴파일러
 .NET Framework 4.6부터는 런타임에 Just-In-Time 컴파일을 위한 새로운 64비트 JIT 컴파일러가 포함됩니다. 이 변경 내용은 32비트 JIT 컴파일러를 사용하는 컴파일에는 영향을 주지 않습니다.  
@@ -43,7 +42,7 @@ ms.lasthandoff: 07/28/2017
   
 -   특정 상황에서 최적화가 사용되도록 설정되어 있을 경우 <xref:System.UInt16> 값을 높은 비트의 집합과 비교하면 결과가 잘못됩니다.  
   
--   배열 값을 초기화할 때와 같은 특정 상황에서 <xref:System.Reflection.Emit.OpCodes.Initblk?displayProperty=fullName> IL 명령에 따라 메모리가 초기화되면 잘못된 값이 사용될 수 있습니다. 이로 인해 처리되지 않은 예외 또는 잘못된 출력이 발생할 수 있습니다.  
+-   배열 값을 초기화할 때와 같은 특정 상황에서 <xref:System.Reflection.Emit.OpCodes.Initblk?displayProperty=nameWithType> IL 명령에 따라 메모리가 초기화되면 잘못된 값이 사용될 수 있습니다. 이로 인해 처리되지 않은 예외 또는 잘못된 출력이 발생할 수 있습니다.  
   
 -   드물게 특정한 상황에서 컴파일러 최적화가 사용되도록 설정되면 조건부 비트 테스트가 잘못된 <xref:System.Boolean> 값을 반환하거나 예외를 throw할 수 있습니다.  
   
@@ -81,6 +80,5 @@ ms.lasthandoff: 07/28/2017
  [Microsoft Connect](https://connect.microsoft.com/VisualStudio)에 버그를 보고하여 문제를 알릴 수도 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [런타임 변경 내용](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)   
+ [런타임 변경 내용](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)  
  [\<useLegacyJit> 요소](../../../docs/framework/configure-apps/file-schema/runtime/uselegacyjit-element.md)
-

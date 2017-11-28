@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.translationtype: HT
-ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
 ms.openlocfilehash: 4591ec591d9aba41e303bacdb6ed94c6663376be
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/29/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="async-in-depth"></a>비동기에 대한 자세한 설명
 
 .NET 태스크 기반 비동기 모델을 사용하면 I/O 및 CPU 바인딩된 비동기 코드를 간단하게 작성할 수 있습니다. 모델은 C# 및 Visual Basic에서 `Task` 및 `Task<T>` 형식과 `async` 및 `await` 키워드로 표시됩니다. (언어 관련 리소스는 [참고 항목](#see-also) 섹션에 있습니다.) 이 문서에서는 .NET 비동기를 사용하는 방법을 설명하고 백그라운드에서 사용되는 비동기 프레임워크에 대한 통찰을 제공합니다.
@@ -154,4 +152,3 @@ public async Task<int> CalculateResult(InputData data)
 [C#의 비동기 프로그래밍](~/docs/csharp/async.md)   
 [Async Programming in F#](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md) (F#의 비동기 프로그래밍)  
 [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
-

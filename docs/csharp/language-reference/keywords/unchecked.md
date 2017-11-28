@@ -1,48 +1,29 @@
 ---
 title: "unchecked(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - unchecked_CSharpKeyword
 - unchecked
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- unchecked keyword [C#]
+helpviewer_keywords: unchecked keyword [C#]
 ms.assetid: 0c021f7c-923f-4b3d-a58f-55336f5ac27e
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c05e7cb742d8e8f5a7804656a5ec13548d0498b1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5878a2412e6c85da85b1a3b8c2a8255b51e67137
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="unchecked-c-reference"></a>unchecked(C# 참조)
 `unchecked` 키워드는 정수 형식 산술 연산 및 변환에 대한 오버플로 검사를 비활성화하는 데 사용됩니다.  
   
  unchecked 컨텍스트에서 식이 대상 형식의 범위를 벗어난 값을 생성하는 경우 오버플로에 플래그가 지정되지 않습니다. 예를 들어 다음 예제의 계산은 `unchecked` 블록 또는 식에서 수행되므로 결과가 정수에 비해 너무 크다는 사실이 무시되며 `int1`에 -2,147,483,639 값이 할당됩니다.  
   
- [!code-cs[csrefKeywordsChecked#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/unchecked_1.cs)]  
+ [!code-csharp[csrefKeywordsChecked#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/unchecked_1.cs)]  
   
  `unchecked` 환경을 제거하면 컴파일 오류가 발생합니다. 식의 모든 항이 상수이기 때문에 컴파일 시간에 오버플로가 검색될 수 있습니다.  
   
@@ -53,15 +34,14 @@ ms.lasthandoff: 09/25/2017
 ## <a name="example"></a>예제  
  이 샘플에서는 `unchecked` 키워드를 사용하는 방법을 보여 줍니다.  
   
- [!code-cs[csrefKeywordsChecked#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/unchecked_2.cs)]  
+ [!code-csharp[csrefKeywordsChecked#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/unchecked_2.cs)]  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
- [Checked 및 Unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)   
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
+ [Checked 및 Unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)  
  [checked](../../../csharp/language-reference/keywords/checked.md)
-

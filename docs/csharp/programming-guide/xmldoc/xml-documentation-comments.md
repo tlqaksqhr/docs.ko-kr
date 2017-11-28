@@ -1,14 +1,10 @@
 ---
 title: "XML 문서 주석(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.xml
-dev_langs:
-- CSharp
+f1_keywords: cs.xml
 helpviewer_keywords:
 - XML [C#], code comments
 - comments [C#], XML
@@ -17,29 +13,14 @@ helpviewer_keywords:
 - C# language, XML code comments
 - XML documentation comments [C#]
 ms.assetid: 803b7f7b-7428-4725-b5db-9a6cff273199
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e7f88a85dd493836a17a80310ab4bce8ebf47c23
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 408b2de29b15158499067da05dbb2f89eb1ba22f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>XML 문서 주석(C# 프로그래밍 가이드)
 Visual C#에서는 주석이 참조하는 코드 블록 바로 앞의 소스 코드의 특별 주석 필드(세 개의 슬래시로 표시)에 XML 요소를 포함하여 코드에 대한 문서를 만들 수 있습니다. 예를 들면 다음과 같습니다.  
@@ -78,4 +59,3 @@ public class MyClass{}
   
 ## <a name="see-also"></a>참고 항목  
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-

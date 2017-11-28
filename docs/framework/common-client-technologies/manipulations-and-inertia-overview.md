@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dd31b89b-eab6-45a1-8d0b-11e0eb84b234
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: b9cfd81b966e2bab95aa780a4fbde26abec74b00
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="manipulations-and-inertia-overview"></a>조작 및 관성 개요
 *조작*을 통해 사용자는 *조작자*를 사용하여 UI(사용자 인터페이스) 요소를 이동, 회전하고 크기를 조정할 수 있습니다. 조작자는 마우스, 터치 사용 시나리오의 스타일러스 또는 손가락을 나타냅니다.  
@@ -85,4 +83,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Windows.Input.Manipulations>
-

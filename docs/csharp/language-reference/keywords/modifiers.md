@@ -1,39 +1,21 @@
 ---
 title: "한정자(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - keywords [C#], modifiers
 - modifiers [C#]
 ms.assetid: c96691dd-b357-49ec-b5ae-03ca214fadfb
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 31bdfb74c5803e0108aab5b7733ea7b725f7ef3c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9e2e7e5e3907ac9bb66676e749ddd55a8ac4836c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="modifiers-c-reference"></a>한정자(C# 참조)
 한정자는 형식 및 형식 멤버의 선언을 수정하는 데 사용됩니다. 이 단원에서는 다음의 C# 한정자에 대해 소개합니다.  
@@ -57,7 +39,6 @@ ms.lasthandoff: 07/28/2017
 |[volatile](../../../csharp/language-reference/keywords/volatile.md)|필드가 운영 체제, 하드웨어 또는 동시에 실행되는 스레드 등에 의해 프로그램에서 수정될 수 있음을 나타냅니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
  [C# 키워드](../../../csharp/language-reference/keywords/index.md)
-

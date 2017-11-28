@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - debugging extensions
 - SOS debugging extensions
 - SOS.dll
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: efdb4bec75d160acd212b763690bd7a473c35eed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 41338111c92cb4af7f175c00c8ec87e48dc9c228
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll(SOS 디버깅 확장명)
 SOS 디버깅 확장명(SOS.dll)을 사용하면 내부 CLR(공용 언어 런타임) 환경에 대한 정보를 제공하여 관리되는 프로그램을 Windows 디버거(WinDbg.exe)와 Visual Studio에서 쉽게 디버깅할 수 있습니다. 이 도구를 사용하려면 프로젝트에 관리되지 않는 디버깅을 활성화해야 합니다. SOS.dll은 .NET Framework와 함께 자동으로 설치됩니다. Visual Studio에서 SOS.dll을 사용하려면 [WDK(Windows 드라이버 키트)](http://msdn.microsoft.com/windows/hardware/hh852362)를 설치합니다.  
@@ -220,6 +213,5 @@ SOS 디버깅 확장명(SOS.dll)을 사용하면 내부 CLR(공용 언어 런타
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [도구](../../../docs/framework/tools/index.md)   
+ [도구](../../../docs/framework/tools/index.md)  
  [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

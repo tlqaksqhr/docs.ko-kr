@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 0fa7f9f906ba72b114fc59c8026b4b6c79586dd2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="a-tour-of-the-c-language"></a>C# 언어 둘러보기  
 
 C#(“샵 참조”)은 간단하면서도 형식이 안전한 최신 개체 지향 프로그래밍 언어입니다. C#은 C 언어 제품군에서 시작되었으며 C, C++, Java 및 JavaScript 프로그래머에게 친숙할 것입니다.
@@ -85,4 +83,3 @@ C#에 대해 자세히 알아볼 수 있는 많은 리소스가 있습니다.  �
 
 >[!div class="step-by-step"]
 [다음](program-structure.md)
-

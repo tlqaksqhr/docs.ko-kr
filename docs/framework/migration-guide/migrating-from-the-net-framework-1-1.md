@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework 4.5, migrating from 1.1
 - .NET Framework 1.1, migrating to .NET Framework 4.5
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 5757894a63ed556413147b8ef8c85c2d31ef11a5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="migrating-from-the-net-framework-11"></a>.NET Framework 1.1에서 마이그레이션
 [!INCLUDE[win7](../../../includes/win7-md.md)] 및 이후 버전의 Windows 운영 체제는 [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)]을 지원하지 않습니다. 따라서 [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] 이상 운영 체제 버전에서 수정하지 않으면 [!INCLUDE[win7](../../../includes/win7-md.md)] 을 대상으로 하는 응용 프로그램이 실행되지 않습니다. 이 항목에서는 [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)] 및 이후 버전의 Windows 운영 체제에서 [!INCLUDE[win7](../../../includes/win7-md.md)]을 대상으로 하는 응용 프로그램을 실행하는 데 필요한 단계에 대해 설명합니다. [!INCLUDE[net_v11_long](../../../includes/net-v11-long-md.md)] 및 [!INCLUDE[win8](../../../includes/win8-md.md)]에 대한 자세한 내용은 [Windows 8 이상 버전에서 .NET Framework 1.1 앱 실행](../../../docs/framework/install/run-net-framework-1-1-apps.md)을 참조하세요.  
@@ -75,4 +73,3 @@ ms.lasthandoff: 07/28/2017
  사용되지 않는 형식 및 멤버의 영향은 대상이 변경된 응용 프로그램 및 다시 컴파일된 응용 프로그램에서 다르게 나타납니다. 사용되지 않는 형식 및 멤버를 사용하더라도 해당 어셈블리에서 해당 형식 및 멤버를 물리적으로 제거하지 않는 경우 대상이 변경된 응용 프로그램에 영향을 주지 않습니다. 사용되지 않는 형식 및 멤버를 사용하는 응용 프로그램을 다시 컴파일하면 일반적으로 컴파일러 오류가 아닌 컴파일러 경고가 발생합니다. 하지만 경우에 따라 컴파일러 오류가 발생되어 사용되지 않는 형식 및 멤버를 사용하는 코드가 성공적으로 컴파일되지 않습니다. 이 경우 응용 프로그램을 다시 컴파일하기 전에 사용되지 않는 형식 및 멤버를 호출하는 소스 코드를 다시 작성해야 합니다. 사용되지 않는 형식 및 멤버에 대한 자세한 내용은 [클래스 라이브러리의 사용되지 않는 기능](../../../docs/framework/whats-new/whats-obsolete.md)을 참조하세요.  
   
  [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] 릴리스 이후 사용되지 않는 형식 및 멤버의 영향을 평가하려면 [클래스 라이브러리의 사용되지 않는 기능](../../../docs/framework/whats-new/whats-obsolete.md)을 참조하세요. 사용되지 않는 형식 및 멤버 목록은 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 및 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서 확인하십시오.
-

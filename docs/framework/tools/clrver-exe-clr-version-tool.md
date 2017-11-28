@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Clrver.exe
 - CLR Version tool
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 037570e34ec8fd7959fa2a9fd8e22b61aa6db738
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f8bef6f85f9e4b7d35e60c613a12ad87a26b70ab
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="clrverexe-clr-version-tool"></a>Clrver.exe(CLR 버전 도구)
 CLR 버전 도구(Clrver.exe)에서는 컴퓨터에서 CLR(공용 언어 런타임)의 모든 설치 버전을 보고합니다.  
@@ -72,6 +65,5 @@ clrver [option]
  `Clrver -all`  
   
 ## <a name="see-also"></a>참고 항목  
- [도구](../../../docs/framework/tools/index.md)   
+ [도구](../../../docs/framework/tools/index.md)  
  [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

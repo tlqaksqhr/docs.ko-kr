@@ -1,45 +1,26 @@
 ---
 title: "컴퓨터 리소스에 액세스(Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- computer resources
-- My.Computer object, tasks
-- computer resources, accessing
+- computer resources [Visual Basic]
+- My.Computer object [Visual Basic], tasks
+- computer resources [Visual Basic], accessing
 ms.assetid: 75b81c88-f7c0-46e0-95c8-0c006d2120f9
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 20c9d23570ec986598ad697f559aaf3a3153a8a0
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ae9517d2c06c2583a90b2bb503094094bb6e938c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/22/2017
 ---
-
 # <a name="accessing-computer-resources-visual-basic"></a>컴퓨터 리소스에 액세스(Visual Basic)
 
 `My.Computer` 개체는 `My`의 세 가지 중앙 개체 중 하나로, 이를 통해 정보 및 일반적으로 사용되는 기능에 액세스할 수 있습니다. `My.Computer`에서는 응용 프로그램이 실행되는 컴퓨터에 액세스하기 위한 메서드, 특성 및 이벤트를 제공합니다. 다음과 같은 개체가 있습니다.  
@@ -80,4 +61,3 @@ CAPS LOCK이 켜져 있는지 확인하는 것과 같이 `My.Computer.Keyboard`�
 
 [레지스트리 읽기 및 쓰기](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)   
 레지스트리 키에서 데이터를 읽거나 레지스트리 키에 데이터를 쓰는 것과 같이 `My.Computer.Registry`와 연결된 작업을 나열합니다.
-

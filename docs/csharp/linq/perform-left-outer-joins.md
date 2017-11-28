@@ -7,16 +7,14 @@ manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: f542cee6-3169-4dcf-a631-3a6a79ccd473
+ms.openlocfilehash: 0c28c85bf933a411403aefcb91801d28fe1c268e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d81f6e9df228dc6eec985253f53b70a95493ed42
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="perform-left-outer-joins"></a>왼쪽 우선 외부 조인 수행
 왼쪽 우선 외부 조인은 두 번째 컬렉션에 상호 연결된 요소가 있는지 여부에 관계없이 첫 번째 컬렉션의 각 요소가 반환되는 조인입니다. LINQ를 통해 그룹 조인의 결과에서 <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> 메서드를 호출하여 왼쪽 우선 외부 조인을 수행할 수 있습니다.  
@@ -31,13 +29,12 @@ ms.lasthandoff: 07/28/2017
 > [!NOTE]
 >  참조 형식의 기본값은 `null`이므로 예제에서는 각 `Pet` 컬렉션의 각 요소에 액세스하기 전에 null 참조를 확인합니다.  
   
- [!code-cs[CsLINQProgJoining#7](../../../samples/snippets/csharp/concepts/linq/how-to-perform-left-outer-joins_1.cs)]  
+ [!code-csharp[CsLINQProgJoining#7](../../../samples/snippets/csharp/concepts/linq/how-to-perform-left-outer-joins_1.cs)]  
  
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Linq.Enumerable.Join%2A>   
- <xref:System.Linq.Enumerable.GroupJoin%2A>   
- [내부 조인 수행](perform-inner-joins.md)   
- [그룹화 조인 수행](perform-grouped-joins.md)   
- [무명 형식](../programming-guide/classes-and-structs/anonymous-types.md)   
+ <xref:System.Linq.Enumerable.Join%2A>  
+ <xref:System.Linq.Enumerable.GroupJoin%2A>  
+ [내부 조인 수행](perform-inner-joins.md)  
+ [그룹화 조인 수행](perform-grouped-joins.md)  
+ [무명 형식](../programming-guide/classes-and-structs/anonymous-types.md)  
  
-

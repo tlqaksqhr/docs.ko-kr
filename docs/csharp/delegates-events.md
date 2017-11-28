@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 4e80e053-8022-4987-a8a0-209caec0315d
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: e511b5057cb83119819a1403d56f23f738488a3f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="delegates--events"></a>대리자 및 이벤트
 
 이 항목은 다음 문서에서 다룹니다.
@@ -54,4 +52,3 @@ ms.lasthandoff: 07/28/2017
 
     이 문서에서는 설계에서 이벤트 및 대리자 사용을 구분하는 방법에 대해 설명합니다.
  
-

@@ -5,10 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - generics [.NET Framework], reflection emit
 - reflection emit, generic types
@@ -20,16 +22,15 @@ helpviewer_keywords:
 - types, generic
 - type parameters
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 99d8da622b23a98b8a48ad6fcdb82c270d24ed22
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bc98ffad2f34be503f649f5331400f59689eea09
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="reflection-and-generic-types"></a>리플렉션 및 제네릭 형식
 <a name="top"></a> 리플렉션의 관점에서 제네릭 형식과 일반 형식 간 차이점은 제네릭 형식이 형식 매개 변수(제네릭 형식 정의인 경우) 또는 형식 인수(생성된 형식인 경우)의 집합과 연결되어 있다는 점입니다. 제네릭 메서드는 동일한 방식으로 일반 메서드와 다릅니다.  
@@ -71,7 +72,7 @@ ms.lasthandoff: 07/28/2017
  제네릭 형식 및 메서드 정의는 인스턴스화할 수 있는 형식을 생성하는 템플릿입니다. <xref:System.Collections.Generic.Dictionary%602>와 같은 .NET Framework 클래스 라이브러리의 제네릭 형식은 제네릭 형식 정의입니다.  
   
 ### <a name="is-the-type-or-method-open-or-closed"></a>형식 또는 메서드가 개방형인가요 아니면 폐쇄형인가요?  
- 인스턴스화할 수 있는 형식이 모든 바깥쪽 형식의 모든 형식 매개 변수를 비롯하여 모든 해당 형식 매개 변수를 대체한 경우 제네릭 형식 또는 메서드는 폐쇄형입니다. 폐쇄형인 경우 제네릭 형식의 인스턴스만 만들 수 있습니다. 형식이 개방형인 경우 <xref:System.Type.ContainsGenericParameters%2A?displayProperty=fullName> 속성에서 `true` 를 반환합니다. 메서드의 경우 <xref:System.Reflection.MethodInfo.ContainsGenericParameters%2A?displayProperty=fullName> 메서드가 같은 기능을 수행합니다.  
+ 인스턴스화할 수 있는 형식이 모든 바깥쪽 형식의 모든 형식 매개 변수를 비롯하여 모든 해당 형식 매개 변수를 대체한 경우 제네릭 형식 또는 메서드는 폐쇄형입니다. 폐쇄형인 경우 제네릭 형식의 인스턴스만 만들 수 있습니다. 형식이 개방형인 경우 <xref:System.Type.ContainsGenericParameters%2A?displayProperty=nameWithType> 속성에서 `true` 를 반환합니다. 메서드의 경우 <xref:System.Reflection.MethodInfo.ContainsGenericParameters%2A?displayProperty=nameWithType> 메서드가 같은 기능을 수행합니다.  
   
  [맨 위로 이동](#top)  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 07/28/2017
   
 <a name="examining_type_arguments"></a>   
 ## <a name="examining-type-arguments-and-type-parameters"></a>형식 인수 및 형식 매개 변수 검사  
- <xref:System.Type.GetGenericArguments%2A?displayProperty=fullName> 메서드를 사용하여 제네릭 형식의 형식 매개 변수 또는 형식 인수를 나타내는 <xref:System.Type> 개체의 배열을 가져오고, <xref:System.Reflection.MethodInfo.GetGenericArguments%2A?displayProperty=fullName> 메서드를 사용하여 제네릭 메서드에 대해 동일한 작업을 수행합니다.  
+ <xref:System.Type.GetGenericArguments%2A?displayProperty=nameWithType> 메서드를 사용하여 제네릭 형식의 형식 매개 변수 또는 형식 인수를 나타내는 <xref:System.Type> 개체의 배열을 가져오고, <xref:System.Reflection.MethodInfo.GetGenericArguments%2A?displayProperty=nameWithType> 메서드를 사용하여 제네릭 메서드에 대해 동일한 작업을 수행합니다.  
   
  <xref:System.Type> 개체가 형식 매개 변수를 나타내는 것을 알고 있다면 리플렉션이 대답할 수 있는 추가 질문이 많습니다. 형식 매개 변수의 소스, 해당 위치 및 해당 제약 조건을 확인할 수 있습니다.  
   
@@ -138,16 +139,16 @@ generic<typename V, typename W> ref class D : B<int, V> {};
  <xref:System.Type.GenericParameterAttributes%2A> 속성은 형식 매개 변수의 분산(공 분산 및 반공 분산) 및 특별 제약 조건을 나타내는 <xref:System.Reflection.GenericParameterAttributes> 값을 가져옵니다.  
   
 #### <a name="covariance-and-contravariance"></a>공 분산 및 반공 분산  
- 형식 매개 변수가 공 분산인지 또는 반공 분산인지 확인하려면 <xref:System.Reflection.GenericParameterAttributes.VarianceMask?displayProperty=fullName> 마스크를 <xref:System.Reflection.GenericParameterAttributes> 속성에서 반환한 <xref:System.Type.GenericParameterAttributes%2A> 값에 적용합니다. 결과가 <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=fullName>인 경우 형식 매개 변수는 고정입니다. [공변성(Covariance) 및 반공변성(Contravariance)](../../../docs/standard/generics/covariance-and-contravariance.md)을 참조하세요.  
+ 형식 매개 변수가 공 분산인지 또는 반공 분산인지 확인하려면 <xref:System.Reflection.GenericParameterAttributes.VarianceMask?displayProperty=nameWithType> 마스크를 <xref:System.Reflection.GenericParameterAttributes> 속성에서 반환한 <xref:System.Type.GenericParameterAttributes%2A> 값에 적용합니다. 결과가 <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>인 경우 형식 매개 변수는 고정입니다. [공변성(Covariance) 및 반공변성(Contravariance)](../../../docs/standard/generics/covariance-and-contravariance.md)을 참조하세요.  
   
 #### <a name="special-constraints"></a>특별 제약 조건  
- 형식 매개 변수의 특별 제약 조건을 확인하려면 <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=fullName> 마스크를 <xref:System.Reflection.GenericParameterAttributes> 속성에서 반환한 <xref:System.Type.GenericParameterAttributes%2A> 값에 적용합니다. 결과가 <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=fullName>인 경우 특별 제약 조건이 없습니다. 형식 매개 변수는 참조 형식이어야 하고 Nullable이 아닌 값 형식이어야 하며 그리고 기본 생성자를 보유해야 하는 제약을 받습니다.  
+ 형식 매개 변수의 특별 제약 조건을 확인하려면 <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> 마스크를 <xref:System.Reflection.GenericParameterAttributes> 속성에서 반환한 <xref:System.Type.GenericParameterAttributes%2A> 값에 적용합니다. 결과가 <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>인 경우 특별 제약 조건이 없습니다. 형식 매개 변수는 참조 형식이어야 하고 Nullable이 아닌 값 형식이어야 하며 그리고 기본 생성자를 보유해야 하는 제약을 받습니다.  
   
  [맨 위로 이동](#top)  
   
 <a name="invariants"></a>   
 ## <a name="invariants"></a>고정  
- 제네릭 형식에 대한 리플렉션의 일반적인 용어에 대한 고정 조건 표는 <xref:System.Type.IsGenericType%2A?displayProperty=fullName>을 참조하세요. 제네릭 메서드와 관련된 추가 용어는 <xref:System.Reflection.MethodInfo.IsGenericMethod%2A?displayProperty=fullName>를 참조하세요.  
+ 제네릭 형식에 대한 리플렉션의 일반적인 용어에 대한 고정 조건 표는 <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType>을 참조하세요. 제네릭 메서드와 관련된 추가 용어는 <xref:System.Reflection.MethodInfo.IsGenericMethod%2A?displayProperty=nameWithType>를 참조하세요.  
   
  [맨 위로 이동](#top)  
   
@@ -160,4 +161,3 @@ generic<typename V, typename W> ref class D : B<int, V> {};
 |[제네릭](../../../docs/standard/generics/index.md)|제네릭 기능 및 .NET Framework에서 제네릭 기능을 지원하는 방법을 설명합니다.|  
 |[방법: 리플렉션 내보내기를 사용하여 제네릭 형식 정의](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|리플렉션 내보내기를 사용하여 동적 어셈블리에서 제네릭 형식을 생성하는 방법을 보여 줍니다.|  
 |[형식 정보 보기](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|<xref:System.Type> 클래스를 설명하고 <xref:System.Type>과 다양한 리플렉션 클래스를 함께 사용하여 생성자, 메서드, 필드, 속성, 이벤트에 대한 정보를 가져오는 방법을 보여 주는 코드 예제를 제공합니다.|
-

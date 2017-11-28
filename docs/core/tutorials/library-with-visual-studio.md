@@ -10,12 +10,11 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: c849ca26-6a25-4d35-9544-f343af88e0e7
+ms.openlocfilehash: 5806e3e71eabbc1d65ecffed72108ba548b57806
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 3a25c1c3b540bac8ef963a8bbf708b0700c3e9e2
-ms.openlocfilehash: 8b86f8f9cd02484cb91af3206606aced8fed1ecd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="building-a-class-library-with-c-and-net-core-in-visual-studio-2017"></a>Visual Studio 2017에서 C# 및 .NET Core로 클래스 라이브러리 빌드
 
@@ -58,7 +57,7 @@ ms.lasthandoff: 09/08/2017
 
    [!CODE-csharp[ClassLib#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/classlib.cs)]
 
-   클래스 라이브러리 `UtilityLibraries.StringLibrary`에는 `StartsWithUpper`라는 메서드가 포함됩니다. 이 메서드는 현재 문자열 인스턴스가 대문자로 시작하는지 여부를 나타내는 <xref:System.Boolean> 값을 반환합니다. 유니코드 표준은 대문자와 소문자를 구분합니다. <xref:System.Char.IsUpper(System.Char)?displayProperty=fullName> 메서드는 문자가 대문자인 경우 `true`를 반환합니다.
+   클래스 라이브러리 `UtilityLibraries.StringLibrary`에는 `StartsWithUpper`라는 메서드가 포함됩니다. 이 메서드는 현재 문자열 인스턴스가 대문자로 시작하는지 여부를 나타내는 <xref:System.Boolean> 값을 반환합니다. 유니코드 표준은 대문자와 소문자를 구분합니다. <xref:System.Char.IsUpper(System.Char)?displayProperty=nameWithType> 메서드는 문자가 대문자인 경우 `true`를 반환합니다.
 
 1. 메뉴 모음에서 **빌드** > **솔루션 빌드**를 선택합니다. 프로젝트가 오류 없이 컴파일되어야 합니다.
 

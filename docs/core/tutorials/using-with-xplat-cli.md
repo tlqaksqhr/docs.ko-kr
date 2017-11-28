@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 41632e63-d5c6-4427-a09e-51dc1116d45f
+ms.openlocfilehash: 19622cca1dd28d4d2248d69f1b4081c352a0c4f4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
-ms.openlocfilehash: 53894b7548b7bedfe3a980efd53a076c0e4efc7f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/04/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>명령줄을 사용하여 Windows/Linux/macOS에서 .NET Core 시작
 
 이 항목에서는 .NET Core CLI 도구를 사용하여 컴퓨터에서 플랫폼 간 앱 개발을 시작하는 방법을 보여 줍니다.
@@ -64,6 +62,8 @@ $ dotnet run
 
    그런 다음 `Hello`라는 네임스페이스를 정의합니다. 이 이름은 원하는 값으로 변경할 수 있습니다. `Program`이라는 클래스는 해당 네임스페이스 내에서 인수로 문자열 배열을 사용하는 `Main` 메서드로 정의됩니다. 이 배열에는 컴파일된 프로그램을 호출할 때 전달된 인수 목록이 포함되어 있습니다. 이 배열은 그대로 사용되지 않습니다. 프로그램은 모두 "Hello World!"를 작성합니다. 표시합니다. 나중에 이 인수를 사용하는 코드를 변경할 예정입니다.
 
+   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 2. `$ dotnet restore`
 
    [`dotnet restore`](../tools/dotnet-restore.md)는 [NuGet](https://www.nuget.org/)(.NET 패키지 관리자)을 호출하여 종속성 트리를 복원합니다. NuGet은 *Hello.csproj* 파일을 분석하고, 파일에 명시된 종속성을 다운로드하고(또는 컴퓨터의 캐시에서 종속성을 가져오고), *obj/project.assets.json* 파일을 작성합니다.  *project.assets.json* 파일은 컴파일 및 실행하려면 필요합니다.
@@ -94,7 +94,7 @@ $ dotnet run
 
 1. *Program.cs* 파일의 내용을 다음 코드로 바꿉니다.
 
-   [!code-csharp[피보나치](../../../samples/core/console-apps/fibonacci-msbuild/Program.cs)]   
+   [!code-csharp[Fibonacci](../../../samples/core/console-apps/fibonacci-msbuild/Program.cs)]   
 
 2. [ `dotnet build` ](../tools/dotnet-build.md)를 실행하여 변경 내용을 컴파일합니다.
 
@@ -129,7 +129,7 @@ $ dotnet run
 
 1. 다음 코드를 사용하여 *Hello* 디렉터리 내에 *FibonacciGenerator.cs*라는 새 파일을 추가합니다.
 
-   [!code-csharp[피보나치 생성기](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]   
+   [!code-csharp[Fibonacci Generator](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]   
 
 2. 다음 예제에서처럼 *Program.cs* 파일의 `Main` 메서드를 변경하여 새 클래스를 인스턴스화하고 메서드를 호출합니다.
 
@@ -164,4 +164,3 @@ $ dotnet run
 ## <a name="see-also"></a>참고 항목
 
 [.NET Core CLI 도구를 사용하여 프로젝트 구성 및 테스트](testing-with-cli.md)
-

@@ -16,19 +16,18 @@ helpviewer_keywords:
 - hash function
 - collections [.NET Framework], Hashtable collection type
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: aa2392775f0bd2d68c0aeb28aa0654b690b11808
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
-ms.openlocfilehash: 223174392019e0958360858740d7cae37d934f4c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Hashtable 및 Dictionary 컬렉션 형식
-<xref:System.Collections.Hashtable?displayProperty=fullName> 클래스와 <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> 및 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName> 제네릭 클래스는 <xref:System.Collections.IDictionary?displayProperty=fullName> 인터페이스를 구현합니다. <xref:System.Collections.Generic.Dictionary%602> 제네릭 클래스는 <xref:System.Collections.Generic.IDictionary%602> 제네릭 인터페이스도 구현합니다. 따라서 이러한 컬렉션의 각 요소는 한 쌍의 키-값입니다.  
+<xref:System.Collections.Hashtable?displayProperty=nameWithType> 클래스와 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 및 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> 제네릭 클래스는 <xref:System.Collections.IDictionary?displayProperty=nameWithType> 인터페이스를 구현합니다. <xref:System.Collections.Generic.Dictionary%602> 제네릭 클래스는 <xref:System.Collections.Generic.IDictionary%602> 제네릭 인터페이스도 구현합니다. 따라서 이러한 컬렉션의 각 요소는 한 쌍의 키-값입니다.  
   
  <xref:System.Collections.Hashtable> 개체는 컬렉션 요소를 포함하는 버킷으로 구성됩니다. 버킷은 <xref:System.Collections.Hashtable> 내 요소의 가상 하위 그룹으로, 대부분의 컬렉션보다 더 쉽고 빠르게 검색하고 가져올 수 있게 해줍니다. 각 버킷은 해시 함수를 사용하여 생성되고 요소의 키를 기반으로 하는 해시 코드와 연결됩니다.  
   
@@ -45,11 +44,10 @@ ms.lasthandoff: 09/06/2017
  <xref:System.Collections.Generic.Dictionary%602> 및 <xref:System.Collections.Concurrent.ConcurrentDictionary%602>클래스는 <xref:System.Collections.Hashtable> 클래스와 동일한 기능을 갖습니다. 특정 형식(<xref:System.Object> 이외)의 <xref:System.Collections.Generic.Dictionary%602>는 값 형식의 <xref:System.Collections.Hashtable>보다 더 나은 성능을 제공합니다. 이는 <xref:System.Collections.Hashtable>의 요소가 <xref:System.Object> 형식이기 때문입니다. 따라서 boxing 및 unboxing은 일반적으로 값 형식을 저장하거나 검색할 때 발생합니다. <xref:System.Collections.Concurrent.ConcurrentDictionary%602>클래스는 여러 스레드가 컬렉션에 동시에 액세스할 수 있는 경우에 사용해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Collections.Hashtable>   
- <xref:System.Collections.IDictionary>   
- <xref:System.Collections.IHashCodeProvider>   
- <xref:System.Collections.Generic.Dictionary%602>   
- <xref:System.Collections.Generic.IDictionary%602?displayProperty=fullName>   
- <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName>   
+ <xref:System.Collections.Hashtable>  
+ <xref:System.Collections.IDictionary>  
+ <xref:System.Collections.IHashCodeProvider>  
+ <xref:System.Collections.Generic.Dictionary%602>  
+ <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>  
+ <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>  
  [일반적으로 사용되는 컬렉션 형식](../../../docs/standard/collections/commonly-used-collection-types.md)
-

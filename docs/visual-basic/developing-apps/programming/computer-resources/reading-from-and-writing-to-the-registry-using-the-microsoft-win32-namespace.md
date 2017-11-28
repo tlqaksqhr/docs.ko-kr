@@ -1,42 +1,22 @@
 ---
 title: "Microsoft.Win32 네임스페이스를 사용하여 레지스트리 읽기 및 쓰기(Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- registry, Visual Basic
+helpviewer_keywords: registry [Visual Basic]
 ms.assetid: 4a0dcce0-c27b-4199-baa8-ee4528da6a56
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 462cc5c3854035cfc04c7c5df6905c2cfbd486ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cefde5317b2ed2bc0a2834224b1475e8020f7f25
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="reading-from-and-writing-to-the-registry-using-the-microsoftwin32-namespace-visual-basic"></a>Microsoft.Win32 네임스페이스를 사용하여 레지스트리 읽기 및 쓰기(Visual Basic)
 `My.Computer.Registry`는 레지스트리에 대해 프로그래밍할 때 기본 요구를 충족해야 하지만, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]의 <xref:Microsoft.Win32> 네임스페이스에서 <xref:Microsoft.Win32.Registry> 및 <xref:Microsoft.Win32.RegistryKey> 클래스를 사용할 수도 있습니다.  
@@ -67,10 +47,9 @@ ms.lasthandoff: 07/28/2017
  [!code-vb[VbResourceTasks#21](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace_2.vb)]  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.SystemException>   
- <xref:System.ApplicationException>   
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>   
- [Try...Catch...Finally 문](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)   
- [레지스트리 읽기 및 쓰기](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)   
+ <xref:System.SystemException>  
+ <xref:System.ApplicationException>  
+ <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
+ [Try...Catch...Finally 문](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [레지스트리 읽기 및 쓰기](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)  
  [보안 및 레지스트리](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)
-

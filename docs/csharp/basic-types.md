@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
+ms.openlocfilehash: 398a73f72a9a31c6b2a19a626f704f65564f4fbd
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
-ms.openlocfilehash: 16c99ec5d1c120f1ab079940459cdb7716471353
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="types-variables-and-values"></a>형식, 변수 및 값  
 C#은 강력한 형식의 언어입니다. 모든 변수 및 상수에는 값으로 계산되는 모든 식을 실행하는 형식이 있습니다. 모든 메서드 시그니처는 각 입력 매개 변수 및 반환 값의 형식을 지정합니다. .NET Framework 클래스 라이브러리는 기본 제공 숫자 형식 집합 및 날짜, 개체의 배열, 컬렉션, 네트워크 연결, 파일 시스템과 같은 더 복잡한 형식을 정의합니다. 일반 C# 프로그램에서는 클래스 라이브러리의 형식 및 프로그램의 문제 도메인에 관련된 개념을 모델링하는 사용자 정의 형식을 사용합니다.  
   
@@ -64,7 +62,7 @@ C#에서는 정수, 부동 소수점 값, 부울 식, 텍스트 문자, 10진수
 [struct](language-reference/keywords/class.md), [class](language-reference/keywords/class.md), [interface](language-reference/keywords/interface.md) 및 [enum](language-reference/keywords/enum.md) 구문을 사용하여 자체 사용자 지정 형식을 만듭니다. .NET Framework 클래스 라이브러리 자체는 자체 응용 프로그램에서 사용할 수 있는 Microsoft에서 제공되는 사용자 지정 형식의 컬렉션입니다. 기본적으로 클래스 라이브러리의 가장 자주 사용되는 형식을 모든 C# 프로그램에서 사용할 수 있습니다. 기타 형식은 정의되어 있는 어셈블리에 대한 프로젝트 참조를 명시적으로 추가할 경우에만 사용할 수 있습니다. 컴파일러에 어셈블리에 대한 참조가 포함된 후에는 소스 코드에서 해당 어셈블리에 선언된 형식의 변수(및 상수)를 선언할 수 있습니다. 
   
 ## <a name="generic-types"></a>제네릭 형식  
-클라이언트 코드가 형식의 인스턴스를 만들 때 제공하는 실제 형식(*구체적 형식*)에 대한 자리 표시자로 사용되는 하나 이상의 *형식 매개 변수*를 사용하여 형식을 선언할 수 있습니다. 해당 형식을 *제네릭 형식*이라고 합니다. 예를 들어 .NET Framework 형식 @System.Collections.Generic.List%601 에는 변환을 통해 이름 *T*가 제공되는 하나의 형식 매개 변수가 있습니다. 형식의 인스턴스를 만들 때 목록에 포함될 개체의 형식(예: 문자열)을 지정합니다.  
+클라이언트 코드가 형식의 인스턴스를 만들 때 제공하는 실제 형식(*구체적 형식*)에 대한 자리 표시자로 사용되는 하나 이상의 *형식 매개 변수*를 사용하여 형식을 선언할 수 있습니다. 해당 형식을 *제네릭 형식*이라고 합니다. 예를 들어 .NET Framework 형식 <xref:System.Collections.Generic.List%601>에는 변환을 통해 이름 *T*가 제공되는 하나의 형식 매개 변수가 있습니다. 형식의 인스턴스를 만들 때 목록에 포함될 개체의 형식(예: 문자열)을 지정합니다.  
   
 [!code-csharp[Generic types](../../samples/snippets/csharp/concepts/basic-types/generic-type.cs)] 
   
@@ -80,7 +78,7 @@ C#에서는 정수, 부동 소수점 값, 부울 식, 텍스트 문자, 10진수
 ## <a name="the-common-type-system"></a>공용 형식 시스템  
 .NET Framework의 형식 시스템에 대한 두 가지 기초 사항을 이해해야 합니다.  
   
--   형식 시스템은 상속 원칙을 지원합니다. 형식은 *기본 형식*이라는 다른 형식에서 파생될 수 있습니다. 파생 형식은 기본 형식의 메서드, 속성 및 기타 멤버를 상속합니다(몇 가지 제한 사항 있음). 기본 형식이 다른 형식에서 파생될 수도 있습니다. 이 경우 파생 형식은 상속 계층 구조에 있는 두 기본 형식의 멤버를 상속합니다. @System.Int32 (C# 키워드: `int`)와 같은 기본 제공 숫자 형식을 포함한 모든 형식은 기본적으로 단일 기본 형식 @System.Object (C# 키워드: `object`)에서 파생됩니다. 이 통합 형식 계층 구조를 CTS([공용 형식 시스템](../standard/common-type-system.md))라고 합니다. C#의 상속에 대한 자세한 내용은 [상속](programming-guide/classes-and-structs/inheritance.md)을 참조하세요.  
+-   형식 시스템은 상속 원칙을 지원합니다. 형식은 *기본 형식*이라는 다른 형식에서 파생될 수 있습니다. 파생 형식은 기본 형식의 메서드, 속성 및 기타 멤버를 상속합니다(몇 가지 제한 사항 있음). 기본 형식이 다른 형식에서 파생될 수도 있습니다. 이 경우 파생 형식은 상속 계층 구조에 있는 두 기본 형식의 멤버를 상속합니다. <xref:System.Int32> (C# 키워드: `int`)와 같은 기본 제공 숫자 형식을 포함한 모든 형식은 기본적으로 단일 기본 형식 <xref:System.Object> (C# 키워드: `object`)에서 파생됩니다. 이 통합 형식 계층 구조를 CTS([공용 형식 시스템](../standard/common-type-system.md))라고 합니다. C#의 상속에 대한 자세한 내용은 [상속](programming-guide/classes-and-structs/inheritance.md)을 참조하세요.  
   
 -   CTS의 각 형식은 *값 형식* 또는 *참조 형식*으로 정의됩니다. 여기에는 .NET Framework 클래스 라이브러리의 모든 사용자 지정 형식과 자체 사용자 지정 형식도 포함됩니다. [struct](language-reference/keywords/struct.md)를 사용하여 정의한 형식은 값 형식이고, 모든 기본 제공 숫자 형식은 **구조체**입니다. 값 형식에 대한 자세한 내용은 [구조체](structs.md)를 참조하세요. [class](language-reference/keywords/class.md) 키워드를 사용하여 정의한 형식은 참조 형식입니다. 참조 형식에 대한 자세한 내용은 [클래스](classes.md)를 참조하세요. 참조 형식과 값 형식의 컴파일 시간 규칙 및 런타임 동작은 서로 다릅니다.
  
@@ -88,4 +86,3 @@ C#에서는 정수, 부동 소수점 값, 부울 식, 텍스트 문자, 10진수
 ## <a name="see-also"></a>참고 항목
 [구조체](structs.md)
 [클래스](classes.md)
-

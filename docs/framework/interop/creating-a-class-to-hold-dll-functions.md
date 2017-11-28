@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - COM interop, DLL functions
 - unmanaged functions
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - platform invoke, creating class for functions
 - DLL functions
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: abf5c47e843801d47bb2d47c8686db7f81f42698
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ac3c3542e46168f5903ff0425740a29f16253733
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>DLL 함수가 포함된 클래스 만들기
 자주 사용되는 DLL 함수를 관리되는 클래스로 래핑하는 것은 플랫폼 기능을 캡슐화하는 효과적인 방법입니다. 매번 래핑할 필요는 없지만 DLL 함수 정의는 번거롭고 오류가 발생할 수 있으므로 클래스 래퍼를 제공하는 것이 편리합니다. Visual Basic 또는 C#으로 프로그래밍할 경우 클래스 또는 Visual Basic 모듈 내에서 DLL 함수를 선언해야 합니다.  
@@ -52,8 +45,7 @@ ms.lasthandoff: 08/21/2017
  원하는 대로 클래스 및 해당 메서드의 이름을 지정할 수 있습니다. 플랫폼 호출에서 사용되는 .NET 기반 선언을 생성하는 방법을 보여 주는 예제는 [플랫폼 호출을 사용하여 데이터 마샬링](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [관리되지 않는 DLL 함수 사용](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)   
- [DLL 함수 식별](../../../docs/framework/interop/identifying-functions-in-dlls.md)   
- [관리 코드에서 프로토타입 만들기](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)   
+ [관리되지 않는 DLL 함수 사용](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
+ [DLL 함수 식별](../../../docs/framework/interop/identifying-functions-in-dlls.md)  
+ [관리 코드에서 프로토타입 만들기](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
  [DLL 함수 호출](../../../docs/framework/interop/calling-a-dll-function.md)
-

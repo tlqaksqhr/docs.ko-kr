@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Storeadm.exe
 - listing stores for current user
@@ -21,16 +15,15 @@ helpviewer_keywords:
 - stores, current user
 - removing stores
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: d9ae6b007fe32dfbef973105311ba929cc247e6b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e2304bd0e2ac9115c9d937e502b960399d793356
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe(격리된 저장소 도구)
 격리된 저장소 도구를 사용하면 현재 사용자의 기존 저장소를 모두 표시하거나 제거할 수 있습니다.  
@@ -76,7 +69,6 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
  사용자에 대해 로밍이 실제로 사용되는지 여부는 Storeadm.exe의 관리에 영향을 주지 않습니다. 옵션 없이 이 도구를 실행하면 모든 작업이 로컬 저장소에 적용됩니다. **/roaming** 옵션을 지정하여 이 도구를 실행하면 모든 작업이 로밍 가능한 저장소에 적용됩니다. **/machine** 옵션을 지정하여 이 도구를 실행하면 모든 작업이 컴퓨터 저장소에 적용됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [도구](../../../docs/framework/tools/index.md)   
- [격리된 저장소](../../../docs/standard/io/isolated-storage.md)   
+ [도구](../../../docs/framework/tools/index.md)  
+ [격리된 저장소](../../../docs/standard/io/isolated-storage.md)  
  [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

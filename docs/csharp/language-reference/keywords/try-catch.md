@@ -1,45 +1,26 @@
 ---
 title: "try-catch(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - try
 - try_CSharpKeyword
 - catch
 - catch_CSharpKeyword
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 753beb554796ad0aa2c5e15c715240453de9a3e1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: 47e4c298c20e7adde0e427f0a547904db2f96d37
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="try-catch-c-reference"></a>try-catch(C# 참조)
 try-catch 문은 `try` 블록에 이어 서로 다른 예외에 대한 처리기를 지정하는 하나 이상의 `catch` 절로 구성됩니다.  
@@ -146,7 +127,7 @@ static void Main()
   
  컨트롤이 비동기 메서드의 `await`에 도달하면 대기 중인 작업이 완료될 때까지 메서드의 진행이 일시 중단됩니다. 작업이 완료되면 메서드가 실행이 다시 시작될 수 있습니다. 자세한 내용은 [async 및 await를 사용한 비동기 프로그래밍](../../../csharp/programming-guide/concepts/async/index.md) 및 [비동기 프로그램의 제어 흐름](../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)을 참조하세요.  
   
- `await`가 적용되는 완료된 작업은 작업을 반환하는 메서드의 처리되지 않은 예외로 인해 오류 상태에 있을 수 있습니다. 작업을 기다리면 예외가 throw됩니다. 작업을 반환하는 비동기 프로세스가 취소되면 작업이 취소됨 상태로 종료될 수도 있습니다. 취소된 작업을 기다리면 `OperationCanceledException`이 throw됩니다. 비동기 프로세스를 취소하는 방법에 대한 자세한 내용은 [Async 응용 프로그램 미세 조정](http://msdn.microsoft.com/library/daaa32ea-c84c-4761-8230-c8292ffebd74)을 참조하세요.  
+ `await`가 적용되는 완료된 작업은 작업을 반환하는 메서드의 처리되지 않은 예외로 인해 오류 상태에 있을 수 있습니다. 작업을 기다리면 예외가 throw됩니다. 작업을 반환하는 비동기 프로세스가 취소되면 작업이 취소됨 상태로 종료될 수도 있습니다. 취소된 작업을 기다리면 `OperationCanceledException`이 throw됩니다. 비동기 프로세스를 취소하는 방법에 대한 자세한 내용은 [Async 응용 프로그램 미세 조정](../../programming-guide/concepts/async/fine-tuning-your-async-application.md)을 참조하세요.  
   
  예외를 catch하려면 `try` 블록에서 작업을 기다리고 연결된 `catch` 블록에서 예외를 catch합니다. 예제에 대해서는 "예제" 섹션을 참조하세요.  
   
@@ -155,7 +136,7 @@ static void Main()
 ## <a name="example"></a>예제  
  다음 예제에서 `try` 블록에는 예외를 가져올 수 있는 `ProcessString` 메서드에 대한 호출이 포함됩니다. `catch` 절에는 화면에 메시지만 표시하는 예외 처리기가 포함됩니다. `throw` 문이 `MyMethod` 내부에서 호출되면 시스템에서는 `catch` 문을 검색하고 메시지 `Exception caught`를 표시합니다.  
   
- [!code-cs[csrefKeywordsExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_1.cs)]  
+ [!code-csharp[csrefKeywordsExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_1.cs)]  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 두 catch 블록이 사용되고 먼저 나오는 가장 구체적인 예외가 catch됩니다.  
@@ -164,7 +145,7 @@ static void Main()
   
  가장 덜 구체적인 catch 블록을 예제에 첫 번째로 배치하면 다음 오류 메시지가 표시됩니다. `A previous catch clause already catches all exceptions of this or a super type ('System.Exception')`.  
   
- [!code-cs[csrefKeywordsExceptions#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_2.cs)]  
+ [!code-csharp[csrefKeywordsExceptions#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_2.cs)]  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 비동기 메서드에 대한 예외 처리를 보여 줍니다. 비동기 작업에서 throw하는 예외를 catch하려면 `try` 블록에 `await` 식을 배치하고 `catch` 블록에서 예외를 catch합니다.  
@@ -173,25 +154,24 @@ static void Main()
   
  `throw new OperationCancelledException` 줄의 주석 처리를 제거하여 비동기 프로세스를 취소할 수 있을 때 발생하는 동작을 보여 줍니다. 작업의 `IsCanceled` 속성이 `true`로 설정되고, 예외가 `catch` 블록에서 catch됩니다. 이 예제에 적용되지 않는 몇몇 조건에서는 작업의 `IsFaulted` 속성이 `true`로 설정되고 `IsCanceled`가 `false`로 설정됩니다.  
   
- [!code-cs[csAsyncExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_3.cs)]  
+ [!code-csharp[csAsyncExceptions#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_3.cs)]  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 여러 작업에서 여러 예외가 발생할 수 있는 경우 예외 처리를 보여 줍니다. `try` 블록은 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>에 대한 호출에서 반환된 작업을 기다립니다. WhenAll이 적용된 작업 세 개가 완료되면 작업이 완료됩니다.  
   
  세 작업에서 각각 예외가 발생합니다. `catch` 블록은 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>에서 반환된 작업의 `Exception.InnerExceptions` 속성에 있는 예외를 반복합니다.  
   
- [!code-cs[csAsyncExceptions#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_4.cs)]  
+ [!code-csharp[csAsyncExceptions#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-catch_4.cs)]  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
- [try, throw 및 catch 문(C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)   
- [예외 처리 문](../../../csharp/language-reference/keywords/exception-handling-statements.md)   
- [throw](../../../csharp/language-reference/keywords/throw.md)   
- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)   
- [방법: 명시적으로 예외 Throw](https://msdn.microsoft.com/library/xhcbs8fz)
-
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
+ [try, throw 및 catch 문(C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)  
+ [예외 처리 문](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
+ [throw](../../../csharp/language-reference/keywords/throw.md)  
+ [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
+ [방법: 명시적으로 예외 Throw](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

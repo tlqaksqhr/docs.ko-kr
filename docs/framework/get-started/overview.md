@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,18 +14,16 @@ helpviewer_keywords:
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
 ms.openlocfilehash: 9c41a7760afb03f1d14d433a30cc12194dcecfcb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/05/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="overview-of-the-net-framework"></a>.NET Framework의 개요
 
 .NET Framework는 차세대 앱 및 XML 웹 서비스의 빌드 및 실행을 지원하는 기술입니다. .NET Framework는 다음과 같은 목적을 달성하기 위해 디자인되었습니다.
@@ -110,4 +107,3 @@ Windows Forms 클래스는 Windows GUI 개발을 매우 단순하게 하는 다�
 [도구](../../../docs/framework/tools/index.md)   
 [.NET Framework 샘플](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)   
 [.NET Framework 클래스 라이브러리](http://go.microsoft.com/fwlink/?LinkID=227195)
-

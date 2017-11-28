@@ -5,10 +5,13 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - reflection, reflection-only loader context
 - assemblies [.NET Framework], loading for reflection
@@ -16,16 +19,15 @@ helpviewer_keywords:
 - assemblies [.NET Framework], reflection-only loader context
 - reflection-only loader context
 ms.assetid: 9818b660-52f5-423d-a9af-e75163aa7068
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: b1366107b7dca9b1a2128a91d4c9a66f72069e9a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9af4fa8068f25fd22eafe3ac27fbd7a4c7697c30
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>방법: 리플렉션 전용 컨텍스트에 어셈블리 로드
 리플렉션 전용 로드 컨텍스트를 사용하면 다른 플랫폼이나 다른 버전의 .NET Framework에 대해 컴파일된 어셈블리를 검사할 수 있습니다. 이 컨텍스트에 로드된 코드는 검사할 수만 있고 실행할 수 없습니다. 즉, 생성자를 실행할 수 없기 때문에 개체를 만들 수 없습니다. 코드를 실행할 수 없기 때문에 종속성이 자동으로 로드되지 않습니다. 종속성을 검사하려면 직접 로드해야 합니다.  
@@ -41,7 +43,7 @@ ms.lasthandoff: 07/28/2017
   
 3.  어셈블리의 <xref:System.Reflection.Assembly.ReflectionOnly%2A> 속성을 사용하여 어셈블리를 리플렉션 전용 컨텍스트에 로드할지 여부를 확인합니다.  
   
-4.  어셈블리 또는 어셈블리의 형식에 특성이 적용된 경우 <xref:System.Reflection.CustomAttributeData> 클래스를 통해 이러한 특성을 검사하여 리플렉션 전용 컨텍스트에서 코드를 실행하지 않도록 합니다. <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=fullName> 메서드의 적절한 오버로드를 사용하여 어셈블리, 멤버, 모듈 또는 매개 변수에 적용된 특성을 나타내는 <xref:System.Reflection.CustomAttributeData> 개체를 가져옵니다.  
+4.  어셈블리 또는 어셈블리의 형식에 특성이 적용된 경우 <xref:System.Reflection.CustomAttributeData> 클래스를 통해 이러한 특성을 검사하여 리플렉션 전용 컨텍스트에서 코드를 실행하지 않도록 합니다. <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> 메서드의 적절한 오버로드를 사용하여 어셈블리, 멤버, 모듈 또는 매개 변수에 적용된 특성을 나타내는 <xref:System.Reflection.CustomAttributeData> 개체를 가져옵니다.  
   
     > [!NOTE]
     >  어셈블리에 또는 해당 내용에 적용되는 특성은 어셈블리에서 정의되거나, 리플렉션 전용 컨텍스트에 로드된 다른 어셈블리에서 정의될 수 있습니다. 특성이 정의되어 있는 위치를 미리 확인할 수는 없습니다.  
@@ -54,10 +56,11 @@ ms.lasthandoff: 07/28/2017
 > [!NOTE]
 >  코드 예제를 단순화하기 위해 어셈블리가 자동으로 로드 및 검사됩니다. 일반적으로 실행 컨텍스트와 리플렉션 전용 컨텍스트에 동일한 어셈블리가 로드되는 경우는 없습니다.  
   
- [!code-cpp[CustomAttributeData#1](../../../samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)] [!code-csharp[CustomAttributeData#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)] [!code-vb[CustomAttributeData#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
+ [!code-cpp[CustomAttributeData#1](../../../samples/snippets/cpp/VS_Snippets_CLR/CustomAttributeData/CPP/source.cpp#1)]
+ [!code-csharp[CustomAttributeData#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CustomAttributeData/CS/source.cs#1)]
+ [!code-vb[CustomAttributeData#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CustomAttributeData/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>   
- <xref:System.Reflection.Assembly.ReflectionOnly%2A>   
+ <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>  
+ <xref:System.Reflection.Assembly.ReflectionOnly%2A>  
  <xref:System.Reflection.CustomAttributeData>
-

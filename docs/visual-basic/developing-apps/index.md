@@ -1,40 +1,21 @@
 ---
 title: "Visual Basic을 사용한 응용 프로그램 개발"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic, developing applications
 - applications [Visual Basic]
 ms.assetid: 1e1c0c81-6d95-4167-a98b-44b1efb6d25f
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 3752d99e3e9860d5cac2996bb412fdb6c30b5af1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b0dee8a19d22eb9b483a2d17fad43830971a8ab0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="developing-applications-with-visual-basic"></a>Visual Basic을 사용한 응용 프로그램 개발
 이 단원은 Visual Basic 언어에 대한 개념 설명서를 포함합니다.  
@@ -47,7 +28,7 @@ ms.lasthandoff: 07/28/2017
  응용 프로그램 및 해당 런타임 환경과 관련된 정보와 기본 개체 인스턴스에 대한 액세스를 제공하는 `My`라는 새 기능을 설명합니다.  
   
  [Visual Basic 응용 프로그램에서 데이터에 액세스](../../visual-basic/developing-apps/accessing-data.md)  
- Visual Basic에서 데이터에 액세스하는 방법에 대한 도움말을 포함합니다.   
+ Visual Basic에서 데이터에 액세스하는 방법에 대한 도움말을 포함합니다.  
   
  [Visual Basic에서 구성 요소 만들기 및 사용](../../visual-basic/developing-apps/creating-and-using-components.md)  
  *구성 요소*라는 용어를 정의하고 구성 요소를 만드는 방법과 시기에 대해 설명합니다.  
@@ -67,4 +48,3 @@ ms.lasthandoff: 07/28/2017
   
  [Visual Basic 언어 참조](../../visual-basic/language-reference/index.md)  
  Visual Basic 언어에 대한 참조 설명서를 포함합니다.
-

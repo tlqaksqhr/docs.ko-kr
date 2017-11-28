@@ -1,42 +1,23 @@
 ---
 title: "-out(C# 컴파일러 옵션)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /out
-dev_langs:
-- CSharp
+f1_keywords: /out
 helpviewer_keywords:
 - /out compiler option [C#]
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 332e369b6fe2de79c9063daa9e6d5c0e83f0bcc8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a6db728bc98f5223fc35268a1cce41021ff530cc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="out-c-compiler-options"></a>/out(C# 컴파일러 옵션)
 **/out** 옵션은 출력 파일의 이름을 지정합니다.  
@@ -66,9 +47,9 @@ ms.lasthandoff: 07/28/2017
   
  명령줄 컴파일에서 여러 출력 파일을 만들 때는 출력 파일 중 하나만 어셈블리가 될 수 있고, **/out**을 사용하여 명시적으로 또는 암시적으로 지정된 첫 번째 출력 파일만 어셈블리가 될 수 있다는 것에 유의하세요.  
   
- 컴파일의 일부로 생성된 모든 모듈은 컴파일할 때 함께 생성된 어셈블리와 연결된 파일이 됩니다. 연결된 파일을 보려면 [ildasm.exe](https://msdn.microsoft.com/library/f7dy01k1)를 사용하여 어셈블리 매니페스트를 확인합니다.  
+ 컴파일의 일부로 생성된 모든 모듈은 컴파일할 때 함께 생성된 어셈블리와 연결된 파일이 됩니다. 연결된 파일을 보려면 [ildasm.exe](../../../framework/tools/ildasm-exe-il-disassembler.md)를 사용하여 어셈블리 매니페스트를 확인합니다.  
   
- exe가 friend 어셈블리의 대상이 되려면 /out 컴파일러 옵션이 필요합니다. 자세한 내용은 [Friend 어셈블리](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055)를 참조하세요.  
+ exe가 friend 어셈블리의 대상이 되려면 /out 컴파일러 옵션이 필요합니다. 자세한 내용은 [Friend 어셈블리](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)를 참조하세요.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
@@ -88,7 +69,6 @@ csc t.cs /out:mymodule.netmodule /target:module t2.cs
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)   
- [Friend 어셈블리](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055)   
+ [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)  
+ [Friend 어셈블리](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
  [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)
-

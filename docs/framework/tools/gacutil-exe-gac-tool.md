@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
 - global assembly cache, viewing contents
@@ -30,16 +24,15 @@ helpviewer_keywords:
 - global assembly cache, Gacutil.exe
 - Global Assembly Cache tool
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 90c8a2467d48a45fe333cd07e34bca5ecfa5d727
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a42ef6cc2a1418c5071f94f4c8a7497a8701a73a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe(전역 어셈블리 캐시 도구)
 전역 어셈블리 캐시 도구를 사용하면 전역 어셈블리 캐시와 다운로드 캐시의 내용을 보고 조작할 수 있습니다.  
@@ -165,8 +158,7 @@ gacutil /l
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [도구](../../../docs/framework/tools/index.md)   
- [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)   
- [Regasm.exe(어셈블리 등록 도구)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)   
+ [도구](../../../docs/framework/tools/index.md)  
+ [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)  
+ [Regasm.exe(어셈블리 등록 도구)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)  
  [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

@@ -1,25 +1,21 @@
 ---
 title: "정적으로 컴파일된 쿼리(LINQ to XML)(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 3bf558fe-0705-479d-86d4-00188f5fcf9c
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 15ba867951ca4df1d203b837318ca2cc9eb91e7e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8e9986524756c979226919d37318a9ca2562213a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="statically-compiled-queries-linq-to-xml-c"></a>정적으로 컴파일된 쿼리(LINQ to XML)(C#)
 <xref:System.Xml.XmlDocument>와는 달리 LINQ to XML의 가장 큰 성능 이점 중 하나는 LINQ to XML의 쿼리가 정적으로 컴파일된다는 점입니다. 반면 XPath 쿼리는 런타임에 해석되어야 합니다. 이 기능은 LINQ to XML에 기본 제공되므로 이를 활용하기 위해 별도의 단계를 수행할 필요는 없습니다. 그러나 이 두 가지 기술 중 하나를 선택해야 하는 경우를 위해 그 차이를 알고 있는 것이 좋습니다. 이 항목에서는 그 차이에 대해 설명합니다.  
@@ -107,4 +103,3 @@ reader.Close();
   
 ## <a name="see-also"></a>참고 항목  
  [성능(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)
-

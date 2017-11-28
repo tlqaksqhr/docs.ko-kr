@@ -1,30 +1,21 @@
 ---
 title: "비동기 작업 또는 작업 목록 취소(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 78becece40b4b527869c593f8a1fe1eeba1f1f51
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2e34344c9cdf0717291c4c7375bab703679515a7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>비동기 작업 또는 작업 목록 취소(C#)
 작업이 완료될 때까지 기다리지 않으려면 비동기 응용 프로그램을 취소할 때 사용하는 단추를 설정할 수 있습니다. 이 항목의 예제에 따라 한 웹 사이트 또는 웹 사이트 목록의 콘텐츠를 다운로드하는 응용 프로그램에 취소 단추를 추가할 수 있습니다.  
@@ -70,7 +61,7 @@ ms.lasthandoff: 07/28/2017
         CancellationTokenSource cts;  
     ```  
   
-2.  **취소** 단추에 대한 다음 이벤트 처리기를 추가합니다. 이벤트 처리기는 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName> 메서드를 사용하여 사용자가 취소를 요청할 때 `cts`에 알려줍니다.  
+2.  **취소** 단추에 대한 다음 이벤트 처리기를 추가합니다. 이벤트 처리기는 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 메서드를 사용하여 사용자가 취소를 요청할 때 `cts`에 알려줍니다.  
   
     ```csharp  
     // ***Add an event handler for the Cancel button.  
@@ -92,7 +83,7 @@ ms.lasthandoff: 07/28/2017
         cts = new CancellationTokenSource();  
         ```  
   
-    -   지정된 웹 사이트의 콘텐츠를 다운로드하는 `AccessTheWebAsync` 호출에서 `cts`의 <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=fullName> 속성을 인수로 전송합니다. 취소가 요청되면 `Token` 속성은 메시지를 전파합니다. 사용자가 다운로드 작업을 취소하도록 선택할 경우 메시지를 표시하는 catch 블록을 추가합니다. 다음 코드는 변경 내용을 보여 줍니다.  
+    -   지정된 웹 사이트의 콘텐츠를 다운로드하는 `AccessTheWebAsync` 호출에서 `cts`의 <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> 속성을 인수로 전송합니다. 취소가 요청되면 `Token` 속성은 메시지를 전파합니다. 사용자가 다운로드 작업을 취소하도록 선택할 경우 메시지를 표시하는 catch 블록을 추가합니다. 다음 코드는 변경 내용을 보여 줍니다.  
   
         ```csharp  
         try  
@@ -113,7 +104,7 @@ ms.lasthandoff: 07/28/2017
         }  
         ```  
   
-4.  `AccessTheWebAsync`에서 <xref:System.Net.Http.HttpClient> 형식에 있는 `GetAsync` 메서드의 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=fullName> 오버로드를 사용하여 웹 사이트의 콘텐츠를 다운로드합니다. `AccessTheWebAsync`의 <xref:System.Threading.CancellationToken> 매개 변수인 `ct`를 두 번째 인수로 전달합니다. 사용자가 **취소** 단추를 선택하면 토큰이 메시지를 전달합니다.  
+4.  `AccessTheWebAsync`에서 <xref:System.Net.Http.HttpClient> 형식에 있는 `GetAsync` 메서드의 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 오버로드를 사용하여 웹 사이트의 콘텐츠를 다운로드합니다. `AccessTheWebAsync`의 <xref:System.Threading.CancellationToken> 매개 변수인 `ct`를 두 번째 인수로 전달합니다. 사용자가 **취소** 단추를 선택하면 토큰이 메시지를 전달합니다.  
   
      다음 코드는 `AccessTheWebAsync`의 변경 내용을 보여 줍니다.  
   
@@ -530,9 +521,8 @@ namespace CancelAListOfTasks
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Threading.CancellationTokenSource>   
- <xref:System.Threading.CancellationToken>   
- [async 및 await를 사용한 비동기 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/async/index.md)   
- [Async 응용 프로그램 미세 조정(C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
+ <xref:System.Threading.CancellationTokenSource>  
+ <xref:System.Threading.CancellationToken>  
+ [async 및 await를 사용한 비동기 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
+ [Async 응용 프로그램 미세 조정(C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
  [Async 샘플: 응용 프로그램 미세 조정](http://go.microsoft.com/fwlink/?LinkId=255046)
-

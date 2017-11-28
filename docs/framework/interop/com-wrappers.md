@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - wrapper classes
 - COM interop, COM wrappers
@@ -22,16 +16,15 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0c83cae510d695dc05b2cc6a71fdef7b5244a2ea
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 733d7f3e56b8ed704003ca9d6c2aa858c713df93
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="com-wrappers"></a>COM 래퍼
 COM은 다음과 같은 여러 중요한 방식에서 .NET Framework 개체 모델과 다릅니다.  
@@ -50,9 +43,8 @@ COM 래퍼 개요
  대부분의 경우 런타임에 의해 생성된 표준 RCW 또는 CCW는 COM 및 .NET Framework 사이의 경계를 넘어가는 호출에 대해 적절한 마샬링을 제공합니다. 사용자 지정 특성을 사용하여 런타임이 관리 코드와 비관리 코드를 나타내는 방식을 필요에 따라 조정할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [고급 COM 상호 운용성](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)   
- [런타임 호출 가능 래퍼](../../../docs/framework/interop/runtime-callable-wrapper.md)   
- [COM 호출 가능 래퍼](../../../docs/framework/interop/com-callable-wrapper.md)   
- [표준 래퍼 사용자 지정](http://msdn.microsoft.com/en-us/c40d089b-6a3c-41b5-a20d-d760c215e49d)   
+ [고급 COM 상호 운용성](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
+ [런타임 호출 가능 래퍼](../../../docs/framework/interop/runtime-callable-wrapper.md)  
+ [COM 호출 가능 래퍼](../../../docs/framework/interop/com-callable-wrapper.md)  
+ [표준 래퍼 사용자 지정](http://msdn.microsoft.com/en-us/c40d089b-6a3c-41b5-a20d-d760c215e49d)  
  [방법: 런타임 호출 가능 래퍼 사용자 지정](http://msdn.microsoft.com/en-us/4a4bb3da-4d60-4517-99f2-78d46a681732)
-

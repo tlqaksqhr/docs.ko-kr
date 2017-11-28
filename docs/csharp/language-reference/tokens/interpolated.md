@@ -1,41 +1,23 @@
 ---
 title: "$(C# 참조)"
-ms.date: 2017-02-09
+ms.date: 02/09/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - $_CSharpKeyword
 - $
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - $ special character [C#]
 - $ language element [C#]
 ms.assetid: 7d9e21b5-eac3-4878-9530-50e4da578acd
 author: rpetrusha
 ms.author: ronpet
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d245bab063721abdb930aae113aab2094553b9bb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 65dfc7b28059c4d41dd9113fd60c6a64987bfc2b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="-c-reference"></a>$(C# 참조)
 
@@ -43,12 +25,11 @@ ms.lasthandoff: 07/28/2017
 
 다음 예제에서는 `$` 문자를 사용하여 보간된 문자열을 정의합니다.
 
-[!CODE-cs[interpolated-string-symbol](../../../../samples/snippets/csharp/language-reference/keywords/dollar-sign1.cs#1)]
+[!code-csharp[interpolated-string-symbol](../../../../samples/snippets/csharp/language-reference/keywords/dollar-sign1.cs#1)]
 
 보간된 문자열에 대한 자세한 내용은 [보간된 문자열](../keywords/interpolated-strings.md) 항목을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
  [C# 특수 문자](../../../csharp/language-reference/tokens/index.md)
-

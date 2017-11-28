@@ -12,18 +12,16 @@ helpviewer_keywords:
 - asynchronous design patterns, .NET Framework
 - .NET Framework, asynchronous design patterns
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: a527824ba11928d59bc700f253c5a4d77056abf0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/05/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="asynchronous-programming-patterns"></a>비동기 프로그래밍 패턴
 
 .NET Framework에서는 비동기 작업을 수행하기 위한 세 가지 패턴을 제공합니다.  
@@ -91,4 +89,3 @@ TAP, APM 및 EAP에 대한 포괄적인 설명은 다음 섹션에 나와 있는
 [C#의 비동기 프로그래밍](~/docs/csharp/async.md)   
 [Async Programming in F#](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md) (F#의 비동기 프로그래밍)  
 [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
-

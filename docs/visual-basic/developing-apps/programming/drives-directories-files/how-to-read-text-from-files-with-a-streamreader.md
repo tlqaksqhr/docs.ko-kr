@@ -1,44 +1,26 @@
 ---
 title: "방법: StreamReader를 사용하여 파일에서 텍스트 읽기(Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- reading files, text
+- reading files [Visual Basic], text
 - text, reading from files
-- reading text from files
-- files, reading
+- reading text from files [Visual Basic]
+- files [Visual Basic], reading
 ms.assetid: 384033c6-18f9-4d59-9610-36371226558f
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 834657f80a9f3841e8f30e457c373510dec6d17d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d895b32b1613462a6c8dedcc19040b5040f936ec
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-read-text-from-files-with-a-streamreader-visual-basic"></a>방법: StreamReader를 사용하여 파일에서 텍스트 읽기(Visual Basic)
 `My.Computer.FileSystem` 개체는 <xref:System.IO.TextReader> 및 <xref:System.IO.TextWriter>를 여는 메서드를 제공합니다. `OpenTextFileWriter` 및 `OpenTextFileReader` 메서드는 **모두** 탭을 선택한 경우에만 IntelliSense에 표시되는 고급 메서드입니다.  
@@ -60,10 +42,9 @@ ms.lasthandoff: 07/28/2017
  파일에서 읽으려면 어셈블리에 <xref:System.Security.Permissions.FileIOPermission> 클래스에서 부여한 권한 수준이 필요합니다. 부분 신뢰 컨텍스트에서 실행하는 경우 권한 부족으로 인해 코드에서 예외를 throw할 수 있습니다. 자세한 내용은 [코드 액세스 보안 기본 사항](https://msdn.microsoft.com/library/33tceax8)을 참조하세요. 사용자에게 파일에 대한 액세스 권한도 필요합니다. 자세한 내용은 [ACL 기술 개요](http://msdn.microsoft.com/en-us/06fbf66d-6f02-4378-b863-b2f12e349045)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>   
- <xref:System.Windows.Forms.OpenFileDialog>   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A>   
- [SaveFileDialog 구성 요소](../../../../framework/winforms/controls/savefiledialog-component-windows-forms.md)   
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
+ <xref:System.Windows.Forms.OpenFileDialog>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A>  
+ [SaveFileDialog 구성 요소](../../../../framework/winforms/controls/savefiledialog-component-windows-forms.md)  
  [파일 읽기](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
-

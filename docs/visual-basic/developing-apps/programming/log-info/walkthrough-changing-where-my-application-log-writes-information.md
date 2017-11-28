@@ -1,43 +1,24 @@
 ---
 title: "My.Application.Log가 정보를 기록하는 위치 변경(Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: c4cd2e675bf1be4f065ee116795a95dae64d13d9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a02307c55283c359ae069170e8038cd1983d495b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>연습: My.Application.Log가 정보를 기록하는 위치 변경(Visual Basic)
 `My.Application.Log` 및 `My.Log` 개체를 사용하여 응용 프로그램에서 발생하는 이벤트에 대한 정보를 기록할 수 있습니다. 이 연습에서는 기본 설정을 재정의하고 `Log` 개체가 다른 로그 수신기에 쓰도록 만드는 방법을 보여 줍니다.  
@@ -180,13 +161,13 @@ ms.lasthandoff: 07/28/2017
   
      다음 형식을 사용할 수 있습니다.  
   
-    -   파일 로그에 쓰는 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName> 수신기  
+    -   파일 로그에 쓰는 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> 수신기  
   
-    -   <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> 매개 변수로 지정된 컴퓨터 이벤트 로그에 정보를 쓰는 `initializeData` 수신기  
+    -   `initializeData` 매개 변수로 지정된 컴퓨터 이벤트 로그에 정보를 쓰는 <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> 수신기  
   
-    -   <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> 매개 변수에 지정된 파일에 쓰는 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName> 및 `initializeData` 수신기  
+    -   `initializeData` 매개 변수에 지정된 파일에 쓰는 <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> 및 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> 수신기  
   
-    -   명령줄 콘솔에 쓰는 <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName> 수신기  
+    -   명령줄 콘솔에 쓰는 <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> 수신기  
   
      다른 형식의 로그 수신기가 정보를 쓰는 위치에 대한 자세한 내용은 해당 형식의 설명서를 참조하세요.  
   
@@ -209,10 +190,9 @@ ms.lasthandoff: 07/28/2017
      `Microsoft.VisualBasic.Logging.FileLogTraceListener, Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a`  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
- <xref:System.Diagnostics.TraceListener>   
- <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName>   
- <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName>   
- [How to: Write Event Information to a Text File](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)   
+ <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
+ <xref:System.Diagnostics.TraceListener>  
+ <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>  
+ <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>  
+ [방법: 텍스트 파일에 이벤트 정보 쓰기](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)  
  [방법: 응용 프로그램 이벤트 로그에 쓰기](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)
-

@@ -1,32 +1,23 @@
 ---
 title: "호출자 정보(C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 05c153afd502da1f290b3bc36460ded27789e21c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8c514266b474f6d4cd3f02e6f9008bef053c407a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="caller-information-c"></a>호출자 정보(C#)
 호출자 정보 특성을 사용하여 메서드 호출자에 대한 정보를 얻을 수 있습니다. 소스 코드 파일 경로, 소스 코드 줄 번호 및 호출자의 멤버 이름을 얻을 수 있습니다. 이 정보는 추적, 디버깅 및 진단 도구를 만드는 데 도움이 됩니다.  
   
- 이 정보를 얻으려면 각각 기본값이 있는 선택적 매개 변수에 적용되는 특성을 사용합니다. 다음 표에서는 <xref:System.Runtime.CompilerServices?displayProperty=fullName> 네임스페이스에 정의된 호출자 정보 특성을 보여줍니다.  
+ 이 정보를 얻으려면 각각 기본값이 있는 선택적 매개 변수에 적용되는 특성을 사용합니다. 다음 표에서는 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 네임스페이스에 정의된 호출자 정보 특성을 보여줍니다.  
   
 |특성|설명|형식|  
 |---|---|---|  
@@ -90,8 +81,7 @@ public void TraceMessage(string message,
 |포함하는 멤버가 없음(예: 어셈블리 수준 또는 형식에 적용되는 특성)|선택적 매개 변수의 기본값입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [특성(C#)](../../../csharp/programming-guide/concepts/attributes/index.md)   
- [공통 특성(C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)   
- [명명된 인수 및 선택적 인수](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)   
+ [특성(C#)](../../../csharp/programming-guide/concepts/attributes/index.md)  
+ [공통 특성(C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)  
+ [명명된 인수 및 선택적 인수](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
  [프로그래밍 개념(C#)](../../../csharp/programming-guide/concepts/index.md)
-

@@ -18,19 +18,18 @@ helpviewer_keywords:
 - runtime, attributes
 - extending metadata
 ms.assetid: 30386922-1e00-4602-9ebf-526b271a8b87
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 8151fd7738dd41ee6ae330a90f3814ec2cc9eb62
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c2c8db8b200e38c87d5b79ba3bf6a870bf6640c7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="extending-metadata-using-attributes"></a>특성을 사용하여 메타데이터 확장
-공용 언어 런타임에서는 형식, 필드, 메서드 및 속성과 같은 프로그래밍 요소에 주석을 달기 위해 특성이라는 키워드 방식의 설명적 선언을 추가할 수 있습니다. 런타임용으로 코드를 컴파일하는 경우 MSIL(Microsoft Intermediate Language)로 변환되고 컴파일러에서 생성된 메타데이터와 함께 PE(이식 가능한 실행) 파일 내에 배치됩니다. 특성을 사용하여 런타임 리플렉션 서비스를 통해 추출할 수 있는 메타데이터에 추가 설명 정보를 배치할 수 있습니다. <xref:System.Attribute?displayProperty=fullName>에서 파생되는 특수 클래스 인스턴스를 선언하면 컴파일러에서 특성을 만듭니다.  
+공용 언어 런타임에서는 형식, 필드, 메서드 및 속성과 같은 프로그래밍 요소에 주석을 달기 위해 특성이라는 키워드 방식의 설명적 선언을 추가할 수 있습니다. 런타임용으로 코드를 컴파일하는 경우 MSIL(Microsoft Intermediate Language)로 변환되고 컴파일러에서 생성된 메타데이터와 함께 PE(이식 가능한 실행) 파일 내에 배치됩니다. 특성을 사용하여 런타임 리플렉션 서비스를 통해 추출할 수 있는 메타데이터에 추가 설명 정보를 배치할 수 있습니다. <xref:System.Attribute?displayProperty=nameWithType>에서 파생되는 특수 클래스 인스턴스를 선언하면 컴파일러에서 특성을 만듭니다.  
   
  .NET Framework는 다양한 이유와 많은 문제를 해결하기 위해 특성을 사용합니다. 특성은 데이터를 직렬화하고, 보안을 적용하는 데 사용되는 특징을 지정하고, 코드를 쉽게 디버그할 수 있도록 JIT(Just-In-Time) 컴파일러에 의한 최적화를 제한하는 방법을 설명합니다. 또한 특성은 폼을 개발하는 동안 파일 이름 또는 코드 작성자를 기록하거나 컨트롤과 멤버의 표시 유형을 제어할 수 있습니다.  
   
@@ -45,5 +44,4 @@ ms.lasthandoff: 09/05/2017
 |[방법: 리플렉션 전용 컨텍스트에 어셈블리 로드](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|리플렉션 전용 컨텍스트에서 사용자 지정 특성 정보를 검색하는 방법을 설명합니다.|  
   
 ## <a name="reference"></a>참조  
- <xref:System.Attribute?displayProperty=fullName>
-
+ <xref:System.Attribute?displayProperty=nameWithType>

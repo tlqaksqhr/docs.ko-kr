@@ -1,43 +1,24 @@
 ---
 title: "LINQ의 쿼리 구문 및 메서드 구문(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 0127ee0815c4ba6a697456fe45bd373bcf9ba4e4
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 35ad7e9b086f36ca92974fdea197da4c513c8a51
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>LINQ의 쿼리 구문 및 메서드 구문(C#)
 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)](Language Integrated Query) 소개 설명서에 있는 대부분의 쿼리는 LINQ 선언적 쿼리 구문을 사용하여 작성되었습니다. 그러나 쿼리 구문은 코드를 컴파일할 때 .NET CLR(공용 언어 런타임)에 대한 메서드 호출로 변환해야 합니다. 이러한 메서드 호출은 `Where`, `Select`, `GroupBy`, `Join`, `Max`, `Average` 등과 같은 표준 쿼리 연산자를 호출합니다. 사용자는 쿼리 구문 대신 메서드 구문을 사용하여 연산자를 직접 호출할 수 있습니다.  
@@ -47,7 +28,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="standard-query-operator-extension-methods"></a>표준 쿼리 연산자 확장 메서드  
  다음 예제는 간단한 *쿼리 식* 및 *메서드 기반 쿼리*로서 작성된, 의미상 동등한 쿼리를 보여 줍니다.  
   
- [!code-cs[csLINQGettingStarted#22](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/query-syntax-and-method-syntax-in-linq_1.cs)]  
+ [!code-csharp[csLINQGettingStarted#22](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/query-syntax-and-method-syntax-in-linq_1.cs)]  
   
  두 예제에서 출력은 동일합니다. 쿼리 변수의 형식이 두 양식에서 모두 동일한 것을 알 수 있습니다(<xref:System.Collections.Generic.IEnumerable%601>).  
   
@@ -71,4 +52,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>참고 항목  
  [C#에서 LINQ 시작](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-

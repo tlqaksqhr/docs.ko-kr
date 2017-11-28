@@ -1,25 +1,21 @@
 ---
 title: "방법: 복합 필터링으로 쿼리 작성(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 4065d901-cf89-4e47-8bf9-abb65acfb003
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 0d663b777b0d1b02462a6557097938831ef870b7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c5b212796df6e65263b8b35514b6807bcdf5797f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-write-queries-with-complex-filtering-c"></a>방법: 복합 필터링으로 쿼리 작성(C#)
 복잡한 필터를 사용하여 LINQ to XML 쿼리를 작성하려는 경우가 있습니다. 예를 들어, 특정 이름과 값을 가진 자식 요소가 있는 모든 요소를 찾으려고 할 수 있습니다. 이 항목에서는 복잡한 필터링을 사용하여 쿼리를 작성하는 예제를 제공합니다.  
@@ -82,9 +78,8 @@ foreach (XElement el in purchaseOrders)
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Xml.Linq.XElement.Attribute%2A>   
- <xref:System.Xml.Linq.XContainer.Elements%2A>   
- [기본 쿼리(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)   
- [프로젝션 작업(C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)   
+ <xref:System.Xml.Linq.XElement.Attribute%2A>  
+ <xref:System.Xml.Linq.XContainer.Elements%2A>  
+ [기본 쿼리(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
+ [프로젝션 작업(C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)  
  [수량자 작업(C#)](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md)
-

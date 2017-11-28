@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: c42d3274fcb03bc523367ba71c857144b2d78b72
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d7f86ddcb86f3361665498ca0e34bf9147338551
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>완화: 응용 프로그램 도메인 간 개체의 deserialization
 경우에 따라 앱이 다양한 응용 프로그램을 기반으로 하여 두 개 이상의 응용 프로그램 도메인을 사용하면 여러 응용 프로그램 도메인 간에 논리 호출 컨텍스트의 개체를 deserialize하려는 시도로 인해 예외가 throw됩니다.  
@@ -29,7 +27,7 @@ ms.lasthandoff: 07/28/2017
   
 1.  앱이 다양한 응용 프로그램을 기반으로 하여 두 개 이상의 응용 프로그램 도메인을 사용합니다.  
   
-2.  일부 형식은 <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> 또는 <xref:System.Runtime.Remoting.Messaging.LogicalCallContext.SetData%2A?displayProperty=fullName>와 같은 메서드를 호출하여 <xref:System.Runtime.Remoting.Messaging.CallContext.LogicalSetData%2A?displayProperty=fullName>에 명시적으로 추가됩니다. 이러한 형식은 serializable로 표시되지 않고 전역 어셈블리 캐시에 저장되지 않습니다.  
+2.  일부 형식은 <xref:System.Runtime.Remoting.Messaging.LogicalCallContext> 또는 <xref:System.Runtime.Remoting.Messaging.LogicalCallContext.SetData%2A?displayProperty=nameWithType>와 같은 메서드를 호출하여 <xref:System.Runtime.Remoting.Messaging.CallContext.LogicalSetData%2A?displayProperty=nameWithType>에 명시적으로 추가됩니다. 이러한 형식은 serializable로 표시되지 않고 전역 어셈블리 캐시에 저장되지 않습니다.  
   
 3.  나중에 기본이 아닌 응용 프로그램 도메인에서 실행되는 코드가 구성 파일에서 값을 읽거나 XML을 사용하여 개체를 deserialize하려고 시도합니다.  
   
@@ -60,4 +58,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>참고 항목  
  [런타임 변경 내용](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)
-

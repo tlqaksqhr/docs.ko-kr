@@ -1,44 +1,26 @@
 ---
 title: "방법: Visual Basic에서 내 문서 디렉터리의 파일에 텍스트 쓰기"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- files, writing to
+- files [Visual Basic], writing to
 - text, writing to files
 - examples [Visual Basic], text files
-- writing to files, in My Documents
+- writing to files [Visual Basic], in My Documents
 ms.assetid: 1c726124-781d-4976-9baa-ed46814ff3fe
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 4c8970994f3ac4e34dfdf4af3e28100e2d009855
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c900072d184469ead75bb76a3e152edce357a34f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-write-text-to-files-in-the-my-documents-directory-in-visual-basic"></a>방법: Visual Basic에서 내 문서 디렉터리의 파일에 텍스트 쓰기
 `My.Computer.FileSystem.SpecialDirectories` 개체를 사용하면 **MyDocuments** 디렉터리 등의 특수 디렉터리에 액세스할 수 있습니다.  
@@ -70,9 +52,8 @@ ms.lasthandoff: 07/28/2017
  이 예제에서는 새 파일을 만듭니다. 응용 프로그램에서 파일을 만들어야 하는 경우 해당 응용 프로그램에 폴더에 대한 만들기 권한이 있어야 합니다. 권한은 액세스 제어 목록을 사용하여 설정됩니다. 파일이 이미 있는 경우에는 응용 프로그램에 더 낮은 권한인 쓰기 권한만 있으면 됩니다. 가능한 경우 배포하는 동안 파일을 만들고, 폴더에 대한 만들기 권한 대신 단일 파일에 대한 읽기 권한만 부여하는 것이 더 안전합니다. 또한 루트 폴더나 **Program Files** 폴더보다 사용자 폴더에 데이터를 쓰는 것이 더 안전합니다. 자세한 내용은 [ACL 기술 개요](http://msdn.microsoft.com/en-us/06fbf66d-6f02-4378-b863-b2f12e349045)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.IO.Path.Combine%2A?displayProperty=fullName>   
- <xref:Microsoft.VisualBasic.Devices.Computer>   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>   
+ <xref:System.IO.Path.Combine%2A?displayProperty=nameWithType>  
+ <xref:Microsoft.VisualBasic.Devices.Computer>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>  
  <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>
-

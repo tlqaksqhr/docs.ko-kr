@@ -1,42 +1,23 @@
 ---
 title: "값 형식(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.valuetypes
-dev_langs:
-- CSharp
+f1_keywords: cs.valuetypes
 helpviewer_keywords:
 - value types [C#]
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 281b811f2a8a1f2c364405b563f9f103899b492c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7500426846562dd7f3bbb8ea99f300a3e8a26546
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="value-types-c-reference"></a>값 형식(C# 참조)
 값 형식은 다음 두 가지 기본 범주로 구성됩니다.  
@@ -62,7 +43,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="main-features-of-value-types"></a>값 형식의 주요 기능  
  값 형식을 기반으로 하는 변수에는 직접 값이 포함됩니다. 값 형식 변수를 다른 값 형식 변수에 할당하면 포함된 값이 복사됩니다. 이는 개체 자체가 아니라 참조를 개체에 복사하는 참조 형식 변수의 할당과 다릅니다.  
   
- 모든 값 형식은 <xref:System.ValueType?displayProperty=fullName>에서 암시적으로 파생됩니다.  
+ 모든 값 형식은 <xref:System.ValueType?displayProperty=nameWithType>에서 암시적으로 파생됩니다.  
   
  참조 형식과 달리 값 형식에서는 새 형식을 파생할 수 없습니다. 그러나 참조 형식과 마찬가지로 구조체가 인터페이스를 구현할 수 있습니다.  
   
@@ -71,7 +52,7 @@ ms.lasthandoff: 07/28/2017
  각 값 형식에는 해당 형식의 기본값을 초기화하는 암시적 기본 생성자가 있습니다. 값 형식의 기본값에 대한 자세한 내용은 [기본값 표](../../../csharp/language-reference/keywords/default-values-table.md)를 참조하세요.  
   
 ## <a name="main-features-of-simple-types"></a>단순 형식의 주요 기능  
- C# 언어의 필수 형식인 모든 단순 형식은 .NET Framework 시스템 형식의 별칭입니다. 예를 들어 [int](../../../csharp/language-reference/keywords/int.md)는 <xref:System.Int32?displayProperty=fullName>의 별칭입니다. 별칭의 전체 목록은 [기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)를 참조하세요.  
+ C# 언어의 필수 형식인 모든 단순 형식은 .NET Framework 시스템 형식의 별칭입니다. 예를 들어 [int](../../../csharp/language-reference/keywords/int.md)는 <xref:System.Int32?displayProperty=nameWithType>의 별칭입니다. 별칭의 전체 목록은 [기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)를 참조하세요.  
   
  해당 피연산자가 모두 단순 형식 상수인 상수 식은 컴파일 시간에 계산됩니다.  
   
@@ -123,10 +104,9 @@ Point p = new Point(); // Invoke default constructor for the struct.
  숫자 형식의 출력에 서식을 지정하는 방법에 대한 자세한 내용은 [숫자 결과 형식 지정 표](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
- [형식](../../../csharp/language-reference/keywords/types.md)   
- [형식 참조 테이블](../../../csharp/language-reference/keywords/reference-tables-for-types.md)   
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
+ [유형](../../../csharp/language-reference/keywords/types.md)  
+ [형식 참조 테이블](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
  [참조 형식](../../../csharp/language-reference/keywords/reference-types.md)
-

@@ -8,22 +8,23 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- thread-safe collections, concurrent dictionary
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: thread-safe collections, concurrent dictionary
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 1c034b656cf7a953ae532c12640b5916001764c0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 40291d424916c2f87a2070a9a8a6e49243ac083a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>방법: ConcurrentDictionary에서 항목 추가 및 제거
-이 예제는 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName>에서 항목을 추가, 검색, 업데이트 및 제거하는 방법을 보여 줍니다. 이 컬렉션 클래스는 스레드로부터 안전하게 구현됩니다. 여러 스레드에서 컬렉션에 동시에 액세스할 수 있을 때는 언제든지 이 클래스를 사용하는 것이 좋습니다.  
+이 예제는 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>에서 항목을 추가, 검색, 업데이트 및 제거하는 방법을 보여 줍니다. 이 컬렉션 클래스는 스레드로부터 안전하게 구현됩니다. 여러 스레드에서 컬렉션에 동시에 액세스할 수 있을 때는 언제든지 이 클래스를 사용하는 것이 좋습니다.  
   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602>에서는 추가하거나 제거하려고 시도하기 전에 키의 존재 여부를 먼저 확인하는 코드가 필요하지 않게 하는 편리한 몇 가지 메서드를 제공합니다. 다음 표에서는 이처럼 편리한 메서드를 나열하고 해당 메서드가 사용되는 경우에 대해 설명합니다.  
   
@@ -54,6 +55,5 @@ ms.lasthandoff: 09/19/2017
  따라서 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>에서 반환한 데이터가 스레드의 valueFactory에서 만든 것과 동일한 데이터라고 보장되지 않습니다. <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>를 호출할 때에도 비슷한 이벤트 시퀀스가 발생할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Collections.Concurrent?displayProperty=fullName>   
+ <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
  [스레드로부터 안전한 컬렉션](../../../../docs/standard/collections/thread-safe/index.md)
-

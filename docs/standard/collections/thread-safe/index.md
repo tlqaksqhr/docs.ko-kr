@@ -8,27 +8,25 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- thread-safe collections, overview
+helpviewer_keywords: thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: b5394cd2e9c9fa2b0cacb93ddf2cf05b33fabc71
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b37d1d7ff75aebfcdf3e849931a5d2b3924d5d7a
-ms.openlocfilehash: 19ecc67b38e2eab52994fb278211c6d9ff67ae7e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="thread-safe-collections"></a>스레드로부터 안전한 컬렉션
-[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]에서는 네임스페이스는 스레드로부터 안전하면서 확장 가능한 몇 가지 컬렉션 클래스를 포함하는 <xref:System.Collections.Concurrent?displayProperty=fullName> 네임스페이스를 도입합니다. 여러 스레드는 사용자 코드에서 추가로 동기화할 필요없이 이러한 컬렉션으로부터 안전하고 효율적으로 항목을 추가하거나 제거할 수 있습니다. 새 코드를 작성하는 경우 컬렉션이 여러 스레드를 동시에 작성할 때마다 동시 컬렉션 클래스를 사용합니다. 공유 컬렉션에서 읽기만 하는 경우에 <xref:System.Collections.Generic?displayProperty=fullName> 네임스페이스에서 클래스를 사용할 수 있습니다. .NET Framework 1.1 또는 이전 런타임을 대상으로 해야 하는 경우가 아니면 1.0 컬렉션 클래스를 사용하지 않는 것이 좋습니다.  
+[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]에서는 네임스페이스는 스레드로부터 안전하면서 확장 가능한 몇 가지 컬렉션 클래스를 포함하는 <xref:System.Collections.Concurrent?displayProperty=nameWithType> 네임스페이스를 도입합니다. 여러 스레드는 사용자 코드에서 추가로 동기화할 필요없이 이러한 컬렉션으로부터 안전하고 효율적으로 항목을 추가하거나 제거할 수 있습니다. 새 코드를 작성하는 경우 컬렉션이 여러 스레드를 동시에 작성할 때마다 동시 컬렉션 클래스를 사용합니다. 공유 컬렉션에서 읽기만 하는 경우에 <xref:System.Collections.Generic?displayProperty=nameWithType> 네임스페이스에서 클래스를 사용할 수 있습니다. .NET Framework 1.1 또는 이전 런타임을 대상으로 해야 하는 경우가 아니면 1.0 컬렉션 클래스를 사용하지 않는 것이 좋습니다.  
   
 ## <a name="thread-synchronization-in-the-net-framework-10-and-20-collections"></a>.NET Framework 1.0 및 2.0 컬렉션에서 스레드 동기화  
- .NET Framework 1.0에 도입된 컬렉션은 <xref:System.Collections?displayProperty=fullName> 네임스페이스에 있습니다. 일반적으로 사용되는 <xref:System.Collections.ArrayList> 및 <xref:System.Collections.Hashtable>을 포함하는 이러한 컬렉션은 컬렉션 주변에서 스레드로부터 안전한 래퍼를 반환하는 `Synchronized` 속성을 통해 어느 정도 스레드로부터의 안전성을 제공합니다. 래퍼는 모든 추가 또는 제거 작업에서 전체 컬렉션을 잠그는 방식으로 작동합니다. 따라서 컬렉션에 액세스하려고 하는 각 스레드는 잠금을 사용하기 위해 차례를 기다려야 합니다. 이것은 확장할 수 없고 큰 컬렉션에 상당한 성능 저하가 발생할 수 있습니다. 또한 디자인은 경합 조건에서 완전히 보호되지 않습니다. 자세한 내용은 MSDN 웹 사이트의 [제네릭 컬렉션에서의 동기화](http://go.microsoft.com/fwlink/?LinkID=161130)를 참조하세요.  
+ .NET Framework 1.0에 도입된 컬렉션은 <xref:System.Collections?displayProperty=nameWithType> 네임스페이스에 있습니다. 일반적으로 사용되는 <xref:System.Collections.ArrayList> 및 <xref:System.Collections.Hashtable>을 포함하는 이러한 컬렉션은 컬렉션 주변에서 스레드로부터 안전한 래퍼를 반환하는 `Synchronized` 속성을 통해 어느 정도 스레드로부터의 안전성을 제공합니다. 래퍼는 모든 추가 또는 제거 작업에서 전체 컬렉션을 잠그는 방식으로 작동합니다. 따라서 컬렉션에 액세스하려고 하는 각 스레드는 잠금을 사용하기 위해 차례를 기다려야 합니다. 이것은 확장할 수 없고 큰 컬렉션에 상당한 성능 저하가 발생할 수 있습니다. 또한 디자인은 경합 조건에서 완전히 보호되지 않습니다. 자세한 내용은 MSDN 웹 사이트의 [제네릭 컬렉션에서의 동기화](http://go.microsoft.com/fwlink/?LinkID=161130)를 참조하세요.  
   
- .NET Framework 2.0에 도입된 컬렉션 클래스는 <xref:System.Collections.Generic?displayProperty=fullName> 네임스페이스에 있습니다. 여기에는 <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602> 등이 포함됩니다. 이러한 클래스는 .NET Framework 1.0 클래스에 비해 형식 안정성 및 성능을 향상시킵니다. 그러나 .NET Framework 2.0 컬렉션 클래스는 스레드 동기화를 제공하지 않습니다. 여러 스레드에서 동시에 항목이 추가되거나 제거되는 경우 사용자 코드에서는 모든 동기화를 제공해야 합니다.  
+ .NET Framework 2.0에 도입된 컬렉션 클래스는 <xref:System.Collections.Generic?displayProperty=nameWithType> 네임스페이스에 있습니다. 여기에는 <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602> 등이 포함됩니다. 이러한 클래스는 .NET Framework 1.0 클래스에 비해 형식 안정성 및 성능을 향상시킵니다. 그러나 .NET Framework 2.0 컬렉션 클래스는 스레드 동기화를 제공하지 않습니다. 여러 스레드에서 동시에 항목이 추가되거나 제거되는 경우 사용자 코드에서는 모든 동기화를 제공해야 합니다.  
   
  [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]의 동시 컬렉션 클래스는 .NET Framework 2.0 컬렉션 클래스의 형식 안전성을 제공할 뿐만 아니라 [!INCLUDE[net_v10_short](../../../../includes/net-v10-short-md.md)] 컬렉션이 제공하는 스레드로부터의 안전성보다 더 효율적이고 안전하기 때문에 권장됩니다.  
   
@@ -40,7 +38,7 @@ ms.lasthandoff: 09/06/2017
 > [!NOTE]
 >  동시 컬렉션 클래스가 <xref:System.Collections.ICollection>을 지원하기 때문에 이러한 속성이 관련되지 않은 경우에도 <xref:System.Collections.ICollection.IsSynchronized%2A> 및 <xref:System.Collections.ICollection.SyncRoot%2A> 속성에 대한 구현을 제공합니다. `IsSynchronized`는 항상 `false`를 반환하고 `SyncRoot`는 항상 `null`(Visual Basic의 `Nothing`)입니다.  
   
- 다음 테이블에서는 <xref:System.Collections.Concurrent?displayProperty=fullName> 네임스페이스의 컬렉션 형식을 나열합니다.  
+ 다음 테이블에서는 <xref:System.Collections.Concurrent?displayProperty=nameWithType> 네임스페이스의 컬렉션 형식을 나열합니다.  
   
 |형식|설명|  
 |----------|-----------------|  
@@ -64,5 +62,4 @@ ms.lasthandoff: 09/06/2017
 |[방법: ConcurrentBag을 사용하여 개체 풀 만들기](../../../../docs/standard/collections/thread-safe/how-to-create-an-object-pool.md)|개체를 끊임없이 새로 만드는 대신 다시 사용할 수 있는 시나리오에서 동시 모음을 사용하고 성능을 향상시키는 방법을 보여 줍니다.|  
   
 ## <a name="reference"></a>참조  
- <xref:System.Collections.Concurrent?displayProperty=fullName>
-
+ <xref:System.Collections.Concurrent?displayProperty=nameWithType>

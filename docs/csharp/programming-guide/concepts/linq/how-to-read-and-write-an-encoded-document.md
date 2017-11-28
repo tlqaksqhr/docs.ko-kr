@@ -1,30 +1,21 @@
 ---
 title: "방법: 인코딩된 문서 읽기 및 쓰기(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 84f64e71-39a6-42c6-ad68-f052bb158a03
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: a08fa9404c92bd64b07059df2f419bff5f80da3e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fc7c21c1aa6f4035bfaee509c7bc542542635313
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-read-and-write-an-encoded-document-c"></a>방법: 인코딩된 문서 읽기 및 쓰기(C#)
 인코딩된 XML 문서를 만들려면 <xref:System.Xml.Linq.XDeclaration>을 XML 트리에 추가하여 인코딩을 원하는 코드 페이지 이름으로 설정합니다.  
@@ -94,6 +85,5 @@ Encoding of loaded document is:utf-16
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=fullName>   
+ <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>  
  [고급 LINQ to XML 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
-

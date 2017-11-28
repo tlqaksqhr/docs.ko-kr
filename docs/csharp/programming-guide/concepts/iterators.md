@@ -1,27 +1,18 @@
 ---
 title: "반복기(C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 6d4994ea57d9fd0df8dfca7ffa40c280499caee6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5d5543a48d0c835f5270067d1e5ad514c28842b2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="iterators-c"></a>반복기(C#)
 *반복기*는 목록 및 배열과 같은 컬렉션을 단계별로 실행하는 데 사용할 수 있습니다.  
@@ -366,7 +357,7 @@ public class Stack<T> : IEnumerable<T>
   
  `foreach` 루프를 연속 반복하거나 `IEnumerator.MoveNext`를 직접 호출하면 다음 반복기 코드 본문이 이전 `yield return` 문 다음에 다시 시작됩니다. 그런 후 반복기 본문의 끝에 도달하거나 `yield break` 문이 나타날 때까지 다음 `yield return` 문을 계속 실행합니다.  
   
- 반복기는 <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=fullName> 메서드를 지원하지 않습니다. 처음부터 다시 반복하려면 새 반복기를 가져와야 합니다.  
+ 반복기는 <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> 메서드를 지원하지 않습니다. 처음부터 다시 반복하려면 새 반복기를 가져와야 합니다.  
   
  자세한 내용은 [C# 언어 사양](../../../csharp/language-reference/language-specification/index.md)을 참조하세요.  
   
@@ -380,10 +371,9 @@ public class Stack<T> : IEnumerable<T>
 -   반복기에서 목록 작성을 캡슐화합니다. 반복기 메서드에서 목록을 빌드한 후 루프에서 각 결과를 생성할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Collections.Generic>   
- <xref:System.Collections.Generic.IEnumerable%601>   
- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)   
- [yield](../../../csharp/language-reference/keywords/yield.md)   
- [배열에 foreach 사용](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)   
+ <xref:System.Collections.Generic>  
+ <xref:System.Collections.Generic.IEnumerable%601>  
+ [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
+ [yield](../../../csharp/language-reference/keywords/yield.md)  
+ [배열에 foreach 사용](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)  
  [제네릭](../../../csharp/programming-guide/generics/index.md)
-

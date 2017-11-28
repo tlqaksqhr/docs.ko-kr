@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: ec86c558b9aa9c6269fcf9890978f61a934c081f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="working-with-linq"></a>LINQ 작업
 
 ## <a name="introduction"></a>소개
@@ -334,4 +332,3 @@ var startingDeck = (from s in Suits().LogQuery("Suit Generation")
 이 샘플에서는 LINQ에서 사용되는 일부 메서드를 통해 LINQ 지원 코드에서 쉽게 사용할 수 있는 자체 메서드를 만드는 방법을 보여 줍니다. 또한 지연 계산 및 즉시 계산 간의 차이점과 이러한 결정이 성능이 미칠 수 있는 결과도 보여 주었습니다.
 
 마술사의 한 가지 기술에 대해서도 약간 배웠습니다. 마술사들은 데크에서 모든 카드가 이동하는 위치를 제어할 수 있으므로 파로 셔플 기술을 사용합니다. 일부 마술에서 마술사는 청중 중 한 명에게 데크 맨 위에 카드를 놓아 달라고 부탁한 후 몇 번 섞은 다음 해당 카드의 위치를 알아냅니다. 특정 방식으로 데크를 셋팅해야 하는 마술도 있습니다. 마술사는 마술을 하기 전에 데크를 셋팅합니다. 그런 후 내부 순서 섞기를 사용해서 데크를 5번 섞습니다. 무대에서 무작위로 섞인 데크를 보여준 다음 3번 더 섞은 후 원하는 방식과 정확히 일치하게 데크를 셋팅할 수 있습니다.
-

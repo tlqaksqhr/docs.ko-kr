@@ -1,41 +1,23 @@
 ---
 title: "Visual Basic 언어 연습"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic, walkthroughs
 - examples [Visual Basic]
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c57ee0b94e5aafb6b1287707b10977e86ee631f1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4b4e9eba6d086d0094c8368d7c3d67c676fe0bd3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Visual Basic 언어 연습
 연습에서는 일반 시나리오에 대한 단계별 지침을 제공하므로 제품 또는 특정 기능 영역 파악을 효율적으로 시작할 수 있습니다.  
@@ -105,4 +87,3 @@ ms.lasthandoff: 07/28/2017
   
  [관례에서 생성 기능을 통한 테스트 우선 지원](http://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  
  먼저 단위 테스트를 작성한 다음 테스트가 성공하도록 소스 코드를 작성하는 테스트 우선 개발의 수행 방법을 보여 줍니다.
-

@@ -1,44 +1,26 @@
 ---
 title: "인터페이스 속성(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 1da48adf73cccb28d9cff641948db52b40b8c1bb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2b76cdc4e8419b08dcd95c3711eaead5513ae1d9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="interface-properties-c-programming-guide"></a>인터페이스 속성(C# 프로그래밍 가이드)
 [interface](../../../csharp/language-reference/keywords/interface.md)에 속성을 선언할 수 있습니다. 다음은 인터페이스 인덱서 접근자의 예입니다.  
   
- [!code-cs[csProgGuideProperties#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_1.cs)]  
+ [!code-csharp[csProgGuideProperties#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_1.cs)]  
   
  인터페이스 속성의 접근자에는 본문이 없습니다. 따라서 접근자의 목적은 속성이 읽기/쓰기인지, 읽기 전용인지, 쓰기 전용인지를 지정하는 것입니다.  
   
@@ -47,19 +29,19 @@ ms.lasthandoff: 07/28/2017
   
  멤버가 선언된 인터페이스를 참조하는 속성의 정규화된 이름을 사용할 수 있습니다. 예:  
   
- [!code-cs[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_2.cs)]  
+ [!code-csharp[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_2.cs)]  
   
  이를 [명시적 인터페이스 구현](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)이라고 합니다. 예를 들어 `Employee` 클래스가 두 인터페이스 `ICitizen` 및 `IEmployee`를 구현하고 두 인터페이스에 모두 `Name` 속성이 있으면 명시적 인터페이스 멤버 구현이 필요합니다. 즉, 다음과 같은 속성 선언이 있다고 가정합니다.  
   
- [!code-cs[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_2.cs)]  
+ [!code-csharp[csProgGuideProperties#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_2.cs)]  
   
  이 선언은 `IEmployee` 인터페이스의 `Name` 속성을 구현합니다. 또한 다음과 같은 선언이 있다고 가정합니다.  
   
- [!code-cs[csProgGuideProperties#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_3.cs)]  
+ [!code-csharp[csProgGuideProperties#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_3.cs)]  
   
  이 선언은 `ICitizen` 인터페이스의 `Name` 속성을 구현합니다.  
   
- [!code-cs[csProgGuideProperties#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_4.cs)]  
+ [!code-csharp[csProgGuideProperties#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/interface-properties_4.cs)]  
   
   **`210 Hazem Abolrous`**    
 ## <a name="sample-output"></a>샘플 출력  
@@ -74,10 +56,9 @@ ms.lasthandoff: 07/28/2017
  `Employee name: Hazem Abolrous`  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [속성](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [속성 사용](../../../csharp/programming-guide/classes-and-structs/using-properties.md)   
- [속성 및 인덱서 비교](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)   
- [인덱서](../../../csharp/programming-guide/indexers/index.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [속성](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [속성 사용](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+ [속성 및 인덱서 비교](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+ [인덱서](../../../csharp/programming-guide/indexers/index.md)  
  [인터페이스](../../../csharp/programming-guide/interfaces/index.md)
-

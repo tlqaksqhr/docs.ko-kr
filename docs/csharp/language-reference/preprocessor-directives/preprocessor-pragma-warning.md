@@ -1,41 +1,20 @@
 ---
 title: "#<a name=\"pragma-warning-c-reference\"></a>pragma warning(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- '#pragma warning'
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- '#pragma warning [C#]'
+f1_keywords: '#pragma warning'
+helpviewer_keywords: '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 5330b448dc2b328992b2d29699557d20df56dee4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 75c11acfd096d36c96ceb9e9c5c0d16e47e58fa1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="pragma-warning-c-reference"></a>#pragma warning(C# 참조)
 `#pragma warning`은 특정 경고를 사용하거나 사용하지 않도록 설정합니다.  
@@ -83,8 +62,7 @@ public class D
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C# 전처리기 지시문](../../../csharp/language-reference/preprocessor-directives/index.md)   
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [C# 전처리기 지시문](../../../csharp/language-reference/preprocessor-directives/index.md)  
  [C# 컴파일러 오류](../../../csharp/language-reference/compiler-messages/index.md)
-

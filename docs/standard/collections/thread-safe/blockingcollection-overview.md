@@ -8,19 +8,20 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- BlockingCollection, overview
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: BlockingCollection, overview
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 6dc6729bf4627164fbcde5980d4fcccd41b67645
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 10e59c246914c17c4a0803de52cf891b2e0d3a3f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="blockingcollection-overview"></a>BlockingCollection 개요
 <xref:System.Collections.Concurrent.BlockingCollection%601>는 스레드로부터 안전한 컬렉션 클래스이며 제공하는 기능은 다음과 같습니다.  
@@ -86,7 +87,6 @@ BlockingCollection<string> bc = new BlockingCollection<string>(new ConcurrentBag
  소비자에서 여러 컬렉션의 항목을 동시에 가져와야 하는 시나리오의 경우 <xref:System.Collections.Concurrent.BlockingCollection%601> 배열을 만들고, 배열 내의 컬렉션에 항목을 추가하거나 이 컬렉션으로부터 항목을 가져올 <xref:System.Collections.Concurrent.BlockingCollection%601.AddToAny%2A> 및 <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny%2A>와 같은 정적 메서드를 사용할 수 있습니다. 특정 컬렉션이 차단되는 즉시 메서드에서 작업을 수행할 수 있는 컬렉션을 찾을 때까지 다른 컬렉션에 대한 액세스를 시도합니다. 자세한 내용은 [방법: 파이프라인에서 차단 컬렉션 배열 사용](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Collections.Concurrent?displayProperty=fullName>   
- [컬렉션 및 데이터 구조](../../../../docs/standard/collections/index.md)   
+ <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+ [컬렉션 및 데이터 구조](../../../../docs/standard/collections/index.md)  
  [스레드로부터 안전한 컬렉션](../../../../docs/standard/collections/thread-safe/index.md)
-

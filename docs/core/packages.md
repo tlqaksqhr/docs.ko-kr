@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
-ms.translationtype: HT
-ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
 ms.openlocfilehash: 6e614986dc91310dea40971987969e7433cb79e8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/04/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="packages-metapackages-and-frameworks"></a>패키지, 메타패키지 및 프레임워크
 
 .NET Core는 NuGet 패키지로 구성된 플랫폼입니다. 일부 제품은 정교하게 정의된 패키지로 구성되는 반면 다른 제품은 다소 거칠게 정의된 패키지로 구성됩니다. 이러한 이중성을 수용하기 위해 이 제품은 세분화된 패키지 집합으로 배포되고, 그런 다음 비공식적으로 "메타패키지"라고 하는 패키지 형식의 거친 덩어리로 기술됩니다.
@@ -149,4 +147,3 @@ ms.lasthandoff: 08/04/2017
 `Microsoft.NETCore.App` 메타패키지는 `netcoreapp` 프레임워크를 대상으로 합니다. 최대 60개 라이브러리, `NETStandard.Library` 패키지에서 제공하는 최대 40개 및 추가 20개에 대한 액세스를 제공합니다. 추가 API에 대한 액세스 권한을 얻기 위해 `netcoreapp` 또는 호환 프레임워크(예: `netstandard`)를 대상으로 하는 추가 라이브러리를 참조할 수 있습니다. 
 
 다른 `netstandard` 라이브러리에서 종속성을 충족하는 경우 `Microsoft.NETCore.App`에서 제공하는 추가 라이브러리 대부분은 또한 `netstandard`를 대상으로 합니다. 즉, `netstandard` 라이브러리 역시 해당 패키지를 종속성으로 참조할 수 있습니다. 
-

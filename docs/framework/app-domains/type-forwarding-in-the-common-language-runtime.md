@@ -5,24 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- cpp
 helpviewer_keywords:
 - assemblies [.NET Framework], type forwarding
 - type forwarding
 ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 18e580a67d5a983d61ab3c0b71cfc7d294468010
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 113ff6decccc190c6638fa04745af425c55c6c0b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>공용 언어 런타임의 형식 전달
 형식 전달을 사용하면 원본 어셈블리를 사용하는 응용 프로그램을 다시 컴파일하지 않고도 형식을 다른 어셈블리로 이동할 수 있습니다.  
@@ -54,7 +55,6 @@ ms.lasthandoff: 07/28/2017
 4.  해당 형식이 있었던 어셈블리를 현재 해당 형식이 들어 있는 어셈블리에 대한 참조를 사용하여 다시 컴파일합니다. 예를 들어, 명령줄에서 C# 파일을 컴파일할 경우 [/reference (C# Compiler Options)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) 옵션을 사용하여 해당 형식이 들어 있는 어셈블리를 지정합니다. C++의 경우 소스 파일에서 [#using](http://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a) 지시문을 사용하여 해당 형식이 들어 있는 어셈블리를 지정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>   
- [형식 전달(C++-CLI)](/cpp/windows/type-forwarding-cpp-cli)   
+ <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>  
+ [형식 전달(C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)  
  [#using 지시문](http://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a)
-

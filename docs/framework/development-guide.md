@@ -5,23 +5,20 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- .NET Framework, development guide
+helpviewer_keywords: .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 429eae61ab311d2a7a68567c97f40e1fdc0a1f3e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7233827b9c331529cb70daf13aeb1308a053b1c1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework 개발 가이드
 이 섹션에서는 .NET Framework 앱을 생성, 구성, 디버그, 배포하고 보안을 적용하는 방법을 설명합니다. 이 섹션에서는 또한 동적 프로그래밍, 상호 운용성, 확장성, 메모리 관리 및 스레딩과 같은 기술 영역에 대한 정보를 제공합니다.  
@@ -43,7 +40,7 @@ ms.lasthandoff: 07/28/2017
  WCF(Windows Communication Foundation)를 사용하여 안전하고 신뢰할 수 있는 서비스 지향 앱을 빌드하는 방법을 설명합니다.  
   
  [Windows Workflow Foundation으로 워크플로 만들기](windows-workflow-foundation/index.md)     
- Windows WF(Workflow Foundation) 사용을 위한 프로그래밍 모델, 샘플 및 도구에 대한 정보를 제공합니다.   
+ Windows WF(Workflow Foundation) 사용을 위한 프로그래밍 모델, 샘플 및 도구에 대한 정보를 제공합니다.  
 
  [Windows 서비스 응용 프로그램](../../docs/framework/windows-services/index.md)  
  Visual Studio 및 .NET Framework를 사용하여 서비스로서 설치되는 앱을 만들고 서비스 동작을 시작, 중지 및 다른 방식으로 제어하는 방법에 대해 설명합니다.  
@@ -94,4 +91,3 @@ ms.lasthandoff: 07/28/2017
   
  [.NET Framework 샘플](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)  
  .NET Framework 기술을 보여주는 샘플 앱에 대한 MSDN 코드 샘플 갤러리의 링크를 제공합니다.
-

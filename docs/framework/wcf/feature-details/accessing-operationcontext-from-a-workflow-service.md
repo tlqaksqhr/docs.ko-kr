@@ -1,25 +1,28 @@
 ---
-title: "워크플로 서비스에서 OperationContext 액세스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "워크플로 서비스에서 OperationContext 액세스"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b1dafe55-a20e-4db0-9ac8-90c315883cdd
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 11a6a1efad59ba5b9f3a143277909b63a5fe5e05
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 워크플로 서비스에서 OperationContext 액세스
-워크플로 서비스 내에서 <xref:System.ServiceModel.OperationContext>에 액세스하려면 사용자 지정 실행 속성에서 <xref:System.ServiceModel.Activities.IReceiveMessageCallback> 인터페이스를 구현해야 합니다.<xref:System.ServiceModel.OperationContext>에 대한 참조로 전달되는 <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage%2A> System.Activities.ExecutionProperties)?qualifyHint=False&autoUpgrade=True 메서드를 재정의합니다.이 항목에서는 사용자 지정 헤더를 검색하기 위해 이 실행 속성을 구현하고 런타임에 이 속성을 <xref:System.ServiceModel.Activities.Receive>에 노출할 사용자 지정 활동을 구현하는 방법을 안내합니다.사용자 지정 활동은 <xref:System.ServiceModel.Activities.Sequence> 활동과 동일한 동작을 구현합니다. 단, <xref:System.ServiceModel.Activities.Receive>가 내부에 배치되는 경우 <xref:System.ServiceModel.Activities.IReceiveMessageCallback>이 호출되고 <xref:System.ServiceModel.OperationContext> 정보가 검색된다는 점이 다릅니다.이 항목에서는 클라이언트 측 <xref:System.ServiceModel.OperationContext>에 액세스하여 <xref:System.ServiceModel.Activities.ISendMessageCallback> 인터페이스를 통해 나가는 헤더를 추가하는 방법도 보여 줍니다.  
+# <a name="accessing-operationcontext-from-a-workflow-service"></a>워크플로 서비스에서 OperationContext 액세스
+워크플로 서비스 내에서 <xref:System.ServiceModel.OperationContext>에 액세스하려면 사용자 지정 실행 속성에서 <xref:System.ServiceModel.Activities.IReceiveMessageCallback> 인터페이스를 구현해야 합니다. 재정의 <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage%2A> System.Activities.ExecutionProperties)?qualifyHint=False & autoUpgrade =에 대 한 참조를 전달 되는 True 메서드는 <xref:System.ServiceModel.OperationContext>합니다. 이 항목에서는 사용자 지정 헤더를 검색하기 위해 이 실행 속성을 구현하고 런타임에 이 속성을 <xref:System.ServiceModel.Activities.Receive>에 노출할 사용자 지정 활동을 구현하는 방법을 안내합니다.  사용자 지정 활동에는 동일한 동작을 구현 합니다는 <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` 때를 제외 하 고 활동은 <xref:System.ServiceModel.Activities.Receive> 내부에 배치는 <xref:System.ServiceModel.Activities.IReceiveMessageCallback> 호출 될 및 <xref:System.ServiceModel.OperationContext> 정보가 검색 된다는 합니다.  이 항목에서는 클라이언트측 <xref:System.ServiceModel.OperationContext>에 액세스하여 <xref:System.ServiceModel.Activities.ISendMessageCallback> 인터페이스를 통해 나가는 헤더를 추가하는 방법도 보여 줍니다.  
   
-### 서비스측 IReceiveMessageCallback 구현  
+### <a name="implement-the-service-side-ireceivemessagecallback"></a>서비스측 IReceiveMessageCallback 구현  
   
 1.  빈 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 솔루션을 만듭니다.  
   
@@ -54,14 +57,13 @@ caps.handback.revision: 9
                 }  
             }  
     }  
-  
     ```  
   
      이 코드에서는 메서드에 전달된 <xref:System.ServiceModel.OperationContext>를 사용하여 들어오는 메시지의 헤더에 액세스합니다.  
   
-### 서비스측 기본 활동을 구현하여 IReceiveMessageCallback 구현을 NativeActivityContext에 추가  
+### <a name="implement-a-service-side-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a>서비스측 기본 활동을 구현하여 IReceiveMessageCallback 구현을 NativeActivityContext에 추가  
   
-1.  `ReceiveInstanceIdScope`라는 <xref:System.Activities.NativeActivity>에서 파생된 새 클래스를 추가합니다.  
+1.  <xref:System.Activities.NativeActivity>라는 `ReceiveInstanceIdScope`에서 파생된 새 클래스를 추가합니다.  
   
 2.  자식 작업, 변수, 현재 작업 인덱스 및 <xref:System.Activities.CompletionCallback> 콜백을 추적하기 위해 로컬 변수를 추가합니다.  
   
@@ -73,7 +75,6 @@ caps.handback.revision: 9
             Variable<int> currentIndex;  
             CompletionCallback onChildComplete;  
     }  
-  
     ```  
   
 3.  생성자를 구현합니다.  
@@ -87,7 +88,6 @@ caps.handback.revision: 9
                 this.currentIndex = new Variable<int>();  
             }  
     }  
-  
     ```  
   
 4.  `Activities` 및 `Variables` 속성을 구현합니다.  
@@ -102,7 +102,6 @@ caps.handback.revision: 9
     {  
         get { return this.variables; }  
     }  
-  
     ```  
   
 5.  <xref:System.Activities.NativeActivity.CacheMetadata%2A>를 재정의합니다.  
@@ -115,7 +114,6 @@ caps.handback.revision: 9
         //add the private implementation variable: currentIndex   
         metadata.AddImplementationVariable(this.currentIndex);  
     }  
-  
     ```  
   
 6.  <xref:System.Activities.NativeActivity.Execute%2A>를 재정의합니다.  
@@ -152,12 +150,11 @@ caps.handback.revision: 9
                 //increment the currentIndex  
                 this.currentIndex.Set(context, ++currentActivityIndex);  
             }  
-  
     ```  
   
-### 워크플로 서비스 구현  
+### <a name="implement-the-workflow-service"></a>워크플로 서비스 구현  
   
-1.  기존 `Program` 클래스를 엽니다.  
+1.  기존 열 `Program` 클래스입니다.  
   
 2.  다음 상수를 정의합니다.  
   
@@ -167,7 +164,6 @@ caps.handback.revision: 9
        const string addr = "http://localhost:8080/Service";  
        static XName contract = XName.Get("IService", "http://tempuri.org");  
     }  
-  
     ```  
   
 3.  워크플로 서비스를 만드는 `GetWorkflowService`라는 정적 메서드를 추가합니다.  
@@ -206,7 +202,6 @@ caps.handback.revision: 9
                     }  
                 };  
             }  
-  
     ```  
   
 4.  기존 `Main` 메서드에서 워크플로 서비스를 호스트합니다.  
@@ -227,10 +222,9 @@ caps.handback.revision: 9
                     host.Close();  
                 }  
             }  
-  
     ```  
   
-### 클라이언트 측 ISendMessageCallback 구현  
+### <a name="implement-the-client-side-isendmessagecallback"></a>클라이언트측 ISendMessageCallback 구현  
   
 1.  `Service`라는 새 콘솔 응용 프로그램을 솔루션에 추가합니다.  
   
@@ -257,14 +251,13 @@ caps.handback.revision: 9
                 operationContext.OutgoingMessageHeaders.Add(MessageHeader.CreateHeader(HeaderName, HeaderNS, this.InstanceId));  
             }  
         }  
-  
     ```  
   
      이 코드에서는 메서드에 전달된 <xref:System.ServiceModel.OperationContext>를 사용하여 사용자 지정 헤더를 들어오는 메시지에 추가합니다.  
   
-### 클라이언트 측 기본 활동을 구현하여 클라이언트 측 ISendMessageCallback 구현을 NativeActivityContext에 추가  
+### <a name="implement-a-client-side-native-activity-to-add-the-client-side-isendmessagecallback-implementation-to-the-nativeactivitycontext"></a>클라이언트측 기본 활동을 구현하여 클라이언트측 ISendMessageCallback 구현을 NativeActivityContext에 추가  
   
-1.  `SendInstanceIdScope`라는 <xref:System.Activities.NativeActivity>에서 파생된 새 클래스를 추가합니다.  
+1.  <xref:System.Activities.NativeActivity>라는 `SendInstanceIdScope`에서 파생된 새 클래스를 추가합니다.  
   
 2.  자식 작업, 변수, 현재 작업 인덱스 및 <xref:System.Activities.CompletionCallback> 콜백을 추적하기 위해 로컬 변수를 추가합니다.  
   
@@ -276,7 +269,6 @@ caps.handback.revision: 9
             Variable<int> currentIndex;  
             CompletionCallback onChildComplete;  
     }  
-  
     ```  
   
 3.  생성자를 구현합니다.  
@@ -289,7 +281,6 @@ caps.handback.revision: 9
                 this.variables = new Collection<Variable>();  
                 this.currentIndex = new Variable<int>();  
             }  
-  
     ```  
   
 4.  `Activities` 및 `Variables` 속성을 구현합니다.  
@@ -304,7 +295,6 @@ caps.handback.revision: 9
     {  
         get { return this.variables; }  
     }  
-  
     ```  
   
 5.  <xref:System.Activities.NativeActivity.CacheMetadata%2A>를 재정의합니다.  
@@ -317,7 +307,6 @@ caps.handback.revision: 9
         //add the private implementation variable: currentIndex   
         metadata.AddImplementationVariable(this.currentIndex);  
     }  
-  
     ```  
   
 6.  <xref:System.Activities.NativeActivity.Execute%2A>를 재정의합니다.  
@@ -385,10 +374,9 @@ caps.handback.revision: 9
                 //increment the currentIndex  
                 this.currentIndex.Set(context, ++currentActivityIndex);  
             }  
-  
     ```  
   
-### 워크플로 클라이언트 구현  
+### <a name="implement-a-workflow-client"></a>워크플로 클라이언트 구현  
   
 1.  `Client`라는 콘솔 응용 프로그램 프로젝트를 새로 만듭니다.  
   
@@ -458,7 +446,6 @@ caps.handback.revision: 9
                     }  
                 };  
             }  
-  
     ```  
   
 4.  다음 호스팅 코드를 `Main()` 메서드에 추가합니다.  
@@ -472,10 +459,9 @@ caps.handback.revision: 9
        Console.WriteLine("Press [ENTER] to exit");  
        Console.ReadLine();  
     }  
-  
     ```  
   
-## 예제  
+## <a name="example"></a>예제  
  다음은 이 항목에서 사용되는 전체 소스 코드 목록입니다.  
   
 ```  
@@ -561,7 +547,6 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-  
 ```  
   
 ```  
@@ -595,7 +580,6 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-  
 ```  
   
 ```  
@@ -671,7 +655,6 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
     }  
   
 }  
-  
 ```  
   
 ```  
@@ -699,7 +682,6 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
         }  
     }  
 }  
-  
 ```  
   
 ```  
@@ -785,7 +767,6 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
         }  
     }  
 }  
-  
 ```  
   
 ```  
@@ -864,12 +845,11 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
         }  
     }  
 }  
-  
 ```  
   
  선택적 주석입니다.  
   
-## 참고 항목  
- [워크플로 서비스](../../../../docs/framework/wcf/feature-details/workflow-services.md)   
- [OperationContext 액세스](../../../../docs/framework/windows-workflow-foundation/samples/accessing-operationcontext.md)   
- [명령 코드를 사용하여 워크플로, 활동 및 식 작성](../../../../docs/framework/windows-workflow-foundation//authoring-workflows-activities-and-expressions-using-imperative-code.md)
+## <a name="see-also"></a>참고 항목  
+ [워크플로 서비스](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [OperationContext 액세스](../../../../docs/framework/windows-workflow-foundation/samples/accessing-operationcontext.md)  
+ [명령형 코드를 사용하여 워크플로, 활동 및 식 작성](../../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)

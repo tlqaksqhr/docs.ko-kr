@@ -5,10 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - assembly manifest, single-file assemblies
 - library assemblies
@@ -18,16 +20,15 @@ helpviewer_keywords:
 - code modules
 - single-file assemblies
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: dd4472587cabc0ebfb2cb64e0bdc15a8d4778507
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1a584e6ded79489e5e33b07d02dde618541c6cc8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-build-a-single-file-assembly"></a>방법: 단일 파일 어셈블리 만들기
 가장 단순한 형식의 어셈블리인 단일 파일 어셈블리에는 형식 정보 및 구현과 [어셈블리 매니페스트](../../../docs/framework/app-domains/assembly-manifest.md)가 포함되어 있습니다. 명령줄 컴파일러 또는 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]를 사용하여 단일 파일 어셈블리를 만들 수 있습니다. 기본적으로 컴파일러는 확장명이 .exe인 어셈블리 파일을 만듭니다.  
@@ -95,8 +96,7 @@ vbc /out:myCodeLibrary.dll /t:library myCode.vb
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [어셈블리 만들기](../../../docs/framework/app-domains/create-assemblies.md)   
- [다중 파일 어셈블리](../../../docs/framework/app-domains/multifile-assemblies.md)   
- [방법: 다중 파일 어셈블리 빌드](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   
+ [어셈블리 만들기](../../../docs/framework/app-domains/create-assemblies.md)  
+ [다중 파일 어셈블리](../../../docs/framework/app-domains/multifile-assemblies.md)  
+ [방법: 다중 파일 어셈블리 빌드](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
  [어셈블리를 사용한 프로그래밍](../../../docs/framework/app-domains/programming-with-assemblies.md)
-

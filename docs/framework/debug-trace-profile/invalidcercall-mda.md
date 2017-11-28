@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - invalid CER calls
 - InvalidCERCall MDA
@@ -22,16 +16,15 @@ helpviewer_keywords:
 - CER calls
 - managed debugging assistants (MDAs), CER calls
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8fda91296ffb27a7661f8e9c5ea4bc664e570ce8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 0c051e1513f8e8ad1735085cb93f106b4fb9b0d7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="invalidcercall-mda"></a>invalidCERCall MDA
 `invalidCERCall` MDA(관리 디버깅 도우미)는 안정성 계약 또는 지나치게 약한 계약이 없는 메서드에 대한 호출이 CER(제약이 있는 실행 영역) 그래프 내에 있으면 활성화됩니다. 약한 계약은 가장 나쁜 사례 상태 손상이 호출에 전달된 인스턴스보다 큰 범위에 관련됨을 선언하는 계약입니다. 즉, <xref:System.AppDomain> 또는 프로세스 상태가 손상될 수 있거나 CER 내에서 호출될 때 결과가 항상 결정적으로 계산 가능한 것은 아닙니다.  
@@ -70,7 +63,6 @@ ms.lasthandoff: 08/21/2017
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>   
- <xref:System.Runtime.ConstrainedExecution>   
+ <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>  
+ <xref:System.Runtime.ConstrainedExecution>  
  [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-

@@ -1,41 +1,22 @@
 ---
 title: "for(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - for
 - for_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- for keyword [C#]
+helpviewer_keywords: for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: cb7e83733fe026658f502b430975a0f8a27e9df3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d65c198b0fd763bddae4832290af038b8992eb48
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="for-c-reference"></a>for(C# 참조)
 `for` 루프를 사용하면 지정된 식이 `false`로 계산될 때까지 문 또는 문의 블록을 반복해서 실행할 수 있습니다. 이러한 종류의 루프는 배열을 반복하는 데 유용하며 루프를 반복할 횟수를 미리 알고 있는 다른 응용 프로그램에 유용합니다.  
@@ -43,7 +24,7 @@ ms.lasthandoff: 09/25/2017
 ## <a name="example"></a>예제  
  다음 예제에서 `i` 값은 콘솔에 기록되며 루프를 반복할 때마다 1씩 증가합니다.  
   
- [!code-cs[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_1.cs)]  
+ [!code-csharp[csrefKeywordsIteration#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_1.cs)]  
   
  이전 예제에서 `for` 문은 다음 작업을 수행합니다.  
   
@@ -120,20 +101,19 @@ for (initializer; condition; iterator)
   
  다음 예제에서는 이니셜라이저 섹션에서 외부 루프 변수에 값 할당, 이니셜라이저와 반복기 섹션에서 `Console.WriteLine` 메서드 호출, 반복기 섹션에서 두 변수의 값 변경과 같이 여러 가지 덜 일반적인 선택 항목을 보여 줍니다.  
   
- [!code-cs[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_2.cs)]  
+ [!code-csharp[csrefKeywordsIteration#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_2.cs)]  
   
  `for` 문을 정의하는 모든 식은 선택 사항입니다. 예를 들어 다음 문은 무한 루프를 만듭니다.  
   
- [!code-cs[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_3.cs)]  
+ [!code-csharp[csrefKeywordsIteration#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/for_3.cs)]  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)   
- [for 문(C++)](/cpp/cpp/for-statement-cpp)   
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
+ [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
+ [for 문(C++)](/cpp/cpp/for-statement-cpp)  
  [반복 문](../../../csharp/language-reference/keywords/iteration-statements.md)
-

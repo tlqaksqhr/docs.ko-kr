@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,15 @@ helpviewer_keywords:
 - application domains, shadow copying assemblies
 - shadow copying assemblies
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 2eb71e1d03da16581ee25bf972be51ee2f63f585
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9ca1f68b7f88c3aec08d58fc1ccba7ea082bb026
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="shadow-copying-assemblies"></a>어셈블리 섀도 복사
 섀도 복사를 사용하면 응용 프로그램 도메인을 언로드하지 않고 응용 프로그램 도메인에서 사용되는 어셈블리를 업데이트할 수 있습니다. 특히 이 기능은 ASP.NET 사이트와 같이 지속적으로 제공되어야 하는 응용 프로그램에 유용합니다.  
@@ -88,9 +86,8 @@ ms.lasthandoff: 07/28/2017
  <xref:System.AppDomain> 클래스에는 응용 프로그램 도메인에서 섀도 복사를 제어하는 데 사용될 수 있는 <xref:System.AppDomain.SetShadowCopyFiles%2A> 및 <xref:System.AppDomain.ClearShadowCopyPath%2A>와 같은 여러 가지 메서드가 있지만 이들 메서드는 .NET Framework 버전 2.0에서 사용되지 않는 것으로 표시되었습니다. 섀도 복사를 사용하도록 응용 프로그램 도메인을 구성할 경우 <xref:System.AppDomainSetup> 클래스의 속성을 사용하는 것이 좋습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=fullName>   
- <xref:System.AppDomainSetup.CachePath%2A?displayProperty=fullName>   
- <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=fullName>   
- <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=fullName>   
+ <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=nameWithType>  
+ <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>  
+ <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>  
+ <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=nameWithType>  
  [\<shadowCopyVerifyByTimestamp> 요소](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)
-

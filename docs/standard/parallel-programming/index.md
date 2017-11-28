@@ -1,5 +1,5 @@
 ---
-title: ".NET Framework의 병렬 프로그래밍"
+title: ".NET으로 병렬 프로그래밍"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -8,21 +8,19 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- parallel programming
+helpviewer_keywords: parallel programming
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: e061508b6b74e81b79ab7d53b0277afd38072635
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a3509229efc57b1f6b1244671df65b2f21964e65
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="parallel-programming-in-the-net-framework"></a>.NET Framework의 병렬 프로그래밍
+# <a name="parallel-programming-in-net"></a>.NET으로 병렬 프로그래밍
 여러 개인용 컴퓨터 및 워크스테이션에는 코어, 즉 CPU가 2개 또는 4개 있기 때문에 다중 스레드가 동시에 실행될 수 있습니다. 가까운 미래에 컴퓨터의 코어 수는 대폭 증가할 것으로 예상됩니다. 현재 및 미래의 하드웨어를 활용하기 위해 코드를 병렬화하여 작업을 여러 프로세스에 분산할 수 있습니다. 이전의 병렬화에서는 스레드 및 잠금에 대한 저수준 조작이 필요했습니다. [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] 및 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서는 새로운 런타임, 새로운 클래스 라이브러리 형식 및 새로운 진단 도구를 제공하여 병렬 프로그래밍에 대한 지원이 향상되었습니다. 이러한 기능은 병렬 개발을 단순화하기 때문에 개발자는 스레드 또는 스레드 풀을 직접 건드릴 필요 없이 효율적이고 세부적이고 확장명 가능한 병렬 코드를 자연스러운 언어로 작성할 수 있습니다. 다음 그림에서는 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]의 병렬 프로그래밍 아키텍처에 대한 간략한 개요를 제공합니다.  
   
  ![.NET 병렬 프로그래밍 아키텍처](../../../docs/standard/parallel-programming/media/tpl-architecture.png "TPL_Architecture")  
@@ -31,7 +29,7 @@ ms.lasthandoff: 09/05/2017
   
 |기술|설명|  
 |----------------|-----------------|  
-|[TPL(작업 병렬 라이브러리)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|<xref:System.Threading.Tasks.Parallel?displayProperty=fullName> 및 `For` 루프의 병렬 버전을 포함하는 `ForEach` 클래스 및 비동기 작업에 대한 선호되는 표현 방식을 나타내는 <xref:System.Threading.Tasks.Task?displayProperty=fullName> 클래스의 설명서를 제공합니다.|  
+|[TPL(작업 병렬 라이브러리)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|<xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 및 `For` 루프의 병렬 버전을 포함하는 `ForEach` 클래스 및 비동기 작업에 대한 선호되는 표현 방식을 나타내는 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 클래스의 설명서를 제공합니다.|  
 |[PLINQ(병렬 LINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)|여러 시나리오에서 성능을 대폭 향상시키는 LINQ to Objects의 병렬 구현입니다.|  
 |[병렬 프로그래밍을 위한 데이터 구조](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)|스레드로부터 안전한 컬렉션 클래스, 간단한 동기화 형식 및 초기화 지연 관련 형식에 대한 설명서의 링크를 제공합니다.|  
 |[병렬 진단 도구](../../../docs/standard/parallel-programming/parallel-diagnostic-tools.md)|Visual Studio 디버거의 작업 및 병렬 스택 창에 대한 설명서와 병렬 코드의 디버깅 및 성능 튜닝에 사용 가능한 [!INCLUDE[vsprvsts](../../../includes/vsprvsts-md.md)] 프로파일러의 뷰 집합으로 구성되는 [Concurrency Visualizer](/visualstudio/profiling/concurrency-visualizer)에 대한 설명서의 링크를 제공합니다.|  
@@ -41,6 +39,5 @@ ms.lasthandoff: 09/05/2017
 |[추가 정보](../../../docs/standard/parallel-programming/for-further-reading-parallel-programming.md)|.NET Framework의 병렬 프로그래밍과 관련된 추가적 설명서 및 샘플 리소스에 대한 링크를 제공합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [병렬 프로그래밍 패턴: .NET Framework 4의 병렬 패턴 이해 및 적용](http://go.microsoft.com/fwlink/?LinkID=185142)   
+ [병렬 프로그래밍 패턴: .NET Framework 4의 병렬 패턴 이해 및 적용](http://go.microsoft.com/fwlink/?LinkID=185142)  
  [NET Framework를 사용한 병렬 프로그래밍 샘플](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
-

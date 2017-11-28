@@ -1,41 +1,22 @@
 ---
 title: "public(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - public
 - public_CSharpKeyword
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- public keyword [C#]
+helpviewer_keywords: public keyword [C#]
 ms.assetid: 0ae45d16-a551-4b74-9845-57208de1328e
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 197ef4a2a8544d439b0c34ec14bb7752b760ea06
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ae19bf9a33a9860a8960cde5dd4402e10418a094
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="public-c-reference"></a>public(C# 참조)
 `public` 키워드는 형식 및 형식 멤버에 대한 액세스 한정자입니다. 공용 액세스는 허용 범위가 가장 큰 액세스 수준입니다. 다음 예제와 같이, 공용 멤버 액세스에 대한 제한은 없습니다.  
@@ -52,7 +33,7 @@ class SampleClass
 ## <a name="example"></a>예제  
  다음 예제에서는 두 개의 클래스, `PointTest` 및 `MainClass`를 선언합니다. `PointTest`의 공용 멤버 `x` 및 `y`는 `MainClass`에서 직접 액세스합니다.  
   
- [!code-cs[csrefKeywordsModifiers#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/public_1.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/public_1.cs)]  
   
  `public` 액세스 수준을 [private](../../../csharp/language-reference/keywords/private.md) 또는 [protected](../../../csharp/language-reference/keywords/protected.md)로 변경하면 오류 메시지가 표시됩니다.  
   
@@ -62,14 +43,13 @@ class SampleClass
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [액세스 한정자](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)   
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
- [액세스 한정자](../../../csharp/language-reference/keywords/access-modifiers.md)   
- [액세스 가능성 수준](../../../csharp/language-reference/keywords/accessibility-levels.md)   
- [한정자](../../../csharp/language-reference/keywords/modifiers.md)   
- [private](../../../csharp/language-reference/keywords/private.md)   
- [protected](../../../csharp/language-reference/keywords/protected.md)   
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [액세스 한정자](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+ [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
+ [액세스 한정자](../../../csharp/language-reference/keywords/access-modifiers.md)  
+ [액세스 수준](../../../csharp/language-reference/keywords/accessibility-levels.md)  
+ [한정자](../../../csharp/language-reference/keywords/modifiers.md)  
+ [private](../../../csharp/language-reference/keywords/private.md)  
+ [protected](../../../csharp/language-reference/keywords/protected.md)  
  [internal](../../../csharp/language-reference/keywords/internal.md)
-

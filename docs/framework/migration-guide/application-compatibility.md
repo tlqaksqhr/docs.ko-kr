@@ -14,30 +14,27 @@ helpviewer_keywords:
 - application compatibility
 - .NET Framework application compatibility
 - .NET Framework changes
-caps.latest.revision: 19
+caps.latest.revision: "19"
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: e67fff19c4b187010b35519081f46e11effbad6c
+ms.sourcegitcommit: d0f7646d67db5809cf43ff1d27b399a4020e8ee2
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b3c7df2984c2c9e8af308ca8070f7207d11ba49e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/25/2017
 ---
-
 # <a name="application-compatibility-in-the-net-framework"></a>.NET Framework의 응용 프로그램 호환성
 
 ## <a name="introduction"></a>소개
-
 호환성은 각 .NET 릴리스의 매우 중요한 목표입니다. 호환성이 있으면 각 버전이 누적되므로 이전 버전이 계속 작동합니다. 반면, 성능 향상, 보안 문제 해결 또는 버그 수정을 위해 이전 기능이 변경되면 이후 버전에서 실행되는 기존 코드 또는 기존 응용 프로그램에서 호환성 문제가 발생할 수 있습니다. .NET Framework는 대상 다시 지정 변경 내용 및 런타임 변경 내용을 인식합니다. 대상 다시 지정 변경 내용은 .NET Framework의 특정 버전을 대상으로 지정하지만 이후 버전에서 실행되는 응용 프로그램에 영향을 미칩니다. 런타임 변경 내용은 특정 버전에서 실행되는 모든 응용 프로그램에 영향을 미칩니다.
 
 각 앱은 .NET Framework의 특정 버전을 대상으로 하며, 다음을 통해 지정됩니다.
 
-- Visual Studio에서 대상 프레임워크 정의
-- 프로젝트 파일에서 대상 프레임워크 지정
-- 소스 코드에 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 적용
+* Visual Studio에서 대상 프레임워크 정의
+* 프로젝트 파일에서 대상 프레임워크 지정
+* 소스 코드에 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 적용
 
 대상으로 지정된 버전보다 더 새로운 버전에서 실행될 경우 .NET Framework는 특수 동작을 사용하여 대상으로 지정된 이전 버전을 모방합니다. 즉, 앱은 Framework의 더 새로운 버전에서 실행되지만 이전 버전에서 실행되는 것처럼 동작합니다. .NET Framework 버전 간의 대부분의 호환성 문제는 이 특수 모델을 통해 완화됩니다.
 
@@ -82,16 +79,14 @@ ms.lasthandoff: 07/28/2017
 -   사용 가능한 진단의 ID
 
 ## <a name="usage"></a>용도
-
 시작하려면 아래에서 호환성 변경 형식을 선택합니다.
 
-- [대상 다시 지정 변경 내용](./retargeting/index.md)
-- [런타임 변경 내용](./runtime/index.md)
+* [대상 다시 지정 변경 내용](./retargeting/index.md)
+* [런타임 변경 내용](./runtime/index.md)
 
 
 ## <a name="see-also"></a>참고 항목
 
-[버전 및 종속성](../../../docs/framework/migration-guide/versions-and-dependencies.md)   
-[새로운 기능](../../../docs/framework/whats-new/index.md)   
-[클래스 라이브러리의 사용되지 않는 기능](../../../docs/framework/whats-new/whats-obsolete.md)
-
+* [버전 및 종속성](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+* [새로운 기능](../../../docs/framework/whats-new/index.md)
+* [클래스 라이브러리의 사용되지 않는 기능](../../../docs/framework/whats-new/whats-obsolete.md)

@@ -1,43 +1,25 @@
 ---
 title: "방법: Visual Basic에서 직렬 포트에 연결된 모뎀 전화 접속"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- modems, dialing
-- serial ports, dialing
+- modems [Visual Basic], dialing
+- serial ports [Visual Basic], dialing
 - My.Computer.Ports object
 ms.assetid: 3834db40-f431-45f1-b671-dc91787164b6
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: ea1b2d6152af8919ac1aa272def4ba198b33867c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0daaf35cdebac3d69ddc536124d4c86b96955b11
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-dial-modems-attached-to-serial-ports-in-visual-basic"></a>방법: Visual Basic에서 직렬 포트에 연결된 모뎀 전화 접속
 이 항목에서는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서 `My.Computer.Ports`를 사용하여 모뎀으로 전화를 거는 방법을 설명합니다.  
@@ -68,7 +50,7 @@ ms.lasthandoff: 07/28/2017
  이 코드 예제는 IntelliSense 코드 조각으로 사용할 수도 있습니다. 코드 조각 선택에서는 **연결 및 네트워킹**에 있습니다. 자세한 내용은 [코드 조각](/visualstudio/ide/code-snippets)을 참조하세요.  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- 이 예제에서는 <xref:System?displayProperty=fullName> 네임스페이스에 대한 참조가 필요합니다.  
+ 이 예제에서는 <xref:System?displayProperty=nameWithType> 네임스페이스에 대한 참조가 필요합니다.  
   
 ## <a name="robust-programming"></a>강력한 프로그래밍  
  이 예제에서는 모뎀이 COM1에 연결되어 있다고 가정합니다. 코드에서 사용자가 사용 가능한 포트 목록에서 원하는 직렬 포트를 선택할 수 있도록 하는 것이 좋습니다. 자세한 내용은 [방법: 사용할 수 있는 직렬 포트 표시](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)를 참조하세요.  
@@ -78,9 +60,8 @@ ms.lasthandoff: 07/28/2017
  이 예제에서 응용 프로그램은 모뎀으로 전화를 건 후 직렬 포트의 연결을 끊습니다. 현실적으로 모뎀과 데이터를 주고받으려 합니다. 자세한 내용은 [방법: 직렬 포트에서 문자열 받기](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:Microsoft.VisualBasic.Devices.Ports>   
- <xref:System.IO.Ports.SerialPort?displayProperty=fullName>   
- [방법: 직렬 포트로 문자열 보내기](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)   
- [방법: 직렬 포트에서 문자열 받기](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)   
+ <xref:Microsoft.VisualBasic.Devices.Ports>  
+ <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>  
+ [방법: 직렬 포트로 문자열 보내기](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)  
+ [방법: 직렬 포트에서 문자열 받기](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)  
  [방법: 사용할 수 있는 직렬 포트 표시](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
-

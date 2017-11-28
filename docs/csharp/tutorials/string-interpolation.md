@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
+ms.openlocfilehash: ac19d4208da4f8ee6dd3e071ab70dbc41a0cd065
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: de8f77e44319731f87f00d227a5373a78bf40e32
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="string-interpolation-in-c"></a>C#의 문자열 보간 #
 
 문자열 보간은 문자열의 자리 표시자가 문자열 변수의 값으로 바뀌는 방식입니다. C# 6 이전에는 이 작업을 위해 `System.String.Format`을 사용했습니다. 이 방법도 괜찮지만 번호가 매겨진 자리 표시자를 사용하므로 읽기가 더 어렵고 좀 더 길 수 있습니다.
@@ -46,23 +44,27 @@ dotnet new console
 
 이 명령은 프로젝트 파일, *interpolated.csproj* 및 소스 코드 파일 *Program.cs*를 사용하여 기본 .NET Core 프로젝트를 만듭니다. `dotnet restore`를 실행하여 이 프로젝트를 컴파일하는 데 필요한 종속성을 복원해야 합니다.
 
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 이 프로그램을 실행하려면 `dotnet run`을 사용합니다. 콘솔에 "Hello, World" 출력이 표시됩니다.
+
+
 
 ## <a name="intro-to-string-interpolation"></a>문자열 보간 소개
 
 `System.String.Format`을 사용하여 매개 변수와 문자열로 대체되는 "자리 표시자" 문자열을 지정합니다. 예를 들면 다음과 같습니다.
 
-[!code-csharp[String.Format 예제](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
+[!code-csharp[String.Format example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
 
 그러면 "My name is Matt Groves"가 출력됩니다.
 
 C# 6에서 `String.Format`을 사용하는 대신, 앞에 `$` 기호를 붙인 다음 문자열에 직접 변수를 사용하여 보간된 문자열을 정의합니다. 예를 들면 다음과 같습니다.
 
-[!code-csharp[보간 예제](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExample)]  
+[!code-csharp[Interpolation example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExample)]  
 
 단순히 변수를 사용할 필요는 없습니다. 대괄호 안에 어떤 식도 사용 가능합니다. 예를 들면 다음과 같습니다.
 
-[!code-csharp[보간 식 예제](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExpressionExample)]  
+[!code-csharp[Interpolation expression example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationExpressionExample)]  
 
 다음이 출력됩니다.
 
@@ -80,7 +82,7 @@ This is line number 5
 
 예를 들어 안쪽 여백 및 숫자 서식을 추가할 수 있습니다.
 
-[!code-csharp[보간 서식 지정 예제](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationFormattingExample)]  
+[!code-csharp[Interpolation formatting example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationFormattingExample)]  
 
 위 예제는 다음과 같은 결과를 출력합니다.
 
@@ -118,9 +120,8 @@ Console.WriteLine(localizeMe);
 
 예를 들면 다음과 같습니다.
 
-[!code-csharp[보간 국제화 예제](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
+[!code-csharp[Interpolation internationalization example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
 
 ## <a name="conclusion"></a>결론 
 
 이 자습서에서는 C# 6의 문자열 보간 기능을 사용하는 방법을 알아보았습니다. 이 기능은 좀 더 개선된 방식으로 사용할 때는 몇 가지 주의할 사항이 있지만 단순한 `String.Format` 문을 작성하는 좀 더 정확한 방법입니다.
-

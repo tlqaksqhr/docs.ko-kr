@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - failed assembly binds
 - Fuslogvw.exe
@@ -22,16 +16,15 @@ helpviewer_keywords:
 - locating assemblies
 - Assembly Binding Log Viewer
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 1ad02ade9c9e60e53fa8fb91d9a38d6ec12bc2e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 381464ecc911dedb0dd394ded7c29fe143423142
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe(어셈블리 바인딩 로그 뷰어)
 어셈블리 바인딩 로그 뷰어는 어셈블리 바인딩에 대한 자세한 내용을 표시합니다. 이 정보를 검토하면 .NET Framework에서 런타임에 어셈블리를 찾지 못하는 이유를 진단할 수 있습니다. 이러한 오류는 일반적으로 어셈블리가 잘못된 위치에 배포되었거나 네이티브 이미지가 더 이상 유효하지 않거나 버전 번호 또는 문화권이 일치하지 않기 때문에 일어납니다. 공용 언어 런타임의 어셈블리 찾기 오류는 일반적으로 응용 프로그램에서 <xref:System.TypeLoadException>으로 나타납니다.  
@@ -221,7 +214,7 @@ Discarding native image.
      도메인 중립적으로 로드되는 어셈블리에 대한 중요 사항을 참조하세요.  
   
 > [!IMPORTANT]
->  예를 들어 <xref:System.AppDomainSetup.LoaderOptimization%2A> 속성을 <xref:System.LoaderOptimization.MultiDomain?displayProperty=fullName> 또는 <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=fullName>로 설정하여 어셈블리가 도메인 중립적으로 로드되는 경우 로깅을 설정하면 경우에 따라 메모리가 누수될 수 있습니다. 도메인 중립 모듈이 응용 프로그램 도메인에 로드되었을 때 로그 엔트리가 만들어지고 나중에 응용 프로그램 도메인이 언로드되면 이러한 누수가 발생할 수 있습니다. 프로세스가 끝날 때까지는 로그 엔트리가 해제되지 않을 수도 있습니다. 로깅이 자동으로 설정되는 디버거도 있습니다.  
+>  예를 들어 <xref:System.AppDomainSetup.LoaderOptimization%2A> 속성을 <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> 또는 <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType>로 설정하여 어셈블리가 도메인 중립적으로 로드되는 경우 로깅을 설정하면 경우에 따라 메모리가 누수될 수 있습니다. 도메인 중립 모듈이 응용 프로그램 도메인에 로드되었을 때 로그 엔트리가 만들어지고 나중에 응용 프로그램 도메인이 언로드되면 이러한 누수가 발생할 수 있습니다. 프로세스가 끝날 때까지는 로그 엔트리가 해제되지 않을 수도 있습니다. 로깅이 자동으로 설정되는 디버거도 있습니다.  
   
 #### <a name="to-enable-a-custom-log-path"></a>사용자 지정 로그 경로를 사용하려면  
   
@@ -244,9 +237,8 @@ Discarding native image.
     >  Windows 8 이상에서만 상자가 활성화됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.TypeLoadException>   
- [도구](../../../docs/framework/tools/index.md)   
- [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)   
- [런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
+ <xref:System.TypeLoadException>  
+ [도구](../../../docs/framework/tools/index.md)  
+ [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)  
+ [런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

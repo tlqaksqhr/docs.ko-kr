@@ -1,42 +1,23 @@
 ---
 title: "-errorreport(C# 컴파일러 옵션)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /errorreport
-dev_langs:
-- CSharp
+f1_keywords: /errorreport
 helpviewer_keywords:
 - -errorreport compiler option [C#]
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 3063a29452d90a09d5904d2a598b62530104d739
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d32ec08da36509527b153166ae15019f129aad71
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="errorreport-c-compiler-options"></a>/errorreport(C# 컴파일러 옵션)
 이 옵션은 C# 내부 컴파일러 오류를 Microsoft에 보고하는 편리한 방법을 제공합니다.  
@@ -62,10 +43,8 @@ ms.lasthandoff: 07/28/2017
   
  **send**  
  내부 컴파일러 오류 보고서를 Microsoft에 자동으로 보냅니다. 이 옵션을 사용하려면 먼저 Microsoft 데이터 수집 정책에 동의해야 합니다. 처음으로 컴퓨터에서 **/errorreport:send**를 지정하면 Microsoft 데이터 수집 정책 웹 사이트로 안내하는 컴파일러 메시지가 나타납니다.  
-  
- 이 옵션은 레지스트리 설정에 따라 달라집니다. 레지스트리에서 적절한 값을 설정하는 방법에 대한 자세한 내용은 MSDN 웹 사이트에서 [Visual Studio 2008 명령줄 도구에서 자동 오류 보고를 설정하는 방법](http://go.microsoft.com/fwlink/?LinkID=184695)을 참조하세요.  
-  
-## <a name="remarks"></a>주의  
+    
+## <a name="remarks"></a>설명  
  내부 컴파일러 오류(ICE)는 컴파일러에서 소스 코드 파일을 처리할 수 없을 때 발생합니다. ICE가 발생하면 컴파일러에서 출력 파일 또는 코드를 수정하는 데 사용할 수 있는 유용한 진단을 생성하지 않습니다.  
   
  이전 릴리스에서는 ICE를 수신하는 경우 Microsoft 기술 지원 서비스에 문의하여 문제를 보고하도록 했습니다. **/errorreport**를 사용하여 Visual C# 팀에 ICE 정보를 제공할 수 있습니다. 오류 보고서는 향후 컴파일러 릴리스를 개선하는 데 도움이 됩니다.  
@@ -88,4 +67,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>참고 항목  
  [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)
-

@@ -1,42 +1,24 @@
 ---
 title: "&lt;exception&gt;(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - exception
 - <exception>
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - <exception> C# XML tag
 - exception C# XML tag
 ms.assetid: dd73aac5-3c74-4fcf-9498-f11bff3a2f3c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: bd859a09bfbe9f814bf57f0987fd49ded9ba7100
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bdcbe116db4ed0f63ea73c524c482266b4ac1a38
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="ltexceptiongt-c-programming-guide"></a>&lt;exception&gt;(C# 프로그래밍 가이드)
 ## <a name="syntax"></a>구문  
@@ -62,9 +44,8 @@ ms.lasthandoff: 07/28/2017
  예외 처리에 대한 자세한 내용은 [예외 및 예외 처리](../../../csharp/programming-guide/exceptions/index.md)를 참조하세요.  
   
 ## <a name="example"></a>예제  
- [!code-cs[csProgGuideDocComments#4](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/exception_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#4](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/exception_1.cs)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
  [문서 주석에 대한 권장 태그](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
-

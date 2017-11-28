@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.translationtype: HT
-ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
 ms.openlocfilehash: 1478b5dc5844cef0abfea44eba88a12801d32bd4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="linq-language-integrated-query"></a>LINQ(Language-Integrated Query)
 
 ## <a name="what-is-it"></a>LINQ란?
@@ -263,4 +261,3 @@ LINQ를 통해 쉽게 표현될 수 있는 병렬화 가능한 CPU 바인딩된 
 *   [101 LINQ 샘플](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
 *   [Linqpad](https://www.linqpad.net/), 실습 환경 및 C#/F#/VB에 대한 데이터베이스 쿼리 엔진
 *   [EduLinq](http://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), LINQ-to-objects 구현 방법 학습을 위한 전자책
-

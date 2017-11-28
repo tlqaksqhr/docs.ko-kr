@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-ms.translationtype: HT
-ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
 ms.openlocfilehash: bf0cc4ed21c92a57f3f5b2cfa27ac1f054e15172
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="async-overview"></a>비동기 개요
 
 얼마 전만 해도 최신 PC 또는 서버를 구입하기만 해도 앱 속도가 빨라졌지만 이러한 추세는 중단되었습니다. 사실 반대가 되었다고 해야 맞습니다. 1ghz 싱글 코어 ARM 칩이 탑재되고 서버 작업이 VM으로 전환된 휴대폰이 출시되었습니다. 그래도 사용자는 여전히 응답성이 뛰어난 UI를 원하고 비즈니스 소유자는 비즈니스에 맞게 확장되는 서버를 원합니다. 모바일 및 클라우드로의 전환과 인터넷 연결 사용자 수가 30억 명을 넘어서면서 일련의 새로운 소프트웨어 패턴이 생겼습니다. 
@@ -41,4 +39,3 @@ ms.lasthandoff: 08/21/2017
 ## <a name="whats-next"></a>새로운 기능
 
 비동기 개념 및 프로그래밍에 대한 자세한 내용은 [비동기에 대한 자세한 설명](async-in-depth.md) 및 [작업 기반 비동기 프로그래밍](~/docs/standard/parallel-programming/task-based-asynchronous-programming.md)을 참조하세요.
-

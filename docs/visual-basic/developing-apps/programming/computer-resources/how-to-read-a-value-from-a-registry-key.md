@@ -1,45 +1,27 @@
 ---
 title: "방법: Visual Basic에서 레지스트리 키 값 읽기"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- registry keys, determining if a value exists in
+- registry keys [Visual Basic], determining if a value exists in
 - My.Computer.Registry object, examples
-- registry, determining if values exist
-- registry keys, reading from
-- registry, reading
+- registry [Visual Basic], determining if values exist
+- registry keys [Visual Basic], reading from
+- registry [Visual Basic], reading
 ms.assetid: 775d0a57-68c9-464e-8949-9a39bd29cc64
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f88401f6daa7a2108522496c845521474c22cc30
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 69b833777629cfd642ab75ac055b96b59c1da70b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>방법: Visual Basic에서 레지스트리 키 값 읽기
 `My.Computer.Registry` 개체의 `GetValue` 메서드를 사용하여 Windows 레지스트리의 값을 읽을 수 있습니다.  
@@ -79,7 +61,6 @@ ms.lasthandoff: 07/28/2017
  이 프로세스를 실행하려면 어셈블리에 <xref:System.Security.Permissions.RegistryPermission> 클래스에서 부여한 권한 수준이 필요합니다. 부분 신뢰 컨텍스트에서 실행하는 경우 프로세스가 권한 부족으로 인해 예외를 throw할 수 있습니다. 마찬가지로, 사용자에게 설정을 만들거나 쓸 수 있는 올바른 ACL이 있어야 합니다. 예를 들어 코드 액세스 보안 권한이 있는 로컬 응용 프로그램에는 운영 체제 권한이 없을 수 있습니다. 자세한 내용은 [코드 액세스 보안 기본 사항](https://msdn.microsoft.com/library/33tceax8)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>   
- <xref:Microsoft.Win32.RegistryHive>   
+ <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
+ <xref:Microsoft.Win32.RegistryHive>  
  [레지스트리 읽기 및 쓰기](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
-

@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 08/07/2017
 ms.topic: article
 ms.prod: .net-core
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: 180ed868116967b03c5d4058b5618927242defc2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 1b028e5880f9e57e87c16eabeb442e0a46a369da
-ms.openlocfilehash: 38e6c7d8797285abc4eb2e87602cc0bbf46ba590
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="consuming-a-class-library-with-net-core-in-visual-studio-2017"></a>Visual Studio 2017에서 .NET Core로 클래스 라이브러리 사용
 
 [Visual Studio 2017에서 .NET Core를 사용하여 C# 클래스 라이브러리 빌드](./library-with-visual-studio.md) 또는 [Visual Studio 2017에서 .NET Core를 사용하여 Visual Basic 클래스 라이브러리 빌드](vb-library-with-visual-studio.md)의 단계를 따라 클래스 라이브러리를 만들고, [Visual Studio 2017에서 .NET Core를 사용하여 클래스 라이브러리 테스트](testing-library-with-visual-studio.md)에서 테스트하고, 라이브러리의 릴리스 버전을 빌드한 후 다음 단계는 호출자가 사용할 수 있게 만드는 것입니다. 이 작업은
@@ -104,4 +105,3 @@ ms.lasthandoff: 09/08/2017
    > *dotnet.exe*를 포함하는 디렉터리가 해당 PATH에 없는 경우 콘솔 창에 `where dotnet.exe`를 입력하여 해당 위치를 찾을 수 있습니다.
 
 NuGet 패키지를 만드는 방법에 대한 자세한 내용은 [플랫폼 간 도구로 NuGet 패키지를 만드는 방법](../../core/deploying/creating-nuget-packages.md)을 참조하세요.
-

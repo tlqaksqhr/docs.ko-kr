@@ -5,13 +5,13 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
 ms.topic: article
+dev_langs: vb
 ms.prod: .net-core
+ms.openlocfilehash: b656ae4746691f2e72eaa666542e98d4abc91069
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
-ms.openlocfilehash: 1f642678f15e05d24ee770adc1291b26eed6367c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>dotnet test 및 MSTest를 사용하여 Visual Basic .NET Core 라이브러리 유닛 테스트
 
@@ -127,7 +127,7 @@ Public Function IsPrime(candidate As Integer) As Boolean
 End Function
 ```
 
-*unit-testing-vb-using-mstest* 디렉터리에서 `dotnet test`를 다시 실행합니다. `dotnet test` 명령은 `PrimeService` 프로젝트에 대한 빌드를 실행한 다음 `PrimeService.Tests` 프로젝트에 대한 빌드를 실행합니다. 두 프로젝트를 모두 빌드한 후 이 단일 테스트를 실행합니다. 통과합니다.
+*unit-testing-vb-using-mstest* 디렉터리에서 `dotnet test`를 다시 실행합니다. `dotnet test` 명령은 `PrimeService` 프로젝트에 대한 빌드를 실행한 다음 `PrimeService.Tests` 프로젝트에 대한 빌드를 실행합니다. 두 프로젝트를 모두 빌드한 후 이 단일 테스트를 실행합니다. 전달합니다.
 
 ## <a name="adding-more-features"></a>더 많은 기능 추가
 
@@ -146,4 +146,3 @@ if candidate < 2
 기본 라이브러리에서 더 많은 테스트, 더 많은 이론, 더 많은 코드를 추가하여 계속 반복합니다. [테스트의 완료된 버전](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-using-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.vb) 및 [라이브러리의 완전한 구현](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-using-mstest/PrimeService/PrimeService.vb)을 얻게 됩니다.
 
 작은 라이브러리 및 이 라이브러리에 대한 단위 테스트 집합을 작성했습니다. 새 패키지 및 테스트 추가가 정상 워크플로에 포함되도록 솔루션을 구조화했습니다. 응용 프로그램의 목표를 해결하는 데 대부분의 시간과 노력을 들였습니다.
-

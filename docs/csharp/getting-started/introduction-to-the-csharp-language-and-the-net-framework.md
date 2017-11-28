@@ -1,40 +1,22 @@
 ---
 title: "C# 언어 및 .NET Framework 소개"
 description: "C# 및 .NET의 기본 사항에 대해 알아봅니다. C# 언어 및 .NET 에코시스템에 대한 개요를 확인합니다."
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 2bc7dfbca102a5d2e891b48b676347822eae56f7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: c7fac541dd233111bfffb9c0f67ba048f8d271be
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 언어 및 .NET Framework 소개
 유연하고 형식이 안전한 개체 지향 언어인 C#은 개발자가 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]에서 실행되는 안전하고 강력한 여러 응용 프로그램을 구축할 수 있도록 지원합니다. C#을 사용하여 Windows 클라이언트 응용 프로그램, XML Web services, 분산 구성 요소, 클라이언트-서버 응용 프로그램, 데이터베이스 응용 프로그램 등을 만들 수 있습니다. Visual C#에서는 고급 코드 편집기, 편리한 사용자 인터페이스 디자이너, 통합 디버거 및 다른 많은 도구를 제공하여 C# 언어 및 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]에 따라 보다 쉽게 응용 프로그램을 개발할 수 있습니다.  
@@ -69,10 +51,8 @@ ms.lasthandoff: 09/25/2017
   
 -   C# 언어의 특정 측면에 대한 자세한 내용은 [C# 참조](../../csharp/language-reference/index.md)를 참조하세요.  
   
--   [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]에 대한 자세한 내용은 [LINQ(언어 통합 쿼리)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)를 참조하세요.  
-  
--   Visual C# 팀이 발표한 최신 기사 및 리소스를 찾아보려면 [Visual C# 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=47811)를 참조하세요.  
-  
+-   [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]에 대한 자세한 내용은 [LINQ(언어 통합 쿼리)](../programming-guide/concepts/linq/index.md)를 참조하세요.  
+
 ## <a name="net-framework-platform-architecture"></a>.NET Framework 플랫폼 아키텍처  
  C# 프로그램은 CLR(공용 언어 런타임)이라고 하는 가상 실행 시스템과 통합된 클래스 라이브러리 집합을 포함하는 Windows의 통합 구성 요소인 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]에서 실행됩니다. CLR은 언어 및 라이브러리가 원활하게 함께 작동하는 실행 및 개발 환경을 만들기 위한 기준이 되는 국제 표준인 CLI(공용 언어 인프라)를 Microsoft에서 상업적으로 구현한 것입니다.  
   
@@ -86,8 +66,7 @@ ms.lasthandoff: 09/25/2017
   
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]에는 런타임 서비스 외에, 파일 입/출력부터 문자열 조작, XML 구문 분석, Windows Forms 컨트롤에 이르는 모든 항목에 대해 다양하고 유용한 기능을 제공하는 네임스페이스로 구성된 4,000개 이상의 광범위한 클래스 라이브러리도 포함됩니다. 일반적인 C# 응용 프로그램은 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 클래스 라이브러리를 광범위하게 사용하여 일반적인 "배관" 작업을 처리합니다.  
   
- .NET Framework에 대한 자세한 내용은 [Microsoft.NET Framework 개요](http://msdn.microsoft.com/en-us/d05daf50-00fe-45c7-8383-06fe41697355)를 참조하세요.  
+ .NET Framework에 대한 자세한 내용은 [Microsoft.NET Framework 개요](../../framework/get-started/overview.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [C#](../../csharp/index.md) [Visual C# 및 Visual Basic 시작](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
-

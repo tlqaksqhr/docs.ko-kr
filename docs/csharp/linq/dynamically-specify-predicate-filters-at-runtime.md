@@ -7,16 +7,14 @@ manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: 90238470-0767-497c-916c-52d0d16845e0
+ms.openlocfilehash: 06bc594ac1357e7dca6c182fa28310559a79875c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9e724428bce09e2b2fa20b9391ad131424e16413
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="dynamically-specify-predicate-filters-at-runtime"></a>런타임에 동적으로 조건자 필터 지정
 
@@ -32,7 +30,7 @@ ms.lasthandoff: 07/28/2017
   
 4.  `Program` 클래스를 다음 코드로 바꿉니다.  
   
-     [!code-cs[csProgGuideLINQ#26](../../../samples/snippets/csharp/concepts/linq/how-to-dynamically-specify-predicate-filters-at-runtime_1.cs)]  
+     [!code-csharp[csProgGuideLINQ#26](../../../samples/snippets/csharp/concepts/linq/how-to-dynamically-specify-predicate-filters-at-runtime_1.cs)]  
   
 5.  `ids`의 선언 아래에서 `DynamicPredicates` 클래스의 `Main` 메서드에 다음 줄을 추가합니다.  
   
@@ -70,7 +68,7 @@ ms.lasthandoff: 07/28/2017
   
 2.  다음 메서드를 복사하여 `DynamicPredicates` 클래스에 붙여 넣습니다.  
   
-     [!code-cs[csProgGuideLINQ#27](../../../samples/snippets/csharp/concepts/linq//how-to-dynamically-specify-predicate-filters-at-runtime_2.cs)]  
+     [!code-csharp[csProgGuideLINQ#27](../../../samples/snippets/csharp/concepts/linq//how-to-dynamically-specify-predicate-filters-at-runtime_2.cs)]  
   
 3.  `Main` 메서드에서 `QueryByID` 호출을 `QueryByYear(args[0])` 호출로 바꿔 `args` 배열의 첫 번째 요소를 인수로 전송합니다.  
   
@@ -78,6 +76,5 @@ ms.lasthandoff: 07/28/2017
   
  
 ## <a name="see-also"></a>참고 항목  
- [LINQ 쿼리 식](index.md)   
+ [LINQ 쿼리 식](index.md)  
  [where 절](../language-reference/keywords/where-clause.md)
-

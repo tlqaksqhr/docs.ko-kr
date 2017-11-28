@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - app.config files, assembly locations
 - deploying applications [.NET Framework], assembly locations
@@ -22,16 +16,15 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: f1a4fd55688f03cbd9de2ceb815c49423aff5fad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: 75353ad43d76ceecd60bb9edd207c56c759e52c2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>런타임에서 어셈블리를 찾는 방법
 .NET Framework 응용 프로그램을 성공적으로 배포하려면 공용 언어 런타임이 응용 프로그램을 구성하는 어셈블리를 찾아서 바인딩하는 방법을 이해해야 합니다. 기본적으로 런타임은 응용 프로그램 빌드 시 사용된 정확한 버전의 어셈블리로 바인딩을 시도합니다. 이 기본 동작은 구성 파일 설정으로 재정의할 수 있습니다.  
@@ -263,6 +256,5 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  예를 들어 Assembly1이 Assembly2를 참조하고 Assembly1이 http://www.code.microsoft.com/utils에서 다운로드된 경우 해당 위치가 Assembly2.dll을 찾을 수 있는 위치에 대한 힌트로 간주됩니다. 그러면 런타임이 http://www.code.microsoft.com/utils/Assembly2.dll 및 http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll에서 어셈블리를 검색합니다. Assembly2가 이러한 위치 중 하나에  없으면 런타임에서 Windows Installer를 쿼리합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [최선의 어셈블리 로드 방법](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)   
+ [최선의 어셈블리 로드 방법](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
  [배포](../../../docs/framework/deployment/index.md)
-

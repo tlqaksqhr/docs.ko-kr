@@ -1,40 +1,22 @@
 ---
 title: "방법: Office 프로그래밍에 명명된 인수와 선택적 인수 사용(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - named and optional arguments [C#], Office programming
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: a453699591397224435fba1e602c305f18e84a11
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c773e7a6d902b9e61e724a69c9fdf5d61606de50
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>방법: Office 프로그래밍에 명명된 인수와 선택적 인수 사용(C# 프로그래밍 가이드)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]에서 도입된 명명된 인수 및 선택적 인수는 C# 프로그래밍의 편의성, 유연성 및 가독성을 향상합니다. 또한 이러한 기능은 Microsoft Office 자동화 API와 같은 COM 인터페이스에 대한 액세스에 큰 도움이 됩니다.  
@@ -77,23 +59,23 @@ ms.lasthandoff: 07/28/2017
   
 2.  다음 `using` 지시문을 코드 파일의 맨 위에 추가합니다.  
   
-     [!code-cs[csProgGuideNamedAndOptional#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_1.cs)]  
+     [!code-csharp[csProgGuideNamedAndOptional#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_1.cs)]  
   
 ### <a name="to-display-text-in-a-word-document"></a>Word 문서에 텍스트를 표시하려면  
   
 1.  Program.cs의 `Program` 클래스에서 다음 메서드를 추가하여 Word 응용 프로그램과 Word 문서를 만듭니다. [Add](http://go.microsoft.com/fwlink/?LinkId=145381) 메서드에는 선택적 매개 변수 4개가 있습니다. 이 예제에서는 해당 기본값을 사용합니다. 따라서 호출하는 문에 인수가 필요하지 않습니다.  
   
-     [!code-cs[csProgGuideNamedAndOptional#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_2.cs)]  
+     [!code-csharp[csProgGuideNamedAndOptional#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_2.cs)]  
   
 2.  메서드의 끝에 다음 코드를 추가하여 문서에서 텍스트를 표시할 위치 및 표시할 텍스트를 정의합니다.  
   
-     [!code-cs[csProgGuideNamedAndOptional#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_3.cs)]  
+     [!code-csharp[csProgGuideNamedAndOptional#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_3.cs)]  
   
 ### <a name="to-run-the-application"></a>응용 프로그램을 실행하려면  
   
 1.  다음 문을 Main에 추가합니다.  
   
-     [!code-cs[csProgGuideNamedAndOptional#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_4.cs)]  
+     [!code-csharp[csProgGuideNamedAndOptional#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_4.cs)]  
   
 2.  Ctrl+F5를 눌러 프로젝트를 실행합니다. 지정된 텍스트를 포함하는 Word 문서가 나타납니다.  
   
@@ -106,11 +88,11 @@ ConvertToTable 매개 변수
   
      명명된 인수 및 선택적 인수를 사용하면 변경하려는 매개 변수의 값만 지정할 수 있습니다. `DisplayInWord` 메서드의 끝에 다음 코드를 추가하여 간단한 표를 만듭니다. 인수는 `range`의 텍스트 문자열에 있는 쉼표가 표의 셀을 구분하도록 지정합니다.  
   
-     [!code-cs[csProgGuideNamedAndOptional#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_5.cs)]  
+     [!code-csharp[csProgGuideNamedAndOptional#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_5.cs)]  
   
      이전 버전의 C#에서 `ConvertToTable`을 호출하려면 다음 코드와 같이 각 매개 변수에 대한 참조 인수가 필요합니다.  
   
-     [!code-cs[csProgGuideNamedAndOptional#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_6.cs)]  
+     [!code-csharp[csProgGuideNamedAndOptional#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_6.cs)]  
   
 2.  Ctrl+F5를 눌러 프로젝트를 실행합니다.  
   
@@ -118,17 +100,16 @@ ConvertToTable 매개 변수
   
 1.  열 1개와 행 3개가 포함되도록 표를 변경하려면 `DisplayInWord`의 마지막 줄을 다음 문으로 바꾼 다음 Ctrl+F5를 입력합니다.  
   
-     [!code-cs[csProgGuideNamedAndOptional#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_7.cs)]  
+     [!code-csharp[csProgGuideNamedAndOptional#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_7.cs)]  
   
 2.  미리 정의된 표 형식을 지정하려면 `DisplayInWord`의 마지막 줄을 다음 문으로 바꾼 다음 Ctrl+F5를 입력합니다. 형식은 [WdTableFormat](http://go.microsoft.com/fwlink/?LinkId=145382) 상수 중 하나일 수 있습니다.  
   
-     [!code-cs[csProgGuideNamedAndOptional#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_8.cs)]  
+     [!code-csharp[csProgGuideNamedAndOptional#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_8.cs)]  
   
 ## <a name="example"></a>예제  
  다음 코드에는 전체 예제가 포함되어 있습니다.  
   
- [!code-cs[csProgGuideNamedAndOptional#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_9.cs)]  
+ [!code-csharp[csProgGuideNamedAndOptional#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_9.cs)]  
   
 ## <a name="see-also"></a>참고 항목  
  [명명된 인수 및 선택적 인수](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
-

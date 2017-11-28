@@ -1,25 +1,21 @@
 ---
 title: "성능(LINQ to XML)(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 43c9f1b7-9bd3-489c-b45c-cb09173a3718
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: af1dc264722fc38ac4d20377233419583bebf3e1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9d184038634a20394a67010eba6f317ac68dc942
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="performance-linq-to-xml-c"></a>성능(LINQ to XML)(C#)
 이 단원에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]의 성능을 함수 생성 및 쿼리 성능에 중점을 두어 설명합니다.  
@@ -39,4 +35,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>참고 항목  
  [프로그래밍 가이드(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
-

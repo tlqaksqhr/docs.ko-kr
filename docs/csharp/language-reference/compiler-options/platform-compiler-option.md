@@ -1,42 +1,23 @@
 ---
 title: "-platform(C# 컴파일러 옵션)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /platform
-dev_langs:
-- CSharp
+f1_keywords: /platform
 helpviewer_keywords:
 - platform compiler option [C#]
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d03e12ae60b9a0145dcb58765ae00f756f84ca56
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 44d4cadbc45eb141ecb7a83345d2a7a834ce5299
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="platform-c-compiler-options"></a>/platform(C# 컴파일러 옵션)
 어셈블리를 실행할 수 있는 CLR(공용 언어 런타임) 버전을 지정합니다.  
@@ -77,7 +58,7 @@ ms.lasthandoff: 07/28/2017
   
  **anycpu32bitpreferred** 설정은 실행 파일(.EXE)에 대해서만 유효하고 .NET Framework 4.5를 필요로 합니다.  
   
- Windows 64비트 운영 체제에서 실행할 응용 프로그램을 개발하는 방법에 대한 자세한 내용은 [64비트 응용 프로그램](https://msdn.microsoft.com/library/ms241064)을 참조하세요.  
+ Windows 64비트 운영 체제에서 실행할 응용 프로그램을 개발하는 방법에 대한 자세한 내용은 [64비트 응용 프로그램](../../../framework/64-bit-apps.md)을 참조하세요.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
@@ -99,6 +80,5 @@ csc /platform:anycpu filename.cs
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 컴파일러 옵션](index.md)   
+ [C# 컴파일러 옵션](index.md)  
  [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)
-

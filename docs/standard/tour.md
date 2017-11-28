@@ -1,5 +1,5 @@
 ---
-title: ".NET 둘러보기 | Microsoft Docs"
+title: ".NET 둘러보기"
 description: ".NET의 몇 가지 주요 기능에 대한 둘러보기입니다."
 keywords: ".NET, .NET Core, 둘러보기, 프로그래밍 언어, 안전하지 않음, 메모리 관리, 형식 안전성, 비동기"
 author: cartermp
@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
+ms.openlocfilehash: 809f0eaddf298b0d6a57e217c2bcf5450675c3e9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 2762cdc983465979a530192716c33de7044dd1ed
-ms.openlocfilehash: c64a3113cf4e9e9ff203ed2cf449359f67ee9d10
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="tour-of-net"></a>.NET 둘러보기
 
 .NET은 범용 개발 플랫폼입니다. 여러 플랫폼에서 다양한 시나리오를 사용할 수 있는 여러 프로그래밍 언어 지원, 비동기 및 동시 실행 프로그래밍 모델 및 기본 상호 운용성과 같은 여러 중요한 특징이 있습니다.
@@ -149,4 +147,3 @@ F# 기능을 살펴보고 싶은 경우 [F# 둘러보기](../fsharp/tour.md)를 
 사용자가 직접 코드 작성을 시작하려는 경우에는 [시작](get-started.md)을 방문하세요.
 
 .NET의 중요한 구성 요소에 대해 알아보려면 [.NET 아키텍처 구성 요소](components.md)를 확인하세요.
-

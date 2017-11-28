@@ -1,42 +1,23 @@
 ---
 title: "-moduleassemblyname(C# 컴파일러 옵션)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /moduleassemblyname
-dev_langs:
-- CSharp
+f1_keywords: /moduleassemblyname
 helpviewer_keywords:
 - moduleassemblyname compiler option [C#]
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c8ebd6f7498adead4586c9e90ec58ca8efe81aaa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2522609aa41ad944b37a8882c1cc56cd5967b330
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="moduleassemblyname-c-compiler-option"></a>/moduleassemblyname(C# 컴파일러 옵션)
 .netmodule에서 public이 아닌 형식에 액세스할 수 있는 어셈블리를 지정합니다.  
@@ -62,7 +43,7 @@ ms.lasthandoff: 07/28/2017
   
  .netmodule 빌드 방법에 대한 자세한 내용은 [/target:module(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)을 참조하세요.  
   
- friend 어셈블리에 대한 자세한 내용은 [Friend 어셈블리](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055)를 참조하세요.  
+ friend 어셈블리에 대한 자세한 내용은 [Friend 어셈블리](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)를 참조하세요.  
   
  개발 환경 내에서는 이 옵션을 사용할 수 없습니다. 명령줄에서 컴파일하는 경우에만 사용할 수 있습니다.  
   
@@ -116,8 +97,7 @@ class A {
 }  
 ```  
   
- **An_Internal_Class.Test 호출됨**   
+ **An_Internal_Class.Test 호출됨**  
 ## <a name="see-also"></a>참고 항목  
- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)   
+ [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)  
  [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)
-

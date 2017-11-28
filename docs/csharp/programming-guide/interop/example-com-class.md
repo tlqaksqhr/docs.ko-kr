@@ -1,39 +1,21 @@
 ---
 title: "COM 클래스 예제(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - examples [C#], COM classes
 - COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: ad14b414c037d38da55ce0ec82685b790cc46d2f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a759a7dcd211207c8740dd99d592daa509ddec47
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="example-com-class-c-programming-guide"></a>COM 클래스 예제(C# 프로그래밍 가이드)
 다음은 COM 개체로 노출되는 클래스의 예제입니다. 이 코드를 .cs 파일에 배치하고 프로젝트에 추가한 후 **COM Interop 등록** 속성을 **True**로 설정합니다. 자세한 내용은 [NIB: 방법: 구성 요소 COM Interop 등록](http://msdn.microsoft.com/en-us/4de7d474-56e8-4027-994d-d47ca4725c5e)을 참조하세요.  
@@ -57,10 +39,9 @@ ms.lasthandoff: 07/28/2017
  클래스는 클래스 인터페이스를 구현합니다. 둘 이상의 인터페이스를 구현할 수 있지만 첫 번째 구현이 기본 클래스 인터페이스가 됩니다. 여기에서 COM에 노출된 메서드 및 속성을 구현합니다. 이러한 메서드 및 속성은 public으로 표시되어야 하며 클래스 인터페이스의 선언과 일치해야 합니다. 또한 여기에서 클래스에 의해 발생된 이벤트를 선언합니다. 이러한 이벤트는 public으로 표시되어야 하며 이벤트 인터페이스의 선언과 일치해야 합니다.  
   
 ## <a name="example"></a>예제  
- [!code-cs[csProgGuideInterop#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/example-com-class_1.cs)]  
+ [!code-csharp[csProgGuideInterop#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/example-com-class_1.cs)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [상호 운용성](../../../csharp/programming-guide/interop/index.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [상호 운용성](../../../csharp/programming-guide/interop/index.md)  
  [프로젝트 디자이너, 빌드 페이지(C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)
-

@@ -1,45 +1,26 @@
 ---
 title: "연습: C#에서 쿼리 작성(LINQ)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: get-started-article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - LINQ [C#], walkthroughs
 - LINQ [C#], writing queries
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: c0885c3cc989260cf67608bec0ff512c9f4835f6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: aef03dca681f0b3d24f2ab55eef4ae29ee515132
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>연습: C#에서 쿼리 작성(LINQ)
 이 연습에서는 LINQ 쿼리 식을 작성하는 데 사용되는 C # 언어 기능을 보여 줍니다.  
@@ -47,7 +28,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="create-a-c-project"></a>C# 프로젝트 만들기  
   
 > [!NOTE]
->  다음 지침은 Visual Studio용입니다. 다른 개발 환경을 사용하는 경우 System.Core.dll에 대한 참조와 <xref:System.Linq?displayProperty=fullName> 네임스페이스에 대한 `using` 지시문을 사용하여 콘솔 프로젝트를 만듭니다.  
+>  다음 지침은 Visual Studio용입니다. 다른 개발 환경을 사용하는 경우 System.Core.dll에 대한 참조와 <xref:System.Linq?displayProperty=nameWithType> 네임스페이스에 대한 `using` 지시문을 사용하여 콘솔 프로젝트를 만듭니다.  
   
 #### <a name="to-create-a-project-in-visual-studio"></a>Visual Studio에서 프로젝트를 만들려면  
   
@@ -63,7 +44,7 @@ ms.lasthandoff: 07/28/2017
   
      **솔루션 탐색기**에 새 프로젝트가 표시됩니다.  
   
-5.  프로젝트에 System.Core.dll에 대한 참조 및 <xref:System.Linq?displayProperty=fullName> 네임스페이스에 대한 `using` 지시문이 있습니다.  
+5.  프로젝트에 System.Core.dll에 대한 참조 및 <xref:System.Linq?displayProperty=nameWithType> 네임스페이스에 대한 `using` 지시문이 있습니다.  
   
 ## <a name="create-an-in-memory-data-source"></a>메모리 내 데이터 소스 만들기  
  쿼리의 데이터 소스는 간단한 `Student` 개체 목록입니다. 각 `Student` 레코드에는 이름, 성 및 클래스의 테스트 점수를 나타내는 정수 배열이 있습니다. 프로젝트에 이 코드를 복사합니다. 다음 특성에 주의합니다.  
@@ -80,7 +61,7 @@ ms.lasthandoff: 07/28/2017
   
 -   `Student` 클래스 및 초기화된 학생 목록을 프로젝트의 `Program` 클래스에 추가합니다.  
   
-     [!code-cs[CsLinqGettingStarted#11](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_1.cs)]  
+     [!code-csharp[CsLinqGettingStarted#11](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_1.cs)]  
   
 #### <a name="to-add-a-new-student-to-the-students-list"></a>학생 목록에 새 학생을 추가하려면  
   
@@ -94,7 +75,7 @@ ms.lasthandoff: 07/28/2017
   
      또한 쿼리의 범위 변수 `student`는 소스의 각 `Student`에 대한 참조로 사용되며, 각 개체에 대한 멤버 액세스를 제공합니다.  
   
- [!code-cs[CsLINQGettingStarted#12](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_2.cs)]  
+ [!code-csharp[CsLINQGettingStarted#12](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_2.cs)]  
   
 ## <a name="execute-the-query"></a>쿼리 실행  
   
@@ -108,7 +89,7 @@ ms.lasthandoff: 07/28/2017
   
 2.  이 코드를 추가한 후 응용 프로그램을 빌드하고 실행하고 **콘솔** 창에서 결과를 확인하세요.  
   
- [!code-cs[CsLINQGettingStarted#13](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_3.cs)]  
+ [!code-csharp[CsLINQGettingStarted#13](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_3.cs)]  
   
 #### <a name="to-add-another-filter-condition"></a>다른 필터 조건을 추가하려면  
   
@@ -148,11 +129,11 @@ ms.lasthandoff: 07/28/2017
   
 1.  그룹화는 쿼리 식의 강력한 기능입니다. 그룹 절이 있는 쿼리는 그룹 시퀀스를 생성하며, 각 그룹 자체는 `Key` 및 해당 그룹의 모든 멤버로 구성된 시퀀스를 포함합니다. 다음과 같은 새 쿼리는 학생 성의 첫 글자를 키로 사용하여 학생들을 그룹화합니다.  
   
-     [!code-cs[CsLINQGettingStarted#14](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_4.cs)]  
+     [!code-csharp[CsLINQGettingStarted#14](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_4.cs)]  
   
 2.  이제 쿼리 형식이 변경되었습니다. 이제 쿼리를 실행하면 `char` 형식을 키로 가지고 있고 `Student` 개체의 시퀀스를 가지고 있는 그룹의 시퀀스가 생성됩니다. 쿼리 형식이 변경되었으므로 다음 코드는 `foreach` 실행 루프도 변경합니다.  
   
-     [!code-cs[CsLINQGettingStarted#15](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_5.cs)]  
+     [!code-csharp[CsLINQGettingStarted#15](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_5.cs)]  
   
 3.  응용 프로그램을 실행하고 **콘솔** 창에서 결과를 봅니다.  
   
@@ -162,7 +143,7 @@ ms.lasthandoff: 07/28/2017
   
 1.  `IGroupings`의 `IEnumerables`를 명시적으로 코딩하는 작업은 지루할 수 있습니다. `var`을 사용하여 동일한 쿼리 및 `foreach` 루프를 훨씬 더 편리하게 작성할 수 있습니다. `var` 키워드는 개체 형식을 변경하지 않고, 형식을 추론하도록 컴파일러에 지시합니다. `studentQuery`의 형식 및 `group` 반복 변수를 `var`로 변경하고 쿼리를 다시 실행합니다. 내부 `foreach` 루프에서 반복 변수의 형식은 여전히 `Student`로 지정되며 쿼리는 이전과 마찬가지로 작동합니다. `s` 반복 변수를 `var`로 변경하고 쿼리를 다시 실행합니다. 정확히 동일한 결과가 표시됩니다.  
   
-     [!code-cs[CsLINQGettingStarted#16](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_6.cs)]  
+     [!code-csharp[CsLINQGettingStarted#16](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_6.cs)]  
   
      [var](../../../../csharp/language-reference/keywords/var.md)에 대한 자세한 내용은 [암시적으로 형식화된 지역 변수](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)를 참조하세요.  
   
@@ -170,7 +151,7 @@ ms.lasthandoff: 07/28/2017
   
 1.  이전 쿼리를 실행하면 그룹이 사전순으로 표시되지 않습니다. 이를 변경하려면 `group` 절 뒤에 `orderby` 절을 제공해야 합니다. 그러나 `orderby` 절을 사용하려면 우선 `group` 절로 만든 그룹에 대한 참조 역할을 하는 식별자가 필요합니다. 다음과 같이 `into` 키워드를 사용하여 식별자를 제공합니다.  
   
-     [!code-cs[csLINQGettingStarted#17](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_7.cs)]  
+     [!code-csharp[csLINQGettingStarted#17](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_7.cs)]  
   
      이 쿼리를 실행하면 이제 그룹이 사전순으로 정렬되는 것을 알 수 있습니다.  
   
@@ -178,7 +159,7 @@ ms.lasthandoff: 07/28/2017
   
 1.  `let` 키워드를 사용하여 쿼리 식의 식 결과에 대한 식별자를 소개할 수 있습니다. 이 식별자는 다음 예제에서처럼 편리하게 사용할 수도 있고, 여러 번 계산할 필요가 없도록 표현식의 결과를 저장하여 성능을 향상시킬 수도 있습니다.  
   
-     [!code-cs[csLINQGettingStarted#18](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_8.cs)]  
+     [!code-csharp[csLINQGettingStarted#18](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_8.cs)]  
   
      자세한 내용은 [let 절](../../../../csharp/language-reference/keywords/let-clause.md)을 참조하세요.  
   
@@ -186,17 +167,17 @@ ms.lasthandoff: 07/28/2017
   
 1.  [LINQ의 쿼리 구문 및 메서드 구문](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)에 설명된 대로 일부 쿼리 작업은 메서드 구문을 사용해야만 표현할 수 있습니다. 다음 코드는 소스 시퀀스의 각 `Student`에 대한 총 점수를 계산한 다음, 해당 쿼리의 결과에 대해 `Average()` 메서드를 호출하여 클래스의 평균 점수를 계산합니다. 쿼리 식 전후에 괄호를 사용해야 합니다.  
   
-     [!code-cs[csLINQGettingStarted#19](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_9.cs)]  
+     [!code-csharp[csLINQGettingStarted#19](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_9.cs)]  
   
 #### <a name="to-transform-or-project-in-the-select-clause"></a>select 절에서 변환 또는 프로젝션하려면  
   
 1.  쿼리가 소스 시퀀스의 요소와 다른 요소를 갖는 시퀀스를 생성하는 것은 매우 일반적입니다. 이전 쿼리 및 실행 루프를 삭제하거나 주석으로 처리하고 다음 코드로 바꿉니다. 쿼리는 문자열 시퀀스(`Students` 아님)를 반환하며 이 사실은 `foreach` 루프에 반영됩니다.  
   
-     [!code-cs[csLINQGettingStarted#20](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_10.cs)]  
+     [!code-csharp[csLINQGettingStarted#20](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_10.cs)]  
   
 2.  이 연습의 앞부분에 있는 코드는 평균 클래스 점수가 약 334임을 나타냅니다. 총점이 클래스 평균보다 큰 `Students`의 시퀀스를 `Student ID`와 함께 생성하려면 `select` 문에서 무명 형식을 사용할 수 있습니다.  
   
-     [!code-cs[csLINQGettingStarted#21](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_11.cs)]  
+     [!code-csharp[csLINQGettingStarted#21](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_11.cs)]  
   
 ## <a name="next-steps"></a>다음 단계  
  C#에서 쿼리 작업의 기본 사항에 익숙해지면 관심이 있는 특정 LINQ 공급자 형식에 대한 설명서와 샘플을 읽을 준비가 된 것입니다.  
@@ -210,7 +191,6 @@ ms.lasthandoff: 07/28/2017
  [LINQ to Objects(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [LINQ(Language-Integrated Query)(C#)](../../../../csharp/programming-guide/concepts/linq/index.md)   
- [C#에서 LINQ 시작](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)   
+ [LINQ(Language-Integrated Query)(C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
+ [C#에서 LINQ 시작](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
  [LINQ 쿼리 식](../../../../csharp/programming-guide/linq-query-expressions/index.md)
-

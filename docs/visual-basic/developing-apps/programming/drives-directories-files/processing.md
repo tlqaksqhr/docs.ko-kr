@@ -1,15 +1,12 @@
 ---
 title: "드라이브, 디렉터리 및 파일 처리(Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - drives
 - drives, processing
@@ -18,29 +15,14 @@ helpviewer_keywords:
 - files [Visual Basic], accessing
 - directories [Visual Studio], processing
 ms.assetid: f1db14c8-a4fd-4d0b-8323-c7cb29d688c2
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 27a5c3c389860cdc29c4263edbff492738ffe565
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8cb9735b82d381dfb57211bf37ce29dfbb7374aa
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>드라이브, 디렉터리 및 파일 처리(Visual Basic)
 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]을 사용하여 `My.Computer.FileSystem` 개체로 드라이브, 폴더 및 파일을 처리할 수 있습니다. `FileOpen` 및 `Write` 함수(여전히 사용할 수 있음)와 같은 기존 메서드보다 사용하기 쉬우며 더 나은 성능을 제공합니다. 다음 섹션에서는 이러한 메서드에 대해 자세히 설명합니다.  
@@ -64,4 +46,3 @@ ms.lasthandoff: 07/28/2017
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  `My.Computer.FileSystem` 개체와 해당 멤버에 대한 참조 설명서입니다.
-

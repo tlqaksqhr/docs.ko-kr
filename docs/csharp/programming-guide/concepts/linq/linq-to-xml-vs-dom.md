@@ -1,30 +1,21 @@
 ---
 title: "LINQ to XML과 비교 DOM(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 51c0e3d2-c047-4e6a-a423-d61a882400b7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 049b60477c7c6de2254dfc355a741a4beb1a725f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e27bf46390bca80ca573ab557953f70f591c9ae2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML과 비교 DOM(C#)
 이 섹션에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]과 현재 주로 사용되는 XML 프로그래밍 API인 W3C DOM(문서 개체 모델)의 몇 가지 주요 차이점에 대해 설명합니다.  
@@ -133,7 +124,7 @@ doc.AppendChild(name);
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 `XmlDocumentFragment` 클래스와 동일한 항목을 제공하지 않습니다. 그러나 대부분의 경우에 `XmlDocumentFragment` 개념은 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XNode>이나 <xref:System.Collections.Generic.IEnumerable%601>의 <xref:System.Xml.Linq.XElement>로 형식화된 쿼리의 결과에 의해 처리될 수 있습니다.  
   
 ## <a name="support-for-xpathnavigator"></a>XPathNavigator에 대한 지원  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 <xref:System.Xml.XPath.XPathNavigator> 네임스페이스의 확장 메서드를 통해 <xref:System.Xml.XPath?displayProperty=fullName>를 지원합니다. 자세한 내용은 <xref:System.Xml.XPath.Extensions?displayProperty=fullName>을 참조하십시오.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 <xref:System.Xml.XPath.XPathNavigator> 네임스페이스의 확장 메서드를 통해 <xref:System.Xml.XPath?displayProperty=nameWithType>를 지원합니다. 자세한 내용은 <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>을 참조하십시오.  
   
 ## <a name="support-for-white-space-and-indentation"></a>공백 및 들여쓰기에 대한 지원  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 DOM의 경우보다 간단하게 공백을 처리합니다.  
@@ -148,8 +139,7 @@ doc.AppendChild(name);
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 요소는 확장 가능한 주석 집합을 지원합니다. 이러한 지원은 스키마 정보, 요소가 UI에 바인딩되어 있는지 여부 또는 다른 종류의 응용 프로그램 관련 정보와 같은 요소에 대한 기타 정보를 추적하는 데 유용합니다. 자세한 내용은 [LINQ to XML 주석](http://msdn.microsoft.com/library/e2f0052d-61e2-48d4-9ea4-356c9cab35d5)을 참조하세요.  
   
 ## <a name="support-for-schema-information"></a>스키마 정보에 대한 지원  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 <xref:System.Xml.Schema?displayProperty=fullName> 네임스페이스의 확장 메서드를 통해 XSD 유효성 검사를 지원합니다. XML 트리가 XSD를 준수하는지 확인할 수 있으며, PSVI(Post-Schema-Validation Infoset)를 사용하여 XML 트리를 채울 수 있습니다. 자세한 내용은 [방법: XSD를 사용하여 유효성 검사](http://msdn.microsoft.com/library/481a97fa-6e96-46f2-8c9a-415555fac33b) 및 <xref:System.Xml.Schema.Extensions>를 참조하세요.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 <xref:System.Xml.Schema?displayProperty=nameWithType> 네임스페이스의 확장 메서드를 통해 XSD 유효성 검사를 지원합니다. XML 트리가 XSD를 준수하는지 확인할 수 있으며, PSVI(Post-Schema-Validation Infoset)를 사용하여 XML 트리를 채울 수 있습니다. 자세한 내용은 [방법: XSD를 사용하여 유효성 검사](http://msdn.microsoft.com/library/481a97fa-6e96-46f2-8c9a-415555fac33b) 및 <xref:System.Xml.Schema.Extensions>를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [시작(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
-

@@ -1,15 +1,12 @@
 ---
 title: ".NET Framework 파일 I/O 및 파일 시스템의 기본 사항(Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - file access, file I/O in Visual Basic
 - file attributes, determining
@@ -18,30 +15,14 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 4a148aa9b7dad357aeaa6f88ec11098418005719
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b84e8bbaeb09bfe2ccddb17ecb9b0f8f71cd37c6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 파일 I/O 및 파일 시스템의 기본 사항(Visual Basic)
 <xref:System.IO> 네임스페이스의 클래스는 드라이브, 파일 및 디렉터리 작업에 사용됩니다.  
@@ -126,8 +107,7 @@ ms.lasthandoff: 09/25/2017
  <xref:System.IO.FileSystemWatcher> 구성 요소를 사용하면 네트워크 액세스 권한이 있는 컴퓨터나 시스템의 파일 및 디렉터리에서 변경 내용을 관찰할 수 있습니다. 예를 들어 파일이 수정되는 경우 변경이 발생했다는 경고를 사용자에게 보낼 수 있습니다. 변경이 일어나는 경우 하나 이상의 이벤트가 발생하고, 버퍼에 저장되고, 처리를 위해 <xref:System.IO.FileSystemWatcher> 구성 요소로 전달됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [스트림 작성](https://msdn.microsoft.com/library/e4y2dch9)   
- [파일 및 스트림 I/O](https://msdn.microsoft.com/library/k3352a4t)   
- [비동기 파일 I/O](https://msdn.microsoft.com/library/kztecsys)   
+ [스트림 작성](https://msdn.microsoft.com/library/e4y2dch9)  
+ [파일 및 스트림 I/O](https://msdn.microsoft.com/library/k3352a4t)  
+ [비동기 파일 I/O](https://msdn.microsoft.com/library/kztecsys)  
  [.NET Framework 파일 I/O 및 파일 시스템에 사용되는 클래스(Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)
-

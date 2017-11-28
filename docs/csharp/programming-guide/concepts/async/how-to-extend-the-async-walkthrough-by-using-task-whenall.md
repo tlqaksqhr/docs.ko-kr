@@ -1,33 +1,24 @@
 ---
 title: "방법: Task.WhenAll을 사용하여 비동기 연습 확장(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: a83ceb8a58104cc7a4c177ce6c7df9aded8af7e1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 132332f4fd274126bb8bc270cd762e1bdc97106f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>방법: Task.WhenAll을 사용하여 비동기 연습 확장(C#)
-<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> 메서드를 사용하여 [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)에서 비동기 솔루션의 성능을 향상할 수 있습니다. 이 메서드는 작업 컬렉션으로 표시되는 여러 개의 비동기 작업을 비동기적으로 기다립니다.  
+<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 메서드를 사용하여 [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)에서 비동기 솔루션의 성능을 향상할 수 있습니다. 이 메서드는 작업 컬렉션으로 표시되는 여러 개의 비동기 작업을 비동기적으로 기다립니다.  
   
  연습에서 웹 사이트 다운로드 속도가 각기 다른 것을 보셨을 것입니다. 때로는 웹 사이트 중 하나가 매우 느려 나머지 다운로드가 모두 지연됩니다. 연습에서 빌드하는 비동기 솔루션을 실행하는 경우 대기하지 않으려면 프로그램을 쉽게 종료할 수 있지만, 동시에 모든 다운로드를 시작한 후 더 빠른 다운로드는 지연되는 다운로드를 기다리지 않고 계속되도록 하는 것이 더 낫습니다.  
   
@@ -453,6 +444,5 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>   
+ <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>  
  [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-

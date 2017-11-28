@@ -1,30 +1,21 @@
 ---
 title: "사용자 지정 특성 만들기(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 500e1977-c6de-462d-abce-78a0eb1eda22
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 38bdedb352cc79f7a4cc3d08eb6138e7d994514b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8ae5084501a2dd60ae23c93bbdb52dcd44f3f3f7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-custom-attributes-c"></a>사용자 지정 특성 만들기(C#)
 메타데이터에서 특성 정의를 빠르고 쉽게 식별할 수 있도록 하는 <xref:System.Attribute>에서 직접 또는 간접적으로 파생되는 특성 클래스를 정의하여 자체 사용자 지정 특성을 만들 수 있습니다. 형식을 작성한 프로그래머의 이름을 형식에 태그로 지정한다고 가정합니다. 사용자 지정 `Author` 특성 클래스를 정의할 수 있습니다.  
@@ -84,11 +75,10 @@ class SampleClass
 >  특성 클래스에 속성이 포함되면 해당 속성은 읽기-쓰기여야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Reflection>   
- [C# 프로그래밍 가이드](../../../../csharp/programming-guide/index.md)   
- [사용자 지정 특성 작성](../../../../standard/attributes/writing-custom-attributes.md)   
- [리플렉션(C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
- [특성(C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)   
- [리플렉션을 사용하여 특성 액세스(C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)   
+ <xref:System.Reflection>  
+ [C# 프로그래밍 가이드](../../../../csharp/programming-guide/index.md)  
+ [사용자 지정 특성 작성](../../../../standard/attributes/writing-custom-attributes.md)  
+ [리플렉션(C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+ [특성(C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
+ [리플렉션을 사용하여 특성 액세스(C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)  
  [AttributeUsage(C#)](../../../../csharp/programming-guide/concepts/attributes/attributeusage.md)
-

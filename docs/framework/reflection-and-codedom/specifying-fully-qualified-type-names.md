@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,19 +22,18 @@ helpviewer_keywords:
 - special characters
 - IDENTIFIER
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 6759e7b62f4083f6d53663385398baf098f2676f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 966bc0883cf29774ab6f52f6f3207241c129159c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="specifying-fully-qualified-type-names"></a>정규화된 형식 이름 지정
-다양한 리플렉션 작업에 대한 유효한 입력을 포함하려면 형식 이름을 지정해야 합니다. 정규화된 형식 이름은 어셈블리 이름 사양, 네임스페이스 사양, 형식 이름으로 구성됩니다. 형식 이름 사양은 <xref:System.Type.GetType%2A?displayProperty=fullName>, <xref:System.Reflection.Module.GetType%2A?displayProperty=fullName>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=fullName>, <xref:System.Reflection.Assembly.GetType%2A?displayProperty=fullName> 등의 메서드에서 사용됩니다.  
+다양한 리플렉션 작업에 대한 유효한 입력을 포함하려면 형식 이름을 지정해야 합니다. 정규화된 형식 이름은 어셈블리 이름 사양, 네임스페이스 사양, 형식 이름으로 구성됩니다. 형식 이름 사양은 <xref:System.Type.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> 등의 메서드에서 사용됩니다.  
   
 ## <a name="backus-naur-form-grammar-for-type-names"></a>형식 이름에 대한 Backus-Naur 형식 문법  
  BNF(Backus-Naur 형식)는 공식 언어의 구문을 정의합니다. 다음 표에서는 유효한 입력을 인식하는 방법을 설명하는 BNF 어휘 규칙을 보여 줍니다. 터미널(더 이상 줄일 수 없는 요소)은 모두 대문자로 표시됩니다. 비터미널(더 줄일 수 있는 요소)은 대/소문자가 혼합되어 있거나 작은따옴표가 붙은 문자열로 표시되지만 작은따옴표(')는 구문 자체에 속하지 않습니다. 파이프 문자(&#124;)는 하위 규칙이 있는 규칙을 나타냅니다.  
@@ -76,7 +74,7 @@ ms.lasthandoff: 07/28/2017
   
  AssemblyNameSpec을 제외한 모든 TypeSpec 구성 요소에서 공백은 관련이 있습니다. AssemblyNameSpec에서는 ',' 구분 기호 앞의 공백은 관련이 있지만 ',' 구분 기호 뒤의 공백은 무시됩니다.  
   
- <xref:System.Type.FullName%2A?displayProperty=fullName> 등의 리플렉션 클래스는 `MyType.GetType(myType.FullName)`과 같이 반환된 이름을 <xref:System.Type.GetType%2A> 호출에 사용할 수 있도록 바뀐 이름을 반환합니다.  
+ <xref:System.Type.FullName%2A?displayProperty=nameWithType> 등의 리플렉션 클래스는 `MyType.GetType(myType.FullName)`과 같이 반환된 이름을 <xref:System.Type.GetType%2A> 호출에 사용할 수 있도록 바뀐 이름을 반환합니다.  
   
  예를 들어 형식의 정규화된 이름이 `Ozzy.OutBack.Kangaroo+Wallaby,MyAssembly`일 수 있습니다.  
   
@@ -136,7 +134,7 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
  SimpleTypeSpec &은 관리되는 포인터나 참조를 나타냅니다. 예를 들어 MyType 형식에 대한 참조를 가져오려면 `Type.GetType("MyType &")`을 사용합니다. 포인터와 달리 참조는 한 수준으로 제한됩니다.  
   
 ## <a name="specifying-arrays"></a>배열 지정  
- BNF 문법에서 ReflectionEmitDimension은 <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=fullName>을 사용하여 검색된 불완전한 형식 정의에만 적용됩니다. 불완전한 형식 정의는 <xref:System.Reflection.Emit?displayProperty=fullName>을 사용하여 생성되었지만 <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A?displayProperty=fullName>이 호출되지 않은 <xref:System.Reflection.Emit.TypeBuilder> 개체입니다. ReflectionDimension을 사용하여 완성된 형식 정의, 즉 로드된 형식을 검색할 수 있습니다.  
+ BNF 문법에서 ReflectionEmitDimension은 <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>을 사용하여 검색된 불완전한 형식 정의에만 적용됩니다. 불완전한 형식 정의는 <xref:System.Reflection.Emit?displayProperty=nameWithType>을 사용하여 생성되었지만 <xref:System.Reflection.Emit.TypeBuilder.CreateType%2A?displayProperty=nameWithType>이 호출되지 않은 <xref:System.Reflection.Emit.TypeBuilder> 개체입니다. ReflectionDimension을 사용하여 완성된 형식 정의, 즉 로드된 형식을 검색할 수 있습니다.  
   
  배열은 배열의 순위를 지정하여 리플렉션에서 액세스합니다.  
   
@@ -153,11 +151,10 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
  **ModuleBuilder.GetType**의 경우 `MyArray[0..5]`는 크기가 6, 하한이 0인 1차원 배열을 나타냅니다. `MyArray[4…]`는 크기를 알 수 없고 하한이 4인 1차원 배열을 나타냅니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Reflection.AssemblyName>   
- <xref:System.Reflection.Emit.ModuleBuilder>   
- <xref:System.Reflection.Emit.TypeBuilder>   
- <xref:System.Type.FullName%2A?displayProperty=fullName>   
- <xref:System.Type.GetType%2A?displayProperty=fullName>   
- <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=fullName>   
+ <xref:System.Reflection.AssemblyName>  
+ <xref:System.Reflection.Emit.ModuleBuilder>  
+ <xref:System.Reflection.Emit.TypeBuilder>  
+ <xref:System.Type.FullName%2A?displayProperty=nameWithType>  
+ <xref:System.Type.GetType%2A?displayProperty=nameWithType>  
+ <xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>  
  [형식 정보 보기](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)
-

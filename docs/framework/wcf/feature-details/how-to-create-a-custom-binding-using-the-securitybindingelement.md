@@ -1,38 +1,43 @@
 ---
-title: "방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "보안 [WCF] 사용자 지정 바인딩 만들기"
+title: "방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-caps.latest.revision: 19
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 0042ae642d8e3a5936c316921b2f9377a0eac17a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에는 구성할 수 있지만 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 지원하는 모든 보안 옵션을 구성할 때 완벽한 유연성을 제공하지는 않는 여러 시스템 제공 바인딩이 포함되어 있습니다. 이 항목에서는 개별 바인딩 요소에서 직접 사용자 지정 바인딩을 만드는 방법에 대해 설명하고, 이와 같은 바인딩을 만들 때 지정할 수 있는 일부 보안 설정에 대해 강조합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]사용자 지정 바인딩 만들기, 참조 [바인딩 확장](../../../../docs/framework/wcf/extending/extending-bindings.md)합니다.  
+# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에는 구성할 수 있지만 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 지원하는 모든 보안 옵션을 구성할 때 완벽한 유연성을 제공하지는 않는 여러 시스템 제공 바인딩이 포함되어 있습니다. 이 항목에서는 개별 바인딩 요소에서 직접 사용자 지정 바인딩을 만드는 방법에 대해 설명하고, 이와 같은 바인딩을 만들 때 지정할 수 있는 일부 보안 설정에 대해 강조합니다. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]사용자 지정 바인딩을 만들 참조 [바인딩 확장](../../../../docs/framework/wcf/extending/extending-bindings.md)합니다.  
   
 > [!WARNING]
->  <xref:System.ServiceModel.Channels.SecurityBindingElement> 지원 하지 않습니다는 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 채널 셰이프는 기본 채널 셰이프 사용 하는 TCP가 인 경우 전송 <xref:System.ServiceModel.TransferMode> 로 설정 되어 <xref:System.ServiceModel.TransferMode.Buffered>합니다. 설정 해야 <xref:System.ServiceModel.TransferMode> 를 <xref:System.ServiceModel.TransferMode.Streamed> 사용 하기 위해 <xref:System.ServiceModel.Channels.SecurityBindingElement> 이 시나리오에서는 합니다.  
+>  <xref:System.ServiceModel.Channels.SecurityBindingElement>는 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>가 <xref:System.ServiceModel.TransferMode>로 설정된 경우 TCP 전송에서 사용하는 기본 채널 셰이프인 <xref:System.ServiceModel.TransferMode.Buffered> 채널 셰이프를 지원하지 않습니다. 이 시나리오에서 <xref:System.ServiceModel.TransferMode>를 사용하려면 <xref:System.ServiceModel.TransferMode.Streamed>를 <xref:System.ServiceModel.Channels.SecurityBindingElement>으로 설정해야 합니다.  
   
 ## <a name="creating-a-custom-binding"></a>사용자 지정 바인딩 만들기  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 모든 바인딩이 구성 된 *바인딩 요소의*합니다. 각 바인딩 요소에서 파생 되는 <xref:System.ServiceModel.Channels.BindingElement> 클래스입니다. 표준 시스템 제공 바인딩의 경우 바인딩 요소가 자동으로 생성되어 구성되지만 일부 속성 설정을 사용자 지정할 수 있습니다.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 모든 바인딩에 이루어져 *바인딩 요소의*합니다. 각 바인딩 요소는 <xref:System.ServiceModel.Channels.BindingElement> 클래스에서 파생됩니다. 표준 시스템 제공 바인딩의 경우 바인딩 요소가 자동으로 생성되어 구성되지만 일부 속성 설정을 사용자 지정할 수 있습니다.  
   
- 반면에 사용자 지정 바인딩을 만들려면 바인딩 요소를 만들고 구성 및 <xref:System.ServiceModel.Channels.CustomBinding> 바인딩 요소에서 생성 됩니다.  
+ 이와 달리 사용자 지정 바인딩을 만들려면 바인딩 요소를 만들어 구성하고 바인딩 요소에서 <xref:System.ServiceModel.Channels.CustomBinding>을 만들어야 합니다.  
   
- 개별 바인딩 요소 인스턴스에 의해 표시 되는 컬렉션에 추가 하면이 위해는 <xref:System.ServiceModel.Channels.BindingElementCollection> 클래스를 다음 설정의 `Elements` 속성은 `CustomBinding` 해당 개체와 같지 합니다. 바인딩 요소는 Transaction Flow, Reliable Session, Security, Composite Duplex, One-way, Stream Security, Message Encoding, Transport 순으로 추가해야 합니다. 나열된 모든 바인딩 요소가 모든 바인딩에서 필요한 것은 아닙니다.  
+ 이렇게 하려면 <xref:System.ServiceModel.Channels.BindingElementCollection> 클래스 인스턴스로 표시되는 컬렉션에 개별 바인딩 요소를 추가한 다음 `Elements`의 `CustomBinding` 속성을 해당 개체와 같게 만듭니다. 바인딩 요소는 Transaction Flow, Reliable Session, Security, Composite Duplex, One-way, Stream Security, Message Encoding, Transport 순으로 추가해야 합니다. 나열된 모든 바인딩 요소가 모든 바인딩에서 필요한 것은 아닙니다.  
   
 ## <a name="securitybindingelement"></a>SecurityBindingElement  
- 세 개의 바인딩 요소에서 파생 되는 모두 메시지 수준 보안과 관련이 <xref:System.ServiceModel.Channels.SecurityBindingElement> 클래스입니다. 세 가지는 <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>, 및 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>합니다. <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> 혼합된 모드 보안을 제공 하는 데 사용 됩니다. 다른 두 가지 요소는 메시지 계층이 보안을 제공할 때 사용합니다.  
+ 세 가지 바인딩 요소가 메시지 수준 보안과 관련이 있으며 이러한 요소는 모두 <xref:System.ServiceModel.Channels.SecurityBindingElement> 클래스에서 파생됩니다. 이 세 가지는 <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 및 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>입니다. <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>는 혼합 모드 보안을 제공하는 데 사용됩니다. 다른 두 가지 요소는 메시지 계층이 보안을 제공할 때 사용합니다.  
   
  전송 수준 보안이 제공될 경우 다음과 같은 추가 클래스가 사용됩니다.  
   
@@ -87,33 +92,33 @@ caps.handback.revision: 19
   
 #### <a name="to-create-a-custom-binding-that-uses-a-symmetricsecuritybindingelement"></a>SymmetricSecurityBindingElement를 사용하여 사용자 지정 바인딩을 만들려면  
   
-1.  인스턴스를 만들고는 <xref:System.ServiceModel.Channels.BindingElementCollection> 클래스 이름의 `outputBec`합니다.  
+1.  이름이 <xref:System.ServiceModel.Channels.BindingElementCollection>인 `outputBec` 클래스의 인스턴스를 만듭니다.  
   
-2.  정적 메서드를 호출 `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`의 인스턴스를 반환 하는 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 클래스입니다.  
+2.  `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)` 클래스의 인스턴스를 반환하는 정적 메서드 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>를 호출합니다.  
   
-3.  추가 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 컬렉션에 (`outputBec`)를 호출 하 여는 `Add` 의 메서드는 <xref:System.Collections.ObjectModel.Collection%601> 의 <xref:System.ServiceModel.Channels.BindingElement> 클래스입니다.  
+3.  <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 클래스의 `outputBec`에서 `Add` 메서드를 호출하여 <xref:System.Collections.ObjectModel.Collection%601>를 컬렉션(<xref:System.ServiceModel.Channels.BindingElement>)에 추가합니다.  
   
-4.  인스턴스를 만들고는 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 클래스 컬렉션에 추가 합니다 (`outputBec`). 이를 통해 바인딩에서 사용하는 인코딩이 지정됩니다.  
+4.  <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 클래스의 인스턴스를 만들고 이를 컬렉션(`outputBec`)에 추가합니다. 이를 통해 바인딩에서 사용하는 인코딩이 지정됩니다.  
   
-5.  만들기는 <xref:System.ServiceModel.Channels.HttpTransportBindingElement> 컬렉션에 추가 합니다 (`outputBec`). 이를 통해 바인딩이 HTTP 전송을 사용하도록 지정됩니다.  
+5.  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>를 만들고 이를 컬렉션(`outputBec`)에 추가합니다. 이를 통해 바인딩이 HTTP 전송을 사용하도록 지정됩니다.  
   
-6.  인스턴스를 만들어 새 사용자 지정 바인딩 만들기는 <xref:System.ServiceModel.Channels.CustomBinding> 클래스와 컬렉션을 전달 `outputBec` 생성자에 있습니다.  
+6.  <xref:System.ServiceModel.Channels.CustomBinding> 클래스의 인스턴스를 만들고 `outputBec` 컬렉션을 생성자에게 전달함으로써 새 사용자 지정 바인딩을 만듭니다.  
   
-7.  결과 사용자 지정 바인딩은 표준과 동일한 특징을 많이 공유 <xref:System.ServiceModel.WSHttpBinding>합니다. 메시지 수준 보안 및 Windows 자격 증명을 지정하지만 보안 세션은 사용하지 않도록 설정하고, 서비스 자격 증명은 대역 외로 지정되어야 하며, 서명을 암호화하지 않습니다. 마지막 설정을 통해서만 제어할 수는 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> 4 단계에서와 같이 속성입니다. 다른 두 가지는 표준 바인딩의 설정을 사용하여 제어할 수 있습니다.  
+7.  결과 사용자 지정 바인딩은 표준 <xref:System.ServiceModel.WSHttpBinding>과 동일한 특징을 많이 공유합니다. 메시지 수준 보안 및 Windows 자격 증명을 지정하지만 보안 세션은 사용하지 않도록 설정하고, 서비스 자격 증명은 대역 외로 지정되어야 하며, 서명을 암호화하지 않습니다. 마지막 항목은 4단계에서처럼 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> 속성의 설정을 통해서만 제어할 수 있습니다. 다른 두 가지는 표준 바인딩의 설정을 사용하여 제어할 수 있습니다.  
   
 ## <a name="example"></a>예제  
   
 ### <a name="description"></a>설명  
- 다음 예에서는 완전 한 함수를 사용 하는 사용자 지정 바인딩을 만드는 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>합니다.  
+ 다음 예제에서는 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>를 사용하는 사용자 지정 바인딩을 만들기 위한 완전한 함수를 제공합니다.  
   
 ### <a name="code"></a>코드  
  [!code-csharp[c_CustomBinding#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#20)]
  [!code-vb[c_CustomBinding#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombinding/vb/source.vb#20)]  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Channels.SecurityBindingElement>   
- <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>   
- <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>   
- <xref:System.ServiceModel.Channels.CustomBinding>   
- [바인딩 확장](../../../../docs/framework/wcf/extending/extending-bindings.md)   
+ <xref:System.ServiceModel.Channels.SecurityBindingElement>  
+ <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
+ <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ [바인딩 확장](../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [시스템 제공 바인딩](../../../../docs/framework/wcf/system-provided-bindings.md)

@@ -10,12 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
-ms.translationtype: HT
-ms.sourcegitcommit: a7af88d8d7b19e201c0f7829915e817daa61c838
 ms.openlocfilehash: d64881380febee08414f57a36ed92079e8d69ed6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/08/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -328,4 +327,3 @@ MVC에 대해 사용할 수 있는 모든 템플릿을 나열합니다.
 [dotnet용 사용자 지정 템플릿 새로 만들기](~/docs/core/tutorials/create-custom-template.md)  
 [dotnet/dotnet-template-samples GitHub repo](https://github.com/dotnet/dotnet-template-samples)(dotnet/dotnet-template-samples GitHub 리포지토리)  
 [Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)(dotnet new에 대한 사용 가능한 템플릿)
-

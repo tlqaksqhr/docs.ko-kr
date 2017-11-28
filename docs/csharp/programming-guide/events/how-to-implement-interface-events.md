@@ -1,39 +1,21 @@
 ---
 title: "방법: 인터페이스 이벤트 구현(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 944b894e7e5f305d35d4db96d7426bf05322ca54
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8f8460674aa59170cf75eb2fa93e9d232df07e5e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-implement-interface-events-c-programming-guide"></a>방법: 인터페이스 이벤트 구현(C# 프로그래밍 가이드)
 [인터페이스](../../../csharp/language-reference/keywords/interface.md)는 [이벤트](../../../csharp/language-reference/keywords/event.md)를 선언할 수 있습니다. 다음 예제에서는 클래스에서 인터페이스 이벤트를 구현하는 방법을 보여 줍니다. 기본적인 규칙은 다른 모든 인터페이스 메서드나 속성을 구현할 때의 규칙과 같습니다.  
@@ -81,12 +63,11 @@ ms.lasthandoff: 07/28/2017
   
  고유한 접근자를 제공하면 클래스에서 두 이벤트를 같은 이벤트로 표시할지 아니면 다른 이벤트로 표시할지를 지정할 수 있습니다. 예를 들어 인터페이스 사양에 따라 이벤트가 서로 다른 시간에 발생해야 하는 경우에는 각 이벤트를 클래스의 개별 구현과 연결할 수 있습니다. 다음 예제에서는 구독자가 `IShape` 또는 `IDrawingObject`에 셰이프 참조를 캐스팅하여 수신할 `OnDraw` 이벤트를 결정합니다.  
   
- [!code-cs[csProgGuideEvents#10](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-implement-interface-events_1.cs)]  
+ [!code-csharp[csProgGuideEvents#10](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-implement-interface-events_1.cs)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [이벤트](../../../csharp/programming-guide/events/index.md)   
- [대리자](../../../csharp/programming-guide/delegates/index.md)   
- [명시적 인터페이스 구현](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [이벤트](../../../csharp/programming-guide/events/index.md)  
+ [대리자](../../../csharp/programming-guide/delegates/index.md)  
+ [명시적 인터페이스 구현](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)  
  [방법: 파생 클래스에서 기본 클래스 이벤트 발생](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)
-

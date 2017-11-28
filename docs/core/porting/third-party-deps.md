@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: b446e9e0-72f6-48f6-92c6-70ad0ce3f86a
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: a074978f2817abafa7b8a9fefe7c67c9c52195b3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="porting-to-net-core---analyzing-your-third-party-party-dependencies"></a>.NET Core로 이식 - 타사 종속성 분석
 
 이식 프로세스의 첫 번째 단계는 타사 종속성을 이해하는 것입니다.  .NET Core에서 아직 실행되지 않는 것이 무엇인지를 파악하고 이에 대한 대체 계획을 개발해야 합니다.
@@ -97,4 +95,3 @@ dotnet5.5
 ## <a name="next-steps"></a>다음 단계
 
 라이브러리를 이식하려는 경우 [라이브러리 이식](libraries.md)을 확인합니다.
-

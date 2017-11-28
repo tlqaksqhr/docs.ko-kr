@@ -1,34 +1,40 @@
 ---
-title: "방법: 데이터 서비스 메시지 가로채기(WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "쿼리 인터셉터 [WCF Data Services]"
-  - "WCF Data Services, 사용자 지정"
+title: "방법: 데이터 서비스 메시지 가로채기(WCF Data Services)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- WCF Data Services, customizing
+- query interceptors [WCF Data Services]
 ms.assetid: 24b9df1b-b54b-4795-a033-edf333675de6
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 6c18664eaa154fbc048c77cb359d0926f04b7e52
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 데이터 서비스 메시지 가로채기(WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하면 사용자 지정 논리를 작업에 추가할 수 있도록 요청 메시지를 가로챌 수 있습니다.  메시지를 가로채려면 데이터 서비스에서 특별한 특성이 있는 메서드를 사용합니다.  자세한 내용은 [인터셉터](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)을 참조하세요.  
+# <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>방법: 데이터 서비스 메시지 가로채기(WCF Data Services)
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]를 사용하면 사용자 지정 논리를 작업에 추가할 수 있도록 요청 메시지를 가로챌 수 있습니다. 메시지를 가로채기 위해 데이터 서비스에서 특별 한 특성이 메서드를 사용 합니다. 자세한 내용은 참조 [인터셉터](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)합니다.  
   
- 이 항목의 예제에서는 Northwind 샘플 데이터 서비스를 사용합니다.  이 서비스는 [WCF Data Services 퀵 스타트](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)를 완료하면 만들어집니다.  
+ 이 항목의 예제에서는 Northwind 샘플 데이터 서비스를 사용합니다. 이 서비스를 완료할 때 만드는 [WCF Data Services 퀵 스타트](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)합니다.  
   
-### Orders 엔터티 집합에 대해 쿼리 인터셉터를 정의하려면  
+### <a name="to-define-a-query-interceptor-for-the-orders-entity-set"></a>Orders 엔터티 집합에 대해 쿼리 인터셉터를 정의하려면  
   
 1.  Northwind 데이터 서비스 프로젝트에서 Northwind.svc 파일을 엽니다.  
   
-2.  `Northwind` 클래스의 코드 페이지에서 다음 `using` 문\(Visual Basic에서는 `Imports`\)을 추가합니다.  
+2.  `Northwind` 클래스의 코드 페이지에서 다음 `using` 문(Visual Basic에서는 `Imports`)을 추가합니다.  
   
      [!code-csharp[Astoria Northwind Service#UsingLinqExpressions](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#usinglinqexpressions)]
      [!code-vb[Astoria Northwind Service#UsingLinqExpressions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#usinglinqexpressions)]  
@@ -38,7 +44,7 @@ caps.handback.revision: 2
      [!code-csharp[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#queryinterceptordef)]
      [!code-vb[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#queryinterceptordef)]  
   
-### Products 엔터티 집합에 대해 변경 인터셉터를 정의하려면  
+### <a name="to-define-a-change-interceptor-for-the-products-entity-set"></a>Products 엔터티 집합에 대해 변경 인터셉터를 정의하려면  
   
 1.  Northwind 데이터 서비스 프로젝트에서 Northwind.svc 파일을 엽니다.  
   
@@ -47,18 +53,18 @@ caps.handback.revision: 2
      [!code-csharp[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#changeinterceptordef)]
      [!code-vb[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#changeinterceptordef)]  
   
-## 예제  
- 다음 예제에서는 `Orders` 엔터티 집합에 대해 람다 식을 반환하는 쿼리 인터셉터 메서드를 정의합니다.  이 식에는 특정 연락처 이름이 있는 관련 `Customers`를 기반으로 요청된 `Orders`를 필터링하는 대리자가 포함되어 있습니다.  이름은 요청하는 사용자를 기반으로 확인됩니다.  이 예제에서는 WCF를 사용하고 인증이 사용하도록 설정된 ASP.NET 웹 응용 프로그램 내에 데이터 서비스가 호스트된다고 가정합니다.  <xref:System.Web.HttpContext> 클래스는 현재 요청의 사용자를 검색하는 데 사용됩니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 `Orders` 엔터티 집합에 대해 람다 식을 반환하는 쿼리 인터셉터 메서드를 정의합니다. 이 식에는 특정 연락처 이름이 있는 관련 `Orders`를 기반으로 요청된 `Customers`를 필터링하는 대리자가 포함되어 있습니다. 이름은 요청하는 사용자를 기반으로 확인됩니다. 이 예제에서는 WCF를 사용하고 인증이 사용하도록 설정된 ASP.NET 웹 응용 프로그램 내에 데이터 서비스가 호스트된다고 가정합니다. <xref:System.Web.HttpContext> 클래스는 현재 요청의 사용자를 검색하는 데 사용됩니다.  
   
  [!code-csharp[Astoria Northwind Service#QueryInterceptor](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#queryinterceptor)]
  [!code-vb[Astoria Northwind Service#QueryInterceptor](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#queryinterceptor)]  
   
-## 예제  
- 다음 예제에서는 `Products` 엔터티 집합에 대해 변경 인터셉터 메서드를 정의합니다.  이 메서드는 <xref:System.Data.Services.UpdateOperations> 또는 <xref:System.Data.Services.UpdateOperations> 작업에 대해 서비스 입력의 유효성을 검사하고 판매가 중단된 제품이 변경되는 경우 예외를 발생시킵니다.  또한 제품 삭제를 지원되지 않는 작업으로 차단합니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 `Products` 엔터티 집합에 대해 변경 인터셉터 메서드를 정의합니다. 이 메서드는 <xref:System.Data.Services.UpdateOperations.Add> 또는 <xref:System.Data.Services.UpdateOperations.Change> 작업에 대해 서비스 입력의 유효성을 검사하고 판매가 중단된 제품이 변경되는 경우 예외를 발생시킵니다. 또한 제품 삭제를 지원되지 않는 작업으로 차단합니다.  
   
  [!code-csharp[Astoria Northwind Service#ChangeInterceptor](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#changeinterceptor)]
  [!code-vb[Astoria Northwind Service#ChangeInterceptor](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#changeinterceptor)]  
   
-## 참고 항목  
- [방법: 서비스 작업 정의](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)   
+## <a name="see-also"></a>참고 항목  
+ [방법: 서비스 작업 정의](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)  
  [WCF Data Services 정의](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)

@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 68f1e217cdc6433270ecb8afe4149d2e37e4b014
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 2ecfc61c5b586dd3385890d73ded729a38fb41c2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>런타임 지시문(rd.xml) 구성 파일 참조
 런타임 지시문(.rd.xml) 파일은 지정된 프로그램 요소를 리플렉션에 사용할 수 있는지 여부를 지정하는 XML 구성 파일입니다. 런타임 지시문 파일의 예는 다음과 같습니다.  
@@ -53,41 +51,41 @@ ms.lasthandoff: 08/21/2017
  [Application](../../../docs/framework/net-native/application-element-net-native.md) [0:1]  
  [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0:M]  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.   
+ 입니다. 을 발생시킵니다. 입니다.  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.   
+ 입니다. 을 발생시킵니다. 입니다.  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)(생성된 제네릭 형식) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.   
+ 입니다. 을 발생시킵니다. 입니다.  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.   
+ 입니다. 을 발생시킵니다. 입니다.  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.   
- [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)(생성된 제네릭 형식) [0:M]   
- 입니다. 을 발생시킵니다. 입니다.   
- [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md)(포함 형식의 하위 클래스) [O:1]   
- [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.   
+ 입니다. 을 발생시킵니다. 입니다.  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)(생성된 제네릭 형식) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.   
- [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md)(포함 형식이 특성임) [O:1]   
+ 입니다. 을 발생시킵니다. 입니다.  
+ [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
+ [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md)(포함 형식의 하위 클래스) [O:1]  
+ [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
+ 입니다. 을 발생시킵니다. 입니다.  
+ [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)(생성된 제네릭 형식) [0:M]  
+ 입니다. 을 발생시킵니다. 입니다.  
+ [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md)(포함 형식이 특성임) [O:1]  
  [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]  
  [Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]  
- [Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M]   
+ [Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M]  
  [TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0:M]  
  [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]  
- [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)(생성된 제네릭 메서드) [0:M]   
+ [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)(생성된 제네릭 메서드) [0:M]  
  [Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]  
  [Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M]  
  [Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)(생성된 제네릭 형식) [0:M]  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.   
+ 입니다. 을 발생시킵니다. 입니다.  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)(생성된 제네릭 형식) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.   
+ 입니다. 을 발생시킵니다. 입니다.  
  [Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]  
- [Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M]   
+ [Parameter](../../../docs/framework/net-native/parameter-element-net-native.md) [0:M]  
  [TypeParameter](../../../docs/framework/net-native/typeparameter-element-net-native.md) [0:M]  
  [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]  
  [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)(생성된 제네릭 메서드) [0:M]  
@@ -97,36 +95,36 @@ ms.lasthandoff: 08/21/2017
  [Library](../../../docs/framework/net-native/library-element-net-native.md) [0:M]  
  [Assembly](../../../docs/framework/net-native/assembly-element-net-native.md) [0:M]  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.   
+ 입니다. 을 발생시킵니다. 입니다.  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.   
+ 입니다. 을 발생시킵니다. 입니다.  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)(생성된 제네릭 형식) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.   
+ 입니다. 을 발생시킵니다. 입니다.  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
  [Namespace](../../../docs/framework/net-native/namespace-element-net-native.md) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.   
+ 입니다. 을 발생시킵니다. 입니다.  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.   
- [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)(생성된 제네릭 형식) [0:M]   
- 입니다. 을 발생시킵니다. 입니다.   
- [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md)(포함 형식의 하위 클래스) [O:1]   
- [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.   
+ 입니다. 을 발생시킵니다. 입니다.  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)(생성된 제네릭 형식) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.   
- [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md)(포함 형식이 특성임) [O:1]   
+ 입니다. 을 발생시킵니다. 입니다.  
+ [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
+ [Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md)(포함 형식의 하위 클래스) [O:1]  
+ [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
+ 입니다. 을 발생시킵니다. 입니다.  
+ [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)(생성된 제네릭 형식) [0:M]  
+ 입니다. 을 발생시킵니다. 입니다.  
+ [AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md)(포함 형식이 특성임) [O:1]  
  [GenericParameter](../../../docs/framework/net-native/genericparameter-element-net-native.md) [0:M]  
  [Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]  
- [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)(생성된 제네릭 메서드) [0:M]   
+ [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)(생성된 제네릭 메서드) [0:M]  
  [Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]  
  [Field](../../../docs/framework/net-native/field-element-net-native.md) [0:M]  
  [Event](../../../docs/framework/net-native/event-element-net-native.md) [0:M]  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)(생성된 제네릭 형식) [0:M]  
  [Type](../../../docs/framework/net-native/type-element-net-native.md) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.   
+ 입니다. 을 발생시킵니다. 입니다.  
  [TypeInstantiation](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)(생성된 제네릭 형식) [0:M]  
- 입니다. 을 발생시킵니다. 입니다.   
+ 입니다. 을 발생시킵니다. 입니다.  
  [Method](../../../docs/framework/net-native/method-element-net-native.md) [0:M]  
  [MethodInstantiation](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)(생성된 제네릭 메서드) [0:M]  
  [Property](../../../docs/framework/net-native/property-element-net-native.md) [0:M]  
@@ -167,11 +165,11 @@ ms.lasthandoff: 08/21/2017
   
 -   `Serialize`. Newtonsoft JSON serializer 등의 타사 라이브러리를 통해 형식 인스턴스를 serialize 및 deserialize할 수 있도록 생성자, 필드 및 속성에 대한 런타임 액세스를 제어합니다.  
   
--   `DataContractSerializer`. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName> 클래스를 사용하는 serialization에 대한 정책을 제어합니다.  
+-   `DataContractSerializer`. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 클래스를 사용하는 serialization에 대한 정책을 제어합니다.  
   
--   `DataContractJsonSerializer`. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=fullName> 클래스를 사용하는 JSON serialization에 대한 정책을 제어합니다.  
+-   `DataContractJsonSerializer`. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 클래스를 사용하는 JSON serialization에 대한 정책을 제어합니다.  
   
--   `XmlSerializer`. <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> 클래스를 사용하는 XML serialization에 대한 정책을 제어합니다.  
+-   `XmlSerializer`. <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> 클래스를 사용하는 XML serialization에 대한 정책을 제어합니다.  
   
 -   `MarshalObject`. WinRT 및 COM에 대한 참조 형식을 마샬링하는 정책을 제어합니다.  
   
@@ -396,7 +394,7 @@ ms.lasthandoff: 08/21/2017
   
 -   메서드가 제네릭이면 해당 메서드가 인스턴스화되는 형식이 `Browse` 정책으로 표시됩니다.  
   
--   `MethodInfo.Invoke`를 통해 메서드를 호출할 수 있으며 <xref:System.Reflection.MethodInfo.CreateDelegate%2A?displayProperty=fullName>를 통해 대리자를 만들 수 있습니다.  
+-   `MethodInfo.Invoke`를 통해 메서드를 호출할 수 있으며 <xref:System.Reflection.MethodInfo.CreateDelegate%2A?displayProperty=nameWithType>를 통해 대리자를 만들 수 있습니다.  
   
  필드에 `Dynamic` 정책을 적용하면 정책이 다음과 같이 변경됩니다.  
   
@@ -417,7 +415,7 @@ ms.lasthandoff: 08/21/2017
   
  메서드에 `Activation` 정책을 적용하면 정책이 다음과 같이 변경됩니다.  
   
--   <xref:System.Reflection.ConstructorInfo.Invoke%2A?displayProperty=fullName> 및 <xref:System.Activator.CreateInstance%2A?displayProperty=fullName> 메서드를 통해 생성자를 호출할 수 있습니다. 메서드의 경우에는 `Activation` 정책이 생성자에만 적용됩니다.  
+-   <xref:System.Reflection.ConstructorInfo.Invoke%2A?displayProperty=nameWithType> 및 <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> 메서드를 통해 생성자를 호출할 수 있습니다. 메서드의 경우에는 `Activation` 정책이 생성자에만 적용됩니다.  
   
  필드에는 `Activation` 정책을 적용해도 아무런 영향이 없습니다.  
   
@@ -470,6 +468,5 @@ ms.lasthandoff: 08/21/2017
  자세한 내용은 [Windows 스토어 앱을 .NET 네이티브로 마이그레이션](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)에서 “직렬 변환기의 차이점” 섹션을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [런타임 지시문 요소](../../../docs/framework/net-native/runtime-directive-elements.md)   
+ [런타임 지시문 요소](../../../docs/framework/net-native/runtime-directive-elements.md)  
  [리플렉션 및 .NET 네이티브](../../../docs/framework/net-native/reflection-and-net-native.md)
-

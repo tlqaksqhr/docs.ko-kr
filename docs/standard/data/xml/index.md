@@ -8,22 +8,16 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 38382609fb21069fd69a84eb8b9de4701efeaf2c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 88d993122bf1498b08d2e523a71f7f1bed505c9a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="xml-documents-and-data"></a>XML 문서 및 데이터
 .NET Framework에서 XML 인식 응용 프로그램을 쉽게 작성할 수 있도록 하는 종합적이고 통합된 클래스 집합을 제공합니다. 다음 네임스페이스의 클래스에서는 XML 구문 분석 및 작성, 메모리에서의 XML 데이터 편집, 데이터 유효성 검사 및 XSLT 변형을 지원합니다.  
@@ -42,13 +36,13 @@ ms.lasthandoff: 09/05/2017
   
  이러한 네임스페이스의 클래스는 W3C(World Wide Web 컨소시엄) 권장 사항을 지원합니다. 예:  
   
--   <xref:System.Xml.XmlDocument?displayProperty=fullName> 클래스는 [W3C DOM(문서 개체 모델) Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/) 및 [DOM Level 2 Core](http://www.w3.org/TR/DOM-Level-2-Core/) 권장 사항을 구현합니다.  
+-   <xref:System.Xml.XmlDocument?displayProperty=nameWithType> 클래스는 [W3C DOM(문서 개체 모델) Level 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/) 및 [DOM Level 2 Core](http://www.w3.org/TR/DOM-Level-2-Core/) 권장 사항을 구현합니다.  
   
--   <xref:System.Xml.XmlReader?displayProperty=fullName> 및 <xref:System.Xml.XmlWriter?displayProperty=fullName> 클래스는 [W3C XML 1.0](http://www.w3.org/TR/2006/REC-xml-20060816/) 및 [XML의 네임스페이스](http://www.w3.org/TR/REC-xml-names/) 권장 사항을 지원합니다.  
+-   <xref:System.Xml.XmlReader?displayProperty=nameWithType> 및 <xref:System.Xml.XmlWriter?displayProperty=nameWithType> 클래스는 [W3C XML 1.0](http://www.w3.org/TR/2006/REC-xml-20060816/) 및 [XML의 네임스페이스](http://www.w3.org/TR/REC-xml-names/) 권장 사항을 지원합니다.  
   
--   <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=fullName> 클래스의 스키마는 [W3C XML 스키마 1장: 구조](http://www.w3.org/TR/xmlschema-1/) 및 [XML 스키마 2장: 데이터 형식](http://www.w3.org/TR/xmlschema-2/) 권장 사항을 지원합니다.  
+-   <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> 클래스의 스키마는 [W3C XML 스키마 1장: 구조](http://www.w3.org/TR/xmlschema-1/) 및 [XML 스키마 2장: 데이터 형식](http://www.w3.org/TR/xmlschema-2/) 권장 사항을 지원합니다.  
   
--   <xref:System.Xml.Xsl?displayProperty=fullName> 네임스페이스의 클래스는 [W3C XSLT 1.0](http://www.w3.org/TR/xslt) 권장 사항을 준수하는 XSLT 변환을 지원합니다.  
+-   <xref:System.Xml.Xsl?displayProperty=nameWithType> 네임스페이스의 클래스는 [W3C XSLT 1.0](http://www.w3.org/TR/xslt) 권장 사항을 준수하는 XSLT 변환을 지원합니다.  
   
  .NET Framework의 XML 클래스는 다음과 같은 이점을 제공합니다.  
   
@@ -101,4 +95,3 @@ ms.lasthandoff: 09/05/2017
   
  [XML 개발자 센터](http://go.microsoft.com/fwlink/?linkid=42458)  
  XML 개발자를 위한 추가 기술 정보, 다운로드, 뉴스 그룹 및 기타 리소스를 제공합니다.
-

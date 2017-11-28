@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
-ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
 ms.openlocfilehash: 9f6a70598f3a0c0e3f479a25171e1deb6abffa33
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core 및 .NET Standard의 유닛 테스트
 
 .NET Core는 테스트 가능성을 염두에 두고 설계되어 이전보다 더 쉽게 응용 프로그램에 대한 단위 테스트를 만들 수 있습니다. 이 문서에서는 단위 테스트 및 이 테스트가 다른 종류의 테스트와 어떻게 다른지에 대해 간략하게 소개합니다. 연결된 리소스에서는 테스트 프로젝트를 솔루션에 추가한 다음, 명령줄이나 Visual Studio를 사용하여 단위 테스트를 실행하는 방법을 보여 줍니다.
@@ -52,4 +50,3 @@ ms.lasthandoff: 09/14/2017
 * Visual Studio를 사용하는 경우 [.NET Core의 Live Unit Testing](/visualstudio/test/live-unit-testing)을 참조하세요.
 * 선택적 단위 테스트 필터링을 사용하는 방법에 관한 추가 정보 및 예제는 [선택적 단위 테스트 실행](selective-unit-tests.md) 또는 [Visual Studio를 사용하여 테스트 포함 및 제외](/visualstudio/test/live-unit-testing#including-and-excluding-test-projects-and-test-methods)를 참조하세요.
 * XUnit 팀은 [.NET Core 및 Visual Studio에서 xUnit을 사용하는 방법](http://xunit.github.io/docs/getting-started-dotnet-core.html)을 보여 주는 자습서를 작성했습니다.
-

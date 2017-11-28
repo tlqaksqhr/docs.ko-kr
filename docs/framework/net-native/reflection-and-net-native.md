@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f6ec8d0a93354fcea17b27321d59174f2e53a47f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: d9e4bdc26815feab7910e7518f7cd691a1f4dece
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="reflection-and-net-native"></a>리플렉션 및 .NET 네이티브
 .NET Framework의 관리 개발에서는 리플렉션 API를 통한 메타 프로그래밍이 지원됩니다. 리플렉션을 통해 앱의 개체를 검사하고, 검사를 통해 검색된 개체에 대해 메서드를 호출하고, 런타임에 새 형식을 생성하고, 기타 여러 동적 코드 시나리오를 지원할 수 있습니다. 또한 serialization과 deserialization도 지원되므로 개체의 필드 값을 유지했다가 나중에 복원할 수 있습니다. 이러한 모든 시나리오에서는 .NET Framework JIT(Just-In-Time) 컴파일러가 사용 가능한 메타데이터를 기반으로 네이티브 코드를 생성해야 합니다.  
@@ -33,7 +31,7 @@ ms.lasthandoff: 08/21/2017
 > [!NOTE]
 >  런타임 지시문 파일이 필요한 이유에 대한 배경 정보를 제공하는 .NET 네이티브 컴파일 프로세스의 개요는 [.NET 네이티브 및 컴파일](../../../docs/framework/net-native/net-native-and-compilation.md)을 참조하세요.  
   
- 또한 [!INCLUDE[net_native](../../../includes/net-native-md.md)]에서는 .NET Framework 클래스 라이브러리의 전용 멤버에 대한 리플렉션을 허용하지 않습니다. 예를 들어 .NET Framework 클래스 라이브러리 형식의 필드를 검색하기 위해 <xref:System.Reflection.TypeInfo.DeclaredFields%2A?displayProperty=fullName> 속성을 호출하면 공용 필드 또는 보호된 필드만 반환됩니다.  
+ 또한 [!INCLUDE[net_native](../../../includes/net-native-md.md)]에서는 .NET Framework 클래스 라이브러리의 전용 멤버에 대한 리플렉션을 허용하지 않습니다. 예를 들어 .NET Framework 클래스 라이브러리 형식의 필드를 검색하기 위해 <xref:System.Reflection.TypeInfo.DeclaredFields%2A?displayProperty=nameWithType> 속성을 호출하면 공용 필드 또는 보호된 필드만 반환됩니다.  
   
  다음 항목에서는 앱에서 리플렉션과 serialization을 지원하는 데 필요한 개념 및 참조 설명서를 제공합니다.  
   
@@ -44,6 +42,5 @@ ms.lasthandoff: 08/21/2017
 -   [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [.NET 네이티브로 앱 컴파일](../../../docs/framework/net-native/index.md)   
+ [.NET Native로 앱 컴파일](../../../docs/framework/net-native/index.md)  
  [.NET 네이티브 및 컴파일](../../../docs/framework/net-native/net-native-and-compilation.md)
-

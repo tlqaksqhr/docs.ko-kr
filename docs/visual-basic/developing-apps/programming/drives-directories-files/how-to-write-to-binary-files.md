@@ -1,43 +1,25 @@
 ---
 title: "방법: Visual Basic에서 이진 파일에 쓰기"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- files, binary access
-- WriteAllBytes method
-- binary files, writing in Visual Basic
+- files [Visual Basic], binary access
+- WriteAllBytes method [Visual Basic]
+- binary files [Visual Basic], writing in Visual Basic
 ms.assetid: 59fae125-de5b-4c96-883c-209f4a55112c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 4d8f908822dbcb865f427bee082b8bc4e22ca7fe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ae6f275dd86a53c6b6251feb08210a775adba0b0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-write-to-binary-files-in-visual-basic"></a>방법: Visual Basic에서 이진 파일에 쓰기
 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A> 메서드는 이진 파일에 데이터를 씁니다. `append` 매개 변수가 `True`이면 파일에 데이터를 추가합니다. 그렇지 않으면 파일의 데이터를 덮어씁니다.  
@@ -68,6 +50,5 @@ ms.lasthandoff: 07/28/2017
 -   경로를 보는 데 필요한 권한이 사용자에게 없는 경우(<xref:System.Security.SecurityException>)  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>   
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>  
  [방법: 파일에 텍스트 쓰기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)
-

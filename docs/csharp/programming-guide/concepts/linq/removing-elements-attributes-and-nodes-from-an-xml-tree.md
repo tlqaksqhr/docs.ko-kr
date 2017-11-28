@@ -1,22 +1,18 @@
 ---
 title: "XML 트리에서 요소, 특성 및 노드 제거(C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 07dd06d6-1117-4077-bf98-9120cf51176e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 1745b1ce84b33a67d54f5e752da2ecf9bbfdbc17
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 934373d61407c8cc19b7d6424898a582880f9c21
-ms.openlocfilehash: 40be8959c731746df9392e3cbf29c88fce222b0b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/10/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>XML 트리에서 요소, 특성 및 노드 제거(C#)
 XML 트리를 수정하여 요소, 특성 및 다른 형식의 노드를 제거할 수 있습니다.  
@@ -29,19 +25,19 @@ XML 트리를 수정하여 요소, 특성 및 다른 형식의 노드를 제거�
   
 |메서드|설명|  
 |------------|-----------------|  
-|<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=fullName>|부모에서 <xref:System.Xml.Linq.XAttribute>를 제거합니다.|  
-|<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=fullName>|<xref:System.Xml.Linq.XContainer>에서 자식 노드를 제거합니다.|  
-|<xref:System.Xml.Linq.XElement.RemoveAll%2A?displayProperty=fullName>|<xref:System.Xml.Linq.XElement>에서 내용과 특성을 제거합니다.|  
-|<xref:System.Xml.Linq.XElement.RemoveAttributes%2A?displayProperty=fullName>|<xref:System.Xml.Linq.XElement>의 특성을 제거합니다.|  
-|<xref:System.Xml.Linq.XElement.SetAttributeValue%2A?displayProperty=fullName>|값으로 `null`을 전달하면 특성을 제거합니다.|  
-|<xref:System.Xml.Linq.XElement.SetElementValue%2A?displayProperty=fullName>|값으로 `null`을 전달하면 자식 요소를 제거합니다.|  
-|<xref:System.Xml.Linq.XNode.Remove%2A?displayProperty=fullName>|부모에서 <xref:System.Xml.Linq.XNode>를 제거합니다.|  
-|<xref:System.Xml.Linq.Extensions.Remove%2A?displayProperty=fullName>|부모 요소에서 소스 컬렉션의 모든 특성이나 요소를 제거합니다.|  
+|<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=nameWithType>|부모에서 <xref:System.Xml.Linq.XAttribute>를 제거합니다.|  
+|<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=nameWithType>|<xref:System.Xml.Linq.XContainer>에서 자식 노드를 제거합니다.|  
+|<xref:System.Xml.Linq.XElement.RemoveAll%2A?displayProperty=nameWithType>|<xref:System.Xml.Linq.XElement>에서 내용과 특성을 제거합니다.|  
+|<xref:System.Xml.Linq.XElement.RemoveAttributes%2A?displayProperty=nameWithType>|<xref:System.Xml.Linq.XElement>의 특성을 제거합니다.|  
+|<xref:System.Xml.Linq.XElement.SetAttributeValue%2A?displayProperty=nameWithType>|값으로 `null`을 전달하면 특성을 제거합니다.|  
+|<xref:System.Xml.Linq.XElement.SetElementValue%2A?displayProperty=nameWithType>|값으로 `null`을 전달하면 자식 요소를 제거합니다.|  
+|<xref:System.Xml.Linq.XNode.Remove%2A?displayProperty=nameWithType>|부모에서 <xref:System.Xml.Linq.XNode>를 제거합니다.|  
+|<xref:System.Xml.Linq.Extensions.Remove%2A?displayProperty=nameWithType>|부모 요소에서 소스 컬렉션의 모든 특성이나 요소를 제거합니다.|  
   
 ## <a name="example"></a>예제  
   
 ### <a name="description"></a>설명  
- 이 예제에서는 요소를 제거하는 세 가지 방법을 보여 줍니다. 첫째, 단일 요소를 제거합니다. 둘째, 요소의 컬렉션을 검색하고 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName> 연산자를 사용하여 구체화한 다음 제거합니다. 마지막으로, 요소의 컬렉션을 검색하고 <xref:System.Xml.Linq.Extensions.Remove%2A> 확장 메서드를 사용하여 제거합니다.  
+ 이 예제에서는 요소를 제거하는 세 가지 방법을 보여 줍니다. 첫째, 단일 요소를 제거합니다. 둘째, 요소의 컬렉션을 검색하고 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> 연산자를 사용하여 구체화한 다음 제거합니다. 마지막으로, 요소의 컬렉션을 검색하고 <xref:System.Xml.Linq.Extensions.Remove%2A> 확장 메서드를 사용하여 제거합니다.  
   
  <xref:System.Linq.Enumerable.ToList%2A> 연산자에 대한 자세한 내용은 [데이터 형식 변환(C#)](../../../../csharp/programming-guide/concepts/linq/converting-data-types.md)을 참조하세요.  
   
@@ -89,4 +85,3 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>참고 항목  
  [XML 트리 수정(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
-

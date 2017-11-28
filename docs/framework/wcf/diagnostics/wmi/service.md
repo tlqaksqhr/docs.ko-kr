@@ -1,25 +1,28 @@
 ---
-title: "서비스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "서비스"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 999806e1-6376-409e-b998-b0af391adfe7
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: bd784b470810e16b86ba7537b1f45681ac3e1ed1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 서비스
+# <a name="service"></a>서비스
 서비스  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 class Service  
@@ -39,98 +42,98 @@ class Service
 };  
 ```  
   
-## 메서드  
+## <a name="methods"></a>메서드  
  Service 클래스는 메서드를 정의하지 않습니다.  
   
-## 속성  
+## <a name="properties"></a>속성  
  Service 클래스에는 다음과 같은 속성이 있습니다.  
   
-### BaseAddresses  
+### <a name="baseaddresses"></a>BaseAddresses  
  데이터 형식: string array  
   
  액세스 형식: 읽기 전용  
   
  서비스가 사용하는 기본 주소입니다.  
   
-### Behaviors  
+### <a name="behaviors"></a>동작  
  데이터 형식: Behavior array  
   
  액세스 형식: 읽기 전용  
   
  이 서비스와 연관된 동작입니다.  
   
-### ConfigurationName  
+### <a name="configurationname"></a>ConfigurationName  
  데이터 형식: string  
   
  액세스 형식: 읽기 전용  
   
- ServiceElement\_BehaviorConfiguration  
+ ServiceElement_BehaviorConfiguration  
   
-### CounterInstanceName  
+### <a name="counterinstancename"></a>CounterInstanceName  
  데이터 형식: string  
   
  액세스 형식: 읽기 전용  
   
  서비스의 성능 카운터 인스턴스의 인스턴스 이름입니다.  
   
-### DistinguishedName  
+### <a name="distinguishedname"></a>DistinguishedName  
  데이터 형식: string  
   
  액세스 형식: 읽기 전용  
   
  주소의 서비스 이름입니다.  
   
-### Extensions  
+### <a name="extensions"></a>확장  
  데이터 형식: string array  
   
  액세스 형식: 읽기 전용  
   
  서비스 인스턴스의 확장에 대한 인스턴스 컨텍스트입니다.  
   
-### Metadata  
+### <a name="metadata"></a>메타데이터  
  데이터 형식: string array  
   
  액세스 형식: 읽기 전용  
   
  서비스 메타데이터 설정입니다.  
   
-### Name  
+### <a name="name"></a>이름  
  데이터 형식: string  
   
  액세스 형식: 읽기 전용  
   
  이 서비스의 고유한 이름입니다.  
   
-### 네임스페이스  
+### <a name="namespace"></a>네임스페이스  
  데이터 형식: string  
   
  액세스 형식: 읽기 전용  
   
  서비스의 네임스페이스입니다.  
   
-### Opened  
+### <a name="opened"></a>Opened  
  데이터 형식: datetime  
   
  액세스 형식: 읽기 전용  
   
  서비스가 열린 시간입니다.  
   
-### OutgoingChannels  
+### <a name="outgoingchannels"></a>OutgoingChannels  
  데이터 형식: Channel array  
   
  액세스 형식: 읽기 전용  
   
  서비스 인스턴스에서 보내는 채널입니다.  
   
-### ProcessId  
+### <a name="processid"></a>ProcessId  
  데이터 형식: sint32  
   
  액세스 형식: 읽기 전용  
   
  서비스를 호스팅하는 프로세스의 프로세스 ID입니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
   
 |MOF|Servicemodel.mof에 선언되어 있습니다.|  
-|---------|----------------------------------|  
-|네임스페이스|root\\ServiceModel에 정의되어 있습니다.|
+|---------|-----------------------------------|  
+|네임스페이스|root\ServiceModel에 정의되어 있습니다.|

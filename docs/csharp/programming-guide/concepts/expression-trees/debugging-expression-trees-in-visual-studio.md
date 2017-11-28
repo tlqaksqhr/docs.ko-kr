@@ -1,30 +1,21 @@
 ---
 title: "Visual Studio에서 식 트리 디버그(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: d74df8ba339526e20850cd8b8f1a4b37c20e22ab
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0cf40b38ca9a6f743aca2894506e1d0ea80c9d57
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>Visual Studio에서 식 트리 디버그(C#)
 응용 프로그램을 디버그할 때 식 트리의 구조 및 내용을 분석할 수 있습니다. 식 트리 구조의 개요를 빠르게 확인하려면 디버그 모드에서만 제공되는 `DebugView` 속성을 사용합니다. 디버깅에 대한 자세한 내용은 [Debugging in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)(Visual Studio의 디버깅)를 참조하세요.  
@@ -111,7 +102,7 @@ ms.lasthandoff: 07/28/2017
 |`LabelTarget target = Expression.Label(); BlockExpression block = Expression.Block( Expression.Goto(target5), Expression.Label(target5));`|`.Block() {`<br /><br /> `.Goto #Label1 { };`<br /><br /> `.Label`<br /><br /> `.LabelTarget #Label1:`<br /><br /> `}`|  
   
 ## <a name="checked-operators"></a>확인된 연산자  
- 확인된 연산자는 연산자 앞에 “#” 기호가 표시됩니다. 예를 들어 확인된 더하기 연산자는 `#+`로 표시됩니다.  
+ 확인된 연산자는 연산자 앞에 "#" 기호가 표시됩니다. 예를 들어 확인된 더하기 연산자는 `#+`로 표시됩니다.  
   
 ### <a name="examples"></a>예제  
   
@@ -121,7 +112,6 @@ ms.lasthandoff: 07/28/2017
 |`Expression expr = Expression.ConvertChecked( Expression.Constant(10.0), typeof(int));`|`#(System.Int32)10D`|  
   
 ## <a name="see-also"></a>참고 항목  
- [식 트리(C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)   
- [Visual Studio의 디버깅](/visualstudio/debugger/debugging-in-visual-studio)   
+ [식 트리(C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
+ [Visual Studio의 디버깅](/visualstudio/debugger/debugging-in-visual-studio)  
  [Create Custom Visualizers of Data](/visualstudio/debugger/create-custom-visualizers-of-data)(데이터의 사용자 지정 시각화 도우미 만들기)
-

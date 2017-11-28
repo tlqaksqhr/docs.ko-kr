@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 00d00d38-99af-44f4-a75f-defcd9729dc5
-ms.translationtype: HT
-ms.sourcegitcommit: 3155295489e1188640dae5aa5bf9fdceb7480ed6
 ms.openlocfilehash: 4fc68a3dbdec634d8e92a066a46939ba19c65db7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/05/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="porting-to-net-core-from-net-framework"></a>.NET Framework에서 .NET Core로 이식
 
 .NET Framework에서 코드를 실행한 적이 있으면 .NET Core 1.0에서 코드를 실행하는 데 관심이 있을 수 있습니다.  이 문서에서는 이식 프로세스 및 .NET Core로 이식할 때 유용하게 사용할 수 있는 도구 목록에 대해 간략하게 설명합니다.
@@ -55,4 +53,3 @@ ms.lasthandoff: 08/05/2017
 
 [타사 종속성 분석](third-party-deps.md)
    
-

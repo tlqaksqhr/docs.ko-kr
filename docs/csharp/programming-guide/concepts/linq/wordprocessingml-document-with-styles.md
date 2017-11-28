@@ -1,25 +1,21 @@
 ---
 title: "스타일이 사용된 WordprocessingML 문서3"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 40e35de6-ac93-4bba-88ab-a018cbe93873
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 7a551d43114c5896e40230265447eeedb7fca2b2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 476f6cbd7b29f77ffad6d5a072297f94452ffff4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="wordprocessingml-document-with-styles"></a>스타일이 사용된 WordprocessingML 문서
 더 복잡한 WordprocessingML 문서에는 스타일로 서식이 지정된 단락이 있습니다.  
@@ -33,7 +29,7 @@ ms.lasthandoff: 07/28/2017
   
  다음 문서에서 첫 번째 단락에는 `Heading1` 스타일이 있습니다. 기본 스타일이 있는 단락이 많이 있으며 `Code` 스타일이 있는 단락도 많이 있습니다. 이 문서는 이와 같이 비교적 복잡하기 때문에 LINQ to XML을 사용하여 구문 분석하기가 더 흥미로운 대상입니다.  
   
- 비기본 스타일이 있는 단락에서 단락 요소에는 `w:pPr`(이)라는 자식 요소가 있으며 이 자식 요소에는 `w:pStyle`이라는 자식 요소가 있습니다. 이 요소에는 스타일 이름이 포함된 `w:val` 특성이 있습니다. 단락에 기본 스타일이 있으면 단락 요소에 `w:p.Pr` 자식 요소가 없습니다.  
+ 비기본 스타일이 있는 단락에서 단락 요소에는 `w:pPr`이라는 자식 요소가 있으며 이 자식 요소에는 `w:pStyle`이라는 자식 요소가 있습니다. 이 요소에는 스타일 이름이 포함된 `w:val` 특성이 있습니다. 단락에 기본 스타일이 있으면 단락 요소에 `w:p.Pr` 자식 요소가 없습니다.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -151,4 +147,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>참고 항목  
  [Office Open XML WordprocessingML 문서 정보(C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
-

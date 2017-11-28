@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fcc83b5b-fb68-4e48-9132-0882677d8056
-ms.translationtype: HT
-ms.sourcegitcommit: 680f9f83e07d6b5e3ee1031fb1a2f6d04765e18d
 ms.openlocfilehash: 52f6b8a1000a8b8623c36cc1f76671f0a7a764b7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="c-tutorials"></a>C# 자습서
 
 다음 자습서를 사용하면 [.NET Core](../../core/index.md)를 사용하여 C# 프로그램을 빌드할 수 있습니다.
@@ -34,4 +32,3 @@ ms.lasthandoff: 09/07/2017
 * [문자열 보간](string-interpolation.md): C#의 `$` 문자열 보간의 여러 용도를 보여 줍니다.
 
 * [특성 사용](attributes.md): C#에서 특성을 만들고 사용하는 방법을 보여 줍니다.
-

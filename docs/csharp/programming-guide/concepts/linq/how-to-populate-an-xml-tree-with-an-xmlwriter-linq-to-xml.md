@@ -1,30 +1,21 @@
 ---
 title: "방법: XmlWriter를 사용하여 XML 트리 채우기(LINQ to XML)(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: cd5674d1-5c54-4efc-ba68-e23b2875295f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 2df0626d0376973aeaa09876c6737c93dd671da4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9d74e6bd3d8454f5ed37fa8d190beb0c44399fa7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml-c"></a>방법: XmlWriter를 사용하여 XML 트리 채우기(LINQ to XML)(C#)
 XML 트리를 채우는 한 가지 방법은 <xref:System.Xml.Linq.XContainer.CreateWriter%2A>를 사용하여 <xref:System.Xml.XmlWriter>를 만든 다음 <xref:System.Xml.XmlWriter>에 쓰는 것입니다. XML 트리는 <xref:System.Xml.XmlWriter>에 쓴 모든 노드로 채워집니다.  
@@ -80,8 +71,7 @@ Console.WriteLine(newTree);
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Xml.Linq.XContainer.CreateWriter%2A>   
- <xref:System.Xml.XmlWriter>   
- <xref:System.Xml.Xsl.XslCompiledTransform>   
+ <xref:System.Xml.Linq.XContainer.CreateWriter%2A>  
+ <xref:System.Xml.XmlWriter>  
+ <xref:System.Xml.Xsl.XslCompiledTransform>  
  [XML 트리 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
-

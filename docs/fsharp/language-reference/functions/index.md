@@ -1,6 +1,6 @@
 ---
 title: "함수(F#)"
-description: "함수(F#)"
+description: "F # 및 F #에서 지 원하는 방법 일반적인 함수형 프로그래밍 구문에서 함수에 알아봅니다."
 keywords: "visual f#, f#, 함수형 프로그래밍"
 author: cartermp
 ms.author: phcart
@@ -10,13 +10,12 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 6dea2c3e-2f9d-4c9d-97a2-d8f9a72b6f4c
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: 7a5fff4746157b430c6f1a492c23e9ea3d7b82c3
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: 9750e37647a3e382c7a8308c3ffede15729012d8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="functions"></a>함수
 
 함수는 모든 프로그래밍 언어에서 프로그램 실행의 기본 단위입니다. 다른 언어와 마찬가지로 F# 함수는 이름을 가지며, 매개 변수 및 인수를 사용할 수 있고, 본문을 포함합니다. 또한 F#은 함수를 값으로 처리, 식에 명명되지 않은 함수 사용, 함수를 합성하여 새로운 함수 생성, 커리된 함수, 함수 인수를 부분적으로 적용하는 방식의 암시적 함수 정의 등 함수형 프로그래밍 구문도 지원합니다.
@@ -116,7 +115,7 @@ let vol = cylinderVolume 2.0 3.0
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet107.fs)]
     
 ## <a name="recursive-functions"></a>재귀 함수
-*재귀 함수*는 자신을 호출하는 함수입니다. 이러한 함수에는 **rec** 키워드 다음에 **let** 키워드를 지정해야 합니다. 임의의 함수를 호출하는 경우와 마찬가지로 함수 본문 내에서 재귀 함수를 호출합니다. 다음 재귀 함수는 *n*번째 피보나치 수를 계산합니다. 피보나치 수열은 아주 오래 전부터 알려져 왔으며, 연속되는 각 숫자는 수열에서 이전 두 숫자의 합이 되는 수열입니다.
+*재귀 함수*는 자신을 호출하는 함수입니다. 이러한 함수에는 **rec** 키워드 다음에 **let** 키워드를 지정해야 합니다. 임의의 함수를 호출하는 경우와 마찬가지로 함수 본문 내에서 재귀 함수를 호출합니다. 다음 재귀 함수를 계산 합니다.는  *n* 번째 피보나치 수 있습니다. 피보나치 수열은 아주 오래 전부터 알려져 왔으며, 연속되는 각 숫자는 수열에서 이전 두 숫자의 합이 되는 수열입니다.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 
@@ -188,11 +187,11 @@ let result2 = Compose2 2
 
 // Pipelining
 // Pipeline operator
-// ( <| ) : ('T -> 'U) -> 'T -> 'U
+// ( |> ) : 'T1 -> ('T1 -> 'U) -> 'U
 let Pipeline1 x = addOne <| timesTwo x
 
 // Backward pipeline operator
-// ( |> ) : 'T1 -> ('T1 -> 'U) -> 'U
+// ( <| ) : ('T -> 'U) -> 'T -> 'U
 let Pipeline2 x = addOne x |> timesTwo
 
 // Result is 5
@@ -210,4 +209,3 @@ let result4 = Pipeline2 2
 [값](../values/index.md)
 
 [F# 언어 참조](../index.md)
-

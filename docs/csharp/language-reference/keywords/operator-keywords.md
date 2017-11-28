@@ -1,39 +1,21 @@
 ---
 title: "연산자 키워드(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - keywords [C#], operators
 - operators [C#], keywords
 ms.assetid: f745c81f-f8d8-4673-86a1-0f3a85cc63c3
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 1d30e85dd76f37c797ec212b9e0700ab93a21a67
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0f1109fb343ebed3dc66e14664ed5ba470750f59
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="operator-keywords-c-reference"></a>연산자 키워드(C# 참조)
 개체 생성, 개체의 런타임 형식 확인, 형식의 크기 가져오기 등의 기타 작업을 수행하는 데 사용됩니다. 이 섹션에서는 다음과 같은 키워드를 소개합니다.  
@@ -79,8 +61,7 @@ ms.lasthandoff: 07/28/2017
 -   [unchecked](../../../csharp/language-reference/keywords/unchecked.md) unchecked 컨텍스트를 지정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
  [C# 연산자](../../../csharp/language-reference/operators/index.md)
-

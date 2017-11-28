@@ -1,30 +1,21 @@
 ---
 title: "스레딩(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 236d157d-37c0-4ee8-89fc-721e6c596325
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 633fe784b98bf67086581b82fb4b00cff28d5f5a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 45ffa38254717c9aee29c3922bf801f6a90c716e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="threading-c"></a>스레딩(C#)
 스레딩을 사용하면 C# 프로그램에서 동시 처리를 수행할 수 있으므로 한 번에 여러 작업을 진행할 수 있습니다. 예를 들어 스레딩을 사용하여 사용자의 입력을 모니터링하고, 백그라운드 작업을 수행하고, 동시 입력 스트림을 처리할 수 있습니다.  
@@ -48,7 +39,7 @@ ms.lasthandoff: 07/28/2017
  이러한 클래스의 일부 또는 모두를 사용하여 여러 스레드 작업을 동기화할 수 있지만, 스레딩에 대한 일부 지원이 C# 언어에서 지원됩니다. 예를 들어 [Lock 문](../../../../csharp/language-reference/keywords/lock-statement.md)은 <xref:System.Threading.Monitor>를 암시적으로 사용하여 동기화 기능을 제공합니다.  
   
 > [!NOTE]
->  [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)]부터는 <xref:System.Threading.Tasks.Parallel?displayProperty=fullName> 및 <xref:System.Threading.Tasks.Task?displayProperty=fullName> 클래스, [PLINQ(병렬 LINQ)](https://msdn.microsoft.com/library/dd460688), <xref:System.Collections.Concurrent?displayProperty=fullName> 네임스페이스의 새로운 동시 컬렉션 클래스, 그리고 스레드가 아닌 작업 개념을 기반으로 하는 새로운 프로그래밍 모델로 인해 다중 스레드 프로그래밍이 매우 간소화되었습니다. 자세한 내용은 [병렬 프로그래밍](https://msdn.microsoft.com/library/dd460693)을 참조하세요.  
+>  [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)]부터는 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 클래스, [PLINQ(병렬 LINQ)](https://msdn.microsoft.com/library/dd460688), <xref:System.Collections.Concurrent?displayProperty=nameWithType> 네임스페이스의 새로운 동시 컬렉션 클래스, 그리고 스레드가 아닌 작업 개념을 기반으로 하는 새로운 프로그래밍 모델로 인해 다중 스레드 프로그래밍이 매우 간소화되었습니다. 자세한 내용은 [병렬 프로그래밍](https://msdn.microsoft.com/library/dd460693)을 참조하세요.  
   
 ## <a name="related-topics"></a>관련 항목  
   
@@ -62,4 +53,3 @@ ms.lasthandoff: 07/28/2017
 |[스레드 풀링(C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)|시스템에서 관리하는 작업자 스레드 풀을 사용하는 방법을 설명합니다.|  
 |[방법: 스레드 풀 사용(C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|스레드 풀에서 여러 스레드의 동기화된 사용을 보여 줍니다.|  
 |[스레딩](https://msdn.microsoft.com/library/3e8s7xdd)|.NET Framework에서 스레딩을 구현하는 방법을 설명합니다.|
-

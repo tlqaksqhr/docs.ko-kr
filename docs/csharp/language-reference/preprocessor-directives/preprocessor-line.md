@@ -1,40 +1,20 @@
 ---
 title: "#<a name=\"line-c-reference\"></a>line(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- '#line'
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- '#line directive [C#]'
+f1_keywords: '#line'
+helpviewer_keywords: '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 3d2f42915d214349eebff40949482d7f603c0c2c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 89eac93497deb2312e9da358a22e37db1e4a2f80
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="line-c-reference"></a>#line(C# 참조)
 `#line`을 사용하면 오류 및 경고에 대한 컴파일러의 줄 번호와 파일 이름 출력(옵션)을 수정할 수 있습니다. 이 예제에서는 줄 번호와 관련된 두 개의 경고를 보고하는 방법을 보여 줍니다. `#line 200` 지시문은 줄 번호를 강제로 200(기본값은 #7임)으로 설정하며, 다음 #line 지시문까지 파일 이름이 “Special”로 보고됩니다. #line 기본 지시문은 줄 번호 매기기를 기본 번호 매기기로 되돌립니다. 이 경우 이전 지시문을 통해 번호가 다시 매겨진 줄이 계산됩니다.  
@@ -88,7 +68,6 @@ class MainClass
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
  [C# 전처리기 지시문](../../../csharp/language-reference/preprocessor-directives/index.md)
-

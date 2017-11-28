@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - command prompt, Windows SDK
 - Visual Studio command prompt
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - environment variables, setting for tools
 - developer command prompt
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: e93a1d116ac0480c80e259ddbadbc65fd9539389
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0287c3f250a57f7a685191702be3ad5cc28fbec6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Visual Studio용 개발자 명령 프롬프트
 Visual Studio용 개발자 명령 프롬프트는 .NET Framework 도구를 쉽게 사용할 수 있는 환경 변수를 자동으로 설정합니다. 개발자 명령 프롬프트는 전체 또는 커뮤니티 버전의 Visual Studio와 함께 설치됩니다. Express 버전의 Visual Studio에서는 설치되지 않습니다.  
@@ -102,6 +95,5 @@ Visual Studio용 개발자 명령 프롬프트는 .NET Framework 도구를 쉽�
  그런 다음 새 메뉴 항목이 추가되고 **도구** 메뉴에서 명령 프롬프트에 액세스할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [도구](../../../docs/framework/tools/index.md)   
+ [도구](../../../docs/framework/tools/index.md)  
  [외부 도구 관리](/visualstudio/ide/managing-external-tools)
-

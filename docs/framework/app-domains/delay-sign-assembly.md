@@ -2,9 +2,12 @@
 title: "어셈블리 서명 연기"
 ms.date: 07/31/2017
 ms.prod: .net-framework
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - deferring assembly signing
 - signing assemblies
@@ -12,16 +15,15 @@ helpviewer_keywords:
 - strong-named assemblies, delaying assembly signing
 - partial assembly signing
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 08f0f48a71415878cd24640272a41de4c0a5ade6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 0ee5fed355e0d8418500f1ecee53019548d9f7f8
-ms.openlocfilehash: 2c50a652c834dba80595f2ea419bc75148e13419
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="delay-signing-an-assembly"></a>어셈블리 서명 연기
 조직에 개발자가 일상적으로 액세스할 수 없는 엄격하게 보호된 키 쌍이 있을 수 있습니다. 대부분이 경우 공개 키를 사용할 수 있지만 개인 키에 대한 액세스는 몇몇 개인만으로 제한됩니다. 강력한 이름을 사용하여 어셈블리를 개발할 경우 강력한 이름의 대상 어셈블리를 참조하는 각 어셈블리에는 대상 어셈블리에 강력한 이름을 지정하는 데 사용되는 공개 키의 토큰이 포함됩니다. 이를 위해 개발 프로세스 중에 공개 키를 사용할 수 있어야 합니다.  
@@ -36,9 +38,11 @@ ms.lasthandoff: 08/02/2017
   
     -   <xref:System.Reflection.AssemblyKeyFileAttribute> - 매개 변수로 공개 키가 포함된 파일의 이름을 생성자에 전달합니다.  
   
-    -   <xref:System.Reflection.AssemblyDelaySignAttribute> - 매개 변수로 **true**를 생성자에 전달하여 서명 지연에 사용 중임을 나타냅니다. 예를 들면 다음과 같습니다.  
+    -   <xref:System.Reflection.AssemblyDelaySignAttribute> - 매개 변수로 **true**를 생성자에 전달하여 서명 지연에 사용 중임을 나타냅니다. 예:  
   
-         [!code-cpp[AssemblyDelaySignAttribute#4](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#4)]  [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)]  [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
+         [!code-cpp[AssemblyDelaySignAttribute#4](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#4)]
+         [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)]
+         [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
   
 3.  컴파일러는 공개 키를 어셈블리 매니페스트에 삽입하고 PE 파일에서 전체 강력한 이름 시그니처에 사용할 공간을 예약합니다. 실제 공개 키는 어셈블리가 빌드되는 동안 저장되어야 합니다. 그래야 이 어셈블리를 참조하는 다른 어셈블리가 자체적인 어셈블리 참조에 저장할 키를 가져올 수 있습니다.  
   
@@ -73,8 +77,7 @@ ms.lasthandoff: 08/02/2017
     ```  
   
 ## <a name="see-also"></a>참고 항목  
- [어셈블리 만들기](../../../docs/framework/app-domains/create-assemblies.md)   
- [방법: 공개/개인 키 쌍 만들기](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)   
- [Sn.exe(강력한 이름 도구)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)   
+ [어셈블리 만들기](../../../docs/framework/app-domains/create-assemblies.md)  
+ [방법: 공개/개인 키 쌍 만들기](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
+ [Sn.exe(강력한 이름 도구)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
  [어셈블리를 사용한 프로그래밍](../../../docs/framework/app-domains/programming-with-assemblies.md)
-

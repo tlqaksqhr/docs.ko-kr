@@ -1,45 +1,27 @@
 ---
 title: "nullable 형식(C# 프로그래밍 가이드)"
-ms.date: 2017-05-15
+ms.date: 05/15/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - nullable types [C#]
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: af7de7ea0be5368371e4bb174f6313e98f93ac4b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: 6d99bffc74cbcce04d725b8f225a4a4b175973be
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="nullable-types-c-programming-guide"></a>nullable 형식(C# 프로그래밍 가이드)
 Nullable 형식은 <xref:System.Nullable%601?displayProperty=nameWithType> 구조체의 인스턴스입니다. Null 허용 형식은 해당 내부 형식의 올바른 값 범위와 추가 `null` 값을 나타낼 수 있습니다. 예를 들어 "Nullable of Int32"로도 나타내는 `Nullable<Int32>`에는 -2147483648에서 2147483647까지 값이 할당되거나 `null` 값이 할당될 수 있습니다. `Nullable<bool>`에는 [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md) 또는 [null](../../../csharp/language-reference/keywords/null.md) 값이 할당될 수 있습니다. 숫자 및 부울 형식에 `null`을 할당하는 기능은 값을 할당할 수 없는 요소를 포함하는 데이터베이스 및 기타 데이터 형식을 처리할 때 특히 유용합니다. 예를 들어 데이터베이스의 부울 필드는 값 `true` 또는 `false`를 저장하거나 정의되지 않을 수 있습니다. 
   
-[!code-cs[nullable-types](../../../../samples/snippets/csharp/programming-guide/nullable-types/nullable-ex1.cs)]  
+[!code-csharp[nullable-types](../../../../samples/snippets/csharp/programming-guide/nullable-types/nullable-ex1.cs)]  
   
 추가 예제를 보려면 [Null 허용 형식 사용](../../../csharp/programming-guide/nullable-types/using-nullable-types.md)을 참조하세요.  
   
@@ -81,9 +63,8 @@ Nullable 형식은 <xref:System.Nullable%601?displayProperty=nameWithType> 구�
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Nullable>   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C#](../../../csharp/index.md)   
- [C# 참조](../../../csharp/language-reference/index.md)   
+ <xref:System.Nullable>  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [C#](../../../csharp/index.md)  
+ [C# 참조](../../../csharp/language-reference/index.md)  
  ['리프트'란 정확히 어떤 의미입니까?](http://go.microsoft.com/fwlink/?LinkId=112382)
-

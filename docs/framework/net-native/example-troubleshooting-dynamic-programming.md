@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 25a384fa2465be6f4e523410e69aba6813e5c22d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: de808e333506858d6591dab6c7c06e6a3e9ddabd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>예: 동적 프로그래밍 문제 해결
 > [!NOTE]
@@ -60,9 +58,9 @@ AppViewModel.Current.LayoutVM.PageMap
   
  `App.Core.ViewModels.Layout.LayoutApplicationVM`이 다른 네임스페이스에 있어서 메타데이터가 누락되었기 때문에 오류가 발생했을 수도 있습니다.  
   
- 이 경우 `App.Core.ViewModels`에 대해 런타임 지시문을 추가하면 문제가 해결됩니다. 근본 원인은 <xref:System.Type.GetType%28System.String%29?displayProperty=fullName> 메서드에 대한 API 호출에서 **null**이 반환된 것이며, 앱은 충돌이 해결될 때까지 문제를 자동으로 무시합니다.  
+ 이 경우 `App.Core.ViewModels`에 대해 런타임 지시문을 추가하면 문제가 해결됩니다. 근본 원인은 <xref:System.Type.GetType%28System.String%29?displayProperty=nameWithType> 메서드에 대한 API 호출에서 **null**이 반환된 것이며, 앱은 충돌이 해결될 때까지 문제를 자동으로 무시합니다.  
   
- 동적 프로그래밍 시에 [!INCLUDE[net_native](../../../includes/net-native-md.md)]에서 리플렉션 API를 사용할 때는 오류 발생 시 예외를 throw하는 <xref:System.Type.GetType%2A?displayProperty=fullName> 오버로드를 사용하는 것이 좋습니다.  
+ 동적 프로그래밍 시에 [!INCLUDE[net_native](../../../includes/net-native-md.md)]에서 리플렉션 API를 사용할 때는 오류 발생 시 예외를 throw하는 <xref:System.Type.GetType%2A?displayProperty=nameWithType> 오버로드를 사용하는 것이 좋습니다.  
   
 ## <a name="is-this-an-isolated-case"></a>사례의 격리 여부 확인  
  `App.Core.ViewModels` 사용 시에는 다른 문제도 발생할 수 있습니다.  따라서 각 메타데이터 누락 예외를 파악하여 수정할지 아니면 시간 절약을 위해 대형 형식 클래스에 대한 지시문을 추가할지를 결정해야 합니다.  여기서는 생성되는 출력 바이너리의 크기가 증가해도 문제가 없다면 `dynamic`에 대해 `App.Core.ViewModels` 메타데이터를 추가하는 것이 가장 효율적인 방법입니다.  
@@ -71,6 +69,5 @@ AppViewModel.Current.LayoutVM.PageMap
  앱에서 `typeof(LayoutApplicationVM)` 대신 `Type.GetType("LayoutApplicationVM")`를 사용했다면 도구 체인이 `browse` 메타데이터를 보존했을 수 있습니다.  그러나 `invoke` 메타데이터는 작성되지 않았으므로 형식을 인스턴스화할 때 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 예외가 발생합니다. 이 예외를 방지하려면 `dynamic` 정책을 지정하는 형식 또는 네임스페이스에 대해 런타임 지시문을 추가해야 합니다. 런타임 지시문에 대한 자세한 내용은 [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [시작](../../../docs/framework/net-native/getting-started-with-net-native.md)   
+ [시작](../../../docs/framework/net-native/getting-started-with-net-native.md)  
  [예: 데이터를 바인딩하는 경우 예외 처리](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
-

@@ -1,44 +1,25 @@
 ---
 title: "My.Application.Log 출력 필터링(Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - My.Log object, filtering output
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 90fd445227e0c8290ad63fccf807d6d7bdf43ccd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a19bd71f1346be292dcc7b143a0080ac1cf11ec0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>연습: My.Application.Log 출력 필터링(Visual Basic)
 이 연습에서는 `My.Application.Log` 개체에 대한 기본 로그 필터링을 변경하여 `Log` 개체에서 수신기로 전달되는 정보 및 수신기가 작성하는 정보를 제어하는 방법을 보여 줍니다. 구성 정보가 응용 프로그램의 구성 파일에 저장되므로 응용 프로그램을 빌드한 후에도 로깅 동작을 변경할 수 있습니다.  
@@ -162,7 +143,7 @@ ms.lasthandoff: 07/28/2017
 9. `value` 특성의 값을 다시 "정보"로 변경합니다.  
   
     > [!NOTE]
-    >  `DefaultSwitch` 스위치 설정은 `My.Application.Log`만 제어합니다. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=fullName> 및 <xref:System.Diagnostics.Debug?displayProperty=fullName> 클래스의 동작은 변경되지 않습니다.  
+    >  `DefaultSwitch` 스위치 설정은 `My.Application.Log`만 제어합니다. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=nameWithType> 및 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 클래스의 동작은 변경되지 않습니다.  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>My.Application.Log 수신기에 대한 개별 필터링  
  이전 예제에서는 모든 `My.Application.Log` 출력에 대한 필터링을 변경하는 방법을 보여 줍니다. 이 예제에서는 개별 로그 수신기를 필터링하는 방법을 보여 줍니다. 기본적으로 응용 프로그램에는 각각 응용 프로그램의 디버그 출력 및 로그 파일에 기록하는 두 개의 수신기가 있습니다.  
@@ -275,10 +256,9 @@ ms.lasthandoff: 07/28/2017
  배포 후 로그 설정을 변경하는 방법에 대한 자세한 내용은 [응용 프로그램 로그 작업](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [연습: My.Application.Log가 정보를 기록하는 위치 확인](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)   
- [연습: My.Application.Log가 정보를 기록하는 위치 변경](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)   
- [연습: 사용자 지정 로그 수신기 만들기](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)   
- [방법: 로그 메시지 쓰기](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
- [추적 스위치](../../../../framework/debug-trace-profile/trace-switches.md)   
+ [연습: My.Application.Log가 정보를 기록하는 위치 확인](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
+ [연습: My.Application.Log가 정보를 기록하는 위치 변경](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
+ [연습: 사용자 지정 로그 수신기 만들기](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
+ [방법: 로그 메시지 쓰기](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
+ [추적 스위치](../../../../framework/debug-trace-profile/trace-switches.md)  
  [응용 프로그램의 정보 기록](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
-

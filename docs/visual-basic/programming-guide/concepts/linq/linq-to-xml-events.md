@@ -1,52 +1,44 @@
 ---
-title: "LINQ to XML 이벤트 (Visual Basic) | Microsoft 문서"
+title: "LINQ to XML 이벤트 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 34923928-b99c-4004-956e-38f6db25e910
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 2b7756845f155c4683015d54b41f2ecc09b29333
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b19d8f19f9feb1d385f9900d76d2a7af8e89bbeb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="linq-to-xml-events-visual-basic"></a>LINQ to XML 이벤트 (Visual Basic)
-[!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]이벤트를 사용 하는 XML 트리가 변경 될 때 알림을 받을 수 있습니다.  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 이벤트를 통해 XML 트리가 변경될 때 알림을 받을 수 있습니다.  
   
- 모든 <xref:System.Xml.Linq.XObject>.</xref:System.Xml.Linq.XObject> 의 인스턴스에 이벤트를 추가할 수 있습니다. 그런 다음 이벤트 처리기가 수정에 대 한 이벤트 수신 <xref:System.Xml.Linq.XObject>와 해당 하위 항목의.</xref:System.Xml.Linq.XObject> 예를 들어, 이벤트 처리기를 트리의 루트에 추가하고 해당 이벤트 처리기에서 트리의 모든 수정을 처리할 수 있습니다.  
+ <xref:System.Xml.Linq.XObject>의 인스턴스에 이벤트를 추가할 수 있습니다. 이벤트 처리기는 이 <xref:System.Xml.Linq.XObject>와 해당 하위 항목의 수정에 대한 이벤트를 받습니다. 예를 들어, 이벤트 처리기를 트리의 루트에 추가하고 해당 이벤트 처리기에서 트리의 모든 수정을 처리할 수 있습니다.  
   
- 에 대 한 예제 [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)] <xref:System.Xml.Linq.XObject.Changing>및 <xref:System.Xml.Linq.XObject.Changed>.</xref:System.Xml.Linq.XObject.Changed> </xref:System.Xml.Linq.XObject.Changing> 이벤트 참조  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 이벤트의 예제는 <xref:System.Xml.Linq.XObject.Changing> 및 <xref:System.Xml.Linq.XObject.Changed>를 참조하세요.  
   
 ## <a name="types-and-events"></a>형식 및 이벤트  
  이벤트 작업을 할 때 다음 형식을 사용할 수 있습니다.  
   
 |형식|설명|  
 |----------|-----------------|  
-|<xref:System.Xml.Linq.XObjectChange></xref:System.Xml.Linq.XObjectChange>|<xref:System.Xml.Linq.XObject>.</xref:System.Xml.Linq.XObject> 에 대 한 이벤트가 발생할 때 이벤트 형식을 지정합니다|  
-|<xref:System.Xml.Linq.XObjectChangeEventArgs></xref:System.Xml.Linq.XObjectChangeEventArgs>|에 대 한 데이터를 제공 된 <xref:System.Xml.Linq.XObject.Changing>및 <xref:System.Xml.Linq.XObject.Changed>이벤트.</xref:System.Xml.Linq.XObject.Changed> </xref:System.Xml.Linq.XObject.Changing>|  
+|<xref:System.Xml.Linq.XObjectChange>|<xref:System.Xml.Linq.XObject>에 대한 이벤트가 발생할 때 이벤트 형식을 지정합니다.|  
+|<xref:System.Xml.Linq.XObjectChangeEventArgs>|<xref:System.Xml.Linq.XObject.Changing> 및 <xref:System.Xml.Linq.XObject.Changed> 이벤트에 대한 데이터를 제공합니다.|  
   
  다음 이벤트는 XML 트리를 수정할 때 발생합니다.  
   
 |Event|설명|  
 |-----------|-----------------|  
-|<xref:System.Xml.Linq.XObject.Changing></xref:System.Xml.Linq.XObject.Changing>|이 바로 전에 발생 <xref:System.Xml.Linq.XObject>또는 해당 하위 항목이 변경 되기.</xref:System.Xml.Linq.XObject>|  
-|<xref:System.Xml.Linq.XObject.Changed></xref:System.Xml.Linq.XObject.Changed>|발생 경우는 <xref:System.Xml.Linq.XObject>변경 되거나 해당 하위 항목의 변경 된.</xref:System.Xml.Linq.XObject>|  
+|<xref:System.Xml.Linq.XObject.Changing>|이 <xref:System.Xml.Linq.XObject> 또는 해당 하위 항목이 변경되기 직전에 발생합니다.|  
+|<xref:System.Xml.Linq.XObject.Changed>|<xref:System.Xml.Linq.XObject>가 변경되거나 해당 하위 항목이 변경될 때 발생합니다.|  
   
 ## <a name="example"></a>예제  
   

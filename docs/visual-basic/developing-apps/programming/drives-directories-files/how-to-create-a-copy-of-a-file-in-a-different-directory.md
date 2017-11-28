@@ -1,44 +1,26 @@
 ---
 title: "방법: Visual Basic에서 다른 디렉터리에 파일의 복사본 만들기"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - My.Computer.FileSystem.CopyFile method, copying files [Visual Basic]
-- files, copying
-- CopyFile method, copying files in Visual Basic
+- files [Visual Basic], copying
+- CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: 88e2145c-d414-45a5-ad03-6f5d58ecca26
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0fe37ba940172e83574505d4c82e196f60dfc1eb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ef6fcfaa38343d0fb137571b82f4d2719f3d61ef
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-a-different-directory-in-visual-basic"></a>방법: Visual Basic에서 다른 디렉터리에 파일의 복사본 만들기
 `My.Computer.FileSystem.CopyFile` 메서드를 사용하면 파일을 복사할 수 있습니다. 해당 매개 변수를 통해 기존 파일을 덮어쓰고, 파일 이름을 바꾸고, 작업의 진행률을 표시하고, 사용자가 작업을 취소할 수 있습니다.  
@@ -52,11 +34,11 @@ ms.lasthandoff: 07/28/2017
 ## <a name="robust-programming"></a>강력한 프로그래밍  
  다음 조건에서는 예외가 throw될 수 있습니다.  
   
--   길이가 0인 문자열이거나, 공백만 포함하거나, 잘못된 문자를 포함하거나, 경로가 장치 경로인 경우(\\\\.\\로 시작됨)와 같은 여러 가지 이유 중 하나로 경로가 유효하지 않은 경우(<xref:System.ArgumentException>)  
+-   길이가 0인 문자열이거나, 공백만 포함하거나, 잘못된 문자를 포함하거나, 경로가 장치 경로인 경우(\\\\.\\로 시작됨)와 같은 여러 가지 이유 중 하나로 경로가 올바르지 않은 경우(<xref:System.ArgumentException>)  
   
 -   시스템이 절대 경로를 검색할 수 없는 경우(<xref:System.ArgumentException>)  
   
--   경로가 `Nothing`이기 때문에 유효하지 않은 경우(<xref:System.ArgumentNullException>)  
+-   경로가 `Nothing`이기 때문에 올바르지 않은 경우(<xref:System.ArgumentNullException>)  
   
 -   소스 파일이 잘못되었거나 없는 경우(<xref:System.IO.FileNotFoundException>)  
   
@@ -81,11 +63,10 @@ ms.lasthandoff: 07/28/2017
 -   경로를 보는 데 필요한 권한이 사용자에게 없는 경우(<xref:System.Security.SecurityException>)  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>   
- <xref:Microsoft.VisualBasic.FileIO.UICancelOption>   
- [방법: 특정 패턴의 파일을 디렉터리에 복사](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)   
- [방법: 동일한 디렉터리에 파일의 복사본 만들기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)   
- [방법: 디렉터리를 다른 디렉터리에 복사](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)   
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>  
+ <xref:Microsoft.VisualBasic.FileIO.UICancelOption>  
+ [방법: 특정 패턴의 파일을 디렉터리에 복사](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
+ [방법: 동일한 디렉터리에 파일의 복사본 만들기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-the-same-directory.md)  
+ [방법: 디렉터리를 다른 디렉터리에 복사](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-a-directory-to-another-directory.md)  
  [방법: 파일 이름 바꾸기](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)
-

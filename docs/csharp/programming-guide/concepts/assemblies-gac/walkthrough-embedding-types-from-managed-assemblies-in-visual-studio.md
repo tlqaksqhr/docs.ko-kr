@@ -1,30 +1,21 @@
 ---
 title: "연습: Visual Studio에서 관리되는 어셈블리의 형식 포함(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: cbd95c71525a92714ab5758855964e323345b2e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7b003e76229a06883adc22f933f08663330f0c9d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>연습: Visual Studio에서 관리되는 어셈블리의 형식 포함(C#)
 강력한 이름의 관리되는 어셈블리에서 형식 정보를 포함하는 경우 응용 프로그램에서 유형을 느슨하게 연결하여 버전 독립성을 확보할 수 있습니다. 즉, 각 버전에 대해 컴파일하지 않고도 관리되는 라이브러리의 여러 버전에서 형식을 사용하도록 프로그램을 작성할 수 있습니다.  
@@ -49,7 +40,7 @@ ms.lasthandoff: 07/28/2017
   
 -   상수는 포함되지 않습니다.  
   
--   <xref:System.Collections.Generic.Dictionary%602?displayProperty=fullName> 클래스는 포함된 형식을 키로 지원하지 않습니다. 포함된 형식을 키로서 지원하도록 고유한 사전 형식을 구현할 수 있습니다.  
+-   <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 클래스는 포함된 형식을 키로 지원하지 않습니다. 포함된 형식을 키로서 지원하도록 고유한 사전 형식을 구현할 수 있습니다.  
   
  이 연습에서는 다음을 수행합니다.  
   
@@ -250,8 +241,7 @@ ms.lasthandoff: 07/28/2017
 6.  파일 탐색기에서 출력 경로 폴더를 엽니다(예: C:\TypeEquivalenceSample). TypeEquivalenceClient.exe를 두 번 클릭하여 프로그램을 실행합니다. 다시 컴파일하지 않고도 이 프로그램은 TypeEquivalenceRuntime 어셈블리의 새 버전을 반영합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [/link(C# 컴파일러 옵션)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)   
- [C# 프로그래밍 가이드](../../../../csharp/programming-guide/index.md)   
- [어셈블리를 사용한 프로그래밍](../../../../framework/app-domains/programming-with-assemblies.md)   
+ [/link(C# 컴파일러 옵션)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
+ [C# 프로그래밍 가이드](../../../../csharp/programming-guide/index.md)  
+ [어셈블리를 사용한 프로그래밍](../../../../framework/app-domains/programming-with-assemblies.md)  
  [어셈블리 및 전역 어셈블리 캐시(C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
-

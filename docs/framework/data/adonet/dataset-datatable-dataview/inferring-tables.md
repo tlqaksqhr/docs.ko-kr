@@ -1,23 +1,26 @@
 ---
-title: "테이블 유추 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "테이블 유추"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: ae6f7827b7206544ff7547cc04f44b7cda34bef8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 테이블 유추
-XML 문서로부터 <xref:System.Data.DataSet>의 스키마를 유추할 때 ADO.NET에서는 우선 테이블을 나타내는 XML 요소를 결정합니다.  다음 XML 구조는 **DataSet** 스키마의 테이블이 됩니다.  
+# <a name="inferring-tables"></a>테이블 유추
+XML 문서로부터 <xref:System.Data.DataSet>의 스키마를 유추할 때 ADO.NET에서는 우선 테이블을 나타내는 XML 요소를 결정합니다. 다음 XML 구조에 대 한 테이블의 결과 **DataSet** 스키마:  
   
 -   특성이 있는 요소  
   
@@ -25,10 +28,10 @@ XML 문서로부터 <xref:System.Data.DataSet>의 스키마를 유추할 때 ADO
   
 -   반복되는 요소  
   
-## 특성이 있는 요소  
- 자신에 지정된 특성을 갖고 있는 요소는 유추된 테이블이 됩니다.  예를 들어, 다음과 같은 XML을 가정해 봅시다.  
+## <a name="elements-with-attributes"></a>특성이 있는 요소  
+ 자신에 지정된 특성을 갖고 있는 요소는 유추된 테이블이 됩니다. 예를 들어, 다음과 같은 XML을 가정해 봅시다.  
   
-```  
+```xml  
 <DocumentElement>  
   <Element1 attr1="value1"/>  
   <Element1 attr1="value2">Text1</Element1>  
@@ -37,19 +40,19 @@ XML 문서로부터 <xref:System.Data.DataSet>의 스키마를 유추할 때 ADO
   
  위 유추 과정에서 "Element1"이라는 테이블이 생성됩니다.  
   
- **DataSet:** DocumentElement  
+ **데이터 집합:** DocumentElement  
   
  **Table:** Element1  
   
-|attr1|Element1\_Text|  
+|attr1|Element1_Text|  
 |-----------|--------------------|  
 |value1||  
 |value2|Text1|  
   
-## 자식 요소가 있는 요소  
- 자식 요소를 갖고 있는 요소는 유추된 테이블이 됩니다.  예를 들어, 다음과 같은 XML을 가정해 봅시다.  
+## <a name="elements-with-child-elements"></a>자식 요소가 있는 요소  
+ 자식 요소를 갖고 있는 요소는 유추된 테이블이 됩니다. 예를 들어, 다음과 같은 XML을 가정해 봅시다.  
   
-```  
+```xml  
 <DocumentElement>  
   <Element1>  
     <ChildElement1>Text1</ChildElement1>  
@@ -59,7 +62,7 @@ XML 문서로부터 <xref:System.Data.DataSet>의 스키마를 유추할 때 ADO
   
  위 유추 과정에서 "Element1"이라는 테이블이 생성됩니다.  
   
- **DataSet:** DocumentElement  
+ **데이터 집합:** DocumentElement  
   
  **Table:** Element1  
   
@@ -67,9 +70,9 @@ XML 문서로부터 <xref:System.Data.DataSet>의 스키마를 유추할 때 ADO
 |-------------------|  
 |Text1|  
   
- 문서 요소 또는 루트 요소는 열로 유추되는 특성이나 자식 요소를 갖고 있는 경우 유추된 테이블이 됩니다.  문서 요소에 열로 유추되는 특성이나 자식 요소가 없으면 문서 요소는 **DataSet**으로 유추됩니다.  예를 들어, 다음과 같은 XML을 가정해 봅시다.  
+ 문서 요소 또는 루트 요소는 열로 유추되는 특성이나 자식 요소를 갖고 있는 경우 유추된 테이블이 됩니다. 문서 요소에 특성이 나 열으로 유추 되는 자식 요소가 있는 경우 요소도 유추 됩니다는 **DataSet**합니다. 예를 들어, 다음과 같은 XML을 가정해 봅시다.  
   
-```  
+```xml  
 <DocumentElement>  
   <Element1>Text1</Element1>  
   <Element2>Text2</Element2>  
@@ -78,7 +81,7 @@ XML 문서로부터 <xref:System.Data.DataSet>의 스키마를 유추할 때 ADO
   
  위 유추 과정에서 "DocumentElement"라는 테이블이 생성됩니다.  
   
- **DataSet:** NewDataSet  
+ **데이터 집합:** NewDataSet  
   
  **Table:** DocumentElement  
   
@@ -88,15 +91,15 @@ XML 문서로부터 <xref:System.Data.DataSet>의 스키마를 유추할 때 ADO
   
  또는 다음과 같은 XML을 가정해 봅시다.  
   
-```  
+```xml  
 <DocumentElement>  
   <Element1 attr1="value1" attr2="value2"/>  
 </DocumentElement>  
 ```  
   
- 위 유추 과정에서 "Element1"이라는 테이블이 포함된 "DocumentElement"라는 **DataSet**이 생성됩니다.  
+ 위 유추 과정에서 생성 한 **DataSet** "Element1" 이라는 테이블이 포함 된 "DocumentElement" 라는  
   
- **DataSet:** DocumentElement  
+ **데이터 집합:** DocumentElement  
   
  **Table:** Element1  
   
@@ -104,10 +107,10 @@ XML 문서로부터 <xref:System.Data.DataSet>의 스키마를 유추할 때 ADO
 |-----------|-----------|  
 |value1|value2|  
   
-## 반복되는 요소  
- 반복되는 요소는 하나의 유추된 테이블이 됩니다.  예를 들어, 다음과 같은 XML을 가정해 봅시다.  
+## <a name="repeating-elements"></a>반복되는 요소  
+ 반복되는 요소는 하나의 유추된 테이블이 됩니다. 예를 들어, 다음과 같은 XML을 가정해 봅시다.  
   
-```  
+```xml  
 <DocumentElement>  
   <Element1>Text1</Element1>  
   <Element1>Text2</Element1>  
@@ -116,19 +119,19 @@ XML 문서로부터 <xref:System.Data.DataSet>의 스키마를 유추할 때 ADO
   
  위 유추 과정에서 "Element1"이라는 테이블이 생성됩니다.  
   
- **DataSet:** DocumentElement  
+ **데이터 집합:** DocumentElement  
   
  **Table:** Element1  
   
-|Element1\_Text|  
+|Element1_Text|  
 |--------------------|  
 |Text1|  
 |Text2|  
   
-## 참고 항목  
- [XML에서 DataSet 관계형 구조 유추](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)   
- [XML로부터 DataSet 로드](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)   
- [XML로부터 DataSet 스키마 정보 로드](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)   
- [DataSet에서 XML 사용](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)   
- [DataSets, DataTables 및 DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
+## <a name="see-also"></a>참고 항목  
+ [XML에서 데이터 집합 관계형 구조 유추](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
+ [XML 로부터 DataSet 로드](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
+ [XML에서 데이터 집합 스키마 정보를 로드합니다.](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
+ [데이터 집합에서 XML 사용](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [DataSet, DataTable 및 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)

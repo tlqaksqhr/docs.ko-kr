@@ -1,39 +1,21 @@
 ---
 title: "익명 형식(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 24ebf1c98e14eaf74572a6143ea6865d89735a6e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 80a0d3c99f7765dba1166fd9c5ecc3e7fbadc7a1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="anonymous-types-c-programming-guide"></a>익명 형식(C# 프로그래밍 가이드)
 익명 형식을 사용하면 먼저 명시적으로 형식을 정의할 필요 없이 읽기 전용 속성 집합을 단일 개체로 편리하게 캡슐화할 수 있습니다. 형식 이름은 컴파일러에 의해 생성되며 소스 코드 수준에서 사용할 수 없습니다. 각 속성의 형식은 컴파일러에서 유추합니다.  
@@ -58,7 +40,7 @@ Console.WriteLine(v.Amount + v.Message);
   
  익명 형식에 멤버 이름을 지정하지 않으면 컴파일러가 익명 형식 멤버에 해당 멤버를 초기화하는 데 사용된 속성과 동일한 이름을 제공합니다. 앞의 예제에 표시된 것처럼, 식으로 초기화되는 속성의 이름을 제공해야 합니다. 다음 예제에서 익명 형식의 속성 이름은 `Color` 및 `Price`입니다.  
   
- [!code-cs[csRef30Features#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/anonymous-types_1.cs)]  
+ [!code-csharp[csRef30Features#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/anonymous-types_1.cs)]  
   
  일반적으로 무명 형식을 사용하여 변수를 초기화할 때는 [var](../../../csharp/language-reference/keywords/var.md)을 사용하여 변수를 암시적 형식 지역 변수로 선언합니다. 컴파일러만 익명 형식의 기본 이름에 액세스할 수 있으므로 변수 선언에는 형식 이름을 지정할 수 없습니다. `var`에 대한 자세한 내용은 [암시적 형식 지역 변수](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)를 참조하세요.  
   
@@ -78,8 +60,7 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
  익명 형식에 대한 <xref:System.Object.Equals%2A> 및 <xref:System.Object.GetHashCode%2A> 메서드는 속성의 `Equals` 및 `GetHashCode` 메서드 측면에서 정의되므로 동일한 익명 형식의 두 인스턴스는 해당 속성이 모두 동일한 경우에만 동일합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [개체 이니셜라이저 및 컬렉션 이니셜라이저](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)   
- [C#에서 LINQ 시작](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [개체 이니셜라이저 및 컬렉션 이니셜라이저](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+ [C#에서 LINQ 시작](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
  [LINQ 쿼리 식](../../../csharp/programming-guide/linq-query-expressions/index.md)
-

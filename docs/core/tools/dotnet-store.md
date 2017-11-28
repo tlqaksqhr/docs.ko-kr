@@ -7,12 +7,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
 ms.openlocfilehash: fcf1eeba0709e05cff124bc3ae7bb93f4ca57128
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-store"></a>dotnet store
 
@@ -87,4 +86,3 @@ ms.lasthandoff: 08/14/2017
 ## <a name="see-also"></a>참고 항목
 
 [런타임 패키지 저장소](../deploying/runtime-store.md)   
-

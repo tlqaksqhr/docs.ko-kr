@@ -1,39 +1,19 @@
 ---
 title: "같음 비교(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- object equality [C#]
+helpviewer_keywords: object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 199257b1fe371dea3e4ee1eedcf11f3bdce02366
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 948bbc1b5b8535cc31ea362497fa69a816b43edc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>같음 비교(C# 프로그래밍 가이드)
 두 값이 같은지를 비교해야 하는 경우가 있습니다. 때로는 두 변수에 포함된 값이 같음을 의미하는 *값 같음*(*동등*이라고도 함)을 테스트합니다. 다른 경우에는 두 변수가 메모리에서 동일한 기본 개체를 참조하는지 여부를 확인해야 합니다. 이 유형의 같음을 *참조 같음* 또는 *ID*라고 합니다. 이 항목에서는 이러한 두 종류의 같음을 설명하고 자세한 정보가 있는 다른 항목에 대한 링크를 제공합니다.  
@@ -41,7 +21,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="reference-equality"></a>참조 같음  
  참조 같음은 두 개체 참조가 동일한 기본 개체를 참조함을 의미합니다. 이러한 상황은 다음 예제와 같이 단순 할당을 통해 발생할 수 있습니다.  
   
- [!code-cs[csProgGuideStatements#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/equality-comparisons_1.cs)]  
+ [!code-csharp[csProgGuideStatements#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/equality-comparisons_1.cs)]  
   
  이 코드에서는 두 개체가 생성되지만 대입문 이후 두 참조가 동일한 개체를 참조합니다. 따라서 참조 같음이 있습니다. 두 참조가 동일한 개체를 참조하는지 확인하려면 <xref:System.Object.ReferenceEquals%2A> 메서드를 사용합니다.  
   
@@ -66,7 +46,7 @@ if( b == a)
  그러나 동등이 형식의 모든 필드를 기반으로 해야 한다는 요구 사항은 없습니다. 하위 집합을 기반으로 할 수도 있습니다. 소유하지 않은 형식을 비교하는 경우 해당 형식에 대해 동등이 정의된 방식을 구체적으로 알아야 합니다. 사용자 고유의 클래스 및 구조체에서 값 같음을 정의하는 방법에 대한 자세한 내용은 [방법: 형식에 대한 값 같음 정의](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md)를 참조하세요.  
   
 ### <a name="value-equality-for-floating-point-values"></a>부동 소수점 값에 대한 값 같음  
- 부동 소수점 값([double](../../../csharp/language-reference/keywords/double.md) 및 [float](../../../csharp/language-reference/keywords/float.md))의 같음 비교에서는 이진 컴퓨터의 부정확한 부동 소수점 연산 때문에 문제가 발생합니다. 자세한 내용은 <xref:System.Double?displayProperty=fullName> 항목의 설명을 참조하세요.  
+ 부동 소수점 값([double](../../../csharp/language-reference/keywords/double.md) 및 [float](../../../csharp/language-reference/keywords/float.md))의 같음 비교에서는 이진 컴퓨터의 부정확한 부동 소수점 연산 때문에 문제가 발생합니다. 자세한 내용은 <xref:System.Double?displayProperty=nameWithType> 항목의 설명을 참조하세요.  
   
 ## <a name="related-topics"></a>관련 항목  
   
@@ -79,4 +59,3 @@ if( b == a)
   
 ## <a name="see-also"></a>참고 항목  
  [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)
-

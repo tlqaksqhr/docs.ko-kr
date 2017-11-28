@@ -1,40 +1,20 @@
 ---
 title: "#<a name=\"if-c-reference\"></a>if(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- '#if'
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- '#if directive [C#]'
+f1_keywords: '#if'
+helpviewer_keywords: '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e4e3b79f64f5190d48d7248726ecdf031ad685e6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f70dac98d5731370ae961f795b08a71946867d9b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="if-c-reference"></a>#if(C# 참조)
 C# 컴파일러는 `#if` 지시문과 [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) 지시문이 차례로 확인되면 지정된 기호가 정의되어 있어야 지시문 사이의 코드를 컴파일합니다.  C 및 C++와 달리 기호에 숫자 값을 할당할 수는 없습니다. C#의 #if 문은 부울이며 기호가 정의되었는지 여부만을 테스트합니다. 예를 들면 다음과 같습니다.  
@@ -66,7 +46,8 @@ C# 컴파일러는 `#if` 지시문과 [#endif](../../../csharp/language-referenc
   
 ```csharp
 // preprocessor_if.cs  
-#define DEBUG#define MYTEST  
+#define DEBUG
+#define MYTEST  
 using System;  
 public class MyClass   
 {  
@@ -85,9 +66,8 @@ public class MyClass
 }  
 ```  
   
- **DEBUG and MYTEST are defined**   
+ **DEBUG and MYTEST are defined**  
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
  [C# 전처리기 지시문](../../../csharp/language-reference/preprocessor-directives/index.md)
-

@@ -1,48 +1,30 @@
 ---
 title: "방법: Visual Basic에서 레지스트리 키 만들기 및 값 설정"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - RegistryKey.CreateSubKey
 - RegistryKey.SetValue
-dev_langs:
-- VB
 helpviewer_keywords:
-- registry keys, creating
-- registry, adding values
-- registry, adding keys
-- registry keys, setting values
+- registry keys [Visual Basic], creating
+- registry [Visual Basic], adding values
+- registry [Visual Basic], adding keys
+- registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: b6e71c106592490b92cf6f2dc02e59cddb28b95d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 106a98a1b15c37eb2cac05e1a681bf7dfed3543d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>방법: Visual Basic에서 레지스트리 키 만들기 및 값 설정
 `My.Computer.Registry` 개체의 `CreateSubKey` 메서드를 사용하여 레지스트리 키를 만들 수 있습니다.  
@@ -97,9 +79,8 @@ ms.lasthandoff: 07/28/2017
  이 프로세스를 실행하려면 어셈블리에 <xref:System.Security.Permissions.RegistryPermission> 클래스에서 부여한 권한 수준이 필요합니다. 부분 신뢰 컨텍스트에서 실행하는 경우 프로세스가 권한 부족으로 인해 예외를 throw할 수 있습니다. 마찬가지로, 사용자에게 설정을 만들거나 쓸 수 있는 올바른 ACL이 있어야 합니다. 예를 들어 코드 액세스 보안 권한이 있는 로컬 응용 프로그램에는 운영 체제 권한이 없을 수 있습니다. 자세한 내용은 [코드 액세스 보안 기본 사항](https://msdn.microsoft.com/library/33tceax8)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>   
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>   
- <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>   
- [레지스트리 읽기 및 쓰기](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)   
+ <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
+ <xref:Microsoft.VisualBasic.MyServices.RegistryProxy.CurrentUser%2A>  
+ <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>  
+ [레지스트리 읽기 및 쓰기](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)  
  [코드 액세스 보안 기본 사항](https://msdn.microsoft.com/library/33tceax8)
-

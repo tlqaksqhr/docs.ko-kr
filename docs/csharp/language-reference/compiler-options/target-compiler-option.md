@@ -1,43 +1,24 @@
 ---
 title: "-target(C# 컴파일러 옵션)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /target
-dev_langs:
-- CSharp
+f1_keywords: /target
 helpviewer_keywords:
 - target compiler options [C#]
 - /target compiler options [C#]
 - assemblies [C#], compiling
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 4666f0305fc2de35c1fa594ccef3dd3a64c0f67c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 22dc86ce0c0a24681d05e54e5f1ba4f36295659a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="target-c-compiler-options"></a>/target(C# 컴파일러 옵션)
 **/target** 컴파일러 옵션은 다음 네 가지 형태 중 하나로 지정할 수 있습니다.  
@@ -60,7 +41,7 @@ ms.lasthandoff: 07/28/2017
  [/target:winmdobj](../../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)  
  중간 .winmdobj 파일을 만듭니다.  
   
- **/target:module**을 지정하지 않으면 **/target**은 .NET Framework 어셈블리 매니페스트가 출력 파일에 배치되도록 합니다. 자세한 내용은 [공용 언어 런타임의 어셈블리](https://msdn.microsoft.com/library/k3677y81) 및 [공통 특성](http://msdn.microsoft.com/library/2f48a7ec-9683-4899-a1d2-a08be8fc558b)을 참조하세요.  
+ **/target:module**을 지정하지 않으면 **/target**은 .NET Framework 어셈블리 매니페스트가 출력 파일에 배치되도록 합니다. 자세한 내용은 [공용 언어 런타임의 어셈블리](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md) 및 [공통 특성](../../programming-guide/concepts/attributes/common-attributes.md)을 참조하세요.  
   
  어셈블리 매니페스트는 컴파일의 첫 번째 .exe 출력 파일 또는 .exe 출력 파일이 없는 경우 첫 번째 DLL에 배치됩니다. 예를 들어 다음 명령줄에서 매니페스트는 `1.exe`에 배치됩니다.  
   
@@ -86,7 +67,6 @@ public class TestClass
  이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)   
- [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)   
+ [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)  
+ [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)  
  [/subsystemversion(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/subsystemversion-compiler-option.md)
-

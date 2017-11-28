@@ -17,16 +17,15 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 3f6beb720819a1be4e45bf4cefac3d805d7ee5e7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 63832eb1b7c750bb4ef86660304ab883a7c3695f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="globalizing-and-localizing-net-framework-applications"></a>.NET Framework 응용 프로그램 전역화 및 지역화
 하나 이상의 언어로 지역화할 수 있는 응용 프로그램을 포함하여 [지역화 대비 응용 프로그램](http://msdn.microsoft.com/goglobal/bb978433.aspx)의 개발에는 전역화, 지역화 가능성 검토 및 지역화의 세 가지 단계가 포함됩니다.  
@@ -67,7 +66,7 @@ ms.lasthandoff: 09/05/2017
  전역화 및 지역화 구현과 world-ready ASP.NET 응용 프로그램 개발을 위한 최선의 구현 방법을 소개합니다.  
   
 ## <a name="reference"></a>참조  
- <xref:System.Globalization?displayProperty=fullName> 네임스페이스  
+ <xref:System.Globalization?displayProperty=nameWithType> 네임스페이스  
  언어, 국가/지역, 사용하는 달력, 날짜, 통화 및 숫자 형식 패턴, 문자열 정렬 순서 등의 문화권 관련 정보를 정의하는 클래스를 포함합니다.  
   
  <xref:System.Resources> 네임스페이스  
@@ -81,4 +80,3 @@ ms.lasthandoff: 09/05/2017
   
  [Winres.exe(Windows Forms 리소스 편집기)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)  
  Winres.exe를 사용하여 Windows Forms 폼을 지역화하는 방법을 설명합니다.
-

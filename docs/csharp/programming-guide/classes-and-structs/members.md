@@ -1,39 +1,21 @@
 ---
 title: "멤버(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 184d4f2976b8594c308efeb113a0490499e3460e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 98446a2eb0415c92aa44cbddf8539477a00a2666
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="members-c-programming-guide"></a>멤버(C# 프로그래밍 가이드)
 클래스 및 구조체에는 해당 데이터와 동작을 나타내는 멤버가 있습니다. 클래스의 멤버에는 클래스에서 선언된 모든 멤버가 상속 계층 구조의 모든 클래스에서 선언된 모든 멤버(생성자 및 종료자 제외)와 함께 포함됩니다. 기본 클래스의 private 멤버는 상속되지만 파생 클래스에서 액세스할 수 없습니다.  
@@ -54,16 +36,15 @@ ms.lasthandoff: 07/28/2017
 |[중첩 형식](../../../csharp/programming-guide/classes-and-structs/nested-types.md)|중첩 형식은 다른 형식 내에서 선언된 형식입니다. 중첩 형식은 대체로 개체를 포함하는 형식에서만 사용되는 개체를 설명하는 데 사용됩니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [클래스](../../../csharp/programming-guide/classes-and-structs/classes.md)   
- [메서드](../../../csharp/programming-guide/classes-and-structs/methods.md)   
- [생성자](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [종료자](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
- [속성](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [필드](../../../csharp/programming-guide/classes-and-structs/fields.md)   
- [인덱서](../../../csharp/programming-guide/indexers/index.md)   
- [이벤트](../../../csharp/programming-guide/events/index.md)   
- [중첩 형식](../../../csharp/programming-guide/classes-and-structs/nested-types.md)   
- [연산자](../../../csharp/programming-guide/statements-expressions-operators/operators.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [클래스](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+ [메서드](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+ [생성자](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+ [종료자](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+ [속성](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [필드](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+ [인덱서](../../../csharp/programming-guide/indexers/index.md)  
+ [이벤트](../../../csharp/programming-guide/events/index.md)  
+ [중첩 형식](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
+ [연산자](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
  [오버로드할 수 있는 연산자](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)
-

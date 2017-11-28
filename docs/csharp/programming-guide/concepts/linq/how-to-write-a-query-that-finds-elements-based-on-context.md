@@ -1,25 +1,21 @@
 ---
 title: "방법: 컨텍스트에 따라 요소를 찾는 쿼리 작성(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: a9e818c5e0967a6d146cd48b81aebcba4bbdde3f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3c0592dee4da6d8b8b18ad4c3dc349398bd87a77
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>방법: 컨텍스트에 따라 요소를 찾는 쿼리 작성(C#)
 컨텍스트에 따라 요소를 선택하는 쿼리를 작성해야 하는 경우가 있습니다. 이전 또는 다음 형제 요소를 기준으로 필터링하거나, 자식 또는 상위 요소를 기준으로 필터링하려고 할 수 있습니다.  
@@ -111,9 +107,8 @@ id = 6
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Xml.Linq.XElement.Parse%2A>   
- <xref:System.Xml.Linq.XContainer.Descendants%2A>   
- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>   
- <xref:System.Linq.Enumerable.FirstOrDefault%2A>   
+ <xref:System.Xml.Linq.XElement.Parse%2A>  
+ <xref:System.Xml.Linq.XContainer.Descendants%2A>  
+ <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
+ <xref:System.Linq.Enumerable.FirstOrDefault%2A>  
  [기본 쿼리(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-

@@ -1,52 +1,33 @@
 ---
 title: "명령줄 인수(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- command-line arguments [C#]
+helpviewer_keywords: command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 025ed2c451c0a657ce71db56df603302097fc7ee
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f0d404ae0384ec97b0eb78c6284e07cac8065548
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>명령줄 인수(C# 프로그래밍 가이드)
 다음 방법 중 하나로 메서드를 정의하여 인수를 `Main` 메서드에 보낼 수 있습니다.  
   
- [!code-cs[csProgGuideMain#2](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_1.cs)]  
+ [!code-csharp[csProgGuideMain#2](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_1.cs)]  
   
- [!code-cs[csProgGuideMain#3](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_2.cs)]  
+ [!code-csharp[csProgGuideMain#3](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_2.cs)]  
   
 > [!NOTE]
->  Windows Forms 응용 프로그램의 `Main` 메서드에서 명령줄 인수를 사용하도록 설정하려면 program.cs에서 `Main`의 시그니처를 수동으로 수정해야 합니다. Windows Forms 디자이너에서 생성된 코드는 입력 매개 변수 없이 `Main`을 만듭니다. <xref:System.Environment.CommandLine%2A?displayProperty=fullName> 또는 <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=fullName>를 사용하여 콘솔 또는 Windows 응용 프로그램의 임의 지점에서 명령줄 인수에 액세스할 수 있습니다.  
+>  Windows Forms 응용 프로그램의 `Main` 메서드에서 명령줄 인수를 사용하도록 설정하려면 program.cs에서 `Main`의 시그니처를 수동으로 수정해야 합니다. Windows Forms 디자이너에서 생성된 코드는 입력 매개 변수 없이 `Main`을 만듭니다. <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> 또는 <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType>를 사용하여 콘솔 또는 Windows 응용 프로그램의 임의 지점에서 명령줄 인수에 액세스할 수 있습니다.  
   
  `Main` 메서드의 매개 변수는 명령줄 인수를 나타내는 <xref:System.String> 배열입니다. 일반적으로 다음과 같이 `Length` 속성을 테스트하여 인수가 있는지 확인합니다.  
   
- [!code-cs[csProgGuideMain#4](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_3.cs)]  
+ [!code-csharp[csProgGuideMain#4](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_3.cs)]  
   
  <xref:System.Convert> 클래스 또는 `Parse` 메서드를 사용하여 문자열 인수를 숫자 형식으로 변환할 수도 있습니다. 예를 들어 다음 문은 <xref:System.Int64.Parse%2A> 메서드를 사용하여 `string`을 `long` 숫자로 변환합니다.  
   
@@ -75,7 +56,7 @@ long num = Convert.ToInt64(s);
   
 1.  다음 코드를 텍스트 편집기에 붙여넣고 이름 `Factorial.cs`를 사용하여 파일을 텍스트 파일로 저장합니다.  
   
-     [!code-cs[csProgGuideMain#16](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_4.cs)]  
+     [!code-csharp[csProgGuideMain#16](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/command-line-arguments_4.cs)]  
   
 2.  **시작** 화면이나 **시작** 메뉴에서 Visual Studio **개발자 명령 프롬프트** 창을 열고 방금 만든 파일이 포함된 폴더로 이동합니다.  
   
@@ -97,11 +78,10 @@ long num = Convert.ToInt64(s);
  명령줄 인수를 사용하는 방법에 대한 자세한 내용은 [방법: 명령줄을 사용하여 어셈블리 만들기 및 사용](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Environment?displayProperty=fullName>   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [Main()과 명령줄 인수](../../../csharp/programming-guide/main-and-command-args/index.md)   
- [방법: 명령줄 인수 표시](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)   
- [방법: foreach를 사용하여 명령줄 인수 액세스](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)   
- [Main() 반환 값](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)   
+ <xref:System.Environment?displayProperty=nameWithType>  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [Main()과 명령줄 인수](../../../csharp/programming-guide/main-and-command-args/index.md)  
+ [방법: 명령줄 인수 표시](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
+ [방법: foreach를 사용하여 명령줄 인수 액세스](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
+ [Main() 반환 값](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
  [클래스](../../../csharp/programming-guide/classes-and-structs/classes.md)
-

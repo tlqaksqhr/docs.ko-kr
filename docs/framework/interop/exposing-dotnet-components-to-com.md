@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - exposing .NET Framework components to COM
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8248d78ffa7360f838ceb0389686ab9b348ffd8d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 9451504b64ddaa8dc0ea6b3a0754257b2c8b3824
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="exposing-net-framework-components-to-com"></a>.NET Framework 구성 요소를 COM에 노출
 .NET 형식을 작성하고 비관리 코드에서 해당 형식을 사용하는 것은 개발자들에게 독특한 활동입니다. 이 섹션에서는 COM 클라이언트와 통합되는 관리 코드를 작성하기 위한 몇 가지 팁을 설명합니다.  
@@ -66,6 +59,5 @@ ms.lasthandoff: 08/21/2017
      강력한 이름의 어셈블리는 전역 어셈블리 캐시에 설치할 수 있고 게시자의 시그니처가 필요합니다. 강력한 이름이 아닌 어셈블리는 클라이언트의 응용 프로그램 디렉터리에 설치해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [비관리 코드와의 상호 운용](../../../docs/framework/interop/index.md)   
+ [비관리 코드와의 상호 운용](../../../docs/framework/interop/index.md)  
  [COM Interop 샘플: COM 클라이언트 및 .NET 서버](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)
-

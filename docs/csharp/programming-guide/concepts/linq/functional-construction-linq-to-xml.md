@@ -1,30 +1,21 @@
 ---
 title: "함수 생성(LINQ to XML)(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 57a82bcf-de03-4f1c-a0c8-9a76e989d542
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: f357de98fae60b3d0b6548ef195b462b4e2f6a5a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fc5dd9ba35ab226b944f8d73593c7351bb5ef224
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="functional-construction-linq-to-xml-c"></a>함수 생성(LINQ to XML)(C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 *함수 생성*이라는 XML 요소를 만드는 강력한 방법을 제공합니다. 함수 생성은 단일 문으로 XML 트리를 만드는 기능입니다.  
@@ -89,4 +80,3 @@ Console.WriteLine(xmlTree);
   
 ## <a name="see-also"></a>참고 항목  
  [XML 트리 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
-

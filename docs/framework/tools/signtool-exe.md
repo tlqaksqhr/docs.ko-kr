@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 06a8b2e41841dfa43609468cce60a3776137b720
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 78814d27e8416d37a018fa3bc1ab643d99970ec9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe(서명 도구)
 서명 도구는 파일에 디지털 서명을 하고, 파일의 서명을 확인하고, 파일에 타임스탬프를 기록하는 명령줄 도구입니다.  
@@ -91,7 +84,7 @@ signtool [command] [options] [file_name | ...]
 |`/csp`  *CSPName*|개인 키 컨테이너를 포함하는 CSP(암호화 서비스 공급자)를 지정합니다.|  
 |`/d`  *Desc*|서명된 콘텐츠에 대한 설명을 지정합니다.|  
 |`/du`  *URL*|서명한 콘텐츠의 부연 설명에 대한 URL(Uniform Resource Locator)을 지정합니다.|  
-|`/f`  *SignCertFile*|파일에 있는 서명 인증서를 지정합니다. 파일이 PFX(개인 정보 교환) 형식이면서 암호로 보호되는 경우, `/p` 옵션을 사용하여 암호를 지정합니다. 파일에 개인 키가 없으면 `/csp` 및 `/k` 옵션을 사용하여 CSP 및 개인 키 컨테이너 이름을 지정합니다.|  
+|`/f`  *SignCertFile*|파일에 있는 서명 인증서를 지정합니다. 파일이 PFX(개인 정보 교환) 형식이면서 암호로 보호되는 경우, `/p` 옵션을 사용하여 암호를 지정합니다. 파일에 개인 키가 없으면 `/csp` 및 `/kc` 옵션을 사용하여 CSP 및 개인 키 컨테이너 이름을 지정합니다.|  
 |`/fd`|파일 서명을 만드는 데 사용할 파일 다이제스트 알고리즘을 지정합니다. 기본값은 SHA1입니다.|  
 |`/i`  *IssuerName*|서명 인증서의 발급자 이름을 지정합니다. 이 값은 발급자의 전체 이름에서 부분 문자열이 될 수 있습니다.|  
 |`/kc`  *PrivKeyContainerName*|개인 키 컨테이너 이름을 지정합니다.|  
@@ -225,6 +218,5 @@ signtool verify /c MyCatalog.cat SystemFile.dll
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [도구](../../../docs/framework/tools/index.md)   
+ [도구](../../../docs/framework/tools/index.md)  
  [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

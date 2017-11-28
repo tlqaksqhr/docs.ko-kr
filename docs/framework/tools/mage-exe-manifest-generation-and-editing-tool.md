@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-caps.latest.revision: 68
+caps.latest.revision: "68"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
+ms.openlocfilehash: 5bb802df171990eca411dda37fc4743de15fc169
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 67551eb207461d5ac68db9f23b48ff7266c39ae9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe(매니페스트 생성 및 편집 도구)
 매니페스트 생성 및 편집 도구(Mage.exe)는 응용 프로그램 매니페스트 및 배포 매니페스트의 생성과 편집을 지원하는 명령줄 도구입니다. Mage.exe는 명령줄 도구로서 일괄 처리 스크립트뿐 아니라 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 응용 프로그램을 비롯한 Windows 기반 응용 프로그램에서도 실행할 수 있습니다.  
@@ -210,9 +203,8 @@ mage -Sign deploy.application -CertFile cert.pfx -Password <passwd>
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)   
- [연습: ClickOnce 응용 프로그램 수동 배포](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)   
- [신뢰할 수 있는 응용 프로그램 배포 개요](/visualstudio/deployment/trusted-application-deployment-overview)   
- [MageUI.exe(매니페스트 생성 및 편집 도구, 그래픽 클라이언트)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)   
+ [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)  
+ [연습: ClickOnce 응용 프로그램 수동 배포](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
+ [신뢰할 수 있는 응용 프로그램 배포 개요](/visualstudio/deployment/trusted-application-deployment-overview)  
+ [MageUI.exe(매니페스트 생성 및 편집 도구, 그래픽 클라이언트)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)  
  [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

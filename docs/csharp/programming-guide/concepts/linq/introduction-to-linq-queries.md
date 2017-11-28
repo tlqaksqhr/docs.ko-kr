@@ -1,45 +1,26 @@
 ---
 title: "LINQ 쿼리 소개(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - deferred execution [LINQ]
 - LINQ, queries
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: ae7a2d03859e95d939ff4c62fa33e07917a873a2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8427a0f439516cbba0b38db25f48b0083a337b1b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ 쿼리 소개(C#)
 *쿼리*는 데이터 소스에서 데이터를 검색하는 식입니다. 쿼리는 일반적으로 특수화된 쿼리 언어로 표현됩니다. 관계형 데이터베이스에는 SQL이 사용되고 XML에는 XQuery가 사용되는 것처럼 시간에 따라 다양한 형식의 데이터 소스에 대해 서로 다른 언어가 개발되었습니다. 따라서 개발자는 지원해야 하는 데이터 소스의 형식이나 데이터 형식에 따라 새로운 쿼리 언어를 배워야 했습니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]는 다양한 데이터 소스 및 형식에 사용할 수 있는 일관된 모델을 제공함으로써 이러한 상황을 간단하게 합니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리에서는 항상 개체를 사용하고 있습니다. XML 문서, SQL 데이터베이스, [!INCLUDE[vstecado](~/includes/vstecado-md.md)] 데이터 집합, .NET 컬렉션 및 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 공급자를 사용할 수 있는 다른 모든 형식에서 데이터를 쿼리하고 변환하는 데 동일한 기본 코딩 패턴을 사용합니다.  
@@ -55,7 +36,7 @@ ms.lasthandoff: 07/28/2017
   
  다음 예제에서는 쿼리 작업의 세 부분이 소스 코드로 표현되는 방식을 보여 줍니다. 예제에서는 편의상 정수 배열을 데이터 소스로 사용하지만 다른 데이터 소스에도 동일한 개념이 적용됩니다. 이 예제는 이 항목의 나머지 부분 전체에서 참조됩니다.  
   
- [!code-cs[CsLINQGettingStarted#1](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_1.cs)]  
+ [!code-csharp[CsLINQGettingStarted#1](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_1.cs)]  
   
  다음 그림에서는 전체 쿼리 작업을 보여 줍니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]에서는 쿼리 실행이 쿼리 자체와 구분됩니다. 즉, 쿼리 변수를 만드는 것만으로 데이터가 검색되지는 않습니다.  
   
@@ -66,7 +47,7 @@ ms.lasthandoff: 07/28/2017
   
  쿼리 가능 형식은 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 데이터 소스로 사용하기 위해 수정하거나 특별하게 처리할 필요가 없습니다. 소스 데이터가 쿼리 가능 형식으로 메모리에 나타나지 않을 경우 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 공급자는 그렇게 나타내야 합니다. 예를 들어 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]는 XML 문서를 쿼리 가능 <xref:System.Xml.Linq.XElement> 형식으로 로드합니다.  
   
- [!code-cs[CsLINQGettingStarted#2](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_2.cs)]  
+ [!code-csharp[CsLINQGettingStarted#2](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_2.cs)]  
   
  먼저 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]을 사용하여 디자인 타임에 수동으로 또는 Visual Studio에서 [Visual Studio의 LINQ to SQL 도구](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)를 사용하여 개체 관계형 매핑을 만듭니다. 개체에 대해 쿼리를 작성하면 런타임에 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]에서 데이터베이스와의 통신을 처리합니다. 다음 예에서 `Customers`는 데이터베이스의 특정 테이블을 나타내며, <xref:System.Linq.IQueryable%601> 쿼리 결과 형식은 <xref:System.Collections.Generic.IEnumerable%601>에서 파생됩니다.  
   
@@ -98,7 +79,7 @@ IQueryable<Customer> custQuery =
 ### <a name="deferred-execution"></a>지연된 실행  
  앞에서 설명한 대로 쿼리 변수 자체는 쿼리 명령을 저장할 뿐입니다. 실제 쿼리 실행은 `foreach` 문에서 쿼리 변수가 반복될 때까지 지연됩니다. 이 개념을 *지연된 실행*이라고 하며 다음 예제에서 보여 줍니다.  
   
- [!code-cs[csLinqGettingStarted#4](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_3.cs)]  
+ [!code-csharp[csLinqGettingStarted#4](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_3.cs)]  
   
  `foreach` 문은 쿼리 결과가 검색되는 위치이기도 합니다. 예를 들어 이전 쿼리에서 반복 변수 `num`은 반환된 시퀀스에서 각 값을 한 번에 하나씩 저장합니다.  
   
@@ -107,19 +88,18 @@ IQueryable<Customer> custQuery =
 ### <a name="forcing-immediate-execution"></a>즉시 실행 강제 적용  
  소스 요소 범위에 대해 집계 함수를 수행하는 쿼리는 먼저 해당 요소를 반복해야 합니다. 이러한 쿼리의 예로 `Count`, `Max`, `Average` 및 `First`가 있습니다. 이러한 쿼리는 쿼리 자체에서 결과를 반환하려면 `foreach`를 사용해야 하기 때문에 명시적 `foreach` 문 없이 실행됩니다. 또한 이러한 유형의 쿼리는 `IEnumerable` 컬렉션이 아니라 단일 값을 반환합니다. 다음 쿼리는 소스 배열에서 짝수의 개수를 반환합니다.  
   
- [!code-cs[csLinqGettingStarted#5](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_4.cs)]  
+ [!code-csharp[csLinqGettingStarted#5](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_4.cs)]  
   
  모든 쿼리를 즉시 실행하고 그 결과를 캐시하기 위해 <xref:System.Linq.Enumerable.ToList%2A> 또는 <xref:System.Linq.Enumerable.ToArray%2A> 메서드를 호출할 수 있습니다.  
   
- [!code-cs[csLinqGettingStarted#6](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_5.cs)]  
+ [!code-csharp[csLinqGettingStarted#6](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/introduction-to-linq-queries_5.cs)]  
   
  또한 `foreach` 루프를 쿼리 식 바로 다음에 배치하여 강제로 실행할 수 있습니다. 그러나 `ToList` 또는 `ToArray`를 호출하여 단일 컬렉션 개체에서 모든 데이터를 캐시할 수도 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [C#에서 LINQ 시작](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)   
- [연습: C#에서 쿼리 작성](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)   
- [연습: C#에서 쿼리 작성](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)   
- [LINQ 쿼리 식](../../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [foreach, in](../../../../csharp/language-reference/keywords/foreach-in.md)   
+ [C#에서 LINQ 시작](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)  
+ [연습: C#에서 쿼리 작성](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+ [연습: C#에서 쿼리 작성](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+ [LINQ 쿼리 식](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
+ [foreach, in](../../../../csharp/language-reference/keywords/foreach-in.md)  
  [쿼리 키워드(LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)
-

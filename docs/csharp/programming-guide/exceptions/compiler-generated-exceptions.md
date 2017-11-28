@@ -1,38 +1,19 @@
 ---
 title: "컴파일러 생성 예외(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- exceptions [C#], compiler-generated
+helpviewer_keywords: exceptions [C#], compiler-generated
 ms.assetid: 53b52f97-b366-4ed7-b05b-9eb78096b7f9
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d1417e42f588978d5fc1beca4ad55463502ee219
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d8fbae9272b34dd4d010199470c930c846cd1b74
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="compiler-generated-exceptions-c-programming-guide"></a>컴파일러 생성 예외(C# 프로그래밍 가이드)
 기본 작업이 실패하면 .NET Framework의 CLR(공용 언어 런타임)에 의해 자동으로 일부 예외가 throw됩니다. 이러한 예외와 관련 오류 조건이 다음 표에 나와 있습니다.  
@@ -51,10 +32,9 @@ ms.lasthandoff: 07/28/2017
 |<xref:System.TypeInitializationException>|정적 생성자가 예외를 throw하고 이 예외를 catch할 수 있는 호환되는 `catch` 절이 없는 경우 throw됩니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [예외 및 예외 처리](../../../csharp/programming-guide/exceptions/index.md)   
- [예외 처리](../../../csharp/programming-guide/exceptions/exception-handling.md)   
- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)   
- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [예외 및 예외 처리](../../../csharp/programming-guide/exceptions/index.md)  
+ [예외 처리](../../../csharp/programming-guide/exceptions/exception-handling.md)  
+ [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
+ [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
  [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
-

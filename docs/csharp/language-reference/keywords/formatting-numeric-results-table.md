@@ -1,47 +1,28 @@
 ---
 title: "숫자 결과 형식 지정 표(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - formatting [C#]
 - numeric formatting [C#]
 - String.Format method
 - Console.Write method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: cce14d5124ffdf030701ae0fc769278da51f86cc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 16976f5a59bd4eb0eca29553aff87d4fe0b1d247
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>숫자 결과 형식 지정 표(C# 참조)
-<xref:System.String.Format%2A?displayProperty=fullName> 메서드를 사용하거나 `String.Format`을 호출하는 <xref:System.Console.Write%2A?displayProperty=fullName> 또는 <xref:System.Console.WriteLine%2A?displayProperty=fullName> 메서드를 통해 숫자 결과의 서식을 지정할 수 있습니다. 형식은 형식 문자열을 사용하여 지정됩니다. 다음 표에는 지원되는 표준 형식 문자열을 보여 줍니다. 형식 문자열은 `Axx` 형식을 사용합니다. 여기서 `A`는 형식 지정자이고 `xx`는 전체 자릿수 지정자입니다. 형식 지정자는 숫자 값에 적용되는 서식 형식을 제어하고, 전체 자릿수 지정자는 서식이 지정된 출력의 유효 자릿수 또는 소수 자릿수를 제어합니다. 전체 자릿수 지정자의 값은 0에서 99 사이입니다.  
+<xref:System.String.Format%2A?displayProperty=nameWithType> 메서드를 사용하거나 `String.Format`을 호출하는 <xref:System.Console.Write%2A?displayProperty=nameWithType> 또는 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 메서드를 통해 숫자 결과의 서식을 지정할 수 있습니다. 형식은 형식 문자열을 사용하여 지정됩니다. 다음 표에는 지원되는 표준 형식 문자열을 보여 줍니다. 형식 문자열은 `Axx` 형식을 사용합니다. 여기서 `A`는 형식 지정자이고 `xx`는 전체 자릿수 지정자입니다. 형식 지정자는 숫자 값에 적용되는 서식 형식을 제어하고, 전체 자릿수 지정자는 서식이 지정된 출력의 유효 자릿수 또는 소수 자릿수를 제어합니다. 전체 자릿수 지정자의 값은 0에서 99 사이입니다.  
   
- 표준 및 사용자 지정 서식 문자열에 대한 자세한 내용은 [형식 서식 지정](../../../standard/base-types/formatting-types.md)을 참조하세요. `String.Format` 메서드에 대한 자세한 내용은 <xref:System.String.Format%2A?displayProperty=fullName>을 참조하십시오.  
+ 표준 및 사용자 지정 서식 문자열에 대한 자세한 내용은 [형식 서식 지정](../../../standard/base-types/formatting-types.md)을 참조하세요. `String.Format` 메서드에 대한 자세한 내용은 <xref:System.String.Format%2A?displayProperty=nameWithType>을 참조하십시오.  
   
 |형식 지정자|설명|예제|출력|  
 |----------------------|-----------------|--------------|------------|  
@@ -54,9 +35,8 @@ ms.lasthandoff: 07/28/2017
 |X 또는 x|16진수|Console.Write("{0:X}", 250);<br /><br /> Console.Write("{0:X}", 0xffff);|FA<br /><br /> FFFF|  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [표준 숫자 형식 문자열](../../../standard/base-types/standard-numeric-format-strings.md)   
- [형식 참조 테이블](../../../csharp/language-reference/keywords/reference-tables-for-types.md)   
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [표준 숫자 형식 문자열](../../../standard/base-types/standard-numeric-format-strings.md)  
+ [형식 참조 테이블](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
  [string](../../../csharp/language-reference/keywords/string.md)
-

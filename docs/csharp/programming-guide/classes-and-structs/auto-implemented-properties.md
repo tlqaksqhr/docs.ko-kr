@@ -1,39 +1,21 @@
 ---
 title: "자동으로 구현된 속성(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: aa55fa97-ccec-431f-b5e9-5ac789fd32b7
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 1aa923c6d8208c2d5451957c4112493d0acd561d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 92e0037b73f1054673ea8060b71af5bd4db13ca3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="auto-implemented-properties-c-programming-guide"></a>자동으로 구현된 속성(C# 프로그래밍 가이드)
 C# 3.0 이상에서는 속성 접근자에 추가적인 논리가 필요하지 않을 경우 자동 구현 속성을 통해 속성 선언이 더 간결해집니다. 이를 통해 클라이언트 코드에서 개체를 만들 수도 있습니다. 다음 예제와 같이 속성을 선언할 때 컴파일러는 속성의 `get` 및 `set` 접근자를 통해서만 액세스할 수 있는 전용 익명 지원 필드를 만듭니다.  
@@ -41,7 +23,7 @@ C# 3.0 이상에서는 속성 접근자에 추가적인 논리가 필요하지 �
 ## <a name="example"></a>예제  
  다음 예제에서는 일부 자동 구현 속성이 있는 간단한 클래스를 보여 줍니다.  
   
- [!code-cs[csProgGuideLINQ#28](../../../csharp/programming-guide/arrays/codesnippet/CSharp/auto-implemented-properties_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#28](../../../csharp/programming-guide/arrays/codesnippet/CSharp/auto-implemented-properties_1.cs)]  
   
  C# 6 이상 버전에서는 필드와 유사하게 자동 구현 속성을 초기화할 수 있습니다.  
   
@@ -54,6 +36,5 @@ public string FirstName { get; set; } = "Jane";
  특성은 자동 구현 속성에서 허용되지만, 소스 코드에서 액세스할 수 없으므로 지원 필드에서는 분명히 허용되지 않습니다. 속성의 지원 필드에서 특성을 사용해야 할 경우 일반 속성만 만듭니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [속성](../../../csharp/programming-guide/classes-and-structs/properties.md)   
+ [속성](../../../csharp/programming-guide/classes-and-structs/properties.md)  
  [한정자](../../../csharp/language-reference/keywords/modifiers.md)
-

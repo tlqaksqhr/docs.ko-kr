@@ -10,14 +10,12 @@ ms.prod: visual-studio-dev-14
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 0b671333019c00abafcfb72533e30936f8fc6ad7
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="versioning-in-c"></a>C#으로 버전 관리 #
 
 이 자습서에서는 .NET에서 버전 관리가 어떤 의미인지에 대해 배웁니다. 또한 라이브러리의 버전을 관리할 때 및 라이브러리의 새 버전으로 업그레이드할 때 고려해야 할 요소에 대해 배웁니다.
@@ -89,9 +87,9 @@ SemVer에 대한 가장 기본적인 접근법은 3개 구성 요소 형식 `MAJ
 
 다음 예제를 참조하세요.
 
-[!code-csharp['new' 한정자의 샘플 사용](../../samples/csharp/versioning/new/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'new' modifier](../../samples/csharp/versioning/new/Program.cs#sample)]
 
-**Output**
+**출력**
 
 ```
 A base method
@@ -107,9 +105,9 @@ A derived method
 
 `override` 한정자를 사용하면 파생된 구현은 기본 클래스 멤버의 구현을 숨기는 대신 확장합니다. 기본 클래스 멤버에 `virtual` 한정자를 적용해야 합니다.
 
-[!code-csharp['override' 한정자의 샘플 사용법](../../samples/csharp/versioning/override/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'override' modifier](../../samples/csharp/versioning/override/Program.cs#sample)]
 
-**Output**
+**출력**
 
 ```
 Base Method One: Method One
@@ -119,4 +117,3 @@ Derived Method One: Derived Method One
 `override` 한정자는 컴파일 시간에 평가되며, 재정의할 가상 멤버를 찾지 못하면 컴파일러에서 오류가 발생합니다.
 
 라이브러리 버전 간을 더욱 간편하게 전환하려면 여기서 설명한 방법을 익히고 어떤 상황에서 사용해야 할지를 이해해야 합니다.
-

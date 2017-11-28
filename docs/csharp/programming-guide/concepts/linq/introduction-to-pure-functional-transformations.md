@@ -1,25 +1,21 @@
 ---
 title: "순수 함수 변환 소개(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 8495c9d9-2d02-4aa0-8a10-9e8794b985fe
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 535d022b68fd4d08f04648fb98f5a7a7c53ed6e3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 34c4b94577291f300dd2a14ffc33a5ec04b31782
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="introduction-to-pure-functional-transformations-c"></a>순수 함수 변환 소개(C#)
 이 단원에서는 기본 개념과 지원하는 언어 구문을 비롯하여 함수 변환에 대해 소개합니다. 프로그래밍에 대한 개체 지향 및 함수 변환 방법을 대조하고 함수 변환 방법으로 전환하는 방법에 대한 조언을 제공합니다. 많은 프로그래밍 시나리오에서 함수 변환을 사용할 수 있지만 여기에서는 XML 변환이 구체적인 예제로 사용되었습니다.  
@@ -36,4 +32,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>참고 항목  
  [XML의 순수 함수 변환(C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
-

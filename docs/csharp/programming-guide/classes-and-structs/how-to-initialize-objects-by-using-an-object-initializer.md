@@ -1,39 +1,21 @@
 ---
 title: "방법: 개체 이니셜라이저를 사용하여 개체 초기화(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - object initializers [C#], how to use
 - objects [C#], initializing
 ms.assetid: 4b75ebb2-2e29-43de-929c-d736a8f27ce6
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d1e65f8519062f6bceeb466a3b72c5719c0918f7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 01f2391680d9236b42f0d015b944b8f12455d0c8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-initialize-objects-by-using-an-object-initializer-c-programming-guide"></a>방법: 개체 이니셜라이저를 사용하여 개체 초기화(C# 프로그래밍 가이드)
 개체 이니셜라이저를 사용하여 형식에 대한 생성자를 명시적으로 호출하지 않고 선언적 방식으로 형식 개체를 초기화할 수 있습니다.  
@@ -45,17 +27,16 @@ ms.lasthandoff: 07/28/2017
 ## <a name="example"></a>예제  
  다음 예제에서는 개체 이니셜라이저를 사용하여 새 `StudentName` 형식을 초기화하는 방법을 보여 줍니다.  
   
- [!code-cs[csProgGuideLINQ#35](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-objects-by-using-an-object-initializer_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#35](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-objects-by-using-an-object-initializer_1.cs)]  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 컬렉션 이니셜라이저를 사용하여 `StudentName` 형식 컬렉션을 초기화하는 방법을 보여 줍니다. 컬렉션 이니셜라이저는 일련의 쉼표로 구분된 개체 이니셜라이저입니다.  
   
- [!code-cs[csProgGuideLINQ#36](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-objects-by-using-an-object-initializer_2.cs)]  
+ [!code-csharp[csProgGuideLINQ#36](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-initialize-objects-by-using-an-object-initializer_2.cs)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- 이 코드를 실행하려면 클래스를 복사하여 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]에서 생성된 Visual C# 콘솔 응용 프로그램 프로젝트에 붙여넣습니다.   
+ 이 코드를 실행하려면 클래스를 복사하여 [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]에서 생성된 Visual C# 콘솔 응용 프로그램 프로젝트에 붙여넣습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
  [개체 이니셜라이저 및 컬렉션 이니셜라이저](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-

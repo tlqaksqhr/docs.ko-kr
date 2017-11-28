@@ -1,30 +1,22 @@
 ---
-title: "방법: 네임 스페이스 (LINQ to XML) 스페이스로 문서 만들기 (Visual Basic) | Microsoft 문서"
+title: "방법: 네임스페이스로 문서 만들기(LINQ to XML)(Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 761967351cfc6292eb60a5941e213bfd90036f65
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 038e2924603eba7250620bc2792ec87b8e978787
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>방법: 네임스페이스로 문서 만들기(LINQ to XML)(Visual Basic)
 이 항목에서는 Visual Basic에서 네임스페이스를 사용하여 문서를 만드는 방법을 보여 줍니다.  
@@ -35,7 +27,7 @@ ms.lasthandoff: 03/13/2017
   
  `Imports` 키워드를 사용하여 기본 네임스페이스와 접두사가 포함된 네임스페이스를 모두 정의할 수 있습니다.  
   
- 자세한 내용은 참조 [Visual Basic의 XML 리터럴 소개](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md)합니다.  
+ 자세한 내용은 참조 [Visual basic에서 XML 리터럴 소개](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md)합니다.  
   
  기본 XML 네임스페이스는 요소에만 적용되고 특성에는 적용되지 않습니다. 특성은 기본적으로 항상 네임스페이스에 없습니다. 그러나 네임스페이스 접두사를 사용하여 특성을 네임스페이스에 배치할 수 있습니다.  
   
@@ -96,7 +88,7 @@ End Module
 ## <a name="example"></a>예제  
  다음 예제에서는 네임스페이스 접두사가 포함된 여러 네임스페이스가 포함된 문서를 만듭니다.  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]에서는 XML 트리를 serialize할 때 각 요소가 지정된 네임스페이스에 있도록 필요에 따라 네임스페이스 선언을 생성합니다.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 XML 트리를 serialize할 때 각 요소가 지정된 네임스페이스에 있도록 필요에 따라 네임스페이스 선언을 생성합니다.  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  

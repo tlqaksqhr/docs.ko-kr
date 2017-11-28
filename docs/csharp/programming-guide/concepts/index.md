@@ -1,27 +1,18 @@
 ---
 title: "프로그래밍 개념(C#)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 9c82430ec58b81f37a33f4c246ea40f6da465af8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8b914c6f820af1cd7de93fadc0d915261497f296
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="programming-concepts-c"></a>프로그래밍 개념(C#)
 이 섹션에서는 C# 언어의 프로그래밍 개념을 설명합니다.  
@@ -49,4 +40,3 @@ ms.lasthandoff: 07/28/2017
 |||  
 |---|---|  
 |[성능 팁](https://msdn.microsoft.com/library/ms173196(VS.110).aspx) | 응용 프로그램의 성능을 향상시키는 데 도움이 되는 여러 가지 기본 규칙에 대해 설명합니다.|
-

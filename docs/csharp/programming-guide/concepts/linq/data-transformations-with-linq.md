@@ -1,15 +1,12 @@
 ---
 title: "LINQ를 통한 데이터 변환(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - LINQ [C#], data transformations
 - source elements [LINQ in C#]
@@ -19,30 +16,14 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: f77bd40ea8ec0745dda3d40eee273d9e7338263b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5b48dd495b843f8211a2b6e26df8a4f0618b254a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="data-transformations-with-linq-c"></a>LINQ를 통한 데이터 변환(C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]는 데이터 검색만 관련된 것이 아닙니다. 데이터 변환을 위한 강력한 도구이기도 합니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리를 사용하여 소스 시퀀스를 입력으로 사용하고 다양한 방법으로 수정하여 새 출력 시퀀스를 만들 수 있습니다. 정렬 및 그룹화를 통해 요소 자체를 수정하지 않고 시퀀스 자체를 수정할 수 있습니다. 하지만 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리의 가장 강력한 기능은 새 형식을 만드는 기능일 것입니다. 이 작업은 [select](../../../../csharp/language-reference/keywords/select-clause.md) 절에서 수행합니다. 예를 들어, 아래와 같은 작업을 수행할 수 있습니다.  
@@ -60,11 +41,11 @@ ms.lasthandoff: 07/28/2017
 ## <a name="joining-multiple-inputs-into-one-output-sequence"></a>여러 입력을 단일 출력 시퀀스로 결합  
  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리를 사용하여 두 개 이상의 입력 시퀀스에서 생성된 요소가 포함된 출력 시퀀스를 만들 수 있습니다. 다음 예제에서는 두 개의 메모리 내 데이터 구조를 결합하는 방법을 보여 주지만 XML, SQL 또는 DataSet 소스에서 데이터를 결합하는 데는 같은 원칙을 적용할 수 있습니다. 다음 두 가지 클래스 형식을 가정합니다.  
   
- [!code-cs[CsLINQGettingStarted#7](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_1.cs)]  
+ [!code-csharp[CsLINQGettingStarted#7](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_1.cs)]  
   
  다음 예제에서는 쿼리를 보여 줍니다.  
   
- [!code-cs[CSLinqGettingStarted#8](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_2.cs)]  
+ [!code-csharp[CSLinqGettingStarted#8](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_2.cs)]  
   
  자세한 내용은 [join 절](../../../../csharp/language-reference/keywords/join-clause.md) 및 [select 절](../../../../csharp/language-reference/keywords/select-clause.md)을 참조하세요.  
   
@@ -90,7 +71,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="transforming-in-memory-objects-into-xml"></a>메모리 내 개체를 XML로 변환  
  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리를 통해 메모리 내 데이터 구조, SQL 데이터베이스, [!INCLUDE[vstecado](~/includes/vstecado-md.md)] 데이터 집합 및 XML 스트림이나 문서 간에 손쉽게 데이터를 변환할 수 있습니다. 다음 예제에서는 메모리 내 데이터 구조의 개체를 XML 요소로 변환합니다.  
   
- [!code-cs[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]  
+ [!code-csharp[CsLINQGettingStarted#9](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_3.cs)]  
   
  이 코드에서는 다음 XML 출력을 생성합니다.  
   
@@ -122,13 +103,12 @@ ms.lasthandoff: 07/28/2017
 > [!NOTE]
 >  쿼리가 일부 다른 도메인으로 변환될 경우 쿼리 식에서 메서드를 호출할 수 없습니다. 예를 들어 SQL Server에는 관련 컨텍스트가 없으므로 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]에서 일반 C# 메서드를 호출할 수 없습니다. 그러나 저장 프로시저를 메서드에 매핑하고 저장 프로시저를 호출할 수 있습니다. 자세한 내용은 [저장 프로시저](../../../../framework/data/adonet/sql/linq/stored-procedures.md)를 참조하세요.  
   
- [!code-cs[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_4.cs)]  
+ [!code-csharp[CsLINQGettingStarted#10](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/data-transformations-with-linq_4.cs)]  
   
 ## <a name="see-also"></a>참고 항목  
- [LINQ(Language-Integrated Query)(C#)](../../../../csharp/programming-guide/concepts/linq/index.md)   
- [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)   
- [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)   
- [LINQ to XML(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)   
- [LINQ 쿼리 식](../../../../csharp/programming-guide/linq-query-expressions/index.md)   
+ [LINQ(Language-Integrated Query)(C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
+ [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)  
+ [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
+ [LINQ to XML(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
+ [LINQ 쿼리 식](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
  [select 절](../../../../csharp/language-reference/keywords/select-clause.md)
-

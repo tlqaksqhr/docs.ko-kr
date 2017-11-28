@@ -1,43 +1,24 @@
 ---
 title: "-win32res(C# 컴파일러 옵션)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /win32res
-dev_langs:
-- CSharp
+f1_keywords: /win32res
 helpviewer_keywords:
 - win32res compiler option
 - /win32res compiler option [C#]
 - -win32res compiler option [C#]
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 96583542c62305cbaa5a24f66e9e54ec9b525c90
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4552b526767584e62106b2b10f8a1e6394a23b46
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="win32res-c-compiler-options"></a>/win32res(C# 컴파일러 옵션)
 **/win32res** 옵션은 출력 파일에 Win32 리소스를 삽입합니다.  
@@ -53,7 +34,7 @@ ms.lasthandoff: 07/28/2017
  출력 파일에 추가하려는 리소스 파일입니다.  
   
 ## <a name="remarks"></a>설명  
- Win32 리소스 파일은 [리소스 컴파일러](http://go.microsoft.com/fwlink/?LinkId=148370)로 만들 수 있습니다. 리소스 컴파일러는 Visual C++ 프로그램을 컴파일할 때 실행되며 .rc 파일에서 .res 파일이 만들어집니다.  
+ Win32 리소스 파일은 [리소스 컴파일러](../../language-reference/compiler-options/resource-compiler-option.md)로 만들 수 있습니다. 리소스 컴파일러는 Visual C++ 프로그램을 컴파일할 때 실행되며 .rc 파일에서 .res 파일이 만들어집니다.  
   
  Win32 리소스는 파일 탐색기에서 응용 프로그램을 식별하는 데 도움이 되는 버전 정보나 비트맵 (아이콘) 정보를 포함할 수 있습니다. **/win32res**를 지정하지 않으면 컴파일러에서 어셈블리 버전을 기반으로 하여 버전 정보를 생성합니다.  
   
@@ -75,6 +56,5 @@ csc /win32res:rf.res in.cs
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)   
+ [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)  
  [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)
-

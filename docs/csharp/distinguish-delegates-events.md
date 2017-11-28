@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 3026a0d853cb17dcf05d3b98d814044d743e48dc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="distinguishing-delegates-and-events"></a>대리자 및 이벤트를 구별
 
 [이전](modern-events.md)
@@ -55,4 +53,3 @@ UX 컨트롤은 이벤트를 수신하는 구독자가 없는 경우에도 여�
 ## <a name="evaluate-carefully"></a>신중하게 평가
 
 위의 고려 사항은 엄격한 규칙이 아닙니다. 대신 특정 용도에 가장 적합한 선택 항목을 결정하는 데 도움이 되는 지침을 나타냅니다. 유사하기 때문에 둘 다를 프로토타입화할 수도 있고 작업에 더 자연스러운 항목을 고려할 수 있습니다. 둘 다 런타임에 바인딩 시나리오도 처리합니다. 최상의 디자인을 전달하는 기능을 사용하세요.
-

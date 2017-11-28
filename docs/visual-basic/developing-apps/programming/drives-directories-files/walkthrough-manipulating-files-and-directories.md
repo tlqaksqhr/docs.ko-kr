@@ -1,52 +1,34 @@
 ---
 title: "Visual Basic에서 파일과 디렉터리 조작"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- files, reading text
-- reading files, text
+- files [Visual Basic], reading text
+- reading files [Visual Basic], text
 - I/O [Visual Basic], walkthroughs
 - text, writing to files
 - text, reading from files
-- reading text from files, walkthroughs
+- reading text from files [Visual Basic], walkthroughs
 - Visual Basic code, file access
-- files, writing text
+- files [Visual Basic], writing text
 - I/O [Visual Basic], writing text to files
 - file access, walkthroughs
-- writing to files, walkthroughs
+- writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: bd1e61503394741e7943d30d383f2e7c5ea35f68
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9e66d062df07fc23dfbd5d509e08ccd08813db15
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>연습: Visual Basic에서 파일과 디렉터리 조작
 이 연습에서는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서 파일 I/O의 기본 개념을 소개합니다. 디렉터리에 텍스트 파일을 나열하고 검사하는 작은 응용 프로그램을 만드는 방법을 설명합니다. 선택한 각 텍스트 파일에 대해 응용 프로그램은 파일 특성 및 내용의 첫 줄을 제공합니다. 로그 파일에 정보를 기록하는 옵션이 있습니다.  
@@ -186,8 +168,7 @@ ms.lasthandoff: 07/28/2017
  [!code-vb[VbVbcnMyFileSystem#111](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/walkthrough-manipulating-files-and-directories_9.vb)]  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.IO>   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>   
+ <xref:System.IO>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>  
  [연습: .NET Framework 메서드를 사용하여 파일 조작](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)
-

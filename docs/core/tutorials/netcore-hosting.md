@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
-ms.translationtype: HT
-ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
 ms.openlocfilehash: 1f0983b909244dda7270d3eff01dc302383639a5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="hosting-net-core"></a>.NET Core 호스트
 
 모든 관리 코드와 같이 .NET Core 응용 프로그램은 호스트에서 실행됩니다. 호스트는 런타임(가비지 수집기 및 JIT와 같은 구성 요소 포함)을 시작하고 AppDomain을 만들고 관리 진입점을 호출합니다.
@@ -147,4 +145,3 @@ coreclrhost.h를 사용(mscoree.h 대신 직접적으로)하는 예는 [UnixCore
 처음에 작동되지 않으면, 호스트가 예상한 위치에서 *coreclr.dll*을 사용할 수 있고, 필요한 프레임워크 라이브러리가 모두 TPA 목록에 있으며 CoreCLR의 비트 수(32비트 또는 64비트)가 호스트가 빌드된 방식과 일치하는지 다시 확인합니다.
 
 .NET Core 런타임 호스트는 일부 개발자만 필요로 하는 고급 시나리오이지만, 네이티브 프로세스에서 관리 코드를 실행해야 하거나 .NET Core 런타임의 동작에 대해 더 많은 제어권이 필요한 경우 아주 유용할 수 있습니다. .NET Core는 자체를 나란히 실행할 수 있기 때문에 여러 버전의 .NET Core 런타임을 초기화 및 시작하는 호스트를 만들고 동일한 프로세스로 모든 호스트에서 앱을 실행할 수도 있습니다. 
-

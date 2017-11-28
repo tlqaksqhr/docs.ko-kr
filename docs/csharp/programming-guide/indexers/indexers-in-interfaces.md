@@ -1,39 +1,21 @@
 ---
 title: "인터페이스의 인덱서(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 304f2e037d8df025376d06f229ddd1584f8713b6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2715602dadea40324f613bb07b5dd332ed18c25c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>인터페이스의 인덱서(C# 프로그래밍 가이드)
 [interface](../../../csharp/language-reference/keywords/interface.md)에 인덱서를 선언할 수 있습니다. 인터페이스 인덱서 접근자와 [class](../../../csharp/language-reference/keywords/class.md) 인덱서 접근자 간에는 다음과 같은 차이점이 있습니다.  
@@ -46,14 +28,14 @@ ms.lasthandoff: 07/28/2017
   
  다음은 인터페이스 인덱서 접근자의 예입니다.  
   
- [!code-cs[csProgGuideIndexers#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/indexers-in-interfaces_1.cs)]  
+ [!code-csharp[csProgGuideIndexers#3](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/indexers-in-interfaces_1.cs)]  
   
  인덱서의 시그니처는 동일한 인터페이스에 선언된 다른 모든 인덱서의 시그니처와 달라야 합니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 인터페이스 인덱서를 구현하는 방법을 보여 줍니다.  
   
- [!code-cs[csProgGuideIndexers#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/indexers-in-interfaces_2.cs)]  
+ [!code-csharp[csProgGuideIndexers#4](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/indexers-in-interfaces_2.cs)]  
   
  앞의 예제에서는 인터페이스 멤버의 정규화된 이름을 사용하여 명시적 인터페이스 멤버 구현을 사용할 수 있습니다. 예:  
   
@@ -82,8 +64,7 @@ public string ICitizen.this
  이 선언은 `ICitizen` 인터페이스의 인덱서를 구현합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [인덱서](../../../csharp/programming-guide/indexers/index.md)   
- [속성](../../../csharp/programming-guide/classes-and-structs/properties.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [인덱서](../../../csharp/programming-guide/indexers/index.md)  
+ [속성](../../../csharp/programming-guide/classes-and-structs/properties.md)  
  [인터페이스](../../../csharp/programming-guide/interfaces/index.md)
-

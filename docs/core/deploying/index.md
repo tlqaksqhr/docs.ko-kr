@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: da7a31a0-8072-4f23-82aa-8a19184cb701
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 199bb132df201175dbdbdd19634de5c3551b5f3b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-core-application-deployment"></a>.NET Core 응용 프로그램 배포
 
 .NET Core 응용 프로그램에 대해 두 가지 유형을 배포를 만들 수 있습니다.
@@ -82,4 +80,3 @@ CLI 도구를 사용하여 .NET Core 앱을 배포하는 방법을 보여 주는
 [Deploying .NET Core Apps with Visual Studio](deploy-with-vs.md) (Visual Studio를 사용하여 .NET Core 앱 배포)  
 [패키지, 메타패키지 및 프레임워크](../packages.md)   
 [.NET Core RID(런타임 식별자) 카탈로그](../rid-catalog.md)
-

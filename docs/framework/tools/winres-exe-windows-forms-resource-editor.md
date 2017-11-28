@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Winres.exe
 - Windows Forms Resource Editor
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 8009f832434d6bbad2ad7bee9cbfd62c81d623c7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 934373d61407c8cc19b7d6424898a582880f9c21
-ms.openlocfilehash: e2a2121d97cd1f7de211a72ed95e2fdf24bfac60
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/10/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="winresexe-windows-forms-resource-editor"></a>Winres.exe(Windows Forms 리소스 편집기)
 Winres.exe(Windows Forms 리소스 편집기)는 지역화 전문가가 폼에 사용된 Windows Forms UI(사용자 인터페이스)를 쉽게 지역화하는 데 사용할 수 있는 시각적 레이아웃 도구입니다. Winres.exe의 입력으로 사용되는 .resx 또는 .resources 파일은 Microsoft Visual Studio 같은 시각적 디자인 환경을 사용하여 만들 수 있습니다. .NET Framework 응용 프로그램의 리소스를 배포하는 데 대한 자세한 내용은 [데스크톱 앱의 리소스](../../../docs/framework/resources/index.md)를 참조하세요.  
@@ -149,12 +142,11 @@ winres /?
 5.  문화권 및 파일 모드를 적절히 선택한 다음 **확인**을 클릭합니다. 지역화된 리소스 파일에 대해 런타임에서 예상하는 명명 규칙을 사용하여 파일이 저장됩니다. 예를 들어, `TestApp.resources`를 독일어(독일)로 지역화하는 경우 이 도구는 파일을 `TestApp.de-DE.resources`로 저장하고 `TestApp.resx`를 독일어(독일)로 지역화하는 경우 `TestApp.de-DE.resx`로 저장합니다. 리소스 명명 규칙에 대한 자세한 내용은 [리소스 패키지 및 배포](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)를 참조하세요. 런타임에서 사용하는 미리 정의된 문화권 이름의 목록은 <xref:System.Globalization.CultureInfo> 클래스를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.ComponentModel.LocalizableAttribute>   
- <xref:System.Globalization.CultureInfo>   
- <xref:System.Resources.ResourceManager>   
- <xref:System.Resources.ResourceReader>   
- <xref:System.Resources.ResourceWriter>   
- [도구](../../../docs/framework/tools/index.md)   
- [데스크톱 앱의 리소스](../../../docs/framework/resources/index.md)   
+ <xref:System.ComponentModel.LocalizableAttribute>  
+ <xref:System.Globalization.CultureInfo>  
+ <xref:System.Resources.ResourceManager>  
+ <xref:System.Resources.ResourceReader>  
+ <xref:System.Resources.ResourceWriter>  
+ [도구](../../../docs/framework/tools/index.md)  
+ [데스크톱 앱의 리소스](../../../docs/framework/resources/index.md)  
  [전역화 및 지역화](../../../docs/standard/globalization-localization/index.md)
-

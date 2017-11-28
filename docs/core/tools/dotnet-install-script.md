@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: b64e7e6f-ffb4-4fc8-b43b-5731c89479c2
-ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
 ms.openlocfilehash: 2f15f37016fe824d76b501e4793e0b28bbdbe167
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 스크립트 참조
 
 ## <a name="name"></a>이름
@@ -158,4 +156,3 @@ macOS/Linux:
 
 [.NET Core 릴리스](https://github.com/dotnet/core/releases)   
 [.NET Core 런타임 및 SDK 다운로드 아카이브](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
-

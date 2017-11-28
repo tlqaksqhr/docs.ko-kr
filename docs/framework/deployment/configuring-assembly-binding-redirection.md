@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: ff3f56b08aa3d6c7cb05bafd98d26f4700fa4e5a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6cd1e2d621d133f80a2f6e650ae6aed94e6bbe33
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="configuring-assembly-binding-redirection"></a>어셈블리 바인딩 리디렉션 구성
 기본적으로 응용 프로그램에서는 응용 프로그램을 컴파일하는 데 사용된 런타임 버전과 함께 제공된 .NET Framework 어셈블리 집합을 사용합니다. 응용 프로그램 구성 파일에서 [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) 요소에 대해 **appliesTo** 특성을 사용하여 어셈블리 바인딩 참조를 .NET Framework 어셈블리의 특정 버전으로 리디렉션할 수 있습니다. 이 선택적 특성은 .NET Framework 버전을 사용하여 특성이 적용되는 버전을 지정합니다. **appliesTo** 특성이 지정되지 않으면 **\<assemblyBinding>** 요소는 .NET Framework의 모든 버전에 적용됩니다.  
@@ -74,4 +67,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>참고 항목  
  [방법: 자동 바인딩 리디렉션 사용 설정 및 해제](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
-

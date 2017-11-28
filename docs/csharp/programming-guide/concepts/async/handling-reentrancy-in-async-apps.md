@@ -1,30 +1,21 @@
 ---
 title: "비동기 앱에서 재입력 처리(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: a917f88d3d6105f836dc67ef8a9ec92efc300d7a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: bd51c81c9589831146942ad9f0eae3642d4678e9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>비동기 앱에서 재입력 처리(C#)
 앱에 비동기 코드를 포함하는 경우 완료되기 전에 비동기 작업을 다시 입력하는 것을 나타내는 재입력을 고려하고 방지할 수 있어야 합니다. 재입력 가능성을 식별하고 처리하지 못하면 예기치 않은 결과가 발생할 수 있습니다.  
@@ -729,6 +720,5 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 12. [시작 단추 사용 안 함](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), [작업 취소 및 다시 시작](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) 또는 [여러 작업을 실행하고 출력을 큐 대기](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)의 내용을 변경하여 재입력을 처리합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
+ [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
  [async 및 await를 사용한 비동기 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-

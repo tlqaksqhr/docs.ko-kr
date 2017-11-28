@@ -1,25 +1,21 @@
 ---
 title: "순수 함수를 사용하여 리팩터링(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 3aba03afe75f0ef30a709d6a65ee03d56c13c820
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d918c5f37f92f5da7ca535b05b8ff3a97dc851bf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>순수 함수를 사용하여 리팩터링(C#)
 다음 예제에서는 순수 함수를 사용하기 위해 이전 예제 [확장 메서드를 사용하여 리팩터링(C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)을 리팩터링합니다. 이 예제에서 단락의 텍스트를 찾는 코드는 순수 정적 메서드 `ParagraphText`로 이동됩니다.  
@@ -29,7 +25,7 @@ ms.lasthandoff: 07/28/2017
   
  이 예제의 소스 문서 만들기에 대한 지침은 [원본 Office Open XML 문서 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)를 참조하세요.  
   
- 이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=fullName> 네임스페이스의 형식을 사용합니다.  
+ 이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -192,7 +188,6 @@ StyleName:Code >Hello World<
 -   [다른 모양으로 XML 프로젝션(C#)](../../../../csharp/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [자습서: WordprocessingML 문서에서 내용 조작(C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)   
- [확장 메서드를 사용하여 리팩터링(C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)   
+ [자습서: WordprocessingML 문서에서 내용 조작(C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
+ [확장 메서드를 사용하여 리팩터링(C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
  [순수 함수로 리팩터링(C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
-

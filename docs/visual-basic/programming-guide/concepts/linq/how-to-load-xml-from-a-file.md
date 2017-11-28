@@ -1,38 +1,30 @@
 ---
-title: "방법: XML 파일 (Visual Basic)에서 로드 | Microsoft 문서"
+title: "방법: 파일 (Visual Basic)에서 XML을 로드 합니다."
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e2d337ad-8ac8-4671-b694-30e5ca1413b7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 54755384eaf74fa008f93198f3de5e44fb095bda
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7babad6b08b2aa486c2ae92e7ad2485d62ac5d47
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-load-xml-from-a-file-visual-basic"></a>방법: XML 파일에서에서 로드 한 (Visual Basic)
-이 항목에서는 사용 하 여 URI에서 XML을 로드 하는 방법을 보여 줍니다.는 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>메서드.</xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>  
+# <a name="how-to-load-xml-from-a-file-visual-basic"></a>방법: 파일 (Visual Basic)에서 XML을 로드 합니다.
+이 항목에서는 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> 메서드를 사용하여 URI에서 XML을 로드하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 파일에서 XML 문서를 로드하는 방법을 보여 줍니다. 다음 예제에서는 books.xml을 로드하고 XML 트리를 콘솔에 출력합니다.  
   
- 이 예제에서는 다음 XML 문서: [샘플 XML 파일: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)합니다.  
+ 이 예제에서는 XML 문서 [샘플 XML 파일: Books(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)를 사용합니다.  
   
 ```vb  
 Dim booksFromFile As XElement = XElement.Load("books.xml")  
@@ -66,4 +58,4 @@ Console.WriteLine(booksFromFile)
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [(Visual Basic) XML 구문 분석](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+ [XML 구문 분석 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

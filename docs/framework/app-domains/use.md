@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,15 @@ helpviewer_keywords:
 - common language runtime, application domains
 - runtime, application domains
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 53180d5d3d9314c3f078ddca8f5c155b01981f4e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b2dac2238ae9117d3678335748c680d594a8b5c6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="using-application-domains"></a>응용 프로그램 도메인 사용
 응용 프로그램 도메인은 공용 언어 런타임에 대한 격리 단위를 제공하고 프로세스 내에서 생성되고 실행됩니다. 응용 프로그램 도메인은 대개 런타임을 프로세스로 로드하고 응용 프로그램 도메인 내에서 사용자 코드를 실행하는 응용 프로그램인 런타임 호스트에서 만들어집니다. 런타임 호스트는 프로세스와 기본 응용 프로그램 도메인을 만들고 그 내부에서 관리 코드를 실행합니다. 런타임 호스트에는 ASP.NET, Microsoft Internet Explorer 및 Windows 셸이 포함됩니다.  
@@ -56,7 +54,7 @@ ms.lasthandoff: 07/28/2017
  공용 언어 런타임이 예외 처리기 검색을 시작하기 전에 예외가 throw되었다는 알림을 받을 수 있는 방법을 설명합니다.  
   
  [어셈블리 로드 해결](../../../docs/framework/app-domains/resolve-assembly-loads.md)  
- <xref:System.AppDomain.AssemblyResolve?displayProperty=fullName> 이벤트를 사용하여 어셈블리 로드 실패를 해결하는 방법에 대한 지침을 제공합니다.  
+ <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 이벤트를 사용하여 어셈블리 로드 실패를 해결하는 방법에 대한 지침을 제공합니다.  
   
 ## <a name="reference"></a>참조  
  <xref:System.AppDomain>  
@@ -77,4 +75,3 @@ ms.lasthandoff: 07/28/2017
   
  [리플렉션 개요](../../../docs/framework/reflection-and-codedom/reflection.md)  
  **Reflection** 클래스를 사용하여 어셈블리에 대한 정보를 얻는 방법을 설명합니다.
-

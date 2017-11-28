@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - code modules
 - multifile assemblies
 ms.assetid: 13509e73-db77-4645-8165-aad8dfaedff6
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: fead0a944b464ffd8f72dca6da33fd97404fe2d1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7851375c03f9caacd9c89d33e5a03212581d7937
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="multifile-assemblies"></a>다중 파일 어셈블리
 명령줄 컴파일러 또는 [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)]를 Visual C++와 함께 사용하여 다중 파일 어셈블리를 만들 수 있습니다. 어셈블리의 한 파일에 어셈블리 매니페스트가 포함되어 있어야 합니다. 응용 프로그램을 시작하는 어셈블리에는 Main 또는 WinMain 메서드와 같은 진입점도 포함되어 있어야 합니다.  
@@ -51,6 +49,5 @@ ms.lasthandoff: 07/28/2017
  어셈블리를 만든 후 어셈블리 매니페스트(따라서 어셈블리)가 포함된 파일에 서명하거나, 파일(및 어셈블리)에 강력한 이름을 지정하고 전역 어셈블리 캐시에 넣을 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [방법: 다중 파일 어셈블리 빌드](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)   
+ [방법: 다중 파일 어셈블리 빌드](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
  [어셈블리를 사용한 프로그래밍](../../../docs/framework/app-domains/programming-with-assemblies.md)
-

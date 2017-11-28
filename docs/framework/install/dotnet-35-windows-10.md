@@ -10,14 +10,12 @@ ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 67cda1d5-c6g4-4eb5-93e6-4f478de07ff7
-ms.translationtype: HT
-ms.sourcegitcommit: 21c6a1485f3d0c38bde065d6ecc7b07d5e424c1d
 ms.openlocfilehash: 85a3cada074714c24015d90c26d94551f4f411f2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/05/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Windows 10, Windows 8.1 및 Windows 8에 .NET Framework 3.5 설치
 
 Windows 10, Windows 8.1 및 Windows 8에서 앱을 실행하려면 .NET Framework 3.5가 필요할 수 있습니다. 이러한 지침은 이전 Windows 버전에도 사용할 수 있습니다.
@@ -39,4 +37,3 @@ Windows 제어판을 통해 .NET Framework 3.5를 사용하도록 설정할 수 
    ![제어판으로 .NET 설치](./media/dotnet-control-panel.png)
 
    이 기능이 필요한 개발자 또는 서버 관리자가 아니라면 **WCF(Windows Communication Foundation) HTTP 활성화** 및 **WCF(Windows Communication Foundation) 비 HTTP 활성화**를 위한 자식 항목을 선택할 필요가 없습니다.
-

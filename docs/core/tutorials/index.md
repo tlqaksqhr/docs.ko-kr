@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
-ms.translationtype: HT
-ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
 ms.openlocfilehash: 9932555d5a5b029b4faaf3edcaa3ab523eebe77e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-core-tutorials"></a>.NET Core 자습서
 
 다음 자습서를 사용하여 .NET Core에 대해 알아볼 수 있습니다.
@@ -58,4 +56,3 @@ ms.lasthandoff: 08/14/2017
 - [dotnet용 사용자 지정 템플릿 새로 만들기](create-custom-template.md)
 
 ASP.NET Core 웹 응용 프로그램 개발에 대한 자습서는 [ASP.NET Core 설명서](/aspnet/core/)를 참조하세요.
-

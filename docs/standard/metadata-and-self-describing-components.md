@@ -8,6 +8,9 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - runtime, metadata
 - languages, interoperability
@@ -18,16 +21,15 @@ helpviewer_keywords:
 - PE files, metadata
 - components [.NET Framework], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 8fcb5ea90cc16d62fee5b8e95b03bfe53c3a6793
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f5469f649d594553e1567d6d611cfafcd28e2c5b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="metadata-and-self-describing-components"></a>메타데이터 및 자동 기술 구성 요소
 이전에 한 가지 언어로 작성된 소프트웨어 구성 요소(.exe 또는 .dll)는 다른 언어로 작성된 소프트웨어 구성 요소를 쉽게 사용할 수 없었습니다. COM은 이러한 문제를 해결하기 위한 단계를 제공했습니다. .NET Framework는 컴파일러가 모든 모듈과 어셈블리에 추가 선언 정보를 내보낼 수 있도록 하여 구성 요소 상호 운용성을 훨씬 더 쉽게 만듭니다. 메타데이터라고 하는 이 정보는 구성 요소가 아무런 문제 없이 원만하게 상호 작용할 수 있도록 하는 데 도움이 됩니다.  
@@ -176,4 +178,3 @@ IL_000d:  call int32 ConsoleApplication.MyApp::Add(int32,int32) /* 06000003 */
 |제목|설명|  
 |-----------|-----------------|  
 |[특성](../../docs/standard/attributes/index.md)|특성을 적용하고, 사용자 지정 특성을 작성하고, 특성에 저장된 정보를 검색하는 방법에 대해 설명합니다.|
-

@@ -1,42 +1,22 @@
 ---
 title: "LINQ를 지원하는 C# 기능"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- LINQ [C#], features supporting LINQ
+helpviewer_keywords: LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 2f5accb188e54e0d3e2b941832637ec33afc26b2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 01db44482ee3230d15af5ce8e0373fb15a769609
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="c-features-that-support-linq"></a>LINQ를 지원하는 C# 기능
 다음 섹션에서는 C# 3.0에 도입된 새로운 언어 구문을 소개합니다. 이러한 새 기능은 모두 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리에서 어느 정도 사용되지만 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]로 제한되지 않고 유용한 모든 컨텍스트에서 사용할 수 있습니다.  
@@ -64,12 +44,12 @@ var query = from str in stringArray
             select str;  
 ```  
   
- `var`(으)로 선언된 변수는 형식을 명시적으로 지정한 변수만큼 강력한 형식입니다. `var`을 사용하면 무명 형식을 만들 수 있지만 모든 지역 변수에 사용할 수 있습니다. 배열은 암시적 형식 지정을 사용하여 선언할 수도 있습니다.  
+ `var`로 선언된 변수는 형식을 명시적으로 지정한 변수만큼 강력한 형식입니다. `var`을 사용하면 무명 형식을 만들 수 있지만 모든 지역 변수에 사용할 수 있습니다. 배열은 암시적 형식 지정을 사용하여 선언할 수도 있습니다.  
   
  자세한 내용은 [암시적으로 형식화된 지역 변수](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)를 참조하세요.  
   
 ## <a name="object-and-collection-initializers"></a>개체 및 컬렉션 이니셜라이저  
- 개체 및 컬렉션 이니셜라이저를 사용하면 개체에 대한 생성자를 명시적으로 호출하지 않고 개체를 초기화할 수 있습니다. 일반적으로 이니셜라이저는 소스 데이터를 새 데이터 형식으로 프로젝션할 때 쿼리 식에서 사용됩니다. public `Name` 및 `Phone` 속성이 있는 `Customer`(이)라는 클래스를 가정할 경우 다음 코드에서처럼 개체 이니셜라이저를 사용할 수 있습니다.  
+ 개체 및 컬렉션 이니셜라이저를 사용하면 개체에 대한 생성자를 명시적으로 호출하지 않고 개체를 초기화할 수 있습니다. 일반적으로 이니셜라이저는 소스 데이터를 새 데이터 형식으로 프로젝션할 때 쿼리 식에서 사용됩니다. public `Name` 및 `Phone` 속성이 있는 `Customer`라는 클래스를 가정할 경우 다음 코드에서처럼 개체 이니셜라이저를 사용할 수 있습니다.  
   
 ```  
 Customer cust = new Customer { Name = "Mike", Phone = "555-1212" };  
@@ -113,4 +93,3 @@ public string Name {get; set;}
   
 ## <a name="see-also"></a>참고 항목  
  [LINQ(Language-Integrated Query)(C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
-

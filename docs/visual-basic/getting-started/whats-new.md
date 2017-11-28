@@ -1,42 +1,23 @@
 ---
 title: "Visual Basic의 새로운 기능"
-ms.date: 2017-04-27
+ms.date: 04/27/2017
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- VB.StartPage.WhatsNew
-dev_langs:
-- VB
+f1_keywords: VB.StartPage.WhatsNew
 helpviewer_keywords:
 - new features, Visual Basic
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: 145
+caps.latest.revision: "145"
 author: rpetrusha
 ms.author: ronpet
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d26eb23aae6e5baec98e27a246d06af6b78e0802
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0a9379d5dd2d1c6b3ed6820e350c19fb346ac84c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic의 새로운 기능
 
@@ -85,7 +66,7 @@ Visual Basic .NET의 첫 번째 릴리스
  
 Visual Basic의 튜플 지원을 사용하면 튜플을 신속하게 정의하고, 필요에 따라 해당 값에 의미 체계 이름을 할당하고, 해당 값을 빠르게 검색할 수 있습니다. 다음 예제에서는 <xref:System.Int32.TryParse%2A> 메서드 호출을 래핑하고 튜플을 반환합니다.
 
-[!code-vb[튜플](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#2)]
+[!code-vb[Tuple](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#2)]
 
 그런 다음 메서드를 호출하고 반환된 튜플을 코드에서 다음과 같이 처리할 수 있습니다.
 
@@ -95,7 +76,7 @@ Visual Basic의 튜플 지원을 사용하면 튜플을 신속하게 정의하�
 
 `&B` 또는 `&b` 접두사를 사용하여 이진 리터럴을 정의할 수 있습니다. 또한 밑줄 문자 `_`를 자릿수 구분 기호로 사용하여 가독성을 향상할 수 있습니다. 다음 예제에서는 두 기능을 모두 사용하여 `Byte` 값을 할당하고 10진수, 16진수, 이진수로 표시합니다.
 
-[!code-vb[이진](../../../samples/snippets/visualbasic/getting-started/bin-example.vb#1)]
+[!code-vb[Binary](../../../samples/snippets/visualbasic/getting-started/bin-example.vb#1)]
 
 자세한 내용은 [바이트](../language-reference/data-types/byte-data-type.md#literal-assignments), [정수](../language-reference/data-types/integer-data-type.md#literal-assignments), [Long](../language-reference/data-types/long-data-type.md#literal-assignments), [Short](../language-reference/data-types/short-data-type.md#literal-assignments), [SByte](../language-reference/data-types/sbyte-data-type.md#literal-assignments), [UInteger](../language-reference/data-types/uinteger-data-type.md#literal-assignments), [ULong](../language-reference/data-types/ulong-data-type.md#literal-assignments) 및 [UShort](../language-reference/data-types/ushort-data-type.md#literal-assignments) 데이터 형식의 "리터럴 할당" 섹션을 참조하세요.
 
@@ -192,4 +173,3 @@ End Interface
   
 ## <a name="see-also"></a>참고 항목  
  [Visual Studio 2017의 새로운 기능](/visualstudio/ide/whats-new-in-visual-studio)
-

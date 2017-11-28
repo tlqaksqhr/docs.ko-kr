@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 74b87cdb-a244-4c13-908c-539118bfeef9
+ms.openlocfilehash: 21f42bbf4693c78a5be271b7769ef4489ed6d476
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b982d72b92cefb015c584ea6827dc60999ca9a00
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="managing-dependencies-with-net-core-sdk-10"></a>.NET Core SDK 1.0으로 종속성 관리
 
 .NET Core 프로젝트가 project.json에서 csproj 및 MSBuild로 전환하면서 상당한 투자가 발생했으며, 그 결과 종속성 추적을 허용하는 프로젝트 파일과 자산 통합이 이루어졌습니다. .NET Core 프로젝트의 경우 project.json의 경우와 비슷합니다. NuGet 종속성을 추적하는 별도 JSON 또는 XML 파일이 없습니다. 이 변경으로 `<PackageReference>`라는 csproj 구문에 대한 다른 *참조* 형식도 소개하였습니다. 
@@ -56,6 +54,8 @@ MSBuild에 익숙한 경우 이미 존재하는 다른 참조 형식에 익숙�
 ```
 이렇게 되면 프로젝트를 저장하고 `dotnet restore` 명령을 실행하여 종속성을 설치합니다. 
 
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
 전체 프로젝트는 다음과 같습니다.
 
 ```xml
@@ -73,4 +73,3 @@ MSBuild에 익숙한 경우 이미 존재하는 다른 참조 형식에 익숙�
 
 ## <a name="removing-a-dependency-from-the-project"></a>프로젝트에서 종속성 제거
 프로젝트 파일에서 종속성을 제거하는 작업은 프로젝트 파일에서 `<PackageReference>`를 단순히 제거하는 것입니다.
-

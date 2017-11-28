@@ -1,30 +1,21 @@
 ---
 title: "연습: BackgroundWorker 구성 요소를 사용한 다중 스레딩(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: ff670fbf-a0ac-40c1-ab08-9ed53768f880
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 72d6e9ab42ca270ebe0691be23ebe181b973620d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 541a1ec788c337eea9965b8a46155e5c6606ea2f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-c"></a>연습: BackgroundWorker 구성 요소를 사용한 다중 스레딩(C#)
 이 연습에서는 텍스트 파일에서 단어를 검색하는 다중 스레드 Windows Forms 응용 프로그램을 만드는 방법을 보여 줍니다. 세부 항목은 다음과 같습니다.  
@@ -292,6 +283,5 @@ ms.lasthandoff: 07/28/2017
  이 응용 프로그램에는 몇 가지 기본적인 오류 처리 기능이 포함되어 있습니다. 이 응용 프로그램은 빈 검색 문자열을 검색합니다. 계산할 수 있는 최대 단어 또는 줄 수 초과 등과 같은 기타 오류를 처리함으로써 이 프로그램을 더욱 강력하게 만들 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [스레딩(C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
+ [스레딩(C#)](../../../../csharp/programming-guide/concepts/threading/index.md)  
  [방법: 이벤트 구독 및 구독 취소](../../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)
-

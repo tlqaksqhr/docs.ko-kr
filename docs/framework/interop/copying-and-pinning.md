@@ -5,31 +5,24 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - pinning, interop marshaling
 - copying, interop marshaling
 - interop marshaling, copying
 - interop marshaling, pinning
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b6f5c54ba65f44e01cc95094f7fa4027c587e8a1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 8e25d9a7bffdf0a3e8f68639dc0442ccf62a4412
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="copying-and-pinning"></a>복사 및 고정
 데이터를 마샬링할 때 interop 마샬러는 마샬링되는 데이터를 복사 또는 고정할 수 있습니다. 데이터를 복사하면 한 메모리 위치의 데이터 복사본이 또 다른 메모리 위치에 배치됩니다. 다음 그림에서는 값 형식 복사와 관리되는 메모리에서 관리되지 않는 메모리로 참조를 통해 전달되는 형식 복사의 차이점을 보여 줍니다.  
@@ -88,13 +81,12 @@ ms.lasthandoff: 08/21/2017
 > [!CAUTION]
 >  문자열이 값으로 전달되면 호출 수신자는 마샬러가 전달한 참조를 변경할 수 없습니다. 변경하면 관리되는 힙이 손상될 수 있습니다.  
   
- <xref:System.String?displayProperty=fullName>이 참조로 전달되면 마샬러는 호출을 수행하기 전에 문자열 콘텐츠를 보조 버퍼에 복사합니다. 그런 다음 호출에서 반환 시 버퍼 콘텐츠를 새 문자열에 복사합니다. 이 방법을 사용하면 변경할 수 없는 관리되는 문자열이 변경되지 않습니다.  
+ <xref:System.String?displayProperty=nameWithType>이 참조로 전달되면 마샬러는 호출을 수행하기 전에 문자열 콘텐츠를 보조 버퍼에 복사합니다. 그런 다음 호출에서 반환 시 버퍼 콘텐츠를 새 문자열에 복사합니다. 이 방법을 사용하면 변경할 수 없는 관리되는 문자열이 변경되지 않습니다.  
   
- <xref:System.Text.StringBuilder?displayProperty=fullName>가 값으로 전달되면 마샬러는 **StringBuilder**의 내부 버퍼에 대한 참조를 호출자에게 직접 전달합니다. 호출자와 호출 수신자가 버퍼 크기가 동의해야 합니다. 호출자는 적절한 길이의 **StringBuilder**를 만들어야 합니다. 호출 수신자는 버퍼가 오버런되지 않도록 필요한 예방 조치를 수행해야 합니다. **StringBuilder**는 값으로 전달되는 참조 형식이 기본적으로 In 매개 변수로 전달되는 규칙의 예외입니다. 항상 In/Out으로 전달됩니다.  
+ <xref:System.Text.StringBuilder?displayProperty=nameWithType>가 값으로 전달되면 마샬러는 **StringBuilder**의 내부 버퍼에 대한 참조를 호출자에게 직접 전달합니다. 호출자와 호출 수신자가 버퍼 크기가 동의해야 합니다. 호출자는 적절한 길이의 **StringBuilder**를 만들어야 합니다. 호출 수신자는 버퍼가 오버런되지 않도록 필요한 예방 조치를 수행해야 합니다. **StringBuilder**는 값으로 전달되는 참조 형식이 기본적으로 In 매개 변수로 전달되는 규칙의 예외입니다. 항상 In/Out으로 전달됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [기본 마샬링 동작](../../../docs/framework/interop/default-marshaling-behavior.md)   
- [Interop 마샬러를 사용한 메모리 관리](http://msdn.microsoft.com/en-us/417206ce-ee3e-4619-9529-0c0b686c7bee)   
- [방향 특성](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)   
- [Interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)
-
+ [기본 마샬링 동작](../../../docs/framework/interop/default-marshaling-behavior.md)  
+ [Interop 마샬러를 사용한 메모리 관리](http://msdn.microsoft.com/en-us/417206ce-ee3e-4619-9529-0c0b686c7bee)  
+ [방향 특성](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
+ [interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)

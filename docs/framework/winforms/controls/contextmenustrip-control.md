@@ -1,31 +1,32 @@
 ---
-title: "ContextMenuStrip 컨트롤 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "상황에 맞는 메뉴"
-  - "ContextMenuStrip 컨트롤[Windows Forms]"
-  - "바로 가기 메뉴"
+title: "ContextMenuStrip 컨트롤"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- context menus
+- ContextMenuStrip control [Windows Forms]
+- shortcut menus
 ms.assetid: 76e070b2-65d7-457f-8300-d104e4e01e5e
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7a6c9ced35b68cf1c3bbb216f0b34b6eabe9dba1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# ContextMenuStrip 컨트롤
+# <a name="contextmenustrip-control"></a>ContextMenuStrip 컨트롤
 <xref:System.Windows.Forms.ContextMenuStrip> 컨트롤은 컨트롤에 연결하는 바로 가기 메뉴를 제공합니다.  
   
-## 단원 내용  
+## <a name="in-this-section"></a>단원 내용  
  [ContextMenuStrip 컨트롤 개요](../../../../docs/framework/winforms/controls/contextmenustrip-control-overview.md)  
  이 컨트롤의 정의와 주요 기능 및 속성을 설명합니다.  
   
@@ -44,9 +45,9 @@ caps.handback.revision: 9
  [방법: ContextMenuStrip Opening 이벤트 처리](../../../../docs/framework/winforms/controls/how-to-handle-the-contextmenustrip-opening-event.md)  
  <xref:System.Windows.Forms.ToolStripDropDown.Opening> 이벤트를 처리하여 <xref:System.Windows.Forms.ContextMenuStrip> 컨트롤의 동작을 사용자 지정하는 방법을 설명합니다.  
   
- [ContextMenuStrip 작업 대화 상자](http://msdn.microsoft.com/library/ms233646\(v=vs.110\)) 또는 [ContextMenuStrip 항목 컬렉션 편집기](http://msdn.microsoft.com/library/ms233641\(v=vs.110\))를 참조하세요.  
+ 또한 참조 [ContextMenuStrip 작업 대화 상자](http://msdn.microsoft.com/library/ms233646\(v=vs.110\)) 또는 [ContextMenuStrip 항목 컬렉션 편집기](http://msdn.microsoft.com/library/ms233641\(v=vs.110\))합니다.  
   
-## 참조  
+## <a name="reference"></a>참조  
  <xref:System.Windows.Forms.MenuStrip>  
  폼에 대한 메뉴 시스템을 제공하는 <xref:System.Windows.Forms.MenuStrip> 클래스의 기능을 설명합니다.  
   
@@ -56,6 +57,6 @@ caps.handback.revision: 9
  <xref:System.Windows.Forms.ToolStripMenuItem>  
  <xref:System.Windows.Forms.MenuStrip> 또는 <xref:System.Windows.Forms.ContextMenuStrip>에 표시된 선택 가능한 옵션을 나타내는 <xref:System.Windows.Forms.ToolStripMenuItem> 클래스의 기능을 설명합니다.  
   
-## 관련 단원  
+## <a name="related-sections"></a>관련 단원  
  [Windows Forms에 사용할 수 있는 컨트롤](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  사용 방법에 대한 정보 링크를 포함하는 Windows Forms 컨트롤의 전체 목록을 제공합니다.

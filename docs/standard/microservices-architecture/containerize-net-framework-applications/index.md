@@ -8,12 +8,11 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
+ms.openlocfilehash: 3bce714d517615bdd56473a8c74acde424d2d5a7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 9bb64ea7199f5699ff166d1affb7f8126dcc6612
-ms.openlocfilehash: 1756ff0f49d9bb243fa561ba760418eba79de1f0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/05/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="migrating-legacy-monolithic-net-framework-applications-to-windows-containers"></a>Windows 컨테이너로 레거시 모놀리식 .NET Framework 응용 프로그램 마이그레이션
 
@@ -191,4 +190,3 @@ Visual Studio 통합은 솔루션에 Docker 지원을 추가하는 과정의 일
 
 >[!div class="step-by-step"]
 [이전](../net-core-single-containers-linux-windows-server-hosts/index.md) [다음](../multi-container-microservice-net-applications/index.md)
-

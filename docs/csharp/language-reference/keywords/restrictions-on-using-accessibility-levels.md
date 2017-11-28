@@ -1,38 +1,19 @@
 ---
 title: "액세스 가능성 수준 사용에 대한 제한(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- access modifiers [C#], accessibility level restrictions
+helpviewer_keywords: access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 44d065429f67d717d7c50e3877294eadd462a99d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8e49afd38fd776593b87f065a079da0d546df4a6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>액세스 가능성 수준 사용에 대한 제한(C# 참조)
 선언에서 형식을 지정하는 경우, 형식의 액세스 가능성 수준이 멤버 또는 다른 형식의 액세스 가능성 수준에 따라 달라지는지를 확인합니다. 예를 들어 직접 기본 클래스는 적어도 파생 클래스 수준만큼 액세스 가능해야 합니다. 다음 선언에서는 기본 클래스 `BaseClass`가 `MyClass`보다 액세스 가능성이 낮기 때문에 컴파일러 오류가 발생합니다.  
@@ -128,15 +109,14 @@ public class A
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
- [액세스 한정자](../../../csharp/language-reference/keywords/access-modifiers.md)   
- [액세스 가능성 도메인](../../../csharp/language-reference/keywords/accessibility-domain.md)   
- [액세스 가능성 수준](../../../csharp/language-reference/keywords/accessibility-levels.md)   
- [액세스 한정자](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)   
- [public](../../../csharp/language-reference/keywords/public.md)   
- [private](../../../csharp/language-reference/keywords/private.md)   
- [protected](../../../csharp/language-reference/keywords/protected.md)   
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
+ [액세스 한정자](../../../csharp/language-reference/keywords/access-modifiers.md)  
+ [접근성 도메인](../../../csharp/language-reference/keywords/accessibility-domain.md)  
+ [액세스 수준](../../../csharp/language-reference/keywords/accessibility-levels.md)  
+ [액세스 한정자](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+ [public](../../../csharp/language-reference/keywords/public.md)  
+ [private](../../../csharp/language-reference/keywords/private.md)  
+ [protected](../../../csharp/language-reference/keywords/protected.md)  
  [internal](../../../csharp/language-reference/keywords/internal.md)
-

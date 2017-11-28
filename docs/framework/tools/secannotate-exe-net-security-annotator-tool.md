@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - SecAnnotate.exe
 - Security Annotator tool
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: f7051e753c324933828e2447752f9c5ea13ed9d7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cdfe635b913f379a031994ad359a7d6ab657c255
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe(.NET Security Annotator 도구)
 .NET Security Annotator 도구(SecAnnotate.exe)는 하나 이상의 어셈블리의 `SecurityCritical` 및 `SecuritySafeCritical` 부분을 식별하는 명령줄 응용 프로그램입니다.  
@@ -70,4 +63,3 @@ SecAnnotate.exe [parameters] [assemblies]
  .NET Security Annotator에 대한 자세한 내용은 .NET Security 블로그의 [SecAnnotate를 사용하여 어셈블리의 투명도 위반 분석](http://go.microsoft.com/fwlink/?LinkId=187648) 항목을 참조하세요.  
   
 ## <a name="examples"></a>예제
-

@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
+ms.openlocfilehash: a7b7b77622ee4305dde3d126cb2e062055aa9df4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f6daa65c15a35bc84d8d7c07a86f42ffd251274d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (매니페스트 생성 및 편집 도구, 그래픽 클라이언트)
 MageUI.exe는 명령줄 도구인 Mage.exe와 동일한 기능을 지원하지만 Windows 기반 UI(사용자 인터페이스)를 사용합니다. 이 도구를 사용하면 배포 및 응용 프로그램 매니페스트를 만들고, 편집하고, 서명할 수 있습니다. MageUI.exe로 만든 새 매니페스트는 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]을 대상으로 합니다. 이전 버전의 MageUI.exe는 이전 .NET Framework 버전을 대상으로 사용해야 합니다. 매니페스트에서 어셈블리를 추가하거나 제거 또는 기존 매니페스트를 다시 서명할 때 MageUI.exe는 매니페스트를 대상 [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]로 업데이트하지 않습니다. 자세한 내용은 [Mage.exe(매니페스트 생성 및 편집 도구)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)를 참조하세요.  
@@ -207,7 +200,6 @@ MageUI.exe는 명령줄 도구인 Mage.exe와 동일한 기능을 지원하지�
 |**매니페스트 선택**|응용 프로그램 매니페스트를 선택할 수 있습니다. 응용 프로그램 매니페스트를 선택하면 이 페이지의 모든 기타 필드가 채워집니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)   
- [연습: ClickOnce 응용 프로그램 수동 배포](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)   
+ [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)  
+ [연습: ClickOnce 응용 프로그램 수동 배포](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
  [Mage.exe(매니페스트 생성 및 편집 도구)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
-

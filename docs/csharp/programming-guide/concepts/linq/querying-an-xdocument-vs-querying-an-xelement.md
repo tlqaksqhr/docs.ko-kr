@@ -1,31 +1,27 @@
 ---
 title: "XDocument 쿼리와 XElement 쿼리 비교(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 46221ff5-62ee-4de8-93ba-66465facb5c1
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: b315a9b298a786cbb78eb18efd4ecf3ea8e0b90c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fa756d4adb1c361ef52e58bf6bdfd3bc2e31d13a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a>XDocument 쿼리와 XElement 쿼리 비교(C#)
-<xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>를 통해 문서를 로드하는 경우에는 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>를 통해 로드하는 경우와 약간 다르게 쿼리를 작성해야 합니다.  
+<xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>를 통해 문서를 로드하는 경우에는 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>를 통해 로드하는 경우와 약간 다르게 쿼리를 작성해야 합니다.  
   
 ## <a name="comparison-of-xdocumentload-and-xelementload"></a>XDocument.Load와 XElement.Load의 비교  
- <xref:System.Xml.Linq.XElement>를 통해 XML 문서를 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=fullName>에 로드하면 XML 트리의 루트에 있는 <xref:System.Xml.Linq.XElement>에 로드된 문서의 루트 요소가 포함되어 있습니다. 그러나 <xref:System.Xml.Linq.XDocument>를 통해 동일한 XML 문서를 <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=fullName>에 로드하면 트리의 루트가 <xref:System.Xml.Linq.XDocument> 노드이고 로드된 문서의 루트 요소가 <xref:System.Xml.Linq.XElement>의 허용된 하나의 자식 <xref:System.Xml.Linq.XDocument> 노드입니다. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 축은 루트 노드와 상대적으로 작동합니다.  
+ <xref:System.Xml.Linq.XElement>를 통해 XML 문서를 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>에 로드하면 XML 트리의 루트에 있는 <xref:System.Xml.Linq.XElement>에 로드된 문서의 루트 요소가 포함되어 있습니다. 그러나 <xref:System.Xml.Linq.XDocument>를 통해 동일한 XML 문서를 <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>에 로드하면 트리의 루트가 <xref:System.Xml.Linq.XDocument> 노드이고 로드된 문서의 루트 요소가 <xref:System.Xml.Linq.XElement>의 허용된 하나의 자식 <xref:System.Xml.Linq.XDocument> 노드입니다. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 축은 루트 노드와 상대적으로 작동합니다.  
   
  이 첫 번째 예제에서는 <xref:System.Xml.Linq.XElement.Load%2A>를 사용하여 XML 트리를 로드한 다음 트리 루트의 자식 요소에 대해 쿼리합니다.  
   
@@ -123,4 +119,3 @@ Querying tree loaded with XDocument.Load
   
 ## <a name="see-also"></a>참고 항목  
  [기본 쿼리(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-

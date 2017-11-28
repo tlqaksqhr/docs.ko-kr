@@ -1,42 +1,23 @@
 ---
 title: "-warnaserror(C# 컴파일러 옵션)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /warnaserror
-dev_langs:
-- CSharp
+f1_keywords: /warnaserror
 helpviewer_keywords:
 - /warnaserror compiler option [C#]
 - -warnaserror compiler option [C#]
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 28c2cdc26d32d98e617a0c4b8cd282d2fbc87f4d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: df29fd760e0e4a002f1b5078d85370a74f322e23
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="warnaserror-c-compiler-options"></a>/warnaserror(C# 컴파일러 옵션)
 **/warnaserror+** 옵션은 모든 경고를 오류로 처리합니다.  
@@ -75,6 +56,5 @@ csc /warnaserror:642,649,652 in.cs
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)   
+ [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)  
  [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)
-

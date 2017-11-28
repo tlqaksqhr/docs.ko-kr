@@ -1,30 +1,21 @@
 ---
 title: "방법: 명령줄을 사용하여 어셈블리 만들기 및 사용(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: d59988ec4899b4115d8d0fd7172e0c8ff8802378
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 630a799331e03860fbee34eab6bea3bb594ef0f0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>방법: 명령줄을 사용하여 어셈블리 만들기 및 사용(C#)
 어셈블리 또는 DLL(동적 연결 라이브러리)은 런타임 시 프로그램에 연결됩니다. DLL 빌드 및 사용을 보여 주려면 다음 시나리오를 고려합니다.  
@@ -140,7 +131,6 @@ csc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.cs
  명령줄에서 빌드하는 방법에 대한 자세한 내용은 [csc.exe를 사용한 명령줄 빌드](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../../csharp/programming-guide/index.md)   
- [어셈블리 및 전역 어셈블리 캐시(C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)   
+ [C# 프로그래밍 가이드](../../../../csharp/programming-guide/index.md)  
+ [어셈블리 및 전역 어셈블리 캐시(C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
  [DLL 함수가 포함된 클래스 만들기](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)
-

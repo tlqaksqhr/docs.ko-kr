@@ -5,26 +5,27 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - resource files, .resources files
 - .resources files
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 10f714f5793fff4d6081c9fc910159a02e34e53b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2afcde97f5056c23f8d6bc294e955b75b5f166fd
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>데스크톱 응용 프로그램용 리소스 파일 만들기
 문자열, 이미지 또는 개체 데이터와 같은 리소스를 리소스 파일에 포함하여 응용 프로그램에서 쉽게 사용할 수 있게 설정할 수 있습니다. .NET Framework에서는 리소스 파일을 만드는 다섯 가지 방법을 제공합니다.  
@@ -65,7 +66,7 @@ name2=value2
   
  .txt 및 .restext 파일의 리소스 파일 형식은 같습니다. .restext 파일 확장명은 단순히 텍스트 파일을 텍스트 기반 리소스 파일로 즉시 식별할 수 있도록 합니다.  
   
- 문자열 리소스는 *name/value* 쌍으로 나타납니다. 여기서 *name*은 리소스를 식별하는 문자열이고, *value*는 *name*을 <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=fullName>과 같은 리소스 검색 메서드에 전달할 때 반환되는 리소스 문자열입니다. *name* 및 *value*는 등호(=)로 구분해야 합니다. 예를 들면 다음과 같습니다.  
+ 문자열 리소스는 *name/value* 쌍으로 나타납니다. 여기서 *name*은 리소스를 식별하는 문자열이고, *value*는 *name*을 <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>과 같은 리소스 검색 메서드에 전달할 때 반환되는 리소스 문자열입니다. *name* 및 *value*는 등호(=)로 구분해야 합니다. 예를 들면 다음과 같습니다.  
   
 ```  
 FileMenuName=File  
@@ -77,7 +78,7 @@ HelpMenuName=Help
 > [!CAUTION]
 >  암호, 보안이 중요한 정보 또는 개인 데이터를 저장할 때는 리소스 파일을 사용하지 마세요.  
   
- 빈 문자열(즉, <xref:System.String.Empty?displayProperty=fullName> 값을 가진 리소스)은 텍스트 파일에 사용할 수 있습니다. 예를 들면 다음과 같습니다.  
+ 빈 문자열(즉, <xref:System.String.Empty?displayProperty=nameWithType> 값을 가진 리소스)은 텍스트 파일에 사용할 수 있습니다. 예를 들면 다음과 같습니다.  
   
 ```  
 EmptyString=  
@@ -123,7 +124,8 @@ greeting=Hello, {0}!
   
  다음 예제에서는 .resources 파일을 사용하여 사용자에게 메시지를 표시하는 콘솔 응용 프로그램에 대한 소스 코드를 보여 줍니다.  
   
- [!code-csharp[Conceptual.Resources.TextFiles#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.textfiles/cs/greeting.cs#1)] [!code-vb[Conceptual.Resources.TextFiles#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.textfiles/vb/greeting.vb#1)]  
+ [!code-csharp[Conceptual.Resources.TextFiles#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.textfiles/cs/greeting.cs#1)]
+ [!code-vb[Conceptual.Resources.TextFiles#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.textfiles/vb/greeting.vb#1)]  
   
  Visual Basic을 사용하고 있고 소스 코드 파일 이름이 Greeting.vb라면 다음 명령은 포함된 .resources 파일을 포함하는 실행 파일을 만듭니다.  
   
@@ -174,20 +176,21 @@ greeting=Hello, {0}!
   
 <a name="ResourcesFiles"></a>   
 ## <a name="resources-in-resources-files"></a>.resources 파일의 리소스  
- <xref:System.Resources.ResourceWriter?displayProperty=fullName> 클래스를 사용하여 프로그래밍 방식으로 코드에서 직접 이진 리소스(.resources) 파일을 만들 수 있습니다. [리소스 파일 생성기(Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)를 사용하여 텍스트 파일 또는 .resx 파일에서 .resources 파일을 만들 수도 있습니다. .resources 파일에는 문자열 데이터 외에 이진 데이터(바이트 배열) 및 개체 데이터가 포함될 수 있습니다. 프로그래밍 방식으로 .resources 파일을 만들려면 다음 단계가 필요합니다.  
+ <xref:System.Resources.ResourceWriter?displayProperty=nameWithType> 클래스를 사용하여 프로그래밍 방식으로 코드에서 직접 이진 리소스(.resources) 파일을 만들 수 있습니다. [리소스 파일 생성기(Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)를 사용하여 텍스트 파일 또는 .resx 파일에서 .resources 파일을 만들 수도 있습니다. .resources 파일에는 문자열 데이터 외에 이진 데이터(바이트 배열) 및 개체 데이터가 포함될 수 있습니다. 프로그래밍 방식으로 .resources 파일을 만들려면 다음 단계가 필요합니다.  
   
 1.  고유한 파일 이름을 사용하여 <xref:System.Resources.ResourceWriter> 개체를 만듭니다. 파일 이름 또는 파일 스트림을 <xref:System.Resources.ResourceWriter> 클래스 생성자로 지정하여 이 작업을 수행할 수 있습니다.  
   
-2.  파일에 추가할 각 명명된 리소스에 대해 <xref:System.Resources.ResourceWriter.AddResource%2A?displayProperty=fullName> 메서드의 오버로드 중 하나를 호출합니다. 리소스는 문자열, 개체 또는 이진 데이터 컬렉션(바이트 배열)일 수 있습니다.  
+2.  파일에 추가할 각 명명된 리소스에 대해 <xref:System.Resources.ResourceWriter.AddResource%2A?displayProperty=nameWithType> 메서드의 오버로드 중 하나를 호출합니다. 리소스는 문자열, 개체 또는 이진 데이터 컬렉션(바이트 배열)일 수 있습니다.  
   
-3.  <xref:System.Resources.ResourceWriter.Close%2A?displayProperty=fullName> 메서드를 호출하여 리소스를 파일에 쓰고 <xref:System.Resources.ResourceWriter> 개체를 닫습니다.  
+3.  <xref:System.Resources.ResourceWriter.Close%2A?displayProperty=nameWithType> 메서드를 호출하여 리소스를 파일에 쓰고 <xref:System.Resources.ResourceWriter> 개체를 닫습니다.  
   
 > [!NOTE]
 >  암호, 보안이 중요한 정보 또는 개인 데이터를 저장할 때는 리소스 파일을 사용하지 마세요.  
   
  다음 예제에서는 문자열 6개, 아이콘 한 개 및 응용 프로그램 정의 개체 2개(`Automobile` 개체 2개)를 저장하는 CarResources.resources라는 .resources 파일을 프로그래밍 방식으로 만듭니다. 이 예제에서 정의되고 인스턴스화된 `Automobile` 클래스는 <xref:System.SerializableAttribute> 특성으로 태그가 지정되어 이진 serialization 포맷터를 통해 유지될 수 있습니다.  
   
- [!code-csharp[Conceptual.Resources.Resources#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resources/cs/resources1.cs#1)] [!code-vb[Conceptual.Resources.Resources#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resources/vb/resources1.vb#1)]  
+ [!code-csharp[Conceptual.Resources.Resources#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resources/cs/resources1.cs#1)]
+ [!code-vb[Conceptual.Resources.Resources#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resources/vb/resources1.vb#1)]  
   
  .resources 파일을 만든 후 언어 컴파일러의 `/resource` 스위치를 포함하여 런타임 실행 파일 또는 라이브러리에 포함하거나, [어셈블리 링커(Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md)를 사용하여 위성 어셈블리에 포함할 수 있습니다.  
   
@@ -200,7 +203,6 @@ greeting=Hello, {0}!
  컴파일 시간에 Visual Studio에서는 먼저 프로젝트의 .resx 파일을 이진 리소스(.resources) 파일로 변환하고 프로젝트 obj 디렉터리의 하위 디렉터리에 저장합니다. Visual Studio에서는 지역화된 리소스가 포함되지 않은 모든 리소스 파일을 프로젝트에서 생성된 주 어셈블리에 포함합니다. 리소스 파일에 지역화된 리소스가 포함된 경우 Visual Studio에서는 각 지역화된 문화권에 대한 개별 위성 어셈블리에 리소스 파일을 포함합니다. 그다음에 각 위성 어셈블리를 이름이 지역화된 문화권과 일치하는 디렉터리에 저장합니다. 예를 들어 지역화된 영어(미국) 리소스는 en-US 하위 디렉터리의 위성 어셈블리에 저장됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Resources>   
- [데스크톱 앱의 리소스](../../../docs/framework/resources/index.md)   
+ <xref:System.Resources>  
+ [데스크톱 앱의 리소스](../../../docs/framework/resources/index.md)  
  [리소스 패키징 및 배포](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
-

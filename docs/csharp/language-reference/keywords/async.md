@@ -1,42 +1,23 @@
 ---
 title: "async(C# 참조)"
-ms.date: 2017-05-22
+ms.date: 05/22/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- async_CSharpKeyword
-dev_langs:
-- CSharp
+f1_keywords: async_CSharpKeyword
 helpviewer_keywords:
 - async keyword [C#]
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c4a89736822342a9d9a24db6d43435f9795b81b5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1dc7ba08d1a79d17d625755a6d60565aee6945e3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="async-c-reference"></a>async(C# 참조)
 `async` 한정자를 사용하여 메서드, [람다 식](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) 또는 [무명 메서드](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)를 비동기로 지정합니다. 메서드 또는 식에 이 한정자를 사용하면 *비동기 메서드*라고 합니다. 다음 예제에서는 `ExampleMethodAsync`라는 비동기 메서드를 정의합니다. 
@@ -48,7 +29,7 @@ public async Task<int> ExampleMethodAsync()
 }  
 ```  
  
-비동기 프로그래밍이 처음이거나 비동기 메서드가 `await` 키워드를 사용하여 호출자의 스레드를 차단하지 않고 장기 실행 작업을 수행할 수 있는 방법을 잘 모르겠으면 [async 및 await를 사용한 비동기 프로그래밍](../../../csharp/programming-guide/concepts/async/index.md)의 소개 내용을 참조하세요. 다음 코드는 비동기 메서드 안에 있으며 <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=fullName> 메서드를 호출합니다. 
+비동기 프로그래밍이 처음이거나 비동기 메서드가 `await` 키워드를 사용하여 호출자의 스레드를 차단하지 않고 장기 실행 작업을 수행할 수 있는 방법을 잘 모르겠으면 [async 및 await를 사용한 비동기 프로그래밍](../../../csharp/programming-guide/concepts/async/index.md)의 소개 내용을 참조하세요. 다음 코드는 비동기 메서드 안에 있으며 <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType> 메서드를 호출합니다. 
   
 ```csharp  
 string contents = await httpClient.GetStringAsync(requestUrl);  
@@ -82,7 +63,7 @@ Visual Studio에서 이 코드를 WPF(Windows Presentation Foundation) 앱 또�
 - 이 코드를 MainPage.xaml.cs의 `MainPage` 클래스에 붙여넣습니다.  
 - System.Net.Http 및 System.Threading.Tasks에 대한 using 지시문을 추가합니다.  
   
-[!code-cs[wpf-async](../../../../samples/snippets/csharp/language-reference/keywords/async/wpf/mainwindow.xaml.cs#1)]
+[!code-csharp[wpf-async](../../../../samples/snippets/csharp/language-reference/keywords/async/wpf/mainwindow.xaml.cs#1)]
   
 > [!IMPORTANT]
 >  작업 및 작업 완료를 기다리는 동안 실행되는 코드에 대한 자세한 내용은 [async 및 await를 사용한 비동기 프로그래밍](../../../csharp/programming-guide/concepts/async/index.md)을 참조하세요. 비슷한 요소를 사용하는 전체 WPF 예제에 대해서는 [연습: Async 및 Await를 사용하여 웹에 액세스](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)를 참조하세요.  
@@ -106,8 +87,7 @@ C# 7부터 `GetAwaiter` 메서드가 있는 다른 형식(일반적으로 값 �
 자세한 내용과 예제는 [비동기 반환 형식](../../../csharp/programming-guide/concepts/async/async-return-types.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>   
- [await](../../../csharp/language-reference/keywords/await.md)   
- [연습: Async 및 Await를 사용하여 웹에 액세스](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
+ <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>  
+ [await](../../../csharp/language-reference/keywords/await.md)  
+ [연습: Async 및 Await를 사용하여 웹에 액세스](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
  [Async 및 Await를 사용한 비동기 프로그래밍](../../../csharp/programming-guide/concepts/async/index.md)
-

@@ -1,30 +1,21 @@
 ---
 title: "스레드 풀링(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 98ae68c1-ace8-44b9-9317-8920ac9ef2b6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 09dd597e8ac7a6b336f71891ccc89984ea659614
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d2f8e5a2d7a83dc6fef72ef87b4003ae49656d8f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="thread-pooling-c"></a>스레드 풀링(C#)
 *스레드 풀*은 백그라운드에서 몇 가지 작업을 수행하는 데 사용할 수 있는 스레드 컬렉션입니다. 배경 정보는 [스레딩(C#)](../../../../csharp/programming-guide/concepts/threading/index.md)을 참조하세요. 이렇게 하면 기본 스레드가 자유롭게 다른 작업을 비동기적으로 수행할 수 있습니다.  
@@ -37,7 +28,7 @@ ms.lasthandoff: 07/28/2017
   
  고유한 스레드 풀을 구현할 수 있지만, <xref:System.Threading.ThreadPool> 클래스를 통해 .NET Framework에서 제공하는 스레드 풀을 사용하는 편이 더 쉽습니다.  
   
- 스레드 풀링을 사용하는 경우 실행하려는 프로시저에 대한 대리자를 사용하여 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=fullName> 메서드를 호출합니다. 그러면 C#에서 스레드를 만들고 프로시저를 실행합니다.  
+ 스레드 풀링을 사용하는 경우 실행하려는 프로시저에 대한 대리자를 사용하여 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> 메서드를 호출합니다. 그러면 C#에서 스레드를 만들고 프로시저를 실행합니다.  
   
 ## <a name="thread-pooling-example"></a>스레드 풀링 예제  
  다음 예제에서는 스레드 풀링을 사용하여 몇 가지 작업을 시작하는 방법을 보여 줍니다.  
@@ -76,11 +67,10 @@ private void AnotherLongTask(Object state)
  구조체를 사용하여 상태 개체 내의 값을 반환할 수 없습니다. 구조체는 값 형식이므로 비동기 프로세스를 통해 변경된 내용은 원래 구조체의 멤버를 변경하지 않습니다. 반환 값이 필요하지 않은 경우 구조체를 사용하여 매개 변수를 제공할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>   
- <xref:System.Threading>   
- <xref:System.Threading.ThreadPool>   
- [방법: 스레드 풀 사용(C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)   
- [스레딩(C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
- [다중 스레드 응용 프로그램(C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)   
+ <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  
+ <xref:System.Threading>  
+ <xref:System.Threading.ThreadPool>  
+ [방법: 스레드 풀 사용(C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)  
+ [스레딩(C#)](../../../../csharp/programming-guide/concepts/threading/index.md)  
+ [다중 스레드 응용 프로그램(C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)  
  [스레드 동기화(C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)
-

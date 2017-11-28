@@ -1,58 +1,40 @@
 ---
 title: "try-finally(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - finally
 - finally_CSharpKeyword
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - finally keyword [C#]
 - try-finally statement [C#]
 ms.assetid: c27623fb-7261-4464-862c-7a369d3c8f0a
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 927b851419f2c5245518ee39bf847cb1f1664917
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 88b9960b8c026d1fcd8eed1815ade57422cd2a15
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="try-finally-c-reference"></a>try-finally(C# 참조)
 `finally` 블록을 사용하면 [try](../../../csharp/language-reference/keywords/try-catch.md) 블록에서 할당된 리소스를 정리할 수 있으며, `try` 블록에서 예외가 발생하는 경우에도 코드를 실행할 수 있습니다. 일반적으로 `finally` 블록의 문은 제어가 `try` 문을 벗어날 때 실행됩니다. 제어 전송은 정상적인 실행 결과, `break`, `continue`, `goto` 또는 `return` 문의 실행 결과 또는 `try` 문에서 예외 전파의 결과로 발생할 수 있습니다.  
   
- 처리된 예외 내에서는 연결된 `finally` 블록이 항상 실행됩니다. 그러나 예외가 처리되지 않은 경우 `finally` 블록의 실행 여부는 예외 해제 작업의 트리거 방법에 따라 달라집니다. 트리거 방법은 다시 사용자 컴퓨터의 설정 방법에 따라 달라집니다. 자세한 내용은 [CLR에서 처리되지 않은 예외 처리](http://go.microsoft.com/fwlink/?LinkId=128371)를 참조하세요.  
+ 처리된 예외 내에서는 연결된 `finally` 블록이 항상 실행됩니다. 그러나 예외가 처리되지 않은 경우 `finally` 블록의 실행 여부는 예외 해제 작업의 트리거 방법에 따라 달라집니다. 트리거 방법은 다시 사용자 컴퓨터의 설정 방법에 따라 달라집니다.
   
  일반적으로 처리되지 않은 예외로 응용 프로그램이 종료되는 경우 `finally` 블록의 실행 여부는 중요하지 않습니다. 그러나 해당 상황에서도 실행해야 하는 문이 `finally` 블록에 있는 경우 한 가지 솔루션은 `catch` 블록을 `try`-`finally` 문에 추가하는 것입니다. 또는 호출 스택에서 상위 `try`-`finally` 문의 `try` 블록에 throw될 수 있는 예외를 catch할 수 있습니다. 즉, `try`-`finally` 문을 포함하는 메서드를 호출하는 메서드, 해당 메서드를 호출하는 메서드 또는 호출 스택의 임의 메서드에 예외를 catch할 수 있습니다. 예외가 catch되지 않는 경우 `finally`의 실행은 운영 체제에서 예외 해제 작업 트리거를 선택하는지 여부에 따라 달라집니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 잘못된 변환 문으로 인해 `System.InvalidCastException` 예외가 발생합니다. 예외가 처리되지 않습니다.  
   
- [!code-cs[csrefKeywordsExceptions#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-finally_1.cs)]  
+ [!code-csharp[csrefKeywordsExceptions#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-finally_1.cs)]  
   
  다음 예제에서는 `TryCast` 메서드의 예외가 호출 스택의 위에 있는 메서드에서 catch됩니다.  
   
- [!code-cs[csrefKeywordsExceptions#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-finally_2.cs)]  
+ [!code-csharp[csrefKeywordsExceptions#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/try-finally_2.cs)]  
   
  `finally`에 대한 자세한 내용은 [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)를 참조하세요.  
   
@@ -62,12 +44,11 @@ ms.lasthandoff: 09/25/2017
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
- [try, throw 및 catch 문(C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)   
- [예외 처리 문](../../../csharp/language-reference/keywords/exception-handling-statements.md)   
- [throw](../../../csharp/language-reference/keywords/throw.md)   
- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)   
- [방법: 명시적으로 예외 Throw](https://msdn.microsoft.com/library/xhcbs8fz)
-
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
+ [try, throw 및 catch 문(C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)  
+ [예외 처리 문](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
+ [throw](../../../csharp/language-reference/keywords/throw.md)  
+ [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
+ [방법: 명시적으로 예외 Throw](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

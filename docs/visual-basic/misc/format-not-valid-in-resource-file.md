@@ -1,39 +1,22 @@
 ---
-title: "리소스 파일에 지정 된 형식이 잘못 됨 | Microsoft 문서"
-ms.date: 2015-07-20
+title: "리소스 파일의 형식이 잘못되었습니다."
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vbrID325
+f1_keywords: vbrID325
 ms.assetid: e986ab45-e3ce-430e-8704-5882e5da1104
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6d9332c5a346ea17736d17812930bbae376d8f88
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: ab126e3ac030e855659d5e4a02e523eefb7860e7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="format-not-valid-in-resource-file"></a>리소스 파일의 형식이 잘못되었습니다.
-프로젝트에 리소스 파일의 표준 Windows 리소스 파일 형식을 따르지 않습니다 또는 리소스 파일 간에 불일치가 있기 및 [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 프로젝트입니다.  
+프로젝트의 리소스 파일이 Windows 리소스 파일의 표준 형식을 따르지 않거나 리소스 파일과 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 프로젝트가 일치하지 않습니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   

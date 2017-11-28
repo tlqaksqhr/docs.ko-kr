@@ -1,45 +1,27 @@
 ---
 title: "방법: Visual Basic에서 파일 다운로드"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- downloading Internet resources, files
-- downloading files
-- remote computers, downloading from
-- files, downloading
-- files, transferring
+- downloading Internet resources [Visual Basic], files
+- downloading files [Visual Basic]
+- remote computers [Visual Basic], downloading from
+- files [Visual Basic], downloading
+- files [Visual Basic], transferring
 ms.assetid: ac479f81-c0e2-4b99-af73-217f446b73da
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: dc67d28b870f86c6464e86f7682f71e6e36ea9e7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8988b922df921c2de3e2c4f6d7a8e98887ba7b0a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-download-a-file-in-visual-basic"></a>방법: Visual Basic에서 파일 다운로드
 <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> 메서드를 사용하여 원격 파일을 다운로드한 다음 특정 위치에 저장할 수 있습니다. `ShowUI` 매개 변수가 `True`로 설정된 경우 다운로드 진행률을 표시하고 사용자가 작업을 취소할 수 있도록 하는 대화 상자가 표시됩니다. 기본적으로 동일한 이름의 기존 파일을 덮어쓰지 않습니다. 기존 파일을 덮어쓰려는 경우 `overwrite` 매개 변수를 `True`로 설정합니다.  
@@ -81,8 +63,7 @@ ms.lasthandoff: 07/28/2017
     >  `DownLoadFile` 메서드에서 사용되는 FTP 프로토콜은 암호 등의 정보를 일반 텍스트로 보내므로 중요한 정보 전송에 사용하면 안 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:Microsoft.VisualBasic.Devices.Network>   
- <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>   
- [방법: 파일 업로드](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)   
+ <xref:Microsoft.VisualBasic.Devices.Network>  
+ <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>  
+ [방법: 파일 업로드](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
  [방법: 파일 경로의 구문 분석](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
-

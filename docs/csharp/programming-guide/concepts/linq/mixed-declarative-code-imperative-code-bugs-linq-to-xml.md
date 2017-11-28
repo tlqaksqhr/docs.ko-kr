@@ -1,30 +1,21 @@
 ---
 title: "혼합된 선언적 코드-명령적 코드 버그(LINQ to XML)(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: fada62d0-0680-4e73-945a-2b00d7a507af
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 328a266d910e57dc089991ead5fe09a87e722688
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2fb679ee2593520e633daba969ccaa4db4d30509
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-c"></a>혼합된 선언적 코드-명령적 코드 버그(LINQ to XML)(C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에는 XML 트리를 직접 수정하는 데 사용할 수 있는 다양한 메서드가 포함되어 있습니다. 요소를 추가 및 삭제하고, 요소의 내용을 변경하고, 특성을 추가하는 등의 작업을 수행할 수 있습니다. 이 프로그래밍 인터페이스는 [XML 트리 수정(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)에 설명되어 있습니다. <xref:System.Xml.Linq.XContainer.Elements%2A>와 같은 축 중 하나를 반복하면서 XML 트리를 수정하면 이상한 버그가 발생할 수 있습니다.  
@@ -187,4 +178,3 @@ Console.WriteLine(newRoot);
   
 ## <a name="see-also"></a>참고 항목  
  [고급 LINQ to XML 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
-

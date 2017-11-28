@@ -1,12 +1,9 @@
 ---
 title: "상속(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - abstract methods [C#]
 - abstract classes [C#]
@@ -15,29 +12,14 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: dc3d448d311fe0a67839757fa43a209d92141214
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 01092b94c83f50b16604428780b2786496017732
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="inheritance-c-programming-guide"></a>상속(C# 프로그래밍 가이드)
 
@@ -50,14 +32,14 @@ ms.lasthandoff: 07/28/2017
   
  다른 클래스에서 파생할 클래스를 정의하는 경우 파생 클래스는 해당 생성자와 종료자를 제외하고 기본 클래스의 모든 멤버를 암시적으로 얻게 됩니다. 따라서 파생 클래스는 다시 구현하지 않고도 기본 클래스의 코드를 다시 사용할 수 있습니다. 파생 클래스에서 더 많은 멤버를 추가할 수 있습니다. 이런 방식으로 파생 클래스는 기본 클래스의 기능을 확장합니다.  
   
- 다음 그림은 일부 비즈니스 프로세스의 작업 항목을 나타내는 `WorkItem` 클래스를 보여 줍니다. 모든 클래스와 마찬가지로, <xref:System.Object?displayProperty=fullName>에서 파생되고 해당 메서드를 모두 상속합니다. `WorkItem`은 고유한 멤버 5개를 추가합니다. 생성자는 상속되지 않으므로 생성자도 여기에 포함됩니다. `ChangeRequest` 클래스는 `WorkItem`에서 상속되며 특정 종류의 작업 항목을 나타냅니다. `ChangeRequest`는 `WorkItem` 및 <xref:System.Object>에서 상속하는 멤버에 둘 이상의 멤버를 추가합니다. 고유한 생성자를 추가해야 하며, `originalItemID`도 추가합니다. `originalItemID` 속성을 사용하면 `ChangeRequest` 인스턴스를 변경 요청이 적용되는 원래 `WorkItem`에 연결할 수 있습니다.  
+ 다음 그림은 일부 비즈니스 프로세스의 작업 항목을 나타내는 `WorkItem` 클래스를 보여 줍니다. 모든 클래스와 마찬가지로, <xref:System.Object?displayProperty=nameWithType>에서 파생되고 해당 메서드를 모두 상속합니다. `WorkItem`은 고유한 멤버 5개를 추가합니다. 생성자는 상속되지 않으므로 생성자도 여기에 포함됩니다. `ChangeRequest` 클래스는 `WorkItem`에서 상속되며 특정 종류의 작업 항목을 나타냅니다. `ChangeRequest`는 `WorkItem` 및 <xref:System.Object>에서 상속하는 멤버에 둘 이상의 멤버를 추가합니다. 고유한 생성자를 추가해야 하며, `originalItemID`도 추가합니다. `originalItemID` 속성을 사용하면 `ChangeRequest` 인스턴스를 변경 요청이 적용되는 원래 `WorkItem`에 연결할 수 있습니다.  
   
  ![클래스 상속](../../../csharp/programming-guide/classes-and-structs/media/class_inheritance.png "Class_Inheritance")  
 클래스 상속  
   
- 다음 예제에서는 앞의 그림에서 보여 주는 클래스 관계가 C#에서 어떻게 표현되는지를 보여 줍니다. 또한 이 예제에서 `WorkItem`은 가상 메서드 <xref:System.Object.ToString%2A?displayProperty=fullName>을 재정의하는 방법과 `ChangeRequest` 클래스가 메서드의 `WorkItem` 구현을 상속하는 방법을 보여 줍니다.  
+ 다음 예제에서는 앞의 그림에서 보여 주는 클래스 관계가 C#에서 어떻게 표현되는지를 보여 줍니다. 또한 이 예제에서 `WorkItem`은 가상 메서드 <xref:System.Object.ToString%2A?displayProperty=nameWithType>을 재정의하는 방법과 `ChangeRequest` 클래스가 메서드의 `WorkItem` 구현을 상속하는 방법을 보여 줍니다.  
   
- [!code-cs[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#49](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/inheritance_1.cs)]  
   
 ## <a name="abstract-and-virtual-methods"></a>추상 메서드 및 가상 메서드  
  기본 클래스가 메서드를 [virtual](../../../csharp/language-reference/keywords/virtual.md)로 선언하는 경우 파생 클래스가 해당 구현으로 메서드를 [재정의](../../../csharp/language-reference/keywords/override.md)할 수 있습니다. 기본 클래스가 멤버를 [abstract](../../../csharp/language-reference/keywords/abstract.md)로 선언하는 경우 해당 클래스에서 직접 상속하는 모든 비추상 클래스에서 메서드를 재정의해야 합니다. 파생 클래스 자체가 abstract인 경우 직접 구현하지 않고 추상 멤버를 상속합니다. 추상 멤버 및 가상 멤버는 개체 지향 프로그래밍의 두 번째 주요 특징인 다형성의 기초가 됩니다. 자세한 내용은 [다형성](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)을 참조하세요.  
@@ -68,7 +50,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="interfaces"></a>인터페이스  
  *인터페이스*는 추상 멤버로만 구성된 추상 기본 클래스와 비슷한 참조 형식입니다. 클래스에서 인터페이스를 구현하는 경우 인터페이스의 모든 멤버에 대해 구현을 제공해야 합니다. 하나의 직접 기본 클래스에서만 파생할 수 있는 경우에도 클래스에서 여러 인터페이스를 구현할 수 있습니다.  
   
- 인터페이스는 "is a" 관계가 없을 수도 있는 클래스에 대해 특정 기능을 정의하는 데 사용됩니다. 예를 들어 <xref:System.IEquatable%601?displayProperty=fullName> 인터페이스는 클라이언트 코드에서 형식의 두 개체가 같은지 여부를 확인할 수 있도록 해야 하는 모든 클래스 또는 구조체에 의해 구현될 수 있습니다(그러나 형식이 동등성을 정의함). <xref:System.IEquatable%601>은 기본 클래스와 파생 클래스 간에 존재하는 동일한 종류의 "is a" 관계를 암시하지 않습니다(예: `Mammal`은 `Animal`임). 자세한 내용은 [인터페이스](../../../csharp/programming-guide/interfaces/index.md)를 참조하세요.  
+ 인터페이스는 "is a" 관계가 없을 수도 있는 클래스에 대해 특정 기능을 정의하는 데 사용됩니다. 예를 들어 <xref:System.IEquatable%601?displayProperty=nameWithType> 인터페이스는 클라이언트 코드에서 형식의 두 개체가 같은지 여부를 확인할 수 있도록 해야 하는 모든 클래스 또는 구조체에 의해 구현될 수 있습니다(그러나 형식이 동등성을 정의함). <xref:System.IEquatable%601>은 기본 클래스와 파생 클래스 간에 존재하는 동일한 종류의 "is a" 관계를 암시하지 않습니다(예: `Mammal`은 `Animal`임). 자세한 내용은 [인터페이스](../../../csharp/programming-guide/interfaces/index.md)를 참조하세요.  
   
 ## <a name="preventing-further-derivation"></a>추가 파생 방지  
  클래스는 자신이나 멤버를 [sealed](../../../csharp/language-reference/keywords/sealed.md)로 선언하여 다른 클래스가 해당 클래스나 멤버에서 상속할 수 없도록 차단할 수 있습니다. 자세한 내용은 [추상 및 봉인 클래스와 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)를 참조하세요.  
@@ -77,8 +59,7 @@ ms.lasthandoff: 07/28/2017
  파생 클래스는 동일한 이름과 시그니처로 멤버를 선언하여 기본 클래스 멤버를 숨길 수 있습니다. [new](../../../csharp/language-reference/keywords/new.md) 한정자를 사용하여 멤버가 기본 멤버를 재정의하지 않음을 명시적으로 나타내는 데 사용할 수 있습니다. [new](../../../csharp/language-reference/keywords/new.md) 사용은 필수가 아니지만 [new](../../../csharp/language-reference/keywords/new.md)를 사용하지 않을 경우 컴파일러 경고가 생성됩니다. 자세한 내용은 [Override 및 New 키워드를 사용하여 버전 관리](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) 및 [Override 및 New 키워드를 사용해야 하는 경우](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [클래스 및 구조체](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [class](../../../csharp/language-reference/keywords/class.md)   
- [truct](../../../csharp/language-reference/keywords/struct.md)
-
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [클래스 및 구조체](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [class](../../../csharp/language-reference/keywords/class.md)  
+ [struct](../../../csharp/language-reference/keywords/struct.md)

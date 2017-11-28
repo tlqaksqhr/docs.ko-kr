@@ -1,15 +1,12 @@
 ---
 title: "My.Application.Log가 정보를 기록하는 위치 확인(Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - My.Log object, output location
 - output, application log location
@@ -18,30 +15,14 @@ helpviewer_keywords:
 - application event logs, output location
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 4df7a80907b29a5eea79992f46c46603cbe2cc81
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 36c91f607a5a9d0dcf65ee6e049b9a49cdd37929
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>연습: My.Application.Log가 정보를 기록하는 위치 확인(Visual Basic)
 `My.Application.Log` 개체는 여러 로그 수신기에 정보를 쓸 수 있습니다. 로그 수신기는 컴퓨터의 구성 파일로 구성되며 응용 프로그램의 구성 파일로 재정의할 수 있습니다. 이 항목에서는 기본 설정과 응용 프로그램의 설정을 확인하는 방법을 설명합니다.  
@@ -79,28 +60,27 @@ ms.lasthandoff: 07/28/2017
   
 5.  여러 형식의 공유 수신기의 경우, 수신기의 초기화 데이터에는 수신기가 데이터를 보낼 위치에 대한 설명이 포함되어 있습니다.  
   
-    -   소개에서 설명한 것처럼 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=fullName> 수신기는 파일 로그에 씁니다.  
+    -   소개에서 설명한 것처럼 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> 수신기는 파일 로그에 정보를 씁니다.  
   
-    -   <xref:System.Diagnostics.EventLogTraceListener?displayProperty=fullName> 수신기는 `initializeData` 매개 변수로 지정된 컴퓨터 이벤트 로그에 정보를 씁니다. 이벤트 로그를 보려면 **서버 탐색기** 또는 **Windows 이벤트 뷰어**를 사용합니다. 자세한 내용은 [ETW Events in the .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299)을 참조하세요.  
+    -   <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> 수신기는 `initializeData` 매개 변수로 지정된 컴퓨터 이벤트 로그에 정보를 씁니다. 이벤트 로그를 보려면 **서버 탐색기** 또는 **Windows 이벤트 뷰어**를 사용합니다. 자세한 내용은 [ETW Events in the .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299)을 참조하세요.  
   
-    -   <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=fullName> 및 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=fullName> 수신기는 `initializeData` 매개 변수에 지정된 파일에 씁니다.  
+    -   <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> 및 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> 수신기는 `initializeData` 매개 변수에 지정된 파일에 정보를 씁니다.  
   
-    -   <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=fullName> 수신기는 명령줄 콘솔에 씁니다.  
+    -   <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> 수신기는 명령줄 콘솔에 정보를 씁니다.  
   
     -   다른 형식의 로그 수신기가 정보를 쓰는 위치에 대한 자세한 내용은 해당 형식의 설명서를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=fullName>   
- <xref:System.Diagnostics.DefaultTraceListener>   
- <xref:System.Diagnostics.EventLogTraceListener>   
- <xref:System.Diagnostics.DelimitedListTraceListener>   
- <xref:System.Diagnostics.XmlWriterTraceListener>   
- <xref:System.Diagnostics.ConsoleTraceListener>   
- <xref:System.Diagnostics>   
- [응용 프로그램 로그 작업](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)   
- [방법: 예외 기록](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)   
- [방법: 로그 메시지 쓰기](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)   
- [연습: My.Application.Log가 정보를 기록하는 위치 변경](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)   
- [.NET Framework의 ETW 이벤트](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299)   
+ <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
+ <xref:System.Diagnostics.DefaultTraceListener>  
+ <xref:System.Diagnostics.EventLogTraceListener>  
+ <xref:System.Diagnostics.DelimitedListTraceListener>  
+ <xref:System.Diagnostics.XmlWriterTraceListener>  
+ <xref:System.Diagnostics.ConsoleTraceListener>  
+ <xref:System.Diagnostics>  
+ [응용 프로그램 로그 작업](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)  
+ [방법: 예외 기록](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)  
+ [방법: 로그 메시지 쓰기](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
+ [연습: My.Application.Log가 정보를 기록하는 위치 변경](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
+ [.NET Framework의 ETW 이벤트](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299)  
  [문제 해결: 로그 수신기](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)
-

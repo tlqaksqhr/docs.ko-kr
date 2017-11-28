@@ -1,40 +1,22 @@
 ---
 title: "C# 연습"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - walkthroughs [C#]
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: cba6852f129e0c62a7ece97f18b6f67c423c608c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0e49290852ccdc83ab7879366102602f0ca3f99b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="c-walkthroughs"></a>C# 연습
 연습에서는 일반 시나리오에 대한 단계별 지침을 제공하므로 제품 또는 특정 기능 영역 파악을 효율적으로 시작할 수 있습니다.  
@@ -93,6 +75,5 @@ ms.lasthandoff: 07/28/2017
  일반적인 배포 시나리오의 단계별 예제를 제공합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../csharp/programming-guide/index.md)   
+ [C# 프로그래밍 가이드](../csharp/programming-guide/index.md)  
  [Visual Studio 샘플](/visualstudio/ide/visual-studio-samples)
-

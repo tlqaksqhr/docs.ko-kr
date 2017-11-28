@@ -5,24 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - updates, determining for .NET Framework
 - .NET Framework, determining updates
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: ba734dd3a9585b52b96cb2d27743da6190961126
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b29b402e859688dcced6bd4429b18298070fb5e4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-determine-which-net-framework-updates-are-installed"></a>방법: 설치된 .NET Framework 업데이트 확인
 컴퓨터에 설치된 각 .NET Framework 버전에 대해 설치된 업데이트는 Windows 레지스트리에 나열됩니다. 레지스트리 편집기(regedit.exe)를 사용하여 이 정보를 볼 수 있습니다.  
@@ -80,4 +81,3 @@ Microsoft .NET Framework 4 Extended
 [방법: 설치된 .NET Framework 버전 확인](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)   
 [.NET Framework 설치](../../../docs/framework/install/guide-for-developers.md)   
 [버전 및 종속성](../../../docs/framework/migration-guide/versions-and-dependencies.md)
-

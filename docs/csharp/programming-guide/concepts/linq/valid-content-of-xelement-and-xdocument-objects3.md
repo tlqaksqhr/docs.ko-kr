@@ -1,32 +1,23 @@
 ---
 title: "XElement 및 XDocument 개체의 유효한 콘텐츠3"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 0d253586-2b97-459f-b1a7-f30f38f3ed9f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 113a187c9a852420ffcef3893a415a24bae2c655
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2552c233961c13816fd91c79c5e6b589674985f6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="valid-content-of-xelement-and-xdocument-objects"></a>XElement 및 XDocument 개체의 유효한 콘텐츠
+# <a name="valid-content-of-xelement-and-xdocument-objects"></a>XElement 및 XDocument 개체의 올바른 콘텐츠
 이 항목에서는 생성자에 전달될 수 있는 유효한 인수에 대해 설명하고 내용을 요소와 문서에 추가하는 데 사용하는 메서드에 대한 정보를 제공합니다.  
   
 ## <a name="valid-content"></a>유효한 내용  
@@ -107,4 +98,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>참고 항목  
  [XML 트리 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
-

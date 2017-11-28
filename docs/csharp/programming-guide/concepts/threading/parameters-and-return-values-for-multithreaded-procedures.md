@@ -1,30 +1,21 @@
 ---
 title: "다중 스레드 프로시저의 매개 변수 및 반환 값(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: ba63c30c-d9f0-4962-b5c7-9d83ba851e6a
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: fec0ad955439f0cd683ad56c8d6433eed2417304
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5e377a006409dbae49b3c00297f69e8d55a01295
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="parameters-and-return-values-for-multithreaded-procedures-c"></a>다중 스레드 프로시저의 매개 변수 및 반환 값(C#)
 스레드 클래스의 생성자에 인수를 사용하지 않고 값을 반환하지 않는 프로시저에 대한 참조를 전달해야 하기 때문에 다중 스레드 응용 프로그램에서 값을 제공하고 반환하는 작업은 복잡합니다. 다음 섹션에서는 매개 변수를 제공하고 별도 스레드의 프로시저에서 값을 반환하는 몇 가지 간단한 방법을 보여 줍니다.  
@@ -135,11 +126,10 @@ private void BackgroundWorker1_RunWorkerCompleted(
  매개 변수를 제공하고 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> 메서드의 선택적 `ByVal` 상태 개체 변수를 사용하여 스레드 풀 스레드에 값을 반환할 수 있습니다. 스레드 타이머 스레드도 이 용도의 상태 개체를 지원합니다. 스레드 풀링 및 스레드 타이머에 대한 자세한 내용은 [스레드 풀링(C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md) 및 [스레드 타이머(C#)](../../../../csharp/programming-guide/concepts/threading/thread-timers.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [연습: BackgroundWorker 구성 요소를 사용한 다중 스레딩(C#)](../../../../csharp/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)   
- [스레드 풀링(C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)   
- [스레드 동기화(C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)   
- [이벤트](../../../../csharp/programming-guide/events/index.md)   
- [다중 스레드 응용 프로그램(C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)   
- [대리자](../../../../csharp/programming-guide/delegates/index.md)   
+ [연습: BackgroundWorker 구성 요소를 사용한 다중 스레딩(C#)](../../../../csharp/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)  
+ [스레드 풀링(C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)  
+ [스레드 동기화(C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)  
+ [이벤트](../../../../csharp/programming-guide/events/index.md)  
+ [다중 스레드 응용 프로그램(C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)  
+ [대리자](../../../../csharp/programming-guide/delegates/index.md)  
  [구성 요소에서 다중 스레딩](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)
-

@@ -1,52 +1,34 @@
 ---
 title: ".NET Framework 메서드를 사용하여 파일 조작(Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - I/O [Visual Basic], walkthroughs
-- text files, writing to
-- reading text files
+- text files [Visual Basic], writing to
+- reading text files [Visual Basic]
 - text, writing to files
-- files, searching
+- files [Visual Basic], searching
 - StreamReader class, walkthroughs
-- files, accessing
+- files [Visual Basic], accessing
 - I/O [Visual Basic], writing text to files
-- writing to files, walkthroughs
+- writing to files [Visual Basic], walkthroughs
 - StreamWriter class, walkthroughs
-- text files, reading
+- text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: bc42dee640271ef84d35ceeb039d98741d296c5e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: eab8ebe0f1e6f3e86b9c4aa7c3b24a2763a27ffc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>연습: .NET Framework 메서드를 사용하여 파일 조작(Visual Basic)
 이 연습에서는 <xref:System.IO.StreamReader> 클래스를 사용하여 파일을 열고 읽는 방법, 파일이 액세스되고 있는지 확인하는 방법, <xref:System.IO.StreamReader> 클래스의 인스턴스로 파일 읽기 내에서 문자열을 검색하는 방법, <xref:System.IO.StreamWriter> 클래스를 사용하여 파일에 쓰는 방법을 보여 줍니다.  
@@ -174,7 +156,6 @@ ms.lasthandoff: 07/28/2017
  코드를 테스트하려면 F5를 눌러 응용 프로그램을 컴파일합니다. **항목 가져오기**를 클릭하고 항목을 선택한 다음 **표시**를 클릭합니다. 항목이 `DisplayEntry`<xref:System.Windows.Forms.TextBox>에 나타납니다. **항목 편집**을 클릭합니다. 항목이 `Entry`<xref:System.Windows.Forms.TextBox>에 나타납니다. `Entry`<xref:System.Windows.Forms.TextBox>에서 항목을 편집하고 **편집 제출**을 클릭합니다. `MyDiary.txt` 파일을 열어 수정한 내용을 확인합니다. 이제 항목을 선택하고 **항목 삭제**를 클릭합니다. <xref:System.Windows.Forms.MessageBox>에 확인을 요청하는 메시지가 표시되면 **확인**을 클릭합니다. 응용 프로그램을 닫고 `MyDiary.txt`를 열어 삭제를 확인합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.IO.StreamReader>   
- <xref:System.IO.StreamWriter>   
+ <xref:System.IO.StreamReader>  
+ <xref:System.IO.StreamWriter>  
  [연습](../../../../visual-basic/walkthroughs.md)
-

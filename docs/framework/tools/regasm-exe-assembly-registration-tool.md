@@ -5,31 +5,24 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Assembly Registration tool
 - assemblies [.NET Framework], registering
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 21da853d442a86eb42d04ff4f32d9f2798e14477
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 553b7725d2e0fe8fc197805d8e4b444567c33040
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe(어셈블리 등록 도구)
 어셈블리 등록 도구를 사용하면 어셈블리 내의 메타데이터를 읽고 필요한 엔트리를 레지스트리에 추가할 수 있습니다. 이렇게 하면 COM 클라이언트에서 .NET Framework 클래스를 투명하게 만들 수 있습니다. 클래스가 등록되고 나면 COM 클라이언트에서는 해당 클래스가 마치 COM 클래스인 것처럼 사용할 수 있습니다. 클래스는 어셈블리가 설치될 때 한 번만 등록됩니다. 클래스가 실제로 등록되어야만 COM에서 어셈블리 내의 클래스 인스턴스를 만들 수 있습니다.  
@@ -97,9 +90,8 @@ regasm myTest.dll /tlb:myTest.tlb
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [도구](../../../docs/framework/tools/index.md)   
- [Tlbexp.exe(형식 라이브러리 내보내기)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)   
- [Tlbimp.exe(형식 라이브러리 가져오기)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)   
- [COM에 어셈블리 등록](../../../docs/framework/interop/registering-assemblies-with-com.md)   
+ [도구](../../../docs/framework/tools/index.md)  
+ [Tlbexp.exe(형식 라이브러리 내보내기)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
+ [Tlbimp.exe(형식 라이브러리 가져오기)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
+ [COM에 어셈블리 등록](../../../docs/framework/interop/registering-assemblies-with-com.md)  
  [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-

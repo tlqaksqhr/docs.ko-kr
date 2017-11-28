@@ -1,30 +1,21 @@
 ---
 title: "스레드 동기화(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: e42b1be6-c93c-479f-a148-be0759f1a4e1
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 2b51775eac5221ec8c723d89323d1f4f542d2453
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: df4093d4bf777f904aa8ce376cd164ed822350a0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="thread-synchronization-c"></a>스레드 동기화(C#)
 다음 섹션에서는 다중 스레드 응용 프로그램에서 리소스에 대한 액세스를 동기화 하는 데 사용할 수 있는 기능 및 클래스를 설명합니다.  
@@ -73,7 +64,7 @@ public class TestThreading
   
 -   [lock 문](../../../../csharp/language-reference/keywords/lock-statement.md)  
   
--   @System.Threading.Monitor  
+-   <xref:System.Threading.Monitor>  
   
 ## <a name="monitors"></a>모니터  
  `lock` 키워드와 마찬가지로, 모니터는 코드 블록이 여러 스레드에서 동시에 실행되지 않도록 합니다. <xref:System.Threading.Monitor.Enter%2A> 메서드를 사용하면 하나의 스레드만 다음 문으로 계속 진행할 수 있습니다. 다른 모든 스레드는 실행 중인 스레드가 <xref:System.Threading.Monitor.Exit%2A>를 호출할 때까지 차단됩니다. 이는 `lock` 키워드를 사용하는 것과 같습니다. 예:  
@@ -107,7 +98,7 @@ finally
   
  동기화 이벤트에는 <xref:System.Threading.AutoResetEvent> 및 <xref:System.Threading.ManualResetEvent>의 두 가지 종류가 있습니다. 두 가지 동기화 이벤트는 <xref:System.Threading.AutoResetEvent>가 스레드를 활성화할 때마다 자동으로 신호 알림에서 신호 알림 해제로 변경된다는 점만 다릅니다. 반대로, <xref:System.Threading.ManualResetEvent>는 개수와 관계없이 스레드가 신호 알림 상태에 의해 활성화될 수 있도록 하며, 해당 <xref:System.Threading.EventWaitHandle.Reset%2A> 메서드가 호출될 때만 신호 알림 해제 상태로 돌아갑니다.  
   
- <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A>, <xref:System.Threading.WaitHandle.WaitAll%2A> 등의 대기 메서드 중 하나를 호출하여 스레드가 이벤트에서 대기하도록 만들 수 있습니다. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=fullName>을 사용하면 단일 이벤트 신호 알림을 보낼 때까지 스레드가 대기하고, <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=fullName>을 사용하면 표시된 하나 이상의 이벤트 신호 알림을 보낼 때까지 스레드가 차단되고, <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=fullName>을 사용하면 표시된 모든 이벤트 신호 알림을 보낼 때까지 스레드가 차단됩니다. 해당 <xref:System.Threading.EventWaitHandle.Set%2A> 메서드가 호출될 때 이벤트 신호를 보냅니다.  
+ <xref:System.Threading.WaitHandle.WaitOne%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A>, <xref:System.Threading.WaitHandle.WaitAll%2A> 등의 대기 메서드 중 하나를 호출하여 스레드가 이벤트에서 대기하도록 만들 수 있습니다. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>을 사용하면 단일 이벤트 신호 알림을 보낼 때까지 스레드가 대기하고, <xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>을 사용하면 표시된 하나 이상의 이벤트 신호 알림을 보낼 때까지 스레드가 차단되고, <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>을 사용하면 표시된 모든 이벤트 신호 알림을 보낼 때까지 스레드가 차단됩니다. 해당 <xref:System.Threading.EventWaitHandle.Set%2A> 메서드가 호출될 때 이벤트 신호를 보냅니다.  
   
  다음 예제에서는 `Main` 함수에 의해 스레드가 생성되고 시작됩니다. 새 스레드는 <xref:System.Threading.WaitHandle.WaitOne%2A> 메서드를 사용하여 이벤트에서 대기합니다. `Main` 함수를 실행하는 기본 스레드에서 이벤트 신호 알림을 보낼 때까지 스레드가 일시 중단됩니다. 이벤트 신호 알림을 보내면 보조 스레드가 반환됩니다. 이 경우 이벤트는 하나의 스레드 활성화에만 사용되므로 <xref:System.Threading.AutoResetEvent> 또는 <xref:System.Threading.ManualResetEvent> 클래스를 사용할 수 있습니다.  
   
@@ -160,27 +151,26 @@ class ThreadingExample
  스레드 동기화는 다중 스레드 응용 프로그램에서 중요하지만 항상 여러 스레드가 서로를 대기하여 응용 프로그램이 중단되는 `deadlock`이 발생할 위험이 있습니다. 교착 상태는 자동차가 교차로 일단 정지 지점에서 멈춰 있고 서로 지나가기를 기다리는 상황과 유사합니다. 교착 상태를 방지하는 것이 중요하며, 관건은 신중한 계획입니다. 대체로 코딩을 시작하기 전에 다중 스레드 응용 프로그램의 다이어그램을 작성하면 교착 상태 상황을 예측할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Threading.Thread>   
- <xref:System.Threading.WaitHandle.WaitOne%2A>   
- <xref:System.Threading.WaitHandle.WaitAny%2A>   
- <xref:System.Threading.WaitHandle.WaitAll%2A>   
- <xref:System.Threading.Thread.Join%2A>   
- <xref:System.Threading.Thread.Start%2A>   
- <xref:System.Threading.Thread.Sleep%2A>   
- <xref:System.Threading.Monitor>   
- <xref:System.Threading.Mutex>   
- <xref:System.Threading.AutoResetEvent>   
- <xref:System.Threading.ManualResetEvent>   
- <xref:System.Threading.Interlocked>   
- <xref:System.Threading.WaitHandle>   
- <xref:System.Threading.EventWaitHandle>   
- <xref:System.Threading>   
- <xref:System.Threading.EventWaitHandle.Set%2A>   
- [다중 스레드 응용 프로그램(C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)   
- [lock 문](../../../../csharp/language-reference/keywords/lock-statement.md)   
- [뮤텍스](../../../../standard/threading/mutexes.md)   
- @System.Threading.Monitor   
- [연동 작업](../../../../standard/threading/interlocked-operations.md)   
- [AutoResetEvent](../../../../standard/threading/autoresetevent.md)   
+ <xref:System.Threading.Thread>  
+ <xref:System.Threading.WaitHandle.WaitOne%2A>  
+ <xref:System.Threading.WaitHandle.WaitAny%2A>  
+ <xref:System.Threading.WaitHandle.WaitAll%2A>  
+ <xref:System.Threading.Thread.Join%2A>  
+ <xref:System.Threading.Thread.Start%2A>  
+ <xref:System.Threading.Thread.Sleep%2A>  
+ <xref:System.Threading.Monitor>  
+ <xref:System.Threading.Mutex>  
+ <xref:System.Threading.AutoResetEvent>  
+ <xref:System.Threading.ManualResetEvent>  
+ <xref:System.Threading.Interlocked>  
+ <xref:System.Threading.WaitHandle>  
+ <xref:System.Threading.EventWaitHandle>  
+ <xref:System.Threading>  
+ <xref:System.Threading.EventWaitHandle.Set%2A>  
+ <xref:System.Threading.Monitor>  
+ [다중 스레드 응용 프로그램(C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)  
+ [lock 문](../../../../csharp/language-reference/keywords/lock-statement.md)  
+ [뮤텍스](../../../../standard/threading/mutexes.md)  
+ [연동 작업](../../../../standard/threading/interlocked-operations.md)  
+ [AutoResetEvent](../../../../standard/threading/autoresetevent.md)  
  [다중 스레딩을 위한 데이터 동기화](../../../../standard/threading/synchronizing-data-for-multithreading.md)
-

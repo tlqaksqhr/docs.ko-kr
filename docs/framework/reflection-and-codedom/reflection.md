@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,19 +28,18 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 7c2d95bfae212f658945904a647885ebd303cbc7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cf8d583b3e65c80f2c0eef1f6b3e32befe00c3fe
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="reflection-in-the-net-framework"></a>.NET Framework의 리플렉션
-<xref:System.Reflection> 네임스페이스의 클래스와 <xref:System.Type?displayProperty=fullName>을 함께 사용하여 로드된 [어셈블리](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) 및 어셈블리 내에 정의된 형식(예: [클래스](http://msdn.microsoft.com/en-us/ad7d3561-271e-4546-82fc-e00b059f27a9), [인터페이스](http://msdn.microsoft.com/en-us/fd9d5975-5363-4bc9-b883-609f887895e5), [값 형식](http://msdn.microsoft.com/en-us/c9c567f8-8ab1-4d88-834d-00f7d92418de))에 대한 정보를 가져올 수 있습니다. 리플렉션을 사용하여 런타임에 형식 인스턴스를 만들고 이 인스턴스를 호출 및 액세스할 수도 있습니다. 리플렉션의 특정 측면에 대한 항목은 이 개요의 끝부분에서 [관련 항목](#related_topics)을 참조하세요.  
+<xref:System.Reflection> 네임스페이스의 클래스와 <xref:System.Type?displayProperty=nameWithType>을 함께 사용하여 로드된 [어셈블리](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) 및 어셈블리 내에 정의된 형식(예: [클래스](http://msdn.microsoft.com/en-us/ad7d3561-271e-4546-82fc-e00b059f27a9), [인터페이스](http://msdn.microsoft.com/en-us/fd9d5975-5363-4bc9-b883-609f887895e5), [값 형식](http://msdn.microsoft.com/en-us/c9c567f8-8ab1-4d88-834d-00f7d92418de))에 대한 정보를 가져올 수 있습니다. 리플렉션을 사용하여 런타임에 형식 인스턴스를 만들고 이 인스턴스를 호출 및 액세스할 수도 있습니다. 리플렉션의 특정 측면에 대한 항목은 이 개요의 끝부분에서 [관련 항목](#related_topics)을 참조하세요.  
   
  [공용 언어 런타임](../../../docs/standard/clr.md) 로더는 같은 응용 프로그램 범위가 포함된 개체 주위의 경계를 구성하는 [응용 프로그램 도메인](../../../docs/framework/app-domains/application-domains.md)을 관리합니다. 이 관리에는 각 어셈블리를 적절한 응용 프로그램 도메인으로 로드하는 작업과 각 어셈블리 내에서 형식 계층 구조의 메모리 레이아웃을 제어하는 작업이 포함됩니다.  
   
@@ -94,10 +92,9 @@ ms.lasthandoff: 07/28/2017
 |[동적 메서드 및 어셈블리 내보내기](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|동적 어셈블리 및 동적 메서드를 생성하는 방법을 설명합니다.|  
   
 ## <a name="reference"></a>참조  
- <xref:System.Type?displayProperty=fullName>  
+ <xref:System.Type?displayProperty=nameWithType>  
   
  <xref:System.Reflection>  
   
  <xref:System.Reflection.Emit>  
   
-

@@ -1,30 +1,21 @@
 ---
 title: "방법: 식 트리 실행(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: get-started-article
-dev_langs:
-- CSharp
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 9a87c9893de2b70c47f0ed78a92adc6bce10db7b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d230adee877c214dfef0f60ae2c6e7547fedb869
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-execute-expression-trees-c"></a>방법: 식 트리 실행(C#)
 이 항목에서는 식 트리를 실행하는 방법을 보여 줍니다. 식 트리를 실행할 때 값이 반환될 수 있거나, 메서드 호출 등의 작업만 수행할 수도 있습니다.  
@@ -66,6 +57,5 @@ Console.WriteLine(result);
 -   System.Linq.Expressions 네임스페이스를 포함합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [식 트리(C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)   
+ [식 트리(C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
  [방법: 식 트리 수정(C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
-

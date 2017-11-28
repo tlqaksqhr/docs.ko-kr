@@ -1,30 +1,21 @@
 ---
 title: "방법: LINQ를 사용하여 ArrayList 쿼리(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: fe1426bb77f4e958abda83814632e61ee9ce415c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 77d7bbaa99f7b8becf53244211ad480736d9ffab
-ms.openlocfilehash: 3ef12d014715237fe752038466be85c4b47437eb
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/08/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-query-an-arraylist-with-linq-c"></a>방법: LINQ를 사용하여 ArrayList 쿼리(C#)
 LINQ를 사용하여 <xref:System.Collections.ArrayList> 등의 제네릭이 아닌 <xref:System.Collections.IEnumerable> 컬렉션을 쿼리하는 경우 컬렉션에 있는 개체의 특정 형식을 반영하도록 범위 변수의 형식을 명시적으로 선언해야 합니다. 예를 들어 `Student` 개체의 <xref:System.Collections.ArrayList>가 있는 경우 [from 절](../../../../csharp/language-reference/keywords/from-clause.md)은 다음과 같아야 합니다.  
@@ -102,4 +93,3 @@ namespace NonGenericLINQ
   
 ## <a name="see-also"></a>참고 항목  
  [LINQ to Objects(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-

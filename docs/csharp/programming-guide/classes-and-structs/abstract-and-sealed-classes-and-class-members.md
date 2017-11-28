@@ -1,42 +1,23 @@
 ---
 title: "추상 및 봉인 클래스와 클래스 멤버(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - abstract classes [C#]
 - sealed classes [C#]
 - C# language, abstract classes
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: dac7570c018bd577faac4540e4d800cc11143578
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0788ea0778b3f8b846231fc2408938b2236314c9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>추상 및 봉인 클래스와 클래스 멤버(C# 프로그래밍 가이드)
 [abstract](../../../csharp/language-reference/keywords/abstract.md) 키워드를 사용하면, 불완전하여 파생 클래스에서 구현해야 하는 클래스 및 [클래스](../../../csharp/language-reference/keywords/class.md) 멤버를 만들 수 있습니다.  
@@ -46,36 +27,35 @@ ms.lasthandoff: 07/28/2017
 ## <a name="abstract-classes-and-class-members"></a>추상 클래스 및 클래스 멤버  
  클래스 정의 앞에 `abstract` 키워드를 배치하여 클래스를 추상으로 선언할 수 있습니다. 예:  
   
- [!code-cs[csProgGuideInheritance#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_1.cs)]  
   
  추상 클래스는 인스턴스화할 수 없습니다. 추상 클래스의 목적은 여러 파생 클래스에서 공유할 수 있는 기본 클래스의 공통적인 정의를 제공하는 것입니다. 예를 들어 클래스 라이브러리에서 여러 자체 함수에 매개 변수로 사용되는 추상 클래스를 정의한 다음 해당 라이브러리를 사용하는 프로그래머가 파생 클래스를 만들어 클래스의 고유 구현을 제공하도록 할 수 있습니다.  
   
  추상 클래스에서는 추상 메서드도 정의할 수 있습니다. 메서드의 반환 형식 앞에 `abstract` 키워드를 추가하면 추상 메서드가 정의됩니다. 예:  
   
- [!code-cs[csProgGuideInheritance#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#14](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_2.cs)]  
   
  추상 메서드에는 구현이 없으므로 메서드 정의 다음에는 일반적인 메서드 블록 대신 세미콜론이 옵니다. 추상 클래스의 파생 클래스에서는 모든 추상 메서드를 구현해야 합니다. 추상 클래스에서 기본 클래스의 가상 메서드를 상속하는 경우 추상 클래스에서는 추상 메서드를 사용하여 가상 메서드를 재정의할 수 있습니다. 예:  
   
- [!code-cs[csProgGuideInheritance#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_3.cs)]  
+ [!code-csharp[csProgGuideInheritance#15](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_3.cs)]  
   
  `virtual` 메서드는 `abstract`로 선언되어도 추상 클래스에서 상속된 모든 클래스에 대해 여전히 가상입니다. 추상 메서드를 상속하는 클래스에서는 메서드의 원본 구현에 액세스할 수 없습니다. 앞의 예제에서 F 클래스의 `DoWork`에서는 D 클래스의 `DoWork`를 호출할 수 없습니다. 따라서 추상 클래스는 파생 클래스에서 가상 메서드에 대한 새 메서드 구현을 반드시 제공하도록 제한할 수 있습니다.  
   
 ## <a name="sealed-classes-and-class-members"></a>봉인 클래스 및 클래스 멤버  
  클래스 정의 앞에 `sealed` 키워드를 배치하여 클래스를 [sealed](../../../csharp/language-reference/keywords/sealed.md)로 선언할 수 있습니다. 예:  
   
- [!code-cs[csProgGuideInheritance#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_4.cs)]  
+ [!code-csharp[csProgGuideInheritance#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_4.cs)]  
   
  봉인 클래스는 기본 클래스로 사용할 수 없습니다. 그러므로 추상 클래스가 될 수도 없습니다. 봉인 클래스는 상속할 수 없습니다. 봉인 클래스는 기본 클래스로 사용될 수 없으므로 일부 런타임 최적화에서는 봉인 클래스 멤버 호출이 약간 더 빨라집니다.  
   
  기본 클래스의 가상 멤버를 재정의하는 파생 클래스의 메서드, 인덱서, 속성 또는 이벤트는 해당 멤버를 봉인으로 선언할 수 있습니다. 이렇게 하면 이후에 파생되는 클래스에서는 해당 멤버가 가상이 아니게 됩니다. 클래스 멤버 선언에서 [override](../../../csharp/language-reference/keywords/override.md) 키워드 앞에 `sealed` 키워드를 배치하면 됩니다. 예:  
   
- [!code-cs[csProgGuideInheritance#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_5.cs)]  
+ [!code-csharp[csProgGuideInheritance#17](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/abstract-and-sealed-classes-and-class-members_5.cs)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [클래스 및 구조체](../../../csharp/programming-guide/classes-and-structs/index.md)   
- [상속](../../../csharp/programming-guide/classes-and-structs/inheritance.md)   
- [메서드](../../../csharp/programming-guide/classes-and-structs/methods.md)   
- [필드](../../../csharp/programming-guide/classes-and-structs/fields.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [클래스 및 구조체](../../../csharp/programming-guide/classes-and-structs/index.md)  
+ [상속](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
+ [메서드](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+ [필드](../../../csharp/programming-guide/classes-and-structs/fields.md)  
  [방법: 추상 속성 정의](../../../csharp/programming-guide/classes-and-structs/how-to-define-abstract-properties.md)
-

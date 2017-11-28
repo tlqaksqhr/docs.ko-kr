@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 1feadf3d-3cfc-41dd-abb5-a4fc303a7b53
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 1d972489536e929c8694bd6a4cab31c9f2d624a8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="migrating-net-core-projects-to-the-csproj-format"></a>.csproj 형식으로 .NET Core 프로젝트 마이그레이션
 
 이 문서에서는 .NET Core 프로젝트에 대한 마이그레이션 시나리오를 설명하고 다음 세 가지 마이그레이션 시나리오를 살펴봅니다.
@@ -90,4 +88,3 @@ project.json 및 csproj 형식 간을 비교하려면 [project.json 및 csproj �
 
 ## <a name="see-also"></a>참고 항목
 [Visual Studio 프로젝트 포팅, 마이그레이션, 업그레이드](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)
-

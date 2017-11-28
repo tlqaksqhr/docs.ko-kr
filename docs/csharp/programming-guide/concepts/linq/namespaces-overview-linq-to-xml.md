@@ -1,30 +1,21 @@
 ---
 title: "네임스페이스 개요(LINQ to XML)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 16283322-8238-4918-ab11-802ac6748eb7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: d2aa60f10e9d4cf1b1db4d2e81d94e5ea8e1302a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: dfa9e65bcf5a3c0e37bb1a44caab889468c5c236
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="namespaces-overview-linq-to-xml"></a>네임스페이스 개요(LINQ to XML)
 이 항목에서는 네임스페이스, <xref:System.Xml.Linq.XName> 클래스 및 <xref:System.Xml.Linq.XNamespace> 클래스에 대해 소개합니다.  
@@ -43,4 +34,3 @@ ms.lasthandoff: 07/28/2017
   
 ## <a name="see-also"></a>참고 항목  
  [XML 네임스페이스 작업(C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
-

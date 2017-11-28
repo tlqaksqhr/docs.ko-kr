@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 007cc736-f5cf-4919-b99b-0c00ab2814ce
+ms.openlocfilehash: c4c26e2b7b0693ec940958a9b7d2d306001090e7
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: da116ce67428e9349e03dea60b35abd52dcffee2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
-
 # <a name="language-integrated-query-linq"></a>LINQ(Language-Integrated Query)
 
 LINQ(Language-Integrated Query)는 C# 언어에 직접 쿼리 기능을 통합하는 방식을 기반으로 하는 기술 집합 이름입니다. 일반적으로 데이터에 대한 쿼리는 컴파일 시간의 형식 검사나 IntelliSense 지원 없이 간단한 문자열로 표현됩니다. 또한 SQL 데이터베이스, XML 문서, 다양한 웹 서비스 등의 각 데이터 소스 형식에 대해 서로 다른 쿼리 언어를 배워야 합니다. LINQ를 사용할 경우 쿼리는 클래스, 메서드, 이벤트와 같은 고급 언어 구문이 됩니다.
@@ -26,7 +24,7 @@ LINQ(Language-Integrated Query)는 C# 언어에 직접 쿼리 기능을 통합�
 
 다음 예제에서는 전체 쿼리 작업을 보여 줍니다. 전체 작업에는 데이터 소스 만들기, 쿼리 식 정의 및 `foreach` 문의 쿼리 실행이 포함됩니다.
 
-[!code-cs[csProgGuideLINQ#11](../../../samples/snippets/csharp/concepts/linq/index_1.cs)]
+[!code-csharp[csProgGuideLINQ#11](../../../samples/snippets/csharp/concepts/linq/index_1.cs)]
 
 ## <a name="query-expression-overview"></a>쿼리 식 개요
 
@@ -58,6 +56,5 @@ LINQ에 대한 자세한 내용을 알아보려면 [쿼리 식 기본 사항](qu
 LINQ를 보다 깊이 있게 이해하려면 [C#의 LINQ](linq-in-csharp.md)를 참조하세요.
 
 C#에서 LINQ를 사용하려면 자습서 [LINQ 작업](../tutorials/working-with-linq.md)을 참조하세요.
-
 
 

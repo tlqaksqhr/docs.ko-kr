@@ -1,25 +1,21 @@
 ---
 title: "확장 메서드를 사용하여 리팩터링(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: c5fc123d-af10-4a2f-b8e4-db921efb2639
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 52972d1fbc951a379b4ce754a47143a15c672cfb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c4145e38a6fc49d53d274520dd155cffb5e7f9d5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="refactoring-using-an-extension-method-c"></a>확장 메서드를 사용하여 리팩터링(C#)
 이 예제는 확장 메서드로 구현된 순수 함수를 사용하여 문자열의 연결을 리팩터링하는 방법으로 이전 예제인 [단락의 텍스트 검색(C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)을 기반으로 작성되었습니다.  
@@ -33,7 +29,7 @@ ms.lasthandoff: 07/28/2017
   
  이 예제의 소스 문서 만들기에 대한 지침은 [원본 Office Open XML 문서 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)에서 찾을 수 있습니다.  
   
- 이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=fullName> 네임스페이스의 형식을 사용합니다.  
+ 이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -259,6 +255,5 @@ StyleName:Code >Hello World<
 -   [순수 함수를 사용하여 리팩터링(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [자습서: WordprocessingML 문서에서 내용 조작(C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)   
+ [자습서: WordprocessingML 문서에서 내용 조작(C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
  [순수 함수로 리팩터링(C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
-

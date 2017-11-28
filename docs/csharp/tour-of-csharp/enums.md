@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 7faba1cc-6ea9-4a19-adb9-0335e4b132e5
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 77d315dd87d9cab32605de415674d146eb9115fa
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-    
 # <a name="enums"></a>열거형
 
 ***열거형 형식***은 명명된 상수 집합을 갖는 고유 값 형식입니다. 개별 값 집합을 가질 수 있는 형식을 정의해야 할 경우 열거형을 정의합니다. 정수 값 형식 중 하나를 기본 저장소로 사용합니다. 또한 개별 값에 대해 의미 체계 의미를 제공합니다.
@@ -45,4 +43,3 @@ ms.lasthandoff: 07/28/2017
 >[!div class="step-by-step"]
 [이전](interfaces.md)
 [다음](delegates.md)
-

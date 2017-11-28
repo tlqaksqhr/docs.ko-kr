@@ -9,14 +9,12 @@ ms.topic: get-started-article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8902e849-dd17-42c0-8264-cc7ae3927a0c
+ms.openlocfilehash: 893999f9abcc299da4fb0923fe47c371079f695c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e11515031716a66ead866e52504137cb4e1df137
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="getting-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Visual Studio for Mac을 사용하여 macOS에서 .NET Core 시작
 
 Visual Studio for Mac은 .NET Core 응용 프로그램 개발을 위해 필요한 전기능 IDE(통합 개발 환경)를 제공합니다. 이 항목에서는 Mac 및 .NET Core용 Visual Studio를 사용하여 간단한 콘솔 응용 프로그램을 빌드하는 과정을 안내합니다.
@@ -63,4 +61,3 @@ Visual Studio for Mac은 .NET Core 응용 프로그램 개발을 위해 필요�
 ## <a name="next-step"></a>다음 단계
 
 [Visual Studio for Mac을 사용하여 macOS에서 완전한 .NET Core 솔루션 빌드](using-on-mac-vs-full-solution.md) 항목에서는 재사용 가능한 라이브러리 및 단위 테스트를 포함하는 전체 .NET Core 솔루션을 빌드하는 방법을 보여 줍니다.
-

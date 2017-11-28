@@ -1,12 +1,9 @@
 ---
 title: "명시적 숫자 변환 표(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - conversions [C#], explicit numeric
 - numeric conversions [C#], explicit
@@ -15,29 +12,14 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e7a366328035b205b93a50ff6d212a06576ee801
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0315810522be319a6bb565c99e1c8f7d1ba4701b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>명시적 숫자 변환 표(C# 참조)
 명시적 숫자 변환은 캐스트 식을 사용하여 숫자 형식을 암시적 변환이 없는 다른 숫자 형식으로 변환하는 데 사용됩니다. 다음 표에는 이러한 변환이 나와 있습니다.  
@@ -80,11 +62,10 @@ ms.lasthandoff: 07/28/2017
  명시적 변환에 대한 자세한 내용은 C# 언어 사양의 Explicit(명시적)을 참조하세요. 사양에 액세스하는 방법에 대한 자세한 내용은 [C# 언어 사양](../../../csharp/language-reference/language-specification/index.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [캐스팅 및 형식 변환](../../../csharp/programming-guide/types/casting-and-type-conversions.md)   
- [() 연산자](../../../csharp/language-reference/operators/invocation-operator.md)   
- [정수 형식 표](../../../csharp/language-reference/keywords/integral-types-table.md)   
- [기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)   
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [캐스팅 및 형식 변환](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
+ [() 연산자](../../../csharp/language-reference/operators/invocation-operator.md)  
+ [정수 계열 형식 표](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)  
  [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
-

@@ -1,30 +1,21 @@
 ---
 title: "연결 작업(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 890ee104-c590-457e-8a7f-b2b5da0fb417
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: f59d94004eeeaa5812dfb7d5424bdbb3364e7237
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1f87b2e8f9cb8b5eae900228a8758c08fbfed426
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="concatenation-operations-c"></a>연결 작업(C#)
 연결은 한 시퀀스를 다른 시퀀스에 추가하는 작업을 나타냅니다.  
@@ -42,7 +33,6 @@ ms.lasthandoff: 07/28/2017
 |Concat|두 시퀀스를 연결하여 하나의 시퀀스를 구성합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Linq>   
- [표준 쿼리 연산자 개요(C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
+ <xref:System.Linq>  
+ [표준 쿼리 연산자 개요(C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
  [방법: 문자열 컬렉션 결합 및 비교(LINQ)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
-

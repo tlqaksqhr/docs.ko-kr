@@ -1,12 +1,9 @@
 ---
 title: "정적 클래스 및 정적 클래스 멤버(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# language, static members
 - static members [C#]
@@ -14,29 +11,14 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: cf2517dd5989d36341b840ffcb476cbeb14baf54
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 63f46f9ae35b3c699744f7bf61cad3b08b796509
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>정적 클래스 및 정적 클래스 멤버(C# 프로그래밍 가이드)
 [정적](../../../csharp/language-reference/keywords/static.md) 클래스는 기본적으로 비정적 클래스와 동일하지만, 정적 클래스는 인스턴스화할 수 없다는 한 가지 차이점이 있습니다. 즉, [new](../../../csharp/language-reference/keywords/new.md) 키워드를 사용하여 클래스 형식의 변수를 만들 수 없습니다. 인스턴스 변수가 없기 때문에 클래스 이름 자체를 사용하여 정적 클래스의 멤버에 액세스합니다. 예를 들어 public 메서드 `MethodA`를 포함하는 `UtilityClass`라는 정적 클래스가 있는 경우 다음 예제와 같이 메서드를 호출합니다.  
@@ -45,7 +27,7 @@ ms.lasthandoff: 07/28/2017
 UtilityClass.MethodA();  
 ```  
   
- 정적 클래스는 입력 매개 변수에 대해서만 작동하고 내부 인스턴스 필드를 가져오거나 설정할 필요가 없는 메서드 집합에 대한 편리한 컨테이너로 사용할 수 있습니다. 예를 들어 .NET Framework 클래스 라이브러리의 정적 <xref:System.Math?displayProperty=fullName> 클래스에는 <xref:System.Math> 클래스의 특정 인스턴스에 고유한 데이터를 저장하거나 검색할 필요 없이 수학 연산을 수행하는 메서드가 포함되어 있습니다. 즉, 다음 예제와 같이 클래스 이름과 메서드 이름을 지정하여 클래스의 멤버를 적용합니다.  
+ 정적 클래스는 입력 매개 변수에 대해서만 작동하고 내부 인스턴스 필드를 가져오거나 설정할 필요가 없는 메서드 집합에 대한 편리한 컨테이너로 사용할 수 있습니다. 예를 들어 .NET Framework 클래스 라이브러리의 정적 <xref:System.Math?displayProperty=nameWithType> 클래스에는 <xref:System.Math> 클래스의 특정 인스턴스에 고유한 데이터를 저장하거나 검색할 필요 없이 수학 연산을 수행하는 메서드가 포함되어 있습니다. 즉, 다음 예제와 같이 클래스 이름과 메서드 이름을 지정하여 클래스의 멤버를 적용합니다.  
   
 ```csharp  
 double dub = -3.14;  
@@ -81,7 +63,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 ## <a name="example"></a>예제  
  온도를 섭씨에서 화씨로, 화씨에서 섭씨로 변환하는 두 메서드를 포함하는 정적 클래스의 예는 다음과 같습니다.  
   
- [!code-cs[csProgGuideObjects#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_1.cs)]  
+ [!code-csharp[csProgGuideObjects#31](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_1.cs)]  
   
 ## <a name="static-members"></a>정적 멤버  
  비정적 클래스는 정적 메서드, 필드, 속성 또는 이벤트를 포함할 수 있습니다. 정적 멤버는 클래스 인스턴스가 생성되지 않은 경우에도 클래스에 대해 호출할 수 있습니다. 정적 멤버는 항상 인스턴스 이름이 아니라 클래스 이름으로 액세스됩니다. 생성된 클래스 인스턴스 개수에 관계없이 정적 멤버의 복사본 한 개만 있습니다. 정적 메서드 및 속성은 포함하는 형식의 비정적 필드 및 이벤트에 액세스할 수 없으며, 메서드 매개 변수에 명시적으로 전달되지 않은 경우 개체의 인스턴스 변수에 액세스할 수 없습니다.  
@@ -96,11 +78,11 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  다음 예제와 같이 멤버의 반환 형식 앞에 `static` 키워드를 사용하여 정적 클래스 멤버를 선언합니다.  
   
- [!code-cs[csProgGuideObjects#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_2.cs)]  
+ [!code-csharp[csProgGuideObjects#29](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_2.cs)]  
   
  정적 멤버는 정적 멤버를 처음으로 액세스하기 전, 정적 생성자가 있을 경우 호출되기 전에 초기화됩니다. 정적 클래스 멤버에 액세스하려면 다음 예제와 같이 변수 이름 대신 클래스 이름을 사용하여 멤버의 위치를 지정합니다.  
   
- [!code-cs[csProgGuideObjects#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_3.cs)]  
+ [!code-csharp[csProgGuideObjects#30](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/static-classes-and-static-class-members_3.cs)]  
   
  클래스에 정적 필드가 포함된 경우 클래스가 로드될 때 정적 필드를 초기화하는 정적 생성자를 제공합니다.  
   
@@ -110,10 +92,9 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [static](../../../csharp/language-reference/keywords/static.md)   
- [클래스](../../../csharp/programming-guide/classes-and-structs/classes.md)   
- [class](../../../csharp/language-reference/keywords/class.md)   
- [정적 생성자](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [static](../../../csharp/language-reference/keywords/static.md)  
+ [클래스](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+ [class](../../../csharp/language-reference/keywords/class.md)  
+ [정적 생성자](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)  
  [인스턴스 생성자](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)
-

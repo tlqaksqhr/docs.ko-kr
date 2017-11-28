@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 3935906d9fca81a094999eefdd49ae4ed56990bf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="expression-trees"></a>Expression Trees
 
 LINQ를 사용했다면 `Func` 형식이 API 집합의 일부인 풍부한 라이브러리 경험이 있는 것입니다. LINQ에 익숙하지 않은 경우 [LINQ 자습서](linq/index.md) 및 [람다 식](lambda-expressions.md)에 대한 자습서를 먼저 읽어보는 것이 좋습니다. *식 트리*에서는 함수인 인수를 사용하는 보다 풍부한 조작을 제공합니다.
@@ -60,4 +58,3 @@ LINQ 쿼리를 만들 때 일반적으로 람다 식을 사용하여 함수 인�
 
     식 트리에 대한 정보를 검토합니다.
     
-

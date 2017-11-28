@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.translationtype: HT
-ms.sourcegitcommit: ef6d1bf9a7153f7adf635d13b4dcfb7647ed2e33
 ms.openlocfilehash: d04a158db4f97a0e37f8a92149a3f237ee2e5434
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="delegates-and-lambdas"></a>대리자 및 람다 식
 
 대리자는 특정 메서드 시그니처를 지정하는 형식을 정의합니다. 이 시그니처를 충족하는 메서드(정적 또는 인스턴스)를 해당 형식의 변수에 할당한 다음 직접 호출하거나(적절한 인수 사용) 다른 메서드에 인수로 전달한 다음 호출할 수 있습니다. 다음 예제에서는 대리자 사용을 보여 줍니다.
@@ -157,4 +155,3 @@ public MainWindow()
 *   [대리자](https://msdn.microsoft.com/library/ms173171.aspx)
 *   [익명 함수](https://msdn.microsoft.com/library/bb882516.aspx)
 *   [람다 식](https://msdn.microsoft.com/library/bb397687.aspx)
-

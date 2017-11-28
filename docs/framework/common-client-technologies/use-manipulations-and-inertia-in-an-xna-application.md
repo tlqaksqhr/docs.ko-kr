@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b7c18905-850c-4da4-8977-a074406a4263
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
+ms.openlocfilehash: adf48310c1c2e0c59224ab820211e818a2401579
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7d623a8c2276811ae443a4d745faffeeb79ffc6f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-manipulations-and-inertia-in-an-xna-application"></a>XNA 응용 프로그램에서 조작 및 관성 사용
 이 문서에서는 Microsoft XNA 응용 프로그램의 조작 및 관성 처리를 사용하여 게임 피스의 움직임을 제어하는 방법을 설명합니다. 이 문서를 읽기 전에 [조작 및 관성 개요](../../../docs/framework/common-client-technologies/manipulations-and-inertia-overview.md) 항목 및 기본적인 XNA 프로그래밍 개념을 잘 알고 있어야 합니다.  
@@ -42,6 +40,5 @@ ms.lasthandoff: 07/28/2017
  [전체 코드 목록](../../../docs/framework/common-client-technologies/full-code-listings.md)  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Input.Manipulations>   
+ <xref:System.Windows.Input.Manipulations>  
  [조작 및 관성 개요](../../../docs/framework/common-client-technologies/manipulations-and-inertia-overview.md)
-

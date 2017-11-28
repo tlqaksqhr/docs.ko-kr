@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fffc3400-aeb9-4c07-9fea-83bc8dbdcbf3
+ms.openlocfilehash: a8f70505d1bb043ab21f87edbb5aa2d9f18a7071
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 434b27f6c2d44c63b4ce4deee094ac6c322cf2b5
-ms.openlocfilehash: 62de584fe5d7f1029e73e4c8c5f9b428c567751a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI 도구 확장성 모델
 
 이 문서에서는 .NET Core CLI(명령줄 인터페이스) 도구를 확장할 수 있는 다양한 방법 및 각 방법을 구동하는 시나리오를 설명합니다.
@@ -49,6 +47,8 @@ CLI 도구는 세 가지 주요 방법으로 확장할 수 있습니다.
 
 ### <a name="consuming-per-project-tools"></a>프로젝트 단위 도구 사용
 이러한 도구를 사용하려면 사용할 각 도구에 대한 `<DotNetCliToolReference>` 요소를 프로젝트 파일에 추가해야 합니다. `<DotNetCliToolReference>` 요소 내에서 도구가 상주하는 패키지를 참조하고 필요한 버전을 지정합니다. [`dotnet restore`](dotnet-restore.md)를 실행하면 도구 및 해당 종속성이 복원됩니다.
+
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 프로젝트의 빌드 출력을 로드하여 실행해야 하는 도구의 경우 일반적으로 프로젝트 파일의 일반 종속성 아래에 나열되는 다른 종속성이 있습니다. CLI에서는 빌드 엔진으로 MSBuild를 사용하기 때문에 전반적인 빌드 프로세스에 포함될 수 있는 방식으로 이러한 도구 부분을 사용자 지정 MSBuild [대상](/visualstudio/msbuild/msbuild-targets) 및 [작업](/visualstudio/msbuild/msbuild-tasks)으로 작성하는 것이 좋습니다. 또한 출력 파일 위치, 빌드 중인 현재 구성 등 빌드를 통해 생성된 모든 데이터를 쉽게 가져올 수 있습니다. 이 정보는 모두 임의 대상에서 읽을 수 있는 MSBuild 속성 집합이 됩니다. 이 문서의 뒷부분에 있는 NuGet을 사용하여 사용자 지정 대상을 추가하는 방법을 확인할 수 있습니다.
 
@@ -165,4 +165,3 @@ echo "Hello World"
 MacOS에서는 이 스크립트를 `dotnet-hello`으로 저장하고 `chmod +x dotnet-hello`을 사용하여 실행 파일 비트를 설정할 수 있습니다. 그런 다음 `ln -s <full_path>/dotnet-hello /usr/local/bin/` 명령을 사용하여 `/usr/local/bin`에 바로 가기 링크를 만들 수 있습니다. 그러면 `dotnet hello` 구문을 사용하여 명령을 호출할 수 있습니다.
 
 Windows에서는 이 스크립트를 `dotnet-hello.cmd`로 저장하고 시스템 경로에 있는 위치에 보관하거나 경로에 이미 있는 폴더에 추가할 수 있습니다. 그런 다음 `dotnet hello`를 사용하여 이 예제를 실행할 수 있습니다.
-

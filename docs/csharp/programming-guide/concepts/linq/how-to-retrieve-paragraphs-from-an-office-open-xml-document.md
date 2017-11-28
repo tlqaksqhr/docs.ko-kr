@@ -1,25 +1,21 @@
 ---
 title: "방법: Office Open XML 문서에서 단락 검색(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: e6014b7cf4dc02c2818dd4b9bf5fadfcbd82e3d4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 945fc1e2cc3d7ae57239fdc5113e87c0a1512ff8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>방법: Office Open XML 문서에서 단락 검색(C#)
 이 항목에서는 Office Open XML 문서를 열고 문서에 있는 모든 단락의 컬렉션을 검색하는 예제를 제공합니다.  
@@ -33,7 +29,7 @@ ms.lasthandoff: 07/28/2017
   
  이 예제가 작동하는 방식을 설명하는 자세한 자습서는 [XML의 순수 함수 변환(C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)을 참조하세요.  
   
- 이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=fullName> 네임스페이스의 형식을 사용합니다.  
+ 이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.  
   
 ```csharp  
 public static class LocalExtensions  
@@ -197,4 +193,3 @@ StyleName:Code >Hello World<
   
 ## <a name="see-also"></a>참고 항목  
  [고급 쿼리 기술(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
-

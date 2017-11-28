@@ -2,8 +2,7 @@
 title: "강력한 이름의 어셈블리 만들기 및 사용"
 ms.date: 08/01/2017
 ms.prod: .net-framework
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.topic: article
 helpviewer_keywords:
 - strong-name bypass feature
@@ -16,16 +15,15 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - assembly binding, strong-named
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 0ee5fed355e0d8418500f1ecee53019548d9f7f8
 ms.openlocfilehash: 39fbd38549a791a761c633dca90dbdeeeefce10b
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="creating-and-using-strong-named-assemblies"></a>강력한 이름의 어셈블리 만들기 및 사용
 <a name="top"></a> 강력한 이름은 간단한 텍스트 이름, 버전 번호 및 문화권 정보(제공되는 경우)를 포함하는 어셈블리 ID와 공개 키 및 디지털 서명으로 구성됩니다. 디지털 서명은 해당 개인 키를 사용하여 어셈블리 파일에서 생성됩니다. 어셈블리 파일은 어셈블리를 구성하는 모든 파일의 이름과 해시가 들어 있는 어셈블리 매니페스트를 포함합니다.  
@@ -93,4 +91,3 @@ ms.lasthandoff: 08/02/2017
 |[Visual Studio에서 어셈블리 서명을 연기하는 방법](/visualstudio/ide/managing-assembly-and-manifest-signing#how-to-sign-an-assembly-in-visual-studio)|어셈블리를 만든 후 강력한 이름의 어셈블리에 서명하는 방법에 대해 설명합니다.|  
 |[Sn.exe(강력한 이름 도구)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)|강력한 이름의 어셈블리를 만들 수 있도록 지원하는 .NET Framework에 포함된 도구에 대해 설명합니다. 이 도구는 키 관리, 서명 생성 및 서명 확인을 위한 옵션을 제공합니다.|  
 |[Al.exe(어셈블리 링커)](../../../docs/framework/tools/al-exe-assembly-linker.md)|모듈 또는 리소스 파일에서 어셈블리 매니페스트가 있는 파일을 생성하는 .NET Framework에 포함된 도구에 대해 설명합니다.|
-

@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
+ms.openlocfilehash: f6f94b06e88e5fb58a9a7af787270609077a9610
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
-ms.openlocfilehash: 86c772bd98978fe06f648eec9ca750b86ab2bfec
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/14/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="build-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>Visual Studio 2017에서 .NET Core를 사용하여 C# Hello World 응용 프로그램 빌드
 
 이 항목에서는 Visual Studio 2017에서 C#을 사용하여 간단한 .NET Core 콘솔 응용 프로그램을 빌드, 디버그 및 게시하는 과정을 단계별로 소개합니다. Visual Studio 2017은 .NET Core 응용 프로그램 빌드를 위해 필요한 모든 기능을 갖춘 개발 환경을 제공합니다. 플랫폼 특정 종속성이 없는 응용 프로그램은 .NET Core에서 대상으로 하는 모든 플랫폼과 .NET Core가 설치된 모든 시스템에서 실행할 수 있습니다.
@@ -40,9 +38,9 @@ ms.lasthandoff: 09/14/2017
 
    ![Visual Studio 및 새 HelloWorld 프로젝트](./media/with-visual-studio/devenv.png)
 
-   템플릿은 간단한 "Hello World" 응용 프로그램을 만듭니다. <xref:System.Console.WriteLine(System.String)?displayProperty=fullName> 메서드를 호출하여 리터럴 문자열 "Hello World!"를 콘솔 창에 표시합니다. 도구 모음에서 녹색 화살표가 있는 **HelloWorld** 단추를 선택하여 디버그 모드에서 프로그램을 실행할 수 있습니다. 이렇게 하면 콘솔 창이 잠깐만 표시되었다가 닫힙니다. `Main` 메서드의 단일 문이 실행되는 즉시 `Main` 메서드가 종료되고 응용 프로그램도 종료되기 때문입니다.
+   템플릿은 간단한 "Hello World" 응용 프로그램을 만듭니다. <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 메서드를 호출하여 리터럴 문자열 "Hello World!"를 콘솔 창에 표시합니다. 도구 모음에서 녹색 화살표가 있는 **HelloWorld** 단추를 선택하여 디버그 모드에서 프로그램을 실행할 수 있습니다. 이렇게 하면 콘솔 창이 잠깐만 표시되었다가 닫힙니다. `Main` 메서드의 단일 문이 실행되는 즉시 `Main` 메서드가 종료되고 응용 프로그램도 종료되기 때문입니다.
 
-1. 응용 프로그램이 콘솔 창을 닫기 전에 일시 중지되도록 하려면 <xref:System.Console.WriteLine(System.String)?displayProperty=fullName> 메서드 호출 바로 뒤에 다음 코드를 추가합니다.
+1. 응용 프로그램이 콘솔 창을 닫기 전에 일시 중지되도록 하려면 <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> 메서드 호출 바로 뒤에 다음 코드를 추가합니다.
 
    ```csharp
    Console.Write("Press any key to continue...");
@@ -66,11 +64,11 @@ ms.lasthandoff: 09/14/2017
 
    [!code-csharp[GettingStarted#1](../../../samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
 
-   이 코드는 기존 <xref:System.Console.WriteLine%2A?displayProperty=fullName>, <xref:System.Console.Write%2A?displayProperty=fullName> 및 <xref:System.Console.ReadKey%2A?displayProperty=fullName> 문을 대체합니다.
+   이 코드는 기존 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, <xref:System.Console.Write%2A?displayProperty=nameWithType> 및 <xref:System.Console.ReadKey%2A?displayProperty=nameWithType> 문을 대체합니다.
 
    ![업데이트된 Main 메서드가 포함된 Visual Studio 프로그램 C# 파일](./media/with-visual-studio/codewindow.png)
 
-   이 코드는 "What is your name?"을 콘솔 창에 표시하고 사용자가 문자열을 입력한 후 Enter 키를 누를 때까지 기다립니다. 이 문자열을 `name`이라는 변수에 저장합니다. 또한 현재 현지 시간을 포함하는 <xref:System.DateTime.Now?displayProperty=fullName> 속성 값을 검색한 후 `date`라는 변수에 할당합니다. 마지막으로, [보간된 문자열](../../csharp/language-reference/keywords/interpolated-strings.md)을 사용하여 콘솔 창에 이러한 값을 표시합니다.
+   이 코드는 "What is your name?"을 콘솔 창에 표시하고 사용자가 문자열을 입력한 후 Enter 키를 누를 때까지 기다립니다. 이 문자열을 `name`이라는 변수에 저장합니다. 또한 현재 현지 시간을 포함하는 <xref:System.DateTime.Now?displayProperty=nameWithType> 속성 값을 검색한 후 `date`라는 변수에 할당합니다. 마지막으로, [보간된 문자열](../../csharp/language-reference/keywords/interpolated-strings.md)을 사용하여 콘솔 창에 이러한 값을 표시합니다.
 
 1. **빌드** > **솔루션 빌드**를 선택하여 프로그램을 컴파일합니다.
 
@@ -91,4 +89,3 @@ ms.lasthandoff: 09/14/2017
 콘솔 응용 프로그램 대신 .NET Core 및 Visual Studio 2017을 사용하여 클래스 라이브러리를 빌드할 수도 있습니다. 단계별 지침을 보려면 [Visual Studio 2017에서 C# 및 .NET Core로 클래스 라이브러리 빌드](library-with-visual-studio.md)를 참조하세요.
 
 다운로드할 수 있는 코드 편집기인 [Visual Studio Code](https://code.visualstudio.com/)를 사용하여 Mac, Linux 및 Windows에서 .NET Core 콘솔 응용 프로그램을 개발할 수도 있습니다. 단계별 자습서에 대해서는 [Visual Studio Code 시작](with-visual-studio-code.md)을 참조하세요.
-

@@ -1,41 +1,23 @@
 ---
 title: "상호 운용성(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - COM interop
 - interoperability
 - platform invoke, accessing APIs with C#
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 5822f2e4e120f476d925520f0681055f058e3df1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: 910b0e0675fe416fae71a6e46c4a6cf2293327e6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="interoperability-c-programming-guide"></a>상호 운용성(C# 프로그래밍 가이드)
 상호 운용성은 비관리 코드에 대한 기존 투자를 보존하고 활용할 수 있도록 합니다. CLR(공용 언어 런타임)의 제어 하에서 실행되는 코드를 *관리 코드*라고 하고, CLR 외부에서 실행되는 코드를 *비관리 코드*라고 합니다. COM, COM+, C++ 구성 요소, ActiveX 구성 요소 및 Microsoft Win32 API는 비관리 코드의 예입니다.  
@@ -65,8 +47,7 @@ ms.lasthandoff: 09/25/2017
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [비관리 코드와의 상호 운용](https://msdn.microsoft.com/library/sd10k43k)   
+ <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [비관리 코드와의 상호 운용](https://msdn.microsoft.com/library/sd10k43k)  
  [연습: Office 프로그래밍](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)
-

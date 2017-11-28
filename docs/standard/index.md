@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 7819424510fe33c775cefb195f78697aef8b512d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-guide"></a>.NET 가이드
 
 .NET 가이드는 .NET에 대한 많은 정보를 제공합니다.  .NET에 대한 지식에 따라 이 가이드의 다양한 섹션과 .NET 설명서의 다른 섹션을 탐색할 수 있습니다.
@@ -68,4 +66,3 @@ ms.lasthandoff: 09/14/2017
 ## <a name="api-reference"></a>API 참조
 
 [.NET API 참조](../../api/index.md)에서 사용 가능한 API 범위를 확인하세요.
-

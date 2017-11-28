@@ -1,45 +1,26 @@
 ---
 title: "C#에서 LINQ 시작"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - LINQ [C#]
 - queries [LINQ in C#]
 - LINQ, C#
 - queries [LINQ], LINQ in C#
 ms.assetid: b8700c1f-05c9-4380-b6eb-e34c4da38e54
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 1e8f520f1fa5146f68bae0b634f8b2b1d5d875d9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 02a76889912e441cc0d1bcf27cb5e9421ef852ad
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="getting-started-with-linq-in-c"></a>C#에서 LINQ 시작
 이 섹션에서는 LINQ 설명서 및 샘플의 나머지 부분을 이해하는 데 도움이 되는 기본 배경 정보를 제공합니다.  
@@ -84,4 +65,3 @@ ms.lasthandoff: 07/28/2017
   
  [Visual Basic에서 LINQ 시작](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
  Visual Basic에서 LINQ 사용 관련 항목에 대한 링크를 제공합니다.
-

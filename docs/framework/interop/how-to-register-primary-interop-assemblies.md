@@ -5,29 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - registering primary interop assemblies
 - primary interop assemblies, registering
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 81b57a73b8c5118af9cf2867902b849d73820e83
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 1b72a24f349237aa35ccae295e9e552facc21ddd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>방법: 주 Interop 어셈블리 등록
 클래스는 COM interop에 의해서만 마샬링될 수 있으며 항상 인터페이스로 마샬링됩니다. 클래스를 마샬링하는 데 사용되는 인터페이스를 클래스 인터페이스라고 하는 경우도 있습니다. 선택한 인터페이스로 클래스 인터페이스를 재정의하는 방법에 대한 자세한 내용은 [COM 호출 가능 래퍼](../../../docs/framework/interop/com-callable-wrapper.md)를 참조하세요.  
@@ -64,7 +57,6 @@ regasm CompanyA.UtilLib.dll
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [주 Interop 어셈블리를 사용한 프로그래밍](http://msdn.microsoft.com/en-us/306fa1d6-0703-4004-9e93-d0a57f1be81e)   
- [기본 Interop 어셈블리 찾기](http://msdn.microsoft.com/en-us/d6768e4b-cd80-414d-a4f8-05d979eb393b)   
+ [주 Interop 어셈블리를 사용한 프로그래밍](http://msdn.microsoft.com/en-us/306fa1d6-0703-4004-9e93-d0a57f1be81e)  
+ [주 Interop 어셈블리 찾기](http://msdn.microsoft.com/en-us/d6768e4b-cd80-414d-a4f8-05d979eb393b)  
  [기본 Interop 어셈블리 재배포](http://msdn.microsoft.com/en-us/e76384f0-d631-474c-bdbd-13884cba0265)
-

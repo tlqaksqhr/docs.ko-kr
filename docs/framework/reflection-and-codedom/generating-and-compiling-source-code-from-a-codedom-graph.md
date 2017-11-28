@@ -5,10 +5,13 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - code compilers
 - CodeDOM, generating source code
@@ -30,16 +33,15 @@ helpviewer_keywords:
 - compiling source code, multiple languages
 - CodeDOM, graphs
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 55ba7c1b9dd7e8c912903fb9827e0073a8329abb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4b01517d7d8c12d9a0191293fb52f429bb83bf40
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>CodeDOM 그래프에서 소스 코드 생성 및 컴파일
 <xref:System.CodeDom.Compiler> 네임스페이스는 CodeDOM 개체 그래프에서 소스 코드를 생성하고 지원되는 컴파일러를 통한 컴파일을 관리하기 위한 인터페이스를 제공합니다. 코드 공급자는 CodeDOM 그래프에 따라 특정 프로그래밍 언어로 소스 코드를 생성할 수 있습니다. <xref:System.CodeDom.Compiler.CodeDomProvider>에서 파생되는 클래스는 일반적으로 공급자가 지원하는 언어의 코드를 생성 및 컴파일하기 위한 메서드를 제공할 수 있습니다.  
@@ -49,11 +51,15 @@ ms.lasthandoff: 07/28/2017
   
  다음 예제에서는 <xref:Microsoft.CSharp.CSharpCodeProvider> 인스턴스를 만드는 방법을 보여 줍니다.  
   
- [!code-cpp[CodeDomExample#21](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#21)] [!code-csharp[CodeDomExample#21](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#21)] [!code-vb[CodeDomExample#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#21)]  
+ [!code-cpp[CodeDomExample#21](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#21)]
+ [!code-csharp[CodeDomExample#21](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#21)]
+ [!code-vb[CodeDomExample#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#21)]  
   
  코드 생성 그래프는 일반적으로 <xref:System.CodeDom.CodeCompileUnit>에 포함되어 있습니다. CodeDOM 그래프를 포함하는 **CodeCompileUnit**에 대한 코드를 생성하려면 코드 공급자의 <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> 메서드를 호출합니다. 이 메서드에는 소스 코드를 생성하는 데 사용하는 <xref:System.IO.TextWriter>에 대한 매개 변수가 있으므로 먼저 쓸 수 있는 **TextWriter**를 만들어야 하는 경우도 있습니다. 다음 예제에서는 **CodeCompileUnit**에서 코드를 생성하고 생성된 소스 코드를 HelloWorld.cs라는 파일에 쓰는 방법을 보여 줍니다.  
   
- [!code-cpp[CodeDomExample#22](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#22)] [!code-csharp[CodeDomExample#22](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#22)] [!code-vb[CodeDomExample#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#22)]  
+ [!code-cpp[CodeDomExample#22](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#22)]
+ [!code-csharp[CodeDomExample#22](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#22)]
+ [!code-vb[CodeDomExample#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#22)]  
   
 ## <a name="using-a-codedom-code-provider-to-compile-assemblies"></a>CodeDOM 코드 공급자를 사용하여 어셈블리 컴파일  
  **컴파일 호출**  
@@ -88,14 +94,15 @@ ms.lasthandoff: 07/28/2017
   
  다음 코드 예제에서는 <xref:System.CodeDom.Compiler.CodeDomProvider> 클래스에서 파생된 CodeDom 공급자를 사용하여 소스 파일을 컴파일하는 방법을 보여 줍니다.  
   
- [!code-cpp[CodeDomExample#23](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#23)] [!code-csharp[CodeDomExample#23](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#23)] [!code-vb[CodeDomExample#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#23)]  
+ [!code-cpp[CodeDomExample#23](../../../samples/snippets/cpp/VS_Snippets_CLR/CodeDomExample/CPP/source3.cpp#23)]
+ [!code-csharp[CodeDomExample#23](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source3.cs#23)]
+ [!code-vb[CodeDomExample#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source3.vb#23)]  
   
 ## <a name="languages-with-initial-support"></a>초기 지원 상태의 언어  
  .NET Framework에서는 C#, Visual Basic, C++, JScript 언어에 대한 코드 컴파일러 및 코드 생성기를 제공합니다. 언어별 코드 생성기 및 코드 컴파일러를 구현하면 CodeDOM 지원을 다른 언어로 확장할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.CodeDom>   
- <xref:System.CodeDom.Compiler>   
- [동적 소스 코드 생성 및 컴파일](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)   
+ <xref:System.CodeDom>  
+ <xref:System.CodeDom.Compiler>  
+ [동적 소스 코드 생성 및 컴파일](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
  [CodeDOM 빠른 참조](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524)
-

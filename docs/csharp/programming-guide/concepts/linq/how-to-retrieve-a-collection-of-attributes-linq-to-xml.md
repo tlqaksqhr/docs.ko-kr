@@ -1,25 +1,21 @@
 ---
 title: "방법: 특성 컬렉션 검색(LINQ to XML)(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: a49ee7a3-b2c2-4d49-9b5c-b7c6c41f4f13
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 165c807735bfc73375d4ddec125786750ad08ad1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5cfd1e46dd6ad261844bd7ba1715b382cbe6a870
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-c"></a>방법: 특성 컬렉션 검색(LINQ to XML)(C#)
 이 항목에서는 <xref:System.Xml.Linq.XElement.Attributes%2A> 메서드에 대해 소개합니다. 이 메서드는 요소의 특성을 검색합니다.  
@@ -50,4 +46,3 @@ ConvertableTo="double"
   
 ## <a name="see-also"></a>참고 항목  
  [LINQ to XML 축(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
-

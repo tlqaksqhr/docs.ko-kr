@@ -1,12 +1,9 @@
 ---
 title: "접근자 액세스 가능성 제한(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - read-only properties [C#]
 - read-only indexers [C#]
@@ -15,34 +12,19 @@ helpviewer_keywords:
 - asymmetric accessor accesibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: a4905885323f59d8b8b2654a5331e02054334398
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 347fffa4f612c5cb674a6529e46c0b1785670c95
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>접근자 액세스 가능성 제한(C# 프로그래밍 가이드)
 속성 또는 인덱서의 [get](../../../csharp/language-reference/keywords/get.md) 및 [set](../../../csharp/language-reference/keywords/set.md) 부분을 *접근자*라고 합니다. 기본적으로 이러한 접근자는 속하는 속성 또는 인덱서와 동일한 표시 유형 또는 액세스 수준을 갖습니다. 자세한 내용은 [접근성 수준](../../../csharp/language-reference/keywords/accessibility-levels.md)을 참조하세요. 그러나 이러한 접근자 중 하나에 대한 액세스를 제한하는 것이 유용한 경우도 있습니다. 이렇게 하려면 일반적으로 `set` 접근자의 접근성을 제한하는 동시에 `get` 접근자를 공개적으로 액세스할 수 있도록 유지해야 합니다. 예:  
   
- [!code-cs[csProgGuideIndexers#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_1.cs)]  
+ [!code-csharp[csProgGuideIndexers#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_1.cs)]  
   
  이 예제에서는 `Name` 속성이 `get` 및 `set` 접근자를 정의합니다. `get` 접근자는 속성 자체의 접근성 수준(이 경우 `public`)을 받는 반면, `set` 접근자는 접근자 자체에 [protected](../../../csharp/language-reference/keywords/protected.md) 액세스 한정자를 적용하여 명시적으로 제한됩니다.  
   
@@ -60,12 +42,12 @@ ms.lasthandoff: 07/28/2017
 ## <a name="access-modifiers-on-overriding-accessors"></a>재정의 접근자의 액세스 한정자  
  속성 또는 인덱서를 재정의하는 경우 재정의 코드에서 재정의된 접근자에 액세스할 수 있어야 합니다. 또한 속성/인덱서의 접근성 수준과 접근자의 접근성 수준이 재정의된 속성/인덱서 및 접근자와 일치해야 합니다. 예:  
   
- [!code-cs[csProgGuideIndexers#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_2.cs)]  
+ [!code-csharp[csProgGuideIndexers#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_2.cs)]  
   
 ## <a name="implementing-interfaces"></a>인터페이스 구현  
  접근자를 사용하여 인터페이스를 구현하는 경우 접근자에 액세스 한정자가 있을 수 없습니다. 그러나 `get` 등의 한 접근자를 사용하여 인터페이스를 구현하는 경우 다음 예제와 같이 다른 접근자에 액세스 한정자를 사용할 수 있습니다.  
   
- [!code-cs[csProgGuideIndexers#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_3.cs)]  
+ [!code-csharp[csProgGuideIndexers#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_3.cs)]  
   
 ## <a name="accessor-accessibility-domain"></a>접근자 접근성 도메인  
  접근자의 액세스 한정자를 사용하는 경우 접근자의 [접근성 도메인](../../../csharp/language-reference/keywords/accessibility-domain.md)은 이 한정자에 의해 결정됩니다.  
@@ -77,7 +59,7 @@ ms.lasthandoff: 07/28/2017
   
  또한 예제에서는 `DerivedClass`, `Name` 속성의 `set` 접근자에 있는 `private`, `protected` 등의 제한적인 액세스 한정자가 접근자에 대한 액세스를 차단하고 할당을 시도할 때 오류를 생성함을 보여 줍니다.  
   
- [!code-cs[csProgGuideIndexers#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_4.cs)]  
+ [!code-csharp[csProgGuideIndexers#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/restricting-accessor-accessibility_4.cs)]  
   
 ## <a name="comments"></a>설명  
  `new private string Id` 선언을 `new public string Id`로 바꿀 경우 다음과 같이 출력됩니다.  
@@ -87,8 +69,7 @@ ms.lasthandoff: 07/28/2017
  `Name and ID in the derived class: John, John123`  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [속성](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [인덱서](../../../csharp/programming-guide/indexers/index.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [속성](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [인덱서](../../../csharp/programming-guide/indexers/index.md)  
  [액세스 한정자](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
-

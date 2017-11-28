@@ -1,34 +1,30 @@
 ---
-title: "방법: 단일 특성 (LINQ to XML)을 검색 (Visual Basic) | Microsoft 문서"
+title: "방법: 단일 특성 (LINQ to XML)을 검색 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 11b938d7-c011-4048-900e-8b9183c41c94
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 35f477ead2bdcfdf78781459f93a755dbc89e5cc
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 08b9b2bed60f5818db9c494047ade576e8526bb7
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>방법: 단일 특성 (LINQ to XML)을 검색 (Visual Basic)
 이 항목에서는 특성 이름이 제공되는 경우 요소의 단일 특성을 검색하는 방법에 대해 설명합니다. 이 방법은 특정 특성을 가진 요소를 찾으려는 경우 쿼리 식을 작성하는 데 유용합니다.  
   
- <xref:System.Xml.Linq.XElement.Attribute%2A>의 메서드는 <xref:System.Xml.Linq.XElement>반환 클래스는 <xref:System.Xml.Linq.XAttribute>지정 된 이름의.</xref:System.Xml.Linq.XAttribute> </xref:System.Xml.Linq.XElement> </xref:System.Xml.Linq.XElement.Attribute%2A>  
+ <xref:System.Xml.Linq.XElement.Attribute%2A> 클래스의 <xref:System.Xml.Linq.XElement> 메서드는 지정된 이름을 가진 <xref:System.Xml.Linq.XAttribute>를 반환합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 <xref:System.Xml.Linq.XElement.Attribute%2A>메서드.</xref:System.Xml.Linq.XElement.Attribute%2A>  
+ 다음 예제에서는 <xref:System.Xml.Linq.XElement.Attribute%2A> 메서드를 사용합니다.  
   
 ```vb  
 Dim cust As XElement = <PhoneNumbers>  
@@ -51,7 +47,7 @@ work
 ```  
   
 ## <a name="example"></a>예제  
- 특성의 값을 검색 하려는 경우 캐스팅할 수 있습니다에 대 한와 마찬가지로 <xref:System.Xml.Linq.XElement>개체.</xref:System.Xml.Linq.XElement> 다음은 이에 대한 예입니다.  
+ 특성의 값을 검색하려면 <xref:System.Xml.Linq.XElement> 개체의 경우와 마찬가지로 특성을 캐스팅하면 됩니다. 다음은 이에 대한 예입니다.  
   
 ```vb  
 Dim cust As XElement = <PhoneNumbers>  
@@ -73,7 +69,7 @@ home
 work  
 ```  
   
- [!INCLUDE[sqltecxlinq](../../../../csharp/programming-guide/concepts/linq/includes/sqltecxlinq_md.md)]provides explicit cast operators for the <xref:System.Xml.Linq.XAttribute> class to `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`, and `GUID?`.</xref:System.Xml.Linq.XAttribute>  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 <xref:System.Xml.Linq.XAttribute> 클래스를 `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID`, `GUID?`로 캐스팅할 수 있는 명시적 캐스트 연산자를 제공합니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 네임스페이스에 있는 특성에 대한 동일한 코드를 보여 줍니다. 자세한 내용은 참조 [XML 네임 스페이스 (Visual Basic) 작업](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)합니다.  
@@ -106,4 +102,4 @@ work
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [LINQ to XML 축 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+ [LINQ to XML 축(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

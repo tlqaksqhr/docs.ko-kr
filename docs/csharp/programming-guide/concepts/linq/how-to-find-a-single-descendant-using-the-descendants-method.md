@@ -1,25 +1,21 @@
 ---
 title: "방법: Descendants 메서드를 사용하여 단일 하위 항목 찾기(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 6f735be9-0293-4680-8007-ca9d96bfebed
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 6dc90262318f5f31c4236318f87393749295a18a
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 89e20ede65caf65e91a37cbee69c80146a1443f0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>방법: Descendants 메서드를 사용하여 단일 하위 항목 찾기(C#)
 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축 메서드를 사용하여 고유하게 명명된 단일 요소를 찾는 코드를 신속하게 작성할 수 있습니다. 이 기법은 지정된 이름을 가진 특정 하위 요소를 찾으려는 경우 특히 유용합니다. 원하는 요소를 탐색하는 코드를 작성할 수도 있지만 <xref:System.Xml.Linq.XContainer.Descendants%2A> 축을 사용하여 코드를 작성하는 것이 더 빠르고 쉬운 경우가 많습니다.  
@@ -87,4 +83,3 @@ GC3 Value
   
 ## <a name="see-also"></a>참고 항목  
  [기본 쿼리(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-

@@ -7,24 +7,22 @@ manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: cbda9c08-151b-4c9e-82f7-c3d7f3dac66b
+ms.openlocfilehash: cdd06a6fad037291bbc5aa011b47bb668fa2f062
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ddd028a3aad5186ef6773b32e9f9e8e1cbff95fc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="group-results-by-contiguous-keys"></a>연속 키를 기준으로 결과 그룹화
 
 다음 예제에서는 연속 키의 하위 시퀀스를 나타내는 청크로 요소를 그룹화하는 방법을 보여 줍니다. 예를 들어 키-값 쌍의 다음 시퀀스가 제공된다고 가정합니다.  
   
-|키|값|  
+|Key|값|  
 |---------|-----------|  
-|A|We|  
+|A|수|  
 |A|think|  
 |A|that|  
 |B|Linq|  
@@ -52,11 +50,10 @@ ms.lasthandoff: 07/28/2017
 ## <a name="example"></a>예제  
  다음 예제에서는 확장 메서드 및 이 메서드를 사용하는 클라이언트 코드를 보여 줍니다.  
   
- [!code-cs[cscsrefContiguousGroups#1](../../../samples/snippets/csharp/concepts/linq/how-to-group-results-by-contiguous-keys_1.cs)]  
+ [!code-csharp[cscsrefContiguousGroups#1](../../../samples/snippets/csharp/concepts/linq/how-to-group-results-by-contiguous-keys_1.cs)]  
   
  프로젝트에서 확장 메서드를 사용하려면 `MyExtensions` 정적 클래스를 신규 또는 기존 소스 코드 파일에 복사하고, 필요한 경우 해당 메서드가 있는 네임스페이스에 대한 `using` 지시문을 추가합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [LINQ 쿼리 식](index.md)   
+ [LINQ 쿼리 식](index.md)  
  
-

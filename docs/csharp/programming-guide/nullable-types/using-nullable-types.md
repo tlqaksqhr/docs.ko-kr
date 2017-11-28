@@ -1,38 +1,19 @@
 ---
 title: "Nullable 형식 사용(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- nullable types [C#], about nullable types
+helpviewer_keywords: nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c8a42392bbcd2e53c54ff4c13bf98c048262ae4d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 0721d9f60abc4e158135d6b050953b3e63ab8cb5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Nullable 형식 사용(C# 프로그래밍 가이드)
 nullable 형식은 기본 형식의 모든 값과 추가 [null](../../../csharp/language-reference/keywords/null.md) 값을 나타낼 수 있습니다. nullable 형식은 다음과 같은 두 가지 방법 중 하나로 선언됩니다.  
@@ -50,9 +31,9 @@ nullable 형식은 기본 형식의 모든 값과 추가 [null](../../../csharp/
  이 차이로 인해 상태 정보, 특수 값 사용 등을 저장하는 데 사용되는 추가 변수와 관련한 추가 프로그래밍 작업이 발생할 수 있습니다. C#에서는 nullable 형식 한정자를 사용하여 정의되지 않은 값을 나타내는 값 형식 변수를 만들 수 있습니다.  
   
 ## <a name="examples-of-nullable-types"></a>nullable 형식의 예  
- nullable 형식에 대한 기준으로 모든 값 형식을 사용할 수 있습니다. 예를 들면 다음과 같습니다.  
+ nullable 형식에 대한 기준으로 모든 값 형식을 사용할 수 있습니다. 예:  
   
- [!code-cs[csProgGuideTypes#4](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_1.cs)]  
+ [!code-csharp[csProgGuideTypes#4](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_1.cs)]  
   
 ## <a name="the-members-of-nullable-types"></a>nullable 형식의 멤버  
  nullable 형식의 각 인스턴스에는 다음과 같은 두 개의 public 읽기 전용 속성이 포함됩니다.  
@@ -67,47 +48,47 @@ nullable 형식은 기본 형식의 모든 값과 추가 [null](../../../csharp/
   
  이 예제에서 `HasValue` 멤버는 변수를 표시하려고 하기 전에 변수가 값을 포함하는지를 테스트하는 데 사용됩니다.  
   
- [!code-cs[csProgGuideTypes#5](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_2.cs)]  
+ [!code-csharp[csProgGuideTypes#5](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_2.cs)]  
   
  값에 대한 테스트는 다음 예제처럼 수행할 수도 있습니다.  
   
- [!code-cs[csProgGuideTypes#6](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_3.cs)]  
+ [!code-csharp[csProgGuideTypes#6](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_3.cs)]  
   
 ## <a name="explicit-conversions"></a>명시적 변환  
- nullable 형식은 캐스트를 사용하여 명시적으로 또는 `Value` 속성을 사용하여 일반 형식으로 캐스팅할 수 있습니다. 예를 들면 다음과 같습니다.  
+ nullable 형식은 캐스트를 사용하여 명시적으로 또는 `Value` 속성을 사용하여 일반 형식으로 캐스팅할 수 있습니다. 예:  
   
- [!code-cs[csProgGuideTypes#7](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_4.cs)]  
+ [!code-csharp[csProgGuideTypes#7](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_4.cs)]  
   
  두 데이터 형식 간에 사용자 정의 변환이 정의된 경우 이러한 데이터 형식의 nullable 버전에도 같은 변환을 사용할 수 있습니다.  
   
 ## <a name="implicit-conversions"></a>암시적 변환  
  nullable 형식의 변수는 다음 예제와 같이 `null` 키워드를 사용하여 null로 설정할 수 있습니다.  
   
- [!code-cs[csProgGuideTypes#8](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_5.cs)]  
+ [!code-csharp[csProgGuideTypes#8](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_5.cs)]  
   
  일반 형식에서 nullable 형식으로의 변환은 암시적입니다.  
   
- [!code-cs[csProgGuideTypes#9](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_6.cs)]  
+ [!code-csharp[csProgGuideTypes#9](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_6.cs)]  
   
 ## <a name="operators"></a>연산자  
- 미리 정의된 단항 및 이항 연산자와 값 형식에 대해 존재하는 모든 사용자 정의 연산자는 nullable 형식에도 사용할 수 있습니다. 이러한 연산자는 피연산자가 null인 경우 null 값을 생성하고, 그렇지 않으면 연산자는 포함된 값을 사용하여 결과를 계산합니다. 예를 들면 다음과 같습니다.  
+ 미리 정의된 단항 및 이항 연산자와 값 형식에 대해 존재하는 모든 사용자 정의 연산자는 nullable 형식에도 사용할 수 있습니다. 이러한 연산자는 피연산자가 null인 경우 null 값을 생성하고, 그렇지 않으면 연산자는 포함된 값을 사용하여 결과를 계산합니다. 예:  
   
- [!code-cs[csProgGuideTypes#10](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_7.cs)]  
+ [!code-csharp[csProgGuideTypes#10](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_7.cs)]  
   
  nullable 형식과의 비교를 수행할 때 nullable 형식 중 하나의 값이 null이고 나머지는 null이 아닌 경우 모든 비교는 `!=`(같지 않음)을 제외하고는 `false`로 계산됩니다. 특정 비교에서는 `false`를 반환하고 그 반대의 경우에는 `true`를 반환한다고 가정하지 않는 것이 중요합니다. 다음 예제에서 10은 null보다 크지 않고, 작지 않고, 같지도 않습니다. `num1 != num2`만 `true`로 계산됩니다.  
   
- [!code-cs[csProgGuideTypes#11](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_8.cs)]  
+ [!code-csharp[csProgGuideTypes#11](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_8.cs)]  
   
  둘 다 null인 두 nullable 형식의 같음 비교는 `true`로 계산됩니다.  
   
 ## <a name="the--operator"></a>?? 연산자  
  `??` 연산자는 nullable 형식이 nullable 형식이 아닌 형식에 할당된 경우 반환되는 기본값을 정의합니다.  
   
- [!code-cs[csProgGuideTypes#12](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_9.cs)]  
+ [!code-csharp[csProgGuideTypes#12](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_9.cs)]  
   
- 이 연산자는 여러 nullable 형식에도 사용할 수 있습니다. 예를 들면 다음과 같습니다.  
+ 이 연산자는 여러 nullable 형식에도 사용할 수 있습니다. 예:  
   
- [!code-cs[csProgGuideTypes#13](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_10.cs)]  
+ [!code-csharp[csProgGuideTypes#13](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_10.cs)]  
   
 ## <a name="the-bool-type"></a>bool? 형식  
  `bool?` nullable 형식은 세 가지 값 [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md) 및 [null](../../../csharp/language-reference/keywords/null.md)을 포함할 수 있습니다. bool?에서 bool로 캐스팅하는 방법에 대한 자세한 내용은 [방법: bool?에서 bool로 안전하게 캐스팅](../../../csharp/programming-guide/nullable-types/how-to-safely-cast-from-bool-to-bool.md)을 참조하세요.  
@@ -133,8 +114,7 @@ nullable 형식은 기본 형식의 모든 값과 추가 [null](../../../csharp/
 |null|null|null|null|  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [Nullable 형식](../../../csharp/programming-guide/nullable-types/index.md)   
- [Nullable 형식 boxing](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [Nullable 형식](../../../csharp/programming-guide/nullable-types/index.md)  
+ [Nullable 형식 boxing](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)  
  [Nullable 값 형식](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
-

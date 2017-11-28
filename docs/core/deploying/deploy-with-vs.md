@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 01049a21-fd50-4419-9ab2-0e4a2e091050
+ms.openlocfilehash: 884ecb110b4168c6dc1e4c664de1dcb8db3734c5
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: b647c5dc4e565f9813212d75fab4a2e46c1a47b9
-ms.openlocfilehash: 19f5234ce667b2064a1e5b3fb50222c1ef4fe2a5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/12/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
-
 # <a name="deploying-net-core-apps-with-visual-studio"></a>Visual Studio를 사용하여 .NET Core 앱 배포
 
 .NET Core 응용 프로그램은 응용 프로그램 이진을 포함하지만 대상 시스템에 .NET Core가 있는지 여부에 따라 달라지는 *프레임워크 종속 배포* 또는 응용 프로그램과 .NET Core 이진을 모두 포함하는 *자체 포함 배포*로 배포할 수 있습니다. .NET Core 응용 프로그램 배포 개요는 [.NET Core 응용 프로그램 배포](index.md)를 참조하세요.
@@ -42,7 +40,7 @@ Visual Studio를 사용하여 .NET Core 응용 프로그램을 개발하는 방�
 
    편집기에서 *Program.cs* 파일을 열고 자동 생성된 코드를 다음 코드로 바꿉니다. 텍스트를 입력하라는 메시지가 표시된 다음 사용자가 입력한 개별 단어가 표시됩니다. 정규식 `\w+`를 사용하여 입력 테스트의 단어를 구분합니다.
 
-   [!code-cs[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. 앱의 디버그 빌드를 만듭니다.
 
@@ -92,7 +90,7 @@ Visual Studio를 사용하여 .NET Core 응용 프로그램을 개발하는 방�
 
    편집기에서 *Program.cs* 파일을 열고 자동 생성된 코드를 다음 코드로 바꿉니다. 텍스트를 입력하라는 메시지가 표시된 다음 사용자가 입력한 개별 단어가 표시됩니다. 정규식 `\w+`를 사용하여 입력 테스트의 단어를 구분합니다.
 
-   [!code-cs[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. 앱의 대상 플랫폼을 정의합니다.
 
@@ -189,4 +187,3 @@ Visual Studio를 사용하여 .NET Core 응용 프로그램을 개발하는 방�
 # <a name="see-also"></a>참고 항목
 [.NET Core 응용 프로그램 배포](index.md)   
 [.NET Core RID(런타임 식별자) 카탈로그](../rid-catalog.md)   
-

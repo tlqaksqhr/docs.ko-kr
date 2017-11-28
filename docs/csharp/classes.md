@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.translationtype: HT
-ms.sourcegitcommit: b041fbec3ff22157d00af2447e76a7ce242007fc
 ms.openlocfilehash: 13cbd3a5b53ea9b0f1acb22684b6a28639d00751
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="classes"></a>클래스
 *클래스*는 기타 형식, 메서드 및 이벤트의 변수를 그룹화하여 자체 사용자 지정 형식을 만들 수 있는 구문입니다. 클래스는 청사진과 비슷합니다. 클래스는 형식의 데이터 및 동작을 정의합니다. 클래스가 static으로 선언되지 않으면 클라이언트 코드는 변수에 할당되는 *개체* 또는 *인스턴스*를 만드는 방식으로 클래스를 사용합니다. 변수는 변수에 대한 모든 참조가 범위를 벗어날 때까지 메모리에 남아 있습니다. 이때 CLR는 변수를 가비지 수집에 적격한 것으로 표시합니다. 클래스가 [static](language-reference/keywords/static.md)으로 선언되면 메모리에는 복사본이 하나만 존재하고 클라이언트 코드는 *인스턴스 변수*가 아니라 클래스 자체를 통해서만 클래스에 액세스할 수 있습니다. 자세한 내용은 [정적 클래스 및 정적 클래스 멤버](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)를 참조하세요.  
 
@@ -84,5 +82,4 @@ C++와 달리 C#의 클래스는 하나의 기본 클래스에서만 직접 상�
 [생성자](programming-guide/classes-and-structs/constructors.md)   
 [종료자](programming-guide/classes-and-structs/destructors.md)   
 [개체](programming-guide/classes-and-structs/objects.md)
-
 

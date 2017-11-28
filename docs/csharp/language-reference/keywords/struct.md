@@ -1,41 +1,22 @@
 ---
 title: "struct(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- struct_CSharpKeyword
-dev_langs:
-- CSharp
+f1_keywords: struct_CSharpKeyword
 helpviewer_keywords:
 - struct keyword [C#]
 - structs [C#], struct keyword
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: e8a848d5543291ef335e72cb7806158827e865dd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 309e68a57e1ee869850d960ffaac6cf35eb6e260
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="struct-c-reference"></a>struct(C# 참조)
 `struct` 형식은 인벤토리의 항목 특성이나 사각형의 좌표와 같은 관련 변수의 소규모 그룹을 캡슐화하는 데 일반적으로 사용되는 값 형식입니다. 다음 예제에서는 간단한 구조체 선언을 보여줍니다.  
@@ -65,14 +46,13 @@ public struct Book
  예제를 보려면 [구조체 사용](../../../csharp/programming-guide/classes-and-structs/using-structs.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
- [기본값 표](../../../csharp/language-reference/keywords/default-values-table.md)   
- [기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)   
- [형식](../../../csharp/language-reference/keywords/types.md)   
- [값 형식](../../../csharp/language-reference/keywords/value-types.md)   
- [class](../../../csharp/language-reference/keywords/class.md)   
- [interface](../../../csharp/language-reference/keywords/interface.md)   
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
+ [기본값 표](../../../csharp/language-reference/keywords/default-values-table.md)  
+ [기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [유형](../../../csharp/language-reference/keywords/types.md)  
+ [값 형식](../../../csharp/language-reference/keywords/value-types.md)  
+ [class](../../../csharp/language-reference/keywords/class.md)  
+ [interface](../../../csharp/language-reference/keywords/interface.md)  
  [클래스 및 구조체](../../../csharp/programming-guide/classes-and-structs/index.md)
-

@@ -2,8 +2,7 @@
 title: ".NET Framework 4 마이그레이션 문제"
 ms.date: 05/02/2017
 ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework 4, migration
@@ -12,14 +11,12 @@ ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: mariaw
 manager: wpickett
+ms.openlocfilehash: a959e49fe4b400efc93de382837741083085de9c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 6170e096e36f8d054fdfe9cbd8311e6492e32a04
-ms.openlocfilehash: c3803a6bd9f64c89197f8514c624e1bd54d36886
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 마이그레이션 문제
 
 이 항목에서는 수정, 표준 준수 및 보안에 대한 변경 내용, 고객 피드백 기반의 변경 내용을 포함하여 .NET Framework 버전 3.5 서비스 팩 1과 .NET Framework 버전 4 간의 마이그레이션 문제에 대해 설명합니다. 이러한 변경 내용은 대부분 응용 프로그램에서 프로그래밍을 수정할 필요가 없습니다. 수정이 필요한 경우 표의 권장 변경 내용 열을 참조하세요.
@@ -263,7 +260,7 @@ ms.lasthandoff: 08/28/2017
 | **명령 인스턴스 바인딩** | 보기-모델 기반 명령 인스턴스를 보기 기반 입력 제스처에 바인딩하는 메커니즘을 제공하기 위해 <xref:System.Windows.Input.InputBinding> 클래스는 이제 <xref:System.Windows.DependencyObject> 대신 <xref:System.Windows.Freezable>에서 상속받습니다. 이제 다음 속성이 종속성 속성이 됩니다.<br><br>* <xref:System.Windows.Input.InputBinding.Command><br>* <xref:System.Windows.Input.InputBinding.CommandParameter><br>* <xref:System.Windows.Input.InputBinding.CommandTarget><br><br>이 변경의 결과는 다음과 같습니다.<br><br>* 이제 <xref:System.Windows.Input.InputBinding> 개체는 변경 가능한 상태로 유지되는 대신 등록 시 고정됩니다.<br>* <xref:System.Windows.DependencyObject> 클래스의 제한 때문에 다중 스레드에서 인스턴스 수준 <xref:System.Windows.Input.InputBinding> 개체에 액세스할 수 없습니다.<br>* <xref:System.Windows.Freezable> 클래스의 제한 때문에 등록 이후에 클래스 수준 입력 바인딩을 변경할 수 없습니다.<br>* 보기-모델에서 작성된 명령 인스턴스에는 입력 바인딩을 지정할 수 없습니다. | 바인딩이 변경될 수 있는 경우 개별 스레드에 <xref:System.Windows.Input.InputBinding> 클래스의 개별 인스턴스를 작성하거나 아니면 고정하세요. 등록된 후에는 클래스 수준의 정적 <xref:System.Windows.Input.InputBinding>을 변경하지 마세요. |
 | **브라우저 응용 프로그램** | WPF 브라우저 응용 프로그램(.XBAP)은 이제 개체가 올바른 순서로 라우팅된 키 이벤트를 수신할 수 있도록 독립 실행형 WPF 응용 프로그램과 마찬가지로 키 이벤트를 처리합니다. | 없음 |
 | **데드 키 조합** | WPF는 눈에 보이는 문자를 생성하지 않는 데드 키를 난독 처리하지만, 대신 키가 다음 문자 키와 결합되어 한 문자를 생성함을 나타냅니다. <xref:System.Windows.Input.Keyboard.KeyDownEvent> 이벤트와 같은 키 입력 이벤트는 <xref:System.Windows.Input.KeyEventArgs.Key> 속성을 <xref:System.Windows.Input.Key> 값으로 설정하여 키가 데드 키일 때 보고합니다. 응용 프로그램은 일반적으로 결합된 문자를 만드는 키보드 입력에 응답하지 않으므로, 이는 일반적으로 예상되는 동작입니다. | 결합된 문자의 일부였던 키를 읽어야 하는 응용 프로그램은 <xref:System.Windows.Input.KeyEventArgs.DeadCharProcessedKey> 속성을 사용하여 현재 모호한 키를 얻을 수 있습니다. |
-| **포커스 관리자** | `true`로 설정된 [IsFocusScope](https://msdn.microsoft.com/library/system.windows.input.focusmanager.isfocusscope.aspx) 연결 속성이 있는 요소가 <xref:System.Windows.Input.FocusManager.GetFocusedElement(System.Windows.DependencyObject)?displayProperty=fullName> 메서드에 전달되면, 이 메서드는 해당 포커스 영역 내에서 마지막 키보드 포커스 요소인 요소를 반환합니다. 단, 반환된 요소가 메서드에 전달된 요소와 동일한 <xref:System.Windows.PresentationSource> 개체여야 합니다. | 없음 |
+| **포커스 관리자** | `true`로 설정된 [IsFocusScope](https://msdn.microsoft.com/library/system.windows.input.focusmanager.isfocusscope.aspx) 연결 속성이 있는 요소가 <xref:System.Windows.Input.FocusManager.GetFocusedElement(System.Windows.DependencyObject)?displayProperty=nameWithType> 메서드에 전달되면, 이 메서드는 해당 포커스 영역 내에서 마지막 키보드 포커스 요소인 요소를 반환합니다. 단, 반환된 요소가 메서드에 전달된 요소와 동일한 <xref:System.Windows.PresentationSource> 개체여야 합니다. | 없음 |
 
 ### <a name="ui-automation"></a>UI 자동화
 
@@ -340,4 +337,3 @@ ms.lasthandoff: 08/28/2017
 
 [.NET Framework에서 사용되지 않는 기능](https://msdn.microsoft.com/library/ee461502(v=vs.110).aspx)   
 [.NET Framework 4 응용 프로그램의 마이그레이션 문제: 베타 2에서 RTM](http://go.microsoft.com/fwlink/?LinkId=191505)
-

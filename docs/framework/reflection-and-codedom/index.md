@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework, dynamic programming
 - dynamic programming [.NET Framework]
 ms.assetid: f78ec137-df0e-48c9-a7a0-5f6a1055f011
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: d71be02173bfcfeace5412e22e51f4fc0b247a5f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/05/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dynamic-programming-in-the-net-framework"></a>.NET Framework의 동적 프로그래밍
 설명서의 이 섹션에서는 .NET Framework에서의 동적 프로그래밍에 대한 정보를 제공합니다.  
@@ -44,4 +42,3 @@ ms.lasthandoff: 09/05/2017
  [개발 가이드](../../../docs/framework/development-guide.md)  
   
  [.NET Framework에 대한 고급 정보](http://msdn.microsoft.com/en-us/faae8083-fecb-4514-b133-b0a5a32a7c3c)
-

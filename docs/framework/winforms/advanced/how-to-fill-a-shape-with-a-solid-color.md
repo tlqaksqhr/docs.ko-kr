@@ -1,39 +1,43 @@
 ---
-title: "방법: 단색으로 도형 채우기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "색, 도형에 추가"
-  - "도형, 채우기"
+title: "방법: 단색으로 도형 채우기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- colors [Windows Forms], adding to shapes
+- shapes [Windows Forms], filling
 ms.assetid: 06088b31-bac9-4ef3-9ebe-06c2c764d6df
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: eb3e160392a903083386d9942f8e2cfe31ee89a4
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/22/2017
 ---
-# 방법: 단색으로 도형 채우기
-단색으로 도형을 채우려면 <xref:System.Drawing.SolidBrush> 개체를 만든 다음 이 <xref:System.Drawing.SolidBrush> 개체를 <xref:System.Drawing.Graphics> 클래스의 채우기 메서드 중 하나에 인수로 전달합니다.  아래 예제에서는 빨간색으로 타원을 채우는 방법을 보여 줍니다.  
+# <a name="how-to-fill-a-shape-with-a-solid-color"></a>방법: 단색으로 도형 채우기
+만들기를 단색으로 도형 채우기는 <xref:System.Drawing.SolidBrush> 개체를 다음 전달할 <xref:System.Drawing.SolidBrush> 개체의 채우기 메서드 중 하나에 대 한 인수로 <xref:System.Drawing.Graphics> 클래스입니다. 다음 예제에서는 빨간색으로 타원을 채우는 방법을 보여 줍니다.  
   
-## 예제  
- 다음 코드에서 <xref:System.Drawing.SolidBrush.%23ctor%2A> 생성자는 <xref:System.Drawing.Color> 개체만 인수로 사용합니다.  <xref:System.Drawing.Color.FromArgb%2A> 메서드에 사용되는 값은 색의 알파, 빨강, 녹색 및 파랑 구성 요소를 나타냅니다.  이러한 각 값은 0\-255 사이에 있어야 합니다.  첫 번째 255는 색이 완전한 불투명이라는 것을 나타내며 두 번째 255는 빨강 구성 요소의 농도가 100%라는 것을 나타냅니다.  나머지 두 개의 0은 각각 녹색 및 파랑 구성 요소의 농도가 0%임을 나타냅니다.  
+## <a name="example"></a>예제  
+ 다음 코드에서는 <xref:System.Drawing.SolidBrush.%23ctor%2A> 생성자는 <xref:System.Drawing.Color> 인수로 개체입니다. 사용 되는 값은 <xref:System.Drawing.Color.FromArgb%2A> 메서드 색의 알파, 빨간색, 녹색 및 파랑 구성 요소를 나타냅니다. 이러한 값을 각각 0-255 사이에 있어야 합니다. 첫 번째 255 나타내며 색은 완전히 불투명 한 두 번째 255 빨강 구성 요소의 농도가 임을 나타냅니다. 두 개의 0 있는지 녹색 및 파랑 구성 요소 둘 다가 0의 강도 나타냅니다.  
   
- <xref:System.Drawing.Graphics.FillEllipse%2A> 메서드에 전달된 네 개의 숫자 \(0, 0, 100, 60\)은 타원을 둘러싸는 사각형의 위치와 크기를 나타냅니다.  이 사각형의 왼쪽 위 모퉁이는 \(0, 0\)이고 너비는 100, 높이는 60입니다.  
+ 4 개의 숫자 (0, 0, 100, 60)에 전달 되는 <xref:System.Drawing.Graphics.FillEllipse%2A> 메서드는 타원에 대 한 경계 사각형의 크기와 위치를 지정 합니다. 사각형의 왼쪽 위 모퉁이 (0, 0), 100, 너비 및 높이 60입니다.  
   
  [!code-csharp[System.Drawing.UsingABrush#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.UsingABrush#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#11)]  
   
-## 코드 컴파일  
- 앞의 예제는 Windows Forms에서 사용해야 하며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`를 필요로 합니다.  
+## <a name="compiling-the-code"></a>코드 컴파일  
+ 앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`가 필요합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [브러시를 사용하여 도형 채우기](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)

@@ -1,30 +1,21 @@
 ---
 title: "방법: 네임스페이스 접두사 제어(C#)(LINQ to XML)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 64de5186-b81a-4ddd-8327-8693df59a01b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: fc8d652c54be62fdf38e0aa05fcf6a81af3f719b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1e56dcf74725940019cda1bf340b2f3ac4e1f6c4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>방법: 네임스페이스 접두사 제어(C#)(LINQ to XML)
 이 항목에서는 XML 트리를 serialize할 때 네임스페이스 접두사를 제어하는 방법에 대해 설명합니다.  
@@ -73,4 +64,3 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>참고 항목  
  [XML 네임스페이스 작업(C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
-

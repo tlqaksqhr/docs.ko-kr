@@ -1,43 +1,25 @@
 ---
 title: "방법: Visual Basic에서 텍스트 파일에 추가"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - I/O [Visual Basic], appending to files
 - I/O [Visual Basic], My.Computer.FileSystem.WriteAllText method
 - I/O [Visual Basic], WriteAllText method
 ms.assetid: bbbd7fb5-f169-41a9-b53f-520ea9613913
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 41ab4491dbc21936c6fbfe9440fcbaeaaac6f1dd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3425c82ed73e4a6fbded187b9333f4083111e78f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-append-to-text-files-in-visual-basic"></a>방법: Visual Basic에서 텍스트 파일에 추가
 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 메서드는 `append` 매개 변수가 `True`로 설정되도록 지정하여 텍스트 파일에 추가하는 데 사용될 수 있습니다.  
@@ -68,7 +50,6 @@ ms.lasthandoff: 07/28/2017
 -   경로를 보는 데 필요한 권한이 사용자에게 없는 경우(<xref:System.Security.SecurityException>)  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>   
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>   
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>  
+ <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  [파일에 쓰기](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
-

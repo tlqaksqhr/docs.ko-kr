@@ -12,16 +12,15 @@ helpviewer_keywords:
 - collections [.NET Framework], generic
 - generic collections [.NET Framework]
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 6e6f23c413bbefe6a29746e2f6a1887a23dd3bfa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 465939bca9e0300300efef9842f312800817a5cc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="when-to-use-generic-collections"></a>제네릭 컬렉션 사용 기준
 제네릭 컬렉션을 사용하면 기본 컬렉션 형식에서 파생하고 형식별 멤버를 구현하지 않아도 형식 보안 이점이 즉시 제공되므로 일반적으로는 제네릭 컬렉션을 사용하는 것이 좋습니다. 또한 컬렉션 요소가 값 형식일 때는 대개 제네릭 컬렉션 형식이 해당하는 제네릭이 아닌 컬렉션 형식 및 제네릭이 아닌 기본 컬렉션 형식에서 파행되는 형식에 비해 성능도 뛰어납니다. 제네릭을 사용하는 경우에는 요소를 boxing할 필요가 없기 때문입니다.  
@@ -54,7 +53,7 @@ ms.lasthandoff: 07/28/2017
 -   <xref:System.Collections.Concurrent.ConcurrentBag%601> 는 순서가 지정되지 않은 요소의 빠른 삽입 및 제거 기능을 제공합니다.  
   
 ## <a name="linq-to-objects"></a>LINQ to Objects  
- LINQ to Objects 기능을 사용하면 개체 형식이 <xref:System.Collections.IEnumerable?displayProperty=fullName> 또는 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> 인터페이스를 구현하는 경우 LINQ 쿼리를 통해 메모리 내 개체에 액세스할 수 있습니다. LINQ 쿼리는 데이터 액세스를 위한 일반 패턴을 제공하고, 표준 `foreach` 루프에 비해 간결하고 쉽게 읽을 수 있으며, 필터링, 순서 지정 및 그룹화 기능을 제공합니다. 또한 LINQ 쿼리를 통해 성능을 향상시킬 수도 있습니다. 자세한 내용은 [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9) 및 [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)를 참조하세요.  
+ LINQ to Objects 기능을 사용하면 개체 형식이 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 또는 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 인터페이스를 구현하는 경우 LINQ 쿼리를 통해 메모리 내 개체에 액세스할 수 있습니다. LINQ 쿼리는 데이터 액세스를 위한 일반 패턴을 제공하고, 표준 `foreach` 루프에 비해 간결하고 쉽게 읽을 수 있으며, 필터링, 순서 지정 및 그룹화 기능을 제공합니다. 또한 LINQ 쿼리를 통해 성능을 향상시킬 수도 있습니다. 자세한 내용은 [LINQ to Objects](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9) 및 [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)를 참조하세요.  
   
 ## <a name="additional-functionality"></a>추가 기능  
  일부 제네릭 형식은 제네릭이 아닌 컬렉션 형식에는 없는 기능을 포함합니다. 예를 들어 제네릭이 아닌 <xref:System.Collections.Generic.List%601> 클래스에 해당하는 <xref:System.Collections.ArrayList> 클래스에는 제네릭 대리자를 허용하는 여러 메서드가 포함되어 있습니다. 이러한 대리자로는 목록 검색을 위한 메서드를 지정할 수 있도록 하는 <xref:System.Predicate%601> 대리자, 목록의 각 요소에 대해 작동하는 메서드를 나타내는 <xref:System.Action%601> 대리자, 형식 간의 변환을 정의할 수 있도록 하는 <xref:System.Converter%602> 대리자 등이 있습니다.  
@@ -62,7 +61,6 @@ ms.lasthandoff: 07/28/2017
  <xref:System.Collections.Generic.List%601> 클래스를 사용하면 목록 검색 및 정렬을 위해 <xref:System.Collections.Generic.IComparer%601> 제네릭 인터페이스 구현을 직접 지정할 수 있습니다. <xref:System.Collections.Generic.SortedDictionary%602> 및 <xref:System.Collections.Generic.SortedList%602> 클래스에도 이 기능이 있습니다. 또한 이러한 클래스를 사용하는 경우 컬렉션을 만들 때 비교자를 지정할 수 있습니다. 마찬가지로 <xref:System.Collections.Generic.Dictionary%602> 및 <xref:System.Collections.ObjectModel.KeyedCollection%602> 클래스에서도 고유한 같음 비교자를 지정할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [컬렉션 및 데이터 구조](../../../docs/standard/collections/index.md)   
- [일반적으로 사용되는 컬렉션 형식](../../../docs/standard/collections/commonly-used-collection-types.md)   
+ [컬렉션 및 데이터 구조](../../../docs/standard/collections/index.md)  
+ [일반적으로 사용되는 컬렉션 형식](../../../docs/standard/collections/commonly-used-collection-types.md)  
  [제네릭](../../../docs/standard/generics/index.md)
-

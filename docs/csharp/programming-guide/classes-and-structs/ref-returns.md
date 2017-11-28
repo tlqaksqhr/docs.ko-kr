@@ -9,12 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 18cf7a4b-29f0-4b14-85b8-80af754aabd8
+ms.openlocfilehash: 1d8fb092b578602b5d4f791a3fd14f47dfae1ba6
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 4582cb0ee091526423cce3fc1d8243029f34f59c
-ms.openlocfilehash: 3f2ee35db5b77efcce629b6315060a723429b19c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="ref-returns-and-ref-locals"></a>참조 반환 및 참조 로컬
 
@@ -86,15 +85,14 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 
 다음 예제에서는 정수 값의 배열을 저장하는 `NumberStore` 클래스를 정의합니다. `FindNumber` 메서드는 인수로 전달된 숫자보다 크거나 같은 첫 번째 숫자를 참조로 반환합니다. 인수보다 크거나 같은 숫자가 없으면 메서드는 인덱스 0의 숫자를 반환합니다. 
 
-[!CODE-cs[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#1)]
+[!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#1)]
 
 다음 예제에서는 `NumberStore.FindNumber` 메서드를 호출하여 16보다 크거나 같은 첫 번째 값을 검색합니다. 그런 다음 호출자가 메서드에서 반환된 값을 두 배로 만듭니다. 예제의 출력에서 볼 수 있듯이 이 변경 내용은 `NumberStore` 인스턴스의 배열 요소 값에 반영됩니다.
 
-[!CODE-cs[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#2)]
+[!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/ref-returns1.cs#2)]
 
 참조 반환 값이 지원되지 않을 경우 이러한 작업은 일반적으로 해당 값과 함께 배열 요소의 인덱스를 반환하여 수행됩니다. 그런 다음 호출자는 이 인덱스를 사용하여 별도 메서드 호출에서 값을 수정할 수 있습니다. 그러나 호출자가 인덱스를 수정하여 다른 배열 값에 액세스하고 수정할 수도 있습니다.  
  
 ## <a name="see-also"></a>참고 항목
 
 [ref 키워드](../../language-reference/keywords/ref.md)
-

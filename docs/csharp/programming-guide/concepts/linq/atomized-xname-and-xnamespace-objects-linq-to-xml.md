@@ -1,25 +1,21 @@
 ---
 title: "원자화된 XName 및 XNamespace 개체(LINQ to XML)(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: a5b21433-b49d-415c-b00e-bcbfb0d267d7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: cc3fdb907c46cf77ff6560b68ebc449380947e1c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1731be2847e5e118340b93cd35205fc13ff9f75a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-c"></a>원자화된 XName 및 XNamespace 개체(LINQ to XML)(C#)
 <xref:System.Xml.Linq.XName> 및 <xref:System.Xml.Linq.XNamespace> 개체는 *원자화*됩니다. 즉, 이들 개체의 정규화된 이름이 같으면 같은 개체를 참조합니다. 이를 통해 쿼리 성능이 향상될 수 있습니다. 두 개의 원자화된 이름이 같은지 비교하는 경우 기본 중간 언어에서 이 두 개의 참조가 같은 개체를 가리키는지 여부만 확인하면 됩니다. 기본 코드는 시간이 많이 걸리는 문자열 비교를 수행할 필요가 없습니다.  
@@ -88,4 +84,3 @@ foreach (var z in query)
   
 ## <a name="see-also"></a>참고 항목  
  [성능(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)
-

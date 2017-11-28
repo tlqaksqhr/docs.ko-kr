@@ -1,39 +1,21 @@
 ---
 title: "다형성(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 601c8cf626c846ca6c5d6bc2338e271e6b93544a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c278a6a931154af97cab5b1ff33124dd31a3fa2e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="polymorphism-c-programming-guide"></a>다형성(C# 프로그래밍 가이드)
 다형성은 흔히 캡슐화와 상속의 뒤를 이어 개체 지향 프로그래밍의 세 번째 특징으로 일컬어집니다. 다형성은 "여러 형태"를 의미하는 그리스어 단어이며 다음과 같은 두 가지 고유한 측면을 가집니다.  
@@ -50,7 +32,7 @@ ms.lasthandoff: 07/28/2017
   
  먼저, `Shape`라는 기본 클래스를 만들고 `Rectangle`, `Circle` 및 `Triangle`과 같은 파생 클래스를 만듭니다. `Shape` 클래스에 `Draw`라는 가상 메서드를 제공하고, 각 파생 클래스에서 이를 재정의하여 클래스가 나타내는 특정 도형을 그립니다. `List<Shape>` 개체를 만들고 이 개체에 Circle, Triangle 및 Rectangle을 추가합니다. 그리기 화면을 업데이트하려면 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 루프를 사용하여 목록을 반복하고 목록의 각 `Shape` 개체에 대해 `Draw` 메서드를 호출합니다. 목록의 각 개체에 선언된 형식 `Shape`가 있더라도 이는 호출될 런타임 형식(각 파생 클래스에 있는 메서드의 재정의된 버전)입니다.  
   
- [!code-cs[csProgGuideInheritance#50](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_1.cs)]  
+ [!code-csharp[csProgGuideInheritance#50](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_1.cs)]  
   
  C#에서 모든 형식은 사용자 정의 형식을 포함한 모든 형식이 <xref:System.Object>에서 파생되므로 다형 형식입니다.  
   
@@ -67,42 +49,42 @@ ms.lasthandoff: 07/28/2017
   
  파생 클래스는 기본 클래스 멤버가 [virtual](../../../csharp/language-reference/keywords/virtual.md) 또는 [abstract](../../../csharp/language-reference/keywords/abstract.md)로 선언된 경우에만 기본 클래스 멤버를 재정의할 수 있습니다. 파생 멤버는 [override](../../../csharp/language-reference/keywords/override.md) 키워드를 사용하여 메서드가 가상 호출에 참여하도록 되어 있음을 명시적으로 나타내야 합니다. 다음 코드는 예제를 제공합니다.  
   
- [!code-cs[csProgGuideInheritance#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_2.cs)]  
+ [!code-csharp[csProgGuideInheritance#20](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_2.cs)]  
   
  필드는 가상일 수 없습니다. 메서드, 속성, 이벤트 및 인덱서만 가상일 수 있습니다. 파생 클래스가 가상 멤버를 재정의하면 해당 멤버는 해당 클래스의 인스턴스가 기본 클래스의 인스턴스로 액세스되는 경우에도 호출됩니다. 다음 코드는 예제를 제공합니다.  
   
- [!code-cs[csProgGuideInheritance#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_3.cs)]  
+ [!code-csharp[csProgGuideInheritance#21](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_3.cs)]  
   
  가상 메서드 및 속성을 통해 파생 클래스는 메서드의 기본 클래스 구현을 사용할 필요 없이 기본 클래스를 확장할 수 있습니다. 자세한 내용은 [Override 및 New 키워드를 사용하여 버전 관리](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)를 참조하세요. 인터페이스는 구현이 파생 클래스에 남겨진 메서드 또는 메서드 집합을 정의하는 또 다른 방법을 제공합니다. 자세한 내용은 [인터페이스](../../../csharp/programming-guide/interfaces/index.md)를 참조하세요.  
   
 ### <a name="hiding-base-class-members-with-new-members"></a>새 멤버로 기본 클래스 멤버 숨기기  
  파생 멤버가 기본 클래스의 멤버와 동일한 이름을 갖되 가상 호출에는 참여하지 않도록 하려면 [new](../../../csharp/language-reference/keywords/new.md) 키워드를 사용하면 됩니다. `new` 키워드는 바꿀 클래스 멤버의 반환 형식 앞에 배치됩니다. 다음 코드는 예제를 제공합니다.  
   
- [!code-cs[csProgGuideInheritance#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_4.cs)]  
+ [!code-csharp[csProgGuideInheritance#18](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_4.cs)]  
   
- 숨겨진 기본 클래스 멤버는 파생 클래스의 인스턴스를 기본 클래스의 인스턴스로 캐스팅하여 클라이언트 코드에서 계속 액세스할 수 있습니다. 예:  
+ 숨겨진 기본 클래스 멤버는 파생 클래스의 인스턴스를 기본 클래스의 인스턴스로 캐스팅하여 클라이언트 코드에서 계속 액세스할 수 있습니다. 예를 들면 다음과 같습니다.  
   
- [!code-cs[csProgGuideInheritance#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_5.cs)]  
+ [!code-csharp[csProgGuideInheritance#19](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_5.cs)]  
   
 ### <a name="preventing-derived-classes-from-overriding-virtual-members"></a>파생 클래스가 가상 멤버를 재정의하지 못하도록 설정  
  가상 멤버는 가상 멤버와 원래 가상 멤버를 선언한 클래스 간에 선언된 클래스 수와 관계없이 무기한 가상으로 유지됩니다. 클래스 A가 가상 멤버를 선언하고, 클래스 B가 A에서 파생되며, 클래스 C가 B에서 파생되면 클래스 C는 클래스 B가 해당 멤버에 대한 재정의를 선언했는지 여부와 관계없이 가상 멤버를 상속하며, 가상 멤버를 재정의할 수 있습니다. 다음 코드는 예제를 제공합니다.  
   
- [!code-cs[csProgGuideInheritance#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_6.cs)]  
+ [!code-csharp[csProgGuideInheritance#22](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_6.cs)]  
   
  파생 클래스는 재정의를 [sealed](../../../csharp/language-reference/keywords/sealed.md)로 선언하여 가상 상속을 중지할 수 있습니다. 이렇게 하려면 클래스 멤버 선언에서 `sealed` 키워드 앞에 `override` 키워드를 배치해야 합니다. 다음 코드는 예제를 제공합니다.  
   
- [!code-cs[csProgGuideInheritance#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_7.cs)]  
+ [!code-csharp[csProgGuideInheritance#24](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_7.cs)]  
   
  앞의 예제에서 `DoWork` 메서드는 C에서 파생된 모든 클래스에 대해 더 이상 가상이 아닙니다. 그러나 이 메서드는 C의 인스턴스가 형식 B 또는 형식 A로 캐스팅되더라도 여전히 C의 인스턴스에 대해서는 가상입니다. 다음 예제와 같이 `new` 키워드를 사용하여 sealed 메서드를 파생 클래스로 대체할 수 있습니다.  
   
- [!code-cs[csProgGuideInheritance#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_8.cs)]  
+ [!code-csharp[csProgGuideInheritance#25](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_8.cs)]  
   
  이 경우 형식 D 변수를 사용하여 D에 대해 `DoWork`을 호출하면 새 `DoWork`가 호출됩니다. 형식 C, B 또는 A 변수를 사용하여 D의 인스턴스에 액세스하면 `DoWork`에 대한 호출에서 가상 상속의 규칙을 따라 해당 호출을 클래스 C에 대한 `DoWork`의 구현으로 라우팅합니다.  
   
 ### <a name="accessing-base-class-virtual-members-from-derived-classes"></a>파생 클래스에서 기본 클래스 가상 멤버 액세스  
  메서드 또는 속성을 바꾸었거나 재정의한 파생 클래스는 계속해서 base 키워드를 사용하여 기본 클래스에 대한 메서드 또는 속성에 액세스할 수 있습니다. 다음 코드는 예제를 제공합니다.  
   
- [!code-cs[csProgGuideInheritance#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_9.cs)]  
+ [!code-csharp[csProgGuideInheritance#26](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/polymorphism_9.cs)]  
   
  자세한 내용은 [base](../../../csharp/language-reference/keywords/base.md)를 참조하세요.  
   
@@ -118,13 +100,12 @@ ms.lasthandoff: 07/28/2017
 -   [방법: ToString 메서드 재정의](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [상속](../../../csharp/programming-guide/classes-and-structs/inheritance.md)   
- [추상 및 봉인 클래스와 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
- [메서드](../../../csharp/programming-guide/classes-and-structs/methods.md)   
- [이벤트](../../../csharp/programming-guide/events/index.md)   
- [속성](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [인덱서](../../../csharp/programming-guide/indexers/index.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [상속](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
+ [추상/봉인된 클래스 및 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
+ [메서드](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+ [이벤트](../../../csharp/programming-guide/events/index.md)  
+ [속성](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [인덱서](../../../csharp/programming-guide/indexers/index.md)  
  [유형](../../../csharp/programming-guide/types/index.md)
-

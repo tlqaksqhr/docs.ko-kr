@@ -7,16 +7,14 @@ manager: wpickett
 ms.author: wiwagn
 ms.date: 12/1/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: 45bceed6-f549-4114-a9b1-b44feb497742
+ms.openlocfilehash: fdf75c0b7195742bdce70566ebb3880bb0565f31
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2b73b954dbb090484a320302a3af72509fccd9d3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="perform-inner-joins"></a>내부 조인 수행
 
@@ -37,7 +35,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="simple-key-join-example"></a>단순 키 조인 예제  
  다음 예제에서는 두 개의 사용자 정의 형식인 `Person` 및 `Pet`의 개체를 포함하는 두 개의 컬렉션을 만듭니다. 쿼리는 C#의 `join` 절을 사용하여 `Person` 개체를 `Owner`가 해당 `Person`인 `Pet` 개체와 일치시킵니다. C#의 `select` 절은 결과 개체의 모양을 정의합니다. 이 예제에서 결과 개체는 소유자의 이름과 애완 동물의 이름으로 구성된 무명 형식입니다.  
   
- [!code-cs[CsLINQProgJoining#1](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_1.cs)]  
+ [!code-csharp[CsLINQProgJoining#1](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_1.cs)]  
   
  `LastName`이 "Huff"인 `Person` 개체는 `Pet.Owner`가 `Person`과 같은 `Pet` 개체가 없기 때문에 결과 집합에 표시되지 않습니다.  
   
@@ -48,7 +46,7 @@ ms.lasthandoff: 07/28/2017
   
  다음 예제에서는 `Employee` 개체 목록과 `Student` 개체 목록을 사용하여 학생이기도 한 직원을 확인합니다. 이러한 형식에는 둘 다 <xref:System.String> 형식의 `FirstName` 및 `LastName` 속성이 있습니다. 각 목록의 요소에서 조인 키를 만드는 함수는 각 요소의 `FirstName` 및 `LastName` 속성으로 구성된 무명 형식을 반환합니다. 조인 작업은 이러한 복합 키가 같은지 비교하고 각 목록에서 이름과 성이 둘 다 일치하는 개체 쌍을 반환합니다.  
   
- [!code-cs[CsLINQProgJoining#2](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_2.cs)]  
+ [!code-csharp[CsLINQProgJoining#2](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_2.cs)]  
   
 ## <a name="example"></a>예제  
   
@@ -61,7 +59,7 @@ ms.lasthandoff: 07/28/2017
   
  C#의 두 번째 `join` 절은 `Person` 형식의 `Owner` 속성과 동물 이름의 첫 글자로 구성된 복합 키를 기준으로 제공된 개 목록의 `Dog` 개체와 첫 번째 조인에서 반환된 무명 형식을 상호 연결합니다. 일치하는 각 쌍의 `Cat.Name` 및 `Dog.Name` 속성을 포함하는 무명 형식의 시퀀스를 반환합니다. 내부 조인이기 때문에 두 번째 데이터 소스에 일치 항목이 있는 첫 번째 데이터 소스의 개체만 반환됩니다.  
   
- [!code-cs[CsLINQProgJoining#3](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_3.cs)]  
+ [!code-csharp[CsLINQProgJoining#3](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_3.cs)]  
   
 ## <a name="example"></a>예제  
   
@@ -74,13 +72,12 @@ ms.lasthandoff: 07/28/2017
   
  `query1`의 결과는 `into` 절 없이 `join` 절을 사용해서 내부 조인을 수행하여 얻은 결과 집합과 같습니다. `query2` 변수는 이와 동일한 쿼리를 보여 줍니다.  
   
- [!code-cs[CsLINQProgJoining#4](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_4.cs)]  
+ [!code-csharp[CsLINQProgJoining#4](../../../samples/snippets/csharp/concepts/linq/how-to-perform-inner-joins_4.cs)]  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Linq.Enumerable.Join%2A>   
- <xref:System.Linq.Enumerable.GroupJoin%2A>   
- [그룹화 조인 수행](perform-grouped-joins.md)   
- [왼쪽 우선 외부 조인 수행](perform-left-outer-joins.md)   
- [무명 형식](../programming-guide/classes-and-structs/anonymous-types.md)   
+ <xref:System.Linq.Enumerable.Join%2A>  
+ <xref:System.Linq.Enumerable.GroupJoin%2A>  
+ [그룹화 조인 수행](perform-grouped-joins.md)  
+ [왼쪽 우선 외부 조인 수행](perform-left-outer-joins.md)  
+ [무명 형식](../programming-guide/classes-and-structs/anonymous-types.md)  
  
-

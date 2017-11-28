@@ -1,39 +1,21 @@
 ---
 title: "방법: 자동으로 구현된 속성을 사용하여 간단한 클래스 구현(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: f43dfaffe6ff696387573729dc25cabe33c1fede
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2b944b6d232925bbd9bf1c04e89cd40e5ceaf016
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>방법: 자동으로 구현된 속성을 사용하여 간단한 클래스 구현(C# 프로그래밍 가이드)
 이 예제에서는 자동 구현 속성 집합을 캡슐화하는 데만 사용되는 변경할 수 없는 간단한 클래스를 만드는 방법을 보여 줍니다. 참조 형식 의미 체계를 사용해야 하는 경우 구조체 대신 이러한 종류의 구문을 사용합니다.  
@@ -137,7 +119,6 @@ ms.lasthandoff: 07/28/2017
  컴파일러는 각 자동 구현 속성에 대해 지원 필드를 만듭니다. 이 필드는 소스 코드에서 직접 액세스할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [속성](../../../csharp/programming-guide/classes-and-structs/properties.md)   
- [struct](../../../csharp/language-reference/keywords/struct.md)   
+ [속성](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+ [struct](../../../csharp/language-reference/keywords/struct.md)  
  [개체 이니셜라이저 및 컬렉션 이니셜라이저](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-

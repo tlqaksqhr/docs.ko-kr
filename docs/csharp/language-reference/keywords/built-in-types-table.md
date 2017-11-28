@@ -1,39 +1,21 @@
 ---
 title: "기본 제공 형식 표(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: d9d1e4945526a862074e73e608185696328946be
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: df13a45544491dee9e592a4ab0b90b5235f12abc
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="built-in-types-table-c-reference"></a>기본 제공 형식 표(C# 참조)
 다음 표에서는 <xref:System> 네임스페이스에 미리 정의된 형식의 별칭인 기본 제공 C# 형식의 키워드를 보여 줍니다.  
@@ -75,12 +57,11 @@ Console.WriteLine(myVariable.GetType());
  [typeof](../../../csharp/language-reference/keywords/typeof.md) 연산자를 사용할 수도 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
- [값 형식](../../../csharp/language-reference/keywords/value-types.md)   
- [기본값 표](../../../csharp/language-reference/keywords/default-values-table.md)   
- [숫자 결과 형식 지정 표](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)   
- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)   
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
+ [값 형식](../../../csharp/language-reference/keywords/value-types.md)  
+ [기본값 표](../../../csharp/language-reference/keywords/default-values-table.md)  
+ [숫자 결과 형식 지정 표](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)  
+ [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
  [형식 참조 테이블](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
-

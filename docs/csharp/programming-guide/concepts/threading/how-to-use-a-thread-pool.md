@@ -1,30 +1,21 @@
 ---
 title: "방법: 스레드 풀 사용(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 210a9235-83a6-420b-af52-2d6a58e5133f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 9ad5ffb224821c67d227297f8a5a4a1476d77b0a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f90262cdfa6e4d6c8c37c553e999d51fee736d6a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-use-a-thread-pool-c"></a>방법: 스레드 풀 사용(C#)
 *스레드 풀링*은 스레드를 만들 때 자동으로 시작되고 작업이 큐에 추가되는 다중 스레딩의 한 형태입니다. 자세한 내용은 [스레드 풀링(C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)을 참조하세요.  
@@ -150,15 +141,14 @@ Fibonacci(27) = 196418
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Threading.Mutex>   
- <xref:System.Threading.WaitHandle.WaitAll%2A>   
- <xref:System.Threading.ManualResetEvent>   
- <xref:System.Threading.EventWaitHandle.Set%2A>   
- <xref:System.Threading.ThreadPool>   
- <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>   
- <xref:System.Threading.ManualResetEvent>   
- [스레드 풀링(C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)   
- [스레딩(C#)](../../../../csharp/programming-guide/concepts/threading/index.md)   
- @System.Threading.Monitor   
+ <xref:System.Threading.Mutex>  
+ <xref:System.Threading.WaitHandle.WaitAll%2A>  
+ <xref:System.Threading.ManualResetEvent>  
+ <xref:System.Threading.EventWaitHandle.Set%2A>  
+ <xref:System.Threading.ThreadPool>  
+ <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A>  
+ <xref:System.Threading.ManualResetEvent>  
+ <xref:System.Threading.Monitor>  
+ [스레드 풀링(C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)  
+ [스레딩(C#)](../../../../csharp/programming-guide/concepts/threading/index.md)  
  [보안](../../../../standard/security/index.md)
-

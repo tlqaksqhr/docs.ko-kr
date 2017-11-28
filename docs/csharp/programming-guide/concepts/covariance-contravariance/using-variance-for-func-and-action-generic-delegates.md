@@ -1,30 +1,21 @@
 ---
 title: "Func 및 Action 제네릭 대리자에 가변성 사용(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 1826774f-2b7a-470f-b110-17cfdd6abdae
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 1b12a08579f70a07ebb90bfe723209b9f03460e9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 976057252a6cfa378008e9508145be7bc330fdc8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-c"></a>Func 및 Action 제네릭 대리자에 가변성 사용(C#)
 이러한 예제는 메서드를 다시 사용하고 코드의 유연성을 높이기 위해 `Func` 및 `Action` 제네릭 대리자에서 공변성(covariance) 및 반공변성(contravariance)을 사용하는 방법을 보여 줍니다.  
@@ -99,6 +90,5 @@ class Program
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [공변성(Covariance) 및 반공변성(Contravariance)(C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/index.md)   
+ [공변성(Covariance) 및 반공변성(Contravariance)(C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  
  [제네릭](~/docs/standard/generics/index.md)
-

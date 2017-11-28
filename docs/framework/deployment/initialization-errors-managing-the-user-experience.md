@@ -5,30 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - no framework found experience
 - initialization errors [.NET Framework]
 - .NET Framework, initialization errors
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: a0b03f2b5c0c656b8800d1b2ceff9b774a5c65d5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ad1a40319a1571643d022536bba93686d82a3d9f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework 초기화 오류: 사용자 환경 관리
 CLR(공용 언어 런타임) 활성화 시스템은 관리되는 응용 프로그램 코드를 실행하는 데 사용할 CLR 버전을 결정합니다. 경우에 따라 활성화 시스템이 로드할 CLR 버전을 찾지 못할 수도 있습니다. 일반적으로 이런 상황은 응용 프로그램에 필요한 CLR 버전이 잘못되었거나 지정된 컴퓨터에 설치되지 않은 경우에 발생합니다. 요청된 버전이 없는 경우 CLR 활성화 시스템은 호출된 함수 또는 인터페이스에서 HRESULT 오류 코드를 반환하며, 응용 프로그램을 실행하는 사용자에게 오류 메시지를 표시할 수 있습니다. 이 문서에서는 HRESULT 코드 목록을 제공하며 오류 메시지가 표시되지 않도록 하는 방법을 설명합니다.  
@@ -102,8 +95,7 @@ CLR(공용 언어 런타임) 활성화 시스템은 관리되는 응용 프로�
  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]부터 CLR 활성화 로깅이 초기화 오류 메시지가 표시되는 시기 및 이유를 기록하는 로그 항목을 포함하도록 향상되었습니다. 자세한 내용은 [방법: CLR 활성화 문제 디버깅](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [개발자를 위한 배포 가이드](../../../docs/framework/deployment/deployment-guide-for-developers.md)   
- [방법: .NET Framework 4 또는 4.5를 지원하도록 앱 구성](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)   
- [방법: CLR 활성화 문제 디버깅](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)   
+ [개발자를 위한 배포 가이드](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+ [방법: .NET Framework 4 또는 4.5를 지원하도록 앱 구성](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)  
+ [방법: CLR 활성화 문제 디버그](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  
  [Windows 10, Windows 8.1 및 Windows 8에 .NET Framework 3.5 설치](../../../docs/framework/install/dotnet-35-windows-10.md)
-

@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 5409c379-5622-4fae-88b5-1654276ea8d4
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 99ec2489daf89926da9b8c4e148965412826a8a6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="statements"></a>문
 
 프로그램의 동작은 *문*을 사용하여 표현됩니다. C#은 여러 다른 종류의 문을 지원하며 이중 많은 문이 포함 문에 대해 정의됩니다.
@@ -46,7 +44,7 @@ ms.lasthandoff: 07/28/2017
 
 * 지역 변수 선언:
 
- [!code-csharp[선언](../../../samples/snippets/csharp/tour/statements/Program.cs#L9-L15)]
+ [!code-csharp[Declarations](../../../samples/snippets/csharp/tour/statements/Program.cs#L9-L15)]
 
 * 지역 상수 선언:
 
@@ -119,4 +117,3 @@ ms.lasthandoff: 07/28/2017
 >[!div class="step-by-step"]
 [이전](expressions.md)
 [다음](classes-and-objects.md)
-

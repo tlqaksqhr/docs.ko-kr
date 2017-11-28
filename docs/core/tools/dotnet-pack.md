@@ -7,12 +7,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
 ms.openlocfilehash: 8594c863d67baf0237b63e61f28ca9ee315eeddf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -173,4 +172,3 @@ NuGet 패키지에 소스 파일을 포함합니다. 소스 파일은 `nupkg`의
 `PackageVersion` MSBuild 속성을 사용하여 패키지 버전을 `2.1.0`으로 설정합니다.
 
 `dotnet pack /p:PackageVersion=2.1.0`
-

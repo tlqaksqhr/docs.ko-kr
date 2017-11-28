@@ -1,47 +1,29 @@
 ---
 title: "namespace(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - namespace_CSharpKeyword
 - namespace
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 76cc1adc21f6cfadc93da58250336705e43e333a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d2cef3949d9a41db36406db059218f7a204172ea
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="namespace-c-reference"></a>namespace(C# 참조)
 `namespace` 키워드는 관련 개체 집합을 포함하는 범위를 선언하는 데 사용됩니다. 네임스페이스를 사용하여 코드 요소를 구성하고 전역적으로 고유한 형식을 만들 수 있습니다.  
   
- [!code-cs[csrefKeywordsNamespace#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_1.cs)]  
+ [!code-csharp[csrefKeywordsNamespace#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_1.cs)]  
   
 ## <a name="remarks"></a>설명  
  네임스페이스 내에서 다음 형식 중 하나 이상을 선언할 수 있습니다.  
@@ -52,7 +34,7 @@ ms.lasthandoff: 09/25/2017
   
 -   [interface](../../../csharp/language-reference/keywords/interface.md)  
   
--   [struct](../../../csharp/language-reference/keywords/struct.md)  
+-   [truct](../../../csharp/language-reference/keywords/struct.md)  
   
 -   [enum](../../../csharp/language-reference/keywords/enum.md)  
   
@@ -64,12 +46,12 @@ ms.lasthandoff: 09/25/2017
   
  둘 이상의 선언에서 네임스페이스를 정의할 수 있습니다. 예를 들어 다음 예제에서는 `MyCompany` 네임스페이스의 일부로 두 클래스를 정의합니다.  
   
- [!code-cs[csrefKeywordsNamespace#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_2.cs)]  
+ [!code-csharp[csrefKeywordsNamespace#2](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_2.cs)]  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 중첩된 네임스페이스에서 정적 메서드를 호출하는 방법을 보여 줍니다.  
   
- [!code-cs[csrefKeywordsNamespace#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_3.cs)]  
+ [!code-csharp[csrefKeywordsNamespace#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/namespace_3.cs)]  
   
 ## <a name="for-more-information"></a>자세한 내용  
  네임스페이스를 사용하는 방법에 대한 자세한 내용은 다음 항목을 참조하세요.  
@@ -84,9 +66,8 @@ ms.lasthandoff: 09/25/2017
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
- [네임스페이스 키워드](../../../csharp/language-reference/keywords/namespace-keywords.md)   
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
+ [네임스페이스 키워드](../../../csharp/language-reference/keywords/namespace-keywords.md)  
  [using](../../../csharp/language-reference/keywords/using.md)
-

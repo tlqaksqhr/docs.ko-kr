@@ -1,38 +1,19 @@
 ---
 title: "방법: .NET Framework 지침을 따르는 이벤트 게시(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- events [C#], implementation guidelines
+helpviewer_keywords: events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 570729e432146b4ef97e4c487f644b12b354bb4a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 21badd504a54c7000fef76e901cc952134eff61e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>방법: .NET Framework 지침을 따르는 이벤트 게시(C# 프로그래밍 가이드)
 다음 절차에서는 표준 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 패턴을 따르는 이벤트를 클래스와 구조체에 추가하는 방법을 보여 줍니다. [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 클래스 라이브러리의 모든 이벤트는 다음과 같이 정의된 <xref:System.EventHandler> 대리자를 기반으로 합니다.  
@@ -94,11 +75,10 @@ public delegate void EventHandler(object sender, EventArgs e);
 ## <a name="example"></a>예제  
  다음 예제에서는 사용자 지정 EventArgs 클래스와 <xref:System.EventHandler%601>를 이벤트 유형으로 사용하여 이전 단계를 보여 줍니다.  
   
- [!code-cs[csProgGuideEvents#2](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-publish-events-that-conform-to-net-framework-guidelines_1.cs)]  
+ [!code-csharp[csProgGuideEvents#2](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-publish-events-that-conform-to-net-framework-guidelines_1.cs)]  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Delegate>   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [이벤트](../../../csharp/programming-guide/events/index.md)   
+ <xref:System.Delegate>  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [이벤트](../../../csharp/programming-guide/events/index.md)  
  [대리자](../../../csharp/programming-guide/delegates/index.md)
-

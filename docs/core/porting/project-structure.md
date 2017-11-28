@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 3af62252-1dfa-4336-8d2f-5cfdb57d7724
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 93bec65e3bbee93855d6f5bce5e2d6cea8bb9f3d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>.NET Framework 및 .NET Core를 지원하도록 프로젝트 구성
 
 이 문서는 .NET Framework 및 .NET Core에 대해 솔루션을 나란히 컴파일하려는 프로젝트 소유자를 위해 작성되었습니다. 개발자가 이러한 목표를 달성할 수 있도록 프로젝트를 구성하는 몇 가지 옵션이 제공됩니다. 다음 목록에서는 .NET Core를 사용하여 프로젝트 레이아웃을 설정하는 방법을 결정할 때 고려해야 할 몇 가지 일반적인 시나리오를 제공합니다. 여기에서 모든 것을 다루지는 못할 수 있습니다. 프로젝트 요구에 따라 우선 순위를 정하세요.
@@ -88,4 +86,3 @@ ms.lasthandoff: 08/11/2017
 
 [option-csproj]: #replace-existing-projects-with-a-multi-targeted-net-core-project
 [option-csproj-folder]: #keep-existing-projects-and-create-a-net-core-project
-

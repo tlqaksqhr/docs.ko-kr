@@ -7,12 +7,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
 ms.openlocfilehash: 96e4eac528abad2b336a979a98c9be2bee5d17ee
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
@@ -49,4 +48,3 @@ ms.lasthandoff: 08/14/2017
 SDK를 통해 포함된 모든 대상이 있는 전체 프로젝트를 확인합니다.
 
 `dotnet msbuild /pp`
-

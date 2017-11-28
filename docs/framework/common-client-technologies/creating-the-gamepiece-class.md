@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 37a27a86-ac1c-47be-b477-cb4b819459d3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
+ms.openlocfilehash: 989883034b30c3ec67f5441c5512418643546519
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7ac9884766812cd635b5a70c028cf15c19838511
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-the-gamepiece-class"></a>GamePiece 클래스 만들기
 **GamePiece** 클래스는 Microsoft XNA 게임 피스 이미지를 로드하고 게임 피스와 관련된 마우스 상태를 추적하고, 마우스를 캡처하고, 조작 및 관성 처리를 제공하고, 게임 피스가 뷰포트의 제한에 도달할 경우 바운스되는 기능을 제공하는 데 필요한 모든 기능을 캡슐화합니다.  
@@ -110,8 +108,7 @@ ms.lasthandoff: 07/28/2017
  [!code-csharp[ManipulationXNA#_GamePiece_PrivateProperties](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_privateproperties)]  
   
 ## <a name="see-also"></a>참고 항목  
- [조작 및 관성](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)   
- [XNA 응용 프로그램에서 조작 및 관성 사용](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)   
- [GamePieceCollection 클래스 만들기](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md)   
+ [조작 및 관성](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)  
+ [XNA 응용 프로그램에서 조작 및 관성 사용](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)  
+ [GamePieceCollection 클래스 만들기](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md)  
  [Game1 클래스 만들기](../../../docs/framework/common-client-technologies/creating-the-game1-class.md)
-

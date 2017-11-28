@@ -5,29 +5,23 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+dev_langs: cpp
 helpviewer_keywords:
 - progress information, .NET Framework installer
 - .NET Framework, installing
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: ea2e878ca4894612dda77075d04c924c3db8e293
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 404a092c6c05bcef568b234c9abeaf7969703cce
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>방법: .NET Framework 4.5 설치 관리자에서 진행률 가져오기
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]는 재배포 가능 런타임입니다. .NET Framework의 이 버전용 응용 프로그램을 개발하는 경우 응용 프로그램 설치 시 필수 구성 요소로 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 설치를 포함(연결)시킬 수 있습니다. 사용자 지정 설치 환경이나 통합 설치 환경을 제공하려면 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 설치 프로그램을 자동으로 시작하고 앱의 설치 진행률을 표시하는 동안 진행 상태를 추적하는 것이 좋습니다. 자동 추적을 사용하도록 설정하기 위해 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 설치 프로그램(감시할 수 있음)은 메모리 매핑된 I/O(MMIO) 세그먼트를 사용하여 설치 프로그램과 함께 통신할 프로토콜(감시자 또는 chainer)을 정의합니다. 이 프로토콜은 chainer가 진행률 정보를 가져오고, 자세한 결과를 확인하고. 메시지에 응답하고, [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 설치를 취소하는 방법을 정의합니다.  
@@ -323,6 +317,5 @@ ms.lasthandoff: 07/28/2017
  일반적인 서버는 임의의 MMIO 파일 이름을 만들고, 파일을 만든 다음(이전 코드 예제와 같이 `Server::CreateSection`에서) `CreateProcess` 메서드를 사용하고 `-pipe someFileSectionName` 옵션으로 파이프 이름을 전달하여 재배포 가능 패키지를 시작합니다. 서버는 응용 프로그램 UI 관련 코드를 사용하여 `OnProgress`, `Send` 및 `Finished` 메서드를 구현해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [개발자를 위한 배포 가이드](../../../docs/framework/deployment/deployment-guide-for-developers.md)   
+ [개발자를 위한 배포 가이드](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
  [배포](../../../docs/framework/deployment/index.md)
-

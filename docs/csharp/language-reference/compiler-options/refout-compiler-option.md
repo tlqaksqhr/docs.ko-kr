@@ -1,28 +1,22 @@
 ---
 title: "-refout(C# 컴파일러 옵션)"
-ms.date: 2017-08-08
+ms.date: 08/08/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /refout
-dev_langs:
-- CSharp
+f1_keywords: /refout
 helpviewer_keywords:
 - refout compiler option [C#]
 - /refout compiler option [C#]
 - -refout compiler option [C#]
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: dc78165fc8f273948111c174ae0bf0af6591a8ab
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81a2252314ef51b5dc01fddc081eb881aa4431a7
-ms.openlocfilehash: b1516356bf7ec8f5716c0c4183148f675f2ffa78
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/16/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-
 # <a name="refout-c-compiler-options"></a>/refout(C# 컴파일러 옵션)
 
 **/refout** 옵션은 참조 어셈블리가 출력되어야 하는 파일 경로를 지정합니다. 이것은 Emit API에서 `metadataPeStream`으로 전환됩니다.
@@ -54,6 +48,5 @@ ms.lasthandoff: 08/16/2017
 `/refout` 및 [`/refonly`](refonly-compiler-option.md) 옵션은 함께 사용할 수 없습니다.
 
 ## <a name="see-also"></a>참고 항목
- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)   
+ [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)  
  [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)
-

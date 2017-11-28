@@ -2,8 +2,7 @@
 title: "열거형 형식(C# 프로그래밍 가이드)"
 ms.date: 09/10/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - enumerations [C#]
@@ -11,15 +10,14 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 13ec7d5d2a44cddb2b7f440c8d811c2e4060d432
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 6b58466f8dd70a3eefb73c3d1ac21ec42a370b47
-ms.openlocfilehash: 71ddf47259ce55a6a7c5a9e5f4999ed786154f52
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="enumeration-types-c-programming-guide"></a>열거형 형식(C# 프로그래밍 가이드)
 
@@ -68,7 +66,7 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
 
 열거형 형식을 사용하여 비트 플래그를 정의할 수 있으며, 그러면 열거형 형식의 인스턴스에서 열거자 목록에 정의된 값의 조합을 저장할 수 있습니다. 물론, 일부 조합은 의미가 없거나 프로그램 코드에서 허용되지 않을 수 있습니다.
 
-`AND`, `OR`, `NOT` 및 `XOR` 비트 연산을 수행할 수 있도록 <xref:System.FlagsAttribute?displayProperty=fullName> 특성을 적용하고 적절히 값을 정의하여 비트 플래그 열거형을 만듭니다. 비트 플래그 열거형에서 "플래그가 설정되지 않음"을 의미하는 0 값을 갖는 명명된 상수를 포함합니다. 0 값이 "플래그가 설정되지 않음"을 의미하지 않는 경우 이 값을 플래그에 지정하지 마세요.
+`AND`, `OR`, `NOT` 및 `XOR` 비트 연산을 수행할 수 있도록 <xref:System.FlagsAttribute?displayProperty=nameWithType> 특성을 적용하고 적절히 값을 정의하여 비트 플래그 열거형을 만듭니다. 비트 플래그 열거형에서 "플래그가 설정되지 않음"을 의미하는 0 값을 갖는 명명된 상수를 포함합니다. 0 값이 "플래그가 설정되지 않음"을 의미하지 않는 경우 이 값을 플래그에 지정하지 마세요.
 
 다음 예제에서는 `Days`라는 다른 버전의 `Day` 열거형을 정의합니다. `Days`에는 `Flags` 특성이 있고 각 값에는 다음으로 큰 2의 거듭제곱이 할당됩니다. 따라서 값이 `Days.Tuesday | Days.Thursday` 인 `Days` 변수를 만들 수 있습니다.
 
@@ -82,20 +80,19 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
 
 [!code-csharp[csProgGuideEnums#7](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#7)]
 
-<xref:System.FlagsAttribute?displayProperty=fullName> 특성을 사용하여 열거형 형식을 정의할 때 고려할 사항에 대한 자세한 내용은 <xref:System.Enum?displayProperty=fullName>을 참조하세요.
+<xref:System.FlagsAttribute?displayProperty=nameWithType> 특성을 사용하여 열거형 형식을 정의할 때 고려할 사항에 대한 자세한 내용은 <xref:System.Enum?displayProperty=nameWithType>을 참조하세요.
 
 ## <a name="using-the-systemenum-methods-to-discover-and-manipulate-enum-values"></a>System.Enum 메서드를 사용하여 열거형 값 검색 및 조작
 
-모든 열거형은 <xref:System.Enum?displayProperty=fullName> 형식의 인스턴스입니다. <xref:System.Enum?displayProperty=fullName>에서 새 클래스를 파생시킬 수는 없지만 해당 메서드를 사용하여 열거형 인스턴스에서 값에 대한 정보를 검색하고 값을 조작할 수는 있습니다.
+모든 열거형은 <xref:System.Enum?displayProperty=nameWithType> 형식의 인스턴스입니다. <xref:System.Enum?displayProperty=nameWithType>에서 새 클래스를 파생시킬 수는 없지만 해당 메서드를 사용하여 열거형 인스턴스에서 값에 대한 정보를 검색하고 값을 조작할 수는 있습니다.
 
 [!code-csharp[csProgGuideEnums#5](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#5)]
 
-자세한 내용은 <xref:System.Enum?displayProperty=fullName>을 참조하십시오.
+자세한 내용은 <xref:System.Enum?displayProperty=nameWithType>을 참조하십시오.
 
 또한 확장 메서드를 사용하여 열거형에 대한 새 메서드를 만들 수 있습니다. 자세한 내용은 [방법: 새 열거형 메서드 만들기](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
- <xref:System.Enum?displayProperty=fullName>   
- [C# 프로그래밍 가이드](../../csharp/programming-guide/index.md)   
+ <xref:System.Enum?displayProperty=nameWithType>  
+ [C# 프로그래밍 가이드](../../csharp/programming-guide/index.md)  
  [enum](../../csharp/language-reference/keywords/enum.md)
-

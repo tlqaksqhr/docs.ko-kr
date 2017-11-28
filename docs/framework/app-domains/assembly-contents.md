@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,15 @@ helpviewer_keywords:
 - single-file assemblies
 - multifile assemblies
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: b51380126de164a4e0934068c7e0de55f5f3d92e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 864e90fea6eb3e65a5a35a9eac38eaecf2299e41
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="assembly-contents"></a>어셈블리 콘텐츠
 일반적으로 정적 어셈블리는 네 가지 요소로 구성됩니다.  
@@ -59,7 +57,6 @@ ms.lasthandoff: 07/28/2017
  소스 코드를 디자인하는 경우 응용 프로그램의 기능을 하나 이상의 파일로 분리하는 방법에 대해 명시적으로 결정해야 합니다. 또한 .NET Framework 코드를 디자인하는 경우에도 해당 기능을 하나 이상의 어셈블리로 분리하는 방법에 대해 결정해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [공용 언어 런타임의 어셈블리](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)   
- [어셈블리 매니페스트](../../../docs/framework/app-domains/assembly-manifest.md)   
+ [공용 언어 런타임의 어셈블리](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ [어셈블리 매니페스트](../../../docs/framework/app-domains/assembly-manifest.md)  
  [어셈블리 보안 고려 사항](../../../docs/framework/app-domains/assembly-security-considerations.md)
-

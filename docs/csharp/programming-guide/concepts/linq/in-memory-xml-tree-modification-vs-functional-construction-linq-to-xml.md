@@ -1,25 +1,21 @@
 ---
 title: "메모리 내 XML 트리 수정과 함수 생성(LINQ to XML)(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: b5afc31d-a325-4ec6-bf17-0ff90a20ffca
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: d8ff61927d6335228858b24138af074a841d779e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ca3d24c8ff145bdc30db3f71b8ab3e28217f67d8
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-c"></a>메모리 내 XML 트리 수정과 함수 생성(LINQ to XML)(C#)
 메모리 내 XML 트리 수정은 XML 문서의 모양을 변경하는 일반적인 방법입니다. 일반적인 응용 프로그램에서는 문서를 DOM 또는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]과 같은 데이터 저장소로 로드하고 프로그래밍 인터페이스를 사용하여 노드를 삽입 또는 삭제하거나 노드의 내용을 변경한 다음 XML을 파일에 저장하거나 네트워크를 통해 전송합니다.  
@@ -87,4 +83,3 @@ Console.WriteLine(newTree);
   
 ## <a name="see-also"></a>참고 항목  
  [XML 트리 수정(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
-

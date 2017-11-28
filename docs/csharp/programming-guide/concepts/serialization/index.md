@@ -1,30 +1,21 @@
 ---
 title: Serialization(C# )
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 704ff2bf-02ab-4fea-94ea-594107825645
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: b045f092bef837d1345b5f3b31df0a5ec22fc010
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2eefd71abf07a96bb99b256571e6ac4529fb277d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="serialization-c-"></a>Serialization(C# )
 Serialization은 개체를 저장하거나 메모리, 데이터베이스 또는 파일로 전송하기 위해 개체를 바이트 스트림으로 변환하는 프로세스입니다. 주 목적은 필요할 때 다시 만들 수 있도록 개체의 상태를 저장하는 것입니다. 역 프로세스를 deserialization이라고 합니다.  
@@ -84,4 +75,3 @@ Serialization은 개체를 저장하거나 메모리, 데이터베이스 또는 
   
  [방법: XML 파일에 개체 데이터 쓰기(C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
  <xref:System.Xml.Serialization.XmlSerializer> 클래스를 사용하여 클래스의 개체를 XML 파일에 쓰는 방법을 보여 줍니다.
-

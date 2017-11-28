@@ -1,41 +1,22 @@
 ---
 title: "인덱서(C# 프로그래밍 가이드)"
-ms.date: 2017-03-10
+ms.date: 03/10/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.indexers
-dev_langs:
-- CSharp
+f1_keywords: cs.indexers
 helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: db49a602b83940cab3f87dea17accb92a2be825d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 784308f3073114cd0c07cf15edae527a2654edec
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="indexers-c-programming-guide"></a>인덱서(C# 프로그래밍 가이드)
 
@@ -43,7 +24,7 @@ ms.lasthandoff: 09/25/2017
  
  다음 예제에서는 간단한 [get](../../../csharp/language-reference/keywords/get.md) 및 [set](../../../csharp/language-reference/keywords/set.md) 접근자 메서드를 사용해서 값을 할당하거나 검색하는 제네릭 클래스를 정의합니다. `Program` 클래스는 이 클래스의 인스턴스를 만들어 문자열을 저장합니다.  
   
- [!code-cs[indexers#1](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-1.cs)]  
+ [!code-csharp[indexers#1](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-1.cs)]  
   
 > [!NOTE]
 >  추가 예제는 [관련 섹션](../../../csharp/programming-guide/indexers/index.md#BKMK_RelatedSections)을 참조하세요.  
@@ -52,13 +33,13 @@ ms.lasthandoff: 09/25/2017
  
 인덱서의 get 또는 set 접근자는 값을 반환하거나 설정하는 단일 문으로 구성되는 것이 일반적입니다. 식 본문이 있는 멤버는 이 시나리오를 지원하기 위해 간단한 구문을 제공합니다. C# 6부터 읽기 전용 인덱서는 다음 예제와 같이 식 본문이 있는 멤버로 구현할 수 있습니다.
 
-[!code-cs[indexers#2](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-2.cs)]  
+[!code-csharp[indexers#2](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-2.cs)]  
 
 `=>`에서 식 본문을 도입하며 `get` 키워드는 사용되지 않습니다. 
 
 C# 7부터 get 및 set 접근자 모두를 식 본문 멤버로 구현할 수 있습니다. 이 경우 `get` 및 `set` 키워드를 둘 다 사용해야 합니다. 예:
 
-[!code-cs[indexers#3](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-3.cs)]  
+[!code-csharp[indexers#3](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-3.cs)]  
   
 ## <a name="indexers-overview"></a>인덱서 개요  
   
@@ -90,6 +71,5 @@ C# 7부터 get 및 set 접근자 모두를 식 본문 멤버로 구현할 수 �
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
  [속성](../../../csharp/programming-guide/classes-and-structs/properties.md)
-

@@ -8,12 +8,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: 82a78dcb0cc85e2ba087b6df5ee029cbfb687358
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 019461964ba63d874ce86511474aa37b4342bbc4
-ms.openlocfilehash: 86de979257d4e1be3a29d8876494b7f4966e5b1c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -44,6 +43,8 @@ dotnet restore [-h|--help]
 ## <a name="description"></a>설명
 
 `dotnet restore` 명령은 NuGet을 사용하여 프로젝트 파일에 지정된 종속성 및 프로젝트 관련 도구를 복원합니다. 기본적으로 종속성 및 도구의 복원은 병렬로 수행됩니다.
+
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 종속성을 복원하려면 NuGet에 패키지가 있는 피드가 필요합니다. 피드는 일반적으로 *NuGet.config* 구성 파일을 통해 제공됩니다. CLI 도구가 설치될 때 기본 구성 파일이 제공됩니다. 프로젝트 디렉터리에 고유한 *NuGet.config* 파일을 만들어 추가 피드를 지정합니다. 또한 명령 프롬프트에서 호출당 추가 피드를 지정합니다.
 
@@ -170,4 +171,3 @@ dotnet restore [-h|--help]
 현재 디렉터리에 있는 프로젝트에 대한 종속성 및 도구를 복원하고 최소 출력만 표시합니다.
 
 `dotnet restore --verbosity minimal`
-

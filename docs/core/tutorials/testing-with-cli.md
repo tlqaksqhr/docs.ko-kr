@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 52ff1be3-d92e-4477-9c84-8c1771e87ab5
+ms.openlocfilehash: 62c81bf070a435f6105c313ae95340a5504233df
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1a0a0554b28600821fb15f64d31c6bce74a17136
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>.NET Core 명령줄을 사용하여 프로젝트 구성 및 테스트
 
 이 자습서에서는 [명령줄을 사용하여 Windows/Linux/macOS에서 .NET Core 시작](using-with-xplat-cli.md)에 따라 간단한 콘솔 앱 이상의 잘 구성된 고급 응용 프로그램을 개발하는 과정을 안내합니다. 이 자습서에서는 폴더를 사용하여 코드를 구성하는 방법을 보여 준 후에 [xUnit](https://xunit.github.io/) 테스트 프레임워크를 사용하여 콘솔 응용 프로그램을 확장하는 방법을 보여 줍니다.
@@ -94,7 +92,6 @@ ms.lasthandoff: 09/19/2017
 다음 명령을 실행합니다.
 
 ```console
-dotnet restore
 dotnet run
 ```
 
@@ -191,6 +188,9 @@ public class PetTests
 ```
 
 *test/NewTypesTests* 디렉터리에서 시작합니다. [`dotnet restore`](../tools/dotnet-restore.md) 명령을 사용하여 테스트 프로젝트를 복원합니다. [`dotnet test`](../tools/dotnet-test.md) 명령을 사용하여 테스트를 실행합니다. 이 명령은 프로젝트 파일에 지정된 Test Runner를 시작합니다.
+
+ [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
  
 예상대로 테스트에 실패하고, 콘솔에 다음 출력이 표시됩니다.
  

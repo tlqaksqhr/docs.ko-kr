@@ -1,38 +1,19 @@
 ---
 title: "방법: CLS 규격이 아닌 예외 catch"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- exceptions [C#], non-CLS
+helpviewer_keywords: exceptions [C#], non-CLS
 ms.assetid: db4630b3-5240-471a-b3a7-c7ff6ab31e8d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 473cace033983915c66647d14cae16dc7f5d5b9d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 18a19fe34b8ec13bd9fc6d25335d0931a22ce4a3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/19/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-catch-a-non-cls-exception"></a>방법: CLS 규격이 아닌 예외 catch
 C++/CLI를 포함한 일부 .NET 언어에서는 개체가 <xref:System.Exception>에서 파생되지 않은 예외를 throw할 수 있습니다. 이러한 예외를 *CLS 규격이 아닌 예외* 또는 *예외가 아닌 항목*이라고 합니다. [!INCLUDE[csprcs](~/includes/csprcs-md.md)]에서는 CLS 규격이 아닌 예외를 throw할 수 없지만 다음 두 가지 방법으로 해당 예외를 catch할 수 있습니다.  
@@ -52,7 +33,7 @@ C++/CLI를 포함한 일부 .NET 언어에서는 개체가 <xref:System.Exceptio
 2.  <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A> 속성을 통해 원래 예외에 액세스합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 C++/CLR로 작성된 클래스 라이브러리에서 throw된 CLS 규격이 아닌 예외를 catch하는 방법을 보여 줍니다. 이 예제에서 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 클라이언트 코드는 throw되는 예외 형식이 <xref:System.String?displayProperty=fullName>이라는 것을 사전에 알고 있습니다. 코드에서 해당 형식에 액세스할 수 있으면 <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A> 속성을 다시 원래 형식으로 캐스팅할 수 있습니다.  
+ 다음 예제에서는 C++/CLR로 작성된 클래스 라이브러리에서 throw된 CLS 규격이 아닌 예외를 catch하는 방법을 보여 줍니다. 이 예제에서 [!INCLUDE[csprcs](~/includes/csprcs-md.md)] 클라이언트 코드는 throw되는 예외 형식이 <xref:System.String?displayProperty=nameWithType>이라는 것을 사전에 알고 있습니다. 코드에서 해당 형식에 액세스할 수 있으면 <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A> 속성을 다시 원래 형식으로 캐스팅할 수 있습니다.  
   
 ```  
 // Class library written in C++/CLR.  
@@ -84,6 +65,5 @@ C++/CLI를 포함한 일부 .NET 언어에서는 개체가 <xref:System.Exceptio
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.CompilerServices.RuntimeWrappedException>   
+ <xref:System.Runtime.CompilerServices.RuntimeWrappedException>  
  [예외 및 예외 처리](../../../csharp/programming-guide/exceptions/index.md)
-

@@ -1,47 +1,28 @@
 ---
 title: "변환 연산자(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# language, conversion operators
 - conversion operators [C#]
 - operators [C#], conversion
 - user-defined conversions [C#]
 ms.assetid: c5ad73a3-d57b-4d2b-b4c9-24e3c2856efc
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 5277c1160c604ee56ff575df5bd603e115588d21
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c12fd13d6526d79363f973ce2a944c4823bf4104
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="conversion-operators-c-programming-guide"></a>변환 연산자(C# 프로그래밍 가이드)
 C#을 사용하면 프로그래머가 클래스 또는 구조체를 다른 클래스 또는 구조체나 기본 형식으로/에서 변환할 수 있도록 클래스 또는 구조체에서 변환을 선언할 수 있습니다. 변환은 연산자처럼 정의되며 변환 결과의 형식에 따라 이름이 지정됩니다. 변환할 인수의 형식이나 변환 결과의 형식 중 하나만 포함 형식이어야 하며 둘 다 포함 형식이면 안 됩니다.  
   
- [!code-cs[csProgGuideStatements#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/conversion-operators_1.cs)]  
+ [!code-csharp[csProgGuideStatements#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/conversion-operators_1.cs)]  
   
 ## <a name="conversion-operators-overview"></a>변환 연산자 개요  
  변환 연산자에는 다음과 같은 속성이 있습니다.  
@@ -68,7 +49,6 @@ C#을 사용하면 프로그래머가 클래스 또는 구조체를 다른 클�
 -   [static](../../../csharp/language-reference/keywords/static.md)  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Convert>   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
+ <xref:System.Convert>  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
  [Chained user-defined explicit conversions in C#](http://go.microsoft.com/fwlink/?LinkId=112384)(C#의 연결된 사용자 정의 명시적 변환)
-

@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,15 @@ helpviewer_keywords:
 - culture, assembly manifest
 - assemblies [.NET Framework], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 1df64129a0ae15b5bad387a62ca60bb4b1b92f7d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: eb20bfac6717779f5394724617d247a6dc980c7e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="assembly-manifest"></a>어셈블리 매니페스트
 정적 또는 동적 어셈블리인지 여부에 상관 없이 모든 어셈블리는 어셈블리의 요소가 서로 어떻게 연관되는지를 설명하는 데이터 컬렉션을 포함합니다. 이러한 어셈블리 메타데이터는 어셈블리 매니페스트에 들어 있습니다. 어셈블리 매니페스트는 어셈블리의 버전 요구 사항과 보안 ID를 지정하는 데 필요한 모든 메타데이터와 어셈블리의 범위를 정의하고 리소스나 클래스에 대한 참조를 확인하는 데 필요한 모든 메타데이터를 포함합니다. 어셈블리 매니페스트는 MSIL(Microsoft Intermediate Language)로 PE 파일(.exe 또는 .dll)에 저장되거나 어셈블리 매니페스트 정보만 포함하는 독립 실행형 PE 파일에 저장됩니다.  
@@ -65,8 +63,7 @@ ms.lasthandoff: 07/28/2017
  코드에서 어셈블리 특성을 사용하여 어셈블리 매니페스트에 있는 정보를 추가하거나 변경할 수 있습니다. 버전 정보나 정보 특성(상표, 저작권, 제품, 회사, 정보 버전 등)을 변경할 수 있습니다. 어셈블리 특성에 대한 전체 목록은 [어셈블리 특성 설정](../../../docs/framework/app-domains/set-assembly-attributes.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [어셈블리 콘텐츠](../../../docs/framework/app-domains/assembly-contents.md)   
- [어셈블리 버전 관리](../../../docs/framework/app-domains/assembly-versioning.md)   
- [위성 어셈블리 만들기](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)   
+ [어셈블리 콘텐츠](../../../docs/framework/app-domains/assembly-contents.md)  
+ [어셈블리 버전 관리](../../../docs/framework/app-domains/assembly-versioning.md)  
+ [위성 어셈블리 만들기](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
  [강력한 이름의 어셈블리](../../../docs/framework/app-domains/strong-named-assemblies.md)
-

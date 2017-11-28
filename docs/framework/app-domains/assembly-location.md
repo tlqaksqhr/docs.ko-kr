@@ -5,24 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 9f1f41a7-2954-49d3-a2c0-62b6ef4d40ab
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: e069c1636004896bfb193fd70a352195ba045865
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3bc0fc4e099540a87832b225aa0a3c262c54e9c3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="assembly-location"></a>어셈블리 위치
 어셈블리 위치에 따라 공용 언어 런타임이 참조 시 해당 위치를 찾을 수 있는지 여부가 결정되고 어셈블리를 다른 어셈블리와 공유할 수 있는지 여부도 결정될 수 있습니다. 다음 위치에 어셈블리를 배포할 수 있습니다.  
@@ -40,8 +38,7 @@ ms.lasthandoff: 07/28/2017
      HTTP 서버에 배포되는 어셈블리에는 강력한 이름이 있어야 합니다. 응용 프로그램 구성 파일의 코드베이스 섹션에 있는 어셈블리를 가리킵니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [어셈블리 만들기](../../../docs/framework/app-domains/create-assemblies.md)   
- [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)   
- [런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
+ [어셈블리 만들기](../../../docs/framework/app-domains/create-assemblies.md)  
+ [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)  
+ [런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [어셈블리를 사용한 프로그래밍](../../../docs/framework/app-domains/programming-with-assemblies.md)
-

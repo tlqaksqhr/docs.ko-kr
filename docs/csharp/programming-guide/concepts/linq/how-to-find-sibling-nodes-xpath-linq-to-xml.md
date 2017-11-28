@@ -1,25 +1,21 @@
 ---
 title: "방법: 형제 노드 찾기(XPath 및 LINQ to XML)(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 65965ef1a5e24a6356bb90d3439d5ccb0dc74f86
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1e40a04b1e4359b2455442b2589b9d036562d70a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>방법: 형제 노드 찾기(XPath 및 LINQ to XML)(C#)
 특정 이름을 가진 노드의 형제를 모두 찾으려고 할 수 있습니다. 컨텍스트 노드도 해당 이름을 가진 경우 생성되는 컬렉션에 컨텍스트 노드가 포함될 수 있습니다.  
@@ -88,4 +84,3 @@ Results are identical
   
 ## <a name="see-also"></a>참고 항목  
  [XPath 사용자를 위한 LINQ to XML(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
-

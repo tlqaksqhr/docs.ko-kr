@@ -1,30 +1,21 @@
 ---
 title: "연습: Visual Studio에서 개체 유지(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: get-started-article
-dev_langs:
-- CSharp
 ms.assetid: a544ce46-ee25-49da-afd4-457a3d59bf63
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: efdf4694c1a1b6df2e9531a2bb4c813b536a330e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4c8dce64c470f01f540a83f68e3861df56913e4c
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-c"></a>연습: Visual Studio에서 개체 유지(C#)
 디자인 타임에 개체의 속성을 기본값으로 설정할 수 있지만, 런타임에 입력한 값은 개체가 소멸될 때 손실됩니다. serialization을 사용하면 인스턴스 간에 개체의 데이터를 유지할 수 있으므로, 다음에 개체를 인스턴스화할 때 값을 저장하고 검색할 수 있습니다.  
@@ -230,6 +221,5 @@ ms.lasthandoff: 07/28/2017
  이 시점에서 다시 응용 프로그램을 빌드 및 실행할 수 있습니다. 처음에는 텍스트 상자에 기본값이 나타납니다. 값을 변경하고 네 번째 텍스트 상자에 이름을 입력합니다. 응용 프로그램을 닫았다가 다시 엽니다. 이제 새 값이 텍스트 상자에 나타납니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Serialization(C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)   
+ [serialization(C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)  
  [C# 프로그래밍 가이드](../../../../csharp/programming-guide/index.md)
-

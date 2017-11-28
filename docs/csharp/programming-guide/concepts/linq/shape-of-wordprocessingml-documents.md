@@ -1,25 +1,21 @@
 ---
 title: "WordprocessingML 문서의 모양(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 8c1ccbfd71baff50a8055cd89ddecf47bd35cac9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f5471b03c0bc5b96686f200318aacb71617805a3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a>WordprocessingML 문서의 모양(C#)
 이 항목에서는 WordprocessingML 문서의 XML 모양에 대해 소개합니다.  
@@ -67,7 +63,7 @@ xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml">
   
  XML 형식으로 WordprocessingML 문서의 내용을 보는 가장 쉬운 방법은 Microsoft Word를 사용하여 문서를 만들어 저장한 후 XML을 콘솔에 출력하는 다음 프로그램을 실행하는 것입니다.  
   
- 이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=fullName> 네임스페이스의 형식을 사용합니다.  
+ 이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.  
   
 ```csharp  
 const string documentRelationshipType =  
@@ -108,4 +104,3 @@ using (Package wdPackage = Package.Open("SampleDoc.docx", FileMode.Open, FileAcc
   
 ## <a name="see-also"></a>참고 항목  
  [자습서: WordprocessingML 문서에서 내용 조작(C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-

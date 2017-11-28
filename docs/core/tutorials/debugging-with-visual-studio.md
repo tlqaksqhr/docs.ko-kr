@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: cb213625-cc60-438b-9b9e-49aed0e4a974
+ms.openlocfilehash: 6fbebf69b2772b4159841d13068e7b95a39bea92
+ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
 ms.translationtype: HT
-ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
-ms.openlocfilehash: 19744773d18f6ea43e4b4a7518405b60e6b53acf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/21/2017
 ---
-
 # <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>Visual Studio 2017을 사용하여 Hello World 응용 프로그램 디버그
 
 지금까지 [Visual Studio 2017에서 .NET Core를 사용하여 C# Hello World 응용 프로그램 빌드](.\with-visual-studio.md) 또는 [Visual Studio 2017에서 .NET Core를 사용하여 Visual Basic Hello World 응용 프로그램 빌드](vb-with-visual-studio.md)의 단계에 따라 간단한 콘솔 응용 프로그램을 만들고 실행했습니다. 응용 프로그램을 작성하고 컴파일했으면 테스트를 시작할 수 있습니다. Visual Studio에는 응용 프로그램을 테스트하고 문제를 해결하는 데 사용할 수 있는 포괄적인 디버깅 도구 집합이 포함되어 있습니다.
@@ -65,13 +63,13 @@ ms.lasthandoff: 08/14/2017
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. **직접 실행 창**에 `date = new DateTime(2016,11,01,11,59,00)`를 입력하고 Enter 키를 누릅니다.
 
-   **직접 실행 창**에는 문자열 변수의 값과 @System.DateTime 값의 속성이 표시됩니다. 또한 변수 값이 **자동** 및 **지역** 창에서 업데이트됩니다.
+   **직접 실행 창**에는 문자열 변수의 값과 <xref:System.DateTime> 값의 속성이 표시됩니다. 또한 변수 값이 **자동** 및 **지역** 창에서 업데이트됩니다.
 
    ![자동 창 및 직접 실행 창](./media/debugging-with-visual-studio/autosimmediate.png)
 # <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
 1. **직접 실행 창**에 `currentDate = new DateTime(2016,11,01,11,59,00)`를 입력하고 Enter 키를 누릅니다.
 
-<!-- The **Immediate Window** displays the value of the string variable and the properties of the @System.DateTime value. In addition, the value of the variables is updated in the **Autos** and **Locals** windows.
+<!-- The **Immediate Window** displays the value of the string variable and the properties of the <xref:System.DateTime> value. In addition, the value of the variables is updated in the **Autos** and **Locals** windows.
 
    ![Autos window and Immediate Window](./media/debugging-with-visual-studio/vb-autosimmediate.png)
 -->
@@ -119,9 +117,9 @@ ms.lasthandoff: 08/14/2017
 
 1. 콘솔 창에 이름을 입력하라는 메시지가 나타나면 Enter 키를 누릅니다.
 
-1. `name`이 `null` 또는 <xref:System.String.Empty?displayProperty=fullName>이라는 지정한 조건이 충족되었으므로 중단점에 도달한 후 `Console.WriteLine` 메서드가 실행되기 전에 프로그램 실행이 중지됩니다.
+1. `name`이 `null` 또는 <xref:System.String.Empty?displayProperty=nameWithType>이라는 지정한 조건이 충족되었으므로 중단점에 도달한 후 `Console.WriteLine` 메서드가 실행되기 전에 프로그램 실행이 중지됩니다.
 
-1. **지역** 창을 선택합니다. 이 창에는 현재 실행 중인 메서드(프로그램의 `Main` 메서드)에 로컬인 변수 값이 표시됩니다. `name` 변수의 값은 `""` 또는 <xref:System.String.Empty?displayProperty=fullName>입니다.
+1. **지역** 창을 선택합니다. 이 창에는 현재 실행 중인 메서드(프로그램의 `Main` 메서드)에 로컬인 변수 값이 표시됩니다. `name` 변수의 값은 `""` 또는 <xref:System.String.Empty?displayProperty=nameWithType>입니다.
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. **직접 실행 창**에 다음 문을 입력하여 값이 빈 문자열인지 확인합니다. 결과는 `true`입니다.
@@ -175,13 +173,13 @@ Visual Studio에서 프로그램을 한 줄씩 단계별로 실행하고 해당 
 
 1. **디버그** > **한 단계씩 코드 실행**을 선택하거나 F11 키를 누릅니다. Visual Studio는 `name` 변수 할당을 포함하는 문을 강조 표시합니다. **자동** 창에서는 `name`이 `null`(C#) 또는 `Nothing`(Visual Basic)으로 표시되고 콘솔 창에서는 문자열 “What is your name?”이 표시됩니다.
 
-1. 콘솔 창에 문자열을 입력하고 Enter 키를 눌러 프롬프트에 응답합니다. 콘솔은 응답하지 않게 되고 입력한 문자열이 콘솔 창에 표시되지 않지만 <xref:System.Console.ReadLine%2A?displayProperty=fullName> 메서드는 사용자의 입력을 캡처합니다.
+1. 콘솔 창에 문자열을 입력하고 Enter 키를 눌러 프롬프트에 응답합니다. 콘솔은 응답하지 않게 되고 입력한 문자열이 콘솔 창에 표시되지 않지만 <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> 메서드는 사용자의 입력을 캡처합니다.
 
-1. **디버그** > **한 단계씩 코드 실행**을 선택하거나 F11 키를 누릅니다. Visual Studio는 `date`(C#) 또는 `currentDate`(Visual Basic) 변수 할당을 포함하는 문을 강조 표시합니다. **자동** 창에는 <xref:System.DateTime.Now?displayProperty=fullName> 속성 값과 <xref:System.Console.ReadLine%2A?displayProperty=fullName> 메서드 호출에 의해 반환된 값이 표시됩니다. 콘솔 창에는 콘솔이 입력을 요구할 때 입력된 문자열도 표시됩니다.
+1. **디버그** > **한 단계씩 코드 실행**을 선택하거나 F11 키를 누릅니다. Visual Studio는 `date`(C#) 또는 `currentDate`(Visual Basic) 변수 할당을 포함하는 문을 강조 표시합니다. **자동** 창에는 <xref:System.DateTime.Now?displayProperty=nameWithType> 속성 값과 <xref:System.Console.ReadLine%2A?displayProperty=nameWithType> 메서드 호출에 의해 반환된 값이 표시됩니다. 콘솔 창에는 콘솔이 입력을 요구할 때 입력된 문자열도 표시됩니다.
 
-1. **디버그** > **한 단계씩 코드 실행**을 선택하거나 F11 키를 누릅니다. **자동** 창에는 <xref:System.DateTime.Now?displayProperty=fullName> 속성에 따라 할당된 이후의 `date` 변수 값이 표시됩니다. 콘솔 창은 변경되지 않습니다.
+1. **디버그** > **한 단계씩 코드 실행**을 선택하거나 F11 키를 누릅니다. **자동** 창에는 <xref:System.DateTime.Now?displayProperty=nameWithType> 속성에 따라 할당된 이후의 `date` 변수 값이 표시됩니다. 콘솔 창은 변경되지 않습니다.
 
-1. **디버그** > **한 단계씩 코드 실행**을 선택하거나 F11 키를 누릅니다. Visual Studio에서 <xref:System.Console.WriteLine(System.String,System.Object,System.Object)?displayProperty=fullName> 메서드를 호출합니다. `date`(또는 `currentDate`) 및 `name` 변수 값이 **자동** 창에 표시되고 콘솔 창에는 서식 문자열이 표시됩니다.
+1. **디버그** > **한 단계씩 코드 실행**을 선택하거나 F11 키를 누릅니다. Visual Studio에서 <xref:System.Console.WriteLine(System.String,System.Object,System.Object)?displayProperty=nameWithType> 메서드를 호출합니다. `date`(또는 `currentDate`) 및 `name` 변수 값이 **자동** 창에 표시되고 콘솔 창에는 서식 문자열이 표시됩니다.
 
 1. **디버그** > **프로시저 나가기**를 선택하거나 Shift+F11을 누릅니다. 이렇게 하면 단계별 실행이 중지됩니다. 콘솔 창은 메시지를 표시하고 사용자가 키를 누르기를 기다립니다.
 
@@ -198,4 +196,3 @@ Visual Studio에서 프로그램을 한 줄씩 단계별로 실행하고 해당 
 F5 키를 누르거나 **빌드** 메뉴에서 **솔루션 빌드**를 선택하면 Visual Studio에서 콘솔 응용 프로그램의 릴리스 버전을 컴파일합니다. 응용 프로그램의 디버그 버전처럼 릴리스 버전을 테스트할 수 있습니다.
 
 응용 프로그램 디버그를 마친 후의 다음 단계는 배포 가능한 응용 프로그램 버전을 게시하는 것입니다. 이 작업을 수행하는 방법에 대한 자세한 내용은 [Visual Studio 2017을 사용하여 Hello World 응용 프로그램 게시](./publishing-with-visual-studio.md)를 참조하세요.
-

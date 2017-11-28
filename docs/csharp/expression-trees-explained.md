@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
+ms.openlocfilehash: 1de856a139ac7a6dee25f1dae54924e33f14a33b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 14673f86d7d228bc1fc17a3154e0337b4c6e5f57
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="expression-trees-explained"></a>식 트리 설명
 
 [이전 -- 개요](expression-trees.md)
@@ -50,7 +48,7 @@ var sum = 1 + 2;
 
 다음 코드는 복잡해 보이지만 매우 강력합니다. 동일한 프로세스에 따라 훨씬 더 복잡한 식을 분해할 수 있습니다. 다음 식을 살펴보세요.
 ```csharp
-var finalAnswer = this.SecretSauceFuncion(
+var finalAnswer = this.SecretSauceFunction(
     currentState.createInterimResult(), currentState.createSecondValue(1, 2),
     decisionServer.considerFinalOptions("hello")) +
     MoreSecretSauce('A', DateTime.Now, true);
@@ -75,4 +73,3 @@ var finalAnswer = this.SecretSauceFuncion(
 단, 식 트리는 수정할 수 없습니다.  식 트리는 변경할 수 없는 데이터 구조입니다. 식 트리를 변경하려면 원하는 변경 사항을 포함하여 원본의 복사본인 새 트리를 만들어야 합니다. 
 
 [다음 -- 식 트리를 지원하는 프레임워크 형식](expression-classes.md)
-

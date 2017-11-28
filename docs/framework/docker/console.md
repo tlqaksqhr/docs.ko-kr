@@ -9,14 +9,12 @@ ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 2fdce1e131eaa0d6952b2910f73105f097487711
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="running-console-applications-in-windows-containers"></a>Windows 컨테이너에서 콘솔 응용 프로그램 실행
 
 콘솔 응용 프로그램은 간단한 상태 쿼리에서 장기 실행 문서 이미지 처리 태스크에 이르기까지 다양한 용도로 사용됩니다. 어떤 경우든지 이러한 응용 프로그램을 시작하고 크기를 조정하는 기능은 하드웨어 취득, 시작 시간 또는 여러 인스턴스 실행의 제약을 받습니다.
@@ -145,4 +143,3 @@ docker run --rm console-random-answer-generator "Are you a square container?"
 
 ## <a name="summary"></a>요약
 Dockerfile을 추가하고 응용 프로그램을 게시하기만 하면 .NET Framework 콘솔 응용 프로그램을 컨테이너화할 수 있으며, 이제 응용 프로그램 코드를 변경하지 않고 여러 인스턴스 실행, 클린 시작 및 중지 등의 Windows Server 2016 기능을 활용할 수 있습니다.
-

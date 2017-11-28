@@ -1,30 +1,21 @@
 ---
 title: "LINQ에 대한 Visual Studio IDE 및 도구 지원(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: c1f6cfdf-c96f-417f-acc8-4a049772ead3
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 42d38e34c1b6474a3892fd091c9f344234f7ca68
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 028f501b455da2a930d3e39ba25da38ef9fdfd8d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-c"></a>LINQ에 대한 Visual Studio IDE 및 도구 지원(C#)
 Visual Studio IDE(통합 개발 환경)는 LINQ 응용 프로그램 개발을 지원하는 다음과 같은 기능을 제공합니다.  
@@ -43,4 +34,3 @@ Visual Studio IDE(통합 개발 환경)는 LINQ 응용 프로그램 개발을 �
   
 ## <a name="see-also"></a>참고 항목  
  [LINQ(Language-Integrated Query)(C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
-

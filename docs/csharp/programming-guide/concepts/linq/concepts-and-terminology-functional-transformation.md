@@ -1,25 +1,21 @@
 ---
 title: "개념과 용어(함수 변환)(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: c62aadc84f9c62429ffe59b78de386aac0f5cf63
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: ba05385b4cf686ac7bf8a203140338d31da80680
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>개념과 용어(함수 변환)(C#)
 이 항목에서는 순수 함수 변환의 개념과 용어에 대해 소개합니다. 데이터 변환에 대한 함수 변환 방법은 전통적인 명령형 프로그래밍보다 신속하게 프로그래밍할 수 있고 표현이 다양하며 디버깅과 유지 관리가 쉬운 코드를 생성합니다.  
@@ -84,6 +80,5 @@ ms.lasthandoff: 07/28/2017
  이러한 언어 기능은 이 단원 전반의 코드 샘플에서 사용됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [순수 함수 변환 소개(C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)   
+ [순수 함수 변환 소개(C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
  [함수형 프로그래밍과 명령형 프로그래밍 비교(C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
-

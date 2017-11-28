@@ -1,41 +1,22 @@
 ---
 title: "const(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - const_CSharpKeyword
 - const
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- const keyword [C#]
+helpviewer_keywords: const keyword [C#]
 ms.assetid: 79eb447c-117b-4418-933f-97c50aa472db
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 7f54b686b170622ca1ead736a9f614c9bbef52dc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b8f6d567deed513ff5693fe39bd21c8607677402
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="const-c-reference"></a>const(C# 참조)
 상수 필드 또는 지역 상수를 선언할 때는 `const` 키워드를 사용합니다. 상수 필드 및 지역 상수는 변수가 아니며 수정할 수 없습니다. 상수는 숫자, 부울 값, 문자열 또는 null 참조일 수 있습니다. 언제든지 변경될 수 있는 정보를 나타낼 때는 상수를 만들지 마세요. 예를 들어, 상수 필드를 사용하여 서비스의 가격, 제품 버전 번호 또는 회사의 브랜드 이름을 저장하지 마세요. 이러한 값은 시간이 지남에 따라 변경될 수 있으며, 컴파일러는 상수를 전파하므로 변경 내용을 보기 위해서는 라이브러리를 사용하여 컴파일된 다른 코드를 다시 컴파일해야 합니다. [readonly](../../../csharp/language-reference/keywords/readonly.md) 키워드를 참조하세요. 예:  
@@ -70,20 +51,19 @@ public const int c2 = c1 + 100;
 >  [readonly](../../../csharp/language-reference/keywords/readonly.md) 키워드는 `const` 키워드와 다릅니다. `const` 필드는 필드 선언에서만 초기화될 수 있습니다. `readonly` 필드는 선언이나 생성자에서 초기화될 수 있습니다. 따라서 `readonly` 필드는 사용된 생성자에 따라 다른 값을 가질 수 있습니다. 또한 `const` 필드가 컴파일 시간 상수라고 하더라도 `readonly` 필드는 다음 줄에서와 같이 런타임 상수에 사용될 수 있습니다. `public static readonly uint l1 = (uint)DateTime.Now.Ticks;`  
   
 ## <a name="example"></a>예제  
- [!code-cs[csrefKeywordsModifiers#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/const_1.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/const_1.cs)]  
   
 ## <a name="example"></a>예제  
  이 예제에서는 상수를 지역 변수로 사용하는 방법을 보여 줍니다.  
   
- [!code-cs[csrefKeywordsModifiers#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/const_2.cs)]  
+ [!code-csharp[csrefKeywordsModifiers#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/const_2.cs)]  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
- [한정자](../../../csharp/language-reference/keywords/modifiers.md)   
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
+ [한정자](../../../csharp/language-reference/keywords/modifiers.md)  
  [readonly](../../../csharp/language-reference/keywords/readonly.md)
-

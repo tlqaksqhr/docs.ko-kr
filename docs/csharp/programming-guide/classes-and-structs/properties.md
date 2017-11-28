@@ -1,41 +1,22 @@
 ---
 title: "속성(C# 프로그래밍 가이드)"
-ms.date: 2017-03-10
+ms.date: 03/10/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- cs.properties
-dev_langs:
-- CSharp
+f1_keywords: cs.properties
 helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 6f40bea2c7d39d88839a70e73e391113bee86f14
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 127299a617cacee15f87964a12bb3877a2586204
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="properties-c-programming-guide"></a>속성(C# 프로그래밍 가이드)
 
@@ -56,9 +37,9 @@ ms.lasthandoff: 07/28/2017
 
 속성을 구현하는 한 가지 기본 패턴에는 private 지원 필드를 사용하여 속성 값을 설정 및 검색하는 작업이 포함됩니다. `get` 접근자는 private 필드의 값을 반환하고 `set` 접근자는 private 필드에 값을 할당하기 전에 데이터 유효성 검사를 수행할 수 있습니다. 또한 두 접근자 모두 데이터를 저장 또는 반환하기 전에 데이터에 대한 변환이나 계산을 수행할 수도 있습니다.
 
-다음 예제에서 이 방법을 보여 줍니다. 이 예제에서 `TimePeriod` 클래스는 시간 간격을 나타냅니다. 내부적으로 이 클래스는 `seconds`라는 private 필드에 시간 간격을 초 단위로 저장합니다. `Hours`라는 읽기/쓰기 속성을 사용하면 고객이 시간 간격을 시간 단위로 지정할 수 있습니다. `get` 및 `set` 접근자 모두 필요에 따라 시간 및 초 간의 변환을 수행합니다. 또한 `set` 접근자는 데이터의 유효성을 검사하고 시간(시)이 잘못된 경우 @System.ArgumentOutOfRangeException을 throw합니다. 
+다음 예제에서 이 방법을 보여 줍니다. 이 예제에서 `TimePeriod` 클래스는 시간 간격을 나타냅니다. 내부적으로 이 클래스는 `seconds`라는 private 필드에 시간 간격을 초 단위로 저장합니다. `Hours`라는 읽기/쓰기 속성을 사용하면 고객이 시간 간격을 시간 단위로 지정할 수 있습니다. `get` 및 `set` 접근자 모두 필요에 따라 시간 및 초 간의 변환을 수행합니다. 또한 `set` 접근자는 데이터의 유효성을 검사하고 시간(시)이 잘못된 경우 <xref:System.ArgumentOutOfRangeException>을 throw합니다. 
    
- [!code-cs[Properties#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-1.cs)]  
+ [!code-csharp[Properties#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-1.cs)]  
   
 ## <a name="expression-body-definitions"></a>식 본문 정의  
 
@@ -66,11 +47,11 @@ ms.lasthandoff: 07/28/2017
 
  C# 6부터 읽기 전용 속성에서 `get` 접근자를 식 본문 멤버로 구현할 수 있습니다. 이 경우 `get` 접근자 키워드나 `return` 키워드를 모두 사용하지 않습니다. 다음 예제에서는 읽기 전용 `Name` 속성을 식 본문 멤버로 구현합니다.
 
- [!code-cs[Properties#2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-2.cs)]  
+ [!code-csharp[Properties#2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-2.cs)]  
 
  C# 7부터 `get` 및 `set` 접근자 모두를 식 본문 멤버로 구현할 수 있습니다. 이 경우 `get` 및 `set` 키워드가 있어야 합니다. 다음 예제에서는 두 접근자에 대해 식 본문 정의를 사용하는 방법을 보여 줍니다. `return` 키워드는 `get` 접근자와 함께 사용하지 않습니다.
  
-  [!code-cs[Properties#3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-3.cs)]  
+  [!code-csharp[Properties#3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-3.cs)]  
 
 ## <a name="auto-implemented-properties"></a>자동으로 구현된 속성
 
@@ -78,7 +59,7 @@ ms.lasthandoff: 07/28/2017
 
 속성에 `get` 및 `set` 접근자가 모두 포함된 경우 두 접근자를 모두 자동 구현해야 합니다. 구현을 제공하지 않고 `get` 및 `set` 키워드를 사용하여 자동 구현 속성을 정의합니다. 다음 예제에서는 `Name` 및 `Price`가 자동 구현 속성인 점만 제외하고 이전 예제와 동일합니다. 이 예제에서는 매개 변수화된 생성자도 제거하므로 `SaleItem` 개체가 [개체 이니셜라이저](object-and-collection-initializers.md) 및 기본 생성자에 대한 호출로 초기화됩니다.
 
-  [!code-cs[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
+  [!code-csharp[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
 
 ## <a name="related-sections"></a>관련 단원  
   
@@ -96,9 +77,8 @@ ms.lasthandoff: 07/28/2017
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [속성 사용](../../../csharp/programming-guide/classes-and-structs/using-properties.md)   
- [인덱서](../../../csharp/programming-guide/indexers/index.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
+ [속성 사용](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+ [인덱서](../../../csharp/programming-guide/indexers/index.md)  
  [get 키워드](../../../csharp/language-reference/keywords/get.md)    
  [set 키워드](../../../csharp/language-reference/keywords/set.md)    
-

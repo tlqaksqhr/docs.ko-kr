@@ -7,16 +7,14 @@ manager: wpickett
 ms.author: wiwagn
 ms.date: 11/30/2016
 ms.topic: article
-ms.prod: .net-core
-ms.technology: .net-core-technologies
-ms.devlang: dotnet
+ms.prod: .net
+ms.technology: devlang-csharp
 ms.assetid: db220f79-c35b-41f2-886c-cd068672d42d
+ms.openlocfilehash: c1b69e3f5f0cd2c50ae80d2454e6b7f13dc30344
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 747345f0a765bc6cbe947a2b0c7bc025eb599550
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a>방법: 메서드에서 쿼리 반환(C# 프로그래밍 가이드)
 이 예제는 메서드에서 반환 값 및 `out` 매개 변수로서 쿼리를 반환하는 방법을 보여 줍니다.  
@@ -26,8 +24,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="example"></a>예제  
  다음 예제에서 첫 번째 메서드는 쿼리를 반환 값으로 반환하고 두 번째 메서드는 쿼리를 `out` 매개 변수로 반환합니다. 두 경우 모두 쿼리 결과가 아니라 쿼리가 반환됩니다.  
   
- [!code-cs[csProgGuideLINQ#80](../../../samples/snippets/csharp/concepts/linq/how-to-return-a-query-from-a-method_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#80](../../../samples/snippets/csharp/concepts/linq/how-to-return-a-query-from-a-method_1.cs)]  
 
 ## <a name="see-also"></a>참고 항목  
  [LINQ 쿼리 식](index.md)
-

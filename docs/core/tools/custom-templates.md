@@ -9,14 +9,12 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
-ms.translationtype: HT
-ms.sourcegitcommit: c58ed1b3c09f1e358d0b66f6cf7186821601fd69
 ms.openlocfilehash: c68e382450a763fd0521b7defdd79d8433e1acde
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/12/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new에 대한 사용자 지정 템플릿
 
 [.NET Core SDK](https://www.microsoft.com/net/download/core)에는 [`dotnet new` 명령](dotnet-new.md)과 함께 사용할 많은 템플릿이 미리 설치되어 제공됩니다. .NET Core 2.0부터 앱, 서비스, 도구 또는 클래스 라이브러리와 같은 모든 형식의 프로젝트에 대한 사용자 지정 템플릿을 만들 수 있습니다. 구성 파일과 같이 하나 이상의 종속 파일을 출력하는 템플릿도 만들 수 있습니다.
@@ -164,4 +162,3 @@ dotnet new <TEMPLATE>
 [dotnet/dotnet-template-samples GitHub repo](https://github.com/dotnet/dotnet-template-samples)(dotnet/dotnet-template-samples GitHub 리포지토리)  
 [How to create your own templates for dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)(dotnet new에 대한 사용자 지정 템플릿을 만드는 방법)  
 [*template.json* JSON 스키마 저장소에 대 한 스키마](http://json.schemastore.org/template)  
-

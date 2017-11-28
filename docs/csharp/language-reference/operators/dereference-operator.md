@@ -1,41 +1,22 @@
 ---
 title: "-&gt; 연산자(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- ->_CSharpKeyword
-dev_langs:
-- CSharp
+f1_keywords: ->_CSharpKeyword
 helpviewer_keywords:
 - member access operator (->) [C#]
 - -> operator [C#]
 ms.assetid: e39ccdc1-f1ff-4a92-bf1d-ac2c8c11316a
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 4c5918f56257feb29d2624ba29b8cebaaa4f4ebe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f42135e43bdfc58ee64fd3465074b3f8791f8ada
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="-gt-operator-c-reference"></a>-&gt; 연산자(C# 참조)
 `->` 연산자는 포인터 역참조와 멤버 액세스를 결합합니다.  
@@ -58,10 +39,9 @@ x->y
  `->` 연산자를 오버로드할 수 없습니다.  
   
 ## <a name="example"></a>예제  
- [!code-cs[csRefOperators#15](../../../csharp/language-reference/operators/codesnippet/CSharp/dereference-operator_1.cs)]  
+ [!code-csharp[csRefOperators#15](../../../csharp/language-reference/operators/codesnippet/CSharp/dereference-operator_1.cs)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
  [C# 연산자](../../../csharp/language-reference/operators/index.md)
-

@@ -1,39 +1,21 @@
 ---
 title: "오버로드할 수 있는 연산자(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - C# language, operator overloading
 - operator overloading [C#]
 ms.assetid: 390d9d01-79fc-40ab-9ed3-0bf448da1b6a
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 92dde781aa258267b7140228bc87621d26713f6d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 1e548df4de2c07934313311a7ffcfae82be76000
-ms.openlocfilehash: 9e4f54f3a5b461be267301a2b8bc8de52ef9f776
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/29/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="overloadable-operators-c-programming-guide"></a>오버로드할 수 있는 연산자(C# 프로그래밍 가이드)
 
@@ -81,4 +63,3 @@ public override string ToString() => $"{this.real} + {this.imaginary}";
 [연산자](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
 [C# 연산자](../../../csharp/language-reference/operators/index.md)  
 [Why are overloaded operators always static in C#?](http://go.microsoft.com/fwlink/?LinkId=112383)(오버로드된 연산자가 C#에서 항상 정적인 이유)
-

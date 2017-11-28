@@ -1,52 +1,33 @@
 ---
 title: "연산자(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - operators [C#]
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 8e270b683862502c218ff248de76819ecea83dc8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 22d2f6b93a18fcacbeea10ab60a1d078c632b0af
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="operators-c-programming-guide"></a>연산자(C# 프로그래밍 가이드)
 C#에서 *연산자* 는 식 또는 문에서 하나 이상의 *피연산자* 에 적용되는 프로그램 요소입니다. 증가 연산자(`++`)나 `new`같이 피연산자 하나를 사용하는 연산자를 *단항* 연산자라고 합니다. 산술 연산자(`+`,`-`,`*`,`/`) 같이 피연산자 두 개를 사용하는 연산자를 *이항* 연산자라고 합니다. 조건 연산자(`?:`)는 피연산자 세 개를 사용하며 이는 C#에서 유일한 삼진 연산자입니다.  
   
  다음 C# 문에는 단항 연산자 하나와 피연산자 하나가 들어 있습니다. 증가 연산자 `++`는 피연산자 `y`의 값을 수정합니다.  
   
- [!code-cs[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]  
+ [!code-csharp[csProgGuideStatements#5](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_1.cs)]  
   
  다음 C# 문에는 이항 연산자가 두 개 있습니다. 각 연산자는 피연산자를 두 개씩 사용합니다. 할당 연산자 `=`에는 정수 변수 `y` 와 식 `2 + 3` 이 피연산자로 사용됩니다. 식 `2 + 3` 자체는 더하기 연산자와 두 개의 피연산자, `2` 및 `3`으로 구성됩니다.  
   
- [!code-cs[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
+ [!code-csharp[csProgGuideStatements#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/operators_2.cs)]  
   
 ## <a name="operators-evaluation-and-operator-precedence"></a>연산자, 평가, 및 연산자 우선 순위  
  피연산자는 모든 길이의 코드로 구성된 유효한 식이 될 수 있으며 모든 개수의 하위 식으로 구성될 수 있습니다. 여러 연산자를 포함하는 식에서 연산자가 적용되는 순서는 *operator precedence*, *associativity*및 괄호로 결정됩니다.  
@@ -193,6 +174,5 @@ a = (b = c);
  자세한 내용은 [연산자 키워드](../../../csharp/language-reference/keywords/operator-keywords.md) 및 [C# 연산자](../../../csharp/language-reference/operators/index.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
+ [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
  [문, 식, 연산자](../../../csharp/programming-guide/statements-expressions-operators/index.md)
-

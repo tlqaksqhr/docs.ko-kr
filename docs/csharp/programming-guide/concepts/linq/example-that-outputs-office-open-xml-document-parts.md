@@ -1,25 +1,21 @@
 ---
 title: "Office Open XML 문서 부분을 출력하는 예제(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 6cd37055-89b4-42e8-bf27-5a29717e35f3
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 42265df3bdaae7835cfd44346d78b3df212c8dfd
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e7b2135a0894e1fa5a553552fa128809d740dea2
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="example-that-outputs-office-open-xml-document-parts-c"></a>Office Open XML 문서 부분을 출력하는 예제(C#)
 이 항목에서는 Office Open XML 문서를 열고 문서 안의 부분에 액세스하는 방법을 보여 줍니다.  
@@ -27,7 +23,7 @@ ms.lasthandoff: 07/28/2017
 ## <a name="example"></a>예제  
  다음 예제에서는 Office Open XML 문서를 열고 문서 부분과 스타일 부분을 콘솔에 출력합니다.  
   
- 이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=fullName> 네임스페이스의 형식을 사용합니다.  
+ 이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.  
   
 ```csharp  
 const string fileName = "SampleDoc.docx";  
@@ -80,4 +76,3 @@ using (Package wdPackage = Package.Open(fileName, FileMode.Open, FileAccess.Read
   
 ## <a name="see-also"></a>참고 항목  
  [Office Open XML WordprocessingML 문서 정보(C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
-

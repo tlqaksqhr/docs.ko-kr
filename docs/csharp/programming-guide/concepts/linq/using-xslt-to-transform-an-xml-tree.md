@@ -1,30 +1,21 @@
 ---
 title: "XSLT를 사용하여 XML 트리 변환(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 373a2699-d4c5-471b-9bda-c1f0ab73b477
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 0abd857def00bd1e96332cd635d49aa50b2b873b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b6ec4a04bebd39ecb6a90dfc48729fa8696a2ab5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="using-xslt-to-transform-an-xml-tree-c"></a>XSLT를 사용하여 XML 트리 변환(C#)
 XML 트리를 만들고 XML 트리에서 <xref:System.Xml.XmlReader>를 만든 다음 새 문서를 만들고 새 문서에 쓸 <xref:System.Xml.XmlWriter>를 만들 수 있습니다. 그런 다음 <xref:System.Xml.XmlReader> 및 <xref:System.Xml.XmlWriter>를 변환에 전달하여 XSLT 변환을 호출할 수 있습니다. 변환이 성공적으로 완료된 후 새 XML 트리가 변환의 결과로 채워집니다.  
@@ -76,7 +67,6 @@ Console.WriteLine(newTree);
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=fullName>   
- <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=fullName>   
+ <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=nameWithType>  
+ <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=nameWithType>  
  [고급 LINQ to XML 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
-

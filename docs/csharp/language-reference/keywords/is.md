@@ -1,42 +1,23 @@
 ---
 title: "is(C# 참조)"
 keywords: "is 키워드(C#), is(C#)"
-ms.date: 2017-02-17
+ms.date: 02/17/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - is_CSharpKeyword
 - is
-dev_langs:
-- CSharp
-helpviewer_keywords:
-- is keyword [C#]
+helpviewer_keywords: is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 9f0242439caa21268a6c314409f41587890c4126
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 81117b1419c2a9c3babd6a7429052e2b23e08a70
-ms.openlocfilehash: 5aeb29a799ba24b5ab7db3eca62a91035b25b8f6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="is-c-reference"></a>is(C# 참조) #
 
@@ -54,7 +35,7 @@ ms.lasthandoff: 09/25/2017
 
 예를 들어 다음 코드는 `obj`를 `Person` 형식의 인스턴스로 캐스트할 수 있는지 확인합니다.
 
-[!code-cs[is#1](../../../../samples/snippets/csharp/language-reference/keywords/is/is1.cs#1)]
+[!code-csharp[is#1](../../../../samples/snippets/csharp/language-reference/keywords/is/is1.cs#1)]
 
 `is` 문은 다음과 같은 경우 true입니다.
 
@@ -68,14 +49,14 @@ ms.lasthandoff: 09/25/2017
 
 다음 예제에서는 `is` 식이 이러한 각 변환에 대해 `true`로 평가되는 것을 보여 줍니다.
 
-[!code-cs[is#3](../../../../samples/snippets/csharp/language-reference/keywords/is/is3.cs#3)]
+[!code-csharp[is#3](../../../../samples/snippets/csharp/language-reference/keywords/is/is3.cs#3)]
 
 식이 항상 `true`이거나 `false`인 것으로 알려진 경우 `is` 키워드는 컴파일 시간 경고를 생성합니다. 참조 변환, boxing 변환 및 unboxing 변환만 고려하고 사용자 정의 변환이나 형식의 [implicit](implicit.md) 및 [explicit](explicit.md) 연산자로 정의된 변환은 고려하지 않습니다. 다음 예제에서는 변환의 결과가 컴파일 시간에 알려지기 때문에 경고를 생성합니다. `int`에서 `long` 및 `double`로 변환하기 위한 `is` 식에서 false를 반환하는데, 이러한 변환이 [implicit](implicit.md) 연산자에 의해 처리되기 때문입니다.
 
-[!code-cs[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]
+[!code-csharp[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]
 
 `expr`은 무명 메서드 및 람다 식을 제외하고 값을 반환하는 모든 식이 될 수 있습니다. 다음 예제에서는 `is`를 사용하여 메서드 호출의 반환 값을 평가합니다.   
-[!code-cs[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
+[!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
 
 C# 7부터는 [형식 패턴](#type)을 사용한 패턴 일치를 통해 `is` 문을 사용하는 보다 간결한 코드를 작성할 수 있습니다.
 
@@ -113,19 +94,19 @@ C# 7부터는 `is` 및 [switch](../../../csharp/language-reference/keywords/swit
 
 다음 예제에서는 `is` 형식 패턴을 사용하여 형식의 <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> 메서드 구현을 제공합니다.
 
-[!code-cs[is#5](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern5.cs#5)]
+[!code-csharp[is#5](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern5.cs#5)]
 
 패턴 일치를 사용하지 않을 경우 이 코드를 다음과 같이 작성할 수 있습니다. 형식 패턴 일치를 사용하면 변환 결과가 `null`인지 여부를 테스트할 필요가 없으므로 보다 간결하고 읽기 쉬운 코드가 생성됩니다.  
 
-[!code-cs[is#6](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern6.cs#6)]
+[!code-csharp[is#6](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern6.cs#6)]
 
 또한 `is` 형식 패턴은 값 형식의 형식을 확인할 때 보다 간결한 코드를 생성합니다. 다음 예제에서는 `is` 형식 패턴을 사용하여 개체가 `Person` 인스턴스인지 `Dog` 인스턴스인지를 확인한 후 적절한 속성의 값을 표시합니다. 
 
-[!code-cs[is#9](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern9.cs#9)]
+[!code-csharp[is#9](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern9.cs#9)]
 
 패턴 일치를 사용하지 않는 동일한 코드에는 명시적 캐스트를 포함하는 별도의 할당이 필요합니다.
 
-[!code-cs[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]
+[!code-csharp[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]
 
 ### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> 상수 패턴 ###
 
@@ -151,7 +132,7 @@ C# 7부터는 `is` 및 [switch](../../../csharp/language-reference/keywords/swit
 
 다음 예제에서는 형식 패턴과 상수 패턴을 결합하여 개체가 `Dice` 인스턴스인지 여부를 테스트하고, 그럴 경우 주사위 굴리기 값이 6인지 여부를 확인합니다.
 
-[!code-cs[is#7](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern7.cs#7)]
+[!code-csharp[is#7](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern7.cs#7)]
  
 ### <a name="var" /> var 패턴 </a>
 
@@ -163,7 +144,7 @@ var 패턴을 사용한 패턴 일치는 항상 성공합니다. 사용되는 �
 
 여기서 *expr*의 값은 항상 *varname*이라는 로컬 변수에 할당됩니다. *varname*은 *expr*과 동일한 형식의 정적 변수입니다. 다음 예제에서는 var 패턴을 사용하여 `obj`라는 변수에 식을 할당합니다. 그런 다음 `obj`의 값과 형식을 표시합니다.
 
-[!code-cs[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
+[!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
 
 *expr*이 `null`인 경우에도 `is` 식은 true이고 *varname*에 `null`을 할당합니다. 
 
@@ -172,9 +153,8 @@ var 패턴을 사용한 패턴 일치는 항상 성공합니다. 사용되는 �
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)   
- [typeof](../../../csharp/language-reference/keywords/typeof.md)   
- [as](../../../csharp/language-reference/keywords/as.md)   
+ [C# 참조](../../../csharp/language-reference/index.md)  
+ [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
+ [typeof](../../../csharp/language-reference/keywords/typeof.md)  
+ [as](../../../csharp/language-reference/keywords/as.md)  
  [연산자 키워드](../../../csharp/language-reference/keywords/operator-keywords.md)
-

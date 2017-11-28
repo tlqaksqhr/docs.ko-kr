@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - GAC (global assembly cache), removing assemblies
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: a17478c350d789d320e97d6b50d6f5f9daaf6db3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a2bcc04fe3d428606e23e70d6f565b90f62e6a09
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>방법: 전역 어셈블리 캐시에서 어셈블리 제거
 GAC(전역 어셈블리 캐시)에서 어셈블리를 제거하는 다음 두 가지 방법이 있습니다.  
@@ -62,7 +60,6 @@ gacutil -u hello
     >  Windows Installer는 GAC에 설치된 어셈블리에 대한 참조 횟수를 유지 관리합니다. 참조 횟수가 0에 도달하여 Windows Installer 패키지를 통해 설치된 응용 프로그램에서 사용되지 않음을 나타내는 경우에만 어셈블리가 GAC에서 제거됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [어셈블리 및 전역 어셈블리 캐시 사용](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)   
- [방법: 전역 어셈블리 캐시에 어셈블리 설치](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)   
+ [어셈블리 및 전역 어셈블리 캐시 사용](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
+ [방법: 전역 어셈블리 캐시에 어셈블리 설치](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
  [Gacutil.exe(전역 어셈블리 캐시 도구)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
-

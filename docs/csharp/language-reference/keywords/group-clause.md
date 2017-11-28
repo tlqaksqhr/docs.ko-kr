@@ -1,60 +1,42 @@
 ---
 title: "group 절(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
 f1_keywords:
 - group
 - group_CSharpKeyword
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: a2f67b2c90e1cced92d6fc7d47768b58bf155360
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: afd32358a406b2797059cf2b8d85d897c8737222
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="group-clause-c-reference"></a>group 절(C# 참조)
 `group` 절은 그룹의 키 값과 일치하는 0개 이상의 항목이 포함된 <xref:System.Linq.IGrouping%602> 개체 시퀀스를 반환합니다. 예를 들어 각 문자열의 첫 번째 문자에 따라 문자열 시퀀스를 그룹화할 수 있습니다. 이 경우 첫 번째 문자는 키로, [char](../../../csharp/language-reference/keywords/char.md) 형식이며 각 <xref:System.Linq.IGrouping%602> 개체의 `Key` 속성에 저장됩니다. 컴파일러는 키의 형식을 유추합니다.  
   
  다음 예제와 같이 쿼리 식을 `group` 절로 끝낼 수 있습니다.  
   
- [!code-cs[cscsrefQueryKeywords#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_1.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_1.cs)]  
   
  각 그룹에서 추가 쿼리 작업을 수행하려는 경우 [into](../../../csharp/language-reference/keywords/into.md) 상황별 키워드를 사용하여 임시 식별자를 지정할 수 있습니다. `into`를 사용하는 경우 쿼리를 계속 진행하고, 다음 예제와 같이 궁극적으로 `select` 문이나 다른 `group` 절로 끝내야 합니다.  
   
- [!code-cs[cscsrefQueryKeywords#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_2.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#11](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_2.cs)]  
   
  `into`를 포함 및 포함하지 않고 `group`을 사용하는 보다 자세한 예제는 이 항목의 예제 섹션에 제공됩니다.  
   
 ## <a name="enumerating-the-results-of-a-group-query"></a>그룹 쿼리 결과 열거  
  `group` 쿼리에 의해 생성된 <xref:System.Linq.IGrouping%602> 개체는 기본적으로 목록의 목록이기 때문에 중첩된 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 루프를 사용하여 각 그룹에 있는 항목에 액세스해야 합니다. 외부 루프는 그룹 키를 반복하고, 내부 루프는 그룹 자체에 있는 각 항목을 반복합니다. 그룹에 키가 있지만 요소는 없을 수도 있습니다. 다음은 앞의 코드 예제에서 쿼리를 실행하는 `foreach` 루프입니다.  
   
- [!code-cs[cscsrefQueryKeywords#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_3.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#12](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_3.cs)]  
   
 ## <a name="key-types"></a>키 유형  
  그룹 키는 문자열, 기본 제공 숫자 형식, 사용자 정의 명명된 형식, 무명 형식 등 모든 형식일 수 있습니다.  
@@ -62,17 +44,17 @@ ms.lasthandoff: 07/28/2017
 ### <a name="grouping-by-string"></a>문자열로 그룹화  
  앞의 코드 예제에서는 `char`를 사용했습니다. 대신, 문자열 키를 전체 성 등으로 쉽게 지정했을 수 있습니다.  
   
- [!code-cs[cscsrefQueryKeywords#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_4.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_4.cs)]  
   
 ### <a name="grouping-by-bool"></a>부울로 그룹화  
  다음 예제에서는 키에 부울 값을 사용하여 결과를 두 그룹으로 나누는 방법을 보여 줍니다. 값은 `group` 절의 하위 식에서 생성됩니다.  
   
- [!code-cs[cscsrefQueryKeywords#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_5.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_5.cs)]  
   
 ### <a name="grouping-by-numeric-range"></a>숫자 범위로 그룹화  
  다음 예제에서는 식을 사용하여 백분위수 범위를 나타내는 숫자 그룹 키를 만듭니다. 메서드 호출 결과를 저장할 편리한 위치로 [let](../../../csharp/language-reference/keywords/let-clause.md)을 사용하여 `group` 절에서 메서드를 두 번 호출할 필요가 없도록 합니다. 또한 `group` 절에서 "0으로 나누기" 예외를 방지하기 위해 코드를 통해 학생의 평균이 0이 아닌 것을 확인합니다. 쿼리 식에 메서드를 안전하게 사용하는 방법에 대한 자세한 내용은 [방법: 쿼리 식의 예외 처리](../../../csharp/programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md)를 참조하세요.  
   
- [!code-cs[cscsrefQueryKeywords#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_6.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_6.cs)]  
   
 ### <a name="grouping-by-composite-keys"></a>복합 키로 그룹화  
  둘 이상의 키에 따라 요소를 그룹화하려는 경우 복합 키를 사용합니다. 무명 형식이나 명명된 형식을 통해 키 요소를 저장하여 복합 키를 만듭니다. 다음 예제에서는 `Person` 클래스가 `surname` 및 `city`라는 멤버로 선언되었다고 가정합니다. `group` 절은 성과 도시가 동일한 각 개인 집합에 대해 별도 그룹이 생성되도록 합니다.  
@@ -88,24 +70,23 @@ group person by new {name = person.surname, city = person.city};
   
  `group` 절의 결과는 시퀀스의 시퀀스입니다. 따라서 반환된 각 그룹 내의 개별 요소에 액세스하려면 다음 예제와 같이 그룹 키를 반복하는 루프 안에 중첩된 `foreach` 루프를 사용합니다.  
   
- [!code-cs[cscsrefQueryKeywords#16](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_7.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#16](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_7.cs)]  
   
 ## <a name="example"></a>예제  
  이 예제에서는 `into`와 함께 *continuation*을 사용하여 그룹을 만든 후 그룹에서 추가 논리를 수행하는 방법을 보여 줍니다. 자세한 내용은 [into](../../../csharp/language-reference/keywords/into.md)를 참조하세요. 다음 예제에서는 각 그룹을 쿼리하여 키 값이 모음인 그룹만 선택합니다.  
   
- [!code-cs[cscsrefQueryKeywords#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_8.cs)]  
+ [!code-csharp[cscsrefQueryKeywords#17](../../../csharp/language-reference/keywords/codesnippet/CSharp/group-clause_8.cs)]  
   
 ## <a name="remarks"></a>설명  
  `group` 절은 컴파일 시간에 <xref:System.Linq.Enumerable.GroupBy%2A> 메서드 호출로 변환됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Linq.IGrouping%602>   
- <xref:System.Linq.Enumerable.GroupBy%2A>   
- <xref:System.Linq.Enumerable.ThenBy%2A>   
- <xref:System.Linq.Enumerable.ThenByDescending%2A>   
- [쿼리 키워드(LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)   
- [LINQ 쿼리 식](../../../csharp/programming-guide/linq-query-expressions/index.md)   
- [방법: 중첩 그룹 만들기](../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)   
- [방법: 쿼리 결과 그룹화](../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)   
+ <xref:System.Linq.IGrouping%602>  
+ <xref:System.Linq.Enumerable.GroupBy%2A>  
+ <xref:System.Linq.Enumerable.ThenBy%2A>  
+ <xref:System.Linq.Enumerable.ThenByDescending%2A>  
+ [쿼리 키워드(LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
+ [LINQ 쿼리 식](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+ [방법: 중첩 그룹 만들기](../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)  
+ [방법: 쿼리 결과 그룹화](../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)  
  [방법: 그룹화 작업에서 하위 쿼리 수행](../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)
-

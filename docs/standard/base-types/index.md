@@ -13,16 +13,15 @@ helpviewer_keywords:
 - base types
 - type system, base types
 ms.assetid: 028d0ce8-ebc2-4a88-a16f-17508f6d0bd6
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: d6b1c760fb8667850d4f4e88ca8fe5bcf0b0a662
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/05/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="working-with-base-types-in-net"></a>.NET의 기본 형식 작업
 이 섹션에서는 형식 지정, 변환 및 일반 작업을 포함하여 .NET 기본 형식 작업에 대해 설명합니다.  
@@ -46,4 +45,3 @@ ms.lasthandoff: 09/05/2017
   
  [날짜, 시간 및 표준 시간대](../../../docs/standard/datetime/index.md)  
  표준 시간대 인식 응용 프로그램에서 표준 시간대 및 표준 시간대 변환 작업을 수행하는 방법을 설명합니다.
-

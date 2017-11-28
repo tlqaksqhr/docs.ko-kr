@@ -10,14 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
+ms.openlocfilehash: 6cdc4eb0d0fea93b5210532210ad0c928e35a7a5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5585db33fb5020ed18c26f32ce0b63f97353d20f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="microservices-hosted-in-docker"></a>Docker에서 호스트되는 마이크로 서비스
 
 ## <a name="introduction"></a>소개
@@ -94,6 +92,7 @@ Dotnet은 NuGet 패키지 관리자를 사용하여 필요한 모든 패키지�
 ```console
 dotnet build
 ```
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 일단 응용 프로그램을 빌드한 후에는 명령줄에서 실행합니다.
 
@@ -140,7 +139,7 @@ Project.json에는 프로젝트에 대한 정보가 포함됩니다. 자주 사�
 
 람다 식의 인수는 요청에 대한 `HttpContext`입니다. 해당 속성 중 하나는 `Request` 개체입니다. `Request` 개체는 요청에 대한 쿼리 문자열에 있는 모든 값의 사전을 포함하는 `Query` 속성을 갖습니다. 첫 번째 추가 내용은 위도 및 경도 값을 확인하는 것입니다.
 
-[!code-csharp[ReadQueryString](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#ReadQueryString "쿼리 문자열에서 변수 읽기")]
+[!code-csharp[ReadQueryString](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#ReadQueryString "read variables from the query string")]
 
 쿼리 사전 값은 `StringValue` 형식입니다. 해당 형식에는 문자열 컬렉션이 포함될 수 있습니다. 날씨 서비스의 경우 각 값이 단일 문자열입니다. 이 때문에 위의 코드에서 `FirstOrDefault()`가 호출되는 것입니다. 
 
@@ -156,17 +155,17 @@ bool TryParse(string s, out double result);
 
 확장 메서드는 정적 메서드로 정의되지만 첫 번째 매개 변수에 `this` 한정자를 추가하여 마치 해당 클래스의 멤버인 것처럼 호출할 수 있습니다. 확장 메서드는 정적 클래스에서만 정의할 수 있습니다. 구문 분석을 위한 확장 메서드를 포함하는 클래스의 정의는 다음과 같습니다.
 
-[!code-csharp[TryParseExtension](../../../samples/csharp/getting-started/WeatherMicroservice/Extensions.cs#TryParseExtension "null 허용에 대한 구문 분석 시도")]
+[!code-csharp[TryParseExtension](../../../samples/csharp/getting-started/WeatherMicroservice/Extensions.cs#TryParseExtension "try parse to a nullable")]
 
 `default(double?)` 식은 `double?` 형식의 기본값을 반환합니다. 기본값은 null(또는 누락된) 값입니다.
 
 이 확장 메서드를 사용하여 쿼리 문자열 인수를 double 형식으로 변환할 수 있습니다.
 
-[!code-csharp[UseTryParse](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#UseTryParse "try parse 확장 메서드 사용")]
+[!code-csharp[UseTryParse](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#UseTryParse "Use the try parse extension method")]
 
 구문 분석 코드를 쉽게 테스트하기 위해 인수 값을 포함하도록 응답을 업데이트합니다.
 
-[!code-csharp[WriteResponse](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#WriteResponse "출력 응답 쓰기")]
+[!code-csharp[WriteResponse](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#WriteResponse "Write the output response")]
 
 이제 웹 응용 프로그램을 실행하고 구문 분석 코드가 작동하는지 확인할 수 있습니다. 브라우저에서 웹 요청에 값을 추가합니다. 그러면 업데이트된 결과가 표시됩니다.
 
@@ -196,11 +195,11 @@ public class WeatherReport
 
 다음에는 해당 값을 임의로 설정하는 생성자를 빌드합니다. 이 생성자는 위도 및 경도 값을 사용하여 난수 생성기를 시드합니다. 즉, 같은 위치에 대한 예보는 동일합니다. 위도 및 경도 대한 인수를 변경하면 다른 예보를 얻게 됩니다(다른 시드로 시작하므로).
 
-[!code-csharp[WeatherReportConstructor](../../../samples/csharp/getting-started/WeatherMicroservice/WeatherReport.cs#WeatherReportConstructor "날씨 보고서 생성자")]
+[!code-csharp[WeatherReportConstructor](../../../samples/csharp/getting-started/WeatherMicroservice/WeatherReport.cs#WeatherReportConstructor "Weather Report Constructor")]
 
 이제 응답 메서드에서 5일 예보를 생성할 수 있습니다.
 
-[!code-csharp[GenerateRandomReport](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#GenerateRandomReport "임의 날씨 보고서 생성")]
+[!code-csharp[GenerateRandomReport](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#GenerateRandomReport "Generate a random weather report")]
 
 ### <a name="build-the-json-response"></a>JSON 응답을 빌드합니다.
 
@@ -212,7 +211,7 @@ dotnet add package Newtonsoft.Json
 
 그런 다음 `JsonConvert` 클래스를 사용하여 개체를 문자열에 쓸 수 있습니다.
 
-[!code-csharp[ConvertToJson](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#ConvertToJSON "개체를 JSON으로 변환")]
+[!code-csharp[ConvertToJson](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#ConvertToJSON "Convert objects to JSON")]
 
 위의 코드는 예보 개체(`WeatherForecast` 개체 목록)를 JSON 패킷으로 변환합니다. 응답 패킷을 생성한 다음 콘텐츠 형식을 `application/json`으로 설정하고 문자열을 씁니다.
 
@@ -248,7 +247,7 @@ WORKDIR /app
 # copy csproj and restore as distinct layers
 
 COPY WeatherMicroservice.csproj .
-RUN dotnet restore
+RUN dotnet restore 
 
 # copy and build everything else
 
@@ -257,6 +256,8 @@ COPY . .
 # RUN dotnet restore
 RUN dotnet publish -c Release -o out
 ```
+
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 현재 디렉터리의 프로젝트 파일에 docker VM으로 복사되고 모든 패키지가 복원됩니다. dotnet CLI를 사용하면 Docker 이미지에 .NET Core SDK가 포함됩니다. 그런 다음 응용 프로그램의 나머지 부분이 복사되고 dotnet publish 명령이 응용 프로그램을 빌드하고 패키지합니다.
 
@@ -350,4 +351,3 @@ docker rmi weather-microservice
 해당 서비스에 대해 docker 컨테이너 이미지를 빌드하고 컴퓨터에서 해당 컨테이너를 실행했습니다. 터미널 창을 서비스에 연결하고 서비스에서 진단 메시지를 확인했습니다.
 
 그 과정에서 C# 언어의 일부 기능이 사용되는 것을 확인했습니다.
-

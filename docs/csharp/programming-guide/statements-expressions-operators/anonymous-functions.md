@@ -1,40 +1,22 @@
 ---
 title: "익명 함수(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - lambda expressions [C#], as anonymus functions
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 888743bb1c49df123b57b4d09e0251dbe1e049d3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9f0105ad5ee5a97243e9aeda42c9b1842ec15d0e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>익명 함수(C# 프로그래밍 가이드)
 익명 함수는 대리자 형식이 예상되는 곳에서 항상 사용할 수 있는 “인라인” 문 또는 식입니다. 이를 사용하여 명명된 대리자를 초기화하거나 명명된 대리자 형식 대신 이를 메서드 매개 변수로 전달할 수 있습니다.  
@@ -53,14 +35,13 @@ ms.lasthandoff: 07/28/2017
   
  다음 예제에서는 C# 1.0에서 C# 3.0까지 대리자 만들기의 발전을 보여 줍니다.  
   
- [!code-cs[csProgGuideLINQ#65](../../../csharp/programming-guide/arrays/codesnippet/CSharp/anonymous-functions_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#65](../../../csharp/programming-guide/arrays/codesnippet/CSharp/anonymous-functions_1.cs)]  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
- [문, 식, 연산자](../../../csharp/programming-guide/statements-expressions-operators/index.md)   
- [람다 식](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)   
- [대리자](../../../csharp/programming-guide/delegates/index.md)   
+ [문, 식, 연산자](../../../csharp/programming-guide/statements-expressions-operators/index.md)  
+ [람다 식](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+ [대리자](../../../csharp/programming-guide/delegates/index.md)  
  [식 트리](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)
-

@@ -5,25 +5,27 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-bcl
+ms.technology: dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - assemblies [.NET Framework], attributes
 - assembly binding, attributes
 - assembly manifest, attributes
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 0683ee1e79d9e5fd9bef7af3b6b85dd5a58c3845
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 53dcff7fea0f2a751574d470031b56697e76447d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="setting-assembly-attributes"></a>어셈블리 특성 설정
 어셈블리 특성은 어셈블리에 대한 정보를 제공하는 값입니다. 특성은 다음과 같은 정보 집합으로 나뉩니다.  
@@ -45,11 +47,13 @@ ms.lasthandoff: 07/28/2017
 |---------------------------------|-----------------|  
 |<xref:System.Reflection.AssemblyCultureAttribute>|어셈블리에서 지원하는 문화권을 나타내는 열거형 필드입니다. 어셈블리는 기본 문화권에 대한 리소스가 포함되어 있음을 나타내는 문화권 독립성을 지정할 수도 있습니다. **참고:** 런타임은 culture 특성이 null로 설정되어 있지 않은 모든 어셈블리를 위성 어셈블리로 처리합니다. 이러한 어셈블리에는 위성 어셈블리 바인딩 규칙이 적용됩니다. 자세한 내용은 [런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)을 참조하세요.|  
 |<xref:System.Reflection.AssemblyFlagsAttribute>|어셈블리를 병렬로 실행할 수 있는지 여부와 같은 어셈블리 특성을 설정하는 값입니다.|  
-|<xref:System.Reflection.AssemblyVersionAttribute>|*major*.*minor*.*build*.*revision* 형식의 숫자 값입니다(예: 2.4.0.0). 공용 언어 런타임은 이 값을 사용하여 강력한 이름의 어셈블리에서 바인딩 작업을 수행합니다. **참고:** <xref:System.Reflection.AssemblyInformationalVersionAttribute> 특성이 어셈블리에 적용되어 있지 않은 경우 <xref:System.Reflection.AssemblyVersionAttribute> 특성으로 지정된 버전 번호가 <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=fullName>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=fullName> 및 <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=fullName> 속성에서 사용됩니다.|  
+|<xref:System.Reflection.AssemblyVersionAttribute>|*major*.*minor*.*build*.*revision* 형식의 숫자 값입니다(예: 2.4.0.0). 공용 언어 런타임은 이 값을 사용하여 강력한 이름의 어셈블리에서 바인딩 작업을 수행합니다. **참고:** <xref:System.Reflection.AssemblyInformationalVersionAttribute> 특성이 어셈블리에 적용되어 있지 않은 경우 <xref:System.Reflection.AssemblyVersionAttribute> 특성으로 지정된 버전 번호가 <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 및 <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> 속성에서 사용됩니다.|  
   
  다음 코드 예제에서는 어셈블리에 version 및 culture 특성을 적용하는 방법을 보여 줍니다.  
   
- [!code-cpp[AssemblyDelaySignAttribute#3](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#3)] [!code-csharp[AssemblyDelaySignAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#3)] [!code-vb[AssemblyDelaySignAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#3)]  
+ [!code-cpp[AssemblyDelaySignAttribute#3](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#3)]
+ [!code-csharp[AssemblyDelaySignAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#3)]
+ [!code-vb[AssemblyDelaySignAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#3)]  
   
 ## <a name="informational-attributes"></a>정보 특성  
  정보 특성을 사용하여 어셈블리에 대한 추가 회사 또는 제품 정보를 제공할 수 있습니다. 다음 표에서는 어셈블리에 적용할 수 있는 정보 특성에 대해 설명합니다.  
@@ -59,7 +63,7 @@ ms.lasthandoff: 07/28/2017
 |<xref:System.Reflection.AssemblyCompanyAttribute>|회사 이름을 지정하는 문자열 값입니다.|  
 |<xref:System.Reflection.AssemblyCopyrightAttribute>|저작권 정보를 지정하는 문자열 값입니다.|  
 |<xref:System.Reflection.AssemblyFileVersionAttribute>|Win32 파일 버전 번호를 지정하는 문자열 값입니다. 기본값은 일반적으로 어셈블리 버전입니다.|  
-|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|전체 제품 버전 번호와 같이 공용 언어 런타임에서 사용되지 않는 버전 정보를 지정하는 문자열 값입니다. **참고:** 이 특성이 어셈블리에 적용된 경우 <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=fullName> 속성을 사용하여 런타임에 지정하는 문자열을 가져올 수 있습니다. 문자열은 <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=fullName> 및 <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=fullName> 속성이 제공하는 경로 및 레지스트리 키에서도 사용됩니다.|  
+|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|전체 제품 버전 번호와 같이 공용 언어 런타임에서 사용되지 않는 버전 정보를 지정하는 문자열 값입니다. **참고:** 이 특성이 어셈블리에 적용된 경우 <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType> 속성을 사용하여 런타임에 지정하는 문자열을 가져올 수 있습니다. 문자열은 <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 및 <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> 속성이 제공하는 경로 및 레지스트리 키에서도 사용됩니다.|  
 |<xref:System.Reflection.AssemblyProductAttribute>|제품 정보를 지정하는 문자열 값입니다.|  
 |<xref:System.Reflection.AssemblyTrademarkAttribute>|상표 정보를 지정하는 문자열 값입니다.|  
   
@@ -86,9 +90,10 @@ ms.lasthandoff: 07/28/2017
   
  다음 코드 예제에서는 `myKey.snk`라는 공개 키 파일과 함께 서명 연기를 사용하여 강력한 이름의 어셈블리를 만들 때 적용할 특성을 보여 줍니다.  
   
- [!code-cpp[AssemblyDelaySignAttribute#4](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#4)] [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)] [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
+ [!code-cpp[AssemblyDelaySignAttribute#4](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#4)]
+ [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)]
+ [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
   
 ## <a name="see-also"></a>참고 항목  
- [어셈블리 만들기](../../../docs/framework/app-domains/create-assemblies.md)   
+ [어셈블리 만들기](../../../docs/framework/app-domains/create-assemblies.md)  
  [어셈블리를 사용한 프로그래밍](../../../docs/framework/app-domains/programming-with-assemblies.md)
-

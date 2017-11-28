@@ -10,14 +10,12 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 602a17591d27ebfd098516453b9028bca37ad5e3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="translating-expression-trees"></a>식 트리 변환
 
 [이전 -- 식 작성](expression-trees-building.md)
@@ -205,4 +203,3 @@ Computed sum: 10
 코드 집합을 검사하고, 해당 코드를 원하는 대로 변경하고, 변경된 버전을 실행할 수 있습니다. 식 트리는 변경할 수 없기 때문에 기존 트리의 구성 요소를 사용하여 새 트리를 만들 수 있습니다. 이렇게 하면 수정된 식 트리를 만드는 데 필요한 메모리 양이 최소화됩니다.
 
 [다음 -- 요약](expression-trees-summary.md)
-
