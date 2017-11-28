@@ -7,30 +7,31 @@ ms.date: 08/11/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
+ms.openlocfilehash: 7518ec32d669e64d713e77f687d285279b012967
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
-ms.openlocfilehash: 54fe434c44c9354ae16ae096fe3496ee0134f6e0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="dotnet-add-package"></a>dotnet add package
+# <a name="dotnet-add-package"></a><span data-ttu-id="a0019-103">dotnet add package</span><span class="sxs-lookup"><span data-stu-id="a0019-103">dotnet add package</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>이름
+## <a name="name"></a><span data-ttu-id="a0019-104">이름</span><span class="sxs-lookup"><span data-stu-id="a0019-104">Name</span></span>
 
-`dotnet add package` - 패키지 참조를 프로젝트 파일에 추가합니다.
+<span data-ttu-id="a0019-105">`dotnet add package` - 패키지 참조를 프로젝트 파일에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="a0019-105">`dotnet add package` - Adds a package reference to a project file.</span></span>
 
-## <a name="synopsis"></a>개요
+## <a name="synopsis"></a><span data-ttu-id="a0019-106">개요</span><span class="sxs-lookup"><span data-stu-id="a0019-106">Synopsis</span></span>
 
 `dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-v|--version] [-f|--framework] [-n|--no-restore] [-s|--source] [--package-directory]`
 
-## <a name="description"></a>설명
+## <a name="description"></a><span data-ttu-id="a0019-107">설명</span><span class="sxs-lookup"><span data-stu-id="a0019-107">Description</span></span>
 
-`dotnet add package` 명령은 패키지 참조를 프로젝트 파일에 추가하는 편리한 옵션을 제공합니다. 명령을 실행한 후 패키지가 프로젝트의 프레임워크와 호환되는지 확인하는 호환성 검사가 있습니다. 검사를 통과하면 `<PackageReference>` 요소가 프로젝트 파일에 추가되고 [dotnet restore](dotnet-restore.md)가 실행됩니다.
+<span data-ttu-id="a0019-108">`dotnet add package` 명령은 패키지 참조를 프로젝트 파일에 추가하는 편리한 옵션을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="a0019-108">The `dotnet add package` command provides a convenient option to add a package reference to a project file.</span></span> <span data-ttu-id="a0019-109">명령을 실행한 후 패키지가 프로젝트의 프레임워크와 호환되는지 확인하는 호환성 검사가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a0019-109">After running the command, there's a compatibility check to ensure the package is compatible with the frameworks in the project.</span></span> <span data-ttu-id="a0019-110">검사를 통과하면 `<PackageReference>` 요소가 프로젝트 파일에 추가되고 [dotnet restore](dotnet-restore.md)가 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="a0019-110">If the check passes, a `<PackageReference>` element is added to the project file and [dotnet restore](dotnet-restore.md) is run.</span></span>
 
-예를 들어 `Newtonsoft.Json`를 *ToDo.csproj*에 추가하면 다음 예제와 유사한 출력이 생성됩니다.
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+
+<span data-ttu-id="a0019-111">예를 들어 `Newtonsoft.Json`를 *ToDo.csproj*에 추가하면 다음 예제와 유사한 출력이 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="a0019-111">For example, adding `Newtonsoft.Json` to *ToDo.csproj* produces output similar to the following example:</span></span>
 
 ```
   Writing C:\Users\mairaw\AppData\Local\Temp\tmp95A8.tmp
@@ -42,59 +43,58 @@ info : Package 'Newtonsoft.Json' is compatible with all the specified frameworks
 info : PackageReference for package 'Newtonsoft.Json' version '10.0.3' added to file 'C:\projects\ToDo\ToDo.csproj'.
 ```
 
-이제 *ToDo.csproj* 파일에 참조되는 패키지에 대한 [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) 요소가 포함됩니다.
+<span data-ttu-id="a0019-112">이제 *ToDo.csproj* 파일에 참조되는 패키지에 대한 [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) 요소가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="a0019-112">The *ToDo.csproj* file now contains a [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) element for the referenced package.</span></span>
 
 ```xml
 <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
 ```
 
-## <a name="arguments"></a>인수
+## <a name="arguments"></a><span data-ttu-id="a0019-113">인수</span><span class="sxs-lookup"><span data-stu-id="a0019-113">Arguments</span></span>
 
 `PROJECT`
 
-프로젝트 파일을 지정합니다. 지정하지 않으면 이 명령은 현재 디렉터리에서 검색합니다.
+<span data-ttu-id="a0019-114">프로젝트 파일을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="a0019-114">Specifies the project file.</span></span> <span data-ttu-id="a0019-115">지정하지 않으면 이 명령은 현재 디렉터리에서 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="a0019-115">If not specified, the command searches the current directory for one.</span></span>
 
 `PACKAGE_NAME`
 
-추가할 패키지 참조입니다.
+<span data-ttu-id="a0019-116">추가할 패키지 참조입니다.</span><span class="sxs-lookup"><span data-stu-id="a0019-116">The package reference to add.</span></span>
 
-## <a name="options"></a>옵션
+## <a name="options"></a><span data-ttu-id="a0019-117">옵션</span><span class="sxs-lookup"><span data-stu-id="a0019-117">Options</span></span>
 
 `-h|--help`
 
-명령에 대한 간단한 도움말을 출력합니다.
+<span data-ttu-id="a0019-118">명령에 대한 간단한 도움말을 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="a0019-118">Prints out a short help for the command.</span></span>
 
 `-v|--version <VERSION>`
 
-패키지의 버전입니다.
+<span data-ttu-id="a0019-119">패키지의 버전입니다.</span><span class="sxs-lookup"><span data-stu-id="a0019-119">Version of the package.</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-특정 [프레임워크](../../standard/frameworks.md)를 대상으로 하는 경우에만 패키지 참조를 추가합니다.
+<span data-ttu-id="a0019-120">특정 [프레임워크](../../standard/frameworks.md)를 대상으로 하는 경우에만 패키지 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="a0019-120">Adds a package reference only when targeting a specific [framework](../../standard/frameworks.md).</span></span>
 
 `-n|--no-restore`
 
-복원 미리 보기 및 호환성 검사를 수행하지 않고 패키지 참조를 추가합니다.
+<span data-ttu-id="a0019-121">복원 미리 보기 및 호환성 검사를 수행하지 않고 패키지 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="a0019-121">Adds a package reference without performing a restore preview and compatibility check.</span></span>
 
 `-s|--source <SOURCE>`
 
-복원 작업 중 특정 NuGet 패키지 소스를 사용합니다.
+<span data-ttu-id="a0019-122">복원 작업 중 특정 NuGet 패키지 소스를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="a0019-122">Uses a specific NuGet package source during the restore operation.</span></span>
 
 `--package-directory <PACKAGE_DIRECTORY>`
 
-지정된 디렉터리에 패키지를 복원합니다.
+<span data-ttu-id="a0019-123">지정된 디렉터리에 패키지를 복원합니다.</span><span class="sxs-lookup"><span data-stu-id="a0019-123">Restores the package to the specified directory.</span></span>
 
-## <a name="examples"></a>예제
+## <a name="examples"></a><span data-ttu-id="a0019-124">예제</span><span class="sxs-lookup"><span data-stu-id="a0019-124">Examples</span></span>
 
-`Newtonsoft.Json` NuGet 패키지를 프로젝트에 추가합니다.
+<span data-ttu-id="a0019-125">`Newtonsoft.Json` NuGet 패키지를 프로젝트에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="a0019-125">Add `Newtonsoft.Json` NuGet package to a project:</span></span>
 
 `dotnet add package Newtonsoft.Json`
 
-특정 버전의 패키지를 프로젝트에 추가합니다.
+<span data-ttu-id="a0019-126">특정 버전의 패키지를 프로젝트에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="a0019-126">Add a specific version of a package to a project:</span></span>
 
 `dotnet add ToDo.csproj package Microsoft.Azure.DocumentDB.Core -v 1.0.0`
 
-특정 NuGet 소스를 사용하여 패키지를 추가합니다.
+<span data-ttu-id="a0019-127">특정 NuGet 소스를 사용하여 패키지를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="a0019-127">Add a package using a specific NuGet source:</span></span>
 
 `dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json`
-

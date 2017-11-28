@@ -1,5 +1,5 @@
 ---
-title: ".NET 표준 | Microsoft 문서"
+title: ".NET 표준"
 description: ".NET Standard, 해당 버전 및 .NET Standard를 지원하는 .NET 구현에 대해 알아봅니다."
 keywords: ".NET 표준, PCL, .NET"
 author: mairaw
@@ -10,145 +10,143 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
+ms.openlocfilehash: ccb44b94f1b3ce2fb369de368454679b25ed351f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: b47d4c74a01b99d743b69328c201096bc8d89794
-ms.openlocfilehash: eaae98ce0f7a1b49669098812193ae1b629584a4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="net-standard"></a>.NET 표준
+# <a name="net-standard"></a><span data-ttu-id="3956c-104">.NET 표준</span><span class="sxs-lookup"><span data-stu-id="3956c-104">.NET Standard</span></span>
 
-[.NET Standard](https://github.com/dotnet/standard)는 모든 .NET 구현에서 사용할 수 있는 .NET API의 공식 사양입니다. .NET 표준은 .NET 에코시스템의 균일성을 높이기 위한 것입니다. [ECMA 335](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)에서는 .NET 구현 동작에 대한 균일성을 계속 설정하지만 .NET 라이브러리 구현의 .NET BCL(기본 클래스 라이브러리)에 대한 유사한 사양은 없습니다. 
+<span data-ttu-id="3956c-105">[.NET Standard](https://github.com/dotnet/standard)는 모든 .NET 구현에서 사용할 수 있는 .NET API의 공식 사양입니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-105">The [.NET Standard](https://github.com/dotnet/standard) is a formal specification of .NET APIs that are intended to be available on all .NET implementations.</span></span> <span data-ttu-id="3956c-106">.NET 표준은 .NET 에코시스템의 균일성을 높이기 위한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-106">The motivation behind the .NET Standard is establishing greater uniformity in the .NET ecosystem.</span></span> <span data-ttu-id="3956c-107">[ECMA 335](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)에서는 .NET 구현 동작에 대한 균일성을 계속 설정하지만 .NET 라이브러리 구현의 .NET BCL(기본 클래스 라이브러리)에 대한 유사한 사양은 없습니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-107">[ECMA 335](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) continues to establish uniformity for .NET implementation behavior, but there is no similar spec for the .NET Base Class Libraries (BCL) for .NET library implementations.</span></span> 
 
-.NET 표준을 통해 다음과 같은 주요 시나리오를 사용할 수 있습니다. 
+<span data-ttu-id="3956c-108">.NET 표준을 통해 다음과 같은 주요 시나리오를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-108">The .NET Standard enables the following key scenarios:</span></span> 
 
-- 워크로드에 독립적으로 구현할 모든 .NET 구현에 대해 균일한 BCL API 집합을 정의합니다.
-- 개발자가 이 동일한 API 집합을 사용하여 .NET 구현에서 사용할 수 있는 이식 가능한 라이브러리를 생성할 수 있게 합니다.
-- OS API에 대해서만 .NET API로 인한 공유 소스의 조건부 컴파일을 줄이거나 제거하기도 합니다.
+- <span data-ttu-id="3956c-109">워크로드에 독립적으로 구현할 모든 .NET 구현에 대해 균일한 BCL API 집합을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-109">Defines uniform set of BCL APIs for all .NET implementations to implement, independent of workload.</span></span>
+- <span data-ttu-id="3956c-110">개발자가 이 동일한 API 집합을 사용하여 .NET 구현에서 사용할 수 있는 이식 가능한 라이브러리를 생성할 수 있게 합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-110">Enables developers to produce portable libraries that are usable across .NET implementations, using this same set of APIs.</span></span>
+- <span data-ttu-id="3956c-111">OS API에 대해서만 .NET API로 인한 공유 소스의 조건부 컴파일을 줄이거나 제거하기도 합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-111">Reduces or even eliminates conditional compilation of shared source due to .NET APIs, only for OS APIs.</span></span>
 
-다양한 .NET 구현은 특정 버전의 .NET Standard를 대상으로 합니다. 각 .NET 구현 버전은 지원하는 최신 .NET Standard 버전을 보급합니다. 이는 이전 버전도 지원함을 의미합니다. 예를 들어 .NET Framework 4.6에서는 .NET 표준 1.3을 구현합니다. 즉, .NET 표준 버전 1.0에서 1.3까지에 정의된 모든 API를 표시합니다. 마찬가지로 .NET Framework 4.6.1에서는 .NET Standard 1.4를 구현하지만 .NET Core 1.0에서는 .NET Standard 1.6을 구현합니다.
+<span data-ttu-id="3956c-112">다양한 .NET 구현은 특정 버전의 .NET Standard를 대상으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-112">The various .NET implementations target specific versions of .NET Standard.</span></span> <span data-ttu-id="3956c-113">각 .NET 구현 버전은 지원하는 최신 .NET Standard 버전을 보급합니다. 이는 이전 버전도 지원함을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-113">Each .NET implementation version advertises the highest .NET Standard version it supports, a statement that means it also supports previous versions.</span></span> <span data-ttu-id="3956c-114">예를 들어 .NET Framework 4.6에서는 .NET 표준 1.3을 구현합니다. 즉, .NET 표준 버전 1.0에서 1.3까지에 정의된 모든 API를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-114">For example, the .NET Framework 4.6 implements .NET Standard 1.3, which means that it exposes all APIs defined in .NET Standard versions 1.0 through 1.3.</span></span> <span data-ttu-id="3956c-115">마찬가지로 .NET Framework 4.6.1에서는 .NET Standard 1.4를 구현하지만 .NET Core 1.0에서는 .NET Standard 1.6을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-115">Similarly, the .NET Framework 4.6.1 implements .NET Standard 1.4, while .NET Core 1.0 implements .NET Standard 1.6.</span></span>
 
-## <a name="net-implementation-support"></a>.NET 구현 지원
+## <a name="net-implementation-support"></a><span data-ttu-id="3956c-116">.NET 구현 지원</span><span class="sxs-lookup"><span data-stu-id="3956c-116">.NET implementation support</span></span>
 
-다음 표에는 모든 .NET 표준 버전 및 지원되는 플랫폼이 나와 있습니다.
+<span data-ttu-id="3956c-117">다음 표에는 모든 .NET 표준 버전 및 지원되는 플랫폼이 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-117">The following table lists all versions of .NET Standard and the platforms supported:</span></span>
 
 [!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
 
-대상으로 지정할 수 있는 가장 높은 버전의 .NET 표준을 찾으려면 다음을 수행합니다.
-1. 실행할 .NET 구현을 나타내는 행을 찾습니다.
-2. 해당 행의 오른쪽에서 왼쪽으로 사용 중인 버전을 나타내는 열을 찾습니다.
-3. 열 헤더는 대상에서 지원하는 .NET 표준 버전을 나타냅니다(더 낮은 .NET 표준 버전도 모두 대상을 지원함).
-4. 대상으로 지정할 각 플랫폼에 대해 이 프로세스를 반복합니다. 대상 플랫폼이 두 개 이상 있으면 더 낮은 버전을 선택해야 합니다. 예를 들어 .NET Framework 4.5 및 .NET Core 1.0에서 실행하려는 경우 사용할 수 있는 가장 높은 .NET 표준 버전은 .NET 표준 1.1입니다.
+<span data-ttu-id="3956c-118">대상으로 지정할 수 있는 가장 높은 버전의 .NET 표준을 찾으려면 다음을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-118">To find the highest version of .NET Standard that you can target, do the following:</span></span>
+1. <span data-ttu-id="3956c-119">실행할 .NET 구현을 나타내는 행을 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-119">Find the row that indicate the .NET implementation you want to run on.</span></span>
+2. <span data-ttu-id="3956c-120">해당 행의 오른쪽에서 왼쪽으로 사용 중인 버전을 나타내는 열을 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-120">Find the column in that row that indicates your version starting from right to left.</span></span>
+3. <span data-ttu-id="3956c-121">열 헤더는 대상에서 지원하는 .NET 표준 버전을 나타냅니다(더 낮은 .NET 표준 버전도 모두 대상을 지원함).</span><span class="sxs-lookup"><span data-stu-id="3956c-121">The column header indicates the .NET Standard version that your target supports (and any lower .NET Standard versions will also support it).</span></span>
+4. <span data-ttu-id="3956c-122">대상으로 지정할 각 플랫폼에 대해 이 프로세스를 반복합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-122">Repeat this process for each platform you want to target.</span></span> <span data-ttu-id="3956c-123">대상 플랫폼이 두 개 이상 있으면 더 낮은 버전을 선택해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-123">If you have more than one target platform, you should pick the smaller version among them.</span></span> <span data-ttu-id="3956c-124">예를 들어 .NET Framework 4.5 및 .NET Core 1.0에서 실행하려는 경우 사용할 수 있는 가장 높은 .NET 표준 버전은 .NET 표준 1.1입니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-124">For example, if you want to run on .NET Framework 4.5 and .NET Core 1.0, the highest .NET Standard version you can use is .NET Standard 1.1.</span></span>
 
-### <a name="which-net-standard-version-to-target"></a>대상으로 지정할 .NET 표준 버전
+### <a name="which-net-standard-version-to-target"></a><span data-ttu-id="3956c-125">대상으로 지정할 .NET 표준 버전</span><span class="sxs-lookup"><span data-stu-id="3956c-125">Which .NET Standard version to target</span></span>
 
-.NET 표준 버전을 선택할 때 다음 절충 요소를 고려해야 합니다.
+<span data-ttu-id="3956c-126">.NET 표준 버전을 선택할 때 다음 절충 요소를 고려해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-126">When choosing a .NET Standard version, you should consider this trade-off:</span></span>
 
-- 버전이 높을수록 더 많은 API를 사용할 수 있습니다.
-- 버전이 낮을수록 더 많은 플랫폼에서 이 버전을 구현합니다.
+- <span data-ttu-id="3956c-127">버전이 높을수록 더 많은 API를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-127">The higher the version, the more APIs are available to you.</span></span>
+- <span data-ttu-id="3956c-128">버전이 낮을수록 더 많은 플랫폼에서 이 버전을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-128">The lower the version, the more platforms implement it.</span></span>
 
-일반적으로 가능한 .NET 표준의 *가장 낮은* 버전을 대상으로 지정하는 것이 좋습니다. 따라서 대상으로 지정할 수 있는 가장 높은 .NET 표준 버전을 찾은 후 다음 단계에 따릅니다.
-1. 다음으로 낮은 버전의 .NET 표준을 대상으로 지정하고 프로젝트를 빌드합니다.
-2. 프로젝트가 성공적으로 빌드되면 1단계를 반복합니다. 그렇지 않으면 다음으로 높은 버전으로 대상을 변경합니다. 이 버전을 사용해야 합니다.
+<span data-ttu-id="3956c-129">일반적으로 가능한 .NET 표준의 *가장 낮은* 버전을 대상으로 지정하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-129">In general, we recommend you to target the *lowest* version of .NET Standard possible.</span></span> <span data-ttu-id="3956c-130">따라서 대상으로 지정할 수 있는 가장 높은 .NET 표준 버전을 찾은 후 다음 단계에 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-130">So, after you find the highest .NET Standard version you can target, follow these steps:</span></span>
+1. <span data-ttu-id="3956c-131">다음으로 낮은 버전의 .NET 표준을 대상으로 지정하고 프로젝트를 빌드합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-131">Target the next lower version of .NET Standard and build your project.</span></span>
+2. <span data-ttu-id="3956c-132">프로젝트가 성공적으로 빌드되면 1단계를 반복합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-132">If your project builds successfully, repeat step 1.</span></span> <span data-ttu-id="3956c-133">그렇지 않으면 다음으로 높은 버전으로 대상을 변경합니다. 이 버전을 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-133">Otherwise, retarget to the next higher version and that's the version you should use.</span></span>
 
-### <a name="net-standard-versioning-rules"></a>.NET 표준 버전 관리 규칙
+### <a name="net-standard-versioning-rules"></a><span data-ttu-id="3956c-134">.NET 표준 버전 관리 규칙</span><span class="sxs-lookup"><span data-stu-id="3956c-134">.NET Standard versioning rules</span></span>
 
-두 가지 기본 버전 관리 규칙이 있습니다.
+<span data-ttu-id="3956c-135">두 가지 기본 버전 관리 규칙이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-135">There are two primary versioning rules:</span></span>
 
-- 추가: .NET 표준 버전은 논리적으로 동심원입니다. 더 높은 버전이 이전 버전의 모든 API를 통합합니다. 버전 간에 큰 차이는 없습니다.
-- 변경할 수 없습니다. 제공되고 나면 .NET 표준 버전은 고정됩니다. 새 API는 먼저 특정 .NET 구현(예: .NET Core)에서 제공됩니다. .NET 표준 심사 위원회에서 새 API가 모든 곳에서 사용 가능하다고 판단하면 해당 API는 새 .NET 표준 버전에 추가됩니다.
+- <span data-ttu-id="3956c-136">추가: .NET 표준 버전은 논리적으로 동심원입니다. 더 높은 버전이 이전 버전의 모든 API를 통합합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-136">Additive: .NET Standard versions are logically concentric circles: higher versions incorporate all APIs from previous versions.</span></span> <span data-ttu-id="3956c-137">버전 간에 큰 차이는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-137">There are no breaking changes between versions.</span></span>
+- <span data-ttu-id="3956c-138">변경할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-138">Immutable.</span></span> <span data-ttu-id="3956c-139">제공되고 나면 .NET 표준 버전은 고정됩니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-139">Once shipped, .NET Standard versions are frozen.</span></span> <span data-ttu-id="3956c-140">새 API는 먼저 특정 .NET 구현(예: .NET Core)에서 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-140">New APIs will first become available in specific .NET implementations, such as .NET Core.</span></span> <span data-ttu-id="3956c-141">.NET 표준 심사 위원회에서 새 API가 모든 곳에서 사용 가능하다고 판단하면 해당 API는 새 .NET 표준 버전에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-141">If the .NET Standard review board believes the new APIs should be made available everywhere, they'll be added in a new .NET Standard version.</span></span>
 
-## <a name="comparison-to-portable-class-libraries"></a>이식 가능한 클래스 라이브러리와 비교
+## <a name="comparison-to-portable-class-libraries"></a><span data-ttu-id="3956c-142">이식 가능한 클래스 라이브러리와 비교</span><span class="sxs-lookup"><span data-stu-id="3956c-142">Comparison to Portable Class Libraries</span></span>
 
-.NET Standard는 [PCL(이식 가능한 클래스 라이브러리)](./cross-platform/cross-platform-development-with-the-portable-class-library.md)을 대체합니다. .NET Standard는 표준 BCL을 조정하고 그 결과로 .NET 구현 간에 균일성을 높여 이식 가능한 라이브러리를 만드는 환경을 향상합니다. .NET 표준을 대상으로 하는 라이브러리는 PCL 또는 “.NET 표준 기반 PCL”입니다. 기존 PCL은 "프로필 기반 PCL"입니다.
+<span data-ttu-id="3956c-143">.NET Standard는 [PCL(이식 가능한 클래스 라이브러리)](./cross-platform/cross-platform-development-with-the-portable-class-library.md)을 대체합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-143">.NET Standard is the replacement for [Portable Class Libraries (PCL)](./cross-platform/cross-platform-development-with-the-portable-class-library.md).</span></span> <span data-ttu-id="3956c-144">.NET Standard는 표준 BCL을 조정하고 그 결과로 .NET 구현 간에 균일성을 높여 이식 가능한 라이브러리를 만드는 환경을 향상합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-144">The .NET Standard improves on the experience of creating portable libraries by curating a standard BCL and establishing greater uniformity across .NET implementations as a result.</span></span> <span data-ttu-id="3956c-145">.NET 표준을 대상으로 하는 라이브러리는 PCL 또는 “.NET 표준 기반 PCL”입니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-145">A library that targets .NET Standard is a PCL or a ".NET Standard-based PCL".</span></span> <span data-ttu-id="3956c-146">기존 PCL은 "프로필 기반 PCL"입니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-146">Existing PCLs are "profile-based PCLs".</span></span>
 
-.NET 표준 및 PCL 프로필은 비슷한 용도로 생성되었지만 주요 차이점도 있습니다.
+<span data-ttu-id="3956c-147">.NET 표준 및 PCL 프로필은 비슷한 용도로 생성되었지만 주요 차이점도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-147">.NET Standard and PCL profiles were created for similar purposes but also differ in key ways.</span></span>
 
-유사점:
+<span data-ttu-id="3956c-148">유사점:</span><span class="sxs-lookup"><span data-stu-id="3956c-148">Similarities:</span></span>
 
-- 이진 코드 공유에 사용할 수 있는 API를 정의합니다.
+- <span data-ttu-id="3956c-149">이진 코드 공유에 사용할 수 있는 API를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-149">Defines APIs that can be used for binary code sharing.</span></span>
 
-차이점:
+<span data-ttu-id="3956c-150">차이점:</span><span class="sxs-lookup"><span data-stu-id="3956c-150">Differences:</span></span>
 
-- .NET 표준은 조정된 API 집합이지만, PCL 프로필은 기존 플랫폼의 교차 부분으로 정의됩니다.
-- .NET 표준 버전은 선형으로 관리되지만, PCL 프로필 버전은 선형으로 관리되지 않습니다.
-- PCL 프로필은 Microsoft 플랫폼을 나타내지만 .NET 표준은 플랫폼에 독립적입니다.
+- <span data-ttu-id="3956c-151">.NET 표준은 조정된 API 집합이지만, PCL 프로필은 기존 플랫폼의 교차 부분으로 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-151">.NET Standard is a curated set of APIs, while PCL profiles are defined by intersections of existing platforms.</span></span>
+- <span data-ttu-id="3956c-152">.NET 표준 버전은 선형으로 관리되지만, PCL 프로필 버전은 선형으로 관리되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-152">.NET Standard linearly versions, while PCL profiles do not.</span></span>
+- <span data-ttu-id="3956c-153">PCL 프로필은 Microsoft 플랫폼을 나타내지만 .NET 표준은 플랫폼에 독립적입니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-153">PCL profiles represents Microsoft platforms while the .NET Standard is agnostic to platform.</span></span>
 
-## <a name="specification"></a>사양
+## <a name="specification"></a><span data-ttu-id="3956c-154">사양</span><span class="sxs-lookup"><span data-stu-id="3956c-154">Specification</span></span>
 
-.NET 표준 사양은 표준화된 API 집합입니다. 사양은 .NET 구현자, 특히 Microsoft(.NET Framework, .NET Core, Mono 포함) 및 Unity에 의해 유지 관리됩니다. 공용 피드백 프로세스는 [GitHub](https://github.com/dotnet/standard)를 통해 새로운 .NET 표준 버전을 설정하는 과정의 일부로 사용됩니다.
+<span data-ttu-id="3956c-155">.NET 표준 사양은 표준화된 API 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-155">The .NET Standard specification is a standardized set of APIs.</span></span> <span data-ttu-id="3956c-156">사양은 .NET 구현자, 특히 Microsoft(.NET Framework, .NET Core, Mono 포함) 및 Unity에 의해 유지 관리됩니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-156">The specification is maintained by .NET implementors, specifically Microsoft (includes .NET Framework, .NET Core and Mono) and Unity.</span></span> <span data-ttu-id="3956c-157">공용 피드백 프로세스는 [GitHub](https://github.com/dotnet/standard)를 통해 새로운 .NET 표준 버전을 설정하는 과정의 일부로 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-157">A public feedback process is used as part of establishing new .NET Standard versions through [GitHub](https://github.com/dotnet/standard).</span></span>
 
-### <a name="official-artifacts"></a>공식 아티팩트
+### <a name="official-artifacts"></a><span data-ttu-id="3956c-158">공식 아티팩트</span><span class="sxs-lookup"><span data-stu-id="3956c-158">Official artifacts</span></span>
 
-공식 사양은 표준의 일부인 API를 정의하는 .cs 파일 집합입니다. [dotnet/standard repository](https://github.com/dotnet/corefx/tree/master/src)(dotnet/표준 리포지토리)의 [ref directory](https://github.com/dotnet/standard/tree/master/netstandard/ref)(ref 디렉터리)는 .NET Standard API를 정의합니다.
+<span data-ttu-id="3956c-159">공식 사양은 표준의 일부인 API를 정의하는 .cs 파일 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-159">The official specification is a set of .cs files that define the APIs that are part of the standard.</span></span> <span data-ttu-id="3956c-160">[dotnet/standard repository](https://github.com/dotnet/corefx/tree/master/src)(dotnet/표준 리포지토리)의 [ref directory](https://github.com/dotnet/standard/tree/master/netstandard/ref)(ref 디렉터리)는 .NET Standard API를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-160">The [ref directory](https://github.com/dotnet/standard/tree/master/netstandard/ref) in the [dotnet/standard repository](https://github.com/dotnet/corefx/tree/master/src) defines the .NET Standard APIs.</span></span>
 
-[NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) 메타패키지([소스](https://github.com/dotnet/standard/blob/master/netstandard/pkg/NETStandard.Library.dependencies.props))는 하나 이상의 .NET Standard 버전을 부분적으로 정의하는 라이브러리 집합에 대해 설명합니다.
+<span data-ttu-id="3956c-161">[NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) 메타패키지([소스](https://github.com/dotnet/standard/blob/master/netstandard/pkg/NETStandard.Library.dependencies.props))는 하나 이상의 .NET Standard 버전을 부분적으로 정의하는 라이브러리 집합에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-161">The [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) metapackage ([source](https://github.com/dotnet/standard/blob/master/netstandard/pkg/NETStandard.Library.dependencies.props)) describes the set of libraries that define (in part) one or more .NET Standard versions.</span></span>
 
-System.Runtime 등의 지정된 구성 요소는 다음에 대해 설명합니다.
+<span data-ttu-id="3956c-162">System.Runtime 등의 지정된 구성 요소는 다음에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-162">A given component, like System.Runtime, describes:</span></span>
 
-- .NET 표준의 일부(해당 범위만)
-- 해당 범위에 대한 .NET 표준의 여러 버전
+- <span data-ttu-id="3956c-163">.NET 표준의 일부(해당 범위만)</span><span class="sxs-lookup"><span data-stu-id="3956c-163">Part of .NET Standard (just its scope).</span></span>
+- <span data-ttu-id="3956c-164">해당 범위에 대한 .NET 표준의 여러 버전</span><span class="sxs-lookup"><span data-stu-id="3956c-164">Multiple versions of .NET Standard, for that scope.</span></span>
 
-보다 편리하게 읽을 수 있고 특정 개발자 시나리오(예: 컴파일러 사용)를 지원할 수 있도록 파생 아티팩트가 제공됩니다.
+<span data-ttu-id="3956c-165">보다 편리하게 읽을 수 있고 특정 개발자 시나리오(예: 컴파일러 사용)를 지원할 수 있도록 파생 아티팩트가 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-165">Derivative artifacts are provided to enable more convenient reading and to enable certain developer scenarios (for example, using a compiler).</span></span>
 
-- [API list in markdown](https://github.com/dotnet/standard/tree/master/docs/versions)(Markdown의 API 목록)
-- [NuGet 패키지](../core/packages.md)로 배포되고 [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/) 메타패키지에서 참조되는 참조 어셈블리입니다.
+- <span data-ttu-id="3956c-166">[API list in markdown](https://github.com/dotnet/standard/tree/master/docs/versions)(Markdown의 API 목록)</span><span class="sxs-lookup"><span data-stu-id="3956c-166">[API list in markdown](https://github.com/dotnet/standard/tree/master/docs/versions)</span></span>
+- <span data-ttu-id="3956c-167">[NuGet 패키지](../core/packages.md)로 배포되고 [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/) 메타패키지에서 참조되는 참조 어셈블리입니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-167">Reference assemblies, distributed as [NuGet packages](../core/packages.md) and referenced by the [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/) metapackage.</span></span>
 
-### <a name="package-representation"></a>패키지 표현
+### <a name="package-representation"></a><span data-ttu-id="3956c-168">패키지 표현</span><span class="sxs-lookup"><span data-stu-id="3956c-168">Package representation</span></span>
 
-.NET 표준 참조 어셈블리의 기본 배포 수단은 [NuGet 패키지](../core/packages.md)입니다. 구현은 각 .NET 구현에 적절한 여러 가지 방법으로 전달됩니다.
+<span data-ttu-id="3956c-169">.NET 표준 참조 어셈블리의 기본 배포 수단은 [NuGet 패키지](../core/packages.md)입니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-169">The primary distribution vehicle for the .NET Standard reference assemblies is [NuGet packages](../core/packages.md).</span></span> <span data-ttu-id="3956c-170">구현은 각 .NET 구현에 적절한 여러 가지 방법으로 전달됩니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-170">Implementations will be delivered in a variety of ways, appropriate for each .NET implementation.</span></span>
 
-NuGet 패키지는 하나 이상의 [프레임워크](frameworks.md)를 대상으로 합니다. .NET 표준 패키지는 “.NET 표준” 프레임워크를 대상으로 합니다. `netstandard` [compact TFM](frameworks.md)(예: `netstandard1.4`)을 사용하여 .NET 표준 프레임워크를 대상으로 지정할 수 있습니다. 여러 런타임에서 실행되도록 만들어진 라이브러리는 이 프레임워크를 대상으로 해야 합니다. 
+<span data-ttu-id="3956c-171">NuGet 패키지는 하나 이상의 [프레임워크](frameworks.md)를 대상으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-171">NuGet packages target one or more [frameworks](frameworks.md).</span></span> <span data-ttu-id="3956c-172">.NET 표준 패키지는 “.NET 표준” 프레임워크를 대상으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-172">The .NET Standard packages target the ".NET Standard" framework.</span></span> <span data-ttu-id="3956c-173">`netstandard` [compact TFM](frameworks.md)(예: `netstandard1.4`)을 사용하여 .NET 표준 프레임워크를 대상으로 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-173">You can target the .NET Standard Framework using the `netstandard` [compact TFM](frameworks.md) (for example, `netstandard1.4`).</span></span> <span data-ttu-id="3956c-174">여러 런타임에서 실행되도록 만들어진 라이브러리는 이 프레임워크를 대상으로 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-174">Libraries that are intended to run on multiple runtimes should target this framework.</span></span> 
 
-`NETStandard.Library` 메타패키지는 .NET 표준을 정의하는 NuGet 패키지의 전체 집합을 참조합니다.  `netstandard`를 대상으로 지정하는 가장 일반적인 방법은 이 메타패키지를 참조하는 것입니다. 이 메타패키지는 최대 40개의 .NET 라이브러리 및 .NET 표준을 정의하는 관련 API를 설명하고 액세스할 수 있도록 합니다. 추가 API에 액세스하기 위해 `netstandard`를 대상으로 하는 추가 패키지를 참조할 수 있습니다. 
+<span data-ttu-id="3956c-175">`NETStandard.Library` 메타패키지는 .NET 표준을 정의하는 NuGet 패키지의 전체 집합을 참조합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-175">The `NETStandard.Library` metapackage references the complete set of NuGet packages that define .NET Standard.</span></span>  <span data-ttu-id="3956c-176">`netstandard`를 대상으로 지정하는 가장 일반적인 방법은 이 메타패키지를 참조하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-176">The most common way to target `netstandard` is by referencing this metapackage.</span></span> <span data-ttu-id="3956c-177">이 메타패키지는 최대 40개의 .NET 라이브러리 및 .NET 표준을 정의하는 관련 API를 설명하고 액세스할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-177">It describes and provides access to the ~40 .NET libraries and associated APIs that define .NET Standard.</span></span> <span data-ttu-id="3956c-178">추가 API에 액세스하기 위해 `netstandard`를 대상으로 하는 추가 패키지를 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-178">You can reference additional packages that target `netstandard` to get access to additional APIs.</span></span> 
 
-### <a name="versioning"></a>버전 관리
+### <a name="versioning"></a><span data-ttu-id="3956c-179">버전 관리</span><span class="sxs-lookup"><span data-stu-id="3956c-179">Versioning</span></span>
 
-사양은 단수형이 아니라 점진적으로 증가하고 선형으로 버전이 관리되는 API 집합입니다. 첫 번째 버전의 표준에서는 API의 기준 집합을 설정합니다. 이후 버전에서는 API를 추가하고 이전 버전에서 정의한 API를 상속받습니다. 표준에서 API 제거와 관련해서 설정된 프로비전은 없습니다.
+<span data-ttu-id="3956c-180">사양은 단수형이 아니라 점진적으로 증가하고 선형으로 버전이 관리되는 API 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-180">The specification is not singular, but an incrementally growing and linearly versioned set of APIs.</span></span> <span data-ttu-id="3956c-181">첫 번째 버전의 표준에서는 API의 기준 집합을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-181">The first version of the standard establishes a baseline set of APIs.</span></span> <span data-ttu-id="3956c-182">이후 버전에서는 API를 추가하고 이전 버전에서 정의한 API를 상속받습니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-182">Subsequent versions add APIs and inherit APIs defined by previous versions.</span></span> <span data-ttu-id="3956c-183">표준에서 API 제거와 관련해서 설정된 프로비전은 없습니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-183">There is no established provision for removing APIs from the standard.</span></span>
 
-.NET Standard는 어느 하나의 .NET 구현에 특정되지 않고, 이러한 런타임 중 하나의 버전 관리 체계와 일치하지도 않습니다.
+<span data-ttu-id="3956c-184">.NET Standard는 어느 하나의 .NET 구현에 특정되지 않고, 이러한 런타임 중 하나의 버전 관리 체계와 일치하지도 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-184">.NET Standard is not specific to any one .NET implementation, nor does it match the versioning scheme of any of those runtimes.</span></span>
 
-구현(예: .NET Framework, .NET Core, Mono) 중 하나에 추가된 API는 특히 기본적인 특성으로 간주되는 경우 사양에 추가할 후보로 고려될 수 있습니다. .NET 구현 릴리스에 따라 새 [.NET Standard 버전](https://github.com/dotnet/standard/blob/master/docs/versions.md)이 생성되므로 .NET Standard PCL에서 새 API를 대상으로 지정할 수 있습니다. 버전 관리 메커니즘에 대해서는 [.NET Core 버전 관리](../core/versions/index.md)에서 자세히 설명합니다.
+<span data-ttu-id="3956c-185">구현(예: .NET Framework, .NET Core, Mono) 중 하나에 추가된 API는 특히 기본적인 특성으로 간주되는 경우 사양에 추가할 후보로 고려될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-185">APIs added to any of the implementations (such as, .NET Framework, .NET Core and Mono) can be considered as candidates to add to the specification, particularly if they are thought to be fundamental in nature.</span></span> <span data-ttu-id="3956c-186">.NET 구현 릴리스에 따라 새 [.NET Standard 버전](https://github.com/dotnet/standard/blob/master/docs/versions.md)이 생성되므로 .NET Standard PCL에서 새 API를 대상으로 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-186">New [versions of .NET Standard](https://github.com/dotnet/standard/blob/master/docs/versions.md) are created based on .NET implementation releases, enabling you to target new APIs from a .NET Standard PCL.</span></span> <span data-ttu-id="3956c-187">버전 관리 메커니즘에 대해서는 [.NET Core 버전 관리](../core/versions/index.md)에서 자세히 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-187">The versioning mechanics are described in more detail in [.NET Core Versioning](../core/versions/index.md).</span></span>
 
-.NET 표준 버전 관리는 사용에 중요합니다. .NET 표준 버전이 지정된 경우 동일한 버전이나 하위 버전을 대상으로 하는 라이브러리를 사용할 수 있습니다. 다음 방법에서는 .NET 표준 대상 지정과 관련된 .NET 표준 PCL 사용 워크플로에 대해 설명합니다.
+<span data-ttu-id="3956c-188">.NET 표준 버전 관리는 사용에 중요합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-188">.NET Standard versioning is important for usage.</span></span> <span data-ttu-id="3956c-189">.NET 표준 버전이 지정된 경우 동일한 버전이나 하위 버전을 대상으로 하는 라이브러리를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-189">Given a .NET Standard version, you can use libraries that target that same or lower version.</span></span> <span data-ttu-id="3956c-190">다음 방법에서는 .NET 표준 대상 지정과 관련된 .NET 표준 PCL 사용 워크플로에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-190">The following approach describes the workflow for using .NET Standard PCLs, specific to .NET Standard targeting.</span></span>
 
-- PCL에 사용할 .NET 표준 버전을 선택합니다.
-- 동일한 .NET 표준 버전이나 하위 버전에 종속된 라이브러리를 사용합니다.
-- 상위 .NET 표준 버전에 종속된 라이브러리가 있을 경우 동일한 버전을 채택하거나 해당 라이브러리를 사용하지 않도록 결정해야 합니다.
+- <span data-ttu-id="3956c-191">PCL에 사용할 .NET 표준 버전을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-191">Select a .NET Standard version to use for your PCL.</span></span>
+- <span data-ttu-id="3956c-192">동일한 .NET 표준 버전이나 하위 버전에 종속된 라이브러리를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-192">Use libraries that depend on the same .NET Standard version or lower.</span></span>
+- <span data-ttu-id="3956c-193">상위 .NET 표준 버전에 종속된 라이브러리가 있을 경우 동일한 버전을 채택하거나 해당 라이브러리를 사용하지 않도록 결정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-193">If you find a library that depends on a higher .NET Standard version, you either need to adopt that same version or decide not to use that library.</span></span>
 
-### <a name="pcl-compatibility"></a>PCL 호환성
+### <a name="pcl-compatibility"></a><span data-ttu-id="3956c-194">PCL 호환성</span><span class="sxs-lookup"><span data-stu-id="3956c-194">PCL compatibility</span></span>
 
-.NET 표준은 PCL 프로필의 하위 집합과 호환됩니다. .NET 표준 1.0, 1.1 및 1.2는 각각 PCL 프로필 집합과 겹칩니다. 이러한 중첩은 다음 두 가지 이유로 생성되었습니다.
+<span data-ttu-id="3956c-195">.NET 표준은 PCL 프로필의 하위 집합과 호환됩니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-195">.NET Standard is compatible with a subset of PCL profiles.</span></span> <span data-ttu-id="3956c-196">.NET 표준 1.0, 1.1 및 1.2는 각각 PCL 프로필 집합과 겹칩니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-196">.NET Standard 1.0, 1.1 and 1.2 each overlap with a set of PCL profiles.</span></span> <span data-ttu-id="3956c-197">이러한 중첩은 다음 두 가지 이유로 생성되었습니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-197">This overlap was created for two reasons:</span></span>
 
-- .NET 표준 기반 PCL이 프로필 기반 PCL을 참조할 수 있습니다.
-- 프로필 기반 PCL을 .NET 표준 기반 PCL로 패키지할 수 있습니다.
+- <span data-ttu-id="3956c-198">.NET 표준 기반 PCL이 프로필 기반 PCL을 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-198">Enable .NET Standard-based PCLs to reference profile-based PCLs.</span></span>
+- <span data-ttu-id="3956c-199">프로필 기반 PCL을 .NET 표준 기반 PCL로 패키지할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-199">Enable profile-based PCLs to be packaged as .NET Standard-based PCLs.</span></span>
 
-프로필 기반 PCL 호환성은 [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) NuGet 패키지에서 제공됩니다. 이러한 종속성은 프로필 기반 PCL을 포함하는 NuGet 패키지를 참조할 때 필요합니다.
+<span data-ttu-id="3956c-200">프로필 기반 PCL 호환성은 [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) NuGet 패키지에서 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-200">Profile-based PCL compatibility is provided by the [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) NuGet package.</span></span> <span data-ttu-id="3956c-201">이러한 종속성은 프로필 기반 PCL을 포함하는 NuGet 패키지를 참조할 때 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-201">This dependency is required when referencing NuGet packages that contain profile-based PCLs.</span></span>
 
-`netstandard`로 패키지된 프로필 기반 PCL은 일반적으로 패키지된 프로필 기반 PCL보다 더 쉽게 이용할 수 있습니다. `netstandard` 패키징은 기존 사용자와 호환됩니다.
+<span data-ttu-id="3956c-202">`netstandard`로 패키지된 프로필 기반 PCL은 일반적으로 패키지된 프로필 기반 PCL보다 더 쉽게 이용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-202">Profile-based PCLs packaged as `netstandard` are easier to consume than typically packaged profile-based PCLs.</span></span> <span data-ttu-id="3956c-203">`netstandard` 패키징은 기존 사용자와 호환됩니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-203">`netstandard` packaging is compatible with existing users.</span></span>
 
-.NET 표준과 호환되는 PCL 프로필 집합을 확인할 수 있습니다. 
+<span data-ttu-id="3956c-204">.NET 표준과 호환되는 PCL 프로필 집합을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-204">You can see the set of PCL profiles that are compatible with the .NET Standard:</span></span> 
 
-| PCL 프로필 | .NET 표준 | PCL 플랫폼
+| <span data-ttu-id="3956c-205">PCL 프로필</span><span class="sxs-lookup"><span data-stu-id="3956c-205">PCL Profile</span></span> | <span data-ttu-id="3956c-206">.NET 표준</span><span class="sxs-lookup"><span data-stu-id="3956c-206">.NET Standard</span></span> | <span data-ttu-id="3956c-207">PCL 플랫폼</span><span class="sxs-lookup"><span data-stu-id="3956c-207">PCL Platforms</span></span>
 |:-----------:|:-------------:|------------------------------------------------------------------------------
-| Profile7    | 1.1           | .NET Framework 4.5, Windows 8
-| Profile31   | 1.0           | Windows 8.1, Windows Phone Silverlight 8.1
-| Profile32   | 1.2           | Windows 8.1, Windows Phone 8.1
-| Profile44   | 1.2           | .NET Framework 4.5.1, Windows 8.1
-| Profile49   | 1.0           | .NET Framework 4.5, Windows Phone Silverlight 8
-| Profile78   | 1.0           | .NET Framework 4.5, Windows 8, Windows Phone Silverlight 8
-| Profile84   | 1.0           | Windows Phone 8.1, Windows Phone Silverlight 8.1
-| Profile111  | 1.1           | .NET Framework 4.5, Windows 8, Windows Phone 8.1
-| Profile151  | 1.2           | .NET Framework 4.5.1, Windows 8.1, Windows Phone 8.1
-| Profile157  | 1.0           | Windows 8.1, Windows Phone 8.1, Windows Phone Silverlight 8.1
-| Profile259  | 1.0           | .NET Framework 4.5, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8
+| <span data-ttu-id="3956c-208">Profile7</span><span class="sxs-lookup"><span data-stu-id="3956c-208">Profile7</span></span>    | <span data-ttu-id="3956c-209">1.1</span><span class="sxs-lookup"><span data-stu-id="3956c-209">1.1</span></span>           | <span data-ttu-id="3956c-210">.NET Framework 4.5, Windows 8</span><span class="sxs-lookup"><span data-stu-id="3956c-210">.NET Framework 4.5, Windows 8</span></span>
+| <span data-ttu-id="3956c-211">Profile31</span><span class="sxs-lookup"><span data-stu-id="3956c-211">Profile31</span></span>   | <span data-ttu-id="3956c-212">1.0</span><span class="sxs-lookup"><span data-stu-id="3956c-212">1.0</span></span>           | <span data-ttu-id="3956c-213">Windows 8.1, Windows Phone Silverlight 8.1</span><span class="sxs-lookup"><span data-stu-id="3956c-213">Windows 8.1, Windows Phone Silverlight 8.1</span></span>
+| <span data-ttu-id="3956c-214">Profile32</span><span class="sxs-lookup"><span data-stu-id="3956c-214">Profile32</span></span>   | <span data-ttu-id="3956c-215">1.2</span><span class="sxs-lookup"><span data-stu-id="3956c-215">1.2</span></span>           | <span data-ttu-id="3956c-216">Windows 8.1, Windows Phone 8.1</span><span class="sxs-lookup"><span data-stu-id="3956c-216">Windows 8.1, Windows Phone 8.1</span></span>
+| <span data-ttu-id="3956c-217">Profile44</span><span class="sxs-lookup"><span data-stu-id="3956c-217">Profile44</span></span>   | <span data-ttu-id="3956c-218">1.2</span><span class="sxs-lookup"><span data-stu-id="3956c-218">1.2</span></span>           | <span data-ttu-id="3956c-219">.NET Framework 4.5.1, Windows 8.1</span><span class="sxs-lookup"><span data-stu-id="3956c-219">.NET Framework 4.5.1, Windows 8.1</span></span>
+| <span data-ttu-id="3956c-220">Profile49</span><span class="sxs-lookup"><span data-stu-id="3956c-220">Profile49</span></span>   | <span data-ttu-id="3956c-221">1.0</span><span class="sxs-lookup"><span data-stu-id="3956c-221">1.0</span></span>           | <span data-ttu-id="3956c-222">.NET Framework 4.5, Windows Phone Silverlight 8</span><span class="sxs-lookup"><span data-stu-id="3956c-222">.NET Framework 4.5, Windows Phone Silverlight 8</span></span>
+| <span data-ttu-id="3956c-223">Profile78</span><span class="sxs-lookup"><span data-stu-id="3956c-223">Profile78</span></span>   | <span data-ttu-id="3956c-224">1.0</span><span class="sxs-lookup"><span data-stu-id="3956c-224">1.0</span></span>           | <span data-ttu-id="3956c-225">.NET Framework 4.5, Windows 8, Windows Phone Silverlight 8</span><span class="sxs-lookup"><span data-stu-id="3956c-225">.NET Framework 4.5, Windows 8, Windows Phone Silverlight 8</span></span>
+| <span data-ttu-id="3956c-226">Profile84</span><span class="sxs-lookup"><span data-stu-id="3956c-226">Profile84</span></span>   | <span data-ttu-id="3956c-227">1.0</span><span class="sxs-lookup"><span data-stu-id="3956c-227">1.0</span></span>           | <span data-ttu-id="3956c-228">Windows Phone 8.1, Windows Phone Silverlight 8.1</span><span class="sxs-lookup"><span data-stu-id="3956c-228">Windows Phone 8.1, Windows Phone Silverlight 8.1</span></span>
+| <span data-ttu-id="3956c-229">Profile111</span><span class="sxs-lookup"><span data-stu-id="3956c-229">Profile111</span></span>  | <span data-ttu-id="3956c-230">1.1</span><span class="sxs-lookup"><span data-stu-id="3956c-230">1.1</span></span>           | <span data-ttu-id="3956c-231">.NET Framework 4.5, Windows 8, Windows Phone 8.1</span><span class="sxs-lookup"><span data-stu-id="3956c-231">.NET Framework 4.5, Windows 8, Windows Phone 8.1</span></span>
+| <span data-ttu-id="3956c-232">Profile151</span><span class="sxs-lookup"><span data-stu-id="3956c-232">Profile151</span></span>  | <span data-ttu-id="3956c-233">1.2</span><span class="sxs-lookup"><span data-stu-id="3956c-233">1.2</span></span>           | <span data-ttu-id="3956c-234">.NET Framework 4.5.1, Windows 8.1, Windows Phone 8.1</span><span class="sxs-lookup"><span data-stu-id="3956c-234">.NET Framework 4.5.1, Windows 8.1, Windows Phone 8.1</span></span>
+| <span data-ttu-id="3956c-235">Profile157</span><span class="sxs-lookup"><span data-stu-id="3956c-235">Profile157</span></span>  | <span data-ttu-id="3956c-236">1.0</span><span class="sxs-lookup"><span data-stu-id="3956c-236">1.0</span></span>           | <span data-ttu-id="3956c-237">Windows 8.1, Windows Phone 8.1, Windows Phone Silverlight 8.1</span><span class="sxs-lookup"><span data-stu-id="3956c-237">Windows 8.1, Windows Phone 8.1, Windows Phone Silverlight 8.1</span></span>
+| <span data-ttu-id="3956c-238">Profile259</span><span class="sxs-lookup"><span data-stu-id="3956c-238">Profile259</span></span>  | <span data-ttu-id="3956c-239">1.0</span><span class="sxs-lookup"><span data-stu-id="3956c-239">1.0</span></span>           | <span data-ttu-id="3956c-240">.NET Framework 4.5, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8</span><span class="sxs-lookup"><span data-stu-id="3956c-240">.NET Framework 4.5, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8</span></span>
 
 
-## <a name="targeting-net-standard"></a>.NET 표준을 대상으로 지정
+## <a name="targeting-net-standard"></a><span data-ttu-id="3956c-241">.NET 표준을 대상으로 지정</span><span class="sxs-lookup"><span data-stu-id="3956c-241">Targeting .NET Standard</span></span>
 
-`netstandard` 프레임워크와 NETStandard.Library 메타패키지의 조합을 사용하여 [.NET 표준 라이브러리를 빌드](../core/tutorials/libraries.md)할 수 있습니다. [.NET Core 도구를 사용하여 .NET 표준을 대상으로 지정](../core/packages.md)하는 예를 확인할 수 있습니다.
+<span data-ttu-id="3956c-242">`netstandard` 프레임워크와 NETStandard.Library 메타패키지의 조합을 사용하여 [.NET 표준 라이브러리를 빌드](../core/tutorials/libraries.md)할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-242">You can [build .NET Standard Libraries](../core/tutorials/libraries.md) using a combination of the `netstandard` framework and the NETStandard.Library metapackage.</span></span> <span data-ttu-id="3956c-243">[.NET Core 도구를 사용하여 .NET 표준을 대상으로 지정](../core/packages.md)하는 예를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3956c-243">You can see examples of [targeting the .NET Standard with .NET Core tools](../core/packages.md).</span></span>
 
-## <a name="see-also"></a>참고 항목
-[.NET Standard Versions](https://github.com/dotnet/standard/blob/master/docs/versions.md)(.NET 표준 버전)
-
+## <a name="see-also"></a><span data-ttu-id="3956c-244">참고 항목</span><span class="sxs-lookup"><span data-stu-id="3956c-244">See also</span></span>
+<span data-ttu-id="3956c-245">[.NET Standard Versions](https://github.com/dotnet/standard/blob/master/docs/versions.md)(.NET 표준 버전)</span><span class="sxs-lookup"><span data-stu-id="3956c-245">[.NET Standard Versions](https://github.com/dotnet/standard/blob/master/docs/versions.md)</span></span>

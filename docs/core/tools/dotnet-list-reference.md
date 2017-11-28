@@ -7,48 +7,46 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.translationtype: HT
-ms.sourcegitcommit: a19ab54a6cc44bd7acd1e40a4ca94da52bf14297
 ms.openlocfilehash: b3e903c15a7486faa279d47ad5e2e00c090b19af
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="dotnet-list-reference"></a>dotnet list reference
+# <a name="dotnet-list-reference"></a><span data-ttu-id="ae729-103">dotnet list reference</span><span class="sxs-lookup"><span data-stu-id="ae729-103">dotnet list reference</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>이름
+## <a name="name"></a><span data-ttu-id="ae729-104">이름</span><span class="sxs-lookup"><span data-stu-id="ae729-104">Name</span></span>
 
-`dotnet list reference` - 프로젝트 간 참조를 나열합니다.
+<span data-ttu-id="ae729-105">`dotnet list reference` - 프로젝트 간 참조를 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="ae729-105">`dotnet list reference` - Lists project to project references.</span></span>
 
-## <a name="synopsis"></a>개요
+## <a name="synopsis"></a><span data-ttu-id="ae729-106">개요</span><span class="sxs-lookup"><span data-stu-id="ae729-106">Synopsis</span></span>
 
 `dotnet list [<PROJECT>] reference [-h|--help]`
 
-## <a name="description"></a>설명
+## <a name="description"></a><span data-ttu-id="ae729-107">설명</span><span class="sxs-lookup"><span data-stu-id="ae729-107">Description</span></span>
 
-`dotnet list reference` 명령은 지정한 프로젝트에 대해 프로젝트 참조를 나열하는 편리한 옵션을 제공합니다.
+<span data-ttu-id="ae729-108">`dotnet list reference` 명령은 지정한 프로젝트에 대해 프로젝트 참조를 나열하는 편리한 옵션을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="ae729-108">The `dotnet list reference` command provides a convenient option to list project references for a given project.</span></span>
 
-## <a name="arguments"></a>인수
+## <a name="arguments"></a><span data-ttu-id="ae729-109">인수</span><span class="sxs-lookup"><span data-stu-id="ae729-109">Arguments</span></span>
 
 `PROJECT`
 
-참조를 나열하기 위해 사용할 프로젝트 파일을 지정합니다. 지정하지 않으면 이 명령은 현재 디렉터리에서 프로젝트 파일을 검색합니다.
+<span data-ttu-id="ae729-110">참조를 나열하기 위해 사용할 프로젝트 파일을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="ae729-110">Specifies the project file to use for listing references.</span></span> <span data-ttu-id="ae729-111">지정하지 않으면 이 명령은 현재 디렉터리에서 프로젝트 파일을 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="ae729-111">If not specified, the command will search the current directory for a project file.</span></span>
 
-## <a name="options"></a>옵션
+## <a name="options"></a><span data-ttu-id="ae729-112">옵션</span><span class="sxs-lookup"><span data-stu-id="ae729-112">Options</span></span>
 
 `-h|--help`
 
-명령에 대한 간단한 도움말을 출력합니다.
+<span data-ttu-id="ae729-113">명령에 대한 간단한 도움말을 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="ae729-113">Prints out a short help for the command.</span></span>
 
-## <a name="examples"></a>예제
+## <a name="examples"></a><span data-ttu-id="ae729-114">예제</span><span class="sxs-lookup"><span data-stu-id="ae729-114">Examples</span></span>
 
-지정된 프로젝트에 대한 프로젝트 참조를 나열합니다.
+<span data-ttu-id="ae729-115">지정된 프로젝트에 대한 프로젝트 참조를 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="ae729-115">List the project references for the specified project:</span></span>
 
 `dotnet list app/app.csproj reference`
 
-현재 디렉터리에 있는 프로젝트에 대한 프로젝트 참조를 나열합니다.
+<span data-ttu-id="ae729-116">현재 디렉터리에 있는 프로젝트에 대한 프로젝트 참조를 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="ae729-116">List the project references for the project in the current directory:</span></span>
 
 `dotnet list reference`
-

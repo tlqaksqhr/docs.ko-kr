@@ -1,70 +1,71 @@
 ---
-title: "방법: 디자이너를 사용하여 Windows Forms DataGrid 컨트롤에 테이블 및 열 추가 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "열[Windows Forms], DataGrid 컨트롤에 추가"
-  - "DataGrid 컨트롤[Windows Forms], 테이블 및 열 추가"
-  - "테이블[Windows Forms], DataGrid 컨트롤에 추가"
+title: "방법: 디자이너를 사용하여 Windows Forms DataGrid 컨트롤에 테이블 및 열 추가"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [Windows Forms], adding to DataGrid control
+- tables [Windows Forms], adding to DataGrid control
+- DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 4a6d1b34-b696-476b-bf8a-57c6230aa9e1
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4c80bd12db83284c30f637f48dfc09e7de22280b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 디자이너를 사용하여 Windows Forms DataGrid 컨트롤에 테이블 및 열 추가
+# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a><span data-ttu-id="a5c38-102">방법: 디자이너를 사용하여 Windows Forms DataGrid 컨트롤에 테이블 및 열 추가</span><span class="sxs-lookup"><span data-stu-id="a5c38-102">How to: Add Tables and Columns to the Windows Forms DataGrid Control Using the Designer</span></span>
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다.  자세한 내용은 [Windows Forms DataGridView 컨트롤과 DataGrid 컨트롤의 차이점](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.  
+>  <span data-ttu-id="a5c38-103"><xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a5c38-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="a5c38-104">자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="a5c38-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
   
- <xref:System.Windows.Forms.DataGridTableStyle> 개체를 만든 다음 <xref:System.Windows.Forms.DataGrid> 컨트롤의 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 속성을 통해 액세스할 수 있는 <xref:System.Windows.Forms.GridTableStylesCollection> 개체에 추가하여 테이블과 열에 Windows Forms <xref:System.Windows.Forms.DataGrid> 컨트롤의 데이터를 표시할 수 있습니다.  각 테이블 스타일은 <xref:System.Windows.Forms.DataGridTableStyle>의 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 속성에 어떤 데이터 테이블이 지정되든 상관없이 그 내용을 표시합니다.  기본적으로 열 스타일이 지정되지 않은 테이블 스타일은 해당 데이터 테이블 안에 있는 모든 열을 표시합니다.  각 <xref:System.Windows.Forms.DataGridTableStyle>의 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 속성을 통해 액세스할 수 있는 <xref:System.Windows.Forms.GridColumnStylesCollection>에 <xref:System.Windows.Forms.DataGridColumnStyle> 개체를 추가하여 표시될 테이블의 열을 제한할 수 있습니다.  
+ <span data-ttu-id="a5c38-105">Windows Forms에서 데이터를 표시할 수 있습니다 <xref:System.Windows.Forms.DataGrid> 컨트롤에 테이블과 열을 만들어서 <xref:System.Windows.Forms.DataGridTableStyle> 개체에 추가 하는 <xref:System.Windows.Forms.GridTableStylesCollection> 통해 액세스할 수 있는 개체는 <xref:System.Windows.Forms.DataGrid> 컨트롤의 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="a5c38-105">You can display data in the Windows Forms <xref:System.Windows.Forms.DataGrid> control in tables and columns by creating <xref:System.Windows.Forms.DataGridTableStyle> objects and adding them to the <xref:System.Windows.Forms.GridTableStylesCollection> object, which is accessed through the <xref:System.Windows.Forms.DataGrid> control's <xref:System.Windows.Forms.DataGrid.TableStyles%2A> property.</span></span> <span data-ttu-id="a5c38-106">에 지정 된 모든 데이터 테이블의 내용을 표시 하는 각 테이블 스타일의 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 의 속성은 <xref:System.Windows.Forms.DataGridTableStyle>합니다.</span><span class="sxs-lookup"><span data-stu-id="a5c38-106">Each table style displays the contents of whatever data table is specified in the <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> property of the <xref:System.Windows.Forms.DataGridTableStyle>.</span></span> <span data-ttu-id="a5c38-107">기본적으로 테이블 스타일 열 스타일을 지정 하지 않으면 해당 데이터 테이블 안의 모든 열 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a5c38-107">By default, a table style without column styles specified will display all the columns within that data table.</span></span> <span data-ttu-id="a5c38-108">추가 하 여 표시할 테이블에서 열을 제한할 수 있습니다 <xref:System.Windows.Forms.DataGridColumnStyle> 개체를 <xref:System.Windows.Forms.GridColumnStylesCollection>를 통해 액세스할는 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 각 속성 <xref:System.Windows.Forms.DataGridTableStyle>합니다.</span><span class="sxs-lookup"><span data-stu-id="a5c38-108">You can restrict which columns from the table appear by adding <xref:System.Windows.Forms.DataGridColumnStyle> objects to the <xref:System.Windows.Forms.GridColumnStylesCollection>, which is accessed through the <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> property of each <xref:System.Windows.Forms.DataGridTableStyle>.</span></span>  
   
- 다음 절차를 수행하려면 <xref:System.Windows.Forms.DataGrid> 컨트롤이 포함된 폼이 있는 **Windows 응용 프로그램** 프로젝트가 필요합니다.  이러한 프로젝트를 설정하는 방법에 대한 내용은 [How to: Create a Windows Application Project](http://msdn.microsoft.com/ko-kr/b2f93fed-c635-4705-8d0e-cf079a264efa) 및 [방법: Windows Forms에 컨트롤 추가](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)를 참조하십시오.  기본적으로 [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]에서는 <xref:System.Windows.Forms.DataGrid> 컨트롤이 **도구 상자**에 없습니다.  이 컨트롤을 추가하는 방법에 대한 자세한 내용은 [How to: Add Items to the Toolbox](http://msdn.microsoft.com/ko-kr/458e119e-17fe-450b-b889-e31c128bd7e0)를 참조하십시오.  
+ <span data-ttu-id="a5c38-109">다음 절차를 필요는 **Windows 응용 프로그램** 포함 하는 폼을 사용 하 여 프로젝트는 <xref:System.Windows.Forms.DataGrid> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="a5c38-109">The following procedures require a **Windows Application** project with a form that contains a <xref:System.Windows.Forms.DataGrid> control.</span></span> <span data-ttu-id="a5c38-110">이러한 프로젝트를 설정 하는 방법에 대 한 정보를 참조 하십시오. [하는 방법: Windows 응용 프로그램 프로젝트 만들기](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) 및 [하는 방법: Windows Forms에 컨트롤 추가](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a5c38-110">For information about how to set up such a project, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) and [How to: Add Controls to Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span></span> <span data-ttu-id="a5c38-111">기본적으로 [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], <xref:System.Windows.Forms.DataGrid> 내에 **도구 상자**합니다.</span><span class="sxs-lookup"><span data-stu-id="a5c38-111">By default in [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], the <xref:System.Windows.Forms.DataGrid> control is not in the **Toolbox**.</span></span> <span data-ttu-id="a5c38-112">추가 하는 방법에 대 한 정보를 참조 하십시오. [하는 방법: 도구 상자에 항목 추가](http://msdn.microsoft.com/en-us/458e119e-17fe-450b-b889-e31c128bd7e0)합니다.</span><span class="sxs-lookup"><span data-stu-id="a5c38-112">For information about adding it, see [How to: Add Items to the Toolbox](http://msdn.microsoft.com/en-us/458e119e-17fe-450b-b889-e31c128bd7e0).</span></span>  
   
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다.  설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기**를 선택합니다.  자세한 내용은 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ko-kr/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하십시오.  
+>  <span data-ttu-id="a5c38-113">표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a5c38-113">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="a5c38-114">설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="a5c38-114">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="a5c38-115">자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="a5c38-115">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### 디자이너에서 DataGrid 컨트롤에 테이블을 추가하려면  
+### <a name="to-add-a-table-to-the-datagrid-control-in-the-designer"></a><span data-ttu-id="a5c38-116">DataGrid 컨트롤 디자이너에 테이블을 추가 하려면</span><span class="sxs-lookup"><span data-stu-id="a5c38-116">To add a table to the DataGrid control in the designer</span></span>  
   
-1.  테이블의 데이터를 표시하려면 먼저 <xref:System.Windows.Forms.DataGrid> 컨트롤을 데이터 집합에 바인딩해야 합니다.  자세한 내용은 [방법: 디자이너를 사용하여 데이터 소스에 Windows Forms DataGrid 컨트롤 바인딩](../../../../docs/framework/winforms/controls/bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)을 참조하십시오.  
+1.  <span data-ttu-id="a5c38-117">테이블의 데이터를 표시 하려면 먼저 바인딩해야는 <xref:System.Windows.Forms.DataGrid> 데이터 집합을 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="a5c38-117">In order to display data in the table, you must first bind the <xref:System.Windows.Forms.DataGrid> control to a dataset.</span></span> <span data-ttu-id="a5c38-118">자세한 내용은 참조 [하는 방법: Windows Forms DataGrid 컨트롤을 데이터 원본 디자이너를 사용 하는 바인딩할](../../../../docs/framework/winforms/controls/bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a5c38-118">For more information, see [How to: Bind the Windows Forms DataGrid Control to a Data Source Using the Designer](../../../../docs/framework/winforms/controls/bind-wf-datagrid-control-to-a-data-source-using-the-designer.md).</span></span>  
   
-2.  속성 창에서 <xref:System.Windows.Forms.DataGrid> 컨트롤의 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 속성을 선택한 다음 속성 옆에 있는 줄임표 단추\(![VisualStudioEllipsesButton 스크린 샷](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\)를 클릭하여 **DataGridTableStyle 컬렉션 편집기**를 엽니다.  
+2.  <span data-ttu-id="a5c38-119">선택 된 <xref:System.Windows.Forms.DataGrid> 컨트롤의 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 속성이 속성 창에서 줄임표 단추를 클릭 하 고 (![VisualStudioEllipsesButton 스크린 샷](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 옆에 표시할 속성을는 **DataGridTableStyle 컬렉션 편집기**합니다.</span><span class="sxs-lookup"><span data-stu-id="a5c38-119">Select the <xref:System.Windows.Forms.DataGrid> control's <xref:System.Windows.Forms.DataGrid.TableStyles%2A> property in the Properties window, and then click the ellipsis button (![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) next to the property to display the **DataGridTableStyle Collection Editor**.</span></span>  
   
-3.  컬렉션 편집기에서 **추가**를 클릭하여 테이블 스타일을 삽입합니다.  
+3.  <span data-ttu-id="a5c38-120">컬렉션 편집기에서 클릭 **추가** 테이블 스타일을 삽입 합니다.</span><span class="sxs-lookup"><span data-stu-id="a5c38-120">In the collection editor, click **Add** to insert a table style.</span></span>  
   
-4.  **확인**을 클릭하여 컬렉션 편집기를 닫은 다음 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 속성 옆에 있는 줄임표 단추를 클릭하여 다시 엽니다.  
+4.  <span data-ttu-id="a5c38-121">클릭 **확인** 컬렉션 편집기를 닫고를 닫은 다음 다시 옆에 있는 줄임표 단추를 클릭 하 여는 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="a5c38-121">Click **OK** to close the collection editor, and then reopen it by clicking the ellipsis button next to the <xref:System.Windows.Forms.DataGrid.TableStyles%2A> property.</span></span>  
   
-     컬렉션 편집기를 다시 열면 해당 컨트롤에 바인딩된 모든 데이터 테이블이 테이블 스타일의 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 속성에 대한 드롭다운 목록에 나타납니다.  
+     <span data-ttu-id="a5c38-122">컨트롤에 바인딩된 모든 데이터 테이블에 대 한 드롭다운 목록에 표시 됩니다 컬렉션 편집기를 다시 열 때는 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 테이블 스타일의 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="a5c38-122">When you reopen the collection editor, any data tables bound to the control will appear in the drop-down list for the <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> property of the table style.</span></span>  
   
-5.  컬렉션 편집기의 **멤버** 상자에서 테이블 스타일을 클릭합니다.  
+5.  <span data-ttu-id="a5c38-123">에 **멤버** 상자 컬렉션 편집기의 테이블 스타일을 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="a5c38-123">In the **Members** box of the collection editor, click the table style.</span></span>  
   
-6.  컬렉션 편집기의 **속성** 상자에서 표시할 테이블에 대한 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 값을 선택합니다.  
+6.  <span data-ttu-id="a5c38-124">에 **속성** 컬렉션 편집기 상자는 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 표시 하려는 테이블에 대 한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="a5c38-124">In the **Properties** box of the collection editor, select the <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> value for the table you want to display.</span></span>  
   
-### 디자이너에서 DataGrid 컨트롤에 열을 추가하려면  
+### <a name="to-add-a-column-to-the-datagrid-control-in-the-designer"></a><span data-ttu-id="a5c38-125">디자이너의 DataGrid 컨트롤에 열을 추가 하려면</span><span class="sxs-lookup"><span data-stu-id="a5c38-125">To add a column to the DataGrid control in the designer</span></span>  
   
-1.  **DataGridTableStyle 컬렉션 편집기**의 **멤버** 상자에서 적절한 테이블 스타일을 선택합니다.  컬렉션 편집기의 **속성** 상자에서 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 컬렉션을 선택한 다음 속성 옆의 줄임표 단추\(![VisualStudioEllipsesButton 스크린 샷](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\)를 클릭하여 **DataGridColumnStyle 컬렉션 편집기**를 표시합니다.  
+1.  <span data-ttu-id="a5c38-126">에 **멤버** 상자는 **DataGridTableStyle 컬렉션 편집기**, 해당 테이블 스타일을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="a5c38-126">In the **Members** box of the **DataGridTableStyle Collection Editor**, select the appropriate table style.</span></span> <span data-ttu-id="a5c38-127">에 **속성** 컬렉션 편집기 상자는 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 컬렉션, 줄임표 단추를 클릭 하 고 (![VisualStudioEllipsesButton 스크린 샷] (../../../../docs/framework/winforms/media/vbellipsesbutton.png " vbEllipsesButton")) 표시 하 고 속성 옆에 **DataGridColumnStyle 컬렉션 편집기**합니다.</span><span class="sxs-lookup"><span data-stu-id="a5c38-127">In the **Properties** box of the collection editor, select the <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> collection, and then click the ellipsis button (![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) next to the property to display the **DataGridColumnStyle Collection Editor**.</span></span>  
   
-2.  컬렉션 편집기에서 **추가** 단추를 클릭하여 열 스타일을 삽입하거나 **추가** 단추 옆에 있는 아래쪽 화살표를 클릭하여 열 형식을 지정합니다.  
+2.  <span data-ttu-id="a5c38-128">컬렉션 편집기에서 클릭 **추가** 열 스타일을 삽입 하거나 옆에 있는 아래쪽 화살표를 클릭 **추가** 열 형식을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a5c38-128">In the collection editor, click **Add** to insert a column style or click the down arrow next to **Add** to specify a column type.</span></span>  
   
-     드롭다운 상자에서 <xref:System.Windows.Forms.DataGridTextBoxColumn> 또는 <xref:System.Windows.Forms.DataGridBoolColumn> 형식을 선택할 수 있습니다.  
+     <span data-ttu-id="a5c38-129">드롭다운 목록 상자에서 선택할 수 있습니다는 <xref:System.Windows.Forms.DataGridTextBoxColumn> 또는 <xref:System.Windows.Forms.DataGridBoolColumn> 유형입니다.</span><span class="sxs-lookup"><span data-stu-id="a5c38-129">In the drop-down box, you can select either the <xref:System.Windows.Forms.DataGridTextBoxColumn> or <xref:System.Windows.Forms.DataGridBoolColumn> type.</span></span>  
   
-3.  확인을 클릭하여 **DataGridColumnStyle 컬렉션 편집기**를 닫은 다음 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 속성 옆에 있는 줄임표 단추를 클릭하여 다시 엽니다.  
+3.  <span data-ttu-id="a5c38-130">확인을 눌러 닫습니다는 **DataGridColumnStyle 컬렉션 편집기**를 닫은 다음 옆에 있는 줄임표 단추를 클릭 하 여는 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="a5c38-130">Click OK to close the **DataGridColumnStyle Collection Editor**, and then reopen it by clicking the ellipsis button next to the <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> property.</span></span>  
   
-     컬렉션 편집기를 다시 열면 바인딩된 데이터 테이블에 있는 데이터 열이 열 스타일의 <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> 속성에 대한 드롭다운 목록에 나타납니다.  
+     <span data-ttu-id="a5c38-131">바인딩된 데이터 테이블에 있는 데이터 열에 대 한 드롭다운 목록에 표시 됩니다 컬렉션 편집기를 다시 열 때는 <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> 열 스타일의 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="a5c38-131">When you reopen the collection editor, any data columns in the bound data table will appear in the drop-down list for the <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> property of the column style.</span></span>  
   
-4.  컬렉션 편집기의 **멤버** 상자에서 열 스타일을 클릭합니다.  
+4.  <span data-ttu-id="a5c38-132">에 **멤버** 상자 컬렉션 편집기의 열 스타일을 클릭 합니다.</span><span class="sxs-lookup"><span data-stu-id="a5c38-132">In the **Members** box of the collection editor, click the column style.</span></span>  
   
-5.  컬렉션 편집기의 **속성** 상자에서 표시할 열에 대한 <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> 값을 선택합니다.  
+5.  <span data-ttu-id="a5c38-133">에 **속성** 컬렉션 편집기 상자는 <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> 표시 하려는 열에 대 한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="a5c38-133">In the **Properties** box of the collection editor, select the <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> value for the column you want to display.</span></span>  
   
-## 참고 항목  
- [DataGrid 컨트롤](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)   
- [방법: Windows Forms DataGrid 컨트롤에서 열 삭제 또는 숨기기](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+## <a name="see-also"></a><span data-ttu-id="a5c38-134">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a5c38-134">See Also</span></span>  
+ [<span data-ttu-id="a5c38-135">DataGrid 컨트롤</span><span class="sxs-lookup"><span data-stu-id="a5c38-135">DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
+ [<span data-ttu-id="a5c38-136">방법: Windows Forms DataGrid 컨트롤에서 열 삭제 또는 숨기기</span><span class="sxs-lookup"><span data-stu-id="a5c38-136">How to: Delete or Hide Columns in the Windows Forms DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

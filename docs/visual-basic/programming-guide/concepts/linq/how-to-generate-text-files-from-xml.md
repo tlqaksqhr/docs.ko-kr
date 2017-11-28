@@ -1,35 +1,30 @@
 ---
-title: "방법: XML (Visual Basic)에서 텍스트 파일을 생성 합니다. | Microsoft 문서"
+title: "방법: XML (Visual Basic)에서 텍스트 파일을 생성 합니다."
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 3b33f191-4abe-4419-b81b-3cb81d9a317f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 0c45218ab9330c0b67ebfbbcedd5e5f699c3e6e2
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 901d31b6dbac54740404a7dc182ecbadca5ddd74
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-generate-text-files-from-xml-visual-basic"></a>방법: XML (Visual Basic)에서 텍스트 파일을 생성 합니다.
-이 예제에서는 XML 파일에서 CSV(쉼표로 구분된 값) 파일을 생성하는 방법을 보여 줍니다.  
+# <a name="how-to-generate-text-files-from-xml-visual-basic"></a><span data-ttu-id="519ef-102">방법: XML (Visual Basic)에서 텍스트 파일을 생성 합니다.</span><span class="sxs-lookup"><span data-stu-id="519ef-102">How to: Generate Text Files from XML (Visual Basic)</span></span>
+<span data-ttu-id="519ef-103">이 예제에서는 XML 파일에서 CSV(쉼표로 구분된 값) 파일을 생성하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="519ef-103">This example shows how to generate a comma-separated values (CSV) file from an XML file.</span></span>  
   
-## <a name="example"></a>예제  
- 
-          [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 버전에서는 절차적 코드를 사용하여 문자열 컬렉션을 단일 문자열로 집계합니다.  
+## <a name="example"></a><span data-ttu-id="519ef-104">예제</span><span class="sxs-lookup"><span data-stu-id="519ef-104">Example</span></span>  
+ <span data-ttu-id="519ef-105">[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 버전에서는 절차적 코드를 사용하여 문자열 컬렉션을 단일 문자열로 집계합니다.</span><span class="sxs-lookup"><span data-stu-id="519ef-105">The [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] version uses procedural code to aggregate the collection of strings into a single string.</span></span>  
   
- 이 예제에서는 다음 XML 문서: [샘플 XML 파일: Customers 및 Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)합니다.  
+ <span data-ttu-id="519ef-106">이 예제에서는 XML 문서 [샘플 XML 파일: 고객 및 주문(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="519ef-106">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim custOrd As XElement = XElement.Load("CustomersOrders.xml")  
@@ -56,7 +51,7 @@ Next
 Console.WriteLine(sb.ToString())  
 ```  
   
- 이 코드의 결과는 다음과 같습니다.  
+ <span data-ttu-id="519ef-107">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="519ef-107">This code produces the following output:</span></span>  
   
 ```  
 GREAL,Great Lakes Food Market,Howard Snyder,Marketing Manager,(503) 555-7555,2732 Baker Blvd.,Eugene,OR,97403,USA  
@@ -65,5 +60,5 @@ LAZYK,Lazy K Kountry Store,John Steel,Marketing Manager,(509) 555-7969,12 Orches
 LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,San Francisco,CA,94117,USA  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [프로젝션 및 변환 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="519ef-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="519ef-108">See Also</span></span>  
+ [<span data-ttu-id="519ef-109">프로젝션 및 변형 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="519ef-109">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

@@ -1,54 +1,57 @@
 ---
-title: "워크플로의 &lt;behaviors&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "워크플로의 &lt;behaviors&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 3c6017b6-0c4f-4192-bd67-9515f5d1ec82
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 40278c0a3d99dd5c37df1d642b8a2e13e9f62633
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 워크플로의 &lt;behaviors&gt;
-이 요소에는 **serviceBehaviors** 컬렉션이 포함됩니다.  컬렉션의 각 요소는 워크플로 서비스에서 사용하는 동작 요소를 정의합니다.  각 동작 요소는 고유한 **name** 특성으로 식별됩니다.  
+# <a name="ltbehaviorsgt-of-workflow"></a><span data-ttu-id="0c28e-102">워크플로의 &lt;behaviors&gt;</span><span class="sxs-lookup"><span data-stu-id="0c28e-102">&lt;behaviors&gt; of workflow</span></span>
+<span data-ttu-id="0c28e-103">이 요소에 포함 된 **serviceBehaviors** 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="0c28e-103">This element contains the **serviceBehaviors** collection.</span></span>  <span data-ttu-id="0c28e-104">컬렉션의 각 요소는 워크플로 서비스에서 사용하는 동작 요소를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="0c28e-104">Each element in the collection defines behavior elements consumed by workflow services.</span></span> <span data-ttu-id="0c28e-105">각 동작 요소는 고유한으로 식별 되 **이름** 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="0c28e-105">Each behavior element is identified by its unique **name** attribute.</span></span>  
   
- \<system.ServiceModel\>  
+ <span data-ttu-id="0c28e-106">\<시스템입니다. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="0c28e-106">\<system.ServiceModel></span></span>  
   
-## 구문  
+## <a name="syntax"></a><span data-ttu-id="0c28e-107">구문</span><span class="sxs-lookup"><span data-stu-id="0c28e-107">Syntax</span></span>  
   
-```  
-  
+```xml  
 <behaviors>  
-   <serviceBehaviors>  
-   </serviceBehaviors>  
+  <serviceBehaviors>  
+  </serviceBehaviors>  
 </behaviors>  
 ```  
   
-## 특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="0c28e-108">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="0c28e-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="0c28e-109">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="0c28e-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 특성  
- 없음  
+### <a name="attributes"></a><span data-ttu-id="0c28e-110">특성</span><span class="sxs-lookup"><span data-stu-id="0c28e-110">Attributes</span></span>  
+ <span data-ttu-id="0c28e-111">없음</span><span class="sxs-lookup"><span data-stu-id="0c28e-111">None</span></span>  
   
-### 자식 요소  
+### <a name="child-elements"></a><span data-ttu-id="0c28e-112">자식 요소</span><span class="sxs-lookup"><span data-stu-id="0c28e-112">Child Elements</span></span>  
   
-|요소|설명|  
-|--------|--------|  
-|[\<serviceBehaviors\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/servicebehaviors-of-workflow.md)|이 구성 섹션은 특정 워크플로 서비스에 정의된 모든 동작을 나타냅니다.|  
+|<span data-ttu-id="0c28e-113">요소</span><span class="sxs-lookup"><span data-stu-id="0c28e-113">Element</span></span>|<span data-ttu-id="0c28e-114">설명</span><span class="sxs-lookup"><span data-stu-id="0c28e-114">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="0c28e-115">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="0c28e-115">\<serviceBehaviors></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/servicebehaviors-of-workflow.md)|<span data-ttu-id="0c28e-116">이 구성 섹션은 특정 워크플로 서비스에 정의된 모든 동작을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="0c28e-116">This configuration section represents all the behaviors defined for a specific workflow service.</span></span>|  
   
-### 부모 요소  
+### <a name="parent-elements"></a><span data-ttu-id="0c28e-117">부모 요소</span><span class="sxs-lookup"><span data-stu-id="0c28e-117">Parent Elements</span></span>  
   
-|요소|설명|  
-|--------|--------|  
-|[\<system.serviceModel\>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)|모든 워크플로 구성 요소의 루트 요소입니다.|  
+|<span data-ttu-id="0c28e-118">요소</span><span class="sxs-lookup"><span data-stu-id="0c28e-118">Element</span></span>|<span data-ttu-id="0c28e-119">설명</span><span class="sxs-lookup"><span data-stu-id="0c28e-119">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="0c28e-120">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="0c28e-120">\<system.serviceModel></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)|<span data-ttu-id="0c28e-121">모든 워크플로 구성 요소의 루트 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="0c28e-121">The root element of all workflow configuration elements.</span></span>|  
   
-## 참고 항목  
- <xref:System.ServiceModel.Configuration.BehaviorsSection>   
- <xref:System.ServiceModel.Configuration.ServiceBehaviorElementCollection>   
- <xref:System.ServiceModel.Configuration.ServiceBehaviorElement>   
- [동작을 사용하여 런타임 구성 및 확장](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+## <a name="see-also"></a><span data-ttu-id="0c28e-122">참고 항목</span><span class="sxs-lookup"><span data-stu-id="0c28e-122">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.BehaviorsSection>  
+ <xref:System.ServiceModel.Configuration.ServiceBehaviorElementCollection>  
+ <xref:System.ServiceModel.Configuration.ServiceBehaviorElement>  
+ [<span data-ttu-id="0c28e-123">구성 하 고 런타임 동작을 확장</span><span class="sxs-lookup"><span data-stu-id="0c28e-123">Configuring and Extending the Runtime with Behaviors</span></span>](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

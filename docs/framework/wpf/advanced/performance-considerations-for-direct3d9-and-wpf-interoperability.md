@@ -1,73 +1,76 @@
 ---
-title: "Direct3D9 및 WPF 상호 운용성을 위한 성능 고려 사항 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Direct3D9[WPF 상호 운용성], 성능"
-  - "WPF, Direct3D9 상호 운용성 성능"
+title: "Direct3D9 및 WPF 상호 운용성을 위한 성능 고려 사항"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WPF [WPF], Direct3D9 interop performance
+- Direct3D9 [WPF interoperability], performance
 ms.assetid: ea8baf91-12fe-4b44-ac4d-477110ab14dd
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 886ef6c8c9df9d14b5c2a805da2e3948d5e55f69
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Direct3D9 및 WPF 상호 운용성을 위한 성능 고려 사항
-<xref:System.Windows.Interop.D3DImage> 클래스를 사용하여 Direct3D9 콘텐츠를 호스팅할 수 있습니다.  Direct3D9 콘텐츠를 호스팅하면 응용 프로그램의 성능에 영향을 줄 수 있습니다.  이 항목에서는 WPF\(Windows Presentation Foundation\) 응용 프로그램에서 Direct3D9 콘텐츠를 호스팅할 때 성능을 최적화할 수 있는 유용한 정보를 제공합니다.  여기서 제공되는 유용한 정보에는 <xref:System.Windows.Interop.D3DImage>를 사용하는 방법 및 Windows Vista, Windows XP 및 다중 모니터 디스플레이를 사용할 경우의 유용한 정보가 포함됩니다.  
+# <a name="performance-considerations-for-direct3d9-and-wpf-interoperability"></a><span data-ttu-id="4776a-102">Direct3D9 및 WPF 상호 운용성을 위한 성능 고려 사항</span><span class="sxs-lookup"><span data-stu-id="4776a-102">Performance Considerations for Direct3D9 and WPF Interoperability</span></span>
+<span data-ttu-id="4776a-103">사용 하 여 Direct3D9 콘텐츠를 호스팅할 수는 <xref:System.Windows.Interop.D3DImage> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-103">You can host Direct3D9 content by using the <xref:System.Windows.Interop.D3DImage> class.</span></span> <span data-ttu-id="4776a-104">Direct3D9 콘텐츠를 호스트 응용 프로그램의 성능 영향을 줄 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-104">Hosting Direct3D9 content can affect the performance of your application.</span></span> <span data-ttu-id="4776a-105">이 항목에서는 Windows Presentation Foundation (WPF) 응용 프로그램에서 Direct3D9 콘텐츠를 호스트 하는 경우 성능을 최적화 하는 모범 사례를 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-105">This topic describes best practices to optimize performance when hosting Direct3D9 content in a Windows Presentation Foundation (WPF) application.</span></span> <span data-ttu-id="4776a-106">이러한 최선의 방법을 사용 하는 방법이 <xref:System.Windows.Interop.D3DImage> 다중 모니터를 표시 하 고 Windows Vista, Windows XP를 사용 하는 모범 사례 및 합니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-106">These best practices include how to use <xref:System.Windows.Interop.D3DImage> and best practices when you are using Windows Vista, Windows XP, and multi-monitor displays.</span></span>  
   
 > [!NOTE]
->  이러한 유용한 정보를 보여 주는 코드 예제를 보려면 [WPF 및 Direct3D9 상호 운용성](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)를 참조하십시오.  
+>  <span data-ttu-id="4776a-107">이들 모범 사례를 보여 주는 코드 예제를 보려면 [WPF 및 Direct3D9 상호 운용](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-107">For code examples that demonstrate these best practices, see [WPF and Direct3D9 Interoperation](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md).</span></span>  
   
-## 필요한 경우에만 D3DImage 사용  
- <xref:System.Windows.Interop.D3DImage> 인스턴스에 호스팅되는 Direct3D9 콘텐츠는 순수 Direct3D 응용 프로그램만큼 빠르게 렌더링되지 않습니다.  화면을 복사하고 명령 버퍼를 플러시하는 작업에는 많은 리소스가 필요할 수 있습니다.  <xref:System.Windows.Interop.D3DImage> 인스턴스 수가 증가하면 플러시도 증가하여 성능이 저하됩니다.  따라서 <xref:System.Windows.Interop.D3DImage>는 꼭 필요한 경우에만 사용하는 것이 좋습니다.  
+## <a name="use-d3dimage-sparingly"></a><span data-ttu-id="4776a-108">D3DImage를 제한적으로 사용</span><span class="sxs-lookup"><span data-stu-id="4776a-108">Use D3DImage Sparingly</span></span>  
+ <span data-ttu-id="4776a-109">Direct3D9 콘텐츠에서 호스팅되는 <xref:System.Windows.Interop.D3DImage> 인스턴스는 순수 Direct3D 응용 프로그램용 빠르지로 렌더링 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-109">Direct3D9 content hosted in a <xref:System.Windows.Interop.D3DImage> instance does not render as fast as in a pure Direct3D application.</span></span> <span data-ttu-id="4776a-110">화면을 복사 하 고 명령 버퍼를 플러시하여 비용이 많이 드는 작업 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-110">Copying the surface and flushing the command buffer can be costly operations.</span></span> <span data-ttu-id="4776a-111">개수로 <xref:System.Windows.Interop.D3DImage> 인스턴스 증가 하는 경우 더 많은 플러시 작업이 발생 하지 않으며 성능이 저하 됩니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-111">As the number of <xref:System.Windows.Interop.D3DImage> instances increases, more flushing occurs, and performance degrades.</span></span> <span data-ttu-id="4776a-112">따라서 사용 해야 <xref:System.Windows.Interop.D3DImage> 제한적으로 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-112">Therefore, you should use <xref:System.Windows.Interop.D3DImage> sparingly.</span></span>  
   
-## Windows Vista에 대한 유용한 정보  
- WDDM\(Windows Display Driver Model\)을 사용하도록 구성된 디스플레이를 사용하는 Windows Vista에서 최상의 성능을 얻으려면 Direct3D9 화면을 `IDirect3DDevice9Ex` 장치에 만듭니다.  이렇게 하면 화면을 공유할 수 있습니다.  이 경우 비디오 카드가 Windows Vista에서 `D3DDEVCAPS2_CAN_STRETCHRECT_FROM_TEXTURES` 및 `D3DCAPS2_CANSHARERESOURCE` 드라이버 기능을 지원해야 합니다.  그 외의 다른 설정을 사용하면 소프트웨어를 통해 화면이 복사되어 성능이 크게 저하됩니다.  
-  
-> [!NOTE]
->  Windows Vista에서 XDDM\(Windows XP Display Driver Model\)을 사용하도록 구성된 디스플레이를 사용하는 경우에는 설정에 관계없이 소프트웨어를 통해 화면이 항상 복사됩니다.  적절한 설정과 비디오 카드를 사용하면 화면 복사가 하드웨어에서 수행되기 때문에 WDDM을 사용할 때 Windows Vista의 성능을 높일 수 있습니다.  
-  
-## Windows XP에 대한 유용한 정보  
- XDDM\(Windows XP Display Driver Model\)을 사용하는 Windows XP에서 최상의 성능을 얻으려면 `IDirect3DSurface9::GetDC` 메서드가 호출될 때 올바르게 동작하는 잠금 가능한 화면을 만듭니다.  `BitBlt` 메서드는 내부적으로 하드웨어 장치 간에 화면을 전송합니다.  `GetDC` 메서드는 항상 XRGB 화면에서 작동합니다.  그러나 클라이언트 컴퓨터에서 Windows XP SP3 또는 SP2를 실행하며 이 클라이언트에 계층 창 기능을 위한 핫픽스가 적용된 경우 이 메서드는 ARGB 화면에서만 작동합니다.  비디오 카드는 `D3DDEVCAPS2_CAN_STRETCHRECT_FROM_TEXTURES` 드라이브 기능을 지원해야 합니다.  
-  
- 16비트 바탕 화면 디스플레이를 사용하면 성능이 크게 저하될 수 있으므로  32비트 바탕 화면을 사용하는 것이 좋습니다.  
-  
- Windows Vista와 Windows XP용으로 개발하는 경우에는 Windows XP에서 성능을 테스트하십시오.  Windows XP의 경우 비디오 메모리 부족이 문제가 될 수 있습니다.  또한 Windows XP에서는 비디오 메모리 복사 작업을 추가적으로 수행해야 하므로 <xref:System.Windows.Interop.D3DImage>가 Windows Vista WDDM에 비해 비디오 메모리와 대역폭을 많이 사용합니다.  따라서 동일한 비디오 하드웨어를 사용하더라도 Windows Vista보다 Windows XP에서 성능이 떨어집니다.  
+## <a name="best-practices-on-windows-vista"></a><span data-ttu-id="4776a-113">Windows Vista에서 모범 사례</span><span class="sxs-lookup"><span data-stu-id="4776a-113">Best Practices on Windows Vista</span></span>  
+ <span data-ttu-id="4776a-114">최상의 성능을 위해서는 Windows Vista에서 Windows 표시 드라이버 모델 (WDDM)를 사용 하도록 구성 된 디스플레이 사용 하면 Direct3D9 노출에 만들는 `IDirect3DDevice9Ex` 장치입니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-114">For best performance on Windows Vista with a display that is configured to use the Windows Display Driver Model (WDDM), create your Direct3D9 surface on an `IDirect3DDevice9Ex` device.</span></span> <span data-ttu-id="4776a-115">이 화면의 공유를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-115">This enables surface sharing.</span></span> <span data-ttu-id="4776a-116">비디오 카드를 지원 해야 합니다는 `D3DDEVCAPS2_CAN_STRETCHRECT_FROM_TEXTURES` 및 `D3DCAPS2_CANSHARERESOURCE` Windows vista 드라이버 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-116">The video card must support the `D3DDEVCAPS2_CAN_STRETCHRECT_FROM_TEXTURES` and `D3DCAPS2_CANSHARERESOURCE` driver capabilities on Windows Vista.</span></span> <span data-ttu-id="4776a-117">다른 모든 설정을 화면이 소프트웨어 성능이 크게 저하를 통해 복사 되어 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-117">Any other settings cause the surface to be copied through software, which reduces performance significantly.</span></span>  
   
 > [!NOTE]
->  XDDM은 Windows XP와 Windows Vista에서 모두 사용할 수 있지만 WDDM은 Windows Vista에서만 사용할 수 있습니다.  
+>  <span data-ttu-id="4776a-118">Windows Vista에서 Windows XP 표시 드라이버 모델 (XDDM)를 사용 하도록 구성 되어 있는 디스플레이, 표면은 항상 설정에 관계 없이 소프트웨어를 통해 복사 됩니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-118">If Windows Vista has a display that is configured to use the Windows XP Display Driver Model (XDDM), the surface is always copied through software, regardless of settings.</span></span> <span data-ttu-id="4776a-119">적절 한 설정 및 비디오 카드를 사용 하 여 하드웨어에서 화면 복사가 수행 되기 때문에 WDDM를 사용 하는 경우 Windows Vista 더 나은 성능을 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-119">With the proper settings and video card, you will see better performance on Windows Vista when you use the WDDM because surface copies are performed in hardware.</span></span>  
   
-## 일반적인 유용한 정보  
- 장치를 만들 때 `D3DCREATE_MULTITHREADED` 생성 플래그를 사용합니다.  이 플래그를 사용하면 성능이 저하되지만 WPF 렌더링 시스템이 다른 스레드에서 이 장치에 대해 메서드를 호출합니다.  한 번에 하나의 스레드만 장치에 액세스하도록 잠금 프로토콜을 올바르게 사용하십시오.  
+## <a name="best-practices-on-windows-xp"></a><span data-ttu-id="4776a-120">Windows XP에서 모범 사례</span><span class="sxs-lookup"><span data-stu-id="4776a-120">Best Practices on Windows XP</span></span>  
+ <span data-ttu-id="4776a-121">Windows XP 디스플레이 드라이버 모델 (XDDM)를 사용 하는 Windows XP에서 최상의 성능을 위해가 올바르게 작동 하는 잠글 수 있는 화면을 만들 때는 `IDirect3DSurface9::GetDC` 메서드를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-121">For best performance on Windows XP, which uses the Windows XP Display Driver Model (XDDM), create a lockable surface that behaves correctly when the `IDirect3DSurface9::GetDC` method is called.</span></span> <span data-ttu-id="4776a-122">내부적으로 `BitBlt` 메서드 하드웨어의 장치에서 화면을 전송 합니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-122">Internally, the `BitBlt` method transfers the surface across devices in hardware.</span></span> <span data-ttu-id="4776a-123">`GetDC` xrgb 화면에서 항상 사용할 수 있는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-123">The `GetDC` method always works on XRGB surfaces.</span></span> <span data-ttu-id="4776a-124">그러나 클라이언트 컴퓨터가 SP3 또는 SP2, Windows XP를 실행 및 클라이언트에 계층화 된 창의 기능에 대 한 핫픽스 하는 경우이 방법을 사용 ARGB 화면 합니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-124">However, if the client computer is running Windows XP with SP3 or SP2, and if the client also has the hotfix for the layered-window feature, this method only works on ARGB surfaces.</span></span> <span data-ttu-id="4776a-125">비디오 카드를 지원 해야 합니다는 `D3DDEVCAPS2_CAN_STRETCHRECT_FROM_TEXTURES` 드라이버 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-125">The video card must support the `D3DDEVCAPS2_CAN_STRETCHRECT_FROM_TEXTURES` driver capability.</span></span>  
   
- WPF 관리 스레드에서 렌더링이 수행되는 경우에는 `D3DCREATE_FPU_PRESERVE` 생성 플래그를 사용하여 장치를 만드는 것이 좋습니다.  이 설정을 사용하지 않으면 D3D 렌더링으로 인해 WPF 배정밀도 작업의 정확도가 떨어져 렌더링 문제가 발생할 수 있습니다.  
+ <span data-ttu-id="4776a-126">16 비트 바탕 화면 깊이 성능이 크게 저하 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-126">A 16-bit desktop display depth can significantly reduce performance.</span></span> <span data-ttu-id="4776a-127">32 비트 데스크톱을 사용 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-127">A 32-bit desktop is recommended.</span></span>  
   
- <xref:System.Windows.Interop.D3DImage>가 포함된 <xref:System.Windows.Media.DrawingBrush> 또는 <xref:System.Windows.Media.VisualBrush>를 바둑판식으로 배열하는 경우 또는 하드웨어 지원 없이 비pow2 화면을 바둑판식으로 배열하는 경우가 아니라면 <xref:System.Windows.Interop.D3DImage>를 빠르게 바둑판식으로 배열할 수 있습니다.  
+ <span data-ttu-id="4776a-128">Windows Vista 및 Windows XP 개발 하는 경우에 Windows XP에서 성능을 테스트 합니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-128">If you are developing for Windows Vista and Windows XP, test the performance on Windows XP.</span></span> <span data-ttu-id="4776a-129">Windows XP에서 비디오 메모리가 부족 하 여 실행은 문제가.</span><span class="sxs-lookup"><span data-stu-id="4776a-129">Running out of video memory on Windows XP is a concern.</span></span> <span data-ttu-id="4776a-130">또한 <xref:System.Windows.Interop.D3DImage> Windows XP에서 더 많은 비디오 메모리와 필요한 추가 비디오 메모리 복사본으로 인해 Windows Vista WDDM 보다 대역폭을 사용 하 여 합니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-130">In addition, <xref:System.Windows.Interop.D3DImage> on Windows XP uses more video memory and bandwidth than Windows Vista WDDM, due to a necessary extra video memory copy.</span></span> <span data-ttu-id="4776a-131">따라서 성능이 비디오는 동일한 하드웨어에 대 한 보다 Windows Vista에서 Windows XP에서 뒤 처 집니다 기대할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-131">Therefore, you can expect performance to be worse on Windows XP than on Windows Vista for the same video hardware.</span></span>  
   
-## 다중 모니터 디스플레이에 대한 유용한 정보  
- 모니터가 여러 대 있는 컴퓨터를 사용하는 경우에는 위에 설명된 유용한 정보를 따르는 것이 좋습니다.  다중 모니터 구성을 사용할 때는 이외에도 몇 가지 성능 고려 사항이 있습니다.  
+> [!NOTE]
+>  <span data-ttu-id="4776a-132">XDDM는 Windows XP 및 Windows Vista; 모두에서 사용할 수 그러나 WDDM은 Windows Vista에만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-132">XDDM is available on both Windows XP and Windows Vista; however, WDDM is available only on Windows Vista.</span></span>  
   
- 백 버퍼를 만들면 백 버퍼가 특정 장치 및 어댑터에 만들어지지만 WPF에서는 프런트 버퍼를 임의의 어댑터에 표시할 수 있습니다.  프런트 버퍼를 업데이트하기 위해 어댑터 간에 복사하는 작업에는 리소스가 많이 필요할 수 있습니다.  여러 개의 비디오 카드와 `IDirect3DDevice9Ex` 장치와 함께 WDDM을 사용하도록 구성된 Windows Vista의 경우 동일한 비디오 카드의 다른 어댑터에 프런트 버퍼가 있어도 성능에 아무런 영향이 없습니다.  그러나 Windows XP에서 여러 개의 비디오 카드와 함께 XDDM을 사용할 경우에는 프런트 버퍼가 백 버퍼와 다른 어댑터에 표시되면 성능이 크게 저하될 수 있습니다.  자세한 내용은 [WPF 및 Direct3D9 상호 운용성](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)를 참조하십시오.  
+## <a name="general-best-practices"></a><span data-ttu-id="4776a-133">유용한 일반 정보</span><span class="sxs-lookup"><span data-stu-id="4776a-133">General Best Practices</span></span>  
+ <span data-ttu-id="4776a-134">장치를 만들 때 사용 된 `D3DCREATE_MULTITHREADED` 생성 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-134">When you create the device, use the `D3DCREATE_MULTITHREADED` creation flag.</span></span> <span data-ttu-id="4776a-135">성능, 줄어들지만 WPF 렌더링 시스템이이 장치에 다른 스레드에서 메서드를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-135">This reduces performance, but the WPF rendering system calls methods on this device from another thread.</span></span> <span data-ttu-id="4776a-136">사용할 두 개의 스레드가 동시에 액세스할 수 있도록 잠금 프로토콜을 올바르게 수행 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-136">Be sure to follow the locking protocol correctly, so that no two threads access the device at the same time.</span></span>  
   
-## 성능 요약  
- 다음 표에서는 운영 체제의 기능, 픽셀 형식 및 화면 잠금 가능성에 따른 프런트 버퍼 업데이트의 성능을 보여 줍니다.  여기서는 프런트 버퍼와 백 버퍼가 같은 어댑터에 있다고 가정합니다.  어댑터 구성에 따라 일반적으로 하드웨어 업데이트가 소프트웨어 업데이트보다 훨씬 빠릅니다.  
+ <span data-ttu-id="4776a-137">렌더링을 관리 되는 WPF 스레드에서 수행이 가장 좋습니다 사용 하 여 장치를 만드는 `D3DCREATE_FPU_PRESERVE` 생성 플래그입니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-137">If your rendering is performed on a WPF managed thread, it is strongly recommended that you create the device with the `D3DCREATE_FPU_PRESERVE` creation flag.</span></span> <span data-ttu-id="4776a-138">이 설정이 없으면 D3D 렌더링 WPF 배정도 작업의 정확도 하 고 렌더링 문제가 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-138">Without this setting, the D3D rendering can reduce the accuracy of WPF double-precision operations and introduce rendering issues.</span></span>  
   
-|화면 픽셀 형식|Windows Vista, WDDM 및 9Ex|기타 Windows Vista 구성|Windows XP SP3 또는 SP2\(핫픽스 포함\)|Windows XP SP2|  
-|--------------|-------------------------------|-------------------------|-------------------------------------|--------------------|  
-|D3DFMT\_X8R8G8B8\(잠글 수 없음\)|**하드웨어 업데이트**|소프트웨어 업데이트|소프트웨어 업데이트|소프트웨어 업데이트|  
-|D3DFMT\_X8R8G8B8\(잠글 수 있음\)|**하드웨어 업데이트**|소프트웨어 업데이트|**하드웨어 업데이트**|**하드웨어 업데이트**|  
-|D3DFMT\_A8R8G8B8\(잠글 수 없음\)|**하드웨어 업데이트**|소프트웨어 업데이트|소프트웨어 업데이트|소프트웨어 업데이트|  
-|D3DFMT\_A8R8G8B8\(잠글 수 있음\)|**하드웨어 업데이트**|소프트웨어 업데이트|**하드웨어 업데이트**|소프트웨어 업데이트|  
+ <span data-ttu-id="4776a-139">바둑판식으로 배열는 <xref:System.Windows.Interop.D3DImage> 경우 또는 하드웨어 지원 사용 하지 않는 비 pow2 화면 타일 하지 않는 한도 빠르지만 <xref:System.Windows.Media.DrawingBrush> 또는 <xref:System.Windows.Media.VisualBrush> 를 포함 하는 <xref:System.Windows.Interop.D3DImage>합니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-139">Tiling a <xref:System.Windows.Interop.D3DImage> is fast, unless you tile a non-pow2 surface without hardware support, or if you tile a <xref:System.Windows.Media.DrawingBrush> or <xref:System.Windows.Media.VisualBrush> that contains a <xref:System.Windows.Interop.D3DImage>.</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Interop.D3DImage>   
- [WPF 및 Direct3D9 상호 운용성](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)   
- [연습: WPF에서 호스팅할 Direct3D9 콘텐츠 만들기](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)   
- [연습: WPF에서 Direct3D9 콘텐츠 호스팅](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)
+## <a name="best-practices-for-multi-monitor-displays"></a><span data-ttu-id="4776a-140">다중 모니터 디스플레이 대 한 모범 사례</span><span class="sxs-lookup"><span data-stu-id="4776a-140">Best Practices for Multi-Monitor Displays</span></span>  
+ <span data-ttu-id="4776a-141">모니터가 여러 개 있는 컴퓨터를 사용 하는 경우 앞에서 설명한 모범 사례를 따라야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-141">If you are using a computer that has multiple monitors, you should follow the previously described best practices.</span></span> <span data-ttu-id="4776a-142">다중 모니터 구성에 대 한 몇 가지 추가적인 성능 고려 사항이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-142">There are also some additional performance considerations for a multi-monitor configuration.</span></span>  
+  
+ <span data-ttu-id="4776a-143">백 버퍼를 만들 때 특정 장치 및 어댑터에 생성 됩니다. 하지만 WPF 모든 어댑터에 프런트 버퍼를 표시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-143">When you create the back buffer, it is created on a specific device and adapter, but WPF may display the front buffer on any adapter.</span></span> <span data-ttu-id="4776a-144">전면 버퍼를 업데이트 하기 위해 어댑터 간에 복사 하는 것은 비용이 매우 많이 들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-144">Copying across adapters to update the front buffer can be very expensive.</span></span> <span data-ttu-id="4776a-145">WDDM 여러 개의 비디오 카드를 사용 하 여 사용 하도록 구성 된 Windows Vista에서는 `IDirect3DDevice9Ex` 장치 프런트 버퍼 다른 어댑터 하지만 여전히 동일한 비디오 카드에 있으면 없습니다 성능 저하 됩니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-145">On Windows Vista that is configured to use the WDDM with multiple video cards and with an `IDirect3DDevice9Ex` device, if the front buffer is on a different adapter but still the same video card, there is no performance penalty.</span></span> <span data-ttu-id="4776a-146">그러나, Windows XP 및 XDDM 비디오 카드가 여러 개 있는 경우에 성능이 크게 저하 프런트 버퍼 백 버퍼 다른 어댑터에 표시 될 때.</span><span class="sxs-lookup"><span data-stu-id="4776a-146">However, on Windows XP and the XDDM with multiple video cards, there is a significant performance penalty when the front buffer is displayed on a different adapter than the back buffer.</span></span> <span data-ttu-id="4776a-147">자세한 내용은 참조 [WPF 및 Direct3D9 상호 운용](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-147">For more information, see [WPF and Direct3D9 Interoperation](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md).</span></span>  
+  
+## <a name="performance-summary"></a><span data-ttu-id="4776a-148">성능 요약</span><span class="sxs-lookup"><span data-stu-id="4776a-148">Performance Summary</span></span>  
+ <span data-ttu-id="4776a-149">다음 표에서 운영 체제, 픽셀 형식 및 화면 잠금 가능성의 함수로 프런트 버퍼 업데이트의 성능을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-149">The following table shows performance of the front buffer update as a function of operating system, pixel format, and surface lockability.</span></span> <span data-ttu-id="4776a-150">전면 버퍼 및 백 버퍼 동일한 어댑터에 있는 것으로 간주 됩니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-150">The front buffer and back buffer are assumed to be on the same adapter.</span></span> <span data-ttu-id="4776a-151">어댑터 구성에 따라 하드웨어 업데이트를 일반적으로 소프트웨어 업데이트 보다 훨씬 빠릅니다.</span><span class="sxs-lookup"><span data-stu-id="4776a-151">Depending on the adapter configuration, hardware updates are generally much faster than software updates.</span></span>  
+  
+|<span data-ttu-id="4776a-152">화면 픽셀 형식</span><span class="sxs-lookup"><span data-stu-id="4776a-152">Surface pixel format</span></span>|<span data-ttu-id="4776a-153">Windows Vista, WDDM 및 9Ex</span><span class="sxs-lookup"><span data-stu-id="4776a-153">Windows Vista, WDDM and 9Ex</span></span>|<span data-ttu-id="4776a-154">다른 Windows Vista 구성</span><span class="sxs-lookup"><span data-stu-id="4776a-154">Other Windows Vista configurations</span></span>|<span data-ttu-id="4776a-155">Windows XP SP3 또는 핫픽스 w / s p 2</span><span class="sxs-lookup"><span data-stu-id="4776a-155">Windows XP SP3 or SP2 w/ hotfix</span></span>|<span data-ttu-id="4776a-156">Windows XP SP2</span><span class="sxs-lookup"><span data-stu-id="4776a-156">Windows XP SP2</span></span>|  
+|--------------------------|---------------------------------|----------------------------------------|--------------------------------------|--------------------|  
+|<span data-ttu-id="4776a-157">D3DFMT_X8R8G8B8 (잠글 수 없습니다)</span><span class="sxs-lookup"><span data-stu-id="4776a-157">D3DFMT_X8R8G8B8 (not lockable)</span></span>|<span data-ttu-id="4776a-158">**하드웨어 업데이트**</span><span class="sxs-lookup"><span data-stu-id="4776a-158">**Hardware Update**</span></span>|<span data-ttu-id="4776a-159">소프트웨어 업데이트</span><span class="sxs-lookup"><span data-stu-id="4776a-159">Software Update</span></span>|<span data-ttu-id="4776a-160">소프트웨어 업데이트</span><span class="sxs-lookup"><span data-stu-id="4776a-160">Software Update</span></span>|<span data-ttu-id="4776a-161">소프트웨어 업데이트</span><span class="sxs-lookup"><span data-stu-id="4776a-161">Software Update</span></span>|  
+|<span data-ttu-id="4776a-162">D3DFMT_X8R8G8B8 (잠금 가능)</span><span class="sxs-lookup"><span data-stu-id="4776a-162">D3DFMT_X8R8G8B8 (lockable)</span></span>|<span data-ttu-id="4776a-163">**하드웨어 업데이트**</span><span class="sxs-lookup"><span data-stu-id="4776a-163">**Hardware Update**</span></span>|<span data-ttu-id="4776a-164">소프트웨어 업데이트</span><span class="sxs-lookup"><span data-stu-id="4776a-164">Software Update</span></span>|<span data-ttu-id="4776a-165">**하드웨어 업데이트**</span><span class="sxs-lookup"><span data-stu-id="4776a-165">**Hardware Update**</span></span>|<span data-ttu-id="4776a-166">**하드웨어 업데이트**</span><span class="sxs-lookup"><span data-stu-id="4776a-166">**Hardware Update**</span></span>|  
+|<span data-ttu-id="4776a-167">D3DFMT_A8R8G8B8 (잠글 수 없습니다)</span><span class="sxs-lookup"><span data-stu-id="4776a-167">D3DFMT_A8R8G8B8 (not lockable)</span></span>|<span data-ttu-id="4776a-168">**하드웨어 업데이트**</span><span class="sxs-lookup"><span data-stu-id="4776a-168">**Hardware Update**</span></span>|<span data-ttu-id="4776a-169">소프트웨어 업데이트</span><span class="sxs-lookup"><span data-stu-id="4776a-169">Software Update</span></span>|<span data-ttu-id="4776a-170">소프트웨어 업데이트</span><span class="sxs-lookup"><span data-stu-id="4776a-170">Software Update</span></span>|<span data-ttu-id="4776a-171">소프트웨어 업데이트</span><span class="sxs-lookup"><span data-stu-id="4776a-171">Software Update</span></span>|  
+|<span data-ttu-id="4776a-172">D3DFMT_A8R8G8B8 (잠금 가능)</span><span class="sxs-lookup"><span data-stu-id="4776a-172">D3DFMT_A8R8G8B8 (lockable)</span></span>|<span data-ttu-id="4776a-173">**하드웨어 업데이트**</span><span class="sxs-lookup"><span data-stu-id="4776a-173">**Hardware Update**</span></span>|<span data-ttu-id="4776a-174">소프트웨어 업데이트</span><span class="sxs-lookup"><span data-stu-id="4776a-174">Software Update</span></span>|<span data-ttu-id="4776a-175">**하드웨어 업데이트**</span><span class="sxs-lookup"><span data-stu-id="4776a-175">**Hardware Update**</span></span>|<span data-ttu-id="4776a-176">소프트웨어 업데이트</span><span class="sxs-lookup"><span data-stu-id="4776a-176">Software Update</span></span>|  
+  
+## <a name="see-also"></a><span data-ttu-id="4776a-177">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4776a-177">See Also</span></span>  
+ <xref:System.Windows.Interop.D3DImage>  
+ [<span data-ttu-id="4776a-178">WPF 및 Direct3D9 상호 운용성</span><span class="sxs-lookup"><span data-stu-id="4776a-178">WPF and Direct3D9 Interoperation</span></span>](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)  
+ [<span data-ttu-id="4776a-179">연습: WPF에서 호스팅할 Direct3D9 콘텐츠 만들기</span><span class="sxs-lookup"><span data-stu-id="4776a-179">Walkthrough: Creating Direct3D9 Content for Hosting in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)  
+ [<span data-ttu-id="4776a-180">연습: WPF에서 Direct3D9 콘텐츠 호스팅</span><span class="sxs-lookup"><span data-stu-id="4776a-180">Walkthrough: Hosting Direct3D9 Content in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)
