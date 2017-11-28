@@ -1,102 +1,92 @@
 ---
 title: "비동기 반환 형식(C#)"
 ms.custom: 
-ms.date: 2075-05-29
+ms.date: 05/29/2017
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 7aee1ebdf24a2ac564268e1f36d3aac707dea463
+ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9e7f31d4160d44668f4ddea5e1ca0eaa3037c5a5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="async-return-types-c"></a>비동기 반환 형식(C#)
-비동기 메서드의 반환 형식은 다음과 같을 수 있습니다.
+# <a name="async-return-types-c"></a><span data-ttu-id="e79da-102">비동기 반환 형식(C#)</span><span class="sxs-lookup"><span data-stu-id="e79da-102">Async Return Types (C#)</span></span>
+<span data-ttu-id="e79da-103">비동기 메서드의 반환 형식은 다음과 같을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-103">Async methods can have the following return types:</span></span>
 
-- <xref:System.Threading.Tasks.Task%601> - 값을 반환하는 비동기 메서드의 경우 
+- <span data-ttu-id="e79da-104"><xref:System.Threading.Tasks.Task%601> - 값을 반환하는 비동기 메서드의 경우</span><span class="sxs-lookup"><span data-stu-id="e79da-104"><xref:System.Threading.Tasks.Task%601>, for an async method that returns a value.</span></span> 
  
--  <xref:System.Threading.Tasks.Task> - 작업을 수행하지만 아무 값도 반환하지 않는 비동기 메서드의 경우
+-  <span data-ttu-id="e79da-105"><xref:System.Threading.Tasks.Task> - 작업을 수행하지만 아무 값도 반환하지 않는 비동기 메서드의 경우</span><span class="sxs-lookup"><span data-stu-id="e79da-105"><xref:System.Threading.Tasks.Task>, for an async method that performs an operation but returns no value.</span></span>
 
-- `void` - 이벤트 처리기의 경우 
+- <span data-ttu-id="e79da-106">`void` - 이벤트 처리기의 경우</span><span class="sxs-lookup"><span data-stu-id="e79da-106">`void`, for an event handler.</span></span> 
 
-- C# 7부터 액세스 가능한 `GetAwaiter` 메서드가 있는 모든 형식. `GetAwaiter` 메서드에서 반환된 개체는 <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=fullName> 인터페이스를 구현해야 합니다.
+- <span data-ttu-id="e79da-107">C# 7부터 액세스 가능한 `GetAwaiter` 메서드가 있는 모든 형식.</span><span class="sxs-lookup"><span data-stu-id="e79da-107">Starting with C# 7, any type that has an accessible `GetAwaiter` method.</span></span> <span data-ttu-id="e79da-108">`GetAwaiter` 메서드에서 반환된 개체는 <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType> 인터페이스를 구현해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-108">The object returned by the `GetAwaiter` method must implement the <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType> interface.</span></span>
   
-비동기 메서드에 대한 자세한 내용은 [async 및 await를 사용한 비동기 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/async/index.md)을 참조하세요.  
+<span data-ttu-id="e79da-109">비동기 메서드에 대한 자세한 내용은 [async 및 await를 사용한 비동기 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/async/index.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e79da-109">For more information about async methods, see [Asynchronous Programming with async and await (C#)](../../../../csharp/programming-guide/concepts/async/index.md).</span></span>  
   
-다음 섹션 중 하나에서 각 반환 형식을 살펴보고 세 가지 형식 모두를 사용하는 전체 예제는 이 항목의 끝에 나와 있습니다.  
+<span data-ttu-id="e79da-110">다음 섹션 중 하나에서 각 반환 형식을 살펴보고 세 가지 형식 모두를 사용하는 전체 예제는 이 항목의 끝에 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-110">Each return type is examined in one of the following sections, and you can find a full example that uses all three types at the end of the topic.</span></span>  
   
-##  <a name="BKMK_TaskTReturnType"></a> Task(T) 반환 형식  
-<xref:System.Threading.Tasks.Task%601> 반환 형식은 피연산자의 형식이 `TResult`인 [Return](../../../../csharp/language-reference/keywords/return.md)(C#) 문이 포함된 비동기 메서드에 사용합니다.  
+##  <span data-ttu-id="e79da-111"><a name="BKMK_TaskTReturnType"></a> Task(T) 반환 형식</span><span class="sxs-lookup"><span data-stu-id="e79da-111"><a name="BKMK_TaskTReturnType"></a> Task(T) Return Type</span></span>  
+<span data-ttu-id="e79da-112"><xref:System.Threading.Tasks.Task%601> 반환 형식은 피연산자의 형식이 `TResult`인 [Return](../../../../csharp/language-reference/keywords/return.md)(C#) 문이 포함된 비동기 메서드에 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-112">The <xref:System.Threading.Tasks.Task%601> return type is used for an async method that contains a [return](../../../../csharp/language-reference/keywords/return.md) (C#) statement in which the operand has type `TResult`.</span></span>  
   
-다음 예제에서 `GetLeisureHours` 비동기 메서드는 정수를 반환하는 `return` 문을 포함합니다. 따라서 메서드 선언은 `Task<int>`의 반환 형식을 지정해야 합니다.  <xref:System.Threading.Tasks.Task.FromResult%2A> 비동기 메서드는 문자열을 반환하는 작업에 대한 자리 표시자입니다.
+<span data-ttu-id="e79da-113">다음 예제에서 `GetLeisureHours` 비동기 메서드는 정수를 반환하는 `return` 문을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-113">In the following example, the `GetLeisureHours` async method contains a `return` statement that returns an integer.</span></span> <span data-ttu-id="e79da-114">따라서 메서드 선언은 `Task<int>`의 반환 형식을 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-114">Therefore, the method declaration must specify a return type of `Task<int>`.</span></span>  <span data-ttu-id="e79da-115"><xref:System.Threading.Tasks.Task.FromResult%2A> 비동기 메서드는 문자열을 반환하는 작업에 대한 자리 표시자입니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-115">The <xref:System.Threading.Tasks.Task.FromResult%2A> async method is a placeholder for an operation that returns a string.</span></span>
   
-[!code-cs[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1.cs)]
+[!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1.cs)]
 
-`ShowTodaysInfo` 메서드의 await 식 내에서 `GetLeisureHours`를 호출하면 await 식이 `GetLeisureHours`에서 반환된 작업에 저장된 정수 값(`leisureHours` 값)을 검색합니다. await 식에 대한 자세한 내용은 [await](../../../../csharp/language-reference/keywords/await.md)를 참조하세요.  
+<span data-ttu-id="e79da-116">`ShowTodaysInfo` 메서드의 await 식 내에서 `GetLeisureHours`를 호출하면 await 식이 `GetLeisureHours`에서 반환된 작업에 저장된 정수 값(`leisureHours` 값)을 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-116">When `GetLeisureHours` is called from within an await expression in the `ShowTodaysInfo` method, the await expression retrieves the integer value (the value of `leisureHours`) that's stored in the task returned by the `GetLeisureHours` method.</span></span> <span data-ttu-id="e79da-117">await 식에 대한 자세한 내용은 [await](../../../../csharp/language-reference/keywords/await.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e79da-117">For more information about await expressions, see [await](../../../../csharp/language-reference/keywords/await.md).</span></span>  
   
-다음 코드와 같이 `GetLeisureHours` 호출을 `await`의 적용과 구분하면 이 과정을 더욱 잘 이해할 수 있습니다. 곧바로 대기 상태가 되지 않는 `TaskOfT_MethodAsync` 메서드를 호출하면 메서드 선언에서 예상한 대로 `Task<int>`를 반환합니다. 예제에서 작업이 `integerTask` 변수에 할당됩니다. `integerTask`가 <xref:System.Threading.Tasks.Task%601>이기 때문에 `TResult` 형식의 <xref:System.Threading.Tasks.Task%601.Result> 속성을 포함합니다. 이 경우 TResult는 정수 형식을 나타냅니다. `await`가 `integerTask`에 적용되는 경우 await 식은 `integerTask`의 <xref:System.Threading.Tasks.Task%601.Result%2A> 속성 내용으로 평가됩니다. 값은 `result2` 변수에 할당됩니다.  
+<span data-ttu-id="e79da-118">다음 코드와 같이 `GetLeisureHours` 호출을 `await`의 적용과 구분하면 이 과정을 더욱 잘 이해할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-118">You can better understand how this happens by separating the call to `GetLeisureHours` from the application of `await`, as the following code shows.</span></span> <span data-ttu-id="e79da-119">곧바로 대기 상태가 되지 않는 `TaskOfT_MethodAsync` 메서드를 호출하면 메서드 선언에서 예상한 대로 `Task<int>`를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-119">A call to method `TaskOfT_MethodAsync` that isn't immediately awaited returns a `Task<int>`, as you would expect from the declaration of the method.</span></span> <span data-ttu-id="e79da-120">예제에서 작업이 `integerTask` 변수에 할당됩니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-120">The task is assigned to the `integerTask` variable in the example.</span></span> <span data-ttu-id="e79da-121">`integerTask`가 <xref:System.Threading.Tasks.Task%601>이기 때문에 `TResult` 형식의 <xref:System.Threading.Tasks.Task%601.Result> 속성을 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-121">Because `integerTask` is a <xref:System.Threading.Tasks.Task%601>, it contains a <xref:System.Threading.Tasks.Task%601.Result> property of type `TResult`.</span></span> <span data-ttu-id="e79da-122">이 경우 TResult는 정수 형식을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-122">In this case, TResult represents an integer type.</span></span> <span data-ttu-id="e79da-123">`await`가 `integerTask`에 적용되는 경우 await 식은 `integerTask`의 <xref:System.Threading.Tasks.Task%601.Result%2A> 속성 내용으로 평가됩니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-123">When `await` is applied to `integerTask`, the await expression evaluates to the contents of the <xref:System.Threading.Tasks.Task%601.Result%2A> property of `integerTask`.</span></span> <span data-ttu-id="e79da-124">값은 `result2` 변수에 할당됩니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-124">The value is assigned to the `result2` variable.</span></span>  
   
 > [!IMPORTANT]
->  <xref:System.Threading.Tasks.Task%601.Result%2A> 속성은 차단 속성입니다. 해당 작업이 완료되기 전에 액세스하려고 하면, 작업이 완료되고 값을 사용할 수 있을 때까지 현재 활성화된 스레드가 차단됩니다. 대부분의 경우 속성에 직접 액세스하지 않고 `await`를 사용하여 값에 액세스해야 합니다. <br/> 앞의 예제에서는 `ShowTodaysInfo` 메서드가 응용 프로그램 종료 전에 실행을 완료할 수 있도록 <xref:System.Threading.Tasks.Task%601.Result%2A> 속성의 값을 검색하여 주 스레드를 차단했습니다.  
+>  <span data-ttu-id="e79da-125"><xref:System.Threading.Tasks.Task%601.Result%2A> 속성은 차단 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-125">The <xref:System.Threading.Tasks.Task%601.Result%2A> property is a blocking property.</span></span> <span data-ttu-id="e79da-126">해당 작업이 완료되기 전에 액세스하려고 하면, 작업이 완료되고 값을 사용할 수 있을 때까지 현재 활성화된 스레드가 차단됩니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-126">If you try to access it before its task is finished, the thread that's currently active is blocked until the task completes and the value is available.</span></span> <span data-ttu-id="e79da-127">대부분의 경우 속성에 직접 액세스하지 않고 `await`를 사용하여 값에 액세스해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-127">In most cases, you should access the value by using `await` instead of accessing the property directly.</span></span> <br/> <span data-ttu-id="e79da-128">앞의 예제에서는 `ShowTodaysInfo` 메서드가 응용 프로그램 종료 전에 실행을 완료할 수 있도록 <xref:System.Threading.Tasks.Task%601.Result%2A> 속성의 값을 검색하여 주 스레드를 차단했습니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-128">The previous example retrieved the value of the <xref:System.Threading.Tasks.Task%601.Result%2A> property to block the main thread so that the `ShowTodaysInfo` method could finish execution before the application ended.</span></span>  
 
-[!code-cs[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1a.cs#1)]
+[!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1a.cs#1)]
   
-##  <a name="BKMK_TaskReturnType"></a> Task 반환 형식  
-`return` 문을 포함하지 않거나 피연산자를 반환하지 않는 `return` 문을 포함하는 비동기 메서드의 반환 형식은 일반적으로 <xref:System.Threading.Tasks.Task>입니다. 이러한 메서드는 동기적으로 실행될 경우 `void`를 반환합니다. 비동기 메서드에 대해 <xref:System.Threading.Tasks.Task> 반환 형식을 사용하는 경우 호출된 비동기 메서드가 완료될 때까지 호출 메서드는 `await` 연산자를 사용하여 호출자의 완료를 일시 중단할 수 있습니다.  
+##  <span data-ttu-id="e79da-129"><a name="BKMK_TaskReturnType"></a> Task 반환 형식</span><span class="sxs-lookup"><span data-stu-id="e79da-129"><a name="BKMK_TaskReturnType"></a> Task Return Type</span></span>  
+<span data-ttu-id="e79da-130">`return` 문을 포함하지 않거나 피연산자를 반환하지 않는 `return` 문을 포함하는 비동기 메서드의 반환 형식은 일반적으로 <xref:System.Threading.Tasks.Task>입니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-130">Async methods that don't contain a `return` statement or that contain a `return` statement that doesn't return an operand usually have a return type of <xref:System.Threading.Tasks.Task>.</span></span> <span data-ttu-id="e79da-131">이러한 메서드는 동기적으로 실행될 경우 `void`를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-131">Such methods return `void` if they run synchronously.</span></span> <span data-ttu-id="e79da-132">비동기 메서드에 대해 <xref:System.Threading.Tasks.Task> 반환 형식을 사용하는 경우 호출된 비동기 메서드가 완료될 때까지 호출 메서드는 `await` 연산자를 사용하여 호출자의 완료를 일시 중단할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-132">If you use a <xref:System.Threading.Tasks.Task> return type for an async method, a calling method can use an `await` operator to suspend the caller's completion until the called async method has finished.</span></span>  
   
-다음 예제에서 `WaitAndApologize` 비동기 메서드에는 `return` 문이 없으므로 메서드가 <xref:System.Threading.Tasks.Task> 개체를 반환합니다. 이렇게 하면 `WaitAndApologize`가 대기됩니다. <xref:System.Threading.Tasks.Task> 형식에는 반환 값이 없으므로 `Result` 속성이 포함되어 있지 않습니다.  
+<span data-ttu-id="e79da-133">다음 예제에서 `WaitAndApologize` 비동기 메서드에는 `return` 문이 없으므로 메서드가 <xref:System.Threading.Tasks.Task> 개체를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-133">In the following example, the `WaitAndApologize` async method doesn't contain a `return` statement, so the method returns a <xref:System.Threading.Tasks.Task> object.</span></span> <span data-ttu-id="e79da-134">이렇게 하면 `WaitAndApologize`가 대기됩니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-134">This enables `WaitAndApologize` to be awaited.</span></span> <span data-ttu-id="e79da-135"><xref:System.Threading.Tasks.Task> 형식에는 반환 값이 없으므로 `Result` 속성이 포함되어 있지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-135">Note that the <xref:System.Threading.Tasks.Task> type doesn't include a `Result` property because it has no return value.</span></span>  
 
-[!code-cs[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2.cs)]  
+[!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2.cs)]  
   
-동기 void를 반환하는 메서드에 대한 호출 문과 비슷하게 await 식 대신 await 문을 사용하여 `WaitAndApologize`가 대기됩니다. 이 경우 await 연산자를 적용하면 값이 산출되지 않습니다.  
+<span data-ttu-id="e79da-136">동기 void를 반환하는 메서드에 대한 호출 문과 비슷하게 await 식 대신 await 문을 사용하여 `WaitAndApologize`가 대기됩니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-136">`WaitAndApologize` is awaited by using an await statement instead of an await expression, similar to the calling statement for a synchronous void-returning method.</span></span> <span data-ttu-id="e79da-137">이 경우 await 연산자를 적용하면 값이 산출되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-137">The application of an await operator in this case doesn't produce a value.</span></span>  
   
-앞의 <xref:System.Threading.Tasks.Task%601> 예제처럼 다음 코드와 같이 `Task_MethodAsync` 호출을 await 연산자의 적용과 구분할 수 있습니다. 그러나 `Task`에는 `Result` 속성이 없으므로 await 연산자가 `Task`에 적용될 때 값이 생성되지 않습니다.  
+<span data-ttu-id="e79da-138">앞의 <xref:System.Threading.Tasks.Task%601> 예제처럼 다음 코드와 같이 `Task_MethodAsync` 호출을 await 연산자의 적용과 구분할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-138">As in the previous <xref:System.Threading.Tasks.Task%601> example, you can separate the call to `Task_MethodAsync` from the application of an await operator, as the following code shows.</span></span> <span data-ttu-id="e79da-139">그러나 `Task`에는 `Result` 속성이 없으므로 await 연산자가 `Task`에 적용될 때 값이 생성되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-139">However, remember that a `Task` doesn't have a `Result` property, and that no value is produced when an await operator is applied to a `Task`.</span></span>  
   
-다음 코드에서는 `WaitAndApologize` 메서드 호출과 해당 메서드에서 반환하는 작업 대기를 구분합니다.  
+<span data-ttu-id="e79da-140">다음 코드에서는 `WaitAndApologize` 메서드 호출과 해당 메서드에서 반환하는 작업 대기를 구분합니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-140">The following code separates calling the `WaitAndApologize` method from awaiting the task that the method returns.</span></span>  
  
-[!code-cs[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]  
+[!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]  
  
-##  <a name="BKMK_VoidReturnType"></a> Void 반환 형식  
-`void`반환 형식이 필요한 비동기 이벤트 처리기에 `void` 반환 형식을 사용합니다. 값을 반환하지 않는 이벤트 처리기 이외의 메서드의 경우 `void`를 반환하는 비동기 메서드를 대기할 수 없기 때문에 <xref:System.Threading.Tasks.Task>를 대신 반환해야 합니다. 이러한 메서드의 호출자는 호출된 비동기 메서드가 마치는 것을 기다리지 않고 완료될 때까지 계속 진행할 수 있어야 하므로, 해당 호출자는 비동기 메서드가 생성하는 모든 값 또는 예외와 독립되어 있어야 합니다.  
+##  <span data-ttu-id="e79da-141"><a name="BKMK_VoidReturnType"></a> Void 반환 형식</span><span class="sxs-lookup"><span data-stu-id="e79da-141"><a name="BKMK_VoidReturnType"></a> Void return type</span></span>  
+<span data-ttu-id="e79da-142">`void`반환 형식이 필요한 비동기 이벤트 처리기에 `void` 반환 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-142">You use the `void` return type in asynchronous event handlers, which require a `void` return type.</span></span> <span data-ttu-id="e79da-143">값을 반환하지 않는 이벤트 처리기 이외의 메서드의 경우 `void`를 반환하는 비동기 메서드를 대기할 수 없기 때문에 <xref:System.Threading.Tasks.Task>를 대신 반환해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-143">For methods other than event handlers don't return a value, you should return a <xref:System.Threading.Tasks.Task> instead, because an async method that returns `void` can't be awaited.</span></span> <span data-ttu-id="e79da-144">이러한 메서드의 호출자는 호출된 비동기 메서드가 마치는 것을 기다리지 않고 완료될 때까지 계속 진행할 수 있어야 하므로, 해당 호출자는 비동기 메서드가 생성하는 모든 값 또는 예외와 독립되어 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-144">Any caller of such a method must be able to continue to completion without waiting for the called async method to finish, and the caller must be independent of any values or exceptions that the async method generates.</span></span>  
   
-void를 반환하는 비동기 메서드의 호출자는 메서드에서 throw되는 예외를 catch할 수 없으므로 이러한 처리되지 않은 예외를 사용하면 응용 프로그램이 실패할 수 있습니다. <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>를 반환하는 비동기 메서드에서 예외가 발생하는 경우 이 예외는 반환된 작업에 저장되고 작업이 대기 상태일 때 다시 throw됩니다. 따라서 예외를 생성할 수 있는 모든 비동기 메서드에 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>의 반환 형식이 있고 메서드 호출이 대기 상태인지 확인해야 합니다.  
+<span data-ttu-id="e79da-145">void를 반환하는 비동기 메서드의 호출자는 메서드에서 throw되는 예외를 catch할 수 없으므로 이러한 처리되지 않은 예외를 사용하면 응용 프로그램이 실패할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-145">The caller of a void-returning async method can't catch exceptions that are thrown from the method, and such unhandled exceptions are likely to cause your application to fail.</span></span> <span data-ttu-id="e79da-146"><xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>를 반환하는 비동기 메서드에서 예외가 발생하는 경우 이 예외는 반환된 작업에 저장되고 작업이 대기 상태일 때 다시 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-146">If an exception occurs in an async method that returns a <xref:System.Threading.Tasks.Task> or <xref:System.Threading.Tasks.Task%601>, the exception is stored in the returned task and is rethrown when the task is awaited.</span></span> <span data-ttu-id="e79da-147">따라서 예외를 생성할 수 있는 모든 비동기 메서드에 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601>의 반환 형식이 있고 메서드 호출이 대기 상태인지 확인해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-147">Therefore, make sure that any async method that can produce an exception has a return type of <xref:System.Threading.Tasks.Task> or <xref:System.Threading.Tasks.Task%601> and that calls to the method are awaited.</span></span>  
   
-비동기 메서드에서 예외를 catch하는 방법에 대한 자세한 내용은 [try-catch](../../../../csharp/language-reference/keywords/try-catch.md)를 참조하세요.  
+<span data-ttu-id="e79da-148">비동기 메서드에서 예외를 catch하는 방법에 대한 자세한 내용은 [try-catch](../../../../csharp/language-reference/keywords/try-catch.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="e79da-148">For more information about how to catch exceptions in async methods, see [try-catch](../../../../csharp/language-reference/keywords/try-catch.md) .</span></span>  
   
-다음 예제에서는 비동기 이벤트 처리기를 정의합니다.  
+<span data-ttu-id="e79da-149">다음 예제에서는 비동기 이벤트 처리기를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-149">The following eample defines an async event handler.</span></span>  
  
-[!code-cs[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns3.cs)]  
+[!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns3.cs)]  
  
-## <a name="generalized-async-return-types-and-valuetaskt"></a>일반화된 비동기 반환 형식 및 ValueTask<T>
+## <a name="generalized-async-return-types-and-valuetaskt"></a><span data-ttu-id="e79da-150">일반화된 비동기 반환 형식 및 ValueTask<T></span><span class="sxs-lookup"><span data-stu-id="e79da-150">Generalized async return types and ValueTask<T></span></span>
 
-C# 7부터 비동기 메서드는 액세스 가능한 `GetAwaiter` 메서드가 있는 모든 형식을 반환할 수 있습니다.
+<span data-ttu-id="e79da-151">C# 7부터 비동기 메서드는 액세스 가능한 `GetAwaiter` 메서드가 있는 모든 형식을 반환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-151">Starting with C# 7, an async method can return any type that has an accessible `GetAwaiter` method.</span></span>
  
-<xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601>는 참조 형식이므로 특히 타이트 루프에서 할당이 발생하는 경우 성능이 중요한 경로의 메모리 할당으로 인해 성능이 저하될 수 있습니다. 일반화된 반환 형식이 지원되면 추가 메모리 할당을 방지하기 위해 참조 형식 대신 간단한 값 형식을 반환할 수 있습니다. 
+<span data-ttu-id="e79da-152"><xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601>는 참조 형식이므로 특히 타이트 루프에서 할당이 발생하는 경우 성능이 중요한 경로의 메모리 할당으로 인해 성능이 저하될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-152">Because <xref:System.Threading.Tasks.Task> and <xref:System.Threading.Tasks.Task%601> are reference types, memory allocation in performance-critical paths, particularly when allocations occur in tight loops, can adversely affect performance.</span></span> <span data-ttu-id="e79da-153">일반화된 반환 형식이 지원되면 추가 메모리 할당을 방지하기 위해 참조 형식 대신 간단한 값 형식을 반환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-153">Support for generalized return types means that you can return a lightweight value type instead of a reference type to avoid additional memory allocations.</span></span> 
 
-.NET에서는 값을 반환하는 일반화된 작업의 간단한 구현으로 <xref:System.Threading.Tasks.ValueTask%601?displayProperty=fullName> 구조체를 제공합니다. <xref:System.Threading.Tasks.ValueTask%601?displayProperty=fullName> 형식을 사용하려면 `System.Threading.Tasks.Extensions` NuGet 패키지를 프로젝트에 추가해야 합니다. 다음 예제에서는 <xref:System.Threading.Tasks.ValueTask%601> 구조체를 사용하여 두 주사위 굴리기 값을 검색합니다. 
+<span data-ttu-id="e79da-154">.NET에서는 값을 반환하는 일반화된 작업의 간단한 구현으로 <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType> 구조체를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-154">.NET provides the <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType> structure as a light-weight implementation of a generalized task-returning value.</span></span> <span data-ttu-id="e79da-155"><xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType> 형식을 사용하려면 `System.Threading.Tasks.Extensions` NuGet 패키지를 프로젝트에 추가해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-155">To use the <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType> type, you must add the `System.Threading.Tasks.Extensions` NuGet package to your project.</span></span> <span data-ttu-id="e79da-156">다음 예제에서는 <xref:System.Threading.Tasks.ValueTask%601> 구조체를 사용하여 두 주사위 굴리기 값을 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="e79da-156">The following example uses the <xref:System.Threading.Tasks.ValueTask%601> structure to retrieve the value of two dice rolls.</span></span> 
   
-[!code-cs[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-valuetask.cs)]
+[!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-valuetask.cs)]
 
-## <a name="see-also"></a>참고 항목  
-<xref:System.Threading.Tasks.Task.FromResult%2A>   
-[연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
-[비동기 프로그램의 제어 흐름(C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)   
-[async](../../../../csharp/language-reference/keywords/async.md)   
-[await](../../../../csharp/language-reference/keywords/await.md)
-
+## <a name="see-also"></a><span data-ttu-id="e79da-157">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e79da-157">See also</span></span>  
+<span data-ttu-id="e79da-158"><xref:System.Threading.Tasks.Task.FromResult%2A></span><span class="sxs-lookup"><span data-stu-id="e79da-158"><xref:System.Threading.Tasks.Task.FromResult%2A></span></span>   
+<span data-ttu-id="e79da-159">[연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) </span><span class="sxs-lookup"><span data-stu-id="e79da-159">[Walkthrough: Accessing the Web by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) </span></span>  
+<span data-ttu-id="e79da-160">[비동기 프로그램의 제어 흐름(C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md) </span><span class="sxs-lookup"><span data-stu-id="e79da-160">[Control Flow in Async Programs (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md) </span></span>  
+<span data-ttu-id="e79da-161">[async](../../../../csharp/language-reference/keywords/async.md) </span><span class="sxs-lookup"><span data-stu-id="e79da-161">[async](../../../../csharp/language-reference/keywords/async.md) </span></span>  
+[<span data-ttu-id="e79da-162">await</span><span class="sxs-lookup"><span data-stu-id="e79da-162">await</span></span>](../../../../csharp/language-reference/keywords/await.md)

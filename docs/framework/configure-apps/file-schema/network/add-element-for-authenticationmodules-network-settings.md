@@ -1,76 +1,78 @@
 ---
-title: "authenticationModules의 &lt;add&gt; 요소(네트워크 설정) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#add"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/add"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<add> 요소, authenticationModules"
-  - "<authenticationModules>, add 요소"
-  - "add 요소, authenticationModules"
-  - "authenticationModules, add 요소"
+title: "&lt;추가&gt; authenticationModules (네트워크 설정)에 대 한 요소"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#add
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/add
+helpviewer_keywords:
+- authenticationModules, add element
+- add element, authenticationModules
+- <authenticationModules>, add element
+- <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-caps.latest.revision: 15
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 60909a738afbe2ec14d0f67846b06578a7393601
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# authenticationModules의 &lt;add&gt; 요소(네트워크 설정)
-응용 프로그램에 인증 모듈을 추가합니다.  
+# <a name="ltaddgt-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="935e8-102">&lt;추가&gt; authenticationModules (네트워크 설정)에 대 한 요소</span><span class="sxs-lookup"><span data-stu-id="935e8-102">&lt;add&gt; Element for authenticationModules (Network Settings)</span></span>
+<span data-ttu-id="935e8-103">응용 프로그램에 사용자 지정 인증 모듈을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="935e8-103">Adds an authentication module to the application.</span></span>  
   
-## 구문  
+ <span data-ttu-id="935e8-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="935e8-104">\<configuration></span></span>  
+<span data-ttu-id="935e8-105">\<system.net ></span><span class="sxs-lookup"><span data-stu-id="935e8-105">\<system.net></span></span>  
+<span data-ttu-id="935e8-106">\<authenticationModules ></span><span class="sxs-lookup"><span data-stu-id="935e8-106">\<authenticationModules></span></span>  
+<span data-ttu-id="935e8-107">\<add></span><span class="sxs-lookup"><span data-stu-id="935e8-107">\<add></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="935e8-108">구문</span><span class="sxs-lookup"><span data-stu-id="935e8-108">Syntax</span></span>  
   
-      <add   
-   type = "client type", System, Version="version number", Culture="culture", PublicKeyToken="token"   
+```xml  
+<add
+  type="type_fullname, assembly_fullname"   
 />  
 ```  
   
-## 특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="935e8-109">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="935e8-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="935e8-110">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="935e8-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 특성  
+### <a name="attributes"></a><span data-ttu-id="935e8-111">특성</span><span class="sxs-lookup"><span data-stu-id="935e8-111">Attributes</span></span>  
   
-|**특성**|**설명**|  
-|------------|------------|  
-|`type`|인증을 구현하는 모듈의 클래스 이름 및 사양입니다.|  
+|<span data-ttu-id="935e8-112">**특성**</span><span class="sxs-lookup"><span data-stu-id="935e8-112">**Attribute**</span></span>|<span data-ttu-id="935e8-113">**설명**</span><span class="sxs-lookup"><span data-stu-id="935e8-113">**Description**</span></span>|  
+|-------------------|---------------------|  
+|`type`|<span data-ttu-id="935e8-114">정규화 된 형식 이름 (으로 표시는 <xref:System.Type.FullName%2A> 속성)와 어셈블리 이름 (가리키는 <xref:System.Reflection.Assembly.FullName%2A> 속성)을 쉼표로 구분 합니다.</span><span class="sxs-lookup"><span data-stu-id="935e8-114">The fully qualified type name (indicated by the <xref:System.Type.FullName%2A> property) and the assembly name (indicated by the <xref:System.Reflection.Assembly.FullName%2A> property), separated by a comma.</span></span>|  
   
-### 자식 요소  
- 없음  
+### <a name="child-elements"></a><span data-ttu-id="935e8-115">자식 요소</span><span class="sxs-lookup"><span data-stu-id="935e8-115">Child Elements</span></span>  
+ <span data-ttu-id="935e8-116">없음</span><span class="sxs-lookup"><span data-stu-id="935e8-116">None.</span></span>  
   
-### 부모 요소  
+### <a name="parent-elements"></a><span data-ttu-id="935e8-117">부모 요소</span><span class="sxs-lookup"><span data-stu-id="935e8-117">Parent Elements</span></span>  
   
-|**요소**|**설명**|  
-|------------|------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|네트워크 요청을 인증하는 데 사용되는 모듈을 지정합니다.|  
+|<span data-ttu-id="935e8-118">**요소**</span><span class="sxs-lookup"><span data-stu-id="935e8-118">**Element**</span></span>|<span data-ttu-id="935e8-119">**설명**</span><span class="sxs-lookup"><span data-stu-id="935e8-119">**Description**</span></span>|  
+|-----------------|---------------------|  
+|[<span data-ttu-id="935e8-120">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="935e8-120">authenticationModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|<span data-ttu-id="935e8-121">네트워크 요청을 인증 하는 데 사용 되는 모듈을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="935e8-121">Specifies modules used to authenticate network requests.</span></span>|  
   
-## 설명  
- `add` 요소는 등록된 인증 모듈 목록의 끝에 인증 모듈을 추가합니다.  인증 모듈은 목록에 추가된 순서에 따라 호출됩니다.  
+## <a name="remarks"></a><span data-ttu-id="935e8-122">설명</span><span class="sxs-lookup"><span data-stu-id="935e8-122">Remarks</span></span>  
+ <span data-ttu-id="935e8-123">`add` 요소는 등록된 인증 모듈 목록의 끝에 인증 모듈을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="935e8-123">The `add` element adds an authentication module to the end of the list of registered authentication modules.</span></span> <span data-ttu-id="935e8-124">인증 모듈 목록에 추가 된 순서 대로 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="935e8-124">Authentication modules are called in the order in which they were added to the list.</span></span>  
   
- `type` 특성 값은 쉼표로 구분된 유효한 DLL 이름과 해당 클래스 이름이어야 합니다.  
+ <span data-ttu-id="935e8-125">에 대 한 값은 `type` 특성 유효한 형식 이름 및 쉼표로 구분 하 여 해당 어셈블리 이름 이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="935e8-125">The value for the `type` attribute should be a valid type name and corresponding assembly name, separated by a comma.</span></span>  
   
-## 구성 파일  
- 이 요소는 응용 프로그램 구성 파일이나 컴퓨터 구성 파일\(Machine.config\)에 사용할 수 있습니다.  
+## <a name="configuration-files"></a><span data-ttu-id="935e8-126">구성 파일</span><span class="sxs-lookup"><span data-stu-id="935e8-126">Configuration Files</span></span>  
+ <span data-ttu-id="935e8-127">이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="935e8-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## 예제  
- 다음 코드 예제에서는 기본 인증 모듈을 설정합니다.  Version 및 PublicKeyToken 값을 지정된 모듈에 적합한 값으로 바꾸어야 합니다.  
+## <a name="example"></a><span data-ttu-id="935e8-128">예제</span><span class="sxs-lookup"><span data-stu-id="935e8-128">Example</span></span>  
+ <span data-ttu-id="935e8-129">다음 예에서는 기본 인증 모듈을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="935e8-129">The following example enables the default authentication modules.</span></span> <span data-ttu-id="935e8-130">지정된 된 모듈에 대 한 올바른 값으로 PublicKeyToken 및 버전에 대 한 값 바꿔야 합니다.</span><span class="sxs-lookup"><span data-stu-id="935e8-130">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
   
-```  
+```xml  
 <configuration>  
   <system.net>  
         <authenticationModules>  
@@ -89,7 +91,7 @@ caps.handback.revision: 15
 </configuration>  
 ```  
   
-## 참고 항목  
- <xref:System.Net.IAuthenticationModule>   
- <xref:System.Net.AuthenticationManager>   
- [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="935e8-131">참고 항목</span><span class="sxs-lookup"><span data-stu-id="935e8-131">See Also</span></span>  
+ <xref:System.Net.IAuthenticationModule>  
+ <xref:System.Net.AuthenticationManager>  
+ [<span data-ttu-id="935e8-132">네트워크 설정 스키마</span><span class="sxs-lookup"><span data-stu-id="935e8-132">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

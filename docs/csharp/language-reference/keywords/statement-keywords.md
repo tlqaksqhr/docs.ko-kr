@@ -1,55 +1,36 @@
 ---
 title: "문 키워드(C# 참조)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - keywords [C#], statements
 - statements [C#]
 ms.assetid: fad0c004-e282-4ec8-a127-bca7fd7a0b6f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 0a882d7c0e88f325d4a0bf471b5b38844b2b13f3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: aae7d08eaca3491754444182ae1cfb82276e0939
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="statement-keywords-c-reference"></a>문 키워드(C# 참조)
-문은 프로그램 명령입니다. 다음 표에서 참조된 항목에 설명된 경우를 제외하고 문은 순서대로 실행됩니다. 다음 표에는 C# 문 키워드가 나와 있습니다. 키워드로 표현되지 않은 문에 대한 자세한 내용은 [문](../../../csharp/programming-guide/statements-expressions-operators/statements.md)을 참조하세요.  
+# <a name="statement-keywords-c-reference"></a><span data-ttu-id="4602b-102">문 키워드(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="4602b-102">Statement Keywords (C# Reference)</span></span>
+<span data-ttu-id="4602b-103">문은 프로그램 명령입니다.</span><span class="sxs-lookup"><span data-stu-id="4602b-103">Statements are program instructions.</span></span> <span data-ttu-id="4602b-104">다음 표에서 참조된 항목에 설명된 경우를 제외하고 문은 순서대로 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="4602b-104">Except as described in the topics referenced in the following table, statements are executed in sequence.</span></span> <span data-ttu-id="4602b-105">다음 표에는 C# 문 키워드가 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4602b-105">The following table lists the C# statement keywords.</span></span> <span data-ttu-id="4602b-106">키워드로 표현되지 않은 문에 대한 자세한 내용은 [문](../../../csharp/programming-guide/statements-expressions-operators/statements.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="4602b-106">For more information about statements that are not expressed with any keyword, see [Statements](../../../csharp/programming-guide/statements-expressions-operators/statements.md).</span></span>  
   
-|범주|C# 키워드|  
+|<span data-ttu-id="4602b-107">범주</span><span class="sxs-lookup"><span data-stu-id="4602b-107">Category</span></span>|<span data-ttu-id="4602b-108">C# 키워드</span><span class="sxs-lookup"><span data-stu-id="4602b-108">C# keywords</span></span>|  
 |--------------|------------------|  
-|[선택 문](../../../csharp/language-reference/keywords/selection-statements.md)|[if](../../../csharp/language-reference/keywords/if-else.md), [else](../../../csharp/language-reference/keywords/if-else.md), [switch](../../../csharp/language-reference/keywords/switch.md), [case](../../../csharp/language-reference/keywords/switch.md)|  
-|[반복 문](../../../csharp/language-reference/keywords/iteration-statements.md)|[do](../../../csharp/language-reference/keywords/do.md), [for](../../../csharp/language-reference/keywords/for.md), [foreach](../../../csharp/language-reference/keywords/foreach-in.md), [in](../../../csharp/language-reference/keywords/foreach-in.md), [while](../../../csharp/language-reference/keywords/while.md)|  
-|[점프 문](../../../csharp/language-reference/keywords/jump-statements.md)|[break](../../../csharp/language-reference/keywords/break.md), [continue](../../../csharp/language-reference/keywords/continue.md), [default](../../../csharp/language-reference/keywords/switch.md), [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md), [yield](../../../csharp/language-reference/keywords/yield.md)|  
-|[예외 처리 문](../../../csharp/language-reference/keywords/exception-handling-statements.md)|[throw](../../../csharp/language-reference/keywords/throw.md), [try-catch](../../../csharp/language-reference/keywords/try-catch.md), [try-finally](../../../csharp/language-reference/keywords/try-finally.md), [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)|  
-|[Checked 및 Unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)|[checked](../../../csharp/language-reference/keywords/checked.md), [unchecked](../../../csharp/language-reference/keywords/unchecked.md)|  
-[fixed 문](../../../csharp/language-reference/keywords/fixed-statement.md)|[fixed](../../../csharp/language-reference/keywords/fixed-statement.md)|  
-|[lock 문](../../../csharp/language-reference/keywords/lock-statement.md)|[lock](../../../csharp/language-reference/keywords/lock-statement.md)|  
+|[<span data-ttu-id="4602b-109">선택 문</span><span class="sxs-lookup"><span data-stu-id="4602b-109">Selection statements</span></span>](../../../csharp/language-reference/keywords/selection-statements.md)|<span data-ttu-id="4602b-110">[if](../../../csharp/language-reference/keywords/if-else.md), [else](../../../csharp/language-reference/keywords/if-else.md), [switch](../../../csharp/language-reference/keywords/switch.md), [case](../../../csharp/language-reference/keywords/switch.md)</span><span class="sxs-lookup"><span data-stu-id="4602b-110">[if](../../../csharp/language-reference/keywords/if-else.md), [else](../../../csharp/language-reference/keywords/if-else.md), [switch](../../../csharp/language-reference/keywords/switch.md), [case](../../../csharp/language-reference/keywords/switch.md)</span></span>|  
+|[<span data-ttu-id="4602b-111">반복 문</span><span class="sxs-lookup"><span data-stu-id="4602b-111">Iteration statements</span></span>](../../../csharp/language-reference/keywords/iteration-statements.md)|<span data-ttu-id="4602b-112">[do](../../../csharp/language-reference/keywords/do.md), [for](../../../csharp/language-reference/keywords/for.md), [foreach](../../../csharp/language-reference/keywords/foreach-in.md), [in](../../../csharp/language-reference/keywords/foreach-in.md), [while](../../../csharp/language-reference/keywords/while.md)</span><span class="sxs-lookup"><span data-stu-id="4602b-112">[do](../../../csharp/language-reference/keywords/do.md), [for](../../../csharp/language-reference/keywords/for.md), [foreach](../../../csharp/language-reference/keywords/foreach-in.md), [in](../../../csharp/language-reference/keywords/foreach-in.md), [while](../../../csharp/language-reference/keywords/while.md)</span></span>|  
+|[<span data-ttu-id="4602b-113">점프 문</span><span class="sxs-lookup"><span data-stu-id="4602b-113">Jump statements</span></span>](../../../csharp/language-reference/keywords/jump-statements.md)|<span data-ttu-id="4602b-114">[break](../../../csharp/language-reference/keywords/break.md), [continue](../../../csharp/language-reference/keywords/continue.md), [default](../../../csharp/language-reference/keywords/switch.md), [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md), [yield](../../../csharp/language-reference/keywords/yield.md)</span><span class="sxs-lookup"><span data-stu-id="4602b-114">[break](../../../csharp/language-reference/keywords/break.md), [continue](../../../csharp/language-reference/keywords/continue.md), [default](../../../csharp/language-reference/keywords/switch.md), [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md), [yield](../../../csharp/language-reference/keywords/yield.md)</span></span>|  
+|[<span data-ttu-id="4602b-115">예외 처리 문</span><span class="sxs-lookup"><span data-stu-id="4602b-115">Exception handling statements</span></span>](../../../csharp/language-reference/keywords/exception-handling-statements.md)|<span data-ttu-id="4602b-116">[throw](../../../csharp/language-reference/keywords/throw.md), [try-catch](../../../csharp/language-reference/keywords/try-catch.md), [try-finally](../../../csharp/language-reference/keywords/try-finally.md), [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)</span><span class="sxs-lookup"><span data-stu-id="4602b-116">[throw](../../../csharp/language-reference/keywords/throw.md), [try-catch](../../../csharp/language-reference/keywords/try-catch.md), [try-finally](../../../csharp/language-reference/keywords/try-finally.md), [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)</span></span>|  
+|[<span data-ttu-id="4602b-117">Checked 및 Unchecked</span><span class="sxs-lookup"><span data-stu-id="4602b-117">Checked and unchecked</span></span>](../../../csharp/language-reference/keywords/checked-and-unchecked.md)|<span data-ttu-id="4602b-118">[checked](../../../csharp/language-reference/keywords/checked.md), [unchecked](../../../csharp/language-reference/keywords/unchecked.md)</span><span class="sxs-lookup"><span data-stu-id="4602b-118">[checked](../../../csharp/language-reference/keywords/checked.md), [unchecked](../../../csharp/language-reference/keywords/unchecked.md)</span></span>|  
+[<span data-ttu-id="4602b-119">fixed 문</span><span class="sxs-lookup"><span data-stu-id="4602b-119">fixed Statement</span></span>](../../../csharp/language-reference/keywords/fixed-statement.md)|[<span data-ttu-id="4602b-120">fixed</span><span class="sxs-lookup"><span data-stu-id="4602b-120">fixed</span></span>](../../../csharp/language-reference/keywords/fixed-statement.md)|  
+|[<span data-ttu-id="4602b-121">lock 문</span><span class="sxs-lookup"><span data-stu-id="4602b-121">lock Statement</span></span>](../../../csharp/language-reference/keywords/lock-statement.md)|[<span data-ttu-id="4602b-122">lock</span><span class="sxs-lookup"><span data-stu-id="4602b-122">lock</span></span>](../../../csharp/language-reference/keywords/lock-statement.md)|  
   
-## <a name="see-also"></a>참고 항목  
- [C# 참조](../../../csharp/language-reference/index.md)   
- [문](../../../csharp/programming-guide/statements-expressions-operators/statements.md)   
- [C# 키워드](../../../csharp/language-reference/keywords/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="4602b-123">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4602b-123">See Also</span></span>  
+ [<span data-ttu-id="4602b-124">C# 참조</span><span class="sxs-lookup"><span data-stu-id="4602b-124">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="4602b-125">문</span><span class="sxs-lookup"><span data-stu-id="4602b-125">Statements</span></span>](../../../csharp/programming-guide/statements-expressions-operators/statements.md)  
+ [<span data-ttu-id="4602b-126">C# 키워드</span><span class="sxs-lookup"><span data-stu-id="4602b-126">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)

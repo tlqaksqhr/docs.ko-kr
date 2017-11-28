@@ -1,48 +1,52 @@
 ---
-title: "기본 TransactionScope | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "기본 TransactionScope"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1e22b76a-76de-43b4-9be7-7a86ed3d5a44
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d4f9d9e966a0a6d8fa48d195b17438b3d78b32a9
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 기본 TransactionScope
-이 샘플은 <xref:System.Activities.Statements.TransactionScope> 인스턴스를 중첩시키는 방법을 보여 주는 네 개의 시나리오로 구성되어 있습니다.첫 번째 시나리오에서는 작성자가 생성에 대해 알지 못하는 타사 활동을 중첩시키는 방법을 보여 줍니다.두 번째와 세 번째 시나리오에서는 제한 시간을 적용하는 방법을 보여 주고 마지막 시나리오에서는 <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A> 설정을 보여 줍니다.  
+# <a name="basic-transactionscope"></a><span data-ttu-id="4a0b0-102">기본 TransactionScope</span><span class="sxs-lookup"><span data-stu-id="4a0b0-102">Basic TransactionScope</span></span>
+<span data-ttu-id="4a0b0-103">이 샘플은 <xref:System.Activities.Statements.TransactionScope> 인스턴스를 중첩시키는 방법을 보여 주는 네 개의 시나리오로 구성되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4a0b0-103">This sample consists of four scenarios that run showing how to nest <xref:System.Activities.Statements.TransactionScope> instances.</span></span> <span data-ttu-id="4a0b0-104">첫 번째 시나리오에서는 작성자가 생성에 대해 알지 못하는 타사 활동을 중첩시키는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4a0b0-104">The first scenario shows nesting a 3rd party activity of which the author has no knowledge of the construction.</span></span> <span data-ttu-id="4a0b0-105">두 번째와 세 번째 시나리오에서는 제한 시간을 적용하는 방법을 보여 주고 마지막 시나리오에서는 <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A> 설정을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4a0b0-105">The second and third scenarios show how time-outs are respected and the final scenario shows the <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A> setting.</span></span>  
   
-## TransactionScopeActivity 중첩  
- 첫 번째 시나리오의 워크플로는 두 <xref:System.Activities.Statements.WriteLine> 활동과 한 <xref:System.Activities.Statements.TransactionScope> 활동의 시퀀스로 구성되어 있습니다.<xref:System.Activities.Statements.TransactionScope>의 본문은 둘 이상의 <xref:System.Activities.Statements.WriteLine> 활동, 트랜잭션의 로컬 식별자를 출력하는 사용자 지정 활동 및 타사 활동으로 이루어진 시퀀스입니다.타사 활동 `TransactionScopeTest`에는 <xref:System.Activities.Statements.TransactionScope>가 포함되어 있지만 워크플로 작성자는 이를 알 수 없습니다.이 시나리오에서는 <xref:System.Activities.Statements.TransactionScope> 활동이 중첩될 수 있음을 보여 줍니다.  
+## <a name="nesting-of-transactionscopeactivity"></a><span data-ttu-id="4a0b0-106">TransactionScopeActivity 중첩</span><span class="sxs-lookup"><span data-stu-id="4a0b0-106">Nesting of TransactionScopeActivity</span></span>  
+ <span data-ttu-id="4a0b0-107">첫 번째 시나리오의 워크플로는 두 <xref:System.Activities.Statements.WriteLine> 활동과 한 <xref:System.Activities.Statements.TransactionScope> 활동의 시퀀스로 구성되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4a0b0-107">The workflow for the first scenario consists of a sequence of two <xref:System.Activities.Statements.WriteLine> activities and a <xref:System.Activities.Statements.TransactionScope>.</span></span> <span data-ttu-id="4a0b0-108"><xref:System.Activities.Statements.TransactionScope>의 본문은 둘 이상의 <xref:System.Activities.Statements.WriteLine> 활동, 트랜잭션의 로컬 식별자를 출력하는 사용자 지정 활동 및 타사 활동으로 이루어진 시퀀스입니다.</span><span class="sxs-lookup"><span data-stu-id="4a0b0-108">The body of the <xref:System.Activities.Statements.TransactionScope> is a sequence of two more <xref:System.Activities.Statements.WriteLine> activities, a custom activity that prints the local identifier of the transaction and a third party activity.</span></span> <span data-ttu-id="4a0b0-109">타사 활동 `TransactionScopeTest`에는 <xref:System.Activities.Statements.TransactionScope>가 포함되어 있지만 워크플로 작성자는 이를 알 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4a0b0-109">The third party activity `TransactionScopeTest` contains a <xref:System.Activities.Statements.TransactionScope> although the workflow author has no way of knowing.</span></span> <span data-ttu-id="4a0b0-110">이 시나리오에서는 <xref:System.Activities.Statements.TransactionScope> 활동이 중첩될 수 있음을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4a0b0-110">This scenario shows that <xref:System.Activities.Statements.TransactionScope> activities can be nested.</span></span>  
   
-## 제한 시간  
- 두 번째 시나리오의 워크플로는 첫 번째 시나리오와 거의 동일하지만`TransactionScopeTest`가 <xref:System.Activities.Statements.TransactionScope>로 대체되었다는 차이점이 있습니다.<xref:System.Activities.Statements.TransactionScope>의 본문은 5초의 지연 시간을 나타내며 트랜잭션 제한 시간은 2초로 설정됩니다.외부 <xref:System.Activities.Statements.TransactionScope>의 제한 시간은 10초로 설정됩니다.범위의 최소 제한 시간이 적용되어 트랜잭션이 시간 초과됩니다.  
+## <a name="time-outs"></a><span data-ttu-id="4a0b0-111">제한 시간</span><span class="sxs-lookup"><span data-stu-id="4a0b0-111">Time-Outs</span></span>  
+ <span data-ttu-id="4a0b0-112">두 번째 시나리오의 워크플로는 첫 번째 시나리오와 거의 동일하지만</span><span class="sxs-lookup"><span data-stu-id="4a0b0-112">The workflow for the second scenario is nearly identical to the first.</span></span> <span data-ttu-id="4a0b0-113">`TransactionScopeTest`가 <xref:System.Activities.Statements.TransactionScope>로 대체되었다는 차이점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4a0b0-113">The `TransactionScopeTest` has been replaced with a <xref:System.Activities.Statements.TransactionScope>.</span></span> <span data-ttu-id="4a0b0-114"><xref:System.Activities.Statements.TransactionScope>의 본문은 5초의 지연 시간을 나타내며 트랜잭션 제한 시간은 2초로 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="4a0b0-114">The body of the <xref:System.Activities.Statements.TransactionScope> is a five-second delay and the time-out for the transaction is set to two seconds.</span></span> <span data-ttu-id="4a0b0-115">외부 <xref:System.Activities.Statements.TransactionScope>의 제한 시간은 10초로 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="4a0b0-115">The time-out for the outer <xref:System.Activities.Statements.TransactionScope> is set to 10 seconds.</span></span> <span data-ttu-id="4a0b0-116">범위의 최소 제한 시간이 적용되어 트랜잭션이 시간 초과됩니다.</span><span class="sxs-lookup"><span data-stu-id="4a0b0-116">Note that the smallest time-out in scope is respected and the transaction times out.</span></span>  
   
- 세 번째 시나리오의 워크플로는 두 번째 시나리오와 거의 동일하지만지연 활동이 내부 <xref:System.Activities.Statements.TransactionScope>에서 외부 <xref:System.Activities.Statements.TransactionScope>의 본문에 해당하는 시퀀스에서 해당 위치 바로 다음의 위치로 이동되었다는 차이점이 있습니다.트랜잭션은 여전히 제한 시간이 적용되지만 내부 <xref:System.Activities.Statements.TransactionScope>의 제한 시간 2초는 더 이상 적용되지 않습니다.대신 외부 <xref:System.Activities.Statements.TransactionScope> 제한 시간이 초과되는 10초 후에 트랜잭션이 시간 초과됩니다.  
+ <span data-ttu-id="4a0b0-117">세 번째 시나리오의 워크플로는 두 번째 시나리오와 거의 동일하지만</span><span class="sxs-lookup"><span data-stu-id="4a0b0-117">The workflow for the third scenario is nearly identical to scenario two.</span></span> <span data-ttu-id="4a0b0-118">지연 활동이 내부 <xref:System.Activities.Statements.TransactionScope>에서 외부 <xref:System.Activities.Statements.TransactionScope>의 본문에 해당하는 시퀀스에서 해당 위치 바로 다음의 위치로 이동되었다는 차이점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4a0b0-118">The delay activity has been moved from the body of the inner <xref:System.Activities.Statements.TransactionScope> to immediately after it in the sequence that is the body of the outer <xref:System.Activities.Statements.TransactionScope>.</span></span> <span data-ttu-id="4a0b0-119">트랜잭션은 여전히 제한 시간이 적용되지만 내부 <xref:System.Activities.Statements.TransactionScope>의 제한 시간 2초는 더 이상 적용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4a0b0-119">The transaction still times out but because the two second time-out of the inner <xref:System.Activities.Statements.TransactionScope> no longer applies.</span></span> <span data-ttu-id="4a0b0-120">대신 외부 <xref:System.Activities.Statements.TransactionScope> 제한 시간이 초과되는 10초 후에 트랜잭션이 시간 초과됩니다.</span><span class="sxs-lookup"><span data-stu-id="4a0b0-120">The transaction times out at 10 seconds when the outer <xref:System.Activities.Statements.TransactionScope> time-out is exceeded.</span></span>  
   
-## 트랜잭션 실패 시 중단  
- 이 워크플로는 세 번째 시나리오와 유사하지만 <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A> 속성에 의해 제한 시간이 대체되었다는 차이점이 있습니다.모든 내부 자식 항목의 플래그\(설정된 경우\)는 외부 <xref:System.Activities.Statements.TransactionScope>와 일치해야 합니다.이 시나리오에서는 그렇지 않으므로 워크플로가 열릴 때 예외가 throw됩니다.  
+## <a name="aborting-on-transaction-failure"></a><span data-ttu-id="4a0b0-121">트랜잭션 실패 시 중단</span><span class="sxs-lookup"><span data-stu-id="4a0b0-121">Aborting on Transaction Failure</span></span>  
+ <span data-ttu-id="4a0b0-122">이 워크플로는 세 번째 시나리오와 유사하지만 <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A> 속성에 의해 제한 시간이 대체되었다는 차이점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4a0b0-122">This workflow is similar to scenario three except the time-outs have been replaced by the <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A> property.</span></span> <span data-ttu-id="4a0b0-123">모든 내부 자식 항목의 플래그(설정된 경우)는 외부 <xref:System.Activities.Statements.TransactionScope>와 일치해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4a0b0-123">Note that the flags of all inner children, if set, must match the outer <xref:System.Activities.Statements.TransactionScope>.</span></span> <span data-ttu-id="4a0b0-124">이 시나리오에서는 그렇지 않으므로 워크플로가 열릴 때 예외가 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="4a0b0-124">In this scenario, they do not and an exception is thrown when the workflow opens.</span></span>  
   
-#### 이 샘플을 실행하려면  
+#### <a name="to-run-the-sample"></a><span data-ttu-id="4a0b0-125">이 샘플을 실행하려면</span><span class="sxs-lookup"><span data-stu-id="4a0b0-125">To run the sample</span></span>  
   
-1.  [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]에서 BasicTransactionScopeSample.sln 솔루션을 엽니다.  
+1.  <span data-ttu-id="4a0b0-126">[!INCLUDE[vs2010](../../../../includes/vs2010-md.md)]에서 BasicTransactionScopeSample.sln 솔루션을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="4a0b0-126">Open the BasicTransactionScopeSample.sln solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  솔루션을 빌드하려면 Ctrl\+Shift\+B를 누르거나 **빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.  
+2.  <span data-ttu-id="4a0b0-127">솔루션을 빌드하려면 CTRL + SHIFT + B 키를 누르거나 선택 **솔루션 빌드** 에서 **빌드** 메뉴.</span><span class="sxs-lookup"><span data-stu-id="4a0b0-127">To build the solution, press CTRL+SHIFT+B or select **Build Solution** from the **Build** menu.</span></span>  
   
-3.  빌드가 성공한 후 F5 키를 누르거나 **디버그** 메뉴에서 **디버깅 시작**을 선택합니다.Ctrl\+F5를 누르거나 **디버그** 메뉴에서 **디버깅하지 않고 시작**을 선택하여 디버깅하지 않고 실행할 수도 있습니다.  
+3.  <span data-ttu-id="4a0b0-128">빌드가 성공한 후 F5 키를 누르거나 선택 **디버깅 시작** 에서 **디버그** 메뉴.</span><span class="sxs-lookup"><span data-stu-id="4a0b0-128">Once the build has succeeded, press F5 or select **Start Debugging** from the **Debug** menu.</span></span> <span data-ttu-id="4a0b0-129">CTRL + f 5를 눌러 하거나 선택할 수 또는 **디버깅 하지 않고 시작** 에서 **디버그** 메뉴 디버깅 없이 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="4a0b0-129">Alternatively you can press CTRL+F5 or select **Start Without Debugging** from the **Debug** menu to run without debugging.</span></span>  
   
 > [!IMPORTANT]
->  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.계속하기 전에 다음\(기본\) 디렉터리를 확인하십시오.  
+>  <span data-ttu-id="4a0b0-130">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4a0b0-130">The samples may already be installed on your machine.</span></span> <span data-ttu-id="4a0b0-131">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="4a0b0-131">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780)로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하십시오.이 샘플은 다음 디렉터리에 있습니다.  
+>  <span data-ttu-id="4a0b0-132">이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요.</span><span class="sxs-lookup"><span data-stu-id="4a0b0-132">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="4a0b0-133">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4a0b0-133">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Transactions\BasicTransactionScope`  
   
-## 참고 항목
+## <a name="see-also"></a><span data-ttu-id="4a0b0-134">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4a0b0-134">See Also</span></span>

@@ -1,56 +1,37 @@
 ---
 title: "방법: 메서드에 대한 구조체 전달과 클래스 참조 전달 간의 차이점 이해(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - structs [C#], passing as method parameter
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: b989c3cefe72c6c17d10dd91005dcecbfc84e389
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1a4508c8765ac678fd371180cb0c3ece3e1d9a44
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>방법: 메서드에 대한 구조체 전달과 클래스 참조 전달 간의 차이점 이해(C# 프로그래밍 가이드)
-다음 예제에서는 [struct](../../../csharp/language-reference/keywords/struct.md)를 메서드에 전달하는 것과 [class](../../../csharp/language-reference/keywords/class.md) 인스턴스를 메서드에 전달하는 것이 어떻게 다른지를 보여 줍니다. 예제에서 두 인수(구조체와 클래스 인스턴스)는 모두 값으로 전달되며, 두 메서드 모두 인수의 한 필드 값을 변경합니다. 그러나 구조체를 전달할 때 전달되는 내용과 클래스 인스턴스를 전달할 때 전달되는 내용이 다르기 때문에 두 메서드의 결과는 서로 다릅니다.  
+# <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a><span data-ttu-id="dd0cf-102">방법: 메서드에 대한 구조체 전달과 클래스 참조 전달 간의 차이점 이해(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="dd0cf-102">How to: Know the Difference Between Passing a Struct and Passing a Class Reference to a Method (C# Programming Guide)</span></span>
+<span data-ttu-id="dd0cf-103">다음 예제에서는 [struct](../../../csharp/language-reference/keywords/struct.md)를 메서드에 전달하는 것과 [class](../../../csharp/language-reference/keywords/class.md) 인스턴스를 메서드에 전달하는 것이 어떻게 다른지를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="dd0cf-103">The following example demonstrates how passing a [struct](../../../csharp/language-reference/keywords/struct.md) to a method differs from passing a [class](../../../csharp/language-reference/keywords/class.md) instance to a method.</span></span> <span data-ttu-id="dd0cf-104">예제에서 두 인수(구조체와 클래스 인스턴스)는 모두 값으로 전달되며, 두 메서드 모두 인수의 한 필드 값을 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="dd0cf-104">In the example, both of the arguments (struct and class instance) are passed by value, and both methods change the value of one field of the argument.</span></span> <span data-ttu-id="dd0cf-105">그러나 구조체를 전달할 때 전달되는 내용과 클래스 인스턴스를 전달할 때 전달되는 내용이 다르기 때문에 두 메서드의 결과는 서로 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="dd0cf-105">However, the results of the two methods are not the same because what is passed when you pass a struct differs from what is passed when you pass an instance of a class.</span></span>  
   
- 구조체는 [value type](../../../csharp/language-reference/keywords/value-types.md)이므로 메서드에 [구조체를 값으로 전달](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md)하는 경우 메서드가 구조체 인수의 복사본을 받아서 작동합니다. 메서드가 호출 메서드의 원래 구조체에 액세스할 수 없으므로 어떤 방식으로든 변경할 수 없습니다. 메서드는 복사본만 변경할 수 있습니다.  
+ <span data-ttu-id="dd0cf-106">구조체는 [value type](../../../csharp/language-reference/keywords/value-types.md)이므로 메서드에 [구조체를 값으로 전달](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md)하는 경우 메서드가 구조체 인수의 복사본을 받아서 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="dd0cf-106">Because a struct is a [value type](../../../csharp/language-reference/keywords/value-types.md), when you [pass a struct by value](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md) to a method, the method receives and operates on a copy of the struct argument.</span></span> <span data-ttu-id="dd0cf-107">메서드가 호출 메서드의 원래 구조체에 액세스할 수 없으므로 어떤 방식으로든 변경할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="dd0cf-107">The method has no access to the original struct in the calling method and therefore can't change it in any way.</span></span> <span data-ttu-id="dd0cf-108">메서드는 복사본만 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dd0cf-108">The method can change only the copy.</span></span>  
   
- 클래스 인스턴스는 값 형식이 아니라 [참조 형식](../../../csharp/language-reference/keywords/reference-types.md)입니다. 메서드에 [참조 형식을 값으로 전달](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md)하는 경우 메서드가 클래스 인스턴스에 대한 참조의 복사본을 받습니다. 즉, 메서드는 인스턴스 자체의 복사본이 아니라 인스턴스 주소의 복사본을 받습니다. 호출 메서드의 클래스 인스턴스에 주소가 있고, 호출된 메서드의 매개 변수에 주소의 복사본이 있으며, 두 주소가 모두 동일한 개체를 참조합니다. 매개 변수에 주소의 복사본만 포함되므로 호출된 메서드는 호출 메서드의 클래스 인스턴스 주소를 변경할 수 없습니다. 그러나 호출된 메서드는 주소를 사용하여 원래 주소와 복사본이 모두 참조하는 클래스 멤버에 액세스할 수 있습니다. 호출된 메서드가 클래스 멤버를 변경하는 경우 호출 메서드의 원래 클래스 인스턴스도 변경됩니다.  
+ <span data-ttu-id="dd0cf-109">클래스 인스턴스는 값 형식이 아니라 [참조 형식](../../../csharp/language-reference/keywords/reference-types.md)입니다.</span><span class="sxs-lookup"><span data-stu-id="dd0cf-109">A class instance is a [reference type](../../../csharp/language-reference/keywords/reference-types.md), not a value type.</span></span> <span data-ttu-id="dd0cf-110">메서드에 [참조 형식을 값으로 전달](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md)하는 경우 메서드가 클래스 인스턴스에 대한 참조의 복사본을 받습니다.</span><span class="sxs-lookup"><span data-stu-id="dd0cf-110">When [a reference type is passed by value](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md) to a method, the method receives a copy of the reference to the class instance.</span></span> <span data-ttu-id="dd0cf-111">즉, 메서드는 인스턴스 자체의 복사본이 아니라 인스턴스 주소의 복사본을 받습니다.</span><span class="sxs-lookup"><span data-stu-id="dd0cf-111">That is, the method receives a copy of the address of the instance, not a copy of the instance itself.</span></span> <span data-ttu-id="dd0cf-112">호출 메서드의 클래스 인스턴스에 주소가 있고, 호출된 메서드의 매개 변수에 주소의 복사본이 있으며, 두 주소가 모두 동일한 개체를 참조합니다.</span><span class="sxs-lookup"><span data-stu-id="dd0cf-112">The class instance in the calling method has an address, the parameter in the called method has a copy of the address, and both addresses refer to the same object.</span></span> <span data-ttu-id="dd0cf-113">매개 변수에 주소의 복사본만 포함되므로 호출된 메서드는 호출 메서드의 클래스 인스턴스 주소를 변경할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="dd0cf-113">Because the parameter contains only a copy of the address, the called method cannot change the address of the class instance in the calling method.</span></span> <span data-ttu-id="dd0cf-114">그러나 호출된 메서드는 주소를 사용하여 원래 주소와 복사본이 모두 참조하는 클래스 멤버에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="dd0cf-114">However, the called method can use the address to access the class members that both the original address and the copy reference.</span></span> <span data-ttu-id="dd0cf-115">호출된 메서드가 클래스 멤버를 변경하는 경우 호출 메서드의 원래 클래스 인스턴스도 변경됩니다.</span><span class="sxs-lookup"><span data-stu-id="dd0cf-115">If the called method changes a class member, the original class instance in the calling method also changes.</span></span>  
   
- 다음 예제의 출력에서 차이점을 보여 줍니다. `ClassTaker` 메서드가 매개 변수의 주소를 사용하여 클래스 인스턴스의 지정된 필드를 찾기 때문에 클래스 인스턴스의 `willIChange` 필드 값은 해당 메서드 호출에 의해 변경됩니다. 인수 값이 해당 주소의 복사본이 아니라 구조체 자체의 복사본이기 때문에 호출 메서드의 구조체 `willIChange` 필드는 `StructTaker` 메서드 호출에 의해 변경되지 않습니다. `StructTaker`는 복사본을 변경하고, `StructTaker` 호출이 완료되면 복사본이 손실됩니다.  
+ <span data-ttu-id="dd0cf-116">다음 예제의 출력에서 차이점을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="dd0cf-116">The output of the following example illustrates the difference.</span></span> <span data-ttu-id="dd0cf-117">`ClassTaker` 메서드가 매개 변수의 주소를 사용하여 클래스 인스턴스의 지정된 필드를 찾기 때문에 클래스 인스턴스의 `willIChange` 필드 값은 해당 메서드 호출에 의해 변경됩니다.</span><span class="sxs-lookup"><span data-stu-id="dd0cf-117">The value of the `willIChange` field of the class instance is changed by the call to method `ClassTaker` because the method uses the address in the parameter to find the specified field of the class instance.</span></span> <span data-ttu-id="dd0cf-118">인수 값이 해당 주소의 복사본이 아니라 구조체 자체의 복사본이기 때문에 호출 메서드의 구조체 `willIChange` 필드는 `StructTaker` 메서드 호출에 의해 변경되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="dd0cf-118">The `willIChange` field of the struct in the calling method is not changed by the call to method `StructTaker` because the value of the argument is a copy of the struct itself, not a copy of its address.</span></span> <span data-ttu-id="dd0cf-119">`StructTaker`는 복사본을 변경하고, `StructTaker` 호출이 완료되면 복사본이 손실됩니다.</span><span class="sxs-lookup"><span data-stu-id="dd0cf-119">`StructTaker` changes the copy, and the copy is lost when the call to `StructTaker` is completed.</span></span>  
   
-## <a name="example"></a>예제  
- [!code-cs[csProgGuideObjects#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method_1.cs)]  
+## <a name="example"></a><span data-ttu-id="dd0cf-120">예제</span><span class="sxs-lookup"><span data-stu-id="dd0cf-120">Example</span></span>  
+ [!code-csharp[csProgGuideObjects#32](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method_1.cs)]  
   
-## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [클래스](../../../csharp/programming-guide/classes-and-structs/classes.md)   
- [구조체](../../../csharp/programming-guide/classes-and-structs/structs.md)   
- [매개 변수 전달](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)
-
+## <a name="see-also"></a><span data-ttu-id="dd0cf-121">참고 항목</span><span class="sxs-lookup"><span data-stu-id="dd0cf-121">See Also</span></span>  
+ [<span data-ttu-id="dd0cf-122">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="dd0cf-122">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="dd0cf-123">클래스</span><span class="sxs-lookup"><span data-stu-id="dd0cf-123">Classes</span></span>](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+ [<span data-ttu-id="dd0cf-124">구조체</span><span class="sxs-lookup"><span data-stu-id="dd0cf-124">Structs</span></span>](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+ [<span data-ttu-id="dd0cf-125">매개 변수 전달</span><span class="sxs-lookup"><span data-stu-id="dd0cf-125">Passing Parameters</span></span>](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)

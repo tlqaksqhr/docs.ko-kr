@@ -1,40 +1,39 @@
 ---
-title: "방법: Windows Communication Foundation 클라이언트 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "WCF 클라이언트 [WCF], using"
+title: "방법: Windows Communication Foundation 클라이언트 사용"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: WCF clients [WCF], using
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-caps.latest.revision: 38
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 38
+caps.latest.revision: "38"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c4b0612cc18129f9f35ed3f475bca8941a20d3ca
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: Windows Communication Foundation 클라이언트 사용
-이 작업은 기본 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램을 만드는 데 필요한 6가지 작업 중 마지막 작업입니다.  6가지 모든 작업에 대한 개요는 [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md) 항목을 참조하세요.  
+# <a name="how-to-use-a-windows-communication-foundation-client"></a><span data-ttu-id="c10b4-102">방법: Windows Communication Foundation 클라이언트 사용</span><span class="sxs-lookup"><span data-stu-id="c10b4-102">How to: Use a Windows Communication Foundation Client</span></span>
+<span data-ttu-id="c10b4-103">이 작업은 기본 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램을 만드는 데 필요한 6가지 작업 중 마지막 작업입니다.</span><span class="sxs-lookup"><span data-stu-id="c10b4-103">This is the last of six tasks required to create a basic [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] application.</span></span> <span data-ttu-id="c10b4-104">모든 6 가지 작업의 개요를 참조 하십시오.는 [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md) 항목입니다.</span><span class="sxs-lookup"><span data-stu-id="c10b4-104">For an overview of all six of the tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>  
   
- [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 프록시를 만들고 구성한 후에는 클라이언트 인스턴스를 만들고 클라이언트 응용 프로그램을 컴파일하여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스와 통신하는 데 사용할 수 있습니다.  이 항목에서는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트를 인스턴스화하고 사용하는 절차에 대해 설명합니다.  이 절차에서는 다음과 같은 세 작업을 수행합니다.  
+ <span data-ttu-id="c10b4-105">[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 프록시를 만들고 구성한 후에는 클라이언트 인스턴스를 만들고 클라이언트 응용 프로그램을 컴파일하여 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스와 통신하는 데 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c10b4-105">Once a [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] proxy has been created and configured, a client instance can be created and the client application can be compiled and used to communicate with the [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] service.</span></span> <span data-ttu-id="c10b4-106">이 항목에서는 [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트를 인스턴스화하고 사용하는 절차에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="c10b4-106">This topic describes procedures for instantiating and using a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client.</span></span> <span data-ttu-id="c10b4-107">이 절차에서는 다음과 같은 세 작업을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="c10b4-107">This procedure does three things:</span></span>  
   
-1.  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트를 인스턴스화합니다.  
+1.  <span data-ttu-id="c10b4-108">[!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 클라이언트를 인스턴스화합니다.</span><span class="sxs-lookup"><span data-stu-id="c10b4-108">Instantiates a [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] client.</span></span>  
   
-2.  생성된 프록시에서 서비스 작업 호출  
+2.  <span data-ttu-id="c10b4-109">생성된 프록시에서 서비스 작업 호출</span><span class="sxs-lookup"><span data-stu-id="c10b4-109">Calls the service operations from the generated proxy.</span></span>  
   
-3.  작업 호출이 완료되면 클라이언트 닫기  
+3.  <span data-ttu-id="c10b4-110">작업 호출이 완료되면 클라이언트 닫기</span><span class="sxs-lookup"><span data-stu-id="c10b4-110">Closes the client once the operation call is completed.</span></span>  
   
-### Windows Communication Foundation 클라이언트를 사용하려면  
+### <a name="to-use-a-windows-communication-foundation-client"></a><span data-ttu-id="c10b4-111">Windows Communication Foundation 클라이언트를 사용하려면</span><span class="sxs-lookup"><span data-stu-id="c10b4-111">To use a Windows Communication Foundation client</span></span>  
   
-1.  GettingStartedClient 프로젝트에서 코드 편집기에서 Program.cs 또는 Program.vb 파일을 열고 기존 코드를 다음 코드로 바꿉니다.  
+1.  <span data-ttu-id="c10b4-112">GettingStartedClient 프로젝트에서 코드 편집기에서 Program.cs 또는 Program.vb 파일을 열고 기존 코드를 다음 코드로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="c10b4-112">Open the Program.cs or Program.vb file from the GettingStartedClient project and replace the existing code with the following code:</span></span>  
   
     ```  
     using System;  
@@ -82,7 +81,6 @@ caps.handback.revision: 38
             }  
         }  
     }  
-  
     ```  
   
     ```  
@@ -133,44 +131,28 @@ caps.handback.revision: 38
         End Sub  
   
     End Module  
-  
     ```  
   
-     GettingStartedClient.ServiceReference1을 가져오는 문 사용 또는 가져오기를 참조하십시오.  이는 Visual Studio에서 서비스 참조 추가에서 생성하는 코드를 가져옵니다.  이 코드는 WCF 프록시를 인스턴스화한 다음 계산기 서비스가 노출한 각 서비스 작업을 호출하고 프록시를 닫고 종료합니다.  
+     <span data-ttu-id="c10b4-113">GettingStartedClient.ServiceReference1을 가져오는 문 사용 또는 가져오기를 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="c10b4-113">Notice the using or imports statement that imports the GettingStartedClient.ServiceReference1.</span></span> <span data-ttu-id="c10b4-114">이는 Visual Studio에서 서비스 참조 추가에서 생성하는 코드를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="c10b4-114">This imports the code generated by Add Service Reference in Visual Studio.</span></span> <span data-ttu-id="c10b4-115">이 코드는 WCF 프록시를 인스턴스화한 다음 계산기 서비스가 노출한 각 서비스 작업을 호출하고 프록시를 닫고 종료합니다.</span><span class="sxs-lookup"><span data-stu-id="c10b4-115">The code instantiates the WCF proxy and then calls each of the service operations exposed by the calculator service, closes the proxy and terminates.</span></span>  
   
- 이것으로 초보자를 위한 자습서를 완료했습니다.  서비스 계약을 정의했고 서비스 계약을 구현했으며 WCF 프록시를 생성했고 WCF 클라이언트 응용 프로그램을 구성한 다음 서비스 작업을 호출하기 위해 프록시를 사용했습니다.  응용 프로그램을 테스트하려면 먼저 GettingStartedHost를 실행하여 서비스를 시작한 다음 GettingStartedClient를 실행합니다.  GettingStartedHost의 출력은 다음과 같아야 합니다.  
-  
-```Output  
-  
-            The service is ready.  Press <ENTER> to terminate service.  Received Add(100,15.99)  
-Return: 115.99  
-Received Subtract(145,76.54)  
-Return: 68.46  
-Received Multiply(9,81.25)  
-Return: 731.25  
-Received Divide(22,7)  
-Return: 3.14285714285714    
-```  
-  
- GettingStartedClient의 출력은 다음과 같아야 합니다.  
+ <span data-ttu-id="c10b4-116">이것으로 초보자를 위한 자습서를 완료했습니다.</span><span class="sxs-lookup"><span data-stu-id="c10b4-116">You have now completed the tutorial.</span></span> <span data-ttu-id="c10b4-117">서비스 계약을 정의했고 서비스 계약을 구현했으며 WCF 프록시를 생성했고 WCF 클라이언트 응용 프로그램을 구성한 다음 서비스 작업을 호출하기 위해 프록시를 사용했습니다.</span><span class="sxs-lookup"><span data-stu-id="c10b4-117">You defined a service contract, implemented the service contract, generated a WCF proxy, configured a WCF client application, and then used the proxy to call service operations.</span></span> <span data-ttu-id="c10b4-118">응용 프로그램을 테스트하려면 먼저 GettingStartedHost를 실행하여 서비스를 시작한 다음 GettingStartedClient를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="c10b4-118">To test out the application first run GettingStartedHost to start the service and then run GettingStartedClient.</span></span> <span data-ttu-id="c10b4-119">GettingStartedHost의 출력은 다음과 같아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c10b4-119">The output from GettingStartedHost should look like this:</span></span>  
   
 ```Output  
-  
-            Add(100,15.99) = 115.99  
-Subtract(145,76.54) = 68.46  
-Multiply(9,81.25) = 731.25  
-Divide(22,7) = 3.14285714285714  
-  
-클라이언트를 종료하려면 <Enter> 키를 누릅니다.  
-  
+The service is ready.Press <ENTER> to terminate service.Received Add(100,15.99)Return: 115.99Received Subtract(145,76.54)Return: 68.46Received Multiply(9,81.25)Return: 731.25Received Divide(22,7)Return: 3.14285714285714  
 ```  
   
-## 참고 항목  
- [클라이언트 빌드](../../../docs/framework/wcf/building-clients.md)   
- [방법: 클라이언트 만들기](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)   
- [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md)   
- [기본 WCF 프로그래밍](../../../docs/framework/wcf/basic-wcf-programming.md)   
- [방법: 이중 계약 만들기](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)   
- [방법: 이중 계약을 사용하여 서비스 액세스](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)   
- [시작](../../../docs/framework/wcf/samples/getting-started-sample.md)   
- [자체 호스팅](../../../docs/framework/wcf/samples/self-host.md)
+ <span data-ttu-id="c10b4-120">GettingStartedClient의 출력은 다음과 같아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c10b4-120">The output from GettingStartedClient should look like this:</span></span>  
+  
+```Output  
+Add(100,15.99) = 115.99Subtract(145,76.54) = 68.46Multiply(9,81.25) = 731.25Divide(22,7) = 3.14285714285714Press <ENTER> to terminate client.  
+```  
+  
+## <a name="see-also"></a><span data-ttu-id="c10b4-121">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c10b4-121">See Also</span></span>  
+ [<span data-ttu-id="c10b4-122">클라이언트 빌드</span><span class="sxs-lookup"><span data-stu-id="c10b4-122">Building Clients</span></span>](../../../docs/framework/wcf/building-clients.md)  
+ [<span data-ttu-id="c10b4-123">방법: 클라이언트 만들기</span><span class="sxs-lookup"><span data-stu-id="c10b4-123">How to: Create a Client</span></span>](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
+ [<span data-ttu-id="c10b4-124">초보자를 위한 자습서</span><span class="sxs-lookup"><span data-stu-id="c10b4-124">Getting Started Tutorial</span></span>](../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [<span data-ttu-id="c10b4-125">기본 WCF 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="c10b4-125">Basic WCF Programming</span></span>](../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [<span data-ttu-id="c10b4-126">방법: 이중 계약 만들기</span><span class="sxs-lookup"><span data-stu-id="c10b4-126">How to: Create a Duplex Contract</span></span>](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
+ [<span data-ttu-id="c10b4-127">방법: 이중 계약을 사용 하 여 서비스에 액세스</span><span class="sxs-lookup"><span data-stu-id="c10b4-127">How to: Access Services with a Duplex Contract</span></span>](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
+ [<span data-ttu-id="c10b4-128">시작</span><span class="sxs-lookup"><span data-stu-id="c10b4-128">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)  
+ [<span data-ttu-id="c10b4-129">자체 호스팅</span><span class="sxs-lookup"><span data-stu-id="c10b4-129">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)

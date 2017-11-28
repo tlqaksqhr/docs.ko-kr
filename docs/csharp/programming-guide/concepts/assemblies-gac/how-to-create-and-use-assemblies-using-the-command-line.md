@@ -1,43 +1,34 @@
 ---
 title: "방법: 명령줄을 사용하여 어셈블리 만들기 및 사용(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: d59988ec4899b4115d8d0fd7172e0c8ff8802378
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 630a799331e03860fbee34eab6bea3bb594ef0f0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>방법: 명령줄을 사용하여 어셈블리 만들기 및 사용(C#)
-어셈블리 또는 DLL(동적 연결 라이브러리)은 런타임 시 프로그램에 연결됩니다. DLL 빌드 및 사용을 보여 주려면 다음 시나리오를 고려합니다.  
+# <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a><span data-ttu-id="3a9d8-102">방법: 명령줄을 사용하여 어셈블리 만들기 및 사용(C#)</span><span class="sxs-lookup"><span data-stu-id="3a9d8-102">How to: Create and Use Assemblies Using the Command Line (C#)</span></span>
+<span data-ttu-id="3a9d8-103">어셈블리 또는 DLL(동적 연결 라이브러리)은 런타임 시 프로그램에 연결됩니다.</span><span class="sxs-lookup"><span data-stu-id="3a9d8-103">An assembly, or a dynamic linking library (DLL), is linked to your program at run time.</span></span> <span data-ttu-id="3a9d8-104">DLL 빌드 및 사용을 보여 주려면 다음 시나리오를 고려합니다.</span><span class="sxs-lookup"><span data-stu-id="3a9d8-104">To demonstrate building and using a DLL, consider the following scenario:</span></span>  
   
--   `MathLibrary.DLL`: 런타임 시 호출할 메서드가 포함된 라이브러리 파일입니다. 이 예제의 DLL에는 두 개의 메서드 `Add` 및 `Multiply`가 포함되어 있습니다.  
+-   <span data-ttu-id="3a9d8-105">`MathLibrary.DLL`: 런타임 시 호출할 메서드가 포함된 라이브러리 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="3a9d8-105">`MathLibrary.DLL`: The library file that contains the methods to be called at run time.</span></span> <span data-ttu-id="3a9d8-106">이 예제의 DLL에는 두 개의 메서드 `Add` 및 `Multiply`가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3a9d8-106">In this example, the DLL contains two methods, `Add` and `Multiply`.</span></span>  
   
--   `Add`: `Add` 메서드가 포함된 소스 파일입니다. 해당 매개 변수의 합계를 반환합니다. `Add` 메서드가 포함된 `AddClass` 클래스는 `UtilityMethods` 네임스페이스의 멤버입니다.  
+-   <span data-ttu-id="3a9d8-107">`Add`: `Add` 메서드가 포함된 소스 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="3a9d8-107">`Add`: The source file that contains the method `Add`.</span></span> <span data-ttu-id="3a9d8-108">해당 매개 변수의 합계를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="3a9d8-108">It returns the sum of its parameters.</span></span> <span data-ttu-id="3a9d8-109">`Add` 메서드가 포함된 `AddClass` 클래스는 `UtilityMethods` 네임스페이스의 멤버입니다.</span><span class="sxs-lookup"><span data-stu-id="3a9d8-109">The class `AddClass` that contains the method `Add` is a member of the namespace `UtilityMethods`.</span></span>  
   
--   `Mult`: `Multiply` 메서드가 포함된 소스 코드입니다. 매개 변수의 곱을 반환합니다. `Multiply` 메서드가 포함된 `MultiplyClass` 클래스는 `UtilityMethods` 네임스페이스의 멤버이기도 합니다.  
+-   <span data-ttu-id="3a9d8-110">`Mult`: `Multiply` 메서드가 포함된 소스 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="3a9d8-110">`Mult`: The source code that contains the method `Multiply`.</span></span> <span data-ttu-id="3a9d8-111">매개 변수의 곱을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="3a9d8-111">It returns the product of its parameters.</span></span> <span data-ttu-id="3a9d8-112">`Multiply` 메서드가 포함된 `MultiplyClass` 클래스는 `UtilityMethods` 네임스페이스의 멤버이기도 합니다.</span><span class="sxs-lookup"><span data-stu-id="3a9d8-112">The class `MultiplyClass` that contains the method `Multiply` is also a member of the namespace `UtilityMethods`.</span></span>  
   
--   `TestCode`: `Main` 메서드가 포함된 파일입니다. DLL 파일의 메서드를 사용하여 런타임 인수의 합계와 곱을 계산합니다.  
+-   <span data-ttu-id="3a9d8-113">`TestCode`: `Main` 메서드가 포함된 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="3a9d8-113">`TestCode`: The file that contains the `Main` method.</span></span> <span data-ttu-id="3a9d8-114">DLL 파일의 메서드를 사용하여 런타임 인수의 합계와 곱을 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="3a9d8-114">It uses the methods in the DLL file to calculate the sum and the product of the run-time arguments.</span></span>  
   
-## <a name="example"></a>예제  
+## <a name="example"></a><span data-ttu-id="3a9d8-115">예제</span><span class="sxs-lookup"><span data-stu-id="3a9d8-115">Example</span></span>  
   
 ```csharp  
 // File: Add.cs   
@@ -101,46 +92,45 @@ class TestCode
 */  
 ```  
   
- 이 파일에는 DLL 메서드 `Add` 및 `Multiply`를 사용하는 알고리즘이 포함되어 있습니다. 명령줄에서 입력된 인수 `num1` 및 `num2`의 구문 분석으로 시작합니다. 그런 다음 `AddClass` 클래스의 `Add` 메서드를 사용하여 합계를 계산하고 `MultiplyClass` 클래스의 `Multiply` 메서드를 사용하여 곱을 계산합니다.  
+ <span data-ttu-id="3a9d8-116">이 파일에는 DLL 메서드 `Add` 및 `Multiply`를 사용하는 알고리즘이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3a9d8-116">This file contains the algorithm that uses the DLL methods, `Add` and `Multiply`.</span></span> <span data-ttu-id="3a9d8-117">명령줄에서 입력된 인수 `num1` 및 `num2`의 구문 분석으로 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="3a9d8-117">It starts with parsing the arguments entered from the command line, `num1` and `num2`.</span></span> <span data-ttu-id="3a9d8-118">그런 다음 `AddClass` 클래스의 `Add` 메서드를 사용하여 합계를 계산하고 `MultiplyClass` 클래스의 `Multiply` 메서드를 사용하여 곱을 계산합니다.</span><span class="sxs-lookup"><span data-stu-id="3a9d8-118">Then it calculates the sum by using the `Add` method on the `AddClass` class, and the product by using the `Multiply` method on the `MultiplyClass` class.</span></span>  
   
- 파일의 시작 부분에 `using` 지시문을 사용하면 정규화되지 않은 클래스 이름을 통해 컴파일 시간에 DLL 메서드를 다음과 같이 참조할 수 있습니다.  
+ <span data-ttu-id="3a9d8-119">파일의 시작 부분에 `using` 지시문을 사용하면 정규화되지 않은 클래스 이름을 통해 컴파일 시간에 DLL 메서드를 다음과 같이 참조할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3a9d8-119">Notice that the `using` directive at the beginning of the file enables you to use the unqualified class names to reference the DLL methods at compile time, as follows:</span></span>  
   
 ```csharp  
 MultiplyClass.Multiply(num1, num2);  
 ```  
   
- 사용하지 않을 경우 정규화된 이름을 다음과 같이 사용해야 합니다.  
+ <span data-ttu-id="3a9d8-120">사용하지 않을 경우 정규화된 이름을 다음과 같이 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3a9d8-120">Otherwise, you have to use the fully qualified names, as follows:</span></span>  
   
 ```csharp  
 UtilityMethods.MultiplyClass.Multiply(num1, num2);  
 ```  
   
-## <a name="execution"></a>실행  
- 프로그램을 실행하려면 다음과 같이 EXE 파일의 이름과 두 개의 숫자를 차례로 입력합니다.  
+## <a name="execution"></a><span data-ttu-id="3a9d8-121">실행</span><span class="sxs-lookup"><span data-stu-id="3a9d8-121">Execution</span></span>  
+ <span data-ttu-id="3a9d8-122">프로그램을 실행하려면 다음과 같이 EXE 파일의 이름과 두 개의 숫자를 차례로 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="3a9d8-122">To run the program, enter the name of the EXE file, followed by two numbers, as follows:</span></span>  
   
  `TestCode 1234 5678`  
   
-## <a name="compiling-the-code"></a>코드 컴파일  
- `MathLibrary.DLL` 파일을 빌드하려면 다음 명령줄을 사용하여 두 개의 파일 `Add` 및 `Mult`를 컴파일합니다.  
+## <a name="compiling-the-code"></a><span data-ttu-id="3a9d8-123">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="3a9d8-123">Compiling the Code</span></span>  
+ <span data-ttu-id="3a9d8-124">`MathLibrary.DLL` 파일을 빌드하려면 다음 명령줄을 사용하여 두 개의 파일 `Add` 및 `Mult`를 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="3a9d8-124">To build the file `MathLibrary.DLL`, compile the two files `Add` and `Mult` by using the following command line.</span></span>  
   
 ```csharp  
 csc /target:library /out:MathLibrary.DLL Add.cs Mult.cs  
 ```  
   
- [/target:library](../../../../csharp/language-reference/compiler-options/target-library-compiler-option.md) 컴파일러 옵션은 EXE 파일 대신 DLL을 출력하도록 컴파일러에 지시합니다. [/out](../../../../csharp/language-reference/compiler-options/out-compiler-option.md) 컴파일러 옵션은 DLL 파일 이름을 지정하는 데 사용됩니다. 사용하지 않을 경우 컴파일러는 첫 번째 파일(`Add.cs`)을 DLL의 이름으로 사용합니다.  
+ <span data-ttu-id="3a9d8-125">[/target:library](../../../../csharp/language-reference/compiler-options/target-library-compiler-option.md) 컴파일러 옵션은 EXE 파일 대신 DLL을 출력하도록 컴파일러에 지시합니다.</span><span class="sxs-lookup"><span data-stu-id="3a9d8-125">The [/target:library](../../../../csharp/language-reference/compiler-options/target-library-compiler-option.md) compiler option tells the compiler to output a DLL instead of an EXE file.</span></span> <span data-ttu-id="3a9d8-126">[/out](../../../../csharp/language-reference/compiler-options/out-compiler-option.md) 컴파일러 옵션은 DLL 파일 이름을 지정하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="3a9d8-126">The [/out](../../../../csharp/language-reference/compiler-options/out-compiler-option.md) compiler option followed by a file name is used to specify the DLL file name.</span></span> <span data-ttu-id="3a9d8-127">사용하지 않을 경우 컴파일러는 첫 번째 파일(`Add.cs`)을 DLL의 이름으로 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="3a9d8-127">Otherwise, the compiler uses the first file (`Add.cs`) as the name of the DLL.</span></span>  
   
- 실행 파일 `TestCode.exe`를 빌드하려면 다음 명령줄을 사용합니다.  
+ <span data-ttu-id="3a9d8-128">실행 파일 `TestCode.exe`를 빌드하려면 다음 명령줄을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="3a9d8-128">To build the executable file, `TestCode.exe`, use the following command line:</span></span>  
   
 ```csharp  
 csc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.cs  
 ```  
   
- **/out** 컴파일러 옵션은 EXE 파일을 출력하도록 컴파일러에 지시하고 출력 파일의 이름(`TestCode.exe`)을 지정합니다. 이 컴파일러 옵션은 선택 사항입니다. [/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 컴파일러 옵션은 이 프로그램이 사용하는 DLL 파일을 지정합니다. 자세한 내용은 [/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md)를 참조하세요.  
+ <span data-ttu-id="3a9d8-129">**/out** 컴파일러 옵션은 EXE 파일을 출력하도록 컴파일러에 지시하고 출력 파일의 이름(`TestCode.exe`)을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3a9d8-129">The **/out** compiler option tells the compiler to output an EXE file and specifies the name of the output file (`TestCode.exe`).</span></span> <span data-ttu-id="3a9d8-130">이 컴파일러 옵션은 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="3a9d8-130">This compiler option is optional.</span></span> <span data-ttu-id="3a9d8-131">[/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 컴파일러 옵션은 이 프로그램이 사용하는 DLL 파일을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3a9d8-131">The [/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md) compiler option specifies the DLL file or files that this program uses.</span></span> <span data-ttu-id="3a9d8-132">자세한 내용은 [/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="3a9d8-132">For more information, see [/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md).</span></span>  
   
- 명령줄에서 빌드하는 방법에 대한 자세한 내용은 [csc.exe를 사용한 명령줄 빌드](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)를 참조하세요.  
+ <span data-ttu-id="3a9d8-133">명령줄에서 빌드하는 방법에 대한 자세한 내용은 [csc.exe를 사용한 명령줄 빌드](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="3a9d8-133">For more information about building from the command line, see [Command-line Building With csc.exe](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../../csharp/programming-guide/index.md)   
- [어셈블리 및 전역 어셈블리 캐시(C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)   
- [DLL 함수가 포함된 클래스 만들기](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)
-
+## <a name="see-also"></a><span data-ttu-id="3a9d8-134">참고 항목</span><span class="sxs-lookup"><span data-stu-id="3a9d8-134">See Also</span></span>  
+ [<span data-ttu-id="3a9d8-135">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="3a9d8-135">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="3a9d8-136">어셈블리 및 전역 어셈블리 캐시(C#)</span><span class="sxs-lookup"><span data-stu-id="3a9d8-136">Assemblies and the Global Assembly Cache (C#)</span></span>](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+ [<span data-ttu-id="3a9d8-137">DLL 함수가 포함된 클래스 만들기</span><span class="sxs-lookup"><span data-stu-id="3a9d8-137">Creating a Class to Hold DLL Functions</span></span>](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

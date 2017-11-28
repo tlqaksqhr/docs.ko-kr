@@ -1,78 +1,81 @@
 ---
-title: "대량 복사 예제 설정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "대량 복사 예제 설정"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 56fae815038e9c488b225eee84003c7c93b9e6cb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 대량 복사 예제 설정
-<xref:System.Data.SqlClient.SqlBulkCopy> 클래스를 사용하면 SQL Server 테이블에만 데이터를 쓸 수 있습니다.  이 항목의 코드 샘플에서는 SQL Server 샘플 데이터베이스인 **AdventureWorks**를 사용합니다.  코드 샘플에서는 기존 테이블을 변경하지 않도록 사용자가 먼저 만드는 테이블에 데이터를 씁니다.  
+# <a name="bulk-copy-example-setup"></a><span data-ttu-id="f0e43-102">대량 복사 예제 설정</span><span class="sxs-lookup"><span data-stu-id="f0e43-102">Bulk Copy Example Setup</span></span>
+<span data-ttu-id="f0e43-103"><xref:System.Data.SqlClient.SqlBulkCopy> 클래스를 사용하면 SQL Server 테이블에만 데이터를 쓸 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f0e43-103">The <xref:System.Data.SqlClient.SqlBulkCopy> class can be used to write data only to SQL Server tables.</span></span> <span data-ttu-id="f0e43-104">이 항목에 표시 된 코드 예제는 SQL Server 예제 데이터베이스를 사용 하 여 **AdventureWorks**합니다.</span><span class="sxs-lookup"><span data-stu-id="f0e43-104">The code samples shown in this topic use the SQL Server sample database, **AdventureWorks**.</span></span> <span data-ttu-id="f0e43-105">코드 샘플에서는 기존 테이블을 변경하지 않도록 사용자가 먼저 만드는 테이블에 데이터를 씁니다.</span><span class="sxs-lookup"><span data-stu-id="f0e43-105">To avoid altering the existing tables code samples write data to tables that you must create first.</span></span>  
   
- **BulkCopyDemoMatchingColumns** 및 **BulkCopyDemoDifferentColumns** 테이블은 모두 **AdventureWorks** **Production.Products** 테이블을 기반으로 합니다.  이러한 테이블을 사용하는 코드 샘플에서는 데이터가 **Production.Products** 테이블에서 이러한 샘플 테이블 중 하나로 추가됩니다.  **BulkCopyDemoDifferentColumns** 테이블은 샘플에서 원본 데이터의 열을 대상 테이블로 매핑하는 방법을 설명하는 경우에 사용하며 **BulkCopyDemoMatchingColumns**는 대부분의 다른 샘플에 사용됩니다.  
+ <span data-ttu-id="f0e43-106">**BulkCopyDemoMatchingColumns** 및 **BulkCopyDemoDifferentColumns** 테이블은 둘 다 기반는 **AdventureWorks** **Production.Products**  테이블입니다.</span><span class="sxs-lookup"><span data-stu-id="f0e43-106">The **BulkCopyDemoMatchingColumns** and **BulkCopyDemoDifferentColumns** tables are both based on the **AdventureWorks** **Production.Products** table.</span></span> <span data-ttu-id="f0e43-107">이러한 테이블을 사용 하는 코드 샘플 데이터에서 추가 되 고 **Production.Products** 이러한 샘플 테이블 중 하나에 테이블입니다.</span><span class="sxs-lookup"><span data-stu-id="f0e43-107">In code samples that use these tables, data is added from the **Production.Products** table to one of these sample tables.</span></span> <span data-ttu-id="f0e43-108">**BulkCopyDemoDifferentColumns** 샘플 원본 데이터에서 열을 대상 테이블로 매핑하는 방법을 설명 하는 경우 테이블을 사용 합니다. **BulkCopyDemoMatchingColumns** 대부분의 다른 샘플에 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f0e43-108">The **BulkCopyDemoDifferentColumns** table is used when the sample illustrates how to map columns from the source data to the destination table; **BulkCopyDemoMatchingColumns** is used for most other samples.</span></span>  
   
- 일부 코드 샘플에서는 <xref:System.Data.SqlClient.SqlBulkCopy> 클래스 하나로 여러 테이블에 쓰는 방법을 보여 줍니다.  이러한 샘플에서는 **BulkCopyDemoOrderHeader** 및 **BulkCopyDemoOrderDetail** 테이블을 대상 테이블로 사용합니다.  이러한 테이블은 **AdventureWorks**의 **Sales.SalesOrderHeader** 및 **Sales.SalesOrderDetail** 테이블을 기반으로 합니다.  
+ <span data-ttu-id="f0e43-109">일부 코드 샘플에서는 <xref:System.Data.SqlClient.SqlBulkCopy> 클래스 하나로 여러 테이블에 쓰는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f0e43-109">A few of the code samples demonstrate how to use one <xref:System.Data.SqlClient.SqlBulkCopy> class to write to multiple tables.</span></span> <span data-ttu-id="f0e43-110">이러한 예제는 **BulkCopyDemoOrderHeader** 및 **BulkCopyDemoOrderDetail** 테이블 대상 테이블로 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f0e43-110">For these samples, the **BulkCopyDemoOrderHeader** and **BulkCopyDemoOrderDetail** tables are used as the destination tables.</span></span> <span data-ttu-id="f0e43-111">이러한 테이블은 기반는 **Sales.SalesOrderHeader** 및 **Sales.SalesOrderDetail** 테이블에 **AdventureWorks**합니다.</span><span class="sxs-lookup"><span data-stu-id="f0e43-111">These tables are based on the **Sales.SalesOrderHeader** and **Sales.SalesOrderDetail** tables in **AdventureWorks**.</span></span>  
   
 > [!NOTE]
->  **SqlBulkCopy** 코드 샘플은 **SqlBulkCopy**를 사용하는 구문을 보여 주기 위한 용도로만 제공됩니다.  소스 테이블과 대상 테이블이 동일한 SQL Server 인스턴스에 있으면 Transact\-SQL `INSERT   SELECT` 문을 사용하여 데이터를 더 쉽고 빠르게 복사할 수 있습니다.  
+>  <span data-ttu-id="f0e43-112">**SqlBulkCopy** 사용에 대 한 구문을 보여 주는 코드 샘플은 제공 **SqlBulkCopy** 만 합니다.</span><span class="sxs-lookup"><span data-stu-id="f0e43-112">The **SqlBulkCopy** code samples are provided to demonstrate the syntax for using **SqlBulkCopy** only.</span></span> <span data-ttu-id="f0e43-113">소스 테이블과 대상 테이블이 동일한 SQL Server 인스턴스에 있으면 Transact-SQL `INSERT … SELECT` 문을 사용하여 데이터를 더 쉽고 빠르게 복사할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f0e43-113">If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL `INSERT … SELECT` statement to copy the data.</span></span>  
   
-## 테이블 설정  
- 코드 샘플을 올바르게 실행하는 데 필요한 테이블을 만들려면 SQL Server 데이터베이스에서 다음 Transact\-SQL 문을 실행해야 합니다.  
+## <a name="table-setup"></a><span data-ttu-id="f0e43-114">테이블 설정</span><span class="sxs-lookup"><span data-stu-id="f0e43-114">Table Setup</span></span>  
+ <span data-ttu-id="f0e43-115">코드 샘플을 올바르게 실행하는 데 필요한 테이블을 만들려면 SQL Server 데이터베이스에서 다음 Transact-SQL 문을 실행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f0e43-115">To create the tables necessary for the code samples to run correctly, you must run the following Transact-SQL statements in a SQL Server database.</span></span>  
   
 ```  
 USE AdventureWorks  
   
 IF EXISTS (SELECT * FROM dbo.sysobjects   
- WHERE id = object_id(N'[dbo].[BulkCopyDemoMatchingColumns]')   
+ WHERE id = object_id(N'[dbo].[BulkCopyDemoMatchingColumns]')  
  AND OBJECTPROPERTY(id, N'IsUserTable') = 1)  
     DROP TABLE [dbo].[BulkCopyDemoMatchingColumns]  
   
 CREATE TABLE [dbo].[BulkCopyDemoMatchingColumns]([ProductID] [int] IDENTITY(1,1) NOT NULL,  
     [Name] [nvarchar](50) NOT NULL,  
     [ProductNumber] [nvarchar](25) NOT NULL,  
- CONSTRAINT [PK_ProductID] PRIMARY KEY CLUSTERED   
+ CONSTRAINT [PK_ProductID] PRIMARY KEY CLUSTERED  
 (  
     [ProductID] ASC  
 ) ON [PRIMARY]) ON [PRIMARY]  
   
 IF EXISTS (SELECT * FROM dbo.sysobjects   
- WHERE id = object_id(N'[dbo].[BulkCopyDemoDifferentColumns]')   
+ WHERE id = object_id(N'[dbo].[BulkCopyDemoDifferentColumns]')  
  AND OBJECTPROPERTY(id, N'IsUserTable') = 1)  
     DROP TABLE [dbo].[BulkCopyDemoDifferentColumns]  
   
 CREATE TABLE [dbo].[BulkCopyDemoDifferentColumns]([ProdID] [int] IDENTITY(1,1) NOT NULL,  
     [ProdNum] [nvarchar](25) NOT NULL,  
     [ProdName] [nvarchar](50) NOT NULL,  
- CONSTRAINT [PK_ProdID] PRIMARY KEY CLUSTERED   
+ CONSTRAINT [PK_ProdID] PRIMARY KEY CLUSTERED  
 (  
     [ProdID] ASC  
 ) ON [PRIMARY]) ON [PRIMARY]  
   
 IF EXISTS (SELECT * FROM dbo.sysobjects   
- WHERE id = object_id(N'[dbo].[BulkCopyDemoOrderHeader]')   
+ WHERE id = object_id(N'[dbo].[BulkCopyDemoOrderHeader]')  
  AND OBJECTPROPERTY(id, N'IsUserTable') = 1)  
     DROP TABLE [dbo].[BulkCopyDemoOrderHeader]  
   
 CREATE TABLE [dbo].[BulkCopyDemoOrderHeader]([SalesOrderID] [int] IDENTITY(1,1) NOT NULL,  
     [OrderDate] [datetime] NOT NULL,  
     [AccountNumber] [nvarchar](15) NULL,  
- CONSTRAINT [PK_SalesOrderID] PRIMARY KEY CLUSTERED   
+ CONSTRAINT [PK_SalesOrderID] PRIMARY KEY CLUSTERED  
 (  
     [SalesOrderID] ASC  
 ) ON [PRIMARY]) ON [PRIMARY]  
   
 IF EXISTS (SELECT * FROM dbo.sysobjects   
- WHERE id = object_id(N'[dbo].[BulkCopyDemoOrderDetail]')   
+ WHERE id = object_id(N'[dbo].[BulkCopyDemoOrderDetail]')  
  AND OBJECTPROPERTY(id, N'IsUserTable') = 1)  
     DROP TABLE [dbo].[BulkCopyDemoOrderDetail]  
   
@@ -81,13 +84,13 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
     [OrderQty] [smallint] NOT NULL,  
     [ProductID] [int] NOT NULL,  
     [UnitPrice] [money] NOT NULL,  
- CONSTRAINT [PK_LineNumber] PRIMARY KEY CLUSTERED   
+ CONSTRAINT [PK_LineNumber] PRIMARY KEY CLUSTERED  
 (  
     [SalesOrderID] ASC,  
     [SalesOrderDetailID] ASC  
 ) ON [PRIMARY]) ON [PRIMARY]  
 ```  
   
-## 참고 항목  
- [SQL Server에서의 대량 복사 작업](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)   
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="f0e43-116">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f0e43-116">See Also</span></span>  
+ [<span data-ttu-id="f0e43-117">SQL Server의 대량 복사 작업</span><span class="sxs-lookup"><span data-stu-id="f0e43-117">Bulk Copy Operations in SQL Server</span></span>](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
+ [<span data-ttu-id="f0e43-118">ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터</span><span class="sxs-lookup"><span data-stu-id="f0e43-118">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,38 +1,42 @@
 ---
-title: "3503 - DuplicateCorrelationQuery | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 3503 - DuplicateCorrelationQuery
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b857f8e6-ce4d-4da4-bc9d-6cd63fa558a4
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 60367b33e1e57cce8646b4fcde79c7d4fd20a4cc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 3503 - DuplicateCorrelationQuery
-## 속성  
+# <a name="3503---duplicatecorrelationquery"></a><span data-ttu-id="4e7d2-102">3503 - DuplicateCorrelationQuery</span><span class="sxs-lookup"><span data-stu-id="4e7d2-102">3503 - DuplicateCorrelationQuery</span></span>
+## <a name="properties"></a><span data-ttu-id="4e7d2-103">속성</span><span class="sxs-lookup"><span data-stu-id="4e7d2-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|3503|  
-|키워드|WFServices|  
-|수준|경고|  
-|채널|Microsoft\-Windows\-응용 프로그램 서버\-응용 프로그램\/분석|  
+|<span data-ttu-id="4e7d2-104">ID</span><span class="sxs-lookup"><span data-stu-id="4e7d2-104">ID</span></span>|<span data-ttu-id="4e7d2-105">3503</span><span class="sxs-lookup"><span data-stu-id="4e7d2-105">3503</span></span>|  
+|<span data-ttu-id="4e7d2-106">키워드</span><span class="sxs-lookup"><span data-stu-id="4e7d2-106">Keywords</span></span>|<span data-ttu-id="4e7d2-107">WFServices</span><span class="sxs-lookup"><span data-stu-id="4e7d2-107">WFServices</span></span>|  
+|<span data-ttu-id="4e7d2-108">수준</span><span class="sxs-lookup"><span data-stu-id="4e7d2-108">Level</span></span>|<span data-ttu-id="4e7d2-109">경고</span><span class="sxs-lookup"><span data-stu-id="4e7d2-109">Warning</span></span>|  
+|<span data-ttu-id="4e7d2-110">채널</span><span class="sxs-lookup"><span data-stu-id="4e7d2-110">Channel</span></span>|<span data-ttu-id="4e7d2-111">Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석</span><span class="sxs-lookup"><span data-stu-id="4e7d2-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## 설명  
- 중복 CorrelationQuery를 찾았음을 나타냅니다.  중복 쿼리는 상관 관계를 계산할 때 사용되지 않습니다.  
+## <a name="description"></a><span data-ttu-id="4e7d2-112">설명</span><span class="sxs-lookup"><span data-stu-id="4e7d2-112">Description</span></span>  
+ <span data-ttu-id="4e7d2-113">중복 CorrelationQuery를 찾았음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="4e7d2-113">Indicates a duplicate CorrelationQuery was found.</span></span> <span data-ttu-id="4e7d2-114">중복 쿼리는 상관 관계를 계산할 때 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4e7d2-114">The duplicate query will not be used when calculating correlation.</span></span>  
   
-## 메시지  
- Where\='%1'인 중복 CorrelationQuery가 있습니다.  이 중복 쿼리는 상관 관계를 계산할 때 사용되지 않습니다.  
+## <a name="message"></a><span data-ttu-id="4e7d2-115">메시지</span><span class="sxs-lookup"><span data-stu-id="4e7d2-115">Message</span></span>  
+ <span data-ttu-id="4e7d2-116">Where='%1'인 중복 CorrelationQuery가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4e7d2-116">A duplicate CorrelationQuery was found with Where='%1'.</span></span> <span data-ttu-id="4e7d2-117">이 중복 쿼리는 상관 관계를 계산할 때 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4e7d2-117">This duplicate query will not be used when calculating correlation.</span></span>  
   
-## 설명  
+## <a name="details"></a><span data-ttu-id="4e7d2-118">설명</span><span class="sxs-lookup"><span data-stu-id="4e7d2-118">Details</span></span>  
   
-|데이터 항목 이름|데이터 항목 형식|설명|  
-|---------------|---------------|--------|  
-|Where|xs:string|상관 관계 쿼리의 Where 부분입니다.|  
-|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName에서 반환되는 문자열입니다.|
+|<span data-ttu-id="4e7d2-119">데이터 항목 이름</span><span class="sxs-lookup"><span data-stu-id="4e7d2-119">Data Item Name</span></span>|<span data-ttu-id="4e7d2-120">데이터 항목 형식</span><span class="sxs-lookup"><span data-stu-id="4e7d2-120">Data Item Type</span></span>|<span data-ttu-id="4e7d2-121">설명</span><span class="sxs-lookup"><span data-stu-id="4e7d2-121">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="4e7d2-122">Where</span><span class="sxs-lookup"><span data-stu-id="4e7d2-122">Where</span></span>|<span data-ttu-id="4e7d2-123">xs:string</span><span class="sxs-lookup"><span data-stu-id="4e7d2-123">xs:string</span></span>|<span data-ttu-id="4e7d2-124">상관 관계 쿼리의 Where 부분입니다.</span><span class="sxs-lookup"><span data-stu-id="4e7d2-124">The Where portion of the correlation query.</span></span>|  
+|<span data-ttu-id="4e7d2-125">AppDomain</span><span class="sxs-lookup"><span data-stu-id="4e7d2-125">AppDomain</span></span>|<span data-ttu-id="4e7d2-126">xs:string</span><span class="sxs-lookup"><span data-stu-id="4e7d2-126">xs:string</span></span>|<span data-ttu-id="4e7d2-127">AppDomain.CurrentDomain.FriendlyName에서 반환되는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="4e7d2-127">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

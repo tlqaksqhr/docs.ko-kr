@@ -1,104 +1,107 @@
 ---
-title: "방법: Windows Server App Fabric을 사용하여 워크플로 서비스 호스팅 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "방법: Windows Server AppFabric을 사용하여 워크플로 서비스 호스팅"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 69911b2baf0e184957158ac536fa2271524cb2ba
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: Windows Server App Fabric을 사용하여 워크플로 서비스 호스팅
-App Fabric에서 워크플로 서비스를 호스팅하는 것은 IIS\/WAS에서 호스팅하는 것과 유사합니다.유일한 차이점은 App Fabric에서 워크플로 서비스의 배포, 모니터링 및 관리를 위해 제공하는 도구입니다.이 항목에서는 [장기 실행 워크플로 서비스 만들기](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)에서 만든 워크플로 서비스를 사용합니다.이 항목에서는 워크플로 서비스를 만드는 방법을 안내하며,App Fabric을 사용하여 워크플로 서비스를 호스팅하는 방법을 설명합니다.Windows Server App Fabric[!INCLUDE[crabout](../../../../includes/crabout-md.md)][Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x412)을 참조하십시오.아래의 단계를 완료하기 전에 Windows Server App Fabric이 설치되어 있는지 확인합니다.이렇게 하려면 인터넷 정보 서비스\(inetmgr.exe\)를 열고 **연결** 뷰에서 서버 이름을 클릭한 다음 사이트를 클릭하고 **기본 웹 사이트**를 클릭합니다.화면의 오른쪽에 **App Fabric**이라는 섹션이 표시됩니다.이 섹션\(오른쪽 창의 맨 위에 있음\)이 없으면 App Fabric이 설치되지 않은 것입니다.Windows Server App Fabric 설치에 대한 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]는 [Windows Server AppFabric 설치](http://go.microsoft.com/fwlink/?LinkId=193136)\(영문 페이지일 수 있음\)를 참조하십시오.  
+# <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a><span data-ttu-id="15afa-102">방법: Windows Server AppFabric을 사용하여 워크플로 서비스 호스팅</span><span class="sxs-lookup"><span data-stu-id="15afa-102">How to: Host a Workflow Service with Windows Server App Fabric</span></span>
+<span data-ttu-id="15afa-103">AppFabric에서 워크플로 서비스를 호스팅하는 것은 IIS/WAS에서 호스팅하는 것과 유사합니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-103">Hosting workflow services in App Fabric is similar to hosting under IIS/WAS.</span></span> <span data-ttu-id="15afa-104">유일한 차이점은 AppFabric에서 워크플로 서비스의 배포, 모니터링 및 관리를 위해 제공하는 도구입니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-104">The only difference is the tools App Fabric provides for deploying, monitoring, and managing workflow services.</span></span> <span data-ttu-id="15afa-105">이 항목에서는에서 만든 워크플로 서비스는 [장기 실행 워크플로 서비스를 만드는](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-105">This topic uses the workflow service created in the [Creating a Long-running Workflow Service](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md).</span></span> <span data-ttu-id="15afa-106">이 항목에서는 워크플로 서비스를 만드는 방법을 안내하며,</span><span class="sxs-lookup"><span data-stu-id="15afa-106">That topic will walk you through creating a workflow service.</span></span> <span data-ttu-id="15afa-107">AppFabric을 사용하여 워크플로 서비스를 호스팅하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-107">This topic will explain how to host the workflow service using App Fabric.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="15afa-108">Windows Server App Fabric 참조 [Windows Server App Fabric 문서](http://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409)합니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-108"> Windows Server App Fabric, see [Windows Server App Fabric Documentation](http://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409).</span></span> <span data-ttu-id="15afa-109">아래의 단계를 완료하기 전에 Windows Server AppFabric이 설치되어 있는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-109">Before completing the steps below make sure you have Windows Server App Fabric installed.</span></span>  <span data-ttu-id="15afa-110">인터넷 정보 서비스 (inetmgr.exe)를이 열고를 수행 하려면 서버 이름을 클릭는 **연결** 사이트를 클릭 하 고 클릭 **기본 웹 사이트**합니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-110">To do this open up Internet Information Services (inetmgr.exe), click your server name in the **Connections** view, click Sites, and click **Default Web Site**.</span></span> <span data-ttu-id="15afa-111">화면 오른쪽에 있는 섹션이 표시 되어야 **App Fabric**합니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-111">In the right-hand side of the screen you should see a section called **App Fabric**.</span></span> <span data-ttu-id="15afa-112">이 섹션(오른쪽 창의 맨 위에 있음)이 없으면 AppFabric이 설치되지 않은 것입니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-112">If you don’t see this section (it will be on the top of the right-hand pane) you do not have App Fabric installed.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="15afa-113">Windows Server App Fabric 설치 참조 [설치 Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193136)합니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-113"> installing Windows Server App Fabric see [Installing Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193136).</span></span>  
   
-### 간단한 워크플로 서비스 만들기  
+### <a name="creating-a-simple-workflow-service"></a><span data-ttu-id="15afa-114">간단한 워크플로 서비스 만들기</span><span class="sxs-lookup"><span data-stu-id="15afa-114">Creating a Simple Workflow Service</span></span>  
   
-1.  [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]을 열고 [장기 실행 워크플로 서비스 만들기](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md) 항목에서 만든 OrderProcessing 솔루션을 로드합니다.  
+1.  <span data-ttu-id="15afa-115">열기 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 에서 만든 OrderProcessing 솔루션을 로드 하 고는 [장기 실행 워크플로 서비스를 만드는](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md) 항목입니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-115">Open [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] and load the OrderProcessing solution you created in the [Creating a Long-running Workflow Service](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md) topic.</span></span>  
   
-2.  **OrderService** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택한 다음 **웹** 탭을 선택합니다.  
+2.  <span data-ttu-id="15afa-116">마우스 오른쪽 단추로 클릭는 **OrderService** 프로젝트를 마우스 선택 **속성** 선택 하 고는 **웹** 탭 합니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-116">Right click the **OrderService** project and select **Properties** and select the **Web** tab.</span></span>  
   
-3.  속성 페이지의 **시작 작업** 섹션에서 **특정 페이지**를 선택하고 편집 상자에 Service1.xamlx를 입력합니다.  
+3.  <span data-ttu-id="15afa-117">에 **시작 작업** 속성 페이지의 섹션 선택 **특정 페이지** 편집 상자에 Service1.xamlx를 입력 합니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-117">In the **Start Action** section of the property page select **Specific Page** and type Service1.xamlx in the edit box.</span></span>  
   
-4.  속성 페이지의 **서버** 섹션에서 **로컬 IIS 웹 서버 사용**을 선택하고 URL `http://localhost/OrderService`를 입력합니다.  
+4.  <span data-ttu-id="15afa-118">에 **서버** 속성 페이지의 섹션을 선택 **로컬 IIS 웹 서버 사용** 및 다음 url에서 형식: `http://localhost/OrderService`합니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-118">In the **Servers** section of the property page select **Use Local IIS Web Server** and type in the following URL: `http://localhost/OrderService`.</span></span>  
   
-5.  **가상 디렉터리 만들기** 단추를 클릭합니다.새 가상 디렉터리가 만들어지고 프로젝트가 빌드될 때 이 가상 디렉터리에 필요한 파일을 복사하도록 프로젝트가 설정됩니다.또는 .xamlx, web.config 및 필요한 DLL을 가상 디렉터리에 수동으로 복사할 수 있습니다.  
+5.  <span data-ttu-id="15afa-119">클릭는 **가상 디렉터리 만들기** 단추입니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-119">Click the **Create Virtual Directory** button.</span></span> <span data-ttu-id="15afa-120">새 가상 디렉터리가 만들어지고 프로젝트가 빌드될 때 이 가상 디렉터리에 필요한 파일을 복사하도록 프로젝트가 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-120">This will create a new virtual directory and set up the project to copy the needed files to the virtual directory when the project is built.</span></span>  <span data-ttu-id="15afa-121">또는 .xamlx, web.config 및 필요한 DLL을 가상 디렉터리에 수동으로 복사할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-121">Alternatively you could manually copy the .xamlx, the web.config, and any needed DLLs to the virtual directory.</span></span>  
   
-### Windows Server App Fabric에서 호스팅되는 워크플로 서비스 구성  
+### <a name="configuring-a-workflow-service-hosted-in-windows-server-app-fabric"></a><span data-ttu-id="15afa-122">Windows Server AppFabric에서 호스팅되는 워크플로 서비스 구성</span><span class="sxs-lookup"><span data-stu-id="15afa-122">Configuring a Workflow Service Hosted in Windows Server App Fabric</span></span>  
   
-1.  인터넷 정보 서비스 관리자\(inetmgr.exe\)를 엽니다.  
+1.  <span data-ttu-id="15afa-123">인터넷 정보 서비스 관리자(inetmgr.exe)를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-123">Open Internet Information Services Manager (inetmgr.exe).</span></span>  
   
-2.  **연결** 창에서 OrderService 가상 디렉터리로 이동합니다.  
+2.  <span data-ttu-id="15afa-124">OrderService 가상 디렉터리로 이동 된 **연결** 창.</span><span class="sxs-lookup"><span data-stu-id="15afa-124">Navigate to the OrderService virtual directory in the **Connections** pane.</span></span>  
   
-3.  OrderService를 마우스 오른쪽 단추로 클릭하고 **WCF 및 WF 서비스 관리**, **구성…**을 차례로 선택합니다.**응용 프로그램에 대해 WCF 및 WF 구성** 대화 상자가 표시됩니다.  
+3.  <span data-ttu-id="15afa-125">OrderService를 마우스 오른쪽 단추로 클릭 하 고 선택 **WCF 및 WF 서비스 관리**, **구성 중...** .</span><span class="sxs-lookup"><span data-stu-id="15afa-125">Right click OrderService and select **Manage WCF and WF Services**, **Configure…**.</span></span> <span data-ttu-id="15afa-126">**WCF 및 WF 응용 프로그램에 대 한 구성** 대화 상자가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-126">The **Configure WCF and WF for Application** dialog box is displayed.</span></span>  
   
-4.  **일반** 탭을 선택하여 다음 스크린 샷과 같이 응용 프로그램에 대한 일반 정보를 표시합니다.  
+4.  <span data-ttu-id="15afa-127">선택 된 **일반** 다음 스크린 샷과 같이 응용 프로그램에 대 한 일반 정보를 표시 하려면 탭 합니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-127">Select the **General** tab to display general information about the application as shown in the following screen shot.</span></span>  
   
-     ![App Fabric 구성 대화 상자의 일반 탭](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-general.gif "AppFabricConfiguration\-General")  
+     <span data-ttu-id="15afa-128">![App Fabric 구성 대화 상자의 일반 탭](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-general.gif "AppFabricConfiguration-일반")</span><span class="sxs-lookup"><span data-stu-id="15afa-128">![General tab of the App Fabric Configuration dialog](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-general.gif "AppFabricConfiguration-General")</span></span>  
   
-5.  **모니터링** 탭을 선택합니다.다음 스크린 샷과 같이 다양한 모니터링 설정이 표시됩니다.  
+5.  <span data-ttu-id="15afa-129">선택 된 **모니터링** 탭 합니다. 다음 스크린 샷과 같이 다양한 모니터링 설정이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-129">Select the **Monitoring** tab. This shows various monitoring settings as shown in the following screen shot.</span></span>  
   
-     ![App Fabric 구성 모니터링 탭](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-monitoring.gif "AppFabricConfiguration\-Monitoring")  
+     <span data-ttu-id="15afa-130">![App Fabric Configuration Monitoring 탭](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-monitoring.gif "AppFabricConfiguration 모니터링")</span><span class="sxs-lookup"><span data-stu-id="15afa-130">![App Fabric Configuration Monitoring tab](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-monitoring.gif "AppFabricConfiguration-Monitoring")</span></span>  
   
-     App Fabric에서 워크플로 서비스 모니터링을 구성하는 방법[!INCLUDE[crabout](../../../../includes/crabout-md.md)][모니터링 구성](http://go.microsoft.com/fwlink/?LinkId=193153)을 참조하십시오.  
+     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="15afa-131">Appfabric에서 워크플로 서비스 모니터링을 구성을 참조 [App Fabric로 모니터링 구성](http://go.microsoft.com/fwlink/?LinkId=193153)합니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-131"> configuring workflow service monitoring in App Fabric see [Configuring monitoring with App Fabric](http://go.microsoft.com/fwlink/?LinkId=193153).</span></span>  
   
-6.  **워크플로 지속성** 탭을 선택합니다.여기에서는 다음 스크린 샷과 같이 App Fabric의 기본 지속성 공급자를 사용하도록 응용 프로그램을 구성할 수 있습니다.  
+6.  <span data-ttu-id="15afa-132">선택 된 **워크플로 지 속성** 탭 합니다. 여기에서는 다음 스크린 샷과 같이 AppFabric의 기본 지속성 공급자를 사용하도록 응용 프로그램을 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-132">Select the **Workflow Persistence** tab. This allows you to configure your application to use App Fabric’s default persistence provider as shown in the following screen shot.</span></span>  
   
-     ![App Fabric 구성 &#45; 지속성](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-persistence.gif "AppFabricConfiguration\-Persistence")  
+     <span data-ttu-id="15afa-133">![App Fabric 구성 &#45; 지 속성](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-persistence.gif "AppFabricConfiguration 지 속성")</span><span class="sxs-lookup"><span data-stu-id="15afa-133">![App Fabric Configuration &#45; Persistence](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-persistence.gif "AppFabricConfiguration-Persistence")</span></span>  
   
-     Windows Server App Fabric에서 워크플로 지속성을 구성하는 방법[!INCLUDE[crabout](../../../../includes/crabout-md.md)][워크플로 지속성 구성](http://go.microsoft.com/fwlink/?LinkId=193148)을 참조하십시오.  
+     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="15afa-134">Windows Server Appfabric에서 워크플로 지 속성을 구성을 참조 [Appfabric에서 워크플로 지 속성 구성](http://go.microsoft.com/fwlink/?LinkId=193148)합니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-134"> configuring workflow persistence in Windows Server App Fabric see [Configuring Workflow Persistence in App Fabric](http://go.microsoft.com/fwlink/?LinkId=193148).</span></span>  
   
-7.  **워크플로 호스트 관리** 탭을 선택합니다.여기에서는 다음 스크린 샷과 같이 유휴 워크플로 서비스 인스턴스가 언로드되고 유지되는 때를 지정할 수 있습니다.  
+7.  <span data-ttu-id="15afa-135">선택 된 **워크플로 호스트 관리** 탭 합니다. 여기에서는 다음 스크린 샷과 같이 유휴 워크플로 서비스 인스턴스가 언로드되고 유지되는 때를 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-135">Select the **Workflow Host Management** tab. This allows you to specify when idle workflow service instances should be unloaded and persisted as shown in the following screen shot.</span></span>  
   
-     ![App Fabric 구성 워크플로 호스트 관리](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-management.gif "AppFabricConfiguration\-Management")  
+     <span data-ttu-id="15afa-136">![App Fabric 구성 워크플로 호스트 관리](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-management.gif "AppFabricConfiguration 관리")</span><span class="sxs-lookup"><span data-stu-id="15afa-136">![App Fabric Configuration  Workflow Host Management](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-management.gif "AppFabricConfiguration-Management")</span></span>  
   
-     워크플로 호스트 관리 구성[!INCLUDE[crabout](../../../../includes/crabout-md.md)][워크플로 호스트 관리 구성](http://go.microsoft.com/fwlink/?LinkId=193151)을 참조하십시오.  
+     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="15afa-137">워크플로 호스트 관리 구성 참조 [Appfabric에서 워크플로 호스트 관리 구성](http://go.microsoft.com/fwlink/?LinkId=193151)합니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-137"> workflow host management configuration see [Configuring Workflow Host Management in App Fabric](http://go.microsoft.com/fwlink/?LinkId=193151).</span></span>  
   
-8.  **자동 시작** 탭을 선택합니다.여기에서는 다음 스크린 샷과 같이 응용 프로그램에서 워크플로 서비스에 대한 자동 시작 설정을 지정할 수 있습니다.  
+8.  <span data-ttu-id="15afa-138">선택 된 **자동 시작** 탭 합니다. 여기에서는 다음 스크린 샷과 같이 응용 프로그램에서 워크플로 서비스에 대한 자동 시작 설정을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-138">Select the **Auto-Start** tab. This allows you to specify auto-start settings for the workflow services in the application as shown in the following screen shot.</span></span>  
   
-     ![App Fabric 자동 시작 구성](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationautostart.gif "AppFabricConfigurationAutostart")  
+     <span data-ttu-id="15afa-139">![App Fabric 자동 &#45; 시작 구성은](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationautostart.gif "AppFabricConfigurationAutostart")</span><span class="sxs-lookup"><span data-stu-id="15afa-139">![App Fabric Auto&#45;start configuration](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationautostart.gif "AppFabricConfigurationAutostart")</span></span>  
   
-     자동 시작 구성[!INCLUDE[crabout](../../../../includes/crabout-md.md)][자동 시작 구성](http://go.microsoft.com/fwlink/?LinkId=193150)을 참조하십시오.  
+     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="15afa-140">자동 시작 구성 참조 [구성 자동 시작 App Fabric로](http://go.microsoft.com/fwlink/?LinkId=193150)합니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-140"> configuring Auto-Start see [Configuring Auto-Start with App Fabric](http://go.microsoft.com/fwlink/?LinkId=193150).</span></span>  
   
-9. **제한** 탭을 선택합니다.여기에서는 다음 스크린 샷과 같이 워크플로 서비스에 대한 제한 설정을 구성할 수 있습니다.  
+9. <span data-ttu-id="15afa-141">선택 된 **제한** 탭 합니다. 여기에서는 다음 스크린 샷과 같이 워크플로 서비스에 대한 제한 설정을 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-141">Select the **Throttling** tab. This allows you to configure throttling settings for the workflow service as shown in the following screen shot.</span></span>  
   
-     ![App Fabric 구성 제한](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationthrottling.gif "AppFabricConfigurationThrottling")  
+     <span data-ttu-id="15afa-142">![App Fabric 구성 스로틀](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationthrottling.gif "AppFabricConfigurationThrottling")</span><span class="sxs-lookup"><span data-stu-id="15afa-142">![App Fabric configuration throttling](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationthrottling.gif "AppFabricConfigurationThrottling")</span></span>  
   
-     제한 구성[!INCLUDE[crabout](../../../../includes/crabout-md.md)][App Fabric 제한 구성](http://go.microsoft.com/fwlink/?LinkId=193149)을 참조하십시오.  
+     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="15afa-143">조정 구성을 참조 [App Fabric로 제한 구성](http://go.microsoft.com/fwlink/?LinkId=193149)합니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-143"> configuring throttling see [Configuring Throttling with App Fabric](http://go.microsoft.com/fwlink/?LinkId=193149).</span></span>  
   
-10. **보안** 탭을 선택합니다.여기에서는 다음 스크린 샷과 같이 응용 프로그램에 대한 보안 설정을 구성할 수 있습니다.  
+10. <span data-ttu-id="15afa-144">선택 된 **보안** 탭 합니다. 여기에서는 다음 스크린 샷과 같이 응용 프로그램에 대한 보안 설정을 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-144">Select the **Security** tab. This allows you to configure security settings for the application as shown in the following screen shot.</span></span>  
   
-     ![App Fabric 보안 구성](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-security.gif "AppFabricConfiguration\-Security")  
+     <span data-ttu-id="15afa-145">![App Fabric 보안 구성](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-security.gif "AppFabricConfiguration 보안")</span><span class="sxs-lookup"><span data-stu-id="15afa-145">![App Fabric Security Configuration](../../../../docs/framework/wcf/feature-details/media/appfabricconfiguration-security.gif "AppFabricConfiguration-Security")</span></span>  
   
-     Windows Server App Fabric에서 보안을 구성하는 방법[!INCLUDE[crabout](../../../../includes/crabout-md.md)][보안 구성](http://go.microsoft.com/fwlink/?LinkId=193152)을 참조하십시오.  
+     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="15afa-146">Windows Server Appfabric을 사용 하 여 보안을 구성을 참조 [App Fabric로 보안 구성](http://go.microsoft.com/fwlink/?LinkId=193152)합니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-146"> configuring security with Windows Server App Fabric see [Configuring Security with App Fabric](http://go.microsoft.com/fwlink/?LinkId=193152).</span></span>  
   
-### Windows Server App Fabric 사용  
+### <a name="using-windows-server-app-fabric"></a><span data-ttu-id="15afa-147">Windows Server AppFabric 사용</span><span class="sxs-lookup"><span data-stu-id="15afa-147">Using Windows Server App Fabric</span></span>  
   
-1.  솔루션을 빌드하여 필요한 파일을 가상 디렉터리에 복사합니다.  
+1.  <span data-ttu-id="15afa-148">솔루션을 빌드하여 필요한 파일을 가상 디렉터리에 복사합니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-148">Build the solution to copy the necessary files to the virtual directory.</span></span>  
   
-2.  OrderClient 프로젝트를 마우스 오른쪽 단추로 클릭하고 **디버그**, **새 인스턴스 시작**을 차례로 선택하여 클라이언트 응용 프로그램을 시작합니다.  
+2.  <span data-ttu-id="15afa-149">OrderClient 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **디버그**, **새 인스턴스 시작** 클라이언트 응용 프로그램을 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-149">Right click the OrderClient project and select **Debug**, **Start New Instance** to launch the client application.</span></span>  
   
-3.  클라이언트가 실행되고 Visual Studio에서 **연결 보안 경고** 대화 상자가 표시되면 **연결 안 함** 단추를 클릭합니다.이렇게 하면 Visual Studio에서 디버깅을 위해 IIS 프로세스에 연결하지 않습니다.  
+3.  <span data-ttu-id="15afa-150">클라이언트가 실행 되 고 이름이 표시 됩니다는 **연결 보안 경고** 대화 상자를 클릭는 **연결 안 함** 단추입니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-150">The client will run and Visual Studio will display an **Attach Security Warning** dialog box, click the **Don’t Attach** button.</span></span> <span data-ttu-id="15afa-151">이렇게 하면 Visual Studio에서 디버깅을 위해 IIS 프로세스에 연결하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-151">This tells Visual Studio to not attach to the IIS process for debugging.</span></span>  
   
-4.  클라이언트 응용 프로그램은 워크플로 서비스를 즉시 호출한 다음 기다립니다.워크플로 서비스는 유휴 상태가 되고 유지됩니다.인터넷 정보 서비스\(inetmgr.exe\)를 시작하고 연결 창에서 OrderService로 이동한 다음 선택하여 이를 확인할 수 있습니다.그런 다음 오른쪽 창에서 App Fabric 대시보드 아이콘을 클릭합니다.지속된 WF 인스턴스 아래에 다음 스크린 샷과 같이 유지된 워크플로 서비스 인스턴스가 하나 있습니다.  
+4.  <span data-ttu-id="15afa-152">클라이언트 응용 프로그램은 워크플로 서비스를 즉시 호출한 다음 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-152">The client application will immediately call the Workflow service and then wait.</span></span> <span data-ttu-id="15afa-153">워크플로 서비스는 유휴 상태가 되고 유지됩니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-153">The workflow service will go idle and be persisted.</span></span> <span data-ttu-id="15afa-154">인터넷 정보 서비스(inetmgr.exe)를 시작하고 연결 창에서 OrderService로 이동한 다음 선택하여 이를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-154">You can verify this by starting Internet Information Services (inetmgr.exe), navigating to the OrderService in the Connections pane and selecting it.</span></span> <span data-ttu-id="15afa-155">그런 다음 오른쪽 창에서 AppFabric 대시보드 아이콘을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-155">Next, click the App Fabric Dashboard icon in the right-hand pane.</span></span> <span data-ttu-id="15afa-156">지속된 WF 인스턴스 아래에 다음 스크린 샷과 같이 유지된 워크플로 서비스 인스턴스가 하나 있습니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-156">Under Persisted WF Instances you will see there is one persisted workflow service instance as shown in the following screen shot.</span></span>  
   
-     ![App Fabric 대시보드](../../../../docs/framework/wcf/feature-details/media/appfabricdashboard.gif "AppFabricDashboard")  
+     <span data-ttu-id="15afa-157">![App Fabric 대시보드](../../../../docs/framework/wcf/feature-details/media/appfabricdashboard.gif "AppFabricDashboard")</span><span class="sxs-lookup"><span data-stu-id="15afa-157">![App Fabric Dashboard](../../../../docs/framework/wcf/feature-details/media/appfabricdashboard.gif "AppFabricDashboard")</span></span>  
   
-     **WF 인스턴스 기록**에는 워크플로 서비스 활성화 수, 워크플로 서비스 인스턴스 완료 수 및 오류가 있는 워크플로 인스턴스 수와 같은 워크플로 서비스에 대한 정보가 표시됩니다.활성 또는 유휴 인스턴스 아래에 링크가 표시됩니다. 이 링크를 클릭하면 다음 스크린 샷과 같이 유휴 워크플로 인스턴스에 대한 자세한 정보가 표시됩니다.  
+     <span data-ttu-id="15afa-158">**WF 인스턴스 기록** 워크플로 서비스 정품 인증 수, 워크플로 서비스 인스턴스 완료 수 및 오류가 있는 워크플로 인스턴스 수와 같은 워크플로 서비스에 대 한 정보를 나열 합니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-158">The **WF Instance History** lists information about the workflow service such as the number of workflow service activations, the number of workflow service instance completions, and the number of workflow instances with failures.</span></span> <span data-ttu-id="15afa-159">활성 또는 유휴 인스턴스 아래에 링크가 표시됩니다. 이 링크를 클릭하면 다음 스크린 샷과 같이 유휴 워크플로 인스턴스에 대한 자세한 정보가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="15afa-159">Under Active or Idle instances a link will be displayed, clicking on the link will display more information about the idle workflow instances as shown in the following screen shot.</span></span>  
   
-     ![지속된 워크플로 인스턴스 세부 정보](../../../../docs/framework/wcf/feature-details/media/persisteddetail.gif "PersistedDetail")  
+     <span data-ttu-id="15afa-160">![지속형 워크플로 인스턴스 정보](../../../../docs/framework/wcf/feature-details/media/persisteddetail.gif "PersistedDetail")</span><span class="sxs-lookup"><span data-stu-id="15afa-160">![Persisted Workflow Instance Details](../../../../docs/framework/wcf/feature-details/media/persisteddetail.gif "PersistedDetail")</span></span>  
   
-     Window Server App Fabric 기능과 사용 방법에 대한 자세한 내용은 [Windows Server App Fabric 호스팅 기능](http://go.microsoft.com/fwlink/?LinkID=193143&clcid=0x412)\(영문 페이지일 수 있음\)을 참조하십시오.  
+     <span data-ttu-id="15afa-161">Windows Server App Fabric에 대 한 자세한 내용은 기능 및 사용 하는 방법 참조 [Windows Server App Fabric 호스팅 기능](http://go.microsoft.com/fwlink/?LinkID=193143&clcid=0x409)</span><span class="sxs-lookup"><span data-stu-id="15afa-161">For more information about Windows Server App Fabric features and how to use them see [Windows Server App Fabric Hosting Features](http://go.microsoft.com/fwlink/?LinkID=193143&clcid=0x409)</span></span>  
   
-## 참고 항목  
- [장기 실행 워크플로 서비스 만들기](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)   
- [AppFabric 호스팅 기능](http://go.microsoft.com/fwlink/?LinkId=193143)   
- [Windows Server AppFabric 설치](http://go.microsoft.com/fwlink/?LinkId=193136)   
- [Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x412)
+## <a name="see-also"></a><span data-ttu-id="15afa-162">참고 항목</span><span class="sxs-lookup"><span data-stu-id="15afa-162">See Also</span></span>  
+ [<span data-ttu-id="15afa-163">장기 실행 워크플로 서비스 만들기</span><span class="sxs-lookup"><span data-stu-id="15afa-163">Creating a Long-running Workflow Service</span></span>](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)  
+ [<span data-ttu-id="15afa-164">Windows Server App Fabric 호스팅 기능</span><span class="sxs-lookup"><span data-stu-id="15afa-164">Windows Server App Fabric Hosting Features</span></span>](http://go.microsoft.com/fwlink/?LinkId=193143)  
+ [<span data-ttu-id="15afa-165">Windows Server Appfabric 설치</span><span class="sxs-lookup"><span data-stu-id="15afa-165">Installing Windows Server App Fabric</span></span>](http://go.microsoft.com/fwlink/?LinkId=193136)  
+ [<span data-ttu-id="15afa-166">Windows Server App Fabric 문서</span><span class="sxs-lookup"><span data-stu-id="15afa-166">Windows Server App Fabric Documentation</span></span>](http://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409)

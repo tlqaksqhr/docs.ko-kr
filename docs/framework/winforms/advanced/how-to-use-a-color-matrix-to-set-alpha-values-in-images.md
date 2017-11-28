@@ -1,46 +1,50 @@
 ---
-title: "방법: 색 매트릭스를 사용하여 이미지에 알파 값 설정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "비트맵[Windows Forms], 반투명에 색 매트릭스 사용"
-  - "이미지[Windows Forms], 반투명에 색 매트릭스 사용"
-  - "매트릭스, 알파 값"
-  - "투명성, 색 매트릭스"
+title: "방법: 색 매트릭스를 사용하여 이미지에 알파 값 설정"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- images [Windows Forms], using color matrices for semi-transparent
+- transparency [Windows Forms], color matrices
+- matrices [Windows Forms], alpha values
+- bitmaps [Windows Forms], using color matrices for semi-transparent
 ms.assetid: a27121e6-f7e9-4c09-84e2-f05aa9d2a1bb
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ba7a016c96556f2719d4a247c93df7ac698b24fa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 색 매트릭스를 사용하여 이미지에 알파 값 설정
-<xref:System.Drawing.Image> 클래스에서 상속되는 <xref:System.Drawing.Bitmap> 클래스와 <xref:System.Drawing.Imaging.ImageAttributes> 클래스에는 픽셀 값을 가져오고 설정하는 기능이 있습니다.  <xref:System.Drawing.Imaging.ImageAttributes> 클래스를 사용하여 전체 이미지의 알파 값을 수정하거나 <xref:System.Drawing.Bitmap> 클래스의 <xref:System.Drawing.Bitmap.SetPixel%2A> 메서드를 호출하여 개별 픽셀 값을 수정할 수 있습니다.  
+# <a name="how-to-use-a-color-matrix-to-set-alpha-values-in-images"></a><span data-ttu-id="37f46-102">방법: 색 매트릭스를 사용하여 이미지에 알파 값 설정</span><span class="sxs-lookup"><span data-stu-id="37f46-102">How to: Use a Color Matrix to Set Alpha Values in Images</span></span>
+<span data-ttu-id="37f46-103"><xref:System.Drawing.Bitmap> 클래스 (에서 상속 되는 <xref:System.Drawing.Image> 클래스) 및 <xref:System.Drawing.Imaging.ImageAttributes> 클래스 가져오고 픽셀 값을 설정 하기 위한 기능을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="37f46-103">The <xref:System.Drawing.Bitmap> class (which inherits from the <xref:System.Drawing.Image> class) and the <xref:System.Drawing.Imaging.ImageAttributes> class provide functionality for getting and setting pixel values.</span></span> <span data-ttu-id="37f46-104">사용할 수는 <xref:System.Drawing.Imaging.ImageAttributes> 알파를 수정 하는 클래스는 전체 이미지에 대 한 값 하거나 호출할 수 있습니다는 <xref:System.Drawing.Bitmap.SetPixel%2A> 의 메서드는 <xref:System.Drawing.Bitmap> 개별 픽셀 값을 수정 하는 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="37f46-104">You can use the <xref:System.Drawing.Imaging.ImageAttributes> class to modify the alpha values for an entire image, or you can call the <xref:System.Drawing.Bitmap.SetPixel%2A> method of the <xref:System.Drawing.Bitmap> class to modify individual pixel values.</span></span>  
   
-## 예제  
- <xref:System.Drawing.Imaging.ImageAttributes> 클래스에는 렌더링하는 동안 이미지를 수정하는 데 사용할 수 있는 속성이 많이 있습니다.  다음 예제에서는 <xref:System.Drawing.Imaging.ImageAttributes> 개체를 사용하여 모든 알파 값을 원래 값의 80%로 설정합니다.  이를 위해 색 매트릭스를 초기화하고 매트릭스에서 알파 배율 조정 값을0.8로 설정합니다.  색 매트릭스의 주소는 <xref:System.Drawing.Imaging.ImageAttributes> 개체의 <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> 메서드에 전달되고 <xref:System.Drawing.Imaging.ImageAttributes> 개체는 <xref:System.Drawing.Graphics> 개체의 <xref:System.Drawing.Graphics.DrawString%2A> 메서드에 전달됩니다.  
+## <a name="example"></a><span data-ttu-id="37f46-105">예제</span><span class="sxs-lookup"><span data-stu-id="37f46-105">Example</span></span>  
+ <span data-ttu-id="37f46-106"><xref:System.Drawing.Imaging.ImageAttributes> 클래스에 렌더링 하는 동안 이미지를 수정 하는 데 사용할 수 있는 여러 속성이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="37f46-106">The <xref:System.Drawing.Imaging.ImageAttributes> class has many properties that you can use to modify images during rendering.</span></span> <span data-ttu-id="37f46-107">다음 예제에서는 <xref:System.Drawing.Imaging.ImageAttributes> 개체 알파 값을 모두 원래 대로의 80%로 설정 하는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="37f46-107">In the following example, an <xref:System.Drawing.Imaging.ImageAttributes> object is used to set all the alpha values to 80 percent of what they were.</span></span> <span data-ttu-id="37f46-108">색 매트릭스를 초기화 하 고 알파 배율 조정 0.8 행렬에는 값을 설정 하면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="37f46-108">This is done by initializing a color matrix and setting the alpha scaling value in the matrix to 0.8.</span></span> <span data-ttu-id="37f46-109">색 매트릭스의 주소에 전달 되는 <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> 의 메서드는 <xref:System.Drawing.Imaging.ImageAttributes> 개체 및 <xref:System.Drawing.Imaging.ImageAttributes> 를 전달 하는 <xref:System.Drawing.Graphics.DrawString%2A> 의 메서드는 <xref:System.Drawing.Graphics> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="37f46-109">The address of the color matrix is passed to the <xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A> method of the <xref:System.Drawing.Imaging.ImageAttributes> object, and the <xref:System.Drawing.Imaging.ImageAttributes> object is passed to the <xref:System.Drawing.Graphics.DrawString%2A> method of the <xref:System.Drawing.Graphics> object.</span></span>  
   
- 렌더링하는 동안 비트맵의 알파 값은 이전 값의 80%로 변환되며,  그에 따라 이미지가 배경과 혼합됩니다.  아래 그림에 나와 있는 것처럼 비트맵 이미지가 투명하므로 이미지를 투과하여 검정 선을 볼 수 있습니다.  
+ <span data-ttu-id="37f46-110">렌더링 하는 동안 경우 비트맵의 알파 값은 원래 대로의 80%로 변환 됩니다.</span><span class="sxs-lookup"><span data-stu-id="37f46-110">During rendering, the alpha values in the bitmap are converted to 80 percent of what they were.</span></span> <span data-ttu-id="37f46-111">따라서 이미지를 배경색과 혼합 됩니다.</span><span class="sxs-lookup"><span data-stu-id="37f46-111">This results in an image that is blended with the background.</span></span> <span data-ttu-id="37f46-112">다음 그림에 나와 있는 비트맵 이미지 찾아 선택 합니다. 이 통해 검은색 실선을 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="37f46-112">As the following illustration shows, the bitmap image looks transparent; you can see the solid black line through it.</span></span>  
   
- ![매트릭스를 사용한 알파 혼합](../../../../docs/framework/winforms/advanced/media/image2.png "image2")  
+ <span data-ttu-id="37f46-113">![행렬을 사용 하 여 알파 혼합](../../../../docs/framework/winforms/advanced/media/image2.png "image2")</span><span class="sxs-lookup"><span data-stu-id="37f46-113">![Alpha Blending Using a Matrix](../../../../docs/framework/winforms/advanced/media/image2.png "image2")</span></span>  
   
- 배경의 흰색 부분에 있는 이미지는 흰색과 혼합되고  검정 선과 교차하는 곳의 이미지는 검정과 혼합됩니다.  
+ <span data-ttu-id="37f46-114">여기서 이미지는 흰색 부분 배경색, 이미지를 흰색으로 혼합 되 합니다.</span><span class="sxs-lookup"><span data-stu-id="37f46-114">Where the image is over the white portion of the background, the image has been blended with the color white.</span></span> <span data-ttu-id="37f46-115">이미지는 검은색 줄과 교차 검은색 이미지 혼합 됩니다.</span><span class="sxs-lookup"><span data-stu-id="37f46-115">Where the image crosses the black line, the image is blended with the color black.</span></span>  
   
  [!code-csharp[System.Drawing.AlphaBlending#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.AlphaBlending#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#21)]  
   
-## 코드 컴파일  
- 앞의 예제는 Windows Forms에서 사용해야 하며 <xref:System.Windows.Forms.PaintEventHandler>의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`를 필요로 합니다.  
+## <a name="compiling-the-code"></a><span data-ttu-id="37f46-116">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="37f46-116">Compiling the Code</span></span>  
+ <span data-ttu-id="37f46-117">앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.PaintEventArgs>의 매개 변수인 `e`<xref:System.Windows.Forms.PaintEventHandler>가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="37f46-117">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of <xref:System.Windows.Forms.PaintEventHandler>.</span></span>  
   
-## 참고 항목  
- [Windows Forms의 그래픽 및 그리기](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)   
- [선 및 채우기 알파 혼합](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)
+## <a name="see-also"></a><span data-ttu-id="37f46-118">참고 항목</span><span class="sxs-lookup"><span data-stu-id="37f46-118">See Also</span></span>  
+ [<span data-ttu-id="37f46-119">Windows Forms의 그래픽 및 그리기</span><span class="sxs-lookup"><span data-stu-id="37f46-119">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [<span data-ttu-id="37f46-120">선 및 채우기 알파 혼합</span><span class="sxs-lookup"><span data-stu-id="37f46-120">Alpha Blending Lines and Fills</span></span>](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)

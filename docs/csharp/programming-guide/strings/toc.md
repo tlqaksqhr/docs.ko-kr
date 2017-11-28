@@ -7,5 +7,3 @@
 ## [방법: 정규식을 사용하여 문자열 검색](how-to-search-strings-using-regular-expressions.md)
 ## [방법: 문자열이 숫자 값을 나타내는지 확인](how-to-determine-whether-a-string-represents-a-numeric-value.md)
 ## [방법: 문자열을 DateTime으로 변환](how-to-convert-a-string-to-a-datetime.md)
-## [방법: 레거시 인코딩과 유니코드 간 변환](how-to-convert-between-legacy-encodings-and-unicode.md)
-## [방법: RTF를 일반 텍스트로 변환](how-to-convert-rtf-to-plain-text.md)

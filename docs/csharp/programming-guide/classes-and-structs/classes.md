@@ -1,99 +1,79 @@
 ---
 title: "클래스(C# 프로그래밍 가이드)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 37e810fc5a5397a6b9240346ac28505b11b1e817
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: eedb087f177b1bff6f4d4177cd56ac4cca016490
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="classes-c-programming-guide"></a>클래스(C# 프로그래밍 가이드)
-*클래스*는 기타 형식, 메서드 및 이벤트의 변수를 그룹화하여 자체 사용자 지정 형식을 만들 수 있는 구문입니다. 클래스는 청사진과 비슷합니다. 클래스는 형식의 데이터 및 동작을 정의합니다. 클래스가 static으로 선언되지 않으면 클라이언트 코드는 변수에 할당되는 *개체* 또는 *인스턴스*를 만드는 방식으로 클래스를 사용합니다. 변수는 변수에 대한 모든 참조가 범위를 벗어날 때까지 메모리에 남아 있습니다. 이때 CLR는 변수를 가비지 수집에 적격한 것으로 표시합니다. 클래스가 [static](../../../csharp/language-reference/keywords/static.md)으로 선언되면 메모리에는 복사본이 하나만 존재하고 클라이언트 코드는 *인스턴스 변수*가 아니라 클래스 자체를 통해서만 클래스에 액세스할 수 있습니다. 자세한 내용은 [정적 클래스 및 정적 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)를 참조하세요.  
+# <a name="classes-c-programming-guide"></a><span data-ttu-id="0f88c-102">클래스(C# 프로그래밍 가이드)</span><span class="sxs-lookup"><span data-stu-id="0f88c-102">Classes (C# Programming Guide)</span></span>
+<span data-ttu-id="0f88c-103">*클래스*는 기타 형식, 메서드 및 이벤트의 변수를 그룹화하여 자체 사용자 지정 형식을 만들 수 있는 구문입니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-103">A *class* is a construct that enables you to create your own custom types by grouping together variables of other types, methods and events.</span></span> <span data-ttu-id="0f88c-104">클래스는 청사진과 비슷합니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-104">A class is like a blueprint.</span></span> <span data-ttu-id="0f88c-105">클래스는 형식의 데이터 및 동작을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-105">It defines the data and behavior of a type.</span></span> <span data-ttu-id="0f88c-106">클래스가 static으로 선언되지 않으면 클라이언트 코드는 변수에 할당되는 *개체* 또는 *인스턴스*를 만드는 방식으로 클래스를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-106">If the class is not declared as static, client code can use it by creating *objects* or *instances* which are assigned to a variable.</span></span> <span data-ttu-id="0f88c-107">변수는 변수에 대한 모든 참조가 범위를 벗어날 때까지 메모리에 남아 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-107">The variable remains in memory until all references to it go out of scope.</span></span> <span data-ttu-id="0f88c-108">이때 CLR는 변수를 가비지 수집에 적격한 것으로 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-108">At that time, the CLR marks it as eligible for garbage collection.</span></span> <span data-ttu-id="0f88c-109">클래스가 [static](../../../csharp/language-reference/keywords/static.md)으로 선언되면 메모리에는 복사본이 하나만 존재하고 클라이언트 코드는 *인스턴스 변수*가 아니라 클래스 자체를 통해서만 클래스에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-109">If the class is declared as [static](../../../csharp/language-reference/keywords/static.md), then only one copy exists in memory and client code can only access it through the class itself, not an *instance variable*.</span></span> <span data-ttu-id="0f88c-110">자세한 내용은 [정적 클래스 및 정적 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="0f88c-110">For more information, see [Static Classes and Static Class Members](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).</span></span>  
   
- 구조체와 달리 클래스는 개체 지향 프로그래밍의 기본적인 특성인 *상속*을 지원합니다. 자세한 내용은 [상속](../../../csharp/programming-guide/classes-and-structs/inheritance.md)을 참조하세요.  
+ <span data-ttu-id="0f88c-111">구조체와 달리 클래스는 개체 지향 프로그래밍의 기본적인 특성인 *상속*을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-111">Unlike structs, classes support *inheritance*, a fundamental characteristic of object-oriented programming.</span></span> <span data-ttu-id="0f88c-112">자세한 내용은 [상속](../../../csharp/programming-guide/classes-and-structs/inheritance.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="0f88c-112">For more information, see [Inheritance](../../../csharp/programming-guide/classes-and-structs/inheritance.md).</span></span>  
   
-## <a name="declaring-classes"></a>클래스 선언  
- 다음 예제와 같이 [class](../../../csharp/language-reference/keywords/class.md) 키워드를 사용하여 클래스를 선언합니다.  
+## <a name="declaring-classes"></a><span data-ttu-id="0f88c-113">클래스 선언</span><span class="sxs-lookup"><span data-stu-id="0f88c-113">Declaring Classes</span></span>  
+ <span data-ttu-id="0f88c-114">다음 예제와 같이 [class](../../../csharp/language-reference/keywords/class.md) 키워드를 사용하여 클래스를 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-114">Classes are declared by using the [class](../../../csharp/language-reference/keywords/class.md) keyword, as shown in the following example:</span></span>  
   
- [!code-cs[csProgGuideObjects#79](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_1.cs)]  
+ [!code-csharp[csProgGuideObjects#79](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_1.cs)]  
   
- `class` 키워드는 액세스 수준 뒤에 옵니다. 이 경우 [public](../../../csharp/language-reference/keywords/public.md)이 사용되므로 누구나 이 클래스에서 개체를 만들 수 있습니다. 클래스 이름은 `class` 키워드 뒤에 옵니다. 정의의 나머지 부분은 동작과 데이터가 정의되는 클래스 본문입니다. 클래스의 필드, 속성, 메서드 및 이벤트를 모두 *클래스 멤버*라고 합니다.  
+ <span data-ttu-id="0f88c-115">`class` 키워드는 액세스 수준 뒤에 옵니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-115">The `class` keyword is preceded by the access level.</span></span> <span data-ttu-id="0f88c-116">이 경우 [public](../../../csharp/language-reference/keywords/public.md)이 사용되므로 누구나 이 클래스에서 개체를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-116">Because [public](../../../csharp/language-reference/keywords/public.md) is used in this case, anyone can create objects from this class.</span></span> <span data-ttu-id="0f88c-117">클래스 이름은 `class` 키워드 뒤에 옵니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-117">The name of the class follows the `class` keyword.</span></span> <span data-ttu-id="0f88c-118">정의의 나머지 부분은 동작과 데이터가 정의되는 클래스 본문입니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-118">The remainder of the definition is the class body, where the behavior and data are defined.</span></span> <span data-ttu-id="0f88c-119">클래스의 필드, 속성, 메서드 및 이벤트를 모두 *클래스 멤버*라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-119">Fields, properties, methods, and events on a class are collectively referred to as *class members*.</span></span>  
   
-## <a name="creating-objects"></a>개체 만들기  
- 클래스와 개체는 바꿔 사용되기도 하지만 서로 다른 항목입니다. 클래스는 개체의 형식을 정의하지만 개체 자체는 아닙니다. 개체는 클래스에 기반을 둔 구체적 엔터티이고 클래스의 인스턴스라고도 합니다.  
+## <a name="creating-objects"></a><span data-ttu-id="0f88c-120">개체 만들기</span><span class="sxs-lookup"><span data-stu-id="0f88c-120">Creating Objects</span></span>  
+ <span data-ttu-id="0f88c-121">클래스와 개체는 바꿔 사용되기도 하지만 서로 다른 항목입니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-121">Although they are sometimes used interchangeably, a class and an object are different things.</span></span> <span data-ttu-id="0f88c-122">클래스는 개체의 형식을 정의하지만 개체 자체는 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-122">A class defines a type of object, but it is not an object itself.</span></span> <span data-ttu-id="0f88c-123">개체는 클래스에 기반을 둔 구체적 엔터티이고 클래스의 인스턴스라고도 합니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-123">An object is a concrete entity based on a class, and is sometimes referred to as an instance of a class.</span></span>  
   
- 개체를 만들려면 다음과 같이 [new](../../../csharp/language-reference/keywords/new.md) 키워드 뒤에 개체의 기반이 되는 클래스의 이름을 사용합니다.  
+ <span data-ttu-id="0f88c-124">개체를 만들려면 다음과 같이 [new](../../../csharp/language-reference/keywords/new.md) 키워드 뒤에 개체의 기반이 되는 클래스의 이름을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-124">Objects can be created by using the [new](../../../csharp/language-reference/keywords/new.md) keyword followed by the name of the class that the object will be based on, like this:</span></span>  
   
- [!code-cs[csProgGuideObjects#80](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_2.cs)]  
+ [!code-csharp[csProgGuideObjects#80](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_2.cs)]  
   
- 클래스 인스턴스가 만들어질 때 개체에 대한 참조가 다시 프로그래머에게 전달됩니다. 이전 예제에서 `object1`은 `Customer`에 기반을 둔 개체에 대한 참조입니다. 이 참조는 새 개체를 참조하지만 개체 데이터 자체를 포함하지 않습니다. 실제로 개체를 만들지 않고도 개체 참조를 만들 수 있습니다.  
+ <span data-ttu-id="0f88c-125">클래스 인스턴스가 만들어질 때 개체에 대한 참조가 다시 프로그래머에게 전달됩니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-125">When an instance of a class is created, a reference to the object is passed back to the programmer.</span></span> <span data-ttu-id="0f88c-126">이전 예제에서 `object1`은 `Customer`에 기반을 둔 개체에 대한 참조입니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-126">In the previous example, `object1` is a reference to an object that is based on `Customer`.</span></span> <span data-ttu-id="0f88c-127">이 참조는 새 개체를 참조하지만 개체 데이터 자체를 포함하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-127">This reference refers to the new object but does not contain the object data itself.</span></span> <span data-ttu-id="0f88c-128">실제로 개체를 만들지 않고도 개체 참조를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-128">In fact, you can create an object reference without creating an object at all:</span></span>  
   
- [!code-cs[csProgGuideObjects#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_3.cs)]  
+ [!code-csharp[csProgGuideObjects#81](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_3.cs)]  
   
- 런타임에는 참조를 통한 개체 액세스 시도에 실패하므로 개체를 참조하지 않는 이와 같은 개체 참조는 만들지 않는 것이 좋습니다. 그러나 새 개체를 만들거나 다음과 같이 기존 개체에 개체를 할당하여 개체를 참조하는 참조를 만들 수 있습니다.  
+ <span data-ttu-id="0f88c-129">런타임에는 참조를 통한 개체 액세스 시도에 실패하므로 개체를 참조하지 않는 이와 같은 개체 참조는 만들지 않는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-129">We don't recommend creating object references such as this one that don't refer to an object because trying to access an object through such a reference will fail at run time.</span></span> <span data-ttu-id="0f88c-130">그러나 새 개체를 만들거나 다음과 같이 기존 개체에 개체를 할당하여 개체를 참조하는 참조를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-130">However, such a reference can be made to refer to an object, either by creating a new object, or by assigning it to an existing object, such as this:</span></span>  
   
- [!code-cs[csProgGuideObjects#82](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_4.cs)]  
+ [!code-csharp[csProgGuideObjects#82](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_4.cs)]  
   
- 이 코드에서는 같은 개체를 참조하는 두 개의 개체 참조를 만듭니다. 따라서 `object3`을 통해 이루어진 모든 개체 변경 내용은 이후 `object4` 사용 시 반영됩니다. 클래스에 기반을 둔 개체는 참조를 통해 참조되므로 클래스를 참조 형식이라고 합니다.  
+ <span data-ttu-id="0f88c-131">이 코드에서는 같은 개체를 참조하는 두 개의 개체 참조를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-131">This code creates two object references that both refer to the same object.</span></span> <span data-ttu-id="0f88c-132">따라서 `object3`을 통해 이루어진 모든 개체 변경 내용은 이후 `object4` 사용 시 반영됩니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-132">Therefore, any changes to the object made through `object3` will be reflected in subsequent uses of `object4`.</span></span> <span data-ttu-id="0f88c-133">클래스에 기반을 둔 개체는 참조를 통해 참조되므로 클래스를 참조 형식이라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-133">Because objects that are based on classes are referred to by reference, classes are known as reference types.</span></span>  
   
-## <a name="class-inheritance"></a>클래스 상속  
- 상속은 *파생*을 통해 수행합니다. 즉, 클래스는 데이터와 동작을 상속하는 소스 *기본 클래스*를 사용하여 선언됩니다. 다음과 같이 파생 클래스 이름 뒤에 콜론 및 기본 클래스 이름을 추가하여 기본 클래스를 지정합니다.  
+## <a name="class-inheritance"></a><span data-ttu-id="0f88c-134">클래스 상속</span><span class="sxs-lookup"><span data-stu-id="0f88c-134">Class Inheritance</span></span>  
+ <span data-ttu-id="0f88c-135">상속은 *파생*을 통해 수행합니다. 즉, 클래스는 데이터와 동작을 상속하는 소스 *기본 클래스*를 사용하여 선언됩니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-135">Inheritance is accomplished by using a *derivation*, which means a class is declared by using a *base class* from which it inherits data and behavior.</span></span> <span data-ttu-id="0f88c-136">다음과 같이 파생 클래스 이름 뒤에 콜론 및 기본 클래스 이름을 추가하여 기본 클래스를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-136">A base class is specified by appending a colon and the name of the base class following the derived class name, like this:</span></span>  
   
- [!code-cs[csProgGuideObjects#83](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_5.cs)]  
+ [!code-csharp[csProgGuideObjects#83](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_5.cs)]  
   
- 기본 클래스를 선언하는 클래스는 생성자를 제외하고 기본 클래스의 모든 멤버를 상속합니다.  
+ <span data-ttu-id="0f88c-137">기본 클래스를 선언하는 클래스는 생성자를 제외하고 기본 클래스의 모든 멤버를 상속합니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-137">When a class declares a base class, it inherits all the members of the base class except the constructors.</span></span>  
   
- C++와 달리 C#의 클래스는 하나의 기본 클래스에서만 직접 상속될 수 있습니다. 그러나 기본 클래스 자체는 다른 클래스에서 상속될 수 있으므로 클래스는 여러 기본 클래스를 간접적으로 상속할 수 있습니다. 게다가 클래스는 두 개 이상의 인터페이스를 직접 구현할 수 있습니다. 자세한 내용은 [인터페이스](../../../csharp/programming-guide/interfaces/index.md)를 참조하세요.  
+ <span data-ttu-id="0f88c-138">C++와 달리 C#의 클래스는 하나의 기본 클래스에서만 직접 상속될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-138">Unlike C++, a class in C# can only directly inherit from one base class.</span></span> <span data-ttu-id="0f88c-139">그러나 기본 클래스 자체는 다른 클래스에서 상속될 수 있으므로 클래스는 여러 기본 클래스를 간접적으로 상속할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-139">However, because a base class may itself inherit from another class, a class may indirectly inherit multiple base classes.</span></span> <span data-ttu-id="0f88c-140">게다가 클래스는 두 개 이상의 인터페이스를 직접 구현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-140">Furthermore, a class can directly implement more than one interface.</span></span> <span data-ttu-id="0f88c-141">자세한 내용은 [인터페이스](../../../csharp/programming-guide/interfaces/index.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="0f88c-141">For more information, see [Interfaces](../../../csharp/programming-guide/interfaces/index.md).</span></span>  
   
- 클래스는 [abstract](../../../csharp/language-reference/keywords/abstract.md)로 선언될 수 있습니다. 추상 클래스에는 시그니처 정의가 있지만 구현이 없는 추상 메서드가 포함됩니다. 추상 클래스는 인스턴스화할 수 없습니다. 추상 클래스는 추상 메서드를 구현하는 파생 클래스를 통해서만 사용할 수 있습니다. 이와 달리 [sealed](../../../csharp/language-reference/keywords/sealed.md) 클래스에서는 다른 클래스가 파생될 수 없습니다. 자세한 내용은 [Abstract 및 Sealed 클래스와 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)를 참조하세요.  
+ <span data-ttu-id="0f88c-142">클래스는 [abstract](../../../csharp/language-reference/keywords/abstract.md)로 선언될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-142">A class can be declared [abstract](../../../csharp/language-reference/keywords/abstract.md).</span></span> <span data-ttu-id="0f88c-143">추상 클래스에는 시그니처 정의가 있지만 구현이 없는 추상 메서드가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-143">An abstract class contains abstract methods that have a signature definition but no implementation.</span></span> <span data-ttu-id="0f88c-144">추상 클래스는 인스턴스화할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-144">Abstract classes cannot be instantiated.</span></span> <span data-ttu-id="0f88c-145">추상 클래스는 추상 메서드를 구현하는 파생 클래스를 통해서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-145">They can only be used through derived classes that implement the abstract methods.</span></span> <span data-ttu-id="0f88c-146">이와 달리 [sealed](../../../csharp/language-reference/keywords/sealed.md) 클래스에서는 다른 클래스가 파생될 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-146">By contrast, a [sealed](../../../csharp/language-reference/keywords/sealed.md) class does not allow other classes to derive from it.</span></span> <span data-ttu-id="0f88c-147">자세한 내용은 [Abstract 및 Sealed 클래스와 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="0f88c-147">For more information, see [Abstract and Sealed Classes and Class Members](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).</span></span>  
   
- 클래스 정의는 여러 소스 파일로 분할될 수 있습니다. 자세한 내용은 참조 [Partial 클래스 및 메서드](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)합니다.  
+ <span data-ttu-id="0f88c-148">클래스 정의는 여러 소스 파일로 분할될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-148">Class definitions can be split between different source files.</span></span> <span data-ttu-id="0f88c-149">자세한 내용은 참조 [Partial 클래스 및 메서드](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-149">For more information, see [Partial Classes and Methods](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md).</span></span>  
   
-## <a name="description"></a>설명  
- 다음 예제에서는 단일 필드, 메서드 및 생성자라는 특수 메서드가 포함된 public 클래스가 정의됩니다. 자세한 내용은 [생성자](../../../csharp/programming-guide/classes-and-structs/constructors.md)를 참조하세요. 그런 다음 클래스는 `new` 키워드를 사용하여 인스턴스화됩니다.  
+## <a name="description"></a><span data-ttu-id="0f88c-150">설명</span><span class="sxs-lookup"><span data-stu-id="0f88c-150">Description</span></span>  
+ <span data-ttu-id="0f88c-151">다음 예제에서는 단일 필드, 메서드 및 생성자라는 특수 메서드가 포함된 public 클래스가 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-151">In the following example, a public class that contains a single field, a method, and a special method called a constructor is defined.</span></span> <span data-ttu-id="0f88c-152">자세한 내용은 [생성자](../../../csharp/programming-guide/classes-and-structs/constructors.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="0f88c-152">For more information, see [Constructors](../../../csharp/programming-guide/classes-and-structs/constructors.md).</span></span> <span data-ttu-id="0f88c-153">그런 다음 클래스는 `new` 키워드를 사용하여 인스턴스화됩니다.</span><span class="sxs-lookup"><span data-stu-id="0f88c-153">The class is then instantiated with the `new` keyword.</span></span>  
   
-## <a name="example"></a>예제  
- [!code-cs[csProgGuideObjects#84](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_6.cs)]  
+## <a name="example"></a><span data-ttu-id="0f88c-154">예제</span><span class="sxs-lookup"><span data-stu-id="0f88c-154">Example</span></span>  
+ [!code-csharp[csProgGuideObjects#84](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/classes_6.cs)]  
   
-## <a name="c-language-specification"></a>C# 언어 사양  
+## <a name="c-language-specification"></a><span data-ttu-id="0f88c-155">C# 언어 사양</span><span class="sxs-lookup"><span data-stu-id="0f88c-155">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)   
- [개체 지향 프로그래밍](../concepts/object-oriented-programming.md)   
- [다형성](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)   
- [멤버](../../../csharp/programming-guide/classes-and-structs/members.md)   
- [메서드](../../../csharp/programming-guide/classes-and-structs/methods.md)   
- [생성자](../../../csharp/programming-guide/classes-and-structs/constructors.md)   
- [종료자](../../../csharp/programming-guide/classes-and-structs/destructors.md)   
- [개체](../../../csharp/programming-guide/classes-and-structs/objects.md)
-
+## <a name="see-also"></a><span data-ttu-id="0f88c-156">참고 항목</span><span class="sxs-lookup"><span data-stu-id="0f88c-156">See Also</span></span>  
+ [<span data-ttu-id="0f88c-157">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="0f88c-157">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="0f88c-158">개체 지향 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="0f88c-158">Object-Oriented Programming</span></span>](../concepts/object-oriented-programming.md)  
+ [<span data-ttu-id="0f88c-159">다형성</span><span class="sxs-lookup"><span data-stu-id="0f88c-159">Polymorphism</span></span>](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)  
+ [<span data-ttu-id="0f88c-160">멤버</span><span class="sxs-lookup"><span data-stu-id="0f88c-160">Members</span></span>](../../../csharp/programming-guide/classes-and-structs/members.md)  
+ [<span data-ttu-id="0f88c-161">메서드</span><span class="sxs-lookup"><span data-stu-id="0f88c-161">Methods</span></span>](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+ [<span data-ttu-id="0f88c-162">생성자</span><span class="sxs-lookup"><span data-stu-id="0f88c-162">Constructors</span></span>](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+ [<span data-ttu-id="0f88c-163">종료자</span><span class="sxs-lookup"><span data-stu-id="0f88c-163">Finalizers</span></span>](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+ [<span data-ttu-id="0f88c-164">개체</span><span class="sxs-lookup"><span data-stu-id="0f88c-164">Objects</span></span>](../../../csharp/programming-guide/classes-and-structs/objects.md)

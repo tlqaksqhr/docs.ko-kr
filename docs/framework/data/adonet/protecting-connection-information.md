@@ -1,53 +1,56 @@
 ---
-title: "연결 정보 보호 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "연결 정보 보호"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 31196697a606b3edbc0b3aa00b01e5eacb66cb03
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 연결 정보 보호
-응용 프로그램 보안의 가장 중요한 목표 중 하나는 데이터 소스에 대한 액세스를 보호하는 것입니다.  연결 문자열을 안전하게 보호하지 않으면 이로 인해 보안상 취약한 부분이 생길 수 있습니다.  연결 정보를 일반 텍스트로 저장하거나 메모리에 유지하면 전체 시스템을 손상시킬 위험이 있습니다.  소스 코드에 포함된 연결 문자열은 MSIL\(Microsoft intermediate language\)을 컴파일된 어셈블리에 표시하는 [Ildasm.exe\(IL 디스어셈블러\)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md)을를 사용하여 읽을 수 있습니다.  
+# <a name="protecting-connection-information"></a><span data-ttu-id="bb783-102">연결 정보 보호</span><span class="sxs-lookup"><span data-stu-id="bb783-102">Protecting Connection Information</span></span>
+<span data-ttu-id="bb783-103">응용 프로그램 보안의 가장 중요한 목표 중 하나는 데이터 소스에 대한 액세스를 보호하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="bb783-103">Protecting access to your data source is one of the most important goals when securing an application.</span></span> <span data-ttu-id="bb783-104">연결 문자열을 안전하게 보호하지 않으면 이로 인해 보안상 취약한 부분이 생길 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bb783-104">A connection string presents a potential vulnerability if it is not secured.</span></span> <span data-ttu-id="bb783-105">연결 정보를 일반 텍스트로 저장하거나 메모리에 유지하면 전체 시스템을 손상시킬 위험이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bb783-105">Storing connection information in plain text or persisting it in memory risks compromising your entire system.</span></span> <span data-ttu-id="bb783-106">사용 하 여 소스 코드에 포함 된 연결 문자열을 읽을 수는 [Ildasm.exe (IL 디스어셈블러)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) Microsoft MSIL (intermediate language) 컴파일된 어셈블리에서 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bb783-106">Connection strings embedded in your source code can be read using the [Ildasm.exe (IL Disassembler)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) to view Microsoft intermediate language (MSIL) in a compiled assembly.</span></span>  
   
- 연결 문자열과 관련된 보안 취약성은 사용된 인증 유형, 연결 문자열을 메모리와 디스크에 유지하는 방법 및 런타임에 연결 문자열을 구성하는 기술에 따라 발생됩니다.  
+ <span data-ttu-id="bb783-107">연결 문자열과 관련된 보안 취약성은 사용된 인증 유형, 연결 문자열을 메모리와 디스크에 유지하는 방법 및 런타임에 연결 문자열을 구성하는 기술에 따라 발생됩니다.</span><span class="sxs-lookup"><span data-stu-id="bb783-107">Security vulnerabilities involving connection strings can arise based on the type of authentication used, how connection strings are persisted in memory and on disk, and the techniques used to construct them at run time.</span></span>  
   
-## Windows 인증 사용  
- 데이터 소스에 대한 액세스를 제한하려면 사용자 ID, 암호, 데이터 소스 이름과 같은 연결 정보의 보안을 유지해야 합니다.  사용자 정보 노출을 방지하려면 되도록 Windows 인증\(*통합 보안*이라고도 함\)을 사용하는 것이 좋습니다.  Windows 인증은 `Integrated Security` 또는 `Trusted_Connection` 키워드를 사용하여 문자열에 지정되므로 사용자 ID와 암호를 사용할 필요가 없습니다.  Windows 인증을 사용하면 사용자는 Windows에서 인증되고 서버 및 데이터베이스 리소스에 대한 액세스는 Windows 사용자 및 그룹에 부여하는 권한에 따라 결정됩니다.  
+## <a name="use-windows-authentication"></a><span data-ttu-id="bb783-108">Windows 인증 사용</span><span class="sxs-lookup"><span data-stu-id="bb783-108">Use Windows Authentication</span></span>  
+ <span data-ttu-id="bb783-109">데이터 소스에 대한 액세스를 제한하려면 사용자 ID, 암호, 데이터 소스 이름과 같은 연결 정보의 보안을 유지해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb783-109">To help limit access to your data source, you must secure connection information such as user ID, password, and data source name.</span></span> <span data-ttu-id="bb783-110">Windows 인증을 사용 하 여 좋습니다 사용자 정보 노출을 피하려면 (라고도 *통합 보안*) 가능 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb783-110">In order to avoid exposing user information, we recommend using Windows authentication (sometimes referred to as *integrated security*) wherever possible.</span></span> <span data-ttu-id="bb783-111">Windows 인증은 `Integrated Security` 또는 `Trusted_Connection` 키워드를 사용하여 문자열에 지정되므로 사용자 ID와 암호를 사용할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="bb783-111">Windows authentication is specified in a connection string by using the `Integrated Security` or `Trusted_Connection` keywords, eliminating the need to use a user ID and password.</span></span> <span data-ttu-id="bb783-112">Windows 인증을 사용하면 사용자는 Windows에서 인증되고 서버 및 데이터베이스 리소스에 대한 액세스는 Windows 사용자 및 그룹에 부여하는 권한에 따라 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="bb783-112">When using Windows authentication, users are authenticated by Windows, and access to server and database resources is determined by granting permissions to Windows users and groups.</span></span>  
   
- Windows 인증을 사용할 수 없는 상황에서는 사용자 자격 증명이 연결 문자열에 노출되므로 각별히 유의해야 합니다.  ASP.NET 응용 프로그램에서 Windows 계정을 고정 ID로 구성하여 데이터베이스 및 기타 네트워크 리소스에 연결하는 데 사용할 수 있습니다.  **web.config** 파일에서 ID 요소에 가장을 설정하고 사용자 이름과 암호를 지정합니다.  
+ <span data-ttu-id="bb783-113">Windows 인증을 사용할 수 없는 상황에서는 사용자 자격 증명이 연결 문자열에 노출되므로 각별히 유의해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb783-113">For situations where it is not possible to use Windows authentication, you must use extra care because user credentials are exposed in the connection string.</span></span> <span data-ttu-id="bb783-114">ASP.NET 응용 프로그램에서 Windows 계정을 고정 ID로 구성하여 데이터베이스 및 기타 네트워크 리소스에 연결하는 데 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bb783-114">In an ASP.NET application, you can configure a Windows account as a fixed identity that is used to connect to databases and other network resources.</span></span> <span data-ttu-id="bb783-115">id 요소에 가장을 사용 하면는 **web.config** 파일을 사용자 이름 및 암호를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb783-115">You enable impersonation in the identity element in the **web.config** file and specify a user name and password.</span></span>  
   
-```  
+```xml  
 <identity impersonate="true"   
         userName="MyDomain\UserAccount"   
         password="*****" />  
 ```  
   
- 고정 ID 계정은 데이터베이스에서 필수 권한만 부여된 권한이 낮은 계정이어야 합니다.  또한 사용자 이름과 암호가 일반 텍스트로 노출되지 않도록 구성 파일을 암호화해야 합니다.  
+ <span data-ttu-id="bb783-116">고정 ID 계정은 데이터베이스에서 필수 권한만 부여된 권한이 낮은 계정이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb783-116">The fixed identity account should be a low-privilege account that has been granted only necessary permissions in the database.</span></span> <span data-ttu-id="bb783-117">또한 사용자 이름과 암호가 일반 텍스트로 노출되지 않도록 구성 파일을 암호화해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="bb783-117">In addition, you should encrypt the configuration file so that the user name and password are not exposed in clear text.</span></span>  
   
-## UDL\(유니버설 데이터 링크\) 파일 사용 안 함  
- UDL\(유니버설 데이터 링크\) 파일에 <xref:System.Data.OleDb.OleDbConnection>에 대한 연결 문자열을 저장하지 마세요.  UDL은 일반 텍스트로 저장되므로 암호화될 수 없습니다.  UDL 파일은 응용 프로그램에 대한 외부 파일 기반 리소스이므로 .NET Framework를 사용하여 파일을 보호하거나 암호화할 수 없습니다.  
+## <a name="do-not-use-universal-data-link-udl-files"></a><span data-ttu-id="bb783-118">UDL(유니버설 데이터 링크) 파일 사용 안 함</span><span class="sxs-lookup"><span data-stu-id="bb783-118">Do Not Use Universal Data Link (UDL) files</span></span>  
+ <span data-ttu-id="bb783-119">UDL(유니버설 데이터 링크) 파일에 <xref:System.Data.OleDb.OleDbConnection>에 대한 연결 문자열을 저장하지 마세요.</span><span class="sxs-lookup"><span data-stu-id="bb783-119">Avoid storing connection strings for an <xref:System.Data.OleDb.OleDbConnection> in a Universal Data Link (UDL) file.</span></span> <span data-ttu-id="bb783-120">UDL은 일반 텍스트로 저장되므로 암호화될 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="bb783-120">UDLs are stored in clear text and cannot be encrypted.</span></span> <span data-ttu-id="bb783-121">UDL 파일은 응용 프로그램에 대한 외부 파일 기반 리소스이므로 .NET Framework를 사용하여 파일을 보호하거나 암호화할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="bb783-121">A UDL file is an external file-based resource to your application, and it cannot be secured or encrypted using the .NET Framework.</span></span>  
   
-## 연결 문자열 작성기를 통해 삽입 공격 방지  
- 연결 문자열 삽입 공격은 사용자 입력에 대해 동적 문자열 연결을 사용하여 연결 문자열을 작성할 때 발생할 수 있습니다.  사용자 입력의 유효성이 확인되지 않고 악의적인 텍스트 또는 문자를 막을 수 없는 경우 공격자가 서버에서 중요한 데이터 또는 기타 리소스에 액세스할 가능성이 있습니다.  이 문제를 해결하기 위해 ADO.NET 2.0에서는 새 연결 문자열 작성기 클래스를 도입하여 연결 문자열 구문의 유효성을 확인하고 추가 매개 변수가 사용되지 않았는지 확인합니다.  자세한 내용은 [연결 문자열 작성기](../../../../docs/framework/data/adonet/connection-string-builders.md)을 참조하세요.  
+## <a name="avoid-injection-attacks-with-connection-string-builders"></a><span data-ttu-id="bb783-122">연결 문자열 작성기를 통해 삽입 공격 방지</span><span class="sxs-lookup"><span data-stu-id="bb783-122">Avoid Injection Attacks with Connection String Builders</span></span>  
+ <span data-ttu-id="bb783-123">연결 문자열 삽입 공격은 사용자 입력에 대해 동적 문자열 연결을 사용하여 연결 문자열을 작성할 때 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bb783-123">A connection string injection attack can occur when dynamic string concatenation is used to build connection strings based on user input.</span></span> <span data-ttu-id="bb783-124">사용자 입력의 유효성이 확인되지 않고 악의적인 텍스트 또는 문자를 막을 수 없는 경우 공격자가 서버에서 중요한 데이터 또는 기타 리소스에 액세스할 가능성이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bb783-124">If the user input is not validated and malicious text or characters not escaped, an attacker can potentially access sensitive data or other resources on the server.</span></span> <span data-ttu-id="bb783-125">이 문제를 해결하기 위해 ADO.NET 2.0에서는 새 연결 문자열 작성기 클래스를 도입하여 연결 문자열 구문의 유효성을 확인하고 추가 매개 변수가 사용되지 않았는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="bb783-125">To address this problem, ADO.NET 2.0 introduced new connection string builder classes to validate connection string syntax and ensure that additional parameters are not introduced.</span></span> <span data-ttu-id="bb783-126">자세한 내용은 참조 [연결 문자열 작성기](../../../../docs/framework/data/adonet/connection-string-builders.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="bb783-126">For more information, see [Connection String Builders](../../../../docs/framework/data/adonet/connection-string-builders.md).</span></span>  
   
-## Persist Security Info\=False 사용  
- `Persist Security Info`의 기본값은 false입니다. 모든 연결 문자열에서 이 기본값을 사용하는 것이 좋습니다.  `Persist Security Info`를 `true` 또는 `yes`로 설정하면 연결이 열린 다음 연결에서 사용자 ID 및 암호와 같은 보안 관련 정보를 얻을 수 있습니다.  `Persist Security Info`를 `false` 또는 `no`로 설정하면 연결을 열기 위해 보안 정보를 사용한 다음 삭제하므로 신뢰할 수 없는 소스는 보안 관련 정보에 액세스할 수 없습니다.  
+## <a name="use-persist-security-infofalse"></a><span data-ttu-id="bb783-127">Persist Security Info=False 사용</span><span class="sxs-lookup"><span data-stu-id="bb783-127">Use Persist Security Info=False</span></span>  
+ <span data-ttu-id="bb783-128">`Persist Security Info`의 기본값은 false입니다. 모든 연결 문자열에서 이 기본값을 사용하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="bb783-128">The default value for `Persist Security Info` is false; we recommend using this default in all connection strings.</span></span> <span data-ttu-id="bb783-129">`Persist Security Info`를 `true` 또는 `yes`로 설정하면 연결이 열린 다음 연결에서 사용자 ID 및 암호와 같은 보안 관련 정보를 얻을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="bb783-129">Setting `Persist Security Info` to `true` or `yes` allows security-sensitive information, including the user ID and password, to be obtained from a connection after it has been opened.</span></span> <span data-ttu-id="bb783-130">`Persist Security Info`를 `false` 또는 `no`로 설정하면 연결을 열기 위해 보안 정보를 사용한 다음 삭제하므로 신뢰할 수 없는 소스는 보안 관련 정보에 액세스할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="bb783-130">When `Persist Security Info` is set to `false` or `no`, security information is discarded after it is used to open the connection, ensuring that an untrusted source does not have access to security-sensitive information.</span></span>  
   
-## 구성 파일 암호화  
- 연결 문자열을 구성 파일에 저장할 수도 있으며 그러면 연결 문자열을 응용 프로그램 코드에 포함할 필요가 없습니다.  구성 파일은 .NET Framework에 공통 요소 집합이 정의된 표준 XML 파일입니다.  구성 파일의 연결 문자열은 Windows 응용 프로그램의 경우 **app.config** 파일 또는 ASP.NET 응용 프로그램의 경우 **web.config** 파일에 있는 **\<connectionStrings\>** 요소 내부에 일반적으로 저장됩니다.  구성 파일의 연결 문자열을 저장, 검색 및 암호화하는 기본적인 방법에 대한 자세한 내용은 [연결 문자열 및 구성 파일](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)을 참조하세요.  
+## <a name="encrypt-configuration-files"></a><span data-ttu-id="bb783-131">구성 파일 암호화</span><span class="sxs-lookup"><span data-stu-id="bb783-131">Encrypt Configuration Files</span></span>  
+ <span data-ttu-id="bb783-132">연결 문자열을 구성 파일에 저장할 수도 있으며 그러면 연결 문자열을 응용 프로그램 코드에 포함할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="bb783-132">You can also store connection strings in configuration files, which eliminates the need to embed them in your application's code.</span></span> <span data-ttu-id="bb783-133">구성 파일은 .NET Framework에 공통 요소 집합이 정의된 표준 XML 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="bb783-133">Configuration files are standard XML files for which the .NET Framework has defined a common set of elements.</span></span> <span data-ttu-id="bb783-134">구성 파일의 연결 문자열은 일반적으로 내부 저장 되는  **\<connectionStrings >** 요소에는 **app.config** Windows 응용 프로그램에 대 한 또는  **web.config** ASP.NET 응용 프로그램에 대 한 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="bb783-134">Connection strings in configuration files are typically stored inside the **\<connectionStrings>** element in the **app.config** for a Windows application, or the **web.config** file for an ASP.NET application.</span></span> <span data-ttu-id="bb783-135">저장할 경우의 기본 사항에 자세한 내용은 검색 하 고 구성 파일에서 연결 문자열 암호화 참조 [연결 문자열 및 구성 파일](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="bb783-135">For more information on the basics of storing, retrieving and encrypting connection strings from configuration files, see [Connection Strings and Configuration Files](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).</span></span>  
   
-## 참고 항목  
- [ADO.NET 응용 프로그램 보안](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [Encrypting Configuration Information Using Protected Configuration](../Topic/Encrypting%20Configuration%20Information%20Using%20Protected%20Configuration.md)   
- [PAVE Security in Native and .NET Framework Code](http://msdn.microsoft.com/ko-kr/bd61be84-c143-409a-a75a-44253724f784)   
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="bb783-136">참고 항목</span><span class="sxs-lookup"><span data-stu-id="bb783-136">See Also</span></span>  
+ [<span data-ttu-id="bb783-137">ADO.NET 응용 프로그램 보안</span><span class="sxs-lookup"><span data-stu-id="bb783-137">Securing ADO.NET Applications</span></span>](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [<span data-ttu-id="bb783-138">보호 된 구성을 사용 하 여 구성 정보 암호화</span><span class="sxs-lookup"><span data-stu-id="bb783-138">Encrypting Configuration Information Using Protected Configuration</span></span>](http://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1)  
+ [<span data-ttu-id="bb783-139">네이티브 및 .NET Framework 코드의 PAVE 보안</span><span class="sxs-lookup"><span data-stu-id="bb783-139">PAVE Security in Native and .NET Framework Code</span></span>](http://msdn.microsoft.com/en-us/bd61be84-c143-409a-a75a-44253724f784)  
+ [<span data-ttu-id="bb783-140">ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터</span><span class="sxs-lookup"><span data-stu-id="bb783-140">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

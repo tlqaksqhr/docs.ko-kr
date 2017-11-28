@@ -9,53 +9,50 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
-ms.translationtype: HT
-ms.sourcegitcommit: e0271ba3392ce8861dc916714af8c16d4581ce4f
 ms.openlocfilehash: 9932555d5a5b029b4faaf3edcaa3ab523eebe77e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="net-core-tutorials"></a><span data-ttu-id="3ee4d-104">.NET Core 자습서</span><span class="sxs-lookup"><span data-stu-id="3ee4d-104">.NET Core Tutorials</span></span>
 
-# <a name="net-core-tutorials"></a>.NET Core 자습서
+<span data-ttu-id="3ee4d-105">다음 자습서를 사용하여 .NET Core에 대해 알아볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3ee4d-105">The following tutorials are available for learning about .NET Core.</span></span>
 
-다음 자습서를 사용하여 .NET Core에 대해 알아볼 수 있습니다.
+## <a name="building-applications-with-visual-studio-2017"></a><span data-ttu-id="3ee4d-106">Visual Studio 2017을 사용하여 응용 프로그램 빌드</span><span class="sxs-lookup"><span data-stu-id="3ee4d-106">Building applications with Visual Studio 2017</span></span>
 
-## <a name="building-applications-with-visual-studio-2017"></a>Visual Studio 2017을 사용하여 응용 프로그램 빌드
+- [<span data-ttu-id="3ee4d-107">C# Hello World 응용 프로그램 빌드</span><span class="sxs-lookup"><span data-stu-id="3ee4d-107">Building a C# Hello World application</span></span>](with-visual-studio.md)
+- [<span data-ttu-id="3ee4d-108">C# Hello World 응용 프로그램 디버깅</span><span class="sxs-lookup"><span data-stu-id="3ee4d-108">Debugging your C# Hello World application</span></span>](debugging-with-visual-studio.md)
+- [<span data-ttu-id="3ee4d-109">C# Hello World 응용 프로그램 게시</span><span class="sxs-lookup"><span data-stu-id="3ee4d-109">Publishing your C# Hello World application</span></span>](publishing-with-visual-studio.md)
+- [<span data-ttu-id="3ee4d-110">C# 클래스 라이브러리 빌드</span><span class="sxs-lookup"><span data-stu-id="3ee4d-110">Building a C# class library</span></span>](library-with-visual-studio.md)
+- [<span data-ttu-id="3ee4d-111">Visual Basic에서 클래스 라이브러리 빌드</span><span class="sxs-lookup"><span data-stu-id="3ee4d-111">Building a class library with Visual Basic</span></span>](vb-library-with-visual-studio.md)
+- [<span data-ttu-id="3ee4d-112">클래스 라이브러리 테스트</span><span class="sxs-lookup"><span data-stu-id="3ee4d-112">Testing a class library</span></span>](testing-library-with-visual-studio.md)
+- [<span data-ttu-id="3ee4d-113">클래스 라이브러리 사용</span><span class="sxs-lookup"><span data-stu-id="3ee4d-113">Consuming a class library</span></span>](consuming-library-with-visual-studio.md)
+- [<span data-ttu-id="3ee4d-114">Windows에서 완전한 C# .NET Core 솔루션 빌드</span><span class="sxs-lookup"><span data-stu-id="3ee4d-114">Building a complete C# .NET Core solution on Windows</span></span>](using-on-windows-full-solution.md)
+- [<span data-ttu-id="3ee4d-115">NoSQL 자습서: .NET Core의 DocumentDB C# 콘솔 응용 프로그램 빌드</span><span class="sxs-lookup"><span data-stu-id="3ee4d-115">NoSQL tutorial: Build a DocumentDB C# console application on .NET Core</span></span>](/azure/documentdb/documentdb-dotnetcore-get-started)
 
-- [C# Hello World 응용 프로그램 빌드](with-visual-studio.md)
-- [C# Hello World 응용 프로그램 디버깅](debugging-with-visual-studio.md)
-- [C# Hello World 응용 프로그램 게시](publishing-with-visual-studio.md)
-- [C# 클래스 라이브러리 빌드](library-with-visual-studio.md)
-- [Visual Basic에서 클래스 라이브러리 빌드](vb-library-with-visual-studio.md)
-- [클래스 라이브러리 테스트](testing-library-with-visual-studio.md)
-- [클래스 라이브러리 사용](consuming-library-with-visual-studio.md)
-- [Windows에서 완전한 C# .NET Core 솔루션 빌드](using-on-windows-full-solution.md)
-- [NoSQL 자습서: .NET Core의 DocumentDB C# 콘솔 응용 프로그램 빌드](/azure/documentdb/documentdb-dotnetcore-get-started)
+## <a name="building-applications-with-visual-studio-code"></a><span data-ttu-id="3ee4d-116">Visual Studio Code를 사용하여 응용 프로그램 빌드</span><span class="sxs-lookup"><span data-stu-id="3ee4d-116">Building applications with Visual Studio Code</span></span>
 
-## <a name="building-applications-with-visual-studio-code"></a>Visual Studio Code를 사용하여 응용 프로그램 빌드
+- [<span data-ttu-id="3ee4d-117">C# 및 Visual Studio Code 시작</span><span class="sxs-lookup"><span data-stu-id="3ee4d-117">Getting Started with C# and Visual Studio Code</span></span>](with-visual-studio-code.md)
+- [<span data-ttu-id="3ee4d-118">macOS에서 .NET Core 시작</span><span class="sxs-lookup"><span data-stu-id="3ee4d-118">Getting started with .NET Core on macOS</span></span>](using-on-macos.md)
 
-- [C# 및 Visual Studio Code 시작](with-visual-studio-code.md)
-- [macOS에서 .NET Core 시작](using-on-macos.md)
+## <a name="building-applications-with-visual-studio-for-mac"></a><span data-ttu-id="3ee4d-119">Visual Studio for Mac을 사용하여 응용 프로그램 빌드</span><span class="sxs-lookup"><span data-stu-id="3ee4d-119">Building applications with Visual Studio for Mac</span></span>
 
-## <a name="building-applications-with-visual-studio-for-mac"></a>Visual Studio for Mac을 사용하여 응용 프로그램 빌드
+- [<span data-ttu-id="3ee4d-120">Visual Studio for Mac을 사용하여 macOS에서 .NET Core 시작</span><span class="sxs-lookup"><span data-stu-id="3ee4d-120">Getting started with .NET Core on macOS using Visual Studio for Mac</span></span>](using-on-mac-vs.md)
+- [<span data-ttu-id="3ee4d-121">Visual Studio for Mac을 사용하여 macOS에서 완전한 .NET Core 솔루션 빌드</span><span class="sxs-lookup"><span data-stu-id="3ee4d-121">Building a complete .NET Core solution on macOS using Visual Studio for Mac</span></span>](using-on-mac-vs-full-solution.md)
 
-- [Visual Studio for Mac을 사용하여 macOS에서 .NET Core 시작](using-on-mac-vs.md)
-- [Visual Studio for Mac을 사용하여 macOS에서 완전한 .NET Core 솔루션 빌드](using-on-mac-vs-full-solution.md)
+## <a name="building-applications-with-the-net-core-cli-tools"></a><span data-ttu-id="3ee4d-122">.NET Core CLI 도구를 사용하여 응용 프로그램 빌드</span><span class="sxs-lookup"><span data-stu-id="3ee4d-122">Building applications with the .NET Core CLI tools</span></span>
 
-## <a name="building-applications-with-the-net-core-cli-tools"></a>.NET Core CLI 도구를 사용하여 응용 프로그램 빌드
+- [<span data-ttu-id="3ee4d-123">.NET Core CLI 도구를 사용하여 Windows/Linux/macOS에서 .NET Core 시작</span><span class="sxs-lookup"><span data-stu-id="3ee4d-123">Getting started with .NET Core on Windows/Linux/macOS using the .NET Core CLI tools</span></span>](using-with-xplat-cli.md)
+- [<span data-ttu-id="3ee4d-124">.NET Core CLI 도구를 사용하여 프로젝트 구성 및 테스트</span><span class="sxs-lookup"><span data-stu-id="3ee4d-124">Organizing and testing projects with the .NET Core CLI tools</span></span>](testing-with-cli.md)
+- [<span data-ttu-id="3ee4d-125">F# 시작</span><span class="sxs-lookup"><span data-stu-id="3ee4d-125">Get started with F#</span></span>](../../fsharp/get-started/get-started-command-line.md)
 
-- [.NET Core CLI 도구를 사용하여 Windows/Linux/macOS에서 .NET Core 시작](using-with-xplat-cli.md)
-- [.NET Core CLI 도구를 사용하여 프로젝트 구성 및 테스트](testing-with-cli.md)
-- [F# 시작](../../fsharp/get-started/get-started-command-line.md)
+## <a name="other"></a><span data-ttu-id="3ee4d-126">기타</span><span class="sxs-lookup"><span data-stu-id="3ee4d-126">Other</span></span>
+- [<span data-ttu-id="3ee4d-127">Dotnet 테스트를 사용한 .NET Core의 단위 테스트</span><span class="sxs-lookup"><span data-stu-id="3ee4d-127">Unit Testing in .NET Core using dotnet test</span></span>](../testing/unit-testing-with-dotnet-test.md)
+- [<span data-ttu-id="3ee4d-128">MSTest 및 .NET Core를 사용한 단위 테스트</span><span class="sxs-lookup"><span data-stu-id="3ee4d-128">Unit testing with MSTest and .NET Core</span></span>](../testing/unit-testing-with-mstest.md)
+- [<span data-ttu-id="3ee4d-129">플랫폼 간 도구로 라이브러리 개발</span><span class="sxs-lookup"><span data-stu-id="3ee4d-129">Developing Libraries with Cross Platform Tools</span></span>](libraries.md)
+- [<span data-ttu-id="3ee4d-130">.NET Core 1.0에 대한 패키지 종속성 버전을 관리하는 방법</span><span class="sxs-lookup"><span data-stu-id="3ee4d-130">How to Manage Package Dependency Versions for .NET Core 1.0</span></span>](managing-package-dependency-versions.md)
+- [<span data-ttu-id="3ee4d-131">네이티브 코드에서 .NET Core 호스트</span><span class="sxs-lookup"><span data-stu-id="3ee4d-131">Hosting .NET Core from native code</span></span>](netcore-hosting.md)
+- [<span data-ttu-id="3ee4d-132">dotnet용 사용자 지정 템플릿 새로 만들기</span><span class="sxs-lookup"><span data-stu-id="3ee4d-132">Create a custom template for dotnet new</span></span>](create-custom-template.md)
 
-## <a name="other"></a>기타
-- [Dotnet 테스트를 사용한 .NET Core의 단위 테스트](../testing/unit-testing-with-dotnet-test.md)
-- [MSTest 및 .NET Core를 사용한 단위 테스트](../testing/unit-testing-with-mstest.md)
-- [플랫폼 간 도구로 라이브러리 개발](libraries.md)
-- [.NET Core 1.0에 대한 패키지 종속성 버전을 관리하는 방법](managing-package-dependency-versions.md)
-- [네이티브 코드에서 .NET Core 호스트](netcore-hosting.md)
-- [dotnet용 사용자 지정 템플릿 새로 만들기](create-custom-template.md)
-
-ASP.NET Core 웹 응용 프로그램 개발에 대한 자습서는 [ASP.NET Core 설명서](/aspnet/core/)를 참조하세요.
-
+<span data-ttu-id="3ee4d-133">ASP.NET Core 웹 응용 프로그램 개발에 대한 자습서는 [ASP.NET Core 설명서](/aspnet/core/)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="3ee4d-133">For tutorials about developing ASP.NET Core web applications, see the [ASP.NET Core documentation](/aspnet/core/).</span></span>

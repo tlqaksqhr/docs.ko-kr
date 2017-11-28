@@ -1,24 +1,27 @@
 ---
-title: "일반 참조 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "일반 참조 [WCF]"
-  - "WCF, 일반 참조"
-  - "Windows Communication Foundation, 일반 참조"
+title: "일반 참조"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- general reference [WCF]
+- Windows Communication Foundation, general reference
+- WCF, general reference
 ms.assetid: b1a21e93-4700-46e6-88ca-bd7a50e19a16
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9109898adb20a3630ca393176e7f0a59eda0d617
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 일반 참조
-[\<system.serviceModel\>](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) 단원에서는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 클라이언트 및 서비스 구성에 사용되는 요소에 대해 설명합니다.
+# <a name="general-reference"></a><span data-ttu-id="68e56-102">일반 참조</span><span class="sxs-lookup"><span data-stu-id="68e56-102">General Reference</span></span>
+<span data-ttu-id="68e56-103">섹션 [ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) 구성 하는 데 사용 되는 요소를 설명 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 클라이언트와 서비스입니다.</span><span class="sxs-lookup"><span data-stu-id="68e56-103">The section [\<system.serviceModel>](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) describes the elements that are used to configure [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] clients and services.</span></span>

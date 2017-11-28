@@ -12,31 +12,29 @@ helpviewer_keywords:
 - asynchronous design patterns, .NET Framework
 - .NET Framework, asynchronous design patterns
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: a527824ba11928d59bc700f253c5a4d77056abf0
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/05/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="asynchronous-programming-patterns"></a><span data-ttu-id="25de1-102">비동기 프로그래밍 패턴</span><span class="sxs-lookup"><span data-stu-id="25de1-102">Asynchronous Programming Patterns</span></span>
 
-# <a name="asynchronous-programming-patterns"></a>비동기 프로그래밍 패턴
+<span data-ttu-id="25de1-103">.NET Framework에서는 비동기 작업을 수행하기 위한 세 가지 패턴을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="25de1-103">The .NET Framework provides three patterns for performing asynchronous operations:</span></span>  
+  
+- <span data-ttu-id="25de1-104"><xref:System.IAsyncResult> 패턴이라고도 하는 APM(비동기 프로그래밍 모델) 패턴. 이 패턴에서는 비동기 작업을 수행하려면 `Begin` 및 `End` 메서드가 필요합니다. 예를 들어 비동기 쓰기 작업의 경우에는 `BeginWrite` 및 `EndWrite` 메서드가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="25de1-104">Asynchronous Programming Model (APM) pattern (also called the <xref:System.IAsyncResult> pattern), where asynchronous operations require `Begin` and `End` methods (for example, `BeginWrite` and `EndWrite` for asynchronous write operations).</span></span> <span data-ttu-id="25de1-105">신규 개발에서는 이 패턴을 더 이상 사용하지 않는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="25de1-105">This pattern is no longer recommended for new development.</span></span> <span data-ttu-id="25de1-106">자세한 내용은 [APM(비동기 프로그래밍 모델)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="25de1-106">For more information, see [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md).</span></span>  
+  
+- <span data-ttu-id="25de1-107">EAP(이벤트 기반 비동기 패턴). 이 패턴에서는 `Async` 접미사가 있는 메서드가 필요하며 하나 이상의 이벤트, 이벤트 처리기 대리가 형식 및 `EventArg`에서 파생된 형식도 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="25de1-107">Event-based Asynchronous Pattern (EAP), which requires a method that has the `Async` suffix, and also requires one or more events, event handler delegate types, and `EventArg`-derived types.</span></span> <span data-ttu-id="25de1-108">EAP는 .NET Framework 2.0에 도입되었습니다.</span><span class="sxs-lookup"><span data-stu-id="25de1-108">EAP was introduced in the .NET Framework 2.0.</span></span> <span data-ttu-id="25de1-109">이 패턴 역시 신규 개발에서는 더 이상 사용하지 않는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="25de1-109">It is no longer recommended for new development.</span></span> <span data-ttu-id="25de1-110">자세한 내용은 [EAP(이벤트 기반 비동기 패턴)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="25de1-110">For more information, see [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).</span></span>  
+  
+- <span data-ttu-id="25de1-111">단일 메서드를 사용하여 비동기 작업 시작과 완료를 나타내는 TAP(작업 기반 비동기 패턴).</span><span class="sxs-lookup"><span data-stu-id="25de1-111">Task-based Asynchronous Pattern (TAP), which uses a single method to represent the initiation and completion of an asynchronous operation.</span></span> <span data-ttu-id="25de1-112">TAP는 .NET Framework 4에 도입되었으며, .NET Framework에서 비동기 프로그래밍을 수행할 때는 이 패턴을 사용하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="25de1-112">TAP was introduced in the .NET Framework 4 and is the recommended approach to asynchronous programming in the .NET Framework.</span></span> <span data-ttu-id="25de1-113">C#의 [async](~/docs/csharp/language-reference/keywords/async.md) 및 [await](~/docs/csharp/language-reference/keywords/await.md) 키워드와 Visual Basic 언어의 [Async](~/docs/visual-basic/language-reference/modifiers/async.md) 및 [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) 연산자는 TAP에 대한 언어 지원을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="25de1-113">The [async](~/docs/csharp/language-reference/keywords/async.md) and [await](~/docs/csharp/language-reference/keywords/await.md) keywords in C# and the [Async](~/docs/visual-basic/language-reference/modifiers/async.md) and [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) operators in Visual Basic Language add language support for TAP.</span></span> <span data-ttu-id="25de1-114">자세한 내용은 [TAP(작업 기반 비동기 패턴)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="25de1-114">For more information, see [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).</span></span>  
+  
+## <a name="comparing-patterns"></a><span data-ttu-id="25de1-115">패턴 비교</span><span class="sxs-lookup"><span data-stu-id="25de1-115">Comparing Patterns</span></span>  
 
-.NET Framework에서는 비동기 작업을 수행하기 위한 세 가지 패턴을 제공합니다.  
-  
-- <xref:System.IAsyncResult> 패턴이라고도 하는 APM(비동기 프로그래밍 모델) 패턴. 이 패턴에서는 비동기 작업을 수행하려면 `Begin` 및 `End` 메서드가 필요합니다. 예를 들어 비동기 쓰기 작업의 경우에는 `BeginWrite` 및 `EndWrite` 메서드가 필요합니다. 신규 개발에서는 이 패턴을 더 이상 사용하지 않는 것이 좋습니다. 자세한 내용은 [APM(비동기 프로그래밍 모델)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)을 참조하세요.  
-  
-- EAP(이벤트 기반 비동기 패턴). 이 패턴에서는 `Async` 접미사가 있는 메서드가 필요하며 하나 이상의 이벤트, 이벤트 처리기 대리가 형식 및 `EventArg`에서 파생된 형식도 필요합니다. EAP는 .NET Framework 2.0에 도입되었습니다. 이 패턴 역시 신규 개발에서는 더 이상 사용하지 않는 것이 좋습니다. 자세한 내용은 [EAP(이벤트 기반 비동기 패턴)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)를 참조하세요.  
-  
-- 단일 메서드를 사용하여 비동기 작업 시작과 완료를 나타내는 TAP(작업 기반 비동기 패턴). TAP는 .NET Framework 4에 도입되었으며, .NET Framework에서 비동기 프로그래밍을 수행할 때는 이 패턴을 사용하는 것이 좋습니다. C#의 [async](~/docs/csharp/language-reference/keywords/async.md) 및 [await](~/docs/csharp/language-reference/keywords/await.md) 키워드와 Visual Basic 언어의 [Async](~/docs/visual-basic/language-reference/modifiers/async.md) 및 [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) 연산자는 TAP에 대한 언어 지원을 추가합니다. 자세한 내용은 [TAP(작업 기반 비동기 패턴)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)을 참조하세요.  
-  
-## <a name="comparing-patterns"></a>패턴 비교  
-
-위의 세 가지 패턴 모델이 비동기 작업을 수행하는 방법을 빠르게 비교하려는 경우 지정한 오프셋에서부터 지정된 양의 데이터를 제공된 버퍼로 읽어 들이는 `Read` 메서드를 사용할 수 있습니다.  
+<span data-ttu-id="25de1-116">위의 세 가지 패턴 모델이 비동기 작업을 수행하는 방법을 빠르게 비교하려는 경우 지정한 오프셋에서부터 지정된 양의 데이터를 제공된 버퍼로 읽어 들이는 `Read` 메서드를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="25de1-116">For a quick comparison of how the three patterns model asynchronous operations, consider a `Read` method that reads a specified amount of data into a provided buffer starting at a specified offset:</span></span>  
   
 ```csharp  
 public class MyClass  
@@ -45,7 +43,7 @@ public class MyClass
 }  
 ```  
   
-이 메서드에 해당하는 APM 코드는 `BeginRead` 및 `EndRead` 메서드를 노출합니다.  
+<span data-ttu-id="25de1-117">이 메서드에 해당하는 APM 코드는 `BeginRead` 및 `EndRead` 메서드를 노출합니다.</span><span class="sxs-lookup"><span data-stu-id="25de1-117">The APM counterpart of this method would expose the `BeginRead` and `EndRead` methods:</span></span>  
   
 ```csharp  
 public class MyClass  
@@ -57,7 +55,7 @@ public class MyClass
 }  
 ```  
   
-그리고 이 메서드에 해당하는 EAP 코드는 다음 형식 및 멤버 집합을 노출합니다.  
+<span data-ttu-id="25de1-118">그리고 이 메서드에 해당하는 EAP 코드는 다음 형식 및 멤버 집합을 노출합니다.</span><span class="sxs-lookup"><span data-stu-id="25de1-118">The EAP counterpart would expose the following set of types and members:</span></span>  
   
 ```csharp  
 public class MyClass  
@@ -67,7 +65,7 @@ public class MyClass
 }  
 ```  
   
-TAP에 해당하는 코드는 다음의 단일 `ReadAsync` 메서드를 노출합니다.  
+<span data-ttu-id="25de1-119">TAP에 해당하는 코드는 다음의 단일 `ReadAsync` 메서드를 노출합니다.</span><span class="sxs-lookup"><span data-stu-id="25de1-119">The TAP counterpart would expose the following single `ReadAsync` method:</span></span>  
   
 ```csharp  
 public class MyClass  
@@ -76,19 +74,18 @@ public class MyClass
 }  
 ```  
   
-TAP, APM 및 EAP에 대한 포괄적인 설명은 다음 섹션에 나와 있는 링크를 참조하세요.  
+<span data-ttu-id="25de1-120">TAP, APM 및 EAP에 대한 포괄적인 설명은 다음 섹션에 나와 있는 링크를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="25de1-120">For a comprehensive discussion of TAP, APM, and EAP, see the links provided in the next section.</span></span>  
   
-## <a name="related-topics"></a>관련 항목
+## <a name="related-topics"></a><span data-ttu-id="25de1-121">관련 항목</span><span class="sxs-lookup"><span data-stu-id="25de1-121">Related topics</span></span>
 
-| 제목 | 설명 |
+| <span data-ttu-id="25de1-122">제목</span><span class="sxs-lookup"><span data-stu-id="25de1-122">Title</span></span> | <span data-ttu-id="25de1-123">설명</span><span class="sxs-lookup"><span data-stu-id="25de1-123">Description</span></span> |
 | ----- | ----------- |
-| [APM(비동기 프로그래밍 모델)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) | <xref:System.IAsyncResult> 인터페이스를 사용하여 비동기 동작을 제공하는 레거시 모델에 대해 설명합니다. 신규 개발에서는 이 모델을 더 이상 사용하지 않는 것이 좋습니다. |
-| [EAP(이벤트 기반 비동기 패턴)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) | 비동기 동작을 제공하기 위한 이벤트 기반 레거시 모델에 대해 설명합니다. 신규 개발에서는 이 모델을 더 이상 사용하지 않는 것이 좋습니다. |
-| [TAP(작업 기반 비동기 패턴)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) | <xref:System.Threading.Tasks> 네임스페이스를 기반으로 하는 새 비동기 패턴에 대해 설명합니다. .NET Framework 4 이상 버전에서 비동기 프로그래밍을 수행할 때는 이 모델을 사용하는 것이 좋습니다. |
+| [<span data-ttu-id="25de1-124">APM(비동기 프로그래밍 모델)</span><span class="sxs-lookup"><span data-stu-id="25de1-124">Asynchronous Programming Model (APM)</span></span>](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) | <span data-ttu-id="25de1-125"><xref:System.IAsyncResult> 인터페이스를 사용하여 비동기 동작을 제공하는 레거시 모델에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="25de1-125">Describes the legacy model that uses the <xref:System.IAsyncResult> interface to provide asynchronous behavior.</span></span> <span data-ttu-id="25de1-126">신규 개발에서는 이 모델을 더 이상 사용하지 않는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="25de1-126">This model is no longer recommended for new development.</span></span> |
+| [<span data-ttu-id="25de1-127">EAP(이벤트 기반 비동기 패턴)</span><span class="sxs-lookup"><span data-stu-id="25de1-127">Event-based Asynchronous Pattern (EAP)</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) | <span data-ttu-id="25de1-128">비동기 동작을 제공하기 위한 이벤트 기반 레거시 모델에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="25de1-128">Describes the event-based legacy model for providing asynchronous behavior.</span></span> <span data-ttu-id="25de1-129">신규 개발에서는 이 모델을 더 이상 사용하지 않는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="25de1-129">This model is no longer recommended for new development.</span></span> |
+| [<span data-ttu-id="25de1-130">TAP(작업 기반 비동기 패턴)</span><span class="sxs-lookup"><span data-stu-id="25de1-130">Task-based Asynchronous Pattern (TAP)</span></span>](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) | <span data-ttu-id="25de1-131"><xref:System.Threading.Tasks> 네임스페이스를 기반으로 하는 새 비동기 패턴에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="25de1-131">Describes the new asynchronous pattern based on the <xref:System.Threading.Tasks> namespace.</span></span> <span data-ttu-id="25de1-132">.NET Framework 4 이상 버전에서 비동기 프로그래밍을 수행할 때는 이 모델을 사용하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="25de1-132">This model is the recommended approach to asynchronous programming in the .NET Framework 4 and later versions.</span></span> |
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a><span data-ttu-id="25de1-133">참고 항목</span><span class="sxs-lookup"><span data-stu-id="25de1-133">See also</span></span>
 
-[C#의 비동기 프로그래밍](~/docs/csharp/async.md)   
-[Async Programming in F#](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md) (F#의 비동기 프로그래밍)  
-[Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
-
+<span data-ttu-id="25de1-134">[C#의 비동기 프로그래밍](~/docs/csharp/async.md) </span><span class="sxs-lookup"><span data-stu-id="25de1-134">[Asynchronous programming in C#](~/docs/csharp/async.md) </span></span>  
+<span data-ttu-id="25de1-135">[Async Programming in F#](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md) (F#의 비동기 프로그래밍)</span><span class="sxs-lookup"><span data-stu-id="25de1-135">[Async Programming in F#](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md) </span></span>  
+[<span data-ttu-id="25de1-136">Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="25de1-136">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](~/docs/visual-basic/programming-guide/concepts/async/index.md)

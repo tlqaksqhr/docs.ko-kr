@@ -1,161 +1,159 @@
 ---
-title: "Declare Statement | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Declare"
-  - "vb.Lib"
-  - "vb.Any"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Lib keyword"
-  - "declaring procedures, Declare statement"
-  - "functions [Visual Basic], function procedures"
-  - "declarations, procedures"
-  - "procedures, declaration"
-  - "procedures, external"
-  - "Alias keyword"
-  - "external references, Visual Basic"
-  - "DLLs, declaring procedures"
-  - "Declare statement"
-  - "declarations, external"
-  - "Visual Basic code, Function procedures"
-  - "As keyword, in Declare statement"
-  - "resources [Visual Basic], declaring"
-  - "Public keyword, Declare statement"
-  - "platform invoke, Visual Basic external references"
-  - "Sub procedures, declarations"
-  - "APIs, declaring API functions"
-  - "Visual Basic code, Sub procedures"
-  - "Function procedures, declaring"
+title: Declare Statement
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Declare
+- vb.Lib
+- vb.Any
+helpviewer_keywords:
+- Lib keyword [Visual Basic]
+- declaring procedures [Visual Basic], Declare statement
+- functions [Visual Basic], function procedures
+- declarations [Visual Basic], procedures
+- procedures [Visual Basic], declaration
+- procedures [Visual Basic], external
+- Alias keyword [Visual Basic]
+- external references [Visual Basic], Visual Basic
+- DLLs, declaring procedures
+- Declare statement [Visual Basic]
+- declarations [Visual Basic], external
+- Visual Basic code, Function procedures
+- As keyword [Visual Basic], in Declare statement
+- resources [Visual Basic], declaring
+- Public keyword [Visual Basic], Declare statement
+- platform invoke, Visual Basic external references
+- Sub procedures [Visual Basic], declarations
+- APIs, declaring API functions
+- Visual Basic code, Sub procedures
+- Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-caps.latest.revision: 30
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 30
+caps.latest.revision: "30"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 2560f34a5130ef7453b50ffb4495b67bf1dfa4c8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Declare Statement
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-외부 파일에 구현된 프로시저에 대한 참조를 선언합니다.  
+# <a name="declare-statement"></a><span data-ttu-id="20a87-102">Declare Statement</span><span class="sxs-lookup"><span data-stu-id="20a87-102">Declare Statement</span></span>
+<span data-ttu-id="20a87-103">외부 파일에 구현 된 프로시저에 대 한 참조를 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-103">Declares a reference to a procedure implemented in an external file.</span></span>  
   
-## 구문  
+## <a name="syntax"></a><span data-ttu-id="20a87-104">구문</span><span class="sxs-lookup"><span data-stu-id="20a87-104">Syntax</span></span>  
   
 ```  
-[ <attributelist> ] [ accessmodifier ] [ Shadows ] [ Overloads ] _  
-Declare [ charsetmodifier ] [ Sub ] name Lib "libname" _  
-[ Alias "aliasname" ] [ ([ parameterlist ]) ]  
+[ <attributelist> ] [ accessmodifier ] [ Shadows ] [ Overloads ] _  
+Declare [ charsetmodifier ] [ Sub ] name Lib "libname" _  
+[ Alias "aliasname" ] [ ([ parameterlist ]) ]  
 ' -or-  
-[ <attributelist> ] [ accessmodifier ] [ Shadows ] [ Overloads ] _  
-Declare [ charsetmodifier ] [ Function ] name Lib "libname" _  
-[ Alias "aliasname" ] [ ([ parameterlist ]) ] [ As returntype ]  
+[ <attributelist> ] [ accessmodifier ] [ Shadows ] [ Overloads ] _  
+Declare [ charsetmodifier ] [ Function ] name Lib "libname" _  
+[ Alias "aliasname" ] [ ([ parameterlist ]) ] [ As returntype ]  
 ```  
   
-## 요소  
+## <a name="parts"></a><span data-ttu-id="20a87-105">요소</span><span class="sxs-lookup"><span data-stu-id="20a87-105">Parts</span></span>  
   
-|||  
-|-|-|  
-|용어|정의|  
-|`attributelist`|선택적 요소.  [특성 목록](../../../visual-basic/language-reference/statements/attribute-list.md)을 참조하십시오.|  
-|`accessmodifier`|선택적 요소.  다음 중 하나일 수 있습니다.<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [Private](../../../visual-basic/language-reference/modifiers/private.md)<br />-   `Protected Friend`<br /><br /> 자세한 내용은 [Access Levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)를 참조하십시오.|  
-|`Shadows`|선택적 요소.  [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)를 참조하십시오.|  
-|`charsetmodifier`|선택적 요소.  문자 집합과 파일 검색 정보를 지정합니다.  다음 중 하나일 수 있습니다.<br /><br /> -   [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)\(기본값\)<br />-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)<br />-   [Auto](../../../visual-basic/language-reference/modifiers/auto.md)|  
-|`Sub`|선택적 요소. `Sub`나 `Function` 중 하나가 반드시 있어야 합니다.  외부 프로시저가 값을 반환하지 않음을 나타냅니다.|  
-|`Function`|선택적 요소. `Sub`나 `Function` 중 하나가 반드시 있어야 합니다.  외부 프로시저가 값을 반환함을 나타냅니다.|  
-|`name`|필수 요소.  이 외부 참조의 이름입니다.  자세한 내용은 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)를 참조하십시오.|  
-|`Lib`|필수 요소.  외부 프로시저를 포함하는 외부 파일\(DLL 또는 코드 리소스\)을 식별하는 `Lib` 절을 지정합니다.|  
-|`libname`|필수 요소.  선언된 프로시저가 포함되어 있는 파일의 이름입니다.|  
-|`Alias`|선택적 요소.  선언할 프로시저를 `name`에 지정된 이름으로 해당 파일 내에서 식별할 수 없음을 나타냅니다.  해당 식별 사항을 `aliasname`에 지정합니다.|  
-|`aliasname`|`Alias` 키워드를 사용하는 경우 필수적 요소입니다.  다음은 두 가지 방법 중 하나로 프로시저를 식별하는 문자열입니다.<br /><br /> 해당 파일 내에서 프로시저의 진입점 이름을 따옴표\(`""`\)로 묶은 것입니다.<br /><br /> 또는<br /><br /> 숫자 기호\(`#`\)와 해당 파일 내에서 프로시저의 진입점을 나타내는 서수 번호를 지정하는 정수입니다.|  
-|`parameterlist`|프로시저에서 매개 변수를 사용하는 경우 필수적 요소입니다.  자세한 내용은 [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md)를 참조하십시오.|  
-|`returntype`|`Function`을 지정하고 `Option Strict`가 `On`인 경우 필수적 요소입니다.  프로시저에서 반환되는 값의 데이터 형식입니다.|  
+|<span data-ttu-id="20a87-106">용어</span><span class="sxs-lookup"><span data-stu-id="20a87-106">Term</span></span>|<span data-ttu-id="20a87-107">정의</span><span class="sxs-lookup"><span data-stu-id="20a87-107">Definition</span></span>|  
+|---|---|  
+|`attributelist`|<span data-ttu-id="20a87-108">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-108">Optional.</span></span> <span data-ttu-id="20a87-109">참조 [특성 목록](../../../visual-basic/language-reference/statements/attribute-list.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-109">See [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md).</span></span>|  
+|`accessmodifier`|<span data-ttu-id="20a87-110">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-110">Optional.</span></span> <span data-ttu-id="20a87-111">다음 중 하나일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-111">Can be one of the following:</span></span><br /><br /> <span data-ttu-id="20a87-112">-   [공개](../../../visual-basic/language-reference/modifiers/public.md)</span><span class="sxs-lookup"><span data-stu-id="20a87-112">-   [Public](../../../visual-basic/language-reference/modifiers/public.md)</span></span><br /><span data-ttu-id="20a87-113">-   [보호](../../../visual-basic/language-reference/modifiers/protected.md)</span><span class="sxs-lookup"><span data-stu-id="20a87-113">-   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)</span></span><br /><span data-ttu-id="20a87-114">-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)</span><span class="sxs-lookup"><span data-stu-id="20a87-114">-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)</span></span><br /><span data-ttu-id="20a87-115">-   [개인](../../../visual-basic/language-reference/modifiers/private.md)</span><span class="sxs-lookup"><span data-stu-id="20a87-115">-   [Private](../../../visual-basic/language-reference/modifiers/private.md)</span></span><br />-   `Protected Friend`<br /><br /> <span data-ttu-id="20a87-116">참조 [액세스 수준을 Visual Basic의](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-116">See [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>|  
+|`Shadows`|<span data-ttu-id="20a87-117">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-117">Optional.</span></span> <span data-ttu-id="20a87-118">참조 [그림자](../../../visual-basic/language-reference/modifiers/shadows.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-118">See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).</span></span>|  
+|`charsetmodifier`|<span data-ttu-id="20a87-119">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-119">Optional.</span></span> <span data-ttu-id="20a87-120">문자 집합 및 파일을 지정 정보를 검색 합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-120">Specifies character set and file search information.</span></span> <span data-ttu-id="20a87-121">다음 중 하나일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-121">Can be one of the following:</span></span><br /><br /> <span data-ttu-id="20a87-122">-   [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md) (기본값)</span><span class="sxs-lookup"><span data-stu-id="20a87-122">-   [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md) (default)</span></span><br /><span data-ttu-id="20a87-123">-   [유니코드](../../../visual-basic/language-reference/modifiers/unicode.md)</span><span class="sxs-lookup"><span data-stu-id="20a87-123">-   [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)</span></span><br /><span data-ttu-id="20a87-124">-   [자동](../../../visual-basic/language-reference/modifiers/auto.md)</span><span class="sxs-lookup"><span data-stu-id="20a87-124">-   [Auto](../../../visual-basic/language-reference/modifiers/auto.md)</span></span>|  
+|`Sub`|<span data-ttu-id="20a87-125">선택적 `Sub` 또는 `Function` 나타나야 합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-125">Optional, but either `Sub` or `Function` must appear.</span></span> <span data-ttu-id="20a87-126">외부 프로시저 값을 반환 하지 않는 것을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-126">Indicates that the external procedure does not return a value.</span></span>|  
+|`Function`|<span data-ttu-id="20a87-127">선택적 `Sub` 또는 `Function` 나타나야 합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-127">Optional, but either `Sub` or `Function` must appear.</span></span> <span data-ttu-id="20a87-128">외부 프로시저에 값을 반환 했는지를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-128">Indicates that the external procedure returns a value.</span></span>|  
+|`name`|<span data-ttu-id="20a87-129">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="20a87-129">Required.</span></span> <span data-ttu-id="20a87-130">이 외부 참조의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-130">Name of this external reference.</span></span> <span data-ttu-id="20a87-131">자세한 내용은 참조 [선언 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-131">For more information, see [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).</span></span>|  
+|`Lib`|<span data-ttu-id="20a87-132">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="20a87-132">Required.</span></span> <span data-ttu-id="20a87-133">소개는 `Lib` 절 외부 프로시저를 포함 하는 외부 파일 (DLL 또는 코드 리소스)를 식별 합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-133">Introduces a `Lib` clause, which identifies the external file (DLL or code resource) that contains an external procedure.</span></span>|  
+|`libname`|<span data-ttu-id="20a87-134">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="20a87-134">Required.</span></span> <span data-ttu-id="20a87-135">선언된 된 프로시저를 포함 하는 파일의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-135">Name of the file that contains the declared procedure.</span></span>|  
+|`Alias`|<span data-ttu-id="20a87-136">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-136">Optional.</span></span> <span data-ttu-id="20a87-137">에 지정 된 이름으로 선언 되는 프로시저 파일 내에서 식별할 수 없음을 나타냅니다 `name`합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-137">Indicates that the procedure being declared cannot be identified within its file by the name specified in `name`.</span></span> <span data-ttu-id="20a87-138">해당 id를 지정 `aliasname`합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-138">You specify its identification in `aliasname`.</span></span>|  
+|`aliasname`|<span data-ttu-id="20a87-139">사용 하는 경우 필요는 `Alias` 키워드입니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-139">Required if you use the `Alias` keyword.</span></span> <span data-ttu-id="20a87-140">두 가지 방법 중 하나에서 프로시저를 식별 하는 문자열:</span><span class="sxs-lookup"><span data-stu-id="20a87-140">String that identifies the procedure in one of two ways:</span></span><br /><br /> <span data-ttu-id="20a87-141">따옴표 안에 해당 파일 내에서 프로시저의 진입점 이름 (`""`)</span><span class="sxs-lookup"><span data-stu-id="20a87-141">The entry point name of the procedure within its file, within quotes (`""`)</span></span><br /><br /> <span data-ttu-id="20a87-142">또는</span><span class="sxs-lookup"><span data-stu-id="20a87-142">-or-</span></span><br /><br /> <span data-ttu-id="20a87-143">숫자 기호 (`#`) 뒤에 해당 파일 내에서 프로시저의 진입점의 서 수를 지정 하는 정수</span><span class="sxs-lookup"><span data-stu-id="20a87-143">A number sign (`#`) followed by an integer specifying the ordinal number of the procedure's entry point within its file</span></span>|  
+|`parameterlist`|<span data-ttu-id="20a87-144">프로시저 매개 변수를 사용 하는 경우 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-144">Required if the procedure takes parameters.</span></span> <span data-ttu-id="20a87-145">참조 [매개 변수 목록](../../../visual-basic/language-reference/statements/parameter-list.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-145">See [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md).</span></span>|  
+|`returntype`|<span data-ttu-id="20a87-146">필요한 경우 `Function` 지정 및 `Option Strict` 은 `On`합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-146">Required if `Function` is specified and `Option Strict` is `On`.</span></span> <span data-ttu-id="20a87-147">프로시저에서 반환 되는 값의 데이터 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-147">Data type of the value returned by the procedure.</span></span>|  
   
-## 설명  
- DLL 또는 코드 리소스와 같은 프로젝트 외부 파일에 정의된 프로시저를 호출해야 하는 경우도 있습니다.  이 경우 Visual Basic 컴파일러는 프로시저의 위치, 식별 방법, 호출 시퀀스와 반환 형식 및 사용되는 문자열 문자 집합 등 프로시저를 정확하게 호출하는 데 필요한 정보에 액세스할 수 없습니다.  `Declare` 문은 외부 프로시저에 대한 참조를 만들고 이와 같이 필요한 정보를 제공합니다.  
+## <a name="remarks"></a><span data-ttu-id="20a87-148">설명</span><span class="sxs-lookup"><span data-stu-id="20a87-148">Remarks</span></span>  
+ <span data-ttu-id="20a87-149">경우에 따라 프로젝트 외부 (예: DLL 또는 코드 리소스) 파일에 정의 된 프로시저를 호출 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-149">Sometimes you need to call a procedure defined in a file (such as a DLL or code resource) outside your project.</span></span> <span data-ttu-id="20a87-150">이 작업을 수행 하는 경우 Visual Basic 컴파일러 액세스 절차를 올바르게 호출 하는 데 필요한 정보를, 프로시저의 위치, 식별 되는 방법, 호출 시퀀스 및 반환 형식 및 문자열 문자 집합을 사용 하 여 같은 않아도 됩니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-150">When you do this, the Visual Basic compiler does not have access to the information it needs to call the procedure correctly, such as where the procedure is located, how it is identified, its calling sequence and return type, and the string character set it uses.</span></span> <span data-ttu-id="20a87-151">`Declare` 문은 외부 프로시저에 대 한 참조를 만들고를 이와 같이 필요한 정보를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-151">The `Declare` statement creates a reference to an external procedure and supplies this necessary information.</span></span>  
   
- `Declare` 키워드는 모듈 수준에서만 사용할 수 있습니다.  즉, 외부 참조에 대한 *선언 컨텍스트*는 클래스, 구조체 또는 모듈이어야 하며 소스 파일, 네임스페이스, 인터페이스, 프로시저 또는 블록일 수는 없습니다.  자세한 내용은 [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)을 참조하십시오.  
+ <span data-ttu-id="20a87-152">`Declare`는 모듈 수준에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-152">You can use `Declare` only at module level.</span></span> <span data-ttu-id="20a87-153">즉,는 *선언 컨텍스트* 외부 참조 클래스, 구조체 또는 모듈 이어야 하며 소스 파일, 네임 스페이스, 인터페이스, 프로시저 또는 블록 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-153">This means the *declaration context* for an external reference must be a class, structure, or module, and cannot be a source file, namespace, interface, procedure, or block.</span></span> <span data-ttu-id="20a87-154">자세한 내용은 [선언 컨텍스트 및 기본 액세스 수준](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="20a87-154">For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).</span></span>  
   
- 외부 참조는 기본적으로 [Public](../../../visual-basic/language-reference/modifiers/public.md) 액세스입니다.  액세스 한정자를 사용하여 액세스 수준을 조정할 수 있습니다.  
+ <span data-ttu-id="20a87-155">외부 참조는 기본적으로 [공용](../../../visual-basic/language-reference/modifiers/public.md) 액세스 합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-155">External references default to [Public](../../../visual-basic/language-reference/modifiers/public.md) access.</span></span> <span data-ttu-id="20a87-156">액세스 한정자로 액세스 수준을 조정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-156">You can adjust their access levels with the access modifiers.</span></span>  
   
-## 규칙  
+## <a name="rules"></a><span data-ttu-id="20a87-157">규칙</span><span class="sxs-lookup"><span data-stu-id="20a87-157">Rules</span></span>  
   
--   **특성** 특성을 외부 참조에 적용할 수 있습니다.  적용되는 특성은 프로젝트에만 영향을 미치고 외부 파일에는 영향을 미치지 않습니다.  
+-   <span data-ttu-id="20a87-158">**특성입니다.**</span><span class="sxs-lookup"><span data-stu-id="20a87-158">**Attributes.**</span></span> <span data-ttu-id="20a87-159">외부 참조에 특성을 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-159">You can apply attributes to an external reference.</span></span> <span data-ttu-id="20a87-160">적용 되는 특성은 외부 파일을 프로젝트에만 효과가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-160">Any attribute you apply has effect only in your project, not in the external file.</span></span>  
   
--   **한정자.** 외부 프로시저는 암시적으로 [Shared](../../../visual-basic/language-reference/modifiers/shared.md)됩니다.  외부 참조를 선언할 때는 `Shared` 키워드를 사용할 수 없으며, 해당 공유 상태를 변경할 수 없습니다.  
+-   <span data-ttu-id="20a87-161">**한정자입니다.**</span><span class="sxs-lookup"><span data-stu-id="20a87-161">**Modifiers.**</span></span> <span data-ttu-id="20a87-162">외부 프로시저는 암시적으로 [Shared](../../../visual-basic/language-reference/modifiers/shared.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-162">External procedures are implicitly [Shared](../../../visual-basic/language-reference/modifiers/shared.md).</span></span> <span data-ttu-id="20a87-163">사용할 수 없습니다는 `Shared` 키워드를 외부 참조를 선언 공유 상태를 변경할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-163">You cannot use the `Shared` keyword when declaring an external reference, and you cannot alter its shared status.</span></span>  
   
-     외부 프로시저는 재정의에 참여하거나, 인터페이스 멤버를 구현하거나, 이벤트를 처리할 수 없습니다.  따라서 `Overrides`, `Overridable`, `NotOverridable`, `MustOverride`, `Implements` 또는 `Declare` 문의 `Handles` 키워드를 사용할 수 없습니다.  
+     <span data-ttu-id="20a87-164">외부 프로시저 재정의에 참여, 인터페이스 멤버를 구현 하거나 이벤트를 처리할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-164">An external procedure cannot participate in overriding, implement interface members, or handle events.</span></span> <span data-ttu-id="20a87-165">적절 하 게 사용할 수 없습니다는 `Overrides`, `Overridable`, `NotOverridable`, `MustOverride`, `Implements`, 또는 `Handles` 키워드는 `Declare` 문.</span><span class="sxs-lookup"><span data-stu-id="20a87-165">Accordingly, you cannot use the `Overrides`, `Overridable`, `NotOverridable`, `MustOverride`, `Implements`, or `Handles` keyword in a `Declare` statement.</span></span>  
   
--   **외부 프로시저 이름.** 이 외부 참조에 해당 외부 파일 내에서 프로시저의 진입점 이름\(`aliasname`\)과 동일한 이름\(`name`\)을 부여할 필요가 없습니다.  진입점 이름을 지정하는 데는 `Alias` 절을 사용할 수 있습니다.  이 방법은 외부 프로시저가 Visual Basic의 예약된 한정자나 변수, 프로시저 또는 해당 범위 내 기타 프로그래밍 요소와 동일한 이름을 갖는 경우에 유용할 수 있습니다.  
-  
-    > [!NOTE]
-    >  대부분의 DLL에서 진입점 이름은 대\/소문자를 구분합니다.  
-  
--   **외부 프로시저 번호.** `Alias` 절을 사용하여 외부 파일의 내보내기 테이블 내에 있는 진입점에 대해 서수를 지정할 수도 있습니다.  이렇게 하려면 `aliasname`을 숫자 기호\(`#`\)로 시작합니다.  이 방법은 외부 프로시저 이름에 포함된 문자가 Visual Basic에서 허용되지 않는 경우나 외부 파일에서 프로시저를 이름이 없는 상태로 내보낼 경우에 유용합니다.  
-  
-## 데이터 형식 규칙  
-  
--   **매개 변수 데이터 형식.** `Option Strict`가 `On`인 경우 각 매개 변수의 데이터 형식을 `parameterlist`에 지정해야 합니다.  열거형, 구조체, 클래스 또는 인터페이스의 이름 또는 모든 데이터 형식을 지정할 수 있습니다.  `parameterlist` 내에서는 `As` 절을 사용하여 각 매개 변수에 전달할 인수의 데이터 형식을 지정합니다.  
+-   <span data-ttu-id="20a87-166">**외부 프로시저 이름입니다.**</span><span class="sxs-lookup"><span data-stu-id="20a87-166">**External Procedure Name.**</span></span> <span data-ttu-id="20a87-167">이 외부 참조에 같은 이름을 제공할 필요가 없습니다 (에서 `name`) 외부 파일 내에서 프로시저의 진입점 이름으로 (`aliasname`).</span><span class="sxs-lookup"><span data-stu-id="20a87-167">You do not have to give this external reference the same name (in `name`) as the procedure's entry-point name within its external file (`aliasname`).</span></span> <span data-ttu-id="20a87-168">사용할 수는 `Alias` 절 진입점 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-168">You can use an `Alias` clause to specify the entry-point name.</span></span> <span data-ttu-id="20a87-169">이 수는 외부 프로시저가 Visual Basic 예약된 한정자 또는 변수, 프로시저 또는 다른 프로그래밍 요소와 같은 이름을 같은 범위에 있는 경우에 유용 합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-169">This can be useful if the external procedure has the same name as a Visual Basic reserved modifier or a variable, procedure, or any other programming element in the same scope.</span></span>  
   
     > [!NOTE]
-    >  외부 프로시저가 .NET Framework용으로 작성되지 않은 경우에는 데이터 형식이 일치하는지 주의해야 합니다.  예를 들어, `Integer` 매개 변수\(Visual Basic 6.0에서는 16비트\)를 사용하는 Visual Basic 6.0 프로시저에 대한 외부 참조를 선언하는 경우 Visual Basic에서는 `Short`가 16비트 정수 형식이므로 `Declare` 문에서 해당 인수를 Short로 나타내야 합니다.  마찬가지로 Visual Basic 6.0에서는 `Long`의 데이터 너비가 다르므로 `Date`를 다르게 구현해야 합니다.  
+    >  <span data-ttu-id="20a87-170">대부분의 Dll의 진입점 이름은 대/소문자를 구분 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-170">Entry-point names in most DLLs are case-sensitive.</span></span>  
   
--   **반환 데이터 형식.** 외부 프로시저가 `Function`이고 `Option Strict`가 `On`인 경우 호출 코드로 반환되는 값의 데이터 형식을 지정해야 합니다.  열거형, 구조체, 클래스 또는 인터페이스의 이름 또는 모든 데이터 형식을 지정할 수 있습니다.  
+-   <span data-ttu-id="20a87-171">**외부 프로시저 번호입니다.**</span><span class="sxs-lookup"><span data-stu-id="20a87-171">**External Procedure Number.**</span></span> <span data-ttu-id="20a87-172">사용할 수 있습니다는 `Alias` 절을 외부 파일의 내보내기 테이블 내에서 진입점의 서 수를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-172">Alternatively, you can use an `Alias` clause to specify the ordinal number of the entry point within the export table of the external file.</span></span> <span data-ttu-id="20a87-173">이 작업을 수행 하려면 먼저 `aliasname` 숫자 기호 (`#`).</span><span class="sxs-lookup"><span data-stu-id="20a87-173">To do this, you begin `aliasname` with a number sign (`#`).</span></span> <span data-ttu-id="20a87-174">외부 파일 이름 없이 프로시저를 내보내는 경우 또는 Visual basic의 경우 외부 프로시저 이름에 있는 문자 허용 되지 않은 경우에 유용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-174">This can be useful if any character in the external procedure name is not allowed in Visual Basic, or if the external file exports the procedure without a name.</span></span>  
+  
+## <a name="data-type-rules"></a><span data-ttu-id="20a87-175">데이터 형식 규칙</span><span class="sxs-lookup"><span data-stu-id="20a87-175">Data Type Rules</span></span>  
+  
+-   <span data-ttu-id="20a87-176">**매개 변수 데이터 형식입니다.**</span><span class="sxs-lookup"><span data-stu-id="20a87-176">**Parameter Data Types.**</span></span> <span data-ttu-id="20a87-177">경우 `Option Strict` 은 `On`에서 각 매개 변수의 데이터 형식을 지정 해야 `parameterlist`합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-177">If `Option Strict` is `On`, you must specify the data type of each parameter in `parameterlist`.</span></span> <span data-ttu-id="20a87-178">이 열거형, 구조체, 클래스 또는 인터페이스의 이름 또는 데이터 형식일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-178">This can be any data type or the name of an enumeration, structure, class, or interface.</span></span> <span data-ttu-id="20a87-179">내에서 `parameterlist`를 사용 하면는 `As` 데이터 형식의 각 매개 변수에 전달 될 인수를 지정 하는 절.</span><span class="sxs-lookup"><span data-stu-id="20a87-179">Within `parameterlist`, you use an `As` clause to specify the data type of the argument to be passed to each parameter.</span></span>  
   
     > [!NOTE]
-    >  Visual Basic 컴파일러에서는 데이터 형식이 외부 프로시저의 데이터 형식과 호환되는지 확인하지 않습니다.  일치하지 않는 데이터 형식이 있는 경우 공용 언어 런타임에서는 런타임에 <xref:System.Runtime.InteropServices.MarshalDirectiveException> 예외를 생성합니다.  
+    >  <span data-ttu-id="20a87-180">.NET Framework에 대 한 외부 프로시저 작성 되지, 하는 경우 주의 해야 데이터 형식을 해당 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-180">If the external procedure was not written for the .NET Framework, you must take care that the data types correspond.</span></span> <span data-ttu-id="20a87-181">예를 들어, Visual Basic 6.0 프로시저에 대 한 외부 참조를 선언 하는 경우는 `Integer` 매개 변수 (Visual Basic 6.0에서 16 비트)로 서의 해당 인수를 식별 해야 `Short` 에 `Declare` 문, 16-이기 때문에 Visual Basic의 비트 정수 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-181">For example, if you declare an external reference to a Visual Basic 6.0 procedure with an `Integer` parameter (16 bits in Visual Basic 6.0), you must identify the corresponding argument as `Short` in the `Declare` statement, because that is the 16-bit integer type in Visual Basic.</span></span> <span data-ttu-id="20a87-182">마찬가지로, `Long` Visual Basic 6.0에서 다른 데이터 너비가 및 `Date` 다르게 구현 됩니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-182">Similarly, `Long` has a different data width in Visual Basic 6.0, and `Date` is implemented differently.</span></span>  
   
--   **기본 데이터 형식.** `Option Strict`가 `Off`이고 `parameterlist`에 매개 변수의 데이터 형식을 지정하지 않은 경우에는 Visual Basic 컴파일러에서 해당 인수를 [Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md)으로 변환합니다.  마찬가지로 `returntype`을 지정하지 않으면 컴파일러에서 반환 데이터 형식을 `Object`로 변환합니다.  
+-   <span data-ttu-id="20a87-183">**데이터 형식을 반환 합니다.**</span><span class="sxs-lookup"><span data-stu-id="20a87-183">**Return Data Type.**</span></span> <span data-ttu-id="20a87-184">외부 프로시저가 `Function` 및 `Option Strict` 은 `On`, 호출 코드에 반환 되는 값의 데이터 형식을 지정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-184">If the external procedure is a `Function` and `Option Strict` is `On`, you must specify the data type of the value returned to the calling code.</span></span> <span data-ttu-id="20a87-185">이 열거형, 구조체, 클래스 또는 인터페이스의 이름 또는 데이터 형식일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-185">This can be any data type or the name of an enumeration, structure, class, or interface.</span></span>  
   
     > [!NOTE]
-    >  다른 플랫폼에서 작성되었을 수도 있는 외부 프로시저를 처리하게 되므로 데이터 형식을 가정하거나 데이터 형식의 기본값을 허용하는 것은 위험할 수 있습니다.  모든 매개 변수와 반환 값\(있는 경우\)의 데이터 형식을 반드시 지정하는 것이 훨씬 안전합니다.  이렇게 하면 가독성도 향상되어 코드를 쉽게 읽을 수 있습니다.  
+    >  <span data-ttu-id="20a87-186">Visual Basic 컴파일러는 데이터 형식이 외부 프로시저의 인수와 호환 되는지 확인 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-186">The Visual Basic compiler does not verify that your data types are compatible with those of the external procedure.</span></span> <span data-ttu-id="20a87-187">불일치가 있을 경우 공용 언어 런타임에서 생성 된 <xref:System.Runtime.InteropServices.MarshalDirectiveException> 런타임 시 예외입니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-187">If there is a mismatch, the common language runtime generates a <xref:System.Runtime.InteropServices.MarshalDirectiveException> exception at run time.</span></span>  
   
-## 동작  
+-   <span data-ttu-id="20a87-188">**기본 데이터 형식입니다.**</span><span class="sxs-lookup"><span data-stu-id="20a87-188">**Default Data Types.**</span></span> <span data-ttu-id="20a87-189">경우 `Option Strict` 은 `Off` 의 매개 변수 데이터 형식을 지정 하지 않으면 및 `parameterlist`, Visual Basic 컴파일러에서 해당 인수를 변환의 [Object 데이터 형식](../../../visual-basic/language-reference/data-types/object-data-type.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-189">If `Option Strict` is `Off` and you do not specify the data type of a parameter in `parameterlist`, the Visual Basic compiler converts the corresponding argument to the [Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md).</span></span> <span data-ttu-id="20a87-190">마찬가지로, 지정 하지 않으면 `returntype`, 컴파일러는 반환 데이터 형식이 되도록 `Object`합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-190">Similarly, if you do not specify `returntype`, the compiler takes the return data type to be `Object`.</span></span>  
   
--   **범위.** 외부 참조는 해당 클래스, 구조체 또는 모듈 전체의 범위에 있습니다.  
+    > [!NOTE]
+    >  <span data-ttu-id="20a87-191">다른 플랫폼에서 기록 된 외부 프로시저를 처리 하는 때문에 데이터 형식에 대 한 가정을 또는 기본값을 지정할 수 있도록 위험 합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-191">Because you are dealing with an external procedure that might have been written on a different platform, it is dangerous to make any assumptions about data types or to allow them to default.</span></span> <span data-ttu-id="20a87-192">있는 경우 더 훨씬 안전의 모든 매개 변수 및 반환 값의 데이터 형식을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-192">It is much safer to specify the data type of every parameter and of the return value, if any.</span></span> <span data-ttu-id="20a87-193">또한 코드의 가독성 향상 됩니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-193">This also improves the readability of your code.</span></span>  
   
--   **수명.** 외부 참조의 수명은 외부 참조가 선언된 클래스, 구조체 또는 모듈의 수명과 동일합니다.  
+## <a name="behavior"></a><span data-ttu-id="20a87-194">동작</span><span class="sxs-lookup"><span data-stu-id="20a87-194">Behavior</span></span>  
   
--   **외부 프로시저 호출.** `Function` 또는 `Sub` 프로시저 호출과 동일한 방법으로 외부 프로시저를 호출합니다. 즉, 값을 반환하는 경우 식에서 외부 프로시저를 사용하고, 값을 반환하지 않는 경우에는 [Call Statement](../../../visual-basic/language-reference/statements/call-statement.md)에서 외부 프로시저를 지정합니다.  
+-   <span data-ttu-id="20a87-195">**범위입니다.**</span><span class="sxs-lookup"><span data-stu-id="20a87-195">**Scope.**</span></span> <span data-ttu-id="20a87-196">범위 전체에서 해당 클래스, 구조체 또는 모듈에에서 대 한 외부 참조가입니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-196">An external reference is in scope throughout its class, structure, or module.</span></span>  
   
-     `Declare` 문의 `parameterlist`에 지정된 대로 외부 프로시저에 인수를 전달합니다.  매개 변수가 외부 파일에서 원래 선언된 방식은 고려할 필요가 없습니다.  마찬가지로 반환 값이 있는 경우에도 `Declare` 문의 `returntype`에 지정된 대로 반환 값을 사용합니다.  
+-   <span data-ttu-id="20a87-197">**수명입니다.**</span><span class="sxs-lookup"><span data-stu-id="20a87-197">**Lifetime.**</span></span> <span data-ttu-id="20a87-198">외부 참조는 클래스, 구조체 또는 모듈 선언 된와 수명이 동일 합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-198">An external reference has the same lifetime as the class, structure, or module in which it is declared.</span></span>  
   
--   **문자 집합.** Visual Basic에서 외부 프로시저를 호출할 때 문자열을 마샬링하는 방법을 `charsetmodifier`에 지정할 수 있습니다.  `Ansi` 한정자는 Visual Basic에서 모든 문자열을 ANSI 값으로 마샬링하도록 지시하며 `Unicode` 한정자는 Visual Basic에서 모든 문자열을 유니코드 값으로 마샬링하도록 지시합니다.  `Auto` 한정자는 Visual Basic에서 `name` 외부 참조 또는 `aliasname` 외부 참조\(지정된 경우\)를 기반으로 하는 .NET Framework 규칙에 따라 문자열을 마샬링하도록 지시합니다.  기본값은 `Ansi`입니다.  
+-   <span data-ttu-id="20a87-199">**외부 프로시저를 호출 합니다.**</span><span class="sxs-lookup"><span data-stu-id="20a87-199">**Calling an External Procedure.**</span></span> <span data-ttu-id="20a87-200">외부 프로시저를 호출 하면 동일한 방식으로 호출 된 `Function` 또는 `Sub` 프로시저-값을 반환 하는 경우 식에서 사용 하거나에서 지정 하 여는 [Call 문을](../../../visual-basic/language-reference/statements/call-statement.md) 값을 반환 하지 않는 경우.</span><span class="sxs-lookup"><span data-stu-id="20a87-200">You call an external procedure the same way you call a `Function` or `Sub` procedure—by using it in an expression if it returns a value, or by specifying it in a [Call Statement](../../../visual-basic/language-reference/statements/call-statement.md) if it does not return a value.</span></span>  
   
-     `charsetmodifier`는 Visual Basic이 외부 파일 내에서 외부 프로시저 이름을 검색하는 방법도 지정합니다.  `Ansi` 및 `Unicode` 모두 Visual Basic에서 검색 중에 해당 이름을 수정하지 않고 직접 조회합니다.  `Auto`는 Visual Basic이 런타임 플랫폼의 기본 문자 집합을 결정하고 가능하면 외부 프로시저 이름을 다음과 같이 수정하도록 지시합니다.  
+     <span data-ttu-id="20a87-201">에 의해 지정 된 대로 정확 하 게 외부 프로시저에 인수를 전달 `parameterlist` 에 `Declare` 문.</span><span class="sxs-lookup"><span data-stu-id="20a87-201">You pass arguments to the external procedure exactly as specified by `parameterlist` in the `Declare` statement.</span></span> <span data-ttu-id="20a87-202">에 고려 되지 않습니다 계정 매개 변수는 외부 파일에서 원래 선언 된는 어떻게 합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-202">Do not take into account how the parameters were originally declared in the external file.</span></span> <span data-ttu-id="20a87-203">마찬가지로, 반환 값 이면 사용 하 여 지정 된 대로 정확 하 게 `returntype` 에 `Declare` 문.</span><span class="sxs-lookup"><span data-stu-id="20a87-203">Similarly, if there is a return value, use it exactly as specified by `returntype` in the `Declare` statement.</span></span>  
   
-    -   Windows 95, Windows 98 또는 Windows Millennium Edition 같은 ANSI 플랫폼에서는 이름 수정 없이 외부 프로시저를 먼저 조회합니다.  찾지 못한 경우 외부 프로시저 이름 끝에 "A"를 추가하고 다시 조회합니다.  
+-   <span data-ttu-id="20a87-204">**문자 집합입니다.**</span><span class="sxs-lookup"><span data-stu-id="20a87-204">**Character Sets.**</span></span> <span data-ttu-id="20a87-205">지정할 수 있습니다 `charsetmodifier` 어떻게 Visual Basic 문자열 마샬링하고 외부 프로시저를 호출할 때입니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-205">You can specify in `charsetmodifier` how Visual Basic should marshal strings when it calls the external procedure.</span></span> <span data-ttu-id="20a87-206">`Ansi` 한정자에는 모든 문자열을 ANSI 값을 마샬링합니다 Visual Basic 하도록 지시 및 `Unicode` 한정자 마샬링해야 하는 모든 문자열을 유니코드 값으로 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-206">The `Ansi` modifier directs Visual Basic to marshal all strings to ANSI values, and the `Unicode` modifier directs it to marshal all strings to Unicode values.</span></span> <span data-ttu-id="20a87-207">`Auto` 한정자 Visual Basic.NET Framework에 따라 문자열을 마샬링 하 규칙 외부 참조를 기반 알려 `name`, 또는 `aliasname` 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-207">The `Auto` modifier directs Visual Basic to marshal strings according to .NET Framework rules based on the external reference `name`, or `aliasname` if specified.</span></span> <span data-ttu-id="20a87-208">기본값은 `Ansi`입니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-208">The default value is `Ansi`.</span></span>  
   
-    -   Windows NT, Windows 2000 또는 Windows XP 같은 유니코드 플랫폼에서는 이름 수정 없이 외부 프로시저를 먼저 조회합니다.  찾지 못한 경우 외부 프로시저 이름 끝에 "W"를 추가하고 다시 조회합니다.  
+     <span data-ttu-id="20a87-209">`charsetmodifier`또한 Visual Basic 외부 파일 내에서 외부 프로시저를 조회 방법을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-209">`charsetmodifier` also specifies how Visual Basic should look up the external procedure within its external file.</span></span> <span data-ttu-id="20a87-210">`Ansi`및 `Unicode` 둘 다 직접 Visual Basic로 검색 하는 동안 이름을 수정 하지 않고 조회 합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-210">`Ansi` and `Unicode` both direct Visual Basic to look it up without modifying its name during the search.</span></span> <span data-ttu-id="20a87-211">`Auto`Visual Basic 하는 런타임 플랫폼의 기본 문자 집합을 결정 하 고 다음과 같은 외부 프로시저 이름을 수정 하도록 지시 합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-211">`Auto` directs Visual Basic to determine the base character set of the run-time platform and possibly modify the external procedure name, as follows:</span></span>  
   
--   **메커니즘.** Visual Basic에서는 .NET Framework PInvoke\(*플랫폼 호출*\) 메커니즘을 사용하여 외부 프로시저를 확인하고 액세스합니다.  `Declare` 문과 <xref:System.Runtime.InteropServices.DllImportAttribute> 클래스에는 모두 이 메커니즘이 자동으로 사용되므로 사용자가 PInvoke를 몰라도 상관없습니다.  자세한 내용은 [Walkthrough: Calling Windows APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)를 참조하십시오.  
+    -   <span data-ttu-id="20a87-212">Windows 95, Windows 98 또는 Windows Millennium Edition 등의 ANSI 플랫폼에서 먼저 외부 프로시저 이름 수정 하지 않을를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-212">On an ANSI platform, such as Windows 95, Windows 98, or Windows Millennium Edition, first look up the external procedure with no name modification.</span></span> <span data-ttu-id="20a87-213">실패할 경우 외부 프로시저 이름의 끝에 "A"를 추가 하 고 다시 조회 합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-213">If that fails, append "A" to the end of the external procedure name and look it up again.</span></span>  
+  
+    -   <span data-ttu-id="20a87-214">Windows NT, Windows 2000 또는 Windows XP와 같은 유니코드 플랫폼에서 먼저 외부 프로시저 이름 수정 하지 않을를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-214">On a Unicode platform, such as Windows NT, Windows 2000, or Windows XP, first look up the external procedure with no name modification.</span></span> <span data-ttu-id="20a87-215">실패할 경우 추가 "W" 끝에는 외부 프로시저의 이름을 지정 하 고 다시 조회 합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-215">If that fails, append "W" to the end of the external procedure name and look it up again.</span></span>  
+  
+-   <span data-ttu-id="20a87-216">**메커니즘입니다.**</span><span class="sxs-lookup"><span data-stu-id="20a87-216">**Mechanism.**</span></span> <span data-ttu-id="20a87-217">.NET Framework를 사용 하는 Visual Basic *플랫폼 호출* 확인 하 고 외부 프로시저 액세스할 (PInvoke) 메커니즘입니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-217">Visual Basic uses the .NET Framework *platform invoke* (PInvoke) mechanism to resolve and access external procedures.</span></span> <span data-ttu-id="20a87-218">`Declare` 문 및 <xref:System.Runtime.InteropServices.DllImportAttribute> 클래스에는 모두 자동으로이 메커니즘을 사용 하 고 PInvoke에 대 한 지식이 필요 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-218">The `Declare` statement and the <xref:System.Runtime.InteropServices.DllImportAttribute> class both use this mechanism automatically, and you do not need any knowledge of PInvoke.</span></span> <span data-ttu-id="20a87-219">자세한 내용은 참조 [연습: Windows Api 호출](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-219">For more information, see [Walkthrough: Calling Windows APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).</span></span>  
   
 > [!IMPORTANT]
->  외부 프로시저가 CLR\(공용 언어 런타임\) 외부에서 실행되는 경우 외부 프로시저는 *비관리 코드*입니다.  그러한 프로시저\(예: Win32 API 함수 또는 COM 메서드\)를 호출하는 경우 응용 프로그램이 보안 위험에 노출될 수 있습니다.  자세한 내용은 [비관리 코드에 대한 보안 코딩 지침](../Topic/Secure%20Coding%20Guidelines%20for%20Unmanaged%20Code.md)를 참조하십시오.  
+>  <span data-ttu-id="20a87-220">외부 프로시저가 실행 될 경우 공용 언어 런타임 (CLR) 외부, *비관리 코드*합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-220">If the external procedure runs outside the common language runtime (CLR), it is *unmanaged code*.</span></span> <span data-ttu-id="20a87-221">이러한 프로시저, 예: Win32 API 함수 또는 COM 메서드를 호출 하는 경우 응용 프로그램 보안 위험을 노출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-221">When you call such a procedure, for example a Win32 API function or a COM method, you might expose your application to security risks.</span></span> <span data-ttu-id="20a87-222">자세한 내용은 참조 [보안 코딩 지침 비관리 코드에 대 한](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-222">For more information, see [Secure Coding Guidelines for Unmanaged Code](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).</span></span>  
   
-## 예제  
- 다음 예제에서는 현재 사용자 이름을 반환하는 `Function` 프로시저에 대한 외부 참조를 선언합니다.  그런 다음 `GetUserNameA` 외부 프로시저를 `getUser` 프로시저의 일부로 호출합니다.  
+## <a name="example"></a><span data-ttu-id="20a87-223">예제</span><span class="sxs-lookup"><span data-stu-id="20a87-223">Example</span></span>  
+ <span data-ttu-id="20a87-224">다음 예제에서는 선언에 대 한 외부 참조는 `Function` 현재 사용자 이름을 반환 하는 프로시저입니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-224">The following example declares an external reference to a `Function` procedure that returns the current user name.</span></span> <span data-ttu-id="20a87-225">그런 다음 호출 하는 외부 프로시저가 `GetUserNameA` 의 일부로 `getUser` 프로시저입니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-225">It then calls the external procedure `GetUserNameA` as part of the `getUser` procedure.</span></span>  
   
  [!code-vb[VbVbalrStatements#15](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_1.vb)]  
   
-## 예제  
- <xref:System.Runtime.InteropServices.DllImportAttribute>를 통해 비관리 코드에서 함수를 사용할 수도 있습니다.  다음 예제에서는 `Declare` 문을 사용하지 않고 가져온 함수를 선언합니다.  
+## <a name="example"></a><span data-ttu-id="20a87-226">예제</span><span class="sxs-lookup"><span data-stu-id="20a87-226">Example</span></span>  
+ <span data-ttu-id="20a87-227"><xref:System.Runtime.InteropServices.DllImportAttribute> 비관리 코드에서 함수를 사용 하는 대체 방법을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="20a87-227">The <xref:System.Runtime.InteropServices.DllImportAttribute> provides an alternative way of using functions in unmanaged code.</span></span> <span data-ttu-id="20a87-228">다음 예제에서는 가져온된 함수를 사용 하지 않고 선언는 `Declare` 문.</span><span class="sxs-lookup"><span data-stu-id="20a87-228">The following example declares an imported function without using a `Declare` statement.</span></span>  
   
  [!code-vb[VbVbalrStatements#16](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_2.vb)]  
   
  [!code-vb[VbVbalrStatements#1](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/declare-statement_3.vb)]  
   
-## 참고 항목  
- <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>   
- [Imports Statement \(.NET Namespace and Type\)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)   
- [AddressOf Operator](../../../visual-basic/language-reference/operators/addressof-operator.md)   
- [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md)   
- [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md)   
- [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md)   
- [Call Statement](../../../visual-basic/language-reference/statements/call-statement.md)   
- [Walkthrough: Calling Windows APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+## <a name="see-also"></a><span data-ttu-id="20a87-229">참고 항목</span><span class="sxs-lookup"><span data-stu-id="20a87-229">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>  
+ [<span data-ttu-id="20a87-230">Imports 문(.NET 네임스페이스 및 형식)</span><span class="sxs-lookup"><span data-stu-id="20a87-230">Imports Statement (.NET Namespace and Type)</span></span>](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
+ [<span data-ttu-id="20a87-231">AddressOf 연산자</span><span class="sxs-lookup"><span data-stu-id="20a87-231">AddressOf Operator</span></span>](../../../visual-basic/language-reference/operators/addressof-operator.md)  
+ [<span data-ttu-id="20a87-232">Function 문</span><span class="sxs-lookup"><span data-stu-id="20a87-232">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [<span data-ttu-id="20a87-233">Sub 문</span><span class="sxs-lookup"><span data-stu-id="20a87-233">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [<span data-ttu-id="20a87-234">매개 변수 목록</span><span class="sxs-lookup"><span data-stu-id="20a87-234">Parameter List</span></span>](../../../visual-basic/language-reference/statements/parameter-list.md)  
+ [<span data-ttu-id="20a87-235">Call 문</span><span class="sxs-lookup"><span data-stu-id="20a87-235">Call Statement</span></span>](../../../visual-basic/language-reference/statements/call-statement.md)  
+ [<span data-ttu-id="20a87-236">연습: Windows API 호출</span><span class="sxs-lookup"><span data-stu-id="20a87-236">Walkthrough: Calling Windows APIs</span></span>](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)

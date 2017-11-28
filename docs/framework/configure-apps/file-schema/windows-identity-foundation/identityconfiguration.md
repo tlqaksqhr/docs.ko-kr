@@ -1,100 +1,107 @@
 ---
-title: "&lt;identityConfiguration&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;identityConfiguration&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1db76253-07da-447b-9e7a-3705c7228cf4
-caps.latest.revision: 13
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: b1cca286fc967631c60aa02a1318fe24120e05b0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;identityConfiguration&gt;
-서비스 수준 id 설정을 지정합니다.  
+# <a name="ltidentityconfigurationgt"></a><span data-ttu-id="e0bab-102">&lt;identityConfiguration&gt;</span><span class="sxs-lookup"><span data-stu-id="e0bab-102">&lt;identityConfiguration&gt;</span></span>
+<span data-ttu-id="e0bab-103">서비스 수준 id 설정을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-103">Specifies service-level identity settings.</span></span>  
   
-## 구문  
+ <span data-ttu-id="e0bab-104">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="e0bab-104">\<system.identityModel></span></span>  
+<span data-ttu-id="e0bab-105">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="e0bab-105">\<identityConfiguration></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="e0bab-106">구문</span><span class="sxs-lookup"><span data-stu-id="e0bab-106">Syntax</span></span>  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration  
-      name=xs:string  
-      saveBootstrapContext=xs:boolean>  
-      maximumClockSkew=TimeSpan >  
-  </identityConfiguration>  
+  <identityConfiguration  
+      name=xs:string  
+      saveBootstrapContext=xs:boolean>  
+      maximumClockSkew=TimeSpan >  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## 특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e0bab-107">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="e0bab-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="e0bab-108">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 특성  
+### <a name="attributes"></a><span data-ttu-id="e0bab-109">특성</span><span class="sxs-lookup"><span data-stu-id="e0bab-109">Attributes</span></span>  
   
-|특성|설명|  
-|--------|--------|  
-|name|Identity 구성 섹션의 이름입니다.  이 이름은 특정 구성 섹션을 참조할 수 있습니다.  그렇지 않은 경우 `name` 특성을 지정한 경우 기본 구성 섹션을 정의 합니다.  패시브 페더레이션 시나리오에 대 한 기본 구성은 항상 사용 합니다.  자세한 내용은 [\<federationConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) 요소를 참조하십시오.|  
-|saveBootstrapContext|부트스트랩 하는 토큰의 세션 토큰이 포함 되는지 여부를 지정 합니다.  값을 설정 하 여도 토큰 처리기 컬렉션에 설정할 수 있습니다는 `saveBootstrapContext` 특성에 있는 [\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) 요소입니다.  토큰 처리기 컬렉션에 설정한 값은 서비스에 설정 된 값 보다 우선 합니다.|  
-|maximumClockSkew|A <xref:System.TimeSpan> 는 허용 되는 최대 클럭 기울이기를 지정 합니다.  허용 되는 최대 클럭 기울이기 로그인 세션의 만료 시간을 확인 하는 것과 같은 시간에 민감한 작업을 수행 하는 경우를 제어 합니다.  기본값은 5 분입니다 "00: 05: 00"입니다.  지정 하는 방법에 대 한 자세한 내용은 <xref:System.TimeSpan> 값을 참조 하십시오. [Timespan Values](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md#BKMK_TimespanValues).  최대 시계 기울이기를 토큰 처리기 컬렉션을 설정 하 여 설정 해야는 `maximumClockSkew` 특성에 있는 [\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) 요소입니다.  토큰 처리기 컬렉션에 설정한 값은 서비스에 설정 된 값 보다 우선 합니다.|  
+|<span data-ttu-id="e0bab-110">특성</span><span class="sxs-lookup"><span data-stu-id="e0bab-110">Attribute</span></span>|<span data-ttu-id="e0bab-111">설명</span><span class="sxs-lookup"><span data-stu-id="e0bab-111">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="e0bab-112">name</span><span class="sxs-lookup"><span data-stu-id="e0bab-112">name</span></span>|<span data-ttu-id="e0bab-113">Id 구성 섹션의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-113">The name of the identity configuration section.</span></span> <span data-ttu-id="e0bab-114">특정 구성 섹션을 참조 하려면이 이름을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-114">You can use this name to reference a specific configuration section.</span></span> <span data-ttu-id="e0bab-115">되지 않은 경우 `name` 특성 지정, 섹션의 기본 구성을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-115">If no `name` attribute is specified, the section defines the default configuration.</span></span> <span data-ttu-id="e0bab-116">기본 구성은 수동 페더레이션 시나리오에 대해 항상 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-116">The default configuration is always used for passive federation scenarios.</span></span> <span data-ttu-id="e0bab-117">자세한 내용은 참조는 [ \<federationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-117">For more information, see the [\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) element.</span></span>|  
+|<span data-ttu-id="e0bab-118">saveBootstrapContext</span><span class="sxs-lookup"><span data-stu-id="e0bab-118">saveBootstrapContext</span></span>|<span data-ttu-id="e0bab-119">세션 토큰에 부트스트랩 토큰이 포함할지 여부를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-119">Specifies whether bootstrap tokens should be included in the session token.</span></span> <span data-ttu-id="e0bab-120">값 설정할 수도 있습니다 토큰 처리기 컬렉션에 설정 하 여는 `saveBootstrapContext` 특성에 [ \<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-120">The value may also be set on a token handler collection by setting the `saveBootstrapContext` attribute on the [\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) element.</span></span> <span data-ttu-id="e0bab-121">토큰 처리기 컬렉션에 설정 된 값에는 서비스에 설정 된 값 보다 우선 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-121">A value set on the token handler collection overrides the value set on the service.</span></span>|  
+|<span data-ttu-id="e0bab-122">maximumClockSkew</span><span class="sxs-lookup"><span data-stu-id="e0bab-122">maximumClockSkew</span></span>|<span data-ttu-id="e0bab-123">A <xref:System.TimeSpan> 최대 허용 된 클럭 오차를 지정 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-123">A <xref:System.TimeSpan> that specifies the maximum allowed clock skew.</span></span> <span data-ttu-id="e0bab-124">로그인 세션의 만료 시간 유효성 검사와 같은 시간에 민감한 작업을 수행할 때 최대 허용 된 클럭 오차를 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-124">Controls the maximum allowed clock skew when performing time-sensitive operations, such as validating the expiration time of a sign-in session.</span></span> <span data-ttu-id="e0bab-125">기본값은 5 분 "00: 05:00"입니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-125">The default is 5 minutes, "00:05:00".</span></span> <span data-ttu-id="e0bab-126">지정 하는 방법에 대 한 자세한 내용은 <xref:System.TimeSpan> 값, 참조 [Timespan 값](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-126">For more information about how to specify <xref:System.TimeSpan> values, see [Timespan Values](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).</span></span> <span data-ttu-id="e0bab-127">최대 클럭 오차 설정할 수도 있습니다 토큰 처리기 컬렉션에 설정 하 여는 `maximumClockSkew` 특성에 [ \<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-127">The maximum clock skew may also be set on a token handler collection by setting the `maximumClockSkew` attribute on the [\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) element.</span></span> <span data-ttu-id="e0bab-128">토큰 처리기 컬렉션에 설정 된 값에는 서비스에 설정 된 값 보다 우선 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-128">A value set on the token handler collection overrides the value set on the service.</span></span>|  
   
-### 자식 요소  
+### <a name="child-elements"></a><span data-ttu-id="e0bab-129">자식 요소</span><span class="sxs-lookup"><span data-stu-id="e0bab-129">Child Elements</span></span>  
   
-|요소|설명|  
-|--------|--------|  
-|[\<caches\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|세션 토큰 및 토큰 재생 검색에 사용 되는 캐시를 등록 합니다.  보안 토큰 처리기 컬렉션 또는 서비스 수준에서 지정할 수 있습니다.  선택적 요소.|  
-|[\<certificateValidation\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|토큰 처리기를 사용 하 여 인증서의 유효성을 검사 하는 설정을 제어 합니다.  보안 토큰 처리기 컬렉션 또는 서비스 수준에서 지정할 수 있습니다.  선택적 요소.|  
-|[\<claimsAuthenticationManager\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthenticationmanager.md)|들어오는 클레임에는 클레임 인증 관리자에 등록합니다.  선택적 요소.|  
-|[\<claimsAuthorizationManager\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)|들어오는 클레임에는 클레임 권한 부여 관리자를 등록합니다.  선택적 요소.|  
-|[\<claimTypeRequired\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|들어오는 보안 토큰에 대 한 필요한 클레임 집합을 지정합니다.  선택적 요소.|  
-|[\<securityTokenHandlers\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|보안 토큰 처리기의 컬렉션을 지정합니다.  0 개 이상의 각종 보안 토큰 처리기를 지정할 수 있습니다.  선택적 요소.|  
-|[\<tokenReplayDetection\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|토큰 재생 검색을 사용 하 고 토큰에 대 한 만료 시간을 지정 합니다.  보안 토큰 처리기 컬렉션 또는 서비스 수준에서 지정할 수 있습니다.  선택적 요소.|  
+|<span data-ttu-id="e0bab-130">요소</span><span class="sxs-lookup"><span data-stu-id="e0bab-130">Element</span></span>|<span data-ttu-id="e0bab-131">설명</span><span class="sxs-lookup"><span data-stu-id="e0bab-131">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="e0bab-132">\<캐시 ></span><span class="sxs-lookup"><span data-stu-id="e0bab-132">\<caches></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|<span data-ttu-id="e0bab-133">세션 토큰에서 토큰 재생 검색에 사용 되는 캐시에 등록 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-133">Registers the caches used for session tokens and token replay detection.</span></span> <span data-ttu-id="e0bab-134">서비스 수준에서 또는 보안 토큰 처리기 컬렉션에 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-134">Can be specified at the service-level or on a security token handler collection.</span></span> <span data-ttu-id="e0bab-135">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-135">Optional.</span></span>|  
+|[<span data-ttu-id="e0bab-136">\<certificateValidation ></span><span class="sxs-lookup"><span data-stu-id="e0bab-136">\<certificateValidation></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|<span data-ttu-id="e0bab-137">토큰 처리기 인증서의 유효성을 검사 하기 위해 사용 하는 설정을 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-137">Controls the settings that token handlers use to validate certificates.</span></span> <span data-ttu-id="e0bab-138">서비스 수준에서 또는 보안 토큰 처리기 컬렉션에 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-138">Can be specified at the service-level or on a security token handler collection.</span></span> <span data-ttu-id="e0bab-139">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-139">Optional.</span></span>|  
+|[<span data-ttu-id="e0bab-140">\<claimsAuthenticationManager ></span><span class="sxs-lookup"><span data-stu-id="e0bab-140">\<claimsAuthenticationManager></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthenticationmanager.md)|<span data-ttu-id="e0bab-141">들어오는 클레임에 대 한 클레임 인증 관리자를 등록합니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-141">Registers a claims authentication manager for the incoming claims.</span></span> <span data-ttu-id="e0bab-142">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-142">Optional.</span></span>|  
+|[<span data-ttu-id="e0bab-143">\<claimsAuthorizationManager ></span><span class="sxs-lookup"><span data-stu-id="e0bab-143">\<claimsAuthorizationManager></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)|<span data-ttu-id="e0bab-144">들어오는 클레임에 대 한 클레임 권한 부여 관리자를 등록합니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-144">Registers a claims authorization manager for the incoming claims.</span></span> <span data-ttu-id="e0bab-145">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-145">Optional.</span></span>|  
+|[<span data-ttu-id="e0bab-146">\<claimTypeRequired ></span><span class="sxs-lookup"><span data-stu-id="e0bab-146">\<claimTypeRequired></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|<span data-ttu-id="e0bab-147">들어오는 보안 토큰에 대 한 요구 된 클레임 집합을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-147">Specifies the set of required claims for incoming security tokens.</span></span> <span data-ttu-id="e0bab-148">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-148">Optional.</span></span>|  
+|[<span data-ttu-id="e0bab-149">\<securityTokenHandlers ></span><span class="sxs-lookup"><span data-stu-id="e0bab-149">\<securityTokenHandlers></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|<span data-ttu-id="e0bab-150">보안 토큰 처리기의 컬렉션을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-150">Specifies a collection of security token handlers.</span></span> <span data-ttu-id="e0bab-151">보안 토큰 처리기의 컬렉션을 0 개 이상 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-151">Zero or more collections of security token handlers can be specified.</span></span> <span data-ttu-id="e0bab-152">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-152">Optional.</span></span>|  
+|[<span data-ttu-id="e0bab-153">\<tokenReplayDetection ></span><span class="sxs-lookup"><span data-stu-id="e0bab-153">\<tokenReplayDetection></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)|<span data-ttu-id="e0bab-154">토큰 재생 검색을 사용 하도록 설정 하 고 토큰에 대 한 만료 시간을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-154">Enables token replay detection and specifies the expiration time for tokens.</span></span> <span data-ttu-id="e0bab-155">서비스 수준에서 또는 보안 토큰 처리기 컬렉션에 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-155">Can be specified at the service-level or on a security token handler collection.</span></span> <span data-ttu-id="e0bab-156">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-156">Optional.</span></span>|  
   
-### 부모 요소  
+### <a name="parent-elements"></a><span data-ttu-id="e0bab-157">부모 요소</span><span class="sxs-lookup"><span data-stu-id="e0bab-157">Parent Elements</span></span>  
   
-|요소|설명|  
-|--------|--------|  
-|[\<system.identityModel\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)|응용 프로그램에서 Windows Identity 파운데이션 \(싸 우 자\) 옵션을 사용 하는 구성을 제공 합니다.|  
+|<span data-ttu-id="e0bab-158">요소</span><span class="sxs-lookup"><span data-stu-id="e0bab-158">Element</span></span>|<span data-ttu-id="e0bab-159">설명</span><span class="sxs-lookup"><span data-stu-id="e0bab-159">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="e0bab-160">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="e0bab-160">\<system.identityModel></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)|<span data-ttu-id="e0bab-161">응용 프로그램에서 Windows Identity Foundation (WIF) 옵션을 사용 하도록 설정 하는 것에 대 한 구성을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-161">Provides configuration for enabling Windows Identity Foundation (WIF) options in applications.</span></span>|  
   
-## 설명  
- 구성을 정의 될 수 있습니다, 여러 각각 고유한 이름을 가진 id입니다.  동작은 다음과 같습니다.  
+## <a name="remarks"></a><span data-ttu-id="e0bab-162">설명</span><span class="sxs-lookup"><span data-stu-id="e0bab-162">Remarks</span></span>  
+ <span data-ttu-id="e0bab-163">고유 이름으로 각각 여러 identity 구성을 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-163">Multiple identity configurations may be defined, each with a unique name.</span></span> <span data-ttu-id="e0bab-164">동작은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-164">The behavior is as follows:</span></span>  
   
-1.  그렇지 않은 경우 `<identityConfiguration>` 요소를 지정 합니다.  런타임에 기본 identity 구성 만들어지고 기본 값으로 채워집니다.  
+1.  <span data-ttu-id="e0bab-165">되지 않은 경우 `<identityConfiguration>` 요소를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-165">If no `<identityConfiguration>` element is specified.</span></span> <span data-ttu-id="e0bab-166">기본 id 구성은 런타임 시 만들어지고 기본값으로 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-166">A default identity configuration is created at runtime and populated with default values.</span></span>  
   
-2.  단일 경우 `<identityConfiguration>` 요소를 지정 합니다.  요소는 기본 identity 구성입니다.  명명 된 범위나 명명 되지 않은 여부를 중요 하지 않습니다.  
+2.  <span data-ttu-id="e0bab-167">경우는 단일 `<identityConfiguration>` 요소를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-167">If a single `<identityConfiguration>` element is specified.</span></span> <span data-ttu-id="e0bab-168">이 요소는 기본 identity 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-168">It is the default identity configuration.</span></span> <span data-ttu-id="e0bab-169">이름이 지정 되거나 명명 되지 않은 여부는 중요 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-169">It does not matter whether it is named or unnamed.</span></span>  
   
-3.  여러 개인 경우 `<identityConfiguration>` 요소에서 지정 됩니다.  기본 identity 구성 명명 되지 않은 요소를 지정합니다.  여러 개 지정 하면 것이 좋습니다 `<identityConfiguration>` 요소 중 하나가 없습니다 명명 된.  
+3.  <span data-ttu-id="e0bab-170">여러 개인 경우 `<identityConfiguration>` 요소가 지정 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-170">If multiple `<identityConfiguration>` elements are specified.</span></span> <span data-ttu-id="e0bab-171">명명 되지 않은 요소에는 기본 id 구성을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-171">The unnamed element specifies the default identity configuration.</span></span> <span data-ttu-id="e0bab-172">것이 좋습니다 여러 개 지정 하는 경우 `<identityConfiguration>` 요소, 그 중 하나가 취소 해야 명명 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-172">It is recommended that when you specify multiple `<identityConfiguration>` elements, one of them should be unnamed.</span></span>  
   
 > [!WARNING]
->  여러 개 지정 된 경우 `<identityConfiguration>` 요소 중 하나가 없습니다 명명 된.  명명 되지 않은 요소는 기본값 identity 구성 됩니다.  
+>  <span data-ttu-id="e0bab-173">여러 개 지정 하는 경우 `<identityConfiguration>` 요소, 그 중 하나가 취소 해야 명명 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-173">If you specify multiple `<identityConfiguration>` elements, one of them should be unnamed.</span></span> <span data-ttu-id="e0bab-174">명명 되지 않은 요소에 기본 id 구성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-174">The unnamed element will be the default identity configuration.</span></span>  
   
- 지정 된 설정 중 일부는 `<identityConfiguration>` 요소를 보안 토큰 처리기 컬렉션에서 설정 하거나 개별 보안 토큰 처리기의 설정을 재정의할 수 있습니다.  
-  
-> [!IMPORTANT]
->  사용 하는 경우는 <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> 또는 <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> 코드에서 참조 되는 identity 구성 클레임 기반 액세스 제어를 제공 하는 클래스는 `<federationConfiguration>` 의 클레임 권한 부여 관리자와 권한 부여 결정을 만드는 데 사용 하는 정책 요소를 구성 합니다.  수동 웹 시나리오, 예를 들어 Windows 통신 Foundation \(WCF\) 응용 프로그램 또는 웹 기반 된 응용 프로그램이 없는 경우에도 마찬가지입니다.  응용 프로그램이 수동 웹 응용 프로그램이 없는 경우는 [\<claimsAuthorizationManager\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) 요소와 해당 자식 정책 요소에 있는 경우 참조 된 identity 구성에 적용 되는 유일한 설정입니다.  다른 모든 설정은 모두 무시됩니다.  자세한 내용은 [\<federationConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) 요소를 참조하십시오.  
-  
- `<identityConfiguration>` 요소가 표시 되는 <xref:System.IdentityModel.Configuration.IdentityConfigurationElement> 클래스입니다.  Identity 구성 섹션에 표시 되는 <xref:System.IdentityModel.Configuration.IdentityConfiguration> 클래스입니다.  
+ <span data-ttu-id="e0bab-175">에 지정 된 설정 중 일부는 `<identityConfiguration>` 요소는 보안 토큰 처리기 컬렉션에 대 한 설정에 따라 또는 개별 보안 토큰 처리기의 설정으로 재정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-175">Some of the settings specified in the `<identityConfiguration>` element can be overridden by settings on a security token handler collection or by settings on individual security token handlers.</span></span>  
   
 > [!IMPORTANT]
->  다음 요소를 자식 요소로 지정 하는 `<identityConfiguration>` 요소가 되지 않습니다, 동작은 이전 버전과 호환성을 위해 계속 지원 되지만.  이러한 요소에서 대신 지정 해야 하 고, 해당 [\<securityTokenHandlerConfiguration\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) 요소.  
+>  <span data-ttu-id="e0bab-176">사용 하는 경우는 <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> 또는 <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> 에서 참조 되는 id 구성 코드에서 클레임 기반 액세스 제어를 제공 하는 클래스는 `<federationConfiguration>` 요소는 클레임 권한 부여 관리자 및 정책을 확인 하는 데 사용 되는 구성 권한 부여 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-176">When using the <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> or the <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> class to provide claims-based access control in your code, the identity configuration that is referenced by the `<federationConfiguration>` element configures the claims authorization manager and policy that is used to make authorization decisions.</span></span> <span data-ttu-id="e0bab-177">수동 웹 시나리오 예: Windows Communication Foundation (WCF) 응용 프로그램 또는 응용 프로그램은 웹 기반을 하지 않은 시나리오에도 마찬가지입니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-177">This is true, even in scenarios that are not passive Web scenarios, for example Windows Communication Foundation (WCF) applications or an application that is not Web-based.</span></span> <span data-ttu-id="e0bab-178">응용 프로그램 수동 웹 응용 프로그램이 아닌 경우는 [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) 요소 (및 해당 자식 정책 요소에 있는 경우)의 참조 된 id 구성이 적용 되는 유일한 설정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-178">If the application is not a passive Web application, the [\<claimsAuthorizationManager>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) element (and its child policy elements, if present) of the referenced identity configuration are the only settings applied.</span></span> <span data-ttu-id="e0bab-179">모든 다른 설정은 무시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-179">All other settings are ignored.</span></span> <span data-ttu-id="e0bab-180">자세한 내용은 참조는 [ \<federationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-180">For more information, see the [\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) element.</span></span>  
+  
+ <span data-ttu-id="e0bab-181">`<identityConfiguration>` 에서 요소가 표시 되는 <xref:System.IdentityModel.Configuration.IdentityConfigurationElement> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-181">The `<identityConfiguration>` element is represented by the <xref:System.IdentityModel.Configuration.IdentityConfigurationElement> class.</span></span> <span data-ttu-id="e0bab-182">Id 구성 섹션으로 표시 됩니다는 <xref:System.IdentityModel.Configuration.IdentityConfiguration> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-182">An identity configuration section is represented by the <xref:System.IdentityModel.Configuration.IdentityConfiguration> class.</span></span>  
+  
+> [!IMPORTANT]
+>  <span data-ttu-id="e0bab-183">자식 요소로 다음 요소를 지정 하는 `<identityConfiguration>` 요소는 사용 되지, 동작은 이전 버전과 호환성에 여전히 지원 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-183">Specifying the following elements as child elements of the `<identityConfiguration>` element has been deprecated, although the behavior is still supported for backward compatibility.</span></span> <span data-ttu-id="e0bab-184">이러한 요소는 아래 대신 지정 해야 합니다는 [ \<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-184">These elements should, instead, be specified under the [\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) element.</span></span>  
 >   
->  -   [\<audienceUris\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)  
-> -   [\<issuerNameRegistry\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)  
-> -   [\<issuerTokenResolver\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)  
-> -   [\<serviceTokenResolver\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)  
+>  -   [<span data-ttu-id="e0bab-185">\<audienceUris ></span><span class="sxs-lookup"><span data-stu-id="e0bab-185">\<audienceUris></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/audienceuris.md)  
+> -   [<span data-ttu-id="e0bab-186">\<issuerNameRegistry ></span><span class="sxs-lookup"><span data-stu-id="e0bab-186">\<issuerNameRegistry></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)  
+> -   [<span data-ttu-id="e0bab-187">\<issuerTokenResolver ></span><span class="sxs-lookup"><span data-stu-id="e0bab-187">\<issuerTokenResolver></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuertokenresolver.md)  
+> -   [<span data-ttu-id="e0bab-188">\<serviceTokenResolver ></span><span class="sxs-lookup"><span data-stu-id="e0bab-188">\<serviceTokenResolver></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicetokenresolver.md)  
   
-## 예제  
- 다음 예제에서는 "alternateConfiguration" 명명 된 identity 구성을 만듭니다.  Identity 구성 기본 설정을 지정합니다.  
+## <a name="example"></a><span data-ttu-id="e0bab-189">예제</span><span class="sxs-lookup"><span data-stu-id="e0bab-189">Example</span></span>  
+ <span data-ttu-id="e0bab-190">다음 예제에서는 "alternateConfiguration" 라는 id 구성을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-190">The following example creates an identity configuration named "alternateConfiguration".</span></span> <span data-ttu-id="e0bab-191">Id 구성에는 기본 설정을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="e0bab-191">The identity configuration specifies default settings.</span></span>  
   
-```  
+```xml  
 <system.identityModel>  
     <identityConfiguration name="alternateConfiguration"/>  
 </system.identityModel>  
 ```  
   
-## 참고 항목  
- <xref:System.IdentityModel.Configuration.IdentityConfiguration>   
+## <a name="see-also"></a><span data-ttu-id="e0bab-192">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e0bab-192">See Also</span></span>  
+ <xref:System.IdentityModel.Configuration.IdentityConfiguration>  
  <xref:System.IdentityModel.Configuration.IdentityConfigurationElement>

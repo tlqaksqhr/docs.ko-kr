@@ -10,69 +10,66 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
+ms.openlocfilehash: 1de856a139ac7a6dee25f1dae54924e33f14a33b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 14673f86d7d228bc1fc17a3154e0337b4c6e5f57
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="expression-trees-explained"></a><span data-ttu-id="a46d7-104">식 트리 설명</span><span class="sxs-lookup"><span data-stu-id="a46d7-104">Expression Trees Explained</span></span>
 
-# <a name="expression-trees-explained"></a>식 트리 설명
+[<span data-ttu-id="a46d7-105">이전 -- 개요</span><span class="sxs-lookup"><span data-stu-id="a46d7-105">Previous -- Overview</span></span>](expression-trees.md)
 
-[이전 -- 개요](expression-trees.md)
-
-식 트리는 코드를 정의하는 데이터 구조이며, 컴파일러에서 코드를 분석하고 컴파일된 출력을 생성하는 데 사용하는 것과 동일한 구조를 기반으로 합니다. 이 자습서를 읽다 보면 식 트리와 Roslyn API에서 [Analyzers and CodeFixes](https://github.com/dotnet/roslyn-analyzers)(분석기 및 CodeFix)를 빌드하는 데 사용된 형식 사이에 상당히 많은 유사성이 있음을 확인할 수 있습니다.
-분석기 및 CodeFix는 코드에 대해 정적 분석을 수행하고 개발자에게 잠재적 해결 방법을 제안할 수 있는 NuGet 패키지입니다. 개념이 유사하며 최종 결과는 의미 있는 방식으로 소스 코드를 검사할 수 있는 데이터 구조입니다. 그러나 식 트리는 Roslyn API와 완전히 다른 클래스 및 API 집합을 기반으로 합니다.
+<span data-ttu-id="a46d7-106">식 트리는 코드를 정의하는 데이터 구조이며,</span><span class="sxs-lookup"><span data-stu-id="a46d7-106">An Expression Tree is a data structure that defines code.</span></span> <span data-ttu-id="a46d7-107">컴파일러에서 코드를 분석하고 컴파일된 출력을 생성하는 데 사용하는 것과 동일한 구조를 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-107">They are based on the same structures that a compiler uses to analyze code and generate the compiled output.</span></span> <span data-ttu-id="a46d7-108">이 자습서를 읽다 보면 식 트리와 Roslyn API에서 [Analyzers and CodeFixes](https://github.com/dotnet/roslyn-analyzers)(분석기 및 CodeFix)를 빌드하는 데 사용된 형식 사이에 상당히 많은 유사성이 있음을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-108">As you read through this tutorial, you will notice quite a bit of similarity between Expression Trees and the types used in the Roslyn APIs to build [Analyzers and CodeFixes](https://github.com/dotnet/roslyn-analyzers).</span></span>
+<span data-ttu-id="a46d7-109">분석기 및 CodeFix는 코드에 대해 정적 분석을 수행하고 개발자에게 잠재적 해결 방법을 제안할 수 있는 NuGet 패키지입니다. 개념이 유사하며 최종 결과는 의미 있는 방식으로 소스 코드를 검사할 수 있는 데이터 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-109">(Analyzers and CodeFixes are NuGet packages that perform static analysis on code and can suggest potential fixes for a developer.) The concepts are similar, and the end result is a data structure that allows examination of the source code in a meaningful way.</span></span> <span data-ttu-id="a46d7-110">그러나 식 트리는 Roslyn API와 완전히 다른 클래스 및 API 집합을 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-110">However, Expression Trees are based on a totally different set of classes and APIs than the Roslyn APIs.</span></span>
     
-간단한 예제를 살펴보겠습니다.
-코드 줄은 다음과 같습니다.
+<span data-ttu-id="a46d7-111">간단한 예제를 살펴보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-111">Let's look at a simple example.</span></span>
+<span data-ttu-id="a46d7-112">코드 줄은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-112">Here's a line of code:</span></span>
 ```csharp
 var sum = 1 + 2;
 ```
-이 코드를 식 트리로 분석하려는 경우 트리에 여러 개의 노드가 포함됩니다.
-가장 바깥쪽 노드는 할당을 사용하는 변수 선언문(`var sum = 1 + 2;`)입니다. 이 가장 바깥쪽 노드에는 변수 선언, 대입 연산자 및 등호의 오른쪽을 나타내는 식과 같은 여러 개의 자식 노드가 포함됩니다. 이 식은 더하기 연산을 나타내는 식, 더하기의 왼쪽과 오른쪽 피연산자로 다시 구분됩니다.
+<span data-ttu-id="a46d7-113">이 코드를 식 트리로 분석하려는 경우 트리에 여러 개의 노드가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-113">If you were to analyze this as an expression tree, the tree contains several nodes.</span></span>
+<span data-ttu-id="a46d7-114">가장 바깥쪽 노드는 할당을 사용하는 변수 선언문(`var sum = 1 + 2;`)입니다. 이 가장 바깥쪽 노드에는 변수 선언, 대입 연산자 및 등호의 오른쪽을 나타내는 식과 같은 여러 개의 자식 노드가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-114">The outermost node is a variable declaration statement with assignment (`var sum = 1 + 2;`) That outermost node contains several child nodes: a variable declaration, an assignment operator, and an expression representing the right hand side of the equals sign.</span></span> <span data-ttu-id="a46d7-115">이 식은 더하기 연산을 나타내는 식, 더하기의 왼쪽과 오른쪽 피연산자로 다시 구분됩니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-115">That expression is further subdivided into expressions that represent the addition operation, and left and right operands of the addition.</span></span>
 
-등호의 오른쪽을 구성하는 식을 좀더 자세히 살펴보겠습니다.
-식은 `1 + 2`이며, 이진 식입니다. 보다 구체적으로 이진 더하기 식입니다. 이진 더하기 식에는 더하기 식의 왼쪽과 오른쪽 노드를 나타내는 두 개의 자식이 있습니다. 여기에서 두 노드는 상수 식입니다. 왼쪽 피연산자는 `1` 값이고, 오른쪽 피연산자는 `2` 값입니다.
+<span data-ttu-id="a46d7-116">등호의 오른쪽을 구성하는 식을 좀더 자세히 살펴보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-116">Let's drill down a bit more into the expressions that make up the right side of the equals sign.</span></span>
+<span data-ttu-id="a46d7-117">식은 `1 + 2`이며,</span><span class="sxs-lookup"><span data-stu-id="a46d7-117">The expression is `1 + 2`.</span></span> <span data-ttu-id="a46d7-118">이진 식입니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-118">That's a binary expression.</span></span> <span data-ttu-id="a46d7-119">보다 구체적으로 이진 더하기 식입니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-119">More specifically, it's a binary addition expression.</span></span> <span data-ttu-id="a46d7-120">이진 더하기 식에는 더하기 식의 왼쪽과 오른쪽 노드를 나타내는 두 개의 자식이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-120">A binary addition expression has two children, representing the left and right nodes of the addition expression.</span></span> <span data-ttu-id="a46d7-121">여기에서 두 노드는 상수 식입니다. 왼쪽 피연산자는 `1` 값이고, 오른쪽 피연산자는 `2` 값입니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-121">Here, both nodes are constant expressions: The left operand is the value `1`, and the right operand is the value `2`.</span></span>
 
-시각적으로 전체 문은 트리입니다. 루트 노드에서 시작하여 트리의 각 노드로 이동하면서 문을 구성하는 코드를 확인할 수 있습니다.
+<span data-ttu-id="a46d7-122">시각적으로 전체 문은 트리입니다. 루트 노드에서 시작하여 트리의 각 노드로 이동하면서 문을 구성하는 코드를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-122">Visually, the entire statement is a tree: You could start at the root node, and travel to each node in the tree to see the code that makes up the statement:</span></span>
 
-- 할당을 사용하는 변수 선언문(`var sum = 1 + 2;`)
-    * 암시적 변수 형식 선언(`var sum`)
-        - 암시적 var 키워드(`var`)
-        - 변수 이름 선언(`sum`)
-    * 대입 연산자(`=`)
-    * 이진 더하기 식(`1 + 2`)
-        - 왼쪽 피연산자(`1`)
-        - 더하기 연산자(`+`)
-        - 오른쪽 피연산자(`2`)
+- <span data-ttu-id="a46d7-123">할당을 사용하는 변수 선언문(`var sum = 1 + 2;`)</span><span class="sxs-lookup"><span data-stu-id="a46d7-123">Variable declaration statement with assignment (`var sum = 1 + 2;`)</span></span>
+    * <span data-ttu-id="a46d7-124">암시적 변수 형식 선언(`var sum`)</span><span class="sxs-lookup"><span data-stu-id="a46d7-124">Implicit variable type declaration (`var sum`)</span></span>
+        - <span data-ttu-id="a46d7-125">암시적 var 키워드(`var`)</span><span class="sxs-lookup"><span data-stu-id="a46d7-125">Implicit var keyword (`var`)</span></span>
+        - <span data-ttu-id="a46d7-126">변수 이름 선언(`sum`)</span><span class="sxs-lookup"><span data-stu-id="a46d7-126">Variable name declaration (`sum`)</span></span>
+    * <span data-ttu-id="a46d7-127">대입 연산자(`=`)</span><span class="sxs-lookup"><span data-stu-id="a46d7-127">Assignment operator (`=`)</span></span>
+    * <span data-ttu-id="a46d7-128">이진 더하기 식(`1 + 2`)</span><span class="sxs-lookup"><span data-stu-id="a46d7-128">Binary addition expression (`1 + 2`)</span></span>
+        - <span data-ttu-id="a46d7-129">왼쪽 피연산자(`1`)</span><span class="sxs-lookup"><span data-stu-id="a46d7-129">Left operand (`1`)</span></span>
+        - <span data-ttu-id="a46d7-130">더하기 연산자(`+`)</span><span class="sxs-lookup"><span data-stu-id="a46d7-130">Addition operator (`+`)</span></span>
+        - <span data-ttu-id="a46d7-131">오른쪽 피연산자(`2`)</span><span class="sxs-lookup"><span data-stu-id="a46d7-131">Right operand (`2`)</span></span>
 
-다음 코드는 복잡해 보이지만 매우 강력합니다. 동일한 프로세스에 따라 훨씬 더 복잡한 식을 분해할 수 있습니다. 다음 식을 살펴보세요.
+<span data-ttu-id="a46d7-132">다음 코드는 복잡해 보이지만 매우 강력합니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-132">This may look complicated, but it is very powerful.</span></span> <span data-ttu-id="a46d7-133">동일한 프로세스에 따라 훨씬 더 복잡한 식을 분해할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-133">Following the same process, you can decompose much more complicated expressions.</span></span> <span data-ttu-id="a46d7-134">다음 식을 살펴보세요.</span><span class="sxs-lookup"><span data-stu-id="a46d7-134">Consider this expression:</span></span>
 ```csharp
-var finalAnswer = this.SecretSauceFuncion(
+var finalAnswer = this.SecretSauceFunction(
     currentState.createInterimResult(), currentState.createSecondValue(1, 2),
     decisionServer.considerFinalOptions("hello")) +
     MoreSecretSauce('A', DateTime.Now, true);
 ```
 
-위의 식은 할당을 사용하는 변수 선언이기도 합니다.
-이 경우 할당의 오른쪽이 훨씬 더 복잡한 트리입니다.
-이 식은 분해하지 않고 서로 다른 노드 부분을 살펴보겠습니다. 현재 개체를 수신기로 사용하는 메서드 호출, 명시적 `this` 수신기가 있는 호출과 그렇지 않은 호출이 있습니다. 다른 수신기 개체를 사용하는 메서드 호출이 있고 다양한 형식의 상수 인수가 있습니다. 마지막으로 이진 더하기 연산자가 있습니다. `SecretSauceFunction()` 또는 `MoreSecretSauce()`의 반환 형식에 따라 해당 이진 더하기 연산자는 재정의된 더하기 연산자에 대한 메서드 호출이 되어 클래스에 대해 정의된 이진 더하기 연산자에 대한 정적 메서드 호출로 확인될 수 있습니다.
+<span data-ttu-id="a46d7-135">위의 식은 할당을 사용하는 변수 선언이기도 합니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-135">The expression above is also a variable declaration with an assignment.</span></span>
+<span data-ttu-id="a46d7-136">이 경우 할당의 오른쪽이 훨씬 더 복잡한 트리입니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-136">In this instance, the right hand side of the assignment is a much more complicated tree.</span></span>
+<span data-ttu-id="a46d7-137">이 식은 분해하지 않고 서로 다른 노드 부분을 살펴보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-137">I'm not going to decompose this expression, but consider what the different nodes might be.</span></span> <span data-ttu-id="a46d7-138">현재 개체를 수신기로 사용하는 메서드 호출, 명시적 `this` 수신기가 있는 호출과 그렇지 않은 호출이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-138">There are method calls using the current object as a receiver, one that has an explicit `this` receiver, one that does not.</span></span> <span data-ttu-id="a46d7-139">다른 수신기 개체를 사용하는 메서드 호출이 있고 다양한 형식의 상수 인수가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-139">There are method calls using other receiver objects, there are constant arguments of different types.</span></span> <span data-ttu-id="a46d7-140">마지막으로 이진 더하기 연산자가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-140">And finally, there is a binary addition operator.</span></span> <span data-ttu-id="a46d7-141">`SecretSauceFunction()` 또는 `MoreSecretSauce()`의 반환 형식에 따라 해당 이진 더하기 연산자는 재정의된 더하기 연산자에 대한 메서드 호출이 되어 클래스에 대해 정의된 이진 더하기 연산자에 대한 정적 메서드 호출로 확인될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-141">Depending on the return type of `SecretSauceFunction()` or `MoreSecretSauce()`, that binary addition operator may be a method call to an overridden addition operator, resolving to a static method call to the binary addition operator defined for a class.</span></span>
 
-이러한 복잡성에도 불구하고 위의 식은 첫 번째 샘플만큼 쉽게 탐색할 수 있는 트리 구조를 만듭니다. 식에서 자식 노드를 계속 트래버스하여 리프 노드를 찾을 수 있습니다. 부모 노드에는 자식에 대한 참조가 있으며 각 노드에는 노드의 종류를 설명하는 속성이 있습니다.
+<span data-ttu-id="a46d7-142">이러한 복잡성에도 불구하고 위의 식은 첫 번째 샘플만큼 쉽게 탐색할 수 있는 트리 구조를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-142">Despite this perceived complexity, the expression above creates a tree structure that can be navigated as easily as the first sample.</span></span> <span data-ttu-id="a46d7-143">식에서 자식 노드를 계속 트래버스하여 리프 노드를 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-143">You can keep traversing child nodes to find leaf nodes in the expression.</span></span> <span data-ttu-id="a46d7-144">부모 노드에는 자식에 대한 참조가 있으며 각 노드에는 노드의 종류를 설명하는 속성이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-144">Parent nodes will have references to their children, and each node has a property that describes what kind of node it is.</span></span>
 
-식 트리의 구조는 거의 일치합니다. 기본 사항을 익혔으면 식 트리로 표현될 때 가장 복잡한 코드도 이해할 수 있습니다. 간결한 데이터 구조는 C# 컴파일러에서 가장 복잡한 C# 프로그램을 분석하고 복잡한 해당 소스 코드에서 적절한 출력을 만드는 방법을 설명합니다.
+<span data-ttu-id="a46d7-145">식 트리의 구조는 거의 일치합니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-145">The structure of an expression tree is very consistent.</span></span> <span data-ttu-id="a46d7-146">기본 사항을 익혔으면 식 트리로 표현될 때 가장 복잡한 코드도 이해할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-146">Once you've learned the basics, you can understand even the most complex code when it is represented as an expression tree.</span></span> <span data-ttu-id="a46d7-147">간결한 데이터 구조는 C# 컴파일러에서 가장 복잡한 C# 프로그램을 분석하고 복잡한 해당 소스 코드에서 적절한 출력을 만드는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-147">The elegance in the data structure explains how the C# compiler can analyze the most complex C# programs and create proper output from that complicated source code.</span></span>
 
-식 트리의 구조에 익숙해지고 나면 신속하게 습득한 지식을 통해 훨씬 더 많은 고급 시나리오를 사용할 수 있습니다. 식 트리에는 정말 강력한 기능이 있습니다.
+<span data-ttu-id="a46d7-148">식 트리의 구조에 익숙해지고 나면 신속하게 습득한 지식을 통해 훨씬 더 많은 고급 시나리오를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-148">Once you become familiar with the structure of expression trees, you will find that knowledge you've gained quickly enables you to work with many more and more advanced scenarios.</span></span> <span data-ttu-id="a46d7-149">식 트리에는 정말 강력한 기능이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-149">There is incredible power to expression trees.</span></span>
 
-알고리즘을 변환하여 다른 환경에서 실행하는 것 외에 식 트리를 사용하면 코드를 실행하기 전에 검사하는 알고리즘을 더 쉽게 작성할 수 있습니다. 인수가 식인 메서드를 작성한 다음 코드를 실행하기 전에 해당 식을 검사할 수 있습니다. 식 트리는 코드의 전체 표현이며, 모든 하위 식의 값을 확인할 수 있습니다.
-메서드 및 속성 이름을 확인할 수 있습니다. 모든 상수 식의 값을 확인할 수 있습니다.
-또한 식 트리를 실행 가능한 대리자로 변환하고 코드를 실행할 수 있습니다.
+<span data-ttu-id="a46d7-150">알고리즘을 변환하여 다른 환경에서 실행하는 것 외에 식 트리를 사용하면 코드를 실행하기 전에 검사하는 알고리즘을 더 쉽게 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-150">In addition to translating algorithms to execute in other environments, expression trees can be used to make it easier to write algorithms that inspect code before executing it.</span></span> <span data-ttu-id="a46d7-151">인수가 식인 메서드를 작성한 다음 코드를 실행하기 전에 해당 식을 검사할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-151">You can write a method whose arguments are expressions and then examine those expressions before executing the code.</span></span> <span data-ttu-id="a46d7-152">식 트리는 코드의 전체 표현이며, 모든 하위 식의 값을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-152">The Expression Tree is a full representation of the code: you can see values of any sub-expression.</span></span>
+<span data-ttu-id="a46d7-153">메서드 및 속성 이름을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-153">You can see method and property names.</span></span> <span data-ttu-id="a46d7-154">모든 상수 식의 값을 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-154">You can see the value of any constant expressions.</span></span>
+<span data-ttu-id="a46d7-155">또한 식 트리를 실행 가능한 대리자로 변환하고 코드를 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-155">You can also convert an expression tree into an executable delegate, and execute the code.</span></span>
 
-식 트리에 대한 API에서는 거의 모든 유효한 코드 구문을 나타내는 트리를 만들 수 있습니다. 그러나 최대한 간단하게 유지하기 위해 식 트리에는 일부 C# 관용구를 만들 수 없습니다. 한 가지 예는 비동기 식(`async` 및 `await` 키워드 사용)입니다. 비동기 알고리즘이 필요한 경우 컴파일러 지원을 사용하기 보다는 `Task` 개체를 직접 조작해야 합니다. 또 다른 예로 루프 만들기가 있습니다. 일반적으로 `for`, `foreach`, `while` 또는 `do` 루프를 사용하여 만듭니다. [이 시리즈의 뒷부분](expression-trees-building.md)에서 살펴보겠지만 식 트리에 대한 API는 루프 반복을 제어하는 `break` 및 `continue` 식과 함께 단일 루프 식을 지원합니다.
+<span data-ttu-id="a46d7-156">식 트리에 대한 API에서는 거의 모든 유효한 코드 구문을 나타내는 트리를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-156">The APIs for Expression Trees enable you to create trees that represent almost any valid code construct.</span></span> <span data-ttu-id="a46d7-157">그러나 최대한 간단하게 유지하기 위해 식 트리에는 일부 C# 관용구를 만들 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-157">However, to keep things as simple as possible, some C# idioms cannot be created in an expression tree.</span></span> <span data-ttu-id="a46d7-158">한 가지 예는 비동기 식(`async` 및 `await` 키워드 사용)입니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-158">One example is asynchronous expressions (using the `async` and `await` keywords).</span></span> <span data-ttu-id="a46d7-159">비동기 알고리즘이 필요한 경우 컴파일러 지원을 사용하기 보다는 `Task` 개체를 직접 조작해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-159">If your needs require asynchronous algorithms, you would need to manipulate the `Task` objects directly, rather than rely on the compiler support.</span></span> <span data-ttu-id="a46d7-160">또 다른 예로 루프 만들기가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-160">Another is in creating loops.</span></span> <span data-ttu-id="a46d7-161">일반적으로 `for`, `foreach`, `while` 또는 `do` 루프를 사용하여 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-161">Typically, you create these by using `for`, `foreach`, `while` or `do` loops.</span></span> <span data-ttu-id="a46d7-162">[이 시리즈의 뒷부분](expression-trees-building.md)에서 살펴보겠지만 식 트리에 대한 API는 루프 반복을 제어하는 `break` 및 `continue` 식과 함께 단일 루프 식을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-162">As you'll see [later in this series](expression-trees-building.md), the APIs for expression trees support a single loop expression, with `break` and `continue` expressions that control repeating the loop.</span></span>
 
-단, 식 트리는 수정할 수 없습니다.  식 트리는 변경할 수 없는 데이터 구조입니다. 식 트리를 변경하려면 원하는 변경 사항을 포함하여 원본의 복사본인 새 트리를 만들어야 합니다. 
+<span data-ttu-id="a46d7-163">단, 식 트리는 수정할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-163">The one thing you can't do is modify an expression tree.</span></span>  <span data-ttu-id="a46d7-164">식 트리는 변경할 수 없는 데이터 구조입니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-164">Expression Trees are immutable data structures.</span></span> <span data-ttu-id="a46d7-165">식 트리를 변경하려면 원하는 변경 사항을 포함하여 원본의 복사본인 새 트리를 만들어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a46d7-165">If you want to mutate (change) an expression tree, you must create a new tree that is a copy of the original, but with your desired changes.</span></span> 
 
-[다음 -- 식 트리를 지원하는 프레임워크 형식](expression-classes.md)
-
+[<span data-ttu-id="a46d7-166">다음 -- 식 트리를 지원하는 프레임워크 형식</span><span class="sxs-lookup"><span data-stu-id="a46d7-166">Next -- Framework Types Supporting Expression Trees</span></span>](expression-classes.md)

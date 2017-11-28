@@ -1,52 +1,42 @@
 ---
 title: "LINQ to XML 축(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 3f7d54ff-b608-43a1-9e2d-e70668b72df8
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 212754ca8bafb8c8e2d0dbe076b88d3818e39a68
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 65d64b6082942d702444305d7dfed4d05444b59e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="linq-to-xml-axes-c"></a>LINQ to XML 축(C#)
-XML 트리를 만들거나 XML 문서를 XML 트리에 로드한 후 XML 트리를 쿼리하여 요소와 특성을 찾고 해당 값을 검색할 수 있습니다.  
+# <a name="linq-to-xml-axes-c"></a><span data-ttu-id="6033e-102">LINQ to XML 축(C#)</span><span class="sxs-lookup"><span data-stu-id="6033e-102">LINQ to XML Axes (C#)</span></span>
+<span data-ttu-id="6033e-103">XML 트리를 만들거나 XML 문서를 XML 트리에 로드한 후 XML 트리를 쿼리하여 요소와 특성을 찾고 해당 값을 검색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6033e-103">After you have created an XML tree or loaded an XML document into an XML tree, you can query it to find elements and attributes and retrieve their values.</span></span>  
   
- 쿼리를 작성하려면 먼저 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 축에 대해 이해해야 합니다. 축 메서드에는 두 가지 종류가 있습니다. 첫째, 단일 <xref:System.Xml.Linq.XElement> 개체, <xref:System.Xml.Linq.XDocument> 개체 또는 <xref:System.Xml.Linq.XNode> 개체에 대해 호출하는 메서드가 있습니다. 이러한 메서드는 단일 개체에 대해 작동하고 <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute> 또는 <xref:System.Xml.Linq.XNode> 개체의 컬렉션을 반환합니다. 둘째, 컬렉션에 대해 작동하고 컬렉션을 반환하는 확장 메서드가 있습니다. 확장 메서드는 소스 컬렉션을 열거하고 컬렉션의 각 항목에 대해 적절한 축 메서드를 호출한 다음 결과를 연결합니다.  
+ <span data-ttu-id="6033e-104">쿼리를 작성하려면 먼저 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 축에 대해 이해해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6033e-104">Before you can write any queries, you must understand the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] axes.</span></span> <span data-ttu-id="6033e-105">축 메서드에는 두 가지 종류가 있습니다. 첫째, 단일 <xref:System.Xml.Linq.XElement> 개체, <xref:System.Xml.Linq.XDocument> 개체 또는 <xref:System.Xml.Linq.XNode> 개체에 대해 호출하는 메서드가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6033e-105">There are two kinds of axis methods: First, there are the methods that you call on a single <xref:System.Xml.Linq.XElement> object, <xref:System.Xml.Linq.XDocument> object, or <xref:System.Xml.Linq.XNode> object.</span></span> <span data-ttu-id="6033e-106">이러한 메서드는 단일 개체에 대해 작동하고 <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute> 또는 <xref:System.Xml.Linq.XNode> 개체의 컬렉션을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="6033e-106">These methods operate on a single object and return a collection of <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute>, or <xref:System.Xml.Linq.XNode> objects.</span></span> <span data-ttu-id="6033e-107">둘째, 컬렉션에 대해 작동하고 컬렉션을 반환하는 확장 메서드가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6033e-107">Second, there are extension methods that operate on collections and return collections.</span></span> <span data-ttu-id="6033e-108">확장 메서드는 소스 컬렉션을 열거하고 컬렉션의 각 항목에 대해 적절한 축 메서드를 호출한 다음 결과를 연결합니다.</span><span class="sxs-lookup"><span data-stu-id="6033e-108">The extension methods enumerate the source collection, call the appropriate axis method on each item in the collection, and concatenate the results.</span></span>  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a><span data-ttu-id="6033e-109">단원 내용</span><span class="sxs-lookup"><span data-stu-id="6033e-109">In This Section</span></span>  
   
-|항목|설명|  
+|<span data-ttu-id="6033e-110">항목</span><span class="sxs-lookup"><span data-stu-id="6033e-110">Topic</span></span>|<span data-ttu-id="6033e-111">설명</span><span class="sxs-lookup"><span data-stu-id="6033e-111">Description</span></span>|  
 |-----------|-----------------|  
-|[LINQ to XML 축 개요(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes-overview.md)|축을 정의하고 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리와 관련하여 축을 사용하는 방법에 대해 설명합니다.|  
-|[방법: 요소 컬렉션 검색(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-a-collection-of-elements-linq-to-xml.md)|<xref:System.Xml.Linq.XContainer.Elements%2A> 메서드에 대해 소개합니다. 이 메서드는 요소의 자식 요소 컬렉션을 검색합니다.|  
-|[방법: 요소 값 검색(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md)|요소의 값을 가져오는 방법을 보여 줍니다.|  
-|[방법: 요소 이름 필터링(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-filter-on-element-names-linq-to-xml.md)|축을 사용할 때 요소 이름을 기준으로 필터링하는 방법을 보여 줍니다.|  
-|[방법: 축 메서드 호출 연결(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-chain-axis-method-calls-linq-to-xml.md)|호출을 축 메서드에 연결하는 방법을 보여 줍니다.|  
-|[방법: 단일 자식 요소 검색(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md)|자식 요소의 태그 이름이 제공된 경우 요소의 단일 자식 요소를 검색하는 방법을 보여 줍니다.|  
-|[방법: 특성 컬렉션 검색(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-a-collection-of-attributes-linq-to-xml.md)|<xref:System.Xml.Linq.XElement.Attributes%2A> 메서드에 대해 소개합니다. 이 메서드는 요소의 특성을 검색합니다.|  
-|[방법: 단일 특성 검색(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-a-single-attribute-linq-to-xml.md)|특성 이름이 제공된 경우 요소의 단일 특성을 검색하는 방법을 보여 줍니다.|  
-|[방법: 특성 값 검색(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-attribute-linq-to-xml.md)|특성의 값을 가져오는 방법을 보여 줍니다.|  
-|[방법: 요소의 단순 값 검색(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-the-shallow-value-of-an-element.md)|요소의 부분 값을 검색하는 방법을 보여 줍니다.|  
+|[<span data-ttu-id="6033e-112">LINQ to XML 축 개요(C#)</span><span class="sxs-lookup"><span data-stu-id="6033e-112">LINQ to XML Axes Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes-overview.md)|<span data-ttu-id="6033e-113">축을 정의하고 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리와 관련하여 축을 사용하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="6033e-113">Defines axes, and explains how they are used in the context of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries.</span></span>|  
+|[<span data-ttu-id="6033e-114">방법: 요소 컬렉션 검색(LINQ to XML)(C#)</span><span class="sxs-lookup"><span data-stu-id="6033e-114">How to: Retrieve a Collection of Elements (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-a-collection-of-elements-linq-to-xml.md)|<span data-ttu-id="6033e-115"><xref:System.Xml.Linq.XContainer.Elements%2A> 메서드에 대해 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="6033e-115">Introduces the <xref:System.Xml.Linq.XContainer.Elements%2A> method.</span></span> <span data-ttu-id="6033e-116">이 메서드는 요소의 자식 요소 컬렉션을 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="6033e-116">This method retrieves a collection of the child elements of an element.</span></span>|  
+|[<span data-ttu-id="6033e-117">방법: 요소 값 검색(LINQ to XML)(C#)</span><span class="sxs-lookup"><span data-stu-id="6033e-117">How to: Retrieve the Value of an Element (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-element-linq-to-xml.md)|<span data-ttu-id="6033e-118">요소의 값을 가져오는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6033e-118">Shows how to get the values of elements.</span></span>|  
+|[<span data-ttu-id="6033e-119">방법: 요소 이름 필터링(LINQ to XML)(C#)</span><span class="sxs-lookup"><span data-stu-id="6033e-119">How to: Filter on Element Names (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-filter-on-element-names-linq-to-xml.md)|<span data-ttu-id="6033e-120">축을 사용할 때 요소 이름을 기준으로 필터링하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6033e-120">Shows how to filter on element names when using axes.</span></span>|  
+|[<span data-ttu-id="6033e-121">방법: 축 메서드 호출 연결(LINQ to XML)(C#)</span><span class="sxs-lookup"><span data-stu-id="6033e-121">How to: Chain Axis Method Calls (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-chain-axis-method-calls-linq-to-xml.md)|<span data-ttu-id="6033e-122">호출을 축 메서드에 연결하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6033e-122">Shows how to chain calls to axes methods.</span></span>|  
+|[<span data-ttu-id="6033e-123">방법: 단일 자식 요소 검색(LINQ to XML)(C#)</span><span class="sxs-lookup"><span data-stu-id="6033e-123">How to: Retrieve a Single Child Element (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-a-single-child-element-linq-to-xml.md)|<span data-ttu-id="6033e-124">자식 요소의 태그 이름이 제공된 경우 요소의 단일 자식 요소를 검색하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6033e-124">Shows how to retrieve a single child element of an element, given the tag name of the child element.</span></span>|  
+|[<span data-ttu-id="6033e-125">방법: 특성 컬렉션 검색(LINQ to XML)(C#)</span><span class="sxs-lookup"><span data-stu-id="6033e-125">How to: Retrieve a Collection of Attributes (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-a-collection-of-attributes-linq-to-xml.md)|<span data-ttu-id="6033e-126"><xref:System.Xml.Linq.XElement.Attributes%2A> 메서드에 대해 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="6033e-126">Introduces the <xref:System.Xml.Linq.XElement.Attributes%2A> method.</span></span> <span data-ttu-id="6033e-127">이 메서드는 요소의 특성을 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="6033e-127">This method retrieves the attributes of an element.</span></span>|  
+|[<span data-ttu-id="6033e-128">방법: 단일 특성 검색(LINQ to XML)(C#)</span><span class="sxs-lookup"><span data-stu-id="6033e-128">How to: Retrieve a Single Attribute (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-a-single-attribute-linq-to-xml.md)|<span data-ttu-id="6033e-129">특성 이름이 제공된 경우 요소의 단일 특성을 검색하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6033e-129">Shows how to retrieve a single attribute of an element, given the attribute name.</span></span>|  
+|[<span data-ttu-id="6033e-130">방법: 특성 값 검색(LINQ to XML)(C#)</span><span class="sxs-lookup"><span data-stu-id="6033e-130">How to: Retrieve the Value of an Attribute (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-attribute-linq-to-xml.md)|<span data-ttu-id="6033e-131">특성의 값을 가져오는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6033e-131">Shows how to get the values of attributes.</span></span>|  
+|[<span data-ttu-id="6033e-132">방법: 요소의 단순 값 검색(C#)</span><span class="sxs-lookup"><span data-stu-id="6033e-132">How to: Retrieve the Shallow Value of an Element (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-retrieve-the-shallow-value-of-an-element.md)|<span data-ttu-id="6033e-133">요소의 부분 값을 검색하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="6033e-133">Shows how to retrieve the shallow value of an element.</span></span>|  
   
-## <a name="see-also"></a>참고 항목  
- [확장 메서드](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)   
- [프로그래밍 가이드(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
-
+## <a name="see-also"></a><span data-ttu-id="6033e-134">참고 항목</span><span class="sxs-lookup"><span data-stu-id="6033e-134">See Also</span></span>  
+ [<span data-ttu-id="6033e-135">확장명 메서드</span><span class="sxs-lookup"><span data-stu-id="6033e-135">Extension Methods</span></span>](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
+ [<span data-ttu-id="6033e-136">프로그래밍 가이드(LINQ to XML)(C#)</span><span class="sxs-lookup"><span data-stu-id="6033e-136">Programming Guide (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

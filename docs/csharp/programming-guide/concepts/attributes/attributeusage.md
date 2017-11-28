@@ -1,33 +1,24 @@
 ---
 title: AttributeUsage(C#)
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 22c45568-9a6a-4c2f-8480-f38c1caa0a99
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 81e7440279a2d7dfa801394ee0e9af6181da3c13
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: c008c1a696e93bc3b756a926a046aa5a6942bc10
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="attributeusage-c"></a>AttributeUsage(C#)
-사용자 지정 특성 클래스를 사용하는 방법을 결정합니다. `AttributeUsage`는 새 특성 적용 방법을 제어하기 위해 사용자 지정 특성 정의에 적용할 수 있는 특성입니다. 기본 설정은 명시적으로 적용될 경우 다음과 같이 표시됩니다.  
+# <a name="attributeusage-c"></a><span data-ttu-id="ab141-102">AttributeUsage(C#)</span><span class="sxs-lookup"><span data-stu-id="ab141-102">AttributeUsage (C#)</span></span>
+<span data-ttu-id="ab141-103">사용자 지정 특성 클래스를 사용하는 방법을 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="ab141-103">Determines how a custom attribute class can be used.</span></span> <span data-ttu-id="ab141-104">`AttributeUsage`는 새 특성 적용 방법을 제어하기 위해 사용자 지정 특성 정의에 적용할 수 있는 특성입니다.</span><span class="sxs-lookup"><span data-stu-id="ab141-104">`AttributeUsage` is an attribute that can be applied to custom attribute definitions to control how the new attribute can be applied.</span></span> <span data-ttu-id="ab141-105">기본 설정은 명시적으로 적용될 경우 다음과 같이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="ab141-105">The default settings look like this when applied explicitly:</span></span>  
   
 ```csharp  
 [System.AttributeUsage(System.AttributeTargets.All,  
@@ -36,16 +27,16 @@ ms.lasthandoff: 07/28/2017
 class NewAttribute : System.Attribute { }  
 ```  
   
- 이 예제에서 `NewAttribute` 클래스는 모든 특성 가능 코드 엔터티에 적용될 수 있지만 각 엔터티에 한 번만 적용될 수 있습니다. 이 특성은 기본 클래스에 적용될 때 파생 클래스가 상속합니다.  
+ <span data-ttu-id="ab141-106">이 예제에서 `NewAttribute` 클래스는 모든 특성 가능 코드 엔터티에 적용될 수 있지만 각 엔터티에 한 번만 적용될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ab141-106">In this example, the `NewAttribute` class can be applied to any attribute-able code entity, but can be applied only once to each entity.</span></span> <span data-ttu-id="ab141-107">이 특성은 기본 클래스에 적용될 때 파생 클래스가 상속합니다.</span><span class="sxs-lookup"><span data-stu-id="ab141-107">It is inherited by derived classes when applied to a base class.</span></span>  
   
- `AllowMultiple` 및 `Inherited` 인수는 선택 사항이므로 이 코드에 미치는 영향은 같습니다.  
+ <span data-ttu-id="ab141-108">`AllowMultiple` 및 `Inherited` 인수는 선택 사항이므로 이 코드에 미치는 영향은 같습니다.</span><span class="sxs-lookup"><span data-stu-id="ab141-108">The `AllowMultiple` and `Inherited` arguments are optional, so this code has the same effect:</span></span>  
   
 ```csharp  
 [System.AttributeUsage(System.AttributeTargets.All)]  
 class NewAttribute : System.Attribute { }  
 ```  
   
- 첫 번째 `AttributeUsage` 인수는 <xref:System.AttributeTargets> 열거형의 요소가 하나 이상이어야 합니다. 다음과 같이 OR 연산자를 사용하여 여러 대상 형식을 함께 연결할 수 있습니다.  
+ <span data-ttu-id="ab141-109">첫 번째 `AttributeUsage` 인수는 <xref:System.AttributeTargets> 열거형의 요소가 하나 이상이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ab141-109">The first `AttributeUsage` argument must be one or more elements of the <xref:System.AttributeTargets> enumeration.</span></span> <span data-ttu-id="ab141-110">다음과 같이 OR 연산자를 사용하여 여러 대상 형식을 함께 연결할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ab141-110">Multiple target types can be linked together with the OR operator, like this:</span></span>  
   
 ```csharp  
 using System;  
@@ -54,7 +45,7 @@ using System;
 class NewPropertyOrFieldAttribute : Attribute { }  
 ```  
   
- `AllowMultiple` 인수를 `true`로 설정하면 다음과 같이 결과 특성을 단일 엔터티에 두 번 이상 적용할 수 있습니다.  
+ <span data-ttu-id="ab141-111">`AllowMultiple` 인수를 `true`로 설정하면 다음과 같이 결과 특성을 단일 엔터티에 두 번 이상 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ab141-111">If the `AllowMultiple` argument is set to `true`, then the resulting attribute can be applied more than once to a single entity, like this:</span></span>  
   
 ```csharp  
 using System;  
@@ -70,9 +61,9 @@ class Class1 { }
 class Class2 { }  
 ```  
   
- 이 경우 `AllowMultiple`이 `true`로 설정되므로 `MultiUseAttr`를 반복적으로 적용할 수 있습니다. 여러 특성을 적용하기 위해 표시된 두 형식이 모두 유효합니다.  
+ <span data-ttu-id="ab141-112">이 경우 `AllowMultiple`이 `true`로 설정되므로 `MultiUseAttr`를 반복적으로 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ab141-112">In this case `MultiUseAttr` can be applied repeatedly because `AllowMultiple` is set to `true`.</span></span> <span data-ttu-id="ab141-113">여러 특성을 적용하기 위해 표시된 두 형식이 모두 유효합니다.</span><span class="sxs-lookup"><span data-stu-id="ab141-113">Both formats shown for applying multiple attributes are valid.</span></span>  
   
- `Inherited`를 `false`로 설정하면 특성이 지정된 클래스에서 파생된 클래스가 특성을 상속하지 않습니다. 예:  
+ <span data-ttu-id="ab141-114">`Inherited`를 `false`로 설정하면 특성이 지정된 클래스에서 파생된 클래스가 특성을 상속하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ab141-114">If `Inherited` is set to `false`, then the attribute is not inherited by classes that are derived from a class that is attributed.</span></span> <span data-ttu-id="ab141-115">예:</span><span class="sxs-lookup"><span data-stu-id="ab141-115">For example:</span></span>  
   
 ```csharp  
 using System;  
@@ -86,15 +77,15 @@ class BClass { }
 class DClass : BClass { }  
 ```  
   
- 이 경우 `Attr1`은 상속을 통해 `DClass`에 적용되지 않습니다.  
+ <span data-ttu-id="ab141-116">이 경우 `Attr1`은 상속을 통해 `DClass`에 적용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="ab141-116">In this case `Attr1` is not applied to `DClass` via inheritance.</span></span>  
   
-## <a name="remarks"></a>주의  
- `AttributeUsage` 특성은 단일 사용 특성입니다. 같은 클래스에 두 번 이상 적용될 수 없습니다. `AttributeUsage`는 <xref:System.AttributeUsageAttribute>의 별칭입니다.  
+## <a name="remarks"></a><span data-ttu-id="ab141-117">주의</span><span class="sxs-lookup"><span data-stu-id="ab141-117">Remarks</span></span>  
+ <span data-ttu-id="ab141-118">`AttributeUsage` 특성은 단일 사용 특성입니다. 같은 클래스에 두 번 이상 적용될 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="ab141-118">The `AttributeUsage` attribute is a single-use attribute--it cannot be applied more than once to the same class.</span></span> <span data-ttu-id="ab141-119">`AttributeUsage`는 <xref:System.AttributeUsageAttribute>의 별칭입니다.</span><span class="sxs-lookup"><span data-stu-id="ab141-119">`AttributeUsage` is an alias for <xref:System.AttributeUsageAttribute>.</span></span>  
   
- 자세한 내용은 [리플렉션을 사용하여 특성 액세스(C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)를 참조하세요.  
+ <span data-ttu-id="ab141-120">자세한 내용은 [리플렉션을 사용하여 특성 액세스(C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="ab141-120">For more information, see [Accessing Attributes by Using Reflection (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md).</span></span>  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 `AttributeUsage` 특성에 대한 `Inherited` 및 `AllowMultiple`의 영향과 클래스에 적용되는 사용자 지정 특성을 열거하는 방법을 보여 줍니다.  
+## <a name="example"></a><span data-ttu-id="ab141-121">예제</span><span class="sxs-lookup"><span data-stu-id="ab141-121">Example</span></span>  
+ <span data-ttu-id="ab141-122">다음 예제에서는 `AttributeUsage` 특성에 대한 `Inherited` 및 `AllowMultiple`의 영향과 클래스에 적용되는 사용자 지정 특성을 열거하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="ab141-122">The following example demonstrates the effect of the `Inherited` and `AllowMultiple` arguments to the `AttributeUsage` attribute, and how the custom attributes applied to a class can be enumerated.</span></span>  
   
 ```csharp  
 using System;  
@@ -141,7 +132,7 @@ public class TestAttributeUsage
 }  
 ```  
   
-## <a name="sample-output"></a>샘플 출력  
+## <a name="sample-output"></a><span data-ttu-id="ab141-123">샘플 출력</span><span class="sxs-lookup"><span data-stu-id="ab141-123">Sample Output</span></span>  
   
 ```  
 Attributes on Base Class:  
@@ -153,13 +144,12 @@ A3
 A2  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Attribute>   
- <xref:System.Reflection>   
- [C# 프로그래밍 가이드](../../../../csharp/programming-guide/index.md)   
- [특성](https://msdn.microsoft.com/library/5x6cd29c)   
- [리플렉션(C#)](../../../../csharp/programming-guide/concepts/reflection.md)   
- [특성](../../../../csharp/programming-guide/concepts/attributes/index.md)   
- [사용자 지정 특성 만들기(C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)   
- [리플렉션을 사용하여 특성 액세스(C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
-
+## <a name="see-also"></a><span data-ttu-id="ab141-124">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ab141-124">See Also</span></span>  
+ <xref:System.Attribute>  
+ <xref:System.Reflection>  
+ [<span data-ttu-id="ab141-125">C# 프로그래밍 가이드</span><span class="sxs-lookup"><span data-stu-id="ab141-125">C# Programming Guide</span></span>](../../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="ab141-126">특성</span><span class="sxs-lookup"><span data-stu-id="ab141-126">Attributes</span></span>](https://msdn.microsoft.com/library/5x6cd29c)  
+ [<span data-ttu-id="ab141-127">리플렉션(C#)</span><span class="sxs-lookup"><span data-stu-id="ab141-127">Reflection (C#)</span></span>](../../../../csharp/programming-guide/concepts/reflection.md)  
+ [<span data-ttu-id="ab141-128">특성</span><span class="sxs-lookup"><span data-stu-id="ab141-128">Attributes</span></span>](../../../../csharp/programming-guide/concepts/attributes/index.md)  
+ [<span data-ttu-id="ab141-129">사용자 지정 특성 만들기(C#)</span><span class="sxs-lookup"><span data-stu-id="ab141-129">Creating Custom Attributes (C#)</span></span>](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
+ [<span data-ttu-id="ab141-130">리플렉션을 사용하여 특성 액세스(C#)</span><span class="sxs-lookup"><span data-stu-id="ab141-130">Accessing Attributes by Using Reflection (C#)</span></span>](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

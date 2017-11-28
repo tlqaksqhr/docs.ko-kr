@@ -1,36 +1,34 @@
 ---
-title: "CLR 형식에 XML 데이터 형식 매핑 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "CLR 형식에 XML 데이터 형식 매핑"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
-caps.latest.revision: 2
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 3b6e67d27de33e61f5d5190249e90ac48e1aaaec
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# CLR 형식에 XML 데이터 형식 매핑
-다음 표에서는 XML 데이터 형식과 CLR\(공용 언어 런타임\) 형식 간의 기본 매핑에 대해 설명합니다.  
+# <a name="mapping-xml-data-types-to-clr-types"></a><span data-ttu-id="ba59b-102">CLR 형식에 XML 데이터 형식 매핑</span><span class="sxs-lookup"><span data-stu-id="ba59b-102">Mapping XML Data Types to CLR Types</span></span>
+<span data-ttu-id="ba59b-103">다음 표에서는 XML 데이터 형식과 CLR(공용 언어 런타임) 형식 간의 기본 매핑에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="ba59b-103">The following table describes the default mapping between the XML data types and the common language runtime (CLR) types.</span></span>  
   
-## 다음 표에서는 XML 데이터 형식을 CLR 형식으로 매핑하는 기본 매핑에 대해 설명합니다.  
+## <a name="the-following-table-describes-the-default-mappings-of-an-xml-data-type-to-a-clr-type"></a><span data-ttu-id="ba59b-104">다음 표에서는 XML 데이터 형식을 CLR 형식으로 매핑하는 기본 매핑에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="ba59b-104">The following table describes the default mappings of an XML data type to a CLR type.</span></span>  
   
 > [!NOTE]
->  `xs` 및 `xdt` 접두사는 각각 http:\/\/www.w3.org\/2001\/XMLSchema 및 http:\/\/www.w3.org\/2003\/05\/xpath\-datatypes 네임스페이스 URI로 매핑됩니다.  
+>  <span data-ttu-id="ba59b-105">`xs` 및 `xdt` 접두사는 각각 http://www.w3.org/2001/XMLSchema 및 http://www.w3.org/2003/05/xpath-datatypes 네임스페이스 URI로 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="ba59b-105">The `xs` and the `xdt` prefixes are mapped to the http://www.w3.org/2001/XMLSchema and the http://www.w3.org/2003/05/xpath-datatypes namespace URIs respectively.</span></span>  
   
-|XML 형식|CLR 형식|  
-|------------|------------|  
+|<span data-ttu-id="ba59b-106">XML 형식</span><span class="sxs-lookup"><span data-stu-id="ba59b-106">XML Type</span></span>|<span data-ttu-id="ba59b-107">CLR 형식</span><span class="sxs-lookup"><span data-stu-id="ba59b-107">CLR Type</span></span>|  
+|--------------|--------------|  
 |`xs:anyURI`|<xref:System.Uri>|  
 |`xs:base64Binary`|`Byte[]`|  
 |`xs:boolean`|<xref:System.Boolean>|  
@@ -80,13 +78,13 @@ caps.handback.revision: 2
 |`xdt:untypedAtomic`|<xref:System.String>|  
 |`xdt:anyAtomicType`|<xref:System.Object>|  
 |`xs:anySimpleType`|<xref:System.String>|  
-|문서 노드|<xref:System.Xml.XPath.XPathNavigator>|  
-|요소 노드|<xref:System.Xml.XPath.XPathNavigator>|  
-|특성 노드|<xref:System.Xml.XPath.XPathNavigator>|  
-|네임스페이스 노드|<xref:System.Xml.XPath.XPathNavigator>|  
-|텍스트 노드|<xref:System.Xml.XPath.XPathNavigator>|  
-|주석 노드|<xref:System.Xml.XPath.XPathNavigator>|  
-|처리 명령 노드|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="ba59b-108">문서 노드</span><span class="sxs-lookup"><span data-stu-id="ba59b-108">Document node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="ba59b-109">요소 노드</span><span class="sxs-lookup"><span data-stu-id="ba59b-109">Element node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="ba59b-110">특성 노드</span><span class="sxs-lookup"><span data-stu-id="ba59b-110">Attribute node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="ba59b-111">네임스페이스 노드</span><span class="sxs-lookup"><span data-stu-id="ba59b-111">Namespace node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="ba59b-112">텍스트 노드</span><span class="sxs-lookup"><span data-stu-id="ba59b-112">Text node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="ba59b-113">주석 노드</span><span class="sxs-lookup"><span data-stu-id="ba59b-113">Comment node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="ba59b-114">처리 명령 노드</span><span class="sxs-lookup"><span data-stu-id="ba59b-114">Processing instruction node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
   
-## 참고 항목  
- [System.Xml 클래스의 형식 지원](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+## <a name="see-also"></a><span data-ttu-id="ba59b-115">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ba59b-115">See Also</span></span>  
+ [<span data-ttu-id="ba59b-116">System.Xml 클래스의 형식 지원</span><span class="sxs-lookup"><span data-stu-id="ba59b-116">Type Support in the System.Xml Classes</span></span>](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

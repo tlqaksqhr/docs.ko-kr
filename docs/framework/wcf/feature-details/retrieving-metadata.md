@@ -1,43 +1,45 @@
 ---
-title: "메타데이터 검색 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "메타데이터 [WCF], 검색"
+title: "메타데이터 검색"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: metadata [WCF], retrieving
 ms.assetid: 18d8ba4c-af0f-4827-a50b-4202d767bacc
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 51d12f091100e73a87b0c7203db1fbf1eeed77bb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 메타데이터 검색
-메타데이터 검색은 WS\-MEX\(WS\-MetadataExchange\) 메타데이터 끝점 또는 HTTP\/GET 메타데이터 끝점 같은 메타데이터 끝점에서 메타데이터를 요청 및 검색하는 프로세스입니다.  
+# <a name="retrieving-metadata"></a><span data-ttu-id="7a655-102">메타데이터 검색</span><span class="sxs-lookup"><span data-stu-id="7a655-102">Retrieving Metadata</span></span>
+<span data-ttu-id="7a655-103">메타데이터 검색은 WS-MEX(WS-MetadataExchange) 메타데이터 끝점 또는 HTTP/GET 메타데이터 끝점 같은 메타데이터 끝점에서 메타데이터를 요청 및 검색하는 프로세스입니다.</span><span class="sxs-lookup"><span data-stu-id="7a655-103">Metadata retrieval is the process of requesting and retrieving metadata from a metadata endpoint, such as a WS-MetadataExchange (MEX) metadata endpoint or an HTTP/GET metadata endpoint.</span></span>  
   
-## Svcutil.exe를 사용하여 명령줄에서 메타데이터 검색  
- [ServiceModel Metadata 유틸리티 도구\(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 도구를 사용하고 `/target:metadata` 스위치와 주소를 전달하여 WS\-MetadataExchange 또는 HTTP\/GET 요청을 통해 서비스 메타데이터를 검색할 수 있습니다.Svcutil.exe는 지정된 주소의 메타데이터를 다운로드하고 파일을 디스크에 저장합니다.Svcutil.exe는 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=fullName> 인스턴스를 내부적으로 사용하고, 구성에서 Svcutil.exe에 입력으로 전달된 주소 스키마와 이름이 같은 <xref:System.ServiceModel.Description.IMetadataExchange> 끝점 구성을 로드합니다.  
+## <a name="retrieving-metadata-from-the-command-line-using-svcutilexe"></a><span data-ttu-id="7a655-104">Svcutil.exe를 사용하여 명령줄에서 메타데이터 검색</span><span class="sxs-lookup"><span data-stu-id="7a655-104">Retrieving Metadata from the Command Line Using Svcutil.exe</span></span>  
+ <span data-ttu-id="7a655-105">사용 하 여 Ws-metadataexchange 또는 HTTP/GET 요청을 사용 하 여 서비스 메타 데이터를 검색할 수 있습니다는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 도구 및 전달 된 `/target:metadata` 스위치와 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="7a655-105">You can retrieve service metadata using WS-MetadataExchange or HTTP/GET requests by using the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) tool and passing the `/target:metadata` switch and an address.</span></span> <span data-ttu-id="7a655-106">Svcutil.exe는 지정된 주소의 메타데이터를 다운로드하고 파일을 디스크에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="7a655-106">Svcutil.exe downloads the metadata at the specified address and saves the file to disk.</span></span> <span data-ttu-id="7a655-107">Svcutil.exe는 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 인스턴스를 내부적으로 사용하고, 구성에서 Svcutil.exe에 입력으로 전달된 주소 스키마와 이름이 같은 <xref:System.ServiceModel.Description.IMetadataExchange> 끝점 구성을 로드합니다.</span><span class="sxs-lookup"><span data-stu-id="7a655-107">Svcutil.exe uses a <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> instance internally and loads from configuration the <xref:System.ServiceModel.Description.IMetadataExchange> endpoint configuration whose name matches the scheme of the address passed to Svcutil.exe as input.</span></span>  
   
-## MetadataExchangeClient를 사용하여 프로그래밍 방식으로 메타데이터 검색  
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 WS\-MetadataExchange 및 HTTP\/GET 요청과 같은 표준화된 프로토콜을 통해 서비스 메타데이터를 검색할 수 있습니다.이러한 프로토콜은 모두 <xref:System.ServiceModel.Description.MetadataExchangeClient> 형식에서 지원합니다.메타데이터 끝점의 주소와 선택적인 바인딩을 제공하여 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=fullName> 형식을 통해 서비스 메타데이터를 검색합니다.<xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=fullName> 인스턴스에서 사용되는 바인딩은 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 정적 클래스의 기본 바인딩, 사용자 제공 바인딩 또는 `IMetadataExchange` 계약의 끝점 구성에서 로드된 바인딩 중 하나입니다.<xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=fullName>는 <xref:System.Net.HttpWebRequest> 형식을 통해 메타데이터에 대한 HTTP URL 참조를 확인할 수도 있습니다.  
+## <a name="retrieving-metadata-programmatically-using-the-metadataexchangeclient"></a><span data-ttu-id="7a655-108">MetadataExchangeClient를 사용하여 프로그래밍 방식으로 메타데이터 검색</span><span class="sxs-lookup"><span data-stu-id="7a655-108">Retrieving Metadata Programmatically Using the MetadataExchangeClient</span></span>  
+ [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="7a655-109">에서는 WS-MetadataExchange 및 HTTP/GET 요청과 같은 표준화된 프로토콜을 통해 서비스 메타데이터를 검색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7a655-109"> can retrieve service metadata using standardized protocols such as WS-MetadataExchange and HTTP/GET requests.</span></span> <span data-ttu-id="7a655-110">이러한 프로토콜은 모두 <xref:System.ServiceModel.Description.MetadataExchangeClient> 형식에서 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="7a655-110">Both of these protocols are supported by the <xref:System.ServiceModel.Description.MetadataExchangeClient> type.</span></span> <span data-ttu-id="7a655-111">메타데이터 끝점의 주소와 선택적인 바인딩을 제공하여 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 형식을 통해 서비스 메타데이터를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="7a655-111">You retrieve service metadata using the <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> type by providing an address for the metadata endpoint and an optional binding.</span></span> <span data-ttu-id="7a655-112"><xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 인스턴스에서 사용되는 바인딩은 <xref:System.ServiceModel.Description.MetadataExchangeBindings> 정적 클래스의 기본 바인딩, 사용자 제공 바인딩 또는 `IMetadataExchange` 계약의 끝점 구성에서 로드된 바인딩 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="7a655-112">The binding used by a <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> instance can be one of the default bindings from the <xref:System.ServiceModel.Description.MetadataExchangeBindings> static class, a user-supplied binding, or a binding loaded from an endpoint configuration for the `IMetadataExchange` contract.</span></span> <span data-ttu-id="7a655-113"><xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>는 <xref:System.Net.HttpWebRequest> 형식을 통해 메타데이터에 대한 HTTP URL 참조를 확인할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7a655-113">The <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> can also resolve HTTP URL references to metadata using the <xref:System.Net.HttpWebRequest> type.</span></span>  
   
- 기본적으로 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=fullName> 인스턴스는 단일 <xref:System.ServiceModel.ChannelFactory> 인스턴스에 연결됩니다.<xref:System.ServiceModel.Description.MetadataExchangeClient.GetChannelFactory%2A> 가상 메서드를 재정의하여 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=fullName>에서 사용하는 <xref:System.ServiceModel.ChannelFactory?displayProperty=fullName> 인스턴스를 변경하거나 바꿀 수 있습니다.마찬가지로 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetWebRequest%2A?displayProperty=fullName> 가상 메서드를 재정의하여 HTTP\/GET 요청을 만들기 위해 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=fullName>에서 사용하는 <xref:System.Net.HttpWebRequest> 인스턴스를 변경하거나 바꿀 수 있습니다.  
+ <span data-ttu-id="7a655-114">기본적으로 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 인스턴스는 하나의 <xref:System.ServiceModel.ChannelFactory> 인스턴스에 연결됩니다.</span><span class="sxs-lookup"><span data-stu-id="7a655-114">By default, a <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> instance is tied to a single <xref:System.ServiceModel.ChannelFactory> instance.</span></span> <span data-ttu-id="7a655-115"><xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> 가상 메서드를 재정의하여 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>에서 사용하는 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetChannelFactory%2A> 인스턴스를 변경하거나 바꿀 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7a655-115">You can change or replace the <xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType> instance used by a <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> by overriding the <xref:System.ServiceModel.Description.MetadataExchangeClient.GetChannelFactory%2A> virtual method.</span></span> <span data-ttu-id="7a655-116">마찬가지로 <xref:System.Net.HttpWebRequest> 가상 메서드를 재정의하여 HTTP/GET 요청을 만들기 위해 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>에서 사용하는 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetWebRequest%2A?displayProperty=nameWithType> 인스턴스를 변경하거나 바꿀 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7a655-116">Similarly, you can change or replace the <xref:System.Net.HttpWebRequest> instance used by a <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> to make HTTP/GET requests by overriding the <xref:System.ServiceModel.Description.MetadataExchangeClient.GetWebRequest%2A?displayProperty=nameWithType> virtual method.</span></span>  
   
-## 단원 내용  
- [방법: Svcutil.exe를 사용하여 메타데이터 문서 다운로드](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)  
- Svcutil.exe를 사용하여 메타데이터 문서를 다운로드하는 방법을 보여 줍니다.  
+## <a name="in-this-section"></a><span data-ttu-id="7a655-117">단원 내용</span><span class="sxs-lookup"><span data-stu-id="7a655-117">In This Section</span></span>  
+ [<span data-ttu-id="7a655-118">방법: Svcutil.exe를 사용 하 여 메타 데이터 문서를 다운로드 하려면</span><span class="sxs-lookup"><span data-stu-id="7a655-118">How to: Use Svcutil.exe to Download Metadata Documents</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)  
+ <span data-ttu-id="7a655-119">Svcutil.exe를 사용하여 메타데이터 문서를 다운로드하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="7a655-119">Demonstrates how to use Svcutil.exe to download metadata documents.</span></span>  
   
- [방법: MetadataResolver를 사용하여 동적으로 바인딩 메타데이터 가져오기](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md)  
- <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=fullName>를 사용하여 바인딩 메타데이터를 런타임에 동적으로 가져오는 방법을 보여 줍니다.  
+ [<span data-ttu-id="7a655-120">방법: MetadataResolver를 사용 하 여 동적으로 바인딩 메타 데이터 가져오기</span><span class="sxs-lookup"><span data-stu-id="7a655-120">How to: Use MetadataResolver to Obtain Binding Metadata Dynamically</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md)  
+ <span data-ttu-id="7a655-121"><xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>를 사용하여 바인딩 메타데이터를 런타임에 동적으로 가져오는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="7a655-121">Demonstrates how to use the <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType> to obtain binding metadata dynamically at runtime.</span></span>  
   
- [방법: MetadataExchangeClient를 사용하여 메타데이터 검색](../../../../docs/framework/wcf/feature-details/how-to-use-metadataexchangeclient-to-retrieve-metadata.md)  
- <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=fullName> 클래스를 사용하여 파일에 기록하거나 다른 용도로 사용할 <xref:System.ServiceModel.Description.MetadataSection?displayProperty=fullName> 개체가 있는 <xref:System.ServiceModel.Description.MetadataSet?displayProperty=fullName> 개체에 메타데이터 파일을 다운로드하는 방법을 보여 줍니다.  
+ [<span data-ttu-id="7a655-122">방법: MetadataExchangeClient를 사용 하 여 메타 데이터를 검색 합니다.</span><span class="sxs-lookup"><span data-stu-id="7a655-122">How to: Use MetadataExchangeClient to Retrieve Metadata</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-metadataexchangeclient-to-retrieve-metadata.md)  
+ <span data-ttu-id="7a655-123"><xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 클래스를 사용하여 파일에 기록하거나 다른 용도로 사용할 <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType> 개체가 있는 <xref:System.ServiceModel.Description.MetadataSection?displayProperty=nameWithType> 개체에 메타데이터 파일을 다운로드하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="7a655-123">Demonstrates how to use the <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> class to download metadata files into a <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType> object that contains <xref:System.ServiceModel.Description.MetadataSection?displayProperty=nameWithType> objects to write to files or for other uses.</span></span>  
   
-## 참고 항목  
+## <a name="see-also"></a><span data-ttu-id="7a655-124">참고 항목</span><span class="sxs-lookup"><span data-stu-id="7a655-124">See Also</span></span>  
  <xref:System.ServiceModel.Description.MetadataExchangeClient>

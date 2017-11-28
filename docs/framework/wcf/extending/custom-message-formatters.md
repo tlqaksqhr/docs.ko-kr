@@ -1,45 +1,48 @@
 ---
-title: "사용자 지정 메시지 포맷터 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "사용자 지정 메시지 포맷터"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c07435f3-5214-4791-8961-2c2b61306d71
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 01998d0ac732f63f6771c47bfc76a8207a5531f3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 사용자 지정 메시지 포맷터
-메시지 내용은 응용 프로그램에 편리한 형식이 아닌 XML 형식인 경우가 많습니다.  응용 프로그램은 속성을 가져오고 설정하여 개체를 조작합니다.  [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 *데이터 계약*을 사용하여 <xref:System.ServiceModel.Channels.Message> 개체를 응용 프로그램이 쉽게 처리할 수 있는 개체로 변환합니다.  이러한 프로세스를 serialization 및 deserialization이라고 합니다.  전송 계층에서 메시지 통신 형식에 대해 수행하는 관련 없는 프로세스인 serialization 및 deserialization을 설명하는 데에도 동일한 용어가 사용됩니다.  
+# <a name="custom-message-formatters"></a><span data-ttu-id="037fe-102">사용자 지정 메시지 포맷터</span><span class="sxs-lookup"><span data-stu-id="037fe-102">Custom Message Formatters</span></span>
+<span data-ttu-id="037fe-103">메시지 내용은 응용 프로그램에 편리한 형식이 아닌 XML 형식인 경우가 많습니다.</span><span class="sxs-lookup"><span data-stu-id="037fe-103">The content in a message is often in the form of XML, which is usually not a convenient format for an application.</span></span> <span data-ttu-id="037fe-104">응용 프로그램은 속성을 가져오고 설정하여 개체를 조작합니다.</span><span class="sxs-lookup"><span data-stu-id="037fe-104">Applications manipulate objects, getting and setting their properties.</span></span> [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="037fe-105">사용 하 여는 *데이터 계약* 변환 하는 <xref:System.ServiceModel.Channels.Message> 응용 프로그램에서 쉽게 처리할 수 있는 개체로 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="037fe-105"> uses the *Data Contract* to convert a <xref:System.ServiceModel.Channels.Message> object into an object easily handled by an application.</span></span> <span data-ttu-id="037fe-106">이러한 프로세스를 serialization 및 deserialization이라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="037fe-106">These processes are called serialization and deserialization.</span></span> <span data-ttu-id="037fe-107">전송 계층에서 메시지 통신 형식에 대해 수행하는 관련 없는 프로세스인 serialization 및 deserialization을 설명하는 데에도 동일한 용어가 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="037fe-107">Note that these same terms are used to describe the serialization and deserialization done by the transport layer to and from the message wire format, which is an unrelated process.</span></span>  
   
- 데이터 계약을 통해 수행할 수 없는 메시지 및 개체 간의 특별한 변환을 구현해야 하는 경우 사용자 지정 메시지 포맷터를 사용할 수 있습니다.  이렇게 하려면 클라이언트 또는 서비스에서 특정 계약 작업의 실행 동작을 수정하거나 확장합니다.  
+ <span data-ttu-id="037fe-108">데이터 계약을 통해 수행할 수 없는 메시지 및 개체 간의 특별한 변환을 구현해야 하는 경우 사용자 지정 메시지 포맷터를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="037fe-108">You can use a custom message formatter if you need to implement a specialized conversion between messages and objects that you cannot accomplish by means of a Data Contract.</span></span> <span data-ttu-id="037fe-109">이렇게 하려면 클라이언트 또는 서비스에서 특정 계약 작업의 실행 동작을 수정하거나 확장합니다.</span><span class="sxs-lookup"><span data-stu-id="037fe-109">Do this by modifying or extending the execution behavior of a specific contract operation on a client or a service.</span></span>  
   
-## 클라이언트의 사용자 지정 메시지 포맷터  
- <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> 인터페이스는 클라이언트 응용 프로그램에 대해 메시지를 개체로 변환하고, 개체를 메시지로 변환하는 과정을 제어하는 데 사용되는 메서드를 정의합니다.  
+## <a name="custom-message-formatters-on-the-client"></a><span data-ttu-id="037fe-110">클라이언트의 사용자 지정 메시지 포맷터</span><span class="sxs-lookup"><span data-stu-id="037fe-110">Custom Message Formatters on the Client</span></span>  
+ <span data-ttu-id="037fe-111"><xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> 인터페이스는 클라이언트 응용 프로그램에 대해 메시지를 개체로 변환하고, 개체를 메시지로 변환하는 과정을 제어하는 데 사용되는 메서드를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="037fe-111">The <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> interface defines methods that are used to control the conversion of messages into objects and objects into messages for client applications.</span></span>  
   
- 이 인터페이스를 구현해야 합니다.  먼저 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.DeserializeReply%2A> 메서드를 재정의하여 메시지를 deserialize합니다.  이 메서드는 들어오는 메시지가 수신된 후, 메시지가 클라이언트 작업에 디스패치되기 전에 호출됩니다.  
+ <span data-ttu-id="037fe-112">이 인터페이스를 구현해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="037fe-112">You must implement this interface.</span></span> <span data-ttu-id="037fe-113">먼저 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.DeserializeReply%2A> 메서드를 재정의하여 메시지를 deserialize합니다.</span><span class="sxs-lookup"><span data-stu-id="037fe-113">First override the <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.DeserializeReply%2A> method to deserialize a message.</span></span> <span data-ttu-id="037fe-114">이 메서드는 들어오는 메시지가 수신된 후, 메시지가 클라이언트 작업에 디스패치되기 전에 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="037fe-114">This method is called after an incoming message is received, but before it is dispatched to the client operation.</span></span>  
   
- 다음에는 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.SerializeRequest%2A> 메서드를 재정의하여 개체를 serialize합니다.  이 메서드는 보내는 메시지를 보내기 전에 호출됩니다.  
+ <span data-ttu-id="037fe-115">다음에는 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.SerializeRequest%2A> 메서드를 재정의하여 개체를 serialize합니다.</span><span class="sxs-lookup"><span data-stu-id="037fe-115">Next, override the <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.SerializeRequest%2A> method to serialize an object.</span></span> <span data-ttu-id="037fe-116">이 메서드는 보내는 메시지를 보내기 전에 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="037fe-116">This method is called prior to sending an outgoing message.</span></span>  
   
- 사용자 지정 포맷터를 서비스 응용 프로그램에 삽입하려면 작업 동작을 사용하여 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> 개체를 <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A> 속성에 할당합니다.  동작에 대한 자세한 내용은 [동작을 사용하여 런타임 구성 및 확장](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)을 참조하세요.  
+ <span data-ttu-id="037fe-117">사용자 지정 포맷터를 서비스 응용 프로그램에 삽입하려면 작업 동작을 사용하여 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> 개체를 <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A> 속성에 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="037fe-117">To insert the custom formatter into the service application, assign the <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> object to the <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A> property using an operation behavior.</span></span> <span data-ttu-id="037fe-118">동작에 대 한 정보를 참조 하십시오. [구성 하 고 런타임 동작을 확장](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="037fe-118">For information about behaviors, see [Configuring and Extending the Runtime with Behaviors](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).</span></span>  
   
-## 서비스의 사용자 지정 메시지 포맷터  
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> 인터페이스는 <xref:System.ServiceModel.Channels.Message> 개체를 작업 매개 변수로 변환하고 매개 변수에서 서비스 응용 프로그램의 <xref:System.ServiceModel.Channels.Message> 개체로 변환하는 메서드를 정의합니다.  
+## <a name="custom-message-formatters-on-the-service"></a><span data-ttu-id="037fe-119">서비스의 사용자 지정 메시지 포맷터</span><span class="sxs-lookup"><span data-stu-id="037fe-119">Custom Message Formatters on the Service</span></span>  
+ <span data-ttu-id="037fe-120"><xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> 인터페이스는 <xref:System.ServiceModel.Channels.Message> 개체를 작업 매개 변수로 변환하고 매개 변수에서 서비스 응용 프로그램의 <xref:System.ServiceModel.Channels.Message> 개체로 변환하는 메서드를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="037fe-120">The <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> interface defines methods that convert a <xref:System.ServiceModel.Channels.Message> object into parameters for an operation and from parameters into a <xref:System.ServiceModel.Channels.Message> object in a service application.</span></span>  
   
- 이 인터페이스를 구현해야 합니다.  먼저 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.DeserializeReply%2A> 메서드를 재정의하여 메시지를 deserialize합니다.  이 메서드는 들어오는 메시지가 수신된 후, 메시지가 클라이언트 작업에 디스패치되기 전에 호출됩니다.  
+ <span data-ttu-id="037fe-121">이 인터페이스를 구현해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="037fe-121">You must implement this interface.</span></span> <span data-ttu-id="037fe-122">먼저 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.DeserializeReply%2A> 메서드를 재정의하여 메시지를 deserialize합니다.</span><span class="sxs-lookup"><span data-stu-id="037fe-122">First override the <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.DeserializeReply%2A> method to deserialize a message.</span></span> <span data-ttu-id="037fe-123">이 메서드는 들어오는 메시지가 수신된 후, 메시지가 클라이언트 작업에 디스패치되기 전에 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="037fe-123">This method is called after an incoming message is received, but before it is dispatched to the client operation.</span></span>  
   
- 다음에는 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.SerializeRequest%2A> 메서드를 재정의하여 개체를 serialize합니다.  이 메서드는 보내는 메시지를 보내기 전에 호출됩니다.  
+ <span data-ttu-id="037fe-124">다음에는 <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.SerializeRequest%2A> 메서드를 재정의하여 개체를 serialize합니다.</span><span class="sxs-lookup"><span data-stu-id="037fe-124">Next, override the <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.SerializeRequest%2A> method to serialize an object.</span></span> <span data-ttu-id="037fe-125">이 메서드는 보내는 메시지를 보내기 전에 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="037fe-125">This method is called prior to sending an outgoing message.</span></span>  
   
- 사용자 지정 포맷터를 서비스 응용 프로그램에 삽입하려면 작업 동작을 사용하여 <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> 개체를 <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> 속성에 할당합니다.  동작에 대한 자세한 내용은 [동작을 사용하여 런타임 구성 및 확장](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)을 참조하세요.  
+ <span data-ttu-id="037fe-126">사용자 지정 포맷터를 서비스 응용 프로그램에 삽입하려면 작업 동작을 사용하여 <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> 개체를 <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> 속성에 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="037fe-126">To insert the custom formatter into the service application, assign the <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> object to the <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> property using an operation behavior.</span></span> <span data-ttu-id="037fe-127">동작에 대 한 정보를 참조 하십시오. [구성 하 고 런타임 동작을 확장](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="037fe-127">For information about behaviors, see [Configuring and Extending the Runtime with Behaviors](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).</span></span>  
   
-## 참고 항목  
- <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>   
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>   
- [동작을 사용하여 런타임 구성 및 확장](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+## <a name="see-also"></a><span data-ttu-id="037fe-128">참고 항목</span><span class="sxs-lookup"><span data-stu-id="037fe-128">See Also</span></span>  
+ <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>  
+ [<span data-ttu-id="037fe-129">구성 하 고 런타임 동작을 확장</span><span class="sxs-lookup"><span data-stu-id="037fe-129">Configuring and Extending the Runtime with Behaviors</span></span>](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

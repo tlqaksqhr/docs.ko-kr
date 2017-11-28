@@ -1,90 +1,96 @@
 ---
-title: "종속성 속성 콜백 및 유효성 검사 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "콜백, 유효성 검사"
-  - "강제 값 콜백"
-  - "종속성 속성, 콜백"
-  - "종속성 속성, 유효성 검사"
-  - "종속성 속성 유효성 검사"
+title: "종속성 속성 콜백 및 유효성 검사"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- dependency properties [WPF], validation
+- coerce value callbacks [WPF]
+- callbacks [WPF], validation
+- dependency properties [WPF], callbacks
+- validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0d1b62c7f49653627c626bce2583b2799df931dc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 종속성 속성 콜백 및 유효성 검사
-이 항목에서는 유효성 검사 확인, 속성의 유효 값이 변경될 때마다 호출되는 콜백, 값 확인 시 발생할 수 있는 외부 영향 재정의 등 속성 관련 기능을 위한 대체 사용자 지정 구현을 사용하여 종속성 속성을 만드는 방법에 대해 설명합니다.  또한 이러한 기법을 사용하여 기본 속성 시스템 동작을 확장하는 것이 적절한 시나리오에 대해서도 설명합니다.  
+# <a name="dependency-property-callbacks-and-validation"></a><span data-ttu-id="466c6-102">종속성 속성 콜백 및 유효성 검사</span><span class="sxs-lookup"><span data-stu-id="466c6-102">Dependency Property Callbacks and Validation</span></span>
+<span data-ttu-id="466c6-103">이 항목에서는 유효성 검사 확인, 속성의 유효 값이 변경될 때마다 호출되는 콜백, 값 결정에 대한 가능한 외부 영향 재정의 등 속성 관련 기능에 대체 사용자 지정 구현을 사용하여 종속성 속성을 만드는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-103">This topic describes how to create dependency properties using alternative custom implementations for property-related features such as validation determination, callbacks that are invoked whenever the property's effective value is changed, and overriding possible outside influences on value determination.</span></span> <span data-ttu-id="466c6-104">또한 이 항목에서는 이러한 기술을 사용한 기본 속성 시스템 동작 확장이 적절한 시나리오에 대해서도 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-104">This topic also discusses scenarios where expanding on the default property system behaviors by using these techniques is appropriate.</span></span>  
   
-   
+  
   
 <a name="prerequisites"></a>   
-## 사전 요구 사항  
- 이 항목에서는 사용자가 종속성 속성을 구현하는 기본 시나리오와 사용자 지정 종속성 속성에 메타데이터를 적용하는 방법에 대해 잘 알고 있다고 가정합니다.  자세한 내용은 [사용자 지정 종속성 속성](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) 및 [종속성 속성 메타데이터](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)를 참조하십시오.  
+## <a name="prerequisites"></a><span data-ttu-id="466c6-105">필수 구성 요소</span><span class="sxs-lookup"><span data-stu-id="466c6-105">Prerequisites</span></span>  
+ <span data-ttu-id="466c6-106">이 항목에서는 종속성 속성을 구현하는 기본 시나리오와 메타데이터가 사용자 지정 종속성 속성에 적용되는 방법을 이해하고 있다고 가정합니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-106">This topic assumes that you understand the basic scenarios of implementing a dependency property, and how metadata is applied to a custom dependency property.</span></span> <span data-ttu-id="466c6-107">컨텍스트는 [사용자 지정 종속성 속성](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) 및 [종속성 속성 메타데이터](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="466c6-107">See [Custom Dependency Properties](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) and [Dependency Property Metadata](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md) for context.</span></span>  
   
 <a name="Validation_Callbacks"></a>   
-## 유효성 검사 콜백  
- 유효성 검사 콜백은 처음 등록할 때 종속성 속성에 할당할 수 있습니다.  유효성 검사 콜백은 속성 메타데이터의 일부가 아니며, <xref:System.Windows.DependencyProperty.Register%2A> 메서드의 직접 입력입니다.  따라서 종속성 속성에 대한 유효성 검사 콜백을 만든 후에는 새 구현으로 재정의할 수 없습니다.  
+## <a name="validation-callbacks"></a><span data-ttu-id="466c6-108">유효성 검사 콜백</span><span class="sxs-lookup"><span data-stu-id="466c6-108">Validation Callbacks</span></span>  
+ <span data-ttu-id="466c6-109">유효성 검사 콜백은 종속성 속성을 처음 등록할 때 이 속성에 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-109">Validation callbacks can be assigned to a dependency property when you first register it.</span></span> <span data-ttu-id="466c6-110">유효성 검사 콜백을 속성 메타 데이터의 일부가 아닙니다. 직접 입력 된 <xref:System.Windows.DependencyProperty.Register%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="466c6-110">The validation callback is not part of property metadata; it is a direct input of the <xref:System.Windows.DependencyProperty.Register%2A> method.</span></span> <span data-ttu-id="466c6-111">따라서 종속성 속성에 대해 유효성 검사 콜백을 만든 다음에는 새 구현으로 재정의할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-111">Therefore, once a validation callback is created for a dependency property, it cannot be overridden by a new implementation.</span></span>  
   
  [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
  [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
- 콜백은 개체 값을 제공하는 방식으로 구현되며,  제공된 값이 속성에 적합한 경우에는 `true`를 반환하고 적합하지 않은 경우에는 `false`를 반환합니다.  여기에서는 속성이 속성 시스템에 등록된 올바른 형식이라고 가정하므로 일반적으로 콜백 내에서 형식 확인이 수행되지 않습니다.  콜백은 속성 시스템에 의해 다양한 작업에 사용됩니다.  이러한 작업에는 기본값에 의한 초기 형식 초기화, <xref:System.Windows.DependencyObject.SetValue%2A> 호출을 통한 프로그래밍 방식의 변경, 제공된 새 기본값으로 메타데이터를 재정의하는 작업 등이 포함됩니다.  이러한 작업 중 하나에서 유효성 검사 콜백이 호출되고 `false`가 반환되는 경우 예외가 발생됩니다.  응용 프로그램 작성자는 이러한 예외를 처리해야 합니다.  유효성 검사 콜백의 일반적인 용도는 열거형 값의 유효성을 검사하는 것이거나 속성이 0 이상이 되어야 하는 측정값을 설정할 때 integer 또는 double 값을 제약하는 것입니다.  
+ <span data-ttu-id="466c6-112">콜백은 개체 값이 제공되도록 구현됩니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-112">The callbacks are implemented such that they are provided an object value.</span></span> <span data-ttu-id="466c6-113">제공된 값이 속성에 유효하면 `true`를 반환하고, 그러지 않으면 `false`를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-113">They return `true` if the provided value is valid for the property; otherwise, they return `false`.</span></span> <span data-ttu-id="466c6-114">속성은 속성 시스템에 등록된 형식에 따라 올바른 형식이 되므로 콜백 내에서 형식 검사가 일반적으로 수행되지 않는다고 간주합니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-114">It is assumed that the property is of the correct type per the type registered with the property system, so checking type within the callbacks is not ordinarily done.</span></span> <span data-ttu-id="466c6-115">콜백은 다양한 작업에서 속성 시스템에 의해 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-115">The callbacks are used by the property system in a variety of different operations.</span></span> <span data-ttu-id="466c6-116">호출 하 여 초기 형식 초기화 기본값, 프로그래밍 방식 변경 포함 <xref:System.Windows.DependencyObject.SetValue%2A>, 메타 데이터를 제공 하는 새 기본 값으로 재정의 하려고 합니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-116">This includes the initial type initialization by default value, programmatic change by invoking <xref:System.Windows.DependencyObject.SetValue%2A>, or attempts to override metadata with new default value provided.</span></span> <span data-ttu-id="466c6-117">유효성 검사 콜백이 이러한 작업에 의해 호출되고 `false`를 반환하면 예외가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-117">If the validation callback is invoked by any of these operations, and returns `false`, then an exception will be raised.</span></span> <span data-ttu-id="466c6-118">응용 프로그램 작성자는 이러한 예외를 처리할 수 있도록 준비해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-118">Application writers must be prepared to handle these exceptions.</span></span> <span data-ttu-id="466c6-119">유효성 검사 콜백의 일반적인 용도는 열거형 값의 유효성을 검사하거나 속성이 0 이상이어야 하는 측정값을 설정할 때 정수 또는 double 값을 제약하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-119">A common use of validation callbacks is validating enumeration values, or constraining values of integers or doubles when the property sets measurements that must be zero or greater.</span></span>  
   
- 유효성 검사 콜백은 인스턴스 유효성 검사기가 아니라 클래스 유효성 검사기로 사용됩니다.  콜백 매개 변수는 유효성을 검사할 속성이 설정되어 있는 특정 <xref:System.Windows.DependencyObject>를 전달하지 않습니다.  따라서 인스턴스별 속성 값이 다른 속성의 인스턴스별 값 또는 런타임 같은 요소에 종속되는 경우처럼 속성 값에 영향을 줄 가능성이 있는 "종속성"을 적용할 때는 유효성 검사 콜백이 유용하지 않습니다.  
+ <span data-ttu-id="466c6-120">유효성 검사 콜백은 특별히 인스턴스 유효성 검사기가 아닌 클래스 유효성 검사기입니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-120">Validation callbacks specifically are intended to be class validators, not instance validators.</span></span> <span data-ttu-id="466c6-121">콜백 매개 변수는 특정 통신 하지 않는 <xref:System.Windows.DependencyObject> 에 유효성을 검사 하는 속성이 설정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-121">The parameters of the callback do not communicate a specific <xref:System.Windows.DependencyObject> on which the properties to validate are set.</span></span> <span data-ttu-id="466c6-122">따라서 유효성 검사 콜백은 속성 값에 영향을 줄 수 있는 가능한 "종속성"을 적용하는 데 유용하지 않으며, 속성의 인스턴스 관련 값은 다른 속성의 인스턴스 관련 값이나 런타임 상태와 같은 요소에 따라 달라집니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-122">Therefore the validation callbacks are not useful for enforcing the possible "dependencies" that might influence a property value, where the instance-specific value of a property is dependent on factors such as instance-specific values of other properties, or run-time state.</span></span>  
   
- 다음은 매우 간단한 유효성 검사 콜백 시나리오에 대한 예제 코드로서, 유효성 검사를 통해 <xref:System.Double> 기본 형식으로 형식화된 속성이 <xref:System.Double.PositiveInfinity> 또는 <xref:System.Double.NegativeInfinity>가 아닌지 확인하는 것입니다.  
+ <span data-ttu-id="466c6-123">다음은 매우 간단한 유효성 검사 콜백 시나리오에 대 한 예제 코드: 했는지 확인으로 형식화 된 속성의 <xref:System.Double> 기본있지 않습니다 <xref:System.Double.PositiveInfinity> 또는 <xref:System.Double.NegativeInfinity>합니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-123">The following is example code for a very simple validation callback scenario: validating that a property that is typed as the <xref:System.Double> primitive is not <xref:System.Double.PositiveInfinity> or <xref:System.Double.NegativeInfinity>.</span></span>  
   
  [!code-csharp[DPCallbackOverride#ValidateValueCallback](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#validatevaluecallback)]
  [!code-vb[DPCallbackOverride#ValidateValueCallback](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#validatevaluecallback)]  
   
 <a name="Coerce_Value_Callbacks_and_Property_Changed_Events"></a>   
-## 강제 값 콜백 및 속성 변경 이벤트  
- 강제 값 콜백은 종속성 속성 값이 변경될 때마다 속성 시스템에서 호출되는 <xref:System.Windows.PropertyChangedCallback> 구현과 마찬가지로 속성에 대한 특정 <xref:System.Windows.DependencyObject> 인스턴스를 전달합니다.  이 두 콜백을 조합하여 사용하면 한 속성의 변경 내용이 다른 속성의 강제 변환이나 재계산을 유발하는 일련의 속성을 만들 수 있습니다.  
+## <a name="coerce-value-callbacks-and-property-changed-events"></a><span data-ttu-id="466c6-124">강제 값 콜백 및 속성 변경 이벤트</span><span class="sxs-lookup"><span data-stu-id="466c6-124">Coerce Value Callbacks and Property Changed Events</span></span>  
+ <span data-ttu-id="466c6-125">강제 값 콜백이 특정 전달 <xref:System.Windows.DependencyObject> 마찬가지로 속성에 대 한 인스턴스 <xref:System.Windows.PropertyChangedCallback> 종속성 속성의 값이 변경 될 때마다 속성 시스템에 의해 호출 되는 구현 합니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-125">Coerce value callbacks do pass the specific <xref:System.Windows.DependencyObject> instance for properties, as do <xref:System.Windows.PropertyChangedCallback> implementations that are invoked by the property system whenever the value of a dependency property changes.</span></span> <span data-ttu-id="466c6-126">이 두 콜백을 함께 사용하여 한 속성이 변경되면 다른 속성의 강제 변환이나 재계산이 강제로 적용될 요소에 일련의 속성을 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-126">Using these two callbacks in combination, you can create a series of properties on elements where changes in one property will force a coercion or reevaluation of another property.</span></span>  
   
- 종속성 속성 연결을 사용하는 일반적인 시나리오는 요소가 최소값과 최대값에 대해 하나씩 값을 유지하고 실제 값이나 현재 값에 대한 세 번째 속성을 유지하는 사용자 인터페이스 기반 속성을 사용할 때입니다.  따라서 현재 값이 새 최대값을 초과할 때 최대값을 조정하려는 경우 현재 값을 강제로 새로운 최대값보다 크지 않게 만들 수 있습니다. 유사한 관계가 최소값과 현재 값에도 적용됩니다.  
+ <span data-ttu-id="466c6-127">종속성 속성의 연결을 사용하는 일반적인 시나리오는 요소가 최소값 및 최대값에 대해 각각 하나씩 속성을 보유하고 실제 또는 현재 값에 대해 세 번째 속성을 보유하는 사용자 인터페이스 기반 속성이 있는 경우입니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-127">A typical scenario for using a linkage of dependency properties is when you have a user interface driven property where the element holds one property each for the minimum and maximum value, and a third property for the actual or current value.</span></span> <span data-ttu-id="466c6-128">여기에서 현재 값이 새 최대값을 초과하는 방식으로 최대값을 조정한 경우 새 최대값보다 크지 않도록 현재 값을 강제 변환하고 최소값에 대한 유사한 관계를 현재값으로 강제 변환하려고 합니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-128">Here, if the maximum was adjusted in such a way that the current value exceeded the new maximum, you would want to coerce the current value to be no greater than the new maximum, and a similar relationship for minimum to current.</span></span>  
   
- 다음은 이 관계를 설명하는 세 가지 종속성 속성 중 하나에 대한 매우 간략한 예제 코드입니다.  이 예제에서는 관련 \*Reading 속성의 Min\/Max\/Current 집합에 대한 `CurrentReading` 속성을 등록하는 방법을 보여 줍니다.  여기에는 이전 단원에서 설명한 유효성 검사가 사용됩니다.  
+ <span data-ttu-id="466c6-129">다음은 이 관계를 보여 주는 세 가지 종속성 속성 중 하나에 대한 매우 간단한 예제 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-129">The following is very brief example code for just one of the three dependency properties that illustrate this relationship.</span></span> <span data-ttu-id="466c6-130">이 예제에서는 관련 *Reading 속성의 Min/Max/Current 집합 중 `CurrentReading` 속성이 등록되는 방법을 보여 주며,</span><span class="sxs-lookup"><span data-stu-id="466c6-130">The example shows how the `CurrentReading` property of a Min/Max/Current set of related *Reading properties is registered.</span></span> <span data-ttu-id="466c6-131">이전 섹션에 표시된 유효성 검사를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-131">It uses the validation as shown in the previous section.</span></span>  
   
  [!code-csharp[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#currentdefinitionwithwrapper)]
  [!code-vb[DPCallbackOverride#CurrentDefinitionWithWrapper](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#currentdefinitionwithwrapper)]  
   
- Current에 대한 속성 변경 콜백은 다른 속성에 등록된 강제 값 콜백을 명시적으로 호출하여 변경 내용을 해당 종속 속성에 전달하는 데 사용됩니다.  
+ <span data-ttu-id="466c6-132">Current에 대한 속성 변경 콜백은 다른 속성에 대해 등록된 강제 값 콜백을 명시적으로 호출하여 다른 종속 속성에 변경 내용을 전달하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-132">The property changed callback for Current is used to forward the change to other dependent properties, by explicitly invoking the coerce value callbacks that are registered for those other properties:</span></span>  
   
  [!code-csharp[DPCallbackOverride#OnPCCurrent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#onpccurrent)]
  [!code-vb[DPCallbackOverride#OnPCCurrent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#onpccurrent)]  
   
- 강제 값 콜백은 현재 속성이 종속될 수 있는 속성 값을 확인하여 필요한 경우 현재 값을 강제로 변환합니다.  
+ <span data-ttu-id="466c6-133">강제 값 콜백은 현재 속성이 잠재적으로 종속되어 있는 속성의 값을 확인하고 필요한 경우 현재 값을 강제 변환합니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-133">The coerce value callback checks the values of properties that the current property is potentially dependent upon, and coerces the current value if necessary:</span></span>  
   
  [!code-csharp[DPCallbackOverride#CoerceCurrent](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DPCallbackOverride/CSharp/SDKSampleLibrary/class1.cs#coercecurrent)]
  [!code-vb[DPCallbackOverride#CoerceCurrent](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DPCallbackOverride/visualbasic/sdksamplelibrary/class1.vb#coercecurrent)]  
   
 > [!NOTE]
->  속성 기본값은 강제로 변환되지 않습니다.  속성 값이 초기 기본값을 가지고 있거나 <xref:System.Windows.DependencyObject.ClearValue%2A>를 사용하여 다른 값을 지우는 경우에 기본값과 동일한 속성 값이 설정될 수 있습니다.  
+>  <span data-ttu-id="466c6-134">속성의 기본값은 강제 변환되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-134">Default values of properties are not coerced.</span></span> <span data-ttu-id="466c6-135">속성 값에 아직 초기 기본값을 하거나와 다른 값을 지우는 기본값에는 속성 값이 발생할 수 있습니다 <xref:System.Windows.DependencyObject.ClearValue%2A>합니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-135">A property value equal to the default value might occur if a property value still has its initial default, or through clearing other values with <xref:System.Windows.DependencyObject.ClearValue%2A>.</span></span>  
   
- 강제 값 및 속성 변경 콜백은 속성 메타데이터의 일부입니다.  따라서 형식의 속성에 대한 메타데이터를 재정의하면 종속성 속성을 소유하는 형식에서 파생시킨 형식에 존재하는 것처럼 특정 종속성 속성에 대한 콜백을 변경할 수 있습니다.  
+ <span data-ttu-id="466c6-136">강제 값 및 속성 변경 콜백은 속성 메타데이터의 일부입니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-136">The coerce value and property changed callbacks are part of property metadata.</span></span> <span data-ttu-id="466c6-137">따라서 특정 형식의 속성에 대한 메타데이터를 재정의하여 종속성 속성을 소유하는 형식에서 파생된 형식에 있는 특정 종속성 속성에 대한 콜백을 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-137">Therefore, you can change the callbacks for a particular dependency property as it exists on a type that you derive from the type that owns the dependency property, by overriding the metadata for that property on your type.</span></span>  
   
 <a name="Advanced"></a>   
-## 고급 강제 변환 및 콜백 시나리오  
+## <a name="advanced-coercion-and-callback-scenarios"></a><span data-ttu-id="466c6-138">고급 강제 변환 및 콜백 시나리오</span><span class="sxs-lookup"><span data-stu-id="466c6-138">Advanced Coercion and Callback Scenarios</span></span>  
   
-### 제약 조건 및 원하는 값  
- 사용자가 선언한 논리에 따라 값을 강제로 변환하지만 로컬에서 설정된 속성의 강제 변환된 값이 내부적으로 "원하는 값"을 계속 유지하게 만들기 위해 속성 시스템에서 <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 콜백이 사용됩니다.  제약 조건이 응용 프로그램 수명 동안 동적으로 변경될 수 있는 다른 속성 값에 기반하는 경우 강제 제약 조건 또한 동적으로 변경되며 제약 조건이 적용된 속성은 지정된 새 제약 조건에서 가능한 원하는 값과 가까운 값으로 해당 값을 변경할 수 있습니다.  모든 제약 조건이 리프트되면 값이 원하는 값이 됩니다.  순환하는 방식으로 다른 속성에 종속되는 여러 개의 속성이 있는 경우에는 다소 복잡한 종속성 시나리오를 도입할 수 있습니다.  예를 들어 Min\/Max\/Current 시나리오에서 Minimum 및 Maximum을 사용자가 설정할 수 있게 만들 수 있습니다.  그렇게 하는 경우 Maximum이 항상 Minimum보다 크게 만들고 Minimum이 항상 Maximum보다 작게 만들어야 합니다.  하지만 이러한 강제 변환이 활성화되고 Maximum이 Minimum으로 강제 변환되는 경우에는 Current가 두 값에 모두 종속되고 두 값의 사이 값인 범위\(0\)로 제한되므로 값을 설정할 수 없는 상태가 됩니다.  이 경우 Current의 원하는 값이 저장되어 있고 제약 조건이 느슨할 때 원하는 값에 도달하려고 하기 때문에 Maximum 또는 Minimum이 조정되면 Current가 두 값 중 하나를 "따르는" 것처럼 보이게 됩니다.  
+### <a name="constraints-and-desired-values"></a><span data-ttu-id="466c6-139">제약 조건 및 원하는 값</span><span class="sxs-lookup"><span data-stu-id="466c6-139">Constraints and Desired Values</span></span>  
+ <span data-ttu-id="466c6-140"><xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 콜백을 사용할 속성 시스템에서 선언한 논리 하지만 강제 변환 된 값이 로컬로 설정된에 따라 값을 강제 변환할 속성은 "적절된 한 값"이 내부적으로 유지 계속 됩니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-140">The <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> callbacks will be used by the property system to coerce a value in accordance to the logic you declare, but a coerced value of a locally set property will still retain a "desired value" internally.</span></span> <span data-ttu-id="466c6-141">제약 조건이 응용 프로그램 수명 동안 동적으로 변경될 수 있는 다른 속성 값을 기반으로 하는 경우 강제 변환 제약 조건도 동적으로 변경되며 제한된 속성은 원하는 값에 최대한 가깝게 값을 변경하여 새 제약 조건을 제공할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-141">If the constraints are based on other property values that may change dynamically during the application lifetime, the coercion constraints are changed dynamically also, and the constrained property can change its value to get as close to the desired value as possible given the new constraints.</span></span> <span data-ttu-id="466c6-142">모든 제약 조건이 적용되면 해당 값은 원하는 값이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-142">The value will become the desired value if all constraints are lifted.</span></span> <span data-ttu-id="466c6-143">여러 속성이 순환 방식으로 서로 종속되어 있는 경우 다소 복잡한 종속성 시나리오를 도입할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-143">You can potentially introduce some fairly complicated dependency scenarios if you have multiple properties that are dependent on one another in a circular manner.</span></span> <span data-ttu-id="466c6-144">예를 들어 Min/Max/Current 시나리오에서 최소값과 최대값을 사용자가 설정할 수 있도록 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-144">For instance, in the Min/Max/Current scenario, you could choose to have Minimum and Maximum be user settable.</span></span> <span data-ttu-id="466c6-145">그렇다면 최대값이 항상 최소값보다 크거나 그 반대가 되도록 강제 변환해야 할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-145">If so, you might need to coerce that Maximum is always greater than Minimum and vice versa.</span></span> <span data-ttu-id="466c6-146">그러나 해당 강제 변환이 활성화되고 최대값이 최소값으로 강제 변환되면 현재 값은 두 값에 종속되어 있고 두 값 사이의 범위(0)로 제한되기 때문에 설정할 수 없는 상태로 유지됩니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-146">But if that coercion is active, and Maximum coerces to Minimum, it leaves Current in an unsettable state, because it is dependent on both and is constrained to the range between the values, which is zero.</span></span> <span data-ttu-id="466c6-147">그런 다음 최대값이나 최소값을 조정하면 현재 값의 원하는 값이 계속 저장되고 제약 조건이 완화되면 원하는 값에 도달하려고 시도하기 때문에 현재 값은 두 값 중 하나를 "따르는" 것처럼 보입니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-147">Then, if Maximum or Minimum are adjusted, Current will seem to "follow" one of the values, because the desired value of Current is still stored and is attempting to reach the desired value as the constraints are loosened.</span></span>  
   
- 복잡한 종속성에 기술적인 문제는 전혀 없지만 많은 수의 재계산이 필요한 경우에는 성능에 나쁜 영향을 줄 수 있고 UI에 직접 적용되는 경우에는 사용자에게 혼란을 줄 수 있습니다.  속성 변경 값과 강제 값 콜백을 사용할 때에는 주의해야 하며 강제 변환을 시도할 때에는 가능한 한 모호하지 않게 처리하고 "과도한 제약"을 하지 않도록 해야 합니다.  
+ <span data-ttu-id="466c6-148">복잡한 종속성에서 기술적으로 잘못된 것은 없지만 많은 재계산이 필요한 경우 성능이 약간 저하될 수 있으며 UI에 직접 영향을 주는 경우 사용자에게 혼동을 줄 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-148">There is nothing technically wrong with complex dependencies, but they can be a slight performance detriment if they require large numbers of reevaluations, and can also be confusing to users if they affect the UI directly.</span></span> <span data-ttu-id="466c6-149">속성 변경 및 강제 값 콜백을 사용할 때는 주의해야 하며 시도하려는 강제 변환이 최대한 명확하게 처리되고 "지나치게 제약"하지 않도록 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-149">Be careful with property changed and coerce value callbacks and make sure that the coercion being attempted can be treated as unambiguously as possible, and does not "overconstrain".</span></span>  
   
-### CoerceValue를 사용하여 값 변경 취소  
- 속성 시스템에서는 <xref:System.Windows.DependencyProperty.UnsetValue> 값을 반환하는 모든 <xref:System.Windows.CoerceValueCallback>을 특별하게 취급합니다.  특별하다고 하는 이유는 호출되는 <xref:System.Windows.CoerceValueCallback>에서 반환되는 속성 변경을 속성 시스템에서 거부하고 대신 속성의 이전 값을 보고하기 때문입니다.  비동기적으로 초기화된 속성 변경이 현재 개체 상태에 유효한지 확인하여 유효하지 않은 경우 변경을 억제하는 경우에 이 메커니즘이 유용합니다.  다른 가능한 시나리오는 속성 값 확인 구성 요소 중에서 보고된 값과 관련된 구성 요소에 따라 선택적으로 값을 억제하는 것입니다.  이렇게 하려면 콜백 및 속성 식별자에서 <xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>에 대한 입력으로 전달된 <xref:System.Windows.DependencyProperty>를 사용하여 <xref:System.Windows.ValueSource>를 처리합니다.  
+### <a name="using-coercevalue-to-cancel-value-changes"></a><span data-ttu-id="466c6-150">CoerceValue를 사용하여 값 변경 내용 취소</span><span class="sxs-lookup"><span data-stu-id="466c6-150">Using CoerceValue to Cancel Value Changes</span></span>  
+ <span data-ttu-id="466c6-151">속성 시스템에서 처리 된 <xref:System.Windows.CoerceValueCallback> 값을 반환 하 <xref:System.Windows.DependencyProperty.UnsetValue> 특별 한 경우로 합니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-151">The property system will treat any <xref:System.Windows.CoerceValueCallback> that returns the value <xref:System.Windows.DependencyProperty.UnsetValue> as a special case.</span></span> <span data-ttu-id="466c6-152">이 특수 한 경우에 속성 변경을 의미는 <xref:System.Windows.CoerceValueCallback> 속성 시스템에 의해 거부 호출 되 고 속성 시스템의 속성에는 이전 값을 대신 보고 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-152">This special case means that the property change that resulted in the <xref:System.Windows.CoerceValueCallback> being called should be rejected by the property system, and that the property system should instead report whatever previous value the property had.</span></span> <span data-ttu-id="466c6-153">이 메커니즘은 비동기적으로 시작된 속성의 변경 내용이 현재 개체 상태에 여전히 유효한지 확인하고 유효하지 않을 경우 변경 내용을 무시하는 데 유용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-153">This mechanism can be useful to check that changes to a property that were initiated asynchronously are still valid for the current object state, and suppress the changes if not.</span></span> <span data-ttu-id="466c6-154">다른 가능한 시나리오에서는 보고할 값을 담당하는 속성 값 결정의 구성 요소에 따라 선택적으로 값을 무시할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-154">Another possible scenario is that you can selectively suppress a value depending on which component of property value determination is responsible for the value being reported.</span></span> <span data-ttu-id="466c6-155">이 위해 사용할 수 있습니다는 <xref:System.Windows.DependencyProperty> 콜백과 속성 식별자에 대 한 입력으로 전달 <xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>, 다음의 <xref:System.Windows.ValueSource>합니다.</span><span class="sxs-lookup"><span data-stu-id="466c6-155">To do this, you can use the <xref:System.Windows.DependencyProperty> passed in the callback and the property identifier as input for <xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>, and then process the <xref:System.Windows.ValueSource>.</span></span>  
   
-## 참고 항목  
- [종속성 속성 개요](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)   
- [종속성 속성 메타데이터](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)   
- [사용자 지정 종속성 속성](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+## <a name="see-also"></a><span data-ttu-id="466c6-156">참고 항목</span><span class="sxs-lookup"><span data-stu-id="466c6-156">See Also</span></span>  
+ [<span data-ttu-id="466c6-157">종속성 속성 개요</span><span class="sxs-lookup"><span data-stu-id="466c6-157">Dependency Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [<span data-ttu-id="466c6-158">종속성 속성 메타데이터</span><span class="sxs-lookup"><span data-stu-id="466c6-158">Dependency Property Metadata</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
+ [<span data-ttu-id="466c6-159">사용자 지정 종속성 속성</span><span class="sxs-lookup"><span data-stu-id="466c6-159">Custom Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)

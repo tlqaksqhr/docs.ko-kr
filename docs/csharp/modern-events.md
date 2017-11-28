@@ -10,26 +10,24 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: cf69cbe0a7adbd274d1cb9e9544dda77d9fa1740
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
+# <a name="the-updated-net-core-event-pattern"></a><span data-ttu-id="3939e-104">업데이트된 .NET Core 이벤트 패턴</span><span class="sxs-lookup"><span data-stu-id="3939e-104">The Updated .NET Core Event Pattern</span></span>
 
-# <a name="the-updated-net-core-event-pattern"></a>업데이트된 .NET Core 이벤트 패턴
+[<span data-ttu-id="3939e-105">이전</span><span class="sxs-lookup"><span data-stu-id="3939e-105">Previous</span></span>](event-pattern.md)
 
-[이전](event-pattern.md)
+<span data-ttu-id="3939e-106">이전 문서에서는 가장 일반적인 이벤트 패턴을 설명했습니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-106">The previous article discussed the most common event patterns.</span></span> <span data-ttu-id="3939e-107">.NET Core에는 보다 완화된 패턴이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-107">.NET Core has a more relaxed pattern.</span></span> <span data-ttu-id="3939e-108">이 버전에서는 `EventHandler<TEventArgs>` 정의에 `TEventArgs`가 `System.EventArgs`에서 파생된 클래스여야 한다는 제약 조건이 더 이상 없습니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-108">In this version, the `EventHandler<TEventArgs>` definition no longer has the constraint that `TEventArgs` must be a class derived from `System.EventArgs`.</span></span>
 
-이전 문서에서는 가장 일반적인 이벤트 패턴을 설명했습니다. .NET Core에는 보다 완화된 패턴이 있습니다. 이 버전에서는 `EventHandler<TEventArgs>` 정의에 `TEventArgs`가 `System.EventArgs`에서 파생된 클래스여야 한다는 제약 조건이 더 이상 없습니다.
+<span data-ttu-id="3939e-109">이 때문에 유연성이 증가하고 이전 버전과 호환됩니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-109">This increases flexibility for you, and is backwards compatible.</span></span> <span data-ttu-id="3939e-110">유연성부터 살펴보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-110">Let's start with the flexibility.</span></span> <span data-ttu-id="3939e-111">System.EventArgs 클래스는 개체의 부분 복사본을 만드는 `MemberwiseClone()` 메서드 하나를 소개합니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-111">The class System.EventArgs introduces one method: `MemberwiseClone()`, which creates a shallow copy of the object.</span></span>
+<span data-ttu-id="3939e-112">이 메서드는 `EventArgs`에서 파생된 클래스에 대해 해당 기능을 구현하기 위해 리플렉션을 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-112">That method must use reflection in order to implement its functionality for any class derived from `EventArgs`.</span></span> <span data-ttu-id="3939e-113">특정 파생 클래스에서는 해당 기능을 더 쉽게 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-113">That functionality is easier to create in a specific derived class.</span></span> <span data-ttu-id="3939e-114">이는 System.EventArgs에서 파생되는 것이 디자인을 제한하는 제약 조건이지만 추가적인 혜택은 없음을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-114">That effectively means that deriving from System.EventArgs is a constraint that limits your designs, but does not provide any additional benefit.</span></span>
+<span data-ttu-id="3939e-115">실제로 `EventArgs`에서 파생되지 않도록 `FileFoundArgs` 및 `SearchDirectoryArgs`의 정의를 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-115">In fact, you can changes the definitions of `FileFoundArgs` and `SearchDirectoryArgs` so that they do not derive from `EventArgs`.</span></span>
+<span data-ttu-id="3939e-116">프로그램은 동일하게 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-116">The program will work exactly the same.</span></span>
 
-이 때문에 유연성이 증가하고 이전 버전과 호환됩니다. 유연성부터 살펴보겠습니다. System.EventArgs 클래스는 개체의 부분 복사본을 만드는 `MemberwiseClone()` 메서드 하나를 소개합니다.
-이 메서드는 `EventArgs`에서 파생된 클래스에 대해 해당 기능을 구현하기 위해 리플렉션을 사용해야 합니다. 특정 파생 클래스에서는 해당 기능을 더 쉽게 만들 수 있습니다. 이는 System.EventArgs에서 파생되는 것이 디자인을 제한하는 제약 조건이지만 추가적인 혜택은 없음을 의미합니다.
-실제로 `EventArgs`에서 파생되지 않도록 `FileFoundArgs` 및 `SearchDirectoryArgs`의 정의를 변경할 수 있습니다.
-프로그램은 동일하게 작동합니다.
-
-한 가지 더 변경하는 경우 `SearchDirectoryArgs`를 구조체로 변경할 수도 있습니다.
+<span data-ttu-id="3939e-117">한 가지 더 변경하는 경우 `SearchDirectoryArgs`를 구조체로 변경할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-117">You could also change the `SearchDirectoryArgs` to a struct, if you also make one more change:</span></span>
 
 ```csharp  
 internal struct SearchDirectoryArgs  
@@ -48,21 +46,21 @@ internal struct SearchDirectoryArgs
 }  
 ```   
 
-추가 변경은 모든 필드를 초기화하는 생성자를 입력하기 전에 기본 생성자를 호출하는 것입니다. 해당 코드를 추가하지 않으면 C#의 규칙에서 속성이 할당되기 전에 액세스된다고 보고합니다.
+<span data-ttu-id="3939e-118">추가 변경은 모든 필드를 초기화하는 생성자를 입력하기 전에 기본 생성자를 호출하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-118">The additional change is to call the default constructor before entering the constructor that initializes all the fields.</span></span> <span data-ttu-id="3939e-119">해당 코드를 추가하지 않으면 C#의 규칙에서 속성이 할당되기 전에 액세스된다고 보고합니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-119">Without that addition, the rules of C# would report that the properties are being accessed before they have been assigned.</span></span>
 
-`FileFoundArgs`를 클래스(참조 형식)에서 구조체(값 형식)로 변경하면 안 됩니다. 이는 취소를 처리하기 위한 프로토콜에서 이벤트 인수가 참조로 전달되도록 요구하기 때문입니다. 동일한 변경을 수행하면 파일 검색 클래스가 이벤트 구독자의 변경 내용을 관찰할 수 없습니다. 구조체의 새 복사본이 각 구독자에 사용되며, 해당 복사본은 파일 검색 개체에 표시되는 것과는 다른 복사본입니다.
+<span data-ttu-id="3939e-120">`FileFoundArgs`를 클래스(참조 형식)에서 구조체(값 형식)로 변경하면 안 됩니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-120">You should not change the `FileFoundArgs` from a class (reference type) to a struct (value type).</span></span> <span data-ttu-id="3939e-121">이는 취소를 처리하기 위한 프로토콜에서 이벤트 인수가 참조로 전달되도록 요구하기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-121">That's because the protocol for handling cancel requires that the event arguments are passed by reference.</span></span> <span data-ttu-id="3939e-122">동일한 변경을 수행하면 파일 검색 클래스가 이벤트 구독자의 변경 내용을 관찰할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-122">If you made the same change, the file search class could never observe any changes made by any of the event subscribers.</span></span> <span data-ttu-id="3939e-123">구조체의 새 복사본이 각 구독자에 사용되며, 해당 복사본은 파일 검색 개체에 표시되는 것과는 다른 복사본입니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-123">A new copy of the structure would be used for each subscriber, and that copy would be a different copy than the one seen by the file search object.</span></span>
 
-다음으로, 이러한 변경 내용이 이전 버전과 호환될 수 방법을 살펴보겠습니다.
-제약 조건을 제거해도 기존 코드에는 영향을 주지 않습니다. 기존 이벤트 인수 형식은 여전히 `System.EventArgs`에서 파생됩니다.
-이전 버전과의 호환성은 `System.EventArgs`에서 계속 파생되는 한 가지 주요 이유입니다. 기존 이벤트 구독자는 클래식 패턴을 따르는 이벤트의 구독자가 됩니다.
+<span data-ttu-id="3939e-124">다음으로, 이러한 변경 내용이 이전 버전과 호환될 수 방법을 살펴보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-124">Next, let's consider how this change can be backwards compatible.</span></span>
+<span data-ttu-id="3939e-125">제약 조건을 제거해도 기존 코드에는 영향을 주지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-125">The removal of the constraint does not affect any existing code.</span></span> <span data-ttu-id="3939e-126">기존 이벤트 인수 형식은 여전히 `System.EventArgs`에서 파생됩니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-126">Any existing event argument types do still derive from `System.EventArgs`.</span></span>
+<span data-ttu-id="3939e-127">이전 버전과의 호환성은 `System.EventArgs`에서 계속 파생되는 한 가지 주요 이유입니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-127">Backwards compatibility is one major reason why they will continue to derive from `System.EventArgs`.</span></span> <span data-ttu-id="3939e-128">기존 이벤트 구독자는 클래식 패턴을 따르는 이벤트의 구독자가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-128">Any existing event subscribers will be subscribers to an event that followed the classic pattern.</span></span>
 
-유사한 논리에 따라 이제 생성되는 이벤트 인수 형식은 기존 코드베이스에 구독자가 없습니다. `System.EventArgs`에서 파생되지 않는 새 이벤트 유형은 이러한 코드베이스를 중단하지 않습니다.
+<span data-ttu-id="3939e-129">유사한 논리에 따라 이제 생성되는 이벤트 인수 형식은 기존 코드베이스에 구독자가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-129">Following similar logic, any event argument type created now would not have any subscribers in any existing codebases.</span></span> <span data-ttu-id="3939e-130">`System.EventArgs`에서 파생되지 않는 새 이벤트 유형은 이러한 코드베이스를 중단하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-130">New event types that do not derive from `System.EventArgs` will not break those codebases.</span></span>
 
-## <a name="events-with-async-subscribers"></a>비동기 구독자가 포함된 이벤트
+## <a name="events-with-async-subscribers"></a><span data-ttu-id="3939e-131">비동기 구독자가 포함된 이벤트</span><span class="sxs-lookup"><span data-stu-id="3939e-131">Events with Async subscribers</span></span>
 
-알아볼 한 가지 최종 패턴은 비동기 코드를 호출하는 이벤트 구독자를 올바르게 작성하는 방법입니다. 이 과제는 [async 및 await](async.md)에 대한 문서에서 설명합니다. 비동기 메서드의 반환 형식이 void일 수도 있지만 권장되지는 않습니다. 이벤트 구독자 코드에서 비동기 메서드를 호출하는 경우 `async void` 메서드를 만들 수밖에 없습니다. 이벤트 처리기 시그니처에 이 메서드가 필요합니다.
+<span data-ttu-id="3939e-132">알아볼 한 가지 최종 패턴은 비동기 코드를 호출하는 이벤트 구독자를 올바르게 작성하는 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-132">You have one final pattern to learn: How to correctly write event subscribers that call async code.</span></span> <span data-ttu-id="3939e-133">이 과제는 [async 및 await](async.md)에 대한 문서에서 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-133">The challenge is described in the article on [async and await](async.md).</span></span> <span data-ttu-id="3939e-134">비동기 메서드의 반환 형식이 void일 수도 있지만 권장되지는 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-134">Async methods can have a void return type, but that is strongly discouraged.</span></span> <span data-ttu-id="3939e-135">이벤트 구독자 코드에서 비동기 메서드를 호출하는 경우 `async void` 메서드를 만들 수밖에 없습니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-135">When your event subscriber code calls an async method, you have no choice but to create an `async void` method.</span></span> <span data-ttu-id="3939e-136">이벤트 처리기 시그니처에 이 메서드가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-136">The event handler signature requires it.</span></span>
 
-이 반대 지침을 조정해야 합니다. 어떻게 해서든 안전한 `async void` 메서드를 만들어야 합니다. 구현해야 하는 패턴의 기본 사항은 아래와 같습니다.
+<span data-ttu-id="3939e-137">이 반대 지침을 조정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-137">You need to reconcile this opposing guidance.</span></span> <span data-ttu-id="3939e-138">어떻게 해서든 안전한 `async void` 메서드를 만들어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-138">Somehow, you must create a safe `async void` method.</span></span> <span data-ttu-id="3939e-139">구현해야 하는 패턴의 기본 사항은 아래와 같습니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-139">The basics of the pattern you need to implement are below:</span></span>
 
 ```csharp
 worker.StartWorking += async (sender, eventArgs) =>
@@ -80,13 +78,12 @@ worker.StartWorking += async (sender, eventArgs) =>
 };
 ```
 
-첫째, 처리기는 비동기 처리기로 표시됩니다. 이벤트 처리기 대리자 형식에 할당되므로 void 반환 형식을 갖습니다. 즉, 처리기에 표시된 패턴을 따르고 비동기 처리기의 컨텍스트 외부에서 예외가 throw되지 않도록 해야 합니다. 작업을 반환하지 않으므로 오류 상태를 입력하여 오류를 보고할 수 있는 작업이 없습니다. 메서드가 비동기이므로 메서드에서 단순히 예외를 throw할 수 없습니다. 호출하는 메서드가 `async`이므로 실행을 계속했습니다. 실제 런타임 동작은 각 환경마다 다르게 정의됩니다. 스레드를 종료하거나, 프로그램을 종료하거나, 프로그램을 결정되지 않은 상태로 둘 수 있습니다. 모두 좋은 결과는 아닙니다.
+<span data-ttu-id="3939e-140">첫째, 처리기는 비동기 처리기로 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-140">First, notice that the handler is marked as an async handler.</span></span> <span data-ttu-id="3939e-141">이벤트 처리기 대리자 형식에 할당되므로 void 반환 형식을 갖습니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-141">Because it is being assigned to an event handler delegate type, it will have a void return type.</span></span> <span data-ttu-id="3939e-142">즉, 처리기에 표시된 패턴을 따르고 비동기 처리기의 컨텍스트 외부에서 예외가 throw되지 않도록 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-142">That means you must follow the pattern shown in the handler, and not allow any exceptions to be thrown out of the context of the async handler.</span></span> <span data-ttu-id="3939e-143">작업을 반환하지 않으므로 오류 상태를 입력하여 오류를 보고할 수 있는 작업이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-143">Because it does not return a task, there is no task that can report the error by entering the faulted state.</span></span> <span data-ttu-id="3939e-144">메서드가 비동기이므로 메서드에서 단순히 예외를 throw할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-144">Because the method is async, the method can't simply throw the exception.</span></span> <span data-ttu-id="3939e-145">호출하는 메서드가 `async`이므로 실행을 계속했습니다. 실제 런타임 동작은 각 환경마다 다르게 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-145">(The calling method has continued execution because it is `async`.) The actual runtime behavior will be defined differently for different environments.</span></span> <span data-ttu-id="3939e-146">스레드를 종료하거나, 프로그램을 종료하거나, 프로그램을 결정되지 않은 상태로 둘 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-146">It may terminate the thread, it may terminate the program, or it may leave the program in an undetermined state.</span></span> <span data-ttu-id="3939e-147">모두 좋은 결과는 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-147">None of those are good outcomes.</span></span>
 
-이 때문에 비동기 작업에 대한 await 문을 고유한 try 블록에 래핑해야 합니다. 오류 작업이 발생하는 경우 오류를 기록할 수 있습니다. 응용 프로그램이 복구할 수 없는 오류인 경우 빠르고 정상적으로 프로그램을 종료할 수 있습니다.
+<span data-ttu-id="3939e-148">이 때문에 비동기 작업에 대한 await 문을 고유한 try 블록에 래핑해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-148">That's why you should wrap the await statement for the async Task in your own try block.</span></span> <span data-ttu-id="3939e-149">오류 작업이 발생하는 경우 오류를 기록할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-149">If it does cause a faulted task, you can log the error.</span></span> <span data-ttu-id="3939e-150">응용 프로그램이 복구할 수 없는 오류인 경우 빠르고 정상적으로 프로그램을 종료할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-150">If it is an error from which your application cannot recover, you can exit the program quickly and gracefully</span></span>
 
-이러한 기능은 .NET 이벤트 패턴에 대한 주요 업데이트입니다. 작업할 라이브러리에 이전 버전의 예제가 많이 표시됩니다. 그러나 최신 패턴이 무엇인지도 이해해야 합니다.
+<span data-ttu-id="3939e-151">이러한 기능은 .NET 이벤트 패턴에 대한 주요 업데이트입니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-151">Those are the major updates to the .NET event pattern.</span></span> <span data-ttu-id="3939e-152">작업할 라이브러리에 이전 버전의 예제가 많이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-152">You will see many examples of the earlier versions in the libraries you work with.</span></span> <span data-ttu-id="3939e-153">그러나 최신 패턴이 무엇인지도 이해해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-153">However, you should understand what the latest patterns are as well.</span></span>
 
-이 시리즈의 다음 문서는 디자인에 `delegates`를 사용하는 경우와 `events`를 사용하는 경우를 구분하는 데 도움이 됩니다. 비슷한 개념이며 해당 문서를 통해 프로그램에 대한 최상의 결정을 내릴 수 있습니다.
+<span data-ttu-id="3939e-154">이 시리즈의 다음 문서는 디자인에 `delegates`를 사용하는 경우와 `events`를 사용하는 경우를 구분하는 데 도움이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-154">The next article in this series helps you distinguish between using `delegates` and `events` in your designs.</span></span> <span data-ttu-id="3939e-155">비슷한 개념이며 해당 문서를 통해 프로그램에 대한 최상의 결정을 내릴 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3939e-155">They are similar concepts, and that article will help you make the best decision for your programs.</span></span>
 
-[다음](distinguish-delegates-events.md)
-
+[<span data-ttu-id="3939e-156">다음</span><span class="sxs-lookup"><span data-stu-id="3939e-156">Next</span></span>](distinguish-delegates-events.md)

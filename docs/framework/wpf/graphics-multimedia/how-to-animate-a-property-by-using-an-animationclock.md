@@ -1,46 +1,52 @@
 ---
-title: "방법: AnimationClock을 사용하여 속성에 애니메이션 효과 적용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "애니메이션, 속성, AnimationClocks로"
-  - "AnimationClocks"
+title: "방법: AnimationClock을 사용하여 속성에 애니메이션 효과 적용"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- animation [WPF], properties [WPF], with AnimationClocks
+- AnimationClocks [WPF]
 ms.assetid: e6542021-714c-4675-9567-04f1c7380834
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 47df7aaad45000bc8c761a9bb9022d37e0f0828c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: AnimationClock을 사용하여 속성에 애니메이션 효과 적용
-이 예제에서는 <xref:System.Windows.Media.Animation.Clock> 개체를 사용하여 속성에 애니메이션 효과를 적용하는 방법을 보여 줍니다.  
+# <a name="how-to-animate-a-property-by-using-an-animationclock"></a><span data-ttu-id="1fcb7-102">방법: AnimationClock을 사용하여 속성에 애니메이션 효과 적용</span><span class="sxs-lookup"><span data-stu-id="1fcb7-102">How to: Animate a Property by Using an AnimationClock</span></span>
+<span data-ttu-id="1fcb7-103">사용 하는 방법을 보여 주는이 예제 <xref:System.Windows.Media.Animation.Clock> 속성에 애니메이션 효과를 줄 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="1fcb7-103">This example shows how to use <xref:System.Windows.Media.Animation.Clock> objects to animate a property.</span></span>  
   
- 다음과 같은 세 가지 방법으로 [종속성 속성](GTMT)에 애니메이션 효과를 적용할 수 있습니다.  
+ <span data-ttu-id="1fcb7-104">종속성 속성에 애니메이션을 적용하는 방법에는 다음 세 가지가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1fcb7-104">There are three ways to animate a dependency property:</span></span>  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline>을 만든 다음 <xref:System.Windows.Media.Animation.Storyboard>를 사용하여 해당 속성에 연결합니다.  
+-   <span data-ttu-id="1fcb7-105">만들기는 <xref:System.Windows.Media.Animation.AnimationTimeline> 를 사용 하 여 해당 속성을 연결 된 <xref:System.Windows.Media.Animation.Storyboard>합니다.</span><span class="sxs-lookup"><span data-stu-id="1fcb7-105">Create an <xref:System.Windows.Media.Animation.AnimationTimeline> and associate it with that property by using a <xref:System.Windows.Media.Animation.Storyboard>.</span></span>  
   
--   개체의 <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> 메서드를 사용하여 대상 속성에 단일 <xref:System.Windows.Media.Animation.AnimationTimeline>을 적용합니다.  
+-   <span data-ttu-id="1fcb7-106">개체의를 사용 하 여 <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> 단일을 적용할 방법을 <xref:System.Windows.Media.Animation.AnimationTimeline> 대상 속성에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="1fcb7-106">Use the object's <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> method to apply a single <xref:System.Windows.Media.Animation.AnimationTimeline> to a target property.</span></span>  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline>에서 <xref:System.Windows.Media.Animation.AnimationClock>을 만들어 속성에 적용합니다.  
+-   <span data-ttu-id="1fcb7-107">만들기는 <xref:System.Windows.Media.Animation.AnimationClock> 에서 <xref:System.Windows.Media.Animation.AnimationTimeline> 속성에 적용 합니다.</span><span class="sxs-lookup"><span data-stu-id="1fcb7-107">Create an <xref:System.Windows.Media.Animation.AnimationClock> from an <xref:System.Windows.Media.Animation.AnimationTimeline> and apply it to a property.</span></span>  
   
- <xref:System.Windows.Media.Animation.Storyboard> 개체와 <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> 메서드를 사용하면 시계를 직접 만들어 배포하지 않고도 속성에 애니메이션 효과를 적용할 수 있습니다. 시계는 자동으로 만들어져 배포됩니다. 예제를 보려면 [Storyboard를 사용하여 속성에 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md) 및 [Storyboard를 사용하지 않고 속성에 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)를 참조하십시오.  
+ <span data-ttu-id="1fcb7-108"><xref:System.Windows.Media.Animation.Storyboard>개체 및 <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> 방법을 사용 하면 속성 애니메이션 효과를 직접 만들고 시계를 배포 하지 않고 (예제를 보려면 [속성 스토리 보드를 사용 하 여 애니메이션을 적용](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md) 및 [는 속성 없이 애니메이션을 적용 스토리 보드를 사용 하 여](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)); 클럭은 만들고 자동으로 배포 합니다.</span><span class="sxs-lookup"><span data-stu-id="1fcb7-108"><xref:System.Windows.Media.Animation.Storyboard> objects and the <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> method enable you to animate properties without directly creating and distributing clocks (for examples, see [Animate a Property by Using a Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md) and [Animate a Property Without Using a Storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)); clocks are created and distributed for you automatically.</span></span>  
   
-## 예제  
- 다음 예제에서는 <xref:System.Windows.Media.Animation.AnimationClock>을 만들어서 두 개의 비슷한 속성에 적용하는 방법을 보여 줍니다.  
+## <a name="example"></a><span data-ttu-id="1fcb7-109">예제</span><span class="sxs-lookup"><span data-stu-id="1fcb7-109">Example</span></span>  
+ <span data-ttu-id="1fcb7-110">만드는 방법을 보여 주는 다음 예제는 <xref:System.Windows.Media.Animation.AnimationClock> 두 개의 비슷한 속성에 적용 합니다.</span><span class="sxs-lookup"><span data-stu-id="1fcb7-110">The following example shows how to create an <xref:System.Windows.Media.Animation.AnimationClock> and apply it to two similar properties.</span></span>  
   
  [!code-csharp[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/AnimationClockExample.cs#graphicsmmcreateanimationclockwholeclass)]
  [!code-vb[timingbehaviors_procedural_snip#GraphicsMMCreateAnimationClockWholeClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/animationclockexample.vb#graphicsmmcreateanimationclockwholeclass)]  
   
- <xref:System.Windows.Media.Animation.Clock>이 시작된 후 이를 대화식으로 제어하는 방법을 보여 주는 예제는 [대화식으로 Clock 제어](../../../../docs/framework/wpf/graphics-multimedia/how-to-interactively-control-a-clock.md)를 참조하십시오.  
+ <span data-ttu-id="1fcb7-111">대화형으로 제어 하는 방법을 보여 주는 예제는 <xref:System.Windows.Media.Animation.Clock> 시작 되 면 참조 [시계를 대화형으로 제어](../../../../docs/framework/wpf/graphics-multimedia/how-to-interactively-control-a-clock.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="1fcb7-111">For an example showing how to interactively control a <xref:System.Windows.Media.Animation.Clock> after it starts, see [Interactively Control a Clock](../../../../docs/framework/wpf/graphics-multimedia/how-to-interactively-control-a-clock.md).</span></span>  
   
-## 참고 항목  
- [Storyboard를 사용하여 속성에 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)   
- [Storyboard를 사용하지 않고 속성에 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)   
- [속성 애니메이션 기술 개요](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
+## <a name="see-also"></a><span data-ttu-id="1fcb7-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1fcb7-112">See Also</span></span>  
+ [<span data-ttu-id="1fcb7-113">Storyboard를 사용하여 속성에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="1fcb7-113">Animate a Property by Using a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)  
+ [<span data-ttu-id="1fcb7-114">Storyboard를 사용하지 않고 속성에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="1fcb7-114">Animate a Property Without Using a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)  
+ [<span data-ttu-id="1fcb7-115">속성 애니메이션 기술 개요</span><span class="sxs-lookup"><span data-stu-id="1fcb7-115">Property Animation Techniques Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)

@@ -5,45 +5,42 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f6ec8d0a93354fcea17b27321d59174f2e53a47f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: d9e4bdc26815feab7910e7518f7cd691a1f4dece
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="reflection-and-net-native"></a>리플렉션 및 .NET 네이티브
-.NET Framework의 관리 개발에서는 리플렉션 API를 통한 메타 프로그래밍이 지원됩니다. 리플렉션을 통해 앱의 개체를 검사하고, 검사를 통해 검색된 개체에 대해 메서드를 호출하고, 런타임에 새 형식을 생성하고, 기타 여러 동적 코드 시나리오를 지원할 수 있습니다. 또한 serialization과 deserialization도 지원되므로 개체의 필드 값을 유지했다가 나중에 복원할 수 있습니다. 이러한 모든 시나리오에서는 .NET Framework JIT(Just-In-Time) 컴파일러가 사용 가능한 메타데이터를 기반으로 네이티브 코드를 생성해야 합니다.  
+# <a name="reflection-and-net-native"></a><span data-ttu-id="c4734-102">리플렉션 및 .NET 네이티브</span><span class="sxs-lookup"><span data-stu-id="c4734-102">Reflection and .NET Native</span></span>
+<span data-ttu-id="c4734-103">.NET Framework의 관리 개발에서는 리플렉션 API를 통한 메타 프로그래밍이 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="c4734-103">In the .NET Framework, managed development supports metaprogramming through the reflection API.</span></span> <span data-ttu-id="c4734-104">리플렉션을 통해 앱의 개체를 검사하고, 검사를 통해 검색된 개체에 대해 메서드를 호출하고, 런타임에 새 형식을 생성하고, 기타 여러 동적 코드 시나리오를 지원할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c4734-104">Reflection allows you to inspect objects in an app, call methods on objects discovered through inspection, generate new types at run time, and supports many other dynamic code scenarios.</span></span> <span data-ttu-id="c4734-105">또한 serialization과 deserialization도 지원되므로 개체의 필드 값을 유지했다가 나중에 복원할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c4734-105">It also supports serialization and deserialization, which allows an object's field values to be persisted and later restored.</span></span> <span data-ttu-id="c4734-106">이러한 모든 시나리오에서는 .NET Framework JIT(Just-In-Time) 컴파일러가 사용 가능한 메타데이터를 기반으로 네이티브 코드를 생성해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4734-106">These scenarios all require the .NET Framework just-in-time (JIT) compiler to generate native code based on available metadata.</span></span>  
   
- [!INCLUDE[net_native](../../../includes/net-native-md.md)] 런타임에는 JIT 컴파일러가 포함되어 있지 않습니다. 따라서 필요한 모든 네이티브 코드를 미리 생성해야 합니다. 추론 집합을 사용하여 생성해야 하는 코드를 결정할 수 있지만 이러한 추론이 가능한 모든 프로그래밍 시나리오에 적용되는 것은 아닙니다.  그러므로 [런타임 지시문](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)을 사용하여 이러한 메타 프로그래밍 시나리오에 대한 힌트를 제공해야 합니다. 필요한 메타데이터 또는 구현 코드를 런타임에 사용할 수 없는 경우 앱에서는 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 또는 [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) 예외를 throw합니다. 이 예외를 제거하는 런타임 지시문 파일에 대한 적절한 항목을 생성하는 두 가지 문제 해결사를 이용할 수 있습니다.  
+ <span data-ttu-id="c4734-107">[!INCLUDE[net_native](../../../includes/net-native-md.md)] 런타임에는 JIT 컴파일러가 포함되어 있지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c4734-107">The [!INCLUDE[net_native](../../../includes/net-native-md.md)] runtime doesn't include a JIT compiler.</span></span> <span data-ttu-id="c4734-108">따라서 필요한 모든 네이티브 코드를 미리 생성해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4734-108">As a result, all necessary native code must be generated in advance.</span></span> <span data-ttu-id="c4734-109">추론 집합을 사용하여 생성해야 하는 코드를 결정할 수 있지만 이러한 추론이 가능한 모든 프로그래밍 시나리오에 적용되는 것은 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="c4734-109">A set of heuristics is used to determine what code should be generated, but these heuristics cannot cover all possible metaprogramming scenarios.</span></span>  <span data-ttu-id="c4734-110">그러므로 [런타임 지시문](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)을 사용하여 이러한 메타 프로그래밍 시나리오에 대한 힌트를 제공해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c4734-110">Therefore, you must provide hints for these metaprogramming scenarios by using [runtime directives](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).</span></span> <span data-ttu-id="c4734-111">필요한 메타데이터 또는 구현 코드를 런타임에 사용할 수 없는 경우 앱에서는 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) 또는 [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) 예외를 throw합니다.</span><span class="sxs-lookup"><span data-stu-id="c4734-111">If the necessary metadata or implementation code is not available at runtime, your app throws a [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md), or [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) exception.</span></span> <span data-ttu-id="c4734-112">이 예외를 제거하는 런타임 지시문 파일에 대한 적절한 항목을 생성하는 두 가지 문제 해결사를 이용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c4734-112">Two troubleshooters are available that will generate the appropriate entry for your runtime directives file that eliminates the exception:</span></span>  
   
--   형식의 경우 [MissingMetadataException 문제 해결사](http://dotnet.github.io/native/troubleshooter/type.html) 입니다.  
+-   <span data-ttu-id="c4734-113">형식의 경우 [MissingMetadataException 문제 해결사](http://dotnet.github.io/native/troubleshooter/type.html) 입니다.</span><span class="sxs-lookup"><span data-stu-id="c4734-113">The [MissingMetadataException troubleshooter](http://dotnet.github.io/native/troubleshooter/type.html) for types.</span></span>  
   
--   메서드의 경우 [MissingMetadataException 문제 해결사](http://dotnet.github.io/native/troubleshooter/method.html) 입니다.  
+-   <span data-ttu-id="c4734-114">메서드의 경우 [MissingMetadataException 문제 해결사](http://dotnet.github.io/native/troubleshooter/method.html) 입니다.</span><span class="sxs-lookup"><span data-stu-id="c4734-114">The [MissingMetadataException troubleshooter](http://dotnet.github.io/native/troubleshooter/method.html) for methods.</span></span>  
   
 > [!NOTE]
->  런타임 지시문 파일이 필요한 이유에 대한 배경 정보를 제공하는 .NET 네이티브 컴파일 프로세스의 개요는 [.NET 네이티브 및 컴파일](../../../docs/framework/net-native/net-native-and-compilation.md)을 참조하세요.  
+>  <span data-ttu-id="c4734-115">런타임 지시문 파일이 필요한 이유에 대한 배경 정보를 제공하는 .NET 네이티브 컴파일 프로세스의 개요는 [.NET 네이티브 및 컴파일](../../../docs/framework/net-native/net-native-and-compilation.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="c4734-115">For an overview of the .NET Native compilation process that provides background on why a runtime directives file is needed, see [.NET Native and Compilation](../../../docs/framework/net-native/net-native-and-compilation.md).</span></span>  
   
- 또한 [!INCLUDE[net_native](../../../includes/net-native-md.md)]에서는 .NET Framework 클래스 라이브러리의 전용 멤버에 대한 리플렉션을 허용하지 않습니다. 예를 들어 .NET Framework 클래스 라이브러리 형식의 필드를 검색하기 위해 <xref:System.Reflection.TypeInfo.DeclaredFields%2A?displayProperty=fullName> 속성을 호출하면 공용 필드 또는 보호된 필드만 반환됩니다.  
+ <span data-ttu-id="c4734-116">또한 [!INCLUDE[net_native](../../../includes/net-native-md.md)]에서는 .NET Framework 클래스 라이브러리의 전용 멤버에 대한 리플렉션을 허용하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c4734-116">In addition, [!INCLUDE[net_native](../../../includes/net-native-md.md)] doesn't allow you to reflect over private members of the .NET Framework class library.</span></span> <span data-ttu-id="c4734-117">예를 들어 .NET Framework 클래스 라이브러리 형식의 필드를 검색하기 위해 <xref:System.Reflection.TypeInfo.DeclaredFields%2A?displayProperty=nameWithType> 속성을 호출하면 공용 필드 또는 보호된 필드만 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="c4734-117">For example, a call to the <xref:System.Reflection.TypeInfo.DeclaredFields%2A?displayProperty=nameWithType> property to retrieve the fields of a .NET Framework class library type returns only public or protected fields.</span></span>  
   
- 다음 항목에서는 앱에서 리플렉션과 serialization을 지원하는 데 필요한 개념 및 참조 설명서를 제공합니다.  
+ <span data-ttu-id="c4734-118">다음 항목에서는 앱에서 리플렉션과 serialization을 지원하는 데 필요한 개념 및 참조 설명서를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="c4734-118">The following topics provide the conceptual and reference documentation that you need to support reflection and serialization in your apps:</span></span>  
   
--   [리플렉션을 사용하는 API](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
+-   [<span data-ttu-id="c4734-119">리플렉션을 사용하는 API</span><span class="sxs-lookup"><span data-stu-id="c4734-119">APIs That Rely on Reflection</span></span>](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
   
--   [리플렉션 API 참조](../../../docs/framework/net-native/net-native-reflection-api-reference.md)  
+-   [<span data-ttu-id="c4734-120">리플렉션 API 참조</span><span class="sxs-lookup"><span data-stu-id="c4734-120">Reflection API Reference</span></span>](../../../docs/framework/net-native/net-native-reflection-api-reference.md)  
   
--   [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+-   [<span data-ttu-id="c4734-121">런타임 지시문(rd.xml) 구성 파일 참조</span><span class="sxs-lookup"><span data-stu-id="c4734-121">Runtime Directives (rd.xml) Configuration File Reference</span></span>](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
   
-## <a name="see-also"></a>참고 항목  
- [.NET 네이티브로 앱 컴파일](../../../docs/framework/net-native/index.md)   
- [.NET 네이티브 및 컴파일](../../../docs/framework/net-native/net-native-and-compilation.md)
-
+## <a name="see-also"></a><span data-ttu-id="c4734-122">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c4734-122">See Also</span></span>  
+ [<span data-ttu-id="c4734-123">.NET Native로 앱 컴파일</span><span class="sxs-lookup"><span data-stu-id="c4734-123">Compiling Apps with .NET Native</span></span>](../../../docs/framework/net-native/index.md)  
+ [<span data-ttu-id="c4734-124">.NET 네이티브 및 컴파일</span><span class="sxs-lookup"><span data-stu-id="c4734-124">.NET Native and Compilation</span></span>](../../../docs/framework/net-native/net-native-and-compilation.md)

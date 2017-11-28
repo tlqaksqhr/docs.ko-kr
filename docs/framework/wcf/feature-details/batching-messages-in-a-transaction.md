@@ -1,94 +1,96 @@
 ---
-title: "트랜잭션에서 메시지 일괄 처리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "메시지 일괄 처리 [WCF]"
+title: "트랜잭션에서 메시지 일괄 처리"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
-caps.latest.revision: 19
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2aa633d2e89612549d1dbe6703e80f4a5e713bf0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 트랜잭션에서 메시지 일괄 처리
-대기 중인 응용 프로그램은 트랜잭션을 사용하여 정확하고 안정적인 메시지 배달을 수행합니다.트랜잭션은 비용이 많이 드는 작업이나 메시지 처리량을 상당히 줄일 수 있습니다.메시지 처리량을 향상시키기 위한 한가지 방법은 응용 프로그램이 단일 트랜잭션 내에서 여러 메시지를 읽고 처리하는 것입니다.성능이 좋아질수록 복구 작업도 늘어납니다. 즉, 일괄 처리하는 메시지 수가 증가하면 트랜잭션이 롤백 되는 경우 필요한 복구 작업의 크기도 증가합니다.트랜잭션 및 세션에서 일괄 처리하는 메시지 사이에는 차이가 있습니다.*세션*은 하나의 응용 프로그램에 의해 처리되고 하나의 단위로 커밋되는 관련 메시지의 그룹입니다.세션은 일반적으로 관련 메시지 그룹을 함께 처리해야 하는 경우 사용됩니다.이러한 예로 온라인 쇼핑 웹 사이트를 들 수 있습니다.*일괄 처리*는 메시지 처리량을 증가시키는 여러 관련 없는 메시지를 처리하는 데 사용됩니다.세션[!INCLUDE[crabout](../../../../includes/crabout-md.md)][세션의 대기 중인 메시지 그룹화](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)을 참조하십시오.또한 일괄 처리하는 메시지는 하나의 응용 프로그램에 의해 처리되고 하나의 단위로 커밋되지만 일괄 처리하는 메시지 간에 관계가 없을 수 있습니다.한 트랜잭션의 메시지를 일괄 처리하는 것이 응용 프로그램이 실행되는 방법을 변경하지 않는 가장 적절한 방법입니다.  
+# <a name="batching-messages-in-a-transaction"></a><span data-ttu-id="a6803-102">트랜잭션에서 메시지 일괄 처리</span><span class="sxs-lookup"><span data-stu-id="a6803-102">Batching Messages in a Transaction</span></span>
+<span data-ttu-id="a6803-103">대기 중인 응용 프로그램은 트랜잭션을 사용하여 정확하고 안정적인 메시지 배달을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-103">Queued applications use transactions to ensure correctness and reliable delivery of messages.</span></span> <span data-ttu-id="a6803-104">트랜잭션은 비용이 많이 드는 작업이나 메시지 처리량을 상당히 줄일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-104">Transactions, however, are expensive operations and can dramatically reduce message throughput.</span></span> <span data-ttu-id="a6803-105">메시지 처리량을 향상시키기 위한 한가지 방법은 응용 프로그램이 단일 트랜잭션 내에서 여러 메시지를 읽고 처리하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-105">One way to improve message throughput is to have an application read and process multiple messages within a single transaction.</span></span> <span data-ttu-id="a6803-106">성능이 좋아질수록 복구 작업도 늘어납니다. 즉, 일괄 처리하는 메시지 수가 증가하면 트랜잭션이 롤백 되는 경우 필요한 복구 작업의 크기도 증가합니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-106">The trade-off is between performance and recovery: as the number of messages in a batch increases, so does the amount of recovery work that required if transactions are rolled back.</span></span> <span data-ttu-id="a6803-107">트랜잭션 및 세션에서 일괄 처리하는 메시지 사이에는 차이가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-107">It is important to note the difference between batching messages in a transaction and sessions.</span></span> <span data-ttu-id="a6803-108">A *세션* 은 단일 응용 프로그램에 의해 처리 되 고 하나의 단위로 커밋되는 관련된 메시지의 그룹화 합니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-108">A *session* is a grouping of related messages that are processed by a single application and committed as a single unit.</span></span> <span data-ttu-id="a6803-109">세션은 일반적으로 관련 메시지 그룹을 함께 처리해야 하는 경우 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-109">Sessions are generally used when a group of related messages must be processed together.</span></span> <span data-ttu-id="a6803-110">이러한 예로 온라인 쇼핑 웹 사이트를 들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-110">An example of this is an online shopping Web site.</span></span> <span data-ttu-id="a6803-111">*일괄 처리* 관련 없는 메시지를 메시지 처리량을 증가 하는 방법, 여러 처리 하는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-111">*Batches* are used to process multiple, unrelated messages in a way that increases message throughput.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="a6803-112">세션은 참조 [세션의 대기 중인 메시지 그룹화](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-112"> sessions, see [Grouping Queued Messages in a Session](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md).</span></span> <span data-ttu-id="a6803-113">또한 일괄 처리하는 메시지는 하나의 응용 프로그램에 의해 처리되고 하나의 단위로 커밋되지만 일괄 처리하는 메시지 간에 관계가 없을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-113">Messages in a batch are also processed by a single application and committed as a single unit, but there may be no relationship between the messages in the batch.</span></span> <span data-ttu-id="a6803-114">한 트랜잭션의 메시지를 일괄 처리하는 것이 응용 프로그램이 실행되는 방법을 변경하지 않는 가장 적절한 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-114">Batching messages in a transaction is an optimization that does not change how the application runs.</span></span>  
   
-## 일괄 처리 모드 시작  
- <xref:System.ServiceModel.Description.TransactedBatchingBehavior> 끝점 동작은 일괄 처리를 제어합니다.이 끝점 동작을 서비스 끝점에 추가하면 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]가 하나의 트랜잭션에서 메시지를 일괄 처리하도록 합니다.일부 메시지의 경우 트랜잭션이 필요하지 않기 때문에 트랜잭션이 필요한 메시지만 일괄 처리되고 `TransactionScopeRequired` \= `true` 및 `TransactionAutoComplete` \= `true`로 표시된 작업에서 보낸 메시지만 일괄 처리 대상으로 고려됩니다.서비스 계약의 모든 작업이 `TransactionScopeRequired` \= `false` 및 `TransactionAutoComplete` \= `false`로 표시된 경우 일괄 처리 모드가 시작되지 않습니다.  
+## <a name="entering-batching-mode"></a><span data-ttu-id="a6803-115">일괄 처리 모드 시작</span><span class="sxs-lookup"><span data-stu-id="a6803-115">Entering Batching Mode</span></span>  
+ <span data-ttu-id="a6803-116"><xref:System.ServiceModel.Description.TransactedBatchingBehavior> 끝점 동작은 일괄 처리를 제어합니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-116">The <xref:System.ServiceModel.Description.TransactedBatchingBehavior> endpoint behavior controls batching.</span></span> <span data-ttu-id="a6803-117">이 끝점 동작을 서비스 끝점에 추가하면 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]가 하나의 트랜잭션에서 메시지를 일괄 처리하도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-117">Adding this endpoint behavior to a service endpoint tells [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] to batch messages in a transaction.</span></span> <span data-ttu-id="a6803-118">트랜잭션이 필요한 메시지만 일괄 처리에 배치 됩니다 일부 메시지에 트랜잭션이 필요 하 고로 표시 된 작업에서 보낸 메시지만 `TransactionScopeRequired`  =  `true` 및 `TransactionAutoComplete`  =  `true` 됩니다 일괄 처리에 대 한 것으로 간주 합니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-118">Not all messages require a transaction, so only messages that require a transaction are placed in a batch, and only messages sent from operations marked with `TransactionScopeRequired` = `true` and `TransactionAutoComplete` = `true` are considered for a batch.</span></span> <span data-ttu-id="a6803-119">경우에 서비스 계약에 대 한 모든 작업으로 표시 되어 `TransactionScopeRequired`  =  `false` 및 `TransactionAutoComplete`  =  `false`, 다음 일괄 처리 모드 시작 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-119">If all operations on the service contract are marked with `TransactionScopeRequired` = `false` and `TransactionAutoComplete` = `false`, then batching mode is never entered.</span></span>  
   
-## 트랜잭션 커밋  
- 일괄 처리된 트랜잭션은 다음을 기준으로 커밋됩니다.  
+## <a name="committing-a-transaction"></a><span data-ttu-id="a6803-120">트랜잭션 커밋</span><span class="sxs-lookup"><span data-stu-id="a6803-120">Committing a Transaction</span></span>  
+ <span data-ttu-id="a6803-121">일괄 처리된 트랜잭션은 다음을 기준으로 커밋됩니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-121">A batched transaction is committed based on the following:</span></span>  
   
--   `MaxBatchSize`.<xref:System.ServiceModel.Description.TransactedBatchingBehavior> 동작의 속성입니다.이 속성은 일괄 처리로 배치되는 최대 메시지 수를 결정합니다.이 값에 도달하면 일괄 처리가 커밋됩니다.값은 엄격하게 제한하지 않으며 이 값의 메시지를 받기 전에 일괄 처리를 커밋할 수 있습니다.  
+-   <span data-ttu-id="a6803-122">`MaxBatchSize`.</span><span class="sxs-lookup"><span data-stu-id="a6803-122">`MaxBatchSize`.</span></span> <span data-ttu-id="a6803-123"><xref:System.ServiceModel.Description.TransactedBatchingBehavior> 동작의 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-123">A property of the <xref:System.ServiceModel.Description.TransactedBatchingBehavior> behavior.</span></span> <span data-ttu-id="a6803-124">이 속성은 일괄 처리로 배치되는 최대 메시지 수를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-124">This property determines the maximum number of messages that are placed into a batch.</span></span> <span data-ttu-id="a6803-125">이 값에 도달하면 일괄 처리가 커밋됩니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-125">When this number is reached, the batch is committed.</span></span> <span data-ttu-id="a6803-126">값은 엄격하게 제한하지 않으며 이 값의 메시지를 받기 전에 일괄 처리를 커밋할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-126">This is value is not a strict limit, it is possible to commit a batch before receiving this number of messages.</span></span>  
   
--   `Transaction Timeout`.트랜잭션 시간 제한의 80%가 경과한 후, 일괄 처리가 커밋되고 새 일괄 처리가 만들어 집니다.이는 완료할 트랜잭션의 지정된 시간이 20% 이하로 남은 경우, 일괄 처리가 커밋된다는 의미입니다.  
+-   <span data-ttu-id="a6803-127">`Transaction Timeout`.</span><span class="sxs-lookup"><span data-stu-id="a6803-127">`Transaction Timeout`.</span></span> <span data-ttu-id="a6803-128">트랜잭션 시간 제한의 80%가 경과한 후, 일괄 처리가 커밋되고 새 일괄 처리가 만들어 집니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-128">After 80 percent of the transaction's time-out has elapsed, the batch is committed and a new batch is created.</span></span> <span data-ttu-id="a6803-129">이는 완료할 트랜잭션의 지정된 시간이 20% 이하로 남은 경우, 일괄 처리가 커밋된다는 의미입니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-129">This means that if 20 percent or less of the time given for a transaction to complete remains, the batch is committed.</span></span>  
   
--   `TransactionScopeRequired`.일괄 처리 메시지를 처리할 때 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]가 `TransactionScopeRequired` \= `false`로 설정된 메시지를 발견한 경우, 일괄 처리를 커밋하고 `TransactionScopeRequired` \= `true` 및 `TransactionAutoComplete` \= `true` 상태의 첫 번째 메시지 수신 시 새 일괄 처리를 다시 엽니다.  
+-   <span data-ttu-id="a6803-130">`TransactionScopeRequired`.</span><span class="sxs-lookup"><span data-stu-id="a6803-130">`TransactionScopeRequired`.</span></span> <span data-ttu-id="a6803-131">일괄 처리 메시지를 처리할 때 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 발견 된 `TransactionScopeRequired`  =  `false`, 첫 번째 메시지 수신 시 새 일괄 처리를 다시 열를 일괄 처리를 커밋하고 `TransactionScopeRequired`  =  `true` 및 `TransactionAutoComplete` = `true`.</span><span class="sxs-lookup"><span data-stu-id="a6803-131">When processing a batch of messages, if [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] finds one that has `TransactionScopeRequired` = `false`, it commits the batch and reopens a new batch on receipt of the first message with `TransactionScopeRequired` = `true` and `TransactionAutoComplete` = `true`.</span></span>  
   
--   메시지가 더 이상 큐에 없는 경우 `MaxBatchSize`에 도달하지 않았거나 트랜잭션 시간 제한의 80%가 경과하지 않았더라도 현재 일괄 처리가 커밋됩니다.  
+-   <span data-ttu-id="a6803-132">메시지가 더 이상 큐에 없는 경우 `MaxBatchSize`에 도달하지 않았거나 트랜잭션 시간 제한의 80%가 경과하지 않았더라도 현재 일괄 처리가 커밋됩니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-132">If no more messages exist in the queue, then the current batch is committed, even if the `MaxBatchSize` has not been reached or 80 percent of the transaction's time-out has not elapsed.</span></span>  
   
-## 일괄 처리 모드 종료  
- 일괄 처리 메시지로 인해 트랜잭션이 중단되는 경우 다음 단계가 수행됩니다.  
+## <a name="leaving-batching-mode"></a><span data-ttu-id="a6803-133">일괄 처리 모드 종료</span><span class="sxs-lookup"><span data-stu-id="a6803-133">Leaving Batching Mode</span></span>  
+ <span data-ttu-id="a6803-134">일괄 처리 메시지로 인해 트랜잭션이 중단되는 경우 다음 단계가 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-134">If a message in a batch causes the transaction to abort, the following steps occur:</span></span>  
   
-1.  전체 일괄 처리 메시지가 롤백됩니다.  
+1.  <span data-ttu-id="a6803-135">전체 일괄 처리 메시지가 롤백됩니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-135">The entire batch of messages is rolled back.</span></span>  
   
-2.  읽는 메시지 수가 최대 일괄 처리 크기의 두 배를 초과할 때까지 메시지를 한 번에 하나씩 읽습니다.  
+2.  <span data-ttu-id="a6803-136">읽는 메시지 수가 최대 일괄 처리 크기의 두 배를 초과할 때까지 메시지를 한 번에 하나씩 읽습니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-136">Messages are read one at a time until the number of messages read exceeds twice the maximum batch size.</span></span>  
   
-3.  일괄 처리 모드가 다시 시작됩니다.  
+3.  <span data-ttu-id="a6803-137">일괄 처리 모드가 다시 시작됩니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-137">Batch mode is re-entered.</span></span>  
   
-## 일괄 처리 크기 선택  
- 일괄 처리 크기는 응용 프로그램에 따라 달라집니다.응용 프로그램의 최적 일괄 처리 크기를 결정하는 데 가장 적절한 방법은 직접 경험하는 것입니다.일괄 처리 크기 선택 시 응용 프로그램의 실제 배포 모델에 따라 크기를 선택해야 합니다.예를 들어, 응용 프로그램을 배포할 때 원격 시스템에서 SQL Server가 필요하고 큐 및 SQL Server가 포함된 트랜잭션이 필요한 경우 이 구성을 실제로 실행하여 일괄 처리 크기를 결정하는 것이 가장 바람직합니다.  
+## <a name="choosing-the-batch-size"></a><span data-ttu-id="a6803-138">일괄 처리 크기 선택</span><span class="sxs-lookup"><span data-stu-id="a6803-138">Choosing the Batch Size</span></span>  
+ <span data-ttu-id="a6803-139">일괄 처리 크기는 응용 프로그램에 따라 달라집니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-139">The size of a batch is application-dependent.</span></span> <span data-ttu-id="a6803-140">응용 프로그램의 최적 일괄 처리 크기를 결정하는 데 가장 적절한 방법은 직접 경험하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-140">The empirical method is the best way to arrive at an optimal batch size for the application.</span></span> <span data-ttu-id="a6803-141">일괄 처리 크기 선택 시 응용 프로그램의 실제 배포 모델에 따라 크기를 선택해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-141">It is important to remember when choosing a batch size to choose the size according to your application's actual deployment model.</span></span> <span data-ttu-id="a6803-142">예를 들어, 응용 프로그램을 배포할 때 원격 시스템에서 SQL Server가 필요하고 큐 및 SQL Server가 포함된 트랜잭션이 필요한 경우 이 구성을 실제로 실행하여 일괄 처리 크기를 결정하는 것이 가장 바람직합니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-142">For example, when deploying the application, if you need an SQL server on a remote machine and a transaction that spans the queue and the SQL server, then the batch size is best determined by running this exact configuration.</span></span>  
   
-## 동시성 및 일괄 처리  
- 처리량을 증가시키기 위해 여러 일괄 처리를 동시에 실행할 수도 있습니다.`ServiceBehaviorAttribute`에서 `ConcurrencyMode.Multiple`을 설정하여 동시 일괄 처리를 수행할 수 있습니다.  
+## <a name="concurrency-and-batching"></a><span data-ttu-id="a6803-143">동시성 및 일괄 처리</span><span class="sxs-lookup"><span data-stu-id="a6803-143">Concurrency and Batching</span></span>  
+ <span data-ttu-id="a6803-144">처리량을 증가시키기 위해 여러 일괄 처리를 동시에 실행할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-144">To increase throughput, you can also have many batches run concurrently.</span></span> <span data-ttu-id="a6803-145">`ConcurrencyMode.Multiple`에서 `ServiceBehaviorAttribute`을 설정하여 동시 일괄 처리를 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-145">By setting `ConcurrencyMode.Multiple` in `ServiceBehaviorAttribute`, you enable concurrent batching.</span></span>  
   
- *서비스 스로틀*은 서비스에서 수행할 수 있는 최대 동시 호출 수를 나타내는 데 사용되는 서비스 동작입니다.일괄 처리에서 사용하는 경우 이 동작은 동시에 실행할 수 있는 일괄 처리 수로 해석됩니다.서비스 스로틀을 설정하지 않을 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 기본적으로 최대 동시 호출을 16으로 지정합니다.따라서 기본적으로 일괄 처리 동작이 추가된 경우, 동시에 최대 16개의 일괄 처리를 수행할 수 있습니다.사용자 성능을 기준으로 서비스 스로틀 및 일괄 처리를 조정하는 것이 가장 바람직합니다.예를 들어, 큐에 100개의 메시지가 있고 20개를 일괄 처리하려는 경우 처리량에 따라 일괄 처리를 조정하지 않은 것처럼 16개의 트랜잭션을 수행할 수 있기 때문에, 최대 동시 호출을 16으로 설정하는 것이 유용하지 않을 수 있습니다.따라서 성능을 세부적으로 조정하는 경우 동시 일괄 처리를 설정하지 않거나 올바른 서비스 스로틀 크기로 동시 일괄 처리를 설정합니다.  
+ <span data-ttu-id="a6803-146">*서비스 스로틀* 최대 동시 호출 수는 서비스에서 수행할 수를 나타내는 데 사용 되는 서비스 동작입니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-146">*Service throttling* is a service behavior that is used to indicate how many maximum concurrent calls can be made on the service.</span></span> <span data-ttu-id="a6803-147">일괄 처리에서 사용하는 경우 이 동작은 동시에 실행할 수 있는 일괄 처리 수로 해석됩니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-147">When used with batching, this is interpreted as how many concurrent batches can be run.</span></span> <span data-ttu-id="a6803-148">서비스 스로틀을 설정하지 않을 경우 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 기본적으로 최대 동시 호출을 16으로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-148">If the service throttling is not set, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] defaults the maximum concurrent calls to 16.</span></span> <span data-ttu-id="a6803-149">따라서 기본적으로 일괄 처리 동작이 추가된 경우, 동시에 최대 16개의 일괄 처리를 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-149">Thus, if batching behavior were added by default, a maximum of 16 batches can be active at the same time.</span></span> <span data-ttu-id="a6803-150">사용자 성능을 기준으로 서비스 스로틀 및 일괄 처리를 조정하는 것이 가장 바람직합니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-150">It is best to tune the service throttling and batching based on your capacity.</span></span> <span data-ttu-id="a6803-151">예를 들어, 큐에 100개의 메시지가 있고 20개를 일괄 처리하려는 경우 처리량에 따라 일괄 처리를 조정하지 않은 것처럼 16개의 트랜잭션을 수행할 수 있기 때문에, 최대 동시 호출을 16으로 설정하는 것이 유용하지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-151">For example, if the queue has 100 messages and a batch of 20 is desired, having the maximum concurrent calls set to 16 is not useful because, depending on throughput, 16 transactions could be active, similar to not having batching turned on.</span></span> <span data-ttu-id="a6803-152">따라서 성능을 세부적으로 조정하는 경우 동시 일괄 처리를 설정하지 않거나 올바른 서비스 스로틀 크기로 동시 일괄 처리를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-152">Therefore, when fine-tuning for performance, either do not have concurrent batching or have concurrent batching with the correct service throttle size.</span></span>  
   
-## 일괄 처리 및 여러 끝점  
- 끝점은 주소 및 계약으로 구성됩니다.동일한 바인딩을 공유하는 여러 끝점이 있을 수 있습니다.두 개의 끝점이 동일한 바인딩을 공유하고 URI\(Uniform Resource Identifier\) 또는 큐 주소를 수신 대기할 수 있습니다.두 개의 끝점을 동일한 큐에서 읽는 경우, 트랜잭션된 일괄 처리 동작이 양쪽 끝점에 추가되고 지정된 일괄 처리 크기 간에 충돌될 수 있습니다.이러한 동작은 두 개의 트랜잭션된 일괄 처리 동작 간에 지정된 최소 일괄 처리 크기로 일괄 처리를 구현하여 확인합니다.이 시나리오에서 끝점 중 하나가 트랜잭션된 일괄 처리를 지정하지 않은 경우, 양쪽 끝점 모두 일괄 처리를 사용하지 않습니다.  
+## <a name="batching-and-multiple-endpoints"></a><span data-ttu-id="a6803-153">일괄 처리 및 여러 끝점</span><span class="sxs-lookup"><span data-stu-id="a6803-153">Batching and Multiple Endpoints</span></span>  
+ <span data-ttu-id="a6803-154">끝점은 주소 및 계약으로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-154">An endpoint is composed of an address and a contract.</span></span> <span data-ttu-id="a6803-155">동일한 바인딩을 공유하는 여러 끝점이 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-155">There may be multiple endpoints that share the same binding.</span></span> <span data-ttu-id="a6803-156">두 개의 끝점이 동일한 바인딩을 공유하고 URI(Uniform Resource Identifier) 또는 큐 주소를 수신 대기할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-156">It is possible for two endpoints to share the same binding and listen Uniform Resource Identifier (URI), or queue address.</span></span> <span data-ttu-id="a6803-157">두 개의 끝점을 동일한 큐에서 읽는 경우, 트랜잭션된 일괄 처리 동작이 양쪽 끝점에 추가되고 지정된 일괄 처리 크기 간에 충돌될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-157">If two endpoints are reading from the same queue, and transacted batching behavior is added to both endpoints, a conflict in the batch sizes specified could arise.</span></span> <span data-ttu-id="a6803-158">이러한 동작은 두 개의 트랜잭션된 일괄 처리 동작 간에 지정된 최소 일괄 처리 크기로 일괄 처리를 구현하여 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-158">This is resolved by implementing batching using the minimal batch size specified between the two transacted batching behaviors.</span></span> <span data-ttu-id="a6803-159">이 시나리오에서 끝점 중 하나가 트랜잭션된 일괄 처리를 지정하지 않은 경우, 양쪽 끝점 모두 일괄 처리를 사용하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-159">In this scenario, if one of the endpoints does not specify transacted batching, then both endpoints would not use batching.</span></span>  
   
-## 예제  
- 다음 예제에서는 구성 파일에서 `TransactedBatchingBehavior`를 지정하는 방법을 보여 줍니다.  
+## <a name="example"></a><span data-ttu-id="a6803-160">예제</span><span class="sxs-lookup"><span data-stu-id="a6803-160">Example</span></span>  
+ <span data-ttu-id="a6803-161">다음 예제에서는 구성 파일에서 `TransactedBatchingBehavior`를 지정하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-161">The following example shows how to specify the `TransactedBatchingBehavior` in a configuration file.</span></span>  
   
+```xml  
+<behaviors>
+  <endpointBehaviors>
+    <behavior name="TransactedBatchingBehavior"
+              maxBatchSize="100" />
+  </endpointBehaviors>
+</behaviors>
 ```  
-<behaviors>  
-      <endpointBehaviors>  
-        <behavior name="TransactedBatchingBehavior"  
-                  maxBatchSize="100"/>  
-      </endpointBehaviors>  
-    </behaviors>  
-```  
   
- 다음 예제에서는 코드에서 <xref:System.ServiceModel.Description.TransactedBatchingBehavior>를 지정하는 방법을 보여 줍니다.  
+ <span data-ttu-id="a6803-162">다음 예제에서는 코드에서 <xref:System.ServiceModel.Description.TransactedBatchingBehavior>를 지정하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a6803-162">The following example shows how to specify the <xref:System.ServiceModel.Description.TransactedBatchingBehavior> in code.</span></span>  
   
-```  
-using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))  
-{  
-     ServiceEndpoint sep = ServiceHost.AddServiceEndpoint(typeof(IOrderProcessor), new NetMsmqBinding(), "net.msmq://localhost/private/ServiceModelSamplesTransacted");  
-                sep.Behaviors.Add(new TransactedBatchingBehavior(100));  
+```csharp
+using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
+{
+     ServiceEndpoint sep = ServiceHost.AddServiceEndpoint(typeof(IOrderProcessor), new NetMsmqBinding(), "net.msmq://localhost/private/ServiceModelSamplesTransacted");
+     sep.Behaviors.Add(new TransactedBatchingBehavior(100));
+     
+     // Open the ServiceHost to create listeners and start listening for messages.
+    serviceHost.Open();
   
-     // Open the ServiceHost to create listeners and start listening for messages.  
-    serviceHost.Open();  
+    // The service can now be accessed.
+    Console.WriteLine("The service is ready.");
+    Console.WriteLine("Press <ENTER> to terminate service.");
+    Console.WriteLine();
+    Console.ReadLine();
   
-    // The service can now be accessed.  
-    Console.WriteLine("The service is ready.");  
-    Console.WriteLine("Press <ENTER> to terminate service.");  
-    Console.WriteLine();  
-    Console.ReadLine();  
-  
-   // Close the ServiceHostB to shut down the service.  
-    serviceHost.Close();  
+    // Close the ServiceHostB to shut down the service.
+    serviceHost.Close();
 }  
 ```  
   
-## 참고 항목  
- [큐 개요](../../../../docs/framework/wcf/feature-details/queues-overview.md)   
- [WCF의 큐](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+## <a name="see-also"></a><span data-ttu-id="a6803-163">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a6803-163">See Also</span></span>  
+ [<span data-ttu-id="a6803-164">큐 개요</span><span class="sxs-lookup"><span data-stu-id="a6803-164">Queues Overview</span></span>](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
+ [<span data-ttu-id="a6803-165">WCF의 큐</span><span class="sxs-lookup"><span data-stu-id="a6803-165">Queuing in WCF</span></span>](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)

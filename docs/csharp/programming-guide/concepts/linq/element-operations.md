@@ -1,51 +1,41 @@
 ---
 title: "요소 작업(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 283206c9-3246-4c48-b01a-d9de409a7231
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 55081e66419624c2c4930a254d3d464007477766
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: da747e884960c89fabc45d3761da92f913d66362
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="element-operations-c"></a>요소 작업(C#)
-요소 작업은 시퀀스에서 특정 단일 요소를 반환합니다.  
+# <a name="element-operations-c"></a><span data-ttu-id="e6ddc-102">요소 작업(C#)</span><span class="sxs-lookup"><span data-stu-id="e6ddc-102">Element Operations (C#)</span></span>
+<span data-ttu-id="e6ddc-103">요소 작업은 시퀀스에서 특정 단일 요소를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="e6ddc-103">Element operations return a single, specific element from a sequence.</span></span>  
   
- 다음 섹션에는 요소 작업을 수행하는 표준 쿼리 연산자 메서드가 나열되어 있습니다.  
+ <span data-ttu-id="e6ddc-104">다음 섹션에는 요소 작업을 수행하는 표준 쿼리 연산자 메서드가 나열되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="e6ddc-104">The standard query operator methods that perform element operations are listed in the following section.</span></span>  
   
-## <a name="methods"></a>메서드  
+## <a name="methods"></a><span data-ttu-id="e6ddc-105">메서드</span><span class="sxs-lookup"><span data-stu-id="e6ddc-105">Methods</span></span>  
   
-|메서드 이름|설명|C# 쿼리 식 구문|추가 정보|  
+|<span data-ttu-id="e6ddc-106">메서드 이름</span><span class="sxs-lookup"><span data-stu-id="e6ddc-106">Method Name</span></span>|<span data-ttu-id="e6ddc-107">설명</span><span class="sxs-lookup"><span data-stu-id="e6ddc-107">Description</span></span>|<span data-ttu-id="e6ddc-108">C# 쿼리 식 구문</span><span class="sxs-lookup"><span data-stu-id="e6ddc-108">C# Query Expression Syntax</span></span>|<span data-ttu-id="e6ddc-109">추가 정보</span><span class="sxs-lookup"><span data-stu-id="e6ddc-109">More Information</span></span>|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|ElementAt|컬렉션의 지정된 인덱스에 있는 요소를 반환합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.ElementAt%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ElementAt%2A?displayProperty=nameWithType>|  
-|ElementAtOrDefault|컬렉션의 지정된 인덱스에 있는 요소를 반환하거나 인덱스가 범위를 벗어나면 기본값을 반환합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.ElementAtOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ElementAtOrDefault%2A?displayProperty=nameWithType>|  
-|First|컬렉션의 첫 번째 요소 또는 특정 조건에 맞는 첫 번째 요소를 반환합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.First%2A?displayProperty=nameWithType>|  
-|FirstOrDefault|컬렉션의 첫 번째 요소 또는 특정 조건에 맞는 첫 번째 요소를 반환합니다. 이러한 요소가 없으면 기본값을 반환합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.FirstOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.FirstOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.FirstOrDefault%60%601%28System.Linq.IQueryable%7B%60%600%7D%29?displayProperty=nameWithType>|  
-|마지막|컬렉션의 마지막 요소 또는 특정 조건에 맞는 마지막 요소를 반환합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.Last%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Last%2A?displayProperty=nameWithType>|  
-|LastOrDefault|컬렉션의 마지막 요소 또는 특정 조건에 맞는 마지막 요소를 반환합니다. 이러한 요소가 없으면 기본값을 반환합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.LastOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.LastOrDefault%2A?displayProperty=nameWithType>|  
-|Single|컬렉션의 유일한 요소 또는 특정 조건에 맞는 유일한 요소를 반환합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.Single%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Single%2A?displayProperty=nameWithType>|  
-|SingleOrDefault|컬렉션의 유일한 요소 또는 특정 조건에 맞는 유일한 요소를 반환합니다. 이러한 요소가 없거나 컬렉션에 정확히 하나의 요소가 포함되지 않은 경우 기본값을 반환합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="e6ddc-110">ElementAt</span><span class="sxs-lookup"><span data-stu-id="e6ddc-110">ElementAt</span></span>|<span data-ttu-id="e6ddc-111">컬렉션의 지정된 인덱스에 있는 요소를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="e6ddc-111">Returns the element at a specified index in a collection.</span></span>|<span data-ttu-id="e6ddc-112">해당 사항 없음.</span><span class="sxs-lookup"><span data-stu-id="e6ddc-112">Not applicable.</span></span>|<xref:System.Linq.Enumerable.ElementAt%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ElementAt%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="e6ddc-113">ElementAtOrDefault</span><span class="sxs-lookup"><span data-stu-id="e6ddc-113">ElementAtOrDefault</span></span>|<span data-ttu-id="e6ddc-114">컬렉션의 지정된 인덱스에 있는 요소를 반환하거나 인덱스가 범위를 벗어나면 기본값을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="e6ddc-114">Returns the element at a specified index in a collection or a default value if the index is out of range.</span></span>|<span data-ttu-id="e6ddc-115">해당 사항 없음.</span><span class="sxs-lookup"><span data-stu-id="e6ddc-115">Not applicable.</span></span>|<xref:System.Linq.Enumerable.ElementAtOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ElementAtOrDefault%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="e6ddc-116">First</span><span class="sxs-lookup"><span data-stu-id="e6ddc-116">First</span></span>|<span data-ttu-id="e6ddc-117">컬렉션의 첫 번째 요소 또는 특정 조건에 맞는 첫 번째 요소를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="e6ddc-117">Returns the first element of a collection, or the first element that satisfies a condition.</span></span>|<span data-ttu-id="e6ddc-118">해당 사항 없음.</span><span class="sxs-lookup"><span data-stu-id="e6ddc-118">Not applicable.</span></span>|<xref:System.Linq.Enumerable.First%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.First%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="e6ddc-119">FirstOrDefault</span><span class="sxs-lookup"><span data-stu-id="e6ddc-119">FirstOrDefault</span></span>|<span data-ttu-id="e6ddc-120">컬렉션의 첫 번째 요소 또는 특정 조건에 맞는 첫 번째 요소를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="e6ddc-120">Returns the first element of a collection, or the first element that satisfies a condition.</span></span> <span data-ttu-id="e6ddc-121">이러한 요소가 없으면 기본값을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="e6ddc-121">Returns a default value if no such element exists.</span></span>|<span data-ttu-id="e6ddc-122">해당 사항 없음.</span><span class="sxs-lookup"><span data-stu-id="e6ddc-122">Not applicable.</span></span>|<xref:System.Linq.Enumerable.FirstOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.FirstOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.FirstOrDefault%60%601%28System.Linq.IQueryable%7B%60%600%7D%29?displayProperty=nameWithType>|  
+|<span data-ttu-id="e6ddc-123">마지막</span><span class="sxs-lookup"><span data-stu-id="e6ddc-123">Last</span></span>|<span data-ttu-id="e6ddc-124">컬렉션의 마지막 요소 또는 특정 조건에 맞는 마지막 요소를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="e6ddc-124">Returns the last element of a collection, or the last element that satisfies a condition.</span></span>|<span data-ttu-id="e6ddc-125">해당 사항 없음.</span><span class="sxs-lookup"><span data-stu-id="e6ddc-125">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Last%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Last%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="e6ddc-126">LastOrDefault</span><span class="sxs-lookup"><span data-stu-id="e6ddc-126">LastOrDefault</span></span>|<span data-ttu-id="e6ddc-127">컬렉션의 마지막 요소 또는 특정 조건에 맞는 마지막 요소를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="e6ddc-127">Returns the last element of a collection, or the last element that satisfies a condition.</span></span> <span data-ttu-id="e6ddc-128">이러한 요소가 없으면 기본값을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="e6ddc-128">Returns a default value if no such element exists.</span></span>|<span data-ttu-id="e6ddc-129">해당 사항 없음.</span><span class="sxs-lookup"><span data-stu-id="e6ddc-129">Not applicable.</span></span>|<xref:System.Linq.Enumerable.LastOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.LastOrDefault%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="e6ddc-130">Single</span><span class="sxs-lookup"><span data-stu-id="e6ddc-130">Single</span></span>|<span data-ttu-id="e6ddc-131">컬렉션의 유일한 요소 또는 특정 조건에 맞는 유일한 요소를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="e6ddc-131">Returns the only element of a collection, or the only element that satisfies a condition.</span></span>|<span data-ttu-id="e6ddc-132">해당 사항 없음.</span><span class="sxs-lookup"><span data-stu-id="e6ddc-132">Not applicable.</span></span>|<xref:System.Linq.Enumerable.Single%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Single%2A?displayProperty=nameWithType>|  
+|<span data-ttu-id="e6ddc-133">SingleOrDefault</span><span class="sxs-lookup"><span data-stu-id="e6ddc-133">SingleOrDefault</span></span>|<span data-ttu-id="e6ddc-134">컬렉션의 유일한 요소 또는 특정 조건에 맞는 유일한 요소를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="e6ddc-134">Returns the only element of a collection, or the only element that satisfies a condition.</span></span> <span data-ttu-id="e6ddc-135">이러한 요소가 없거나 컬렉션에 정확히 하나의 요소가 포함되지 않은 경우 기본값을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="e6ddc-135">Returns a default value if no such element exists or the collection does not contain exactly one element.</span></span>|<span data-ttu-id="e6ddc-136">해당 사항 없음.</span><span class="sxs-lookup"><span data-stu-id="e6ddc-136">Not applicable.</span></span>|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Linq>   
- [표준 쿼리 연산자 개요(C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)   
- [방법: 디렉터리 트리에서 가장 큰 파일을 하나 이상 쿼리(LINQ)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)
-
+## <a name="see-also"></a><span data-ttu-id="e6ddc-137">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e6ddc-137">See Also</span></span>  
+ <xref:System.Linq>  
+ [<span data-ttu-id="e6ddc-138">표준 쿼리 연산자 개요(C#)</span><span class="sxs-lookup"><span data-stu-id="e6ddc-138">Standard Query Operators Overview (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+ [<span data-ttu-id="e6ddc-139">방법: 디렉터리 트리에서 가장 큰 파일을 하나 이상 쿼리(LINQ)(C#)</span><span class="sxs-lookup"><span data-stu-id="e6ddc-139">How to: Query for the Largest File or Files in a Directory Tree (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)

@@ -8,70 +8,67 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- thread-safe collections, when to upgrade
+helpviewer_keywords: thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
+ms.openlocfilehash: 0bfb5ef2679c4e20e99a10dcf82a251673811b41
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5166b7b7be38fae9bf809cb0b3aa79b76efd41ac
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="when-to-use-a-thread-safe-collection"></a>스레드로부터 안전한 컬렉션 사용 시기
-[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]에서는 다중 스레드 추가 및 제거 작업을 지원하도록 특별히 디자인된 5가지 새 컬렉션 형식을 도입했습니다. 이러한 새 형식은 스레드로부터의 안전성을 달성하기 위해 다양한 종류의 효율적인 잠금 및 잠금 해제 동기화 메커니즘을 사용합니다. 동기화로 인해 작업에 오버헤드가 더해집니다. 사용되는 동기화의 종류, 수행되는 작업의 종류 및 컬렉션에 동시에 액세스하려는 스레드의 수와 같은 기타 요인에 따라 오버헤드의 양이 달라집니다.  
+# <a name="when-to-use-a-thread-safe-collection"></a><span data-ttu-id="52ae2-102">스레드로부터 안전한 컬렉션 사용 시기</span><span class="sxs-lookup"><span data-stu-id="52ae2-102">When to Use a Thread-Safe Collection</span></span>
+<span data-ttu-id="52ae2-103">[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]에서는 다중 스레드 추가 및 제거 작업을 지원하도록 특별히 디자인된 5가지 새 컬렉션 형식을 도입했습니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-103">The [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] introduces five new collection types that are specially designed to support multi-threaded add and remove operations.</span></span> <span data-ttu-id="52ae2-104">이러한 새 형식은 스레드로부터의 안전성을 달성하기 위해 다양한 종류의 효율적인 잠금 및 잠금 해제 동기화 메커니즘을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-104">To achieve thread-safety, these new types use various kinds of efficient locking and lock-free synchronization mechanisms.</span></span> <span data-ttu-id="52ae2-105">동기화로 인해 작업에 오버헤드가 더해집니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-105">Synchronization adds overhead to an operation.</span></span> <span data-ttu-id="52ae2-106">사용되는 동기화의 종류, 수행되는 작업의 종류 및 컬렉션에 동시에 액세스하려는 스레드의 수와 같은 기타 요인에 따라 오버헤드의 양이 달라집니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-106">The amount of overhead depends on the kind of synchronization that is used, the kind of operations that are performed, and other factors such as the number of threads that are trying to concurrently access the collection.</span></span>  
   
- 일부 시나리오에서는 동기화 오버헤드가 거의 없고 다중 스레드 형식을 외부 잠금으로 보호하는 경우 스레드로부터 안전하지 않은 형식보다 훨씬 더 빠르게 수행하고 크기를 조정할 수 있습니다. 다른 시나리오에서는 오버헤드로 인해 스레드로부터 안전한 형식이 외부에서 잠근 스레드로부터 안전하지 않은 버전의 형식보다 동일하거나 훨씬 더 느리게 수행하고 크기를 조정하게 될 수 있습니다.  
+ <span data-ttu-id="52ae2-107">일부 시나리오에서는 동기화 오버헤드가 거의 없고 다중 스레드 형식을 외부 잠금으로 보호하는 경우 스레드로부터 안전하지 않은 형식보다 훨씬 더 빠르게 수행하고 크기를 조정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-107">In some scenarios, synchronization overhead is negligible and enables the multi-threaded type to perform significantly faster and scale far better than its non-thread-safe equivalent when protected by an external lock.</span></span> <span data-ttu-id="52ae2-108">다른 시나리오에서는 오버헤드로 인해 스레드로부터 안전한 형식이 외부에서 잠근 스레드로부터 안전하지 않은 버전의 형식보다 동일하거나 훨씬 더 느리게 수행하고 크기를 조정하게 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-108">In other scenarios, the overhead can cause the thread-safe type to perform and scale about the same or even more slowly than the externally-locked, non-thread-safe version of the type.</span></span>  
   
- 다음 섹션에서는 읽기 및 쓰기 작업에 사용자가 제공한 잠금이 있는 스레드로부터 안전한 컬렉션 및 스레드로부터 안전하지 않은 컬렉션을 사용하는 경우에 대한 일반적인 지침을 제공합니다. 성능이 여러 요인에 따라 달라질 수 있기 때문에 지침은 구체적이지 않고 모든 상황에서 반드시 유효하지 않습니다. 성능이 매우 중요한 경우 사용할 컬렉션 형식을 결정하는 가장 좋은 방법은 대표적인 컴퓨터 구성 및 부하에 따라 성능을 측정하는 것입니다. 이 문서에서는 다음과 같은 용어를 사용합니다.  
+ <span data-ttu-id="52ae2-109">다음 섹션에서는 읽기 및 쓰기 작업에 사용자가 제공한 잠금이 있는 스레드로부터 안전한 컬렉션 및 스레드로부터 안전하지 않은 컬렉션을 사용하는 경우에 대한 일반적인 지침을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-109">The following sections provide general guidance about when to use a thread-safe collection versus its non-thread-safe equivalent that has a user-provided lock around its read and write operations.</span></span> <span data-ttu-id="52ae2-110">성능이 여러 요인에 따라 달라질 수 있기 때문에 지침은 구체적이지 않고 모든 상황에서 반드시 유효하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-110">Because performance may vary depending on many factors, the guidance is not specific and is not necessarily valid in all circumstances.</span></span> <span data-ttu-id="52ae2-111">성능이 매우 중요한 경우 사용할 컬렉션 형식을 결정하는 가장 좋은 방법은 대표적인 컴퓨터 구성 및 부하에 따라 성능을 측정하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-111">If performance is very important, then the best way to determine which collection type to use is to measure performance based on representative computer configurations and loads.</span></span> <span data-ttu-id="52ae2-112">이 문서에서는 다음과 같은 용어를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-112">This document uses the following terms:</span></span>  
   
- *순수 생산자-소비자 시나리오*  
- 지정된 모든 스레드가 요소를 추가하거나 제거하는 작업 중 하나만 수행합니다.  
+ <span data-ttu-id="52ae2-113">*순수 생산자-소비자 시나리오*</span><span class="sxs-lookup"><span data-stu-id="52ae2-113">*Pure producer-consumer scenario*</span></span>  
+ <span data-ttu-id="52ae2-114">지정된 모든 스레드가 요소를 추가하거나 제거하는 작업 중 하나만 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-114">Any given thread is either adding or removing elements, but not both.</span></span>  
   
- *혼합 생산자-소비자 시나리오*  
- 지정된 모든 스레드가 요소를 추가하고 제거하는 작업을 모두 수행합니다.  
+ <span data-ttu-id="52ae2-115">*혼합 생산자-소비자 시나리오*</span><span class="sxs-lookup"><span data-stu-id="52ae2-115">*Mixed producer-consumer scenario*</span></span>  
+ <span data-ttu-id="52ae2-116">지정된 모든 스레드가 요소를 추가하고 제거하는 작업을 모두 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-116">Any given thread is both adding and removing elements.</span></span>  
   
- *속도 향상*  
- 동일한 시나리오에서 다른 형식에 비해 더 빠른 알고리즘 성능입니다.  
+ <span data-ttu-id="52ae2-117">*속도 향상*</span><span class="sxs-lookup"><span data-stu-id="52ae2-117">*Speedup*</span></span>  
+ <span data-ttu-id="52ae2-118">동일한 시나리오에서 다른 형식에 비해 더 빠른 알고리즘 성능입니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-118">Faster algorithmic performance relative to another type in the same scenario.</span></span>  
   
- *확장성*  
- 컴퓨터의 코어 수에 비례하는 성능의 증가입니다. 배율이 두 개의 코어를 사용하는 경우보다 8개의 코어를 사용하는 경우 더 빠르게 수행하는 알고리즘입니다.  
+ <span data-ttu-id="52ae2-119">*확장성*</span><span class="sxs-lookup"><span data-stu-id="52ae2-119">*Scalability*</span></span>  
+ <span data-ttu-id="52ae2-120">컴퓨터의 코어 수에 비례하는 성능의 증가입니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-120">The increase in performance that is proportional to the number of cores on the computer.</span></span> <span data-ttu-id="52ae2-121">배율이 두 개의 코어를 사용하는 경우보다 8개의 코어를 사용하는 경우 더 빠르게 수행하는 알고리즘입니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-121">An algorithm that scales performs faster on eight cores than it does on two cores.</span></span>  
   
-## <a name="concurrentqueuet-vs-queuet"></a>ConcurrentQueue(T) 및 Queue(T)  
- 명령이 몇 개뿐이어서 각 요소에 대한 처리 시간이 매우 짧은 순수 생산자-소비자 시나리오의 경우 <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=fullName>를 사용하면 외부 잠금이 있는 <xref:System.Collections.Generic.Queue%601?displayProperty=fullName>을 통해 성능을 어느 정도 개선할 수 있습니다. 이 시나리오에서 <xref:System.Collections.Concurrent.ConcurrentQueue%601>은 하나의 전용 스레드가 큐에 대기 중이고 다른 하나의 전용 스레드가 큐에서 해제되는 경우 최고의 성능을 발휘합니다. 이 규칙을 적용하지 않는 경우 <xref:System.Collections.Generic.Queue%601>은 다중 코어인 컴퓨터의 <xref:System.Collections.Concurrent.ConcurrentQueue%601>보다 약간 더 빠르게 수행할 수 있습니다.  
+## <a name="concurrentqueuet-vs-queuet"></a><span data-ttu-id="52ae2-122">ConcurrentQueue(T) 및 Queue(T)</span><span class="sxs-lookup"><span data-stu-id="52ae2-122">ConcurrentQueue(T) vs. Queue(T)</span></span>  
+ <span data-ttu-id="52ae2-123">명령이 몇 개뿐이어서 각 요소에 대한 처리 시간이 매우 짧은 순수 생산자-소비자 시나리오의 경우 <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>를 사용하면 외부 잠금이 있는 <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>을 통해 성능을 어느 정도 개선할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-123">In pure producer-consumer scenarios, where the processing time for each element is very small (a few instructions), then <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType> can offer modest performance benefits over a <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> that has an external lock.</span></span> <span data-ttu-id="52ae2-124">이 시나리오에서 <xref:System.Collections.Concurrent.ConcurrentQueue%601>은 하나의 전용 스레드가 큐에 대기 중이고 다른 하나의 전용 스레드가 큐에서 해제되는 경우 최고의 성능을 발휘합니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-124">In this scenario, <xref:System.Collections.Concurrent.ConcurrentQueue%601> performs best when one dedicated thread is queuing and one dedicated thread is de-queuing.</span></span> <span data-ttu-id="52ae2-125">이 규칙을 적용하지 않는 경우 <xref:System.Collections.Generic.Queue%601>은 다중 코어인 컴퓨터의 <xref:System.Collections.Concurrent.ConcurrentQueue%601>보다 약간 더 빠르게 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-125">If you do not enforce this rule, then <xref:System.Collections.Generic.Queue%601> might even perform slightly faster than <xref:System.Collections.Concurrent.ConcurrentQueue%601> on computers that have multiple cores.</span></span>  
   
- 처리 시간이 500FLOPS(부동 소수점 연산) 이상인 경우 매우 우수한 확장성을 가진 두 개의 스레드 규칙은 <xref:System.Collections.Concurrent.ConcurrentQueue%601>에 적용되지 않습니다. <xref:System.Collections.Generic.Queue%601>는 이 시나리오에서 잘 확장되지 않습니다.  
+ <span data-ttu-id="52ae2-126">처리 시간이 500FLOPS(부동 소수점 연산) 이상인 경우 매우 우수한 확장성을 가진 두 개의 스레드 규칙은 <xref:System.Collections.Concurrent.ConcurrentQueue%601>에 적용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-126">When processing time is around 500 FLOPS (floating point operations) or more, then the two-thread rule does not apply to <xref:System.Collections.Concurrent.ConcurrentQueue%601>, which then has very good scalability.</span></span> <span data-ttu-id="52ae2-127"><xref:System.Collections.Generic.Queue%601>는 이 시나리오에서 잘 확장되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-127"><xref:System.Collections.Generic.Queue%601> does not scale well in this scenario.</span></span>  
   
- 혼합 생산자-소비자 시나리오에서 처리 시간이 매우 작은 경우 <xref:System.Collections.Generic.Queue%601>의 외부 잠금 배율은 <xref:System.Collections.Concurrent.ConcurrentQueue%601>에 비해 우수합니다. 그러나 처리 시간이 500FLOPS 이상인 경우 <xref:System.Collections.Concurrent.ConcurrentQueue%601>의 확장성이 더 우수합니다.  
+ <span data-ttu-id="52ae2-128">혼합 생산자-소비자 시나리오에서 처리 시간이 매우 작은 경우 <xref:System.Collections.Generic.Queue%601>의 외부 잠금 배율은 <xref:System.Collections.Concurrent.ConcurrentQueue%601>에 비해 우수합니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-128">In mixed producer-consumer scenarios, when the processing time is very small, a <xref:System.Collections.Generic.Queue%601> that has an external lock scales better than <xref:System.Collections.Concurrent.ConcurrentQueue%601> does.</span></span> <span data-ttu-id="52ae2-129">그러나 처리 시간이 500FLOPS 이상인 경우 <xref:System.Collections.Concurrent.ConcurrentQueue%601>의 확장성이 더 우수합니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-129">However, when processing time is around 500 FLOPS or more, then the <xref:System.Collections.Concurrent.ConcurrentQueue%601> scales better.</span></span>  
   
-## <a name="concurrentstack-vs-stack"></a>ConcurrentStack 및 스택  
- 순수 생산자-소비자 시나리오에서 처리 시간이 매우 짧으면 외부 잠금이 있는 <xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=fullName> 및 <xref:System.Collections.Generic.Stack%601?displayProperty=fullName>의 성능은 전용 푸싱 스레드와 전용 팝업 스레드를 하나씩 사용하는 경우 거의 동일할 가능성이 높습니다. 그러나 스레드가 증가하면 경합 증가로 인해 두 유형의 성능이 모두 저하되고 <xref:System.Collections.Generic.Stack%601>이 <xref:System.Collections.Concurrent.ConcurrentStack%601>보다 우수한 결과를 수행할 수 있습니다. 처리 시간이 500FLOPS 이상인 경우 두 형식은 거의 동일한 속도로 확장합니다.  
+## <a name="concurrentstack-vs-stack"></a><span data-ttu-id="52ae2-130">ConcurrentStack 및 스택</span><span class="sxs-lookup"><span data-stu-id="52ae2-130">ConcurrentStack vs. Stack</span></span>  
+ <span data-ttu-id="52ae2-131">순수 생산자-소비자 시나리오에서 처리 시간이 매우 짧으면 외부 잠금이 있는 <xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=nameWithType> 및 <xref:System.Collections.Generic.Stack%601?displayProperty=nameWithType>의 성능은 전용 푸싱 스레드와 전용 팝업 스레드를 하나씩 사용하는 경우 거의 동일할 가능성이 높습니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-131">In pure producer-consumer scenarios, when processing time is very small, then <xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=nameWithType> and <xref:System.Collections.Generic.Stack%601?displayProperty=nameWithType> that has an external lock will probably perform about the same with one dedicated pushing thread and one dedicated popping thread.</span></span> <span data-ttu-id="52ae2-132">그러나 스레드가 증가하면 경합 증가로 인해 두 유형의 성능이 모두 저하되고 <xref:System.Collections.Generic.Stack%601>이 <xref:System.Collections.Concurrent.ConcurrentStack%601>보다 우수한 결과를 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-132">However, as the number of threads increases, both types slow down because of increased contention, and <xref:System.Collections.Generic.Stack%601> might perform better than <xref:System.Collections.Concurrent.ConcurrentStack%601>.</span></span> <span data-ttu-id="52ae2-133">처리 시간이 500FLOPS 이상인 경우 두 형식은 거의 동일한 속도로 확장합니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-133">When processing time is around 500 FLOPS or more, then both types scale at about the same rate.</span></span>  
   
- 혼합 생산자-소비자 시나리오에서는 <xref:System.Collections.Concurrent.ConcurrentStack%601>이 소규모 및 대규모 워크로드를 빠르게 처리합니다.  
+ <span data-ttu-id="52ae2-134">혼합 생산자-소비자 시나리오에서는 <xref:System.Collections.Concurrent.ConcurrentStack%601>이 소규모 및 대규모 워크로드를 빠르게 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-134">In mixed producer-consumer scenarios, <xref:System.Collections.Concurrent.ConcurrentStack%601> is faster for both small and large workloads.</span></span>  
   
- <xref:System.Collections.Concurrent.ConcurrentStack%601.PushRange%2A> 및 <xref:System.Collections.Concurrent.ConcurrentStack%601.TryPopRange%2A>를 사용하면 액세스 시간을 크게 절약할 수 있습니다.  
+ <span data-ttu-id="52ae2-135"><xref:System.Collections.Concurrent.ConcurrentStack%601.PushRange%2A> 및 <xref:System.Collections.Concurrent.ConcurrentStack%601.TryPopRange%2A>를 사용하면 액세스 시간을 크게 절약할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-135">The use of the <xref:System.Collections.Concurrent.ConcurrentStack%601.PushRange%2A> and <xref:System.Collections.Concurrent.ConcurrentStack%601.TryPopRange%2A> may greatly speed up access times.</span></span>  
   
-## <a name="concurrentdictionary-vs-dictionary"></a>ConcurrentDictionary 및 사전  
- 일반적으로는 여러 스레드에서 키나 값을 동시에 추가하고 업데이트하는 모든 시나리오에서 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=fullName>를 사용합니다. 잦은 업데이트 및 비교적 적은 읽기를 포함하는 시나리오에서 <xref:System.Collections.Concurrent.ConcurrentDictionary%602>은 일반적으로 어느 정도 이점을 제공합니다. 많은 읽기 및 업데이트를 포함하는 시나리오에서 <xref:System.Collections.Concurrent.ConcurrentDictionary%602>은 일반적으로 코어를 가진 컴퓨터에서 훨씬 빠릅니다.  
+## <a name="concurrentdictionary-vs-dictionary"></a><span data-ttu-id="52ae2-136">ConcurrentDictionary 및 사전</span><span class="sxs-lookup"><span data-stu-id="52ae2-136">ConcurrentDictionary vs. Dictionary</span></span>  
+ <span data-ttu-id="52ae2-137">일반적으로는 여러 스레드에서 키나 값을 동시에 추가하고 업데이트하는 모든 시나리오에서 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-137">In general, use a <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> in any scenario where you are adding and updating keys or values concurrently from multiple threads.</span></span> <span data-ttu-id="52ae2-138">잦은 업데이트 및 비교적 적은 읽기를 포함하는 시나리오에서 <xref:System.Collections.Concurrent.ConcurrentDictionary%602>은 일반적으로 어느 정도 이점을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-138">In scenarios that involve frequent updates and relatively few reads, the <xref:System.Collections.Concurrent.ConcurrentDictionary%602> generally offers modest benefits.</span></span> <span data-ttu-id="52ae2-139">많은 읽기 및 업데이트를 포함하는 시나리오에서 <xref:System.Collections.Concurrent.ConcurrentDictionary%602>은 일반적으로 코어를 가진 컴퓨터에서 훨씬 빠릅니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-139">In scenarios that involve many reads and many updates, the <xref:System.Collections.Concurrent.ConcurrentDictionary%602> generally is significantly faster on computers that have any number of cores.</span></span>  
   
- 잦은 업데이트를 포함하는 시나리오에서 <xref:System.Collections.Concurrent.ConcurrentDictionary%602>의 동시성 수준을 증가시키고 더 많은 코어가 있는 컴퓨터에서 성능이 향상되는지를 측정할 수 있습니다. 동시성 수준을 변경하면 가능한 한 글로벌 운영을 하지 마십시오.  
+ <span data-ttu-id="52ae2-140">잦은 업데이트를 포함하는 시나리오에서 <xref:System.Collections.Concurrent.ConcurrentDictionary%602>의 동시성 수준을 증가시키고 더 많은 코어가 있는 컴퓨터에서 성능이 향상되는지를 측정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-140">In scenarios that involve frequent updates, you can increase the degree of concurrency in the <xref:System.Collections.Concurrent.ConcurrentDictionary%602> and then measure to see whether performance increases on computers that have more cores.</span></span> <span data-ttu-id="52ae2-141">동시성 수준을 변경하면 가능한 한 글로벌 운영을 하지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="52ae2-141">If you change the concurrency level, avoid global operations as much as possible.</span></span>  
   
- 사전이 어떤 스레드에서도 수정되지 않는 경우에는 동기화가 필요하지 않기 때문에 키 또는 값을 읽기만 할 때는 <xref:System.Collections.Generic.Dictionary%602>가 더 빠릅니다.  
+ <span data-ttu-id="52ae2-142">사전이 어떤 스레드에서도 수정되지 않는 경우에는 동기화가 필요하지 않기 때문에 키 또는 값을 읽기만 할 때는 <xref:System.Collections.Generic.Dictionary%602>가 더 빠릅니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-142">If you are only reading key or values, the <xref:System.Collections.Generic.Dictionary%602> is faster because no synchronization is required if the dictionary is not being modified by any threads.</span></span>  
   
-## <a name="concurrentbag"></a>ConcurrentBag  
- 순수 생산자-소비자 시나리오에서 <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=fullName>은 다른 동시 컬렉션 형식보다 더 느리게 작동할 수 있습니다.  
+## <a name="concurrentbag"></a><span data-ttu-id="52ae2-143">ConcurrentBag</span><span class="sxs-lookup"><span data-stu-id="52ae2-143">ConcurrentBag</span></span>  
+ <span data-ttu-id="52ae2-144">순수 생산자-소비자 시나리오에서 <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>은 다른 동시 컬렉션 형식보다 더 느리게 작동할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-144">In pure producer-consumer scenarios, <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> will probably perform more slowly than the other concurrent collection types.</span></span>  
   
- 혼합 생산자-소비자 시나리오에서 <xref:System.Collections.Concurrent.ConcurrentBag%601>은 일반적으로 크고 작은 작업에 대한 다른 동시 컬렉션 형식보다 훨씬 빠르고 확장성이 큽니다.  
+ <span data-ttu-id="52ae2-145">혼합 생산자-소비자 시나리오에서 <xref:System.Collections.Concurrent.ConcurrentBag%601>은 일반적으로 크고 작은 작업에 대한 다른 동시 컬렉션 형식보다 훨씬 빠르고 확장성이 큽니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-145">In mixed producer-consumer scenarios, <xref:System.Collections.Concurrent.ConcurrentBag%601> is generally much faster and more scalable than any other concurrent collection type for both large and small workloads.</span></span>  
   
-## <a name="blockingcollection"></a>BlockingCollection  
- 경계 및 차단 구문이 필요한 경우에는 어떤 사용자 지정 구현보다 <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=fullName>을 사용하는 것이 더 속도가 빠를 가능성이 높습니다. 또한 여러 가지 취소, 열거 및 예외 처리를 지원합니다.  
+## <a name="blockingcollection"></a><span data-ttu-id="52ae2-146">BlockingCollection</span><span class="sxs-lookup"><span data-stu-id="52ae2-146">BlockingCollection</span></span>  
+ <span data-ttu-id="52ae2-147">경계 및 차단 구문이 필요한 경우에는 어떤 사용자 지정 구현보다 <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>을 사용하는 것이 더 속도가 빠를 가능성이 높습니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-147">When bounding and blocking semantics are required, <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> will probably perform faster than any custom implementation.</span></span> <span data-ttu-id="52ae2-148">또한 여러 가지 취소, 열거 및 예외 처리를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="52ae2-148">It also supports rich cancellation, enumeration, and exception handling.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Collections.Concurrent?displayProperty=fullName>   
- [스레드로부터 안전한 컬렉션](../../../../docs/standard/collections/thread-safe/index.md)   
- [병렬 프로그래밍](../../../../docs/standard/parallel-programming/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="52ae2-149">참고 항목</span><span class="sxs-lookup"><span data-stu-id="52ae2-149">See Also</span></span>  
+ <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+ [<span data-ttu-id="52ae2-150">스레드로부터 안전한 컬렉션</span><span class="sxs-lookup"><span data-stu-id="52ae2-150">Thread-Safe Collections</span></span>](../../../../docs/standard/collections/thread-safe/index.md)  
+ [<span data-ttu-id="52ae2-151">병렬 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="52ae2-151">Parallel Programming</span></span>](../../../../docs/standard/parallel-programming/index.md)

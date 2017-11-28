@@ -1,63 +1,66 @@
 ---
-title: "워크플로 추적 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "프로그래밍 [WF], 추적"
+title: "워크플로 추적"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
-caps.latest.revision: 16
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d9f4df7832be962665c2a49d4b009d9cc6f76f93
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 워크플로 추적
-Windows Workflow 추적은 워크플로 실행을 쉽게 볼 수 있도록 디자인된 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 기능입니다.이 기능은 워크플로 인스턴스 실행을 추적하기 위한 추적 인프라를 제공합니다.WF 추적 인프라는 실행 중에 주요 이벤트를 반영하여 레코드를 내보내기 위한 워크플로를 투명하게 계측합니다.기본적으로 모든 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 워크플로에 이 기능을 사용할 수 있습니다.추적을 수행하기 위해 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 워크플로를 변경할 필요는 없습니다.받으려는 추적 데이터의 양만 결정하면 됩니다.워크플로 인스턴스가 시작되거나 완료되면 처리 추적 레코드가 내보내집니다.추적에서 워크플로 변수와 연결된 비즈니스 관련 데이터를 추출할 수도 있습니다.예를 들어, 워크플로가 주문 처리 시스템을 나타내는 경우 <xref:System.Activities.Tracking.TrackingRecord> 개체와 함께 주문 ID를 추출할 수 있습니다.일반적으로 WF 추적을 사용하면 워크플로 실행에서 진단 또는 비즈니스 분석에 쉽게 액세스할 수 있습니다.  
+# <a name="workflow-tracking-and-tracing"></a><span data-ttu-id="00a7e-102">워크플로 추적</span><span class="sxs-lookup"><span data-stu-id="00a7e-102">Workflow Tracking and Tracing</span></span>
+<span data-ttu-id="00a7e-103">Windows Workflow 추적은 워크플로 실행을 쉽게 볼 수 있도록 디자인된 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-103">Windows Workflow tracking is a [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] feature designed to provide visibility into workflow execution.</span></span> <span data-ttu-id="00a7e-104">이 기능은 워크플로 인스턴스 실행을 추적하기 위한 추적 인프라를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-104">It provides a tracking infrastructure to track the execution of a workflow instance.</span></span> <span data-ttu-id="00a7e-105">WF 추적 인프라는 실행 중에 주요 이벤트를 반영하여 레코드를 내보내기 위한 워크플로를 투명하게 계측합니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-105">The WF tracking infrastructure transparently instruments a workflow to emit records reflecting key events during the execution.</span></span> <span data-ttu-id="00a7e-106">기본적으로 모든 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 워크플로에 이 기능을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-106">This functionality is available by default for any [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow.</span></span> <span data-ttu-id="00a7e-107">추적을 수행하기 위해 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 워크플로를 변경할 필요는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-107">No changes are required to be made to a [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] workflow for tracking to occur.</span></span> <span data-ttu-id="00a7e-108">받으려는 추적 데이터의 양만 결정하면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-108">It is just a matter of deciding how much tracking data you want to receive.</span></span> <span data-ttu-id="00a7e-109">워크플로 인스턴스가 시작되거나 완료되면 처리 추적 레코드가 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-109">When a workflow instance starts or completes, its processing tracking records are emitted.</span></span> <span data-ttu-id="00a7e-110">추적에서 워크플로 변수와 연결된 비즈니스 관련 데이터를 추출할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-110">Tracking can also extract business-relevant data associated with the workflow variables.</span></span> <span data-ttu-id="00a7e-111">예를 들어, 워크플로가 주문 처리 시스템을 나타내는 경우 <xref:System.Activities.Tracking.TrackingRecord> 개체와 함께 주문 ID를 추출할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-111">For example, if the workflow represents an order processing system, the order ID can be extracted along with the <xref:System.Activities.Tracking.TrackingRecord> object.</span></span> <span data-ttu-id="00a7e-112">일반적으로 WF 추적을 사용하면 워크플로 실행에서 진단 또는 비즈니스 분석에 쉽게 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-112">In general, enabling WF tracking facilitates diagnostics or business analytics data to be accessed from a workflow execution.</span></span>  
   
- 이 추적 구성 요소는 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]의 추적 서비스와 같습니다.[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]에서는 WF 추적 기능에 맞게 성능이 향상되고 프로그래밍 모델이 단순화되었습니다.추적 런타임은 워크플로 인스턴스를 계측하여 워크플로 수명 주기와 관련된 이벤트, 워크플로 활동 및 사용자 지정 이벤트를 내보냅니다.  
+ <span data-ttu-id="00a7e-113">이 추적 구성 요소는 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]의 추적 서비스와 같습니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-113">These tracking components are equivalent to the tracking service in [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)].</span></span> <span data-ttu-id="00a7e-114">[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]에서는 WF 추적 기능에 맞게 성능이 향상되고 프로그래밍 모델이 단순화되었습니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-114">In [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], the performance has been improved and the programming model simplified for the WF tracking feature.</span></span> <span data-ttu-id="00a7e-115">추적 런타임은 워크플로 인스턴스를 계측하여 워크플로 수명 주기와 관련된 이벤트, 워크플로 활동 및 사용자 지정 이벤트를 내보냅니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-115">The tracking runtime instruments a workflow instance to emit events related to the workflow life cycle, workflow activities and custom events.</span></span>  
   
- Windows Server App Fabric은 WCF 및 워크플로 서비스의 실행을 모니터링하는 기능도 제공합니다.[!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Windows Server App Fabric 모니터링](http://go.microsoft.com/fwlink/?LinkId=201273) 및 [Windows Server AppFabric을 사용한 응용 프로그램 모니터링](http://go.microsoft.com/fwlink/?LinkId=201287)  
+ <span data-ttu-id="00a7e-116">Windows Server AppFabric은 WCF 및 워크플로 서비스의 실행을 모니터링하는 기능도 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-116">Windows Server App Fabric also provides the ability to monitor the execution of a WCF and workflow services.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="00a7e-117">[Windows Server App Fabric 모니터링](http://go.microsoft.com/fwlink/?LinkId=201273) 및 [Windows Server AppFabric로 응용 프로그램 모니터링](http://go.microsoft.com/fwlink/?LinkId=201287)</span><span class="sxs-lookup"><span data-stu-id="00a7e-117"> [Windows Server App Fabric Monitoring](http://go.microsoft.com/fwlink/?LinkId=201273) and [Monitoring Applications with Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=201287)</span></span>  
   
- 워크플로 런타임의 문제를 해결하기 위해 진단 워크플로 추적을 설정할 수 있습니다.[!INCLUDE[crdefault](../../../includes/crdefault-md.md)][워크플로 추적](../../../docs/framework/windows-workflow-foundation//workflow-tracing.md).  
+ <span data-ttu-id="00a7e-118">워크플로 런타임의 문제를 해결하기 위해 진단 워크플로 추적을 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-118">To troubleshoot the workflow runtime, you can turn on diagnostic workflow tracing.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="00a7e-119">[워크플로 추적](../../../docs/framework/windows-workflow-foundation/workflow-tracing.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-119"> [Workflow Tracing](../../../docs/framework/windows-workflow-foundation/workflow-tracing.md).</span></span>  
   
- 프로그래밍 모델을 이해할 수 있도록 이 항목에서는 추적 인프라의 주요 구성 요소를 설명합니다.  
+ <span data-ttu-id="00a7e-120">프로그래밍 모델을 이해할 수 있도록 이 항목에서는 추적 인프라의 주요 구성 요소를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-120">To understand the programming model, the primary components of the tracking infrastructure are discussed in this topic:</span></span>  
   
--   워크플로 런타임에서 내보낸 <xref:System.Activities.Tracking.TrackingRecord> 개체입니다.[!INCLUDE[crdefault](../../../includes/crdefault-md.md)][추적 레코드](../../../docs/framework/windows-workflow-foundation//tracking-records.md).  
+-   <span data-ttu-id="00a7e-121">워크플로 런타임에서 내보낸 <xref:System.Activities.Tracking.TrackingRecord> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-121"><xref:System.Activities.Tracking.TrackingRecord> objects emitted from the workflow runtime.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="00a7e-122">[추적 레코드](../../../docs/framework/windows-workflow-foundation/tracking-records.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-122"> [Tracking Records](../../../docs/framework/windows-workflow-foundation/tracking-records.md).</span></span>  
   
--   <xref:System.Activities.Tracking.TrackingParticipant> 개체는 <xref:System.Activities.Tracking.TrackingRecord> 개체를 구독합니다.추적 참가자에는 <xref:System.Activities.Tracking.TrackingRecord> 개체에서 페이로드를 처리하기 위한 논리가 포함됩니다. 예를 들어 파일에 기록하도록 선택할 수 있습니다.[!INCLUDE[crdefault](../../../includes/crdefault-md.md)][추적 참가자](../../../docs/framework/windows-workflow-foundation//tracking-participants.md).  
+-   <span data-ttu-id="00a7e-123"><xref:System.Activities.Tracking.TrackingParticipant> 개체는 <xref:System.Activities.Tracking.TrackingRecord> 개체를 구독합니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-123"><xref:System.Activities.Tracking.TrackingParticipant> objects subscribe to <xref:System.Activities.Tracking.TrackingRecord> objects.</span></span> <span data-ttu-id="00a7e-124">추적 참가자에는 <xref:System.Activities.Tracking.TrackingRecord> 개체에서 페이로드를 처리하기 위한 논리가 포함됩니다. 예를 들어 파일에 기록하도록 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-124">The tracking participants contain the logic to process the payload from the <xref:System.Activities.Tracking.TrackingRecord> objects (for example, they could choose to write to a file).</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="00a7e-125">[추적 참가자에 게](../../../docs/framework/windows-workflow-foundation/tracking-participants.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-125"> [Tracking Participants](../../../docs/framework/windows-workflow-foundation/tracking-participants.md).</span></span>  
   
--   <xref:System.Activities.Tracking.TrackingProfile> 개체는 워크플로 인스턴스에서 내보낸 추적 레코드를 필터링합니다.[!INCLUDE[crdefault](../../../includes/crdefault-md.md)][추적 프로필](../../../docs/framework/windows-workflow-foundation//tracking-profiles.md).  
+-   <span data-ttu-id="00a7e-126"><xref:System.Activities.Tracking.TrackingProfile> 개체는 워크플로 인스턴스에서 내보낸 추적 레코드를 필터링합니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-126"><xref:System.Activities.Tracking.TrackingProfile> objects filter tracking records emitted from a workflow instance.</span></span> [!INCLUDE[crdefault](../../../includes/crdefault-md.md)]<span data-ttu-id="00a7e-127">[추적 프로필](../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-127"> [Tracking Profiles](../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>  
   
-## 워크플로 추적 인프라  
- 워크플로 추적 인프라는 게시 및 구독 패러다임을 따릅니다.워크플로 인스턴스는 추적 레코드 게시자인 반면, 추적 레코드 구독자는 워크플로의 확장으로 등록됩니다.<xref:System.Activities.Tracking.TrackingRecord> 개체를 구독하는 이 확장을 추적 참가자라고 합니다.추적 참가자는 <xref:System.Activities.Tracking.TrackingRecord> 개체에 액세스한 다음 해당 참가자에 정해진 방식으로 처리하는 확장성 지점입니다.추적 인프라를 사용하면 보내기 추적 레코드에 필터를 적용하여 참가자가 레코드 하위 집합을 구독하도록 허용할 수 있습니다.이 필터링 메커니즘은 추적 프로필 파일을 통해 완료됩니다.  
+## <a name="workflow-tracking-infrastructure"></a><span data-ttu-id="00a7e-128">워크플로 추적 인프라</span><span class="sxs-lookup"><span data-stu-id="00a7e-128">Workflow Tracking Infrastructure</span></span>  
+ <span data-ttu-id="00a7e-129">워크플로 추적 인프라는 게시 및 구독 패러다임을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-129">The workflow tracking infrastructure follows a publish-and-subscribe paradigm.</span></span> <span data-ttu-id="00a7e-130">워크플로 인스턴스는 추적 레코드 게시자인 반면, 추적 레코드 구독자는 워크플로의 확장으로 등록됩니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-130">The workflow instance is the publisher of tracking records, while subscribers of the tracking records are registered as extensions to the workflow.</span></span> <span data-ttu-id="00a7e-131"><xref:System.Activities.Tracking.TrackingRecord> 개체를 구독하는 이 확장을 추적 참가자라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-131">These extensions that subscribe to <xref:System.Activities.Tracking.TrackingRecord> objects are called tracking participants.</span></span> <span data-ttu-id="00a7e-132">추적 참가자는 <xref:System.Activities.Tracking.TrackingRecord> 개체에 액세스한 다음 해당 참가자에 정해진 방식으로 처리하는 확장성 지점입니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-132">Tracking participants are extensibility points that access <xref:System.Activities.Tracking.TrackingRecord> objects and process them in whatever manner they are written to do so.</span></span> <span data-ttu-id="00a7e-133">추적 인프라를 사용하면 보내기 추적 레코드에 필터를 적용하여 참가자가 레코드 하위 집합을 구독하도록 허용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-133">The tracking infrastructure allows the application of a filter on the outgoing tracking records to allow a participant to subscribe to a subset of the records.</span></span> <span data-ttu-id="00a7e-134">이 필터링 메커니즘은 추적 프로필 파일을 통해 완료됩니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-134">This filtering mechanism is accomplished through a tracking profile file.</span></span>  
   
- 다음 그림에서는 추적 인프라를 간략하게 보여 줍니다.  
+ <span data-ttu-id="00a7e-135">다음 그림에서는 추적 인프라를 간략하게 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-135">A high level view of the tracking infrastructure is shown in the following illustration.</span></span>  
   
- ![워크플로 추적 인프라](../../../docs/framework/windows-workflow-foundation//media/wv.gif "WV")  
+ <span data-ttu-id="00a7e-136">![워크플로 추적 인프라](../../../docs/framework/windows-workflow-foundation/media/wv.gif "WV")</span><span class="sxs-lookup"><span data-stu-id="00a7e-136">![Workflow Tracking Infrastructure](../../../docs/framework/windows-workflow-foundation/media/wv.gif "WV")</span></span>  
   
-## 단원 내용  
- [추적 레코드](../../../docs/framework/windows-workflow-foundation//tracking-records.md)  
- 워크플로 런타임이 내보내는 추적 레코드를 설명합니다.  
+## <a name="in-this-section"></a><span data-ttu-id="00a7e-137">단원 내용</span><span class="sxs-lookup"><span data-stu-id="00a7e-137">In This Section</span></span>  
+ [<span data-ttu-id="00a7e-138">추적 레코드</span><span class="sxs-lookup"><span data-stu-id="00a7e-138">Tracking Records</span></span>](../../../docs/framework/windows-workflow-foundation/tracking-records.md)  
+ <span data-ttu-id="00a7e-139">워크플로 런타임이 내보내는 추적 레코드를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-139">Describes the tracking records that the workflow runtime emits.</span></span>  
   
- [추적 프로필](../../../docs/framework/windows-workflow-foundation//tracking-profiles.md)  
- 추적 프로필이 사용되는 방법을 설명합니다.  
+ [<span data-ttu-id="00a7e-140">추적 프로필</span><span class="sxs-lookup"><span data-stu-id="00a7e-140">Tracking Profiles</span></span>](../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ <span data-ttu-id="00a7e-141">추적 프로필이 사용되는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-141">Discusses how tracking profiles are used.</span></span>  
   
- [추적 참가자](../../../docs/framework/windows-workflow-foundation//tracking-participants.md)  
- 시스템 제공 추적 참가자를 사용하는 방법 또는 사용자 지정 추적 참가자를 만드는 방법을 설명합니다.  
+ [<span data-ttu-id="00a7e-142">추적 참가자</span><span class="sxs-lookup"><span data-stu-id="00a7e-142">Tracking Participants</span></span>](../../../docs/framework/windows-workflow-foundation/tracking-participants.md)  
+ <span data-ttu-id="00a7e-143">시스템 제공 추적 참가자를 사용하는 방법 또는 사용자 지정 추적 참가자를 만드는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-143">Describes how to use system-provided tracking participant or how to create custom tracking participants.</span></span>  
   
- [워크플로 추적 구성](../../../docs/framework/windows-workflow-foundation//configuring-tracking-for-a-workflow.md)  
- 워크플로 추적을 구성하는 방법을 설명합니다.  
+ [<span data-ttu-id="00a7e-144">워크플로 추적 구성</span><span class="sxs-lookup"><span data-stu-id="00a7e-144">Configuring Tracking for a Workflow</span></span>](../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)  
+ <span data-ttu-id="00a7e-145">워크플로 추적을 구성하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-145">Describes how to configure tracking for a workflow.</span></span>  
   
- [워크플로 추적](../../../docs/framework/windows-workflow-foundation//workflow-tracing.md)  
- 워크플로 추적을 디버깅하는 두 가지 방법을 설명합니다.  
+ [<span data-ttu-id="00a7e-146">워크플로 추적</span><span class="sxs-lookup"><span data-stu-id="00a7e-146">Workflow Tracing</span></span>](../../../docs/framework/windows-workflow-foundation/workflow-tracing.md)  
+ <span data-ttu-id="00a7e-147">워크플로 추적을 디버깅하는 두 가지 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-147">Describes the two ways to enable debug tracing for a workflow.</span></span>  
   
- [추적을 사용하여 워크플로 실행 기간 확인](../../../docs/framework/windows-workflow-foundation//determining-workflow-execution-duration-using-tracing.md)  
- 워크플로 응용 프로그램 실행 기간을 확인하기 위해 메시지 추적을 사용하는 방법을 설명합니다.  
+ [<span data-ttu-id="00a7e-148">추적을 사용하여 워크플로 실행 기간 확인</span><span class="sxs-lookup"><span data-stu-id="00a7e-148">Determining Workflow Execution Duration Using Tracing</span></span>](../../../docs/framework/windows-workflow-foundation/determining-workflow-execution-duration-using-tracing.md)  
+ <span data-ttu-id="00a7e-149">워크플로 응용 프로그램 실행 기간을 확인하기 위해 메시지 추적을 사용하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="00a7e-149">Describes how to use tracing messages to determine workflow execution duration.</span></span>  
   
-## 참고 항목  
- [SQL 추적](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)
+## <a name="see-also"></a><span data-ttu-id="00a7e-150">참고 항목</span><span class="sxs-lookup"><span data-stu-id="00a7e-150">See Also</span></span>  
+ [<span data-ttu-id="00a7e-151">SQL 추적</span><span class="sxs-lookup"><span data-stu-id="00a7e-151">SQL Tracking</span></span>](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)

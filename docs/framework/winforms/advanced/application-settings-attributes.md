@@ -1,53 +1,54 @@
 ---
-title: "응용 프로그램 설정 특성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "응용 프로그램 설정[Windows Forms], 특성"
-  - "특성[Windows Forms], 응용 프로그램 설정"
-  - "래퍼 클래스, 응용 프로그램 설정"
+title: "응용 프로그램 설정 특성"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- application settings [Windows Forms], attributes
+- attributes [Windows Forms], application settings
+- wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1879ac6704619092c4c0d9cd6fab0356ea07a13d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 응용 프로그램 설정 특성
-응용 프로그램 설정 아키텍처는 응용 프로그램 설정 래퍼 클래스 또는 해당되는 개별 속성에 적용할 수 있는 여러 특성을 제공합니다.  이러한 특성은 사용자 지정 래퍼의 정해진 요구에 맞게 기능을 조절하기 위해 응용 프로그램 설정 인프라\(특히 설정 공급자인 경우가 많음\)에서 런타임에 검사합니다.  
+# <a name="application-settings-attributes"></a><span data-ttu-id="07d52-102">응용 프로그램 설정 특성</span><span class="sxs-lookup"><span data-stu-id="07d52-102">Application Settings Attributes</span></span>
+<span data-ttu-id="07d52-103">응용 프로그램 설정 아키텍처는 응용 프로그램 설정 래퍼 클래스 또는 해당 개별 속성에 적용할 수 있는 여러 특성을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="07d52-103">The Application Settings architecture provides many attributes that can be applied either to the applications settings wrapper class or its individual properties.</span></span> <span data-ttu-id="07d52-104">이러한 특성은 맞게 사용자 지정 래퍼 명시 된 요구 사항에 기능을 조절 하려면 응용 프로그램 설정 인프라 종종 특별히 설정 공급자에 의해 런타임 시 검사 합니다.</span><span class="sxs-lookup"><span data-stu-id="07d52-104">These attributes are examined at run time by the application settings infrastructure, often specifically the settings provider, in order to tailor its functioning to the stated needs of the custom wrapper.</span></span>  
   
- 다음 표에서는 응용 프로그램 설정 래퍼 클래스나 이 클래스의 개별 속성 또는 둘 다에 적용할 수 있는 특성을 보여 줍니다.  정의에 따라 하나의 범위 특성 즉, **UserScopedSettingAttribute** 또는 **ApplicationScopedSettingAttribute**만 각각의 설정 속성에 적용되어야 합니다.  
+ <span data-ttu-id="07d52-105">다음 표에서 응용 프로그램 설정 래퍼 클래스,이 클래스의 개별 속성 또는 둘 다에 적용할 수 있는 특성을 나열 합니다.</span><span class="sxs-lookup"><span data-stu-id="07d52-105">The following table lists the attributes that can be applied to the application settings wrapper class, this class's individual properties, or both.</span></span> <span data-ttu-id="07d52-106">정의 따르면 단일 범위 특성만-**UserScopedSettingAttribute** 또는 **ApplicationScopedSettingAttribute**-각 설정 속성에 적용 되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="07d52-106">By definition, only a single scope attribute—**UserScopedSettingAttribute** or **ApplicationScopedSettingAttribute**—must be applied to each and every settings property.</span></span>  
   
 > [!NOTE]
->  <xref:System.Configuration.SettingsProvider>에서 파생된 사용자 지정 설정 공급자는 **ApplicationScopedSettingAttribute**, **UserScopedSettingAttribute** 및 **DefaultSettingValueAttribute** 속성 등 세 가지 속성을 인식할 때만 필요합니다.  
+>  <span data-ttu-id="07d52-107">파생 된 사용자 지정 설정 공급자는 <xref:System.Configuration.SettingsProvider> 클래스에 다음 세 가지 특성을 인식 해야만: **ApplicationScopedSettingAttribute**, **UserScopedSettingAttribute**, 및 **DefaultSettingValueAttribute**합니다.</span><span class="sxs-lookup"><span data-stu-id="07d52-107">A custom settings provider, derived from the <xref:System.Configuration.SettingsProvider> class, is only required to recognize the following three attributes: **ApplicationScopedSettingAttribute**, **UserScopedSettingAttribute**, and **DefaultSettingValueAttribute**.</span></span>  
   
-|특성|대상|설명|  
-|--------|--------|--------|  
-|<xref:System.Configuration.SettingsProviderAttribute>|Both|지속성을 위해 사용할 설정 공급자의 약식 이름을 지정합니다.<br /><br /> 이 특성을 지정하지 않으면 기본 공급자인 <xref:System.Configuration.LocalFileSettingsProvider>가 사용됩니다.|  
-|<xref:System.Configuration.UserScopedSettingAttribute>|Both|속성을 사용자 범위 응용 프로그램 설정으로 정의합니다.|  
-|<xref:System.Configuration.ApplicationScopedSettingAttribute>|Both|속성을 응용 프로그램 범위 응용 프로그램 설정으로 정의합니다.|  
-|<xref:System.Configuration.DefaultSettingValueAttribute>|Property|공급자가 deserialize할 수 있는 문자열을 이 속성에 대해 하드 코드된 기본값으로 지정합니다.<br /><br /> <xref:System.Configuration.LocalFileSettingsProvider>에는 이 특성이 필요하지 않으며 이미 유지되고 있는 값이 있으면 이 특성에서 지정하는 값으로 재정의됩니다.|  
-|<xref:System.Configuration.SettingsDescriptionAttribute>|Property|주로 런타임 및 디자인 타임 도구에서 사용되는 개별 설정에 대한 설명 텍스트를 지정합니다.|  
-|<xref:System.Configuration.SettingsGroupNameAttribute>|클래스|설정 그룹의 명시적 이름을 지정합니다.  이 특성이 없으면 <xref:System.Configuration.ApplicationSettingsBase>는 래퍼 클래스 이름을 사용합니다.|  
-|<xref:System.Configuration.SettingsGroupDescriptionAttribute>|클래스|주로 런타임 및 디자인 타임 도구에서 사용되는 설정 그룹에 대한 설명 텍스트를 지정합니다.|  
-|<xref:System.Configuration.SettingsManageabilityAttribute>|Both|설정 그룹 또는 속성에 지정해야 하는 하나 이상의 관리 효율성 서비스를 지정하거나 지정하지 않습니다.  사용 가능한 서비스는 <xref:System.Configuration.SettingsManageability> 열거형에서 설명합니다.|  
-|<xref:System.Configuration.SpecialSettingAttribute>|Property|설정이 설정 공급자에서 특수하게 처리하도록 제안하는 연결 문자열과 같은 미리 정의된 특수 범주에 속해 있음을 나타냅니다.  이 특성에 대해 미리 정의된 범주는 <xref:System.Configuration.SpecialSetting> 열거형에서 정의합니다.|  
-|<xref:System.Configuration.SettingsSerializeAsAttribute>|Both|설정 그룹 또는 속성에 대해 기본 설정 serialization 메커니즘을 지정합니다.  사용 가능한 serialization 메커니즘은 <xref:System.Configuration.SettingsSerializeAs> 열거형에서 정의합니다.|  
-|<xref:System.Configuration.NoSettingsVersionUpgradeAttribute>|Property|설정 공급자가 표시된 속성에 대해 모든 응용 프로그램 업그레이드 기능을 사용하지 않도록 지정합니다.|  
+|<span data-ttu-id="07d52-108">특성</span><span class="sxs-lookup"><span data-stu-id="07d52-108">Attribute</span></span>|<span data-ttu-id="07d52-109">대상</span><span class="sxs-lookup"><span data-stu-id="07d52-109">Target</span></span>|<span data-ttu-id="07d52-110">설명</span><span class="sxs-lookup"><span data-stu-id="07d52-110">Description</span></span>|  
+|---------------|------------|-----------------|  
+|<xref:System.Configuration.SettingsProviderAttribute>|<span data-ttu-id="07d52-111">Both</span><span class="sxs-lookup"><span data-stu-id="07d52-111">Both</span></span>|<span data-ttu-id="07d52-112">지 속성을 위해 사용 하는 설정 공급자의 약식 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="07d52-112">Specifies the short name of the settings provider to use for persistence.</span></span><br /><br /> <span data-ttu-id="07d52-113">이 특성을 제공 하지 않으면 기본 공급자 <xref:System.Configuration.LocalFileSettingsProvider>, 것으로 간주 됩니다.</span><span class="sxs-lookup"><span data-stu-id="07d52-113">If this attribute is not supplied, the default provider, <xref:System.Configuration.LocalFileSettingsProvider>, is assumed.</span></span>|  
+|<xref:System.Configuration.UserScopedSettingAttribute>|<span data-ttu-id="07d52-114">Both</span><span class="sxs-lookup"><span data-stu-id="07d52-114">Both</span></span>|<span data-ttu-id="07d52-115">응용 프로그램 사용자 범위 설정으로 속성을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="07d52-115">Defines a property as a user-scoped application setting.</span></span>|  
+|<xref:System.Configuration.ApplicationScopedSettingAttribute>|<span data-ttu-id="07d52-116">Both</span><span class="sxs-lookup"><span data-stu-id="07d52-116">Both</span></span>|<span data-ttu-id="07d52-117">응용 프로그램 범위 응용 프로그램 설정으로 속성을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="07d52-117">Defines a property as an application-scoped application setting.</span></span>|  
+|<xref:System.Configuration.DefaultSettingValueAttribute>|<span data-ttu-id="07d52-118">속성</span><span class="sxs-lookup"><span data-stu-id="07d52-118">Property</span></span>|<span data-ttu-id="07d52-119">공급자가이 속성에 대 한 기본 하드 코드 된 값으로 deserialize 할 수 있는 문자열을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="07d52-119">Specifies a string that can be deserialized by the provider into the hard-coded default value for this property.</span></span><br /><br /> <span data-ttu-id="07d52-120"><xref:System.Configuration.LocalFileSettingsProvider> 이 특성이 필요 하지 않으며이 특성이 없는 경우 값을 이미 지속 제공 된 모든 값을 재정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="07d52-120">The <xref:System.Configuration.LocalFileSettingsProvider> does not require this attribute, and will override any value provided by this attribute if there is a value already persisted.</span></span>|  
+|<xref:System.Configuration.SettingsDescriptionAttribute>|<span data-ttu-id="07d52-121">속성</span><span class="sxs-lookup"><span data-stu-id="07d52-121">Property</span></span>|<span data-ttu-id="07d52-122">런타임 및 디자인 타임 도구 주로 사용 하는 개별 설정에 대 한 설명 텍스트를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="07d52-122">Provides the descriptive test for an individual setting, used primarily by run-time and design-time tools.</span></span>|  
+|<xref:System.Configuration.SettingsGroupNameAttribute>|<span data-ttu-id="07d52-123">클래스</span><span class="sxs-lookup"><span data-stu-id="07d52-123">Class</span></span>|<span data-ttu-id="07d52-124">설정 그룹에 대 한 명시적 이름을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="07d52-124">Provides an explicit name for a settings group.</span></span> <span data-ttu-id="07d52-125">이 특성을 사용할 수 없는 경우 <xref:System.Configuration.ApplicationSettingsBase> 래퍼 클래스 이름을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="07d52-125">If this attribute is missing, <xref:System.Configuration.ApplicationSettingsBase> uses the wrapper class name.</span></span>|  
+|<xref:System.Configuration.SettingsGroupDescriptionAttribute>|<span data-ttu-id="07d52-126">클래스</span><span class="sxs-lookup"><span data-stu-id="07d52-126">Class</span></span>|<span data-ttu-id="07d52-127">런타임 및 디자인 타임 도구 주로 사용 하는 설정 그룹에 대 한 설명 텍스트를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="07d52-127">Provides the descriptive test for a settings group, used primarily by run-time and design-time tools.</span></span>|  
+|<xref:System.Configuration.SettingsManageabilityAttribute>|<span data-ttu-id="07d52-128">Both</span><span class="sxs-lookup"><span data-stu-id="07d52-128">Both</span></span>|<span data-ttu-id="07d52-129">설정 그룹이 나 속성에 제공 해야 하는 0 개 이상의 관리 서비스를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="07d52-129">Specifies zero or more manageability services that should be provided to the settings group or property.</span></span> <span data-ttu-id="07d52-130">사용 가능한 서비스에서 설명 하는 <xref:System.Configuration.SettingsManageability> 열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="07d52-130">The available services are described by the <xref:System.Configuration.SettingsManageability> enumeration.</span></span>|  
+|<xref:System.Configuration.SpecialSettingAttribute>|<span data-ttu-id="07d52-131">속성</span><span class="sxs-lookup"><span data-stu-id="07d52-131">Property</span></span>|<span data-ttu-id="07d52-132">설정 공급자가 특수 한 처리를 제안 하는 연결 문자열과 같은 특수 한 미리 정의 된 범주에는 설정을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="07d52-132">Indicates that a setting belongs to a special, predefined category, such as a connection string, that suggests special processing by the settings provider.</span></span> <span data-ttu-id="07d52-133">이 특성에 대 한 미리 정의 된 범주에 의해 정의 됩니다는 <xref:System.Configuration.SpecialSetting> 열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="07d52-133">The predefined categories for this attribute are defined by the <xref:System.Configuration.SpecialSetting> enumeration.</span></span>|  
+|<xref:System.Configuration.SettingsSerializeAsAttribute>|<span data-ttu-id="07d52-134">Both</span><span class="sxs-lookup"><span data-stu-id="07d52-134">Both</span></span>|<span data-ttu-id="07d52-135">설정 그룹이 나 속성에 대 한 기본 serialization 메커니즘을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="07d52-135">Specifies a preferred serialization mechanism for a settings group or property.</span></span> <span data-ttu-id="07d52-136">사용 가능한 serialization 메커니즘에 의해 정의 됩니다는 <xref:System.Configuration.SettingsSerializeAs> 열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="07d52-136">The available serialization mechanisms are defined by the <xref:System.Configuration.SettingsSerializeAs> enumeration.</span></span>|  
+|<xref:System.Configuration.NoSettingsVersionUpgradeAttribute>|<span data-ttu-id="07d52-137">속성</span><span class="sxs-lookup"><span data-stu-id="07d52-137">Property</span></span>|<span data-ttu-id="07d52-138">설정 공급자가 표시 된 속성에 대 한 모든 응용 프로그램 업그레이드 기능 하지 않도록 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="07d52-138">Specifies that a settings provider should disable all application upgrade functionality for the marked property.</span></span>|  
   
- *클래스*는 특성을 응용 프로그램 설정 래퍼 클래스에만 적용할 수 있음을 나타냅니다.  *속성*은 특성을 설정 속성에만 적용할 수 있음을 나타내며  *모두*는 특성을 어느 수준에나 적용할 수 있음을 나타냅니다.  
+ <span data-ttu-id="07d52-139">*클래스* 응용 프로그램 설정 래퍼 클래스에만 특성을 적용할 수 있음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="07d52-139">*Class* indicates that the attribute can be applied only to an application settings wrapper class.</span></span> <span data-ttu-id="07d52-140">*속성* 특성 설정을 속성에만 적용할된 수 있음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="07d52-140">*Property* indicates that the attribute can be applied only settings properties.</span></span> <span data-ttu-id="07d52-141">*둘 다* 어느 수준에 특성을 적용할 수 있음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="07d52-141">*Both* indicates that the attribute can be applied at either level.</span></span>  
   
-## 참고 항목  
- <xref:System.Configuration.ApplicationSettingsBase>   
- <xref:System.Configuration.SettingsProvider>   
- [응용 프로그램 설정 아키텍처](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)   
- [How to: Create Application Settings](http://msdn.microsoft.com/ko-kr/53b3af80-1c02-4e35-99c6-787663148945)
+## <a name="see-also"></a><span data-ttu-id="07d52-142">참고 항목</span><span class="sxs-lookup"><span data-stu-id="07d52-142">See Also</span></span>  
+ <xref:System.Configuration.ApplicationSettingsBase>  
+ <xref:System.Configuration.SettingsProvider>  
+ [<span data-ttu-id="07d52-143">응용 프로그램 설정 아키텍처</span><span class="sxs-lookup"><span data-stu-id="07d52-143">Application Settings Architecture</span></span>](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
+ [<span data-ttu-id="07d52-144">방법: 응용 프로그램 설정 만들기</span><span class="sxs-lookup"><span data-stu-id="07d52-144">How to: Create Application Settings</span></span>](http://msdn.microsoft.com/en-us/53b3af80-1c02-4e35-99c6-787663148945)

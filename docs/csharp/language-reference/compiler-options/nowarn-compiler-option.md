@@ -1,81 +1,61 @@
 ---
 title: "-nowarn(C# 컴파일러 옵션)"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- /nowarn
-dev_langs:
-- CSharp
+f1_keywords: /nowarn
 helpviewer_keywords:
 - nowarn compiler option [C#]
 - /nowarn compiler option [C#]
 - -nowarn compiler option [C#]
 ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 499203bb4714fa2d07b2c0e42958ffd0e472facc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3bae7e6d16c044b8f1aeba26de434cdf17479e82
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="nowarn-c-compiler-options"></a>/nowarn(C# 컴파일러 옵션)
-**/nowarn** 옵션을 사용하면 컴파일러에서 하나 이상의 경고를 표시하지 않을 수 있습니다. 여러 경고 번호를 쉼표로 구분합니다.  
+# <a name="nowarn-c-compiler-options"></a><span data-ttu-id="3f94b-102">/nowarn(C# 컴파일러 옵션)</span><span class="sxs-lookup"><span data-stu-id="3f94b-102">/nowarn (C# Compiler Options)</span></span>
+<span data-ttu-id="3f94b-103">**/nowarn** 옵션을 사용하면 컴파일러에서 하나 이상의 경고를 표시하지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3f94b-103">The **/nowarn** option lets you suppress the compiler from displaying one or more warnings.</span></span> <span data-ttu-id="3f94b-104">여러 경고 번호를 쉼표로 구분합니다.</span><span class="sxs-lookup"><span data-stu-id="3f94b-104">Separate multiple warning numbers with a comma.</span></span>  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a><span data-ttu-id="3f94b-105">구문</span><span class="sxs-lookup"><span data-stu-id="3f94b-105">Syntax</span></span>  
   
 ```console  
 /nowarn:number1[,number2,...]  
 ```  
   
-## <a name="arguments"></a>인수  
- `number1`, `number2`  
- 컴파일러에서 표시하지 않으려는 경고 번호입니다.  
+## <a name="arguments"></a><span data-ttu-id="3f94b-106">인수</span><span class="sxs-lookup"><span data-stu-id="3f94b-106">Arguments</span></span>  
+ <span data-ttu-id="3f94b-107">`number1`, `number2`</span><span class="sxs-lookup"><span data-stu-id="3f94b-107">`number1`, `number2`</span></span>  
+ <span data-ttu-id="3f94b-108">컴파일러에서 표시하지 않으려는 경고 번호입니다.</span><span class="sxs-lookup"><span data-stu-id="3f94b-108">Warning number(s) that you want the compiler to suppress.</span></span>  
   
-## <a name="remarks"></a>주의  
- 경고 식별자의 숫자 부분만 지정해야 합니다. 예를 들어 CS0028을 표시하지 않으려면 `/nowarn:28`을 지정할 수 있습니다.  
+## <a name="remarks"></a><span data-ttu-id="3f94b-109">주의</span><span class="sxs-lookup"><span data-stu-id="3f94b-109">Remarks</span></span>  
+ <span data-ttu-id="3f94b-110">경고 식별자의 숫자 부분만 지정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="3f94b-110">You should only specify the numeric part of the warning identifier.</span></span> <span data-ttu-id="3f94b-111">예를 들어 CS0028을 표시하지 않으려면 `/nowarn:28`을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3f94b-111">For example, if you want to suppress CS0028, you could specify `/nowarn:28`.</span></span>  
   
- 컴파일러는 이전 릴리스에서 유효했지만 현재 컴파일러에서 제거된, `/nowarn`에 전달된 경고 번호를 자동으로 무시합니다. 예를 들어 CS0679는 Visual Studio.NET 2002의 컴파일러에서 유효했지만 이후에 제거되었습니다.  
+ <span data-ttu-id="3f94b-112">컴파일러는 이전 릴리스에서 유효했지만 현재 컴파일러에서 제거된, `/nowarn`에 전달된 경고 번호를 자동으로 무시합니다.</span><span class="sxs-lookup"><span data-stu-id="3f94b-112">The compiler will silently ignore warning numbers passed to `/nowarn` that were valid in previous releases, but that have been removed from the compiler.</span></span> <span data-ttu-id="3f94b-113">예를 들어 CS0679는 Visual Studio.NET 2002의 컴파일러에서 유효했지만 이후에 제거되었습니다.</span><span class="sxs-lookup"><span data-stu-id="3f94b-113">For example, CS0679 was valid in the compiler in Visual Studio .NET 2002 but was subsequently removed.</span></span>  
   
- 다음 경고는 `/nowarn` 옵션으로 표시되지 않도록 설정할 수 없습니다.  
+ <span data-ttu-id="3f94b-114">다음 경고는 `/nowarn` 옵션으로 표시되지 않도록 설정할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="3f94b-114">The following warnings cannot be suppressed by the `/nowarn` option:</span></span>  
   
--   컴파일러 경고(수준 1) CS2002  
+-   <span data-ttu-id="3f94b-115">컴파일러 경고(수준 1) CS2002</span><span class="sxs-lookup"><span data-stu-id="3f94b-115">Compiler Warning (level 1) CS2002</span></span>  
   
--   컴파일러 경고(수준 1) CS2023  
+-   <span data-ttu-id="3f94b-116">컴파일러 경고(수준 1) CS2023</span><span class="sxs-lookup"><span data-stu-id="3f94b-116">Compiler Warning (level 1) CS2023</span></span>  
   
--   컴파일러 경고(수준 1) CS2029  
+-   <span data-ttu-id="3f94b-117">컴파일러 경고(수준 1) CS2029</span><span class="sxs-lookup"><span data-stu-id="3f94b-117">Compiler Warning (level 1) CS2029</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="3f94b-118">Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면</span><span class="sxs-lookup"><span data-stu-id="3f94b-118">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  프로젝트의 **속성** 페이지를 엽니다. 자세한 내용은 [프로젝트 디자이너, 빌드 페이지(C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)를 참조하세요.  
+1.  <span data-ttu-id="3f94b-119">프로젝트의 **속성** 페이지를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="3f94b-119">Open the **Properties** page for the project.</span></span> <span data-ttu-id="3f94b-120">자세한 내용은 [프로젝트 디자이너, 빌드 페이지(C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="3f94b-120">For details, see [Build Page, Project Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).</span></span>  
   
-2.  **빌드** 속성 페이지를 클릭합니다.  
+2.  <span data-ttu-id="3f94b-121">**빌드** 속성 페이지를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="3f94b-121">Click the **Build** property page.</span></span>  
   
-3.  **경고 표시 안 함** 속성을 수정합니다.  
+3.  <span data-ttu-id="3f94b-122">**경고 표시 안 함** 속성을 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="3f94b-122">Modify the **Suppress Warnings** property.</span></span>  
   
- 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>을 참조하십시오.  
+ <span data-ttu-id="3f94b-123">이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="3f94b-123">For information about how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)   
- [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)   
- [C# 컴파일러 오류](../../../csharp/language-reference/compiler-messages/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="3f94b-124">참고 항목</span><span class="sxs-lookup"><span data-stu-id="3f94b-124">See Also</span></span>  
+ [<span data-ttu-id="3f94b-125">C# 컴파일러 옵션</span><span class="sxs-lookup"><span data-stu-id="3f94b-125">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+ [<span data-ttu-id="3f94b-126">프로젝트 및 솔루션 속성 관리</span><span class="sxs-lookup"><span data-stu-id="3f94b-126">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)  
+ [<span data-ttu-id="3f94b-127">C# 컴파일러 오류</span><span class="sxs-lookup"><span data-stu-id="3f94b-127">C# Compiler Errors</span></span>](../../../csharp/language-reference/compiler-messages/index.md)

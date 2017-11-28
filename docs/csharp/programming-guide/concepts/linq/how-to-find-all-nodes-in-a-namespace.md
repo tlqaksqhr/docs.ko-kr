@@ -1,31 +1,27 @@
 ---
 title: "방법: 네임스페이스에서 모든 노드 찾기(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 766b0b4ff535703e6acdfeb409a51bb09a265e43
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e3a132834527f3a13a678fc56a593f7b442deb56
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>방법: 네임스페이스에서 모든 노드 찾기(C#)
-해당 특정 네임스페이스에서 모든 노드를 찾기 위해 각 요소나 특성의 네임스페이스를 기준으로 필터링할 수 있습니다.  
+# <a name="how-to-find-all-nodes-in-a-namespace-c"></a><span data-ttu-id="f2889-102">방법: 네임스페이스에서 모든 노드 찾기(C#)</span><span class="sxs-lookup"><span data-stu-id="f2889-102">How to: Find All Nodes in a Namespace (C#)</span></span>
+<span data-ttu-id="f2889-103">해당 특정 네임스페이스에서 모든 노드를 찾기 위해 각 요소나 특성의 네임스페이스를 기준으로 필터링할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f2889-103">You can filter on the namespace of each element or attribute to find all nodes in that particular namespace.</span></span>  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 두 네임스페이스가 포함된 XML 트리를 만듭니다. 그런 다음 트리를 반복하고 이러한 네임스페이스 중 하나에 있는 모든 요소 및 특성의 이름을 출력합니다.  
+## <a name="example"></a><span data-ttu-id="f2889-104">예제</span><span class="sxs-lookup"><span data-stu-id="f2889-104">Example</span></span>  
+ <span data-ttu-id="f2889-105">다음 예제에서는 두 네임스페이스가 포함된 XML 트리를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="f2889-105">The following example creates an XML tree with two namespaces.</span></span> <span data-ttu-id="f2889-106">그런 다음 트리를 반복하고 이러한 네임스페이스 중 하나에 있는 모든 요소 및 특성의 이름을 출력합니다.</span><span class="sxs-lookup"><span data-stu-id="f2889-106">It then iterates through the tree and prints the names of all the elements and attributes in one of those namespaces.</span></span>  
   
 ```csharp  
 string markup = @"<aw:Root xmlns:aw='http://www.adventure-works.com' xmlns:fc='www.fourthcoffee.com'>  
@@ -47,7 +43,7 @@ foreach (XElement el in awElements)
     Console.WriteLine(el.Name.ToString());  
 ```  
   
- 이 코드의 결과는 다음과 같습니다.  
+ <span data-ttu-id="f2889-107">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="f2889-107">This code produces the following output:</span></span>  
   
 ```  
 Nodes in the http://www.adventure-works.com namespace  
@@ -55,10 +51,10 @@ Nodes in the http://www.adventure-works.com namespace
 {http://www.adventure-works.com}GrandChild2  
 ```  
   
-## <a name="example"></a>예제  
- 다음 쿼리에서 액세스하는 XML 파일에는 두 가지 네임스페이스의 구매 주문이 포함되어 있습니다. 쿼리에서는 네임스페이스 중 하나에 있는 요소만 포함된 트리를 새로 만듭니다.  
+## <a name="example"></a><span data-ttu-id="f2889-108">예제</span><span class="sxs-lookup"><span data-stu-id="f2889-108">Example</span></span>  
+ <span data-ttu-id="f2889-109">다음 쿼리에서 액세스하는 XML 파일에는 두 가지 네임스페이스의 구매 주문이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f2889-109">The XML file accessed by the following query contains purchase orders in two different namespaces.</span></span> <span data-ttu-id="f2889-110">쿼리에서는 네임스페이스 중 하나에 있는 요소만 포함된 트리를 새로 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="f2889-110">The query creates a new tree with just the elements in one of the namespaces.</span></span>  
   
- 이 예제에서는 XML 문서 [샘플 XML 파일: 통합된 구매 주문](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)을 사용합니다.  
+ <span data-ttu-id="f2889-111">이 예제에서는 XML 문서 [샘플 XML 파일: 통합된 구매 주문](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="f2889-111">This example uses the following XML document: [Sample XML File: Consolidated Purchase Orders](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).</span></span>  
   
 ```csharp  
 XDocument cpo = XDocument.Load("ConsolidatedPurchaseOrders.xml");  
@@ -71,7 +67,7 @@ XElement newTree = new XElement("Root",
 Console.WriteLine(newTree);  
 ```  
   
- 이 코드의 결과는 다음과 같습니다.  
+ <span data-ttu-id="f2889-112">이 코드의 결과는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="f2889-112">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -107,6 +103,5 @@ Console.WriteLine(newTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [기본 쿼리(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-
+## <a name="see-also"></a><span data-ttu-id="f2889-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f2889-113">See Also</span></span>  
+ [<span data-ttu-id="f2889-114">기본 쿼리(LINQ to XML)(C#)</span><span class="sxs-lookup"><span data-stu-id="f2889-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

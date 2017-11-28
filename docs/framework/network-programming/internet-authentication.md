@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - authentication [.NET Framework], classes
 - IAuthenticationModule interface
@@ -26,36 +21,34 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: a26811b5dd62e30b371af88bc79d06843ef58d05
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: f44bef7804e9101b2d1bc50ba53f3fc7a5fa90ee
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="internet-authentication"></a>인터넷 인증
-<xref:System.Net> 클래스는 표준 인터넷 인증 방법인 기본, 다이제스트, 협상, NTLM 및 Kerberos 인증뿐 아니라 직접 만들 수 있는 사용자 지정 방법을 포함한 다양한 클라이언트 인증 메커니즘을 지원합니다.  
+# <a name="internet-authentication"></a><span data-ttu-id="d8589-102">인터넷 인증</span><span class="sxs-lookup"><span data-stu-id="d8589-102">Internet Authentication</span></span>
+<span data-ttu-id="d8589-103"><xref:System.Net> 클래스는 표준 인터넷 인증 방법인 기본, 다이제스트, 협상, NTLM 및 Kerberos 인증뿐 아니라 직접 만들 수 있는 사용자 지정 방법을 포함한 다양한 클라이언트 인증 메커니즘을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="d8589-103">The <xref:System.Net> classes support a variety of client authentication mechanisms, including the standard Internet authentication methods basic, digest, negotiate, NTLM, and Kerberos authentication, as well as custom methods that you can create.</span></span>  
   
- 인증 자격 증명은 <xref:System.Net.ICredentials> 인터페이스를 구현하는 <xref:System.Net.NetworkCredential> 및 <xref:System.Net.CredentialCache> 클래스에 저장됩니다. 이러한 클래스 중 하나를 쿼리하여 자격 증명이 있는지 확인할 경우 해당 클래스는 **NetworkCredential** 클래스의 인스턴스를 반환합니다. 인증 프로세스는 <xref:System.Net.AuthenticationManager> 클래스에서 관리되고 실제 인증 프로세스는 <xref:System.Net.IAuthenticationModule> 인터페이스를 구현하는 인증 모듈 클래스에서 수행됩니다. 사용자 지정 인증 모듈을 사용하기 전에 **AuthenticationManager**에 등록해야 합니다. 기본, 다이제스트, 협상, NTLM 및 Kerberos 인증 방법용 모듈은 기본적으로 등록되어 있습니다.  
+ <span data-ttu-id="d8589-104">인증 자격 증명은 <xref:System.Net.ICredentials> 인터페이스를 구현하는 <xref:System.Net.NetworkCredential> 및 <xref:System.Net.CredentialCache> 클래스에 저장됩니다.</span><span class="sxs-lookup"><span data-stu-id="d8589-104">Authentication credentials are stored in the <xref:System.Net.NetworkCredential> and <xref:System.Net.CredentialCache> classes, which implement the <xref:System.Net.ICredentials> interface.</span></span> <span data-ttu-id="d8589-105">이러한 클래스 중 하나를 쿼리하여 자격 증명이 있는지 확인할 경우 해당 클래스는 **NetworkCredential** 클래스의 인스턴스를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="d8589-105">When one of these classes is queried for credentials, it returns an instance of the **NetworkCredential** class.</span></span> <span data-ttu-id="d8589-106">인증 프로세스는 <xref:System.Net.AuthenticationManager> 클래스에서 관리되고 실제 인증 프로세스는 <xref:System.Net.IAuthenticationModule> 인터페이스를 구현하는 인증 모듈 클래스에서 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="d8589-106">The authentication process is managed by the <xref:System.Net.AuthenticationManager> class, and the actual authentication process is performed by an authentication module class that implements the <xref:System.Net.IAuthenticationModule> interface.</span></span> <span data-ttu-id="d8589-107">사용자 지정 인증 모듈을 사용하기 전에 **AuthenticationManager**에 등록해야 합니다. 기본, 다이제스트, 협상, NTLM 및 Kerberos 인증 방법용 모듈은 기본적으로 등록되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d8589-107">You must register a custom authentication module with the **AuthenticationManager** before it can be used; modules for the basic, digest, negotiate, NTLM, and Kerberos authentication methods are registered by default.</span></span>  
   
- **NetworkCredential**은 URI로 식별되는 단일 인터넷 리소스와 연결된 자격 증명 집합을 저장하고 <xref:System.Net.NetworkCredential.GetCredential%2A> 메서드 호출에 대한 응답으로 자격 증명을 반환합니다. **NetworkCredential** 클래스는 일반적으로 제한된 수의 인터넷 리소스에 액세스하는 응용 프로그램에서 사용되거나 모든 경우에 동일한 자격 증명 집합을 사용하는 응용 프로그램에서 사용됩니다.  
+ <span data-ttu-id="d8589-108">**NetworkCredential**은 URI로 식별되는 단일 인터넷 리소스와 연결된 자격 증명 집합을 저장하고 <xref:System.Net.NetworkCredential.GetCredential%2A> 메서드 호출에 대한 응답으로 자격 증명을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="d8589-108">**NetworkCredential** stores a set of credentials associated with a single Internet resource identified by a URI and returns them in response to any call to the <xref:System.Net.NetworkCredential.GetCredential%2A> method.</span></span> <span data-ttu-id="d8589-109">**NetworkCredential** 클래스는 일반적으로 제한된 수의 인터넷 리소스에 액세스하는 응용 프로그램에서 사용되거나 모든 경우에 동일한 자격 증명 집합을 사용하는 응용 프로그램에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="d8589-109">The **NetworkCredential** class is typically used by applications that access a limited number of Internet resources or by applications that use the same set of credentials in all cases.</span></span>  
   
- **CredentialCache** 클래스는 다양한 웹 리소스에 대한 자격 증명 컬렉션을 저장합니다. <xref:System.Net.CredentialCache.GetCredential%2A> 메서드가 호출되면 **CredentialCache**는 웹 리소스의 URI 및 요청된 인증 체계를 통해 확인되는 적절한 자격 증명 집합을 반환합니다. 다양한 인증 체계가 적용된 다양한 인터넷 리소스를 사용하는 응용 프로그램은 **CredentialCache** 클래스를 사용하는 것이 유용합니다. 이 응용 프로그램은 모든 자격 증명을 저장하고 요청 시 제공하기 때문입니다.  
+ <span data-ttu-id="d8589-110">**CredentialCache** 클래스는 다양한 웹 리소스에 대한 자격 증명 컬렉션을 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="d8589-110">The **CredentialCache** class stores a collection of credentials for various Web resources.</span></span> <span data-ttu-id="d8589-111"><xref:System.Net.CredentialCache.GetCredential%2A> 메서드가 호출되면 **CredentialCache**는 웹 리소스의 URI 및 요청된 인증 체계를 통해 확인되는 적절한 자격 증명 집합을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="d8589-111">When the <xref:System.Net.CredentialCache.GetCredential%2A> method is called, **CredentialCache** returns the proper set of credentials, as determined by the URI of the Web resource and the requested authentication scheme.</span></span> <span data-ttu-id="d8589-112">다양한 인증 체계가 적용된 다양한 인터넷 리소스를 사용하는 응용 프로그램은 **CredentialCache** 클래스를 사용하는 것이 유용합니다. 이 응용 프로그램은 모든 자격 증명을 저장하고 요청 시 제공하기 때문입니다.</span><span class="sxs-lookup"><span data-stu-id="d8589-112">Applications that use a variety of Internet resources with different authentication schemes benefit from using the **CredentialCache** class, since it stores all the credentials and provides them as requested.</span></span>  
   
- 인터넷 리소스가 인증을 요청하면 <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=fullName> 메서드는 <xref:System.Net.WebRequest>를 자격 증명 요청과 함께 **AuthenticationManager**에 보냅니다. 그러면 요청이 다음 프로세스에 따라 인증됩니다.  
+ <span data-ttu-id="d8589-113">인터넷 리소스가 인증을 요청하면 <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType> 메서드는 <xref:System.Net.WebRequest>를 자격 증명 요청과 함께 **AuthenticationManager**에 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="d8589-113">When an Internet resource requests authentication, the <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType> method sends the <xref:System.Net.WebRequest> to the **AuthenticationManager** along with the request for credentials.</span></span> <span data-ttu-id="d8589-114">그러면 요청이 다음 프로세스에 따라 인증됩니다.</span><span class="sxs-lookup"><span data-stu-id="d8589-114">The request is then authenticated according to the following process:</span></span>  
   
-1.  **AuthenticationManager**는 각 등록된 인증 모듈에서 모듈이 등록된 순서대로 <xref:System.Net.IAuthenticationModule.Authenticate%2A> 메서드를 호출합니다. **AuthenticationManager**는 **null**을 반환하지 않는 첫 번째 모듈을 사용하여 인증 프로세스를 수행합니다. 프로세스 세부 정보는 관련된 인증 모듈 형식에 따라 달라집니다.  
+1.  <span data-ttu-id="d8589-115">**AuthenticationManager**는 각 등록된 인증 모듈에서 모듈이 등록된 순서대로 <xref:System.Net.IAuthenticationModule.Authenticate%2A> 메서드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="d8589-115">The **AuthenticationManager** calls the <xref:System.Net.IAuthenticationModule.Authenticate%2A> method on each of the registered authentication modules in the order they were registered.</span></span> <span data-ttu-id="d8589-116">**AuthenticationManager**는 **null**을 반환하지 않는 첫 번째 모듈을 사용하여 인증 프로세스를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="d8589-116">The **AuthenticationManager** uses the first module that does not return **null** to carry out the authentication process.</span></span> <span data-ttu-id="d8589-117">프로세스 세부 정보는 관련된 인증 모듈 형식에 따라 달라집니다.</span><span class="sxs-lookup"><span data-stu-id="d8589-117">The details of the process vary depending on the type of authentication module involved.</span></span>  
   
-2.  인증 프로세스가 완료되면 인증 모듈은 <xref:System.Net.Authorization>을 인터넷 리소스에 액세스하는 데 필요한 정보가 포함된 **WebRequest**에 반환합니다.  
+2.  <span data-ttu-id="d8589-118">인증 프로세스가 완료되면 인증 모듈은 <xref:System.Net.Authorization>을 인터넷 리소스에 액세스하는 데 필요한 정보가 포함된 **WebRequest**에 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="d8589-118">When the authentication process is complete, the authentication module returns an <xref:System.Net.Authorization> to the **WebRequest** that contains the information needed to access the Internet resource.</span></span>  
   
- 일부 인증 체계에서는 리소스에 대한 요청을 먼저 만들지 않고 사용자를 인증할 수 있습니다. 응용 프로그램은 리소스에서 사용자를 사전 인증하여 서버에 대한 하나 이상의 왕복을 제거하는 방식으로 시간을 단축할 수 있습니다. 또는 나중에 사용자에게 더 빨리 응답할 수 있도록 프로그램 시작 중에 인증을 수행할 수 있습니다. 사전 인증을 사용하는 인증 체계는 <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> 속성을 **true**로 설정합니다.  
+ <span data-ttu-id="d8589-119">일부 인증 체계에서는 리소스에 대한 요청을 먼저 만들지 않고 사용자를 인증할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d8589-119">Some authentication schemes can authenticate a user without first making a request for a resource.</span></span> <span data-ttu-id="d8589-120">응용 프로그램은 리소스에서 사용자를 사전 인증하여 서버에 대한 하나 이상의 왕복을 제거하는 방식으로 시간을 단축할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d8589-120">An application can save time by preauthenticating the user with the resource, thus eliminating at least one round trip to the server.</span></span> <span data-ttu-id="d8589-121">또는 나중에 사용자에게 더 빨리 응답할 수 있도록 프로그램 시작 중에 인증을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d8589-121">Or, it can perform authentication during program startup in order to be more responsive to the user later.</span></span> <span data-ttu-id="d8589-122">사전 인증을 사용하는 인증 체계는 <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> 속성을 **true**로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="d8589-122">Authentication schemes that can use preauthentication set the <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> property to **true**.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [기본 인증 및 다이제스트 인증](../../../docs/framework/network-programming/basic-and-digest-authentication.md)   
- [NTLM 및 Kerberos 인증](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)   
- [네트워크 프로그래밍의 보안](../../../docs/framework/network-programming/security-in-network-programming.md)
-
+## <a name="see-also"></a><span data-ttu-id="d8589-123">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d8589-123">See Also</span></span>  
+ [<span data-ttu-id="d8589-124">기본 및 다이제스트 인증</span><span class="sxs-lookup"><span data-stu-id="d8589-124">Basic and Digest Authentication</span></span>](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
+ [<span data-ttu-id="d8589-125">NTLM 및 Kerberos 인증</span><span class="sxs-lookup"><span data-stu-id="d8589-125">NTLM and Kerberos Authentication</span></span>](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)  
+ [<span data-ttu-id="d8589-126">네트워크 프로그래밍의 보안</span><span class="sxs-lookup"><span data-stu-id="d8589-126">Security in Network Programming</span></span>](../../../docs/framework/network-programming/security-in-network-programming.md)

@@ -1,46 +1,37 @@
 ---
-title: "방법: LINQ (Visual Basic)를 사용 하 여 ArrayList 쿼리 | Microsoft 문서"
+title: "방법: LINQ (Visual Basic)를 사용 하 여 ArrayList 쿼리"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 176358a9-d765-4b57-9557-7feb4428138d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: f48b06c23b1e28fccb953638954a8d9afefe574e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 6740d8a7c6d4a31ccd3730249695c24c6417785d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>방법: LINQ (Visual Basic)를 사용 하 여 ArrayList 쿼리
-제네릭이 아닌 쿼리를 LINQ를 사용 하는 경우 <xref:System.Collections.IEnumerable>와 같은 컬렉션 <xref:System.Collections.ArrayList>, 컬렉션에 있는 개체의 특정 유형을 반영 하도록 범위 변수의 형식을 명시적으로 선언 해야 합니다.</xref:System.Collections.ArrayList> </xref:System.Collections.IEnumerable> 예를 들어 한 <xref:System.Collections.ArrayList>의 `Student` 개체를 프로그램 [From 절이](../../../../visual-basic/language-reference/queries/from-clause.md) 다음과 같아야 합니다:</xref:System.Collections.ArrayList>  
+# <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a><span data-ttu-id="159a4-102">방법: LINQ (Visual Basic)를 사용 하 여 ArrayList 쿼리</span><span class="sxs-lookup"><span data-stu-id="159a4-102">How to: Query an ArrayList with LINQ (Visual Basic)</span></span>
+<span data-ttu-id="159a4-103">LINQ를 사용하여 <xref:System.Collections.ArrayList> 등의 제네릭이 아닌 <xref:System.Collections.IEnumerable> 컬렉션을 쿼리하는 경우 컬렉션에 있는 개체의 특정 형식을 반영하도록 범위 변수의 형식을 명시적으로 선언해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="159a4-103">When using LINQ to query non-generic <xref:System.Collections.IEnumerable> collections such as <xref:System.Collections.ArrayList>, you must explicitly declare the type of the range variable to reflect the specific type of the objects in the collection.</span></span> <span data-ttu-id="159a4-104">예를 들어, 있는 경우는 <xref:System.Collections.ArrayList> 의 `Student` 개체 프로그램 [From 절이](../../../../visual-basic/language-reference/queries/from-clause.md) 다음과 같이 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="159a4-104">For example, if you have an <xref:System.Collections.ArrayList> of `Student` objects, your [From Clause](../../../../visual-basic/language-reference/queries/from-clause.md) should look like this:</span></span>  
   
 ```  
 Dim query = From student As Student In arrList   
 ...  
 ```  
   
- 범위 변수의 종류를 지정 하 여 각 항목에 캐스팅할는 <xref:System.Collections.ArrayList>에 `Student`.</xref:System.Collections.ArrayList>  
+ <span data-ttu-id="159a4-105">범위 변수의 형식을 지정하여 <xref:System.Collections.ArrayList>의 각 항목을 `Student`로 캐스팅합니다.</span><span class="sxs-lookup"><span data-stu-id="159a4-105">By specifying the type of the range variable, you are casting each item in the <xref:System.Collections.ArrayList> to a `Student`.</span></span>  
   
- 쿼리 식에 명시적으로 형식화 된 범위 변수의 사용 하는 것은 <xref:System.Linq.Enumerable.Cast%2A>메서드.</xref:System.Linq.Enumerable.Cast%2A> <xref:System.Linq.Enumerable.Cast%2A>지정된 된 캐스트를 수행할 수 없는 경우 예외를 throw 합니다.</xref:System.Linq.Enumerable.Cast%2A> <xref:System.Linq.Enumerable.Cast%2A>및 <xref:System.Linq.Enumerable.OfType%2A>제네릭이 아닌에서 작동 하는 두 개의 표준 쿼리 연산자 메서드가 <xref:System.Collections.IEnumerable>형식.</xref:System.Collections.IEnumerable> </xref:System.Linq.Enumerable.OfType%2A></xref:System.Linq.Enumerable.Cast%2A> Visual Basic의 경우 명시적으로 호출 해야는 <xref:System.Linq.Enumerable.Cast%2A>특정 범위 변수 형식을 확인 하는 데이터 원본에 대해 메서드.</xref:System.Linq.Enumerable.Cast%2A> 자세한 내용은 참조[쿼리 작업 (Visual Basic)의 형식 관계](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md)합니다.  
+ <span data-ttu-id="159a4-106">명시적 형식 범위 변수를 쿼리 식에 사용하는 것은 <xref:System.Linq.Enumerable.Cast%2A> 메서드 호출과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="159a4-106">The use of an explicitly typed range variable in a query expression is equivalent to calling the <xref:System.Linq.Enumerable.Cast%2A> method.</span></span> <span data-ttu-id="159a4-107">지정된 캐스트를 수행할 수 없는 경우 <xref:System.Linq.Enumerable.Cast%2A>에서 예외를 throw합니다.</span><span class="sxs-lookup"><span data-stu-id="159a4-107"><xref:System.Linq.Enumerable.Cast%2A> throws an exception if the specified cast cannot be performed.</span></span> <span data-ttu-id="159a4-108"><xref:System.Linq.Enumerable.Cast%2A> 및 <xref:System.Linq.Enumerable.OfType%2A>은 제네릭이 아닌 <xref:System.Collections.IEnumerable> 형식에서 작동하는 두 가지 표준 쿼리 연산자 메서드입니다.</span><span class="sxs-lookup"><span data-stu-id="159a4-108"><xref:System.Linq.Enumerable.Cast%2A> and <xref:System.Linq.Enumerable.OfType%2A> are the two Standard Query Operator methods that operate on non-generic <xref:System.Collections.IEnumerable> types.</span></span> <span data-ttu-id="159a4-109">Visual Basic의 경우 명시적으로 호출 해야는 <xref:System.Linq.Enumerable.Cast%2A> 특정 범위 변수 유형 되도록 데이터 원본에 대해 메서드.</span><span class="sxs-lookup"><span data-stu-id="159a4-109">In Visual Basic, you must explicitly call the <xref:System.Linq.Enumerable.Cast%2A> method on the data source to ensure a specific range variable type.</span></span> <span data-ttu-id="159a4-110">자세한 내용은 참조[쿼리 작업 (Visual Basic)의 형식 관계](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="159a4-110">For more information, see[Type Relationships in Query Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md).</span></span>  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 <xref:System.Collections.ArrayList>.</xref:System.Collections.ArrayList> 따라 간단한 쿼리를 보여 줍니다. 참고 코드를 호출 하는 경우이 예제에서는 개체 이니셜라이저를 사용 하 여 <xref:System.Collections.ArrayList.Add%2A>방법 이지만이 필요는 없습니다.</xref:System.Collections.ArrayList.Add%2A>  
+## <a name="example"></a><span data-ttu-id="159a4-111">예제</span><span class="sxs-lookup"><span data-stu-id="159a4-111">Example</span></span>  
+ <span data-ttu-id="159a4-112">다음 예제에서는 <xref:System.Collections.ArrayList>에 대한 단순 쿼리를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="159a4-112">The following example shows a simple query over an <xref:System.Collections.ArrayList>.</span></span> <span data-ttu-id="159a4-113">이 예제에서는 코드가 <xref:System.Collections.ArrayList.Add%2A> 메서드를 호출할 때 개체 이니셜라이저를 사용하지만 요구 사항은 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="159a4-113">Note that this example uses object initializers when the code calls the <xref:System.Collections.ArrayList.Add%2A> method, but this is not a requirement.</span></span>  
   
 ```vb  
 Imports System.Collections  
@@ -94,6 +85,5 @@ End Module
 '   Garcia: 97  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-
+## <a name="see-also"></a><span data-ttu-id="159a4-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="159a4-114">See Also</span></span>  
+ [<span data-ttu-id="159a4-115">LINQ to Objects(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="159a4-115">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

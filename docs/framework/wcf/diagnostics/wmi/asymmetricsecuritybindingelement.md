@@ -1,25 +1,28 @@
 ---
-title: "AsymmetricSecurityBindingElement | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: AsymmetricSecurityBindingElement
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7bd3b6be-8f77-4927-93ae-6fa371893cca
-caps.latest.revision: 8
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 104810fc24cfe7c4c6ddf7ee5ece9f16a345c80c
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# AsymmetricSecurityBindingElement
-AsymmetricSecurityBindingElement  
+# <a name="asymmetricsecuritybindingelement"></a><span data-ttu-id="f0c9e-102">AsymmetricSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="f0c9e-102">AsymmetricSecurityBindingElement</span></span>
+<span data-ttu-id="f0c9e-103">AsymmetricSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="f0c9e-103">AsymmetricSecurityBindingElement</span></span>  
   
-## 구문  
+## <a name="syntax"></a><span data-ttu-id="f0c9e-104">구문</span><span class="sxs-lookup"><span data-stu-id="f0c9e-104">Syntax</span></span>  
   
 ```  
 class AsymmetricSecurityBindingElement : SecurityBindingElement  
@@ -29,31 +32,31 @@ class AsymmetricSecurityBindingElement : SecurityBindingElement
 };  
 ```  
   
-## 메서드  
- AsymmetricSecurityBindingElement 클래스는 메서드를 정의하지 않습니다.  
+## <a name="methods"></a><span data-ttu-id="f0c9e-105">메서드</span><span class="sxs-lookup"><span data-stu-id="f0c9e-105">Methods</span></span>  
+ <span data-ttu-id="f0c9e-106">AsymmetricSecurityBindingElement 클래스는 메서드를 정의하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f0c9e-106">The AsymmetricSecurityBindingElement class does not define any methods.</span></span>  
   
-## 속성  
- AsymmetricSecurityBindingElement 클래스에는 다음과 같은 속성이 있습니다.  
+## <a name="properties"></a><span data-ttu-id="f0c9e-107">속성</span><span class="sxs-lookup"><span data-stu-id="f0c9e-107">Properties</span></span>  
+ <span data-ttu-id="f0c9e-108">AsymmetricSecurityBindingElement 클래스에는 다음과 같은 속성이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f0c9e-108">The AsymmetricSecurityBindingElement class has the following properties:</span></span>  
   
-### MessageProtectionOrder  
- 데이터 형식: string  
+### <a name="messageprotectionorder"></a><span data-ttu-id="f0c9e-109">MessageProtectionOrder</span><span class="sxs-lookup"><span data-stu-id="f0c9e-109">MessageProtectionOrder</span></span>  
+ <span data-ttu-id="f0c9e-110">데이터 형식: string</span><span class="sxs-lookup"><span data-stu-id="f0c9e-110">Data type: string</span></span>  
   
- 액세스 형식: 읽기 전용  
+ <span data-ttu-id="f0c9e-111">액세스 형식: 읽기 전용</span><span class="sxs-lookup"><span data-stu-id="f0c9e-111">Access type: Read-only</span></span>  
   
- 이 바인딩의 메시지 암호화 및 서명 순서입니다.  
+ <span data-ttu-id="f0c9e-112">이 바인딩의 메시지 암호화 및 서명 순서입니다.</span><span class="sxs-lookup"><span data-stu-id="f0c9e-112">The order of message encryption and signing for this binding.</span></span>  
   
-### RequireSignatureConfirmation  
- 데이터 형식: boolean  
+### <a name="requiresignatureconfirmation"></a><span data-ttu-id="f0c9e-113">RequireSignatureConfirmation</span><span class="sxs-lookup"><span data-stu-id="f0c9e-113">RequireSignatureConfirmation</span></span>  
+ <span data-ttu-id="f0c9e-114">데이터 형식: boolean</span><span class="sxs-lookup"><span data-stu-id="f0c9e-114">Data type: boolean</span></span>  
   
- 액세스 형식: 읽기 전용  
+ <span data-ttu-id="f0c9e-115">액세스 형식: 읽기 전용</span><span class="sxs-lookup"><span data-stu-id="f0c9e-115">Access type: Read-only</span></span>  
   
- 바인딩에 서명 확인이 필요한지 여부입니다.  
+ <span data-ttu-id="f0c9e-116">바인딩에 서명 확인이 필요한지 여부입니다.</span><span class="sxs-lookup"><span data-stu-id="f0c9e-116">Whether the binding requires signature confirmation.</span></span>  
   
-## 요구 사항  
+## <a name="requirements"></a><span data-ttu-id="f0c9e-117">요구 사항</span><span class="sxs-lookup"><span data-stu-id="f0c9e-117">Requirements</span></span>  
   
-|MOF|Servicemodel.mof에 선언되어 있습니다.|  
-|---------|----------------------------------|  
-|네임스페이스|root\\ServiceModel에 정의되어 있습니다.|  
+|<span data-ttu-id="f0c9e-118">MOF</span><span class="sxs-lookup"><span data-stu-id="f0c9e-118">MOF</span></span>|<span data-ttu-id="f0c9e-119">Servicemodel.mof에 선언되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f0c9e-119">Declared in Servicemodel.mof.</span></span>|  
+|---------|-----------------------------------|  
+|<span data-ttu-id="f0c9e-120">네임스페이스</span><span class="sxs-lookup"><span data-stu-id="f0c9e-120">Namespace</span></span>|<span data-ttu-id="f0c9e-121">root\ServiceModel에 정의되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f0c9e-121">Defined in root\ServiceModel</span></span>|  
   
-## 참고 항목  
+## <a name="see-also"></a><span data-ttu-id="f0c9e-122">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f0c9e-122">See Also</span></span>  
  <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>

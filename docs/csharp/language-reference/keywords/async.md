@@ -1,45 +1,26 @@
 ---
 title: "async(C# 참조)"
-ms.date: 2017-05-22
+ms.date: 05/22/2017
 ms.prod: .net
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-f1_keywords:
-- async_CSharpKeyword
-dev_langs:
-- CSharp
+f1_keywords: async_CSharpKeyword
 helpviewer_keywords:
 - async keyword [C#]
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: c4a89736822342a9d9a24db6d43435f9795b81b5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1dc7ba08d1a79d17d625755a6d60565aee6945e3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="async-c-reference"></a>async(C# 참조)
-`async` 한정자를 사용하여 메서드, [람다 식](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) 또는 [무명 메서드](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)를 비동기로 지정합니다. 메서드 또는 식에 이 한정자를 사용하면 *비동기 메서드*라고 합니다. 다음 예제에서는 `ExampleMethodAsync`라는 비동기 메서드를 정의합니다. 
+# <a name="async-c-reference"></a><span data-ttu-id="8f444-102">async(C# 참조)</span><span class="sxs-lookup"><span data-stu-id="8f444-102">async (C# Reference)</span></span>
+<span data-ttu-id="8f444-103">`async` 한정자를 사용하여 메서드, [람다 식](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) 또는 [무명 메서드](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)를 비동기로 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="8f444-103">Use the `async` modifier to specify that a method, [lambda expression](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md), or [anonymous method](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) is asynchronous.</span></span> <span data-ttu-id="8f444-104">메서드 또는 식에 이 한정자를 사용하면 *비동기 메서드*라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="8f444-104">If you use this modifier on a method or expression, it's referred to as an *async method*.</span></span> <span data-ttu-id="8f444-105">다음 예제에서는 `ExampleMethodAsync`라는 비동기 메서드를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="8f444-105">The following example defines an async method named `ExampleMethodAsync`:</span></span> 
   
 ```csharp  
 public async Task<int> ExampleMethodAsync()  
@@ -48,22 +29,22 @@ public async Task<int> ExampleMethodAsync()
 }  
 ```  
  
-비동기 프로그래밍이 처음이거나 비동기 메서드가 `await` 키워드를 사용하여 호출자의 스레드를 차단하지 않고 장기 실행 작업을 수행할 수 있는 방법을 잘 모르겠으면 [async 및 await를 사용한 비동기 프로그래밍](../../../csharp/programming-guide/concepts/async/index.md)의 소개 내용을 참조하세요. 다음 코드는 비동기 메서드 안에 있으며 <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=fullName> 메서드를 호출합니다. 
+<span data-ttu-id="8f444-106">비동기 프로그래밍이 처음이거나 비동기 메서드가 `await` 키워드를 사용하여 호출자의 스레드를 차단하지 않고 장기 실행 작업을 수행할 수 있는 방법을 잘 모르겠으면 [async 및 await를 사용한 비동기 프로그래밍](../../../csharp/programming-guide/concepts/async/index.md)의 소개 내용을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="8f444-106">If you're new to asynchronous programming or do not understand how an async method uses the `await` keyword to do potentially long-running work without blocking the caller’s thread, read the introduction in [Asynchronous Programming with async and await](../../../csharp/programming-guide/concepts/async/index.md).</span></span> <span data-ttu-id="8f444-107">다음 코드는 비동기 메서드 안에 있으며 <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType> 메서드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="8f444-107">The following code is found inside an async method and calls the <xref:System.Net.Http.HttpClient.GetStringAsync%2a?displayProperty=nameWithType> method:</span></span> 
   
 ```csharp  
 string contents = await httpClient.GetStringAsync(requestUrl);  
 ```  
   
-비동기 메서드는 대기 중인 작업이 완료될 때까지 메서드가 일시 중단되는 지점인 첫 번째 `await` 식에 도달하기 전에는 동기적으로 실행됩니다. 다음 단원의 예제에서처럼 그 동안에는 제어가 메서드 호출자에게 반환됩니다.  
+<span data-ttu-id="8f444-108">비동기 메서드는 대기 중인 작업이 완료될 때까지 메서드가 일시 중단되는 지점인 첫 번째 `await` 식에 도달하기 전에는 동기적으로 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="8f444-108">An async method runs synchronously until it reaches its first `await` expression, at which point the method is suspended until the awaited task is complete.</span></span> <span data-ttu-id="8f444-109">다음 단원의 예제에서처럼 그 동안에는 제어가 메서드 호출자에게 반환됩니다.</span><span class="sxs-lookup"><span data-stu-id="8f444-109">In the meantime, control returns to the caller of the method, as the example in the next section shows.</span></span>  
   
-`async` 키워드에서 수정하는 메서드에 `await` 식 또는 문이 없는 경우 해당 메서드가 동기적으로 실행됩니다. `await` 문이 포함되지 않은 모든 비동기 메서드에서는 오류가 발생할 수 있으므로 컴파일러 경고가 나타납니다. [컴파일러 경고(수준 1) CS4014](../../../csharp/language-reference/compiler-messages/cs4014.md)를 참조하세요.  
+<span data-ttu-id="8f444-110">`async` 키워드에서 수정하는 메서드에 `await` 식 또는 문이 없는 경우 해당 메서드가 동기적으로 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="8f444-110">If the method that the `async` keyword modifies doesn't contain an `await` expression or statement, the method executes synchronously.</span></span> <span data-ttu-id="8f444-111">`await` 문이 포함되지 않은 모든 비동기 메서드에서는 오류가 발생할 수 있으므로 컴파일러 경고가 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="8f444-111">A compiler warning alerts you to any async methods that don't contain `await` statements, because that situation might indicate an error.</span></span> <span data-ttu-id="8f444-112">[컴파일러 경고(수준 1) CS4014](../../../csharp/language-reference/compiler-messages/cs4014.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="8f444-112">See [Compiler Warning (level 1) CS4014](../../../csharp/language-reference/compiler-messages/cs4014.md).</span></span>  
   
- `async` 키워드는 메서드, 람다 식 또는 무명 메서드를 수정할 때만 키워드로 사용됩니다. 다른 모든 컨텍스트에서는 식별자로 해석됩니다.  
+ <span data-ttu-id="8f444-113">`async` 키워드는 메서드, 람다 식 또는 무명 메서드를 수정할 때만 키워드로 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="8f444-113">The `async` keyword is contextual in that it's a keyword only when it modifies a method, a lambda expression, or an anonymous method.</span></span> <span data-ttu-id="8f444-114">다른 모든 컨텍스트에서는 식별자로 해석됩니다.</span><span class="sxs-lookup"><span data-stu-id="8f444-114">In all other contexts, it's interpreted as an identifier.</span></span>  
   
-## <a name="example"></a>예제  
-다음 예제에서는 비동기 이벤트 처리기, `StartButton_Click`, 비동기 메서드 및 `ExampleMethodAsync` 간의 제어 흐름과 구조를 보여 줍니다. 비동기 메서드의 결과는 웹 페이지의 문자 수입니다. 이 코드는 Visual Studio에서 만든 WPF(Windows Presentation Foundation) 앱 또는 Windows 스토어 앱에 적합합니다. 앱을 설정하는 방법은 코드 주석을 참조하세요.  
+## <a name="example"></a><span data-ttu-id="8f444-115">예제</span><span class="sxs-lookup"><span data-stu-id="8f444-115">Example</span></span>  
+<span data-ttu-id="8f444-116">다음 예제에서는 비동기 이벤트 처리기, `StartButton_Click`, 비동기 메서드 및 `ExampleMethodAsync` 간의 제어 흐름과 구조를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8f444-116">The following example shows the structure and flow of control between an async event handler, `StartButton_Click`, and an async method, `ExampleMethodAsync`.</span></span> <span data-ttu-id="8f444-117">비동기 메서드의 결과는 웹 페이지의 문자 수입니다.</span><span class="sxs-lookup"><span data-stu-id="8f444-117">The result from the async method is the number of characters of a web page.</span></span> <span data-ttu-id="8f444-118">이 코드는 Visual Studio에서 만든 WPF(Windows Presentation Foundation) 앱 또는 Windows 스토어 앱에 적합합니다. 앱을 설정하는 방법은 코드 주석을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="8f444-118">The code is suitable for a Windows Presentation Foundation (WPF) app or Windows Store app that you create in Visual Studio; see the code comments for setting up the app.</span></span>  
 
-Visual Studio에서 이 코드를 WPF(Windows Presentation Foundation) 앱 또는 Windows 스토어 앱으로 실행할 수 있습니다. `StartButton`이라는 Button 컨트롤과 `ResultsTextBox`라는 Textbox 컨트롤이 필요합니다. 다음과 같이 작성되도록 이름과 처리기를 설정해야 합니다.  
+<span data-ttu-id="8f444-119">Visual Studio에서 이 코드를 WPF(Windows Presentation Foundation) 앱 또는 Windows 스토어 앱으로 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8f444-119">You can run this code in Visual Studio as a Windows Presentation Foundation (WPF) app or a Windows Store app.</span></span> <span data-ttu-id="8f444-120">`StartButton`이라는 Button 컨트롤과 `ResultsTextBox`라는 Textbox 컨트롤이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="8f444-120">You need a Button control named `StartButton` and a Textbox control named `ResultsTextBox`.</span></span> <span data-ttu-id="8f444-121">다음과 같이 작성되도록 이름과 처리기를 설정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8f444-121">Remember to set the names and handler so that you have something like this:</span></span>  
 
 ```xaml
 <Button Content="Button" HorizontalAlignment="Left" Margin="88,77,0,0" VerticalAlignment="Top" Width="75"  
@@ -72,42 +53,41 @@ Visual Studio에서 이 코드를 WPF(Windows Presentation Foundation) 앱 또�
          Text="&lt;Enter a URL&gt;" VerticalAlignment="Top" Width="310" Name="ResultsTextBox"/>  
 ```
   
-코드를 WPF 앱으로 실행하려면  
+<span data-ttu-id="8f444-122">코드를 WPF 앱으로 실행하려면</span><span class="sxs-lookup"><span data-stu-id="8f444-122">To run the code as a WPF app:</span></span>  
 
-- 이 코드를 MainWindow.xaml.cs의 `MainWindow` 클래스에 붙여넣습니다.  
-- System.Net.Http에 대한 참조를 추가합니다.  
-- System.Net.Http에 대한 `using` 지시문을 추가합니다.  
+- <span data-ttu-id="8f444-123">이 코드를 MainWindow.xaml.cs의 `MainWindow` 클래스에 붙여넣습니다.</span><span class="sxs-lookup"><span data-stu-id="8f444-123">Paste this code into the `MainWindow` class in MainWindow.xaml.cs.</span></span>  
+- <span data-ttu-id="8f444-124">System.Net.Http에 대한 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8f444-124">Add a reference to System.Net.Http.</span></span>  
+- <span data-ttu-id="8f444-125">System.Net.Http에 대한 `using` 지시문을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8f444-125">Add a `using` directive for System.Net.Http.</span></span>  
   
-코드를 Windows 스토어 앱으로 실행하려면  
-- 이 코드를 MainPage.xaml.cs의 `MainPage` 클래스에 붙여넣습니다.  
-- System.Net.Http 및 System.Threading.Tasks에 대한 using 지시문을 추가합니다.  
+<span data-ttu-id="8f444-126">코드를 Windows 스토어 앱으로 실행하려면</span><span class="sxs-lookup"><span data-stu-id="8f444-126">To run the code as a Windows Store app:</span></span>  
+- <span data-ttu-id="8f444-127">이 코드를 MainPage.xaml.cs의 `MainPage` 클래스에 붙여넣습니다.</span><span class="sxs-lookup"><span data-stu-id="8f444-127">Paste this code into the `MainPage` class in MainPage.xaml.cs.</span></span>  
+- <span data-ttu-id="8f444-128">System.Net.Http 및 System.Threading.Tasks에 대한 using 지시문을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8f444-128">Add using directives for System.Net.Http and System.Threading.Tasks.</span></span>  
   
-[!code-cs[wpf-async](../../../../samples/snippets/csharp/language-reference/keywords/async/wpf/mainwindow.xaml.cs#1)]
+[!code-csharp[wpf-async](../../../../samples/snippets/csharp/language-reference/keywords/async/wpf/mainwindow.xaml.cs#1)]
   
 > [!IMPORTANT]
->  작업 및 작업 완료를 기다리는 동안 실행되는 코드에 대한 자세한 내용은 [async 및 await를 사용한 비동기 프로그래밍](../../../csharp/programming-guide/concepts/async/index.md)을 참조하세요. 비슷한 요소를 사용하는 전체 WPF 예제에 대해서는 [연습: Async 및 Await를 사용하여 웹에 액세스](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)를 참조하세요.  
+>  <span data-ttu-id="8f444-129">작업 및 작업 완료를 기다리는 동안 실행되는 코드에 대한 자세한 내용은 [async 및 await를 사용한 비동기 프로그래밍](../../../csharp/programming-guide/concepts/async/index.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="8f444-129">For more information about tasks and the code that executes while waiting for a task, see [Asynchronous Programming with async and await](../../../csharp/programming-guide/concepts/async/index.md).</span></span> <span data-ttu-id="8f444-130">비슷한 요소를 사용하는 전체 WPF 예제에 대해서는 [연습: Async 및 Await를 사용하여 웹에 액세스](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="8f444-130">For a full WPF example that uses similar elements, see [Walkthrough: Accessing the Web by Using Async and Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).</span></span>  
   
-## <a name="return-types"></a>반환 형식  
-비동기 메서드의 반환 형식은 다음과 같을 수 있습니다.
+## <a name="return-types"></a><span data-ttu-id="8f444-131">반환 형식</span><span class="sxs-lookup"><span data-stu-id="8f444-131">Return Types</span></span>  
+<span data-ttu-id="8f444-132">비동기 메서드의 반환 형식은 다음과 같을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8f444-132">An async method can have the following return types:</span></span>
 
 - <xref:System.Threading.Tasks.Task>
 - <xref:System.Threading.Tasks.Task%601>
-- 이벤트 처리기에만 사용해야 하는 [void](../../../csharp/language-reference/keywords/void.md).
-- C# 7부터 액세스 가능한 `GetAwaiter` 메서드가 있는 모든 형식. `System.Threading.Tasks.ValueTask<TResult>` 형식은 이러한 구현 중 하나입니다. NuGet 패키지 `System.Threading.Tasks.Extensions`를 추가하면 사용할 수 있습니다. 
+- <span data-ttu-id="8f444-133">이벤트 처리기에만 사용해야 하는 [void](../../../csharp/language-reference/keywords/void.md).</span><span class="sxs-lookup"><span data-stu-id="8f444-133">[void](../../../csharp/language-reference/keywords/void.md), which should only be used for event handlers.</span></span>
+- <span data-ttu-id="8f444-134">C# 7부터 액세스 가능한 `GetAwaiter` 메서드가 있는 모든 형식.</span><span class="sxs-lookup"><span data-stu-id="8f444-134">Starting with C# 7, any type that has an accessible `GetAwaiter` method.</span></span> <span data-ttu-id="8f444-135">`System.Threading.Tasks.ValueTask<TResult>` 형식은 이러한 구현 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="8f444-135">The `System.Threading.Tasks.ValueTask<TResult>` type is one such implementation.</span></span> <span data-ttu-id="8f444-136">NuGet 패키지 `System.Threading.Tasks.Extensions`를 추가하면 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8f444-136">It is available by adding the NuGet package `System.Threading.Tasks.Extensions`.</span></span> 
 
-비동기 메서드는 모든 [ref](../../../csharp/language-reference/keywords/ref.md) 또는 [out](../../../csharp/language-reference/keywords/out.md) 매개 변수를 선언할 수 없고 <!-- [reference return value](../../programming-guide/classes-and-structs/ref-returns.md) -->참조 반환 값을 가질 수도 없지만, 이러한 매개 변수가 있는 메서드를 호출할 수는 있습니다.  
+<span data-ttu-id="8f444-137">비동기 메서드는 모든 [ref](../../../csharp/language-reference/keywords/ref.md) 또는 [out](../../../csharp/language-reference/keywords/out.md) 매개 변수를 선언할 수 없고 <!-- [reference return value](../../programming-guide/classes-and-structs/ref-returns.md) -->참조 반환 값을 가질 수도 없지만, 이러한 매개 변수가 있는 메서드를 호출할 수는 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8f444-137">The async method can't declare any [ref](../../../csharp/language-reference/keywords/ref.md) or [out](../../../csharp/language-reference/keywords/out.md) parameters, nor can it have a <!-- [reference return value](../../programming-guide/classes-and-structs/ref-returns.md) -->reference return value, but it can call methods that have such parameters.</span></span>  
   
-메서드의 [return](../../../csharp/language-reference/keywords/return.md) 문에서 `TResult` 형식의 피연산자를 지정할 경우 비동기 메서드의 반환 형식으로 `Task<TResult>`를 지정합니다. 메서드가 완료되었을 때 의미 있는 값이 반환되지 않을 경우 `Task`를 사용합니다. 즉, 이 메서드를 호출하면 `Task`가 반환되지만 `Task`가 완료되면 `await`를 기다리는 모든 `Task` 식이 `void`가 됩니다.  
+<span data-ttu-id="8f444-138">메서드의 [return](../../../csharp/language-reference/keywords/return.md) 문에서 `TResult` 형식의 피연산자를 지정할 경우 비동기 메서드의 반환 형식으로 `Task<TResult>`를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="8f444-138">You specify `Task<TResult>` as the return type of an async method if the [return](../../../csharp/language-reference/keywords/return.md) statement of the method specifies an operand of type `TResult`.</span></span> <span data-ttu-id="8f444-139">메서드가 완료되었을 때 의미 있는 값이 반환되지 않을 경우 `Task`를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="8f444-139">You use `Task` if no meaningful value is returned when the method is completed.</span></span> <span data-ttu-id="8f444-140">즉, 이 메서드를 호출하면 `Task`가 반환되지만 `Task`가 완료되면 `await`를 기다리는 모든 `Task` 식이 `void`가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="8f444-140">That is, a call to the method returns a `Task`, but when the `Task` is completed, any `await` expression that's awaiting the `Task` evaluates to `void`.</span></span>  
   
-`void` 반환 형식은 주로 해당 반환 형식이 필요한 이벤트 처리기를 정의할 때 사용합니다. `void` 반환 비동기 메서드의 호출자는 기다릴 수 없으므로 메서드가 throw하는 예외를 catch할 수 없습니다.  
+<span data-ttu-id="8f444-141">`void` 반환 형식은 주로 해당 반환 형식이 필요한 이벤트 처리기를 정의할 때 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="8f444-141">You use the `void` return type primarily to define event handlers, which require that return type.</span></span> <span data-ttu-id="8f444-142">`void` 반환 비동기 메서드의 호출자는 기다릴 수 없으므로 메서드가 throw하는 예외를 catch할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="8f444-142">The caller of a `void`-returning async method can't await it and can't catch exceptions that the method throws.</span></span>  
 
-C# 7부터 `GetAwaiter` 메서드가 있는 다른 형식(일반적으로 값 형식)을 반환하여 성능이 중요한 코드 섹션에서 메모리 할당을 최소화합니다. 
+<span data-ttu-id="8f444-143">C# 7부터 `GetAwaiter` 메서드가 있는 다른 형식(일반적으로 값 형식)을 반환하여 성능이 중요한 코드 섹션에서 메모리 할당을 최소화합니다.</span><span class="sxs-lookup"><span data-stu-id="8f444-143">Starting with C# 7, you return another type, typically a value type, that has a `GetAwaiter` method to miminize memory allocations in performance-critical sections of code.</span></span> 
 
-자세한 내용과 예제는 [비동기 반환 형식](../../../csharp/programming-guide/concepts/async/async-return-types.md)을 참조하세요.  
+<span data-ttu-id="8f444-144">자세한 내용과 예제는 [비동기 반환 형식](../../../csharp/programming-guide/concepts/async/async-return-types.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="8f444-144">For more information and examples, see [Async Return Types](../../../csharp/programming-guide/concepts/async/async-return-types.md).</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>   
- [await](../../../csharp/language-reference/keywords/await.md)   
- [연습: Async 및 Await를 사용하여 웹에 액세스](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
- [Async 및 Await를 사용한 비동기 프로그래밍](../../../csharp/programming-guide/concepts/async/index.md)
-
+## <a name="see-also"></a><span data-ttu-id="8f444-145">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8f444-145">See Also</span></span>  
+ <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>  
+ [<span data-ttu-id="8f444-146">await</span><span class="sxs-lookup"><span data-stu-id="8f444-146">await</span></span>](../../../csharp/language-reference/keywords/await.md)  
+ [<span data-ttu-id="8f444-147">연습: Async 및 Await를 사용하여 웹에 액세스</span><span class="sxs-lookup"><span data-stu-id="8f444-147">Walkthrough: Accessing the Web by Using Async and Await</span></span>](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+ [<span data-ttu-id="8f444-148">Async 및 Await를 사용한 비동기 프로그래밍</span><span class="sxs-lookup"><span data-stu-id="8f444-148">Asynchronous Programming with async and await</span></span>](../../../csharp/programming-guide/concepts/async/index.md)

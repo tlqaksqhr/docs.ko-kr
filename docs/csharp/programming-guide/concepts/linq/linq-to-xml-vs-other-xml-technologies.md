@@ -1,74 +1,64 @@
 ---
 title: "LINQ to XML과 비교 기타 XML 기술 비교3"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 01b8e746-12d3-471d-b811-7539e4547784
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 4a159c906799a61372c1a40e7464d885339b9256
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fac7fc1d902352b02215e9156954a23b553e5049
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML과 비교 기타 XML 기술 비교
-이 항목에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], <xref:System.Xml.XmlReader>, XSLT, MSXML 및 XmlLite와 같은 XML 기술을 비교합니다. 이 정보는 사용할 기술을 결정할 때 유용할 수 있습니다.  
+# <a name="linq-to-xml-vs-other-xml-technologies"></a><span data-ttu-id="6c9b5-102">LINQ to XML과 비교 기타 XML 기술 비교</span><span class="sxs-lookup"><span data-stu-id="6c9b5-102">LINQ to XML vs. Other XML Technologies</span></span>
+<span data-ttu-id="6c9b5-103">이 항목에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], <xref:System.Xml.XmlReader>, XSLT, MSXML 및 XmlLite와 같은 XML 기술을 비교합니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-103">This topic compares [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to the following XML technologies: <xref:System.Xml.XmlReader>, XSLT, MSXML, and XmlLite.</span></span> <span data-ttu-id="6c9b5-104">이 정보는 사용할 기술을 결정할 때 유용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-104">This information can help you decide which technology to use.</span></span>  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]과 DOM(문서 개체 모델)의 비교는 [LINQ to XML과 DOM 비교(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)를 참조하세요.  
+ <span data-ttu-id="6c9b5-105">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]과 DOM(문서 개체 모델)의 비교는 [LINQ to XML과 DOM 비교(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-105">For a comparison of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to the Document Object Model (DOM), see [LINQ to XML vs. DOM (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md).</span></span>  
   
-## <a name="linq-to-xml-vs-xmlreader"></a>LINQ to XML과 비교 XmlReader  
- <xref:System.Xml.XmlReader>는 캐시하지 않으며 정방향으로만 작동하는 빠른 파서입니다.  
+## <a name="linq-to-xml-vs-xmlreader"></a><span data-ttu-id="6c9b5-106">LINQ to XML과 비교 XmlReader</span><span class="sxs-lookup"><span data-stu-id="6c9b5-106">LINQ to XML vs. XmlReader</span></span>  
+ <span data-ttu-id="6c9b5-107"><xref:System.Xml.XmlReader>는 캐시하지 않으며 정방향으로만 작동하는 빠른 파서입니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-107"><xref:System.Xml.XmlReader> is a fast, forward-only, non-caching parser.</span></span>  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]은 <xref:System.Xml.XmlReader>를 기반으로 구현되었으며 두 기술은 밀접하게 통합되어 있습니다. 그러나 <xref:System.Xml.XmlReader>를 단독으로 사용할 수도 있습니다.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="6c9b5-108">은 <xref:System.Xml.XmlReader>를 기반으로 구현되었으며 두 기술은 밀접하게 통합되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-108"> is implemented on top of <xref:System.Xml.XmlReader>, and they are tightly integrated.</span></span> <span data-ttu-id="6c9b5-109">그러나 <xref:System.Xml.XmlReader>를 단독으로 사용할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-109">However, you can also use <xref:System.Xml.XmlReader> by itself.</span></span>  
   
- 예를 들어 초당 수백 개의 XML 문서를 구문 분석할 웹 서비스를 빌드하는데 문서의 구조가 동일하여 XML의 구문을 분석하는 코드의 구현을 하나만 작성하면 되는 경우를 가정해 보겠습니다. 이 경우에는 <xref:System.Xml.XmlReader>를 단독으로 사용할 수 있습니다.  
+ <span data-ttu-id="6c9b5-110">예를 들어 초당 수백 개의 XML 문서를 구문 분석할 웹 서비스를 빌드하는데 문서의 구조가 동일하여 XML의 구문을 분석하는 코드의 구현을 하나만 작성하면 되는 경우를 가정해 보겠습니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-110">For example, suppose you are building a Web service that will parse hundreds of XML documents per second, and the documents have the same structure, meaning that you only have to write one implementation of the code to parse the XML.</span></span> <span data-ttu-id="6c9b5-111">이 경우에는 <xref:System.Xml.XmlReader>를 단독으로 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-111">In this case, you would probably want to use <xref:System.Xml.XmlReader> by itself.</span></span>  
   
- 반대로 크기가 작은 다양한 XML 문서의 구문을 분석하는 시스템을 빌드하는데 각 문서의 구조가 서로 다르면 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서 제공하는 성능 향상 기능을 사용할 수 있습니다.  
+ <span data-ttu-id="6c9b5-112">반대로 크기가 작은 다양한 XML 문서의 구문을 분석하는 시스템을 빌드하는데 각 문서의 구조가 서로 다르면 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서 제공하는 성능 향상 기능을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-112">In contrast, if you are building a system that parses many smaller XML documents, and each one is different, you would want to take advantage of the productivity improvements that [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] provides.</span></span>  
   
-## <a name="linq-to-xml-vs-xslt"></a>LINQ to XML과 비교 XSLT  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]과 XSLT는 모두 광범위한 XML 문서 변환 기능을 제공합니다. XSLT는 규칙 기반의 선언적 방법입니다. 고급 XSLT 프로그래머는 상태 비저장 방법을 강조하는 함수형 프로그래밍 스타일로 XSLT를 작성합니다. 이 경우 부작용 없이 구현되는 순수 함수를 사용하여 변환을 작성할 수 있습니다. 이 규칙 기반 방법 또는 함수 방법은 대부분의 개발자에게 익숙하지 않으며 배우는 데 많은 시간과 노력이 필요할 수 있습니다.  
+## <a name="linq-to-xml-vs-xslt"></a><span data-ttu-id="6c9b5-113">LINQ to XML과 비교 XSLT</span><span class="sxs-lookup"><span data-stu-id="6c9b5-113">LINQ to XML vs. XSLT</span></span>  
+ <span data-ttu-id="6c9b5-114">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]과 XSLT는 모두 광범위한 XML 문서 변환 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-114">Both [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] and XSLT provide extensive XML document transformation capabilities.</span></span> <span data-ttu-id="6c9b5-115">XSLT는 규칙 기반의 선언적 방법입니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-115">XSLT is a rule-based, declarative approach.</span></span> <span data-ttu-id="6c9b5-116">고급 XSLT 프로그래머는 상태 비저장 방법을 강조하는 함수형 프로그래밍 스타일로 XSLT를 작성합니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-116">Advanced XSLT programmers write XSLT in a functional programming style that emphasizes a stateless approach.</span></span> <span data-ttu-id="6c9b5-117">이 경우 부작용 없이 구현되는 순수 함수를 사용하여 변환을 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-117">Transformations can be written using pure functions that are implemented without side effects.</span></span> <span data-ttu-id="6c9b5-118">이 규칙 기반 방법 또는 함수 방법은 대부분의 개발자에게 익숙하지 않으며 배우는 데 많은 시간과 노력이 필요할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-118">This rule-based or functional approach is unfamiliar to many developers, and can be difficult and time-consuming to learn.</span></span>  
   
- XSLT는 고성능 응용 프로그램을 생성하는 생산성이 매우 높은 시스템일 수 있습니다. 예를 들어 규모가 큰 일부 웹 회사에서는 다양한 데이터 저장소에서 가져온 XML에서 HTML을 생성하는 방법으로 XSLT를 사용합니다. 관리되는 XSLT 엔진은 XSLT를 CLR 코드로 컴파일하며 일부 시나리오에서 네이티브 XSLT 엔진보다 성능이 훨씬 좋습니다.  
+ <span data-ttu-id="6c9b5-119">XSLT는 고성능 응용 프로그램을 생성하는 생산성이 매우 높은 시스템일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-119">XSLT can be a very productive system that yields high-performance applications.</span></span> <span data-ttu-id="6c9b5-120">예를 들어 규모가 큰 일부 웹 회사에서는 다양한 데이터 저장소에서 가져온 XML에서 HTML을 생성하는 방법으로 XSLT를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-120">For example, some big Web companies use XSLT as a way to generate HTML from XML that has been pulled from a variety of data stores.</span></span> <span data-ttu-id="6c9b5-121">관리되는 XSLT 엔진은 XSLT를 CLR 코드로 컴파일하며 일부 시나리오에서 네이티브 XSLT 엔진보다 성능이 훨씬 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-121">The managed XSLT engine compiles XSLT to CLR code, and performs even better in some scenarios than the native XSLT engine.</span></span>  
   
- 그러나 XSLT에서는 개발자가 C# 및 Visual Basic 지식을 활용할 수 없으며 복잡하고 다른 프로그래밍 언어로 코드를 작성해야 합니다. C#(또는 Visual Basic) 및 XSLT와 같은 통합되지 않은 두 가지 개발 시스템을 사용하면 소프트웨어 시스템을 개발하고 유지 관리하기가 더 어렵습니다.  
+ <span data-ttu-id="6c9b5-122">그러나 XSLT에서는 개발자가 C# 및 Visual Basic 지식을 활용할 수 없으며</span><span class="sxs-lookup"><span data-stu-id="6c9b5-122">However, XSLT does not take advantage of the C# and Visual Basic knowledge that many developers have.</span></span> <span data-ttu-id="6c9b5-123">복잡하고 다른 프로그래밍 언어로 코드를 작성해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-123">It requires developers to write code in a different and complex programming language.</span></span> <span data-ttu-id="6c9b5-124">C#(또는 Visual Basic) 및 XSLT와 같은 통합되지 않은 두 가지 개발 시스템을 사용하면 소프트웨어 시스템을 개발하고 유지 관리하기가 더 어렵습니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-124">Using two non-integrated development systems such as C# (or Visual Basic) and XSLT results in software systems that are more difficult to develop and maintain.</span></span>  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리 식을 완전히 익히고 나면 강력한 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 변환 기술을 쉽게 사용할 수 있게 됩니다. 기본적으로 다양한 소스에서 데이터를 가져와서 <xref:System.Xml.Linq.XElement> 개체를 동적으로 생성하고 전체 데이터를 새 XML 트리로 어셈블하는 함수 생성을 사용하여 XML 문서를 만듭니다. 변환을 통해 완전히 새로운 문서가 생성될 수 있습니다. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 비교적 쉽고 직관적으로 변환을 생성할 수 있으며 생성되는 코드도 쉽게 읽을 수 있습니다. 따라서 개발 및 유지 관리 비용이 줄어듭니다.  
+ <span data-ttu-id="6c9b5-125">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리 식을 완전히 익히고 나면 강력한 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 변환 기술을 쉽게 사용할 수 있게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-125">After you have mastered [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query expressions, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] transformations are a powerful technology that is easy to use.</span></span> <span data-ttu-id="6c9b5-126">기본적으로 다양한 소스에서 데이터를 가져와서 <xref:System.Xml.Linq.XElement> 개체를 동적으로 생성하고 전체 데이터를 새 XML 트리로 어셈블하는 함수 생성을 사용하여 XML 문서를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-126">Basically, you form your XML document by using functional construction, pulling in data from various sources, constructing <xref:System.Xml.Linq.XElement> objects dynamically, and assembling the whole into a new XML tree.</span></span> <span data-ttu-id="6c9b5-127">변환을 통해 완전히 새로운 문서가 생성될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-127">The transformation can generate a completely new document.</span></span> <span data-ttu-id="6c9b5-128">[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 비교적 쉽고 직관적으로 변환을 생성할 수 있으며 생성되는 코드도 쉽게 읽을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-128">Constructing transformations in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] is relatively easy and intuitive, and the resulting code is readable.</span></span> <span data-ttu-id="6c9b5-129">따라서 개발 및 유지 관리 비용이 줄어듭니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-129">This reduces development and maintenance costs.</span></span>  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]은 XSLT를 대체하기 위한 것이 아닙니다. XSLT는 여전히 복잡하고 문서 중심적인 XML(특히 문서 구조가 제대로 정의되지 않은 경우) 변환에 사용할 수 있습니다.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="6c9b5-130">은 XSLT를 대체하기 위한 것이 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-130"> is not intended to replace XSLT.</span></span> <span data-ttu-id="6c9b5-131">XSLT는 여전히 복잡하고 문서 중심적인 XML(특히 문서 구조가 제대로 정의되지 않은 경우) 변환에 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-131">XSLT is still the tool of choice for complicated and document-centric XML transformations, especially if the structure of the document is not well defined.</span></span>  
   
- XSLT는 W3C(World Wide Web 컨소시엄) 표준이라는 장점이 있습니다. 표준 기술만 사용해야 하는 요구 사항이 있는 경우 XSLT가 더 적합할 수 있습니다.  
+ <span data-ttu-id="6c9b5-132">XSLT는 W3C(World Wide Web 컨소시엄) 표준이라는 장점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-132">XSLT has the advantage of being a World Wide Web Consortium (W3C) standard.</span></span> <span data-ttu-id="6c9b5-133">표준 기술만 사용해야 하는 요구 사항이 있는 경우 XSLT가 더 적합할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-133">If you have a requirement that you use only technologies that are standards, XSLT might be more appropriate.</span></span>  
   
- XSLT는 XML이므로 프로그래밍 방식으로 조작할 수 있습니다.  
+ <span data-ttu-id="6c9b5-134">XSLT는 XML이므로 프로그래밍 방식으로 조작할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-134">XSLT is XML, and therefore can be programmatically manipulated.</span></span>  
   
-## <a name="linq-to-xml-vs-msxml"></a>LINQ to XML과 비교 MSXML  
- MSXML은 Microsoft Windows에 포함된 XML을 처리할 수 있는 COM 기반 기술입니다. MSXML은 XPath 및 XSLT를 지원하는 DOM의 기본적인 구현을 제공하며 캐시하지 않는 이벤트 기반의 SAX2 파서도 포함하고 있습니다.  
+## <a name="linq-to-xml-vs-msxml"></a><span data-ttu-id="6c9b5-135">LINQ to XML과 비교 MSXML</span><span class="sxs-lookup"><span data-stu-id="6c9b5-135">LINQ to XML vs. MSXML</span></span>  
+ <span data-ttu-id="6c9b5-136">MSXML은 Microsoft Windows에 포함된 XML을 처리할 수 있는 COM 기반 기술입니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-136">MSXML is the COM-based technology for processing XML that is included with Microsoft Windows.</span></span> <span data-ttu-id="6c9b5-137">MSXML은 XPath 및 XSLT를 지원하는 DOM의 기본적인 구현을 제공하며</span><span class="sxs-lookup"><span data-stu-id="6c9b5-137">MSXML provides a native implementation of the DOM with support for XPath and XSLT.</span></span> <span data-ttu-id="6c9b5-138">캐시하지 않는 이벤트 기반의 SAX2 파서도 포함하고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-138">It also contains the SAX2 non-caching, event-based parser.</span></span>  
   
- MSXML은 성능이 좋으며 대부분의 시나리오에서 기본적으로 안전합니다. AJAX 스타일의 응용 프로그램에서 클라이언트측 XML 처리를 수행하기 위해 Internet Explorer에서 MSXML에 액세스할 수 있습니다. C++, JavaScript 및 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0을 비롯한 COM을 지원하는 모든 프로그래밍 언어에서 MSXML을 사용할 수 있습니다.  
+ <span data-ttu-id="6c9b5-139">MSXML은 성능이 좋으며 대부분의 시나리오에서 기본적으로 안전합니다. AJAX 스타일의 응용 프로그램에서 클라이언트측 XML 처리를 수행하기 위해 Internet Explorer에서 MSXML에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-139">MSXML performs well, is secure by default in most scenarios, and can be accessed in Internet Explorer for performing client-side XML processing in AJAX-style applications.</span></span> <span data-ttu-id="6c9b5-140">C++, JavaScript 및 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0을 비롯한 COM을 지원하는 모든 프로그래밍 언어에서 MSXML을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-140">MSXML can be used from any programming language that supports COM, including C++, JavaScript, and [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0.</span></span>  
   
- CLR(공용 언어 런타임) 기반의 관리 코드에서는 MSXML을 사용하지 않는 것이 좋습니다.  
+ <span data-ttu-id="6c9b5-141">CLR(공용 언어 런타임) 기반의 관리 코드에서는 MSXML을 사용하지 않는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-141">MSXML is not recommended for use in managed code based on the common language runtime (CLR).</span></span>  
   
-## <a name="linq-to-xml-vs-xmllite"></a>LINQ to XML과 비교 XmlLite  
- XmlLite는 캐시하지 않으며 정방향으로만 작동하는 가져오기 파서입니다. 개발자는 주로 C++와 함께 XmlLite를 사용합니다. 관리 코드와 함께 XmlLite를 사용하는 것은 권장되지 않습니다.  
+## <a name="linq-to-xml-vs-xmllite"></a><span data-ttu-id="6c9b5-142">LINQ to XML과 비교 XmlLite</span><span class="sxs-lookup"><span data-stu-id="6c9b5-142">LINQ to XML vs. XmlLite</span></span>  
+ <span data-ttu-id="6c9b5-143">XmlLite는 캐시하지 않으며 정방향으로만 작동하는 가져오기 파서입니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-143">XmlLite is a non-caching, forward only, pull parser.</span></span> <span data-ttu-id="6c9b5-144">개발자는 주로 C++와 함께 XmlLite를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-144">Developers primarily use XmlLite with C++.</span></span> <span data-ttu-id="6c9b5-145">관리 코드와 함께 XmlLite를 사용하는 것은 권장되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-145">It is not recommended for developers to use XmlLite with managed code.</span></span>  
   
- XmlLite의 주요 이점은 대부분의 시나리오에서 안전하며 간단하고 빠른 XML 파서라는 점입니다. XmlLite에서 위협에 노출되는 영역은 매우 작습니다. 신뢰할 수 없는 문서의 구문을 분석해야 하고 서비스 거부나 데이터 노출과 같은 공격으로부터 보호하려면 XmlLite를 선택하는 것이 좋습니다.  
+ <span data-ttu-id="6c9b5-146">XmlLite의 주요 이점은 대부분의 시나리오에서 안전하며 간단하고 빠른 XML 파서라는 점입니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-146">The main advantage of XmlLite is that it is a lightweight, fast XML parser that is secure in most scenarios.</span></span> <span data-ttu-id="6c9b5-147">XmlLite에서 위협에 노출되는 영역은 매우 작습니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-147">Its threat surface area is very small.</span></span> <span data-ttu-id="6c9b5-148">신뢰할 수 없는 문서의 구문을 분석해야 하고 서비스 거부나 데이터 노출과 같은 공격으로부터 보호하려면 XmlLite를 선택하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-148">If you have to parse untrusted documents and you want to protect against attacks such as denial of service or exposure of data, XmlLite might be a good option.</span></span>  
   
- XmlLite는 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]와 통합되지 않았으며 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]에 핵심적인 프로그래머 생산성 향상 기능을 제공하지 않습니다.  
+ <span data-ttu-id="6c9b5-149">XmlLite는 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]와 통합되지 않았으며</span><span class="sxs-lookup"><span data-stu-id="6c9b5-149">XmlLite is not integrated with [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].</span></span> <span data-ttu-id="6c9b5-150">[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]에 핵심적인 프로그래머 생산성 향상 기능을 제공하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="6c9b5-150">It does not yield the programmer productivity improvements that are the motivating force behind [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [시작(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
-
+## <a name="see-also"></a><span data-ttu-id="6c9b5-151">참고 항목</span><span class="sxs-lookup"><span data-stu-id="6c9b5-151">See Also</span></span>  
+ [<span data-ttu-id="6c9b5-152">시작(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="6c9b5-152">Getting Started (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

@@ -5,113 +5,110 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 37a27a86-ac1c-47be-b477-cb4b819459d3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
+ms.openlocfilehash: 989883034b30c3ec67f5441c5512418643546519
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7ac9884766812cd635b5a70c028cf15c19838511
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="creating-the-gamepiece-class"></a>GamePiece 클래스 만들기
-**GamePiece** 클래스는 Microsoft XNA 게임 피스 이미지를 로드하고 게임 피스와 관련된 마우스 상태를 추적하고, 마우스를 캡처하고, 조작 및 관성 처리를 제공하고, 게임 피스가 뷰포트의 제한에 도달할 경우 바운스되는 기능을 제공하는 데 필요한 모든 기능을 캡슐화합니다.  
+# <a name="creating-the-gamepiece-class"></a><span data-ttu-id="07952-102">GamePiece 클래스 만들기</span><span class="sxs-lookup"><span data-stu-id="07952-102">Creating the GamePiece Class</span></span>
+<span data-ttu-id="07952-103">**GamePiece** 클래스는 Microsoft XNA 게임 피스 이미지를 로드하고 게임 피스와 관련된 마우스 상태를 추적하고, 마우스를 캡처하고, 조작 및 관성 처리를 제공하고, 게임 피스가 뷰포트의 제한에 도달할 경우 바운스되는 기능을 제공하는 데 필요한 모든 기능을 캡슐화합니다.</span><span class="sxs-lookup"><span data-stu-id="07952-103">The **GamePiece** class encapsulates all the functionality required to load a Microsoft XNA game piece image, track the state of the mouse in relation to the game piece, capture the mouse, provide manipulation and inertia processing, and provide bouncing capability when the game piece reaches the limits of the view port.</span></span>  
   
-## <a name="private-members"></a>private 멤버  
- **GamePiece** 클래스의 맨 위에서 여러 개의 private 멤버가 선언됩니다.  
+## <a name="private-members"></a><span data-ttu-id="07952-104">private 멤버</span><span class="sxs-lookup"><span data-stu-id="07952-104">Private Members</span></span>  
+ <span data-ttu-id="07952-105">**GamePiece** 클래스의 맨 위에서 여러 개의 private 멤버가 선언됩니다.</span><span class="sxs-lookup"><span data-stu-id="07952-105">At the top of the **GamePiece** class, several private members are declared.</span></span>  
   
  [!code-csharp[ManipulationXNA#_GamePiece_PrivateMembers](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_privatemembers)]  
   
-## <a name="public-properties"></a>Public 속성  
- 이러한 private 멤버 중 3개는 public 속성을 통해 노출됩니다. **Scale** 및 **PieceColor** 속성을 통해 응용 프로그램은 피스의 배율과 색을 각각 지정할 수 있습니다. **Bounds** 속성은 한 피스가 다른 피스를 오버레이해야 하는 경우와 같이 한 피스가 렌더링되기 위해 다른 피스의 범위를 사용할 수 있도록 노출됩니다. 다음 코드에서는 public 속성의 선언을 보여 줍니다.  
+## <a name="public-properties"></a><span data-ttu-id="07952-106">Public 속성</span><span class="sxs-lookup"><span data-stu-id="07952-106">Public Properties</span></span>  
+ <span data-ttu-id="07952-107">이러한 private 멤버 중 3개는 public 속성을 통해 노출됩니다.</span><span class="sxs-lookup"><span data-stu-id="07952-107">Three of these private members are exposed through public properties.</span></span> <span data-ttu-id="07952-108">**Scale** 및 **PieceColor** 속성을 통해 응용 프로그램은 피스의 배율과 색을 각각 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07952-108">The **Scale** and **PieceColor** properties enable the application to specify the scale and the color of the piece, respectively.</span></span> <span data-ttu-id="07952-109">**Bounds** 속성은 한 피스가 다른 피스를 오버레이해야 하는 경우와 같이 한 피스가 렌더링되기 위해 다른 피스의 범위를 사용할 수 있도록 노출됩니다.</span><span class="sxs-lookup"><span data-stu-id="07952-109">The **Bounds** property is exposed to enable one piece to use the bounds of another to render itself, such as when one piece should overlay another.</span></span> <span data-ttu-id="07952-110">다음 코드에서는 public 속성의 선언을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="07952-110">The following code shows the declaration of the public properties.</span></span>  
   
  [!code-csharp[ManipulationXNA#_GamePiece_PublicProperties](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_publicproperties)]  
   
-## <a name="class-constructor"></a>클래스 생성자  
- **GamePiece** 클래스에 대한 생성자는 다음 매개 변수를 수락합니다.  
+## <a name="class-constructor"></a><span data-ttu-id="07952-111">클래스 생성자</span><span class="sxs-lookup"><span data-stu-id="07952-111">Class Constructor</span></span>  
+ <span data-ttu-id="07952-112">**GamePiece** 클래스에 대한 생성자는 다음 매개 변수를 수락합니다.</span><span class="sxs-lookup"><span data-stu-id="07952-112">The constructor for the **GamePiece** class accepts the following parameters:</span></span>  
   
--   [SpriteBatch](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.aspx) 형식. 여기에 전달된 참조는 private 멤버 `spriteBatch`에 할당되고, 게임 피스가 렌더링될 때 [SpriteBatch.Draw](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.draw.aspx) 메서드에 액세스하는 데 사용됩니다. 또한 [GraphicsDevice](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.graphicsdevice.aspx) 속성은 게임 피스와 연결된 [Texture](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.texture.aspx) 개체를 만들고, 피스가 바운드될 수 있도록 게임 피스가 창 경계에 도달한 경우를 감지하기 위해 뷰포트의 크기를 가져오는 데 사용됩니다.  
+-   <span data-ttu-id="07952-113">[SpriteBatch](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.aspx) 형식.</span><span class="sxs-lookup"><span data-stu-id="07952-113">A [SpriteBatch](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.aspx) type.</span></span> <span data-ttu-id="07952-114">여기에 전달된 참조는 private 멤버 `spriteBatch`에 할당되고, 게임 피스가 렌더링될 때 [SpriteBatch.Draw](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.draw.aspx) 메서드에 액세스하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="07952-114">The reference passed here is assigned to the private member `spriteBatch`, and is used to access the [SpriteBatch.Draw](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.draw.aspx) method when the game piece renders itself.</span></span> <span data-ttu-id="07952-115">또한 [GraphicsDevice](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.graphicsdevice.aspx) 속성은 게임 피스와 연결된 [Texture](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.texture.aspx) 개체를 만들고, 피스가 바운드될 수 있도록 게임 피스가 창 경계에 도달한 경우를 감지하기 위해 뷰포트의 크기를 가져오는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="07952-115">In addition, the [GraphicsDevice](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.graphicsdevice.aspx) property is used to create the [Texture](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.texture.aspx) object associated with the game piece, and to obtain the size of the view port in order to detect when the game piece encounters a window boundary so that the piece can bounce.</span></span>  
   
--   게임 피스에 사용할 이미지의 파일 이름을 지정하는 문자열입니다.  
+-   <span data-ttu-id="07952-116">게임 피스에 사용할 이미지의 파일 이름을 지정하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="07952-116">A string that specifies the file name of the image to use for the game piece.</span></span>  
   
- 또한 생성자는 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> 개체와 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D> 개체를 만들고 해당 이벤트에 대한 이벤트 처리기를 설정합니다.  
+ <span data-ttu-id="07952-117">또한 생성자는 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> 개체와 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D> 개체를 만들고 해당 이벤트에 대한 이벤트 처리기를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="07952-117">The constructor also creates a <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> object and an <xref:System.Windows.Input.Manipulations.InertiaProcessor2D> object, and establishes event handlers for their events.</span></span>  
   
- 다음 코드에서는 **GamePiece** 클래스에 대한 생성자를 보여 줍니다.  
+ <span data-ttu-id="07952-118">다음 코드에서는 **GamePiece** 클래스에 대한 생성자를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="07952-118">The following code shows the constructor for the **GamePiece** class.</span></span>  
   
  [!code-csharp[ManipulationXNA#_GamePiece_Constructor](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_constructor)]  
   
-## <a name="capturing-mouse-input"></a>마우스 입력 캡처  
- **UpdateFromMouse** 메서드는 마우스가 게임 피스의 경계 내에 있는 동안 마우스 단추를 누른 경우와 마우스 단추를 놓은 경우를 감지해야 합니다.  
+## <a name="capturing-mouse-input"></a><span data-ttu-id="07952-119">마우스 입력 캡처</span><span class="sxs-lookup"><span data-stu-id="07952-119">Capturing Mouse Input</span></span>  
+ <span data-ttu-id="07952-120">**UpdateFromMouse** 메서드는 마우스가 게임 피스의 경계 내에 있는 동안 마우스 단추를 누른 경우와 마우스 단추를 놓은 경우를 감지해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="07952-120">The **UpdateFromMouse** method is responsible for detecting when a mouse button is pressed while the mouse is within the boundaries of the game piece, and for detecting when the mouse button has been released.</span></span>  
   
- 마우스가 피스 경계 내에 있는 상태에서 마우스 왼쪽 단추를 누르면 이 메서드는 이 게임 피스가 마우스를 캡처했음을 나타내는 플래그를 설정하고, 조작 처리를 시작합니다.  
+ <span data-ttu-id="07952-121">마우스가 피스 경계 내에 있는 상태에서 마우스 왼쪽 단추를 누르면 이 메서드는 이 게임 피스가 마우스를 캡처했음을 나타내는 플래그를 설정하고, 조작 처리를 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="07952-121">When the left mouse button is pressed (while the mouse is inside the piece boundaries), this method sets a flag to indicate that this game piece has captured the mouse, and begins manipulation processing.</span></span>  
   
- 조작 처리는 <xref:System.Windows.Input.Manipulations.Manipulator2D> 개체의 배열을 만들고 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> 개체에 전달하여 시작됩니다. 그러면 조작 프로세서가 조작자(이 경우 단일 조작자)를 평가하고 조작 이벤트를 발생시킵니다.  
+ <span data-ttu-id="07952-122">조작 처리는 <xref:System.Windows.Input.Manipulations.Manipulator2D> 개체의 배열을 만들고 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> 개체에 전달하여 시작됩니다.</span><span class="sxs-lookup"><span data-stu-id="07952-122">Manipulation processing is started by creating an array of <xref:System.Windows.Input.Manipulations.Manipulator2D> objects and passing them to the <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> object.</span></span> <span data-ttu-id="07952-123">그러면 조작 프로세서가 조작자(이 경우 단일 조작자)를 평가하고 조작 이벤트를 발생시킵니다.</span><span class="sxs-lookup"><span data-stu-id="07952-123">This causes the manipulation processor to evaluate the manipulators (in this case a single manipulator), and raise manipulation events.</span></span>  
   
- 또한 끌기가 발생하는 지점이 저장됩니다. 이 정보는 나중에 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> 이벤트 중 게임 피스가 끌기 지점 뒤의 줄로 회전할 수 있도록 델타 변환 값을 조정하는 데 사용됩니다.  
+ <span data-ttu-id="07952-124">또한 끌기가 발생하는 지점이 저장됩니다.</span><span class="sxs-lookup"><span data-stu-id="07952-124">In addition, the point at which the drag is occurring is saved.</span></span> <span data-ttu-id="07952-125">이 정보는 나중에 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> 이벤트 중 게임 피스가 끌기 지점 뒤의 줄로 회전할 수 있도록 델타 변환 값을 조정하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="07952-125">This is used later during the <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> event to adjust the delta translation values so that the game piece swings into line behind the drag point.</span></span>  
   
- 끝으로, 이 메서드는 마우스 캡처의 상태를 반환합니다. 이 상태를 통해 [GamePieceCollection](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md) 개체는 여러 개의 게임 피스가 있을 때 캡처를 관리할 수 있습니다.  
+ <span data-ttu-id="07952-126">끝으로, 이 메서드는 마우스 캡처의 상태를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="07952-126">Finally, this method returns the state of the mouse capture.</span></span> <span data-ttu-id="07952-127">이 상태를 통해 [GamePieceCollection](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md) 개체는 여러 개의 게임 피스가 있을 때 캡처를 관리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="07952-127">This enables the [GamePieceCollection](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md) object to manage capturing when there are multiple game pieces.</span></span>  
   
- 다음 코드에서는 **UpdateFromMouse** 메서드를 보여 줍니다.  
+ <span data-ttu-id="07952-128">다음 코드에서는 **UpdateFromMouse** 메서드를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="07952-128">The following code shows the **UpdateFromMouse** method.</span></span>  
   
  [!code-csharp[ManipulationXNA#_GamePiece_UpdateFromMouse](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_updatefrommouse)]  
   
-## <a name="processing-manipulations"></a>조작 처리  
- 조작이 시작되면 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started> 이벤트가 발생합니다. 이 이벤트 처리기는 관성 처리가 발생할 경우 이를 중지하고 *processInertia* 플래그를 `false`로 설정합니다.  
+## <a name="processing-manipulations"></a><span data-ttu-id="07952-129">조작 처리</span><span class="sxs-lookup"><span data-stu-id="07952-129">Processing Manipulations</span></span>  
+ <span data-ttu-id="07952-130">조작이 시작되면 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started> 이벤트가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="07952-130">When manipulation begins, the <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started> event is raised.</span></span> <span data-ttu-id="07952-131">이 이벤트 처리기는 관성 처리가 발생할 경우 이를 중지하고 *processInertia* 플래그를 `false`로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="07952-131">The handler for this event stops inertia processing if it is occurring, and sets the *processInertia* flag to `false`.</span></span>  
   
  [!code-csharp[ManipulationXNA#_GamePiece_OnManipulationStarted](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_onmanipulationstarted)]  
   
- 조작과 연결된 값이 변경되면 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> 이벤트가 발생합니다. 이 이벤트 처리기는 이벤트 인수에 전달된 델타 값을 사용하여 게임 피스의 위치 및 회전 값을 변경합니다.  
+ <span data-ttu-id="07952-132">조작과 연결된 값이 변경되면 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> 이벤트가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="07952-132">As the values associated with the manipulation change, the <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> event is raised.</span></span> <span data-ttu-id="07952-133">이 이벤트 처리기는 이벤트 인수에 전달된 델타 값을 사용하여 게임 피스의 위치 및 회전 값을 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="07952-133">The handler for this event uses the delta values passed in the event arguments to make changes to the position and rotation values of the game piece.</span></span>  
   
  [!code-csharp[ManipulationXNA#_GamePiece_OnManipulationDelta](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_onmanipulationdelta)]  
   
- 조작과 연결된 모든 조작자(이 경우 단일 조작자)가 제거되면 조작자 프로세서에서 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Completed> 이벤트를 발생시킵니다. 이 이벤트 처리기는 관성 프로세서의 초기 속도를 이벤트 인수에서 보고된 값으로 설정하여 관성 처리를 시작하고 *processInertia* 플래그를 `true`로 설정합니다.  
+ <span data-ttu-id="07952-134">조작과 연결된 모든 조작자(이 경우 단일 조작자)가 제거되면 조작자 프로세서에서 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Completed> 이벤트를 발생시킵니다.</span><span class="sxs-lookup"><span data-stu-id="07952-134">When all of the manipulators (in this case, a single manipulator) that are associated with a manipulation are removed, the manipulation processor raises the <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Completed> event.</span></span> <span data-ttu-id="07952-135">이 이벤트 처리기는 관성 프로세서의 초기 속도를 이벤트 인수에서 보고된 값으로 설정하여 관성 처리를 시작하고 *processInertia* 플래그를 `true`로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="07952-135">The handler for this event begins inertia processing by setting the initial velocities of the inertia processor to those reported by the event arguments, and sets the *processInertia* flag to `true`.</span></span>  
   
  [!code-csharp[ManipulationXNA#_GamePiece_OnManipulationCompleted](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_onmanipulationcompleted)]  
   
-## <a name="processing-inertia"></a>관성 처리  
- 관성 처리에서 각도 및 선형 속도, 위치(변환) 좌표 및 회전에 대한 새 값을 추정하면 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> 이벤트가 발생합니다. 이 이벤트 처리기는 이벤트 인수에 전달된 델타 값을 사용하여 게임 피스의 위치 및 회전을 수정합니다.  
+## <a name="processing-inertia"></a><span data-ttu-id="07952-136">관성 처리</span><span class="sxs-lookup"><span data-stu-id="07952-136">Processing Inertia</span></span>  
+ <span data-ttu-id="07952-137">관성 처리에서 각도 및 선형 속도, 위치(변환) 좌표 및 회전에 대한 새 값을 추정하면 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> 이벤트가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="07952-137">As inertia processing extrapolates new values for angular and linear velocities, position (translation) coordinates, and rotation, the <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> event is raised.</span></span> <span data-ttu-id="07952-138">이 이벤트 처리기는 이벤트 인수에 전달된 델타 값을 사용하여 게임 피스의 위치 및 회전을 수정합니다.</span><span class="sxs-lookup"><span data-stu-id="07952-138">The handler for this event uses the delta values passed in the event arguments to modify the position and rotation of the game piece.</span></span>  
   
- 새 좌표로 인해 게임 피스가 뷰포트 경계를 넘어가는 경우 관성 처리의 속도가 반대로 바뀝니다. 그러면 게임 피스가 도달한 뷰포트 경계에서 바운스됩니다.  
+ <span data-ttu-id="07952-139">새 좌표로 인해 게임 피스가 뷰포트 경계를 넘어가는 경우 관성 처리의 속도가 반대로 바뀝니다.</span><span class="sxs-lookup"><span data-stu-id="07952-139">If the new coordinates result in the game piece moving beyond the view port boundaries, the velocity of the inertia processing is reversed.</span></span> <span data-ttu-id="07952-140">그러면 게임 피스가 도달한 뷰포트 경계에서 바운스됩니다.</span><span class="sxs-lookup"><span data-stu-id="07952-140">This causes the game piece to bounce off the view port boundary that it has encountered.</span></span>  
   
- 추정을 실행하는 동안에는 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D> 개체의 속성을 변경할 수 없습니다. 따라서 X 또는 Y 속도를 반대로 하는 경우 이벤트 처리기에서 먼저 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Complete%2A> 메서드를 호출하여 관성을 중지합니다. 그런 다음 새 초기 속도 값을 현재 속도 값(스폰지 동작을 위해 조정됨)으로 할당하고 *processInertia* 플래그를 `true`로 설정합니다.  
+ <span data-ttu-id="07952-141">추정을 실행하는 동안에는 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D> 개체의 속성을 변경할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="07952-141">You cannot change the properties of an <xref:System.Windows.Input.Manipulations.InertiaProcessor2D> object while it is running extrapolation.</span></span> <span data-ttu-id="07952-142">따라서 X 또는 Y 속도를 반대로 하는 경우 이벤트 처리기에서 먼저 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Complete%2A> 메서드를 호출하여 관성을 중지합니다.</span><span class="sxs-lookup"><span data-stu-id="07952-142">Therefore, when reversing the X or Y velocity, the event handler first stops inertia by calling the <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Complete%2A> method.</span></span> <span data-ttu-id="07952-143">그런 다음 새 초기 속도 값을 현재 속도 값(스폰지 동작을 위해 조정됨)으로 할당하고 *processInertia* 플래그를 `true`로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="07952-143">It then assigns the new initial velocity values to be the current velocity values (adjusted for sponge behavior), and sets the *processInertia* flag to `true`.</span></span>  
   
- 다음 코드에서는 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> 이벤트에 대한 이벤트 처리기를 보여 줍니다.  
+ <span data-ttu-id="07952-144">다음 코드에서는 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> 이벤트에 대한 이벤트 처리기를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="07952-144">The following code shows the event handler for the <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> event.</span></span>  
   
  [!code-csharp[ManipulationXNA#_GamePiece_OnInertiaDelta](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_oninertiadelta)]  
   
- 관성 처리가 완료되면 관성 프로세서에서 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Completed> 이벤트를 발생시킵니다. 이 이벤트 처리기는 *processInertia* 플래그를 `false`로 설정합니다.  
+ <span data-ttu-id="07952-145">관성 처리가 완료되면 관성 프로세서에서 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Completed> 이벤트를 발생시킵니다.</span><span class="sxs-lookup"><span data-stu-id="07952-145">When inertia processing is complete, the inertia processor raises the <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Completed> event.</span></span> <span data-ttu-id="07952-146">이 이벤트 처리기는 *processInertia* 플래그를 `false`로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="07952-146">The handler for this event sets the *processInertia* flag to `false`.</span></span>  
   
  [!code-csharp[ManipulationXNA#_GamePiece_OnInertiaCompleted](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_oninertiacompleted)]  
   
- 지금까지 제공한 논리에서는 실제로 관성 추정이 발생하지 않습니다. 이 작업은 **ProcessInertia** 메서드에서 수행됩니다. 게임 업데이트 루프([Game.Update](http://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) 메서드)에서 반복적으로 호출되는 이 메서드는 *processInertia* 플래그가 `true`로 설정되었는지 확인하고, 설정된 경우 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Process%2A> 메서드를 호출합니다. 이 메서드를 호출하면 추정이 수행되고 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> 이벤트가 발생합니다.  
+ <span data-ttu-id="07952-147">지금까지 제공한 논리에서는 실제로 관성 추정이 발생하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="07952-147">None of the logic presented so far actually causes inertia extrapolation to occur.</span></span> <span data-ttu-id="07952-148">이 작업은 **ProcessInertia** 메서드에서 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="07952-148">This is accomplished in the **ProcessInertia** method.</span></span> <span data-ttu-id="07952-149">게임 업데이트 루프([Game.Update](http://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) 메서드)에서 반복적으로 호출되는 이 메서드는 *processInertia* 플래그가 `true`로 설정되었는지 확인하고, 설정된 경우 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Process%2A> 메서드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="07952-149">This method, which is called repeatedly from the game update loop (the [Game.Update](http://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) method) checks to see if the *processInertia* flag is set to `true`, and if so, calls the <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Process%2A> method.</span></span> <span data-ttu-id="07952-150">이 메서드를 호출하면 추정이 수행되고 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> 이벤트가 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="07952-150">Calling this method causes extrapolation to occur, and raises the <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> event.</span></span>  
   
  [!code-csharp[ManipulationXNA#_GamePiece_ProcessInertia](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_processinertia)]  
   
- Draw 메서드 오버로드 중 하나가 호출될 때까지 게임 피스는 실제로 렌더링되지 않습니다. 이 메서드의 첫 번째 오버로드는 게임 그리기 루프([Game.Draw](http://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) 메서드)에서 반복적으로 호출됩니다. 이 오버로드는 현재 위치, 회전 및 배율로 게임 피스를 렌더링합니다.  
+ <span data-ttu-id="07952-151">Draw 메서드 오버로드 중 하나가 호출될 때까지 게임 피스는 실제로 렌더링되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="07952-151">The game piece is not actually rendered until one of the Draw method overloads is called.</span></span> <span data-ttu-id="07952-152">이 메서드의 첫 번째 오버로드는 게임 그리기 루프([Game.Draw](http://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) 메서드)에서 반복적으로 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="07952-152">The first overload of this method is called repeatedly from the game draw loop (the [Game.Draw](http://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) method).</span></span> <span data-ttu-id="07952-153">이 오버로드는 현재 위치, 회전 및 배율로 게임 피스를 렌더링합니다.</span><span class="sxs-lookup"><span data-stu-id="07952-153">This renders the game piece with the current position, rotation, and scale factors.</span></span>  
   
  [!code-csharp[ManipulationXNA#_GamePiece_Draw](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_draw)]  
   
-## <a name="additional-properties"></a>추가 속성  
- **GamePiece** 클래스는 세 개의 private 속성을 사용합니다.  
+## <a name="additional-properties"></a><span data-ttu-id="07952-154">추가 속성</span><span class="sxs-lookup"><span data-stu-id="07952-154">Additional Properties</span></span>  
+ <span data-ttu-id="07952-155">**GamePiece** 클래스는 세 개의 private 속성을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="07952-155">Three private properties are used by the **GamePiece** class.</span></span>  
   
-1.  **Timestamp** - 조작 및 관성 프로세서에서 사용할 타임스탬프 값을 가져옵니다.  
+1.  <span data-ttu-id="07952-156">**Timestamp** - 조작 및 관성 프로세서에서 사용할 타임스탬프 값을 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="07952-156">**Timestamp** – Gets a timestamp value to be used by the manipulation and inertia processors.</span></span>  
   
-2.  **X** - 게임 피스의 X 좌표를 가져오거나 설정합니다. 설정할 때 적중 테스트와 조작 프로세서의 피벗 위치에 사용되는 범위를 조정합니다.  
+2.  <span data-ttu-id="07952-157">**X** - 게임 피스의 X 좌표를 가져오거나 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="07952-157">**X** – Gets or sets the X coordinate of the game piece.</span></span> <span data-ttu-id="07952-158">설정할 때 적중 테스트와 조작 프로세서의 피벗 위치에 사용되는 범위를 조정합니다.</span><span class="sxs-lookup"><span data-stu-id="07952-158">When setting, adjusts the bounds used for hit testing and the pivot location of the manipulation processor.</span></span>  
   
-3.  **Y** - 게임 피스의 Y 좌표를 가져오거나 설정합니다. 설정할 때 적중 테스트와 조작 프로세서의 피벗 위치에 사용되는 범위를 조정합니다.  
+3.  <span data-ttu-id="07952-159">**Y** - 게임 피스의 Y 좌표를 가져오거나 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="07952-159">**Y** – Gets or sets the Y coordinate of the game piece.</span></span> <span data-ttu-id="07952-160">설정할 때 적중 테스트와 조작 프로세서의 피벗 위치에 사용되는 범위를 조정합니다.</span><span class="sxs-lookup"><span data-stu-id="07952-160">When setting, adjusts the bounds used for hit testing and the pivot location of the manipulation processor.</span></span>  
   
  [!code-csharp[ManipulationXNA#_GamePiece_PrivateProperties](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_privateproperties)]  
   
-## <a name="see-also"></a>참고 항목  
- [조작 및 관성](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)   
- [XNA 응용 프로그램에서 조작 및 관성 사용](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)   
- [GamePieceCollection 클래스 만들기](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md)   
- [Game1 클래스 만들기](../../../docs/framework/common-client-technologies/creating-the-game1-class.md)
-
+## <a name="see-also"></a><span data-ttu-id="07952-161">참고 항목</span><span class="sxs-lookup"><span data-stu-id="07952-161">See Also</span></span>  
+ [<span data-ttu-id="07952-162">조작 및 관성</span><span class="sxs-lookup"><span data-stu-id="07952-162">Manipulations and Inertia</span></span>](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)  
+ [<span data-ttu-id="07952-163">XNA 응용 프로그램에서 조작 및 관성 사용</span><span class="sxs-lookup"><span data-stu-id="07952-163">Using Manipulations and Inertia in an XNA Application</span></span>](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)  
+ [<span data-ttu-id="07952-164">GamePieceCollection 클래스 만들기</span><span class="sxs-lookup"><span data-stu-id="07952-164">Creating the GamePieceCollection Class</span></span>](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md)  
+ [<span data-ttu-id="07952-165">Game1 클래스 만들기</span><span class="sxs-lookup"><span data-stu-id="07952-165">Creating the Game1 Class</span></span>](../../../docs/framework/common-client-technologies/creating-the-game1-class.md)

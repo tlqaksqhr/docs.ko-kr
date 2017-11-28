@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -160,35 +159,28 @@ f1_keywords:
 - WME1015
 - WME1047
 - WME9
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Winmdexp.exe, error messages
 - Windows Runtime Metadata Export Tool, error messages
 - error messages, Winmdexp.exe
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
+ms.openlocfilehash: 83f7b1f91b70281b4cce57632977bfc4685a58fb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3797621322fd88d57133602b1cb3c3173fedbe6e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="winmdexpexe-error-messages"></a>Winmdexp.exe 오류 메시지
-[!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)]에서 **[!INCLUDE[wrt](../../../includes/wrt-md.md)] 구성 요소** 템플릿을 사용할 때 빌드 프로세스는 [Winmdexp.exe(Windows 런타임 메타데이터 내보내기 도구)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)를 호출하므로 Winmdexp.exe 오류 메시지가 **오류 목록**에 표시됩니다. Winmdexp.exe는 `/target:winmdobj` 옵션으로 컴파일된 모듈에서 작동합니다. 컴파일된 모듈이 입력으로 필요하므로 컴파일에 성공하지 않으면 해당 오류 메시지가 나타나지 않습니다.  
+# <a name="winmdexpexe-error-messages"></a><span data-ttu-id="158c7-102">Winmdexp.exe 오류 메시지</span><span class="sxs-lookup"><span data-stu-id="158c7-102">Winmdexp.exe Error Messages</span></span>
+<span data-ttu-id="158c7-103">[!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)]에서 **[!INCLUDE[wrt](../../../includes/wrt-md.md)] 구성 요소** 템플릿을 사용할 때 빌드 프로세스는 [Winmdexp.exe(Windows 런타임 메타데이터 내보내기 도구)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)를 호출하므로 Winmdexp.exe 오류 메시지가 **오류 목록**에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="158c7-103">The build process calls [Winmdexp.exe (Windows Runtime Metadata Export Tool)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) when you use the **[!INCLUDE[wrt](../../../includes/wrt-md.md)] Component** template in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], so Winmdexp.exe error messages appear in the **Error List**.</span></span> <span data-ttu-id="158c7-104">Winmdexp.exe는 `/target:winmdobj` 옵션으로 컴파일된 모듈에서 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="158c7-104">Winmdexp.exe operates on a module that is compiled with the `/target:winmdobj` option.</span></span> <span data-ttu-id="158c7-105">컴파일된 모듈이 입력으로 필요하므로 컴파일에 성공하지 않으면 해당 오류 메시지가 나타나지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="158c7-105">Because it requires a compiled module as input, its error messages don't appear unless compilation succeeds.</span></span>  
   
- 오류 메시지는 보고되는 오류 조건을 해결하는 데 필요한 모든 정보를 포함하도록 설계되었습니다. 그러나 몇 가지 문제에는 메시지에 표시되는 것보다 많은 정보가 필요합니다. 추가 정보는 Windows 개발자 센터의 [Windows 런타임 구성 요소 오류 조건 진단](http://go.microsoft.com/fwlink/p/?LinkId=251127)에서 찾을 수 있습니다.  
+ <span data-ttu-id="158c7-106">오류 메시지는 보고되는 오류 조건을 해결하는 데 필요한 모든 정보를 포함하도록 설계되었습니다. 그러나 몇 가지 문제에는 메시지에 표시되는 것보다 많은 정보가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="158c7-106">The error messages are designed to contain all the information you need to address the error conditions they report.However, some problems require more information than will fit in the message.</span></span> <span data-ttu-id="158c7-107">추가 정보는 Windows 개발자 센터의 [Windows 런타임 구성 요소 오류 조건 진단](http://go.microsoft.com/fwlink/p/?LinkId=251127)에서 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="158c7-107">You can find additional information in [Diagnosing Windows Runtime component error conditions](http://go.microsoft.com/fwlink/p/?LinkId=251127) in the Windows Dev Center.</span></span>  
   
- 해당 문서에서 오류를 설명하지 않고 메시지에 문제 해결을 위한 정보가 충분히 포함되지 않은 경우 문서의 사용자 의견 링크를 사용하고 오류 메시지를 포함하십시오. [Microsoft Connect 웹 사이트](http://go.microsoft.com/fwlink/p/?LinkId=251130)에서 버그를 보고할 수도 있습니다. 자세한 내용은 [Microsoft 포럼](http://go.microsoft.com/fwlink/p/?LinkId=251129)에서도 찾을 수 있습니다.  
+ <span data-ttu-id="158c7-108">해당 문서에서 오류를 설명하지 않고 메시지에 문제 해결을 위한 정보가 충분히 포함되지 않은 경우 문서의 사용자 의견 링크를 사용하고 오류 메시지를 포함하십시오.</span><span class="sxs-lookup"><span data-stu-id="158c7-108">If your error is not discussed in that article, and you feel that the message doesn't contain sufficient information to address the issue, please use the feedback link in that article and include the error message.</span></span> <span data-ttu-id="158c7-109">[Microsoft Connect 웹 사이트](http://go.microsoft.com/fwlink/p/?LinkId=251130)에서 버그를 보고할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="158c7-109">Alternatively, you can file a bug at the [Microsoft Connect website](http://go.microsoft.com/fwlink/p/?LinkId=251130).</span></span> <span data-ttu-id="158c7-110">자세한 내용은 [Microsoft 포럼](http://go.microsoft.com/fwlink/p/?LinkId=251129)에서도 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="158c7-110">You can also look for more information on the [Microsoft Forums](http://go.microsoft.com/fwlink/p/?LinkId=251129).</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [Winmdexp.exe(Windows 런타임 메타데이터 내보내기 도구)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)   
- [Windows 런타임 구성 요소 오류 조건 진단](http://go.microsoft.com/fwlink/p/?LinkId=251127)
-
+## <a name="see-also"></a><span data-ttu-id="158c7-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="158c7-111">See Also</span></span>  
+ [<span data-ttu-id="158c7-112">Winmdexp.exe(Windows 런타임 메타데이터 내보내기 도구)</span><span class="sxs-lookup"><span data-stu-id="158c7-112">Winmdexp.exe (Windows Runtime Metadata Export Tool)</span></span>](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)  
+ [<span data-ttu-id="158c7-113">Windows 런타임 구성 요소 오류 조건 진단</span><span class="sxs-lookup"><span data-stu-id="158c7-113">Diagnosing Windows Runtime component error conditions</span></span>](http://go.microsoft.com/fwlink/p/?LinkId=251127)

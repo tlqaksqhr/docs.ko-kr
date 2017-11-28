@@ -1,37 +1,33 @@
 ---
 title: "여러 모양으로 XML 프로젝션(C#)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
+ms.openlocfilehash: 54eb890e37634362af715c132bfe43b7addb20b4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: e5de9010f35ee5a7537e99f19369d0b84422df03
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="projecting-xml-in-a-different-shape-c"></a>여러 모양으로 XML 프로젝션(C#)
-이 항목에서는 소스 XML과 다른 모양으로 XML을 프로젝션하는 예제를 보여 줍니다.  
+# <a name="projecting-xml-in-a-different-shape-c"></a><span data-ttu-id="7e053-102">여러 모양으로 XML 프로젝션(C#)</span><span class="sxs-lookup"><span data-stu-id="7e053-102">Projecting XML in a Different Shape (C#)</span></span>
+<span data-ttu-id="7e053-103">이 항목에서는 소스 XML과 다른 모양으로 XML을 프로젝션하는 예제를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="7e053-103">This topic shows an example of projecting XML that is in a different shape than the source XML.</span></span>  
   
- 많은 일반적인 XML 변환은 이 예제의 경우와 마찬가지로 연결된 쿼리로 구성되어 있습니다. 특정 형태의 XML에서 시작하여 중간 결과를 익명 형식이나 명명된 형식의 컬렉션으로 프로젝션한 다음 마지막으로 소스 XML과 완전히 다른 모양의 XML로 결과를 다시 프로젝션하는 것이 일반적입니다.  
+ <span data-ttu-id="7e053-104">많은 일반적인 XML 변환은 이 예제의 경우와 마찬가지로 연결된 쿼리로 구성되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="7e053-104">Many typical XML transformations consist of chained queries, as in this example.</span></span> <span data-ttu-id="7e053-105">특정 형태의 XML에서 시작하여 중간 결과를 익명 형식이나 명명된 형식의 컬렉션으로 프로젝션한 다음 마지막으로 소스 XML과 완전히 다른 모양의 XML로 결과를 다시 프로젝션하는 것이 일반적입니다.</span><span class="sxs-lookup"><span data-stu-id="7e053-105">It is common to start with some form of XML, project intermediate results as collections of anonymous types or named types, and then finally to project the results back into XML that is in an entirely different shape than the source XML.</span></span>  
   
-## <a name="example"></a>예제  
- 이 예제에서는 WordprocessingML 문서를 처리하여 WordprocessingML 문서에서 단락 노드를 검색합니다. 또한 각 단락의 스타일과 텍스트도 식별하고 마지막으로 다른 모양으로 XML을 프로젝션합니다. 이 예제는 이 자습서의 이전 예제를 기반으로 합니다. 프로젝션을 수행하는 새 문은 아래에 있는 코드의 주석에서 호출됩니다.  
+## <a name="example"></a><span data-ttu-id="7e053-106">예제</span><span class="sxs-lookup"><span data-stu-id="7e053-106">Example</span></span>  
+ <span data-ttu-id="7e053-107">이 예제에서는 WordprocessingML 문서를 처리하여 WordprocessingML 문서에서 단락 노드를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="7e053-107">This example processes a WordprocessingML document, retrieving the paragraph nodes from a WordprocessingML document.</span></span> <span data-ttu-id="7e053-108">또한 각 단락의 스타일과 텍스트도 식별하고</span><span class="sxs-lookup"><span data-stu-id="7e053-108">It also identifies the style and text of each paragraph.</span></span> <span data-ttu-id="7e053-109">마지막으로 다른 모양으로 XML을 프로젝션합니다.</span><span class="sxs-lookup"><span data-stu-id="7e053-109">Finally, the example projects XML with a different shape.</span></span> <span data-ttu-id="7e053-110">이 예제는 이 자습서의 이전 예제를 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="7e053-110">This example builds on the previous examples in this tutorial.</span></span> <span data-ttu-id="7e053-111">프로젝션을 수행하는 새 문은 아래에 있는 코드의 주석에서 호출됩니다.</span><span class="sxs-lookup"><span data-stu-id="7e053-111">The new statement that does the projection is called out in comments in the code below.</span></span>  
   
- 이 예제의 소스 문서 만들기에 대한 지침은 [원본 Office Open XML 문서 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)를 참조하세요.  
+ <span data-ttu-id="7e053-112">이 예제의 소스 문서 만들기에 대한 지침은 [원본 Office Open XML 문서 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="7e053-112">For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).</span></span>  
   
- 이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=fullName> 네임스페이스의 형식을 사용합니다.  
+ <span data-ttu-id="7e053-113">이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고</span><span class="sxs-lookup"><span data-stu-id="7e053-113">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="7e053-114"><xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="7e053-114">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```csharp  
 public static class LocalExtensions  
@@ -175,7 +171,7 @@ class Program
 }  
 ```  
   
- 이 예제는 다음과 같은 출력을 생성합니다.  
+ <span data-ttu-id="7e053-115">이 예제는 다음과 같은 출력을 생성합니다.</span><span class="sxs-lookup"><span data-stu-id="7e053-115">This example produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -242,11 +238,10 @@ class Program
 </Root>  
 ```  
   
-## <a name="next-steps"></a>다음 단계  
- 다음 예제에서는 Word 문서에서 텍스트를 모두 찾기 위해 쿼리합니다.  
+## <a name="next-steps"></a><span data-ttu-id="7e053-116">다음 단계</span><span class="sxs-lookup"><span data-stu-id="7e053-116">Next Steps</span></span>  
+ <span data-ttu-id="7e053-117">다음 예제에서는 Word 문서에서 텍스트를 모두 찾기 위해 쿼리합니다.</span><span class="sxs-lookup"><span data-stu-id="7e053-117">In the next example, you'll query to find all the text in a Word document:</span></span>  
   
--   [Word 문서에서 텍스트 찾기(C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+-   [<span data-ttu-id="7e053-118">Word 문서에서 텍스트 찾기(C#)</span><span class="sxs-lookup"><span data-stu-id="7e053-118">Finding Text in Word Documents (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
-## <a name="see-also"></a>참고 항목  
- [자습서: WordprocessingML 문서에서 내용 조작(C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-
+## <a name="see-also"></a><span data-ttu-id="7e053-119">참고 항목</span><span class="sxs-lookup"><span data-stu-id="7e053-119">See Also</span></span>  
+ [<span data-ttu-id="7e053-120">자습서: WordprocessingML 문서에서 내용 조작(C#)</span><span class="sxs-lookup"><span data-stu-id="7e053-120">Tutorial: Manipulating Content in a WordprocessingML Document (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

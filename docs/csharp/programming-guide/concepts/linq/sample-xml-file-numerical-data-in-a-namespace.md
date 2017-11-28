@@ -1,35 +1,26 @@
 ---
 title: "샘플 XML 파일: 네임스페이스의 숫자 데이터3"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-csharp
+ms.technology: devlang-csharp
 ms.topic: article
-dev_langs:
-- CSharp
 ms.assetid: 51750cab-3c66-4511-90fb-b9d211308d31
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
+ms.openlocfilehash: 2437f22c1c76d1a24883cc2ed5b0e9c5f068e55b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
 ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 5b02c0990a73aa18b4ce7e7b6ff652ad485ed854
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="sample-xml-file-numerical-data-in-a-namespace"></a>샘플 XML 파일: 네임스페이스의 숫자 데이터
-다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다. 이 파일에는 합계 및 평균을 구하고 그룹화할 숫자 데이터가 포함되어 있습니다. XML은 네임스페이스에 있습니다.  
+# <a name="sample-xml-file-numerical-data-in-a-namespace"></a><span data-ttu-id="b21ea-102">샘플 XML 파일: 네임스페이스의 숫자 데이터</span><span class="sxs-lookup"><span data-stu-id="b21ea-102">Sample XML File: Numerical Data in a Namespace</span></span>
+<span data-ttu-id="b21ea-103">다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="b21ea-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="b21ea-104">이 파일에는 합계 및 평균을 구하고 그룹화할 숫자 데이터가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b21ea-104">This file contains numerical data for summing, averaging, and grouping.</span></span> <span data-ttu-id="b21ea-105">XML은 네임스페이스에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b21ea-105">The XML is in a namespace.</span></span>  
   
-## <a name="data"></a>데이터  
+## <a name="data"></a><span data-ttu-id="b21ea-106">데이터</span><span class="sxs-lookup"><span data-stu-id="b21ea-106">Data</span></span>  
   
 ```xml  
 <Root xmlns='http://www.adatum.com'>  
@@ -72,6 +63,5 @@ ms.lasthandoff: 07/28/2017
 </Root>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [샘플 XML 문서(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
-
+## <a name="see-also"></a><span data-ttu-id="b21ea-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b21ea-107">See Also</span></span>  
+ [<span data-ttu-id="b21ea-108">샘플 XML 문서(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="b21ea-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
