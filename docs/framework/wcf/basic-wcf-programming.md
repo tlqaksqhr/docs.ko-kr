@@ -1,34 +1,34 @@
 ---
-title: "기본 WCF 프로그래밍 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "기본 프로그래밍 [WCF]"
-  - "WCF [WCF], 기본 프로그래밍"
-  - "WCF [WCF], 프로그래밍"
-  - "Windows Communication Foundation [WCF], 기본 프로그래밍"
-  - "Windows Communication Foundation [WCF], 프로그래밍"
+title: "기본 WCF 프로그래밍"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- basic programming [WCF]
+- WCF [WCF], basic programming
+- WCF [WCF], programming
+- Windows Communication Foundation [WCF], basic programming
+- Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
-caps.latest.revision: 31
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 31
+caps.latest.revision: "31"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: fa43705fd20a60512ca4c460bb3048220aa1e193
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 기본 WCF 프로그래밍
+# <a name="basic-wcf-programming"></a>기본 WCF 프로그래밍
 이 단원에서는 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] 응용 프로그램을 만들기 위한 기본 사항에 대해 설명합니다.  
   
-## 단원 내용  
+## <a name="in-this-section"></a>단원 내용  
  [기본 프로그래밍 수명 주기](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] 서비스 및 클라이언트 응용 프로그램 디자인, 빌드 및 배포에 대한 수명 주기를 설명합니다.  
   
@@ -53,25 +53,25 @@ caps.handback.revision: 31
  [WCF 및 ASP.NET Web API](../../../docs/framework/wcf/wcf-and-aspnet-web-api.md)  
  두 가지 기술과 이러한 기술의 관계 및 사용 시기에 대해 설명합니다.  
   
-## 참조  
+## <a name="reference"></a>참조  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
   
  <xref:System.ServiceModel.Description>  
   
-## 관련 단원  
+## <a name="related-sections"></a>관련 단원  
  [시스템 요구 사항](../../../docs/framework/wcf/wcf-system-requirements.md)  
   
  [개념적 개요](../../../docs/framework/wcf/conceptual-overview.md)  
   
  [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md)  
   
- [지침 및 최선의 방법](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
+ [지침 및 모범 사례](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
   
  [Windows Communication Foundation 도구](../../../docs/framework/wcf/tools.md)  
   
- [Windows Communication Foundation Samples](http://msdn.microsoft.com/ko-kr/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Windows Communication Foundation 샘플](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
  [시작](../../../docs/framework/wcf/samples/getting-started-sample.md)  
   

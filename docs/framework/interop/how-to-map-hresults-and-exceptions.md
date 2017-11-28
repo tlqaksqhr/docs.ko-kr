@@ -5,15 +5,10 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+dev_langs: cpp
 helpviewer_keywords:
 - interoperation with unmanaged code, HRESULTs
 - exceptions, HRESULTs
@@ -22,16 +17,15 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 842c223d63aafe38e2506d1430ac17ea2051884d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 41220f37837c1bd2e983a82ecb3406fe1cb918e2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>방법: HRESULT 및 예외 매핑
 COM 메서드는 HRESULT를 반환하여 오류를 보고하고, .NET 메서드는 예외를 throw하여 오류를 보고합니다. 런타임은 두 항목 간의 전환을 처리합니다. .NET Framework의 각 예외 클래스는 HRESULT에 매핑됩니다.  
@@ -156,6 +150,5 @@ CMyClass::MethodThatThrows
  **Message**, **Source** 및 **StackTrace**와 같은 예외 필드는 **StackOverflowException**에 사용할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [고급 COM 상호 운용성](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)   
+ [고급 COM 상호 운용성](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
  [예외](../../../docs/standard/exceptions/index.md)
-

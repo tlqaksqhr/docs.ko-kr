@@ -1,31 +1,34 @@
 ---
-title: "본문 요소에 의한 디스패치 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "본문 요소에 의한 디스패치"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-caps.latest.revision: 13
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1f727b5d4a1e2689b4a90971f5b5c93efb55c475
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 본문 요소에 의한 디스패치
+# <a name="dispatch-by-body-element"></a>본문 요소에 의한 디스패치
 이 샘플에서는 들어오는 메시지를 작업에 할당하는 대체 알고리즘을 구현하는 방법을 보여 줍니다.  
   
- 기본적으로 서비스 모델 디스패처는 메시지의 WS\-Addressing "Action" 헤더나 HTTP SOAP 요청의 동일한 정보에 따라 들어오는 메시지에 적합한 처리 방법을 선택합니다.  
+ 기본적으로 서비스 모델 디스패처는 메시지의 WS-Addressing "Action" 헤더나 HTTP SOAP 요청의 동일한 정보에 따라 들어오는 메시지에 적합한 처리 방법을 선택합니다.  
   
- WS\-I Basic Profile 1.1 지침을 따르지 않는 일부 SOAP 1.1 웹 서비스 스택은 동작 URI 대신 SOAP 본문 내 첫 번째 요소의 정규화된 XML 이름에 따라 메시지를 디스패치합니다.  마찬가지로 이러한 스택의 클라이언트측은 SOAP 1.1 사양에 허용된 빈 HTTP SoapAction 헤더나 임의의 HTTP SoapAction 헤더를 사용하여 메시지를 보낼 수 있습니다.  
+ WS-I Basic Profile 1.1 지침을 따르지 않는 일부 SOAP 1.1 웹 서비스 스택은 동작 URI 대신 SOAP 본문 내 첫 번째 요소의 정규화된 XML 이름에 따라 메시지를 디스패치합니다. 마찬가지로 이러한 스택의 클라이언트측은 SOAP 1.1 사양에 허용된 빈 HTTP SoapAction 헤더나 임의의 HTTP SoapAction 헤더를 사용하여 메시지를 보낼 수 있습니다.  
   
- 메시지가 메서드로 디스패치되는 방법을 변경하기 위해 이 샘플에서는 `DispatchByBodyElementOperationSelector`에서 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 확장성 인터페이스를 구현합니다.  이 클래스는 메시지 본문의 첫 번째 요소에 따라 작업을 선택합니다.  
+ 메시지가 메서드로 디스패치되는 방법을 변경하기 위해 이 샘플에서는 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>에서 `DispatchByBodyElementOperationSelector` 확장성 인터페이스를 구현합니다. 이 클래스는 메시지 본문의 첫 번째 요소에 따라 작업을 선택합니다.  
   
- 클래스 생성자에는 `XmlQualifiedName`과 문자열 쌍으로 채워진 사전이 필요합니다. 여기에서 정규화된 이름은 SOAP 본문에서 첫 번째 자식의 이름을 나타내고 문자열은 일치하는 작업 이름을 나타냅니다.  `defaultOperationName`은 이 사전과 일치하지 않는 모든 메시지를 받는 작업의 이름입니다.  
+ 클래스 생성자에는 `XmlQualifiedName`과 문자열 쌍으로 채워진 사전이 필요합니다. 여기에서 정규화된 이름은 SOAP 본문에서 첫 번째 자식의 이름을 나타내고 문자열은 일치하는 작업 이름을 나타냅니다. `defaultOperationName`은 이 사전과 일치하지 않는 모든 메시지를 받는 작업의 이름입니다.  
   
 ```  
 class DispatchByBodyElementOperationSelector : IDispatchOperationSelector  
@@ -40,9 +43,9 @@ class DispatchByBodyElementOperationSelector : IDispatchOperationSelector
     }  
 ```  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 구현은 인터페이스 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>에 메서드가 하나만 있으므로 매우 간단하게 빌드할 수 있습니다.  이 메서드의 작업은 들어오는 메시지를 검사하고 현재 끝점에 대한 서비스 계약의 메서드 이름과 동일한 문자열을 반환하는 것입니다.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> 구현은 인터페이스 <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>에 메서드가 하나만 있으므로 매우 간단하게 빌드할 수 있습니다. 이 메서드의 작업은 들어오는 메시지를 검사하고 현재 끝점에 대한 서비스 계약의 메서드 이름과 동일한 문자열을 반환하는 것입니다.  
   
- 이 샘플에서 작업 선택기는 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A>를 사용하여 들어오는 메시지의 본문에 대한 <xref:System.Xml.XmlDictionaryReader>를 가져옵니다.  이 메서드는 메시지 본문의 첫 번째 자식에 판독기를 미리 배치하여 현재 요소의 이름과 네임스페이스 URI를 가져와서 `XmlQualifiedName`에 결합한 다음 작업 선택기에서 보유하고 있는 사전에서 해당 작업을 조회하는 데 사용할 수 있도록 합니다.  
+ 이 샘플에서 작업 선택기는 <xref:System.Xml.XmlDictionaryReader>를 사용하여 들어오는 메시지의 본문에 대한 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A>를 가져옵니다. 이 메서드는 메시지 본문의 첫 번째 자식에 판독기를 미리 배치하여 현재 요소의 이름과 네임스페이스 URI를 가져와서 `XmlQualifiedName`에 결합한 다음 작업 선택기에서 보유하고 있는 사전에서 해당 작업을 조회하는 데 사용할 수 있도록 합니다.  
   
 ```  
 public string SelectOperation(ref System.ServiceModel.Channels.Message message)  
@@ -62,10 +65,9 @@ public string SelectOperation(ref System.ServiceModel.Channels.Message message)
 }  
 ```  
   
- <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> 또는 메시지 본문 내용에 액세스할 수 있는 권한을 제공하는 다른 메서드를 사용하여 메시지 본문에 액세스하면 메시지가 "읽음"으로 표시됩니다. 즉, 메시지를 추가로 처리할 수 없습니다.  따라서 작업 선택기는 다음 코드에 표시된 메서드를 사용하여 들어오는 메시지의 복사본을 만듭니다.  판독기의 위치는 검사 중에 변경되지 않기 때문에 새로 만든 메시지에서 이를 참조할 수 있습니다. 입력 메시지의 메시지 속성 및 메시지 헤더도 이 새 메시지에 복사되므로 원본 메시지가 정확하게 복제됩니다.  
+ <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> 또는 메시지 본문 내용에 액세스할 수 있는 권한을 제공하는 다른 메서드를 사용하여 메시지 본문에 액세스하면 메시지가 "읽음"으로 표시됩니다. 즉, 메시지를 추가로 처리할 수 없습니다. 따라서 작업 선택기는 다음 코드에 표시된 메서드를 사용하여 들어오는 메시지의 복사본을 만듭니다. 판독기의 위치는 검사 중에 변경되지 않기 때문에 새로 만든 메시지에서 이를 참조할 수 있습니다. 입력 메시지의 메시지 속성 및 메시지 헤더도 이 새 메시지에 복사되므로 원본 메시지가 정확하게 복제됩니다.  
   
 ```  
-  
 private Message CreateMessageCopy(Message message,   
                                      XmlDictionaryReader body)  
 {  
@@ -74,17 +76,16 @@ private Message CreateMessageCopy(Message message,
     copy.Properties.CopyProperties(message.Properties);  
     return copy;  
 }  
-  
 ```  
   
-## 서비스에 작업 선택기 추가  
- 서비스 디스패치 작업 선택기는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 디스패처의 확장입니다.  이중 계약의 콜백 채널에서 메서드를 선택하기 위한 클라이언트 작업 선택기도 있습니다. 이 작업 선택기는 여기에서 설명하는 디스패치 작업 선택기와 매우 유사하게 작동하지만 이 샘플에서 명시적으로 설명하지는 않습니다.  
+## <a name="adding-an-operation-selector-to-a-service"></a>서비스에 작업 선택기 추가  
+ 서비스 디스패치 작업 선택기는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 디스패처의 확장입니다. 이중 계약의 콜백 채널에서 메서드를 선택하기 위한 클라이언트 작업 선택기도 있습니다. 이 작업 선택기는 여기에서 설명하는 디스패치 작업 선택기와 매우 유사하게 작동하지만 이 샘플에서 명시적으로 설명하지는 않습니다.  
   
- 대부분의 서비스 모델 확장처럼 디스패치 작업 선택기도 동작을 사용하여 디스패처에 추가됩니다.  *동작*은 디스패치 런타임이나 클라이언트 런타임에 하나 이상의 확장을 추가하거나 해당 설정을 변경하는 구성 개체입니다.  
+ 대부분의 서비스 모델 확장처럼 디스패치 작업 선택기도 동작을 사용하여 디스패처에 추가됩니다. A *동작* 은 디스패치 런타임이나 (또는 클라이언트 런타임을) 하나 이상의 확장을 추가 하거나 해당 설정을 변경 하는 구성 개체입니다.  
   
- 작업 선택기에는 계약 범위가 있으므로 여기서 구현하기에 적합한 동작은 <xref:System.ServiceModel.Description.IContractBehavior>입니다.  다음 코드와 같이 인터페이스는 <xref:System.Attribute> 파생 클래스에 구현되므로 이 동작을 서비스 계약에 선언적으로 추가할 수 있습니다.  <xref:System.ServiceModel.ServiceHost>를 열고 디스패치 런타임을 빌드할 때마다 계약, 작업 및 서비스 구현의 특성이나 서비스 구성의 요소로 검색되는 모든 동작은 자동으로 추가된 후 확장을 적용하거나 기본 구성을 수정하라는 요청을 받습니다.  
+ 작업 선택기에는 계약 범위가 있으므로 여기서 구현하기에 적합한 동작은 <xref:System.ServiceModel.Description.IContractBehavior>입니다. 다음 코드와 같이 인터페이스는 <xref:System.Attribute> 파생 클래스에 구현되므로 이 동작을 서비스 계약에 선언적으로 추가할 수 있습니다. <xref:System.ServiceModel.ServiceHost>를 열고 디스패치 런타임을 빌드할 때마다 계약, 작업 및 서비스 구현의 특성이나 서비스 구성의 요소로 검색되는 모든 동작은 자동으로 추가된 후 확장을 적용하거나 기본 구성을 수정하라는 요청을 받습니다.  
   
- 간단한 설명을 위해 다음에 인용된 코드에서는 이 샘플에 사용된 디스패처의 구성 변경에 영향을 주는 <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%2A> 메서드의 구현만 보여 줍니다.  다른 메서드는 작업을 수행하지 않고 호출자에게 반환되기 때문에 표시되지 않습니다.  
+ 간단한 설명을 위해 다음에 인용된 코드에서는 이 샘플에 사용된 디스패처의 구성 변경에 영향을 주는 <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%2A> 메서드의 구현만 보여 줍니다. 다른 메서드는 작업을 수행하지 않고 호출자에게 반환되기 때문에 표시되지 않습니다.  
   
 ```  
 [AttributeUsage(AttributeTargets.Class|AttributeTargets.Interface)]  
@@ -95,9 +96,9 @@ class DispatchByBodyElementBehaviorAttribute : Attribute, IContractBehavior
     // public void Validate(...)  
 ```  
   
- 먼저 <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%2A> 구현에서는 서비스 끝점의 <xref:System.ServiceModel.Description.ContractDescription>에서 <xref:System.ServiceModel.Description.OperationDescription> 요소를 반복하여 작업 선택기에 대한 조회 사전을 설정합니다.  그런 다음 각 작업 설명을 검사하여 이 샘플에도 정의되어 있는 <xref:System.ServiceModel.Description.IOperationBehavior>의 구현인 `DispatchBodyElementAttribute` 동작이 있는지 확인합니다.  이 클래스도 동작이지만 수동적이며 디스패치 런타임에 구성 변경 내용을 능동적으로 적용하지 않습니다.  클래스의 모든 메서드가 작업을 수행하지 않고 호출자에게 반환됩니다.  작업 동작만 존재하므로 새 디스패치 메커니즘에 필요한 메타데이터 즉, 작업이 선택되는 본문 요소의 정규화된 이름을 해당 작업에 연결할 수 있습니다.  
+ 먼저 <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%2A> 구현에서는 서비스 끝점의 <xref:System.ServiceModel.Description.OperationDescription>에서 <xref:System.ServiceModel.Description.ContractDescription> 요소를 반복하여 작업 선택기에 대한 조회 사전을 설정합니다. 그런 다음 각 작업 설명을 검사하여 이 샘플에도 정의되어 있는 `DispatchBodyElementAttribute`의 구현인 <xref:System.ServiceModel.Description.IOperationBehavior> 동작이 있는지 확인합니다. 이 클래스도 동작이지만 수동적이며 디스패치 런타임에 구성 변경 내용을 능동적으로 적용하지 않습니다. 클래스의 모든 메서드가 작업을 수행하지 않고 호출자에게 반환됩니다. 작업 동작만 존재하므로 새 디스패치 메커니즘에 필요한 메타데이터 즉, 작업이 선택되는 본문 요소의 정규화된 이름을 해당 작업에 연결할 수 있습니다.  
   
- 이러한 동작이 있으면 정규화된 XML 이름\(`QName` 속성\)과 작업 이름\(`Name` 속성\)으로 만들어진 값 쌍이 사전에 추가됩니다.  
+ 이러한 동작이 있으면 정규화된 XML 이름(`QName` 속성)과 작업 이름(`Name` 속성)으로 만들어진 값 쌍이 사전에 추가됩니다.  
   
  사전이 채워지면 이 정보로 새 `DispatchByBodyElementOperationSelector`가 생성되고 디스패치 런타임의 작업 선택기로 설정됩니다.  
   
@@ -125,12 +126,12 @@ public void ApplyDispatchBehavior(ContractDescription contractDescription, Servi
 }  
 ```  
   
-## 서비스 구현  
- 이 샘플에 구현된 동작은 네트워크의 메시지가 해석되고 디스패치되는 방식에 직접적인 영향을 주며, 이는 서비스 계약의 기능입니다.  따라서 이 동작을 사용하도록 선택하는 서비스 구현에서는 서비스 계약 수준으로 동작을 선언해야 합니다.  
+## <a name="implementing-the-service"></a>서비스 구현  
+ 이 샘플에 구현된 동작은 네트워크의 메시지가 해석되고 디스패치되는 방식에 직접적인 영향을 주며, 이는 서비스 계약의 기능입니다. 따라서 이 동작을 사용하도록 선택하는 서비스 구현에서는 서비스 계약 수준으로 동작을 선언해야 합니다.  
   
- 샘플 프로젝트 서비스에서는 `DispatchByBodyElementBehaviorAttribute` 계약 동작을 `IDispatchedByBody` 서비스 계약에 적용하고 `DispatchBodyElementAttribute` 작업 동작을 사용하여 `OperationForBodyA()`  작업과 `OperationForBodyB()` 작업에 각각 레이블을 지정합니다.  이 계약을 구현하는 서비스에 대한 서비스 호스트를 열면 앞에서 설명한 대로 디스패처 작성기에서 이 메타데이터를 선택합니다.  
+ 샘플 프로젝트 서비스에 적용 되는 `DispatchByBodyElementBehaviorAttribute` 계약 동작을는 `IDispatchedByBody` 서비스 계약 및 각 레이블을 두 동작 `OperationForBodyA()` 및 `OperationForBodyB()` 와 `DispatchBodyElementAttribute` 작업 동작입니다. 이 계약을 구현하는 서비스에 대한 서비스 호스트를 열면 앞에서 설명한 대로 디스패처 작성기에서 이 메타데이터를 선택합니다.  
   
- 작업 선택기는 메시지 본문 요소만을 기준으로 디스패치하고 "Action"을 무시하므로 <xref:System.ServiceModel.OperationContractAttribute>의 `ReplyAction` 속성에 와일드카드 "\*"를 할당하여 반환된 회신에서 "Action" 헤더를 검사하지 않도록 런타임에 알려야 합니다.  또한 작업 선택기에는  "Action" 속성이 와일드카드 "\*"로 설정된 기본 작업이 있어야 합니다.  기본 작업은 디스패치할 수 없는 모든 메시지를 받으므로 `DispatchBodyElementAttribute`이 없습니다.  
+ 작업 선택기는 메시지 본문 요소만을 기준으로 디스패치하고 "Action"을 무시하므로 `ReplyAction`의 <xref:System.ServiceModel.OperationContractAttribute> 속성에 와일드카드 "*"를 할당하여 반환된 회신에서 "Action" 헤더를 검사하지 않도록 런타임에 알려야 합니다. 또한 "Action" 속성이 와일드 카드로 설정 된 기본 작업이 있어야 하는 "\*"입니다. 기본 작업은 디스패치할 수 없는 모든 메시지를 받으므로 `DispatchBodyElementAttribute`이 없습니다.  
   
 ```  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"),  
@@ -148,14 +149,14 @@ public interface IDispatchedByBody
 }  
 ```  
   
- 샘플 서비스 구현은 간단합니다.  모든 메서드는 수신된 메시지를 회신 메시지로 래핑하고 클라이언트에 다시 표시합니다.  
+ 샘플 서비스 구현은 간단합니다. 모든 메서드는 수신된 메시지를 회신 메시지로 래핑하고 클라이언트에 다시 표시합니다.  
   
-## 샘플 실행 및 빌드  
+## <a name="running-and-building-the-sample"></a>샘플 실행 및 빌드  
  샘플을 실행하면 작업 응답의 본문 내용이 형식이 지정된 다음 출력과 유사하게 클라이언트 콘솔 창에 표시됩니다.  
   
- 클라이언트는 본문 내용 요소의 이름이 각각 `bodyA`, `bodyB` 및 `bodyX`인 세 개의 메시지를 서비스로 보냅니다.  이전 설명과 표시된 서비스 계약에서 알 수 있듯이, `bodyA` 요소가 있는 들어오는 메시지는 `OperationForBodyA()` 메서드로 디스패치됩니다.  `bodyX` 본문 요소가 있는 메시지의 경우에는 명시적인 디스패치 대상이 없으므로 메시지가 `DefaultOperation()`으로 디스패치됩니다.  각 서비스 작업은 수신된 메시지 본문을 메서드 관련 요소로 래핑하여 반환하며, 이 작업은 이 샘플의 입력 및 출력 메시지를 명확하게 상호 연결하기 위해 수행됩니다.  
+ 클라이언트는 본문 내용 요소의 이름이 각각 `bodyA`, `bodyB` 및 `bodyX`인 세 개의 메시지를 서비스로 보냅니다. 이전 설명과 표시된 서비스 계약에서 알 수 있듯이, `bodyA` 요소가 있는 들어오는 메시지는 `OperationForBodyA()` 메서드로 디스패치됩니다. `bodyX` 본문 요소가 있는 메시지의 경우에는 명시적인 디스패치 대상이 없으므로 메시지가 `DefaultOperation()`으로 디스패치됩니다. 각 서비스 작업은 수신된 메시지 본문을 메서드 관련 요소로 래핑하여 반환하며, 이 작업은 이 샘플의 입력 및 출력 메시지를 명확하게 상호 연결하기 위해 수행됩니다.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="IBM437"?>  
 <replyBodyA xmlns="http://tempuri.org">  
    <q:bodyA xmlns:q="http://tempuri.org">test</q:bodyA>  
@@ -168,24 +169,23 @@ public interface IDispatchedByBody
 <replyDefault xmlns="http://tempuri.org">  
    <q:bodyX xmlns:q="http://tempuri.org">test</q:bodyX>  
 </replyDefault>  
-  
 ```  
   
-#### 샘플을 설치, 빌드 및 실행하려면  
+#### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1.  [Windows Communication Foundation 샘플의 일회 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)를 수행했는지 확인합니다.  
+1.  수행 했는지 확인 하십시오.는 [Windows Communication Foundation 샘플의 일회 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
   
-2.  솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
+2.  지침에 따라 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.  
   
-3.  단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따릅니다.  
+3.  지침에 따라 단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
   
 > [!IMPORTANT]
->  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.  계속하기 전에 다음\(기본\) 디렉터리를 확인하세요.  
+>  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [.NET Framework 4용 WCF\(Windows Communication Foundation\) 및 Windows WF\(Workflow Foundation\) 샘플](http://go.microsoft.com/fwlink/?LinkId=150780)\(영문\)로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요.  이 샘플은 다음 디렉터리에 있습니다.  
+>  이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  
   
-## 참고 항목
+## <a name="see-also"></a>참고 항목

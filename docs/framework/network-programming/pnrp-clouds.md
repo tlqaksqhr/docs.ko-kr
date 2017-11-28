@@ -7,22 +7,16 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 17770f43d04916ae55b1b62010c8b43e0e4c95e3
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 1b9769d4e3936e127407f68de81f9b5b5da4fbc0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="pnrp-clouds"></a>PNRP 클라우드
 PNRP “클라우드”는 네트워크를 통해 서로 통신할 수 있는 노드 집합을 나타냅니다. “클라우드”라는 용어는 “피어 메시” 및 “피어 투 피어 그래프”와 동의어입니다.  
@@ -47,6 +41,5 @@ PNRP “클라우드”는 네트워크를 통해 서로 통신할 수 있는 �
  클라우드 인스턴스를 만들거나 가져오고 나면 피어 이름을 등록하여 알려진 피어의 메시를 만들 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Net.PeerToPeer.Cloud>   
+ <xref:System.Net.PeerToPeer.Cloud>  
  [피어 이름 확인 프로토콜](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)
-

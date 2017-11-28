@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - deadlocks [.NET Framework]
 - LoaderLock MDA
@@ -23,16 +17,15 @@ helpviewer_keywords:
 - loader locks
 - locks, threads
 ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 632f46593f3e9ab5acba06d00f3a919cca31611f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 90fa57bae7bec1fb7f29ad566e92ae9143a39539
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="loaderlock-mda"></a>loaderLock MDA
 `loaderLock` MDA(관리 디버깅 도우미)는 Microsoft Windows 운영 체제 로더 잠금을 보유하는 스레드에서 관리 코드를 실행하려는 시도를 감지합니다.  이와 같은 실행은 운영 체제의 로더에서 초기화하기 전에 DLL을 사용하고 교착 상태를 일으킬 수 있으므로 유효하지 않습니다.  
@@ -45,7 +38,7 @@ ms.lasthandoff: 08/21/2017
  마지막으로 운영 체제의 로더에서 DLL을 제대로 초기화하기 전에 DLL을 호출할 수 있는 경우가 있습니다.  교착 상태와 관련된 모든 스레드의 스택을 검사하여 진단할 수 있는 교착 상태 오류와 달리 초기화되지 않은 DLL 사용은 이 MDA를 사용하지 않으면 진단하기가 매우 어렵습니다.  
   
 ## <a name="cause"></a>원인  
- .NET Framework 버전 1.0 또는 1.1용으로 빌드된 혼합 관리/관리되지 않는 C++ 어셈블리에서는 특별하게 주의를 기울이는 경우가 아니면(예: **/NOENTRY**와 링크) 일반적으로 로더 잠금 내의 관리 코드를 실행하려고 시도합니다.  이러한 문제점에 대한 자세한 설명은 MSDN 라이브러리의 “혼합 DLL 로딩 문제점”을 참조하세요.  
+ .NET Framework 버전 1.0 또는 1.1용으로 빌드된 혼합 관리/관리되지 않는 C++ 어셈블리에서는 특별하게 주의를 기울이는 경우가 아니면(예: **/NOENTRY**와 링크) 일반적으로 로더 잠금 내의 관리 코드를 실행하려고 시도합니다.
   
  .NET Framework 버전 2.0용으로 빌드된 혼합된 관리/관리되지 않는 C++ 어셈블리에서는 이러한 문제점이 발생할 가능성이 적으며, 운영 체제의 규칙을 위반하는 관리되지 않는 DLL을 사용하는 응용 프로그램과 마찬가지로 위험이 줄어듭니다.  예를 들어, 관리되지 않는 DLL의 `DllMain` 진입점에서 `CoCreateInstance`를 호출하여 COM에 노출된 관리되는 오브젝트를 확보하는 경우 결과적으로 로더 잠금 내에서 관리 코드를 실행하려고 시도합니다. .NET Framework 버전 2.0 이상의 로더 잠금 문제점에 대한 자세한 내용은 [혼합 어셈블리 초기화](/cpp/dotnet/initialization-of-mixed-assemblies)를 참조하세요.  
   
@@ -72,4 +65,3 @@ ms.lasthandoff: 08/21/2017
   
 ## <a name="see-also"></a>참고 항목  
  [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-
