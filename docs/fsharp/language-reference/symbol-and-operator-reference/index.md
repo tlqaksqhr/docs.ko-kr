@@ -1,6 +1,6 @@
 ---
 title: "기호 및 연산자 참조(F#)"
-description: "기호 및 연산자 참조(F#)"
+description: "기호 및 F # 프로그래밍 언어에서 사용 되는 연산자에 알아봅니다."
 keywords: "visual f#, f#, 함수형 프로그래밍"
 author: cartermp
 ms.author: phcart
@@ -10,13 +10,12 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ab453800-d4d0-4a11-9d55-2b358d56af27
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: 514dc37dce3df3f40ae99ce55772b0c4e8deb95f
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: d1000e991a6c07693f2e639ee8f0a386d53a2aae
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="symbol-and-operator-reference"></a>기호 및 연산자 참조
 
 > [!NOTE]
@@ -139,7 +138,7 @@ ms.lasthandoff: 04/05/2017
 |`or`, <code>&#124;&#124;</code>|왼쪽|
 |`&`, `&&`|왼쪽|
 |`:>`, `:?>`|오른쪽|
-|`!=`*연산자*, `<`*연산자*, `>`*연산자*, `=`, <code>&#124;</code>*연산자*, `&`*연산자*, `&`<br /><br />(`<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&` 포함)|왼쪽|
+|`!=`*op*, `<` *op*, `>` *op*, `=`, <code>&#124;</code> *op*, `&`  *op*,`&`<br /><br />(`<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&` 포함)|왼쪽|
 |`^`*연산자*<br /><br />(`^^^` 포함)|오른쪽|
 |`::`|오른쪽|
 |`:?`|결합성 없음|
@@ -158,4 +157,3 @@ F#에서는 사용자 지정 연산자 오버로드를 지원합니다. 즉, 고
 [F# 언어 참조](../index.md)
 
 [연산자 오버로드](../operator-overloading.md)
-

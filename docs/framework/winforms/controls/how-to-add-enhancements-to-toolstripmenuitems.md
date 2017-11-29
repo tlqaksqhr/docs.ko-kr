@@ -1,96 +1,98 @@
 ---
-title: "방법: ToolStripMenuItems에 향상된 기능 추가 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "확인 표시, 메뉴에 추가"
-  - "명령[Windows Forms], 메뉴에 그룹화"
-  - "이미지[Windows Forms], 메뉴에 추가"
-  - "바로 가기 키, 메뉴에 표시"
-  - "메뉴 항목, 확인 표시 추가"
-  - "메뉴 항목, 이미지 추가"
-  - "메뉴 항목, 선택키 표시"
-  - "메뉴 항목, 바로 가기 키 표시"
-  - "메뉴 항목, 구분선 표시"
-  - "메뉴, 명령 그룹화"
-  - "구분 문자, 메뉴에 표시"
-  - "ToolStripMenuItems"
-  - "ToolStripMenuItems, 확인 표시 추가"
-  - "ToolStripMenuItems, 이미지 추가"
-  - "ToolStripMenuItems, 선택키 표시"
-  - "ToolStripMenuItems, 바로 가기 키 표시"
-  - "ToolStripMenuItems, 구분줄 표시"
-  - "ToolStripSeparators, MenuStrip에 표시"
+title: "방법: ToolStripMenuItems에 향상된 기능 추가"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- commands [Windows Forms], grouping on menus
+- check marks [Windows Forms], adding to menus
+- ToolStripMenuItems [Windows Forms], displaying access keys
+- menus [Windows Forms], grouping commands
+- menu items [Windows Forms], displaying shortcut keys
+- ToolStripMenuItems
+- separators [Windows Forms], displaying on menus
+- menu items [Windows Forms], showing separators
+- menu items [Windows Forms], adding check marks
+- ToolStripMenuItems [Windows Forms], adding check marks
+- menu items [Windows Forms], adding images
+- ToolStripSeparators [Windows Forms], displaying on MenuStrips
+- menu items [Windows Forms], displaying access keys
+- ToolStripMenuItems [Windows Forms], displaying shortcut keys
+- ToolStripMenuItems [Windows Forms], adding images
+- keyboard shortcuts [Windows Forms], displaying on menus
+- images [Windows Forms], adding to menus
+- ToolStripMenuItems [Windows Forms], showing separator bars
 ms.assetid: aa5f19bb-b545-4378-bfa6-36ba592f0d7c
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2701094ffcbcf7eeb14444163b995816398876fe
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: ToolStripMenuItems에 향상된 기능 추가
-다음과 같은 방법으로 <xref:System.Windows.Forms.MenuStrip> 및 <xref:System.Windows.Forms.ContextMenuStrip> 컨트롤의 유용성을 향상시킬 수 있습니다.  
+# <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>방법: ToolStripMenuItems에 향상된 기능 추가
+유용성을 향상 시킬 수 있습니다 <xref:System.Windows.Forms.MenuStrip> 및 <xref:System.Windows.Forms.ContextMenuStrip> 다음과 같은 방법으로 제어 합니다.  
   
--   확인 표시를 추가하여 워드프로세서 응용 프로그램의 여백 눈금자 표시 여부와 같이 기능의 설정 또는 해제 상태를 지정하거나 파일 목록 중 **창** 메뉴 등에 표시되는 파일을 나타냅니다.  
+-   확인 표시는 눈금자 워드 프로세서의 여백 표시 되는지 여부와 같은 설정 / 해제는 기능이 설정 되어 있는지 여부를 지정 하거나 되는 파일의 파일 목록에 표시 되는 등에서 다음으로 나타내려면 추가 **창** 메뉴입니다.  
   
--   메뉴 명령을 시각적으로 나타내는 이미지를 추가합니다.  
+-   메뉴 명령에 시각적으로 나타내는 이미지를 추가 합니다.  
   
--   명령을 수행하는 데 키보드에서 마우스 대신 사용할 수 있는 바로 가기 키를 표시합니다.  예를 들어, Ctrl\+C를 누르면 **Copy** 명령이 수행됩니다.  
+-   명령을 수행 하기 위한 마우스에 키보드 대신 사용할 수 있도록 바로 가기 키를 표시 합니다. CTRL + C를 수행 하는 예를 들어는 **복사** 명령입니다.  
   
--   메뉴를 탐색하는 데 키보드에서 마우스 대신 사용할 수 있는 선택키를 표시합니다.  예를 들어, Alt\+F를 누르면 **파일** 메뉴가 선택됩니다.  
+-   탐색 메뉴에 대 한 마우스에 키보드 대신 사용할 수 있도록 선택 키를 표시 합니다. 예를 들어 ALT + F를 누르면 선택은 **파일** 메뉴.  
   
--   구분줄을 통해 관련된 명령을 그룹화하여 메뉴를 보다 읽기 쉽게 만듭니다.  
+-   관련된 명령을 그룹화 하 고 메뉴를 더 쉽게 읽을 수 있도록 하려면 구분선을 표시 합니다.  
   
-### 메뉴 명령에 확인 표시를 표시하려면  
+### <a name="to-display-a-check-mark-on-a-menu-command"></a>메뉴 명령에 확인 표시를 표시 하려면  
   
--   <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> 속성을 `true`로 설정합니다.  
+-   설정의 <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> 속성을 `true`합니다.  
   
-     또한 <xref:System.Windows.Forms.ToolStripMenuItem.CheckState%2A> 속성을 `true`로 설정합니다.  메뉴 명령의 선택 여부에 관계없이 메뉴 명령이 기본적으로 선택된 것으로 나타나게 하려는 경우에만 이 절차를 수행합니다.  
+     설정의 <xref:System.Windows.Forms.ToolStripMenuItem.CheckState%2A> 속성을 `true`합니다. 메뉴 명령에서 선택 되었는지 여부에 관계 없이 기본적으로 선택 된 상태로 표시 하려는 경우에이 절차를 사용 합니다.  
   
-### 클릭할 때마다 상태를 변경하는 확인 표시를 표시하려면  
+### <a name="to-display-a-check-mark-that-changes-state-with-each-click"></a>클릭할 때마다 상태를 변경 하는 확인 표시가 표시 하려면  
   
--   메뉴 명령의 <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> 속성을 `true`로 설정합니다.  
+-   설정 메뉴 명령 <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> 속성을 `true`합니다.  
   
-### 메뉴 명령에 이미지를 추가하려면  
+### <a name="to-add-an-image-to-a-menu-command"></a>메뉴 명령에 이미지를 추가 하려면  
   
--   메뉴 명령의 <xref:System.Windows.Forms.ToolStripItem.Image%2A> 속성을 이미지의 이름으로 설정합니다.  이 메뉴 명령의 <xref:System.Windows.Forms.ToolStripItemDisplayStyle> 속성이 <xref:System.Windows.Forms.ToolStripItemDisplayStyle> 또는 <xref:System.Windows.Forms.ToolStripItemDisplayStyle>으로 설정된 경우 이미지를 표시할 수 없습니다.  
-  
-> [!NOTE]
->  필요한 경우 이미지 여백에 확인 표시를 표시할 수도 있습니다.  또한 이미지의 <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> 속성을 `true`로 설정하여 런타임에 이미지 주위에 사선 테두리가 나타나도록 할 수 있습니다.  
-  
-### 메뉴 명령에 대한 바로 가기 키를 표시하려면  
-  
--   메뉴 명령의 <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A> 속성을 원하는 키보드 조합으로 설정\(예: **열기** 메뉴의 경우 Ctrl\+O\)하고 <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> 속성을 `true`로 설정합니다.  
-  
-### 메뉴 명령에 대한 사용자 지정 바로 가기 키를 표시하려면  
-  
--   메뉴 명령의 <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeyDisplayString%2A> 속성을 원하는 키보드 조합으로 설정\(예: Shift\+Ctrl\+O가 아닌 Ctrl\+Shift\+O\)하고 <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> 속성을 `true`로 설정합니다.  
-  
-### 메뉴 명령에 대한 선택키를 표시하려면  
-  
--   메뉴 명령에 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 속성을 설정하는 경우 밑줄을 표시하여 선택키임을 나타내려는 문자 앞에 앰퍼샌드\(&\)를 입력합니다.  예를 들어, 메뉴 항목의 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 속성으로 `&Open` 을 입력하면 메뉴 명령에 **O**pen으로 나타납니다.  
-  
-     이 메뉴 명령을 탐색하려면 Alt 키를 눌러 <xref:System.Windows.Forms.MenuStrip>으로 포커스를 이동한 다음 해당 메뉴 이름의 선택키를 누릅니다.  메뉴가 열리고 선택키가 있는 항목이 표시되면 선택키만 눌러도 메뉴 명령을 선택할 수 있습니다.  
+-   설정 메뉴 명령 <xref:System.Windows.Forms.ToolStripItem.Image%2A> 속성을 이미지의 이름입니다. 경우는 <xref:System.Windows.Forms.ToolStripItemDisplayStyle> 이 메뉴 명령의 속성이로 설정 되어 <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> 또는 <xref:System.Windows.Forms.ToolStripItemDisplayStyle.None>, 이미지를 표시할 수 없습니다.  
   
 > [!NOTE]
->  동일한 메뉴 시스템에서 Alt\+F를 두 번 정의하는 것과 같이 중복된 선택키를 정의하지 마십시오.  중복 선택키를 정의하는 경우 선택 순서는 알 수 없습니다.  
+>  이미지 여백을 표시할 수도 확인 표시가 필요한 경우. 또한, 설정할 수 있습니다는 <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> 이미지의 속성 `true`, 실행 시으로 해치 테두리가 이미지가 표시 됩니다.  
   
-### 메뉴 명령 사이에 구분줄을 표시하려면  
+### <a name="to-display-a-shortcut-key-for-a-menu-command"></a>메뉴 명령에 대 한 바로 가기 키를 표시 하려면  
   
--   <xref:System.Windows.Forms.MenuStrip> 및 여기에 포함될 항목을 정의한 다음 <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> 또는 <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> 메서드를 사용하여 원하는 순서대로 메뉴 명령 및 <xref:System.Windows.Forms.ToolStripSeparator> 컨트롤을 <xref:System.Windows.Forms.MenuStrip>에 추가합니다.  
+-   설정 메뉴 명령 <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A> 속성에서 원하는 키보드 조합 CTRL + O 같은 **열려** 메뉴 명령 및 집합의 <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> 속성을 `true`합니다.  
   
-     \[Visual Basic\]  
+### <a name="to-display-custom-shortcut-keys-for-a-menu-command"></a>메뉴 명령에 대 한 사용자 지정 바로 가기 키를 표시 하려면  
   
-    ```  
+-   설정 메뉴 명령 <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeyDisplayString%2A> 속성에서 원하는 키보드 조합 CTRL + SHIFT + O 보다는 SHIFT + CTRL + O, 집합 등의 <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> 속성을 `true`합니다.  
+  
+### <a name="to-display-an-access-key-for-a-menu-command"></a>메뉴 명령에 대 한 선택 키를 표시 하려면  
+  
+-   설정 하는 경우는 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 메뉴 명령에 대 한 속성 입력 앰퍼샌드 (&) 선택 키 밑줄을 표시 하려면 문자 앞입니다. 예를 들어 입력 `&Open` 로 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 메뉴 항목의 속성으로 표시 되는 메뉴 명령에서 발생 합니다 **O**펜입니다.  
+  
+     이 메뉴 명령이 이동 하려면 ALT 키를 눌러 포커스는 <xref:System.Windows.Forms.MenuStrip>, 메뉴 이름의 선택 키를 누릅니다. 메뉴 선택 키를 가진 항목이 표시을 열고, 액세스 키를 눌러 메뉴 명령이 선택 하기만 하면 됩니다.  
+  
+> [!NOTE]
+>  ALT + F를 동일한 메뉴 시스템에서 두 번 정의 하는 등의 중복 된 선택 키를 정의 하지 마십시오. 중복 된 선택 키의 선택 순서를 보장할 수 없습니다.  
+  
+### <a name="to-display-a-separator-bar-between-menu-commands"></a>메뉴 명령 사이 구분 기호 막대를 표시 하려면  
+  
+-   정의 하 고 나면 사용자 <xref:System.Windows.Forms.MenuStrip> 및 여기에 포함 될 항목 사용의 <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> 또는 <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> 메뉴 명령을 추가 하는 메서드 및 <xref:System.Windows.Forms.ToolStripSeparator> 컨트롤을 <xref:System.Windows.Forms.MenuStrip> 원하는 순서로 합니다.  
+  
+    ```vb  
     ' This code adds a top-level File menu to the MenuStrip.  
     Me.menuStrip1.Items.Add(New ToolStripMenuItem() _  
     {Me.fileToolStripMenuItem})  
@@ -102,12 +104,9 @@ caps.handback.revision: 10
     ToolStripMenuItem() {Me.newToolStripMenuItem, _  
     Me.openToolStripMenuItem, Me.toolStripSeparator1, _  
     Me.saveToolStripMenuItem, Me.exitToolStripMenuItem})  
-  
     ```  
   
-     \[C\#\]  
-  
-    ```  
+    ```csharp  
     // This code adds a top-level File menu to the MenuStrip.  
     this.menuStrip1.Items.Add(new ToolStripItem[]_  
     {this.fileToolStripMenuItem});  
@@ -124,7 +123,7 @@ caps.handback.revision: 10
     this.exitToolStripMenuItem});  
     ```  
   
-## 참고 항목  
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ToolStripMenuItem>   
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ToolStripMenuItem>  
  [MenuStrip 컨트롤 개요](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

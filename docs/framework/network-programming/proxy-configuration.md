@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - Networking
 - adaptive proxies
@@ -22,16 +17,15 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: d2576050310c9b1926ee413e4fb1bbcf0c4bf4be
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: b543097d0fc85c502bd36f22225958f9239ccd71
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="proxy-configuration"></a>프록시 구성
 프록시 서버는 리소스에 대한 클라이언트 요청을 처리합니다. 프록시는 해당 캐시에서 요청한 리소스를 반환하거나 리소스가 있는 서버로 요청을 전달할 수 있으며, 원격 서버로 전송되는 요청 수를 줄여 네트워크 성능을 개선할 수 있습니다. 프록시를 사용하여 리소스에 대한 액세스를 제한할 수도 있습니다.  
@@ -113,7 +107,6 @@ ms.lasthandoff: 08/21/2017
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Net.WebProxy>   
- <xref:System.Net.GlobalProxySelection>   
+ <xref:System.Net.WebProxy>  
+ <xref:System.Net.GlobalProxySelection>  
  [자동 프록시 검색](../../../docs/framework/network-programming/automatic-proxy-detection.md)
-

@@ -1,43 +1,47 @@
 ---
-title: "Windows Workflow 설명서에 대한 안내 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WF [WF], 안내"
-  - "Windows Workflow Foundation [WF], 안내"
+title: "Windows Workflow 설명서에 대한 안내"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WF [WF], guide to
+- Windows Workflow Foundation [WF], guide to
 ms.assetid: a75025be-f225-430f-90cf-98f7022db436
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 55859cb83c98c28ced862a66bd56dd86a828c1fc
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# Windows Workflow 설명서에 대한 안내
-이 항목에서는 Windows Workflow Foundation 설명서를 사용하는 방법을 설명합니다.구체적인 관심사와 지식 수준에 따라 그룹화된 링크 문서부터 보시는 것이 좋습니다.  
+# <a name="guide-to-the-windows-workflow-documentation"></a>Windows Workflow 설명서에 대한 안내
+이 항목에서는 Windows Workflow Foundation 설명서를 사용하는 방법을 설명합니다. 구체적인 관심사와 지식 수준에 따라 그룹화된 링크 문서부터 보시는 것이 좋습니다.  
   
-## Windows Workflow Foundation 프로그래밍을 처음 사용하는 경우  
+## <a name="new-to-windows-workflow-foundation-programming"></a>Windows Workflow Foundation 프로그래밍을 처음 사용하는 경우  
   
--   Windows Workflow Foundation을 사용하여 처음으로 프로그래밍하는 경우 샘플 응용 프로그램의 작동 방식을 보기만 하려면 [Windows Workflow 샘플](../../../docs/framework/windows-workflow-foundation/samples/index.md)에 나열된 항목을 참조하십시오.  
+-   Windows Workflow Foundation를 사용한 프로그래밍을 처음 사용 하려는 경우 작업, 아래 나열 된 항목을 참조 하는 몇 가지 예제 응용 프로그램을 확인 하려면 [Windows Workflow 샘플](../../../docs/framework/windows-workflow-foundation/samples/index.md)합니다.  
   
--   다양한 Windows Workflow Foundation 흐름 제어 모델에 대한 자세한 내용은 [워크플로 디자인](../../../docs/framework/windows-workflow-foundation//designing-workflows.md)을 참조하십시오.  
+-   다양 한 Windows Workflow Foundation 흐름 제어 모델의 논의 알려면 [워크플로 디자인](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)합니다.  
   
--   Windows Workflow Foundation 응용 프로그램을 만드는 기본 단계를 안내하는 자습서는 [초보자를 위한 자습서](../../../docs/framework/windows-workflow-foundation//getting-started-tutorial.md)를 참조하십시오.  
+-   에서 Windows Workflow Foundation 응용 프로그램을 만드는 기본 단계를 안내 하는 방법에 대 한 참조 [초보자를 위한 자습서](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)합니다.  
   
--   Windows Workflow Foundation의 개념에 관심이 있는 경우에는 [Windows Workflow 개념적 개요](../../../docs/framework/windows-workflow-foundation//conceptual-overview.md) 단원의 항목을 참조하십시오.  
+-   Windows Workflow Foundation 개념에 관심이의 항목을 참조는 [Windows Workflow 개념적 개요](../../../docs/framework/windows-workflow-foundation/conceptual-overview.md) 섹션.  
   
--   Windows Workflow Foundation 설명서에서 사용되는 용어 목록은 [.NET Framework 4.5용 Windows Workflow Foundation 용어집](../../../docs/framework/windows-workflow-foundation//glossary.md)을 참조하십시오.  
+-   Windows Workflow Foundation 설명서에서 사용 되는 용어 목록은 참조 [.NET Framework 4.5에 대 한 Windows Workflow Foundation 용어집](../../../docs/framework/windows-workflow-foundation/glossary.md)합니다.  
   
--   새로운 개념 및 기능 목록은 [Windows Workflow Foundation의 새로운 기능](../../../docs/framework/windows-workflow-foundation//whats-new.md)을 참조하십시오.  
+-   새로운 개념 및 기능 목록에 대 한 참조 [Windows Workflow Foundation의 새로운](../../../docs/framework/windows-workflow-foundation/whats-new.md)합니다.  
   
-## 세부 프로그래밍  
+## <a name="programming-in-depth"></a>세부 프로그래밍  
   
--   Windows Workflow Foundation 개체 모델에 대한 자세한 내용은 [Windows Workflow 아키텍처](../../../docs/framework/windows-workflow-foundation//architecture.md)를 참조하십시오.  
+-   Windows Workflow Foundation 개체 모델의 심도 있는 논의 알려면 [Windows Workflow 아키텍처](../../../docs/framework/windows-workflow-foundation/architecture.md)합니다.  
   
--   응용 프로그램 개발을 시작하려면 [Windows Workflow Foundation 프로그래밍](../../../docs/framework/windows-workflow-foundation//programming.md)을 참조하십시오.  
+-   참조, 응용 프로그램 개발을 시작할 준비가 된 경우 [Windows Workflow Foundation 프로그래밍](../../../docs/framework/windows-workflow-foundation/programming.md)합니다.  
   
--   사용자 요구 사항에 맞게 Windows Workflow Foundation을 확장하거나 사용자 지정하려는 경우 [Windows Workflow Foundation 확장](../../../docs/framework/windows-workflow-foundation//extend.md)을 참조하십시오.
+-   확장 요구 사항에 따라 즉, Windows Workflow Foundation 사용자 지정 하거나 원하는 경우 [Windows Workflow Foundation 확장](../../../docs/framework/windows-workflow-foundation/extend.md)합니다.

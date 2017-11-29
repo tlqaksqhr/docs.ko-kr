@@ -1,103 +1,102 @@
 ---
-title: "Array Dimensions in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "dimensions, arrays"
-  - "arrays [Visual Basic], dimensions"
-  - "arrays [Visual Basic], rectangular"
-  - "arrays [Visual Basic], rank"
-  - "rectangular arrays"
-  - "ranking, arrays"
+title: Array Dimensions in Visual Basic
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- dimensions, arrays
+- arrays [Visual Basic], dimensions
+- arrays [Visual Basic], rectangular
+- arrays [Visual Basic], rank
+- rectangular arrays
+- ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 21e170ca5942862a26e05428fffaea7d1e875e19
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Array Dimensions in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-*차원*은 배열 요소의 사양이 달라질 수 있는 방향입니다.  특정 달의 날짜별 총 판매액이 들어 있는 배열은 해당 달의 날짜에 해당하는 차원을 하나 갖습니다.  특정 달의 부서별 매일 총 판매액이 들어 있는 배열은 부서 번호와 해당 달의 날짜에 해당하는 두 개의 차원을 갖습니다.  배열의 차원 수를 *차수*라고 합니다.  
+# <a name="array-dimensions-in-visual-basic"></a>Array Dimensions in Visual Basic
+A *차원* 은 방향 배열 요소의 사양을 변경할 수 있습니다. 각 날짜의 월에 대 한 총 판매를 포함 하는 배열에는 1 차원 (해당 월의 일)에 있습니다. 총 판매액이 들어 부서별로 각 날짜의 월에 대 한 배열 차원이 두 개 (부서 번호 및 월의 일). 배열의 차원 수 라고 해당 *순위*합니다.  
   
 > [!NOTE]
->  <xref:System.Array.Rank%2A> 속성을 사용하여 배열에 있는 차원의 수를 확인할 수 있습니다.  
+>  사용할 수는 <xref:System.Array.Rank%2A> 배열이 차원 수를 결정 하는 속성입니다.  
   
-## 차원 사용  
- 배열의 각 차원에 대한 *인덱스*나 *첨자*를 지정하여 배열 요소를 지정할 수 있습니다.  요소는 각 차원에서 인덱스 0부터 해당 차원의 가장 높은 인덱스까지 연속되어 있습니다.  
+## <a name="working-with-dimensions"></a>차원 작업  
+ 배열의 요소를 제공 하 여 지정 된 *인덱스* 또는 *아래 첨자* 배열의 각 차원에 대 한 합니다. 요소는 해당 차원에 대 한 가장 높은 인덱스를 인덱스 0에서에서 각 차원에 따라 연속입니다.  
   
- 다음 그림에서는 여러 차수의 배열에 대한 개념적 구조를 보여 줍니다.  그림의 각 요소는 해당 요소에 액세스하는 인덱스 값을 보여 줍니다.  예를 들어, 인덱스 `(1, 0)`을 지정하면 2차원 배열의 두 번째 행에 있는 첫 번째 요소에 액세스할 수 있습니다.  
+ 다음 그림의 순위에 다른 배열 개념적 구조를 보여줍니다. 각 요소는 그림에 액세스 하는 인덱스 값을 보여 줍니다. 예를 들어 2 차원 배열의 두 번째 행의 첫 번째 요소 인덱스를 지정 하 여 액세스할 수 있습니다 `(1, 0)`합니다.  
   
- ![1차원 배열의 그래픽 다이어그램](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.png "ArrayExDimOne")  
-1차원 배열  
+ ![1 &#45;그래픽 다이어그램; 차원 배열](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
+1 차원 배열  
   
- ![2차원 배열의 그래픽 다이어그램](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
-2차원 배열  
+ ![2 &#45;그래픽 다이어그램; 차원 배열](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
+2 차원 배열  
   
- ![3차원 배열의 그래픽 다이어그램](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.png "ArrayExDimThree")  
-3차원 배열  
+ ![3 &#45;그래픽 다이어그램; 차원 배열](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
+3 차원 배열  
   
-### 1차원  
- 대부분의 배열은 1차 배열이며, 이러한 배열의 예로는 각 나이에 해당하는 사람 수를 나타내는 배열이 있습니다.  이 경우 요소를 지정하는 데 필요한 유일한 요건은 카운트를 보유하는 대상인 나이입니다.  따라서 이러한 배열에서는 인덱스를 하나만 사용합니다.  다음 예제에서는 나이 0부터 120까지에 대한 나이 카운트가 들어 있는 *1차원 배열*을 보유하는 변수를 선언합니다.  
+### <a name="one-dimension"></a>차원이 두 개  
+ 많은 배열을는 각 나이 사용자 수와 같이 차원이 하나만 있어야 합니다. 요소를 지정 하는 유일한 요구 사항은 나가는 해당 요소의 개수를 보유 합니다. 따라서 이러한 배열 인덱스는 하나만 사용합니다. 다음 예제에서는 선언 보유 하는 변수는 *1 차원 배열* age의 나가 120 사이의 0에 대 한 계산 합니다.  
   
 ```  
 Dim ageCounts(120) As UInteger  
 ```  
   
-### 2차원  
- 일부 배열은 교내 각 건물의 각 층에 있는 사무실 수가 들어 있는 배열과 같이 2차원 배열입니다.  요소를 지정할 때는 건물 번호와 층이 모두 필요하며 각 요소가 건물과 층의 조합에 대한 카운트를 보유해야 합니다.  따라서 이러한 배열에서는 두 개의 인덱스를 사용합니다.  다음 예제에서는 건물 0~ 40과 층 0~5에 대한 사무실 카운트가 들어 있는 *2차원 배열*을 보유하는 변수를 선언합니다.  
+### <a name="two-dimensions"></a>2 차원  
+ 일부 배열은 있는 캠퍼스 각 건물의 각 층에서 사무실의 수와 같은 두 개의 차원입니다. 요소를 지정할 건물 번호와 층이 모두를 차지 하며 각 요소를 함께 건물과 층의 개수를 보유 합니다. 따라서 이러한 배열에서는 두 개의 인덱스를 사용 합니다. 다음 예제에서는 보유 하는 변수를 선언는 *2 차원 배열* 0 ~ 40 건물과 층 0 ~ 5에 대 한 office 카운트 합니다.  
   
 ```  
 Dim officeCounts(40, 5) As Byte  
 ```  
   
- 2차원 배열을 *사각형 배열*이라고도 합니다.  
+ 2 차원 배열을 라고도 *사각형 배열을*합니다.  
   
-### 3차원  
- 일부 배열은 3차원 공간의 값이 들어 있는 배열과 같이 3차원 배열입니다.  이러한 배열에서는 세 개의 인덱스를 사용하며 위 배열의 경우 각 인덱스는 물리적 공간의 x, y 및 z 좌표를 나타냅니다.  다음 예제에서는 3차원 공간의 여러 지점에서 측정한 온도가 들어 있는 *3차원 배열*을 보유하는 변수를 선언합니다.  
+### <a name="three-dimensions"></a>3 차원  
+ 몇 가지 배열은 있는 3d 공간에서 값과 같은 3 차원입니다. 이러한 배열은 경우 x, y 및 z 좌표 물리적 공간을 나타내는 세 개의 인덱스를 사용 합니다. 다음 예제에서는 보유 하는 변수를 선언는 *3 차원 배열을* 한 다양 한 시점에서 차원 공간의 온도가 합니다.  
   
 ```  
 Dim airTemperatures(99, 99, 24) As Single  
 ```  
   
-### 4차원 이상  
- 배열에는 최대 32개의 차원이 있을 수 있지만 4차원 이상을 사용하는 경우는 거의 없습니다.  
+### <a name="more-than-three-dimensions"></a>4 개 이상의 차원  
+ 배열 32 차원을 수 있지만에 거의 3 개를 초과 합니다.  
   
 > [!NOTE]
->  배열에 차원을 추가하면 배열에 필요한 전체 저장 공간이 상당히 늘어나므로 다차원 배열은 신중하게 사용해야 합니다.  
+>  배열에 차원을 추가 하면 상당히 다차원 배열은 주의 하 여 배열에 필요한 총 저장소 증가 합니다.  
   
-## 다른 차원 사용  
- 현재 월의 매일 총 판매액을 추적하려는 경우  다음 예제와 같이 해당 월의 각 날짜에 해당하는 31개의 요소가 있는 1차원 배열을 선언할 수 있습니다.  
+## <a name="using-different-dimensions"></a>다른 차원 사용  
+ 현재 월의 모든 날에 대 한 판매 금액을 추적 하 고 한다고 가정 합니다. 다음 예제와 같이 해당 월의 각 날짜에 대 한 한 표시 31 요소는 1 차원 배열을 선언할 수 있습니다.  
   
 ```  
 Dim salesAmounts(30) As Double  
 ```  
   
- 특정 달의 모든 날짜뿐 아니라 특정 연도의 모든 월에 대해서도 동일한 정보를 추적하려는 경우  다음 예제와 같이 월을 나타내는 12개의 행과 날짜를 나타내는 31개의 열이 있는 2차원 배열을 선언할 수 있습니다.  
+ 이제 한 달의 뿐만 아니라 해당 연도의 매월을 매일 뿐만 아니라 동일한 정보를 추적 하려는 경우 다음과 같이 합니다. 다음 예제와 같이 (개월)에 대 한 12 개의 행과 31 열 일)에 대 한 2 차원 배열을 선언할 수 있습니다.  
   
 ```  
 Dim salesAmounts(11, 30) As Double  
 ```  
   
- 1년 이상의 기간에 대한 정보를 보유하는 배열을 만들 수도 있습니다.  예를 들어, 5년 동안의 총 판매액을 추적하려는 경우 다음 예제와 같이 5개의 레이어, 12개의 행 및 31개의 열이 있는 3차원 배열을 선언할 수 있습니다.  
+ 현재 사용 하기로 결정할 경우를 가정해 볼 배열 1 년 이상에 대 한 정보를 포함 합니다. 5 년에 대 한 총 판매액을 추적 하려는 경우 다음 예제와 같이 5 개의 레이어, 12 개의 행과 31 열이 있는 3 차원 배열을 선언할 수 있습니다.  
   
 ```  
 Dim salesAmounts(4, 11, 30) As Double  
 ```  
   
- 각 인덱스는 0부터 최대값까지 변화하므로 `salesAmounts`의 각 차원은 해당 차원에 필요한 길이보다 1만큼 작게 선언됩니다.  배열의 크기는 새 차원을 추가할 때마다 증가합니다.  위 예제에서 세 차원의 크기\(요소 수\)는 각각 31, 372 및 1,860입니다.  
+ 각 인덱스 0에서 최대값의 각 차원 다릅니다 때문에 `salesAmounts` 해당 차원에 필요한 길이 보다 1 작은 값으로 선언 됩니다. 배열의 크기 각 새 차원에 따라 카운터가 증가 또한 note 합니다. 이전 예제에서 세 가지 크기만 각각 31, 372, 및 1,860 요소입니다.  
   
 > [!NOTE]
->  `Dim` 문 또는 `New` 절을 사용하지 않고도 배열을 만들 수 있습니다.  예를 들어, <xref:System.Array.CreateInstance%2A> 메서드를 호출하거나 다른 구성 요소에서 코드에 이 방식으로 만든 배열을 전달할 수 있습니다.  이러한 배열의 하한은 0이 아닐 수 있습니다.  언제든지 <xref:System.Array.GetLowerBound%2A> 메서드나 `LBound` 함수를 사용하여 차원의 하한을 테스트할 수 있습니다.  
+>  사용 하지 않고 배열을 만들 수는 `Dim` 문 또는 `New` 절. 예를 들어, 호출할 수 있습니다는 <xref:System.Array.CreateInstance%2A> 메서드 또는 다른 구성 요소 배열을 전달할 수 코드 이런이 방식으로 생성 합니다. 이러한 배열은 0이 아닌 있을 수 있습니다. 사용 하 여 차원의 최소치 항상 테스트할 수 있습니다는 <xref:System.Array.GetLowerBound%2A> 메서드 또는 `LBound` 함수입니다.  
   
-## 참고 항목  
- [배열](../../../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [Troubleshooting Arrays](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
+## <a name="see-also"></a>참고 항목  
+ [배열](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [배열 문제 해결](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)

@@ -1,39 +1,38 @@
 ---
-title: "&lt;list&gt; (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "listheader XML tag"
-  - "<item> XML tag"
-  - "<list> XML tag"
-  - "<listheader> XML tag"
-  - "term XML tag"
-  - "list XML tag"
-  - "<description> XML tag"
-  - "description XML tag"
-  - "item XML tag"
-  - "<term> XML tag"
+title: "&lt;목록&gt; (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- listheader XML tag
+- <item> XML tag
+- <list> XML tag
+- <listheader> XML tag
+- term XML tag
+- list XML tag
+- <description> XML tag
+- description XML tag
+- item XML tag
+- <term> XML tag
 ms.assetid: ec35fced-d58e-4520-a764-0691256e014b
-caps.latest.revision: 12
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 34347df88f1bc3097db0020526ec99943c8f7bd4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;list&gt; (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-목록이나 테이블을 정의합니다.  
+# <a name="ltlistgt-visual-basic"></a>&lt;목록&gt; (Visual Basic)
+목록 또는 테이블을 정의합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
-```  
+```xml  
 <list type="type">  
    <listheader>  
       <term>term</term>  
@@ -46,29 +45,29 @@ caps.handback.revision: 12
 </list>  
 ```  
   
-#### 매개 변수  
+#### <a name="parameters"></a>매개 변수  
  `type`  
- 목록의 형식입니다.  글머리 기호 목록의 경우는 "bullet", 번호 매기기 목록의 경우는 "number", 두 개의 열로 이루어진 테이블의 경우는 "table"이어야 합니다.  
+ 형식 목록입니다. 글머리 기호 목록, 번호 매기기 목록 또는 두 개의 열 테이블에 대 한 "table"에 대 한 "number"에 대 한 "bullet" 이어야 합니다.  
   
  `term`  
- `type`이 "table"일 경우에만 사용됩니다. 정의할 용어로, 설명 태그 안에서 정의됩니다.  
+ 경우에 사용 `type` "table"은 용어를 정의 하려면 설명 태그에 정의 된입니다.  
   
  `description`  
- `type`이 "bullet"이거나 "number"이면 `description`은 목록에 있는 항목이며, `type`이 "table"이면 `description`은 `term`에 대한 정의입니다.  
+ 때 `type` "bullet" 또는 "number" `description` 이 목록에 항목이 때 `type` "table"은 `description` 의 정의가 `term`합니다.  
   
-## 설명  
- `<listheader>` 블록은 테이블이나 정의 목록의 머리글을 정의합니다.  테이블을 정의할 때는 머리글의 `term`에 대한 엔트리만 제공하면 됩니다.  
+## <a name="remarks"></a>설명  
+ `<listheader>` 블록 목록 정의 또는 테이블의 머리글을 정의 합니다. 테이블을 정의할 때만 제공 해야에 대 한 항목이 `term` 머리글에 있습니다.  
   
- 목록의 각 항목은 `<item>` 블록으로 지정합니다.  정의 목록을 만들 때는 `term`과 `description`을 모두 지정해야 합니다.  그러나 테이블, 글머리 기호 목록 또는 번호 매기기 목록의 경우에는 `description`의 엔트리만 제공하면 됩니다.  
+ 목록의 각 항목으로 지정 된 프로그램 `<item>` 블록입니다. 둘 다 지정 해야 정의 목록을 만들 때 `term` 및 `description`합니다. 그러나 테이블, 글머리 기호 목록 또는 번호 매기기 목록에 대 한 하기만 하면에 대 한 항목을 제공 하려면 `description`합니다.  
   
- 목록이나 테이블에 사용할 수 있는 `<item>` 블록의 수에는 제한이 없습니다.  
+ 목록 또는 테이블 만큼 가질 수 `<item>` 필요에 따라 차단 합니다.  
   
- [\/doc](../../../visual-basic/reference/command-line-compiler/doc.md)로 컴파일하여 문서 주석을 파일로 저장합니다.  
+ [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
-## 예제  
- 다음 예제에서는 `<list>` 태그를 사용하여 설명 섹션에 글머리 기호 목록을 정의합니다.  
+## <a name="example"></a>예제  
+ 사용 하 여이 예제는 `<list>` 글머리 기호 목록 주의 섹션에 정의 하는 태그입니다.  
   
  [!code-vb[VbVbcnXmlDocComments#5](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/list_1.vb)]  
   
-## 참고 항목  
- [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+## <a name="see-also"></a>참고 항목  
+ [XML 주석 태그](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)

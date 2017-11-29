@@ -1,23 +1,27 @@
 ---
-title: "비동기 작업에서 오류 처리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "비동기 작업에서 오류 처리"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e8f8ce2b-50c9-4e44-b187-030e0cf30a5d
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7606aeeeb3e2e583f9a217b78bcae4aebc6d8662
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 비동기 작업에서 오류 처리
-<xref:System.Activities.AsyncCodeActivity>에서 오류 처리를 제공하면 활동의 콜백 시스템을 통해 오류를 라우팅합니다.이 항목은 SendMail 활동 샘플을 사용하여 호스트에 비동기 작업에서 throw되는 오류가 발생하는 방법을 설명합니다.  
+# <a name="error-handling-in-asynchronous-activities"></a>비동기 작업에서 오류 처리
+<xref:System.Activities.AsyncCodeActivity>에서 오류 처리를 제공하면 활동의 콜백 시스템을 통해 오류를 라우팅합니다. 이 항목은 SendMail 활동 샘플을 사용하여 호스트에 비동기 작업에서 throw되는 오류가 발생하는 방법을 설명합니다.  
   
-## 호스트에 비동기 활동에서 throw되는 오류 반환  
+## <a name="returning-an-error-thrown-in-an-asynchronous-activity-back-to-the-host"></a>호스트에 비동기 활동에서 throw되는 오류 반환  
  SendMail 활동 샘플에서 호스트에 비동기 작업의 오류를 라우팅하는 것은 다음 단계를 포함합니다.  
   
 -   `SendMailAsyncResult` 클래스에 예외 속성을 추가합니다.  
@@ -52,5 +56,4 @@ class SendMailAsyncResult : IAsyncResult
                 throw sendMailResult.Error;   
         }  
     }  
-  
 ```

@@ -1,6 +1,6 @@
 ---
 title: "예외 처리(F#)"
-description: "예외 처리(F#)"
+description: "F #에서 예외 처리의 기본 사항을 설명 하 고 식과 함수를 처리 하는 예외에 대 한 링크를 찾습니다."
 keywords: "visual f#, f#, 함수형 프로그래밍"
 author: cartermp
 ms.author: phcart
@@ -10,13 +10,12 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ad475c4a-d94e-47d9-b27b-3ff000b65f8e
-translationtype: Human Translation
-ms.sourcegitcommit: 0a01ec92a90d99fafaacbd3f71f5177e5cf94a68
-ms.openlocfilehash: d95aca8c511524f0b9af67b34a5999f885cf3aaf
-ms.lasthandoff: 04/05/2017
-
+ms.openlocfilehash: b61af66e0a70fdf9b86df37418c0284957d1f99e
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-
 # <a name="exception-handling"></a>예외 처리
 
 이 섹션에서는 F# 언어의 예외 처리 지원에 대해 설명합니다.

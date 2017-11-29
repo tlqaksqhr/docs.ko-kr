@@ -1,29 +1,27 @@
 ---
-title: "Default property access is ambiguous between the inherited interface members &#39;&lt;defaultpropertyname&gt;&#39; of interface &#39;&lt;interfacename1&gt;&#39; and &#39;&lt;defaultpropertyname&gt;&#39; of interface &#39;&lt;interfacename2&gt;&#39; | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbc30686"
-  - "bc30686"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC30686"
+title: "기본 속성 액세스가 상속 된 인터페이스 멤버 &#39; 사이의 모호합니다. &lt;defaultpropertyname&gt;&#39; 인터페이스 &#39;&lt; interfacename1&gt;&#39; 및 &#39;&lt; defaultpropertyname&gt;&#39; 인터페이스 &#39;&lt; interfacename2&gt;&#39;"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vbc30686
+- bc30686
+helpviewer_keywords: BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-caps.latest.revision: 13
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 23d613668ee2d92484117759dd614ed2cad4bcb2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# Default property access is ambiguous between the inherited interface members &#39;&lt;defaultpropertyname&gt;&#39; of interface &#39;&lt;interfacename1&gt;&#39; and &#39;&lt;defaultpropertyname&gt;&#39; of interface &#39;&lt;interfacename2&gt;&#39;
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-인터페이스는 각각 이름이 같은 기본 속성을 선언하는 두 인터페이스에서 상속됩니다.  컴파일러에서 한정자 없이 이 기본 속성에 대한 액세스를 확인할 수 없습니다.  다음은 이에 대한 예입니다.  
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename1gt39-and-39ltdefaultpropertynamegt39-of-interface-39ltinterfacename2gt39"></a>기본 속성 액세스가 상속 된 인터페이스 멤버 &#39; 사이의 모호합니다. &lt;defaultpropertyname&gt;&#39; 인터페이스 &#39;&lt; interfacename1&gt;&#39; 및 &#39;&lt; defaultpropertyname&gt;&#39; 인터페이스 &#39;&lt; interfacename2&gt;&#39;
+인터페이스는 각각 같은 이름의 기본 속성을 선언 하는 두 가지 인터페이스에서 상속 됩니다. 컴파일러는 한정 하지 않고이 기본 속성에 대 한 액세스를 확인할 수 없습니다. 다음은 이에 대한 예입니다.  
   
 ```  
 Public Interface Iface1  
@@ -43,13 +41,13 @@ Public Class testClass
 End Class  
 ```  
   
- `testObj(1)`를 지정하면 컴파일러에서 기본 속성으로 확인하려고 하지만,  상속된 인터페이스로 인해 두 개의 기본 속성을 사용할 수 있으므로 컴파일러에서 이 오류를 알립니다.  
+ 지정 하는 경우 `testObj(1)`는 컴파일러의 기본 속성을 확인 하려고 합니다. 그러나 두 개의 사용 가능한 기본 속성은 상속된 된 인터페이스로 인해 하므로 컴파일러가이 오류를이 발생 시킵니다.  
   
  **오류 ID:** BC30686  
   
-### 이 오류를 해결하려면  
+## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   이름이 같은 멤버를 상속하지 않습니다.  앞의 예제에서 `testObj`에 `Iface2` 등의 멤버가 필요 없을 경우 다음과 같이 선언합니다.  
+-   동일한 이름 가진 멤버를 상속 하지 않습니다. 위 예제의 경우 `testObj` 의 멤버는 필요 하지 않습니다, 예를 들어, `Iface2`, 다음과 같이 선언 합니다.  
   
     ```  
     Dim testObj As Iface1  
@@ -57,7 +55,7 @@ End Class
   
      또는  
   
--   상속하는 인터페이스를 클래스에 구현합니다.  그러면 상속된 각 속성을 다른 이름으로 구현할 수 있습니다.  그러나 상속된 속성 중 하나만 구현하는 클래스의 기본 속성이 될 수 있습니다.  다음은 이에 대한 예입니다.  
+-   클래스에서 상속 하는 인터페이스를 구현 합니다. 그런 다음 다른 이름의 상속 된 속성의 각 구현할 수 있습니다. 그러나 그 중 하나만 구현 하는 클래스의 기본 속성을 수 있습니다. 다음은 이에 대한 예입니다.  
   
     ```  
     Public Class useIface3  
@@ -71,5 +69,5 @@ End Class
     End Class  
     ```  
   
-## 참고 항목  
- [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+## <a name="see-also"></a>참고 항목  
+ [인터페이스](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

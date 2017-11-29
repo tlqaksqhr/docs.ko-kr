@@ -1,33 +1,36 @@
 ---
-title: "라우팅 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "라우팅 [WCF]"
-  - "WCF [WCF], 라우팅"
-  - "Windows communication Foundation [WCF], 라우팅"
+title: "라우팅"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- routing [WCF]
+- WCF [WCF], routing
+- Windows communication Foundation [WCF], routing
 ms.assetid: bd56516c-420d-4c4e-97f9-f72d28d149a9
-caps.latest.revision: 7
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 4ea56330e4de55a7acbc6ccca737cd62b8f151d1
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 라우팅
-이 단원의 항목에서는 라우팅 서비스에 대해 설명합니다.  라우팅 서비스는 내용 기반 라우팅을 구성하고, 프로토콜 브리징을 설정하고, 통신 오류를 처리하고, 런타임에 라우팅 논리를 동적으로 업데이트하는 데 사용할 수 있는 구성 가능한 제네릭 SOAP 매개자입니다.  
+# <a name="routing"></a>라우팅
+이 단원의 항목에서는 라우팅 서비스에 대해 설명합니다. 라우팅 서비스는 내용 기반 라우팅을 구성하고, 프로토콜 브리징을 설정하고, 통신 오류를 처리하고, 런타임에 라우팅 논리를 동적으로 업데이트하는 데 사용할 수 있는 구성 가능한 제네릭 SOAP 매개자입니다.  
   
-## 단원 내용  
+## <a name="in-this-section"></a>단원 내용  
  [라우팅 서비스](../../../../docs/framework/wcf/feature-details/routing-service.md)  
  라우팅 서비스의 기능에 대해 간략하게 설명합니다.  
   
- [Routing Service](http://msdn.microsoft.com/ko-kr/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
+ [라우팅 서비스](http://msdn.microsoft.com/en-us/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
  라우팅 서비스의 기능에 대해 설명합니다.  
   
  [라우팅 소개](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  

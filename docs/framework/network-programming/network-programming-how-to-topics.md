@@ -7,27 +7,21 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - network resources
 - networks [.NET Framework], programming how-tos
 - networking how-tos [.NET Framework]
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6e63c65f0ebef37e854bd3cfd62a33e396470a57
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 1b6e63c0db9815c7bcfc32ec962e3f85362cce4f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="network-programming-how-to-topics"></a>네트워크 프로그래밍 방법 항목
 다음 목록에는 네트워크 프로그래밍 개념 문서에 나와 있는 방법 항목에 대한 링크가 들어 있습니다.  
@@ -93,7 +87,6 @@ ms.lasthandoff: 08/21/2017
 -   [방법: 호스트 Ping](../../../docs/framework/network-programming/how-to-ping-a-host.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [.NET Framework의 네트워크 프로그래밍](../../../docs/framework/network-programming/index.md)   
- [네트워크 프로그래밍 샘플](../../../docs/framework/network-programming/network-programming-samples.md)   
+ [.NET Framework의 네트워크 프로그래밍](../../../docs/framework/network-programming/index.md)  
+ [네트워크 프로그래밍 샘플](../../../docs/framework/network-programming/network-programming-samples.md)  
  [MSDN 코드 갤러리의 .NET용 네트워킹 샘플](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
-

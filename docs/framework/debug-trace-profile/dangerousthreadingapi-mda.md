@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - suspending threads
 - DangerousThreadingAPI MDA
@@ -23,19 +17,18 @@ helpviewer_keywords:
 - Suspend method
 - threading [.NET Framework], managed debugging assistants
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: fd0d8b8a4a96e1e92aa8cf58ee49adf7b51857ab
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: a84fd957800f0cedcd92b36929721b4d0d51b7fd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="dangerousthreadingapi-mda"></a>dangerousThreadingAPI MDA
-`dangerousThreadingAPI` MDA(관리 디버깅 도우미)는 <xref:System.Threading.Thread.Suspend%2A?displayProperty=fullName> 메서드가 현재 스레드 이외의 스레드에서 호출될 때 활성화됩니다.  
+`dangerousThreadingAPI` MDA(관리 디버깅 도우미)는 <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> 메서드가 현재 스레드 이외의 스레드에서 호출될 때 활성화됩니다.  
   
 ## <a name="symptoms"></a>증상  
  응용 프로그램이 응답하지 않거나 무기한으로 중단됩니다. 시스템 또는 응용 프로그램 데이터가 일시적으로 또는 응용 프로그램이 종료된 후에도 예측 가능한 상태로 남아 있을 수 있습니다. 일부 작업이 예상대로 완료되지 않습니다.  
@@ -83,7 +76,6 @@ Thread t = new Thread(delegate() { Thread.Sleep(1000); });
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Threading.Thread>   
- [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
+ <xref:System.Threading.Thread>  
+ [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
  [lock 문](~/docs/csharp/language-reference/keywords/lock-statement.md)
-

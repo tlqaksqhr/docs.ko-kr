@@ -8,25 +8,22 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - time-based cache policies
 - cache [.NET Framework], time-based policies
 - default time-based cache policy
 ms.assetid: 6bfce066-a2e7-4add-a05e-85c12ec9f07f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: f462c55919025b92014a99d73b9a6b779465f98e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: ae864b5f22f469d9a60b9faba90a5a66c65e8172
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>방법: 응용 프로그램에 대해 시간 기반 캐시 정책 설정
 기본 시간 기반 캐시 정책을 사용하면 [http://www.ietf.org](http://www.ietf.org/)에서 제공되는 RFC 2616의 섹션 13 및 14에 정의된 캐시 동작 및 캐시된 리소스와 함께 전송된 헤더를 통해 정의된 캐시 동작이 응용 프로그램에 나타날 수 있습니다. 이것은 대부분의 응용 프로그램에서 적절한 캐시 동작입니다.  
@@ -75,9 +72,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [네트워크 응용 프로그램에 대한 캐시 관리](../../../docs/framework/network-programming/cache-management-for-network-applications.md)   
- [캐시 정책](../../../docs/framework/network-programming/cache-policy.md)   
- [위치 기반 캐시 정책](../../../docs/framework/network-programming/location-based-cache-policies.md)   
- [시간 기반 캐시 정책](../../../docs/framework/network-programming/time-based-cache-policies.md)   
+ [네트워크 응용 프로그램에 대한 캐시 관리](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [캐시 정책](../../../docs/framework/network-programming/cache-policy.md)  
+ [위치 기반 캐시 정책](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [시간 기반 캐시 정책](../../../docs/framework/network-programming/time-based-cache-policies.md)  
  [\<requestCaching> 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
-

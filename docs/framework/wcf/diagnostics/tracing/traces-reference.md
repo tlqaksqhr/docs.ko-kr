@@ -1,25 +1,28 @@
 ---
-title: "추적 참조 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "추적 참조"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bd960851-162d-4dcc-8c0c-0ec8f455d56d
-caps.latest.revision: 17
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 9e86953d250002b0cc630e864f79cddd221cdd03
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 추적 참조
+# <a name="traces-reference"></a>추적 참조
 이 섹션에서는 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]에 의해 생성된 모든 추적을 보여 줍니다.  
   
-## 단원 내용  
+## <a name="in-this-section"></a>단원 내용  
  `Administration`  
   
  [System.ServiceModel.Administration.WmiPut](../../../../../docs/framework/wcf/diagnostics/tracing/system-servicemodel-administration-wmiput.md)  

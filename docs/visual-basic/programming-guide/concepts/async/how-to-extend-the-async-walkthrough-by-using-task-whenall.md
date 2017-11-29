@@ -1,52 +1,44 @@
 ---
-title: "방법: Task.WhenAll (Visual Basic)를 사용 하 여 비동기 연습 확장 | Microsoft 문서"
+title: "방법: Task.WhenAll (Visual Basic)를 사용 하 여 비동기 연습 확장"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 46c5cb9328f2fa1a4ffc5116d318bc3286419e13
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 49cca45336cb25850c888e3389e97b323c70d89d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>방법: Task.WhenAll (Visual Basic)를 사용 하 여 비동기 연습 확장
-비동기 솔루션의 성능을 향상 시킬 수 있습니다 [연습:를 사용 하 여 Async 및 Await (Visual Basic) 하 여 웹 서비스에 액세스](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) 를 사용 하 여는 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>메서드.</xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName> 이 메서드는 작업의 컬렉션으로 표시 되는 여러 개의 비동기 작업을 비동기적으로 기다립니다.  
+비동기 솔루션의 성능을 향상 시킬 수 있습니다 [연습:를 사용 하 여 Async 및 Await (Visual Basic) 하 여 웹 서비스에 액세스](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) 를 사용 하 여는 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 메서드. 이 메서드는 작업 컬렉션으로 표시되는 여러 개의 비동기 작업을 비동기적으로 기다립니다.  
   
- 보았을 것 연습에서 웹 사이트를 서로 다른 속도로 다운로드 합니다. 때로는 웹 사이트 중 하나 매우 느립니다, 나머지 모든 다운로드를 지연입니다. 이 연습에서 작성 하는 비동기 솔루션을 실행 하면 수를 종료할 때는 프로그램 쉽게 대기 하지 않으려는 경우 더 나은 옵션을 동시에 모든 다운로드를 시작 하 고 더 빠르게 사용 하는 것 다운로드 지연 되는 것을 기다리지 않고 계속 있습니다.  
+ 연습에서 웹 사이트 다운로드 속도가 각기 다른 것을 보셨을 것입니다. 때로는 웹 사이트 중 하나가 매우 느려 나머지 다운로드가 모두 지연됩니다. 연습에서 빌드하는 비동기 솔루션을 실행하는 경우 대기하지 않으려면 프로그램을 쉽게 종료할 수 있지만, 동시에 모든 다운로드를 시작한 후 더 빠른 다운로드는 지연되는 다운로드를 기다리지 않고 계속되도록 하는 것이 더 낫습니다.  
   
- 적용 하면는 `Task.WhenAll` 메서드를 작업의 컬렉션입니다. 응용 프로그램의 `WhenAll` 컬렉션의 모든 작업이 완료 될 때까지 완료 되지 않은 단일 작업을 반환 합니다. 작업을 병렬로 실행할 처럼 보이지만는 추가 스레드가 생성 됩니다. 작업 순서에 관계 없이 완료할 수 있습니다.  
+ 작업 컬렉션에 `Task.WhenAll` 메서드를 적용합니다. `WhenAll` 응용 프로그램은 컬렉션의 모든 작업이 완료될 때까지 완료되지 않는 단일 작업을 반환합니다. 작업이 병렬로 실행되는 것처럼 보이지만 추가 스레드는 생성되지 않습니다. 작업이 임의 순서로 완료될 수 있습니다.  
   
 > [!IMPORTANT]
->  다음 절차에서 개발 된 비동기 응용 프로그램에 대 한 확장 설명 [연습:를 사용 하 여 Async 및 Await (Visual Basic) 하 여 웹 서비스에 액세스](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)합니다. 연습을 완료 하거나 코드를 다운로드 하 여 응용 프로그램을 개발할 수 [개발자 코드 샘플](http://go.microsoft.com/fwlink/?LinkId=255191)합니다.  
+>  다음 절차에서는에서 개발 된 비동기 응용 프로그램에 대 한 확장 [연습:를 사용 하 여 Async 및 Await (Visual Basic) 하 여 웹 서비스에 액세스](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)합니다. 연습을 완료하거나 [개발자 코드 샘플](http://go.microsoft.com/fwlink/?LinkId=255191)에서 코드를 다운로드하여 응용 프로그램을 개발할 수 있습니다.  
 >   
->  예제를 실행 하려면 Visual Studio 2012 있어야 합니다. 또는 나중에 컴퓨터에 설치 합니다.  
+>  예제를 실행하려면 Visual Studio 2012 이상이 컴퓨터에 설치되어 있어야 합니다.  
   
 ### <a name="to-add-taskwhenall-to-your-geturlcontentsasync-solution"></a>GetURLContentsAsync 솔루션에 Task.WhenAll을 추가하려면  
   
-1.  추가 된 `ProcessURLAsync` 에서 개발 된 첫 번째 응용 프로그램에 메서드 [연습:를 사용 하 여 Async 및 Await (Visual Basic) 하 여 웹 서비스에 액세스](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)합니다.  
+1.  추가 `ProcessURLAsync` 에서 개발 된 첫 번째 응용 프로그램에 메서드 [연습:를 사용 하 여 Async 및 Await (Visual Basic) 하 여 웹 서비스에 액세스](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)합니다.  
   
-    -   코드를 다운로드 한 경우 [개발자 코드 샘플](http://go.microsoft.com/fwlink/?LinkId=255191)AsyncWalkthrough 프로젝트를 연 다음 추가 `ProcessURLAsync` MainWindow.xaml.vb 파일에 있습니다.  
+    -   코드를 다운로드 한 경우 [개발자 코드 샘플](http://go.microsoft.com/fwlink/?LinkId=255191)AsyncWalkthrough 프로젝트를 연 다음 추가 `ProcessURLAsync` MainWindow.xaml.vb 파일로 합니다.  
   
-    -   이 연습을 완료 하 여 코드를 개발 하는 경우 추가 `ProcessURLAsync` 포함 된 응용 프로그램에는 `GetURLContentsAsync` 메서드. 이 응용 프로그램의 MainWindow.xaml.vb 파일은 "전체 코드 예제에서" 연습 "섹션의 첫 번째 예제입니다.  
+    -   연습을 완료하여 코드를 개발한 경우 `GetURLContentsAsync` 메서드를 포함하는 응용 프로그램에 `ProcessURLAsync`를 추가합니다. 이 응용 프로그램의 MainWindow.xaml.vb 파일은 "전체 코드 예제에서" 연습 "섹션의 첫 번째 예제입니다.  
   
-     `ProcessURLAsync` 메서드 통합 작업의 본문에는 `For Each` 루프 `SumPageSizesAsync` 원래 연습에서 합니다. 메서드가는 비동기적으로 바이트 배열로 지정된 된 웹 사이트의 내용을 다운로드 다음 표시 되며 및 바이트 배열의 길이 반환 합니다.  
+     `ProcessURLAsync` 메서드는 원래 연습의 `SumPageSizesAsync`에 `For Each` 루프 본문의 작업을 통합합니다. 이 메서드는 비동기적으로 지정된 웹 사이트의 내용을 바이트 배열로 다운로드한 다음 바이트 배열의 길이를 표시하고 반환합니다.  
   
     ```vb  
     Private Async Function ProcessURLAsync(url As String) As Task(Of Integer)  
@@ -57,7 +49,7 @@ ms.lasthandoff: 03/13/2017
     End Function  
     ```  
   
-2.  주석으로 처리 하거나 삭제는 `For Each` 루프 `SumPageSizesAsync`다음 코드와 같이 합니다.  
+2.  다음 코드와 같이 `SumPageSizesAsync`의 `For Each` 루프를 주석으로 처리하거나 삭제합니다.  
   
     ```vb  
     'Dim total = 0  
@@ -79,9 +71,9 @@ ms.lasthandoff: 03/13/2017
     'Next  
     ```  
   
-3.  작업 컬렉션을 만듭니다. 다음 코드를 정의 [쿼리](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) 를 실행 하면는 <xref:System.Linq.Enumerable.ToArray%2A>메서드를 각 웹 사이트의 콘텐츠를 다운로드 하는 작업의 컬렉션을 만듭니다.</xref:System.Linq.Enumerable.ToArray%2A> 작업에는 쿼리가 평가 될 때 시작 됩니다.  
+3.  작업 컬렉션을 만듭니다. 다음 코드는 <xref:System.Linq.Enumerable.ToArray%2A> 메서드가 실행할 때 각 웹 사이트의 내용을 다운로드하는 작업 컬렉션을 만드는 [쿼리](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)를 정의합니다. 작업은 쿼리가 평가될 때 시작됩니다.  
   
-     메서드에 다음 코드를 추가 `SumPageSizesAsync` 의 선언 뒤 `urlList`합니다.  
+     `SumPageSizesAsync` 메서드의 `urlList` 선언 뒤에 다음 코드를 추가합니다.  
   
     ```vb  
     ' Create a query.   
@@ -92,9 +84,9 @@ ms.lasthandoff: 03/13/2017
     Dim downloadTasks As Task(Of Integer)() = downloadTasksQuery.ToArray()  
     ```  
   
-4.  적용 `Task.WhenAll` 작업의 컬렉션에 `downloadTasks`합니다. `Task.WhenAll`작업의 컬렉션에서 모든 작업이 완료 될 때 완료 하는 단일 작업을 반환 합니다.  
+4.  작업 컬렉션 `downloadTasks`에서 `Task.WhenAll`을 적용합니다. `Task.WhenAll`은 작업 컬렉션의 모든 작업이 완료될 때 완료되는 단일 작업을 반환합니다.  
   
-     다음 예제에서는 `Await` 식을 단일의 완료를 대기 하는 작업입니다 `WhenAll` 반환 합니다. 식은 각 정수는 다운로드 한 웹 사이트의 길이 정수 배열이 됩니다. 다음 코드를 추가 `SumPageSizesAsync`를 이전 단계에서 추가한 코드 뒤 뿐입니다.  
+     다음 예제에서 `Await` 식은 `WhenAll`이 반환하는 단일 작업이 완료될 때까지 기다립니다. 식은 각 정수가 다운로드된 웹 사이트의 길이인 정수 배열로 평가됩니다. 이전 단계에서 추가한 코드 뒤의 `SumPageSizesAsync`에 다음 코드를 추가합니다.  
   
     ```vb  
     ' Await the completion of all the running tasks.  
@@ -105,7 +97,7 @@ ms.lasthandoff: 03/13/2017
     'Dim lengths As Integer() = Await whenAllTask  
     ```  
   
-5.  마지막으로, 사용 된 <xref:System.Linq.Enumerable.Sum%2A>모든 웹 사이트의 길이의 합을 계산 하는 방법.</xref:System.Linq.Enumerable.Sum%2A> 다음 줄을 추가 `SumPageSizesAsync`합니다.  
+5.  마지막으로, <xref:System.Linq.Enumerable.Sum%2A> 메서드를 사용하여 모든 웹 사이트의 길이 합계를 계산합니다. `SumPageSizesAsync`에 다음 줄을 추가합니다.  
   
     ```vb  
     Dim total = lengths.Sum()  
@@ -113,15 +105,15 @@ ms.lasthandoff: 03/13/2017
   
 ### <a name="to-add-taskwhenall-to-the-httpclientgetbytearrayasync-solution"></a>HttpClient.GetByteArrayAsync 솔루션에 Task.WhenAll을 추가하려면  
   
-1.  다음 버전의 추가 `ProcessURLAsync` 에서 개발 된 두 번째 응용 프로그램에 [연습:를 사용 하 여 Async 및 Await (Visual Basic) 하 여 웹 서비스에 액세스](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)합니다.  
+1.  다음 버전의 추가 `ProcessURLAsync` 에서 개발 하는 두 번째 응용 프로그램에 [연습:를 사용 하 여 Async 및 Await (Visual Basic) 하 여 웹 서비스에 액세스](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)합니다.  
   
-    -   코드를 다운로드 한 경우 [개발자 코드 샘플](http://go.microsoft.com/fwlink/?LinkId=255191)AsyncWalkthrough_HttpClient 프로젝트를 연 다음 추가 `ProcessURLAsync` MainWindow.xaml.vb 파일에 있습니다.  
+    -   코드를 다운로드 한 경우 [개발자 코드 샘플](http://go.microsoft.com/fwlink/?LinkId=255191)AsyncWalkthrough_HttpClient 프로젝트를 연 다음 추가 `ProcessURLAsync` MainWindow.xaml.vb 파일로 합니다.  
   
-    -   이 연습을 완료 하 여 코드를 개발 하는 경우 추가 `ProcessURLAsync` 사용 하 여 응용 프로그램에는 `HttpClient.GetByteArrayAsync` 메서드. 이 응용 프로그램의 MainWindow.xaml.vb 파일은 "전체 코드 예제에서" 연습 "섹션에 두 번째 예제입니다.  
+    -   연습을 완료하여 코드를 개발한 경우 `HttpClient.GetByteArrayAsync` 메서드를 사용하는 응용 프로그램에 `ProcessURLAsync`를 추가합니다. 이 응용 프로그램의 MainWindow.xaml.vb 파일은 "전체 코드 예제에서" 연습 "섹션에서 두 번째 예제입니다.  
   
-     `ProcessURLAsync` 메서드 통합 작업의 본문에는 `For Each` 루프 `SumPageSizesAsync` 원래 연습에서 합니다. 메서드가는 비동기적으로 바이트 배열로 지정된 된 웹 사이트의 내용을 다운로드 다음 표시 되며 및 바이트 배열의 길이 반환 합니다.  
+     `ProcessURLAsync` 메서드는 원래 연습의 `SumPageSizesAsync`에 `For Each` 루프 본문의 작업을 통합합니다. 이 메서드는 비동기적으로 지정된 웹 사이트의 내용을 바이트 배열로 다운로드한 다음 바이트 배열의 길이를 표시하고 반환합니다.  
   
-     유일한 차이점은 `ProcessURLAsync` 이전 절차에서 메서드를 사용 하는는 <xref:System.Net.Http.HttpClient>인스턴스, `client`.</xref:System.Net.Http.HttpClient>  
+     이전 절차의 `ProcessURLAsync` 메서드와 차이점은 <xref:System.Net.Http.HttpClient> 인스턴스 `client`를 사용한다는 것입니다.  
   
     ```vb  
     Private Async Function ProcessURLAsync(url As String, client As HttpClient) As Task(Of Integer)  
@@ -132,7 +124,7 @@ ms.lasthandoff: 03/13/2017
     End Function  
     ```  
   
-2.  주석으로 처리 하거나 삭제는 `For Each` 루프 `SumPageSizesAsync`다음 코드와 같이 합니다.  
+2.  다음 코드와 같이 `SumPageSizesAsync`의 `For Each` 루프를 주석으로 처리하거나 삭제합니다.  
   
     ```vb  
     'Dim total = 0   
@@ -150,12 +142,11 @@ ms.lasthandoff: 03/13/2017
     '    ' Update the total.   
     '    total += urlContents.Length   
     'Next  
-  
     ```  
   
-3.  정의 [쿼리](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) 를 실행 하면는 <xref:System.Linq.Enumerable.ToArray%2A>메서드를 각 웹 사이트의 콘텐츠를 다운로드 하는 작업의 컬렉션을 만듭니다.</xref:System.Linq.Enumerable.ToArray%2A> 작업에는 쿼리가 평가 될 때 시작 됩니다.  
+3.  <xref:System.Linq.Enumerable.ToArray%2A> 메서드에서 실행할 때 각 웹 사이트의 내용을 다운로드하는 작업 컬렉션을 만드는 [쿼리](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)를 정의합니다. 작업은 쿼리가 평가될 때 시작됩니다.  
   
-     메서드에 다음 코드를 추가 `SumPageSizesAsync` 의 선언 뒤 `client` 및 `urlList`합니다.  
+     `SumPageSizesAsync` 메서드의 `client` 및 `urlList` 선언 뒤에 다음 코드를 추가합니다.  
   
     ```vb  
     ' Create a query.  
@@ -166,9 +157,9 @@ ms.lasthandoff: 03/13/2017
     Dim downloadTasks As Task(Of Integer)() = downloadTasksQuery.ToArray()  
     ```  
   
-4.  다음으로, 적용 `Task.WhenAll` 작업의 컬렉션에 `downloadTasks`합니다. `Task.WhenAll`작업의 컬렉션에서 모든 작업이 완료 될 때 완료 하는 단일 작업을 반환 합니다.  
+4.  작업 컬렉션 `downloadTasks`에서 `Task.WhenAll`을 적용합니다. `Task.WhenAll`은 작업 컬렉션의 모든 작업이 완료될 때 완료되는 단일 작업을 반환합니다.  
   
-     다음 예제에서는 `Await` 식을 단일의 완료를 대기 하는 작업입니다 `WhenAll` 반환 합니다. 완료 되 면는 `Await` 식이 있는 각 정수는 다운로드 한 웹 사이트의 길이, 정수의 배열입니다. 다음 코드를 추가 `SumPageSizesAsync`를 이전 단계에서 추가한 코드 뒤 뿐입니다.  
+     다음 예제에서 `Await` 식은 `WhenAll`이 반환하는 단일 작업이 완료될 때까지 기다립니다. 완료되면 `Await` 식은 각 정수가 다운로드된 웹 사이트의 길이인 정수 배열로 평가됩니다. 이전 단계에서 추가한 코드 뒤의 `SumPageSizesAsync`에 다음 코드를 추가합니다.  
   
     ```vb  
     ' Await the completion of all the running tasks.  
@@ -179,7 +170,7 @@ ms.lasthandoff: 03/13/2017
     'Dim lengths As Integer() = Await whenAllTask  
     ```  
   
-5.  마지막으로 사용 하 여는 <xref:System.Linq.Enumerable.Sum%2A>를 모든 웹 사이트의 길이 합한 값을 가져오는 메서드입니다.</xref:System.Linq.Enumerable.Sum%2A> 다음 줄을 추가 `SumPageSizesAsync`합니다.  
+5.  마지막으로, <xref:System.Linq.Enumerable.Sum%2A> 메서드를 사용하여 모든 웹 사이트의 길이 합계를 가져옵니다. `SumPageSizesAsync`에 다음 줄을 추가합니다.  
   
     ```vb  
     Dim total = lengths.Sum()  
@@ -187,10 +178,10 @@ ms.lasthandoff: 03/13/2017
   
 ### <a name="to-test-the-taskwhenall-solutions"></a>Task.WhenAll 솔루션을 테스트하려면  
   
--   두 솔루션에 대 한 프로그램을 실행 하려면 F5 키를 선택 하 고 선택 된 **시작** 단추입니다. 출력의 출력에서 비동기 솔루션을 비슷해야 [연습:를 사용 하 여 Async 및 Await (Visual Basic) 하 여 웹 서비스에 액세스](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)합니다. 그러나 웹 사이트 나타나는 각 시간에 다른 순서로 확인 합니다.  
+-   두 솔루션 중 하나에 대해 F5 키를 선택하여 프로그램을 실행한 다음 **시작** 단추를 선택합니다. 출력의 출력에서 비동기 솔루션을 비슷해야 [연습:를 사용 하 여 Async 및 Await (Visual Basic) 하 여 웹 서비스에 액세스](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)합니다. 그러나 웹 사이트가 매번 다른 순서로 나타납니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드에서는 사용 하는 프로젝트에 대 한 확장은 `GetURLContentsAsync` 메서드는 웹에서 콘텐츠를 다운로드 합니다.  
+ 다음 코드에서는 `GetURLContentsAsync` 메서드를 사용하여 웹에서 콘텐츠를 다운로드하는 프로젝트에 대한 확장을 보여 줍니다.  
   
 ```vb  
 ' Add the following Imports statements, and add a reference for System.Net.Http.  
@@ -323,7 +314,7 @@ End Class
 ```  
   
 ## <a name="example"></a>예제  
- 다음 코드에서는 메서드를 사용 하는 프로젝트에 대 한 확장 `HttpClient.GetByteArrayAsync` 웹에서 콘텐츠를 다운로드 합니다.  
+ 다음 코드에서는 `HttpClient.GetByteArrayAsync` 메서드를 사용하여 웹에서 콘텐츠를 다운로드하는 프로젝트에 대한 확장을 보여 줍니다.  
   
 ```vb  
 ' Add the following Imports statements, and add a reference for System.Net.Http.  
@@ -438,5 +429,5 @@ End Class
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName></xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=fullName>   
- [연습: Async를 사용 하 여 웹 서비스에 액세스 및 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+ <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>  
+ [연습: Async 및 Await를 사용하여 웹에 액세스(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)

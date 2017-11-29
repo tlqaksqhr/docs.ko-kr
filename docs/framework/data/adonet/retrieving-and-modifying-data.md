@@ -1,25 +1,28 @@
 ---
-title: "ADO.NET에서 데이터 검색 및 수정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ADO.NET에서 데이터 검색 및 수정"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-caps.latest.revision: 5
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 35de20b1cb35fdcd87a653f1ac202c01d345c317
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# ADO.NET에서 데이터 검색 및 수정
-데이터베이스 응용 프로그램의 기본 기능은 데이터 소스에 연결하여 포함된 데이터를 검색하는 것입니다.  ADO.NET의 .NET Framework 데이터 공급자는 응용 프로그램과 데이터 소스를 연결하여 **DataReader** 또는 **DataAdapter**를 통해 데이터 검색뿐 아니라 명령 실행을 돕습니다.  모든 데이터베이스 응용 프로그램의 한 가지 핵심 기능은 데이터베이스에 저장된 데이터를 업데이트하는 것입니다.  ADO.NET에서 데이터를 업데이트하려면 **DataAdapter**, <xref:System.Data.DataSet> 및 **Command** 개체를 사용해야 하며 트랜잭션도 사용해야 할 수 있습니다.  
+# <a name="retrieving-and-modifying-data-in-adonet"></a>ADO.NET에서 데이터 검색 및 수정
+데이터베이스 응용 프로그램의 기본 기능은 데이터 소스에 연결하여 포함된 데이터를 검색하는 것입니다. ADO.NET의.NET Framework 데이터 공급자 다리 역할을 응용 프로그램과 데이터 원본을 사용 하 여 데이터 검색 뿐 아니라 명령 실행 수는 **DataReader** 또는 **DataAdapter** . 모든 데이터베이스 응용 프로그램의 한 가지 핵심 기능은 데이터베이스에 저장된 데이터를 업데이트하는 것입니다. Ado.net에서 데이터 업데이트를 사용 하는 **DataAdapter** 및 <xref:System.Data.DataSet>, 및 **명령** 개체; 수 트랜잭션도 사용 해야 합니다.  
   
-## 단원 내용  
+## <a name="in-this-section"></a>단원 내용  
  [데이터 소스에 연결](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
  데이터 소스에 대한 연결을 설정하고 연결 이벤트로 작업하는 방법을 설명합니다.  
   
@@ -32,19 +35,19 @@ caps.handback.revision: 5
  [명령 및 매개 변수](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  명령 및 명령 작성기를 만드는 방법, 매개 변수를 구성하는 방법 및 명령을 실행하여 데이터를 검색하고 수정하는 방법에 대한 항목을 제공합니다.  
   
- [DataAdapters 및 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [Dataadapter 및 Datareader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  DataReaders, DataAdapters, 매개 변수, DataAdapter 이벤트 처리 및 배치 작업 수행 방법을 설명하는 항목을 제공합니다.  
   
  [트랜잭션 및 동시성](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
  로컬 트랜잭션, 분산 트랜잭션 및 낙관적 동시성 관련 작업의 수행 방법을 설명하는 항목을 제공합니다.  
   
- [ID 또는 Autonumber 값 검색](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 테이블의 **ID** 열이나 Microsoft Access 테이블의 **Autonumber** 필드에 대해 생성된 값을 테이블에 삽입된 행의 열에 매핑하는 예제를 제공합니다.  `DataTable`에서의 ID 값 병합에 대해 설명합니다.  
+ [Id 또는 일련 번호 값 검색](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
+ 에 대해 생성 된 값을 매핑할의 예제를 제공는 **identity** 열에는 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 테이블 또는 **일련 번호** 테이블에 삽입된 된 행의 열에는 Microsoft Access 테이블의 필드입니다. `DataTable`에서의 ID 값 병합에 대해 설명합니다.  
   
  [이진 데이터 검색](../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
- `DataReader`의 기본 동작을 수정하는 `CommandBehavior`.`SequentialAccess`를 사용하여 이진 데이터나 대형 데이터 구조를 검색하는 방법을 설명합니다.  
+ 이진 데이터 나 대형 데이터 구조를 사용 하 여 검색 하는 방법을 설명 `CommandBehavior`합니다.`SequentialAccess` 기본 동작을 수정 하는 `DataReader`합니다.  
   
- [저장 프로시저로 데이터 수정](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
+ [저장된 프로시저를 사용 하 여 데이터 수정](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
  저장 프로시저 입력 매개 변수와 출력 매개 변수를 사용하여 데이터베이스에 행을 삽입하여 새 ID 값을 반환하는 방법을 설명합니다.  
   
  [데이터베이스 스키마 정보 검색](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
@@ -65,9 +68,9 @@ caps.handback.revision: 5
  [SqlClient 스트리밍 지원](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
  메모리에 완전하게 로드하지 않고 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]에서 데이터를 스트리밍하는 응용 프로그램을 쓰는 방법에 대해 논의합니다.  
   
-## 참고 항목  
- [ADO.NET의 데이터 형식 매핑](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)   
- [DataSets, DataTables 및 DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)   
- [ADO.NET 응용 프로그램 보안](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)   
- [SQL Server 및 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)   
+## <a name="see-also"></a>참고 항목  
+ [ADO.NET에서 데이터 형식 매핑](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
+ [DataSet, DataTable 및 DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [ADO.NET 응용 프로그램 보안](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
+ [SQL Server 및 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
  [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)
