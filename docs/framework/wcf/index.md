@@ -1,28 +1,27 @@
 ---
-title: "Windows Communication Foundation | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WCF [WCF]"
-  - "Windows Communication Foundation [WCF]"
-ms.assetid: 96aad289-58bc-4389-89d0-b09dfc4d5c58
-caps.latest.revision: 2
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 10
+title: Windows Communication Foundation
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.topic: article
+helpviewer_keywords:
+- Windows Communication Foundation [WCF]
+- WCF [WCF]
+ms.assetid: 149348a6-bf82-4ccc-9604-fa7cc88c0749
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7d0e4a33f83cc8bbd0b67a7f21d786ac9f646bd5
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# Windows Communication Foundation
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]은 서비스 기반 응용 프로그램을 빌드하기 위한 Microsoft의 통합 프로그래밍 모델이며,  이를 통해 개발자는 플랫폼 간에 통합되고 기존 투자와 상호 운용할 수 있는 안정적인 보안 트랜잭션된 솔루션을 빌드할 수 있습니다.  
-  
-## 단원 내용  
+# <a name="developing-service-oriented-applications-with-wcf"></a>WCF를 사용하여 서비스 기반 응용 프로그램 개발
+설명서의 이 섹션에서는 서비스 지향 응용 프로그램 빌드를 위한 통합 프로그래밍 모델인 WCF(Windows Communication Foundation)에 대한 정보를 제공합니다. 이를 통해 개발자는 플랫폼 간에 통합되고 기존 투자와 상호 운용할 수 있는 안정적인 보안 트랜잭션된 솔루션을 빌드할 수 있습니다.
+ 
+## <a name="in-this-section"></a>단원 내용  
  [Windows Communication Foundation 4.5의 새로운 기능](../../../docs/framework/wcf/whats-new.md)  
  Windows Communication Foundation에 새로 추가된 기능에 대해 설명합니다.  
   
@@ -33,7 +32,7 @@ caps.handback.revision: 10
  WCF 설명서에 대한 설명  
   
  [개념적 개요](../../../docs/framework/wcf/conceptual-overview.md)  
- WCF\(Windows Communication Foundation\) 메시징 시스템 및 이 시스템을 사용할 수 있도록 지원하는 클래스에 대한 정보를 요약합니다.  
+ WCF(Windows Communication Foundation) 메시징 시스템 및 이 시스템을 사용할 수 있도록 지원하는 클래스에 대한 정보를 요약합니다.  
   
  [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md)  
  WCF 서비스 및 클라이언트를 만들기 위한 단계별 자습서  
@@ -47,8 +46,8 @@ caps.handback.revision: 10
  [WCF 확장](../../../docs/framework/wcf/extending/extending-wcf.md)  
  WCF 런타임 구성 요소를 수정하고 확장하는 방법에 대한 설명  
   
- [지침 및 최선의 방법](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
- WCF\(Windows Communication Foundation\) 응용 프로그램을 만들기 위한 지침을 제공합니다.  
+ [지침 및 모범 사례](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
+ WCF(Windows Communication Foundation) 응용 프로그램을 만들기 위한 지침을 제공합니다.  
   
  [관리 및 진단](../../../docs/framework/wcf/diagnostics/index.md)  
  WCF의 진단 기능 설명  
@@ -85,7 +84,3 @@ caps.handback.revision: 10
   
  [개인 정보](../../../docs/framework/wcf/privacy-information.md)  
  WCF 및 개인 정보에 대한 정보  
-  
-## 참조  
-  
-## 관련 단원

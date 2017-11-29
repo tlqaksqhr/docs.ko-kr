@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 494e67b39187a2a38f29f994e17051430d90f708
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>방법: WIF를 사용하여 로그인 상태 표시
 ## <a name="applies-to"></a>적용 대상  
@@ -165,4 +163,3 @@ ms.lasthandoff: 08/21/2017
 1.  Visual Studio에서 **F5** 키를 눌러 응용 프로그램 디버깅을 시작합니다. 오류가 발견되지 않으면 새 브라우저 창이 열립니다.  
   
 2.  브라우저가 요청을 STS로 자동으로 리디렉션하고 나서 Default.aspx 페이지를 엽니다. WIF가 제대로 구성되면 사이트에 다음 텍스트가 표시되어야 합니다. **“로그인했습니다.”**
-

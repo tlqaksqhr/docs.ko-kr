@@ -1,40 +1,22 @@
 ---
 title: "Visual Basic 프로그래밍 가이드"
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - Visual Basic code, language guide
 - Visual Basic, programming in
 - Visual Basic, language reference
 ms.assetid: 640e5796-2796-433c-af37-4d2a2334895b
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 01d6a1fc688f2cdf55ab4be5c6d0a8daccda2031
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 72234f4707e891abd00744db8cebe04114865522
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="visual-basic-programming-guide"></a>Visual Basic 프로그래밍 가이드
 모든 최신 프로그래밍 언어와 마찬가지로 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서도 일반적인 여러 프로그래밍 구문과 언어 요소를 지원합니다. 이 가이드에서는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]을 사용한 프로그래밍의 모든 주요 요소에 대해 설명합니다.  
@@ -55,4 +37,3 @@ ms.lasthandoff: 07/28/2017
   
  [Visual Basic 명령줄 컴파일러](../../visual-basic/reference/command-line-compiler/index.md)  
  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 명령줄 컴파일러, 컴파일러 옵션 및 키워드 업그레이드 도구에 대한 정보를 제공합니다.
-

@@ -1,40 +1,40 @@
 ---
-title: "FolderBrowserDialog 구성 요소 개요(Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "FolderBrowserDialog"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "디렉터리[Windows Forms], 응용 프로그램에서 찾아보기 사용"
-  - "FolderBrowserDialog 구성 요소[Windows Forms], FolderBrowserDialog 정보"
-  - "폴더[Windows Forms], 응용 프로그램에서 찾아보기 사용"
+title: "FolderBrowserDialog 구성 요소 개요(Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: FolderBrowserDialog
+helpviewer_keywords:
+- FolderBrowserDialog component [Windows Forms], about FolderBrowserDialog
+- directories [Windows Forms], enabling browsing in applications
+- folders [Windows Forms], enabling browsing in applications
 ms.assetid: 796b622c-3ba9-4356-93bb-e217fc52f2c7
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d7fab1dbe01c5b21e510841b1541150f6152ab0b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# FolderBrowserDialog 구성 요소 개요(Windows Forms)
-Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> 구성 요소는 폴더를 찾아서 선택하는 데 사용되는 모달 대화 상자입니다.  <xref:System.Windows.Forms.FolderBrowserDialog> 구성 요소 내에서 새 폴더를 만들 수도 있습니다.  
+# <a name="folderbrowserdialog-component-overview-windows-forms"></a>FolderBrowserDialog 구성 요소 개요(Windows Forms)
+Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> 구성 요소는 폴더를 선택 하 고 검색에 사용 되는 모달 대화 상자. 내에서 새 폴더를 만들 수도 있습니다는 <xref:System.Windows.Forms.FolderBrowserDialog> 구성 요소입니다.  
   
 > [!NOTE]
->  폴더 대신 파일을 선택하려면 [OpenFileDialog](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md) 구성 요소를 사용하십시오.  
+>  폴더 대신 파일을 선택 하려면 사용 하 여는 [OpenFileDialog](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md) 구성 요소입니다.  
   
- <xref:System.Windows.Forms.FolderBrowserDialog> 구성 요소는 런타임에 <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 메서드를 사용하여 표시됩니다.  <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> 속성을 설정하여 대화 상자의 트리 뷰에서 맨 위에 표시될 폴더와 하위 폴더를 지정하십시오.  대화 상자가 표시되면 <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> 속성을 사용하여 선택된 폴더의 경로를 가져올 수 있습니다.  
+ <xref:System.Windows.Forms.FolderBrowserDialog> 구성 요소가 사용 하 여 런타임에 표시 되는 <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 메서드. 설정의 <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> 최상위 폴더 및 대화 상자의 트리 뷰 내에서 나타나는 모든 하위 폴더를 확인 하는 속성입니다. 대화 상자가 표시 되 면 사용할 수 있습니다는 <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> 선택 된 폴더의 경로 가져올 속성입니다.  
   
- <xref:System.Windows.Forms.FolderBrowserDialog> 구성 요소가 폼에 추가되면 Windows Forms 디자이너의 아래쪽에 있는 트레이에 나타납니다.  
+ 폼에 추가 될 때의 <xref:System.Windows.Forms.FolderBrowserDialog> 구성 요소는 Windows Forms 디자이너 아래쪽에서 트레이에 표시 됩니다.  
   
-## 참고 항목  
- <xref:System.Windows.Forms.FolderBrowserDialog>   
- [방법: Windows Forms FolderBrowserDialog 구성 요소를 사용하여 폴더 선택](../../../../docs/framework/winforms/controls/how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)   
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Windows.Forms.FolderBrowserDialog>  
+ [방법: Windows Forms FolderBrowserDialog 구성 요소를 사용하여 폴더 선택](../../../../docs/framework/winforms/controls/how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)  
  [FolderBrowserDialog 구성 요소](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-windows-forms.md)

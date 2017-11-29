@@ -1,97 +1,102 @@
 ---
-title: "여러 비동기 작업을 시작 하 고 (Visual Basic) 완료 될 때마다 처리 | Microsoft 문서"
+title: "여러 비동기 작업을 시작 하 고 (Visual Basic) 완료 될 때마다 처리"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 57ffb748-af40-4794-bedd-bdb7fea062de
-caps.latest.revision: 3
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6fbf4611ecd64abfd016963dff887d82aad333b7
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: dfabe4619e5d73b554d91edb137ae1ce7d34b5ce
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>여러 비동기 작업을 시작 하 고 (Visual Basic) 완료 될 때마다 처리
-사용 하 여 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName>, 동시에 여러 작업을 시작할 수 있으며은 완료 된 것 보다는 시작 하는 순서에서이 처리 하는 대로 하나씩 처리 합니다.</xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=fullName>  
+<xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>를 사용하면 시작된 순서대로 처리하는 대신 동시에 여러 작업을 시작하고 완료 시 하나씩 처리할 수 있습니다.  
   
- 다음 예제에서는 작업의 컬렉션을 만드는 쿼리를 사용 합니다. 지정된 된 웹 사이트의 콘텐츠를 다운로드 하는 각 작업입니다. 잠시의 각 반복에서 루프에 대 한 대기 중인된 호출 `WhenAny` 다운로드를 먼저 완료 하는 작업의 컬렉션에 작업을 반환 합니다. 해당 작업 컬렉션에서 제거 하 고 처리 됩니다. 루프는 컬렉션에 더 많은 작업이 포함 될 때까지 반복 합니다.  
+ 다음 예제에서는 쿼리를 사용하여 작업 컬렉션을 만듭니다. 각 작업은 지정된 웹 사이트의 콘텐츠를 다운로드합니다. while 루프의 각 반복에서 대기된 `WhenAny` 호출은 다운로드를 먼저 완료하는 작업 컬렉션의 작업을 반환합니다. 해당 작업은 컬렉션에서 제거되고 처리됩니다. 컬렉션에 더 이상 작업이 없을 때까지 루프가 반복됩니다.  
   
 > [!NOTE]
->  예제를 실행 하려면 Visual Studio 2012 이상 및.NET Framework 4.5 또는 있어야 사용자의 컴퓨터에 설치 되어 있습니다.  
+>  예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.  
   
 ## <a name="downloading-the-example"></a>예제 다운로드  
- 전체 Windows Presentation Foundation (WPF) 프로젝트를 다운로드할 수 있습니다 [Async 샘플: 세밀 하 게 응용 프로그램 튜닝](http://go.microsoft.com/fwlink/?LinkId=255046) 다음이 단계를 수행 하 고 있습니다.  
+ [Async 샘플: 응용 프로그램 세부 조정](http://go.microsoft.com/fwlink/?LinkId=255046)에서 전체 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후 다음 단계를 따를 수 있습니다.  
   
 1.  다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.  
   
 2.  메뉴 모음에서 **파일**, **열기**, **프로젝트/솔루션**을 선택합니다.  
   
-3.  에 **프로젝트 열기** 대화 상자에서 압축을 해제 하는 샘플 코드를 보유 하는 폴더를 연 다음 AsyncFineTuningVB에 대 한 솔루션 (.sln) 파일을 엽니다.  
+3.  에 **프로젝트 열기** 대화 상자, 하면 압축을 푼 샘플 코드가 저장 된 폴더를 연 다음 AsyncFineTuningVB에 대 한 솔루션 (.sln) 파일을 엽니다.  
   
-4.  **솔루션 탐색기**, 바로 가기 메뉴를 열고는 **ProcessTasksAsTheyFinish** 프로젝트를 선택한 다음 **시작 프로젝트로 설정**합니다.  
+4.  **솔루션 탐색기**에서 **ProcessTasksAsTheyFinish** 프로젝트에 대한 바로 가기 메뉴를 열고 **시작 프로젝트로 설정**을 선택합니다.  
   
-5.  프로젝트를 실행 하려면 F5 키를 선택 합니다.  
+5.  F5 키를 선택하여 프로젝트를 실행합니다.  
   
-     디버깅 하지 않고 프로젝트를 실행 하려면 Ctrl + f&5;를 선택 합니다.  
+     디버그하지 않고 프로젝트를 실행하려면 Ctrl+F5를 선택합니다.  
   
-6.  다운로드 한 길이 없습니다 동일한 순서로 항상 표시 되는지 확인 하려면 프로젝트를 여러 번 실행 합니다.  
+6.  프로젝트를 여러 번 실행하여 다운로드한 길이가 항상 같은 순서로 표시되는지 확인합니다.  
   
- 프로젝트를 다운로드 하지 않으려는 경우에이 항목의 끝에 MainWindow.xaml.vb 파일을 검토할 수 있습니다.  
+ 프로젝트를 다운로드 하지 않으려면 하는 경우이 항목의 끝에 MainWindow.xaml.vb 파일을 검토할 수 있습니다.  
   
 ## <a name="building-the-example"></a>예제 빌드  
- 개발 하는 코드에 추가 하는이 예제 [하나의 완전 (Visual Basic) 한 후 남은 비동기 작업 취소](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md) 동일한 UI를 사용 하 여 합니다.  
+ 개발 하는 코드를 추가 하는이 예제 [하나의 완전 (Visual Basic) 한 후 남은 비동기 작업 취소](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md) 동일한 UI를 사용 하 여 합니다.  
   
- 예제를 빌드하려면 "예제 다운로드" 섹션의 지침에 따라 사용자가 직접 단계별로 하지만를 선택할 **CancelAfterOneTask** 으로 **시작 프로젝트**합니다. 이 항목의 변경 내용을 추가 `AccessTheWebAsync` 해당 프로젝트에서 메서드. 변경 내용은 별표로 표시 됩니다.  
+ 직접 예제를 빌드하려면 "예제 다운로드" 섹션의 지침을 단계별로 따르되, **CancelAfterOneTask**를 **시작 프로젝트**로 선택합니다. 이 항목의 변경 내용을 해당 프로젝트의 `AccessTheWebAsync` 메서드에 추가합니다. 변경 내용은 별표로 표시됩니다.  
   
- **CancelAfterOneTask** 는 쿼리를 이미 포함 하는 프로젝트를 실행 하면 작업의 컬렉션을 만듭니다. 호출할 때마다 `ProcessURLAsync` 다음 코드를 반환는 <xref:System.Threading.Tasks.Task%601>여기서 `TResult` 는 정수입니다.</xref:System.Threading.Tasks.Task%601>  
+ **CancelAfterOneTask** 프로젝트에는 실행 시 작업 컬렉션을 만드는 쿼리가 이미 포함되어 있습니다. 다음 코드에서는 `ProcessURLAsync`를 호출할 때마다 <xref:System.Threading.Tasks.Task%601>가 반환됩니다. 여기서 `TResult`는 정수입니다.  
   
-<CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
+```vb  
+Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =  
+    From url In urlList Select ProcessURLAsync(url, client, ct)  
+```  
+  
  프로젝트의 MainWindow.xaml.vb 파일에서 다음과 같이 변경 하는 `AccessTheWebAsync` 메서드.  
   
--   <xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName> <xref:System.Linq.Enumerable.ToArray%2A>.</xref:System.Linq.Enumerable.ToArray%2A> 대신</xref:System.Linq.Enumerable.ToList%2A?displayProperty=fullName> 적용 하 여 쿼리를 실행 합니다.  
+-   <xref:System.Linq.Enumerable.ToArray%2A> 대신 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>를 적용하여 쿼리를 실행합니다.  
   
-<CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
--   잠시 추가 컬렉션의 각 작업에 대해 다음 단계를 수행 하는 루프입니다.  
+    ```vb  
+    Dim downloadTasks As List(Of Task(Of Integer)) = downloadTasksQuery.ToList()  
+    ```  
   
-    1.  에 대 한 호출을 기다리는 `WhenAny` 다운로드를 완료 하려면 컬렉션의 첫 번째 작업을 식별할 수 있습니다.  
+-   컬렉션의 각 작업에 대해 다음 단계를 수행하는 while 루프를 추가합니다.  
   
-<CodeContentPlaceHolder>2</CodeContentPlaceHolder>  
+    1.  컬렉션의 첫 번째 작업을 식별하여 다운로드를 완료하기 위해 `WhenAny` 호출을 대기합니다.  
+  
+        ```vb  
+        Dim firstFinishedTask As Task(Of Integer) = Await Task.WhenAny(downloadTasks)  
+        ```  
+  
     2.  컬렉션에서 해당 작업을 제거합니다.  
   
-<CodeContentPlaceHolder>3</CodeContentPlaceHolder>  
-    3.  대기 `firstFinishedTask`에 대 한 호출에서 반환 된 `ProcessURLAsync`합니다. `firstFinishedTask` 변수가 <xref:System.Threading.Tasks.Task%601>여기서 `TReturn` 는 정수입니다.</xref:System.Threading.Tasks.Task%601> 작업이 이미 완료 되 면 하지만 다음 예제와 같이 다운로드 한 웹 사이트의 길이 검색 하기를 기다립니다.  
+        ```vb  
+        downloadTasks.Remove(firstFinishedTask)  
+        ```  
+  
+    3.  `ProcessURLAsync` 호출에서 반환된 `firstFinishedTask`를 대기합니다. `firstFinishedTask` 변수는 <xref:System.Threading.Tasks.Task%601>입니다. 여기서 `TReturn`은 정수입니다. 작업은 이미 완료되었지만, 다음 예제와 같이 다운로드한 웹 사이트의 길이를 검색하도록 기다립니다.  
   
         ```vb  
         Dim length = Await firstFinishedTask  
         resultsTextBox.Text &= String.Format(vbCrLf & "Length of the downloaded website:  {0}" & vbCrLf, length)  
         ```  
   
- 다운로드 한 길이 순서 대로 나타나지 항상 확인을 여러 번 프로젝트를 실행 해야 합니다.  
+ 프로젝트를 여러 번 실행하여 다운로드한 길이가 항상 같은 순서로 표시되는지 확인해야 합니다.  
   
 > [!CAUTION]
->  사용할 수 있습니다 `WhenAny` 적은 수의 작업을 포함 하는 문제를 해결 하는 예제에 설명 된 대로 루프에서. 그러므로 많은 수의 작업을 처리해야 하는 경우에는 다른 접근 방법이 더 효율적입니다. 자세한 내용 및 예제에 대 한 참조 [처리 작업이 완료 될 때](http://go.microsoft.com/fwlink/?LinkId=260810)합니다.  
+>  예제에 설명된 대로 루프에서 `WhenAny`를 사용하는 것은 적은 수의 작업이 필요한 문제 해결에 적합합니다. 그러므로 많은 수의 작업을 처리해야 하는 경우에는 다른 접근 방법이 더 효율적입니다. 자세한 내용 및 예제는 [작업이 완료되었을 때 처리 방법](http://go.microsoft.com/fwlink/?LinkId=260810)을 참조하세요.  
   
-## <a name="complete-example"></a>전체 예제  
- 다음 코드는 예제에 대 한 MainWindow.xaml.vb 파일의 전체 텍스트입니다. 별표는이 예제에 대 한 추가 된 요소를 표시 합니다.  
+## <a name="complete-example"></a>완성된 예제  
+ 다음 코드는 예제에 대 한 MainWindow.xaml.vb 파일의 전체 텍스트입니다. 별표는 이 예제에 대해 추가된 요소를 표시합니다.  
   
- <xref:System.Net.Http>.</xref:System.Net.Http> 에 대 한 참조를 추가 해야 한다고 공지  
+ <xref:System.Net.Http>에 대한 참조를 추가해야 합니다.  
   
- 프로젝트를 다운로드할 수 있습니다 [Async 샘플: 세밀 하 게 응용 프로그램 튜닝](http://go.microsoft.com/fwlink/?LinkId=255046)합니다.  
+ [Async 샘플: 응용 프로그램 미세 조정](http://go.microsoft.com/fwlink/?LinkId=255046)에서 프로젝트를 다운로드할 수 있습니다.  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -210,7 +215,7 @@ End Class
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Threading.Tasks.Task.WhenAny%2A></xref:System.Threading.Tasks.Task.WhenAny%2A>   
- [Async (Visual Basic) 응용 프로그램을 미세 조정](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
- [비동기 프로그래밍 async 및 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)   
+ <xref:System.Threading.Tasks.Task.WhenAny%2A>  
+ [Async 응용 프로그램 미세 조정(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
+ [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
  [Async 샘플: 응용 프로그램 미세 조정](http://go.microsoft.com/fwlink/?LinkId=255046)

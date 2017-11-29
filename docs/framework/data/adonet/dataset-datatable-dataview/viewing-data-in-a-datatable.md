@@ -1,43 +1,49 @@
 ---
-title: "DataTable에서 데이터 보기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "DataTable에서 데이터 보기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
-caps.latest.revision: 4
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 147d6fb4509913de1f0331ce2ff6c580c6e41ef3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# DataTable에서 데이터 보기
-**DataTable**의 **Rows** 및 **Columns** 컬렉션을 사용하여 <xref:System.Data.DataTable>의 내용에 액세스할 수 있습니다.  <xref:System.Data.DataTable.Select%2A> 메서드를 사용하여 검색 조건, 정렬 순서 및 행 상태 등의 기준에 따라 **DataTable**에 있는 데이터의 하위 집합을 반환할 수도 있습니다.  또한 기본 키 값으로 특정 행을 검색할 때 **DataRowCollection**의 <xref:System.Data.DataRowCollection.Find%2A> 메서드를 사용할 수 있습니다.  
+# <a name="viewing-data-in-a-datatable"></a>DataTable에서 데이터 보기
+내용에 액세스할 수 있습니다는 <xref:System.Data.DataTable> 를 사용 하 여는 **행** 및 **열** 의 컬렉션은 **DataTable**합니다. 사용할 수도 있습니다는 <xref:System.Data.DataTable.Select%2A> 에 있는 데이터의 하위 집합을 반환 하는 메서드는 **DataTable** 검색 조건을 포함 하 여 기준에 따라 정렬 순서 및 행 상태입니다. 또한 사용할 수는 <xref:System.Data.DataRowCollection.Find%2A> 의 메서드는 **DataRowCollection** 기본 키 값을 사용 하 여 특정 행을 검색할 때.  
   
- **DataTable** 개체의 **Select** 메서드는 지정된 조건과 일치하는 <xref:System.Data.DataRow> 개체를 반환합니다.  **Select**에는 필터 식, 정렬 식 및 **DataViewRowState**의 선택적 옵션 인수가 사용됩니다.  필터 식은 **DataColumn** 값에 따라 반환되는 행을 식별하며, 이 식은 `LastName = 'Smith'`와 같이 표현됩니다.  정렬 식은 열 정렬에 표준 SQL 규칙을 사용하며, 이 식은 `LastName ASC, FirstName ASC`와 같이 표현됩니다.  식 작성 규칙에 대한 자세한 내용은 **DataColumn** 클래스의 <xref:System.Data.DataColumn.Expression%2A> 속성을 참조하세요.  
+ **선택** 의 메서드는 **DataTable** 개체 집합을 반환 <xref:System.Data.DataRow> 지정된 된 조건과 일치 하는 개체입니다. **선택** 는 필터 식, 정렬 식의 선택적 옵션 인수가 사용 및 **DataViewRowState**합니다. 필터 식에 따라 반환 하는 행을 식별 **DataColumn** 와 같은 값 `LastName = 'Smith'`합니다. 정렬 식은 열 정렬에 표준 SQL 규칙을 사용하며, 이 식은 `LastName ASC, FirstName ASC`와 같이 표현됩니다. 식을 작성 하는 방법에 대 한 규칙에 대 한 참조는 <xref:System.Data.DataColumn.Expression%2A> 의 속성은 **DataColumn** 클래스입니다.  
   
 > [!TIP]
->  **DataTable**의 **Select** 메서드를 여러 번 호출하려는 경우, 먼저 **DataTable**에 대해 <xref:System.Data.DataView>를 만들면 성능을 향상시킬 수 있습니다.  **DataView**를 만들면 테이블 행의 인덱스가 작성됩니다.  그러면 **Select** 메서드는 해당 인덱스를 사용하여 쿼리 결과 생성 시간을 상당히 줄여 줍니다.  **DataTable**에 대해 **DataView**를 만드는 방법은 [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)을 참조하세요.  
+>  다양 한 호출을 수행 하는 경우는 **선택** 의 메서드는 **DataTable**를 먼저 만들어 성능을 향상 시킬 수 있습니다는 <xref:System.Data.DataView> 에 대 한는 **DataTable**합니다. 만들기는 **DataView** 테이블의 행을 인덱싱합니다. **선택** 메서드 다음 인덱스를 개이고에서 쿼리 결과 생성 하는 데 시간이 상당히 줄어듭니다. 만드는 방법에 대해서는 **DataView** 에 대 한는 **DataTable**, 참조 [데이터 보기](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)합니다.  
   
- **Select** 메서드는 <xref:System.Data.DataViewRowState>에 따라 보거나 조작하려는 행 버전을 선택합니다.  다음 표에서는 사용할 수 있는 **DataViewRowState** 열거형 값에 대해 설명합니다.  
+ **선택** 메서드 보거나 조작 하려는 행의 버전에 따라 결정 된 <xref:System.Data.DataViewRowState>합니다. 다음 표에 가능한 **DataViewRowState** 열거형 값입니다.  
   
 |DataViewRowState 값|설명|  
-|------------------------|--------|  
+|----------------------------|-----------------|  
 |**CurrentRows**|변경되지 않거나 추가되거나 수정된 행을 포함하는 현재 행|  
-|**삭제됨**|삭제된 행|  
-|**ModifiedCurrent**|원래 데이터가 수정된 현재 버전  \(**ModifiedOriginal** 참조\)|  
-|**ModifiedOriginal**|수정된 모든 행의 원래 버전.  현재 버전은 **ModifiedCurrent**를 사용하여 알 수 있습니다.|  
-|**Added**|새 행|  
+|**삭제**|삭제된 행|  
+|**ModifiedCurrent**|원래 데이터가 수정된 현재 버전 (참조 **ModifiedOriginal**.)|  
+|**ModifiedOriginal**|수정된 모든 행의 원래 버전. 현재 버전은 사용할 수 있는 사용 하 여 **ModifiedCurrent**합니다.|  
+|**추가**|새 행|  
 |**없음**|없음|  
 |**OriginalRows**|변경되지 않거나 삭제된 행을 포함하는 원래 행|  
-|**Unchanged**|변경되지 않은 행|  
+|**변경 되지 않은**|변경되지 않은 행|  
   
- 다음 예제에서는 **DataSet** 개체가 필터링되므로, **DataViewRowState**가 **CurrentRows**로 설정된 행에서만 작업을 수행합니다.  
+ 다음 예제에서는 **데이터 집합** 만 사용 하는 행 인 있도록 개체가 필터링 **DataViewRowState** 로 설정 된 **CurrentRows**합니다.  
   
 ```vb  
 Dim column As DataColumn  
@@ -65,7 +71,6 @@ Else
     Console.WriteLine(vbTab & rowState)  
   Next  
 End If  
-  
 ```  
   
 ```csharp  
@@ -91,7 +96,7 @@ else
 }  
 ```  
   
- **Select** 메서드를 사용하면 **RowState** 값이나 필드 값이 다른 행을 반환할 수 있습니다.  다음 예제에서는 이미 삭제된 모든 행을 참조하는 **DataRow** 배열을 반환하고, **CustID** 열이 5보다 큰 모든 행을 참조하는 또 다른 **DataRow** 배열을 반환합니다. 이 배열은 **CustLName**에 따라 정렬됩니다.  **Deleted** 행에서 정보를 보는 방법에 대한 자세한 내용은 [행 상태 및 행 버전](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)을 참조하세요.  
+ **선택** 메서드를 사용 하 여 다른 행을 반환할 수 있습니다 **RowState** 값 이나 필드 값입니다. 다음 예제에서는 반환 된 **DataRow** 행을 삭제 하 고 반환 하는 값을 모두 참조 하는 배열 **DataRow** 배열의 모든 행을 참조 하는 기준으로 정렬 된 **에서는**, 여기서는 **CustID** 열이 5 보다 큽니다. 에 대 한 정보를 보는 방법에 대 한 내용은 **Deleted** 행에서 참조 [행 상태 및 행 버전](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)합니다.  
   
 ```vb  
 ' Retrieve all deleted rows.  
@@ -100,7 +105,6 @@ Dim deletedRows() As DataRow = workTable.Select(Nothing, Nothing, DataViewRowSta
 ' Retrieve rows where CustID > 5, and order by CustLName.  
 Dim custRows() As DataRow = workTable.Select( _  
     "CustID > 5", "CustLName ASC")  
-  
 ```  
   
 ```csharp  
@@ -112,11 +116,11 @@ DataRow[] deletedRows = workTable.Select(
 DataRow[] custRows = workTable.Select("CustID > 5", "CustLName ASC");  
 ```  
   
-## 참고 항목  
- <xref:System.Data.DataRow>   
- <xref:System.Data.DataSet>   
- <xref:System.Data.DataTable>   
- <xref:System.Data.DataViewRowState>   
- [DataTable에서 데이터 조작](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)   
- [행 상태 및 행 버전](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)   
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Data.DataRow>  
+ <xref:System.Data.DataSet>  
+ <xref:System.Data.DataTable>  
+ <xref:System.Data.DataViewRowState>  
+ [DataTable에서 데이터 조작](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [행 상태 및 행 버전](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)  
  [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)

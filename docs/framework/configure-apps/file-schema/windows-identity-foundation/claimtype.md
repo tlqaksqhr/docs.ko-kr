@@ -1,51 +1,60 @@
 ---
-title: "&lt;claimType&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;claimType&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d17b5831-9a2c-45c4-b0d1-68f48e72e861
-caps.latest.revision: 4
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: c4ee8833578b082f25c427b13d77072d1954197f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# &lt;claimType&gt;
-들어오는 보안 토큰에 대 한 하나의 선택적 또는 필수 클레임을 지정합니다.  
+# <a name="ltclaimtypegt"></a>&lt;claimType&gt;
+들어오는 보안 토큰에 대 한 단일 옵션 또는 필요한 클레임을 지정합니다.  
   
-## 구문  
+ \<system.identityModel >  
+\<identityConfiguration >  
+\<claimTypeRequired >  
+\<claimType >  
   
-```  
+## <a name="syntax"></a>구문  
+  
+```xml  
 <system.identityModel>  
-  <identityConfiguration>  
-    <claimTypeRequired>  
-      <claimType type=URI optional=xs:boolean >  
-      </claimType>  
-    </claimTypeRequired>  
-  </identityConfiguration>  
+  <identityConfiguration>  
+    <claimTypeRequired>  
+      <claimType type=URI optional=xs:boolean >  
+      </claimType>  
+    </claimTypeRequired>  
+  </identityConfiguration>  
 </system.identityModel>  
 ```  
   
-## 특성 및 요소  
+## <a name="attributes-and-elements"></a>특성 및 요소  
  다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
-### 특성  
+### <a name="attributes"></a>특성  
   
 |특성|설명|  
-|--------|--------|  
-|type|클레임 형식입니다.  일반적으로 URI입니다.  필수 요소.|  
-|optional|클레임 형식은 선택적 요소 인지 여부를 지정 하는 부울 값  선택적 요소.|  
+|---------------|-----------------|  
+|type|클레임 형식입니다. 일반적으로 URI입니다. 필수 요소.|  
+|선택적|클레임 유형 선택 사항 인지를 지정 하는 부울 값입니다. 선택 사항입니다.|  
   
-### 자식 요소  
+### <a name="child-elements"></a>자식 요소  
  없음  
   
-### 부모 요소  
+### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
-|--------|--------|  
-|[\<claimTypeRequired\>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|들어오는 보안 토큰에 대 한 필요한 클레임 집합을 지정합니다.|
+|-------------|-----------------|  
+|[\<claimTypeRequired >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtyperequired.md)|들어오는 보안 토큰에 대 한 요구 된 클레임 집합을 지정합니다.|

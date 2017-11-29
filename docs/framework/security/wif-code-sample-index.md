@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6711f01a-4743-43ce-95ab-5e2302a363ea
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: d5ec81864fca8ec9c83fd294f722e890f002e510
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/14/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="wif-code-sample-index"></a>WIF 코드 샘플 인덱스
 Windows Identity Foundation 4.5에 대한 코드 샘플은 다음과 같습니다.  
@@ -42,4 +40,3 @@ Windows Identity Foundation 4.5에 대한 코드 샘플은 다음과 같습니�
   
 ## <a name="see-also"></a>참고 항목  
  [Windows Identity Foundation](../../../docs/framework/security/index.md)
-

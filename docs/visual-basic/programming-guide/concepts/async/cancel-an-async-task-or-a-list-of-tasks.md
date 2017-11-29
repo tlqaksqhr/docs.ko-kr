@@ -1,67 +1,59 @@
 ---
-title: "비동기 작업 또는 작업 (Visual Basic) 목록이 취소 | Microsoft 문서"
+title: "비동기 작업 또는 작업 (Visual Basic) 목록 취소"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-caps.latest.revision: 3
-author: stevehoag
-ms.author: shoag
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: fe2df73aaf49f1b61dafcad9a6c6e0f3d014f8ec
-ms.lasthandoff: 03/13/2017
-
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 916577107bd65559aed71dc9bb2921969a117e90
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>비동기 작업 또는 작업 (Visual Basic) 목록이 취소
-완료 될 때까지 대기 하지 않으려는 경우 비동기 응용 프로그램을 취소 하는 데 사용할 수 있는 단추를 설정할 수 있습니다. 이 항목의 예제를 따라 웹 사이트 목록이 나 웹 사이트의 콘텐츠를 다운로드 하는 응용 프로그램에 취소 단추를 추가할 수 있습니다.  
+# <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>비동기 작업 또는 작업 (Visual Basic) 목록 취소
+작업이 완료될 때까지 기다리지 않으려면 비동기 응용 프로그램을 취소할 때 사용하는 단추를 설정할 수 있습니다. 이 항목의 예제에 따라 한 웹 사이트 또는 웹 사이트 목록의 콘텐츠를 다운로드하는 응용 프로그램에 취소 단추를 추가할 수 있습니다.  
   
  예제에서는 UI를 사용 하는 [미세 조정 Your 비동기 응용 프로그램 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) 에 대해 설명 합니다.  
   
 > [!NOTE]
->  예제를 실행 하려면 Visual Studio 2012 이상 및.NET Framework 4.5 또는 있어야 사용자의 컴퓨터에 설치 되어 있습니다.  
+>  예제를 실행하려면 Visual Studio 2012 이상 및 .NET Framework 4.5 이상이 컴퓨터에 설치되어 있어야 합니다.  
   
-##  <a name="BKMK_CancelaTask"></a>작업 취소  
- 첫 번째 예제에서는 연결에서 **취소** 번 다운로드 작업에는 단추입니다. 응용 프로그램은 콘텐츠를 다운로드 하는 동안 단추를 선택 하면 다운로드가 취소 됩니다.  
+##  <a name="BKMK_CancelaTask"></a> 작업 취소  
+ 첫 번째 예제에서는 **취소** 단추를 단일 다운로드 작업에 연결합니다. 응용 프로그램이 콘텐츠를 다운로드하는 동안 단추를 선택하면 다운로드가 취소됩니다.  
   
 ### <a name="downloading-the-example"></a>예제 다운로드  
- 전체 Windows Presentation Foundation (WPF) 프로젝트를 다운로드할 수 있습니다 [Async 샘플: 세밀 하 게 응용 프로그램 튜닝](http://go.microsoft.com/fwlink/?LinkId=255046) 다음이 단계를 수행 하 고 있습니다.  
+ [Async 샘플: 응용 프로그램 세부 조정](http://go.microsoft.com/fwlink/?LinkId=255046)에서 전체 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후 다음 단계를 따를 수 있습니다.  
   
 1.  다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.  
   
 2.  메뉴 모음에서 **파일**, **열기**, **프로젝트/솔루션**을 선택합니다.  
   
-3.  에 **프로젝트 열기** 대화 상자에서 압축을 해제 하는 샘플 코드를 보유 하는 폴더를 연 다음 AsyncFineTuningVB에 대 한 솔루션 (.sln) 파일을 엽니다.  
+3.  에 **프로젝트 열기** 대화 상자, 하면 압축을 푼 샘플 코드가 저장 된 폴더를 연 다음 AsyncFineTuningVB에 대 한 솔루션 (.sln) 파일을 엽니다.  
   
-4.  **솔루션 탐색기**, 바로 가기 메뉴를 열고는 **CancelATask** 프로젝트를 선택한 다음 **시작 프로젝트로 설정**합니다.  
+4.  **솔루션 탐색기**에서 **CancelATask** 프로젝트에 대한 바로 가기 메뉴를 열고 **시작 프로젝트로 설정**을 선택합니다.  
   
-5.  프로젝트를 실행 하려면 F5 키를 선택 합니다.  
+5.  F5 키를 선택하여 프로젝트를 실행합니다.  
   
-     디버깅 하지 않고 프로젝트를 실행 하려면 Ctrl + f&5;를 선택 합니다.  
+     디버그하지 않고 프로젝트를 실행하려면 Ctrl+F5를 선택합니다.  
   
- 프로젝트를 다운로드 하지 않으려는 경우이 항목의 끝부분에 MainWindow.xaml.vb 파일을 검토할 수 있습니다.  
+ 프로젝트를 다운로드 하지 않으려면 하는 경우이 항목의 끝부분에 MainWindow.xaml.vb 파일을 검토할 수 있습니다.  
   
 ### <a name="building-the-example"></a>예제 빌드  
- 다음과 같은 변경 내용이 추가 **취소** 웹 사이트를 다운로드 하는 응용 프로그램에 단추입니다. 예제를 작성 하거나 다운로드 하 고 않으려면,이 항목의 끝에 있는 "예제" 섹션에서 최종 제품을 검토할 수 있습니다. 별표는 코드의 변경 내용을 표시합니다.  
+ 다음 변경 내용은 웹 사이트를 다운로드하는 응용 프로그램에 **취소** 단추를 추가합니다. 예제를 다운로드하거나 빌드하지 않으려면 이 항목의 끝에 있는 “전체 예제” 섹션에서 최종 결과를 검토할 수 있습니다. 코드에서 변경 내용에는 별표가 표시됩니다.  
   
- 예제를 빌드하려면 "예제 다운로드" 섹션의 지침에 따라 사용자가 직접 단계별로 하지만를 선택할 **StarterCode** 으로 **시작 프로젝트** 대신 **CancelATask**합니다.  
+ 직접 예제를 빌드하려면 "예제 다운로드" 섹션의 지침을 단계별로 따르지만 **시작 프로젝트**로 **CancelATask** 대신 **StarterCode**를 선택합니다.  
   
- 그런 다음 다음과 같은 변경 내용이 해당 프로젝트의 MainWindow.xaml.vb 파일에 추가.  
+ 해당 프로젝트의 MainWindow.xaml.vb 파일에 다음과 같은 변경을 추가 합니다.  
   
-1.  선언는 `CancellationTokenSource` 변수인 `cts`, 액세스 하는 모든 메서드에 대 한 범위에 있습니다.  
+1.  액세스하는 모든 메서드에 대한 범위 내에 있는 `CancellationTokenSource` 변수 `cts`를 선언합니다.  
   
     ```vb  
     Class MainWindow  
@@ -70,7 +62,7 @@ ms.lasthandoff: 03/13/2017
         Dim cts As CancellationTokenSource  
     ```  
   
-2.  다음 이벤트 처리기에 대 한 추가 **취소** 단추입니다. 이벤트 처리기에서 사용 된 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName>에 알리기 위해 메서드 `cts` 사용자가 취소를 요청 하는 경우.</xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=fullName>  
+2.  **취소** 단추에 대한 다음 이벤트 처리기를 추가합니다. 이벤트 처리기는 <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> 메서드를 사용하여 사용자가 취소를 요청할 때 `cts`에 알려줍니다.  
   
     ```vb  
     ' ***Add an event handler for the Cancel button.  
@@ -82,16 +74,16 @@ ms.lasthandoff: 03/13/2017
     End Sub  
     ```  
   
-3.  변경 다음 이벤트에 대 한 처리기는 **시작** 단추 `startButton_Click`합니다.  
+3.  이벤트 처리기에서 **시작** 단추 `startButton_Click`을 다음과 같이 변경합니다.  
   
-    -   인스턴스화하는 `CancellationTokenSource`, `cts`합니다.  
+    -   `CancellationTokenSource`, `cts`를 인스턴스화합니다.  
   
         ```vb  
         ' ***Instantiate the CancellationTokenSource.  
         cts = New CancellationTokenSource()  
         ```  
   
-    -   에 대 한 호출에서 `AccessTheWebAsync`, 지정된 된 웹 사이트의 콘텐츠를 다운로드 하는, 보내기는 <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=fullName>속성 `cts` 인수로.</xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=fullName> `Token` 속성 취소가 요청 된 경우 메시지를 전파 합니다. 사용자가 다운로드 작업을 취소 하도록 선택 하는 경우 메시지를 표시 하는 catch 블록을 추가 합니다. 다음 코드에서는 변경 내용을 보여 줍니다.  
+    -   지정된 웹 사이트의 콘텐츠를 다운로드하는 `AccessTheWebAsync` 호출에서 `cts`의 <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> 속성을 인수로 전송합니다. 취소가 요청되면 `Token` 속성은 메시지를 전파합니다. 사용자가 다운로드 작업을 취소하도록 선택할 경우 메시지를 표시하는 catch 블록을 추가합니다. 다음 코드는 변경 내용을 보여 줍니다.  
   
         ```vb  
         Try  
@@ -110,9 +102,9 @@ ms.lasthandoff: 03/13/2017
         End Try  
         ```  
   
-4.  `AccessTheWebAsync`를 사용 하 여는 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=fullName>오버 로드는 `GetAsync` 에서 메서드는 <xref:System.Net.Http.HttpClient>웹 사이트의 내용을 다운로드 하는 형식입니다.</xref:System.Net.Http.HttpClient> </xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=fullName> 전달 `ct`, <xref:System.Threading.CancellationToken>의 매개 변수 `AccessTheWebAsync`, 두 번째 인수로.</xref:System.Threading.CancellationToken> 토큰이 사용자가 선택 하는 경우 메시지 전달의 **취소** 단추입니다.  
+4.  `AccessTheWebAsync`에서 <xref:System.Net.Http.HttpClient> 형식에 있는 `GetAsync` 메서드의 <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> 오버로드를 사용하여 웹 사이트의 콘텐츠를 다운로드합니다. `AccessTheWebAsync`의 <xref:System.Threading.CancellationToken> 매개 변수인 `ct`를 두 번째 인수로 전달합니다. 사용자가 **취소** 단추를 선택하면 토큰이 메시지를 전달합니다.  
   
-     다음 코드에서는의 변경 내용을 `AccessTheWebAsync`합니다.  
+     다음 코드는 `AccessTheWebAsync`의 변경 내용을 보여 줍니다.  
   
     ```vb  
     ' ***Provide a parameter for the CancellationToken.  
@@ -138,44 +130,44 @@ ms.lasthandoff: 03/13/2017
     End Function  
     ```  
   
-5.  프로그램을 취소 하지는 다음과 같은 출력을 생성 합니다.  
+5.  프로그램을 취소하지 않으면 다음 출력이 생성됩니다.  
   
     ```  
     Ready to download.  
     Length of the downloaded string: 158125.  
     ```  
   
-     선택 하는 경우는 **취소** 단추 프로그램 하기 전에 콘텐츠를 다운로드 하는 완료 되 면을 다음과 같은 출력을 생성 하는 프로그램입니다.  
+     프로그램이 다운로드를 완료하기 전에 **취소** 단추를 선택하면 다음 출력이 생성됩니다.  
   
     ```  
     Ready to download.  
     Download canceled.  
     ```  
   
-##  <a name="BKMK_CancelaListofTasks"></a>작업 목록 취소  
- 동일한 연결 하 여 다양 한 작업을 취소 하는 앞의 예제를 확장할 수 있습니다 `CancellationTokenSource` 각 작업을 사용 하 여 인스턴스. 선택 하는 경우는 **취소** 완료 아직 되지 않은 모든 작업을 취소 단추를 합니다.  
+##  <a name="BKMK_CancelaListofTasks"></a> 작업 목록 취소  
+ 이전 예제를 확장하여 같은 `CancellationTokenSource` 인스턴스를 각 작업과 연결하는 방식으로 여러 작업을 취소할 수 있습니다. **취소** 단추를 선택하면 아직 완료되지 않은 모든 작업이 취소됩니다.  
   
 ### <a name="downloading-the-example"></a>예제 다운로드  
- 전체 Windows Presentation Foundation (WPF) 프로젝트를 다운로드할 수 있습니다 [Async 샘플: 세밀 하 게 응용 프로그램 튜닝](http://go.microsoft.com/fwlink/?LinkId=255046) 다음이 단계를 수행 하 고 있습니다.  
+ [Async 샘플: 응용 프로그램 세부 조정](http://go.microsoft.com/fwlink/?LinkId=255046)에서 전체 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후 다음 단계를 따를 수 있습니다.  
   
 1.  다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.  
   
 2.  메뉴 모음에서 **파일**, **열기**, **프로젝트/솔루션**을 선택합니다.  
   
-3.  에 **프로젝트 열기** 대화 상자에서 압축을 해제 하는 샘플 코드를 보유 하는 폴더를 연 다음 AsyncFineTuningVB에 대 한 솔루션 (.sln) 파일을 엽니다.  
+3.  에 **프로젝트 열기** 대화 상자, 하면 압축을 푼 샘플 코드가 저장 된 폴더를 연 다음 AsyncFineTuningVB에 대 한 솔루션 (.sln) 파일을 엽니다.  
   
-4.  **솔루션 탐색기**, 바로 가기 메뉴를 열고는 **CancelAListOfTasks** 프로젝트를 선택한 다음 **시작 프로젝트로 설정**합니다.  
+4.  **솔루션 탐색기**에서 **CancelAListOfTasks** 프로젝트에 대한 바로 가기 메뉴를 열고 **시작 프로젝트로 설정**을 선택합니다.  
   
-5.  프로젝트를 실행 하려면 F5 키를 선택 합니다.  
+5.  F5 키를 선택하여 프로젝트를 실행합니다.  
   
-     디버깅 하지 않고 프로젝트를 실행 하려면 Ctrl + f&5;를 선택 합니다.  
+     디버그하지 않고 프로젝트를 실행하려면 Ctrl+F5를 선택합니다.  
   
- 프로젝트를 다운로드 하지 않으려는 경우이 항목의 끝부분에 MainWindow.xaml.vb 파일을 검토할 수 있습니다.  
+ 프로젝트를 다운로드 하지 않으려면 하는 경우이 항목의 끝부분에 MainWindow.xaml.vb 파일을 검토할 수 있습니다.  
   
 ### <a name="building-the-example"></a>예제 빌드  
- 예제를 확장 하려면 "예 다운로드" 섹션의 지침에 따라 직접 단계별로 하지만를 선택할 **CancelATask** 으로 **시작 프로젝트**합니다. 다음과 같은 변경 내용이 해당 프로젝트에 추가 합니다. 별표는 프로그램의 변경 내용을 표시합니다.  
+ 직접 예제를 확장하려면 "예제 다운로드" 섹션의 지침을 단계별로 따르되, **CancelATask**를 **시작 프로젝트**로 선택합니다. 해당 프로젝트에 다음 변경 내용을 추가합니다. 프로그램에서 변경 내용에는 별표가 표시됩니다.  
   
-1.  웹 주소 목록을 만드는 메서드를 추가 합니다.  
+1.  웹 주소 목록에 메서드를 추가합니다.  
   
     ```vb  
     ' ***Add a method that creates a list of web addresses.  
@@ -195,14 +187,14 @@ ms.lasthandoff: 03/13/2017
     End Function  
     ```  
   
-2.  메서드를 호출 `AccessTheWebAsync`합니다.  
+2.  `AccessTheWebAsync`에서 메서드를 호출합니다.  
   
     ```vb  
     ' ***Call SetUpURLList to make a list of web addresses.  
     Dim urlList As List(Of String) = SetUpURLList()  
     ```  
   
-3.  다음 루프에 추가 `AccessTheWebAsync` 목록에서 각 웹 주소를 처리 합니다.  
+3.  `AccessTheWebAsync`에서 다음 루프를 추가하여 목록에 있는 각 웹 주소를 처리합니다.  
   
     ```vb  
     ' ***Add a loop to process the list of web addresses.  
@@ -220,19 +212,21 @@ ms.lasthandoff: 03/13/2017
     Next  
     ```  
   
-4.  때문에 `AccessTheWebAsync` 표시 길이 메서드를 아무것도 반환할 필요가 없습니다. Return 문을 제거 하 고 <xref:System.Threading.Tasks.Task> <xref:System.Threading.Tasks.Task%601>.</xref:System.Threading.Tasks.Task%601> 대신</xref:System.Threading.Tasks.Task> 하는 메서드의 반환 형식 변경  
+4.  `AccessTheWebAsync`는 길이를 표시하므로 메서드가 아무것도 반환할 필요가 없습니다. return 문을 제거하고 메서드의 반환 형식을 <xref:System.Threading.Tasks.Task%601> 대신 <xref:System.Threading.Tasks.Task>로 변경합니다.  
   
-<CodeContentPlaceHolder>10</CodeContentPlaceHolder>  
-     메서드를 호출 `startButton_Click` 식 대신 사용 하 여 합니다.  
+    ```vb  
+    Async Function AccessTheWebAsync(ct As CancellationToken) As Task  
+    ```  
+  
+     식 대신 문을 사용하여 `startButton_Click`에서 메서드를 호출합니다.  
   
     ```vb  
     Await AccessTheWebAsync(cts.Token)  
     ```  
   
-5.  프로그램을 취소 하지는 다음과 같은 출력을 생성 합니다.  
+5.  프로그램을 취소하지 않으면 다음 출력이 생성됩니다.  
   
     ```  
-  
     Length of the downloaded string: 35939.  
   
     Length of the downloaded string: 237682.  
@@ -248,10 +242,9 @@ ms.lasthandoff: 03/13/2017
     Length of the downloaded string: 145790.  
   
     Downloads complete.  
-  
     ```  
   
-     선택 하는 경우는 **취소** 출력 다운로드를 완료 하기 전에 단추를 취소 하기 전에 완료 하는 다운로드의 길이 포함 합니다.  
+     다운로드가 완료되기 전에 **취소** 단추를 선택하면 취소하기 전에 완료된 다운로드의 길이가 출력에 포함됩니다.  
   
     ```  
     Length of the downloaded string: 35939.  
@@ -261,13 +254,12 @@ ms.lasthandoff: 03/13/2017
     Length of the downloaded string: 128607.  
   
     Downloads canceled.  
-  
     ```  
   
-##  <a name="BKMK_CompleteExamples"></a>전체 예제  
- 다음 섹션에서는 각각 이전 예제에 대 한 코드를 포함. <xref:System.Net.Http>.</xref:System.Net.Http> 에 대 한 참조를 추가 해야 한다고 공지  
+##  <a name="BKMK_CompleteExamples"></a> 전체 예제  
+ 다음 섹션에는 각각의 이전 예제에 대한 코드가 있습니다. <xref:System.Net.Http>에 대한 참조를 추가해야 합니다.  
   
- 프로젝트를 다운로드할 수 있습니다 [Async 샘플: 세밀 하 게 응용 프로그램 튜닝](http://go.microsoft.com/fwlink/?LinkId=255046)합니다.  
+ [Async 샘플: 응용 프로그램 미세 조정](http://go.microsoft.com/fwlink/?LinkId=255046)에서 프로젝트를 다운로드할 수 있습니다.  
   
 ### <a name="cancel-a-task-example"></a>작업 취소 예제  
  다음 코드는 단일 작업을 취소 하는 예제에 대 한 전체 MainWindow.xaml.vb 파일입니다.  
@@ -354,7 +346,7 @@ End Class
 ```  
   
 ### <a name="cancel-a-list-of-tasks-example"></a>작업 목록 취소 예제  
- 다음 코드는 작업 목록 취소 하는 예제에 대 한 전체 MainWindow.xaml.vb 파일입니다.  
+ 다음 코드는 작업 목록 취소 예제에 대 한 전체 MainWindow.xaml.vb 파일입니다.  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -472,8 +464,8 @@ End Class
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Threading.CancellationTokenSource></xref:System.Threading.CancellationTokenSource>   
- <xref:System.Threading.CancellationToken></xref:System.Threading.CancellationToken>   
- [비동기 프로그래밍 async 및 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)   
- [Async (Visual Basic) 응용 프로그램을 미세 조정](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
+ <xref:System.Threading.CancellationTokenSource>  
+ <xref:System.Threading.CancellationToken>  
+ [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
+ [Async 응용 프로그램 미세 조정(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
  [Async 샘플: 응용 프로그램 미세 조정](http://go.microsoft.com/fwlink/?LinkId=255046)

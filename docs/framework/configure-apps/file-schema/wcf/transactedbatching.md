@@ -1,56 +1,64 @@
 ---
-title: "&lt;transactedBatching&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;transactedBatching&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2f790a0d-8f03-4b86-81b5-ce1bc1a6c575
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: edeb10a1a7fa540b3f3e6ef4bf1a4a820fbc1b4a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;transactedBatching&gt;
+# <a name="lttransactedbatchinggt"></a>&lt;transactedBatching&gt;
 받기 작업에 트랜잭션 일괄 처리가 지원되는지 여부를 지정합니다.  
   
-## 구문  
+ \<시스템입니다. ServiceModel >  
+\<동작 >  
+\<endpointBehaviors >  
+\<동작 >  
+\<transactedBatching >  
   
-```  
+## <a name="syntax"></a>구문  
   
+```xml  
 <transactedBatching maxBatchSize="Integer" />  
 ```  
   
-## 특성 및 요소  
+## <a name="attributes-and-elements"></a>특성 및 요소  
  다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
-### 특성  
+### <a name="attributes"></a>특성  
   
 |특성|설명|  
-|--------|--------|  
-|`maxBatchSize`|트랜잭션 한 번으로 일괄 처리할 수 있는 받기 작업의 최대 수를 지정하는 정수입니다.  기본값은 0입니다.|  
+|---------------|-----------------|  
+|`maxBatchSize`|트랜잭션 한 번으로 일괄 처리할 수 있는 받기 작업의 최대 수를 지정하는 정수입니다. 기본값은 0입니다.|  
   
-### 자식 요소  
+### <a name="child-elements"></a>자식 요소  
  없음  
   
-### 부모 요소  
+### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
-|--------|--------|  
-|[\<behavior\>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|끝점 동작을 지정합니다.|  
+|-------------|-----------------|  
+|[\<동작 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|끝점 동작을 지정합니다.|  
   
-## 설명  
- 트랜잭션 일괄 처리로 구성된 전송에서 여러 개의 받기 작업을 한 번의 트랜잭션으로 일괄 처리하도록 시도합니다.  이렇게 하면 모든 받기 작업에서 트랜잭션을 만들고 이를 커밋하는 비용을 줄일 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 트랜잭션 일괄 처리로 구성된 전송에서 여러 개의 받기 작업을 한 번의 트랜잭션으로 일괄 처리하도록 시도합니다. 이렇게 하면 모든 받기 작업에서 트랜잭션을 만들고 이를 커밋하는 비용을 줄일 수 있습니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 예제에서는 구성 파일에서 트랜잭션된 일괄 처리 동작을 서비스에 추가하는 방법을 보여 줍니다.  
   
-```  
+```xml  
 <system.serviceModel>  
   <services>  
     <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
@@ -88,6 +96,6 @@ caps.handback.revision: 9
 </system.serviceModel>  
 ```  
   
-## 참고 항목  
- <xref:System.ServiceModel.Configuration.TransactedBatchingElement>   
+## <a name="see-also"></a>참고 항목  
+ <xref:System.ServiceModel.Configuration.TransactedBatchingElement>  
  <xref:System.ServiceModel.Description.TransactedBatchingBehavior>

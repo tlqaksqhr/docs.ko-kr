@@ -5,15 +5,13 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
+- cpp
 helpviewer_keywords:
 - prototypes in managed code
 - COM interop, DLL functions
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - DLL functions
 - object fields in platform invoke
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 9a3dcc625a838dc8823930e31541543b9c4c7f8f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 59cfb9160ccd84c41d71ad29b417b05fb4a17233
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="creating-prototypes-in-managed-code"></a>관리 코드에서 프로토타입 만들기
 이 항목에서는 관리되지 않는 함수에 액세스하는 방법을 설명하고 관리 코드에서 메서드 정의에 주석을 다는 여러 특성 필드를 소개합니다. 플랫폼 호출에서 사용되는 .NET 기반 선언을 생성하는 방법을 보여 주는 예제는 [플랫폼 호출을 사용하여 데이터 마샬링](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)을 참조하세요.  
@@ -43,7 +40,7 @@ ms.lasthandoff: 08/21/2017
  관리 코드에서 관리되지 않는 DLL 함수에 액세스하기 전에 함수 이름과 함수를 내보내는 DLL 이름을 알아야 합니다. 이 정보를 사용하여 DLL에서 구현되는 관리되지 않는 함수에 대한 관리되는 정의를 쓰기 시작할 수 있습니다. 또한 플랫폼 호출이 함수를 만들고 데이터를 함수로 또는 반대로 마샬링하는 방법을 조정할 수 있습니다.  
   
 > [!NOTE]
->  문자열을 할당하는 Win32 API 함수를 통해 `LocalFree`와 같은 메서드를 사용하여 문자열을 해제할 수 있습니다. 플랫폼 호출은 매개 변수를 다르게 처리합니다. 플랫폼 호출의 경우 매개 변수를 `String` 형식 대신 `IntPtr` 형식으로 설정합니다. <xref:System.Runtime.InteropServices.Marshal?displayProperty=fullName> 클래스에서 제공된 메서드를 사용하여 형식을 문자열로 수동으로 변환하고 해제합니다.  
+>  문자열을 할당하는 Win32 API 함수를 통해 `LocalFree`와 같은 메서드를 사용하여 문자열을 해제할 수 있습니다. 플랫폼 호출은 매개 변수를 다르게 처리합니다. 플랫폼 호출의 경우 매개 변수를 `String` 형식 대신 `IntPtr` 형식으로 설정합니다. <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> 클래스에서 제공된 메서드를 사용하여 형식을 문자열로 수동으로 변환하고 해제합니다.  
   
 ## <a name="declaration-basics"></a>선언 기본 사항  
  관리되지 않는 함수에 대한 관리되는 정의는 다음 예제와 같이 언어 종속적입니다. 전체 코드 예제를 보려면 [플랫폼 호출 예제](../../../docs/framework/interop/platform-invoke-examples.md)를 참조하세요.  
@@ -233,12 +230,11 @@ interface IDemandStubsItf
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [관리되지 않는 DLL 함수 사용](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)   
- [진입점 지정](../../../docs/framework/interop/specifying-an-entry-point.md)   
- [문자 집합 지정](../../../docs/framework/interop/specifying-a-character-set.md)   
- [플랫폼 호출 예제](../../../docs/framework/interop/platform-invoke-examples.md)   
- [플랫폼 호출 보안 고려 사항](http://msdn.microsoft.com/en-us/bbcc67f7-50b5-4917-88ed-cb15470409fb)   
- [DLL 함수 식별](../../../docs/framework/interop/identifying-functions-in-dlls.md)   
- [DLL 함수가 포함된 클래스 만들기](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)   
+ [관리되지 않는 DLL 함수 사용](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
+ [진입점 지정](../../../docs/framework/interop/specifying-an-entry-point.md)  
+ [문자 집합 지정](../../../docs/framework/interop/specifying-a-character-set.md)  
+ [플랫폼 호출 예제](../../../docs/framework/interop/platform-invoke-examples.md)  
+ [플랫폼 호출 보안 고려 사항](http://msdn.microsoft.com/en-us/bbcc67f7-50b5-4917-88ed-cb15470409fb)  
+ [DLL 함수 식별](../../../docs/framework/interop/identifying-functions-in-dlls.md)  
+ [DLL 함수가 포함된 클래스 만들기](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)  
  [DLL 함수 호출](../../../docs/framework/interop/calling-a-dll-function.md)
-

@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5f723345-7270-49e2-b638-b3a34bd40517
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1e23b0261625efb1e6da070e4b5f8334b1ef7488
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 312324553333427c08acf7ef3eb11059f2224d06
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="windows-identity-foundation-45-overview"></a>Windows Identity Foundation 4.5 개요
 Windows Identity Foundation 4.5는 응용 프로그램에서 클레임 기반 ID를 구현하기 위한 일련의 .NET Framework 클래스입니다. 이를 사용하면 클레임 인식 응용 프로그램과 서비스의 이점을 더욱 쉽게 활용할 수 있습니다. WIF 4.5는 .NET Framework 버전 4.5 이상을 사용하는 웹 서비스 또는 웹 응용 프로그램에서 사용할 수 있습니다. WIF는 개방형 표준에 따라 공유 산업 비전을 구현하는 Microsoft 페더레이션 ID 소프트웨어 제품군의 일부분일 뿐입니다. 페더레이션 ID는 [AD FS(Active Directory® Federation Services)](http://go.microsoft.com/fwlink/?LinkID=247516) 2.0, [Microsoft Azure ACS(Access Control Services)](http://go.microsoft.com/fwlink/?LinkID=247517) 및 WIF와 같은 세 가지 구성 요소로 구성됩니다. 이러한 세 가지 구성 요소가 모여 Microsoft의 새로운 클레임 기반 클라우드 ID 및 액세스 플랫폼의 핵심을 형성합니다.  
@@ -49,5 +47,4 @@ Windows Identity Foundation 4.5는 응용 프로그램에서 클레임 기반 ID
   
 -   인증 강화 응용 프로그램 내의 리소스에 따라 인증 요구 사항이 달라질 수 있습니다. WIF를 통해 개발자가 증분 인증 요구 사항이 필요할 수 있는 응용 프로그램을 빌드할 수 있습니다(예: 사용자 이름/암호 인증으로 초기 로그인 후 스마트 카드 인증으로 강화).  
   
- WIF를 사용하여 클레임 기반 ID 모델의 이점을 쉽게 활용할 수 있습니다. 자세한 내용은 [개발자용 Windows Identity Foundation 백서](http://go.microsoft.com/fwlink/?LinkId=122266)를 참조하세요.
-
+ WIF를 사용하여 클레임 기반 ID 모델의 이점을 쉽게 활용할 수 있습니다. 자세한 내용은 [개발자용 Windows Identity Foundation 백서](http://download.microsoft.com/download/7/d/0/7d0b5166-6a8a-418a-addd-95ee9b046994/windowsidentityfoundationwhitepaperfordevelopers-rtw.pdf)를 참조하세요.

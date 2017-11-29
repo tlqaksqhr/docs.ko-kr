@@ -1,43 +1,25 @@
 ---
 title: "Visual Basic의 변수"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
 - variables [Visual Basic]
 - values [Visual Basic], storing
 ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 2fdc670bf4f17000809e75e32c32edb39abf0fed
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: a7a47ad7e4ade9f15159c27ac672aeb937a05493
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="variables-in-visual-basic"></a>Visual Basic의 변수
 일반적으로 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서 계산을 수행할 경우 값을 저장해야 합니다. 예를 들어 여러 값을 계산하여 비교하고 비교 결과에 따라 값에서 다른 작업을 수행해야 할 수 있습니다. 값을 비교하려면 값을 보존해야 합니다.  
@@ -61,10 +43,9 @@ ms.lasthandoff: 07/28/2017
  변수처럼 *속성*은 액세스할 수 있는 값을 나타냅니다. 그러나 변수보다 더 복잡합니다. 속성에는 값을 설정 및 검색하는 방법을 제어하는 코드 블록이 사용됩니다. 자세한 내용은 [Visual Basic에서 속성과 변수의 차이점](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [변수 선언](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)   
- [개체 변수](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)   
- [변수 문제 해결](../../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)   
- [방법: 변수 값 저장 및 검색](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)   
- [Visual Basic에서 속성과 변수의 차이점](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)   
+ [변수 선언](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
+ [개체 변수](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
+ [변수 문제 해결](../../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)  
+ [방법: 변수 값 저장 및 검색](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)  
+ [Visual Basic에서 속성과 변수의 차이점](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)  
  [지역 형식 유추](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-

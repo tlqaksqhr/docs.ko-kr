@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - debugging [.NET Framework]
 - .NET Framework application configuration, debugging
@@ -26,16 +20,15 @@ helpviewer_keywords:
 - troubleshooting applications [.NET Framework]
 - application development [.NET Framework], profiling
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 1f7696edacc95dee383a7c7e9256cca3eac44839
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/14/2017
-
+ms.openlocfilehash: 21032358c9edb1b79d9e170e477502670f781fc3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="debugging-tracing-and-profiling"></a>디버깅, 추적 및 프로파일링
 .NET Framework 응용 프로그램을 디버그하려면 디버거가 응용 프로그램에 연결하고 가능한 경우 응용 프로그램 및 해당 MSIL(Microsoft intermediate language)에 대한 기호 및 라인 맵을 둘 다 생성할 수 있도록 컴파일러 및 런타임 환경을 구성해야 합니다. 관리되는 응용 프로그램이 디버그된 후 성능을 향상시키기 위해 프로파일링할 수 있습니다. 프로파일링은 가장 자주 실행된 코드를 생성하는 소스 코드 줄과 실행하는 데 소요된 시간을 평가 및 설명합니다.  
@@ -67,4 +60,3 @@ ms.lasthandoff: 09/14/2017
   
  [개발 가이드](../../../docs/framework/development-guide.md)  
  만들기, 구성, 디버깅, 보안, 응용 프로그램 배포, 동적 프로그래밍에 대한 정보, 상호 운용성, 확장성, 메모리 관리 및 스레딩을 포함하여 응용 프로그램 개발에 대한 모든 주요 기술 분야 및 작업에 대한 지침을 제공합니다.
-

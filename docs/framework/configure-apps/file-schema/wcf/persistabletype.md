@@ -1,28 +1,34 @@
 ---
-title: "&lt;persistableType&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;persistableType&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e5425fe6-523a-4076-aab4-2c2515b1d830
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c77bdf8ef02edf682ded95ab16b4d56dbf60b4ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;persistableType&gt;
+# <a name="ltpersistabletypegt"></a>&lt;persistableType&gt;
 모든 지속 형식을 지정합니다.  
   
-## 구문  
+ \<시스템입니다. ServiceModel >  
+\<comContracts >  
+\<comContract >  
   
-```  
+## <a name="syntax"></a>구문  
   
+```xml  
 <comContracts>  
   <comContract>  
       <persistableTypes>  
@@ -34,31 +40,31 @@ caps.handback.revision: 5
 </comContracts>  
 ```  
   
-## 형식  
+## <a name="type"></a>형식  
  `Type`  
   
-## 특성 및 요소  
+## <a name="attributes-and-elements"></a>특성 및 요소  
  다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
-### 특성  
+### <a name="attributes"></a>특성  
   
 |특성|설명|  
-|--------|--------|  
+|---------------|-----------------|  
 |id|지속 형식에 대한 고유 식별자를 지정하는 문자열이 포함된 필수적 특성입니다.|  
 |name|지속 형식의 이름을 지정하는 문자열이 포함된 선택적 특성입니다.|  
   
-### 자식 요소  
+### <a name="child-elements"></a>자식 요소  
  없음  
   
-### 부모 요소  
+### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
-|--------|--------|  
-|[\<persistableTypes\>](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)|`persistableType` 요소의 컬렉션입니다.|  
+|-------------|-----------------|  
+|[\<persistableTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)|`persistableType` 요소의 컬렉션입니다.|  
   
-## 참고 항목  
- <xref:System.ServiceModel.Configuration.ComPersistableTypeElementCollection>   
- <xref:System.ServiceModel.Configuration.ComPersistableTypeElement>   
- [\<comContracts\>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)   
- [COM\+ 응용 프로그램과 통합](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)   
- [방법: COM\+ 서비스 설정 구성](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+## <a name="see-also"></a>참고 항목  
+ <xref:System.ServiceModel.Configuration.ComPersistableTypeElementCollection>  
+ <xref:System.ServiceModel.Configuration.ComPersistableTypeElement>  
+ [\<comContracts >](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
+ [COM + 응용 프로그램과 통합](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
+ [방법: COM + 서비스 설정 구성](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

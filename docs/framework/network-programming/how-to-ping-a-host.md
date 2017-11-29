@@ -7,24 +7,17 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- Ping
+helpviewer_keywords: Ping
 ms.assetid: bbf20f5b-eca1-4661-af04-cb8837f9af05
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 96ce0167b1e382759c2bef89bc5677df51c1271d
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 28c55a9e51b43fcc882ef98f6bad907d5d5c5301
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-ping-a-host"></a>방법: 호스트 Ping
 이 샘플에서는 원격 호스트를 ping하는 방법을 보여 줍니다.  
@@ -139,4 +132,3 @@ namespace Examples.System.Net.NetworkInformation.PingTest
  이 예제에는 다음 사항이 필요합니다.  
   
 -   **System.Net** 네임스페이스에 대한 참조.
-

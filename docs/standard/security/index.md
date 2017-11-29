@@ -8,27 +8,21 @@ ms.suite:
 ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - .NET Framework, security
 - security [.NET Framework], about security
 - application development [.NET Framework], security
 - security [.NET Framework]
 ms.assetid: 9a9621d7-8883-4a4f-a874-65e8e09e20a6
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: b2c487c76a6a0b42370b7b70099d5baba58f42db
-ms.contentlocale: ko-kr
-ms.lasthandoff: 09/05/2017
-
+ms.openlocfilehash: 5d6bf5929466d09b70cb74ffdf6c46d21c6f85ca
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="security-in-the-net-framework"></a>.NET Framework의 보안
 공용 언어 런타임 및.NET Framework는 개발자가 쉽게 안전한 코드를 작성할 수 있게 해주고 시스템 관리자가 보호된 리소스에 액세스할 수 있도록 코드에 부여되는 권한을 사용자 지정할 수 있게 해주는 많은 유용한 클래스 및 서비스를 제공합니다. 또한 런타임 및 .NET Framework는 암호화 및 역할 기반 보안을 쉽게 사용할 수 있게 해주는 유용한 클래스 및 서비스를 제공합니다.  
@@ -58,4 +52,3 @@ ms.lasthandoff: 09/05/2017
 ## <a name="related-sections"></a>관련 단원  
  [개발 가이드](../../../docs/framework/development-guide.md)  
  만들기, 구성, 디버깅, 보안, 응용 프로그램 배포, 동적 프로그래밍에 대한 정보, 상호 운용성, 확장성, 메모리 관리 및 스레딩을 포함하여 응용 프로그램 개발에 대한 모든 주요 기술 분야 및 작업에 대한 지침을 제공합니다.
-

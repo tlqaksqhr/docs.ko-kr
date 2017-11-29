@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 8da57c130f8b22a1e2de57678e86f84d00d11aaf
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e7216f14fb0b8da27b870fc8e66b24f6d87fcaad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="serialization-and-metadata"></a>Serialization 및 메타데이터
 앱이 개체를 serialize 및 deserialize하는 경우에는 런타임에 필요한 메타데이터가 제공되도록 런타임 지시문(.rd.xml) 파일에 항목을 추가해야 할 수 있습니다. serializer에는 두 가지 범주가 있으며 각 범주는 런타임 지시문 파일에서 서로 다른 방식으로 처리해야 합니다.  
@@ -62,7 +60,7 @@ ms.lasthandoff: 08/21/2017
 <Type Name="DataSet" Browse="Required Public" />  
 ```  
   
- 마찬가지로 다음 코드에서와 같이 <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=fullName> 등의 생성자를 호출하고 serialize할 추가 <xref:System.Type> 개체 배열을 제공하는 경우 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 컴파일러는 해당 형식을 확인할 수 없습니다.  
+ 마찬가지로 다음 코드에서와 같이 <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> 등의 생성자를 호출하고 serialize할 추가 <xref:System.Type> 개체 배열을 제공하는 경우 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 컴파일러는 해당 형식을 확인할 수 없습니다.  
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   
@@ -75,8 +73,7 @@ ms.lasthandoff: 08/21/2017
  이 예제에 사용된 구문에 대한 자세한 내용은 [\<Type> 요소](../../../docs/framework/net-native/type-element-net-native.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)   
- [런타임 지시문 요소](../../../docs/framework/net-native/runtime-directive-elements.md)   
- [\<Type> 요소](../../../docs/framework/net-native/type-element-net-native.md)   
+ [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [런타임 지시문 요소](../../../docs/framework/net-native/runtime-directive-elements.md)  
+ [\<형식 > 요소](../../../docs/framework/net-native/type-element-net-native.md)  
  [\<Namespace> 요소](../../../docs/framework/net-native/namespace-element-net-native.md)
-

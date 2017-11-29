@@ -7,25 +7,19 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7ce81e348b3e5de285a3517d70b8bc477198d3e4
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 906abbcbd3ec00e76d8c183f61828fb5135d9154
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a>버전 2.0에서 System.Uri 네임스페이스 변경 내용
-<xref:System.Uri?displayProperty=fullName> 클래스에 몇 가지 변경 내용이 적용되었습니다. 이러한 변경 내용은 잘못된 동작을 수정하고, 유용성을 개선하고, 보안을 강화했습니다.  
+<xref:System.Uri?displayProperty=nameWithType> 클래스에 몇 가지 변경 내용이 적용되었습니다. 이러한 변경 내용은 잘못된 동작을 수정하고, 유용성을 개선하고, 보안을 강화했습니다.  
   
 ## <a name="obsolete-and-deprecated-members"></a>더 이상 사용되지 않는 멤버  
  생성자:  
@@ -85,5 +79,4 @@ ms.lasthandoff: 08/21/2017
 -   끊어진 URI가 루트 위의 파일 시스템을 트래버스할 수 없도록 URI 경로 압축이 수정되었습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Uri?displayProperty=fullName>
-
+ <xref:System.Uri?displayProperty=nameWithType>

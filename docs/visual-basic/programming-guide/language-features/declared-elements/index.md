@@ -1,39 +1,21 @@
 ---
 title: "Visual Basic의 선언된 요소"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 0d1d1bb5-ac0b-485f-8922-cdcec5574c79
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 074ae8af056784e2ae4b870545ec4389deb9388e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 0c437331e5fb1a5b9d727b3e24760250685fd365
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="declared-elements-in-visual-basic"></a>Visual Basic의 선언된 요소
 *선언된 요소*는 선언문에 정의된 프로그래밍 요소입니다. 선언된 요소에는 변수, 상수, 열거형, 클래스, 구조체, 모듈, 인터페이스, 프로시저, 프로시저 매개 변수, 함수 반환 값, 외부 프로시저 참조, 연산자, 속성, 이벤트 및 대리자가 포함됩니다.  
@@ -87,4 +69,3 @@ ms.lasthandoff: 07/28/2017
   
  [선언 컨텍스트 및 기본 액세스 수준](../../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)  
  선언된 요소의 형식을 나열하고 각 형식에 대해 선언문, 선언할 수 있는 컨텍스트, 기본 액세스 수준을 보여 줍니다.
-

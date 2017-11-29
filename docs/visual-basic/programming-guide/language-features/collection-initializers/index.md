@@ -1,43 +1,23 @@
 ---
 title: "컬렉션 이니셜라이저(Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-f1_keywords:
-- vb.CollectionInitializer
-dev_langs:
-- VB
-helpviewer_keywords:
-- collection initializers [Visual Basic]
+f1_keywords: vb.CollectionInitializer
+helpviewer_keywords: collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 72ca6506d0bd867efa60ba73ecda72c32def129e
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 5ec0179df50df453d6058a4b910d17561394140d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="collection-initializers-visual-basic"></a>컬렉션 이니셜라이저(Visual Basic)
 *컬렉션 이니셜라이저*는 컬렉션을 만들고 값의 초기 집합으로 채울 수 있도록 하는 약식 구문을 제공합니다. 컬렉션 이니셜라이저는 알려진 값(예: 메뉴 옵션 또는 범주 목록, 숫자 값의 초기 집합, 일 또는 월 이름과 같은 문자열의 정적 목록 또는 유효성 검사에 사용되는 상태 목록과 같은 지리적 위치)의 집합에서 컬렉션을 만드는 경우에 유용합니다.  
@@ -103,14 +83,13 @@ ms.lasthandoff: 07/28/2017
 |[방법: 컬렉션 이니셜라이저에 사용되는 컬렉션 만들기](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|`IEnumerable`을 구현하는 컬렉션 클래스에 `Add` 메서드를 포함하여 컬렉션 이니셜라이저를 사용할 수 있도록 설정하는 방법을 보여 줍니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [컬렉션](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)   
- [배열](../../../../visual-basic/programming-guide/language-features/arrays/index.md)   
- [개체 이니셜라이저: 명명된 형식과 익명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)   
- [New 연산자](../../../../visual-basic/language-reference/operators/new-operator.md)   
- [자동으로 구현된 속성](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)   
- [방법: Visual Basic에서 배열 변수 초기화](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)   
- [지역 형식 유추](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)   
- [무명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)   
- [Visual Basic의 LINQ 소개](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
+ [컬렉션](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+ [배열](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+ [개체 이니셜라이저: 명명된 형식과 익명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+ [New 연산자](../../../../visual-basic/language-reference/operators/new-operator.md)  
+ [자동으로 구현된 속성](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
+ [방법: Visual Basic에서 배열 변수 초기화](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)  
+ [지역 형식 유추](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+ [익명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
+ [Visual Basic의 LINQ 소개](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
  [방법: 항목 목록 만들기](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
-

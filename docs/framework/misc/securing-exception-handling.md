@@ -1,33 +1,32 @@
 ---
-title: "예외 처리 보안 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "코드 보안, 예외 처리"
-  - "예외 처리, 보안"
-  - "보안 코딩, 예외 처리"
-  - "보안[.NET Framework], 예외 처리"
+title: "예외 처리 보안"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: cpp
+helpviewer_keywords:
+- code security, exception handling
+- security [.NET Framework], exception handling
+- secure coding, exception handling
+- exception handling, security
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
-caps.latest.revision: 10
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: a028fcdfb6c85e456c8722decdb1bca8fd907a9f
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 예외 처리 보안
-Visual C\+\+ 및 Visual Basic에서는 스택의 위쪽에 있는 필터 식이 **finally** 문보다 먼저 실행됩니다.  이 필터와 관련된 **catch** 블록은 **finally** 문 다음에 실행됩니다.  자세한 내용은 [사용자 필터 예외 사용](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md)을 참조하십시오.  이 단원에서는 이 실행 순서와 관련된 보안 문제에 대해 설명합니다.  다음 의사 코드 예제에서는 필터 문과 **finally** 문이 실행되는 순서를 보여 줍니다.  
+# <a name="securing-exception-handling"></a>예외 처리 보안
+Visual c + + 및 Visual Basic에서 스택 추가 필터 식을 전에 실행할 **마지막** 문. **catch** 블록에 연결 된 후 실행 되는 해당 필터는 **마지막** 문. 자세한 내용은 참조 [사용자 필터 예외](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md)합니다. 이 섹션에서는이 순서에 따른 보안 위험을 검사 합니다. 다음 의사 코드 예제에서는 필터 문 순서를 보여 줍니다 및 **마지막** 문을 실행 합니다.  
   
 ```cpp  
 void Main()   
@@ -59,7 +58,7 @@ void Sub()
 }                        
 ```  
   
- 이 코드에서는 다음이 출력됩니다.  
+ 이 코드에서는 다음이 출력 됩니다.  
   
 ```  
 Throw  
@@ -68,7 +67,7 @@ Finally
 Catch  
 ```  
   
- 필터가 **finally** 문보다 먼저 실행되므로 다른 코드를 실행하는 데 이용될 수 있는 위치에서 상태를 변경하는 작업을 수행하면 보안 문제가 발생할 수 있습니다.  예를 들면 다음과 같습니다.  
+ 필터가 먼저 실행는 **마지막** 문, 여기서 다른 코드를 실행 하는 데 이용 변경 상태를 수행 하면 보안 문제를 유발 될 수 있도록 합니다. 예:  
   
 ```cpp  
 try   
@@ -87,7 +86,7 @@ finally
 }  
 ```  
   
- 이 의사 코드에서는 스택 위쪽의 필터가 임의의 코드를 실행할 수 있습니다.  비슷한 결과를 생성하는 다른 작업의 예로는 다른 ID를 임시로 가장하거나 보안 검사를 우회하는 내부 플래그를 설정하거나 스레드와 관련된 culture를 변경하는 것이 있습니다.  권장되는 해결 방법은 스레드 상태에 대한 코드의 변경 사항을 호출자의 필터 블록과 격리하기 위해 예외 처리기를 사용하는 것입니다.  그러나 예외 처리기를 올바르게 사용하지 않으면 이 문제가 해결되지 않습니다.  다음 예제에서는 UI culture를 전환시키지만 모든 유형의 스레드 상태 변경은 마찬가지로 노출될 수 있습니다.  
+ 이 의사 코드에서는 임의의 코드를 실행 하기 위해 스택의 상위 필터입니다. 비슷한 영향을 미칠 수 있는 작업의 다른 예제는 임시 일부 보안 검사를 무시 하는 내부 플래그를 설정 하는 다른 id 가장 하거나 스레드와 연결 된 문화권을 변경 합니다. 권장된 솔루션 호출자의 필터 블록에서 스레드 상태에는 코드의 변경 내용을 격리 하는 예외 처리기를 도입 하는 것입니다. 그러나이 예외 처리기 제대로 도입 될 중요 하거나이 문제가 해결 되지 않습니다. 다음 예제에서는 UI 문화권을 전환 하지만 모든 종류의 스레드 상태 변경 마찬가지로 노출 될 수 있습니다.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -101,7 +100,6 @@ YourObject.YourMethod()
       Thread.CurrentThread.CurrentUICulture = saveCulture;  
    }  
 }  
-  
 ```  
   
 ```vb  
@@ -125,7 +123,7 @@ Thread.CurrentThread.CurrentUICulture)
 End Class  
 ```  
   
- 이 경우 올바른 해결 방법은 **try**\/**catch** 블록에서 기존의 **try**\/**finally** 블록을 래핑하는 것입니다.  다음 예제에서 볼 수 있는 것처럼 **catch\-throw** 절을 기존의 **try**\/**finally** 블록으로 삽입하는 것만으로는 문제를 해결하지 못합니다.  
+ 올바른 수정이 경우 기존 래핑하는 **시도**/**마지막** 블록는 **시도**/**catch** 블록입니다. 소개는 **catch throw** 기존 절 **시도**/**마지막** 블록 다음 예제에 표시 된 대로 문제를 해결 되지 않으면 합니다.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -145,9 +143,9 @@ YourObject.YourMethod()
 }  
 ```  
   
- 이 예제에서는 `FilterFunc`가 제어권을 얻기 전에 **finally** 문이 실행되지 않았기 때문에 문제를 해결하지 못합니다.  
+ 때문에 문제가 해결 되지 않으면는 **마지막** 하기 전에 문이 실행 되지 않은 `FilterFunc` 컨트롤을 가져옵니다.  
   
- 다음 예제에서는 호출자의 예외 필터 블록에 예외를 제공하기 전에 **finally** 절이 실행되도록 함으로써 문제를 해결합니다.  
+ 다음 예제는 다음을 통해 문제를 해결는 **마지막** 절이 호출자의 예외 필터 블록에 예외를 제공 하기 전에 실행 됩니다.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -169,5 +167,5 @@ YourObject.YourMethod()
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [보안 코딩 지침](../../../docs/standard/security/secure-coding-guidelines.md)
