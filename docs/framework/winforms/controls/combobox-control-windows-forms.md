@@ -1,48 +1,49 @@
 ---
-title: "ComboBox 컨트롤(Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "콤보 상자"
-  - "콤보 상자, Windows Forms 컨트롤"
-  - "ComboBox 컨트롤[Windows Forms]"
-  - "드롭다운 목록, ComboBox 컨트롤"
-  - "드롭다운 목록, Windows Forms"
-  - "list 컨트롤, Windows Forms"
-  - "목록 항목, 표시된 Windows Forms"
+title: "ComboBox 컨트롤(Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- drop-down lists [Windows Forms], Windows Forms
+- list controls [Windows Forms], Windows Forms
+- combo boxes [Windows Forms], Windows Forms controls
+- combo boxes
+- list items [Windows Forms], Windows Forms controls that display
+- drop-down lists [Windows Forms], ComboBox control
+- ComboBox control [Windows Forms]
 ms.assetid: 86a1bbc3-0469-4290-91c5-99ff61b739ff
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 52863e8551f798a2a4c50c3856bdb4673dd9fd4f
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/22/2017
 ---
-# ComboBox 컨트롤(Windows Forms)
-Windows Forms `ComboBox` 컨트롤은 드롭다운 콤보 상자에 데이터를 표시하는 데 사용됩니다.  기본적으로 `ComboBox` 컨트롤은 두 부분으로 표시됩니다. 윗 부분은 사용자가 목록 항목을 입력할 수 있는 텍스트 상자이며  아랫 부분은 사용자가 항목을 선택할 수 있는 항목 목록을 표시하는 목록 상자입니다.  
+# <a name="combobox-control-windows-forms"></a><span data-ttu-id="65bb2-102">ComboBox 컨트롤(Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="65bb2-102">ComboBox Control (Windows Forms)</span></span>
+<span data-ttu-id="65bb2-103">Windows Forms `ComboBox` 컨트롤을 사용 하는 드롭다운 콤보 상자에 데이터를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="65bb2-103">The Windows Forms `ComboBox` control is used to display data in a drop-down combo box.</span></span> <span data-ttu-id="65bb2-104">기본적으로는 `ComboBox` 두 부분에 나와 있는: 위쪽 부분은 사용자가 목록 항목을 입력할 수 있게 하는 텍스트 상자가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="65bb2-104">By default, the `ComboBox` control appears in two parts: the top part is a text box that allows the user to type a list item.</span></span> <span data-ttu-id="65bb2-105">두 번째 부분에 있는 사용자 수 하나를 선택 하는 항목의 목록을 표시 하는 목록 상자입니다.</span><span class="sxs-lookup"><span data-stu-id="65bb2-105">The second part is a list box that displays a list of items from which the user can select one.</span></span>  
   
-## 단원 내용  
- [ComboBox 컨트롤 개요](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
- 이 컨트롤의 정의, 주요 기능 및 속성을 설명합니다.  
+## <a name="in-this-section"></a><span data-ttu-id="65bb2-106">단원 내용</span><span class="sxs-lookup"><span data-stu-id="65bb2-106">In This Section</span></span>  
+ [<span data-ttu-id="65bb2-107">ComboBox 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="65bb2-107">ComboBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
+ <span data-ttu-id="65bb2-108">이 컨트롤의 정의와 주요 기능 및 속성을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="65bb2-108">Explains what this control is and its key features and properties.</span></span>  
   
- [방법: ComboBox 컨트롤에서 가변 크기 텍스트 만들기](../../../../docs/framework/winforms/controls/how-to-create-variable-sized-text-in-a-combobox-control.md)  
- `ComboBox` 컨트롤의 텍스트에 대한 사용자 지정 그리기 방법을 보여 줍니다.  
+ [<span data-ttu-id="65bb2-109">방법: ComboBox 컨트롤에서 가변 크기 텍스트 만들기</span><span class="sxs-lookup"><span data-stu-id="65bb2-109">How to: Create Variable Sized Text in a ComboBox Control</span></span>](../../../../docs/framework/winforms/controls/how-to-create-variable-sized-text-in-a-combobox-control.md)  
+ <span data-ttu-id="65bb2-110">텍스트에 대 한 사용자 지정 그리기를 보여 줍니다.는 `ComboBox` 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="65bb2-110">Demonstrates custom drawing of text in a `ComboBox` control.</span></span>  
   
-## 참조  
- <xref:System.Windows.Forms.ComboBox> 클래스  
- 이 클래스를 설명하며 이 클래스의 모든 멤버에 대한 링크가 포함되어 있습니다.  
+## <a name="reference"></a><span data-ttu-id="65bb2-111">참조</span><span class="sxs-lookup"><span data-stu-id="65bb2-111">Reference</span></span>  
+ <span data-ttu-id="65bb2-112"><xref:System.Windows.Forms.ComboBox> 클래스</span><span class="sxs-lookup"><span data-stu-id="65bb2-112"><xref:System.Windows.Forms.ComboBox> class</span></span>  
+ <span data-ttu-id="65bb2-113">이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="65bb2-113">Describes this class and has links to all its members.</span></span>  
   
-## 관련 단원  
- [옵션 목록 표시에 사용하는 Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
- 목록 상자, 콤보 상자 및 확인 목록 상자로 수행할 수 있는 작업 목록을 제공합니다.  
+## <a name="related-sections"></a><span data-ttu-id="65bb2-114">관련 단원</span><span class="sxs-lookup"><span data-stu-id="65bb2-114">Related Sections</span></span>  
+ [<span data-ttu-id="65bb2-115">옵션 목록 표시에 사용된 Windows Forms 컨트롤</span><span class="sxs-lookup"><span data-stu-id="65bb2-115">Windows Forms Controls Used to List Options</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
+ <span data-ttu-id="65bb2-116">확인된 목록 상자, 목록 상자 및 콤보 상자와 수행할 수 있는 작업의 목록을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="65bb2-116">Provides a list of things you can do with list boxes, combo boxes, and checked list boxes.</span></span>  
   
-## 참고 항목  
- [Windows Forms에 사용할 수 있는 컨트롤](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="65bb2-117">참고 항목</span><span class="sxs-lookup"><span data-stu-id="65bb2-117">See Also</span></span>  
+ [<span data-ttu-id="65bb2-118">Windows Forms에서 사용할 컨트롤</span><span class="sxs-lookup"><span data-stu-id="65bb2-118">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

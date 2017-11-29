@@ -1,44 +1,47 @@
 ---
-title: ".NET Framework 4.5의 정책 활동 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ".NET Framework 4.5의에서 정책 작업"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8e375e0c-d7c1-4d69-88ab-36d52db0aa7e
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1374bc086923b9ffef288a7fa90427710bdd91b4
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# .NET Framework 4.5의 정책 활동
-Policy4 활동을 사용하면 WF 3.5에서 제공되는 규칙 엔진을 사용하여 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]\(WF 4.5\)의 [!INCLUDE[wf2](../../../../includes/wf2-md.md)]에서 직접 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]\(WF 3.5\)의 [!INCLUDE[wf2](../../../../includes/wf2-md.md)]<xref:System.Workflow.Activities.Rules.RuleSet> 개체를 사용할 수 있습니다.이 활동을 사용하여 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>을 만들고 실행할 수 있습니다.Windows Workflow Foundation의 일부로 포함된 WF 3.5 규칙 엔진[!INCLUDE[crabout](../../../../includes/crabout-md.md)] Windows Workflow Foundation 규칙 엔진 소개를 참조하십시오.[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]에서 규칙을 WF로 마이그레이션하는 방법은 [마이그레이션 지침](../../../../docs/framework/windows-workflow-foundation//migration-guidance.md)을 참조하십시오.  
+# <a name="policy-activity-in-net-framework-45"></a><span data-ttu-id="9a452-102">.NET Framework 4.5의에서 정책 작업</span><span class="sxs-lookup"><span data-stu-id="9a452-102">Policy Activity in .NET Framework 4.5</span></span>
+<span data-ttu-id="9a452-103">Policy4 활동을 사용하면 WF 3.5에서 제공되는 규칙 엔진을 사용하여 [!INCLUDE[wf2](../../../../includes/wf2-md.md)](WF 4.5)의 [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]에서 직접 <xref:System.Workflow.Activities.Rules.RuleSet>(WF 3.5)의 [!INCLUDE[wf2](../../../../includes/wf2-md.md)] [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 개체를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-103">The Policy4 activity allows [!INCLUDE[wf2](../../../../includes/wf2-md.md)] in [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> objects to be used in [!INCLUDE[wf2](../../../../includes/wf2-md.md)] in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) directly by using the rules engine that is shipped in WF 3.5.</span></span> <span data-ttu-id="9a452-104">이 활동을 사용하여 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>을 만들고 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-104">By using this activity, you can create and execute a WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>.</span></span> <span data-ttu-id="9a452-105">Windows Workflow Foundation의 일부로 포함된 WF 3.5 규칙 엔진[!INCLUDE[crabout](../../../../includes/crabout-md.md)] Windows Workflow Foundation 규칙 엔진 소개를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9a452-105">[!INCLUDE[crabout](../../../../includes/crabout-md.md)] WF 3.5 Rules Engine included as part of Windows Workflow Foundation, please read Introduction to the Windows Workflow Foundation Rules Engine.</span></span> <span data-ttu-id="9a452-106">마이그레이션에 대 한 자세한 내용은 규칙에서 WF [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], 읽으십시오 [마이그레이션 지침](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-106">For more information about migrating rules to WF in [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], please read [Migration Guidance](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).</span></span>  
   
 > [!IMPORTANT]
->  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.계속하기 전에 다음\(기본\) 디렉터리를 확인하십시오.  
+>  <span data-ttu-id="9a452-107">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-107">The samples may already be installed on your machine.</span></span> <span data-ttu-id="9a452-108">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="9a452-108">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780)로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하십시오.이 샘플은 다음 디렉터리에 있습니다.  
+>  <span data-ttu-id="9a452-109">이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요.</span><span class="sxs-lookup"><span data-stu-id="9a452-109">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="9a452-110">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-110">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Rules-Policy4`  
   
-## 이 샘플의 프로젝트  
+## <a name="projects-in-this-sample"></a><span data-ttu-id="9a452-111">이 샘플의 프로젝트</span><span class="sxs-lookup"><span data-stu-id="9a452-111">Projects in this Sample</span></span>  
   
-|프로젝트 이름|설명|기본 파일|  
-|-------------|--------|-----------|  
-|Policy4|Policy4 활동과 이 활동의 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 디자이너가 들어 있습니다.|**Policy4.cs**: Policy4 활동 정의입니다.<br /><br /> **PolicyDesigner.xaml**: Policy4 활동의 사용자 지정 디자이너입니다.이 디자이너는 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 규칙 엔진의 규칙 편집기\([RuleSetDialog 클래스](http://go.microsoft.com/fwlink/?LinkId=150378)\)를 사용합니다.|  
-|ImperativeCodeClientSample|명령적 C\# 코드를 사용하는 Policy4 응용 프로그램을 사용하여 워크플로를 구성하고 실행하는 샘플 클라이언트 응용 프로그램입니다\([!INCLUDE[wf1](../../../../includes/wf1-md.md)] 디자이너가 사용되지 않음\).|**ApplyDiscount.rules**: [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 규칙 정의가 있는 파일입니다.<br /><br /> **Order.cs**: 고객 주문을 나타내는 형식입니다.이 형식의 개체에 규칙이 적용됩니다.<br /><br /> **Program.cs**: Policy4 활동이 있는 워크플로를 구성하고 실행하여 ApplyDiscount.rules에 정의된 규칙을 Order 개체의 인스턴스에 적용합니다.<br /><br /> **App.config**: 규칙 파일의 경로가 있는 구성 파일입니다.|  
-|DesignerClientSample|[!INCLUDE[wf1](../../../../includes/wf1-md.md)] 디자이너에서 Policy4 응용 프로그램을 사용하여 워크플로를 구성하고 실행하는 샘플 클라이언트 응용 프로그램입니다.|**Sequence1.xaml**: Policy4 활동을 사용하여 규칙을 평가하는 순차 워크플로입니다.<br /><br /> `Program.cs`: Sequence1.xaml에 정의된 워크플로의 인스턴스를 실행합니다.|  
+|<span data-ttu-id="9a452-112">프로젝트 이름</span><span class="sxs-lookup"><span data-stu-id="9a452-112">Project Name</span></span>|<span data-ttu-id="9a452-113">설명</span><span class="sxs-lookup"><span data-stu-id="9a452-113">Description</span></span>|<span data-ttu-id="9a452-114">기본 파일</span><span class="sxs-lookup"><span data-stu-id="9a452-114">Main Files</span></span>|  
+|------------------|-----------------|----------------|  
+|<span data-ttu-id="9a452-115">Policy4</span><span class="sxs-lookup"><span data-stu-id="9a452-115">Policy4</span></span>|<span data-ttu-id="9a452-116">Policy4 활동과 이 활동의 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 디자이너가 들어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-116">Contains the Policy4 activity and its [!INCLUDE[wf1](../../../../includes/wf1-md.md)] designer.</span></span>|<span data-ttu-id="9a452-117">**Policy4.cs**: Policy4 활동 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-117">**Policy4.cs**: Policy4 activity definition.</span></span><br /><br /> <span data-ttu-id="9a452-118">**PolicyDesigner.xaml**: Policy4 활동에 대 한 사용자 지정 디자이너입니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-118">**PolicyDesigner.xaml**: Custom designer for Policy4 activity.</span></span> <span data-ttu-id="9a452-119">규칙 편집기를 사용 하 여 ([RuleSetDialog 클래스](http://go.microsoft.com/fwlink/?LinkId=150378))에서 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 규칙 엔진입니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-119">It uses the rules editor ([RuleSetDialog Class](http://go.microsoft.com/fwlink/?LinkId=150378)) from [!INCLUDE[wf1](../../../../includes/wf1-md.md)] rules engine.</span></span>|  
+|<span data-ttu-id="9a452-120">ImperativeCodeClientSample</span><span class="sxs-lookup"><span data-stu-id="9a452-120">ImperativeCodeClientSample</span></span>|<span data-ttu-id="9a452-121">명령적 C# 코드를 사용하는 Policy4 응용 프로그램을 사용하여 워크플로를 구성하고 실행하는 샘플 클라이언트 응용 프로그램입니다([!INCLUDE[wf1](../../../../includes/wf1-md.md)] 디자이너가 사용되지 않음).</span><span class="sxs-lookup"><span data-stu-id="9a452-121">Sample client application that configures and runs a workflow using a Policy4 application using imperative C# code (no [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Designer used).</span></span>|<span data-ttu-id="9a452-122">**ApplyDiscount.rules**: 파일 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 규칙 정의가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-122">**ApplyDiscount.rules**: File with [!INCLUDE[wf1](../../../../includes/wf1-md.md)] rule definitions.</span></span><br /><br /> <span data-ttu-id="9a452-123">**Order.cs**: 고객 주문을 나타내는 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-123">**Order.cs**: Type that represents a customer order.</span></span> <span data-ttu-id="9a452-124">이 형식의 개체에 규칙이 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-124">Rules are applied to objects of this type.</span></span><br /><br /> <span data-ttu-id="9a452-125">**Program.cs**: 구성 하 고 Order 개체의 인스턴스에 여 ApplyDiscount.rules에 정의 된 규칙 적용 Policy4 활동이 있는 워크플로 실행 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-125">**Program.cs**: Configures and runs a workflow that has a Policy4 activity to apply rules defined in ApplyDiscount.rules to instances of Order objects.</span></span><br /><br /> <span data-ttu-id="9a452-126">**App.config**: 규칙 파일의 경로로 구성 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-126">**App.config**: Configuration file with the path of the rules file.</span></span>|  
+|<span data-ttu-id="9a452-127">DesignerClientSample</span><span class="sxs-lookup"><span data-stu-id="9a452-127">DesignerClientSample</span></span>|<span data-ttu-id="9a452-128">[!INCLUDE[wf1](../../../../includes/wf1-md.md)] 디자이너에서 Policy4 응용 프로그램을 사용하여 워크플로를 구성하고 실행하는 샘플 클라이언트 응용 프로그램입니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-128">Sample client application that configures and runs a workflow using a Policy4 application in the [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Designer.</span></span>|<span data-ttu-id="9a452-129">**Sequence1.xaml**: Policy4 활동을 사용 하 여 규칙을 평가 하는 순차 워크플로입니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-129">**Sequence1.xaml**: Sequential workflow that uses a Policy4 activity to perform rule evaluations.</span></span><br /><br /> <span data-ttu-id="9a452-130">`Program.cs`: Sequence1.xaml에 정의된 워크플로의 인스턴스를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-130">`Program.cs`: Runs an instance of the workflow defined in Sequence1.xaml.</span></span>|  
   
-## Policy4 활동  
- Policy4 활동은 워크플로가 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] RuleSet을 실행할 수 있도록 하는 <xref:System.Activities.NativeActivity%601>에서 파생되는 클래스입니다.다음 코드 예제는 활동의 공용 OM에 대한 간략한 정의입니다.  
+## <a name="the-policy4-activity"></a><span data-ttu-id="9a452-131">Policy4 활동</span><span class="sxs-lookup"><span data-stu-id="9a452-131">The Policy4 Activity</span></span>  
+ <span data-ttu-id="9a452-132">Policy4 활동은 워크플로가 <xref:System.Activities.NativeActivity%601> RuleSet을 실행할 수 있도록 하는 [!INCLUDE[wf1](../../../../includes/wf1-md.md)]에서 파생되는 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-132">The Policy4 activity is a class that derives from <xref:System.Activities.NativeActivity%601> that allows workflows to execute [!INCLUDE[wf1](../../../../includes/wf1-md.md)] RuleSets.</span></span> <span data-ttu-id="9a452-133">다음 코드 예제는 활동의 공용 OM에 대한 간략한 정의입니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-133">The following code example is a simplified definition of the public OM of the activity.</span></span>  
   
 ```csharp  
-  
 public class Policy4Activity<TResult>: NativeActivity<TResult>  
 {  
     public RuleSet RuleSet  
@@ -50,40 +53,40 @@ public class Policy4Activity<TResult>: NativeActivity<TResult>
 }  
 ```  
   
-|속성|설명|  
-|--------|--------|  
-|RuleSet|활동을 실행할 때 평가할 .NET Framework 3.5용 WF [RuleSet Class](http://go.microsoft.com/fwlink/?LinkId=150379)입니다.|  
-|TargetObject|[RuleSet Class](http://go.microsoft.com/fwlink/?LinkId=150379)의 규칙이 평가되는 대상 개체입니다.|  
-|ValidationError|실행하기 전에 대상 개체에 대해 [RuleSet Class](http://go.microsoft.com/fwlink/?LinkId=150379)의 유효성을 검사할 때 .NET Framework 3.5용 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 규칙 엔진에서 반환하는 유효성 검사 오류 목록입니다.|  
+|<span data-ttu-id="9a452-134">속성</span><span class="sxs-lookup"><span data-stu-id="9a452-134">Property</span></span>|<span data-ttu-id="9a452-135">설명</span><span class="sxs-lookup"><span data-stu-id="9a452-135">Description</span></span>|  
+|--------------|-----------------|  
+|<span data-ttu-id="9a452-136">RuleSet</span><span class="sxs-lookup"><span data-stu-id="9a452-136">RuleSet</span></span>|<span data-ttu-id="9a452-137">WF [RuleSet 클래스](http://go.microsoft.com/fwlink/?LinkId=150379) 활동을 실행할 때 평가할.NET Framework 3.5에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-137">The WF [RuleSet Class](http://go.microsoft.com/fwlink/?LinkId=150379) for .NET Framework 3.5 to be evaluated when the activity is executed.</span></span>|  
+|<span data-ttu-id="9a452-138">TargetObject</span><span class="sxs-lookup"><span data-stu-id="9a452-138">TargetObject</span></span>|<span data-ttu-id="9a452-139">개체의 규칙은 [RuleSet 클래스](http://go.microsoft.com/fwlink/?LinkId=150379) 평가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-139">The object against which the Rules in the [RuleSet Class](http://go.microsoft.com/fwlink/?LinkId=150379) are evaluated.</span></span>|  
+|<span data-ttu-id="9a452-140">ValidationError</span><span class="sxs-lookup"><span data-stu-id="9a452-140">ValidationError</span></span>|<span data-ttu-id="9a452-141">반환 되는 유효성 검사 오류의 목록은 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 유효성을 검사할 때.NET Framework 3.5에 대 한 규칙 엔진은 [RuleSet 클래스](http://go.microsoft.com/fwlink/?LinkId=150379) 실행 하기 전에 대상 개체에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-141">The list of validation errors returned by the [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Rule Engine for .NET Framework 3.5 when validating the [RuleSet Class](http://go.microsoft.com/fwlink/?LinkId=150379) against the target object before execution.</span></span>|  
   
-## Policy4 활동 디자이너  
- Policy4 디자이너는 코드를 작성하지 않고 Policy4 활동을 구성할 수 있는 기능을 추가합니다.솔루션을 빌드한 후에는 도구 상자의 **Microsoft.Samples.Activities.Rules** 섹션에 있습니다.  
+## <a name="policy4-activity-designer"></a><span data-ttu-id="9a452-142">Policy4 활동 디자이너</span><span class="sxs-lookup"><span data-stu-id="9a452-142">Policy4 Activity Designer</span></span>  
+ <span data-ttu-id="9a452-143">Policy4 디자이너는 코드를 작성하지 않고 Policy4 활동을 구성할 수 있는 기능을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-143">The Policy4 designer adds the capability to configure a Policy4 activity without the need to write code.</span></span> <span data-ttu-id="9a452-144">솔루션을 빌드한 후 있습니다 도구 상자에서 절의 **Microsoft.Samples.Activities.Rules**합니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-144">After building the solution, it can be found in the toolbox in the section **Microsoft.Samples.Activities.Rules**.</span></span>  
   
- WF 디자이너를 사용하면 대상 개체와 RuleSet을 구성할 수 있습니다.**RuleSet 편집** 단추를 클릭하면 [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]용 WF [RuleSetDialog Class](http://go.microsoft.com/fwlink/?LinkId=150378)가 표시됩니다.이 대화 상자는 다시 호스팅된 [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 규칙 편집기입니다.이 편집기를 사용하여 Policy4 활동이 실행하는 규칙을 만들고 편집할 수 있습니다.  
+ <span data-ttu-id="9a452-145">WF 디자이너를 사용하면 대상 개체와 RuleSet을 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-145">The WF Designer allows you to configure a target object and a RuleSet.</span></span> <span data-ttu-id="9a452-146">경우는 **RuleSet 편집** 단추를 클릭 하면 WF [RuleSetDialog 클래스](http://go.microsoft.com/fwlink/?LinkId=150378) 에 대 한 [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-146">When the **Edit RuleSet** button is clicked, the WF [RuleSetDialog Class](http://go.microsoft.com/fwlink/?LinkId=150378) for [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] is displayed.</span></span> <span data-ttu-id="9a452-147">이 대화 상자는 다시 호스트된 [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 규칙 편집기입니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-147">This dialog is the re-hosted [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] Rules Editor.</span></span> <span data-ttu-id="9a452-148">이 편집기를 사용하여 Policy4 활동이 실행하는 규칙을 만들고 편집할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-148">Use the editor to create and edit the rules that the Policy4 activity executes.</span></span>  
   
-## 이 샘플의 사용법  
- 이 샘플을 실행하기 위한 특별한 설정 작업은 필요하지 않습니다.Visual Studio에서 솔루션을 열고 F5 키를 누르기만 하면 응용 프로그램이 실행됩니다.  
+## <a name="using-this-sample"></a><span data-ttu-id="9a452-149">이 샘플의 사용법</span><span class="sxs-lookup"><span data-stu-id="9a452-149">Using this Sample</span></span>  
+ <span data-ttu-id="9a452-150">이 샘플을 실행하기 위한 특별한 설정 작업은 필요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-150">No special set up is required to run this sample.</span></span> <span data-ttu-id="9a452-151">Visual Studio에서 솔루션을 열고 F5 키를 누르기만 하면 응용 프로그램이 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-151">Just open the solution in Visual Studio, and press F5 to run the application.</span></span>  
   
- 이 샘플에는 두 개의 클라이언트 응용 프로그램인 ImperativeCodeClientSample과 DesignerClientSample이 포함되어 있습니다.ImperativeCodeClientSample 클라이언트에서는 C\# 명령적 코드를 사용하여 Policy4 활동을 구성 및 실행하는 방법을 보여 주고,DesignerClientSample에서는 디자이너를 사용하여 Policy4 활동을 구성 및 실행하는 방법을 보여 줍니다.  
+ <span data-ttu-id="9a452-152">이 샘플에는 두 개의 클라이언트 응용 프로그램인 ImperativeCodeClientSample과 DesignerClientSample이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-152">This sample contains two client applications: ImperativeCodeClientSample and DesignerClientSample.</span></span> <span data-ttu-id="9a452-153">ImperativeCodeClientSample 클라이언트에서는 C# 명령적 코드를 사용하여 Policy4 활동을 구성 및 실행하는 방법을 보여 주고,</span><span class="sxs-lookup"><span data-stu-id="9a452-153">The ImperativeCodeClientSample client shows how to configure and run the Policy40 activity using C# imperative code.</span></span> <span data-ttu-id="9a452-154">DesignerClientSample에서는 디자이너를 사용하여 Policy4 활동을 구성 및 실행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-154">The DesignerClientSample shows how to configure and run the Policy4 activity using the designer.</span></span>  
   
-#### ImperativeCodeClientSample 클라이언트 응용 프로그램을 실행하려면  
+#### <a name="to-run-the-imperativecodeclientsample-client-application"></a><span data-ttu-id="9a452-155">ImperativeCodeClientSample 클라이언트 응용 프로그램을 실행하려면</span><span class="sxs-lookup"><span data-stu-id="9a452-155">To run the ImperativeCodeClientSample client application</span></span>  
   
-1.  [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]을 사용하여 Policy4Sample.sln 솔루션 파일을 엽니다.  
+1.  <span data-ttu-id="9a452-156">[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]을 사용하여 Policy4Sample.sln 솔루션 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-156">Using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open the Policy4Sample.sln solution file.</span></span>  
   
-2.  **솔루션 탐색기**에서 **ImperativeCodeClientSample** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **시작 프로젝트로 설정**을 선택합니다.  
+2.  <span data-ttu-id="9a452-157">**솔루션 탐색기**를 마우스 오른쪽 단추로 클릭는 **ImperativeCodeClientSample** 프로젝트를 클릭 한 **시작 프로젝트로 설정**합니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-157">In **Solution Explorer**, right-click the **ImperativeCodeClientSample** project and then select **Set as startup project**.</span></span>  
   
-3.  Ctrl\+F5를 눌러 프로젝트를 실행합니다.  
+3.  <span data-ttu-id="9a452-158">Ctrl+F5를 눌러 프로젝트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-158">To run the project, press CTRL+F5.</span></span>  
   
-#### ImperativeCodeClientSample 클라이언트 응용 프로그램을 실행하려면  
+#### <a name="to-run-the-imperativecodeclientsample-client-application"></a><span data-ttu-id="9a452-159">ImperativeCodeClientSample 클라이언트 응용 프로그램을 실행하려면</span><span class="sxs-lookup"><span data-stu-id="9a452-159">To run the ImperativeCodeClientSample client application</span></span>  
   
-1.  [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]을 사용하여 Policy4Sample.sln 솔루션 파일을 엽니다.  
+1.  <span data-ttu-id="9a452-160">[!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]을 사용하여 Policy4Sample.sln 솔루션 파일을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-160">Using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open the Policy4Sample.sln solution file.</span></span>  
   
-2.  **솔루션 탐색기**에서 **DesignerClientSample** 프로젝트를 마우스 오른쪽 단추로 클릭합니다.  
+2.  <span data-ttu-id="9a452-161">**솔루션 탐색기**를 마우스 오른쪽 단추로 클릭는 **DesignerClientSample** 프로젝트.</span><span class="sxs-lookup"><span data-stu-id="9a452-161">In **Solution Explorer**, right-click the **DesignerClientSample** project.</span></span>  
   
-    -   **시작 프로젝트로 설정**을 선택합니다.  
+    -   <span data-ttu-id="9a452-162">선택 **시작 프로젝트로 설정**합니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-162">Select **Set as startup project**.</span></span>  
   
-3.  프로젝트를 컴파일하려면 Ctrl\+Shift\+B를 누릅니다.  
+3.  <span data-ttu-id="9a452-163">프로젝트를 컴파일하려면 Ctrl+Shift+B를 누릅니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-163">To compile the project, press CTRL+SHIFT+B.</span></span>  
   
-4.  Ctrl\+F5를 눌러 프로젝트를 실행합니다.  
+4.  <span data-ttu-id="9a452-164">Ctrl+F5를 눌러 프로젝트를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="9a452-164">To run the project, press CTRL+F5.</span></span>  
   
-## 참고 항목
+## <a name="see-also"></a><span data-ttu-id="9a452-165">참고 항목</span><span class="sxs-lookup"><span data-stu-id="9a452-165">See Also</span></span>

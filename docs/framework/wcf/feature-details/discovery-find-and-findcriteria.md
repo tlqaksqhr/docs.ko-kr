@@ -1,60 +1,63 @@
 ---
-title: "찾기 및 FindCriteria | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "찾기 및 FindCriteria"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c2eca9553862cf1349272142e4165c3cfd2e4f3f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 찾기 및 FindCriteria
-찾기 작업은 하나 이상의 서비스를 검색하는 클라이언트에 의해 시작되며 검색 작업의 주요 동작 중 하나입니다.찾기를 수행하면 네트워크를 통해 WS\-Discovery Probe 메시지가 보내집니다.지정된 조건과 일치하는 서비스는 WS\-Discovery ProbeMatch 메시지를 사용하여 응답합니다.검색 메시지에 대한 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]는 [WS\-Discovery 사양](http://go.microsoft.com/fwlink/?LinkID=122347)\(영문 페이지일 수 있음\)을 참조하십시오.  
+# <a name="discovery-find-and-findcriteria"></a><span data-ttu-id="3360c-102">찾기 및 FindCriteria</span><span class="sxs-lookup"><span data-stu-id="3360c-102">Discovery Find and FindCriteria</span></span>
+<span data-ttu-id="3360c-103">찾기 작업은 하나 이상의 서비스를 검색하는 클라이언트에 의해 시작되며 검색 작업의 주요 동작 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-103">A discovery find operation is initiated by a client to discover one or more services and is one of the main actions in discovery.</span></span> <span data-ttu-id="3360c-104">찾기를 수행하면 네트워크를 통해 WS-Discovery Probe 메시지가 보내집니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-104">Performing a find sends a WS-Discovery Probe message over the network.</span></span> <span data-ttu-id="3360c-105">지정된 조건과 일치하는 서비스는 WS-Discovery ProbeMatch 메시지를 사용하여 응답합니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-105">Services that match the criteria specified reply with WS-Discovery ProbeMatch messages.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="3360c-106">검색 메시지 참조는 [Ws-discovery 사양의](http://go.microsoft.com/fwlink/?LinkID=122347)합니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-106"> discovery messages, see the [WS-Discovery specification](http://go.microsoft.com/fwlink/?LinkID=122347).</span></span>  
   
-## DiscoveryClient  
- <xref:System.ServiceModel.Discovery.DiscoveryClient> 클래스는 찾기 작업을 수행하는 메커니즘을 제공하고 검색 클라이언트 작업을 손쉽게 수행할 수 있게 합니다.여기에는 동기\(블로킹\) 찾기를 수행하는 <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> 메서드와 비동기\(비블로킹\) 찾기를 시작하는 <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A> 메서드가 포함됩니다.두 메서드는 모두 <xref:System.ServiceModel.Discovery.FindCriteria> 매개 변수를 사용하며 <xref:System.ServiceModel.Discovery.FindResponse> 개체를 통해 결과를 사용자에게 제공합니다.  
+## <a name="discoveryclient"></a><span data-ttu-id="3360c-107">DiscoveryClient</span><span class="sxs-lookup"><span data-stu-id="3360c-107">DiscoveryClient</span></span>  
+ <span data-ttu-id="3360c-108"><xref:System.ServiceModel.Discovery.DiscoveryClient> 클래스는 찾기 작업을 수행하는 메커니즘을 제공하고 검색 클라이언트 작업을 손쉽게 수행할 수 있게 합니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-108">The <xref:System.ServiceModel.Discovery.DiscoveryClient> class provides the mechanism to perform find operations and makes performing discovery client operations easy.</span></span> <span data-ttu-id="3360c-109">여기에는 동기(블로킹) 찾기를 수행하는 <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> 메서드와 비동기(비블로킹) 찾기를 시작하는 <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A> 메서드가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-109">It contains a <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> method, which performs a (blocking) synchronous find, and a <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A> method, which initiates a non-blocking asynchronous find.</span></span> <span data-ttu-id="3360c-110">두 메서드는 모두 <xref:System.ServiceModel.Discovery.FindCriteria> 매개 변수를 사용하며 <xref:System.ServiceModel.Discovery.FindResponse> 개체를 통해 결과를 사용자에게 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-110">Both methods take a <xref:System.ServiceModel.Discovery.FindCriteria> parameter, and provide results to the user through a <xref:System.ServiceModel.Discovery.FindResponse> object.</span></span>  
   
-## FindCriteria  
- <xref:System.ServiceModel.Discovery.FindCriteria>에는 찾을 서비스를 지정하는 검색 조건 및 검색 지속 기간을 지정하는 찾기 종료 조건으로 그룹화할 수 있는 여러 속성이 있습니다.<xref:System.ServiceModel.Discovery.FindCriteria>에는 여러 개의 검색 조건이 포함되어 있을 수 있습니다.기본적으로 서비스는 이러한 모든 검색 조건과 일치해야 합니다. 그렇지 않으면 스스로를 일치하는 서비스로 간주하지 않습니다.일부 조건만 일치하는 서비스를 찾으려면 서비스에 대해 사용자 지정 찾기 논리를 구현하거나 여러 쿼리를 사용하면 됩니다.  
+## <a name="findcriteria"></a><span data-ttu-id="3360c-111">FindCriteria</span><span class="sxs-lookup"><span data-stu-id="3360c-111">FindCriteria</span></span>  
+ <span data-ttu-id="3360c-112"><xref:System.ServiceModel.Discovery.FindCriteria>에는 찾을 서비스를 지정하는 검색 조건 및 검색 지속 기간을 지정하는 찾기 종료 조건으로 그룹화할 수 있는 여러 속성이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-112"><xref:System.ServiceModel.Discovery.FindCriteria> has several properties, which can be grouped into search criteria, which specify what services you are looking for, and find termination criteria (how long the search should last).</span></span> <span data-ttu-id="3360c-113"><xref:System.ServiceModel.Discovery.FindCriteria>에는 여러 개의 검색 조건이 포함되어 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-113">A <xref:System.ServiceModel.Discovery.FindCriteria> can contain multiple search criteria.</span></span> <span data-ttu-id="3360c-114">기본적으로 서비스는 이러한 모든 검색 조건과 일치해야 합니다. 그렇지 않으면 스스로를 일치하는 서비스로 간주하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-114">By default, the service has to match all of the components otherwise it does not consider itself a matching service.</span></span> <span data-ttu-id="3360c-115">일부 조건만 일치하는 서비스를 찾으려면 서비스에 대해 사용자 지정 찾기 논리를 구현하거나 여러 쿼리를 사용하면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-115">If you want to find services that only match some of the criteria, you can implement custom find logic on the service or you can use multiple queries.</span></span>  
   
- 검색 조건은 다음과 같습니다.  
+ <span data-ttu-id="3360c-116">검색 조건은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-116">Search criteria include:</span></span>  
   
--   <xref:System.ServiceModel.Discovery.ContractTypeNames%2A> \- 선택적 요소로서,검색할 서비스의 계약 이름이거나 서비스를 검색할 때 일반적으로 사용되는 조건입니다.둘 이상의 계약 이름이 지정되면 모든 계약과 일치하는 서비스 끝점만 응답합니다.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 하나의 끝점이 하나의 계약만 지원할 수 있습니다.  
+-   <span data-ttu-id="3360c-117"><xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> - 선택적 요소로서,</span><span class="sxs-lookup"><span data-stu-id="3360c-117"><xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement> - Optional.</span></span> <span data-ttu-id="3360c-118">검색할 서비스의 계약 이름이거나 서비스를 검색할 때 일반적으로 사용되는 조건입니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-118">The contract name of the service being searched for and the criteria typically used when searching for a service.</span></span> <span data-ttu-id="3360c-119">둘 이상의 계약 이름이 지정되면 모든 계약과 일치하는 서비스 끝점만 응답합니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-119">If more than one contract name is specified, only service endpoints matching ALL contracts reply.</span></span> <span data-ttu-id="3360c-120">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 하나의 끝점이 하나의 계약만 지원할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-120">Note that in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] an endpoint can only support one contract.</span></span>  
   
--   <xref:System.ServiceModel.Discovery.Scopes%2A> \- 선택적 요소로서,개별 서비스 끝점을 분류하는 데 사용되는 절대 URI입니다.여러 끝점이 동일한 계약을 노출하는 상태에서 끝점의 하위 집합을 검색하려는 경우 이 조건을 사용할 수 있습니다.둘 이상의 범위가 지정되면 모든 범위와 일치하는 서비스 끝점만 응답합니다.  
+-   <span data-ttu-id="3360c-121"><xref:System.ServiceModel.Discovery.Configuration.ScopeElement> - 선택적 요소로서,</span><span class="sxs-lookup"><span data-stu-id="3360c-121"><xref:System.ServiceModel.Discovery.Configuration.ScopeElement> - Optional.</span></span> <span data-ttu-id="3360c-122">개별 서비스 끝점을 분류하는 데 사용되는 절대 URI입니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-122">Scopes are absolute URIs that are used to categorize individual service endpoints.</span></span> <span data-ttu-id="3360c-123">여러 끝점이 동일한 계약을 노출하는 상태에서 끝점의 하위 집합을 검색하려는 경우 이 조건을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-123">You may want to use this in scenarios where multiple endpoints expose the same contract and you want a way to search for a subset of the endpoints.</span></span> <span data-ttu-id="3360c-124">둘 이상의 범위가 지정되면 모든 범위와 일치하는 서비스 끝점만 응답합니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-124">If more than one scope is specified, only service endpoints matching ALL scopes reply.</span></span>  
   
--   <xref:System.ServiceModel.Discovery.ScopeMatchBy%2A> \- Probe 메시지의 범위와 끝점의 범위를 일치시키는 동안 사용할 일치 알고리즘을 지정합니다.다음과 같은 다섯 가지 범위 일치 규칙이 지원됩니다.  
+-   <span data-ttu-id="3360c-125"><xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchBy%2A> - Probe 메시지의 범위와 끝점의 범위를 일치시키는 동안 사용할 일치 알고리즘을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-125"><xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchBy%2A> - Specifies the matching algorithm to use while matching the scopes in the Probe message with that of the endpoint.</span></span> <span data-ttu-id="3360c-126">다음과 같은 다섯 가지 범위 일치 규칙이 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-126">There are five supported scope-matching rules:</span></span>  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact%2A>는 기본 대\/소문자 구분 문자열 비교를 수행합니다.  
+    -   <span data-ttu-id="3360c-127"><xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType>는 기본 대/소문자 구분 문자열 비교를 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-127"><xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType> does a basic case-sensitive string comparison.</span></span>  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix%2A>는 “\/”로 구분된 세그멘트별로 일치시킵니다.예를 들어 http:\/\/contoso\/building1을 검색하면 범위가 http:\/\/contoso\/building\/floor1인 서비스가 일치하는 항목으로 검색됩니다.http:\/\/contoso\/building100은 마지막 두 세그먼트가 일치하지 않으므로 일치하는 항목으로 검색되지 않습니다.  
+    -   <span data-ttu-id="3360c-128"><xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType>일치 항목 세그먼트로 구분 하 여 "/"입니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-128"><xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> matches by segments separated by "/".</span></span> <span data-ttu-id="3360c-129">예를 들어 http://contoso/building1을 검색하면 범위가 http://contoso/building/floor1인 서비스가 일치하는 항목으로 검색됩니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-129">A search for http://contoso/building1 matches a service with scope http://contoso/building/floor1.</span></span> <span data-ttu-id="3360c-130">http://contoso/building100은 마지막 두 세그먼트가 일치하지 않으므로 일치하는 항목으로 검색되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-130">Note that it does not match http://contoso/building100 because the last two segments do not match.</span></span>  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap%2A>는 LDAP URL을 사용하여 세그먼트별로 범위를 일치시킵니다.  
+    -   <span data-ttu-id="3360c-131"><xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType>는 LDAP URL을 사용하여 세그먼트별로 범위를 일치시킵니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-131"><xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType> matches scopes by segments using an LDAP URL.</span></span>  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid%2A>는 UUID 문자열을 사용하여 범위를 정확히 일치시킵니다.  
+    -   <span data-ttu-id="3360c-132"><xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid?displayProperty=nameWithType>는 UUID 문자열을 사용하여 범위를 정확히 일치시킵니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-132"><xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByUuid?displayProperty=nameWithType> matches scopes exactly using a UUID string.</span></span>  
   
-    -   <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone%2A>은 범위를 지정하지 않은 서비스만 일치시킵니다.  
+    -   <span data-ttu-id="3360c-133"><xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone?displayProperty=nameWithType>은 범위를 지정하지 않은 서비스만 일치시킵니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-133"><xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByNone?displayProperty=nameWithType> matches only those services that do not specify a scope.</span></span>  
   
-     범위 일치 규칙이 지정되지 않은 경우 <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix%2A>가 사용됩니다.  
+     <span data-ttu-id="3360c-134">범위 일치 규칙이 지정되지 않은 경우 <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix>가 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-134">If a scope-matching rule is not specified, <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix> is used.</span></span>  
   
- 종료 조건은 다음과 같습니다.  
+ <span data-ttu-id="3360c-135">종료 조건은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-135">Termination criteria include:</span></span>  
   
-1.  <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> \- 네트워크에서 서비스의 응답을 기다리는 최대 시간입니다.기본 시간은 20초입니다.  
+1.  <span data-ttu-id="3360c-136"><xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> - 네트워크에서 서비스의 응답을 기다리는 최대 시간입니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-136"><xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> - The maximum time to wait for replies from services on the network.</span></span> <span data-ttu-id="3360c-137">기본 시간은 20초입니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-137">The default duration is 20 seconds.</span></span>  
   
-2.  <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> \- 기다릴 응답의 최대 수입니다.<xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A>이 경과하기 전에 <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> 응답을 받으면 찾기 작업이 종료됩니다.  
+2.  <span data-ttu-id="3360c-138"><xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> - 기다릴 응답의 최대 수입니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-138"><xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> - The maximum number of replies to wait for.</span></span> <span data-ttu-id="3360c-139"><xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A>이 경과하기 전에 <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> 응답을 받으면 찾기 작업이 종료됩니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-139">If <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> replies are received before <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> has elapsed, the find operation ends.</span></span>  
   
-## FindResponse  
- <xref:System.ServiceModel.Discovery.FindResponse>에는 네트워크에서 일치하는 서비스가 보낸 응답을 포함하는 <xref:System.ServiceModel.Discovery.FindResponse.Endpoints%2A> 컬렉션 속성이 있습니다.응답하는 서비스가 없으면 컬렉션이 비어 있습니다.하나 이상의 서비스가 응답하면 서비스 주소 및 계약을 비롯한 서비스에 대한 일부 추가 정보가 포함된 <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> 개체에 각 응답이 저장됩니다.  
+## <a name="findresponse"></a><span data-ttu-id="3360c-140">FindResponse</span><span class="sxs-lookup"><span data-stu-id="3360c-140">FindResponse</span></span>  
+ <span data-ttu-id="3360c-141"><xref:System.ServiceModel.Discovery.FindResponse>에는 네트워크에서 일치하는 서비스가 보낸 응답을 포함하는 <xref:System.ServiceModel.Discovery.FindResponse.Endpoints%2A> 컬렉션 속성이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-141"><xref:System.ServiceModel.Discovery.FindResponse> has an <xref:System.ServiceModel.Discovery.FindResponse.Endpoints%2A> collection property that contains any replies sent by matching services on the network.</span></span> <span data-ttu-id="3360c-142">응답하는 서비스가 없으면 컬렉션이 비어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-142">If no services replied, the collection is empty.</span></span> <span data-ttu-id="3360c-143">하나 이상의 서비스가 응답하면 서비스 주소 및 계약을 비롯한 서비스에 대한 일부 추가 정보가 포함된 <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> 개체에 각 응답이 저장됩니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-143">If one or more services replied, each reply is stored in an <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> object, which contains the address, contract, and some additional information about the service.</span></span>  
   
- 다음 예제에서는 코드에서 찾기 작업을 수행하는 방법을 보여 줍니다.  
+ <span data-ttu-id="3360c-144">다음 예제에서는 코드에서 찾기 작업을 수행하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="3360c-144">The following example shows how to perform a find operation in code.</span></span>  
   
 ```  
 // Create DiscoveryClient  
@@ -69,12 +72,11 @@ findCriteria.Duration = TimeSpan.FromSeconds(10);
 FindResponse findResponse = discoveryClient.Find(findCriteria);  
   
 Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endpoints.Count)  
-  
 ```  
   
-## 참고 항목  
- [WCF Discovery 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)   
- [Discovery 클라이언트 채널 사용](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)   
- [범위를 사용한 검색](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)   
- [비동기 찾기](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)   
- [Basic](../../../../docs/framework/wcf/samples/basic-sample.md)
+## <a name="see-also"></a><span data-ttu-id="3360c-145">참고 항목</span><span class="sxs-lookup"><span data-stu-id="3360c-145">See Also</span></span>  
+ [<span data-ttu-id="3360c-146">WCF Discovery 개요</span><span class="sxs-lookup"><span data-stu-id="3360c-146">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [<span data-ttu-id="3360c-147">Discovery 클라이언트 채널을 사용 하 여</span><span class="sxs-lookup"><span data-stu-id="3360c-147">Using the Discovery Client Channel</span></span>](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
+ [<span data-ttu-id="3360c-148">범위를 사용한 검색</span><span class="sxs-lookup"><span data-stu-id="3360c-148">Discovery with Scopes</span></span>](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
+ [<span data-ttu-id="3360c-149">비동기 찾기</span><span class="sxs-lookup"><span data-stu-id="3360c-149">Asynchronous Find</span></span>](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)  
+ [<span data-ttu-id="3360c-150">기본</span><span class="sxs-lookup"><span data-stu-id="3360c-150">Basic</span></span>](../../../../docs/framework/wcf/samples/basic-sample.md)

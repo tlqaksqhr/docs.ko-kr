@@ -1,62 +1,64 @@
 ---
-title: "WS-AtomicTransaction 구성 유틸리티(wsatConfig.exe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WS-AtomicTransaction 구성 유틸리티(wsatConfig.exe)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-caps.latest.revision: 14
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: c84a0ddd05de3a28a6c38bc63151c8cec35bdd2e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# WS-AtomicTransaction 구성 유틸리티(wsatConfig.exe)
-WS\-AtomicTransaction 구성 유틸리티는 기본 WS\-AtomicTransaction 지원 설정을 구성하는 데 사용됩니다.  
+# <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a><span data-ttu-id="a683f-102">WS-AtomicTransaction 구성 유틸리티(wsatConfig.exe)</span><span class="sxs-lookup"><span data-stu-id="a683f-102">WS-AtomicTransaction Configuration Utility (wsatConfig.exe)</span></span>
+<span data-ttu-id="a683f-103">WS-AtomicTransaction 구성 유틸리티는 기본 WS-AtomicTransaction 지원 설정을 구성하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-103">The WS-AtomicTransaction Configuration Utility is used to configure basic WS-AtomicTransaction support settings.</span></span>  
   
-## 구문  
+## <a name="syntax"></a><span data-ttu-id="a683f-104">구문</span><span class="sxs-lookup"><span data-stu-id="a683f-104">Syntax</span></span>  
   
 ```  
-  
 wsatConfig [Options]  
 ```  
   
-## 설명  
- 이 명령줄 도구는 로컬 컴퓨터에서만 기본 WS\-AT 설정을 구성하는 데 사용할 수 있습니다.로컬 및 원격 컴퓨터 모두에서 설정을 구성해야 하는 경우는 [WS\-Atomic Transaction 지원 구성](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)에서 설명한 대로 MMC 스냅인을 사용해야 합니다.  
+## <a name="remarks"></a><span data-ttu-id="a683f-105">설명</span><span class="sxs-lookup"><span data-stu-id="a683f-105">Remarks</span></span>  
+ <span data-ttu-id="a683f-106">이 명령줄 도구는 로컬 컴퓨터에서만 기본 WS-AT 설정을 구성하는 데 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-106">This command line tool can be used to configure basic WS-AT settings in a local machine only.</span></span> <span data-ttu-id="a683f-107">로컬 및 원격 컴퓨터에서 설정을 구성 해야 할 경우 사용할지 MMC 스냅인에 설명 된 대로 [Ws-atomic Transaction 지원 구성](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-107">If you have to configure settings on both local and remote machines, you should use the MMC snap-in as described in [Configuring WS-Atomic Transaction Support](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md).</span></span>  
   
- 명령줄 도구는 Windows SDK 설치 위치에 있습니다.  
+ <span data-ttu-id="a683f-108">명령줄 도구는 Windows SDK 설치 위치에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-108">The command line tool can be found in the Windows SDK installation location, specifically,</span></span>  
   
- %SystemRoot%\\Microsoft.Net\\Framework\\v3.0\\Windows Communication Foundation\\wsatConfig.exe  
+ <span data-ttu-id="a683f-109">%SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\wsatConfig.exe</span><span class="sxs-lookup"><span data-stu-id="a683f-109">%SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\wsatConfig.exe</span></span>  
   
- [!INCLUDE[wxp](../../../includes/wxp-md.md)] 또는 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]을 실행 중인 경우 WsatConfig.exe를 실행하기 전에 업데이트를 다운로드해야 합니다.이 업데이트에 대한 자세한 내용은 [Commerce Server 2007용 업데이트\(KB912817\)](http://go.microsoft.com/fwlink/?LinkId=95340) 및 [Windows XP COM\+ 핫픽스 롤업 패키지 13의 사용 가능성](http://go.microsoft.com/fwlink/?LinkId=95341)\(영문 페이지일 수 있음\)을 참조하십시오.  
+ <span data-ttu-id="a683f-110">[!INCLUDE[wxp](../../../includes/wxp-md.md)] 또는 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]을 실행 중인 경우 WsatConfig.exe를 실행하기 전에 업데이트를 다운로드해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-110">If you are running [!INCLUDE[wxp](../../../includes/wxp-md.md)] or [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], you must download an update before running WsatConfig.exe.</span></span> <span data-ttu-id="a683f-111">이 업데이트에 대 한 자세한 내용은 참조 [Commerce Server 2007 (KB912817)에 대 한 업데이트](http://go.microsoft.com/fwlink/?LinkId=95340) 및 [가용성의 Windows XP COM + 핫픽스 롤업 패키지 13](http://go.microsoft.com/fwlink/?LinkId=95341)합니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-111">For more information about this update, see [Update for Commerce Server 2007 (KB912817)](http://go.microsoft.com/fwlink/?LinkId=95340) and [Availability of Windows XP COM+ Hotfix Rollup Package 13](http://go.microsoft.com/fwlink/?LinkId=95341).</span></span>  
   
- 다음 표에서는 WS\-AtomicTransaction 구성 유틸리티\(wsatConfig.exe\)에 사용할 수 있는 옵션을 보여 줍니다.  
+ <span data-ttu-id="a683f-112">다음 표에서는 WS-AtomicTransaction 구성 유틸리티(wsatConfig.exe)에 사용할 수 있는 옵션을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-112">The following table shows the options that can be used with WS-AtomicTransaction Configuration Utility (wsatConfig.exe).</span></span>  
   
 > [!NOTE]
->  선택한 포트에 대한 SSL 인증서를 설정하는 경우 인증서가 있으면 해당 포트와 연결된 원래 SSL 인증서를 덮어씁니다.  
+>  <span data-ttu-id="a683f-113">선택한 포트에 대한 SSL 인증서를 설정하는 경우 인증서가 있으면 해당 포트와 연결된 원래 SSL 인증서를 덮어씁니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-113">When you set an SSL certificate for a selected port, you overwrite the original SSL certificate associated with that port if one exists.</span></span>  
   
-|옵션|설명|  
-|--------|--------|  
-|\-accounts:\<account,\>|WS\-AtomicTransaction에 참여할 수 있는 계정의 쉼표로 구분된 목록을 지정합니다.이러한 계정의 유효성 검사는 수행되지 않습니다.|  
-|\-accountsCerts:\<thumb\>&#124;"Issuer\\SubjectName",\>|WS\-AtomicTransaction에 참여할 수 있는 인증서의 쉼표로 구분된 목록을 지정합니다.인증서는 지문이나 Issuer\\SubjectName 쌍으로 표시됩니다.비어 있으면 제목 이름으로 {EMPTY}를 사용하십시오.|  
-|\-endpointCert:\<machine&#124;\<thumb\>&#124;"Issuer\\SubjectName"\>|지문 또는 Issuer\\SubjectName 쌍으로 지정된 다른 로컬 끝점 인증서 또는 시스템 인증서를 사용합니다.비어 있으면 제목 이름으로 {EMPTY}를 사용하십시오.|  
-|\-maxTimeout:\<sec\>|최대 제한 시간\(초\)을 지정합니다.유효한 값은 0부터 3600까지입니다.|  
-|\-network:\<enable&#124;disable\>|WS\-AtomicTransaction 네트워크 지원을 사용하거나 사용하지 않습니다.|  
-|\-port:\<portNum\>|WS\-AtomicTransaction을 위한 HTTPS 포트를 설정합니다.<br /><br /> 이 도구를 실행하기 전에 방화벽을 이미 활성화한 경우 예외 목록에 포트가 자동으로 등록됩니다.이 도구를 실행하기 전에 방화벽을 비활성화한 경우 방화벽에 대해 추가로 구성되는 사항은 없습니다.<br /><br /> WS\-AT를 구성한 후에 방화벽을 활성화하는 경우 이 도구를 다시 실행하고 이 매개 변수를 사용하여 포트 번호를 제공해야 합니다.구성한 후에 방화벽을 비활성화하는 경우 WS\-AT는 추가 입력 없이 계속 작동합니다.|  
-|\-timeout:\<sec\>|기본 제한 시간\(초\)을 지정합니다.유효한 값은 1부터 3600까지입니다.|  
-|\-traceActivity:\<enable&#124;disable\>|동작 이벤트의 추적을 사용하거나 사용하지 않습니다.|  
-|\-traceLevel:\<Off&#124;Error&#124;Critical&#124;Warning&#124;Information&#124; Verbose&#124;All\>}|추적 수준을 지정합니다.|  
-|\-tracePII:\<enable&#124;disable\>|개인적으로 식별할 수 있는 정보의 추적을 사용하거나 사용하지 않습니다.|  
-|\-traceProp:\<enable&#124;disable\>|전파 이벤트의 추적을 사용하거나 사용하지 않습니다.|  
-|\-restart|변경 내용을 즉시 활성화하려면 MSDTC를 다시 시작합니다.이 옵션을 지정하지 않으면 MSDTC를 다시 시작할 때 변경 내용이 적용됩니다.|  
-|\-show|현재 WS\-AtomicTransaction 프로토콜 설정을 표시합니다.|  
-|\-virtualServer:\<virtualServer\>|DTC 리소스 클러스터 이름을 지정합니다.|  
+|<span data-ttu-id="a683f-114">옵션</span><span class="sxs-lookup"><span data-stu-id="a683f-114">Options</span></span>|<span data-ttu-id="a683f-115">설명</span><span class="sxs-lookup"><span data-stu-id="a683f-115">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="a683f-116">-계정:\<계정 ></span><span class="sxs-lookup"><span data-stu-id="a683f-116">-accounts:\<account,></span></span>|<span data-ttu-id="a683f-117">WS-AtomicTransaction에 참여할 수 있는 계정의 쉼표로 구분된 목록을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-117">Specifies a comma-separated list of accounts that can participate in WS-AtomicTransaction.</span></span> <span data-ttu-id="a683f-118">이러한 계정의 유효성 검사는 수행되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-118">The validity of these accounts is not checked.</span></span>|  
+|<span data-ttu-id="a683f-119">-accountsCerts:\<thumb > &#124; " Issuer\SubjectName"></span><span class="sxs-lookup"><span data-stu-id="a683f-119">-accountsCerts:\<thumb>&#124;"Issuer\SubjectName",></span></span>|<span data-ttu-id="a683f-120">WS-AtomicTransaction에 참여할 수 있는 인증서의 쉼표로 구분된 목록을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-120">Specifies a comma-separated list of certificates that can participate in WS-AtomicTransaction.</span></span> <span data-ttu-id="a683f-121">인증서는 지문이나 Issuer\SubjectName 쌍으로 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-121">The certificates are indicated by thumbprint or by the Issuer\SubjectName pair.</span></span> <span data-ttu-id="a683f-122">비어 있으면 제목 이름으로 {EMPTY}를 사용하십시오.</span><span class="sxs-lookup"><span data-stu-id="a683f-122">Use {EMPTY} for subject name if it is empty.</span></span>|  
+|<span data-ttu-id="a683f-123">-endpointCert: < 컴퓨터 &#124; \<thumb > &#124; " Issuer\SubjectName"></span><span class="sxs-lookup"><span data-stu-id="a683f-123">-endpointCert:<machine&#124;\<thumb>&#124;"Issuer\SubjectName"></span></span>|<span data-ttu-id="a683f-124">지문 또는 Issuer\SubjectName 쌍으로 지정된 다른 로컬 끝점 인증서 또는 시스템 인증서를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-124">Uses the machine certificate or another local endpoint certificate specified by thumbprint or Issuer\SubjectName pair.</span></span> <span data-ttu-id="a683f-125">비어 있으면 제목 이름으로 {EMPTY}를 사용하십시오.</span><span class="sxs-lookup"><span data-stu-id="a683f-125">Uses {EMPTY} for the subject name if it is empty.</span></span>|  
+|<span data-ttu-id="a683f-126">-maxTimeout:\<초 ></span><span class="sxs-lookup"><span data-stu-id="a683f-126">-maxTimeout:\<sec></span></span>|<span data-ttu-id="a683f-127">최대 제한 시간(초)을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-127">Specifies the maximum timeout in seconds.</span></span> <span data-ttu-id="a683f-128">유효한 값은 0에서 3600 까지입니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-128">Valid values are from 0 to 3600.</span></span>|  
+|<span data-ttu-id="a683f-129">-네트워크:\<사용 &#124; 사용 안 함 ></span><span class="sxs-lookup"><span data-stu-id="a683f-129">-network:\<enable&#124;disable></span></span>|<span data-ttu-id="a683f-130">WS-AtomicTransaction 네트워크 지원을 사용하거나 사용하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-130">Enables or disables the WS-AtomicTransaction network support.</span></span>|  
+|<span data-ttu-id="a683f-131">-포트:\<portNum ></span><span class="sxs-lookup"><span data-stu-id="a683f-131">-port:\<portNum></span></span>|<span data-ttu-id="a683f-132">WS-AtomicTransaction을 위한 HTTPS 포트를 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-132">Sets the HTTPS port for WS-AtomicTransaction.</span></span><br /><br /> <span data-ttu-id="a683f-133">이 도구를 실행하기 전에 방화벽을 이미 활성화한 경우 예외 목록에 포트가 자동으로 등록됩니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-133">If you have already enabled firewall before running this tool, the port is automatically registered in the exception list.</span></span> <span data-ttu-id="a683f-134">이 도구를 실행하기 전에 방화벽을 비활성화한 경우 방화벽에 대해 추가로 구성되는 사항은 없습니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-134">If firewall is disabled before running this tool, nothing additional is configured regarding the firewall.</span></span><br /><br /> <span data-ttu-id="a683f-135">WS-AT를 구성한 후에 방화벽을 활성화하는 경우 이 도구를 다시 실행하고 이 매개 변수를 사용하여 포트 번호를 제공해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-135">If you enable firewall after configuring WS-AT, you have to run this tool again and supply the port number using this parameter.</span></span> <span data-ttu-id="a683f-136">구성한 후에 방화벽을 비활성화하는 경우 WS-AT는 추가 입력 없이 계속 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-136">If you disable firewall after configuring, WS-AT continues to work without additional input.</span></span>|  
+|<span data-ttu-id="a683f-137">시간 제한:\<초 ></span><span class="sxs-lookup"><span data-stu-id="a683f-137">-timeout:\<sec></span></span>|<span data-ttu-id="a683f-138">기본 제한 시간(초)을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-138">Specifies the default timeout in seconds.</span></span> <span data-ttu-id="a683f-139">유효한 값은 1부터 3600까지입니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-139">Valid values are from 1 to 3600.</span></span>|  
+|<span data-ttu-id="a683f-140">-traceActivity:\<사용 &#124; 사용 안 함 ></span><span class="sxs-lookup"><span data-stu-id="a683f-140">-traceActivity:\<enable&#124;disable></span></span>|<span data-ttu-id="a683f-141">동작 이벤트의 추적을 사용하거나 사용하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-141">Enables or disables the tracing of activity events.</span></span>|  
+|<span data-ttu-id="a683f-142">-traceLevel:\<해제 &#124; 오류 &#124; 중요 한 &#124; 경고 &#124; 정보 &#124; 자세한 정보 표시 &#124; 모든 >}</span><span class="sxs-lookup"><span data-stu-id="a683f-142">-traceLevel:\<Off&#124;Error&#124;Critical&#124;Warning&#124;Information&#124; Verbose&#124;All>}</span></span>|<span data-ttu-id="a683f-143">추적 수준을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-143">Specifies the trace level.</span></span>|  
+|<span data-ttu-id="a683f-144">-tracePII:\<사용 &#124; 사용 안 함 ></span><span class="sxs-lookup"><span data-stu-id="a683f-144">-tracePII:\<enable&#124;disable></span></span>|<span data-ttu-id="a683f-145">개인적으로 식별할 수 있는 정보의 추적을 사용하거나 사용하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-145">Enables or disables the tracing of personally identifiable information.</span></span>|  
+|<span data-ttu-id="a683f-146">-traceProp:\<사용 &#124; 사용 안 함 ></span><span class="sxs-lookup"><span data-stu-id="a683f-146">-traceProp:\<enable&#124;disable></span></span>|<span data-ttu-id="a683f-147">전파 이벤트의 추적을 사용하거나 사용하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-147">Enables or disables the tracing of propagation events.</span></span>|  
+|<span data-ttu-id="a683f-148">-restart</span><span class="sxs-lookup"><span data-stu-id="a683f-148">-restart</span></span>|<span data-ttu-id="a683f-149">변경 내용을 즉시 활성화하려면 MSDTC를 다시 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-149">Restarts MSDTC to activate changes immediately.</span></span> <span data-ttu-id="a683f-150">이 옵션을 지정하지 않으면 MSDTC를 다시 시작할 때 변경 내용이 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-150">If this is not specified, the changes take effect when MSDTC is restarted.</span></span>|  
+|<span data-ttu-id="a683f-151">-show</span><span class="sxs-lookup"><span data-stu-id="a683f-151">-show</span></span>|<span data-ttu-id="a683f-152">현재 WS-AtomicTransaction 프로토콜 설정을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-152">Displays the current WS-AtomicTransaction protocol settings.</span></span>|  
+|<span data-ttu-id="a683f-153">-virtualServer:\<virtualServer ></span><span class="sxs-lookup"><span data-stu-id="a683f-153">-virtualServer:\<virtualServer></span></span>|<span data-ttu-id="a683f-154">DTC 리소스 클러스터 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="a683f-154">Specifies the DTC resource cluster name.</span></span>|  
   
-## 참고 항목  
- [WS\-AtomicTransaction 사용](../../../docs/framework/wcf/feature-details/using-ws-atomictransaction.md)   
- [WS\-Atomic Transaction 지원 구성](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
+## <a name="see-also"></a><span data-ttu-id="a683f-155">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a683f-155">See Also</span></span>  
+ [<span data-ttu-id="a683f-156">Ws-atomictransaction 사용</span><span class="sxs-lookup"><span data-stu-id="a683f-156">Using WS-AtomicTransaction</span></span>](../../../docs/framework/wcf/feature-details/using-ws-atomictransaction.md)  
+ [<span data-ttu-id="a683f-157">Ws-atomic Transaction 지원 구성</span><span class="sxs-lookup"><span data-stu-id="a683f-157">Configuring WS-Atomic Transaction Support</span></span>](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)

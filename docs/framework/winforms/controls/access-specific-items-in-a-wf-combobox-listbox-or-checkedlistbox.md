@@ -1,43 +1,47 @@
 ---
-title: "방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤의 특정 항목에 액세스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "CheckedListBox 컨트롤[Windows Forms], 항목 액세스"
-  - "콤보 상자, 항목 액세스"
-  - "ComboBox 컨트롤[Windows Forms], 항목 액세스"
-  - "목록 상자, 항목 액세스"
-  - "ListBox 컨트롤[Windows Forms], 항목 액세스"
-  - "ListBox 컨트롤[Windows Forms], 항목 정보 반환"
+title: "방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤의 특정 항목에 액세스"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- ComboBox control [Windows Forms], accessing items
+- ListBox control [Windows Forms], returning item information
+- list boxes [Windows Forms], accessing items
+- ListBox control [Windows Forms], accessing items
+- combo boxes [Windows Forms], accessing items
+- CheckedListBox control [Windows Forms], accessing items
 ms.assetid: 1216742f-bcf9-4ff8-8a62-d7c9053c2b96
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4ddcf6941f90556db26e2945c6b4460dfa585dbf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤의 특정 항목에 액세스
-Windows Forms 콤보 상자, 목록 상자 또는 확인 목록 상자의 특정 항목에 액세스하는 것은 중요한 작업입니다.  이 작업을 통해 어떤 위치에서든지 목록 내에 어떤 항목이 있는지 프로그래밍 방식으로 확인할 수 있습니다.  
+# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="9b00c-102">방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤의 특정 항목에 액세스</span><span class="sxs-lookup"><span data-stu-id="9b00c-102">How to: Access Specific Items in a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
+<span data-ttu-id="9b00c-103">Windows Forms 콤보 상자, 목록 상자 또는 선택 된 목록 상자의 특정 항목에 액세스 하는 필수 작업입니다.</span><span class="sxs-lookup"><span data-stu-id="9b00c-103">Accessing specific items in a Windows Forms combo box, list box, or checked list box is an essential task.</span></span> <span data-ttu-id="9b00c-104">프로그래밍 방식으로 지정된 된 위치에서 목록에는 무엇이 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9b00c-104">It enables you to programmatically determine what is in a list, at any given position.</span></span>  
   
-### 특정 항목에 액세스하려면  
+### <a name="to-access-a-specific-item"></a><span data-ttu-id="9b00c-105">특정 항목에 액세스 하려면</span><span class="sxs-lookup"><span data-stu-id="9b00c-105">To access a specific item</span></span>  
   
-1.  특정 항목의 인덱스를 사용하여`Items` 컬렉션을 쿼리합니다.  
+1.  <span data-ttu-id="9b00c-106">쿼리는 `Items` 특정 항목의 인덱스를 사용 하 여 컬렉션:</span><span class="sxs-lookup"><span data-stu-id="9b00c-106">Query the `Items` collection using the index of the specific item:</span></span>  
   
     ```vb  
     Private Function GetItemText(i As Integer) As String  
        ' Return the text of the item using the index:  
        Return ComboBox1.Items(i).ToString  
     End Function  
-  
     ```  
   
     ```csharp  
@@ -46,7 +50,6 @@ Windows Forms 콤보 상자, 목록 상자 또는 확인 목록 상자의 특정
        // Return the text of the item using the index:  
        return (comboBox1.Items[i].ToString());  
     }  
-  
     ```  
   
     ```cpp  
@@ -58,8 +61,8 @@ Windows Forms 콤보 상자, 목록 상자 또는 확인 목록 상자의 특정
        }  
     ```  
   
-## 참고 항목  
- <xref:System.Windows.Forms.ComboBox>   
- <xref:System.Windows.Forms.ListBox>   
- <xref:System.Windows.Forms.CheckedListBox>   
- [옵션 목록 표시에 사용하는 Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+## <a name="see-also"></a><span data-ttu-id="9b00c-107">참고 항목</span><span class="sxs-lookup"><span data-stu-id="9b00c-107">See Also</span></span>  
+ <xref:System.Windows.Forms.ComboBox>  
+ <xref:System.Windows.Forms.ListBox>  
+ <xref:System.Windows.Forms.CheckedListBox>  
+ [<span data-ttu-id="9b00c-108">옵션 목록 표시에 사용된 Windows Forms 컨트롤</span><span class="sxs-lookup"><span data-stu-id="9b00c-108">Windows Forms Controls Used to List Options</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

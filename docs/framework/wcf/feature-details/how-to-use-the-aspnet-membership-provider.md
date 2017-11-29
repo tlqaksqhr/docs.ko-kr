@@ -1,48 +1,51 @@
 ---
-title: "방법: ASP.NET 멤버 자격 공급자 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "WCF 및 ASP.NET"
-  - "WCF, 권한 부여(authorization)"
-  - "WCF, 보안"
+title: "방법: ASP.NET 멤버 자격 공급자 사용"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF and ASP.NET
+- WCF, authorization
+- WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 74056ae23b08850b9c9a564248d6e276fc518a8a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: ASP.NET 멤버 자격 공급자 사용
-[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 멤버 자격 공급자는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 개발자가 웹 사이트를 만들어 사용자에게 고유 사용자 이름 및 암호 조합을 만들 수 있도록 해주는 기능입니다.이 기능을 사용하여 사용자는 사이트에 계정을 설정하고 사이트 및 해당 서비스에 로그인하여 단독으로 액세스할 수 있습니다.반면, Windows 보안의 경우 사용자에게는 Windows 도메인의 계정이 있어야 합니다.대신 자신의 자격 증명\(사용자 이름\/암호 조합\)을 제공하는 사용자가 사이트 및 해당 서비스를 사용할 수 있습니다.  
+# <a name="how-to-use-the-aspnet-membership-provider"></a><span data-ttu-id="896eb-102">방법: ASP.NET 멤버 자격 공급자 사용</span><span class="sxs-lookup"><span data-stu-id="896eb-102">How to: Use the ASP.NET Membership Provider</span></span>
+<span data-ttu-id="896eb-103">[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 멤버 자격 공급자는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 개발자가 웹 사이트를 만들어 사용자에게 고유 사용자 이름 및 암호 조합을 만들 수 있도록 해주는 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-103">The [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] membership provider is a feature that enables [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] developers to create Web sites that allow users to create unique user name and password combinations.</span></span> <span data-ttu-id="896eb-104">이 기능을 사용하여 사용자는 사이트에 계정을 설정하고 사이트 및 해당 서비스에 로그인하여 단독으로 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-104">With this facility, any user can establish an account with the site, and sign in for exclusive access to the site and its services.</span></span> <span data-ttu-id="896eb-105">반면, Windows 보안의 경우 사용자에게는 Windows 도메인의 계정이 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-105">This is in contrast to Windows security, which requires users to have accounts in a Windows domain.</span></span> <span data-ttu-id="896eb-106">대신 자신의 자격 증명(사용자 이름/암호 조합)을 제공하는 사용자가 사이트 및 해당 서비스를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-106">Instead, any user that supplies his or her credentials (the user name/password combination) can use the site and its services.</span></span>  
   
- 샘플 응용 프로그램을 보려면 [Membership and Role Provider](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)를 참조하십시오.[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 역할 공급자 기능 사용에 대한 자세한 내용은 [방법: 서비스에서 ASP.NET 역할 공급자 사용](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)을 참조하십시오.  
+ <span data-ttu-id="896eb-107">샘플 응용 프로그램에 대 한 참조 [멤버 자격 및 역할 공급자](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-107">For a sample application, see [Membership and Role Provider](../../../../docs/framework/wcf/samples/membership-and-role-provider.md).</span></span> <span data-ttu-id="896eb-108">사용 하는 방법에 대 한 내용은 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 역할 공급자 기능 참조 [하는 방법: ASP.NET 역할 공급자를 사용 하 여 서비스와](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-108">For information about using the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] role provider feature, see [How to: Use the ASP.NET Role Provider with a Service](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).</span></span>  
   
- 멤버 자격 기능을 사용하려면 SQL Server 데이터베이스를 사용하여 사용자 정보를 저장해야 합니다.해당 기능에는 암호를 잊은 사용자에게 질문을 표시하기 위한 메서드도 포함됩니다.  
+ <span data-ttu-id="896eb-109">멤버 자격 기능을 사용하려면 SQL Server 데이터베이스를 사용하여 사용자 정보를 저장해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-109">The membership feature requires using a SQL Server database to store the user information.</span></span> <span data-ttu-id="896eb-110">해당 기능에는 암호를 잊은 사용자에게 질문을 표시하기 위한 메서드도 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-110">The feature also includes methods for prompting with a question any users who have forgotten their password.</span></span>  
   
- [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 개발자는 보안을 위해 이러한 기능을 활용할 수 있습니다.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램에 통합된 경우 사용자는 사용자 이름\/암호 조합을 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 응용 프로그램에 제공해야 합니다.데이터를 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스로 전송하려면 <xref:System.ServiceModel.WSHttpBinding>\(구성에서는 [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)\)과 같은 사용자 이름\/암호 자격 증명을 지원하는 바인딩을 사용하고, 클라이언트 자격 증명 형식을 `UserName`으로 설정합니다.서비스에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안이 사용자 이름 및 암호를 기반으로 사용자를 인증하고, [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 역할에서 지정한 역할도 할당합니다.  
+ [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="896eb-111"> 개발자는 보안을 위해 이러한 기능을 활용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-111"> developers can take advantage of these features for security purposes.</span></span> <span data-ttu-id="896eb-112">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 응용 프로그램에 통합된 경우 사용자는 사용자 이름/암호 조합을 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 클라이언트 응용 프로그램에 제공해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-112">When integrated into an [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] application, users must supply a user name/password combination to the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client application.</span></span> <span data-ttu-id="896eb-113">데이터를 전송 하는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스와 같은 사용자 이름/암호 자격 증명을 지 원하는 바인딩을 사용는 <xref:System.ServiceModel.WSHttpBinding> (구성에서는 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) 하 고 클라이언트 자격 증명 설정 입력 `UserName`합니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-113">To transfer the data to the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service, use a binding that supports user name/password credentials, such as the <xref:System.ServiceModel.WSHttpBinding> (in configuration, the [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)) and set the client credential type to `UserName`.</span></span> <span data-ttu-id="896eb-114">서비스에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 보안이 사용자 이름 및 암호를 기반으로 사용자를 인증하고, [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 역할에서 지정한 역할도 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-114">On the service, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] security authenticates the user based on the user name and password, and also assigns the role specified by the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] role.</span></span>  
   
 > [!NOTE]
->  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 사용자 이름\/암호 조합 또는 기타 사용자 정보로 데이터베이스를 입력할 수 있는 메서드를 제공하지 않습니다.  
+>  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="896eb-115">에서는 사용자 이름/암호 조합 또는 기타 사용자 정보로 데이터베이스를 입력할 수 있는 메서드를 제공하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-115"> does not provide methods to populate the database with user name/password combinations or other user information.</span></span>  
   
-### 멤버 자격 공급자를 구성하려면  
+### <a name="to-configure-the-membership-provider"></a><span data-ttu-id="896eb-116">멤버 자격 공급자를 구성하려면</span><span class="sxs-lookup"><span data-stu-id="896eb-116">To configure the membership provider</span></span>  
   
-1.  Web.config 파일에서 \<`system.web`\> 요소 아래에 \<`membership`\> 요소를 만듭니다.  
+1.  <span data-ttu-id="896eb-117">Web.config 파일에 아래에서 <`system.web`> 요소를 만들는 <`membership`> 요소.</span><span class="sxs-lookup"><span data-stu-id="896eb-117">In the Web.config file, under the <`system.web`> element, create a <`membership`> element.</span></span>  
   
-2.  `<membership>` 요소 아래에 `<providers>` 요소를 만듭니다.  
+2.  <span data-ttu-id="896eb-118">`<membership>` 요소 아래에 `<providers>` 요소를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-118">Under the `<membership>` element, create a `<providers>` element.</span></span>  
   
-3.  \<`providers`\> 요소의 자식 요소로 `<clear />` 요소를 추가하여 공급자 컬렉션을 플러시합니다.  
+3.  <span data-ttu-id="896eb-119">하위 항목으로 <`providers`> 요소를 추가 `<clear />` 요소 플러시 공급자의 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-119">As a child to the <`providers`> element, add a `<clear />` element to flush the collection of providers.</span></span>  
   
-4.  `<clear />` 요소 아래에서 `name`, `type`, `connectionStringName`, `applicationName`, `enablePasswordRetrieval`, `enablePasswordReset`, `requiresQuestionAndAnswer`, `requiresUniqueEmail` 및 `passwordFormat` 등의 적절한 값으로 설정된 특성을 사용하여 \<`add`\> 요소를 만듭니다.`name` 특성은 나중에 구성 파일의 값으로 사용됩니다.다음 예제에서는 이 특성을 `SqlMembershipProvider`로 설정합니다.  
+4.  <span data-ttu-id="896eb-120">아래는 `<clear />` 요소를 만들기는 <`add`> 요소는 다음 특성으로 적절 한 값으로 설정: `name`, `type`, `connectionStringName`, `applicationName`, `enablePasswordRetrieval`, `enablePasswordReset`, `requiresQuestionAndAnswer` `requiresUniqueEmail`, 및 `passwordFormat`합니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-120">Under the `<clear />` element, create an <`add`> element with the following attributes set to appropriate values: `name`, `type`, `connectionStringName`, `applicationName`, `enablePasswordRetrieval`, `enablePasswordReset`, `requiresQuestionAndAnswer`, `requiresUniqueEmail`, and `passwordFormat`.</span></span> <span data-ttu-id="896eb-121">`name` 특성은 나중에 구성 파일의 값으로 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-121">The `name` attribute is used later as a value in the configuration file.</span></span> <span data-ttu-id="896eb-122">다음 예제에서는 이 특성을 `SqlMembershipProvider`으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-122">The following example sets it to `SqlMembershipProvider`.</span></span>  
   
-     다음 예제에서는 구성 섹션을 보여 줍니다.  
+     <span data-ttu-id="896eb-123">다음 예제에서는 구성 섹션을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-123">The following example shows the configuration section.</span></span>  
   
     ```xml  
     <!-- Configure the Sql Membership Provider -->  
@@ -63,17 +66,17 @@ caps.handback.revision: 15
     </membership>  
     ```  
   
-### 사용자 이름\/암호 조합을 허용하도록 서비스 보안을 구성하려면  
+### <a name="to-configure-service-security-to-accept-the-user-namepassword-combination"></a><span data-ttu-id="896eb-124">사용자 이름/암호 조합을 허용하도록 서비스 보안을 구성하려면</span><span class="sxs-lookup"><span data-stu-id="896eb-124">To configure service security to accept the user name/password combination</span></span>  
   
-1.  구성 파일에서 [\<system.serviceModel\>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)[\<bindings\>](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) 요소를 추가합니다.  
+1.  <span data-ttu-id="896eb-125">구성 파일에 아래에서 [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) 요소를 추가 [ \<바인딩 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-125">In the configuration file, under the [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) element, add a [\<bindings>](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) element.</span></span>  
   
-2.  [\<wsHttpBinding\>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)를 바인딩 섹션에 추가합니다.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 바인딩 요소 만들기[!INCLUDE[crabout](../../../../includes/crabout-md.md)][방법: 구성에서 서비스 바인딩 지정](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)을 참조하십시오.  
+2.  <span data-ttu-id="896eb-126">추가 [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 바인딩 섹션에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-126">Add a [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) to the bindings section.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="896eb-127">만들기는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 참조 바인딩 요소 [하는 방법: 구성에서 서비스 바인딩 지정](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-127"> creating an [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] binding element, see [How to: Specify a Service Binding in Configuration](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).</span></span>  
   
-3.  `<security>` 요소의 `mode` 특성을 `Message`로 설정합니다.  
+3.  <span data-ttu-id="896eb-128">`mode` 요소의 `<security>` 특성을 `Message`로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-128">Set the `mode` attribute of the `<security>` element to `Message`.</span></span>  
   
-4.  \<`message`\> 요소의 `clientCredentialType` 특성을 `UserName`으로 설정합니다.이를 통해 사용자 이름\/암호 쌍을 클라이언트의 자격 증명으로 사용하도록 지정됩니다.  
+4.  <span data-ttu-id="896eb-129">설정의 `clientCredentialType` 특성에는 <`message`> 요소를 `UserName`합니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-129">Set the `clientCredentialType` attribute of the <`message`> element to `UserName`.</span></span> <span data-ttu-id="896eb-130">이를 통해 사용자 이름/암호 쌍을 클라이언트의 자격 증명으로 사용하도록 지정됩니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-130">This specifies that a user name/password pair will be used as the client's credential.</span></span>  
   
-     다음 예제에서는 바인딩에 대한 구성 코드를 보여 줍니다.  
+     <span data-ttu-id="896eb-131">다음 예제에서는 바인딩에 대한 구성 코드를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-131">The following example shows the configuration code for the binding.</span></span>  
   
     ```xml  
     <system.serviceModel>  
@@ -90,24 +93,24 @@ caps.handback.revision: 15
     </system.serviceModel>  
     ```  
   
-### 멤버 자격 공급자를 사용하여 서비스를 구성하려면  
+### <a name="to-configure-a-service-to-use-the-membership-provider"></a><span data-ttu-id="896eb-132">멤버 자격 공급자를 사용하여 서비스를 구성하려면</span><span class="sxs-lookup"><span data-stu-id="896eb-132">To configure a service to use the membership provider</span></span>  
   
-1.  [\<behaviors\>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)요소를 `<behaviors>`요소에 대한 자식으로 추가합니다.  
+1.  <span data-ttu-id="896eb-133">하위 항목으로 `<system.serviceModel>` 요소를 추가 [ \<동작 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) 요소</span><span class="sxs-lookup"><span data-stu-id="896eb-133">As a child to the `<system.serviceModel>` element, add a [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) element</span></span>  
   
-2.  [\<serviceBehaviors\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)을 \<`behaviors`\> 요소에 추가합니다.  
+2.  <span data-ttu-id="896eb-134">추가 [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) 에 <`behaviors`> 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-134">Add a [\<serviceBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) to the <`behaviors`> element.</span></span>  
   
-3.  [\<behavior\>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)를 추가하고 `name` 특성을 적절한 값으로 설정합니다.  
+3.  <span data-ttu-id="896eb-135">추가 [ \<동작 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) 설정 하 고는 `name` 특성을 적절 한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-135">Add a [\<behavior>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) and set the `name` attribute to an appropriate value.</span></span>  
   
-4.  [\<serviceCredentials\>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)를 \<`behavior`\> 요소에 추가합니다.  
+4.  <span data-ttu-id="896eb-136">추가 [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) 에 <`behavior`> 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-136">Add a [\<serviceCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) to the <`behavior`> element.</span></span>  
   
-5.  [\<userNameAuthentication\>](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md)를 `<serviceCredentials>` 요소에 추가합니다.  
+5.  <span data-ttu-id="896eb-137">추가 [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md) 에 `<serviceCredentials>` 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-137">Add a [\<userNameAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md) to the `<serviceCredentials>` element.</span></span>  
   
-6.  `userNamePasswordValidationMode` 특성을 `MembershipProvider`로 설정합니다.  
+6.  <span data-ttu-id="896eb-138">`userNamePasswordValidationMode` 특성을 `MembershipProvider`으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-138">Set the `userNamePasswordValidationMode` attribute to `MembershipProvider`.</span></span>  
   
     > [!IMPORTANT]
-    >  `userNamePasswordValidationMode` 값이 설정되어 있지 않으면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 멤버 자격 공급자 대신 Windows 인증을 사용합니다.  
+    >  <span data-ttu-id="896eb-139">`userNamePasswordValidationMode` 값이 설정되어 있지 않으면 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 멤버 자격 공급자 대신 Windows 인증을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-139">If the `userNamePasswordValidationMode` value is not set, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] uses Windows authentication instead of the [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] membership provider.</span></span>  
   
-7.  `membershipProviderName` 특성을 공급자의 이름으로 설정합니다\(이 항목의 첫 번째 절차에서 공급자를 추가할 때 지정됨\).다음 예제에서는 이 지점에 대한 `<serviceCredentials>` 단편을 보여 줍니다.  
+7.  <span data-ttu-id="896eb-140">`membershipProviderName` 특성을 공급자의 이름으로 설정합니다(이 항목의 첫 번째 절차에서 공급자를 추가할 때 지정됨).</span><span class="sxs-lookup"><span data-stu-id="896eb-140">Set the `membershipProviderName` attribute to the name of the provider (specified when adding the provider in the first procedure in this topic).</span></span> <span data-ttu-id="896eb-141">다음 예제에서는 이 지점에 대한 `<serviceCredentials>` 단편을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-141">The following example shows the `<serviceCredentials>` fragment to this point.</span></span>  
   
     ```xml  
     <behaviors>  
@@ -121,13 +124,12 @@ caps.handback.revision: 15
           </behavior>  
        </serviceBehaviors>  
     </behaviors>  
-  
     ```  
   
-## 예제  
- 다음 코드에서는 ASP 멤버 자격 기능을 사용하는 서비스의 구성을 보여 줍니다.  
+## <a name="example"></a><span data-ttu-id="896eb-142">예제</span><span class="sxs-lookup"><span data-stu-id="896eb-142">Example</span></span>  
+ <span data-ttu-id="896eb-143">다음 코드에서는 ASP 멤버 자격 기능을 사용하는 서비스의 구성을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="896eb-143">The following code shows the configuration for a service that uses the ASP membership feature.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
   <system.serviceModel>  
@@ -160,9 +162,8 @@ caps.handback.revision: 15
     </bindings>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## 참고 항목  
- [방법: 서비스에서 ASP.NET 역할 공급자 사용](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)   
- [Membership and Role Provider](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)
+## <a name="see-also"></a><span data-ttu-id="896eb-144">참고 항목</span><span class="sxs-lookup"><span data-stu-id="896eb-144">See Also</span></span>  
+ [<span data-ttu-id="896eb-145">방법: 서비스에서 ASP.NET 역할 공급자 사용</span><span class="sxs-lookup"><span data-stu-id="896eb-145">How to: Use the ASP.NET Role Provider with a Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
+ [<span data-ttu-id="896eb-146">멤버 자격 및 역할 공급자</span><span class="sxs-lookup"><span data-stu-id="896eb-146">Membership and Role Provider</span></span>](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)

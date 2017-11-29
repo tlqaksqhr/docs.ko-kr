@@ -1,74 +1,75 @@
 ---
-title: "이미지, 비트맵, 아이콘 및 메타파일 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "비트맵[Windows Forms], 작업"
-  - "예제[Windows Forms], 비트맵"
-  - "예제[Windows Forms], 이미지"
-  - "예제[Windows Forms], 메타파일"
-  - "이미지[Windows Forms], 작업"
-  - "메타파일, 작업"
+title: "이미지, 비트맵, 아이콘 및 메타파일 사용"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- metafiles [Windows Forms], working with
+- examples [Windows Forms], bitmaps
+- examples [Windows Forms], images
+- bitmaps [Windows Forms], working with
+- images [Windows Forms], working with
+- examples [Windows Forms], metafiles
 ms.assetid: a626d701-bd99-4fd8-b92f-7b8f794e042b
-caps.latest.revision: 17
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 53dc25d6a23c5cdbba1c640905eadbdc6b1acb71
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/22/2017
 ---
-# 이미지, 비트맵, 아이콘 및 메타파일 사용
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]는 래스터 이미지 작업을 위한 `Bitmap` 클래스와 벡터 이미지 작업을 위한 `Metafile` 클래스를 제공합니다.  `Bitmap` 및 `Metafile` 클래스는 둘 다 `Image` 클래스에서 상속됩니다.  
+# <a name="working-with-images-bitmaps-icons-and-metafiles"></a><span data-ttu-id="e0a75-102">이미지, 비트맵, 아이콘 및 메타파일 사용</span><span class="sxs-lookup"><span data-stu-id="e0a75-102">Working with Images, Bitmaps, Icons, and Metafiles</span></span>
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="e0a75-103">는 래스터 이미지 작업을 위한 `Bitmap` 클래스와 벡터 이미지 작업을 위한 `Metafile` 클래스를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="e0a75-103"> provides the `Bitmap` class for working with raster images and the `Metafile` class for working with vector images.</span></span> <span data-ttu-id="e0a75-104">`Bitmap` 및 `Metafile` 클래스는 둘 다 `Image` 클래스에서 상속됩니다.</span><span class="sxs-lookup"><span data-stu-id="e0a75-104">The `Bitmap` and the `Metafile` classes both inherit from the `Image` class.</span></span>  
   
-## 단원 내용  
- [방법: 화면에 기존 비트맵 그리기](../../../../docs/framework/winforms/advanced/how-to-draw-an-existing-bitmap-to-the-screen.md)  
- 비트맵을 로드하고 그리는 방법을 설명합니다.  
+## <a name="in-this-section"></a><span data-ttu-id="e0a75-105">단원 내용</span><span class="sxs-lookup"><span data-stu-id="e0a75-105">In This Section</span></span>  
+ [<span data-ttu-id="e0a75-106">방법: 화면에 기존 비트맵 그리기</span><span class="sxs-lookup"><span data-stu-id="e0a75-106">How to: Draw an Existing Bitmap to the Screen</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-an-existing-bitmap-to-the-screen.md)  
+ <span data-ttu-id="e0a75-107">비트맵을 로드하고 그리는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e0a75-107">Describes how to load and draw bitmaps.</span></span>  
   
- [방법: 메타파일 로드 및 표시](../../../../docs/framework/winforms/advanced/how-to-load-and-display-metafiles.md)  
- 메타파일을 로드하고 그리는 방법을 설명합니다.  
+ [<span data-ttu-id="e0a75-108">방법: 메타파일 로드 및 표시</span><span class="sxs-lookup"><span data-stu-id="e0a75-108">How to: Load and Display Metafiles</span></span>](../../../../docs/framework/winforms/advanced/how-to-load-and-display-metafiles.md)  
+ <span data-ttu-id="e0a75-109">메타파일을 로드하고 그리는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e0a75-109">Shows how to load and draw metafiles.</span></span>  
   
- [GDI\+에서 이미지 자르기 및 배율 조정](../../../../docs/framework/winforms/advanced/cropping-and-scaling-images-in-gdi.md)  
- 벡터 및 래스터 이미지를 자르고 크기를 조정하는 방법을 설명합니다.  
+ [<span data-ttu-id="e0a75-110">GDI+에서 이미지 자르기 및 배율 조정</span><span class="sxs-lookup"><span data-stu-id="e0a75-110">Cropping and Scaling Images in GDI+</span></span>](../../../../docs/framework/winforms/advanced/cropping-and-scaling-images-in-gdi.md)  
+ <span data-ttu-id="e0a75-111">벡터 및 래스터 이미지를 자르고 크기를 조정하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e0a75-111">Explains how to crop and scale vector and raster images.</span></span>  
   
- [방법: 이미지 회전, 반사 및 기울이기](../../../../docs/framework/winforms/advanced/how-to-rotate-reflect-and-skew-images.md)  
- 회전, 반사 및 왜곡된 이미지를 그리는 방법을 설명합니다.  
+ [<span data-ttu-id="e0a75-112">방법: 이미지 회전, 리플렉션 및 기울이기</span><span class="sxs-lookup"><span data-stu-id="e0a75-112">How to: Rotate, Reflect, and Skew Images</span></span>](../../../../docs/framework/winforms/advanced/how-to-rotate-reflect-and-skew-images.md)  
+ <span data-ttu-id="e0a75-113">회전, 반사 및 왜곡된 이미지를 그리는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e0a75-113">Describes how to draw rotated, reflected and skewed images.</span></span>  
   
- [방법: 배율 조정 시 보간 모드를 사용하여 이미지 품질 관리](../../../../docs/framework/winforms/advanced/how-to-use-interpolation-mode-to-control-image-quality-during-scaling.md)  
- <xref:System.Drawing.Drawing2D.InterpolationMode> 열거형을 사용하여 이미지 품질을 변경하는 방법을 보여 줍니다.  
+ [<span data-ttu-id="e0a75-114">방법: 배율 조정 시 보간 모드를 사용하여 이미지 품질 관리</span><span class="sxs-lookup"><span data-stu-id="e0a75-114">How to: Use Interpolation Mode to Control Image Quality During Scaling</span></span>](../../../../docs/framework/winforms/advanced/how-to-use-interpolation-mode-to-control-image-quality-during-scaling.md)  
+ <span data-ttu-id="e0a75-115"><xref:System.Drawing.Drawing2D.InterpolationMode> 열거형을 사용하여 이미지 품질을 변경하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e0a75-115">Shows how to use the <xref:System.Drawing.Drawing2D.InterpolationMode> enumeration to change image quality.</span></span>  
   
- [방법: 축소판 이미지 만들기](../../../../docs/framework/winforms/advanced/how-to-create-thumbnail-images.md)  
- 축소판 이미지를 만드는 방법을 설명합니다.  
+ [<span data-ttu-id="e0a75-116">방법: 축소판 이미지 만들기</span><span class="sxs-lookup"><span data-stu-id="e0a75-116">How to: Create Thumbnail Images</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-thumbnail-images.md)  
+ <span data-ttu-id="e0a75-117">축소판 이미지를 만드는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e0a75-117">Describes how to create thumbnail images.</span></span>  
   
- [방법: 자동 배율 조정 없이 성능 향상](../../../../docs/framework/winforms/advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)  
- 자동 크기 조정 없이 이미지를 그리는 방법을 설명합니다.  
+ [<span data-ttu-id="e0a75-118">방법: 자동 크기 조정 없이 성능 향상</span><span class="sxs-lookup"><span data-stu-id="e0a75-118">How to: Improve Performance by Avoiding Automatic Scaling</span></span>](../../../../docs/framework/winforms/advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)  
+ <span data-ttu-id="e0a75-119">자동 크기 조정 없이 이미지를 그리는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e0a75-119">Explains how to draw an image without automatic scaling.</span></span>  
   
- [방법: 이미지 메타데이터 읽기](../../../../docs/framework/winforms/advanced/how-to-read-image-metadata.md)  
- 이미지에서 메타데이터를 읽는 방법을 설명합니다.  
+ [<span data-ttu-id="e0a75-120">방법: 이미지 메타데이터 읽기</span><span class="sxs-lookup"><span data-stu-id="e0a75-120">How to: Read Image Metadata</span></span>](../../../../docs/framework/winforms/advanced/how-to-read-image-metadata.md)  
+ <span data-ttu-id="e0a75-121">이미지에서 메타데이터를 읽는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e0a75-121">Describes how to read metadata from an image.</span></span>  
   
- [방법: 런타임에 비트맵 만들기](../../../../docs/framework/winforms/advanced/how-to-create-a-bitmap-at-run-time.md)  
- 런타임에 비트맵을 그리는 방법을 보여 줍니다.  
+ [<span data-ttu-id="e0a75-122">방법: 런타임에 비트맵 만들기</span><span class="sxs-lookup"><span data-stu-id="e0a75-122">How to: Create a Bitmap at Run Time</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-a-bitmap-at-run-time.md)  
+ <span data-ttu-id="e0a75-123">런타임에 비트맵을 그리는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="e0a75-123">Shows how to draw a bitmap at runtime.</span></span>  
   
- [방법: Windows Forms에서 파일과 연결된 아이콘 추출](../../../../docs/framework/winforms/advanced/how-to-extract-the-icon-associated-with-a-file-in-windows-forms.md)  
- 파일의 포함된 리소스인 아이콘을 추출하는 방법을 설명합니다.  
+ [<span data-ttu-id="e0a75-124">방법: Windows Forms에서 파일과 연결된 아이콘 추출</span><span class="sxs-lookup"><span data-stu-id="e0a75-124">How to: Extract the Icon Associated with a File in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/how-to-extract-the-icon-associated-with-a-file-in-windows-forms.md)  
+ <span data-ttu-id="e0a75-125">파일의 포함된 리소스인 아이콘을 추출하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="e0a75-125">Describes how to extract an icon that is an embedded resource of a file.</span></span>  
   
-## 참조  
+## <a name="reference"></a><span data-ttu-id="e0a75-126">참조</span><span class="sxs-lookup"><span data-stu-id="e0a75-126">Reference</span></span>  
  <xref:System.Drawing.Image>  
- 이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.  
+ <span data-ttu-id="e0a75-127">이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="e0a75-127">Describes this class and has links to all of its members.</span></span>  
   
  <xref:System.Drawing.Imaging.Metafile>  
- 이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.  
+ <span data-ttu-id="e0a75-128">이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="e0a75-128">Describes this class and has links to all of its members.</span></span>  
   
  <xref:System.Drawing.Bitmap>  
- 이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.  
+ <span data-ttu-id="e0a75-129">이 클래스를 설명하고 모든 해당 멤버의 링크를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="e0a75-129">Describes this class and has links to all of its members.</span></span>  
   
-## 관련 단원  
- [이미지, 비트맵 및 메타파일](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- 다양한 유형의 비트맵 및 응용 프로그램에서 조작하는 방법을 설명하는 항목의 링크를 포함합니다.
+## <a name="related-sections"></a><span data-ttu-id="e0a75-130">관련 단원</span><span class="sxs-lookup"><span data-stu-id="e0a75-130">Related Sections</span></span>  
+ [<span data-ttu-id="e0a75-131">이미지, 비트맵 및 메타파일</span><span class="sxs-lookup"><span data-stu-id="e0a75-131">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ <span data-ttu-id="e0a75-132">다양한 유형의 비트맵 및 응용 프로그램에서 조작하는 방법을 설명하는 항목의 링크를 포함합니다.</span><span class="sxs-lookup"><span data-stu-id="e0a75-132">Contains links to topics that discuss different types of bitmaps and manipulating them in your applications.</span></span>

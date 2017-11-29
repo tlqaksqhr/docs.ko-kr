@@ -1,48 +1,52 @@
 ---
-title: "인스턴스 활성화 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "인스턴스 활성화"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: de2152e557ccfe19c47247e2501f2e2d62253e81
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 인스턴스 활성화
-SQL 워크플로 인스턴스 저장소는 정기적으로 다시 시작되어 지속성 데이터베이스에서 실행 가능하거나 활성화 가능한 워크플로 인스턴스를 검색하는 내부 태스크를 실행합니다.실행 가능한 워크플로 인스턴스를 발견하면 해당 인스턴스를 활성화할 수 있는 워크플로 호스트에 알려 줍니다.인스턴스 저장소에서 활성화 가능한 워크플로 인스턴스를 발견하면 워크플로 호스트를 활성화하여 워크플로 인스턴스를 실행하는 일반 호스트에 알려 줍니다.이 항목의 다음 단원에서는 인스턴스 활성화 프로세스에 대해 자세히 설명합니다.  
+# <a name="instance-activation"></a><span data-ttu-id="11f3c-102">인스턴스 활성화</span><span class="sxs-lookup"><span data-stu-id="11f3c-102">Instance Activation</span></span>
+<span data-ttu-id="11f3c-103">SQL 워크플로 인스턴스 저장소는 정기적으로 다시 시작되어 지속성 데이터베이스에서 실행 가능하거나 활성화 가능한 워크플로 인스턴스를 검색하는 내부 작업를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="11f3c-103">The SQL Workflow Instance Store runs an internal task that periodically wakes up and detects runnable or activatable workflow instances in the persistence database.</span></span> <span data-ttu-id="11f3c-104">실행 가능한 워크플로 인스턴스를 발견하면 해당 인스턴스를 활성화할 수 있는 워크플로 호스트에 알려 줍니다.</span><span class="sxs-lookup"><span data-stu-id="11f3c-104">If it finds a runnable workflow instance, it notifies the workflow host that is capable of activating the instance.</span></span> <span data-ttu-id="11f3c-105">인스턴스 저장소에서 활성화 가능한 워크플로 인스턴스를 발견하면 워크플로 호스트를 활성화하여 워크플로 인스턴스를 실행하는 일반 호스트에 알려 줍니다.</span><span class="sxs-lookup"><span data-stu-id="11f3c-105">If the instance store finds an activatable workflow instance, it notifies a generic host that activates a workflow host, which in turn runs the workflow instance.</span></span> <span data-ttu-id="11f3c-106">이 항목의 다음 단원에서는 인스턴스 활성화 프로세스에 대해 자세히 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="11f3c-106">The following sections in this topic explain the instance activation process in detail.</span></span>  
   
-##  <a name="RunnableSection"></a> 실행 가능한 워크플로 인스턴스 검색 및 활성화  
- SQL 워크플로 인스턴스 저장소에서는 워크플로 인스턴스가 일시 중단 상태 또는 완료 상태가 아니고 다음 조건을 충족할 경우 해당 인스턴스를 *실행 가능한* 것으로 간주합니다.  
+##  <span data-ttu-id="11f3c-107"><a name="RunnableSection"></a>실행 가능한 워크플로 인스턴스 검색 및 활성화</span><span class="sxs-lookup"><span data-stu-id="11f3c-107"><a name="RunnableSection"></a> Detecting and Activating Runnable Workflow Instances</span></span>  
+ <span data-ttu-id="11f3c-108">SQL 워크플로 인스턴스 저장소에서 워크플로 인스턴스를 고려 *실행 가능한* 인스턴스가 일시 중단 된 상태나 완료 된 상태가 아니며 다음 조건을 충족 하는 경우:</span><span class="sxs-lookup"><span data-stu-id="11f3c-108">The SQL Workflow Instance Store considers a workflow instance *runnable* if the instance is not in the suspended state or the completed state and satisfies the following conditions:</span></span>  
   
--   인스턴스가 잠금 해제되었으며 만료된 보류 중인 타이머가 있습니다.  
+-   <span data-ttu-id="11f3c-109">인스턴스가 잠금 해제되었으며 만료된 보류 중인 타이머가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="11f3c-109">The instance is unlocked and has a pending timer that has expired.</span></span>  
   
--   인스턴스에 만료된 잠금이 있습니다.  
+-   <span data-ttu-id="11f3c-110">인스턴스에 만료된 잠금이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="11f3c-110">The instance has an expired lock on it.</span></span>  
   
--   인스턴스가 잠금 해제되었으며 **실행 중** 상태입니다.  
+-   <span data-ttu-id="11f3c-111">인스턴스가 잠금 해제 되어 하 고 해당 상태는 **Executing**합니다.</span><span class="sxs-lookup"><span data-stu-id="11f3c-111">The instance is unlocked and its status is **Executing**.</span></span>  
   
- SQL 워크플로 인스턴스 저장소에서는 실행 가능한 인스턴스가 발견되면 <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent>를 발생시킵니다.그러면 SqlWorkflowInstanceStore는 저장소에서 <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand>가 한 번 호출될 때까지 모니터링을 중지합니다.  
+ <span data-ttu-id="11f3c-112">SQL 워크플로 인스턴스 저장소에서는 실행 가능한 인스턴스가 발견되면 <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent>를 발생시킵니다.</span><span class="sxs-lookup"><span data-stu-id="11f3c-112">The SQL Workflow Instance Store raises the <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> when it finds a runnable instance.</span></span> <span data-ttu-id="11f3c-113">그러면 SqlWorkflowInstanceStore는 저장소에서 <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand>가 한 번 호출될 때까지 모니터링을 중지합니다.</span><span class="sxs-lookup"><span data-stu-id="11f3c-113">After this, the SqlWorkflowInstanceStore stops monitoring until the <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand> is called once on the store.</span></span>  
   
- <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent>에 대해 구독되고 인스턴스를 로드할 수 있는 워크플로 호스트는 인스턴스 저장소에 대해 <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand>를 실행하여 인스턴스를 메모리로 로드합니다.호스트와 인스턴스의 **WorkflowServiceType** 메타데이터 속성이 동일한 값으로 설정되어 있으면 워크플로 호스트에서 워크플로 인스턴스를 로드할 수 있는 것으로 간주됩니다.  
+ <span data-ttu-id="11f3c-114"><xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent>에 대해 구독되고 인스턴스를 로드할 수 있는 워크플로 호스트는 인스턴스 저장소에 대해 <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand>를 실행하여 인스턴스를 메모리로 로드합니다.</span><span class="sxs-lookup"><span data-stu-id="11f3c-114">A workflow host that has subscribed for the <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> and capable of loading the instance executes the <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand> against the instance store to load the instance into memory.</span></span> <span data-ttu-id="11f3c-115">워크플로 호스트는 호스트와 인스턴스의 메타 데이터 속성이 있어야 하는 경우 워크플로 인스턴스를 로드할 수 있는 것으로 간주 됩니다 **WorkflowServiceType** 동일한 값으로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="11f3c-115">A workflow host is considered capable of loading a workflow instance if the host and the instance have metadata property **WorkflowServiceType** set to the same value.</span></span>  
   
-## 활성화 가능한 워크플로 인스턴스 검색 및 활성화  
- 인스턴스가 실행 가능하고 컴퓨터에서 실행되는 인스턴스를 로드할 수 있는 워크플로 호스트가 없는 경우 워크플로 인스턴스가 *활성화 가능한* 것으로 간주됩니다.실행 가능한 워크플로 인스턴스의 정의는 위의 "실행 가능한 워크플로 인스턴스 검색 및 활성화"를 참조하십시오.  
+## <a name="detecting-and-activating-activatable-workflow-instances"></a><span data-ttu-id="11f3c-116">활성화 가능한 워크플로 인스턴스 검색 및 활성화</span><span class="sxs-lookup"><span data-stu-id="11f3c-116">Detecting and Activating Activatable Workflow Instances</span></span>  
+ <span data-ttu-id="11f3c-117">워크플로 인스턴스가 것으로 간주 *활성화할 수 있는* 인스턴스를 로드할 수 있는 워크플로 호스트가 없는 컴퓨터에서 실행 되는 실행 가능 하 고는 경우.</span><span class="sxs-lookup"><span data-stu-id="11f3c-117">A workflow instance is considered *activatable* if the instance is runnable and there is no workflow host that is capable of loading the instance is running on the computer.</span></span> <span data-ttu-id="11f3c-118">실행 가능한 워크플로 인스턴스의 정의는 위의 "실행 가능한 워크플로 인스턴스 검색 및 활성화"를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="11f3c-118">See Detecting and Activating Runnable Workflow Instances above for the definition of a runnable workflow instance.</span></span>  
   
- SQL 워크플로 인스턴스 저장소에서는 데이터베이스에서 활성화 가능한 워크플로 인스턴스가 발견되면 <xref:System.Activities.DurableInstancing.HasActivatableWorkflowEvent>를 발생시킵니다.그러면 SqlWorkflowInstanceStore는 저장소에서 <xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand>가 한 번 호출될 때까지 모니터링을 중지합니다.  
+ <span data-ttu-id="11f3c-119">SQL 워크플로 인스턴스 저장소에서는 데이터베이스에서 활성화 가능한 워크플로 인스턴스가 발견되면 <xref:System.Activities.DurableInstancing.HasActivatableWorkflowEvent>를 발생시킵니다.</span><span class="sxs-lookup"><span data-stu-id="11f3c-119">The SQL Workflow Instance Store raises the <xref:System.Activities.DurableInstancing.HasActivatableWorkflowEvent> when it finds an activatable workflow instance in the database.</span></span> <span data-ttu-id="11f3c-120">그러면 SqlWorkflowInstanceStore는 저장소에서 <xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand>가 한 번 호출될 때까지 모니터링을 중지합니다.</span><span class="sxs-lookup"><span data-stu-id="11f3c-120">After this, the SqlWorkflowInstanceStore stops monitoring until the <xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand> is called once on the store.</span></span>  
   
- <xref:System.Activities.DurableInstancing.HasActivatableWorkflowEvent>에 대해 구독되는 일반 호스트는 이벤트를 수신할 경우 인스턴스 저장소에 대해 <xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand>를 실행하여 워크플로 호스트를 만드는 데 필요한 활성화 매개 변수를 가져옵니다.일반 호스트는 이러한 활성화 매개 변수를 사용하여 워크플로 호스트를 만들고, 워크플로 호스트가 실행 가능한 서비스 인스턴스를 로드 및 실행합니다.  
+ <span data-ttu-id="11f3c-121"><xref:System.Activities.DurableInstancing.HasActivatableWorkflowEvent>에 대해 구독되는 일반 호스트는 이벤트를 수신할 경우 인스턴스 저장소에 대해 <xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand>를 실행하여 워크플로 호스트를 만드는 데 필요한 활성화 매개 변수를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="11f3c-121">When a generic host that has subscribed for the <xref:System.Activities.DurableInstancing.HasActivatableWorkflowEvent> receives the event, it executes the <xref:System.Activities.DurableInstancing.QueryActivatableWorkflowsCommand> against the instance store to obtain activation parameters required to create a workflow host.</span></span> <span data-ttu-id="11f3c-122">일반 호스트는 이러한 활성화 매개 변수를 사용하여 워크플로 호스트를 만들고, 워크플로 호스트가 실행 가능한 서비스 인스턴스를 로드 및 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="11f3c-122">The generic host uses these activation parameters to create a workflow host, which in turn loads and runs the runnable service instance.</span></span>  
   
-## 일반 호스트  
- 일반 호스트는 일반 호스트에 대한 **WorkflowServiceType** 메타데이터 속성 값이 **WorkflowServiceType.Any**로 설정되어 모든 워크플로 유형을 처리할 수 있는 호스트입니다.일반 호스트에는 **ActivationType**이라는 XName 매개 변수가 있습니다.  
+## <a name="generic-hosts"></a><span data-ttu-id="11f3c-123">일반 호스트</span><span class="sxs-lookup"><span data-stu-id="11f3c-123">Generic Hosts</span></span>  
+ <span data-ttu-id="11f3c-124">일반 호스트는 메타 데이터 속성 값을 사용 하는 호스트 **WorkflowServiceType** 로 설정 되어 일반 호스트에 대 한 **WorkflowServiceType.Any** 를 모든 워크플로 유형을 처리할 수 있는 합니다.</span><span class="sxs-lookup"><span data-stu-id="11f3c-124">A generic host is a host with the value of the metadata property **WorkflowServiceType** for generic hosts is set to **WorkflowServiceType.Any** to indicate that it can handle any workflow type.</span></span> <span data-ttu-id="11f3c-125">일반 호스트에 이라는 XName 매개 **ActivationType**합니다.</span><span class="sxs-lookup"><span data-stu-id="11f3c-125">A generic host has an XName parameter named **ActivationType**.</span></span>  
   
- 현재 SQL 워크플로 인스턴스 저장소는 ActivationType 매개 변수 값이 **WAS**로 설정된 일반 호스트를 지원합니다.ActivationType이 WAS로 설정되어 있지 않으면 SQL 워크플로 인스턴스 저장소는 <xref:System.Runtime.DurableInstancing.InstancePersistenceException>을 throw합니다.[!INCLUDE[dublin](../../../includes/dublin-md.md)]과 함께 제공되는 워크플로 관리 서비스는 활성화 유형이 **WAS**로 설정된 일반 호스트입니다.  
+ <span data-ttu-id="11f3c-126">SQL 워크플로 인스턴스 저장소는 ActivationType 매개 변수 설정의 값과 일반 호스트를 지원 하는 현재 **WAS**합니다.</span><span class="sxs-lookup"><span data-stu-id="11f3c-126">Currently, the SQL Workflow Instance Store supports generic hosts with value of the ActivationType parameter set to **WAS**.</span></span> <span data-ttu-id="11f3c-127">ActivationType이 WAS로 설정되어 있지 않으면 SQL 워크플로 인스턴스 저장소는 <xref:System.Runtime.DurableInstancing.InstancePersistenceException>을 throw합니다.</span><span class="sxs-lookup"><span data-stu-id="11f3c-127">If the ActivationType is not set to WAS, the SQL Workflow Instance Store throws an <xref:System.Runtime.DurableInstancing.InstancePersistenceException>.</span></span> <span data-ttu-id="11f3c-128">워크플로 관리 서비스와 함께 제공 되는 [!INCLUDE[dublin](../../../includes/dublin-md.md)] 정품 인증 유형으로 설정 된 일반 호스트는 **WAS**합니다.</span><span class="sxs-lookup"><span data-stu-id="11f3c-128">The Workflow Management Service that ships with the [!INCLUDE[dublin](../../../includes/dublin-md.md)] is a generic host that has the activation type set to **WAS**.</span></span>  
   
- WAS 활성화를 위해 일반 호스트에는 새 호스트를 활성화할 수 있는 끝점 주소를 파생하는 활성화 매개 변수 집합이 필요합니다.WAS 활성화를 위한 활성화 매개 변수는 사이트 이름, 사이트에 상대적인 응용 프로그램 경로 및 응용 프로그램에 상대적인 서비스 경로입니다.SQL 워크플로 인스턴스 저장소는 <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>를 실행하는 동안 이러한 활성화 매개 변수를 저장합니다.  
+ <span data-ttu-id="11f3c-129">WAS 활성화를 위해 일반 호스트에는 새 호스트를 활성화할 수 있는 끝점 주소를 파생하는 활성화 매개 변수 집합이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="11f3c-129">For WAS activation, a generic host requires a set of activation parameters to derive the endpoint address at which new hosts can be activated.</span></span> <span data-ttu-id="11f3c-130">WAS 활성화를 위한 활성화 매개 변수는 사이트 이름, 사이트에 상대적인 응용 프로그램 경로 및 응용 프로그램에 상대적인 서비스 경로입니다.</span><span class="sxs-lookup"><span data-stu-id="11f3c-130">The activation parameters for WAS activation are name of the site, path to the application relative to the site, and path to the service relative to the application.</span></span> <span data-ttu-id="11f3c-131">SQL 워크플로 인스턴스 저장소는 <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>를 실행하는 동안 이러한 활성화 매개 변수를 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="11f3c-131">The SQL Workflow Instance Store stores these activation parameters during the execution of the <xref:System.Activities.DurableInstancing.SaveWorkflowCommand>.</span></span>  
   
-## 실행 가능한 인스턴스 검색 기간  
- SQL 워크플로 인스턴스 저장소의 **Runnable Instances Detection Period** 속성은 SQL 워크플로 인스턴스 저장소에서 이전 검색 주기 이후에 검색 태스크를 실행하여 지속성 데이터베이스에서 실행 가능한 워크플로 인스턴스 또는 활성화 가능한 워크플로 인스턴스를 검색하는 기간을 지정합니다.이 속성에 대한 자세한 내용은 [실행 가능한 인스턴스 검색 기간](../../../docs/framework/windows-workflow-foundation//runnable-instances-detection-period.md)을 참조하십시오.
+## <a name="runnable-instances-detection-period"></a><span data-ttu-id="11f3c-132">실행 가능한 인스턴스 검색 기간</span><span class="sxs-lookup"><span data-stu-id="11f3c-132">Runnable Instances Detection Period</span></span>  
+ <span data-ttu-id="11f3c-133">**Runnable Instances Detection Period** SQL 워크플로 인스턴스 저장소에서 검색 작업 실행 또는 활성화 가능한 워크플로를 실행 하는 기간을 지정 하는 SQL 워크플로 인스턴스 저장소의 속성 이전 검색 주기 후 지 속성 데이터베이스에서 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="11f3c-133">The **Runnable Instances Detection Period** property of the SQL Workflow Instance Store specifies the time period after which the SQL Workflow Instance Store runs a detection task to detect any runnable or activatable workflow instances in the persistence database after the previous detection cycle.</span></span> <span data-ttu-id="11f3c-134">참조 [Runnable Instances Detection Period](../../../docs/framework/windows-workflow-foundation/runnable-instances-detection-period.md) 이 속성에 대 한 자세한 내용은 합니다.</span><span class="sxs-lookup"><span data-stu-id="11f3c-134">See [Runnable Instances Detection Period](../../../docs/framework/windows-workflow-foundation/runnable-instances-detection-period.md) for more details on this property.</span></span>

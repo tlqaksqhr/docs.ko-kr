@@ -1,162 +1,165 @@
 ---
-title: "ServiceDescription 및 WSDL 참조 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ServiceDescription 및 WSDL 참조"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
-caps.latest.revision: 15
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 26babd473ca78d6b55ada6c0505ec2f94214448b
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# ServiceDescription 및 WSDL 참조
-이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 WSDL\(웹 서비스 기술 언어\) 문서를 <xref:System.ServiceModel.Description.ServiceDescription> 인스턴스에 매핑하는 방법을 설명합니다.  
+# <a name="servicedescription-and-wsdl-reference"></a><span data-ttu-id="08866-102">ServiceDescription 및 WSDL 참조</span><span class="sxs-lookup"><span data-stu-id="08866-102">ServiceDescription and WSDL Reference</span></span>
+<span data-ttu-id="08866-103">이 항목에서는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 WSDL(웹 서비스 기술 언어) 문서를 <xref:System.ServiceModel.Description.ServiceDescription> 인스턴스에 매핑하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="08866-103">This topic describes how [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] maps Web Services Description Language (WSDL) documents to and from <xref:System.ServiceModel.Description.ServiceDescription> instances.</span></span>  
   
-## ServiceDescription에서 WSDL 1.1에 매핑하는 방법  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 사용하여 서비스에 대한 <xref:System.ServiceModel.Description.ServiceDescription> 인스턴스에서 WSDL 문서를 내보낼 수 있습니다.  WSDL 문서는 메타데이터 끝점을 게시할 때 서비스에 대해 자동으로 생성됩니다.  
+## <a name="how-servicedescription-maps-to-wsdl-11"></a><span data-ttu-id="08866-104">ServiceDescription에서 WSDL 1.1에 매핑하는 방법</span><span class="sxs-lookup"><span data-stu-id="08866-104">How ServiceDescription Maps to WSDL 1.1</span></span>  
+ <span data-ttu-id="08866-105">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]를 사용하여 서비스에 대한 <xref:System.ServiceModel.Description.ServiceDescription> 인스턴스에서 WSDL 문서를 내보낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="08866-105">You can use [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] to export WSDL documents from a <xref:System.ServiceModel.Description.ServiceDescription> instance for your service.</span></span> <span data-ttu-id="08866-106">WSDL 문서는 메타데이터 끝점을 게시할 때 서비스에 대해 자동으로 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="08866-106">WSDL documents are automatically generated for your service when you publish metadata endpoints.</span></span>  
   
- `WsdlImporter` 형식을 사용하여 WSDL 문서에서 <xref:System.ServiceModel.Description.ServiceEndpoint>, <xref:System.ServiceModel.Description.ContractDescription> 및 <xref:System.ServiceModel.Channels.Binding> 인스턴스를 가져올 수도 있습니다.  
+ <span data-ttu-id="08866-107"><xref:System.ServiceModel.Description.ServiceEndpoint> 형식을 사용하여 WSDL 문서에서 <xref:System.ServiceModel.Description.ContractDescription>, <xref:System.ServiceModel.Channels.Binding> 및 `WsdlImporter` 인스턴스를 가져올 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="08866-107">You can also import <xref:System.ServiceModel.Description.ServiceEndpoint> instances, <xref:System.ServiceModel.Description.ContractDescription> instances, and <xref:System.ServiceModel.Channels.Binding> instances from WSDL documents using the `WsdlImporter` type.</span></span>  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 내보낸 WSDL 문서는 외부 XML 스키마 문서에서 사용된 XML 스키마 정의를 가져옵니다.  서비스에서 데이터 형식에 사용되는 대상 네임스페이스마다 별도의 XML 스키마 문서를 내보냅니다.  마찬가지로 서비스 계약에 사용되는 대상 네임스페이스마다 별도의 WSDL 문서를 내보냅니다.  
+ <span data-ttu-id="08866-108">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 내보낸 WSDL 문서는 외부 XML 스키마 문서에서 사용된 XML 스키마 정의를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="08866-108">The WSDL documents, exported by [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], import any XML Schema definitions used from external XML Schema documents.</span></span> <span data-ttu-id="08866-109">서비스에서 데이터 형식에 사용되는 대상 네임스페이스마다 별도의 XML 스키마 문서를 내보냅니다.</span><span class="sxs-lookup"><span data-stu-id="08866-109">A separate XML Schema document is exported for each target namespace the data types use in the service.</span></span> <span data-ttu-id="08866-110">마찬가지로 서비스 계약에 사용되는 대상 네임스페이스마다 별도의 WSDL 문서를 내보냅니다.</span><span class="sxs-lookup"><span data-stu-id="08866-110">Likewise, a separate WSDL document is exported for each target namespace the service contracts use.</span></span>  
   
-### ServiceDescription  
- <xref:System.ServiceModel.Description.ServiceDescription> 인스턴스는 `wsdl:service` 요소에 매핑됩니다.  <xref:System.ServiceModel.Description.ServiceDescription> 인스턴스에는 각각 개별 `wsdl:port` 요소에 매핑되는 <xref:System.ServiceModel.Description.ServiceEndpoint> 인스턴스의 컬렉션이 포함되어 있습니다.  
+### <a name="servicedescription"></a><span data-ttu-id="08866-111">ServiceDescription</span><span class="sxs-lookup"><span data-stu-id="08866-111">ServiceDescription</span></span>  
+ <span data-ttu-id="08866-112"><xref:System.ServiceModel.Description.ServiceDescription> 인스턴스는 `wsdl:service` 요소에 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="08866-112">A <xref:System.ServiceModel.Description.ServiceDescription> instance maps to a `wsdl:service` element.</span></span> <span data-ttu-id="08866-113"><xref:System.ServiceModel.Description.ServiceDescription> 인스턴스에는 각각 개별 <xref:System.ServiceModel.Description.ServiceEndpoint> 요소에 매핑되는 `wsdl:port` 인스턴스의 컬렉션이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="08866-113">A <xref:System.ServiceModel.Description.ServiceDescription> instance contains a collection of <xref:System.ServiceModel.Description.ServiceEndpoint> instances that each map to individual `wsdl:port` elements.</span></span>  
   
-|속성|WSDL 매핑|  
-|--------|-------------|  
-|`Name`|서비스에 대한 `wsdl:service`\/@name 값입니다.|  
-|`Namespace`|서비스의 `wsdl:service` 정의에 대한 targetNamespace입니다.|  
-|`Endpoints`|서비스에 대한 `wsdl:port` 정의입니다.|  
+|<span data-ttu-id="08866-114">속성</span><span class="sxs-lookup"><span data-stu-id="08866-114">Properties</span></span>|<span data-ttu-id="08866-115">WSDL 매핑</span><span class="sxs-lookup"><span data-stu-id="08866-115">WSDL mapping</span></span>|  
+|----------------|------------------|  
+|`Name`|<span data-ttu-id="08866-116">`wsdl:service` /@name 서비스에 대 한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-116">The `wsdl:service`/@name value for the service.</span></span>|  
+|`Namespace`|<span data-ttu-id="08866-117">서비스의 `wsdl:service` 정의에 대한 targetNamespace입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-117">The targetNamespace for the `wsdl:service` definition for the service.</span></span>|  
+|`Endpoints`|<span data-ttu-id="08866-118">서비스에 대한 `wsdl:port` 정의입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-118">The `wsdl:port` definitions for the service.</span></span>|  
   
-### ServiceEndpoint  
- <xref:System.ServiceModel.Description.ServiceEndpoint> 인스턴스는 `wsdl:port` 요소에 매핑됩니다.  <xref:System.ServiceModel.Description.ServiceEndpoint> 인스턴스에는 주소, 바인딩 및 계약이 포함되어 있습니다.  
+### <a name="serviceendpoint"></a><span data-ttu-id="08866-119">ServiceEndpoint</span><span class="sxs-lookup"><span data-stu-id="08866-119">ServiceEndpoint</span></span>  
+ <span data-ttu-id="08866-120"><xref:System.ServiceModel.Description.ServiceEndpoint> 인스턴스는 `wsdl:port` 요소에 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="08866-120">A <xref:System.ServiceModel.Description.ServiceEndpoint> instance maps to a `wsdl:port` element.</span></span> <span data-ttu-id="08866-121"><xref:System.ServiceModel.Description.ServiceEndpoint> 인스턴스에는 주소, 바인딩 및 계약이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="08866-121">A <xref:System.ServiceModel.Description.ServiceEndpoint> instance contains an address, a binding, and a contract.</span></span>  
   
- <xref:System.ServiceModel.Description.IWsdlExportExtension> 인터페이스를 구현하는 끝점 동작은 연결되는 끝점에 대한 `wsdl:port` 요소를 수정할 수 있습니다.  
+ <span data-ttu-id="08866-122"><xref:System.ServiceModel.Description.IWsdlExportExtension> 인터페이스를 구현하는 끝점 동작은 연결되는 끝점에 대한 `wsdl:port` 요소를 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="08866-122">Endpoint behaviors that implement the <xref:System.ServiceModel.Description.IWsdlExportExtension> interface can modify the `wsdl:port` element for the endpoint they are attached to.</span></span>  
   
-|속성|WSDL 매핑|  
-|--------|-------------|  
-|`Name`|끝점에 대한 `wsdl:port`\/@name 값 및 끝점 바인딩에 대한 `wsdl:binding`\/@name 값입니다.|  
-|`Address`|끝점의 `wsdl:port` 정의에 대한 주소입니다.<br /><br /> 끝점에 대한 전송에 따라 주소 형식이 결정됩니다.  예를 들어, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 지원 전송의 경우 SOAP 주소 또는 끝점 참조일 수 있습니다.|  
-|`Binding`|끝점에 대한 `wsdl:binding` 정의입니다.<br /><br /> `wsdl:binding` 정의와 달리 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 바인딩은 어떠한 계약에도 연결되지 않습니다.|  
-|`Contract`|끝점에 대한 `wsdl:portType` 정의입니다.|  
-|`Behaviors`|<xref:System.ServiceModel.Description.IWsdlExportExtension> 인터페이스를 구현하는 끝점 동작은 끝점에 대한 `wsdl:port`를 수정할 수 있습니다.|  
+|<span data-ttu-id="08866-123">속성</span><span class="sxs-lookup"><span data-stu-id="08866-123">Properties</span></span>|<span data-ttu-id="08866-124">WSDL 매핑</span><span class="sxs-lookup"><span data-stu-id="08866-124">WSDL mapping</span></span>|  
+|----------------|------------------|  
+|`Name`|<span data-ttu-id="08866-125">`wsdl:port` /@name 끝점에 대 한 값 및 `wsdl:binding` /@name 끝점 바인딩에 대 한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-125">The `wsdl:port`/@name value for the endpoint and the `wsdl:binding`/@name value for the endpoint binding.</span></span>|  
+|`Address`|<span data-ttu-id="08866-126">끝점의 `wsdl:port` 정의에 대한 주소입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-126">The address for the `wsdl:port` definition for the endpoint.</span></span><br /><br /> <span data-ttu-id="08866-127">끝점에 대한 전송에 따라 주소 형식이 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="08866-127">The transport for the endpoint determines the format of the address.</span></span> <span data-ttu-id="08866-128">예를 들어, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 지원 전송의 경우 SOAP 주소 또는 끝점 참조일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="08866-128">For example, for [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-supported transports it could be a SOAP address or an endpoint reference.</span></span>|  
+|`Binding`|<span data-ttu-id="08866-129">끝점에 대한 `wsdl:binding` 정의입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-129">The `wsdl:binding` definition for the endpoint.</span></span><br /><br /> <span data-ttu-id="08866-130">`wsdl:binding` 정의와 달리 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 바인딩은 어떠한 계약에도 연결되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="08866-130">Unlike `wsdl:binding` definitions, bindings in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] are not tied to any one contract.</span></span>|  
+|`Contract`|<span data-ttu-id="08866-131">끝점에 대한 `wsdl:portType` 정의입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-131">The `wsdl:portType` definition for the endpoint.</span></span>|  
+|`Behaviors`|<span data-ttu-id="08866-132"><xref:System.ServiceModel.Description.IWsdlExportExtension> 인터페이스를 구현하는 끝점 동작은 끝점에 대한 `wsdl:port`를 수정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="08866-132">Endpoint behaviors that implement the <xref:System.ServiceModel.Description.IWsdlExportExtension> interface can modify the `wsdl:port` for the endpoint.</span></span>|  
   
-### 바인딩  
- `ServiceEndpoint` 인스턴스에 대한 바인딩 인스턴스가 `wsdl:binding` 정의에 매핑됩니다.  특정 `wsdl:portType` 정의와 연결되어야 하는 `wsdl:binding` 정의와 달리 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 바인딩은 계약에 독립적입니다.  
+### <a name="bindings"></a><span data-ttu-id="08866-133">바인딩</span><span class="sxs-lookup"><span data-stu-id="08866-133">Bindings</span></span>  
+ <span data-ttu-id="08866-134">`ServiceEndpoint` 인스턴스에 대한 바인딩 인스턴스가 `wsdl:binding` 정의에 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="08866-134">The binding instance for a `ServiceEndpoint` instance maps to a `wsdl:binding` definition.</span></span> <span data-ttu-id="08866-135">특정 `wsdl:binding` 정의와 연결되어야 하는 `wsdl:portType` 정의와 달리 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 바인딩은 계약에 독립적입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-135">Unlike `wsdl:binding` definitions, which must be associated with a specific `wsdl:portType` definition, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] bindings are independent of any contract.</span></span>  
   
- 바인딩은 바인딩 요소의 컬렉션으로 구성됩니다.  각 요소는 끝점이 클라이언트와 통신하는 방법의 일부를 설명합니다.  또한 바인딩에는 끝점에 대한 <xref:System.ServiceModel.EnvelopeVersion> 및 <xref:System.ServiceModel.Channels.AddressingVersion>을 나타내는 <xref:System.ServiceModel.Channels.MessageVersion>이 있습니다.  
+ <span data-ttu-id="08866-136">바인딩은 바인딩 요소의 컬렉션으로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="08866-136">A binding is made up of a collection of binding elements.</span></span> <span data-ttu-id="08866-137">각 요소는 끝점이 클라이언트와 통신하는 방법의 일부를 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="08866-137">Each element describes some aspect of how the endpoint communicates with clients.</span></span> <span data-ttu-id="08866-138">또한 바인딩에는 끝점에 대한 <xref:System.ServiceModel.Channels.MessageVersion> 및 <xref:System.ServiceModel.EnvelopeVersion>을 나타내는 <xref:System.ServiceModel.Channels.AddressingVersion>이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="08866-138">Additionally, a binding has a <xref:System.ServiceModel.Channels.MessageVersion> that indicates the <xref:System.ServiceModel.EnvelopeVersion> and <xref:System.ServiceModel.Channels.AddressingVersion> for the endpoint.</span></span>  
   
-|속성|WSDL 매핑|  
-|--------|-------------|  
-|`Name`|끝점에 대한 기본 이름에 사용되며, 계약 이름을 밑줄로 구분하여 연결한 바인딩 이름입니다.|  
-|`Namespace`|`wsdl:binding` 정의에 대한 `targetNamespace`입니다.<br /><br /> 가져오기에서는 정책이 WSDL 포트에 연결되어 있으면 가져온 바인딩 네임스페이스가 `wsdl:port` 정의에 대한 `targetNamespace`에 매핑됩니다.|  
-|`CreateBindingElements`\(\) 메서드에 의해 반환되는 `BindingElementCollection`|`wsdl:binding` 정의에 대한 다양한 도메인별 확장\(일반적으로 정책 어설션\)입니다.|  
-|`MessageVersion`|끝점에 대한 `EnvelopeVersion` 및 `AddressingVersion`입니다.<br /><br /> `MessageVersion.None`이 지정된 경우 WSDL 바인딩은 SOAP 바인딩을 포함하지 않고 WSDL 포트는 WS\-Addressing 콘텐츠를 포함하지 않습니다.  이 설정은 일반적으로 POX\(Plain Old XML\) 끝점에 사용됩니다.|  
+|<span data-ttu-id="08866-139">속성</span><span class="sxs-lookup"><span data-stu-id="08866-139">Properties</span></span>|<span data-ttu-id="08866-140">WSDL 매핑</span><span class="sxs-lookup"><span data-stu-id="08866-140">WSDL mapping</span></span>|  
+|----------------|------------------|  
+|`Name`|<span data-ttu-id="08866-141">끝점에 대한 기본 이름에 사용되며, 계약 이름을 밑줄로 구분하여 연결한 바인딩 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-141">Used in the default name of an endpoint, which is the binding name with the contract name appended separated by an underscore.</span></span>|  
+|`Namespace`|<span data-ttu-id="08866-142">`targetNamespace` 정의에 대한 `wsdl:binding`입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-142">The `targetNamespace` for the `wsdl:binding` definition.</span></span><br /><br /> <span data-ttu-id="08866-143">가져오기에서는 정책이 WSDL 포트에 연결되어 있으면 가져온 바인딩 네임스페이스가 `targetNamespace` 정의에 대한 `wsdl:port`에 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="08866-143">On import, if a policy is attached to the WSDL port, the imported binding namespace maps to the `targetNamespace` for the `wsdl:port` definition.</span></span>|  
+|<span data-ttu-id="08866-144">`BindingElementCollection`() 메서드에 의해 반환되는 `CreateBindingElements`</span><span class="sxs-lookup"><span data-stu-id="08866-144">`BindingElementCollection`, as returned by the `CreateBindingElements`() method</span></span>|<span data-ttu-id="08866-145">`wsdl:binding` 정의에 대한 다양한 도메인별 확장(일반적으로 정책 어설션)입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-145">Various domain-specific extensions to the `wsdl:binding` definition, typically policy assertions.</span></span>|  
+|`MessageVersion`|<span data-ttu-id="08866-146">끝점에 대한 `EnvelopeVersion` 및 `AddressingVersion`입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-146">The `EnvelopeVersion` and `AddressingVersion` for the endpoint.</span></span><br /><br /> <span data-ttu-id="08866-147">`MessageVersion.None`이 지정된 경우 WSDL 바인딩은 SOAP 바인딩을 포함하지 않고 WSDL 포트는 WS-Addressing 콘텐츠를 포함하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="08866-147">When `MessageVersion.None` is specified, the WSDL binding does not contain a SOAP binding and the WSDL port does not contain WS-Addressing content.</span></span> <span data-ttu-id="08866-148">이 설정은 일반적으로 POX(Plain Old XML) 끝점에 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="08866-148">This setting is typically used for plain old XML (POX) endpoints.</span></span>|  
   
-#### BindingElements  
- 끝점 바인딩에 대한 바인딩 요소는 정책 어설션과 같은 `wsdl:binding`의 다양한 WSDL 확장에 매핑됩니다.  
+#### <a name="bindingelements"></a><span data-ttu-id="08866-149">BindingElements</span><span class="sxs-lookup"><span data-stu-id="08866-149">BindingElements</span></span>  
+ <span data-ttu-id="08866-150">끝점 바인딩에 대한 바인딩 요소는 정책 어설션과 같은 `wsdl:binding`의 다양한 WSDL 확장에 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="08866-150">The binding elements for an endpoint binding map to various WSDL extensions in the `wsdl:binding`, such as policy assertions.</span></span>  
   
- 바인딩에 대한 <xref:System.ServiceModel.Channels.TransportBindingElement>에 따라 SOAP 바인딩에 대한 전송 URI\(Uniform Resource Identifier\)가 결정됩니다.  
+ <span data-ttu-id="08866-151">바인딩에 대한 <xref:System.ServiceModel.Channels.TransportBindingElement>에 따라 SOAP 바인딩에 대한 전송 URI(Uniform Resource Identifier)가 결정됩니다.</span><span class="sxs-lookup"><span data-stu-id="08866-151">The <xref:System.ServiceModel.Channels.TransportBindingElement> for the binding determines the transport Uniform Resource Identifier (URI) for a SOAP binding.</span></span>  
   
-#### AddressingVersion  
- 바인딩의 `AddressingVersion`은 `wsd:port`에 사용되는 주소 지정 버전에 매핑됩니다.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 SOAP 1.1 및 SOAP 1.2 주소와 WS\-Addressing 08\/2004 및 WS\-Addressing 1.0 끝점 참조를 지원합니다.  
+#### <a name="addressingversion"></a><span data-ttu-id="08866-152">AddressingVersion</span><span class="sxs-lookup"><span data-stu-id="08866-152">AddressingVersion</span></span>  
+ <span data-ttu-id="08866-153">바인딩의 `AddressingVersion`은 `wsd:port`에 사용되는 주소 지정 버전에 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="08866-153">The `AddressingVersion` on a binding maps to the version of addressing used in the `wsd:port`.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="08866-154">는 SOAP 1.1 및 SOAP 1.2 주소와 WS-Addressing 08/2004 및 WS-Addressing 1.0 끝점 참조를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="08866-154"> supports SOAP 1.1 and SOAP 1.2 addresses, and WS-Addressing 08/2004 and WS-Addressing 1.0 endpoint references.</span></span>  
   
-#### EnvelopeVersion  
- 바인딩의 `EnvelopeVersion`은 `wsdl:binding`에 사용되는 SOAP 버전에 매핑됩니다.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 SOAP 1.1 및 SOAP 1.2 바인딩을 지원합니다.  
+#### <a name="envelopeversion"></a><span data-ttu-id="08866-155">EnvelopeVersion</span><span class="sxs-lookup"><span data-stu-id="08866-155">EnvelopeVersion</span></span>  
+ <span data-ttu-id="08866-156">바인딩의 `EnvelopeVersion`은 `wsdl:binding`에 사용되는 SOAP 버전에 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="08866-156">The `EnvelopeVersion` on a binding maps to the version of SOAP used in the `wsdl:binding`.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="08866-157">는 SOAP 1.1 및 SOAP 1.2 바인딩을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="08866-157"> supports SOAP 1.1 and SOAP 1.2 bindings.</span></span>  
   
-### 계약  
- `ServiceEndpoint` 인스턴스에 대한 <xref:System.ServiceModel.Description.ContractDescription> 인스턴스가 `wsdl:portType`에 매핑됩니다.  `ContractDescription` 인스턴스는 지정된 계약에 대한 모든 작업을 설명합니다.  
+### <a name="contracts"></a><span data-ttu-id="08866-158">계약</span><span class="sxs-lookup"><span data-stu-id="08866-158">Contracts</span></span>  
+ <span data-ttu-id="08866-159"><xref:System.ServiceModel.Description.ContractDescription> 인스턴스에 대한 `ServiceEndpoint` 인스턴스가 `wsdl:portType`에 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="08866-159">The <xref:System.ServiceModel.Description.ContractDescription> instance for a `ServiceEndpoint` instance maps to a `wsdl:portType`.</span></span> <span data-ttu-id="08866-160">`ContractDescription` 인스턴스는 지정된 계약에 대한 모든 작업을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="08866-160">A `ContractDescription` instance describes all of the operations for a given contract.</span></span>  
   
-|속성|WSDL 매핑|  
-|--------|-------------|  
-|`Name`|계약에 대한 `wsdl:portType`\/@name 값입니다.|  
-|`Namespace`|`wsdl:portType` 정의에 대한 targetNamespace입니다.|  
-|`SessionMode`|계약에 대한 `wsdl:portType`\/@msc:usingSession 값입니다.  이 특성은 WSDL 1.1에 대한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 확장입니다.|  
-|`Operations`|계약에 대한 `wsdl:operation` 정의입니다.|  
+|<span data-ttu-id="08866-161">속성</span><span class="sxs-lookup"><span data-stu-id="08866-161">Properties</span></span>|<span data-ttu-id="08866-162">WSDL 매핑</span><span class="sxs-lookup"><span data-stu-id="08866-162">WSDL mapping</span></span>|  
+|----------------|------------------|  
+|`Name`|<span data-ttu-id="08866-163">`wsdl:portType` /@name 계약에 대 한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-163">The `wsdl:portType`/@name value for the contract.</span></span>|  
+|`Namespace`|<span data-ttu-id="08866-164">`wsdl:portType` 정의에 대한 targetNamespace입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-164">The targetNamespace for the `wsdl:portType` definition.</span></span>|  
+|`SessionMode`|<span data-ttu-id="08866-165">`wsdl:portType` /@msc:usingSession 계약에 대 한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-165">The `wsdl:portType`/@msc:usingSession value for the contract.</span></span> <span data-ttu-id="08866-166">이 특성은 WSDL 1.1에 대한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 확장입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-166">This attribute is a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] extension for WSDL 1.1.</span></span>|  
+|`Operations`|<span data-ttu-id="08866-167">계약에 대한 `wsdl:operation` 정의입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-167">The `wsdl:operation` definitions for the contract.</span></span>|  
   
-### 작업  
- <xref:System.ServiceModel.Description.OperationDescription> 인스턴스는 `wsdl:portType`\/`wsdl:operation`에 매핑됩니다.  `OperationDescription`에는 작업에 대한 메시지를 설명하는 `MessageDescription` 인스턴스 컬렉션이 포함되어 있습니다.  
+### <a name="operations"></a><span data-ttu-id="08866-168">작업</span><span class="sxs-lookup"><span data-stu-id="08866-168">Operations</span></span>  
+ <span data-ttu-id="08866-169"><xref:System.ServiceModel.Description.OperationDescription> 인스턴스에 매핑되는 `wsdl:portType` / `wsdl:operation`합니다.</span><span class="sxs-lookup"><span data-stu-id="08866-169">An <xref:System.ServiceModel.Description.OperationDescription> instance maps to a `wsdl:portType`/`wsdl:operation`.</span></span> <span data-ttu-id="08866-170">`OperationDescription`에는 작업에 대한 메시지를 설명하는 `MessageDescription` 인스턴스 컬렉션이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="08866-170">An `OperationDescription` contains a collection of `MessageDescription` instances that describe the messages for the operation.</span></span>  
   
- `OperationDescription`이 WSDL 문서에 매핑되는 방법에 주로 관여하는 작업 동작은 `DataContractSerializerOperationBehavior` 및 `XmlSerializerOperationBehavior`입니다.  
+ <span data-ttu-id="08866-171">`OperationDescription`이 WSDL 문서에 매핑되는 방법에 주로 관여하는 작업 동작은 `DataContractSerializerOperationBehavior` 및 `XmlSerializerOperationBehavior`입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-171">Two operation behaviors participate heavily in how an `OperationDescription` is mapped to a WSDL document: `DataContractSerializerOperationBehavior` and `XmlSerializerOperationBehavior`.</span></span>  
   
-|속성|WSDL 매핑|  
-|--------|-------------|  
-|`Name`|작업에 대한 `wsdl:portType`\/`wsdl:operation`\/@name 값입니다.|  
-|`ProtectionLevel`|이 작업의 `wsdl:binding/wsdl:operation` 메시지에 연결된 보안 정책의 보호 어설션입니다.|  
-|`IsInitiating`|작업에 대한 `wsdl:portType`\/`wsdl:operation`\/@msc:isInitiating 값입니다.  이 특성은 WSDL 1.1에 대한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 확장입니다.|  
-|`IsTerminating`|작업에 대한 `wsdl:portType`\/`wsdl:operation`\/@msc:isTerminating 값입니다.  이 특성은 WSDL 1.1에 대한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 확장입니다.|  
-|`Messages`|작업에 대한 `wsdl:portType`\/`wsdl:operation`\/`wsdl:input` 및 `wsdl:portType`\/`wsdl:operation`\/`wsdl:output` 메시지입니다.|  
-|`Faults`|작업에 대한 `wsdl:portType`\/`wsdl:operation`\/`wsdl:fault` 정의입니다.|  
-|`Behaviors`|`DataContractSerializerOperationBehavior` 및 `XmlSerializerOperationBehavior`는 작업 바인딩과 작업 메시지를 처리합니다.|  
+|<span data-ttu-id="08866-172">속성</span><span class="sxs-lookup"><span data-stu-id="08866-172">Properties</span></span>|<span data-ttu-id="08866-173">WSDL 매핑</span><span class="sxs-lookup"><span data-stu-id="08866-173">WSDL mapping</span></span>|  
+|----------------|------------------|  
+|`Name`|<span data-ttu-id="08866-174">`wsdl:portType` / `wsdl:operation` /@name 작업에 대 한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-174">The `wsdl:portType`/`wsdl:operation`/@name value for the operation.</span></span>|  
+|`ProtectionLevel`|<span data-ttu-id="08866-175">이 작업의 `wsdl:binding/wsdl:operation` 메시지에 연결된 보안 정책의 보호 어설션입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-175">Protection assertions in security policy attached to the `wsdl:binding/wsdl:operation` messages for this operation.</span></span>|  
+|`IsInitiating`|<span data-ttu-id="08866-176">`wsdl:portType` / `wsdl:operation` /@msc:isInitiating 작업에 대 한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-176">The `wsdl:portType`/`wsdl:operation`/@msc:isInitiating value for the operation.</span></span> <span data-ttu-id="08866-177">이 특성은 WSDL 1.1에 대한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 확장입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-177">This attribute is a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] extension for WSDL 1.1.</span></span>|  
+|`IsTerminating`|<span data-ttu-id="08866-178">`wsdl:portType` / `wsdl:operation` /@msc:isTerminating 작업에 대 한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-178">The `wsdl:portType`/`wsdl:operation`/@msc:isTerminating value for the operation.</span></span> <span data-ttu-id="08866-179">이 특성은 WSDL 1.1에 대한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 확장입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-179">This attribute is a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] extension for WSDL 1.1.</span></span>|  
+|`Messages`|<span data-ttu-id="08866-180">`wsdl:portType` / `wsdl:operation` / `wsdl:input` 및 `wsdl:portType` / `wsdl:operation` / `wsdl:output` 작업에 대 한 메시지입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-180">The `wsdl:portType`/`wsdl:operation`/`wsdl:input` and `wsdl:portType`/`wsdl:operation`/`wsdl:output` messages for the operation.</span></span>|  
+|`Faults`|<span data-ttu-id="08866-181">`wsdl:portType` / `wsdl:operation` / `wsdl:fault` 작업에 대 한 정의입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-181">The `wsdl:portType`/`wsdl:operation`/`wsdl:fault` definitions for the operation.</span></span>|  
+|`Behaviors`|<span data-ttu-id="08866-182">`DataContractSerializerOperationBehavior` 및 `XmlSerializerOperationBehavior`는 작업 바인딩과 작업 메시지를 처리합니다.</span><span class="sxs-lookup"><span data-stu-id="08866-182">The `DataContractSerializerOperationBehavior` and `XmlSerializerOperationBehavior` deal with the operation binding and the operation messages.</span></span>|  
   
-#### DataContractSerializerOperationBehavior  
- 작업에 대한 `DataContractSerializerOperationBehavior`는 해당 작업에 대한 WSDL 메시지 및 바인딩을 내보내는 `IWsdlExportExtension` 구현입니다.  XML 스키마 형식은 `XsdDataContractExporter`를 사용하여 내보냅니다.  또한 `DataContractSerializerOperationBehavior`는 해당 작업에 대한 용도, 스타일, 스키마 내보내기 및 가져오기를 결정합니다.  
+#### <a name="the-datacontractserializeroperationbehavior"></a><span data-ttu-id="08866-183">DataContractSerializerOperationBehavior</span><span class="sxs-lookup"><span data-stu-id="08866-183">The DataContractSerializerOperationBehavior</span></span>  
+ <span data-ttu-id="08866-184">작업에 대한 `DataContractSerializerOperationBehavior`는 해당 작업에 대한 WSDL 메시지 및 바인딩을 내보내는 `IWsdlExportExtension` 구현입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-184">The `DataContractSerializerOperationBehavior` for an operation is an `IWsdlExportExtension` implementation that exports the WSDL messages and binding for that operation.</span></span> <span data-ttu-id="08866-185">XML 스키마 형식은 `XsdDataContractExporter`를 사용하여 내보냅니다.</span><span class="sxs-lookup"><span data-stu-id="08866-185">The XML Schema types are exported using the `XsdDataContractExporter`.</span></span> <span data-ttu-id="08866-186">또한 `DataContractSerializerOperationBehavior`는 해당 작업에 대한 용도, 스타일, 스키마 내보내기 및 가져오기를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="08866-186">The `DataContractSerializerOperationBehavior` also determines the use, style, and schema exporter and importer to use for that operation.</span></span>  
   
-|속성|WSDL 매핑|  
-|--------|-------------|  
-|`DataContractFormatAttribute`|이 특성에 대한 `Style` 속성은 작업의 `wsdl:binding`\/`wsdl:operation`\/`soap:operation`\/@style 값에 매핑됩니다.<br /><br /> `DataContractSerializerOperationBehavior`는 WSDL에서 스키마 형식의 리터럴 사용만 지원합니다.|  
+|<span data-ttu-id="08866-187">속성</span><span class="sxs-lookup"><span data-stu-id="08866-187">Properties</span></span>|<span data-ttu-id="08866-188">WSDL 매핑</span><span class="sxs-lookup"><span data-stu-id="08866-188">WSDL Mapping</span></span>|  
+|----------------|------------------|  
+|`DataContractFormatAttribute`|<span data-ttu-id="08866-189">`Style` 이 특성에 대 한 속성에 매핑됩니다는 `wsdl:binding` / `wsdl:operation` / `soap:operation` /@style 작업에 대 한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-189">The `Style` property for this attribute maps to the `wsdl:binding`/`wsdl:operation`/`soap:operation`/@style value for the operation.</span></span><br /><br /> <span data-ttu-id="08866-190">`DataContractSerializerOperationBehavior`는 WSDL에서 스키마 형식의 리터럴 사용만 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="08866-190">The `DataContractSerializerOperationBehavior` supports only the literal use of the schema types in the WSDL.</span></span>|  
   
-#### XmlSerializerOperationBehavior  
- 작업에 대한 `XmlSerializerOperationBehavior`는 해당 작업에 대한 WSDL 메시지 및 바인딩을 내보내는 `IWsdlExportExtension` 구현입니다.  XML 스키마 형식은 `XmlSchemaExporter`를 사용하여 내보냅니다.  또한 `XmlSerializerOperationBehavior`는 해당 작업에 대한 용도, 스타일, 스키마 내보내기 및 가져오기를 결정합니다.  
+#### <a name="the-xmlserializeroperationbehavior"></a><span data-ttu-id="08866-191">XmlSerializerOperationBehavior</span><span class="sxs-lookup"><span data-stu-id="08866-191">The XmlSerializerOperationBehavior</span></span>  
+ <span data-ttu-id="08866-192">작업에 대한 `XmlSerializerOperationBehavior`는 해당 작업에 대한 WSDL 메시지 및 바인딩을 내보내는 `IWsdlExportExtension` 구현입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-192">The `XmlSerializerOperationBehavior` for an operation is an `IWsdlExportExtension` implementation that exports the WSDL messages and binding for that operation.</span></span> <span data-ttu-id="08866-193">XML 스키마 형식은 `XmlSchemaExporter`를 사용하여 내보냅니다.</span><span class="sxs-lookup"><span data-stu-id="08866-193">The XML Schema types are exported using the `XmlSchemaExporter`.</span></span> <span data-ttu-id="08866-194">또한 `XmlSerializerOperationBehavior`는 해당 작업에 대한 용도, 스타일, 스키마 내보내기 및 가져오기를 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="08866-194">The `XmlSerializerOperationBehavior` also determines the use, style, and schema exporter and importer to use for that operation.</span></span>  
   
-|속성|WSDL 매핑|  
-|--------|-------------|  
-|`XmlSerializerFormatAttribute`|이 특성에 대한 `Style` 속성은 작업의 `wsdl:binding`\/`wsdl:operation`\/`soap:operation`\/@style 값에 매핑됩니다.<br /><br /> 이 특성의 `Use` 속성은 이 작업의 모든 메시지에 대한 `wsdl:binding`\/`wsdl:operation`\/`soap:operation`\/\*\/@use 값에 매핑됩니다.|  
+|<span data-ttu-id="08866-195">속성</span><span class="sxs-lookup"><span data-stu-id="08866-195">Properties</span></span>|<span data-ttu-id="08866-196">WSDL 매핑</span><span class="sxs-lookup"><span data-stu-id="08866-196">WSDL mapping</span></span>|  
+|----------------|------------------|  
+|`XmlSerializerFormatAttribute`|<span data-ttu-id="08866-197">`Style` 이 특성에 대 한 속성에 매핑됩니다는 `wsdl:binding` / `wsdl:operation` / `soap:operation` /@style 작업에 대 한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-197">The `Style` property for this attribute maps to the `wsdl:binding`/`wsdl:operation`/`soap:operation`/@style value for the operation.</span></span><br /><br /> <span data-ttu-id="08866-198">`Use` 이 특성에 대 한 속성에 매핑됩니다는 `wsdl:binding` / `wsdl:operation` / `soap:operation`/ */@use 작업의 모든 메시지에 대 한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-198">The `Use` property for this attribute maps to the `wsdl:binding`/`wsdl:operation`/`soap:operation`/*/@use values for all messages in the operation.</span></span>|  
   
-### 메시지  
- `MessageDescription` 인스턴스는 작업에서 `wsdl:portType`\/`wsdl:operation`\/`wsdl:input` 또는 `wsdl:portType`\/`wsdl:operation`\/`wsdl:output` 메시지가 참조하는 `wsdl:message`에 매핑됩니다.  `MessageDescription`에는 본문과 헤더가 있습니다.  
+### <a name="messages"></a><span data-ttu-id="08866-199">메시지</span><span class="sxs-lookup"><span data-stu-id="08866-199">Messages</span></span>  
+ <span data-ttu-id="08866-200">A `MessageDescription` 인스턴스에 매핑되는 `wsdl:message` 에 대 한는 `wsdl:portType` / `wsdl:operation` / `wsdl:input` 또는 `wsdl:portType` / `wsdl:operation` / `wsdl:output`작업에서 메시지입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-200">A `MessageDescription` instance maps to a `wsdl:message` that is referenced by a `wsdl:portType`/`wsdl:operation`/`wsdl:input` or a `wsdl:portType`/`wsdl:operation`/`wsdl:output` message in an operation.</span></span> <span data-ttu-id="08866-201">`MessageDescription`에는 본문과 헤더가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="08866-201">A `MessageDescription` has a body and headers.</span></span>  
   
-|속성|WSDL 매핑|  
-|--------|-------------|  
-|`Action`|작업에 대한 SOAP 또는 WS\-Addressing 동작입니다.<br /><br /> "\*" 동작 문자열을 사용하는 작업은 WSDL에 표시되지 않습니다.|  
-|`Direction`|`MessageDirection.Input`은 `wsdl:input`에 매핑됩니다.<br /><br /> `MessageDirection.Output`은 `wsdl:output`에 매핑됩니다.|  
-|`ProtectionLevel`|이 메시지의 `wsdl:message` 정의에 연결되는 보안 정책의 보호 어설션입니다.|  
-|`Body`|메시지의 메시지 본문입니다.|  
-|`Headers`|메시지의 헤더입니다.|  
-|`ContractDescription.Name`, `OperationContract.Name`|내보내기에서 `wsdl:message`\/@name 값을 파생시키는 데 사용됩니다.|  
+|<span data-ttu-id="08866-202">속성</span><span class="sxs-lookup"><span data-stu-id="08866-202">Properties</span></span>|<span data-ttu-id="08866-203">WSDL 매핑</span><span class="sxs-lookup"><span data-stu-id="08866-203">WSDL Mapping</span></span>|  
+|----------------|------------------|  
+|`Action`|<span data-ttu-id="08866-204">작업에 대한 SOAP 또는 WS-Addressing 동작입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-204">The SOAP or WS-Addressing action for the message.</span></span><br /><br /> <span data-ttu-id="08866-205">"*" 동작 문자열을 사용하는 작업은 WSDL에 표시되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="08866-205">Note that operations that use the Action string "*" are not represented in WSDL.</span></span>|  
+|`Direction`|<span data-ttu-id="08866-206">`MessageDirection.Input`은 `wsdl:input`에 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="08866-206">`MessageDirection.Input` maps to `wsdl:input`.</span></span><br /><br /> <span data-ttu-id="08866-207">`MessageDirection.Output`은 `wsdl:output`에 매핑됩니다.</span><span class="sxs-lookup"><span data-stu-id="08866-207">`MessageDirection.Output` maps to `wsdl:output`.</span></span>|  
+|`ProtectionLevel`|<span data-ttu-id="08866-208">이 메시지의 `wsdl:message` 정의에 연결되는 보안 정책의 보호 어설션입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-208">Protection assertions in security policy attached to the `wsdl:message` definition for this message.</span></span>|  
+|`Body`|<span data-ttu-id="08866-209">메시지의 메시지 본문입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-209">The message body for the message.</span></span>|  
+|`Headers`|<span data-ttu-id="08866-210">메시지의 헤더입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-210">The headers for the message.</span></span>|  
+|<span data-ttu-id="08866-211">`ContractDescription.Name`, `OperationContract.Name`</span><span class="sxs-lookup"><span data-stu-id="08866-211">`ContractDescription.Name`, `OperationContract.Name`</span></span>|<span data-ttu-id="08866-212">가져올 때와 파생 하는 데 사용 된 `wsdl:message` /@name 값입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-212">On export, used to derive the `wsdl:message`/@name value.</span></span>|  
   
-#### 메시지 본문  
- `MessageBodyDescription` 인스턴스는 메시지의 본문에 대한 `wsdl:message`\/`wsdl:part` 정의에 매핑됩니다.  메시지 본문은 wrapped 또는 bare입니다.  
+#### <a name="message-body"></a><span data-ttu-id="08866-213">메시지 본문</span><span class="sxs-lookup"><span data-stu-id="08866-213">Message Body</span></span>  
+ <span data-ttu-id="08866-214">A `MessageBodyDescription` 인스턴스에 매핑되는 `wsdl:message` / `wsdl:part` 메시지의 본문에 대 한 정의입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-214">A `MessageBodyDescription` instance maps to the `wsdl:message`/`wsdl:part` definitions for the body of a message.</span></span> <span data-ttu-id="08866-215">메시지 본문은 wrapped 또는 bare입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-215">The message body may be wrapped or bare.</span></span>  
   
-|속성|WSDL 매핑|  
-|--------|-------------|  
-|`WrapperName`|스타일이 RPC가 아닌 경우 `WrapperName`은 @name이 "parameters"로 설정된 `wsdl:message`\/`wsdl:part`에 의해 참조되는 요소 이름에 매핑됩니다.|  
-|`WrapperNamespace`|스타일이 RPC가 아닌 경우 `WrapperNamespace`는 @name이 "parameters"로 설정된 `wsdl:message`\/`wsdl:part`에 대한 요소 네임스페이스에 매핑됩니다.|  
-|`Parts`|이 메시지 본문의 메시지 부분입니다.|  
-|`ReturnValue`|래퍼 요소가 있으면 래퍼 요소의 자식 요소이고\(문서 래핑 스타일 또는 RPC 스타일\), 그렇지 않으면 메시지의 첫 번째 `wsdl:message`\/`wsdl:part`입니다.|  
+|<span data-ttu-id="08866-216">속성</span><span class="sxs-lookup"><span data-stu-id="08866-216">Properties</span></span>|<span data-ttu-id="08866-217">WSDL 매핑</span><span class="sxs-lookup"><span data-stu-id="08866-217">WSDL Mapping</span></span>|  
+|----------------|------------------|  
+|`WrapperName`|<span data-ttu-id="08866-218">스타일이 RPC가 아닌 경우 하면 `WrapperName` 에서 참조 하는 요소 이름에 매핑됩니다는 `wsdl:message` / `wsdl:part` 와 @name "parameters"로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="08866-218">If the style is not RPC, then the `WrapperName` maps to the element name referenced by the `wsdl:message`/`wsdl:part` with @name set to "parameters".</span></span>|  
+|`WrapperNamespace`|<span data-ttu-id="08866-219">스타일이 RPC가 아닌 경우 하면 `WrapperNamespace` 에 대 한 요소 네임 스페이스에 매핑됩니다는 `wsdl:message` / `wsdl:part` 와 @name "parameters"로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="08866-219">If the style is not RPC, then the `WrapperNamespace` maps to the element namespace for the `wsdl:message`/`wsdl:part` with @name set to "parameters".</span></span>|  
+|`Parts`|<span data-ttu-id="08866-220">이 메시지 본문의 메시지 부분입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-220">The message parts for this message body.</span></span>|  
+|`ReturnValue`|<span data-ttu-id="08866-221">래퍼 요소가 있으면 (문서 래핑 스타일 또는 RPC 스타일), 그렇지 않으면 래퍼 요소의 자식 요소가 첫 번째 `wsdl:message` / `wsdl:part` 메시지에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="08866-221">The child element of the wrapper element if a wrapper element exists (document wrapped style, or RPC style), otherwise the first `wsdl:message`/`wsdl:part` in the message.</span></span>|  
   
-#### 메시지 부분  
- `MessagePartDescription` 인스턴스는 메시지 부분이 가리키는 XML 스키마 형식 또는 요소 및 `wsdl:message`\/`wsdl:part`에 매핑됩니다.  
+#### <a name="message-parts"></a><span data-ttu-id="08866-222">메시지 부분</span><span class="sxs-lookup"><span data-stu-id="08866-222">Message Parts</span></span>  
+ <span data-ttu-id="08866-223">A `MessagePartDescription` 인스턴스에 매핑되는 `wsdl:message` / `wsdl:part` 와 XML 스키마 유형 또는 메시지 부분이 가리키는 요소의 합니다.</span><span class="sxs-lookup"><span data-stu-id="08866-223">A `MessagePartDescription` instance maps to a `wsdl:message`/`wsdl:part` and the XML schema type or element that the message part points to.</span></span>  
   
-|속성|WSDL 매핑|  
-|--------|-------------|  
-|`Name`|메시지 부분의 `wsd:message`\/`wsdl:part`\/@name 값과 메시지 부분이 가리키는 요소의 이름입니다.|  
-|`Namespace`|메시지 부분이 가리키는 요소의 네임스페이스입니다.|  
-|`Index`|메시지에 대한 `wsdl:message`\/`wsdl:part`의 인덱스입니다.|  
-|`ProtectionLevel`|이 메시지 부분의 `wsdl:message` 정의에 연결되는 보안 정책의 보호 어설션입니다.  정책은 특정 메시지 부분을 가리키는 매개 변수를 가집니다.|  
-|`MessageType`|메시지 부분이 가리키는 요소의 XML 스키마 형식입니다.|  
+|<span data-ttu-id="08866-224">속성</span><span class="sxs-lookup"><span data-stu-id="08866-224">Properties</span></span>|<span data-ttu-id="08866-225">WSDL 매핑</span><span class="sxs-lookup"><span data-stu-id="08866-225">WSDL mapping</span></span>|  
+|----------------|------------------|  
+|`Name`|<span data-ttu-id="08866-226">`wsd:message` / `wsdl:part` /@name 메시지 파트 및 메시지 부분이 가리키는 요소의 이름에 대 한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-226">The `wsd:message`/`wsdl:part`/@name value for the message part and the name of the element that the message part points to.</span></span>|  
+|`Namespace`|<span data-ttu-id="08866-227">메시지 부분이 가리키는 요소의 네임스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-227">The namespace of the element that the message part points to.</span></span>|  
+|`Index`|<span data-ttu-id="08866-228">인덱스는 `wsdl:message` / `wsdl:part` 메시지에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="08866-228">The index of the `wsdl:message`/`wsdl:part` for the message.</span></span>|  
+|`ProtectionLevel`|<span data-ttu-id="08866-229">이 메시지 부분의 `wsdl:message` 정의에 연결되는 보안 정책의 보호 어설션입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-229">Protection assertions in security policy attached to the `wsdl:message` definition for this message part.</span></span> <span data-ttu-id="08866-230">정책은 특정 메시지 부분을 가리키는 매개 변수를 가집니다.</span><span class="sxs-lookup"><span data-stu-id="08866-230">The policy is parameterized to point to the specific message part.</span></span>|  
+|`MessageType`|<span data-ttu-id="08866-231">메시지 부분이 가리키는 요소의 XML 스키마 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-231">The XML Schema type of the element that the message part points to.</span></span>|  
   
-#### 메시지 헤더  
- `MessageHeaderDescription` 인스턴스는 메시지 부분에 대한 `soap:header` 바인딩에도 매핑되는 메시지 부분입니다.  
+#### <a name="message-headers"></a><span data-ttu-id="08866-232">메시지 헤더</span><span class="sxs-lookup"><span data-stu-id="08866-232">Message Headers</span></span>  
+ <span data-ttu-id="08866-233">`MessageHeaderDescription` 인스턴스는 메시지 부분에 대한 `soap:header` 바인딩에도 매핑되는 메시지 부분입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-233">A `MessageHeaderDescription` instance is a message part that also maps to a `soap:header` binding for the message part.</span></span>  
   
-### 오류  
- `FaultDescription` 인스턴스는 `wsdl:portType`\/`wsdl:operation`\/`wsdl:fault` 정의와 관련 `wsdl:message` 정의에 매핑됩니다.  `wsdl:message`는 연결된 WSDL 포트 형식과 동일한 대상 네임스페이스에 추가됩니다.  `wsdl:message`에는 `FaultDescription` 인스턴스의 `DefaultType` 속성 값에 해당하는 XML 스키마 요소를 가리키는 "detail"이라는 단일 메시지 부분이 있습니다.  
+### <a name="faults"></a><span data-ttu-id="08866-234">오류</span><span class="sxs-lookup"><span data-stu-id="08866-234">Faults</span></span>  
+ <span data-ttu-id="08866-235">A `FaultDescription` 인스턴스에 매핑되는 `wsdl:portType` / `wsdl:operation` / `wsdl:fault` 정의와 관련 `wsdl:message` 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="08866-235">A `FaultDescription` instance maps to a `wsdl:portType`/`wsdl:operation`/`wsdl:fault` definition and its associated `wsdl:message` definition.</span></span> <span data-ttu-id="08866-236">`wsdl:message`는 연결된 WSDL 포트 형식과 동일한 대상 네임스페이스에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="08866-236">The `wsdl:message` is added to the same target namespace as its associated WSDL port type.</span></span> <span data-ttu-id="08866-237">`wsdl:message`에는 `DefaultType` 인스턴스의 `FaultDescription` 속성 값에 해당하는 XML 스키마 요소를 가리키는 "detail"이라는 단일 메시지 부분이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="08866-237">The `wsdl:message` has a single message part named "detail" that points to the XML Schema element that corresponds to the `DefaultType` property value for the `FaultDescription` instance.</span></span>  
   
-|속성|WSDL 매핑|  
-|--------|-------------|  
-|`Name`|오류에 대한 `wsdl:portType`\/`wsdl:operation`\/`wsdl:fault`\/@name 값입니다.|  
-|`Namespace`|오류 정보 메시지 부분이 가리키는 XML 스키마 요소의 네임스페이스입니다.|  
-|`Action`|오류에 대한 SOAP 또는 WS\-Addressing 동작입니다.|  
-|`ProtectionLevel`|이 오류의 `wsdl:message` 정의에 연결되는 보안 정책의 보호 어설션입니다.|  
-|`DetailType`|세부 메시지 부분이 가리키는 요소의 XML 스키마 형식입니다.|  
-|`Name, ContractDescription.Name, OperationDescription.Name,`|오류 메시지의 `wsdl:message`\/@name 값을 파생시키는 데 사용됩니다.|  
+|<span data-ttu-id="08866-238">속성</span><span class="sxs-lookup"><span data-stu-id="08866-238">Properties</span></span>|<span data-ttu-id="08866-239">WSDL 매핑</span><span class="sxs-lookup"><span data-stu-id="08866-239">WSDL mapping</span></span>|  
+|----------------|------------------|  
+|`Name`|<span data-ttu-id="08866-240">`wsdl:portType` / `wsdl:operation` / `wsdl:fault` /@name 의 오류에 대 한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-240">The `wsdl:portType`/`wsdl:operation`/`wsdl:fault`/@name value for the fault.</span></span>|  
+|`Namespace`|<span data-ttu-id="08866-241">오류 정보 메시지 부분이 가리키는 XML 스키마 요소의 네임스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-241">The namespace of the XML Schema element that the fault detail message part points to.</span></span>|  
+|`Action`|<span data-ttu-id="08866-242">오류에 대한 SOAP 또는 WS-Addressing 동작입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-242">The SOAP or WS-Addressing action for the fault.</span></span>|  
+|`ProtectionLevel`|<span data-ttu-id="08866-243">이 오류의 `wsdl:message` 정의에 연결되는 보안 정책의 보호 어설션입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-243">Protection assertions in security policy attached to the `wsdl:message` definition for this fault.</span></span>|  
+|`DetailType`|<span data-ttu-id="08866-244">세부 메시지 부분이 가리키는 요소의 XML 스키마 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-244">The XML Schema type of the element that the detail message part points to.</span></span>|  
+|`Name, ContractDescription.Name, OperationDescription.Name,`|<span data-ttu-id="08866-245">파생 하는 데 사용 된 `wsdl:message` /@name 오류 메시지에 대 한 값입니다.</span><span class="sxs-lookup"><span data-stu-id="08866-245">Used to derive the `wsdl:message`/@name value for the fault message.</span></span>|  
   
-## 참고 항목  
+## <a name="see-also"></a><span data-ttu-id="08866-246">참고 항목</span><span class="sxs-lookup"><span data-stu-id="08866-246">See Also</span></span>  
  <xref:System.ServiceModel.Description>

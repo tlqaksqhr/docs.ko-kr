@@ -1,31 +1,34 @@
 ---
-title: "ProtocolInitializationFailure | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: ProtocolInitializationFailure
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8ee26f94-c85e-4e92-b56b-16f486c8b00e
-caps.latest.revision: 6
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 92749729be091711380b6b727e22f3c5ad2cebf1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# ProtocolInitializationFailure
-ID: 142  
+# <a name="protocolinitializationfailure"></a><span data-ttu-id="638ac-102">ProtocolInitializationFailure</span><span class="sxs-lookup"><span data-stu-id="638ac-102">ProtocolInitializationFailure</span></span>
+<span data-ttu-id="638ac-103">Id: 142</span><span class="sxs-lookup"><span data-stu-id="638ac-103">Id: 142</span></span>  
   
- 심각도: 오류  
+ <span data-ttu-id="638ac-104">심각도: 오류</span><span class="sxs-lookup"><span data-stu-id="638ac-104">Severity: Error</span></span>  
   
- 범주: TransactionBridge  
+ <span data-ttu-id="638ac-105">범주: TransactionBridge</span><span class="sxs-lookup"><span data-stu-id="638ac-105">Category: TransactionBridge</span></span>  
   
-## 설명  
- 이 이벤트는 WS\-Atomic Transaction 프로토콜 서비스가 초기화되지 않았음을 나타냅니다.따라서 WS\-Atomic Transaction 기능을 사용하도록 설정할 수 없습니다.이 이벤트는 프로토콜 ID, 프로토콜 이름, 예외, 프로세스 이름 및 프로세스 ID를 나열합니다. .  
+## <a name="description"></a><span data-ttu-id="638ac-106">설명</span><span class="sxs-lookup"><span data-stu-id="638ac-106">Description</span></span>  
+ <span data-ttu-id="638ac-107">이 이벤트는 WS-Atomic Transaction 프로토콜 서비스가 초기화되지 않았음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="638ac-107">This event indicates that the WS-Atomic Transaction protocol service failed to initialize.</span></span> <span data-ttu-id="638ac-108">따라서 WS-Atomic Transaction 기능을 사용하도록 설정할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="638ac-108">As a result, WS-Atomic Transaction functionality is disabled.</span></span> <span data-ttu-id="638ac-109">이 이벤트는 프로토콜 ID, 프로토콜 이름, 예외, 프로세스 이름 및 프로세스 ID를 나열합니다.</span><span class="sxs-lookup"><span data-stu-id="638ac-109">The event lists the protocol ID, protocol name, exception, process name and process ID.</span></span> <span data-ttu-id="638ac-110">입니다.</span><span class="sxs-lookup"><span data-stu-id="638ac-110">.</span></span>  
   
-## 참고 항목  
- [이벤트 로깅](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)   
- [이벤트 일반 참조](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="638ac-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="638ac-111">See Also</span></span>  
+ [<span data-ttu-id="638ac-112">이벤트 로깅</span><span class="sxs-lookup"><span data-stu-id="638ac-112">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [<span data-ttu-id="638ac-113">이벤트 일반 참조</span><span class="sxs-lookup"><span data-stu-id="638ac-113">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

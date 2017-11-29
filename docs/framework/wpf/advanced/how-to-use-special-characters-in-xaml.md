@@ -1,43 +1,46 @@
 ---
-title: "방법: XAML에서 특수 문자 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "문자, 특수"
-  - "특수 문자"
-  - "입력 체계, 특수 문자"
-  - "유니코드 UTF-8 파일 형식"
-  - "UTF-8 파일 형식"
+title: "방법: XAML에서 특수 문자 사용"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Unicode UTF-8 file format
+- UTF-8 file format
+- characters [WPF], special
+- typography [WPF], special characters
+- special characters [WPF]
 ms.assetid: a57776d1-f353-4794-afa0-bfa3c712ed1c
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 308b2152f98286ba532a15e5491b5d1a25aa66dd
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/22/2017
 ---
-# 방법: XAML에서 특수 문자 사용
-[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]에서 작성한 태그 파일은 자동으로 [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] UTF\-8 파일 형식으로 저장됩니다. 따라서 악센트 기호 등의 대부분의 특수 문자가 올바르게 인코딩됩니다.  하지만 이와는 다르게 처리되는 많이 사용되는 특수 문자 집합이 있습니다.  이러한 특수 문자는 [!INCLUDE[TLA#tla_w3c](../../../../includes/tlasharptla-w3c-md.md)] [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 표준에 따라 인코딩됩니다.  
+# <a name="how-to-use-special-characters-in-xaml"></a><span data-ttu-id="06461-102">방법: XAML에서 특수 문자 사용</span><span class="sxs-lookup"><span data-stu-id="06461-102">How to: Use Special Characters in XAML</span></span>
+<span data-ttu-id="06461-103">마크업 파일에 만들어진 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 에 자동으로 저장 되는 [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] u t F-8 파일 형식 이므로 악센트 표시 등의 가장 특수 문자가 인코딩됩니다.</span><span class="sxs-lookup"><span data-stu-id="06461-103">Markup files that are created in [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] are automatically saved in the [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] UTF-8 file format, which means that most special characters, such as accent marks, are encoded correctly.</span></span> <span data-ttu-id="06461-104">그러나 다르게 처리되는 일반적으로 사용되는 특수 문자 집합이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="06461-104">However, there is a set of commonly-used special characters that are handled differently.</span></span> <span data-ttu-id="06461-105">이 특수 문자에 따라는 [!INCLUDE[TLA#tla_w3c](../../../../includes/tlasharptla-w3c-md.md)] [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 인코딩에 대 한 표준입니다.</span><span class="sxs-lookup"><span data-stu-id="06461-105">These special characters follow the [!INCLUDE[TLA#tla_w3c](../../../../includes/tlasharptla-w3c-md.md)][!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] standard for encoding.</span></span>  
   
- 다음 표에서는 이 특수 문자 집합을 인코딩하기 위한 구문을 보여 줍니다.  
+ <span data-ttu-id="06461-106">다음 표는 이 특수 문자 집합을 인코딩하는 구문을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="06461-106">The following table shows the syntax for encoding this set of special characters:</span></span>  
   
-|문자|구문|설명|  
-|--------|--------|--------|  
-|\<|`<`|보다 작음 기호|  
-|\>|`>`|보다 큼 기호|  
-|&|`&`|앰퍼샌드 기호|  
-|이때|`"`|큰따옴표 기호|  
+|<span data-ttu-id="06461-107">문자</span><span class="sxs-lookup"><span data-stu-id="06461-107">Character</span></span>|<span data-ttu-id="06461-108">구문</span><span class="sxs-lookup"><span data-stu-id="06461-108">Syntax</span></span>|<span data-ttu-id="06461-109">설명</span><span class="sxs-lookup"><span data-stu-id="06461-109">Description</span></span>|  
+|---------------|------------|-----------------|  
+|<|`<`|<span data-ttu-id="06461-110">보다 작음 기호</span><span class="sxs-lookup"><span data-stu-id="06461-110">Less than symbol.</span></span>|  
+|>|`>`|<span data-ttu-id="06461-111">보다 큼 기호</span><span class="sxs-lookup"><span data-stu-id="06461-111">Greater than sign.</span></span>|  
+|&|`&`|<span data-ttu-id="06461-112">앰퍼샌드 기호</span><span class="sxs-lookup"><span data-stu-id="06461-112">Ampersand symbol.</span></span>|  
+|<span data-ttu-id="06461-113">"</span><span class="sxs-lookup"><span data-stu-id="06461-113">"</span></span>|`"`|<span data-ttu-id="06461-114">큰따옴표 기호</span><span class="sxs-lookup"><span data-stu-id="06461-114">Double quote symbol.</span></span>|  
   
 > [!NOTE]
->  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 메모장과 같은 텍스트 편집기를 사용하여 작성한 태그 파일은 [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] UTF\-8 파일 형식으로 저장해야 인코딩된 특수 문자를 보존할 수 있습니다.  
+>  <span data-ttu-id="06461-115">파일을 만들면 태그 텍스트를 사용 하 여 편집기와 같은 경우 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 메모장에서 파일을 저장 해야는 [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] 인코딩된 특수 문자를 보존할 u t F-8 파일 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="06461-115">If you create a markup file using a text editor, such as [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Notepad, you must save the file in the [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] UTF-8 file format in order to preserve any encoded special characters.</span></span>  
   
- 다음 예제에서는 태그를 작성할 때 텍스트에 특수 문자를 사용하는 방법을 보여 줍니다.  
+ <span data-ttu-id="06461-116">다음 예제에서는 태그를 만들 때 텍스트에 특수 문자를 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="06461-116">The following example shows how you can use special characters in text when creating markup.</span></span>  
   
-## 예제  
- [!code-xml[SpecialCharsSnippets#SpecialCharsSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SpecialCharsSnippets/CS/Window1.xaml#specialcharssnippet1)]
+## <a name="example"></a><span data-ttu-id="06461-117">예제</span><span class="sxs-lookup"><span data-stu-id="06461-117">Example</span></span>  
+ [!code-xaml[SpecialCharsSnippets#SpecialCharsSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SpecialCharsSnippets/CS/Window1.xaml#specialcharssnippet1)]

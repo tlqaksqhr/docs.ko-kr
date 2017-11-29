@@ -1,43 +1,47 @@
 ---
-title: "1016 - CompleteCompletionWorkItem | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 1016 - CompleteCompletionWorkItem
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 246929fb-6f14-440a-814b-cd8349350644
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2a7c6b6060e8dd3256d23db7350299d2670f6caa
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 1016 - CompleteCompletionWorkItem
-## 속성  
+# <a name="1016---completecompletionworkitem"></a><span data-ttu-id="0377c-102">1016 - CompleteCompletionWorkItem</span><span class="sxs-lookup"><span data-stu-id="0377c-102">1016 - CompleteCompletionWorkItem</span></span>
+## <a name="properties"></a><span data-ttu-id="0377c-103">속성</span><span class="sxs-lookup"><span data-stu-id="0377c-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|1016|  
-|키워드|WFRuntime|  
-|수준|Verbose|  
-|채널|Microsoft\-Windows\-응용 프로그램 서버\-응용 프로그램\/디버그|  
+|<span data-ttu-id="0377c-104">ID</span><span class="sxs-lookup"><span data-stu-id="0377c-104">ID</span></span>|<span data-ttu-id="0377c-105">1016</span><span class="sxs-lookup"><span data-stu-id="0377c-105">1016</span></span>|  
+|<span data-ttu-id="0377c-106">키워드</span><span class="sxs-lookup"><span data-stu-id="0377c-106">Keywords</span></span>|<span data-ttu-id="0377c-107">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="0377c-107">WFRuntime</span></span>|  
+|<span data-ttu-id="0377c-108">수준</span><span class="sxs-lookup"><span data-stu-id="0377c-108">Level</span></span>|<span data-ttu-id="0377c-109">Verbose</span><span class="sxs-lookup"><span data-stu-id="0377c-109">Verbose</span></span>|  
+|<span data-ttu-id="0377c-110">채널</span><span class="sxs-lookup"><span data-stu-id="0377c-110">Channel</span></span>|<span data-ttu-id="0377c-111">Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그</span><span class="sxs-lookup"><span data-stu-id="0377c-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## 설명  
- CompletionWorkItem이 완료되었음을 나타냅니다.  
+## <a name="description"></a><span data-ttu-id="0377c-112">설명</span><span class="sxs-lookup"><span data-stu-id="0377c-112">Description</span></span>  
+ <span data-ttu-id="0377c-113">CompletionWorkItem이 완료되었음을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="0377c-113">Indicates a CompletionWorkItem has completed.</span></span>  
   
-## 메시지  
- 부모 작업 '%1', DisplayName: '%2', InstanceId: '%3'에 대해 CompletionWorkItem이 완료되었습니다.  작업 '%4', DisplayName: '%5', InstanceId: '%6'이\(가\) 완료되었습니다.  
+## <a name="message"></a><span data-ttu-id="0377c-114">메시지</span><span class="sxs-lookup"><span data-stu-id="0377c-114">Message</span></span>  
+ <span data-ttu-id="0377c-115">부모 작업 '%1', DisplayName: '%2', InstanceId: '%3'에 대해 CompletionWorkItem이 완료되었습니다.</span><span class="sxs-lookup"><span data-stu-id="0377c-115">A CompletionWorkItem has completed for parent Activity '%1', DisplayName: '%2', InstanceId: '%3'.</span></span> <span data-ttu-id="0377c-116">작업 '%4', DisplayName: '%5', InstanceId: '%6'이(가) 완료되었습니다.</span><span class="sxs-lookup"><span data-stu-id="0377c-116">Completed Activity '%4', DisplayName: '%5', InstanceId: '%6'.</span></span>  
   
-## 설명  
+## <a name="details"></a><span data-ttu-id="0377c-117">설명</span><span class="sxs-lookup"><span data-stu-id="0377c-117">Details</span></span>  
   
-|데이터 항목 이름|데이터 항목 형식|설명|  
-|---------------|---------------|--------|  
-|ParentActivity|xs:string|부모 작업의 형식 이름입니다.|  
-|ParentDisplayName|xs:string|부모 작업의 표시 이름입니다.|  
-|ParentInstanceId|xs:string|부모 작업의 인스턴스 ID입니다.|  
-|CompletedActivity|xs:string|완료된 작업의 형식 이름입니다.|  
-|CompletedActivityDisplayName|xs:string|완료된 작업의 표시 이름입니다.|  
-|CompletedActivityInstanceId|xs:string|완료된 작업의 인스턴스 ID입니다.|  
-|AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName에서 반환되는 문자열입니다.|
+|<span data-ttu-id="0377c-118">데이터 항목 이름</span><span class="sxs-lookup"><span data-stu-id="0377c-118">Data Item Name</span></span>|<span data-ttu-id="0377c-119">데이터 항목 형식</span><span class="sxs-lookup"><span data-stu-id="0377c-119">Data Item Type</span></span>|<span data-ttu-id="0377c-120">설명</span><span class="sxs-lookup"><span data-stu-id="0377c-120">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="0377c-121">ParentActivity</span><span class="sxs-lookup"><span data-stu-id="0377c-121">ParentActivity</span></span>|<span data-ttu-id="0377c-122">xs:string</span><span class="sxs-lookup"><span data-stu-id="0377c-122">xs:string</span></span>|<span data-ttu-id="0377c-123">부모 작업의 형식 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="0377c-123">The type name of the parent activity.</span></span>|  
+|<span data-ttu-id="0377c-124">ParentDisplayName</span><span class="sxs-lookup"><span data-stu-id="0377c-124">ParentDisplayName</span></span>|<span data-ttu-id="0377c-125">xs:string</span><span class="sxs-lookup"><span data-stu-id="0377c-125">xs:string</span></span>|<span data-ttu-id="0377c-126">부모 작업의 표시 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="0377c-126">The display name of the parent activity.</span></span>|  
+|<span data-ttu-id="0377c-127">ParentInstanceId</span><span class="sxs-lookup"><span data-stu-id="0377c-127">ParentInstanceId</span></span>|<span data-ttu-id="0377c-128">xs:string</span><span class="sxs-lookup"><span data-stu-id="0377c-128">xs:string</span></span>|<span data-ttu-id="0377c-129">부모 작업의 인스턴스 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="0377c-129">The instance id of the parent activity.</span></span>|  
+|<span data-ttu-id="0377c-130">CompletedActivity</span><span class="sxs-lookup"><span data-stu-id="0377c-130">CompletedActivity</span></span>|<span data-ttu-id="0377c-131">xs:string</span><span class="sxs-lookup"><span data-stu-id="0377c-131">xs:string</span></span>|<span data-ttu-id="0377c-132">완료된 작업의 형식 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="0377c-132">The type name of the completed activity.</span></span>|  
+|<span data-ttu-id="0377c-133">CompletedActivityDisplayName</span><span class="sxs-lookup"><span data-stu-id="0377c-133">CompletedActivityDisplayName</span></span>|<span data-ttu-id="0377c-134">xs:string</span><span class="sxs-lookup"><span data-stu-id="0377c-134">xs:string</span></span>|<span data-ttu-id="0377c-135">완료된 작업의 표시 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="0377c-135">The display name of the completed activity.</span></span>|  
+|<span data-ttu-id="0377c-136">CompletedActivityInstanceId</span><span class="sxs-lookup"><span data-stu-id="0377c-136">CompletedActivityInstanceId</span></span>|<span data-ttu-id="0377c-137">xs:string</span><span class="sxs-lookup"><span data-stu-id="0377c-137">xs:string</span></span>|<span data-ttu-id="0377c-138">완료된 작업의 인스턴스 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="0377c-138">The instance id of the completed activity.</span></span>|  
+|<span data-ttu-id="0377c-139">AppDomain</span><span class="sxs-lookup"><span data-stu-id="0377c-139">AppDomain</span></span>|<span data-ttu-id="0377c-140">xs:string</span><span class="sxs-lookup"><span data-stu-id="0377c-140">xs:string</span></span>|<span data-ttu-id="0377c-141">AppDomain.CurrentDomain.FriendlyName에서 반환되는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="0377c-141">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

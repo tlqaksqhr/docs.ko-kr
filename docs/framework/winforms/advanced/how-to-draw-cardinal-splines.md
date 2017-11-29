@@ -1,58 +1,64 @@
 ---
-title: "방법: 카디널 스플라인 그리기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "카디널 스플라인, 그리기"
-  - "그리기, 카디널 스플라인"
-  - "그래픽, 카디널 스플라인"
+title: "방법: 카디널 스플라인 그리기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- cardinal splines [Windows Forms], drawing
+- drawing [Windows Forms], cardinal splines
+- graphics [Windows Forms], cardinal splines
 ms.assetid: a4a41e80-4461-4b47-b6bd-2c5e68881994
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c47ff269cb1c367abee0be197fdc80485fb37b97
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 카디널 스플라인 그리기
-카디널 스플라인은 주어진 점의 집합을 매끄럽게 통과하며 그려지는 곡선입니다.  카디널 스플라인을 그리려면 <xref:System.Drawing.Graphics> 개체를 만들고 점 배열의 주소를 <xref:System.Drawing.Graphics.DrawCurve%2A> 메서드에 전달합니다.  
+# <a name="how-to-draw-cardinal-splines"></a><span data-ttu-id="b34a6-102">방법: 카디널 스플라인 그리기</span><span class="sxs-lookup"><span data-stu-id="b34a6-102">How to: Draw Cardinal Splines</span></span>
+<span data-ttu-id="b34a6-103">카디널 스플라인 주어진된 점의 집합을 통해 원활 하 게 전달 되는 곡선입니다.</span><span class="sxs-lookup"><span data-stu-id="b34a6-103">A cardinal spline is a curve that passes smoothly through a given set of points.</span></span> <span data-ttu-id="b34a6-104">카디널 스플라인 그리기, 하려면 만듭니다는 <xref:System.Drawing.Graphics> 개체를 가리키는 배열 주소 전달는 <xref:System.Drawing.Graphics.DrawCurve%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="b34a6-104">To draw a cardinal spline, create a <xref:System.Drawing.Graphics> object and pass the address of an array of points to the <xref:System.Drawing.Graphics.DrawCurve%2A> method.</span></span>  
   
-### 종 모양 카디널 스플라인 그리기  
+### <a name="drawing-a-bell-shaped-cardinal-spline"></a><span data-ttu-id="b34a6-105">종 모양 카디널 스플라인 그리기</span><span class="sxs-lookup"><span data-stu-id="b34a6-105">Drawing a Bell-Shaped Cardinal Spline</span></span>  
   
--   다음 예제에서는 지정된 다섯 개의 점을 통과하는 종 모양의 카디널 스플라인을 그립니다.  아래 그림에서는 곡선과 다섯 개의 점을 보여 줍니다.  
+-   <span data-ttu-id="b34a6-106">다음 예제에서는 5 개의 지정 된 점을 통해 전달 되는 종 모양의 카디널 스플라인을 그립니다.</span><span class="sxs-lookup"><span data-stu-id="b34a6-106">The following example draws a bell-shaped cardinal spline that passes through five designated points.</span></span> <span data-ttu-id="b34a6-107">다음 그림에서는 5 개의 점과 곡선을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b34a6-107">The following illustration shows the curve and five points.</span></span>  
+  
+     <span data-ttu-id="b34a6-108">![카디널 스플라인](../../../../docs/framework/winforms/advanced/media/cardinalspline1.png "CardinalSpline1")</span><span class="sxs-lookup"><span data-stu-id="b34a6-108">![Cardinal Spline](../../../../docs/framework/winforms/advanced/media/cardinalspline1.png "CardinalSpline1")</span></span>  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#21)]  
   
-### 닫힌 카디널 스플라인 그리기  
+### <a name="drawing-a-closed-cardinal-spline"></a><span data-ttu-id="b34a6-109">폐쇄형된 카디널 스플라인 그리기</span><span class="sxs-lookup"><span data-stu-id="b34a6-109">Drawing a Closed Cardinal Spline</span></span>  
   
--   <xref:System.Drawing.Graphics> 클래스의 <xref:System.Drawing.Graphics.DrawClosedCurve%2A> 메서드를 사용하여 닫힌 카디널 스플라인을 그립니다.  닫힌 카디널 스플라인에서는 곡선이 배열의 마지막 점을 지나 배열의 첫 번째 점으로 다시 연결됩니다.  다음 예제에서는 지정된 여섯 개의 점을 통과하는 닫힌 카디널 스플라인을 그립니다.  아래 그림에서는 여섯 개의 점을 따라 그려진 닫힌 스플라인을 보여 줍니다.  
+-   <span data-ttu-id="b34a6-110">사용 하 여는 <xref:System.Drawing.Graphics.DrawClosedCurve%2A> 의 메서드는 <xref:System.Drawing.Graphics> 클래스 되는 폐쇄형된 카디널 스플라인을 그립니다.</span><span class="sxs-lookup"><span data-stu-id="b34a6-110">Use the <xref:System.Drawing.Graphics.DrawClosedCurve%2A> method of the <xref:System.Drawing.Graphics> class to draw a closed cardinal spline.</span></span> <span data-ttu-id="b34a6-111">폐쇄형된 카디널 스플라인 곡선 배열에서 마지막 점을 계속 하 고 첫 번째 포인터는 배열에 연결 합니다.</span><span class="sxs-lookup"><span data-stu-id="b34a6-111">In a closed cardinal spline, the curve continues through the last point in the array and connects with the first point in the array.</span></span> <span data-ttu-id="b34a6-112">다음 예제에서는 6 개의 지정 된 점을 통과 하는 폐쇄형된 카디널 스플라인을 그립니다.</span><span class="sxs-lookup"><span data-stu-id="b34a6-112">The following example draws a closed cardinal spline that passes through six designated points.</span></span> <span data-ttu-id="b34a6-113">다음 그림에서는 6 개 포인트에 따라 닫힌된 스플라인 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b34a6-113">The following illustration shows the closed spline along with the six points.</span></span>  
   
- ![카디널 스플라인](../../../../docs/framework/winforms/advanced/media/cardinalspline1a.png "CardinalSpline1A")  
+ <span data-ttu-id="b34a6-114">![카디널 스플라인](../../../../docs/framework/winforms/advanced/media/cardinalspline1a.png "CardinalSpline1A")</span><span class="sxs-lookup"><span data-stu-id="b34a6-114">![Cardinal Spline](../../../../docs/framework/winforms/advanced/media/cardinalspline1a.png "CardinalSpline1A")</span></span>  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#22](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#22)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#22](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#22)]  
   
-### 카디널 스플라인의 굴곡 변경  
+### <a name="changing-the-bend-of-a-cardinal-spline"></a><span data-ttu-id="b34a6-115">카디널 스플라인 굴곡 변경</span><span class="sxs-lookup"><span data-stu-id="b34a6-115">Changing the Bend of a Cardinal Spline</span></span>  
   
--   장력 인수를 <xref:System.Drawing.Graphics.DrawCurve%2A> 메서드에 전달하여 카디널 스플라인의 굴곡 정도를 변경합니다.  다음 예제에서는 동일한 점 집합을 통과하는 세 개의 카디널 스플라인을 그립니다.  아래 그림에서는 세 가지 스플라인 및 각각의 장력 값을 보여 줍니다.  장력 값이 0이면 점은 직선으로 연결됩니다.  
+-   <span data-ttu-id="b34a6-116">카디널 스플라인의 장력 인수를 전달 하 여 굴곡 방식을 변경는 <xref:System.Drawing.Graphics.DrawCurve%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="b34a6-116">Change the way a cardinal spline bends by passing a tension argument to the <xref:System.Drawing.Graphics.DrawCurve%2A> method.</span></span> <span data-ttu-id="b34a6-117">다음 예제에서는 동일한 점 집합이 통과 하는 세 개의 카디널 스플라인을 그립니다.</span><span class="sxs-lookup"><span data-stu-id="b34a6-117">The following example draws three cardinal splines that pass through the same set of points.</span></span> <span data-ttu-id="b34a6-118">다음 그림에서는 세 가지 스플라인 해당 장력 값과 함께 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b34a6-118">The following illustration shows the three splines along with their tension values.</span></span> <span data-ttu-id="b34a6-119">참고는 장력이 0 인 점 직선으로 연결 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b34a6-119">Note that when the tension is 0, the points are connected by straight lines.</span></span>  
   
- ![카디널 스플라인](../../../../docs/framework/winforms/advanced/media/cardinalspline2.png "CardinalSpline2")  
+ <span data-ttu-id="b34a6-120">![카디널 스플라인](../../../../docs/framework/winforms/advanced/media/cardinalspline2.png "CardinalSpline2")</span><span class="sxs-lookup"><span data-stu-id="b34a6-120">![Cardinal Spline](../../../../docs/framework/winforms/advanced/media/cardinalspline2.png "CardinalSpline2")</span></span>  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#23](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#23)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#23](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#23)]  
   
-## 코드 컴파일  
- 앞의 예제는 Windows Forms에서 사용해야 하며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`를 필요로 합니다.  
+## <a name="compiling-the-code"></a><span data-ttu-id="b34a6-121">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="b34a6-121">Compiling the Code</span></span>  
+ <span data-ttu-id="b34a6-122">앞의 예제에서는 Windows Forms에서 사용 하도록 설계 되었으며 필요한 <xref:System.Windows.Forms.PaintEventArgs> `e`의 매개 변수는 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기입니다.</span><span class="sxs-lookup"><span data-stu-id="b34a6-122">The preceding examples are designed for use with Windows Forms, and they require <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
   
-## 참고 항목  
- [선, 곡선 및 도형](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)   
- [곡선 구성 및 그리기](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)
+## <a name="see-also"></a><span data-ttu-id="b34a6-123">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b34a6-123">See Also</span></span>  
+ [<span data-ttu-id="b34a6-124">선, 곡선 및 도형</span><span class="sxs-lookup"><span data-stu-id="b34a6-124">Lines, Curves, and Shapes</span></span>](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [<span data-ttu-id="b34a6-125">곡선 구성 및 그리기</span><span class="sxs-lookup"><span data-stu-id="b34a6-125">Constructing and Drawing Curves</span></span>](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)

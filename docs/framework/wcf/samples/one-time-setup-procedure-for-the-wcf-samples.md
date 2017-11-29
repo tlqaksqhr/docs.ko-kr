@@ -1,41 +1,44 @@
 ---
-title: "Windows Communication Foundation 샘플의 일회 설치 절차 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Windows Communication Foundation 샘플의 일회 설치 절차"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-caps.latest.revision: 83
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 83
+caps.latest.revision: "83"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7f2cb8d8376447de12f324719e39f575df8f33a3
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# Windows Communication Foundation 샘플의 일회 설치 절차
-대부분의 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 샘플은 IIS\(인터넷 정보 서비스\)에서 호스팅되고 공용 가상 디렉터리에서 실행됩니다.이 일회 설치 절차에서는 디스크에 폴더를 만들고 IIS에 **ServiceModelSamples**라는 가상 디렉터리를 추가합니다.  
+# <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a><span data-ttu-id="c63d0-102">Windows Communication Foundation 샘플의 일회 설치 절차</span><span class="sxs-lookup"><span data-stu-id="c63d0-102">One-Time Setup Procedure for the Windows Communication Foundation Samples</span></span>
+<span data-ttu-id="c63d0-103">대부분의 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 샘플은 IIS(인터넷 정보 서비스)에서 호스팅되고 공용 가상 디렉터리에서 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-103">Most of the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] samples are hosted in Internet Information Services (IIS) and run from a common virtual directory.</span></span> <span data-ttu-id="c63d0-104">이 일회 설치 절차에서는 디스크; 폴더를 만듭니다. 명명 된 iis 가상 디렉터리 추가 **ServiceModelSamples**합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-104">This one-time setup procedure creates a folder on the disk; it also adds a virtual directory to IIS named **ServiceModelSamples**.</span></span>  
   
- **ServiceModelSamples** 가상 디렉터리는 IIS에서 호스팅되는 서비스를 사용하는 모든 샘플을 빌드 및 실행하는 데 사용됩니다.이 디렉터리는 샘플을 실행하는 데 필요한 유일한 가상 디렉터리입니다.샘플을 빌드하면 이 가상 디렉터리에서 이전에 배포된 서비스가 대체되고 가장 최근에 빌드된 샘플만 배포되어 이 가상 디렉터리에서 사용할 수 있게 됩니다.  
+ <span data-ttu-id="c63d0-105">**ServiceModelSamples** IIS에서 호스팅되는 서비스를 사용 하는 모든 샘플을 빌드 및 실행 가상 디렉터리를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-105">The **ServiceModelSamples** virtual directory is used for building and running all samples that use an IIS-hosted service.</span></span> <span data-ttu-id="c63d0-106">이 디렉터리는 샘플을 실행하는 데 필요한 유일한 가상 디렉터리입니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-106">This is the only virtual directory that is required to run the samples.</span></span> <span data-ttu-id="c63d0-107">샘플을 빌드하면 이 가상 디렉터리에서 이전에 배포된 서비스가 대체되고 가장 최근에 빌드된 샘플만 배포되어 이 가상 디렉터리에서 사용할 수 있게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-107">Building a sample will replace any previously deployed service at this virtual directory; only the most recently built sample will be deployed and available in this virtual directory.</span></span>  
   
 > [!NOTE]
->  모든 명령을 로컬 관리자 계정으로 실행해야 합니다.Windows 7, [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] 또는 Windows Server 2008 R2를 사용하는 경우에는 높은 권한으로 명령 프롬프트를 실행해야 합니다.이렇게 하려면 명령 프롬프트 아이콘을 마우스 오른쪽 단추로 클릭한 다음 **관리자 권한으로 실행**을 클릭합니다.이 항목의 모든 명령은 경로 설정이 적절한 명령 프롬프트에서 실행해야 합니다.이를 위한 가장 쉬운 방법은 Visual Studio 명령 프롬프트를 사용하는 것입니다.이 프롬프트를 열려면 **시작**을 클릭하고 **모든 프로그램**을 선택한 다음 아래로 스크롤하여 **Visual Studio 2010**에서 **Visual Studio 도구**를 선택합니다. 그런 다음 **Visual Studio 명령 프롬프트\(2010\)**를 마우스 오른쪽 단추로 클릭하고 **관리자 권한으로 실행**을 클릭합니다.Visual Studio Express Edition 중 하나가 설치되어 있어 이 명령 프롬프트를 사용할 수 없는 경우에는 시스템 경로에 "C:\\Windows\\Microsoft.Net\\Framework\\v4.0"을 추가해야 합니다.  
+>  <span data-ttu-id="c63d0-108">모든 명령을 로컬 관리자 계정으로 실행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-108">You must run all commands under a local administrator account.</span></span> <span data-ttu-id="c63d0-109">Windows 7, [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] 또는 Windows Server 2008 R2를 사용하는 경우에는 높은 권한으로 명령 프롬프트를 실행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-109">If you are using Windows 7, [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)], or Windows Server 2008 R2, you must also run the command prompt with elevated privileges.</span></span> <span data-ttu-id="c63d0-110">이렇게 하려면 명령 프롬프트 아이콘을 마우스 오른쪽 단추로 클릭 하 고 클릭 **관리자 권한으로 실행**합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-110">To do so, right-click the command prompt icon, and then click **Run as administrator**.</span></span> <span data-ttu-id="c63d0-111">이 항목의 모든 명령은 경로 설정이 적절한 명령 프롬프트에서 실행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-111">All commands in this topic must be run in a command prompt that has the appropriate path settings.</span></span>  <span data-ttu-id="c63d0-112">이를 위한 가장 쉬운 방법은 Visual Studio 명령 프롬프트를 사용하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-112">The easiest way to ensure this is by using the Visual Studio Command Prompt.</span></span> <span data-ttu-id="c63d0-113">이 프롬프트를 열려면 클릭 **시작**선택, **모든 프로그램**까지 아래로 스크롤하고 **Visual Studio 2010**선택, **Visual Studio Tools**, 마우스 오른쪽 단추로 클릭 **Visual Studio 명령 프롬프트 (2010)**, 클릭 하 고 **관리자 권한으로 실행**합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-113">To open this prompt, click **Start**, select **All Programs**, scroll down to **Visual Studio 2010**, select **Visual Studio Tools**, right-click **Visual Studio Command Prompt (2010)**, and then click **Run as administrator**.</span></span> <span data-ttu-id="c63d0-114">Visual Studio Express Edition 중 하나가 설치되어 있어 이 명령 프롬프트를 사용할 수 없는 경우에는 시스템 경로에 "C:\Windows\Microsoft.Net\Framework\v4.0"을 추가해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-114">If you have one of the Visual Studio Express editions installed, this command prompt is not available, and you will have to add "C:\Windows\Microsoft.Net\Framework\v4.0" to the system path.</span></span>  
   
-### WCF 샘플의 일회 설치 절차  
+### <a name="one-time-setup-procedure-for-wcf-samples"></a><span data-ttu-id="c63d0-115">WCF 샘플의 일회 설치 절차</span><span class="sxs-lookup"><span data-stu-id="c63d0-115">One-time setup procedure for WCF samples</span></span>  
   
-1.  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]이 설치되어 있는지 확인합니다.[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 설정 방법에 대한 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]는 [인터넷 정보 서비스 호스팅 지침](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)을 참조하십시오.  
+1.  <span data-ttu-id="c63d0-116">[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]이 설치되어 있는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-116">Ensure that [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] is set up.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="c63d0-117">설정 하는 방법 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], 참조 [인터넷 정보 서비스 호스팅 지침](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-117"> how to set up [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], see [Internet Information Service Hosting Instructions](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).</span></span>  
   
-2.  [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]이 설치되어 있는지 확인합니다.**\\Windows\\Microsoft.NET\\Framework** 디렉터리에서 v4.0\(또는 이후 버전\)을 검색합니다.  
+2.  <span data-ttu-id="c63d0-118">[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]이 설치되어 있는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-118">Ensure that [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] is installed.</span></span> <span data-ttu-id="c63d0-119">V 4.0에 대 한 디렉터리 (또는 이후 버전)에서 다음 검색: **\Windows\Microsoft.NET\Framework**</span><span class="sxs-lookup"><span data-stu-id="c63d0-119">Search the following directory for v4.0 (or later): **\Windows\Microsoft.NET\Framework**</span></span>  
   
-3.  [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]이 설치되어 있지 않고 운영 체제가 Windows Server 2008 SP2 이상이 아닌 경우 [핫픽스 251798](http://go.microsoft.com/fwlink/?LinkId=184693)을 설치합니다.  
+3.  <span data-ttu-id="c63d0-120">경우 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 설치 되지 않은 운영 체제가 Windows Server 2008 SP2 또는 이상 버전에서는 설치 [핫픽스 251798](http://go.microsoft.com/fwlink/?LinkId=184693)합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-120">If [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] is not installed, and your operating system is not Windows Server 2008 SP2 or later, install [Hotfix 251798](http://go.microsoft.com/fwlink/?LinkId=184693).</span></span>  
   
-4.  다음 명령을 실행합니다.이러한 명령을 실행해야 하는 이유에 대한 자세한 내용은 [IIS Hosted Service Fails](http://msdn.microsoft.com/ko-kr/ee5499fc-1b10-4cda-a9b1-13dba70f05f8)를 참조하십시오.  
+4.  <span data-ttu-id="c63d0-121">다음 명령을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-121">Run the following commands.</span></span> <span data-ttu-id="c63d0-122">이러한 명령은 실행 해야 하는 이유에 대 한 자세한 내용은 참조 하십시오. [IIS 호스팅된 서비스가 실패 하면](http://msdn.microsoft.com/en-us/ee5499fc-1b10-4cda-a9b1-13dba70f05f8)합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-122">For more information about why these commands must be run, see [IIS Hosted Service Fails](http://msdn.microsoft.com/en-us/ee5499fc-1b10-4cda-a9b1-13dba70f05f8).</span></span>  
   
     > [!WARNING]
-    >  IIS가 다시 설치된 경우 다음 명령을 다시 실행해야 합니다.  
+    >  <span data-ttu-id="c63d0-123">IIS가 다시 설치된 경우 다음 명령을 다시 실행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-123">If IIS is reinstalled, the following commands will need to be run again.</span></span>  
   
     ```  
     "%WINDIR%\Microsoft.Net\Framework\v4.0.30319\aspnet_regiis" –i –enable  
@@ -43,54 +46,54 @@ caps.handback.revision: 83
     ```  
   
     > [!WARNING]
-    >  `aspnet_regiis –i –enable` 명령을 실행하면 [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]을 사용하여 기본 응용 프로그램 풀이 실행됩니다. 이 경우 동일한 컴퓨터의 다른 응용 프로그램에 비호환 문제가 발생할 수 있습니다.  
+    >  <span data-ttu-id="c63d0-124">명령을 실행 `aspnet_regiis –i –enable` 기본 응용 프로그램 풀이 사용 하 여 실행 하면 [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]를 동일한 컴퓨터에서 다른 응용 프로그램에 대 한 비 호환성 문제가 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-124">Running the command `aspnet_regiis –i –enable` will make the Default App Pool run using [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], which may produce incompatibility issues for other applications on the same computer.</span></span>  
   
-5.  [방화벽 지침](../../../../docs/framework/wcf/samples/firewall-instructions.md)에 따라 샘플에서 사용하는 포트를 활성화합니다.  
+5.  <span data-ttu-id="c63d0-125">에 따라는 [방화벽 지침](../../../../docs/framework/wcf/samples/firewall-instructions.md) 예제에서 사용 되는 포트를 사용 하도록 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-125">Follow the [Firewall Instructions](../../../../docs/framework/wcf/samples/firewall-instructions.md) for enabling the ports used by the samples.</span></span>  
   
-6.  \<InstallDrive\>:**\\WF\_WCF\_Samples** 기본 디렉터리를 확인합니다.샘플이 이전에 설치된 경우 이 디렉터리가 기본 디렉터리입니다.  
+6.  <span data-ttu-id="c63d0-126">다음 기본 디렉터리에 대 한 확인: \<InstallDrive >:**\WF_WCF_Samples**합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-126">Check for the following default directory: \<InstallDrive>:**\WF_WCF_Samples**.</span></span> <span data-ttu-id="c63d0-127">샘플이 이전에 설치된 경우 이 디렉터리가 기본 디렉터리입니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-127">If the samples were previously installed, this is the default directory.</span></span>  
   
-7.  샘플이 설치되어 있지 않은 경우에는 [Visual C\#](http://go.microsoft.com/fwlink/?LinkId=190939) 또는 [Visual Basic](http://go.microsoft.com/fwlink/?LinkID=193373)에 대한 샘플 다운로드 위치에서 샘플을 설치합니다.  
+7.  <span data-ttu-id="c63d0-128">샘플이 설치 되지 않은 경우에 대 한 샘플 다운로드 위치에서 설치 [Visual C#](http://go.microsoft.com/fwlink/?LinkId=190939) 또는 [Visual Basic](http://go.microsoft.com/fwlink/?LinkID=193373)합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-128">If the samples are not installed, install them from the samples download location for [Visual C#](http://go.microsoft.com/fwlink/?LinkId=190939) or [Visual Basic](http://go.microsoft.com/fwlink/?LinkID=193373).</span></span>  
   
-8.  샘플을 설치한 후 \<InstallDrive\>:**\\WF\_WCF\_Samples\\WCF\\Setup\\**으로 이동합니다.  
+8.  <span data-ttu-id="c63d0-129">샘플을 설치한 후로 이동: \<InstallDrive >:**\WF_WCF_Samples\WCF\Setup\\**</span><span class="sxs-lookup"><span data-stu-id="c63d0-129">After installing the samples, go to : \<InstallDrive>:**\WF_WCF_Samples\WCF\Setup\\**</span></span>  
   
-9. **Setupvroot.bat** 배치 파일을 실행합니다.다음 단계가 수행됩니다.  
+9. <span data-ttu-id="c63d0-130">실행 된 **Setupvroot.bat** 배치 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-130">Run the **Setupvroot.bat** batch file.</span></span> <span data-ttu-id="c63d0-131">다음 단계가 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-131">The following steps are performed:</span></span>  
   
-    -   IIS에 ServiceModelSamples라는 가상 디렉터리가 만들어집니다.  
+    -   <span data-ttu-id="c63d0-132">IIS에 ServiceModelSamples라는 가상 디렉터리가 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-132">A virtual directory is created in IIS named ServiceModelSamples.</span></span>  
   
-    -   %SystemDrive%\\Inetpub\\wwwroot\\ServiceModelSamples and %SystemDrive%\\Inetpub\\wwwroot\\ServiceModelSamples\\bin이라는 새 디스크 디렉터리가 만들어집니다.  
+    -   <span data-ttu-id="c63d0-133">%SystemDrive%\Inetpub\wwwroot\ServiceModelSamples and %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples\bin이라는 새 디스크 디렉터리가 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-133">New disk directories are created named %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples and %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples\bin.</span></span>  
   
-     이러한 디렉터리를 수동으로 설정하려면 [가상 디렉터리 설치 지침](../../../../docs/framework/wcf/samples/virtual-directory-setup-instructions.md)을 참조하십시오.이 단계에서 수행한 모든 변경 작업을 되돌리려면 샘플 사용을 마친 후 cleanupvroot.bat를 실행합니다.  
-  
-    > [!NOTE]
-    >  cleanupvroot.bat가 실행되지 않은 경우 이 절차는 한 컴퓨터에서 한 번만 수행해야 합니다.  
-  
-10. 샘플을 빌드 중인 계정과 Network Service 사용자에 %SystemDrive%\\inetpub\\wwwroot에 대한 수정 권한을 부여해야 합니다.빌드하는 동안 일부 웹 호스팅 샘플은 컴파일된 이진 파일을 앞에서 설명한 위치에 복사하려고 시도하므로 적절한 사용 권한이 설정되지 않은 경우 빌드가 중지됩니다.또는 사용 권한을 그대로 유지하고 SDK 명령 프롬프트 또는 Visual Studio 명령 프롬프트\(2012\)를 관리자 권한으로 실행하거나, 관리자 권한으로 실행되는 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]에서 샘플을 빌드할 수도 있습니다.  
+     <span data-ttu-id="c63d0-134">이러한 디렉터리를 수동으로 설정 하는 것을 선호 하는 경우 참조는 [가상 디렉터리 설치 지침](../../../../docs/framework/wcf/samples/virtual-directory-setup-instructions.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-134">If you prefer to set up these directories manually, see the [Virtual Directory Setup Instructions](../../../../docs/framework/wcf/samples/virtual-directory-setup-instructions.md).</span></span> <span data-ttu-id="c63d0-135">이 단계에서 수행한 모든 변경 작업을 되돌리려면 샘플 사용을 마친 후 cleanupvroot.bat를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-135">To revert all changes done in this step, run cleanupvroot.bat after you finish using the samples.</span></span>  
   
     > [!NOTE]
-    >  이 단계를 완료하지 않으면 IIS에서 호스팅되는 모든 샘플이 빌드 중에 실패합니다.사용 권한을 올바르게 설정했는지 확인하거나 SDK 명령 프롬프트와 Visual Studio 명령 프롬프트\(2012\)를 관리자 권한으로 실행하십시오.  
+    >  <span data-ttu-id="c63d0-136">cleanupvroot.bat가 실행되지 않은 경우 이 절차는 한 컴퓨터에서 한 번만 수행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-136">This procedure must be performed only once on a computer, unless cleanupvroot.bat is run.</span></span>  
   
-11. 컴퓨터에 C:\\logs 디렉터리를 만듭니다. 일부 샘플에 이 디렉터리가 필요할 수 있습니다.적절한 계정에 이 폴더에 대한 쓰기 권한을 부여해야 합니다.이 계정은 Windows 7, [!INCLUDE[wv](../../../../includes/wv-md.md)] 및 Windows Server 2008 R2의 경우 **Network Service**이고,[!INCLUDE[lserver](../../../../includes/lserver-md.md)]의 경우 NT Authority\\Network Service이며,[!INCLUDE[wxp](../../../../includes/wxp-md.md)] 및 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]의 경우에는 ASPNET입니다.  
-  
-12. Setupcerttool.bat 파일을 실행합니다.이 파일은 \<InstallPath\>\\WF\_WCF\_Samples\\WCF\\Setup\\ 폴더에 있습니다.이 스크립트는 다음 작업을 수행합니다.  
-  
-    -   FindPrivateKey 도구를 빌드합니다.  
-  
-    -   %ProgramFiles%\\ServiceModelSampleTools라는 디렉터리를 만듭니다.  
-  
-    -   이 디렉터리에 새 FindPrivateKey 도구를 복사합니다.  
-  
-     이 도구는 인증서를 사용하고 IIS에서 호스팅되는 샘플에 필요합니다.  
+10. <span data-ttu-id="c63d0-137">샘플을 빌드 중인 계정과 Network Service 사용자에 %SystemDrive%\inetpub\wwwroot에 대한 수정 권한을 부여해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-137">You must grant permission to modify for %SystemDrive%\inetpub\wwwroot to the account under which you are building the samples and the Network Service user.</span></span> <span data-ttu-id="c63d0-138">빌드하는 동안 일부 웹 호스팅 샘플은 컴파일된 이진 파일을 앞에서 설명한 위치에 복사하려고 시도하므로 적절한 사용 권한이 설정되지 않은 경우 빌드가 중지됩니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-138">While building, some Web-hosted samples might attempt to copy the compiled binaries to the previously mentioned location, and if you have not set the appropriate permissions, the build will break.</span></span> <span data-ttu-id="c63d0-139">또는 사용 권한을 그대로 유지하고 SDK 명령 프롬프트 또는 Visual Studio 명령 프롬프트(2012)를 관리자 권한으로 실행하거나, 관리자 권한으로 실행되는 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]에서 샘플을 빌드할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-139">Alternatively, you can leave the permissions as they are and run the SDK command prompt or Visual Studio Command Prompt (2012) as Administrator, or build the samples in [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], also run as Administrator.</span></span>  
   
     > [!NOTE]
-    >  보안을 위해 샘플 사용이 끝나면 Cleanupvroot.bat라는 배치 파일을 실행하여 설치 단계에서 부여된 가상 디렉터리 정의와 사용 권한을 제거해야 합니다.  
+    >  <span data-ttu-id="c63d0-140">이 단계를 완료하지 않으면 IIS에서 호스팅되는 모든 샘플이 빌드 중에 실패합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-140">If this step is not completed, all IIS-hosted samples will fail while building.</span></span> <span data-ttu-id="c63d0-141">사용 권한을 올바르게 설정했는지 확인하거나 SDK 명령 프롬프트와 Visual Studio 명령 프롬프트(2012)를 관리자 권한으로 실행하십시오.</span><span class="sxs-lookup"><span data-stu-id="c63d0-141">Ensure that you set the permissions correctly, or run both the SDK command prompt and Visual Studio Command Prompt (2012) as Administrator.</span></span>  
   
-13. IIS에서 호스팅되지 않고 자체 호스팅되는 샘플의 경우 수신 대기를 위해 컴퓨터에서 HTTP 주소를 등록할 수 있는 권한이 필요합니다.HTTP 네임스페이스 예약을 위한 사용 권한은 샘플을 실행하는 데 사용되는 사용자 계정에서 제공됩니다.기본적으로 관리자 계정에는 모든 HTTP 주소를 등록할 수 있는 사용 권한이 있습니다.관리자 이외의 계정에는 샘플에 사용되는 HTTP 네임스페이스에 대한 권한을 부여해야 합니다.네임스페이스 예약을 구성하는 방법에 대한 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]는 [HTTP 및 HTTPS 구성](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)을 참조하십시오.  
+11. <span data-ttu-id="c63d0-142">컴퓨터에 C:\logs 디렉터리를 만듭니다. 일부 샘플에 이 디렉터리가 필요할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-142">Create a C:\logs directory on the computer; some samples might be expecting it.</span></span> <span data-ttu-id="c63d0-143">적절한 계정에 이 폴더에 대한 쓰기 권한을 부여해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-143">Make sure that the appropriate account has write access granted to this folder.</span></span> <span data-ttu-id="c63d0-144">Windows 7 용 [!INCLUDE[wv](../../../../includes/wv-md.md)], Windows Server 2008 r 2는이 계정은 **네트워크 서비스**합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-144">For Windows 7, [!INCLUDE[wv](../../../../includes/wv-md.md)], and Windows Server 2008 R2, this account is **Network Service**.</span></span> <span data-ttu-id="c63d0-145">[!INCLUDE[lserver](../../../../includes/lserver-md.md)]의 경우 NT Authority\Network Service이며,</span><span class="sxs-lookup"><span data-stu-id="c63d0-145">For  [!INCLUDE[lserver](../../../../includes/lserver-md.md)], the account is NT Authority\Network Service.</span></span> <span data-ttu-id="c63d0-146">[!INCLUDE[wxp](../../../../includes/wxp-md.md)] 및 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]의 경우에는 ASPNET입니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-146">For [!INCLUDE[wxp](../../../../includes/wxp-md.md)] and [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], the account is ASPNET.</span></span>  
   
-14. 일부 샘플에는 메시지 큐가 필요합니다.설치 방법을 보려면 [메시지 큐\(MSMQ\) 설치](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)를 참조하십시오.  
+12. <span data-ttu-id="c63d0-147">Setupcerttool.bat 파일을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-147">Run the Setupcerttool.bat file.</span></span> <span data-ttu-id="c63d0-148">이 파일은 \<InstallPath > \WF_WCF_Samples\WCF\Setup\ 폴더입니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-148">This file is located in the  \<InstallPath>\WF_WCF_Samples\WCF\Setup\  folder.</span></span>  <span data-ttu-id="c63d0-149">이 스크립트는 다음 작업을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-149">This script will perform the following tasks:</span></span>  
+  
+    -   <span data-ttu-id="c63d0-150">FindPrivateKey 도구를 빌드합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-150">Build the FindPrivateKey tool.</span></span>  
+  
+    -   <span data-ttu-id="c63d0-151">%ProgramFiles%\ServiceModelSampleTools라는 디렉터리를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-151">Create a directory called %ProgramFiles%\ServiceModelSampleTools.</span></span>  
+  
+    -   <span data-ttu-id="c63d0-152">이 디렉터리에 새 FindPrivateKey 도구를 복사합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-152">Copy the new FindPrivateKey tool to this directory.</span></span>  
+  
+     <span data-ttu-id="c63d0-153">이 도구는 인증서를 사용하고 IIS에서 호스팅되는 샘플에 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-153">This tool is required by samples that use certificates and are hosted in IIS.</span></span>  
   
     > [!NOTE]
-    >  메시지 큐가 필요한 샘플을 실행하려면 먼저 MSMQ 서비스를 시작해야 합니다.  
+    >  <span data-ttu-id="c63d0-154">보안을 위해 샘플 사용이 끝나면 Cleanupvroot.bat라는 배치 파일을 실행하여 설치 단계에서 부여된 가상 디렉터리 정의와 사용 권한을 제거해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-154">For security purposes, remember to remove the virtual directory definition and permissions granted in the setup steps above by running the batch file named Cleanupvroot.bat after you are finished with the samples.</span></span>  
   
-15. 일부 샘플에는 인증서가 필요합니다.[IIS\(인터넷 정보 서비스\) 서버 인증서 설치 지침](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)을 참조하십시오.  
+13. <span data-ttu-id="c63d0-155">IIS에서 호스팅되지 않고 자체 호스팅되는 샘플의 경우 수신 대기를 위해 컴퓨터에서 HTTP 주소를 등록할 수 있는 권한이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-155">Samples that are self-hosted (not hosted in IIS) require permission to register HTTP addresses on the computer for listening.</span></span> <span data-ttu-id="c63d0-156">HTTP 네임스페이스 예약을 위한 사용 권한은 샘플을 실행하는 데 사용되는 사용자 계정에서 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-156">The permission for an HTTP namespace reservation comes from the user account used to run the sample.</span></span> <span data-ttu-id="c63d0-157">기본적으로 관리자 계정에는 모든 HTTP 주소를 등록할 수 있는 사용 권한이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-157">By default, administrator accounts have the permission to register any HTTP address.</span></span> <span data-ttu-id="c63d0-158">관리자 이외의 계정에는 샘플에 사용되는 HTTP 네임스페이스에 대한 권한을 부여해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-158">Non-administrator accounts must be granted permission for the HTTP namespaces used by the samples.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="c63d0-159">네임 스페이스 예약을 구성을 참조 하는 방법 [HTTP 및 HTTPS 구성](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-159"> how to configure namespace reservations, see [Configuring HTTP and HTTPS](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md).</span></span>  
   
-## 참고 항목
+14. <span data-ttu-id="c63d0-160">일부 샘플에는 메시지 큐가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-160">Some samples require Message Queuing.</span></span> <span data-ttu-id="c63d0-161">참조 [설치 메시지 큐 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md) 설치 지침에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-161">See [Installing Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md) for installation instructions.</span></span>  
+  
+    > [!NOTE]
+    >  <span data-ttu-id="c63d0-162">메시지 큐가 필요한 샘플을 실행하려면 먼저 MSMQ 서비스를 시작해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-162">Ensure that you start the MSMQ service before you run any samples that require Message Queuing.</span></span>  
+  
+15. <span data-ttu-id="c63d0-163">일부 샘플에는 인증서가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-163">Some samples require certificates.</span></span> <span data-ttu-id="c63d0-164">참조 [인터넷 정보 서비스 (IIS) 서버 인증서 설치 지침](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="c63d0-164">See [Internet Information Services (IIS) Server Certificate Installation Instructions](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="c63d0-165">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c63d0-165">See Also</span></span>

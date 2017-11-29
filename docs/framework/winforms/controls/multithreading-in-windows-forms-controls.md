@@ -1,53 +1,53 @@
 ---
-title: "Windows Forms 컨트롤의 다중 스레딩 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "BackgroundWorker 구성 요소"
-  - "BeginInvoke 메서드"
-  - "스레딩[Windows Forms], 컨트롤"
+title: "Windows Forms 컨트롤의 다중 스레딩"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- BackgroundWorker component
+- threading [Windows Forms], controls
 ms.assetid: c311d652-0f26-45fa-bdcc-b1615d73ce4e
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c4651ca9707dcf0fac2edea0f004275cfcf18cf2
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/22/2017
 ---
-# Windows Forms 컨트롤의 다중 스레딩
-응용 프로그램에서 시간이 많이 걸리는 작업을 다른 스레드에서 수행하여 UI\(사용자 인터페이스\)의 응답 기능을 향상시킬 수 있는 경우가 많습니다.  <xref:System.Threading> 네임스페이스, <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=fullName> 메서드 및 `BackgroundWorker` 구성 요소를 비롯한 수많은 도구를 사용하여 Windows Forms 컨트롤을 다중 스레딩할 수 있습니다.  
+# <a name="multithreading-in-windows-forms-controls"></a><span data-ttu-id="d6da9-102">Windows Forms 컨트롤의 다중 스레딩</span><span class="sxs-lookup"><span data-stu-id="d6da9-102">Multithreading in Windows Forms Controls</span></span>
+<span data-ttu-id="d6da9-103">대부분의 응용 프로그램을 만들면 사용자 인터페이스 (UI) 응답성 다른 스레드에서 시간이 많이 걸리는 작업을 수행 하 여 됩니다.</span><span class="sxs-lookup"><span data-stu-id="d6da9-103">In many applications, you can make your user interface (UI) more responsive by performing time-consuming operations on another thread.</span></span> <span data-ttu-id="d6da9-104">여러 가지 도구에 사용할 수 있는 다중 스레딩을 포함 하 여 Windows Forms 컨트롤은 <xref:System.Threading> 네임 스페이스는 <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> 메서드를 및 `BackgroundWorker` 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="d6da9-104">A number of tools are available for multithreading your Windows Forms controls, including the <xref:System.Threading> namespace, the <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> method, and the `BackgroundWorker` component.</span></span>  
   
 > [!NOTE]
->  `BackgroundWorker`는 <xref:System.Threading> 네임스페이스와 <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=fullName> 메서드를 대체하고 여기에 다른 기능을 추가하여 새로 도입된 구성 요소이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 이러한 네임스페이스와 메서드를 계속 유지하도록 선택할 수 있습니다.  자세한 내용은 [BackgroundWorker 구성 요소 개요](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)를 참조하십시오.  
+>  <span data-ttu-id="d6da9-105">`BackgroundWorker` 대체 하 고 기능을 추가 하는 구성 요소는 <xref:System.Threading> 네임 스페이스 및 <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> 메서드도 있습니다; 그러나 이러한 됩니다 유지의 이전 버전과 호환성 및 이후 사용 하도록 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d6da9-105">The `BackgroundWorker` component replaces and adds functionality to the <xref:System.Threading> namespace and the <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> method; however, these are retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="d6da9-106">자세한 내용은 참조 [BackgroundWorker 구성 요소 개요](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="d6da9-106">For more information, see [BackgroundWorker Component Overview](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).</span></span>  
   
-## 단원 내용  
- [방법: 스레드로부터 안전한 방식으로 Windows Forms 컨트롤 호출](../../../../docs/framework/winforms/controls/how-to-make-thread-safe-calls-to-windows-forms-controls.md)  
- 스레드로부터 안전한 방식으로 Windows Forms 컨트롤을 호출하는 방법을 보여 줍니다.  
+## <a name="in-this-section"></a><span data-ttu-id="d6da9-107">단원 내용</span><span class="sxs-lookup"><span data-stu-id="d6da9-107">In This Section</span></span>  
+ [<span data-ttu-id="d6da9-108">방법: 스레드로부터 안전한 방식으로 Windows Forms 컨트롤 호출</span><span class="sxs-lookup"><span data-stu-id="d6da9-108">How to: Make Thread-Safe Calls to Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/how-to-make-thread-safe-calls-to-windows-forms-controls.md)  
+ <span data-ttu-id="d6da9-109">Windows Forms 컨트롤에 스레드로부터 안전한 호출을 수행 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="d6da9-109">Shows how to make thread-safe calls to Windows Forms controls.</span></span>  
   
- [방법: 백그라운드 스레드를 사용하여 파일 검색](../../../../docs/framework/winforms/controls/how-to-use-a-background-thread-to-search-for-files.md)  
- <xref:System.Threading> 네임스페이스와 <xref:System.Windows.Forms.Control.BeginInvoke%2A> 메서드를 사용하여 파일을 비동기적으로 검색하는 방법을 보여 줍니다.  
+ [<span data-ttu-id="d6da9-110">방법: 백그라운드 스레드를 사용하여 파일 검색</span><span class="sxs-lookup"><span data-stu-id="d6da9-110">How to: Use a Background Thread to Search for Files</span></span>](../../../../docs/framework/winforms/controls/how-to-use-a-background-thread-to-search-for-files.md)  
+ <span data-ttu-id="d6da9-111">사용 하는 방법을 보여 줍니다.는 <xref:System.Threading> 네임 스페이스 및 <xref:System.Windows.Forms.Control.BeginInvoke%2A> 메서드를 비동기적으로 파일을 검색 합니다.</span><span class="sxs-lookup"><span data-stu-id="d6da9-111">Shows how to use the <xref:System.Threading> namespace and the <xref:System.Windows.Forms.Control.BeginInvoke%2A> method to search for files asynchronously.</span></span>  
   
-## 참조  
+## <a name="reference"></a><span data-ttu-id="d6da9-112">참조</span><span class="sxs-lookup"><span data-stu-id="d6da9-112">Reference</span></span>  
  <xref:System.ComponentModel.BackgroundWorker>  
- 비동기 작업을 위해 작업자 스레드를 캡슐화하는 구성 요소를 설명합니다.  
+ <span data-ttu-id="d6da9-113">비동기 작업에 대 한 작업자 스레드를 캡슐화 하는 구성 요소에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="d6da9-113">Documents a component that encapsulates a worker thread for asynchronous operations.</span></span>  
   
  <xref:System.Media.SoundPlayer.LoadAsync%2A>  
- 소리를 비동기적으로 로드하는 방법을 설명합니다.  
+ <span data-ttu-id="d6da9-114">비동기적으로 소리를 로드 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="d6da9-114">Documents how to load a sound asynchronously.</span></span>  
   
  <xref:System.Windows.Forms.PictureBox.LoadAsync%2A>  
- 이미지를 비동기적으로 로드하는 방법을 설명합니다.  
+ <span data-ttu-id="d6da9-115">이미지를 비동기적으로 로드 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="d6da9-115">Documents how to load an image asynchronously.</span></span>  
   
-## 관련 단원  
- [방법: 백그라운드에서 작업 실행](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
- <xref:System.ComponentModel.BackgroundWorker> 구성 요소를 사용하여 시간이 많이 걸리는 작업을 수행하는 방법을 보여 줍니다.  
+## <a name="related-sections"></a><span data-ttu-id="d6da9-116">관련 단원</span><span class="sxs-lookup"><span data-stu-id="d6da9-116">Related Sections</span></span>  
+ [<span data-ttu-id="d6da9-117">방법: 백그라운드에서 작업 실행</span><span class="sxs-lookup"><span data-stu-id="d6da9-117">How to: Run an Operation in the Background</span></span>](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
+ <span data-ttu-id="d6da9-118">시간이 많이 걸리는 작업을 수행 하는 방법을 보여 줍니다.는 <xref:System.ComponentModel.BackgroundWorker> 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="d6da9-118">Shows how to perform a time-consuming operation with the <xref:System.ComponentModel.BackgroundWorker> component.</span></span>  
   
- [BackgroundWorker 구성 요소 개요](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)  
- <xref:System.ComponentModel.BackgroundWorker> 구성 요소를 비동기 작업에 사용하는 방법을 설명하는 항목을 제공합니다.
+ [<span data-ttu-id="d6da9-119">BackgroundWorker 구성 요소 개요</span><span class="sxs-lookup"><span data-stu-id="d6da9-119">BackgroundWorker Component Overview</span></span>](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)  
+ <span data-ttu-id="d6da9-120">사용 하는 방법을 설명 하는 항목을 제공 된 <xref:System.ComponentModel.BackgroundWorker> 비동기 작업에 대 한 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="d6da9-120">Provides topics that describe how to use the <xref:System.ComponentModel.BackgroundWorker> component for asynchronous operations.</span></span>

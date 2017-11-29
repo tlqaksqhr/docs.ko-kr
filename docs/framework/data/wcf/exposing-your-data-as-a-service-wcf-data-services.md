@@ -1,40 +1,43 @@
 ---
-title: "데이터를 서비스로 노출(WCF Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-oob"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "시작, WCF Data Services"
-  - "WCF Data Services, 구성"
-  - "WCF Data Services, 시작"
+title: "서비스로 데이터 노출(WCF Data Services)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework-oob
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WCF Data Services, configuring
+- getting started, WCF Data Services
+- WCF Data Services, getting started
 ms.assetid: df0bbcee-f66f-4a88-abb4-4e73c8b9c908
-caps.latest.revision: 2
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 122d05d5e4bd7690f32b22453dccbfaab2fb7f13
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 데이터를 서비스로 노출(WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 Visual Studio와 통합되므로 데이터를 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드로 노출하는 서비스를 보다 쉽게 정의할 수 있습니다.  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드를 노출하는 데이터 서비스를 만들려면 다음 기본 단계를 수행해야 합니다.  
+# <a name="exposing-your-data-as-a-service-wcf-data-services"></a><span data-ttu-id="00b4b-102">서비스로 데이터 노출(WCF Data Services)</span><span class="sxs-lookup"><span data-stu-id="00b4b-102">Exposing Your Data as a Service (WCF Data Services)</span></span>
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="00b4b-103">데이터를 노출 하는 서비스를 보다 쉽게 정의할 수 있도록 Visual Studio와 통합 되어 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 피드입니다.</span><span class="sxs-lookup"><span data-stu-id="00b4b-103"> integrates with Visual Studio to enable you to more easily define services to expose your data as [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feeds.</span></span> <span data-ttu-id="00b4b-104">노출 하는 데이터 서비스 만들기는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 피드에 필요한 다음과 같은 기본 단계:</span><span class="sxs-lookup"><span data-stu-id="00b4b-104">Creating a data service that exposes an [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed involves the following basic steps:</span></span>  
   
-1.  **데이터 모델** **정의**.  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)를 기반으로 하는 데이터 모델을 기본적으로 지원합니다.  자세한 내용은 [방법: ADO.NET Entity Framework 데이터 원본을 사용하여 데이터 서비스 만들기](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)을 참조하세요.  
+1.  <span data-ttu-id="00b4b-105">**정의** **데이터 모델**합니다.</span><span class="sxs-lookup"><span data-stu-id="00b4b-105">**Define** **the data model**.</span></span> [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]<span data-ttu-id="00b4b-106">기본적으로 기반으로 하는 데이터 모델을 지원는 [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="00b4b-106"> natively supports data models that are based on the [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md).</span></span> <span data-ttu-id="00b4b-107">자세한 내용은 참조 [하는 방법: ADO.NET Entity Framework 데이터 소스를 사용 하 여 데이터 서비스 만들기](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="00b4b-107">For more information, see [How to: Create a Data Service Using an ADO.NET Entity Framework Data Source](../../../../docs/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf.md).</span></span>  
   
-     또한 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 <xref:System.Linq.IQueryable%601> 인터페이스 인스턴스를 반환하는 CLR\(공용 언어 런타임\) 개체를 기반으로 하는 데이터 모델을 지원합니다.  이렇게 하면 .NET Framework의 목록, 어레이 및 컬렉션에 기반하여 데이터 서비스를 배포할 수 있습니다. 이러한 데이터 구조에 생성, 업데이트 및 삭제 작업을 활성화하려면 <xref:System.Data.Services.IUpdatable> 인터페이스도 구현해야 합니다.  자세한 내용은 [방법: 리플렉션 공급자를 사용하여 데이터 서비스 만들기](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)을 참조하세요.  
+     <span data-ttu-id="00b4b-108">또한 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 <xref:System.Linq.IQueryable%601> 인터페이스 인스턴스를 반환하는 CLR(공용 언어 런타임) 개체를 기반으로 하는 데이터 모델을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="00b4b-108">[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] also supports data models that are based on common language runtime (CLR) objects that return an instance of the <xref:System.Linq.IQueryable%601> interface.</span></span> <span data-ttu-id="00b4b-109">따라서 .NET Framework의 목록, 배열 및 컬렉션을 기반으로 하는 데이터 서비스를 배포할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="00b4b-109">This enables you to deploy data services that are based on lists, arrays, and collections in the .NET Framework.</span></span> <span data-ttu-id="00b4b-110">이러한 데이터 구조에 대해 만들기, 업데이트 및 삭제 작업을 수행하려면 <xref:System.Data.Services.IUpdatable> 인터페이스도 구현해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="00b4b-110">To enable create, update, and delete operations over these data structures, you must also implement the <xref:System.Data.Services.IUpdatable> interface.</span></span> <span data-ttu-id="00b4b-111">자세한 내용은 참조 [하는 방법: 리플렉션 공급자를 사용 하 여 데이터 서비스 만들기](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="00b4b-111">For more information, see [How to: Create a Data Service Using the Reflection Provider](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).</span></span>  
   
-     고급 시나리오를 위해 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]에 포함된 공급자 집합을 사용하면 런타임에 바인딩된 데이터 형식을 기반으로 데이터 모델을 정의할 수 있습니다.  자세한 내용은 [사용자 지정 데이터 서비스 공급자](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)을 참조하세요.  
+     <span data-ttu-id="00b4b-112">더 고급 시나리오에 대 한 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 런타임에 바인딩된 데이터 형식을 기반으로 데이터 모델을 정의할 수 있도록 하는 공급자의 집합을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="00b4b-112">For more advanced scenarios, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] includes a set of providers that enable you to define a data model based on late-bound data types.</span></span> <span data-ttu-id="00b4b-113">자세한 내용은 참조 [사용자 지정 데이터 서비스 공급자](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="00b4b-113">For more information, see [Custom Data Service Providers](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md).</span></span>  
   
-2.  **데이터 서비스를 만듭니다.** 가장 기본적인 데이터 서비스는 <xref:System.Data.Services.DataService%601> 클래스에서 상속하는 클래스를 엔터티 컨테이너의 네임스페이스로 정규화된 이름인 `T` 형식으로 노출합니다.  자세한 내용은 [WCF Data Services 정의](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)을 참조하세요.  
+2.  <span data-ttu-id="00b4b-114">**데이터 서비스를 만듭니다.**</span><span class="sxs-lookup"><span data-stu-id="00b4b-114">**Create the data service.**</span></span> <span data-ttu-id="00b4b-115">가장 기본적인 데이터 서비스는 <xref:System.Data.Services.DataService%601> 클래스에서 상속하는 클래스를 엔터티 컨테이너의 네임스페이스로 정규화된 이름인 `T` 형식으로 노출합니다.</span><span class="sxs-lookup"><span data-stu-id="00b4b-115">The most basic data service exposes a class that inherits from the <xref:System.Data.Services.DataService%601> class, with a type `T` that is the namespace-qualified name of the entity container.</span></span> <span data-ttu-id="00b4b-116">자세한 내용은 [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)의 개발 및 배포에 대한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="00b4b-116">For more information, see [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md).</span></span>  
   
-3.  **데이터 서비스 구성.**기본적으로 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]는 엔터티 컨테이너에 의해 노출되는 리소스에 대한 액세스를 비활성화합니다. <xref:System.Data.Services.DataServiceConfiguration> 인터페이스를 사용하면 리소스 및 서비스 작업을 구성 및 액세스하고, 지원되는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 버전을 지정하고, 단일 응답에서 반환될 수 있는 최대 엔터티 수, 일괄 처리 동작과 같은 기타 서비스 전체 동작을 정의할 수 있습니다. 자세한 내용은 [데이터 서비스 구성](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)을 참조하세요.  
+3.  <span data-ttu-id="00b4b-117">**데이터 서비스를 구성 합니다.**</span><span class="sxs-lookup"><span data-stu-id="00b4b-117">**Configure the data service.**</span></span> <span data-ttu-id="00b4b-118">기본적으로 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 는 엔터티 컨테이너에 의해 노출되는 리소스에 액세스할 수 없도록 설정되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="00b4b-118">By default, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] disables access to resources that are exposed by an entity container.</span></span> <span data-ttu-id="00b4b-119"><xref:System.Data.Services.DataServiceConfiguration> 인터페이스를 사용하면 리소스 및 서비스 작업에 대한 액세스를 구성하고 지원되는 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 버전을 지정할 수 있으며 일괄 처리 동작 또는 단일 응답에 반환될 수 있는 최대 엔터티 수와 같은 서비스 전반적인 기타 동작을 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="00b4b-119">The <xref:System.Data.Services.DataServiceConfiguration> interface enables you to configure access to resources and service operations, specify the supported version of [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], and to define other service-wide behaviors, such as batching behaviors or the maximum number of entities that can be returned in a single response.</span></span> <span data-ttu-id="00b4b-120">자세한 내용은 참조 [데이터 서비스 구성](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="00b4b-120">For more information, see [Configuring the Data Service](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).</span></span>  
   
- Northwind 샘플 데이터베이스를 기반으로 하는 간단한 데이터 서비스를 만드는 방법의 예제는 [빠른 시작](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)를 참조하세요.  
+ <span data-ttu-id="00b4b-121">Northwind 샘플 데이터베이스를 기반으로 하는 간단한 데이터 서비스를 만드는 방법의 예제를 보려면 [퀵 스타트](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="00b4b-121">For an example of how to create a simple data service that is based on the Northwind sample database, see [Quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span>  
   
-## 참고 항목  
- [시작](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)   
- [개요](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)
+## <a name="see-also"></a><span data-ttu-id="00b4b-122">참고 항목</span><span class="sxs-lookup"><span data-stu-id="00b4b-122">See Also</span></span>  
+ [<span data-ttu-id="00b4b-123">시작</span><span class="sxs-lookup"><span data-stu-id="00b4b-123">Getting Started</span></span>](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  
+ [<span data-ttu-id="00b4b-124">개요</span><span class="sxs-lookup"><span data-stu-id="00b4b-124">Overview</span></span>](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)
