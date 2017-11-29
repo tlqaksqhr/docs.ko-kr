@@ -1,76 +1,59 @@
 ---
-title: "방법: 속성 (Visual Basic)에서 값 가져오기 | Microsoft 문서"
+title: "방법: 속성에서 값 가져오기(Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- property values
+- property values [Visual Basic]
 - Visual Basic code, procedures
-- values, properties
+- values [Visual Basic], properties
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 7487e4cde724c46a193639f2ad116d25e4ff834c
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 6cde5408ea09398a79a3da01ae9b2d0202c58eaf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-get-a-value-from-a-property-visual-basic"></a>방법: 속성에서 값 가져오기(Visual Basic)
-식에서 속성 이름을 포함 하 여 속성의 값을 검색 합니다.  
+# <a name="how-to-get-a-value-from-a-property-visual-basic"></a><span data-ttu-id="b6b43-102">방법: 속성에서 값 가져오기(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b6b43-102">How to: Get a Value from a Property (Visual Basic)</span></span>
+<span data-ttu-id="b6b43-103">식에서 속성 이름을 포함 하 여 속성의 값을 검색 합니다.</span><span class="sxs-lookup"><span data-stu-id="b6b43-103">You retrieve a property's value by including the property name in an expression.</span></span>  
   
- 속성의 `Get` 프로시저는 값을 검색 하지만 호출 하지 않으면 명시적으로 그 이름으로 합니다. 변수를 사용할 때와 마찬가지로 속성을 사용 합니다. [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]에서는 속성의 프로시저를 호출 합니다.  
+ <span data-ttu-id="b6b43-104">속성의 `Get` 프로시저는 값을 검색 하지만 호출 하지 않으면 명시적으로 해당 이름으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="b6b43-104">The property's `Get` procedure retrieves the value, but you do not explicitly call it by name.</span></span> <span data-ttu-id="b6b43-105">변수를 사용할 때와 마찬가지로 속성을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="b6b43-105">You use the property just as you would use a variable.</span></span> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="b6b43-106">에서는 속성의 프로시저를 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="b6b43-106"> makes the calls to the property's procedures.</span></span>  
   
-### <a name="to-retrieve-a-value-from-a-property"></a>속성에서 값을 검색 하려면  
+### <a name="to-retrieve-a-value-from-a-property"></a><span data-ttu-id="b6b43-107">속성에서 값을 검색 하려면</span><span class="sxs-lookup"><span data-stu-id="b6b43-107">To retrieve a value from a property</span></span>  
   
-1.  변수 이름을 사용할 것 같은 방법으로 식에서 속성 이름을 사용 합니다. 속성을 사용 하 여 어디서 나 변수 또는 상수를 사용할 수 있습니다.  
+1.  <span data-ttu-id="b6b43-108">변수 이름을 사용할 것 같은 방법으로 식에서 속성 이름을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="b6b43-108">Use the property name in an expression the same way you would use a variable name.</span></span> <span data-ttu-id="b6b43-109">속성을 사용 하 여 아무 곳 이나 변수 또는 상수를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b6b43-109">You can use a property anywhere you can use a variable or a constant.</span></span>  
   
-     또는  
+     <span data-ttu-id="b6b43-110">또는</span><span class="sxs-lookup"><span data-stu-id="b6b43-110">-or-</span></span>  
   
-     다음에 오는 속성 이름을 사용 하 여 (`=`) 대입문에 로그인 합니다.  
+     <span data-ttu-id="b6b43-111">다음에 오는 속성 이름을 사용 하 여 (`=`) 대입문에 로그인 합니다.</span><span class="sxs-lookup"><span data-stu-id="b6b43-111">Use the property name following the equal (`=`) sign in an assignment statement.</span></span>  
   
-     다음 예제에서는 값을 읽었습니다는 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] `Now` 암시적으로 호출 하는 속성을 해당 `Get` 프로시저입니다.  
+     <span data-ttu-id="b6b43-112">다음 예제에서는 값을 읽었습니다는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] `Now` 속성을 호출 하는 암시적으로 해당 `Get` 프로시저입니다.</span><span class="sxs-lookup"><span data-stu-id="b6b43-112">The following example reads the value of the [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] `Now` property, implicitly calling its `Get` procedure.</span></span>  
   
-     [!code-vb[VbVbalrDateProperties #&4;](./codesnippet/VisualBasic/how-to-get-a-value-from-a-property_1.vb)]  
+     [!code-vb[VbVbalrDateProperties#4](./codesnippet/VisualBasic/how-to-get-a-value-from-a-property_1.vb)]  
   
-2.  인수를 사용 하는 속성을 괄호로 묶어 인수 목록 속성 이름 뒤에. 필요에 따라 인수가 있을 경우 괄호를 생략할 수 있습니다.  
+2.  <span data-ttu-id="b6b43-113">인수를 사용 하는 속성, 속성 이름으로를 인수 목록을 묶는 괄호를 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="b6b43-113">If the property takes arguments, follow the property name with parentheses to enclose the argument list.</span></span> <span data-ttu-id="b6b43-114">인수가 없는 경우에 필요에 따라 괄호를 생략할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b6b43-114">If there are no arguments, you can optionally omit the parentheses.</span></span>  
   
-3.  인수를 괄호로 묶고 쉼표로 구분 된 인수 목록에 배치 합니다. 속성은 해당 매개 변수를 정의 하는 동일한 순서 대로 인수를 지정 해야 합니다.  
+3.  <span data-ttu-id="b6b43-115">쉼표로 구분 하 여는 괄호 안에 인수 목록에서 인수를 배치 합니다.</span><span class="sxs-lookup"><span data-stu-id="b6b43-115">Place the arguments in the argument list within the parentheses, separated by commas.</span></span> <span data-ttu-id="b6b43-116">속성은 해당 매개 변수를 정의 하는 동일한 순서로 인수를 지정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b6b43-116">Be sure you supply the arguments in the same order that the property defines the corresponding parameters.</span></span>  
   
- 변수 처럼 식에 참여 하는 속성의 값 또는 상수 또는 변수 또는 대입문의 왼쪽에는 속성에 저장 됩니다.  
+ <span data-ttu-id="b6b43-117">방금 변수로 식에 참여 하는 속성의 값 또는 상수 또는 변수 또는 속성 대입문의 왼쪽에 저장 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b6b43-117">The value of the property participates in the expression just as a variable or constant would, or it is stored in the variable or property on the left side of the assignment statement.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [프로시저](./index.md)   
- [속성 프로시저](./property-procedures.md)   
- [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)   
- [Property 문](../../../../visual-basic/language-reference/statements/property-statement.md)   
- [Visual Basic에서 속성과 변수의 차이점](./differences-between-properties-and-variables.md)   
- [방법: 속성 만들기](./how-to-create-a-property.md)   
- [방법: 액세스 수준이 혼합된 된 속성 선언](./how-to-declare-a-property-with-mixed-access-levels.md)   
- [방법: 속성 프로시저 호출](./how-to-call-a-property-procedure.md)   
- [방법: 선언 하 고 Visual Basic의 기본 속성 호출](./how-to-declare-and-call-a-default-property.md)   
- [방법: 속성 값 입력](./how-to-put-a-value-in-a-property.md)
+## <a name="see-also"></a><span data-ttu-id="b6b43-118">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b6b43-118">See Also</span></span>  
+ [<span data-ttu-id="b6b43-119">절차</span><span class="sxs-lookup"><span data-stu-id="b6b43-119">Procedures</span></span>](./index.md)  
+ [<span data-ttu-id="b6b43-120">속성 프로시저</span><span class="sxs-lookup"><span data-stu-id="b6b43-120">Property Procedures</span></span>](./property-procedures.md)  
+ [<span data-ttu-id="b6b43-121">프로시저 매개 변수 및 인수</span><span class="sxs-lookup"><span data-stu-id="b6b43-121">Procedure Parameters and Arguments</span></span>](./procedure-parameters-and-arguments.md)  
+ [<span data-ttu-id="b6b43-122">Property 문</span><span class="sxs-lookup"><span data-stu-id="b6b43-122">Property Statement</span></span>](../../../../visual-basic/language-reference/statements/property-statement.md)  
+ [<span data-ttu-id="b6b43-123">Visual Basic에서 속성과 변수의 차이점</span><span class="sxs-lookup"><span data-stu-id="b6b43-123">Differences Between Properties and Variables in Visual Basic</span></span>](./differences-between-properties-and-variables.md)  
+ [<span data-ttu-id="b6b43-124">방법: 속성 만들기</span><span class="sxs-lookup"><span data-stu-id="b6b43-124">How to: Create a Property</span></span>](./how-to-create-a-property.md)  
+ [<span data-ttu-id="b6b43-125">방법: 액세스 수준이 혼합된 속성 선언</span><span class="sxs-lookup"><span data-stu-id="b6b43-125">How to: Declare a Property with Mixed Access Levels</span></span>](./how-to-declare-a-property-with-mixed-access-levels.md)  
+ [<span data-ttu-id="b6b43-126">방법: 속성 프로시저 호출</span><span class="sxs-lookup"><span data-stu-id="b6b43-126">How to: Call a Property Procedure</span></span>](./how-to-call-a-property-procedure.md)  
+ [<span data-ttu-id="b6b43-127">방법: 선언 하 고 Visual Basic의 기본 속성 호출</span><span class="sxs-lookup"><span data-stu-id="b6b43-127">How to: Declare and Call a Default Property in Visual Basic</span></span>](./how-to-declare-and-call-a-default-property.md)  
+ [<span data-ttu-id="b6b43-128">방법: 속성 값 입력</span><span class="sxs-lookup"><span data-stu-id="b6b43-128">How to: Put a Value in a Property</span></span>](./how-to-put-a-value-in-a-property.md)

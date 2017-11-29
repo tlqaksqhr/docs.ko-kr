@@ -1,25 +1,27 @@
 ---
-title: "&#39;&lt;keyname&gt;&#39; 레지스트리 키를 만들 수 없습니다. | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrInteraction_ResKeyNotCreated1"
+title: "레지스트리 키 &#39; &lt;keyname&gt;&#39; 만들 수 없습니다"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrInteraction_ResKeyNotCreated1
 ms.assetid: 465ccd53-dfdc-47ec-8b3f-9a65ba739314
-caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: f51ba41f39f16f3429796f15533a6fb2a0049d45
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# &#39;&lt;keyname&gt;&#39; 레지스트리 키를 만들 수 없습니다.
-지정된 레지스트리 키를 만들 수 없습니다. 보안 권한이 없기 때문일 수 있습니다.  
+# <a name="registry-key-39ltkeynamegt39-could-not-be-created"></a><span data-ttu-id="f250c-102">레지스트리 키 &#39; &lt;keyname&gt;&#39; 만들 수 없습니다</span><span class="sxs-lookup"><span data-stu-id="f250c-102">Registry key &#39;&lt;keyname&gt;&#39; could not be created</span></span>
+<span data-ttu-id="f250c-103">지정된 레지스트리 키를 만들 수 없습니다. 보안 권한이 없기 때문일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f250c-103">The specified registry key could not be created, possibly because of insufficient security permissions.</span></span>  
   
-### 이 오류를 해결하려면  
+## <a name="to-correct-this-error"></a><span data-ttu-id="f250c-104">이 오류를 해결하려면</span><span class="sxs-lookup"><span data-stu-id="f250c-104">To correct this error</span></span>  
   
--   키에 액세스할 수 있는 보안 권한이 있는지 확인합니다.  
+-   <span data-ttu-id="f250c-105">키에 액세스할 수 있는 보안 권한이 있는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="f250c-105">Ensure that you have sufficient security permissions to access the key.</span></span>  
   
-## 참고 항목  
- [Registry Summary](../../visual-basic/language-reference/keywords/registry-summary.md)   
- [Registry Access Changes in Visual Basic .NET](http://msdn.microsoft.com/ko-kr/b58f7687-f4db-448a-a865-07f62fd16fb2)
+## <a name="see-also"></a><span data-ttu-id="f250c-106">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f250c-106">See Also</span></span>  
+ [<span data-ttu-id="f250c-107">레지스트리 요약</span><span class="sxs-lookup"><span data-stu-id="f250c-107">Registry Summary</span></span>](../../visual-basic/language-reference/keywords/registry-summary.md)  
+ [<span data-ttu-id="f250c-108">Visual basic.NET 레지스트리 액세스 변경</span><span class="sxs-lookup"><span data-stu-id="f250c-108">Registry Access Changes in Visual Basic .NET</span></span>](http://msdn.microsoft.com/en-us/b58f7687-f4db-448a-a865-07f62fd16fb2)

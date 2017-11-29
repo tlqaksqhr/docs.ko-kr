@@ -1,55 +1,57 @@
 ---
-title: "Generics in XAML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "generics [XAML Services]"
+title: "XAML의 제네릭"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
-caps.latest.revision: 8
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 05eaab4497949231d32ceab0ba696b9f252d67ad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Generics in XAML
-System.Xaml에서 구현된 .NET Framework XAML 서비스는 제네릭 CLR 형식을 사용하기 위한 지원 기능을 제공합니다.  이 지원 기능에는 제네릭의 제약 조건을 형식 인수로 지정하는 것과 제네릭 컬렉션 경우에 적절한 `Add` 메서드를 호출하여 제약 조건을 적용하는 것이 포함됩니다.  이 항목에서는 XAML에서 제네릭 형식의 사용 및 참조에 대한 측면에 대해 설명합니다.  
+# <a name="generics-in-xaml"></a><span data-ttu-id="7ac1f-102">XAML의 제네릭</span><span class="sxs-lookup"><span data-stu-id="7ac1f-102">Generics in XAML</span></span>
+<span data-ttu-id="7ac1f-103">System.Xaml에 구현 된 대로.NET Framework XAML 서비스 제네릭 CLR 형식 사용에 대 한 지원을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="7ac1f-103">The .NET Framework XAML Services as implemented in System.Xaml provides support for using generic CLR types.</span></span> <span data-ttu-id="7ac1f-104">이 지원 형식 인수로 제네릭의 제약 조건을 지정 하는 제약 조건을 적절 한 호출 하 여 적용 및 포함 `Add` 방법의 경우 제네릭 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="7ac1f-104">This support includes specifying the constraints of generics as a type argument and enforcing the constraint by calling the appropriate `Add` method for generic collection cases.</span></span> <span data-ttu-id="7ac1f-105">이 항목에서는 사용 하 고 XAML의 제네릭 형식 참조의 측면을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="7ac1f-105">This topic describes aspects of using and referencing generic types in XAML.</span></span>  
   
-## x:TypeArguments  
- `x:TypeArguments`는 XAML 언어에서 정의된 지시문입니다.  제네릭 형식이 지원하는 XAML 형식의 멤버로 사용될 때 `x:TypeArguments`는 제네릭의 제한하는 형식 인수를 지원 생성자에 전달합니다.  구문 예제를 비롯하여 `x:TypeArguments`의 .NET Framework XAML 서비스 사용과 관련된 참조 구문은 [x:TypeArguments Directive](../../../docs/framework/xaml-services/x-typearguments-directive.md)을 참조하십시오.  
+## <a name="xtypearguments"></a><span data-ttu-id="7ac1f-106">나온</span><span class="sxs-lookup"><span data-stu-id="7ac1f-106">x:TypeArguments</span></span>  
+ <span data-ttu-id="7ac1f-107">`x:TypeArguments`지시문은 XAML 언어에 의해 정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="7ac1f-107">`x:TypeArguments` is a directive defined by the XAML language.</span></span> <span data-ttu-id="7ac1f-108">제네릭 형식에 의해 지원 되는 XAML 형식의 멤버로 사용할 경우 `x:TypeArguments` 형식 제네릭을 지원 생성자의 인수를 전달 합니다.</span><span class="sxs-lookup"><span data-stu-id="7ac1f-108">When it is used as a member of a XAML type that is backed by a generic type, `x:TypeArguments` passes constraining type arguments of the generic to the backing constructor.</span></span> <span data-ttu-id="7ac1f-109">.NET Framework XAML 서비스에 관련 된 참조 구문이 사용 하 여의 `x:TypeArguments`, 구문 예제를 포함 된, 참조 [X:typearguments 지시문](../../../docs/framework/xaml-services/x-typearguments-directive.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="7ac1f-109">For reference syntax that pertains to .NET Framework XAML Services use of `x:TypeArguments`, which includes syntax examples, see [x:TypeArguments Directive](../../../docs/framework/xaml-services/x-typearguments-directive.md).</span></span>  
   
- `x:TypeArguments`가 문자열을 사용하고 형식 변환기 지원을 갖고 있기 때문에 일반적으로 XAML 사용에서 특성으로 선언됩니다.  
+ <span data-ttu-id="7ac1f-110">때문에 `x:TypeArguments` 는 문자열을 형식 변환기 지원을 갖고 특성으로 XAML 사용에 일반적으로 선언 된 것입니다.</span><span class="sxs-lookup"><span data-stu-id="7ac1f-110">Because `x:TypeArguments` takes a string, and has type converter backing, it is typically declared in XAML usage as an attribute.</span></span>  
   
- XAML 노드 스트림에서 `x:TypeArguments`에 의해 선언된 정보는 노드 스트림의 `StartObject` 위치에 있는 <xref:System.Xaml.XamlType.TypeArguments%2A?displayProperty=fullName>에서 가져올 수 있습니다.  <xref:System.Xaml.XamlType.TypeArguments%2A?displayProperty=fullName>의 반환 값은 <xref:System.Xaml.XamlType> 값의 목록입니다.  XAML 형식이 제네릭 형식을 나타내는지 여부는 <xref:System.Xaml.XamlType.IsGeneric%2A?displayProperty=fullName>을 호출하여 확인할 수 있습니다.  
+ <span data-ttu-id="7ac1f-111">XAML 노드 스트림의 정보에서 선언 `x:TypeArguments` 에서 가져올 수 <xref:System.Xaml.XamlType.TypeArguments%2A?displayProperty=nameWithType> 에 `StartObject` 노드 스트림 내의 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="7ac1f-111">In the XAML node stream, the information declared by `x:TypeArguments` can be obtained from <xref:System.Xaml.XamlType.TypeArguments%2A?displayProperty=nameWithType> at a `StartObject` position in the node stream.</span></span> <span data-ttu-id="7ac1f-112">반환 값 <xref:System.Xaml.XamlType.TypeArguments%2A?displayProperty=nameWithType> 목록이 <xref:System.Xaml.XamlType> 값입니다.</span><span class="sxs-lookup"><span data-stu-id="7ac1f-112">The return value of <xref:System.Xaml.XamlType.TypeArguments%2A?displayProperty=nameWithType> is a list of <xref:System.Xaml.XamlType> values.</span></span> <span data-ttu-id="7ac1f-113">XAML 형식 제네릭 형식을 나타내는지 여부를 결정을 호출 하 여 만들어질 수 <xref:System.Xaml.XamlType.IsGeneric%2A?displayProperty=nameWithType>합니다.</span><span class="sxs-lookup"><span data-stu-id="7ac1f-113">Determination of whether a XAML type represents a generic type can be made by calling <xref:System.Xaml.XamlType.IsGeneric%2A?displayProperty=nameWithType>.</span></span>  
   
-## XAML의 제네릭에 대한 규칙 및 구문 규칙  
- XAML에서 제네릭 형식은 항상 제한된 제네릭으로 표현되어야 합니다. 제한되지 않은 제네릭은 XAML 형식 시스템이나 XAML 노드 스트림에 표시되지 않으며 XAML 태그에 표현될 수 없습니다.  제네릭이 `x:TypeArguments`에 의해 참조될 제네릭의 중첩 형식 제약 조건인 경우나 `x:Type`이 제네릭 형식에 대한 CLR 형식 참조를 제공하는 경우에 제네릭은 XAML 특성 구문 내에서 참조될 수 있습니다.  이는 .NET Framework XAML 서비스에서 정의된 <xref:System.Xaml.Schema.XamlTypeTypeConverter> 클래스를 통해 지원됩니다.  
+## <a name="rules-and-syntax-conventions-for-generics-in-xaml"></a><span data-ttu-id="7ac1f-114">규칙 및 XAML의 제네릭에 대 한 구문 표기 규칙</span><span class="sxs-lookup"><span data-stu-id="7ac1f-114">Rules and Syntax Conventions for Generics in XAML</span></span>  
+ <span data-ttu-id="7ac1f-115">XAML에서는 제한 된 제네릭으로; 제네릭 형식을 표현 항상 합니다. 제네릭은 XAML 노드 스트림을 또는 XAML 형식 시스템에 존재 하 고 XAML 태그에 나타낼 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="7ac1f-115">In XAML, a generic type must always be represented as a constrained generic; an unconstrained generic is never present in the XAML type system or a XAML node stream and cannot be represented in XAML markup.</span></span> <span data-ttu-id="7ac1f-116">제네릭에서 참조 하 고 제네릭의 중첩된 형식 제약 하는 경우에 대 한 XAML 특성 구문에서 참조할 수 `x:TypeArguments`, 경우 여기서 `x:Type` 제네릭 형식에 대 한 CLR 형식 참조를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="7ac1f-116">A generic can be referenced within XAML attribute syntax, for cases where it is a nested type constraint of a generic being referenced by `x:TypeArguments`, or for cases where `x:Type` supplies a CLR type reference for a generic type.</span></span> <span data-ttu-id="7ac1f-117">이 통해 지원 되는 <xref:System.Xaml.Schema.XamlTypeTypeConverter> .NET Framework XAML 서비스에 의해 정의 된 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="7ac1f-117">This is supported through the <xref:System.Xaml.Schema.XamlTypeTypeConverter> class defined by .NET Framework XAML Services.</span></span>  
   
- <xref:System.Xaml.Schema.XamlTypeTypeConverter>를 통해 사용할 수 있게 되는 XAML 특성 구문 형태는 제네릭의 형식과 제약 조건에 꺾쇠 괄호를 사용하는 일반적인 MSIL\/CLR 구문 규칙을 변경하고 제약 조건 컨테이너에 괄호를 대신 사용합니다.  예제를 보려면 [x:TypeArguments Directive](../../../docs/framework/xaml-services/x-typearguments-directive.md)을 참조하십시오.  
+ <span data-ttu-id="7ac1f-118">XAML 특성으로 사용 하도록 설정 하는 구문 형식 <xref:System.Xaml.Schema.XamlTypeTypeConverter> 변경 하는 일반적인 MSIL / 각도 사용 하 여 CLR 구문 규칙 유형 및 제네릭, 제약 조건에 대 한 괄호 및 제약 조건 컨테이너에 대 한 괄호를 대신 합니다.</span><span class="sxs-lookup"><span data-stu-id="7ac1f-118">The XAML attribute syntax form enabled by <xref:System.Xaml.Schema.XamlTypeTypeConverter> alters the typical MSIL / CLR syntax convention that uses angle brackets for types and constraints of generics, and instead substitutes parentheses for the constraint container.</span></span> <span data-ttu-id="7ac1f-119">예를 들어 참조 [X:typearguments 지시문](../../../docs/framework/xaml-services/x-typearguments-directive.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="7ac1f-119">For an example, see [x:TypeArguments Directive](../../../docs/framework/xaml-services/x-typearguments-directive.md).</span></span>  
   
-## 제네릭 및 XAML 2009 기능  
- XAML 2009를 사용하는 경우 일반적인 언어 기본 형식에 대한 XAML 형식을 얻기 위해 CLR 기본 형식을 매핑하는 대신 [XAML 2009 기본 제공 형식](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)을 `x:TypeArguments`의 정보 항목으로 사용할 수 있습니다.  예를 들어 다음을 선언할 수 있습니다. 여기서 접두사 매핑은 표시되지 않았지만 `x`는 XAML 2009의 XAML 언어 XAML 네임스페이스입니다.  
+## <a name="generics-and-xaml-2009-features"></a><span data-ttu-id="7ac1f-120">제네릭 및 XAML 2009 기능</span><span class="sxs-lookup"><span data-stu-id="7ac1f-120">Generics and XAML 2009 Features</span></span>  
+ <span data-ttu-id="7ac1f-121">XAML 2009를 사용 하면 CLR 매핑하는 대신 기본 공용 언어 기본 형식에 대 한 XAML 형식을 가져올 형식을 사용할 수 있습니다 [XAML 2009의 기본 제공 형식](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md) 의 정보 항목으로 `x:TypeArguments`합니다.</span><span class="sxs-lookup"><span data-stu-id="7ac1f-121">If you use XAML 2009 instead of mapping the CLR base types to obtain XAML types for common language primitives, you can use [XAML 2009 built-in types](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md) as information items in `x:TypeArguments`.</span></span> <span data-ttu-id="7ac1f-122">예를 들어, 다음에 선언할 수 있습니다 (접두사 매핑이 표시 되지 않지만 `x` 은 XAML 언어 XAML 네임 스페이스에 대 한 XAML 2009):</span><span class="sxs-lookup"><span data-stu-id="7ac1f-122">For example, you could declare the following (prefix mappings not shown, but `x` is the XAML language XAML namespace for XAML 2009):</span></span>  
   
-```  
+```xaml  
 <my:BusinessObject x:TypeArguments="x:String,x:Int32"/>  
 ```  
   
-## WPF 및 기타 v3.5 프레임워크의 제네릭 지원  
- 특히 WPF를 대상으로 하는 경우 XAML 2006 사용을 위해 [x:Class](../../../docs/framework/xaml-services/x-class-directive.md)는 `x:TypeArguments`와 동일한 요소에서도 제공되어야 하며 해당 요소가 XAML 문서에서 루트 요소여야 합니다.  루트 요소는 하나 이상의 형식 인수가 있는 제네릭 형식에 매핑되어야 합니다.  예를 들면 <xref:System.Windows.Navigation.PageFunction%601>과 같이 지정합니다.  
+## <a name="generics-support-in-wpf-and-other-v35-frameworks"></a><span data-ttu-id="7ac1f-123">WPF 및 다른 v3.5 프레임 워크의 제네릭 지원</span><span class="sxs-lookup"><span data-stu-id="7ac1f-123">Generics Support in WPF and Other v3.5 Frameworks</span></span>  
+ <span data-ttu-id="7ac1f-124">구체적으로 WPF를 대상으로 할 때 XAML 2006 사용에 대 한 [X:class](../../../docs/framework/xaml-services/x-class-directive.md) 와 동일한 요소에도 제공 해야 `x:TypeArguments`, 해당 요소는 XAML 문서의 루트 요소 여야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7ac1f-124">For XAML 2006 usage when specifically targeting WPF, [x:Class](../../../docs/framework/xaml-services/x-class-directive.md) must also be provided on the same element as `x:TypeArguments`, and that element must be the root element in a XAML document.</span></span> <span data-ttu-id="7ac1f-125">루트 요소는 하나 이상의 형식 인수가 있는 제네릭 형식에 매핑되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="7ac1f-125">The root element must map to a generic type with at least one type argument.</span></span> <span data-ttu-id="7ac1f-126">예로 <xref:System.Windows.Navigation.PageFunction%601>합니다.</span><span class="sxs-lookup"><span data-stu-id="7ac1f-126">An example is <xref:System.Windows.Navigation.PageFunction%601>.</span></span>  
   
- 제네릭 사용을 지원하는 가능한 해결 방법에는 제네릭 형식을 반환할 수 있는 사용자 지정 태그 확장을 정의하거나 제네릭 형식에서 파생되지만 자체 클래스 정의에서 제네릭 제약 조건을 노출하는 래핑 클래스 정의를 제공하는 것이 포함됩니다.  
+ <span data-ttu-id="7ac1f-127">가능한 해결 방법에 제네릭 사용을 지 원하는 제네릭 형식을 반환할 수 있는 사용자 지정 태그 확장을 정의 하거나는 래핑 제공 포함 클래스는 제네릭 형식에서 파생 되지만 클래스 정의 자체에서 제네릭 제약 조건을 평평 하 게 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="7ac1f-127">Possible workarounds to support generic usages include defining a custom markup extension that can return generic types, or providing a wrapping class definition that derives from a generic type but flattens the generic constraint in its own class definition.</span></span>  
   
- WPF와 대상 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]에서는 XAML 2009 기능을 `x:TypeArguments`와 함께 사용할 수 있지만 느슨한 XAML\(태그 컴파일되지 않은 XAML\)의 경우에만 가능합니다.  WPF에 대한 태그 컴파일된 XAML 및 BAML 형태의 XAML은 현재 XAML 2009 키워드 및 기능을 지원하지 않습니다.  
+ <span data-ttu-id="7ac1f-128">WPF와 대상 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]와 함께 XAML 2009 기능을 사용할 수 있습니다 `x:TypeArguments`, 느슨한 XAML (태그 컴파일되지 않은 XAML)에 대해서만 합니다.</span><span class="sxs-lookup"><span data-stu-id="7ac1f-128">In WPF and targeting [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], you can use XAML 2009 features together with `x:TypeArguments`, but only for loose XAML (XAML that is not markup-compiled).</span></span> <span data-ttu-id="7ac1f-129">WPF에 대한 태그로 컴파일된 XAML 및 BAML 형식의 XAML은 현재 XAML 2009 키워드 및 기능을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="7ac1f-129">Markup-compiled XAML for WPF and the BAML form of XAML do not currently support the XAML 2009 keywords and features.</span></span>  
   
- [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]에 대한 [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)]의 사용자 지정 워크플로는 제네릭 XAML 사용을 지원하지 않습니다.  
+ <span data-ttu-id="7ac1f-130">사용자 지정 워크플로 [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] 에 대 한 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 일반 XAML 사용을 지원 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="7ac1f-130">Custom workflows in [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] for [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] do not support generic XAML usage.</span></span>  
   
-## 참고 항목  
- [x:TypeArguments Directive](../../../docs/framework/xaml-services/x-typearguments-directive.md)   
- [x:Class Directive](../../../docs/framework/xaml-services/x-class-directive.md)   
- [Built\-in Types for Common XAML Language Primitives](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)
+## <a name="see-also"></a><span data-ttu-id="7ac1f-131">참고 항목</span><span class="sxs-lookup"><span data-stu-id="7ac1f-131">See Also</span></span>  
+ [<span data-ttu-id="7ac1f-132">x:TypeArguments 지시문</span><span class="sxs-lookup"><span data-stu-id="7ac1f-132">x:TypeArguments Directive</span></span>](../../../docs/framework/xaml-services/x-typearguments-directive.md)  
+ [<span data-ttu-id="7ac1f-133">x:Class 지시문</span><span class="sxs-lookup"><span data-stu-id="7ac1f-133">x:Class Directive</span></span>](../../../docs/framework/xaml-services/x-class-directive.md)  
+ [<span data-ttu-id="7ac1f-134">공용 XAML 언어 기본 형식에 대한 기본 제공 형식</span><span class="sxs-lookup"><span data-stu-id="7ac1f-134">Built-in Types for Common XAML Language Primitives</span></span>](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)

@@ -1,208 +1,209 @@
 ---
-title: "연습: FlowLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "FlowLayoutPanel 컨트롤[Windows Forms], 연습"
-  - "Windows Forms 컨트롤, 정렬"
-  - "컨트롤[Windows Forms], FlowLayoutPanel로 정렬"
-  - "레이아웃[Windows Forms], 연습"
+title: "연습: FlowLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FlowLayoutPanel control [Windows Forms], walkthroughs
+- Windows Forms controls, arranging
+- controls [Windows Forms], arranging with FlowLayoutPanel
+- layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
-caps.latest.revision: 22
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 84b909f0c638bf0fb7c19ecc3a86c7c32bab2adb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 연습: FlowLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬
-일부 응용 프로그램에는 폼 크기가 조정되거나 내용의 크기가 변경될 때 적절하게 정렬되는 레이아웃을 가진 폼이 필요합니다. 동적 레이아웃이 필요하며 코드에서 명시적으로 <xref:System.Windows.Forms.Control.Layout> 이벤트를 처리하지 않으려는 경우 레이아웃 패널을 사용하는 것이 좋습니다.  
+# <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a><span data-ttu-id="3fb68-102">연습: FlowLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬</span><span class="sxs-lookup"><span data-stu-id="3fb68-102">Walkthrough: Arranging Controls on Windows Forms Using a FlowLayoutPanel</span></span>
+<span data-ttu-id="3fb68-103">일부 응용 프로그램에는 폼 크기가 조정되거나 내용의 크기가 변경될 때 적절하게 정렬되는 레이아웃을 가진 폼이 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-103">Some applications require a form with a layout that arranges itself appropriately as the form is resized or as the contents change in size.</span></span> <span data-ttu-id="3fb68-104">동적 레이아웃이 필요하며 코드에서 명시적으로 <xref:System.Windows.Forms.Control.Layout> 이벤트를 처리하지 않으려는 경우 레이아웃 패널을 사용하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-104">When you need a dynamic layout and you do not want to handle <xref:System.Windows.Forms.Control.Layout> events explicitly in your code, consider using a layout panel.</span></span>  
   
- <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤 및 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤은 폼에서 컨트롤을 정렬하는 직관적인 방법을 제공합니다. 둘 다 포함된 자식 컨트롤의 상대 위치를 제어하는 구성 가능한 자동 기능을 제공하며, 둘 다 런타임에 동적 레이아웃 기능을 제공하므로 부모 폼의 크기가 변경될 때 자식 컨트롤의 크기를 조정하고 위치를 변경할 수 있습니다. 레이아웃 패널을 레이아웃 패널 내에 중첩하여 정교한 사용자 인터페이스를 구현할 수 있습니다.  
+ <span data-ttu-id="3fb68-105"><xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤 및 <xref:System.Windows.Forms.TableLayoutPanel> 컨트롤은 폼에서 컨트롤을 정렬하는 직관적인 방법을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-105">The <xref:System.Windows.Forms.FlowLayoutPanel> control and the <xref:System.Windows.Forms.TableLayoutPanel> control provide intuitive ways to arrange controls on your form.</span></span> <span data-ttu-id="3fb68-106">둘 다 포함된 자식 컨트롤의 상대 위치를 제어하는 구성 가능한 자동 기능을 제공하며, 둘 다 런타임에 동적 레이아웃 기능을 제공하므로 부모 폼의 크기가 변경될 때 자식 컨트롤의 크기를 조정하고 위치를 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-106">Both provide an automatic, configurable ability to control the relative positions of child controls contained within them, and both give you dynamic layout features at run time, so they can resize and reposition child controls as the dimensions of the parent form change.</span></span> <span data-ttu-id="3fb68-107">레이아웃 패널을 레이아웃 패널 내에 중첩하여 정교한 사용자 인터페이스를 구현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-107">Layout panels can be nested within layout panels, to enable the realization of sophisticated user interfaces.</span></span>  
   
- <xref:System.Windows.Forms.TableLayoutPanel>은 내용을 그리드로 정렬하여 HTML \<table\> 요소와 유사한 기능을 제공합니다. 해당 셀은 행과 열로 정렬되며 크기가 서로 다를 수 있습니다. 자세한 내용은 [연습: TableLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)을 참조하세요.  
+ <span data-ttu-id="3fb68-108"><xref:System.Windows.Forms.TableLayoutPanel> html 유사한 기능을 제공 하는 눈금으로 내용을 정렬 \<테이블 > 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-108">The <xref:System.Windows.Forms.TableLayoutPanel> arranges its contents in a grid, providing functionality similar to the HTML \<table> element.</span></span> <span data-ttu-id="3fb68-109">해당 셀은 행과 열로 정렬되며 크기가 서로 다를 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-109">Its cells are arranged in rows and columns, and these can have different sizes.</span></span> <span data-ttu-id="3fb68-110">자세한 내용은 [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="3fb68-110">For more information, see [Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md).</span></span>  
   
- <xref:System.Windows.Forms.FlowLayoutPanel>은 특정 흐름 방향\(수평 또는 수직\)으로 내용을 정렬합니다. 컨트롤 내용을 한 행에서 다음 행으로 또는 한 열에서 다음 열로 줄 바꿈할 수 있습니다. 또는 컨트롤 내용이 줄 바꿈되는 대신 잘릴 수 있습니다. 이 연습에서 설명하는 작업은 다음과 같습니다.  
+ <span data-ttu-id="3fb68-111"><xref:System.Windows.Forms.FlowLayoutPanel> 은 특정 흐름 방향(수평 또는 수직)으로 내용을 정렬합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-111">The <xref:System.Windows.Forms.FlowLayoutPanel> arranges its contents in a specific flow direction: horizontal or vertical.</span></span> <span data-ttu-id="3fb68-112">컨트롤 내용을 한 행에서 다음 행으로 또는 한 열에서 다음 열로 줄 바꿈할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-112">Its contents can be wrapped from one row to the next, or from one column to the next.</span></span> <span data-ttu-id="3fb68-113">또는 컨트롤 내용이 줄 바꿈되는 대신 잘릴 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-113">Alternately, its contents can be clipped instead of wrapped.</span></span> <span data-ttu-id="3fb68-114">이 연습에서 설명하는 작업은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-114">Tasks illustrated in this walkthrough include:</span></span>  
   
--   Windows Forms 프로젝트 만들기  
+-   <span data-ttu-id="3fb68-115">Windows Forms 프로젝트 만들기</span><span class="sxs-lookup"><span data-stu-id="3fb68-115">Creating a Windows Forms project</span></span>  
   
--   가로 및 세로로 컨트롤 정렬  
+-   <span data-ttu-id="3fb68-116">가로 및 세로로 컨트롤 정렬</span><span class="sxs-lookup"><span data-stu-id="3fb68-116">Arranging Controls Horizontally and Vertically</span></span>  
   
--   흐름 방향 변경  
+-   <span data-ttu-id="3fb68-117">흐름 방향 변경</span><span class="sxs-lookup"><span data-stu-id="3fb68-117">Changing Flow Direction</span></span>  
   
--   흐름 나누기 삽입  
+-   <span data-ttu-id="3fb68-118">흐름 나누기 삽입</span><span class="sxs-lookup"><span data-stu-id="3fb68-118">Inserting Flow Breaks</span></span>  
   
--   안쪽 여백 및 여백을 사용하여 컨트롤 정렬  
+-   <span data-ttu-id="3fb68-119">안쪽 여백 및 여백을 사용하여 컨트롤 정렬</span><span class="sxs-lookup"><span data-stu-id="3fb68-119">Arranging Controls Using Padding and Margins</span></span>  
   
--   도구 상자에서 두 번 클릭하여 컨트롤 삽입  
+-   <span data-ttu-id="3fb68-120">도구 상자에서 두 번 클릭하여 컨트롤 삽입</span><span class="sxs-lookup"><span data-stu-id="3fb68-120">Inserting Controls by Double-clicking Them in the Toolbox</span></span>  
   
--   윤곽선을 그려 컨트롤 삽입  
+-   <span data-ttu-id="3fb68-121">윤곽선을 그려 컨트롤 삽입</span><span class="sxs-lookup"><span data-stu-id="3fb68-121">Inserting a Control by Drawing Its Outline</span></span>  
   
--   캐럿을 사용하여 컨트롤 삽입  
+-   <span data-ttu-id="3fb68-122">캐럿을 사용하여 컨트롤 삽입</span><span class="sxs-lookup"><span data-stu-id="3fb68-122">Inserting Controls Using the Caret</span></span>  
   
--   다른 부모에 기존 컨트롤 다시 할당  
+-   <span data-ttu-id="3fb68-123">다른 부모에 기존 컨트롤 다시 할당</span><span class="sxs-lookup"><span data-stu-id="3fb68-123">Reassigning Existing Controls to a Different Parent</span></span>  
   
- 작업을 완료하면 이러한 중요한 레이아웃 기능이 수행하는 역할을 이해하게 됩니다.  
+ <span data-ttu-id="3fb68-124">작업을 완료하면 이러한 중요한 레이아웃 기능이 수행하는 역할을 이해하게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-124">When you are finished, you will have an understanding of the role played by these important layout features.</span></span>  
   
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기**를 선택합니다. 자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/ko-kr/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.  
+>  <span data-ttu-id="3fb68-125">표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-125">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="3fb68-126">설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-126">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="3fb68-127">자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="3fb68-127">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-## 프로젝트 만들기  
- 첫 번째 단계는 프로젝트를 만들고 폼을 설정하는 것입니다.  
+## <a name="creating-the-project"></a><span data-ttu-id="3fb68-128">프로젝트 만들기</span><span class="sxs-lookup"><span data-stu-id="3fb68-128">Creating the Project</span></span>  
+ <span data-ttu-id="3fb68-129">첫 번째 단계는 프로젝트를 만들고 폼을 설정하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-129">The first step is to create the project and set up the form.</span></span>  
   
-#### 프로젝트를 만들려면  
+#### <a name="to-create-the-project"></a><span data-ttu-id="3fb68-130">프로젝트를 만들려면</span><span class="sxs-lookup"><span data-stu-id="3fb68-130">To create the project</span></span>  
   
-1.  "FlowLayoutPanelExample"이라는 Windows 기반 응용 프로그램 프로젝트를 만듭니다. 자세한 내용은 [How to: Create a Windows Application Project](http://msdn.microsoft.com/ko-kr/b2f93fed-c635-4705-8d0e-cf079a264efa)을 참조하세요.  
+1.  <span data-ttu-id="3fb68-131">"FlowLayoutPanelExample"이라는 Windows 기반 응용 프로그램 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-131">Create a Windows-based application project called "FlowLayoutPanelExample".</span></span> <span data-ttu-id="3fb68-132">자세한 내용은 [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="3fb68-132">For more information, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).</span></span>  
   
-2.  **폼 디자이너**에서 폼을 선택합니다.  
+2.  <span data-ttu-id="3fb68-133">**폼 디자이너**에서 폼을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-133">Select the form in the **Forms Designer**.</span></span>  
   
-## 가로 및 세로로 컨트롤 정렬  
- <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤을 사용하면 각 개별 컨트롤의 위치를 정확하게 지정하지 않고 행 또는 열에 컨트롤을 배치할 수 있습니다.  
+## <a name="arranging-controls-horizontally-and-vertically"></a><span data-ttu-id="3fb68-134">가로 및 세로로 컨트롤 정렬</span><span class="sxs-lookup"><span data-stu-id="3fb68-134">Arranging Controls Horizontally and Vertically</span></span>  
+ <span data-ttu-id="3fb68-135"><xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤을 사용하면 각 개별 컨트롤의 위치를 정확하게 지정하지 않고 행 또는 열에 컨트롤을 배치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-135">The <xref:System.Windows.Forms.FlowLayoutPanel> control allows you to place controls along rows or columns without requiring you to precisely specify the position of each individual control.</span></span>  
   
- <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤은 부모 폼의 크기가 변경될 때 자식 컨트롤의 크기를 조정하거나 흐름을 변경할 수 있습니다.  
+ <span data-ttu-id="3fb68-136"><xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤은 부모 폼의 크기가 변경될 때 자식 컨트롤의 크기를 조정하거나 흐름을 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-136">The <xref:System.Windows.Forms.FlowLayoutPanel> control can resize or reflow its child controls as the dimensions of the parent form change.</span></span>  
   
-#### FlowLayoutPanel을 사용하여 가로 및 세로로 컨트롤을 정렬하려면  
+#### <a name="to-arrange-controls-horizontally-and-vertically-using-a-flowlayoutpanel"></a><span data-ttu-id="3fb68-137">FlowLayoutPanel을 사용하여 가로 및 세로로 컨트롤을 정렬하려면</span><span class="sxs-lookup"><span data-stu-id="3fb68-137">To arrange controls horizontally and vertically using a FlowLayoutPanel</span></span>  
   
-1.  **도구 상자**에서 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤을 폼으로 끌어다 놓습니다.  
+1.  <span data-ttu-id="3fb68-138"><xref:System.Windows.Forms.FlowLayoutPanel> 도구 상자 **에서** 컨트롤을 폼으로 끌어다 놓습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-138">Drag a <xref:System.Windows.Forms.FlowLayoutPanel> control from the **Toolbox** onto your form.</span></span>  
   
-2.  **도구 상자**에서 <xref:System.Windows.Forms.Button> 컨트롤을 <xref:System.Windows.Forms.FlowLayoutPanel>로 끌어다 놓습니다. 컨트롤이 자동으로 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 왼쪽 위로 이동됩니다.  
+2.  <span data-ttu-id="3fb68-139"><xref:System.Windows.Forms.Button> 도구 상자 **에서** 컨트롤을 <xref:System.Windows.Forms.FlowLayoutPanel>로 끌어다 놓습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-139">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** into the <xref:System.Windows.Forms.FlowLayoutPanel>.</span></span> <span data-ttu-id="3fb68-140">컨트롤이 자동으로 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 왼쪽 위로 이동됩니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-140">Note that it is automatically moved to the upper-left corner of the <xref:System.Windows.Forms.FlowLayoutPanel> control.</span></span>  
   
-3.  **도구 상자**에서 다른 <xref:System.Windows.Forms.Button> 컨트롤을 <xref:System.Windows.Forms.FlowLayoutPanel>로 끌어다 놓습니다.<xref:System.Windows.Forms.Button> 컨트롤이 자동으로 첫 번째 <xref:System.Windows.Forms.Button> 컨트롤 옆의 위치로 이동됩니다.<xref:System.Windows.Forms.FlowLayoutPanel>이 너무 좁아서 두 컨트롤을 동일한 행에 배치할 수 없는 경우 새 <xref:System.Windows.Forms.Button> 컨트롤이 자동으로 다음 행으로 이동됩니다.  
+3.  <span data-ttu-id="3fb68-141"><xref:System.Windows.Forms.Button> 도구 상자 **에서 다른** 컨트롤을 <xref:System.Windows.Forms.FlowLayoutPanel>로 끌어다 놓습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-141">Drag another <xref:System.Windows.Forms.Button> control from the **Toolbox** into the <xref:System.Windows.Forms.FlowLayoutPanel>.</span></span> <span data-ttu-id="3fb68-142"><xref:System.Windows.Forms.Button> 컨트롤이 자동으로 첫 번째 <xref:System.Windows.Forms.Button> 컨트롤 옆의 위치로 이동됩니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-142">Note that the <xref:System.Windows.Forms.Button> control is automatically moved to a position next to the first <xref:System.Windows.Forms.Button> control.</span></span> <span data-ttu-id="3fb68-143"><xref:System.Windows.Forms.FlowLayoutPanel> 이 너무 좁아서 두 컨트롤을 동일한 행에 배치할 수 없는 경우 새 <xref:System.Windows.Forms.Button> 컨트롤이 자동으로 다음 행으로 이동됩니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-143">If your <xref:System.Windows.Forms.FlowLayoutPanel> is too narrow to fit the two controls on the same row, the new <xref:System.Windows.Forms.Button> control is automatically moved to the next row.</span></span>  
   
-4.  **도구 상자**에서 <xref:System.Windows.Forms.Button> 컨트롤을 몇 개 더 <xref:System.Windows.Forms.FlowLayoutPanel>로 끌어다 놓습니다. 한 컨트롤이 다음 행으로 줄 바꿈될 때까지 <xref:System.Windows.Forms.Button> 컨트롤을 계속 배치합니다.  
+4.  <span data-ttu-id="3fb68-144"><xref:System.Windows.Forms.Button> 도구 상자 **에서** 컨트롤을 몇 개 더 <xref:System.Windows.Forms.FlowLayoutPanel>로 끌어다 놓습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-144">Drag several more <xref:System.Windows.Forms.Button> controls from the **Toolbox** into the <xref:System.Windows.Forms.FlowLayoutPanel>.</span></span> <span data-ttu-id="3fb68-145">한 컨트롤이 다음 행으로 줄 바꿈될 때까지 <xref:System.Windows.Forms.Button> 컨트롤을 계속 배치합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-145">Continue placing <xref:System.Windows.Forms.Button> controls until one wraps to the next row.</span></span>  
   
-5.  <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 <xref:System.Windows.Forms.FlowLayoutPanel.WrapContents%2A> 속성 값을 `false`로 변경합니다. 자식 컨트롤이 더 이상 다음 행으로 흐르지 않습니다. 대신, 첫 번째 행으로 이동되어 잘립니다.  
+5.  <span data-ttu-id="3fb68-146"><xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 <xref:System.Windows.Forms.FlowLayoutPanel.WrapContents%2A> 속성 값을 `false`로 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-146">Change the value of the <xref:System.Windows.Forms.FlowLayoutPanel> control's <xref:System.Windows.Forms.FlowLayoutPanel.WrapContents%2A> property to `false`.</span></span> <span data-ttu-id="3fb68-147">자식 컨트롤이 더 이상 다음 행으로 흐르지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-147">Note that the child controls no longer flow to the next row.</span></span> <span data-ttu-id="3fb68-148">대신, 첫 번째 행으로 이동되어 잘립니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-148">Instead, they are moved to the first row and clipped.</span></span>  
   
-6.  <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 <xref:System.Windows.Forms.FlowLayoutPanel.WrapContents%2A> 속성 값을 `true`로 변경합니다. 자식 컨트롤이 다시 다음 행으로 줄 바꿈됩니다.  
+6.  <span data-ttu-id="3fb68-149"><xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 <xref:System.Windows.Forms.FlowLayoutPanel.WrapContents%2A> 속성 값을 `true`로 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-149">Change the value of the <xref:System.Windows.Forms.FlowLayoutPanel> control's <xref:System.Windows.Forms.FlowLayoutPanel.WrapContents%2A> property to `true`.</span></span> <span data-ttu-id="3fb68-150">자식 컨트롤이 다시 다음 행으로 줄 바꿈됩니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-150">Note that the child controls again wrap to the next row.</span></span>  
   
-7.  모든 <xref:System.Windows.Forms.Button> 컨트롤이 첫 번째 열로 이동될 때까지 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 너비를 줄입니다.  
+7.  <span data-ttu-id="3fb68-151">모든 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤이 첫 번째 열로 이동될 때까지 <xref:System.Windows.Forms.Button> 컨트롤의 너비를 줄입니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-151">Decrease the width of the <xref:System.Windows.Forms.FlowLayoutPanel> control until all the <xref:System.Windows.Forms.Button> controls are moved into the first column.</span></span>  
   
-8.  모든 <xref:System.Windows.Forms.Button> 컨트롤이 첫 번째 행으로 이동될 때까지 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 너비를 늘립니다. 큰 너비를 수용하기 위해 폼 크기를 조정해야 할 수도 있습니다.  
+8.  <span data-ttu-id="3fb68-152">모든 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤이 첫 번째 행으로 이동될 때까지 <xref:System.Windows.Forms.Button> 컨트롤의 너비를 늘립니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-152">Increase the width of the <xref:System.Windows.Forms.FlowLayoutPanel> control until all the <xref:System.Windows.Forms.Button> controls are moved into the first row.</span></span> <span data-ttu-id="3fb68-153">큰 너비를 수용하기 위해 폼 크기를 조정해야 할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-153">You may need to resize your form to accommodate the greater width.</span></span>  
   
-## 흐름 방향 변경  
- <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 속성을 사용하면 컨트롤이 정렬되는 방향을 변경할 수 있습니다. 왼쪽에서 오른쪽, 오른쪽에서 왼쪽, 위쪽에서 아래쪽 또는 아래쪽에서 위쪽으로 자식 컨트롤을 정렬할 수 있습니다.  
+## <a name="changing-flow-direction"></a><span data-ttu-id="3fb68-154">흐름 방향 변경</span><span class="sxs-lookup"><span data-stu-id="3fb68-154">Changing Flow Direction</span></span>  
+ <span data-ttu-id="3fb68-155"><xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 속성을 사용하면 컨트롤이 정렬되는 방향을 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-155">The <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> property allows you to change the direction in which controls are arranged.</span></span> <span data-ttu-id="3fb68-156">왼쪽에서 오른쪽, 오른쪽에서 왼쪽, 위쪽에서 아래쪽 또는 아래쪽에서 위쪽으로 자식 컨트롤을 정렬할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-156">You can arrange the child controls from left to right, from right to left, from top to bottom, or from bottom to top.</span></span>  
   
-#### FlowLayoutPanel에서 흐름 방향을 변경하려면  
+#### <a name="to-change-the-flow-direction-in-a-flowlayoutpanel"></a><span data-ttu-id="3fb68-157">FlowLayoutPanel에서 흐름 방향을 변경하려면</span><span class="sxs-lookup"><span data-stu-id="3fb68-157">To change the flow direction in a FlowLayoutPanel</span></span>  
   
-1.  <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 속성 값을 <xref:System.Windows.Forms.FlowDirection>로 변경합니다. 컨트롤의 높이에 따라 자식 컨트롤이 하나 이상의 열에 다시 정렬됩니다.  
+1.  <span data-ttu-id="3fb68-158"><xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 속성 값을 <xref:System.Windows.Forms.FlowDirection.TopDown>로 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-158">Change the value of the <xref:System.Windows.Forms.FlowLayoutPanel> control's <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> property to <xref:System.Windows.Forms.FlowDirection.TopDown>.</span></span> <span data-ttu-id="3fb68-159">컨트롤의 높이에 따라 자식 컨트롤이 하나 이상의 열에 다시 정렬됩니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-159">Note that the child controls are rearranged into one or more columns, depending on the height of the control.</span></span>  
   
-2.  높이가 <xref:System.Windows.Forms.Button> 컨트롤의 열보다 더 짧도록 <xref:System.Windows.Forms.FlowLayoutPanel>의 크기를 조정합니다.<xref:System.Windows.Forms.FlowLayoutPanel>이 자식 컨트롤을 다시 정렬하여 다음 열로 흐르도록 합니다. 높이를 계속 줄이면서 자식 컨트롤이 연속하는 열로 흐르는 것을 확인합니다.<xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 속성 값을 <xref:System.Windows.Forms.FlowDirection>로 변경합니다. 자식 컨트롤의 위치는 반대가 됩니다.<xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 속성의 값을 <xref:System.Windows.Forms.FlowDirection>으로 변경하면서 레이아웃을 살펴봅니다.  
+2.  <span data-ttu-id="3fb68-160">높이가 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 열보다 더 짧도록 <xref:System.Windows.Forms.Button> 의 크기를 조정합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-160">Resize the <xref:System.Windows.Forms.FlowLayoutPanel> so its height is shorter than the column of <xref:System.Windows.Forms.Button> controls.</span></span> <span data-ttu-id="3fb68-161"><xref:System.Windows.Forms.FlowLayoutPanel> 이 자식 컨트롤을 다시 정렬하여 다음 열로 흐르도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-161">Note that the <xref:System.Windows.Forms.FlowLayoutPanel> rearranges the child controls to flow into the next column.</span></span> <span data-ttu-id="3fb68-162">높이를 계속 줄이면서 자식 컨트롤이 연속하는 열로 흐르는 것을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-162">Continue decreasing the height and note that the child controls flow into consecutive columns.</span></span> <span data-ttu-id="3fb68-163"><xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 속성 값을 <xref:System.Windows.Forms.FlowDirection.RightToLeft>로 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-163">Change the value of the <xref:System.Windows.Forms.FlowLayoutPanel> control's <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> property to <xref:System.Windows.Forms.FlowDirection.RightToLeft>.</span></span> <span data-ttu-id="3fb68-164">자식 컨트롤의 위치는 반대가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-164">Note that the positions of the child controls are reversed.</span></span> <span data-ttu-id="3fb68-165"><xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 속성의 값을 <xref:System.Windows.Forms.FlowDirection.BottomUp>으로 변경하면서 레이아웃을 살펴봅니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-165">Observe the layout when you change the value of the <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> property to <xref:System.Windows.Forms.FlowDirection.BottomUp>.</span></span>  
   
-## 흐름 나누기 삽입  
- <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤은 자식 컨트롤에 FlowBreak 속성을 제공합니다. FlowBreak 속성의 값을 `true`로 설정하면 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤이 현재 흐름 방향에서 컨트롤 레이아웃을 중지하고 다음 행이나 열로 줄 바꿈합니다.  
+## <a name="inserting-flow-breaks"></a><span data-ttu-id="3fb68-166">흐름 나누기 삽입</span><span class="sxs-lookup"><span data-stu-id="3fb68-166">Inserting Flow Breaks</span></span>  
+ <span data-ttu-id="3fb68-167"><xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤은 자식 컨트롤에 FlowBreak 속성을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-167">The <xref:System.Windows.Forms.FlowLayoutPanel> control provides a FlowBreak property to its child controls.</span></span> <span data-ttu-id="3fb68-168">FlowBreak 속성의 값을 `true` 로 설정하면 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤이 현재 흐름 방향에서 컨트롤 레이아웃을 중지하고 다음 행이나 열로 줄 바꿈합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-168">Setting the value of the FlowBreak property to `true` causes the <xref:System.Windows.Forms.FlowLayoutPanel> control to stop laying out controls in the current flow direction and wrap to the next row or column.</span></span>  
   
-#### 흐름 나누기를 삽입하려면  
+#### <a name="to-insert-flow-breaks"></a><span data-ttu-id="3fb68-169">흐름 나누기를 삽입하려면</span><span class="sxs-lookup"><span data-stu-id="3fb68-169">To insert flow breaks</span></span>  
   
-1.  <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 속성 값을 <xref:System.Windows.Forms.FlowDirection>로 변경합니다.  
+1.  <span data-ttu-id="3fb68-170"><xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 속성 값을 <xref:System.Windows.Forms.FlowDirection.TopDown>로 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-170">Change the value of the <xref:System.Windows.Forms.FlowLayoutPanel> control's <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> property to <xref:System.Windows.Forms.FlowDirection.TopDown>.</span></span>  
   
-2.  맨 왼쪽 열의 중간에서 <xref:System.Windows.Forms.Button> 컨트롤 중 하나를 선택합니다.  
+2.  <span data-ttu-id="3fb68-171">맨 왼쪽 열의 중간에서 <xref:System.Windows.Forms.Button> 컨트롤 중 하나를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-171">Select one of the <xref:System.Windows.Forms.Button> controls in the middle of the leftmost column.</span></span>  
   
-3.  <xref:System.Windows.Forms.Button> 컨트롤의 FlowBreak 속성 값을 `true`로 설정합니다. 열이 나누어지고 선택한 <xref:System.Windows.Forms.Button> 컨트롤 뒤에 있는 컨트롤이 다음 열로 흐릅니다.<xref:System.Windows.Forms.Button> 컨트롤의 FlowBreak 속성 값을 `false`로 설정하여 원래 동작으로 되돌립니다.  
+3.  <span data-ttu-id="3fb68-172"><xref:System.Windows.Forms.Button> 컨트롤의 FlowBreak 속성 값을 `true`로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-172">Set the value of the <xref:System.Windows.Forms.Button> control's FlowBreak property to `true`.</span></span> <span data-ttu-id="3fb68-173">열이 나누어지고 선택한 <xref:System.Windows.Forms.Button> 컨트롤 뒤에 있는 컨트롤이 다음 열로 흐릅니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-173">Note that the column is broken and the controls following the selected <xref:System.Windows.Forms.Button> control flow into the next column.</span></span> <span data-ttu-id="3fb68-174"><xref:System.Windows.Forms.Button> 컨트롤의 FlowBreak 속성 값을 `false` 로 설정하여 원래 동작으로 되돌립니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-174">Set the value of the <xref:System.Windows.Forms.Button> control's FlowBreak property to `false` to return to the original behavior.</span></span>  
   
-## 도킹 및 고정 기능을 사용하여 컨트롤 위치 지정  
- 자식 컨트롤의 도킹 및 고정 동작은 다른 컨테이너 컨트롤의 동작과 다릅니다. 도킹 및 고정은 둘 다 흐름 방향에서 가장 큰 컨트롤을 기준으로 합니다.  
+## <a name="positioning-controls-using-docking-and-anchoring"></a><span data-ttu-id="3fb68-175">도킹 및 고정 기능을 사용하여 컨트롤 위치 지정</span><span class="sxs-lookup"><span data-stu-id="3fb68-175">Positioning Controls Using Docking and Anchoring</span></span>  
+ <span data-ttu-id="3fb68-176">자식 컨트롤의 도킹 및 고정 동작은 다른 컨테이너 컨트롤의 동작과 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-176">Docking and anchoring behaviors of child controls differ from the behaviors in other container controls.</span></span> <span data-ttu-id="3fb68-177">도킹 및 고정은 둘 다 흐름 방향에서 가장 큰 컨트롤을 기준으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-177">Both docking and anchoring are relative to the largest control in the flow direction.</span></span>  
   
-#### 도킹 및 고정 기능을 사용하여 컨트롤 위치를 지정하려면  
+#### <a name="to-position-controls-using-docking-and-anchoring"></a><span data-ttu-id="3fb68-178">도킹 및 고정 기능을 사용하여 컨트롤 위치를 지정하려면</span><span class="sxs-lookup"><span data-stu-id="3fb68-178">To position controls using docking and anchoring</span></span>  
   
-1.  <xref:System.Windows.Forms.Button> 컨트롤이 모두 열에 정렬될 때까지 <xref:System.Windows.Forms.FlowLayoutPanel>의 크기를 늘립니다.  
+1.  <span data-ttu-id="3fb68-179"><xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤이 모두 열에 정렬될 때까지 <xref:System.Windows.Forms.Button> 의 크기를 늘립니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-179">Increase the size of the <xref:System.Windows.Forms.FlowLayoutPanel> until the <xref:System.Windows.Forms.Button> controls are all arranged in a column.</span></span>  
   
-2.  위쪽 <xref:System.Windows.Forms.Button> 컨트롤을 선택합니다. 다른 <xref:System.Windows.Forms.Button> 컨트롤 너비의 두 배가 되도록 너비를 늘립니다.  
+2.  <span data-ttu-id="3fb68-180">위쪽 <xref:System.Windows.Forms.Button> 컨트롤을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-180">Select the top <xref:System.Windows.Forms.Button> control.</span></span> <span data-ttu-id="3fb68-181">다른 <xref:System.Windows.Forms.Button> 컨트롤 너비의 두 배가 되도록 너비를 늘립니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-181">Increase its width so that it is about twice as wide as the other <xref:System.Windows.Forms.Button> controls.</span></span>  
   
-3.  두 번째 <xref:System.Windows.Forms.Button> 컨트롤을 선택합니다.<xref:System.Windows.Forms.Control.Anchor%2A> 속성의 값을 <xref:System.Windows.Forms.AnchorStyles>로 변경합니다. 오른쪽 테두리가 첫 번째 <xref:System.Windows.Forms.Button> 컨트롤의 오른쪽 테두리에 정렬되도록 이동됩니다.  
+3.  <span data-ttu-id="3fb68-182">두 번째 <xref:System.Windows.Forms.Button> 컨트롤을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-182">Select the second <xref:System.Windows.Forms.Button> control.</span></span> <span data-ttu-id="3fb68-183"><xref:System.Windows.Forms.Control.Anchor%2A> 속성의 값을 <xref:System.Windows.Forms.AnchorStyles.Right>로 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-183">Change the value of its <xref:System.Windows.Forms.Control.Anchor%2A> property to <xref:System.Windows.Forms.AnchorStyles.Right>.</span></span> <span data-ttu-id="3fb68-184">오른쪽 테두리가 첫 번째 <xref:System.Windows.Forms.Button> 컨트롤의 오른쪽 테두리에 정렬되도록 이동됩니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-184">Note that it is moved so that its right border is aligned with the first <xref:System.Windows.Forms.Button> control's right border.</span></span>  
   
-4.  <xref:System.Windows.Forms.Control.Anchor%2A> 속성의 값을 <xref:System.Windows.Forms.AnchorStyles> 및 <xref:System.Windows.Forms.AnchorStyles>로 변경합니다. 첫 번째 <xref:System.Windows.Forms.Button> 컨트롤과 동일한 너비로 크기가 조정됩니다.  
+4.  <span data-ttu-id="3fb68-185"><xref:System.Windows.Forms.Control.Anchor%2A> 속성의 값을 <xref:System.Windows.Forms.AnchorStyles.Right> 및 <xref:System.Windows.Forms.AnchorStyles.Left>로 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-185">Change the value of its <xref:System.Windows.Forms.Control.Anchor%2A> property to <xref:System.Windows.Forms.AnchorStyles.Right> and <xref:System.Windows.Forms.AnchorStyles.Left>.</span></span> <span data-ttu-id="3fb68-186">첫 번째 <xref:System.Windows.Forms.Button> 컨트롤과 동일한 너비로 크기가 조정됩니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-186">Note that it is sized to the same width as the first <xref:System.Windows.Forms.Button> control.</span></span>  
   
-5.  세 번째 <xref:System.Windows.Forms.Button> 컨트롤을 선택합니다.<xref:System.Windows.Forms.Control.Dock%2A> 속성의 값을 <xref:System.Windows.Forms.DockStyle>로 변경합니다. 첫 번째 <xref:System.Windows.Forms.Button> 컨트롤과 동일한 너비로 크기가 조정됩니다.  
+5.  <span data-ttu-id="3fb68-187">세 번째 <xref:System.Windows.Forms.Button> 컨트롤을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-187">Select the third <xref:System.Windows.Forms.Button> control.</span></span> <span data-ttu-id="3fb68-188"><xref:System.Windows.Forms.Control.Dock%2A> 속성의 값을 <xref:System.Windows.Forms.DockStyle.Fill>로 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-188">Change the value of its <xref:System.Windows.Forms.Control.Dock%2A> property to <xref:System.Windows.Forms.DockStyle.Fill>.</span></span> <span data-ttu-id="3fb68-189">첫 번째 <xref:System.Windows.Forms.Button> 컨트롤과 동일한 너비로 크기가 조정됩니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-189">Note that it is sized to the same width as the first <xref:System.Windows.Forms.Button> control.</span></span>  
   
-## 안쪽 여백 및 여백을 사용하여 컨트롤 정렬  
- <xref:System.Windows.Forms.Control.Padding%2A> 및 <xref:System.Windows.Forms.Control.Margin%2A> 속성을 변경하여 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤에 컨트롤을 정렬할 수도 있습니다.  
+## <a name="arranging-controls-using-padding-and-margins"></a><span data-ttu-id="3fb68-190">안쪽 여백 및 여백을 사용하여 컨트롤 정렬</span><span class="sxs-lookup"><span data-stu-id="3fb68-190">Arranging Controls Using Padding and Margins</span></span>  
+ <span data-ttu-id="3fb68-191"><xref:System.Windows.Forms.FlowLayoutPanel> 및 <xref:System.Windows.Forms.Control.Padding%2A> 속성을 변경하여 <xref:System.Windows.Forms.Control.Margin%2A> 컨트롤에 컨트롤을 정렬할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-191">You can also arrange controls in your <xref:System.Windows.Forms.FlowLayoutPanel> control by changing the <xref:System.Windows.Forms.Control.Padding%2A> and <xref:System.Windows.Forms.Control.Margin%2A> properties.</span></span>  
   
- <xref:System.Windows.Forms.Control.Padding%2A> 속성을 사용하면 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 셀 내에서 컨트롤 배치를 제어할 수 있습니다. 자식 컨트롤과 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤 테두리 사이의 간격을 지정합니다.  
+ <span data-ttu-id="3fb68-192"><xref:System.Windows.Forms.Control.Padding%2A> 속성을 사용하면 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 셀 내에서 컨트롤 배치를 제어할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-192">The <xref:System.Windows.Forms.Control.Padding%2A> property allows you to control the placement of controls within a <xref:System.Windows.Forms.FlowLayoutPanel> control's cell.</span></span> <span data-ttu-id="3fb68-193">자식 컨트롤과 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤 테두리 사이의 간격을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-193">It specifies the spacing between the child controls and the <xref:System.Windows.Forms.FlowLayoutPanel> control's border.</span></span>  
   
- <xref:System.Windows.Forms.Control.Margin%2A> 속성을 사용하면 컨트롤 사이의 간격을 제어할 수 있습니다.  
+ <span data-ttu-id="3fb68-194"><xref:System.Windows.Forms.Control.Margin%2A> 속성을 사용하면 컨트롤 사이의 간격을 제어할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-194">The <xref:System.Windows.Forms.Control.Margin%2A> property allows you to control the spacing between controls.</span></span>  
   
-#### 안쪽 여백 및 여백 속성을 사용하여 컨트롤을 정렬하려면  
+#### <a name="to-arrange-controls-using-the-padding-and-margin-properties"></a><span data-ttu-id="3fb68-195">안쪽 여백 및 여백 속성을 사용하여 컨트롤을 정렬하려면</span><span class="sxs-lookup"><span data-stu-id="3fb68-195">To arrange controls using the Padding and Margin properties</span></span>  
   
-1.  <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 <xref:System.Windows.Forms.Control.Dock%2A> 속성 값을 <xref:System.Windows.Forms.DockStyle>로 변경합니다. 폼이 충분히 큰 경우 <xref:System.Windows.Forms.Button> 컨트롤이 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 첫 번째 열로 이동됩니다.  
+1.  <span data-ttu-id="3fb68-196"><xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 <xref:System.Windows.Forms.Control.Dock%2A> 속성 값을 <xref:System.Windows.Forms.DockStyle.Fill>로 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-196">Change the value of the <xref:System.Windows.Forms.FlowLayoutPanel> control's <xref:System.Windows.Forms.Control.Dock%2A> property to <xref:System.Windows.Forms.DockStyle.Fill>.</span></span> <span data-ttu-id="3fb68-197">폼이 충분히 큰 경우 <xref:System.Windows.Forms.Button> 컨트롤이 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 첫 번째 열로 이동됩니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-197">If your form is large enough, the <xref:System.Windows.Forms.Button> controls will be moved into the first column of the <xref:System.Windows.Forms.FlowLayoutPanel> control.</span></span>  
   
-2.  **속성** 창에서 <xref:System.Windows.Forms.Control.Padding%2A> 항목을 확장하고 <xref:System.Windows.Forms.Padding.All%2A> 속성을 **20**으로 설정하여 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 <xref:System.Windows.Forms.Control.Padding%2A> 속성 값을 변경합니다. 자세한 내용은 [연습: Padding, Margins 및 AutoSize 속성을 사용하여 Windows Forms 컨트롤 레이아웃](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)을 참조하세요. 자식 컨트롤이 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 중심 쪽으로 이동됩니다.<xref:System.Windows.Forms.Control.Padding%2A> 속성의 값이 증가한 만큼 자식 컨트롤이 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 테두리에서 멀어집니다.  
+2.  <span data-ttu-id="3fb68-198"><xref:System.Windows.Forms.FlowLayoutPanel> 속성 <xref:System.Windows.Forms.Control.Padding%2A> 창에서 <xref:System.Windows.Forms.Control.Padding%2A> 항목을 확장하고 **속성을** 20 <xref:System.Windows.Forms.Padding.All%2A> 으로 설정하여 **컨트롤의**속성 값을 변경합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-198">Change the value of the <xref:System.Windows.Forms.FlowLayoutPanel> control's <xref:System.Windows.Forms.Control.Padding%2A> property by expanding the <xref:System.Windows.Forms.Control.Padding%2A> entry in the **Properties** window and setting the <xref:System.Windows.Forms.Padding.All%2A> property to **20**.</span></span> <span data-ttu-id="3fb68-199">자세한 내용은 참조 [연습: 레이아웃으로 Windows Forms 컨트롤 Padding, Margins 및 AutoSize 속성](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-199">For more information, see [Walkthrough: Laying Out Windows Forms Controls with Padding, Margins, and the AutoSize Property](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md).</span></span> <span data-ttu-id="3fb68-200">자식 컨트롤이 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 중심 쪽으로 이동됩니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-200">Note that the child controls are moved toward the center of the <xref:System.Windows.Forms.FlowLayoutPanel> control.</span></span> <span data-ttu-id="3fb68-201"><xref:System.Windows.Forms.Control.Padding%2A> 속성의 값이 증가한 만큼 자식 컨트롤이 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 테두리에서 멀어집니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-201">The increased value for the <xref:System.Windows.Forms.Control.Padding%2A> property pushes the child controls away from the <xref:System.Windows.Forms.FlowLayoutPanel> control's borders.</span></span>  
   
-3.  <xref:System.Windows.Forms.FlowLayoutPanel>에서 <xref:System.Windows.Forms.Button> 컨트롤을 모두 선택하고 <xref:System.Windows.Forms.Control.Margin%2A> 속성의 값을 **20**으로 설정합니다.<xref:System.Windows.Forms.Button> 컨트롤 사이의 간격이 증가하므로 더 멀리 떨어져 이동됩니다. 자식 컨트롤을 모두 표시하기 위해 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 크기를 더 크게 조정해야 할 수도 있습니다.  
+3.  <span data-ttu-id="3fb68-202"><xref:System.Windows.Forms.Button> 에서 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤을 모두 선택하고 <xref:System.Windows.Forms.Control.Margin%2A> 속성의 값을 **20**으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-202">Select all of the <xref:System.Windows.Forms.Button> controls in the <xref:System.Windows.Forms.FlowLayoutPanel> and set the value of the <xref:System.Windows.Forms.Control.Margin%2A> property to **20**.</span></span> <span data-ttu-id="3fb68-203"><xref:System.Windows.Forms.Button> 컨트롤 사이의 간격이 증가하므로 더 멀리 떨어져 이동됩니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-203">Note that the spacing between the <xref:System.Windows.Forms.Button> controls increases, so they are moved further apart.</span></span> <span data-ttu-id="3fb68-204">자식 컨트롤을 모두 표시하기 위해 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 크기를 더 크게 조정해야 할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-204">You may need to resize the <xref:System.Windows.Forms.FlowLayoutPanel> control to be larger to see all of the child controls.</span></span>  
   
-## 도구 상자에서 두 번 클릭하여 컨트롤 삽입  
- **도구 상자**에서 컨트롤을 두 번 클릭하여 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤을 채울 수 있습니다.  
+## <a name="inserting-controls-by-double-clicking-them-in-the-toolbox"></a><span data-ttu-id="3fb68-205">도구 상자에서 두 번 클릭하여 컨트롤 삽입</span><span class="sxs-lookup"><span data-stu-id="3fb68-205">Inserting Controls by Double-clicking Them in the Toolbox</span></span>  
+ <span data-ttu-id="3fb68-206"><xref:System.Windows.Forms.FlowLayoutPanel> 도구 상자 **에서 컨트롤을 두 번 클릭하여**컨트롤을 채울 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-206">You can populate your <xref:System.Windows.Forms.FlowLayoutPanel> control by double-clicking controls in the **Toolbox**.</span></span>  
   
-#### 도구 상자에서 두 번 클릭하여 컨트롤을 삽입하려면  
+#### <a name="to-insert-controls-by-double-clicking-in-the-toolbox"></a><span data-ttu-id="3fb68-207">도구 상자에서 두 번 클릭하여 컨트롤을 삽입하려면</span><span class="sxs-lookup"><span data-stu-id="3fb68-207">To insert controls by double-clicking in the Toolbox</span></span>  
   
-1.  **도구 상자**에서 <xref:System.Windows.Forms.Button> 컨트롤 아이콘을 두 번 클릭합니다. 새 <xref:System.Windows.Forms.Button> 컨트롤이 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤에 표시됩니다.  
+1.  <span data-ttu-id="3fb68-208"><xref:System.Windows.Forms.Button> 도구 상자 **에서**컨트롤 아이콘을 두 번 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-208">Double-click the <xref:System.Windows.Forms.Button> control icon in the **Toolbox**.</span></span> <span data-ttu-id="3fb68-209">새 <xref:System.Windows.Forms.Button> 컨트롤이 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-209">Note that a new <xref:System.Windows.Forms.Button> control appears in the <xref:System.Windows.Forms.FlowLayoutPanel> control.</span></span>  
   
-2.  **도구 상자**에서 컨트롤을 몇 개 더 두 번 클릭합니다. 새 컨트롤이 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤에 연속해서 표시됩니다.  
+2.  <span data-ttu-id="3fb68-210">**도구 상자**에서 컨트롤을 몇 개 더 두 번 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-210">Double-click several more controls in the **Toolbox**.</span></span> <span data-ttu-id="3fb68-211">새 컨트롤이 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤에 연속해서 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-211">Note that the new controls appear successively in the <xref:System.Windows.Forms.FlowLayoutPanel> control.</span></span>  
   
-## 윤곽선을 그려 컨트롤 삽입  
- <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤에 컨트롤을 삽입하고 셀에서 해당 윤곽선을 그려 크기를 지정합니다.  
+## <a name="inserting-a-control-by-drawing-its-outline"></a><span data-ttu-id="3fb68-212">윤곽선을 그려 컨트롤 삽입</span><span class="sxs-lookup"><span data-stu-id="3fb68-212">Inserting a Control by Drawing Its Outline</span></span>  
+ <span data-ttu-id="3fb68-213"><xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤에 컨트롤을 삽입하고 셀에서 해당 윤곽선을 그려 크기를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-213">You can insert a control into a <xref:System.Windows.Forms.FlowLayoutPanel> control and specify its size by drawing its outline in a cell.</span></span>  
   
-#### 윤곽선을 그려 컨트롤을 삽입하려면  
+#### <a name="to-insert-a-control-by-drawing-its-outline"></a><span data-ttu-id="3fb68-214">윤곽선을 그려 컨트롤을 삽입하려면</span><span class="sxs-lookup"><span data-stu-id="3fb68-214">To insert a Control by drawing its outline</span></span>  
   
-1.  **도구 상자**에서 <xref:System.Windows.Forms.Button> 컨트롤 아이콘을 클릭합니다. 폼으로 끌어다 놓지 마세요.  
+1.  <span data-ttu-id="3fb68-215">**도구 상자**에서 <xref:System.Windows.Forms.Button> 컨트롤 아이콘을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-215">In the **Toolbox**, click the <xref:System.Windows.Forms.Button> control icon.</span></span> <span data-ttu-id="3fb68-216">폼으로 끌어다 놓지 마세요.</span><span class="sxs-lookup"><span data-stu-id="3fb68-216">Do not drag it onto the form.</span></span>  
   
-2.  마우스 포인터를 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤 위로 이동합니다. 포인터가 <xref:System.Windows.Forms.Button> 컨트롤 아이콘이 연결된 십자형으로 바뀝니다.  
+2.  <span data-ttu-id="3fb68-217">마우스 포인터를 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤 위로 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-217">Move the mouse pointer over the <xref:System.Windows.Forms.FlowLayoutPanel> control.</span></span> <span data-ttu-id="3fb68-218">포인터가 <xref:System.Windows.Forms.Button> 컨트롤 아이콘이 연결된 십자형으로 바뀝니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-218">Note that the pointer changes to a crosshair with the <xref:System.Windows.Forms.Button> control icon attached.</span></span>  
   
-3.  마우스 단추를 길게 클릭합니다.  
+3.  <span data-ttu-id="3fb68-219">마우스 단추를 길게 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-219">Click and hold the mouse button.</span></span>  
   
-4.  마우스 포인터를 끌어 <xref:System.Windows.Forms.Button> 컨트롤의 윤곽선을 그립니다. 원하는 크기가 되면 마우스 단추를 놓습니다.<xref:System.Windows.Forms.Button> 컨트롤이 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 다음 열린 위치에 만들어집니다.  
+4.  <span data-ttu-id="3fb68-220">마우스 포인터를 끌어 <xref:System.Windows.Forms.Button> 컨트롤의 윤곽선을 그립니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-220">Drag the mouse pointer to draw the outline of the <xref:System.Windows.Forms.Button> control.</span></span> <span data-ttu-id="3fb68-221">원하는 크기가 되면 마우스 단추를 놓습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-221">When you are satisfied with the size, release the mouse button.</span></span> <span data-ttu-id="3fb68-222"><xref:System.Windows.Forms.Button> 컨트롤이 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 다음 열린 위치에 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-222">Note that the <xref:System.Windows.Forms.Button> control is created in the next open location of the <xref:System.Windows.Forms.FlowLayoutPanel> control.</span></span>  
   
-## 삽입 막대를 사용하여 컨트롤 삽입  
- <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 특정 위치에 컨트롤을 삽입할 수 있습니다.<xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 클라이언트 영역으로 컨트롤을 끌어다 놓으면 삽입 막대가 나타나 컨트롤이 삽입될 위치를 표시합니다.  
+## <a name="inserting-controls-using-the-insertion-bar"></a><span data-ttu-id="3fb68-223">삽입 막대를 사용하여 컨트롤 삽입</span><span class="sxs-lookup"><span data-stu-id="3fb68-223">Inserting Controls Using the Insertion Bar</span></span>  
+ <span data-ttu-id="3fb68-224"><xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 특정 위치에 컨트롤을 삽입할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-224">You can insert controls at a specific position in a <xref:System.Windows.Forms.FlowLayoutPanel> control.</span></span> <span data-ttu-id="3fb68-225"><xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 클라이언트 영역으로 컨트롤을 끌어다 놓으면 삽입 막대가 나타나 컨트롤이 삽입될 위치를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-225">When you drag a control into the <xref:System.Windows.Forms.FlowLayoutPanel> control's client area, an insertion bar appears to indicate where the control will be inserted.</span></span>  
   
-#### 캐럿을 사용하여 컨트롤을 삽입하려면  
+#### <a name="to-insert-a-control-using-the-caret"></a><span data-ttu-id="3fb68-226">캐럿을 사용하여 컨트롤을 삽입하려면</span><span class="sxs-lookup"><span data-stu-id="3fb68-226">To insert a control using the caret</span></span>  
   
-1.  **도구 상자**에서 <xref:System.Windows.Forms.Button> 컨트롤을 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤로 끌어다 놓고 두 <xref:System.Windows.Forms.Button> 컨트롤 사이의 공간을 가리킵니다. 삽입 막대가 그려져<xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤에 놓을 때 <xref:System.Windows.Forms.Button>이 배치될 위치를 표시합니다. 새 <xref:System.Windows.Forms.Button> 컨트롤을 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤로 끌어다 놓기 전에 마우스 포인터를 움직여 삽입 막대가 어떻게 이동하는지 관찰합니다.  
+1.  <span data-ttu-id="3fb68-227"><xref:System.Windows.Forms.Button> 도구 상자 **에서** 컨트롤을 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤로 끌어다 놓고 두 <xref:System.Windows.Forms.Button> 컨트롤 사이의 공간을 가리킵니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-227">Drag a <xref:System.Windows.Forms.Button> control from the **Toolbox** into the <xref:System.Windows.Forms.FlowLayoutPanel> control and point to the space between two <xref:System.Windows.Forms.Button> controls.</span></span> <span data-ttu-id="3fb68-228">위치를 나타내는 삽입 막대가 그려져 되는 <xref:System.Windows.Forms.Button> 에 놓을 때 배치 될는 <xref:System.Windows.Forms.FlowLayoutPanel> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-228">Note that an insertion bar is drawn, indicating where the <xref:System.Windows.Forms.Button> will be placed when it is dropped into the <xref:System.Windows.Forms.FlowLayoutPanel> control.</span></span> <span data-ttu-id="3fb68-229">새 <xref:System.Windows.Forms.Button> 컨트롤을 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤로 끌어다 놓기 전에 마우스 포인터를 움직여 삽입 막대가 어떻게 이동하는지 관찰합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-229">Before you drop the new <xref:System.Windows.Forms.Button> control into the <xref:System.Windows.Forms.FlowLayoutPanel> control, move the mouse pointer around to observe how the insertion bar moves.</span></span>  
   
-2.  새 <xref:System.Windows.Forms.Button> 컨트롤을 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤로 끌어다 놓습니다. 새 <xref:System.Windows.Forms.Button> 컨트롤은 <xref:System.Windows.Forms.Control.Margin%2A> 속성 값이 다르기 때문에 다른 컨트롤과 정렬되지 않습니다.  
+2.  <span data-ttu-id="3fb68-230">새 <xref:System.Windows.Forms.Button> 컨트롤을 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤로 끌어다 놓습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-230">Drop the new <xref:System.Windows.Forms.Button> control into the <xref:System.Windows.Forms.FlowLayoutPanel> control.</span></span> <span data-ttu-id="3fb68-231">새 <xref:System.Windows.Forms.Button> 컨트롤은 <xref:System.Windows.Forms.Control.Margin%2A> 속성 값이 다르기 때문에 다른 컨트롤과 정렬되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-231">Note that the new <xref:System.Windows.Forms.Button> control is not aligned with the others, because its <xref:System.Windows.Forms.Control.Margin%2A> property has a different value.</span></span>  
   
-## 다른 부모에 기존 컨트롤 다시 할당  
- 폼에 있는 컨트롤을 새 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤에 할당할 수 있습니다.  
+## <a name="reassigning-existing-controls-to-a-different-parent"></a><span data-ttu-id="3fb68-232">다른 부모에 기존 컨트롤 다시 할당</span><span class="sxs-lookup"><span data-stu-id="3fb68-232">Reassigning Existing Controls to a Different Parent</span></span>  
+ <span data-ttu-id="3fb68-233">폼에 있는 컨트롤을 새 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤에 할당할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-233">You can assign controls that exist on your form to a new <xref:System.Windows.Forms.FlowLayoutPanel> control.</span></span>  
   
-#### 기존 컨트롤의 부모를 재지정하려면  
+#### <a name="to-reparent-existing-controls"></a><span data-ttu-id="3fb68-234">기존 컨트롤의 부모를 재지정하려면</span><span class="sxs-lookup"><span data-stu-id="3fb68-234">To reparent existing controls</span></span>  
   
-1.  **도구 상자**의 세 <xref:System.Windows.Forms.Button> 컨트롤을 폼으로 끌어옵니다. 서로 정렬되지 않은 상태로 근처에 배치합니다.  
+1.  <span data-ttu-id="3fb68-235"><xref:System.Windows.Forms.Button> 도구 상자 **의 세** 컨트롤을 폼으로 끌어옵니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-235">Drag three <xref:System.Windows.Forms.Button> controls from the **Toolbox** onto the form.</span></span> <span data-ttu-id="3fb68-236">서로 정렬되지 않은 상태로 근처에 배치합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-236">Position them near to each other, but leave them unaligned.</span></span>  
   
-2.  **도구 상자**에서 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤 아이콘을 클릭합니다. 폼으로 끌어다 놓지 마세요.  
+2.  <span data-ttu-id="3fb68-237">**도구 상자**에서 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤 아이콘을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-237">In the **Toolbox**, click the <xref:System.Windows.Forms.FlowLayoutPanel> control icon.</span></span> <span data-ttu-id="3fb68-238">폼으로 끌어다 놓지 마세요.</span><span class="sxs-lookup"><span data-stu-id="3fb68-238">Do not drag it onto the form.</span></span>  
   
-3.  마우스 포인터를 세 <xref:System.Windows.Forms.Button> 컨트롤 쪽으로 이동합니다. 포인터가 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤 아이콘이 연결된 십자형으로 바뀝니다.  
+3.  <span data-ttu-id="3fb68-239">마우스 포인터를 세 <xref:System.Windows.Forms.Button> 컨트롤 쪽으로 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-239">Move the mouse pointer close to the three <xref:System.Windows.Forms.Button> controls.</span></span> <span data-ttu-id="3fb68-240">포인터가 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤 아이콘이 연결된 십자형으로 바뀝니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-240">Note that the pointer changes to a crosshair with the <xref:System.Windows.Forms.FlowLayoutPanel> control icon attached.</span></span>  
   
-4.  마우스 단추를 길게 클릭합니다.  
+4.  <span data-ttu-id="3fb68-241">마우스 단추를 길게 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-241">Click and hold the mouse button.</span></span>  
   
-5.  마우스 포인터를 끌어 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 윤곽선을 그립니다. 세 <xref:System.Windows.Forms.Button> 컨트롤 주위에 윤곽선을 그립니다.  
+5.  <span data-ttu-id="3fb68-242">마우스 포인터를 끌어 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 윤곽선을 그립니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-242">Drag the mouse pointer to draw the outline of the <xref:System.Windows.Forms.FlowLayoutPanel> control.</span></span> <span data-ttu-id="3fb68-243">세 <xref:System.Windows.Forms.Button> 컨트롤 주위에 윤곽선을 그립니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-243">Draw the outline around the three <xref:System.Windows.Forms.Button> controls.</span></span>  
   
-6.  마우스 단추를 놓습니다. 세 <xref:System.Windows.Forms.Button> 컨트롤이 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤에 삽입됩니다.  
+6.  <span data-ttu-id="3fb68-244">마우스 단추를 놓습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-244">Release the mouse button.</span></span> <span data-ttu-id="3fb68-245">세 <xref:System.Windows.Forms.Button> 컨트롤이 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤에 삽입됩니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-245">Note that the three <xref:System.Windows.Forms.Button> controls are inserted into the <xref:System.Windows.Forms.FlowLayoutPanel> control.</span></span>  
   
-## 다음 단계  
- 레이아웃 패널 및 컨트롤의 조합을 사용하여 복잡한 레이아웃을 얻을 수 있습니다. 다음과 같은 사항을 더 살펴보는 것이 좋습니다.  
+## <a name="next-steps"></a><span data-ttu-id="3fb68-246">다음 단계</span><span class="sxs-lookup"><span data-stu-id="3fb68-246">Next Steps</span></span>  
+ <span data-ttu-id="3fb68-247">레이아웃 패널 및 컨트롤의 조합을 사용하여 복잡한 레이아웃을 얻을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-247">You can achieve a complex layout using a combination of layout panels and controls.</span></span> <span data-ttu-id="3fb68-248">다음과 같은 사항을 더 살펴보는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-248">Suggestions for more exploration include:</span></span>  
   
--   <xref:System.Windows.Forms.Button> 컨트롤 중 하나의 크기를 더 크게 조정하고 레이아웃에 미치는 영향을 확인합니다.  
+-   <span data-ttu-id="3fb68-249"><xref:System.Windows.Forms.Button> 컨트롤 중 하나의 크기를 더 크게 조정하고 레이아웃에 미치는 영향을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-249">Resize one of the <xref:System.Windows.Forms.Button> controls to a larger size and note the effect on the layout.</span></span>  
   
--   레이아웃 패널에 다른 레이아웃 패널을 포함할 수 있습니다.<xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 기존 컨트롤에 끌어다 놓습니다.  
+-   <span data-ttu-id="3fb68-250">레이아웃 패널에 다른 레이아웃 패널을 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-250">Layout panels can contain other layout panels.</span></span> <span data-ttu-id="3fb68-251"><xref:System.Windows.Forms.TableLayoutPanel> 컨트롤을 기존 컨트롤에 끌어다 놓습니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-251">Experiment with dropping a <xref:System.Windows.Forms.TableLayoutPanel> control into the existing control.</span></span>  
   
--   <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤을 부모 폼에 도킹합니다. 폼의 크기를 조정하고 레이아웃에 미치는 영향을 확인합니다.  
+-   <span data-ttu-id="3fb68-252"><xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤을 부모 폼에 도킹합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-252">Dock the <xref:System.Windows.Forms.FlowLayoutPanel> control to the parent form.</span></span> <span data-ttu-id="3fb68-253">폼의 크기를 조정하고 레이아웃에 미치는 영향을 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-253">Resize the form and note the effect on the layout.</span></span>  
   
--   컨트롤 중 하나의 <xref:System.Windows.Forms.Control.Visible%2A> 속성을 `false`로 설정하고 그에 대한 응답으로 <xref:System.Windows.Forms.FlowLayoutPanel>이 어떻게 재배치되는지 확인합니다.  
+-   <span data-ttu-id="3fb68-254">컨트롤 중 하나의 <xref:System.Windows.Forms.Control.Visible%2A> 속성을 `false` 로 설정하고 그에 대한 응답으로 <xref:System.Windows.Forms.FlowLayoutPanel> 이 어떻게 재배치되는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="3fb68-254">Set the <xref:System.Windows.Forms.Control.Visible%2A> property of one of the controls to `false` and note how the <xref:System.Windows.Forms.FlowLayoutPanel> reflows in response.</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Forms.FlowLayoutPanel>   
- <xref:System.Windows.Forms.TableLayoutPanel>   
- [연습: TableLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)   
- [연습: 맞춤선을 사용하여 Windows Forms에서 컨트롤 정렬](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)   
- [Microsoft Windows 사용자 환경, 사용자 인터페이스 개발자 및 디자이너를 위한 공식 지침. Redmond, WA: Microsoft Press, 1999. \(USBN: 0\-7356\-0566\-1\)](http://www.microsoft.com/mspress/southpacific/books/book11588.htm)   
- [AutoSize 속성 개요](../../../../docs/framework/winforms/controls/autosize-property-overview.md)   
- [방법: Windows Forms에 컨트롤 도킹](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)   
- [방법: Windows Forms에서 컨트롤 고정](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)   
- [연습: Padding, Margins 및 AutoSize 속성을 사용하여 Windows Forms 컨트롤 레이아웃](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)
+## <a name="see-also"></a><span data-ttu-id="3fb68-255">참고 항목</span><span class="sxs-lookup"><span data-stu-id="3fb68-255">See Also</span></span>  
+ <xref:System.Windows.Forms.FlowLayoutPanel>  
+ <xref:System.Windows.Forms.TableLayoutPanel>  
+ [<span data-ttu-id="3fb68-256">연습: TableLayoutPanel을 사용하여 Windows Forms에서 컨트롤 정렬</span><span class="sxs-lookup"><span data-stu-id="3fb68-256">Walkthrough: Arranging Controls on Windows Forms Using a TableLayoutPanel</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+ [<span data-ttu-id="3fb68-257">연습: Windows Forms에서 맞춤선을 사용하여 컨트롤 정렬</span><span class="sxs-lookup"><span data-stu-id="3fb68-257">Walkthrough: Arranging Controls on Windows Forms Using Snaplines</span></span>](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
+ [<span data-ttu-id="3fb68-258">Microsoft Windows 사용자 환경, 사용자 인터페이스 개발자 및 디자이너를 위한 공식 지침. Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)</span><span class="sxs-lookup"><span data-stu-id="3fb68-258">Microsoft Windows User Experience, Official Guidelines for User Interface Developers and Designers. Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)</span></span>](http://www.microsoft.com/mspress/southpacific/books/book11588.htm)  
+ [<span data-ttu-id="3fb68-259">AutoSize 속성 개요</span><span class="sxs-lookup"><span data-stu-id="3fb68-259">AutoSize Property Overview</span></span>](../../../../docs/framework/winforms/controls/autosize-property-overview.md)  
+ [<span data-ttu-id="3fb68-260">방법: Windows Forms에서 컨트롤 고정</span><span class="sxs-lookup"><span data-stu-id="3fb68-260">How to: Dock Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)  
+ [<span data-ttu-id="3fb68-261">방법: Windows Forms에서 컨트롤 고정</span><span class="sxs-lookup"><span data-stu-id="3fb68-261">How to: Anchor Controls on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-anchor-controls-on-windows-forms.md)  
+ [<span data-ttu-id="3fb68-262">연습: Padding, Margins 및 AutoSize 속성을 사용하여 Windows Forms 컨트롤 레이아웃</span><span class="sxs-lookup"><span data-stu-id="3fb68-262">Walkthrough: Laying Out Windows Forms Controls with Padding, Margins, and the AutoSize Property</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)

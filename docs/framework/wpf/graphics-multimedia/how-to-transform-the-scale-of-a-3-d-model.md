@@ -1,35 +1,38 @@
 ---
-title: "방법: 3차원 모델의 배율 변환 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "3차원 개체, 배율"
-  - "배율, 3차원 개체"
+title: "방법: 3차원 모델의 배율 변환"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- scaling [WPF], 3-D objects
+- 3-D objects [WPF], scaling
 ms.assetid: f3fdfe33-f7dc-44b0-84a5-e43b89947f35
-caps.latest.revision: 3
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d94086f38169ee31cbee29e034359d573462ffca
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 3차원 모델의 배율 변환
-이 예제에서는 3차원 개체의 배율을 조정하는 방법을 보여 줍니다.  3차원 개체의 배율을 조정하려면 <xref:System.Windows.Media.Media3D.ScaleTransform3D>를 사용합니다.  <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleX%2A>, <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleY%2A> 및 <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleZ%2A> 속성은 사용자가 지정한 인수에 따라 요소의 크기를 조정합니다.  예를 들어 <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleX%2A> 값 1.5는 개체를 원래 너비의 150%로 늘립니다.  <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleY%2A> 값 0.5는 개체의 높이를 50%까지 줄입니다.  아래의 코드에서는 <xref:System.Windows.Media.Media3D.GeometryModel3D>에 대한 변환으로 <xref:System.Windows.Media.Media3D.ScaleTransform3D>를 사용하는 방법을 보여 줍니다.  
+# <a name="how-to-transform-the-scale-of-a-3-d-model"></a><span data-ttu-id="87684-102">방법: 3차원 모델의 배율 변환</span><span class="sxs-lookup"><span data-stu-id="87684-102">How to: Transform the Scale of a 3-D Model</span></span>
+<span data-ttu-id="87684-103">이 예에서는 3 차원 개체의 크기를 조정 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="87684-103">This example shows how to scale a 3-D object.</span></span> <span data-ttu-id="87684-104">3 차원 개체의 크기를 조정 하려면 사용 된 <xref:System.Windows.Media.Media3D.ScaleTransform3D>합니다.</span><span class="sxs-lookup"><span data-stu-id="87684-104">To scale a 3-D object, use a <xref:System.Windows.Media.Media3D.ScaleTransform3D>.</span></span> <span data-ttu-id="87684-105"><xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleX%2A>, <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleY%2A>, 및 <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleZ%2A> 속성에 지정한 계수로 요소 크기 조정 합니다.</span><span class="sxs-lookup"><span data-stu-id="87684-105">The <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleX%2A>, <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleY%2A>, and <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleZ%2A> properties resize the element by the factor you specify.</span></span> <span data-ttu-id="87684-106">예를 들어 한 <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleX%2A> 원래 너비의 150%로 개체를 확장 하는 1.5의 값입니다.</span><span class="sxs-lookup"><span data-stu-id="87684-106">For example, a <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleX%2A> value of 1.5 stretches an object to 150 percent of its original width.</span></span> <span data-ttu-id="87684-107">A <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleY%2A> 값이 0.5 개체의 높이 50%로 축소 합니다.</span><span class="sxs-lookup"><span data-stu-id="87684-107">A <xref:System.Windows.Media.Media3D.ScaleTransform3D.ScaleY%2A> value of 0.5 shrinks the height of an object by 50 percent.</span></span> <span data-ttu-id="87684-108">아래 코드를 사용 하 여 보여 줍니다는 <xref:System.Windows.Media.Media3D.ScaleTransform3D> 에 대 한 변환으로는 <xref:System.Windows.Media.Media3D.GeometryModel3D>합니다.</span><span class="sxs-lookup"><span data-stu-id="87684-108">The code below shows using a <xref:System.Windows.Media.Media3D.ScaleTransform3D> as the transform for a <xref:System.Windows.Media.Media3D.GeometryModel3D>.</span></span>  
   
- [!code-xml[3DGallery_snip#ScaleTransform3DExampleInline1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/ScaleTransform3DExample.xaml#scaletransform3dexampleinline1)]  
+ [!code-xaml[3DGallery_snip#ScaleTransform3DExampleInline1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/ScaleTransform3DExample.xaml#scaletransform3dexampleinline1)]  
   
-## 예제  
- 다음 코드에서는 전체 샘플을 보여 줍니다.  
+## <a name="example"></a><span data-ttu-id="87684-109">예제</span><span class="sxs-lookup"><span data-stu-id="87684-109">Example</span></span>  
+ <span data-ttu-id="87684-110">다음 코드에서는 전체 예제를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="87684-110">The following code shows the entire sample.</span></span>  
   
- [!code-xml[3DGallery_snip#ScaleTransform3DExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/ScaleTransform3DExample.xaml#scaletransform3dexamplewholepage)]  
+ [!code-xaml[3DGallery_snip#ScaleTransform3DExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/ScaleTransform3DExample.xaml#scaletransform3dexamplewholepage)]  
   
-## 참고 항목  
- [3차원 변환에 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-3-d-translations.md)   
- [3차원 장면 만들기](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)   
- [3차원 그래픽 개요](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+## <a name="see-also"></a><span data-ttu-id="87684-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="87684-111">See Also</span></span>  
+ [<span data-ttu-id="87684-112">3차원 변환에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="87684-112">Animate 3-D Translations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-3-d-translations.md)  
+ [<span data-ttu-id="87684-113">3차원 장면 만들기</span><span class="sxs-lookup"><span data-stu-id="87684-113">Create a 3-D Scene</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)  
+ [<span data-ttu-id="87684-114">3차원 그래픽 개요</span><span class="sxs-lookup"><span data-stu-id="87684-114">3-D Graphics Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)

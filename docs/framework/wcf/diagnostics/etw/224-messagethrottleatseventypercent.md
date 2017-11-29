@@ -1,42 +1,45 @@
 ---
-title: "224 - MessageThrottleAtSeventyPercent | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: 224 - MessageThrottleAtSeventyPercent
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 82bbbfd7-10d2-41fd-805d-2443b0c1b96b
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0dd985e3986548938f06e86c1f49d23c43307d17
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 224 - MessageThrottleAtSeventyPercent
-## 속성  
+# <a name="224---messagethrottleatseventypercent"></a><span data-ttu-id="c1672-102">224 - MessageThrottleAtSeventyPercent</span><span class="sxs-lookup"><span data-stu-id="c1672-102">224 - MessageThrottleAtSeventyPercent</span></span>
+## <a name="properties"></a><span data-ttu-id="c1672-103">속성</span><span class="sxs-lookup"><span data-stu-id="c1672-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|ID|224|  
-|키워드|EndToEndMonitoring, HealthMonitoring, 문제 해결, ServiceModel|  
-|수준|경고|  
-|채널|Microsoft\-Windows\-응용 프로그램 서버\-응용 프로그램\/분석|  
+|<span data-ttu-id="c1672-104">ID</span><span class="sxs-lookup"><span data-stu-id="c1672-104">ID</span></span>|<span data-ttu-id="c1672-105">224</span><span class="sxs-lookup"><span data-stu-id="c1672-105">224</span></span>|  
+|<span data-ttu-id="c1672-106">키워드가</span><span class="sxs-lookup"><span data-stu-id="c1672-106">Keywords</span></span>|<span data-ttu-id="c1672-107">EndToEndMonitoring, HealthMonitoring, 문제 해결, ServiceModel</span><span class="sxs-lookup"><span data-stu-id="c1672-107">EndToEndMonitoring, HealthMonitoring, Troubleshooting, ServiceModel</span></span>|  
+|<span data-ttu-id="c1672-108">수준</span><span class="sxs-lookup"><span data-stu-id="c1672-108">Level</span></span>|<span data-ttu-id="c1672-109">경고</span><span class="sxs-lookup"><span data-stu-id="c1672-109">Warning</span></span>|  
+|<span data-ttu-id="c1672-110">채널</span><span class="sxs-lookup"><span data-stu-id="c1672-110">Channel</span></span>|<span data-ttu-id="c1672-111">Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석</span><span class="sxs-lookup"><span data-stu-id="c1672-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## 설명  
- 기본 서비스 스로틀 중 하나가 초과되면 `MessageThrottleExceeded` 이벤트가 내보내집니다.작업 스파이크가 느려지고 스로틀의 현재 값이 현재 한계의 70%이면 이 이벤트가 내보내집니다.이 이벤트는 작업이 느려지므로 한 번만 내보내집니다.예를 들어 현재 값이 70% 표시 지점을 넘나들면\(예: 70,69,70,71,70,69\) 처음으로 70%가 될 때만 이 이벤트가 내보내집니다.이 이벤트가 내보내진 후에 현재 값이 스로틀 한계를 다시 초과하면 `MessageThrottleExceeded` 이벤트가 내보내집니다.  
+## <a name="description"></a><span data-ttu-id="c1672-112">설명</span><span class="sxs-lookup"><span data-stu-id="c1672-112">Description</span></span>  
+ <span data-ttu-id="c1672-113">기본 서비스 스로틀 중 하나가 초과되면 `MessageThrottleExceeded` 이벤트가 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="c1672-113">When one of the main service throttles has been exceeded, the `MessageThrottleExceeded` event is emitted.</span></span> <span data-ttu-id="c1672-114">작업 스파이크가 느려지고 스로틀의 현재 값이 현재 한계의 70%이면 이 이벤트가 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="c1672-114">When the spike of activity slows and the current value of the throttle is at 70 percent of the current limit then this event is emitted.</span></span> <span data-ttu-id="c1672-115">이 이벤트는 작업이 느려지므로 한 번만 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="c1672-115">Note that this event is only emitted once as the activity is slowing.</span></span> <span data-ttu-id="c1672-116">예를 들어 현재 값이 70% 표시 지점을 넘나들면(예: 70,69,70,71,70,69) 처음으로 70%가 될 때만 이 이벤트가 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="c1672-116">If the current value hovers at the 70 percent mark, (for example, 70,69,70,71,70,69), only the first occurrence of 70 percent results in an event.</span></span> <span data-ttu-id="c1672-117">이 이벤트가 내보내진 후에 현재 값이 스로틀 한계를 다시 초과하면 `MessageThrottleExceeded` 이벤트가 내보내집니다.</span><span class="sxs-lookup"><span data-stu-id="c1672-117">After this event is emitted, future occurrences of exceeding the throttle's limit result in a `MessageThrottleExceeded` event.</span></span>  
   
-## 메시지  
- '%2'의 스로틀 제한 '%1'이\(가\) 70퍼센트입니다.  
+## <a name="message"></a><span data-ttu-id="c1672-118">메시지</span><span class="sxs-lookup"><span data-stu-id="c1672-118">Message</span></span>  
+ <span data-ttu-id="c1672-119">'%2'의 스로틀 제한 '%1'이(가) 70퍼센트입니다.</span><span class="sxs-lookup"><span data-stu-id="c1672-119">The '%1' throttle limit of '%2' is at 70%%.</span></span>  
   
-## 세부 사항  
+## <a name="details"></a><span data-ttu-id="c1672-120">세부 정보</span><span class="sxs-lookup"><span data-stu-id="c1672-120">Details</span></span>  
   
-|데이터 항목 이름|데이터 항목 형식|설명|  
-|---------------|---------------|--------|  
-|Throttle Name|`xs:string`|초과한 스로틀의 이름입니다.`MaxConcurrentCalls`, `MaxConcurrentInstances` 또는 `MaxConcurrentSessions` 중 하나입니다.|  
-|Limit|`xs:long`|현재 구성된 스로틀 한계입니다.|  
-|HostReference|`xs:string`|웹 호스팅 서비스의 경우 이 필드는 웹 계층의 서비스를 고유하게 식별합니다.이 서비스의 형식은 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'으로 정의됩니다.예를 들면 'Default Web Site\/CalculatorApplication&#124;\/CalculatorService.svc&#124;CalculatorService'와 같습니다.|  
-|AppDomain|`xs:string`|AppDomain.CurrentDomain.FriendlyName에서 반환되는 문자열입니다.|
+|<span data-ttu-id="c1672-121">데이터 항목 이름</span><span class="sxs-lookup"><span data-stu-id="c1672-121">Data Item Name</span></span>|<span data-ttu-id="c1672-122">데이터 항목 형식</span><span class="sxs-lookup"><span data-stu-id="c1672-122">Data Item Type</span></span>|<span data-ttu-id="c1672-123">설명</span><span class="sxs-lookup"><span data-stu-id="c1672-123">Description</span></span>|  
+|--------------------|--------------------|-----------------|  
+|<span data-ttu-id="c1672-124">Throttle Name</span><span class="sxs-lookup"><span data-stu-id="c1672-124">Throttle Name</span></span>|`xs:string`|<span data-ttu-id="c1672-125">초과한 스로틀의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="c1672-125">The name of the throttle that has been exceeded.</span></span> <span data-ttu-id="c1672-126">`MaxConcurrentCalls`, `MaxConcurrentInstances` 또는 `MaxConcurrentSessions` 중 하나입니다.</span><span class="sxs-lookup"><span data-stu-id="c1672-126">Either `MaxConcurrentCalls`, `MaxConcurrentInstances`, or `MaxConcurrentSessions`,</span></span>|  
+|<span data-ttu-id="c1672-127">Limit</span><span class="sxs-lookup"><span data-stu-id="c1672-127">Limit</span></span>|`xs:long`|<span data-ttu-id="c1672-128">현재 구성된 스로틀 한계입니다.</span><span class="sxs-lookup"><span data-stu-id="c1672-128">The currently configured limit of the throttle.</span></span>|  
+|<span data-ttu-id="c1672-129">HostReference</span><span class="sxs-lookup"><span data-stu-id="c1672-129">HostReference</span></span>|`xs:string`|<span data-ttu-id="c1672-130">웹 호스팅 서비스의 경우 이 필드는 웹 계층의 서비스를 고유하게 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="c1672-130">For Web-hosted services, this field uniquely identifies the service in the Web hierarchy.</span></span> <span data-ttu-id="c1672-131">해당 형식으로 정의 됩니다 ' 웹 Site Name Application Virtual Path &#124; 서비스의 가상 경로 &#124; ServiceName'.</span><span class="sxs-lookup"><span data-stu-id="c1672-131">Its format is defined as 'Web Site Name Application Virtual Path&#124;Service Virtual Path&#124;ServiceName'.</span></span> <span data-ttu-id="c1672-132">예: ' 기본 웹 사이트/CalculatorApplication #124;/CalculatorService.svc &#124; CalculatorService'.</span><span class="sxs-lookup"><span data-stu-id="c1672-132">Example: 'Default Web Site/CalculatorApplication&#124;/CalculatorService.svc&#124;CalculatorService'.</span></span>|  
+|<span data-ttu-id="c1672-133">AppDomain</span><span class="sxs-lookup"><span data-stu-id="c1672-133">AppDomain</span></span>|`xs:string`|<span data-ttu-id="c1672-134">AppDomain.CurrentDomain.FriendlyName에서 반환되는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="c1672-134">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

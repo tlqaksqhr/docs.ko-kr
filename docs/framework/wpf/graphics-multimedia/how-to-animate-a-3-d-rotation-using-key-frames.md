@@ -1,41 +1,44 @@
 ---
-title: "방법: 키 프레임을 사용하여 3차원 회전에 애니메이션 효과 주기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "3차원 변환, 애니메이션 적용, 키 프레임으로(Rotation3DAnimation)"
-  - "애니메이션, 3차원 변환, 키 프레임으로(Rotation3DAnimation)"
-  - "키 프레임, Rotation3DAnimation"
+title: "방법: 키 프레임을 사용하여 3차원 회전에 애니메이션 효과 주기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- animation [WPF], 3-D translations [WPF], with key frames (Rotation3DAnimation)
+- key frames [WPF], Rotation3DAnimation
+- 3-D translations [WPF], animating [WPF], with key frames (Rotation3DAnimation)
 ms.assetid: 6f671b95-7f30-4836-9a4f-aeb7dc30121f
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8dad8934dacd64f31cf65d7517d8c48114522505
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 키 프레임을 사용하여 3차원 회전에 애니메이션 효과 주기
-다음 예제에서 <xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames>는 3D 개체의 회전 축이 "비틀거리면서" 3D 개체가 회전하는 애니메이션 효과를 주는 데 사용됩니다.  이 애니메이션에서는 다음 키 프레임을 사용합니다.  
+# <a name="how-to-animate-a-3-d-rotation-using-key-frames"></a><span data-ttu-id="216c1-102">방법: 키 프레임을 사용하여 3차원 회전에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="216c1-102">How to: Animate a 3-D Rotation Using Key Frames</span></span>
+<span data-ttu-id="216c1-103">다음 예에서 <xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames> 3D 개체가 해당 축 회전 애니메이션 효과 주는 "비틀 거리 면 서" 하는 동안 회전을 만드는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="216c1-103">In the following example, <xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames> is used to make a 3D object rotate while its axis of rotation animates resulting in a "wobble".</span></span> <span data-ttu-id="216c1-104">이 애니메이션 다음 키 프레임을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="216c1-104">This animation uses the following key frames:</span></span>  
   
-1.  <xref:System.Windows.Media.Animation.LinearRotation3DKeyFrame>은 값 사이에 부드러운 선형 보간을 만드는 데 사용됩니다.  
+1.  <span data-ttu-id="216c1-105"><xref:System.Windows.Media.Animation.LinearRotation3DKeyFrame>값 사이의 선형 보간을 부드러운 만드는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="216c1-105"><xref:System.Windows.Media.Animation.LinearRotation3DKeyFrame> is used to create a smooth, linear interpolation between values.</span></span>  
   
-2.  <xref:System.Windows.Media.Animation.DiscreteRotation3DKeyFrame>은 값 간에 급격한 "이동"을 만드는 데 사용됩니다\(보간 없음\).  
+2.  <span data-ttu-id="216c1-106"><xref:System.Windows.Media.Animation.DiscreteRotation3DKeyFrame>값 (보간 없음) 사이의 급격 한 "이동"을 만드는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="216c1-106"><xref:System.Windows.Media.Animation.DiscreteRotation3DKeyFrame> is used to create sudden "jumps" between values (no interpolation).</span></span>  
   
-3.  <xref:System.Windows.Media.Animation.SplineRotation3DKeyFrame>은 <xref:System.Windows.Media.Animation.SplineRotation3DKeyFrame.KeySpline%2A> 속성에 따라 값 간에 가변 전환을 만드는 데 사용됩니다.  아래 예제에서 이 애니메이션 부분은 처음에는 서서히 시작되다가 시간 세그먼트의 끝 부분으로 갈수록 빠르게 진행됩니다.  
+3.  <span data-ttu-id="216c1-107"><xref:System.Windows.Media.Animation.SplineRotation3DKeyFrame>변수 전환에 따라 값을 만드는 데 사용 되는 <xref:System.Windows.Media.Animation.SplineRotation3DKeyFrame.KeySpline%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="216c1-107"><xref:System.Windows.Media.Animation.SplineRotation3DKeyFrame> is used to create a variable transition between values depending on the <xref:System.Windows.Media.Animation.SplineRotation3DKeyFrame.KeySpline%2A> property.</span></span> <span data-ttu-id="216c1-108">아래 예에서 애니메이션의이 부분 서서히 시작 되 다가 시간 세그먼트의 끝으로, 갈수록 합니다.</span><span class="sxs-lookup"><span data-stu-id="216c1-108">In the example below, this part of the animation starts off slow but toward the end of the time segment, speeds up exponentially.</span></span>  
   
-## 예제  
- [!code-xml[Animation3DGallery_snip#Rotation3DAnimationUsingKeyFramesExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Rotation3DAnimationUsingKeyFramesExample.xaml#rotation3danimationusingkeyframesexamplewholepage)]  
+## <a name="example"></a><span data-ttu-id="216c1-109">예제</span><span class="sxs-lookup"><span data-stu-id="216c1-109">Example</span></span>  
+ [!code-xaml[Animation3DGallery_snip#Rotation3DAnimationUsingKeyFramesExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Rotation3DAnimationUsingKeyFramesExample.xaml#rotation3danimationusingkeyframesexamplewholepage)]  
   
-## 참고 항목  
- [3차원 그래픽 개요](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)   
- [키 프레임 애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)   
- [Storyboard를 사용하여 3차원 회전에 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-storyboards.md)   
- [Rotation3DAnimation을 사용하여 3차원 회전에 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-rotation3danimation.md)   
- [4원수를 사용하여 3차원 회전에 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-quaternions.md)   
- [키 프레임을 사용하여 3차원 회전에 애니메이션 효과 주기\(QuaternionAnimationUsingKeyFrames\)](../../../../docs/framework/wpf/graphics-multimedia/animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)
+## <a name="see-also"></a><span data-ttu-id="216c1-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="216c1-110">See Also</span></span>  
+ [<span data-ttu-id="216c1-111">3차원 그래픽 개요</span><span class="sxs-lookup"><span data-stu-id="216c1-111">3-D Graphics Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)  
+ [<span data-ttu-id="216c1-112">키 프레임 애니메이션 개요</span><span class="sxs-lookup"><span data-stu-id="216c1-112">Key-Frame Animations Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [<span data-ttu-id="216c1-113">Storyboard를 사용하여 3차원 회전에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="216c1-113">Animate a 3-D Rotation Using Storyboards</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-storyboards.md)  
+ [<span data-ttu-id="216c1-114">Rotation3DAnimation을 사용하여 3차원 회전에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="216c1-114">Animate a 3-D Rotation Using Rotation3DAnimation</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-rotation3danimation.md)  
+ [<span data-ttu-id="216c1-115">4원수를 사용하여 3차원 회전에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="216c1-115">Animate a 3-D Rotation Using Quaternions</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-quaternions.md)  
+ [<span data-ttu-id="216c1-116">키 프레임을 사용하여 3차원 회전에 애니메이션 효과 주기(QuaternionAnimationUsingKeyFrames)</span><span class="sxs-lookup"><span data-stu-id="216c1-116">Animate a 3-D Rotation Using Key Frames (QuaternionAnimationUsingKeyFrames)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)

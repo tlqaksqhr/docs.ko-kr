@@ -1,44 +1,43 @@
 ---
-title: "배포 고려 사항(Entity Framework) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
+title: "배포 고려 사항(Entity Framework)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3a847a22-4eb8-4565-b18b-453bbca070db
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 03c64c9a300a92a86dfac1ed92c67be248e53219
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 배포 고려 사항(Entity Framework)
-이 항목에서는 데이터 액세스를 위해 ADO.NET Entity Framework를 사용하는 응용 프로그램 배포에 대한 정보를 제공합니다.  Entity Framework에 대한 자세한 내용은 [시작](../../../../../docs/framework/data/adonet/ef/getting-started.md)를 참조하세요.  
+# <a name="deployment-considerations-entity-framework"></a><span data-ttu-id="471e4-102">배포 고려 사항(Entity Framework)</span><span class="sxs-lookup"><span data-stu-id="471e4-102">Deployment Considerations (Entity Framework)</span></span>
+<span data-ttu-id="471e4-103">이 항목에서는 데이터 액세스를 위해 ADO.NET Entity Framework를 사용하는 응용 프로그램 배포에 대한 정보를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="471e4-103">This topic provides information about deploying applications that use the ADO.NET Entity Framework for data access.</span></span> <span data-ttu-id="471e4-104">Entity Framework에 대 한 자세한 내용은 참조 [시작](../../../../../docs/framework/data/adonet/ef/getting-started.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="471e4-104">For more information about the Entity Framework, see [Getting Started](../../../../../docs/framework/data/adonet/ef/getting-started.md).</span></span>  
   
- Entity Framework에서는 Visual Studio에서 개발을 용이하게 하는 통합된 도구 집합을 제공합니다.  자세한 내용은 [ADO.NET Entity Data Model  Tools](http://msdn.microsoft.com/ko-kr/91076853-0881-421b-837a-f582f36be527)을 참조하세요.  이 항목에서 Entity Framework 기반 응용 프로그램을 배포하기 위해 특정 기술을 사용하는 방법을 설명하지는 않습니다.  
+ <span data-ttu-id="471e4-105">Entity Framework에서는 Visual Studio에서 개발을 용이하게 하는 통합된 도구 집합을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="471e4-105">The Entity Framework provides a set of tools that integrate with and make it easier to develop in Visual Studio.</span></span> <span data-ttu-id="471e4-106">자세한 내용은 참조 [ADO.NET 엔터티 데이터 모델 도구](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)합니다.</span><span class="sxs-lookup"><span data-stu-id="471e4-106">For more information, see [ADO.NET Entity Data Model  Tools](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527).</span></span> <span data-ttu-id="471e4-107">이 항목에서 Entity Framework 기반 응용 프로그램을 배포하기 위해 특정 기술을 사용하는 방법을 설명하지는 않습니다.</span><span class="sxs-lookup"><span data-stu-id="471e4-107">This topic does not describe how to use specific technologies to deploy an Entity Framework–based application.</span></span>  
   
- Visual Studio에서는 ClickOnce 배포와 같은 응용 프로그램 배포에 대한 기능을 제공합니다.  자세한 내용은 Visual Studio 설명서에서 [응용 프로그램 및 구성 요소 배포](../Topic/Deploying%20Applications,%20Services,%20and%20Components.md)를 참조하세요.  
+ <span data-ttu-id="471e4-108">Visual Studio에서는 ClickOnce 배포와 같은 응용 프로그램 배포에 대한 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="471e4-108">Visual Studio provides facilities for distributing and deploying applications, such as ClickOnce deployment.</span></span> <span data-ttu-id="471e4-109">자세한 내용은 참조 [응용 프로그램 배포 및 구성 요소](https://msdn.microsoft.com/library/wtzawcsz) Visual Studio 설명서에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="471e4-109">For more information, see [Deploying Applications and Components](https://msdn.microsoft.com/library/wtzawcsz) in the Visual Studio documentation.</span></span>  
   
- Entity Framework를 사용하는 응용 프로그램을 배포할 때 다음 사항을 고려해야 합니다.  
+ <span data-ttu-id="471e4-110">Entity Framework를 사용하는 응용 프로그램을 배포할 때 다음 사항을 고려해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="471e4-110">The following considerations apply when you deploy an application that uses the Entity Framework:</span></span>  
   
--   Entity Framework는 .NET Framework 3.5 서비스 팩 1\(SP1\)과 함께 시작하는 .NET Framework의 구성 요소입니다.  Entity Framework 기반 응용 프로그램을 배포할 때 .NET Framework 3.5 SP1 이상 버전이 설치되어 있어야 합니다.  
+-   <span data-ttu-id="471e4-111">Entity Framework는 .NET Framework 3.5 서비스 팩 1(SP1)과 함께 시작하는 .NET Framework의 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="471e4-111">The Entity Framework is a component of the .NET Framework starting with the .NET Framework 3.5 Service Pack 1 (SP1).</span></span> <span data-ttu-id="471e4-112">Entity Framework 기반 응용 프로그램을 배포할 때 .NET Framework 3.5 SP1 이상 버전이 설치되어 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="471e4-112">You must ensure that the .NET Framework 3.5 SP1 or a later version is installed when deploying an Entity Framework–based application.</span></span>  
   
--   엔터티 데이터 모델 마법사를 통해 개념적 모델이 생성되면 응용 프로그램 구성 파일에서 연결 문자열이 만들어집니다.  모델 및 매핑 파일이 응용 프로그램 리소스로 포함되거나 출력 디렉터리에 복사될 수 있습니다.  기본적으로 모델 및 매핑 파일은 포함된 응용 프로그램 리소스로 배포됩니다.  Entity Designer 파일의 `Metadata Artifact Processing` 속성을 사용하여 이러한 옵션 중 하나를 선택합니다.  자세한 내용은 [How to: Copy Model and Mapping Files to the Output Directory](http://msdn.microsoft.com/ko-kr/e2c9820f-1705-457e-9fdb-8b289f3179b4)을 참조하세요.  
+-   <span data-ttu-id="471e4-113">엔터티 데이터 모델 마법사를 통해 개념적 모델이 생성되면 응용 프로그램 구성 파일에서 연결 문자열이 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="471e4-113">When a conceptual model is generated by the Entity Data Model Wizard, a connection string is created in the application configuration file.</span></span> <span data-ttu-id="471e4-114">모델 및 매핑 파일이 응용 프로그램 리소스로 포함되거나 출력 디렉터리에 복사될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="471e4-114">Model and mapping files can be embedded as application resources or they can be copied to the output directory.</span></span> <span data-ttu-id="471e4-115">기본적으로 모델 및 매핑 파일은 포함된 응용 프로그램 리소스로 배포됩니다.</span><span class="sxs-lookup"><span data-stu-id="471e4-115">By default, they are deployed as embedded application resources.</span></span> <span data-ttu-id="471e4-116">Entity Designer 파일의 `Metadata Artifact Processing` 속성을 사용하여 이러한 옵션 중 하나를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="471e4-116">Use the `Metadata Artifact Processing` property of the Entity Designer file to select one of these options.</span></span> <span data-ttu-id="471e4-117">자세한 내용은 참조 [하는 방법: 복사 모델 및 매핑 파일을 출력 디렉터리](http://msdn.microsoft.com/en-us/e2c9820f-1705-457e-9fdb-8b289f3179b4)합니다.</span><span class="sxs-lookup"><span data-stu-id="471e4-117">For more information, see [How to: Copy Model and Mapping Files to the Output Directory](http://msdn.microsoft.com/en-us/e2c9820f-1705-457e-9fdb-8b289f3179b4).</span></span>  
   
--   CSDL\(개념 스키마 정의 언어\), SSDL\(저장소 스키마 정의 언어\) 및 MSL\(매핑 사양 언어\)로 표현되는 모델 및 매핑 정보가 연결 문자열에 의해 지정된 위치에 응용 프로그램과 함께 배포됩니다.  자세한 내용은 [연결 문자열](../../../../../docs/framework/data/adonet/ef/connection-strings.md)을 참조하세요.  
+-   <span data-ttu-id="471e4-118">CSDL(개념 스키마 정의 언어), SSDL(저장소 스키마 정의 언어) 및 MSL(매핑 사양 언어)로 표현되는 모델 및 매핑 정보가 연결 문자열에 의해 지정된 위치에 응용 프로그램과 함께 배포됩니다.</span><span class="sxs-lookup"><span data-stu-id="471e4-118">Ensure that the model and mapping information (expressed in conceptual schema definition language (CSDL), store schema definition language (SSDL), and mapping specification language (MSL)) is deployed together with the application and in the location specified by the connection string.</span></span> <span data-ttu-id="471e4-119">자세한 내용은 참조 [연결 문자열](../../../../../docs/framework/data/adonet/ef/connection-strings.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="471e4-119">For more information, see [Connection Strings](../../../../../docs/framework/data/adonet/ef/connection-strings.md).</span></span>  
   
--   모델 및 매핑 정보를 응용 프로그램 리소스로 포함하는 경우 개념적 모델이 업데이트될 때마다 응용 프로그램을 다시 컴파일하고 다시 배포해야 합니다.  
+-   <span data-ttu-id="471e4-120">모델 및 매핑 정보를 응용 프로그램 리소스로 포함하는 경우 개념적 모델이 업데이트될 때마다 응용 프로그램을 다시 컴파일하고 다시 배포해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="471e4-120">When you embed model and mapping information as application resources, you must recompile and redeploy the application every time the conceptual model is updated.</span></span>  
   
--   Entity Framework는 .NET Framework의 구성 요소이므로 .NET Framework 사용권 계약에 허용된 대로 응용 프로그램과 함께 재배포할 수 있습니다.  
+-   <span data-ttu-id="471e4-121">Entity Framework는 .NET Framework의 구성 요소이므로 .NET Framework 사용권 계약에 허용된 대로 응용 프로그램과 함께 재배포할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="471e4-121">Because the Entity Framework is a component of the .NET Framework, it can be redistributed with your application as permitted by the .NET Framework license agreement.</span></span>  
   
-## 참고 항목  
- [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)   
- [개발 및 배포 고려 사항](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)
+## <a name="see-also"></a><span data-ttu-id="471e4-122">참고 항목</span><span class="sxs-lookup"><span data-stu-id="471e4-122">See Also</span></span>  
+ [<span data-ttu-id="471e4-123">ADO.NET Entity Framework</span><span class="sxs-lookup"><span data-stu-id="471e4-123">ADO.NET Entity Framework</span></span>](../../../../../docs/framework/data/adonet/ef/index.md)  
+ [<span data-ttu-id="471e4-124">개발 및 배포 고려 사항</span><span class="sxs-lookup"><span data-stu-id="471e4-124">Development and Deployment Considerations</span></span>](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

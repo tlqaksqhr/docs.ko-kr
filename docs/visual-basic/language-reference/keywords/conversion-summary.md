@@ -1,60 +1,42 @@
 ---
-title: "변환 요약 (Visual Basic) | Microsoft 문서"
-ms.date: 2015-07-20
+title: "변환 요약(Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- data type conversion, keywords
+- data type conversion [Visual Basic], keywords
 - reference, type conversions
-- conversions, Visual Basic
-- type conversion, keywords
+- conversions [Visual Basic], Visual Basic
+- type conversion [Visual Basic], keywords
 ms.assetid: ae2c79a7-2d62-4fbe-8585-14360d11f987
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 05ea9ba57cc2d6f5f3d05d6e623527958b9dc1eb
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 76c5d56276dca62af8f0dacc66618b9b941bea35
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="conversion-summary-visual-basic"></a>변환 요약(Visual Basic)
-[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]언어 키워드와 런타임 라이브러리 멤버 용도 따라 구성 됩니다 사용 합니다.  
+# <a name="conversion-summary-visual-basic"></a><span data-ttu-id="5b679-102">변환 요약(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5b679-102">Conversion Summary (Visual Basic)</span></span>
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]<span data-ttu-id="5b679-103">언어 키워드 및 런타임 라이브러리 멤버 용도 따라 구성 하 고 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="5b679-103"> language keywords and run-time library members are organized by purpose and use.</span></span>  
   
-|작업|언어 요소|  
+|<span data-ttu-id="5b679-104">작업</span><span class="sxs-lookup"><span data-stu-id="5b679-104">Action</span></span>|<span data-ttu-id="5b679-105">언어 요소</span><span class="sxs-lookup"><span data-stu-id="5b679-105">Language element</span></span>|  
 |------------|----------------------|  
-|ANSI 값을 문자열로 변환 합니다.|<xref:Microsoft.VisualBasic.Strings.Chr%2A>,<xref:Microsoft.VisualBasic.Strings.ChrW%2A></xref:Microsoft.VisualBasic.Strings.ChrW%2A></xref:Microsoft.VisualBasic.Strings.Chr%2A>|  
-|문자열을 소문자 또는 대문자로 변환 합니다.|<xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.LCase%2A>,<xref:Microsoft.VisualBasic.Strings.UCase%2A></xref:Microsoft.VisualBasic.Strings.UCase%2A></xref:Microsoft.VisualBasic.Strings.LCase%2A></xref:Microsoft.VisualBasic.Strings.Format%2A>|  
-|일련 번호로 날짜를 변환 합니다.|<xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>,<xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A></xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A></xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>|  
-|10 진수 숫자를 다른 진수로 변환 합니다.|<xref:Microsoft.VisualBasic.Conversion.Hex%2A>,<xref:Microsoft.VisualBasic.Conversion.Oct%2A></xref:Microsoft.VisualBasic.Conversion.Oct%2A></xref:Microsoft.VisualBasic.Conversion.Hex%2A>|  
-|숫자를 문자열로 변환 합니다.|<xref:Microsoft.VisualBasic.Strings.Format%2A>,<xref:Microsoft.VisualBasic.Conversion.Str%2A></xref:Microsoft.VisualBasic.Conversion.Str%2A></xref:Microsoft.VisualBasic.Strings.Format%2A>|  
-|데이터 형식 간에 변환 합니다.|[CBool](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CByte](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDate](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDbl](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDec](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CInt](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CLng](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CSng](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CStr](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CType](../../../visual-basic/language-reference/functions/ctype-function.md), <xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A></xref:Microsoft.VisualBasic.Conversion.Int%2A></xref:Microsoft.VisualBasic.Conversion.Fix%2A>|  
-|날짜를 일, 월, 요일 또는 연도를 변환 합니다.|<xref:Microsoft.VisualBasic.DateAndTime.Day%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Month%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Weekday%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Year%2A></xref:Microsoft.VisualBasic.DateAndTime.Year%2A></xref:Microsoft.VisualBasic.DateAndTime.Weekday%2A></xref:Microsoft.VisualBasic.DateAndTime.Month%2A></xref:Microsoft.VisualBasic.DateAndTime.Day%2A>|  
-|시간, 분 또는 초 시간으로 변환 합니다.|<xref:Microsoft.VisualBasic.DateAndTime.Hour%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Minute%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Second%2A></xref:Microsoft.VisualBasic.DateAndTime.Second%2A></xref:Microsoft.VisualBasic.DateAndTime.Minute%2A></xref:Microsoft.VisualBasic.DateAndTime.Hour%2A>|  
-|문자열 ASCII 값으로 변환 합니다.|<xref:Microsoft.VisualBasic.Strings.Asc%2A>,<xref:Microsoft.VisualBasic.Strings.AscW%2A></xref:Microsoft.VisualBasic.Strings.AscW%2A></xref:Microsoft.VisualBasic.Strings.Asc%2A>|  
-|문자열을 숫자로 변환 합니다.|<xref:Microsoft.VisualBasic.Conversion.Val%2A></xref:Microsoft.VisualBasic.Conversion.Val%2A>|  
-|시간을 일련 번호로 변환 합니다.|<xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>,<xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A></xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A></xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>|  
+|<span data-ttu-id="5b679-106">ANSI 값을 문자열로 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="5b679-106">Convert ANSI value to string.</span></span>|<span data-ttu-id="5b679-107"><xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A></span><span class="sxs-lookup"><span data-stu-id="5b679-107"><xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A></span></span>|  
+|<span data-ttu-id="5b679-108">문자열을 소문자 또는 대문자로 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="5b679-108">Convert string to lowercase or uppercase.</span></span>|<span data-ttu-id="5b679-109"><xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.LCase%2A>,<xref:Microsoft.VisualBasic.Strings.UCase%2A></span><span class="sxs-lookup"><span data-stu-id="5b679-109"><xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Strings.LCase%2A>,<xref:Microsoft.VisualBasic.Strings.UCase%2A></span></span>|  
+|<span data-ttu-id="5b679-110">일련 번호로 날짜를 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="5b679-110">Convert date to serial number.</span></span>|<span data-ttu-id="5b679-111"><xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A></span><span class="sxs-lookup"><span data-stu-id="5b679-111"><xref:Microsoft.VisualBasic.DateAndTime.DateSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.DateValue%2A></span></span>|  
+|<span data-ttu-id="5b679-112">10 진수 숫자를 다른 진수로 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="5b679-112">Convert decimal number to other bases.</span></span>|<span data-ttu-id="5b679-113"><xref:Microsoft.VisualBasic.Conversion.Hex%2A>, <xref:Microsoft.VisualBasic.Conversion.Oct%2A></span><span class="sxs-lookup"><span data-stu-id="5b679-113"><xref:Microsoft.VisualBasic.Conversion.Hex%2A>, <xref:Microsoft.VisualBasic.Conversion.Oct%2A></span></span>|  
+|<span data-ttu-id="5b679-114">숫자를 문자열로 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="5b679-114">Convert number to string.</span></span>|<span data-ttu-id="5b679-115"><xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Conversion.Str%2A></span><span class="sxs-lookup"><span data-stu-id="5b679-115"><xref:Microsoft.VisualBasic.Strings.Format%2A>, <xref:Microsoft.VisualBasic.Conversion.Str%2A></span></span>|  
+|<span data-ttu-id="5b679-116">다른 데이터 형식을 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="5b679-116">Convert one data type to another.</span></span>|<span data-ttu-id="5b679-117">[CBool](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CByte](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDate](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDbl](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDec](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CInt](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [ CLng](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CSng](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CStr](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CType](../../../visual-basic/language-reference/functions/ctype-function.md), <xref:Microsoft.VisualBasic.Conversion.Fix%2A>,<xref:Microsoft.VisualBasic.Conversion.Int%2A></span><span class="sxs-lookup"><span data-stu-id="5b679-117">[CBool](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CByte](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDate](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDbl](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CDec](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CInt](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CLng](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CSng](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CStr](../../../visual-basic/language-reference/functions/type-conversion-functions.md), [CType](../../../visual-basic/language-reference/functions/ctype-function.md), <xref:Microsoft.VisualBasic.Conversion.Fix%2A>, <xref:Microsoft.VisualBasic.Conversion.Int%2A></span></span>|  
+|<span data-ttu-id="5b679-118">날짜를 일, 월, 주중 매일, 또는 연도를 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="5b679-118">Convert date to day, month, weekday, or year.</span></span>|<span data-ttu-id="5b679-119"><xref:Microsoft.VisualBasic.DateAndTime.Day%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Month%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Weekday%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Year%2A></span><span class="sxs-lookup"><span data-stu-id="5b679-119"><xref:Microsoft.VisualBasic.DateAndTime.Day%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Month%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Weekday%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Year%2A></span></span>|  
+|<span data-ttu-id="5b679-120">시간, 분 또는 초 시간으로 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="5b679-120">Convert time to hour, minute, or second.</span></span>|<span data-ttu-id="5b679-121"><xref:Microsoft.VisualBasic.DateAndTime.Hour%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Minute%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Second%2A></span><span class="sxs-lookup"><span data-stu-id="5b679-121"><xref:Microsoft.VisualBasic.DateAndTime.Hour%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Minute%2A>, <xref:Microsoft.VisualBasic.DateAndTime.Second%2A></span></span>|  
+|<span data-ttu-id="5b679-122">문자열 ASCII 값으로 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="5b679-122">Convert string to ASCII value.</span></span>|<span data-ttu-id="5b679-123"><xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A></span><span class="sxs-lookup"><span data-stu-id="5b679-123"><xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A></span></span>|  
+|<span data-ttu-id="5b679-124">문자열을 숫자로 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="5b679-124">Convert string to number.</span></span>|<xref:Microsoft.VisualBasic.Conversion.Val%2A>|  
+|<span data-ttu-id="5b679-125">시간을 일련 번호로 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="5b679-125">Convert time to serial number.</span></span>|<span data-ttu-id="5b679-126"><xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A></span><span class="sxs-lookup"><span data-stu-id="5b679-126"><xref:Microsoft.VisualBasic.DateAndTime.TimeSerial%2A>, <xref:Microsoft.VisualBasic.DateAndTime.TimeValue%2A></span></span>|  
   
-## <a name="see-also"></a>참고 항목  
- [키워드](../../../visual-basic/language-reference/keywords/index.md)   
- [Visual Basic 런타임 라이브러리 멤버](../../../visual-basic/language-reference/runtime-library-members.md)
+## <a name="see-also"></a><span data-ttu-id="5b679-127">참고 항목</span><span class="sxs-lookup"><span data-stu-id="5b679-127">See Also</span></span>  
+ [<span data-ttu-id="5b679-128">키워드</span><span class="sxs-lookup"><span data-stu-id="5b679-128">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)  
+ [<span data-ttu-id="5b679-129">Visual Basic 런타임 라이브러리 멤버</span><span class="sxs-lookup"><span data-stu-id="5b679-129">Visual Basic Runtime Library Members</span></span>](../../../visual-basic/language-reference/runtime-library-members.md)

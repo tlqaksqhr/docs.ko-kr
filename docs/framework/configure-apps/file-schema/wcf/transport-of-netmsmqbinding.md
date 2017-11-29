@@ -1,28 +1,37 @@
 ---
-title: "&lt;netMsmqBinding&gt;의 &lt;transport&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "&lt;netMsmqBinding&gt;의 &lt;transport&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 72e1b338-39f0-4af1-a5d9-7a2fb79f6a0b
-caps.latest.revision: 10
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 2df5bf18605fcf20b253212cb0f9a62b4719b0ad
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;netMsmqBinding&gt;의 &lt;transport&gt;
-전송 보안 설정을 정의합니다.  
+# <a name="lttransportgt-of-ltnetmsmqbindinggt"></a><span data-ttu-id="c124d-102">&lt;netMsmqBinding&gt;의 &lt;transport&gt;</span><span class="sxs-lookup"><span data-stu-id="c124d-102">&lt;transport&gt; of &lt;netMsmqBinding&gt;</span></span>
+<span data-ttu-id="c124d-103">전송 보안 설정을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="c124d-103">Defines the transport security settings.</span></span>  
   
-## 구문  
+ <span data-ttu-id="c124d-104">\<시스템입니다. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="c124d-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="c124d-105">\<바인딩 ></span><span class="sxs-lookup"><span data-stu-id="c124d-105">\<bindings></span></span>  
+<span data-ttu-id="c124d-106">\<netMsmqBinding ></span><span class="sxs-lookup"><span data-stu-id="c124d-106">\<netMsmqBinding></span></span>  
+<span data-ttu-id="c124d-107">\<바인딩 ></span><span class="sxs-lookup"><span data-stu-id="c124d-107">\<binding></span></span>  
+<span data-ttu-id="c124d-108">\<보안 ></span><span class="sxs-lookup"><span data-stu-id="c124d-108">\<security></span></span>  
+<span data-ttu-id="c124d-109">\<전송 ></span><span class="sxs-lookup"><span data-stu-id="c124d-109">\<transport></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="c124d-110">구문</span><span class="sxs-lookup"><span data-stu-id="c124d-110">Syntax</span></span>  
   
+```xml  
 <netMsmqBinding>  
     <binding>  
     <security>  
@@ -35,35 +44,35 @@ caps.handback.revision: 10
 </netMsmqBinding>  
 ```  
   
-## 특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c124d-111">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="c124d-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="c124d-112">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="c124d-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 특성  
+### <a name="attributes"></a><span data-ttu-id="c124d-113">특성</span><span class="sxs-lookup"><span data-stu-id="c124d-113">Attributes</span></span>  
   
-|특성|설명|  
-|--------|--------|  
-|msmqAuthenticationMode|메시지가 MSMQ 전송에 의해 인증되는 방법을 지정합니다.  유효한 값은 다음과 같습니다.<br /><br /> -   None: 인증하지 않습니다.<br />-   WindowsDomain: 이 인증 메커니즘은 Active Directory를 사용하여 메시지와 연결된 보안 ID의 X.509 인증서를 검색합니다.  그런 다음 이 인증서는 사용자에게 큐에 대한 쓰기 권한이 있는지 확인하기 위해 큐의 ACL을 검사하는 데 사용됩니다.<br />-   Certificate: 채널은 인증서 저장소에서 인증서를 검색합니다.<br /><br /> 기본값은 `WindowsDomain`입니다.<br /><br /> 이 특성이 `None`으로 설정되면 `msmqProtectionLevel` 특성도 `None`으로 설정해야 합니다.  이 특성은 <xref:System.ServiceModel.MsmqAuthenticationMode> 형식입니다.|  
-|msmqEncryptionAlgorithm|메시지 큐 관리자 간에 메시지를 전송할 때 통신 중에 메시지 암호화에 사용할 알고리즘을 지정합니다.  유효한 값은 다음과 같습니다.<br /><br /> -   RC4Stream<br />-   AES<br />-   기본값은 `RC4Stream`입니다.  이 특성은 <xref:System.ServiceModel.MsmqEncryptionAlgorithm> 형식입니다.|  
-|msmqProtectionLevel|메시지가 MSMQ 전송 수준에서 보호되는 방식을 지정합니다.  암호화는 메시지 무결성을 보장하지만 서명 및 암호화는 메시지 무결성 및 부인 없음을 보장합니다.  즉 메시지는 실제로 해당 보낸 사람이 보낸 것이며 보낸 사람은 본인이 보낸 사람이라고 밝힌 사람입니다.  유효한 값은 다음과 같습니다.<br /><br /> -   None: 보호되지 않습니다.<br />-   Sign: 메시지가 서명됩니다.<br />-   EncryptAndSign: 메시지가 암호화되고 서명됩니다.<br />-   기본값은 `Sign`입니다.|  
-|msmqSecureHashAlgorithm|메시지 다이제스트를 계산하는 데 사용할 해시 알고리즘을 지정합니다.  유효한 값은 다음과 같습니다.<br /><br /> -   MD5<br />-   SHA1<br />-   SHA256<br />-   SHA512<br /><br /> 기본값은 `SHA1`입니다.  이 특성은 <xref:System.ServiceModel.MsmqSecureHashAlgorithm> 형식입니다.|  
+|<span data-ttu-id="c124d-114">특성</span><span class="sxs-lookup"><span data-stu-id="c124d-114">Attribute</span></span>|<span data-ttu-id="c124d-115">설명</span><span class="sxs-lookup"><span data-stu-id="c124d-115">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="c124d-116">msmqAuthenticationMode</span><span class="sxs-lookup"><span data-stu-id="c124d-116">msmqAuthenticationMode</span></span>|<span data-ttu-id="c124d-117">메시지가 MSMQ 전송에 의해 인증되는 방법을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="c124d-117">Specifies how the message must be authenticated by the MSMQ transport.</span></span> <span data-ttu-id="c124d-118">유효한 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="c124d-118">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="c124d-119">-None: 인증 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c124d-119">-   None: No authentication.</span></span><br /><span data-ttu-id="c124d-120">-WindowsDomain: 인증 메커니즘 메시지에 연결 된 보안 식별자에 대 한 X.509 인증서를 검색 하려면 Active Directory를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="c124d-120">-   WindowsDomain: The authentication mechanism uses Active Directory to retrieve the X.509 certificate for the security identifier associated with the message.</span></span> <span data-ttu-id="c124d-121">그런 다음 이 인증서는 사용자에게 큐에 대한 쓰기 권한이 있는지 확인하기 위해 큐의 ACL을 검사하는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="c124d-121">This is then used to check the ACL of the queue to ensure the user has write permission for the queue.</span></span><br /><span data-ttu-id="c124d-122">-Certificate: 채널의 인증서 저장소에서 인증서를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="c124d-122">-   Certificate: The channel retrieves the certificate from the certificate store.</span></span><br /><br /> <span data-ttu-id="c124d-123">기본값은 `WindowsDomain`입니다.</span><span class="sxs-lookup"><span data-stu-id="c124d-123">The default is `WindowsDomain`.</span></span><br /><br /> <span data-ttu-id="c124d-124">이 특성이 `None`으로 설정되면 `msmqProtectionLevel` 특성도 `None`으로 설정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="c124d-124">If this attribute is set to `None`, the `msmqProtectionLevel` attribute must also be set to `None`.</span></span> <span data-ttu-id="c124d-125">이 특성은 <xref:System.ServiceModel.MsmqAuthenticationMode> 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="c124d-125">This attribute is of type <xref:System.ServiceModel.MsmqAuthenticationMode></span></span>|  
+|<span data-ttu-id="c124d-126">msmqEncryptionAlgorithm</span><span class="sxs-lookup"><span data-stu-id="c124d-126">msmqEncryptionAlgorithm</span></span>|<span data-ttu-id="c124d-127">메시지 큐 관리자 간에 메시지를 전송할 때 통신 중에 메시지 암호화에 사용할 알고리즘을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="c124d-127">Specifies the algorithm to be used for message encryption on the wire when transferring messages between message queue managers.</span></span> <span data-ttu-id="c124d-128">유효한 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="c124d-128">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="c124d-129">-RC4Stream</span><span class="sxs-lookup"><span data-stu-id="c124d-129">-   RC4Stream</span></span><br /><span data-ttu-id="c124d-130">-AES</span><span class="sxs-lookup"><span data-stu-id="c124d-130">-   AES</span></span><br /><span data-ttu-id="c124d-131">-기본값은 `RC4Stream`합니다.</span><span class="sxs-lookup"><span data-stu-id="c124d-131">-   The default value is `RC4Stream`.</span></span> <span data-ttu-id="c124d-132">이 특성은 <xref:System.ServiceModel.MsmqEncryptionAlgorithm> 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="c124d-132">This attribute is of type <xref:System.ServiceModel.MsmqEncryptionAlgorithm>.</span></span>|  
+|<span data-ttu-id="c124d-133">msmqProtectionLevel</span><span class="sxs-lookup"><span data-stu-id="c124d-133">msmqProtectionLevel</span></span>|<span data-ttu-id="c124d-134">메시지가 MSMQ 전송 수준에서 보호되는 방식을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="c124d-134">Specifies the way messages are secured at the level of the MSMQ transport.</span></span> <span data-ttu-id="c124d-135">암호화는 메시지 무결성을 보장하지만 서명 및 암호화는 메시지 무결성 및 부인 없음을 보장합니다.</span><span class="sxs-lookup"><span data-stu-id="c124d-135">Encryption ensures message integrity, while sign and encrypt ensures both message integrity and non-repudiation.</span></span> <span data-ttu-id="c124d-136">즉 메시지는 실제로 해당 보낸 사람이 보낸 것이며 보낸 사람은 본인이 보낸 사람이라고 밝힌 사람입니다.</span><span class="sxs-lookup"><span data-stu-id="c124d-136">That is, the message indeed came from the sender and the sender is who he says he is.</span></span> <span data-ttu-id="c124d-137">유효한 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="c124d-137">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="c124d-138">-None: 보호 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="c124d-138">-   None: No protection.</span></span><br /><span data-ttu-id="c124d-139">-Sign: 메시지가 서명 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c124d-139">-   Sign: Messages are signed.</span></span><br /><span data-ttu-id="c124d-140">-EncryptAndSign: 메시지가 암호화 되 고 서명 합니다.</span><span class="sxs-lookup"><span data-stu-id="c124d-140">-   EncryptAndSign: Messages are encrypted and signed.</span></span><br /><span data-ttu-id="c124d-141">-기본값은 `Sign`합니다.</span><span class="sxs-lookup"><span data-stu-id="c124d-141">-   The default is `Sign`.</span></span>|  
+|<span data-ttu-id="c124d-142">msmqSecureHashAlgorithm</span><span class="sxs-lookup"><span data-stu-id="c124d-142">msmqSecureHashAlgorithm</span></span>|<span data-ttu-id="c124d-143">메시지 다이제스트를 계산하는 데 사용할 해시 알고리즘을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="c124d-143">Specifies the hash algorithm to be used for computing the message digest.</span></span> <span data-ttu-id="c124d-144">유효한 값은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="c124d-144">Valid values include the following:</span></span><br /><br /> <span data-ttu-id="c124d-145">-M D 5</span><span class="sxs-lookup"><span data-stu-id="c124d-145">-   MD5</span></span><br /><span data-ttu-id="c124d-146">-S H A 1</span><span class="sxs-lookup"><span data-stu-id="c124d-146">-   SHA1</span></span><br /><span data-ttu-id="c124d-147">-S H A 256</span><span class="sxs-lookup"><span data-stu-id="c124d-147">-   SHA256</span></span><br /><span data-ttu-id="c124d-148">-SHA512</span><span class="sxs-lookup"><span data-stu-id="c124d-148">-   SHA512</span></span><br /><br /> <span data-ttu-id="c124d-149">기본값은 `SHA1`입니다.</span><span class="sxs-lookup"><span data-stu-id="c124d-149">The default is `SHA1`.</span></span> <span data-ttu-id="c124d-150">이 특성은 <xref:System.ServiceModel.MsmqSecureHashAlgorithm> 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="c124d-150">This attribute is of type <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.</span></span>|  
   
-### 자식 요소  
- 없음  
+### <a name="child-elements"></a><span data-ttu-id="c124d-151">자식 요소</span><span class="sxs-lookup"><span data-stu-id="c124d-151">Child Elements</span></span>  
+ <span data-ttu-id="c124d-152">없음</span><span class="sxs-lookup"><span data-stu-id="c124d-152">None</span></span>  
   
-### 부모 요소  
+### <a name="parent-elements"></a><span data-ttu-id="c124d-153">부모 요소</span><span class="sxs-lookup"><span data-stu-id="c124d-153">Parent Elements</span></span>  
   
-|요소|설명|  
-|--------|--------|  
-|[\<security\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|대기 중인 전송에 대한 전송 보안 설정을 정의합니다.|  
+|<span data-ttu-id="c124d-154">요소</span><span class="sxs-lookup"><span data-stu-id="c124d-154">Element</span></span>|<span data-ttu-id="c124d-155">설명</span><span class="sxs-lookup"><span data-stu-id="c124d-155">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="c124d-156">\<보안 ></span><span class="sxs-lookup"><span data-stu-id="c124d-156">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|<span data-ttu-id="c124d-157">대기 중인 전송에 대한 전송 보안 설정을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="c124d-157">Defines the transport security settings for queued transports.</span></span>|  
   
-## 참고 항목  
- <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>   
- <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement.Transport%2A>   
- <xref:System.ServiceModel.NetMsmqSecurity.Transport%2A>   
- <xref:System.ServiceModel.MsmqTransportSecurity>   
- [WCF의 큐](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)   
- [서비스 및 클라이언트에 보안 설정](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [바인딩](../../../../../docs/framework/wcf/bindings.md)   
- [시스템 제공 바인딩 구성](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/ko-kr/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [\<binding\>](../../../../../docs/framework/misc/binding.md)
+## <a name="see-also"></a><span data-ttu-id="c124d-158">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c124d-158">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>  
+ <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement.Transport%2A>  
+ <xref:System.ServiceModel.NetMsmqSecurity.Transport%2A>  
+ <xref:System.ServiceModel.MsmqTransportSecurity>  
+ [<span data-ttu-id="c124d-159">WCF의 큐</span><span class="sxs-lookup"><span data-stu-id="c124d-159">Queues in WCF</span></span>](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
+ [<span data-ttu-id="c124d-160">서비스 및 클라이언트 보안 설정</span><span class="sxs-lookup"><span data-stu-id="c124d-160">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="c124d-161">바인딩</span><span class="sxs-lookup"><span data-stu-id="c124d-161">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="c124d-162">시스템 제공 바인딩 구성</span><span class="sxs-lookup"><span data-stu-id="c124d-162">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="c124d-163">바인딩을 사용 하 여 Windows Communication Foundation 서비스 및 클라이언트 구성</span><span class="sxs-lookup"><span data-stu-id="c124d-163">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="c124d-164">\<바인딩 ></span><span class="sxs-lookup"><span data-stu-id="c124d-164">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

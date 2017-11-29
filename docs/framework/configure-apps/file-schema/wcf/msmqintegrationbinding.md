@@ -1,37 +1,35 @@
 ---
-title: "&lt;msmqIntegrationBinding&gt;&lt;/msmqIntegrationBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-helpviewer_keywords: 
-  - "msmqIntegrationBinding 요소"
+title: '&lt;msmqIntegrationBinding&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-caps.latest.revision: 34
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 34
+caps.latest.revision: "34"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 5f11fffbc30ed1f3bf98ca78243bf4d52f438347
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;msmqIntegrationBinding&gt;&lt;/msmqIntegrationBinding&gt;
-MSMQ를 통해 메시지를 라우팅하여 큐 지원을 제공하는 바인딩을 정의합니다.  
+# <a name="ltmsmqintegrationbindinggt"></a><span data-ttu-id="00835-102">&lt;msmqIntegrationBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="00835-102">&lt;msmqIntegrationBinding&gt;</span></span>
+<span data-ttu-id="00835-103">MSMQ를 통해 메시지를 라우팅하여 큐 지원을 제공하는 바인딩을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="00835-103">Defines a binding that provides queuing support by routing messages through MSMQ.</span></span>  
   
- \<system.ServiceModel>  
-<>\>  
-msmqIntegrationBinding  
+ <span data-ttu-id="00835-104">\<시스템입니다. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="00835-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="00835-105">\<바인딩 ></span><span class="sxs-lookup"><span data-stu-id="00835-105">\<bindings></span></span>  
+<span data-ttu-id="00835-106">msmqIntegrationBinding</span><span class="sxs-lookup"><span data-stu-id="00835-106">msmqIntegrationBinding</span></span>  
   
-## <a name="syntax"></a>구문  
+## <a name="syntax"></a><span data-ttu-id="00835-107">구문</span><span class="sxs-lookup"><span data-stu-id="00835-107">Syntax</span></span>  
   
-```  
-  
+```xml  
 <msmqIntegrationBinding>  
    <binding   
        closeTimeout="TimeSpan"   
@@ -42,7 +40,7 @@ msmqIntegrationBinding
        maxReceivedMessageSize"Integer"  
        maxRetryCycles="Integer"   
        name="string"   
-       openTimeout="TimeSpan"        receiveContextEnabled=”Boolean”  
+       openTimeout="TimeSpan"        receiveContextEnabled="Boolean"  
        receiveErrorHandling="Drop/Fault/Move/Reject"  
        receiveTimeout="TimeSpan"   
        receiveRetryCount="Integer"  
@@ -56,61 +54,61 @@ msmqIntegrationBinding
 </msmqIntegrationBinding>   
 ```  
   
-## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="00835-108">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="00835-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="00835-109">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="00835-109">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### <a name="attributes"></a>특성  
+### <a name="attributes"></a><span data-ttu-id="00835-110">특성</span><span class="sxs-lookup"><span data-stu-id="00835-110">Attributes</span></span>  
   
-|특성|설명|  
+|<span data-ttu-id="00835-111">특성</span><span class="sxs-lookup"><span data-stu-id="00835-111">Attribute</span></span>|<span data-ttu-id="00835-112">설명</span><span class="sxs-lookup"><span data-stu-id="00835-112">Description</span></span>|  
 |---------------|-----------------|  
-|closeTimeout|A <xref:System.TimeSpan> 닫기 작업을 완료에 대 한 제공 되는 시간 간격을 지정 하는 값입니다. 이 값 보다 크거나 같은 해야 <xref:System.TimeSpan.Zero>합니다. 기본값은 00:01:00입니다.|  
-|customDeadLetterQueue|응용 프로그램별 배달 못 한 편지 큐의 위치를 포함하는 URI입니다. 이 큐에는 만료되었거나 전송 또는 배달하지 못한 메시지가 보관됩니다.<br /><br /> 배달 못 한 편지 큐는 송신 응용 프로그램의 큐 관리자에서 관리하는 큐로, 배달하지 못한 만료된 메시지가 보관됩니다.<br /><br /> 지정 된 URI <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> net.msmq 체계를 사용 해야 합니다.|  
-|deadLetterQueue|A <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>있는 경우 사용할 배달 못 한 편지 큐의 형식을 지정 하는 값입니다<br /><br /> 배달 못 한 편지 큐는 응용 프로그램에 배달하지 못한 메시지가 전송되는 위치입니다.<br /><br /> exactlyOnce 보증이 필요한 즉, `exactlyOnce` 특성이 `true`로 설정된 메시지의 경우 이 특성의 기본값은 MSMQ에서 시스템 차원의 배달 못 한 트랜잭션 큐로 설정됩니다.<br /><br /> 보증이 필요하지 않은 메시지의 경우 이 특성은 기본적으로 `null`로 설정됩니다.|  
-|durable|큐의 메시지가 지속적인지 또는 일시적인지를 나타내는 부울 값입니다. 지속적 메시지는 큐 관리자가 중단되더라도 남아 있지만, 일시적 메시지는 손실됩니다. 응용 프로그램에서 더 낮은 대기 시간을 요구하며 어느 정도의 메시지 손실을 허용할 수 있다면 일시적 메시지가 유용합니다. `exactlyOnce` 특성을 `true`로 설정하면 메시지는 지속적이어야 합니다. 기본값은 `true`입니다.|  
-|exactlyOnce|각 메시지가 한 번만 배달되는지 여부를 나타내는 부울 값입니다. 배달이 실패하면 발신자는 알림을 받습니다. `durable`이 `false`이면 이 특성은 무시되고 배달 보증 없이 메시지가 전송됩니다. 기본값은 `true`입니다. 자세한 내용은 참조 <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>합니다.|  
-|maxReceivedMessageSize|이 바인딩에 의해 처리되는 최대 메시지 크기(헤더 포함)(바이트)를 정의하는 양의 정수입니다. 이 한도를 초과하는 메시지를 보낸 사람은 SOAP 오류를 받습니다. 수신자는 메시지를 삭제하고 추적 로그에 이벤트 항목을 만듭니다. 기본값은 65536입니다. 이 메시지 크기 제한은 DoS(서비스 거부) 공격에 대한 노출을 막기 위한 것입니다.|  
-|maxRetryCycles|포이즌 메시지 검색 기능에 사용되는 재시도 주기 수를 나타내는 정수입니다. 모든 주기의 모든 배달 시도가 실패할 경우 메시지는 포이즌 메시지가 됩니다. 기본값은 2입니다. 자세한 내용은 참조 <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>합니다.|  
-|name|바인딩의 구성 이름을 포함하는 문자열입니다. 이 값은 바인딩의 ID로 사용되므로 고유해야 합니다. [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)]부터는 바인딩 및 동작에 이름이 필요하지 않습니다. 기본 구성 및 이름 없는 바인딩 및 동작에 대 한 자세한 내용은 참조 [단순화 된 구성](../../../../../docs/framework/wcf/simplified-configuration.md) 및 [WCF 서비스를 위한 단순화 된 구성](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)합니다.|  
-|openTimeout|A <xref:System.TimeSpan> 열기 작업을 완료에 대해 제공 되는 시간 간격을 지정 하는 값입니다. 이 값 보다 크거나 같은 해야 <xref:System.TimeSpan.Zero>합니다. 기본값은 00:01:00입니다.|  
-|receiveErrorHandling|A <xref:System.ServiceModel.ReceiveErrorHandling> 포이즌 메시지 및 디스패치할 수 메시지의 처리 방법을 지정 하는 값입니다.|  
-|receiveRetryCount|응용 프로그램 큐에서 응용 프로그램으로의 메시지 전송이 실패할 경우 큐 관리자가 수행해야 하는 최대 즉시 재시도 횟수를 지정하는 정수입니다.<br /><br /> 최대 배달 시도 횟수에 도달했으나 응용 프로그램에서 메시지에 액세스하지 못한 경우 해당 메시지는 나중에 다시 배달하기 위해 재시도 큐로 보내집니다. 메시지가 전송 큐로 다시 돌아갈 때까지 걸리는 시간은 `retryCycleDelay`를 사용하여 제어합니다. 재시도 주기가 `maxRetryCycles` 값에 도달하면 해당 메시지가 포이즌 메시지 큐로 보내지거나 발신자에게 부정 승인이 다시 보내집니다.|  
-|receiveTimeout|A <xref:System.TimeSpan> 수신 작업 완료 하기 위해 제공 되는 시간 간격을 지정 하는 값입니다. 이 값 보다 크거나 같은 해야 <xref:System.TimeSpan.Zero>합니다. 기본값은 00:10:00입니다.|  
-|receiveContextEnabled|큐에서 메시지 처리를 위한 수신 컨텍스트를 사용하는지 여부를 지정하는 부울입니다. 이 값이 `true`로 설정되면 서비스가 큐에서 메시지를 "피킹"하여 처리를 시작할 수 있으며 오류가 발생하여 예외가 throw되면 큐에 메시지가 유지됩니다. 서비스에서 나중에 다시 처리하기 위해 메시지를 "잠글" 수도 있습니다. ReceiveContext를 "완료" 메시지가 처리 된 큐에서 제거할 수 있는 메커니즘을 제공 합니다. 메시지는 더 이상 읽고 큐에 다시 쓰지 네트워크를 통해 않으며 개별 메시지 처리 중 다른 서비스 인스턴스 간에 반송 되지 않습니다.|  
-|retryCycleDelay|전달하지 못한 메시지를 즉시 다시 전달하려고 시도할 때 재시도 주기 사이의 지연 시간을 지정하는 TimeSpan 값입니다. 실제 대기 시간이 더 길 수 있으므로 이 값은 최소 대기 시간만 정의합니다. 기본값은 00:30:00입니다. 자세한 내용은 참조 <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A>합니다.|  
-|sendTimeout|A <xref:System.TimeSpan> 보내기 작업을 완료에 대 한 제공 되는 시간 간격을 지정 하는 값입니다. 이 값 보다 크거나 같은 해야 <xref:System.TimeSpan.Zero>합니다. 기본값은 00:01:00입니다.|  
-|serializationFormat|메시지 본문의 serialization에 사용되는 형식을 정의합니다. 이 특성은 형식의 <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat>합니다.|  
-|timeToLive|메시지가 만료되어 배달 못 한 큐에 추가되기 전에 메시지가 유효한 기간을 지정하는 TimeSpan 값입니다. 기본값은 1.00:00:00입니다.<br /><br /> 이 특성은 시간을 다투는 메시지가 수신 응용 프로그램에서 처리되기 전에 무효화되지 않도록 하기 위해 설정됩니다. 지정된 시간 간격 내에 수신 응용 프로그램에서 사용하지 않은 큐의 메시지는 만료된 것으로 간주됩니다. 만료된 메시지는 배달 못한 편지 큐라는 특수 큐로 보내집니다. 배달 못 한 편지 큐의 위치는 보증에 따라 `DeadLetterQueue` 특성으로 설정되거나 해당 기본값으로 설정됩니다.|  
-|useMsmqTracing|이 바인딩이 처리하는 메시지를 추적할지 여부를 지정하는 부울 값입니다. 기본값은 `false`입니다. 추적 기능을 사용하면 메시지가 메시지 큐 컴퓨터에 들어가거나 나올 때마다 보고서 메시지가 만들어진 후 보고서 큐로 보내집니다.|  
-|useSourceJournal|이 바인딩에서 처리하는 메시지의 복사본을 소스 업무 일지에 저장할지 여부를 지정하는 부울 값입니다. 기본값은 `false`입니다.<br /><br /> 대기 중 응용 프로그램에서 컴퓨터의 나가는 큐를 떠난 메시지의 레코드를 보존해야 할 경우 메시지를 업무 일지 큐에 복사할 수 있습니다. 메시지가 보내는 큐를 떠난 후 대상 컴퓨터에 수신되었다는 승인을 받으면 해당 메시지의 복사본이 보낸 컴퓨터의 시스템 업무 일지 큐에 보관됩니다.|  
+|<span data-ttu-id="00835-113">closeTimeout</span><span class="sxs-lookup"><span data-stu-id="00835-113">closeTimeout</span></span>|<span data-ttu-id="00835-114">닫기 작업을 완료하기 위해 제공된 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-114">A <xref:System.TimeSpan> value that specifies the interval of time provided for a close operation to complete.</span></span> <span data-ttu-id="00835-115">이 값은 <xref:System.TimeSpan.Zero>보다 크거나 같아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="00835-115">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="00835-116">기본값은 00:01:00입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-116">The default is 00:01:00.</span></span>|  
+|<span data-ttu-id="00835-117">customDeadLetterQueue</span><span class="sxs-lookup"><span data-stu-id="00835-117">customDeadLetterQueue</span></span>|<span data-ttu-id="00835-118">응용 프로그램별 배달 못 한 편지 큐의 위치를 포함하는 URI입니다. 이 큐에는 만료되었거나 전송 또는 배달하지 못한 메시지가 보관됩니다.</span><span class="sxs-lookup"><span data-stu-id="00835-118">A URI that contains the location of the per-application dead letter queue, where messages that have expired or that have failed transfer or delivery are placed.</span></span><br /><br /> <span data-ttu-id="00835-119">배달 못 한 편지 큐는 송신 응용 프로그램의 큐 관리자에서 관리하는 큐로, 배달하지 못한 만료된 메시지가 보관됩니다.</span><span class="sxs-lookup"><span data-stu-id="00835-119">The dead letter queue is a queue on the queue manager of the sending application for expired messages that have failed to be delivered.</span></span><br /><br /> <span data-ttu-id="00835-120"><xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>로 지정된 URI는 net.msmq 체계를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="00835-120">The URI that is specified by <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> must use the net.msmq scheme.</span></span>|  
+|<span data-ttu-id="00835-121">deadLetterQueue</span><span class="sxs-lookup"><span data-stu-id="00835-121">deadLetterQueue</span></span>|<span data-ttu-id="00835-122">배달 못 한 편지 큐가 있는 경우 사용할 큐의 형식을 지정하는 <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> 값입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-122">A <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>.value specifying which type of dead-letter queue to use, if any</span></span><br /><br /> <span data-ttu-id="00835-123">배달 못 한 편지 큐는 응용 프로그램에 배달하지 못한 메시지가 전송되는 위치입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-123">A dead-letter queue is the location that messages that have failed to be delivered to the application will be transferred.</span></span><br /><br /> <span data-ttu-id="00835-124">exactlyOnce 보증이 필요한 즉, `exactlyOnce` 특성이 `true`로 설정된 메시지의 경우 이 특성의 기본값은 MSMQ에서 시스템 차원의 배달 못 한 트랜잭션 큐로 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="00835-124">For messages that require exactlyOnce assurance (i.e., the `exactlyOnce` attribute is set to `true`), this attribute defaults to the system-wide transactional dead-letter queue in MSMQ.</span></span><br /><br /> <span data-ttu-id="00835-125">보증이 필요하지 않은 메시지의 경우 이 특성은 기본적으로 `null`로 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="00835-125">For messages that require no assurances, this attribute defaults to `null`.</span></span>|  
+|<span data-ttu-id="00835-126">durable</span><span class="sxs-lookup"><span data-stu-id="00835-126">durable</span></span>|<span data-ttu-id="00835-127">큐의 메시지가 지속적인지 또는 일시적인지를 나타내는 부울 값입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-127">A Boolean value that indicates whether the message is durable or volatile in the queue.</span></span> <span data-ttu-id="00835-128">지속적 메시지는 큐 관리자가 중단되더라도 남아 있지만, 일시적 메시지는 손실됩니다.</span><span class="sxs-lookup"><span data-stu-id="00835-128">A durable message survives a queue manager crash, while a volatile message does not.</span></span> <span data-ttu-id="00835-129">응용 프로그램에서 더 낮은 대기 시간을 요구하며 어느 정도의 메시지 손실을 허용할 수 있다면 일시적 메시지가 유용합니다.</span><span class="sxs-lookup"><span data-stu-id="00835-129">Volatile messages are useful when applications require lower latency and can tolerate occasional lost messages.</span></span> <span data-ttu-id="00835-130">`exactlyOnce` 특성을 `true`로 설정하면 메시지는 지속적이어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="00835-130">If the `exactlyOnce` attribute is set to `true`, the messages must be durable.</span></span> <span data-ttu-id="00835-131">기본값은 `true`입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-131">The default is `true`.</span></span>|  
+|<span data-ttu-id="00835-132">exactlyOnce</span><span class="sxs-lookup"><span data-stu-id="00835-132">exactlyOnce</span></span>|<span data-ttu-id="00835-133">각 메시지가 한 번만 배달되는지 여부를 나타내는 부울 값입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-133">A Boolean value that indicates whether each message is delivered only once.</span></span> <span data-ttu-id="00835-134">배달이 실패하면 발신자는 알림을 받습니다.</span><span class="sxs-lookup"><span data-stu-id="00835-134">The sender will then be notified of delivery failures.</span></span> <span data-ttu-id="00835-135">`durable`이 `false`이면 이 특성은 무시되고 배달 보증 없이 메시지가 전송됩니다.</span><span class="sxs-lookup"><span data-stu-id="00835-135">When `durable` is `false`, this attribute is ignored and messages are transferred without delivery assurance.</span></span> <span data-ttu-id="00835-136">기본값은 `true`입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-136">The default is `true`.</span></span> <span data-ttu-id="00835-137">자세한 내용은 <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="00835-137">For more information, see <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>.</span></span>|  
+|<span data-ttu-id="00835-138">maxReceivedMessageSize</span><span class="sxs-lookup"><span data-stu-id="00835-138">maxReceivedMessageSize</span></span>|<span data-ttu-id="00835-139">이 바인딩에 의해 처리되는 최대 메시지 크기(헤더 포함)(바이트)를 정의하는 양의 정수입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-139">A positive integer that defines the maximum message size, in bytes, including headers, that is processed by this binding.</span></span> <span data-ttu-id="00835-140">이 한도를 초과하는 메시지를 보낸 사람은 SOAP 오류를 받습니다.</span><span class="sxs-lookup"><span data-stu-id="00835-140">The sender of a message exceeding this limit will receive a SOAP fault.</span></span> <span data-ttu-id="00835-141">수신자는 메시지를 삭제하고 추적 로그에 이벤트 항목을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="00835-141">The receiver drops the message and creates an entry of the event in the trace log.</span></span> <span data-ttu-id="00835-142">기본값은 65536입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-142">The default is 65536.</span></span> <span data-ttu-id="00835-143">이 메시지 크기 제한은 DoS(서비스 거부) 공격에 대한 노출을 막기 위한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-143">This bound on message size is intended to limit exposure to Denial of Service (DoS) attacks.</span></span>|  
+|<span data-ttu-id="00835-144">maxRetryCycles</span><span class="sxs-lookup"><span data-stu-id="00835-144">maxRetryCycles</span></span>|<span data-ttu-id="00835-145">포이즌 메시지 검색 기능에 사용되는 재시도 주기 수를 나타내는 정수입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-145">An integer that indicates the number of retry cycles used by the poison-message detection feature.</span></span> <span data-ttu-id="00835-146">모든 주기의 모든 배달 시도가 실패할 경우 메시지는 포이즌 메시지가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="00835-146">A message becomes a poison message when it fails all delivery attempts of all cycles.</span></span> <span data-ttu-id="00835-147">기본값은 2입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-147">The default is 2.</span></span> <span data-ttu-id="00835-148">자세한 내용은 <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="00835-148">For more information, see <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>.</span></span>|  
+|<span data-ttu-id="00835-149">name</span><span class="sxs-lookup"><span data-stu-id="00835-149">name</span></span>|<span data-ttu-id="00835-150">바인딩의 구성 이름을 포함하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-150">A string that contains the configuration name of the binding.</span></span> <span data-ttu-id="00835-151">이 값은 바인딩의 ID로 사용되므로 고유해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="00835-151">This value should be unique because it is used as an identification for the binding.</span></span> <span data-ttu-id="00835-152">[!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)]부터는 바인딩 및 동작에 이름이 필요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="00835-152">Starting with [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], bindings and behaviors are not required to have a name.</span></span> <span data-ttu-id="00835-153">기본 구성 및 이름이 없는 바인딩 및 동작에 대 한 자세한 내용은 참조 [단순화 된 구성](../../../../../docs/framework/wcf/simplified-configuration.md) 및 [WCF 서비스에 대 한 구성을 단순화](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="00835-153">For more information about default configuration and nameless bindings and behaviors, see [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>|  
+|<span data-ttu-id="00835-154">openTimeout</span><span class="sxs-lookup"><span data-stu-id="00835-154">openTimeout</span></span>|<span data-ttu-id="00835-155">열기 작업을 완료하기 위해 제공된 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-155">A <xref:System.TimeSpan> value that specifies the interval of time provided for an open operation to complete.</span></span> <span data-ttu-id="00835-156">이 값은 <xref:System.TimeSpan.Zero>보다 크거나 같아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="00835-156">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="00835-157">기본값은 00:01:00입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-157">The default is 00:01:00.</span></span>|  
+|<span data-ttu-id="00835-158">receiveErrorHandling</span><span class="sxs-lookup"><span data-stu-id="00835-158">receiveErrorHandling</span></span>|<span data-ttu-id="00835-159">포이즌 메시지 및 디스패치할 수 없는 메시지의 처리 방법을 지정하는 <xref:System.ServiceModel.ReceiveErrorHandling> 값입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-159">A <xref:System.ServiceModel.ReceiveErrorHandling> value that specifies how poison and nondispatchable messages are handled.</span></span>|  
+|<span data-ttu-id="00835-160">receiveRetryCount</span><span class="sxs-lookup"><span data-stu-id="00835-160">receiveRetryCount</span></span>|<span data-ttu-id="00835-161">응용 프로그램 큐에서 응용 프로그램으로의 메시지 전송이 실패할 경우 큐 관리자가 수행해야 하는 최대 즉시 재시도 횟수를 지정하는 정수입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-161">An integer that specifies the maximum number of immediate retries the queue manager should attempt if transmission of a message from the application queue to the application fails.</span></span><br /><br /> <span data-ttu-id="00835-162">최대 배달 시도 횟수에 도달했으나 응용 프로그램에서 메시지에 액세스하지 못한 경우 해당 메시지는 나중에 다시 배달하기 위해 재시도 큐로 보내집니다.</span><span class="sxs-lookup"><span data-stu-id="00835-162">If the maximum number of delivery attempts is reached and the message is not accessed by the application, then the message is sent to a retry queue for redelivery at a later time.</span></span> <span data-ttu-id="00835-163">메시지가 전송 큐로 다시 돌아갈 때까지 걸리는 시간은 `retryCycleDelay`를 사용하여 제어합니다.</span><span class="sxs-lookup"><span data-stu-id="00835-163">The amount of time before the message is transferred back to the sending queue is controlled by `retryCycleDelay`.</span></span> <span data-ttu-id="00835-164">재시도 주기가 `maxRetryCycles` 값에 도달하면 해당 메시지가 포이즌 메시지 큐로 보내지거나 발신자에게 부정 승인이 다시 보내집니다.</span><span class="sxs-lookup"><span data-stu-id="00835-164">If retry cycles reach the `maxRetryCycles` value, then the message is either sent to the poison-message queue, or a negative acknowledgement is sent back to the sender.</span></span>|  
+|<span data-ttu-id="00835-165">receiveTimeout</span><span class="sxs-lookup"><span data-stu-id="00835-165">receiveTimeout</span></span>|<span data-ttu-id="00835-166">받기 작업을 완료하기 위해 제공된 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-166">A <xref:System.TimeSpan> value that specifies the interval of time provided for a receive operation to complete.</span></span> <span data-ttu-id="00835-167">이 값은 <xref:System.TimeSpan.Zero>보다 크거나 같아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="00835-167">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="00835-168">기본값은 00:10:00입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-168">The default is 00:10:00.</span></span>|  
+|<span data-ttu-id="00835-169">receiveContextEnabled</span><span class="sxs-lookup"><span data-stu-id="00835-169">receiveContextEnabled</span></span>|<span data-ttu-id="00835-170">큐에서 메시지 처리를 위한 수신 컨텍스트를 사용하는지 여부를 지정하는 부울입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-170">A Boolean that specifies if receive context for processing messages in queues is enabled.</span></span> <span data-ttu-id="00835-171">이로 설정 된 경우 `true`, 서비스에서는 처리를 시작 하려면 큐에서 메시지를 "피킹" 수 하 고, 문제가 발생 하 고 예외가 발생 하는 경우 큐에 남아 있습니다.</span><span class="sxs-lookup"><span data-stu-id="00835-171">When this is set to `true`, a service can "peek" a message on the queue to begin processing it, and, if anything goes wrong and an exception is thrown, it remains on the queue.</span></span> <span data-ttu-id="00835-172">서비스 수 "잠글" 수도 시간에서 나중에 다시 처리 하기 위해 메시지입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-172">Services can also "lock" messages in order to retry processing at a later point in time.</span></span> <span data-ttu-id="00835-173">ReceiveContext를 "완료" 메시지 큐에서 제거할 수 있는 처리 된 메커니즘을 제공 합니다. 메시지는 더 이상 읽고 큐에 다시 쓰지 네트워크를 통해 않으며 개별 메시지 처리 중 다른 서비스 인스턴스 간에 반송 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="00835-173">ReceiveContext provides a mechanism for "completing" the message once processed so it can be removed from the queue.Messages are no longer being read and re-written to queues over the network, and individual messages aren’t bouncing across different service instances during processing.</span></span>|  
+|<span data-ttu-id="00835-174">retryCycleDelay</span><span class="sxs-lookup"><span data-stu-id="00835-174">retryCycleDelay</span></span>|<span data-ttu-id="00835-175">전달하지 못한 메시지를 즉시 다시 전달하려고 시도할 때 재시도 주기 사이의 지연 시간을 지정하는 TimeSpan 값입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-175">A TimeSpan value that specifies the time delay between retry cycles when attempting to deliver a message that could not be delivered immediately.</span></span> <span data-ttu-id="00835-176">실제 대기 시간이 더 길 수 있으므로 이 값은 최소 대기 시간만 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="00835-176">The value defines only the minimum wait time because actual wait time can be longer.</span></span> <span data-ttu-id="00835-177">기본값은 00:30:00입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-177">The default value is 00:30:00.</span></span> <span data-ttu-id="00835-178">자세한 내용은 <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A>을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="00835-178">For more information, see <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A>.</span></span>|  
+|<span data-ttu-id="00835-179">sendTimeout</span><span class="sxs-lookup"><span data-stu-id="00835-179">sendTimeout</span></span>|<span data-ttu-id="00835-180">보내기 작업을 완료하기 위해 제공된 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-180">A <xref:System.TimeSpan> value that specifies the interval of time provided for a send operation to complete.</span></span> <span data-ttu-id="00835-181">이 값은 <xref:System.TimeSpan.Zero>보다 크거나 같아야 합니다.</span><span class="sxs-lookup"><span data-stu-id="00835-181">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="00835-182">기본값은 00:01:00입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-182">The default is 00:01:00.</span></span>|  
+|<span data-ttu-id="00835-183">serializationFormat</span><span class="sxs-lookup"><span data-stu-id="00835-183">serializationFormat</span></span>|<span data-ttu-id="00835-184">메시지 본문의 serialization에 사용되는 형식을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="00835-184">Defines the format used for serialization of the message body.</span></span> <span data-ttu-id="00835-185">이 특성은 <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat> 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-185">This attribute is of type <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat>.</span></span>|  
+|<span data-ttu-id="00835-186">timeToLive</span><span class="sxs-lookup"><span data-stu-id="00835-186">timeToLive</span></span>|<span data-ttu-id="00835-187">메시지가 만료되어 배달 못 한 큐에 추가되기 전에 메시지가 유효한 기간을 지정하는 TimeSpan 값입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-187">A TimeSpan value that specifies how long the messages are valid before they are expired and put into the dead-letter queue.</span></span> <span data-ttu-id="00835-188">기본값은 1.00:00:00입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-188">The default is 1.00:00:00.</span></span><br /><br /> <span data-ttu-id="00835-189">이 특성은 시간을 다투는 메시지가 수신 응용 프로그램에서 처리되기 전에 무효화되지 않도록 하기 위해 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="00835-189">This attribute is set to ensure that time-sensitive messages do not become stale before they are processed by the receiving applications.</span></span> <span data-ttu-id="00835-190">지정된 시간 간격 내에 수신 응용 프로그램에서 사용하지 않은 큐의 메시지는 만료된 것으로 간주됩니다.</span><span class="sxs-lookup"><span data-stu-id="00835-190">A message in a queue that is not consumed by the receiving application within the time interval specified is said to be expired.</span></span> <span data-ttu-id="00835-191">만료된 메시지는 배달 못한 편지 큐라는 특수 큐로 보내집니다.</span><span class="sxs-lookup"><span data-stu-id="00835-191">Expired messages are sent to special queue called the dead letter queue.</span></span> <span data-ttu-id="00835-192">배달 못 한 편지 큐의 위치는 보증에 따라 `DeadLetterQueue` 특성으로 설정되거나 해당 기본값으로 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="00835-192">The location of the dead letter queue is set with the `DeadLetterQueue` attribute or to the appropriate default, based on assurances.</span></span>|  
+|<span data-ttu-id="00835-193">useMsmqTracing</span><span class="sxs-lookup"><span data-stu-id="00835-193">useMsmqTracing</span></span>|<span data-ttu-id="00835-194">이 바인딩이 처리하는 메시지를 추적할지 여부를 지정하는 부울 값입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-194">A Boolean value that specifies whether messages processed by this binding should be traced.</span></span> <span data-ttu-id="00835-195">기본값은 `false`입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-195">The default is `false`.</span></span> <span data-ttu-id="00835-196">추적 기능을 사용하면 메시지가 메시지 큐 컴퓨터에 들어가거나 나올 때마다 보고서 메시지가 만들어진 후 보고서 큐로 보내집니다.</span><span class="sxs-lookup"><span data-stu-id="00835-196">When tracing is enabled, report messages are created and sent to the report queue each time the message leaves or arrives at a Message Queuing computer.</span></span>|  
+|<span data-ttu-id="00835-197">useSourceJournal</span><span class="sxs-lookup"><span data-stu-id="00835-197">useSourceJournal</span></span>|<span data-ttu-id="00835-198">이 바인딩에서 처리하는 메시지의 복사본을 소스 업무 일지에 저장할지 여부를 지정하는 부울 값입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-198">A Boolean value that specifies copies of messages processed by this binding should be stored in the source journal.</span></span> <span data-ttu-id="00835-199">기본값은 `false`입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-199">The default is `false`.</span></span><br /><br /> <span data-ttu-id="00835-200">대기 중 응용 프로그램에서 컴퓨터의 나가는 큐를 떠난 메시지의 레코드를 보존해야 할 경우 메시지를 업무 일지 큐에 복사할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="00835-200">Queued applications that want to keep a record of messages that have left the computer's outgoing queue can copy the messages to a journal queue.</span></span> <span data-ttu-id="00835-201">메시지가 보내는 큐를 떠난 후 대상 컴퓨터에 수신되었다는 승인을 받으면 해당 메시지의 복사본이 보낸 컴퓨터의 시스템 업무 일지 큐에 보관됩니다.</span><span class="sxs-lookup"><span data-stu-id="00835-201">Once a message leaves the outgoing queue and an acknowledgment is received that the message was received on the destination computer, a copy of the message is kept in the sending computer's system journal queue.</span></span>|  
   
-## <a name="serializationformat-attribute"></a>{serializationFormat} 특성  
+## <a name="serializationformat-attribute"></a><span data-ttu-id="00835-202">{serializationFormat} 특성</span><span class="sxs-lookup"><span data-stu-id="00835-202">{serializationFormat} Attribute</span></span>  
   
-|값|설명|  
+|<span data-ttu-id="00835-203">값</span><span class="sxs-lookup"><span data-stu-id="00835-203">Value</span></span>|<span data-ttu-id="00835-204">설명</span><span class="sxs-lookup"><span data-stu-id="00835-204">Description</span></span>|  
 |-----------|-----------------|  
-|Xml|XML 형식|  
-|이항|이진 형식|  
-|ActiveX|ActiveX 형식|  
-|ByteArray|개체를 바이트 배열로 serialize합니다.|  
-|스트림|스트림 형식의 본문|  
+|<span data-ttu-id="00835-205">Xml</span><span class="sxs-lookup"><span data-stu-id="00835-205">Xml</span></span>|<span data-ttu-id="00835-206">XML 형식</span><span class="sxs-lookup"><span data-stu-id="00835-206">XML format</span></span>|  
+|<span data-ttu-id="00835-207">이항</span><span class="sxs-lookup"><span data-stu-id="00835-207">Binary</span></span>|<span data-ttu-id="00835-208">이진 형식</span><span class="sxs-lookup"><span data-stu-id="00835-208">Binary format</span></span>|  
+|<span data-ttu-id="00835-209">ActiveX</span><span class="sxs-lookup"><span data-stu-id="00835-209">ActiveX</span></span>|<span data-ttu-id="00835-210">ActiveX 형식</span><span class="sxs-lookup"><span data-stu-id="00835-210">ActiveX format</span></span>|  
+|<span data-ttu-id="00835-211">ByteArray</span><span class="sxs-lookup"><span data-stu-id="00835-211">ByteArray</span></span>|<span data-ttu-id="00835-212">개체를 바이트 배열로 serialize합니다.</span><span class="sxs-lookup"><span data-stu-id="00835-212">Serializes the object to an array of bytes.</span></span>|  
+|<span data-ttu-id="00835-213">스트림</span><span class="sxs-lookup"><span data-stu-id="00835-213">Stream</span></span>|<span data-ttu-id="00835-214">스트림 형식의 본문</span><span class="sxs-lookup"><span data-stu-id="00835-214">The body formatted as a stream</span></span>|  
   
-### <a name="child-elements"></a>자식 요소  
+### <a name="child-elements"></a><span data-ttu-id="00835-215">자식 요소</span><span class="sxs-lookup"><span data-stu-id="00835-215">Child Elements</span></span>  
   
-|요소|설명|  
+|<span data-ttu-id="00835-216">요소</span><span class="sxs-lookup"><span data-stu-id="00835-216">Element</span></span>|<span data-ttu-id="00835-217">설명</span><span class="sxs-lookup"><span data-stu-id="00835-217">Description</span></span>|  
 |-------------|-----------------|  
-|[<>\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-msmqintegrationbinding.md)|바인딩에 대한 보안 설정을 정의합니다. 이 요소는 형식의 <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>합니다.|  
+|[<span data-ttu-id="00835-218">\<보안 ></span><span class="sxs-lookup"><span data-stu-id="00835-218">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-msmqintegrationbinding.md)|<span data-ttu-id="00835-219">바인딩에 대한 보안 설정을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="00835-219">Defines the security settings for the binding.</span></span> <span data-ttu-id="00835-220">이 요소는 <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement> 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="00835-220">This element is of type <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>.</span></span>|  
   
-### <a name="parent-elements"></a>부모 요소  
+### <a name="parent-elements"></a><span data-ttu-id="00835-221">부모 요소</span><span class="sxs-lookup"><span data-stu-id="00835-221">Parent Elements</span></span>  
   
-|요소|설명|  
+|<span data-ttu-id="00835-222">요소</span><span class="sxs-lookup"><span data-stu-id="00835-222">Element</span></span>|<span data-ttu-id="00835-223">설명</span><span class="sxs-lookup"><span data-stu-id="00835-223">Description</span></span>|  
 |-------------|-----------------|  
-|[<>\>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|이 요소는 표준 및 사용자 지정 바인딩의 컬렉션을 보유합니다.|  
+|[<span data-ttu-id="00835-224">\<바인딩 ></span><span class="sxs-lookup"><span data-stu-id="00835-224">\<bindings></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|<span data-ttu-id="00835-225">이 요소는 표준 및 사용자 지정 바인딩의 컬렉션을 보유합니다.</span><span class="sxs-lookup"><span data-stu-id="00835-225">This element holds a collection of standard and custom bindings.</span></span>|  
   
-## <a name="remarks"></a>설명  
- 이 바인딩 요소는 Windows Communication Foundation (WCF) 응용 프로그램이 메시지를 보내고, COM, MSMQ 네이티브 Api 또는에 정의 된 형식을 사용 하는 기존 MSMQ 응용 프로그램에서 메시지를 받을 수 있도록 데 사용할 수는 <xref:System.Messaging?displayProperty=fullName> 네임 스페이스 주소 큐 하는 방법, 전송 보증, 메시지 해야 영구 저장 여부, 및 메시지를 보호 및 인증 방법을 지정 하려면이 구성 요소를 사용할 수 있습니다. 자세한 내용은 참조 [하는 방법: WCF 끝점 및 메시지 큐 응용 프로그램과 메시지를 교환](../../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)합니다.  
+## <a name="remarks"></a><span data-ttu-id="00835-226">설명</span><span class="sxs-lookup"><span data-stu-id="00835-226">Remarks</span></span>  
+ <span data-ttu-id="00835-227">Windows Communication Foundation (WCF) 응용 프로그램이 메시지를 전송 하 고 COM, MSMQ 네이티브 Api 또는에 정의 된 형식을 사용 하는 기존 MSMQ 응용 프로그램에서 메시지를 받을 수 있도록 하 여이 바인딩 요소를 사용할 수는 <xref:System.Messaging?displayProperty=nameWithType> 네임 스페이스 있습니다 이 구성 요소 메시지 영구 저장, 큐, 전송 보증을 해결할 수 있는 방법을 지정할 수 및 메시지를 보호 및 인증 방법을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="00835-227">This binding element can be used to enable Windows Communication Foundation (WCF) applications to send messages to and receive messages from existing MSMQ applications that use either COM, MSMQ native APIs, or the types defined in the <xref:System.Messaging?displayProperty=nameWithType> namespace You can use this configuration element to specify ways to address the queue, transfer assurances, whether messages must be durably stored, and how messages should be protected and authenticated.</span></span> <span data-ttu-id="00835-228">자세한 내용은 참조 [하는 방법: WCF 끝점 및 메시지 큐 응용 프로그램과 메시지를 교환](../../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="00835-228">For more information, see [How to: Exchange Messages with WCF Endpoints and Message Queuing Applications](../../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).</span></span>  
   
-## <a name="example"></a>예제  
+## <a name="example"></a><span data-ttu-id="00835-229">예제</span><span class="sxs-lookup"><span data-stu-id="00835-229">Example</span></span>  
   
-```  
+```xml  
 <configuration>  
 <system.ServiceModel>  
     <bindings>  
@@ -141,12 +139,12 @@ msmqIntegrationBinding
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement>   
- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>   
- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>   
- [<>\>](../../../../../docs/framework/misc/binding.md)   
- [바인딩](../../../../../docs/framework/wcf/bindings.md)   
- [시스템 제공 바인딩 구성](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [바인딩을 사용 하 여 Windows Communication Foundation 서비스 및 클라이언트 구성](http://msdn.microsoft.com/ko-kr/bd8b277b-932f-472f-a42a-b02bb5257dfb)   
- [WCF의 큐](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+## <a name="see-also"></a><span data-ttu-id="00835-230">참고 항목</span><span class="sxs-lookup"><span data-stu-id="00835-230">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement>  
+ <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>  
+ <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>  
+ [<span data-ttu-id="00835-231">\<바인딩 ></span><span class="sxs-lookup"><span data-stu-id="00835-231">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)  
+ [<span data-ttu-id="00835-232">바인딩</span><span class="sxs-lookup"><span data-stu-id="00835-232">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="00835-233">시스템 제공 바인딩 구성</span><span class="sxs-lookup"><span data-stu-id="00835-233">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="00835-234">바인딩을 사용 하 여 Windows Communication Foundation 서비스 및 클라이언트 구성</span><span class="sxs-lookup"><span data-stu-id="00835-234">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="00835-235">WCF의 큐</span><span class="sxs-lookup"><span data-stu-id="00835-235">Queues in WCF</span></span>](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

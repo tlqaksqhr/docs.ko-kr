@@ -1,60 +1,58 @@
 ---
-title: "Take Clause (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QueryTake"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Take statement"
-  - "queries [Visual Basic], Take"
-  - "Take clause"
+title: "Take 절(Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.QueryTake
+helpviewer_keywords:
+- Take statement [Visual Basic]
+- queries [Visual Basic], Take
+- Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ee289a24c15226126a526af116ed53b4a9055b35
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Take Clause (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-컬렉션의 시작 위치에서 지정된 수의 연속 요소를 반환합니다.  
+# <a name="take-clause-visual-basic"></a><span data-ttu-id="88ee5-102">Take 절(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="88ee5-102">Take Clause (Visual Basic)</span></span>
+<span data-ttu-id="88ee5-103">컬렉션의 시작 위치에서 지정된 수의 연속 요소를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="88ee5-103">Returns a specified number of contiguous elements from the start of a collection.</span></span>  
   
-## 구문  
+## <a name="syntax"></a><span data-ttu-id="88ee5-104">구문</span><span class="sxs-lookup"><span data-stu-id="88ee5-104">Syntax</span></span>  
   
 ```  
 Take count  
 ```  
   
-## 요소  
+## <a name="parts"></a><span data-ttu-id="88ee5-105">요소</span><span class="sxs-lookup"><span data-stu-id="88ee5-105">Parts</span></span>  
  `count`  
- 필수 요소.  반환할 시퀀스의 요소 수로 계산되는 값이나 식입니다.  
+ <span data-ttu-id="88ee5-106">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="88ee5-106">Required.</span></span> <span data-ttu-id="88ee5-107">값 또는 반환 되는 시퀀스의 요소 수로 계산 되는 식입니다.</span><span class="sxs-lookup"><span data-stu-id="88ee5-107">A value or an expression that evaluates to the number of elements of the sequence to return.</span></span>  
   
-## 설명  
- `Take` 절은 결과 목록의 시작 부분에서 지정된 수의 연속 요소가 쿼리에 포함되게 합니다.  포함할 요소의 수는 `count` 매개 변수에 의해 지정됩니다.  
+## <a name="remarks"></a><span data-ttu-id="88ee5-108">설명</span><span class="sxs-lookup"><span data-stu-id="88ee5-108">Remarks</span></span>  
+ <span data-ttu-id="88ee5-109">`Take` 절로 인해 쿼리를 지정 된 수의 결과 목록에는의 시작 부분부터 연속 요소를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="88ee5-109">The `Take` clause causes a query to include a specified number of contiguous elements from the start of a results list.</span></span> <span data-ttu-id="88ee5-110">요소를 포함 하도록 수가 붙습니다는 `count` 매개 변수입니다.</span><span class="sxs-lookup"><span data-stu-id="88ee5-110">The number of elements to include is specified by the `count` parameter.</span></span>  
   
- `Skip` 절과 함께 `Take` 절을 사용하여 쿼리의 세그먼트에서 데이터 범위를 반환할 수 있습니다.  이렇게 하려면 범위의 첫 번째 요소에 대한 인덱스를 `Skip` 절에 전달하고 범위 크기를 `Take` 절에 전달합니다.  이 경우 `Take` 절은 `Skip` 절 뒤에 지정되어야 합니다.  
+ <span data-ttu-id="88ee5-111">사용할 수 있습니다는 `Take` 절과 함께 `Skip` 절 쿼리 세그먼트에서 데이터의 범위를 반환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="88ee5-111">You can use the `Take` clause with the `Skip` clause to return a range of data from any segment of a query.</span></span> <span data-ttu-id="88ee5-112">이 위해 전달 범위의 첫 번째 요소의 인덱스는 `Skip` 절과 범위의 크기는 `Take` 절.</span><span class="sxs-lookup"><span data-stu-id="88ee5-112">To do this, pass the index of the first element of the range to the `Skip` clause and the size of the range to the `Take` clause.</span></span> <span data-ttu-id="88ee5-113">이 경우에 `Take` 뒤에 절을 지정 해야 합니다는 `Skip` 절.</span><span class="sxs-lookup"><span data-stu-id="88ee5-113">In this case, the `Take` clause must be specified after the `Skip` clause.</span></span>  
   
- 쿼리에 `Take` 절을 사용하는 경우 `Take` 절에서 의도한 결과를 포함하게 될 순서로 결과도 반환되어야 합니다.  쿼리 결과 정렬에 대한 자세한 내용은 [Order By Clause](../../../visual-basic/language-reference/queries/order-by-clause.md)을 참조하십시오.  
+ <span data-ttu-id="88ee5-114">사용 하는 경우는 `Take` 쿼리에서 절을 할 수도 있습니다는 결과 수 있게 하는 순서로 반환 되도록 하는 `Take` 절에서 의도 한 결과 포함 하도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="88ee5-114">When you use the `Take` clause in a query, you may also need to ensure that the results are returned in an order that will enable the `Take` clause to include the intended results.</span></span> <span data-ttu-id="88ee5-115">쿼리 결과 정렬 하는 방법에 대 한 자세한 내용은 참조 [Order By 절](../../../visual-basic/language-reference/queries/order-by-clause.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="88ee5-115">For more information about ordering query results, see [Order By Clause](../../../visual-basic/language-reference/queries/order-by-clause.md).</span></span>  
   
- `TakeWhile` 절을 사용하여 제공된 조건에 따라 해당 특정 요소만 반환되도록 지정할 수 있습니다.  
+ <span data-ttu-id="88ee5-116">사용할 수는 `TakeWhile` 절 제공된 조건에 따라 특정 요소에만 반환 되도록 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="88ee5-116">You can use the `TakeWhile` clause to specify that only certain elements be returned, depending on a supplied condition.</span></span>  
   
-## 예제  
- 다음 코드 예제에서는 `Take` 절을 `Skip` 절과 함께 사용하여 페이지의 쿼리에서 데이터를 반환합니다.  GetCustomers 함수는 `Skip` 절을 사용하여 제공된 시작 인덱스 값까지 목록에서 고객을 건너뛰고 `Take` 절을 사용하여 해당 인덱스 값에서 시작하는 고객의 페이지를 반환합니다.  
+## <a name="example"></a><span data-ttu-id="88ee5-117">예제</span><span class="sxs-lookup"><span data-stu-id="88ee5-117">Example</span></span>  
+ <span data-ttu-id="88ee5-118">다음 코드 예제에서는 `Take` 절과 함께 `Skip` 절을 페이지에 쿼리에서 데이터를에서 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="88ee5-118">The following code example uses the `Take` clause together with the `Skip` clause to return data from a query in pages.</span></span> <span data-ttu-id="88ee5-119">GetCustomers 사용 하 여 함수는 `Skip` 절 값을 사용 하 여 인덱스를 지정 된 시작 될 때까지 목록에서 고객을 무시 하는 `Take` 절 해당 인덱스 값에서 시작 하는 고객의 페이지를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="88ee5-119">The GetCustomers function uses the `Skip` clause to bypass the customers in the list until the supplied starting index value, and uses the `Take` clause to return a page of customers starting from that index value.</span></span>  
   
  [!code-vb[VbSimpleQuerySamples#1](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/take-clause_1.vb)]  
   
-## 참고 항목  
- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [Queries](../../../visual-basic/language-reference/queries/queries.md)   
- [Select Clause](../../../visual-basic/language-reference/queries/select-clause.md)   
- [From Clause](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Order By Clause](../../../visual-basic/language-reference/queries/order-by-clause.md)   
- [Take While Clause](../../../visual-basic/language-reference/queries/take-while-clause.md)   
- [Skip Clause](../../../visual-basic/language-reference/queries/skip-clause.md)
+## <a name="see-also"></a><span data-ttu-id="88ee5-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="88ee5-120">See Also</span></span>  
+ [<span data-ttu-id="88ee5-121">Visual Basic의 LINQ 소개</span><span class="sxs-lookup"><span data-stu-id="88ee5-121">Introduction to LINQ in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [<span data-ttu-id="88ee5-122">쿼리</span><span class="sxs-lookup"><span data-stu-id="88ee5-122">Queries</span></span>](../../../visual-basic/language-reference/queries/queries.md)  
+ [<span data-ttu-id="88ee5-123">Select 절</span><span class="sxs-lookup"><span data-stu-id="88ee5-123">Select Clause</span></span>](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [<span data-ttu-id="88ee5-124">From 절</span><span class="sxs-lookup"><span data-stu-id="88ee5-124">From Clause</span></span>](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [<span data-ttu-id="88ee5-125">Order By 절</span><span class="sxs-lookup"><span data-stu-id="88ee5-125">Order By Clause</span></span>](../../../visual-basic/language-reference/queries/order-by-clause.md)  
+ [<span data-ttu-id="88ee5-126">Take While 절</span><span class="sxs-lookup"><span data-stu-id="88ee5-126">Take While Clause</span></span>](../../../visual-basic/language-reference/queries/take-while-clause.md)  
+ [<span data-ttu-id="88ee5-127">Skip 절</span><span class="sxs-lookup"><span data-stu-id="88ee5-127">Skip Clause</span></span>](../../../visual-basic/language-reference/queries/skip-clause.md)

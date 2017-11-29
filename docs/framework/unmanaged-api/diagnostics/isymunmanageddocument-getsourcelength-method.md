@@ -1,0 +1,48 @@
+---
+title: "ISymUnmanagedDocument::GetSourceLength 메서드"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+api_name: ISymUnmanagedDocument.GetSourceLength
+api_location: diasymreader.dll
+api_type: COM
+f1_keywords: ISymUnmanagedDocument::GetSourceLength
+helpviewer_keywords:
+- GetSourceLength method [.NET Framework debugging]
+- ISymUnmanagedDocument::GetSourceLength method [.NET Framework debugging]
+ms.assetid: e087dbbb-f4fb-4fbe-8292-e4f1a14d0df2
+topic_type: apiref
+caps.latest.revision: "7"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: b4bf318303b1d787df100051a5c2d3fdd0ac5918
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
+---
+# <a name="isymunmanageddocumentgetsourcelength-method"></a><span data-ttu-id="bfb68-102">ISymUnmanagedDocument::GetSourceLength 메서드</span><span class="sxs-lookup"><span data-stu-id="bfb68-102">ISymUnmanagedDocument::GetSourceLength Method</span></span>
+<span data-ttu-id="bfb68-103">포함 소스의 길이(바이트)를 가져옵니다.</span><span class="sxs-lookup"><span data-stu-id="bfb68-103">Gets the length, in bytes, of the embedded source.</span></span>  
+  
+## <a name="syntax"></a><span data-ttu-id="bfb68-104">구문</span><span class="sxs-lookup"><span data-stu-id="bfb68-104">Syntax</span></span>  
+  
+```  
+HRESULT GetSourceLength(  
+    [out, retval]  ULONG32*  pRetVal);  
+```  
+  
+#### <a name="parameters"></a><span data-ttu-id="bfb68-105">매개 변수</span><span class="sxs-lookup"><span data-stu-id="bfb68-105">Parameters</span></span>  
+ `pRetVal`  
+ <span data-ttu-id="bfb68-106">[out] 포함 소스의 길이 (바이트)를 나타내는 변수에 대 한 포인터입니다.</span><span class="sxs-lookup"><span data-stu-id="bfb68-106">[out] A pointer to a variable that indicates the length, in bytes, of the embedded source.</span></span>  
+  
+## <a name="return-value"></a><span data-ttu-id="bfb68-107">반환 값</span><span class="sxs-lookup"><span data-stu-id="bfb68-107">Return Value</span></span>  
+ <span data-ttu-id="bfb68-108">메서드가 성공 하면 S_OK입니다.</span><span class="sxs-lookup"><span data-stu-id="bfb68-108">S_OK if the method succeeds.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="bfb68-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="bfb68-109">See Also</span></span>  
+ [<span data-ttu-id="bfb68-110">ISymUnmanagedDocument 인터페이스</span><span class="sxs-lookup"><span data-stu-id="bfb68-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

@@ -5,160 +5,157 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - JIT tracing events [.NET Framework]
 - ETW, JIT tracing events (CLR)
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: b33a86eb235524ed9cbe5e07dd6625fedf884411
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="jit-tracing-etw-events"></a>JIT 추적 ETW 이벤트
-<a name="top"></a> 이들 이벤트는 JIT(Just-In-Time) 인라인 처리 및 JIT 마무리 호출의 성공 또는 실패와 관련된 정보를 수집합니다.  
+# <a name="jit-tracing-etw-events"></a><span data-ttu-id="9ecb4-102">JIT 추적 ETW 이벤트</span><span class="sxs-lookup"><span data-stu-id="9ecb4-102">JIT Tracing ETW Events</span></span>
+<span data-ttu-id="9ecb4-103"><a name="top"></a> 이들 이벤트는 JIT(Just-In-Time) 인라인 처리 및 JIT 마무리 호출의 성공 또는 실패와 관련된 정보를 수집합니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-103"><a name="top"></a> These events collect information relating to the success or failure of just-in-time (JIT) inlining and JIT tail calls.</span></span>  
   
- JIT 추적 이벤트는 다음 두 범주로 구성됩니다.  
+ <span data-ttu-id="9ecb4-104">JIT 추적 이벤트는 다음 두 범주로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-104">JIT tracing events consist of the following two categories:</span></span>  
   
--   [JIT 인라인 처리 이벤트](#jit_inlining_events)  
+-   [<span data-ttu-id="9ecb4-105">JIT 인라인 처리 이벤트</span><span class="sxs-lookup"><span data-stu-id="9ecb4-105">JIT Inlining Events</span></span>](#jit_inlining_events)  
   
--   [JIT 마무리 호출 이벤트](#jit_tail_call_events)  
+-   [<span data-ttu-id="9ecb4-106">JIT 마무리 호출 이벤트</span><span class="sxs-lookup"><span data-stu-id="9ecb4-106">JIT Tail Call Events</span></span>](#jit_tail_call_events)  
   
 <a name="jit_inlining_events"></a>   
-## <a name="jit-inlining-events"></a>JIT 인라인 처리 이벤트  
+## <a name="jit-inlining-events"></a><span data-ttu-id="9ecb4-107">JIT 인라인 처리 이벤트</span><span class="sxs-lookup"><span data-stu-id="9ecb4-107">JIT Inlining Events</span></span>  
   
-### <a name="methodjitinliningfailed-event"></a>MethodJitInliningFailed 이벤트  
- 다음 표에서는 키워드와 수준을 보여 줍니다. 자세한 내용은 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)을 참조하세요.  
+### <a name="methodjitinliningfailed-event"></a><span data-ttu-id="9ecb4-108">MethodJitInliningFailed 이벤트</span><span class="sxs-lookup"><span data-stu-id="9ecb4-108">MethodJitInliningFailed Event</span></span>  
+ <span data-ttu-id="9ecb4-109">다음 표에서는 키워드와 수준을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-109">The following table shows the keyword and level.</span></span> <span data-ttu-id="9ecb4-110">자세한 내용은 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-110">(For more information, see [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md).)</span></span>  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|<span data-ttu-id="9ecb4-111">이벤트를 발생시키기 위한 키워드</span><span class="sxs-lookup"><span data-stu-id="9ecb4-111">Keyword for raising the event</span></span>|<span data-ttu-id="9ecb4-112">수준</span><span class="sxs-lookup"><span data-stu-id="9ecb4-112">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword` (0x10)|자세한 정보 표시(5)|  
+|<span data-ttu-id="9ecb4-113">`JITTracingKeyword` (0x10)</span><span class="sxs-lookup"><span data-stu-id="9ecb4-113">`JITTracingKeyword` (0x10)</span></span>|<span data-ttu-id="9ecb4-114">자세한 정보 표시(5)</span><span class="sxs-lookup"><span data-stu-id="9ecb4-114">Verbose (5)</span></span>|  
   
- 다음 표에서는 이벤트 정보를 보여 줍니다.  
+ <span data-ttu-id="9ecb4-115">다음 표에서는 이벤트 정보를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-115">The following table shows the event information.</span></span>  
   
-|이벤트|이벤트 ID|발생 시기|  
+|<span data-ttu-id="9ecb4-116">이벤트</span><span class="sxs-lookup"><span data-stu-id="9ecb4-116">Event</span></span>|<span data-ttu-id="9ecb4-117">이벤트 ID</span><span class="sxs-lookup"><span data-stu-id="9ecb4-117">Event ID</span></span>|<span data-ttu-id="9ecb4-118">발생 시기</span><span class="sxs-lookup"><span data-stu-id="9ecb4-118">Raised when</span></span>|  
 |-----------|--------------|-----------------|  
-|`MethodJitInliningFailed`|186|JIT 인라인 처리에 실패했습니다.|  
+|`MethodJitInliningFailed`|<span data-ttu-id="9ecb4-119">186</span><span class="sxs-lookup"><span data-stu-id="9ecb4-119">186</span></span>|<span data-ttu-id="9ecb4-120">JIT 인라인 처리에 실패했습니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-120">The JIT inlining failed.</span></span>|  
   
- 다음 표에서는 이벤트 데이터를 보여 줍니다.  
+ <span data-ttu-id="9ecb4-121">다음 표에서는 이벤트 데이터를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-121">The following table shows the event data.</span></span>  
   
-|필드 이름|데이터 형식|설명|  
+|<span data-ttu-id="9ecb4-122">필드 이름</span><span class="sxs-lookup"><span data-stu-id="9ecb4-122">Field name</span></span>|<span data-ttu-id="9ecb4-123">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="9ecb4-123">Data type</span></span>|<span data-ttu-id="9ecb4-124">설명</span><span class="sxs-lookup"><span data-stu-id="9ecb4-124">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|MethodBeingCompiledNameSpace|win:UnicodeString|컴파일되는 메서드의 네임스페이스입니다.|  
-|MethodBeingCompiledName|win:UnicodeString|컴파일되는 메서드의 이름입니다.|  
-|MethodBeingCompiledNameSignature|win:UnicodeString|컴파일되는 메서드의 서명입니다.|  
-|InlinerNamespace|win:UnicodeString|JIT 컴파일러가 코드를 생성할 메서드의 네임스페이스입니다.|  
-|InlinerName|win:UnicodeString|컴파일러가 코드를 생성할 메서드의 이름입니다. 컴파일러가 `MethodBeingCompiledName` 에 대한 호출을 생성하는 대신 코드를 `MethodBeingCompiledName` 으로 인라인 처리하려고 하면 이름이 `InlinerName`과 같지 않을 수 있습니다.|  
-|InlinerNameSignature|win:UnicodeString|인라인 처리자에 대한 서명입니다.|  
-|InlineeNamespace|win:UnicodeString|인라인 대상의 네임스페이스입니다.|  
-|InlineeName|win:UnicodeString|컴파일러가 인라인 처리하려고 하는 메서드입니다(호출을 생성하지 않음).|  
-|InlineeNameSignature|win:UnicodeString|인라인 대상에 대한 서명입니다.|  
-|FailAlways|win:Boolean|인라인 대상에 대한 인라인 처리가 항상 실패함을 JIT 컴파일러에 알리는 힌트입니다.|  
-|FailReason|win:UnicodeString|INLINE_NEVER는 어떤 다른 이유로 인라인 처리가 실패할 것으로 확인된 이전 인라인 처리 시도를 의미합니다. 이외의 경우는 자유 형식 텍스트입니다.|  
-|ClrInstanceID|win:UnicodeString|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
+|<span data-ttu-id="9ecb4-125">MethodBeingCompiledNameSpace</span><span class="sxs-lookup"><span data-stu-id="9ecb4-125">MethodBeingCompiledNameSpace</span></span>|<span data-ttu-id="9ecb4-126">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-126">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-127">컴파일되는 메서드의 네임스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-127">Namespace of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="9ecb4-128">MethodBeingCompiledName</span><span class="sxs-lookup"><span data-stu-id="9ecb4-128">MethodBeingCompiledName</span></span>|<span data-ttu-id="9ecb4-129">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-129">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-130">컴파일되는 메서드의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-130">Name of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="9ecb4-131">MethodBeingCompiledNameSignature</span><span class="sxs-lookup"><span data-stu-id="9ecb4-131">MethodBeingCompiledNameSignature</span></span>|<span data-ttu-id="9ecb4-132">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-132">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-133">컴파일되는 메서드의 서명입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-133">Signature of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="9ecb4-134">InlinerNamespace</span><span class="sxs-lookup"><span data-stu-id="9ecb4-134">InlinerNamespace</span></span>|<span data-ttu-id="9ecb4-135">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-135">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-136">JIT 컴파일러가 코드를 생성할 메서드의 네임스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-136">The namespace of the method the JIT compiler is trying to generate code for.</span></span>|  
+|<span data-ttu-id="9ecb4-137">InlinerName</span><span class="sxs-lookup"><span data-stu-id="9ecb4-137">InlinerName</span></span>|<span data-ttu-id="9ecb4-138">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-138">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-139">컴파일러가 코드를 생성할 메서드의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-139">The name of the method the compiler is attempting to generate code for.</span></span> <span data-ttu-id="9ecb4-140">컴파일러가 `MethodBeingCompiledName` 에 대한 호출을 생성하는 대신 코드를 `MethodBeingCompiledName` 으로 인라인 처리하려고 하면 이름이 `InlinerName`과 같지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-140">This might not be the same as `MethodBeingCompiledName` if the compiler is attempting to inline code into `MethodBeingCompiledName` instead of generating a call to `InlinerName`.</span></span>|  
+|<span data-ttu-id="9ecb4-141">InlinerNameSignature</span><span class="sxs-lookup"><span data-stu-id="9ecb4-141">InlinerNameSignature</span></span>|<span data-ttu-id="9ecb4-142">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-142">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-143">인라인 처리자에 대한 서명입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-143">The signature for the inliner.</span></span>|  
+|<span data-ttu-id="9ecb4-144">InlineeNamespace</span><span class="sxs-lookup"><span data-stu-id="9ecb4-144">InlineeNamespace</span></span>|<span data-ttu-id="9ecb4-145">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-145">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-146">인라인 대상의 네임스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-146">The namespace of the inlinee.</span></span>|  
+|<span data-ttu-id="9ecb4-147">InlineeName</span><span class="sxs-lookup"><span data-stu-id="9ecb4-147">InlineeName</span></span>|<span data-ttu-id="9ecb4-148">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-148">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-149">컴파일러가 인라인 처리하려고 하는 메서드입니다(호출을 생성하지 않음).</span><span class="sxs-lookup"><span data-stu-id="9ecb4-149">The method the compiler is trying to inline (not generate a call to).</span></span>|  
+|<span data-ttu-id="9ecb4-150">InlineeNameSignature</span><span class="sxs-lookup"><span data-stu-id="9ecb4-150">InlineeNameSignature</span></span>|<span data-ttu-id="9ecb4-151">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-151">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-152">인라인 대상에 대한 서명입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-152">The signature for the inlinee.</span></span>|  
+|<span data-ttu-id="9ecb4-153">FailAlways</span><span class="sxs-lookup"><span data-stu-id="9ecb4-153">FailAlways</span></span>|<span data-ttu-id="9ecb4-154">win:Boolean</span><span class="sxs-lookup"><span data-stu-id="9ecb4-154">win:Boolean</span></span>|<span data-ttu-id="9ecb4-155">인라인 대상에 대한 인라인 처리가 항상 실패함을 JIT 컴파일러에 알리는 힌트입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-155">A hint to the JIT compiler that inlining will always fail for the inlinee.</span></span>|  
+|<span data-ttu-id="9ecb4-156">FailReason</span><span class="sxs-lookup"><span data-stu-id="9ecb4-156">FailReason</span></span>|<span data-ttu-id="9ecb4-157">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-157">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-158">INLINE_NEVER는 어떤 다른 이유로 인라인 처리가 실패할 것으로 확인된 이전 인라인 처리 시도를 의미합니다. 이외의 경우는 자유 형식 텍스트입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-158">INLINE_NEVER means a previous inlining attempt determined that inlining will never succeed for some other reason; otherwise, free-form text.</span></span>|  
+|<span data-ttu-id="9ecb4-159">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="9ecb4-159">ClrInstanceID</span></span>|<span data-ttu-id="9ecb4-160">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-160">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-161">CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-161">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-### <a name="methodjitinliningsucceeded-event"></a>MethodJitInliningSucceeded 이벤트  
- 다음 표에서는 키워드와 수준을 보여 줍니다.  
+### <a name="methodjitinliningsucceeded-event"></a><span data-ttu-id="9ecb4-162">MethodJitInliningSucceeded 이벤트</span><span class="sxs-lookup"><span data-stu-id="9ecb4-162">MethodJitInliningSucceeded Event</span></span>  
+ <span data-ttu-id="9ecb4-163">다음 표에서는 키워드와 수준을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-163">The following table shows the keyword and level.</span></span>  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|<span data-ttu-id="9ecb4-164">이벤트를 발생시키기 위한 키워드</span><span class="sxs-lookup"><span data-stu-id="9ecb4-164">Keyword for raising the event</span></span>|<span data-ttu-id="9ecb4-165">수준</span><span class="sxs-lookup"><span data-stu-id="9ecb4-165">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword` (0x10)|자세한 정보 표시(5)|  
+|<span data-ttu-id="9ecb4-166">`JITTracingKeyword` (0x10)</span><span class="sxs-lookup"><span data-stu-id="9ecb4-166">`JITTracingKeyword` (0x10)</span></span>|<span data-ttu-id="9ecb4-167">자세한 정보 표시(5)</span><span class="sxs-lookup"><span data-stu-id="9ecb4-167">Verbose (5)</span></span>|  
   
- 다음 표에서는 이벤트 정보를 보여 줍니다.  
+ <span data-ttu-id="9ecb4-168">다음 표에서는 이벤트 정보를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-168">The following table shows the event information.</span></span>  
   
-|이벤트|이벤트 ID|발생 시기|  
+|<span data-ttu-id="9ecb4-169">이벤트</span><span class="sxs-lookup"><span data-stu-id="9ecb4-169">Event</span></span>|<span data-ttu-id="9ecb4-170">이벤트 ID</span><span class="sxs-lookup"><span data-stu-id="9ecb4-170">Event ID</span></span>|<span data-ttu-id="9ecb4-171">발생 시기</span><span class="sxs-lookup"><span data-stu-id="9ecb4-171">Raised when</span></span>|  
 |-----------|--------------|-----------------|  
-|`MethodJitInliningSucceeded`|185|메서드 인라인 처리에 성공했습니다.|  
+|`MethodJitInliningSucceeded`|<span data-ttu-id="9ecb4-172">185</span><span class="sxs-lookup"><span data-stu-id="9ecb4-172">185</span></span>|<span data-ttu-id="9ecb4-173">메서드 인라인 처리에 성공했습니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-173">The method inlining succeeded.</span></span>|  
   
- 다음 표에서는 이벤트 데이터를 보여 줍니다.  
+ <span data-ttu-id="9ecb4-174">다음 표에서는 이벤트 데이터를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-174">The following table shows the event data.</span></span>  
   
-|필드 이름|데이터 형식|설명|  
+|<span data-ttu-id="9ecb4-175">필드 이름</span><span class="sxs-lookup"><span data-stu-id="9ecb4-175">Field name</span></span>|<span data-ttu-id="9ecb4-176">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="9ecb4-176">Data type</span></span>|<span data-ttu-id="9ecb4-177">설명</span><span class="sxs-lookup"><span data-stu-id="9ecb4-177">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|MethodBeingCompiledNameSpace|win:UnicodeString|컴파일되는 메서드의 네임스페이스입니다.|  
-|MethodBeingCompiledName|win:UnicodeString|컴파일되는 메서드의 이름입니다.|  
-|MethodBeingCompiledNameSignature|win:UnicodeString|컴파일되는 메서드의 서명입니다.|  
-|InlinerNamespace|win:UnicodeString|JIT 컴파일러가 코드를 생성할 메서드의 네임스페이스입니다.|  
-|InlinerName|win:UnicodeString|컴파일러가 코드를 생성할 메서드의 이름입니다. 컴파일러가 `MethodBeingCompiledName` 에 대한 호출을 생성하는 대신 코드를 `MethodBeingCompiledName` 으로 인라인 처리하려고 하면 이름이 `InlinerName`과 같지 않을 수 있습니다.|  
-|InlinerNameSignature|win:UnicodeString|인라인 처리자에 대한 서명입니다.|  
-|InlineeNamespace|win:UnicodeString|인라인 대상의 네임스페이스입니다.|  
-|InlineeName|win:UnicodeString|컴파일러가 인라인 처리하려고 하는 메서드입니다(호출을 생성하지 않음).|  
-|InlineeNameSignature|win:UnicodeString|인라인 대상에 대한 서명입니다.|  
-|ClrInstanceID|win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
+|<span data-ttu-id="9ecb4-178">MethodBeingCompiledNameSpace</span><span class="sxs-lookup"><span data-stu-id="9ecb4-178">MethodBeingCompiledNameSpace</span></span>|<span data-ttu-id="9ecb4-179">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-179">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-180">컴파일되는 메서드의 네임스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-180">The namespace of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="9ecb4-181">MethodBeingCompiledName</span><span class="sxs-lookup"><span data-stu-id="9ecb4-181">MethodBeingCompiledName</span></span>|<span data-ttu-id="9ecb4-182">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-182">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-183">컴파일되는 메서드의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-183">The name of the method being that is compiled.</span></span>|  
+|<span data-ttu-id="9ecb4-184">MethodBeingCompiledNameSignature</span><span class="sxs-lookup"><span data-stu-id="9ecb4-184">MethodBeingCompiledNameSignature</span></span>|<span data-ttu-id="9ecb4-185">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-185">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-186">컴파일되는 메서드의 서명입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-186">The signature of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="9ecb4-187">InlinerNamespace</span><span class="sxs-lookup"><span data-stu-id="9ecb4-187">InlinerNamespace</span></span>|<span data-ttu-id="9ecb4-188">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-188">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-189">JIT 컴파일러가 코드를 생성할 메서드의 네임스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-189">The namespace of the method the JIT compiler is attempting to generate code for.</span></span>|  
+|<span data-ttu-id="9ecb4-190">InlinerName</span><span class="sxs-lookup"><span data-stu-id="9ecb4-190">InlinerName</span></span>|<span data-ttu-id="9ecb4-191">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-191">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-192">컴파일러가 코드를 생성할 메서드의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-192">The name of the method the compiler is attempting to generate code for.</span></span> <span data-ttu-id="9ecb4-193">컴파일러가 `MethodBeingCompiledName` 에 대한 호출을 생성하는 대신 코드를 `MethodBeingCompiledName` 으로 인라인 처리하려고 하면 이름이 `InlinerName`과 같지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-193">This might not be the same as `MethodBeingCompiledName` if the compiler is attempting to inline code into `MethodBeingCompiledName` instead of generating a call to `InlinerName`.</span></span>|  
+|<span data-ttu-id="9ecb4-194">InlinerNameSignature</span><span class="sxs-lookup"><span data-stu-id="9ecb4-194">InlinerNameSignature</span></span>|<span data-ttu-id="9ecb4-195">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-195">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-196">인라인 처리자에 대한 서명입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-196">The signature for the inliner.</span></span>|  
+|<span data-ttu-id="9ecb4-197">InlineeNamespace</span><span class="sxs-lookup"><span data-stu-id="9ecb4-197">InlineeNamespace</span></span>|<span data-ttu-id="9ecb4-198">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-198">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-199">인라인 대상의 네임스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-199">The namespace of the inlinee.</span></span>|  
+|<span data-ttu-id="9ecb4-200">InlineeName</span><span class="sxs-lookup"><span data-stu-id="9ecb4-200">InlineeName</span></span>|<span data-ttu-id="9ecb4-201">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-201">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-202">컴파일러가 인라인 처리하려고 하는 메서드입니다(호출을 생성하지 않음).</span><span class="sxs-lookup"><span data-stu-id="9ecb4-202">The method the compiler is trying to inline (not generate a call to).</span></span>|  
+|<span data-ttu-id="9ecb4-203">InlineeNameSignature</span><span class="sxs-lookup"><span data-stu-id="9ecb4-203">InlineeNameSignature</span></span>|<span data-ttu-id="9ecb4-204">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-204">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-205">인라인 대상에 대한 서명입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-205">The signature for the inlinee.</span></span>|  
+|<span data-ttu-id="9ecb4-206">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="9ecb4-206">ClrInstanceID</span></span>|<span data-ttu-id="9ecb4-207">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="9ecb4-207">win:UInt16</span></span>|<span data-ttu-id="9ecb4-208">CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-208">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
- [맨 위로 이동](#top)  
+ [<span data-ttu-id="9ecb4-209">맨 위로 이동</span><span class="sxs-lookup"><span data-stu-id="9ecb4-209">Back to top</span></span>](#top)  
   
 <a name="jit_tail_call_events"></a>   
-## <a name="jit-tail-call-events"></a>JIT 마무리 호출 이벤트  
+## <a name="jit-tail-call-events"></a><span data-ttu-id="9ecb4-210">JIT 마무리 호출 이벤트</span><span class="sxs-lookup"><span data-stu-id="9ecb4-210">JIT Tail Call Events</span></span>  
   
-### <a name="methodjittailcallfailed-event"></a>MethodJITTailCallFailed 이벤트  
- 다음 표에서는 키워드와 수준을 보여 줍니다.  
+### <a name="methodjittailcallfailed-event"></a><span data-ttu-id="9ecb4-211">MethodJITTailCallFailed 이벤트</span><span class="sxs-lookup"><span data-stu-id="9ecb4-211">MethodJITTailCallFailed Event</span></span>  
+ <span data-ttu-id="9ecb4-212">다음 표에서는 키워드와 수준을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-212">The following table shows the keyword and level.</span></span>  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|<span data-ttu-id="9ecb4-213">이벤트를 발생시키기 위한 키워드</span><span class="sxs-lookup"><span data-stu-id="9ecb4-213">Keyword for raising the event</span></span>|<span data-ttu-id="9ecb4-214">수준</span><span class="sxs-lookup"><span data-stu-id="9ecb4-214">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword` (0x10)|자세한 정보 표시(5)|  
+|<span data-ttu-id="9ecb4-215">`JITTracingKeyword` (0x10)</span><span class="sxs-lookup"><span data-stu-id="9ecb4-215">`JITTracingKeyword` (0x10)</span></span>|<span data-ttu-id="9ecb4-216">자세한 정보 표시(5)</span><span class="sxs-lookup"><span data-stu-id="9ecb4-216">Verbose (5)</span></span>|  
   
- 다음 표에서는 이벤트 정보를 보여 줍니다.  
+ <span data-ttu-id="9ecb4-217">다음 표에서는 이벤트 정보를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-217">The following table shows the event information.</span></span>  
   
-|이벤트|이벤트 ID|발생 시기|  
+|<span data-ttu-id="9ecb4-218">이벤트</span><span class="sxs-lookup"><span data-stu-id="9ecb4-218">Event</span></span>|<span data-ttu-id="9ecb4-219">이벤트 ID</span><span class="sxs-lookup"><span data-stu-id="9ecb4-219">Event ID</span></span>|<span data-ttu-id="9ecb4-220">발생 시기</span><span class="sxs-lookup"><span data-stu-id="9ecb4-220">Raised when</span></span>|  
 |-----------|--------------|-----------------|  
-|`MethodJitTailCallFailed`|189|메서드 마무리 호출에 실패했습니다.|  
+|`MethodJitTailCallFailed`|<span data-ttu-id="9ecb4-221">189</span><span class="sxs-lookup"><span data-stu-id="9ecb4-221">189</span></span>|<span data-ttu-id="9ecb4-222">메서드 마무리 호출에 실패했습니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-222">The method tail call failed.</span></span>|  
   
- 다음 표에서는 이벤트 데이터를 보여 줍니다.  
+ <span data-ttu-id="9ecb4-223">다음 표에서는 이벤트 데이터를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-223">The following table shows the event data.</span></span>  
   
-|필드 이름|데이터 형식|설명|  
+|<span data-ttu-id="9ecb4-224">필드 이름</span><span class="sxs-lookup"><span data-stu-id="9ecb4-224">Field name</span></span>|<span data-ttu-id="9ecb4-225">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="9ecb4-225">Data type</span></span>|<span data-ttu-id="9ecb4-226">설명</span><span class="sxs-lookup"><span data-stu-id="9ecb4-226">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|MethodBeingCompiledNameSpace|win:UnicodeString|컴파일되는 메서드의 네임스페이스입니다.|  
-|MethodBeingCompiledName|win:UnicodeString|컴파일되는 메서드의 이름입니다.|  
-|MethodBeingCompiledNameSignature|win:UnicodeString|컴파일되는 메서드의 서명입니다.|  
-|CallerNamespace|win:UnicodeString|JIT 컴파일러가 코드를 생성할 메서드의 네임스페이스입니다.|  
-|CallerName|win:UnicodeString|컴파일러가 코드를 생성할 메서드의 이름입니다.|  
-|CallerNameSignature|win:UnicodeString|호출자에 대한 서명입니다.|  
-|CalleeNamespace|win:UnicodeString|호출 수신자의 네임스페이스입니다.|  
-|CalleeName|win:UnicodeString|컴파일러가 마무리 호출하려고 하는 메서드입니다(호출을 생성하지 않음).|  
-|CalleeNameSignature|win:UnicodeString|호출자 수신자에 대한 서명입니다.|  
-|TailPrefix|win:Boolean|마무리 호출에 대한 접두사입니다.|  
-|FailReason|win:UnicodeString|마무리 호출이 실패한 이유입니다.|  
-|ClrInstanceID|win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
+|<span data-ttu-id="9ecb4-227">MethodBeingCompiledNameSpace</span><span class="sxs-lookup"><span data-stu-id="9ecb4-227">MethodBeingCompiledNameSpace</span></span>|<span data-ttu-id="9ecb4-228">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-228">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-229">컴파일되는 메서드의 네임스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-229">Namespace of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="9ecb4-230">MethodBeingCompiledName</span><span class="sxs-lookup"><span data-stu-id="9ecb4-230">MethodBeingCompiledName</span></span>|<span data-ttu-id="9ecb4-231">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-231">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-232">컴파일되는 메서드의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-232">Name of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="9ecb4-233">MethodBeingCompiledNameSignature</span><span class="sxs-lookup"><span data-stu-id="9ecb4-233">MethodBeingCompiledNameSignature</span></span>|<span data-ttu-id="9ecb4-234">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-234">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-235">컴파일되는 메서드의 서명입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-235">Signature of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="9ecb4-236">CallerNamespace</span><span class="sxs-lookup"><span data-stu-id="9ecb4-236">CallerNamespace</span></span>|<span data-ttu-id="9ecb4-237">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-237">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-238">JIT 컴파일러가 코드를 생성할 메서드의 네임스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-238">The namespace of the method the JIT compiler is attempting to generate code for.</span></span>|  
+|<span data-ttu-id="9ecb4-239">CallerName</span><span class="sxs-lookup"><span data-stu-id="9ecb4-239">CallerName</span></span>|<span data-ttu-id="9ecb4-240">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-240">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-241">컴파일러가 코드를 생성할 메서드의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-241">The name of the method the compiler is attempting to generate code for.</span></span>|  
+|<span data-ttu-id="9ecb4-242">CallerNameSignature</span><span class="sxs-lookup"><span data-stu-id="9ecb4-242">CallerNameSignature</span></span>|<span data-ttu-id="9ecb4-243">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-243">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-244">호출자에 대한 서명입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-244">The signature for the caller.</span></span>|  
+|<span data-ttu-id="9ecb4-245">CalleeNamespace</span><span class="sxs-lookup"><span data-stu-id="9ecb4-245">CalleeNamespace</span></span>|<span data-ttu-id="9ecb4-246">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-246">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-247">호출 수신자의 네임스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-247">The namespace of the callee.</span></span>|  
+|<span data-ttu-id="9ecb4-248">CalleeName</span><span class="sxs-lookup"><span data-stu-id="9ecb4-248">CalleeName</span></span>|<span data-ttu-id="9ecb4-249">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-249">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-250">컴파일러가 마무리 호출하려고 하는 메서드입니다(호출을 생성하지 않음).</span><span class="sxs-lookup"><span data-stu-id="9ecb4-250">The method the compiler is trying to tail call (not generate a call to).</span></span>|  
+|<span data-ttu-id="9ecb4-251">CalleeNameSignature</span><span class="sxs-lookup"><span data-stu-id="9ecb4-251">CalleeNameSignature</span></span>|<span data-ttu-id="9ecb4-252">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-252">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-253">호출자 수신자에 대한 서명입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-253">The signature for the callee.</span></span>|  
+|<span data-ttu-id="9ecb4-254">TailPrefix</span><span class="sxs-lookup"><span data-stu-id="9ecb4-254">TailPrefix</span></span>|<span data-ttu-id="9ecb4-255">win:Boolean</span><span class="sxs-lookup"><span data-stu-id="9ecb4-255">win:Boolean</span></span>|<span data-ttu-id="9ecb4-256">마무리 호출에 대한 접두사입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-256">The prefix for the tail call</span></span>|  
+|<span data-ttu-id="9ecb4-257">FailReason</span><span class="sxs-lookup"><span data-stu-id="9ecb4-257">FailReason</span></span>|<span data-ttu-id="9ecb4-258">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-258">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-259">마무리 호출이 실패한 이유입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-259">The reason the tail call failed.</span></span>|  
+|<span data-ttu-id="9ecb4-260">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="9ecb4-260">ClrInstanceID</span></span>|<span data-ttu-id="9ecb4-261">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="9ecb4-261">win:UInt16</span></span>|<span data-ttu-id="9ecb4-262">CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-262">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-### <a name="methodjittailcallsucceeded-event"></a>MethodJITTailCallSucceeded 이벤트  
- 다음 표에서는 키워드와 수준을 보여 줍니다.  
+### <a name="methodjittailcallsucceeded-event"></a><span data-ttu-id="9ecb4-263">MethodJITTailCallSucceeded 이벤트</span><span class="sxs-lookup"><span data-stu-id="9ecb4-263">MethodJITTailCallSucceeded Event</span></span>  
+ <span data-ttu-id="9ecb4-264">다음 표에서는 키워드와 수준을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-264">The following table shows the keyword and level.</span></span>  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|<span data-ttu-id="9ecb4-265">이벤트를 발생시키기 위한 키워드</span><span class="sxs-lookup"><span data-stu-id="9ecb4-265">Keyword for raising the event</span></span>|<span data-ttu-id="9ecb4-266">수준</span><span class="sxs-lookup"><span data-stu-id="9ecb4-266">Level</span></span>|  
 |-----------------------------------|-----------|  
-|`JITTracingKeyword` (0x10)|자세한 정보 표시(5)|  
+|<span data-ttu-id="9ecb4-267">`JITTracingKeyword` (0x10)</span><span class="sxs-lookup"><span data-stu-id="9ecb4-267">`JITTracingKeyword` (0x10)</span></span>|<span data-ttu-id="9ecb4-268">자세한 정보 표시(5)</span><span class="sxs-lookup"><span data-stu-id="9ecb4-268">Verbose (5)</span></span>|  
   
- 다음 표에서는 이벤트 정보를 보여 줍니다.  
+ <span data-ttu-id="9ecb4-269">다음 표에서는 이벤트 정보를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-269">The following table shows the event information.</span></span>  
   
-|이벤트|이벤트 ID|발생 시기|  
+|<span data-ttu-id="9ecb4-270">이벤트</span><span class="sxs-lookup"><span data-stu-id="9ecb4-270">Event</span></span>|<span data-ttu-id="9ecb4-271">이벤트 ID</span><span class="sxs-lookup"><span data-stu-id="9ecb4-271">Event ID</span></span>|<span data-ttu-id="9ecb4-272">발생 시기</span><span class="sxs-lookup"><span data-stu-id="9ecb4-272">Raised when</span></span>|  
 |-----------|--------------|-----------------|  
-|`MethodJitTailCallSucceeded`|188|메서드 마무리 호출에 성공했습니다.|  
+|`MethodJitTailCallSucceeded`|<span data-ttu-id="9ecb4-273">188</span><span class="sxs-lookup"><span data-stu-id="9ecb4-273">188</span></span>|<span data-ttu-id="9ecb4-274">메서드 마무리 호출에 성공했습니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-274">The method tail call succeeded.</span></span>|  
   
- 다음 표에서는 이벤트 데이터를 보여 줍니다.  
+ <span data-ttu-id="9ecb4-275">다음 표에서는 이벤트 데이터를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-275">The following table shows the event data.</span></span>  
   
-|필드 이름|데이터 형식|설명|  
+|<span data-ttu-id="9ecb4-276">필드 이름</span><span class="sxs-lookup"><span data-stu-id="9ecb4-276">Field name</span></span>|<span data-ttu-id="9ecb4-277">데이터 형식</span><span class="sxs-lookup"><span data-stu-id="9ecb4-277">Data type</span></span>|<span data-ttu-id="9ecb4-278">설명</span><span class="sxs-lookup"><span data-stu-id="9ecb4-278">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|MethodBeingCompiledNameSpace|win:UnicodeString|컴파일되는 메서드의 네임스페이스입니다.|  
-|MethodBeingCompiledName|win:UnicodeString|컴파일되는 메서드의 이름입니다.|  
-|MethodBeingCompiledNameSignature|win:UnicodeString|컴파일되는 메서드의 서명입니다.|  
-|CallerNamespace|win:UnicodeString|JIT 컴파일러가 코드를 생성할 메서드의 네임스페이스입니다.|  
-|CallerName|win:UnicodeString|컴파일러가 코드를 생성할 메서드의 이름입니다.|  
-|CallerNameSignature|win:UnicodeString|호출자에 대한 서명입니다.|  
-|CalleeNamespace|win:UnicodeString|호출 수신자의 네임스페이스입니다.|  
-|CalleeName|win:UnicodeString|컴파일러가 마무리 호출하려고 하는 메서드입니다(호출을 생성하지 않음).|  
-|CalleeNameSignature|win:UnicodeString|호출자 수신자에 대한 서명입니다.|  
-|TailPrefix|win:Boolean|마무리 호출에 대한 접두사입니다.|  
-|TailCallType|win:UnicodeString|마무리 호출의 형식입니다.|  
-|ClrInstanceID|win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
+|<span data-ttu-id="9ecb4-279">MethodBeingCompiledNameSpace</span><span class="sxs-lookup"><span data-stu-id="9ecb4-279">MethodBeingCompiledNameSpace</span></span>|<span data-ttu-id="9ecb4-280">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-280">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-281">컴파일되는 메서드의 네임스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-281">Namespace of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="9ecb4-282">MethodBeingCompiledName</span><span class="sxs-lookup"><span data-stu-id="9ecb4-282">MethodBeingCompiledName</span></span>|<span data-ttu-id="9ecb4-283">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-283">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-284">컴파일되는 메서드의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-284">Name of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="9ecb4-285">MethodBeingCompiledNameSignature</span><span class="sxs-lookup"><span data-stu-id="9ecb4-285">MethodBeingCompiledNameSignature</span></span>|<span data-ttu-id="9ecb4-286">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-286">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-287">컴파일되는 메서드의 서명입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-287">Signature of the method that is being compiled.</span></span>|  
+|<span data-ttu-id="9ecb4-288">CallerNamespace</span><span class="sxs-lookup"><span data-stu-id="9ecb4-288">CallerNamespace</span></span>|<span data-ttu-id="9ecb4-289">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-289">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-290">JIT 컴파일러가 코드를 생성할 메서드의 네임스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-290">The namespace of the method the JIT compiler is attempting to generate code for.</span></span>|  
+|<span data-ttu-id="9ecb4-291">CallerName</span><span class="sxs-lookup"><span data-stu-id="9ecb4-291">CallerName</span></span>|<span data-ttu-id="9ecb4-292">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-292">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-293">컴파일러가 코드를 생성할 메서드의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-293">The name of the method the compiler is attempting to generate code for.</span></span>|  
+|<span data-ttu-id="9ecb4-294">CallerNameSignature</span><span class="sxs-lookup"><span data-stu-id="9ecb4-294">CallerNameSignature</span></span>|<span data-ttu-id="9ecb4-295">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-295">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-296">호출자에 대한 서명입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-296">The signature for the caller.</span></span>|  
+|<span data-ttu-id="9ecb4-297">CalleeNamespace</span><span class="sxs-lookup"><span data-stu-id="9ecb4-297">CalleeNamespace</span></span>|<span data-ttu-id="9ecb4-298">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-298">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-299">호출 수신자의 네임스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-299">The namespace of the callee.</span></span>|  
+|<span data-ttu-id="9ecb4-300">CalleeName</span><span class="sxs-lookup"><span data-stu-id="9ecb4-300">CalleeName</span></span>|<span data-ttu-id="9ecb4-301">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-301">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-302">컴파일러가 마무리 호출하려고 하는 메서드입니다(호출을 생성하지 않음).</span><span class="sxs-lookup"><span data-stu-id="9ecb4-302">The method the compiler is trying to tail call (not generate a call to).</span></span>|  
+|<span data-ttu-id="9ecb4-303">CalleeNameSignature</span><span class="sxs-lookup"><span data-stu-id="9ecb4-303">CalleeNameSignature</span></span>|<span data-ttu-id="9ecb4-304">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-304">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-305">호출자 수신자에 대한 서명입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-305">The signature for the callee.</span></span>|  
+|<span data-ttu-id="9ecb4-306">TailPrefix</span><span class="sxs-lookup"><span data-stu-id="9ecb4-306">TailPrefix</span></span>|<span data-ttu-id="9ecb4-307">win:Boolean</span><span class="sxs-lookup"><span data-stu-id="9ecb4-307">win:Boolean</span></span>|<span data-ttu-id="9ecb4-308">마무리 호출에 대한 접두사입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-308">The prefix for the tail call.</span></span>|  
+|<span data-ttu-id="9ecb4-309">TailCallType</span><span class="sxs-lookup"><span data-stu-id="9ecb4-309">TailCallType</span></span>|<span data-ttu-id="9ecb4-310">win:UnicodeString</span><span class="sxs-lookup"><span data-stu-id="9ecb4-310">win:UnicodeString</span></span>|<span data-ttu-id="9ecb4-311">마무리 호출의 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-311">The type of the tail call.</span></span>|  
+|<span data-ttu-id="9ecb4-312">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="9ecb4-312">ClrInstanceID</span></span>|<span data-ttu-id="9ecb4-313">win:UInt16</span><span class="sxs-lookup"><span data-stu-id="9ecb4-313">win:UInt16</span></span>|<span data-ttu-id="9ecb4-314">CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.</span><span class="sxs-lookup"><span data-stu-id="9ecb4-314">Unique ID for the instance of CLR or CoreCLR.</span></span>|  
   
-## <a name="see-also"></a>참고 항목  
- [CLR ETW 이벤트](../../../docs/framework/performance/clr-etw-events.md)
-
+## <a name="see-also"></a><span data-ttu-id="9ecb4-315">참고 항목</span><span class="sxs-lookup"><span data-stu-id="9ecb4-315">See Also</span></span>  
+ [<span data-ttu-id="9ecb4-316">CLR ETW 이벤트</span><span class="sxs-lookup"><span data-stu-id="9ecb4-316">CLR ETW Events</span></span>](../../../docs/framework/performance/clr-etw-events.md)

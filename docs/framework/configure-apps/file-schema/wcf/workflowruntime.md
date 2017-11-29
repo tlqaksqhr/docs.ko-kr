@@ -1,28 +1,36 @@
 ---
-title: "&lt;workflowRuntime&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: '&lt;workflowRuntime&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 304c70fa-78d1-4d0f-b89f-0ca23d734c6f
-caps.latest.revision: 7
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: ad33eee445e04d1e43fa8b15e92c08cd48c11b11
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;workflowRuntime&gt;
-워크플로 기반 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] 서비스를 호스트하기 위해 <xref:System.Workflow.Runtime.WorkflowRuntime>의 인스턴스에 대한 설정을 지정합니다.  
+# <a name="ltworkflowruntimegt"></a><span data-ttu-id="88780-102">&lt;workflowRuntime&gt;</span><span class="sxs-lookup"><span data-stu-id="88780-102">&lt;workflowRuntime&gt;</span></span>
+<span data-ttu-id="88780-103">워크플로 기반 <xref:System.Workflow.Runtime.WorkflowRuntime> 서비스를 호스트하기 위해 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]의 인스턴스에 대한 설정을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="88780-103">Specifies settings for an instance of <xref:System.Workflow.Runtime.WorkflowRuntime> for hosting workflow-based [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] services.</span></span>  
   
-## 구문  
+ <span data-ttu-id="88780-104">\<시스템입니다. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="88780-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="88780-105">\<동작 ></span><span class="sxs-lookup"><span data-stu-id="88780-105">\<behaviors></span></span>  
+<span data-ttu-id="88780-106">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="88780-106">\<serviceBehaviors></span></span>  
+<span data-ttu-id="88780-107">\<동작 ></span><span class="sxs-lookup"><span data-stu-id="88780-107">\<behavior></span></span>  
+<span data-ttu-id="88780-108">\<workflowRuntime ></span><span class="sxs-lookup"><span data-stu-id="88780-108">\<workflowRuntime></span></span>  
   
-```  
+## <a name="syntax"></a><span data-ttu-id="88780-109">구문</span><span class="sxs-lookup"><span data-stu-id="88780-109">Syntax</span></span>  
   
+```xml  
 <workflowRuntime cachedInstanceExpiration="TimeSpan"  
                                   enablePerformanceCounters="Boolean"  
                                   name="String"  
@@ -36,37 +44,37 @@ caps.handback.revision: 7
 </workflowRuntime>  
 ```  
   
-## 특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+## <a name="attributes-and-elements"></a><span data-ttu-id="88780-110">특성 및 요소</span><span class="sxs-lookup"><span data-stu-id="88780-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="88780-111">다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="88780-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### 특성  
+### <a name="attributes"></a><span data-ttu-id="88780-112">특성</span><span class="sxs-lookup"><span data-stu-id="88780-112">Attributes</span></span>  
   
-|특성|설명|  
-|--------|--------|  
-|cachedInstanceExpiration|워크플로 인스턴스가 강제로 언로드되거나 중단되기 전에 메모리에 유휴 상태로 유지될 수 있는 최대 기간을 지정하는 선택적 <xref:System.Timespan> 값입니다.  workflowruntime에 unloadOnIdle을 수행하는 `PersistenceService`가 있으면 이 특성이 무시됩니다.|  
-|enablePerformanceCounters|성능 카운터를 사용하는지 여부를 지정하는 선택적 부울 값입니다.  성능 카운터는 다양한 워크플로 관련 통계에 대한 정보를 제공하지만 워크플로 런타임 엔진이 시작될 때 및 워크플로 인스턴스가 실행되고 있을 때 성능을 저하시킵니다.  기본값은 `true`입니다.|  
-|name|워크플로 런타임 엔진의 이름을 포함하는 문자열입니다.  이름은 시스템\(예: 성능 카운터\)에서 실행 중일 수 있는 다른 런타임과 이 런타임을 구분하기 위해 출력에서 사용됩니다.<br /><br /> 기본값은 빈 문자열입니다.|  
-|validateOnCreate|WorkflowServiceHost가 열릴 때 워크플로 정의의 유효성 검사를 실시할지 여부를 지정하는 선택적 부울 값입니다.  이 특성을 `true`로 설정하면 `WorkflowServiceHost.Open`을 호출할 때마다 워크플로 유효성 검사가 실행됩니다.  유효성 검사 오류가 발견되면 <xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException> 오류가 throw됩니다.<br /><br /> 이 속성을 `false`로 설정하면 워크플로 정의 유효성 검사가 실행되지 않습니다.<br /><br /> 이 속성의 기본값은 `true`입니다.|  
+|<span data-ttu-id="88780-113">특성</span><span class="sxs-lookup"><span data-stu-id="88780-113">Attribute</span></span>|<span data-ttu-id="88780-114">설명</span><span class="sxs-lookup"><span data-stu-id="88780-114">Description</span></span>|  
+|---------------|-----------------|  
+|<span data-ttu-id="88780-115">cachedInstanceExpiration</span><span class="sxs-lookup"><span data-stu-id="88780-115">cachedInstanceExpiration</span></span>|<span data-ttu-id="88780-116">워크플로 인스턴스가 강제로 언로드되거나 중단되기 전에 메모리에 유휴 상태로 유지될 수 있는 최대 기간을 지정하는 선택적 <xref:System.TimeSpan> 값입니다.</span><span class="sxs-lookup"><span data-stu-id="88780-116">An optional <xref:System.TimeSpan> value that specifies the maximum duration a workflow instance can stay in-memory in idle state before it is forcefully unloaded or aborted.</span></span> <span data-ttu-id="88780-117">workflowruntime에 unloadOnIdle을 수행하는 `PersistenceService`가 있으면 이 특성이 무시됩니다.</span><span class="sxs-lookup"><span data-stu-id="88780-117">If the workflowruntime has `PersistenceService` which performs unloadOnIdle, this attribute is ignored.</span></span>|  
+|<span data-ttu-id="88780-118">enablePerformanceCounters</span><span class="sxs-lookup"><span data-stu-id="88780-118">enablePerformanceCounters</span></span>|<span data-ttu-id="88780-119">성능 카운터를 사용하는지 여부를 지정하는 선택적 부울 값입니다.</span><span class="sxs-lookup"><span data-stu-id="88780-119">An optional Boolean value that specifies whether performance counters are enabled.</span></span> <span data-ttu-id="88780-120">성능 카운터는 다양한 워크플로 관련 통계에 대한 정보를 제공하지만 워크플로 런타임 엔진이 시작될 때 및 워크플로 인스턴스가 실행되고 있을 때 성능을 저하시킵니다.</span><span class="sxs-lookup"><span data-stu-id="88780-120">Performance counters provide information on various workflow-related statistics, but they cause a performance penalty when the workflow runtime engine starts, and when workflow instances are running.</span></span> <span data-ttu-id="88780-121">기본값은 `true`입니다.</span><span class="sxs-lookup"><span data-stu-id="88780-121">The default value is `true`.</span></span>|  
+|<span data-ttu-id="88780-122">name</span><span class="sxs-lookup"><span data-stu-id="88780-122">name</span></span>|<span data-ttu-id="88780-123">워크플로 런타임 엔진의 이름을 포함하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="88780-123">A string containing the name of the workflow runtime engine.</span></span> <span data-ttu-id="88780-124">이름은 시스템(예: 성능 카운터)에서 실행 중일 수 있는 다른 런타임과 이 런타임을 구분하기 위해 출력에서 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="88780-124">The name is used in output to distinguish this runtime from other runtimes that may be running on the system, for example, in performance counters.</span></span><br /><br /> <span data-ttu-id="88780-125">기본값은 빈 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="88780-125">The default is an empty string.</span></span>|  
+|<span data-ttu-id="88780-126">validateOnCreate</span><span class="sxs-lookup"><span data-stu-id="88780-126">validateOnCreate</span></span>|<span data-ttu-id="88780-127">WorkflowServiceHost가 열릴 때 워크플로 정의의 유효성 검사를 실시할지 여부를 지정하는 선택적 부울 값입니다.</span><span class="sxs-lookup"><span data-stu-id="88780-127">An optional Boolean value that specifies whether validation of workflow definition will occur when the WorkflowServiceHost is opened.</span></span>  <span data-ttu-id="88780-128">이 특성을 `true`로 설정하면 `WorkflowServiceHost.Open`을 호출할 때마다 워크플로 유효성 검사가 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="88780-128">When this attribute is set to `true`, the workflow validation is executed every time `WorkflowServiceHost.Open` is called.</span></span> <span data-ttu-id="88780-129">유효성 검사 오류가 발견되면 <xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException> 오류가 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="88780-129">If validation errors are found, a <xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException> error is thrown.</span></span><br /><br /> <span data-ttu-id="88780-130">이 속성을 `false`로 설정하면 워크플로 정의 유효성 검사가 실행되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="88780-130">When this property is set to `false`, no Workflow definition validation will happen.</span></span><br /><br /> <span data-ttu-id="88780-131">이 속성의 기본값은 `true`입니다.</span><span class="sxs-lookup"><span data-stu-id="88780-131">The default value for this property is `true`.</span></span>|  
   
-### 자식 요소  
+### <a name="child-elements"></a><span data-ttu-id="88780-132">자식 요소</span><span class="sxs-lookup"><span data-stu-id="88780-132">Child Elements</span></span>  
   
-|요소|설명|  
-|--------|--------|  
-|commonParameters|서비스에서 사용하는 일반 매개 변수 컬렉션입니다.  일반적으로 이 컬렉션에는 영속 서비스에서 공유할 수 있는 데이터베이스 연결 문자열이 포함됩니다.|  
-|서비스|<xref:System.Workflow.Runtime.WorkflowRuntime> 엔진에 추가할 서비스 컬렉션입니다.  요소는 <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement> 형식입니다.  컬렉션에 지정된 서비스는 워크플로 런타임 엔진에 의해 초기화되며 해당 <xref:System.Workflow.Runtime.WorkflowRuntime> 생성자를 호출할 때 서비스에 추가됩니다.  따라서 컬렉션에 지정된 서비스는 생성자의 시그니처에 대한 특정 규칙을 따라야 합니다.  자세한 내용은 <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>를 참조하세요.|  
+|<span data-ttu-id="88780-133">요소</span><span class="sxs-lookup"><span data-stu-id="88780-133">Element</span></span>|<span data-ttu-id="88780-134">설명</span><span class="sxs-lookup"><span data-stu-id="88780-134">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="88780-135">commonParameters</span><span class="sxs-lookup"><span data-stu-id="88780-135">commonParameters</span></span>|<span data-ttu-id="88780-136">서비스에서 사용하는 일반 매개 변수 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="88780-136">A collection of common parameters used by services.</span></span> <span data-ttu-id="88780-137">일반적으로 이 컬렉션에는 영속 서비스에서 공유할 수 있는 데이터베이스 연결 문자열이 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="88780-137">This collection will typically include the database connection string that might be shared by durable services.</span></span>|  
+|<span data-ttu-id="88780-138">서비스</span><span class="sxs-lookup"><span data-stu-id="88780-138">services</span></span>|<span data-ttu-id="88780-139"><xref:System.Workflow.Runtime.WorkflowRuntime> 엔진에 추가할 서비스 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="88780-139">A collection of services that will be added to the <xref:System.Workflow.Runtime.WorkflowRuntime> engine.</span></span> <span data-ttu-id="88780-140">요소는 <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement> 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="88780-140">The elements are of type <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.</span></span>  <span data-ttu-id="88780-141">컬렉션에 지정된 서비스는 워크플로 런타임 엔진에 의해 초기화되며 해당 <xref:System.Workflow.Runtime.WorkflowRuntime> 생성자를 호출할 때 서비스에 추가됩니다.</span><span class="sxs-lookup"><span data-stu-id="88780-141">The services specified in the collection will be initialized by the workflow runtime engine and added to its services when the appropriate <xref:System.Workflow.Runtime.WorkflowRuntime> constructor is called.</span></span> <span data-ttu-id="88780-142">따라서 컬렉션에 지정된 서비스는 생성자의 시그니처에 대한 특정 규칙을 따라야 합니다.</span><span class="sxs-lookup"><span data-stu-id="88780-142">Therefore, the services specified in the collection must follow certain rules about the signatures of their constructors.</span></span> <span data-ttu-id="88780-143">자세한 내용은 <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="88780-143">See <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement> for more information.</span></span>|  
   
-### 부모 요소  
+### <a name="parent-elements"></a><span data-ttu-id="88780-144">부모 요소</span><span class="sxs-lookup"><span data-stu-id="88780-144">Parent Elements</span></span>  
   
-|요소|설명|  
-|--------|--------|  
-|[\<behavior\>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|동작 요소를 지정합니다.|  
+|<span data-ttu-id="88780-145">요소</span><span class="sxs-lookup"><span data-stu-id="88780-145">Element</span></span>|<span data-ttu-id="88780-146">설명</span><span class="sxs-lookup"><span data-stu-id="88780-146">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="88780-147">\<동작 ></span><span class="sxs-lookup"><span data-stu-id="88780-147">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|<span data-ttu-id="88780-148">동작 요소를 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="88780-148">Specifies a behavior element.</span></span>|  
   
-## 설명  
- Windows Workflow Foundation 호스트 응용 프로그램의 <xref:System.Workflow.Runtime.WorkflowRuntime> 개체의 동작을 제어할 수 있는 구성 파일 사용에 대한 자세한 내용은 [Workflow Configuration Files](http://msdn.microsoft.com/ko-kr/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)을 참조하세요.  
+## <a name="remarks"></a><span data-ttu-id="88780-149">설명</span><span class="sxs-lookup"><span data-stu-id="88780-149">Remarks</span></span>  
+ <span data-ttu-id="88780-150">동작을 제어 하는 구성 파일을 사용 하 여 대 한 자세한 내용은 <xref:System.Workflow.Runtime.WorkflowRuntime> 개체는 Windows Workflow Foundation 호스트 응용 프로그램의 참조 [워크플로 구성 파일](http://msdn.microsoft.com/en-us/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)합니다.</span><span class="sxs-lookup"><span data-stu-id="88780-150">For more information on using a configuration file to control the behavior of a <xref:System.Workflow.Runtime.WorkflowRuntime> object of a Windows Workflow Foundation host application, see [Workflow Configuration Files](http://msdn.microsoft.com/en-us/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909).</span></span>  
   
-## 예제  
+## <a name="example"></a><span data-ttu-id="88780-151">예제</span><span class="sxs-lookup"><span data-stu-id="88780-151">Example</span></span>  
   
-```  
+```xml  
 <serviceBehaviors>  
    <behavior name="ServiceBehavior">  
       <workflowRuntime name="WorkflowServiceHostRuntime"  
@@ -84,8 +92,8 @@ caps.handback.revision: 7
 </serviceBehaviors>  
 ```  
   
-## 참고 항목  
- <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>   
- <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>   
- <xref:System.Workflow.Runtime.WorkflowRuntime>   
- [Workflow Configuration Files](http://msdn.microsoft.com/ko-kr/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)
+## <a name="see-also"></a><span data-ttu-id="88780-152">참고 항목</span><span class="sxs-lookup"><span data-stu-id="88780-152">See Also</span></span>  
+ <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>  
+ <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>  
+ <xref:System.Workflow.Runtime.WorkflowRuntime>  
+ [<span data-ttu-id="88780-153">워크플로 구성 파일</span><span class="sxs-lookup"><span data-stu-id="88780-153">Workflow Configuration Files</span></span>](http://msdn.microsoft.com/en-us/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)

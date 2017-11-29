@@ -1,71 +1,75 @@
 ---
-title: "컬렉션 형식 종속성 속성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "컬렉션 형식 속성"
-  - "종속성 속성"
-  - "속성, 컬렉션 형식"
-  - "속성, 종속성"
+title: "컬렉션 형식 종속성 속성"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- properties [WPF], dependency
+- properties [WPF], collection-type
+- dependency properties [WPF]
+- collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 11927efee2b8375550767d119e6b4a95b3ef7bd8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 컬렉션 형식 종속성 속성
-이 항목에서는 속성의 형식이 컬렉션 형식인 [종속성 속성](GTMT)을 구현하는 방법에 대한 지침 및 제안 패턴을 제공합니다.  
+# <a name="collection-type-dependency-properties"></a><span data-ttu-id="835c4-102">컬렉션 형식 종속성 속성</span><span class="sxs-lookup"><span data-stu-id="835c4-102">Collection-Type Dependency Properties</span></span>
+<span data-ttu-id="835c4-103">이 항목에서는 속성 형식이 컬렉션 형식인 종속성 속성을 구현하는 방법에 대한 지침과 제안된 패턴을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="835c4-103">This topic provides guidance and suggested patterns for how to implement a dependency property where the type of the property is a collection type.</span></span>  
   
-   
+ 
   
 <a name="implementing"></a>   
-## 컬렉션 형식 종속성 속성 구현  
- 일반적으로 종속성 속성의 경우에는 속성이 필드 또는 다른 구문이 아니라 <xref:System.Windows.DependencyProperty> 식별자에 기반하는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 속성 래퍼를 정의하는 구현 패턴을 따릅니다.  컬렉션 형식 속성을 구현할 때도 이와 같은 패턴을 따릅니다.  하지만 컬렉션 안에 포함된 형식 자체가 <xref:System.Windows.DependencyObject> 또는 <xref:System.Windows.Freezable> 파생 클래스인 경우에는 컬렉션 형식 속성으로 인해 패턴이 약간 복잡해집니다.  
+## <a name="implementing-a-collection-type-dependency-property"></a><span data-ttu-id="835c4-104">컬렉션 형식 종속성 속성 구현</span><span class="sxs-lookup"><span data-stu-id="835c4-104">Implementing a Collection-Type Dependency Property</span></span>  
+ <span data-ttu-id="835c4-105">종속성 속성에 대 한 일반적으로 수행 하는 구현 패턴은 정의 하는 한 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 래퍼 속성에는 해당 속성에서 지원 되며 여기서는 <xref:System.Windows.DependencyProperty> 식별자 보다는 필드 있든 다른 구문입니다.</span><span class="sxs-lookup"><span data-stu-id="835c4-105">For a dependency property in general, the implementation pattern that you follow is that you define a [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] property wrapper, where that property is backed by a <xref:System.Windows.DependencyProperty> identifier rather than a field or other construct.</span></span> <span data-ttu-id="835c4-106">콜렉션 형식 속성을 구현할 때도 이와 동일한 패턴을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="835c4-106">You follow this same pattern when you implement a collection-type property.</span></span> <span data-ttu-id="835c4-107">그러나 컬렉션 형식 속성 더 복잡해 패턴을 컬렉션에 포함 된 형식이 자체 때마다는 <xref:System.Windows.DependencyObject> 또는 <xref:System.Windows.Freezable> 클래스를 파생 합니다.</span><span class="sxs-lookup"><span data-stu-id="835c4-107">However, a collection-type property introduces some complexity to the pattern whenever the type that is contained within the collection is itself a <xref:System.Windows.DependencyObject> or <xref:System.Windows.Freezable> derived class.</span></span>  
   
 <a name="initializing"></a>   
-## 기본값을 벗어나 컬렉션 초기화  
- 종속성 속성을 만들 때는 속성 기본값을 초기 필드 값으로 지정하지 않습니다.  대신 종속성 속성 메타데이터를 통해 기본값을 지정합니다.  속성이 참조 형식인 경우 종속성 속성 메타데이터에 지정된 기본값은 인스턴스별 기본값이 아니라 해당 형식의 모든 인스턴스에 적용되는 기본값입니다.  따라서 특정 형식으로 새로 만들어진 인스턴스의 기본값에 대한 작업을 수행할 때 컬렉션 속성 메타데이터로 정의된 단일 정적 컬렉션을 사용하지 않도록 주의해야 합니다.  대신 클래스 생성자 논리의 일부로 컬렉션 값을 고유한 \(인스턴스\) 컬렉션으로 설정해야 합니다.  그렇지 않으면 예상치 못한 singleton 클래스가 만들어집니다.  
+## <a name="initializing-the-collection-beyond-the-default-value"></a><span data-ttu-id="835c4-108">기본값 이외의 컬렉션 초기화</span><span class="sxs-lookup"><span data-stu-id="835c4-108">Initializing the Collection Beyond the Default Value</span></span>  
+ <span data-ttu-id="835c4-109">종속성 속성을 만들 때는 속성 기본값을 초기 필드 값으로 지정하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="835c4-109">When you create a dependency property, you do not specify the property default value as the initial field value.</span></span> <span data-ttu-id="835c4-110">대신 종속성 속성 메타데이터를 통해 기본값을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="835c4-110">Instead, you specify the default value through the dependency property metadata.</span></span> <span data-ttu-id="835c4-111">속성이 참조 형식인 경우 종속성 속성 메타데이터에 지정된 기본값은 인스턴스별 기본값이 아니라 해당 형식의 모든 인스턴스에 적용되는 기본값입니다.</span><span class="sxs-lookup"><span data-stu-id="835c4-111">If your property is a reference type, the default value specified in dependency property metadata is not a default value per instance; instead it is a default value that applies to all instances of the type.</span></span> <span data-ttu-id="835c4-112">따라서 컬렉션 속성 메타데이터로 정의된 단일 정적 컬렉션을 형식에 대해 새로 만든 인스턴스의 작업 기본값으로 사용하지 않도록 주의해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="835c4-112">Therefore you must be careful to not use the singular static collection defined by the collection property metadata as the working default value for newly created instances of your type.</span></span> <span data-ttu-id="835c4-113">대신 클래스 생성자 논리의 일부로서 의도적으로 컬렉션 값을 고유한(인스턴스) 컬렉션으로 설정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="835c4-113">Instead, you must make sure that you deliberately set the collection value to a unique (instance) collection as part of your class constructor logic.</span></span> <span data-ttu-id="835c4-114">그렇지 않으면 의도하지 않은 Singleton 클래스가 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="835c4-114">Otherwise you will have created an unintentional singleton class.</span></span>  
   
- 다음 예제를 살펴보십시오.  예제의 다음 섹션에서는 클래스 `Aquarium`의 정의를 보여 줍니다.  클래스는 <xref:System.Windows.FrameworkElement> 형식 제약 조건이 있는 제네릭 <xref:System.Collections.Generic.List%601> 형식을 사용하는 컬렉션 형식 종속성 속성 `AquariumObjects`를 정의합니다.  종속성 속성에 대한 <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> 호출에서 메타데이터는 기본값을 새 제네릭 <xref:System.Collections.Generic.List%601>로 설정합니다.  
+ <span data-ttu-id="835c4-115">다음 예제를 살펴보십시오.</span><span class="sxs-lookup"><span data-stu-id="835c4-115">Consider the following example.</span></span> <span data-ttu-id="835c4-116">예제의 다음 섹션에서는 `Aquarium` 클래스에 대한 정의를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="835c4-116">The following section of the example shows the definition for a class `Aquarium`.</span></span> <span data-ttu-id="835c4-117">클래스는 컬렉션 형식 종속성 속성을 정의 하며 `AquariumObjects`, 제네릭을 사용 하 여 <xref:System.Collections.Generic.List%601> 형식을 <xref:System.Windows.FrameworkElement> 형식 제약 조건입니다.</span><span class="sxs-lookup"><span data-stu-id="835c4-117">The class defines the collection type dependency property `AquariumObjects`, which uses the generic <xref:System.Collections.Generic.List%601> type with a <xref:System.Windows.FrameworkElement> type constraint.</span></span> <span data-ttu-id="835c4-118">에 <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> 새 제네릭 되도록 기본값을 설정 하는 종속성 속성을 메타 데이터에 대 한 호출 <xref:System.Collections.Generic.List%601>합니다.</span><span class="sxs-lookup"><span data-stu-id="835c4-118">In the <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> call for the dependency property, the metadata establishes the default value to be a new generic <xref:System.Collections.Generic.List%601>.</span></span>  
   
- <!-- TODO: review snippet reference [!code-csharp[PropertiesOvwSupport#CollectionProblemDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemdefinition)]  -->
- [!code-vb[PropertiesOvwSupport#CollectionProblemDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemdefinition)]  
-[!code-csharp[PropertiesOvwSupport#CollectionProblemEndB](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemendb)]
-[!code-vb[PropertiesOvwSupport#CollectionProblemEndB](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemendb)]  
+ [!code-csharp[PropertiesOvwSupport2#CollectionProblemDefinition](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport2/CSharp/page.xaml.cs#collectionproblemdefinition)]
+ [!code-vb[PropertiesOvwSupport2#CollectionProblemDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport2/visualbasic/page.xaml.vb#collectionproblemdefinition)]  
   
- 하지만 설명한 것처럼 코드를 벗어나면 `Aquarium`의 모든 인스턴스에서 단일 목록 기본값을 공유합니다.  두 개의 개별적인 `Aquarium` 인스턴스를 인스턴스화하고 서로에게 하나의 서로 다른 `Fish`를 추가하는 방법을 보여 주는 다음 테스트 코드를 실행하면 놀라운 결과를 보게 됩니다.  
+ <span data-ttu-id="835c4-119">그러나 설명한 대로 코드를 방금 벗어나면 모든 `Aquarium` 인스턴스에서 단일 목록 기본값을 공유합니다.</span><span class="sxs-lookup"><span data-stu-id="835c4-119">However, if you just left the code as shown, that single list default value is shared for all instances of `Aquarium`.</span></span> <span data-ttu-id="835c4-120">두 개의 개별 `Aquarium` 인스턴스를 인스턴스화하고 각 인스턴스에 서로 다른 단일 `Fish`를 추가하는 방법을 보여 주는 다음 테스트 코드를 실행하면 놀라운 결과를 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="835c4-120">If you ran the following test code, which is intended to show how you would instantiate two separate `Aquarium` instances and add a single different `Fish` to each of them, you would see a surprising result:</span></span>  
   
  [!code-csharp[PropertiesOvwSupport#CollectionProblemTestCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemtestcode)]
  [!code-vb[PropertiesOvwSupport#CollectionProblemTestCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemtestcode)]  
   
- 각 컬렉션의 숫자는 1이 아니라 2입니다.  이는 각 `Aquarium`이 해당 `Fish`를 메타데이터의 단일 생성자 호출의 결과이며 따라서 모든 인스턴스 사이에서 공유되는 기본값 컬렉션에 추가했기 때문입니다.  이것은 결코 의도하지 않은 상황입니다.  
+ <span data-ttu-id="835c4-121">각 콜렉션의 개수는 1이 아니라 2입니다!</span><span class="sxs-lookup"><span data-stu-id="835c4-121">Instead of each collection having a count of one, each collection has a count of two!</span></span> <span data-ttu-id="835c4-122">이는 메타데이터의 단일 생성자 호출로 인해 각 `Aquarium`에서 해당 `Fish`를 기본값 컬렉션에 추가했기 때문이며, 이에 따라 모든 인스턴스 간에 공유됩니다.</span><span class="sxs-lookup"><span data-stu-id="835c4-122">This is because each `Aquarium` added its `Fish` to the default value collection, which resulted from a single constructor call in the metadata and is therefore shared between all instances.</span></span> <span data-ttu-id="835c4-123">이 상황은 결코 바람직한 작업이 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="835c4-123">This situation is almost never what you want.</span></span>  
   
- 이 문제를 해결하려면 클래스 생성자 호출의 일부로 컬렉션 종속성 속성 값을 고유한 인스턴스로 재설정해야 합니다.  속성이 읽기 전용 종속성 속성이기 때문에 클래스 안에서만 액세스 가능한 <xref:System.Windows.DependencyPropertyKey>를 사용하여 <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29> 메서드로 이 속성을 설정합니다.  
+ <span data-ttu-id="835c4-124">이 문제를 해결하려면 클래스 생성자 호출의 일부로 컬렉션 종속성 속성 값을 고유한 인스턴스로 다시 설정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="835c4-124">To correct this problem, you must reset the collection dependency property value to a unique instance, as part of the class constructor call.</span></span> <span data-ttu-id="835c4-125">속성은 읽기 전용 종속성 속성을 사용는 <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29> 메서드를 사용 하 여 설정 하는 <xref:System.Windows.DependencyPropertyKey> 하는 클래스 내에서 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="835c4-125">Because the property is a read-only dependency property, you use the <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyPropertyKey%2CSystem.Object%29> method to set it, using the <xref:System.Windows.DependencyPropertyKey> that is only accessible within the class.</span></span>  
   
  [!code-csharp[PropertiesOvwSupport#CollectionProblemCtor](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#collectionproblemctor)]
  [!code-vb[PropertiesOvwSupport#CollectionProblemCtor](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#collectionproblemctor)]  
   
- 이제 샘플 테스트 코드를 다시 실행하면 원하는 대로 각 `Aquarium`이 자체의 고유한 컬렉션을 지원하는 결과를 볼 수 있습니다.  
+ <span data-ttu-id="835c4-126">이제 동일한 테스트 코드를 다시 실행하면 각 `Aquarium`에서 자체의 고유한 컬렉션을 지원하는 예상 결과를 더 많이 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="835c4-126">Now, if you ran that same test code again, you could see more expected results, where each `Aquarium` supported its own unique collection.</span></span>  
   
- 컬렉션 속성을 읽기\-쓰기로 지정한 경우 이 패턴에 약간의 변형이 있습니다.  이 경우 생성자에서 public set 접근자를 호출하여 초기화를 수행할 수 있습니다. 이 경우 여전히 public <xref:System.Windows.DependencyProperty> 식별자를 사용하여 집합 래퍼 안에서 <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyProperty%2CSystem.Object%29>의 비 키 시그니처를 호출합니다.  
+ <span data-ttu-id="835c4-127">읽기/쓰기 컬렉션 속성이 되도록 선택한 경우 이 패턴에 약간의 변형이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="835c4-127">There would be a slight variation on this pattern if you chose to have your collection property be read-write.</span></span> <span data-ttu-id="835c4-128">이 경우 초기화의 키가 아닌 서명을 계속 호출 됩니다는 작업을 수행 하는 생성자에서 접근자를 호출할 수 있습니다 <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyProperty%2CSystem.Object%29> 를 내에서 사용 하 여 공용 <xref:System.Windows.DependencyProperty> 식별자입니다.</span><span class="sxs-lookup"><span data-stu-id="835c4-128">In that case, you could call the public set accessor from the constructor to do the initialization, which would still be calling the nonkey signature of <xref:System.Windows.DependencyObject.SetValue%28System.Windows.DependencyProperty%2CSystem.Object%29> within your set wrapper, using a public <xref:System.Windows.DependencyProperty> identifier.</span></span>  
   
-## 컬렉션 속성에서 바인딩 값 변경 보고  
- 그 자체로 종속성 속성인 컬렉션 속성은 변경 내용을 자동으로 하위 속성에 보고하지 않습니다.  컬렉션에 대한 바인딩을 만들 때 이로 인해 보고서 변경 내용을 바인딩하지 못하게 되어 일부 데이터 바인딩 시나리오가 무효화될 수 있습니다.  하지만 컬렉션 형식 <xref:System.Windows.FreezableCollection%601>을 컬렉션 형식으로 사용하는 경우 컬렉션의 포함된 요소에 대한 하위 속성 변경 내용이 적절하게 보고되고 바인딩이 예상대로 작동합니다.  
+## <a name="reporting-binding-value-changes-from-collection-properties"></a><span data-ttu-id="835c4-129">컬렉션 속성에서 바인딩 값 변경 보고</span><span class="sxs-lookup"><span data-stu-id="835c4-129">Reporting Binding Value Changes from Collection Properties</span></span>  
+ <span data-ttu-id="835c4-130">자체적으로 종속성 속성인 콜렉션 속성은 변경 내용을 하위 속성에 자동으로 보고하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="835c4-130">A collection property that is itself a dependency property does not automatically report changes to its subproperties.</span></span> <span data-ttu-id="835c4-131">컬렉션에 바인딩을 만들면 바인딩에서 변경 내용을 보고하지 못하도록 하여 일부 데이터 바인딩 시나리오가 무효화될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="835c4-131">If you are creating bindings into a collection, this can prevent the binding from reporting changes, thus invalidating some data binding scenarios.</span></span> <span data-ttu-id="835c4-132">그러나 컬렉션 형식을 사용 하면 <xref:System.Windows.FreezableCollection%601> 컬렉션 형식으로 다음 컬렉션에 포함 된 요소에 대 한 하위 속성 변경 제대로 보고 되 고 바인딩이 예상 대로 작동 합니다.</span><span class="sxs-lookup"><span data-stu-id="835c4-132">However, if you use the collection type <xref:System.Windows.FreezableCollection%601> as your collection type, then subproperty changes to contained elements in the collection are properly reported, and binding works as expected.</span></span>  
   
- 종속성 개체 컬렉션에서 하위 속성 바인딩을 사용할 수 있게 하려면 컬렉션 속성을 <xref:System.Windows.FreezableCollection%601> 형식으로 만들고 해당 컬렉션의 형식 제약 조건을 모든 <xref:System.Windows.DependencyObject> 파생 클래스로 지정합니다.  
+ <span data-ttu-id="835c4-133">종속성 개체 컬렉션의 하위 속성 바인딩을 사용 하려면 컬렉션 속성 형식으로 만듭니다 <xref:System.Windows.FreezableCollection%601>, 모든 해당 컬렉션에 대 한 형식 제약 조건을 <xref:System.Windows.DependencyObject> 클래스를 파생 합니다.</span><span class="sxs-lookup"><span data-stu-id="835c4-133">To enable subproperty binding in a dependency object collection, create the collection property as type <xref:System.Windows.FreezableCollection%601>, with a type constraint for that collection to any <xref:System.Windows.DependencyObject> derived class.</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.FreezableCollection%601>   
- [WPF에 대한 XAML 및 사용자 지정 클래스](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)   
- [데이터 바인딩 개요](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [종속성 속성 개요](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)   
- [사용자 지정 종속성 속성](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)   
- [종속성 속성 메타데이터](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
+## <a name="see-also"></a><span data-ttu-id="835c4-134">참고 항목</span><span class="sxs-lookup"><span data-stu-id="835c4-134">See Also</span></span>  
+ <xref:System.Windows.FreezableCollection%601>  
+ [<span data-ttu-id="835c4-135">WPF에 대한 XAML 및 사용자 지정 클래스</span><span class="sxs-lookup"><span data-stu-id="835c4-135">XAML and Custom Classes for WPF</span></span>](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
+ [<span data-ttu-id="835c4-136">데이터 바인딩 개요</span><span class="sxs-lookup"><span data-stu-id="835c4-136">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="835c4-137">종속성 속성 개요</span><span class="sxs-lookup"><span data-stu-id="835c4-137">Dependency Properties Overview</span></span>](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [<span data-ttu-id="835c4-138">사용자 지정 종속성 속성</span><span class="sxs-lookup"><span data-stu-id="835c4-138">Custom Dependency Properties</span></span>](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
+ [<span data-ttu-id="835c4-139">종속성 속성 메타데이터</span><span class="sxs-lookup"><span data-stu-id="835c4-139">Dependency Property Metadata</span></span>](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
