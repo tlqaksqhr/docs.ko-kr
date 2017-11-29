@@ -1,39 +1,39 @@
 ---
-title: "MonthCalendar 컨트롤 개요(Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MonthCalendar"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "calendar 컨트롤, Windows Forms"
-  - "달력, Windows Forms 컨트롤"
-  - "MonthCalendar 컨트롤[Windows Forms], 주의 첫째 요일 설정"
+title: "MonthCalendar 컨트롤 개요(Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: MonthCalendar
+helpviewer_keywords:
+- calendars [Windows Forms], Windows Forms controls
+- calendar controls [Windows Forms], Windows Forms
+- MonthCalendar control [Windows Forms], setting the first day of the week
 ms.assetid: 788c5325-b721-44ec-95bf-9b680ba0f6a2
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dba245df31ad14150e57188c95ab3a980ae8d3db
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# MonthCalendar 컨트롤 개요(Windows Forms)
-Windows Forms <xref:System.Windows.Forms.MonthCalendar> 컨트롤은 날짜 정보를 보고 설정할 수 있는 직관적인 그래픽 인터페이스를 제공합니다.  이 컨트롤은 날짜가 요일별로 나열된 표 형태의 달력을 표시하며 선택된 범위의 날짜는 강조 표시됩니다.  월 캡션의 양쪽에 있는 화살표 단추를 클릭하여 다른 월을 선택할 수 있습니다.  <xref:System.Windows.Forms.DateTimePicker> 컨트롤과 달리 이 컨트롤에서는 날짜를 두 개 이상 선택할 수 있습니다.  <xref:System.Windows.Forms.DateTimePicker> 컨트롤에 대한 자세한 내용은 [DateTimePicker 컨트롤](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)를 참조하십시오.  
+# <a name="monthcalendar-control-overview-windows-forms"></a><span data-ttu-id="09d29-102">MonthCalendar 컨트롤 개요(Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="09d29-102">MonthCalendar Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="09d29-103">Windows Forms <xref:System.Windows.Forms.MonthCalendar> 컨트롤을 보고 설정할 날짜 정보는 사용자를 위한 직관적인 그래픽 인터페이스를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="09d29-103">The Windows Forms <xref:System.Windows.Forms.MonthCalendar> control presents an intuitive graphical interface for users to view and set date information.</span></span> <span data-ttu-id="09d29-104">달력을 표시 하는 컨트롤: 선택한 범위를 강조 표시 하는 날짜, 요일 일 요일별으로 나열 된 해당 월의 번호가 매겨진된 날짜를 포함 하는 표입니다.</span><span class="sxs-lookup"><span data-stu-id="09d29-104">The control displays a calendar: a grid containing the numbered days of the month, arranged in columns underneath the days of the week, with the selected range of dates highlighted.</span></span> <span data-ttu-id="09d29-105">월 캡션 어느 한 쪽에 있는 화살표 단추를 클릭 하 여 다른 월을 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="09d29-105">You can select a different month by clicking the arrow buttons on either side of the month caption.</span></span> <span data-ttu-id="09d29-106">달리 <xref:System.Windows.Forms.DateTimePicker> 컨트롤을이 컨트롤을 사용 하 여 둘 이상의 날짜를 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="09d29-106">Unlike the similar <xref:System.Windows.Forms.DateTimePicker> control, you can select more than one date with this control.</span></span> <span data-ttu-id="09d29-107">에 대 한 자세한 내용은 <xref:System.Windows.Forms.DateTimePicker> 제어, 참조 [DateTimePicker 컨트롤](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="09d29-107">For more information about the <xref:System.Windows.Forms.DateTimePicker> control, see [DateTimePicker Control](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md).</span></span>  
   
-## MonthCalendar 컨트롤 구성  
- <xref:System.Windows.Forms.MonthCalendar> 컨트롤의 모양을 매우 다양하게 구성할 수 있습니다.  기본적으로 오늘 날짜에는 원이 표시되고 표 아래쪽에도 오늘 날짜가 별도로 표기됩니다.  <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> 및 <xref:System.Windows.Forms.MonthCalendar.ShowTodayCircle%2A> 속성을 `false`로 설정하여 이 기능을 변경할 수 있습니다.  <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> 속성을 `true`로 설정하면 달력에 주 번호를 추가할 수도 있습니다.  <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A> 속성을 설정하면 가로나 세로 방향으로 여러 달을 표시할 수 있습니다.  기본적으로 일요일이 첫 번째 요일로 표시되지만 <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A> 속성을 사용하여 다른 요일을 지정할 수 있습니다.  
+## <a name="configuring-the-monthcalendar-control"></a><span data-ttu-id="09d29-108">MonthCalendar 컨트롤 구성</span><span class="sxs-lookup"><span data-stu-id="09d29-108">Configuring the MonthCalendar Control</span></span>  
+ <span data-ttu-id="09d29-109"><xref:System.Windows.Forms.MonthCalendar> 컨트롤의 모양이 되 게 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="09d29-109">The <xref:System.Windows.Forms.MonthCalendar> control's appearance is highly configurable.</span></span> <span data-ttu-id="09d29-110">기본적으로 현재 날짜, 원이 표시 되 고 모눈의 맨 아래에 설명 되어 합니다.</span><span class="sxs-lookup"><span data-stu-id="09d29-110">By default, today's date is displayed as circled, and is also noted at the bottom of the grid.</span></span> <span data-ttu-id="09d29-111">이 기능을 설정 하 여 변경할 수 있습니다는 <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> 및 <xref:System.Windows.Forms.MonthCalendar.ShowTodayCircle%2A> 속성을 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="09d29-111">You can change this feature by setting the <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> and <xref:System.Windows.Forms.MonthCalendar.ShowTodayCircle%2A> properties to `false`.</span></span> <span data-ttu-id="09d29-112">설정 하 여 일정에 주 번호를 추가할 수도 있습니다는 <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> 속성을 `true`합니다.</span><span class="sxs-lookup"><span data-stu-id="09d29-112">You can also add week numbers to the calendar by setting the <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> property to `true`.</span></span> <span data-ttu-id="09d29-113">설정 하 여는 <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A> 속성을 표시 되는 월 가로 및 세로로 여러 개 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="09d29-113">By setting the <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A> property, you can have multiple months displayed horizontally and vertically.</span></span> <span data-ttu-id="09d29-114">기본적으로 일요일 첫 번째 요일으로 표시 하지만 사용 하 여 임의의 날짜에 지정 될 수 있습니다는 <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="09d29-114">By default, Sunday is shown as the first day of the week, but any day can be designated using the <xref:System.Windows.Forms.MonthCalendar.FirstDayOfWeek%2A> property.</span></span>  
   
- <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A> 및 <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> 속성에 <xref:System.DateTime> 개체를 추가하면 특정 날짜를 한 번만, 매년 또는 매월 굵게 표시할 수 있습니다.  자세한 내용은 [방법: Windows Forms MonthCalendar 컨트롤을 사용하여 특정 날짜를 굵게 표시](../../../../docs/framework/winforms/controls/display-specific-days-in-bold-with-wf-monthcalendar-control.md)를 참조하십시오.  
+ <span data-ttu-id="09d29-115">설정할 수도 있습니다에 표시할 특정 날짜를 한 번만, 매년 또는 매월 굵게 표시를 추가 하 여 <xref:System.DateTime> 개체는 <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>, 및 <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="09d29-115">You can also set certain dates to be displayed in bold on a one-time basis, annually, or monthly, by adding <xref:System.DateTime> objects to the <xref:System.Windows.Forms.MonthCalendar.BoldedDates%2A>, <xref:System.Windows.Forms.MonthCalendar.AnnuallyBoldedDates%2A>, and <xref:System.Windows.Forms.MonthCalendar.MonthlyBoldedDates%2A> properties.</span></span> <span data-ttu-id="09d29-116">자세한 내용은 참조 [하는 방법: Windows Forms MonthCalendar 컨트롤에서 굵게에서 표시 특정 일](../../../../docs/framework/winforms/controls/display-specific-days-in-bold-with-wf-monthcalendar-control.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="09d29-116">For more information, see [How to: Display Specific Days in Bold with the Windows Forms MonthCalendar Control](../../../../docs/framework/winforms/controls/display-specific-days-in-bold-with-wf-monthcalendar-control.md).</span></span>  
   
- <xref:System.Windows.Forms.MonthCalendar> 컨트롤의 주요 속성은 컨트롤에서 날짜 범위를 선택할 수 있는 <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>입니다.  <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> 값은 <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> 속성에 설정된 선택 가능 날짜의 최대 수를 초과할 수 없습니다.  사용자가 선택할 수 있는 처음 날짜와 마지막 날짜는 <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A> 및 <xref:System.Windows.Forms.MonthCalendar.MinDate%2A> 속성으로 결정됩니다.  
+ <span data-ttu-id="09d29-117">키 속성은 <xref:System.Windows.Forms.MonthCalendar> 컨트롤은 <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>, 컨트롤에서 선택한 날짜 범위입니다.</span><span class="sxs-lookup"><span data-stu-id="09d29-117">The key property of the <xref:System.Windows.Forms.MonthCalendar> control is <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>, the range of dates selected in the control.</span></span> <span data-ttu-id="09d29-118"><xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> 값을 선택할 수에서 설정 하는 일 최대 수를 초과할 수 없습니다는 <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="09d29-118">The <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> value cannot exceed the maximum number of days that can be selected, set in the <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> property.</span></span> <span data-ttu-id="09d29-119">선택할 수 있는 시작 및 완료 날짜에 따라 결정 됩니다는 <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A> 및 <xref:System.Windows.Forms.MonthCalendar.MinDate%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="09d29-119">The earliest and latest dates the user can select are determined by the <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A> and <xref:System.Windows.Forms.MonthCalendar.MinDate%2A> properties.</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Forms.MonthCalendar>   
- [MonthCalendar 컨트롤](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="09d29-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="09d29-120">See Also</span></span>  
+ <xref:System.Windows.Forms.MonthCalendar>  
+ [<span data-ttu-id="09d29-121">MonthCalendar 컨트롤</span><span class="sxs-lookup"><span data-stu-id="09d29-121">MonthCalendar Control</span></span>](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)

@@ -1,41 +1,43 @@
 ---
-title: "방법: ListView에 있는 열의 가로 맞춤 변경 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ListView 컨트롤, 가로 맞춤"
+title: "방법: ListView에 있는 열의 가로 맞춤 변경"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: ListView controls [WPF], horizontal alignment [WPF]
 ms.assetid: b9573e44-9dad-4d14-939c-7859ca372758
-caps.latest.revision: 4
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3ed163de9a5b01a3ddab8ef42d21f38d35f48519
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: ListView에 있는 열의 가로 맞춤 변경
-기본적으로 <xref:System.Windows.Controls.ListViewItem>의 각 열 콘텐츠는 왼쪽으로 정렬됩니다.  이러한 각 열에 대한 맞춤은 <xref:System.Windows.DataTemplate>을 제공하고 <xref:System.Windows.DataTemplate> 안에서 요소에 대한 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 속성을 설정하여 변경할 수 있습니다.  이 항목에서는 <xref:System.Windows.Controls.ListView>의 콘텐츠가 기본적으로 정렬되는 방식과 <xref:System.Windows.Controls.ListView>에서 특정 열의 맞춤을 변경하는 방법을 보여 줍니다.  
+# <a name="how-to-change-the-horizontal-alignment-of-a-column-in-a-listview"></a><span data-ttu-id="c2415-102">방법: ListView에 있는 열의 가로 맞춤 변경</span><span class="sxs-lookup"><span data-stu-id="c2415-102">How to: Change the Horizontal Alignment of a Column in a ListView</span></span>
+<span data-ttu-id="c2415-103">기본적으로에서 각 열의 내용은 <xref:System.Windows.Controls.ListViewItem> 는 왼쪽 정렬 합니다.</span><span class="sxs-lookup"><span data-stu-id="c2415-103">By default, the content of each column in a <xref:System.Windows.Controls.ListViewItem> is left-aligned.</span></span> <span data-ttu-id="c2415-104">제공 하 여 각 열의 맞춤을 변경할 수는 <xref:System.Windows.DataTemplate> 설정는 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 내에서 요소의 속성에는 <xref:System.Windows.DataTemplate>합니다.</span><span class="sxs-lookup"><span data-stu-id="c2415-104">You can change the alignment of each column by providing a <xref:System.Windows.DataTemplate> and setting the <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> property on the element within the <xref:System.Windows.DataTemplate>.</span></span> <span data-ttu-id="c2415-105">이 항목에서는 방법을 <xref:System.Windows.Controls.ListView> 맞춤에서 한 열을 변경 하는 방법 및 기본적으로 해당 내용을 맞춥니다.는 <xref:System.Windows.Controls.ListView>합니다.</span><span class="sxs-lookup"><span data-stu-id="c2415-105">This topic shows how a <xref:System.Windows.Controls.ListView> aligns its content by default and how to change the alignment of one column in a <xref:System.Windows.Controls.ListView>.</span></span>  
   
-## 예제  
- 다음 예제에서는 `Title` 및 `ISBN` 열의 데이터가 왼쪽으로 정렬됩니다.  
+## <a name="example"></a><span data-ttu-id="c2415-106">예제</span><span class="sxs-lookup"><span data-stu-id="c2415-106">Example</span></span>  
+ <span data-ttu-id="c2415-107">다음 예제에서는 데이터에는 `Title` 및 `ISBN` 열은 왼쪽 정렬 합니다.</span><span class="sxs-lookup"><span data-stu-id="c2415-107">In the following example, the data in the `Title` and `ISBN` columns is left-aligned.</span></span>  
   
- [!code-xml[ListViewHowTos#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#1)]  
-[!code-xml[ListViewHowTos#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#2)]  
+ [!code-xaml[ListViewHowTos#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#1)]  
+[!code-xaml[ListViewHowTos#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#2)]  
   
- `ISBN` 열의 맞춤을 변경하려면 각 <xref:System.Windows.Controls.ListViewItem>의 요소가 각 열의 전체 너비에 맞게 확장되거나 배치될 수 있도록 각 <xref:System.Windows.Controls.ListViewItem>의 <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> 속성을 <xref:System.Windows.HorizontalAlignment>로 지정해야 합니다.  <xref:System.Windows.Controls.ListView>는 데이터 소스에 바인딩되기 때문에 <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>를 설정하는 스타일도 만들어야 합니다.  그런 다음 <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> 속성을 사용하는 대신 <xref:System.Windows.DataTemplate>을 사용하여 콘텐츠를 표시해야 합니다.  각 템플릿의 `ISBN`을 표시하려면 <xref:System.Windows.DataTemplate>에 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 속성이 <xref:System.Windows.HorizontalAlignment>로 설정된 <xref:System.Windows.Controls.TextBlock>만 포함하면 됩니다.  
+ <span data-ttu-id="c2415-108">맞춤을 변경 하려면는 `ISBN` 열을 지정 해야 하는 <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> 각 속성 <xref:System.Windows.Controls.ListViewItem> 은 <xref:System.Windows.HorizontalAlignment.Stretch>되도록 각 요소 <xref:System.Windows.Controls.ListViewItem> 에 걸쳐 있을 수 또는 각 열의 전체 너비를 따라 위치할 합니다.</span><span class="sxs-lookup"><span data-stu-id="c2415-108">To change the alignment of the `ISBN` column, you need to specify that the <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> property of each <xref:System.Windows.Controls.ListViewItem> is <xref:System.Windows.HorizontalAlignment.Stretch>, so that the elements in each <xref:System.Windows.Controls.ListViewItem> can span or be positioned along the entire width of each column.</span></span> <span data-ttu-id="c2415-109">때문에 <xref:System.Windows.Controls.ListView> 바인딩된 데이터 소스를 설정 하는 스타일을 만들어야 할는 <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>합니다.</span><span class="sxs-lookup"><span data-stu-id="c2415-109">Because the <xref:System.Windows.Controls.ListView> is bound to a data source, you need to create a style that sets the <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>.</span></span> <span data-ttu-id="c2415-110">사용 해야 하는 다음으로 <xref:System.Windows.DataTemplate> 사용 하는 대신 내용을 표시 하는 <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="c2415-110">Next, you need to use a <xref:System.Windows.DataTemplate> to display the content instead of using the <xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A> property.</span></span> <span data-ttu-id="c2415-111">표시 하는 `ISBN` 각 서식 파일의는 <xref:System.Windows.DataTemplate> 만 포함 될 수 있습니다는 <xref:System.Windows.Controls.TextBlock> 있는 해당 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 속성이로 설정 <xref:System.Windows.HorizontalAlignment.Right>합니다.</span><span class="sxs-lookup"><span data-stu-id="c2415-111">To display the `ISBN` of each template, the <xref:System.Windows.DataTemplate> can just contain a <xref:System.Windows.Controls.TextBlock> that has its <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> property set to <xref:System.Windows.HorizontalAlignment.Right>.</span></span>  
   
- 다음 예제에서는 `ISBN` 열을 오른쪽 맞춤으로 설정하는 데 필요한 스타일과 <xref:System.Windows.DataTemplate>을 정의하고 <xref:System.Windows.DataTemplate>을 참조하도록 <xref:System.Windows.Controls.GridViewColumn>을 변경합니다.  
+ <span data-ttu-id="c2415-112">스타일을 정의 하는 다음 예제에서는 및 <xref:System.Windows.DataTemplate> 확인 하는 데 필요한는 `ISBN` 열을 오른쪽 맞춤 하 고 변경 내용을 <xref:System.Windows.Controls.GridViewColumn> 참조에는 <xref:System.Windows.DataTemplate>합니다.</span><span class="sxs-lookup"><span data-stu-id="c2415-112">The following example defines the style and <xref:System.Windows.DataTemplate> necessary to make the `ISBN` column right-aligned, and changes the <xref:System.Windows.Controls.GridViewColumn> to reference the <xref:System.Windows.DataTemplate>.</span></span>  
   
- [!code-xml[ListViewHowTos#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#3)]  
-[!code-xml[ListViewHowTos#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#4)]  
+ [!code-xaml[ListViewHowTos#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#3)]  
+[!code-xaml[ListViewHowTos#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#4)]  
   
-## 참고 항목  
- [데이터 바인딩 개요](../../../../docs/framework/wpf/data/data-binding-overview.md)   
- [데이터 템플릿 개요](../../../../docs/framework/wpf/data/data-templating-overview.md)   
- [XMLData Provider 및 XPath 쿼리를 사용하여 XML 데이터에 바인딩](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)   
- [ListView 개요](../../../../docs/framework/wpf/controls/listview-overview.md)
+## <a name="see-also"></a><span data-ttu-id="c2415-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c2415-113">See Also</span></span>  
+ [<span data-ttu-id="c2415-114">데이터 바인딩 개요</span><span class="sxs-lookup"><span data-stu-id="c2415-114">Data Binding Overview</span></span>](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="c2415-115">데이터 템플릿 개요</span><span class="sxs-lookup"><span data-stu-id="c2415-115">Data Templating Overview</span></span>](../../../../docs/framework/wpf/data/data-templating-overview.md)  
+ [<span data-ttu-id="c2415-116">XMLDataProvider 및 XPath 쿼리를 사용하여 XML 데이터에 바인딩</span><span class="sxs-lookup"><span data-stu-id="c2415-116">Bind to XML Data Using an XMLDataProvider and XPath Queries</span></span>](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
+ [<span data-ttu-id="c2415-117">ListView 개요</span><span class="sxs-lookup"><span data-stu-id="c2415-117">ListView Overview</span></span>](../../../../docs/framework/wpf/controls/listview-overview.md)

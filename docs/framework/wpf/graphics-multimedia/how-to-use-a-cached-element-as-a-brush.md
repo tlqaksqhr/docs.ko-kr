@@ -1,36 +1,39 @@
 ---
-title: "방법: 캐시된 요소를 브러시로 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "BitmapCache[WPF], using"
-  - "BitmapCacheBrush[WPF], using"
-  - "캐시된 요소[WPF], 브러시로 사용"
-  - "CacheMode[WPF], using"
+title: "방법: 캐시된 요소를 브러시로 사용"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- BitmapCache [WPF], using
+- cached element [WPF], use as a brush
+- BitmapCacheBrush [WPF], using
+- CacheMode [WPF], using
 ms.assetid: d36e944a-866e-4baf-98c4-fd6a75f6fdd0
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4d0f0c60e9df6a1ec816b1f9cf5769c93b382ae5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 캐시된 요소를 브러시로 사용
-<xref:System.Windows.Media.BitmapCacheBrush> 클래스를 사용하여 캐시된 요소를 효과적으로 다시 사용할 수 있습니다.  요소를 캐시하려면 <xref:System.Windows.Media.BitmapCache> 클래스의 새 인스턴스를 만들어 해당 요소의 <xref:System.Windows.UIElement.CacheMode%2A> 속성에 할당합니다.  
+# <a name="how-to-use-a-cached-element-as-a-brush"></a><span data-ttu-id="2fa6a-102">방법: 캐시된 요소를 브러시로 사용</span><span class="sxs-lookup"><span data-stu-id="2fa6a-102">How to: Use a Cached Element as a Brush</span></span>
+<span data-ttu-id="2fa6a-103">사용 하 여는 <xref:System.Windows.Media.BitmapCacheBrush> 클래스를 효율적으로 캐시 된 요소를 다시 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="2fa6a-103">Use the <xref:System.Windows.Media.BitmapCacheBrush> class to reuse a cached element efficiently.</span></span> <span data-ttu-id="2fa6a-104">새 인스턴스를 만들고 요소를 캐시 하려면는 <xref:System.Windows.Media.BitmapCache> 클래스 및 요소에 할당할 <xref:System.Windows.UIElement.CacheMode%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="2fa6a-104">To cache an element, create a new instance of the <xref:System.Windows.Media.BitmapCache> class and assign it to the element's <xref:System.Windows.UIElement.CacheMode%2A> property.</span></span>  
   
-## 예제  
- 다음 코드 예제에서는 캐시된 요소를 다시 사용하는 방법을 보여 줍니다.  캐시된 요소는 큰 이미지를 표시하는 <xref:System.Windows.Controls.Image> 컨트롤입니다.  <xref:System.Windows.Controls.Image> 컨트롤은 <xref:System.Windows.Media.BitmapCache> 클래스를 사용하여 비트맵으로 캐시되며, 해당 캐시는 <xref:System.Windows.Media.BitmapCacheBrush>에 할당됨으로써 다시 사용됩니다.  브러시는 25개 단추의 배경에 할당되어 효과적인 재사용 방식을 보여 줍니다.  
+## <a name="example"></a><span data-ttu-id="2fa6a-105">예제</span><span class="sxs-lookup"><span data-stu-id="2fa6a-105">Example</span></span>  
+ <span data-ttu-id="2fa6a-106">다음 코드 예제에서는 캐시 된 요소를 다시 사용 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="2fa6a-106">The following code example shows how to reuse a cached element.</span></span> <span data-ttu-id="2fa6a-107">캐시 된 요소는 한 <xref:System.Windows.Controls.Image> 큰 이미지를 표시 하는 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="2fa6a-107">The cached element is an <xref:System.Windows.Controls.Image> control that displays a large image.</span></span> <span data-ttu-id="2fa6a-108"><xref:System.Windows.Controls.Image> 컨트롤이 사용 하 여 비트맵으로 캐시 되는 <xref:System.Windows.Media.BitmapCache> 클래스 및 캐시에 할당 하 여 다시 사용 되는 <xref:System.Windows.Media.BitmapCacheBrush>합니다.</span><span class="sxs-lookup"><span data-stu-id="2fa6a-108">The <xref:System.Windows.Controls.Image> control is cached as a bitmap by using the <xref:System.Windows.Media.BitmapCache> class, and the cache is reused by assigning it to a <xref:System.Windows.Media.BitmapCacheBrush>.</span></span> <span data-ttu-id="2fa6a-109">효율적인 다시 사용할 수 있도록 표시 하려면 25 단추의 배경 브러시 할당 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2fa6a-109">The brush is assigned to the background of twenty-five buttons to show efficient reuse.</span></span>  
   
- [!code-xml[System.Windows.Media.BitmapCacheBrush#_BitmapCacheBrushXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/system.windows.media.bitmapcachebrush/cs/window1.xaml#_bitmapcachebrushxaml)]  
+ [!code-xaml[System.Windows.Media.BitmapCacheBrush#_BitmapCacheBrushXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/system.windows.media.bitmapcachebrush/cs/window1.xaml#_bitmapcachebrushxaml)]  
   
-## 참고 항목  
- <xref:System.Windows.Media.BitmapCache>   
- <xref:System.Windows.Media.BitmapCacheBrush>   
- <xref:System.Windows.UIElement.CacheMode%2A>   
- [방법: 요소를 캐시하여 렌더링 성능 향상](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)
+## <a name="see-also"></a><span data-ttu-id="2fa6a-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="2fa6a-110">See Also</span></span>  
+ <xref:System.Windows.Media.BitmapCache>  
+ <xref:System.Windows.Media.BitmapCacheBrush>  
+ <xref:System.Windows.UIElement.CacheMode%2A>  
+ [<span data-ttu-id="2fa6a-111">방법: 요소를 캐시하여 렌더링 성능 향상</span><span class="sxs-lookup"><span data-stu-id="2fa6a-111">How to: Improve Rendering Performance by Caching an Element</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)

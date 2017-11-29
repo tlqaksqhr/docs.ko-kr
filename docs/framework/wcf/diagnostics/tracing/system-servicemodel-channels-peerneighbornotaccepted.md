@@ -1,31 +1,34 @@
 ---
-title: "System.ServiceModel.Channels.PeerNeighborNotAccepted | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Channels.PeerNeighborNotAccepted
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 77309bf5-37ba-4b90-b31f-c00ef044db0d
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 927d5a6cf79a12def8df6b371c3b1f64bd0666b3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Channels.PeerNeighborNotAccepted
-피어 환경이 허용되지 않았습니다.  
+# <a name="systemservicemodelchannelspeerneighbornotaccepted"></a><span data-ttu-id="631cd-102">System.ServiceModel.Channels.PeerNeighborNotAccepted</span><span class="sxs-lookup"><span data-stu-id="631cd-102">System.ServiceModel.Channels.PeerNeighborNotAccepted</span></span>
+<span data-ttu-id="631cd-103">피어 환경이 허용되지 않았습니다.</span><span class="sxs-lookup"><span data-stu-id="631cd-103">A peer neighbor was not accepted.</span></span>  
   
-## 설명  
- 이 추적은 환경 연결을 처리할 때 발생합니다.이 추적이 발생하는 이유로는 일치하지 않는 보안 설정, 시간 제한 초과, 연결을 수락할 수 없는 환경, 일시적인 네트워크 문제 등이 있습니다.  
+## <a name="description"></a><span data-ttu-id="631cd-104">설명</span><span class="sxs-lookup"><span data-stu-id="631cd-104">Description</span></span>  
+ <span data-ttu-id="631cd-105">이 추적은 환경 연결을 처리할 때 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="631cd-105">This trace occurs when processing a connection to a neighbor.</span></span> <span data-ttu-id="631cd-106">이 추적이 발생하는 이유로는 일치하지 않는 보안 설정, 시간 제한 초과, 연결을 수락할 수 없는 환경, 일시적인 네트워크 문제 등이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="631cd-106">The possible reasons include mismatched security settings, timeout exceeded, a neighbor that cannot accept a connection, or transient network issues.</span></span>  
   
-## 문제 해결  
- 보안 설정이 일치하지 않는지, 시간 제한이 초과되었는지, 환경에서 연결을 수락할 수 없는지 또는 일시적 네트워크 문제인지 확인하십시오.  
+## <a name="troubleshooting"></a><span data-ttu-id="631cd-107">문제 해결</span><span class="sxs-lookup"><span data-stu-id="631cd-107">Troubleshooting</span></span>  
+ <span data-ttu-id="631cd-108">보안 설정이 일치하지 않는지, 시간 제한이 초과되었는지, 환경에서 연결을 수락할 수 없는지 또는 일시적 네트워크 문제인지 확인하십시오.</span><span class="sxs-lookup"><span data-stu-id="631cd-108">Check for mismatched security settings, timeout exceeded, a neighbor's inability to accept a connection, or transient network issues.</span></span>  
   
-## 참고 항목  
- [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [추적을 사용하여 응용 프로그램 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
- [관리 및 진단](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="631cd-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="631cd-109">See Also</span></span>  
+ [<span data-ttu-id="631cd-110">추적</span><span class="sxs-lookup"><span data-stu-id="631cd-110">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="631cd-111">추적을 사용 하 여 응용 프로그램 문제를 해결 하려면</span><span class="sxs-lookup"><span data-stu-id="631cd-111">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="631cd-112">관리 및 진단</span><span class="sxs-lookup"><span data-stu-id="631cd-112">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

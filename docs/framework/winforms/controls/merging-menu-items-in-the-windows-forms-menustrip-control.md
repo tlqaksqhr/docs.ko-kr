@@ -1,70 +1,71 @@
 ---
-title: "Windows Forms MenuStrip 컨트롤의 메뉴 항목 병합 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "MenuStrip, 병합"
-  - "병합, 일반 개념"
+title: "Windows Forms MenuStrip 컨트롤의 메뉴 항목 병합"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MenuStrip [Windows Forms], merging
+- merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c8e042b3f7b0a2a2e40b8fba33fca6c147086df6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Windows Forms MenuStrip 컨트롤의 메뉴 항목 병합
-MDI\(다중 문서 인터페이스\) 응용 프로그램의 경우 자식 폼의 메뉴 항목이나 전체 메뉴를 부모 폼의 메뉴에 병합할 수 있습니다.  
+# <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a><span data-ttu-id="abb4b-102">Windows Forms MenuStrip 컨트롤의 메뉴 항목 병합</span><span class="sxs-lookup"><span data-stu-id="abb4b-102">Merging Menu Items in the Windows Forms MenuStrip Control</span></span>
+<span data-ttu-id="abb4b-103">(mdi 다중) 다중 문서 인터페이스 응용 프로그램의 경우 부모 폼의 메뉴에 메뉴 항목이 나 자식 폼에서 전체 메뉴를 병합할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-103">If you have a multiple-document interface (MDI) application, you can merge menu items or whole menus from the child form into the menus of the parent form.</span></span>  
   
- 이 항목에서는 MDI 응용 프로그램의 메뉴 항목을 병합하는 데 관련된 기본 개념을 설명합니다.  
+ <span data-ttu-id="abb4b-104">이 항목에서는 MDI 응용 프로그램에서 메뉴 항목 병합에 연결 된 기본 개념을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-104">This topic describes the basic concepts associated with merging menu items in an MDI application.</span></span>  
   
-## 일반 개념  
- 병합 과정에는 대상 컨트롤과 소스 컨트롤이 모두 포함됩니다.  
+## <a name="general-concepts"></a><span data-ttu-id="abb4b-105">일반 개념</span><span class="sxs-lookup"><span data-stu-id="abb4b-105">General Concepts</span></span>  
+ <span data-ttu-id="abb4b-106">대상 및 소스 제어 병합 과정에 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-106">Merging procedures involve both a target and a source control:</span></span>  
   
--   대상은 메뉴 항목을 병합할 기본 또는 MDI 부모 폼에 있는 <xref:System.Windows.Forms.MenuStrip> 컨트롤입니다.  
+-   <span data-ttu-id="abb4b-107">대상이 <xref:System.Windows.Forms.MenuStrip> 를 병합 하는 메뉴 항목 main 또는 MDI 부모 폼에 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-107">The target is the <xref:System.Windows.Forms.MenuStrip> control on the main or MDI parent form into which you are merging menu items.</span></span>  
   
--   소스는 대상 메뉴에 병합할 메뉴 항목이 들어 있는 MDI 자식 폼의 <xref:System.Windows.Forms.MenuStrip> 컨트롤입니다.  
+-   <span data-ttu-id="abb4b-108">원본이 <xref:System.Windows.Forms.MenuStrip> 병합할 대상 메뉴에 메뉴 항목이 포함 된 MDI 자식 폼에서 컨트롤입니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-108">The source is the <xref:System.Windows.Forms.MenuStrip> control on the MDI child form that contains the menu items you want to merge into the target menu.</span></span>  
   
- <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> 속성은 현재 MDI 부모 폼의 MDI 자식에 대한 제목으로 채울 드롭다운 목록이 있는 메뉴 항목을 식별합니다.  예를 들어, 현재 열려 있는 MDI 자식 목록을 일반적으로 **창** 메뉴에 표시합니다.  
+ <span data-ttu-id="abb4b-109"><xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> 속성은 현재 MDI의 제목으로 채울 드롭다운 목록이 해당 부모 폼의 MDI 자식 메뉴 항목을 식별 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-109">The <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> property identifies the menu item whose drop-down list you will populate with the titles of the current MDI parent form's MDI children.</span></span> <span data-ttu-id="abb4b-110">예를 들어 목록을 일반적으로에서 현재 열려 있는 MDI 자식 폼의 **창** 메뉴.</span><span class="sxs-lookup"><span data-stu-id="abb4b-110">For example, you typically list MDI children that are currently open on the **Window** menu.</span></span>  
   
- <xref:System.Windows.Forms.ToolStripMenuItem.IsMdiWindowListEntry%2A> 속성은 MDI 자식 폼의 <xref:System.Windows.Forms.MenuStrip>에서 가져온 메뉴 항목을 식별합니다.  
+ <span data-ttu-id="abb4b-111"><xref:System.Windows.Forms.ToolStripMenuItem.IsMdiWindowListEntry%2A> 속성에서 제공 되는 메뉴 항목을 식별 한 <xref:System.Windows.Forms.MenuStrip> MDI 자식 폼에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-111">The <xref:System.Windows.Forms.ToolStripMenuItem.IsMdiWindowListEntry%2A> property identifies which menu items come from a <xref:System.Windows.Forms.MenuStrip> on an MDI child form.</span></span>  
   
- 수동으로 또는 자동으로 메뉴 항목을 병합할 수 있습니다.  어느 방법을 사용하든 메뉴 항목이 병합되는 방식은 동일하지만 병합이 활성화되는 방식은 각기 다릅니다. 자세한 내용은 이 항목의 "수동 병합" 및 "자동 병합" 설명을 참조하십시오.  수동 병합이나 자동 병합 모두, 각 병합 작업은 다음 병합 작업에 영향을 줍니다.  
+ <span data-ttu-id="abb4b-112">수동 또는 자동으로 메뉴 항목을 병합할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-112">You can merge menu items manually or automatically.</span></span> <span data-ttu-id="abb4b-113">두 방법에 대 한 동일한 방식으로 메뉴 항목 병합 하지만 병합이이 항목의 뒷부분에 나오는 "수동 병합" 및 "자동 병합" 섹션에 설명 된 대로 다르게 활성화 됩니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-113">The menu items merge in the same way for both methods, but the merge is activated differently, as discussed in the "Manual Merging" and "Automatic Merging" sections later in this topic.</span></span> <span data-ttu-id="abb4b-114">각 병합 작업을 수동 및 자동 병합, 다음 병합 작업을 영향을 줍니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-114">In both manual and automatic merging, each merge action affects the next merge action.</span></span>  
   
- <xref:System.Windows.Forms.MenuStrip> 병합은 <xref:System.Windows.Forms.MainMenu>에서와 같이 메뉴 항목을 복제하는 것이 아니라 다른 <xref:System.Windows.Forms.ToolStrip>으로 이동합니다.  
+ <span data-ttu-id="abb4b-115"><xref:System.Windows.Forms.MenuStrip>하나에서 메뉴 항목을 이동 병합 <xref:System.Windows.Forms.ToolStrip> 다른 경우와 같이 복제 하는 대신 <xref:System.Windows.Forms.MainMenu>합니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-115"><xref:System.Windows.Forms.MenuStrip> merging moves menu items from one <xref:System.Windows.Forms.ToolStrip> to another rather than cloning them, as was the case with <xref:System.Windows.Forms.MainMenu>.</span></span>  
   
-## MergeAction 값  
- <xref:System.Windows.Forms.MergeAction> 속성을 사용하여 소스 <xref:System.Windows.Forms.MenuStrip>의 메뉴 항목에 대한 병합 작업을 설정할 수 있습니다.  
+## <a name="mergeaction-values"></a><span data-ttu-id="abb4b-116">MergeAction 값</span><span class="sxs-lookup"><span data-stu-id="abb4b-116">MergeAction Values</span></span>  
+ <span data-ttu-id="abb4b-117">메뉴 항목 소스에 대해 병합 작업을 설정할 <xref:System.Windows.Forms.MenuStrip> 를 사용 하는 <xref:System.Windows.Forms.MergeAction> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-117">You set the merge action on menu items in the source <xref:System.Windows.Forms.MenuStrip> using the <xref:System.Windows.Forms.MergeAction> property.</span></span>  
   
- 다음 표에서는 사용할 수 있는 병합 작업의 의미와 일반적인 용도를 설명합니다.  
+ <span data-ttu-id="abb4b-118">다음 표에서 사용할 수 있는 병합 작업의 의미와 일반적인 용도 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-118">The following table describes the meaning and typical use of the available merge actions.</span></span>  
   
-|MergeAction 값|설명|일반적인 용도|  
-|-------------------|--------|-------------|  
-|<xref:System.Windows.Forms.MergeAction>|기본값. 소스 항목을 대상 항목 컬렉션의 끝에 추가합니다.|프로그램의 일부분이 활성화될 때 메뉴 끝에 메뉴 항목을 추가하는 데 사용합니다.|  
-|<xref:System.Windows.Forms.MergeAction>|대상 항목 컬렉션에서 소스 항목에 설정된 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 속성에 의해 지정된 위치에 소스 항목을 추가합니다.|프로그램의 일부분이 활성화될 때 메뉴의 중간이나 처음에 메뉴 항목을 추가하는 데 사용합니다.<br /><br /> 두 메뉴 항목의 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 값이 같으면 역순으로 메뉴 항목이 추가됩니다.  원래 순서를 유지하려면 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>를 적절하게 설정합니다.|  
-|<xref:System.Windows.Forms.MergeAction>|일치하는 텍스트를 찾거나 일치하는 텍스트가 없을 경우 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 값을 사용한 다음 일치하는 대상 메뉴 항목을 소스 메뉴 항목으로 바꿉니다.|대상 메뉴 항목을 이름은 같지만 기능이 다른 소스 메뉴 항목으로 바꾸는 데 사용합니다.|  
-|<xref:System.Windows.Forms.MergeAction>|일치하는 텍스트를 찾거나 일치하는 텍스트가 없을 경우 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 값을 사용한 다음 소스의 모든 드롭다운 항목을 대상에 추가합니다.|메뉴 항목을 하위 메뉴에 삽입 또는 추가하거나 하위 메뉴에서 메뉴 항목을 제거하는 메뉴 구조를 만드는 데 사용합니다.  예를 들어, MDI 자식의 메뉴 항목을 기본 <xref:System.Windows.Forms.MenuStrip>의 **다른 이름으로 저장** 메뉴에 추가할 수 있습니다.<br /><br /> <xref:System.Windows.Forms.MergeAction>를 사용하면 별도의 작업 없이 메뉴 구조를 탐색할 수 있으므로  다음에 나오는 항목을 쉽게 확인할 수 있습니다.|  
-|<xref:System.Windows.Forms.MergeAction>|일치하는 텍스트를 찾거나 일치하는 텍스트가 없을 경우 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 값을 사용한 다음 해당 항목을 대상에서 제거합니다.|대상 <xref:System.Windows.Forms.MenuStrip>에서 메뉴 항목을 제거하는 데 사용합니다.|  
+|<span data-ttu-id="abb4b-119">MergeAction 값</span><span class="sxs-lookup"><span data-stu-id="abb4b-119">MergeAction Value</span></span>|<span data-ttu-id="abb4b-120">설명</span><span class="sxs-lookup"><span data-stu-id="abb4b-120">Description</span></span>|<span data-ttu-id="abb4b-121">일반적인 용도</span><span class="sxs-lookup"><span data-stu-id="abb4b-121">Typical Use</span></span>|  
+|-----------------------|-----------------|-----------------|  
+|<xref:System.Windows.Forms.MergeAction.Append>|<span data-ttu-id="abb4b-122">(기본값) 대상 항목 컬렉션의 끝에 소스 항목을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-122">(Default) Adds the source item to the end of the target item's collection.</span></span>|<span data-ttu-id="abb4b-123">프로그램의 특정 부분 활성화 될 때 메뉴의 끝에 메뉴 항목을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-123">Adding menu items to the end of the menu when some part of the program is activated.</span></span>|  
+|<xref:System.Windows.Forms.MergeAction.Insert>|<span data-ttu-id="abb4b-124">소스 항목으로 지정 된 위치에서 대상 항목의 컬렉션에 추가 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 소스 항목에서 속성을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-124">Adds the source item to the target item's collection, in the location specified by the <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> property set on the source item.</span></span>|<span data-ttu-id="abb4b-125">중간 이나 프로그램의 특정 부분 활성화 될 때 메뉴의 시작 부분에 메뉴 항목을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-125">Adding menu items to the middle or the beginning of the menu when some part of the program is activated.</span></span><br /><br /> <span data-ttu-id="abb4b-126">하는 경우의 값 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 동일 메뉴 항목 모두에 대해 추가 된 반대 순서로 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-126">If the value of <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> is the same for both menu items, they are added in reverse order.</span></span> <span data-ttu-id="abb4b-127">설정 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 적절 하 게 원래 순서를 보존 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-127">Set <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> appropriately to preserve the original order.</span></span>|  
+|<xref:System.Windows.Forms.MergeAction.Replace>|<span data-ttu-id="abb4b-128">일치 하는 텍스트를 찾거나 사용 하 여는 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 값이 텍스트 일치 항목이 없는 발견 되 고 원본 메뉴 항목과 일치 하는 대상 메뉴 항목을 다음으로 바꿉니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-128">Finds a text match, or uses the <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> value if no text match is found, and then replaces the matching target menu item with the source menu item.</span></span>|<span data-ttu-id="abb4b-129">이름이 같은 다른 작업을 수행 하는 소스 메뉴 항목 대상 메뉴 항목을 대체 됩니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-129">Replacing a target menu item with a source menu item of the same name that does something different.</span></span>|  
+|<xref:System.Windows.Forms.MergeAction.MatchOnly>|<span data-ttu-id="abb4b-130">일치 하는 텍스트를 찾거나 사용 하 여는 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 값이 텍스트 일치 항목이 없는 발견 되 고 대상에 원본의 모든 드롭다운 목록 항목을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-130">Finds a text match, or uses the <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> value if no text match is found, and then adds all the drop-down items from the source to the target.</span></span>|<span data-ttu-id="abb4b-131">메뉴 구조를 구축 삽입 되 또는 하위 메뉴에 메뉴 항목을 추가 하거나 하위 메뉴에서 메뉴 항목을 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-131">Building a menu structure that inserts or adds menu items into a submenu, or removes menu items from a submenu.</span></span> <span data-ttu-id="abb4b-132">기본에서 MDI 자식 메뉴 항목을 추가할 수는 예를 들어 <xref:System.Windows.Forms.MenuStrip> **다른 이름으로 저장** 메뉴.</span><span class="sxs-lookup"><span data-stu-id="abb4b-132">For example, you can add a menu item from an MDI child to a main <xref:System.Windows.Forms.MenuStrip>**Save As** menu.</span></span><br /><br /> <span data-ttu-id="abb4b-133"><xref:System.Windows.Forms.MergeAction.MatchOnly>작업을 수행 하지 않고 메뉴 구조를 탐색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-133"><xref:System.Windows.Forms.MergeAction.MatchOnly> allows you to navigate through the menu structure without taking any action.</span></span> <span data-ttu-id="abb4b-134">다음 항목을 평가 하는 방법을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-134">It provides a way to evaluate the subsequent items.</span></span>|  
+|<xref:System.Windows.Forms.MergeAction.Remove>|<span data-ttu-id="abb4b-135">일치 하는 텍스트를 찾거나 사용 하 여는 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 값이 텍스트 일치 항목이 없는 발견 되 고 다음 항목을 대상에서 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-135">Finds a text match, or uses the <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> value if no text match is found, and then removes the item from the target.</span></span>|<span data-ttu-id="abb4b-136">대상에서 메뉴 항목을 제거 <xref:System.Windows.Forms.MenuStrip>합니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-136">Removing a menu item from the target <xref:System.Windows.Forms.MenuStrip>.</span></span>|  
   
-## 수동 병합  
- 자동 병합은 <xref:System.Windows.Forms.MenuStrip> 컨트롤에만 사용할 수 있습니다.  <xref:System.Windows.Forms.ToolStrip> 및 <xref:System.Windows.Forms.StatusStrip> 등의 다른 컨트롤에 있는 항목을 병합하려면 필요에 따라 코드에서 <xref:System.Windows.Forms.ToolStripManager.Merge%2A> 및 <xref:System.Windows.Forms.ToolStripManager.RevertMerge%2A> 메서드를 호출하여 수동으로 병합해야 합니다.  
+## <a name="manual-merging"></a><span data-ttu-id="abb4b-137">수동 병합</span><span class="sxs-lookup"><span data-stu-id="abb4b-137">Manual Merging</span></span>  
+ <span data-ttu-id="abb4b-138">만 <xref:System.Windows.Forms.MenuStrip> 컨트롤이 자동 병합에 참여 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-138">Only <xref:System.Windows.Forms.MenuStrip> controls participate in automatic merging.</span></span> <span data-ttu-id="abb4b-139">와 같은 다른 컨트롤의 항목을 결합 하 <xref:System.Windows.Forms.ToolStrip> 및 <xref:System.Windows.Forms.StatusStrip> 컨트롤을 병합 해야 해당를 직접 호출 하 여는 <xref:System.Windows.Forms.ToolStripManager.Merge%2A> 및 <xref:System.Windows.Forms.ToolStripManager.RevertMerge%2A> 필요에 따라 코드 메서드.</span><span class="sxs-lookup"><span data-stu-id="abb4b-139">To combine the items of other controls, such as <xref:System.Windows.Forms.ToolStrip> and <xref:System.Windows.Forms.StatusStrip> controls, you must merge them manually, by calling the <xref:System.Windows.Forms.ToolStripManager.Merge%2A> and <xref:System.Windows.Forms.ToolStripManager.RevertMerge%2A> methods in your code as required.</span></span>  
   
-## 자동 병합  
- 소스 폼을 활성화하여 MDI 응용 프로그램에 대한 자동 병합 기능을 사용할 수 있습니다.  MDI 응용 프로그램에서 <xref:System.Windows.Forms.MenuStrip>을 사용하려면 <xref:System.Windows.Forms.Form.MainMenuStrip%2A> 속성을 대상 <xref:System.Windows.Forms.MenuStrip>으로 설정하여 소스 <xref:System.Windows.Forms.MenuStrip>에 대해 수행되는 병합 작업이 대상 <xref:System.Windows.Forms.MenuStrip>에 반영되도록 합니다.  
+## <a name="automatic-merging"></a><span data-ttu-id="abb4b-140">자동 병합</span><span class="sxs-lookup"><span data-stu-id="abb4b-140">Automatic Merging</span></span>  
+ <span data-ttu-id="abb4b-141">소스 폼을 활성화 하 여 MDI 응용 프로그램에 대 한 자동 병합을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-141">You can use automatic merging for MDI applications by activating the source form.</span></span> <span data-ttu-id="abb4b-142">사용 하는 <xref:System.Windows.Forms.MenuStrip> MDI 응용 프로그램 설정의 <xref:System.Windows.Forms.Form.MainMenuStrip%2A> 속성을 대상 <xref:System.Windows.Forms.MenuStrip> 소스에 병합 작업이 수행 되도록 <xref:System.Windows.Forms.MenuStrip> 대상에 반영 <xref:System.Windows.Forms.MenuStrip>합니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-142">To use a <xref:System.Windows.Forms.MenuStrip> in an MDI application, set the <xref:System.Windows.Forms.Form.MainMenuStrip%2A> property to the target <xref:System.Windows.Forms.MenuStrip> so that merging actions performed on the source <xref:System.Windows.Forms.MenuStrip> are reflected in the target <xref:System.Windows.Forms.MenuStrip>.</span></span>  
   
- MDI 소스에서 <xref:System.Windows.Forms.MenuStrip>을 활성화하여 자동 병합을 트리거할 수 있습니다.  활성화되면 소스 <xref:System.Windows.Forms.MenuStrip>이 MDI 대상에 병합됩니다.  새 폼이 활성화되면 마지막 폼에 대해 수행된 병합이 되돌려지고 새 폼에 대해 병합이 수행됩니다.  각 <xref:System.Windows.Forms.ToolStripItem>에서 <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> 속성을 필요한 대로 설정하고 각 <xref:System.Windows.Forms.MenuStrip>에서 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 속성을 설정하여 이 동작을 제어할 수 있습니다.  
+ <span data-ttu-id="abb4b-143">활성화 하 여 자동 병합을 트리거할 수 있습니다는 <xref:System.Windows.Forms.MenuStrip> MDI 소스에서 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-143">You can trigger automatic merging by activating the <xref:System.Windows.Forms.MenuStrip> on the MDI source.</span></span> <span data-ttu-id="abb4b-144">활성화 되 면 원본 <xref:System.Windows.Forms.MenuStrip> MDI 대상 파티션으로 병합 되며 병합 합니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-144">Upon activation, the source <xref:System.Windows.Forms.MenuStrip> is merged into the MDI target.</span></span> <span data-ttu-id="abb4b-145">새 폼 활성화 되 면 마지막 폼에 병합 되돌아가고 새 폼에 트리거됩니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-145">When a new form becomes active, the merge is reverted on the last form and triggered on the new form.</span></span> <span data-ttu-id="abb4b-146">설정 하 여이 동작을 제어할 수는 <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> 각 필요에 따라 속성 <xref:System.Windows.Forms.ToolStripItem>를 설정 하 여는 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 각 속성 <xref:System.Windows.Forms.MenuStrip>합니다.</span><span class="sxs-lookup"><span data-stu-id="abb4b-146">You can control this behavior by setting the <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> property as needed on each <xref:System.Windows.Forms.ToolStripItem>, and by setting the <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> property on each <xref:System.Windows.Forms.MenuStrip>.</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Forms.ToolStripManager>   
- <xref:System.Windows.Forms.MenuStrip>   
- [MenuStrip 컨트롤](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)   
- [방법: MenuStrip이 포함된 MDI 창 목록 만들기](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)   
- [방법: MDI 응용 프로그램의 자동 메뉴 병합 설정](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)
+## <a name="see-also"></a><span data-ttu-id="abb4b-147">참고 항목</span><span class="sxs-lookup"><span data-stu-id="abb4b-147">See Also</span></span>  
+ <xref:System.Windows.Forms.ToolStripManager>  
+ <xref:System.Windows.Forms.MenuStrip>  
+ [<span data-ttu-id="abb4b-148">MenuStrip 컨트롤</span><span class="sxs-lookup"><span data-stu-id="abb4b-148">MenuStrip Control</span></span>](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)  
+ [<span data-ttu-id="abb4b-149">방법: MenuStrip이 포함된 MDI 창 목록 만들기</span><span class="sxs-lookup"><span data-stu-id="abb4b-149">How to: Create an MDI Window List with MenuStrip</span></span>](../../../../docs/framework/winforms/controls/how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)  
+ [<span data-ttu-id="abb4b-150">방법: MDI 응용 프로그램의 자동 메뉴 병합 설정</span><span class="sxs-lookup"><span data-stu-id="abb4b-150">How to: Set Up Automatic Menu Merging for MDI Applications</span></span>](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)

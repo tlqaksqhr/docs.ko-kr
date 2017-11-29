@@ -1,36 +1,39 @@
 ---
-title: "방법: 속성 값이 변경될 때 애니메이션 트리거 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "애니메이션, 속성 값이 변경될 때 시작"
-  - "스토리보드, 속성 값이 변경될 때 시작"
-  - "애니메이션 트리거"
+title: "방법: 속성 값이 변경될 때 애니메이션 트리거"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- animation [WPF], starting when property values change
+- triggering animation [WPF]
+- Storyboards [WPF], starting when property values change
 ms.assetid: 12399c21-0300-4f4f-9e3a-d92d9907e5f5
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4d722be0f0367f7e6e98ef1c8451ce58ee28fedd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 속성 값이 변경될 때 애니메이션 트리거
-이 예제에서는 속성 값이 변경될 때 <xref:System.Windows.Trigger>를 사용하여 <xref:System.Windows.Media.Animation.Storyboard>를 시작하는 방법을 보여 줍니다.  <xref:System.Windows.Trigger>는 <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate> 또는 <xref:System.Windows.DataTemplate> 내에서 사용할 수 있습니다.  
+# <a name="how-to-trigger-an-animation-when-a-property-value-changes"></a><span data-ttu-id="afab3-102">방법: 속성 값이 변경될 때 애니메이션 트리거</span><span class="sxs-lookup"><span data-stu-id="afab3-102">How to: Trigger an Animation When a Property Value Changes</span></span>
+<span data-ttu-id="afab3-103">사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Trigger> 시작 하는 <xref:System.Windows.Media.Animation.Storyboard> 속성 값이 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="afab3-103">This example shows how to use a <xref:System.Windows.Trigger> to start a <xref:System.Windows.Media.Animation.Storyboard> when a property value changes.</span></span> <span data-ttu-id="afab3-104">사용할 수는 <xref:System.Windows.Trigger> 내는 <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>, 또는 <xref:System.Windows.DataTemplate>합니다.</span><span class="sxs-lookup"><span data-stu-id="afab3-104">You can use a <xref:System.Windows.Trigger> inside a <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>, or <xref:System.Windows.DataTemplate>.</span></span>  
   
-## 예제  
- 다음 예제에서는 <xref:System.Windows.Trigger>를 사용하여 <xref:System.Windows.Controls.Button>의 <xref:System.Windows.UIElement.IsMouseOver%2A> 속성이 `true`가 될 때 해당 <xref:System.Windows.UIElement.Opacity%2A>에 애니메이션 효과를 적용합니다.  
+## <a name="example"></a><span data-ttu-id="afab3-105">예제</span><span class="sxs-lookup"><span data-stu-id="afab3-105">Example</span></span>  
+ <span data-ttu-id="afab3-106">다음 예제에서는 <xref:System.Windows.Trigger> 애니메이션 효과를 줄의 <xref:System.Windows.UIElement.Opacity%2A> 의 <xref:System.Windows.Controls.Button> 때 해당 <xref:System.Windows.UIElement.IsMouseOver%2A> 속성은 `true`합니다.</span><span class="sxs-lookup"><span data-stu-id="afab3-106">The following example uses a <xref:System.Windows.Trigger> to animate the <xref:System.Windows.UIElement.Opacity%2A> of a <xref:System.Windows.Controls.Button> when its <xref:System.Windows.UIElement.IsMouseOver%2A> property becomes `true`.</span></span>  
   
- [!code-xml[AnimatePropertyStoryboards#PropertyTriggerExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/AnimatePropertyStoryboards/XAML/PropertyTriggerExample.xaml#propertytriggerexample)]  
+ [!code-xaml[AnimatePropertyStoryboards#PropertyTriggerExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/AnimatePropertyStoryboards/XAML/PropertyTriggerExample.xaml#propertytriggerexample)]  
   
- 속성 <xref:System.Windows.Trigger> 개체에 의해 적용된 애니메이션은 <xref:System.Windows.EventTrigger> 애니메이션 또는 <xref:System.Windows.Media.Animation.Storyboard> 메서드를 사용하여 시작된 애니메이션보다 복잡한 방식으로 작동합니다.  이러한 애니메이션은 다른 <xref:System.Windows.Trigger> 개체에 의해 정의된 애니메이션과 "핸드오프"하지만 <xref:System.Windows.EventTrigger> 및 메서드에서 트리거한 애니메이션으로 구성됩니다.  
+ <span data-ttu-id="afab3-107">속성에 의해 적용 된 애니메이션이 <xref:System.Windows.Trigger> 개체 보다 더 복잡 한 방식으로 작동 <xref:System.Windows.EventTrigger> 애니메이션이 나 애니메이션 사용 하 여 시작 <xref:System.Windows.Media.Animation.Storyboard> 메서드.</span><span class="sxs-lookup"><span data-stu-id="afab3-107">Animations applied by property <xref:System.Windows.Trigger> objects behave in a more complex fashion than <xref:System.Windows.EventTrigger> animations or animations started using <xref:System.Windows.Media.Animation.Storyboard> methods.</span></span>  <span data-ttu-id="afab3-108">"핸드 오프" 애니메이션이 있는 다른 정의 <xref:System.Windows.Trigger> 개체 하지만로 작성 <xref:System.Windows.EventTrigger> 및 애니메이션 메서드 트리거됩니다.</span><span class="sxs-lookup"><span data-stu-id="afab3-108">They "handoff" with animations defined by other <xref:System.Windows.Trigger> objects, but compose with <xref:System.Windows.EventTrigger> and method-triggered animations.</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Trigger>   
- [속성 애니메이션 기술 개요](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)   
- [Storyboard 개요](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+## <a name="see-also"></a><span data-ttu-id="afab3-109">참고 항목</span><span class="sxs-lookup"><span data-stu-id="afab3-109">See Also</span></span>  
+ <xref:System.Windows.Trigger>  
+ [<span data-ttu-id="afab3-110">속성 애니메이션 기술 개요</span><span class="sxs-lookup"><span data-stu-id="afab3-110">Property Animation Techniques Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)  
+ [<span data-ttu-id="afab3-111">Storyboard 개요</span><span class="sxs-lookup"><span data-stu-id="afab3-111">Storyboards Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)

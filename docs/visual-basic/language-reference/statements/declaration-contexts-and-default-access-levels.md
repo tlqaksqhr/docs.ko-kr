@@ -1,65 +1,64 @@
 ---
-title: "Declaration Contexts and Default Access Levels (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "module level, defined"
-  - "declaration contexts, Visual Basic"
-  - "procedure level, defined"
-  - "namespace level, defined"
-  - "access levels, Visual Basic"
-  - "access levels, default levels"
+title: "선언 컨텍스트 및 기본 액세스 수준(Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- module level, defined
+- declaration contexts, Visual Basic
+- procedure level, defined
+- namespace level, defined
+- access levels, Visual Basic
+- access levels, default levels
 ms.assetid: bf63b96e-e825-4745-88c8-5dae222728db
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b89b74a6c0393f6a52a0b5c1ddf6f66c505564ba
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Declaration Contexts and Default Access Levels (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-이 항목에서는 다른 형식 안에 선언할 수 있는 Visual Basic 형식과 해당 형식의 액세스 수준을 지정하지 않을 경우의 기본값에 대해 설명합니다.  
+# <a name="declaration-contexts-and-default-access-levels-visual-basic"></a><span data-ttu-id="fb8af-102">선언 컨텍스트 및 기본 액세스 수준(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fb8af-102">Declaration Contexts and Default Access Levels (Visual Basic)</span></span>
+<span data-ttu-id="fb8af-103">이 항목에서는 있는 Visual Basic 형식과 다른 형식 내에서 선언 될 수 있으며 어떤 액세스 수준을 기본적으로 지정 하지 않은 경우를 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="fb8af-103">This topic describes which Visual Basic types can be declared within which other types, and what their access levels default to if not specified.</span></span>  
   
-## 선언 컨텍스트 수준  
- 프로그래밍 요소의 *선언 컨텍스트*는 해당 요소가 선언되는 코드의 영역입니다.  *포함 요소*라고도 하는 다른 프로그래밍 요소를 가리키는 경우도 많습니다.  
+## <a name="declaration-context-levels"></a><span data-ttu-id="fb8af-104">선언 컨텍스트 수준</span><span class="sxs-lookup"><span data-stu-id="fb8af-104">Declaration Context Levels</span></span>  
+ <span data-ttu-id="fb8af-105">*선언 컨텍스트* 프로그래밍 요소의 선언 되는 코드의 영역입니다.</span><span class="sxs-lookup"><span data-stu-id="fb8af-105">The *declaration context* of a programming element is the region of code in which it is declared.</span></span> <span data-ttu-id="fb8af-106">이 종종 라고도 하는 다른 프로그래밍 요소는 *요소를 포함 하*합니다.</span><span class="sxs-lookup"><span data-stu-id="fb8af-106">This is often another programming element, which is then called the *containing element*.</span></span>  
   
- 선언 컨텍스트의 수준은 다음과 같습니다.  
+ <span data-ttu-id="fb8af-107">수준을 선언 컨텍스트는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8af-107">The levels for declaration contexts are the following:</span></span>  
   
--   *네임스페이스 수준* — 클래스, 구조체, 모듈 또는 인터페이스를 제외한 소스 파일 또는 네임스페이스 내  
+-   <span data-ttu-id="fb8af-108">*Namespace 수준* -클래스, 구조체, 모듈 또는 인터페이스를 제외한 소스 파일이 나 네임 스페이스 내</span><span class="sxs-lookup"><span data-stu-id="fb8af-108">*Namespace level* — within a source file or namespace but not within a class, structure, module, or interface</span></span>  
   
--   *모듈 수준* — 프로시저나 블록을 제외한 클래스, 구조체, 모듈 또는 인터페이스 내  
+-   <span data-ttu-id="fb8af-109">*모듈 수준* — 블록 또는 프로시저일 내부가 아니라 클래스, 구조체, 모듈 또는 인터페이스 내에서</span><span class="sxs-lookup"><span data-stu-id="fb8af-109">*Module level* — within a class, structure, module, or interface but not within a procedure or block</span></span>  
   
--   *프로시저 수준* — 프로시저 또는 블록\(`If` 또는 `For`\) 내  
+-   <span data-ttu-id="fb8af-110">*프로시저 수준* -프로시저 또는 블록 내에서 (예: `If` 또는 `For`)</span><span class="sxs-lookup"><span data-stu-id="fb8af-110">*Procedure level* — within a procedure or block (such as `If` or `For`)</span></span>  
   
- 다음 표에서는 선언된 여러 가지 프로그래밍 요소에 대한 기본 액세스 수준을 해당 선언 컨텍스트에 따라 보여 줍니다.  
+ <span data-ttu-id="fb8af-111">다음 표에서 해당 선언 컨텍스트에 따라 다양 한 선언 된 프로그래밍 요소에 대 한 기본 액세스 수준을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="fb8af-111">The following table shows the default access levels for various declared programming elements, depending on their declaration contexts.</span></span>  
   
-|선언 요소|네임스페이스 수준|모듈 수준|프로시저 수준|  
-|-----------|---------------|-----------|-------------|  
-|변수\([Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md)\)|허용되지 않음|`Private`\(`Structure`에서는 `Public`, `Interface`에서는 허용되지 않음\)|`Public`|  
-|상수\([Const Statement](../../../visual-basic/language-reference/statements/const-statement.md)\)|허용되지 않음|`Private`\(`Structure`에서는 `Public`, `Interface`에서는 허용되지 않음\)|`Public`|  
-|열거형\([Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md)\)|`Friend`|`Public`|허용되지 않음|  
-|클래스\([Class Statement](../../../visual-basic/language-reference/statements/class-statement.md)\)|`Friend`|`Public`|허용되지 않음|  
-|구조체\([Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md)\)|`Friend`|`Public`|허용되지 않음|  
-|모듈\([Module Statement](../../../visual-basic/language-reference/statements/module-statement.md)\)|`Friend`|허용되지 않음|허용되지 않음|  
-|인터페이스\([Interface Statement](../../../visual-basic/language-reference/statements/interface-statement.md)\)|`Friend`|`Public`|허용되지 않음|  
-|프로시저\([Function Statement](../../../visual-basic/language-reference/statements/function-statement.md), [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md)\)|허용되지 않음|`Public`|허용되지 않음|  
-|외부 참조\([Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)\)|허용되지 않음|`Public`\(`Interface`에서는 허용되지 않음\)|허용되지 않음|  
-|연산자\([Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)\)|허용되지 않음|`Public`\(`Interface` 또는 `Module`에서는 허용되지 않음\)|허용되지 않음|  
-|속성\([Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)\)|허용되지 않음|`Public`|허용되지 않음|  
-|기본 속성\([Default](../../../visual-basic/language-reference/modifiers/default.md)\)|허용되지 않음|`Public`\(`Module`에서는 허용되지 않음\)|허용되지 않음|  
-|이벤트\([Event Statement](../../../visual-basic/language-reference/statements/event-statement.md)\)|허용되지 않음|`Public`|허용되지 않음|  
-|대리자\([Delegate Statement](../../../visual-basic/language-reference/statements/delegate-statement.md)\)|`Friend`|`Public`|허용되지 않음|  
+|<span data-ttu-id="fb8af-112">선언 요소</span><span class="sxs-lookup"><span data-stu-id="fb8af-112">Declared element</span></span>|<span data-ttu-id="fb8af-113">Namespace 수준</span><span class="sxs-lookup"><span data-stu-id="fb8af-113">Namespace level</span></span>|<span data-ttu-id="fb8af-114">모듈 수준</span><span class="sxs-lookup"><span data-stu-id="fb8af-114">Module level</span></span>|<span data-ttu-id="fb8af-115">프로시저 수준</span><span class="sxs-lookup"><span data-stu-id="fb8af-115">Procedure level</span></span>|  
+|----------------------|---------------------|------------------|---------------------|  
+|<span data-ttu-id="fb8af-116">변수 ([Dim 문](../../../visual-basic/language-reference/statements/dim-statement.md))</span><span class="sxs-lookup"><span data-stu-id="fb8af-116">Variable ([Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md))</span></span>|<span data-ttu-id="fb8af-117">허용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8af-117">Not allowed</span></span>|<span data-ttu-id="fb8af-118">`Private`(`Public` 에 `Structure`에서 허용 되지 않음, `Interface`)</span><span class="sxs-lookup"><span data-stu-id="fb8af-118">`Private` (`Public` in `Structure`, not allowed in `Interface`)</span></span>|`Public`|  
+|<span data-ttu-id="fb8af-119">상수 ([Const 문](../../../visual-basic/language-reference/statements/const-statement.md))</span><span class="sxs-lookup"><span data-stu-id="fb8af-119">Constant ([Const Statement](../../../visual-basic/language-reference/statements/const-statement.md))</span></span>|<span data-ttu-id="fb8af-120">허용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8af-120">Not allowed</span></span>|<span data-ttu-id="fb8af-121">`Private`(`Public` 에 `Structure`에서 허용 되지 않음, `Interface`)</span><span class="sxs-lookup"><span data-stu-id="fb8af-121">`Private` (`Public` in `Structure`, not allowed in `Interface`)</span></span>|`Public`|  
+|<span data-ttu-id="fb8af-122">열거형 ([Enum 문](../../../visual-basic/language-reference/statements/enum-statement.md))</span><span class="sxs-lookup"><span data-stu-id="fb8af-122">Enumeration ([Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md))</span></span>|`Friend`|`Public`|<span data-ttu-id="fb8af-123">허용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8af-123">Not allowed</span></span>|  
+|<span data-ttu-id="fb8af-124">클래스 ([Class 문](../../../visual-basic/language-reference/statements/class-statement.md))</span><span class="sxs-lookup"><span data-stu-id="fb8af-124">Class ([Class Statement](../../../visual-basic/language-reference/statements/class-statement.md))</span></span>|`Friend`|`Public`|<span data-ttu-id="fb8af-125">허용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8af-125">Not allowed</span></span>|  
+|<span data-ttu-id="fb8af-126">구조 ([문을 구조체](../../../visual-basic/language-reference/statements/structure-statement.md))</span><span class="sxs-lookup"><span data-stu-id="fb8af-126">Structure ([Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md))</span></span>|`Friend`|`Public`|<span data-ttu-id="fb8af-127">허용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8af-127">Not allowed</span></span>|  
+|<span data-ttu-id="fb8af-128">모듈 ([Module 문](../../../visual-basic/language-reference/statements/module-statement.md))</span><span class="sxs-lookup"><span data-stu-id="fb8af-128">Module ([Module Statement](../../../visual-basic/language-reference/statements/module-statement.md))</span></span>|`Friend`|<span data-ttu-id="fb8af-129">허용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8af-129">Not allowed</span></span>|<span data-ttu-id="fb8af-130">허용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8af-130">Not allowed</span></span>|  
+|<span data-ttu-id="fb8af-131">인터페이스 ([Interface 문](../../../visual-basic/language-reference/statements/interface-statement.md))</span><span class="sxs-lookup"><span data-stu-id="fb8af-131">Interface ([Interface Statement](../../../visual-basic/language-reference/statements/interface-statement.md))</span></span>|`Friend`|`Public`|<span data-ttu-id="fb8af-132">허용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8af-132">Not allowed</span></span>|  
+|<span data-ttu-id="fb8af-133">프로시저 ([문을 작동](../../../visual-basic/language-reference/statements/function-statement.md), [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md))</span><span class="sxs-lookup"><span data-stu-id="fb8af-133">Procedure ([Function Statement](../../../visual-basic/language-reference/statements/function-statement.md), [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md))</span></span>|<span data-ttu-id="fb8af-134">허용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8af-134">Not allowed</span></span>|`Public`|<span data-ttu-id="fb8af-135">허용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8af-135">Not allowed</span></span>|  
+|<span data-ttu-id="fb8af-136">외부 참조 ([선언 문의](../../../visual-basic/language-reference/statements/declare-statement.md))</span><span class="sxs-lookup"><span data-stu-id="fb8af-136">External reference ([Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md))</span></span>|<span data-ttu-id="fb8af-137">허용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8af-137">Not allowed</span></span>|<span data-ttu-id="fb8af-138">`Public`(에 사용할 수 없습니다 `Interface`)</span><span class="sxs-lookup"><span data-stu-id="fb8af-138">`Public` (not allowed in `Interface`)</span></span>|<span data-ttu-id="fb8af-139">허용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8af-139">Not allowed</span></span>|  
+|<span data-ttu-id="fb8af-140">연산자 ([Operator 문](../../../visual-basic/language-reference/statements/operator-statement.md))</span><span class="sxs-lookup"><span data-stu-id="fb8af-140">Operator ([Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md))</span></span>|<span data-ttu-id="fb8af-141">허용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8af-141">Not allowed</span></span>|<span data-ttu-id="fb8af-142">`Public`(에 사용할 수 없습니다 `Interface` 또는 `Module`)</span><span class="sxs-lookup"><span data-stu-id="fb8af-142">`Public` (not allowed in `Interface` or `Module`)</span></span>|<span data-ttu-id="fb8af-143">허용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8af-143">Not allowed</span></span>|  
+|<span data-ttu-id="fb8af-144">속성 ([Property 문](../../../visual-basic/language-reference/statements/property-statement.md))</span><span class="sxs-lookup"><span data-stu-id="fb8af-144">Property ([Property Statement](../../../visual-basic/language-reference/statements/property-statement.md))</span></span>|<span data-ttu-id="fb8af-145">허용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8af-145">Not allowed</span></span>|`Public`|<span data-ttu-id="fb8af-146">허용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8af-146">Not allowed</span></span>|  
+|<span data-ttu-id="fb8af-147">기본 속성 ([기본](../../../visual-basic/language-reference/modifiers/default.md))</span><span class="sxs-lookup"><span data-stu-id="fb8af-147">Default property ([Default](../../../visual-basic/language-reference/modifiers/default.md))</span></span>|<span data-ttu-id="fb8af-148">허용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8af-148">Not allowed</span></span>|<span data-ttu-id="fb8af-149">`Public`(에 사용할 수 없습니다 `Module`)</span><span class="sxs-lookup"><span data-stu-id="fb8af-149">`Public` (not allowed in `Module`)</span></span>|<span data-ttu-id="fb8af-150">허용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8af-150">Not allowed</span></span>|  
+|<span data-ttu-id="fb8af-151">이벤트 ([Event 문](../../../visual-basic/language-reference/statements/event-statement.md))</span><span class="sxs-lookup"><span data-stu-id="fb8af-151">Event ([Event Statement](../../../visual-basic/language-reference/statements/event-statement.md))</span></span>|<span data-ttu-id="fb8af-152">허용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8af-152">Not allowed</span></span>|`Public`|<span data-ttu-id="fb8af-153">허용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8af-153">Not allowed</span></span>|  
+|<span data-ttu-id="fb8af-154">대리자 ([Delegate 문](../../../visual-basic/language-reference/statements/delegate-statement.md))</span><span class="sxs-lookup"><span data-stu-id="fb8af-154">Delegate ([Delegate Statement](../../../visual-basic/language-reference/statements/delegate-statement.md))</span></span>|`Friend`|`Public`|<span data-ttu-id="fb8af-155">허용 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fb8af-155">Not allowed</span></span>|  
   
- 자세한 내용은 [Access Levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)을 참조하십시오.  
+ <span data-ttu-id="fb8af-156">자세한 내용은 참조 [액세스 수준을 Visual Basic의](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="fb8af-156">For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).</span></span>  
   
-## 참고 항목  
- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)   
- [Private](../../../visual-basic/language-reference/modifiers/private.md)   
- [Public](../../../visual-basic/language-reference/modifiers/public.md)
+## <a name="see-also"></a><span data-ttu-id="fb8af-157">참고 항목</span><span class="sxs-lookup"><span data-stu-id="fb8af-157">See Also</span></span>  
+ [<span data-ttu-id="fb8af-158">Friend</span><span class="sxs-lookup"><span data-stu-id="fb8af-158">Friend</span></span>](../../../visual-basic/language-reference/modifiers/friend.md)  
+ [<span data-ttu-id="fb8af-159">전용</span><span class="sxs-lookup"><span data-stu-id="fb8af-159">Private</span></span>](../../../visual-basic/language-reference/modifiers/private.md)  
+ [<span data-ttu-id="fb8af-160">공용</span><span class="sxs-lookup"><span data-stu-id="fb8af-160">Public</span></span>](../../../visual-basic/language-reference/modifiers/public.md)

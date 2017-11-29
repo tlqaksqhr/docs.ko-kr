@@ -1,131 +1,124 @@
 ---
-title: "+ Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.+"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "arithmetic operators, addition"
-  - "+ operator"
-  - "concatenation operators, syntax"
-  - "strings [Visual Basic], concatenating"
-  - "sum operator"
+title: "+ 연산자 (Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.+
+helpviewer_keywords:
+- arithmetic operators [Visual Basic], addition
+- + operator
+- concatenation operators [Visual Basic], syntax
+- strings [Visual Basic], concatenating
+- sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-caps.latest.revision: 26
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 26
+caps.latest.revision: "26"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: fb0d66db2d777c046ccec69acc1f2069d21baf6c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# + Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-숫자 식의 양수 값을 반환하거나 두 수를 더합니다.  두 문자열 식을 연결할 때도 사용할 수 있습니다.  
+# <a name="-operator-visual-basic"></a><span data-ttu-id="92e51-102">+ 연산자(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="92e51-102">+ Operator (Visual Basic)</span></span>
+<span data-ttu-id="92e51-103">두 개의 숫자를 추가 하거나 숫자 식의 양수 값을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-103">Adds two numbers or returns the positive value of a numeric expression.</span></span> <span data-ttu-id="92e51-104">두 문자열 식을 연결할 사용할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-104">Can also be used to concatenate two string expressions.</span></span>  
   
-## 구문  
+## <a name="syntax"></a><span data-ttu-id="92e51-105">구문</span><span class="sxs-lookup"><span data-stu-id="92e51-105">Syntax</span></span>  
   
 ```  
-  
       expression1 + expression2  
 - or -  
 + expression1  
 ```  
   
-## 요소  
+## <a name="parts"></a><span data-ttu-id="92e51-106">요소</span><span class="sxs-lookup"><span data-stu-id="92e51-106">Parts</span></span>  
   
-|||  
-|-|-|  
-|용어|정의|  
-|`expression1`|필수 요소.  임의의 숫자 또는 문자열 식입니다.|  
-|`expression2`|`+` 연산자가 음수 값을 계산하지 않는 경우 필수적 요소입니다.  임의의 숫자 또는 문자열 식입니다.|  
+|<span data-ttu-id="92e51-107">용어</span><span class="sxs-lookup"><span data-stu-id="92e51-107">Term</span></span>|<span data-ttu-id="92e51-108">정의</span><span class="sxs-lookup"><span data-stu-id="92e51-108">Definition</span></span>|  
+|---|---|  
+|`expression1`|<span data-ttu-id="92e51-109">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="92e51-109">Required.</span></span> <span data-ttu-id="92e51-110">모든 숫자 또는 문자열 식입니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-110">Any numeric or string expression.</span></span>|  
+|`expression2`|<span data-ttu-id="92e51-111">필수 하지 않는 경우는 `+` 연산자가 음수 값을 계산 합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-111">Required unless the `+` operator is calculating a negative value.</span></span> <span data-ttu-id="92e51-112">모든 숫자 또는 문자열 식입니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-112">Any numeric or string expression.</span></span>|  
   
-## 결과  
- `expression1`과 `expression2`가 모두 숫자인 경우 결과는 산술 합계입니다.  
+## <a name="result"></a><span data-ttu-id="92e51-113">결과</span><span class="sxs-lookup"><span data-stu-id="92e51-113">Result</span></span>  
+ <span data-ttu-id="92e51-114">경우 `expression1` 및 `expression2` 가 모두 숫자인 경우 결과 산술 합계입니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-114">If `expression1` and `expression2` are both numeric, the result is their arithmetic sum.</span></span>  
   
- `expression2`가 없는 경우 `+` 연산자는 식의 변경되지 않은 값에 대한 *단항* 같음 연산자입니다.  이 경우 `expression1`을 해당 부호와 함께 연산하므로 `expression1`이 음수인 경우 결과는 음수입니다.  
+ <span data-ttu-id="92e51-115">경우 `expression2` 없어진 경우는 `+` 연산자는는 *단항* 식의 변경 되지 않은 값에 대 한 같음 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-115">If `expression2` is absent, the `+` operator is the *unary* identity operator for the unchanged value of an expression.</span></span> <span data-ttu-id="92e51-116">이러한 관점에서 작업의 부호를 포함 시킬 이루어져 `expression1`이므로 결과 음수 경우 `expression1` 음수입니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-116">In this sense, the operation consists of retaining the sign of `expression1`, so the result is negative if `expression1` is negative.</span></span>  
   
- `expression1`과 `expression2`가 모두 문자열인 경우 결과는 해당 값을 연결한 것입니다.  
+ <span data-ttu-id="92e51-117">경우 `expression1` 및 `expression2` 은 모두 문자열 결과 해당 값의 연결 합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-117">If `expression1` and `expression2` are both strings, the result is the concatenation of their values.</span></span>  
   
- `expression1`과 `expression2`가 숫자와 문자열의 조합인 경우 수행할 작업은 해당 형식과 내용 및 [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md) 설정에 따라 다릅니다.  자세한 내용은 "설명" 부분의 표를 참조하십시오.  
+ <span data-ttu-id="92e51-118">경우 `expression1` 및 `expression2` 는 혼합된 형식 중 해당 형식, 내용 및의 설정에 따라 다른 동작이 수행 된 [Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-118">If `expression1` and `expression2` are of mixed types, the action taken depends on their types, their contents, and the setting of the [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md).</span></span> <span data-ttu-id="92e51-119">자세한 내용은 "주의"에서 테이블을 참조 하십시오.</span><span class="sxs-lookup"><span data-stu-id="92e51-119">For more information, see the tables in "Remarks."</span></span>  
   
-## 지원 형식  
- 부호 없는 형식, 부동 소수점 형식, `Decimal`, `String`을 비롯한 모든 숫자 형식입니다.  
+## <a name="supported-types"></a><span data-ttu-id="92e51-120">지원 형식</span><span class="sxs-lookup"><span data-stu-id="92e51-120">Supported Types</span></span>  
+ <span data-ttu-id="92e51-121">부호 없는 및 부동 소수점 형식을 포함 한 모든 숫자 형식 및 `Decimal`, 및 `String`합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-121">All numeric types, including the unsigned and floating-point types and `Decimal`, and `String`.</span></span>  
   
-## 설명  
- 일반적으로 `+`는 산술 더하기를 수행하고 두 식이 모두 문자열인 경우에만 식을 연결합니다.  
+## <a name="remarks"></a><span data-ttu-id="92e51-122">설명</span><span class="sxs-lookup"><span data-stu-id="92e51-122">Remarks</span></span>  
+ <span data-ttu-id="92e51-123">일반적으로 `+` 산술 더하기를 수행 하 고 모두 두 식이 문자열인 경우에 연결 합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-123">In general, `+` performs arithmetic addition when possible, and concatenates only when both expressions are strings.</span></span>  
   
- 두 식이 모두 `Object`가 아닌 경우 Visual Basic에서는 다음과 같은 작업을 수행합니다.  
+ <span data-ttu-id="92e51-124">두 식 모두 하는 경우는 `Object`, Visual Basic은 다음 작업을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-124">If neither expression is an `Object`, Visual Basic takes the following actions.</span></span>  
   
-|||  
-|-|-|  
-|식의 데이터 형식|컴파일러 작업|  
-|두 식이 모두 숫자 데이터 형식\(`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single` 또는 `Double`\)인 경우|더합니다.  결과 데이터 형식은 `expression1`과 `expression2`의 데이터 형식에 적합한 숫자 형식입니다.  [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)에서 "정수 연산" 표를 참조하십시오.|  
-|두 식이 모두 `String` 형식인 경우|연결합니다.|  
-|한 식은 숫자 데이터 형식이고 다른 식은 문자열인 경우|`Option Strict`가 `On`으로 설정된 경우 컴파일러 오류가 발생합니다.<br /><br /> `Option Strict`가 `Off`로 설정된 경우 `String`을 `Double`로 암시적으로 변환한 다음 더합니다.<br /><br /> `String`을 `Double`로 변환할 수 없으면 <xref:System.InvalidCastException> 예외가 throw됩니다.|  
-|한 식은 숫자 데이터 형식이고 다른 식은 [Nothing](../../../visual-basic/language-reference/nothing.md)인 경우|`Nothing` 값은 0으로 하고 더합니다.|  
-|한 식은 문자열이고 다른 식은 `Nothing`인 경우|`Nothing` 값은 ""로 하고 연결합니다.|  
+|<span data-ttu-id="92e51-125">식의 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="92e51-125">Data types of expressions</span></span>|<span data-ttu-id="92e51-126">컴파일러 작업</span><span class="sxs-lookup"><span data-stu-id="92e51-126">Action by compiler</span></span>|  
+|---|---|  
+|<span data-ttu-id="92e51-127">두 식이 모두 숫자 데이터 형식 (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, 또는 `Double`)</span><span class="sxs-lookup"><span data-stu-id="92e51-127">Both expressions are numeric data types (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, or `Double`)</span></span>|<span data-ttu-id="92e51-128">추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-128">Add.</span></span> <span data-ttu-id="92e51-129">결과 데이터 형식이 데이터 형식에 대 한 적합 한 숫자 형식 `expression1` 및 `expression2`합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-129">The result data type is a numeric type appropriate for the data types of `expression1` and `expression2`.</span></span> <span data-ttu-id="92e51-130">"정수 연산" 표를 참조 하십시오. [연산자 결과의 데이터 형식을](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-130">See the "Integer Arithmetic" tables in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).</span></span>|  
+|<span data-ttu-id="92e51-131">형식의 두 식이 모두`String`</span><span class="sxs-lookup"><span data-stu-id="92e51-131">Both expressions are of type `String`</span></span>|<span data-ttu-id="92e51-132">연결 합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-132">Concatenate.</span></span>|  
+|<span data-ttu-id="92e51-133">한 식이 숫자 데이터 형식이 며 다른 하나는 문자열</span><span class="sxs-lookup"><span data-stu-id="92e51-133">One expression is a numeric data type and the other is a string</span></span>|<span data-ttu-id="92e51-134">경우 `Option Strict` 은 `On`, 컴파일러 오류가 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-134">If `Option Strict` is `On`, then generate a compiler error.</span></span><br /><br /> <span data-ttu-id="92e51-135">경우 `Option Strict` 은 `Off`, 암시적으로 변환의 `String` 를 `Double` 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-135">If `Option Strict` is `Off`, then implicitly convert the `String` to `Double` and add.</span></span><br /><br /> <span data-ttu-id="92e51-136">경우는 `String` 변환할 수 없습니다 `Double`, 다음 throw는 <xref:System.InvalidCastException> 예외입니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-136">If the `String` cannot be converted to `Double`, then throw an <xref:System.InvalidCastException> exception.</span></span>|  
+|<span data-ttu-id="92e51-137">한 식이 숫자 데이터 형식이 며 다른 하나는 [Nothing](../../../visual-basic/language-reference/nothing.md)</span><span class="sxs-lookup"><span data-stu-id="92e51-137">One expression is a numeric data type, and the other is [Nothing](../../../visual-basic/language-reference/nothing.md)</span></span>|<span data-ttu-id="92e51-138">에 추가 된 `Nothing` 값은 0으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-138">Add, with `Nothing` valued as zero.</span></span>|  
+|<span data-ttu-id="92e51-139">한 식은 문자열을 하 고 다른 하나는`Nothing`</span><span class="sxs-lookup"><span data-stu-id="92e51-139">One expression is a string, and the other is `Nothing`</span></span>|<span data-ttu-id="92e51-140">와 concatenate `Nothing` 값으로 ""입니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-140">Concatenate, with `Nothing` valued as "".</span></span>|  
   
- 식 하나가 `Object` 식인 경우 Visual Basic에서는 다음과 같은 작업을 수행합니다.  
+ <span data-ttu-id="92e51-141">하나의 식이 `Object` Visual Basic 식에서 다음 동작을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-141">If one expression is an `Object` expression, Visual Basic takes the following actions.</span></span>  
   
-|||  
-|-|-|  
-|식의 데이터 형식|컴파일러 작업|  
-|`Object` 식이 숫자 값을 사용하고 다른 식이 숫자 데이터 형식인 경우|`Option Strict`가 `On`으로 설정된 경우 컴파일러 오류가 발생합니다.<br /><br /> `Option Strict`가 `Off`로 설정된 경우 더합니다.|  
-|`Object` 식이 숫자 값을 사용하고 다른 식이 `String` 형식인 경우|`Option Strict`가 `On`으로 설정된 경우 컴파일러 오류가 발생합니다.<br /><br /> `Option Strict`가 `Off`로 설정된 경우 `String`을 `Double`로 암시적으로 변환한 다음 더합니다.<br /><br /> `String`을 `Double`로 변환할 수 없으면 <xref:System.InvalidCastException> 예외가 throw됩니다.|  
-|`Object` 식이 문자열을 사용하고 다른 식이 숫자 데이터 형식인 경우|`Option Strict`가 `On`으로 설정된 경우 컴파일러 오류가 발생합니다.<br /><br /> `Option Strict`가 `Off`로 설정된 경우 문자열 `Object`를 `Double`로 암시적으로 변환한 다음 더합니다.<br /><br /> 문자열 `Object`를 `Double`로 변환할 수 없으면 <xref:System.InvalidCastException> 예외가 throw됩니다.|  
-|`Object`식이 문자열을 사용하고 다른 식이 `String` 형식인 경우|`Option Strict`가 `On`으로 설정된 경우 컴파일러 오류가 발생합니다.<br /><br /> `Option Strict`가 `Off`로 설정된 경우 `Object`를 `String`으로 암시적으로 변환한 다음 연결합니다.|  
+|<span data-ttu-id="92e51-142">식의 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="92e51-142">Data types of expressions</span></span>|<span data-ttu-id="92e51-143">컴파일러 작업</span><span class="sxs-lookup"><span data-stu-id="92e51-143">Action by compiler</span></span>|  
+|---|---|  
+|<span data-ttu-id="92e51-144">`Object`식이 숫자 값이 고 다른 숫자 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="92e51-144">`Object` expression holds a numeric value and the other is a numeric data type</span></span>|<span data-ttu-id="92e51-145">경우 `Option Strict` 은 `On`, 컴파일러 오류가 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-145">If `Option Strict` is `On`, then generate a compiler error.</span></span><br /><br /> <span data-ttu-id="92e51-146">경우 `Option Strict` 은 `Off`를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-146">If `Option Strict` is `Off`, then add.</span></span>|  
+|<span data-ttu-id="92e51-147">`Object`식이 숫자 값이 고 다른 형식의`String`</span><span class="sxs-lookup"><span data-stu-id="92e51-147">`Object` expression holds a numeric value and the other is of type `String`</span></span>|<span data-ttu-id="92e51-148">경우 `Option Strict` 은 `On`, 컴파일러 오류가 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-148">If `Option Strict` is `On`, then generate a compiler error.</span></span><br /><br /> <span data-ttu-id="92e51-149">경우 `Option Strict` 은 `Off`, 암시적으로 변환의 `String` 를 `Double` 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-149">If `Option Strict` is `Off`, then implicitly convert the `String` to `Double` and add.</span></span><br /><br /> <span data-ttu-id="92e51-150">경우는 `String` 변환할 수 없습니다 `Double`, 다음 throw는 <xref:System.InvalidCastException> 예외입니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-150">If the `String` cannot be converted to `Double`, then throw an <xref:System.InvalidCastException> exception.</span></span>|  
+|<span data-ttu-id="92e51-151">`Object`식이 문자열 고 다른 하나는 숫자 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="92e51-151">`Object` expression holds a string and the other is a numeric data type</span></span>|<span data-ttu-id="92e51-152">경우 `Option Strict` 은 `On`, 컴파일러 오류가 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-152">If `Option Strict` is `On`, then generate a compiler error.</span></span><br /><br /> <span data-ttu-id="92e51-153">경우 `Option Strict` 은 `Off`, 다음 문자열을 암시적으로 변환 `Object` 를 `Double` 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-153">If `Option Strict` is `Off`, then implicitly convert the string `Object` to `Double` and add.</span></span><br /><br /> <span data-ttu-id="92e51-154">경우 문자열 `Object` 변환할 수 없습니다 `Double`, 다음 throw는 <xref:System.InvalidCastException> 예외입니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-154">If the string `Object` cannot be converted to `Double`, then throw an <xref:System.InvalidCastException> exception.</span></span>|  
+|<span data-ttu-id="92e51-155">`Object`식이 문자열 하 고 다른 하나는 형식`String`</span><span class="sxs-lookup"><span data-stu-id="92e51-155">`Object` expression holds a string and the other is of type `String`</span></span>|<span data-ttu-id="92e51-156">경우 `Option Strict` 은 `On`, 컴파일러 오류가 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-156">If `Option Strict` is `On`, then generate a compiler error.</span></span><br /><br /> <span data-ttu-id="92e51-157">경우 `Option Strict` 은 `Off`, 암시적으로 변환할 `Object` 를 `String` 을 연결 합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-157">If `Option Strict` is `Off`, then implicitly convert `Object` to `String` and concatenate.</span></span>|  
   
- 두 식이 모두 `Object` 식인 경우 Visual Basic에서는 다음과 같은 작업을 수행합니다\(`Option Strict Off`에만 해당\).  
+ <span data-ttu-id="92e51-158">두 식이 모두 `Object` 식, Visual Basic은 다음 작업을 수행 (`Option Strict Off` 만).</span><span class="sxs-lookup"><span data-stu-id="92e51-158">If both expressions are `Object` expressions, Visual Basic takes the following actions (`Option Strict Off` only).</span></span>  
   
-|||  
-|-|-|  
-|식의 데이터 형식|컴파일러 작업|  
-|두 `Object` 식이 모두 숫자 값을 사용하는 경우|더합니다.|  
-|두 `Object` 식이 모두 `String` 형식인 경우|연결합니다.|  
-|한 `Object` 식이 숫자 값을 사용하고 다른 식이 문자열을 사용하는 경우|문자열 `Object`를 `Double`로 암시적으로 변환한 다음 더합니다.<br /><br /> 문자열 `Object`를 숫자 값으로 변환할 수 없는 경우 <xref:System.InvalidCastException> 예외가 throw됩니다.|  
+|<span data-ttu-id="92e51-159">식의 데이터 형식</span><span class="sxs-lookup"><span data-stu-id="92e51-159">Data types of expressions</span></span>|<span data-ttu-id="92e51-160">컴파일러 작업</span><span class="sxs-lookup"><span data-stu-id="92e51-160">Action by compiler</span></span>|  
+|---|---|  
+|<span data-ttu-id="92e51-161">둘 다 `Object` 숫자 값을 사용 하는 식</span><span class="sxs-lookup"><span data-stu-id="92e51-161">Both `Object` expressions hold numeric values</span></span>|<span data-ttu-id="92e51-162">추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-162">Add.</span></span>|  
+|<span data-ttu-id="92e51-163">둘 다 `Object` 식이란 형식의`String`</span><span class="sxs-lookup"><span data-stu-id="92e51-163">Both `Object` expressions are of type `String`</span></span>|<span data-ttu-id="92e51-164">연결 합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-164">Concatenate.</span></span>|  
+|<span data-ttu-id="92e51-165">하나의 `Object` 식이 숫자 값 및 다른 식이 문자열</span><span class="sxs-lookup"><span data-stu-id="92e51-165">One `Object` expression holds a numeric value and the other holds a string</span></span>|<span data-ttu-id="92e51-166">문자열을 암시적으로 변환할 `Object` 를 `Double` 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-166">Implicitly convert the string `Object` to `Double` and add.</span></span><br /><br /> <span data-ttu-id="92e51-167">경우 문자열 `Object` throw 한 다음 숫자 값을 변환할 수 없습니다는 <xref:System.InvalidCastException> 예외입니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-167">If the string `Object` cannot be converted to a numeric value, then throw an <xref:System.InvalidCastException> exception.</span></span>|  
   
- `Object` 식이 [Nothing](../../../visual-basic/language-reference/nothing.md) 또는 <xref:System.DBNull>로 계산되는 경우 `+` 연산자는 해당 식을 값이 ""인 `String`으로 간주합니다.  
+ <span data-ttu-id="92e51-168">경우 `Object` 식이 [Nothing](../../../visual-basic/language-reference/nothing.md) 또는 <xref:System.DBNull>, `+` 연산자도 처리 한 `String` 값이 ""입니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-168">If either `Object` expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md) or <xref:System.DBNull>, the `+` operator treats it as a `String` with a value of "".</span></span>  
   
 > [!NOTE]
->  `+` 연산자를 사용하는 경우 더하기 또는 문자열 연결 연산의 발생 여부를 확인할 수 없습니다.  그러나 `&` 연산자를 사용하여 연결하면 이러한 모호성을 제거할 수 있고 자체 문서 작성 코드를 사용할 수 있습니다.  
+>  <span data-ttu-id="92e51-169">사용 하는 경우는 `+` 연산자, 더하기 또는 문자열 연결 발생 여부를 확인할 못할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-169">When you use the `+` operator, you might not be able to determine whether addition or string concatenation will occur.</span></span> <span data-ttu-id="92e51-170">사용 된 `&` 연결에 대 한 연산자 모호성을 제거 하 고 자동 문서화 코드를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-170">Use the `&` operator for concatenation to eliminate ambiguity and to provide self-documenting code.</span></span>  
   
-## 오버로딩  
- `+` 연산자는 필요에 따라 *오버로드*할 수 있습니다. 즉, 피연산자의 형식이 특정 클래스 또는 구조체인 경우 해당 클래스나 구조체에서 이 연산자의 동작을 다시 정의할 수 있습니다.  코드에서 이러한 클래스나 구조체에 대해 이 연산자를 사용할 때는 다시 정의된 동작을 알고 있어야 합니다.  자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)를 참조하십시오.  
+## <a name="overloading"></a><span data-ttu-id="92e51-171">오버로딩</span><span class="sxs-lookup"><span data-stu-id="92e51-171">Overloading</span></span>  
+ <span data-ttu-id="92e51-172">`+` 연산자 될 수 있습니다 *오버 로드 된*, 클래스 또는 구조체 수 할의 동작에 해당 클래스 또는 구조체의 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-172">The `+` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="92e51-173">이 연산자를 사용 하 여 이러한 클래스나 구조체에는 코드를 다시 정의 된 동작을 이해 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-173">If your code uses this operator on such a class or structure, be sure you understand its redefined behavior.</span></span> <span data-ttu-id="92e51-174">자세한 내용은 참조 [연산자 프로시저](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-174">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## 예제  
- 다음 예제에서는 `+` 연산자를 사용하여 숫자를 더합니다.  피연산자가 모두 숫자인 경우 Visual Basic에서는 산술 결과를 계산합니다.  산술 결과는 두 피연산자의 합계로 표시됩니다.  
+## <a name="example"></a><span data-ttu-id="92e51-175">예제</span><span class="sxs-lookup"><span data-stu-id="92e51-175">Example</span></span>  
+ <span data-ttu-id="92e51-176">다음 예제에서는 `+` 덧셈 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-176">The following example uses the `+` operator to add numbers.</span></span> <span data-ttu-id="92e51-177">피연산자가 모두 숫자, Visual Basic 산술 결과 계산 합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-177">If the operands are both numeric, Visual Basic computes the arithmetic result.</span></span> <span data-ttu-id="92e51-178">산술 연산 결과 두 개의 피연산자의 합계를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-178">The arithmetic result represents the sum of the two operands.</span></span>  
   
  [!code-vb[VbVbalrOperators#6](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_1.vb)]  
   
- 또한 `+` 연산자를 사용하여 문자열을 연결할 수도 있습니다.  피연산자가 모두 문자열인 경우 Visual Basic에서는 두 문자열을 연결합니다.  연결 결과는 두 피연산자의 내용을 서로 연결한 단일 문자열로 표시됩니다.  
+ <span data-ttu-id="92e51-179">사용할 수도 있습니다는 `+` 문자열을 연결 하는 연산자입니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-179">You can also use the `+` operator to concatenate strings.</span></span> <span data-ttu-id="92e51-180">피연산자가 모두 문자열, Visual Basic로 연결 합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-180">If the operands are both strings, Visual Basic concatenates them.</span></span> <span data-ttu-id="92e51-181">연결 결과 두 피연산자의 내용을 다른 구성 된 단일 문자열을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-181">The concatenation result represents a single string consisting of the contents of the two operands one after the other.</span></span>  
   
- 피연산자가 혼합 형식인 경우 결과는 [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)의 설정에 따라 다릅니다.  다음 예제에서는 `Option Strict`가 `On`으로 설정된 경우의 결과를 보여 줍니다.  
+ <span data-ttu-id="92e51-182">결과의 설정에 따라 피연산자가 혼합 된 형식의 경우는 [Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-182">If the operands are of mixed types, the result depends on the setting of the [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md).</span></span> <span data-ttu-id="92e51-183">다음 예제에서는 결과 때 `Option Strict` 은 `On`합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-183">The following example illustrates the result when `Option Strict` is `On`.</span></span>  
   
  [!code-vb[VbVbalrOperators#53](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_2.vb)]  
   
  [!code-vb[VbVbalrOperators#50](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_3.vb)]  
 [!code-vb[VbVbalrOperators#51](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_4.vb)]  
   
- 다음 예제에서는 `Option Strict`가 `Off`로 설정된 경우의 결과를 보여 줍니다.  
+ <span data-ttu-id="92e51-184">다음 예제에서는 결과 때 `Option Strict` 은 `Off`합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-184">The following example illustrates the result when `Option Strict` is `Off`.</span></span>  
   
  [!code-vb[VbVbalrOperators#54](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_5.vb)]  
   
  [!code-vb[VbVbalrOperators#50](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_3.vb)]  
 [!code-vb[VbVbalrOperators#52](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/addition-operator_6.vb)]  
   
- 모호성을 제거하려면 연결에 `+` 대신 `&` 연산자를 사용해야 합니다.  
+ <span data-ttu-id="92e51-185">혼동을 피하려면 사용할지는 `&` 연산자 대신 `+` 을 연결 합니다.</span><span class="sxs-lookup"><span data-stu-id="92e51-185">To eliminate ambiguity, you should use the `&` operator instead of `+` for concatenation.</span></span>  
   
-## 참고 항목  
- [& Operator](../../../visual-basic/language-reference/operators/concatenation-operator.md)   
- [Concatenation Operators](../../../visual-basic/language-reference/operators/concatenation-operators.md)   
- [Arithmetic Operators](../../../visual-basic/language-reference/operators/arithmetic-operators.md)   
- [Operators Listed by Functionality](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)   
- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)   
- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)   
- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a><span data-ttu-id="92e51-186">참고 항목</span><span class="sxs-lookup"><span data-stu-id="92e51-186">See Also</span></span>  
+ [<span data-ttu-id="92e51-187">& 연산자</span><span class="sxs-lookup"><span data-stu-id="92e51-187">& Operator</span></span>](../../../visual-basic/language-reference/operators/concatenation-operator.md)  
+ [<span data-ttu-id="92e51-188">연결 연산자</span><span class="sxs-lookup"><span data-stu-id="92e51-188">Concatenation Operators</span></span>](../../../visual-basic/language-reference/operators/concatenation-operators.md)  
+ [<span data-ttu-id="92e51-189">산술 연산자</span><span class="sxs-lookup"><span data-stu-id="92e51-189">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
+ [<span data-ttu-id="92e51-190">기능별 연산자 목록</span><span class="sxs-lookup"><span data-stu-id="92e51-190">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
+ [<span data-ttu-id="92e51-191">Visual Basic에서의 연산자 우선 순위</span><span class="sxs-lookup"><span data-stu-id="92e51-191">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)  
+ [<span data-ttu-id="92e51-192">Visual Basic의 산술 연산자</span><span class="sxs-lookup"><span data-stu-id="92e51-192">Arithmetic Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)  
+ [<span data-ttu-id="92e51-193">Option Strict 문</span><span class="sxs-lookup"><span data-stu-id="92e51-193">Option Strict Statement</span></span>](../../../visual-basic/language-reference/statements/option-strict-statement.md)

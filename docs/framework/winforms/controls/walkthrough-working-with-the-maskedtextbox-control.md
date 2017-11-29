@@ -1,61 +1,65 @@
 ---
-title: "연습: MaskedTextBox 컨트롤 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "입력, 유효성을 보장하도록 제어"
-  - "MaskedTextBox 컨트롤[Windows Forms], 유효성 검사"
-  - "MaskedTextBox 컨트롤[Windows Forms], 연습"
-  - "텍스트, 입력할 컨트롤"
-  - "사용자 입력, 제어"
+title: "연습: MaskedTextBox 컨트롤 사용"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- input [Windows Forms], controlling to ensure validity
+- MaskedTextBox control [Windows Forms], walkthroughs
+- MaskedTextBox control [Windows Forms], validation
+- user input [Windows Forms], controlling
+- text [Windows Forms], controls for input
 ms.assetid: df60565e-5447-4110-92a6-be1f6ff5faa3
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 06b8ffd2bda9597198d94c99a785c59cc7cc052e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 연습: MaskedTextBox 컨트롤 사용
-이 연습에서 수행할 작업은 다음과 같습니다.  
+# <a name="walkthrough-working-with-the-maskedtextbox-control"></a><span data-ttu-id="be5c3-102">연습: MaskedTextBox 컨트롤 사용</span><span class="sxs-lookup"><span data-stu-id="be5c3-102">Walkthrough: Working with the MaskedTextBox Control</span></span>
+<span data-ttu-id="be5c3-103">이 연습에서 설명하는 작업은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="be5c3-103">Tasks illustrated in this walkthrough include:</span></span>  
   
--   <xref:System.Windows.Forms.MaskedTextBox> 컨트롤 초기화  
+-   <span data-ttu-id="be5c3-104">초기화는 <xref:System.Windows.Forms.MaskedTextBox> 컨트롤</span><span class="sxs-lookup"><span data-stu-id="be5c3-104">Initializing the <xref:System.Windows.Forms.MaskedTextBox> control</span></span>  
   
--   문자가 마스크에 맞지 않을 경우 <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> 이벤트 처리기를 사용하여 사용자에게 경고 보내기  
+-   <span data-ttu-id="be5c3-105">사용 하 여 <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> 이벤트 처리기를 사용자에 게 알리도록 마스크를 따르지 않는 한 문자</span><span class="sxs-lookup"><span data-stu-id="be5c3-105">Using the <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> event handler to alert the user when a character does not conform to the mask</span></span>  
   
--   <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> 속성에 형식을 할당한 다음 커밋하려는 값이 형식에 유효하지 않은 경우 <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> 이벤트 처리기를 사용하여 사용자에게 경고 보내기  
+-   <span data-ttu-id="be5c3-106">에 형식을 할당는 <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> 속성과 사용 하 여 <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> 커밋하려고 시도 하는 값 형식에 대해 유효 하지 않을 때 사용자에 게 알리도록 하려면 이벤트 처리기</span><span class="sxs-lookup"><span data-stu-id="be5c3-106">Assigning a type to the <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> property and using the <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> event handler to alert the user when the value they're attempting to commit is not valid for the type</span></span>  
   
-## 프로젝트 만들기 및 컨트롤 추가  
+## <a name="creating-the-project-and-adding-a-control"></a><span data-ttu-id="be5c3-107">프로젝트를 만들고 컨트롤 추가</span><span class="sxs-lookup"><span data-stu-id="be5c3-107">Creating the Project and Adding a Control</span></span>  
   
-#### MaskedTextBox 컨트롤을 폼에 추가하려면  
+#### <a name="to-add-a-maskedtextbox-control-to-your-form"></a><span data-ttu-id="be5c3-108">MaskedTextBox 컨트롤을 폼에 추가 하려면</span><span class="sxs-lookup"><span data-stu-id="be5c3-108">To add a MaskedTextBox control to your form</span></span>  
   
-1.  <xref:System.Windows.Forms.MaskedTextBox> 컨트롤을 배치할 폼을 엽니다.  
+1.  <span data-ttu-id="be5c3-109">배치 하려는 양식을 엽니다는 <xref:System.Windows.Forms.MaskedTextBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="be5c3-109">Open the form on which you want to place the <xref:System.Windows.Forms.MaskedTextBox> control.</span></span>  
   
-2.  **도구 상자**에서 <xref:System.Windows.Forms.MaskedTextBox> 컨트롤을 폼으로 끌어 옵니다.  
+2.  <span data-ttu-id="be5c3-110">끌어서는 <xref:System.Windows.Forms.MaskedTextBox> 에서 제어는 **도구 상자** 양식에 합니다.</span><span class="sxs-lookup"><span data-stu-id="be5c3-110">Drag a <xref:System.Windows.Forms.MaskedTextBox> control from the **Toolbox** to your form.</span></span>  
   
-3.  컨트롤을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  **속성** 창에서 **마스크** 속성을 선택한 다음 속성 이름 옆의 **...**\(줄임표\) 단추를  클릭합니다.  
+3.  <span data-ttu-id="be5c3-111">컨트롤을 마우스 오른쪽 단추로 클릭 하 고 선택 **속성**합니다.</span><span class="sxs-lookup"><span data-stu-id="be5c3-111">Right-click the control and choose **Properties**.</span></span> <span data-ttu-id="be5c3-112">에 **속성** 창에서는 **마스크** 속성을 클릭은 **...**  속성 이름 옆에 있는 (줄임표) 단추입니다.</span><span class="sxs-lookup"><span data-stu-id="be5c3-112">In the **Properties** window, select the **Mask** property and click the **...** (ellipsis) button next to the property name.</span></span>  
   
-4.  **입력 마스크** 대화 상자에서 **간단한 날짜** 마스크를 선택하고 **확인**을 클릭합니다.  
+4.  <span data-ttu-id="be5c3-113">에 **입력 마스크** 대화 상자는 **간단한 날짜** 마스크 하 고 클릭 **확인**합니다.</span><span class="sxs-lookup"><span data-stu-id="be5c3-113">In the **Input Mask** dialog box, select the **Short Date** mask and click **OK**.</span></span>  
   
-5.  **속성** 창에서 <xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A> 속성을 `true`로 설정합니다.  이 속성은 사용자가 마스크 정의에 위반되는 문자를 입력할 때마다 짧은 경고음을 울립니다.  
+5.  <span data-ttu-id="be5c3-114">에 **속성** 창 집합은 <xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A> 속성을 `true`합니다.</span><span class="sxs-lookup"><span data-stu-id="be5c3-114">In the **Properties** window set the <xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A> property to `true`.</span></span> <span data-ttu-id="be5c3-115">이 속성을 사용자가 마스크 정의 위반 하는 문자를 입력할 때마다 울릴 짧은 경고음을 하면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="be5c3-115">This property causes a short beep to sound every time the user attempts to input a character that violates the mask definition.</span></span>  
   
- Mask 속성이 지원하는 문자에 대한 요약은 <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> 속성의 설명 부분을 참조하십시오.  
+ <span data-ttu-id="be5c3-116">마스크 속성이 지 원하는 문자 요약의 설명 섹션을 참조 하십시오.는 <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="be5c3-116">For a summary of the characters that the Mask property supports, see the Remarks section of the <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property.</span></span>  
   
-## 사용자에게 입력 오류 알림  
+## <a name="alert-the-user-to-input-errors"></a><span data-ttu-id="be5c3-117">사용자 입력 오류를 경으십시오</span><span class="sxs-lookup"><span data-stu-id="be5c3-117">Alert the User to Input Errors</span></span>  
   
-#### 거부된 마스크 입력에 대한 풍선 팁 추가  
+#### <a name="add-a-balloon-tip-for-rejected-mask-input"></a><span data-ttu-id="be5c3-118">거부 된 마스크 입력에 대 한 풍선 설명을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="be5c3-118">Add a balloon tip for rejected mask input</span></span>  
   
-1.  **도구 상자**로 돌아와서 <xref:System.Windows.Forms.ToolTip>을 폼에 추가합니다.  
+1.  <span data-ttu-id="be5c3-119">으로 돌아와서는 **도구 상자** 추가 <xref:System.Windows.Forms.ToolTip> 양식에 합니다.</span><span class="sxs-lookup"><span data-stu-id="be5c3-119">Return to the **Toolbox** and add a <xref:System.Windows.Forms.ToolTip> to your form.</span></span>  
   
-2.  입력 오류가 발생할 때 <xref:System.Windows.Forms.ToolTip>을 발생시키는 <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> 이벤트 처리기를 만듭니다.  풍선 팁은 5초 동안 또는 사용자가 풍선 팁을 클릭할 때까지 표시됩니다.  
+2.  <span data-ttu-id="be5c3-120">에 대 한 이벤트 처리기를 만들고는 <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> 이벤트를 발생 시키는 <xref:System.Windows.Forms.ToolTip> 입력된 오류가 발생할 경우.</span><span class="sxs-lookup"><span data-stu-id="be5c3-120">Create an event handler for the <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> event that raises the <xref:System.Windows.Forms.ToolTip> when an input error occurs.</span></span> <span data-ttu-id="be5c3-121">사용자가 클릭할 때까지 또는 5 초 동안 풍선 설명을 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="be5c3-121">The balloon tip remains visible for five seconds, or until the user clicks it.</span></span>  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -82,14 +86,13 @@ caps.handback.revision: 16
         ToolTip1.ToolTipTitle = "Invalid Input"  
         ToolTip1.Show("We're sorry, but only digits (0-9) are allowed in dates.", MaskedTextBox1, 5000)  
     End Sub  
-  
     ```  
   
-## 사용자에게 유효하지 않은 형식 알림  
+## <a name="alert-the-user-to-a-type-that-is-not-valid"></a><span data-ttu-id="be5c3-122">유효 하지 않은 형식에 다음과 같은 경으십시오</span><span class="sxs-lookup"><span data-stu-id="be5c3-122">Alert the User to a Type that Is Not Valid</span></span>  
   
-#### 잘못된 데이터 형식에 대한 풍선 팁 추가  
+#### <a name="add-a-balloon-tip-for-invalid-data-types"></a><span data-ttu-id="be5c3-123">잘못 된 데이터 형식에 대 한 풍선 설명을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="be5c3-123">Add a balloon tip for invalid data types</span></span>  
   
-1.  폼의 <xref:System.Windows.Forms.Form.Load> 이벤트 처리기에서 <xref:System.DateTime> 형식을 나타내는 <xref:System.Type> 개체를 <xref:System.Windows.Forms.MaskedTextBox> 컨트롤의 <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> 속성에 할당합니다.  
+1.  <span data-ttu-id="be5c3-124">폼의 <xref:System.Windows.Forms.Form.Load> 이벤트 처리기를 할당 한 <xref:System.Type> 나타내는 개체는 <xref:System.DateTime> 에 입력는 <xref:System.Windows.Forms.MaskedTextBox> 컨트롤의 <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> 속성:</span><span class="sxs-lookup"><span data-stu-id="be5c3-124">In your form's <xref:System.Windows.Forms.Form.Load> event handler, assign a <xref:System.Type> object representing the <xref:System.DateTime> type to the <xref:System.Windows.Forms.MaskedTextBox> control's <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> property:</span></span>  
   
     ```csharp  
     private void Form1_Load(Object sender, EventArgs e)  
@@ -107,7 +110,7 @@ caps.handback.revision: 16
     End Sub  
     ```  
   
-2.  <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> 이벤트에 대한 이벤트 처리기를 추가합니다.  
+2.  <span data-ttu-id="be5c3-125"><xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> 이벤트에 대한 이벤트 처리기를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="be5c3-125">Add an event handler for the <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> event:</span></span>  
   
     ```csharp  
     public void maskedTextBox1_TypeValidationCompleted(object sender, TypeValidationEventArgs e)  
@@ -129,9 +132,8 @@ caps.handback.revision: 16
            e.Cancel = True  
         End If  
     End Sub  
-  
     ```  
   
-## 참고 항목  
- <xref:System.Windows.Forms.MaskedTextBox>   
- [MaskedTextBox 컨트롤](../../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="be5c3-126">참고 항목</span><span class="sxs-lookup"><span data-stu-id="be5c3-126">See Also</span></span>  
+ <xref:System.Windows.Forms.MaskedTextBox>  
+ [<span data-ttu-id="be5c3-127">MaskedTextBox 컨트롤</span><span class="sxs-lookup"><span data-stu-id="be5c3-127">MaskedTextBox Control</span></span>](../../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)

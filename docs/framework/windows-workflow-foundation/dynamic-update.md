@@ -1,47 +1,51 @@
 ---
-title: "동적 업데이트 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "동적 업데이트"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-caps.latest.revision: 5
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1d8aff19cc087cf4aea2befb7a39533422aeabd8
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# 동적 업데이트
-동적 업데이트는 워크플로 응용 프로그램 개발자가 지속형 워크플로 인스턴스의 워크플로 정의를 업데이트하기 위한 메커니즘을 제공합니다.  이를 통해 버그 수정 또는 새 요구 사항을 구현하거나 예기치 않은 변경 내용을 수용할 수 있습니다.  이 항목에서는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에 도입된 동적 업데이트 기능에 대해 간략하게 설명합니다.  
+# <a name="dynamic-update"></a><span data-ttu-id="068e5-102">동적 업데이트</span><span class="sxs-lookup"><span data-stu-id="068e5-102">Dynamic Update</span></span>
+<span data-ttu-id="068e5-103">동적 업데이트는 워크플로 응용 프로그램 개발자가 지속형 워크플로 인스턴스의 워크플로 정의를 업데이트하기 위한 메커니즘을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-103">Dynamic update provides a mechanism for workflow application developers to update the workflow definition of a persisted workflow instance.</span></span> <span data-ttu-id="068e5-104">이를 통해 버그 수정 또는 새 요구 사항을 구현하거나 예기치 않은 변경 내용을 수용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-104">This can be to implement a bug fix, new requirements, or to accommodate unexpected changes.</span></span> <span data-ttu-id="068e5-105">이 항목에서는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에 도입된 동적 업데이트 기능에 대해 간략하게 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-105">This topic provides an overview of the dynamic update functionality introduced in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].</span></span>  
   
-## 동적 업데이트  
- 지속형 워크플로 인스턴스에 동적 업데이트를 적용하려면 지속형 워크플로 인스턴스를 수정하여 필요한 변경 내용을 반영하는 방법을 설명하는 런타임 지침이 포함된 <xref:System.Activities.DynamicUpdate.DynamicUpdateMap>을 만듭니다.  업데이트 맵을 만든 후에는 원하는 지속형 워크플로 인스턴스에 이 업데이트 맵을 적용합니다.  동적 업데이트를 적용한 후에는 새로 업데이트한 워크플로 정의를 사용하여 워크플로 인스턴스를 다시 시작할 수 있습니다.  업데이트 맵을 만들어 적용하는 데 필요한 네 가지 단계는 다음과 같습니다.  
+## <a name="dynamic-update"></a><span data-ttu-id="068e5-106">동적 업데이트</span><span class="sxs-lookup"><span data-stu-id="068e5-106">Dynamic Update</span></span>  
+ <span data-ttu-id="068e5-107">지속형 워크플로 인스턴스에 동적 업데이트를 적용하려면 지속형 워크플로 인스턴스를 수정하여 필요한 변경 내용을 반영하는 방법을 설명하는 런타임 지침이 포함된 <xref:System.Activities.DynamicUpdate.DynamicUpdateMap>을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-107">To apply dynamic updates to a persisted workflow instance, a <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> is created that contains instructions for the runtime that describe how to modify the persisted workflow instance to reflect the desired changes.</span></span> <span data-ttu-id="068e5-108">업데이트 맵을 만든 후에는 원하는 지속형 워크플로 인스턴스에 이 업데이트 맵을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-108">Once the update map is created, it is applied to the desired persisted workflow instances.</span></span> <span data-ttu-id="068e5-109">동적 업데이트를 적용한 후에는 새로 업데이트한 워크플로 정의를 사용하여 워크플로 인스턴스를 다시 시작할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-109">Once the dynamic update is applied, the workflow instance may be resumed using the new updated workflow definition.</span></span> <span data-ttu-id="068e5-110">업데이트 맵을 만들어 적용하는 데 필요한 네 가지 단계는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-110">There are four steps required to create and apply an update map.</span></span>  
   
-1.  [워크플로 정의를 동적 업데이트할 수 있도록 준비합니다.](../../../docs/framework/windows-workflow-foundation//dynamic-update.md#Prepare)  
+1.  [<span data-ttu-id="068e5-111">동적 업데이트에 대 한 워크플로 정의 준비 합니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-111">Prepare the workflow definition for dynamic update</span></span>](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Prepare)  
   
-2.  [워크플로 정의를 업데이트하여 원하는 변경 내용을 반영합니다.](../../../docs/framework/windows-workflow-foundation//dynamic-update.md#Update)  
+2.  [<span data-ttu-id="068e5-112">원하는 변경 내용을 반영 하기 위해 워크플로 정의 업데이트 합니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-112">Update the workflow definition to reflect the desired changes</span></span>](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Update)  
   
-3.  [업데이트 맵을 만듭니다.](../../../docs/framework/windows-workflow-foundation//dynamic-update.md#Create)  
+3.  [<span data-ttu-id="068e5-113">업데이트 맵을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-113">Create the update map</span></span>](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Create)  
   
-4.  [원하는 지속형 워크플로 인스턴스에 업데이트 맵을 적용합니다.](../../../docs/framework/windows-workflow-foundation//dynamic-update.md#Apply)  
-  
-> [!NOTE]
->  업데이트 맵을 만드는 1~3단계와 업데이트를 적용하는 단계는 서로 독립적으로 수행할 수 있습니다.  일반적인 시나리오는 워크플로 개발자가 업데이트 맵을 오프라인으로 만든 다음 관리자가 나중에 업데이트를 적용하는 것입니다.  
-  
- 이 항목에서는 컴파일된 XAML 워크플로의 지속형 인스턴스에 새 활동을 추가하는 동적 업데이트 프로세스에 대해 간략하게 설명합니다.  
-  
-###  <a name="Prepare"></a> 워크플로 정의를 동적 업데이트할 수 있도록 준비합니다.  
- 동적 업데이트 프로세스의 첫 번째 단계는 원하는 워크플로 정의를 업데이트할 수 있도록 준비하는 것입니다.  이를 위해서는 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=fullName> 메서드를 호출하고 수정할 워크플로 정의를 전달합니다.  이 메서드는 유효성을 검사한 다음 나중에 수정된 워크플로 정의와 비교할 수 있도록 워크플로 트리에서 태그가 지정되어야 하는 공용 활동 및 변수와 같은 모든 개체를 식별합니다.  이 작업이 완료되면 워크플로 트리가 복제되어 원래 워크플로 정의에 연결됩니다.  업데이트 맵을 만들 때는 워크플로 정의의 업데이트 버전과 원래 워크플로 정의를 비교하여 그 차이에 따라 업데이트 맵이 생성됩니다.  
-  
- XAML 워크플로를 동적으로 업데이트할 수 있도록 준비하려면 해당 워크플로를 <xref:System.Activities.ActivityBuilder>에 로드한 후 <xref:System.Activities.ActivityBuilder>에 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=fullName>를 전달합니다.  
+4.  [<span data-ttu-id="068e5-114">원하는 지속형된 워크플로 인스턴스에 업데이트 맵을 적용합니다</span><span class="sxs-lookup"><span data-stu-id="068e5-114">Apply the update map to the desired persisted workflow instances</span></span>](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Apply)  
   
 > [!NOTE]
->  Serialize된 워크플로 및 <xref:System.Activities.ActivityBuilder> 작업에 대한 자세한 내용은 [워크플로 및 활동과 XAML 간 serialize](../../../docs/framework/windows-workflow-foundation//serializing-workflows-and-activities-to-and-from-xaml.md)를 참조하세요.  
+>  <span data-ttu-id="068e5-115">업데이트 맵을 만드는 1~3단계와 업데이트를 적용하는 단계는 서로 독립적으로 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-115">Note that steps 1 through 3, which cover the creation of the update map, may be performed independently of applying the update.</span></span> <span data-ttu-id="068e5-116">일반적인 시나리오는 워크플로 개발자가 업데이트 맵을 오프라인으로 만든 다음 관리자가 나중에 업데이트를 적용하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-116">A common scenario that that the workflow developer will create the update map offline, and then an administrator will apply the update at a later time.</span></span>  
   
- 다음 예제에서는 여러 자식 활동과 `MortgageWorkflow`로 구성된 <xref:System.Activities.Statements.Sequence> 정의를 <xref:System.Activities.ActivityBuilder>에 로드한 후 동적 업데이트를 준비합니다.  메서드가 반환한 후 <xref:System.Activities.ActivityBuilder>는 원래 워크플로 정의와 복사본이 포함되어 있습니다.  
+ <span data-ttu-id="068e5-117">이 항목에서는 컴파일된 XAML 워크플로의 지속형 인스턴스에 새 활동을 추가하는 동적 업데이트 프로세스에 대해 간략하게 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-117">This topic provides an overview of the dynamic update process of adding a new activity to a persisted instance of a compiled Xaml workflow.</span></span>  
+  
+###  <span data-ttu-id="068e5-118"><a name="Prepare"></a>동적 업데이트에 대 한 워크플로 정의 준비 합니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-118"><a name="Prepare"></a> Prepare the workflow definition for dynamic update</span></span>  
+ <span data-ttu-id="068e5-119">동적 업데이트 프로세스의 첫 번째 단계는 원하는 워크플로 정의를 업데이트할 수 있도록 준비하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-119">The first step in the dynamic update process is to prepare the desired workflow definition for update.</span></span> <span data-ttu-id="068e5-120">이를 위해서는 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> 메서드를 호출하고 수정할 워크플로 정의를 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-120">This is done by calling the <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> method and passing in the workflow definition to modify.</span></span> <span data-ttu-id="068e5-121">이 메서드는 유효성을 검사한 다음 나중에 수정된 워크플로 정의와 비교할 수 있도록 워크플로 트리에서 태그가 지정되어야 하는 공용 활동 및 변수와 같은 모든 개체를 식별합니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-121">This method validates and then walks the workflow tree to identify all of the objects such as public activities and variables that need to be tagged so they can be compared later with the modified workflow definition.</span></span> <span data-ttu-id="068e5-122">이 작업이 완료되면 워크플로 트리가 복제되어 원래 워크플로 정의에 연결됩니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-122">When this is complete, the workflow tree is cloned and attached to the original workflow definition.</span></span> <span data-ttu-id="068e5-123">업데이트 맵을 만들 때는 워크플로 정의의 업데이트 버전과 원래 워크플로 정의를 비교하여 그 차이에 따라 업데이트 맵이 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-123">When the update map is created, the updated version of the workflow definition is compared with the original workflow definition and the update map is generated based on the differences.</span></span>  
+  
+ <span data-ttu-id="068e5-124">XAML 워크플로를 동적으로 업데이트할 수 있도록 준비하려면 해당 워크플로를 <xref:System.Activities.ActivityBuilder>에 로드한 후 <xref:System.Activities.ActivityBuilder>에 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType>를 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-124">To prepare a Xaml workflow for dynamic update it may be loaded into an <xref:System.Activities.ActivityBuilder>, and then the <xref:System.Activities.ActivityBuilder> is passed into <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType>.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="068e5-125">Serialize 된 워크플로 작업에 대 한 자세한 내용은 및 <xref:System.Activities.ActivityBuilder>, 참조 [직렬화 워크플로 및 활동 xaml](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-125">For more information about working with serialized workflows and <xref:System.Activities.ActivityBuilder>, see [Serializing Workflows and Activities to and from XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).</span></span>  
+  
+ <span data-ttu-id="068e5-126">다음 예제에서는 여러 자식 활동과 `MortgageWorkflow`로 구성된 <xref:System.Activities.Statements.Sequence> 정의를 <xref:System.Activities.ActivityBuilder>에 로드한 후 동적 업데이트를 준비합니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-126">In the following example, a `MortgageWorkflow` definition (that consists of a <xref:System.Activities.Statements.Sequence> with several child activities) is loaded into an <xref:System.Activities.ActivityBuilder>, and then prepared for dynamic update.</span></span> <span data-ttu-id="068e5-127">메서드가 반환한 후 <xref:System.Activities.ActivityBuilder>는 원래 워크플로 정의와 복사본이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-127">After the method returns, the <xref:System.Activities.ActivityBuilder> contains the original workflow definition as well as a copy.</span></span>  
   
 ```csharp  
 // Load the MortgageWorkflow definition from Xaml into  
@@ -62,10 +66,10 @@ DynamicUpdateServices.PrepareForUpdate(ab);
 ```  
   
 > [!NOTE]
->  이 항목과 함께 제공되는 샘플 코드를 다운로드하려면 [동적 업데이트 샘플 코드](http://go.microsoft.com/fwlink/?LinkId=227905)를 참조하세요.  
+>  <span data-ttu-id="068e5-128">이 항목과 함께 제공 되는 샘플 코드를 다운로드 하려면 [동적 업데이트 샘플 코드](http://go.microsoft.com/fwlink/?LinkId=227905)합니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-128">To download the sample code that accompanies this topic, see [Dynamic Update sample code](http://go.microsoft.com/fwlink/?LinkId=227905).</span></span>  
   
-###  <a name="Update"></a> 워크플로 정의를 업데이트하여 원하는 변경 내용을 반영합니다.  
- 워크플로 정의를 업데이트할 준비가 되면 원하는 변경 작업을 수행할 수 있습니다.  활동 추가 또는 제거, 공용 변수 추가, 이동 또는 삭제, 인수 추가 또는 제거, 활동 대리자의 시그니처 변경 같은 작업을 수행할 수 있습니다.  실행 중인 활동을 제거하거나 실행 중인 대리자의 시그니처를 변경할 수는 없습니다.  이러한 변경 작업은 코드를 사용하거나 재호스트된 Workflow Designer를 사용하여 수행할 수 있습니다.  다음 예제에서는 이전 예제에서 사용한 `VerifyAppraisal`의 본문을 구성하는 Sequence에 사용자 지정 `MortgageWorkflow` 활동을 추가합니다.  
+###  <span data-ttu-id="068e5-129"><a name="Update"></a>원하는 변경 내용을 반영 하기 위해 워크플로 정의 업데이트 합니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-129"><a name="Update"></a> Update the workflow definition to reflect the desired changes</span></span>  
+ <span data-ttu-id="068e5-130">워크플로 정의를 업데이트할 준비가 되면 원하는 변경 작업을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-130">Once the workflow definition has been prepared for updating, the desired changes can be made.</span></span> <span data-ttu-id="068e5-131">활동 추가 또는 제거, 공용 변수 추가, 이동 또는 삭제, 인수 추가 또는 제거, 활동 대리자의 시그니처 변경 같은 작업을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-131">You can add or remove activities, add, move or delete public variables, add or remove arguments, and make changes to the signature of activity delegates.</span></span> <span data-ttu-id="068e5-132">실행 중인 활동을 제거하거나 실행 중인 대리자의 시그니처를 변경할 수는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-132">You cannot remove a running activity or change the signature of a running delegate.</span></span> <span data-ttu-id="068e5-133">이러한 변경 작업은 코드를 사용하거나 재호스트된 Workflow Designer를 사용하여 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-133">These changes may be made using code, or in a re-hosted workflow designer.</span></span> <span data-ttu-id="068e5-134">다음 예제에서는 이전 예제에서 사용한 `VerifyAppraisal`의 본문을 구성하는 Sequence에 사용자 지정 `MortgageWorkflow` 활동을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-134">In the following example, a custom `VerifyAppraisal` activity is added to the Sequence that makes up the body of the `MortgageWorkflow` from the previous example.</span></span>  
   
 ```csharp  
 // Make desired changes to the definition. In this example, we are  
@@ -82,15 +86,15 @@ Sequence s = ab.Implementation as Sequence;
 s.Activities.Insert(2, va);  
 ```  
   
-###  <a name="Create"></a> 업데이트 맵을 만듭니다.  
- 업데이트할 준비가 된 워크플로 정의를 수정한 후에는 업데이트 맵을 만들 수 있습니다.  동적 업데이트 맵을 만들려면 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=fullName> 메서드를 호출합니다.  이 메서드는 런타임에 새 워크플로 정의를 사용하여 지속형 워크플로 인스턴스를 로드하고 다시 시작할 수 있도록 런타임에 해당 인스턴스를 수정하는 데 필요한 정보가 포함된 <xref:System.Activities.DynamicUpdate.DynamicUpdateMap>을 반환합니다.  다음 예제에서는 이전 예제에서 수정된 `MortgageWorkflow` 정의에 대해 동적 맵을 만듭니다.  
+###  <span data-ttu-id="068e5-135"><a name="Create"></a>업데이트 맵을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-135"><a name="Create"></a> Create the update map</span></span>  
+ <span data-ttu-id="068e5-136">업데이트할 준비가 된 워크플로 정의를 수정한 후에는 업데이트 맵을 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-136">Once the workflow definition that was prepared for update has been modified, the update map can be created.</span></span> <span data-ttu-id="068e5-137">동적 업데이트 맵을 만들려면 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> 메서드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-137">To create a dynamic update map, the <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> method is invoked.</span></span> <span data-ttu-id="068e5-138">이 메서드는 런타임에 새 워크플로 정의를 사용하여 지속형 워크플로 인스턴스를 로드하고 다시 시작할 수 있도록 런타임에 해당 인스턴스를 수정하는 데 필요한 정보가 포함된 <xref:System.Activities.DynamicUpdate.DynamicUpdateMap>을 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-138">This returns a <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> that contains the information the runtime needs to modify a persisted workflow instance so that it may be loaded and resumed with the new workflow definition.</span></span> <span data-ttu-id="068e5-139">다음 예제에서는 이전 예제에서 수정된 `MortgageWorkflow` 정의에 대해 동적 맵을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-139">In the following example, a dynamic map is created for the modified `MortgageWorkflow` definition from the previous example.</span></span>  
   
 ```csharp  
 // Create the update map.  
 DynamicUpdateMap map = DynamicUpdateServices.CreateUpdateMap(ab);  
 ```  
   
- 이 업데이트 맵은 지속형 워크플로 인스턴스를 수정하는 데 즉시 사용할 수 있으며, 보다 일반적인 방법으로는 이를 저장했다가 나중에 업데이트를 적용할 수 있습니다.  업데이트 맵을 저장하는 한 가지 방법은 다음 예제와 같이 파일에 serialize하는 것입니다.  
+ <span data-ttu-id="068e5-140">이 업데이트 맵은 지속형 워크플로 인스턴스를 수정하는 데 즉시 사용할 수 있으며, 보다 일반적인 방법으로는 이를 저장했다가 나중에 업데이트를 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-140">This update map can immediately be used to modify persisted workflow instances, or more typically it can be saved and the updates applied later.</span></span> <span data-ttu-id="068e5-141">업데이트 맵을 저장하는 한 가지 방법은 다음 예제와 같이 파일에 serialize하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-141">One way to save the update map is to serialize it to a file, as shown in the following example.</span></span>  
   
 ```csharp  
 // Serialize the update map to a file.  
@@ -101,7 +105,7 @@ using (FileStream fs = System.IO.File.Open(@"C:\WorkflowDefitinions\MortgageWork
 }  
 ```  
   
- <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=fullName>이 결과를 반환하면 복제된 워크플로 정의와 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=fullName>에 대한 호출에 추가된 기타 동적 업데이트 정보는 제거되고, 수정된 워크플로 정의는 나중에 업데이트된 워크플로 인스턴스를 다시 시작할 때 사용할 수 있도록 저장될 수 있습니다.  다음 예제에서는 수정된 워크플로 정의를 `MortgageWorkflow_v2.xaml`에 저장합니다.  
+ <span data-ttu-id="068e5-142"><xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType>이 결과를 반환하면 복제된 워크플로 정의와 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType>에 대한 호출에 추가된 기타 동적 업데이트 정보는 제거되고, 수정된 워크플로 정의는 나중에 업데이트된 워크플로 인스턴스를 다시 시작할 때 사용할 수 있도록 저장될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-142">When <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> returns, the cloned workflow definition and other dynamic update information that was added in the call to <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> is removed, and the modified workflow definition is ready to be saved so that it can be used later when resuming updated workflow instances.</span></span> <span data-ttu-id="068e5-143">다음 예제에서는 수정된 워크플로 정의를 `MortgageWorkflow_v2.xaml`에 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-143">In the following example, the modified workflow definition is saved to `MortgageWorkflow_v2.xaml`.</span></span>  
   
 ```csharp  
 // Save the modified workflow definition.  
@@ -111,8 +115,8 @@ XamlServices.Save(xw, ab);
 sw.Close();  
 ```  
   
-###  <a name="Apply"></a> 원하는 지속형 워크플로 인스턴스에 업데이트 맵을 적용합니다.  
- 업데이트 맵을 만든 후 언제든지 업데이트 맵을 적용할 수 있습니다.  이 작업은 <xref:System.Activities.DynamicUpdate.DynamicUpdateMap>에서 반환된 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=fullName> 인스턴스를 사용하여 바로 수행하거나, 저장된 업데이트 맵 복사본을 사용하여 나중에 수행할 수 있습니다.  워크플로 인스턴스를 업데이트하려면 <xref:System.Activities.WorkflowApplicationInstance>를 사용하여 해당 인스턴스를 <xref:System.Activities.WorkflowApplication.GetInstance%2A?displayProperty=fullName>에 로드합니다.  다음으로 업데이트된 워크플로 정의 및 원하는 <xref:System.Activities.WorkflowApplication>를 사용하여 <xref:System.Activities.WorkflowIdentity>을 만듭니다.  이 <xref:System.Activities.WorkflowIdentity>는 원래 워크플로를 유지하는 데 사용된 것과 다를 수 있으며, 일반적으로 지속형 인스턴스가 수정되었음을 반영하기 위해 사용됩니다.  <xref:System.Activities.WorkflowApplication>을 만든 후에는 <xref:System.Activities.WorkflowApplication.Load%2A?displayProperty=fullName>을 사용하는 <xref:System.Activities.DynamicUpdate.DynamicUpdateMap>의 오버로드를 사용하여 이를 로드한 다음 <xref:System.Activities.WorkflowApplication.Unload%2A?displayProperty=fullName>를 호출하여 언로드합니다.  그러면 동적 업데이트가 적용되고 업데이트된 워크플로 인스턴스가 유지됩니다.  
+###  <span data-ttu-id="068e5-144"><a name="Apply"></a>원하는 지속형된 워크플로 인스턴스에 업데이트 맵을 적용합니다</span><span class="sxs-lookup"><span data-stu-id="068e5-144"><a name="Apply"></a> Apply the update map to the desired persisted workflow instances</span></span>  
+ <span data-ttu-id="068e5-145">업데이트 맵을 만든 후 언제든지 업데이트 맵을 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-145">Applying the update map can be done at any time after creating it.</span></span> <span data-ttu-id="068e5-146">이 작업은 <xref:System.Activities.DynamicUpdate.DynamicUpdateMap>에서 반환된 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> 인스턴스를 사용하여 바로 수행하거나, 저장된 업데이트 맵 복사본을 사용하여 나중에 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-146">It can be done right away using the <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> instance that was returned by <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType>, or it can be done later using a saved copy of the update map.</span></span> <span data-ttu-id="068e5-147">워크플로 인스턴스를 업데이트하려면 <xref:System.Activities.WorkflowApplicationInstance>를 사용하여 해당 인스턴스를 <xref:System.Activities.WorkflowApplication.GetInstance%2A?displayProperty=nameWithType>에 로드합니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-147">To update a workflow instance, load it into a <xref:System.Activities.WorkflowApplicationInstance> using <xref:System.Activities.WorkflowApplication.GetInstance%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="068e5-148">다음으로 업데이트된 워크플로 정의 및 원하는 <xref:System.Activities.WorkflowApplication>를 사용하여 <xref:System.Activities.WorkflowIdentity>을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-148">Next, create a <xref:System.Activities.WorkflowApplication> using the updated workflow definition, and the desired <xref:System.Activities.WorkflowIdentity>.</span></span> <span data-ttu-id="068e5-149">이 <xref:System.Activities.WorkflowIdentity>는 원래 워크플로를 유지하는 데 사용된 것과 다를 수 있으며, 일반적으로 지속형 인스턴스가 수정되었음을 반영하기 위해 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-149">This <xref:System.Activities.WorkflowIdentity> may be different than the one that was used to persist the original workflow, and typically is in order to reflect that the persisted instance has been modified.</span></span> <span data-ttu-id="068e5-150"><xref:System.Activities.WorkflowApplication>을 만든 후에는 <xref:System.Activities.WorkflowApplication.Load%2A?displayProperty=nameWithType>을 사용하는 <xref:System.Activities.DynamicUpdate.DynamicUpdateMap>의 오버로드를 사용하여 이를 로드한 다음 <xref:System.Activities.WorkflowApplication.Unload%2A?displayProperty=nameWithType>를 호출하여 언로드합니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-150">Once the <xref:System.Activities.WorkflowApplication> is created, it is loaded using the overload of <xref:System.Activities.WorkflowApplication.Load%2A?displayProperty=nameWithType> that takes a <xref:System.Activities.DynamicUpdate.DynamicUpdateMap>, and then unloaded with a call to <xref:System.Activities.WorkflowApplication.Unload%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="068e5-151">그러면 동적 업데이트가 적용되고 업데이트된 워크플로 인스턴스가 유지됩니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-151">This applies the dynamic update and persists the updated workflow instance.</span></span>  
   
 ```csharp  
 // Load the serialized update map.  
@@ -165,13 +169,13 @@ foreach (Guid id in ids)
 }  
 ```  
   
-### 업데이트된 워크플로 인스턴스 다시 시작  
- 동적 업데이트를 적용한 후에는 워크플로 인스턴스를 다시 시작할 수 있습니다.  이때 새로 업데이트된 정의와 <xref:System.Activities.WorkflowIdentity>를 사용해야 합니다.  
+### <a name="resuming-an-updated-workflow-instance"></a><span data-ttu-id="068e5-152">업데이트된 워크플로 인스턴스 다시 시작</span><span class="sxs-lookup"><span data-stu-id="068e5-152">Resuming an Updated Workflow Instance</span></span>  
+ <span data-ttu-id="068e5-153">동적 업데이트를 적용한 후에는 워크플로 인스턴스를 다시 시작할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-153">Once dynamic update has been applied, the workflow instance may be resumed.</span></span> <span data-ttu-id="068e5-154">이때 새로 업데이트된 정의와 <xref:System.Activities.WorkflowIdentity>를 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-154">Note that the new updated definition and <xref:System.Activities.WorkflowIdentity> must be used.</span></span>  
   
 > [!NOTE]
->  <xref:System.Activities.WorkflowApplication> 및 <xref:System.Activities.WorkflowIdentity> 작업에 대한 자세한 내용은 [WorkflowIdentity 및 버전 관리 사용](../../../docs/framework/windows-workflow-foundation//using-workflowidentity-and-versioning.md)을 참조하세요.  
+>  <span data-ttu-id="068e5-155">작업에 대 한 자세한 내용은 <xref:System.Activities.WorkflowApplication> 및 <xref:System.Activities.WorkflowIdentity>, 참조[및 버전 관리를 사용 하 여 WorkflowIdentity](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-155">For more information about working with <xref:System.Activities.WorkflowApplication> and <xref:System.Activities.WorkflowIdentity>, see[Using WorkflowIdentity and Versioning](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).</span></span>  
   
- 다음 예제에서는 이전 예제에서 컴파일된 `MortgageWorkflow_v1.1.xaml` 워크플로를 업데이트된 워크플로 정의를 사용하여 로드하고 다시 시작합니다.  
+ <span data-ttu-id="068e5-156">다음 예제에서는 이전 예제에서 컴파일된 `MortgageWorkflow_v1.1.xaml` 워크플로를 업데이트된 워크플로 정의를 사용하여 로드하고 다시 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-156">In the following example, the `MortgageWorkflow_v1.1.xaml` workflow from the previous example has been compiled, and is loaded and resumed using the updated workflow definition.</span></span>  
   
 ```csharp  
 // Load the persisted workflow instance using the updated workflow definition  
@@ -196,4 +200,4 @@ wfApp.Load(InstanceId);
 ```  
   
 > [!NOTE]
->  이 항목과 함께 제공되는 샘플 코드를 다운로드하려면 [동적 업데이트 샘플 코드](http://go.microsoft.com/fwlink/?LinkId=227905)를 참조하세요.
+>  <span data-ttu-id="068e5-157">이 항목과 함께 제공 되는 샘플 코드를 다운로드 하려면 [동적 업데이트 샘플 코드](http://go.microsoft.com/fwlink/?LinkId=227905)합니다.</span><span class="sxs-lookup"><span data-stu-id="068e5-157">To download the sample code that accompanies this topic, see [Dynamic Update sample code](http://go.microsoft.com/fwlink/?LinkId=227905).</span></span>

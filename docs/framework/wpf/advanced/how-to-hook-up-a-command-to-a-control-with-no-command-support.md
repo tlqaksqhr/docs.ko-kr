@@ -1,55 +1,61 @@
 ---
-title: "방법: 명령을 지원하지 않는 컨트롤에 명령 후크 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "클래스, 컨트롤, RoutedCommand 연결"
-  - "클래스, RoutedCommand, 컨트롤에 연결"
-  - "Control 클래스, RoutedCommand 연결"
-  - "RoutedCommand 클래스, 컨트롤에 연결"
+title: "방법: 명령을 지원하지 않는 컨트롤에 명령 후크"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Control class [WPF], attaching a RoutedCommand
+- classes [WPF], Control [WPF], attaching a RoutedCommand
+- RoutedCommand class [WPF], attaching to a Control
+- classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: dad08f64-700b-46fb-ad3f-fbfee95f0dfe
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6f38a6f900ee2b253708da4b63bdc2f474fa3ab1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 명령을 지원하지 않는 컨트롤에 명령 후크
-다음 예제에서는 명령을 기본적으로 지원하지 않는 <xref:System.Windows.Controls.Control>에 <xref:System.Windows.Input.RoutedCommand>를 후크하는 방법을 보여 줍니다.  여러 소스에 명령을 후크하는 방법을 보여 주는 전체 샘플은 [Create a Custom RoutedCommand 샘플](http://go.microsoft.com/fwlink/?LinkID=159980)을 참조하십시오.  
+# <a name="how-to-hook-up-a-command-to-a-control-with-no-command-support"></a><span data-ttu-id="46113-102">방법: 명령을 지원하지 않는 컨트롤에 명령 후크</span><span class="sxs-lookup"><span data-stu-id="46113-102">How to: Hook Up a Command to a Control with No Command Support</span></span>
+<span data-ttu-id="46113-103">후크 하는 방법을 보여 주는 다음 예제는 <xref:System.Windows.Input.RoutedCommand> 에 <xref:System.Windows.Controls.Control> 는 않는 하지 기본적으로 명령에 대 한 지원.</span><span class="sxs-lookup"><span data-stu-id="46113-103">The following example shows how to hook up a <xref:System.Windows.Input.RoutedCommand> to a <xref:System.Windows.Controls.Control> which does not have built in support for the command.</span></span>  <span data-ttu-id="46113-104">여러 소스에 명령을 후크하는 전체 샘플은 [Create a Custom RoutedCommand Sample](http://go.microsoft.com/fwlink/?LinkID=159980)(사용자 지정 RoutedCommand 만들기 샘플)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="46113-104">For a complete sample which hooks up commands to multiple sources, see the [Create a Custom RoutedCommand Sample](http://go.microsoft.com/fwlink/?LinkID=159980) sample.</span></span>  
   
-## 예제  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]은 응용 프로그램 프로그래머가 흔히 사용하는 일반 명령이 포함된 라이브러리를 제공합니다.  이 명령 라이브러리를 구성하는 클래스는 <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands> 및 <xref:System.Windows.Documents.EditingCommands>입니다.  
+## <a name="example"></a><span data-ttu-id="46113-105">예제</span><span class="sxs-lookup"><span data-stu-id="46113-105">Example</span></span>  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="46113-106">는 응용 프로그램 프로그래머가 자주 접하게 되는 공용 명령의 라이브러리를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="46113-106"> provides a library of common commands which application programmers encounter regularly.</span></span>  <span data-ttu-id="46113-107">클래스는 명령 라이브러리를 구성 하는: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, 및 <xref:System.Windows.Documents.EditingCommands>합니다.</span><span class="sxs-lookup"><span data-stu-id="46113-107">The classes which comprise the command library are: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, and <xref:System.Windows.Documents.EditingCommands>.</span></span>  
   
- 이러한 클래스를 구성하는 정적 <xref:System.Windows.Input.RoutedCommand> 개체는 명령 논리를 제공하지 않습니다.  명령 논리는 <xref:System.Windows.Input.CommandBinding>을 통해 명령에 연결됩니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]에서 제공하는 대부분의 컨트롤은 명령 라이브러리의 일부 명령을 기본적으로 지원합니다.  예를 들어 <xref:System.Windows.Controls.TextBox>는 <xref:System.Windows.Input.ApplicationCommands.Paste%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A>, <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Redo%2A> 및 <xref:System.Windows.Input.ApplicationCommands.Undo%2A>와 같은 대부분의 응용 프로그램 편집 명령을 지원합니다.  따라서 응용 프로그램 개발자는 컨트롤에서 이러한 명령이 작동하도록 하기 위해 특별한 작업을 수행할 필요가 없습니다.  명령이 실행될 때 명령 대상이 <xref:System.Windows.Controls.TextBox>인 경우 컨트롤에 기본적으로 제공된 <xref:System.Windows.Input.CommandBinding>을 사용하여 명령을 처리합니다.  
+ <span data-ttu-id="46113-108">정적 <xref:System.Windows.Input.RoutedCommand> 이러한 클래스를 구성 하는 개체 명령 논리를 제공 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="46113-108">The static <xref:System.Windows.Input.RoutedCommand> objects which make up these classes do not supply command logic.</span></span>  <span data-ttu-id="46113-109">사용 하 여 명령과와 연결 된 명령에 대 한 논리는 <xref:System.Windows.Input.CommandBinding>합니다.</span><span class="sxs-lookup"><span data-stu-id="46113-109">The logic for the command is associated with the command with a <xref:System.Windows.Input.CommandBinding>.</span></span>  <span data-ttu-id="46113-110">많은 컨트롤 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 기본적으로 명령은 라이브러리에서 명령 중 일부에 대 한 지원.</span><span class="sxs-lookup"><span data-stu-id="46113-110">Many controls in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] have built in support for some of the commands in the command library.</span></span>  <span data-ttu-id="46113-111"><xref:System.Windows.Controls.TextBox>예를 들어와 같은 다양 한 응용 프로그램 편집 명령을 지원 <xref:System.Windows.Input.ApplicationCommands.Paste%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A>, <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Redo%2A>, 및 <xref:System.Windows.Input.ApplicationCommands.Undo%2A>합니다.</span><span class="sxs-lookup"><span data-stu-id="46113-111"><xref:System.Windows.Controls.TextBox>, for example, supports many of the application edit commands such as <xref:System.Windows.Input.ApplicationCommands.Paste%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A>, <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Redo%2A>, and <xref:System.Windows.Input.ApplicationCommands.Undo%2A>.</span></span>  <span data-ttu-id="46113-112">응용 프로그램 개발자는 이러한 명령을 컨트롤과 함께 사용하기 위해 별도로 해야 하는 작업은 없습니다.</span><span class="sxs-lookup"><span data-stu-id="46113-112">The application developer does not have to do anything special to get these commands to work with these controls.</span></span>  <span data-ttu-id="46113-113">경우는 <xref:System.Windows.Controls.TextBox> 가 명령 대상 명령이 실행 될 때 사용 하 여 명령을 처리할 수 있으므로 <xref:System.Windows.Input.CommandBinding> 컨트롤에 내장 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="46113-113">If the <xref:System.Windows.Controls.TextBox> is the command target when the command is executed, it will handle the command using the <xref:System.Windows.Input.CommandBinding> that is built into the control.</span></span>  
   
- 다음 예제에서는 <xref:System.Windows.Controls.Button>을 <xref:System.Windows.Input.ApplicationCommands.Open%2A> 명령의 명령 소스로 사용하는 방법을 보여 줍니다.  지정된 <xref:System.Windows.Input.CanExecuteRoutedEventHandler> 및 <xref:System.Windows.Input.CanExecuteRoutedEventHandler>를 <xref:System.Windows.Input.RoutedCommand>에 연결하는 <xref:System.Windows.Input.CommandBinding>을 만듭니다.  
+ <span data-ttu-id="46113-114">다음을 사용 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.Button> 에 대 한 명령 소스로 <xref:System.Windows.Input.ApplicationCommands.Open%2A> 명령입니다.</span><span class="sxs-lookup"><span data-stu-id="46113-114">The following shows how to use a <xref:System.Windows.Controls.Button> as the command source for the <xref:System.Windows.Input.ApplicationCommands.Open%2A> command.</span></span>  <span data-ttu-id="46113-115">A <xref:System.Windows.Input.CommandBinding> 지정된 된 연결 하 만들어집니다 <xref:System.Windows.Input.CanExecuteRoutedEventHandler> 및 <xref:System.Windows.Input.CanExecuteRoutedEventHandler> 와 <xref:System.Windows.Input.RoutedCommand>합니다.</span><span class="sxs-lookup"><span data-stu-id="46113-115">A <xref:System.Windows.Input.CommandBinding> is created that associates the specified <xref:System.Windows.Input.CanExecuteRoutedEventHandler> and the <xref:System.Windows.Input.CanExecuteRoutedEventHandler> with the <xref:System.Windows.Input.RoutedCommand>.</span></span>  
   
- 먼저 명령 소스를 만듭니다.  <xref:System.Windows.Controls.Button>을 명령 소스로 사용합니다.  
+ <span data-ttu-id="46113-116">첫째, 명령 소스가 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="46113-116">First, the command source is created.</span></span>  <span data-ttu-id="46113-117">A <xref:System.Windows.Controls.Button> 명령 원본으로 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="46113-117">A <xref:System.Windows.Controls.Button> is used as the command source.</span></span>  
   
- [!code-xml[commandWithHandler#CommandHandlerCommandSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandsource)]  
+ [!code-xaml[commandWithHandler#CommandHandlerCommandSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandsource)]  
   
  [!code-csharp[CommandHandlerProcedural#CommandHandlerButtonCommandSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbuttoncommandsource)]
  [!code-vb[CommandHandlerProcedural#CommandHandlerButtonCommandSource](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbuttoncommandsource)]  
   
- 그런 다음 <xref:System.Windows.Input.ExecutedRoutedEventHandler>와 <xref:System.Windows.Input.CanExecuteRoutedEventHandler>를 만듭니다.  <xref:System.Windows.Input.ExecutedRoutedEventHandler>는 단순히 <xref:System.Windows.MessageBox>를 열어 명령이 실행되었음을 보여 줍니다.  <xref:System.Windows.Input.CanExecuteRoutedEventHandler>는 <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> 속성을 `true`로 설정합니다.  일반적으로 CanExecute 처리기는 현재 명령 대상에서 명령을 실행할 수 있는지 여부를 확인하기 위해 보다 강력한 확인 작업을 수행합니다.  
+ <span data-ttu-id="46113-118">다음으로 <xref:System.Windows.Input.ExecutedRoutedEventHandler> 및 <xref:System.Windows.Input.CanExecuteRoutedEventHandler> 만들어집니다.</span><span class="sxs-lookup"><span data-stu-id="46113-118">Next, the <xref:System.Windows.Input.ExecutedRoutedEventHandler> and the <xref:System.Windows.Input.CanExecuteRoutedEventHandler> are created.</span></span>  <span data-ttu-id="46113-119"><xref:System.Windows.Input.ExecutedRoutedEventHandler> 열면는 <xref:System.Windows.MessageBox> 명령이 실행 되었음을 나타내는입니다.</span><span class="sxs-lookup"><span data-stu-id="46113-119">The <xref:System.Windows.Input.ExecutedRoutedEventHandler> simply opens a <xref:System.Windows.MessageBox> to signify that the command executed.</span></span>  <span data-ttu-id="46113-120"><xref:System.Windows.Input.CanExecuteRoutedEventHandler> 설정는 <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> 속성을 `true`합니다.</span><span class="sxs-lookup"><span data-stu-id="46113-120">The <xref:System.Windows.Input.CanExecuteRoutedEventHandler> sets the <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> property to `true`.</span></span>  <span data-ttu-id="46113-121">일반적으로 수 있는 실행 처리기를 현재 명령 대상에서 명령을 실행할 수 있습니다 하는 경우 보다 강력한 확인을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="46113-121">Normally, the can execute handler would perform more robust checks to see if the command could execute on the current command target.</span></span>  
   
  [!code-csharp[commandWithHandler#CommandHandlerBothHandlers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlerbothhandlers)]
  [!code-vb[commandWithHandler#CommandHandlerBothHandlers](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlerbothhandlers)]  
   
- 마지막으로, 라우트된 이벤트 처리기를 <xref:System.Windows.Input.ApplicationCommands.Open%2A> 명령에 연결하는 응용 프로그램의 루트 <xref:System.Windows.Window>에 <xref:System.Windows.Input.CommandBinding>을 만듭니다.  
+ <span data-ttu-id="46113-122">마지막으로, 한 <xref:System.Windows.Input.CommandBinding> 루트에 만들어집니다 <xref:System.Windows.Window> 라우트된 이벤트 처리기를 연결 하는 응용 프로그램의는 <xref:System.Windows.Input.ApplicationCommands.Open%2A> 명령입니다.</span><span class="sxs-lookup"><span data-stu-id="46113-122">Finally, a <xref:System.Windows.Input.CommandBinding> is created on the root <xref:System.Windows.Window> of the application that associates the routed events handlers to the <xref:System.Windows.Input.ApplicationCommands.Open%2A> command.</span></span>  
   
- [!code-xml[commandWithHandler#CommandHandlerCommandBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandbinding)]  
+ [!code-xaml[commandWithHandler#CommandHandlerCommandBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandbinding)]  
   
  [!code-csharp[CommandHandlerProcedural#CommandHandlerBindingInit](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbindinginit)]
  [!code-vb[CommandHandlerProcedural#CommandHandlerBindingInit](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbindinginit)]  
   
-## 참고 항목  
- [명령 개요](../../../../docs/framework/wpf/advanced/commanding-overview.md)   
- [명령을 지원하는 컨트롤에 명령 후크](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)
+## <a name="see-also"></a><span data-ttu-id="46113-123">참고 항목</span><span class="sxs-lookup"><span data-stu-id="46113-123">See Also</span></span>  
+ [<span data-ttu-id="46113-124">명령 개요</span><span class="sxs-lookup"><span data-stu-id="46113-124">Commanding Overview</span></span>](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
+ [<span data-ttu-id="46113-125">명령을 지원하는 컨트롤에 명령 후크</span><span class="sxs-lookup"><span data-stu-id="46113-125">Hook Up a Command to a Control with Command Support</span></span>](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)

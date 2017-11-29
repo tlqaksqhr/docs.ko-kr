@@ -1,44 +1,49 @@
 ---
-title: "방법: FontDialog 구성 요소를 사용하여 글꼴 목록 표시 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "글꼴 대화 상자, 표시"
-  - "Font 속성, FontDialog 구성 요소를 사용하여 설정"
-  - "FontDialog 구성 요소[Windows Forms]"
-  - "글꼴, 특성"
-  - "글꼴, 선택"
-  - "글꼴, 목록 표시"
+title: "방법: FontDialog 구성 요소를 사용하여 글꼴 목록 표시"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- fonts [Windows Forms], showing list
+- FontDialog component [Windows Forms]
+- fonts [Windows Forms], attributes
+- Font property [Windows Forms], setting with FontDialog component
+- Font dialog box [Windows Forms], displaying
+- fonts [Windows Forms], selecting
 ms.assetid: 35692c1b-0937-4b7a-9207-1ae6bdc244a0
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 781daeb43a952ef25e73edd577fa17c61b02b426
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: FontDialog 구성 요소를 사용하여 글꼴 목록 표시
-[FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) 구성 요소를 사용하면 글꼴을 선택하고 굵기와 크기 같은 글꼴 표시 요소를 변경할 수 있습니다.  
+# <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a><span data-ttu-id="e1ce1-102">방법: FontDialog 구성 요소를 사용하여 글꼴 목록 표시</span><span class="sxs-lookup"><span data-stu-id="e1ce1-102">How to: Show a Font List with the FontDialog Component</span></span>
+<span data-ttu-id="e1ce1-103">[FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) 구성 요소에 글꼴을 선택 하 고 가중치와 크기 같은 표시 요소를 변경할 사용자를 허용 합니다.</span><span class="sxs-lookup"><span data-stu-id="e1ce1-103">The [FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md) component allows users to select a font, as well as change its display aspects, such as its weight and size.</span></span>  
   
- 대화 상자에서 선택한 글꼴은 <xref:System.Windows.Forms.FontDialog.Font%2A> 속성에 반환됩니다.  따라서 단순히 속성을 읽기만 하면 사용자가 선택한 글꼴을 사용할 수 있습니다.  
+ <span data-ttu-id="e1ce1-104">대화 상자에서 선택한 글꼴에 반환 되는 <xref:System.Windows.Forms.FontDialog.Font%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="e1ce1-104">The font selected in the dialog box is returned in the <xref:System.Windows.Forms.FontDialog.Font%2A> property.</span></span> <span data-ttu-id="e1ce1-105">따라서 사용자가 선택한 글꼴을 활용 하기 위해 속성 읽기를 하기만 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e1ce1-105">Thus, taking advantage of the font selected by the user is as easy as reading a property.</span></span>  
   
-### FontDialog 구성 요소를 사용하여 글꼴 속성을 선택하려면  
+### <a name="to-select-font-properties-using-the-fontdialog-component"></a><span data-ttu-id="e1ce1-106">FontDialog 구성 요소를 사용 하 여 글꼴 속성을 선택 하려면</span><span class="sxs-lookup"><span data-stu-id="e1ce1-106">To select font properties using the FontDialog Component</span></span>  
   
-1.  <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 메서드를 사용하여 대화 상자를 표시합니다.  
+1.  <span data-ttu-id="e1ce1-107">사용 하 여 대화 상자 표시는 <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="e1ce1-107">Display the dialog box using the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method.</span></span>  
   
-2.  <xref:System.Windows.Forms.DialogResult> 속성을 사용하여 대화 상자가 닫힌 방법을 확인합니다.  
+2.  <span data-ttu-id="e1ce1-108">사용 하 여는 <xref:System.Windows.Forms.DialogResult> 대화 상자를 닫은 방법을 결정 하는 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="e1ce1-108">Use the <xref:System.Windows.Forms.DialogResult> property to determine how the dialog box was closed.</span></span>  
   
-3.  <xref:System.Windows.Forms.FontDialog.Font%2A> 속성을 사용하여 원하는 글꼴을 설정합니다.  
+3.  <span data-ttu-id="e1ce1-109">사용 하 여는 <xref:System.Windows.Forms.FontDialog.Font%2A> 속성을 원하는 글꼴을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="e1ce1-109">Use the <xref:System.Windows.Forms.FontDialog.Font%2A> property to set the desired font.</span></span>  
   
-     아래 예제에서는 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기를 사용하여 <xref:System.Windows.Forms.FontDialog> 구성 요소를 엽니다.  글꼴이 선택된 상태에서 사용자가 **확인**을 클릭하면 해당 폼에 있는 <xref:System.Windows.Forms.TextBox> 컨트롤의 <xref:System.Windows.Forms.FontDialog.Font%2A> 속성이 선택된 글꼴로 설정됩니다.  이 예제에서는 폼에 <xref:System.Windows.Forms.Button> 컨트롤, <xref:System.Windows.Forms.TextBox> 컨트롤 및 <xref:System.Windows.Forms.FontDialog> 구성 요소가 있다고 가정합니다.  
+     <span data-ttu-id="e1ce1-110">다음 예제에는 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기 열립니다는 <xref:System.Windows.Forms.FontDialog> 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="e1ce1-110">In the example below, the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event handler opens a <xref:System.Windows.Forms.FontDialog> component.</span></span> <span data-ttu-id="e1ce1-111">경우 글꼴 선택 하 고 사용자가 **확인**, <xref:System.Windows.Forms.FontDialog.Font%2A> 속성은 <xref:System.Windows.Forms.TextBox> 폼에 컨트롤에 선택 된 글꼴로 설정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="e1ce1-111">When a font is chosen and the user clicks **OK**, the <xref:System.Windows.Forms.FontDialog.Font%2A> property of a <xref:System.Windows.Forms.TextBox> control that is on the form is set to the chosen font.</span></span> <span data-ttu-id="e1ce1-112">이 예에서는 가정 폼에는 <xref:System.Windows.Forms.Button> 컨트롤은 <xref:System.Windows.Forms.TextBox> 컨트롤 및 <xref:System.Windows.Forms.FontDialog> 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="e1ce1-112">The example assumes your form has a <xref:System.Windows.Forms.Button> control, a  <xref:System.Windows.Forms.TextBox> control, and a <xref:System.Windows.Forms.FontDialog> component.</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -47,7 +52,6 @@ caps.handback.revision: 15
           TextBox1.Font = FontDialog1.Font  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -58,7 +62,6 @@ caps.handback.revision: 15
           textBox1.Font = fontDialog1.Font;  
        }  
     }  
-  
     ```  
   
     ```cpp  
@@ -73,17 +76,16 @@ caps.handback.revision: 15
        }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 및 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) 폼의 생성자에 다음 코드를 배치하여 이벤트 처리기를 등록합니다.  
+     <span data-ttu-id="e1ce1-113">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 및 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 폼 생성자에 다음 코드를 추가하여 이벤트 처리기를 등록합니다.</span><span class="sxs-lookup"><span data-stu-id="e1ce1-113">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
-  
     ```  
   
     ```cpp  
     button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## 참고 항목  
- <xref:System.Windows.Forms.FontDialog>   
- [FontDialog 구성 요소](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="e1ce1-114">참고 항목</span><span class="sxs-lookup"><span data-stu-id="e1ce1-114">See Also</span></span>  
+ <xref:System.Windows.Forms.FontDialog>  
+ [<span data-ttu-id="e1ce1-115">FontDialog 구성 요소</span><span class="sxs-lookup"><span data-stu-id="e1ce1-115">FontDialog Component</span></span>](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)

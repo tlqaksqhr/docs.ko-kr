@@ -1,40 +1,32 @@
 ---
-title: "참조 (LINQ to XML) | Microsoft 문서"
+title: "참조(LINQ to XML)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 0f4cc4b9-361d-4de2-b4c3-be7cbd5dd47b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: a9aa7ac11caf7d6199e571902b9d22ae3b998b1a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 0b144d94e566f36891ee059d13bdf18a695f1519
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# <a name="reference-linq-to-xml"></a>참조(LINQ to XML)
-이 항목에는 LINQ to XML 참조 항목에 대한 링크가 포함되어 있습니다.  
+# <a name="reference-linq-to-xml"></a><span data-ttu-id="a70f4-102">참조(LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="a70f4-102">Reference (LINQ to XML)</span></span>
+<span data-ttu-id="a70f4-103">이 항목에는 LINQ to XML 참조 항목에 대한 링크가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a70f4-103">This topic contains links to the LINQ to XML reference topics.</span></span>  
   
-## <a name="in-this-section"></a>단원 내용  
- LINQ to XML 클래스에 대 한 참조 설명서 <xref:System.Xml.Linq>.</xref:System.Xml.Linq> 을 참조 하십시오.  
+## <a name="in-this-section"></a><span data-ttu-id="a70f4-104">단원 내용</span><span class="sxs-lookup"><span data-stu-id="a70f4-104">In This Section</span></span>  
+ <span data-ttu-id="a70f4-105">LINQ to XML 클래스에 대한 참조 설명서는 <xref:System.Xml.Linq>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="a70f4-105">For reference documentation for the LINQ to XML classes, see <xref:System.Xml.Linq>.</span></span>  
   
- 참조 설명서에 대 한 XSD 파일에 대해 XML 트리의 유효성을 검사 하는 데 도움이 되는 확장 메서드에 대 한 <xref:System.Xml.Schema.Extensions?displayProperty=fullName>.</xref:System.Xml.Schema.Extensions?displayProperty=fullName> 참조 됩니다.  
+ <span data-ttu-id="a70f4-106">XSD 파일을 기준으로 XML 트리의 유효성을 검사하는 데 도움이 되는 확장 메서드에 대한 참조 설명서는 <xref:System.Xml.Schema.Extensions?displayProperty=nameWithType>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="a70f4-106">For reference documentation for the extension methods that help you validate XML trees against an XSD file, see <xref:System.Xml.Schema.Extensions?displayProperty=nameWithType>.</span></span>  
   
- XML 트리에 대 한 XPath 쿼리를 평가할 수 있는 확장 메서드에 대 한 참조 설명서, <xref:System.Xml.XPath.Extensions?displayProperty=fullName>.</xref:System.Xml.XPath.Extensions?displayProperty=fullName> 을 참조 하십시오.  
+ <span data-ttu-id="a70f4-107">XML 트리에 대한 XPath 쿼리를 계산하는 데 사용할 수 있는 확장 메서드에 대한 참조 설명서는 <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="a70f4-107">For reference documentation for the extension methods that enable you to evaluate XPath queries on an XML tree, see <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="a70f4-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a70f4-108">See Also</span></span>  
+ [<span data-ttu-id="a70f4-109">LINQ to XML(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a70f4-109">LINQ to XML (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)

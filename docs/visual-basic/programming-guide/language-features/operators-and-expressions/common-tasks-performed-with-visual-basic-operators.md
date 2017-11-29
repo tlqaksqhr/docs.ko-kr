@@ -1,96 +1,91 @@
 ---
-title: "Common Tasks Performed with Visual Basic Operators | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "operators [Visual Basic], logical"
-  - "operators [Visual Basic], string concatenation"
-  - "operators [Visual Basic], bitwise"
-  - "operators [Visual Basic], bit-shift"
-  - "operators [Visual Basic], arithmetic"
-  - "operators [Visual Basic], string comparison"
-  - "operators [Visual Basic], concatenation"
-  - "Visual Basic code, operators"
-  - "operators [Visual Basic], comparison"
-  - "operators [Visual Basic], short-circuiting logical"
+title: "Visual Basic 연산자를 사용한 일반적인 작업"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- operators [Visual Basic], logical
+- operators [Visual Basic], string concatenation
+- operators [Visual Basic], bitwise
+- operators [Visual Basic], bit-shift
+- operators [Visual Basic], arithmetic
+- operators [Visual Basic], string comparison
+- operators [Visual Basic], concatenation
+- Visual Basic code, operators
+- operators [Visual Basic], comparison
+- operators [Visual Basic], short-circuiting logical
 ms.assetid: d181afe5-fafa-460f-a13b-81203f6f4587
-caps.latest.revision: 9
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 0886bc0365f37f964c4c4872a7b1624ec7388067
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Common Tasks Performed with Visual Basic Operators
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-연산자는 *피연산자*라는 하나 이상의 식과 관련된 여러 가지 일반적인 작업을 수행합니다.  
+# <a name="common-tasks-performed-with-visual-basic-operators"></a><span data-ttu-id="500b7-102">Visual Basic 연산자를 사용한 일반적인 작업</span><span class="sxs-lookup"><span data-stu-id="500b7-102">Common Tasks Performed with Visual Basic Operators</span></span>
+<span data-ttu-id="500b7-103">연산자는 호출 하는 하나 이상의 식과 관련 된 여러 가지 일반적인 작업 수행 *피연산자*합니다.</span><span class="sxs-lookup"><span data-stu-id="500b7-103">Operators perform many common tasks involving one or more expressions called *operands*.</span></span>  
   
-## 산술 또는 비트 시프트 연산 작업  
- 다음 표에서는 사용 가능한 산술 및 비트 시프트 연산을 요약하여 설명합니다.  
+## <a name="arithmetic-and-bit-shift-tasks"></a><span data-ttu-id="500b7-104">산술 및 비트 시프트 작업</span><span class="sxs-lookup"><span data-stu-id="500b7-104">Arithmetic and Bit-shift Tasks</span></span>  
+ <span data-ttu-id="500b7-105">다음 표에서 사용 가능한 산술 및 비트 시프트 연산을 요약 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="500b7-105">The following table summarizes the available arithmetic and bit-shift operations.</span></span>  
   
-|||  
-|-|-|  
-|To|참조|  
-|한 숫자 값과 다른 숫자 값 더하기|[\+ Operator](../../../../visual-basic/language-reference/operators/addition-operator.md)|  
-|한 숫자 값에서 다른 숫자 값 빼기|[\- Operator](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
-|숫자 값의 기호 바꾸기|[\- Operator](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
-|한 숫자 값을 다른 숫자 값과 곱하기|[\* Operator](../../../../visual-basic/language-reference/operators/multiplication-operator.md)|  
-|한 숫자 값을 다른 숫자 값으로 나누기|[\/ Operator](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md)|  
-|한 숫자 값을 다른 숫자 값으로 나눈 몫 구하기\(나머지 무시\)|[\\ Operator](../../../../visual-basic/language-reference/operators/integer-division-operator.md)|  
-|한 숫자 값을 다른 숫자 값으로 나눈 나머지 구하기\(몫 무시\)|[Mod 연산자](../../../../visual-basic/language-reference/operators/mod-operator.md)|  
-|한 숫자 값을 다른 숫자 값의 승수로 거듭제곱|[^ Operator](../../../../visual-basic/language-reference/operators/exponentiation-operator.md)|  
-|숫자 값의 비트 패턴을 왼쪽으로 시프트|[\<\< Operator](../../../../visual-basic/language-reference/operators/left-shift-operator.md)|  
-|숫자 값의 비트 패턴을 오른쪽으로 시프트|[\>\> Operator](../../../../visual-basic/language-reference/operators/right-shift-operator.md)|  
+|<span data-ttu-id="500b7-106">후</span><span class="sxs-lookup"><span data-stu-id="500b7-106">To</span></span>|<span data-ttu-id="500b7-107">참조</span><span class="sxs-lookup"><span data-stu-id="500b7-107">See</span></span>|  
+|---|---|  
+|<span data-ttu-id="500b7-108">다른 숫자 값 하나를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="500b7-108">Add one numeric value to another</span></span>|[<span data-ttu-id="500b7-109">+ 연산자</span><span class="sxs-lookup"><span data-stu-id="500b7-109">+ Operator</span></span>](../../../../visual-basic/language-reference/operators/addition-operator.md)|  
+|<span data-ttu-id="500b7-110">한 숫자 값에서 다른 값 빼기</span><span class="sxs-lookup"><span data-stu-id="500b7-110">Subtract one numeric value from another</span></span>|[<span data-ttu-id="500b7-111">-연산자 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="500b7-111">- Operator (Visual Basic)</span></span>](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
+|<span data-ttu-id="500b7-112">숫자 값의 부호 반전</span><span class="sxs-lookup"><span data-stu-id="500b7-112">Reverse the sign of a numeric value</span></span>|[<span data-ttu-id="500b7-113">-연산자 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="500b7-113">- Operator (Visual Basic)</span></span>](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
+|<span data-ttu-id="500b7-114">곱하기 숫자 값을 다른 값</span><span class="sxs-lookup"><span data-stu-id="500b7-114">Multiply one numeric value by another</span></span>|[<span data-ttu-id="500b7-115">* 연산자</span><span class="sxs-lookup"><span data-stu-id="500b7-115">* Operator</span></span>](../../../../visual-basic/language-reference/operators/multiplication-operator.md)|  
+|<span data-ttu-id="500b7-116">다른 파티션으로 하나의 숫자 값을 나눌</span><span class="sxs-lookup"><span data-stu-id="500b7-116">Divide one numeric value into another</span></span>|[<span data-ttu-id="500b7-117">/ 연산자 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="500b7-117">/ Operator (Visual Basic)</span></span>](../../../../visual-basic/language-reference/operators/floating-point-division-operator.md)|  
+|<span data-ttu-id="500b7-118">1 숫자 값 (나머지) 없이 다른으로 나눈 값의 몫을 찾기</span><span class="sxs-lookup"><span data-stu-id="500b7-118">Find the quotient of one numeric value divided by another (without the remainder)</span></span>|[<span data-ttu-id="500b7-119">\ 연산자 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="500b7-119">\ Operator (Visual Basic)</span></span>](../../../../visual-basic/language-reference/operators/integer-division-operator.md)|  
+|<span data-ttu-id="500b7-120">하나의 숫자 값 (몫) 다른 나눈 나머지를 구하려는</span><span class="sxs-lookup"><span data-stu-id="500b7-120">Find the remainder of one numeric value divided by another (without the quotient)</span></span>|[<span data-ttu-id="500b7-121">Mod 연산자</span><span class="sxs-lookup"><span data-stu-id="500b7-121">Mod Operator</span></span>](../../../../visual-basic/language-reference/operators/mod-operator.md)|  
+|<span data-ttu-id="500b7-122">발생 한 숫자 값의 다른 값</span><span class="sxs-lookup"><span data-stu-id="500b7-122">Raise one numeric value to the power of another</span></span>|[<span data-ttu-id="500b7-123">^ 연산자</span><span class="sxs-lookup"><span data-stu-id="500b7-123">^ Operator</span></span>](../../../../visual-basic/language-reference/operators/exponentiation-operator.md)|  
+|<span data-ttu-id="500b7-124">숫자 값의 비트 패턴을 왼쪽으로 이동</span><span class="sxs-lookup"><span data-stu-id="500b7-124">Shift the bit pattern of a numeric value to the left</span></span>|[<span data-ttu-id="500b7-125"><\<연산자</span><span class="sxs-lookup"><span data-stu-id="500b7-125"><\< Operator</span></span>](../../../../visual-basic/language-reference/operators/left-shift-operator.md)|  
+|<span data-ttu-id="500b7-126">숫자 값의 비트 패턴을 오른쪽으로 이동</span><span class="sxs-lookup"><span data-stu-id="500b7-126">Shift the bit pattern of a numeric value to the right</span></span>|[<span data-ttu-id="500b7-127">>> 연산자</span><span class="sxs-lookup"><span data-stu-id="500b7-127">>> Operator</span></span>](../../../../visual-basic/language-reference/operators/right-shift-operator.md)|  
   
-## 비교 연산 작업  
- 다음 표에서는 사용 가능한 비교 연산을 요약하여 설명합니다.  
+## <a name="comparison-tasks"></a><span data-ttu-id="500b7-128">비교 작업</span><span class="sxs-lookup"><span data-stu-id="500b7-128">Comparison Tasks</span></span>  
+ <span data-ttu-id="500b7-129">다음 표에서 사용 가능한 비교 연산을 요약 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="500b7-129">The following table summarizes the available comparison operations.</span></span>  
   
-|||  
-|-|-|  
-|To|참조|  
-|두 값이 같은지 여부 확인|`=` 연산자\([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|두 값이 같지 않은지 여부 확인|`<>` 연산자\([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|한 값이 다른 값보다 작은지 여부 확인|`<` 연산자\([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|한 값이 다른 값보다 큰지 여부 확인|`>` 연산자\([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|한 값이 다른 값보다 작거나 같은지 여부 확인|`<=` 연산자\([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|한 값이 다른 값보다 크거나 같은지 여부 확인|`>=` 연산자\([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)\)|  
-|두 개체 변수가 동일한 개체 인스턴스를 참조하는지 여부 확인|[Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md)|  
-|두 개체 변수가 다른 개체 인스턴스를 참조하는지 여부 확인|[IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md)|  
-|개체가 특정 형식인지 여부 확인|[TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md)|  
+|<span data-ttu-id="500b7-130">후</span><span class="sxs-lookup"><span data-stu-id="500b7-130">To</span></span>|<span data-ttu-id="500b7-131">참조</span><span class="sxs-lookup"><span data-stu-id="500b7-131">See</span></span>|  
+|---|---|  
+|<span data-ttu-id="500b7-132">두 값이 같은지 여부를 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="500b7-132">Determine whether two values are equal</span></span>|<span data-ttu-id="500b7-133">`=`연산자 ([Visual Basic의 비교 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span><span class="sxs-lookup"><span data-stu-id="500b7-133">`=` Operator ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span></span>|  
+|<span data-ttu-id="500b7-134">두 값이 같은지 여부를 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="500b7-134">Determine whether two values are unequal</span></span>|<span data-ttu-id="500b7-135">`<>`연산자 ([Visual Basic의 비교 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span><span class="sxs-lookup"><span data-stu-id="500b7-135">`<>` Operator ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span></span>|  
+|<span data-ttu-id="500b7-136">값이 두 개 다른 노드보다 작은지 여부를 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="500b7-136">Determine whether one value is less than another</span></span>|<span data-ttu-id="500b7-137">`<`연산자 ([Visual Basic의 비교 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span><span class="sxs-lookup"><span data-stu-id="500b7-137">`<` Operator ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span></span>|  
+|<span data-ttu-id="500b7-138">값이 두 개 다른 노드보다 큰지 여부를 결정 합니다.</span><span class="sxs-lookup"><span data-stu-id="500b7-138">Determine whether one value is greater than another</span></span>|<span data-ttu-id="500b7-139">`>`연산자 ([Visual Basic의 비교 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span><span class="sxs-lookup"><span data-stu-id="500b7-139">`>` Operator ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span></span>|  
+|<span data-ttu-id="500b7-140">하나의 값이 다른 보다 작거나 같은지 여부 확인</span><span class="sxs-lookup"><span data-stu-id="500b7-140">Determine whether one value is less than or equal to another</span></span>|<span data-ttu-id="500b7-141">`<=`연산자 ([Visual Basic의 비교 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span><span class="sxs-lookup"><span data-stu-id="500b7-141">`<=` Operator ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span></span>|  
+|<span data-ttu-id="500b7-142">하나의 값이 다른 보다 크거나 여부 확인</span><span class="sxs-lookup"><span data-stu-id="500b7-142">Determine whether one value is greater than or equal to another</span></span>|<span data-ttu-id="500b7-143">`>=`연산자 ([Visual Basic의 비교 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span><span class="sxs-lookup"><span data-stu-id="500b7-143">`>=` Operator ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))</span></span>|  
+|<span data-ttu-id="500b7-144">두 개체 변수가 동일한 개체 인스턴스를 참조 하는지 확인</span><span class="sxs-lookup"><span data-stu-id="500b7-144">Determine whether two object variables refer to the same object instance</span></span>|[<span data-ttu-id="500b7-145">Is 연산자</span><span class="sxs-lookup"><span data-stu-id="500b7-145">Is Operator</span></span>](../../../../visual-basic/language-reference/operators/is-operator.md)|  
+|<span data-ttu-id="500b7-146">두 개체 변수가 서로 다른 개체 인스턴스를 참조 하는지 확인</span><span class="sxs-lookup"><span data-stu-id="500b7-146">Determine whether two object variables refer to different object instances</span></span>|[<span data-ttu-id="500b7-147">IsNot 연산자</span><span class="sxs-lookup"><span data-stu-id="500b7-147">IsNot Operator</span></span>](../../../../visual-basic/language-reference/operators/isnot-operator.md)|  
+|<span data-ttu-id="500b7-148">개체를 특정 형식 인지 확인</span><span class="sxs-lookup"><span data-stu-id="500b7-148">Determine whether an object is of a specific type</span></span>|[<span data-ttu-id="500b7-149">TypeOf 연산자</span><span class="sxs-lookup"><span data-stu-id="500b7-149">TypeOf Operator</span></span>](../../../../visual-basic/language-reference/operators/typeof-operator.md)|  
   
-## 연결 연산 작업  
- 다음 표에서는 사용 가능한 연결 연산을 요약하여 설명합니다.  
+## <a name="concatenation-tasks"></a><span data-ttu-id="500b7-150">연결 연산 작업</span><span class="sxs-lookup"><span data-stu-id="500b7-150">Concatenation Tasks</span></span>  
+ <span data-ttu-id="500b7-151">다음 표에서 사용 가능한 연결 작업을 요약 합니다.</span><span class="sxs-lookup"><span data-stu-id="500b7-151">The following table summarizes the available concatenation operations.</span></span>  
   
-|||  
-|-|-|  
-|To|참조|  
-|여러 문자열을 단일 문자열로 조인|`&` 연산자\([Concatenation Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)\)|  
-|숫자 값을 문자열 값으로 조인|`+` 연산자\([Concatenation Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)\)|  
+|<span data-ttu-id="500b7-152">후</span><span class="sxs-lookup"><span data-stu-id="500b7-152">To</span></span>|<span data-ttu-id="500b7-153">참조</span><span class="sxs-lookup"><span data-stu-id="500b7-153">See</span></span>|  
+|---|---|  
+|<span data-ttu-id="500b7-154">여러 문자열을 단일 문자열로 조인</span><span class="sxs-lookup"><span data-stu-id="500b7-154">Join multiple strings into a single string</span></span>|<span data-ttu-id="500b7-155">`&`연산자 ([Visual Basic의 연결 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))</span><span class="sxs-lookup"><span data-stu-id="500b7-155">`&` Operator ([Concatenation Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))</span></span>|  
+|<span data-ttu-id="500b7-156">숫자 값을 문자열 값과 조인</span><span class="sxs-lookup"><span data-stu-id="500b7-156">Join numeric values with string values</span></span>|<span data-ttu-id="500b7-157">`+`연산자 ([Visual Basic의 연결 연산자](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))</span><span class="sxs-lookup"><span data-stu-id="500b7-157">`+` Operator ([Concatenation Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))</span></span>|  
   
-## 논리 및 비트 연산 작업  
- 다음 표에서는 사용 가능한 논리 및 비트 연산을 요약하여 설명합니다.  
+## <a name="logical-and-bitwise-tasks"></a><span data-ttu-id="500b7-158">논리 및 비트 작업</span><span class="sxs-lookup"><span data-stu-id="500b7-158">Logical and Bitwise Tasks</span></span>  
+ <span data-ttu-id="500b7-159">다음 표에서 사용 가능한 논리 및 비트 연산을 요약 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="500b7-159">The following table summarizes the available logical and bitwise operations.</span></span>  
   
-|||  
-|-|-|  
-|To|참조|  
-|부울 값의 논리 부정 연산 수행|[Not Operator](../../../../visual-basic/language-reference/operators/not-operator.md)|  
-|두 부울 값의 논리 연결 연산 수행|[And Operator](../../../../visual-basic/language-reference/operators/and-operator.md)|  
-|두 부울 값의 포함 논리합 연산 수행|[Or Operator](../../../../visual-basic/language-reference/operators/or-operator.md)|  
-|두 부울 값의 배타적 논리합 연산 수행|[Xor Operator](../../../../visual-basic/language-reference/operators/xor-operator.md)|  
-|두 부울 값의 단락\(short circuit\) 논리곱 연산 수행|[AndAlso Operator](../../../../visual-basic/language-reference/operators/andalso-operator.md)|  
-|두 부울 값의 단락\(short circuit\) 포함 논리합 연산 수행|[OrElse Operator](../../../../visual-basic/language-reference/operators/orelse-operator.md)|  
-|두 정수 계열 값의 비트별 논리곱 연산 수행|[And Operator](../../../../visual-basic/language-reference/operators/and-operator.md)|  
-|두 정수 계열 값의 비트별 포함 논리합 연산 수행|[Or Operator](../../../../visual-basic/language-reference/operators/or-operator.md)|  
-|두 정수 계열 값의 비트별 배타적 논리합 연산 수행|[Xor Operator](../../../../visual-basic/language-reference/operators/xor-operator.md)|  
-|정수 계열 값의 비트별 논리 부정 연산 수행|[Not Operator](../../../../visual-basic/language-reference/operators/not-operator.md)|  
+|<span data-ttu-id="500b7-160">후</span><span class="sxs-lookup"><span data-stu-id="500b7-160">To</span></span>|<span data-ttu-id="500b7-161">참조</span><span class="sxs-lookup"><span data-stu-id="500b7-161">See</span></span>|  
+|---|---|  
+|<span data-ttu-id="500b7-162">부울 값에 논리 부정을 수행합니다</span><span class="sxs-lookup"><span data-stu-id="500b7-162">Perform logical negation on a Boolean value</span></span>|[<span data-ttu-id="500b7-163">Not 연산자</span><span class="sxs-lookup"><span data-stu-id="500b7-163">Not Operator</span></span>](../../../../visual-basic/language-reference/operators/not-operator.md)|  
+|<span data-ttu-id="500b7-164">두 부울 값에 논리 결합을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="500b7-164">Perform logical conjunction on two Boolean values</span></span>|[<span data-ttu-id="500b7-165">And 연산자</span><span class="sxs-lookup"><span data-stu-id="500b7-165">And Operator</span></span>](../../../../visual-basic/language-reference/operators/and-operator.md)|  
+|<span data-ttu-id="500b7-166">두 부울 값의 포함 논리합 연산을 수행합니다</span><span class="sxs-lookup"><span data-stu-id="500b7-166">Perform inclusive logical disjunction on two Boolean values</span></span>|[<span data-ttu-id="500b7-167">Or 연산자</span><span class="sxs-lookup"><span data-stu-id="500b7-167">Or Operator</span></span>](../../../../visual-basic/language-reference/operators/or-operator.md)|  
+|<span data-ttu-id="500b7-168">두 부울 값의 배타적 논리합 연산을 수행합니다</span><span class="sxs-lookup"><span data-stu-id="500b7-168">Perform exclusive logical disjunction on two Boolean values</span></span>|[<span data-ttu-id="500b7-169">Xor 연산자</span><span class="sxs-lookup"><span data-stu-id="500b7-169">Xor Operator</span></span>](../../../../visual-basic/language-reference/operators/xor-operator.md)|  
+|<span data-ttu-id="500b7-170">두 부울 값의 short-circuited 논리 결합을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="500b7-170">Perform short-circuited logical conjunction on two Boolean values</span></span>|[<span data-ttu-id="500b7-171">AndAlso 연산자</span><span class="sxs-lookup"><span data-stu-id="500b7-171">AndAlso Operator</span></span>](../../../../visual-basic/language-reference/operators/andalso-operator.md)|  
+|<span data-ttu-id="500b7-172">두 부울 값의 포함 논리합 short-circuited 수행</span><span class="sxs-lookup"><span data-stu-id="500b7-172">Perform short-circuited inclusive logical disjunction on two Boolean values</span></span>|[<span data-ttu-id="500b7-173">OrElse 연산자</span><span class="sxs-lookup"><span data-stu-id="500b7-173">OrElse Operator</span></span>](../../../../visual-basic/language-reference/operators/orelse-operator.md)|  
+|<span data-ttu-id="500b7-174">두 정수 값에 비트 단위로 논리 결합을 수행 합니다.</span><span class="sxs-lookup"><span data-stu-id="500b7-174">Perform bit-by-bit logical conjunction on two integral values</span></span>|[<span data-ttu-id="500b7-175">And 연산자</span><span class="sxs-lookup"><span data-stu-id="500b7-175">And Operator</span></span>](../../../../visual-basic/language-reference/operators/and-operator.md)|  
+|<span data-ttu-id="500b7-176">두 정수 값의 비트 단위로 포함 논리합 수행</span><span class="sxs-lookup"><span data-stu-id="500b7-176">Perform bit-by-bit inclusive logical disjunction on two integral values</span></span>|[<span data-ttu-id="500b7-177">Or 연산자</span><span class="sxs-lookup"><span data-stu-id="500b7-177">Or Operator</span></span>](../../../../visual-basic/language-reference/operators/or-operator.md)|  
+|<span data-ttu-id="500b7-178">두 정수 값에 비트 단위로 배타적 논리합 연산을 수행합니다</span><span class="sxs-lookup"><span data-stu-id="500b7-178">Perform bit-by-bit exclusive logical disjunction on two integral values</span></span>|[<span data-ttu-id="500b7-179">Xor 연산자</span><span class="sxs-lookup"><span data-stu-id="500b7-179">Xor Operator</span></span>](../../../../visual-basic/language-reference/operators/xor-operator.md)|  
+|<span data-ttu-id="500b7-180">정수 계열 값의 비트 단위로 논리 부정을 수행합니다</span><span class="sxs-lookup"><span data-stu-id="500b7-180">Perform bit-by-bit logical negation on an integral value</span></span>|[<span data-ttu-id="500b7-181">Not 연산자</span><span class="sxs-lookup"><span data-stu-id="500b7-181">Not Operator</span></span>](../../../../visual-basic/language-reference/operators/not-operator.md)|  
   
-## 참고 항목  
- [Operators and Expressions](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)   
- [Operators Listed by Functionality](../../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+## <a name="see-also"></a><span data-ttu-id="500b7-182">참고 항목</span><span class="sxs-lookup"><span data-stu-id="500b7-182">See Also</span></span>  
+ [<span data-ttu-id="500b7-183">연산자 및 식</span><span class="sxs-lookup"><span data-stu-id="500b7-183">Operators and Expressions</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
+ [<span data-ttu-id="500b7-184">기능별 연산자 목록</span><span class="sxs-lookup"><span data-stu-id="500b7-184">Operators Listed by Functionality</span></span>](../../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

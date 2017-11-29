@@ -1,51 +1,57 @@
 ---
-title: "방법: 시계의 상태가 변경될 때 알림 받기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Clock, 상태 변경 알림"
-  - "알림, Clock 상태 변경"
+title: "방법: 알림을 받을 때 클록 &#39; s 상태 변경"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- clocks [WPF], notification of state changes
+- notifications [WPF], clocks' state changes
 ms.assetid: ecb10fc9-d0c2-45c3-b0a1-7b11baa733da
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f59fddb1add29d52ccba6fc8b8ce84938b53a1c2
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/22/2017
 ---
-# 방법: 시계의 상태가 변경될 때 알림 받기
-시계가 시작되거나 중지될 때와 같이 시계의 <xref:System.Windows.Media.Animation.Clock.CurrentState%2A>가 무효화되면 시계의 <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> 이벤트가 발생합니다.  직접 <xref:System.Windows.Media.Animation.Clock>을 사용하거나 <xref:System.Windows.Media.Animation.Timeline>을 사용하여 이 이벤트에 등록할 수 있습니다.  
+# <a name="how-to-receive-notification-when-a-clock39s-state-changes"></a><span data-ttu-id="2904b-102">방법: 알림을 받을 때 클록 &#39; s 상태 변경</span><span class="sxs-lookup"><span data-stu-id="2904b-102">How to: Receive Notification When a Clock&#39;s State Changes</span></span>
+<span data-ttu-id="2904b-103">클록의 <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> 이벤트가 발생할 때 해당 <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> 클록 시작 되거나 중지 될 때와 같은 유효 하지 않게 합니다.</span><span class="sxs-lookup"><span data-stu-id="2904b-103">A clock's <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> event occurs when its <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> becomes invalid, such as when the clock starts or stops.</span></span> <span data-ttu-id="2904b-104">사용 하 여 직접이 이벤트에 등록할 수는 <xref:System.Windows.Media.Animation.Clock>, 하거나 사용 하 여 등록할 수 있습니다는 <xref:System.Windows.Media.Animation.Timeline>합니다.</span><span class="sxs-lookup"><span data-stu-id="2904b-104">You can register for this event with directly using a <xref:System.Windows.Media.Animation.Clock>, or you can register using a <xref:System.Windows.Media.Animation.Timeline>.</span></span>  
   
- 다음 예제에서는 <xref:System.Windows.Media.Animation.Storyboard>와 두 개의 <xref:System.Windows.Media.Animation.DoubleAnimation> 개체를 사용하여 두 사각형의 너비에 애니메이션 효과를 적용합니다.  시계 상태 변경을 수신하기 위해 <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> 이벤트를 사용합니다.  
+ <span data-ttu-id="2904b-105">다음 예제에서는 <xref:System.Windows.Media.Animation.Storyboard> 와 두 개의 <xref:System.Windows.Media.Animation.DoubleAnimation> 개체는 두 개의 사각형의 너비에 애니메이션을 적용 하는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2904b-105">In the following example, a <xref:System.Windows.Media.Animation.Storyboard> and two <xref:System.Windows.Media.Animation.DoubleAnimation> objects are used to animate the width of two rectangles.</span></span> <span data-ttu-id="2904b-106"><xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> 이벤트는 클록 상태 변경 내용을 수신 대기 하는 데 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="2904b-106">The <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> event is used to listen for clock state changes.</span></span>  
   
-## 예제  
- [!code-xml[timingbehaviors_snip#_graphicsmm_StateExampleMarkupWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StateExample.xaml#_graphicsmm_stateexamplemarkupwholepage)]  
+## <a name="example"></a><span data-ttu-id="2904b-107">예제</span><span class="sxs-lookup"><span data-stu-id="2904b-107">Example</span></span>  
+ [!code-xaml[timingbehaviors_snip#_graphicsmm_StateExampleMarkupWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StateExample.xaml#_graphicsmm_stateexamplemarkupwholepage)]  
   
  [!code-csharp[timingbehaviors_snip#_graphicsmm_StateEventHandlers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StateExample.xaml.cs#_graphicsmm_stateeventhandlers)]
  [!code-vb[timingbehaviors_snip#_graphicsmm_StateEventHandlers](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_snip/visualbasic/stateexample.xaml.vb#_graphicsmm_stateeventhandlers)]  
   
- 다음 그림에서는 부모 시간 표시 막대\(*Storyboard*\)가 진행될 때 애니메이션에 적용되는 두 가지 다른 상태를 보여 줍니다.  
+ <span data-ttu-id="2904b-108">다음 그림과 부모 타임 라인으로 다양 한 상태 애니메이션 입력 (*스토리 보드*) 진행 합니다.</span><span class="sxs-lookup"><span data-stu-id="2904b-108">The following illustration shows the different states the animations enter as the parent timeline (*Storyboard*) progresses.</span></span>  
   
- ![두 개의 애니메이션이 있는 Storyboard에 대한 시계 상태](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-3timelines.png "graphicsmm\_3timelines")  
+ <span data-ttu-id="2904b-109">![두 개의 애니메이션이 있는 Storyboard에 대 한 상태 클록](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-3timelines.png "graphicsmm_3timelines")</span><span class="sxs-lookup"><span data-stu-id="2904b-109">![Clock states for a Storyboard with two animations](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-3timelines.png "graphicsmm_3timelines")</span></span>  
   
- 다음 표에서는 *Animation1*의 <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> 이벤트가 발생하는 시간을 보여 줍니다.  
+ <span data-ttu-id="2904b-110">다음 표에서 시간을 *Animation1*의 <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> 이벤트 발생:</span><span class="sxs-lookup"><span data-stu-id="2904b-110">The following table shows the times at which *Animation1*'s <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> event fires:</span></span>  
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-|시간\(초\)|1|10|19|21|30|39|  
-|State|Active|Active|Stopped|Active|Active|Stopped|  
+|<span data-ttu-id="2904b-111">시간 (초)</span><span class="sxs-lookup"><span data-stu-id="2904b-111">Time (Seconds)</span></span>|<span data-ttu-id="2904b-112">1</span><span class="sxs-lookup"><span data-stu-id="2904b-112">1</span></span>|<span data-ttu-id="2904b-113">10</span><span class="sxs-lookup"><span data-stu-id="2904b-113">10</span></span>|<span data-ttu-id="2904b-114">19</span><span class="sxs-lookup"><span data-stu-id="2904b-114">19</span></span>|<span data-ttu-id="2904b-115">21</span><span class="sxs-lookup"><span data-stu-id="2904b-115">21</span></span>|<span data-ttu-id="2904b-116">30</span><span class="sxs-lookup"><span data-stu-id="2904b-116">30</span></span>|<span data-ttu-id="2904b-117">39</span><span class="sxs-lookup"><span data-stu-id="2904b-117">39</span></span>|  
+|<span data-ttu-id="2904b-118">상태</span><span class="sxs-lookup"><span data-stu-id="2904b-118">State</span></span>|<span data-ttu-id="2904b-119">활성</span><span class="sxs-lookup"><span data-stu-id="2904b-119">Active</span></span>|<span data-ttu-id="2904b-120">활성</span><span class="sxs-lookup"><span data-stu-id="2904b-120">Active</span></span>|<span data-ttu-id="2904b-121">중지됨</span><span class="sxs-lookup"><span data-stu-id="2904b-121">Stopped</span></span>|<span data-ttu-id="2904b-122">활성</span><span class="sxs-lookup"><span data-stu-id="2904b-122">Active</span></span>|<span data-ttu-id="2904b-123">활성</span><span class="sxs-lookup"><span data-stu-id="2904b-123">Active</span></span>|<span data-ttu-id="2904b-124">중지됨</span><span class="sxs-lookup"><span data-stu-id="2904b-124">Stopped</span></span>|  
   
- 다음 표에서는 *Animation2*의 <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> 이벤트가 발생하는 시간을 보여 줍니다.  
+ <span data-ttu-id="2904b-125">다음 표에서 시간을 *Animation2*의 <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> 이벤트 발생:</span><span class="sxs-lookup"><span data-stu-id="2904b-125">The following table shows the times at which *Animation2*'s <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> event fires:</span></span>  
   
 ||||||||||  
 |-|-|-|-|-|-|-|-|-|  
-|시간\(초\)|1|9|11|19|21|29|31|39|  
-|State|Active|채우는 중|Active|Stopped|Active|채우는 중|Active|Stopped|  
+|<span data-ttu-id="2904b-126">시간 (초)</span><span class="sxs-lookup"><span data-stu-id="2904b-126">Time (Seconds)</span></span>|<span data-ttu-id="2904b-127">1</span><span class="sxs-lookup"><span data-stu-id="2904b-127">1</span></span>|<span data-ttu-id="2904b-128">9</span><span class="sxs-lookup"><span data-stu-id="2904b-128">9</span></span>|<span data-ttu-id="2904b-129">11</span><span class="sxs-lookup"><span data-stu-id="2904b-129">11</span></span>|<span data-ttu-id="2904b-130">19</span><span class="sxs-lookup"><span data-stu-id="2904b-130">19</span></span>|<span data-ttu-id="2904b-131">21</span><span class="sxs-lookup"><span data-stu-id="2904b-131">21</span></span>|<span data-ttu-id="2904b-132">29</span><span class="sxs-lookup"><span data-stu-id="2904b-132">29</span></span>|<span data-ttu-id="2904b-133">31</span><span class="sxs-lookup"><span data-stu-id="2904b-133">31</span></span>|<span data-ttu-id="2904b-134">39</span><span class="sxs-lookup"><span data-stu-id="2904b-134">39</span></span>|  
+|<span data-ttu-id="2904b-135">상태</span><span class="sxs-lookup"><span data-stu-id="2904b-135">State</span></span>|<span data-ttu-id="2904b-136">활성</span><span class="sxs-lookup"><span data-stu-id="2904b-136">Active</span></span>|<span data-ttu-id="2904b-137">채우기</span><span class="sxs-lookup"><span data-stu-id="2904b-137">Filling</span></span>|<span data-ttu-id="2904b-138">활성</span><span class="sxs-lookup"><span data-stu-id="2904b-138">Active</span></span>|<span data-ttu-id="2904b-139">중지됨</span><span class="sxs-lookup"><span data-stu-id="2904b-139">Stopped</span></span>|<span data-ttu-id="2904b-140">활성</span><span class="sxs-lookup"><span data-stu-id="2904b-140">Active</span></span>|<span data-ttu-id="2904b-141">채우기</span><span class="sxs-lookup"><span data-stu-id="2904b-141">Filling</span></span>|<span data-ttu-id="2904b-142">활성</span><span class="sxs-lookup"><span data-stu-id="2904b-142">Active</span></span>|<span data-ttu-id="2904b-143">중지됨</span><span class="sxs-lookup"><span data-stu-id="2904b-143">Stopped</span></span>|  
   
- *Animation1*의 <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> 이벤트는 10초에서 발생하지만 해당 상태는 그대로 <xref:System.Windows.Media.Animation.ClockState>입니다.  이는 10초에 상태가 변경되지만 동일한 눈금에서 상태가 <xref:System.Windows.Media.Animation.ClockState>에서 <xref:System.Windows.Media.Animation.ClockState>으로 변경된 다음 다시 <xref:System.Windows.Media.Animation.ClockState>로 변경되었기 때문입니다.
+ <span data-ttu-id="2904b-144">다음에 유의 *Animation1*의 <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> 상태로 유지 되는 경우에이 이벤트가 10 초 후에 발생 <xref:System.Windows.Media.Animation.ClockState.Active>합니다.</span><span class="sxs-lookup"><span data-stu-id="2904b-144">Notice that *Animation1*'s  <xref:System.Windows.Media.Animation.Timeline.CurrentStateInvalidated> event fires at 10 seconds, even though its state remains <xref:System.Windows.Media.Animation.ClockState.Active>.</span></span> <span data-ttu-id="2904b-145">10 초 후에 상태가 변경에서 변경 하기 때문에 <xref:System.Windows.Media.Animation.ClockState.Active> 를 <xref:System.Windows.Media.Animation.ClockState.Filling> 다시 <xref:System.Windows.Media.Animation.ClockState.Active> 동일한 눈금에서 합니다.</span><span class="sxs-lookup"><span data-stu-id="2904b-145">That's because its state changed at 10 seconds, but it changed from <xref:System.Windows.Media.Animation.ClockState.Active> to <xref:System.Windows.Media.Animation.ClockState.Filling> and then back to <xref:System.Windows.Media.Animation.ClockState.Active> in the same tick.</span></span>

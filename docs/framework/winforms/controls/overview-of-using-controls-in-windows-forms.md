@@ -1,38 +1,42 @@
 ---
-title: "Windows Forms에서 컨트롤 사용 개요 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "컨트롤[Windows Forms]"
-  - "사용자 지정 컨트롤[Windows Forms]"
-  - "Windows Forms, 컨트롤"
+title: "Windows Forms에서 컨트롤 사용 개요"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Windows Forms, controls
+- controls [Windows Forms]
+- custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 74bd36d422619d2ea537acdb855edb8285360a8a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Windows Forms에서 컨트롤 사용 개요
-이 항목에서는 Windows Forms 응용 프로그램의 필수 요소를 설명하며 Windows Forms 응용 프로그램에서 컨트롤을 사용하고 이벤트를 처리하는 간단한 예제를 제공합니다.  
+# <a name="overview-of-using-controls-in-windows-forms"></a><span data-ttu-id="f15f4-102">Windows Forms에서 컨트롤 사용 개요</span><span class="sxs-lookup"><span data-stu-id="f15f4-102">Overview of Using Controls in Windows Forms</span></span>
+<span data-ttu-id="f15f4-103">이 항목 Windows Forms 응용 프로그램의 필수 요소에 설명 하 고 컨트롤을 사용 하는 Windows Forms 응용 프로그램의 이벤트를 처리 하는 간단한 예를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="f15f4-103">This topic describes the essential elements of a Windows Forms application and provides a simple example that uses controls and handles events in a Windows Forms application.</span></span>  
   
-## 단순 Windows Forms 응용 프로그램  
- Windows Forms 응용 프로그램은 최소한 다음 요소로 구성됩니다.  
+## <a name="simple-windows-forms-applications"></a><span data-ttu-id="f15f4-104">간단한 Windows Forms 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="f15f4-104">Simple Windows Forms Applications</span></span>  
+ <span data-ttu-id="f15f4-105">Windows Forms 응용 프로그램에는 최소한 다음과 같은 요소로 구성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f15f4-105">At a minimum, a Windows Forms application consists of the following elements:</span></span>  
   
--   <xref:System.Windows.Forms.Form?displayProperty=fullName>에서 파생된 하나 이상의 클래스  
+-   <span data-ttu-id="f15f4-106">파생 되는 하나 이상의 클래스 <xref:System.Windows.Forms.Form?displayProperty=nameWithType>합니다.</span><span class="sxs-lookup"><span data-stu-id="f15f4-106">One or more classes that derive from <xref:System.Windows.Forms.Form?displayProperty=nameWithType>.</span></span>  
   
--   `static`\(Visual Basic의 경우 `shared`\) <xref:System.Windows.Forms.Application.Run%2A> 메서드를 호출하고 이 메서드에 <xref:System.Windows.Forms.Form> 인스턴스를 전달하는 `Main` 메서드  <xref:System.Windows.Forms.Application.Run%2A> 메서드는 운영 체제에서 응용 프로그램으로 메시지를 처리합니다.  
+-   <span data-ttu-id="f15f4-107">A `Main` 메서드를 호출 하는 `static` (`shared` Visual basic에서) <xref:System.Windows.Forms.Application.Run%2A> 메서드와 전달은 <xref:System.Windows.Forms.Form> 를 인스턴스.</span><span class="sxs-lookup"><span data-stu-id="f15f4-107">A `Main` method that invokes the `static` (`shared` in Visual Basic) <xref:System.Windows.Forms.Application.Run%2A> method and passes a <xref:System.Windows.Forms.Form> instance to it.</span></span> <span data-ttu-id="f15f4-108"><xref:System.Windows.Forms.Application.Run%2A> 메서드는 운영 체제에서 응용 프로그램에 메시지를 처리 합니다.</span><span class="sxs-lookup"><span data-stu-id="f15f4-108">The <xref:System.Windows.Forms.Application.Run%2A> method processes messages from the operating system to the application.</span></span>  
   
- 다음 코드 예제에서는 Windows Forms 응용 프로그램의 필수 요소를 보여 줍니다.  
+ <span data-ttu-id="f15f4-109">다음 코드 예제는 Windows Forms 응용 프로그램의 필수 요소를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f15f4-109">The following code example shows the essential elements of a Windows Forms application.</span></span>  
   
 ```vb  
 Option Explicit  
@@ -80,8 +84,8 @@ public class MyForm : Form {
 }  
 ```  
   
-## Windows Forms 응용 프로그램에서 컨트롤 사용  
- 다음 코드 예제에서는 Windows Forms 응용 프로그램에서 컨트롤을 사용하고 이벤트를 처리하는 방법을 설명하는 간단한 응용 프로그램을 보여 줍니다.  예제는 폼의 세 가지 단추로 구성되는데, 각 단추를 클릭하면 배경색이 바뀝니다.  
+## <a name="using-controls-in-a-windows-forms-application"></a><span data-ttu-id="f15f4-110">Windows Forms 응용 프로그램에서 컨트롤 사용</span><span class="sxs-lookup"><span data-stu-id="f15f4-110">Using Controls in a Windows Forms Application</span></span>  
+ <span data-ttu-id="f15f4-111">다음 코드 예제에서는 Windows Forms 응용 프로그램 컨트롤을 사용 하 고 이벤트를 처리 하는 방법을 보여 주는 간단한 응용 프로그램을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="f15f4-111">The following code example shows a simple application that illustrates how Windows Forms applications use controls and handle events.</span></span> <span data-ttu-id="f15f4-112">이 예제에서는 세 개의 단추가 폼에서 구성 됩니다. 각 단추 클릭 했을 때 배경색을 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="f15f4-112">The example consists of three buttons on a form; each button changes the background color when clicked.</span></span>  
   
 ```vb  
 Option Explicit  
@@ -229,6 +233,6 @@ public class MyForm : Form {
 }  
 ```  
   
-## 참고 항목  
- [.NET Framework에서 사용자 지정 Windows Forms 컨트롤 개발](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)   
- [Windows Forms 컨트롤 개발 기본 사항](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)
+## <a name="see-also"></a><span data-ttu-id="f15f4-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f15f4-113">See Also</span></span>  
+ [<span data-ttu-id="f15f4-114">.NET Framework에서 사용자 지정 Windows Forms 컨트롤 개발</span><span class="sxs-lookup"><span data-stu-id="f15f4-114">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
+ [<span data-ttu-id="f15f4-115">Windows Forms 컨트롤 개발 기본 사항</span><span class="sxs-lookup"><span data-stu-id="f15f4-115">Windows Forms Control Development Basics</span></span>](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)

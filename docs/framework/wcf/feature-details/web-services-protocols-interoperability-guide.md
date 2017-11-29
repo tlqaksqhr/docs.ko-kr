@@ -1,119 +1,122 @@
 ---
-title: "웹 서비스 프로토콜 상호 운용성 가이드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "웹 서비스 프로토콜 상호 운용성 가이드"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-caps.latest.revision: 20
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: eff6ffe73d5296fb103811a51d94636ea757854e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 웹 서비스 프로토콜 상호 운용성 가이드
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 다양한 웹 서비스 프로토콜을 구현합니다.  이러한 프로토콜의 대부분에는 구현자가 결정하는 여러 가지 옵션과 확장 지점이 포함되어 있습니다.  이 항목에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 구현하는 웹 서비스 프로토콜의 목록을 제공합니다.  이 단원의 다른 항목에서는 지원되는 각 프로토콜의 구현에 대해 자세히 설명합니다.  
+# <a name="web-services-protocols-interoperability-guide"></a><span data-ttu-id="758c5-102">웹 서비스 프로토콜 상호 운용성 가이드</span><span class="sxs-lookup"><span data-stu-id="758c5-102">Web Services Protocols Interoperability Guide</span></span>
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="758c5-103">에서는 다양한 웹 서비스 프로토콜을 구현합니다.</span><span class="sxs-lookup"><span data-stu-id="758c5-103"> implements a number of Web services protocols.</span></span> <span data-ttu-id="758c5-104">이러한 프로토콜의 대부분에는 구현자가 결정하는 여러 가지 옵션과 확장 지점이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="758c5-104">Many of these protocols include a number of options and extensibility points left to the discretion of the implementer.</span></span> <span data-ttu-id="758c5-105">이 항목에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 구현하는 웹 서비스 프로토콜의 목록을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="758c5-105">This topic provides a list of Web services protocols [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implements.</span></span> <span data-ttu-id="758c5-106">이 단원의 다른 항목에서는 지원되는 각 프로토콜의 구현에 대해 자세히 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="758c5-106">Other topics within this section provide implementation details for each protocol supported.</span></span>  
   
-## WCF에서 구현하는 웹 서비스 프로토콜  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]는 채널을 통해 WS\(웹 서비스\) 인프라 프로토콜을 지원하고 계약 기능을 통해 웹 서비스 응용 프로그램 프로토콜을 지원합니다.  응용 프로그램 프로토콜의 상호 운용은 XSD\(XML 스키마 설명 언어\) 1.0과 WSDL\(웹 서비스 기술 언어\) 1.1을 통해 가능합니다.  
+## <a name="web-services-protocols-implemented-by-wcf"></a><span data-ttu-id="758c5-107">WCF에서 구현하는 웹 서비스 프로토콜</span><span class="sxs-lookup"><span data-stu-id="758c5-107">Web Services Protocols Implemented by WCF</span></span>  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="758c5-108">는 채널을 통해 WS(웹 서비스) 인프라 프로토콜을 지원하고 계약 기능을 통해 웹 서비스 응용 프로그램 프로토콜을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="758c5-108"> provides support for Web services (WS) infrastructure protocols through channels and Web services application protocols through the contracts feature.</span></span> <span data-ttu-id="758c5-109">응용 프로그램 프로토콜의 상호 운용은 XSD(XML 스키마 설명 언어) 1.0과 WSDL(웹 서비스 기술 언어) 1.1을 통해 가능합니다.</span><span class="sxs-lookup"><span data-stu-id="758c5-109">Interoperability for application protocols is accomplished through XML Schema description language 1.0 (XSD) and Web Services Description Language (WSDL) 1.1.</span></span>  
   
- 인프라 프로토콜 상호 운용성은 WS\-\* 사양에서 제공됩니다.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 채널은 다양한 WS\-\* 인프라 프로토콜을 지원합니다.  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 채널은 바인딩 요소를 사용하여 구성됩니다.  다음 표에서는 다양한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 바인딩 요소에서 구현하는 전체 WS\-\* 인프라 프로토콜의 목록을 보여 줍니다.  
+ <span data-ttu-id="758c5-110">인프라 프로토콜 상호 운용성은 WS-* 사양에서 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="758c5-110">Infrastructure protocols interoperability is provided by the WS-* specifications.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="758c5-111">채널은 다양 한 WS-에 대 한 지원을 제공\* 인프라 프로토콜입니다.</span><span class="sxs-lookup"><span data-stu-id="758c5-111"> channels provide support for a number of WS-\* infrastructure protocols.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="758c5-112"> 채널은 바인딩 요소를 사용하여 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="758c5-112"> channels are configured using binding elements.</span></span> <span data-ttu-id="758c5-113">다음 표에 WS-의 전체 목록을\* 다양 한 의해 구현 되는 인프라 프로토콜 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 바인딩 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="758c5-113">The following tables contain the full list of the WS-\* infrastructure protocols implemented by various [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] binding elements.</span></span>  
   
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>는 다음 표의 사양을 지원합니다.  
+ <span data-ttu-id="758c5-114"><xref:System.ServiceModel.Channels.HttpTransportBindingElement>는 다음 표의 사양을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="758c5-114"><xref:System.ServiceModel.Channels.HttpTransportBindingElement> supports the specifications in the following table.</span></span>  
   
-|사양\/문서|링크|  
-|------------|--------|  
-|HTTP 1.1|[RFC 2616](http://go.microsoft.com/fwlink/?LinkId=90372)\(영문\)|  
-|SOAP 1.1 HTTP 바인딩|[SOAP\(Simple Object Access Protocol\) 1.1](http://go.microsoft.com/fwlink/?LinkId=90520), 섹션 7\(영문\)|  
-|SOAP 1.2 HTTP 바인딩|[SOAP 버전 1.2 2부: Adjuncts\(Second Edition\)](http://go.microsoft.com/fwlink/?LinkId=95329), 섹션 7\(영문\)|  
+|<span data-ttu-id="758c5-115">사양/문서</span><span class="sxs-lookup"><span data-stu-id="758c5-115">Specification/document</span></span>|<span data-ttu-id="758c5-116">링크</span><span class="sxs-lookup"><span data-stu-id="758c5-116">Link</span></span>|  
+|-----------------------------|----------|  
+|<span data-ttu-id="758c5-117">HTTP 1.1</span><span class="sxs-lookup"><span data-stu-id="758c5-117">HTTP 1.1</span></span>|[<span data-ttu-id="758c5-118">RFC 2616</span><span class="sxs-lookup"><span data-stu-id="758c5-118">RFC 2616</span></span>](http://go.microsoft.com/fwlink/?LinkId=90372)|  
+|<span data-ttu-id="758c5-119">SOAP 1.1 HTTP 바인딩</span><span class="sxs-lookup"><span data-stu-id="758c5-119">SOAP 1.1 HTTP Binding</span></span>|<span data-ttu-id="758c5-120">[Simple Object Access Protocol (SOAP) 1.1](http://go.microsoft.com/fwlink/?LinkId=90520), 섹션 7</span><span class="sxs-lookup"><span data-stu-id="758c5-120">[Simple Object Access Protocol (SOAP) 1.1](http://go.microsoft.com/fwlink/?LinkId=90520), Section 7</span></span>|  
+|<span data-ttu-id="758c5-121">SOAP 1.2 HTTP 바인딩</span><span class="sxs-lookup"><span data-stu-id="758c5-121">SOAP 1.2 HTTP Binding</span></span>|<span data-ttu-id="758c5-122">[SOAP 버전 1.2 2 부: Adjuncts (Second Edition)](http://go.microsoft.com/fwlink/?LinkId=95329), 섹션 7</span><span class="sxs-lookup"><span data-stu-id="758c5-122">[SOAP Version 1.2 Part 2: Adjuncts (Second Edition)](http://go.microsoft.com/fwlink/?LinkId=95329), Section 7</span></span>|  
   
- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 및 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>는 다음 표의 사양을 지원합니다.  
+ <span data-ttu-id="758c5-123"><xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 및 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>는 다음 표의 사양을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="758c5-123"><xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> and <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> support the specifications in the following table.</span></span>  
   
-|사양\/문서|링크|  
-|------------|--------|  
-|XML|[XML\(Extensible Markup Language\) 1.0\(Fourth Edition\)](http://go.microsoft.com/fwlink/?LinkId=15139)\(영문\)|  
-|SOAP 1.1|[SOAP\(Simple Object Access Protocol\) 1.1](http://go.microsoft.com/fwlink/?LinkId=96687)\(영문\)|  
-|SOAP 1.2 Core|[SOAP 버전 1.2 1부: 메시징 프레임워크\(Second Edition\)](http://go.microsoft.com/fwlink/?LinkId=94664)\(영문\)|  
-|WS\-Addressing 2004\/08|[WS\-Addressing\(웹 서비스 주소 지정\)](http://go.microsoft.com/fwlink/?LinkId=81239)\(영문\)|  
-|W3C Web Services Addressing 1.0 \- Core|[웹 서비스 주소 지정 1.0 \- 코어](http://go.microsoft.com/fwlink/?LinkId=96688)\(영문\)|  
-|W3C Web Services Addressing 1.0 \- SOAP 바인딩|[웹 서비스 주소 지정 1.0 \- SOAP 바인딩](http://go.microsoft.com/fwlink/?LinkId=96689)\(영문\)|  
-|W3C Web Services Addressing 1.0 \- WSDL 바인딩\*|[웹 서비스 주소 지정 1.0 \- WSDL 바인딩](http://go.microsoft.com/fwlink/?LinkId=96690)\(영문\)|  
-|W3C Web Services Addressing 1.0 Metadata|[웹 서비스 주소 지정 1.0 \- 메타데이터](http://www.w3.org/TR/ws-addr-metadata/)\(영문\)|  
-|WSDL SOAP1.1 바인딩|[WSDL\(웹 서비스 기술 언어\) 1.1](http://go.microsoft.com/fwlink/?LinkId=96160)\(영문\)|  
-|WSDL SOAP1.2 바인딩|[SOAP 1.2에 대한 WSDL 1.1 바인딩 확장](http://go.microsoft.com/fwlink/?LinkId=96691)\(영문\)|  
+|<span data-ttu-id="758c5-124">사양/문서</span><span class="sxs-lookup"><span data-stu-id="758c5-124">Specification/Document</span></span>|<span data-ttu-id="758c5-125">링크</span><span class="sxs-lookup"><span data-stu-id="758c5-125">Link</span></span>|  
+|-----------------------------|----------|  
+|<span data-ttu-id="758c5-126">XML</span><span class="sxs-lookup"><span data-stu-id="758c5-126">XML</span></span>|[<span data-ttu-id="758c5-127">Extensible Markup Language (XML) 1.0 (Fourth Edition)</span><span class="sxs-lookup"><span data-stu-id="758c5-127">Extensible Markup Language (XML) 1.0 (Fourth Edition)</span></span>](http://go.microsoft.com/fwlink/?LinkId=15139)|  
+|<span data-ttu-id="758c5-128">SOAP 1.1</span><span class="sxs-lookup"><span data-stu-id="758c5-128">SOAP 1.1</span></span>|[<span data-ttu-id="758c5-129">Simple Object Access Protocol (SOAP) 1.1</span><span class="sxs-lookup"><span data-stu-id="758c5-129">Simple Object Access Protocol (SOAP) 1.1</span></span>](http://go.microsoft.com/fwlink/?LinkId=96687)|  
+|<span data-ttu-id="758c5-130">SOAP 1.2 Core</span><span class="sxs-lookup"><span data-stu-id="758c5-130">SOAP 1.2 Core</span></span>|[<span data-ttu-id="758c5-131">SOAP 버전 1.2 1 부: 메시징 프레임 워크 (Second Edition)</span><span class="sxs-lookup"><span data-stu-id="758c5-131">SOAP Version 1.2 Part 1: Messaging Framework (Second Edition)</span></span>](http://go.microsoft.com/fwlink/?LinkId=94664)|  
+|<span data-ttu-id="758c5-132">WS-Addressing 2004/08</span><span class="sxs-lookup"><span data-stu-id="758c5-132">WS-Addressing 2004/08</span></span>|[<span data-ttu-id="758c5-133">웹 서비스 주소 지정 (Ws-addressing)</span><span class="sxs-lookup"><span data-stu-id="758c5-133">Web Services Addressing (WS-Addressing)</span></span>](http://go.microsoft.com/fwlink/?LinkId=81239)|  
+|<span data-ttu-id="758c5-134">W3C Web Services Addressing 1.0 - Core</span><span class="sxs-lookup"><span data-stu-id="758c5-134">W3C Web Services Addressing 1.0 - Core</span></span>|[<span data-ttu-id="758c5-135">웹 서비스 주소 지정 1.0-코어</span><span class="sxs-lookup"><span data-stu-id="758c5-135">Web Services Addressing 1.0 - Core</span></span>](http://go.microsoft.com/fwlink/?LinkId=96688)|  
+|<span data-ttu-id="758c5-136">W3C Web Services Addressing 1.0 - SOAP 바인딩</span><span class="sxs-lookup"><span data-stu-id="758c5-136">W3C Web Services Addressing 1.0 - SOAP Binding</span></span>|[<span data-ttu-id="758c5-137">Web Services Addressing 1.0-SOAP 바인딩</span><span class="sxs-lookup"><span data-stu-id="758c5-137">Web Services Addressing 1.0 - SOAP Binding</span></span>](http://go.microsoft.com/fwlink/?LinkId=96689)|  
+|<span data-ttu-id="758c5-138">W3C Web Services Addressing 1.0 - WSDL 바인딩*</span><span class="sxs-lookup"><span data-stu-id="758c5-138">W3C Web Services Addressing 1.0 - WSDL Binding*</span></span>|[<span data-ttu-id="758c5-139">Web Services Addressing 1.0-WSDL 바인딩</span><span class="sxs-lookup"><span data-stu-id="758c5-139">Web Services Addressing 1.0 - WSDL Binding</span></span>](http://go.microsoft.com/fwlink/?LinkId=96690)|  
+|<span data-ttu-id="758c5-140">W3C Web Services Addressing 1.0 Metadata</span><span class="sxs-lookup"><span data-stu-id="758c5-140">W3C Web Services Addressing 1.0 Metadata</span></span>|[<span data-ttu-id="758c5-141">웹 서비스 주소 지정 1.0-메타 데이터</span><span class="sxs-lookup"><span data-stu-id="758c5-141">Web Services Addressing 1.0 - Metadata</span></span>](http://www.w3.org/TR/ws-addr-metadata/)|  
+|<span data-ttu-id="758c5-142">WSDL SOAP1.1 바인딩</span><span class="sxs-lookup"><span data-stu-id="758c5-142">WSDL SOAP1.1 Binding</span></span>|[<span data-ttu-id="758c5-143">웹 서비스 기술 언어 (WSDL) 1.1</span><span class="sxs-lookup"><span data-stu-id="758c5-143">Web Services Description Language (WSDL) 1.1</span></span>](http://go.microsoft.com/fwlink/?LinkId=96160)|  
+|<span data-ttu-id="758c5-144">WSDL SOAP1.2 바인딩</span><span class="sxs-lookup"><span data-stu-id="758c5-144">WSDL SOAP1.2 Binding</span></span>|[<span data-ttu-id="758c5-145">SOAP 1.2에 대 한 WSDL 1.1 바인딩 확장명</span><span class="sxs-lookup"><span data-stu-id="758c5-145">WSDL 1.1 Binding Extension for SOAP 1.2</span></span>](http://go.microsoft.com/fwlink/?LinkId=96691)|  
   
- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>는 다음 표의 사양을 지원합니다.  
+ <span data-ttu-id="758c5-146"><xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>는 다음 표의 사양을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="758c5-146"><xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> supports the specifications in the following table.</span></span>  
   
-|사양\/문서|링크|  
-|------------|--------|  
-|XOP|[XML 바이너리 최적화 패키징](http://go.microsoft.com/fwlink/?LinkId=96714)\(영문\)|  
-|MTOM \+ SOAP1.2 바인딩|[SOAP 메시지 전송 최적화 메커니즘](http://go.microsoft.com/fwlink/?LinkId=96713)\(영문\)|  
-|MTOM SOAP 1.1 바인딩|[MTOM 1.0에 대한 SOAP 1.1 바인딩](http://go.microsoft.com/fwlink/?LinkId=96712)\(영문\)|  
-|MTOM WS\-PolicyAssertions|게시될 예정|  
+|<span data-ttu-id="758c5-147">사양/문서</span><span class="sxs-lookup"><span data-stu-id="758c5-147">Specification/document</span></span>|<span data-ttu-id="758c5-148">링크</span><span class="sxs-lookup"><span data-stu-id="758c5-148">Link</span></span>|  
+|-----------------------------|----------|  
+|<span data-ttu-id="758c5-149">XOP</span><span class="sxs-lookup"><span data-stu-id="758c5-149">XOP</span></span>|[<span data-ttu-id="758c5-150">XML 바이너리 최적화 패키징</span><span class="sxs-lookup"><span data-stu-id="758c5-150">XML-binary Optimized Packaging</span></span>](http://go.microsoft.com/fwlink/?LinkId=96714)|  
+|<span data-ttu-id="758c5-151">MTOM + SOAP1.2 바인딩</span><span class="sxs-lookup"><span data-stu-id="758c5-151">MTOM + SOAP1.2 Binding</span></span>|[<span data-ttu-id="758c5-152">SOAP 메시지 전송 최적화 메커니즘</span><span class="sxs-lookup"><span data-stu-id="758c5-152">SOAP Message Transmission Optimization Mechanism</span></span>](http://go.microsoft.com/fwlink/?LinkId=96713)|  
+|<span data-ttu-id="758c5-153">MTOM SOAP 1.1 바인딩</span><span class="sxs-lookup"><span data-stu-id="758c5-153">MTOM SOAP 1.1 Binding</span></span>|[<span data-ttu-id="758c5-154">SOAP MTOM 1.0에 대 한 1.1 바인딩</span><span class="sxs-lookup"><span data-stu-id="758c5-154">SOAP 1.1 Binding for MTOM 1.0</span></span>](http://go.microsoft.com/fwlink/?LinkId=96712)|  
+|<span data-ttu-id="758c5-155">MTOM WS-PolicyAssertions</span><span class="sxs-lookup"><span data-stu-id="758c5-155">MTOM WS-PolicyAssertions</span></span>|<span data-ttu-id="758c5-156">게시될 예정</span><span class="sxs-lookup"><span data-stu-id="758c5-156">To be published.</span></span>|  
   
- <xref:System.ServiceModel.Channels.SecurityBindingElement>는 다음 표의 사양을 지원합니다.  
+ <span data-ttu-id="758c5-157"><xref:System.ServiceModel.Channels.SecurityBindingElement>는 다음 표의 사양을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="758c5-157"><xref:System.ServiceModel.Channels.SecurityBindingElement> supports the specifications in the following table.</span></span>  
   
-|사양\/문서|링크|  
-|------------|--------|  
-|WSS: SOAP Message Security 1.0|[Web Services Security: SOAP 메시지 보안 1.0](http://go.microsoft.com/fwlink/?LinkId=94684)\(영문\)|  
-|WSS: Username Token Profile 1.0|[Web Services Security 사용자 이름 토큰 프로필 1.0](http://go.microsoft.com/fwlink/?LinkId=95334)\(영문\)<br /><br /> Password\/@Type\=PasswordText 필요\(기본값\)|  
-|WSS: X.509 Token Profile 1.0|[Web Services Security X.509 인증서 토큰 프로필](http://go.microsoft.com/fwlink/?LinkId=95335)\(영문\)|  
-|WSS: SAML 1.1 Token Profile 1.0|[Web Services Security: SAML 토큰 프로필](http://go.microsoft.com/fwlink/?LinkId=96693)\(영문\)|  
-|WSS: SOAP Message Security 1.1|[Web Services Security: SOAP 메시지 보안 1.1](http://go.microsoft.com/fwlink/?LinkId=91240)\(영문\)|  
-|WSS Username Token Profile 1.1|[Web Services Security 사용자 이름 토큰 프로필 1.1](http://go.microsoft.com/fwlink/?LinkId=95331)\(영문\)<br /><br /> 암호 기반 키 파생을 구현하지 않음<br /><br /> Password\/@Type\=PasswordText 필요\(기본값\)|  
-|WSS: X509 Token Profile 1.1|[Web Services Security X.509 인증서 토큰 프로필 1.1](http://go.microsoft.com/fwlink/?LinkId=95332)\(영문\)|  
-|WSS: Kerberos Token Profile 1.1|[Web Services Security Kerberos 토큰 프로필 1.1](http://go.microsoft.com/fwlink/?LinkId=95333)\(영문\)|  
-|WSS: SAML 1.1 Token Profile 1.1|[Web Services Security: SAML 토큰 프로필 1.1](http://go.microsoft.com/fwlink/?LinkId=96694)\(영문\)|  
-|WS\-Secure Conversation|[Web Services Security 대화 언어](http://go.microsoft.com/fwlink/?LinkId=95317)\(영문\)|  
-|WS\-Trust 1.4|[웹 서비스 트러스트 언어](http://go.microsoft.com/fwlink/?LinkId=169514)\(영문\)|  
-|WS\-SecurityPolicy 2005\/07|[Web Services Security 대화 언어](http://go.microsoft.com/fwlink/?LinkId=95317)\(영문\)<br /><br /> OASIS WS\-SX Technical Committee에 제출된 오류에 따라 수정됨<br /><br /> [ws\-sx 메시지](http://go.microsoft.com/fwlink/?LinkId=96700)\(영문\)|  
-|WS\-ReliableMessaging 1.1|[Reliable Messaging 프로토콜 버전 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)|  
+|<span data-ttu-id="758c5-158">사양/문서</span><span class="sxs-lookup"><span data-stu-id="758c5-158">Specification/document</span></span>|<span data-ttu-id="758c5-159">링크</span><span class="sxs-lookup"><span data-stu-id="758c5-159">Link</span></span>|  
+|-----------------------------|----------|  
+|<span data-ttu-id="758c5-160">WSS: SOAP Message Security 1.0</span><span class="sxs-lookup"><span data-stu-id="758c5-160">WSS: SOAP Message Security 1.0</span></span>|[<span data-ttu-id="758c5-161">Web Services Security: SOAP 메시지 보안 1.0</span><span class="sxs-lookup"><span data-stu-id="758c5-161">Web Services Security: SOAP Message Security 1.0</span></span>](http://go.microsoft.com/fwlink/?LinkId=94684)|  
+|<span data-ttu-id="758c5-162">WSS: Username Token Profile 1.0</span><span class="sxs-lookup"><span data-stu-id="758c5-162">WSS: Username Token Profile 1.0</span></span>|[<span data-ttu-id="758c5-163">웹 서비스 보안 프로필 1.0</span><span class="sxs-lookup"><span data-stu-id="758c5-163">Web Services Security UsernameToken Profile 1.0</span></span>](http://go.microsoft.com/fwlink/?LinkId=95334)<br /><br /> <span data-ttu-id="758c5-164">필요한 Password/@Type= 후 (기본값)</span><span class="sxs-lookup"><span data-stu-id="758c5-164">require Password/@Type=PasswordText (default)</span></span>|  
+|<span data-ttu-id="758c5-165">WSS: X.509 Token Profile 1.0</span><span class="sxs-lookup"><span data-stu-id="758c5-165">WSS: X.509 Token Profile 1.0</span></span>|[<span data-ttu-id="758c5-166">Web Services Security X.509 인증서 토큰 프로필</span><span class="sxs-lookup"><span data-stu-id="758c5-166">Web Services Security X.509 Certificate Token Profile</span></span>](http://go.microsoft.com/fwlink/?LinkId=95335)|  
+|<span data-ttu-id="758c5-167">WSS: SAML 1.1 Token Profile 1.0</span><span class="sxs-lookup"><span data-stu-id="758c5-167">WSS: SAML 1.1 Token Profile 1.0</span></span>|[<span data-ttu-id="758c5-168">Web Services Security: SAML 토큰 프로필</span><span class="sxs-lookup"><span data-stu-id="758c5-168">Web Services Security: SAML Token Profile</span></span>](http://go.microsoft.com/fwlink/?LinkId=96693)|  
+|<span data-ttu-id="758c5-169">WSS: SOAP Message Security 1.1</span><span class="sxs-lookup"><span data-stu-id="758c5-169">WSS: SOAP Message Security 1.1</span></span>|[<span data-ttu-id="758c5-170">Web Services Security: SOAP 메시지 보안 1.1</span><span class="sxs-lookup"><span data-stu-id="758c5-170">Web Services Security: SOAP Message Security 1.1</span></span>](http://go.microsoft.com/fwlink/?LinkId=91240)|  
+|<span data-ttu-id="758c5-171">WSS Username Token Profile 1.1</span><span class="sxs-lookup"><span data-stu-id="758c5-171">WSS Username Token Profile 1.1</span></span>|[<span data-ttu-id="758c5-172">웹 서비스 보안 UsernameToken Profile 1.1</span><span class="sxs-lookup"><span data-stu-id="758c5-172">Web Services Security UsernameToken Profile 1.1</span></span>](http://go.microsoft.com/fwlink/?LinkId=95331)<br /><br /> <span data-ttu-id="758c5-173">암호 기반 키 파생을 구현하지 않음</span><span class="sxs-lookup"><span data-stu-id="758c5-173">do not implement password-based key derivation;</span></span><br /><br /> <span data-ttu-id="758c5-174">필요한 Password/@Type= 후 (기본값)</span><span class="sxs-lookup"><span data-stu-id="758c5-174">require Password/@Type=PasswordText (default)</span></span>|  
+|<span data-ttu-id="758c5-175">WSS: X509 Token Profile 1.1</span><span class="sxs-lookup"><span data-stu-id="758c5-175">WSS: X509 Token Profile 1.1</span></span>|[<span data-ttu-id="758c5-176">Web Services Security X.509 인증서 토큰 프로필 1.1</span><span class="sxs-lookup"><span data-stu-id="758c5-176">Web Services Security X.509 Certificate Token Profile 1.1</span></span>](http://go.microsoft.com/fwlink/?LinkId=95332)|  
+|<span data-ttu-id="758c5-177">WSS: Kerberos Token Profile 1.1</span><span class="sxs-lookup"><span data-stu-id="758c5-177">WSS: Kerberos Token Profile 1.1</span></span>|[<span data-ttu-id="758c5-178">Web Services Security Kerberos 토큰 프로필 1.1</span><span class="sxs-lookup"><span data-stu-id="758c5-178">Web Services Security Kerberos Token Profile 1.1</span></span>](http://go.microsoft.com/fwlink/?LinkId=95333)|  
+|<span data-ttu-id="758c5-179">WSS: SAML 1.1 Token Profile 1.1</span><span class="sxs-lookup"><span data-stu-id="758c5-179">WSS: SAML 1.1 Token Profile 1.1</span></span>|[<span data-ttu-id="758c5-180">웹 서비스 보안 SAML 토큰 프로필 1.1</span><span class="sxs-lookup"><span data-stu-id="758c5-180">Web Services Security SAML Token Profile 1.1</span></span>](http://go.microsoft.com/fwlink/?LinkId=96694)|  
+|<span data-ttu-id="758c5-181">WS-Secure Conversation</span><span class="sxs-lookup"><span data-stu-id="758c5-181">WS-Secure Conversation</span></span>|[<span data-ttu-id="758c5-182">웹 서비스 보안 대화 언어</span><span class="sxs-lookup"><span data-stu-id="758c5-182">Web Services Secure Conversation Language</span></span>](http://go.microsoft.com/fwlink/?LinkId=95317)|  
+|<span data-ttu-id="758c5-183">WS-Trust 1.4</span><span class="sxs-lookup"><span data-stu-id="758c5-183">WS-Trust 1.4</span></span>|[<span data-ttu-id="758c5-184">웹 서비스 트러스트 언어</span><span class="sxs-lookup"><span data-stu-id="758c5-184">Web Services Trust Language</span></span>](http://go.microsoft.com/fwlink/?LinkId=169514)|  
+|<span data-ttu-id="758c5-185">WS-SecurityPolicy 2005/07</span><span class="sxs-lookup"><span data-stu-id="758c5-185">WS-SecurityPolicy 2005/07</span></span>|[<span data-ttu-id="758c5-186">웹 서비스 보안 대화 언어</span><span class="sxs-lookup"><span data-stu-id="758c5-186">Web Services Secure Conversation Language</span></span>](http://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> <span data-ttu-id="758c5-187">OASIS WS-SX Technical Committee에 제출된 오류에 따라 수정됨</span><span class="sxs-lookup"><span data-stu-id="758c5-187">As amended by errata submitted to OASIS WS-SX Technical Committee.</span></span><br /><br /> [<span data-ttu-id="758c5-188">ws-sx 메시지</span><span class="sxs-lookup"><span data-stu-id="758c5-188">ws-sx message</span></span>](http://go.microsoft.com/fwlink/?LinkId=96700)|  
+|<span data-ttu-id="758c5-189">WS-ReliableMessaging 1.1</span><span class="sxs-lookup"><span data-stu-id="758c5-189">WS-ReliableMessaging 1.1</span></span>|[<span data-ttu-id="758c5-190">Reliable Messaging 프로토콜 버전 1.1</span><span class="sxs-lookup"><span data-stu-id="758c5-190">Reliable Messaging Protocol version 1.1</span></span>](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)|  
   
- <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>는 다음 표의 사양을 지원합니다.  
+ <span data-ttu-id="758c5-191"><xref:System.ServiceModel.Channels.TransactionFlowBindingElement>는 다음 표의 사양을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="758c5-191"><xref:System.ServiceModel.Channels.TransactionFlowBindingElement> supports the specifications in the following table.</span></span>  
   
-|사양\/문서|링크|  
-|------------|--------|  
-|WS\-Coordination|[웹 서비스 조정](http://go.microsoft.com/fwlink/?LinkId=95324)\(영문\)|  
-|WS\-AtomicTransaction|[웹 서비스 원자성 트랜잭션](http://go.microsoft.com/fwlink/?LinkId=95323)\(영문\)|  
+|<span data-ttu-id="758c5-192">사양/문서</span><span class="sxs-lookup"><span data-stu-id="758c5-192">Specification/Document</span></span>|<span data-ttu-id="758c5-193">링크</span><span class="sxs-lookup"><span data-stu-id="758c5-193">Link</span></span>|  
+|-----------------------------|----------|  
+|<span data-ttu-id="758c5-194">WS-Coordination</span><span class="sxs-lookup"><span data-stu-id="758c5-194">WS-Coordination</span></span>|[<span data-ttu-id="758c5-195">웹 서비스 조정</span><span class="sxs-lookup"><span data-stu-id="758c5-195">Web Services Coordination</span></span>](http://go.microsoft.com/fwlink/?LinkId=95324)|  
+|<span data-ttu-id="758c5-196">WS-AtomicTransaction</span><span class="sxs-lookup"><span data-stu-id="758c5-196">WS-AtomicTransaction</span></span>|[<span data-ttu-id="758c5-197">웹 서비스 원자성 트랜잭션</span><span class="sxs-lookup"><span data-stu-id="758c5-197">Web Services Atomic Transaction</span></span>](http://go.microsoft.com/fwlink/?LinkId=95323)|  
   
- <xref:System.ServiceModel.Description.MetadataExporter>, <xref:System.ServiceModel.Description.MetadataImporter>, <xref:System.ServiceModel.Description.WSDLExporter>, <xref:System.ServiceModel.Description.WSDLImporter> 및 <xref:System.ServiceModel.Description.MetadataResolver> 클래스는 다음과 같은 메타데이터 사양을 지원합니다.  
+ <span data-ttu-id="758c5-198"><xref:System.ServiceModel.Description.MetadataExporter>, <xref:System.ServiceModel.Description.MetadataImporter>, <!--zz <xref:System.ServiceModel.Description.WSDLExporter>, <xref:System.ServiceModel.Description.WSDLImporter>, --> `System.ServiceModel.Description.MetadataImporter`, `System.ServiceModel.Description.WSDLImporter`, 및 <xref:System.ServiceModel.Description.MetadataResolver> 클래스에서는 다음 메타 데이터 사양을 지원 합니다.</span><span class="sxs-lookup"><span data-stu-id="758c5-198">The <xref:System.ServiceModel.Description.MetadataExporter>, <xref:System.ServiceModel.Description.MetadataImporter>, <!--zz <xref:System.ServiceModel.Description.WSDLExporter>, <xref:System.ServiceModel.Description.WSDLImporter>, --> `System.ServiceModel.Description.MetadataImporter`, `System.ServiceModel.Description.WSDLImporter`, and <xref:System.ServiceModel.Description.MetadataResolver> classes provide support for the following metadata specifications:</span></span>  
   
--   [XML 스키마 1부: 구조\(Second Edition\)](http://go.microsoft.com/fwlink/?LinkId=3536)\(영문\)  
+-   [<span data-ttu-id="758c5-199">XML 스키마 1 부: 구조 제 2 판</span><span class="sxs-lookup"><span data-stu-id="758c5-199">XML Schema Part 1: Structures Second Edition</span></span>](http://go.microsoft.com/fwlink/?LinkId=3536)  
   
--   [XML 스키마 2부: 데이터 형식\(Second Edition\)](http://go.microsoft.com/fwlink/?LinkId=40138)\(영문\)  
+-   [<span data-ttu-id="758c5-200">XML 스키마 2 부: 데이터 형식 제 2 판</span><span class="sxs-lookup"><span data-stu-id="758c5-200">XML Schema Part 2: Data types Second Edition</span></span>](http://go.microsoft.com/fwlink/?LinkId=40138)  
   
--   [WSDL 1.1](http://go.microsoft.com/fwlink/?LinkId=96160)\(영문\)  
+-   [<span data-ttu-id="758c5-201">WSDL 1.1</span><span class="sxs-lookup"><span data-stu-id="758c5-201">WSDL 1.1</span></span>](http://go.microsoft.com/fwlink/?LinkId=96160)  
   
--   [WS\-Policy 1.2](http://go.microsoft.com/fwlink/?LinkId=96705)\(영문\)  
+-   [<span data-ttu-id="758c5-202">Ws-policy 1.2</span><span class="sxs-lookup"><span data-stu-id="758c5-202">WS-Policy 1.2</span></span>](http://go.microsoft.com/fwlink/?LinkId=96705)  
   
--   [WS\-Policy 1.5](http://go.microsoft.com/fwlink/?LinkId=96706)\(영문\)  
+-   [<span data-ttu-id="758c5-203">Ws-policy 1.5</span><span class="sxs-lookup"><span data-stu-id="758c5-203">WS-Policy 1.5</span></span>](http://go.microsoft.com/fwlink/?LinkId=96706)  
   
--   [WS\-PolicyAttachment 1.2](http://go.microsoft.com/fwlink/?LinkId=96707)\(영문\)  
+-   [<span data-ttu-id="758c5-204">Ws-policyattachment 1.2</span><span class="sxs-lookup"><span data-stu-id="758c5-204">WS-PolicyAttachment 1.2</span></span>](http://go.microsoft.com/fwlink/?LinkId=96707)  
   
--   [WS\-MetadataExchange 1.1](http://go.microsoft.com/fwlink/?LinkId=94868)\(영문\)  
+-   [<span data-ttu-id="758c5-205">Ws-metadataexchange 1.1</span><span class="sxs-lookup"><span data-stu-id="758c5-205">WS-MetadataExchange 1.1</span></span>](http://go.microsoft.com/fwlink/?LinkId=94868)  
   
--   [메타데이터 검색을 위한 WS\-Transfer Get](http://go.microsoft.com/fwlink/?LinkId=96708)\(영문\)  
+-   [<span data-ttu-id="758c5-206">Ws-transfer Get 메타 데이터 검색</span><span class="sxs-lookup"><span data-stu-id="758c5-206">WS-Transfer Get for metadata retrieval</span></span>](http://go.microsoft.com/fwlink/?LinkId=96708)  
   
- 또한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 다음과 같은 상호 운용성 프로필이 구현됩니다.  
+ <span data-ttu-id="758c5-207">또한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 다음과 같은 상호 운용성 프로필이 구현됩니다.</span><span class="sxs-lookup"><span data-stu-id="758c5-207">In addition, the following Interoperability Profiles are implemented across [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]:</span></span>  
   
--   [기본 프로필 1.1](http://go.microsoft.com/fwlink/?LinkId=69313)\(영문\)  
+-   [<span data-ttu-id="758c5-208">Basic Profile 1.1</span><span class="sxs-lookup"><span data-stu-id="758c5-208">Basic Profile 1.1</span></span>](http://go.microsoft.com/fwlink/?LinkId=69313)  
   
--   [단순 SOAP 바인딩 1.0](http://go.microsoft.com/fwlink/?LinkId=96710)\(영문\)  
+-   [<span data-ttu-id="758c5-209">단순 SOAP 바인딩 1.0</span><span class="sxs-lookup"><span data-stu-id="758c5-209">Simple SOAP Binding 1.0</span></span>](http://go.microsoft.com/fwlink/?LinkId=96710)  
   
--   [기본 보안 프로필 1.0 규격 초안](http://go.microsoft.com/fwlink/?LinkId=96711)\(영문\)  
+-   [<span data-ttu-id="758c5-210">기본 보안 프로필 1.0 초안</span><span class="sxs-lookup"><span data-stu-id="758c5-210">Basic Security Profile 1.0 Working Draft</span></span>](http://go.microsoft.com/fwlink/?LinkId=96711)  
   
-## 참고 항목  
- [시스템 제공 상호 운용성 바인딩에서 지원하는 웹 서비스 프로토콜](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)   
- [메시징 프로토콜](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)   
- [데이터 계약 스키마 참조](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)   
- [WSDL 및 정책](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)   
- [보안 프로토콜](../../../../docs/framework/wcf/feature-details/security-protocols.md)   
- [Reliable Messaging 프로토콜 버전 1.0](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)   
- [Reliable Messaging 프로토콜 버전 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)   
- [트랜잭션 프로토콜](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)   
- [컨텍스트 교환 프로토콜](../../../../docs/framework/wcf/feature-details/context-exchange-protocol.md)
+## <a name="see-also"></a><span data-ttu-id="758c5-211">참고 항목</span><span class="sxs-lookup"><span data-stu-id="758c5-211">See Also</span></span>  
+ [<span data-ttu-id="758c5-212">웹 서비스 시스템 제공 상호 운용성 바인딩에서 지 원하는 프로토콜</span><span class="sxs-lookup"><span data-stu-id="758c5-212">Web Services Protocols Supported by System-Provided Interoperability Bindings</span></span>](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
+ [<span data-ttu-id="758c5-213">메시징 프로토콜</span><span class="sxs-lookup"><span data-stu-id="758c5-213">Messaging Protocols</span></span>](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)  
+ [<span data-ttu-id="758c5-214">데이터 계약 스키마 참조</span><span class="sxs-lookup"><span data-stu-id="758c5-214">Data Contract Schema Reference</span></span>](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
+ [<span data-ttu-id="758c5-215">WSDL 및 정책</span><span class="sxs-lookup"><span data-stu-id="758c5-215">WSDL and Policy</span></span>](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)  
+ [<span data-ttu-id="758c5-216">보안 프로토콜</span><span class="sxs-lookup"><span data-stu-id="758c5-216">Security Protocols</span></span>](../../../../docs/framework/wcf/feature-details/security-protocols.md)  
+ [<span data-ttu-id="758c5-217">Reliable Messaging 프로토콜 버전 1.0</span><span class="sxs-lookup"><span data-stu-id="758c5-217">Reliable Messaging Protocol version 1.0</span></span>](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-0.md)  
+ [<span data-ttu-id="758c5-218">Reliable Messaging 프로토콜 버전 1.1</span><span class="sxs-lookup"><span data-stu-id="758c5-218">Reliable Messaging Protocol version 1.1</span></span>](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)  
+ [<span data-ttu-id="758c5-219">트랜잭션 프로토콜</span><span class="sxs-lookup"><span data-stu-id="758c5-219">Transaction Protocols</span></span>](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)  
+ [<span data-ttu-id="758c5-220">컨텍스트 교환 프로토콜</span><span class="sxs-lookup"><span data-stu-id="758c5-220">Context Exchange Protocol</span></span>](../../../../docs/framework/wcf/feature-details/context-exchange-protocol.md)

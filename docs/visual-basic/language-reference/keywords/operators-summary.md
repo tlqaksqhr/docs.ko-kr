@@ -1,54 +1,36 @@
 ---
-title: "연산자 요약 (Visual Basic) | Microsoft 문서"
-ms.date: 2015-07-20
+title: "연산자 요약(Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- operators [Visual Basic], about operators
+- operators [Visual Basic], about operators [Visual Basic]
 - symbols, operators
 - Visual Basic code, operators
 ms.assetid: cb44c210-686f-4417-a13f-51c0d60161f8
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3000667c2e81a5569b91e28e2d344e45ab598d69
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 30f1204d3aff244725f5200d59c4da32a5530615
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="operators-summary-visual-basic"></a>연산자 요약(Visual Basic)
-Visual Basic 언어 키워드 및 런타임 라이브러리 멤버는 목적과 용도 따라 구성 됩니다.  
+# <a name="operators-summary-visual-basic"></a><span data-ttu-id="54187-102">연산자 요약(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="54187-102">Operators Summary (Visual Basic)</span></span>
+<span data-ttu-id="54187-103">Visual Basic 언어 키워드 및 런타임 라이브러리 멤버 용도 따라 구성 하 고 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="54187-103">Visual Basic language keywords and run-time library members are organized by purpose and use.</span></span>  
   
-|작업|언어 요소|  
+|<span data-ttu-id="54187-104">작업</span><span class="sxs-lookup"><span data-stu-id="54187-104">Action</span></span>|<span data-ttu-id="54187-105">언어 요소</span><span class="sxs-lookup"><span data-stu-id="54187-105">Language element</span></span>|  
 |------------|----------------------|  
-|산술 연산|[^](../../../visual-basic/language-reference/operators/exponentiation-operator.md), [–](../../../visual-basic/language-reference/operators/subtraction-operator.md), [*](../../../visual-basic/language-reference/operators/multiplication-operator.md), [/](../../../visual-basic/language-reference/operators/floating-point-division-operator.md), [\\](../../../visual-basic/language-reference/operators/integer-division-operator.md), [Mod](../../../visual-basic/language-reference/operators/mod-operator.md), [+](../../../visual-basic/language-reference/operators/addition-operator.md),[=](../../../visual-basic/language-reference/operators/assignment-operator.md)|  
-|할당|[=](../../../visual-basic/language-reference/operators/assignment-operator.md), [^=](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md), [*=](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md), [\\=](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md), [+=](../../../visual-basic/language-reference/operators/addition-assignment-operator.md), [-=](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md), [&=](../../../visual-basic/language-reference/operators/and-assignment-operator.md)|  
-|비교|[=](../../../visual-basic/language-reference/operators/comparison-operators.md), [<>](../../../visual-basic/language-reference/operators/comparison-operators.md), [\<](../../../visual-basic/language-reference/operators/comparison-operators.md), [>](../../../visual-basic/language-reference/operators/comparison-operators.md), [\<=](../../../visual-basic/language-reference/operators/comparison-operators.md), [>=](../../../visual-basic/language-reference/operators/comparison-operators.md), [Like](../../../visual-basic/language-reference/operators/like-operator.md), [Is](../../../visual-basic/language-reference/operators/is-operator.md)|  
-|연결 연산|[&](../../../visual-basic/language-reference/operators/concatenation-operator.md), [+](../../../visual-basic/language-reference/operators/addition-operator.md)|  
-|논리/비트 연산|[Not](../../../visual-basic/language-reference/operators/not-operator.md), [And](../../../visual-basic/language-reference/operators/and-operator.md), [Or](../../../visual-basic/language-reference/operators/or-operator.md), [Xor](../../../visual-basic/language-reference/operators/xor-operator.md), [AndAlso](../../../visual-basic/language-reference/operators/andalso-operator.md), [OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md)|  
-|기타 작업|[AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md), [Await](../../../visual-basic/language-reference/operators/await-operator.md), [GetType](../../../visual-basic/language-reference/operators/gettype-operator.md)|  
+|<span data-ttu-id="54187-106">산술 연산</span><span class="sxs-lookup"><span data-stu-id="54187-106">Arithmetic</span></span>|<span data-ttu-id="54187-107">[^](../../../visual-basic/language-reference/operators/exponentiation-operator.md)[–](../../../visual-basic/language-reference/operators/subtraction-operator.md), [ * ](../../../visual-basic/language-reference/operators/multiplication-operator.md), [ / ](../../../visual-basic/language-reference/operators/floating-point-division-operator.md), [ \\ ](../../../visual-basic/language-reference/operators/integer-division-operator.md), [Mod](../../../visual-basic/language-reference/operators/mod-operator.md), [ +](../../../visual-basic/language-reference/operators/addition-operator.md),[=](../../../visual-basic/language-reference/operators/assignment-operator.md)</span><span class="sxs-lookup"><span data-stu-id="54187-107">[^](../../../visual-basic/language-reference/operators/exponentiation-operator.md), [–](../../../visual-basic/language-reference/operators/subtraction-operator.md), [*](../../../visual-basic/language-reference/operators/multiplication-operator.md), [/](../../../visual-basic/language-reference/operators/floating-point-division-operator.md), [\\](../../../visual-basic/language-reference/operators/integer-division-operator.md), [Mod](../../../visual-basic/language-reference/operators/mod-operator.md), [+](../../../visual-basic/language-reference/operators/addition-operator.md), [=](../../../visual-basic/language-reference/operators/assignment-operator.md)</span></span>|  
+|<span data-ttu-id="54187-108">할당</span><span class="sxs-lookup"><span data-stu-id="54187-108">Assignment</span></span>|<span data-ttu-id="54187-109">[=](../../../visual-basic/language-reference/operators/assignment-operator.md), [^=](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md), [*=](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md), [\\=](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md), [+=](../../../visual-basic/language-reference/operators/addition-assignment-operator.md), [-=](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md), [&=](../../../visual-basic/language-reference/operators/and-assignment-operator.md)</span><span class="sxs-lookup"><span data-stu-id="54187-109">[=](../../../visual-basic/language-reference/operators/assignment-operator.md), [^=](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md), [*=](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md), [\\=](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md), [+=](../../../visual-basic/language-reference/operators/addition-assignment-operator.md), [-=](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md), [&=](../../../visual-basic/language-reference/operators/and-assignment-operator.md)</span></span>|  
+|<span data-ttu-id="54187-110">비교</span><span class="sxs-lookup"><span data-stu-id="54187-110">Comparison</span></span>|<span data-ttu-id="54187-111">[=](../../../visual-basic/language-reference/operators/comparison-operators.md), [<>](../../../visual-basic/language-reference/operators/comparison-operators.md), [\<](../../../visual-basic/language-reference/operators/comparison-operators.md), [>](../../../visual-basic/language-reference/operators/comparison-operators.md), [\<=](../../../visual-basic/language-reference/operators/comparison-operators.md), [ >= ](../../../visual-basic/language-reference/operators/comparison-operators.md), [같은](../../../visual-basic/language-reference/operators/like-operator.md), [은](../../../visual-basic/language-reference/operators/is-operator.md)</span><span class="sxs-lookup"><span data-stu-id="54187-111">[=](../../../visual-basic/language-reference/operators/comparison-operators.md), [<>](../../../visual-basic/language-reference/operators/comparison-operators.md), [\<](../../../visual-basic/language-reference/operators/comparison-operators.md), [>](../../../visual-basic/language-reference/operators/comparison-operators.md), [\<=](../../../visual-basic/language-reference/operators/comparison-operators.md), [>=](../../../visual-basic/language-reference/operators/comparison-operators.md), [Like](../../../visual-basic/language-reference/operators/like-operator.md), [Is](../../../visual-basic/language-reference/operators/is-operator.md)</span></span>|  
+|<span data-ttu-id="54187-112">연결 연산</span><span class="sxs-lookup"><span data-stu-id="54187-112">Concatenation</span></span>|<span data-ttu-id="54187-113">[&](../../../visual-basic/language-reference/operators/concatenation-operator.md), [+](../../../visual-basic/language-reference/operators/addition-operator.md)</span><span class="sxs-lookup"><span data-stu-id="54187-113">[&](../../../visual-basic/language-reference/operators/concatenation-operator.md), [+](../../../visual-basic/language-reference/operators/addition-operator.md)</span></span>|  
+|<span data-ttu-id="54187-114">논리/비트 연산</span><span class="sxs-lookup"><span data-stu-id="54187-114">Logical/bitwise operations</span></span>|<span data-ttu-id="54187-115">[하지](../../../visual-basic/language-reference/operators/not-operator.md), [및](../../../visual-basic/language-reference/operators/and-operator.md), [또는](../../../visual-basic/language-reference/operators/or-operator.md), [Xor](../../../visual-basic/language-reference/operators/xor-operator.md), [AndAlso](../../../visual-basic/language-reference/operators/andalso-operator.md), [OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md)</span><span class="sxs-lookup"><span data-stu-id="54187-115">[Not](../../../visual-basic/language-reference/operators/not-operator.md), [And](../../../visual-basic/language-reference/operators/and-operator.md), [Or](../../../visual-basic/language-reference/operators/or-operator.md), [Xor](../../../visual-basic/language-reference/operators/xor-operator.md), [AndAlso](../../../visual-basic/language-reference/operators/andalso-operator.md), [OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md)</span></span>|  
+|<span data-ttu-id="54187-116">기타 작업</span><span class="sxs-lookup"><span data-stu-id="54187-116">Miscellaneous operations</span></span>|<span data-ttu-id="54187-117">[AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md), [Await](../../../visual-basic/language-reference/operators/await-operator.md), [GetType](../../../visual-basic/language-reference/operators/gettype-operator.md)</span><span class="sxs-lookup"><span data-stu-id="54187-117">[AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md), [Await](../../../visual-basic/language-reference/operators/await-operator.md), [GetType](../../../visual-basic/language-reference/operators/gettype-operator.md)</span></span>|  
   
-## <a name="see-also"></a>참고 항목  
- [키워드](../../../visual-basic/language-reference/keywords/index.md)   
- [Visual Basic 런타임 라이브러리 멤버](../../../visual-basic/language-reference/runtime-library-members.md)
-
+## <a name="see-also"></a><span data-ttu-id="54187-118">참고 항목</span><span class="sxs-lookup"><span data-stu-id="54187-118">See Also</span></span>  
+ [<span data-ttu-id="54187-119">키워드</span><span class="sxs-lookup"><span data-stu-id="54187-119">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)  
+ [<span data-ttu-id="54187-120">Visual Basic 런타임 라이브러리 멤버</span><span class="sxs-lookup"><span data-stu-id="54187-120">Visual Basic Runtime Library Members</span></span>](../../../visual-basic/language-reference/runtime-library-members.md)

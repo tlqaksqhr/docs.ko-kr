@@ -1,35 +1,27 @@
 ---
-title: "방법: 쿼리 (LINQ) (Visual Basic) 폴더에 있는 파일의 내용을 | Microsoft 문서"
+title: "방법: 폴더 (Visual Basic) (LINQ)의 파일 내용 쿼리"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: edacbcd3-f3e4-4429-a8be-28a58dc0dd70
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: d77806190b55d418ec8672913a73fb475ebb5f22
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 053a0b206b5e5fc71fb83967a70da205a8988978
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-query-the-contents-of-files-in-a-folder-linq-visual-basic"></a>방법: 폴더 (Visual Basic) (LINQ)의 파일 내용 쿼리
-이 예제에서는 지정 된 디렉터리 트리에 있는 모든 파일에 대해 쿼리 하 고 각 파일을 열고 내용을 검사 하는 방법을 보여 줍니다. 이러한 유형의 기술은 인덱스를 만들거나 역방향 디렉터리 트리의 내용에 대 한 인덱스를 사용할 수 있습니다. 단순 문자열 검색은이 예제에서 수행 됩니다. 그러나 정규식과 패턴 일치 하는 보다 복잡 한 형식의 수행할 수 있습니다. 자세한 내용은 참조 [하는 방법: 정규식 (Visual Basic)를 사용 하 여 LINQ 쿼리 결합](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)합니다.  
+# <a name="how-to-query-the-contents-of-files-in-a-folder-linq-visual-basic"></a><span data-ttu-id="11efe-102">방법: 폴더 (Visual Basic) (LINQ)의 파일 내용 쿼리</span><span class="sxs-lookup"><span data-stu-id="11efe-102">How to: Query the Contents of Files in a Folder (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="11efe-103">이 예제에서는 지정된 디렉터리 트리에 있는 모든 파일을 쿼리하고 각 파일을 연 다음 내용을 검사하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="11efe-103">This example shows how to query over all the files in a specified directory tree, open each file, and inspect its contents.</span></span> <span data-ttu-id="11efe-104">이러한 유형의 기술을 사용하여 디렉터리 트리 내용의 인덱스 또는 역방향 인덱스를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="11efe-104">This type of technique could be used to create indexes or reverse indexes of the contents of a directory tree.</span></span> <span data-ttu-id="11efe-105">이 예제에서는 단순 문자열 검색이 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="11efe-105">A simple string search is performed in this example.</span></span> <span data-ttu-id="11efe-106">그러나 정규식을 사용하면 더 복잡한 유형의 패턴 일치를 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="11efe-106">However, more complex types of pattern matching can be performed with a regular expression.</span></span> <span data-ttu-id="11efe-107">자세한 내용은 참조 [하는 방법: LINQ 쿼리와 정규식 (Visual Basic) 결합](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="11efe-107">For more information, see [How to: Combine LINQ Queries with Regular Expressions (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md).</span></span>  
   
-## <a name="example"></a>예제  
+## <a name="example"></a><span data-ttu-id="11efe-108">예제</span><span class="sxs-lookup"><span data-stu-id="11efe-108">Example</span></span>  
   
 ```vb  
 Module Module1  
@@ -87,9 +79,9 @@ Module Module1
 End Module  
 ```  
   
-## <a name="compiling-the-code"></a>코드 컴파일  
- .NET Framework 버전 3.5 이상 System.Core.dll에 대 한 참조를 대상으로 하는 프로젝트 만들기 및 `Imports` System.Linq 네임 스페이스에 대 한 정보입니다.  
+## <a name="compiling-the-code"></a><span data-ttu-id="11efe-109">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="11efe-109">Compiling the Code</span></span>  
+ <span data-ttu-id="11efe-110">System.Core.dll에 대한 참조와 System.Linq 네임스페이스에 대한 `Imports` 문을 사용하여 .NET Framework 버전 3.5 이상을 대상으로 하는 프로젝트를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="11efe-110">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)   
- [LINQ 및 파일 디렉터리 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a><span data-ttu-id="11efe-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="11efe-111">See Also</span></span>  
+ [<span data-ttu-id="11efe-112">LINQ to Objects(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="11efe-112">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+ [<span data-ttu-id="11efe-113">LINQ 및 파일 디렉터리(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="11efe-113">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

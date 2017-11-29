@@ -1,81 +1,82 @@
 ---
-title: "방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에 기본 셀 스타일 및 데이터 형식 설정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "셀, 스타일 설정"
-  - "데이터[Windows Forms], 형식 설정"
-  - "데이터 형식"
-  - "DataGridView 컨트롤[Windows Forms], 셀 스타일"
+title: "방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에 기본 셀 스타일 및 데이터 형식 설정"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DataGridView control [Windows Forms], cell styles
+- cells [Windows Forms], setting styles
+- data formats
+- data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 28f81efa3d9f63127ad9748aaba9ce3483246a69
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에 기본 셀 스타일 및 데이터 형식 설정
-<xref:System.Windows.Forms.DataGridView> 컨트롤을 사용하여 전체 컨트롤, 특정 열, 행 및 열 머리글, 교대로 반복되는 행 등에 대해 기본 셀 스타일 및 셀 데이터 형식을 지정하여 장부 형식의 효과를 만들 수 있습니다.  열 및 교대로 반복되는 행에 대한 기본 스타일이 전체 컨트롤에 대한 기본 스타일 설정보다 우선적으로 적용되며  개별 행 및 열에 대해 코드에 설정한 스타일이 기본 스타일보다 우선적으로 적용됩니다.  
+# <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a><span data-ttu-id="76efd-102">방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에 기본 셀 스타일 및 데이터 형식 설정</span><span class="sxs-lookup"><span data-stu-id="76efd-102">How to: Set Default Cell Styles and Data Formats for the Windows Forms DataGridView Control Using the Designer</span></span>
+<span data-ttu-id="76efd-103"><xref:System.Windows.Forms.DataGridView> 제어를 사용 하면 기본 셀 스타일을 지정 하 고 셀 데이터 형식을 전체 컨트롤에 대 한, 특정 열에 대 한, 행 및 열 머리글에 대 한 대체 행 원장 효과를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="76efd-103">The <xref:System.Windows.Forms.DataGridView> control lets you specify default cell styles and cell data formats for the entire control, for specific columns, for row and column headers, and for alternating rows to create a ledger effect.</span></span> <span data-ttu-id="76efd-104">전체 컨트롤에 대해 설정 하는 기본 스타일은 기본적으로 열과 대체 행 스타일 설정 재정의 됩니다.</span><span class="sxs-lookup"><span data-stu-id="76efd-104">Default styles set for the entire control are overridden by default styles set for columns and alternating rows.</span></span> <span data-ttu-id="76efd-105">또한 개별 행 및 열에 대 한 코드에서 설정한 기본 스타일을 재정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="76efd-105">Additionally, styles that you set in code for individual rows and cells override the default styles.</span></span>  
   
- 셀 스타일에 대한 자세한 내용은 [Windows Forms DataGridView 컨트롤의 셀 스타일](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)을 참조하십시오.  교대로 반복되는 행 스타일 설정에 대한 내용은 [방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에 교대로 반복되는 행 스타일 설정](../../../../docs/framework/winforms/controls/set-alternating-row-styles-for-the-datagrid-using-the-designer.md)을 참조하십시오.  
+ <span data-ttu-id="76efd-106">셀 스타일에 대 한 자세한 내용은 참조 [Windows Forms DataGridView 컨트롤의 셀 스타일](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="76efd-106">For more information about cell styles, see [Cell Styles in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).</span></span> <span data-ttu-id="76efd-107">교대로 반복 되는 행에 대 한 스타일을 설정 하려면 참조 [하는 방법:는 Windows Forms DataGridView 컨트롤 사용 하 여 디자이너에 교대로 반복 되는 행 스타일 설정](../../../../docs/framework/winforms/controls/set-alternating-row-styles-for-the-datagrid-using-the-designer.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="76efd-107">To set styles for alternating rows, see [How to: Set Alternating Row Styles for the Windows Forms DataGridView Control Using the Designer](../../../../docs/framework/winforms/controls/set-alternating-row-styles-for-the-datagrid-using-the-designer.md).</span></span>  
   
- 또한 컨트롤에 추가될 모든 행에 스타일을 적용하기 위해 <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> 속성을 사용하여 스타일을 설정할 수 있습니다.  행 템플릿에 대한 자세한 내용은 [방법: 행 템플릿을 사용하여 Windows Forms DataGridView 컨트롤에서 행 사용자 지정](../../../../docs/framework/winforms/controls/use-the-row-template-to-customize-rows-in-the-datagrid.md)을 참조하십시오.  
+ <span data-ttu-id="76efd-108">사용 하 여 스타일을 설정할 수도 있습니다는 <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> 속성을 컨트롤에 추가 될 모든 행에 영향을 줍니다.</span><span class="sxs-lookup"><span data-stu-id="76efd-108">You can also set styles using the <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> property to affect all rows that will be added to the control.</span></span> <span data-ttu-id="76efd-109">행 템플릿에 대 한 자세한 내용은 참조 [하는 방법: Windows Forms DataGridView 컨트롤에서 사용자 지정 행을 행 템플릿을 사용](../../../../docs/framework/winforms/controls/use-the-row-template-to-customize-rows-in-the-datagrid.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="76efd-109">For more information about the row template, see [How to: Use the Row Template to Customize Rows in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/use-the-row-template-to-customize-rows-in-the-datagrid.md).</span></span>  
   
- 다음 절차를 수행하려면 <xref:System.Windows.Forms.DataGridView> 컨트롤이 포함된 폼이 있는 **Windows 응용 프로그램** 프로젝트가 필요합니다.  이러한 프로젝트를 설정하는 데 대한 내용은 [How to: Create a Windows Application Project](http://msdn.microsoft.com/ko-kr/b2f93fed-c635-4705-8d0e-cf079a264efa) 및 [방법: Windows Forms에 컨트롤 추가](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)를 참조하십시오.  
-  
-> [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다.  설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기**를 선택합니다.  자세한 내용은 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ko-kr/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하십시오.  
-  
-### 컨트롤의 모든 셀에 기본 스타일을 설정하려면  
-  
-1.  디자이너에서 <xref:System.Windows.Forms.DataGridView> 컨트롤을 선택합니다.  
-  
-2.  **속성** 창에서 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> 또는 <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> 속성 옆에 있는 줄임표 단추\(![VisualStudioEllipsesButton 스크린 샷](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\)를 클릭합니다.  **CellStyle 작성기** 대화 상자가 나타납니다.  
-  
-3.  속성을 설정하여 스타일을 정의하고 **미리 보기** 창을 사용하여 선택 내용을 확인합니다.  
+ <span data-ttu-id="76efd-110">다음 절차를 필요는 **Windows 응용 프로그램** 포함 된 폼을 사용 하 여 프로젝트는 <xref:System.Windows.Forms.DataGridView> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="76efd-110">The following procedures require a **Windows Application** project with a form containing a <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="76efd-111">이러한 프로젝트 설정에 대 한 정보를 참조 하십시오. [하는 방법: Windows 응용 프로그램 프로젝트 만들기](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) 및 [하는 방법: Windows Forms에 컨트롤 추가](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="76efd-111">For information about setting up such a project, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) and [How to: Add Controls to Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span></span>  
   
 > [!NOTE]
->  비주얼 스타일을 사용할 있는 경우 행 및 열 머리글\(<xref:System.Windows.Forms.DataGridView.TopLeftHeaderCell%2A> 제외\)의 스타일이 현재 테마에 의해 자동으로 지정됩니다. 이 경우 <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> 및 <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> 속성 값은 무시됩니다.  
+>  <span data-ttu-id="76efd-112">표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="76efd-112">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="76efd-113">설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="76efd-113">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="76efd-114">자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="76efd-114">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
+  
+### <a name="to-set-default-styles-for-all-cells-in-the-control"></a><span data-ttu-id="76efd-115">컨트롤의 모든 셀에 대 한 기본 스타일을 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="76efd-115">To set default styles for all cells in the control</span></span>  
+  
+1.  <span data-ttu-id="76efd-116">선택 된 <xref:System.Windows.Forms.DataGridView> 디자이너에서 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="76efd-116">Select the <xref:System.Windows.Forms.DataGridView> control in the designer.</span></span>  
+  
+2.  <span data-ttu-id="76efd-117">에 **속성** 창에서 줄임표 단추를 클릭 (![VisualStudioEllipsesButton 스크린 샷](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 옆에 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>, 또는 <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="76efd-117">In the **Properties** window, click the ellipsis button (![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) next to the <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>, or <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> property.</span></span> <span data-ttu-id="76efd-118">**CellStyle 작성기** 대화 상자가 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="76efd-118">The **CellStyle Builder** dialog box appears.</span></span>  
+  
+3.  <span data-ttu-id="76efd-119">사용 하 여 속성을 설정 하 여 스타일을 정의 하는 **미리 보기** 선택 사항을 확인 하는 창입니다.</span><span class="sxs-lookup"><span data-stu-id="76efd-119">Define the style by setting the properties, using the **Preview** pane to confirm your choices.</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="76efd-120">비주얼 스타일을 사용 하는 경우 행 및 열 머리글 (제외 하 고는 <xref:System.Windows.Forms.DataGridView.TopLeftHeaderCell%2A>)는 현재 테마에 따라 자동으로 스타일이 지정 재정의 <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> 및 <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> 속성 값입니다.</span><span class="sxs-lookup"><span data-stu-id="76efd-120">If visual styles are enabled, the row and column headers (except for the <xref:System.Windows.Forms.DataGridView.TopLeftHeaderCell%2A>) are automatically styled by the current theme, overriding the <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> and <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> property values.</span></span>  
 >   
->  디자이너를 사용하여 선택한 여러 <xref:System.Windows.Forms.DataGridView> 컨트롤에 대해 셀 스타일을 설정할 수 있지만, 해당 컨트롤이 사용자가 수정하려는 셀 스타일 속성에 대해 동일한 값을 갖고 있는 경우에만 가능합니다.  셀 스타일이 해당 속성에 대해 다르면 **CellStyle 작성기** 대화 상자의 **속성** 창이 비게 됩니다.  
+>  <span data-ttu-id="76efd-121">선택한 여러에 대 한 셀 스타일을 설정할 수 있습니다 <xref:System.Windows.Forms.DataGridView> 만 디자이너를 사용 하 여 수정 하려는 셀 스타일 속성에 대 한 동일한 값이 있는 경우를 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="76efd-121">You can set cell styles for multiple selected <xref:System.Windows.Forms.DataGridView> controls using the designer, but only if they have identical values for the cell style property you want to modify.</span></span> <span data-ttu-id="76efd-122">해당 속성에 대 한 셀 스타일 다른 경우는 **속성** 의 창이 **CellStyle 작성기** 대화 상자가 비어 있게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="76efd-122">If any cell styles differ for that property, the **Properties** windows of the **CellStyle Builder** dialog box will be blank.</span></span>  
   
-### 개별 열에서 셀에 기본 스타일을 설정하려면  
+### <a name="to-set-default-styles-for-cells-in-individual-columns"></a><span data-ttu-id="76efd-123">개별 열에 기본 셀 스타일을 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="76efd-123">To set default styles for cells in individual columns</span></span>  
   
-1.  디자이너에서 <xref:System.Windows.Forms.DataGridView> 컨트롤을 마우스 오른쪽 단추로 클릭하고 **열 편집**을 선택합니다.  
+1.  <span data-ttu-id="76efd-124">마우스 오른쪽 단추로 클릭는 <xref:System.Windows.Forms.DataGridView> 디자이너에서 제어 하 고 선택 **열 편집**합니다.</span><span class="sxs-lookup"><span data-stu-id="76efd-124">Right-click the <xref:System.Windows.Forms.DataGridView> control in the designer and choose **Edit Columns**.</span></span>  
   
-2.  **선택한 열** 목록에서 열을 선택합니다.  
+2.  <span data-ttu-id="76efd-125">열을 선택 된 **선택한 열** 목록입니다.</span><span class="sxs-lookup"><span data-stu-id="76efd-125">Select a column from the **Selected Columns** list.</span></span>  
   
-3.  **열 속성** 표에서 <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> 속성 옆에 있는 줄임표 단추\(![VisualStudioEllipsesButton 스크린 샷](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\)를 클릭합니다.  **CellStyle 작성기** 대화 상자가 나타납니다.  
+3.  <span data-ttu-id="76efd-126">에 **열 속성** 그리드, 줄임표 단추를 클릭 (![VisualStudioEllipsesButton 스크린 샷](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 옆에 <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="76efd-126">In the **Column Properties** grid, click the ellipsis button (![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) next to the <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> property.</span></span> <span data-ttu-id="76efd-127">**CellStyle 작성기** 대화 상자가 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="76efd-127">The **CellStyle Builder** dialog box appears.</span></span>  
   
-4.  속성을 설정하여 스타일을 정의하고 **미리 보기** 창을 사용하여 선택 내용을 확인합니다.  
+4.  <span data-ttu-id="76efd-128">사용 하 여 속성을 설정 하 여 스타일을 정의 하는 **미리 보기** 선택 사항을 확인 하는 창입니다.</span><span class="sxs-lookup"><span data-stu-id="76efd-128">Define the style by setting the properties, using the **Preview** pane to confirm your choices.</span></span>  
   
-### 셀 데이터의 형식을 지정하려면  
+### <a name="to-format-data-in-cells"></a><span data-ttu-id="76efd-129">셀의 데이터 서식을 지정 하려면</span><span class="sxs-lookup"><span data-stu-id="76efd-129">To format data in cells</span></span>  
   
-1.  위의 절차 중 하나를 사용하여 기본 셀 스타일 속성과 관련된 **CellStyle 작성기** 대화 상자를 표시합니다.  
+1.  <span data-ttu-id="76efd-130">앞의 절차 중 하나를 사용 하 여 표시 하는 **CellStyle 작성기** 대화 상자에 기본 셀 스타일 속성이 관련이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="76efd-130">Use one of the preceding procedures to display a **CellStyle Builder** dialog box related to a default cell style property.</span></span>  
   
-2.  **CellStyle 작성기** 대화 상자에서 <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> 속성 옆에 있는 줄임표 단추\(![VisualStudioEllipsesButton 스크린 샷](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\)를 클릭합니다.  **형식 문자열 대화 상자**가 나타납니다.  
+2.  <span data-ttu-id="76efd-131">에 **CellStyle 작성기** 대화 상자에서 줄임표 단추를 클릭 (![VisualStudioEllipsesButton 스크린 샷](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 옆에 <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="76efd-131">In the **CellStyle Builder** dialog box, click the ellipsis button (![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) next to the <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> property.</span></span> <span data-ttu-id="76efd-132">**형식 문자열** 대화 상자가 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="76efd-132">The **Format String** dialog box appears.</span></span>  
   
-3.  형식 유형을 선택한 다음 형식에 대한 세부 사항\(예: 표시할 소수 자릿수\)을 수정하고 **샘플** 상자를 사용하여 선택 내용을 확인합니다.  
+3.  <span data-ttu-id="76efd-133">형식 유형을 선택한 다음 형식 (예: 개수 표시 하려면 소수 자릿수)의 세부 정보를 수정를 사용 하는 **샘플** 선택 사항을 확인 하는 상자입니다.</span><span class="sxs-lookup"><span data-stu-id="76efd-133">Select a format type, then modify the details of the type (such as the number of decimal places to display), using the **Sample** box to confirm your choices.</span></span>  
   
-4.  null 값이 포함될 가능성이 있는 데이터 소스에 <xref:System.Windows.Forms.DataGridView> 컨트롤을 바인딩하는 경우에는 **Null 값** 텍스트 상자에 입력합니다.  이 값은 셀 값이 null 참조\(Visual Basic의 경우 `Nothing`\)이거나 <xref:System.DBNull.Value?displayProperty=fullName>인 경우 표시됩니다.  
+4.  <span data-ttu-id="76efd-134">바인딩하는 경우는 <xref:System.Windows.Forms.DataGridView> 컨트롤 입력, null 값을 포함할 가능성이 있는 데이터 소스는 **Null 값** 입력란.</span><span class="sxs-lookup"><span data-stu-id="76efd-134">If you are binding the <xref:System.Windows.Forms.DataGridView> control to a data source that is likely to contain null values, fill in the **Null Value** text box.</span></span> <span data-ttu-id="76efd-135">이 값을 null 참조 셀 값이 같은 경우에 표시 됩니다 (`Nothing` Visual basic에서) 또는 <xref:System.DBNull.Value?displayProperty=nameWithType>합니다.</span><span class="sxs-lookup"><span data-stu-id="76efd-135">This value is displayed when the cell value is equal to a null reference (`Nothing` in Visual Basic) or <xref:System.DBNull.Value?displayProperty=nameWithType>.</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Forms.DataGridView>   
- <xref:System.Windows.Forms.DataGridViewCellStyle>   
- <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A?displayProperty=fullName>   
- [Windows Forms DataGridView 컨트롤의 셀 스타일](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)   
- [방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에 교대로 반복되는 행 스타일 설정](../../../../docs/framework/winforms/controls/set-alternating-row-styles-for-the-datagrid-using-the-designer.md)   
- [How to: Create a Windows Application Project](http://msdn.microsoft.com/ko-kr/b2f93fed-c635-4705-8d0e-cf079a264efa)   
- [방법: Windows Forms에 컨트롤 추가](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="76efd-136">참고 항목</span><span class="sxs-lookup"><span data-stu-id="76efd-136">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ <xref:System.Windows.Forms.DataGridViewCellStyle>  
+ <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A?displayProperty=nameWithType>  
+ [<span data-ttu-id="76efd-137">Windows Forms DataGridView 컨트롤의 셀 스타일</span><span class="sxs-lookup"><span data-stu-id="76efd-137">Cell Styles in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="76efd-138">방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에 교대로 반복되는 행 스타일 설정</span><span class="sxs-lookup"><span data-stu-id="76efd-138">How to: Set Alternating Row Styles for the Windows Forms DataGridView Control Using the Designer</span></span>](../../../../docs/framework/winforms/controls/set-alternating-row-styles-for-the-datagrid-using-the-designer.md)  
+ [<span data-ttu-id="76efd-139">방법: Windows 응용 프로그램 프로젝트 만들기</span><span class="sxs-lookup"><span data-stu-id="76efd-139">How to: Create a Windows Application Project</span></span>](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)  
+ [<span data-ttu-id="76efd-140">방법: Windows Forms에 컨트롤 추가</span><span class="sxs-lookup"><span data-stu-id="76efd-140">How to: Add Controls to Windows Forms</span></span>](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)

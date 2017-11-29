@@ -1,114 +1,115 @@
 ---
-title: "여러 플랫폼을 대상으로 하는 라이브러리의 앱 리소스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-standard"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - ".NET Framework, 여러 플랫폼을 대상으로 할 때의 리소스"
-  - "여러 플랫폼, 리소스"
-  - "리소스[.NET Framework]"
-  - "리소스, 여러 플랫폼용"
-  - "여러 플랫폼을 대상으로 지정, 리소스"
+title: "여러 플랫폼을 대상으로 하는 라이브러리의 앱 리소스"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-standard
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- multiple platforms, resources for
+- resources [.NET Framework]
+- .NET Framework, resources when targeting multiple platforms
+- resources, for multiple platforms
+- targeting multiple platforms, resources for
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
-caps.latest.revision: 20
-author: "mairaw"
-ms.author: "mairaw"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: mairaw
+ms.author: mairaw
+manager: wpickett
+ms.openlocfilehash: 74cd3df645c2490bcf98533ca8846ddfb742f67f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 여러 플랫폼을 대상으로 하는 라이브러리의 앱 리소스
-여러 플랫폼에서 클래스 라이브러리의 리소스에 액세스할 수 있는지 확인하려면 .NET Framework [이식 가능한 클래스 라이브러리](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) 프로젝트 형식을 사용할 수 있습니다.  이 프로젝트 형식은 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)]에서 사용할 수 있으며 .NET Framework 클래스 라이브러리의 이식 가능한 하위 집합을 대상으로 합니다.  [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]을 사용할 경우 데스크톱 앱, Silverlight 앱, Windows Phone 앱 및 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱을 통해 라이브러리에 액세스할 수 있게 됩니다.  
+# <a name="app-resources-for-libraries-that-target-multiple-platforms"></a><span data-ttu-id="58c0a-102">여러 플랫폼을 대상으로 하는 라이브러리의 앱 리소스</span><span class="sxs-lookup"><span data-stu-id="58c0a-102">App Resources for Libraries That Target Multiple Platforms</span></span>
+<span data-ttu-id="58c0a-103">.NET Framework를 사용할 수 있습니다 [이식 가능한 클래스 라이브러리](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) 프로젝트 형식을 여러 플랫폼에서 클래스 라이브러리의 리소스에 액세스할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-103">You can use the .NET Framework [Portable Class Library](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) project type to ensure that resources in your class libraries can be accessed from multiple platforms.</span></span> <span data-ttu-id="58c0a-104">이 프로젝트 형식은 [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)]에서 사용할 수 있으며 .NET Framework 클래스 라이브러리의 이식 가능한 하위 집합을 대상으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-104">This project type is available in [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] and targets the portable subset of the .NET Framework class library.</span></span> <span data-ttu-id="58c0a-105">[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]을 사용할 경우 데스크톱 앱, Silverlight 앱, Windows Phone 앱 및 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 앱을 통해 라이브러리에 액세스할 수 있게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-105">Using  a [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] ensures that your library can be accessed from desktop apps, Silverlight apps, Windows Phone apps, and [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] apps.</span></span>  
   
- [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 프로젝트는 응용 프로그램에서 사용할 수 있는 <xref:System.Resources> 네임스페이스에서 형식의 매우 제한된 하위 집합만 만들지만 <xref:System.Resources.ResourceManager> 클래스를 사용하여 리소스를 검색할 수 있습니다.  그러나 Visual Studio를 사용하여 응용 프로그램을 만들려면 <xref:System.Resources.ResourceManager> 클래스를 직접 사용하는 대신에 Visual Studio가 생성한 강력한 형식의 래퍼를 사용하여야 합니다.  
+ <span data-ttu-id="58c0a-106">[!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 프로젝트는 응용 프로그램에서 사용할 수 있는 <xref:System.Resources> 네임스페이스에서 형식의 매우 제한된 하위 집합만 만들지만 <xref:System.Resources.ResourceManager> 클래스를 사용하여 리소스를 검색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-106">The [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] project makes only a very limited subset of the types in the <xref:System.Resources> namespace available to your application, but it does allow you to use the <xref:System.Resources.ResourceManager> class to retrieve resources.</span></span> <span data-ttu-id="58c0a-107">그러나 Visual Studio를 사용하여 응용 프로그램을 만들려면 <xref:System.Resources.ResourceManager> 클래스를 직접 사용하는 대신에 Visual Studio가 생성한 강력한 형식의 래퍼를 사용하여야 합니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-107">However, if you are creating an app by using Visual Studio, you should use the strongly typed wrapper created by Visual Studio instead of using the <xref:System.Resources.ResourceManager> class directly.</span></span>  
   
- Visual Studio에서 강력한 형식의 래퍼를 만들려면 Visual Studio 리소스 디자이너에서 기본 리소스 파일의 **액세스 한정자**를 **공용**으로 설정합니다.  이를 통해 강력한 형식의 ResourceManager 래퍼를 포함하는 \[resourceFileName\].designer.cs 또는 \[resourceFileName\].designer.vb 파일을 만듭니다.  강력한 형식의 리소스 래퍼를 사용하는 방법에 대한 자세한 내용은 [Resgen.exe\(리소스 파일 생성기\)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) 항목의 "강력한 형식의 리소스 클래스 생성" 섹션을 참조하세요.  
+ <span data-ttu-id="58c0a-108">Visual Studio에서 강력한 형식의 래퍼를 만들려면, 기본 리소스 파일의 설정 **액세스 한정자** 를 Visual Studio 리소스 디자이너 **공용**합니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-108">To create a strongly typed wrapper in Visual Studio, set the main resource file's **Access Modifier** in the Visual Studio Resource Designer to **Public**.</span></span> <span data-ttu-id="58c0a-109">이를 통해 강력한 형식의 ResourceManager 래퍼를 포함하는 [resourceFileName].designer.cs 또는 [resourceFileName].designer.vb 파일을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-109">This creates a [resourceFileName].designer.cs or [resourceFileName].designer.vb file that contains the strongly typed ResourceManager wrapper.</span></span> <span data-ttu-id="58c0a-110">강력한 형식의 리소스 래퍼를 사용 하는 방법에 대 한 자세한 내용은의 "생성 하는 강력한 형식의 리소스 클래스" 섹션을 참조 하십시오.는 [Resgen.exe (리소스 파일 생성기)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) 항목입니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-110">For more information about using a strongly typed resource wrapper, see the "Generating a Strongly Typed Resource Class" section in the [Resgen.exe (Resource File Generator)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) topic.</span></span>  
   
-## [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]의 리소스 관리자  
- [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 프로젝트에서 리소스에 대한 모든 액세스는 <xref:System.Resources.ResourceManager> 클래스에서 처리됩니다.  <xref:System.Resources> 및 <xref:System.Resources.ResourceReader> 같은 <xref:System.Resources.ResourceSet> 네임스페이스의 형식은 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 프로젝트에서 액세스할 수 없기 때문에 리소스 액세스에 사용할 수 없습니다.  
+## <a name="resource-manager-in-the-includenetportableincludesnet-portable-mdmd"></a><span data-ttu-id="58c0a-111">[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]의 리소스 관리자</span><span class="sxs-lookup"><span data-stu-id="58c0a-111">Resource Manager in the [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]</span></span>  
+ <span data-ttu-id="58c0a-112">[!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 프로젝트에서 리소스에 대한 모든 액세스는 <xref:System.Resources.ResourceManager> 클래스에서 처리됩니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-112">In a [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] project, all access to resources is handled by the <xref:System.Resources.ResourceManager> class.</span></span> <span data-ttu-id="58c0a-113"><xref:System.Resources> 및 <xref:System.Resources.ResourceReader> 같은 <xref:System.Resources.ResourceSet> 네임스페이스의 형식은 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 프로젝트에서 액세스할 수 없기 때문에 리소스 액세스에 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-113">Because types in the <xref:System.Resources> namespace, such as <xref:System.Resources.ResourceReader> and <xref:System.Resources.ResourceSet>, are not accessible from a [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] project, they cannot be used to access resources.</span></span>  
   
- [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 프로젝트에는 다음 테이블에 나열된 4개의 <xref:System.Resources.ResourceManager> 멤버가 포함되어 있습니다.  이러한 생성자와 메서드를 사용하여 <xref:System.Resources.ResourceManager> 개체를 인스턴스화하고 문자열 리소스를 검색할 수 있습니다.  
+ <span data-ttu-id="58c0a-114">[!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 프로젝트에는 다음 테이블에 나열된 4개의 <xref:System.Resources.ResourceManager> 멤버가 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-114">The [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] project includes the four <xref:System.Resources.ResourceManager> members listed in the following table.</span></span> <span data-ttu-id="58c0a-115">이러한 생성자와 메서드를 사용하여 <xref:System.Resources.ResourceManager> 개체를 인스턴스화하고 문자열 리소스를 검색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-115">These constructors and methods enable you to instantiate a <xref:System.Resources.ResourceManager> object and retrieve string resources.</span></span>  
   
-|`ResourceManager` 멤버|설명|  
-|--------------------------|--------|  
-|<xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29>|<xref:System.Resources.ResourceManager> 인스턴스를 만들어 지정한 어셈블리에서 발견되는 명명된 리소스 파일에 액세스합니다.|  
-|<xref:System.Resources.ResourceManager.%23ctor%28System.Type%29>|지정한 형식에 해당하는 <xref:System.Resources.ResourceManager> 인스턴스를 만듭니다.|  
-|<xref:System.Resources.ResourceManager.GetString%28System.String%29>|현재 문화권에 대해 명명된 리소스를 검색합니다.|  
-|<xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>|지정된 문화권에 속하는 명명된 리소스를 검색합니다.|  
+|<span data-ttu-id="58c0a-116">`ResourceManager` 멤버</span><span class="sxs-lookup"><span data-stu-id="58c0a-116">`ResourceManager` member</span></span>|<span data-ttu-id="58c0a-117">설명</span><span class="sxs-lookup"><span data-stu-id="58c0a-117">Description</span></span>|  
+|------------------------------|-----------------|  
+|<xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29>|<span data-ttu-id="58c0a-118"><xref:System.Resources.ResourceManager> 인스턴스를 만들어 지정한 어셈블리에서 발견되는 명명된 리소스 파일에 액세스합니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-118">Creates a <xref:System.Resources.ResourceManager> instance to access the named resource file found in the specified assembly.</span></span>|  
+|<xref:System.Resources.ResourceManager.%23ctor%28System.Type%29>|<span data-ttu-id="58c0a-119">지정한 형식에 해당하는 <xref:System.Resources.ResourceManager> 인스턴스를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-119">Creates a <xref:System.Resources.ResourceManager> instance that corresponds to the specified type.</span></span>|  
+|<xref:System.Resources.ResourceManager.GetString%28System.String%29>|<span data-ttu-id="58c0a-120">현재 문화권에 대해 명명된 리소스를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-120">Retrieves a named resource for the current culture.</span></span>|  
+|<xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>|<span data-ttu-id="58c0a-121">지정된 문화권에 속하는 명명된 리소스를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-121">Retrieves a named resource belonging to the specified culture.</span></span>|  
   
- <xref:System.Resources.ResourceManager>에서 다른 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 멤버의 제외는 serialize된 개체, 문자열이 아닌 데이터 및 이미지를 리소스 파일에서 검색할 수 없음을 의미합니다.  [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]에서 리소스를 사용하려면 문자열 형식의 모든 개체 데이터를 저장해야 합니다.  예를 들어, 이를 문자열로 변환하여 리소스 파일에 숫자 값을 저장할 수 있으며 숫자 데이터 형식의 `Parse` 또는 `TryParse` 메서드를 사용하여 다시 숫자로 변환할 수 있습니다.  <xref:System.Convert.ToBase64String%2A?displayProperty=fullName> 메서드를 호출하여 이미지 또는 기타 이진 데이터를 문자열 표현으로 변환하고 <xref:System.Convert.FromBase64String%2A?displayProperty=fullName> 메서드를 호출하여 바이트 배열로 복원할 수 있습니다.  
+ <span data-ttu-id="58c0a-122"><xref:System.Resources.ResourceManager>에서 다른 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 멤버의 제외는 serialize된 개체, 문자열이 아닌 데이터 및 이미지를 리소스 파일에서 검색할 수 없음을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-122">The exclusion of other <xref:System.Resources.ResourceManager> members from the [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] means that serialized objects, non-string data, and images cannot be retrieved from a resource file.</span></span> <span data-ttu-id="58c0a-123">[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]에서 리소스를 사용하려면 문자열 형식의 모든 개체 데이터를 저장해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-123">To use resources from a [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], you should store all  object data in string form.</span></span> <span data-ttu-id="58c0a-124">예를 들어, 이를 문자열로 변환하여 리소스 파일에 숫자 값을 저장할 수 있으며 숫자 데이터 형식의 `Parse` 또는 `TryParse` 메서드를 사용하여 다시 숫자로 변환할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-124">For example, you can store numeric values in a resource file by converting them to strings, and you can retrieve them and then convert them back to numbers by using the numeric data type's `Parse` or `TryParse` method.</span></span> <span data-ttu-id="58c0a-125"><xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> 메서드를 호출하여 이미지 또는 기타 이진 데이터를 문자열 표현으로 변환하고 <xref:System.Convert.FromBase64String%2A?displayProperty=nameWithType> 메서드를 호출하여 바이트 배열로 복원할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-125">You can convert images or other binary data to a string representation by calling the <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> method, and restore them to a byte array by calling the <xref:System.Convert.FromBase64String%2A?displayProperty=nameWithType> method.</span></span>  
   
-## [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 및 Windows 스토어 앱  
- [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 프로젝트는 .resx 파일에 리소스를 저장한 다음 .resources 파일로 컴파일하고 컴파일 타임에 주 어셈블리 또는 위성 어셈블리에 포함시킵니다.  반면에 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램은 리소스를 단일 패키지 리소스 인덱스\(PRI\) 파일로 컴파일되는 .resw 파일에 저장해야 합니다.  그러나 호환되지 않는 파일 형식에도 불구하고 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]은 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 작동합니다.  
+## <a name="the-includenetportableincludesnet-portable-mdmd-and-windows-store-apps"></a><span data-ttu-id="58c0a-126">[!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 및 Windows 스토어 앱</span><span class="sxs-lookup"><span data-stu-id="58c0a-126">The [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] and Windows Store Apps</span></span>  
+ [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]<span data-ttu-id="58c0a-127"> 프로젝트는 .resx 파일에 리소스를 저장한 다음 .resources 파일로 컴파일하고 컴파일 타임에 주 어셈블리 또는 위성 어셈블리에 포함시킵니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-127"> projects store resources in .resx files, which are then compiled into .resources files and embedded in the main assembly or in satellite assemblies at compile time.</span></span> <span data-ttu-id="58c0a-128">반면에 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램은 리소스를 단일 패키지 리소스 인덱스(PRI) 파일로 컴파일되는 .resw 파일에 저장해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-128">[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] apps, on the other hand, require resources to be stored in .resw files, which are then compiled into a single package resource index (PRI) file.</span></span> <span data-ttu-id="58c0a-129">그러나 호환되지 않는 파일 형식에도 불구하고 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]은 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 작동합니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-129">However, despite the incompatible file formats, your [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] will work in a [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] app.</span></span>  
   
- [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 클래스 라이브러리를 사용하려면 Windows 스토어 앱 프로젝트에 이 라이브러리에 대한 참조를 추가합니다.  Visual Studio는 어셈블리의 리소스를 .resw 파일에 투명하게 추출하여 [!INCLUDE[wrt](../../../includes/wrt-md.md)]에서 리소스를 추출할 수 있는 PRI 파일을 생성하는 데 이 파일을 사용합니다.  런타임에 [!INCLUDE[wrt](../../../includes/wrt-md.md)]는 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]에서 코드를 실행하지만 PRI 파일에서 이식 가능한 클래스 라이브러리의 리소스를 검색합니다.  
+ <span data-ttu-id="58c0a-130">[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 클래스 라이브러리를 사용하려면 Windows 스토어 앱 프로젝트에 이 라이브러리에 대한 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-130">To consume your class library from a [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] app, add a reference to it in your Windows Store app project.</span></span> <span data-ttu-id="58c0a-131">Visual Studio는 어셈블리의 리소스를 .resw 파일에 투명하게 추출하여 [!INCLUDE[wrt](../../../includes/wrt-md.md)]에서 리소스를 추출할 수 있는 PRI 파일을 생성하는 데 이 파일을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-131">Visual Studio will transparently extract the resources from your assembly into a .resw file and use it to generate a PRI file from which the [!INCLUDE[wrt](../../../includes/wrt-md.md)] can extract resources.</span></span> <span data-ttu-id="58c0a-132">런타임에 [!INCLUDE[wrt](../../../includes/wrt-md.md)]는 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]에서 코드를 실행하지만 PRI 파일에서 이식 가능한 클래스 라이브러리의 리소스를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-132">At run time, the [!INCLUDE[wrt](../../../includes/wrt-md.md)] executes the code in your [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], but it retrieves your Portable Class Library's resources from the PRI file.</span></span>  
   
- [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 프로젝트에 지역화된 리소스가 포함된 경우 허브 및 스포크 모델을 사용하여 데스크톱 응용 프로그램에서 라이브러리에 대해 수행하는 것처럼 배포합니다.  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 주 리소스 파일과 지역화된 모든 리소스 파일을 사용하도록 주 어셈블리에 대한 참조를 추가합니다.  컴파일 타임에 Visual Studio는 주 리소스 파일 및 지역화된 리소스 파일에서 리소스를 추출하여 별도의 .resw 파일에 넣습니다.  그런 다음 런타임에 [!INCLUDE[wrt](../../../includes/wrt-md.md)]가 액세스하는 단일 PRI 파일로 .resw 파일을 컴파일합니다.  
+ <span data-ttu-id="58c0a-133">[!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 프로젝트에 지역화된 리소스가 포함된 경우 허브 및 스포크 모델을 사용하여 데스크톱 응용 프로그램에서 라이브러리에 대해 수행하는 것처럼 배포합니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-133">If your [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] project includes localized resources, you use the hub-and-spoke model to deploy them just as you would for a library in a desktop app.</span></span> <span data-ttu-id="58c0a-134">[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 주 리소스 파일과 지역화된 모든 리소스 파일을 사용하도록 주 어셈블리에 대한 참조를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-134">To consume your main resource file and any localized resource files in your [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] app, you add a reference to the main assembly.</span></span> <span data-ttu-id="58c0a-135">컴파일 타임에 Visual Studio는 주 리소스 파일 및 지역화된 리소스 파일에서 리소스를 추출하여 별도의 .resw 파일에 넣습니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-135">At compile time, Visual Studio extracts the resources from your main resource file and any localized resource files into separate .resw files.</span></span> <span data-ttu-id="58c0a-136">그런 다음 런타임에 [!INCLUDE[wrt](../../../includes/wrt-md.md)]가 액세스하는 단일 PRI 파일로 .resw 파일을 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-136">It then compiles the .resw files into a single PRI file that the [!INCLUDE[wrt](../../../includes/wrt-md.md)] accesses at run time.</span></span>  
   
 <a name="NonLoc"></a>   
-## 예제: 지역화되지 않은 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]  
- 다음 간단하고 지역화되지 않은 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 예제는 리소스를 사용하여 열 이름을 지정하고 표 형식 데이터를 예약하는 문자 수를 확인하는 데 사용합니다.  예제에서는 LibResources.resx라는 파일을 사용하여 다음 테이블에 나열된 문자열 리소스를 저장합니다.  
+## <a name="example-non-localized-includenetportableincludesnet-portable-mdmd"></a><span data-ttu-id="58c0a-137">예제: 지역화되지 않은 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]</span><span class="sxs-lookup"><span data-stu-id="58c0a-137">Example: Non-Localized [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]</span></span>  
+ <span data-ttu-id="58c0a-138">다음 간단하고 지역화되지 않은 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 예제는 리소스를 사용하여 열 이름을 지정하고 표 형식 데이터를 예약하는 문자 수를 확인하는 데 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-138">The following simple, non-localized [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] example uses resources to store the names of columns and to determine the number of characters to reserve for tabular data.</span></span> <span data-ttu-id="58c0a-139">예제에서는 LibResources.resx라는 파일을 사용하여 다음 테이블에 나열된 문자열 리소스를 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-139">The example uses a file named LibResources.resx to store the string resources listed in the following table.</span></span>  
   
-|리소스 이름|리소스 값|  
-|------------|-----------|  
-|Born|Birthdate|  
-|BornLength|12|  
-|Hired|Hire Date|  
-|HiredLength|12|  
-|ID|ID|  
-|ID.Length|12|  
-|이름|이름|  
-|NameLength|25|  
-|제목|직원 데이터베이스|  
+|<span data-ttu-id="58c0a-140">리소스 이름</span><span class="sxs-lookup"><span data-stu-id="58c0a-140">Resource name</span></span>|<span data-ttu-id="58c0a-141">리소스 값</span><span class="sxs-lookup"><span data-stu-id="58c0a-141">Resource value</span></span>|  
+|-------------------|--------------------|  
+|<span data-ttu-id="58c0a-142">Born</span><span class="sxs-lookup"><span data-stu-id="58c0a-142">Born</span></span>|<span data-ttu-id="58c0a-143">Birthdate</span><span class="sxs-lookup"><span data-stu-id="58c0a-143">Birthdate</span></span>|  
+|<span data-ttu-id="58c0a-144">BornLength</span><span class="sxs-lookup"><span data-stu-id="58c0a-144">BornLength</span></span>|<span data-ttu-id="58c0a-145">12</span><span class="sxs-lookup"><span data-stu-id="58c0a-145">12</span></span>|  
+|<span data-ttu-id="58c0a-146">Hired</span><span class="sxs-lookup"><span data-stu-id="58c0a-146">Hired</span></span>|<span data-ttu-id="58c0a-147">Hire Date</span><span class="sxs-lookup"><span data-stu-id="58c0a-147">Hire Date</span></span>|  
+|<span data-ttu-id="58c0a-148">HiredLength</span><span class="sxs-lookup"><span data-stu-id="58c0a-148">HiredLength</span></span>|<span data-ttu-id="58c0a-149">12</span><span class="sxs-lookup"><span data-stu-id="58c0a-149">12</span></span>|  
+|<span data-ttu-id="58c0a-150">ID</span><span class="sxs-lookup"><span data-stu-id="58c0a-150">ID</span></span>|<span data-ttu-id="58c0a-151">ID</span><span class="sxs-lookup"><span data-stu-id="58c0a-151">ID</span></span>|  
+|<span data-ttu-id="58c0a-152">ID.Length</span><span class="sxs-lookup"><span data-stu-id="58c0a-152">ID.Length</span></span>|<span data-ttu-id="58c0a-153">12</span><span class="sxs-lookup"><span data-stu-id="58c0a-153">12</span></span>|  
+|<span data-ttu-id="58c0a-154">이름</span><span class="sxs-lookup"><span data-stu-id="58c0a-154">Name</span></span>|<span data-ttu-id="58c0a-155">이름</span><span class="sxs-lookup"><span data-stu-id="58c0a-155">Name</span></span>|  
+|<span data-ttu-id="58c0a-156">NameLength</span><span class="sxs-lookup"><span data-stu-id="58c0a-156">NameLength</span></span>|<span data-ttu-id="58c0a-157">25</span><span class="sxs-lookup"><span data-stu-id="58c0a-157">25</span></span>|  
+|<span data-ttu-id="58c0a-158">제목</span><span class="sxs-lookup"><span data-stu-id="58c0a-158">Title</span></span>|<span data-ttu-id="58c0a-159">직원 데이터베이스</span><span class="sxs-lookup"><span data-stu-id="58c0a-159">Employee Database</span></span>|  
   
- 다음 코드는 이 파일에 대한 `UILibrary`액세스 한정자 가 `resources`공용 으로 변경될 때 Visual Studio에 의해 생성되는 라는 리소스 관리자 래퍼를 사용하는  클래스를 정의합니다.  UILibrary 클래스는 필요에 따라 문자열 데이터를 구문 분석합니다.  .  클래스는 `MyCompany.Employees` 네임스페이스에 있습니다.  
+ <span data-ttu-id="58c0a-160">다음 코드 정의 `UILibrary` 라는 리소스 관리자 래퍼를 사용 하는 클래스 `resources` Visual Studio에서 생성 된 때는 **액세스 한정자** 파일에 변경 된 **공용** .</span><span class="sxs-lookup"><span data-stu-id="58c0a-160">The following code defines a `UILibrary` class that uses the Resource Manager wrapper named `resources` generated by Visual Studio when the **Access Modifier** for the file is changed to **Public**.</span></span> <span data-ttu-id="58c0a-161">UILibrary 클래스는 필요에 따라 문자열 데이터를 구문 분석합니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-161">The UILibrary class parses the string data as necessary.</span></span> <span data-ttu-id="58c0a-162">.</span><span class="sxs-lookup"><span data-stu-id="58c0a-162">.</span></span> <span data-ttu-id="58c0a-163">클래스는 `MyCompany.Employees` 네임스페이스에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-163">Note that the class is in the `MyCompany.Employees` namespace.</span></span>  
   
  [!code-csharp[Conceptual.Resources.Portable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/uilibrary.cs#1)]
  [!code-vb[Conceptual.Resources.Portable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/uilibrary.vb#1)]  
   
- 다음 코드는 `UILibrary` 클래스와 해당 리소스를 콘솔 모드 응용 프로그램에서 액세스하는 방법을 보여 줍니다.  이 콘솔 응용 프로그램 프로젝트에 추가하려면 UILIbrary.dll에 대한 참조가 필요합니다.  
+ <span data-ttu-id="58c0a-164">다음 코드는 `UILibrary` 클래스와 해당 리소스를 콘솔 모드 응용 프로그램에서 액세스하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-164">The following code illustrates how the `UILibrary` class and its resources can be accessed from a console-mode app.</span></span> <span data-ttu-id="58c0a-165">이 콘솔 응용 프로그램 프로젝트에 추가하려면 UILIbrary.dll에 대한 참조가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-165">It requires a reference to UILIbrary.dll to be added to the console app project.</span></span>  
   
  [!code-csharp[Conceptual.Resources.Portable#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program.cs#2)]
  [!code-vb[Conceptual.Resources.Portable#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module1.vb#2)]  
   
- 다음 코드는 `UILibrary` 클래스와 해당 리소스를 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 액세스하는 방법을 보여 줍니다.  Windows 스토어 앱 프로젝트에 추가하려면 UILIbrary.dll에 대한 참조가 필요합니다.  
+ <span data-ttu-id="58c0a-166">다음 코드는 `UILibrary` 클래스와 해당 리소스를 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 액세스하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-166">The following code illustrates how the `UILibrary` class and its resources can be accessed from a [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] app.</span></span> <span data-ttu-id="58c0a-167">Windows 스토어 앱 프로젝트에 추가하려면 UILIbrary.dll에 대한 참조가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-167">It requires a reference to UILIbrary.dll to be added to the Windows Store app project.</span></span>  
   
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]  
   
-## 예제: 지역화된 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]  
- 다음의 지역화된 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 예제에는 프랑스어\(프랑스\) 및 영어\(미국\) 문화권에 대한 리소스가 포함됩니다.  영어\(미국\) 문화권은 응용 프로그램의 기본 문화권입니다. 리소스는 [이전 단원](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc)의 표에 표시되어 있습니다.  프랑스어\(프랑스\) 문화권의 리소스 이름은 LibResources.fr\-FR.resx라고 하며 다음 표에 나열된 문자열 리소스로 구성됩니다.  `UILibrary` 클래스의 소스 코드는 이전 단원에 나와 있는 것과 동일합니다.  
+## <a name="example-localized-includenetportableincludesnet-portable-mdmd"></a><span data-ttu-id="58c0a-168">예제: 지역화된 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]</span><span class="sxs-lookup"><span data-stu-id="58c0a-168">Example: Localized [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]</span></span>  
+ <span data-ttu-id="58c0a-169">다음의 지역화된 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 예제에는 프랑스어(프랑스) 및 영어(미국) 문화권에 대한 리소스가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-169">The following localized [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] example includes resources for the French (France) and English (United States) cultures.</span></span> <span data-ttu-id="58c0a-170">영어 (미국) 문화권은 응용 프로그램의 기본 문화권입니다. 해당 리소스의 표에 표시 됩니다는 [이전 섹션](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc)합니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-170">The English (United States) culture is the app's default culture; its resources are shown in the table in the [previous section](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc).</span></span> <span data-ttu-id="58c0a-171">프랑스어(프랑스) 문화권의 리소스 이름은 LibResources.fr-FR.resx라고 하며 다음 표에 나열된 문자열 리소스로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-171">The resources file for the French (France) culture is named LibResources.fr-FR.resx and consists of the string resources listed in the following table.</span></span> <span data-ttu-id="58c0a-172">`UILibrary` 클래스의 소스 코드는 이전 단원에 나와 있는 것과 동일합니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-172">The source code for the `UILibrary` class is the same as that shown in the previous section.</span></span>  
   
-|리소스 이름|리소스 값|  
-|------------|-----------|  
-|Born|Date de naissance|  
-|BornLength|20|  
-|Hired|Date embauché|  
-|HiredLength|16|  
-|ID|ID|  
-|이름|Nom|  
-|제목|Base de données des employés|  
+|<span data-ttu-id="58c0a-173">리소스 이름</span><span class="sxs-lookup"><span data-stu-id="58c0a-173">Resource name</span></span>|<span data-ttu-id="58c0a-174">리소스 값</span><span class="sxs-lookup"><span data-stu-id="58c0a-174">Resource value</span></span>|  
+|-------------------|--------------------|  
+|<span data-ttu-id="58c0a-175">Born</span><span class="sxs-lookup"><span data-stu-id="58c0a-175">Born</span></span>|<span data-ttu-id="58c0a-176">Date de naissance</span><span class="sxs-lookup"><span data-stu-id="58c0a-176">Date de naissance</span></span>|  
+|<span data-ttu-id="58c0a-177">BornLength</span><span class="sxs-lookup"><span data-stu-id="58c0a-177">BornLength</span></span>|<span data-ttu-id="58c0a-178">20</span><span class="sxs-lookup"><span data-stu-id="58c0a-178">20</span></span>|  
+|<span data-ttu-id="58c0a-179">Hired</span><span class="sxs-lookup"><span data-stu-id="58c0a-179">Hired</span></span>|<span data-ttu-id="58c0a-180">Date embauché</span><span class="sxs-lookup"><span data-stu-id="58c0a-180">Date embauché</span></span>|  
+|<span data-ttu-id="58c0a-181">HiredLength</span><span class="sxs-lookup"><span data-stu-id="58c0a-181">HiredLength</span></span>|<span data-ttu-id="58c0a-182">16</span><span class="sxs-lookup"><span data-stu-id="58c0a-182">16</span></span>|  
+|<span data-ttu-id="58c0a-183">ID</span><span class="sxs-lookup"><span data-stu-id="58c0a-183">ID</span></span>|<span data-ttu-id="58c0a-184">ID</span><span class="sxs-lookup"><span data-stu-id="58c0a-184">ID</span></span>|  
+|<span data-ttu-id="58c0a-185">이름</span><span class="sxs-lookup"><span data-stu-id="58c0a-185">Name</span></span>|<span data-ttu-id="58c0a-186">Nom</span><span class="sxs-lookup"><span data-stu-id="58c0a-186">Nom</span></span>|  
+|<span data-ttu-id="58c0a-187">제목</span><span class="sxs-lookup"><span data-stu-id="58c0a-187">Title</span></span>|<span data-ttu-id="58c0a-188">Base de données des employés</span><span class="sxs-lookup"><span data-stu-id="58c0a-188">Base de données des employés</span></span>|  
   
- 다음 코드는 `UILibrary` 클래스와 해당 리소스를 콘솔 모드 응용 프로그램에서 액세스하는 방법을 보여 줍니다.  이 콘솔 응용 프로그램 프로젝트에 추가하려면 UILIbrary.dll에 대한 참조가 필요합니다.  
+ <span data-ttu-id="58c0a-189">다음 코드는 `UILibrary` 클래스와 해당 리소스를 콘솔 모드 응용 프로그램에서 액세스하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-189">The following code illustrates how the `UILibrary` class and its resources can be accessed from a console-mode app.</span></span> <span data-ttu-id="58c0a-190">이 콘솔 응용 프로그램 프로젝트에 추가하려면 UILIbrary.dll에 대한 참조가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-190">It requires a reference to UILIbrary.dll to be added to the console app project.</span></span>  
   
  [!code-csharp[Conceptual.Resources.Portable#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program2.cs#3)]
  [!code-vb[Conceptual.Resources.Portable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module2.vb#3)]  
   
- 다음 코드는 `UILibrary` 클래스와 해당 리소스를 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 액세스하는 방법을 보여 줍니다.  Windows 스토어 앱 프로젝트에 추가하려면 UILIbrary.dll에 대한 참조가 필요합니다.  정적 `ApplicationLanguages.PrimaryLanguageOverride` 속성을 사용하여 응용 프로그램의 기본 설정 언어를 프랑스어로 설정합니다.  
+ <span data-ttu-id="58c0a-191">다음 코드는 `UILibrary` 클래스와 해당 리소스를 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 응용 프로그램에서 액세스하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-191">The following code illustrates how the `UILibrary` class and its resources can be accessed from a [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] app.</span></span> <span data-ttu-id="58c0a-192">Windows 스토어 앱 프로젝트에 추가하려면 UILIbrary.dll에 대한 참조가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-192">It requires a reference to UILIbrary.dll to be added to the Windows Store app project.</span></span> <span data-ttu-id="58c0a-193">정적 `ApplicationLanguages.PrimaryLanguageOverride` 속성을 사용하여 응용 프로그램의 기본 설정 언어를 프랑스어로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="58c0a-193">It uses the static `ApplicationLanguages.PrimaryLanguageOverride` property to set the app's preferred language to French.</span></span>  
   
  [!code-csharp[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetroloc/cs/blankpage.xaml.cs#1)]
  [!code-vb[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portablemetroloc/vb/blankpage.xaml.vb#1)]  
   
-## 참고 항목  
- <xref:System.Resources.ResourceManager>   
- [데스크톱 응용 프로그램의 리소스](../../../docs/framework/resources/index.md)   
- [리소스 패키징 및 배포](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+## <a name="see-also"></a><span data-ttu-id="58c0a-194">참고 항목</span><span class="sxs-lookup"><span data-stu-id="58c0a-194">See Also</span></span>  
+ <xref:System.Resources.ResourceManager>  
+ [<span data-ttu-id="58c0a-195">데스크톱 앱의 리소스</span><span class="sxs-lookup"><span data-stu-id="58c0a-195">Resources in Desktop Apps</span></span>](../../../docs/framework/resources/index.md)  
+ [<span data-ttu-id="58c0a-196">리소스 패키징 및 배포</span><span class="sxs-lookup"><span data-stu-id="58c0a-196">Packaging and Deploying Resources</span></span>](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

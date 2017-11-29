@@ -1,68 +1,71 @@
 ---
-title: "전송 보안을 통해 가장 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "전송 보안을 통해 가장 사용"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-caps.latest.revision: 12
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 906d45ccba7185e82aed82626a13034f2e97422d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 전송 보안을 통해 가장 사용
-*가장*은 클라이언트의 ID를 사용하기 위한 서버 응용 프로그램의 기능입니다.리소스에 대한 액세스 확인 시 일반적으로 서비스는 가장을 사용합니다.서버 응용 프로그램은 서비스 계정을 사용하여 실행하지만 서버가 클라이언트 연결을 수락할 경우, 클라이언트의 자격 증명을 사용하여 액세스 검사를 수행하도록 클라이언트를 가장합니다.전송 보안은 자격 증명을 전달하고 이러한 자격 증명을 사용하여 통신에 보안을 설정하기 위한 메커니즘입니다.이 항목은 가장 기능을 사용하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 전송 보안을 사용하는 방법에 대해 설명합니다.메시지 보안을 사용한 가장에 대한 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]는 [위임 및 가장](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)을 참조하십시오.  
+# <a name="using-impersonation-with-transport-security"></a><span data-ttu-id="4937d-102">전송 보안을 통해 가장 사용</span><span class="sxs-lookup"><span data-stu-id="4937d-102">Using Impersonation with Transport Security</span></span>
+<span data-ttu-id="4937d-103">*가장* 지원은 클라이언트의 id를 사용 하는 서버 응용 프로그램의 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-103">*Impersonation* is the ability of a server application to take on the identity of the client.</span></span> <span data-ttu-id="4937d-104">리소스에 대한 액세스 확인 시 일반적으로 서비스는 가장을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-104">It is common for services to use impersonation when validating access to resources.</span></span> <span data-ttu-id="4937d-105">서버 응용 프로그램은 서비스 계정을 사용하여 실행하지만 서버가 클라이언트 연결을 수락할 경우, 클라이언트의 자격 증명을 사용하여 액세스 검사를 수행하도록 클라이언트를 가장합니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-105">The server application runs using a service account, but when the server accepts a client connection, it impersonates the client so that access checks are performed using the client's credentials.</span></span> <span data-ttu-id="4937d-106">전송 보안은 자격 증명을 전달하고 이러한 자격 증명을 사용하여 통신에 보안을 설정하기 위한 메커니즘입니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-106">Transport security is a mechanism both for passing credentials and securing communication using those credentials.</span></span> <span data-ttu-id="4937d-107">이 항목은 가장 기능을 사용하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 전송 보안을 사용하는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-107">This topic describes using transport security in [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] with the impersonation feature.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="4937d-108">메시지 보안을 사용 하 여 가장 참조 [위임 및 가장](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-108"> impersonation using message security, see [Delegation and Impersonation](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).</span></span>  
   
-## 5개의 가장 수준  
- 전송 보안은 다음 표에 설명된 대로 5개의 가장 수준을 사용합니다.  
+## <a name="five-impersonation-levels"></a><span data-ttu-id="4937d-109">5개의 가장 수준</span><span class="sxs-lookup"><span data-stu-id="4937d-109">Five Impersonation Levels</span></span>  
+ <span data-ttu-id="4937d-110">전송 보안은 다음 표에 설명된 대로 5개의 가장 수준을 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-110">Transport security makes use of five levels of impersonation, as described in the following table.</span></span>  
   
-|가장 수준|설명|  
-|-----------|--------|  
-|없음|서버 응용 프로그램에서 클라이언트 가장을 시도하지 않습니다.|  
-|Anonymous|서버 응용 프로그램에서 클라이언트의 자격 증명에 대한 액세스 검사를 수행할 수 있지만 클라이언트 ID에 대한 정보는 수신하지 않습니다.이 가장 수준은 명명된 파이프와 같이 시스템 상의 통신을 위해서만 사용됩니다.원격 연결을 통해 `Anonymous`를 사용하는 경우 가장 수준이 Identify로 승격됩니다.|  
-|Identify|서버 응용 프로그램이 클라이언트의 ID를 알고 있으며 클라이언트 자격 증명에 대한 액세스 확인을 수행할 수 있지만, 클라이언트를 가장할 수는 없습니다.Identify는 토큰 공급자가 다른 가장 수준을 제공하지 않는 한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 SSPI 자격 증명에서 사용되는 기본 가장 수준입니다.|  
-|Impersonate|서버 응용 프로그램은 액세스 검사를 수행하는 것 이외에 클라이언트로 가장하여 서버 시스템의 리소스에 액세스할 수 있습니다.서버 응용 프로그램은 가장된 토큰에 네트워크 자격 증명이 없기 때문에 클라이언트의 ID를 사용하여 원격 시스템의 리소스에 액세스할 수 없습니다.|  
-|Delegate|`Impersonate`와 동일한 기능을 제공하는 것 이외에 Delegate 가장 수준을 사용하면, 서버 응용 프로그램이 클라이언트의 ID를 사용하여 원격 시스템의 리소스에 액세스할 수 있으며 ID를 다른 응용 프로그램에 전달할 수 있습니다.<br /><br /> **중요** 이러한 추가 기능을 사용하려면 서버 도메인 계정이 도메인 컨트롤러에서 위임을 위해 신뢰할 수 있는 것으로 표시되어야 합니다.이 가장 수준은 중요한 것으로 표시된 클라이언트 도메인 계정에서 사용할 수 없습니다.|  
+|<span data-ttu-id="4937d-111">가장 수준</span><span class="sxs-lookup"><span data-stu-id="4937d-111">Impersonation level</span></span>|<span data-ttu-id="4937d-112">설명</span><span class="sxs-lookup"><span data-stu-id="4937d-112">Description</span></span>|  
+|-------------------------|-----------------|  
+|<span data-ttu-id="4937d-113">없음</span><span class="sxs-lookup"><span data-stu-id="4937d-113">None</span></span>|<span data-ttu-id="4937d-114">서버 응용 프로그램에서 클라이언트 가장을 시도하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-114">The server application does not attempt to impersonate the client.</span></span>|  
+|<span data-ttu-id="4937d-115">Anonymous</span><span class="sxs-lookup"><span data-stu-id="4937d-115">Anonymous</span></span>|<span data-ttu-id="4937d-116">서버 응용 프로그램에서 클라이언트의 자격 증명에 대한 액세스 검사를 수행할 수 있지만 클라이언트 ID에 대한 정보는 수신하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-116">The server application can perform access checks against the client's credentials, but does not receive any information about the client's identity.</span></span> <span data-ttu-id="4937d-117">이 가장 수준은 명명된 파이프와 같이 시스템 상의 통신을 위해서만 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-117">This impersonation level is meaningful only for on-machine communication, such as named pipes.</span></span> <span data-ttu-id="4937d-118">원격 연결을 통해 `Anonymous`를 사용하는 경우 가장 수준이 Identify로 승격됩니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-118">Using `Anonymous` with a remote connection promotes the impersonation level to Identify.</span></span>|  
+|<span data-ttu-id="4937d-119">Identify</span><span class="sxs-lookup"><span data-stu-id="4937d-119">Identify</span></span>|<span data-ttu-id="4937d-120">서버 응용 프로그램이 클라이언트의 ID를 알고 있으며 클라이언트 자격 증명에 대한 액세스 확인을 수행할 수 있지만, 클라이언트를 가장할 수는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-120">The server application knows the client's identity and can perform access validation against the client's credentials, but cannot impersonate the client.</span></span> <span data-ttu-id="4937d-121">Identify는 토큰 공급자가 다른 가장 수준을 제공하지 않는 한 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]의 SSPI 자격 증명에서 사용되는 기본 가장 수준입니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-121">Identify is the default impersonation level used with SSPI credentials in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] unless the token provider provides a different impersonation level.</span></span>|  
+|<span data-ttu-id="4937d-122">Impersonate</span><span class="sxs-lookup"><span data-stu-id="4937d-122">Impersonate</span></span>|<span data-ttu-id="4937d-123">서버 응용 프로그램은 액세스 검사를 수행하는 것 이외에 클라이언트로 가장하여 서버 시스템의 리소스에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-123">The server application can access resources on the server machine as the client in addition to performing access checks.</span></span> <span data-ttu-id="4937d-124">서버 응용 프로그램은 가장된 토큰에 네트워크 자격 증명이 없기 때문에 클라이언트의 ID를 사용하여 원격 시스템의 리소스에 액세스할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-124">The server application cannot access resources on remote machines using the client's identity because the impersonated token does not have network credentials</span></span>|  
+|<span data-ttu-id="4937d-125">대리자</span><span class="sxs-lookup"><span data-stu-id="4937d-125">Delegate</span></span>|<span data-ttu-id="4937d-126">`Impersonate`와 동일한 기능을 제공하는 것 이외에 Delegate 가장 수준을 사용하면, 서버 응용 프로그램이 클라이언트의 ID를 사용하여 원격 시스템의 리소스에 액세스할 수 있으며 ID를 다른 응용 프로그램에 전달할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-126">In addition to having the same capabilities as `Impersonate`, the Delegate impersonation level also enables the server application to access resources on remote machines using the client's identity and to pass the identity to other applications.</span></span><br /><br /> <span data-ttu-id="4937d-127">**중요 한** 표시 해야 하는 서버 도메인 계정이 같은 추가 기능을 사용 하는 도메인 컨트롤러에서 위임을 위해 신뢰할 수 있는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-127">**Important** The server domain account must be marked as trusted for delegation on the domain controller to use these additional features.</span></span> <span data-ttu-id="4937d-128">이 가장 수준은 중요한 것으로 표시된 클라이언트 도메인 계정에서 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-128">This level of impersonation cannot be used with client domain accounts marked as sensitive.</span></span>|  
   
- 전송 보안에서 가장 일반적으로 사용되는 수준은 `Identify`  및 `Impersonate`입니다.`None` 및 `Anonymous` 수준은 일반적인 용도로는 사용하지 않는 것이 좋으며 여러 전송에서는 인증에 이러한 수준을 사용하는 것을 지원하지 않습니다.`Delegate` 수준은 주의하여 사용해야 하는 강력한 기능입니다.신뢰할 수 있는 서버 응용 프로그램에만 자격 증명을 위임할 수 있는 권한을 제공해야 합니다.  
+ <span data-ttu-id="4937d-129">전송 보안에 가장 많이 사용 수준은 `Identify` 및 `Impersonate`합니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-129">The levels most commonly used with transport security are `Identify` and `Impersonate`.</span></span> <span data-ttu-id="4937d-130">`None` 및 `Anonymous` 수준은 일반적인 용도로는 사용하지 않는 것이 좋으며 여러 전송에서는 인증에 이러한 수준을 사용하는 것을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-130">The levels `None` and `Anonymous` are not recommended for typical use, and many transports do not support using those levels with authentication.</span></span> <span data-ttu-id="4937d-131">`Delegate` 수준은 주의하여 사용해야 하는 강력한 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-131">The `Delegate` level is a powerful feature that should be used with care.</span></span> <span data-ttu-id="4937d-132">신뢰할 수 있는 서버 응용 프로그램에만 자격 증명을 위임할 수 있는 권한을 제공해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-132">Only trusted server applications should be given the permission to delegate credentials.</span></span>  
   
- `Impersonate` 또는 `Delegate` 수준에서 가장을 사용하려면 서버 응용 프로그램에 `SeImpersonatePrivilege` 권한이 있어야 합니다.응용 프로그램이 Administrators 그룹의 계정 또는 Service SID\(네트워크 서비스, 로컬 서비스 또는 로컬 시스템\)의 계정에서 실행되는 경우 기본적으로 이 권한을 가집니다.가장 기능을 사용하는 데 클라이언트 및 서버에 대한 상호 인증이 필요하지 않습니다.NTLM과 같이 가장을 지원하는 일부 인증 스키마는 상호 인증에 사용할 수 없습니다.  
+ <span data-ttu-id="4937d-133">`Impersonate` 또는 `Delegate` 수준에서 가장을 사용하려면 서버 응용 프로그램에 `SeImpersonatePrivilege` 권한이 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-133">Using impersonation at the `Impersonate` or `Delegate` levels requires the server application to have the `SeImpersonatePrivilege` privilege.</span></span> <span data-ttu-id="4937d-134">응용 프로그램이 Administrators 그룹의 계정 또는 Service SID(네트워크 서비스, 로컬 서비스 또는 로컬 시스템)의 계정에서 실행되는 경우 기본적으로 이 권한을 가집니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-134">An application has this privilege by default if it is running on an account in the Administrators group or on an account with a Service SID (Network Service, Local Service, or Local System).</span></span> <span data-ttu-id="4937d-135">가장 기능을 사용하는 데 클라이언트 및 서버에 대한 상호 인증이 필요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-135">Impersonation does not require mutual authentication of the client and server.</span></span> <span data-ttu-id="4937d-136">NTLM과 같이 가장을 지원하는 일부 인증 스키마는 상호 인증에 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-136">Some authentication schemes that support impersonation, such as NTLM, cannot be used with mutual authentication.</span></span>  
   
-## 가장을 사용하는 전송 관련 문제  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 전송을 선택하는 경우 가장 선택 작업에 영향을 줍니다.이 단원에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 표준 HTTP 및 명명된 파이프 전송에 영향을 주는 문제에 대해 설명합니다.사용자 지정 전송에는 가장 지원과 관련하여 제한이 있습니다.  
+## <a name="transport-specific-issues-with-impersonation"></a><span data-ttu-id="4937d-137">가장을 사용하는 전송 관련 문제</span><span class="sxs-lookup"><span data-stu-id="4937d-137">Transport-Specific Issues with Impersonation</span></span>  
+ <span data-ttu-id="4937d-138">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 전송을 선택하는 경우 가장 선택 작업에 영향을 줍니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-138">The choice of a transport in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] affects the possible choices for impersonation.</span></span> <span data-ttu-id="4937d-139">이 단원에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 표준 HTTP 및 명명된 파이프 전송에 영향을 주는 문제에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-139">This section describes issues affecting the standard HTTP and named pipe transports in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span> <span data-ttu-id="4937d-140">사용자 지정 전송에는 가장 지원과 관련하여 제한이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-140">Custom transports have their own restrictions on support for impersonation.</span></span>  
   
-### 명명된 파이프 전송  
- 명명된 파이프 전송에서는 다음 항목이 사용됩니다.  
+### <a name="named-pipe-transport"></a><span data-ttu-id="4937d-141">명명된 파이프 전송</span><span class="sxs-lookup"><span data-stu-id="4937d-141">Named Pipe Transport</span></span>  
+ <span data-ttu-id="4937d-142">명명된 파이프 전송에서는 다음 항목이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-142">The following items are used with the named pipe transport:</span></span>  
   
--   명명된 파이프 전송은 로컬 시스템에서만 사용됩니다.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 명명된 파이프 전송은 시스템 간 연결을 명시적으로 허용하지 않습니다.  
+-   <span data-ttu-id="4937d-143">명명된 파이프 전송은 로컬 시스템에서만 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-143">The named pipe transport is intended for use only on the local machine.</span></span> <span data-ttu-id="4937d-144">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서 명명된 파이프 전송은 시스템 간 연결을 명시적으로 허용하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-144">The named pipe transport in [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] explicitly disallows cross-machine connections.</span></span>  
   
--   명명된 파이프는 `Impersonate` 또는 `Delegate` 가장 수준으로 사용할 수 없습니다.명명된 파이프는 이러한 가장 수준에서 컴퓨터 보장을 적용할 수 없습니다.  
+-   <span data-ttu-id="4937d-145">명명된 파이프는 `Impersonate` 또는 `Delegate` 가장 수준으로 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-145">Named pipes cannot be used with the `Impersonate` or `Delegate` impersonation level.</span></span> <span data-ttu-id="4937d-146">명명된 파이프는 이러한 가장 수준에서 컴퓨터 보장을 적용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-146">The named pipe cannot enforce the on-machine guarantee at these impersonation levels.</span></span>  
   
- 명명된 파이프[!INCLUDE[crabout](../../../../includes/crabout-md.md)][전송 선택](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)을 참조하십시오.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="4937d-147">명명 된 파이프, 참조 [전송 선택](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-147"> named pipes, see [Choosing a Transport](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).</span></span>  
   
-### HTTP 전송  
- [HTTP 인증 이해](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)의 설명과 같이 HTTP 전송\(<xref:System.ServiceModel.WSHttpBinding> 및 <xref:System.ServiceModel.BasicHttpBinding>\)을 사용하는 바인딩은 여러 인증 스키마를 지원합니다.지원되는 가장 수준은 인증 스키마에 따라 다릅니다.HTTP 파이프 전송에서는 다음 항목이 사용됩니다.  
+### <a name="http-transport"></a><span data-ttu-id="4937d-148">HTTP 전송</span><span class="sxs-lookup"><span data-stu-id="4937d-148">HTTP Transport</span></span>  
+ <span data-ttu-id="4937d-149">HTTP 전송을 사용 하는 바인딩 (<xref:System.ServiceModel.WSHttpBinding> 및 <xref:System.ServiceModel.BasicHttpBinding>)에 설명 된 대로 몇 가지 인증 체계를 지 원하는 [HTTP 인증 이해](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-149">The bindings that use the HTTP transport (<xref:System.ServiceModel.WSHttpBinding> and <xref:System.ServiceModel.BasicHttpBinding>) support several authentication schemes, as explained in [Understanding HTTP Authentication](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md).</span></span> <span data-ttu-id="4937d-150">지원되는 가장 수준은 인증 스키마에 따라 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-150">The impersonation level supported depends on the authentication scheme.</span></span> <span data-ttu-id="4937d-151">HTTP 파이프 전송에서는 다음 항목이 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-151">The following items are used with the HTTP transport:</span></span>  
   
--   `Anonymous` 인증 스키마는 가장을 무시합니다.  
+-   <span data-ttu-id="4937d-152">`Anonymous` 인증 스키마는 가장을 무시합니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-152">The `Anonymous` authentication scheme ignores impersonation.</span></span>  
   
--   `Basic` 인증 스키마는 `Delegate` 수준만 지원합니다.모든 하위 가장 수준이 업그레이드됩니다.  
+-   <span data-ttu-id="4937d-153">`Basic` 은 지원 되는 인증 체계는 `Delegate` 수준입니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-153">The `Basic` authentication scheme supports only the `Delegate` level.</span></span> <span data-ttu-id="4937d-154">모든 하위 가장 수준이 업그레이드됩니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-154">All lower impersonation levels are upgraded.</span></span>  
   
--   `Digest` 인증 스키마는 `Impersonate` 및 `Delegate` 수준만 지원합니다.  
+-   <span data-ttu-id="4937d-155">`Digest` 인증 스키마는 `Impersonate` 및 `Delegate` 수준만 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-155">The `Digest` authentication scheme supports only the `Impersonate` and `Delegate` levels.</span></span>  
   
--   직접 선택하거나 협상을 통해 선택할 수 있는 `NTLM` 인증 스키마는 로컬 시스템에서 `Delegate` 수준만 지원합니다.  
+-   <span data-ttu-id="4937d-156">직접 선택하거나 협상을 통해 선택할 수 있는 `NTLM` 인증 스키마는 로컬 시스템에서 `Delegate` 수준만 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-156">The `NTLM` authentication scheme, selectable either directly or through negotiation, supports only the `Delegate` level on the local machine.</span></span>  
   
--   스키마를 통해서만 선택할 수 있는 Kerberos 인증 체계는 지원되는 가장 수준으로만 사용할 수 있습니다.  
+-   <span data-ttu-id="4937d-157">스키마를 통해서만 선택할 수 있는 Kerberos 인증 체계는 지원되는 가장 수준으로만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-157">The Kerberos authentication scheme, which can only be selected through negotiation, can be used with any supported impersonation level.</span></span>  
   
- HTTP 전송[!INCLUDE[crabout](../../../../includes/crabout-md.md)][전송 선택](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)을 참조하십시오.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="4937d-158">HTTP 전송 참조 [전송 선택](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="4937d-158"> the HTTP transport, see [Choosing a Transport](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md).</span></span>  
   
-## 참고 항목  
- [위임 및 가장](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)   
- [권한 부여](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)   
- [방법: 서비스에서 클라이언트 가장](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)   
- [HTTP 인증 이해](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)
+## <a name="see-also"></a><span data-ttu-id="4937d-159">참고 항목</span><span class="sxs-lookup"><span data-stu-id="4937d-159">See Also</span></span>  
+ [<span data-ttu-id="4937d-160">위임 및 가장</span><span class="sxs-lookup"><span data-stu-id="4937d-160">Delegation and Impersonation</span></span>](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
+ [<span data-ttu-id="4937d-161">권한 부여</span><span class="sxs-lookup"><span data-stu-id="4937d-161">Authorization</span></span>](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
+ [<span data-ttu-id="4937d-162">방법: 서비스에서 클라이언트 가장</span><span class="sxs-lookup"><span data-stu-id="4937d-162">How to: Impersonate a Client on a Service</span></span>](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
+ [<span data-ttu-id="4937d-163">HTTP 인증 이해</span><span class="sxs-lookup"><span data-stu-id="4937d-163">Understanding HTTP Authentication</span></span>](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)

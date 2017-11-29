@@ -1,72 +1,75 @@
 ---
-title: "WPF의 코드 숨김 및 XAML | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "코드 숨김 파일, XAML"
-  - "XAML, 코드 숨김"
+title: "WPF의 코드 숨김 및 XAML"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XAML [WPF], code-behind
+- code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 241fe815f1a7c2e70a664068a47d511a3dbd7e0a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# WPF의 코드 숨김 및 XAML
-<a name="introduction"></a> 코드 숨김은 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지를 태그 컴파일할 때 태그 정의 개체와 결합되는 코드를 설명하기 위해 사용하는 용어입니다.  이 항목에서는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 코드에 대한 대체 인라인 코드 메커니즘 및 코드 숨김에 대한 요구 사항을 설명합니다.  
+# <a name="code-behind-and-xaml-in-wpf"></a><span data-ttu-id="d0172-102">WPF의 코드 숨김 및 XAML</span><span class="sxs-lookup"><span data-stu-id="d0172-102">Code-Behind and XAML in WPF</span></span>
+<span data-ttu-id="d0172-103"><a name="introduction"></a>코드 숨김은 태그 정의 된 개체와 결합 되는 코드를 설명 하는 데 사용 되는 용어는 경우는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 태그 컴파일된 페이지는 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-103"><a name="introduction"></a> Code-behind is a term used to describe the code that is joined with markup-defined objects, when a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] page is markup-compiled.</span></span> <span data-ttu-id="d0172-104">이 항목에서는 코드에 대 한 대체 인라인 코드 메커니즘 및 코드 숨김에 대 한 요구 사항을 설명 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-104">This topic describes requirements for code-behind as well as an alternative inline code mechanism for code in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span></span>  
   
- 이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
+ <span data-ttu-id="d0172-105">이 항목에는 다음과 같은 단원이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-105">This topic contains the following sections:</span></span>  
   
--   [사전 요구 사항](#Prerequisites)  
+-   [<span data-ttu-id="d0172-106">필수 조건</span><span class="sxs-lookup"><span data-stu-id="d0172-106">Prerequisites</span></span>](#Prerequisites)  
   
--   [코드 숨김 및 XAML 언어](#codebehind_and_the_xaml_language)  
+-   [<span data-ttu-id="d0172-107">코드 숨김 및 XAML 언어</span><span class="sxs-lookup"><span data-stu-id="d0172-107">Code-Behind and the XAML Language</span></span>](#codebehind_and_the_xaml_language)  
   
--   [WPF의 코드 숨김, 이벤트 처리기 및 partial 클래스 요구 사항](#Code_behind__Event_Handler__and_Partial_Class)  
+-   [<span data-ttu-id="d0172-108">코드 숨김, 이벤트 처리기 및 WPF의 Partial 클래스 요구 사항</span><span class="sxs-lookup"><span data-stu-id="d0172-108">Code-behind, Event Handler, and Partial Class Requirements in WPF</span></span>](#Code_behind__Event_Handler__and_Partial_Class)  
   
--   [x:Code](#x_Code)  
+-   [<span data-ttu-id="d0172-109">x: 코드</span><span class="sxs-lookup"><span data-stu-id="d0172-109">x:Code</span></span>](#x_Code)  
   
--   [인라인 코드 제한](#Inline_Code_Limitations)  
+-   [<span data-ttu-id="d0172-110">인라인 코드 제한 사항</span><span class="sxs-lookup"><span data-stu-id="d0172-110">Inline Code Limitations</span></span>](#Inline_Code_Limitations)  
   
 <a name="Prerequisites"></a>   
-## 사전 요구 사항  
- 이 항목에서는 독자가 [XAML 개요\(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)를 읽었으며 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 및 개체 지향 프로그래밍에 대한 기본적인 지식을 갖고 있다고 가정합니다.  
+## <a name="prerequisites"></a><span data-ttu-id="d0172-111">필수 구성 요소</span><span class="sxs-lookup"><span data-stu-id="d0172-111">Prerequisites</span></span>  
+ <span data-ttu-id="d0172-112">이 항목에서는 읽기는 [XAML 개요 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) 대 한 기본 지식이 있고는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 및 개체 지향 프로그래밍 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-112">This topic assumes that you have read the [XAML Overview (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md) and have some basic knowledge of the [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] and object-oriented programming.</span></span>  
   
 <a name="codebehind_and_the_xaml_language"></a>   
-## 코드 숨김 및 XAML 언어  
- XAML 언어에는 태그 파일 쪽에서 코드 파일을 태그 파일에 연결할 수 있는 언어 수준 기능이 포함되어 있습니다.  특히 XAML 언어는 언어 기능 [x:Class 지시문](../../../../docs/framework/xaml-services/x-class-directive.md), [x:Subclass 지시문](../../../../docs/framework/xaml-services/x-subclass-directive.md) 및 [x:ClassModifier 지시문](../../../../docs/framework/xaml-services/x-classmodifier-directive.md)를 정의합니다.  코드를 생성하는 방법과 태그와 코드를 통합하는 방법은 XAML 언어로 지정되지 않습니다.  코드를 통합하는 방법, 응용 프로그램 및 프로그래밍 모델에서 XAML을 사용하는 방법, 빌드 작업 또는 이 모든 작업에 필요한 기타 지원은 WPF와 같은 프레임워크에 의해 결정됩니다.  
+## <a name="code-behind-and-the-xaml-language"></a><span data-ttu-id="d0172-113">코드 숨김 및 XAML 언어</span><span class="sxs-lookup"><span data-stu-id="d0172-113">Code-Behind and the XAML Language</span></span>  
+ <span data-ttu-id="d0172-114">XAML 언어 태그 파일 로부터 태그 파일을 코드 파일을 연결할 수 있도록 언어 수준 기능을 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-114">The XAML language includes language-level features that make it possible to associate code files with markup files, from the markup file side.</span></span> <span data-ttu-id="d0172-115">XAML 언어 언어 기능을 정의 하는 구체적으로, [X:class 지시문](../../../../docs/framework/xaml-services/x-class-directive.md), [X:subclass 지시문](../../../../docs/framework/xaml-services/x-subclass-directive.md), 및 [X:classmodifier 지시문](../../../../docs/framework/xaml-services/x-classmodifier-directive.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-115">Specifically, the XAML language defines the language features [x:Class Directive](../../../../docs/framework/xaml-services/x-class-directive.md), [x:Subclass Directive](../../../../docs/framework/xaml-services/x-subclass-directive.md), and [x:ClassModifier Directive](../../../../docs/framework/xaml-services/x-classmodifier-directive.md).</span></span> <span data-ttu-id="d0172-116">정확히 어떻게 코드를 생성 하는 방법과 태그와 코드를 통합 하는 XAML 언어의 지정에 속하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-116">Exactly how the code should be produced, and how to integrate markup and code, is not part of what the XAML language specifies.</span></span> <span data-ttu-id="d0172-117">코드를 통합 하는 방법을 결정 하는 WPF와 같은 프레임 워크 에서만 사용 하려면 XAML 응용 프로그램 및 프로그래밍 모델 및 빌드에 작업 또는 기타 지원 하는 방법 모두 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-117">It is left up to frameworks such as WPF to determine how to integrate the code, how to use XAML in the application and programming models, and the build actions or other support that all this requires.</span></span>  
   
 <a name="Code_behind__Event_Handler__and_Partial_Class"></a>   
-## WPF의 코드 숨김, 이벤트 처리기 및 partial 클래스 요구 사항  
+## <a name="code-behind-event-handler-and-partial-class-requirements-in-wpf"></a><span data-ttu-id="d0172-118">코드 숨김, 이벤트 처리기 및 WPF의 Partial 클래스 요구 사항</span><span class="sxs-lookup"><span data-stu-id="d0172-118">Code-behind, Event Handler, and Partial Class Requirements in WPF</span></span>  
   
--   partial 클래스는 루트 요소를 지원하는 형식에서 파생되어야 합니다.  
+-   <span data-ttu-id="d0172-119">Partial 클래스는 루트 요소를 지 원하는 형식에서 파생 되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-119">The partial class must derive from the type that backs the root element.</span></span>  
   
--   태그 컴파일 빌드 작업의 기본 동작에 따라 코드 숨김 쪽의 partial 클래스 정의에서 파생을 공백으로 둘 수 있습니다.  컴파일된 결과에서는 지정되지 않았더라도 페이지 루트의 지원 형식을 partial 클래스의 기본 클래스로 가정합니다.  하지만 이 동작을 사용하는 것이 최선의 방법은 아닙니다.  
+-   <span data-ttu-id="d0172-120">태그 컴파일 빌드 작업의 기본 동작에 따라 비워 있습니다 파생 partial 클래스 정의에 빈 코드 숨김 측에서 note 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-120">Note that under the default behavior of the markup compile build actions, you can leave the derivation blank in the partial class definition on the code-behind side.</span></span> <span data-ttu-id="d0172-121">컴파일된 결과 지정 하지 않더라도 부분 클래스에 대 한 기본 클래스로 지원 형식 페이지 루트를 가정 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-121">The compiled result will assume the page root's backing type to be the basis for the partial class, even if it not specified.</span></span> <span data-ttu-id="d0172-122">그러나이 동작에 의존 하지 않습니다는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-122">However, relying on this behavior is not a best practice.</span></span>  
   
--   코드 숨김으로 작성하는 이벤트 처리기는 인스턴스 메서드여야 하며 정적 메서드일 수 없습니다.  이러한 메서드는 `x:Class`로 식별된 CLR 네임스페이스 내의 partial 클래스로 정의되어야 합니다.  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서가 다른 클래스 범위에서 이벤트 연결에 대한 이벤트 처리기를 찾도록 지시하기 위해 이벤트 처리기의 이름을 정규화할 수 없습니다.  
+-   <span data-ttu-id="d0172-123">코드 숨김에 작성 하는 이벤트 처리기 인스턴스 메서드여야 및 정적 메서드 일 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-123">The event handlers you write in the code behind must be instance methods and cannot be static methods.</span></span> <span data-ttu-id="d0172-124">로 식별 되는 CLR 네임 스페이스 내에서 partial 클래스에서 이러한 메서드를 정의 해야 `x:Class`합니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-124">These methods must be defined by the partial class within the CLR namespace identified by `x:Class`.</span></span> <span data-ttu-id="d0172-125">지시 하기 위해 이벤트 처리기의 이름을 한정할 수 없습니다 한 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서가를 다른 클래스 범위에서 이벤트 연결에 대 한 이벤트 처리기를 찾도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-125">You cannot qualify the name of an event handler to instruct a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor to look for an event handler for event wiring in a different class scope.</span></span>  
   
--   처리기는 지원 형식 시스템의 적절한 이벤트에 대한 대리자와 일치해야 합니다.  
+-   <span data-ttu-id="d0172-126">처리기는 지원 형식 시스템의 적절 한 이벤트에 대 한 대리자를 일치 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-126">The handler must match the delegate for the appropriate event in the backing type system.</span></span>  
   
--   [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] 언어의 경우에는 처리기를 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]의 특성에 연결하는 대신 언어 특정 `Handles` 키워드를 사용하여 처리기 선언에서 인스턴스 및 이벤트와 연결해야 합니다.  하지만 `Handles` 키워드는 특정 라우트된 이벤트 시나리오, 연결된 이벤트 등과 같은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 이벤트 시스템의 모든 기능을 지원할 수는 없기 때문에 이 기술에는 몇 가지 제한이 따릅니다.  자세한 내용은 [Visual Basic 및 WPF 이벤트 처리](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)를 참조하십시오.  
+-   <span data-ttu-id="d0172-127">에 대 한는 [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] 언어 구체적으로, 특정 언어를 사용할 수 있습니다 `Handles` 처리기 인스턴스 및 처리기 선언에서 특성을 사용 하 여 처리기를 연결 하는 대신에 이벤트와 연결할 키워드 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-127">For the [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] language specifically, you can use the language-specific `Handles` keyword to associate handlers with instances and events in the handler declaration, instead of attaching handlers with attributes in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span></span> <span data-ttu-id="d0172-128">그러나이 기법에는 몇 가지 제한 때문에 `Handles` 키워드의 특정 기능을 모두 지원할 수 없는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 와 같은 특정 이벤트 시스템 라우트된 이벤트 시나리오 또는 연결 된 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-128">However, this technique does have some limitations because the `Handles` keyword cannot support all of the specific features of the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] event system, such as certain routed event scenarios or attached events.</span></span> <span data-ttu-id="d0172-129">자세한 내용은 참조 [Visual Basic 및 WPF 이벤트 처리](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-129">For details, see [Visual Basic and WPF Event Handling](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).</span></span>  
   
 <a name="x_Code"></a>   
-## x:Code  
- [x:Code](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]에 정의된 지시문 요소입니다. `x:Code` 지시문 요소는 인라인 프로그래밍 코드를 포함할 수 있습니다.  인라인으로 정의된 코드는 같은 페이지의 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]과 상호 작용할 수 있습니다.  다음 예제에서는 인라인 [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] 코드를 보여 줍니다.  코드는 `x:Code` 요소 안에 있으며 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서\([!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 스키마 또는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 스키마를 해석하는\)가 콘텐츠를 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 그대로 해석하지 않도록 하기 위해 코드를 `<CDATA[`...`]]>`로 감싸서 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]에 대한 콘텐츠를 이스케이프해야 합니다.  
+## <a name="xcode"></a><span data-ttu-id="d0172-130">x: 코드</span><span class="sxs-lookup"><span data-stu-id="d0172-130">x:Code</span></span>  
+ <span data-ttu-id="d0172-131">[X:code](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md) 지시문 요소에 정의 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-131">[x:Code](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md) is a directive element defined in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].</span></span> <span data-ttu-id="d0172-132">`x:Code` 지시문 요소 인라인 프로그래밍 코드를 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-132">An `x:Code` directive element can contain inline programming code.</span></span> <span data-ttu-id="d0172-133">인라인으로 정의 되는 코드와 상호 작용할 수는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 동일한 페이지에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-133">The code that is defined inline can interact with the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] on the same page.</span></span> <span data-ttu-id="d0172-134">다음 예제에서는 인라인 [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] 코드입니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-134">The following example illustrates inline [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] code.</span></span> <span data-ttu-id="d0172-135">코드 내에 있는 통지는 `x:Code` 요소와 코드로 묶어야 `<CDATA[`... `]]>` 에 대 한 콘텐츠를 이스케이프 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]되도록는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 프로세서 (해석 중 하나는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 스키마 또는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 스키마) 내용을 해석 하려고 시도 하지 것입니다로 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-135">Notice that the code is inside the `x:Code` element and that the code must be surrounded by `<CDATA[`...`]]>` to escape the contents for [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], so that a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processor (interpreting either the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] schema or the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] schema) will not try to interpret the contents literally as [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)].</span></span>  
   
- [!code-xml[XAMLOvwSupport#ButtonWithInlineCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page4.xaml#buttonwithinlinecode)]  
+ [!code-xaml[XAMLOvwSupport#ButtonWithInlineCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page4.xaml#buttonwithinlinecode)]  
   
 <a name="Inline_Code_Limitations"></a>   
-## 인라인 코드 제한  
- 인라인 코드의 사용을 피하거나 제한해야 합니다.  아키텍처 및 코딩 원칙의 측면에서 보면 태그와 코드 숨김을 분리하면 디자이너와 개발자 역할을 더 구분할 수 있습니다.  더 기술적인 측면에서 보면 항상 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]의 생성된 partial 클래스에 작성하며 기본 XML 네임스페이스 매핑만 사용할 수 있기 때문에 인라인 코드로 코드를 작성하는 것은 어려운 작업일 수 있습니다.  `using` 문을 추가할 수 없기 때문에 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 호출 대부분을 정규화해야 합니다.  기본 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 매핑에는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 어셈블리에 있는 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 네임스페이스 전부는 아니지만 대부분이 포함됩니다. 다른 CLR 네임스페이스에 포함된 형식 및 멤버에 대한 호출을 정규화해야 합니다.  또한 인라인 코드에서는 partial 클래스 이외의 다른 클래스를 정의할 수 없으며 참조하는 모든 사용자 코드 엔터티는 생성된 partial 클래스 내에서 멤버 또는 변수로 존재해야 합니다.  전역 변수 또는 빌드 변수에 대한 `#ifdef` 또는 매크로 등과 같은 다른 언어 특정 프로그래밍 기능도 사용할 수 없습니다.  자세한 내용은 [x:Code 내장 XAML 형식](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)를 참조하십시오.  
+## <a name="inline-code-limitations"></a><span data-ttu-id="d0172-136">인라인 코드 제한 사항</span><span class="sxs-lookup"><span data-stu-id="d0172-136">Inline Code Limitations</span></span>  
+ <span data-ttu-id="d0172-137">방지 하거나 인라인 코드의 사용을 제한 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-137">You should consider avoiding or limiting the use of inline code.</span></span> <span data-ttu-id="d0172-138">아키텍처 및 코딩 원칙의 측면에서 태그 및 코드 숨김 분리 유지 디자이너와 개발자 역할 훨씬 더 분명 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-138">In terms of architecture and coding philosophy, maintaining a separation between markup and code-behind keeps the designer and developer roles much more distinct.</span></span> <span data-ttu-id="d0172-139">자세한 기술 수준에 대해 인라인 코드를 작성 하는 코드 좋지 않을 수 있습니다를 작성 하려면에 항상 작성 하기 때문에 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] partial 클래스를 생성 하 고 기본 XML 네임 스페이스 매핑을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-139">On a more technical level, the code that you write for inline code can be awkward to write, because you are always writing into the [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] generated partial class, and can only use the default XML namespace mappings.</span></span> <span data-ttu-id="d0172-140">추가할 수 없으므로 `using` 문을 정규화 해야 다양 한는 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 설정한 호출 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-140">Because you cannot add `using` statements, you must fully qualify many of the [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] calls that you make.</span></span> <span data-ttu-id="d0172-141">기본 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 매핑에 포함 전부는 아니지만 가장 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 에 있는 네임 스페이스는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 어셈블리; 형식 및 다른 CLR 네임 스페이스 내에 포함 된 멤버에 대 한 호출을 정규화 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-141">The default [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mappings include most but not all [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] namespaces that are present in the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] assemblies; you will have to fully qualify calls to types and members contained within the other CLR namespaces.</span></span> <span data-ttu-id="d0172-142">또한 정의할 수 없습니다 것 partial 클래스 이외에 다른 인라인 코드에 및 멤버 또는 생성 된 partial 클래스 내에서 변수로 참조 하는 모든 사용자 코드 엔터티 존재 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-142">You also cannot define anything beyond the partial class in the inline code, and all user code entities you reference must exist as a member or variable within the generated partial class.</span></span> <span data-ttu-id="d0172-143">다른 특정 프로그래밍 같은 언어 기능이 매크로 또는 `#ifdef` 전역 변수 또는 빌드 변수에 대 한는 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-143">Other language specific programming features, such as macros or `#ifdef` against global variables or build variables, are also not available.</span></span> <span data-ttu-id="d0172-144">자세한 내용은 참조 [X:code 내장 XAML 형식](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="d0172-144">For more information, see [x:Code Intrinsic XAML Type](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md).</span></span>  
   
-## 참고 항목  
- [XAML 개요\(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)   
- [x:Code 내장 XAML 형식](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)   
- [WPF 응용 프로그램 만들기](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)   
- [XAML 구문 정보](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+## <a name="see-also"></a><span data-ttu-id="d0172-145">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d0172-145">See Also</span></span>  
+ [<span data-ttu-id="d0172-146">XAML 개요(WPF)</span><span class="sxs-lookup"><span data-stu-id="d0172-146">XAML Overview (WPF)</span></span>](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [<span data-ttu-id="d0172-147">x:Code 내장 XAML 형식</span><span class="sxs-lookup"><span data-stu-id="d0172-147">x:Code Intrinsic XAML Type</span></span>](../../../../docs/framework/xaml-services/x-code-intrinsic-xaml-type.md)  
+ [<span data-ttu-id="d0172-148">WPF 응용 프로그램 빌드</span><span class="sxs-lookup"><span data-stu-id="d0172-148">Building a WPF Application</span></span>](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
+ [<span data-ttu-id="d0172-149">XAML 구문 정보</span><span class="sxs-lookup"><span data-stu-id="d0172-149">XAML Syntax In Detail</span></span>](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)

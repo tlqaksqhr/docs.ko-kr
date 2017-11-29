@@ -1,39 +1,31 @@
 ---
-title: "방법: 서명 되지 않은 Friend 어셈블리 (Visual Basic) 만들기 | Microsoft 문서"
+title: "방법: 서명 되지 않은 Friend 어셈블리 (Visual Basic) 만들기"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: ceddb35c306f72c8927deda326d9fcca6c75d786
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: a2b2667c60a07a2897a0934d210901042e2e43c1
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>방법: 서명 되지 않은 Friend 어셈블리 (Visual Basic) 만들기
-이 예제에는 어셈블리에 서명 되지 않은 friend 어셈블리를 사용 하는 방법을 보여 줍니다.  
+# <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a><span data-ttu-id="0a04d-102">방법: 서명 되지 않은 Friend 어셈블리 (Visual Basic) 만들기</span><span class="sxs-lookup"><span data-stu-id="0a04d-102">How to: Create Unsigned Friend Assemblies (Visual Basic)</span></span>
+<span data-ttu-id="0a04d-103">이 예제에서는 서명되지 않은 어셈블리와 함께 friend 어셈블리를 사용하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0a04d-103">This example shows how to use friend assemblies with assemblies that are unsigned.</span></span>  
   
-### <a name="to-create-an-assembly-and-a-friend-assembly"></a>어셈블리 및 friend 어셈블리를 만들려면  
+### <a name="to-create-an-assembly-and-a-friend-assembly"></a><span data-ttu-id="0a04d-104">어셈블리 및 friend 어셈블리를 만들려면</span><span class="sxs-lookup"><span data-stu-id="0a04d-104">To create an assembly and a friend assembly</span></span>  
   
-1.  명령 프롬프트를 엽니다.  
+1.  <span data-ttu-id="0a04d-105">명령 프롬프트를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="0a04d-105">Open a command prompt.</span></span>  
   
-2.  라는 Visual Basic 파일을 만듭니다 `friend_signed_A.` 하는 다음 코드를 포함 합니다. 코드를 사용 하는 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>friend_signed_B friend 어셈블리 선언 하는 특성입니다.</xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+2.  <span data-ttu-id="0a04d-106">Visual Basic 파일을 만듭니다 `friend_signed_A.` 다음 코드가 들어 있는입니다.</span><span class="sxs-lookup"><span data-stu-id="0a04d-106">Create a Visual Basic file named `friend_signed_A.` that contains the following code.</span></span> <span data-ttu-id="0a04d-107">코드에서는 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성을 사용하여 friend_signed_B를 friend 어셈블리로 선언합니다.</span><span class="sxs-lookup"><span data-stu-id="0a04d-107">The code uses the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute to declare friend_signed_B as a friend assembly.</span></span>  
   
     ```vb  
     ' friend_unsigned_A.vb  
@@ -59,13 +51,13 @@ ms.lasthandoff: 03/13/2017
     End Class  
     ```  
   
-3.  컴파일 및 friend_signed_A 다음 명령을 사용 하 여 로그인 합니다.  
+3.  <span data-ttu-id="0a04d-108">다음 명령을 사용하여 friend_signed_A를 컴파일하고 서명합니다.</span><span class="sxs-lookup"><span data-stu-id="0a04d-108">Compile and sign friend_signed_A by using the following command.</span></span>  
   
     ```vb  
     Vbc /target:library friend_unsigned_A.vb  
     ```  
   
-4.  라는 Visual Basic 파일을 만듭니다 `friend_unsigned_B` 하는 다음 코드를 포함 합니다. Friend_unsigned_B의 코드에 액세스할 수 friend_unsigned_A friend_unsigned_B friend 어셈블리를 지정 하므로 `Friend` 형식과 friend_unsigned_A에서 멤버입니다.  
+4.  <span data-ttu-id="0a04d-109">Visual Basic 파일을 만듭니다 `friend_unsigned_B` 다음 코드가 들어 있는입니다.</span><span class="sxs-lookup"><span data-stu-id="0a04d-109">Create a Visual Basic file named `friend_unsigned_B` that contains the following code.</span></span> <span data-ttu-id="0a04d-110">friend_unsigned_A는 friend_unsigned_B를 friend 어셈블리로 지정하기 때문에 friend_unsigned_B의 코드는 friend_unsigned_A의 `Friend` 형식과 멤버에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0a04d-110">Because friend_unsigned_A specifies friend_unsigned_B as a friend assembly, the code in friend_unsigned_B can access `Friend` types and members from friend_unsigned_A.</span></span>  
   
     ```vb  
     ' friend_unsigned_B.vb  
@@ -86,24 +78,24 @@ ms.lasthandoff: 03/13/2017
     End Module  
     ```  
   
-5.  다음 명령을 사용 하 여 friend_signed_B를 컴파일하십시오.  
+5.  <span data-ttu-id="0a04d-111">다음 명령을 사용하여 friend_signed_B를 컴파일합니다.</span><span class="sxs-lookup"><span data-stu-id="0a04d-111">Compile friend_signed_B by using the following command.</span></span>  
   
     ```vb  
     Vbc /r:friend_unsigned_A.dll friend_unsigned_B.vb  
     ```  
   
-     컴파일러에서 생성 되는 어셈블리의 이름에 전달 되는 friend 어셈블리 이름과 같아야 합니다.는 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>특성.</xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 사용 하 여 어셈블리를 명시적으로 설정할 수는 `/out` 컴파일러 옵션입니다.  
+     <span data-ttu-id="0a04d-112">컴파일러에서 생성된 어셈블리 이름은 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성에 전달된 friend 어셈블리 이름과 일치해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0a04d-112">The name of the assembly that is generated by the compiler must match the friend assembly name that is passed to the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute.</span></span> <span data-ttu-id="0a04d-113">사용 하 여 어셈블리를 명시적으로 설정할 수는 `/out` 컴파일러 옵션입니다.</span><span class="sxs-lookup"><span data-stu-id="0a04d-113">You can explicitly set the assembly by using the `/out` compiler option.</span></span>  
   
-6.  Friend_signed_B.exe 파일을 실행 합니다.  
+6.  <span data-ttu-id="0a04d-114">friend_signed_B.exe 파일을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="0a04d-114">Run the friend_signed_B.exe file.</span></span>  
   
-     두 문자열을 인쇄 하는 프로그램: "Class1.Test" 및 "Class2.Test"입니다.  
+     <span data-ttu-id="0a04d-115">프로그램이 두 문자열 "Class1.Test" 및 "Class2.Test"를 인쇄합니다.</span><span class="sxs-lookup"><span data-stu-id="0a04d-115">The program prints two strings: "Class1.Test" and "Class2.Test".</span></span>  
   
-## <a name="net-framework-security"></a>.NET Framework 보안  
- 가 유사성 사이는 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>특성 및 <xref:System.Security.Permissions.StrongNameIdentityPermission>클래스가 있습니다.</xref:System.Security.Permissions.StrongNameIdentityPermission> </xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 주요 차이점은 <xref:System.Security.Permissions.StrongNameIdentityPermission>반면 코드의 특정 섹션을 실행 하는 보안 권한을 요구할 수 있습니다는 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>특성의 표시 유형을 제어 `Friend` 형식 및 멤버.</xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> </xref:System.Security.Permissions.StrongNameIdentityPermission>  
+## <a name="net-framework-security"></a><span data-ttu-id="0a04d-116">.NET Framework 보안</span><span class="sxs-lookup"><span data-stu-id="0a04d-116">.NET Framework Security</span></span>  
+ <span data-ttu-id="0a04d-117"><xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성과 <xref:System.Security.Permissions.StrongNameIdentityPermission> 클래스 간에는 유사점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0a04d-117">There are similarities between the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute and the <xref:System.Security.Permissions.StrongNameIdentityPermission> class.</span></span> <span data-ttu-id="0a04d-118">주요 차이점은 <xref:System.Security.Permissions.StrongNameIdentityPermission>은 코드의 특정 섹션을 실행하는 보안 권한을 요구할 수 있는 반면, <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성은 `Friend` 형식 및 멤버의 표시 유형을 제어한다는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="0a04d-118">The main difference is that <xref:System.Security.Permissions.StrongNameIdentityPermission> can demand security permissions to run a particular section of code, whereas the <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> attribute controls the visibility of `Friend` types and members.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute></xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>   
- [어셈블리 및 전역 어셈블리 캐시 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)   
- [Friend 어셈블리 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)   
- [방법: 서명 된 Friend 어셈블리 (Visual Basic) 만들기](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)   
- [프로그래밍 가이드 개념](../../../../visual-basic/programming-guide/concepts/index.md)
+## <a name="see-also"></a><span data-ttu-id="0a04d-119">참고 항목</span><span class="sxs-lookup"><span data-stu-id="0a04d-119">See Also</span></span>  
+ <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+ [<span data-ttu-id="0a04d-120">어셈블리와 전역 어셈블리 캐시(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0a04d-120">Assemblies and the Global Assembly Cache (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+ [<span data-ttu-id="0a04d-121">Friend 어셈블리 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0a04d-121">Friend Assemblies (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+ [<span data-ttu-id="0a04d-122">방법: 서명 된 Friend 어셈블리 (Visual Basic) 만들기</span><span class="sxs-lookup"><span data-stu-id="0a04d-122">How to: Create Signed Friend Assemblies (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
+ [<span data-ttu-id="0a04d-123">프로그래밍 가이드 개요</span><span class="sxs-lookup"><span data-stu-id="0a04d-123">Programming Guide Concepts</span></span>](../../../../visual-basic/programming-guide/concepts/index.md)

@@ -1,42 +1,47 @@
 ---
-title: "방법: Windows Forms 단추 클릭에 응답 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Button 컨트롤[Windows Forms], click 응답"
-  - "단추, Click 이벤트에 응답"
-  - "Click 이벤트, Button 컨트롤"
-  - "Click 이벤트, 응답"
-  - "두 번 클릭"
-  - "이벤트[Windows Forms], Click 이벤트"
-  - "예제[Windows Forms], 컨트롤"
-  - "MouseDown 이벤트"
+title: "방법: Windows Forms 단추 클릭에 응답"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- buttons [Windows Forms], responding to Click events
+- events [Windows Forms], Click events
+- Click event [Windows Forms], Button control
+- MouseDown event
+- Button control [Windows Forms], click response
+- double-clicks
+- examples [Windows Forms], controls
+- Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 923eb7d1b1b5b442ce897619253a958019b239a7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: Windows Forms 단추 클릭에 응답
-Windows Forms <xref:System.Windows.Forms.Button> 컨트롤의 가장 기본적인 용도는 단추가 클릭될 경우 해당 코드를 실행하는 것입니다.  
+# <a name="how-to-respond-to-windows-forms-button-clicks"></a><span data-ttu-id="09141-102">방법: Windows Forms 단추 클릭에 응답</span><span class="sxs-lookup"><span data-stu-id="09141-102">How to: Respond to Windows Forms Button Clicks</span></span>
+<span data-ttu-id="09141-103">Windows Forms의 가장 기본적인 사용법 <xref:System.Windows.Forms.Button> 컨트롤에서 단추를 클릭할 때 일부 코드를 실행 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="09141-103">The most basic use of a Windows Forms <xref:System.Windows.Forms.Button> control is to run some code when the button is clicked.</span></span>  
   
- <xref:System.Windows.Forms.Button> 컨트롤을 클릭하면 <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown> 및 <xref:System.Windows.Forms.Control.MouseUp> 이벤트와 같은 여러 가지 이벤트도 생성됩니다.  이러한 관련 이벤트에 이벤트 처리기를 연결하려면 각 이벤트의 동작이 충돌하지 않아야 합니다.  예를 들어, 단추를 클릭하면 텍스트 상자에 입력한 정보가 지워지는 경우에는 단추 위로 마우스를 가져가도 이미 지워진 정보의 도구 설명이 표시되지 않아야 합니다.  
+ <span data-ttu-id="09141-104">클릭 하는 <xref:System.Windows.Forms.Button> 제어도 생성 된 수의 다른 이벤트와 같은 <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown>, 및 <xref:System.Windows.Forms.Control.MouseUp> 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="09141-104">Clicking a <xref:System.Windows.Forms.Button> control also generates a number of other events, such as the <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown>, and <xref:System.Windows.Forms.Control.MouseUp> events.</span></span> <span data-ttu-id="09141-105">이러한 관련된 이벤트에 대 한 이벤트 처리기를 연결 하려는 경우 수의 동작이 충돌 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="09141-105">If you intend to attach event handlers for these related events, be sure that their actions do not conflict.</span></span> <span data-ttu-id="09141-106">예를 들어 경우 단추를 클릭 하는 사용자가 텍스트 상자에 입력 한 정보를 단추 위로 마우스 포인터를 일시 중지 해야 하지 표시 지워지는 정보를 포함 하는 도구 설명을 합니다.</span><span class="sxs-lookup"><span data-stu-id="09141-106">For example, if clicking the button clears information that the user has typed in a text box, pausing the mouse pointer over the button should not display a tool tip with that now-nonexistent information.</span></span>  
   
- <xref:System.Windows.Forms.Button> 컨트롤을 두 번 클릭하는 경우 각 클릭은 별도로 처리됩니다. 즉, 해당 컨트롤은 두 번 클릭 이벤트를 지원하지 않습니다.  
+ <span data-ttu-id="09141-107">사용자가을 두 번 클릭 하는 경우는 <xref:System.Windows.Forms.Button> 컨트롤을 클릭할 때마다은 별도로 처리 됩니다; 즉, 컨트롤이 두 번 클릭 이벤트 지원 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="09141-107">If the user attempts to double-click the <xref:System.Windows.Forms.Button> control, each click will be processed separately; that is, the control does not support the double-click event.</span></span>  
   
-### 단추 클릭에 응답하려면  
+### <a name="to-respond-to-a-button-click"></a><span data-ttu-id="09141-108">단추 클릭에 응답 하려면</span><span class="sxs-lookup"><span data-stu-id="09141-108">To respond to a button click</span></span>  
   
--   실행할 코드를 단추의`Click` <xref:System.EventHandler>에서 작성합니다.  `Button1_Click`은 해당 컨트롤에 바인딩되어야 합니다.  자세한 내용은 [방법: 런타임에 Windows Forms의 이벤트 처리기 만들기](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md)을 참조하십시오.  
+-   <span data-ttu-id="09141-109">단추의 `Click` <xref:System.EventHandler> 실행 하는 코드를 작성 합니다.</span><span class="sxs-lookup"><span data-stu-id="09141-109">In the button's `Click` <xref:System.EventHandler> write the code to run.</span></span> <span data-ttu-id="09141-110">`Button1_Click`컨트롤에 바인딩해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="09141-110">`Button1_Click` must be bound to the control.</span></span> <span data-ttu-id="09141-111">자세한 내용은 참조 [하는 방법: Windows Forms에 대 한 시간 실행에서 이벤트 처리기 만들기](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="09141-111">For more information, see [How to: Create Event Handlers at Run Time for Windows Forms](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md).</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -51,7 +56,7 @@ Windows Forms <xref:System.Windows.Forms.Button> 컨트롤의 가장 기본적�
     }  
     ```  
   
-    ```cpp#  
+    ```cpp  
     private:  
        void button1_Click(System::Object ^ sender,  
           System::EventArgs ^ e)  
@@ -60,7 +65,7 @@ Windows Forms <xref:System.Windows.Forms.Button> 컨트롤의 가장 기본적�
        }  
     ```  
   
-## 참고 항목  
- [Button 컨트롤 개요](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)   
- [Windows Forms Button 컨트롤 선택 방법](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)   
- [Button 컨트롤](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="09141-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="09141-112">See Also</span></span>  
+ [<span data-ttu-id="09141-113">Button 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="09141-113">Button Control Overview</span></span>](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
+ [<span data-ttu-id="09141-114">Windows Forms Button 컨트롤 선택 방법</span><span class="sxs-lookup"><span data-stu-id="09141-114">Ways to Select a Windows Forms Button Control</span></span>](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
+ [<span data-ttu-id="09141-115">Button 컨트롤</span><span class="sxs-lookup"><span data-stu-id="09141-115">Button Control</span></span>](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)

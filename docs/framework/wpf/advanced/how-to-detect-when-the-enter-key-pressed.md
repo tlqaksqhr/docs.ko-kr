@@ -1,41 +1,47 @@
 ---
-title: "방법: Enter 키를 누르는 시점 감지 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Enter 키, 검색"
-  - "keys, 입력"
+title: "방법: Enter 키를 누르는 시점 감지"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Enter key [WPF], detecting
+- keys [WPF], Enter
 ms.assetid: a66f39d2-ef4a-43a5-b454-a4ea0fe88655
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8311083b4b82d4ab4827e8d0a2cf958c67347014
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: Enter 키를 누르는 시점 감지
-이 예제에서는 키보드의 <xref:System.Windows.Input.Key> 키를 누르는 시점을 감지하는 방법을 보여 줍니다.  
+# <a name="how-to-detect-when-the-enter-key-pressed"></a><span data-ttu-id="c9fd6-102">방법: Enter 키를 누르는 시점 감지</span><span class="sxs-lookup"><span data-stu-id="c9fd6-102">How to: Detect When the Enter Key Pressed</span></span>
+<span data-ttu-id="c9fd6-103">시기를 감지 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Input.Key.Enter> 키보드의 키를 누르면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="c9fd6-103">This example shows how to detect when the <xref:System.Windows.Input.Key.Enter> key is pressed on the keyboard.</span></span>  
   
- 이 예제는 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 파일과 코드 숨김 파일로 구성됩니다.  
+ <span data-ttu-id="c9fd6-104">이 예제는 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 파일 및 코드 숨김 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="c9fd6-104">This example consists of a [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] file and a code-behind file.</span></span>  
   
-## 예제  
- 사용자가 <xref:System.Windows.Controls.TextBox>에서 <xref:System.Windows.Input.Key> 키를 누르면 텍스트 상자의 입력이 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]의 다른 영역에 나타납니다.  
+## <a name="example"></a><span data-ttu-id="c9fd6-105">예제</span><span class="sxs-lookup"><span data-stu-id="c9fd6-105">Example</span></span>  
+ <span data-ttu-id="c9fd6-106">누를 때는 <xref:System.Windows.Input.Key.Enter> 키에 <xref:System.Windows.Controls.TextBox>, 텍스트 상자에 입력의 다른 영역에 표시는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="c9fd6-106">When the user presses the <xref:System.Windows.Input.Key.Enter> key in the <xref:System.Windows.Controls.TextBox>, the input in the text box appears in another area of the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].</span></span>  
   
- 다음 [!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)]에서는 <xref:System.Windows.Controls.StackPanel>, <xref:System.Windows.Controls.TextBlock> 및 <xref:System.Windows.Controls.TextBox>로 구성된 사용자 인터페이스를 만듭니다.  
+ <span data-ttu-id="c9fd6-107">다음 [!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)] 구성 된 사용자 인터페이스를 만들고는 <xref:System.Windows.Controls.StackPanel>, <xref:System.Windows.Controls.TextBlock>, 및 <xref:System.Windows.Controls.TextBox>합니다.</span><span class="sxs-lookup"><span data-stu-id="c9fd6-107">The following [!INCLUDE[TLA2#tla_titlexaml](../../../../includes/tla2sharptla-titlexaml-md.md)] creates the user interface, which consists of a <xref:System.Windows.Controls.StackPanel>, a <xref:System.Windows.Controls.TextBlock>, and a <xref:System.Windows.Controls.TextBox>.</span></span>  
   
- [!code-xml[keydown#KeyDownUI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/KeyDown/CSharp/Window1.xaml#keydownui)]  
+ [!code-xaml[keydown#KeyDownUI](../../../../samples/snippets/csharp/VS_Snippets_Wpf/KeyDown/CSharp/Window1.xaml#keydownui)]  
   
- 다음 코드 숨김에서는 <xref:System.Windows.UIElement.KeyDown> 이벤트 처리기를 만듭니다.  사용자가 누른 키가 <xref:System.Windows.Input.Key> 키이면 <xref:System.Windows.Controls.TextBlock>에 메시지가 표시됩니다.  
+ <span data-ttu-id="c9fd6-108">다음 코드 숨김 만듭니다는 <xref:System.Windows.UIElement.KeyDown> 이벤트 처리기입니다.</span><span class="sxs-lookup"><span data-stu-id="c9fd6-108">The following code behind creates the <xref:System.Windows.UIElement.KeyDown> event handler.</span></span>  <span data-ttu-id="c9fd6-109">키를 누르면가 <xref:System.Windows.Input.Key.Enter> 키, 메시지에 표시 되는 <xref:System.Windows.Controls.TextBlock>합니다.</span><span class="sxs-lookup"><span data-stu-id="c9fd6-109">If the key that is pressed is the <xref:System.Windows.Input.Key.Enter> key, a message is displayed in the <xref:System.Windows.Controls.TextBlock>.</span></span>  
   
  [!code-csharp[keydown#KeyDownSample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/KeyDown/CSharp/Window1.xaml.cs#keydownsample)]
  [!code-vb[keydown#KeyDownSample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/KeyDown/VisualBasic/Window1.xaml.vb#keydownsample)]  
   
-## 참고 항목  
- [입력 개요](../../../../docs/framework/wpf/advanced/input-overview.md)   
- [라우트된 이벤트 개요](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+## <a name="see-also"></a><span data-ttu-id="c9fd6-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="c9fd6-110">See Also</span></span>  
+ [<span data-ttu-id="c9fd6-111">입력 개요</span><span class="sxs-lookup"><span data-stu-id="c9fd6-111">Input Overview</span></span>](../../../../docs/framework/wpf/advanced/input-overview.md)  
+ [<span data-ttu-id="c9fd6-112">라우트된 이벤트 개요</span><span class="sxs-lookup"><span data-stu-id="c9fd6-112">Routed Events Overview</span></span>](../../../../docs/framework/wpf/advanced/routed-events-overview.md)

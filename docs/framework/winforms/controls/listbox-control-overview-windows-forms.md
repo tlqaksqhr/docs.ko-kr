@@ -1,42 +1,42 @@
 ---
-title: "ListBox 컨트롤 개요(Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ListBox"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "목록 상자, 목록 상자 정보"
-  - "ListBox 컨트롤[Windows Forms], ListBox 컨트롤 정보"
+title: "ListBox 컨트롤 개요(Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ListBox
+helpviewer_keywords:
+- list boxes [Windows Forms], about list boxes
+- ListBox control [Windows Forms], about ListBox control
 ms.assetid: 37ea226b-6fc8-4c70-936a-c6af4e0cad4c
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6e73d76a2d9b31a87bf5a693b5ffa387d7ab5cef
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# ListBox 컨트롤 개요(Windows Forms)
-Windows Forms <xref:System.Windows.Forms.ListBox> 컨트롤은 사용자가 하나 이상의 항목을 선택할 수 있는 목록을 표시합니다.  표시할 수 있는 수보다 전체 항목 수가 많으면 <xref:System.Windows.Forms.ListBox> 컨트롤에 자동으로 스크롤 막대가 추가됩니다.  <xref:System.Windows.Forms.ListBox.MultiColumn%2A> 속성이 `true`로 설정된 경우에는 목록 상자의 항목이 여러 열에 표시되고 가로 스크롤 막대가 나타납니다.  또한 <xref:System.Windows.Forms.ListBox.MultiColumn%2A> 속성이 `false`로 설정된 경우에는 목록 상자의 항목이 단일 열에 표시되고 세로 스크롤 막대가 나타납니다.  <xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A>이 `true`로 설정되어 있으면 항목 수에 관계없이 스크롤 막대가 나타납니다.  <xref:System.Windows.Forms.ListBox.SelectionMode%2A> 속성은 한 번에 선택할 수 있는 항목의 수를 결정합니다.  
+# <a name="listbox-control-overview-windows-forms"></a><span data-ttu-id="83712-102">ListBox 컨트롤 개요(Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="83712-102">ListBox Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="83712-103">Windows Forms <xref:System.Windows.Forms.ListBox> 컨트롤 사용자 하나 이상의 항목을 선택할 수 있는 목록을 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="83712-103">A Windows Forms <xref:System.Windows.Forms.ListBox> control displays a list from which the user can select one or more items.</span></span> <span data-ttu-id="83712-104">스크롤 막대에 자동으로 추가 됩니다 총 항목 수가 표시 될 수 있는 수를 초과 하면는 <xref:System.Windows.Forms.ListBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="83712-104">If the total number of items exceeds the number that can be displayed, a scroll bar is automatically added to the <xref:System.Windows.Forms.ListBox> control.</span></span> <span data-ttu-id="83712-105">경우는 <xref:System.Windows.Forms.ListBox.MultiColumn%2A> 속성이 `true`, 여러 열에 있는 항목을 표시 하는 목록 상자 및 가로 스크롤 막대가 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="83712-105">When the <xref:System.Windows.Forms.ListBox.MultiColumn%2A> property is set to `true`, the list box displays items in multiple columns and a horizontal scroll bar appears.</span></span> <span data-ttu-id="83712-106">경우는 <xref:System.Windows.Forms.ListBox.MultiColumn%2A> 속성이 `false`, 단일 열에 있는 항목을 표시 하는 목록 상자 및 세로 스크롤 막대가 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="83712-106">When the <xref:System.Windows.Forms.ListBox.MultiColumn%2A> property is set to `false`, the list box displays items in a single column and a vertical scroll bar appears.</span></span> <span data-ttu-id="83712-107">때 <xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A> 로 설정 된 `true`, 항목 수에 관계 없이 스크롤 막대가 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="83712-107">When <xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A> is set to `true`, the scroll bar appears regardless of the number of items.</span></span> <span data-ttu-id="83712-108"><xref:System.Windows.Forms.ListBox.SelectionMode%2A> 속성 결정 목록 항목의 수를 한 번에 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="83712-108">The <xref:System.Windows.Forms.ListBox.SelectionMode%2A> property determines how many list items can be selected at a time.</span></span>  
   
-## ListBox 컨트롤 변경 방법  
- <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> 속성은 목록 상자에서 처음 선택한 항목에 해당하는 정수 값을 반환합니다.  코드에서 <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> 값을 변경하면 선택한 항목을 프로그래밍 방식으로 변경할 수 있으며 목록의 해당 항목이 Windows Form에서 강조되어 나타납니다.  항목이 선택되지 않은 경우 <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> 값은 \-1입니다.  목록의 첫 번째 항목이 선택되지 않은 경우 <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> 값은 0입니다.  여러 항목을 선택하면 <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> 값은 목록에 처음 나타나는 선택한 항목을 반영합니다.  <xref:System.Windows.Forms.ListBox.SelectedItem%2A> 속성은 <xref:System.Windows.Forms.ListBox.SelectedIndex%2A>와 비슷하지만 대개 문자열 값인 항목 자체를 반환합니다.  <xref:System.Windows.Forms.ListBox.ObjectCollection.Count%2A> 속성은 목록의 항목 개수를 반영하며 <xref:System.Windows.Forms.ListBox.SelectedIndex%2A>가 0부터 시작하기 때문에 <xref:System.Windows.Forms.ListBox.ObjectCollection.Count%2A> 속성의 값은 최대 <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> 값보다 항상 1이 더 큽니다.  
+## <a name="ways-to-change-the-listbox-control"></a><span data-ttu-id="83712-109">ListBox 컨트롤을 변경 하는 방법</span><span class="sxs-lookup"><span data-stu-id="83712-109">Ways to Change the ListBox Control</span></span>  
+ <span data-ttu-id="83712-110"><xref:System.Windows.Forms.ListBox.SelectedIndex%2A> 속성 목록 상자에서 선택한 첫 번째 항목에 해당 하는 정수 값을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="83712-110">The <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> property returns an integer value that corresponds to the first selected item in the list box.</span></span> <span data-ttu-id="83712-111">선택한 항목을 변경 하 여 프로그래밍 방식으로 변경할 수 있습니다는 <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> 코드에서 값; 목록에서 해당 항목을 Windows Form에 강조 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="83712-111">You can programmatically change the selected item by changing the <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> value in code; the corresponding item in the list will appear highlighted on the Windows Form.</span></span> <span data-ttu-id="83712-112">선택 된 항목이 있는 경우는 <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> 값은-1입니다.</span><span class="sxs-lookup"><span data-stu-id="83712-112">If no item is selected, the <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> value is -1.</span></span> <span data-ttu-id="83712-113">목록에서 첫 번째 항목을 선택 하는 경우는 <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> 값은 0입니다.</span><span class="sxs-lookup"><span data-stu-id="83712-113">If the first item in the list is selected, the <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> value is 0.</span></span> <span data-ttu-id="83712-114">여러 항목을 선택 하는 경우는 <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> 값은 선택된 목록에 첫 번째로 표시 된 항목을 반영 합니다.</span><span class="sxs-lookup"><span data-stu-id="83712-114">When multiple items are selected, the <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> value reflects the selected item that appears first in the list.</span></span> <span data-ttu-id="83712-115"><xref:System.Windows.Forms.ListBox.SelectedItem%2A> 속성은 비슷하지만 <xref:System.Windows.Forms.ListBox.SelectedIndex%2A>, 문자열 값을 일반적으로 항목 자체를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="83712-115">The <xref:System.Windows.Forms.ListBox.SelectedItem%2A> property is similar to <xref:System.Windows.Forms.ListBox.SelectedIndex%2A>, but returns the item itself, usually a string value.</span></span> <span data-ttu-id="83712-116"><xref:System.Windows.Forms.ListBox.ObjectCollection.Count%2A> 속성 목록에 있는 항목의 수와 값은 반영 된 <xref:System.Windows.Forms.ListBox.ObjectCollection.Count%2A> 속성은 항상 하나 이상 가장 큰 <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> 때문에 값 <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> 는 0부터 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="83712-116">The <xref:System.Windows.Forms.ListBox.ObjectCollection.Count%2A> property reflects the number of items in the list, and the value of the <xref:System.Windows.Forms.ListBox.ObjectCollection.Count%2A> property is always one more than the largest possible <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> value because <xref:System.Windows.Forms.ListBox.SelectedIndex%2A> is zero-based.</span></span>  
   
- <xref:System.Windows.Forms.ListBox> 컨트롤에서 항목을 추가하거나 삭제하려면 <xref:System.Windows.Forms.ListBox.ObjectCollection.Add%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Insert%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Clear%2A> 또는 <xref:System.Windows.Forms.ListBox.ObjectCollection.Remove%2A> 메서드를 사용합니다.  또한 디자인 타임에 <xref:System.Windows.Forms.ListBox.Items%2A> 속성을 사용하여 목록에 항목을 추가할 수도 있습니다.  
+ <span data-ttu-id="83712-117">에 항목을 추가 하거나 삭제할는 <xref:System.Windows.Forms.ListBox> 컨트롤을 사용 하 여는 <xref:System.Windows.Forms.ListBox.ObjectCollection.Add%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Insert%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Clear%2A> 또는 <xref:System.Windows.Forms.ListBox.ObjectCollection.Remove%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="83712-117">To add or delete items in a <xref:System.Windows.Forms.ListBox> control, use the <xref:System.Windows.Forms.ListBox.ObjectCollection.Add%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Insert%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Clear%2A> or <xref:System.Windows.Forms.ListBox.ObjectCollection.Remove%2A> method.</span></span> <span data-ttu-id="83712-118">사용 하 여 목록에 항목을 추가할 수는 또한는 <xref:System.Windows.Forms.ListBox.Items%2A> 디자인 타임에 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="83712-118">Alternatively, you can add items to the list by using the <xref:System.Windows.Forms.ListBox.Items%2A> property at design time.</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Forms.ListBox>   
- [방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤에서 항목 추가 및 제거](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)   
- [방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤의 내용 정렬](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)   
- [방법: 데이터에 Windows Forms ComboBox 또는 ListBox 컨트롤 바인딩](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)   
- [ComboBox 컨트롤 개요](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)   
- [CheckedListBox 컨트롤 개요](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)   
- [옵션 목록 표시에 사용하는 Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)   
- [방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤의 조회 테이블 만들기](../../../../docs/framework/winforms/controls/create-a-lookup-table-for-a-wf-combobox-listbox.md)
+## <a name="see-also"></a><span data-ttu-id="83712-119">참고 항목</span><span class="sxs-lookup"><span data-stu-id="83712-119">See Also</span></span>  
+ <xref:System.Windows.Forms.ListBox>  
+ [<span data-ttu-id="83712-120">방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤에서 항목 추가 및 제거</span><span class="sxs-lookup"><span data-stu-id="83712-120">How to: Add and Remove Items from a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)  
+ [<span data-ttu-id="83712-121">방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤의 내용 정렬</span><span class="sxs-lookup"><span data-stu-id="83712-121">How to: Sort the Contents of a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
+ [<span data-ttu-id="83712-122">방법: 데이터에 Windows Forms ComboBox 또는 ListBox 컨트롤 바인딩</span><span class="sxs-lookup"><span data-stu-id="83712-122">How to: Bind a Windows Forms ComboBox or ListBox Control to Data</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)  
+ [<span data-ttu-id="83712-123">ComboBox 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="83712-123">ComboBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="83712-124">CheckedListBox 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="83712-124">CheckedListBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="83712-125">옵션 목록 표시에 사용된 Windows Forms 컨트롤</span><span class="sxs-lookup"><span data-stu-id="83712-125">Windows Forms Controls Used to List Options</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
+ [<span data-ttu-id="83712-126">방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤의 조회 테이블 만들기</span><span class="sxs-lookup"><span data-stu-id="83712-126">How to: Create a Lookup Table for a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>](../../../../docs/framework/winforms/controls/create-a-lookup-table-for-a-wf-combobox-listbox.md)

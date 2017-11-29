@@ -1,40 +1,41 @@
 ---
-title: "방법: PrintDialog 구성 요소 표시 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "인쇄 대화 상자, 표시"
-  - "PrintDialog 구성 요소[Windows Forms], 표시"
-  - "인쇄[Windows Forms], 인쇄 대화 상자 표시"
+title: "방법: PrintDialog 구성 요소 표시"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Print dialog box [Windows Forms], displaying
+- PrintDialog component [Windows Forms], displaying
+- printing [Windows Forms], displaying print dialog box
 ms.assetid: 745a8db7-0526-4b21-b09d-18e13ed32014
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7e1162a4e926d5be35f8f7bb7cdeb92264f293aa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: PrintDialog 구성 요소 표시
-<xref:System.Windows.Forms.PrintDialog> 구성 요소는 많은 사용자들에게 친숙한 표준 Windows 인쇄 대화 상자입니다.  <xref:System.Windows.Forms.PrintDialog> 구성 요소는 사용자에게 매우 익숙하다는 장점이 있습니다.  
+# <a name="how-to-display-the-printdialog-component"></a><span data-ttu-id="d2298-102">방법: PrintDialog 구성 요소 표시</span><span class="sxs-lookup"><span data-stu-id="d2298-102">How to: Display the PrintDialog Component</span></span>
+<span data-ttu-id="d2298-103"><xref:System.Windows.Forms.PrintDialog> 구성 요소는 표준 Windows 인쇄 대화 상자 많은 사용자 익숙할 것입니다.</span><span class="sxs-lookup"><span data-stu-id="d2298-103">The <xref:System.Windows.Forms.PrintDialog> component is the standard Windows print dialog box that many of your users will be familiar with.</span></span> <span data-ttu-id="d2298-104">사용자가 즉시 만족 하기 때문에 있다면 좋을 것 사용할 수는 <xref:System.Windows.Forms.PrintDialog> 구성 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="d2298-104">Because your users will be immediately comfortable with it, it would be beneficial for you to use the <xref:System.Windows.Forms.PrintDialog> component.</span></span>  
   
-### PrintDialog 구성 요소를 표시하려면  
+### <a name="to-display-the-printdialog-component"></a><span data-ttu-id="d2298-105">PrintDialog 구성 요소를 표시하려면</span><span class="sxs-lookup"><span data-stu-id="d2298-105">To display the PrintDialog component</span></span>  
   
--   응용 프로그램 코드 안에서 <xref:System.Windows.Forms.Form.ShowDialog%2A> 메서드를 호출합니다.  
+-   <span data-ttu-id="d2298-106">호출 된 <xref:System.Windows.Forms.Form.ShowDialog%2A> 응용 프로그램의 코드에서 메서드를 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2298-106">Call the <xref:System.Windows.Forms.Form.ShowDialog%2A> method from within the code of your application.</span></span>  
   
-     구성 요소가 일단 표시되면 이 구성 요소를 사용하여 대화식으로 인쇄 작업에 대한 속성을 설정할 수 있습니다.  이러한 속성은 해당 인쇄 작업에 연결된 [PrinterSettings](frlrfSystemDrawingPrintingPrinterSettingsMembersTopic) 클래스에 저장되며, 사용자가 <xref:System.Windows.Forms.PrintDialog> 구성 요소를 통해 [PageSetupDialog 구성 요소](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)에 액세스하는 경우에는 [PageSettings](frlrfSystemDrawingPrintingPageSettingsMembersTopic) 클래스에도 저장됩니다.  그런 다음 이들이 설정한 속성을 호출하여 인쇄 작업에 관한 세부 사항을 결정할 수 있습니다.  
+     <span data-ttu-id="d2298-107">구성 요소가 표시되면 사용자가 이 구성 요소와 상호 작용하여 인쇄 작업의 속성을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="d2298-107">Once the component is shown, users will interact with it, setting the properties of the print job.</span></span> <span data-ttu-id="d2298-108">이러한 파일에 저장 되는 <!--zz <xref:System.Drawing.Printing.PrinterSetting>--> `PrinterSetting` 클래스 (및 <xref:System.Drawing.Printing.PageSettings> 클래스를 사용자가 액세스 하는 경우는 [PageSetupDialog 구성 요소](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md) 통해는 <xref:System.Windows.Forms.PrintDialog> 구성 요소) 인쇄 작업에 연결 된 합니다.</span><span class="sxs-lookup"><span data-stu-id="d2298-108">These are saved in the <!--zz <xref:System.Drawing.Printing.PrinterSetting>--> `PrinterSetting` class (and the <xref:System.Drawing.Printing.PageSettings> class, if the user accesses the [PageSetupDialog Component](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md) through the <xref:System.Windows.Forms.PrintDialog> component) associated with that print job.</span></span> <span data-ttu-id="d2298-109">그런 다음 설정한 속성을 호출하여 인쇄 작업의 세부 사항을 결정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="d2298-109">You can then make calls to the properties they set to determine the specifics of the print job.</span></span>  
   
-## 참고 항목  
- [방법: 표준 Windows Forms 인쇄 작업 만들기](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)   
- [방법: 런타임에 PrintDialog에서 사용자 입력 캡처](../../../../docs/framework/winforms/advanced/how-to-capture-user-input-from-a-printdialog-at-run-time.md)   
- [PrintPreviewDialog 컨트롤](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)   
- [PrintDialog 구성 요소](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md)   
- [Windows Forms 인쇄 지원](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)   
- [Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/index.md)
+## <a name="see-also"></a><span data-ttu-id="d2298-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="d2298-110">See Also</span></span>  
+ [<span data-ttu-id="d2298-111">방법: 표준 Windows Forms 인쇄 작업 만들기</span><span class="sxs-lookup"><span data-stu-id="d2298-111">How to: Create Standard Windows Forms Print Jobs</span></span>](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)  
+ [<span data-ttu-id="d2298-112">방법: 런타임에 PrintDialog에서 사용자 입력 캡처</span><span class="sxs-lookup"><span data-stu-id="d2298-112">How to: Capture User Input from a PrintDialog at Run Time</span></span>](../../../../docs/framework/winforms/advanced/how-to-capture-user-input-from-a-printdialog-at-run-time.md)  
+ [<span data-ttu-id="d2298-113">PrintPreviewDialog 컨트롤</span><span class="sxs-lookup"><span data-stu-id="d2298-113">PrintPreviewDialog Control</span></span>](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
+ [<span data-ttu-id="d2298-114">PrintDialog 구성 요소</span><span class="sxs-lookup"><span data-stu-id="d2298-114">PrintDialog Component</span></span>](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md)  
+ [<span data-ttu-id="d2298-115">Windows Forms 인쇄 지원</span><span class="sxs-lookup"><span data-stu-id="d2298-115">Windows Forms Print Support</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)  
+ [<span data-ttu-id="d2298-116">Windows Forms 컨트롤</span><span class="sxs-lookup"><span data-stu-id="d2298-116">Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/index.md)

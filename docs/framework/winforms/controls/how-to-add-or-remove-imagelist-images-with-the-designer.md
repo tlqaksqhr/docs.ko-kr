@@ -1,52 +1,53 @@
 ---
-title: "방법: 디자이너를 사용하여 ImageList 이미지 추가 또는 제거 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ImageList 구성 요소[Windows Forms], 이미지 추가"
-  - "ImageList 구성 요소[Windows Forms], 이미지 제거"
-  - "이미지[Windows Forms], ImageList 구성 요소에 추가"
+title: "방법: 디자이너를 사용하여 ImageList 이미지 추가 또는 제거"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ImageList component [Windows Forms], adding images
+- ImageList component [Windows Forms], removing images
+- images [Windows Forms], adding to ImageList component
 ms.assetid: 5699b244-e37c-4d20-bc35-7441e55c1e3a
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 71fa29fc36292bb6620ab458785abaabc749c38d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 디자이너를 사용하여 ImageList 이미지 추가 또는 제거
-몇 가지 방법으로 <xref:System.Windows.Forms.ImageList> 구성 요소에 이미지를 추가할 수 있습니다.  <xref:System.Windows.Forms.ImageList>에 연결된 스마트 태그를 사용하여 매우 빠르게 이미지를 추가할 수 있으며, <xref:System.Windows.Forms.ImageList>에서 다른 몇 가지 속성을 설정하는 경우에는 속성 창을 사용하여 보다 손쉽게 이미지를 추가할 수 있습니다.  코드를 사용하여 이미지를 추가할 수도 있습니다.  코드를 사용하여 이미지를 추가하는 방법에 대한 자세한 내용은 [방법: Windows Forms ImageList 구성 요소를 사용하여 이미지 추가 또는 제거](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)를 참조하십시오.  컨트롤에 연결하기 전에 <xref:System.Windows.Forms.ImageList> 구성 요소를 이미지로 채우는 방법이 일반적이긴 하지만 반드시 그렇게 할 필요는 없습니다.  
+# <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a><span data-ttu-id="2957e-102">방법: 디자이너를 사용하여 ImageList 이미지 추가 또는 제거</span><span class="sxs-lookup"><span data-stu-id="2957e-102">How to: Add or Remove ImageList Images with the Designer</span></span>
+<span data-ttu-id="2957e-103">이미지를 추가할 수는 <xref:System.Windows.Forms.ImageList> 여러 가지 방법으로 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="2957e-103">You can add images to an <xref:System.Windows.Forms.ImageList> component several different ways.</span></span> <span data-ttu-id="2957e-104">연결 된 스마트 태그를 사용 하 여 이미지를 매우 신속 하 게 추가할 수는 <xref:System.Windows.Forms.ImageList>에 다른 여러 속성을 설정 하는 경우 또는 <xref:System.Windows.Forms.ImageList>, 속성 창 사용 하 여 이미지를 추가 하는 편리한 방법을 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2957e-104">You can add images very quickly by using the smart tag associated with the <xref:System.Windows.Forms.ImageList>, or if you are setting several other properties on the <xref:System.Windows.Forms.ImageList>, you may find it more convenient to add images with the Properties window.</span></span> <span data-ttu-id="2957e-105">코드를 사용 하 여 이미지를 추가할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2957e-105">You can also add images by using code.</span></span> <span data-ttu-id="2957e-106">코드를 사용 하 여 이미지를 추가 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: Windows Forms ImageList 구성 요소와 이미지 추가 또는 제거](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="2957e-106">For more information about how to add images with code, see [How to: Add or Remove Images with the Windows Forms ImageList Component](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).</span></span> <span data-ttu-id="2957e-107">채울 일반적으로 <xref:System.Windows.Forms.ImageList> 구성 요소를 이미지로 전에 컨트롤과 연결 되어 있지만이 필요 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="2957e-107">Typically you populate the <xref:System.Windows.Forms.ImageList> component with images before it is associated with a control, but this is not required.</span></span>  
   
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다.  설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기**를 선택합니다.  자세한 내용은 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ko-kr/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하십시오.  
+>  <span data-ttu-id="2957e-108">표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2957e-108">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="2957e-109">설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="2957e-109">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="2957e-110">자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="2957e-110">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### 속성 창을 사용하여 이미지를 추가하거나 제거하려면  
+### <a name="to-add-or-remove-images-by-using-the-properties-window"></a><span data-ttu-id="2957e-111">추가 하거나 속성 창을 사용 하 여 이미지를 제거 하려면</span><span class="sxs-lookup"><span data-stu-id="2957e-111">To add or remove images by using the Properties window</span></span>  
   
-1.  <xref:System.Windows.Forms.ImageList> 구성 요소를 선택하거나 폼에 이 구성 요소를 추가합니다.  
+1.  <span data-ttu-id="2957e-112">선택 된 <xref:System.Windows.Forms.ImageList> 구성 요소를 폼에 추가 하거나 합니다.</span><span class="sxs-lookup"><span data-stu-id="2957e-112">Select the <xref:System.Windows.Forms.ImageList> component, or add one to the form.</span></span>  
   
-2.  속성 창에서 <xref:System.Windows.Forms.ImageList.Images%2A> 속성 옆에 있는 줄임표 단추\(![VisualStudioEllipsesButton 스크린 샷](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\)를 클릭합니다.  
+2.  <span data-ttu-id="2957e-113">속성 창에서 줄임표 단추를 클릭 합니다. (![VisualStudioEllipsesButton 스크린 샷](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 옆에 <xref:System.Windows.Forms.ImageList.Images%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="2957e-113">In the Properties window, click the ellipsis button (![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) next to the <xref:System.Windows.Forms.ImageList.Images%2A> property.</span></span>  
   
-3.  **이미지 컬렉션 편집기**에서 **추가** 또는 **제거**를 클릭하여 목록에서 이미지를 추가하거나 제거합니다.  
+3.  <span data-ttu-id="2957e-114">에 **이미지 컬렉션 편집기**, 클릭 **추가** 또는 **제거** 를 추가 하거나 목록에서 이미지를 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="2957e-114">In the **Image Collection Editor**, click **Add** or **Remove** to add or remove images from the list.</span></span>  
   
-### 스마트 태그를 사용하여 이미지를 추가하거나 제거하려면  
+### <a name="to-add-or-remove-images-using-the-smart-tag"></a><span data-ttu-id="2957e-115">스마트 태그를 사용 하 여 이미지 추가 또는 제거 하려면</span><span class="sxs-lookup"><span data-stu-id="2957e-115">To add or remove images using the smart tag</span></span>  
   
-1.  <xref:System.Windows.Forms.ImageList> 구성 요소를 선택하거나 폼에 이 구성 요소를 추가합니다.  
+1.  <span data-ttu-id="2957e-116">선택 된 <xref:System.Windows.Forms.ImageList> 구성 요소를 폼에 추가 하거나 합니다.</span><span class="sxs-lookup"><span data-stu-id="2957e-116">Select the <xref:System.Windows.Forms.ImageList> component, or add one to the form.</span></span>  
   
-2.  스마트 태그 문자 모양\(![스마트 태그 문자 모양](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.png "VS\_WinFormSmtTagGlyph")\)을 클릭합니다.  
+2.  <span data-ttu-id="2957e-117">스마트 태그 문자 모양을 클릭 (![스마트 태그 문자 모양](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))</span><span class="sxs-lookup"><span data-stu-id="2957e-117">Click the smart tag glyph (![Smart Tag Glyph](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))</span></span>  
   
-3.  **ImageList 작업** 대화 상자에서 **이미지 선택**을 선택합니다.  
+3.  <span data-ttu-id="2957e-118">에 **ImageList 작업** 대화 상자에서 **이미지 선택**합니다.</span><span class="sxs-lookup"><span data-stu-id="2957e-118">In the **ImageList Tasks** dialog box, select **Choose Images**.</span></span>  
   
-4.  **이미지 컬렉션 편집기**에서 **추가** 또는 **제거**를 클릭하여 목록에서 이미지를 추가하거나 제거합니다.  
+4.  <span data-ttu-id="2957e-119">에 **이미지 컬렉션 편집기** 클릭 **추가** 또는 **제거** 를 추가 하거나 목록에서 이미지를 제거 합니다.</span><span class="sxs-lookup"><span data-stu-id="2957e-119">In the **Images Collection Editor** click **Add** or **Remove** to add or remove images from the list.</span></span>  
   
-## 참고 항목  
- [이미지, 비트맵 및 메타파일](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)   
- [연습: Windows Forms 컨트롤에서 스마트 태그를 사용하여 일반 작업 수행](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)   
- [ImageList 구성 요소](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="2957e-120">참고 항목</span><span class="sxs-lookup"><span data-stu-id="2957e-120">See Also</span></span>  
+ [<span data-ttu-id="2957e-121">이미지, 비트맵 및 메타파일</span><span class="sxs-lookup"><span data-stu-id="2957e-121">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [<span data-ttu-id="2957e-122">연습: Windows Forms 컨트롤에서 스마트 태그를 사용하여 일반 작업 수행</span><span class="sxs-lookup"><span data-stu-id="2957e-122">Walkthrough: Performing Common Tasks Using Smart Tags on Windows Forms Controls</span></span>](../../../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)  
+ [<span data-ttu-id="2957e-123">ImageList 구성 요소</span><span class="sxs-lookup"><span data-stu-id="2957e-123">ImageList Component</span></span>](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)

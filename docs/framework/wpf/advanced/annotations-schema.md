@@ -1,54 +1,48 @@
 ---
-title: "주석 스키마 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "문서, 주석"
-  - "Microsoft Annotations Framework"
-  - "XSD(XML 스키마 정의)"
+title: "주석 스키마"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XML schema definition (XSD)
+- Microsoft Annotations Framework [WPF]
+- documents [WPF], annotations
 ms.assetid: a893442b-e220-4603-bf6a-b01fefcb4b37
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4a68b8966e72339a6bf5929661cf89f7f8a0b07c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 주석 스키마
-이 항목에서는 사용자 주석 데이터를 저장하고 검색하기 위해 Microsoft Annotations Framework에서 사용되는 XSD\(XML 스키마 정의\)에 대해 설명합니다.  
+# <a name="annotations-schema"></a><span data-ttu-id="03b50-102">주석 스키마</span><span class="sxs-lookup"><span data-stu-id="03b50-102">Annotations Schema</span></span>
+<span data-ttu-id="03b50-103">이 항목에서는 사용자 주석 데이터를 저장하고 검색하기 위해 Microsoft Annotations Framework에서 사용하는 XSD(XML 스키마 정의)에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="03b50-103">This topic describes the XML schema definition (XSD) used by the Microsoft Annotations Framework to save and retrieve user annotation data.</span></span>  
   
- [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)]에서는 내부 표현의 주석 데이터를 XML 형식으로 [\-serialize](GTMT)합니다.  이 변환에 사용되는 XML 형식은 [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XSD 스키마로 설명됩니다.  스키마는 응용 프로그램 간에 주석 데이터를 교환하는 데 사용할 수 있는 구현에 독립적인 XML 형식을 정의합니다.  
+ <span data-ttu-id="03b50-104">[!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)]에서는 내부 표현의 주석 데이터를 XML 형식으로 직렬화합니다.</span><span class="sxs-lookup"><span data-stu-id="03b50-104">The [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] serializes annotation data from an internal representation to an XML format.</span></span>  <span data-ttu-id="03b50-105">이 변환에 사용되는 XML 형식은 [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XSD 스키마로 설명됩니다.</span><span class="sxs-lookup"><span data-stu-id="03b50-105">The XML format used for this conversion is described by the [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XSD Schema.</span></span>  <span data-ttu-id="03b50-106">스키마는 응용 프로그램 간에 주석 데이터를 교환하는 데 사용할 수 있는 구현에 독립인적 XML 형식을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="03b50-106">The schema defines the implementation-independent XML format that can be used to exchange annotation data between applications.</span></span>  
   
- [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XML 스키마 정의는 다음 두 개의 하위 스키마로 구성됩니다.  
+ <span data-ttu-id="03b50-107">[!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XML 스키마 정의는 다음 두 개의 하위 스키마로 구성됩니다.</span><span class="sxs-lookup"><span data-stu-id="03b50-107">The [!INCLUDE[TLA2#tla_caf](../../../../includes/tla2sharptla-caf-md.md)] XML schema definition consists of two subschemas</span></span>  
   
--   주석 XML 핵심 스키마\(핵심 스키마\)  
+-   <span data-ttu-id="03b50-108">주석 XML 코어 스키마(코어 스키마)</span><span class="sxs-lookup"><span data-stu-id="03b50-108">The Annotations XML Core Schema (Core Schema).</span></span>  
   
--   주석 XML 기본 스키마\(기본 스키마\)  
+-   <span data-ttu-id="03b50-109">주석 XML 기본 스키마(기본 스키마)</span><span class="sxs-lookup"><span data-stu-id="03b50-109">The Annotations XML Base Schema (Base Schema).</span></span>  
   
- 핵심 스키마는 <xref:System.Windows.Annotations.Annotation>의 기본 XML 구조를 정의합니다.  핵심 스키마에서 정의된 대부분의 XML 요소는 <xref:System.Windows.Annotations> 네임스페이스의 형식에 해당합니다.  핵심 스키마는 응용 프로그램이 자체 XML 데이터를 추가할 수 있는 세 개의 확장 지점을 노출합니다.  이러한 확장 지점에는 <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart> 및 "콘텐츠"가 포함됩니다.  콘텐츠 요소는 <xref:System.Xml.XmlElement> 목록의 형식으로 제공됩니다.  
+ <span data-ttu-id="03b50-110">기본 XML 구조를 정의 하는 Core 스키마는 <xref:System.Windows.Annotations.Annotation>합니다.</span><span class="sxs-lookup"><span data-stu-id="03b50-110">The Core Schema defines the primary XML structure of an <xref:System.Windows.Annotations.Annotation>.</span></span>  <span data-ttu-id="03b50-111">형식에 해당 하는 대부분의 핵심 스키마에 정의 된 XML 요소는 <xref:System.Windows.Annotations> 네임 스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="03b50-111">The majority of XML elements defined in the Core Schema correspond to types in the <xref:System.Windows.Annotations> namespace.</span></span>  <span data-ttu-id="03b50-112">코어 스키마는 응용 프로그램이 자체 XML 데이터를 추가할 수 있는 세 개의 확장 지점을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="03b50-112">The Core Schema exposes three extension points where applications can add their own XML data.</span></span>  <span data-ttu-id="03b50-113">이러한 확장 지점에 포함 된 <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, "콘텐츠" 및 합니다.</span><span class="sxs-lookup"><span data-stu-id="03b50-113">These extension points include the <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, and "Content".</span></span>  <span data-ttu-id="03b50-114">(의 형태로 제공 요소의 콘텐츠는 <xref:System.Xml.XmlElement> 목록입니다.)</span><span class="sxs-lookup"><span data-stu-id="03b50-114">(Content elements are provided in the form of an <xref:System.Xml.XmlElement> list.)</span></span>  
   
- 이 항목에서 설명하는 기본 스키마는 초기 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 릴리스에 포함된 <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart> 및 콘텐츠 형식에 대한 확장을 정의합니다.  
-  
- 이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
-  
-<a name="autoTopLevelSectionsOUTLINE0"></a>   
--   [주석 XML 핵심 스키마](#CoreSchema)  
-  
--   [주석 XML 기본 스키마](#BaseSchema)  
-  
--   [주석 XmlStreamStore에서 작성된 샘플 XML](#SampleXML)  
+ <span data-ttu-id="03b50-115">이 항목에서 설명 하는 기본 스키마에 대 한 확장을 정의 <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, 콘텐츠는 초기에 포함 된 형식 및 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 해제 합니다.</span><span class="sxs-lookup"><span data-stu-id="03b50-115">The Base Schema described in this topic defines the extensions for the <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, and Content types included with the initial [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] release.</span></span>  
   
 <a name="CoreSchema"></a>   
-## 주석 XML 핵심 스키마  
- 주석 XML 핵심 스키마는 <xref:System.Windows.Annotations.Annotation> 개체를 저장하는 데 사용되는 XML 구조를 정의합니다.  
+## <a name="annotations-xml-core-schema"></a><span data-ttu-id="03b50-116">주석 XML 코어 스키마</span><span class="sxs-lookup"><span data-stu-id="03b50-116">Annotations XML Core Schema</span></span>  
+ <span data-ttu-id="03b50-117">XML 주석 핵심 스키마를 저장 하는 데 사용 되는 XML 구조를 정의 <xref:System.Windows.Annotations.Annotation> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="03b50-117">The Annotations XML Core Schema defines the XML structure that is used to store <xref:System.Windows.Annotations.Annotation> objects.</span></span>  
   
-```  
+```xml  
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"  
             blockDefault="#all"  
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -197,10 +191,10 @@ caps.handback.revision: 13
 ```  
   
 <a name="BaseSchema"></a>   
-## 주석 XML 기본 스키마  
- 기본 스키마는 핵심 스키마에 정의된 세 개의 추상 요소인 <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart> 및 <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>에 대한 XML 구조를 정의합니다.  
+## <a name="annotations-xml-base-schema"></a><span data-ttu-id="03b50-118">주석 XML 기본 스키마</span><span class="sxs-lookup"><span data-stu-id="03b50-118">Annotations XML Base Schema</span></span>  
+ <span data-ttu-id="03b50-119">기본 스키마는 핵심 스키마에 정의 된 세 가지 추상 요소에 대 한 XML 구조를 정의 <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, 및 <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>합니다.</span><span class="sxs-lookup"><span data-stu-id="03b50-119">The Base Schema defines the XML structure for the three abstract elements defined in the Core Schema – <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, and <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.</span></span>  
   
-```  
+```xml  
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"  
      blockDefault="#all"  
      xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -508,10 +502,10 @@ caps.handback.revision: 13
 ```  
   
 <a name="SampleXML"></a>   
-## 주석 XmlStreamStore에서 생성된 샘플 XML  
- 다음 XML은 주석 <xref:System.Windows.Annotations.Storage.XmlStreamStore>의 출력과 세 개의 주석\(강조 표시, 텍스트 스티커 메모 및 잉크 스티커 메모\)이 포함된 샘플 파일의 구성을 보여 줍니다.  
+## <a name="sample-xml-produced-by-annotations-xmlstreamstore"></a><span data-ttu-id="03b50-120">주석 XmlStreamStore에서 생성된 샘플 XML</span><span class="sxs-lookup"><span data-stu-id="03b50-120">Sample XML Produced by Annotations XmlStreamStore</span></span>  
+ <span data-ttu-id="03b50-121">뒤에 나오는 XML 주석 출력이 나와 <xref:System.Windows.Annotations.Storage.XmlStreamStore> 세 개의 주석-는 강조 표시는 텍스트 스티커 메모 및 잉크 스티커 메모를 포함 하는 샘플 파일의 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="03b50-121">The XML that follows shows the output of an Annotations <xref:System.Windows.Annotations.Storage.XmlStreamStore> and the organization of a sample file that contains three annotations - a highlight, a text sticky-note, and an ink stick-note.</span></span>  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <anc:Annotations  
      xmlns:anc="http://schemas.microsoft.com/windows/annotations/2003/11/core"  
@@ -597,10 +591,10 @@ caps.handback.revision: 13
 </anc:Annotations>  
 ```  
   
-## 참고 항목  
- <xref:System.Windows.Annotations>   
- <xref:System.Windows.Annotations.Storage>   
- <xref:System.Windows.Annotations.Annotation>   
- <xref:System.Windows.Annotations.Storage.AnnotationStore>   
- <xref:System.Windows.Annotations.Storage.XmlStreamStore>   
- [주석 개요](../../../../docs/framework/wpf/advanced/annotations-overview.md)
+## <a name="see-also"></a><span data-ttu-id="03b50-122">참고 항목</span><span class="sxs-lookup"><span data-stu-id="03b50-122">See Also</span></span>  
+ <xref:System.Windows.Annotations>  
+ <xref:System.Windows.Annotations.Storage>  
+ <xref:System.Windows.Annotations.Annotation>  
+ <xref:System.Windows.Annotations.Storage.AnnotationStore>  
+ <xref:System.Windows.Annotations.Storage.XmlStreamStore>  
+ [<span data-ttu-id="03b50-123">주석 개요</span><span class="sxs-lookup"><span data-stu-id="03b50-123">Annotations Overview</span></span>](../../../../docs/framework/wpf/advanced/annotations-overview.md)

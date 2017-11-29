@@ -1,105 +1,109 @@
 ---
-title: "연습: 바인딩되지 않은 Windows Forms DataGridView 컨트롤 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "데이터[Windows Forms], 데이터 소스에 바인딩하지 않고 표시"
-  - "데이터[Windows Forms], 바인딩되지 않은"
-  - "DataGridView 컨트롤[Windows Forms], 데이터 소스에 바인딩하지 않고 데이터 표시"
-  - "DataGridView 컨트롤[Windows Forms], 바인딩되지 않은 데이터"
-  - "연습[Windows Forms], DataGridView 컨트롤"
+title: "연습: 바인딩되지 않은 Windows Forms DataGridView 컨트롤 만들기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- data [Windows Forms], displaying without binding to data source
+- DataGridView control [Windows Forms], unbound data
+- DataGridView control [Windows Forms], displaying data without binding to a data source
+- data [Windows Forms], unbound
+- walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 5a8d6afa-1b4b-4b24-8db8-501086ffdebe
-caps.latest.revision: 18
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e2c57cfbab4d3af6cebff96517383999ae5b73d5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 연습: 바인딩되지 않은 Windows Forms DataGridView 컨트롤 만들기
-데이터베이스로부터 만들어지지 않은 표 형식의 데이터를 표시해야 할 경우가 자주 있습니다.  예를 들어, 문자열로 된 2차원 배열의 내용을 보여 주려는 경우  <xref:System.Windows.Forms.DataGridView> 클래스를 사용하면 데이터 소스에 바인딩하지 않고도 데이터가 표시되는 방식을 쉽게 사용자 지정할 수 있습니다.  이 연습에서는 <xref:System.Windows.Forms.DataGridView> 컨트롤을 채우고 "바인딩되지 않은" 모드에서 행의 추가와 삭제를 관리하는 방법을 보여 줍니다.  기본적으로 사용자는 새 행을 추가할 수 있습니다.  행을 추가하지 못하게 하려면 <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> 속성을 `false`로 설정합니다.  
+# <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a><span data-ttu-id="5807e-102">연습: 바인딩되지 않은 Windows Forms DataGridView 컨트롤 만들기</span><span class="sxs-lookup"><span data-stu-id="5807e-102">Walkthrough: Creating an Unbound Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="5807e-103">자주 데이터베이스에서 사용 하지 않고도 표 형식 데이터를 표시 하려는 경우가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-103">You may frequently want to display tabular data that does not originate from a database.</span></span> <span data-ttu-id="5807e-104">예를 들어 다음 문자열 2 차원 배열의 콘텐츠를 표시 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-104">For example, you may want to show the contents of a two-dimensional array of strings.</span></span> <span data-ttu-id="5807e-105"><xref:System.Windows.Forms.DataGridView> 클래스는 데이터 소스에 바인딩하지 않고 데이터를 표시 하는 쉽고 고도로 사용자 지정 가능한 방법을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-105">The <xref:System.Windows.Forms.DataGridView> class provides an easy and highly customizable way to display data without binding to a data source.</span></span> <span data-ttu-id="5807e-106">이 연습에서는를 채우는 방법을 보여 줍니다.는 <xref:System.Windows.Forms.DataGridView> 제어 하 고 추가 "언바운드" 모드에서 행의 삭제를 관리 합니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-106">This walkthrough shows how to populate a <xref:System.Windows.Forms.DataGridView> control and manage the addition and deletion of rows in "unbound" mode.</span></span> <span data-ttu-id="5807e-107">사용자는 기본적으로 새 행을 추가할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-107">By default, the user can add new rows.</span></span> <span data-ttu-id="5807e-108">행 추가 방지 하려면 설정는 <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> 속성은 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-108">To prevent row addition, set the <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> property is `false`.</span></span>  
   
- 이 항목의 코드를 단일 목록으로 복사하려면 [방법: 바인딩되지 않은 Windows Forms DataGridView 컨트롤 만들기](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md)를 참조하십시오.  
+ <span data-ttu-id="5807e-109">단일 목록으로이 항목의 코드를 복사 하려면 참조 [하는 방법: 바인딩되지 않은 Windows Forms DataGridView 컨트롤 만들기](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-109">To copy the code in this topic as a single listing, see [How to: Create an Unbound Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md).</span></span>  
   
-## 폼 만들기  
+## <a name="creating-the-form"></a><span data-ttu-id="5807e-110">폼 만들기</span><span class="sxs-lookup"><span data-stu-id="5807e-110">Creating the Form</span></span>  
   
-#### 바인딩되지 않은 DataGridView 컨트롤을 사용하려면  
+#### <a name="to-use-an-unbound-datagridview-control"></a><span data-ttu-id="5807e-111">언바운드 DataGridView 컨트롤을 사용 하려면</span><span class="sxs-lookup"><span data-stu-id="5807e-111">To use an unbound DataGridView control</span></span>  
   
-1.  <xref:System.Windows.Forms.Form>에서 파생되고 다음 변수 선언과 `Main` 메서드가 포함된 클래스를 만듭니다.  
+1.  <span data-ttu-id="5807e-112">파생 되는 클래스를 만듭니다 <xref:System.Windows.Forms.Form> 다음 변수 선언을 포함 하 고 `Main` 메서드.</span><span class="sxs-lookup"><span data-stu-id="5807e-112">Create a class that derives from <xref:System.Windows.Forms.Form> and contains the following variable declarations and `Main` method.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#01](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#01](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#01)]  
     [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#02](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#02](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#02)]  
   
-2.  폼의 클래스 정의에 폼의 레이아웃을 설정하는 `SetupLayout` 메서드를 구현합니다.  
+2.  <span data-ttu-id="5807e-113">구현 된 `SetupLayout` 폼의 레이아웃을 설정 하려면 폼의 클래스 정의에서 메서드.</span><span class="sxs-lookup"><span data-stu-id="5807e-113">Implement a `SetupLayout` method in your form's class definition to set up the form's layout.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#20](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#20)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#20](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#20)]  
   
-3.  <xref:System.Windows.Forms.DataGridView> 열과 속성을 설정하는 `SetupDataGridView` 메서드를 만듭니다.  
+3.  <span data-ttu-id="5807e-114">만들기는 `SetupDataGridView` 를 설정 하는 메서드는 <xref:System.Windows.Forms.DataGridView> 열과 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-114">Create a `SetupDataGridView` method to set up the <xref:System.Windows.Forms.DataGridView> columns and properties.</span></span>  
   
-     이 메서드는 먼저 <xref:System.Windows.Forms.DataGridView> 컨트롤을 폼의 <xref:System.Windows.Forms.Control.Controls%2A> 컬렉션에 추가합니다.  그런 다음 <xref:System.Windows.Forms.DataGridView.ColumnCount%2A> 속성을 사용하여 표시할 열의 수를 설정합니다.  <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> 속성에서 반환된 <xref:System.Windows.Forms.DataGridViewCellStyle>의 <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A>, <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> 및 <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A> 속성을 설정하여 열 머리글의 기본 스타일을 설정할 수 있습니다.  
+     <span data-ttu-id="5807e-115">이 메서드는 먼저 추가 <xref:System.Windows.Forms.DataGridView> 컨트롤을 폼의 <xref:System.Windows.Forms.Control.Controls%2A> 컬렉션입니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-115">This method first adds the <xref:System.Windows.Forms.DataGridView> control to the form's <xref:System.Windows.Forms.Control.Controls%2A> collection.</span></span> <span data-ttu-id="5807e-116">다음으로 표시할 열 수를 사용 하 여 설정 되는 <xref:System.Windows.Forms.DataGridView.ColumnCount%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-116">Next, the number of columns to be displayed is set using the <xref:System.Windows.Forms.DataGridView.ColumnCount%2A> property.</span></span> <span data-ttu-id="5807e-117">열 머리글에 대 한 기본 스타일을 설정 하 여 설정 되어는 <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A>, <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>, 및 <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A> 의 속성은 <xref:System.Windows.Forms.DataGridViewCellStyle> 에서 반환 되는 <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> 속성.</span><span class="sxs-lookup"><span data-stu-id="5807e-117">The default style for the column headers is set by setting the <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A>, <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>, and <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A> properties of the <xref:System.Windows.Forms.DataGridViewCellStyle> returned by the <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> property.</span></span>  
   
-     레이아웃 속성과 모양 속성이 설정된 다음 열 이름이 할당됩니다.  이 메서드가 종료되면 <xref:System.Windows.Forms.DataGridView> 컨트롤을 채울 수 있습니다.  
+     <span data-ttu-id="5807e-118">레이아웃 및 모양 속성을 설정 하 고 열 이름이 할당 되는 다음 합니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-118">Layout and appearance properties are set, and then the column names are assigned.</span></span> <span data-ttu-id="5807e-119">이 메서드 종료 될 때는 <xref:System.Windows.Forms.DataGridView> 컨트롤은을 채울 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-119">When this method exits, the <xref:System.Windows.Forms.DataGridView> control is ready to be populated.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#30](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#30)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#30](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#30)]  
   
-4.  행을 <xref:System.Windows.Forms.DataGridView> 컨트롤에 추가하는 `PopulateDataGridView` 메서드를 만듭니다.  
+4.  <span data-ttu-id="5807e-120">만들기는 `PopulateDataGridView` 에 행을 추가 하는 메서드는 <xref:System.Windows.Forms.DataGridView> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-120">Create a `PopulateDataGridView` method to add rows to the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
-     각 행은 노래와 해당 노래에 관련된 정보를 나타냅니다.  
+     <span data-ttu-id="5807e-121">각 행 노래 및 관련된 정보를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-121">Each row represents a song and its associated information.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#40](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#40)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#40](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#40)]  
   
-5.  적절한 유틸리티 메서드를 사용하여 이벤트 처리기를 연결할 수 있습니다.  
+5.  <span data-ttu-id="5807e-122">위치에서 유틸리티 메서드를 통해 이벤트 처리기를 연결할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-122">With the utility methods in place, you can attach event handlers.</span></span>  
   
-     **추가** 및 **삭제** 단추의 <xref:System.Windows.Forms.Control.Click> 이벤트, 폼의 <xref:System.Windows.Forms.Form.Load> 이벤트 및 <xref:System.Windows.Forms.DataGridView> 컨트롤의 <xref:System.Windows.Forms.DataGridView.CellFormatting> 이벤트를 처리합니다.  
+     <span data-ttu-id="5807e-123">처리 합니다는 **추가** 및 **삭제** 단추의 <xref:System.Windows.Forms.Control.Click> 이벤트, 폼의 <xref:System.Windows.Forms.Form.Load> 이벤트 및 <xref:System.Windows.Forms.DataGridView> 컨트롤의 <xref:System.Windows.Forms.DataGridView.CellFormatting> 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-123">You will handle the **Add** and **Delete** buttons' <xref:System.Windows.Forms.Control.Click> events, the form's <xref:System.Windows.Forms.Form.Load> event, and the <xref:System.Windows.Forms.DataGridView> control's <xref:System.Windows.Forms.DataGridView.CellFormatting> event.</span></span>  
   
-     **추가** 단추의 <xref:System.Windows.Forms.Control.Click> 이벤트가 발생하면 새로운 빈 행이 <xref:System.Windows.Forms.DataGridView>에 추가됩니다.  
+     <span data-ttu-id="5807e-124">때는 **추가** 단추의 <xref:System.Windows.Forms.Control.Click> 이벤트가 새로운 빈 행에 추가 되는 <xref:System.Windows.Forms.DataGridView>합니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-124">When the **Add** button's <xref:System.Windows.Forms.Control.Click> event is raised, a new, empty row is added to the <xref:System.Windows.Forms.DataGridView>.</span></span>  
   
-     **삭제** 단추의 <xref:System.Windows.Forms.Control.Click> 이벤트가 발생하면 선택한 행이 삭제됩니다. 단, 해당 행이 사용자가 새 행을 추가하는 데 사용하는 새 레코드를 위한 행이 아니어야 합니다.  이 행은 항상 <xref:System.Windows.Forms.DataGridView> 컨트롤의 마지막 행입니다.  
+     <span data-ttu-id="5807e-125">경우는 **삭제** 단추의 <xref:System.Windows.Forms.Control.Click> 이벤트는, 선택한 행이 삭제, 수 있는 새 레코드에 대 한 행이 새 행을 추가 하지 않은 경우.</span><span class="sxs-lookup"><span data-stu-id="5807e-125">When the **Delete** button's <xref:System.Windows.Forms.Control.Click> event is raised, the selected row is deleted, unless it is the row for new records, which enables the user add new rows.</span></span> <span data-ttu-id="5807e-126">이 행은 항상 마지막 행에는 <xref:System.Windows.Forms.DataGridView> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-126">This row is always the last row in the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
-     폼의 <xref:System.Windows.Forms.Form.Load> 이벤트가 발생하면 `SetupLayout`, `SetupDataGridView` 및 `PopulateDataGridView` 유틸리티 메서드가 호출됩니다.  
+     <span data-ttu-id="5807e-127">때 폼의 <xref:System.Windows.Forms.Form.Load> 이벤트가 `SetupLayout`, `SetupDataGridView`, 및 `PopulateDataGridView` 유틸리티 메서드가 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-127">When the form's <xref:System.Windows.Forms.Form.Load> event is raised, the `SetupLayout`, `SetupDataGridView`, and `PopulateDataGridView` utility methods are called.</span></span>  
   
-     <xref:System.Windows.Forms.DataGridView.CellFormatting> 이벤트가 발생하면 `Date` 열의 각 셀은 자세한 날짜 형식으로 지정됩니다. 이 경우 셀 값을 구문 분석할 수 있어야 합니다.  
+     <span data-ttu-id="5807e-128">경우는 <xref:System.Windows.Forms.DataGridView.CellFormatting> 이벤트는 각 셀에는 `Date` 열 형식으로 지정 된 자세한 날짜 셀의 값을 구문 분석할 수 없는 경우가 아니면 합니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-128">When the <xref:System.Windows.Forms.DataGridView.CellFormatting> event is raised, each cell in the `Date` column is formatted as a long date, unless the cell's value cannot be parsed.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#10)]  
   
-## 응용 프로그램 테스트  
- 이제 폼을 테스트하여 예상한 대로 동작하는지 확인할 수 있습니다.  
+## <a name="testing-the-application"></a><span data-ttu-id="5807e-129">응용 프로그램 테스트</span><span class="sxs-lookup"><span data-stu-id="5807e-129">Testing the Application</span></span>  
+ <span data-ttu-id="5807e-130">이제 예상 대로 동작 되도록 폼을 테스트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-130">You can now test the form to make sure it behaves as expected.</span></span>  
   
-#### 폼을 테스트하려면  
+#### <a name="to-test-the-form"></a><span data-ttu-id="5807e-131">양식을 테스트 하려면</span><span class="sxs-lookup"><span data-stu-id="5807e-131">To test the form</span></span>  
   
--   F5 키를 눌러 응용 프로그램을 실행합니다.  
+-   <span data-ttu-id="5807e-132">F5 키를 눌러 응용 프로그램을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-132">Press F5 to run the application.</span></span>  
   
-     `PopulateDataGridView`에 나열된 노래를 표시하는 <xref:System.Windows.Forms.DataGridView> 컨트롤이 표시됩니다.  **행 추가** 단추를 사용하여 새 행을 추가할 수 있으며 **행 삭제** 단추를 사용하여 선택한 행을 삭제할 수 있습니다.  바인딩되지 않은 <xref:System.Windows.Forms.DataGridView> 컨트롤은 데이터 저장소이며, 이 컨트롤의 데이터는 <xref:System.Data.DataSet> 또는 배열과 같은 외부 소스에 대해 독립적입니다.  
+     <span data-ttu-id="5807e-133">표시 됩니다는 <xref:System.Windows.Forms.DataGridView> 에 나열 된 노래를 표시 하는 컨트롤 `PopulateDataGridView`합니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-133">You will see a <xref:System.Windows.Forms.DataGridView> control that displays the songs listed in `PopulateDataGridView`.</span></span> <span data-ttu-id="5807e-134">새 행을 추가할 수는 **행 추가** 단추 및 있습니다와 선택 된 행을 삭제할 수는 **행 삭제** 단추입니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-134">You can add new rows with the **Add Row** button, and you can delete selected rows with the **Delete Row** button.</span></span> <span data-ttu-id="5807e-135">바인딩되지 않은 <xref:System.Windows.Forms.DataGridView> 컨트롤의 데이터 저장소 및과 같은 해당 데이터를 외부 소스에 관계 없이 <xref:System.Data.DataSet> 또는 배열입니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-135">The unbound <xref:System.Windows.Forms.DataGridView> control is the data store, and its data is independent of any external source, such as a <xref:System.Data.DataSet> or an array.</span></span>  
   
-## 다음 단계  
- 이 응용 프로그램은 <xref:System.Windows.Forms.DataGridView> 컨트롤의 기능에 대한 기본적인 이해를 제공합니다.  다음과 같은 여러 가지 방법으로 <xref:System.Windows.Forms.DataGridView> 컨트롤의 모양과 동작을 사용자 지정할 수 있습니다.  
+## <a name="next-steps"></a><span data-ttu-id="5807e-136">다음 단계</span><span class="sxs-lookup"><span data-stu-id="5807e-136">Next Steps</span></span>  
+ <span data-ttu-id="5807e-137">이 응용 프로그램에서는 기본적으로 이해는 <xref:System.Windows.Forms.DataGridView> 컨트롤의 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-137">This application gives you a basic understanding of the <xref:System.Windows.Forms.DataGridView> control's capabilities.</span></span> <span data-ttu-id="5807e-138">모양 및 동작을 사용자 지정할 수 있습니다는 <xref:System.Windows.Forms.DataGridView> 여러 가지 방법으로 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-138">You can customize the appearance and behavior of the <xref:System.Windows.Forms.DataGridView> control in several ways:</span></span>  
   
--   테두리와 머리글 스타일을 변경합니다.  자세한 내용은 [방법: Windows Forms DataGridView 컨트롤의 테두리 및 모눈선 스타일 변경](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md)을 참조하십시오.  
+-   <span data-ttu-id="5807e-139">테두리 및 머리글 스타일을 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-139">Change border and header styles.</span></span> <span data-ttu-id="5807e-140">자세한 내용은 참조 [하는 방법: 테두리 및 눈금선 스타일 Windows Forms DataGridView 컨트롤에서 변경](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-140">For more information, see [How to: Change the Border and Gridline Styles in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/change-the-border-and-gridline-styles-in-the-datagrid.md).</span></span>  
   
--   <xref:System.Windows.Forms.DataGridView> 컨트롤에 대한 사용자 입력을 활성화하거나 제한합니다.  자세한 내용은 [방법: Windows Forms DataGridView 컨트롤에서 행 추가 및 삭제 금지](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md) 및 [방법: Windows Forms DataGridView 컨트롤에서 열을 읽기 전용으로 설정](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)을 참조하십시오.  
+-   <span data-ttu-id="5807e-141">사용 하거나 사용자 입력을 제한 된 <xref:System.Windows.Forms.DataGridView> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-141">Enable or restrict user input to the <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="5807e-142">자세한 내용은 참조 [하는 방법: 행 추가 및 삭제 금지 Windows Forms DataGridView 컨트롤에서](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md), 및 [하는 방법: 열을 읽기 전용 Windows Forms DataGridView 컨트롤에서](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-142">For more information, see [How to: Prevent Row Addition and Deletion in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md), and [How to: Make Columns Read-Only in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md).</span></span>  
   
--   사용자 입력에 데이터베이스 관련 오류가 있는지 확인합니다.  자세한 내용은 [연습: Windows Forms DataGridView 컨트롤에서 데이터 입력 중에 발생하는 오류 처리](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md)를 참조하십시오.  
+-   <span data-ttu-id="5807e-143">데이터베이스 관련 오류에 대 한 사용자 입력을 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-143">Check user input for database-related errors.</span></span> <span data-ttu-id="5807e-144">자세한 내용은 참조 [연습: Windows Forms DataGridView 컨트롤에서 데이터 입력 중에 발생 하는 오류 처리](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-144">For more information, see [Walkthrough: Handling Errors that Occur During Data Entry in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/handling-errors-that-occur-during-data-entry-in-the-datagrid.md).</span></span>  
   
--   가상 모드를 사용하여 대용량 데이터 집합을 처리합니다.  자세한 내용은 [연습: Windows Forms DataGridView 컨트롤에서 가상 모드 구현](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)을 참조하십시오.  
+-   <span data-ttu-id="5807e-145">가상 모드를 사용 하 여 매우 큰 데이터 집합을 처리 합니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-145">Handle very large data sets using virtual mode.</span></span> <span data-ttu-id="5807e-146">자세한 내용은 참조 [연습: Windows Forms DataGridView 컨트롤에서 가상 모드 구현](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-146">For more information, see [Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md).</span></span>  
   
--   셀의 모양을 사용자 지정합니다.  자세한 내용은 [방법: Windows Forms DataGridView 컨트롤에서 셀 모양 사용자 지정](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md) 및 [방법: Windows Forms DataGridView 컨트롤에 기본 셀 스타일 설정](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)을 참조하십시오.  
+-   <span data-ttu-id="5807e-147">셀의 모양을 사용자 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-147">Customize the appearance of cells.</span></span> <span data-ttu-id="5807e-148">자세한 내용은 참조 [하는 방법: Windows Forms DataGridView 컨트롤에서 셀 모양 사용자 지정](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md) 및 [하는 방법: Windows Forms DataGridView 컨트롤에 대 한 기본 셀 스타일 설정](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="5807e-148">For more information, see [How to: Customize the Appearance of Cells in the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md) and [How to: Set Default Cell Styles for the Windows Forms DataGridView Control](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Forms.DataGridView>   
- [Windows Forms DataGridView 컨트롤에서 데이터 표시](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)   
- [방법: 바인딩되지 않은 Windows Forms DataGridView 컨트롤 만들기](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md)   
- [Windows Forms DataGridView 컨트롤의 데이터 디스플레이 모드](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="5807e-149">참고 항목</span><span class="sxs-lookup"><span data-stu-id="5807e-149">See Also</span></span>  
+ <xref:System.Windows.Forms.DataGridView>  
+ [<span data-ttu-id="5807e-150">Windows Forms DataGridView 컨트롤에서 데이터 표시</span><span class="sxs-lookup"><span data-stu-id="5807e-150">Displaying Data in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="5807e-151">방법: 바인딩되지 않은 Windows Forms DataGridView 컨트롤 만들기</span><span class="sxs-lookup"><span data-stu-id="5807e-151">How to: Create an Unbound Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md)  
+ [<span data-ttu-id="5807e-152">Windows Forms DataGridView 컨트롤의 데이터 디스플레이 모드</span><span class="sxs-lookup"><span data-stu-id="5807e-152">Data Display Modes in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)

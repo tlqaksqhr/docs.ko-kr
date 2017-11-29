@@ -1,136 +1,138 @@
 ---
-title: "WPF 응용 프로그램 배포(WPF) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "배포[WPF], 응용 프로그램"
-  - "WPF 응용 프로그램, 배포"
+title: "WPF 응용 프로그램 배포(WPF)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- WPF applications [WPF], deployment
+- deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-caps.latest.revision: 27
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 26
+caps.latest.revision: "27"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 860549d444bcef3a25af753923955b2e3e1a3677
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# WPF 응용 프로그램 배포(WPF)
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 응용 프로그램을 빌드한 후 배포해야 합니다.  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 및 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]에는 여러 배포 기술이 포함되어 있습니다.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 배포하는 데 사용되는 배포 기술은 응용 프로그램의 종류에 따라 다릅니다.  이 항목에서는 각 배포 기술에 대해 간략하게 살펴보고 각 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램 종류의 배포 요구 사항에 이러한 기술을 결합하는 방법에 대해 설명합니다.  
+# <a name="deploying-a-wpf-application-wpf"></a><span data-ttu-id="fc73e-102">WPF 응용 프로그램 배포(WPF)</span><span class="sxs-lookup"><span data-stu-id="fc73e-102">Deploying a WPF Application (WPF)</span></span>
+<span data-ttu-id="fc73e-103">[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] 응용 프로그램을 만들었으면 배포해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-103">After [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] applications are built, they need to be deployed.</span></span> [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]<span data-ttu-id="fc73e-104"> 및 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]에서는 여러 가지 배포 기술을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-104"> and the [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] include several deployment technologies.</span></span> <span data-ttu-id="fc73e-105">[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 배포하는 데 사용되는 배포 기술은 응용 프로그램 종류에 따라 달라집니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-105">The deployment technology that is used to deploy a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application depends on the application type.</span></span> <span data-ttu-id="fc73e-106">이 항목에서는 각 배포 기술과 해당 기술이 각 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램 종류의 배포 요구 사항과 함께 사용되는 방법에 대해 간략하게 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-106">This topic provides a brief overview of each deployment technology, and how they are used in conjunction with the deployment requirements of each [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application type.</span></span>  
   
    
-  
 <a name="Deployment_Technologies"></a>   
-## 배포 기술  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 및 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]에는 다음과 같은 여러 배포 기술이 포함되어 있습니다.  
+## <a name="deployment-technologies"></a><span data-ttu-id="fc73e-107">배포 기술</span><span class="sxs-lookup"><span data-stu-id="fc73e-107">Deployment Technologies</span></span>  
+ [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]<span data-ttu-id="fc73e-108"> 및 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]에서는 다음을 포함하여 여러 가지 배포 기술을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-108"> and the [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] include several deployment technologies, including:</span></span>  
   
--   XCopy 배포  
+-   <span data-ttu-id="fc73e-109">XCopy 배포.</span><span class="sxs-lookup"><span data-stu-id="fc73e-109">XCopy deployment.</span></span>  
   
--   [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 배포  
+-   [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]<span data-ttu-id="fc73e-110"> 배포.</span><span class="sxs-lookup"><span data-stu-id="fc73e-110"> deployment.</span></span>  
   
--   [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] 배포  
+-   [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]<span data-ttu-id="fc73e-111"> 배포.</span><span class="sxs-lookup"><span data-stu-id="fc73e-111"> deployment.</span></span>  
   
 <a name="XCopy_Deployment"></a>   
-### XCopy 배포  
- XCopy 배포는 XCopy 명령줄 프로그램을 사용하여 한 위치에서 다른 위치로 파일을 복사하는 것을 말합니다.  XCopy 배포는 다음과 같은 경우에 적합합니다.  
+### <a name="xcopy-deployment"></a><span data-ttu-id="fc73e-112">XCopy 배포</span><span class="sxs-lookup"><span data-stu-id="fc73e-112">XCopy Deployment</span></span>  
+ <span data-ttu-id="fc73e-113">XCopy 배포는 XCopy 명령줄 프로그램을 사용하여 한 위치에서 다른 위치로 파일을 복사하는 방법을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-113">XCopy deployment refers to the use of the XCopy command-line program to copy files from one location to another.</span></span> <span data-ttu-id="fc73e-114">XCopy 배포는 다음과 같은 경우에 적합합니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-114">XCopy deployment is suitable under the following circumstances:</span></span>  
   
--   응용 프로그램이 독립적인 경우.  클라이언트를 실행하기 위해 업데이트할 필요는 없습니다.  
+-   <span data-ttu-id="fc73e-115">응용 프로그램이 독립적이며,</span><span class="sxs-lookup"><span data-stu-id="fc73e-115">The application is self-contained.</span></span> <span data-ttu-id="fc73e-116">실행하기 위해 클라이언트를 업데이트할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-116">It does not need to update the client to run.</span></span>  
   
--   응용 프로그램 파일을 한 위치에서 다른 위치로 이동해야 하는 경우\(예: 파일을 빌드 위치\(로컬 디스크, [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] 파일 공유 등\)에서 게시 위치\(웹 사이트, [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] 파일 공유 등\)로 이동해야 하는 경우\)  
+-   <span data-ttu-id="fc73e-117">빌드 위치(로컬 디스크, [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] 파일 공유 등)에서 게시 위치(웹 사이트, [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] 파일 공유 등)로 이동하는 경우처럼 한 위치에서 다른 위치로 응용 프로그램 파일을 이동해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-117">Application files must be moved from one location to another, such as from a build location (local disk, [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] file share, and so on) to a publish location (Web site, [!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] file share, and so on).</span></span>  
   
--   응용 프로그램에 셸 통합이 필요하지 않은 경우\(시작 메뉴 바로 가기, 바탕 화면 아이콘 등\)  
+-   <span data-ttu-id="fc73e-118">응용 프로그램에 셸 통합(시작 메뉴 바로 가기, 데스크톱 아이콘 등)이 필요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-118">The application does not require shell integration (Start menu shortcut, desktop icon, and so on).</span></span>  
   
- XCopy는 단순한 배포 시나리오에 적합하며 기능이 제한되므로 보다 복잡한 배포 기능이 필요한 경우에는 적합하지 않습니다.  특히, XCopy를 자주 사용할 경우 배포를 강력한 방식으로 관리하기 위해 스크립트를 만들고, 실행하고, 유지 관리하는 데 따르는 오버헤드가 발생합니다.  또한 XCopy는 버전 관리, 제거 또는 롤백을 지원하지 않습니다.  
+ <span data-ttu-id="fc73e-119">XCopy는 간단한 배포 시나리오에 적합하지만 좀더 복잡한 배포 기능이 필요한 경우 제한됩니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-119">Although XCopy is suitable for simple deployment scenarios, it is limited when more complex deployment capabilities are required.</span></span> <span data-ttu-id="fc73e-120">특히 XCopy를 사용하면 강력한 방식으로 배포를 관리하기 위한 스크립트를 작성, 실행 및 유지 관리하는 오버헤드가 자주 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-120">In particular, using XCopy often incurs the overhead for creating, executing, and maintaining scripts for managing deployment in a robust way.</span></span> <span data-ttu-id="fc73e-121">또한 XCopy는 버전 관리, 제거 또는 롤백을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-121">Furthermore, XCopy does not support versioning, uninstallation, or rollback.</span></span>  
   
 <a name="Windows_Installer"></a>   
-### Windows Installer  
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]를 사용하면 클라이언트에 배포하고 실행하기가 간편한 독립 실행 파일로 응용 프로그램을 패키징할 수 있습니다.  또한 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]가 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]와 함께 설치되므로 바탕 화면, 시작 메뉴 및 프로그램 제어판과 통합할 수 있습니다.  
+### <a name="windows-installer"></a><span data-ttu-id="fc73e-122">Windows Installer</span><span class="sxs-lookup"><span data-stu-id="fc73e-122">Windows Installer</span></span>  
+ [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]<span data-ttu-id="fc73e-123">를 사용하면 클라이언트에 쉽게 배포하고 실행할 수 있는 자체 포함 실행 파일로 응용 프로그램을 패키지할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-123"> allows applications to be packaged as self-contained executables that can be easily distributed to clients and run.</span></span> <span data-ttu-id="fc73e-124">또한 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]는 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]와 함께 설치되며 데스크톱, 시작 메뉴 및 프로그램 제어판과의 통합을 가능하게 합니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-124">Furthermore, [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] is installed with [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] and enables integration with the desktop, the Start menu, and the Programs control panel.</span></span>  
   
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]를 사용하면 응용 프로그램의 설치와 제거가 간편하지만 버전 관리 측면에서 볼 때 설치된 응용 프로그램을 최신 상태로 유지하는 기능을 제공하지 않는 단점이 있습니다.  
+ [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]<span data-ttu-id="fc73e-125">에서는 응용 프로그램의 설치 및 제거가 간단하지만 설치된 응용 프로그램이 버전 관리 관점에서 최신 버전으로 유지되도록 보장하는 기능은 제공하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-125"> simplifies the installation and uninstallation of applications, but it does not provide facilities for ensuring that installed applications are kept up-to-date from a versioning standpoint.</span></span>  
   
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]에 대한 자세한 내용은 [Windows Installer Deployment](http://msdn.microsoft.com/ko-kr/121be21b-b916-43e2-8f10-8b080516d2a0)를 참조하십시오.  
+ <span data-ttu-id="fc73e-126">[!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]에 대한 자세한 내용은 [Windows Installer 배포](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="fc73e-126">For more information about [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)], see [Windows Installer Deployment](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0).</span></span>  
   
 <a name="ClickOnce_Deployment"></a>   
-### ClickOnce 배포  
- [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]를 사용하면 웹 응용 프로그램이 아닌 응용 프로그램을 웹 스타일로 배포할 수 있습니다. 응용 프로그램은 웹 또는 파일 서버에 게시되어 해당 서버에서 배포됩니다.  [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]는 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]에서 설치된 응용 프로그램이 제공하는 기능을 모두 지원하지는 않으며 다음과 같은 일부 기능 집합을 지원합니다.  
+### <a name="clickonce-deployment"></a><span data-ttu-id="fc73e-127">ClickOnce 배포</span><span class="sxs-lookup"><span data-stu-id="fc73e-127">ClickOnce Deployment</span></span>  
+ [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]<span data-ttu-id="fc73e-128">에서는 비 웹 응용 프로그램에 대해 웹 스타일 응용 프로그램 배포를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-128"> enables Web-style application deployment for non-Web applications.</span></span> <span data-ttu-id="fc73e-129">응용 프로그램이 웹 또는 파일 서버에서 게시되고 배포됩니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-129">Applications are published to and deployed from Web or file servers.</span></span> <span data-ttu-id="fc73e-130">[!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]는 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] 설치 응용 프로그램처럼 전체 범위의 클라이언트 기능을 지원하지는 않지만 다음을 포함하는 하위 기능은 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-130">Although [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] does not support the full range of client features that [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]-installed applications do, it does support a subset that includes the following:</span></span>  
   
--   시작 메뉴 및 프로그램 제어판과의 통합  
+-   <span data-ttu-id="fc73e-131">시작 메뉴 및 프로그램 제어판과의 통합.</span><span class="sxs-lookup"><span data-stu-id="fc73e-131">Integration with the Start menu and Programs control panel.</span></span>  
   
--   버전 관리, 롤백, 제거  
+-   <span data-ttu-id="fc73e-132">버전 관리, 롤백 및 제거.</span><span class="sxs-lookup"><span data-stu-id="fc73e-132">Versioning, rollback, and uninstallation.</span></span>  
   
--   응용 프로그램을 항상 배포 위치에서 시작하는 온라인 설치 모드  
+-   <span data-ttu-id="fc73e-133">항상 배포 위치에서 응용 프로그램을 시작하는 온라인 설치 모드.</span><span class="sxs-lookup"><span data-stu-id="fc73e-133">Online install mode, which always launches an application from the deployment location.</span></span>  
   
--   새 버전 릴리스 시 자동 업데이트  
+-   <span data-ttu-id="fc73e-134">새 버전이 릴리스되는 경우 자동 업데이트.</span><span class="sxs-lookup"><span data-stu-id="fc73e-134">Automatic updating when new versions are released.</span></span>  
   
--   파일 확장명 등록  
+-   <span data-ttu-id="fc73e-135">파일 확장명 등록.</span><span class="sxs-lookup"><span data-stu-id="fc73e-135">Registration of file extensions.</span></span>  
   
- [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]에 대한 자세한 내용은 [ClickOnce 보안 및 배포](../Topic/ClickOnce%20Security%20and%20Deployment.md)를 참조하십시오.  
+ <span data-ttu-id="fc73e-136">[!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]에 대한 자세한 내용은 [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="fc73e-136">For more information about [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)], see [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment).</span></span>  
   
 <a name="Deploying_WPF_Applications"></a>   
-## WPF 응용 프로그램 배포  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램에 사용되는 배포 옵션은 응용 프로그램의 종류에 따라 다릅니다.  배포 관점에서 볼 때 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]에는 세 가지 중요한 응용 프로그램 유형이 있습니다.  
+## <a name="deploying-wpf-applications"></a><span data-ttu-id="fc73e-137">WPF 응용 프로그램 배포</span><span class="sxs-lookup"><span data-stu-id="fc73e-137">Deploying WPF Applications</span></span>  
+ <span data-ttu-id="fc73e-138">[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램에 대한 배포 옵션은 응용 프로그램 종류에 따라 달라집니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-138">The deployment options for a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application depend on the type of application.</span></span> <span data-ttu-id="fc73e-139">배포 측면에서 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]는 세 가지 중요한 응용 프로그램 종류를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-139">From a deployment perspective, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] has three significant application types:</span></span>  
   
--   독립 실행형 응용 프로그램  
+-   <span data-ttu-id="fc73e-140">독립 실행형 응용 프로그램.</span><span class="sxs-lookup"><span data-stu-id="fc73e-140">Standalone applications.</span></span>  
   
--   태그 전용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 응용 프로그램  
+-   <span data-ttu-id="fc73e-141">마크업 전용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 응용 프로그램.</span><span class="sxs-lookup"><span data-stu-id="fc73e-141">Markup-only [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] applications.</span></span>  
   
--   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
+-   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]<span data-ttu-id="fc73e-142">.</span><span class="sxs-lookup"><span data-stu-id="fc73e-142">.</span></span>  
   
 <a name="Deploying_Standalone_Applications"></a>   
-### 독립 실행형 응용 프로그램 배포  
- 독립 실행형 응용 프로그램은 [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] 또는 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]를 사용하여 배포합니다.  어떤 방법을 사용하든 응용 프로그램을 실행하려면 응용 프로그램에 완전 신뢰를 부여해야 합니다.  [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]를 사용하여 배포한 독립 실행형 응용 프로그램에는 자동으로 완전 신뢰가 부여되지만  [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]를 사용하여 배포한 독립 실행형 응용 프로그램에는 자동으로 완전 신뢰가 부여되지 않습니다.  대신 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]는 독립 실행형 응용 프로그램을 설치하기에 앞서 사용자의 동의를 필요로 하는 보안 경고 대화 상자를 표시합니다.  동의하면 독립 실행형 응용 프로그램이 설치되고 완전 신뢰가 부여됩니다.  동의하지 않으면 독립 실행형 응용 프로그램이 설치되지 않습니다.  
+### <a name="deploying-standalone-applications"></a><span data-ttu-id="fc73e-143">독립 실행형 응용 프로그램 배포</span><span class="sxs-lookup"><span data-stu-id="fc73e-143">Deploying Standalone Applications</span></span>  
+ <span data-ttu-id="fc73e-144">독립 실행형 응용 프로그램은 [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] 또는 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]를 사용하여 배포됩니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-144">Standalone applications are deployed using either [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] or [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)].</span></span> <span data-ttu-id="fc73e-145">두 방법 모두 독립 실행형 응용 프로그램을 실행하려면 완전 신뢰가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-145">Either way, standalone applications require full trust to run.</span></span> <span data-ttu-id="fc73e-146">완전 신뢰는 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]를 사용하여 배포되는 독립 실행형 응용 프로그램에 자동으로 부여됩니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-146">Full trust is automatically granted to standalone applications that are deployed using [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)].</span></span> <span data-ttu-id="fc73e-147">[!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]를 사용하여 배포되는 독립 실행형 응용 프로그램에는 완전 신뢰가 자동으로 부여되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-147">Standalone applications that are deployed using [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] are not automatically granted full trust.</span></span> <span data-ttu-id="fc73e-148">대신 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]는 사용자가 동의해야 독립 실행형 응용 프로그램이 설치되는 보안 경고 대화 상자를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-148">Instead, [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] displays a security warning dialog that users must accept before a standalone application is installed.</span></span> <span data-ttu-id="fc73e-149">동의하면 독립 실행형 응용 프로그램이 설치되고 완전 신뢰가 부여됩니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-149">If accepted, the standalone application is installed and granted full trust.</span></span> <span data-ttu-id="fc73e-150">동의하지 않으면 독립 실행형 응용 프로그램이 설치되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-150">If not, the standalone application is not installed.</span></span>  
   
 <a name="Deploying_Markup_Only_XAML_Applications"></a>   
-### 태그 전용 XAML 응용 프로그램 배포  
- 태그 전용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지는 [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] 페이지와 같이 일반적으로 웹 서버에 게시되고 [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)]를 사용하여 볼 수 있습니다.  태그 전용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지는 인터넷 영역 권한 집합에 정의된 제한 하에 부분 신뢰 보안 샌드박스 내에서 실행됩니다.  이는 [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] 기반 웹 응용 프로그램에도 동일한 보안 샌드박스를 제공합니다.  
+### <a name="deploying-markup-only-xaml-applications"></a><span data-ttu-id="fc73e-151">마크업 전용 XAML 응용 프로그램 배포</span><span class="sxs-lookup"><span data-stu-id="fc73e-151">Deploying Markup-Only XAML Applications</span></span>  
+ <span data-ttu-id="fc73e-152">마크업 전용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지는 일반적으로 [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] 페이지 같은 웹 서버에 게시되며 [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)]를 사용하여 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-152">Markup-only [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pages are usually published to Web servers, like [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] pages, and can be viewed using [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)].</span></span> <span data-ttu-id="fc73e-153">마크업 전용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지는 인터넷 영역 권한 설정에 정의된 제한 사항이 있는 부분 신뢰 보안 샌드박스 내에서 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-153">Markup-only [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pages run within a partial-trust security sandbox with restrictions that are defined by the Internet zone permission set.</span></span> <span data-ttu-id="fc73e-154">또한 [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] 기반 웹 응용 프로그램과 동일한 보안 샌드박스를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-154">This provides an equivalent security sandbox to [!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]-based Web applications.</span></span>  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램의 보안에 대한 자세한 내용은 [보안](../../../../docs/framework/wpf/security-wpf.md)을 참조하십시오.  
+ <span data-ttu-id="fc73e-155">[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램의 보안에 대한 자세한 내용은 [보안](../../../../docs/framework/wpf/security-wpf.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="fc73e-155">For more information about security for [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] applications, see [Security](../../../../docs/framework/wpf/security-wpf.md).</span></span>  
   
- 태그 전용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지는 XCopy 또는 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]를 사용하여 로컬 파일 시스템에 설치할 수 있으며  [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] 또는 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 탐색기를 사용하여 볼 수 있습니다.  
+ <span data-ttu-id="fc73e-156">마크업 전용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지는 XCopy나 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]를 사용하여 로컬 파일 시스템에 설치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-156">Markup-only [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pages can be installed to the local file system by using either XCopy or [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)].</span></span> <span data-ttu-id="fc73e-157">이러한 페이지는 [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] 또는 [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] 탐색기를 사용하여 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-157">These pages can be viewed using [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] or [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] Explorer.</span></span>  
   
- XAML에 대한 자세한 내용은 [XAML 개요\(WPF\)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)를 참조하십시오.  
+ <span data-ttu-id="fc73e-158">XAML에 대한 자세한 내용은 [XAML 개요(WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="fc73e-158">For more information about XAML, see [XAML Overview (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).</span></span>  
   
 <a name="Deploying_XAML_Browser_Applications"></a>   
-### XAML 브라우저 응용 프로그램 배포  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]는 다음 세 가지 파일을 배포해야만 실행할 수 있는 컴파일된 응용 프로그램입니다.  
+### <a name="deploying-xaml-browser-applications"></a><span data-ttu-id="fc73e-159">XAML 브라우저 응용 프로그램 배포</span><span class="sxs-lookup"><span data-stu-id="fc73e-159">Deploying XAML Browser Applications</span></span>  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]<span data-ttu-id="fc73e-160">는 배포하려면 다음과 같은 파일 세 개가 필요한 컴파일된 응용 프로그램입니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-160"> are compiled applications that require the following three files to be deployed:</span></span>  
   
--   *ApplicationName*.exe. 실행 가능한 어셈블리 응용 프로그램 파일입니다.  
+-   <span data-ttu-id="fc73e-161">*ApplicationName*.exe: 실행 가능한 어셈블리 응용 프로그램 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-161">*ApplicationName*.exe: The executable assembly application file.</span></span>  
   
--   *ApplicationName*.xbap. 배포 매니페스트입니다.  
+-   <span data-ttu-id="fc73e-162">*ApplicationName*.xbap: 배포 매니페스트입니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-162">*ApplicationName*.xbap: The deployment manifest.</span></span>  
   
--   *ApplicationName*.exe.manifest. 응용 프로그램 매니페스트입니다.  
+-   <span data-ttu-id="fc73e-163">*ApplicationName*.exe.manifest: 응용 프로그램 매니페스트입니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-163">*ApplicationName*.exe.manifest: The application manifest.</span></span>  
   
 > [!NOTE]
->  배포 및 응용 프로그램 매니페스트에 대한 자세한 내용은 [WPF 응용 프로그램 만들기](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)를 참조하십시오.  
+>  <span data-ttu-id="fc73e-164">배포 및 응용 프로그램 매니페스트에 대한 자세한 내용은 [WPF 응용 프로그램 만들기](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="fc73e-164">For more information about deployment and application manifests, see [Building a WPF Application](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md).</span></span>  
   
- 이러한 파일은 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]를 빌드할 때 생성됩니다.  자세한 내용은 [방법: 새 WPF 브라우저 응용 프로그램 프로젝트 만들기](http://msdn.microsoft.com/ko-kr/72ef4d90-e163-42a1-8df0-ea7ccfd1901f)를 참조하십시오.  태그 전용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지와 마찬가지로 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]도 일반적으로 웹 서버에 게시되고 [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)]를 사용하여 볼 수 있습니다.  
+ <span data-ttu-id="fc73e-165">이러한 파일은 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]가 빌드될 때 생성됩니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-165">These files are produced when an [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] is built.</span></span> <span data-ttu-id="fc73e-166">자세한 내용은 [방법: 새 WPF 브라우저 응용 프로그램 프로젝트 만들기](http://msdn.microsoft.com/en-us/72ef4d90-e163-42a1-8df0-ea7ccfd1901f)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="fc73e-166">For more information, see [How to: Create a New WPF Browser Application Project](http://msdn.microsoft.com/en-us/72ef4d90-e163-42a1-8df0-ea7ccfd1901f).</span></span> <span data-ttu-id="fc73e-167">마크업 전용 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 페이지처럼 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]는 일반적으로 웹 서버에 게시되며 [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)]를 사용하여 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-167">Like markup-only [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pages, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] are typically published to a Web server and viewed using [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)].</span></span>  
   
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]는 배포 방법을 임의로 사용하여  클라이언트에 배포할 수 있습니다.  그러나 다음과 같은 기능을 제공하는 [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]를 사용하는 것이 좋습니다.  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]<span data-ttu-id="fc73e-168">는 배포 기술 중 하나를 사용하여 클라이언트에 배포할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-168"> can be deployed to clients using any of the deployment techniques.</span></span> <span data-ttu-id="fc73e-169">그러나 다음과 같은 기능을 제공하는 [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]가 권장됩니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-169">However, [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] is recommended since it provides the following capabilities:</span></span>  
   
-1.  새 버전이 게시될 때 자동으로 업데이트  
+1.  <span data-ttu-id="fc73e-170">새 버전이 게시될 때 자동 업데이트.</span><span class="sxs-lookup"><span data-stu-id="fc73e-170">Automatic updates when a new version is published.</span></span>  
   
-2.  완전 신뢰 수준에서 실행되는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]를 위한 권한 상승  
+2.  <span data-ttu-id="fc73e-171">완전 신뢰로 실행되는 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]에 대한 권한 상승.</span><span class="sxs-lookup"><span data-stu-id="fc73e-171">Elevation privileges for the [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] running with full trust.</span></span>  
   
- 기본적으로 ClickOnce에서는 .deploy 확장명으로 응용 프로그램 파일을 게시합니다.  이로 인해 문제가 발생할 수 있지만 이 기본 설정은 비활성화할 수 있습니다.  자세한 내용은 [ClickOnce 배포 시 서버 및 클라이언트 구성 문제](../Topic/Server%20and%20Client%20Configuration%20Issues%20in%20ClickOnce%20Deployments.md)를 참조하십시오.  
+ <span data-ttu-id="fc73e-172">기본적으로 ClickOnce는 .deploy 확장명을 사용하여 응용 프로그램 파일을 게시합니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-172">By default, ClickOnce publishes application files with the .deploy extension.</span></span> <span data-ttu-id="fc73e-173">그러면 문제가 될 수 있지만 사용하지 않도록 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-173">This can be problematic, but can be disabled.</span></span> <span data-ttu-id="fc73e-174">자세한 내용은 [ClickOnce 배포 시 서버 및 클라이언트 구성 문제](/visualstudio/deployment/server-and-client-configuration-issues-in-clickonce-deployments)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="fc73e-174">For more information, see [Server and Client Configuration Issues in ClickOnce Deployments](/visualstudio/deployment/server-and-client-configuration-issues-in-clickonce-deployments).</span></span>  
   
- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 배포에 대한 자세한 내용은 [WPF XAML 브라우저 응용 프로그램 개요](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)를 참조하십시오.  
+ <span data-ttu-id="fc73e-175">[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 배포에 대한 자세한 내용은 [WPF XAML 브라우저 응용 프로그램 개요](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="fc73e-175">For more information about deploying [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)], see [WPF XAML Browser Applications Overview](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).</span></span>  
   
 <a name="Installing__NET_Framework_3_0"></a>   
-## .NET Framework 설치  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 실행하려면 클라이언트에 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]가 설치되어 있어야 합니다.  [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]은 브라우저에서 호스팅되는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 확인할 때 클라이언트에 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]이 설치되어 있는지 자동으로 검색합니다.  [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]가 설치되어 있지 않으면 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]에서 설치 여부를 확인하는 메시지를 표시합니다.  
+## <a name="installing-the-net-framework"></a><span data-ttu-id="fc73e-176">.NET Framework 설치</span><span class="sxs-lookup"><span data-stu-id="fc73e-176">Installing the .NET Framework</span></span>  
+ <span data-ttu-id="fc73e-177">[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 실행하려면 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]를 클라이언트에 설치해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-177">To run a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application, the [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] must be installed on the client.</span></span> [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]<span data-ttu-id="fc73e-178">는 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 브라우저에서 호스팅되는 응용 프로그램이 표시될 때 클라이언트에 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]가 설치되어 있는지 자동으로 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-178"> automatically detects whether clients are installed with [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] when [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] browser-hosted applications are viewed.</span></span> <span data-ttu-id="fc73e-179">[!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]가 설치되지 않은 경우 설치하라는 메시지가 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-179">If the [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] is not installed, [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] prompts users to install it.</span></span>  
   
- [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]에는 확장명이 .xaml, .xps, .xbap 및 .application인 콘텐츠 파일에 대한 대체\(fallback\) [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] 처리기로 등록된 부트스트래퍼 응용 프로그램이 있어 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]이 설치되었는지 검색할 수 있습니다.  이러한 파일 형식을 탐색하려는데 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]이 클라이언트에 설치되어 있지 않으면 이 부트스트래퍼 응용 프로그램이 .NET Framework 3.0 설치 권한을 요청합니다.  권한을 제공하지 않으면 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]과 응용 프로그램이 모두 설치되지 않습니다.  
+ <span data-ttu-id="fc73e-180">[!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]가 설치되어 있는지 여부를 검색하기 위해 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]에는 .xaml, .xps, .xbap 및 .application 확장명을 사용하는 콘텐츠 파일에 대한 대체(fallback) [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] 처리기로 등록되는 부트스트래퍼 응용 프로그램이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-180">To detect whether the [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] is installed, [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] includes a bootstrapper application that is registered as the fallback [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] handler for content files with the following extensions: .xaml, .xps, .xbap, and .application.</span></span> <span data-ttu-id="fc73e-181">이러한 파일 형식으로 이동한 경우 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]가 클라이언트에 설치되어 있지 않으면 부트스트래퍼 응용 프로그램에서 설치 권한을 요청합니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-181">If you navigate to these file types and the [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] is not installed on the client, the bootstrapper application requests permission to install it.</span></span> <span data-ttu-id="fc73e-182">권한을 제공하지 않을 경우 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]와 응용 프로그램이 모두 설치되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-182">If permission is not provided, neither the [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] nor the application is installed.</span></span>  
   
- 권한을 부여하면 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]에서 [!INCLUDE[TLA#tla_bits](../../../../includes/tlasharptla-bits-md.md)]를 사용하여 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]를 다운로드하고 설치합니다.  [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]이 설치되고 나면 원래 요청되었던 파일이 새 브라우저 창에서 열립니다.  
+ <span data-ttu-id="fc73e-183">권한이 부여되면 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]에서 [!INCLUDE[TLA#tla_bits](../../../../includes/tlasharptla-bits-md.md)]를 사용하여 [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]를 다운로드하고 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-183">If permission is granted, [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] downloads and installs the [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] using the [!INCLUDE[TLA#tla_bits](../../../../includes/tlasharptla-bits-md.md)].</span></span> <span data-ttu-id="fc73e-184">[!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]를 설치하고 나면 처음에 요청한 파일이 새 브라우저 창에서 열립니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-184">After successful installation of the [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)], the originally requested file is opened in a new browser window.</span></span>  
   
- [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] 자동 검색 기능은 [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] 이상이 설치된 [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)], [!INCLUDE[TLA#tla_winxpsp2](../../../../includes/tlasharptla-winxpsp2-md.md)] 및 [!INCLUDE[TLA#tla_winnetsvrfamsp1](../../../../includes/tlasharptla-winnetsvrfamsp1-md.md)] 클라이언트에서 사용할 수 있습니다.  
+ [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)]<span data-ttu-id="fc73e-185"> 자동 검색은 [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] 이상이 설치된 [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)], [!INCLUDE[TLA#tla_winxpsp2](../../../../includes/tlasharptla-winxpsp2-md.md)] 및 [!INCLUDE[TLA#tla_winnetsvrfamsp1](../../../../includes/tlasharptla-winnetsvrfamsp1-md.md)] 클라이언트에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="fc73e-185"> auto-detection is available on [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)], [!INCLUDE[TLA#tla_winxpsp2](../../../../includes/tlasharptla-winxpsp2-md.md)], and [!INCLUDE[TLA#tla_winnetsvrfamsp1](../../../../includes/tlasharptla-winnetsvrfamsp1-md.md)] clients that have [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] or later installed.</span></span>  
   
- 자세한 내용은 [.NET Framework 및 응용 프로그램 배포](../../../../docs/framework/deployment/net-framework-and-applications.md)를 참조하십시오.  
+ <span data-ttu-id="fc73e-186">자세한 내용은 [.NET Framework 및 응용 프로그램 배포](../../../../docs/framework/deployment/index.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="fc73e-186">For more information, see [Deploying the .NET Framework and Applications](../../../../docs/framework/deployment/index.md).</span></span>  
   
-## 참고 항목  
- [WPF 응용 프로그램 만들기](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)   
- [보안](../../../../docs/framework/wpf/security-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="fc73e-187">참고 항목</span><span class="sxs-lookup"><span data-stu-id="fc73e-187">See Also</span></span>  
+ [<span data-ttu-id="fc73e-188">WPF 응용 프로그램 빌드</span><span class="sxs-lookup"><span data-stu-id="fc73e-188">Building a WPF Application</span></span>](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
+ [<span data-ttu-id="fc73e-189">보안</span><span class="sxs-lookup"><span data-stu-id="fc73e-189">Security</span></span>](../../../../docs/framework/wpf/security-wpf.md)

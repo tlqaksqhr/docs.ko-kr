@@ -1,36 +1,41 @@
 ---
-title: "방법: Windows Forms RichTextBox 컨트롤에서 끌어서 놓기 작업 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "예제[Windows Forms], 텍스트 상자"
-  - "끌어서 놓기, RichTextBox 컨트롤"
-  - "텍스트 상자, 끌어서 놓기 작업"
-  - "RichTextBox 컨트롤[Windows Forms], 끌어서 놓기 작업"
+title: "방법: Windows Forms RichTextBox 컨트롤에서 끌어서 놓기 작업 사용"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- examples [Windows Forms], text boxes
+- drag and drop [Windows Forms], richTextBox control
+- text boxes [Windows Forms], drag-and-drop operations
+- RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
-caps.latest.revision: 16
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 91739643aaa2d7fe3ea302d0d35edabbae0ab14f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: Windows Forms RichTextBox 컨트롤에서 끌어서 놓기 작업 사용
-Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용한 끌어서 놓기 작업은 <xref:System.Windows.Forms.RichTextBox.DragEnter> 및 <xref:System.Windows.Forms.RichTextBox.DragDrop> 이벤트를 처리하여 수행됩니다. 따라서 <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용하면 끌어서 놓기 작업이 매우 간단합니다.  
+# <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a><span data-ttu-id="b62c7-102">방법: Windows Forms RichTextBox 컨트롤에서 끌어서 놓기 작업 사용</span><span class="sxs-lookup"><span data-stu-id="b62c7-102">How to: Enable Drag-and-Drop Operations with the Windows Forms RichTextBox Control</span></span>
+<span data-ttu-id="b62c7-103">Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용한 끌어서 놓기 작업은 <xref:System.Windows.Forms.RichTextBox.DragEnter> 및 <xref:System.Windows.Forms.RichTextBox.DragDrop> 이벤트를 처리하여 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="b62c7-103">Drag-and-drop operations with the Windows Forms <xref:System.Windows.Forms.RichTextBox> control are done by handling the <xref:System.Windows.Forms.RichTextBox.DragEnter> and <xref:System.Windows.Forms.RichTextBox.DragDrop> events.</span></span> <span data-ttu-id="b62c7-104">따라서 <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용하면 끌어서 놓기 작업이 매우 간단합니다.</span><span class="sxs-lookup"><span data-stu-id="b62c7-104">Thus, drag-and-drop operations are extremely simple with the <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
   
-### RichTextBox 컨트롤에서 끌기 작업을 사용하도록 설정하려면  
+### <a name="to-enable-drag-operations-in-a-richtextbox-control"></a><span data-ttu-id="b62c7-105">RichTextBox 컨트롤에서 끌기 작업을 사용하도록 설정하려면</span><span class="sxs-lookup"><span data-stu-id="b62c7-105">To enable drag operations in a RichTextBox control</span></span>  
   
-1.  <xref:System.Windows.Forms.RichTextBox> 컨트롤의 <xref:System.Windows.Forms.RichTextBox.AllowDrop%2A> 속성을 `true`로 설정합니다.  
+1.  <span data-ttu-id="b62c7-106"><xref:System.Windows.Forms.RichTextBox.AllowDrop%2A> 컨트롤의 <xref:System.Windows.Forms.RichTextBox> 속성을 `true`로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="b62c7-106">Set the <xref:System.Windows.Forms.RichTextBox.AllowDrop%2A> property of the <xref:System.Windows.Forms.RichTextBox> control to `true`.</span></span>  
   
-2.  <xref:System.Windows.Forms.RichTextBox.DragEnter> 이벤트의 이벤트 처리기에서 코드를 작성합니다.`if` 문을 사용하여 끌고 있는 데이터가 허용되는 형식\(이 경우 텍스트\)인지 확인합니다.<xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=fullName> 속성은 <xref:System.Windows.Forms.DragDropEffects> 열거형의 값 중 하나로 설정할 수 있습니다.  
+2.  <span data-ttu-id="b62c7-107"><xref:System.Windows.Forms.RichTextBox.DragEnter> 이벤트의 이벤트 처리기에서 코드를 작성합니다.</span><span class="sxs-lookup"><span data-stu-id="b62c7-107">Write code in the event handler of the <xref:System.Windows.Forms.RichTextBox.DragEnter> event.</span></span> <span data-ttu-id="b62c7-108">`if` 문을 사용하여 끌고 있는 데이터가 허용되는 형식(이 경우 텍스트)인지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="b62c7-108">Use an `if` statement to ensure that the data being dragged is of an acceptable type (in this case, text).</span></span> <span data-ttu-id="b62c7-109"><xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=nameWithType> 속성은 <xref:System.Windows.Forms.DragDropEffects> 열거형의 값 중 하나로 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b62c7-109">The <xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=nameWithType> property can be set to any value of the <xref:System.Windows.Forms.DragDropEffects> enumeration.</span></span>  
   
     ```vb  
     Private Sub RichTextBox1_DragEnter(ByVal sender As Object, _   
@@ -42,7 +47,6 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용한 끌
           e.Effect = DragDropEffects.None  
        End If  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -54,7 +58,6 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용한 끌
        else  
           e.Effect = DragDropEffects.None;  
     }  
-  
     ```  
   
     ```cpp  
@@ -69,7 +72,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용한 끌
        }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 및 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) 폼 생성자에 다음 코드를 추가하여 이벤트 처리기를 등록합니다.  
+     <span data-ttu-id="b62c7-110">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 및 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 폼 생성자에 다음 코드를 추가하여 이벤트 처리기를 등록합니다.</span><span class="sxs-lookup"><span data-stu-id="b62c7-110">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.richTextBox1.DragEnter += new  
@@ -83,9 +86,9 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용한 끌
        (this, &Form1::richTextBox1_DragEnter);  
     ```  
   
-3.  <xref:System.Windows.Forms.RichTextBox.DragDrop> 이벤트를 처리할 코드를 작성합니다.<xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=fullName> 메서드를 사용하여 끌고 있는 데이터를 검색합니다.  
+3.  <span data-ttu-id="b62c7-111"><xref:System.Windows.Forms.RichTextBox.DragDrop> 이벤트를 처리할 코드를 작성합니다.</span><span class="sxs-lookup"><span data-stu-id="b62c7-111">Write code to handle the <xref:System.Windows.Forms.RichTextBox.DragDrop> event.</span></span> <span data-ttu-id="b62c7-112"><xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> 메서드를 사용하여 끌고 있는 데이터를 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="b62c7-112">Use the <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> method to retrieve the data being dragged.</span></span>  
   
-     아래 예제에서 코드는 <xref:System.Windows.Forms.RichTextBox> 컨트롤의 <xref:System.Windows.Forms.RichTextBox.Text%2A> 속성을 끌고 있는 데이터와 같도록 설정합니다.<xref:System.Windows.Forms.RichTextBox> 컨트롤에 이미 텍스트가 있는 경우에는 끌어온 텍스트가 삽입 지점에 삽입됩니다.  
+     <span data-ttu-id="b62c7-113">아래 예제에서 코드는 <xref:System.Windows.Forms.RichTextBox.Text%2A> 컨트롤의 <xref:System.Windows.Forms.RichTextBox> 속성을 끌고 있는 데이터와 같도록 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="b62c7-113">In the example below, the code sets the <xref:System.Windows.Forms.RichTextBox.Text%2A> property of the <xref:System.Windows.Forms.RichTextBox> control equal to the data being dragged.</span></span> <span data-ttu-id="b62c7-114"><xref:System.Windows.Forms.RichTextBox> 컨트롤에 이미 텍스트가 있는 경우에는 끌어온 텍스트가 삽입 지점에 삽입됩니다.</span><span class="sxs-lookup"><span data-stu-id="b62c7-114">If there is already text in the <xref:System.Windows.Forms.RichTextBox> control, the dragged text is inserted at the insertion point.</span></span>  
   
     ```vb  
     Private Sub RichTextBox1_DragDrop(ByVal sender As Object, _   
@@ -104,7 +107,6 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용한 끌
           e.Data.GetData(DataFormats.Text).ToString()  
        RichTextBox1.Text = RichTextBox1.Text + s  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -124,7 +126,6 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용한 끌
           e.Data.GetData(DataFormats.Text).ToString();  
        richTextBox1.Text = richTextBox1.Text + s;  
     }  
-  
     ```  
   
     ```cpp  
@@ -147,13 +148,12 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용한 끌
        }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 및 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) 폼 생성자에 다음 코드를 추가하여 이벤트 처리기를 등록합니다.  
+     <span data-ttu-id="b62c7-115">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 및 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 폼 생성자에 다음 코드를 추가하여 이벤트 처리기를 등록합니다.</span><span class="sxs-lookup"><span data-stu-id="b62c7-115">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.richTextBox1.DragDrop += new  
         System.Windows.Forms.DragEventHandler  
         (this.richTextBox1_DragDrop);  
-  
     ```  
   
     ```cpp  
@@ -162,20 +162,20 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용한 끌
        (this, &Form1::richTextBox1_DragDrop);  
     ```  
   
-### 응용 프로그램에서 끌어서 놓기 기능을 테스트하려면  
+### <a name="to-test-the-drag-and-drop-functionality-in-your-application"></a><span data-ttu-id="b62c7-116">응용 프로그램에서 끌어서 놓기 기능을 테스트하려면</span><span class="sxs-lookup"><span data-stu-id="b62c7-116">To test the drag-and-drop functionality in your application</span></span>  
   
-1.  응용 프로그램을 저장하고 빌드합니다. 응용 프로그램이 실행되는 동안 워드패드를 실행합니다.  
+1.  <span data-ttu-id="b62c7-117">응용 프로그램을 저장하고 빌드합니다.</span><span class="sxs-lookup"><span data-stu-id="b62c7-117">Save and build your application.</span></span> <span data-ttu-id="b62c7-118">응용 프로그램이 실행되는 동안 워드패드를 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="b62c7-118">While it is running, run WordPad.</span></span>  
   
-     워드패드는 끌어서 놓기 작업을 허용하는 Windows에 설치된 텍스트 편집기입니다.**시작** 단추를 클릭하고 **실행**을 선택한 다음 **실행** 대화 상자의 텍스트 상자에 `WordPad`를 입력하고 **확인**을 클릭하면 액세스할 수 있습니다.  
+     <span data-ttu-id="b62c7-119">워드패드는 끌어서 놓기 작업을 허용하는 Windows에 설치된 텍스트 편집기입니다.</span><span class="sxs-lookup"><span data-stu-id="b62c7-119">WordPad is a text editor installed by Windows that allows drag-and-drop operations.</span></span> <span data-ttu-id="b62c7-120">**시작** 단추를 클릭하고 **실행**을 선택한 다음 `WordPad` 실행 **대화 상자의 텍스트 상자에** 를 입력하고 **확인**을 클릭하면 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b62c7-120">It is accessible by clicking the **Start** button, selecting **Run**, typing `WordPad` in the text box of the **Run** dialog box, and then clicking **OK**.</span></span>  
   
-2.  워드패드가 열리면 텍스트 문자열을 입력합니다. 마우스를 사용하여 텍스트를 선택한 다음 Windows 응용 프로그램의 <xref:System.Windows.Forms.RichTextBox> 컨트롤 위로 선택한 텍스트를 끕니다.  
+2.  <span data-ttu-id="b62c7-121">워드패드가 열리면 텍스트 문자열을 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="b62c7-121">Once WordPad is open, type a string of text in it.</span></span> <span data-ttu-id="b62c7-122">마우스를 사용하여 텍스트를 선택한 다음 Windows 응용 프로그램의 <xref:System.Windows.Forms.RichTextBox> 컨트롤 위로 선택한 텍스트를 끕니다.</span><span class="sxs-lookup"><span data-stu-id="b62c7-122">Using the mouse, select the text, and then drag the selected text over to the <xref:System.Windows.Forms.RichTextBox> control in your Windows application.</span></span>  
   
-     <xref:System.Windows.Forms.RichTextBox> 컨트롤을 마우스로 가리키면\(결과적으로 <xref:System.Windows.Forms.RichTextBox.DragEnter> 이벤트 발생\) 마우스 포인터가 바뀌고 선택한 텍스트를 <xref:System.Windows.Forms.RichTextBox> 컨트롤로 끌 수 있습니다.  
+     <span data-ttu-id="b62c7-123"><xref:System.Windows.Forms.RichTextBox> 컨트롤을 마우스로 가리키면(결과적으로 <xref:System.Windows.Forms.RichTextBox.DragEnter> 이벤트 발생) 마우스 포인터가 바뀌고 선택한 텍스트를 <xref:System.Windows.Forms.RichTextBox> 컨트롤로 끌 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b62c7-123">Notice that when you point the mouse at the <xref:System.Windows.Forms.RichTextBox> control (and, consequently, raise the <xref:System.Windows.Forms.RichTextBox.DragEnter> event), the mouse pointer changes and you can drop the selected text into the <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
   
-     마우스 단추를 놓으면 선택한 텍스트가 놓이고\(즉, <xref:System.Windows.Forms.RichTextBox.DragDrop> 이벤트 발생\) <xref:System.Windows.Forms.RichTextBox> 컨트롤 내에 삽입됩니다.  
+     <span data-ttu-id="b62c7-124">마우스 단추를 놓으면 선택한 텍스트가 놓이고(즉, <xref:System.Windows.Forms.RichTextBox.DragDrop> 이벤트 발생) <xref:System.Windows.Forms.RichTextBox> 컨트롤 내에 삽입됩니다.</span><span class="sxs-lookup"><span data-stu-id="b62c7-124">When you release the mouse button, the selected text is dropped (that is, the <xref:System.Windows.Forms.RichTextBox.DragDrop> event is raised) and is inserted within the <xref:System.Windows.Forms.RichTextBox> control.</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Forms.RichTextBox>   
- [방법: 응용 프로그램 간에 끌어서 놓기 작업 수행](../../../../docs/framework/winforms/advanced/how-to-perform-drag-and-drop-operations-between-applications.md)   
- [RichTextBox 컨트롤](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)   
- [Windows Forms에 사용할 수 있는 컨트롤](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="b62c7-125">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b62c7-125">See Also</span></span>  
+ <xref:System.Windows.Forms.RichTextBox>  
+ [<span data-ttu-id="b62c7-126">방법: 응용 프로그램 간에 끌어서 놓기 작업 수행</span><span class="sxs-lookup"><span data-stu-id="b62c7-126">How to: Perform Drag-and-Drop Operations Between Applications</span></span>](../../../../docs/framework/winforms/advanced/how-to-perform-drag-and-drop-operations-between-applications.md)  
+ [<span data-ttu-id="b62c7-127">RichTextBox 컨트롤</span><span class="sxs-lookup"><span data-stu-id="b62c7-127">RichTextBox Control</span></span>](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
+ [<span data-ttu-id="b62c7-128">Windows Forms에 사용할 수 있는 컨트롤</span><span class="sxs-lookup"><span data-stu-id="b62c7-128">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

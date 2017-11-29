@@ -1,86 +1,92 @@
 ---
-title: "방법: 페더레이션 서비스에서 자격 증명 구성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "페더레이션"
-  - "WCF, 페더레이션"
+title: "방법: 페더레이션 서비스에서 자격 증명 구성"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- WCF, federation
+- federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-caps.latest.revision: 21
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: e6a15f5b0b68252ada1587e66ea601d1f55e8a06
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 페더레이션 서비스에서 자격 증명 구성
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 다음과 같은 기본 절차를 통해 페더레이션 서비스를 만들 수 있습니다.  
+# <a name="how-to-configure-credentials-on-a-federation-service"></a><span data-ttu-id="27acb-102">방법: 페더레이션 서비스에서 자격 증명 구성</span><span class="sxs-lookup"><span data-stu-id="27acb-102">How to: Configure Credentials on a Federation Service</span></span>
+<span data-ttu-id="27acb-103">[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서는 다음과 같은 기본 절차를 통해 페더레이션 서비스를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-103">In [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], creating a federated service consists of the following main procedures:</span></span>  
   
-1.  <xref:System.ServiceModel.WSFederationHttpBinding> 또는 유사한 사용자 지정 바인딩을 구성합니다.적절한 바인딩 만들기에 대한 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]는 [방법: WSFederationHttpBinding 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)를 참조하십시오.  
+1.  <span data-ttu-id="27acb-104"><xref:System.ServiceModel.WSFederationHttpBinding> 또는 유사한 사용자 지정 바인딩을 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-104">Configuring a <xref:System.ServiceModel.WSFederationHttpBinding> or similar custom binding.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="27acb-105">참조는 적절 한 바인딩 만들기 [하는 방법: WSFederationHttpBinding 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-105"> creating an appropriate binding, see [How to: Create a WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md).</span></span>  
   
-2.  서비스에 제공되는 발급된 토큰에 대한 인증 방법을 제어하는 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>을 구성합니다.  
+2.  <span data-ttu-id="27acb-106">서비스에 제공되는 발급된 토큰에 대한 인증 방법을 제어하는 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>을 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-106">Configuring the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> that controls how issued tokens presented to the service are authenticated.</span></span>  
   
- 이 항목에서는 두 번째 단계에 대해 자세히 설명합니다.페더레이션 서비스가 작동하는 방식[!INCLUDE[crabout](../../../../includes/crabout-md.md)][페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)을 참조하십시오.  
+ <span data-ttu-id="27acb-107">이 항목에서는 두 번째 단계에 대해 자세히 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-107">This topic provides details about the second step.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="27acb-108">페더레이션된 서비스 작동 방식 참조 [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-108"> how a federated service works, see [Federation](../../../../docs/framework/wcf/feature-details/federation.md).</span></span>  
   
-### IssuedTokenServiceCredential의 속성을 코드로 설정하려면  
+### <a name="to-set-the-properties-of-issuedtokenservicecredential-in-code"></a><span data-ttu-id="27acb-109">IssuedTokenServiceCredential의 속성을 코드로 설정하려면</span><span class="sxs-lookup"><span data-stu-id="27acb-109">To set the properties of IssuedTokenServiceCredential in code</span></span>  
   
-1.  <xref:System.ServiceModel.Description.ServiceCredentials> 클래스의 <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A> 속성을 사용하여 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 인스턴스에 대한 참조를 반환합니다.<xref:System.ServiceModel.ServiceHostBase> 클래스의 <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> 속성에서 이 속성에 액세스합니다.  
+1.  <span data-ttu-id="27acb-110"><xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A> 클래스의 <xref:System.ServiceModel.Description.ServiceCredentials> 속성을 사용하여 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 인스턴스에 대한 참조를 반환합니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-110">Use the <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A> property of the <xref:System.ServiceModel.Description.ServiceCredentials> class to return a reference to an <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> instance.</span></span> <span data-ttu-id="27acb-111"><xref:System.ServiceModel.ServiceHostBase.Credentials%2A> 클래스의 <xref:System.ServiceModel.ServiceHostBase> 속성에서 이 속성에 액세스합니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-111">The property is accessed from the <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> property of the <xref:System.ServiceModel.ServiceHostBase> class.</span></span>  
   
-2.  [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 카드와 같은 자체 발급 토큰이 인증될 경우에는 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> 속성을 `true`로 설정합니다.기본값은 `false`입니다.  
+2.  <span data-ttu-id="27acb-112"><xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> 카드와 같은 자체 발급 토큰이 인증될 경우에는 `true` 속성을 [!INCLUDE[infocard](../../../../includes/infocard-md.md)]로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-112">Set the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> property to `true` if self-issued tokens such as [!INCLUDE[infocard](../../../../includes/infocard-md.md)] cards are to be authenticated.</span></span> <span data-ttu-id="27acb-113">기본값은 `false`입니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-113">The default is `false`.</span></span>  
   
-3.  <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 속성에 의해 반환된 컬렉션을 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 클래스의 인스턴스로 채웁니다.각 인스턴스는 서비스에서 인증되는 토큰 발급자를 나타냅니다.  
+3.  <span data-ttu-id="27acb-114"><xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 속성에 의해 반환된 컬렉션을 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 클래스의 인스턴스로 채웁니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-114">Populate the collection returned by the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> property with instances of the <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> class.</span></span> <span data-ttu-id="27acb-115">각 인스턴스는 서비스에서 인증되는 토큰 발급자를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-115">Each instance represents an issuer from which the service will authenticate tokens.</span></span>  
   
     > [!NOTE]
-    >  <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> 속성에 의해 반환된 클라이언트 측 컬렉션과는 달리, 알려진 인증서 컬렉션은 키 컬렉션이 아닙니다.발급된 토큰이 포함된 메시지를 보낸 클라이언트 주소와 상관없이, 서비스에서는 지정된 인증서에서 발급한 토큰을 적용합니다.  
+    >  <span data-ttu-id="27acb-116"><xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> 속성에 의해 반환된 클라이언트 측 컬렉션과는 달리, 알려진 인증서 컬렉션은 키 컬렉션이 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-116">Unlike the client-side collection returned by the <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> property, the known certificates collection is not a keyed collection.</span></span> <span data-ttu-id="27acb-117">발급된 토큰이 포함된 메시지를 보낸 클라이언트 주소와 상관없이, 서비스에서는 지정된 인증서에서 발급한 토큰을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-117">The service accepts the tokens that the specified certificates issue regardless of the address of the client that sent the message containing the issued token (subject to the further constraints, which are described later in this topic).</span></span>  
   
-4.  <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 속성을 <xref:System.ServiceModel.Security.X509CertificateValidationMode> 열거형 값 중 하나로 설정합니다.이 작업은 코드로만 수행할 수 있습니다.기본값은 <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A>입니다.  
+4.  <span data-ttu-id="27acb-118"><xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 속성을 <xref:System.ServiceModel.Security.X509CertificateValidationMode> 열거형 값 중 하나로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-118">Set the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> property to one of the <xref:System.ServiceModel.Security.X509CertificateValidationMode> enumeration values.</span></span> <span data-ttu-id="27acb-119">이 작업은 코드로만 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-119">This can be done only in code.</span></span> <span data-ttu-id="27acb-120">기본값은 <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A>입니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-120">The default is <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A>.</span></span>  
   
-5.  <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 속성이 <xref:System.ServiceModel.Security.X509CertificateValidationMode>으로 설정된 경우 사용자 지정 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 클래스의 인스턴스를 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> 속성에 할당합니다.  
+5.  <span data-ttu-id="27acb-121"><xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 속성이 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>으로 설정된 경우 사용자 지정 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 클래스의 인스턴스를 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> 속성에 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-121">If the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> property is set to <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>, then assign an instance of the custom <xref:System.IdentityModel.Selectors.X509CertificateValidator> class to the <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> property.</span></span>  
   
-6.  <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A>가 `ChainTrust` 또는 `PeerOrChainTrust`로 설정된 경우에는 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.RevocationMode%2A> 속성을 적절한 <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> 열거형 값으로 설정합니다.해지 모드는`PeerTrust` 또는 `Custom` 유효성 검사 모드에서 사용되지 않습니다.  
+6.  <span data-ttu-id="27acb-122"><xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A>가 `ChainTrust` 또는 `PeerOrChainTrust`로 설정된 경우에는 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.RevocationMode%2A> 속성을 적절한 <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> 열거형 값으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-122">If the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> is set to `ChainTrust` or `PeerOrChainTrust`, set the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.RevocationMode%2A> property to an appropriate value from the <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> enumeration.</span></span> <span data-ttu-id="27acb-123">해지 모드는`PeerTrust` 또는 `Custom` 유효성 검사 모드에서 사용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-123">Note that the revocation mode is not used in `PeerTrust` or `Custom` validation modes.</span></span>  
   
-7.  필요에 따라 사용자 지정 <xref:System.IdentityModel.Tokens.SamlSerializer> 클래스의 인스턴스를 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.SamlSerializer%2A> 속성에 할당합니다.예를 들어 사용자 지정 SAML\(Security Assertions Markup Language\) 어설션을 구문 분석하기 위해 사용자 지정 SAML serializer가 필요합니다.  
+7.  <span data-ttu-id="27acb-124">필요에 따라 사용자 지정 <xref:System.IdentityModel.Tokens.SamlSerializer> 클래스의 인스턴스를 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.SamlSerializer%2A> 속성에 할당합니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-124">If needed, assign an instance of a custom <xref:System.IdentityModel.Tokens.SamlSerializer> class to the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.SamlSerializer%2A> property.</span></span> <span data-ttu-id="27acb-125">예를 들어 사용자 지정 SAML(Security Assertions Markup Language) 어설션을 구문 분석하기 위해 사용자 지정 SAML serializer가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-125">A custom Security Assertions Markup Language (SAML) serializer is needed, for example, for parsing custom SAML assertions.</span></span>  
   
-### IssuedTokenServiceCredential의 속성을 구성에서 설정하려면  
+### <a name="to-set-the-properties-of-issuedtokenservicecredential-in-configuration"></a><span data-ttu-id="27acb-126">IssuedTokenServiceCredential의 속성을 구성에서 설정하려면</span><span class="sxs-lookup"><span data-stu-id="27acb-126">To set the properties of IssuedTokenServiceCredential in configuration</span></span>  
   
-1.  `<issuedTokenAuthentication>` 요소를 \<`serviceCredentials`\> 요소의 자식으로 만듭니다.  
+1.  <span data-ttu-id="27acb-127">만들기는 `<issuedTokenAuthentication>` 의 자식으로 요소는 <`serviceCredentials`> 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-127">Create an `<issuedTokenAuthentication>` element as a child of a <`serviceCredentials`> element.</span></span>  
   
-2.  [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 카드와 같은 자체 발급 토큰을 인증하는 경우, `<issuedTokenAuthentication>` 요소의 `allowUntrustedRsaIssuers` 특성을 `true`로 설정합니다.  
+2.  <span data-ttu-id="27acb-128">`allowUntrustedRsaIssuers` 카드와 같은 자체 발급 토큰을 인증하는 경우, `<issuedTokenAuthentication>` 요소의 `true` 특성을 [!INCLUDE[infocard](../../../../includes/infocard-md.md)]로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-128">Set the `allowUntrustedRsaIssuers` attribute of the `<issuedTokenAuthentication>` element to `true` if authenticating a self-issued token, such as an [!INCLUDE[infocard](../../../../includes/infocard-md.md)] card.</span></span>  
   
-3.  `<knownCertificates>` 요소를 `<issuedTokenAuthentication>` 요소의 자식으로 만듭니다.  
+3.  <span data-ttu-id="27acb-129">`<knownCertificates>` 요소를 `<issuedTokenAuthentication>` 요소의 자식으로 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-129">Create a `<knownCertificates>` element as a child of the `<issuedTokenAuthentication>` element.</span></span>  
   
-4.  `<add>` 요소를 `<knownCertificates>` 요소의 자식으로 0개 이상 만들고 `storeLocation`, `storeName`, `x509FindType` 및 `findValue` 특성을 사용하여 인증서를 찾는 방법을 지정합니다.  
+4.  <span data-ttu-id="27acb-130">`<add>` 요소를 `<knownCertificates>` 요소의 자식으로 0개 이상 만들고 `storeLocation`, `storeName`, `x509FindType` 및 `findValue` 특성을 사용하여 인증서를 찾는 방법을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-130">Create zero or more `<add>` elements as children of the `<knownCertificates>` element, and specify how to locate the certificate using the `storeLocation`, `storeName`, `x509FindType`, and `findValue` attributes.</span></span>  
   
-5.  필요에 따라 \<`issuedTokenAuthentication`\> 요소의 `samlSerializer` 특성을 사용자 지정 <xref:System.IdentityModel.Tokens.SamlSerializer> 클래스의 형식 이름으로 설정합니다.  
+5.  <span data-ttu-id="27acb-131">필요한 경우 설정 합니다는 `samlSerializer` 특성에는 <`issuedTokenAuthentication`> 요소를 사용자 지정의 형식 이름 <xref:System.IdentityModel.Tokens.SamlSerializer> 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-131">If necessary, set the `samlSerializer` attribute of the <`issuedTokenAuthentication`> element to the type name of the custom <xref:System.IdentityModel.Tokens.SamlSerializer> class.</span></span>  
   
-## 예제  
- 다음 예제에서는 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>의속성을 코드로 설정합니다.  
+## <a name="example"></a><span data-ttu-id="27acb-132">예제</span><span class="sxs-lookup"><span data-stu-id="27acb-132">Example</span></span>  
+ <span data-ttu-id="27acb-133">다음 예제에서는 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>의속성을 코드로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-133">The following example sets the properties of an <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> in code.</span></span>  
   
  [!code-csharp[C_FederatedService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_federatedservice/cs/source.cs#2)]
  [!code-vb[C_FederatedService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federatedservice/vb/source.vb#2)]  
   
- 페더레이션 서비스에서 클라이언트를 인증하려면 발급된 토큰이 다음 조건을 만족해야 합니다.  
+ <span data-ttu-id="27acb-134">페더레이션 서비스에서 클라이언트를 인증하려면 발급된 토큰이 다음 조건을 만족해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-134">In order for a federated service to authenticate a client, the following must be true about the issued token:</span></span>  
   
--   발급된 토큰의 디지털 서명에 RSA 보안 키 식별자를 사용하는 경우, <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> 속성은 `true`여야 합니다.  
+-   <span data-ttu-id="27acb-135">발급된 토큰의 디지털 서명에 RSA 보안 키 식별자를 사용하는 경우, <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> 속성은 `true`여야 합니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-135">When the issued token’s digital signature uses an RSA security key identifier, the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> property must be `true`.</span></span>  
   
--   발급된 토큰의 서명에 X.509 발급자 일련 번호, X.509 주체 키 식별자 또는 X.509 지문 보안 식별자를 사용하는 경우, 발급된 토큰은 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 클래스의 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 속성에 의해 반환된 컬렉션의 인증서를 통해 서명해야 합니다.  
+-   <span data-ttu-id="27acb-136">발급된 토큰의 서명에 X.509 발급자 일련 번호, X.509 주체 키 식별자 또는 X.509 지문 보안 식별자를 사용하는 경우, 발급된 토큰은 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 클래스의 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 속성에 의해 반환된 컬렉션의 인증서를 통해 서명해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-136">When the issued token’s signature uses an X.509 issuer serial number, X.509 subject key identifier, or X.509 thumbprint security identifier, the issued token must be signed by a certificate in the collection returned by the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> property of the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> class.</span></span>  
   
--   발급된 토큰을 X.509 인증서를 통해 서명하는 경우에는 해당 인증서가 신뢰하는 상대에게 <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause>로 보내졌는지 또는 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 속성에서 가져온 것인지에 상관없이, 인증서에서는 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> 속성 값으로 지정된 의미 체계별로 유효성을 검사해야 합니다.X.509 인증서 유효성 검사[!INCLUDE[crabout](../../../../includes/crabout-md.md)][인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)을 참조하십시오.  
+-   <span data-ttu-id="27acb-137">발급된 토큰을 X.509 인증서를 통해 서명하는 경우에는 해당 인증서가 신뢰하는 상대에게 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A>로 보내졌는지 또는 <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> 속성에서 가져온 것인지에 상관없이, 인증서에서는 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 속성 값으로 지정된 의미 체계별로 유효성을 검사해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-137">When the issued token is signed using an X.509 certificate, the certificate must validate per the semantics specified by the value of the <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> property, regardless of whether the certificate was sent to the relying party as a <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> or was obtained from the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> property.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="27acb-138">X.509 인증서 유효성 검사 참조 [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-138"> X.509 certificate validation, see [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).</span></span>  
   
- 예를 들어 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A>를 <xref:System.ServiceModel.Security.X509CertificateValidationMode>로 설정하면 서명 인증서가 `TrustedPeople` 인증서 저장소에 있는 발급된 모든 토큰을 인증하게 됩니다.이 경우 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> 속성을 <xref:System.Security.Cryptography.X509Certificates.StoreLocation> 또는 <xref:System.Security.Cryptography.X509Certificates.StoreLocation>으로 설정합니다.<xref:System.ServiceModel.Security.X509CertificateValidationMode> 등의 다른 모드를 선택할 수도 있습니다.`Custom`을 선택하면 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 클래스의 인스턴스를 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A> 속성에 할당해야 합니다.사용자 지정 유효성 검사기에서 원하는 조건을 사용하여 인증서의 유효성을 검사할 수 있습니다.[!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][방법: 사용자 지정 인증서 유효성 검사기를 사용하는 서비스 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
+ <span data-ttu-id="27acb-139">예를 들어 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A>를 <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust>로 설정하면 서명 인증서가 `TrustedPeople` 인증서 저장소에 있는 발급된 모든 토큰을 인증하게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-139">For example, setting the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> to <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust> would authenticate any issued token whose signing certificate is in the `TrustedPeople` certificate store.</span></span> <span data-ttu-id="27acb-140">이 경우 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> 속성을 <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> 또는 <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine>으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-140">In that case, set the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> property to either <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> or <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine>.</span></span> <span data-ttu-id="27acb-141"><xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> 등의 다른 모드를 선택할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-141">You can select other modes, including <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>.</span></span> <span data-ttu-id="27acb-142">`Custom`을 선택하면 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 클래스의 인스턴스를 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A> 속성에 할당해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-142">When `Custom` is selected, you must assign an instance of the <xref:System.IdentityModel.Selectors.X509CertificateValidator> class to the <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A> property.</span></span> <span data-ttu-id="27acb-143">사용자 지정 유효성 검사기에서 원하는 조건을 사용하여 인증서의 유효성을 검사할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-143">The custom validator can validate certificates using any criteria it likes.</span></span> [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]<span data-ttu-id="27acb-144">[하는 방법: 사용자 지정 인증서 유효성 검사기를 사용 하는 서비스 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="27acb-144"> [How to: Create a Service that Employs a Custom Certificate Validator](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).</span></span>  
   
-## 참고 항목  
- [페더레이션](../../../../docs/framework/wcf/feature-details/federation.md)   
- [페더레이션 및 트러스트](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)   
- [Federation 샘플](../../../../docs/framework/wcf/samples/federation-sample.md)   
- [방법: WSFederationHttpBinding에서 보안 세션을 사용하지 않도록 설정](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)   
- [방법: WSFederationHttpBinding 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)   
- [방법: 페더레이션 클라이언트 만들기](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)   
- [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)   
- [SecurityBindingElement 인증 모드](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)
+## <a name="see-also"></a><span data-ttu-id="27acb-145">참고 항목</span><span class="sxs-lookup"><span data-stu-id="27acb-145">See Also</span></span>  
+ [<span data-ttu-id="27acb-146">페더레이션</span><span class="sxs-lookup"><span data-stu-id="27acb-146">Federation</span></span>](../../../../docs/framework/wcf/feature-details/federation.md)  
+ [<span data-ttu-id="27acb-147">페더레이션 및 트러스트</span><span class="sxs-lookup"><span data-stu-id="27acb-147">Federation and Trust</span></span>](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)  
+ [<span data-ttu-id="27acb-148">Federation 샘플</span><span class="sxs-lookup"><span data-stu-id="27acb-148">Federation Sample</span></span>](../../../../docs/framework/wcf/samples/federation-sample.md)  
+ [<span data-ttu-id="27acb-149">방법: 사용 안 함 보안 WSFederationHttpBinding에서 세션</span><span class="sxs-lookup"><span data-stu-id="27acb-149">How to: Disable Secure Sessions on a WSFederationHttpBinding</span></span>](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [<span data-ttu-id="27acb-150">방법: WSFederationHttpBinding 만들기</span><span class="sxs-lookup"><span data-stu-id="27acb-150">How to: Create a WSFederationHttpBinding</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
+ [<span data-ttu-id="27acb-151">방법: 페더레이션된 클라이언트 만들기</span><span class="sxs-lookup"><span data-stu-id="27acb-151">How to: Create a Federated Client</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [<span data-ttu-id="27acb-152">인증서 작업</span><span class="sxs-lookup"><span data-stu-id="27acb-152">Working with Certificates</span></span>](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [<span data-ttu-id="27acb-153">SecurityBindingElement 인증 모드</span><span class="sxs-lookup"><span data-stu-id="27acb-153">SecurityBindingElement Authentication Modes</span></span>](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)

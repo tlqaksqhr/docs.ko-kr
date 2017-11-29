@@ -1,42 +1,43 @@
 ---
-title: "MainMenu 구성 요소 개요(Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MenuItem"
-  - "MainMenu"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "MainMenu 컨트롤[Windows Forms], MainMenu 컨트롤 정보"
-  - "메뉴"
+title: "MainMenu 구성 요소 개요(Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MenuItem
+- MainMenu
+helpviewer_keywords:
+- MainMenu control [Windows Forms], about MainMenu control
+- menus
 ms.assetid: b41cc5a3-cc59-4996-aa3c-8dd9c17d3c90
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6f5cfe3a97bbbd4d5ba2d3ba089736599b6a2190
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# MainMenu 구성 요소 개요(Windows Forms)
+# <a name="mainmenu-component-overview-windows-forms"></a><span data-ttu-id="ed9a0-102">MainMenu 구성 요소 개요(Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="ed9a0-102">MainMenu Component Overview (Windows Forms)</span></span>
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.MenuStrip> 및 <xref:System.Windows.Forms.ContextMenuStrip>은 이전 버전의 <xref:System.Windows.Forms.MainMenu> 및 <xref:System.Windows.Forms.ContextMenu> 컨트롤에 새로운 기능이 추가된 것으로, 이전 컨트롤을 대체합니다. 그러나 이전 버전과의 호환성 및 앞으로의 사용 가능성을 고려하여 <xref:System.Windows.Forms.MainMenu> 및 <xref:System.Windows.Forms.ContextMenu>를 계속 유지하도록 선택할 수 있습니다.  
+>  <span data-ttu-id="ed9a0-103">하지만 <xref:System.Windows.Forms.MenuStrip> 및 <xref:System.Windows.Forms.ContextMenuStrip> 대체 기능을 추가 하 고는 <xref:System.Windows.Forms.MainMenu> 및 <xref:System.Windows.Forms.ContextMenu> 이전 버전의 컨트롤 <xref:System.Windows.Forms.MainMenu> 및 <xref:System.Windows.Forms.ContextMenu> 선택 하는 경우 이전 버전과 호환성 및 이후 사용을 모두 유지 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed9a0-103">Although <xref:System.Windows.Forms.MenuStrip> and <xref:System.Windows.Forms.ContextMenuStrip> replace and add functionality to the <xref:System.Windows.Forms.MainMenu> and <xref:System.Windows.Forms.ContextMenu> controls of previous versions, <xref:System.Windows.Forms.MainMenu> and <xref:System.Windows.Forms.ContextMenu> are retained for both backward compatibility and future use if you choose.</span></span>  
   
- Windows Forms <xref:System.Windows.Forms.MainMenu> 구성 요소는 런타임에 메뉴를 표시합니다.  주 메뉴의 모든 하위 메뉴와 개별 항목은 <xref:System.Windows.Forms.MenuItem> 개체입니다.  
+ <span data-ttu-id="ed9a0-104">Windows Forms <xref:System.Windows.Forms.MainMenu> 런타임 시 구성 요소에 메뉴가 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ed9a0-104">The Windows Forms <xref:System.Windows.Forms.MainMenu> component displays a menu at run time.</span></span> <span data-ttu-id="ed9a0-105">주 메뉴 및 개별 항목의 모든 하위 메뉴는 <xref:System.Windows.Forms.MenuItem> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="ed9a0-105">All submenus of the main menu and individual items are <xref:System.Windows.Forms.MenuItem> objects.</span></span>  
   
-## 키 속성  
- <xref:System.Windows.Forms.MenuItem.DefaultItem%2A> 속성을 `true`로 설정하면 메뉴 항목을 기본 항목으로 지정할 수 있습니다.  기본 항목은 메뉴를 클릭할 경우 굵은 글꼴로 나타납니다.  메뉴 항목의 <xref:System.Windows.Forms.MenuItem.Checked%2A> 속성은 `true` 또는 `false`이며 메뉴 항목의 선택 여부를 나타냅니다.  메뉴 항목의 <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> 속성은 선택된 항목의 모양을 사용자 지정합니다. <xref:System.Windows.Forms.MenuItem.RadioCheck%2A>를 `true`로 설정하면 항목 옆에 라디오 단추가 나타납니다. <xref:System.Windows.Forms.MenuItem.RadioCheck%2A>를 `false`로 설정하면 항목 옆에 확인 표시가 나타납니다  
+## <a name="key-properties"></a><span data-ttu-id="ed9a0-106">키 속성</span><span class="sxs-lookup"><span data-stu-id="ed9a0-106">Key Properties</span></span>  
+ <span data-ttu-id="ed9a0-107">메뉴 항목을 설정 하 여 기본 항목으로 지정 될 수 있습니다는 <xref:System.Windows.Forms.MenuItem.DefaultItem%2A> 속성을 `true`합니다.</span><span class="sxs-lookup"><span data-stu-id="ed9a0-107">A menu item can be designated as the default item by setting the <xref:System.Windows.Forms.MenuItem.DefaultItem%2A> property to `true`.</span></span> <span data-ttu-id="ed9a0-108">메뉴를 클릭 하면 기본 항목이 굵은 텍스트로 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="ed9a0-108">The default item appears in bold text when the menu is clicked.</span></span> <span data-ttu-id="ed9a0-109">메뉴 항목의 <xref:System.Windows.Forms.MenuItem.Checked%2A> 속성이 `true` 또는 `false`, 메뉴 항목이 선택 되어 있는지 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="ed9a0-109">The menu item's <xref:System.Windows.Forms.MenuItem.Checked%2A> property is either `true` or `false`, and indicates whether the menu item is selected.</span></span> <span data-ttu-id="ed9a0-110">메뉴 항목의 <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> 속성에서 선택한 항목의 모양을 사용자 지정: 경우 <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> 로 설정 되어 `true`, 경우 항목; 옆에 표시 되는 라디오 단추 <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> 로 설정 된 `false`, 항목 옆에 확인 표시가 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="ed9a0-110">The menu item's <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> property customizes the appearance of the selected item: if <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> is set to `true`, a radio button appears next to the item; if <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> is set to `false`, a check mark appears next to the item.</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Forms.MainMenu>   
- <xref:System.Windows.Forms.Menu>   
- <xref:System.Windows.Forms.MenuItem>   
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ContextMenuStrip>   
- [MenuStrip 컨트롤 개요](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="ed9a0-111">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ed9a0-111">See Also</span></span>  
+ <xref:System.Windows.Forms.MainMenu>  
+ <xref:System.Windows.Forms.Menu>  
+ <xref:System.Windows.Forms.MenuItem>  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ContextMenuStrip>  
+ [<span data-ttu-id="ed9a0-112">MenuStrip 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="ed9a0-112">MenuStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)

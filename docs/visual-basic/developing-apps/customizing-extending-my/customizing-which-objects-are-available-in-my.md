@@ -1,105 +1,88 @@
 ---
-title: "있는 개체 사용자 지정은 지원 되는 내 (Visual Basic) | Microsoft 문서"
-ms.date: 2015-07-20
+title: "My에 사용할 수 있는 개체 사용자 지정(Visual Basic)"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
 helpviewer_keywords:
-- My namespace, customizing
+- My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6791398270e4348adf356eb36a385bfbefde873c
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: e5f5be7481ee102074fe1236b91110ee6b1d2944
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>My에 사용할 수 있는 개체 사용자 지정(Visual Basic)
-이 여기서는를 제어 하는 방법에 대해 설명 `My` 개체는 프로젝트의 설정 하 여 활성화 되어 `_MYTYPE` 조건부 컴파일 상수입니다. [!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] 통합 개발 환경 (IDE) 유지는 `_MYTYPE` 프로젝트의 형식을와 동기화 하는 프로젝트에 대 한 조건부 컴파일 상수입니다.  
+# <a name="customizing-which-objects-are-available-in-my-visual-basic"></a><span data-ttu-id="41ddc-102">My에 사용할 수 있는 개체 사용자 지정(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="41ddc-102">Customizing Which Objects are Available in My (Visual Basic)</span></span>
+<span data-ttu-id="41ddc-103">이 여기서는를 제어 하는 방법에 대해 설명 `My` 개체는 프로젝트의 설정 하 여 활성화 되어 `_MYTYPE` 조건부 컴파일 상수입니다.</span><span class="sxs-lookup"><span data-stu-id="41ddc-103">This topic describes how you can control which `My` objects are enabled by setting your project's `_MYTYPE` conditional-compilation constant.</span></span> <span data-ttu-id="41ddc-104">[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 통합 개발 환경 (IDE) 유지는 `_MYTYPE` 동기화 된 프로젝트의 형식을 프로젝트에 대 한 조건부 컴파일 상수입니다.</span><span class="sxs-lookup"><span data-stu-id="41ddc-104">The [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Integrated Development Environment (IDE) keeps the `_MYTYPE` conditional-compilation constant for a project in sync with the project's type.</span></span>  
   
-## <a name="predefined-mytype-values"></a>미리 정의 된 _MYTYPE 값  
- 사용 해야는 `/define` 컴파일러 옵션을 설정 하는 `_MYTYPE` 조건부 컴파일 상수입니다. 에 대 한 값을 지정 하는 경우는 `_MYTYPE` 상수를 문자열 값에에서 묶어야 백슬래시/따옴표 (\\") 시퀀스입니다. 예를 들어, 사용할 수 있습니다.  
+## <a name="predefined-mytype-values"></a><span data-ttu-id="41ddc-105">미리 정의 된 _MYTYPE 값</span><span class="sxs-lookup"><span data-stu-id="41ddc-105">Predefined _MYTYPE Values</span></span>  
+ <span data-ttu-id="41ddc-106">사용 해야 합니다는 `/define` 컴파일러 옵션을 설정 하려면는 `_MYTYPE` 조건부 컴파일 상수입니다.</span><span class="sxs-lookup"><span data-stu-id="41ddc-106">You must use the `/define` compiler option to set the `_MYTYPE` conditional-compilation constant.</span></span> <span data-ttu-id="41ddc-107">에 대 한 값을 지정 하는 경우는 `_MYTYPE` 상수를 문자열 값에에서 묶어야 백슬래시/따옴표 (\\") 시퀀스입니다.</span><span class="sxs-lookup"><span data-stu-id="41ddc-107">When specifying your own value for the `_MYTYPE` constant, you must enclose the string value in backslash/quotation mark (\\") sequences.</span></span> <span data-ttu-id="41ddc-108">예를 들어 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41ddc-108">For example, you could use:</span></span>  
   
 ```  
 /define:_MYTYPE=\"WindowsForms\"  
 ```  
   
- 이 테이블에서는 `_MYTYPE` 여러 프로젝트 형식에 대 한 조건부 컴파일 상수로 설정 됩니다.  
+ <span data-ttu-id="41ddc-109">이 테이블에서는 `_MYTYPE` 몇 가지 프로젝트 형식에 대 한 조건부 컴파일 상수 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="41ddc-109">This table shows what the `_MYTYPE` conditional-compilation constant is set to for several project types.</span></span>  
   
-|프로젝트 형식|_MYTYPE 값|  
+|<span data-ttu-id="41ddc-110">프로젝트 형식</span><span class="sxs-lookup"><span data-stu-id="41ddc-110">Project type</span></span>|<span data-ttu-id="41ddc-111">_MYTYPE 값</span><span class="sxs-lookup"><span data-stu-id="41ddc-111">_MYTYPE value</span></span>|  
 |------------------|--------------------|  
-|클래스 라이브러리|"Windows"|  
-|콘솔 응용 프로그램|"콘솔"|  
-|웹|"웹"|  
-|웹 컨트롤 라이브러리|"WebControl"|  
-|Windows 응용 프로그램|"WindowsForms"|  
-|Windows 응용 프로그램을 사용자 지정을 시작할 때`Sub Main`|"WindowsFormsWithCustomSubMain"|  
-|Windows 컨트롤 라이브러리|"Windows"|  
-|Windows 서비스|"콘솔"|  
-|Empty|"빈"|  
+|<span data-ttu-id="41ddc-112">클래스 라이브러리</span><span class="sxs-lookup"><span data-stu-id="41ddc-112">Class Library</span></span>|<span data-ttu-id="41ddc-113">"Windows"</span><span class="sxs-lookup"><span data-stu-id="41ddc-113">"Windows"</span></span>|  
+|<span data-ttu-id="41ddc-114">콘솔 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="41ddc-114">Console Application</span></span>|<span data-ttu-id="41ddc-115">"Console"</span><span class="sxs-lookup"><span data-stu-id="41ddc-115">"Console"</span></span>|  
+|<span data-ttu-id="41ddc-116">웹</span><span class="sxs-lookup"><span data-stu-id="41ddc-116">Web</span></span>|<span data-ttu-id="41ddc-117">"웹"</span><span class="sxs-lookup"><span data-stu-id="41ddc-117">"Web"</span></span>|  
+|<span data-ttu-id="41ddc-118">웹 컨트롤 라이브러리</span><span class="sxs-lookup"><span data-stu-id="41ddc-118">Web Control Library</span></span>|<span data-ttu-id="41ddc-119">"WebControl"</span><span class="sxs-lookup"><span data-stu-id="41ddc-119">"WebControl"</span></span>|  
+|<span data-ttu-id="41ddc-120">Windows 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="41ddc-120">Windows Application</span></span>|<span data-ttu-id="41ddc-121">"WindowsForms"</span><span class="sxs-lookup"><span data-stu-id="41ddc-121">"WindowsForms"</span></span>|  
+|<span data-ttu-id="41ddc-122">Windows 응용 프로그램을 사용자 지정을 시작할 때`Sub Main`</span><span class="sxs-lookup"><span data-stu-id="41ddc-122">Windows Application, when starting with custom `Sub Main`</span></span>|<span data-ttu-id="41ddc-123">"WindowsFormsWithCustomSubMain"</span><span class="sxs-lookup"><span data-stu-id="41ddc-123">"WindowsFormsWithCustomSubMain"</span></span>|  
+|<span data-ttu-id="41ddc-124">Windows 컨트롤 라이브러리</span><span class="sxs-lookup"><span data-stu-id="41ddc-124">Windows Control Library</span></span>|<span data-ttu-id="41ddc-125">"Windows"</span><span class="sxs-lookup"><span data-stu-id="41ddc-125">"Windows"</span></span>|  
+|<span data-ttu-id="41ddc-126">Windows 서비스</span><span class="sxs-lookup"><span data-stu-id="41ddc-126">Windows Service</span></span>|<span data-ttu-id="41ddc-127">"Console"</span><span class="sxs-lookup"><span data-stu-id="41ddc-127">"Console"</span></span>|  
+|<span data-ttu-id="41ddc-128">Empty</span><span class="sxs-lookup"><span data-stu-id="41ddc-128">Empty</span></span>|<span data-ttu-id="41ddc-129">"Empty"</span><span class="sxs-lookup"><span data-stu-id="41ddc-129">"Empty"</span></span>|  
   
 > [!NOTE]
->  모든 조건부 컴파일 문자열 비교는 대/소문자 구분, 방식과 관계 없이 `Option Compare` 문의 설정 합니다.  
+>  <span data-ttu-id="41ddc-130">모든 조건부 컴파일 문자열 비교는 대/소문자 구분, 방식과 관계 없이 `Option Compare` 문의 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="41ddc-130">All conditional-compilation string comparisons are case-sensitive, regardless of how the `Option Compare` statement is set.</span></span>  
   
-## <a name="dependent-my-compilation-constants"></a>종속 _MY 컴파일 상수  
- `_MYTYPE` 조건부 컴파일 상수의 여러 다른 값을 차례로 제어 `_MY` 컴파일 상수:  
+## <a name="dependent-my-compilation-constants"></a><span data-ttu-id="41ddc-131">종속 _MY 컴파일 상수</span><span class="sxs-lookup"><span data-stu-id="41ddc-131">Dependent _MY Compilation Constants</span></span>  
+ <span data-ttu-id="41ddc-132">`_MYTYPE` 조건부 컴파일 상수 값 몇 가지 다른을 차례로 제어 `_MY` 컴파일 상수:</span><span class="sxs-lookup"><span data-stu-id="41ddc-132">The `_MYTYPE` conditional-compilation constant, in turn, controls the values of several other `_MY` compilation constants:</span></span>  
   
-|_MYTYPE|_MYAPPLICATIONTYPE|_MYCOMPUTERTYPE|_MYFORMS|_MYUSERTYPE|_MYWEBSERVICES|  
+|<span data-ttu-id="41ddc-133">_MYTYPE</span><span class="sxs-lookup"><span data-stu-id="41ddc-133">_MYTYPE</span></span>|<span data-ttu-id="41ddc-134">_MYAPPLICATIONTYPE</span><span class="sxs-lookup"><span data-stu-id="41ddc-134">_MYAPPLICATIONTYPE</span></span>|<span data-ttu-id="41ddc-135">_MYCOMPUTERTYPE</span><span class="sxs-lookup"><span data-stu-id="41ddc-135">_MYCOMPUTERTYPE</span></span>|<span data-ttu-id="41ddc-136">_MYFORMS</span><span class="sxs-lookup"><span data-stu-id="41ddc-136">_MYFORMS</span></span>|<span data-ttu-id="41ddc-137">_MYUSERTYPE</span><span class="sxs-lookup"><span data-stu-id="41ddc-137">_MYUSERTYPE</span></span>|<span data-ttu-id="41ddc-138">_MYWEBSERVICES</span><span class="sxs-lookup"><span data-stu-id="41ddc-138">_MYWEBSERVICES</span></span>|  
 |--------------|-------------------------|----------------------|---------------|------------------|---------------------|  
-|"콘솔"|"콘솔"|"Windows"|정의되지 않음|"Windows"|TRUE|  
-|"Custom"|정의되지 않음|정의되지 않음|정의되지 않음|정의되지 않음|정의되지 않음|  
-|"빈"|정의되지 않음|정의되지 않음|정의되지 않음|정의되지 않음|정의되지 않음|  
-|"웹"|정의되지 않음|"웹"|FALSE|"웹"|FALSE|  
-|"WebControl"|정의되지 않음|"웹"|FALSE|"웹"|TRUE|  
-|"Windows" 또는 ""|"Windows"|"Windows"|정의되지 않음|"Windows"|TRUE|  
-|"WindowsForms"|"WindowsForms"|"Windows"|TRUE|"Windows"|TRUE|  
-|"WindowsFormsWithCustomSubMain"|"콘솔"|"Windows"|TRUE|"Windows"|TRUE|  
+|<span data-ttu-id="41ddc-139">"Console"</span><span class="sxs-lookup"><span data-stu-id="41ddc-139">"Console"</span></span>|<span data-ttu-id="41ddc-140">"Console"</span><span class="sxs-lookup"><span data-stu-id="41ddc-140">"Console"</span></span>|<span data-ttu-id="41ddc-141">"Windows"</span><span class="sxs-lookup"><span data-stu-id="41ddc-141">"Windows"</span></span>|<span data-ttu-id="41ddc-142">정의 되지 않은</span><span class="sxs-lookup"><span data-stu-id="41ddc-142">Undefined</span></span>|<span data-ttu-id="41ddc-143">"Windows"</span><span class="sxs-lookup"><span data-stu-id="41ddc-143">"Windows"</span></span>|<span data-ttu-id="41ddc-144">TRUE</span><span class="sxs-lookup"><span data-stu-id="41ddc-144">TRUE</span></span>|  
+|<span data-ttu-id="41ddc-145">"Custom"</span><span class="sxs-lookup"><span data-stu-id="41ddc-145">"Custom"</span></span>|<span data-ttu-id="41ddc-146">정의 되지 않은</span><span class="sxs-lookup"><span data-stu-id="41ddc-146">Undefined</span></span>|<span data-ttu-id="41ddc-147">정의 되지 않은</span><span class="sxs-lookup"><span data-stu-id="41ddc-147">Undefined</span></span>|<span data-ttu-id="41ddc-148">정의 되지 않은</span><span class="sxs-lookup"><span data-stu-id="41ddc-148">Undefined</span></span>|<span data-ttu-id="41ddc-149">정의 되지 않은</span><span class="sxs-lookup"><span data-stu-id="41ddc-149">Undefined</span></span>|<span data-ttu-id="41ddc-150">정의 되지 않은</span><span class="sxs-lookup"><span data-stu-id="41ddc-150">Undefined</span></span>|  
+|<span data-ttu-id="41ddc-151">"Empty"</span><span class="sxs-lookup"><span data-stu-id="41ddc-151">"Empty"</span></span>|<span data-ttu-id="41ddc-152">정의 되지 않은</span><span class="sxs-lookup"><span data-stu-id="41ddc-152">Undefined</span></span>|<span data-ttu-id="41ddc-153">정의 되지 않은</span><span class="sxs-lookup"><span data-stu-id="41ddc-153">Undefined</span></span>|<span data-ttu-id="41ddc-154">정의 되지 않은</span><span class="sxs-lookup"><span data-stu-id="41ddc-154">Undefined</span></span>|<span data-ttu-id="41ddc-155">정의 되지 않은</span><span class="sxs-lookup"><span data-stu-id="41ddc-155">Undefined</span></span>|<span data-ttu-id="41ddc-156">정의 되지 않은</span><span class="sxs-lookup"><span data-stu-id="41ddc-156">Undefined</span></span>|  
+|<span data-ttu-id="41ddc-157">"웹"</span><span class="sxs-lookup"><span data-stu-id="41ddc-157">"Web"</span></span>|<span data-ttu-id="41ddc-158">정의 되지 않은</span><span class="sxs-lookup"><span data-stu-id="41ddc-158">Undefined</span></span>|<span data-ttu-id="41ddc-159">"웹"</span><span class="sxs-lookup"><span data-stu-id="41ddc-159">"Web"</span></span>|<span data-ttu-id="41ddc-160">FALSE</span><span class="sxs-lookup"><span data-stu-id="41ddc-160">FALSE</span></span>|<span data-ttu-id="41ddc-161">"웹"</span><span class="sxs-lookup"><span data-stu-id="41ddc-161">"Web"</span></span>|<span data-ttu-id="41ddc-162">FALSE</span><span class="sxs-lookup"><span data-stu-id="41ddc-162">FALSE</span></span>|  
+|<span data-ttu-id="41ddc-163">"WebControl"</span><span class="sxs-lookup"><span data-stu-id="41ddc-163">"WebControl"</span></span>|<span data-ttu-id="41ddc-164">정의 되지 않은</span><span class="sxs-lookup"><span data-stu-id="41ddc-164">Undefined</span></span>|<span data-ttu-id="41ddc-165">"웹"</span><span class="sxs-lookup"><span data-stu-id="41ddc-165">"Web"</span></span>|<span data-ttu-id="41ddc-166">FALSE</span><span class="sxs-lookup"><span data-stu-id="41ddc-166">FALSE</span></span>|<span data-ttu-id="41ddc-167">"웹"</span><span class="sxs-lookup"><span data-stu-id="41ddc-167">"Web"</span></span>|<span data-ttu-id="41ddc-168">TRUE</span><span class="sxs-lookup"><span data-stu-id="41ddc-168">TRUE</span></span>|  
+|<span data-ttu-id="41ddc-169">"Windows" 또는 ""</span><span class="sxs-lookup"><span data-stu-id="41ddc-169">"Windows" or ""</span></span>|<span data-ttu-id="41ddc-170">"Windows"</span><span class="sxs-lookup"><span data-stu-id="41ddc-170">"Windows"</span></span>|<span data-ttu-id="41ddc-171">"Windows"</span><span class="sxs-lookup"><span data-stu-id="41ddc-171">"Windows"</span></span>|<span data-ttu-id="41ddc-172">정의 되지 않은</span><span class="sxs-lookup"><span data-stu-id="41ddc-172">Undefined</span></span>|<span data-ttu-id="41ddc-173">"Windows"</span><span class="sxs-lookup"><span data-stu-id="41ddc-173">"Windows"</span></span>|<span data-ttu-id="41ddc-174">TRUE</span><span class="sxs-lookup"><span data-stu-id="41ddc-174">TRUE</span></span>|  
+|<span data-ttu-id="41ddc-175">"WindowsForms"</span><span class="sxs-lookup"><span data-stu-id="41ddc-175">"WindowsForms"</span></span>|<span data-ttu-id="41ddc-176">"WindowsForms"</span><span class="sxs-lookup"><span data-stu-id="41ddc-176">"WindowsForms"</span></span>|<span data-ttu-id="41ddc-177">"Windows"</span><span class="sxs-lookup"><span data-stu-id="41ddc-177">"Windows"</span></span>|<span data-ttu-id="41ddc-178">TRUE</span><span class="sxs-lookup"><span data-stu-id="41ddc-178">TRUE</span></span>|<span data-ttu-id="41ddc-179">"Windows"</span><span class="sxs-lookup"><span data-stu-id="41ddc-179">"Windows"</span></span>|<span data-ttu-id="41ddc-180">TRUE</span><span class="sxs-lookup"><span data-stu-id="41ddc-180">TRUE</span></span>|  
+|<span data-ttu-id="41ddc-181">"WindowsFormsWithCustomSubMain"</span><span class="sxs-lookup"><span data-stu-id="41ddc-181">"WindowsFormsWithCustomSubMain"</span></span>|<span data-ttu-id="41ddc-182">"Console"</span><span class="sxs-lookup"><span data-stu-id="41ddc-182">"Console"</span></span>|<span data-ttu-id="41ddc-183">"Windows"</span><span class="sxs-lookup"><span data-stu-id="41ddc-183">"Windows"</span></span>|<span data-ttu-id="41ddc-184">TRUE</span><span class="sxs-lookup"><span data-stu-id="41ddc-184">TRUE</span></span>|<span data-ttu-id="41ddc-185">"Windows"</span><span class="sxs-lookup"><span data-stu-id="41ddc-185">"Windows"</span></span>|<span data-ttu-id="41ddc-186">TRUE</span><span class="sxs-lookup"><span data-stu-id="41ddc-186">TRUE</span></span>|  
   
- 기본적으로 정의 되지 않은 조건부 컴파일 상수를 확인 `FALSE`합니다. 기본 동작을 재정의 하도록 프로젝트를 컴파일할 때 정의 되지 않은 상수에 대 한 값을 지정할 수 있습니다.  
+ <span data-ttu-id="41ddc-187">기본적으로 정의 되지 않은 조건부 컴파일 상수를 확인 `FALSE`합니다.</span><span class="sxs-lookup"><span data-stu-id="41ddc-187">By default, undefined conditional-compilation constants resolve to `FALSE`.</span></span> <span data-ttu-id="41ddc-188">기본 동작을 재정의 하도록 프로젝트를 컴파일할 때 정의 되지 않은 상수에 대 한 값을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="41ddc-188">You can specify values for the undefined constants when compiling your project to override the default behavior.</span></span>  
   
 > [!NOTE]
->  때 `_MYTYPE` 설정 된 프로젝트에 포함 된 "Custom"으로 `My` 네임 스페이스를 만들었지만 개체가 없습니다. 그러나 설정 `_MYTYPE` 에 "빈" 컴파일러에서 추가 하지 못하도록는 `My` 네임 스페이스 및 해당 개체입니다.  
+>  <span data-ttu-id="41ddc-189">때 `_MYTYPE` 설정 되어 프로젝트에 포함 된 "Custom"으로 `My` 하지만 네임 스페이스에 개체가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="41ddc-189">When `_MYTYPE` is set to "Custom", the project contains the `My` namespace, but it contains no objects.</span></span> <span data-ttu-id="41ddc-190">그러나 설정 `_MYTYPE` 에 "빈" 컴파일러가가 추가 하지는 `My` 네임 스페이스 및 패키지 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="41ddc-190">However, setting `_MYTYPE` to "Empty" prevents the compiler from adding the `My` namespace and its objects.</span></span>  
   
- 이 표에서 미리 정의 된 값의 효과 `_MY` 컴파일 상수입니다.  
+ <span data-ttu-id="41ddc-191">이 표에서 미리 정의 된 값의 효과 `_MY` 컴파일 상수입니다.</span><span class="sxs-lookup"><span data-stu-id="41ddc-191">This table describes the effects of the predefined values of the `_MY` compilation constants.</span></span>  
   
-|상수|의미|  
+|<span data-ttu-id="41ddc-192">상수</span><span class="sxs-lookup"><span data-stu-id="41ddc-192">Constant</span></span>|<span data-ttu-id="41ddc-193">의미</span><span class="sxs-lookup"><span data-stu-id="41ddc-193">Meaning</span></span>|  
 |--------------|-------------|  
-|`_MYAPPLICATIONTYPE`|수 있도록 `My.Application`상수 "콘솔" Windows가 있으면 "또는"WindowsForms":<br /><br /> -"콘솔" 버전 <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>.</xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> 에서 파생 고 "Windows" 버전 보다 적은 수의 멤버를 포함 합니다.<br />-"Windows" 버전에서 파생 <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>그리고 "WindowsForms" 버전 보다 적은 수의 멤버는.</xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase><br />-"WindowsForms" 버전의 `My.Application` <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>.</xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> 에서 파생 하는 경우는 `TARGET` 상수 "winexe" 정의 된 후 클래스를 포함 한 `Sub Main` 메서드.|  
-|`_MYCOMPUTERTYPE`|수 있도록 `My.Computer`상수는 "웹" 또는 "Windows" 하는 경우:<br /><br /> -"웹" 버전에서 파생 <xref:Microsoft.VisualBasic.Devices.ServerComputer>, "Windows" 버전 보다 더 적은 멤버를 포함 합니다.</xref:Microsoft.VisualBasic.Devices.ServerComputer><br />-"Windows" 버전의 `My.Computer` <xref:Microsoft.VisualBasic.Devices.Computer>.</xref:Microsoft.VisualBasic.Devices.Computer> 에서 파생|  
-|`_MYFORMS`|수 있도록 `My.Forms`상수는 경우, `TRUE`합니다.|  
-|`_MYUSERTYPE`|수 있도록 `My.User`상수는 "웹" 또는 "Windows" 하는 경우:<br /><br /> -"웹" 버전의 `My.User` 현재 HTTP 요청의 사용자 id와 연결 합니다.<br />-"Windows" 버전의 `My.User` 스레드의 현재 보안 주체와 연결 됩니다.|  
-|`_MYWEBSERVICES`|수 있도록 `My.WebServices`상수는 경우, `TRUE`합니다.|  
-|`_MYTYPE`|수 있도록 `My.Log`, `My.Request`, 및 `My.Response`상수는 "Web" 하는 경우.|  
+|`_MYAPPLICATIONTYPE`|<span data-ttu-id="41ddc-194">수 있도록 `My.Application`, 상수가 "콘솔 에" Windows "또는"WindowsForms":</span><span class="sxs-lookup"><span data-stu-id="41ddc-194">Enables `My.Application`, if the constant is "Console," Windows," or "WindowsForms":</span></span><br /><br /> <span data-ttu-id="41ddc-195">-"Console" 버전에서 파생 <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>합니다.</span><span class="sxs-lookup"><span data-stu-id="41ddc-195">-   The "Console" version derives from <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase>.</span></span> <span data-ttu-id="41ddc-196">있으며 "Windows" 버전 보다 적은 수의 멤버입니다.</span><span class="sxs-lookup"><span data-stu-id="41ddc-196">and has fewer members than the "Windows" version.</span></span><br /><span data-ttu-id="41ddc-197">-"Windows" 버전에서 파생 <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>및에 "WindowsForms" 버전 보다 적은 수의 멤버입니다.</span><span class="sxs-lookup"><span data-stu-id="41ddc-197">-   The "Windows" version derives from <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>.and has fewer members than the "WindowsForms" version.</span></span><br /><span data-ttu-id="41ddc-198">-"WindowsForms" 버전의 `My.Application` 에서 파생 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>합니다.</span><span class="sxs-lookup"><span data-stu-id="41ddc-198">-   The "WindowsForms" version of `My.Application` derives from <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>.</span></span> <span data-ttu-id="41ddc-199">경우는 `TARGET` 상수 "winexe" 정의 됩니다. 다음의 클래스를 포함 한 `Sub Main` 메서드.</span><span class="sxs-lookup"><span data-stu-id="41ddc-199">If the `TARGET` constant is defined to be "winexe", then the class includes a `Sub Main` method.</span></span>|  
+|`_MYCOMPUTERTYPE`|<span data-ttu-id="41ddc-200">수 있도록 `My.Computer`상수 "웹" 또는 "Windows"는 경우:</span><span class="sxs-lookup"><span data-stu-id="41ddc-200">Enables `My.Computer`, if the constant is "Web" or "Windows":</span></span><br /><br /> <span data-ttu-id="41ddc-201">-"웹" 버전에서 파생 <xref:Microsoft.VisualBasic.Devices.ServerComputer>, 있으며 "Windows" 버전 보다 적은 수의 멤버입니다.</span><span class="sxs-lookup"><span data-stu-id="41ddc-201">-   The "Web" version derives from <xref:Microsoft.VisualBasic.Devices.ServerComputer>, and has fewer members than the "Windows" version.</span></span><br /><span data-ttu-id="41ddc-202">-의 "Windows" 버전 `My.Computer` 에서 파생 <xref:Microsoft.VisualBasic.Devices.Computer>합니다.</span><span class="sxs-lookup"><span data-stu-id="41ddc-202">-   The "Windows" version of `My.Computer` derives from <xref:Microsoft.VisualBasic.Devices.Computer>.</span></span>|  
+|`_MYFORMS`|<span data-ttu-id="41ddc-203">수 있도록 `My.Forms`상수 있으면 `TRUE`합니다.</span><span class="sxs-lookup"><span data-stu-id="41ddc-203">Enables `My.Forms`, if the constant is `TRUE`.</span></span>|  
+|`_MYUSERTYPE`|<span data-ttu-id="41ddc-204">수 있도록 `My.User`상수 "웹" 또는 "Windows"는 경우:</span><span class="sxs-lookup"><span data-stu-id="41ddc-204">Enables `My.User`, if the constant is "Web" or "Windows":</span></span><br /><br /> <span data-ttu-id="41ddc-205">-의 "웹" 버전 `My.User` 현재 HTTP 요청의 사용자 id와 연결 됩니다.</span><span class="sxs-lookup"><span data-stu-id="41ddc-205">-   The "Web" version of `My.User` is associated with the user identity of the current HTTP request.</span></span><br /><span data-ttu-id="41ddc-206">-의 "Windows" 버전 `My.User` 스레드의 현재 보안 주체와 연결 됩니다.</span><span class="sxs-lookup"><span data-stu-id="41ddc-206">-   The "Windows" version of `My.User` is associated with the thread's current principal.</span></span>|  
+|`_MYWEBSERVICES`|<span data-ttu-id="41ddc-207">수 있도록 `My.WebServices`상수 있으면 `TRUE`합니다.</span><span class="sxs-lookup"><span data-stu-id="41ddc-207">Enables `My.WebServices`, if the constant is `TRUE`.</span></span>|  
+|`_MYTYPE`|<span data-ttu-id="41ddc-208">수 있도록 `My.Log`, `My.Request`, 및 `My.Response`상수 "웹"는 경우.</span><span class="sxs-lookup"><span data-stu-id="41ddc-208">Enables `My.Log`, `My.Request`, and `My.Response`, if the constant is "Web".</span></span>|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase></xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>   
- <xref:Microsoft.VisualBasic.Devices.Computer></xref:Microsoft.VisualBasic.Devices.Computer>   
- <xref:Microsoft.VisualBasic.Logging.Log></xref:Microsoft.VisualBasic.Logging.Log>   
- <xref:Microsoft.VisualBasic.ApplicationServices.User></xref:Microsoft.VisualBasic.ApplicationServices.User>   
- [어떻게 내 프로젝트 형식에 따라 달라 집니다.](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)   
- [조건부 컴파일](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)   
- [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)   
- [My.Forms 개체](../../../visual-basic/language-reference/objects/my-forms-object.md)   
- [My.Request 개체](../../../visual-basic/language-reference/objects/my-request-object.md)   
- [My.Response 개체](../../../visual-basic/language-reference/objects/my-response-object.md)   
- [My.WebServices 개체](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+## <a name="see-also"></a><span data-ttu-id="41ddc-209">참고 항목</span><span class="sxs-lookup"><span data-stu-id="41ddc-209">See Also</span></span>  
+ <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
+ <xref:Microsoft.VisualBasic.Devices.Computer>  
+ <xref:Microsoft.VisualBasic.Logging.Log>  
+ <xref:Microsoft.VisualBasic.ApplicationServices.User>  
+ [<span data-ttu-id="41ddc-210">My가 프로젝트 형식에 의존하는 방식</span><span class="sxs-lookup"><span data-stu-id="41ddc-210">How My Depends on Project Type</span></span>](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
+ [<span data-ttu-id="41ddc-211">조건부 컴파일</span><span class="sxs-lookup"><span data-stu-id="41ddc-211">Conditional Compilation</span></span>](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
+ [<span data-ttu-id="41ddc-212">/define (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="41ddc-212">/define (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/define.md)  
+ [<span data-ttu-id="41ddc-213">My.Forms 개체</span><span class="sxs-lookup"><span data-stu-id="41ddc-213">My.Forms Object</span></span>](../../../visual-basic/language-reference/objects/my-forms-object.md)  
+ [<span data-ttu-id="41ddc-214">My.Request 개체</span><span class="sxs-lookup"><span data-stu-id="41ddc-214">My.Request Object</span></span>](../../../visual-basic/language-reference/objects/my-request-object.md)  
+ [<span data-ttu-id="41ddc-215">My.Response 개체</span><span class="sxs-lookup"><span data-stu-id="41ddc-215">My.Response Object</span></span>](../../../visual-basic/language-reference/objects/my-response-object.md)  
+ [<span data-ttu-id="41ddc-216">My.WebServices 개체</span><span class="sxs-lookup"><span data-stu-id="41ddc-216">My.WebServices Object</span></span>](../../../visual-basic/language-reference/objects/my-webservices-object.md)

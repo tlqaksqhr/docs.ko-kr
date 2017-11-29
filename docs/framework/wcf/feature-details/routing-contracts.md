@@ -1,38 +1,41 @@
 ---
-title: "라우팅 계약 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "라우팅 계약"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9ceea7ae-ea19-4cf9-ba4f-d071e236546d
-caps.latest.revision: 7
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: daebd84c9cef5e64ea7ed55c27b671ba01d14df0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 라우팅 계약
-라우팅 계약은 라우팅 서비스에서 처리할 수 있는 메시지 패턴을 정의합니다.각 계약은 형식이 없으며 메시지 스키마나 동작을 몰라도 서비스에서 메시지를 받을 수 있도록 합니다.따라서 라우트할 기본 메시지의 세부 사항에 대한 추가 구성 없이 라우팅 서비스에서 일반적인 방식으로 메시지를 라우트할 수 있습니다.  
+# <a name="routing-contracts"></a><span data-ttu-id="ee412-102">라우팅 계약</span><span class="sxs-lookup"><span data-stu-id="ee412-102">Routing Contracts</span></span>
+<span data-ttu-id="ee412-103">라우팅 계약은 라우팅 서비스에서 처리할 수 있는 메시지 패턴을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="ee412-103">Routing contracts define the message patterns that the Routing Service can process.</span></span>  <span data-ttu-id="ee412-104">각 계약은 형식이 없으며 메시지 스키마나 동작을 몰라도 서비스에서 메시지를 받을 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="ee412-104">Each contract is typeless and allows the service to receive a message without knowledge of the message schema or action.</span></span> <span data-ttu-id="ee412-105">따라서 라우트할 기본 메시지의 세부 사항에 대한 추가 구성 없이 라우팅 서비스에서 일반적인 방식으로 메시지를 라우트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ee412-105">This allows the Routing Service to generically route messages without additional configuration for the specifics of the underlying messages being routed.</span></span>  
   
-## 라우팅 계약  
- 라우팅 서비스에서 제네릭 WCF 메시지 개체를 허용하기 때문에 계약을 선택할 때 가장 중요한 고려 사항은 클라이언트 및 서비스와 통신할 때 사용할 채널의 셰이프입니다.메시지를 처리할 때 라우팅 서비스에서 대칭 메시지 펌프를 사용하므로 인바운드 계약의 셰이프와 아웃바운드 계약의 셰이프가 일치해야 합니다.그러나 디스패처가 이중 채널을 요청\-회신 채널로 변환하는 경우나 디스패처가 필요 없거나 사용되지 않는 세션 지원을 채널에서 제거하는 경우, 즉 **SessionMode.Allowed**가 **IInputSessionChannel**을 **IInputChannel**로 변환하는 경우처럼 서비스 모델의 디스패처가 셰이프를 수정할 수 있는 경우도 있습니다.  
+## <a name="routing-contracts"></a><span data-ttu-id="ee412-106">라우팅 계약</span><span class="sxs-lookup"><span data-stu-id="ee412-106">Routing Contracts</span></span>  
+ <span data-ttu-id="ee412-107">라우팅 서비스에서 제네릭 WCF 메시지 개체를 허용하기 때문에 계약을 선택할 때 가장 중요한 고려 사항은 클라이언트 및 서비스와 통신할 때 사용할 채널의 셰이프입니다.</span><span class="sxs-lookup"><span data-stu-id="ee412-107">Because the Routing Service accepts a generic WCF Message object, the most important consideration when selecting a contract is the shape of the channel that will be used when communicating with the clients and services.</span></span> <span data-ttu-id="ee412-108">메시지를 처리할 때 라우팅 서비스에서 대칭 메시지 펌프를 사용하므로 인바운드 계약의 셰이프와 아웃바운드 계약의 셰이프가 일치해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="ee412-108">When processing messages, the Routing Service uses symmetrical message pumps, so generally the shape of the inbound contract must match the shape of the outbound contract.</span></span> <span data-ttu-id="ee412-109">그러나 서비스 모델 디스패처 디스패처가 이중 채널 요청-회신 채널로 변환 하거나 필요 하지 않습니다 (즉 사용 되지 않는 경우 세션 지원을 채널에서 제거 하는 등 모양을 수정할 수 있는 경우도 있습니다. 때 **SessionMode.Allowed**개체로 변환 하는 **IInputSessionChannel** 에 **IInputChannel**).</span><span class="sxs-lookup"><span data-stu-id="ee412-109">However, there are cases where the Service Model’s dispatcher can modify the shapes, such as when the dispatcher converts a duplex channel into a request-reply channel, or removes the session support from a channel when it is not required and is not being used (that is, when **SessionMode.Allowed**, converting an **IInputSessionChannel** into an **IInputChannel**).</span></span>  
   
- 이러한 메시지 펌프를 지원하기 위해 라우팅 서비스는 <xref:System.ServiceModel.Routing> 네임스페이스에 자신이 사용하는 서비스 끝점을 정의할 때 사용되어야 하는 계약을 제공합니다.이러한 계약은 형식이 없기 때문에 모든 메시지 형식이나 동작을 받을 수 있도록 하고 특정 메시지 스키마를 몰라도 라우팅 서비스에서 메시지를 처리할 수 있도록 합니다.라우팅 서비스에서 사용하는 계약에 대한 자세한 내용은 [Routing Contracts](../../../../docs/framework/wcf/feature-details/routing-contracts.md)을 참조하십시오.  
+ <span data-ttu-id="ee412-110">이러한 메시지 펌프를 지원하기 위해 라우팅 서비스는 <xref:System.ServiceModel.Routing> 네임스페이스에 자신이 사용하는 서비스 끝점을 정의할 때 사용되어야 하는 계약을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="ee412-110">To support these message pumps, the Routing Service provides contracts in the <xref:System.ServiceModel.Routing> namespace, which must be used when defining the service endpoints used by the Routing Service.</span></span> <span data-ttu-id="ee412-111">이러한 계약은 형식이 없기 때문에 모든 메시지 형식이나 동작을 받을 수 있도록 하고 특정 메시지 스키마를 몰라도 라우팅 서비스에서 메시지를 처리할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="ee412-111">These contracts are typeless, which allows the receipt of any message type or action, and allows the Routing Service to handle messages without knowledge of the specific message schema.</span></span> <span data-ttu-id="ee412-112">라우팅 서비스에서 사용 하는 계약에 대 한 자세한 내용은 참조 [라우팅 계약](../../../../docs/framework/wcf/feature-details/routing-contracts.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ee412-112">For more information about the contracts used by the Routing Service, see [Routing Contracts](../../../../docs/framework/wcf/feature-details/routing-contracts.md).</span></span>  
   
- 라우팅 서비스에서 제공하는 계약은 <xref:System.ServiceModel.Routing> 네임스페이스에 있습니다. 다음 표에서는 이러한 계약에 대해 설명합니다.  
+ <span data-ttu-id="ee412-113">라우팅 서비스에서 제공하는 계약은 <xref:System.ServiceModel.Routing> 네임스페이스에 있습니다. 다음 표에서는 이러한 계약에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="ee412-113">The contracts provided by the Routing Service are located in the <xref:System.ServiceModel.Routing> namespace, and are described in the following table.</span></span>  
   
-|계약|셰이프|채널 셰이프|  
-|--------|---------|------------|  
-|<xref:System.ServiceModel.Routing.ISimplexDatagramRouter>|SessionMode \= SessionMode.Allowed<br /><br /> AsyncPattern \= true<br /><br /> IsOneWay \= true|IInputChannel \-\> IOutputChannel|  
-|<xref:System.ServiceModel.Routing.ISimplexSessionRouter>|SessionMode \= SessionMode.Required<br /><br /> AsyncPattern \= true<br /><br /> IsOneWay \= true|IInputSessionChannel \-\> IOutputSessionChannel|  
-|<xref:System.ServiceModel.Routing.IRequestReplyRouter>|SessionMode \= SessionMode.Allowed<br /><br /> AsyncPattern \= true|IReplyChannel \-\> IRequestChannel|  
-|<xref:System.ServiceModel.Routing.IDuplexSessionRouter>|SessionMode\=SessionMode.Required<br /><br /> CallbackContract\=typeof\(ISimplexSession\)<br /><br /> AsyncPattern \= true<br /><br /> IsOneWay \= true<br /><br /> TransactionFlow\(TransactionFlowOption.Allowed\)|IDuplexSessionChannel \-\> IDuplexSessionChannel|  
+|<span data-ttu-id="ee412-114">계약</span><span class="sxs-lookup"><span data-stu-id="ee412-114">Contract</span></span>|<span data-ttu-id="ee412-115">모양</span><span class="sxs-lookup"><span data-stu-id="ee412-115">Shape</span></span>|<span data-ttu-id="ee412-116">채널 셰이프</span><span class="sxs-lookup"><span data-stu-id="ee412-116">Channel Shape</span></span>|  
+|--------------|-----------|-------------------|  
+|<xref:System.ServiceModel.Routing.ISimplexDatagramRouter>|<span data-ttu-id="ee412-117">SessionMode = SessionMode.Allowed</span><span class="sxs-lookup"><span data-stu-id="ee412-117">SessionMode = SessionMode.Allowed</span></span><br /><br /> <span data-ttu-id="ee412-118">AsyncPattern = true</span><span class="sxs-lookup"><span data-stu-id="ee412-118">AsyncPattern = true</span></span><br /><br /> <span data-ttu-id="ee412-119">IsOneWay = true</span><span class="sxs-lookup"><span data-stu-id="ee412-119">IsOneWay = true</span></span>|<span data-ttu-id="ee412-120">IInputChannel -> IOutputChannel</span><span class="sxs-lookup"><span data-stu-id="ee412-120">IInputChannel -> IOutputChannel</span></span>|  
+|<xref:System.ServiceModel.Routing.ISimplexSessionRouter>|<span data-ttu-id="ee412-121">SessionMode = SessionMode.Required</span><span class="sxs-lookup"><span data-stu-id="ee412-121">SessionMode = SessionMode.Required</span></span><br /><br /> <span data-ttu-id="ee412-122">AsyncPattern = true</span><span class="sxs-lookup"><span data-stu-id="ee412-122">AsyncPattern = true</span></span><br /><br /> <span data-ttu-id="ee412-123">IsOneWay = true</span><span class="sxs-lookup"><span data-stu-id="ee412-123">IsOneWay = true</span></span>|<span data-ttu-id="ee412-124">IInputSessionChannel -> IOutputSessionChannel</span><span class="sxs-lookup"><span data-stu-id="ee412-124">IInputSessionChannel -> IOutputSessionChannel</span></span>|  
+|<xref:System.ServiceModel.Routing.IRequestReplyRouter>|<span data-ttu-id="ee412-125">SessionMode = SessionMode.Allowed</span><span class="sxs-lookup"><span data-stu-id="ee412-125">SessionMode = SessionMode.Allowed</span></span><br /><br /> <span data-ttu-id="ee412-126">AsyncPattern = true</span><span class="sxs-lookup"><span data-stu-id="ee412-126">AsyncPattern = true</span></span>|<span data-ttu-id="ee412-127">IReplyChannel -> IRequestChannel</span><span class="sxs-lookup"><span data-stu-id="ee412-127">IReplyChannel -> IRequestChannel</span></span>|  
+|<xref:System.ServiceModel.Routing.IDuplexSessionRouter>|<span data-ttu-id="ee412-128">SessionMode=SessionMode.Required</span><span class="sxs-lookup"><span data-stu-id="ee412-128">SessionMode=SessionMode.Required</span></span><br /><br /> <span data-ttu-id="ee412-129">CallbackContract=typeof(ISimplexSession)</span><span class="sxs-lookup"><span data-stu-id="ee412-129">CallbackContract=typeof(ISimplexSession)</span></span><br /><br /> <span data-ttu-id="ee412-130">AsyncPattern = true</span><span class="sxs-lookup"><span data-stu-id="ee412-130">AsyncPattern = true</span></span><br /><br /> <span data-ttu-id="ee412-131">IsOneWay = true</span><span class="sxs-lookup"><span data-stu-id="ee412-131">IsOneWay = true</span></span><br /><br /> <span data-ttu-id="ee412-132">TransactionFlow(TransactionFlowOption.Allowed)</span><span class="sxs-lookup"><span data-stu-id="ee412-132">TransactionFlow(TransactionFlowOption.Allowed)</span></span>|<span data-ttu-id="ee412-133">IDuplexSessionChannel -> IDuplexSessionChannel</span><span class="sxs-lookup"><span data-stu-id="ee412-133">IDuplexSessionChannel -> IDuplexSessionChannel</span></span>|  
   
-## 참고 항목  
- [Routing Service](http://msdn.microsoft.com/ko-kr/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)   
- [라우팅 소개](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+## <a name="see-also"></a><span data-ttu-id="ee412-134">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ee412-134">See Also</span></span>  
+ [<span data-ttu-id="ee412-135">라우팅 서비스</span><span class="sxs-lookup"><span data-stu-id="ee412-135">Routing Service</span></span>](http://msdn.microsoft.com/en-us/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
+ [<span data-ttu-id="ee412-136">라우팅 소개</span><span class="sxs-lookup"><span data-stu-id="ee412-136">Routing Introduction</span></span>](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

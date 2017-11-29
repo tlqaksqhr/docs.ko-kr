@@ -1,70 +1,74 @@
 ---
-title: "방법: 도형에 이미지를 바둑판식으로 배열 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "비트맵[Windows Forms], 모양 채우기"
-  - "이미지[Windows Forms], 모양 채우기"
-  - "도형, 이미지를 바둑판식으로 배열"
-  - "질감 브러시, 이미지를 바둑판식으로 배열"
+title: "방법: 도형에 이미지를 바둑판식으로 배열"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- texture brushes [Windows Forms], tiling images with
+- images [Windows Forms], filling shapes with
+- shapes [Windows Forms], tiling with images
+- bitmaps [Windows Forms], filling shapes with
 ms.assetid: 6d407891-6e5c-4495-a546-3da5604e9fb8
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8f825371d3849e96ace627e660fd7c59bd290185
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/22/2017
 ---
-# 방법: 도형에 이미지를 바둑판식으로 배열
-바닥을 타일로 덮듯이 사각형 이미지를 하나씩 맞닿게 붙여 놓아 도형을 채울 수 있습니다. 즉, 이미지를 바둑판식으로 배열할 수 있습니다.  도형의 내부를 바둑판식으로 채우려면 질감 브러시를 사용합니다.  <xref:System.Drawing.TextureBrush> 개체를 생성할 때 생성자에 전달하는 인수 중 하나는 <xref:System.Drawing.Image> 개체입니다.  질감 브러시를 사용하여 도형 내부를 칠할 때는 이 이미지의 복사본을 반복적으로 사용하여 도형이 채워집니다.  
+# <a name="how-to-tile-a-shape-with-an-image"></a><span data-ttu-id="5e099-102">방법: 도형에 이미지를 바둑판식으로 배열</span><span class="sxs-lookup"><span data-stu-id="5e099-102">How to: Tile a Shape with an Image</span></span>
+<span data-ttu-id="5e099-103">타일을 층을 서로 옆에 배치할 것 처럼 사각형 이미지 서로 인접 (타일) 도형 채우기 배치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5e099-103">Just as tiles can be placed next to each other to cover a floor, rectangular images can be placed next to each other to fill (tile) a shape.</span></span> <span data-ttu-id="5e099-104">도형의 내부가 바둑판식으로 배열 하려면 질감 브러시를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="5e099-104">To tile the interior of a shape, use a texture brush.</span></span> <span data-ttu-id="5e099-105">생성할 때는 <xref:System.Drawing.TextureBrush> 개체 생성자에 전달 하는 인수 중 하나는 <xref:System.Drawing.Image> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="5e099-105">When you construct a <xref:System.Drawing.TextureBrush> object, one of the arguments you pass to the constructor is an <xref:System.Drawing.Image> object.</span></span> <span data-ttu-id="5e099-106">질감 브러시를 사용 하 여 도형의 내부를 그리는 경우 셰이프가이 이미지의 반복된 복사본으로 채워집니다.</span><span class="sxs-lookup"><span data-stu-id="5e099-106">When you use the texture brush to paint the interior of a shape, the shape is filled with repeated copies of this image.</span></span>  
   
- <xref:System.Drawing.TextureBrush> 개체의 랩 모드 속성에서는 사각형 모눈에서 이미지를 반복적으로 배열하는 방향을 지정합니다.  모눈에 이미지를 바둑판식으로 배열할 때 모두 같은 방향으로 배열하거나 서로 대칭 방향으로 배열할 수 있습니다.  가로, 세로 또는 두 방향 모두에서 대칭으로 배열할 수 있습니다.  아래 예제에서는 여러 유형으로 대칭 이동되는 바둑판식 배열을 보여 줍니다.  
+ <span data-ttu-id="5e099-107">래핑 모드 속성은 <xref:System.Drawing.TextureBrush> 방법을 이미지는 사각형 그리드에서 반복 되는 대로 방향 개체를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="5e099-107">The wrap mode property of the <xref:System.Drawing.TextureBrush> object determines how the image is oriented as it is repeated in a rectangular grid.</span></span> <span data-ttu-id="5e099-108">눈금에서 타일 모두 동일한 방향을 만들 수 있습니다 또는 다음 그리드 위치에서 대칭 이동 이미지를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5e099-108">You can make all the tiles in the grid have the same orientation, or you can make the image flip from one grid position to the next.</span></span> <span data-ttu-id="5e099-109">반전 가로 스크롤 가능 세로 축 또는 둘 다 합니다.</span><span class="sxs-lookup"><span data-stu-id="5e099-109">The flipping can be horizontal, vertical, or both.</span></span> <span data-ttu-id="5e099-110">다음 예에서는 대칭 이동 하는 여러 유형의 사용한 바둑판식 배열 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="5e099-110">The following examples demonstrate tiling with different types of flipping.</span></span>  
   
-### 이미지를 바둑판식으로 배열하려면  
+### <a name="to-tile-an-image"></a><span data-ttu-id="5e099-111">이미지를 바둑판식으로 배열 하려면</span><span class="sxs-lookup"><span data-stu-id="5e099-111">To tile an image</span></span>  
   
--   이 예제에서는 다음 75×75 이미지를 200×200 사각형에 바둑판식으로 배열합니다.  
+-   <span data-ttu-id="5e099-112">이 예제에서는 200 × 200 사각형 바둑판식으로 배열 하 다음 75 × 75 이미지를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="5e099-112">This example uses the following 75×75 image to tile a 200×200 rectangle.</span></span>  
   
- ![바둑판식 배열 1](../../../../docs/framework/winforms/advanced/media/tile1.png "tile1")  
+ <span data-ttu-id="5e099-113">![1 바둑판식으로 배열](../../../../docs/framework/winforms/advanced/media/tile1.gif "tile1")</span><span class="sxs-lookup"><span data-stu-id="5e099-113">![Tile 1](../../../../docs/framework/winforms/advanced/media/tile1.gif "tile1")</span></span>  
   
--   아래 그림에서는 이미지가 바둑판식으로 배열된 사각형을 보여 줍니다.  이 그림에서 배열된 이미지의 방향은 모두 같고 대칭되지 않음을 알 수 있습니다.  
+-   <span data-ttu-id="5e099-114">다음 그림에서는 사각형이 이미지와 바둑판식으로 배열 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="5e099-114">The following illustration shows how the rectangle is tiled with the image.</span></span> <span data-ttu-id="5e099-115">모든 타일이 동일한 방향을;가 대칭 이동 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="5e099-115">Note that all tiles have the same orientation; there is no flipping.</span></span>  
   
- ![바둑판식 배열 2](../../../../docs/framework/winforms/advanced/media/tile2.png "tile2")  
+ <span data-ttu-id="5e099-116">![2 바둑판식으로 배열](../../../../docs/framework/winforms/advanced/media/tile2.gif "tile2")</span><span class="sxs-lookup"><span data-stu-id="5e099-116">![Tile 2](../../../../docs/framework/winforms/advanced/media/tile2.gif "tile2")</span></span>  
   
  [!code-csharp[System.Drawing.UsingABrush#31](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.UsingABrush#31](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#31)]  
   
-### 바둑판식으로 배열할 때 이미지를 좌우 대칭 이동하려면  
+### <a name="to-flip-an-image-horizontally-while-tiling"></a><span data-ttu-id="5e099-117">가로 바둑판식 배열 하는 동안 이미지 대칭 이동 하려면</span><span class="sxs-lookup"><span data-stu-id="5e099-117">To flip an image horizontally while tiling</span></span>  
   
--   이 예제에서는 같은 75×75 이미지를 200×200 사각형에 채웁니다.  이미지가 가로 대칭으로 배열되도록 랩 모드를 설정합니다.  아래 그림에서는 이미지가 바둑판식으로 배열된 사각형을 보여 줍니다.  이 그림에서는 행을 따라가며 이미지가 가로 대칭으로 배열된 것을 알 수 있습니다.  
+-   <span data-ttu-id="5e099-118">이 예제에서는 동일한 75 × 75 이미지를 사용 하 여 200 × 200 사각형을 채웁니다.</span><span class="sxs-lookup"><span data-stu-id="5e099-118">This example uses the same 75×75 image to fill a 200×200 rectangle.</span></span> <span data-ttu-id="5e099-119">래핑 모드 이미지를 가로로 대칭 이동로 설정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="5e099-119">The wrap mode is set to flip the image horizontally.</span></span> <span data-ttu-id="5e099-120">다음 그림에서는 사각형이 이미지와 바둑판식으로 배열 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="5e099-120">The following illustration shows how the rectangle is tiled with the image.</span></span> <span data-ttu-id="5e099-121">하나의 타일에서 특정된 행을 이동 하면 이미지 가로로 대칭을 참고 합니다.</span><span class="sxs-lookup"><span data-stu-id="5e099-121">Note that as you move from one tile to the next in a given row, the image is flipped horizontally.</span></span>  
   
- ![바둑판식 배열 3](../../../../docs/framework/winforms/advanced/media/tile3.png "tile3")  
+ <span data-ttu-id="5e099-122">![타일 3](../../../../docs/framework/winforms/advanced/media/tile3.gif "tile3")</span><span class="sxs-lookup"><span data-stu-id="5e099-122">![Tile 3](../../../../docs/framework/winforms/advanced/media/tile3.gif "tile3")</span></span>  
   
  [!code-csharp[System.Drawing.UsingABrush#32](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.UsingABrush#32](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#32)]  
   
-### 바둑판식으로 배열할 때 이미지를 상하 대칭 이동하려면  
+### <a name="to-flip-an-image-vertically-while-tiling"></a><span data-ttu-id="5e099-123">바둑판식 배열 하는 동안에 세로로 이미지 대칭 이동 하려면</span><span class="sxs-lookup"><span data-stu-id="5e099-123">To flip an image vertically while tiling</span></span>  
   
--   이 예제에서는 같은 75×75 이미지를 200×200 사각형에 채웁니다.  이미지가 세로 대칭으로 배열되도록 랩 모드를 설정합니다.  
+-   <span data-ttu-id="5e099-124">이 예제에서는 동일한 75 × 75 이미지를 사용 하 여 200 × 200 사각형을 채웁니다.</span><span class="sxs-lookup"><span data-stu-id="5e099-124">This example uses the same 75×75 image to fill a 200×200 rectangle.</span></span> <span data-ttu-id="5e099-125">래핑 모드 이미지를 세로로 대칭 이동로 설정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="5e099-125">The wrap mode is set to flip the image vertically.</span></span>  
   
      [!code-csharp[System.Drawing.UsingABrush#33](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#33)]
      [!code-vb[System.Drawing.UsingABrush#33](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#33)]  
   
-### 바둑판식으로 배열할 때 이미지를 상하 및 좌우 대칭 이동하려면  
+### <a name="to-flip-an-image-horizontally-and-vertically-while-tiling"></a><span data-ttu-id="5e099-126">바둑판식 배열 하는 동안 가로 및 세로로 여러 이미지를 대칭 이동 하려면</span><span class="sxs-lookup"><span data-stu-id="5e099-126">To flip an image horizontally and vertically while tiling</span></span>  
   
--   이 예제에서는 같은 75×75 이미지를 200×200 사각형에 바둑판식으로 배열합니다.  이미지가 가로 및 세로 대칭으로 배열되도록 랩 모드를 설정합니다.  아래 그림에서는 이미지가 바둑판식으로 배열된 사각형을 보여 줍니다.  이 그림에서는 배열된 이미지가 행을 따라가며 가로로 대칭일 뿐만 아니라 열을 따라가며 세로로 대칭되어 있음을 알 수 있습니다.  
+-   <span data-ttu-id="5e099-127">이 예제에서는 200 × 200 사각형 바둑판식으로 배열 하 같은 75 × 75 이미지를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="5e099-127">This example uses the same 75×75 image to tile a 200×200 rectangle.</span></span> <span data-ttu-id="5e099-128">래핑 모드는 가로 및 세로로 이미지가 대칭으로 설정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="5e099-128">The wrap mode is set to flip the image both horizontally and vertically.</span></span> <span data-ttu-id="5e099-129">다음 그림에서는 사각형 이미지가 바둑판식으로 배열 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="5e099-129">The following illustration shows how the rectangle is tiled by the image.</span></span> <span data-ttu-id="5e099-130">이미지를 세로로 대칭은 하나의 타일에서 특정된 열에서 다음을 이동 하면과 하나의 타일에서 특정된 행을 이동 하면 이미지를 가로로 대칭 있는지 확인 하십시오.</span><span class="sxs-lookup"><span data-stu-id="5e099-130">Note that as you move from one tile to the next in a given row, the image is flipped horizontally, and as you move from one tile to the next in a given column, the image is flipped vertically.</span></span>  
   
- ![바둑판식 배열 5](../../../../docs/framework/winforms/advanced/media/tile5.png "tile5")  
+ <span data-ttu-id="5e099-131">![5 바둑판식으로 배열](../../../../docs/framework/winforms/advanced/media/tile5.gif "tile5")</span><span class="sxs-lookup"><span data-stu-id="5e099-131">![Tile 5](../../../../docs/framework/winforms/advanced/media/tile5.gif "tile5")</span></span>  
   
  [!code-csharp[System.Drawing.UsingABrush#34](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingABrush/CS/Class1.cs#34)]
  [!code-vb[System.Drawing.UsingABrush#34](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#34)]  
   
-## 참고 항목  
- [브러시를 사용하여 도형 채우기](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)
+## <a name="see-also"></a><span data-ttu-id="5e099-132">참고 항목</span><span class="sxs-lookup"><span data-stu-id="5e099-132">See Also</span></span>  
+ [<span data-ttu-id="5e099-133">브러시를 사용하여 도형 채우기</span><span class="sxs-lookup"><span data-stu-id="5e099-133">Using a Brush to Fill Shapes</span></span>](../../../../docs/framework/winforms/advanced/using-a-brush-to-fill-shapes.md)

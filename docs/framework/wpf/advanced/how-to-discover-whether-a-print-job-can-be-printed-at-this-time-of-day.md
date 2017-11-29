@@ -1,85 +1,92 @@
 ---
-title: "방법: 인쇄 작업을 현재 인쇄할 수 있는지 확인 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "인쇄 작업, 타이밍"
-  - "인쇄 대기열, 타이밍"
-  - "프린터, 가용성"
+title: "방법: 인쇄 작업을 현재 인쇄할 수 있는지 확인"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- print queues [WPF], timing
+- printers [WPF], availability
+- print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9ac89b8dce67c95c78a5dd46e591d84730a68346
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 인쇄 작업을 현재 인쇄할 수 있는지 확인
-인쇄 큐를 하루 24시간 내내 사용할 수 있는 것은 아닙니다.  인쇄 큐에는 특정 시간에 사용할 수 없도록 설정할 수 있는 시작 및 종료 시간 속성이 있습니다.  예를 들어 오후 5시 이후에는 프린터를 특정 부서가 독점적으로 사용하도록 예약하는 데 이 기능을 사용할 수 있습니다.  해당 부서에서는 다른 부서에서 사용하는 것과 다른 큐에서 프린터를 처리하게 됩니다.  다른 부서의 큐는 오후 5시 이후에는 사용할 수 없도록 설정하고 선택한 부서의 큐는 항상 사용할 수 있도록 설정할 수 있습니다.  
+# <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a><span data-ttu-id="185ca-102">방법: 인쇄 작업을 현재 인쇄할 수 있는지 확인</span><span class="sxs-lookup"><span data-stu-id="185ca-102">How to: Discover Whether a Print Job Can Be Printed At This Time of Day</span></span>
+<span data-ttu-id="185ca-103">인쇄 큐 항상 사용할 수 없는 하루 24 시간에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-103">Print queues are not always available for 24 hours a day.</span></span> <span data-ttu-id="185ca-104">하루 중 특정 시간에 사용할 수 없도록 설정할 수 있는 시작 및 종료 시간 속성을 갖게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-104">They have start and end time properties that can be set to make them unavailable at certain times of day.</span></span> <span data-ttu-id="185ca-105">예를 들어 특정 부서 오후 5 시 이후에 단독으로 사용에 대 한 프린터를 예약 하 고이 기능을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-105">This feature can be used, for example, to reserve a printer for the exclusive use of a certain department after 5 P.M..</span></span> <span data-ttu-id="185ca-106">해당 부서 사용 되는 다른 큐에서는 다른 부서에서 프린터를 처리 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-106">That department would have a different queue servicing the printer than other departments use.</span></span> <span data-ttu-id="185ca-107">다른 부서에 대 한 큐 오후 5 시 이후에 사용할 수 없게 설정 됩니다, 그리고 부서에서 선호 하는 방식된에 대 한 큐 수로 설정 되어 동안 항상 사용 가능한 합니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-107">The queue for the other departments would be set to be unavailable after 5 P.M., while queue for the favored department could be set to be available at all times.</span></span>  
   
- 또한 인쇄 작업 자체는 지정한 시간 범위 내에서만 인쇄 가능하도록 설정할 수 있습니다.  
+ <span data-ttu-id="185ca-108">또한 인쇄 작업 자체는 지정한 시간 범위 내 에서만 인쇄 가능 하도록 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-108">Moreover, print jobs themselves can be set to be printable only within a specified span of time.</span></span>  
   
- [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]의 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]에 노출된 <xref:System.Printing.PrintQueue> 및 <xref:System.Printing.PrintSystemJobInfo> 클래스를 사용하면 현재 시간에 지정한 큐에서 지정한 인쇄 작업을 인쇄할 수 있는지 여부를 원격으로 확인할 수 있습니다.  
+ <span data-ttu-id="185ca-109"><xref:System.Printing.PrintQueue> 및 <xref:System.Printing.PrintSystemJobInfo> 클래스에 노출 된 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] 의 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] 원격으로 현재 시간에 지정된 된 큐에 지정된 된 인쇄 작업 인쇄할 수 있는지를 확인 하기 위한 수단을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-109">The <xref:System.Printing.PrintQueue> and <xref:System.Printing.PrintSystemJobInfo> classes exposed in the [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] of [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] provide a means for remotely checking whether a given print job can print on a given queue at the current time.</span></span>  
   
-## 예제  
- 아래의 예제는 인쇄 작업 문제를 진단할 수 있는 샘플입니다.  
+## <a name="example"></a><span data-ttu-id="185ca-110">예제</span><span class="sxs-lookup"><span data-stu-id="185ca-110">Example</span></span>  
+ <span data-ttu-id="185ca-111">다음 예제에서는 인쇄 작업 문제를 진단할 수 있는 샘플입니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-111">The example below is a sample that can diagnose problems with a print job.</span></span>  
   
- 이러한 종류의 기능에 대한 두 가지 주요 단계는 다음과 같습니다.  
+ <span data-ttu-id="185ca-112">이러한 종류의 기능에 대 한 두 가지 주요 단계는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-112">There are two major steps for this kind of function as follows.</span></span>  
   
-1.  <xref:System.Printing.PrintQueue>의 <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> 및 <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> 속성을 읽고 현재 시간이 이 둘 사이에 있는지 확인합니다.  
+1.  <span data-ttu-id="185ca-113">읽기는 <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> 및 <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> 의 속성은 <xref:System.Printing.PrintQueue> 현재 시간 사이 인지 여부를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-113">Read the <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> and <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> properties of the <xref:System.Printing.PrintQueue> to determine whether the current time is between them.</span></span>  
   
-2.  <xref:System.Printing.PrintSystemJobInfo>의 <xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A> 및 <xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A> 속성을 읽고 현재 시간이 이 둘 사이에 있는지 확인합니다.  
+2.  <span data-ttu-id="185ca-114">읽기는 <xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A> 및 <xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A> 의 속성은 <xref:System.Printing.PrintSystemJobInfo> 현재 시간 사이 인지 여부를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-114">Read the <xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A> and <xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A> properties of the <xref:System.Printing.PrintSystemJobInfo> to determine whether the current time is between them.</span></span>  
   
- 그러나 이러한 속성이 <xref:System.DateTime> 개체가 아니라는 것 때문에 문제가 발생합니다.  이러한 속성은 시간을 자정 이후의 시간\(분\)으로 표시하는 <xref:System.Int32> 개체입니다.  또한 이 자정이 현재 시간대의 자정이 아니라 UTC \(협정 세계시\) 자정입니다.  
+ <span data-ttu-id="185ca-115">이러한 속성은 사실에서 문제가 발생 하지만 <xref:System.DateTime> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-115">But complications arise from the fact that these properties are not <xref:System.DateTime> objects.</span></span> <span data-ttu-id="185ca-116">대신 된 <xref:System.Int32> 하루 중 시간으로 자정 이후의 시간을 분 단위로 표현 하는 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-116">Instead they are <xref:System.Int32> objects that express the time of day as the number of minutes since midnight.</span></span> <span data-ttu-id="185ca-117">또한 자정 표현에 현재 표준 시간대 하지만 utc (협정 세계시)입니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-117">Moreover, this is not midnight in the current time zone, but midnight UTC (Coordinated Universal Time).</span></span>  
   
- 첫 번째 코드 예제에서는 정적 메서드 **ReportQueueAndJobAvailability**를 보여 줍니다. 이 메서드는 <xref:System.Printing.PrintSystemJobInfo>를 전달받고 도우미 메서드를 호출하여 현재 시간에 작업을 인쇄할 수 있는지, 그리고 인쇄할 수 없는 경우 언제 인쇄할 수 있는지를 확인합니다.  <xref:System.Printing.PrintQueue>는 이 메서드에 전달되지 않습니다.  그 이유는 <xref:System.Printing.PrintSystemJobInfo>에서 해당 <xref:System.Printing.PrintSystemJobInfo.HostingPrintQueue%2A> 속성에서 큐에 대한 참조를 포함하고 있기 때문입니다.  
+ <span data-ttu-id="185ca-118">정적 메서드를 제공 하는 첫 번째 코드 예제에서는 **ReportQueueAndJobAvailability**, 전달 되는 <xref:System.Printing.PrintSystemJobInfo> 작업을 현재 시간에 인쇄할 수 있는지 여부를 확인 하는 도우미 메서드를 호출 하 고, 그렇지 않은 경우 인쇄할 수 있는 경우.</span><span class="sxs-lookup"><span data-stu-id="185ca-118">The first code example presents the static method **ReportQueueAndJobAvailability**, which is passed a <xref:System.Printing.PrintSystemJobInfo> and calls helper methods to determine whether the job can print at the current time and, if not, when it can print.</span></span> <span data-ttu-id="185ca-119">에 <xref:System.Printing.PrintQueue> 메서드에 전달 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-119">Notice that a <xref:System.Printing.PrintQueue> is not passed to the method.</span></span> <span data-ttu-id="185ca-120">때문에 이것이 <xref:System.Printing.PrintSystemJobInfo> 큐에 대 한 참조가 포함 해당 <xref:System.Printing.PrintSystemJobInfo.HostingPrintQueue%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-120">This is because the <xref:System.Printing.PrintSystemJobInfo> includes a reference to the queue in its <xref:System.Printing.PrintSystemJobInfo.HostingPrintQueue%2A> property.</span></span>  
   
- 하위 수준 메서드에는 <xref:System.Printing.PrintQueue> 또는 <xref:System.Printing.PrintSystemJobInfo>를 매개 변수로 사용하는 오버로드된 **ReportAvailabilityAtThisTime** 메서드가 포함되어 있습니다.  또한 **TimeConverter.ConvertToLocalHumanReadableTime**도 있습니다.  이러한 메서드에 대해서는 아래에서 설명합니다.  
+ <span data-ttu-id="185ca-121">하위 메서드 오버 로드 된 포함 **ReportAvailabilityAtThisTime** 하나를 사용할 수 있는 메서드는 <xref:System.Printing.PrintQueue> 또는 <xref:System.Printing.PrintSystemJobInfo> 매개 변수로 합니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-121">The subordinate methods include the overloaded **ReportAvailabilityAtThisTime** method which can take either a <xref:System.Printing.PrintQueue> or a <xref:System.Printing.PrintSystemJobInfo> as a parameter.</span></span> <span data-ttu-id="185ca-122">또한 한 **TimeConverter.ConvertToLocalHumanReadableTime**합니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-122">There is also a **TimeConverter.ConvertToLocalHumanReadableTime**.</span></span> <span data-ttu-id="185ca-123">이러한 모든 메서드는 아래 설명 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-123">All of these methods are discussed below.</span></span>  
   
- **ReportQueueAndJobAvailability** 메서드에서는 먼저 현재 시간에 큐 또는 인쇄 작업을 사용할 수 없는지 확인합니다.  이들 중 하나라도 사용할 수 없는 경우 큐를 사용할 수 없는지 확인합니다.  사용할 수 없는 경우 메서드에서는 이 사실과 큐를 다시 사용할 수 있게 될 시간을 보고합니다.  그런 다음 작업을 확인하고 작업을 사용할 수 없는 경우 다음에 인쇄할 수 있는 시간 범위를 보고합니다.  마지막으로 이 메서드는 작업을 인쇄할 수 있는 가장 이른 시간을 보고합니다.  이 시간은 다음 두 시간 중 나중 시간입니다.  
+ <span data-ttu-id="185ca-124">**ReportQueueAndJobAvailability** 큐 또는 인쇄 작업이 사용할 수 없을 경우이 이번에 참조를 확인 하 여 메서드를 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-124">The **ReportQueueAndJobAvailability** method begins by checking to see if either the queue or the print job is unavailable at this time.</span></span> <span data-ttu-id="185ca-125">둘 중 하나를 사용할 수 없는 경우 다음 확인 하는 경우 큐를 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-125">If either of them is unavailable, it then checks to see if the queue unavailable.</span></span> <span data-ttu-id="185ca-126">사용할 수 없는 경우이 팩트 및 때 큐를 사용할 수 있는 다시 시간 메서드가 보고 합니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-126">If it is not available, then the method reports this fact and the time when the queue will become available again.</span></span> <span data-ttu-id="185ca-127">그런 다음 작업을 확인 하 고 다음에 사용할 수 없는 경우 보고 범위 인쇄할 수 있는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-127">It then checks the job and if it is unavailable, it reports the next time span when it when it can print.</span></span> <span data-ttu-id="185ca-128">마지막으로 메서드가 때 작업을 인쇄할 수는 가장 빠른 시간을 보고 합니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-128">Finally, the method reports the earliest time when the job can print.</span></span> <span data-ttu-id="185ca-129">뒤에 두 번 이상입니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-129">This is the later of following two times.</span></span>  
   
--   인쇄 큐를 사용할 수 있는 다음 시간  
+-   <span data-ttu-id="185ca-130">인쇄 큐가 사용 가능한 다음 시간입니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-130">The time when the print queue is next available.</span></span>  
   
--   인쇄 작업을 사용할 수 있는 다음 시간  
+-   <span data-ttu-id="185ca-131">인쇄 작업을 사용할 다음 시간입니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-131">The time when the print job is next available.</span></span>  
   
- 시간을 보고할 때는 출력에서 년, 월 및 일을 표시하지 않도록 만드는 <xref:System.DateTime.ToShortTimeString%2A> 메서드도 호출합니다.  인쇄 큐나 인쇄 작업의 가용성을 특정 년, 월 또는 일로 제한할 수는 없습니다.  
+ <span data-ttu-id="185ca-132">하루 중 시간을 보고할 때는 <xref:System.DateTime.ToShortTimeString%2A> 되므로이 메서드는 년, 월 및 일의 출력에도 메서드가 호출 됩니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-132">When reporting times of day, the <xref:System.DateTime.ToShortTimeString%2A> method is also called because this method suppresses the years, months, and days from the output.</span></span> <span data-ttu-id="185ca-133">특정 연도, 월 또는 일에 인쇄 큐 또는 인쇄 작업의 가용성을 제한할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-133">You cannot restrict the availability of either a print queue or a print job to particular years, months, or days.</span></span>  
   
  [!code-cpp[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#reportqueueandjobavailability)]
  [!code-csharp[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#reportqueueandjobavailability)]
  [!code-vb[DiagnoseProblematicPrintJob#ReportQueueAndJobAvailability](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#reportqueueandjobavailability)]  
   
- **ReportAvailabilityAtThisTime** 메서드의 두 오버로드는 전달받는 형식을 제외하고는 동일합니다. 따라서 아래에서는 <xref:System.Printing.PrintQueue> 버전만 표시됩니다.  
+ <span data-ttu-id="185ca-134">두 오버 로드는 **ReportAvailabilityAtThisTime** 메서드 항목에 전달 하는 형식을 제외한 동일는 <xref:System.Printing.PrintQueue> 버전은 아래 제시 된 합니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-134">The two overloads of the **ReportAvailabilityAtThisTime** method are identical except for the type passed to them, so only the <xref:System.Printing.PrintQueue> version is presented below.</span></span>  
   
 > [!NOTE]
->  이들 메서드가 형식을 제외하고는 동일한데 샘플에서 제네릭 메서드 **ReportAvailabilityAtThisTime\<T\>**를 만들지 않은 이유가 궁금할 것입니다.  그 이유는 이러한 메서드는 메서드에서 호출하는 **StartTimeOfDay** 및 **UntilTimeOfDay** 속성이 있는 클래스로 제한해야 하지만 제네릭 메서드는 단일 클래스로만 제한할 수 있고 상속 트리에서 <xref:System.Printing.PrintQueue> 및 <xref:System.Printing.PrintSystemJobInfo> 모두에 공통인 클래스는 이러한 속성이 없는 <xref:System.Printing.PrintSystemObject>뿐이기 때문입니다.  
+>  <span data-ttu-id="185ca-135">메서드는 형식 제외 하면 동일한 팩트에 대 한 문제를 발생 시킵니다 때문에 샘플에서는 변수를 제네릭 메서드 **ReportAvailabilityAtThisTime\<T >**합니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-135">The fact that the methods are identical except for type raises the question of why the sample does not create a generic method **ReportAvailabilityAtThisTime\<T>**.</span></span> <span data-ttu-id="185ca-136">이유는 이러한 메서드를 가진 에게만 부여 되어야 해야 하는 **StartTimeOfDay** 및 **UntilTimeOfDay** 메서드를 호출 하는 속성 이지만 제네릭 메서드만 제한할 수 있습니다는 단일 클래스 및 모두에 공통적인 유일한 클래스 <xref:System.Printing.PrintQueue> 및 <xref:System.Printing.PrintSystemJobInfo> 상속 트리는 <xref:System.Printing.PrintSystemObject> 있는 이러한 속성이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-136">The reason is that such a method would have to be restricted to a class that has the **StartTimeOfDay** and **UntilTimeOfDay** properties that the method calls, but a generic method can only be restricted to a single class and the only class common to both <xref:System.Printing.PrintQueue> and <xref:System.Printing.PrintSystemJobInfo> in the inheritance tree is <xref:System.Printing.PrintSystemObject> which has no such properties.</span></span>  
   
- 아래 코드 예제에 표시된 **ReportAvailabilityAtThisTime** 메서드는 먼저 <xref:System.Boolean> 센티널 변수를 `true`로 초기화합니다.  큐를 사용할 수 없는 경우 이 변수가 `false`로 재설정됩니다.  
+ <span data-ttu-id="185ca-137">**ReportAvailabilityAtThisTime** 메서드 (아래 코드 예제에 제공 된)을 초기화 하 여 시작 된 <xref:System.Boolean> 센티널 변수를 `true`합니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-137">The **ReportAvailabilityAtThisTime** method (presented in the code example below) begins by initializing a <xref:System.Boolean> sentinel variable to `true`.</span></span> <span data-ttu-id="185ca-138">으로 다시 설정 `false`큐를 사용할 수 없는 경우, 합니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-138">It will be reset to `false`, if the queue is not available.</span></span>  
   
- 그런 다음 이 메서드는 시작 및 "끝" 시간이 동일한지 확인합니다.  동일한 경우 큐를 항상 사용할 수 있으므로 메서드는 `true`를 반환합니다.  
+ <span data-ttu-id="185ca-139">메서드가 있는지를 확인 하는 다음으로 시작 및 "끝" 시간은 동일 합니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-139">Next, the method checks to see if the start and "until" times are identical.</span></span> <span data-ttu-id="185ca-140">인 경우 큐는 항상 사용할 수, 메서드가 반환 되므로 `true`합니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-140">If they are, the queue is always available, so the method returns `true`.</span></span>  
   
- 큐를 항상 사용할 수 없는 경우 이 메서드에서는 정적 <xref:System.DateTime.UtcNow%2A> 속성을 사용하여 현재 시간을 <xref:System.DateTime> 개체로 가져옵니다.  <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> 및 <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> 속성 자체가 UTC 시간에 있으므로 현지 시간은 필요하지 않습니다.  
+ <span data-ttu-id="185ca-141">큐를 사용할 수 없는 항상 정적 사용 <xref:System.DateTime.UtcNow%2A> 현재 시간을 가져올 속성을 <xref:System.DateTime> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-141">If the queue is not available all the time, the method uses the static <xref:System.DateTime.UtcNow%2A> property to get the current time as a <xref:System.DateTime> object.</span></span> <span data-ttu-id="185ca-142">(때문에 현지 시간 필요 하지 않습니다는 <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> 및 <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> 속성은 UTC 시간으로 자체입니다.)</span><span class="sxs-lookup"><span data-stu-id="185ca-142">(We do not need local time because the <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> and <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> properties are themselves in UTC time.)</span></span>  
   
- 그러나 이러한 두 속성은 <xref:System.DateTime> 개체가 아닙니다.  이러한 속성은 시간을 UTC 자정 이후의 시간\(분\)으로 표시하는 <xref:System.Int32>입니다.  따라서 <xref:System.DateTime> 개체를 자정 이후의 시간\(분\)으로 변환해야 합니다.  변환을 마치면 메서드에서는 "지금"이 큐의 시작 및 "끝" 시간 사이에 있는지 확인하고 "지금"이 두 시간 사이에 없으면 센티널을 false로 설정한 다음 센티널을 반환합니다.  
+ <span data-ttu-id="185ca-143">그러나 이러한 두 속성은 <xref:System.DateTime> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-143">However, these two properties are not <xref:System.DateTime> objects.</span></span> <span data-ttu-id="185ca-144">이들은 <xref:System.Int32>의시간 (분) 후 UTC 자정 수로 표현 합니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-144">They are <xref:System.Int32>s expressing the time as the number of minutes-after-UTC-midnight.</span></span> <span data-ttu-id="185ca-145">변환 해야 하므로 우리의 <xref:System.DateTime> 개체 자정 이후의 시간 (분)입니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-145">So we do have to convert our <xref:System.DateTime> object to minutes-after-midnight.</span></span> <span data-ttu-id="185ca-146">완료 되 면 해당 메서드 단순히 확인 되는지 "now" 여부를 확인할 큐의 시작 간 및 "끝" 시간 집합 센티널 false "지금"을 두 번 사이 있지 않습니다와 센티널을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-146">When that is done, the method simply checks to see whether "now" is between the queue's start and "until" times, sets the sentinel to false if "now" is not between the two times, and returns the sentinel.</span></span>  
   
  [!code-cpp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#printqueuestartuntil)]
  [!code-csharp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#printqueuestartuntil)]
  [!code-vb[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#printqueuestartuntil)]  
   
- 아래 코드 예제에 표시된 **TimeConverter.ConvertToLocalHumanReadableTime** 메서드는 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]에 새로 추가된 메서드를 사용하지 않으므로 간략히 설명하고 넘어갑니다.  이 메서드는 이중 변환 작업을 수행합니다. 자정 이후의 시간\(분\)을 표시하는 정수를 가져와서 사람이 인식할 수 있는 시간으로 변환한 다음 이를 현지 시간으로 변환해야 합니다.  이를 수행하기 위해 먼저 UTC 자정으로 설정된 <xref:System.DateTime> 개체를 만든 다음 <xref:System.DateTime.AddMinutes%2A> 메서드를 사용하여 메서드에 전달된 시간\(분\)을 추가합니다.  그러면 메서드에 전달된 원래 시간을 표시하는 새 <xref:System.DateTime>이 반환됩니다.  그런 다음 <xref:System.DateTime.ToLocalTime%2A> 메서드에서 이 시간을 현지 시간으로 변환합니다.  
+ <span data-ttu-id="185ca-147">**TimeConverter.ConvertToLocalHumanReadableTime** 메서드 (아래 코드 예제에 제공 된)에 도입 된 모든 메서드를 사용 하지 않는 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]이므로 간단한 진행 됩니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-147">The **TimeConverter.ConvertToLocalHumanReadableTime** method (presented in the code example below) does not use any methods introduced with [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], so the discussion is brief.</span></span> <span data-ttu-id="185ca-148">메서드에 이중 변환 작업: 자정 이후의 시간 (분)을 표현 하는 정수를 사람이 읽을 수 시간으로 변환 해야 하 고이 현지 시간으로 변환 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-148">The method has a double conversion task: it must take an integer expressing minutes-after-midnight and convert it to a human-readable time and it must convert this to the local time.</span></span> <span data-ttu-id="185ca-149">먼저 만들어이 작업을 수행 하기는 <xref:System.DateTime> UTC 다음 변수를 사용 하는 자정으로 설정 된 개체는 <xref:System.DateTime.AddMinutes%2A> 메서드를 메서드에 전달 된 시간 (분)을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-149">It accomplishes this by first creating a <xref:System.DateTime> object that is set to midnight UTC and then it uses the <xref:System.DateTime.AddMinutes%2A> method to add the minutes that were passed to the method.</span></span> <span data-ttu-id="185ca-150">반환 합니다. 새 <xref:System.DateTime> 메서드에 전달 된 원래 시간을 표현 합니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-150">This returns a new <xref:System.DateTime> expressing the original time that was passed to the method.</span></span> <span data-ttu-id="185ca-151"><xref:System.DateTime.ToLocalTime%2A> 메서드 다음이 현지 시간으로 변환 합니다.</span><span class="sxs-lookup"><span data-stu-id="185ca-151">The <xref:System.DateTime.ToLocalTime%2A> method then converts this to local time.</span></span>  
   
  [!code-cpp[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#timeconverter)]
  [!code-csharp[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#timeconverter)]
  [!code-vb[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#timeconverter)]  
   
-## 참고 항목  
- <xref:System.DateTime>   
- <xref:System.Printing.PrintSystemJobInfo>   
- <xref:System.Printing.PrintQueue>   
- [WPF의 문서](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)   
- [인쇄 개요](../../../../docs/framework/wpf/advanced/printing-overview.md)
+## <a name="see-also"></a><span data-ttu-id="185ca-152">참고 항목</span><span class="sxs-lookup"><span data-stu-id="185ca-152">See Also</span></span>  
+ <xref:System.DateTime>  
+ <xref:System.Printing.PrintSystemJobInfo>  
+ <xref:System.Printing.PrintQueue>  
+ [<span data-ttu-id="185ca-153">WPF의 문서</span><span class="sxs-lookup"><span data-stu-id="185ca-153">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [<span data-ttu-id="185ca-154">인쇄 개요</span><span class="sxs-lookup"><span data-stu-id="185ca-154">Printing Overview</span></span>](../../../../docs/framework/wpf/advanced/printing-overview.md)

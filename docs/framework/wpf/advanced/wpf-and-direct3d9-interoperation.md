@@ -1,159 +1,163 @@
 ---
-title: "WPF 및 Direct3D9 상호 운용성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Direct3D9[WPF 상호 운용성], Direct3D9 콘텐츠 만들기"
-  - "WPF, Direct3D9 콘텐츠 만들기"
+title: "WPF 및 Direct3D9 상호 운용성"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: cpp
+helpviewer_keywords:
+- WPF [WPF], creating Direct3D9 content
+- Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
-caps.latest.revision: 25
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 25
+caps.latest.revision: "25"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b1bd4d7486f546a340a4c722d140c6c7f5cee707
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# WPF 및 Direct3D9 상호 운용성
-Direct3D9 콘텐츠를 WPF\(Windows Presentation Foundation\) 응용 프로그램에 포함할 수 있습니다.  이 항목에서는 WPF와 효율적으로 상호 운용될 수 있도록 Direct3D9 콘텐츠를 만드는 방법에 대해 설명합니다.  
+# <a name="wpf-and-direct3d9-interoperation"></a><span data-ttu-id="b1be0-102">WPF 및 Direct3D9 상호 운용성</span><span class="sxs-lookup"><span data-stu-id="b1be0-102">WPF and Direct3D9 Interoperation</span></span>
+<span data-ttu-id="b1be0-103">Windows Presentation Foundation (WPF) 응용 프로그램에서 Direct3D9 콘텐츠를 포함할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-103">You can include Direct3D9 content in a Windows Presentation Foundation (WPF) application.</span></span> <span data-ttu-id="b1be0-104">이 항목에서는 wpf 효율적으로 상호 운용 되도록 Direct3D9 콘텐츠를 만드는 방법을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-104">This topic describes how to create Direct3D9 content so that it efficiently interoperates with WPF.</span></span>  
   
 > [!NOTE]
->  WPF에서 Direct3D9 콘텐츠를 사용할 때는 성능을 고려해야 합니다.  성능을 최적화하는 방법에 대한 자세한 내용은 [Direct3D9 및 WPF 상호 운용성을 위한 성능 고려 사항](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)을 참조하십시오.  
+>  <span data-ttu-id="b1be0-105">WPF의 Direct3D9 콘텐츠를 사용할 때는 성능을 고려해 야 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-105">When using Direct3D9 content in WPF, you also need to think about performance.</span></span> <span data-ttu-id="b1be0-106">성능을 최적화 하는 방법에 대 한 자세한 내용은 참조 [Direct3D9 및 WPF 상호 운용성에 대 한 성능 고려 사항](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-106">For more information about how to optimize for performance, see [Performance Considerations for Direct3D9 and WPF Interoperability](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md).</span></span>  
   
-## 디스플레이 버퍼  
- <xref:System.Windows.Interop.D3DImage> 클래스는 *백 버퍼*와 *프런트 버퍼*라고 하는 두 가지 디스플레이 버퍼를 관리합니다.  백 버퍼는 Direct3D9 화면입니다.  <xref:System.Windows.Interop.D3DImage.Unlock%2A> 메서드를 호출하면 백 버퍼에 대한 변경 내용이 프런트 버퍼에 복사됩니다.  
+## <a name="display-buffers"></a><span data-ttu-id="b1be0-107">디스플레이 버퍼</span><span class="sxs-lookup"><span data-stu-id="b1be0-107">Display Buffers</span></span>  
+ <span data-ttu-id="b1be0-108"><xref:System.Windows.Interop.D3DImage> 클래스 라고 하는 두 디스플레이 버퍼 관리는 *백 버퍼* 및 *프런트 버퍼*합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-108">The <xref:System.Windows.Interop.D3DImage> class manages two display buffers, which are called the *back buffer* and the *front buffer*.</span></span> <span data-ttu-id="b1be0-109">백 버퍼가 Direct3D9 화면을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-109">The back buffer is your Direct3D9 surface.</span></span> <span data-ttu-id="b1be0-110">백 버퍼에 대 한 변경에 복사 됩니다 프런트 버퍼 호출 하는 경우는 <xref:System.Windows.Interop.D3DImage.Unlock%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="b1be0-110">Changes to the back buffer are copied forward to the front buffer when you call the <xref:System.Windows.Interop.D3DImage.Unlock%2A> method.</span></span>  
   
- 다음 그림에서는 백 버퍼와 프런트 버퍼의 관계를 보여 줍니다.  
+ <span data-ttu-id="b1be0-111">다음 그림 백 버퍼 및 프런트 버퍼 간의 관계를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-111">The following illustration shows the relationship between the back buffer and the front buffer.</span></span>  
   
- ![D3DImage 디스플레이 버퍼](../../../../docs/framework/wpf/advanced/media/d3dimage-buffers.png "D3DImage\_buffers")  
+ <span data-ttu-id="b1be0-112">![D3DImage 디스플레이 버퍼](../../../../docs/framework/wpf/advanced/media/d3dimage-buffers.png "D3DImage_buffers")</span><span class="sxs-lookup"><span data-stu-id="b1be0-112">![D3DImage display buffers](../../../../docs/framework/wpf/advanced/media/d3dimage-buffers.png "D3DImage_buffers")</span></span>  
   
-## Direct3D9 장치 만들기  
- Direct3D9 콘텐츠를 렌더링하려면 Direct3D9 장치를 만들어야 합니다.  장치를 만들 때는 두 가지 Direct3D9 개체, 즉 `IDirect3D9`와 `IDirect3D9Ex`를 사용할 수 있습니다.  이러한 개체를 사용하여 `IDirect3DDevice9` 및 `IDirect3DDevice9Ex` 장치를 각각 만듭니다.  
+## <a name="direct3d9-device-creation"></a><span data-ttu-id="b1be0-113">Direct3D9 장치 만들기</span><span class="sxs-lookup"><span data-stu-id="b1be0-113">Direct3D9 Device Creation</span></span>  
+ <span data-ttu-id="b1be0-114">Direct3D9 콘텐츠를 렌더링 하려면 Direct3D9 장치를 만들어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-114">To render Direct3D9 content, you must create a Direct3D9 device.</span></span> <span data-ttu-id="b1be0-115">장치를 만드는 데 사용할 수 있는 Direct3D9 개체 두 개가 `IDirect3D9` 및 `IDirect3D9Ex`합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-115">There are two Direct3D9 objects that you can use to create a device, `IDirect3D9` and `IDirect3D9Ex`.</span></span> <span data-ttu-id="b1be0-116">이러한 개체를 사용 하 여 만들 `IDirect3DDevice9` 및 `IDirect3DDevice9Ex` 장치, 각각.</span><span class="sxs-lookup"><span data-stu-id="b1be0-116">Use these objects to create `IDirect3DDevice9` and `IDirect3DDevice9Ex` devices, respectively.</span></span>  
   
- 다음 메서드 중 하나를 호출하여 장치를 만듭니다.  
+ <span data-ttu-id="b1be0-117">다음 방법 중 하나를 호출 하 여 장치를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-117">Create a device by calling one of the following methods.</span></span>  
   
 -   `IDirect3D9 * Direct3DCreate9(UINT SDKVersion);`  
   
 -   `HRESULT Direct3DCreate9Ex(UINT SDKVersion, IDirect3D9Ex **ppD3D);`  
   
- Windows Vista 또는 운영 체제에서 사용 하는 `Direct3DCreate9Ex` 메서드는 Windows 표시 드라이버 모델 \(WDDM\) 사용 하도록 구성 되어 있는 디스플레이.  `Direct3DCreate9` 메서드는 그 이외의 모든 플랫폼에서 사용합니다.  
+ <span data-ttu-id="b1be0-118">Windows Vista 또는 운영 체제에서 사용 하 여는 `Direct3DCreate9Ex` 메서드 Windows 표시할 드라이버 모델 (WDDM)를 사용 하도록 구성 된 디스플레이 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-118">On Windows Vista or later operating system, use the `Direct3DCreate9Ex` method with a display that is configured to use the Windows Display Driver Model (WDDM).</span></span> <span data-ttu-id="b1be0-119">사용 된 `Direct3DCreate9` 다른 플랫폼에서 메서드.</span><span class="sxs-lookup"><span data-stu-id="b1be0-119">Use the `Direct3DCreate9` method on any other platform.</span></span>  
   
-### Direct3DCreate9Ex 메서드의 가용성  
- D3d9.dll을가 `Direct3DCreate9Ex` 메서드를 운영 체제 또는 Windows Vista에만.  이 기능을 Windows XP에서 직접 연결하면 응용 프로그램이 로드되지 않습니다.  `Direct3DCreate9Ex` 메서드가 지원되는지 여부를 확인하려면 DLL을 로드한 후 프로시저 주소를 찾아보십시오.  다음 코드에서는 `Direct3DCreate9Ex` 메서드를 테스트하는 방법을 보여 줍니다.  전체 코드 예제는 [연습: WPF에서 호스팅할 Direct3D9 콘텐츠 만들기](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)를 참조하십시오.  
+### <a name="availability-of-the-direct3dcreate9ex-method"></a><span data-ttu-id="b1be0-120">가용성 Direct3DCreate9Ex 메서드</span><span class="sxs-lookup"><span data-stu-id="b1be0-120">Availability of the Direct3DCreate9Ex method</span></span>  
+ <span data-ttu-id="b1be0-121">d3d9.dll에는 `Direct3DCreate9Ex` Windows Vista 또는 운영 체제에 대해서만 메서드.</span><span class="sxs-lookup"><span data-stu-id="b1be0-121">The d3d9.dll has the `Direct3DCreate9Ex` method only on Windows Vista or later operating system.</span></span> <span data-ttu-id="b1be0-122">이 기능을 Windows XP에서 직접 연결 하면 응용 프로그램 로드 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-122">If you directly link the function on Windows XP, your application fails to load.</span></span> <span data-ttu-id="b1be0-123">확인 하려면 여부는 `Direct3DCreate9Ex` 메서드는 지원 DLL을 로드 하 고 프로시저 주소를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-123">To determine whether the `Direct3DCreate9Ex` method is supported, load the DLL and look for the proc address.</span></span> <span data-ttu-id="b1be0-124">다음 코드를 테스트 하는 방법을 보여 줍니다는 `Direct3DCreate9Ex` 메서드.</span><span class="sxs-lookup"><span data-stu-id="b1be0-124">The following code shows how to test for the `Direct3DCreate9Ex` method.</span></span> <span data-ttu-id="b1be0-125">전체 코드 예제를 보려면 [연습: WPF의 호스팅에 대 한 Direct3D9 콘텐츠 만들기](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-125">For a full code example, see [Walkthrough: Creating Direct3D9 Content for Hosting in WPF](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md).</span></span>  
   
  [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_EnsureD3DObjects](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_ensured3dobjects)]  
   
-### HWND 만들기  
- 장치를 만들려면 HWND가 필요합니다.  대개는 Direct3D9에 사용할 더미 HWND를 만듭니다.  다음 코드 예제에서는 더미 HWND를 만드는 방법을 보여 줍니다.  
+### <a name="hwnd-creation"></a><span data-ttu-id="b1be0-126">HWND 만들기</span><span class="sxs-lookup"><span data-stu-id="b1be0-126">HWND Creation</span></span>  
+ <span data-ttu-id="b1be0-127">장치를 만들면 HWND가 필요 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-127">Creating a device requires an HWND.</span></span> <span data-ttu-id="b1be0-128">일반적으로 사용 하는 Direct3D9에 대 한 더미 HWND를 만들어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-128">In general, you create a dummy HWND for Direct3D9 to use.</span></span> <span data-ttu-id="b1be0-129">다음 코드 예제에는 더미 HWND를 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-129">The following code example shows how to create a dummy HWND.</span></span>  
   
  [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_EnsureHWND](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_ensurehwnd)]  
   
-### Present 매개 변수  
- 장치를 만들려면 `D3DPRESENT_PARAMETERS` 구조체도 필요한데 그 중 몇 가지 매개 변수가 중요합니다.  이러한 매개 변수는 메모리 공간을 최소화하기 위해 선택합니다.  
+### <a name="present-parameters"></a><span data-ttu-id="b1be0-130">현재 매개 변수</span><span class="sxs-lookup"><span data-stu-id="b1be0-130">Present Parameters</span></span>  
+ <span data-ttu-id="b1be0-131">장치를 만들면 필요는 `D3DPRESENT_PARAMETERS` 구조체 없지만 몇 가지 매개 변수는 중요 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-131">Creating a device also requires a `D3DPRESENT_PARAMETERS` struct, but only a few parameters are important.</span></span> <span data-ttu-id="b1be0-132">이러한 매개 변수는 메모리 사용 공간을 최소화 하기 위해 선택 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-132">These parameters are chosen to minimize the memory footprint.</span></span>  
   
- `BackBufferHeight` 및 `BackBufferWidth` 필드를 1로 설정합니다.  값을 0으로 설정하면 HWND의 크기로 설정됩니다.  
+ <span data-ttu-id="b1be0-133">설정의 `BackBufferHeight` 및 `BackBufferWidth` 필드를 1로 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-133">Set the `BackBufferHeight` and `BackBufferWidth` fields to 1.</span></span> <span data-ttu-id="b1be0-134">0으로 설정 하면 HWND의 차원에 설정 하도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-134">Setting them to 0 causes them to be set to the dimensions of the HWND.</span></span>  
   
- Direct3D9에서 사용하는 메모리의 손상을 방지하고 Direct3D9로 인해 FPU 설정이 변경되지 않도록 `D3DCREATE_MULTITHREADED` 및 `D3DCREATE_FPU_PRESERVE` 플래그를 항상 설정해야 합니다.  
+ <span data-ttu-id="b1be0-135">항상 설정 된 `D3DCREATE_MULTITHREADED` 및 `D3DCREATE_FPU_PRESERVE` 방지 하는 플래그를 Direct3D9와 Direct3D9 FPU 설정을 변경 하지 못하도록 하려면 사용 하는 메모리를 손상 시키고 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-135">Always set the `D3DCREATE_MULTITHREADED` and `D3DCREATE_FPU_PRESERVE` flags to prevent corrupting memory used by Direct3D9 and to prevent Direct3D9 from changing FPU settings.</span></span>  
   
- 다음 코드 예제에서는 `D3DPRESENT_PARAMETERS` 구조체를 초기화하는 방법을 보여 줍니다.  
+ <span data-ttu-id="b1be0-136">다음 코드에서는 초기화 하는 방법을 보여 줍니다.는 `D3DPRESENT_PARAMETERS` 구조체입니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-136">The following code shows how to initialize the `D3DPRESENT_PARAMETERS` struct.</span></span>  
   
  [!code-cpp[System.Windows.Interop.D3DImage#Renderer_Init](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderer_init)]  
   
-## 백 버퍼 렌더링 대상 만들기  
- Direct3D9 콘텐츠를 <xref:System.Windows.Interop.D3DImage>에 표시하려면 Direct3D9 화면을 만든 후 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 메서드를 호출하여 할당합니다.  
+## <a name="creating-the-back-buffer-render-target"></a><span data-ttu-id="b1be0-137">백 버퍼의 렌더링 대상 만들기</span><span class="sxs-lookup"><span data-stu-id="b1be0-137">Creating the Back Buffer Render Target</span></span>  
+ <span data-ttu-id="b1be0-138">에 Direct3D9 내용을 표시 하는 <xref:System.Windows.Interop.D3DImage>, Direct3D9 화면을 만들고 호출 하 여 할당 된 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="b1be0-138">To display Direct3D9 content in a <xref:System.Windows.Interop.D3DImage>, you create a Direct3D9 surface and assign it by calling the <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> method.</span></span>  
   
-### 어댑터 지원 확인  
- 화면을 만들기 전에, 필요한 모든 화면 속성이 모든 어댑터에서 지원되는지 확인합니다.  어댑터 하나에만 렌더링하더라도 WPF 창은 시스템에 있는 모든 어댑터에 표시될 수 있습니다.  WPF는 사용 가능한 어댑터 간에 화면을 이동할 수 있기 때문에 항상 다중 어댑터 구성을 처리할 수 있도록 Direct3D9 코드를 작성하고 모든 어댑터에서 지원되는지 여부를 확인해야 합니다.  
+### <a name="verifying-adapter-support"></a><span data-ttu-id="b1be0-139">어댑터 지원 확인</span><span class="sxs-lookup"><span data-stu-id="b1be0-139">Verifying Adapter Support</span></span>  
+ <span data-ttu-id="b1be0-140">화면을 만들기 전에 모든 어댑터 화면 속성이 필요한 지를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-140">Before creating a surface, verify that all adapters support the surface properties you require.</span></span> <span data-ttu-id="b1be0-141">하나의 어댑터에 렌더링 하는 경우에 시스템의 모든 어댑터에 WPF 창에 표시 수 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-141">Even if you render to only one adapter, the WPF window may be displayed on any adapter in the system.</span></span> <span data-ttu-id="b1be0-142">항상 다중 어댑터 구성을 처리 하는 Direct3D9 코드를 작성 해야 하 고 WPF 사용 가능한 어댑터 간의 화면을 이동할 수 있으므로 지원에 대 한 모든 어댑터를 확인 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-142">You should always write Direct3D9 code that handles multi-adapter configurations, and you should check all adapters for support, because WPF might move the surface among the available adapters.</span></span>  
   
- 다음 코드 예제에서는 시스템의 모든 어댑터에서 Direct3D9가 지원되는지 여부를 확인하는 방법을 보여 줍니다.  
+ <span data-ttu-id="b1be0-143">다음 코드 예제에서는 모든 어댑터가 Direct3D9 시스템에서 지 원하는 확인 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-143">The following code example shows how to check all adapters on the system for Direct3D9 support.</span></span>  
   
  [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_TestSurfaceSettings](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_testsurfacesettings)]  
   
-### 화면 만들기  
- 화면을 만들기 전에 대상 운영 체제에서 장치 기능이 좋은 성능을 발휘할 수 있는지 검증해야 합니다.  자세한 내용은 [Direct3D9 및 WPF 상호 운용성을 위한 성능 고려 사항](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)을 참조하십시오.  
+### <a name="creating-the-surface"></a><span data-ttu-id="b1be0-144">화면 만들기</span><span class="sxs-lookup"><span data-stu-id="b1be0-144">Creating the Surface</span></span>  
+ <span data-ttu-id="b1be0-145">화면을 만들기 전에 장치 기능 좋은 성능을 대상 운영 체제에서 지원 하는지 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-145">Before creating a surface, verify that the device capabilities support good performance on the target operating system.</span></span> <span data-ttu-id="b1be0-146">자세한 내용은 참조 [Direct3D9 및 WPF 상호 운용성에 대 한 성능 고려 사항](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-146">For more information, see [Performance Considerations for Direct3D9 and WPF Interoperability](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md).</span></span>  
   
- 장치 기능이 검증된 후에는 화면을 만들 수 있습니다.  다음 코드 예제에서는 렌더링 대상을 만드는 방법을 보여 줍니다.  
+ <span data-ttu-id="b1be0-147">장치 기능을 확인 하는 경우에 화면을 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-147">When you have verified device capabilities, you can create the surface.</span></span> <span data-ttu-id="b1be0-148">다음 코드 예제에서는 렌더링 대상을 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-148">The following code example shows how to create the render target.</span></span>  
   
  [!code-cpp[System.Windows.Interop.D3DImage#Renderer_CreateSurface](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderer_createsurface)]  
   
-### WDDM  
- Windows Vista 및 WDDM을 사용 하도록 구성 된 이상 운영 체제에서 렌더링 대상 질감을 만들 고 수준 0 표면에 전달 된 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 메서드.  Windows XP에서는 잠글 수 있는 렌더링 대상 질감을 만들 수 없고 성능이 떨어지기 때문에 이 방법을 사용하지 않는 것이 좋습니다.  
+### <a name="wddm"></a><span data-ttu-id="b1be0-149">WDDM</span><span class="sxs-lookup"><span data-stu-id="b1be0-149">WDDM</span></span>  
+ <span data-ttu-id="b1be0-150">Windows Vista 이상의 운영 체제를 WDDM를 사용 하도록 구성 되어 있는에서 렌더링 대상 질감을 만들 및 수준 0 화면을 전달할 수는 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="b1be0-150">On Windows Vista and later operating systems, which are configured to use the WDDM, you can create a render target texture and pass the level 0 surface to the <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> method.</span></span> <span data-ttu-id="b1be0-151">잠글 수 있는 렌더링 대상 텍스처를 만들 수 없습니다 및 성능은 저하 됩니다 때문에 Windows xp에서는이 방법은 권장 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-151">This approach is not recommended on Windows XP, because you cannot create a lockable render target texture and performance will be reduced.</span></span>  
   
-## 장치 상태 처리  
- <xref:System.Windows.Interop.D3DImage> 클래스는 *백 버퍼*와 *프런트 버퍼*라고 하는 두 가지 디스플레이 버퍼를 관리합니다.  백 버퍼는 Direct3D 화면입니다.  변경 내용을 백 버퍼에 복사 됩니다 앞으로 프런트 버퍼에 전화를 할 경우는 <xref:System.Windows.Interop.D3DImage.Unlock%2A> 하드웨어에서 표시 되는 메서드를.  경우에 따라 프런트 버퍼를 사용할 수 없습니다.  이와 같이 가용성이 부족해지는 것은 화면 잠금, 전체 화면 전용 Direct3D 응용 프로그램, 사용자 전환 또는 기타 시스템 작업 때문일 수 있습니다.  이 문제가 발생 하면 WPF 응용 프로그램에서 처리 받습니다는 <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> 이벤트.  프런트 버퍼에 사용할 수 없게 되 고 응용 프로그램이 응답 하는 방법을 WPF 소프트웨어 렌더링으로 폴백 활성화 됩니다 여부에 따라 달라 집니다.  <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 메서드는 WPF 소프트웨어 렌더링으로 다시 속하는지 여부를 지정 하는 매개 변수를 사용 하는 오버 로드가 있습니다.  
+## <a name="handling-device-state"></a><span data-ttu-id="b1be0-152">장치 상태 처리</span><span class="sxs-lookup"><span data-stu-id="b1be0-152">Handling Device State</span></span>  
+ <span data-ttu-id="b1be0-153"><xref:System.Windows.Interop.D3DImage> 클래스 라고 하는 두 디스플레이 버퍼 관리는 *백 버퍼* 및 *프런트 버퍼*합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-153">The <xref:System.Windows.Interop.D3DImage> class manages two display buffers, which are called the *back buffer* and the *front buffer*.</span></span> <span data-ttu-id="b1be0-154">백 버퍼가 Direct3D 화면을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-154">The back buffer is your Direct3D surface.</span></span>  <span data-ttu-id="b1be0-155">백 버퍼에 대 한 변경에 복사 됩니다 프런트 버퍼 호출 하는 경우는 <xref:System.Windows.Interop.D3DImage.Unlock%2A> 메서드를 하드웨어에 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-155">Changes to the back buffer are copied forward to the front buffer when you call the <xref:System.Windows.Interop.D3DImage.Unlock%2A> method, where it is displayed on the hardware.</span></span> <span data-ttu-id="b1be0-156">경우에 따라서는 프런트 버퍼 수 없게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-156">Occasionally, the front buffer becomes unavailable.</span></span> <span data-ttu-id="b1be0-157">이 처럼 가용성 화면 잠금, 전체 화면 전용 Direct3D 응용 프로그램, 사용자 전환 또는 기타 시스템 작업에 의해 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-157">This lack of availability can be caused by screen locking, full-screen exclusive Direct3D applications, user-switching, or other system activities.</span></span> <span data-ttu-id="b1be0-158">WPF 응용 프로그램 처리를 통해 알림을 이러한 경우는 <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-158">When this occurs, your WPF application is notified by handling the <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> event.</span></span>  <span data-ttu-id="b1be0-159">사용 하지 못하게 될 프런트 버퍼에 응용 프로그램의 응답으로 소프트웨어 렌더링 대체 WPF 사용 여부에 따라 달라 집니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-159">How your application responds to the front buffer becoming unavailable depends on whether WPF is enabled to fall back to software rendering.</span></span> <span data-ttu-id="b1be0-160"><xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 메서드에 WPF 소프트웨어 렌더링으로 다시 속하는지 여부를 지정 하는 매개 변수를 사용 하는 오버 로드 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-160">The <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> method has an overload that takes a parameter that specifies whether WPF falls back to software rendering.</span></span>  
   
- 호출 하면는 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%29> 오버 로드 또는 호출는 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%2CSystem.Boolean%29> 와 오버 로드는 `enableSoftwareFallback` 매개 변수를 설정 `false`, 렌더링 시스템 프런트 버퍼를 사용할 수 없을 때 아무것도 표시 되지 않음 백 버퍼에 대 한 참조를 해제.  프런트 버퍼는 다시 사용할 수 있을 때 렌더링 시스템 발생의 <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> WPF 응용 프로그램에 알리기 위해 이벤트.  이벤트 처리기를 만들 수 있습니다는 <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> 이벤트를 렌더링 하는 올바른 Direct3D 화면을 다시 다시 시작 합니다.  렌더링을 다시 시작 하 여 호출 해야 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A>.  
+ <span data-ttu-id="b1be0-161">호출 하는 경우는 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%29> 오버 로드 또는 호출의 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%2CSystem.Boolean%29> 오버 로드는 `enableSoftwareFallback` 매개 변수 설정 `false`, 프런트 버퍼를 사용할 수 없게 되 고 아무 것도 렌더링 시스템 백 버퍼에 대 한 참조를 해제 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-161">When you call the <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%29> overload or call the <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%2CSystem.Boolean%29> overload with the `enableSoftwareFallback` parameter set to `false`, the rendering system releases its reference to the back buffer when the front buffer becomes unavailable and nothing is displayed.</span></span> <span data-ttu-id="b1be0-162">프런트 버퍼를 사용할 수 있는 다시 렌더링 발생는 <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> WPF 응용 프로그램에 알리는 이벤트를 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-162">When the front buffer is available again, the rendering system raises the <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> event to notify your WPF application.</span></span>  <span data-ttu-id="b1be0-163">에 대 한 이벤트 처리기를 만들 수는 <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> 유효한 Direct3D 화면을 사용 하 여 다시 렌더링을 다시 시작 하는 이벤트입니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-163">You can create an event handler for the <xref:System.Windows.Interop.D3DImage.IsFrontBufferAvailableChanged> event to restart rendering again with a valid Direct3D surface.</span></span> <span data-ttu-id="b1be0-164">호출 해야 렌더링을 다시 시작 하려면 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A>합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-164">To restart rendering, you must call <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A>.</span></span>  
   
- 호출 하면는 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%2CSystem.Boolean%29> 와 오버 로드는 `enableSoftwareFallback` 매개 변수를 설정 `true`, 호출 하지 않아도 되므로 프런트 버퍼를 사용할 수 없을 때 렌더링 시스템 백 버퍼에 대 한 참조를 유지 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 프런트 버퍼 때 사용할 수 있는 다시.  
+ <span data-ttu-id="b1be0-165">호출 하는 경우는 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%2CSystem.Boolean%29> 오버 로드는 `enableSoftwareFallback` 매개 변수 설정 `true`, 렌더링 시스템을 호출할 필요가 없습니다 이므로 프런트 버퍼를 사용할 수 없을 때 백 버퍼에 대 한 참조를 유지 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 때 앞 버퍼를 다시 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-165">When you call the <xref:System.Windows.Interop.D3DImage.SetBackBuffer%28System.Windows.Interop.D3DResourceType%2CSystem.IntPtr%2CSystem.Boolean%29> overload with the `enableSoftwareFallback` parameter set to `true`, the rendering system retains its reference to the back buffer when the front buffer becomes unavailable, so there is no need to call <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> when the front buffer is available again.</span></span>  
   
- 소프트웨어 렌더링을 사용 하면 렌더링 시스템 Direct3D 화면에 대 한 참조를 유지 하지만 위치 사용자의 장치를 사용할 수 없을 경우 있을 수 있습니다.  Direct3D9 장치를 사용할 수 있는지 여부를 확인 하기 위해 호출 된 `TestCooperativeLevel` 메서드.  Direct3D9Ex 장치 호출을 확인 하는 `CheckDeviceState` 메서드를 때문에 `TestCooperativeLevel` 메서드는 사용 되지 않으며 항상 성공을 반환 합니다.  호출 사용자 장치를 사용할 수 없게 된 경우 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> WPF의 참조 백 버퍼를 해제 합니다.  장치를 다시 설정 하는 경우 호출 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 에 `backBuffer` 매개 변수를 설정 `null`, 다음 호출 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 을 다시 `backBuffer` 유효한 Direct3D 화면으로 설정.  
+ <span data-ttu-id="b1be0-166">소프트웨어 렌더링을 사용 하는 경우 여기서 사용자의 장치를 사용할 수 없지만 Direct3D 화면에 대 한 참조를 유지 하는 렌더링 시스템 있을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-166">When software rendering is enabled, there may be situations where the user’s device becomes unavailable, but the rendering system retains a reference to the Direct3D surface.</span></span> <span data-ttu-id="b1be0-167">Direct3D9 장치를 사용할 수 있는지를 확인 하려면 호출 된 `TestCooperativeLevel` 메서드.</span><span class="sxs-lookup"><span data-stu-id="b1be0-167">To check whether a Direct3D9 device is unavailable, call the `TestCooperativeLevel` method.</span></span> <span data-ttu-id="b1be0-168">Direct3D9Ex 장치 호출을 확인 하 고 `CheckDeviceState` 메서드를 때문에 `TestCooperativeLevel` 메서드는 사용 되지 않으며 항상 성공 했다는 결과가 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-168">To check a Direct3D9Ex devices call the `CheckDeviceState` method, because the `TestCooperativeLevel` method is deprecated and always returns success.</span></span> <span data-ttu-id="b1be0-169">사용자 장치를 사용할 수 있는 경우 호출할 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 백 버퍼에 대 한 WPF의 참조를 해제 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-169">If the user device has become unavailable, call <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> to release WPF’s reference to the back buffer.</span></span>  <span data-ttu-id="b1be0-170">장치를 재설정 해야 할 경우 호출 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 와 `backBuffer` 매개 변수 설정 `null`, 한 다음 호출 <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> 사용 하 여 다시 `backBuffer` 유효한 Direct3D 화면으로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-170">If you need to reset your device, call <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> with the `backBuffer` parameter set to `null`, and then call <xref:System.Windows.Interop.D3DImage.SetBackBuffer%2A> again with `backBuffer` set to a valid Direct3D surface.</span></span>  
   
- 다중 어댑터 지원을 구현한 경우에 한해 `Reset` 메서드를 호출하여 유효하지 않은 장치를 복구합니다.  그 이외의 경우에는 모든 Direct3D9 인터페이스를 해제하고 전체적으로 다시 만듭니다.  어댑터 레이아웃이 변경된 경우 변경 전에 만들어진 Direct3D9 개체는 업데이트되지 않습니다.  
+ <span data-ttu-id="b1be0-171">호출 된 `Reset` 다중 어댑터 지원을 구현 하는 경우에 유효 하지 않은 장치에서 복구 하는 메서드.</span><span class="sxs-lookup"><span data-stu-id="b1be0-171">Call the `Reset` method to recover from an invalid device only if you implement multi-adapter support.</span></span> <span data-ttu-id="b1be0-172">그렇지 않으면, 모든 Direct3D9 인터페이스를 해제 하 고 전체적으로 다시 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-172">Otherwise, release all Direct3D9 interfaces and re-create them completely.</span></span> <span data-ttu-id="b1be0-173">어댑터 레이아웃 변경 된 경우에 변경 전에 만들어진 Direct3D9 개체 업데이트 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-173">If the adapter layout has changed, Direct3D9 objects created before the change are not updated.</span></span>  
   
-## 크기 조정 처리  
- 경우는 <xref:System.Windows.Interop.D3DImage> 표시 됩니다 기본 크기로 이외의 해상도로에 따라 현재 조절 되지 <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A>을 제외 하 고, <xref:System.Windows.Media.Effects.SamplingMode> 에 대 한 대체 <xref:System.Windows.Media.BitmapScalingMode>.  
+## <a name="handling-resizing"></a><span data-ttu-id="b1be0-174">크기 조정 처리</span><span class="sxs-lookup"><span data-stu-id="b1be0-174">Handling Resizing</span></span>  
+ <span data-ttu-id="b1be0-175">경우는 <xref:System.Windows.Interop.D3DImage> 표시 됩니다 현재에 따라 조정 된 기본 크기로 이외의 해상도 <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A>제외 하 고 <xref:System.Windows.Media.Effects.SamplingMode.Bilinear> 를 대체 하는 <xref:System.Windows.Media.BitmapScalingMode.Fant>합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-175">If a <xref:System.Windows.Interop.D3DImage> is displayed at a resolution other than its native size, it is scaled according to the current <xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A>, except that <xref:System.Windows.Media.Effects.SamplingMode.Bilinear> is substituted for <xref:System.Windows.Media.BitmapScalingMode.Fant>.</span></span>  
   
- 정확도를 높이려면 <xref:System.Windows.Interop.D3DImage> 컨테이너의 크기가 변경될 때 새 화면을 만들어야 합니다.  
+ <span data-ttu-id="b1be0-176">새 만들어야 높은 충실도 필요로 하는 경우 화면의 컨테이너는 <xref:System.Windows.Interop.D3DImage> 크기를 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-176">If you require higher fidelity, you must create a new surface when the container of the <xref:System.Windows.Interop.D3DImage> changes size.</span></span>  
   
- 크기 조정은 다음과 같은 세 가지 방법으로 처리할 수 있습니다.  
+ <span data-ttu-id="b1be0-177">세 가지 방법으로 크기 조정을 처리할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-177">There are three possible approaches to handle resizing.</span></span>  
   
--   크기가 변경되면 레이아웃 시스템에 참여하고 새 화면을 만듭니다.  비디오 메모리가 모두 사용되거나 조각화될 수 있으므로 화면을 너무 많이 만들면 안 됩니다.  
+-   <span data-ttu-id="b1be0-178">이 레이아웃 시스템에 참여 하 고 크기를 변경할 때 새 화면을 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-178">Participate in the layout system and create a new surface when the size changes.</span></span> <span data-ttu-id="b1be0-179">이 중단 될 수도, 비디오 메모리를 조각화 때문에 화면을 너무 많이 만들지 마십시오.</span><span class="sxs-lookup"><span data-stu-id="b1be0-179">Do not create too many surfaces, because you may exhaust or fragment video memory.</span></span>  
   
--   크기 조정 이벤트가 발생하지 않은 상태로 일정 시간이 경과한 이후에 새 화면을 만듭니다.  
+-   <span data-ttu-id="b1be0-180">새 화면을 만드는 데 시간이의 고정 된 기간 resize 이벤트가 발생 하지 않은 때까지 기다립니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-180">Wait until a resize event has not occurred for a fixed period of time to create the new surface.</span></span>  
   
--   컨테이너 크기를 1초에 여러 번 확인하는 <xref:System.Windows.Threading.DispatcherTimer>를 만듭니다.  
+-   <span data-ttu-id="b1be0-181">만들기는 <xref:System.Windows.Threading.DispatcherTimer> 초당 여러 번 컨테이너 크기를 확인 하 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-181">Create a <xref:System.Windows.Threading.DispatcherTimer> that checks the container dimensions several times per second.</span></span>  
   
-## 다중 모니터 최적화  
- 렌더링 시스템에서 <xref:System.Windows.Interop.D3DImage>를 다른 모니터로 이동할 경우 성능이 크게 저하될 수 있습니다.  
+## <a name="multi-monitor-optimization"></a><span data-ttu-id="b1be0-182">다중 모니터 최적화</span><span class="sxs-lookup"><span data-stu-id="b1be0-182">Multi-monitor Optimization</span></span>  
+ <span data-ttu-id="b1be0-183">렌더링 시스템 이동 하면 성능이 크게 저하 될 수 있습니다는 <xref:System.Windows.Interop.D3DImage> 다른 모니터로 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-183">Significantly reduced performance can result when the rendering system moves a <xref:System.Windows.Interop.D3DImage> to another monitor.</span></span>  
   
- WDDM의 경우 각각의 모니터가 동일한 비디오 카드에 연결되어 있고 `Direct3DCreate9Ex`를 사용하면 성능이 저하되지 않습니다.  모니터가 서로 다른 비디오 카드에 연결되어 있으면 성능이 저하됩니다.  Windows XP에서는 성능이 항상 저하됩니다.  
+ <span data-ttu-id="b1be0-184">WDDM, 동일한 비디오 모니터 되는 카드를 사용 하 여 `Direct3DCreate9Ex`, 성능이 저하 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-184">On WDDM, as long as the monitors are on the same video card and you use `Direct3DCreate9Ex`, there is no reduction in performance.</span></span> <span data-ttu-id="b1be0-185">모니터는 별도 비디오 카드에 있는 경우 성능이 저하 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-185">If the monitors are on separate video cards, performance is reduced.</span></span> <span data-ttu-id="b1be0-186">Windows xp에서는 항상 성능이 저하 됩니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-186">On Windows XP, performance is always reduced.</span></span>  
   
- <xref:System.Windows.Interop.D3DImage>가 다른 모니터로 이동하면 해당 어댑터에 새 화면을 만들어 성능을 복구할 수 있습니다.  
+ <span data-ttu-id="b1be0-187">경우는 <xref:System.Windows.Interop.D3DImage> 좋은 성능을 복원 하려면 해당 어댑터에 새 화면을 만들 수 있습니다 다른 모니터로 이동 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-187">When the <xref:System.Windows.Interop.D3DImage> moves to another monitor, you can create a new surface on the corresponding adapter to restore good performance.</span></span>  
   
- 성능 저하를 방지하려면 다중 모니터에 맞게 코드를 작성해야 합니다.  다음 목록은 다중 모니터 코드를 작성하는 한 가지 방법을 보여 줍니다.  
+ <span data-ttu-id="b1be0-188">성능 저하를 방지 하려면 특히 다중 모니터에 대 한 코드를 작성 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-188">To avoid the performance penalty, write code specifically for the multi-monitor case.</span></span> <span data-ttu-id="b1be0-189">다음 목록에는 다중 모니터 코드를 작성 하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-189">The following list shows one way to write multi-monitor code.</span></span>  
   
-1.  `Visual.ProjectToScreen` 메서드를 사용하여 화면 공간에서 <xref:System.Windows.Interop.D3DImage>의 점을 찾습니다.  
+1.  <span data-ttu-id="b1be0-190">점을 찾습니다는 <xref:System.Windows.Interop.D3DImage> 화면 공간에는 `Visual.ProjectToScreen` 메서드.</span><span class="sxs-lookup"><span data-stu-id="b1be0-190">Find a point of the <xref:System.Windows.Interop.D3DImage> in screen space with the `Visual.ProjectToScreen` method.</span></span>  
   
-2.  `MonitorFromPoint` GDI 메서드를 사용하여 해당 점을 표시하는 모니터를 찾습니다.  
+2.  <span data-ttu-id="b1be0-191">사용 하 여는 `MonitorFromPoint` GDI 메서드는 포인트를 표시 하는 모니터를 찾습니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-191">Use the `MonitorFromPoint` GDI method to find the monitor that is displaying the point.</span></span>  
   
-3.  `IDirect3D9::GetAdapterMonitor` 메서드를 사용하여 해당 모니터가 설정된 Direct3D9 어댑터를 찾습니다.  
+3.  <span data-ttu-id="b1be0-192">사용 하 여는 `IDirect3D9::GetAdapterMonitor` 메서드가 어떤 Direct3D9 어댑터 모니터를 찾을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-192">Use the `IDirect3D9::GetAdapterMonitor` method to find which Direct3D9 adapter the monitor is on.</span></span>  
   
-4.  어댑터가 백 버퍼가 있는 어댑터와 다른 경우 새 모니터에 백 버퍼를 새로 만들고 <xref:System.Windows.Interop.D3DImage> 백 버퍼에 할당합니다.  
+4.  <span data-ttu-id="b1be0-193">어댑터 백 버퍼를 사용 하 여 어댑터와 동일 하 게 없는 경우 새 백 버퍼에 새 모니터 만들고 할당 하는 <xref:System.Windows.Interop.D3DImage> 백 버퍼입니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-193">If the adapter is not the same as the adapter with the back buffer, create a new back buffer on the new monitor and assign it to the <xref:System.Windows.Interop.D3DImage> back buffer.</span></span>  
   
 > [!NOTE]
->  <xref:System.Windows.Interop.D3DImage>가 여러 모니터에서 사용되는 경우, WDDM을 사용하도록 구성되고 `IDirect3D9Ex`가 같은 어댑터에 있는 경우가 아니면 성능이 떨어집니다.  이러한 경우에는 성능을 높일 수 있는 방법이 없습니다.  
+>  <span data-ttu-id="b1be0-194">경우는 <xref:System.Windows.Interop.D3DImage> 여러 모니터 성능 WDDM의 경우를 제외 하 고 느린 됩니다 및 `IDirect3D9Ex` 동일한 어댑터에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-194">If the <xref:System.Windows.Interop.D3DImage> straddles monitors, performance will be slow, except in the case of WDDM and `IDirect3D9Ex` on the same adapter.</span></span> <span data-ttu-id="b1be0-195">이러한 상황에서 성능을 향상 시킬 방식은 없습니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-195">There is no way to improve performance in this situation.</span></span>  
   
- 다음 코드 예제에서는 현재 모니터를 찾는 방법을 보여 줍니다.  
+ <span data-ttu-id="b1be0-196">다음 코드 예제에는 현재 모니터를 찾는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-196">The following code example shows how to find the current monitor.</span></span>  
   
  [!code-cpp[System.Windows.Interop.D3DImage#RendererManager_SetAdapter](../../../../samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanager_setadapter)]  
   
- <xref:System.Windows.Interop.D3DImage> 컨테이너의 크기나 위치가 변경되면 모니터를 업데이트하거나, 1초당 여러 번 업데이트하는 `DispatcherTimer`를 사용하여 모니터를 업데이트합니다.  
+ <span data-ttu-id="b1be0-197">모니터를 업데이트 하면는 <xref:System.Windows.Interop.D3DImage> 컨테이너의 크기 또는 위치 변경 또는 업데이트를 사용 하 여 모니터는 `DispatcherTimer` 초당를 여러 번 업데이트 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-197">Update the monitor when the <xref:System.Windows.Interop.D3DImage> container's size or position changes, or update the monitor by using a `DispatcherTimer` that updates a few times per second.</span></span>  
   
-## WPF 소프트웨어 렌더링  
- 다음과 같은 경우 WPF는 소프트웨어의 UI 스레드에서 동기적으로 렌더링합니다.  
+## <a name="wpf-software-rendering"></a><span data-ttu-id="b1be0-198">WPF 소프트웨어 렌더링</span><span class="sxs-lookup"><span data-stu-id="b1be0-198">WPF Software Rendering</span></span>  
+ <span data-ttu-id="b1be0-199">WPF는 다음과 같은 경우에는 소프트웨어에는 UI 스레드에서 동기적으로 렌더링합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-199">WPF renders synchronously on the UI thread in software in the following situations.</span></span>  
   
--   인쇄  
+-   <span data-ttu-id="b1be0-200">인쇄</span><span class="sxs-lookup"><span data-stu-id="b1be0-200">Printing</span></span>  
   
 -   <xref:System.Windows.Media.Effects.BitmapEffect>  
   
 -   <xref:System.Windows.Media.Imaging.RenderTargetBitmap>  
   
- 이러한 상황이 발생하면 렌더링 시스템은 <xref:System.Windows.Interop.D3DImage.CopyBackBuffer%2A> 메서드를 호출하여 하드웨어 버퍼를 소프트웨어에 복사합니다.  기본 구현을 사용하면 화면과 함께 `GetRenderTargetData` 메서드가 호출됩니다.  이 호출은 Lock\/Unlock 패턴 외부에서 발생하기 때문에 실패할 수 있습니다.  이 경우 `CopyBackBuffer` 메서드가 `null`을 반환하고 이미지가 표시되지 않습니다.  
+ <span data-ttu-id="b1be0-201">이러한 상황 중 하나가 발생할 때 렌더링 시스템 호출는 <xref:System.Windows.Interop.D3DImage.CopyBackBuffer%2A> 메서드를 하드웨어 버퍼 소프트웨어를에 복사 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-201">When one of these situations occurs, the rendering system calls the <xref:System.Windows.Interop.D3DImage.CopyBackBuffer%2A> method to copy the hardware buffer to software.</span></span> <span data-ttu-id="b1be0-202">기본 구현 호출은 `GetRenderTargetData` 메서드를 사용 하면 화면과 함께 합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-202">The default implementation calls the `GetRenderTargetData` method with your surface.</span></span> <span data-ttu-id="b1be0-203">이 호출은 잠금/잠금 해제 패턴 외부에서 발생 하기 때문에 실패할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-203">Because this call occurs outside of the Lock/Unlock pattern, it may fail.</span></span> <span data-ttu-id="b1be0-204">이 경우에 `CopyBackBuffer` 메서드 반환 `null` 및 이미지가 표시 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-204">In this case, the `CopyBackBuffer` method returns `null` and no image is displayed.</span></span>  
   
- <xref:System.Windows.Interop.D3DImage.CopyBackBuffer%2A> 메서드를 재정의하고 기본 구현을 호출할 수 있습니다. 이 경우 `null`이 반환되면 자리 표시자 <xref:System.Windows.Media.Imaging.BitmapSource>를 반환할 수 있습니다.  
+ <span data-ttu-id="b1be0-205">재정의할 수 있습니다는 <xref:System.Windows.Interop.D3DImage.CopyBackBuffer%2A> 메서드를 기본 구현을 반환 하는 경우 및 `null`, 자리 표시자를 반환할 수 있습니다 <xref:System.Windows.Media.Imaging.BitmapSource>합니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-205">You can override the <xref:System.Windows.Interop.D3DImage.CopyBackBuffer%2A> method, call the base implementation, and if it returns `null`, you can return a placeholder <xref:System.Windows.Media.Imaging.BitmapSource>.</span></span>  
   
- 기본 구현을 호출하는 대신 고유한 소프트웨어 렌더링을 구현할 수도 있습니다.  
+ <span data-ttu-id="b1be0-206">또한 기본 구현을 호출 하는 대신 사용자 지정 소프트웨어 렌더링을 구현할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-206">You can also implement your own software rendering instead of calling the base implementation.</span></span>  
   
 > [!NOTE]
->  WPF가 소프트웨어에서만 렌더링되면 WPF에 프런트 버퍼가 없기 때문에 <xref:System.Windows.Interop.D3DImage>가 표시되지 않습니다.  
+>  <span data-ttu-id="b1be0-207">소프트웨어에서 WPF가 완전히에 렌더링 하는 경우 <xref:System.Windows.Interop.D3DImage> WPF 프런트 버퍼 없기 때문에 표시 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b1be0-207">If WPF is rendering completely in software, <xref:System.Windows.Interop.D3DImage> is not shown because WPF does not have a front buffer.</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Interop.D3DImage>   
- [Direct3D9 및 WPF 상호 운용성을 위한 성능 고려 사항](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)   
- [연습: WPF에서 호스팅할 Direct3D9 콘텐츠 만들기](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)   
- [연습: WPF에서 Direct3D9 콘텐츠 호스팅](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="b1be0-208">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b1be0-208">See Also</span></span>  
+ <xref:System.Windows.Interop.D3DImage>  
+ [<span data-ttu-id="b1be0-209">Direct3D9 및 WPF 상호 운용성을 위한 성능 고려 사항</span><span class="sxs-lookup"><span data-stu-id="b1be0-209">Performance Considerations for Direct3D9 and WPF Interoperability</span></span>](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)  
+ [<span data-ttu-id="b1be0-210">연습: WPF에서 호스팅할 Direct3D9 콘텐츠 만들기</span><span class="sxs-lookup"><span data-stu-id="b1be0-210">Walkthrough: Creating Direct3D9 Content for Hosting in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)  
+ [<span data-ttu-id="b1be0-211">연습: WPF에서 Direct3D9 콘텐츠 호스팅</span><span class="sxs-lookup"><span data-stu-id="b1be0-211">Walkthrough: Hosting Direct3D9 Content in WPF</span></span>](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)

@@ -1,53 +1,54 @@
 ---
-title: "Windows Forms DataGridView 컨트롤의 데이터 정렬 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "데이터[Windows Forms], 표에서 정렬"
-  - "데이터 표, 데이터 정렬"
-  - "DataGridView 컨트롤[Windows Forms], 데이터 정렬"
+title: "Windows Forms DataGridView 컨트롤의 데이터 정렬"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data [Windows Forms], sorting in grids
+- data grids [Windows Forms], sorting data
+- DataGridView control [Windows Forms], sorting data
 ms.assetid: c1d4f24c-d961-4181-809d-5a5caa6122e4
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b4027f3ae604f2a3ff4996855fa6dd34d4de8ea2
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Windows Forms DataGridView 컨트롤의 데이터 정렬
-기본적으로 사용자는 텍스트 상자 열의 머리글을 클릭하여 `DataGridView` 컨트롤의 데이터를 정렬할 수 있습니다.  특정 열의 `SortMode` 속성을 수정하여 사용자가 필요에 따라 다른 열 형식을 기준으로 정렬하도록 허용할 수 있습니다.  임의의 열이나 여러 열을 기준으로 데이터를 프로그래밍 방식으로 정렬할 수도 있습니다.  
+# <a name="sorting-data-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="20d8e-102">Windows Forms DataGridView 컨트롤의 데이터 정렬</span><span class="sxs-lookup"><span data-stu-id="20d8e-102">Sorting Data in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="20d8e-103">기본적으로 사용자의 데이터를 정렬할 수는 `DataGridView` 텍스트 상자 열 머리글을 클릭 하 여 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="20d8e-103">By default, users can sort the data in a `DataGridView` control by clicking the header of a text box column.</span></span> <span data-ttu-id="20d8e-104">수정할 수 있습니다는 `SortMode` 사용자가 작업을 수행 하는 경우 다른 형식의 열을 정렬할 수 있도록 특정 열 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="20d8e-104">You can modify the `SortMode` property of specific columns to allow users to sort by other column types when it makes sense to do so.</span></span> <span data-ttu-id="20d8e-105">임의의 열 또는 여러 열으로 프로그래밍 방식으로 데이터를 정렬할 수 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="20d8e-105">You can also sort the data programmatically by any column, or by multiple columns.</span></span>  
   
-## 단원 내용  
- [Windows Forms DataGridView 컨트롤의 열 정렬 모드](../../../../docs/framework/winforms/controls/column-sort-modes-in-the-windows-forms-datagridview-control.md)  
- 컨트롤의 데이터를 정렬하기 위한 옵션을 설명합니다.  
+## <a name="in-this-section"></a><span data-ttu-id="20d8e-106">단원 내용</span><span class="sxs-lookup"><span data-stu-id="20d8e-106">In This Section</span></span>  
+ [<span data-ttu-id="20d8e-107">Windows Forms DataGridView 컨트롤의 열 정렬 모드</span><span class="sxs-lookup"><span data-stu-id="20d8e-107">Column Sort Modes in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/column-sort-modes-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="20d8e-108">컨트롤의 데이터 정렬에 대 한 옵션에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="20d8e-108">Describes the options for sorting data in the control.</span></span>  
   
- [방법: Windows Forms DataGridView 컨트롤의 열 정렬 모드 설정](../../../../docs/framework/winforms/controls/set-the-sort-modes-for-columns-wf-datagridview-control.md)  
- 사용자가 기본적으로 정렬할 수 없는 열을 기준으로 정렬할 수 있도록 허용하는 방법을 설명합니다.  
+ [<span data-ttu-id="20d8e-109">방법: Windows Forms DataGridView 컨트롤의 열 정렬 모드 설정</span><span class="sxs-lookup"><span data-stu-id="20d8e-109">How to: Set the Sort Modes for Columns in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/set-the-sort-modes-for-columns-wf-datagridview-control.md)  
+ <span data-ttu-id="20d8e-110">사용자가 기본적으로 정렬 가능 하지 않은 열을 정렬할 수 있도록 하는 방법에 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="20d8e-110">Describes how to enable users to sort by columns that are not sortable by default.</span></span>  
   
- [방법: Windows Forms DataGridView 컨트롤에서 정렬 사용자 지정](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)  
- 프로그래밍 방식으로 데이터를 정렬하는 방법과 <xref:System.Windows.Forms.DataGridView.SortCompare?displayProperty=fullName> 이벤트를 사용하거나 <xref:System.Collections.IComparer> 인터페이스를 구현하여 정렬을 사용자 지정하는 방법을 설명합니다.  
+ [<span data-ttu-id="20d8e-111">방법: Windows Forms DataGridView 컨트롤에서 정렬 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="20d8e-111">How to: Customize Sorting in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="20d8e-112">프로그래밍 방식으로 데이터를 정렬 하는 방법 및 정렬을 사용 하 여 사용자 지정 하는 방법에 설명 된 <xref:System.Windows.Forms.DataGridView.SortCompare?displayProperty=nameWithType> 이벤트 또는 구현 하 여는 <xref:System.Collections.IComparer> 인터페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="20d8e-112">Describes how to sort data programmatically and how to customize sorting by using the <xref:System.Windows.Forms.DataGridView.SortCompare?displayProperty=nameWithType> event or by implementing the <xref:System.Collections.IComparer> interface.</span></span>  
   
-## 참조  
+## <a name="reference"></a><span data-ttu-id="20d8e-113">참조</span><span class="sxs-lookup"><span data-stu-id="20d8e-113">Reference</span></span>  
  <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridView> 컨트롤에 대한 참조 설명서를 제공합니다.  
+ <span data-ttu-id="20d8e-114"><xref:System.Windows.Forms.DataGridView> 컨트롤에 대한 참조 설명서를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="20d8e-114">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
- <xref:System.Windows.Forms.DataGridView.Sort%2A?displayProperty=fullName>  
- <xref:System.Windows.Forms.DataGridView.Sort%2A> 메서드에 대한 참조 설명서를 제공합니다.  
+ <xref:System.Windows.Forms.DataGridView.Sort%2A?displayProperty=nameWithType>  
+ <span data-ttu-id="20d8e-115">에 대 한 참조 설명서를 제공는 <xref:System.Windows.Forms.DataGridView.Sort%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="20d8e-115">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView.Sort%2A> method.</span></span>  
   
- <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=fullName>  
- <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> 속성에 대한 참조 설명서를 제공합니다.  
+ <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>  
+ <span data-ttu-id="20d8e-116">에 대 한 참조 설명서를 제공는 <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="20d8e-116">Provides reference documentation for the <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> property.</span></span>  
   
  <xref:System.Windows.Forms.DataGridViewColumnSortMode>  
- <xref:System.Windows.Forms.DataGridViewColumnSortMode> 열거형에 대한 참조 설명서를 제공합니다.  
+ <span data-ttu-id="20d8e-117">에 대 한 참조 설명서를 제공는 <xref:System.Windows.Forms.DataGridViewColumnSortMode> 열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="20d8e-117">Provides reference documentation for the <xref:System.Windows.Forms.DataGridViewColumnSortMode> enumeration.</span></span>  
   
-## 참고 항목  
- [DataGridView 컨트롤](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)   
- [Windows Forms DataGridView 컨트롤의 열 형식](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)
+## <a name="see-also"></a><span data-ttu-id="20d8e-118">참고 항목</span><span class="sxs-lookup"><span data-stu-id="20d8e-118">See Also</span></span>  
+ [<span data-ttu-id="20d8e-119">DataGridView 컨트롤</span><span class="sxs-lookup"><span data-stu-id="20d8e-119">DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
+ [<span data-ttu-id="20d8e-120">Windows Forms DataGridView 컨트롤의 열 형식</span><span class="sxs-lookup"><span data-stu-id="20d8e-120">Column Types in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)

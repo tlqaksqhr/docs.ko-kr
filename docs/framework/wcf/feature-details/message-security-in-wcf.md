@@ -1,72 +1,75 @@
 ---
-title: "WCF의 메시지 보안 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "WCF의 메시지 보안"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 0948c7447bcfd32ad666072ce6f74b1f6fd8aed8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# WCF의 메시지 보안
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에는 보안을 제공하는 두 가지 주요 모드\(`Transport` 및 `Message`\)와 그 둘을 조합하는 세 번째 모드\(`TransportWithMessageCredential`\)가 있습니다.이 항목에서는 메시지 보안과 메시지 보안을 사용하는 이유에 대해 설명합니다.  
+# <a name="message-security-in-wcf"></a><span data-ttu-id="98b10-102">WCF의 메시지 보안</span><span class="sxs-lookup"><span data-stu-id="98b10-102">Message Security in WCF</span></span>
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="98b10-103">에는 보안을 제공하는 두 가지 주요 모드(`Transport` 및 `Message`)와 그 둘을 조합하는 세 번째 모드(`TransportWithMessageCredential`)가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-103"> has two major modes for providing security (`Transport` and `Message`) and a third mode (`TransportWithMessageCredential`) that combines the two.</span></span> <span data-ttu-id="98b10-104">이 항목에서는 메시지 보안과 메시지 보안을 사용하는 이유에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-104">This topic discusses message security and the reasons to use it.</span></span>  
   
-## 메시지 보안이란?  
- 메시지 보안은 WS\-Security 사양을 사용하여 메시지를 보호합니다.WS\-Security 사양에서는 전송 수준이 아닌 SOAP 메시지 수준에서 기밀성, 무결성 및 인증을 보장하기 위한 SOAP 메시징 향상에 대해 설명합니다.  
+## <a name="what-is-message-security"></a><span data-ttu-id="98b10-105">메시지 보안이란?</span><span class="sxs-lookup"><span data-stu-id="98b10-105">What Is Message Security?</span></span>  
+ <span data-ttu-id="98b10-106">메시지 보안은 WS-Security 사양을 사용하여 메시지를 보호합니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-106">Message security uses the WS-Security specification to secure messages.</span></span> <span data-ttu-id="98b10-107">WS-Security 사양에서는 전송 수준이 아닌 SOAP 메시지 수준에서 기밀성, 무결성 및 인증을 보장하기 위한 SOAP 메시징 향상에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-107">The WS-Securityspecification describes enhancements to SOAP messaging to ensure confidentiality, integrity, and authentication at the SOAP message level (instead of the transport level).</span></span>  
   
- 간단하게 말해, 메시지 보안은 보안 자격 증명을 캡슐화하고 모든 메시지와 모든 메시지 보호\(서명 또는 암호화\)를 클레임한다는 점에서 전송 보안과 다릅니다.콘텐츠를 수정하여 메시지에 보안을 직접 적용하면 보호된 메시지가 독립적인 보안을 갖출 수 있습니다.그러면 전송 보안을 사용할 때는 불가능한 시나리오 몇 가지가 가능해집니다.  
+ <span data-ttu-id="98b10-108">간단하게 말해, 메시지 보안은 보안 자격 증명을 캡슐화하고 모든 메시지와 모든 메시지 보호(서명 또는 암호화)를 클레임한다는 점에서 전송 보안과 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-108">In brief, message security differs from transport security by encapsulating the security credentials and claims with every message along with any message protection (signing or encryption).</span></span> <span data-ttu-id="98b10-109">콘텐츠를 수정하여 메시지에 보안을 직접 적용하면 보호된 메시지가 독립적인 보안을 갖출 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-109">Applying the security directly to the message by modifying its content allows the secured message to be self-containing with respect to the security aspects.</span></span> <span data-ttu-id="98b10-110">그러면 전송 보안을 사용할 때는 불가능한 시나리오 몇 가지가 가능해집니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-110">This enables some scenarios that are not possible when transport security is used.</span></span>  
   
-## 메시지 보안을 사용하는 이유  
- 메시지 수준 보안에서는 모든 보안 정보가 메시지에 캡슐화됩니다.전송 수준 보안 대신 메시지 수준 보안을 사용하여 메시지를 보호하면 다음과 같은 이점이 있습니다.  
+## <a name="reasons-to-use-message-security"></a><span data-ttu-id="98b10-111">메시지 보안을 사용하는 이유</span><span class="sxs-lookup"><span data-stu-id="98b10-111">Reasons to Use Message Security</span></span>  
+ <span data-ttu-id="98b10-112">메시지 수준 보안에서는 모든 보안 정보가 메시지에 캡슐화됩니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-112">In message-level security, all of the security information is encapsulated in the message.</span></span> <span data-ttu-id="98b10-113">전송 수준 보안 대신 메시지 수준 보안을 사용하여 메시지를 보호하면 다음과 같은 이점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-113">Securing the message with message-level security instead of transport-level security has the following advantages:</span></span>  
   
--   종단 간 보안.SSL\(Secure Sockets Layer\)과 같은 보안 전송은 통신이 지점 간에서 이루어지는 경우에만 메시지 보안을 적용합니다.메시지가 최종 수신자에 도달하기 전에 하나 이상의 SOAP 매개 지점\(예: 라우터\)으로 라우트되는 경우, 매개 지점에서 와이어로부터 메시지를 읽고 나면 메시지 자체를 더 이상 보호할 수 없습니다.또한 클라이언트 인증 정보는 첫 번째 매개 지점에서만 사용할 수 있기 때문에 필요한 경우에는 out\-of\-band 방식으로 최종 수신자에게 전송해야 합니다.이는 전체 경로에서 개별 홉 사이에 SSL 보안을 사용하는 경우에도 적용됩니다.메시지 보안은 메시지에 직접 작용하며 그 안에 있는 XML을 보호하기 때문에, 메시지가 최종 수신자에 도달할 때까지 사용되는 매개 지점의 수에 관계없이 메시지를 계속 보호합니다.따라서 진정한 종단 간 보안 시나리오가 가능하게 됩니다.  
+-   <span data-ttu-id="98b10-114">종단 간 보안.</span><span class="sxs-lookup"><span data-stu-id="98b10-114">End-to-end security.</span></span> <span data-ttu-id="98b10-115">SSL(Secure Sockets Layer)과 같은 보안 전송은 통신이 지점 간에서 이루어지는 경우에만 메시지 보안을 적용합니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-115">Transport security, such as Secure Sockets Layer (SSL) only secures messages when the communication is point-to-point.</span></span> <span data-ttu-id="98b10-116">메시지가 최종 수신자에 도달하기 전에 하나 이상의 SOAP 매개 지점(예: 라우터)으로 라우팅되는 경우, 매개 지점에서 와이어로부터 메시지를 읽고 나면 메시지 자체를 더 이상 보호할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-116">If the message is routed to one or more SOAP intermediaries (for example a router) before reaching the ultimate receiver, the message itself is not protected once an intermediary reads it from the wire.</span></span> <span data-ttu-id="98b10-117">또한 클라이언트 인증 정보는 첫 번째 매개 지점에서만 사용할 수 있기 때문에 필요한 경우에는 out-of-band 방식으로 최종 지점에 다시 전송해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-117">Additionally, the client authentication information is available only to the first intermediary and must be re-transmitted to the ultimate receiver in out-of-band fashion, if necessary.</span></span> <span data-ttu-id="98b10-118">이는 전체 경로에서 개별 홉 사이에 SSL 보안을 사용하는 경우에도 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-118">This applies even if the entire route uses SSL security between individual hops.</span></span> <span data-ttu-id="98b10-119">메시지 보안은 메시지에 직접 작용하며 그 안에 있는 XML을 보호하기 때문에, 메시지가 최종 수신자에 도달할 때까지 사용되는 매개 지점의 수에 관계없이 메시지를 계속 보호합니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-119">Because message security works directly with the message and secures the XML in it, the security stays with the message regardless of how many intermediaries are involved before it reaches the ultimate receiver.</span></span> <span data-ttu-id="98b10-120">따라서 진정한 종단 간 보안 시나리오가 가능하게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-120">This enables a true end-to-end security scenario.</span></span>  
   
--   유연성 향상.메시지 전체가 아닌 메시지의 일부를 서명 또는 암호화할 수 있습니다.즉, 메시지 중 매개 지점에 전달될 부분을 매개 지점에서 볼 수 있습니다.발신자가 메시지의 정보 중 일부를 매개 지점에 보이게 하려는 경우 변경을 방지하려면 암호화는 하지 않고 서명만 하면 됩니다.서명은 메시지의 일부이기 때문에 최종 수신자에서 메시지의 정보가 변경 없이 도착했는지 확인할 수 있습니다.동작 헤더 값에 따라 메시지를 라우트하는 SOAP 매개 서비스가 있는 시나리오를 생각할 수 있습니다.기본적으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 동작 값을 암호화하지 않지만 메시지 보안을 사용하는 경우 서명은 합니다.따라서 모든 매개 지점에서 이 정보를 볼 수 있지만 변경할 수는 없습니다.  
+-   <span data-ttu-id="98b10-121">유연성 향상.</span><span class="sxs-lookup"><span data-stu-id="98b10-121">Increased flexibility.</span></span> <span data-ttu-id="98b10-122">메시지 전체가 아닌 메시지의 일부를 서명 또는 암호화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-122">Parts of the message, instead of the entire message, can be signed or encrypted.</span></span> <span data-ttu-id="98b10-123">즉, 메시지 중 매개 지점에 전달될 부분을 매개 지점에서 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-123">This means that intermediaries can view the parts of the message that are intended for them.</span></span> <span data-ttu-id="98b10-124">발신자가 메시지의 정보 중 일부를 매개 지점에 보이게 하려는 경우 변경을 방지하려면 암호화는 하지 않고 서명만 하면 됩니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-124">If the sender needs to make part of the information in the message visible to the intermediaries but wants to ensure that it is not tampered with, it can just sign it but leave it unencrypted.</span></span> <span data-ttu-id="98b10-125">서명은 메시지의 일부이기 때문에 최종 수신자에서 메시지의 정보가 변경 없이 도착했는지 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-125">Since the signature is part of the message, the ultimate receiver can verify that the information in the message was received intact.</span></span> <span data-ttu-id="98b10-126">동작 헤더 값에 따라 메시지를 라우트하는 SOAP 매개 서비스가 있는 시나리오를 생각할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-126">One scenario might have a SOAP intermediary service that routes message according the Action header value.</span></span> <span data-ttu-id="98b10-127">기본적으로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 동작 값을 암호화하지 않지만 메시지 보안을 사용하는 경우 서명은 합니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-127">By default, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] does not encrypt the Action value but signs it if message security is used.</span></span> <span data-ttu-id="98b10-128">따라서 모든 매개 지점에서 이 정보를 볼 수 있지만 변경할 수는 없습니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-128">Therefore, this information is available to all intermediaries, but no one can change it.</span></span>  
   
--   다중 전송 지원.명명된 파이프 및 TCP 등의 서로 다른 여러 전송을 통해 보안 프로토콜에 의존하지 않고도 보안 메시지를 보낼 수 있습니다.전송 수준 보안을 사용하면 모든 보안 정보가 특정 전송 연결 하나로 범위 지정되며 메시지 콘텐츠 자체에서는 사용할 수 없게 됩니다.메시지 보안은 메시지 전송에 사용되는 전송 방법에 관계없이 메시지를 보호하며 보안 컨텍스트는 메시지 내부에 직접 포함됩니다.  
+-   <span data-ttu-id="98b10-129">다중 전송 지원.</span><span class="sxs-lookup"><span data-stu-id="98b10-129">Support for multiple transports.</span></span> <span data-ttu-id="98b10-130">명명된 파이프 및 TCP 등의 서로 다른 여러 전송을 통해 보안 프로토콜에 의존하지 않고도 보안 메시지를 보낼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-130">You can send secured messages over many different transports, such as named pipes and TCP, without having to rely on the protocol for security.</span></span> <span data-ttu-id="98b10-131">전송 수준 보안을 사용하면 모든 보안 정보가 특정 전송 연결 하나로 범위 지정되며 메시지 콘텐츠 자체에서는 사용할 수 없게 됩니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-131">With transport-level security, all the security information is scoped to a single particular transport connection and is not available from the message content itself.</span></span> <span data-ttu-id="98b10-132">메시지 보안은 메시지 전송에 사용되는 전송 방법에 관계없이 메시지를 보호하며 보안 컨텍스트는 메시지 내부에 직접 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-132">Message security makes the message secure regardless of what transport you use to transmit the message, and the security context is directly embedded inside the message.</span></span>  
   
--   광범위한 자격 증명 및 클레임 지원.메시지 보안은 SOAP 메시지 내에 모든 형식의 클레임을 전송할 수 있는 확장 가능 프레임워크인 WS\-Security 사양을 따릅니다.전송 보안과 달리, 사용할 수 있는 인증 메커니즘 또는 클레임 집합이 전송 기능에 따라 제한되지 않습니다.[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 메시지 보안에는 여러 인증 및 클레임 전송 형식이 포함되어 있으며 필요에 따라 이를 확장하여 추가 형식을 지원할 수 있습니다.그렇기 때문에 예를 들어 메시지 보안 없이는 페더레이션 자격 증명 시나리오를 수행할 수 없습니다.페더레이션 시나리오 WCF 지원에 대한 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]는 [페더레이션 및 발급된 토큰](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)을 참조하십시오.  
+-   <span data-ttu-id="98b10-133">광범위한 자격 증명 및 클레임 지원.</span><span class="sxs-lookup"><span data-stu-id="98b10-133">Support for a wide set of credentials and claims.</span></span> <span data-ttu-id="98b10-134">메시지 보안은 SOAP 메시지 내에 모든 형식의 클레임을 전송할 수 있는 확장 가능 프레임워크인 WS-Security 사양을 따릅니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-134">The message security is based on the WS-Security specification, which provides an extensible framework capable of transmitting any type of claim inside the SOAP message.</span></span> <span data-ttu-id="98b10-135">전송 보안과 달리, 사용할 수 있는 인증 메커니즘 또는 클레임 집합이 전송 기능에 따라 제한되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-135">Unlike transport security, the set of authentication mechanisms, or claims, that you can use is not limited by the transport capabilities.</span></span> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]<span data-ttu-id="98b10-136"> 메시지 보안에는 여러 인증 및 클레임 전송 형식이 포함되어 있으며 필요에 따라 이를 확장하여 추가 형식을 지원할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-136"> message security includes multiple types of authentication and claim transmission and can be extended to support additional types as necessary.</span></span> <span data-ttu-id="98b10-137">그렇기 때문에 예를 들어 메시지 보안 없이는 페더레이션 자격 증명 시나리오를 수행할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-137">For those reasons, for example, a federated credentials scenario is not possible without message security.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="98b10-138">WCF 원하는 페더레이션 시나리오, 참조 [페더레이션 및 발급 된 토큰](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-138"> federation scenarios WCF supports, see [Federation and Issued Tokens](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).</span></span>  
   
-## 메시지 보안과 전송 보안 비교  
+## <a name="how-message-and-transport-security-compare"></a><span data-ttu-id="98b10-139">메시지 보안과 전송 보안 비교</span><span class="sxs-lookup"><span data-stu-id="98b10-139">How Message and Transport Security Compare</span></span>  
   
-### 전송 수준 보안의 장단점  
- 전송 보안에는 다음과 같은 이점이 있습니다.  
+### <a name="pros-and-cons-of-transport-level-security"></a><span data-ttu-id="98b10-140">전송 수준 보안의 장단점</span><span class="sxs-lookup"><span data-stu-id="98b10-140">Pros and Cons of Transport-Level Security</span></span>  
+ <span data-ttu-id="98b10-141">전송 보안에는 다음과 같은 이점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-141">Transport security has the following advantages:</span></span>  
   
--   통신하는 당사자가 XML 수준 보안 개념을 이해할 필요가 없습니다.이를 통해 HTTPS를 사용하여 통신을 보호하는 등의 경우에 상호 운용성을 향상시킬 수 있습니다.  
+-   <span data-ttu-id="98b10-142">통신하는 당사자가 XML 수준 보안 개념을 이해할 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-142">Does not require that the communicating parties understand XML-level security concepts.</span></span> <span data-ttu-id="98b10-143">이를 통해 HTTPS를 사용하여 통신을 보호하는 등의 경우에 상호 운용성을 향상시킬 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-143">This can improve the interoperability, for example, when HTTPS is used to secure the communication.</span></span>  
   
--   일반적으로 성능이 향상되었습니다.  
+-   <span data-ttu-id="98b10-144">일반적으로 성능이 향상되었습니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-144">Generally improved performance.</span></span>  
   
--   하드웨어 액셀러레이터를 사용할 수 있습니다.  
+-   <span data-ttu-id="98b10-145">하드웨어 액셀러레이터를 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-145">Hardware accelerators are available.</span></span>  
   
--   스트리밍이 가능합니다.  
+-   <span data-ttu-id="98b10-146">스트리밍이 가능합니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-146">Streaming is possible.</span></span>  
   
- 전송 보안에는 다음과 같은 단점이 있습니다.  
+ <span data-ttu-id="98b10-147">전송 보안에는 다음과 같은 단점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-147">Transport security has the following disadvantages:</span></span>  
   
--   홉 간에만 적용됩니다.  
+-   <span data-ttu-id="98b10-148">홉 간에만 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-148">Hop-to-hop only.</span></span>  
   
--   자격 증명 집합이 제한되어 확장할 수 없습니다.  
+-   <span data-ttu-id="98b10-149">자격 증명 집합이 제한되어 확장할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-149">Limited and inextensible set of credentials.</span></span>  
   
--   전송에 종속됩니다.  
+-   <span data-ttu-id="98b10-150">전송에 종속됩니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-150">Transport-dependent.</span></span>  
   
-### 메시지 수준 보안의 단점  
- 메시지 보안에는 다음과 같은 단점이 있습니다.  
+### <a name="disadvantages-of-message-level-security"></a><span data-ttu-id="98b10-151">메시지 수준 보안의 단점</span><span class="sxs-lookup"><span data-stu-id="98b10-151">Disadvantages of Message-Level Security</span></span>  
+ <span data-ttu-id="98b10-152">메시지 보안에는 다음과 같은 단점이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-152">Message security has the following disadvantages:</span></span>  
   
--   성능  
+-   <span data-ttu-id="98b10-153">성능</span><span class="sxs-lookup"><span data-stu-id="98b10-153">Performance</span></span>  
   
--   메시지 스트리밍을 사용할 수 없습니다.  
+-   <span data-ttu-id="98b10-154">메시지 스트리밍을 사용할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-154">Cannot use message streaming.</span></span>  
   
--   XML 수준 보안 메커니즘과 WS\-Security 사양 지원을 구현해야 합니다.이로 인해 상호 운용성이 저하될 수 있습니다.  
+-   <span data-ttu-id="98b10-155">XML 수준 보안 메커니즘과 WS-Security 사양 지원을 구현해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-155">Requires implementation of XML-level security mechanisms and support for WS-Security specification.</span></span> <span data-ttu-id="98b10-156">이로 인해 상호 운용성이 저하될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="98b10-156">This might affect the interoperability.</span></span>  
   
-## 참고 항목  
- [서비스 및 클라이언트에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)   
- [전송 보안](../../../../docs/framework/wcf/feature-details/transport-security.md)   
- [방법: 전송 보안 및 메시지 자격 증명 사용](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)   
- [Microsoft 패턴 및 실습, 3장: 전송 및 메시지 레이어 보안 구현](http://go.microsoft.com/fwlink/?LinkId=88897)
+## <a name="see-also"></a><span data-ttu-id="98b10-157">참고 항목</span><span class="sxs-lookup"><span data-stu-id="98b10-157">See Also</span></span>  
+ [<span data-ttu-id="98b10-158">서비스 및 클라이언트 보안 설정</span><span class="sxs-lookup"><span data-stu-id="98b10-158">Securing Services and Clients</span></span>](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="98b10-159">전송 보안</span><span class="sxs-lookup"><span data-stu-id="98b10-159">Transport Security</span></span>](../../../../docs/framework/wcf/feature-details/transport-security.md)  
+ [<span data-ttu-id="98b10-160">방법: 사용 하 여 전송 보안 및 메시지 자격 증명</span><span class="sxs-lookup"><span data-stu-id="98b10-160">How to: Use Transport Security and Message Credentials</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
+ [<span data-ttu-id="98b10-161">Microsoft Patterns and Practices, 3 장: 구현 전송 및 메시지 계층 보안</span><span class="sxs-lookup"><span data-stu-id="98b10-161">Microsoft Patterns and Practices, Chapter 3: Implementing Transport and Message Layer Security</span></span>](http://go.microsoft.com/fwlink/?LinkId=88897)

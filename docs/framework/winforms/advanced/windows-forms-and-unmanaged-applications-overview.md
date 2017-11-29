@@ -1,77 +1,78 @@
 ---
-title: "Windows Forms 및 관리되지 않는 응용 프로그램 개요 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "COM[Windows Forms]"
-  - "Windows Forms, 관리되지 않음"
-  - "COM interop"
-  - "ActiveX 컨트롤[Windows Forms], ActiveX 컨트롤 정보"
-  - "Windows Forms, interop"
+title: "Windows Forms 및 관리되지 않는 응용 프로그램 개요"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- COM [Windows Forms]
+- Windows Forms, unmanaged
+- COM interop
+- ActiveX controls [Windows Forms], about ActiveX controls
+- Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ae36d1897b452767fae5f48bd6501c18f9405801
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Windows Forms 및 관리되지 않는 응용 프로그램 개요
-Windows Forms 응용 프로그램과 컨트롤은 관리되지 않는 응용 프로그램과 상호 운용될 수 있지만 몇 가지 주의할 사항이 있습니다. 다음 섹션에서는 Windows Forms 응용 프로그램과 컨트롤이 지원하는 시나리오 및 구성과 지원하지 않는 시나리오 및 구성을 설명합니다.  
+# <a name="windows-forms-and-unmanaged-applications-overview"></a><span data-ttu-id="894f2-102">Windows Forms 및 관리되지 않는 응용 프로그램 개요</span><span class="sxs-lookup"><span data-stu-id="894f2-102">Windows Forms and Unmanaged Applications Overview</span></span>
+<span data-ttu-id="894f2-103">Windows Forms 응용 프로그램과 컨트롤은 관리되지 않는 응용 프로그램과 상호 운용될 수 있지만 몇 가지 주의할 사항이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-103">Windows Forms applications and controls can interoperate with unmanaged applications, with some caveats.</span></span> <span data-ttu-id="894f2-104">다음 섹션에서는 Windows Forms 응용 프로그램과 컨트롤이 지원하는 시나리오 및 구성과 지원하지 않는 시나리오 및 구성을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-104">The following sections describe the scenarios and configurations that Windows Forms applications and controls support and those that they do not support.</span></span>  
   
-## Windows Forms 컨트롤 및 ActiveX 응용 프로그램  
- Microsoft Internet Explorer 및 MFC\(Microsoft Foundation Classes\)를 제외하고 Windows Forms 컨트롤은 ActiveX 컨트롤을 호스트하도록 설계된 응용 프로그램에서 지원되지 않습니다. Visual Studio .NET 2003 이전 Visual Studio 버전의 ActiveX 테스트 컨테이너를 포함하여 ActiveX 컨트롤을 호스트할 수 있는 다른 응용 프로그램과 개발 도구는 Windows Forms 컨트롤에 대해 지원되는 호스트가 아닙니다.  
+## <a name="windows-forms-controls-and-activex-applications"></a><span data-ttu-id="894f2-105">Windows Forms 컨트롤 및 ActiveX 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="894f2-105">Windows Forms Controls and ActiveX Applications</span></span>  
+ <span data-ttu-id="894f2-106">Microsoft Internet Explorer 및 MFC(Microsoft Foundation Classes)를 제외하고 Windows Forms 컨트롤은 ActiveX 컨트롤을 호스트하도록 설계된 응용 프로그램에서 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-106">With the exception of Microsoft Internet Explorer and Microsoft Foundation Classes (MFC), Windows Forms controls are not supported in applications designed to host ActiveX controls.</span></span> <span data-ttu-id="894f2-107">Visual Studio .NET 2003 이전 Visual Studio 버전의 ActiveX 테스트 컨테이너를 포함하여 ActiveX 컨트롤을 호스트할 수 있는 다른 응용 프로그램과 개발 도구는 Windows Forms 컨트롤에 대해 지원되는 호스트가 아닙니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-107">Other applications and development tools that are capable of hosting ActiveX controls, including the ActiveX test containers from versions of Visual Studio that are earlier than Visual Studio .NET 2003, are not supported hosts for Windows Forms controls.</span></span>  
   
- 이러한 제약 조건은 COM\(구성 요소 개체 모델\) interop를 통한 Windows Forms 컨트롤 사용에도 적용됩니다. CCW\(COM 호출 가능 래퍼\)를 통한 Windows Forms 컨트롤 사용은 Internet Explorer에서만 지원됩니다. COM interop에 대한 자세한 내용은  
+ <span data-ttu-id="894f2-108">이러한 제약 조건은 COM(구성 요소 개체 모델) interop를 통한 Windows Forms 컨트롤 사용에도 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-108">These constraints also apply to the use of Windows Forms controls through Component Object Model COM interop.</span></span> <span data-ttu-id="894f2-109">CCW(COM 호출 가능 래퍼)를 통한 Windows Forms 컨트롤 사용은 Internet Explorer에서만 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-109">The use of a Windows Forms control through a COM callable wrapper (CCW) is supported only in Internet Explorer.</span></span> <span data-ttu-id="894f2-110">COM interop에 대한 자세한 내용은</span><span class="sxs-lookup"><span data-stu-id="894f2-110">For more information about COM interop, see</span></span>  
   
- [COM Interop](../Topic/COM%20Interop%20\(Visual%20Basic\).md).  
+ <span data-ttu-id="894f2-111">[COM Interop](../../../visual-basic/programming-guide/com-interop/index.md).</span><span class="sxs-lookup"><span data-stu-id="894f2-111">[COM Interop](../../../visual-basic/programming-guide/com-interop/index.md).</span></span>  
   
- 다음 표에서는 Windows Forms 컨트롤에 사용할 수 있는 ActiveX 호스팅 지원을 보여 줍니다.  
+ <span data-ttu-id="894f2-112">다음 표에서는 Windows Forms 컨트롤에 사용할 수 있는 ActiveX 호스팅 지원을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-112">The following table shows the available ActiveX hosting support for Windows Forms controls.</span></span>  
   
-|Windows Forms 버전|지원|  
-|----------------------|--------|  
-|.NET Framework 버전 1.0|Internet Explorer 5.01 이상 버전|  
-|.NET Framework 버전 1.1 이상|Internet Explorer 5.01 이상 버전<br /><br /> MFC\(Microsoft Foundation Classes\) 7.0 이상|  
+|<span data-ttu-id="894f2-113">Windows Forms 버전</span><span class="sxs-lookup"><span data-stu-id="894f2-113">Windows Forms version</span></span>|<span data-ttu-id="894f2-114">지원</span><span class="sxs-lookup"><span data-stu-id="894f2-114">Support</span></span>|  
+|---------------------------|-------------|  
+|<span data-ttu-id="894f2-115">.NET Framework 버전 1.0</span><span class="sxs-lookup"><span data-stu-id="894f2-115">.NET Framework version 1.0</span></span>|<span data-ttu-id="894f2-116">Internet Explorer 5.01 이상 버전</span><span class="sxs-lookup"><span data-stu-id="894f2-116">Internet Explorer 5.01 and later versions</span></span>|  
+|<span data-ttu-id="894f2-117">.NET Framework 버전 1.1 이상</span><span class="sxs-lookup"><span data-stu-id="894f2-117">.NET Framework version 1.1 and later</span></span>|<span data-ttu-id="894f2-118">Internet Explorer 5.01 이상 버전</span><span class="sxs-lookup"><span data-stu-id="894f2-118">Internet Explorer 5.01 and later versions</span></span><br /><br /> <span data-ttu-id="894f2-119">MFC(Microsoft Foundation Classes) 7.0 이상</span><span class="sxs-lookup"><span data-stu-id="894f2-119">Microsoft Foundation Classes (MFC) 7.0 and later</span></span>|  
   
-## ActiveX 컨트롤로 Windows Forms 구성 요소 호스트  
- .NET Framework 1.1에서는 MFC 7.0 이상 버전을 포함하도록 지원이 확장되었습니다. 이 지원에는 MFC 7.0 이상 ActiveX 컨트롤 컨테이너와 완전히 호환되는 모든 컨테이너가 포함됩니다.  
+## <a name="hosting-windows-forms-components-as-activex-controls"></a><span data-ttu-id="894f2-120">ActiveX 컨트롤로 Windows Forms 구성 요소 호스트</span><span class="sxs-lookup"><span data-stu-id="894f2-120">Hosting Windows Forms components as ActiveX controls</span></span>  
+ <span data-ttu-id="894f2-121">.NET Framework 1.1에서는 MFC 7.0 이상 버전을 포함하도록 지원이 확장되었습니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-121">In the .NET Framework 1.1, support was extended to include MFC 7.0 and later versions.</span></span> <span data-ttu-id="894f2-122">이 지원에는 MFC 7.0 이상 ActiveX 컨트롤 컨테이너와 완전히 호환되는 모든 컨테이너가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-122">This support includes any container that is fully compatible with the MFC 7.0 and later ActiveX control container.</span></span>  
   
- 그러나 Windows Forms 컨트롤을 ActiveX 컨트롤로 등록하는 기능은 지원되지 않습니다. 또한 Windows Forms 컨트롤에 대한 `com.ms.win32.Ole32.CoCreateInstance` 메서도 호출도 지원되지 않습니다. Windows Forms 컨트롤의 관리되는 활성화만 지원됩니다. Windows Forms 컨트롤을 만든 후에 ActiveX 컨트롤과 마찬가지로 MFC 응용 프로그램에서 호스트할 수 있습니다.  
+ <span data-ttu-id="894f2-123">그러나 Windows Forms 컨트롤을 ActiveX 컨트롤로 등록하는 기능은 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-123">However, registration of Windows Forms controls as ActiveX controls is not supported.</span></span> <span data-ttu-id="894f2-124">또한 Windows Forms 컨트롤에 대한 `com.ms.win32.Ole32.CoCreateInstance` 메서도 호출도 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-124">Also, calling the `com.ms.win32.Ole32.CoCreateInstance` method for Windows Forms controls is not supported.</span></span> <span data-ttu-id="894f2-125">Windows Forms 컨트롤의 관리되는 활성화만 지원됩니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-125">Only managed activation of Windows Forms controls is supported.</span></span> <span data-ttu-id="894f2-126">Windows Forms 컨트롤을 만든 후에 ActiveX 컨트롤과 마찬가지로 MFC 응용 프로그램에서 호스트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-126">Once you create a Windows Forms control, you can host it in an MFC application just as with an ActiveX control.</span></span>  
   
- 관리되지 않는 응용 프로그램에서 Windows Forms 컨트롤을 사용하려면 관리되지 않는 CLR 호스팅 API로 CLR을 호스트하거나 C\+\+ interop 기능을 사용해야 합니다. C\+\+ interop 기능 사용이 권장 솔루션입니다.  
+ <span data-ttu-id="894f2-127">관리되지 않는 응용 프로그램에서 Windows Forms 컨트롤을 사용하려면 관리되지 않는 CLR 호스팅 API로 CLR을 호스트하거나 C++ interop 기능을 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-127">To use Windows Forms controls in your unmanaged application, you must either host the CLR using the unmanaged CLR hosting APIs or use the C++ interop features.</span></span> <span data-ttu-id="894f2-128">C++ interop 기능 사용이 권장 솔루션입니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-128">Using the C++ interop features is the recommended solution.</span></span>  
   
-## COM 클라이언트 응용 프로그램의 Windows Forms  
- Visual Basic 6.0 응용 프로그램이나 MFC 응용 프로그램과 같은 COM 클라이언트 응용 프로그램에서 Windows Form을 여는 경우 폼이 예기치 않게 동작할 수 있습니다. 예를 들어 Tab 키를 누를 때 포커스가 한 컨트롤에서 다른 컨트롤로 변경되지 않습니다. 명령 단추에 포커스가 있는 동안 Enter 키를 누를 때 단추의 <xref:System.Windows.Forms.Control.Click> 이벤트가 발생하지 않습니다. 키 입력이나 마우스 활동에 대한 예기치 않은 동작이 발생할 수도 있습니다.  
+## <a name="windows-forms-in-com-client-applications"></a><span data-ttu-id="894f2-129">COM 클라이언트 응용 프로그램의 Windows Forms</span><span class="sxs-lookup"><span data-stu-id="894f2-129">Windows Forms in COM client applications</span></span>  
+ <span data-ttu-id="894f2-130">Visual Basic 6.0 응용 프로그램이나 MFC 응용 프로그램과 같은 COM 클라이언트 응용 프로그램에서 Windows Form을 여는 경우 폼이 예기치 않게 동작할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-130">When you open a Windows Form from a COM client application, such as a Visual Basic 6.0 application or an MFC application, the form may behave unexpectedly.</span></span> <span data-ttu-id="894f2-131">예를 들어 Tab 키를 누를 때 포커스가 한 컨트롤에서 다른 컨트롤로 변경되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-131">For example, when you press the TAB key, the focus does not change from one control to another control.</span></span> <span data-ttu-id="894f2-132">명령 단추에 포커스가 있는 동안 Enter 키를 누를 때 단추의 <xref:System.Windows.Forms.Control.Click> 이벤트가 발생하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-132">When you press the ENTER key while a command button has focus, the button's <xref:System.Windows.Forms.Control.Click> event is not raised.</span></span> <span data-ttu-id="894f2-133">키 입력이나 마우스 활동에 대한 예기치 않은 동작이 발생할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-133">You may also experience unexpected behavior for keystrokes or mouse activity.</span></span>  
   
- 이 동작은 관리되지 않는 응용 프로그램에서 Windows Forms이 제대로 작동하는 데 필요한 메시지 루프 지원을 구현하지 않기 때문에 발생합니다. COM 클라이언트 응용 프로그램에서 제공하는 메시지 루프는 기본적으로 Windows Forms 메시지 루프와 다릅니다.  
+ <span data-ttu-id="894f2-134">이 동작은 관리되지 않는 응용 프로그램에서 Windows Forms이 제대로 작동하는 데 필요한 메시지 루프 지원을 구현하지 않기 때문에 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-134">This behavior occurs because the unmanaged application does not implement the message loop support that Windows Forms requires to work correctly.</span></span> <span data-ttu-id="894f2-135">COM 클라이언트 응용 프로그램에서 제공하는 메시지 루프는 기본적으로 Windows Forms 메시지 루프와 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-135">The message loop provided by the COM client application is fundamentally different from the Windows Forms message loop.</span></span>  
   
- 응용 프로그램의 메시지 루프는 스레드의 메시지 큐에서 메시지를 검색하고 변환한 다음 처리되도록 응용 프로그램에 보내는 내부 프로그램 루프입니다. Windows Form의 메시지 루프에는 Visual Basic 6.0 응용 프로그램 및 MFC 응용 프로그램과 같은 이전 응용 프로그램이 제공하는 메시지 루프와 동일한 아키텍처가 없습니다. 메시지 루프에 게시된 창 메시지가 Windows Form의 예상과 다르게 처리될 수 있습니다. 따라서 예기치 않은 동작이 발생할 수 있습니다. 일부 키 입력 조합이 작동하지 않거나, 일부 마우스 활동이 작동하지 않거나, 일부 이벤트가 예상대로 발생하지 않을 수 있습니다.  
+ <span data-ttu-id="894f2-136">응용 프로그램의 메시지 루프는 스레드의 메시지 큐에서 메시지를 검색하고 변환한 다음 처리되도록 응용 프로그램에 보내는 내부 프로그램 루프입니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-136">An application's message loop is an internal program loop that retrieves messages from a thread's message queue, translates them, and then sends them to the application to be handled.</span></span> <span data-ttu-id="894f2-137">Windows Form의 메시지 루프에는 Visual Basic 6.0 응용 프로그램 및 MFC 응용 프로그램과 같은 이전 응용 프로그램이 제공하는 메시지 루프와 동일한 아키텍처가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-137">The message loop for a Windows Form does not have the same architecture as message loops that earlier applications, such as Visual Basic 6.0 applications and MFC applications, provide.</span></span> <span data-ttu-id="894f2-138">메시지 루프에 게시된 창 메시지가 Windows Form의 예상과 다르게 처리될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-138">The window messages that are posted to the message loop may be handled differently than the Windows Form expects.</span></span> <span data-ttu-id="894f2-139">따라서 예기치 않은 동작이 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-139">Therefore, unexpected behavior may occur.</span></span> <span data-ttu-id="894f2-140">일부 키 입력 조합이 작동하지 않거나, 일부 마우스 활동이 작동하지 않거나, 일부 이벤트가 예상대로 발생하지 않을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-140">Some keystroke combinations may not work, some mouse activity may not work, or some events may not be raised as expected.</span></span>  
   
-## 상호 운용성 문제 해결  
- <xref:System.Windows.Forms.Application.Run%2A?displayProperty=fullName> 메서드를 사용하여 만든 폼을 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 메시지 루프에 표시하여 이러한 문제를 해결할 수 있습니다.  
+## <a name="resolving-interoperability-issues"></a><span data-ttu-id="894f2-141">상호 운용성 문제 해결</span><span class="sxs-lookup"><span data-stu-id="894f2-141">Resolving Interoperability Issues</span></span>  
+ <span data-ttu-id="894f2-142"><xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 메서드를 사용하여 만든 폼을 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 메시지 루프에 표시하여 이러한 문제를 해결할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-142">You can resolve these problems by displaying the form on a [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] message loop, which is created by using the <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> method.</span></span>  
   
- Windows Form이 COM 클라이언트 응용 프로그램에서 제대로 작동하게 하려면 Windows Forms 메시지 루프에서 실행해야 합니다. 이렇게 하려면 다음 접근 방식 중 하나를 사용합니다.  
+ <span data-ttu-id="894f2-143">Windows Form이 COM 클라이언트 응용 프로그램에서 제대로 작동하게 하려면 Windows Forms 메시지 루프에서 실행해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-143">To make a Windows Form work correctly from a COM client application, you must run it on a Windows Forms message loop.</span></span> <span data-ttu-id="894f2-144">이렇게 하려면 다음 접근 방식 중 하나를 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-144">To do this, use one of the following approaches:</span></span>  
   
--   <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=fullName> 메서드를 사용하여 Windows Form을 표시합니다. 자세한 내용은 [방법: ShowDialog 메서드로 Windows Form을 표시하여 COM Interop 지원](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md)을 참조하세요.  
+-   <span data-ttu-id="894f2-145"><xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 메서드를 사용하여 Windows Form을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-145">Use the <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> method to display the Windows Form.</span></span> <span data-ttu-id="894f2-146">자세한 내용은 [How to: Support COM Interop by Displaying a Windows Form with the ShowDialog Method](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="894f2-146">For more information, see [How to: Support COM Interop by Displaying a Windows Form with the ShowDialog Method](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md).</span></span>  
   
--   각 Windows Form을 새 스레드에 표시합니다. 자세한 내용은 [방법: 각 Windows Form을 별개의 스레드에서 표시하여 COM Interop 지원](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)을 참조하세요.  
+-   <span data-ttu-id="894f2-147">각 Windows Form을 새 스레드에 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="894f2-147">Display each Windows Form on a new thread.</span></span> <span data-ttu-id="894f2-148">자세한 내용은 [방법: 각 Windows Form을 해당 스레드에 표시하여 COM Interop 지원](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="894f2-148">For more information, see [How to: Support COM Interop by Displaying Each Windows Form on Its Own Thread](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).</span></span>  
   
-## 참고 항목  
- [Windows Forms 및 관리되지 않는 응용 프로그램](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)   
- [COM Interop](../Topic/COM%20Interop%20\(Visual%20Basic\).md)   
- [COM Interoperability in .NET Framework Applications](../Topic/COM%20Interoperability%20in%20.NET%20Framework%20Applications%20\(Visual%20Basic\).md)   
- [COM Interoperability Samples](http://msdn.microsoft.com/ko-kr/09c38567-6380-4d70-848a-e896a4ca05f4)   
- [Aximp.exe \(Windows Forms ActiveX 컨트롤 가져오기\)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)   
- [.NET Framework 구성 요소를 COM에 노출](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)   
- [COM에서 사용할 어셈블리의 패키징](../../../../docs/framework/interop/packaging-an-assembly-for-com.md)   
- [COM에 어셈블리 등록](../../../../docs/framework/interop/registering-assemblies-with-com.md)   
- [방법: ShowDialog 메서드로 Windows Form을 표시하여 COM Interop 지원](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md)   
- [방법: 각 Windows Form을 별개의 스레드에서 표시하여 COM Interop 지원](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+## <a name="see-also"></a><span data-ttu-id="894f2-149">참고 항목</span><span class="sxs-lookup"><span data-stu-id="894f2-149">See Also</span></span>  
+ [<span data-ttu-id="894f2-150">Windows Forms 및 관리되지 않는 응용 프로그램</span><span class="sxs-lookup"><span data-stu-id="894f2-150">Windows Forms and Unmanaged Applications</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
+ [<span data-ttu-id="894f2-151">COM Interop</span><span class="sxs-lookup"><span data-stu-id="894f2-151">COM Interop</span></span>](../../../visual-basic/programming-guide/com-interop/index.md)  
+ [<span data-ttu-id="894f2-152">.NET Framework 응용 프로그램의 COM 상호 운용성</span><span class="sxs-lookup"><span data-stu-id="894f2-152">COM Interoperability in .NET Framework Applications</span></span>](~/docs/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)  
+ [<span data-ttu-id="894f2-153">COM 상호 운용성 샘플</span><span class="sxs-lookup"><span data-stu-id="894f2-153">COM Interoperability Samples</span></span>](http://msdn.microsoft.com/en-us/09c38567-6380-4d70-848a-e896a4ca05f4)  
+ [<span data-ttu-id="894f2-154">Aximp.exe(Windows Forms ActiveX 컨트롤 가져오기)</span><span class="sxs-lookup"><span data-stu-id="894f2-154">Aximp.exe (Windows Forms ActiveX Control Importer)</span></span>](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md)  
+ [<span data-ttu-id="894f2-155">.NET Framework 구성 요소를 COM에 노출</span><span class="sxs-lookup"><span data-stu-id="894f2-155">Exposing .NET Framework Components to COM</span></span>](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
+ [<span data-ttu-id="894f2-156">COM에서 사용할 어셈블리의 패키징</span><span class="sxs-lookup"><span data-stu-id="894f2-156">Packaging an Assembly for COM</span></span>](../../../../docs/framework/interop/packaging-an-assembly-for-com.md)  
+ [<span data-ttu-id="894f2-157">COM에 어셈블리 등록</span><span class="sxs-lookup"><span data-stu-id="894f2-157">Registering Assemblies with COM</span></span>](../../../../docs/framework/interop/registering-assemblies-with-com.md)  
+ [<span data-ttu-id="894f2-158">방법: ShowDialog 메서드로 Windows Form을 표시하여 COM Interop 지원</span><span class="sxs-lookup"><span data-stu-id="894f2-158">How to: Support COM Interop by Displaying a Windows Form with the ShowDialog Method</span></span>](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md)  
+ [<span data-ttu-id="894f2-159">방법: 각 Windows Form을 별개의 스레드에서 표시하여 COM Interop 지원</span><span class="sxs-lookup"><span data-stu-id="894f2-159">How to: Support COM Interop by Displaying Each Windows Form on Its Own Thread</span></span>](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)

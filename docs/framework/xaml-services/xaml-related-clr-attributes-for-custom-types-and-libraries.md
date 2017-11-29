@@ -1,280 +1,282 @@
 ---
-title: "XAML-Related CLR Attributes for Custom Types and Libraries | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CLR attributes for custom types [XAML Services]"
+title: "사용자 지정 형식 및 라이브러리에 대한 XAML 관련 CLR 특성"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords: CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-caps.latest.revision: 8
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 9a445d7e730ecb743d5e4086ec682b12a7bf3ff9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# XAML-Related CLR Attributes for Custom Types and Libraries
-이 항목에서는 .NET Framework XAML 서비스에서 정의되는 CLR\(공용 언어 런타임\) 특성에 대해 설명합니다.  또한 .NET Framework에서 정의되며 어셈블리나 형식에 적용하기 위한 XAML 관련 시나리오가 있는 기타 CLR 특성에 대해서도 설명합니다.  어셈블리, 형식 또는 멤버에 이러한 CLR 특성을 설정하면 해당 형식과 관련된 XAML 형식 시스템 정보가 제공됩니다.  정보는 XAML 노드 스트림을 직접 처리하거나 전용 XAML 판독기와 XAML 작성기를 통해 처리하기 위해 .NET Framework XAML 서비스를 사용하는 모든 XAML 소비자에게 제공됩니다.  
+# <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a><span data-ttu-id="426af-102">사용자 지정 형식 및 라이브러리에 대한 XAML 관련 CLR 특성</span><span class="sxs-lookup"><span data-stu-id="426af-102">XAML-Related CLR Attributes for Custom Types and Libraries</span></span>
+<span data-ttu-id="426af-103">이 항목에서는.NET Framework XAML 서비스에서 정의 된 공용 언어 런타임 (CLR) 특성을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-103">This topic describes the common language runtime (CLR) attributes that are defined by .NET Framework XAML Services.</span></span> <span data-ttu-id="426af-104">또한 다른 CLR 특성.NET Framework에 정의 된 어셈블리 또는 형식에 대 한 응용 프로그램에 대 한 XAML 관련 시나리오를 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-104">It also describes other CLR attributes that are defined in the .NET Framework that have a XAML-related scenario for application to assemblies or types.</span></span> <span data-ttu-id="426af-105">이러한 CLR 특성으로 어셈블리, 형식 또는 멤버를 설정 하면 해당 형식과 관련 된 XAML 형식 시스템 정보를 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-105">Attributing assemblies, types, or members with these CLR attributes provides XAML type system information related to your types.</span></span> <span data-ttu-id="426af-106">정보 또는 사용 하 여.NET Framework XAML 서비스 XAML 노드 스트림을 직접 처리 하기 위한 전용된 XAML 판독기 및 XAML 작성기를 통해 모든 XAML 소비자에 게 제공 됩니다.</span><span class="sxs-lookup"><span data-stu-id="426af-106">Information is provided to any XAML consumer that uses .NET Framework XAML Services for processing the XAML node stream directly or through the dedicated XAML readers and XAML writers.</span></span>  
   
-## 사용자 지정 형식 및 사용자 지정 멤버에 대한 XAML 관련 CLR 특성  
- CLR 특성을 사용하면 전체 CLR을 사용하여 형식을 정의하게 되는데, 이렇게 정의할 수 없으면 CLR 특성을 사용할 수 없습니다.  CLR을 사용하여 형식 지원을 정의하는 경우 .NET Framework XAML 서비스 XAML 작성기에서 사용하는 기본 XAML 스키마 컨텍스트는 지원 어셈블리에 대한 리플렉션을 통해 CLR 특성을 읽을 수 있습니다.  
+## <a name="xaml-related-clr-attributes-for-custom-types-and-custom-members"></a><span data-ttu-id="426af-107">사용자 지정 형식 및 사용자 지정 멤버에 대 한 XAML 관련 CLR 특성</span><span class="sxs-lookup"><span data-stu-id="426af-107">XAML-Related CLR Attributes for Custom Types and Custom Members</span></span>  
+ <span data-ttu-id="426af-108">CLR 특성을 사용 하 여 형식을 정의 하 전체 CLR을 사용 하는, 그렇지 않으면 이러한 특성은 사용할 수 없습니다 과정이 수반 됩니다.</span><span class="sxs-lookup"><span data-stu-id="426af-108">Using CLR attributes entails that you are using the overall CLR to define your types, otherwise such attributes are not available.</span></span> <span data-ttu-id="426af-109">백업 유형을 정의 하는 CLR을 사용 하는 경우.NET Framework XAML 서비스 XAML 작성기에서 사용 하는 기본 XAML 스키마 컨텍스트 백업 어셈블리에 대해 리플렉션을 통해 CLR 특성이 읽을 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="426af-109">If you use the CLR to define type backing, then the default XAML schema context used by .NET  Framework XAML Services XAML writers can read CLR attribution through reflection against backing assemblies.</span></span>  
   
- 다음 단원에서는 사용자 지정 형식이나 사용자 지정 멤버에 적용할 수 있는 XAML 관련 특성에 대해 설명합니다.  각 CLR 특성은 XAML 형식 시스템과 관련된 정보를 전달합니다.  로드 경로에서 특성 사용 정보는 XAML 판독기가 유효한 XAML 노드 스트림을 형성하는 데 도움이 되거나 XAML 작성기가 유효한 개체 그래프를 생성하는 데 도움이 됩니다.  저장 경로에서 특성 사용 정보는 XAML 판독기가 XAML 형식 시스템 정보를 다시 구성하는 유효한 XAML 노드 스트림을 형성하는 데 도움이 되거나, XAML 작성기 또는 다른 XAML 소비자에 대한 serialization 힌트나 요구 사항을 선언합니다.  
+ <span data-ttu-id="426af-110">다음 섹션에서는 사용자 정의 형식 또는 사용자 지정 멤버에 적용할 수 있는 XAML 관련 특성을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-110">The following sections describe the XAML-related attributes that you can apply to custom types or custom members.</span></span> <span data-ttu-id="426af-111">각 CLR 특성 XAML 형식 시스템에 관련 된 정보를 전달 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-111">Each CLR attribute communicates information that is relevant to a XAML type system.</span></span> <span data-ttu-id="426af-112">로드 경로에서는 정보 특성 사용된 하는 데 도움이 XAML 판독기가 유효한 XAML 노드 스트림을 형성 또는 XAML 작성기가 유효한 개체 그래프를 생성 하는 데 도움이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="426af-112">In the load path, the attributed information either helps the XAML reader form a valid XAML node stream, or it helps the XAML writer produce a valid object graph.</span></span> <span data-ttu-id="426af-113">파일에서 경로, XAML 형식 시스템 정보를 다시 구성 하는 유효한 XAML 노드 스트림을 형성 하는 XAML 판독기를 사용 하거나 특성 사용된 정보 또는 serialization 힌트 또는 XAML 작성기 또는 기타 XAML 소비자에 대 한 요구 사항을 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-113">In the save path, the attributed information either helps the XAML reader form a valid XAML node stream that reconstitutes XAML type system information; or it declares serialization hints or requirements for the XAML writer or other XAML consumers.</span></span>  
   
-### AmbientAttribute  
- **참조 설명서:**  <xref:System.Windows.Markup.AmbientAttribute>  
+### <a name="ambientattribute"></a><span data-ttu-id="426af-114">AmbientAttribute</span><span class="sxs-lookup"><span data-stu-id="426af-114">AmbientAttribute</span></span>  
+ <span data-ttu-id="426af-115">**참조 설명서:**  <xref:System.Windows.Markup.AmbientAttribute></span><span class="sxs-lookup"><span data-stu-id="426af-115">**Reference Documentation:**  <xref:System.Windows.Markup.AmbientAttribute></span></span>  
   
- **적용 대상:** 클래스, 속성, 또는 연결 가능한 속성을 지원하는 `get` 접근자 멤버  
+ <span data-ttu-id="426af-116">**적용 대상:** 클래스, 속성, 또는 `get` 연결 가능한 속성을 지 원하는 접근자 멤버입니다.</span><span class="sxs-lookup"><span data-stu-id="426af-116">**Applies to:** Class, property, or `get` accessor members that support attachable properties.</span></span>  
   
- **인수:** 없음  
+ <span data-ttu-id="426af-117">**인수:** 없음</span><span class="sxs-lookup"><span data-stu-id="426af-117">**Arguments:** None</span></span>  
   
- <xref:System.Windows.Markup.AmbientAttribute>는 이 속성이나 해당 특성을 사용하는 형식이 사용되는 모든 속성이 XAML에서 앰비언트 속성 개념에 따라 해석되어야 함을 나타냅니다.  앰비언트 개념은 XAML 프로세서에서 멤버의 형식 소유자를 결정하는 방법과 관련이 있습니다.  앰비언트 속성은 개체 그래프를 만들 때 파서 컨텍스트에서 해당 속성 값을 사용할 수 있어야 하지만 바로 생성될 XAML 노드 집합을 위해 일반적인 형식 멤버 조회가 일시 중단된 속성입니다.  
+ <span data-ttu-id="426af-118"><xref:System.Windows.Markup.AmbientAttribute>속성 또는 특성 사용된 하 여 형식에 사용 하는 모든 속성 XAML의 앰비언트 속성 개념에 따라 해석 되어야 함을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="426af-118"><xref:System.Windows.Markup.AmbientAttribute> indicates that the property, or all properties that take the attributed type, should be interpreted under the ambient property concept in XAML.</span></span> <span data-ttu-id="426af-119">앰비언트 개념은 XAML 프로세서가 멤버의 형식 소유자를 결정하는 방법과 관련됩니다.</span><span class="sxs-lookup"><span data-stu-id="426af-119">The ambient concept relates to how XAML processors determine type owners of members.</span></span> <span data-ttu-id="426af-120">앰비언트 속성 값 사용 가능 하도록 파서 컨텍스트에서 하지만 일반적인 형식 멤버 조회가 바로 XAML 노드 만들려는 집합에 대 한 일시 중단 되는 개체 그래프를 만들 때 필요한 속성이입니다.</span><span class="sxs-lookup"><span data-stu-id="426af-120">An ambient property is a property where the value is expected to be available in the parser context when creating an object graph, but where typical type-member lookup is suspended for the immediate XAML node set being created.</span></span>  
   
- 앰비언트 개념은 CLR 특성이 <xref:System.AttributeTargets>를 정의하는 방법의 측면에서 속성으로 표현되지 않는 연결 가능한 멤버에 적용될 수 있습니다.  메서드 특성 사용은 XAML의 연결 가능한 사용을 지원하는 `get` 접근자의 경우에만 적용되어야 합니다.  
+ <span data-ttu-id="426af-121">앰비언트 개념은 CLR 특성이 정의 하는 방법의 측면에서 속성으로 표현 되지 않는 연결 가능한 멤버에 적용할 수 있습니다 <xref:System.AttributeTargets>합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-121">The ambient concept can be applied to attachable members, which are not represented as properties in terms of how CLR attribution defines <xref:System.AttributeTargets>.</span></span> <span data-ttu-id="426af-122">메서드 특성 사용만의 경우에 적용 해야는 `get` 사용을 지 원하는 연결할 수 있는 XAML에 대 한 접근자입니다.</span><span class="sxs-lookup"><span data-stu-id="426af-122">The method attribution usage should be applied only in the case of a `get` accessor that supports attachable usage for XAML.</span></span>  
   
-### ConstructorArgumentAttribute  
- **참조 설명서:**  <xref:System.Windows.Markup.ConstructorArgumentAttribute>  
+### <a name="constructorargumentattribute"></a><span data-ttu-id="426af-123">ConstructorArgumentAttribute</span><span class="sxs-lookup"><span data-stu-id="426af-123">ConstructorArgumentAttribute</span></span>  
+ <span data-ttu-id="426af-124">**참조 설명서:**  <xref:System.Windows.Markup.ConstructorArgumentAttribute></span><span class="sxs-lookup"><span data-stu-id="426af-124">**Reference Documentation:**  <xref:System.Windows.Markup.ConstructorArgumentAttribute></span></span>  
   
- **적용 대상:** 클래스  
+ <span data-ttu-id="426af-125">**적용 대상:** 클래스</span><span class="sxs-lookup"><span data-stu-id="426af-125">**Applies to:** Class</span></span>  
   
- **인수:** 단일 생성자 인수와 일치하는 속성의 이름을 지정하는 문자열  
+ <span data-ttu-id="426af-126">**인수:** 단일 생성자 인수를 일치 하는 속성의 이름을 지정 하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="426af-126">**Arguments:** A string that specifies the name of the property that matches a single constructor argument.</span></span>  
   
- <xref:System.Windows.Markup.ConstructorArgumentAttribute>는 기본값이 아닌 생성자 구문을 사용하여 개체를 초기화할 수 있고 지정된 이름의 속성이 생성 정보를 제공함을 지정합니다.  이 정보는 주로 XAML serialization에 사용됩니다.  자세한 내용은 <xref:System.Windows.Markup.ConstructorArgumentAttribute>를 참조하십시오.  
+ <span data-ttu-id="426af-127"><xref:System.Windows.Markup.ConstructorArgumentAttribute>지정 된 이름의 속성이 생성 정보를 제공 하 고 기본이 아닌 생성자 구문을 사용 하 여 개체를 초기화할 수 있습니다를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-127"><xref:System.Windows.Markup.ConstructorArgumentAttribute> specifies that an object can be initialized by using a non-default constructor syntax, and that a property of the specified name supplies construction information.</span></span> <span data-ttu-id="426af-128">이 정보는 주로 XAML serialization용입니다.</span><span class="sxs-lookup"><span data-stu-id="426af-128">This information is primarily for XAML serialization.</span></span> <span data-ttu-id="426af-129">자세한 내용은 <xref:System.Windows.Markup.ConstructorArgumentAttribute>을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="426af-129">For more information, see <xref:System.Windows.Markup.ConstructorArgumentAttribute>.</span></span>  
   
-### ContentPropertyAttribute  
- **참조 설명서:**  <xref:System.Windows.Markup.ContentPropertyAttribute>  
+### <a name="contentpropertyattribute"></a><span data-ttu-id="426af-130">ContentPropertyAttribute</span><span class="sxs-lookup"><span data-stu-id="426af-130">ContentPropertyAttribute</span></span>  
+ <span data-ttu-id="426af-131">**참조 설명서:**  <xref:System.Windows.Markup.ContentPropertyAttribute></span><span class="sxs-lookup"><span data-stu-id="426af-131">**Reference Documentation:**  <xref:System.Windows.Markup.ContentPropertyAttribute></span></span>  
   
- **적용 대상:** 클래스  
+ <span data-ttu-id="426af-132">**적용 대상:** 클래스</span><span class="sxs-lookup"><span data-stu-id="426af-132">**Applies to:** Class</span></span>  
   
- **인수:** 특성을 사용하는 형식의 멤버 이름을 지정하는 문자열  
+ <span data-ttu-id="426af-133">**인수:** 특성이 지정 된 형식의 멤버의 이름을 지정 하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="426af-133">**Arguments:** A string that specifies the name of a member of the attributed type.</span></span>  
   
- <xref:System.Windows.Markup.ContentPropertyAttribute>는 인수로 이름이 지정된 속성이 해당 형식의 XAML 콘텐츠 속성으로 사용되도록 나타냅니다.  XAML 콘텐츠 속성 정의는 정의 형식에 할당 가능한 모든 파생 형식에 상속합니다.  특정 파생 형식에서 <xref:System.Windows.Markup.ContentPropertyAttribute>를 적용하여 해당 형식에서 정의를 재정의할 수 있습니다.  
+ <span data-ttu-id="426af-134"><xref:System.Windows.Markup.ContentPropertyAttribute>해당 형식에 대 한 XAML 콘텐츠 속성으로는 인수 이름이 지정 된 속성이 사용할 수 있는지를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="426af-134"><xref:System.Windows.Markup.ContentPropertyAttribute> indicates that the property as named by the argument should serve as the XAML content property for that type.</span></span> <span data-ttu-id="426af-135">XAML 콘텐츠 속성 정의를 정의 하는 형식에 할당할 수 있는 모든 파생된 형식 상속 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-135">The XAML content property definition inherits to all derived types that are assignable to the defining type.</span></span> <span data-ttu-id="426af-136">적용 하 여 특정 파생 유형에 정의 재정의할 수 <xref:System.Windows.Markup.ContentPropertyAttribute> 파생 형식에 특정 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-136">You can override the definition on a specific derived type by applying <xref:System.Windows.Markup.ContentPropertyAttribute> on the specific derived type.</span></span>  
   
- XAML 콘텐츠 속성 역할을 하는 속성의 경우 속성에 대한 속성 요소 태그가 XAML 사용에서 생략될 수 있습니다.  일반적으로 콘텐츠 및 포함 모델에 대한 XAML 태그의 효율성을 높이는 XAML 콘텐츠 속성을 지정합니다.  한 멤버만 XAML 콘텐츠 속성으로 지정할 수 있기 때문에 XAML 콘텐츠 속성으로 지정해야 하는 형식의 몇 가지 컨테이너 속성과 관련된 디자인 선택을 하는 경우가 있습니다.  다른 컨테이너 속성은 명시적 속성 요소와 함께 사용해야 합니다.  
+ <span data-ttu-id="426af-137">XAML 콘텐츠 속성으로 사용 되는 속성에 대 한 XAML 사용에 속성 요소는 속성에 대 한 태그를 생략할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="426af-137">For the property that serves as the XAML content property, property element tagging for the property can be omitted in the XAML usage.</span></span> <span data-ttu-id="426af-138">일반적으로 콘텐츠 및 포함 모델에 대 한 간소화 된 XAML 태그를 개선 하는 XAML 콘텐츠 속성을 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="426af-138">Typically, you designate XAML content properties that promote a streamlined XAML markup for your content and containment models.</span></span> <span data-ttu-id="426af-139">한 명의 멤버만 XAML 콘텐츠 속성으로 지정할 수 있으므로 있습니다 해야 하는 경우가 일부의 컨테이너에 대 한 형식의 속성으로 지정 해야 하는 XAML 콘텐츠 속성인 되도록 디자인 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-139">Because only one member can be designated as the XAML content property, you sometimes have design choices to make regarding which of several container properties of a type should be designated as the XAML content property.</span></span> <span data-ttu-id="426af-140">다른 컨테이너 속성은 명시적 속성 요소와 함께 사용 되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-140">The other container properties must be used with explicit property elements.</span></span>  
   
- XAML 노드 스트림에서 XAML 콘텐츠 속성은 <xref:System.Xaml.XamlMember>의 속성 이름을 사용하여 `StartMember` 및 `EndMember` 노드를 계속 생성합니다.  멤버가 XAML 콘텐츠 속성인지 여부를 확인하려면 `StartObject` 위치에서 <xref:System.Xaml.XamlType> 값을 검사하고 <xref:System.Xaml.XamlType.ContentProperty%2A>의 값을 가져옵니다.  
+ <span data-ttu-id="426af-141">XAML 노드 스트림의 XAML 콘텐츠 속성을 계속 나타날 `StartMember` 및 `EndMember` 에 대 한 속성의 이름을 사용 하 여 노드는 <xref:System.Xaml.XamlMember>합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-141">In the XAML node stream, XAML content properties still produce `StartMember` and `EndMember` nodes, using the name of the property for the <xref:System.Xaml.XamlMember>.</span></span> <span data-ttu-id="426af-142">XAML 콘텐츠 속성인 구성원 인지 확인 하려면는 <xref:System.Xaml.XamlType> 에서 값의 `StartObject` 놓고의 값을 가져올 <xref:System.Xaml.XamlType.ContentProperty%2A>합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-142">To determine whether a member is the XAML content property, examine the <xref:System.Xaml.XamlType> value from the `StartObject` position and obtain the value of <xref:System.Xaml.XamlType.ContentProperty%2A>.</span></span>  
   
-### ContentWrapperAttribute  
- **참조 설명서:**  <xref:System.Windows.Markup.ContentWrapperAttribute>  
+### <a name="contentwrapperattribute"></a><span data-ttu-id="426af-143">ContentWrapperAttribute</span><span class="sxs-lookup"><span data-stu-id="426af-143">ContentWrapperAttribute</span></span>  
+ <span data-ttu-id="426af-144">**참조 설명서:**  <xref:System.Windows.Markup.ContentWrapperAttribute></span><span class="sxs-lookup"><span data-stu-id="426af-144">**Reference Documentation:**  <xref:System.Windows.Markup.ContentWrapperAttribute></span></span>  
   
- **적용 대상:** 클래스\(특히 컬렉션 형식\)  
+ <span data-ttu-id="426af-145">**적용 대상:** 클래스, 특히 컬렉션 형식.</span><span class="sxs-lookup"><span data-stu-id="426af-145">**Applies to:** Class, specifically collection types.</span></span>  
   
- **인수:** 외래 콘텐츠의 콘텐츠 래퍼 형식으로 사용할 형식을 지정하는 <xref:System.Type>  
+ <span data-ttu-id="426af-146">**인수:** A <xref:System.Type> 외부 콘텐츠에 대 한 콘텐츠 래퍼 형식으로 사용할 형식을 지정 하 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-146">**Arguments:** A <xref:System.Type> that specifies the type to use as the content wrapper type for foreign content.</span></span>  
   
- <xref:System.Windows.Markup.ContentWrapperAttribute>는 외래 콘텐츠를 래핑하는 데 사용할 연결된 컬렉션 형식에 대한 하나 이상의 형식을 지정합니다.  외래 콘텐츠는 콘텐츠 속성의 형식에 대한 형식 시스템 제약 조건이 소유하는 형식에 대한 XAML 사용에서 지원할 가능한 모든 콘텐츠 사례를 캡처하지 않는 경우를 나타냅니다.  예를 들어 특정 형식의 콘텐츠에 대한 XAML은 강력한 형식의 제네릭 <xref:System.Collections.ObjectModel.Collection%601>에 있는 문자열을 지원할 수 있습니다.  콘텐츠 래퍼는 기존의 태그 규칙을 컬렉션의 할당 가능한 값에 대한 XAML의 개념으로 마이그레이션하는 데 유용합니다. 예를 들어 텍스트 관련 콘텐츠 모델을 쉽게 마이그레이션할 수 있습니다.  
+ <span data-ttu-id="426af-147"><xref:System.Windows.Markup.ContentWrapperAttribute>외부 콘텐츠를 래핑하는 데 사용 될 연결 된 컬렉션 형식에 하나 이상의 형식을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-147"><xref:System.Windows.Markup.ContentWrapperAttribute> specifies one or more types on the associated collection type that will be used to wrap foreign content.</span></span> <span data-ttu-id="426af-148">외부 콘텐츠를 콘텐츠 속성의 형식에 형식 시스템 제약 조건이 캡처하지 않으면 소유 하는 형식에 대 한 XAML 사용은 지원 가능한 콘텐츠 사례의 모든 사례를 참조 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-148">Foreign content refers to cases where the type system constraints on the type of the content property do not capture all of the possible content cases that XAML usage for the owning type would support.</span></span> <span data-ttu-id="426af-149">특정 유형의 콘텐츠 강력한 형식의 제네릭 있는 문자열을 지원할 수에 대 한 XAML을 지원 하는 예를 들어 <xref:System.Collections.ObjectModel.Collection%601>합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-149">For example, XAML support for content of a particular type might support strings in a strongly typed generic <xref:System.Collections.ObjectModel.Collection%601>.</span></span> <span data-ttu-id="426af-150">콘텐츠 래퍼는 마이그레이션 텍스트 관련 콘텐츠 모델 같은 컬렉션에 대 한 할당 가능한 값의 XAML의 개념으로 기존의 태그 규칙을 마이그레이션하는 데 유용 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-150">Content wrappers are useful for migrating preexisting markup conventions into XAML's conception of assignable values for collections, such as migrating text-related content models.</span></span>  
   
- 둘 이상의 콘텐츠 래퍼 형식을 지정하려면 특성을 여러 번 적용합니다.  
+ <span data-ttu-id="426af-151">둘 이상의 콘텐츠 래퍼 종류를 지정 하려면 특성을 여러 번 적용 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-151">To specify more than one content wrapper type, apply the attribute multiple times.</span></span>  
   
-### DependsOnAttribute  
- **참조 설명서:**  <xref:System.Windows.Markup.DependsOnAttribute>  
+### <a name="dependsonattribute"></a><span data-ttu-id="426af-152">DependsOnAttribute</span><span class="sxs-lookup"><span data-stu-id="426af-152">DependsOnAttribute</span></span>  
+ <span data-ttu-id="426af-153">**참조 설명서:**  <xref:System.Windows.Markup.DependsOnAttribute></span><span class="sxs-lookup"><span data-stu-id="426af-153">**Reference Documentation:**  <xref:System.Windows.Markup.DependsOnAttribute></span></span>  
   
- **적용 대상:** 속성  
+ <span data-ttu-id="426af-154">**적용 대상:** 속성</span><span class="sxs-lookup"><span data-stu-id="426af-154">**Applies to:** Property</span></span>  
   
- **인수:** 특성을 사용하는 형식의 다른 멤버 이름을 지정하는 문자열  
+ <span data-ttu-id="426af-155">**인수:** 특성이 지정 된 종류의 다른 멤버의 이름을 지정 하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="426af-155">**Arguments:** A string that specifies the name of another member of the attributed type.</span></span>  
   
- <xref:System.Windows.Markup.DependsOnAttribute>는 특성을 사용하는 속성이 다른 속성의 값에 종속되었음을 나타냅니다.  이 특성을 속성 정의에 적용하면 종속 속성이 XAML 개체 작성에서 가장 먼저 처리됩니다.  <xref:System.Windows.Markup.DependsOnAttribute>의 사용은 유효한 개체 생성을 위해 구문 분석의 특정 순서를 따라야 하는 형식에 대한 속성의 예외적인 경우를 지정합니다.  
+ <span data-ttu-id="426af-156"><xref:System.Windows.Markup.DependsOnAttribute>특성이 지정 된 속성이 다른 속성의 값에 따라 달라 집니다 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="426af-156"><xref:System.Windows.Markup.DependsOnAttribute> indicates that the attributed property depends on the value of another property.</span></span> <span data-ttu-id="426af-157">이 특성 속성 정의에 적용 하면 종속 속성 XAML 개체 작성에서 먼저 처리 됩니다.</span><span class="sxs-lookup"><span data-stu-id="426af-157">Applying this attribute to a property definition ensures that the dependent properties are processed first in XAML object writing.</span></span> <span data-ttu-id="426af-158">사용 <xref:System.Windows.Markup.DependsOnAttribute> 유효한 개체 만들기에 대 한 구문 분석은 특정 순서를 따라야 합니다 위치 형식에 대 한 속성 예외적인 경우를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-158">Usages of <xref:System.Windows.Markup.DependsOnAttribute> specify the exceptional cases of properties on types where a specific order of parsing must be followed for valid object creation.</span></span>  
   
- 여러 <xref:System.Windows.Markup.DependsOnAttribute> 경우를 속성 정의에 적용할 수 있습니다.  
+ <span data-ttu-id="426af-159">여러를 적용할 수 있습니다 <xref:System.Windows.Markup.DependsOnAttribute> 속성 정의에 사례입니다.</span><span class="sxs-lookup"><span data-stu-id="426af-159">You can apply multiple <xref:System.Windows.Markup.DependsOnAttribute> cases to a property definition.</span></span>  
   
-### MarkupExtensionReturnTypeAttribute  
- **참조 설명서:**  <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute>  
+### <a name="markupextensionreturntypeattribute"></a><span data-ttu-id="426af-160">MarkupExtensionReturnTypeAttribute</span><span class="sxs-lookup"><span data-stu-id="426af-160">MarkupExtensionReturnTypeAttribute</span></span>  
+ <span data-ttu-id="426af-161">**참조 설명서:**  <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute></span><span class="sxs-lookup"><span data-stu-id="426af-161">**Reference Documentation:**  <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute></span></span>  
   
- **적용 대상:** <xref:System.Windows.Markup.MarkupExtension> 파생 형식이어야 하는 클래스  
+ <span data-ttu-id="426af-162">**적용 대상:** 기대할 수 있는 클래스는 <xref:System.Windows.Markup.MarkupExtension> 파생 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="426af-162">**Applies to:** Class, which is expected to be a <xref:System.Windows.Markup.MarkupExtension> derived type.</span></span>  
   
- **인수:** 특성을 사용하는 <xref:System.Windows.Markup.MarkupExtension>의 `ProvideValue` 결과로 예상되는 가장 정확한 형식을 지정하는 <xref:System.Type>  
+ <span data-ttu-id="426af-163">**인수:** A <xref:System.Type> 으로 기대 하는 가장 정확한 형식을 지정 하는 `ProvideValue` 특성 사용의 결과 <xref:System.Windows.Markup.MarkupExtension>합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-163">**Arguments:** A <xref:System.Type> that specifies the most precise type to expect as the `ProvideValue` result of the attributed <xref:System.Windows.Markup.MarkupExtension>.</span></span>  
   
- 자세한 내용은 [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)를 참조하십시오.  
+ <span data-ttu-id="426af-164">자세한 내용은 참조 [XAML 개요에 대 한 태그 확장](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-164">For more information, see [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).</span></span>  
   
-### NameScopePropertyAttribute  
- **참조 설명서:**  <xref:System.Windows.Markup.NameScopePropertyAttribute>  
+### <a name="namescopepropertyattribute"></a><span data-ttu-id="426af-165">NameScopePropertyAttribute</span><span class="sxs-lookup"><span data-stu-id="426af-165">NameScopePropertyAttribute</span></span>  
+ <span data-ttu-id="426af-166">**참조 설명서:**  <xref:System.Windows.Markup.NameScopePropertyAttribute></span><span class="sxs-lookup"><span data-stu-id="426af-166">**Reference Documentation:**  <xref:System.Windows.Markup.NameScopePropertyAttribute></span></span>  
   
- **적용 대상:** 클래스  
+ <span data-ttu-id="426af-167">**적용 대상:** 클래스</span><span class="sxs-lookup"><span data-stu-id="426af-167">**Applies to:** Class</span></span>  
   
- **인수:** 다음 두 가지 형식의 특성 지원:  
+ <span data-ttu-id="426af-168">**인수:** 두 가지 형태의 attribution 지원:</span><span class="sxs-lookup"><span data-stu-id="426af-168">**Arguments:** Supports two forms of attribution:</span></span>  
   
--   특성 사용 형식에 대한 속성 이름을 지정하는 문자열  
+-   <span data-ttu-id="426af-169">특성 사용된 하는 형식에는 속성의 이름을 지정 하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="426af-169">A string that specifies the name of a property on the attributed type.</span></span>  
   
--   속성의 이름을 지정하는 문자열 및 명명된 속성을 정의하는 형식의 <xref:System.Type>.  이 형식은 연결 가능한 멤버를 XAML 이름 범위 속성으로 지정하는 데 사용됩니다.  
+-   <span data-ttu-id="426af-170">속성의 이름을 지정 하는 문자열 및 <xref:System.Type> 명명된 된 속성을 정의 하는 형식에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-170">A string that specifies the name of a property, and a <xref:System.Type> for the type that defines the named property.</span></span> <span data-ttu-id="426af-171">XAML 이름 범위 속성으로 연결 가능한 멤버를 지정 하는 데이 폼은입니다.</span><span class="sxs-lookup"><span data-stu-id="426af-171">This form is for specifying an attachable member as the XAML namescope property.</span></span>  
   
- <xref:System.Windows.Markup.NameScopePropertyAttribute>는 특성 사용 클래스에 대한 XAML 이름 범위 값을 제공하는 속성을 지정합니다.  XAML 이름 범위 속성은 <xref:System.Windows.Markup.INameScope>를 구현하고 실제 XAML 이름 범위, 해당 저장소 및 동작을 포함하는 개체를 참조합니다.  
+ <span data-ttu-id="426af-172"><xref:System.Windows.Markup.NameScopePropertyAttribute>특성 사용된 클래스에 대 한 XAML 이름 범위 값을 제공 하는 속성을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-172"><xref:System.Windows.Markup.NameScopePropertyAttribute> specifies a property that provides the XAML namescope value for the attributed class.</span></span> <span data-ttu-id="426af-173">XAML 이름 범위 속성을 구현 하는 개체를 참조 해야 하는 <xref:System.Windows.Markup.INameScope> 실제 XAML 이름 범위, 해당 저장소와 해당 동작을 저장 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-173">The XAML namescope property is expected to reference an object that implements <xref:System.Windows.Markup.INameScope> and holds the actual XAML namescope, its store, and its behavior.</span></span>  
   
-### RuntimeNamePropertyAttribute  
- **참조 설명서:**  <xref:System.Windows.Markup.RuntimeNamePropertyAttribute>  
+### <a name="runtimenamepropertyattribute"></a><span data-ttu-id="426af-174">RuntimeNamePropertyAttribute</span><span class="sxs-lookup"><span data-stu-id="426af-174">RuntimeNamePropertyAttribute</span></span>  
+ <span data-ttu-id="426af-175">**참조 설명서:**  <xref:System.Windows.Markup.RuntimeNamePropertyAttribute></span><span class="sxs-lookup"><span data-stu-id="426af-175">**Reference Documentation:**  <xref:System.Windows.Markup.RuntimeNamePropertyAttribute></span></span>  
   
- **적용 대상:** 클래스  
+ <span data-ttu-id="426af-176">**적용 대상:** 클래스</span><span class="sxs-lookup"><span data-stu-id="426af-176">**Applies to:** Class</span></span>  
   
- **인수:** 특성을 사용하는 형식에 대한 런타임 이름 속성의 이름을 지정하는 문자열  
+ <span data-ttu-id="426af-177">**인수:** 특성이 지정 된 형식에 런타임 이름 속성의 이름을 지정 하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="426af-177">**Arguments:** A string that specifies the name of the run-time name property on the attributed type.</span></span>  
   
- <xref:System.Windows.Markup.RuntimeNamePropertyAttribute>는 XAML [x:Name Directive](../../../docs/framework/xaml-services/x-name-directive.md)에 매핑되는 특성 사용 형식의 속성을 보고합니다.  이 속성은 <xref:System.String> 형식이어야 하며 읽기\/쓰기 속성이어야 합니다.  
+ <span data-ttu-id="426af-178"><xref:System.Windows.Markup.RuntimeNamePropertyAttribute>XAML에 매핑되는 특성 형식 속성을 보고 [X:name 지시문](../../../docs/framework/xaml-services/x-name-directive.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-178"><xref:System.Windows.Markup.RuntimeNamePropertyAttribute> reports a property of the attributed type that maps to the XAML [x:Name Directive](../../../docs/framework/xaml-services/x-name-directive.md).</span></span> <span data-ttu-id="426af-179">속성 형식 이어야 합니다 <xref:System.String> 하며 읽기/쓰기 여야 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-179">The property must be of type <xref:System.String> and must be read/write.</span></span>  
   
- 정의는 정의 형식에 할당 가능한 모든 파생 형식에 상속합니다.  특정 파생 형식에서 <xref:System.Windows.Markup.RuntimeNamePropertyAttribute>를 적용하여 해당 형식에서 정의를 재정의할 수 있습니다.  
+ <span data-ttu-id="426af-180">정의 하는 형식에 할당할 수 있는 모든 파생된 형식에 상속 됩니다.</span><span class="sxs-lookup"><span data-stu-id="426af-180">The definition inherits to all derived types that are assignable to the defining type.</span></span> <span data-ttu-id="426af-181">적용 하 여 특정 파생 유형에 정의 재정의할 수 <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> 파생 형식에 특정 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-181">You can override the definition on a specific derived type by applying <xref:System.Windows.Markup.RuntimeNamePropertyAttribute> on the specific derived type.</span></span>  
   
-### TrimSurroundingWhitespaceAttribute  
- **참조 설명서:**  <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>  
+### <a name="trimsurroundingwhitespaceattribute"></a><span data-ttu-id="426af-182">TrimSurroundingWhitespaceAttribute</span><span class="sxs-lookup"><span data-stu-id="426af-182">TrimSurroundingWhitespaceAttribute</span></span>  
+ <span data-ttu-id="426af-183">**참조 설명서:**  <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute></span><span class="sxs-lookup"><span data-stu-id="426af-183">**Reference Documentation:**  <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute></span></span>  
   
- **적용 대상:** 형식  
+ <span data-ttu-id="426af-184">**적용 대상:** 형식</span><span class="sxs-lookup"><span data-stu-id="426af-184">**Applies to:** Types</span></span>  
   
- **인수:** 없음  
+ <span data-ttu-id="426af-185">**인수:** 없음.</span><span class="sxs-lookup"><span data-stu-id="426af-185">**Arguments:** None.</span></span>  
   
- <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>는 공백이 유효한 콘텐츠\(<xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>가 있는 컬렉션에 포함된 콘텐츠\)에서 자식 요소로 나타날 수 있는 특정 형식에 적용됩니다.  <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>는 주로 저장 경로와 관련이 있지만 <xref:System.Xaml.XamlType.TrimSurroundingWhitespace%2A?displayProperty=fullName>를 검사하여 로드 경로의 XAML 형식 시스템에서 사용할 수 있습니다.  자세한 내용은 [Whitespace Processing in XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)를 참조하십시오.  
+ <span data-ttu-id="426af-186"><xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>공백과 중요 한 콘텐츠 내에서 자식 요소로 표시 될 수 있는 특정 형식에 적용 됩니다 (들어 있는 컬렉션에 포함 된 콘텐츠 <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>).</span><span class="sxs-lookup"><span data-stu-id="426af-186"><xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> is applied to specific types that might appear as child elements within whitespace significant content (content held by a collection that has <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>).</span></span> <span data-ttu-id="426af-187"><xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>저장에 주로 관련 된 경로, 하지만 로드 경로에서 XAML 형식 시스템에서 사용할 수 있는 검사 하 여 <xref:System.Xaml.XamlType.TrimSurroundingWhitespace%2A?displayProperty=nameWithType>합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-187"><xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute> is mainly relevant to the save path, but is available in the XAML type system in the load path by examining <xref:System.Xaml.XamlType.TrimSurroundingWhitespace%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="426af-188">자세한 내용은 참조 [XAML의 공백 처리](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-188">For more information, see [Whitespace Processing in XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).</span></span>  
   
-### TypeConverterAttribute  
- **참조 설명서:**  <xref:System.ComponentModel.TypeConverterAttribute>  
+### <a name="typeconverterattribute"></a><span data-ttu-id="426af-189">TypeConverterAttribute</span><span class="sxs-lookup"><span data-stu-id="426af-189">TypeConverterAttribute</span></span>  
+ <span data-ttu-id="426af-190">**참조 설명서:**  <xref:System.ComponentModel.TypeConverterAttribute></span><span class="sxs-lookup"><span data-stu-id="426af-190">**Reference Documentation:**  <xref:System.ComponentModel.TypeConverterAttribute></span></span>  
   
- **적용 대상:** 클래스, 속성, 메서드\(XAML에 사용할 수 있는 유일한 메서드는 연결 가능한 멤버를 지원하는 `get` 접근자임\)  
+ <span data-ttu-id="426af-191">**적용 대상:** 클래스, 속성, 메서드 (유일한 XAML 유효한 메서드 사례는는 `get` 지 원하는 연결 가능한 멤버 접근자) 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-191">**Applies to:** Class, property, method (the only XAML-valid method case is a `get` accessor that supports an attachable member).</span></span>  
   
- **인수:** <xref:System.ComponentModel.TypeConverter>의 <xref:System.Type>  
+ <span data-ttu-id="426af-192">**인수:** 는 <xref:System.Type> 의 <xref:System.ComponentModel.TypeConverter>합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-192">**Arguments:** The <xref:System.Type> of the <xref:System.ComponentModel.TypeConverter>.</span></span>  
   
- XAML 컨텍스트의 <xref:System.ComponentModel.TypeConverterAttribute>는 사용자 지정 <xref:System.ComponentModel.TypeConverter>를 참조합니다.  이 <xref:System.ComponentModel.TypeConverter>는 사용자 지정 형식 또는 해당 형식의 멤버에 대한 형식 변환 동작을 제공합니다.  
+ <span data-ttu-id="426af-193"><xref:System.ComponentModel.TypeConverterAttribute>XAML에서 컨텍스트는 사용자 지정 참조 <xref:System.ComponentModel.TypeConverter>합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-193"><xref:System.ComponentModel.TypeConverterAttribute> in a XAML context references a custom <xref:System.ComponentModel.TypeConverter>.</span></span> <span data-ttu-id="426af-194">이 <xref:System.ComponentModel.TypeConverter> 사용자 정의 형식 또는 해당 형식의 멤버에 대 한 형식 변환 동작을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-194">This <xref:System.ComponentModel.TypeConverter> provides type conversion behavior for custom types, or members of that type.</span></span>  
   
- <xref:System.ComponentModel.TypeConverterAttribute> 특성을 형식에 적용하여 형식 변환기 구현을 참조합니다.  클래스, 구조체 또는 인터페이스에 대한 XAML의 형식 변환기를 정의할 수 있습니다.  열거형에 대한 형식 변환은 제공할 필요가 없습니다. 이 변환은 기본적으로 사용하도록 설정되어 있습니다.  
+ <span data-ttu-id="426af-195">적용 된 <xref:System.ComponentModel.TypeConverterAttribute> 특성을 참조 하는 형식 변환기 구현 형식입니다.</span><span class="sxs-lookup"><span data-stu-id="426af-195">You apply the <xref:System.ComponentModel.TypeConverterAttribute> attribute to your type, referencing your type converter implementation.</span></span> <span data-ttu-id="426af-196">클래스, 구조체 또는 인터페이스에서 XAML을 위한 형식 변환기를 정의할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="426af-196">You can define type converters for XAML on classes, structures, or interfaces.</span></span> <span data-ttu-id="426af-197">변환에서는 기본적으로 활성화 되어 있는지, 열거형에 대 한 형식 변환을 제공 필요가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="426af-197">You do not need to provide type conversion for enumerations, that conversion is enabled natively.</span></span>  
   
- 형식 변환기는 태그의 특성이나 초기화 텍스트에 사용되는 문자열에서 원하는 대상 형식으로 변환할 수 있어야 합니다.  자세한 내용은 [TypeConverter 및 XAML](../../../ocs/framework/wpf/advanced/typeconverters-and-xaml.md)을 참조하십시오.  
+ <span data-ttu-id="426af-198">형식 변환기는 의도 한 대상 유형으로 특성이 나 초기화 텍스트 태그에서 사용 되는 문자열에서 변환할 수 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-198">Your type converter should be able to convert from a string that is used for attributes or initialization text in markup, into your intended destination type.</span></span> <span data-ttu-id="426af-199">자세한 내용은 참조 [TypeConverters 및 XAML](../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-199">For more information, see [TypeConverters and XAML](../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md).</span></span>  
   
- 형식의 모든 값에 적용하는 대신 XAML에 대한 형식 변환기 동작을 특정 속성에서 설정할 수도 있습니다.  이 경우 <xref:System.ComponentModel.TypeConverterAttribute>를 속성 정의\(특정 `get` 및 `set` 정의가 아닌 외부 정의\)에 적용합니다.  
+ <span data-ttu-id="426af-200">XAML 위한 형식 변환기 동작에는 형식의 모든 값을 적용 하는 대신 특정 속성에 구성 될 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="426af-200">Rather than applying to all values of a type, a type converter behavior for XAML can also be established on a specific property.</span></span> <span data-ttu-id="426af-201">이 경우, 적용 <xref:System.ComponentModel.TypeConverterAttribute> 속성 정의에 (외부 정의 특정 하지 `get` 및 `set` 정의).</span><span class="sxs-lookup"><span data-stu-id="426af-201">In this case, you apply <xref:System.ComponentModel.TypeConverterAttribute> to the property definition (the outer definition, not the specific `get` and `set` definitions).</span></span>  
   
- 연결 가능한 사용자 지정 멤버의 XAML 사용에 대한 형식 변환기 동작은 XAML 사용을 지원하는 `get` 메서드 접근자에 <xref:System.ComponentModel.TypeConverterAttribute>를 적용하여 할당할 수 있습니다.  
+ <span data-ttu-id="426af-202">사용자 지정 연결 가능한 멤버의 XAML 사용에 대 한 형식 변환기 동작을 적용 하 여 할당 될 수 있습니다 <xref:System.ComponentModel.TypeConverterAttribute> 에 `get` XAML 사용을 지 원하는 메서드 접근자입니다.</span><span class="sxs-lookup"><span data-stu-id="426af-202">A type converter behavior for XAML usage of a custom attachable member can be assigned by applying <xref:System.ComponentModel.TypeConverterAttribute> to the `get` method accessor that supports the XAML usage.</span></span>  
   
- <xref:System.ComponentModel.TypeConverter>와 유사한 <xref:System.ComponentModel.TypeConverterAttribute>가 XAML이 존재하기 전에 .NET Framework에 있었으며 형식 변환기 모델은 다른 목적으로 사용되었습니다.  <xref:System.ComponentModel.TypeConverterAttribute>를 참조하고 사용하려면 정규화하거나 <xref:System.ComponentModel>에 대한 `using` 문을 제공해야 합니다.  또한 프로젝트에 System 어셈블리도 포함해야 합니다.  
+ <span data-ttu-id="426af-203">비슷한 <xref:System.ComponentModel.TypeConverter>, <xref:System.ComponentModel.TypeConverterAttribute> XAML 도입 되기 전에.NET Framework에 존재 하 고 형식 변환기 모델 다른 목적으로 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-203">Similar to <xref:System.ComponentModel.TypeConverter>, <xref:System.ComponentModel.TypeConverterAttribute> existed in the .NET Framework prior to the existence of XAML, and the type converter model served other purposes.</span></span> <span data-ttu-id="426af-204">참조 하 고 사용 하기 위해 <xref:System.ComponentModel.TypeConverterAttribute>를 완전히 정규화 하거나 제공 해야 합니다는 `using` 문을 <xref:System.ComponentModel>합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-204">In order to reference and use <xref:System.ComponentModel.TypeConverterAttribute>, you must fully qualify it or provide a `using` statement for <xref:System.ComponentModel>.</span></span> <span data-ttu-id="426af-205">프로젝트에는 시스템 어셈블리는 포함 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-205">You must also include the System assembly in your project.</span></span>  
   
-### UidPropertyAttribute  
- **참조 설명서:**  <xref:System.Windows.Markup.UidPropertyAttribute>  
+### <a name="uidpropertyattribute"></a><span data-ttu-id="426af-206">UidPropertyAttribute</span><span class="sxs-lookup"><span data-stu-id="426af-206">UidPropertyAttribute</span></span>  
+ <span data-ttu-id="426af-207">**참조 설명서:**  <xref:System.Windows.Markup.UidPropertyAttribute></span><span class="sxs-lookup"><span data-stu-id="426af-207">**Reference Documentation:**  <xref:System.Windows.Markup.UidPropertyAttribute></span></span>  
   
- **적용 대상:** 클래스  
+ <span data-ttu-id="426af-208">**적용 대상:** 클래스</span><span class="sxs-lookup"><span data-stu-id="426af-208">**Applies to:** Class</span></span>  
   
- **인수:** 이름으로 관련 속성을 참조하는 문자열  
+ <span data-ttu-id="426af-209">**인수:** 관련 속성 이름으로 참조 하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="426af-209">**Arguments:** A string that references the relevant property by name.</span></span>  
   
- [x:Uid Directive](../../../docs/framework/xaml-services/x-uid-directive.md)의 별칭을 지정하는 클래스의 CLR 속성을 나타냅니다.  
+ <span data-ttu-id="426af-210">별칭을 지정 하는 클래스의 CLR 속성을 나타냅니다는 [X:uid 지시문](../../../docs/framework/xaml-services/x-uid-directive.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-210">Indicates the CLR property of a class that aliases the [x:Uid Directive](../../../docs/framework/xaml-services/x-uid-directive.md).</span></span>  
   
-### UsableDuringInitializationAttribute  
- **참조 설명서:**  <xref:System.Windows.Markup.UsableDuringInitializationAttribute>  
+### <a name="usableduringinitializationattribute"></a><span data-ttu-id="426af-211">UsableDuringInitializationAttribute</span><span class="sxs-lookup"><span data-stu-id="426af-211">UsableDuringInitializationAttribute</span></span>  
+ <span data-ttu-id="426af-212">**참조 설명서:**  <xref:System.Windows.Markup.UsableDuringInitializationAttribute></span><span class="sxs-lookup"><span data-stu-id="426af-212">**Reference Documentation:**  <xref:System.Windows.Markup.UsableDuringInitializationAttribute></span></span>  
   
- **적용 대상:** 클래스  
+ <span data-ttu-id="426af-213">**적용 대상:** 클래스</span><span class="sxs-lookup"><span data-stu-id="426af-213">**Applies to:** Class</span></span>  
   
- **인수:** 부울 값.  특성의 원하는 목적을 위해 사용되는 경우 항상 `true`로 지정되어야 합니다.  
+ <span data-ttu-id="426af-214">**인수:** 부울 값입니다.</span><span class="sxs-lookup"><span data-stu-id="426af-214">**Arguments:** A Boolean.</span></span> <span data-ttu-id="426af-215">특성의 의도 한 목적을 위해 사용 하는 경우이 항상로 지정할 수 `true`합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-215">If used for the attribute's intended purpose, this should always be specified as `true`.</span></span>  
   
- XAML 개체 그래프를 만드는 동안 이 형식이 하향식으로 빌드되는지 여부를 나타냅니다.  이는 고급 개념이며 프로그래밍 모델의 정의와 밀접한 관련이 있을 수 있습니다.  자세한 내용은 <xref:System.Windows.Markup.UsableDuringInitializationAttribute>를 참조하십시오.  
+ <span data-ttu-id="426af-216">이 형식이 XAML 개체 그래프를 만드는 동안 하향식으로 빌드되는지 여부를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="426af-216">Indicates whether this type is built top-down during XAML object graph creation.</span></span> <span data-ttu-id="426af-217">고급 개념은 밀접 한 관련이 있을 프로그래밍 모델의 정의입니다.</span><span class="sxs-lookup"><span data-stu-id="426af-217">This is an advanced concept, which is probably closely related to the definition of your programming model.</span></span> <span data-ttu-id="426af-218">자세한 내용은 <xref:System.Windows.Markup.UsableDuringInitializationAttribute>을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="426af-218">For more information, see <xref:System.Windows.Markup.UsableDuringInitializationAttribute>.</span></span>  
   
-### ValueSerializerAttribute  
- **참조 설명서:**  <xref:System.Windows.Markup.ValueSerializerAttribute>  
+### <a name="valueserializerattribute"></a><span data-ttu-id="426af-219">ValueSerializerAttribute</span><span class="sxs-lookup"><span data-stu-id="426af-219">ValueSerializerAttribute</span></span>  
+ <span data-ttu-id="426af-220">**참조 설명서:**  <xref:System.Windows.Markup.ValueSerializerAttribute></span><span class="sxs-lookup"><span data-stu-id="426af-220">**Reference Documentation:**  <xref:System.Windows.Markup.ValueSerializerAttribute></span></span>  
   
- **적용 대상:** 클래스, 속성, 메서드\(XAML에 사용할 수 있는 유일한 메서드는 연결 가능한 멤버를 지원하는 `get` 접근자임\)  
+ <span data-ttu-id="426af-221">**적용 대상:** 클래스, 속성, 메서드 (유일한 XAML 유효한 메서드 사례는는 `get` 지 원하는 연결 가능한 멤버 접근자) 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-221">**Applies to:** Class, property, method (the only XAML-valid method case is a `get` accessor that supports an attachable member).</span></span>  
   
- **인수:** 특성 사용 형식의 모든 속성이나 특정 특성 사용 속성을 serialize할 때 사용할 값 serializer 지원 클래스를 지정하는 <xref:System.Type>  
+ <span data-ttu-id="426af-222">**인수:** A <xref:System.Type> 특성이 지정 된 형식의 모든 속성을 직렬화 할 때 사용할 값 serializer 지원 클래스를 지정 하는 또는 특정 특성 속성을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-222">**Arguments:** A <xref:System.Type> that specifies the value serializer support class to use when serializing all properties of the attributed type, or the specific attributed property.</span></span>  
   
- <xref:System.Windows.Markup.ValueSerializer>는 <xref:System.ComponentModel.TypeConverter>보다 많은 상태와 컨텍스트가 필요한 값 serialization 클래스를 지정합니다.  연결 가능한 멤버의 정적 `get` 접근자 메서드에 <xref:System.Windows.Markup.ValueSerializerAttribute> 특성을 적용하여 연결 가능한 멤버와 <xref:System.Windows.Markup.ValueSerializer>를 연결할 수 있습니다.  값 serialization은 열거형, 인터페이스 및 구조체에도 적용 가능하지만 대리자에는 적용할 수 없습니다.  
+ <span data-ttu-id="426af-223"><xref:System.Windows.Markup.ValueSerializer>자세한 상태와 컨텍스트를 필요로 하는 값 serialization 클래스 지정는 <xref:System.ComponentModel.TypeConverter> 않습니다.</span><span class="sxs-lookup"><span data-stu-id="426af-223"><xref:System.Windows.Markup.ValueSerializer> specifies a value serialization class that requires more state and context than a <xref:System.ComponentModel.TypeConverter> does.</span></span> <span data-ttu-id="426af-224"><xref:System.Windows.Markup.ValueSerializer>적용 하 여 연결 가능한 멤버와 연결할 수는 <xref:System.Windows.Markup.ValueSerializerAttribute> 특성에는 정적 `get` 연결 가능한 멤버에 대 한 접근자 메서드.</span><span class="sxs-lookup"><span data-stu-id="426af-224"><xref:System.Windows.Markup.ValueSerializer> can be associated with an attachable member by applying the <xref:System.Windows.Markup.ValueSerializerAttribute> attribute on the static `get` accessor method for the attachable member.</span></span> <span data-ttu-id="426af-225">값 serialization도 적용 됩니다. 열거형, 인터페이스 및 구조체에 대 한 하지만 대리자에 대 한 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-225">Value serialization is also applicable for enumerations, interfaces and structures, but not for delegates.</span></span>  
   
-### WhitespaceSignificantCollectionAttribute  
- **참조 설명서:**  <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>  
+### <a name="whitespacesignificantcollectionattribute"></a><span data-ttu-id="426af-226">WhitespaceSignificantCollectionAttribute</span><span class="sxs-lookup"><span data-stu-id="426af-226">WhitespaceSignificantCollectionAttribute</span></span>  
+ <span data-ttu-id="426af-227">**참조 설명서:**  <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute></span><span class="sxs-lookup"><span data-stu-id="426af-227">**Reference Documentation:**  <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute></span></span>  
   
- **적용 대상:** 클래스, 특히 혼합 콘텐츠를 호스팅할 컬렉션 형식. 개체 요소 주위의 공백은 UI 표현에 의미가 있는 것으로 처리될 수 있습니다.  
+ <span data-ttu-id="426af-228">**적용 대상:** 클래스, 특히 개체 요소 주위의 공백을 UI 표현에 중요할 수 있습니다를 혼합 된 콘텐츠를 호스팅할 것으로 예상 되는 컬렉션 형식.</span><span class="sxs-lookup"><span data-stu-id="426af-228">**Applies to:** Class, specifically collection types that are expected to host mixed content, where white space around object elements might be significant for UI representation.</span></span>  
   
- **인수:** 없음  
+ <span data-ttu-id="426af-229">**인수:** 없음.</span><span class="sxs-lookup"><span data-stu-id="426af-229">**Arguments:** None.</span></span>  
   
- <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>는 XAML 프로세서에서 공백을 의미 있는 것으로 간주하도록 컬렉션 형식을 처리해야 함을 나타냅니다. 이는 컬렉션 내에 XAML 노드 스트림의 값 노드를 생성하는 데 영향을 줍니다.  자세한 내용은 [Whitespace Processing in XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)를 참조하십시오.  
+ <span data-ttu-id="426af-230"><xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>컬렉션 형식이 컬렉션 내에서 XAML 노드 스트림의 값 노드 있는 XAML 프로세서에서 중요 한 공백인으로 처리 한다는 것을 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="426af-230"><xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute> indicates that a collection type should be processed as whitespace significant by a XAML processor, which influences the construction of the XAML node stream's value nodes within the collection.</span></span> <span data-ttu-id="426af-231">자세한 내용은 참조 [XAML의 공백 처리](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-231">For more information, see [Whitespace Processing in XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).</span></span>  
   
-### XamlDeferLoadAttribute  
- **참조 설명서:**  <xref:System.Windows.Markup.XamlDeferLoadAttribute>  
+### <a name="xamldeferloadattribute"></a><span data-ttu-id="426af-232">XamlDeferLoadAttribute</span><span class="sxs-lookup"><span data-stu-id="426af-232">XamlDeferLoadAttribute</span></span>  
+ <span data-ttu-id="426af-233">**참조 설명서:**  <xref:System.Windows.Markup.XamlDeferLoadAttribute></span><span class="sxs-lookup"><span data-stu-id="426af-233">**Reference Documentation:**  <xref:System.Windows.Markup.XamlDeferLoadAttribute></span></span>  
   
- **적용 대상:** 클래스, 속성  
+ <span data-ttu-id="426af-234">**적용 대상:** 클래스 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="426af-234">**Applies to:** Class, property.</span></span>  
   
- **인수:** 두 가지 특성 형식, 즉, 문자열로 나타낸 형식이나 <xref:System.Type>으로 나타낸 형식을 지원합니다.  <xref:System.Windows.Markup.XamlDeferLoadAttribute>를 참조하십시오.  
+ <span data-ttu-id="426af-235">**인수:** 지원 두 attribution 형식을 문자열로, 구성 또는 형식을로 <xref:System.Type>합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-235">**Arguments:** Supports two attribution forms types as strings, or types as <xref:System.Type>.</span></span> <span data-ttu-id="426af-236"><xref:System.Windows.Markup.XamlDeferLoadAttribute>을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="426af-236">See <xref:System.Windows.Markup.XamlDeferLoadAttribute>.</span></span>  
   
- 클래스 또는 속성에 XAML에 대한 지연된 로드 사용\(예: 템플릿 동작\)이 있음을 나타내고 지연 동작 및 해당 대상\/콘텐츠 형식을 사용하도록 설정하는 클래스를 보고합니다.  
+ <span data-ttu-id="426af-237">클래스 또는 속성에 XAML에 대 한 지연 된 로드 사용 (예: 템플릿 동작의 경우) 및 지연 동작 및 해당 대상/콘텐츠 형식을 사용할 수 있는 클래스를 보고를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="426af-237">Indicates that a class or property has a deferred load usage for XAML (such as a template behavior), and reports the class that enables the deferring behavior and its destination/content type.</span></span>  
   
-### XamlSetMarkupExtensionAttribute  
- **참조 설명서:**  <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute>  
+### <a name="xamlsetmarkupextensionattribute"></a><span data-ttu-id="426af-238">XamlSetMarkupExtensionAttribute</span><span class="sxs-lookup"><span data-stu-id="426af-238">XamlSetMarkupExtensionAttribute</span></span>  
+ <span data-ttu-id="426af-239">**참조 설명서:**  <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute></span><span class="sxs-lookup"><span data-stu-id="426af-239">**Reference Documentation:**  <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute></span></span>  
   
- **적용 대상:** 클래스  
+ <span data-ttu-id="426af-240">**적용 대상:** 클래스</span><span class="sxs-lookup"><span data-stu-id="426af-240">**Applies to:** Class</span></span>  
   
- **인수:** 콜백의 이름을 지정합니다.  
+ <span data-ttu-id="426af-241">**인수:** 콜백의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-241">**Arguments:** Names the callback.</span></span>  
   
- 클래스에서 태그 확장을 사용하여 하나 이상의 속성에 대한 값을 제공할 수 있음을 나타내며, XAML 작성기가 클래스의 속성에 대해 태그 확장 설정 작업을 수행하기 전에 호출해야 하는 처리기를 참조합니다.  
+ <span data-ttu-id="426af-242">클래스는 하나 이상의 해당 속성에 대 한 값을 제공 하는 태그 확장을 사용할 수 및 XAML 작성기 클래스의 속성에 대해 태그 확장 설정 작업을 수행 하기 전에 호출 해야 하는 처리기 참조를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="426af-242">Indicates that a class can use a markup extension to provide a value for one or more of its properties, and references a handler that a XAML writer should call before performing a markup extension set operation on any property of the class.</span></span>  
   
-### XamlSetTypeConverterAttribute  
- **참조 설명서:**  <xref:System.Windows.Markup.XamlSetTypeConverterAttribute>  
+### <a name="xamlsettypeconverterattribute"></a><span data-ttu-id="426af-243">XamlSetTypeConverterAttribute</span><span class="sxs-lookup"><span data-stu-id="426af-243">XamlSetTypeConverterAttribute</span></span>  
+ <span data-ttu-id="426af-244">**참조 설명서:**  <xref:System.Windows.Markup.XamlSetTypeConverterAttribute></span><span class="sxs-lookup"><span data-stu-id="426af-244">**Reference Documentation:**  <xref:System.Windows.Markup.XamlSetTypeConverterAttribute></span></span>  
   
- **적용 대상:** 클래스  
+ <span data-ttu-id="426af-245">**적용 대상:** 클래스</span><span class="sxs-lookup"><span data-stu-id="426af-245">**Applies to:** Class</span></span>  
   
- **인수:** 콜백의 이름을 지정합니다.  
+ <span data-ttu-id="426af-246">**인수:** 콜백의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-246">**Arguments:** Names the callback.</span></span>  
   
- 클래스에서 형식 변환기를 사용하여 하나 이상의 속성에 대한 값을 제공할 수 있음을 나타내며, XAML 작성기가 클래스의 속성에 대해 형식 변환기 설정 작업을 수행하기 전에 호출해야 하는 처리기를 참조합니다.  
+ <span data-ttu-id="426af-247">클래스는 하나 이상의 해당 속성에 대 한 값을 제공 하는 형식 변환기를 사용할 수 및 XAML 작성기 클래스의 속성에 대해 형식 변환기 설정 작업을 수행 하기 전에 호출 해야 하는 처리기 참조를 나타냅니다.</span><span class="sxs-lookup"><span data-stu-id="426af-247">Indicates that a class can use a type converter to provide a value for one or more of its properties, and references a handler that a XAML writer should call before performing a type converter set operation on any property of the class.</span></span>  
   
-### XmlLangPropertyAttribute  
- **참조 설명서:**  <xref:System.Windows.Markup.XmlLangPropertyAttribute>  
+### <a name="xmllangpropertyattribute"></a><span data-ttu-id="426af-248">XmlLangPropertyAttribute</span><span class="sxs-lookup"><span data-stu-id="426af-248">XmlLangPropertyAttribute</span></span>  
+ <span data-ttu-id="426af-249">**참조 설명서:**  <xref:System.Windows.Markup.XmlLangPropertyAttribute></span><span class="sxs-lookup"><span data-stu-id="426af-249">**Reference Documentation:**  <xref:System.Windows.Markup.XmlLangPropertyAttribute></span></span>  
   
- **적용 대상:** 클래스  
+ <span data-ttu-id="426af-250">**적용 대상:** 클래스</span><span class="sxs-lookup"><span data-stu-id="426af-250">**Applies to:** Class</span></span>  
   
- **인수:** 특성 사용 형식에서 `xml:lang`에 대한 별칭으로 속성의 이름을 지정하는 문자열  
+ <span data-ttu-id="426af-251">**인수:** 별칭을 속성의 이름을 지정 하는 문자열 `xml:lang` 특성이 지정 된 형식에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="426af-251">**Arguments:** A string that specifies the name of the property to alias to `xml:lang` on the attributed type.</span></span>  
   
- <xref:System.Windows.Markup.XmlLangPropertyAttribute>는 XML `lang` 지시문에 매핑되는 특성 사용 형식의 속성을 보고합니다.  속성은 <xref:System.String> 형식일 필요는 없지만 문자열에서 할당 가능해야 합니다. 이는 형식 변환기를 속성의 형식이나 특정 속성과 연결하면 가능합니다.  속성은 읽기\/쓰기 속성이어야 합니다.  
+ <span data-ttu-id="426af-252"><xref:System.Windows.Markup.XmlLangPropertyAttribute>XML에 매핑되는 특성 형식 속성을 보고 `lang` 지시문입니다.</span><span class="sxs-lookup"><span data-stu-id="426af-252"><xref:System.Windows.Markup.XmlLangPropertyAttribute> reports a property of the attributed type that maps to the XML `lang` directive.</span></span> <span data-ttu-id="426af-253">속성은 형식의 반드시 없습니다 <xref:System.String>, 있지만 (가능 특정 속성 또는 속성의 형식과 형식 변환기를 연결 하 여) 문자열에서 할당 되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-253">The property is not necessarily of type <xref:System.String>, but must be assignable from a string (this could be accomplished by associating a type converter with the property's type, or with the specific property).</span></span> <span data-ttu-id="426af-254">속성은 읽기/쓰기 여야 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-254">The property must be read/write.</span></span>  
   
- `xml:lang` 매핑 시나리오는 런타임 개체 모델에서 XMLDOM을 사용하여 특별하게 처리하지 않고도 XML에서 지정한 언어 정보에 액세스할 수 있도록 하는 경우입니다.  
+ <span data-ttu-id="426af-255">매핑 시나리오 `xml:lang` XMLDOM을 사용 하 여 특별히 처리 하지 않고는 런타임 개체 모델에서 지정 된 XML 언어 정보에 액세스할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-255">The scenario for mapping `xml:lang` is so that a runtime object model has access to XML-specified language information without specifically processing with an XMLDOM.</span></span>  
   
- 정의는 정의 형식에 할당 가능한 모든 파생 형식에 상속합니다.  드문 경우이긴 하지만, 특정 파생 형식에서 <xref:System.Windows.Markup.XmlLangPropertyAttribute>를 적용하여 해당 형식에서 정의를 재정의할 수 있습니다.  
+ <span data-ttu-id="426af-256">정의 하는 형식에 할당할 수 있는 모든 파생된 형식에 상속 됩니다.</span><span class="sxs-lookup"><span data-stu-id="426af-256">The definition inherits to all derived types that are assignable to the defining type.</span></span> <span data-ttu-id="426af-257">적용 하 여 특정 파생 유형에 정의 재정의할 수 <xref:System.Windows.Markup.XmlLangPropertyAttribute> 특정에서 파생 된 유형인 일반적인 시나리오는 라고 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-257">You can override the definition on a specific derived type by applying <xref:System.Windows.Markup.XmlLangPropertyAttribute> on the specific derived type, although that is an uncommon scenario.</span></span>  
   
-## 어셈블리 수준의 XAML 관련 CLR 특성  
- 다음 단원에서는 형식 또는 멤버 정의에 적용되지 않지만 어셈블리에는 적용되는 XAML 관련 특성에 대해 설명합니다.  이러한 특성은 XAML에서 사용할 사용자 지정 형식이 포함된 라이브러리를 정의하는 전체적인 목표와 관련이 있습니다.  이러한 특성 중 일부는 반드시 XAML 노드 스트림에 직접 영향을 미치지는 않지만 다른 소비자가 사용할 수 있도록 노드 스트림에서 전달됩니다.  정보의 소비자는 XAML 네임스페이스 정보와 관련 접두사 정보가 필요한 serialization 프로세스나 디자인 환경을 포함합니다.  XAML 스키마 컨텍스트\(.NET Framework XAML 서비스 기본값 포함\)에서도 이 정보를 사용합니다.  
+## <a name="xaml-related-clr-attributes-at-the-assembly-level"></a><span data-ttu-id="426af-258">어셈블리 수준에서 XAML 관련 CLR 특성</span><span class="sxs-lookup"><span data-stu-id="426af-258">XAML-Related CLR Attributes at the Assembly Level</span></span>  
+ <span data-ttu-id="426af-259">다음 섹션에서는 형식 또는 멤버 정의에 적용 되지 않습니다 되지만 어셈블리에 적용 되는 XAML 관련 특성을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-259">The following sections describe the XAML-related attributes that are not applied to types or member definitions, but are instead applied to assemblies.</span></span> <span data-ttu-id="426af-260">이러한 특성은 XAML에서 사용 하도록 사용자 지정 형식을 포함 하는 라이브러리 정의의 전반적인 목표와 관련이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="426af-260">These attributes are pertinent to the overall goal of defining a library that contains custom types to use in XAML.</span></span> <span data-ttu-id="426af-261">특성 중 일부 의미 하지는 않습니다 영향 범위는 XAML 노드 스트림에서 직접 있지만 노드 스트림에서 다른 소비자가 사용할에 전달 됩니다.</span><span class="sxs-lookup"><span data-stu-id="426af-261">Some of the attributes do not necessarily influence the XAML node stream directly, but are passed on in the node stream for other consumers to use.</span></span> <span data-ttu-id="426af-262">소비자는 정보에 대 한 디자인 환경 또는 XAML 네임 스페이스 정보가 필요 하 고 접두사 정보를 연결 하는 serialization 프로세스를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-262">Consumers for the information include design environments or serialization processes that need XAML namespace information and associated prefix information.</span></span> <span data-ttu-id="426af-263">XAML 스키마 컨텍스트 (.NET Framework XAML 서비스 기본값 포함)도이 정보를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-263">A XAML schema context (including the .NET Framework XAML Services default) also uses this information.</span></span>  
   
-### XmlnsCompatibleWithAttribute  
- **참조 설명서:**  <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute>  
+### <a name="xmlnscompatiblewithattribute"></a><span data-ttu-id="426af-264">XmlnsCompatibleWithAttribute</span><span class="sxs-lookup"><span data-stu-id="426af-264">XmlnsCompatibleWithAttribute</span></span>  
+ <span data-ttu-id="426af-265">**참조 설명서:**  <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute></span><span class="sxs-lookup"><span data-stu-id="426af-265">**Reference Documentation:**  <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute></span></span>  
   
- **인수:**  
+ <span data-ttu-id="426af-266">**인수:**</span><span class="sxs-lookup"><span data-stu-id="426af-266">**Arguments:**</span></span>  
   
--   포함할 XAML 네임스페이스의 식별자를 지정하는 문자열  
+-   <span data-ttu-id="426af-267">포함할 XAML 네임 스페이스 식별자를 지정 하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="426af-267">A string that specifies the identifier of the XAML namespace to subsume.</span></span>  
   
--   이전 인수의 XAML 네임스페이스를 포함할 수 있는 XAML 네임스페이스의 식별자를 지정하는 문자열  
+-   <span data-ttu-id="426af-268">이전 인수에서 XAML 네임 스페이스를 포함할 수 있는 XAML 네임 스페이스 식별자를 지정 하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="426af-268">A string that specifies the identifier of the XAML namespace that can subsume the XAML namespace from the previous argument.</span></span>  
   
- <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute>는 XAML 네임스페이스가 다른 XAML 네임스페이스에 의해 포함될 수 있음을 지정합니다.  일반적으로 포함하는 XAML 네임스페이스는 이전에 정의된 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>에 지정됩니다.  이 기법을 사용하여 라이브러리에서 XAML 어휘의 버전을 관리하고 XAML 어휘가 이전 버전의 어휘에 대해 이전에 정의된 태그와 호환되게 할 수 있습니다.  
+ <span data-ttu-id="426af-269"><xref:System.Windows.Markup.XmlnsCompatibleWithAttribute>다른 XAML 네임 스페이스는 XAML 네임 스페이스에 포함 될 수 있는지를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-269"><xref:System.Windows.Markup.XmlnsCompatibleWithAttribute> specifies that a XAML namespace can be subsumed by another XAML namespace.</span></span> <span data-ttu-id="426af-270">일반적으로 포함 하는 XAML 네임 스페이스는 표시에 이전에 정의 된 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-270">Typically, the subsuming XAML namespace is indicated in a previously defined <xref:System.Windows.Markup.XmlnsDefinitionAttribute>.</span></span> <span data-ttu-id="426af-271">이 기술은 수 있습니다는 라이브러리에서 그리고 이전 버전의 어휘에 대해 이전에 정의 된 태그와 호환 되도록 하려면 XAML 어휘 버전 관리에 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-271">This technique can be used for versioning a XAML vocabulary in a library and to make it compatible with previously defined markup against the earlier versioned vocabulary.</span></span>  
   
-### XmlnsDefinitionAttribute  
- **참조 설명서:**  <xref:System.Windows.Markup.XmlnsDefinitionAttribute>  
+### <a name="xmlnsdefinitionattribute"></a><span data-ttu-id="426af-272">XmlnsDefinitionAttribute</span><span class="sxs-lookup"><span data-stu-id="426af-272">XmlnsDefinitionAttribute</span></span>  
+ <span data-ttu-id="426af-273">**참조 설명서:**  <xref:System.Windows.Markup.XmlnsDefinitionAttribute></span><span class="sxs-lookup"><span data-stu-id="426af-273">**Reference Documentation:**  <xref:System.Windows.Markup.XmlnsDefinitionAttribute></span></span>  
   
- **인수:**  
+ <span data-ttu-id="426af-274">**인수:**</span><span class="sxs-lookup"><span data-stu-id="426af-274">**Arguments:**</span></span>  
   
--   정의할 XAML 네임스페이스의 식별자를 지정하는 문자열  
+-   <span data-ttu-id="426af-275">정의 하는 XAML 네임 스페이스의 식별자를 지정 하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="426af-275">A string that specifies the identifier of the XAML namespace to define.</span></span>  
   
--   CLR 네임스페이스의 이름을 지정하는 문자열.  CLR 네임스페이스에서는 어셈블리의 public 형식을 정의해야 하며, 적어도 하나의 CLR 네임스페이스 형식은 XAML용이어야 합니다.  
+-   <span data-ttu-id="426af-276">CLR 네임 스페이스의 이름을 지정 하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="426af-276">A string that names a CLR namespace.</span></span> <span data-ttu-id="426af-277">CLR 네임 스페이스는 어셈블리에 public 형식을 정의 해야 하 고 XAML 사용을 위해 사용 해야 하는 CLR 네임 스페이스 형식 중 하나 이상.</span><span class="sxs-lookup"><span data-stu-id="426af-277">The CLR namespace should define public types in your assembly, and at least one of the CLR namespace types should be intended for XAML usage.</span></span>  
   
- <xref:System.Windows.Markup.XmlnsDefinitionAttribute>는 XAML 네임스페이스와 CLR 네임스페이스 사이의 어셈블리별 매핑을 지정합니다. 이 매핑은 XAML 개체 작성기나 XAML 스키마 컨텍스트에서 형식 확인에 사용됩니다.  
+ <span data-ttu-id="426af-278"><xref:System.Windows.Markup.XmlnsDefinitionAttribute>XAML 네임 스페이스와 XAML 개체 작성기 또는 XAML 스키마 컨텍스트에서 형식 확인에 사용 되는 CLR 네임 스페이스 간 어셈블리별 매핑을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-278"><xref:System.Windows.Markup.XmlnsDefinitionAttribute> specifies a mapping on a per-assembly basis between a XAML namespace and a CLR namespace, which is then used for type resolution by a XAML object writer or XAML schema context.</span></span>  
   
- 둘 이상의 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>를 어셈블리에 적용할 수 있습니다.  이 작업은 다음과 같은 이유로 수행될 수 있습니다.  
+ <span data-ttu-id="426af-279">둘 이상의 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 어셈블리에 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="426af-279">More than one <xref:System.Windows.Markup.XmlnsDefinitionAttribute> can be applied to an assembly.</span></span> <span data-ttu-id="426af-280">다음과 같은 이유로 모든 조합에 대해이 작업을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="426af-280">This might be done for any combination of the following reasons:</span></span>  
   
--   라이브러리 디자인에 런타임 API 액세스의 논리적 구성에 대한 여러 CLR 네임스페이스가 포함되어 있지만 동일한 XAML 네임스페이스를 참조하여 이러한 네임스페이스의 모든 형식을 XAML에서 사용할 수 있게 하려고 합니다.  이 경우 <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> 값이 동일하지만 <xref:System.Windows.Markup.XmlnsDefinitionAttribute.ClrNamespace%2A> 값은 서로 다른 여러 개의 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 특성을 적용합니다.  이 방법은 특히 프레임워크나 응용 프로그램에서 일반적으로 기본 XAML 네임스페이스로 사용할 XAML 네임스페이스에 대한 매핑을 정의하는 경우에 유용합니다.  
+-   <span data-ttu-id="426af-281">런타임 API 액세스;의 논리적 구성에 대 한 여러 CLR 네임 스페이스를 포함 하는 라이브러리 디자인 그러나 동일한 XAML 네임 스페이스를 참조 하 여 XAML 사용할 수 있도록 하려면 해당 네임 스페이스의 모든 형식 바랍니다.</span><span class="sxs-lookup"><span data-stu-id="426af-281">The library design contains multiple CLR namespaces for logical organization of run-time API access; however, you want all types in those namespaces to be XAML-usable by referencing the same XAML namespace.</span></span> <span data-ttu-id="426af-282">이 경우, 적용 여러 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 동일한를 사용 하 여 특성 <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> 하지만 서로 다른 값 <xref:System.Windows.Markup.XmlnsDefinitionAttribute.ClrNamespace%2A> 값입니다.</span><span class="sxs-lookup"><span data-stu-id="426af-282">In this case, you apply several <xref:System.Windows.Markup.XmlnsDefinitionAttribute> attributes using the same <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> value but different <xref:System.Windows.Markup.XmlnsDefinitionAttribute.ClrNamespace%2A> values.</span></span> <span data-ttu-id="426af-283">기본 XAML 네임 스페이스에도 일반적으로 사용 되도록 해당 프레임 워크 또는 응용 프로그램에서 하려는 XAML 네임 스페이스에 대 한 매핑을 정의 하는 경우 특히 유용 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-283">This is especially useful if you are defining mappings for the XAML namespace that your framework or application intends to be the default XAML namespace in common usage.</span></span>  
   
--   라이브러리 디자인에 여러 CLR 네임스페이스가 포함되어 있으며 이러한 CLR 네임스페이스의 형식 사용 간에 XAML 네임스페이스를 의도적으로 분리하려고 합니다.  
+-   <span data-ttu-id="426af-284">여러 CLR 네임 스페이스를 포함 하는 라이브러리 디자인 및 해당 CLR 네임 스페이스의 형식 사용을 의도적으로 XAML 네임 스페이스 분리 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-284">The library design contains multiple CLR namespaces, and you want a deliberate XAML namespace separation between the usages of types in those CLR namespaces.</span></span>  
   
--   어셈블리에 CLR 네임스페이스를 정의하고 둘 이상의 XAML 네임스페이스를 통해 액세스할 수 있게 하려고 합니다.  동일한 코드베이스를 사용하여 여러 어휘를 지원하려는 경우가 이에 해당합니다.  
+-   <span data-ttu-id="426af-285">어셈블리의 CLR 네임 스페이스를 정의 하 고 둘 이상의 XAML 네임 스페이스를 통해 액세스할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-285">You define a CLR namespace in the assembly, and you want it to be accessible through more than one XAML namespace.</span></span> <span data-ttu-id="426af-286">이 시나리오에는 동일한 코드 베이스를 사용 하 여 여러 개의 어휘를 지 원하는 경우 발생 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-286">This scenario occurs when you are supporting multiple vocabularies with the same codebase.</span></span>  
   
--   하나 이상의 CLR 네임스페이스에서 XAML 언어 지원을 정의합니다.  이를 위해 <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> 값은 `http://schemas.microsoft.com/winfx/2006/xaml`이어야 합니다.  
+-   <span data-ttu-id="426af-287">XAML 언어 지원을 하나 이상의 CLR 네임 스페이스를 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-287">You define XAML language support in one or more CLR namespaces.</span></span> <span data-ttu-id="426af-288">이러한 경우는 <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> 값 해야 `http://schemas.microsoft.com/winfx/2006/xaml`합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-288">For these, the <xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A> value should be `http://schemas.microsoft.com/winfx/2006/xaml`.</span></span>  
   
-### XmlnsPrefixAttribute  
- **참조 설명서:**  <xref:System.Windows.Markup.XmlnsPrefixAttribute>  
+### <a name="xmlnsprefixattribute"></a><span data-ttu-id="426af-289">XmlnsPrefixAttribute</span><span class="sxs-lookup"><span data-stu-id="426af-289">XmlnsPrefixAttribute</span></span>  
+ <span data-ttu-id="426af-290">**참조 설명서:**  <xref:System.Windows.Markup.XmlnsPrefixAttribute></span><span class="sxs-lookup"><span data-stu-id="426af-290">**Reference Documentation:**  <xref:System.Windows.Markup.XmlnsPrefixAttribute></span></span>  
   
- **인수:**  
+ <span data-ttu-id="426af-291">**인수:**</span><span class="sxs-lookup"><span data-stu-id="426af-291">**Arguments:**</span></span>  
   
--   XAML 네임스페이스의 식별자를 지정하는 문자열  
+-   <span data-ttu-id="426af-292">XAML 네임 스페이스 식별자를 지정 하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="426af-292">A string that specifies the identifier of a XAML namespace.</span></span>  
   
--   권장되는 접두사를 지정하는 문자열  
+-   <span data-ttu-id="426af-293">권장 되는 접두사를 지정 하는 문자열입니다.</span><span class="sxs-lookup"><span data-stu-id="426af-293">A string that specifies a recommended prefix.</span></span>  
   
- <xref:System.Windows.Markup.XmlnsDefinitionAttribute>는 XAML 네임스페이스에 사용할 권장되는 접두사를 지정합니다.  이 접두사는 .NET Framework XAML 서비스 <xref:System.Xaml.XamlXmlWriter>에 의해 serialize되는 XAML 파일에서 요소와 특성을 작성할 때나 XAML에서 구현하는 라이브러리가 XAML 편집 기능이 있는 디자인 환경과 상호 작용할 때 유용합니다.  
+ <span data-ttu-id="426af-294"><xref:System.Windows.Markup.XmlnsDefinitionAttribute>XAML 네임 스페이스에 대해 사용 하도록 권장 되는 접두사를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-294"><xref:System.Windows.Markup.XmlnsDefinitionAttribute> specifies a recommended prefix to use for a XAML namespace.</span></span> <span data-ttu-id="426af-295">접두사는.NET Framework XAML 서비스에서 serialize 된 XAML 파일에서 특성과 해당 요소를 작성할 때 유용한 <xref:System.Xaml.XamlXmlWriter>, 또는 XAML 구현 라이브러리 XAML 디자인 환경과 상호 작용 하는 경우 편집 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="426af-295">The prefix is useful when writing elements and attributes in a XAML file that is serialized by the .NET Framework XAML Services <xref:System.Xaml.XamlXmlWriter>, or when a XAML-implementing library interacts with a design environment that has XAML editing features.</span></span>  
   
- 둘 이상의 <xref:System.Windows.Markup.XmlnsPrefixAttribute>를 한 어셈블리에 적용할 수 있습니다.  이 작업은 다음과 같은 이유로 수행될 수 있습니다.  
+ <span data-ttu-id="426af-296">둘 이상의 <xref:System.Windows.Markup.XmlnsPrefixAttribute> 어셈블리에 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="426af-296">More than one <xref:System.Windows.Markup.XmlnsPrefixAttribute> can be applied to an assembly.</span></span> <span data-ttu-id="426af-297">다음과 같은 이유로 모든 조합에 대해이 작업을 수행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="426af-297">This might be done for any combination of the following reasons:</span></span>  
   
--   어셈블리에서 둘 이상의 XAML 네임스페이스에 대한 형식을 정의합니다.  이 경우 XAML 네임스페이스마다 다른 접두사 값을 정의해야 합니다.  
+-   <span data-ttu-id="426af-298">어셈블리에 둘 이상의 XAML 네임 스페이스에 대 한 형식을 정의합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-298">Your assembly defines types for more than one XAML namespace.</span></span> <span data-ttu-id="426af-299">이 경우 각 XAML 네임 스페이스에 대 한 서로 다른 접두사 값을 정의 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-299">In this case you should define different prefix values for each XAML namespace.</span></span>  
   
--   여러 어휘를 지원하고 어휘와 XAML 네임스페이스마다 서로 다른 접두사를 사용합니다.  
+-   <span data-ttu-id="426af-300">여러 개의 어휘를 지 원하는 및 각 어휘 및 XAML 네임 스페이스에 대해 서로 다른 접두사를 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-300">You are supporting multiple vocabularies, and you use different prefixes for each vocabulary and XAML namespace.</span></span>  
   
--   어셈블리에서 XAML 언어 지원을 정의하고 `http://schemas.microsoft.com/winfx/2006/xaml`에 대한 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>가 있습니다.  이 경우 일반적으로 접두사 `x`를 승격해야 합니다.  
+-   <span data-ttu-id="426af-301">어셈블리에서 XAML 언어 지원을 정의 하 고는 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 에 대 한 `http://schemas.microsoft.com/winfx/2006/xaml`합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-301">You define XAML language support in the assembly and have a <xref:System.Windows.Markup.XmlnsDefinitionAttribute> for `http://schemas.microsoft.com/winfx/2006/xaml`.</span></span> <span data-ttu-id="426af-302">이 경우 일반적으로 승격 해야 접두사 `x`합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-302">In this case, you typically should promote the prefix `x`.</span></span>  
   
 > [!NOTE]
->  .NET Framework XAML 서비스에서는 XAML 관련 특성인 <xref:System.Windows.Markup.RootNamespaceAttribute>도 정의합니다.  이 특성은 프로젝트 시스템 지원에 대한 어셈블리 수준 특성이며 XAML 사용자 지정 형식과 관련이 없습니다.  
+>  <span data-ttu-id="426af-303">.NET framework XAML 서비스 XAML 관련 특성 정의 <xref:System.Windows.Markup.RootNamespaceAttribute>합니다.</span><span class="sxs-lookup"><span data-stu-id="426af-303">.NET Framework XAML Services also defines the XAML-related attribute <xref:System.Windows.Markup.RootNamespaceAttribute>.</span></span> <span data-ttu-id="426af-304">이 특성은 프로젝트 시스템 지원에 대 한 어셈블리 수준 특성 및는 XAML 사용자 정의 형식과 관련이 없습니다.</span><span class="sxs-lookup"><span data-stu-id="426af-304">This attribute is an assembly-level attribute for project system support, and it is not relevant for XAML custom types.</span></span>  
   
-## 참고 항목  
- <xref:System.Attribute>   
- [Defining Custom Types for Use with .NET Framework XAML Services](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)
+## <a name="see-also"></a><span data-ttu-id="426af-305">참고 항목</span><span class="sxs-lookup"><span data-stu-id="426af-305">See Also</span></span>  
+ <xref:System.Attribute>  
+ [<span data-ttu-id="426af-306">.NET Framework XAML 서비스에서 사용할 사용자 지정 형식 정의</span><span class="sxs-lookup"><span data-stu-id="426af-306">Defining Custom Types for Use with .NET Framework XAML Services</span></span>](../../../docs/framework/xaml-services/defining-custom-types-for-use-with-net-framework-xaml-services.md)

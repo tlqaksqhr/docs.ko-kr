@@ -1,51 +1,54 @@
 ---
-title: "응용 프로그램 성능 계획 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "응용 프로그램, 최적화"
-  - "WPF 응용 프로그램, 최적화"
+title: "응용 프로그램 성능 계획"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- applications [WPF], optimizing
+- WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f47f56e28064c852e5d8f721bdb3a0f73172c12a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 응용 프로그램 성능 계획
-성능 목표의 성공적인 달성은 성능 전략을 얼마나 잘 개발하는지에 달려 있습니다.  모든 제품 개발에서 첫 번째 단계는 계획입니다.  이 항목에서는 훌륭한 성능 전략을 개발하기 위한 몇 가지 아주 간단한 규칙에 대해 설명합니다.  
+# <a name="planning-for-application-performance"></a><span data-ttu-id="0c13f-102">응용 프로그램 성능 계획</span><span class="sxs-lookup"><span data-stu-id="0c13f-102">Planning for Application Performance</span></span>
+<span data-ttu-id="0c13f-103">성공적인 성능 목표를 달성 성능 전략 개발 정도에 따라 다릅니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-103">The success of achieving your performance goals depends on how well you develop your performance strategy.</span></span> <span data-ttu-id="0c13f-104">계획은 모든 제품 개발의 첫 번째 단계입니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-104">Planning is the first stage in developing any product.</span></span> <span data-ttu-id="0c13f-105">이 항목에서는 성능이 현저히 전략을 개발 하기 위한 매우 간단한 몇 가지 규칙을 설명 합니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-105">This topic describes a few very simple rules for developing a good performance strategy.</span></span>  
   
-## 시나리오 측면에서 고려  
- 시나리오는 응용 프로그램의 중요한 구성 요소에 집중하는 데 도움이 될 수 있습니다.  시나리오는 일반적으로 경쟁 제품뿐 아니라 고객에게서 얻습니다.  항상 고객을 연구하고 고객이 자사의 제품이나 경쟁사의 제품에 열광하는 진짜 이유를 찾아봅니다.  고객의 의견은 응용 프로그램의 기본 시나리오를 결정하는 데 도움을 줄 수 있습니다.  예를 들어 시작 시 사용할 구성 요소를 디자인하는 경우 이 구성 요소는 응용 프로그램이 시작할 때 한 번만 호출될 것입니다.  이때에는 시작 시간이 주요 시나리오가 됩니다.  다른 예로 애니메이션 시퀀스의 원하는 프레임 속도, 응용 프로그램에 허용되는 최대 작업 집합 등도 주요 시나리오가 될 수 있습니다.  
+## <a name="think-in-terms-of-scenarios"></a><span data-ttu-id="0c13f-106">시나리오의 측면에서 고민해</span><span class="sxs-lookup"><span data-stu-id="0c13f-106">Think in Terms of Scenarios</span></span>  
+ <span data-ttu-id="0c13f-107">시나리오의 활용 응용 프로그램의 중요 한 구성 요소에 집중 합니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-107">Scenarios can help you focus on the critical components of your application.</span></span> <span data-ttu-id="0c13f-108">시나리오는 경쟁 제품 뿐 아니라 고객 프로그램에서 일반적으로 파생 됩니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-108">Scenarios are generally derived from your customers, as well as competitive products.</span></span> <span data-ttu-id="0c13f-109">항상 고객 연구 하 고 확인 하는 진짜 이유 제품을 경쟁 업체의 제품에 대 한 기쁘게 생각 합니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-109">Always study your customers and find out what really makes them excited about your product, and your competitors' products.</span></span> <span data-ttu-id="0c13f-110">고객의 의견 응용 프로그램의 기본 시나리오를 결정 하는 데 도움이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-110">Your customers' feedback can help you to determine your application's primary scenario.</span></span> <span data-ttu-id="0c13f-111">예를 들어, 시작 시 사용 될 구성 요소를 디자인 하는 경우 응용 프로그램이 시작 될 때 구성 요소를 한 번만 호출할으로 가능성이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-111">For instance, if you are designing a component that will be used at startup, it is likely that the component will be called only once, when the application starts up.</span></span> <span data-ttu-id="0c13f-112">시작 시간은 주요 시나리오가 됩니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-112">Startup time becomes your key scenario.</span></span> <span data-ttu-id="0c13f-113">주요 시나리오의 다른 예에 애니메이션 시퀀스에 대 한 원하는 프레임 속도 수 또는 최대 응용 프로그램에 대 한 허용 집합을 작업 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-113">Other examples of key scenarios could be the desired frame rate for animation sequences, or the maximum working set allowed for the application.</span></span>  
   
-## 목표 정의  
- 목표는 응용 프로그램을 빠르게 수행할지, 아니면 느리게 수행할지를 결정하는 데 도움이 됩니다.  모든 시나리오에 대해 목표를 정의해야 합니다.  정의하는 모든 성능 목표는 고객의 기대를 기반으로 해야 합니다.  아직 해결되지 않은 많은 문제가 있는 응용 프로그램 개발 주기의 초기에는 성능 목표를 설정하는 것이 어려울 수 있습니다.  그러나 초기 목표를 설정하고 나중에 수정하는 것이 성능 목표가 전혀 없는 것보다 낫습니다.  
+## <a name="define-goals"></a><span data-ttu-id="0c13f-114">목표 정의</span><span class="sxs-lookup"><span data-stu-id="0c13f-114">Define Goals</span></span>  
+ <span data-ttu-id="0c13f-115">목표는 응용 프로그램으로 더 빠르거나 더 느리게 수행 되는지 여부를 확인 하는 데 도움이 됩니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-115">Goals help you to determine whether an application is performing faster or slower.</span></span> <span data-ttu-id="0c13f-116">모든 시나리오에 대 한 목표를 정의 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-116">You should define goals for all of your scenarios.</span></span> <span data-ttu-id="0c13f-117">모든 성능 목표는 정의 하는 고객의 기대를 기반으로 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-117">All performance goals that you define should be based on your customers' expectations.</span></span> <span data-ttu-id="0c13f-118">주기를 여전히 많은 해결 되지 않은 문제가 있는 경우 응용 프로그램 개발에서 초기에 목표 집합 성능 하기 어려울 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-118">It may be difficult to set performance goals early on in the application development cycle, when there are still many unresolved issues.</span></span> <span data-ttu-id="0c13f-119">그러나 초기 목표를 설정 하 고 나중에 없는 목표를 전혀 보다 수정 하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-119">However, it is better to set an initial goal and revise it later than not to have a goal at all.</span></span>  
   
-## 플랫폼 이해  
- 응용 프로그램 개발 주기 동안 측정, 조사, 구체화\/수정의 주기를 항상 유지합니다.  개발 주기의 시작부터 끝까지 신뢰할 수 있는 안정된 환경에서 응용 프로그램의 성능을 측정해야 합니다.  외부 요인에 따른 가변성을 방지해야 합니다.  예를 들어 성능을 테스트할 때는 성능 테스트 결과에 영향을 주지 않도록 바이러스 백신 또는 SMS와 같은 자동 업데이트를 사용하지 않도록 설정해야 합니다.  응용 프로그램 성능을 측정한 후에는 성능을 가장 크게 개선할 변경 사항을 식별해야 합니다.  응용 프로그램을 수정하고 나서 주기를 다시 시작합니다.  
+## <a name="understand-your-platform"></a><span data-ttu-id="0c13f-120">플랫폼 이해</span><span class="sxs-lookup"><span data-stu-id="0c13f-120">Understand Your Platform</span></span>  
+ <span data-ttu-id="0c13f-121">측정, 조사, 응용 프로그램 개발 주기 동안 구체화/수정의 주기를 항상 유지 합니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-121">Always maintain the cycle of measuring, investigating, refining/correcting during your application development cycle.</span></span> <span data-ttu-id="0c13f-122">개발 주기의 끝부터 안정적이 고 안정 된 환경에서 응용 프로그램의 성능을 측정 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-122">From the beginning to the end of the development cycle, you need to measure your application's performance in a reliable, stable environment.</span></span> <span data-ttu-id="0c13f-123">외부 요인에 따른 가변성을 피해 야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-123">You should avoid variability caused by external factors.</span></span> <span data-ttu-id="0c13f-124">예를 들어 성능을 테스트할 때 바이러스 백신 또는 SMS 같은 자동 업데이트를 사용 하지 않도록 설정, 성능에 영향을 하지 하려면 테스트 결과 해야 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-124">For example, when testing performance, you should disable anti-virus or any automatic update such as SMS, in order not to impact performance test results.</span></span> <span data-ttu-id="0c13f-125">응용 프로그램의 성능의 측정 한 후에 가장 큰 향상에서 초래할 변화를 확인 해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-125">Once you have measured your application's performance, you need to identify the changes that will result in the biggest improvements.</span></span> <span data-ttu-id="0c13f-126">응용 프로그램을 수정 하면 주기를 다시 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-126">Once you have modified your application, start the cycle again.</span></span>  
   
-## 반복적인 성능 조정  
- 사용할 각 기능의 상대적 비용을 알고 있어야 합니다.  예를 들어 [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)]에서 리플렉션을 사용하면 일반적으로 컴퓨팅 리소스의 측면에서 성능에 상당한 영향을 미치므로 현명하게 사용해야 합니다.  이는 리플렉션을 사용하지 말라는 의미는 아니고 단지 응용 프로그램의 성능 요구 사항과 사용하는 기능의 성능 요구 사항 사이의 균형을 유지할 수 있도록 주의를 기울여야 한다는 의미입니다.  
+## <a name="make-performance-tuning-an-iterative-process"></a><span data-ttu-id="0c13f-127">성능 튜닝 방법으로 반복적인 프로세스를 확인 합니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-127">Make Performance Tuning an Iterative Process</span></span>  
+ <span data-ttu-id="0c13f-128">사용 하 여 각 기능의 상대적 비용을 알고 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-128">You should know the relative cost of each feature you will use.</span></span> <span data-ttu-id="0c13f-129">리플렉션 사용 예를 들어 [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] 않습니다 일반적으로 성능 집중적인 되므로 주의 해 서 사용 하 여 원하는 컴퓨팅 리소스를 기준으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-129">For example, the use of reflection in [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] is generally performance intensive in terms of computing resources, so you would want to use it judiciously.</span></span> <span data-ttu-id="0c13f-130">그렇다고 리플렉션 사용을 방지 하기 위해 사용 하는 기능의 성능 요구 응용 프로그램의 성능 요구 사항을 균형을 조정 하는 주의 해야 하에 합니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-130">This does not mean to avoid the use of reflection, only that you should be careful to balance the performance requirements of your application with the performance demands of the features you use.</span></span>  
   
-## 그래픽 다양성 개발  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 성능을 성취하기 위한 확장 가능한 접근 방법을 구축하기 위한 핵심 기술은 그래픽 다양성과 복잡성을 개발하는 것입니다.  항상 처음에는 성능에 가장 적은 영향을 주는 리소스를 사용하여 시나리오 목표를 달성합니다.  이러한 목표를 달성했으면 항상 시나리오 목표를 염두에 두고 성능에 더 많은 영향을 주는 기능을 사용하여 그래픽 다양성을 개발합니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]는 매우 다양한 그래픽 기능을 제공하는 강력한 플랫폼입니다.  성능에 큰 영향을 주는 기능을 생각 없이 사용하면 전체 응용 프로그램 성능에 나쁜 영향을 줄 수 있습니다.  
+## <a name="build-towards-graphical-richness"></a><span data-ttu-id="0c13f-131">그래픽 다양성 개발</span><span class="sxs-lookup"><span data-stu-id="0c13f-131">Build Towards Graphical Richness</span></span>  
+ <span data-ttu-id="0c13f-132">확장 가능한 접근 방법을 하기 위한 핵심 기술은 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램의 성능을 그래픽 다양성 및 복잡성을 형성 하는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-132">A key technique for creating a scalable approach towards achieving [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application performance is to build towards graphical richness and complexity.</span></span> <span data-ttu-id="0c13f-133">항상 최소 성능 집약적인 리소스를 사용 하 여 시나리오 목표를 달성 하기 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-133">Always start with using the least performance intensive resources to achieve your scenario goals.</span></span> <span data-ttu-id="0c13f-134">이러한 목표를 달성 되 면 더 많은 성능 집약적인 기능을 항상 염두 시나리오 목표를 사용 하 여 그래픽 다양성 빌드하십시오.</span><span class="sxs-lookup"><span data-stu-id="0c13f-134">Once you achieve these goals, build towards graphic richness by using more performance intensive features, always keeping your scenario goals in mind.</span></span> <span data-ttu-id="0c13f-135">[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 강력한 플랫폼 하며 매우 다양 한 그래픽 기능을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-135">Remember, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] is a very rich platform and provides very rich graphic features.</span></span> <span data-ttu-id="0c13f-136">고려 하지 않고 성능 집약적인 기능을 사용 하 여 전체 응용 프로그램 성능이 저하 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-136">Using performance intensive features without thinking can negatively impact your overall application performance.</span></span>  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤은 해당 컨트롤 동작은 변경하지 않고도 모양의 광범위한 사용자 지정을 통해 기본적으로 확장할 수 있습니다.  스타일, 데이터 템플릿 및 컨트롤 템플릿을 활용하여 성능 요구 사항에 맞는 사용자 지정 가능한 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]를 만들고 점차적으로 개선할 수 있습니다.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<span data-ttu-id="0c13f-137">컨트롤은 광범위 한 사용자 지정 컨트롤 동작을 변경 하지 않고도 모양의 허용 하 여 기본적으로 확장할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-137"> controls are inherently extensible by allowing for wide-spread customization of their appearance, while not altering their control behavior.</span></span> <span data-ttu-id="0c13f-138">스타일, 데이터 템플릿 및 컨트롤 템플릿을 활용 하 여 만들 수 있으며 점차적으로 사용자 지정 가능한를 개선할 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 하는 성능 요구 사항에 맞게 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="0c13f-138">By taking advantage of styles, data templates, and control templates, you can create and incrementally evolve a customizable [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] that adapts to your performance requirements.</span></span>  
   
-## 참고 항목  
- [WPF 응용 프로그램 성능 최적화](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)   
- [하드웨어 이용](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)   
- [레이아웃 및 디자인](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)   
- [2차원 그래픽 및 이미징](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)   
- [개체 동작](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)   
- [응용 프로그램 리소스](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)   
- [텍스트](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)   
- [데이터 바인딩](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)   
- [기타 성능 권장 사항](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
+## <a name="see-also"></a><span data-ttu-id="0c13f-139">참고 항목</span><span class="sxs-lookup"><span data-stu-id="0c13f-139">See Also</span></span>  
+ [<span data-ttu-id="0c13f-140">WPF 응용 프로그램 성능 최적화</span><span class="sxs-lookup"><span data-stu-id="0c13f-140">Optimizing WPF Application Performance</span></span>](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
+ [<span data-ttu-id="0c13f-141">하드웨어 이용</span><span class="sxs-lookup"><span data-stu-id="0c13f-141">Taking Advantage of Hardware</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
+ [<span data-ttu-id="0c13f-142">레이아웃 및 디자인</span><span class="sxs-lookup"><span data-stu-id="0c13f-142">Layout and Design</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
+ [<span data-ttu-id="0c13f-143">2차원 그래픽 및 이미징</span><span class="sxs-lookup"><span data-stu-id="0c13f-143">2D Graphics and Imaging</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [<span data-ttu-id="0c13f-144">개체 동작</span><span class="sxs-lookup"><span data-stu-id="0c13f-144">Object Behavior</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
+ [<span data-ttu-id="0c13f-145">응용 프로그램 리소스</span><span class="sxs-lookup"><span data-stu-id="0c13f-145">Application Resources</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
+ [<span data-ttu-id="0c13f-146">Text</span><span class="sxs-lookup"><span data-stu-id="0c13f-146">Text</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
+ [<span data-ttu-id="0c13f-147">데이터 바인딩</span><span class="sxs-lookup"><span data-stu-id="0c13f-147">Data Binding</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [<span data-ttu-id="0c13f-148">기타 성능 권장 사항</span><span class="sxs-lookup"><span data-stu-id="0c13f-148">Other Performance Recommendations</span></span>](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)

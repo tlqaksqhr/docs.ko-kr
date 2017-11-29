@@ -1,114 +1,115 @@
 ---
-title: "방법: 디자이너를 사용하여 Windows Forms DataGrid 컨트롤 서식 지정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "색, DataGrid 컨트롤에 적용"
-  - "열[Windows Forms], DataGrid 컨트롤"
-  - "DataGrid 컨트롤[Windows Forms], 기본 스타일"
-  - "DataGrid 컨트롤[Windows Forms], 서식 지정"
-  - "서식 지정[Windows Forms]"
-  - "테이블[Windows Forms], DataGrid 컨트롤의 서식 지정"
+title: "방법: 디자이너를 사용하여 Windows Forms DataGrid 컨트롤 서식 지정"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [Windows Forms], DataGrid controls
+- colors [Windows Forms], applying to DataGrid controls
+- DataGrid control [Windows Forms], formatting
+- DataGrid control [Windows Forms], default styles
+- tables [Windows Forms], formatting in DataGrid control
+- formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: da36f4f79d0016249dead686f305e1b93defceda
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 디자이너를 사용하여 Windows Forms DataGrid 컨트롤 서식 지정
+# <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a><span data-ttu-id="df028-102">방법: 디자이너를 사용하여 Windows Forms DataGrid 컨트롤 서식 지정</span><span class="sxs-lookup"><span data-stu-id="df028-102">How to: Format the Windows Forms DataGrid Control Using the Designer</span></span>
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다.  자세한 내용은 [Windows Forms DataGridView 컨트롤과 DataGrid 컨트롤의 차이점](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.  
+>  <span data-ttu-id="df028-103"><xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="df028-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="df028-104">자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.</span><span class="sxs-lookup"><span data-stu-id="df028-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>  
   
- <xref:System.Windows.Forms.DataGrid> 컨트롤의 여러 부분에 서로 다른 색을 적용하면 정보를 더 쉽게 읽고 해석할 수 있습니다.  행과 열에 색을 적용할 수 있으며  필요에 따라 행과 열을 숨기거나 표시할 수도 있습니다.  
+ <span data-ttu-id="df028-105">다양 한 부분에 다른 색상을 적용 한 <xref:System.Windows.Forms.DataGrid> 컨트롤에 정보를 더 쉽게 읽고 해석 하기를 높일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="df028-105">Applying different colors to various parts of a <xref:System.Windows.Forms.DataGrid> control can help to make the information in it easier to read and interpret.</span></span> <span data-ttu-id="df028-106">행 및 열에 색을 적용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="df028-106">Color can be applied to rows and columns.</span></span> <span data-ttu-id="df028-107">행과 열 수 또한 숨겨지거나 표시 되려고 판단에 따라 합니다.</span><span class="sxs-lookup"><span data-stu-id="df028-107">Rows and columns can also be hidden or shown at your discretion.</span></span>  
   
- <xref:System.Windows.Forms.DataGrid> 컨트롤의 서식 지정과 관련된 세 가지 기본적인 사항이 있습니다.  
+ <span data-ttu-id="df028-108">다음 세 가지 기본 측면 서식 지정은 <xref:System.Windows.Forms.DataGrid> 제어:</span><span class="sxs-lookup"><span data-stu-id="df028-108">There are three basic aspects of formatting the <xref:System.Windows.Forms.DataGrid> control:</span></span>  
   
--   속성을 설정하여 데이터가 표시되는 기본 스타일을 설정할 수 있습니다.  
+-   <span data-ttu-id="df028-109">데이터 표시 되는 기본 스타일을 설정 하는 속성을 설정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="df028-109">You can set properties to establish a default style in which data is displayed.</span></span>  
   
--   이를 기초로 특정 테이블이 런타임에 표시되는 방식을 사용자 지정할 수 있습니다.  
+-   <span data-ttu-id="df028-110">그런 다음 해당 자료에서 특정 테이블이 런타임 시 표시 되는 방식을 사용자 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="df028-110">From that base, you can then customize the way certain tables are displayed at run time.</span></span>  
   
--   마지막으로, 표시되는 색 및 기타 서식뿐 아니라 데이터 표에 표시할 열을 수정할 수 있습니다.  
+-   <span data-ttu-id="df028-111">마지막으로, 색 뿐만 아니라 데이터 표에 표시 된 열을 수정할 수 있습니다 하 고 기타 서식 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="df028-111">Finally, you can modify which columns are displayed in the data grid as well as the colors and other formatting that is shown.</span></span>  
   
- 데이터 표의 서식을 지정하는 첫 단계로 <xref:System.Windows.Forms.DataGrid> 자체의 속성을 설정할 수 있습니다.  일단 색과 서식을 선택한 다음 이를 기초로 하여 표시되는 데이터 테이블과 열에 따라 변경 작업을 수행할 수 있습니다.  
+ <span data-ttu-id="df028-112">데이터 표 서식 지정에 첫 단계로 속성을 설정할 수 있습니다는 <xref:System.Windows.Forms.DataGrid> 자체입니다.</span><span class="sxs-lookup"><span data-stu-id="df028-112">As an initial step in formatting a data grid, you can set the properties of the <xref:System.Windows.Forms.DataGrid> itself.</span></span> <span data-ttu-id="df028-113">이러한 색과 서식을 선택한을 변경할 수 있습니다 다음 데이터 테이블 및 표시 되는 열에 따라 기본을 형성 합니다.</span><span class="sxs-lookup"><span data-stu-id="df028-113">These color and format choices form a base from which you can then make changes depending on the data tables and columns displayed.</span></span>  
   
- 다음 절차를 수행하려면 <xref:System.Windows.Forms.DataGrid> 컨트롤이 포함된 폼이 있는 **Windows 응용 프로그램** 프로젝트가 필요합니다.  이러한 프로젝트를 설정하는 데 대한 내용은 [How to: Create a Windows Application Project](http://msdn.microsoft.com/ko-kr/b2f93fed-c635-4705-8d0e-cf079a264efa) 및 [방법: Windows Forms에 컨트롤 추가](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)를 참조하십시오.  [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]에서는 기본적으로 <xref:System.Windows.Forms.DataGrid> 컨트롤이 **도구 상자**에 없습니다.  자세한 내용은 [How to: Add Items to the Toolbox](http://msdn.microsoft.com/ko-kr/458e119e-17fe-450b-b889-e31c128bd7e0)를 참조하십시오.  
+ <span data-ttu-id="df028-114">다음 절차를 수행 하려면는 **Windows 응용 프로그램** 포함 된 폼을 사용 하 여 프로젝트는 <xref:System.Windows.Forms.DataGrid> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="df028-114">The following procedure requires a **Windows Application** project with a form containing a <xref:System.Windows.Forms.DataGrid> control.</span></span> <span data-ttu-id="df028-115">이러한 프로젝트 설정에 대 한 정보를 참조 하십시오. [하는 방법: Windows 응용 프로그램 프로젝트 만들기](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) 및 [하는 방법: Windows Forms에 컨트롤 추가](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="df028-115">For information about setting up such a project, see [How to: Create a Windows Application Project](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) and [How to: Add Controls to Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).</span></span> <span data-ttu-id="df028-116">[!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], <xref:System.Windows.Forms.DataGrid> 내에 **도구 상자** 기본적으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="df028-116">In [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], the <xref:System.Windows.Forms.DataGrid> control is not in the **Toolbox** by default.</span></span> <span data-ttu-id="df028-117">자세한 내용은 참조 [하는 방법: 도구 상자에 항목 추가](http://msdn.microsoft.com/en-us/458e119e-17fe-450b-b889-e31c128bd7e0)합니다.</span><span class="sxs-lookup"><span data-stu-id="df028-117">For more information, see [How to: Add Items to the Toolbox](http://msdn.microsoft.com/en-us/458e119e-17fe-450b-b889-e31c128bd7e0).</span></span>  
   
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다.  설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기**를 선택합니다.  자세한 내용은 [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ko-kr/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하십시오.  
+>  <span data-ttu-id="df028-118">표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="df028-118">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="df028-119">설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="df028-119">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="df028-120">자세한 내용은 [Visual Studio에서 개발 설정 사용자 지정](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="df028-120">For more information, see [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).</span></span>  
   
-### DataGrid 컨트롤에 대해 기본 스타일을 설정하려면  
+### <a name="to-establish-a-default-style-for-the-datagrid-control"></a><span data-ttu-id="df028-121">DataGrid 컨트롤에 대 한 기본 스타일을 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="df028-121">To establish a default style for the DataGrid control</span></span>  
   
-1.  <xref:System.Windows.Forms.DataGrid> 컨트롤을 선택합니다.  
+1.  <span data-ttu-id="df028-122"><xref:System.Windows.Forms.DataGrid> 컨트롤을 선택합니다.</span><span class="sxs-lookup"><span data-stu-id="df028-122">Select the <xref:System.Windows.Forms.DataGrid> control.</span></span>  
   
-2.  **속성** 창에서 다음 속성을 적절하게 설정합니다.  
+2.  <span data-ttu-id="df028-123">에 **속성** 창을 적절 하 게 다음 속성을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="df028-123">In the **Properties** window, set the following properties, as appropriate.</span></span>  
   
-    |Property|설명|  
-    |--------------|--------|  
-    |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|`BackColor` 속성은 데이터 표에서 짝수 행의 색을 정의합니다.  <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> 속성을 다른 색으로 설정하면 홀수 행\(1, 3, 5행 등\)에 해당 색이 적용됩니다.|  
-    |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|데이터 표에서 짝수 행\(0, 2, 4, 6행 등\)의 배경색입니다.|  
-    |<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>|<xref:System.Windows.Forms.DataGrid.BackColor%2A> 및 <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> 속성은 데이터 표에서 행의 색을 지정하지만 <xref:System.Windows.Forms.DataGrid.BackgroundColor%2A> 속성은 데이터 표를 아래로 스크롤하거나 데이터 표에 행이 많지 않을 때만 보이는 행 이외 영역의 색을 지정합니다.|  
-    |<xref:System.Windows.Forms.DataGrid.BorderStyle%2A>|데이터 표의 테두리 스타일이며 <xref:System.Windows.Forms.BorderStyle> 열거형 값 중 하나입니다.|  
-    |<xref:System.Windows.Forms.DataGrid.CaptionBackColor%2A>|데이터 표 바로 위에 표시되는 데이터 표 창 캡션의 배경색입니다.|  
-    |<xref:System.Windows.Forms.DataGrid.CaptionFont%2A>|데이터 표 위쪽에 있는 캡션의 글꼴입니다.|  
-    |<xref:System.Windows.Forms.DataGrid.CaptionForeColor%2A>|데이터 표 창 캡션의 배경색입니다.|  
-    |<xref:System.Windows.Forms.Control.Font%2A>|데이터 표에서 텍스트를 표시하는 데 사용되는 글꼴입니다.|  
-    |<xref:System.Windows.Forms.DataGrid.ForeColor%2A>|데이터 표의 행에서 데이터가 표시되는 글꼴의 색입니다.|  
-    |<xref:System.Windows.Forms.DataGrid.GridLineColor%2A>|데이터 표에서 모눈선의 색입니다.|  
-    |<xref:System.Windows.Forms.DataGrid.GridLineStyle%2A>|데이터 표의 각 셀을 구분하는 선의 스타일이며 <xref:System.Windows.Forms.DataGridLineStyle> 열거형 값 중 하나입니다.|  
-    |<xref:System.Windows.Forms.DataGrid.HeaderBackColor%2A>|행 및 열 머리글의 배경색입니다.|  
-    |<xref:System.Windows.Forms.DataGrid.HeaderFont%2A>|열 머리글에 사용되는 글꼴입니다.|  
-    |<xref:System.Windows.Forms.DataGrid.HeaderForeColor%2A>|데이터 표 열 머리글의 전경색입니다. 여기에는 열 머리글 텍스트와 여러 관련 테이블이 표시될 때 행을 확장하고 축소하기 위한 더하기 기호\(\+\) 및 빼기 기호\(\-\) 문자 모양이 포함됩니다.|  
-    |<xref:System.Windows.Forms.DataGrid.LinkColor%2A>|데이터 표에 있는 자식 테이블, 관계 이름 등에 대한 링크를 비롯한 모든 링크의 텍스트 색입니다.|  
-    |<xref:System.Windows.Forms.DataGrid.ParentRowsBackColor%2A>|자식 테이블에서 이 속성은 부모 행의 배경색입니다.|  
-    |<xref:System.Windows.Forms.DataGrid.ParentRowsForeColor%2A>|자식 테이블에서 이 속성은 부모 행의 전경색입니다.|  
-    |<xref:System.Windows.Forms.DataGrid.ParentRowsLabelStyle%2A>|테이블 및 열 이름이 <xref:System.Windows.Forms.DataGridParentRowsLabelStyle> 열거형을 통해 부모 행에 표시되는지 여부를 결정합니다.|  
-    |<xref:System.Windows.Forms.DataGrid.PreferredColumnWidth%2A>|데이터 표에서 열의 기본 너비\(픽셀\)입니다.  개별적으로 또는 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 메서드를 통해 <xref:System.Windows.Forms.DataGrid.DataSource%2A> 및 <xref:System.Windows.Forms.DataGrid.DataMember%2A> 속성을 다시 설정하기 전에 이 속성을 설정합니다. 그렇지 않으면 이 속성을 설정해도 효과가 없습니다.<br /><br /> 이 속성의 값은 0 이상이어야 합니다.|  
-    |<xref:System.Windows.Forms.DataGrid.PreferredRowHeight%2A>|데이터 표에서 행의 높이\(픽셀\)입니다.  개별적으로 또는 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 메서드를 통해 <xref:System.Windows.Forms.DataGrid.DataSource%2A> 및 <xref:System.Windows.Forms.DataGrid.DataMember%2A> 속성을 다시 설정하기 전에 이 속성을 설정합니다. 그렇지 않으면 이 속성을 설정해도 효과가 없습니다.<br /><br /> 이 속성의 값은 0 이상이어야 합니다.|  
-    |<xref:System.Windows.Forms.DataGrid.RowHeaderWidth%2A>|데이터 표에서 행 머리글의 너비입니다.|  
-    |<xref:System.Windows.Forms.DataGrid.SelectionBackColor%2A>|행이나 셀을 선택하면 이 속성이 배경색이 됩니다.|  
-    |<xref:System.Windows.Forms.DataGrid.SelectionForeColor%2A>|행이나 셀을 선택하면 이 속성이 전경색이 됩니다.|  
+    |<span data-ttu-id="df028-124">속성</span><span class="sxs-lookup"><span data-stu-id="df028-124">Property</span></span>|<span data-ttu-id="df028-125">설명</span><span class="sxs-lookup"><span data-stu-id="df028-125">Description</span></span>|  
+    |--------------|-----------------|  
+    |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|<span data-ttu-id="df028-126">`BackColor` 속성 표에 있는 짝수 번호 행의 색을 정의 합니다.</span><span class="sxs-lookup"><span data-stu-id="df028-126">The `BackColor` property defines the color of the even-numbered rows of the grid.</span></span> <span data-ttu-id="df028-127">설정 하는 경우는 <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> 속성을 다른 색으로 다른 모든 행은 색이 설정 되어 (행에 1, 3, 5, 및 등).</span><span class="sxs-lookup"><span data-stu-id="df028-127">When you set the <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> property to a different color, every other row is set to this new color (rows 1, 3, 5, and so on).</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|<span data-ttu-id="df028-128">표에 있는 짝수 번호 행의 배경색 (행에 0, 2, 4, 6, 및 등).</span><span class="sxs-lookup"><span data-stu-id="df028-128">The background color of the even-numbered rows of the grid (rows 0, 2, 4, 6, and so on).</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>|<span data-ttu-id="df028-129">반면는 <xref:System.Windows.Forms.DataGrid.BackColor%2A> 및 <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> 표의 행 색을 결정 하는 속성의 <xref:System.Windows.Forms.DataGrid.BackgroundColor%2A> 모눈을 아래로 스크롤할 또는 경우에 행을 몇 개 에서만 볼 수 있는 행 영역 외부의 영역 색을 결정 하는 속성 모눈에 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="df028-129">Whereas the <xref:System.Windows.Forms.DataGrid.BackColor%2A> and <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> properties determines the color of rows in the grid, the <xref:System.Windows.Forms.DataGrid.BackgroundColor%2A> property determines the color of the area outside the row area, which is only visible when the grid is scrolled to the bottom, or if only a few rows are contained in the grid.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.BorderStyle%2A>|<span data-ttu-id="df028-130">눈금의 테두리 스타일 중 하나는 <xref:System.Windows.Forms.BorderStyle> 열거형 값입니다.</span><span class="sxs-lookup"><span data-stu-id="df028-130">The grid's border style, one of the <xref:System.Windows.Forms.BorderStyle> enumeration values.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.CaptionBackColor%2A>|<span data-ttu-id="df028-131">바로 모눈 위에 표시 되는 데이터 표 창 캡션의 배경색입니다.</span><span class="sxs-lookup"><span data-stu-id="df028-131">The background color of the grid's window caption which appears immediately above the grid.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.CaptionFont%2A>|<span data-ttu-id="df028-132">눈금의 위쪽 캡션의 글꼴입니다.</span><span class="sxs-lookup"><span data-stu-id="df028-132">The font of the caption at the top of the grid.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.CaptionForeColor%2A>|<span data-ttu-id="df028-133">표 창 캡션의 배경색입니다.</span><span class="sxs-lookup"><span data-stu-id="df028-133">The background color of the grid's window caption.</span></span>|  
+    |<xref:System.Windows.Forms.Control.Font%2A>|<span data-ttu-id="df028-134">눈금에서 텍스트를 표시 하는 데 사용 되는 글꼴입니다.</span><span class="sxs-lookup"><span data-stu-id="df028-134">The font used to display the text in the grid.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.ForeColor%2A>|<span data-ttu-id="df028-135">데이터 표 행의 데이터에 의해 표시 되는 글꼴의 색입니다.</span><span class="sxs-lookup"><span data-stu-id="df028-135">The color of the font displayed by the data in the rows of the data grid.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.GridLineColor%2A>|<span data-ttu-id="df028-136">데이터 표의 모눈선의 색입니다.</span><span class="sxs-lookup"><span data-stu-id="df028-136">The color of the grid lines of the data grid.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.GridLineStyle%2A>|<span data-ttu-id="df028-137">중 하나는 눈금의 셀을 구분 하는 선의 스타일은 <xref:System.Windows.Forms.DataGridLineStyle> 열거형 값입니다.</span><span class="sxs-lookup"><span data-stu-id="df028-137">The style of the lines separating the cells of the grid, one of the <xref:System.Windows.Forms.DataGridLineStyle> enumeration values.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.HeaderBackColor%2A>|<span data-ttu-id="df028-138">행 및 열 머리글의 배경색입니다.</span><span class="sxs-lookup"><span data-stu-id="df028-138">The background color of row and column headers.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.HeaderFont%2A>|<span data-ttu-id="df028-139">열 머리글에 사용 되는 글꼴입니다.</span><span class="sxs-lookup"><span data-stu-id="df028-139">The font used for the column headers.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.HeaderForeColor%2A>|<span data-ttu-id="df028-140">열 머리글 텍스트 더하기 기호 (+) 및 빼기 기호 (-)는 여러 관련 테이블 행을 축소 및 확장의 문자를 포함 하 여 표의 열 머리글의 전경색 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="df028-140">The foreground color of the grid's column headers, including the column header text and the plus sign (+) and minus sign (-) glyphs that expand and collapse rows when multiple related tables are displayed.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.LinkColor%2A>|<span data-ttu-id="df028-141">자식 테이블, 관계 이름 등에 대 한 링크를 포함 하 여 데이터 표의 모든 링크의 텍스트의 색입니다.</span><span class="sxs-lookup"><span data-stu-id="df028-141">The color of text of all the links in the data grid, including links to child tables, the relation name, and so on.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.ParentRowsBackColor%2A>|<span data-ttu-id="df028-142">자식 테이블에서 부모 행의 배경색입니다.</span><span class="sxs-lookup"><span data-stu-id="df028-142">In a child table, this is the background color of the parent rows.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.ParentRowsForeColor%2A>|<span data-ttu-id="df028-143">자식 테이블에서 부모 행의 전경색입니다.</span><span class="sxs-lookup"><span data-stu-id="df028-143">In a child table, this is the foreground color of the parent rows.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.ParentRowsLabelStyle%2A>|<span data-ttu-id="df028-144">방법으로 테이블 및 열 이름을 부모 행에 표시 되는지 여부를 결정은 <xref:System.Windows.Forms.DataGridParentRowsLabelStyle> 열거형입니다.</span><span class="sxs-lookup"><span data-stu-id="df028-144">Determines whether the table and column names are displayed in the parent row, by means of the <xref:System.Windows.Forms.DataGridParentRowsLabelStyle> enumeration.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.PreferredColumnWidth%2A>|<span data-ttu-id="df028-145">데이터 표에서 열의 기본 너비(픽셀)입니다.</span><span class="sxs-lookup"><span data-stu-id="df028-145">The default width (in pixels) of columns in the grid.</span></span> <span data-ttu-id="df028-146">다시 설정 하기 전에이 속성을 설정 합니다.는 <xref:System.Windows.Forms.DataGrid.DataSource%2A> 및 <xref:System.Windows.Forms.DataGrid.DataMember%2A> 속성 (중 하나 별도로 또는 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 메서드), 또는 속성이 아무런 효과가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="df028-146">Set this property before resetting the <xref:System.Windows.Forms.DataGrid.DataSource%2A> and <xref:System.Windows.Forms.DataGrid.DataMember%2A> properties (either separately, or through the <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> method), or the property will have no effect.</span></span><br /><br /> <span data-ttu-id="df028-147">속성은 0 보다 작은 값으로 설정할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="df028-147">The property cannot be set to a value less than 0.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.PreferredRowHeight%2A>|<span data-ttu-id="df028-148">행의 높이 (픽셀 단위) 표의 행입니다.</span><span class="sxs-lookup"><span data-stu-id="df028-148">The row height (in pixels) of rows in the grid.</span></span> <span data-ttu-id="df028-149">다시 설정 하기 전에이 속성을 설정 합니다.는 <xref:System.Windows.Forms.DataGrid.DataSource%2A> 및 <xref:System.Windows.Forms.DataGrid.DataMember%2A> 속성 (중 하나 별도로 또는 <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> 메서드), 또는 속성이 아무런 효과가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="df028-149">Set this property before resetting the <xref:System.Windows.Forms.DataGrid.DataSource%2A> and <xref:System.Windows.Forms.DataGrid.DataMember%2A> properties (either separately, or through the <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> method), or the property will have no effect.</span></span><br /><br /> <span data-ttu-id="df028-150">속성은 0 보다 작은 값으로 설정할 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="df028-150">The property cannot be set to a value less than 0.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.RowHeaderWidth%2A>|<span data-ttu-id="df028-151">모눈의 행 머리글의 너비입니다.</span><span class="sxs-lookup"><span data-stu-id="df028-151">The width of the row headers of the grid.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.SelectionBackColor%2A>|<span data-ttu-id="df028-152">행 또는 셀을 선택 하면 이것이 배경색입니다.</span><span class="sxs-lookup"><span data-stu-id="df028-152">When a row or cell is selected, this is the background color.</span></span>|  
+    |<xref:System.Windows.Forms.DataGrid.SelectionForeColor%2A>|<span data-ttu-id="df028-153">행 또는 셀을 선택 하면 이것이 전경색입니다.</span><span class="sxs-lookup"><span data-stu-id="df028-153">When a row or cell is selected, this is the foreground color.</span></span>|  
   
     > [!NOTE]
-    >  컨트롤의 색을 사용자 지정할 때 색을 부적절하게 선택\(예: 빨강 및 녹색\)하면 컨트롤에 액세스할 수 없게 됩니다.  이러한 문제를 방지하려면 **시스템 색** 색상표에 있는 색을 사용합니다.  
+    >  <span data-ttu-id="df028-154">컨트롤의 색 사용자 지정 하는 경우에 컨트롤을 저하 색 선택을 (예를 들어 빨간색 및 녹색)에 액세스할 수 없게 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="df028-154">When you are customizing the colors of controls, it is possible to make the control inaccessible due to poor color choice (for example, red and green).</span></span> <span data-ttu-id="df028-155">사용할 수 있는 색을 사용 하 여는 **시스템 색** 이 문제를 피하려면 색상표입니다.</span><span class="sxs-lookup"><span data-stu-id="df028-155">Use the colors available on the **System Colors** palette to avoid this issue.</span></span>  
   
-     다음 절차를 수행하려면 <xref:System.Windows.Forms.DataGrid> 컨트롤을 데이터 테이블에 바인딩해야 합니다.  자세한 내용은 [방법: 데이터 소스에 Windows Forms DataGrid 컨트롤 바인딩](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)을 참조하십시오.  
+     <span data-ttu-id="df028-156">다음 절차를 수행 하려면는 <xref:System.Windows.Forms.DataGrid> 컨트롤이 데이터 테이블에 연결 합니다.</span><span class="sxs-lookup"><span data-stu-id="df028-156">The following procedure requires a <xref:System.Windows.Forms.DataGrid> control bound to a data table.</span></span> <span data-ttu-id="df028-157">자세한 내용은 참조 [하는 방법: 데이터 소스에 Windows Forms DataGrid 컨트롤 바인딩](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="df028-157">For more information, see [How to: Bind the Windows Forms DataGrid Control to a Data Source](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).</span></span>  
   
-### 디자인 타임에 데이터 테이블의 테이블 및 열 스타일을 설정하려면  
+### <a name="to-set-the-table-and-column-style-of-a-data-table-at-design-time"></a><span data-ttu-id="df028-158">디자인 타임에 데이터 테이블의 테이블 및 열 스타일을 설정 하려면</span><span class="sxs-lookup"><span data-stu-id="df028-158">To set the table and column style of a data table at design time</span></span>  
   
-1.  폼에서 <xref:System.Windows.Forms.DataGrid> 컨트롤을 선택합니다.  
+1.  <span data-ttu-id="df028-159">선택 된 <xref:System.Windows.Forms.DataGrid> 폼의 컨트롤로 합니다.</span><span class="sxs-lookup"><span data-stu-id="df028-159">Select the <xref:System.Windows.Forms.DataGrid> control on your form.</span></span>  
   
-2.  **속성** 창에서 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 속성을 선택하고 **줄임표** 단추\(![VisualStudioEllipsesButton 스크린 샷](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\)를 클릭합니다.  
+2.  <span data-ttu-id="df028-160">에 **속성** 창의 선택 된 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 속성을 클릭은 **줄임표** (![VisualStudioEllipsesButton 스크린 샷] (../../../../docs/framework/winforms/media/vbellipsesbutton.png " vbEllipsesButton")) 단추입니다.</span><span class="sxs-lookup"><span data-stu-id="df028-160">In the **Properties** window, select the <xref:System.Windows.Forms.DataGrid.TableStyles%2A> property and click the **Ellipsis** (![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) button.</span></span>  
   
-3.  **DataGridTableStyle 컬렉션 편집기** 대화 상자에서 **추가**를 클릭하여 테이블 스타일을 컬렉션에 추가합니다.  
+3.  <span data-ttu-id="df028-161">에 **DataGridTableStyle 컬렉션 편집기** 대화 상자를 클릭 **추가** 테이블 스타일 컬렉션에 추가 하려면.</span><span class="sxs-lookup"><span data-stu-id="df028-161">In the **DataGridTableStyle Collection Editor** dialog box, click **Add** to add a table style to the collection.</span></span>  
   
-     **DataGridTableStyle 컬렉션 편집기**를 사용하면 테이블 스타일을 추가하거나 제거하고, 표시 및 레이아웃 속성을 설정하며, 테이블 스타일에 대한 매핑 이름을 설정할 수 있습니다.  
+     <span data-ttu-id="df028-162">와 **DataGridTableStyle 컬렉션 편집기**, 추가할 수 있습니다 및 매핑 테이블 스타일에 대 한 이름을 제거 테이블 스타일과 디스플레이 설정 및 레이아웃 속성을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="df028-162">With the **DataGridTableStyle Collection Editor**, you can add and remove table styles, set display and layout properties, and set the mapping name for the table styles.</span></span>  
   
-4.  <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 속성을 각 테이블 스타일에 대한 매핑 이름으로 설정합니다.  
+4.  <span data-ttu-id="df028-163">설정의 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 속성을 각 테이블 스타일에 대 한 매핑 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="df028-163">Set the <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> property to the mapping name for each table style.</span></span>  
   
-     매핑 이름은 특정 테이블에 사용할 테이블 스타일을 지정하는 데 사용됩니다.  
+     <span data-ttu-id="df028-164">어떤 테이블에 테이블 스타일을 사용 해야 지정할 매핑 이름이 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="df028-164">The mapping name is used to specify which table style should be used with which table.</span></span>  
   
-5.  **DataGridTableStyle 컬렉션 편집기**에서 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 속성을 선택하고 줄임표 단추\(![VisualStudioEllipsesButton 스크린 샷](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")\)를 클릭합니다.  
+5.  <span data-ttu-id="df028-165">에 **DataGridTableStyle 컬렉션 편집기**, 선택는 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 속성 줄임표 단추를 클릭 하 고 (![VisualStudioEllipsesButton 스크린 샷](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton ")).</span><span class="sxs-lookup"><span data-stu-id="df028-165">In the **DataGridTableStyle Collection Editor**, select the <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> property and click the ellipsis button (![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")).</span></span>  
   
-6.  **DataGridColumnStyle 컬렉션 편집기** 대화 상자에서 만든 테이블 스타일에 열 스타일을 추가합니다.  
+6.  <span data-ttu-id="df028-166">에 **DataGridColumnStyle 컬렉션 편집기** 대화 상자에서 만든 테이블 스타일을 열 스타일을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="df028-166">In the **DataGridColumnStyle Collection Editor** dialog box, add column styles to the table style you created.</span></span>  
   
-     **DataGridColumnStyle 컬렉션 편집기**에서는 열 스타일을 추가하거나 제거하고, 표시 및 레이아웃 속성을 설정하며, 데이터 열에 대한 매핑 이름과 형식 지정 문자열을 설정할 수 있습니다.  
+     <span data-ttu-id="df028-167">와 **DataGridColumnStyle 컬렉션 편집기**형식 지정 문자열 데이터에 대 한 열을 추가 하 고 열 스타일을 제거, 표시 및 레이아웃 속성을 설정 하 고 설정할 수는 매핑 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="df028-167">With the **DataGridColumnStyle Collection Editor**, you can add and remove column styles, set display and layout properties, and set the mapping name and formatting strings for the data columns.</span></span>  
   
     > [!NOTE]
-    >  형식 지정 문자열에 대한 자세한 내용은 [형식 서식 지정](../../../../docs/standard/base-types/formatting-types.md)을 참조하십시오.  
+    >  <span data-ttu-id="df028-168">문자열 형식 지정 하는 방법에 대 한 자세한 내용은 참조 [형식 지정](../../../../docs/standard/base-types/formatting-types.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="df028-168">For more information about formatting strings, see [Formatting Types](../../../../docs/standard/base-types/formatting-types.md).</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Forms.GridTableStylesCollection>   
- <xref:System.Windows.Forms.GridColumnStylesCollection>   
- <xref:System.Windows.Forms.DataGrid>   
- [방법: Windows Forms DataGrid 컨트롤에서 열 삭제 또는 숨기기](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)   
- [DataGrid 컨트롤](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="df028-169">참고 항목</span><span class="sxs-lookup"><span data-stu-id="df028-169">See Also</span></span>  
+ <xref:System.Windows.Forms.GridTableStylesCollection>  
+ <xref:System.Windows.Forms.GridColumnStylesCollection>  
+ <xref:System.Windows.Forms.DataGrid>  
+ [<span data-ttu-id="df028-170">방법: Windows Forms DataGrid 컨트롤에서 열 삭제 또는 숨기기</span><span class="sxs-lookup"><span data-stu-id="df028-170">How to: Delete or Hide Columns in the Windows Forms DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
+ [<span data-ttu-id="df028-171">DataGrid 컨트롤</span><span class="sxs-lookup"><span data-stu-id="df028-171">DataGrid Control</span></span>](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)

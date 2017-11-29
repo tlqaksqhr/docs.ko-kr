@@ -1,74 +1,77 @@
 ---
-title: "x:Class Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "x:Class"
-  - "xClass"
-  - "Class"
-helpviewer_keywords: 
-  - "Class attribute in XAML [XAML Services]"
-  - "XAML [XAML Services], x:Class attribute"
-  - "x:Class attribute [XAML Services]"
+title: "x:Class 지시문"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- x:Class
+- xClass
+- Class
+helpviewer_keywords:
+- Class attribute in XAML [XAML Services]
+- XAML [XAML Services], x:Class attribute
+- x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-caps.latest.revision: 27
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 26
+caps.latest.revision: "27"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: 1828ef3614cc1f3a81d8aeff62c15ed5accfe380
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# x:Class Directive
-XAML 태그 컴파일을 구성하여 태그와 코드 숨김 사이에 partial 클래스를 조인합니다.  코드 partial 클래스는 별도의 코드 파일에 [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] 언어로 정의되고 태그 partial 클래스는 일반적으로 XAML 컴파일 시 코드 생성을 통해 만들어집니다.  
+# <a name="xclass-directive"></a><span data-ttu-id="f3a50-102">x:Class 지시문</span><span class="sxs-lookup"><span data-stu-id="f3a50-102">x:Class Directive</span></span>
+<span data-ttu-id="f3a50-103">XAML 태그 컴파일을 태그와 코드 숨김 클래스를 부분 가입을 구성 합니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-103">Configures XAML markup compilation to join partial classes between markup and code-behind.</span></span> <span data-ttu-id="f3a50-104">별도 코드 파일에 코드 partial 클래스가 정의 되어는 [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] 언어에서 반면 태그 partial 클래스는 일반적으로 XAML 컴파일하는 동안 코드를 생성 하 여 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-104">The code partial class is defined in a separate code file in a [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] language, whereas the markup partial class is typically created by code generation during XAML compilation.</span></span>  
   
-## XAML 특성 사용  
+## <a name="xaml-attribute-usage"></a><span data-ttu-id="f3a50-105">XAML 특성 사용</span><span class="sxs-lookup"><span data-stu-id="f3a50-105">XAML Attribute Usage</span></span>  
   
 ```  
-<object x:Class="namespace.classname"...>  
+<object x:Class="namespace.classname"...>  
   ...  
 </object>  
 ```  
   
-## XAML 값  
+## <a name="xaml-values"></a><span data-ttu-id="f3a50-106">XAML 값</span><span class="sxs-lookup"><span data-stu-id="f3a50-106">XAML Values</span></span>  
   
 |||  
 |-|-|  
-|`namespace`|선택적 요소.  `classname`으로 식별된 partial 클래스가 포함된 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 네임스페이스를 지정합니다.  `namespace`를 지정하는 경우 점\(.\)으로 `namespace`와 `classname`을 분리합니다.  설명 부분을 참조하십시오.|  
-|`classname`|필수 요소.  로드된 XAML 및 해당 XAML의 코드 숨김을 연결하는 partial 클래스의 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 이름을 지정합니다.|  
+|`namespace`|<span data-ttu-id="f3a50-107">선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-107">Optional.</span></span> <span data-ttu-id="f3a50-108">지정 된 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 로 식별 되는 partial 클래스를 포함 하는 네임 스페이스 `classname`합니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-108">Specifies a [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] namespace that contains the partial class identified by `classname`.</span></span> <span data-ttu-id="f3a50-109">경우 `namespace` 점 (.) 지정 된 `namespace` 및 `classname`합니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-109">If `namespace` is specified, a dot (.) separates `namespace` and `classname`.</span></span> <span data-ttu-id="f3a50-110">설명 부분을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="f3a50-110">See Remarks.</span></span>|  
+|`classname`|<span data-ttu-id="f3a50-111">필수 요소.</span><span class="sxs-lookup"><span data-stu-id="f3a50-111">Required.</span></span> <span data-ttu-id="f3a50-112">지정 된 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] 로드 된 XAML 및 해당 XAML에 대 한 코드 숨김을 연결 하는 partial 클래스의 이름입니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-112">Specifies the [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] name of the partial class that connects the loaded XAML and your code-behind for that XAML.</span></span>|  
   
-## 종속성  
- `x:Class`는 XAML 프로덕션의 루트 요소에만 지정할 수 있습니다.  `x:Class`는 XAML 프로덕션에서 부모에 있는 모든 개체에 대해 올바르지 않습니다.  자세한 내용은 [\[MS\-XAML\] Section 4.3.1.6](http://go.microsoft.com/fwlink/?LinkId=114525)을 참조하십시오.  
+## <a name="dependencies"></a><span data-ttu-id="f3a50-113">종속성</span><span class="sxs-lookup"><span data-stu-id="f3a50-113">Dependencies</span></span>  
+ <span data-ttu-id="f3a50-114">`x:Class`XAML 프로덕션의 루트 요소에만 지정할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-114">`x:Class` can only be specified on the root element of a XAML production.</span></span> <span data-ttu-id="f3a50-115">`x:Class`XAML 프로덕션에 부모가 있는 모든 개체에서 올바르지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-115">`x:Class` is invalid on any object that has a parent in the XAML production.</span></span> <span data-ttu-id="f3a50-116">자세한 내용은 참조 [ \[MS-XAML\] 섹션 4.3.1.6](http://go.microsoft.com/fwlink/?LinkId=114525)합니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-116">For more information, see [\[MS-XAML\] Section 4.3.1.6](http://go.microsoft.com/fwlink/?LinkId=114525).</span></span>  
   
-## 설명  
- `namespace` 값에는 관련 네임스페이스를 이름 계층 구조로 구성하는 추가 점이 포함될 수 있습니다. 이 계층 구조는 .NET Framework 프로그래밍에서 일반적으로 사용되는 기법입니다.  `x:Class` 값의 문자열에서 마지막 점만 별도의 `namespace` 및 `classname.` 으로 해석됩니다. `x:Class`로 사용되는 클래스는 중첩 클래스가 될 수 없습니다.  중첩 클래스가 허용되면 `x:Class` 문자열에서 점의 의미가 모호해지므로 중첩 클래스는 사용할 수 없습니다.  
+## <a name="remarks"></a><span data-ttu-id="f3a50-117">설명</span><span class="sxs-lookup"><span data-stu-id="f3a50-117">Remarks</span></span>  
+ <span data-ttu-id="f3a50-118">`namespace` 값에는.NET Framework 프로그래밍에서 일반적인 기술 관련된 네임 스페이스, 이름 계층으로 구성 하는 추가 점이 포함 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-118">The `namespace` value may contain additional dots to organize related namespaces into name hierarchies, which is a common technique in .NET Framework programming.</span></span> <span data-ttu-id="f3a50-119">문자열의 마지막 점만 `x:Class` 구분 값 해석 됩니다 `namespace` 및 `classname.` 로 사용 되는 클래스 `x:Class` 중첩 클래스일 수 없습니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-119">Only the last dot in a string of `x:Class` values is interpreted to separate `namespace` and `classname.` The class that is used as `x:Class` cannot be a nested class.</span></span> <span data-ttu-id="f3a50-120">중첩 된 클래스에는 대 한 점의 의미를 확인 하기 때문에 허용 되지 않습니다 `x:Class` 중첩된 클래스는 허용 하는 경우 문자열 모호 합니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-120">Nested classes are not allowed because determining the meaning of dots for `x:Class` strings is ambiguous if nested classes are permitted.</span></span>  
   
- `x:Class`를 사용하는 기존의 프로그래밍 모델에서 `x:Class`는 코드 숨김이 없는 XAML 페이지를 사용할 수 있다는 점에서 선택적 요소입니다.  그러나 해당 기능은 XAML을 사용하는 프레임워크에 의해 구현된 빌드 작업과 상호 작용합니다.  `x:Class` 기능은 XAML 지정된 콘텐츠의 여러 분류에 응용 프로그램 모델과 해당 빌드 작업에 있는 역할의 영향도 받습니다.  XAML에서 이벤트 처리 특성 값을 선언하거나, 정의하는 클래스가 코드 숨김 클래스에 있는 사용자 지정 요소를 인스턴스화하는 경우에는 코드 숨김의 적절한 클래스에 `x:Class` 지시문 참조 또는 [x:Subclass](../../../docs/framework/xaml-services/x-subclass-directive.md)를 제공해야 합니다.  
+ <span data-ttu-id="f3a50-121">기존의 프로그래밍를 사용 하는 모델에서 `x:Class`, `x:Class` 사용할 수 없는 코드 숨김 있는 XAML 페이지 임을 의미에서 선택 사항입니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-121">In existing programming models that use `x:Class`, `x:Class` is optional in the sense that it is entirely valid to have a XAML page that has no code-behind.</span></span> <span data-ttu-id="f3a50-122">그러나 해당 기능도 XAML을 사용 하는 프레임 워크에서 구현 되는 빌드 작업 상호 작용 합니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-122">However, that capability interacts with the build actions as implemented by frameworks that use XAML.</span></span> <span data-ttu-id="f3a50-123">`x:Class`기능 역할 XAML 지정 된 콘텐츠의 다양 한 분류 응용 프로그램 모델에 있고 해당 빌드 동작의 영향도 받습니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-123">`x:Class` capability is also influenced by the roles that various classifications of XAML-specified content have in an application model and in the corresponding build actions.</span></span> <span data-ttu-id="f3a50-124">XAML 이벤트 처리 특성 값 또는 인스턴스화하는 코드 숨김 클래스에서 정의 하는 클래스가 있는 사용자 지정 요소를 선언 하는 경우 제공 해야는 `x:Class` 지시문 참조 (또는 [X:subclass](../../../docs/framework/xaml-services/x-subclass-directive.md))에 코드 숨김에 대 한 적절 한 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-124">If your XAML declares event-handling attribute values or instantiates custom elements where the defining classes are in the code-behind class, you have to provide the `x:Class` directive reference (or [x:Subclass](../../../docs/framework/xaml-services/x-subclass-directive.md)) to the appropriate class for code-behind.</span></span>  
   
- `x:Class` 지시문의 값은 클래스의 정규화된 이름을 지정하지만 어셈블리 정보가 없는 문자열\(<xref:System.Type.FullName%2A?displayProperty=fullName>에 해당\)이어야 합니다.  간단한 응용 프로그램에서는 CLR 네임스페이스 정보를 생략할 수도 있는데 이는 코드 숨김에서도 구조가 동일한 경우, 즉 클래스 수준에서 코드 정의가 시작되는 경우에만 가능합니다.  
+ <span data-ttu-id="f3a50-125">값은 `x:Class` 지시문 어셈블리 정보가 없는 하지만 클래스의 정규화 된 이름을 지정 하는 문자열 이어야 합니다 (해당 하는 <xref:System.Type.FullName%2A?displayProperty=nameWithType>).</span><span class="sxs-lookup"><span data-stu-id="f3a50-125">The value of the `x:Class` directive must be a string that specifies the fully qualified name of a class but without any assembly information (equivalent to the <xref:System.Type.FullName%2A?displayProperty=nameWithType>).</span></span> <span data-ttu-id="f3a50-126">간단한 응용 프로그램에 대 한 코드 숨김 (클래스 수준에서 코드 정의 시작 됨)을 이러한 방식으로 구성 된 경우 CLR 네임 스페이스 정보를 생략할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-126">For simple applications, you can omit CLR namespace information if the code-behind is also structured in that manner (code definition starts at the class level).</span></span>  
   
- 페이지 또는 응용 프로그램 정의에 대한 코드 숨김 파일은 컴파일된 응용 프로그램을 생성하는 프로젝트의 일부로 포함되고 태그 컴파일을 포함하는 코드 파일에 들어 있어야 합니다.  CLR 클래스에 대한 이름 규칙을 따라야 합니다.  자세한 내용은 [프레임 워크 디자인 지침](../../../ml/index.xml)를 참조하십시오.  기본적으로 코드 숨김 클래스는 `public`이어야 하지만 [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md)을 사용하여 다른 액세스 수준으로 정의할 수도 있습니다.  
+ <span data-ttu-id="f3a50-127">페이지 또는 응용 프로그램 정의 대 한 코드 숨김 파일 컴파일된 응용 프로그램을 생성 하 고 태그 컴파일을 포함 하는 프로젝트의 일부로 포함 되어 있는 코드 파일 내에 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-127">The code-behind file for a page or application definition must be within a code file that is included as part of the project that produces a compiled application and involves markup compilation.</span></span> <span data-ttu-id="f3a50-128">CLR 클래스에 대 한 이름 규칙을 따라야 합니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-128">You must follow name rules for CLR classes.</span></span> <span data-ttu-id="f3a50-129">자세한 내용은 참조 [Framework 디자인 지침](../../../docs/standard/design-guidelines/index.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-129">For more information, see [Framework Design Guidelines](../../../docs/standard/design-guidelines/index.md).</span></span> <span data-ttu-id="f3a50-130">기본적으로 코드 숨김 클래스 여야 `public`이지만 사용 하 여 서로 다른 액세스 수준으로 정의할 수 있습니다는 [X:classmodifier 지시문](../../../docs/framework/xaml-services/x-classmodifier-directive.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-130">By default, the code-behind class must be `public`; however, you can define it at a different access level by using the [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md).</span></span>  
   
- `x:Class` 특성의 정확한 해석은 특히 .NET Framework XAML 서비스에서 CLR 기반 XAML 구현에만 적용됩니다.  CLR에 기반하지 않고 .NET Framework XAML 서비스 클래스를 사용하지 않는 기타 XAML 구현은 다른 확인 방법을 사용하여 XAML 태그를 연결하고 런타임 코드를 지원합니다.  `x:Class`의 일반적인 해석에 대한 자세한 내용은 [\[MS\-XAML\]](http://go.microsoft.com/fwlink/?LinkId=114525)을 참조하십시오.  
+ <span data-ttu-id="f3a50-131">이의 해석은 `x:Class` 특성에만 적용 됩니다 CLR 기반 XAML 구현에서 특히.NET Framework XAML 서비스에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-131">This interpretation of the `x:Class` attribute applies only to a CLR-based XAML implementation, in particular to .NET Framework XAML Services.</span></span> <span data-ttu-id="f3a50-132">CLR에 기반 하지 않는 및.NET Framework XAML 서비스를 사용 하지 않는 다른 XAML 구현에는 XAML 태그를 연결 하 고 백업 하는 코드에 대 한 다른 해결 방법이 수식을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-132">Other XAML implementations that are not based on CLR and that do not use .NET Framework XAML Services might use a different resolution formula for connecting XAML markup and backing run-time code.</span></span> <span data-ttu-id="f3a50-133">보다 일반적인 해석 하는 방법에 대 한 자세한 내용은 `x:Class`, 참조 [ \[MS-XAML\]](http://go.microsoft.com/fwlink/?LinkId=114525)합니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-133">For more information about more general interpretations of `x:Class`, see [\[MS-XAML\]](http://go.microsoft.com/fwlink/?LinkId=114525).</span></span>  
   
- 특정 아키텍처 수준에서는 `x:Class`의 의미가 .NET Framework XAML 서비스에 정의되지 않습니다.  그 이유는 .NET Framework XAML 서비스가 XAML 태그와 백업 코드가 연결되어 있는 프로그래밍 모델을 지정하지 않기 때문입니다.  `x:Class` 지시문과 관련된 추가 사용은 XAML 태그와 CLR 기반 코드 숨김을 연결하는 방법을 정의하기 위해 프로그래밍 모델 또는 응용 프로그램 모델을 사용하는 특정 프레임워크에서 구현될 수 있습니다.  각 프레임워크는 각 동작이나 빌드 환경에서 포함되어야 하는 특정 구성 요소 중 일부를 사용하는 자체 빌드 작업이 있을 수 있습니다.  프레임워크 내에서 빌드 작업은 코드 숨김에 사용된 특정 CLR 언어에 따라 다를 수도 있습니다.  
+ <span data-ttu-id="f3a50-134">아키텍처의 의미의 특정 수준에서 `x:Class` .NET Framework XAML 서비스에 정의 되어 있지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-134">At a certain level of architecture, the meaning of `x:Class` is undefined in .NET Framework XAML Services.</span></span> <span data-ttu-id="f3a50-135">즉,.NET Framework XAML 서비스는 xaml 태그 및 코드를 백업 합니다. 연결 된 프로그래밍 모델을 지정 하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-135">This is because .NET Framework XAML Services does not specify the programming model by which XAML markup and backing code are connected.</span></span> <span data-ttu-id="f3a50-136">다른 용도 `x:Class` 지시문 XAML 태그 및 코드 숨김을 CLR 기반 연결 하는 방법을 정의 하기 위해 프로그래밍 모델 또는 응용 프로그램 모델을 사용 하는 특정 프레임 워크에 의해 구현 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-136">Additional uses of the `x:Class` directive might be implemented by specific frameworks that use programming models or application models to define how to connect XAML markup and CLR-based code-behind.</span></span> <span data-ttu-id="f3a50-137">각 프레임에는 동작이 나 빌드 환경에 포함 해야 하는 특정 구성 요소 중 일부를 사용 하는 자체 빌드 작업이 포함 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-137">Each framework can have its own build actions that enable some of the behavior or specific components that must be included in the build environment.</span></span> <span data-ttu-id="f3a50-138">프레임 워크 내에서 코드 숨김에 사용 되는 특정 CLR 언어에 따라 빌드 작업도 달라질 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-138">Within a framework, build actions can also vary depending on the specific CLR language that is used for the code-behind.</span></span>  
   
-## WPF 프로그래밍 모델의 x:Class  
- WPF 응용 프로그램과 WPF 응용 프로그램 모델에서 `x:Class`는 XAML 파일의 루트이고 컴파일 중인 요소의 특성으로 선언하거나\(이 경우 XAML은 `Page` 빌드 작업이 있는 WPF 응용 프로그램 프로젝트에 포함됨\), 컴파일된 WPF 응용 프로그램의 응용 프로그램 정의에서 <xref:System.Windows.Application> 루트의 특성으로 선언할 수 있습니다.  페이지 루트 또는 응용 프로그램 루트 이외의 다른 요소에 `x:Class`을 선언하거나 컴파일되지 않은 XAML 파일에 선언하면 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] 및 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] WPF XAML 컴파일러에서 컴파일 타임 오류가 발생합니다.  WPF에서의 `x:Class` 처리의 다른 측면에 대한 자세한 내용은 [WPF의 코드 숨김 및 XAML](../../../ocs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)를 참조하십시오.  
+## <a name="xclass-in-the-wpf-programming-model"></a><span data-ttu-id="f3a50-139">X:class WPF 프로그래밍 모델</span><span class="sxs-lookup"><span data-stu-id="f3a50-139">x:Class in the WPF Programming Model</span></span>  
+ <span data-ttu-id="f3a50-140">WPF 응용 프로그램 및 WPF 응용 프로그램 모델에서 `x:Class` 는 XAML 파일의 루트 및 컴파일되는 모든 요소에 대 한 특성으로 선언할 수 있습니다 (여기서 XAML ´ â는 WPF 응용 프로그램 프로젝트와 `Page` 빌드 작업), 또는 < c4 > <xref:System.Windows.Application>  컴파일된 WPF 응용 프로그램의 응용 프로그램 정의의 루트입니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-140">In WPF applications and the WPF application model, `x:Class` can be declared as an attribute for any element that is the root of a XAML file and is being compiled (where the XAML is included in a WPF application project with `Page` build action), or for the <xref:System.Windows.Application> root in the application definition of a compiled WPF application.</span></span> <span data-ttu-id="f3a50-141">선언 `x:Class` 외 페이지 루트 계정 또는 응용 프로그램 루트의 요소 또는 컴파일되지 않은 XAML 파일에서 컴파일 타임 오류가 발생 된 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] 및 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] WPF XAML 컴파일러입니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-141">Declaring `x:Class` on an element other than a page root or application root, or on a WPF XAML file that is not compiled, causes a compile-time error under the [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] and [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] WPF XAML compiler.</span></span> <span data-ttu-id="f3a50-142">다른 측면에 대 한 내용은 `x:Class` 참조 WPF의 처리, [WPF의 XAML 및 코드 숨김](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-142">For information about other aspects of `x:Class` handling in WPF, see [Code-Behind and XAML in WPF](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md).</span></span>  
   
-## Windows Workflow Foundation의 x:Class  
- Windows Workflow Foundation의 경우 `x:Class`는 전적으로 XAML에서 구성된 사용자 정의 활동의 클래스 이름을 지정하거나 코드 숨김을 사용하여 활동 디자이너에 대한 XAML 페이지의 partial 클래스 이름을 지정합니다.  
+## <a name="xclass-for-windows-workflow-foundation"></a><span data-ttu-id="f3a50-143">Windows Workflow Foundation에 대 한 x: 클래스</span><span class="sxs-lookup"><span data-stu-id="f3a50-143">x:Class for Windows Workflow Foundation</span></span>  
+ <span data-ttu-id="f3a50-144">Windows Workflow Foundation에 대 한 `x:Class` XAML로만 작성 된 사용자 지정 활동의 클래스 이름, 또는 코드 숨김 활동 디자이너에 대 한 XAML 페이지의 partial 클래스의 이름을 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-144">For Windows Workflow Foundation, `x:Class` names the class of a custom activity composed entirely in XAML, or names the partial class of the XAML page for  an activity designer with code-behind.</span></span>  
   
-## Silverlight 사용 정보  
- Silverlight용 `x:Class`는 별도로 문서화되어 있습니다.  자세한 내용은 [XAML Namespace \(x:\) Language Features \(Silverlight\)](http://go.microsoft.com/fwlink/?LinkId=199081)를 참조하십시오.  
+## <a name="silverlight-usage-notes"></a><span data-ttu-id="f3a50-145">Silverlight 사용 정보</span><span class="sxs-lookup"><span data-stu-id="f3a50-145">Silverlight Usage Notes</span></span>  
+ <span data-ttu-id="f3a50-146">`x:Class`Silverlight 용은 별도로 설명 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-146">`x:Class` for Silverlight is documented separately.</span></span> <span data-ttu-id="f3a50-147">자세한 내용은 참조 [XAML Namespace (x:) 언어 기능 (Silverlight)](http://go.microsoft.com/fwlink/?LinkId=199081)합니다.</span><span class="sxs-lookup"><span data-stu-id="f3a50-147">For more information, see [XAML Namespace (x:) Language Features (Silverlight)](http://go.microsoft.com/fwlink/?LinkId=199081).</span></span>  
   
-## 참고 항목  
- [x:Subclass Directive](../../../docs/framework/xaml-services/x-subclass-directive.md)   
- [WPF에 대한 XAML 및 사용자 지정 클래스](../../../ocs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)   
- [x:ClassModifier Directive](../../../docs/framework/xaml-services/x-classmodifier-directive.md)   
- [Types Migrated from WPF to System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+## <a name="see-also"></a><span data-ttu-id="f3a50-148">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f3a50-148">See Also</span></span>  
+ [<span data-ttu-id="f3a50-149">x:Subclass 지시문</span><span class="sxs-lookup"><span data-stu-id="f3a50-149">x:Subclass Directive</span></span>](../../../docs/framework/xaml-services/x-subclass-directive.md)  
+ [<span data-ttu-id="f3a50-150">WPF에 대한 XAML 및 사용자 지정 클래스</span><span class="sxs-lookup"><span data-stu-id="f3a50-150">XAML and Custom Classes for WPF</span></span>](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
+ [<span data-ttu-id="f3a50-151">x:ClassModifier 지시문</span><span class="sxs-lookup"><span data-stu-id="f3a50-151">x:ClassModifier Directive</span></span>](../../../docs/framework/xaml-services/x-classmodifier-directive.md)  
+ [<span data-ttu-id="f3a50-152">WPF에서 System.Xaml로 마이그레이션된 형식</span><span class="sxs-lookup"><span data-stu-id="f3a50-152">Types Migrated from WPF to System.Xaml</span></span>](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

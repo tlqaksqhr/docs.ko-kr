@@ -1,69 +1,70 @@
 ---
-title: "PasswordBox 스타일 및 템플릿 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ControlTemplate[WPF], PasswordBox"
-  - "요소[WPF], PasswordBox"
-  - "PasswordBox[WPF], 스타일 및 템플릿"
-  - "상태[WPF], PasswordBox"
-  - "스타일[WPF], PasswordBox"
-  - "템플릿[WPF], PasswordBox"
+title: "PasswordBox 스타일 및 템플릿"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- styles [WPF], PasswordBox
+- templates [WPF], PasswordBox
+- ControlTemplate [WPF], PasswordBox
+- states [WPF], PasswordBox
+- PasswordBox [WPF], styles and templates
+- parts [WPF], PasswordBox
 ms.assetid: deb52107-959f-4a60-b303-d21a0a933060
-caps.latest.revision: 8
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 17a9292ef6aeba157780be5ec87d67725eb833a7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# PasswordBox 스타일 및 템플릿
-이 항목에서는 <xref:System.Windows.Controls.PasswordBox> 컨트롤의 스타일 및 템플릿에 대해 설명합니다.  기본 <xref:System.Windows.Controls.ControlTemplate>을 수정하여 컨트롤에 고유한 모양을 지정할 수 있습니다.  자세한 내용은 [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)을 참조하십시오.  
+# <a name="passwordbox-syles-and-templates"></a><span data-ttu-id="f5aa5-102">PasswordBox 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="f5aa5-102">PasswordBox Syles and Templates</span></span>
+<span data-ttu-id="f5aa5-103">이 항목에서는 스타일 및 서식 파일에 대 한 설명의 <xref:System.Windows.Controls.PasswordBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="f5aa5-103">This topic describes the styles and templates for the <xref:System.Windows.Controls.PasswordBox> control.</span></span> <span data-ttu-id="f5aa5-104">기본값을 수정할 수 <xref:System.Windows.Controls.ControlTemplate> 고유한 모양을 제어할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f5aa5-104">You can modify the default <xref:System.Windows.Controls.ControlTemplate> to give the control a unique appearance.</span></span> <span data-ttu-id="f5aa5-105">자세한 내용은 [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="f5aa5-105">For more information, see [Customizing the Appearance of an Existing Control by Creating a ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).</span></span>  
   
-## PasswordBox 요소  
- 다음 표에서는 <xref:System.Windows.Controls.PasswordBox> 컨트롤의 명명된 요소를 보여 줍니다.  
+## <a name="passwordbox-parts"></a><span data-ttu-id="f5aa5-106">PasswordBox 부분</span><span class="sxs-lookup"><span data-stu-id="f5aa5-106">PasswordBox Parts</span></span>  
+ <span data-ttu-id="f5aa5-107">다음 표에서 명명된 된 요소를 나열는 <xref:System.Windows.Controls.PasswordBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="f5aa5-107">The following table lists the named parts for the <xref:System.Windows.Controls.PasswordBox> control.</span></span>  
   
-||||  
+|<span data-ttu-id="f5aa5-108">파트</span><span class="sxs-lookup"><span data-stu-id="f5aa5-108">Part</span></span>|<span data-ttu-id="f5aa5-109">형식</span><span class="sxs-lookup"><span data-stu-id="f5aa5-109">Type</span></span>|<span data-ttu-id="f5aa5-110">설명</span><span class="sxs-lookup"><span data-stu-id="f5aa5-110">Description</span></span>|  
 |-|-|-|  
-|파트|형식|설명|  
-|PART\_ContentHost|<xref:System.Windows.FrameworkElement>|<xref:System.Windows.FrameworkElement>를 포함할 수 있는 시각적 요소입니다.  <xref:System.Windows.Controls.PasswordBox>의 텍스트가 이 요소에 표시됩니다.|  
+|<span data-ttu-id="f5aa5-111">PART_ContentHost</span><span class="sxs-lookup"><span data-stu-id="f5aa5-111">PART_ContentHost</span></span>|<xref:System.Windows.FrameworkElement>|<span data-ttu-id="f5aa5-112">시각적 요소를 포함할 수 있는 한 <xref:System.Windows.FrameworkElement>합니다.</span><span class="sxs-lookup"><span data-stu-id="f5aa5-112">A visual element that can contain a <xref:System.Windows.FrameworkElement>.</span></span> <span data-ttu-id="f5aa5-113">텍스트는 <xref:System.Windows.Controls.PasswordBox> 이 요소에 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="f5aa5-113">The text of the <xref:System.Windows.Controls.PasswordBox> is displayed in this element.</span></span>|  
   
-## PasswordBox 상태  
- 다음 표에서는 <xref:System.Windows.Controls.PasswordBox> 컨트롤의 시각적 상태를 나열합니다.  
+## <a name="passwordbox-states"></a><span data-ttu-id="f5aa5-114">PasswordBox 상태</span><span class="sxs-lookup"><span data-stu-id="f5aa5-114">PasswordBox States</span></span>  
+ <span data-ttu-id="f5aa5-115">다음 표에서 시각적 상태를 나열는 <xref:System.Windows.Controls.PasswordBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="f5aa5-115">The following table lists the visual states for the <xref:System.Windows.Controls.PasswordBox> control.</span></span>  
   
-||||  
+|<span data-ttu-id="f5aa5-116">VisualState 이름</span><span class="sxs-lookup"><span data-stu-id="f5aa5-116">VisualState Name</span></span>|<span data-ttu-id="f5aa5-117">VisualStateGroup 이름</span><span class="sxs-lookup"><span data-stu-id="f5aa5-117">VisualStateGroup Name</span></span>|<span data-ttu-id="f5aa5-118">설명</span><span class="sxs-lookup"><span data-stu-id="f5aa5-118">Description</span></span>|  
 |-|-|-|  
-|VisualState 이름|VisualStateGroup 이름|설명|  
-|보통|CommonStates|기본 상태입니다.|  
-|MouseOver|CommonStates|마우스 포인터가 컨트롤 위에 있습니다.|  
-|Disabled|CommonStates|컨트롤이 사용하지 않도록 설정되어 있습니다.|  
-|Focused|FocusStates|컨트롤에 포커스가 있습니다.|  
-|Unfocused|FocusStates|컨트롤에 포커스가 없습니다.|  
-|Valid|ValidationStates|이 컨트롤은 <xref:System.Windows.Controls.Validation> 클래스를 사용하며 연결된 속성 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>는 `false`입니다.|  
-|InvalidFocused|ValidationStates|컨트롤에 포커스가 있는 경우 연결된 속성 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>는 `true`입니다.|  
-|InvalidUnfocused|ValidationStates|컨트롤에 포커스가 없는 경우 연결된 속성 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=fullName>는 `true`입니다.|  
+|<span data-ttu-id="f5aa5-119">보통</span><span class="sxs-lookup"><span data-stu-id="f5aa5-119">Normal</span></span>|<span data-ttu-id="f5aa5-120">CommonStates</span><span class="sxs-lookup"><span data-stu-id="f5aa5-120">CommonStates</span></span>|<span data-ttu-id="f5aa5-121">기본 상태입니다.</span><span class="sxs-lookup"><span data-stu-id="f5aa5-121">The default state.</span></span>|  
+|<span data-ttu-id="f5aa5-122">MouseOver</span><span class="sxs-lookup"><span data-stu-id="f5aa5-122">MouseOver</span></span>|<span data-ttu-id="f5aa5-123">CommonStates</span><span class="sxs-lookup"><span data-stu-id="f5aa5-123">CommonStates</span></span>|<span data-ttu-id="f5aa5-124">마우스 포인터가 컨트롤 위에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f5aa5-124">The mouse pointer is positioned over the control.</span></span>|  
+|<span data-ttu-id="f5aa5-125">사용 안 함</span><span class="sxs-lookup"><span data-stu-id="f5aa5-125">Disabled</span></span>|<span data-ttu-id="f5aa5-126">CommonStates</span><span class="sxs-lookup"><span data-stu-id="f5aa5-126">CommonStates</span></span>|<span data-ttu-id="f5aa5-127">컨트롤이 비활성화되었습니다.</span><span class="sxs-lookup"><span data-stu-id="f5aa5-127">The control is disabled.</span></span>|  
+|<span data-ttu-id="f5aa5-128">포커스 있음</span><span class="sxs-lookup"><span data-stu-id="f5aa5-128">Focused</span></span>|<span data-ttu-id="f5aa5-129">FocusStates</span><span class="sxs-lookup"><span data-stu-id="f5aa5-129">FocusStates</span></span>|<span data-ttu-id="f5aa5-130">컨트롤에 포커스가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f5aa5-130">The control has focus.</span></span>|  
+|<span data-ttu-id="f5aa5-131">포커스 없음</span><span class="sxs-lookup"><span data-stu-id="f5aa5-131">Unfocused</span></span>|<span data-ttu-id="f5aa5-132">FocusStates</span><span class="sxs-lookup"><span data-stu-id="f5aa5-132">FocusStates</span></span>|<span data-ttu-id="f5aa5-133">컨트롤에 포커스가 없습니다.</span><span class="sxs-lookup"><span data-stu-id="f5aa5-133">The control does not have focus.</span></span>|  
+|<span data-ttu-id="f5aa5-134">유효</span><span class="sxs-lookup"><span data-stu-id="f5aa5-134">Valid</span></span>|<span data-ttu-id="f5aa5-135">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="f5aa5-135">ValidationStates</span></span>|<span data-ttu-id="f5aa5-136">컨트롤이 사용 하는 <xref:System.Windows.Controls.Validation> 클래스 및 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성은 `false`합니다.</span><span class="sxs-lookup"><span data-stu-id="f5aa5-136">The control uses the <xref:System.Windows.Controls.Validation> class and the <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `false`.</span></span>|  
+|<span data-ttu-id="f5aa5-137">InvalidFocused</span><span class="sxs-lookup"><span data-stu-id="f5aa5-137">InvalidFocused</span></span>|<span data-ttu-id="f5aa5-138">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="f5aa5-138">ValidationStates</span></span>|<span data-ttu-id="f5aa5-139"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성을 `true` 가 컨트롤에 포커스가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="f5aa5-139">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control has focus.</span></span>|  
+|<span data-ttu-id="f5aa5-140">InvalidUnfocused</span><span class="sxs-lookup"><span data-stu-id="f5aa5-140">InvalidUnfocused</span></span>|<span data-ttu-id="f5aa5-141">ValidationStates</span><span class="sxs-lookup"><span data-stu-id="f5aa5-141">ValidationStates</span></span>|<span data-ttu-id="f5aa5-142"><xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 연결 된 속성을 `true` 가 컨트롤에 포커스가 없으면 합니다.</span><span class="sxs-lookup"><span data-stu-id="f5aa5-142">The <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> attached property is `true` has the control does not have focus.</span></span>|  
   
-## PasswordBox ControlTemplate 예제  
- 다음 예제에서는 <xref:System.Windows.Controls.PasswordBox> 컨트롤에 대한 <xref:System.Windows.Controls.ControlTemplate>을 정의하는 방법을 보여 줍니다.  
+## <a name="passwordbox-controltemplate-example"></a><span data-ttu-id="f5aa5-143">PasswordBox ControlTemplate 예제</span><span class="sxs-lookup"><span data-stu-id="f5aa5-143">PasswordBox ControlTemplate Example</span></span>  
+ <span data-ttu-id="f5aa5-144">다음 예제에서는 정의 하는 방법을 보여 줍니다.는 <xref:System.Windows.Controls.ControlTemplate> 에 대 한는 <xref:System.Windows.Controls.PasswordBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="f5aa5-144">The following example shows how to define a <xref:System.Windows.Controls.ControlTemplate> for the <xref:System.Windows.Controls.PasswordBox> control.</span></span>  
   
- [!code-xml[ControlTemplateExamples#PasswordBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/textbox.xaml#passwordbox)]  
+ [!code-xaml[ControlTemplateExamples#PasswordBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/textbox.xaml#passwordbox)]  
   
- 앞의 예제에서는 다음 리소스를 하나 이상 사용합니다.  
+ <span data-ttu-id="f5aa5-145">앞의 예제에서는 다음 리소스를 하나 이상 사용합니다.</span><span class="sxs-lookup"><span data-stu-id="f5aa5-145">The preceding example uses one or more of the following resources.</span></span>  
   
- [!code-xml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
+ [!code-xaml[ControlTemplateExamples#Resources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- 전체 샘플을 보려면          [Styling with ControlTemplates 샘플](http://go.microsoft.com/fwlink/?LinkID=160041)을 참조하십시오.  
+ <span data-ttu-id="f5aa5-146">전체 샘플을 보려면 [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041)(ControlTemplate으로 스타일 지정 샘플)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="f5aa5-146">For the complete sample, see [Styling with ControlTemplates Sample](http://go.microsoft.com/fwlink/?LinkID=160041).</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.FrameworkElement.Style%2A>   
- <xref:System.Windows.Controls.ControlTemplate>   
- [Control 스타일 및 템플릿](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)   
- [컨트롤 사용자 지정](../../../../docs/framework/wpf/controls/control-customization.md)   
- [스타일 지정 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md)   
- [ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+## <a name="see-also"></a><span data-ttu-id="f5aa5-147">참고 항목</span><span class="sxs-lookup"><span data-stu-id="f5aa5-147">See Also</span></span>  
+ <xref:System.Windows.FrameworkElement.Style%2A>  
+ <xref:System.Windows.Controls.ControlTemplate>  
+ [<span data-ttu-id="f5aa5-148">Control 스타일 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="f5aa5-148">Control Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [<span data-ttu-id="f5aa5-149">컨트롤 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="f5aa5-149">Control Customization</span></span>](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [<span data-ttu-id="f5aa5-150">스타일 지정 및 템플릿</span><span class="sxs-lookup"><span data-stu-id="f5aa5-150">Styling and Templating</span></span>](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [<span data-ttu-id="f5aa5-151">ControlTemplate을 만들어 기존 컨트롤의 모양 사용자 지정</span><span class="sxs-lookup"><span data-stu-id="f5aa5-151">Customizing the Appearance of an Existing Control by Creating a ControlTemplate</span></span>](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

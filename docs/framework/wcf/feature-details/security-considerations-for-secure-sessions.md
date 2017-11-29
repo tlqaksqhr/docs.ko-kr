@@ -1,33 +1,36 @@
 ---
-title: "보안 세션에 대한 보안 고려 사항 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "보안 세션에 대한 보안 고려 사항"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0d5be591-9a7b-4a6f-a906-95d3abafe8db
-caps.latest.revision: 14
-author: "BrucePerlerMS"
-ms.author: "bruceper"
-manager: "mbaldwin"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: BrucePerlerMS
+ms.author: bruceper
+manager: mbaldwin
+ms.openlocfilehash: 3154080682d406598b47122c64cc856ff8cb1f15
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 보안 세션에 대한 보안 고려 사항
-보안 세션 구현 시 보안에 영향을 주는 다음 항목에 대해 고려해야 합니다.보안 고려 사항에 대한 [!INCLUDE[crabout](../../../../includes/crabout-md.md)]는 [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md) 및 [보안을 위한 최선의 방법](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)를 참조하십시오.  
+# <a name="security-considerations-for-secure-sessions"></a><span data-ttu-id="97c4c-102">보안 세션에 대한 보안 고려 사항</span><span class="sxs-lookup"><span data-stu-id="97c4c-102">Security Considerations for Secure Sessions</span></span>
+<span data-ttu-id="97c4c-103">보안 세션 구현 시 보안에 영향을 주는 다음 항목에 대해 고려해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="97c4c-103">You should consider the following items that affect security when implementing secure sessions.</span></span> [!INCLUDE[crabout](../../../../includes/crabout-md.md)]<span data-ttu-id="97c4c-104">보안 고려 사항 참조 [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md) 및 [보안에 대 한 유용한](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="97c4c-104"> security considerations, see [Security Considerations](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md) and [Best Practices for Security](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).</span></span>  
   
-## 보안 세션 및 메타데이터  
- 보안 세션을 설정할 때 <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> 속성을 `false`로 설정하면, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 `mssp:MustNotSendCancel` 어설션을 서비스 끝점에 대한 WSDL\(웹 서비스 기술 언어\) 문서의 메타데이터 일부로 보냅니다.이`mssp:MustNotSendCancel` 어설션은 서비스가 보안 세션 취소 요청에 응답하지 않음을 클라이언트에게 알립니다.<xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> 속성을 `true`로 설정하면, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 `mssp:MustNotSendCancel` 어설션을 WSDL 문서로 내보내지 않습니다.클라이언트에서 보안 세션이 더 이상 필요하지 않으면 취소 요청을 서비스에 보내야 합니다.[ServiceModel Metadata 유틸리티 도구\(Svcutil.exe\)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)를 사용하여 클라이언트를 생성하면, 클라이언트 코드는 `mssp:MustNotSendCancel` 어설션 유무에 따라 적절히 반응합니다.  
+## <a name="secure-sessions-and-metadata"></a><span data-ttu-id="97c4c-105">보안 세션 및 메타데이터</span><span class="sxs-lookup"><span data-stu-id="97c4c-105">Secure Sessions and Metadata</span></span>  
+ <span data-ttu-id="97c4c-106">보안 세션을 설정할 때 <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> 속성을 `false`로 설정하면, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]에서 `mssp:MustNotSendCancel` 어설션을 서비스 끝점에 대한 WSDL(웹 서비스 기술 언어) 문서의 메타데이터 일부로 보냅니다.</span><span class="sxs-lookup"><span data-stu-id="97c4c-106">When a secure session is established and the <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> property is set to `false`, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] sends an `mssp:MustNotSendCancel` assertion as part of the metadata in the Web Services Description Language (WSDL) document for the service endpoint.</span></span> <span data-ttu-id="97c4c-107">이`mssp:MustNotSendCancel` 어설션은 서비스가 보안 세션 취소 요청에 응답하지 않음을 클라이언트에게 알립니다.</span><span class="sxs-lookup"><span data-stu-id="97c4c-107">The `mssp:MustNotSendCancel` assertion informs clients that the service does not respond to requests to cancel the secure session.</span></span> <span data-ttu-id="97c4c-108"><xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> 속성을 `true`로 설정하면, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 `mssp:MustNotSendCancel` 어설션을 WSDL 문서로 내보내지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="97c4c-108">When the <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters.RequireCancellation%2A> property is set to `true`, then [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] does not emit an `mssp:MustNotSendCancel` assertion in the WSDL document.</span></span> <span data-ttu-id="97c4c-109">클라이언트에서 보안 세션이 더 이상 필요하지 않으면 취소 요청을 서비스에 보내야 합니다.</span><span class="sxs-lookup"><span data-stu-id="97c4c-109">Clients are expected to send a cancel request to the service when they no longer require the secure session.</span></span> <span data-ttu-id="97c4c-110">클라이언트를 사용 하 여 생성 될 때는 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), 클라이언트 코드의 유무에 적절 하 게 반응 하는 `mssp:MustNotSendCancel` 어설션 합니다.</span><span class="sxs-lookup"><span data-stu-id="97c4c-110">When a client is generated using the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md), the client code reacts appropriately to the presence or absence of the `mssp:MustNotSendCancel` assertion.</span></span>  
   
-## 보안 대화 및 사용자 지정 토큰  
- WS\-SecureConversation 사양의 정의로 인해 사용자 지정 토큰과 파생 키를 함께 사용할 때 문제가 발생할 수 있습니다.이 사양에 따르면 `wsse:SecurityTokenReference`는 파생 토큰 “`/wsc:DerivedKeyToken/wsse:SecurityTokenReference`를 참조하는 선택적 요소입니다. 이 선택적 요소는 보안 컨텍스트 토큰, 보안 토큰 또는 파생에 사용되는 공유 키\/암호를 지정하는 데 사용됩니다.이 요소를 지정하지 않으면 받는 사람이 메시지 컨텍스트를 통해 공유 키를 확인할 수 있다고 간주됩니다.컨텍스트를 확인할 수 없는 경우 `wsc:UnknownDerivationSource`와 같은 오류가 발생합니다.”  
+## <a name="secure-conversations-and-custom-tokens"></a><span data-ttu-id="97c4c-111">보안 대화 및 사용자 지정 토큰</span><span class="sxs-lookup"><span data-stu-id="97c4c-111">Secure Conversations and Custom Tokens</span></span>  
+ <span data-ttu-id="97c4c-112">WS-SecureConversation 사양의 정의로 인해 사용자 지정 토큰과 파생 키를 함께 사용할 때 문제가 발생할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="97c4c-112">There are some issues with mixing custom tokens and derived keys due to the way it is defined in the WS-SecureConversation specification.</span></span> <span data-ttu-id="97c4c-113">사양에 따르면 `wsse:SecurityTokenReference` 파생된 토큰을 참조 하는 선택적 요소: "`/wsc:DerivedKeyToken/wsse:SecurityTokenReference` 이 선택적 요소는 보안 컨텍스트 토큰, 보안 토큰 또는 파생에 사용 되는 공유 키/암호를 지정 하는 데 사용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="97c4c-113">The specification says that `wsse:SecurityTokenReference` is an optional element that references the derived token: "`/wsc:DerivedKeyToken/wsse:SecurityTokenReference` This optional element is used to specify security context token, security token, or shared key/secret used for the derivation.</span></span> <span data-ttu-id="97c4c-114">이 요소를 지정하지 않으면 받는 사람이 메시지 컨텍스트를 통해 공유 키를 확인할 수 있다고 간주됩니다.</span><span class="sxs-lookup"><span data-stu-id="97c4c-114">If not specified, it is assumed that the recipient can determine the shared key from the message context.</span></span> <span data-ttu-id="97c4c-115">컨텍스트를 확인할 수 없는 경우와 같은 오류가 다음 `wsc:UnknownDerivationSource` 발생 해야 합니다. "</span><span class="sxs-lookup"><span data-stu-id="97c4c-115">If the context cannot be determined, then a fault such as `wsc:UnknownDerivationSource` should be raised."</span></span>  
   
- 즉, 사용자 지정 토큰이 파생되게 하려면 해당 절 형식을 `SecurityTokenReference` 요소 내에 래핑해야 합니다.파생을 해제하는 옵션도 있지만 키를 파생시키는 것이 기본값입니다.키를 래핑하지 못하면 파생 키 토큰을 serialize하는 작업이 성공하지만 이를 deserialize하면 예외가 throw됩니다.  
+ <span data-ttu-id="97c4c-116">즉, 사용자 지정 토큰이 파생되게 하려면 해당 절 형식을 `SecurityTokenReference` 요소 내에 래핑해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="97c4c-116">This means that if you want a custom token to be derived, you should wrap its clause type in a `SecurityTokenReference` element.</span></span> <span data-ttu-id="97c4c-117">파생을 해제하는 옵션도 있지만 키를 파생시키는 것이 기본값입니다.</span><span class="sxs-lookup"><span data-stu-id="97c4c-117">There is an option to turn off derivation but the default is to derive keys.</span></span> <span data-ttu-id="97c4c-118">키를 래핑하지 못하면 파생 키 토큰을 serialize하는 작업이 성공하지만 이를 deserialize하면 예외가 throw됩니다.</span><span class="sxs-lookup"><span data-stu-id="97c4c-118">If you fail to wrap the key, serializing the derived key token succeeds, but attempting to deserialize it throws an exception.</span></span>  
   
-## 참고 항목  
- [방법: WSFederationHttpBinding에서 보안 세션을 사용하지 않도록 설정](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)   
- [보안 고려 사항](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)   
- [보안을 위한 최선의 방법](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)
+## <a name="see-also"></a><span data-ttu-id="97c4c-119">참고 항목</span><span class="sxs-lookup"><span data-stu-id="97c4c-119">See Also</span></span>  
+ [<span data-ttu-id="97c4c-120">방법: 사용 안 함 보안 WSFederationHttpBinding에서 세션</span><span class="sxs-lookup"><span data-stu-id="97c4c-120">How to: Disable Secure Sessions on a WSFederationHttpBinding</span></span>](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [<span data-ttu-id="97c4c-121">보안 고려 사항</span><span class="sxs-lookup"><span data-stu-id="97c4c-121">Security Considerations</span></span>](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
+ [<span data-ttu-id="97c4c-122">보안에 대 한 모범 사례</span><span class="sxs-lookup"><span data-stu-id="97c4c-122">Best Practices for Security</span></span>](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)

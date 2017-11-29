@@ -1,42 +1,46 @@
 ---
-title: "방법: Windows Forms으로 다중 창 사용자 인터페이스 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "ListView 컨트롤[Windows Forms], 예제"
-  - "Panel 컨트롤[Windows Forms], 예제"
-  - "RichTextBox 컨트롤[Windows Forms], 예제"
-  - "SplitContainer 컨트롤[Windows Forms], 예제"
-  - "Splitter 컨트롤[Windows Forms], 예제"
-  - "TreeView 컨트롤[Windows Forms], 예제"
+title: "방법: Windows Forms으로 다중 창 사용자 인터페이스 만들기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- SplitContainer control [Windows Forms], examples
+- ListView control [Windows Forms], examples
+- RichTextBox control [Windows Forms], examples
+- Panel control [Windows Forms], examples
+- TreeView control [Windows Forms], examples
+- Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-caps.latest.revision: 20
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6db621912e76d24b05c8dcdca7f1d3f4e62c2838
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: Windows Forms으로 다중 창 사용자 인터페이스 만들기
-다음 프로시저에서는 Microsoft Outlook의 사용자 인터페이스와 비슷하게 **폴더** 목록, **메시지** 창 및 **미리 보기** 창이 있는 다중 창 사용자 인터페이스를 만듭니다.  이 배열은 주로 폼에 컨트롤을 도킹하여 만듭니다.  
+# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a><span data-ttu-id="3d325-102">방법: Windows Forms으로 다중 창 사용자 인터페이스 만들기</span><span class="sxs-lookup"><span data-stu-id="3d325-102">How to: Create a Multipane User Interface with Windows Forms</span></span>
+<span data-ttu-id="3d325-103">다음 절차에서는 Microsoft Outlook으로 사용 되는 비슷한 다중 창 사용자 인터페이스 만들어집니다는 **폴더** 목록은 **메시지** 창 및 **미리보기** 창.</span><span class="sxs-lookup"><span data-stu-id="3d325-103">In the following procedure, you will create a multipane user interface that is similar to the one used in Microsoft Outlook, with a **Folder** list, a **Messages** pane, and a **Preview** pane.</span></span> <span data-ttu-id="3d325-104">이 정렬은 주로 폼에 컨트롤을 도킹을 통해 얻습니다.</span><span class="sxs-lookup"><span data-stu-id="3d325-104">This arrangement is achieved chiefly through docking controls with the form.</span></span>  
   
- 컨트롤을 도킹할 때는 컨트롤이 고정될 부모 컨테이너의 가장자리를 결정해야 합니다.  따라서 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle>로 설정하면 컨트롤의 오른쪽 가장자리가 부모 컨트롤의 오른쪽 가장자리에 도킹됩니다.  또한 컨트롤의 도킹된 가장자리는 컨테이너 컨트롤에 맞게 크기가 조정됩니다.  <xref:System.Windows.Forms.SplitContainer.Dock%2A> 속성의 작동 방식에 대한 자세한 내용은 [방법: Windows Forms에 컨트롤 도킹](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)을 참조하십시오.  
+ <span data-ttu-id="3d325-105">컨트롤을 고정 하면 부모 컨테이너의 가장자리 컨트롤을 고정은 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3d325-105">When you dock a control, you determine which edge of the parent container a control is fastened to.</span></span> <span data-ttu-id="3d325-106">따라서 설정 하는 경우는 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 속성을 <xref:System.Windows.Forms.DockStyle.Right>, 컨트롤의 오른쪽 가장자리 부모 컨트롤의 오른쪽 가장자리에 도킹 됩니다.</span><span class="sxs-lookup"><span data-stu-id="3d325-106">Thus, if you set the <xref:System.Windows.Forms.SplitContainer.Dock%2A> property to <xref:System.Windows.Forms.DockStyle.Right>, the right edge of the control will be docked to the right edge of its parent control.</span></span> <span data-ttu-id="3d325-107">또한 컨트롤의 도킹된 가장자리는 컨테이너 컨트롤에 맞게 크기가 조정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="3d325-107">Additionally, the docked edge of the control is resized to match that of its container control.</span></span> <span data-ttu-id="3d325-108">방식에 대 한 자세한 내용은 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 속성은 참조 [하는 방법: Windows Forms에 컨트롤 도킹](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="3d325-108">For more information about how the <xref:System.Windows.Forms.SplitContainer.Dock%2A> property works, see [How to: Dock Controls on Windows Forms](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md).</span></span>  
   
- 이 절차에서는 응용 프로그램을 Microsoft Outlook과 유사하게 만들기 위해 기능을 추가하는 것이 아니라 <xref:System.Windows.Forms.SplitContainer> 및 다른 컨트롤을 폼에 배열하는 방법에 초점을 맞춥니다.  
+ <span data-ttu-id="3d325-109">정렬에 중점을 두고이 절차는 <xref:System.Windows.Forms.SplitContainer> 및 기타 컨트롤이 폼에서가 아니라를 모방 Microsoft Outlook 응용 프로그램으로 설정 하는 기능을 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d325-109">This procedure focuses on arranging the <xref:System.Windows.Forms.SplitContainer> and the other controls on the form, not on adding functionality to make the application mimic Microsoft Outlook.</span></span>  
   
- 이 사용자 인터페이스를 만들려면 모든 컨트롤을 <xref:System.Windows.Forms.SplitContainer> 컨트롤에 배열합니다. 이 컨트롤의 왼쪽 패널에 <xref:System.Windows.Forms.TreeView> 컨트롤이 포함됩니다.  <xref:System.Windows.Forms.SplitContainer> 컨트롤의 오른쪽 패널에는 <xref:System.Windows.Forms.RichTextBox> 컨트롤 위에 <xref:System.Windows.Forms.ListView> 컨트롤이 있는 두 번째 <xref:System.Windows.Forms.SplitContainer> 컨트롤이 포함됩니다.  이 <xref:System.Windows.Forms.SplitContainer> 컨트롤을 사용하여 폼에 있는 나머지 컨트롤의 크기를 독립적으로 조정할 수 있습니다.  여기서 고유의 사용자 인터페이스를 만드는 기술을 적용할 수도 있습니다.  
+ <span data-ttu-id="3d325-110">내에서 모든 컨트롤을 배치 하면이 사용자 인터페이스를 만들려면는 <xref:System.Windows.Forms.SplitContainer> 포함 되는 제어는 <xref:System.Windows.Forms.TreeView> 왼쪽 패널에서 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d325-110">To create this user interface, you place all the controls within a <xref:System.Windows.Forms.SplitContainer> control, which contains a <xref:System.Windows.Forms.TreeView> control in the left-hand panel.</span></span> <span data-ttu-id="3d325-111">오른쪽 패널은 <xref:System.Windows.Forms.SplitContainer> 두 번째 컨트롤에 포함 되어 <xref:System.Windows.Forms.SplitContainer> 보호로 <xref:System.Windows.Forms.ListView> 컨트롤 위의 <xref:System.Windows.Forms.RichTextBox> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d325-111">The right-hand panel of the <xref:System.Windows.Forms.SplitContainer> control contains a second <xref:System.Windows.Forms.SplitContainer> control with a <xref:System.Windows.Forms.ListView> control above a <xref:System.Windows.Forms.RichTextBox> control.</span></span> <span data-ttu-id="3d325-112">이러한 <xref:System.Windows.Forms.SplitContainer> 독립 폼에서 다른 컨트롤의 크기를 조정 컨트롤을 사용 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d325-112">These <xref:System.Windows.Forms.SplitContainer> controls enable independent resizing of the other controls on the form.</span></span> <span data-ttu-id="3d325-113">자신만의 사용자 지정 사용자 인터페이스를 파악 하려면이 절차에 설명 된 기술을 적용할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3d325-113">You can adapt the techniques in this procedure to craft custom user interfaces of your own.</span></span>  
   
-### 프로그래밍 방식으로 Outlook 스타일의 사용자 인터페이스를 만들려면  
+### <a name="to-create-an-outlook-style-user-interface-programmatically"></a><span data-ttu-id="3d325-114">프로그래밍 방식으로 Outlook 스타일 사용자 인터페이스를 만들려면</span><span class="sxs-lookup"><span data-stu-id="3d325-114">To create an Outlook-style user interface programmatically</span></span>  
   
-1.  폼 안에서 사용자 인터페이스를 구성하는 각 컨트롤을 선언합니다.  이 예제에서는 <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer> 및 <xref:System.Windows.Forms.RichTextBox> 컨트롤을 사용하여 Microsoft Outlook 사용자 인터페이스와 비슷한 인터페이스를 만듭니다.  
+1.  <span data-ttu-id="3d325-115">폼 내에서 사용자 인터페이스를 구성 하는 각 컨트롤을 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d325-115">Within a form, declare each control that comprises your user interface.</span></span> <span data-ttu-id="3d325-116">이 예제에서는 사용는 <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, 및 <xref:System.Windows.Forms.RichTextBox> Microsoft Outlook 사용자 인터페이스와 유사 하 게 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d325-116">For this example, use the <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, and <xref:System.Windows.Forms.RichTextBox> controls to mimic the Microsoft Outlook user interface.</span></span>  
   
     ```vb  
     Private WithEvents treeView1 As System.Windows.Forms.TreeView  
@@ -46,7 +50,6 @@ caps.handback.revision: 20
         System.Windows.Forms.SplitContainer  
     Private WithEvents splitContainer2 As _  
         System.Windows.Forms.SplitContainer  
-  
     ```  
   
     ```csharp  
@@ -55,10 +58,9 @@ caps.handback.revision: 20
     private System.Windows.Forms.RichTextBox richTextBox1;  
     private System.Windows.Forms. SplitContainer splitContainer2;  
     private System.Windows.Forms. SplitContainer splitContainer1;  
-  
     ```  
   
-2.  사용자 인터페이스를 정의하는 프로시저를 작성합니다.  다음 코드에서는 폼이 Microsoft Outlook의 사용자 인터페이스와 유사하도록 속성을 설정합니다.  그러나 다른 컨트롤을 사용하거나 컨트롤을 다르게 도킹시키면 크기 조정이 가능한 사용자 인터페이스를 쉽게 만들 수 있습니다.  
+2.  <span data-ttu-id="3d325-117">사용자 인터페이스를 정의 하는 프로시저를 만듭니다.</span><span class="sxs-lookup"><span data-stu-id="3d325-117">Create a procedure that defines your user interface.</span></span> <span data-ttu-id="3d325-118">다음 코드 형식에는 Microsoft Outlook에서 사용자 인터페이스와 유사 합니다 되도록 속성을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d325-118">The following code sets the properties so that the form will resemble the user interface in Microsoft Outlook.</span></span> <span data-ttu-id="3d325-119">그러나 다른 컨트롤을 사용 하 여 다르게에 도킹, 이기 쉽게 시키면 하는 다른 사용자 인터페이스를 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3d325-119">However, by using other controls or docking them differently, it is just as easy to create other user interfaces that are equally flexible.</span></span>  
   
     ```vb  
     Public Sub CreateOutlookUI()  
@@ -120,7 +122,6 @@ caps.handback.revision: 20
         Me.Controls.Add(Me.splitContainer2)  
         Me.Text = "Intricate UI Example"  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -171,24 +172,21 @@ caps.handback.revision: 20
         this.Controls.Add(this.splitContainer2);  
         this.Text = "Intricate UI Example";  
     }  
-  
     ```  
   
-3.  [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]에서 방금 만든 프로시저에 대한 호출을 `New()` 프로시저에 추가합니다.  [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]에서는 폼 클래스의 생성자에 다음 코드 줄을 추가합니다.  
+3.  <span data-ttu-id="3d325-120">[!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]에서 방금 만든 프로시저에 대 한 호출 추가 `New()` 프로시저입니다.</span><span class="sxs-lookup"><span data-stu-id="3d325-120">In [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], add a call to the procedure you just created in the `New()` procedure.</span></span> <span data-ttu-id="3d325-121">[!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]를 폼 클래스에 대 한 생성자를이 줄의 코드를 추가 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d325-121">In [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], add this line of code to the constructor for the form class.</span></span>  
   
     ```vb  
     ' Add this to the New procedure.  
     CreateOutlookUI()  
-  
     ```  
   
     ```csharp  
     // Add this to the form class's constructor.  
     createOutlookUI();  
-  
     ```  
   
-## 참고 항목  
- <xref:System.Windows.Forms.SplitContainer>   
- [SplitContainer 컨트롤](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)   
- [방법: 디자이너를 사용하여 Windows Forms으로 다중 창 사용자 인터페이스 만들기](../../../../docs/framework/winforms/controls/create-a-multipane-user-interface-with-wf-using-the-designer.md)
+## <a name="see-also"></a><span data-ttu-id="3d325-122">참고 항목</span><span class="sxs-lookup"><span data-stu-id="3d325-122">See Also</span></span>  
+ <xref:System.Windows.Forms.SplitContainer>  
+ [<span data-ttu-id="3d325-123">SplitContainer 컨트롤</span><span class="sxs-lookup"><span data-stu-id="3d325-123">SplitContainer Control</span></span>](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
+ [<span data-ttu-id="3d325-124">방법: 디자이너를 사용하여 Windows Forms으로 다중 창 사용자 인터페이스 만들기</span><span class="sxs-lookup"><span data-stu-id="3d325-124">How to: Create a Multipane User Interface with Windows Forms Using the Designer</span></span>](../../../../docs/framework/winforms/controls/create-a-multipane-user-interface-with-wf-using-the-designer.md)

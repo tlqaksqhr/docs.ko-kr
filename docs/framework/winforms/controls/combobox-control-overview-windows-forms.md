@@ -1,44 +1,44 @@
 ---
-title: "ComboBox 컨트롤 개요(Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ComboBox"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "콤보 상자, 콤보 상자 정보"
-  - "ComboBox 컨트롤[Windows Forms], ComboBox 컨트롤 정보"
-  - "드롭다운 목록, ComboBox 컨트롤"
-  - "드롭다운 목록, Windows Forms"
+title: "ComboBox 컨트롤 개요(Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ComboBox
+helpviewer_keywords:
+- drop-down lists [Windows Forms], Windows Forms
+- ComboBox control [Windows Forms], about ComboBox control
+- drop-down lists [Windows Forms], ComboBox control
+- combo boxes [Windows Forms], about combo boxes
 ms.assetid: a58b393f-a614-45d1-8961-857a024b5acd
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 979a410020ab6e3a1f2c15dcee52b062eb00c1ac
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# ComboBox 컨트롤 개요(Windows Forms)
-Windows Forms <xref:System.Windows.Forms.ComboBox> 컨트롤은 드롭다운 콤보 상자에 데이터를 표시하는 데 사용됩니다.  기본적으로 <xref:System.Windows.Forms.ComboBox> 컨트롤은 두 부분으로 표시됩니다. 윗 부분은 사용자가 목록 항목을 입력할 수 있는 텍스트 상자이며  아랫 부분은 사용자가 항목을 선택할 수 있는 항목 목록을 표시하는 목록 상자입니다.  다른 스타일의 콤보 상자에 대한 자세한 내용은 [ListBox 대신 Windows Forms ComboBox를 사용해야 하는 경우](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)를 참조하십시오.  
+# <a name="combobox-control-overview-windows-forms"></a><span data-ttu-id="ebc4d-102">ComboBox 컨트롤 개요(Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="ebc4d-102">ComboBox Control Overview (Windows Forms)</span></span>
+<span data-ttu-id="ebc4d-103">Windows Forms <xref:System.Windows.Forms.ComboBox> 컨트롤을 사용 하는 드롭다운 콤보 상자에 데이터를 표시 합니다.</span><span class="sxs-lookup"><span data-stu-id="ebc4d-103">The Windows Forms <xref:System.Windows.Forms.ComboBox> control is used to display data in a drop-down combo box.</span></span> <span data-ttu-id="ebc4d-104">기본적으로는 <xref:System.Windows.Forms.ComboBox> 두 부분에 나와 있는: 위쪽 부분은 사용자가 목록 항목을 입력할 수 있게 하는 텍스트 상자가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="ebc4d-104">By default, the <xref:System.Windows.Forms.ComboBox> control appears in two parts: the top part is a text box that allows the user to type a list item.</span></span> <span data-ttu-id="ebc4d-105">두 번째 부분에 있는 사용자 수 하나를 선택 하는 항목의 목록을 표시 하는 목록 상자입니다.</span><span class="sxs-lookup"><span data-stu-id="ebc4d-105">The second part is a list box that displays a list of items from which the user can select one.</span></span> <span data-ttu-id="ebc4d-106">콤보 상자의 다른 스타일에 자세한 내용은 참조 [Windows Forms ComboBox Instead of ListBox를 사용 하는 경우](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="ebc4d-106">For more information on other styles of combo box, see [When to Use a Windows Forms ComboBox Instead of a ListBox](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md).</span></span>  
   
- <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> 속성은 목록에서 선택한 항목에 해당하는 정수 값을 반환합니다.  코드에서 <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> 값을 변경하여 선택한 항목을 프로그래밍 방식으로 변경할 수 있습니다. 그러면 목록의 해당 항목이 콤보 상자의 텍스트 상자 부분에 나타납니다.  선택된 항목이 없는 경우 <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A>의 값은 –1입니다.  목록의 첫 번째 항목을 선택한 경우 <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A>의 값은 0입니다.  <xref:System.Windows.Forms.ComboBox.SelectedItem%2A> 속성은 <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A>와 비슷하지만 일반적으로 문자열 값인 항목 자체를 반환합니다.  <xref:System.Windows.Forms.ComboBox.ObjectCollection.Count%2A> 속성은 목록의 항목 개수를 반영하며 <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A>가 0부터 시작하기 때문에 <xref:System.Windows.Forms.ComboBox.ObjectCollection.Count%2A> 속성의 값은 최대 <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> 값보다 항상 1이 더 큽니다.  
+ <span data-ttu-id="ebc4d-107"><xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> 속성 선택한 목록 항목에 해당 하는 정수 값을 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="ebc4d-107">The <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> property returns an integer value that corresponds to the selected list item.</span></span> <span data-ttu-id="ebc4d-108">선택한 항목을 변경 하 여 프로그래밍 방식으로 변경할 수 있습니다는 <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> 코드에서 값; 목록에서 해당 항목은 콤보 상자의 텍스트 상자 부분에 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="ebc4d-108">You can programmatically change the selected item by changing the <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> value in code; the corresponding item in the list will appear in the text box portion of the combo box.</span></span> <span data-ttu-id="ebc4d-109">선택 된 항목이 있는 경우는 <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> 값은-1입니다.</span><span class="sxs-lookup"><span data-stu-id="ebc4d-109">If no item is selected, the <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> value is -1.</span></span> <span data-ttu-id="ebc4d-110">목록에서 첫 번째 항목을 선택 하면 <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> 값은 0입니다.</span><span class="sxs-lookup"><span data-stu-id="ebc4d-110">If the first item in the list is selected, then the <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> value is 0.</span></span> <span data-ttu-id="ebc4d-111"><xref:System.Windows.Forms.ComboBox.SelectedItem%2A> 속성은 비슷하지만 <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> , 문자열 값을 일반적으로 항목 자체를 반환 합니다.</span><span class="sxs-lookup"><span data-stu-id="ebc4d-111">The <xref:System.Windows.Forms.ComboBox.SelectedItem%2A> property is similar to <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> , but returns the item itself, usually a string value.</span></span> <span data-ttu-id="ebc4d-112"><xref:System.Windows.Forms.ComboBox.ObjectCollection.Count%2A> 속성 목록에 있는 항목의 수와 값은 반영 된 <xref:System.Windows.Forms.ComboBox.ObjectCollection.Count%2A> 속성은 항상 하나 이상 가장 큰 <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> 때문에 값 <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> 는 0부터 시작 합니다.</span><span class="sxs-lookup"><span data-stu-id="ebc4d-112">The <xref:System.Windows.Forms.ComboBox.ObjectCollection.Count%2A> property reflects the number of items in the list, and the value of the <xref:System.Windows.Forms.ComboBox.ObjectCollection.Count%2A> property is always one more than the largest possible <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> value because <xref:System.Windows.Forms.ComboBox.SelectedIndex%2A> is zero-based.</span></span>  
   
- <xref:System.Windows.Forms.ComboBox> 컨트롤에서 항목을 추가하거나 삭제하려면 <xref:System.Windows.Forms.ComboBox.ObjectCollection.Add%2A>, <xref:System.Windows.Forms.ComboBox.ObjectCollection.Insert%2A>, <xref:System.Windows.Forms.ComboBox.ObjectCollection.Clear%2A> 또는 <xref:System.Windows.Forms.ComboBox.ObjectCollection.Remove%2A> 메서드를 사용합니다.  또는 디자이너에서 <xref:System.Windows.Forms.ComboBox.Items%2A> 속성을 사용하여 항목을 목록에 추가할 수도 있습니다.  
+ <span data-ttu-id="ebc4d-113">에 항목을 추가 하거나 삭제할는 <xref:System.Windows.Forms.ComboBox> 컨트롤을 사용 하 여는 <xref:System.Windows.Forms.ComboBox.ObjectCollection.Add%2A>, <xref:System.Windows.Forms.ComboBox.ObjectCollection.Insert%2A>, <xref:System.Windows.Forms.ComboBox.ObjectCollection.Clear%2A> 또는 <xref:System.Windows.Forms.ComboBox.ObjectCollection.Remove%2A> 메서드.</span><span class="sxs-lookup"><span data-stu-id="ebc4d-113">To add or delete items in a <xref:System.Windows.Forms.ComboBox> control, use the <xref:System.Windows.Forms.ComboBox.ObjectCollection.Add%2A>, <xref:System.Windows.Forms.ComboBox.ObjectCollection.Insert%2A>, <xref:System.Windows.Forms.ComboBox.ObjectCollection.Clear%2A> or <xref:System.Windows.Forms.ComboBox.ObjectCollection.Remove%2A> method.</span></span> <span data-ttu-id="ebc4d-114">사용 하 여 목록에 항목을 추가할 수는 또한는 <xref:System.Windows.Forms.ComboBox.Items%2A> 디자이너에서 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="ebc4d-114">Alternatively, you can add items to the list by using the <xref:System.Windows.Forms.ComboBox.Items%2A> property in the designer.</span></span>  
   
-## 참고 항목  
- <xref:System.Windows.Forms.ComboBox>   
- [ListBox 컨트롤 개요](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)   
- [ListBox 대신 Windows Forms ComboBox를 사용해야 하는 경우](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)   
- [방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤에서 항목 추가 및 제거](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)   
- [방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤의 내용 정렬](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)   
- [방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤의 특정 항목에 액세스](../../../../docs/framework/winforms/controls/access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)   
- [방법: 데이터에 Windows Forms ComboBox 또는 ListBox 컨트롤 바인딩](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)   
- [옵션 목록 표시에 사용하는 Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)   
- [방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤의 조회 테이블 만들기](../../../../docs/framework/winforms/controls/create-a-lookup-table-for-a-wf-combobox-listbox.md)
+## <a name="see-also"></a><span data-ttu-id="ebc4d-115">참고 항목</span><span class="sxs-lookup"><span data-stu-id="ebc4d-115">See Also</span></span>  
+ <xref:System.Windows.Forms.ComboBox>  
+ [<span data-ttu-id="ebc4d-116">ListBox 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="ebc4d-116">ListBox Control Overview</span></span>](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)  
+ [<span data-ttu-id="ebc4d-117">ListBox 대신 Windows Forms ComboBox를 사용해야 하는 경우</span><span class="sxs-lookup"><span data-stu-id="ebc4d-117">When to Use a Windows Forms ComboBox Instead of a ListBox</span></span>](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
+ [<span data-ttu-id="ebc4d-118">방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤에서 항목 추가 및 제거</span><span class="sxs-lookup"><span data-stu-id="ebc4d-118">How to: Add and Remove Items from a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)  
+ [<span data-ttu-id="ebc4d-119">방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤의 내용 정렬</span><span class="sxs-lookup"><span data-stu-id="ebc4d-119">How to: Sort the Contents of a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
+ [<span data-ttu-id="ebc4d-120">방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤의 특정 항목에 액세스</span><span class="sxs-lookup"><span data-stu-id="ebc4d-120">How to: Access Specific Items in a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>](../../../../docs/framework/winforms/controls/access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)  
+ [<span data-ttu-id="ebc4d-121">방법: 데이터에 Windows Forms ComboBox 또는 ListBox 컨트롤 바인딩</span><span class="sxs-lookup"><span data-stu-id="ebc4d-121">How to: Bind a Windows Forms ComboBox or ListBox Control to Data</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)  
+ [<span data-ttu-id="ebc4d-122">옵션 목록 표시에 사용된 Windows Forms 컨트롤</span><span class="sxs-lookup"><span data-stu-id="ebc4d-122">Windows Forms Controls Used to List Options</span></span>](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
+ [<span data-ttu-id="ebc4d-123">방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤의 조회 테이블 만들기</span><span class="sxs-lookup"><span data-stu-id="ebc4d-123">How to: Create a Lookup Table for a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>](../../../../docs/framework/winforms/controls/create-a-lookup-table-for-a-wf-combobox-listbox.md)

@@ -1,68 +1,72 @@
 ---
-title: "방법: 이미지 메타데이터 읽기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "메타데이터, 속성 항목"
-  - "메타데이터, 이미지 읽기"
+title: "방법: 이미지 메타데이터 읽기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- metadata [Windows Forms], property item
+- metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-caps.latest.revision: 15
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9df2866251e08b8989f8550d045b587c9de8d2cb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 이미지 메타데이터 읽기
-일부 이미지 파일에는 이미지의 특성을 확인하는 데 사용할 수 있는 메타데이터가 있습니다.  예를 들어, 디지털 사진에 포함된 메타데이터를 분석하면 사진 촬영에 사용한 카메라의 제조업체와 모델을 알 수 있습니다.  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]에서는 기존 메타데이터를 읽을 수 있을 뿐 아니라 이미지 파일에 새 메타데이터를 쓸 수도 있습니다.  
+# <a name="how-to-read-image-metadata"></a><span data-ttu-id="3d99f-102">방법: 이미지 메타데이터 읽기</span><span class="sxs-lookup"><span data-stu-id="3d99f-102">How to: Read Image Metadata</span></span>
+<span data-ttu-id="3d99f-103">일부 이미지 파일 이미지의 기능을 확인 읽을 수 있는 메타 데이터를 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="3d99f-103">Some image files contain metadata that you can read to determine features of the image.</span></span> <span data-ttu-id="3d99f-104">예를 들어 디지털 사진 제조업체와 이미지를 캡처하는 데 사용 하는 카메라 모델을 확인 하려면 읽을 수 있는 메타 데이터를 포함 될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3d99f-104">For example, a digital photograph might contain metadata that you can read to determine the make and model of the camera used to capture the image.</span></span> <span data-ttu-id="3d99f-105">와 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], 기존 메타 데이터를 읽을 수 있습니다 및 이미지 파일에 새 메타 데이터를 쓸 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3d99f-105">With [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], you can read existing metadata, and you can also write new metadata to image files.</span></span>  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]에서는 개별 메타데이터 부분을 <xref:System.Drawing.Imaging.PropertyItem> 개체에 저장합니다.  <xref:System.Drawing.Image> 개체의 <xref:System.Drawing.Image.PropertyItems%2A> 속성을 읽어 파일에 있는 모든 메타데이터를 검색할 수 있습니다.  <xref:System.Drawing.Image.PropertyItems%2A> 속성은 <xref:System.Drawing.Imaging.PropertyItem> 개체 배열을 반환합니다.  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="3d99f-106">메타 데이터는 개별 부분을 저장 한 <xref:System.Drawing.Imaging.PropertyItem> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="3d99f-106"> stores an individual piece of metadata in a <xref:System.Drawing.Imaging.PropertyItem> object.</span></span> <span data-ttu-id="3d99f-107">읽을 수는 <xref:System.Drawing.Image.PropertyItems%2A> 속성은 <xref:System.Drawing.Image> 파일에서 모든 메타 데이터를 검색할 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="3d99f-107">You can read the <xref:System.Drawing.Image.PropertyItems%2A> property of an <xref:System.Drawing.Image> object to retrieve all the metadata from a file.</span></span> <span data-ttu-id="3d99f-108"><xref:System.Drawing.Image.PropertyItems%2A> 속성의 배열을 반환 <xref:System.Drawing.Imaging.PropertyItem> 개체입니다.</span><span class="sxs-lookup"><span data-stu-id="3d99f-108">The <xref:System.Drawing.Image.PropertyItems%2A> property returns an array of <xref:System.Drawing.Imaging.PropertyItem> objects.</span></span>  
   
- <xref:System.Drawing.Imaging.PropertyItem> 개체에는 `Id`, `Value`, `Len` 및 `Type`이라는 네 가지 속성이 있습니다.  
+ <span data-ttu-id="3d99f-109">A <xref:System.Drawing.Imaging.PropertyItem> 개체에는 다음 네 가지 속성이: `Id`, `Value`, `Len`, 및 `Type`합니다.</span><span class="sxs-lookup"><span data-stu-id="3d99f-109">A <xref:System.Drawing.Imaging.PropertyItem> object has the following four properties: `Id`, `Value`, `Len`, and `Type`.</span></span>  
   
-## Id  
- 메타데이터 항목을 식별하는 태그입니다.  <xref:System.Drawing.Imaging.PropertyItem.Id%2A>에 할당할 수 있는 값 중 일부가 다음 표에 나와 있습니다.  
+## <a name="id"></a><span data-ttu-id="3d99f-110">ID</span><span class="sxs-lookup"><span data-stu-id="3d99f-110">Id</span></span>  
+ <span data-ttu-id="3d99f-111">메타 데이터 항목을 식별 하는 태그입니다.</span><span class="sxs-lookup"><span data-stu-id="3d99f-111">A tag that identifies the metadata item.</span></span> <span data-ttu-id="3d99f-112">에 할당할 수 있는 일부 값 <xref:System.Drawing.Imaging.PropertyItem.Id%2A> 다음 표에 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="3d99f-112">Some values that can be assigned to <xref:System.Drawing.Imaging.PropertyItem.Id%2A> are shown in the following table.</span></span>  
   
-|16진수 값|설명|  
-|------------|--------|  
-|0x0320<br /><br /> 0x010F<br /><br /> 0x0110<br /><br /> 0x9003<br /><br /> 0x829A<br /><br /> 0x5090<br /><br /> 0x5091|이미지 타이틀<br /><br /> 장비 제조업체<br /><br /> 장비 모델<br /><br /> ExifDTOriginal<br /><br /> Exif 노출 시간<br /><br /> 광도 테이블<br /><br /> 색소 테이블|  
+|<span data-ttu-id="3d99f-113">16 진수 값</span><span class="sxs-lookup"><span data-stu-id="3d99f-113">Hexadecimal value</span></span>|<span data-ttu-id="3d99f-114">설명</span><span class="sxs-lookup"><span data-stu-id="3d99f-114">Description</span></span>|  
+|-----------------------|-----------------|  
+|<span data-ttu-id="3d99f-115">0x0320</span><span class="sxs-lookup"><span data-stu-id="3d99f-115">0x0320</span></span><br /><br /> <span data-ttu-id="3d99f-116">0x010F</span><span class="sxs-lookup"><span data-stu-id="3d99f-116">0x010F</span></span><br /><br /> <span data-ttu-id="3d99f-117">0x0110</span><span class="sxs-lookup"><span data-stu-id="3d99f-117">0x0110</span></span><br /><br /> <span data-ttu-id="3d99f-118">0x9003</span><span class="sxs-lookup"><span data-stu-id="3d99f-118">0x9003</span></span><br /><br /> <span data-ttu-id="3d99f-119">0x829A</span><span class="sxs-lookup"><span data-stu-id="3d99f-119">0x829A</span></span><br /><br /> <span data-ttu-id="3d99f-120">0x5090</span><span class="sxs-lookup"><span data-stu-id="3d99f-120">0x5090</span></span><br /><br /> <span data-ttu-id="3d99f-121">0x5091</span><span class="sxs-lookup"><span data-stu-id="3d99f-121">0x5091</span></span>|<span data-ttu-id="3d99f-122">이미지 제목</span><span class="sxs-lookup"><span data-stu-id="3d99f-122">Image title</span></span><br /><br /> <span data-ttu-id="3d99f-123">장치 제조업체</span><span class="sxs-lookup"><span data-stu-id="3d99f-123">Equipment manufacturer</span></span><br /><br /> <span data-ttu-id="3d99f-124">장치 모델</span><span class="sxs-lookup"><span data-stu-id="3d99f-124">Equipment model</span></span><br /><br /> <span data-ttu-id="3d99f-125">ExifDTOriginal</span><span class="sxs-lookup"><span data-stu-id="3d99f-125">ExifDTOriginal</span></span><br /><br /> <span data-ttu-id="3d99f-126">Exif 노출 시간</span><span class="sxs-lookup"><span data-stu-id="3d99f-126">Exif exposure time</span></span><br /><br /> <span data-ttu-id="3d99f-127">광도 테이블</span><span class="sxs-lookup"><span data-stu-id="3d99f-127">Luminance table</span></span><br /><br /> <span data-ttu-id="3d99f-128">색차 테이블</span><span class="sxs-lookup"><span data-stu-id="3d99f-128">Chrominance table</span></span>|  
   
-## 값  
- 값 배열입니다.  값의 형식은 <xref:System.Drawing.Imaging.PropertyItem.Type%2A> 속성에 따라 결정됩니다.  
+## <a name="value"></a><span data-ttu-id="3d99f-129">값</span><span class="sxs-lookup"><span data-stu-id="3d99f-129">Value</span></span>  
+ <span data-ttu-id="3d99f-130">배열 값입니다.</span><span class="sxs-lookup"><span data-stu-id="3d99f-130">An array of values.</span></span> <span data-ttu-id="3d99f-131">값의 형식은 따라 사용자가 <xref:System.Drawing.Imaging.PropertyItem.Type%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="3d99f-131">The format of the values is determined by the <xref:System.Drawing.Imaging.PropertyItem.Type%2A> property.</span></span>  
   
-## Len  
- <xref:System.Drawing.Imaging.PropertyItem.Value%2A> 속성이 가리키는 값 배열의 바이트 단위 길이입니다.  
+## <a name="len"></a><span data-ttu-id="3d99f-132">Len</span><span class="sxs-lookup"><span data-stu-id="3d99f-132">Len</span></span>  
+ <span data-ttu-id="3d99f-133">(바이트)의 길이 값의 배열에서 가리키는 <xref:System.Drawing.Imaging.PropertyItem.Value%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="3d99f-133">The length (in bytes) of the array of values pointed to by the <xref:System.Drawing.Imaging.PropertyItem.Value%2A> property.</span></span>  
   
-## 형식  
- `Value` 속성이 가리키는 배열에 있는 값의 데이터 형식입니다.  `Type` 속성 값이 나타내는 형식이 다음 표에 나와 있습니다.  
+## <a name="type"></a><span data-ttu-id="3d99f-134">형식</span><span class="sxs-lookup"><span data-stu-id="3d99f-134">Type</span></span>  
+ <span data-ttu-id="3d99f-135">배열에 있는 값의 데이터 형식에서 가리키는 `Value` 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="3d99f-135">The data type of the values in the array pointed to by the `Value` property.</span></span> <span data-ttu-id="3d99f-136">나타내는 형식이 `Type` 속성 값은 다음 표와</span><span class="sxs-lookup"><span data-stu-id="3d99f-136">The formats indicated by the `Type` property values are shown in the following table</span></span>  
   
-|숫자 값|설명|  
-|----------|--------|  
-|1|`Byte`입니다.|  
-|2|ASCII로 인코딩된 `Byte` 개체의 배열입니다.|  
-|3|16비트 정수입니다.|  
-|4|32비트 정수입니다.|  
-|5|유리수를 나타내는 `Byte` 개체 두 개로 이루어진 배열입니다.|  
-|6|사용되지 않습니다.|  
-|7|정의되어 있지 않습니다.|  
-|8|사용되지 않습니다.|  
-|9|`SLong`|  
-|10|`SRational`|  
+|<span data-ttu-id="3d99f-137">숫자 값</span><span class="sxs-lookup"><span data-stu-id="3d99f-137">Numeric value</span></span>|<span data-ttu-id="3d99f-138">설명</span><span class="sxs-lookup"><span data-stu-id="3d99f-138">Description</span></span>|  
+|-------------------|-----------------|  
+|<span data-ttu-id="3d99f-139">1</span><span class="sxs-lookup"><span data-stu-id="3d99f-139">1</span></span>|<span data-ttu-id="3d99f-140">`Byte`입니다.</span><span class="sxs-lookup"><span data-stu-id="3d99f-140">A `Byte`</span></span>|  
+|<span data-ttu-id="3d99f-141">2</span><span class="sxs-lookup"><span data-stu-id="3d99f-141">2</span></span>|<span data-ttu-id="3d99f-142">배열 `Byte` ASCII로 인코딩된 개체</span><span class="sxs-lookup"><span data-stu-id="3d99f-142">An array of `Byte` objects encoded as ASCII</span></span>|  
+|<span data-ttu-id="3d99f-143">3</span><span class="sxs-lookup"><span data-stu-id="3d99f-143">3</span></span>|<span data-ttu-id="3d99f-144">16 비트 정수</span><span class="sxs-lookup"><span data-stu-id="3d99f-144">A 16-bit integer</span></span>|  
+|<span data-ttu-id="3d99f-145">4</span><span class="sxs-lookup"><span data-stu-id="3d99f-145">4</span></span>|<span data-ttu-id="3d99f-146">32 비트 정수</span><span class="sxs-lookup"><span data-stu-id="3d99f-146">A 32-bit integer</span></span>|  
+|<span data-ttu-id="3d99f-147">5</span><span class="sxs-lookup"><span data-stu-id="3d99f-147">5</span></span>|<span data-ttu-id="3d99f-148">두 배열 `Byte` 분수를 나타내는 개체를</span><span class="sxs-lookup"><span data-stu-id="3d99f-148">An array of two `Byte` objects that represent a rational number</span></span>|  
+|<span data-ttu-id="3d99f-149">6</span><span class="sxs-lookup"><span data-stu-id="3d99f-149">6</span></span>|<span data-ttu-id="3d99f-150">사용되지 않음</span><span class="sxs-lookup"><span data-stu-id="3d99f-150">Not used</span></span>|  
+|<span data-ttu-id="3d99f-151">7</span><span class="sxs-lookup"><span data-stu-id="3d99f-151">7</span></span>|<span data-ttu-id="3d99f-152">정의 되지 않은</span><span class="sxs-lookup"><span data-stu-id="3d99f-152">Undefined</span></span>|  
+|<span data-ttu-id="3d99f-153">8</span><span class="sxs-lookup"><span data-stu-id="3d99f-153">8</span></span>|<span data-ttu-id="3d99f-154">사용되지 않음</span><span class="sxs-lookup"><span data-stu-id="3d99f-154">Not used</span></span>|  
+|<span data-ttu-id="3d99f-155">9</span><span class="sxs-lookup"><span data-stu-id="3d99f-155">9</span></span>|`SLong`|  
+|<span data-ttu-id="3d99f-156">10</span><span class="sxs-lookup"><span data-stu-id="3d99f-156">10</span></span>|`SRational`|  
   
-## 예제  
+## <a name="example"></a><span data-ttu-id="3d99f-157">예제</span><span class="sxs-lookup"><span data-stu-id="3d99f-157">Example</span></span>  
   
-### 설명  
- 다음 코드 예제에서는 `FakePhoto.jpg` 파일에 있는 일곱 가지 메타데이터를 읽고 화면에 표시합니다.  목록에서 두 번째\(인덱스 1\) 속성 항목의 <xref:System.Drawing.Imaging.PropertyItem.Id%2A>는 0x010F\(장비 제조업체\)이고 <xref:System.Drawing.Imaging.PropertyItem.Type%2A>은 2\(ASCII로 인코딩된 바이트 배열\)입니다.  코드 예제에서는 해당 속성 항목의 값을 표시합니다.  
+### <a name="description"></a><span data-ttu-id="3d99f-158">설명</span><span class="sxs-lookup"><span data-stu-id="3d99f-158">Description</span></span>  
+ <span data-ttu-id="3d99f-159">다음 코드 예제에서는 파일의 일곱 가지 메타 데이터 표시를 읽고 `FakePhoto.jpg`합니다.</span><span class="sxs-lookup"><span data-stu-id="3d99f-159">The following code example reads and displays the seven pieces of metadata in the file `FakePhoto.jpg`.</span></span> <span data-ttu-id="3d99f-160">목록에서 두 번째 (인덱스 1) 속성 항목에 <xref:System.Drawing.Imaging.PropertyItem.Id%2A> 는 0x010F (주문자) 및 <xref:System.Drawing.Imaging.PropertyItem.Type%2A> 2 (ASCII로 인코딩된 바이트 배열)입니다.</span><span class="sxs-lookup"><span data-stu-id="3d99f-160">The second (index 1) property item in the list has <xref:System.Drawing.Imaging.PropertyItem.Id%2A> 0x010F (equipment manufacturer) and <xref:System.Drawing.Imaging.PropertyItem.Type%2A> 2 (ASCII-encoded byte array).</span></span> <span data-ttu-id="3d99f-161">코드 예제에서는 해당 속성 항목의 값을 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="3d99f-161">The code example displays the value of that property item.</span></span>  
   
- 코드를 실행하면 아래와 비슷한 결과가 나타납니다.  
+ <span data-ttu-id="3d99f-162">코드에는 다음과 유사한 출력이 생성 됩니다.</span><span class="sxs-lookup"><span data-stu-id="3d99f-162">The code produces output similar to the following:</span></span>  
   
  `Property Item 0`  
   
@@ -122,13 +126,13 @@ caps.handback.revision: 15
   
  `The equipment make is Northwind Camera.`  
   
-### 코드  
+### <a name="code"></a><span data-ttu-id="3d99f-163">코드</span><span class="sxs-lookup"><span data-stu-id="3d99f-163">Code</span></span>  
  [!code-csharp[System.Drawing.WorkingWithImages#51](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#51)]
  [!code-vb[System.Drawing.WorkingWithImages#51](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#51)]  
   
-## 코드 컴파일  
- 앞의 예제는 Windows Forms에서 사용해야 하며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`를 필요로 합니다.  폼의 <xref:System.Windows.Forms.Control.Paint> 이벤트를 처리하고 이 코드를 그리기 이벤트 처리기에 붙여 넣습니다.  `FakePhoto.jpg`를 시스템에서 사용할 수 있는 이미지 이름 및 경로로 바꾸고 `System.Drawing.Imaging` 네임스페이스를 가져와야 합니다.  
+## <a name="compiling-the-code"></a><span data-ttu-id="3d99f-164">코드 컴파일</span><span class="sxs-lookup"><span data-stu-id="3d99f-164">Compiling the Code</span></span>  
+ <span data-ttu-id="3d99f-165">앞의 예제는 Windows forms에서 사용하도록 설계되었으며 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기의 매개 변수인 <xref:System.Windows.Forms.PaintEventArgs> `e`가 필요합니다.</span><span class="sxs-lookup"><span data-stu-id="3d99f-165">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span> <span data-ttu-id="3d99f-166">폼의 처리 <xref:System.Windows.Forms.Control.Paint> 이벤트 하 paint 이벤트 처리기에이 코드를 붙여 넣습니다.</span><span class="sxs-lookup"><span data-stu-id="3d99f-166">Handle the form's <xref:System.Windows.Forms.Control.Paint> event and paste this code into the paint event handler.</span></span> <span data-ttu-id="3d99f-167">바꾸어야 `FakePhoto.jpg` 이미지 이름 및 경로 시스템 및 가져오기에 사용할 수는 `System.Drawing.Imaging` 네임 스페이스입니다.</span><span class="sxs-lookup"><span data-stu-id="3d99f-167">You must replace `FakePhoto.jpg` with an image name and path valid on your system and import the `System.Drawing.Imaging` namespace.</span></span>  
   
-## 참고 항목  
- [이미지, 비트맵 및 메타파일](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)   
- [이미지, 비트맵, 아이콘 및 메타파일 사용](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+## <a name="see-also"></a><span data-ttu-id="3d99f-168">참고 항목</span><span class="sxs-lookup"><span data-stu-id="3d99f-168">See Also</span></span>  
+ [<span data-ttu-id="3d99f-169">이미지, 비트맵 및 메타파일</span><span class="sxs-lookup"><span data-stu-id="3d99f-169">Images, Bitmaps, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [<span data-ttu-id="3d99f-170">이미지, 비트맵, 아이콘 및 메타파일 사용</span><span class="sxs-lookup"><span data-stu-id="3d99f-170">Working with Images, Bitmaps, Icons, and Metafiles</span></span>](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

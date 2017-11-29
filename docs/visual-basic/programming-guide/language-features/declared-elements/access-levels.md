@@ -1,103 +1,102 @@
 ---
-title: "Access Levels in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "members, accessing in Visual Basic"
-  - "Friend access modifier"
-  - "access levels, declared elements"
-  - "access levels"
-  - "access modifiers"
-  - "Public access modifier"
-  - "Protected access modifier"
-  - "Protected Friend access modifier"
-  - "Private access modifier"
-  - "declared elements, access level"
+title: "Visual Basic의 액세스 수준"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- members [Visual Basic], accessing in Visual Basic
+- Friend access modifier
+- access levels, declared elements
+- access levels
+- access modifiers
+- Public access modifier
+- Protected access modifier
+- Protected Friend access modifier
+- Private access modifier
+- declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-caps.latest.revision: 16
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 87e43ac7e813cece1179bdaf24c86fa62adcb438
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Access Levels in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-선언 요소의 *액세스 수준*은 해당 요소에 액세스할 수 있는 범위, 즉 해당 요소를 읽거나 쓸 수 있는 코드 범위를 나타냅니다.  액세스 수준은 요소 자체를 선언한 방법뿐만 아니라 해당 요소의 컨테이너에 대한 액세스 수준에 의해서도 결정됩니다.  포함하는 요소에 액세스할 수 없는 코드는 포함된 모든 요소에도 액세스할 수 없습니다. 이는 포함된 요소가 `Public`으로 선언된 경우에도 해당됩니다.  예를 들어, `Private` 구조체의 `Public` 변수는 해당 구조체를 포함하는 클래스 내에서는 액세스할 수 있지만 외부에서는 액세스할 수 없습니다.  
+# <a name="access-levels-in-visual-basic"></a><span data-ttu-id="2c159-102">Visual Basic의 액세스 수준</span><span class="sxs-lookup"><span data-stu-id="2c159-102">Access Levels in Visual Basic</span></span>
+<span data-ttu-id="2c159-103">*액세스 수준* 의 선언 된 요소에 액세스할 수 정도, 즉, 있는 코드를 읽거나 쓰려고 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c159-103">The *access level* of a declared element is the extent of the ability to access it, that is, what code has permission to read it or write to it.</span></span> <span data-ttu-id="2c159-104">이 요소 자체를 선언한 방법 뿐만 아니라 요소의 컨테이너의 액세스 수준을 통해 결정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="2c159-104">This is determined not only by how you declare the element itself, but also by the access level of the element's container.</span></span> <span data-ttu-id="2c159-105">것까지 포함 하는 요소에 액세스할 수 없는 코드에 액세스할 수 없는 모든 포함 된 요소로 선언 `Public`합니다.</span><span class="sxs-lookup"><span data-stu-id="2c159-105">Code that cannot access a containing element cannot access any of its contained elements, even those declared as `Public`.</span></span> <span data-ttu-id="2c159-106">예를 들어 한 `Public` 변수에 `Private` 구조에서가 아니라 서 구조를 포함 하는 클래스 내부에서 액세스할 수 해당 클래스 외부 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c159-106">For example, a `Public` variable in a `Private` structure can be accessed from inside the class that contains the structure, but not from outside that class.</span></span>  
   
-## Public  
- 선언 문에서 [Public](../../../../visual-basic/language-reference/modifiers/public.md) 키워드로 선언된 요소는 같은 프로젝트의 코드, 해당 프로젝트를 참조하는 다른 프로젝트 및 해당 프로젝트에서 빌드된 어셈블리에서 액세스할 수 있습니다.  다음 코드는 `Public` 선언의 예입니다.  
+## <a name="public"></a><span data-ttu-id="2c159-107">공용</span><span class="sxs-lookup"><span data-stu-id="2c159-107">Public</span></span>  
+ <span data-ttu-id="2c159-108">[공용](../../../../visual-basic/language-reference/modifiers/public.md) 선언문에서 키워드는 같은 프로젝트의 코드, 프로젝트를 참조 하는 다른 프로젝트 및 프로젝트에서 빌드된 어셈블리에서 요소에 액세스할 수 있는지 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c159-108">The [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword in the declaration statement specifies that the elements can be accessed from code anywhere in the same project, from other projects that reference the project, and from any assembly built from the project.</span></span> <span data-ttu-id="2c159-109">다음 코드 예제를 보여 줍니다. `Public` 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c159-109">The following code shows a sample `Public` declaration.</span></span>  
   
 ```  
 Public Class classForEverybody  
 ```  
   
- `Public` 키워드는 모듈, 인터페이스 또는 네임스페이스 수준에서만 사용할 수 있습니다.  즉, public 요소는 소스 파일 또는 네임스페이스의 수준이나 인터페이스, 모듈, 클래스 또는 구조체 내에서 선언할 수 있지만 프로시저에서는 선언할 수 없습니다.  
+ <span data-ttu-id="2c159-110">사용할 수 있습니다 `Public` 모듈, 인터페이스 또는 네임 스페이스 수준 에서만.</span><span class="sxs-lookup"><span data-stu-id="2c159-110">You can use `Public` only at module, interface, or namespace level.</span></span> <span data-ttu-id="2c159-111">즉, 소스 파일 또는 네임 스페이스의 또는 인터페이스, 모듈, 클래스 또는 구조체 내에 있지만 프로시저 수준에서 공용 요소를 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2c159-111">This means you can declare a public element at the level of a source file or namespace, or inside an interface, module, class, or structure, but not in a procedure.</span></span>  
   
-## Protected  
- 선언 문에서 [Protected](../../../../visual-basic/language-reference/modifiers/protected.md) 키워드로 선언된 요소는 같은 클래스 또는 해당 클래스에서 파생된 클래스에서만 액세스할 수 있습니다.  다음 코드는 `Protected` 선언의 예입니다.  
+## <a name="protected"></a><span data-ttu-id="2c159-112">보호됨</span><span class="sxs-lookup"><span data-stu-id="2c159-112">Protected</span></span>  
+ <span data-ttu-id="2c159-113">[Protected](../../../../visual-basic/language-reference/modifiers/protected.md) 선언문에서 키워드 지정 요소는이 클래스 로부터 파생 된 클래스 또는 동일한 클래스 내에서 에서만 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2c159-113">The [Protected](../../../../visual-basic/language-reference/modifiers/protected.md) keyword in the declaration statement specifies that the elements can be accessed only from within the same class, or from a class derived from this class.</span></span> <span data-ttu-id="2c159-114">다음 코드 예제를 보여 줍니다. `Protected` 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c159-114">The following code shows a sample `Protected` declaration.</span></span>  
   
 ```  
 Protected Class classForMyHeirs  
 ```  
   
- `Protected`는 클래스의 멤버를 선언할 때 클래스 수준에서만 사용할 수 있습니다.  즉, protected 요소는 클래스에서 선언할 수 있지만 소스 파일 또는 네임스페이스의 수준이나 인터페이스, 모듈, 구조체 또는 프로시저 내에서는 선언할 수 없습니다.  
+ <span data-ttu-id="2c159-115">사용할 수 있습니다 `Protected` 클래스에만 수준 선언할 때 클래스의 멤버입니다.</span><span class="sxs-lookup"><span data-stu-id="2c159-115">You can use `Protected` only at class level, and only when you declare a member of a class.</span></span> <span data-ttu-id="2c159-116">즉, 수준이 아닌 인터페이스, 모듈, 구조체 또는 프로시저 내부에서 실행 되거나 소스 파일 또는 네임 스페이스의 클래스에는 보호 된 요소를 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2c159-116">This means you can declare a protected element in a class, but not at the level of a source file or namespace, or inside an interface, module, structure, or procedure.</span></span>  
   
-## Friend  
- 선언 문에서 [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) 키워드로 선언된 요소는 같은 어셈블리 내에서만 액세스할 수 있고 어셈블리 외부에서는 액세스할 수 없습니다.  다음 코드는 `Friend` 선언의 예입니다.  
+## <a name="friend"></a><span data-ttu-id="2c159-117">Friend</span><span class="sxs-lookup"><span data-stu-id="2c159-117">Friend</span></span>  
+ <span data-ttu-id="2c159-118">[Friend](../../../../visual-basic/language-reference/modifiers/friend.md) 선언문에서 키워드에서가 아니라 하지만 동일한 어셈블리 내에서 요소에 액세스할 수 있다는 지정 어셈블리 외부에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2c159-118">The [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) keyword in the declaration statement specifies that the elements can be accessed from within the same assembly, but not from outside the assembly.</span></span> <span data-ttu-id="2c159-119">다음 코드 예제를 보여 줍니다. `Friend` 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c159-119">The following code shows a sample `Friend` declaration.</span></span>  
   
 ```  
 Friend stringForThisProject As String  
 ```  
   
- `Friend` 키워드는 모듈, 인터페이스 또는 네임스페이스 수준에서만 사용할 수 있습니다.  즉, friend 요소는 소스 파일 또는 네임스페이스의 수준이나 인터페이스, 모듈, 클래스 또는 구조체 내에서 선언할 수 있지만 프로시저에서는 선언할 수 없습니다.  
+ <span data-ttu-id="2c159-120">사용할 수 있습니다 `Friend` 모듈, 인터페이스 또는 네임 스페이스 수준 에서만.</span><span class="sxs-lookup"><span data-stu-id="2c159-120">You can use `Friend` only at module, interface, or namespace level.</span></span> <span data-ttu-id="2c159-121">즉, 소스 파일 또는 네임 스페이스의 또는 인터페이스, 모듈, 클래스 또는 구조체 내에 있지만 프로시저 수준에서 friend 요소를 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2c159-121">This means you can declare a friend element at the level of a source file or namespace, or inside an interface, module, class, or structure, but not in a procedure.</span></span>  
   
-## Protected Friend  
- 선언 문에서 `Protected`와 `Friend` 키워드로 선언된 요소는 파생된 클래스나 같은 어셈블리 내에서 액세스할 수 있습니다.  다음 코드는 `Protected` `Friend` 선언의 예입니다.  
+## <a name="protected-friend"></a><span data-ttu-id="2c159-122">Protected Friend</span><span class="sxs-lookup"><span data-stu-id="2c159-122">Protected Friend</span></span>  
+ <span data-ttu-id="2c159-123">`Protected` 및 `Friend` 선언문에서 키워드 또는 파생 된 클래스에서 내에서 요소를 액세스할 수 있도록 지정할 동일한 어셈블리 또는 둘 다 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c159-123">The `Protected` and `Friend` keywords together in the declaration statement specify that the elements can be accessed either from derived classes or from within the same assembly, or both.</span></span> <span data-ttu-id="2c159-124">다음 코드 예제를 보여 줍니다. `Protected Friend` 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c159-124">The following code shows a sample `Protected Friend` declaration.</span></span>  
   
 ```  
 Protected Friend stringForProjectAndHeirs As String  
 ```  
   
- `Protected` `Friend`는 클래스 수준에서, 클래스의 멤버를 선언할 때만 사용할 수 있습니다.  즉, protected friend 요소는 클래스에서 선언할 수 있지만 소스 파일 또는 네임스페이스의 수준이나 인터페이스, 모듈, 구조체 또는 프로시저 내에서는 선언할 수 없습니다.  
+ <span data-ttu-id="2c159-125">사용할 수 있습니다 `Protected Friend` 클래스에만 수준 선언할 때 클래스의 멤버입니다.</span><span class="sxs-lookup"><span data-stu-id="2c159-125">You can use `Protected Friend` only at class level, and only when you declare a member of a class.</span></span> <span data-ttu-id="2c159-126">즉, protected friend 클래스에 있지만 수준이 아닌 인터페이스, 모듈, 구조체 또는 프로시저 내부에서 실행 되거나 소스 파일 또는 네임 스페이스의 요소를 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2c159-126">This means you can declare a protected friend element in a class, but not at the level of a source file or namespace, or inside an interface, module, structure, or procedure.</span></span>  
   
-## Private  
- 선언 문에서 [Private](../../../../visual-basic/language-reference/modifiers/private.md)으로 선언된 키워드는 같은 모듈, 클래스 또는 구조체 내에서만 액세스할 수 있습니다.  다음 코드는 `Private` 선언의 예입니다.  
+## <a name="private"></a><span data-ttu-id="2c159-127">Private</span><span class="sxs-lookup"><span data-stu-id="2c159-127">Private</span></span>  
+ <span data-ttu-id="2c159-128">[개인](../../../../visual-basic/language-reference/modifiers/private.md) 요소에 동일한 모듈, 클래스 또는 구조체 내 에서만 액세스할 수 있다는 선언문에서 키워드를 지정 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c159-128">The [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword in the declaration statement specifies that the elements can be accessed only from within the same module, class, or structure.</span></span> <span data-ttu-id="2c159-129">다음 코드 예제를 보여 줍니다. `Private` 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c159-129">The following code shows a sample `Private` declaration.</span></span>  
   
 ```  
 Private numberForMeOnly As Integer  
 ```  
   
- `Private` 키워드는 모듈 수준에서만 사용할 수 있습니다.  즉, private 요소는 모듈, 클래스 또는 구조체 내에서 선언할 수 있지만 소스 파일 또는 네임스페이스의 수준이나 인터페이스 또는 프로시저에서는 선언할 수 없습니다.  
+ <span data-ttu-id="2c159-130">`Private`는 모듈 수준에서만 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2c159-130">You can use `Private` only at module level.</span></span> <span data-ttu-id="2c159-131">즉, 모듈, 클래스 또는 구조체 내 있지만 소스 파일 또는 인터페이스 내 또는 프로시저에서 네임 스페이스의 수준이 아닌 개인 요소를 선언할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2c159-131">This means you can declare a private element inside a module, class, or structure, but not at the level of a source file or namespace, inside an interface, or in a procedure.</span></span>  
   
- 모듈 수준에서 액세스 수준 키워드가 지정되지 않은 `Dim` 문은 `Private` 선언과 동일합니다.  그러나 `Private` 키워드를 사용하면 더 쉽게 코드를 읽고 해석할 수 있습니다.  
+ <span data-ttu-id="2c159-132">모듈 수준에서의 `Dim` 문을 액세스 수준 키워드 없이 해당 하는 `Private` 선언 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c159-132">At the module level, the `Dim` statement without any access level keywords is equivalent to a `Private` declaration.</span></span> <span data-ttu-id="2c159-133">하지만, 사용 하도록 필요할 수 있습니다는 `Private` 키워드 코드를 읽고 해석 하기 쉽게 수행할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c159-133">However, you might want to use the `Private` keyword to make your code easier to read and interpret.</span></span>  
   
-## 액세스 한정자  
- 액세스 수준을 지정하는 키워드를 *액세스 한정자*라고 합니다.  다음 표에서는 액세스 한정자를 비교합니다.  
+## <a name="access-modifiers"></a><span data-ttu-id="2c159-134">액세스 한정자</span><span class="sxs-lookup"><span data-stu-id="2c159-134">Access Modifiers</span></span>  
+ <span data-ttu-id="2c159-135">액세스 수준을 지정 하는 키워드 라고 *액세스 한정자*합니다.</span><span class="sxs-lookup"><span data-stu-id="2c159-135">The keywords that specify access level are called *access modifiers*.</span></span> <span data-ttu-id="2c159-136">다음 표에서 액세스 한정자를 비교 합니다.</span><span class="sxs-lookup"><span data-stu-id="2c159-136">The following table compares the access modifiers.</span></span>  
   
-|액세스 한정자|부여된 액세스 수준|이 액세스 수준으로 선언할 수 있는 요소|이 한정자를 사용할 수 있는 선언 컨텍스트|  
-|-------------|----------------|----------------------------|-----------------------------|  
-|`Public`|무제한:<br /><br /> public 요소를 볼 수 있는 모든 코드에서 액세스할 수 있음|인터페이스<br /><br /> 모듈<br /><br /> 클래스<br /><br /> 구조체<br /><br /> 구조체 멤버<br /><br /> 절차<br /><br /> 속성<br /><br /> 멤버 변수<br /><br /> 상수<br /><br /> 열거형<br /><br /> 이벤트<br /><br /> 외부 선언<br /><br /> 대리자|소스 파일<br /><br /> Namespace<br /><br /> Interface<br /><br /> 모듈<br /><br /> 클래스<br /><br /> 구조체|  
-|`Protected`|파생:<br /><br /> protected 요소를 선언하는 클래스 또는 이 클래스에서 파생된 클래스의 코드에서 액세스할 수 있음|인터페이스<br /><br /> 클래스<br /><br /> 구조체<br /><br /> 절차<br /><br /> 속성<br /><br /> 멤버 변수<br /><br /> 상수<br /><br /> 열거형<br /><br /> 이벤트<br /><br /> 외부 선언<br /><br /> 대리자|클래스|  
-|`Friend`|어셈블리:<br /><br /> friend 요소를 선언하는 어셈블리의 코드에서 액세스할 수 있음|인터페이스<br /><br /> 모듈<br /><br /> 클래스<br /><br /> 구조체<br /><br /> 구조체 멤버<br /><br /> 절차<br /><br /> 속성<br /><br /> 멤버 변수<br /><br /> 상수<br /><br /> 열거형<br /><br /> 이벤트<br /><br /> 외부 선언<br /><br /> 대리자|소스 파일<br /><br /> Namespace<br /><br /> Interface<br /><br /> 모듈<br /><br /> 클래스<br /><br /> 구조체|  
-|`Protected` `Friend`|`Protected`와 `Friend`의 통합:<br /><br /> protected friend 요소와 동일한 클래스 또는 어셈블리 내의 코드나 해당 요소의 클래스에서 파생된 모든 클래스의 코드에서 액세스할 수 있음|인터페이스<br /><br /> 클래스<br /><br /> 구조체<br /><br /> 절차<br /><br /> 속성<br /><br /> 멤버 변수<br /><br /> 상수<br /><br /> 열거형<br /><br /> 이벤트<br /><br /> 외부 선언<br /><br /> 대리자|클래스|  
-|`Private`|선언 컨텍스트:<br /><br /> private 요소를 선언하는 형식의 코드와 포함된 형식 내의 코드에서 액세스할 수 있음|인터페이스<br /><br /> 클래스<br /><br /> 구조체<br /><br /> 구조체 멤버<br /><br /> 절차<br /><br /> 속성<br /><br /> 멤버 변수<br /><br /> 상수<br /><br /> 열거형<br /><br /> 이벤트<br /><br /> 외부 선언<br /><br /> 대리자|모듈<br /><br /> 클래스<br /><br /> 구조체|  
+|<span data-ttu-id="2c159-137">액세스 한정자</span><span class="sxs-lookup"><span data-stu-id="2c159-137">Access modifier</span></span>|<span data-ttu-id="2c159-138">부여 된 액세스 수준</span><span class="sxs-lookup"><span data-stu-id="2c159-138">Access level granted</span></span>|<span data-ttu-id="2c159-139">이 액세스 수준으로 선언할 수 요소</span><span class="sxs-lookup"><span data-stu-id="2c159-139">Elements you can declare with this access level</span></span>|<span data-ttu-id="2c159-140">이 한정자를 사용할 수 있는 선언 컨텍스트</span><span class="sxs-lookup"><span data-stu-id="2c159-140">Declaration context within which you can use this modifier</span></span>|  
+|---------------------|--------------------------|-----------------------------------------------------|----------------------------------------------------------------|  
+|`Public`|<span data-ttu-id="2c159-141">무제한:</span><span class="sxs-lookup"><span data-stu-id="2c159-141">Unrestricted:</span></span><br /><br /> <span data-ttu-id="2c159-142">Public 요소를 볼 수 있습니다. 있는 모든 코드에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2c159-142">Any code that can see a public element can access it</span></span>|<span data-ttu-id="2c159-143">인터페이스</span><span class="sxs-lookup"><span data-stu-id="2c159-143">Interfaces</span></span><br /><br /> <span data-ttu-id="2c159-144">모듈</span><span class="sxs-lookup"><span data-stu-id="2c159-144">Modules</span></span><br /><br /> <span data-ttu-id="2c159-145">클래스</span><span class="sxs-lookup"><span data-stu-id="2c159-145">Classes</span></span><br /><br /> <span data-ttu-id="2c159-146">구조체</span><span class="sxs-lookup"><span data-stu-id="2c159-146">Structures</span></span><br /><br /> <span data-ttu-id="2c159-147">구조체 멤버</span><span class="sxs-lookup"><span data-stu-id="2c159-147">Structure members</span></span><br /><br /> <span data-ttu-id="2c159-148">절차</span><span class="sxs-lookup"><span data-stu-id="2c159-148">Procedures</span></span><br /><br /> <span data-ttu-id="2c159-149">속성</span><span class="sxs-lookup"><span data-stu-id="2c159-149">Properties</span></span><br /><br /> <span data-ttu-id="2c159-150">멤버 변수</span><span class="sxs-lookup"><span data-stu-id="2c159-150">Member variables</span></span><br /><br /> <span data-ttu-id="2c159-151">상수</span><span class="sxs-lookup"><span data-stu-id="2c159-151">Constants</span></span><br /><br /> <span data-ttu-id="2c159-152">열거형</span><span class="sxs-lookup"><span data-stu-id="2c159-152">Enumerations</span></span><br /><br /> <span data-ttu-id="2c159-153">이벤트</span><span class="sxs-lookup"><span data-stu-id="2c159-153">Events</span></span><br /><br /> <span data-ttu-id="2c159-154">외부 선언</span><span class="sxs-lookup"><span data-stu-id="2c159-154">External declarations</span></span><br /><br /> <span data-ttu-id="2c159-155">대리자</span><span class="sxs-lookup"><span data-stu-id="2c159-155">Delegates</span></span>|<span data-ttu-id="2c159-156">소스 파일</span><span class="sxs-lookup"><span data-stu-id="2c159-156">Source file</span></span><br /><br /> <span data-ttu-id="2c159-157">네임스페이스</span><span class="sxs-lookup"><span data-stu-id="2c159-157">Namespace</span></span><br /><br /> <span data-ttu-id="2c159-158">인터페이스</span><span class="sxs-lookup"><span data-stu-id="2c159-158">Interface</span></span><br /><br /> <span data-ttu-id="2c159-159">모듈</span><span class="sxs-lookup"><span data-stu-id="2c159-159">Module</span></span><br /><br /> <span data-ttu-id="2c159-160">클래스</span><span class="sxs-lookup"><span data-stu-id="2c159-160">Class</span></span><br /><br /> <span data-ttu-id="2c159-161">구조체</span><span class="sxs-lookup"><span data-stu-id="2c159-161">Structure</span></span>|  
+|`Protected`|<span data-ttu-id="2c159-162">파생:</span><span class="sxs-lookup"><span data-stu-id="2c159-162">Derivational:</span></span><br /><br /> <span data-ttu-id="2c159-163">요소에 액세스할 수는 보호 된 요소 또는 여기에서 파생 된 클래스를 선언 하는 클래스의 코드에서</span><span class="sxs-lookup"><span data-stu-id="2c159-163">Code in the class that declares a protected element, or a class derived from it, can access the element</span></span>|<span data-ttu-id="2c159-164">인터페이스</span><span class="sxs-lookup"><span data-stu-id="2c159-164">Interfaces</span></span><br /><br /> <span data-ttu-id="2c159-165">클래스</span><span class="sxs-lookup"><span data-stu-id="2c159-165">Classes</span></span><br /><br /> <span data-ttu-id="2c159-166">구조체</span><span class="sxs-lookup"><span data-stu-id="2c159-166">Structures</span></span><br /><br /> <span data-ttu-id="2c159-167">절차</span><span class="sxs-lookup"><span data-stu-id="2c159-167">Procedures</span></span><br /><br /> <span data-ttu-id="2c159-168">속성</span><span class="sxs-lookup"><span data-stu-id="2c159-168">Properties</span></span><br /><br /> <span data-ttu-id="2c159-169">멤버 변수</span><span class="sxs-lookup"><span data-stu-id="2c159-169">Member variables</span></span><br /><br /> <span data-ttu-id="2c159-170">상수</span><span class="sxs-lookup"><span data-stu-id="2c159-170">Constants</span></span><br /><br /> <span data-ttu-id="2c159-171">열거형</span><span class="sxs-lookup"><span data-stu-id="2c159-171">Enumerations</span></span><br /><br /> <span data-ttu-id="2c159-172">이벤트</span><span class="sxs-lookup"><span data-stu-id="2c159-172">Events</span></span><br /><br /> <span data-ttu-id="2c159-173">외부 선언</span><span class="sxs-lookup"><span data-stu-id="2c159-173">External declarations</span></span><br /><br /> <span data-ttu-id="2c159-174">대리자</span><span class="sxs-lookup"><span data-stu-id="2c159-174">Delegates</span></span>|<span data-ttu-id="2c159-175">클래스</span><span class="sxs-lookup"><span data-stu-id="2c159-175">Class</span></span>|  
+|`Friend`|<span data-ttu-id="2c159-176">어셈블리:</span><span class="sxs-lookup"><span data-stu-id="2c159-176">Assembly:</span></span><br /><br /> <span data-ttu-id="2c159-177">Friend 요소에 액세스할 수를 선언 하는 어셈블리의 코드에서</span><span class="sxs-lookup"><span data-stu-id="2c159-177">Code in the assembly that declares a friend element can access it</span></span>|<span data-ttu-id="2c159-178">인터페이스</span><span class="sxs-lookup"><span data-stu-id="2c159-178">Interfaces</span></span><br /><br /> <span data-ttu-id="2c159-179">모듈</span><span class="sxs-lookup"><span data-stu-id="2c159-179">Modules</span></span><br /><br /> <span data-ttu-id="2c159-180">클래스</span><span class="sxs-lookup"><span data-stu-id="2c159-180">Classes</span></span><br /><br /> <span data-ttu-id="2c159-181">구조체</span><span class="sxs-lookup"><span data-stu-id="2c159-181">Structures</span></span><br /><br /> <span data-ttu-id="2c159-182">구조체 멤버</span><span class="sxs-lookup"><span data-stu-id="2c159-182">Structure members</span></span><br /><br /> <span data-ttu-id="2c159-183">절차</span><span class="sxs-lookup"><span data-stu-id="2c159-183">Procedures</span></span><br /><br /> <span data-ttu-id="2c159-184">속성</span><span class="sxs-lookup"><span data-stu-id="2c159-184">Properties</span></span><br /><br /> <span data-ttu-id="2c159-185">멤버 변수</span><span class="sxs-lookup"><span data-stu-id="2c159-185">Member variables</span></span><br /><br /> <span data-ttu-id="2c159-186">상수</span><span class="sxs-lookup"><span data-stu-id="2c159-186">Constants</span></span><br /><br /> <span data-ttu-id="2c159-187">열거형</span><span class="sxs-lookup"><span data-stu-id="2c159-187">Enumerations</span></span><br /><br /> <span data-ttu-id="2c159-188">이벤트</span><span class="sxs-lookup"><span data-stu-id="2c159-188">Events</span></span><br /><br /> <span data-ttu-id="2c159-189">외부 선언</span><span class="sxs-lookup"><span data-stu-id="2c159-189">External declarations</span></span><br /><br /> <span data-ttu-id="2c159-190">대리자</span><span class="sxs-lookup"><span data-stu-id="2c159-190">Delegates</span></span>|<span data-ttu-id="2c159-191">소스 파일</span><span class="sxs-lookup"><span data-stu-id="2c159-191">Source file</span></span><br /><br /> <span data-ttu-id="2c159-192">네임스페이스</span><span class="sxs-lookup"><span data-stu-id="2c159-192">Namespace</span></span><br /><br /> <span data-ttu-id="2c159-193">인터페이스</span><span class="sxs-lookup"><span data-stu-id="2c159-193">Interface</span></span><br /><br /> <span data-ttu-id="2c159-194">모듈</span><span class="sxs-lookup"><span data-stu-id="2c159-194">Module</span></span><br /><br /> <span data-ttu-id="2c159-195">클래스</span><span class="sxs-lookup"><span data-stu-id="2c159-195">Class</span></span><br /><br /> <span data-ttu-id="2c159-196">구조체</span><span class="sxs-lookup"><span data-stu-id="2c159-196">Structure</span></span>|  
+|<span data-ttu-id="2c159-197">`Protected` `Friend`</span><span class="sxs-lookup"><span data-stu-id="2c159-197">`Protected` `Friend`</span></span>|<span data-ttu-id="2c159-198">공용 구조체에 `Protected` 및 `Friend`:</span><span class="sxs-lookup"><span data-stu-id="2c159-198">Union of `Protected` and `Friend`:</span></span><br /><br /> <span data-ttu-id="2c159-199">동일한 클래스 또는 protected friend 요소 또는 요소의 클래스에서 파생 된 클래스 내에서 동일한 어셈블리에서 코드를 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="2c159-199">Code in the same class or the same assembly as a protected friend element, or within any class derived from the element's class, can access it</span></span>|<span data-ttu-id="2c159-200">인터페이스</span><span class="sxs-lookup"><span data-stu-id="2c159-200">Interfaces</span></span><br /><br /> <span data-ttu-id="2c159-201">클래스</span><span class="sxs-lookup"><span data-stu-id="2c159-201">Classes</span></span><br /><br /> <span data-ttu-id="2c159-202">구조체</span><span class="sxs-lookup"><span data-stu-id="2c159-202">Structures</span></span><br /><br /> <span data-ttu-id="2c159-203">절차</span><span class="sxs-lookup"><span data-stu-id="2c159-203">Procedures</span></span><br /><br /> <span data-ttu-id="2c159-204">속성</span><span class="sxs-lookup"><span data-stu-id="2c159-204">Properties</span></span><br /><br /> <span data-ttu-id="2c159-205">멤버 변수</span><span class="sxs-lookup"><span data-stu-id="2c159-205">Member variables</span></span><br /><br /> <span data-ttu-id="2c159-206">상수</span><span class="sxs-lookup"><span data-stu-id="2c159-206">Constants</span></span><br /><br /> <span data-ttu-id="2c159-207">열거형</span><span class="sxs-lookup"><span data-stu-id="2c159-207">Enumerations</span></span><br /><br /> <span data-ttu-id="2c159-208">이벤트</span><span class="sxs-lookup"><span data-stu-id="2c159-208">Events</span></span><br /><br /> <span data-ttu-id="2c159-209">외부 선언</span><span class="sxs-lookup"><span data-stu-id="2c159-209">External declarations</span></span><br /><br /> <span data-ttu-id="2c159-210">대리자</span><span class="sxs-lookup"><span data-stu-id="2c159-210">Delegates</span></span>|<span data-ttu-id="2c159-211">클래스</span><span class="sxs-lookup"><span data-stu-id="2c159-211">Class</span></span>|  
+|`Private`|<span data-ttu-id="2c159-212">선언 컨텍스트.</span><span class="sxs-lookup"><span data-stu-id="2c159-212">Declaration context:</span></span><br /><br /> <span data-ttu-id="2c159-213">요소에 액세스할 수 포함 된 형식 내에서 코드를 포함 하 여 private 요소를 선언 하는 형식 코드</span><span class="sxs-lookup"><span data-stu-id="2c159-213">Code in the type that declares a private element, including code within contained types, can access the element</span></span>|<span data-ttu-id="2c159-214">인터페이스</span><span class="sxs-lookup"><span data-stu-id="2c159-214">Interfaces</span></span><br /><br /> <span data-ttu-id="2c159-215">클래스</span><span class="sxs-lookup"><span data-stu-id="2c159-215">Classes</span></span><br /><br /> <span data-ttu-id="2c159-216">구조체</span><span class="sxs-lookup"><span data-stu-id="2c159-216">Structures</span></span><br /><br /> <span data-ttu-id="2c159-217">구조체 멤버</span><span class="sxs-lookup"><span data-stu-id="2c159-217">Structure members</span></span><br /><br /> <span data-ttu-id="2c159-218">절차</span><span class="sxs-lookup"><span data-stu-id="2c159-218">Procedures</span></span><br /><br /> <span data-ttu-id="2c159-219">속성</span><span class="sxs-lookup"><span data-stu-id="2c159-219">Properties</span></span><br /><br /> <span data-ttu-id="2c159-220">멤버 변수</span><span class="sxs-lookup"><span data-stu-id="2c159-220">Member variables</span></span><br /><br /> <span data-ttu-id="2c159-221">상수</span><span class="sxs-lookup"><span data-stu-id="2c159-221">Constants</span></span><br /><br /> <span data-ttu-id="2c159-222">열거형</span><span class="sxs-lookup"><span data-stu-id="2c159-222">Enumerations</span></span><br /><br /> <span data-ttu-id="2c159-223">이벤트</span><span class="sxs-lookup"><span data-stu-id="2c159-223">Events</span></span><br /><br /> <span data-ttu-id="2c159-224">외부 선언</span><span class="sxs-lookup"><span data-stu-id="2c159-224">External declarations</span></span><br /><br /> <span data-ttu-id="2c159-225">대리자</span><span class="sxs-lookup"><span data-stu-id="2c159-225">Delegates</span></span>|<span data-ttu-id="2c159-226">모듈</span><span class="sxs-lookup"><span data-stu-id="2c159-226">Module</span></span><br /><br /> <span data-ttu-id="2c159-227">클래스</span><span class="sxs-lookup"><span data-stu-id="2c159-227">Class</span></span><br /><br /> <span data-ttu-id="2c159-228">구조체</span><span class="sxs-lookup"><span data-stu-id="2c159-228">Structure</span></span>|  
   
-## 참고 항목  
- [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md)   
- [Static](../../../../visual-basic/language-reference/modifiers/static.md)   
- [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)   
- [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)   
- [Declared Element Characteristics](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)   
- [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)   
- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)   
- [How to: Control the Availability of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)   
- [Variables](../../../../visual-basic/programming-guide/language-features/variables/index.md)   
- [변수 선언](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+## <a name="see-also"></a><span data-ttu-id="2c159-229">참고 항목</span><span class="sxs-lookup"><span data-stu-id="2c159-229">See Also</span></span>  
+ [<span data-ttu-id="2c159-230">Dim 문</span><span class="sxs-lookup"><span data-stu-id="2c159-230">Dim Statement</span></span>](../../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [<span data-ttu-id="2c159-231">정적</span><span class="sxs-lookup"><span data-stu-id="2c159-231">Static</span></span>](../../../../visual-basic/language-reference/modifiers/static.md)  
+ [<span data-ttu-id="2c159-232">선언 요소 이름</span><span class="sxs-lookup"><span data-stu-id="2c159-232">Declared Element Names</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
+ [<span data-ttu-id="2c159-233">선언된 요소 참조</span><span class="sxs-lookup"><span data-stu-id="2c159-233">References to Declared Elements</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
+ [<span data-ttu-id="2c159-234">선언 요소의 특징</span><span class="sxs-lookup"><span data-stu-id="2c159-234">Declared Element Characteristics</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
+ [<span data-ttu-id="2c159-235">Visual Basic의 수명</span><span class="sxs-lookup"><span data-stu-id="2c159-235">Lifetime in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)  
+ [<span data-ttu-id="2c159-236">Visual Basic의 범위</span><span class="sxs-lookup"><span data-stu-id="2c159-236">Scope in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)  
+ [<span data-ttu-id="2c159-237">방법: 변수의 사용 가능성 제어</span><span class="sxs-lookup"><span data-stu-id="2c159-237">How to: Control the Availability of a Variable</span></span>](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)  
+ [<span data-ttu-id="2c159-238">변수</span><span class="sxs-lookup"><span data-stu-id="2c159-238">Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
+ [<span data-ttu-id="2c159-239">변수 선언</span><span class="sxs-lookup"><span data-stu-id="2c159-239">Variable Declaration</span></span>](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

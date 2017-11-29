@@ -1,41 +1,44 @@
 ---
-title: "방법: 3차원 장면의 Material 속성에 애니메이션 효과 주기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "3차원 장면, Material 속성에 애니메이션 적용"
-  - "애니메이션, 3차원 장면의 Material 속성"
-  - "Material 속성, 3차원 장면에 애니메이션 적용"
+title: "방법: 3차원 장면의 Material 속성에 애니메이션 효과 주기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Material properties [WPF], animating in 3-D scenes
+- animation [WPF], Material properties in 3-D scenes
+- 3-D scenes [WPF], animating Material properties
 ms.assetid: 229fd6eb-7401-4992-b0c9-8b28de230c0f
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 273c03fcedbd5e5b2f6a38cb718788d5f8d8fda3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 3차원 장면의 Material 속성에 애니메이션 효과 주기
-이 예제에서는 [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] 모델에 적용된 <xref:System.Windows.Media.Media3D.Material>의 <xref:System.Windows.Media.Brush.Opacity%2A> 속성에 애니메이션 효과를 주는 방법을 보여 줍니다.  
+# <a name="how-to-animate-material-properties-in-a-3-d-scene"></a><span data-ttu-id="0d716-102">방법: 3차원 장면의 Material 속성에 애니메이션 효과 주기</span><span class="sxs-lookup"><span data-stu-id="0d716-102">How to: Animate Material Properties in a 3-D Scene</span></span>
+<span data-ttu-id="0d716-103">애니메이션 효과 적용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.Brush.Opacity%2A> 속성은 <xref:System.Windows.Media.Media3D.Material> 에 적용 한 [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] 모델입니다.</span><span class="sxs-lookup"><span data-stu-id="0d716-103">This example shows how to animate the <xref:System.Windows.Media.Brush.Opacity%2A> property of the <xref:System.Windows.Media.Media3D.Material> applied to a [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] model.</span></span>  
   
- 다음 코드 예제에서는 3D 개체에 적용된 <xref:System.Windows.Media.Media3D.Material>로 사용되는 <xref:System.Windows.Media.LinearGradientBrush>를 정의합니다.  
+ <span data-ttu-id="0d716-104">다음 코드 예제에서는 정의 <xref:System.Windows.Media.LinearGradientBrush> 로 사용 되는 <xref:System.Windows.Media.Media3D.Material> 3D 개체에 적용 합니다.</span><span class="sxs-lookup"><span data-stu-id="0d716-104">The following code example defines the <xref:System.Windows.Media.LinearGradientBrush> used as the <xref:System.Windows.Media.Media3D.Material> applied to the 3D object.</span></span>  
   
- [!code-xml[Animation3DGallery_snip#AnimateMaterialExampleInline1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/AnimateMaterialExample.xaml#animatematerialexampleinline1)]  
+ [!code-xaml[Animation3DGallery_snip#AnimateMaterialExampleInline1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/AnimateMaterialExample.xaml#animatematerialexampleinline1)]  
   
- 아래의 코드 예제를 사용하여 이 <xref:System.Windows.Media.LinearGradientBrush>의 <xref:System.Windows.Media.Brush.Opacity%2A> 속성에 애니메이션 효과를 줍니다.  
+ <span data-ttu-id="0d716-105"><xref:System.Windows.Media.Brush.Opacity%2A> 속성 <xref:System.Windows.Media.LinearGradientBrush> 아래 코드 예제를 사용 하 여 애니메이션 효과가 적용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="0d716-105">The <xref:System.Windows.Media.Brush.Opacity%2A> property of this <xref:System.Windows.Media.LinearGradientBrush> is animated using the code example below.</span></span>  
   
- [!code-xml[Animation3DGallery_snip#AnimateMaterialExampleInline2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/AnimateMaterialExample.xaml#animatematerialexampleinline2)]  
+ [!code-xaml[Animation3DGallery_snip#AnimateMaterialExampleInline2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/AnimateMaterialExample.xaml#animatematerialexampleinline2)]  
   
-## 예제  
- 다음 코드에서는 전체 샘플을 보여 줍니다.  
+## <a name="example"></a><span data-ttu-id="0d716-106">예제</span><span class="sxs-lookup"><span data-stu-id="0d716-106">Example</span></span>  
+ <span data-ttu-id="0d716-107">다음 코드에서는 전체 예제를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="0d716-107">The following code shows the entire sample.</span></span>  
   
- [!code-xml[Animation3DGallery_snip#AnimateMaterialExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/AnimateMaterialExample.xaml#animatematerialexamplewholepage)]  
+ [!code-xaml[Animation3DGallery_snip#AnimateMaterialExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/AnimateMaterialExample.xaml#animatematerialexamplewholepage)]  
   
-## 참고 항목  
- [3차원 장면 만들기](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)   
- [3차원 그래픽 개요](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+## <a name="see-also"></a><span data-ttu-id="0d716-108">참고 항목</span><span class="sxs-lookup"><span data-stu-id="0d716-108">See Also</span></span>  
+ [<span data-ttu-id="0d716-109">3차원 장면 만들기</span><span class="sxs-lookup"><span data-stu-id="0d716-109">Create a 3-D Scene</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)  
+ [<span data-ttu-id="0d716-110">3차원 그래픽 개요</span><span class="sxs-lookup"><span data-stu-id="0d716-110">3-D Graphics Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)

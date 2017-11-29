@@ -1,288 +1,291 @@
 ---
-title: "보안(WPF) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "응용 프로그램 보안[WPF]"
-  - "브라우저에서 호스팅되는 응용 프로그램 보안[WPF]"
-  - "기능 컨트롤[WPF], 보안"
-  - "Internet Explorer 보안 설정[WPF]"
-  - "느슨한 XAML 파일[WPF], 샌드박스 동작"
-  - "탐색 보안[WPF]"
-  - "WebBrowser 컨트롤[WPF], 보안"
-  - "WPF 보안"
-  - "XAML 파일[WPF], 샌드박스 동작"
-  - "XBAP 보안[WPF]"
+title: "보안(WPF)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XAML files [WPF], sandbox behavior
+- browser-hosted application security [WPF]
+- application security [WPF]
+- navigation security [WPF]
+- loose XAML files [WPF], sandbox behavior
+- WPF security [WPF]
+- WebBrowser control [WPF], security
+- feature controls [WPF], security
+- XBAP security [WPF]
+- Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-caps.latest.revision: 38
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 33
+caps.latest.revision: "38"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9b7abab8747272fcf23611539c29ab476c5bed48
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 보안(WPF)
-<a name="introduction"></a> [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] 독립 실행형 응용 프로그램과 브라우저에서 호스팅되는 응용 프로그램을 개발하는 경우 보안 모델에 대해 고려해야 합니다. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 독립 실행형 응용 프로그램은 Windows Installer\(.msi\), XCopy, 또는 [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]를 사용하여 배포되었는지 여부에 상관없이 무제한 권한\([!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** 권한 집합\)으로 실행됩니다.  ClickOnce를 사용하여 부분적으로 신뢰되는 독립 실행형 WPF 응용 프로그램을 배포하는 것은 지원되지 않습니다.  그러나 완전 신뢰 호스트 응용 프로그램은 .NET Framework 추가 기능 모델을 사용하여 부분 신뢰 <xref:System.AppDomain>을 만들 수 있습니다.  자세한 내용은 [WPF 추가 기능 개요](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)를 참조하십시오.  
+# <a name="security-wpf"></a><span data-ttu-id="a0670-102">보안(WPF)</span><span class="sxs-lookup"><span data-stu-id="a0670-102">Security (WPF)</span></span>
+<span data-ttu-id="a0670-103"><a name="introduction"></a>개발 하는 경우 [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] 독립 실행형 및 브라우저에서 호스팅되는 응용 프로그램 보안 모델은 고려해 야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-103"><a name="introduction"></a> When developing [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] standalone and browser-hosted applications, you must consider the security model.</span></span> [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]<span data-ttu-id="a0670-104">독립 실행형 응용 프로그램 무제한 권한으로 실행 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** 사용 권한 집합), Windows Installer (.msi) XCopy를 사용 하 여 배포 인지 여부 또는 [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-104"> standalone applications execute with unrestricted permissions ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]**FullTrust** permission set), whether deployed using Windows Installer (.msi), XCopy, or [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)].</span></span> <span data-ttu-id="a0670-105">ClickOnce를 포함한 부분 신뢰, 독립 실행형 WPF 응용 프로그램 배포가 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-105">Deploying partial-trust, standalone WPF applications with ClickOnce is unsupported.</span></span> <span data-ttu-id="a0670-106">그러나 완전 신뢰 호스트 응용 프로그램 부분 신뢰를 만들 수 <xref:System.AppDomain> .NET Framework 추가 기능 모델을 사용 하 여 합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-106">However, a full-trust host application can create a partial-trust <xref:System.AppDomain> using the .NET Framework Add-in model.</span></span> <span data-ttu-id="a0670-107">자세한 내용은 참조 [WPF 추가 기능 개요](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-107">For more information, see [WPF Add-Ins Overview](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).</span></span>  
   
- 브라우저에서 호스팅되는 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 응응 프로그램은 [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] 또는 Firefox에서 호스팅되며 [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] 또는 느슨한 [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] 문서일 수 있습니다. 자세한 내용은 [WPF XAML 브라우저 응용 프로그램 개요](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)를 참조하십시오.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]<span data-ttu-id="a0670-108">브라우저에서 호스팅되는 응용 프로그램에서 호스팅되는 [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] 또는 Firefox 될 수 있습니다 [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] 또는 느슨한 [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] 에 대 한 자세한 내용은 문서 참조 [WPF XAML 브라우저 응용 프로그램 개요](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-108"> browser-hosted applications are hosted by [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] or Firefox, and can be either [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] or loose [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] documents For more information, see [WPF XAML Browser Applications Overview](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md).</span></span>  
   
- 기본적으로 브라우저에서 호스팅되는 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램은 기본 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **Internet** 영역 권한 집합으로 제한되는 부분 신뢰 보안 샌드박스 내에서 실행됩니다.  이 경우 일반 웹 응용 프로그램이 격리될 것으로 예상할 때와 동일한 방식으로 브라우저에서 호스팅되는 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램이 실제로 클라이언트 컴퓨터에서 격리됩니다.  XBAP는 배포 URL의 보안 영역 및 클라이언트의 보안 구성에 따라 권한을 전체 신뢰까지 상승시킬 수 있습니다.  자세한 내용은 [WPF 부분 신뢰 보안](../../../docs/framework/wpf/wpf-partial-trust-security.md)을 참조하십시오.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]<span data-ttu-id="a0670-109">브라우저에서 호스팅되는 응용 프로그램 기본 제한 되는 기본적으로 부분 신뢰 보안 샌드박스에서 실행 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **인터넷** 영역 권한 집합입니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-109"> browser-hosted applications execute within a partial trust security sandbox, by default, which is limited to the default [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]**Internet** zone permission set.</span></span> <span data-ttu-id="a0670-110">이 실제로 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 분리 되어야 하는 일반적인 웹 응용 프로그램 기대 같은 방식으로 클라이언트 컴퓨터에서 브라우저 호스팅되는 응용 프로그램입니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-110">This effectively isolates [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] browser-hosted applications from the client computer in the same way that you would expect typical Web applications to be isolated.</span></span> <span data-ttu-id="a0670-111">XBAP는 배포 URL 및 클라이언트의 보안 구성의 보안 영역에 따라 권한을 완전 신뢰까지 높일 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-111">An XBAP can elevate privileges, up to Full Trust, depending on the security zone of the deployment URL and the client's security configuration.</span></span> <span data-ttu-id="a0670-112">자세한 내용은 [WPF 부분 신뢰 보안](../../../docs/framework/wpf/wpf-partial-trust-security.md)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="a0670-112">For more information, see [WPF Partial Trust Security](../../../docs/framework/wpf/wpf-partial-trust-security.md).</span></span>  
   
- 이 항목에서는 [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] 독립 실행형 응용 프로그램과 브라우저에서 호스팅되는 응용 프로그램의 보안 모델을 설명합니다.  
+ <span data-ttu-id="a0670-113">이 항목에서는 보안 모델에 대 한 설명 [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] 독립 실행형 및 브라우저에서 호스팅되는 응용 프로그램입니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-113">This topic discusses the security model for [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] standalone and browser-hosted applications.</span></span>  
   
- 이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
+ <span data-ttu-id="a0670-114">이 항목에는 다음과 같은 단원이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-114">This topic contains the following sections:</span></span>  
   
--   [안전한 탐색](#SafeTopLevelNavigation)  
+-   [<span data-ttu-id="a0670-115">안전한 탐색</span><span class="sxs-lookup"><span data-stu-id="a0670-115">Safe Navigation</span></span>](#SafeTopLevelNavigation)  
   
--   [웹 브라우징 소프트웨어 보안 설정](#InternetExplorerSecuritySettings)  
+-   [<span data-ttu-id="a0670-116">웹 브라우징 소프트웨어 보안 설정</span><span class="sxs-lookup"><span data-stu-id="a0670-116">Web Browsing Software Security Settings</span></span>](#InternetExplorerSecuritySettings)  
   
--   [WebBrowser 컨트롤 및 기능 컨트롤](#webbrowser_control_and_feature_controls)  
+-   [<span data-ttu-id="a0670-117">WebBrowser 컨트롤 및 기능 컨트롤</span><span class="sxs-lookup"><span data-stu-id="a0670-117">WebBrowser Control and Feature Controls</span></span>](#webbrowser_control_and_feature_controls)  
   
--   [부분적으로 신뢰할 수 있는 클라이언트 응용 프로그램에 대해 APTCA 어셈블리 사용 안 함](#APTCA)  
+-   [<span data-ttu-id="a0670-118">부분적으로 신뢰할 수 있는 클라이언트 응용 프로그램에 대한 APTCA 어셈블리를 사용하지 않도록 설정</span><span class="sxs-lookup"><span data-stu-id="a0670-118">Disabling APTCA Assemblies for Partially Trusted Client Applications</span></span>](#APTCA)  
   
--   [느슨한 XAML 파일에 대한 샌드박스 동작](#LooseContentSandboxing)  
+-   [<span data-ttu-id="a0670-119">XAML 사용 완화 파일에 대한 샌드박스 동작</span><span class="sxs-lookup"><span data-stu-id="a0670-119">Sandbox Behavior for Loose XAML Files</span></span>](#LooseContentSandboxing)  
   
--   [보안을 향상시키는 WPF 응용 프로그램 개발을 위한 리소스](#BestPractices)  
+-   [<span data-ttu-id="a0670-120">보안을 승격하는 WPF 응용 프로그램 개발을 위한 리소스</span><span class="sxs-lookup"><span data-stu-id="a0670-120">Resources for Developing WPF Applications that Promote Security</span></span>](#BestPractices)  
   
 <a name="SafeTopLevelNavigation"></a>   
-## 안전한 탐색  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]의 경우 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]는 두 가지 탐색 유형, 즉 응용 프로그램과 브라우저를 구별합니다.  
+## <a name="safe-navigation"></a><span data-ttu-id="a0670-121">안전한 탐색</span><span class="sxs-lookup"><span data-stu-id="a0670-121">Safe Navigation</span></span>  
+ <span data-ttu-id="a0670-122">에 대 한 [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)], [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 탐색의 두 가지 유형의 구분: 응용 프로그램 및 브라우저.</span><span class="sxs-lookup"><span data-stu-id="a0670-122">For [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)], [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] distinguishes two types of navigation: application and browser.</span></span>  
   
- *응용 프로그램 탐색*은 브라우저에서 호스팅하는 응용 프로그램 내의 콘텐츠 항목 간을 탐색하는 것입니다.  *브라우저 탐색*은 브라우저 자체의 콘텐츠 및 위치 URL을 변경하는 탐색입니다.  다음 그림에서는 응용 프로그램 탐색\(일반적으로 XAML\) 및 브라우저 탐색\(일반적으로 HTML\) 간의 관계를 보여 줍니다.  
+ <span data-ttu-id="a0670-123">*응용 프로그램 탐색*은 브라우저에서 호스트되는 응용 프로그램 내의 콘텐츠 항목 간을 탐색합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-123">*Application navigation* is navigation between items of content within an application that is hosted by a browser.</span></span> <span data-ttu-id="a0670-124">*브라우저 탐색*은 브라우저 자체의 콘텐츠 및 위치 URL을 변경하는 탐색입니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-124">*Browser navigation* is navigation that changes the content and location URL of a browser itself.</span></span> <span data-ttu-id="a0670-125">응용 프로그램 탐색 (일반적으로 XAML)와 브라우저 탐색 (일반적으로 HTML) 간의 관계는 다음 그림에 표시 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-125">The relationship between application navigation (typically XAML) and browser navigation (typically HTML) is shown in the following illustration:</span></span>
   
- ![탐색 다이어그램](../../../docs/framework/wpf/media/safetoplevelnavigationfigure.png "SafeTopLevelNavigationFigure")  
+ <span data-ttu-id="a0670-126">![탐색 다이어그램](../../../docs/framework/wpf/media/safetoplevelnavigationfigure.png "SafeTopLevelNavigationFigure")</span><span class="sxs-lookup"><span data-stu-id="a0670-126">![Navigation diagram](../../../docs/framework/wpf/media/safetoplevelnavigationfigure.png "SafeTopLevelNavigationFigure")</span></span>  
   
- [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]에서 탐색하기에 안전하다고 간주되는 콘텐츠 형식은 주로 응용 프로그램 탐색이 사용되는지 아니면 브라우저 탐색이 사용되는지 여부에 의해 결정됩니다.  
+ <span data-ttu-id="a0670-127">에 대 한 안전 하다 고 판단 되는 콘텐츠 형식의 [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] 이동할 주로 따라 사용자가 응용 프로그램 탐색 또는 브라우저 탐색 사용 여부.</span><span class="sxs-lookup"><span data-stu-id="a0670-127">The type of content that is considered safe for an [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] to navigate to is primarily determined by whether application navigation or browser navigation is used.</span></span>  
   
 <a name="Application_Navigation_Security"></a>   
-### 응용 프로그램 탐색 보안  
- 다음 네 가지 형식의 콘텐츠를 지원하는 팩 [!INCLUDE[TLA2#tla_uri](../../../includes/tla2sharptla-uri-md.md)]로 식별할 수 있는 경우 응용 프로그램 탐색은 안전한 것으로 간주됩니다.  
+### <a name="application-navigation-security"></a><span data-ttu-id="a0670-128">응용 프로그램 탐색 보안</span><span class="sxs-lookup"><span data-stu-id="a0670-128">Application Navigation Security</span></span>  
+ <span data-ttu-id="a0670-129">응용 프로그램 탐색 팩으로 식별할 수 있는 경우에 안전한 것으로 간주 됩니다 [!INCLUDE[TLA2#tla_uri](../../../includes/tla2sharptla-uri-md.md)]를 지 원하는 네 가지 형식의 콘텐츠:</span><span class="sxs-lookup"><span data-stu-id="a0670-129">Application navigation is considered safe if it can be identified with a pack [!INCLUDE[TLA2#tla_uri](../../../includes/tla2sharptla-uri-md.md)], which supports four types of content:</span></span>  
   
-|콘텐츠 형식|설명|URI 예제|  
-|------------|--------|------------|  
-|리소스|빌드 형식이 **리소스**인 프로젝트에 추가되는 파일입니다.|`pack://application:,,,/MyResourceFile.xaml`|  
-|Content|빌드 형식이 **콘텐츠**인 프로젝트에 추가되는 파일입니다.|`pack://application:,,,/MyContentFile.xaml`|  
-|원본 사이트|빌드 형식이 **없음**인 프로젝트에 추가되는 파일입니다.|`pack://siteoforigin:,,,/MySiteOfOriginFile.xaml`|  
-|응용 프로그램 코드|컴파일된 코드 숨김이 있는 XAML 리소스입니다.<br /><br /> 또는<br /><br /> 빌드 형식이 **페이지**인 프로젝트에 추가되는 XAML 파일입니다.|`pack://application:,,,/MyResourceFile` `.xaml`|  
+|<span data-ttu-id="a0670-130">콘텐츠 형식</span><span class="sxs-lookup"><span data-stu-id="a0670-130">Content Type</span></span>|<span data-ttu-id="a0670-131">설명</span><span class="sxs-lookup"><span data-stu-id="a0670-131">Description</span></span>|<span data-ttu-id="a0670-132">URI 예제</span><span class="sxs-lookup"><span data-stu-id="a0670-132">URI Example</span></span>|  
+|------------------|-----------------|-----------------|  
+|<span data-ttu-id="a0670-133">리소스</span><span class="sxs-lookup"><span data-stu-id="a0670-133">Resource</span></span>|<span data-ttu-id="a0670-134">파일의 빌드 형식 사용 하 여 프로젝트에 추가 된 **리소스**합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-134">Files that are added to a project with a build type of **Resource**.</span></span>|`pack://application:,,,/MyResourceFile.xaml`|  
+|<span data-ttu-id="a0670-135">콘텐츠</span><span class="sxs-lookup"><span data-stu-id="a0670-135">Content</span></span>|<span data-ttu-id="a0670-136">파일의 빌드 형식 사용 하 여 프로젝트에 추가 된 **콘텐츠**합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-136">Files that are added to a project with a build type of **Content**.</span></span>|`pack://application:,,,/MyContentFile.xaml`|  
+|<span data-ttu-id="a0670-137">원래 사이트</span><span class="sxs-lookup"><span data-stu-id="a0670-137">Site of origin</span></span>|<span data-ttu-id="a0670-138">파일의 빌드 형식 사용 하 여 프로젝트에 추가 된 **None**합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-138">Files that are added to a project with a build type of **None**.</span></span>|`pack://siteoforigin:,,,/MySiteOfOriginFile.xaml`|  
+|<span data-ttu-id="a0670-139">응용 프로그램 코드</span><span class="sxs-lookup"><span data-stu-id="a0670-139">Application code</span></span>|<span data-ttu-id="a0670-140">컴파일된 코드 숨김이 있는 XAML 리소스.</span><span class="sxs-lookup"><span data-stu-id="a0670-140">XAML resources that have a compiled code-behind.</span></span><br /><br /> <span data-ttu-id="a0670-141">또는</span><span class="sxs-lookup"><span data-stu-id="a0670-141">-or-</span></span><br /><br /> <span data-ttu-id="a0670-142">XAML 파일의 빌드 형식 사용 하 여 프로젝트에 추가 된 **페이지**합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-142">XAML files that are added to a project with a build type of **Page**.</span></span>|<span data-ttu-id="a0670-143">`pack://application:,,,/MyResourceFile` `.xaml`</span><span class="sxs-lookup"><span data-stu-id="a0670-143">`pack://application:,,,/MyResourceFile` `.xaml`</span></span>|  
   
 > [!NOTE]
->  응용 프로그램 데이터 파일 및 팩 [!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)]에 대한 자세한 내용은 [WPF 응용 프로그램 리소스, 콘텐츠 및 데이터 파일](../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)을 참조하십시오.  
+>  <span data-ttu-id="a0670-144">응용 프로그램 데이터 파일 및 팩에 대 한 자세한 내용은 [!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)], 참조 [WPF 응용 프로그램 리소스, 내용 및 데이터 파일](../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-144">For more information about application data files and pack [!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)], see [WPF Application Resource, Content, and Data Files](../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).</span></span>  
   
- 이러한 콘텐츠 형식의 파일은 사용자가 직접 탐색하거나 프로그래밍 방식으로 탐색할 수 있습니다.  
+ <span data-ttu-id="a0670-145">이러한 콘텐츠 형식의 파일은 사용자 또는 프로그래밍 방식으로 탐색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-145">Files of these content types can be navigated to by either the user or programmatically:</span></span>  
   
--   **사용자 탐색**.  사용자가 <xref:System.Windows.Documents.Hyperlink> 요소를 클릭하여 탐색합니다.  
+-   <span data-ttu-id="a0670-146">**사용자 탐색**.</span><span class="sxs-lookup"><span data-stu-id="a0670-146">**User Navigation**.</span></span> <span data-ttu-id="a0670-147">사용자가 클릭 하 여 탐색 한 <xref:System.Windows.Documents.Hyperlink> 요소입니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-147">The user navigates by clicking a <xref:System.Windows.Documents.Hyperlink> element.</span></span>  
   
--   **프로그래밍 방식 탐색**.  <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=fullName> 속성을 설정하는 등의 방법으로 사용자 개입 없이 응용 프로그램에서 탐색합니다.  
+-   <span data-ttu-id="a0670-148">**프로그래밍 방식 탐색**.</span><span class="sxs-lookup"><span data-stu-id="a0670-148">**Programmatic Navigation**.</span></span> <span data-ttu-id="a0670-149">응용 프로그램에서 탐색을 설정 하 여 예를 들어 사용자를 통하지 않고는 <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-149">The application navigates without involving the user, for example, by setting the <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType> property.</span></span>  
   
 <a name="Browser_Navigation_Security"></a>   
-### 브라우저 탐색 보안  
- 브라우저 탐색은 다음 조건 하에서만 안전한 것으로 간주됩니다.  
+### <a name="browser-navigation-security"></a><span data-ttu-id="a0670-150">브라우저 탐색 보안</span><span class="sxs-lookup"><span data-stu-id="a0670-150">Browser Navigation Security</span></span>  
+ <span data-ttu-id="a0670-151">브라우저 탐색은 다음 조건에서만 안전한 것으로 간주됩니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-151">Browser navigation is considered safe only under the following conditions:</span></span>  
   
--   **사용자 탐색**.  중첩된 <xref:System.Windows.Controls.Frame>이 아니라 주 <xref:System.Windows.Navigation.NavigationWindow> 내에 있는 <xref:System.Windows.Documents.Hyperlink> 요소를 클릭하여 사용자가 탐색합니다.  
+-   <span data-ttu-id="a0670-152">**사용자 탐색**.</span><span class="sxs-lookup"><span data-stu-id="a0670-152">**User Navigation**.</span></span> <span data-ttu-id="a0670-153">사용자가 클릭 하 여 탐색 한 <xref:System.Windows.Documents.Hyperlink> 주 내에 있는 요소 <xref:System.Windows.Navigation.NavigationWindow>아니라 중첩 된 <xref:System.Windows.Controls.Frame>합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-153">The user navigates by clicking a <xref:System.Windows.Documents.Hyperlink> element that is within the main <xref:System.Windows.Navigation.NavigationWindow>, not in a nested <xref:System.Windows.Controls.Frame>.</span></span>  
   
--   **영역**.  탐색하는 콘텐츠가 인터넷 또는 로컬 인트라넷에 있습니다.  
+-   <span data-ttu-id="a0670-154">**영역**.</span><span class="sxs-lookup"><span data-stu-id="a0670-154">**Zone**.</span></span> <span data-ttu-id="a0670-155">탐색 대상 콘텐츠는 인터넷 또는 로컬 인트라넷에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-155">The content being navigated to is located on the Internet or the local intranet.</span></span>  
   
--   **프로토콜**.  사용되는 프로토콜은 **http**, **https**, **file** 또는 **mailto**입니다.  
+-   <span data-ttu-id="a0670-156">**프로토콜**.</span><span class="sxs-lookup"><span data-stu-id="a0670-156">**Protocol**.</span></span> <span data-ttu-id="a0670-157">사용 되는 프로토콜은 **http**, **https**, **파일**, 또는 **mailto**합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-157">The protocol being used is either **http**, **https**, **file**, or **mailto**.</span></span>  
   
- [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]가 이러한 조건을 충족하지 않는 방식으로 콘텐츠를 탐색하려고 할 경우 <xref:System.Security.SecurityException>이 throw됩니다.  
+ <span data-ttu-id="a0670-158">경우는 [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] 이러한 조건에 맞지 않는 방식으로 콘텐츠를 탐색 하려고 한 <xref:System.Security.SecurityException> throw 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-158">If an [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] attempts to navigate to content in a manner that does not comply with these conditions, a <xref:System.Security.SecurityException> is thrown.</span></span>  
   
 <a name="InternetExplorerSecuritySettings"></a>   
-## 웹 브라우징 소프트웨어 보안 설정  
- 웹 브라우징 소프트웨어에 부여되는 액세스는 컴퓨터의 보안 설정에 의해 결정됩니다.  웹 브라우징 소프트웨어에는 [WinINet](http://go.microsoft.com/fwlink/?LinkId=179379) 또는 [UrlMon](http://go.microsoft.com/fwlink/?LinkId=179383) API를 사용하는 Internet Explorer 및 PresentationHost.exe 등의 모든 응용 프로그램 또는 구성 요소가 포함됩니다.  
+## <a name="web-browsing-software-security-settings"></a><span data-ttu-id="a0670-159">웹 브라우징 소프트웨어 보안 설정</span><span class="sxs-lookup"><span data-stu-id="a0670-159">Web Browsing Software Security Settings</span></span>  
+ <span data-ttu-id="a0670-160">컴퓨터의 보안 설정은 웹 브라우징 소프트웨어 권한이 부여된 액세스 권한을 결정합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-160">The security settings on your computer determine the access that any Web browsing software is granted.</span></span> <span data-ttu-id="a0670-161">웹 검색 소프트웨어 정보와 모든 응용 프로그램 또는 구성 요소를 사용 하는 [WinINet](http://go.microsoft.com/fwlink/?LinkId=179379) 또는 [UrlMon](http://go.microsoft.com/fwlink/?LinkId=179383) Api, Internet Explorer 및 PresentationHost.exe 포함 합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-161">Web browsing software includes any application or component that uses the [WinINet](http://go.microsoft.com/fwlink/?LinkId=179379) or [UrlMon](http://go.microsoft.com/fwlink/?LinkId=179383) APIs, including Internet Explorer and PresentationHost.exe.</span></span>  
   
- [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]에서 제공되는 메커니즘을 사용하면 다음을 비롯하여 [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]에서 실행이 허용되는 기능을 구성할 수 있습니다.  
+ [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]<span data-ttu-id="a0670-162">으로 또는에서 실행할 수 있도록 허용 되는 기능을 구성할 수 있는 메커니즘을 제공 [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)], 다음을 포함 하 여:</span><span class="sxs-lookup"><span data-stu-id="a0670-162"> provides a mechanism by which you can configure the functionality that is allowed to be executed by or from [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)], including the following:</span></span>  
   
--   [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] 기반 구성 요소  
+-   [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)]<span data-ttu-id="a0670-163"> 기반 구성 요소</span><span class="sxs-lookup"><span data-stu-id="a0670-163">-reliant components</span></span>  
   
--   ActiveX 문서 및 플러그 인  
+-   <span data-ttu-id="a0670-164">ActiveX 컨트롤 및 플러그인</span><span class="sxs-lookup"><span data-stu-id="a0670-164">ActiveX controls and plug-ins</span></span>  
   
--   다운로드  
+-   <span data-ttu-id="a0670-165">다운로드</span><span class="sxs-lookup"><span data-stu-id="a0670-165">Downloads</span></span>  
   
--   스크립팅  
+-   <span data-ttu-id="a0670-166">스크립팅</span><span class="sxs-lookup"><span data-stu-id="a0670-166">Scripting</span></span>  
   
--   사용자 인증  
+-   <span data-ttu-id="a0670-167">사용자 인증</span><span class="sxs-lookup"><span data-stu-id="a0670-167">User Authentication</span></span>  
   
- 이 방법으로 보안 설정할 수 있는 기능 컬렉션은 **인터넷**, **인트라넷**, **신뢰할 수 있는 사이트** 및 **제한된 사이트** 영역에서 영역 단위로 구성됩니다.  다음 단계에서는 보안 설정 구성 방법을 설명합니다.  
+ <span data-ttu-id="a0670-168">이러한 방식으로 보호 될 수 있는 기능 컬렉션에 대 한 영역별로에 구성 되는 **인터넷**, **인트라넷**, **신뢰할 수 있는 사이트**, 및  **제한 된 사이트** 영역입니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-168">The collection of functionality that can be secured in this way is configured on a per-zone basis for the **Internet**, **Intranet**, **Trusted Sites**, and **Restricted Sites** zones.</span></span> <span data-ttu-id="a0670-169">다음 단계는 보안 설정을 구성하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-169">The following steps describe how to configure your security settings:</span></span>  
   
-1.  **제어판**을 엽니다.  
+1.  <span data-ttu-id="a0670-170">**제어판**을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-170">Open **Control Panel**.</span></span>  
   
-2.  **네트워크 및 인터넷**을 클릭한 다음 **인터넷 옵션**을 클릭합니다.  
+2.  <span data-ttu-id="a0670-171">클릭 **네트워크 및 인터넷** 클릭 하 고 **인터넷 옵션**합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-171">Click **Network and Internet** and then click **Internet Options**.</span></span>  
   
-     인터넷 옵션 대화 상자가 나타납니다.  
+     <span data-ttu-id="a0670-172">인터넷 옵션 대화 상자가 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-172">The Internet Options dialog box appears.</span></span>  
   
-3.  **보안** 탭에서 보안 설정을 구성할 영역을 선택합니다.  
+3.  <span data-ttu-id="a0670-173">에 **보안** 탭에 대 한 보안 설정을 구성 하는 영역을 선택 합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-173">On the **Security** tab, select the zone to configure the security settings for.</span></span>  
   
-4.  **사용자 지정 수준** 단추를 클릭합니다.  
+4.  <span data-ttu-id="a0670-174">클릭는 **사용자 지정 수준** 단추입니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-174">Click the **Custom Level** button.</span></span>  
   
-     **보안 설정** 대화 상자가 나타납니다. 선택한 영역의 보안 설정을 여기서 구성할 수 있습니다.  
+     <span data-ttu-id="a0670-175">**보안 설정** 대화 상자가 표시 되며 선택한 영역에 대 한 보안 설정을 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-175">The **Security Settings** dialog box appears and you can configure the security settings for the selected zone.</span></span>  
   
-     ![보안 설정 대화 상자](../../../docs/framework/wpf/media/wpfsecurityfigure1.PNG "WPFSecurityFigure1")  
+     <span data-ttu-id="a0670-176">![보안 설정 대화 상자](../../../docs/framework/wpf/media/wpfsecurityfigure1.PNG "WPFSecurityFigure1")</span><span class="sxs-lookup"><span data-stu-id="a0670-176">![Security Settings dialog box](../../../docs/framework/wpf/media/wpfsecurityfigure1.PNG "WPFSecurityFigure1")</span></span>  
   
 > [!NOTE]
->  또한 Internet Explorer의 인터넷 옵션 대화 상자에 액세스할 수도 있습니다.  **도구**를 클릭한 다음 **인터넷 옵션**을 클릭합니다.  
+>  <span data-ttu-id="a0670-177">Internet Explorer에서 인터넷 옵션 대화 상자에 액세스할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-177">You can also get to the Internet Options dialog box from Internet Explorer.</span></span> <span data-ttu-id="a0670-178">클릭 **도구** 클릭 하 고 **인터넷 옵션**합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-178">Click **Tools** and then click **Internet Options**.</span></span>  
   
- [!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)]부터는 특히 [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)]에 대한 다음 보안 설정이 포함되어 있습니다.  
+ <span data-ttu-id="a0670-179">부터는 [!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)], 특별히 다음과 같은 보안 설정 [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] 포함 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-179">Starting with [!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)], the following security settings specifically for [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] are included:</span></span>  
   
--   **느슨한 XAML**.  [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]에서 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 파일을 탐색하여 느슨하게 하는지 여부를 제어합니다.  사용, 사용 안 함 및 확인 옵션이 있습니다.  
+-   <span data-ttu-id="a0670-180">**느슨한 XAML**.</span><span class="sxs-lookup"><span data-stu-id="a0670-180">**Loose XAML**.</span></span> <span data-ttu-id="a0670-181">컨트롤 여부 [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] 탐색 하 여 느슨한 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-181">Controls whether [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] can navigate to and loose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] files.</span></span> <span data-ttu-id="a0670-182">(설정, 해제 및 확인 옵션).</span><span class="sxs-lookup"><span data-stu-id="a0670-182">(Enable, Disable, and Prompt options).</span></span>  
   
--   **XAML 브라우저 응용 프로그램**.  [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]에서 [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]를 탐색하여 실행하는지 여부를 제어합니다.  사용, 사용 안 함 및 확인 옵션이 있습니다.  
+-   <span data-ttu-id="a0670-183">**XAML 브라우저 응용 프로그램**.</span><span class="sxs-lookup"><span data-stu-id="a0670-183">**XAML browser applications**.</span></span> <span data-ttu-id="a0670-184">컨트롤 여부 [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] 탐색 하 여 실행 [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-184">Controls whether [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] can navigate to and run [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)].</span></span> <span data-ttu-id="a0670-185">(설정, 해제 및 확인 옵션).</span><span class="sxs-lookup"><span data-stu-id="a0670-185">(Enable, Disable, and Prompt options).</span></span>  
   
- 기본적으로 이러한 설정은 **인터넷**, **로컬 인터넷** 및 **신뢰할 수 있는 사이트** 영역의 경우 사용하도록 설정되고 **제한된 사이트** 영역의 경우 사용하지 않도록 설정됩니다.  
+ <span data-ttu-id="a0670-186">기본적으로 이러한 설정을 모두 사용에 대 한는 **인터넷**, **로컬 인트라넷**, 및 **신뢰할 수 있는 사이트** 영역 및에 대 한 사용 안 함은 **제한 된 사이트**  영역입니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-186">By default, these settings are all enabled for the **Internet**, **Local intranet**, and **Trusted sites** zones, and disabled for the **Restricted sites** zone.</span></span>  
   
 <a name="Security_Settings_for_IE6_and_Below"></a>   
-### 보안 관련 WPF 레지스트리 설정  
- 인터넷 옵션을 통해 사용 가능한 보안 설정 외에 보안상 중요한 여러 가지 WPF 기능을 선택적으로 차단하는 데 사용할 수 있는 다음과 같은 레지스트리 값이 있습니다.  이러한 값은 다음 키 아래에 정의됩니다.  
+### <a name="security-related-wpf-registry-settings"></a><span data-ttu-id="a0670-187">보안 관련 WPF 레지스트리 설정</span><span class="sxs-lookup"><span data-stu-id="a0670-187">Security-related WPF Registry Settings</span></span>  
+ <span data-ttu-id="a0670-188">인터넷 옵션을 통해 사용할 수 있는 보안 설정 외에 다음 레지스트리 값은 선택적으로 다양한 보안 관련 WPF 기능을 차단하는 데 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-188">In addition to the security settings available through the Internet Options, the following registry values are available for selectively blocking a number of security-sensitive WPF features.</span></span> <span data-ttu-id="a0670-189">해당 값은 다음 키에서 정의됩니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-189">The values are defined under the following key:</span></span>  
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\Windows Presentation Foundation\Features`  
   
- 다음 표에서는 설정할 수 있는 값 목록을 보여 줍니다.  
+ <span data-ttu-id="a0670-190">다음 표에서는 설정할 수 있는 값을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-190">The following table lists the values that can be set.</span></span>  
   
-|값 이름|값 형식|값 데이터|  
-|----------|----------|-----------|  
-|XBAPDisallow|REG\_DWORD|허용하지 않으려면 1이고, 허용하려면 0입니다.|  
-|LooseXamlDisallow|REG\_DWORD|허용하지 않으려면 1이고, 허용하려면 0입니다.|  
-|WebBrowserDisallow|REG\_DWORD|허용하지 않으려면 1이고, 허용하려면 0입니다.|  
-|MediaAudioDisallow|REG\_DWORD|허용하지 않으려면 1이고, 허용하려면 0입니다.|  
-|MediaImageDisallow|REG\_DWORD|허용하지 않으려면 1이고, 허용하려면 0입니다.|  
-|MediaVideoDisallow|REG\_DWORD|허용하지 않으려면 1이고, 허용하려면 0입니다.|  
-|ScriptInteropDisallow|REG\_DWORD|허용하지 않으려면 1이고, 허용하려면 0입니다.|  
+|<span data-ttu-id="a0670-191">값 이름</span><span class="sxs-lookup"><span data-stu-id="a0670-191">Value Name</span></span>|<span data-ttu-id="a0670-192">값 형식</span><span class="sxs-lookup"><span data-stu-id="a0670-192">Value Type</span></span>|<span data-ttu-id="a0670-193">값 데이터</span><span class="sxs-lookup"><span data-stu-id="a0670-193">Value Data</span></span>|  
+|----------------|----------------|----------------|  
+|<span data-ttu-id="a0670-194">XBAPDisallow</span><span class="sxs-lookup"><span data-stu-id="a0670-194">XBAPDisallow</span></span>|<span data-ttu-id="a0670-195">REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="a0670-195">REG_DWORD</span></span>|<span data-ttu-id="a0670-196">1은 허용되지 않으며 0은 허용됩니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-196">1 to disallow; 0 to allow.</span></span>|  
+|<span data-ttu-id="a0670-197">LooseXamlDisallow</span><span class="sxs-lookup"><span data-stu-id="a0670-197">LooseXamlDisallow</span></span>|<span data-ttu-id="a0670-198">REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="a0670-198">REG_DWORD</span></span>|<span data-ttu-id="a0670-199">1은 허용되지 않으며 0은 허용됩니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-199">1 to disallow; 0 to allow.</span></span>|  
+|<span data-ttu-id="a0670-200">WebBrowserDisallow</span><span class="sxs-lookup"><span data-stu-id="a0670-200">WebBrowserDisallow</span></span>|<span data-ttu-id="a0670-201">REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="a0670-201">REG_DWORD</span></span>|<span data-ttu-id="a0670-202">1은 허용되지 않으며 0은 허용됩니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-202">1 to disallow; 0 to allow.</span></span>|  
+|<span data-ttu-id="a0670-203">MediaAudioDisallow</span><span class="sxs-lookup"><span data-stu-id="a0670-203">MediaAudioDisallow</span></span>|<span data-ttu-id="a0670-204">REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="a0670-204">REG_DWORD</span></span>|<span data-ttu-id="a0670-205">1은 허용되지 않으며 0은 허용됩니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-205">1 to disallow; 0 to allow.</span></span>|  
+|<span data-ttu-id="a0670-206">MediaImageDisallow</span><span class="sxs-lookup"><span data-stu-id="a0670-206">MediaImageDisallow</span></span>|<span data-ttu-id="a0670-207">REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="a0670-207">REG_DWORD</span></span>|<span data-ttu-id="a0670-208">1은 허용되지 않으며 0은 허용됩니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-208">1 to disallow; 0 to allow.</span></span>|  
+|<span data-ttu-id="a0670-209">MediaVideoDisallow</span><span class="sxs-lookup"><span data-stu-id="a0670-209">MediaVideoDisallow</span></span>|<span data-ttu-id="a0670-210">REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="a0670-210">REG_DWORD</span></span>|<span data-ttu-id="a0670-211">1은 허용되지 않으며 0은 허용됩니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-211">1 to disallow; 0 to allow.</span></span>|  
+|<span data-ttu-id="a0670-212">ScriptInteropDisallow</span><span class="sxs-lookup"><span data-stu-id="a0670-212">ScriptInteropDisallow</span></span>|<span data-ttu-id="a0670-213">REG_DWORD</span><span class="sxs-lookup"><span data-stu-id="a0670-213">REG_DWORD</span></span>|<span data-ttu-id="a0670-214">1은 허용되지 않으며 0은 허용됩니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-214">1 to disallow; 0 to allow.</span></span>|  
   
 <a name="webbrowser_control_and_feature_controls"></a>   
-## WebBrowser 컨트롤 및 기능 컨트롤  
- WPF <xref:System.Windows.Controls.WebBrowser> 컨트롤은 웹 콘텐츠를 호스팅하는 데 사용할 수 있습니다.  WPF <xref:System.Windows.Controls.WebBrowser> 컨트롤은 기본 WebBrowser ActiveX 컨트롤을 래핑합니다.  에서는 신뢰할 수 있는 웹 콘텐츠를 호스팅하기 위해 WPF <xref:System.Windows.Controls.WebBrowser> 컨트롤을 사용하는 경우에 응용 프로그램을 보안하는 데 필요한 일부 지원을 제공합니다.  그러나 일부 보안 기능은 <xref:System.Windows.Controls.WebBrowser> 컨트롤을 사용하여 응용 프로그램에서 직접 적용되어야 합니다.  WebBrowser ActiveX 컨트롤에 대한 자세한 내용은 [WebBrowser Control Overviews and Tutorials](http://go.microsoft.com/fwlink/?LinkId=179388)를 참조하십시오.  
+## <a name="webbrowser-control-and-feature-controls"></a><span data-ttu-id="a0670-215">WebBrowser 컨트롤 및 기능 컨트롤</span><span class="sxs-lookup"><span data-stu-id="a0670-215">WebBrowser Control and Feature Controls</span></span>  
+ <span data-ttu-id="a0670-216">WPF <xref:System.Windows.Controls.WebBrowser> 웹 콘텐츠를 호스트에 컨트롤을 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-216">The WPF <xref:System.Windows.Controls.WebBrowser> control can be used to host Web content.</span></span> <span data-ttu-id="a0670-217">WPF <xref:System.Windows.Controls.WebBrowser> 컨트롤 내부 WebBrowser ActiveX 컨트롤을 래핑합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-217">The WPF <xref:System.Windows.Controls.WebBrowser> control wraps the underlying WebBrowser ActiveX control.</span></span> <span data-ttu-id="a0670-218">WPF를 사용 하는 경우 응용 프로그램을 보호 하기 위한 일부 지원을 제공 <xref:System.Windows.Controls.WebBrowser> 컨트롤을 호스트 웹 콘텐츠를 트러스트 합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-218">WPF provides some support for securing your application when you use the WPF <xref:System.Windows.Controls.WebBrowser> control to host untrusted Web content.</span></span> <span data-ttu-id="a0670-219">일부 보안 기능을 사용 하 여 응용 프로그램에서 직접 적용 해야 하는 반면는 <xref:System.Windows.Controls.WebBrowser> 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-219">However, some security features must be applied directly by the applications using the <xref:System.Windows.Controls.WebBrowser> control.</span></span> <span data-ttu-id="a0670-220">WebBrowser ActiveX 컨트롤에 대 한 자세한 내용은 참조 [WebBrowser 컨트롤 개요 및 자습서](http://go.microsoft.com/fwlink/?LinkId=179388)합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-220">For more information about the WebBrowser ActiveX control, see [WebBrowser Control Overviews and Tutorials](http://go.microsoft.com/fwlink/?LinkId=179388).</span></span>  
   
 > [!NOTE]
->  <xref:System.Windows.Controls.Frame> 컨트롤의 경우 <xref:System.Windows.Controls.WebBrowser>를 사용하여 HTML 콘텐츠를 탐색하므로 이 컨트롤에도 이 단원의 내용이 적용됩니다.  
+>  <span data-ttu-id="a0670-221">이 섹션에도 적용 됩니다는 <xref:System.Windows.Controls.Frame> 하므로 사용 하 여이 컨트롤는 <xref:System.Windows.Controls.WebBrowser> HTML 콘텐츠를 탐색할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-221">This section also applies to the <xref:System.Windows.Controls.Frame> control since it uses the <xref:System.Windows.Controls.WebBrowser> to navigate to HTML content.</span></span>  
   
- WPF <xref:System.Windows.Controls.WebBrowser> 컨트롤이 신뢰할 수 없는 웹 콘텐츠를 호스팅하는 데 사용되는 경우 응용 프로그램에서는 부분 신뢰 <xref:System.AppDomain>을 사용하여 응용 프로그램 코드를 악의적인 HTML 스크립트 코드로부터 보호해야 합니다.  특히 응용 프로그램이 <xref:System.Windows.Controls.WebBrowser.InvokeScript%2A> 메서드 및 <xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A> 속성을 사용하여 호스팅되는 스크립트와 상호 작용할 경우에는 이와 같이 보호해야 합니다.  자세한 내용은 [WPF 추가 기능 개요](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)를 참조하십시오.  
+ <span data-ttu-id="a0670-222">경우 WPF <xref:System.Windows.Controls.WebBrowser> 컨트롤은 신뢰할 수 없는 웹 콘텐츠를 호스트 하는 데 사용, 응용 프로그램 부분 신뢰를 사용 해야 <xref:System.AppDomain> 잠재적 악성 HTML 스크립트 코드에서 응용 프로그램 코드를 분리 하려면.</span><span class="sxs-lookup"><span data-stu-id="a0670-222">If the WPF <xref:System.Windows.Controls.WebBrowser> control is used to host untrusted Web content, your application should use a partial-trust <xref:System.AppDomain> to help insulate your application code from potentially malicious HTML script code.</span></span> <span data-ttu-id="a0670-223">사용 하 여 응용 프로그램은 호스팅된 스크립트와 상호 작용 하는 경우에 특히 그렇습니다는 <xref:System.Windows.Controls.WebBrowser.InvokeScript%2A> 메서드 및 <xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A> 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-223">This is especially true if your application is interacting with the hosted script by using the <xref:System.Windows.Controls.WebBrowser.InvokeScript%2A> method and the <xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A> property.</span></span> <span data-ttu-id="a0670-224">자세한 내용은 참조 [WPF 추가 기능 개요](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-224">For more information, see [WPF Add-Ins Overview](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).</span></span>  
   
- 응용 프로그램에서 WPF <xref:System.Windows.Controls.WebBrowser> 컨트롤을 사용하는 경우 보안을 향상시키고 공격을 완화하기 위해 Internet Explorer 기능 컨트롤이 사용되도록 설정할 수도 있습니다.  기능 컨트롤은 관리자 및 개발자가 Internet Explorer 및 WebBrowser ActiveX 컨트롤을 호스팅하는 응용 프로그램의 기능을 구성할 수 있도록 Internet Explorer에 추가됩니다. 이 컨트롤은 WPF <xref:System.Windows.Controls.WebBrowser> 컨트롤에서 래핑합니다.  기능 컨트롤은 [CoInternetSetFeatureEnabled](http://go.microsoft.com/fwlink/?LinkId=179394) 함수를 사용하거나 레지스트리의 값을 변경하여 구성할 수 있습니다.  기능 컨트롤에 대한 자세한 내용은 [Introduction to Feature Controls](http://go.microsoft.com/fwlink/?LinkId=179390) and [Internet Feature Controls](http://go.microsoft.com/fwlink/?LinkId=179392)를 참조하십시오.  
+ <span data-ttu-id="a0670-225">응용 프로그램에서 WPF를 사용 하는 경우 <xref:System.Windows.Controls.WebBrowser> 컨트롤, 보안을 강화 하 고 공격을 완화 하는 다른 방법은 Internet Explorer 기능 컨트롤 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-225">If your application uses the WPF <xref:System.Windows.Controls.WebBrowser> control, another way to increase security and mitigate attacks is to enable Internet Explorer feature controls.</span></span> <span data-ttu-id="a0670-226">기능 컨트롤은 Internet Explorer에 대 한 관리자와 개발자가 Internet Explorer 및 WebBrowser ActiveX 컨트롤을 호스트 하는 응용 프로그램의 기능을 구성할 수 있는 추가 WPF <xref:System.Windows.Controls.WebBrowser> 래핑하고 제어 합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-226">Feature controls are additions to Internet Explorer that allow administrators and developers to configure features of Internet Explorer and applications that host the WebBrowser ActiveX control, which the WPF <xref:System.Windows.Controls.WebBrowser> control wraps.</span></span> <span data-ttu-id="a0670-227">기능 컨트롤을 사용 하 여 구성할 수 있습니다는 [CoInternetSetFeatureEnabled](http://go.microsoft.com/fwlink/?LinkId=179394) 함수 또는 레지스트리 값을 변경 하 여 합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-227">Feature controls can be configured by using the [CoInternetSetFeatureEnabled](http://go.microsoft.com/fwlink/?LinkId=179394) function or by changing values in the registry.</span></span> <span data-ttu-id="a0670-228">기능 컨트롤에 대 한 자세한 내용은 참조 [기능 컨트롤 소개](http://go.microsoft.com/fwlink/?LinkId=179390) 및 [인터넷 기능 컨트롤](http://go.microsoft.com/fwlink/?LinkId=179392)합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-228">For more information about feature controls, see [Introduction to Feature Controls](http://go.microsoft.com/fwlink/?LinkId=179390) and [Internet Feature Controls](http://go.microsoft.com/fwlink/?LinkId=179392).</span></span>  
   
- WPF <xref:System.Windows.Controls.WebBrowser> 컨트롤을 사용하는 독립 실행형 WPF 응용 프로그램을 개발할 경우 WPF에서는 응용 프로그램을 위해 다음 기능 컨트롤을 자동으로 활성화합니다.  
+ <span data-ttu-id="a0670-229">WPF를 사용 하는 독립 실행형 WPF 응용 프로그램을 개발 하는 경우 <xref:System.Windows.Controls.WebBrowser> 컨트롤, WPF 응용 프로그램에 대 한 다음과 같은 기능 컨트롤을 자동으로 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-229">If you are developing a standalone WPF application that uses the WPF <xref:System.Windows.Controls.WebBrowser> control, WPF automatically enables the following feature controls for your application.</span></span>  
   
-|기능 컨트롤|  
-|------------|  
-|FEATURE\_MIME\_HANDLING|  
-|FEATURE\_MIME\_SNIFFING|  
-|FEATURE\_OBJECT\_CACHING|  
-|FEATURE\_SAFE\_BINDTOOBJECT|  
-|FEATURE\_WINDOW\_RESTRICTIONS|  
-|FEATURE\_ZONE\_ELEVATION|  
-|FEATURE\_RESTRICT\_FILEDOWNLOAD|  
-|FEATURE\_RESTRICT\_ACTIVEXINSTALL|  
-|FEATURE\_ADDON\_MANAGEMENT|  
-|FEATURE\_HTTP\_USERNAME\_PASSWORD\_DISABLE|  
-|FEATURE\_SECURITYBAND|  
-|FEATURE\_UNC\_SAVEDFILECHECK|  
-|FEATURE\_VALIDATE\_NAVIGATE\_URL|  
-|FEATURE\_DISABLE\_TELNET\_PROTOCOL|  
-|FEATURE\_WEBOC\_POPUPMANAGEMENT|  
-|FEATURE\_DISABLE\_LEGACY\_COMPRESSION|  
-|FEATURE\_SSLUX|  
+|<span data-ttu-id="a0670-230">기능 컨트롤</span><span class="sxs-lookup"><span data-stu-id="a0670-230">Feature Control</span></span>|  
+|---------------------|  
+|<span data-ttu-id="a0670-231">FEATURE_MIME_HANDLING</span><span class="sxs-lookup"><span data-stu-id="a0670-231">FEATURE_MIME_HANDLING</span></span>|  
+|<span data-ttu-id="a0670-232">FEATURE_MIME_SNIFFING</span><span class="sxs-lookup"><span data-stu-id="a0670-232">FEATURE_MIME_SNIFFING</span></span>|  
+|<span data-ttu-id="a0670-233">FEATURE_OBJECT_CACHING</span><span class="sxs-lookup"><span data-stu-id="a0670-233">FEATURE_OBJECT_CACHING</span></span>|  
+|<span data-ttu-id="a0670-234">FEATURE_SAFE_BINDTOOBJECT</span><span class="sxs-lookup"><span data-stu-id="a0670-234">FEATURE_SAFE_BINDTOOBJECT</span></span>|  
+|<span data-ttu-id="a0670-235">FEATURE_WINDOW_RESTRICTIONS</span><span class="sxs-lookup"><span data-stu-id="a0670-235">FEATURE_WINDOW_RESTRICTIONS</span></span>|  
+|<span data-ttu-id="a0670-236">FEATURE_ZONE_ELEVATION</span><span class="sxs-lookup"><span data-stu-id="a0670-236">FEATURE_ZONE_ELEVATION</span></span>|  
+|<span data-ttu-id="a0670-237">FEATURE_RESTRICT_FILEDOWNLOAD</span><span class="sxs-lookup"><span data-stu-id="a0670-237">FEATURE_RESTRICT_FILEDOWNLOAD</span></span>|  
+|<span data-ttu-id="a0670-238">FEATURE_RESTRICT_ACTIVEXINSTALL</span><span class="sxs-lookup"><span data-stu-id="a0670-238">FEATURE_RESTRICT_ACTIVEXINSTALL</span></span>|  
+|<span data-ttu-id="a0670-239">FEATURE_ADDON_MANAGEMENT</span><span class="sxs-lookup"><span data-stu-id="a0670-239">FEATURE_ADDON_MANAGEMENT</span></span>|  
+|<span data-ttu-id="a0670-240">FEATURE_HTTP_USERNAME_PASSWORD_DISABLE</span><span class="sxs-lookup"><span data-stu-id="a0670-240">FEATURE_HTTP_USERNAME_PASSWORD_DISABLE</span></span>|  
+|<span data-ttu-id="a0670-241">FEATURE_SECURITYBAND</span><span class="sxs-lookup"><span data-stu-id="a0670-241">FEATURE_SECURITYBAND</span></span>|  
+|<span data-ttu-id="a0670-242">FEATURE_UNC_SAVEDFILECHECK</span><span class="sxs-lookup"><span data-stu-id="a0670-242">FEATURE_UNC_SAVEDFILECHECK</span></span>|  
+|<span data-ttu-id="a0670-243">FEATURE_VALIDATE_NAVIGATE_URL</span><span class="sxs-lookup"><span data-stu-id="a0670-243">FEATURE_VALIDATE_NAVIGATE_URL</span></span>|  
+|<span data-ttu-id="a0670-244">FEATURE_DISABLE_TELNET_PROTOCOL</span><span class="sxs-lookup"><span data-stu-id="a0670-244">FEATURE_DISABLE_TELNET_PROTOCOL</span></span>|  
+|<span data-ttu-id="a0670-245">FEATURE_WEBOC_POPUPMANAGEMENT</span><span class="sxs-lookup"><span data-stu-id="a0670-245">FEATURE_WEBOC_POPUPMANAGEMENT</span></span>|  
+|<span data-ttu-id="a0670-246">FEATURE_DISABLE_LEGACY_COMPRESSION</span><span class="sxs-lookup"><span data-stu-id="a0670-246">FEATURE_DISABLE_LEGACY_COMPRESSION</span></span>|  
+|<span data-ttu-id="a0670-247">FEATURE_SSLUX</span><span class="sxs-lookup"><span data-stu-id="a0670-247">FEATURE_SSLUX</span></span>|  
   
- 이러한 기능 컨트롤은 조건 없이 활성화되므로 전체 신뢰 응용 프로그램에 손상을 입힐 수도 있습니다.  이 경우 특정 응용 프로그램 및 해당 응용 프로그램에서 호스팅하는 콘텐츠에 대한 보안상 위험이 없으면 해당하는 기능 컨트롤을 비활성화할 수 있습니다.  
+ <span data-ttu-id="a0670-248">이러한 기능 컨트롤은 조건에 상관 없이 사용되므로 이 컨트롤로 인해 완전 신뢰 응용 프로그램가 손상될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-248">Since these feature controls are enabled unconditionally, a full-trust application might be impaired by them.</span></span> <span data-ttu-id="a0670-249">이 경우 특정 응용 프로그램 및 호스팅하는 콘텐츠에 대한 보안 위험이 없다면, 해당 기능 컨트롤을 비활성화할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-249">In this case, if there is no security risk for the specific application and the content it is hosting, the corresponding feature control can be disabled.</span></span>  
   
- 기능 컨트롤은 WebBrowser ActiveX 개체를 인스턴스화하는 프로세스에 의해 적용됩니다.  따라서 신뢰할 수 없는 콘텐츠를 탐색할 수 있는 독립 실행형 응용 프로그램을 만들 경우 추가적인 기능 컨트롤의 활성화에 대해 신중히 고려해야 합니다.  
-  
-> [!NOTE]
->  이와 관련된 권장 사항은 MSHTML 및 SHDOCVW 호스트 보안에 대한 일반적 권장 사항을 기반으로 합니다.  자세한 내용은 [The MSHTML Host Security FAQ: Part I of II](http://go.microsoft.com/fwlink/?LinkId=179396) 및 [The MSHTML Host Security FAQ: Part II of II](http://go.microsoft.com/fwlink/?LinkId=179415)를 참조하십시오.  
-  
- 실행 파일의 경우 레지스트리 값을 1로 설정하여 다음 기능 컨트롤을 활성화하는 것이 좋습니다.  
-  
-|기능 컨트롤|  
-|------------|  
-|FEATURE\_ACTIVEX\_REPURPOSEDETECTION|  
-|FEATURE\_BLOCK\_LMZ\_IMG|  
-|FEATURE\_BLOCK\_LMZ\_OBJECT|  
-|FEATURE\_BLOCK\_LMZ\_SCRIPT|  
-|FEATURE\_RESTRICT\_RES\_TO\_LMZ|  
-|FEATURE\_RESTRICT\_ABOUT\_PROTOCOL\_IE7|  
-|FEATURE\_SHOW\_APP\_PROTOCOL\_WARN\_DIALOG|  
-|FEATURE\_LOCALMACHINE\_LOCKDOWN|  
-|FEATURE\_FORCE\_ADDR\_AND\_STATUS|  
-|FEATURE\_RESTRICTED\_ZONE\_WHEN\_FILE\_NOT\_FOUND|  
-  
- 실행 파일의 경우 레지스트리 값을 0으로 설정하여 다음 기능 컨트롤을 비활성화하는 것이 좋습니다.  
-  
-|기능 컨트롤|  
-|------------|  
-|FEATURE\_ENABLE\_SCRIPT\_PASTE\_URLACTION\_IF\_PROMPT|  
-  
- [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)]에서 WPF <xref:System.Windows.Controls.WebBrowser> 컨트롤을 포함하는 부분 신뢰 [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)]를 실행하는 경우 WPF는 Internet Explorer 프로세스의 주소 공간에 WebBrowser ActiveX 컨트롤을 호스팅합니다.  WebBrowser ActiveX 컨트롤이 [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] 프로세스에서 호스팅되기 때문에 Internet Explorer의 모든 기능 컨트롤이 WebBrowser ActiveX 컨트롤에 대해 활성화됩니다.  
-  
- 또한 Internet Explorer에서 실행되는 XBAP는 일반적인 독립 실행형 응용 프로그램과 달리 추가적인 보안 수준을 갖게 됩니다.  이 추가적인 보안은 Internet Explorer 및 WebBrowser ActiveX 컨트롤이 [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] 및 [!INCLUDE[win7](../../../includes/win7-md.md)]에서 기본적으로 보호 모드로 실행되기 때문에 제공됩니다.  보호 모드에 대한 자세한 내용은 [Understanding and Working in Protected Mode Internet Explorer](http://go.microsoft.com/fwlink/?LinkId=179393)를 참조하십시오.  
+ <span data-ttu-id="a0670-250">기능 컨트롤 WebBrowser ActiveX 개체를 인스턴스화하는 프로세스에 의해 적용 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-250">Feature controls are applied by the process instantiating the WebBrowser ActiveX object.</span></span> <span data-ttu-id="a0670-251">따라서 신뢰할 수 없는 콘텐츠를 탐색할 수 있는 독립 실행형 응용 프로그램을 만드는 경우, 추가 기능 컨트롤 사용을 심각하게 고려해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-251">Therefore, if you are creating a stand-alone application that can navigate to untrusted content, you should seriously consider enabling additional feature controls.</span></span>  
   
 > [!NOTE]
->  WPF <xref:System.Windows.Controls.WebBrowser> 컨트롤을 포함하는 XBAP를 Firefox에서 실행할 경우 인터넷 영역에 있으면 <xref:System.Security.SecurityException>이 throw됩니다.  이는 WPF 보안 정책에 의한 것입니다.  
+>  <span data-ttu-id="a0670-252">이 권장 사항은 MSHTML 및 SHDOCVW 호스트 보안을 위한 일반 권장 사항을 기반으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-252">This recommendation is based on general recommendations for MSHTML and SHDOCVW host security.</span></span> <span data-ttu-id="a0670-253">자세한 내용은 참조 [The MSHTML 호스트 Security FAQ: II의 1 부에서](http://go.microsoft.com/fwlink/?LinkId=179396) 및 [MSHTML 호스트 보안 질문과 대답: II II 부](http://go.microsoft.com/fwlink/?LinkId=179415)합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-253">For more information, see [The MSHTML Host Security FAQ: Part I of II](http://go.microsoft.com/fwlink/?LinkId=179396) and [The MSHTML Host Security FAQ: Part II of II](http://go.microsoft.com/fwlink/?LinkId=179415).</span></span>  
+  
+ <span data-ttu-id="a0670-254">실행 파일의 경우, 레지스트리 값을 1로 설정하여 다음 기능 컨트롤을 사용하도록 설정하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-254">For your executable, consider enabling the following feature controls by setting the registry value to 1.</span></span>  
+  
+|<span data-ttu-id="a0670-255">기능 컨트롤</span><span class="sxs-lookup"><span data-stu-id="a0670-255">Feature Control</span></span>|  
+|---------------------|  
+|<span data-ttu-id="a0670-256">FEATURE_ACTIVEX_REPURPOSEDETECTION</span><span class="sxs-lookup"><span data-stu-id="a0670-256">FEATURE_ACTIVEX_REPURPOSEDETECTION</span></span>|  
+|<span data-ttu-id="a0670-257">FEATURE_BLOCK_LMZ_IMG</span><span class="sxs-lookup"><span data-stu-id="a0670-257">FEATURE_BLOCK_LMZ_IMG</span></span>|  
+|<span data-ttu-id="a0670-258">FEATURE_BLOCK_LMZ_OBJECT</span><span class="sxs-lookup"><span data-stu-id="a0670-258">FEATURE_BLOCK_LMZ_OBJECT</span></span>|  
+|<span data-ttu-id="a0670-259">FEATURE_BLOCK_LMZ_SCRIPT</span><span class="sxs-lookup"><span data-stu-id="a0670-259">FEATURE_BLOCK_LMZ_SCRIPT</span></span>|  
+|<span data-ttu-id="a0670-260">FEATURE_RESTRICT_RES_TO_LMZ</span><span class="sxs-lookup"><span data-stu-id="a0670-260">FEATURE_RESTRICT_RES_TO_LMZ</span></span>|  
+|<span data-ttu-id="a0670-261">FEATURE_RESTRICT_ABOUT_PROTOCOL_IE7</span><span class="sxs-lookup"><span data-stu-id="a0670-261">FEATURE_RESTRICT_ABOUT_PROTOCOL_IE7</span></span>|  
+|<span data-ttu-id="a0670-262">FEATURE_SHOW_APP_PROTOCOL_WARN_DIALOG</span><span class="sxs-lookup"><span data-stu-id="a0670-262">FEATURE_SHOW_APP_PROTOCOL_WARN_DIALOG</span></span>|  
+|<span data-ttu-id="a0670-263">FEATURE_LOCALMACHINE_LOCKDOWN</span><span class="sxs-lookup"><span data-stu-id="a0670-263">FEATURE_LOCALMACHINE_LOCKDOWN</span></span>|  
+|<span data-ttu-id="a0670-264">FEATURE_FORCE_ADDR_AND_STATUS</span><span class="sxs-lookup"><span data-stu-id="a0670-264">FEATURE_FORCE_ADDR_AND_STATUS</span></span>|  
+|<span data-ttu-id="a0670-265">FEATURE_RESTRICTED_ZONE_WHEN_FILE_NOT_FOUND</span><span class="sxs-lookup"><span data-stu-id="a0670-265">FEATURE_RESTRICTED_ZONE_WHEN_FILE_NOT_FOUND</span></span>|  
+  
+ <span data-ttu-id="a0670-266">실행 파일의 경우, 레지스트리 값을 0으로 설정하여 다음 기능 컨트롤을 사용하지 않도록 설정하는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-266">For your executable, consider disabling the following feature control by setting the registry value to 0.</span></span>  
+  
+|<span data-ttu-id="a0670-267">기능 컨트롤</span><span class="sxs-lookup"><span data-stu-id="a0670-267">Feature Control</span></span>|  
+|---------------------|  
+|<span data-ttu-id="a0670-268">FEATURE_ENABLE_SCRIPT_PASTE_URLACTION_IF_PROMPT</span><span class="sxs-lookup"><span data-stu-id="a0670-268">FEATURE_ENABLE_SCRIPT_PASTE_URLACTION_IF_PROMPT</span></span>|  
+  
+ <span data-ttu-id="a0670-269">부분 신뢰를 실행 하는 경우 [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] WPF를 포함 하는 <xref:System.Windows.Controls.WebBrowser> 제어 [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)], WPF Internet Explorer 프로세스의 주소 공간에서 WebBrowser ActiveX 컨트롤을 호스트 합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-269">If you run a partial-trust [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] that includes a WPF <xref:System.Windows.Controls.WebBrowser> control in [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)], WPF hosts the WebBrowser ActiveX control in the address space of the Internet Explorer process.</span></span> <span data-ttu-id="a0670-270">WebBrowser ActiveX 컨트롤에서 호스팅되므로 [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] 프로세스에 Internet Explorer에 대 한 기능 컨트롤의 모든 WebBrowser ActiveX 컨트롤에 대해 설정 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-270">Since the WebBrowser ActiveX control is hosted in the [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] process, all of the feature controls for Internet Explorer are also enabled for the WebBrowser ActiveX control.</span></span>  
+  
+ <span data-ttu-id="a0670-271">또한 Internet Explorer에서 실행하는 XBAP는 일반 독립 실행형 응용 프로그램보다 추가된 보안 수준이 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-271">XBAPs running in Internet Explorer also get an additional level of security compared to normal standalone applications.</span></span> <span data-ttu-id="a0670-272">이 추가 보안은 Internet Explorer 및 WebBrowser ActiveX 컨트롤에서 실행 되므로 보호 모드에서 기본적으로 [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] 및 [!INCLUDE[win7](../../../includes/win7-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-272">This additional security is because Internet Explorer, and therefore the WebBrowser ActiveX control, runs in protected mode by default on [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] and [!INCLUDE[win7](../../../includes/win7-md.md)].</span></span> <span data-ttu-id="a0670-273">보호 모드에 대 한 자세한 내용은 참조 [이해 하 고 보호 모드 Internet Explorer에서 작업](http://go.microsoft.com/fwlink/?LinkId=179393)합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-273">For more information about protected mode, see [Understanding and Working in Protected Mode Internet Explorer](http://go.microsoft.com/fwlink/?LinkId=179393).</span></span>  
+  
+> [!NOTE]
+>  <span data-ttu-id="a0670-274">WPF를 포함 하는 XBAP 실행 하려고 하면 <xref:System.Windows.Controls.WebBrowser> 컨트롤 Firefox 인터넷 영역에 있는 동안에 <xref:System.Security.SecurityException> throw 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-274">If you try to run an XBAP that includes a WPF <xref:System.Windows.Controls.WebBrowser> control in Firefox, while in the Internet zone, a <xref:System.Security.SecurityException> will be thrown.</span></span> <span data-ttu-id="a0670-275">이는 WPF 보안 정책에 의한 것입니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-275">This is due to WPF security policy.</span></span>  
   
 <a name="APTCA"></a>   
-## 부분적으로 신뢰할 수 있는 클라이언트 응용 프로그램에 대해 APTCA 어셈블리 사용 안 함  
- 관리되는 어셈블리가 [!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]에 설치되는 경우 사용자는 설치를 위해 명시적 권한을 제공해야 하기 때문에 이러한 어셈블리는 완전히 신뢰할 수 있게 됩니다.  이러한 어셈블리는 완전히 신뢰할 수 있으므로 완전히 신뢰할 수 있는 관리되는 클라이언트 응용 프로그램에서만 사용할 수 있습니다.  부분적으로 신뢰할 수 있는 응용 프로그램에서 이러한 어셈블리를 사용하게 하려면 <xref:System.Security.AllowPartiallyTrustedCallersAttribute>\(APTCA\)로 표시해야 합니다.  부분 신뢰에서 안전하게 실행할 수 있는 것으로 테스트된 어셈블리만 이 특성으로 표시해야 합니다.  
+## <a name="disabling-aptca-assemblies-for-partially-trusted-client-applications"></a><span data-ttu-id="a0670-276">부분적으로 신뢰할 수 있는 클라이언트 응용 프로그램에 대한 APTCA 어셈블리를 사용하지 않도록 설정</span><span class="sxs-lookup"><span data-stu-id="a0670-276">Disabling APTCA Assemblies for Partially Trusted Client Applications</span></span>  
+ <span data-ttu-id="a0670-277">관리 되는 어셈블리에 설치 된 경우는 [!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)], 사용자는 설치를 위해 명시적 권한을 제공 해야 하기 때문에 완전히 신뢰할 수 있는 해지기 합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-277">When managed assemblies are installed into the [!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)], they become fully trusted because the user must provide explicit permission to install them.</span></span> <span data-ttu-id="a0670-278">완전히 신뢰할 수 있기 때문에 완전히 신뢰할 수 있는 관리 클라이언트 응용 프로그램에서 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-278">Because they are fully trusted, only fully trusted managed client applications can use them.</span></span> <span data-ttu-id="a0670-279">부분적으로 신뢰할 수 있는 응용 프로그램을 사용할 수 있도록 것으로 표시 되어야 합니다는 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA).</span><span class="sxs-lookup"><span data-stu-id="a0670-279">To allow partially trusted applications to use them, they must be marked with the <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA).</span></span> <span data-ttu-id="a0670-280">부분 신뢰로 실행하기에 안전한 것으로 테스트된 어셈블리만 이 특성으로 표시되어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-280">Only assemblies that have been tested to be safe for execution in partial trust should be marked with this attribute.</span></span>  
   
- 그러나 APTCA 어셈블리는 [!INCLUDE[TLA2#tla_gac](../../../includes/tla2sharptla-gac-md.md)]에 설치된 후 보안 결함을 드러낼 수 있습니다.  보안 결함이 발견되고 나면 어셈블리 게시자는 기존 설치에서 문제를 수정하는 동시에 문제 발견 후 수행되는 설치를 보호하기 위한 보안 업데이트를 생성할 수 있습니다.  업데이트의 한 옵션은 어셈블리를 제거하는 것이지만 이 경우 완전히 신뢰할 수 있는 다른 클라이언트 응용 프로그램이 어셈블리를 사용하지 못하게 될 수 있습니다.  
+ <span data-ttu-id="a0670-281">그러나는에 설치 된 후 보안 결함을 드러낼 APTCA 어셈블리는 [!INCLUDE[TLA2#tla_gac](../../../includes/tla2sharptla-gac-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-281">However, it is possible for an APTCA assembly to exhibit a security flaw after being installed into the [!INCLUDE[TLA2#tla_gac](../../../includes/tla2sharptla-gac-md.md)].</span></span> <span data-ttu-id="a0670-282">보안 결함이 발견되면 어셈블리 게시자는 기존 설치에서 문제를 해결하는 보안 업데이트를 생성할 수 있으며, 문제가 발견된 후 발생할 수 있는 설치를 방지할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-282">Once a security flaw is discovered, assembly publishers can produce a security update to fix the problem on existing installations, and to protect against installations that may occur after the problem is discovered.</span></span> <span data-ttu-id="a0670-283">업데이트에 대한 한 가지 옵션은 어셈블리를 제거하는 것이지만 어셈블리를 사용하는 완전히 신뢰할 수 있는 다른 클라이언트 응용 프로그램이 중단될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-283">One option for the update is to uninstall the assembly, although that may break other fully trusted client applications that use the assembly.</span></span>  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]는 APTCA 어셈블리를 제거하지 않고 부분적으로 신뢰할 수 있는 [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]에 대해 APTCA 어셈블리를 사용하지 않도록 설정하는 메커니즘을 제공합니다.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]<span data-ttu-id="a0670-284">기준인 APTCA 어셈블리 수 수에 대 한 비활성화 부분적으로 신뢰할 수 있는 메커니즘을 제공 [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] APTCA 어셈블리를 제거 하지 않고 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-284"> provides a mechanism by which an APTCA assembly can be disabled for partially trusted [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] without uninstalling the APTCA assembly.</span></span>  
   
- APTCA 어셈블리를 사용하지 않도록 설정하려면 특수 레지스트리 키를 만들어야 합니다.  
+ <span data-ttu-id="a0670-285">APTCA 어셈블리를 사용하지 않도록 설정하려면 특수한 레지스트리 키를 만들어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-285">To disable an APTCA assembly, you have to create a special registry key:</span></span>  
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\policy\APTCA\<AssemblyFullName>, FileVersion=<AssemblyFileVersion>`  
   
- 다음은 이러한 예제입니다.  
+ <span data-ttu-id="a0670-286">이에 대한 예는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-286">The following shows an example:</span></span>  
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\policy\APTCA\aptcagac, Version=1.0.0.0, Culture=neutral, PublicKeyToken=215e3ac809a0fea7, FileVersion=1.0.0.0`  
   
- 이 키는 APTCA 어셈블리에 대한 항목을 설정합니다.  또한 해당 어셈블리를 사용하거나 사용하지 않도록 설정하는 값을 이 키에 만들어야 합니다.  이 값에 대한 자세한 설명은 다음에 나와 있습니다.  
+ <span data-ttu-id="a0670-287">이 키는 APTCA 어셈블리에 대한 항목을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-287">This key establishes an entry for the APTCA assembly.</span></span> <span data-ttu-id="a0670-288">어셈블리를 사용할지를 지정하는 이 키에서 값을 만들 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-288">You also have to create a value in this key that enables or disables the assembly.</span></span> <span data-ttu-id="a0670-289">다음은 값의 세부 정보입니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-289">The following are the details of the value:</span></span>  
   
--   값 이름: **APTCA\_FLAG**  
+-   <span data-ttu-id="a0670-290">값 이름: **APTCA_FLAG**합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-290">Value Name: **APTCA_FLAG**.</span></span>  
   
--   값 형식: **REG\_DWORD**  
+-   <span data-ttu-id="a0670-291">값 종류: **REG_DWORD**합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-291">Value Type: **REG_DWORD**.</span></span>  
   
--   값 데이터: **1**\(사용 안 함\), **0**\(사용\)  
+-   <span data-ttu-id="a0670-292">값 데이터: **1** ; 해제 하려면 **0** 사용할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-292">Value Data: **1** to disable; **0** to enable.</span></span>  
   
- 부분적으로 신뢰할 수 있는 클라이언트 응용 프로그램에 대해 어셈블리를 사용하지 않도록 설정해야 하는 경우 해당 레지스트리 키와 값을 만드는 업데이트를 작성할 수 있습니다.  
+ <span data-ttu-id="a0670-293">어셈블리를 부분적으로 신뢰할 수 있는 클라이언트 응용 프로그램에 사용하지 않도록 설정해야 하는 경우, 레지스트리 키와 값을 만드는 업데이트를 작성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-293">If an assembly has to be disabled for partially trusted client applications, you can write an update that creates the registry key and value.</span></span>  
   
 > [!NOTE]
->  핵심 [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] 어셈블리는 관리되는 응용 프로그램을 실행하는 데 필요하므로 이 방법으로 사용하지 않게 설정해도 영향을 받지 않습니다.  APTCA 어셈블리를 사용하지 않게 설정하는 기능은 주로 이 아니거나 타사 응용 프로그램인 경우를 대상으로 합니다.  
+>  <span data-ttu-id="a0670-294">코어 [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] 어셈블리는 관리 되는 응용 프로그램을 실행 하는 데 필요 하기 때문에 이러한 방식으로 비활성화 하 여 영향을 받지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-294">Core [!INCLUDE[TLA2#tla_winfx](../../../includes/tla2sharptla-winfx-md.md)] assemblies are not affected by disabling them in this way because they are required for managed applications to run.</span></span> <span data-ttu-id="a0670-295">APTCA 어셈블리를 사용하지 않도록 설정하는 것에 대한 지원은 기본적으로 타사 응용 프로그램을 대상으로 합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-295">Support for disabling APTCA assemblies is primarily targeted to third-party applications.</span></span>  
   
 <a name="LooseContentSandboxing"></a>   
-## 느슨한 XAML 파일에 대한 샌드박스 동작  
- 느슨한 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 파일은 코드 숨김, 이벤트 처리기 또는 응용 프로그램별 어셈블리에 의존하지 않는 태그 전용 XAML 파일입니다.  브라우저에서 느슨한 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 파일로 직접 탐색할 경우 기본 인터넷 영역 권한 집합에 기반하여 보안 샌드박스로 로드됩니다.  
+## <a name="sandbox-behavior-for-loose-xaml-files"></a><span data-ttu-id="a0670-296">느슨한 XAML 파일에 대한 샌드박스 동작</span><span class="sxs-lookup"><span data-stu-id="a0670-296">Sandbox Behavior for Loose XAML Files</span></span>  
+ <span data-ttu-id="a0670-297">느슨한 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 파일은 코드 숨김, 이벤트 처리기 또는 응용 프로그램별 어셈블리에 종속 되지 않은 태그 전용 XAML 파일입니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-297">Loose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] files are markup-only XAML files that do not depend on any code-behind, event handler, or application-specific assembly.</span></span> <span data-ttu-id="a0670-298">느슨한 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 브라우저에서 직접 파일 탐색할 기본 인터넷 영역 권한 집합에 따라 보안 샌드박스에 로드 됩니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-298">When loose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] files are navigated to directly from the browser, they are loaded in a security sandbox based on the default Internet zone permission set.</span></span>  
   
- 그러나 독립 실행형 응용 프로그램의 <xref:System.Windows.Navigation.NavigationWindow> 또는 <xref:System.Windows.Controls.Frame>에서 느슨한 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 파일로 탐색할 경우 보안 동작이 다릅니다.  
+ <span data-ttu-id="a0670-299">그러나 보안 동작은 느슨한 다르게 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 파일 중 하나에서 탐색할는 <xref:System.Windows.Navigation.NavigationWindow> 또는 <xref:System.Windows.Controls.Frame> 독립 실행형 응용 프로그램에서입니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-299">However, the security behavior is different when loose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] files are navigated to from either a <xref:System.Windows.Navigation.NavigationWindow> or <xref:System.Windows.Controls.Frame> in a standalone application.</span></span>  
   
- 두 경우 모두에 탐색한 느슨한 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 파일은 호스트 응용 프로그램의 권한을 상속합니다.  그러나 특히 느슨한 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 파일이 신뢰할 수 없거나 알려지지 않은 엔터티에 의해 생성된 경우 이 동작은 보안 관점에서 바람직하지 않습니다.  이 형식의 콘텐츠는 외부 콘텐츠로 알려져 있으며 탐색한 경우 해당 파일을 격리시키도록 <xref:System.Windows.Controls.Frame> 및 <xref:System.Windows.Navigation.NavigationWindow> 모두를 구성할 수 있습니다.  <xref:System.Windows.Controls.Frame> 및 <xref:System.Windows.Navigation.NavigationWindow>에 대한 다음 예제와 같이 **SandboxExternalContent** 속성을 true로 설정하여 격리를 수행할 수 있습니다.  
+ <span data-ttu-id="a0670-300">두 경우 모두 느슨한 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 파일 탐색은 호스트 응용 프로그램의 사용 권한을 상속 합니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-300">In both cases, the loose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] file that is navigated to inherits the permissions of its host application.</span></span> <span data-ttu-id="a0670-301">그러나이 동작의 느슨한 경우 특히 보안 측면에서 적절 하지 않을 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 파일은 신뢰할 수 있는 또는 알 수 없는 엔터티에 의해 생성 되었습니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-301">However, this behavior may be undesirable from a security perspective, particularly if a loose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] file was produced by an entity that is either not trusted or unknown.</span></span> <span data-ttu-id="a0670-302">이 콘텐츠 형식의 라고 *외부 콘텐츠*, 둘 다 고 <xref:System.Windows.Controls.Frame> 및 <xref:System.Windows.Navigation.NavigationWindow> 를 탐색할 때 격리 하도록 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-302">This type of content is known as *external content*, and both <xref:System.Windows.Controls.Frame> and <xref:System.Windows.Navigation.NavigationWindow> can be configured to isolate it when navigated to.</span></span> <span data-ttu-id="a0670-303">격리를 설정 하 여 수행할는 **SandboxExternalContent** 속성을 true에 대 한 다음 예제에 나와 있는 것 처럼 <xref:System.Windows.Controls.Frame> 및 <xref:System.Windows.Navigation.NavigationWindow>:</span><span class="sxs-lookup"><span data-stu-id="a0670-303">Isolation is achieved by setting the **SandboxExternalContent** property to true, as shown in the following examples for <xref:System.Windows.Controls.Frame> and <xref:System.Windows.Navigation.NavigationWindow>:</span></span>  
   
- [!code-xml[SecurityOverviewSnippets#FrameMARKUP](../../../samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window2.xaml#framemarkup)]  
+ [!code-xaml[SecurityOverviewSnippets#FrameMARKUP](../../../samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window2.xaml#framemarkup)]  
   
- [!code-xml[SecurityOverviewSnippets#NavigationWindowMARKUP](../../../samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window1.xaml#navigationwindowmarkup)]  
+ [!code-xaml[SecurityOverviewSnippets#NavigationWindowMARKUP](../../../samples/snippets/csharp/VS_Snippets_Wpf/SecurityOverviewSnippets/CS/Window1.xaml#navigationwindowmarkup)]  
   
- 이 설정을 사용하면 응용 프로그램을 호스팅하는 중인 프로세스와 별개인 프로세스에 외부 콘텐츠가 로드됩니다.  이 프로세스는 기본 인터넷 영역 권한 집합으로 제한되므로 호스팅 응용 프로그램 및 클라이언트 컴퓨터에서 효율적으로 격리됩니다.  
+ <span data-ttu-id="a0670-304">이 설정을 통해 외부 콘텐츠가 응용 프로그램을 호스팅하는 프로세스와 별개인 프로세스로 로드됩니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-304">With this setting, external content will be loaded into a process that is separate from the process that is hosting the application.</span></span> <span data-ttu-id="a0670-305">이 프로세스는 효과적으로 호스팅 응용 프로그램과 클라이언트 컴퓨터에서 격리되어 기본 인터넷 영역 권한 집합으로 제한됩니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-305">This process is restricted to the default Internet zone permission set, effectively isolating it from the hosting application and the client computer.</span></span>  
   
 > [!NOTE]
->  독립 실행형 응용 프로그램에서 <xref:System.Windows.Navigation.NavigationWindow> 또는 <xref:System.Windows.Controls.Frame>으로부터 느슨한 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 파일로 탐색하는 기능은 WPF 브라우저 호스팅 인프라를 기반으로 구현되고 PresentationHost 프로세스와 관련되지만 보안 수준은 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 및 [!INCLUDE[win7](../../../includes/win7-md.md)]에서 콘텐츠가 Internet Explorer에 직접 로드되는 경우\(이 경우에도 PresentationHost를 통해 로드됨\)에 비해 약간 낮습니다. 이는 웹 브라우저를 사용하는 독립 실행형 WPF 응용 프로그램에서 Internet Explorer의 추가적인 보호 모드 보안 기능을 제공하지 않기 때문입니다.  
+>  <span data-ttu-id="a0670-306">경우에 탐색 느슨한을 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 파일 중 하나에서 한 <xref:System.Windows.Navigation.NavigationWindow> 또는 <xref:System.Windows.Controls.Frame> 독립 실행형 응용 프로그램은 구현 호스팅 PresentationHost 프로세스와 관련 된 인프라 WPF 브라우저에 따라 보안 수준이 콘텐츠 Internet Explorer에서 직접 로드할 때 보다 약간 적은 범위로 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] 및 [!INCLUDE[win7](../../../includes/win7-md.md)] (있는 여전히 일 PresentationHost 통해).</span><span class="sxs-lookup"><span data-stu-id="a0670-306">Even though navigation to loose [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] files from either a <xref:System.Windows.Navigation.NavigationWindow> or <xref:System.Windows.Controls.Frame> in a standalone application is implemented based on the WPF browser hosting infrastructure, involving the PresentationHost process, the security level is slightly less than when the content is loaded directly in Internet Explorer on [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] and [!INCLUDE[win7](../../../includes/win7-md.md)] (which would still be through PresentationHost).</span></span> <span data-ttu-id="a0670-307">웹 브라우저를 사용하는 독립 실행형 WPF 응용 프로그램은 Internet Explorer의 추가 보호 모드 보안 기능을 제공하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="a0670-307">This is because a standalone WPF application using a Web browser does not provide the additional Protected Mode security feature of Internet Explorer.</span></span>  
   
 <a name="BestPractices"></a>   
-## 보안을 향상시키는 WPF 응용 프로그램 개발을 위한 리소스  
- 다음은 보안을 향상시키는 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 응용 프로그램을 개발하는 데 도움이 되는 추가적인 리소스입니다.  
+## <a name="resources-for-developing-wpf-applications-that-promote-security"></a><span data-ttu-id="a0670-308">보안을 승격하는 WPF 응용 프로그램 개발을 위한 리소스</span><span class="sxs-lookup"><span data-stu-id="a0670-308">Resources for Developing WPF Applications that Promote Security</span></span>  
+ <span data-ttu-id="a0670-309">다음은 몇 가지 추가 리소스를 개발 하기 위해 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 보안을 향상 하는 응용 프로그램:</span><span class="sxs-lookup"><span data-stu-id="a0670-309">The following are some additional resources to help develop [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] applications that promote security:</span></span>  
   
-|영역|리소스|  
-|--------|---------|  
-|관리 코드|[Patterns and Practices Security Guidance for Applications](http://go.microsoft.com/fwlink/?LinkId=117426)|  
-|[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]|[코드 액세스 보안](../../../docs/framework/misc/code-access-security.md)|  
-|[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[ClickOnce 보안 및 배포](../Topic/ClickOnce%20Security%20and%20Deployment.md)|  
-|[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[WPF 부분 신뢰 보안](../../../docs/framework/wpf/wpf-partial-trust-security.md)|  
+|<span data-ttu-id="a0670-310">영역</span><span class="sxs-lookup"><span data-stu-id="a0670-310">Area</span></span>|<span data-ttu-id="a0670-311">리소스</span><span class="sxs-lookup"><span data-stu-id="a0670-311">Resource</span></span>|  
+|----------|--------------|  
+|<span data-ttu-id="a0670-312">관리 코드</span><span class="sxs-lookup"><span data-stu-id="a0670-312">Managed code</span></span>|[<span data-ttu-id="a0670-313">응용 프로그램에 대한 패턴 및 사례 보안 지침</span><span class="sxs-lookup"><span data-stu-id="a0670-313">Patterns and Practices Security Guidance for Applications</span></span>](http://go.microsoft.com/fwlink/?LinkId=117426)|  
+|[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]|[<span data-ttu-id="a0670-314">코드 액세스 보안</span><span class="sxs-lookup"><span data-stu-id="a0670-314">Code Access Security</span></span>](../../../docs/framework/misc/code-access-security.md)|  
+|[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[<span data-ttu-id="a0670-315">ClickOnce 보안 및 배포</span><span class="sxs-lookup"><span data-stu-id="a0670-315">ClickOnce Security and Deployment</span></span>](/visualstudio/deployment/clickonce-security-and-deployment)|  
+|[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[<span data-ttu-id="a0670-316">WPF 부분 신뢰 보안</span><span class="sxs-lookup"><span data-stu-id="a0670-316">WPF Partial Trust Security</span></span>](../../../docs/framework/wpf/wpf-partial-trust-security.md)|  
   
-## 참고 항목  
- [WPF 부분 신뢰 보안](../../../docs/framework/wpf/wpf-partial-trust-security.md)   
- [WPF 보안 전략 \- 플랫폼 보안](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)   
- [WPF 보안 전략 \- 보안 엔지니어링](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)   
- [Patterns and Practices Security Guidance for Applications](http://go.microsoft.com/fwlink/?LinkId=117426)   
- [코드 액세스 보안](../../../docs/framework/misc/code-access-security.md)   
- [ClickOnce 보안 및 배포](../Topic/ClickOnce%20Security%20and%20Deployment.md)   
- [XAML 개요\(WPF\)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="a0670-317">참고 항목</span><span class="sxs-lookup"><span data-stu-id="a0670-317">See Also</span></span>  
+ [<span data-ttu-id="a0670-318">WPF 부분 신뢰 보안</span><span class="sxs-lookup"><span data-stu-id="a0670-318">WPF Partial Trust Security</span></span>](../../../docs/framework/wpf/wpf-partial-trust-security.md)  
+ [<span data-ttu-id="a0670-319">WPF 보안 전략 - 플랫폼 보안</span><span class="sxs-lookup"><span data-stu-id="a0670-319">WPF Security Strategy - Platform Security</span></span>](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)  
+ [<span data-ttu-id="a0670-320">WPF 보안 전략 - 보안 엔지니어링</span><span class="sxs-lookup"><span data-stu-id="a0670-320">WPF Security Strategy - Security Engineering</span></span>](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)  
+ [<span data-ttu-id="a0670-321">응용 프로그램에 대한 패턴 및 사례 보안 지침</span><span class="sxs-lookup"><span data-stu-id="a0670-321">Patterns and Practices Security Guidance for Applications</span></span>](http://go.microsoft.com/fwlink/?LinkId=117426)  
+ [<span data-ttu-id="a0670-322">코드 액세스 보안</span><span class="sxs-lookup"><span data-stu-id="a0670-322">Code Access Security</span></span>](../../../docs/framework/misc/code-access-security.md)  
+ [<span data-ttu-id="a0670-323">ClickOnce 보안 및 배포</span><span class="sxs-lookup"><span data-stu-id="a0670-323">ClickOnce Security and Deployment</span></span>](/visualstudio/deployment/clickonce-security-and-deployment)  
+ [<span data-ttu-id="a0670-324">XAML 개요(WPF)</span><span class="sxs-lookup"><span data-stu-id="a0670-324">XAML Overview (WPF)</span></span>](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

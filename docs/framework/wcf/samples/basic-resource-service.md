@@ -1,50 +1,53 @@
 ---
-title: "기본 리소스 서비스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "기본 리소스 서비스"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4360063e-cc8c-4648-846e-c05a5af51a7a
-caps.latest.revision: 8
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: d8ba436cba284201f14635162ed394abfa9a14db
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 기본 리소스 서비스
-이 샘플에서는 검색, 추가, 삭제 및 대체 작업을 지원하는 고객 컬렉션을 노출하는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST 프로그래밍 모델을 사용하여 HTTP 기반 서비스를 구현하는 방법을 보여 줍니다.이 샘플은 자체 호스팅되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP 서비스\(Service.cs\)와 서비스를 만들고 호출하는 콘솔 응용 프로그램\(program.cs\)의 두 구성 요소로 구성되어 있습니다.  
+# <a name="basic-resource-service"></a><span data-ttu-id="cb8d0-102">기본 리소스 서비스</span><span class="sxs-lookup"><span data-stu-id="cb8d0-102">Basic Resource Service</span></span>
+<span data-ttu-id="cb8d0-103">이 샘플에서는 검색, 추가, 삭제 및 대체 작업을 지원하는 고객 컬렉션을 노출하는 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST 프로그래밍 모델을 사용하여 HTTP 기반 서비스를 구현하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="cb8d0-103">This sample demonstrates how to implement a HTTP-based service using the [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] REST Programming model that exposes a collection of customers that supports the retrieve, add, delete and replace operations.</span></span> <span data-ttu-id="cb8d0-104">이 샘플은 자체 호스팅되는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP 서비스(Service.cs)와 서비스를 만들고 호출하는 콘솔 응용 프로그램(program.cs)의 두 구성 요소로 구성되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb8d0-104">This sample consists of 2 components - a self-hosted [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] HTTP service (Service.cs) and a console application (program.cs) that creates the service and makes calls to it.</span></span>  
   
-## 샘플 세부 정보  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스는 리소스 지향\/REST 방식으로 고객 컬렉션을 노출합니다.즉, 고객 컬렉션과 이 컬렉션 내의 모든 고객마다 고유한 URI가 있어야 합니다.이 서비스는 컬렉션 URI에서 HTTP `GET`을 보내 전체 컬렉션을 검색하고 컬렉션 URI에서 HTTP `POST`를 보내 컬렉션에 새 고객을 추가하는 작업을 지원합니다.또한 개별 고객의 URI에서는 고객 세부 정보를 가져오기 위한 HTTP `GET`, 고객 세부 정보를 대체하기 위한 HTTP `PUT` 및 컬렉션에서 고객을 제거하기 위한 HTTP `DELETE`를 지원합니다.컬렉션에 새 고객이 추가되면 서비스에서는 고객에게 고유한 URI를 할당하고 이 URI를 고객 세부 정보의 일부로 저장합니다.또한 서비스에서는 응답의 HTTP Location 헤더를 사용하여 이 URI를 클라이언트에 전달합니다.  
+## <a name="sample-details"></a><span data-ttu-id="cb8d0-105">샘플 세부 정보</span><span class="sxs-lookup"><span data-stu-id="cb8d0-105">Sample Details</span></span>  
+ <span data-ttu-id="cb8d0-106">[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스는 리소스 지향/REST 방식으로 고객 컬렉션을 노출합니다.</span><span class="sxs-lookup"><span data-stu-id="cb8d0-106">The [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service exposes a collection of customers in a resource-oriented/REST manner.</span></span> <span data-ttu-id="cb8d0-107">즉, 고객 컬렉션과 이 컬렉션 내의 모든 고객마다 고유한 URI가 있어야 합니다.</span><span class="sxs-lookup"><span data-stu-id="cb8d0-107">In short, this involves having unique URIs for the collection of customers and every customer in the collection.</span></span> <span data-ttu-id="cb8d0-108">이 서비스는 컬렉션 URI에서 HTTP `GET`을 보내 전체 컬렉션을 검색하고 컬렉션 URI에서 HTTP `POST`를 보내 컬렉션에 새 고객을 추가하는 작업을 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="cb8d0-108">The service supports sending an HTTP `GET` at the collection URI to retrieve the entire collection and HTTP `POST` at the collection URI to add a new customer to the collection.</span></span> <span data-ttu-id="cb8d0-109">또한 개별 고객의 URI에서는 고객 세부 정보를 가져오기 위한 HTTP `GET`, 고객 세부 정보를 대체하기 위한 HTTP `PUT` 및 컬렉션에서 고객을 제거하기 위한 HTTP `DELETE`를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="cb8d0-109">Also at the URI for an individual customer, it supports HTTP `GET` to get the customer details, HTTP `PUT` to replace the details of the customer and HTTP `DELETE` to remove the customer from the collection.</span></span> <span data-ttu-id="cb8d0-110">컬렉션에 새 고객이 추가되면 서비스에서는 고객에게 고유한 URI를 할당하고 이 URI를 고객 세부 정보의 일부로 저장합니다.</span><span class="sxs-lookup"><span data-stu-id="cb8d0-110">When a new customer is added to the collection, the service assigns it a unique URI and stores the URI as part of the customer’s details.</span></span> <span data-ttu-id="cb8d0-111">또한 서비스에서는 응답의 HTTP Location 헤더를 사용하여 이 URI를 클라이언트에 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="cb8d0-111">Also, it communicates the URI to the client using the Location HTTP header of the response.</span></span>  
   
- App.config 파일에서는 <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> 속성이 `true`로 설정된 기본 <xref:System.ServiceModel.Description.WebHttpEndpoint>로 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스를 구성합니다.따라서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 `http://localhost:8000/Customers/help`에 자동 HTML 기반 도움말 페이지를 만듭니다. 이 페이지에서는 서비스에 대한 HTTP 요청을 생성하고 서비스의 HTTP 응답에 액세스하는 방법에 대한 정보가 제공됩니다. 예를 들어 고객 세부 정보를 XML 또는 JSON으로 표현하는 방법에 대한 예제가 제공됩니다.  
+ <span data-ttu-id="cb8d0-112">App.config 파일에서는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 속성이 <xref:System.ServiceModel.Description.WebHttpEndpoint>로 설정된 기본 <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A>로 `true` 서비스를 구성합니다.</span><span class="sxs-lookup"><span data-stu-id="cb8d0-112">The App.config file configures the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service with a default <xref:System.ServiceModel.Description.WebHttpEndpoint> that has the <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> property set to `true`.</span></span> <span data-ttu-id="cb8d0-113">따라서 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]에서는 `http://localhost:8000/Customers/help`에 자동 HTML 기반 도움말 페이지를 만듭니다. 이 페이지에서는 서비스에 대한 HTTP 요청을 생성하고 서비스의 HTTP 응답에 액세스하는 방법에 대한 정보가 제공됩니다. 예를 들어 고객 세부 정보를 XML 또는 JSON으로 표현하는 방법에 대한 예제가 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="cb8d0-113">As a result, the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] creates an automatic HTML-based help page at `http://localhost:8000/Customers/help` that provides information about how to construct HTTP requests to the service and how to access the service’s HTTP response – for instance, an example of how the customer details is represented in XML and JSON.</span></span>  
   
- 이러한 방식으로 고객 컬렉션\(보다 일반적으로는 모든 리소스\)을 노출하면 클라이언트가 URI와 HTTP `GET`, `PUT`, `DELETE` 및 `POST`를 사용하여 일관된 방식으로 고객 컬렉션과 상호 작용할 수 있습니다.Program.cs에서는 <xref:System.Net.HttpWebRequest>를 사용하여 이러한 클라이언트를 작성하는 방법을 보여 줍니다.이 방법은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 서비스에 액세스하는 여러 방법 중 하나일 뿐입니다.<xref:System.ServiceModel.ChannelFactory> 및 <xref:System.Net.WebClient> 같은 다른 .NET Framework 클래스를 사용하여 서비스에 액세스할 수도 있습니다.[기본 HTTP 서비스](../../../../docs/framework/wcf/samples/basic-http-service.md) 샘플 및 [자동 포맷 선택](../../../../docs/framework/wcf/samples/automatic-format-selection.md) 샘플과 같은 SDK의 다른 샘플에서는 이러한 클래스를 사용하여 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스와 통신하는 방법을 보여 줍니다.  
+ <span data-ttu-id="cb8d0-114">이러한 방식으로 고객 컬렉션(보다 일반적으로는 모든 리소스)을 노출하면 클라이언트가 URI와 HTTP `GET`, `PUT`, `DELETE` 및 `POST`를 사용하여 일관된 방식으로 고객 컬렉션과 상호 작용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb8d0-114">Exposing the customer collection (and more generally, any resource) in this manner allows the client to interact with it in a uniform way using URIs and HTTP `GET`, `PUT`, `DELETE` and `POST`.</span></span> <span data-ttu-id="cb8d0-115">Program.cs에서는 <xref:System.Net.HttpWebRequest>를 사용하여 이러한 클라이언트를 작성하는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="cb8d0-115">Program.cs demonstrates how such a client can be authored using <xref:System.Net.HttpWebRequest>.</span></span> <span data-ttu-id="cb8d0-116">이 방법은 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST 서비스에 액세스하는 여러 방법 중 하나일 뿐입니다.</span><span class="sxs-lookup"><span data-stu-id="cb8d0-116">Note that this is just one way to access a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST service.</span></span> <span data-ttu-id="cb8d0-117"><xref:System.ServiceModel.ChannelFactory> 및 <xref:System.Net.WebClient> 같은 다른 .NET Framework 클래스를 사용하여 서비스에 액세스할 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb8d0-117">It is also possible to access the service using other .NET Framework classes like the <xref:System.ServiceModel.ChannelFactory> and <xref:System.Net.WebClient>.</span></span> <span data-ttu-id="cb8d0-118">SDK의 다른 샘플 (같은 [기본 HTTP 서비스](../../../../docs/framework/wcf/samples/basic-http-service.md) 샘플 및 [선택 영역 자동 서식](../../../../docs/framework/wcf/samples/automatic-format-selection.md) 샘플)와 통신 하려면 이러한 클래스를 사용 하는 방법을 보여는 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] 서비스입니다.</span><span class="sxs-lookup"><span data-stu-id="cb8d0-118">Other samples in the SDK (such as the [Basic HTTP Service](../../../../docs/framework/wcf/samples/basic-http-service.md) sample and the [Automatic Format Selection](../../../../docs/framework/wcf/samples/automatic-format-selection.md) sample) show how to use these classes to communicate with a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
   
- 이 샘플은 콘솔 응용 프로그램 내에서 실행되는 자체 호스팅 서비스와 클라이언트로 구성되어 있습니다.콘솔 응용 프로그램이 실행되면 클라이언트에서는 서비스로 요청을 보내고 응답의 관련 정보를 콘솔 창에 씁니다.  
+ <span data-ttu-id="cb8d0-119">이 샘플은 콘솔 응용 프로그램 내에서 실행되는 자체 호스팅 서비스와 클라이언트로 구성되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb8d0-119">The sample consists a self-hosted service and a client that both run within a console application.</span></span> <span data-ttu-id="cb8d0-120">콘솔 응용 프로그램이 실행되면 클라이언트에서는 서비스로 요청을 보내고 응답의 관련 정보를 콘솔 창에 씁니다.</span><span class="sxs-lookup"><span data-stu-id="cb8d0-120">As the console application runs, the client makes requests to the service and writes the pertinent information from the responses to the console window.</span></span>  
   
-#### 이 샘플을 사용하려면  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="cb8d0-121">이 샘플을 사용하려면</span><span class="sxs-lookup"><span data-stu-id="cb8d0-121">To use this sample</span></span>  
   
-1.  Basic Resource Service 샘플의 솔루션을 엽니다.관리자 권한으로 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]을 시작해야 샘플이 제대로 실행됩니다.이렇게 하려면 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 아이콘을 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **관리자 권한으로 실행**을 선택합니다.  
+1.  <span data-ttu-id="cb8d0-122">Basic Resource Service 샘플의 솔루션을 엽니다.</span><span class="sxs-lookup"><span data-stu-id="cb8d0-122">Open the solution for the Basic Resource Service Sample.</span></span> <span data-ttu-id="cb8d0-123">관리자 권한으로 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]을 시작해야 샘플이 제대로 실행됩니다.</span><span class="sxs-lookup"><span data-stu-id="cb8d0-123">When launching [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], you must run as an administrator for the sample to execute successfully.</span></span> <span data-ttu-id="cb8d0-124">마우스 오른쪽 단추로 클릭 하 여이 작업을 수행는 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 아이콘을 선택 하면 **관리자 권한으로 실행** 상황에 맞는 메뉴입니다.</span><span class="sxs-lookup"><span data-stu-id="cb8d0-124">Do this by right-clicking the [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] icon and selecting **Run as Administrator** from the context menu.</span></span>  
   
-2.  Ctrl\+Shift\+B를 눌러 솔루션을 빌드한 다음 Ctrl\+F5를 눌러 콘솔 응용 프로그램을 실행합니다.콘솔 창이 나타나고 실행 중인 서비스의 URI와 실행 중인 서비스에 대한 HTML 도움말 페이지의 URI가 제공됩니다.언제든지 브라우저에서 HTML 도움말 페이지의 URI를 입력하면 해당 도움말 페이지를 볼 수 있습니다.샘플이 실행되면 클라이언트에서는 현재 활동의 상태를 씁니다.  
+2.  <span data-ttu-id="cb8d0-125">Ctrl+Shift+B를 눌러 솔루션을 빌드한 다음 Ctrl+F5를 눌러 콘솔 응용 프로그램을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="cb8d0-125">Press CTRL+SHIFT+B to build the solution and then press Ctrl+F5 to run the console application.</span></span> <span data-ttu-id="cb8d0-126">콘솔 창이 나타나고 실행 중인 서비스의 URI와 실행 중인 서비스에 대한 HTML 도움말 페이지의 URI가 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="cb8d0-126">The console window appears and provides the URI of the running service and the URI of the HTML help page for the running service.</span></span> <span data-ttu-id="cb8d0-127">언제든지 브라우저에서 HTML 도움말 페이지의 URI를 입력하면 해당 도움말 페이지를 볼 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb8d0-127">At any point in time you can view the HTML help page by typing the URI of the help page in a browser.</span></span> <span data-ttu-id="cb8d0-128">샘플이 실행되면 클라이언트에서는 현재 활동의 상태를 씁니다.</span><span class="sxs-lookup"><span data-stu-id="cb8d0-128">As the sample runs, the client writes the status of the current activity.</span></span>  
   
-3.  아무 키나 눌러 샘플을 종료합니다.  
+3.  <span data-ttu-id="cb8d0-129">아무 키나 눌러 샘플을 종료합니다.</span><span class="sxs-lookup"><span data-stu-id="cb8d0-129">Press any key to terminate the sample.</span></span>  
   
 > [!IMPORTANT]
->  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.계속하기 전에 다음\(기본\) 디렉터리를 확인하십시오.  
+>  <span data-ttu-id="cb8d0-130">컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb8d0-130">The samples may already be installed on your machine.</span></span> <span data-ttu-id="cb8d0-131">계속하기 전에 다음(기본) 디렉터리를 확인하세요.</span><span class="sxs-lookup"><span data-stu-id="cb8d0-131">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면 [Windows Communication Foundation \(WCF\) and Windows Workflow Foundation \(WF\) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780)로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하십시오.이 샘플은 다음 디렉터리에 있습니다.  
+>  <span data-ttu-id="cb8d0-132">이 디렉터리가 없으면 [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4(.NET Framework 4용 WCF(Windows Communication Foundation) 및 WF(Windows Workflow Foundation) 샘플)](http://go.microsoft.com/fwlink/?LinkId=150780) 로 이동하여 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 모두 다운로드하세요.</span><span class="sxs-lookup"><span data-stu-id="cb8d0-132">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="cb8d0-133">이 샘플은 다음 디렉터리에 있습니다.</span><span class="sxs-lookup"><span data-stu-id="cb8d0-133">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicResourceService`  
   
-## 참고 항목  
- [기본 HTTP 서비스](../../../../docs/framework/wcf/samples/basic-http-service.md)   
- [자동 포맷 선택](../../../../docs/framework/wcf/samples/automatic-format-selection.md)
+## <a name="see-also"></a><span data-ttu-id="cb8d0-134">참고 항목</span><span class="sxs-lookup"><span data-stu-id="cb8d0-134">See Also</span></span>  
+ [<span data-ttu-id="cb8d0-135">기본 HTTP 서비스</span><span class="sxs-lookup"><span data-stu-id="cb8d0-135">Basic HTTP Service</span></span>](../../../../docs/framework/wcf/samples/basic-http-service.md)  
+ [<span data-ttu-id="cb8d0-136">선택 영역 자동 서식 지정</span><span class="sxs-lookup"><span data-stu-id="cb8d0-136">Automatic Format Selection</span></span>](../../../../docs/framework/wcf/samples/automatic-format-selection.md)

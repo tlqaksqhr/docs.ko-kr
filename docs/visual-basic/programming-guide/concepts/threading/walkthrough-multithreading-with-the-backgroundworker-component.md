@@ -1,88 +1,80 @@
 ---
-title: "BackgroundWorker 구성 요소 (Visual Basic)를 사용한 다중 스레딩 | Microsoft 문서"
+title: "BackgroundWorker 구성 요소 (Visual Basic)를 사용한 다중 스레딩"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e4cd9b2a-f924-470e-a16e-50274709b40e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3686eb230349876f6cfffd2ad94ed1f547779ab1
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: bb0734b4bbf3f8bf5b27305754829f1a9f29f42a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="walkthrough-multithreading-with-the-backgroundworker-component-visual-basic"></a>연습: BackgroundWorker 구성 요소 (Visual Basic)를 사용한 다중 스레딩
-이 연습에서는 텍스트 파일에서 특정 단어 검색 하는 다중 스레드 Windows Forms 응용 프로그램을 만드는 방법을 보여 줍니다. 내용은 다음과 같습니다.  
+# <a name="walkthrough-multithreading-with-the-backgroundworker-component-visual-basic"></a><span data-ttu-id="8dd9f-102">연습: BackgroundWorker 구성 요소 (Visual Basic)를 사용한 다중 스레딩</span><span class="sxs-lookup"><span data-stu-id="8dd9f-102">Walkthrough: Multithreading with the BackgroundWorker Component (Visual Basic)</span></span>
+<span data-ttu-id="8dd9f-103">이 연습에서는 텍스트 파일에서 단어를 검색하는 다중 스레드 Windows Forms 응용 프로그램을 만드는 방법을 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-103">This walkthrough demonstrates how to create a multithreaded Windows Forms application that searches a text file for occurrences of a word.</span></span> <span data-ttu-id="8dd9f-104">세부 항목은 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-104">It demonstrates:</span></span>  
   
--   클래스에서 호출할 수 있는 메서드로 정의 <xref:System.ComponentModel.BackgroundWorker>구성 요소.</xref:System.ComponentModel.BackgroundWorker>  
+-   <span data-ttu-id="8dd9f-105"><xref:System.ComponentModel.BackgroundWorker> 구성 요소에서 호출할 수 있는 메서드를 사용하여 클래스 정의</span><span class="sxs-lookup"><span data-stu-id="8dd9f-105">Defining a class with a method that can be called by the <xref:System.ComponentModel.BackgroundWorker> component.</span></span>  
   
--   에 의해 발생 하는 이벤트를 처리는 <xref:System.ComponentModel.BackgroundWorker>구성 요소.</xref:System.ComponentModel.BackgroundWorker>  
+-   <span data-ttu-id="8dd9f-106"><xref:System.ComponentModel.BackgroundWorker> 구성 요소에서 발생하는 이벤트 처리</span><span class="sxs-lookup"><span data-stu-id="8dd9f-106">Handling events raised by the <xref:System.ComponentModel.BackgroundWorker> component.</span></span>  
   
--   시작 하는 <xref:System.ComponentModel.BackgroundWorker>구성 요소가 메서드를 실행 합니다.</xref:System.ComponentModel.BackgroundWorker>  
+-   <span data-ttu-id="8dd9f-107">메서드를 실행할 <xref:System.ComponentModel.BackgroundWorker> 구성 요소 시작</span><span class="sxs-lookup"><span data-stu-id="8dd9f-107">Starting a <xref:System.ComponentModel.BackgroundWorker> component to run a method.</span></span>  
   
--   구현 된 `Cancel` 중지 단추는 <xref:System.ComponentModel.BackgroundWorker>구성 요소.</xref:System.ComponentModel.BackgroundWorker>  
+-   <span data-ttu-id="8dd9f-108"><xref:System.ComponentModel.BackgroundWorker> 구성 요소를 중지하는 `Cancel` 단추 구현</span><span class="sxs-lookup"><span data-stu-id="8dd9f-108">Implementing a `Cancel` button that stops the <xref:System.ComponentModel.BackgroundWorker> component.</span></span>  
   
-### <a name="to-create-the-user-interface"></a>사용자 인터페이스를 만들려면  
+### <a name="to-create-the-user-interface"></a><span data-ttu-id="8dd9f-109">사용자 인터페이스를 만들려면</span><span class="sxs-lookup"><span data-stu-id="8dd9f-109">To create the user interface</span></span>  
   
-1.  새 Visual Basic Windows Forms 응용 프로그램 프로젝트를 열고 라는 폼을 만들 `Form1`합니다.  
+1.  <span data-ttu-id="8dd9f-110">새 Visual Basic Windows Forms 응용 프로그램 프로젝트를 열고 라는 양식을 만드는 `Form1`합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-110">Open a new Visual Basic Windows Forms Application project, and create a form named `Form1`.</span></span>  
   
-2.  두 개의 단추와 텍스트 상자에&4; 개의 추가 `Form1`합니다.  
+2.  <span data-ttu-id="8dd9f-111">두 개의 단추와 네 개의 텍스트 상자를 `Form1`에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-111">Add two buttons and four text boxes to `Form1`.</span></span>  
   
-3.  다음 표에 나와 있는 것 처럼 개체 이름을 지정 합니다.  
+3.  <span data-ttu-id="8dd9f-112">다음 표에 나와 있는 것처럼 개체의 이름을 지정합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-112">Name the objects as shown in the following table.</span></span>  
   
-    |개체|속성|설정|  
+    |<span data-ttu-id="8dd9f-113">개체</span><span class="sxs-lookup"><span data-stu-id="8dd9f-113">Object</span></span>|<span data-ttu-id="8dd9f-114">속성</span><span class="sxs-lookup"><span data-stu-id="8dd9f-114">Property</span></span>|<span data-ttu-id="8dd9f-115">설정</span><span class="sxs-lookup"><span data-stu-id="8dd9f-115">Setting</span></span>|  
     |------------|--------------|-------------|  
-    |첫 번째 단추|`Name`, `Text`|시작, 시작|  
-    |두 번째 단추|`Name`, `Text`|취소, 취소|  
-    |첫 번째 텍스트 상자|`Name`, `Text`|SourceFile, ""|  
-    |두 번째 텍스트 상자|`Name`, `Text`|CompareString, ""|  
-    |세 번째 텍스트 상자|`Name`, `Text`|"0" WordsCounted|  
-    |네 번째 텍스트 상자|`Name`, `Text`|"0" LinesCounted|  
+    |<span data-ttu-id="8dd9f-116">첫 번째 단추</span><span class="sxs-lookup"><span data-stu-id="8dd9f-116">First button</span></span>|<span data-ttu-id="8dd9f-117">`Name`, `Text`</span><span class="sxs-lookup"><span data-stu-id="8dd9f-117">`Name`, `Text`</span></span>|<span data-ttu-id="8dd9f-118">시작, 시작</span><span class="sxs-lookup"><span data-stu-id="8dd9f-118">Start, Start</span></span>|  
+    |<span data-ttu-id="8dd9f-119">두 번째 단추</span><span class="sxs-lookup"><span data-stu-id="8dd9f-119">Second button</span></span>|<span data-ttu-id="8dd9f-120">`Name`, `Text`</span><span class="sxs-lookup"><span data-stu-id="8dd9f-120">`Name`, `Text`</span></span>|<span data-ttu-id="8dd9f-121">취소, 취소</span><span class="sxs-lookup"><span data-stu-id="8dd9f-121">Cancel, Cancel</span></span>|  
+    |<span data-ttu-id="8dd9f-122">첫 번째 텍스트 상자</span><span class="sxs-lookup"><span data-stu-id="8dd9f-122">First text box</span></span>|<span data-ttu-id="8dd9f-123">`Name`, `Text`</span><span class="sxs-lookup"><span data-stu-id="8dd9f-123">`Name`, `Text`</span></span>|<span data-ttu-id="8dd9f-124">SourceFile, ""</span><span class="sxs-lookup"><span data-stu-id="8dd9f-124">SourceFile, ""</span></span>|  
+    |<span data-ttu-id="8dd9f-125">두 번째 텍스트 상자</span><span class="sxs-lookup"><span data-stu-id="8dd9f-125">Second text box</span></span>|<span data-ttu-id="8dd9f-126">`Name`, `Text`</span><span class="sxs-lookup"><span data-stu-id="8dd9f-126">`Name`, `Text`</span></span>|<span data-ttu-id="8dd9f-127">CompareString, ""</span><span class="sxs-lookup"><span data-stu-id="8dd9f-127">CompareString, ""</span></span>|  
+    |<span data-ttu-id="8dd9f-128">세 번째 텍스트 상자</span><span class="sxs-lookup"><span data-stu-id="8dd9f-128">Third text box</span></span>|<span data-ttu-id="8dd9f-129">`Name`, `Text`</span><span class="sxs-lookup"><span data-stu-id="8dd9f-129">`Name`, `Text`</span></span>|<span data-ttu-id="8dd9f-130">WordsCounted, "0"</span><span class="sxs-lookup"><span data-stu-id="8dd9f-130">WordsCounted, "0"</span></span>|  
+    |<span data-ttu-id="8dd9f-131">네 번째 텍스트 상자</span><span class="sxs-lookup"><span data-stu-id="8dd9f-131">Fourth text box</span></span>|<span data-ttu-id="8dd9f-132">`Name`, `Text`</span><span class="sxs-lookup"><span data-stu-id="8dd9f-132">`Name`, `Text`</span></span>|<span data-ttu-id="8dd9f-133">LinesCounted, "0"</span><span class="sxs-lookup"><span data-stu-id="8dd9f-133">LinesCounted, "0"</span></span>|  
   
-4.  각 텍스트 상자 옆에 레이블을 추가 합니다. 설정의 `Text` 다음 표와에서 같이 각 레이블에 대 한 속성입니다.  
+4.  <span data-ttu-id="8dd9f-134">각 텍스트 상자 옆에 레이블을 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-134">Add a label next to each text box.</span></span> <span data-ttu-id="8dd9f-135">다음 표와 같이 각 레이블에 대해 `Text` 속성을 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-135">Set the `Text` property for each label as shown in the following table.</span></span>  
   
-    |개체|속성|설정|  
+    |<span data-ttu-id="8dd9f-136">개체</span><span class="sxs-lookup"><span data-stu-id="8dd9f-136">Object</span></span>|<span data-ttu-id="8dd9f-137">속성</span><span class="sxs-lookup"><span data-stu-id="8dd9f-137">Property</span></span>|<span data-ttu-id="8dd9f-138">설정</span><span class="sxs-lookup"><span data-stu-id="8dd9f-138">Setting</span></span>|  
     |------------|--------------|-------------|  
-    |첫 번째 레이블|`Text`|소스 파일|  
-    |두 번째 레이블|`Text`|문자열 비교|  
-    |세 번째 레이블|`Text`|일치 하는 단어|  
-    |네 번째 레이블|`Text`|계산 된 줄|  
+    |<span data-ttu-id="8dd9f-139">첫 번째 레이블</span><span class="sxs-lookup"><span data-stu-id="8dd9f-139">First label</span></span>|`Text`|<span data-ttu-id="8dd9f-140">소스 파일</span><span class="sxs-lookup"><span data-stu-id="8dd9f-140">Source File</span></span>|  
+    |<span data-ttu-id="8dd9f-141">두 번째 레이블</span><span class="sxs-lookup"><span data-stu-id="8dd9f-141">Second label</span></span>|`Text`|<span data-ttu-id="8dd9f-142">문자열 비교</span><span class="sxs-lookup"><span data-stu-id="8dd9f-142">Compare String</span></span>|  
+    |<span data-ttu-id="8dd9f-143">세 번째 레이블</span><span class="sxs-lookup"><span data-stu-id="8dd9f-143">Third label</span></span>|`Text`|<span data-ttu-id="8dd9f-144">일치하는 단어</span><span class="sxs-lookup"><span data-stu-id="8dd9f-144">Matching Words</span></span>|  
+    |<span data-ttu-id="8dd9f-145">네 번째 레이블</span><span class="sxs-lookup"><span data-stu-id="8dd9f-145">Fourth label</span></span>|`Text`|<span data-ttu-id="8dd9f-146">계산된 줄</span><span class="sxs-lookup"><span data-stu-id="8dd9f-146">Lines Counted</span></span>|  
   
-### <a name="to-create-a-backgroundworker-component-and-subscribe-to-its-events"></a>BackgroundWorker 구성 요소를 작성 하 고 해당 이벤트에 가입 하려면  
+### <a name="to-create-a-backgroundworker-component-and-subscribe-to-its-events"></a><span data-ttu-id="8dd9f-147">BackgroundWorker 구성 요소를 작성하고 해당 이벤트에 가입하려면</span><span class="sxs-lookup"><span data-stu-id="8dd9f-147">To create a BackgroundWorker component and subscribe to its events</span></span>  
   
-1.  추가 <xref:System.ComponentModel.BackgroundWorker>구성 요소에서 **구성 요소** 의 섹션은 **도구 상자** 폼에.</xref:System.ComponentModel.BackgroundWorker> 폼의 구성 요소 트레이에 표시 됩니다.  
+1.  <span data-ttu-id="8dd9f-148">**도구 상자**의 **구성 요소** 섹션에 있는 <xref:System.ComponentModel.BackgroundWorker> 구성 요소를 양식에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-148">Add a <xref:System.ComponentModel.BackgroundWorker> component from the **Components** section of the **ToolBox** to the form.</span></span> <span data-ttu-id="8dd9f-149">양식의 구성 요소 트레이에 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-149">It will appear in the form's component tray.</span></span>  
   
-2.  BackgroundWorker1 개체에 대 한 다음 속성을 설정 합니다.  
+2.  <span data-ttu-id="8dd9f-150">BackgroundWorker1 개체에 대 한 다음 속성을 설정 합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-150">Set the following properties for the BackgroundWorker1 object.</span></span>  
   
-    |속성|설정|  
+    |<span data-ttu-id="8dd9f-151">속성</span><span class="sxs-lookup"><span data-stu-id="8dd9f-151">Property</span></span>|<span data-ttu-id="8dd9f-152">설정</span><span class="sxs-lookup"><span data-stu-id="8dd9f-152">Setting</span></span>|  
     |--------------|-------------|  
-    |`WorkerReportsProgress`|True|  
-    |`WorkerSupportsCancellation`|True|  
+    |`WorkerReportsProgress`|<span data-ttu-id="8dd9f-153">True</span><span class="sxs-lookup"><span data-stu-id="8dd9f-153">True</span></span>|  
+    |`WorkerSupportsCancellation`|<span data-ttu-id="8dd9f-154">True</span><span class="sxs-lookup"><span data-stu-id="8dd9f-154">True</span></span>|  
   
-### <a name="to-define-the-method-that-will-run-on-a-separate-thread"></a>별도 스레드에서 실행 될 메서드를 정의 하려면  
+### <a name="to-define-the-method-that-will-run-on-a-separate-thread"></a><span data-ttu-id="8dd9f-155">별도 스레드에서 실행될 메서드를 정의하려면</span><span class="sxs-lookup"><span data-stu-id="8dd9f-155">To define the method that will run on a separate thread</span></span>  
   
-1.  **프로젝트** 메뉴에서 선택 **클래스 추가** 를 프로젝트에 클래스를 추가 합니다. **새 항목 추가** 대화 상자가 표시 됩니다.  
+1.  <span data-ttu-id="8dd9f-156">**프로젝트** 메뉴에서 **클래스 추가**를 선택하여 프로젝트에 클래스를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-156">From the **Project** menu, choose **Add Class** to add a class to the project.</span></span> <span data-ttu-id="8dd9f-157">**새 항목 추가** 대화 상자가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-157">The **Add New Item** dialog box is displayed.</span></span>  
   
-2.  선택 **클래스** 템플릿 창에서 입력 하 고 `Words.vb` 이름 필드에 있습니다.  
+2.  <span data-ttu-id="8dd9f-158">템플릿 창에서 **클래스**를 선택하고 이름 필드에 `Words.vb`를 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-158">Select **Class** from the templates window and enter `Words.vb` in the name field.</span></span>  
   
-3.  **추가**를 클릭합니다. `Words` 클래스가 표시 됩니다.  
+3.  <span data-ttu-id="8dd9f-159">**추가**를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-159">Click **Add**.</span></span> <span data-ttu-id="8dd9f-160">`Words` 클래스가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-160">The `Words` class is displayed.</span></span>  
   
-4.  `Words` 클래스에 다음 코드를 추가합니다.  
+4.  <span data-ttu-id="8dd9f-161">`Words` 클래스에 다음 코드를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-161">Add the following code to the `Words` class:</span></span>  
   
     ```vb  
     Public Class Words  
@@ -171,9 +163,9 @@ ms.lasthandoff: 03/13/2017
     End Class  
     ```  
   
-### <a name="to-handle-events-from-the-thread"></a>스레드에서 이벤트를 처리 하기  
+### <a name="to-handle-events-from-the-thread"></a><span data-ttu-id="8dd9f-162">스레드에서 이벤트를 처리하려면</span><span class="sxs-lookup"><span data-stu-id="8dd9f-162">To handle events from the thread</span></span>  
   
--   기본 폼에 다음 이벤트 처리기를 추가 합니다.  
+-   <span data-ttu-id="8dd9f-163">다음 이벤트 처리기를 기본 양식에 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-163">Add the following event handlers to your main form:</span></span>  
   
     ```vb  
     Private Sub BackgroundWorker1_RunWorkerCompleted(   
@@ -205,9 +197,9 @@ ms.lasthandoff: 03/13/2017
     End Sub  
     ```  
   
-### <a name="to-start-and-call-a-new-thread-that-runs-the-wordcount-method"></a>시작 하 고 WordCount 메서드를 실행 하는 새 스레드를 호출 합니다.  
+### <a name="to-start-and-call-a-new-thread-that-runs-the-wordcount-method"></a><span data-ttu-id="8dd9f-164">WordCount 메서드를 실행하는 새 스레드를 시작하고 호출하려면</span><span class="sxs-lookup"><span data-stu-id="8dd9f-164">To start and call a new thread that runs the WordCount method</span></span>  
   
-1.  프로그램에 다음 프로시저를 추가 합니다.  
+1.  <span data-ttu-id="8dd9f-165">프로그램에 다음 프로시저를 추가합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-165">Add the following procedures to your program:</span></span>  
   
     ```vb  
     Private Sub BackgroundWorker1_DoWork(   
@@ -241,7 +233,7 @@ ms.lasthandoff: 03/13/2017
     End Sub  
     ```  
   
-2.  호출 된 `StartThread` 메서드에서 `Start` 폼에 단추:  
+2.  <span data-ttu-id="8dd9f-166">양식의 `Start` 단추에서 `StartThread` 메서드를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-166">Call the `StartThread` method from the `Start` button on your form:</span></span>  
   
     ```vb  
     Private Sub Start_Click() Handles Start.Click  
@@ -249,9 +241,9 @@ ms.lasthandoff: 03/13/2017
     End Sub  
     ```  
   
-### <a name="to-implement-a-cancel-button-that-stops-the-thread"></a>취소 단추를 구현 하 고 스레드를 중지 하는  
+### <a name="to-implement-a-cancel-button-that-stops-the-thread"></a><span data-ttu-id="8dd9f-167">스레드를 중지하는 취소 단추를 구현하려면</span><span class="sxs-lookup"><span data-stu-id="8dd9f-167">To implement a Cancel button that stops the thread</span></span>  
   
--   호출의 `StopThread` 에서 프로시저는 `Click` 에 대 한 이벤트 처리기는 `Cancel` 단추입니다.  
+-   <span data-ttu-id="8dd9f-168">`Cancel` 단추에 대한 `Click` 이벤트 처리기에서 `StopThread` 프로시저를 호출합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-168">Call the `StopThread` procedure from the `Click` event handler for the `Cancel` button.</span></span>  
   
     ```vb  
     Private Sub Cancel_Click() Handles Cancel.Click  
@@ -260,31 +252,31 @@ ms.lasthandoff: 03/13/2017
     End Sub  
     ```  
   
-## <a name="testing"></a>테스트  
- 이제 올바르게 작동 하는지 확인 하도록 응용 프로그램을 테스트할 수 있습니다.  
+## <a name="testing"></a><span data-ttu-id="8dd9f-169">테스트</span><span class="sxs-lookup"><span data-stu-id="8dd9f-169">Testing</span></span>  
+ <span data-ttu-id="8dd9f-170">응용 프로그램을 테스트하여 올바르게 작동하는지 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-170">You can now test the application to make sure it works correctly.</span></span>  
   
-#### <a name="to-test-the-application"></a>응용 프로그램을 테스트하려면  
+#### <a name="to-test-the-application"></a><span data-ttu-id="8dd9f-171">응용 프로그램을 테스트하려면</span><span class="sxs-lookup"><span data-stu-id="8dd9f-171">To test the application</span></span>  
   
-1.  F5 키를 눌러 응용 프로그램을 실행합니다.  
+1.  <span data-ttu-id="8dd9f-172">F5 키를 눌러 응용 프로그램을 실행합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-172">Press F5 to run the application.</span></span>  
   
-2.  테스트 하려는 파일에 대 한 파일 경로 입력 폼이 표시 하는 경우는 `sourceFile` 상자입니다. 예를 들어 테스트 파일 Test.txt 라는 가정 하 고, C:\Test.txt를 입력 합니다.  
+2.  <span data-ttu-id="8dd9f-173">양식이 표시되면 테스트할 파일의 경로를 `sourceFile` 상자에 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-173">When the form is displayed, enter the file path for the file you want to test in the `sourceFile` box.</span></span> <span data-ttu-id="8dd9f-174">예를 들어 테스트 파일의 이름이 Test.txt라면 C:\Test.txt를 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-174">For example, assuming your test file is named Test.txt, enter C:\Test.txt.</span></span>  
   
-3.  두 번째 텍스트 상자에 단어나 구를 검색할 텍스트 파일에서 응용 프로그램을 입력 합니다.  
+3.  <span data-ttu-id="8dd9f-175">두 번째 텍스트 상자에 응용 프로그램이 텍스트 파일에서 검색할 단어나 구를 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-175">In the second text box, enter a word or phrase for the application to search for in the text file.</span></span>  
   
-4.  `Start` 단추를 클릭합니다. `LinesCounted` 단추 증가 하는 즉시 시작 해야 합니다. 응용 프로그램이 완료 되 면 "완료 계산" 하는 메시지를 표시 합니다.  
+4.  <span data-ttu-id="8dd9f-176">`Start` 단추를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-176">Click the `Start` button.</span></span> <span data-ttu-id="8dd9f-177">`LinesCounted` 단추에서 숫자가 즉시 증가하기 시작해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-177">The `LinesCounted` button should begin incrementing immediately.</span></span> <span data-ttu-id="8dd9f-178">응용 프로그램이 완료되면 "계산 완료" 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-178">The application displays the message "Finished Counting" when it is done.</span></span>  
   
-#### <a name="to-test-the-cancel-button"></a>취소 단추를 테스트 하려면  
+#### <a name="to-test-the-cancel-button"></a><span data-ttu-id="8dd9f-179">취소 단추를 테스트하려면</span><span class="sxs-lookup"><span data-stu-id="8dd9f-179">To test the Cancel button</span></span>  
   
-1.  F5 키를 눌러 응용 프로그램을 시작 하 고 이전 절차에서 설명한 대로 파일 이름 및 검색 단어를 입력 합니다. 파일을 선택한 완료 되기 전에 절차를 취소 하는 시간을 할 수 있도록 충분히 큰 인지 확인 합니다.  
+1.  <span data-ttu-id="8dd9f-180">F5 키를 눌러 응용 프로그램을 시작하고 이전 절차에서 설명한 대로 파일 이름 및 검색 단어를 입력합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-180">Press F5 to start the application, and enter the file name and search word as described in the previous procedure.</span></span> <span data-ttu-id="8dd9f-181">완료되기 전에 프로시저를 취소할 시간이 있을 정도로 선택한 파일이 큰지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-181">Make sure that the file you choose is large enough to ensure you will have time to cancel the procedure before it is finished.</span></span>  
   
-2.  클릭 된 `Start` 단추는 응용 프로그램을 시작 합니다.  
+2.  <span data-ttu-id="8dd9f-182">`Start` 단추를 클릭하여 응용 프로그램을 시작합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-182">Click the `Start` button to start the application.</span></span>  
   
-3.  `Cancel` 단추를 클릭합니다. 응용 프로그램은 즉시 계산 중지 해야 합니다.  
+3.  <span data-ttu-id="8dd9f-183">`Cancel` 단추를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-183">Click the `Cancel` button.</span></span> <span data-ttu-id="8dd9f-184">응용 프로그램은 즉시 계산을 중지해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-184">The application should stop counting immediately.</span></span>  
   
-## <a name="next-steps"></a>다음 단계  
- 이 응용 프로그램에는 기본적인 오류 처리 기능이 포함 되어 있습니다. 빈 검색 문자열을 검색합니다. 단어 또는 계산 될 수 있는 줄의 최대 수를 초과 하는 등의 다른 오류를 처리 하 여이 프로그램을 더욱 강력한 만들 수 있습니다.  
+## <a name="next-steps"></a><span data-ttu-id="8dd9f-185">다음 단계</span><span class="sxs-lookup"><span data-stu-id="8dd9f-185">Next Steps</span></span>  
+ <span data-ttu-id="8dd9f-186">이 응용 프로그램에는 몇 가지 기본적인 오류 처리 기능이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-186">This application contains some basic error handling.</span></span> <span data-ttu-id="8dd9f-187">이 응용 프로그램은 빈 검색 문자열을 검색합니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-187">It detects blank search strings.</span></span> <span data-ttu-id="8dd9f-188">계산할 수 있는 최대 단어 또는 줄 수 초과 등과 같은 기타 오류를 처리함으로써 이 프로그램을 더욱 강력하게 만들 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="8dd9f-188">You can make this program more robust by handling other errors, such as exceeding the maximum number of words or lines that can be counted.</span></span>  
   
-## <a name="see-also"></a>참고 항목  
- [스레딩 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)   
- [연습: Visual Basic로 간단한 다중 스레드 구성 요소 제작](http://msdn.microsoft.com/library/05693b70-3566-4d91-9f2c-c9bc4ccb3001)   
- [방법: 이벤트 구독 및 구독 취소](../../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)
+## <a name="see-also"></a><span data-ttu-id="8dd9f-189">참고 항목</span><span class="sxs-lookup"><span data-stu-id="8dd9f-189">See Also</span></span>  
+ [<span data-ttu-id="8dd9f-190">스레딩(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8dd9f-190">Threading (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/threading/index.md)  
+ [<span data-ttu-id="8dd9f-191">연습: Visual Basic로 간단한 다중 스레드 구성 요소 작성</span><span class="sxs-lookup"><span data-stu-id="8dd9f-191">Walkthrough: Authoring a Simple Multithreaded Component with Visual Basic</span></span>](http://msdn.microsoft.com/library/05693b70-3566-4d91-9f2c-c9bc4ccb3001)  
+ [<span data-ttu-id="8dd9f-192">방법: 이벤트 구독 및 구독 취소</span><span class="sxs-lookup"><span data-stu-id="8dd9f-192">How to: Subscribe to and Unsubscribe from Events</span></span>](../../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)

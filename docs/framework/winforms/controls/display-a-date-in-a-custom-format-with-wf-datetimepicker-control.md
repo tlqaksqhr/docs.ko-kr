@@ -1,48 +1,51 @@
 ---
-title: "방법: Windows Forms DateTimePicker 컨트롤을 사용하여 날짜를 사용자 지정 형식으로 표시 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "날짜, DateTimePicker 컨트롤에 표시"
-  - "DateTimePicker 컨트롤[Windows Forms], 표시 스타일"
-  - "예제[Windows Forms], DateTimePicker 컨트롤"
+title: "방법: Windows Forms DateTimePicker 컨트롤을 사용하여 날짜를 사용자 지정 형식으로 표시"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- DateTimePicker control [Windows Forms], display styles
+- examples [Windows Forms], DateTimePicker control
+- dates [Windows Forms], displaying in DateTimePicker control
 ms.assetid: 39767691-2d2b-46b6-a663-b7901e581a6e
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0b92fec7565aad2a881f714f9232eae10bf7633c
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: Windows Forms DateTimePicker 컨트롤을 사용하여 날짜를 사용자 지정 형식으로 표시
-Windows Forms <xref:System.Windows.Forms.DateTimePicker> 컨트롤을 사용하면 컨트롤에 표시되는 날짜 및 시간 서식을 융통성 있게 지정할 수 있습니다.  <xref:System.Windows.Forms.DateTimePicker.Format%2A> 속성을 사용하면 <xref:System.Windows.Forms.DateTimePickerFormat>에 나열된 미리 정의된 서식 중에서 선택할 수 있습니다.  필요한 서식이 없을 경우에는 <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A>에 나열된 서식 문자를 사용하여 사용자 서식 스타일을 만들 수 있습니다.  
+# <a name="how-to-display-a-date-in-a-custom-format-with-the-windows-forms-datetimepicker-control"></a><span data-ttu-id="40e7c-102">방법: Windows Forms DateTimePicker 컨트롤을 사용하여 날짜를 사용자 지정 형식으로 표시</span><span class="sxs-lookup"><span data-stu-id="40e7c-102">How to: Display a Date in a Custom Format with the Windows Forms DateTimePicker Control</span></span>
+<span data-ttu-id="40e7c-103">Windows Forms <xref:System.Windows.Forms.DateTimePicker> 컨트롤의 컨트롤에서 날짜와 시간 표시를 서식 지정에 유연성을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="40e7c-103">The Windows Forms <xref:System.Windows.Forms.DateTimePicker> control gives you flexibility in formatting the display of dates and times in the control.</span></span> <span data-ttu-id="40e7c-104"><xref:System.Windows.Forms.DateTimePicker.Format%2A> 속성에 나열 된 미리 정의 된 형식에서 선택할 수 있습니다는 <xref:System.Windows.Forms.DateTimePickerFormat>합니다.</span><span class="sxs-lookup"><span data-stu-id="40e7c-104">The <xref:System.Windows.Forms.DateTimePicker.Format%2A> property allows you to select from predefined formats, listed in the <xref:System.Windows.Forms.DateTimePickerFormat>.</span></span> <span data-ttu-id="40e7c-105">아무것도 용도 맞게 충분 않으면에 나열 된 형식 문자를 사용 하 여 사용자 고유의 형식 스타일을 만들 수 있습니다 <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A>합니다.</span><span class="sxs-lookup"><span data-stu-id="40e7c-105">If none of these is adequate for your purposes, you can create your own format style using format characters listed in <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A>.</span></span>  
   
-### 사용자 지정 서식을 표시하려면  
+### <a name="to-display-a-custom-format"></a><span data-ttu-id="40e7c-106">사용자 지정 형식을 표시 하려면</span><span class="sxs-lookup"><span data-stu-id="40e7c-106">To display a custom format</span></span>  
   
-1.  <xref:System.Windows.Forms.DateTimePicker.Format%2A> 속성을 `DateTimePickerFormat.Custom`으로 설정합니다.  
+1.  <span data-ttu-id="40e7c-107"><xref:System.Windows.Forms.DateTimePicker.Format%2A> 속성을 `DateTimePickerFormat.Custom`으로 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="40e7c-107">Set the <xref:System.Windows.Forms.DateTimePicker.Format%2A> property to `DateTimePickerFormat.Custom`.</span></span>  
   
-2.  <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> 속성을 형식 문자열로 설정합니다.  
+2.  <span data-ttu-id="40e7c-108">설정의 <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> 서식 문자열에는 속성입니다.</span><span class="sxs-lookup"><span data-stu-id="40e7c-108">Set the <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> property to a format string.</span></span>  
   
     ```vb  
     DateTimePicker1.Format = DateTimePickerFormat.Custom  
     ' Display the date as "Mon 27 Feb 2012".  
     DateTimePicker1.CustomFormat = "ddd dd MMM yyyy"  
-  
     ```  
   
     ```csharp  
     dateTimePicker1.Format = DateTimePickerFormat.Custom;  
     // Display the date as "Mon 27 Feb 2012".  
     dateTimePicker1.CustomFormat = "ddd dd MMM yyyy";  
-  
     ```  
   
     ```cpp  
@@ -51,18 +54,16 @@ Windows Forms <xref:System.Windows.Forms.DateTimePicker> 컨트롤을 사용하�
     dateTimePicker1->CustomFormat = "ddd dd MMM yyyy";  
     ```  
   
-### 서식이 지정된 값에 텍스트를 추가하려면  
+### <a name="to-add-text-to-the-formatted-value"></a><span data-ttu-id="40e7c-109">형식이 지정 된 값에 텍스트를 추가 하려면</span><span class="sxs-lookup"><span data-stu-id="40e7c-109">To add text to the formatted value</span></span>  
   
-1.  "M"과 같은 서식 문자나 ":"과 같은 구분 기호 이외의 문자는 작은따옴표로 묶습니다.  예를 들어, 영어\(미국\) 문화권에서 아래의 형식 문자열은 "Today is: 05:30:31 Friday March 02, 2012"의 형식으로 현재 날짜를 표시합니다.  
+1.  <span data-ttu-id="40e7c-110">"M"과 같은 형식 문자 또는 같은 구분 기호가 아닌 모든 문자를 포함 하려면 작은따옴표를 사용 하 여 ":".</span><span class="sxs-lookup"><span data-stu-id="40e7c-110">Use single quotation marks to enclose any character that is not a format character like "M" or a delimiter like ":".</span></span> <span data-ttu-id="40e7c-111">아래의 형식 문자열 형식으로 현재 날짜를 표시 하는 예를 들어 "임: 05시 30분: 31 2012 년 3 월 2 일 금요일" 영어 (미국) 문화권입니다.</span><span class="sxs-lookup"><span data-stu-id="40e7c-111">For example, the format string below displays the current date with the format "Today is: 05:30:31 Friday March 02, 2012" in the English (United States) culture.</span></span>  
   
     ```vb  
     DateTimePicker1.CustomFormat = "'Today is:' hh:mm:ss dddd MMMM dd, yyyy"  
-  
     ```  
   
     ```csharp  
     dateTimePicker1.CustomFormat = "'Today is:' hh:mm:ss dddd MMMM dd, yyyy";  
-  
     ```  
   
     ```cpp  
@@ -70,8 +71,8 @@ Windows Forms <xref:System.Windows.Forms.DateTimePicker> 컨트롤을 사용하�
        "'Today is:' hh:mm:ss dddd MMMM dd, yyyy";  
     ```  
   
-     문화권 설정에 따라 작은따옴표로 묶이지 않은 문자는 변경될 수 있습니다.  예를 들어, 영어\(미국\) 문화권에서 위의 형식 문자열은 "Today is: 05:30:31 Friday March 02, 2012"의 형식으로 현재 날짜를 표시합니다.  첫 번째 콜론은 "hh:mm:ss"에서처럼 구분 기호로 사용하기 위한 것이 아니므로 작은따옴표로 묶여 있습니다.  다른 문화권에서는 이 서식이 "Today is: 05.30.31 Friday March 02, 2012" 형식으로 나타날 수 있습니다.  
+     <span data-ttu-id="40e7c-112">문화권 설정에 따라 따옴표로 묶이지 않은 문자를 변경할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="40e7c-112">Depending on the culture setting, any characters not enclosed in single quotation marks may be changed.</span></span> <span data-ttu-id="40e7c-113">위의 형식 문자열 형식으로 현재 날짜를 표시 하는 예를 들어 "임: 05시 30분: 31 2012 년 3 월 2 일 금요일" 영어 (미국) 문화권입니다.</span><span class="sxs-lookup"><span data-stu-id="40e7c-113">For example, the format string above displays the current date with the format "Today is: 05:30:31 Friday March 02, 2012" in the English (United States) culture.</span></span> <span data-ttu-id="40e7c-114">참고 것이 아니기 때문에 "hh: mm:"에서 같이 구분 기호 문자를 첫 번째 콜론 단일 따옴표에 포함 되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="40e7c-114">Note that the first colon is enclosed in single quotation marks, because it is not intended to be a delimiting character as it is in "hh:mm:ss".</span></span> <span data-ttu-id="40e7c-115">다른 문화권이 형식으로 나타날 수 있습니다 "임: 2012 년 3 월 2 일 금요일 05.30.31"입니다.</span><span class="sxs-lookup"><span data-stu-id="40e7c-115">In another culture, the format might appear as "Today is: 05.30.31 Friday March 02, 2012".</span></span>  
   
-## 참고 항목  
- [DateTimePicker 컨트롤](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)   
- [방법: Windows Forms DateTimePicker 컨트롤을 사용하여 날짜 설정 및 반환](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)
+## <a name="see-also"></a><span data-ttu-id="40e7c-116">참고 항목</span><span class="sxs-lookup"><span data-stu-id="40e7c-116">See Also</span></span>  
+ [<span data-ttu-id="40e7c-117">DateTimePicker 컨트롤</span><span class="sxs-lookup"><span data-stu-id="40e7c-117">DateTimePicker Control</span></span>](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)  
+ [<span data-ttu-id="40e7c-118">방법: Windows Forms DateTimePicker 컨트롤을 사용하여 날짜 설정 및 반환</span><span class="sxs-lookup"><span data-stu-id="40e7c-118">How to: Set and Return Dates with the Windows Forms DateTimePicker Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

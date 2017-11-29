@@ -1,48 +1,48 @@
 ---
-title: "ContextMenuStrip 컨트롤 개요 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ContextMenuStrip"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "상황에 맞는 메뉴, ContextMenuStrip 컨트롤[Windows Forms]"
-  - "ContextMenuStrip 컨트롤[Windows Forms], ContextMenuStrip 컨트롤 정보"
-  - "바로 가기 메뉴, ContextMenuStrip 컨트롤[Windows Forms]"
+title: "ContextMenuStrip 컨트롤 개요"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ContextMenuStrip
+helpviewer_keywords:
+- context menus [Windows Forms], ContextMenuStrip control [Windows Forms]
+- shortcut menus [Windows Forms], ContextMenuStrip control [Windows Forms]
+- ContextMenuStrip control [Windows Forms], about ContextMenuStrip control
 ms.assetid: 9787cdb3-88f1-4198-972f-eefd9524ce39
-caps.latest.revision: 5
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c04e8095d84468ee7574b31f0a30fb6f2d2b03a0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# ContextMenuStrip 컨트롤 개요
+# <a name="contextmenustrip-control-overview"></a><span data-ttu-id="31ab8-102">ContextMenuStrip 컨트롤 개요</span><span class="sxs-lookup"><span data-stu-id="31ab8-102">ContextMenuStrip Control Overview</span></span>
 > [!NOTE]
->  <xref:System.Windows.Forms.ContextMenuStrip> 컨트롤은 <xref:System.Windows.Forms.ContextMenu> 컨트롤에 새로운 기능이 추가된 것으로, 이전 컨트롤을 대체합니다. 그러나 이전 버전과의 호환성 및 앞으로의 사용 가능성을 고려하여 <xref:System.Windows.Forms.ContextMenu> 컨트롤을 유지하도록 선택할 수 있습니다.  
+>  <span data-ttu-id="31ab8-103">그러나 <xref:System.Windows.Forms.ContextMenuStrip> 대체 하 고 여기에 새로운 기능이 추가 된 <xref:System.Windows.Forms.ContextMenu> 컨트롤는 <xref:System.Windows.Forms.ContextMenu> 컨트롤을 선택 하는 경우 이전 버전과 호환성 및 이후 사용에 대 한 유지 합니다.</span><span class="sxs-lookup"><span data-stu-id="31ab8-103">The <xref:System.Windows.Forms.ContextMenuStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ContextMenu> control; however, the <xref:System.Windows.Forms.ContextMenu> control is retained for backward compatibility and future use if you choose.</span></span>  
   
- 상황에 맞는 메뉴라고도 하는 바로 가기 메뉴는 사용자가 마우스 오른쪽 단추를 클릭할 때 마우스 위치에 나타납니다.  *바로 가기 메뉴*는 마우스 포인터 위치에서의 클라이언트 영역 또는 컨트롤에 대한 옵션을 제공합니다.  
+ <span data-ttu-id="31ab8-104">상황에 맞는 메뉴 라고도 하는 바로 가기 메뉴를 마우스 오른쪽 단추를 클릭할 때 마우스 위치에 나타납니다.</span><span class="sxs-lookup"><span data-stu-id="31ab8-104">Shortcut menus, also called context menus, appear at the mouse position when the user clicks the right mouse button.</span></span> <span data-ttu-id="31ab8-105">바로 가기 *메뉴* 클라이언트 영역 또는 마우스 포인터 위치에 있는 컨트롤에 대 한 옵션을 제공 합니다.</span><span class="sxs-lookup"><span data-stu-id="31ab8-105">Shortcut *menus* provide options for the client area or the control at the mouse pointer location.</span></span>  
   
- <xref:System.Windows.Forms.ContextMenuStrip> 컨트롤은 새 <xref:System.Windows.Forms.ToolStrip> 및 관련 컨트롤과 자연스럽게 작동하도록 디자인되었지만 <xref:System.Windows.Forms.ContextMenuStrip>을 다른 컨트롤에 쉽게 연결할 수도 있습니다.  
+ <span data-ttu-id="31ab8-106"><xref:System.Windows.Forms.ContextMenuStrip> 컨트롤은 새 매끄럽게 작동 하도록 설계 되었습니다 <xref:System.Windows.Forms.ToolStrip> 있지만 관련 된 컨트롤에 연결할 수는 <xref:System.Windows.Forms.ContextMenuStrip> 쉽게 다른 제어 기능과 함께 합니다.</span><span class="sxs-lookup"><span data-stu-id="31ab8-106">The <xref:System.Windows.Forms.ContextMenuStrip> control is designed to work seamlessly with the new <xref:System.Windows.Forms.ToolStrip> and related controls, but you can associate a <xref:System.Windows.Forms.ContextMenuStrip> with other controls just as easily.</span></span>  
   
- 다음 표에서는 중요한 <xref:System.Windows.Forms.ContextMenuStrip> 자매 클래스를 보여 줍니다.  
+ <span data-ttu-id="31ab8-107">다음 표에서 중요 한 <xref:System.Windows.Forms.ContextMenuStrip> 도우미 클래스입니다.</span><span class="sxs-lookup"><span data-stu-id="31ab8-107">The following table shows the important <xref:System.Windows.Forms.ContextMenuStrip> companion classes.</span></span>  
   
-|클래스|설명|  
-|---------|--------|  
-|<xref:System.Windows.Forms.ToolStripMenuItem>|<xref:System.Windows.Forms.MenuStrip> 또는 <xref:System.Windows.Forms.ContextMenuStrip>에 표시된 선택 가능한 옵션을 나타냅니다.|  
-|<xref:System.Windows.Forms.ToolStripDropDown>|사용자가 <xref:System.Windows.Forms.ToolStripDropDownButton> 또는 상위 수준의 메뉴 항목을 클릭하는 경우 표시되는 목록에서 단일 항목을 선택할 수 있는 컨트롤을 나타냅니다.|  
-|<xref:System.Windows.Forms.ToolStripDropDownItem>|클릭하면 드롭다운 항목이 표시되는 <xref:System.Windows.Forms.ToolStripItem>에서 파생되는 컨트롤의 기본 기능을 제공합니다.|  
+|<span data-ttu-id="31ab8-108">클래스</span><span class="sxs-lookup"><span data-stu-id="31ab8-108">Class</span></span>|<span data-ttu-id="31ab8-109">설명</span><span class="sxs-lookup"><span data-stu-id="31ab8-109">Description</span></span>|  
+|-----------|-----------------|  
+|<xref:System.Windows.Forms.ToolStripMenuItem>|<span data-ttu-id="31ab8-110">에 표시 된 선택 가능한 옵션을 나타냅니다는 <xref:System.Windows.Forms.MenuStrip> 또는 <xref:System.Windows.Forms.ContextMenuStrip>합니다.</span><span class="sxs-lookup"><span data-stu-id="31ab8-110">Represents a selectable option displayed on a <xref:System.Windows.Forms.MenuStrip> or <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripDropDown>|<span data-ttu-id="31ab8-111">사용자는 사용자가 클릭할 때 표시 되는 목록에서 단일 항목을 선택할 수 있도록 하는 컨트롤을 나타냅니다는 <xref:System.Windows.Forms.ToolStripDropDownButton> 또는 더 높은 수준의 메뉴 항목입니다.</span><span class="sxs-lookup"><span data-stu-id="31ab8-111">Represents a control that enables the user to select a single item from a list that is displayed when the user clicks a <xref:System.Windows.Forms.ToolStripDropDownButton> or a higher-level menu item.</span></span>|  
+|<xref:System.Windows.Forms.ToolStripDropDownItem>|<span data-ttu-id="31ab8-112">파생 된 컨트롤에 대 한 기본 기능을 제공 <xref:System.Windows.Forms.ToolStripItem> 클릭 하면 드롭다운 항목을 표시 하는 합니다.</span><span class="sxs-lookup"><span data-stu-id="31ab8-112">Provides basic functionality for controls derived from <xref:System.Windows.Forms.ToolStripItem> that display drop-down items when clicked.</span></span>|  
   
-## 참고 항목  
- <xref:System.Windows.Forms.ToolStrip>   
- <xref:System.Windows.Forms.MenuStrip>   
- <xref:System.Windows.Forms.ContextMenuStrip>   
- <xref:System.Windows.Forms.ToolStripMenuItem>   
+## <a name="see-also"></a><span data-ttu-id="31ab8-113">참고 항목</span><span class="sxs-lookup"><span data-stu-id="31ab8-113">See Also</span></span>  
+ <xref:System.Windows.Forms.ToolStrip>  
+ <xref:System.Windows.Forms.MenuStrip>  
+ <xref:System.Windows.Forms.ContextMenuStrip>  
+ <xref:System.Windows.Forms.ToolStripMenuItem>  
  <xref:System.Windows.Forms.ToolStripDropDown>

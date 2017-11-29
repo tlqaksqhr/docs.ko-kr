@@ -1,41 +1,47 @@
 ---
-title: "방법: StackPanel에서 콘텐츠 가로 또는 세로 맞춤 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "맞추기, 내용"
-  - "콘텐츠 맞춤"
-  - "StackPanel 컨트롤, 콘텐츠 맞춤"
+title: "방법: StackPanel에서 콘텐츠 가로 또는 세로 맞춤"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- StackPanel control [WPF], content alignment [WPF]
+- content alignment [WPF]
+- aligning [WPF], content
 ms.assetid: c1e8f962-72c8-4e7a-8670-7a2d7e021791
-caps.latest.revision: 9
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bccf0455c736d14bd77113841603022d4c362787
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: StackPanel에서 콘텐츠 가로 또는 세로 맞춤
-이 예제에서는 <xref:System.Windows.Controls.StackPanel> 요소 내 콘텐츠의 <xref:System.Windows.Controls.StackPanel.Orientation%2A>을 조정하는 방법과 자식 콘텐츠의 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 및 <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>를 조정하는 방법을 보여 줍니다.  
+# <a name="how-to-horizontally-or-vertically-align-content-in-a-stackpanel"></a><span data-ttu-id="6c3d4-102">방법: StackPanel에서 콘텐츠 가로 또는 세로 맞춤</span><span class="sxs-lookup"><span data-stu-id="6c3d4-102">How to: Horizontally or Vertically Align Content in a StackPanel</span></span>
+<span data-ttu-id="6c3d4-103">조정 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.StackPanel.Orientation%2A> 내의 콘텐츠는 <xref:System.Windows.Controls.StackPanel> 요소 및 조정 하는 방법의 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 및 <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> 자식 콘텐츠입니다.</span><span class="sxs-lookup"><span data-stu-id="6c3d4-103">This example shows how to adjust the <xref:System.Windows.Controls.StackPanel.Orientation%2A> of content within a <xref:System.Windows.Controls.StackPanel> element, and also how to adjust the <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> and <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> of child content.</span></span>  
   
-## 예제  
- 다음 예제에서는 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]에 세 개의 <xref:System.Windows.Controls.ListBox> 요소를 만듭니다.  각 <xref:System.Windows.Controls.ListBox>는 <xref:System.Windows.Controls.StackPanel>의 <xref:System.Windows.Controls.StackPanel.Orientation%2A>, <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> 및 <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> 속성에 사용 가능한 값을 나타냅니다.  사용자가 <xref:System.Windows.Controls.ListBox> 요소의 값을 선택하면 <xref:System.Windows.Controls.StackPanel> 및 자식 <xref:System.Windows.Controls.Button> 요소의 연결된 속성이 변경됩니다.  
+## <a name="example"></a><span data-ttu-id="6c3d4-104">예제</span><span class="sxs-lookup"><span data-stu-id="6c3d4-104">Example</span></span>  
+ <span data-ttu-id="6c3d4-105">다음 예제에서는 세 개의 <xref:System.Windows.Controls.ListBox> 요소 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]합니다.</span><span class="sxs-lookup"><span data-stu-id="6c3d4-105">The following example creates three <xref:System.Windows.Controls.ListBox> elements in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span> <span data-ttu-id="6c3d4-106">각 <xref:System.Windows.Controls.ListBox> 의 가능한 값을 나타냅니다는 <xref:System.Windows.Controls.StackPanel.Orientation%2A>, <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, 및 <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> 의 속성을 <xref:System.Windows.Controls.StackPanel>합니다.</span><span class="sxs-lookup"><span data-stu-id="6c3d4-106">Each <xref:System.Windows.Controls.ListBox> represents the possible values of the <xref:System.Windows.Controls.StackPanel.Orientation%2A>, <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, and <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> properties of a <xref:System.Windows.Controls.StackPanel>.</span></span> <span data-ttu-id="6c3d4-107">사용자 중 하나에 값을 선택 하는 경우는 <xref:System.Windows.Controls.ListBox> 요소, 연결 된 속성의는 <xref:System.Windows.Controls.StackPanel> 와 해당 자식 <xref:System.Windows.Controls.Button> 요소를 변경 합니다.</span><span class="sxs-lookup"><span data-stu-id="6c3d4-107">When a user selects a value in any of the <xref:System.Windows.Controls.ListBox> elements, the associated property of the <xref:System.Windows.Controls.StackPanel> and its child <xref:System.Windows.Controls.Button> elements change.</span></span>  
   
- [!code-xml[StackPanelIntroSamp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StackPanelIntroSamp/CSharp/Window1.xaml#1)]  
+ [!code-xaml[StackPanelIntroSamp#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StackPanelIntroSamp/CSharp/Window1.xaml#1)]  
   
- 다음 코드 숨김 파일은 <xref:System.Windows.Controls.ListBox> 선택 변경 사항과 연결된 이벤트에 대한 변경 사항을 정의합니다.  <xref:System.Windows.Controls.StackPanel>은 <xref:System.Windows.FrameworkElement.Name%2A> `sp1`로 식별됩니다.  
+ <span data-ttu-id="6c3d4-108">다음 코드 숨김 파일 연관 된 이벤트에 변경 내용을 정의 <xref:System.Windows.Controls.ListBox> 선택 항목이 변경 됨.</span><span class="sxs-lookup"><span data-stu-id="6c3d4-108">The following code-behind file defines the changes to the events that are associated with the <xref:System.Windows.Controls.ListBox> selection changes.</span></span> <span data-ttu-id="6c3d4-109"><xref:System.Windows.Controls.StackPanel>로 식별 되는 <xref:System.Windows.FrameworkElement.Name%2A> `sp1`합니다.</span><span class="sxs-lookup"><span data-stu-id="6c3d4-109"><xref:System.Windows.Controls.StackPanel> is identified by the <xref:System.Windows.FrameworkElement.Name%2A> `sp1`.</span></span>  
   
  [!code-csharp[StackPanelIntroSamp#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StackPanelIntroSamp/CSharp/Window1.xaml.cs#2)]
  [!code-vb[StackPanelIntroSamp#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StackPanelIntroSamp/VisualBasic/Window1.xaml.vb#2)]  
   
-## 참고 항목  
- <xref:System.Windows.Controls.StackPanel>   
- <xref:System.Windows.Controls.ListBox>   
- <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>   
- <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>   
- [Panel 개요](../../../../docs/framework/wpf/controls/panels-overview.md)
+## <a name="see-also"></a><span data-ttu-id="6c3d4-110">참고 항목</span><span class="sxs-lookup"><span data-stu-id="6c3d4-110">See Also</span></span>  
+ <xref:System.Windows.Controls.StackPanel>  
+ <xref:System.Windows.Controls.ListBox>  
+ <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>  
+ <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>  
+ [<span data-ttu-id="6c3d4-111">패널 개요</span><span class="sxs-lookup"><span data-stu-id="6c3d4-111">Panels Overview</span></span>](../../../../docs/framework/wpf/controls/panels-overview.md)
