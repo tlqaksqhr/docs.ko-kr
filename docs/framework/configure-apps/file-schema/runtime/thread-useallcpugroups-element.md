@@ -1,69 +1,71 @@
 ---
-title: "&lt;Thread_UseAllCpuGroups&gt; 요소 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
+title: "&lt;Thread_UseAllCpuGroups&gt; 요소"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
-caps.latest.revision: 6
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 187e391acf3b80a5ae2dfe795c4a3b397af815ed
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;Thread_UseAllCpuGroups&gt; 요소
-런타임이 모든 CPU 그룹에서 관리되는 스레드를 분포하는지 여부를 지정합니다.  
+# <a name="ltthreaduseallcpugroupsgt-element"></a>&lt;Thread_UseAllCpuGroups&gt; 요소
+런타임이 모든 CPU 그룹에 관리되는 스레드를 배포할지를 지정합니다.  
   
-## 구문  
+ \<configuration>  
+\<런타임 >  
+< Thread_UseAllCpuGroups >  
   
-```vb  
+## <a name="syntax"></a>구문  
+  
+```xml
 <Thread_UseAllCpuGroups    
    enabled="true|false"/>  
 ```  
   
-## 특성 및 요소  
+## <a name="attributes-and-elements"></a>특성 및 요소  
  다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
-### 특성  
+### <a name="attributes"></a>특성  
   
 |특성|설명|  
-|--------|--------|  
-|`enabled`|필수 특성입니다.<br /><br /> 런타임이 모든 CPU 그룹에서 관리되는 스레드를 분포하는지 여부를 지정합니다.|  
+|---------------|-----------------|  
+|`enabled`|필수 특성입니다.<br /><br /> 런타임이 모든 CPU 그룹에 관리되는 스레드를 배포할지를 지정합니다.|  
   
-## enabled 특성  
+## <a name="enabled-attribute"></a>enabled 특성  
   
 |값|설명|  
-|-------|--------|  
-|`false`|런타임은 여러 CPU 그룹에 관리되는 스레드를 분포하지 않습니다.  이 값이 기본값입니다.|  
-|`true`|컴퓨터에 여러 CPU 그룹과 [\<GCCpuGroup\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) 요소가 사용되는 경우 런타임은 여러 CPU 그룹에 관리되는 스레드를 배포합니다.|  
+|-----------|-----------------|  
+|`false`|런타임에에서는 여러 CPU 그룹에 걸쳐 관리 되는 스레드를 배포 하지 않습니다. 이 값이 기본값입니다.|  
+|`true`|런타임 컴퓨터에 있는 경우 여러 CPU 그룹 여러 CPU 그룹에 걸쳐 관리 되는 스레드를 배포 및 [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) 요소를 사용할 수 있습니다.|  
   
-### 자식 요소  
+### <a name="child-elements"></a>자식 요소  
  없음  
   
-### 부모 요소  
+### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
-|--------|--------|  
+|-------------|-----------------|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
-|`runtime`|어셈블리 바인딩 및 가비지 수집에 대한 정보를 포함합니다.|  
+|`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|  
   
-## 설명  
- 컴퓨터에 여러 CPU 그룹이 있을 경우 이 요소를 사용하면 런타임에 모든 CPU 그룹에 관리되는 스레드를 배포합니다.  이 기능을 사용하려면 가비지 수집을 모든 CPU 그룹으로 확장하고 힙을 만들고 균형 조정할 때 모든 코어를 계정으로 가져오는 [\<GCCpuGroup\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) 요소도 활성화해야 합니다.  [\<GCCpuGroup\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) 요소를 사용하려면 [\<gcServer\>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) 요소를 사용할 수 있어야 합니다.  이러한 요소를 사용할 수 없으면 `<Thread_UseAllCpuGroups>` 요소를 사용해도 효과가 없습니다.  
+## <a name="remarks"></a>설명  
+ 컴퓨터에 여러 CPU 그룹을이 요소를 사용 하도록 설정 하면 모든 CPU 그룹에서 관리 되는 스레드를 배포할 runtime 합니다. 이 기능을 사용 하려면도 설정 해야는 [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) 모든 CPU 그룹에 가비지 컬렉션을 확장 하 고 모든 코어는 만들고 힙을 분산 때 고려 하는 요소입니다. 사용 하도록 설정 된 [ \<GCCpuGroup >](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md) 요소 사용 하도록 설정 해야는 [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) 요소입니다. 이러한 요소가 활성화 되지 않은 경우 사용 하도록 설정 된 `<Thread_UseAllCpuGroups>` 요소에 영향을 주지 않습니다.  
   
-## 예제  
- 다음 예제에서는 복수 CPU 그룹에 지원을 설정하는 방법을 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 여러 CPU 그룹에 대 한 지원을 사용 하도록 설정 하는 방법을 보여 줍니다.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <Thread_UseAllCpuGroups enabled="true"/>  
@@ -73,7 +75,7 @@ caps.handback.revision: 6
 </configuration>  
 ```  
   
-## 참고 항목  
- [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [\<GCCpuGroup\> 요소](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)
+## <a name="see-also"></a>참고 항목  
+ [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [\<GCCpuGroup > 요소](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)

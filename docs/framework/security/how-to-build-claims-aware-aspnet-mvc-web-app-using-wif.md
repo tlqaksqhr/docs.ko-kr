@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 7065455e3459ad37a8e296107ca8c6991334b328
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>방법: WIF를 사용하여 클레임 인식 ASP.NET MVC 웹 응용 프로그램 빌드
 ## <a name="applies-to"></a>적용 대상  
@@ -230,4 +228,3 @@ ms.lasthandoff: 08/21/2017
 ## <a name="related-items"></a>관련 항목  
   
 -   [방법: WIF를 사용하여 클레임 인식 ASP.NET Web Forms 응용 프로그램 빌드](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
-

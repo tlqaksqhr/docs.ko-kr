@@ -5,15 +5,12 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - CCW
 - COM interop, COM wrappers
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: cbf466fb52af94d51babb30fdee85f4a056298c6
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 874550511ed04427003f6fd54fdd97b3001356fc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="com-callable-wrapper"></a>CCW
 COM 클라이언트가.NET 개체를 호출할 때 공용 언어 런타임에서는 관리되는 개체 및 개체에 대한 COM 호출 가능 래퍼(CCW)를 만듭니다. .NET 개체를 직접 참조할 수는 없으며, COM 클라이언트는 CCW를 관리되는 개체에 대한 프록시로 사용합니다.  
@@ -189,11 +185,10 @@ public class LoanApp : IAnother {
  드물지만 자동으로 생성된 이중 인터페이스가 적절할 수 있지만 버전과 관련해서 복잡해지는 경우가 더 많습니다. 예를 들어 파생 클래스의 클래스 인터페이스를 사용하는 COM 클라이언트는 기본 클래스가 변경될 때 쉽게 중단될 수 있습니다. 타사에서 기본 클래스를 제공할 경우 클래스 인터페이스의 레이아웃을 제어할 수 없습니다. 또한 디스패치 전용 인터페이스와 달리 이중 인터페이스(**ClassInterface.AutoDual**)는 내보낸 형식 라이브러리에서 클래스 인터페이스의 설명을 제공합니다. 이 설명은 런타임에 바인딩된 클라이언트가 런타임에 DispId를 캐시하도록 권장합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>   
- [COM 호출 가능 래퍼](../../../docs/framework/interop/com-callable-wrapper.md)   
- [COM 래퍼](../../../docs/framework/interop/com-wrappers.md)   
- [.NET Framework 구성 요소를 COM에 노출](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)   
- [COM 인터페이스 시뮬레이션](http://msdn.microsoft.com/en-us/ad2ab959-e2be-411b-aaff-275c3fba606c)   
- [상호 운용할 .NET 형식의 정규화](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)   
+ <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>  
+ [COM 호출 가능 래퍼](../../../docs/framework/interop/com-callable-wrapper.md)  
+ [COM 래퍼](../../../docs/framework/interop/com-wrappers.md)  
+ [.NET Framework 구성 요소를 COM에 노출](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
+ [COM 인터페이스 시뮬레이션](http://msdn.microsoft.com/en-us/ad2ab959-e2be-411b-aaff-275c3fba606c)  
+ [상호 운용할 .NET 형식의 정규화](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
  [런타임 호출 가능 래퍼](../../../docs/framework/interop/runtime-callable-wrapper.md)
-

@@ -5,8 +5,7 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,15 @@ helpviewer_keywords:
 - ETW, CLR keywords
 - ETW, CLR levels
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 62f39bb54fab247e7a9291026d3dcebd6e390ab5
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 7f5dcdd969619526c52a9ae44014030a9f0c6dc5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR ETW 키워드 및 수준
 <a name="top"></a> 범주 및 수준별로 ETW(Windows용 이벤트 추적) 이벤트를 필터링할 수 있습니다. 이벤트 [CLR ETW 키워드](#keywords)를 통해 범주별로 이벤트를 필터링할 수 있습니다. 런타임 및 런다운 공급자를 위해 여러 키워드를 조합하여 사용할 수 있습니다. [이벤트 수준](#levels) 은 플래그로 식별됩니다.  
@@ -133,7 +131,6 @@ ms.lasthandoff: 08/21/2017
  0x0 - LogAlways  
   
 ## <a name="see-also"></a>참고 항목  
- [CLR ETW 공급자](../../../docs/framework/performance/clr-etw-providers.md)   
- [CLR ETW 이벤트](../../../docs/framework/performance/clr-etw-events.md)   
+ [CLR ETW 공급자](../../../docs/framework/performance/clr-etw-providers.md)  
+ [CLR ETW 이벤트](../../../docs/framework/performance/clr-etw-events.md)  
  [공용 언어 런타임의 ETW 이벤트](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
-

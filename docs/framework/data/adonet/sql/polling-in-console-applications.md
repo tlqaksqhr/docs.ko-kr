@@ -1,32 +1,36 @@
 ---
-title: "콘솔 응용 프로그램의 폴링 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "콘솔 응용 프로그램에서 폴링"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 781fcd73dc56841eb7eadbf0bd6a0093643e608a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 콘솔 응용 프로그램의 폴링
-ADO.NET에서 비동기 작업을 수행하면 다른 스레드에서 다른 작업을 수행하는 동안 한 스레드에서 시간이 많이 걸리는 데이터베이스 작업을 시작할 수 있습니다.  그러나 대부분은 결국 데이터베이스 작업을 완료할 때까지 응용 프로그램을 계속 실행할 수 없는 지점에 이르게 됩니다.  이 경우 비동기 작업을 폴링하여 작업의 완료 여부를 확인하면 도움이 됩니다.  
+# <a name="polling-in-console-applications"></a>콘솔 응용 프로그램에서 폴링
+ADO.NET에서 비동기 작업을 수행하면 다른 스레드에서 다른 작업을 수행하는 동안 한 스레드에서 시간이 많이 걸리는 데이터베이스 작업을 시작할 수 있습니다. 그러나 대부분은 결국 데이터베이스 작업을 완료할 때까지 응용 프로그램을 계속 실행할 수 없는 지점에 이르게 됩니다. 이 경우 비동기 작업을 폴링하여 작업의 완료 여부를 확인하면 도움이 됩니다.  
   
  <xref:System.IAsyncResult.IsCompleted%2A> 속성을 사용하면 작업의 완료 여부를 확인할 수 있습니다.  
   
-## 예제  
- 다음 콘솔 응용 프로그램에서는 **AdventureWorks** 샘플 데이터베이스에서 데이터를 비동기적으로 업데이트합니다.  이 예제에서는 장기 실행 프로세스를 에뮬레이션하기 위해 명령 텍스트에 WAITFOR 문을 삽입합니다.  일반적으로는 명령을 느린 속도로 실행하지 않겠지만 이 경우 그렇게 하면 보다 손쉽게 비동기 작업을 확인할 수 있습니다.  
+## <a name="example"></a>예제  
+ 다음 콘솔 응용 프로그램 내에서 데이터를 업데이트는 **AdventureWorks** 예제 데이터베이스에서 작업은 비동기적으로 수행 합니다. 이 예제에서는 장기 실행 프로세스를 에뮬레이션하기 위해 명령 텍스트에 WAITFOR 문을 삽입합니다. 일반적으로는 명령을 느린 속도로 실행하지 않겠지만 이 경우 그렇게 하면 보다 손쉽게 비동기 작업을 확인할 수 있습니다.  
   
- \[Visual Basic\]  
-  
-```  
+```vb  
 Imports System  
 Imports System.Data.SqlClient  
   
@@ -102,9 +106,7 @@ Module Module1
 End Module   
 ```  
   
- \[C\#\]  
-  
-```  
+```csharp  
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -198,6 +200,6 @@ class Class1
 }  
 ```  
   
-## 참고 항목  
- [비동기 작업](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)   
+## <a name="see-also"></a>참고 항목  
+ [비동기 작업](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
  [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)

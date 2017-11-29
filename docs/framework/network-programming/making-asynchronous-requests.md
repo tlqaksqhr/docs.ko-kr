@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - Internet, asynchronous access
 - Networking
@@ -19,22 +17,21 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 6854ddc10e35c2a5ff1de200a44c95f34c186609
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: d0ed1eea11049a1e6f026c71a2eb41134f87fd8d
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="making-asynchronous-requests"></a>비동기 요청 수행
 <xref:System.Net> 클래스에서는 인터넷 리소스에 비동기적으로 액세스하기 위해 .NET Framework의 표준 비동기 프로그래밍 모델을 사용합니다. <xref:System.Net.WebRequest> 클래스의 <xref:System.Net.WebRequest.BeginGetResponse%2A> 및 <xref:System.Net.WebRequest.EndGetResponse%2A> 메서드를 통해 인터넷 리소스의 비동기 요청을 시작하고 완료합니다.  
   
 > [!NOTE]
->  비동기 콜백 메서드에서 동기 호출을 사용하면 심각한 성능 저하가 발생할 수 있습니다. **WebRequest** 및 해당 종속 항목을 사용하는 인터넷 요청에서는 <xref:System.IO.Stream.BeginRead%2A?displayProperty=fullName>을 사용하여 <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=fullName> 매서드에서 반환한 스트림을 읽어야 합니다.  
+>  비동기 콜백 메서드에서 동기 호출을 사용하면 심각한 성능 저하가 발생할 수 있습니다. **WebRequest** 및 해당 종속 항목을 사용하는 인터넷 요청에서는 <xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType>을 사용하여 <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> 매서드에서 반환한 스트림을 읽어야 합니다.  
   
  다음 샘플 코드는 **WebRequest** 클래스에서 비동기 호출을 사용하는 방법을 보여 줍니다. 이 샘플은 명령줄에서 URI를 받아 URI에서 리소스를 요청한 다음 인터넷에서 수신하는 동시에 콘솔에 데이터를 인쇄하는 콘솔 프로그램입니다.  
   
@@ -348,4 +345,3 @@ End Class
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 요청](../../../docs/framework/network-programming/requesting-data.md)
-

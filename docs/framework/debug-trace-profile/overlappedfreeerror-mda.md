@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - OverlappedFreeError MDA
 - overlapped free method call error
@@ -22,19 +16,18 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), overlapped structures
 - freeing overlapped structures
 ms.assetid: b6ab2d48-6eee-4bab-97a3-046b3b0a5470
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 68d5098c1a26e186790ba9dafb27b66fedc3f1e9
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 645c9f6c5a2a693fb2b88b2b2bc1c40501eecde8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="overlappedfreeerror-mda"></a>overlappedFreeError MDA
-`overlappedFreeError` MDA(관리 디버깅 도우미)는 겹치는 작업이 완료되기 전에 <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=fullName> 메서드를 호출하면 활성화됩니다.  
+`overlappedFreeError` MDA(관리 디버깅 도우미)는 겹치는 작업이 완료되기 전에 <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType> 메서드를 호출하면 활성화됩니다.  
   
 ## <a name="symptoms"></a>증상  
  액세스 위반 또는 가비지 수집된 힙의 손상입니다.  
@@ -66,7 +59,6 @@ ms.lasthandoff: 08/21/2017
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>   
- [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)   
- [Interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)
-
+ <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
+ [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
+ [interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)

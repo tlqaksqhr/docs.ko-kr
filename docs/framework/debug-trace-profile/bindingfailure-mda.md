@@ -5,15 +5,9 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - binding failure
 - binding, failures
@@ -22,22 +16,21 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), binding failures
 - BindingFailure MDA
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 4e78cdcc5bcf69902675fceacc9dac245bfec336
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 89c1ce4b39379aeae80240750cdbcd2e61b6ec11
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="bindingfailure-mda"></a>bindingFailure MDA
 `bindingFailure` MDA(관리 디버깅 도우미)는 어셈블리 로드에 실패할 때 활성화됩니다.  
   
 ## <a name="symptoms"></a>증상  
- 코드에서 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 또는 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName> 같은 로더 메서드 중 하나 또는 정적 참조를 사용하여 어셈블리를 로드하려고 했습니다. 어셈블리가 로드되지 않고 <xref:System.IO.FileNotFoundException> 또는 <xref:System.IO.FileLoadException> 예외가 throw됩니다.  
+ 코드에서 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 또는 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 같은 로더 메서드 중 하나 또는 정적 참조를 사용하여 어셈블리를 로드하려고 했습니다. 어셈블리가 로드되지 않고 <xref:System.IO.FileNotFoundException> 또는 <xref:System.IO.FileLoadException> 예외가 throw됩니다.  
   
 ## <a name="cause"></a>원인  
  바인딩 실패는 런타임이 어셈블리를 로드할 수 없는 경우에 발생합니다. 바인딩 실패는 다음과 같은 상황 중 하나의 결과일 수 있습니다.  
@@ -115,4 +108,3 @@ namespace ConsoleApplication1
   
 ## <a name="see-also"></a>참고 항목  
  [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-

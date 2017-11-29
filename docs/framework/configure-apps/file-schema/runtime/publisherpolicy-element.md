@@ -1,81 +1,84 @@
 ---
-title: "&lt;publisherPolicy&gt; 요소 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/publisherPolicy"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/publisherPolicy"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#publisherPolicy"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<publisherPolicy> 요소"
-  - "컨테이너 태그, <publisherPolicy> 요소"
-  - "publisherPolicy 요소"
+title: "&lt;l i c y&gt; 요소"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/publisherPolicy
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly/publisherPolicy
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#publisherPolicy
+helpviewer_keywords:
+- publisherPolicy element
+- container tags, <publisherPolicy> element
+- <publisherPolicy> element
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
-caps.latest.revision: 18
-author: "rpetrusha"
-ms.author: "ronpet"
-manager: "wpickett"
-caps.handback.revision: 17
+caps.latest.revision: "18"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 654887c870a7f620c52fa402d6324de39fdb2feb
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;publisherPolicy&gt; 요소
-런타임에서 게시자 정책을 적용하는지 여부를 지정합니다.  
+# <a name="ltpublisherpolicygt-element"></a>&lt;l i c y&gt; 요소
+런타임이 게시자 정책을 적용할지를 지정합니다.  
   
-## 구문  
+ \<configuration>  
+\<런타임 >  
+\<assemblyBinding >  
+\<dependentAssembly >  
+\<l i c y >  
   
-```  
+## <a name="syntax"></a>구문  
   
+```xml  
 <publisherPolicy apply="yes|no"/>  
 ```  
   
-## 특성 및 요소  
+## <a name="attributes-and-elements"></a>특성 및 요소  
  다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
-### 특성  
+### <a name="attributes"></a>특성  
   
 |특성|설명|  
-|--------|--------|  
-|`apply`|게시자 정책을 적용할지 여부를 지정합니다.|  
+|---------------|-----------------|  
+|`apply`|게시자 정책을 적용할지 여부를 지정 합니다.|  
   
-## 특성 적용  
+## <a name="apply-attribute"></a>특성 적용  
   
 |값|설명|  
-|-------|--------|  
-|`yes`|게시자 정책을 적용합니다.  이것이 기본값입니다.|  
-|`no`|게시자 정책을 적용하지 않습니다.|  
+|-----------|-----------------|  
+|`yes`|게시자 정책을 적용합니다. 이것이 기본 설정입니다.|  
+|`no`|게시자 정책을 적용 되지 않습니다.|  
   
-### 자식 요소  
+### <a name="child-elements"></a>자식 요소  
  없음  
   
-### 부모 요소  
+### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
-|--------|--------|  
+|-------------|-----------------|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
-|`runtime`|어셈블리 바인딩 및 가비지 수집에 대한 정보를 포함합니다.|  
+|`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|  
   
-## 설명  
- 구성 요소 공급업체는 특정 어셈블리의 새 버전을 릴리스할 때, 어셈블리의 이전 버전을 사용하는 응용 프로그램에서 새 버전을 사용할 수 있도록 새 어셈블리에 게시자 정책을 포함시킬 수 있습니다.  특정 어셈블리에 대해 게시자 정책을 적용할지 여부를 지정하려면 **\<publisherPolicy\>** 요소를 **\<dependentAssembly\>** 요소 안에 사용합니다.  
+## <a name="remarks"></a>설명  
+ 구성 요소 공급 업체를 새 버전의 어셈블리를 놓으면 공급 업체 이제 이전 버전을 사용 하는 응용 프로그램의 새 버전을 사용 하므로 게시자 정책 파일은 포함할 수 있습니다. 특정 어셈블리에 대 한 게시자 정책을 적용할지 여부를 지정 하려면는  **\<l i c y >** 요소에는  **\<dependentAssembly >** 요소입니다.  
   
- **apply** 특성의 기본값은 **yes**입니다.  **apply** 특성을 **no**로 설정하면 이전의 모든 **yes** 설정이 재정의됩니다.  
+ 에 대 한 기본 설정은 **적용** 특성은 **예**합니다. 설정의 **적용** 특성을 **없습니다** 이전 재정의 **예** 어셈블리에 대 한 설정입니다.  
   
- 권한은 응용 프로그램 구성 파일의 [\<publisherPolicy apply\="no"\>](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) 요소를 사용하여 게시자 정책을 명시적으로 무시하기 위해 응용 프로그램에 필요합니다.  이 권한은 [BindingRedirects](frlrfSystemSecurityPermissionsSecurityPermissionFlagClassTopic) 플래그를 설정함으로서 부여됩니다. 이 플래그는 [SecurityPermission Class](frlrfSystemSecurityPermissionsSecurityPermissionClassTopic)에 있습니다.  자세한 내용은 [어셈블리 바인딩 리디렉션 보안 권한](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)을 참조하십시오.  
+ 권한이 명시적으로 사용 하 여 게시자 정책을 무시 하려면 응용 프로그램에 대 한 필요는 [ \<예 = "no" / >](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) 응용 프로그램 구성 파일의 요소입니다. 설정 하 여 권한 부여는 <xref:System.Security.Permissions.SecurityPermissionFlag> 에 플래그는 <xref:System.Security.Permissions.SecurityPermission>합니다. 자세한 내용은 참조 [어셈블리 바인딩 리디렉션 보안 권한](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)합니다.  
   
-## 예제  
- 다음 예제에서는 `myAssembly` 어셈블리에 대해 게시자 정책 적용 기능을 해제합니다.  
+## <a name="example"></a>예제  
+ 다음 예에서는 어셈블리에 대 한 게시자 정책을 해제 `myAssembly`합니다.  
   
-```  
+```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
@@ -90,8 +93,8 @@ caps.handback.revision: 17
 </configuration>  
 ```  
   
-## 참고 항목  
- [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)   
- [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [런타임에서 어셈블리를 찾는 방법](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)   
+## <a name="see-also"></a>참고 항목  
+ [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [런타임에서 어셈블리를 찾는 방법](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [어셈블리 버전 리디렉션](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

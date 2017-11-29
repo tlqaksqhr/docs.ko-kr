@@ -1,70 +1,80 @@
 ---
-title: "&lt;factorySettings&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: '&lt;factorySettings&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 202aad17-1b8b-4c87-ad57-4ca5de18ed35
-caps.latest.revision: 3
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 1cb942e0d2c5b5d4f1eb92d75b31a9a1678291cc
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;factorySettings&gt;
+# <a name="ltfactorysettingsgt"></a>&lt;factorySettings&gt;
 채널 팩터리 캐시의 설정을 지정합니다.  
   
-## 구문  
+\<시스템입니다. ServiceModel >  
+\<동작 >  
+\<serviceBehaviors >  
+\<동작 >  
+\<sendMessageChannelCache >  
+\<factorySettings >  
   
-```  
+## <a name="syntax"></a>구문  
   
-<behaviors>  
-  <serviceBehaviors>  
-    <behavior name=String">  
-       <sendMessageChannelCache allowUnsafeCaching="Boolean" >          
-           <factorySettings idleTimeout="TimeSpan" leaseTimeout="TimeSpan" maxItemsInCache="Integer" />  
-       </sendMessageChannelCache>  
-    </behavior>  
-  </serviceBehaviors>  
+```xml  
+<behaviors>
+  <serviceBehaviors>
+    <behavior name="String">
+      <sendMessageChannelCache allowUnsafeCaching="Boolean" >
+        <factorySettings idleTimeout="TimeSpan" 
+                         leaseTimeout="TimeSpan" 
+                         maxItemsInCache="Integer" />
+      </sendMessageChannelCache>
+    </behavior>
+  </serviceBehaviors>
 </behaviors>  
-  
 ```  
   
-## 특성 및 요소  
+## <a name="attributes-and-elements"></a>특성 및 요소  
  다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
-### 특성  
+### <a name="attributes"></a>특성  
   
 |특성|설명|  
-|--------|--------|  
+|---------------|-----------------|  
 |idleTimeout|개체가 삭제되기 전에 캐시에서 유휴 상태로 있을 수 있는 최대 시간 간격을 지정하는 TimeSpan 값입니다.|  
-|leaseTimeout|개체가 캐시에서 제거되는 시간 간격을 지정하는 TimeSpan 값입니다.|  
+|leaseTimeout|캐시에서 개체가 제거 되는 시간 간격을 지정 하는 TimeSpan 값입니다.|  
 |maxItemsInCache|캐시에 유지될 수 있는 최대 개체 수를 지정하는 정수입니다.|  
   
-### 자식 요소  
+### <a name="child-elements"></a>자식 요소  
  없음  
   
-### 부모 요소  
+### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
-|--------|--------|  
-|[\<sendMessageChannelCache\>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/sendmessagechannelcache.md)|캐시 공유 수준, 채널 팩터리 캐시 설정 및 Send 메시징 활동을 사용하여 서비스 끝점으로 메시지를 전송하는 워크플로를 위한 채널 캐시 설정에 대한 사용자 지정을 가능하게 하는 서비스 동작입니다.|  
+|-------------|-----------------|  
+|[\<sendMessageChannelCache >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/sendmessagechannelcache.md)|캐시 공유 수준, 채널 팩터리 캐시 설정 및 송신 메시징 활동을 사용 하 여 서비스 끝점으로 메시지를 보내는 워크플로 위한 채널 캐시 설정을 사용자 지정할 수 있는 서비스 동작입니다.|  
   
-## 설명  
- 이 서비스 동작은 서비스 끝점에 메시지를 전송하는 워크플로를 위한 것입니다.  이러한 워크플로는 일반적으로 클라이언트 워크플로이지만 <xref:System.ServiceModel.WorkflowServiceHost>에서 호스팅되는 워크플로 서비스일 수도 있습니다.  
+## <a name="remarks"></a>설명  
+ 이 서비스 동작은 서비스 끝점에 메시지를 전송하는 워크플로를 위한 것입니다. 이러한 워크플로는 일반적으로 클라이언트 워크플로이지만 <xref:System.ServiceModel.WorkflowServiceHost>에서 호스팅되는 워크플로 서비스일 수도 있습니다.  
   
- 기본적으로 <xref:System.ServiceModel.WorkflowServiceHost>에서 호스팅되는 워크플로에서 <xref:System.ServiceModel.Activities.Send> 메시징 활동에 사용되는 캐시는 <xref:System.ServiceModel.WorkflowServiceHost>의 모든 워크플로 인스턴스에서 공유됩니다\(호스트 수준 캐싱\).  <xref:System.ServiceModel.WorkflowServiceHost>에서 호스팅되지 않는 클라이언트 워크플로의 경우 워크플로 인스턴스에서만 캐시를 사용할 수 있습니다\(인스턴스 수준 캐싱\).  구성에 정의된 끝점이 있는 워크플로의 경우 기본적으로 Send 활동에 캐싱을 사용하지 않도록 설정되어 있습니다.  
+ 기본적으로 <xref:System.ServiceModel.WorkflowServiceHost>에서 호스팅되는 워크플로에서 <xref:System.ServiceModel.Activities.Send> 메시징 활동에 사용되는 캐시는 <xref:System.ServiceModel.WorkflowServiceHost>의 모든 워크플로 인스턴스에서 공유됩니다(호스트 수준 캐싱). <xref:System.ServiceModel.WorkflowServiceHost>에서 호스팅되지 않는 클라이언트 워크플로의 경우 워크플로 인스턴스에서만 캐시를 사용할 수 있습니다(인스턴스 수준 캐싱). 구성에 정의된 끝점이 있는 워크플로의 경우 기본적으로 Send 활동에 캐싱을 사용하지 않도록 설정되어 있습니다.  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]채널 팩터리 및 채널 캐시에 대한 기본 캐시 공유 수준과 캐시 설정을 변경하는 방법은 [Send 활동의 캐시 공유 수준 변경](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)을 참조하세요.  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]기본 캐시 공유 수준을 변경 하 고 캐시 채널 팩터리 및 채널 캐시에 대 한 설정을 참조 하는 방법 [보내기 활동에 대 한 캐시 공유 수준 변경](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)합니다.  
   
-## 예제  
- 호스팅된 워크플로 서비스의 경우 응용 프로그램 구성 파일에서 팩터리 캐시 및 채널 캐시 설정을 지정할 수 있습니다.  이렇게 하려면 팩터리 및 채널 캐시의 캐시 설정을 포함하는 서비스 동작을 추가하고 이 서비스 동작을 서비스에 추가합니다.  다음 예제에서는 사용자 지정 팩터리 캐시 및 채널 캐시 설정이 있는 **MyChannelCacheBehavior** 서비스 동작을 포함하는 구성 파일의 내용을 보여 줍니다.  이 서비스 동작은 **behaviorConfiguarion** 특성을 통해 서비스에 추가됩니다.  
+## <a name="example"></a>예제  
+ 호스팅된 워크플로 서비스의 경우 응용 프로그램 구성 파일에서 팩터리 캐시 및 채널 캐시 설정을 지정할 수 있습니다. 이렇게 하려면 팩터리 및 채널 캐시의 캐시 설정을 포함하는 서비스 동작을 추가하고 이 서비스 동작을 서비스에 추가합니다. 다음 예제에서는 포함 된 구성 파일의 내용이 표시는 **MyChannelCacheBehavior** 서비스 동작을 사용자 지정 팩터리 캐시 및 채널 캐시 설정을 사용 합니다. 이 서비스 동작을 통해 서비스에 추가 **behaviorConfiguarion** 특성입니다.  
   
-```  
-  
+```xml  
 <configuration>    
   <system.serviceModel>  
     <!-- List of other config sections here -->   
@@ -84,12 +94,11 @@ caps.handback.revision: 3
     </services>  
   </system.serviceModel>  
 </configuration>  
-  
 ```  
   
-## 참고 항목  
- <xref:System.ServiceModel.Activities.SendMessageChannelCache>   
- <xref:System.ServiceModel.Activities.Configuration.SendMessageChannelCacheElement>   
- <xref:System.ServiceModel.Activities.Send>   
- <xref:System.ServiceModel.Activities.ChannelCacheSettings>   
- [Send 활동의 캐시 공유 수준 변경](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)
+## <a name="see-also"></a>참고 항목  
+ <xref:System.ServiceModel.Activities.SendMessageChannelCache>  
+ <xref:System.ServiceModel.Activities.Configuration.SendMessageChannelCacheElement>  
+ <xref:System.ServiceModel.Activities.Send>  
+ <xref:System.ServiceModel.Activities.ChannelCacheSettings>  
+ [Send 활동 수준의 캐시 공유를 변경 합니다.](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)

@@ -1,34 +1,40 @@
 ---
-title: "DataAdapters를 사용하여 배치 작업 수행 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "DataAdapter를 사용하여 일괄 작업 수행"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 66395e8011b5ea25bb3b52b25e0067dc5d8fc1ee
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# DataAdapters를 사용하여 배치 작업 수행
-ADO.NET의 배치 지원을 사용하면 <xref:System.Data.Common.DataAdapter>를 통해 INSERT, UPDATE 및 DELETE 작업을 한 번에 하나씩 보내지 않고 <xref:System.Data.DataSet> 또는 <xref:System.Data.DataTable>에서 서버로 그룹화할 수 있습니다.  서버로의 라운드트립 횟수가 줄어들면 일반적으로 성능이 크게 개선됩니다.  배치 업데이트는 SQL Server\(<xref:System.Data.SqlClient>\) 및 Oracle\(<xref:System.Data.OracleClient>\)용 .NET 데이터 공급자에서 지원됩니다.  
+# <a name="performing-batch-operations-using-dataadapters"></a>DataAdapter를 사용하여 일괄 작업 수행
+ADO.NET의 배치 지원을 사용하면 <xref:System.Data.Common.DataAdapter>를 통해 INSERT, UPDATE 및 DELETE 작업을 한 번에 하나씩 보내지 않고 <xref:System.Data.DataSet> 또는 <xref:System.Data.DataTable>에서 서버로 그룹화할 수 있습니다. 서버로의 라운드트립 횟수가 줄어들면 일반적으로 성능이 크게 개선됩니다. 배치 업데이트는 SQL Server(<xref:System.Data.SqlClient>) 및 Oracle(<xref:System.Data.OracleClient>)용 .NET 데이터 공급자에서 지원됩니다.  
   
- 이전 버전의 ADO.NET에서는 데이터베이스를 <xref:System.Data.DataSet>의 변경 내용으로 업데이트하는 경우 `DataAdapter`의 `Update` 메서드에서 데이터베이스에 대해 한 번에 한 행씩 업데이트를 수행했습니다.  또한 지정한 <xref:System.Data.DataTable>의 행에서 반복될 때 수정되었는지 여부를 확인하기 위해 각 <xref:System.Data.DataRow>를 검사했습니다.  행이 수정된 경우에는 해당 행의 <xref:System.Data.DataRow.RowState%2A> 속성 값에 따라 적절한 `UpdateCommand`, `InsertCommand` 또는 `DeleteCommand`를 호출했습니다.  그리고 행을 업데이트할 때마다 데이터베이스에 대한 네트워크 라운드트립이 수반되었습니다.  
+ 이전 버전의 ADO.NET에서는 데이터베이스를 <xref:System.Data.DataSet>의 변경 내용으로 업데이트하는 경우 `Update`의 `DataAdapter` 메서드에서 데이터베이스에 대해 한 번에 한 행씩 업데이트를 수행했습니다. 또한 지정한 <xref:System.Data.DataTable>의 행에서 반복될 때 수정되었는지 여부를 확인하기 위해 각 <xref:System.Data.DataRow>를 검사했습니다. 행이 수정된 경우에는 해당 행의 `UpdateCommand` 속성 값에 따라 적절한 `InsertCommand`, `DeleteCommand` 또는 <xref:System.Data.DataRow.RowState%2A>를 호출했습니다. 그리고 행을 업데이트할 때마다 데이터베이스에 대한 네트워크 라운드트립이 수반되었습니다.  
   
- ADO.NET 2.0부터는 <xref:System.Data.Common.DbDataAdapter>가 <xref:System.Data.Common.DbDataAdapter.UpdateBatchSize%2A> 속성을 노출합니다.  `UpdateBatchSize`를 양의 정수 값으로 설정하면 데이터베이스에 대한 업데이트가 지정된 크기의 배치로 전송됩니다.  예를 들어 `UpdateBatchSize`를 10으로 설정하면 10개의 개별적인 문을 그룹화하여 하나의 배치로 제출합니다.  `UpdateBatchSize`를 0으로 설정하면 <xref:System.Data.Common.DataAdapter>가 서버에서 처리할 수 있는 최대 배치 크기를 사용합니다.  1로 설정할 경우에는 행이 한 번에 하나씩 전송되므로 배치 업데이트를 사용할 수 없습니다.  
+ ADO.NET 2.0부터는 <xref:System.Data.Common.DbDataAdapter>가 <xref:System.Data.Common.DbDataAdapter.UpdateBatchSize%2A> 속성을 노출합니다. `UpdateBatchSize`를 양의 정수 값으로 설정하면 데이터베이스에 대한 업데이트가 지정된 크기의 배치로 전송됩니다. 예를 들어 `UpdateBatchSize`를 10으로 설정하면 10개의 개별적인 문을 그룹화하여 하나의 배치로 제출합니다. `UpdateBatchSize`를 0으로 설정하면 <xref:System.Data.Common.DataAdapter>가 서버에서 처리할 수 있는 최대 배치 크기를 사용합니다. 1로 설정할 경우에는 행이 한 번에 하나씩 전송되므로 배치 업데이트를 사용할 수 없습니다.  
   
- 너무 큰 배치를 실행하면 성능이 저하될 수 있습니다.  따라서 응용 프로그램을 구현하기 전에 최적의 배치 크기 설정을 테스트해야 합니다.  
+ 너무 큰 배치를 실행하면 성능이 저하될 수 있습니다. 따라서 응용 프로그램을 구현하기 전에 최적의 배치 크기 설정을 테스트해야 합니다.  
   
-## UpdateBatchSize 속성 사용  
- 배치 업데이트를 사용할 수 있을 때는 DataAdapter `UpdateCommand`, `InsertCommand` 및 `DeleteCommand`의 <xref:System.Data.IDbCommand.UpdatedRowSource%2A> 속성 값을 <xref:System.Data.UpdateRowSource> 또는 <xref:System.Data.UpdateRowSource>로 설정해야 합니다.  배치 업데이트를 수행하는 경우 명령의 <xref:System.Data.IDbCommand.UpdatedRowSource%2A> 속성 값 <xref:System.Data.UpdateRowSource> 또는 <xref:System.Data.UpdateRowSource>는 유효하지 않습니다.  
+## <a name="using-the-updatebatchsize-property"></a>UpdateBatchSize 속성 사용  
+ 배치 업데이트를 사용할 수 있을 때는 DataAdapter <xref:System.Data.IDbCommand.UpdatedRowSource%2A>, `UpdateCommand` 및 `InsertCommand`의 `DeleteCommand` 속성 값을 <xref:System.Data.UpdateRowSource.None> 또는 <xref:System.Data.UpdateRowSource.OutputParameters>로 설정해야 합니다. 배치 업데이트를 수행하는 경우 명령의 <xref:System.Data.IDbCommand.UpdatedRowSource%2A> 속성 값 <xref:System.Data.UpdateRowSource.FirstReturnedRecord> 또는 <xref:System.Data.UpdateRowSource.Both>는 유효하지 않습니다.  
   
- 다음 프로시저에서는 `UpdateBatchSize` 속성을 사용하는 방법을 보여 줍니다.  이 프로시저에서는 **Production.ProductCategory** 테이블의 **ProductCategoryID** 및 **Name** 필드를 표시하는 열이 포함된 <xref:System.Data.DataSet> 개체와 배치 크기를 나타내는 정수\(배치의 행 개수\) 등 두 가지 인수를 사용합니다.  이 코드에서는 <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> 및 <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> 속성을 설정하여 새 <xref:System.Data.SqlClient.SqlDataAdapter> 개체를 만듭니다.  또한 <xref:System.Data.DataSet> 개체에 수정된 행이 있다고 가정합니다.  그리고 `UpdateBatchSize` 속성을 설정한 다음 업데이트를 실행합니다.  
+ 다음 프로시저에서는 `UpdateBatchSize` 속성을 사용하는 방법을 보여 줍니다. 프로시저는 두 개의 인수는 <xref:System.Data.DataSet> 나타내는 열이 있는 개체는 **ProductCategoryID** 및 **이름** 필드에 **Production.ProductCategory**테이블 및 일괄 처리 크기 (일괄 처리의 행 수)를 나타내는 정수입니다. 이 코드에서는 <xref:System.Data.SqlClient.SqlDataAdapter>, <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A> 및 <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> 속성을 설정하여 새 <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> 개체를 만듭니다. 또한 <xref:System.Data.DataSet> 개체에 수정된 행이 있다고 가정합니다. 그리고 `UpdateBatchSize` 속성을 설정한 다음 업데이트를 실행합니다.  
   
 ```vb  
 Public Sub BatchUpdate( _  
@@ -129,24 +135,24 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 }  
 ```  
   
-## 배치 업데이트 관련 이벤트 및 오류 처리  
- **DataAdapter**에는 업데이트 관련 이벤트인 **RowUpdating** 및 **RowUpdated**가 있습니다.  이전 버전의 ADO.NET에서 일괄 처리가 비활성화되어 있는 경우 각 이벤트는 처리되는 각 행마다 생성됩니다.  **RowUpdating**은 업데이트가 발생하기 전에 생성되며 **RowUpdated**는 데이터베이스 업데이트가 완료된 뒤에 생성됩니다.  
+## <a name="handling-batch-update-related-events-and-errors"></a>배치 업데이트 관련 이벤트 및 오류 처리  
+ **DataAdapter** 에 업데이트 관련 이벤트: **RowUpdating** 및 **RowUpdated**합니다. 이전 버전의 ADO.NET에서 일괄 처리가 비활성화되어 있는 경우 각 이벤트는 처리되는 각 행마다 생성됩니다. **RowUpdating** 은 업데이트가 발생 하기 전에 생성 및 **RowUpdated** 데이터베이스 업데이트가 완료 된 후에 생성 됩니다.  
   
-### 배치 업데이트에 따른 이벤트 동작 변경  
- 일괄 처리가 활성화되면 한 번의 데이터베이스 동작으로 여러 개의 행이 업데이트됩니다.  따라서 `RowUpdated` 이벤트는 배치마다 한 번씩만 발생하지만 `RowUpdating` 이벤트는 행이 처리될 때마다 발생합니다.  일괄 처리가 비활성화되면 일대일 인터리빙으로 두 개의 이벤트가 발생합니다. 이 경우 `RowUpdating` 이벤트 하나와 `RowUpdated` 이벤트 하나가 한 행에 대해 발생한 후 모든 행이 처리될 때까지 `RowUpdating` 및 `RowUpdated` 이벤트가 다음 행에 대해 하나씩 발생합니다.  
+### <a name="event-behavior-changes-with-batch-updates"></a>배치 업데이트에 따른 이벤트 동작 변경  
+ 일괄 처리가 활성화되면 한 번의 데이터베이스 동작으로 여러 개의 행이 업데이트됩니다. 따라서 `RowUpdated` 이벤트는 배치마다 한 번씩만 발생하지만 `RowUpdating` 이벤트는 행이 처리될 때마다 발생합니다. 일괄 처리가 비활성화되면 일대일 인터리빙으로 두 개의 이벤트가 발생합니다. 이 경우 `RowUpdating` 이벤트 하나와 `RowUpdated` 이벤트 하나가 한 행에 대해 발생한 후 모든 행이 처리될 때까지 `RowUpdating` 및 `RowUpdated` 이벤트가 다음 행에 대해 하나씩 발생합니다.  
   
-### 업데이트된 행 액세스  
- 일괄 처리가 비활성화되면 <xref:System.Data.Common.RowUpdatedEventArgs> 클래스의 <xref:System.Data.Common.RowUpdatedEventArgs.Row%2A> 속성을 사용하여 업데이트되는 행에 액세스할 수 있습니다.  
+### <a name="accessing-updated-rows"></a>업데이트된 행 액세스  
+ 일괄 처리가 비활성화되면 <xref:System.Data.Common.RowUpdatedEventArgs.Row%2A> 클래스의 <xref:System.Data.Common.RowUpdatedEventArgs> 속성을 사용하여 업데이트되는 행에 액세스할 수 있습니다.  
   
- 일괄 처리가 활성화되면 여러 행에 대해 하나의 `RowUpdated` 이벤트가 생성됩니다.  따라서 각 행에 대한 `Row` 속성 값은 null입니다.  `RowUpdating` 이벤트는 계속해서 각 행에 대해 생성됩니다.  <xref:System.Data.Common.RowUpdatedEventArgs> 클래스의 <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> 메서드를 사용하면 행에 대한 참조를 배열에 복사하여 처리된 행에 액세스할 수 있습니다.  처리 중인 행이 없으면 `CopyToRows`에서 <xref:System.ArgumentNullException>이 throw됩니다.  <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> 메서드를 호출하기 전에 <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A> 속성을 사용하여 처리된 행 수를 반환합니다.  
+ 일괄 처리가 활성화되면 여러 행에 대해 하나의 `RowUpdated` 이벤트가 생성됩니다. 따라서 각 행에 대한 `Row` 속성 값은 null입니다. `RowUpdating` 이벤트는 계속해서 각 행에 대해 생성됩니다. <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> 클래스의 <xref:System.Data.Common.RowUpdatedEventArgs> 메서드를 사용하면 행에 대한 참조를 배열에 복사하여 처리된 행에 액세스할 수 있습니다. 처리 중인 행이 없으면 `CopyToRows`에서 <xref:System.ArgumentNullException>이 throw됩니다. <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A> 메서드를 호출하기 전에 <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> 속성을 사용하여 처리된 행 수를 반환합니다.  
   
-### 데이터 오류 처리  
- 배치를 실행하면 각각의 개별 문을 실행하는 것과 동일한 효과가 나타납니다.  문은 배치에 추가된 순서대로 실행됩니다.  오류는 배치 모드가 비활성화되어 있는 상태와 동일하게 처리됩니다.  행은 각각 개별적으로 처리됩니다.  데이터베이스에서 성공적으로 처리된 행만 <xref:System.Data.DataTable> 내의 해당 <xref:System.Data.DataRow>에서 업데이트됩니다.  
+### <a name="handling-data-errors"></a>데이터 오류 처리  
+ 배치를 실행하면 각각의 개별 문을 실행하는 것과 동일한 효과가 나타납니다. 문은 배치에 추가된 순서대로 실행됩니다. 오류는 배치 모드가 비활성화되어 있는 상태와 동일하게 처리됩니다. 행은 각각 개별적으로 처리됩니다. 데이터베이스에서 성공적으로 처리된 행만 <xref:System.Data.DataRow> 내의 해당 <xref:System.Data.DataTable>에서 업데이트됩니다.  
   
- 데이터 공급자 및 백 엔드 데이터베이스 서버는 배치 실행에 지원되는 SQL 구문을 결정합니다.  실행을 위해 지원되지 않는 문을 전송하면 예외가 throw될 수 있습니다.  
+ 데이터 공급자 및 백 엔드 데이터베이스 서버는 배치 실행에 지원되는 SQL 구문을 결정합니다. 실행을 위해 지원되지 않는 문을 전송하면 예외가 throw될 수 있습니다.  
   
-## 참고 항목  
- [DataAdapters 및 DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)   
- [DataAdapters를 사용하여 데이터 소스 업데이트](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)   
- [DataAdapter 이벤트 처리](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)   
+## <a name="see-also"></a>참고 항목  
+ [Dataadapter 및 Datareader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [DataAdapter로 데이터 원본 업데이트](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
+ [DataAdapter 이벤트 처리](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  
  [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 36cb961345cb724597d8e48ec3be6cbb84df4632
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>방법: WIF 추적을 사용하여 클레임 인식 응용 프로그램 및 서비스 디버그
 ## <a name="applies-to"></a>적용 대상  
@@ -120,4 +118,3 @@ ms.lasthandoff: 08/21/2017
 ## <a name="related-items"></a>관련 항목  
   
 -   [Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결](http://msdn.microsoft.com/library/aa751795.aspx)
-
