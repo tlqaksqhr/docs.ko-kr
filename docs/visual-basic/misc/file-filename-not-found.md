@@ -1,24 +1,26 @@
 ---
-title: "&#39;&lt;filename&gt;&#39; 파일을 찾을 수 없습니다. | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrFileSystem_FileNotFound1"
+title: "파일 &#39; &lt;filename&gt;&#39; 찾을 수 없음"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrFileSystem_FileNotFound1
 ms.assetid: b45bffc9-5b16-4b9b-a413-98a8d726e226
-caps.latest.revision: 6
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 28345564dcc40e2471045523669b201a39d77b25
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# &#39;&lt;filename&gt;&#39; 파일을 찾을 수 없습니다.
+# <a name="file-39ltfilenamegt39-not-found"></a>파일 &#39; &lt;filename&gt;&#39; 찾을 수 없음
 파일 이름이 잘못되었거나 파일이 없습니다.  
   
-### 이 오류를 해결하려면  
+## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
 1.  파일 이름이 올바르고 파일이 있는지 확인합니다.  
   
-## 참고 항목  
- [My.Computer.FileSystem Object](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)
+## <a name="see-also"></a>참고 항목  
+ [My.Computer.FileSystem 개체](../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)

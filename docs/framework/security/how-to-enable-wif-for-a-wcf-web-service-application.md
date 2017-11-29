@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bfc64b3d-64e9-4093-a6a4-72e933917af7
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: 7db69de994770e122dd4a4233b9a44d572c32344
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>방법: WCF 웹 서비스 응용 프로그램에 WIF 사용
 ## <a name="applies-to"></a>적용 대상  
@@ -267,4 +265,3 @@ ms.lasthandoff: 08/21/2017
     >  **Enter** 키를 누르기 전에 **TestService**와 **LocalSTS**가 모두 실행 중이어야 합니다. 서비스를 위한 웹 페이지가 열려야 하고 알림 영역(시스템 트레이)을 보고 **LocalSTS**가 실행 중인지 확인할 수 있습니다.  
   
 3.  이러한 클레임이 콘솔에 나타나는 경우, WCF 서비스에서 클레임을 표시하도록 STS 인증에 성공한 것입니다.
-

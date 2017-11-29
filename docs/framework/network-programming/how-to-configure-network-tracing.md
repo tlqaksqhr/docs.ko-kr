@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - formatting [.NET Framework], network tracing
 - network tracing, configuring
@@ -22,21 +17,20 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 3a713b9b2d76d6198d035226aaa55be7345b87f1
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 12f328d58ef568c78d1e2c8a8ff564839cba9f3b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-configure-network-tracing"></a>방법: 네트워크 추적 구성
 응용 프로그램 또는 컴퓨터 구성 파일은 형식과 네트워크 추적의 내용을 결정하는 설정을 유지합니다. 이 절차를 수행하기 전에 추적이 활성화되어야 합니다. 추적을 사용하는 방법에 대한 자세한 내용은 [네트워크 추적 사용](../../../docs/framework/network-programming/enabling-network-tracing.md)을 참조하세요.  
   
- 컴퓨터 구성 파일인 machine.config는 Windows가 설치된 디렉터리의 %Windir%\Microsoft.NET\Framework 폴더에 저장됩니다. 컴퓨터에 설치된 .NET Framework의 각 버전에 대해 %Windir%\Microsoft.NET\Framework의 폴더(예: C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config)에 별개의 machine.config 파일이 있습니다.  
+ 컴퓨터 구성 파일인 machine.config는 Windows가 설치된 디렉터리의 %Windir%\Microsoft.NET\Framework 폴더에 저장됩니다. 별개의 machine.config 파일에에서 있습니다 (예를 들어 C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\machine.config 또는 C:\Windows\ 컴퓨터에 설치 된.NET Framework의 각 버전에 대해 %Windir%\Microsoft.NET\Framework의 폴더 Microsoft.NET\Framework64\v4.0.30319\Config\machine.config입니다.)입니다.  
   
  이러한 설정은 컴퓨터 구성 파일보다 우선하는 응용 프로그램의 구성 파일에서 만들 수도 있습니다.  
   
@@ -112,8 +106,7 @@ ms.lasthandoff: 08/21/2017
 |`Tracemode`|선택적 <xref:System.String> 특성입니다. 16진수 및 텍스트 형식으로 프로토콜 추적을 표시하려면 `includehex`로 설정합니다. 텍스트만 표시하려면 `protocolonly`로 설정합니다. 기본값은 `includehex`입니다.<br /><br /> 예제에 나타낸 것처럼, \<switches> 요소에 대해 이 특성을 설정해야 합니다. 이 특성이 \<source> 요소 아래의 요소에 대해 설정되어 있는 경우 예외가 throw됩니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [네트워크 추적 해석](../../../docs/framework/network-programming/interpreting-network-tracing.md)   
- [.NET Framework의 네트워크 추적](../../../docs/framework/network-programming/network-tracing.md)   
- [네트워크 추적 사용](../../../docs/framework/network-programming/enabling-network-tracing.md)   
+ [네트워크 추적 해석](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
+ [.NET Framework의 네트워크 추적](../../../docs/framework/network-programming/network-tracing.md)  
+ [네트워크 추적 사용](../../../docs/framework/network-programming/enabling-network-tracing.md)  
  [계측 및 추적 소개](http://msdn.microsoft.com/en-us/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
-

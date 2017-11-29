@@ -1,23 +1,29 @@
 ---
-title: "카탈로그 작업 수행 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "카탈로그 작업 수행"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: f67f393dce518a76b80d91f7294ed19e9a0f411a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 카탈로그 작업 수행
-데이터베이스 또는 카탈로그를 수정하는 CREATE TABLE 또는 CREATE PROCEDURE 문과 같은 명령을 실행하려면 적절한 SQL 문과 **Connection** 개체를 사용하여 **Command** 개체를 만듭니다.  **Command** 개체의 **ExecuteNonQuery** 메서드를 사용하여 명령을 실행합니다.  
+# <a name="performing-catalog-operations"></a>카탈로그 작업 수행
+CREATE TABLE 또는 CREATE PROCEDURE 문과 같은 카탈로그 또는 데이터베이스를 수정 하는 명령을 실행 하려면 만듭니다는 **명령** 적절 한 SQL 문을 사용 하 여 개체 및 **연결** 개체입니다. 사용 하 여 명령을 실행의 **ExecuteNonQuery** 의 메서드는 **명령** 개체입니다.  
   
  다음 코드 예제에서는 Microsoft SQL Server 데이터베이스에 저장 프로시저를 만듭니다.  
   
@@ -49,7 +55,7 @@ SqlCommand command = new SqlCommand(queryString, connection);
 command.ExecuteNonQuery();  
 ```  
   
-## 참고 항목  
- [명령을 사용하여 데이터 수정](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)   
- [명령 및 매개 변수](../../../../docs/framework/data/adonet/commands-and-parameters.md)   
+## <a name="see-also"></a>참고 항목  
+ [명령을 사용 하 여 데이터를 수정 하려면](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
+ [명령 및 매개 변수](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)

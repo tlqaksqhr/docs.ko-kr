@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - authentication [.NET Framework], classes
 - Basic authentication
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - network resources, authentication
 - user authentication, digest
 ms.assetid: 8cce2742-8d52-4643-9dd2-64ddf38aa878
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 369a473b2e9172abe10d263bb066b253500f9502
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: a72635cb77f23e2b87abb54f3f6a4438a3019f22
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="basic-and-digest-authentication"></a>기본 인증 및 다이제스트 인증
 기본 및 다이제스트 인증의 <xref:System.Net> 구현은 RFC2617 – HTTP 인증: 기본 및 다이제스트(www.w3.org의 World Wide Web 컨소시엄 웹 사이트에서 사용 가능)를 준수합니다.  
@@ -59,6 +56,5 @@ WReq.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword);
 >  기본 및 다이제스트 인증과 함께 전송된 데이터는 암호화되지 않으므로 악의적 사용자가 데이터를 볼 수 있습니다. 또한 기본 인증 자격 증명(사용자 이름 및 암호)은 일반 텍스트로 보내지므로 누군가 이를 가로챌 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [NTLM 및 Kerberos 인증](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)   
+ [NTLM 및 Kerberos 인증](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)  
  [인터넷 인증](../../../docs/framework/network-programming/internet-authentication.md)
-

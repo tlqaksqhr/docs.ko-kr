@@ -1,42 +1,22 @@
 ---
 title: "Visual Basic의 LINQ"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- what's new [Visual Basic]
+helpviewer_keywords: what's new [Visual Basic]
 ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 33327e5baa9c17613f35d0007ed156c07b3e1814
-ms.contentlocale: ko-kr
-ms.lasthandoff: 07/28/2017
-
+ms.openlocfilehash: 7dc6fb3c53df9bec7808031513051e628096a0a4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="linq-in-visual-basic"></a>Visual Basic의 LINQ
 이 섹션에는 Visual Basic 및 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]를 이해하고 사용하는 데 도움이 되는 개요, 예제 및 배경 정보가 나와 있습니다.  
@@ -73,8 +53,7 @@ ms.lasthandoff: 07/28/2017
  LINQ 쿼리 결과를 무명 형식 대신 특정 형식으로 반환하는 방법의 예를 제공합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [LINQ(Language-Integrated Query)](../../../../visual-basic/programming-guide/concepts/linq/index.md)   
- [Visual Basic의 LINQ to XML 개요](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)   
- [LINQ to DataSet 개요](https://msdn.microsoft.com/library/bb399399)   
+ [LINQ(Language-Integrated Query)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
+ [Visual Basic의 LINQ to XML 개요](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
+ [LINQ to DataSet 개요](https://msdn.microsoft.com/library/bb399399)  
  [LINQ to SQL](https://msdn.microsoft.com/library/bb386976)
-

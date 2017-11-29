@@ -1,41 +1,40 @@
 ---
-title: "How to: Iterate Through An Enumeration in Visual Basic | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "arrays [Visual Basic], iterating"
-  - "enumerations [Visual Basic], iterating"
-  - "ListBox control [Windows Forms], populating from an enumeration"
+title: "방법: Visual Basic에서 열거형 반복"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- arrays [Visual Basic], iterating
+- enumerations [Visual Basic], iterating
+- ListBox control [Windows Forms], populating from an enumeration
 ms.assetid: e5aa10eb-cfcd-4a3b-8e76-f06b8f2002be
-caps.latest.revision: 20
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 439e6eae7d475316625a2cc1d3a70a9e7181f68a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Iterate Through An Enumeration in Visual Basic
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-열거형은 관련 상수 집합을 사용하고 상수 값을 이름과 연결하는 편리한 방법을 제공합니다.  열거형을 반복하려면 <xref:System.Enum.GetValues%2A> 메서드를 사용하여 열거형을 배열로 이동하면 됩니다.  또한 `For...Each` 문을 사용하거나, 문자열 또는 숫자 값을 추출하는 <xref:System.Enum.GetNames%2A> 또는 <xref:System.Enum.GetValues%2A> 메서드를 사용하여 열거형을 반복할 수도 있습니다.  
+# <a name="how-to-iterate-through-an-enumeration-in-visual-basic"></a>방법: Visual Basic에서 열거형 반복
+열거형은 관련된 상수 집합으로 작업하고 이름과 상수 값을 연결하는 편리한 방법을 제공합니다. 열거를 반복 하려면 이동할 수 있습니다 사용 하 여 배열에는 <xref:System.Enum.GetValues%2A> 메서드. 사용 하는 열거형 반복할 수도 있습니다는 `For...Each` 문을 사용 하는 <xref:System.Enum.GetNames%2A> 또는 <xref:System.Enum.GetValues%2A> 문자열이 나 숫자 값을 추출 하는 메서드.  
   
-### 열거형을 반복하려면  
+### <a name="to-iterate-through-an-enumeration"></a>열거형 반복 하려면  
   
--   배열을 선언한 후 다른 변수를 전달하는 것과 마찬가지로 해당 배열을 전달하기 전에 <xref:System.Enum.GetValues%2A> 메서드를 사용하여 열거형을 해당 배열로 변환합니다.  다음 예제에서는 열거형 <xref:Microsoft.VisualBasic.FirstDayOfWeek>의 각 멤버가 열거형을 반복할 때 이를 표시합니다.  
+-   배열을 선언 하 여 열거를 사용 하 여 변환할는 <xref:System.Enum.GetValues%2A> 때 배열을 전달 하기 전에 메서드는 다른 변수입니다. 다음 예제에서는 표시 된 열거형의 각 구성원 <xref:Microsoft.VisualBasic.FirstDayOfWeek> 대로 반복 하는 열거형입니다.  
   
      [!code-vb[VbEnumsTask#7](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-iterate-through-an-enumeration_1.vb)]  
   
-## 참고 항목  
- [Enumerations Overview](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)   
- [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)   
- [When to Use an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)   
- [How to: Determine the String Associated with an Enumeration Value](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)   
- [How to: Refer to an Enumeration Member](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)   
- [Enumerations and Name Qualification](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)   
+## <a name="see-also"></a>참고 항목  
+ [열거형 개요](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)  
+ [방법: 열거형 선언](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)  
+ [열거형을 사용하는 경우](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)  
+ [방법: 열거형 값과 연결된 문자열 확인](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)  
+ [방법: 열거형 멤버 참조](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)  
+ [열거형 및 이름 한정](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)  
  [배열](../../../../visual-basic/programming-guide/language-features/arrays/index.md)

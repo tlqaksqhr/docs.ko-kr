@@ -1,35 +1,38 @@
 ---
-title: "OracleTypes | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-ado"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: OracleType
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-ado
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 18143304-d5c7-4c95-9995-678088d0c142
-caps.latest.revision: 3
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: e0fa5a76c304246d1518ad7491cfc5b8b741f913
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# OracleTypes
-.NET Framework Data Provider for Oracle에는 Oracle 데이터 형식으로 작업하는 데 사용할 수 있는 여러 가지 구조가 들어 있습니다.  여기에는 <xref:System.Data.OracleClient.OracleNumber> 및 <xref:System.Data.OracleClient.OracleString>이 포함됩니다.  
+# <a name="oracletypes"></a>OracleType
+.NET Framework Data Provider for Oracle에는 Oracle 데이터 형식으로 작업하는 데 사용할 수 있는 여러 가지 구조가 들어 있습니다. 여기에는 <xref:System.Data.OracleClient.OracleNumber> 및 <xref:System.Data.OracleClient.OracleString>이 포함됩니다.  
   
 > [!NOTE]
 >  이러한 구조의 전체 목록은 <xref:System.Data.OracleClient>를 참조하세요.  
   
- 다음은 C\# 예제입니다.  
+ 다음은 C# 예제입니다.  
   
 -   Oracle 테이블을 만들고 데이터와 함께 로드합니다.  
   
 -   <xref:System.Data.OracleClient.OracleDataReader>를 사용하여 데이터에 액세스하고 여러 가지 <xref:System.Data.OracleClient.OracleType> 구조를 사용하여 데이터를 표시합니다.  
   
-## Oracle 테이블 만들기  
- 이 예제에서는 Oracle 테이블을 만들고 데이터와 함께 로드합니다.  반드시 이 예제를 실행한 후 다음 예제를 실행해야 합니다.  
+## <a name="creating-an-oracle-table"></a>Oracle 테이블 만들기  
+ 이 예제에서는 Oracle 테이블을 만들고 데이터와 함께 로드합니다. 반드시 이 예제를 실행한 후 다음 예제를 실행해야 합니다.  
   
 ```csharp  
 public void Setup(string connectionString)  
@@ -58,8 +61,8 @@ public void Setup(string connectionString)
 }  
 ```  
   
-## Oracle 테이블에서 데이터 검색  
- 이 예제에서는 **OracleDataReader**를 사용하여 데이터에 액세스하고 여러 가지 **OracleType** 구조를 사용하여 데이터를 표시합니다.  
+## <a name="retrieving-data-from-the-oracle-table"></a>Oracle 테이블에서 데이터 검색  
+ 사용 하 여이 예제는 **OracleDataReader** 데이터에 액세스할 수 몇 가지를 사용 하 여 **OracleType** 구조 데이터를 표시 합니다.  
   
 ```csharp  
 public void ReadOracleTypesExample(string connectionString)  
@@ -122,6 +125,6 @@ public void ReadOracleTypesExample(string connectionString)
 }  
 ```  
   
-## 참고 항목  
- [Oracle 및 ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)   
+## <a name="see-also"></a>참고 항목  
+ [Oracle 및 ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
  [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](http://go.microsoft.com/fwlink/?LinkId=217917)

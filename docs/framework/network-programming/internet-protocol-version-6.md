@@ -7,11 +7,6 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
 helpviewer_keywords:
 - IPv6, improvements
 - IPv4
@@ -19,18 +14,17 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 7901084f38099d74f3bcde086342bd3c90b34348
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: e8ac63cae9d70f0249533848fa472da77f04b807
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 인터넷 프로토콜 버전 6
+# <a name="internet-protocol-version-6"></a>인터넷 프로토콜 버전 6
 IPv6(인터넷 프로토콜 버전 6)은 인터넷 네트워크 계층에 대한 새로운 표준 프로토콜 도구 모음입니다. IPv6은 주소 고갈, 보안, 자동 구성, 확장성 등에 관련된 현재 버전 인터넷 프로토콜 도구 모음(IPv4라고 함)의 많은 문제를 해결하도록 설계되었습니다. IPv6은 피어 투 피어 및 모바일 응용 프로그램을 포함한 새로운 종류의 응용 프로그램을 구현하기 위해 인터넷 기능을 확장합니다. 현재 IPv4 프로토콜의 주요 문제는 다음과 같습니다.  
   
 -   주소 공간의 빠른 고갈.  
@@ -59,7 +53,7 @@ IPv6(인터넷 프로토콜 버전 6)은 인터넷 네트워크 계층에 대한
   
  자세한 내용은 [IPv6 주소 지정](../../../docs/framework/network-programming/ipv6-addressing.md), [IPv6 라우팅](../../../docs/framework/network-programming/ipv6-routing.md), [IPv6 자동 구성](../../../docs/framework/network-programming/ipv6-auto-configuration.md), [IPv6 사용 및 사용 안 함](../../../docs/framework/network-programming/enabling-and-disabling-ipv6.md) 및 [방법: IPv6 지원을 사용하도록 컴퓨터 구성 파일 수정](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)을 참조하세요.  
   
-## 참조  
+## <a name="references"></a>참조  
  Internet Engineering Task Force 사이트([http://www.ietf.org](http://www.ietf.org/))에서 찾을 수 있는 선택된 RFC 문서는 다음과 같습니다.  
   
 -   RFC 1287, Towards the Future Internet Architecture.  
@@ -72,8 +66,7 @@ IPv6(인터넷 프로토콜 버전 6)은 인터넷 네트워크 계층에 대한
   
  또한 [Technet의 IPv6 영역](http://go.microsoft.com/fwlink/?LinkID=179658)에서 IPv6 관련 정보를 찾을 수 있습니다.  
   
-## 참고 항목  
- [IPv6 Sockets Sample](http://go.microsoft.com/fwlink/?LinkID=179568) (IPv6 소켓 샘플)  
- [네트워크 프로그래밍 샘플](../../../docs/framework/network-programming/network-programming-samples.md)   
+## <a name="see-also"></a>참고 항목  
+ [IPv6 소켓 샘플](http://go.microsoft.com/fwlink/?LinkID=179568)  
+ [네트워크 프로그래밍 샘플](../../../docs/framework/network-programming/network-programming-samples.md)  
  [소켓](../../../docs/framework/network-programming/sockets.md)
-

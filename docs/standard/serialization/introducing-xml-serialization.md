@@ -8,10 +8,8 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
+- csharp
+- vb
 helpviewer_keywords:
 - XML serialization, about XML serialization
 - ICollection interface, serializing
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 858d973ae48ee217f73f293c1ed30c4c3f91cb29
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 13afeecc979cab9719ffa063f78ff91c866262d3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="introducing-xml-serialization"></a>XML Serialization 소개
 serialization은 개체를 전송할 수 있는 형태로 변환하는 프로세스입니다. 예를 들어 개체를 serialize하고 클라이언트와 서버 사이에 HTTP를 사용하여 인터넷을 통해 전송할 수 있습니다. 반면 deserialization은 스트림에서 개체를 다시 생성합니다.  
@@ -181,14 +178,13 @@ public string MyToken;
 -   <xref:System.Xml.Serialization.XmlRootAttribute>  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Xml.Serialization.XmlSerializer>   
- <xref:System.Runtime.Serialization.DataContractSerializer>   
- <xref:System.IO.FileStream>   
- [XML 및 SOAP Serialization](../../../docs/standard/serialization/xml-and-soap-serialization.md)   
- [이진 serialization](../../../docs/standard/serialization/binary-serialization.md)   
- [Serialization](../../../docs/standard/serialization/index.md)   
- <xref:System.Xml.Serialization.XmlSerializer>   
- [XML serialization 예제](../../../docs/standard/serialization/examples-of-xml-serialization.md)   
- [방법: 개체 직렬화](../../../docs/standard/serialization/how-to-serialize-an-object.md)   
+ <xref:System.Xml.Serialization.XmlSerializer>  
+ <xref:System.Runtime.Serialization.DataContractSerializer>  
+ <xref:System.IO.FileStream>  
+ [XML 및 SOAP serialization](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ [이진 serialization](../../../docs/standard/serialization/binary-serialization.md)  
+ [serialization](../../../docs/standard/serialization/index.md)  
+ <xref:System.Xml.Serialization.XmlSerializer>  
+ [XML serialization 예제](../../../docs/standard/serialization/examples-of-xml-serialization.md)  
+ [방법: 개체 직렬화](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
  [방법: 개체 deserialize](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-

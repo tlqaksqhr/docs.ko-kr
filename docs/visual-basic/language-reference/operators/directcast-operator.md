@@ -1,56 +1,53 @@
 ---
-title: "DirectCast Operator (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.directCast"
-  - "directCast"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "DirectCast keyword"
+title: "DirectCast 연산자(Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.directCast
+- directCast
+helpviewer_keywords: DirectCast keyword [Visual Basic]
 ms.assetid: 63e5a1d0-4d9e-4732-bf8f-e90c0c8784b8
-caps.latest.revision: 23
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: d9b81abea364e328b831ee98c3b847161c3f7dd3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# DirectCast Operator (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-상속 또는 구현을 기반으로 형식 변환 작업을 소개합니다.  
+# <a name="directcast-operator-visual-basic"></a>DirectCast 연산자(Visual Basic)
+상속 또는 구현에 따라 형식 변환 작업을 소개 합니다.  
   
-## 설명  
- `DirectCast`는 변환을 위해 Visual Basic 런타임 도우미 루틴을 사용하지 않기 때문에 `Object` 데이터 형식 변환에 있어서 `CType`보다 나은 성능을 제공할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ `DirectCast`변환의 경우 다소을 제공할 수 있도록 런타임에 도우미 루틴 보다 뛰어난 성능을 Visual Basic을 사용 하지 않는 `CType` 데이터 형식에서 변환할 때 `Object`합니다.  
   
- [CType 함수](../../../visual-basic/language-reference/functions/ctype-function.md) 및 [TryCast Operator](../../../visual-basic/language-reference/operators/trycast-operator.md) 키워드를 사용할 때와 같은 방법으로 `DirectCast` 키워드를 사용합니다.  첫 번째 인수로 식을 제공하고 두 번째 인수로 식을 변환할 형식을 제공합니다.  `DirectCast`를 사용하려면 두 인수의 데이터 형식 간에 상속 또는 구현 관계가 있어야 합니다.  즉, 한 형식이 다른 형식에서 상속되거나 구현된 경우라야 합니다.  
+ 사용 된 `DirectCast` 키워드를 사용 하는 방식과 비슷합니다는 [CType 함수](../../../visual-basic/language-reference/functions/ctype-function.md) 및 [TryCast 연산자](../../../visual-basic/language-reference/operators/trycast-operator.md) 키워드입니다. 식을 첫 번째 인수 및 두 번째 인수로 변환 하는 형식으로 제공 합니다. `DirectCast`두 인수의 데이터 형식 간의 상속 또는 구현 관계를 필요합니다. 즉, 한 형식에서 상속 하거나, 다른 구현 해야 합니다.  
   
-## 오류 및 실패  
- `DirectCast`는 상속 또는 구현 관계가 존재하지 않는 경우 컴파일러 오류를 생성합니다.  그러나 컴파일러 오류가 없다고 해서 변환이 반드시 성공적으로 완료되는 것은 아닙니다.  원하는 변환이 축소 변환인 경우에는 런타임에 변환이 실패할 수 있습니다.  이런 경우 런타임에 <xref:System.InvalidCastException> 오류가 throw됩니다.  
+## <a name="errors-and-failures"></a>오류 및 실패  
+ `DirectCast`상속 또는 구현 관계 없는 있는지 검색 하는 경우 컴파일러 오류를 생성 합니다. 하지만 컴파일러 오류가 없다고 성공적인 변환을 보장 하지 않습니다. 원하는 변환이 축소 하는 경우 런타임 시 실패할 수 있습니다. 이 경우 런타임에서 throw 된 <xref:System.InvalidCastException> 오류입니다.  
   
-## 변환 키워드  
- 다음 표에서는 형식 변환 키워드를 비교하여 보여 줍니다.  
+## <a name="conversion-keywords"></a>변환 키워드  
+ 형식 변환 키워드의 비교는 다음과 같습니다.  
   
-|||||  
-|-|-|-|-|  
-|키워드|데이터 형식|인수 관계|런타임 오류|  
-|[CType 함수](../../../visual-basic/language-reference/functions/ctype-function.md)|모든 데이터 형식|두 데이터 형식 간에 확대 또는 축소 변환을 정의해야 합니다.|<xref:System.InvalidCastException>을 throw합니다.|  
-|`DirectCast`|모든 데이터 형식|한 형식이 다른 형식에서 상속되거나 구현된 경우라야 합니다.|<xref:System.InvalidCastException>을 throw합니다.|  
-|[TryCast Operator](../../../visual-basic/language-reference/operators/trycast-operator.md)|참조 형식만|한 형식이 다른 형식에서 상속되거나 구현된 경우라야 합니다.|[Nothing](../../../visual-basic/language-reference/nothing.md) 반환|  
+|키워드|데이터 형식|인수가 관계|런타임 오류|  
+|---|---|---|---|  
+|[CType 함수](../../../visual-basic/language-reference/functions/ctype-function.md)|모든 데이터 형식|두 데이터 형식 간에 확대 또는 축소 변환을 정의 해야 합니다.|Throw<xref:System.InvalidCastException>|  
+|`DirectCast`|모든 데이터 형식|한 형식에서 상속 하거나 다른 형식을 구현 해야|Throw<xref:System.InvalidCastException>|  
+|[TryCast 연산자](../../../visual-basic/language-reference/operators/trycast-operator.md)|참조 형식에만|한 형식에서 상속 하거나 다른 형식을 구현 해야|반환 [Nothing](../../../visual-basic/language-reference/nothing.md)|  
   
-## 예제  
- 다음 예제에서는 런타임에서 `DirectCast`의 두 가지 사용\(실패 및 성공\)을 보여 줍니다.  
+## <a name="example"></a>예제  
+ 다음 예의 두 가지 용도 `DirectCast`, 성공 하는 런타임과에 하나가 실패 합니다.  
   
  [!code-vb[VbVbalrKeywords#1](../../../visual-basic/language-reference/codesnippet/VisualBasic/directcast-operator_1.vb)]  
   
- 앞의 예제에서 `q`의 런타임 형식은 `Double`입니다.  `Double`을 `Integer`로 변환할 수 있기 때문에 `CType`이 성공합니다.  그러나 변환이 존재하더라도 `Double`의 런타임 형식은 `Integer`와 상속 관계가 없기 때문에 첫 번째 `DirectCast`가 런타임에 실패합니다.  두 번째 `DirectCast`는 <xref:System.Windows.Forms.Form> 형식에서 <xref:System.Windows.Forms.Form>이 상속하는 <xref:System.Windows.Forms.Control> 형식으로 변환되기 때문에 성공합니다.  
+ 앞의 예제에서의 실행 시간은 입력 `q` 은 `Double`합니다. `CType`있기 때문에 성공 `Double` 로 변환할 수 `Integer`합니다. 그러나 첫 번째 `DirectCast` 의 실행 시간을 입력 하기 때문에 런타임에 실패 `Double` 별칭과 없는 상속 관계가 `Integer`한 변환이 존재 하는 경우에 합니다. 두 번째 `DirectCast` 형식에서 변환 되기 때문에 성공 하면 <xref:System.Windows.Forms.Form> 입력 <xref:System.Windows.Forms.Control>, 올 <xref:System.Windows.Forms.Form> 상속 합니다.  
   
-## 참고 항목  
- <xref:System.Convert.ChangeType%2A?displayProperty=fullName>   
- [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)   
- [Implicit and Explicit Conversions](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Convert.ChangeType%2A?displayProperty=nameWithType>  
+ [확대 변환과 축소 변환](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
+ [암시적 변환과 명시적 변환](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

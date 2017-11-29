@@ -1,68 +1,72 @@
 ---
-title: "&lt;nameEntry&gt; 요소 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#nameEntry"
-  - "http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping/nameEntry"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "<nameEntry> 요소"
-  - "nameEntry 요소"
+title: "&lt;r y&gt; 요소"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#nameEntry
+- http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping/nameEntry
+helpviewer_keywords:
+- <nameEntry> element
+- nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-caps.latest.revision: 14
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 13
+caps.latest.revision: "14"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 507c71b5c13deeb7c1a81b6a4dd9604c3bd919f3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;nameEntry&gt; 요소
-클래스 이름을 알고리즘 이름에 매핑하며, 하나의 클래스를 여러 이름에 매핑할 수 있습니다.  
+# <a name="ltnameentrygt-element"></a>&lt;r y&gt; 요소
+클래스 이름을 알고리즘 이름에 매핑하며, 이를 통해 하나의 클래스가 여러 이름을 가질 수 있습니다.  
   
-## 구문  
+ \<configuration>  
+\<mscorlib >  
+\<cryptographySettings >  
+\<cryptoNameMapping >  
+\<r y >  
   
-```  
+## <a name="syntax"></a>구문  
+  
+```xml  
 <nameEntry name="friendly name" Class="class name" />  
 ```  
   
-## 특성 및 요소  
+## <a name="attributes-and-elements"></a>특성 및 요소  
  다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
-### 특성  
+### <a name="attributes"></a>특성  
   
 |특성|설명|  
-|--------|--------|  
-|**name**|필수 특성입니다.<br /><br /> 암호화 클래스가 구현하는 알고리즘의 이름을 지정합니다.|  
-|**class**|필수 특성입니다.<br /><br /> [\<cryptoClass\>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) 요소에 있는 **name** 특성의 값을 지정합니다.|  
+|---------------|-----------------|  
+|**name**|필수 특성입니다.<br /><br /> 암호화 클래스를 구현 하는 알고리즘의 이름을 지정 합니다.|  
+|**class**|필수 특성입니다.<br /><br /> 에 대 한 값을 지정 된 **이름** 특성에 [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) 요소입니다.|  
   
-### 자식 요소  
+### <a name="child-elements"></a>자식 요소  
  없음  
   
-### 부모 요소  
+### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
-|--------|--------|  
+|-------------|-----------------|  
 |`configuration`|공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`system.web`|ASP.NET 구성 섹션의 루트 요소를 지정합니다.|  
   
-## 설명  
- **name** 특성은 <xref:System.Security.Cryptography> 네임스페이스에 있는 추상 클래스 중 하나의 이름일 수 있습니다.  추상 암호화 클래스에 있는 **Create** 메서드를 호출하면 해당 추상 클래스 이름이 [Security.CryptoConfig.CreateFromName](frlrfSystemSecurityCryptographyCryptoConfigClassCreateFromNameTopic) 메서드에 전달됩니다.  **CreateFromName**은 **class** 특성으로 지정된 형식의 인스턴스를 반환합니다.  **name** 특성이 RSA 등의 약식 이름이면 **CreateFromName** 메서드를 호출할 때 이 이름을 사용할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ **이름** 특성에는 추상 클래스 중 하나의 이름을 수는 <xref:System.Security.Cryptography> 네임 스페이스입니다. 호출 하는 경우는 **만들기** 추상 암호화 클래스에 메서드, 추상 클래스 이름에 전달 되는 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> 메서드. **CreateFromName** 으로 나타내는 형식의 인스턴스를 반환 된 **클래스** 특성입니다. 경우는 **이름** 특성은 짧은 이름 rsa, RSA, 같은 이름을 사용할 수 있습니다를 호출할 때는 **CreateFromName** 메서드.  
   
-## 예제  
- 다음 예제에서는 **\<nameEntry\>** 요소를 사용하여 암호화 클래스를 참조하고 런타임을 구성하는 방법을 보여 줍니다.  그런 다음 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=fullName> 메서드에 문자열 "RSA"를 전달하고 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 메서드를 사용하여 `MyCryptoRSAClass` 개체를 반환할 수 있습니다.  
+## <a name="example"></a>예제  
+ 사용 하는 방법을 보여 주는 다음 예제는  **\<r y >** 암호화 클래스를 참조 하 고 런타임을 구성 하는 요소입니다. "RSA" 문자열을 전달할 수 있습니다는 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 메서드 및 사용법은 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 반환 하는 메서드는 `MyCryptoRSAClass` 개체입니다.  
   
-```  
+```xml  
 <configuration>  
    <mscorlib>  
       <cryptographySettings>  
@@ -81,8 +85,8 @@ caps.handback.revision: 13
 </configuration>  
 ```  
   
-## 참고 항목  
- [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)   
- [암호화 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)   
- [암호화 서비스](../../../../../docs/standard/security/cryptographic-services.md)   
+## <a name="see-also"></a>참고 항목  
+ [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [암호화 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [암호화 서비스](../../../../../docs/standard/security/cryptographic-services.md)  
  [암호화 클래스 구성](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

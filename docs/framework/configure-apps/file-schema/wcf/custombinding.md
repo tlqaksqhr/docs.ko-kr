@@ -1,31 +1,34 @@
 ---
-title: "&lt;customBinding&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
+title: '&lt;customBinding&gt;'
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-caps.latest.revision: 24
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 7f73ad4d09e085040e006102e5b44664ece98a58
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# &lt;customBinding&gt;
+# <a name="ltcustombindinggt"></a>&lt;customBinding&gt;
 사용자에게 메시징 스택에 대한 모든 권한을 제공합니다.  
   
-## 구문  
+ \<system.serviceModel >  
+\<바인딩 >  
+\<customBinding >  
   
-```  
+## <a name="syntax"></a>구문  
   
+```xml  
 <customBinding>  
     <binding name="string"  
         closeTimeout="TimeSpan"  
@@ -181,63 +184,63 @@ caps.handback.revision: 24
 </customBinding>  
 ```  
   
-## 특성 및 요소  
+## <a name="attributes-and-elements"></a>특성 및 요소  
  다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
-### 특성  
+### <a name="attributes"></a>특성  
   
 |특성|설명|  
-|--------|--------|  
-|closeTimeout|닫기 작업을 완료하기 위해 제공된 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다.  이 값은 <xref:System.TimeSpan.Zero>보다 크거나 같아야 합니다.  기본값은 00:01:00입니다.|  
-|name|바인딩의 구성 이름을 포함하는 문자열입니다.  이 값은 사용자 지정 바인딩의 식별 문자열 역할을 하는 사용자 정의 문자열입니다.  [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)]부터는 바인딩 및 동작에 이름이 필요하지 않습니다.  기본 구성 및 이름 없는 바인딩 및 동작에 대한 자세한 내용은 [단순화된 구성](../../../../../docs/framework/wcf/simplified-configuration.md) 및 [WCF 서비스를 위한 단순화된 구성](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)을 참조하세요.|  
-|openTimeout|열기 작업을 완료하기 위해 제공된 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다.  이 값은 <xref:System.TimeSpan.Zero>보다 크거나 같아야 합니다.  기본값은 00:01:00입니다.|  
-|receiveTimeout|받기 작업을 완료하기 위해 제공된 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다.  이 값은 <xref:System.TimeSpan.Zero>보다 크거나 같아야 합니다.  기본값은 00:01:00입니다.|  
-|sendTimeout|보내기 작업을 완료하기 위해 제공된 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다.  이 값은 <xref:System.TimeSpan.Zero>보다 크거나 같아야 합니다.  기본값은 00:01:00입니다.|  
+|---------------|-----------------|  
+|closeTimeout|닫기 작업을 완료하기 위해 제공된 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다. 이 값은 <xref:System.TimeSpan.Zero>보다 크거나 같아야 합니다. 기본값은 00:01:00입니다.|  
+|name|바인딩의 구성 이름을 포함하는 문자열입니다. 이 값은 사용자 지정 바인딩의 식별 문자열 역할을 하는 사용자 정의 문자열입니다. [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)]부터는 바인딩 및 동작에 이름이 필요하지 않습니다. 기본 구성 및 이름이 없는 바인딩 및 동작에 대 한 자세한 내용은 참조 [단순화 된 구성](../../../../../docs/framework/wcf/simplified-configuration.md) 및 [WCF 서비스에 대 한 구성을 단순화](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)합니다.|  
+|openTimeout|열기 작업을 완료하기 위해 제공된 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다. 이 값은 <xref:System.TimeSpan.Zero>보다 크거나 같아야 합니다. 기본값은 00:01:00입니다.|  
+|receiveTimeout|받기 작업을 완료하기 위해 제공된 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다. 이 값은 <xref:System.TimeSpan.Zero>보다 크거나 같아야 합니다. 기본값은 00:01:00입니다.|  
+|sendTimeout|보내기 작업을 완료하기 위해 제공된 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다. 이 값은 <xref:System.TimeSpan.Zero>보다 크거나 같아야 합니다. 기본값은 00:01:00입니다.|  
   
-### 자식 요소  
-  
-|요소|설명|  
-|--------|--------|  
-|[\<compositeDuplex\>](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|사용자 지정 바인딩에 대한 양방향 메시징을 정의합니다.  예를 들어, HTTP와 같이 원래는 이중 통신을 허용하지 않는 전송에 사용됩니다.  그에 반해 TCP는 기본적으로 이중 통신을 허용하므로, 이 바인딩 요소를 사용하지 않더라도 서비스에서 클라이언트로 회신 메시지를 보낼 수 있습니다.<br /><br /> 서비스에서 접속하여 연결을 설정하려면 클라이언트가 주소를 공개해야 합니다.  이 클라이언트 주소는 `ClientBaseAddress` 특성을 사용하여 제공합니다.<br /><br /> 이 요소는 <xref:System.ServiceModel.Configuration.CompositeDuplexElement> 형식입니다.|  
-|[\<pnrpPeerResolver\>](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|PNRP\(피어 이름 확인 프로토콜\) 피어 이름 확인자를 지정합니다.  이 요소는 <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement> 형식입니다.|  
-|[\<reliableSession\>](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|WS\-Reliable Messaging 설정을 지정합니다.  이 요소가 사용자 지정 바인딩에 추가되면 그 결과로 만들어지는 채널에서 EOD\(Exactly\-Once Delivery\) 보증을 지원할 수 있습니다.  이 요소는 <xref:System.ServiceModel.Configuration.ReliableSessionElement> 형식입니다.|  
-|[\<security\>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|사용자 지정 바인딩에 대한 보안 옵션을 지정합니다.  이 요소는 <xref:System.ServiceModel.Configuration.SecurityElement> 형식입니다.|  
-|[\<sslStreamSecurity\>](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|SSL 스트림 바인딩에 대한 보안 설정을 지정합니다.  이 요소는 <xref:System.ServiceModel.Configuration.SslStreamSecurityElement> 형식입니다.|  
-|[\<transactionFlow\>](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|바인딩이 트랜잭션 흐름 및 `transactionProtocol` 특성에 사용될 프로토콜을 지원하도록 지정합니다.  이 요소는 <xref:System.ServiceModel.Configuration.TransactionFlowElement> 형식입니다.|  
-|[\<windowsStreamSecurity\>](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|사용자 지정 바인딩에 대한 스트리밍 보안 옵션을 지정합니다.  이 요소는 <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement> 형식입니다.|  
-  
-### 부모 요소  
+### <a name="child-elements"></a>자식 요소  
   
 |요소|설명|  
-|--------|--------|  
+|-------------|-----------------|  
+|[\<compositeDuplex >](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|사용자 지정 바인딩에 대한 양방향 메시징을 정의합니다. 예를 들어, HTTP와 같이 원래는 이중 통신을 허용하지 않는 전송에 사용됩니다. 그에 반해 TCP는 기본적으로 이중 통신을 허용하므로, 이 바인딩 요소를 사용하지 않더라도 서비스에서 클라이언트로 회신 메시지를 보낼 수 있습니다.<br /><br /> 서비스에서 접속하여 연결을 설정하려면 클라이언트가 주소를 공개해야 합니다. 이 클라이언트 주소는 `ClientBaseAddress` 특성을 사용하여 제공합니다.<br /><br /> 이 요소는 <xref:System.ServiceModel.Configuration.CompositeDuplexElement> 형식입니다.|  
+|[\<pnrpPeerResolver >](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|PNRP(피어 이름 확인 프로토콜) 피어 이름 확인자를 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement> 형식입니다.|  
+|[\<reliableSession >](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|WS-Reliable Messaging 설정을 지정합니다. 이 요소가 사용자 지정 바인딩에 추가되면 그 결과로 만들어지는 채널에서 EOD(Exactly-Once Delivery) 보증을 지원할 수 있습니다. 이 요소는 <xref:System.ServiceModel.Configuration.ReliableSessionElement> 형식입니다.|  
+|[\<보안 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|사용자 지정 바인딩에 대한 보안 옵션을 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.SecurityElement> 형식입니다.|  
+|[\<sslStreamSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|SSL 스트림 바인딩에 대한 보안 설정을 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.SslStreamSecurityElement> 형식입니다.|  
+|[\<transactionFlow >](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|바인딩이 트랜잭션 흐름 및 `transactionProtocol` 특성에 사용될 프로토콜을 지원하도록 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.TransactionFlowElement> 형식입니다.|  
+|[\<windowsStreamSecurity >](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|사용자 지정 바인딩에 대한 스트리밍 보안 옵션을 지정합니다. 이 요소는 <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement> 형식입니다.|  
+  
+### <a name="parent-elements"></a>부모 요소  
+  
+|요소|설명|  
+|-------------|-----------------|  
 |바인딩|Windows Communication Foundation 응용 프로그램에 대한 모든 바인딩을 포함합니다.|  
   
-## 설명  
- 사용자 지정 바인딩은 WCF 메시징 스택에 대한 모든 권한을 제공합니다.  특정 엔터티의 구성 요소를 추가하여 특수하게 조정된 바인딩을 만들 수 있습니다.  예를 들어, 사용자는 `httpsTransport` 섹션, `reliableSession` 섹션 및 `security` 섹션을 결합하여 믿을 수 있으며 안전한 https 기반 바인딩을 만들 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 사용자 지정 바인딩은 WCF 메시징 스택에 대한 모든 권한을 제공합니다. 특정 엔터티의 구성 요소를 추가하여 특수하게 조정된 바인딩을 만들 수 있습니다. 예를 들어, 사용자는 `httpsTransport` 섹션, `reliableSession` 섹션 및 `security` 섹션을 결합하여 믿을 수 있으며 안전한 https 기반 바인딩을 만들 수 있습니다.  
   
- 개별 바인딩에서는 스택에 나타나는 순서대로 스택 요소의 구성 요소를 지정함으로써 메시지 스택을 정의하며,  각 요소는 스택의 한 요소를 정의하고 구성합니다.  각 사용자 지정 바인딩에는 단 한 개의 전송 요소가 있어야 합니다.  이 요소가 없으면 메시징 스택이 완전하지 않습니다.  
+ 개별 바인딩에서는 스택에 나타나는 순서대로 스택 요소의 구성 요소를 지정함으로써 메시지 스택을 정의하며, 각 요소는 스택의 한 요소를 정의하고 구성합니다. 각 사용자 지정 바인딩에는 단 한 개의 전송 요소가 있어야 합니다. 이 요소가 없으면 메시징 스택이 완전하지 않습니다.  
   
- 스택에서 요소가 나타나는 순서는 작업이 메시지에 적용되는 순서이므로 중요합니다.  다음과 같은 스택 요소 순서를 사용하는 것이 좋습니다.  
+ 스택에서 요소가 나타나는 순서는 작업이 메시지에 적용되는 순서이므로 중요합니다. 다음과 같은 스택 요소 순서를 사용하는 것이 좋습니다.  
   
-1.  Transactions\(선택적\)  
+1.  Transactions(선택적)  
   
-2.  Reliable Messaging\(선택적\)  
+2.  Reliable Messaging(선택적)  
   
-3.  Security\(선택적\)  
+3.  Security(선택적)  
   
 4.  전송  
   
-5.  인코더\(선택적\)  
+5.  인코더(선택적)  
   
- 시스템에서 제공하는 바인딩 중 하나가 사용자의 서비스 요구 사항을 충족하지 않을 때 사용자 지정 바인딩을 사용하세요.  사용자 지정 바인딩을 사용하면 예를 들어 서비스 끝점에서 새 전송 또는 새 인코더 사용을 활성화할 수 있습니다.  
+ 시스템에서 제공하는 바인딩 중 하나가 사용자의 서비스 요구 사항을 충족하지 않을 때 사용자 지정 바인딩을 사용하세요. 사용자 지정 바인딩을 사용하면 예를 들어 서비스 끝점에서 새 전송 또는 새 인코더 사용을 활성화할 수 있습니다.  
   
  사용자 지정 바인딩은 특정 순서로 "스택"되는 바인딩 요소 컬렉션에서 <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> 중 하나를 사용하여 생성됩니다.  
   
 -   맨 위에는 트랜잭션 이동을 허용하는 선택적 <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>가 있습니다.  
   
--   다음에는 WS\-ReliableMessaging 사양에서 정의된 세션 및 순서 지정 메커니즘을 제공하는 선택적 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>가 있습니다.  이 세션 개념은 SOAP 매개자 및 전송 매개자에 적용될 수 있습니다.  
+-   다음에는 WS-ReliableMessaging 사양에서 정의된 세션 및 순서 지정 메커니즘을 제공하는 선택적 <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>가 있습니다. 이 세션 개념은 SOAP 매개자 및 전송 매개자에 적용될 수 있습니다.  
   
--   다음에는 권한 부여, 인증, 보호, 기밀성과 같은 보안 기능을 제공하는 선택적 보안 바인딩 요소가 있습니다.  다음과 같은 보안 바인딩 요소가 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]에서 제공됩니다.  
+-   다음에는 권한 부여, 인증, 보호, 기밀성과 같은 보안 기능을 제공하는 선택적 보안 바인딩 요소가 있습니다. 다음과 같은 보안 바인딩 요소가 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]에서 제공됩니다.  
   
     -   <xref:System.ServiceModel.Channels.SecurityBindingElement>  
   
@@ -251,7 +254,7 @@ caps.handback.revision: 24
   
 -   <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>  
   
--   다음에는 선택적 전송 업그레이드\/도우미 바인딩 요소가 있습니다.  
+-   다음에는 선택적 전송 업그레이드/도우미 바인딩 요소가 있습니다.  
   
     -   <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>  
   
@@ -259,7 +262,7 @@ caps.handback.revision: 24
   
     -   <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
--   다음에는 필수 메시지 인코딩 바인딩 요소가 있습니다.  직접 작성한 전송을 사용하거나 다음 메시지 인코딩 바인딩 중 하나를 사용할 수 있습니다.  
+-   다음에는 필수 메시지 인코딩 바인딩 요소가 있습니다. 직접 작성한 전송을 사용하거나 다음 메시지 인코딩 바인딩 중 하나를 사용할 수 있습니다.  
   
     -   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
   
@@ -267,7 +270,7 @@ caps.handback.revision: 24
   
     -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
   
--   맨 아래에는 필수 전송 요소가 있습니다.  고유의 전송을 사용하거나 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]에서 제공된 전송 바인딩 요소 중 하나를 사용할 수 있습니다.  
+-   맨 아래에는 필수 전송 요소가 있습니다. 고유의 전송을 사용하거나 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]에서 제공된 전송 바인딩 요소 중 하나를 사용할 수 있습니다.  
   
     -   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   
@@ -286,7 +289,7 @@ caps.handback.revision: 24
  다음 표에서는 각 계층의 옵션을 요약합니다.  
   
 |계층|옵션|필수|  
-|--------|--------|--------|  
+|-----------|-------------|--------------|  
 |트랜잭션 흐름|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|아니요|  
 |안정성|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|아니요|  
 |보안|대칭, 비대칭, 전송 수준|아니요|  
@@ -297,18 +300,20 @@ caps.handback.revision: 24
   
  또한 고유의 바인딩 요소를 정의하여 이전에 정의된 계층 사이에 삽입할 수 있습니다.  
   
- 사용자 지정 바인딩을 사용하여 시스템 제공 바인딩을 수정하는 방법에 대한 자세한 내용은 [방법: 시스템 제공 바인딩 사용자 지정](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)을 참조하세요.  
+ 사용자 지정 시스템 제공 바인딩을 수정 하는 바인딩을 사용 하는 방법에 논의 알려면 [하는 방법: 시스템 제공 바인딩 사용자 지정](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)합니다.  
   
-## 참고 항목  
- <xref:System.ServiceModel.Channels.Binding>   
- <xref:System.ServiceModel.Channels.BindingElement>   
- <xref:System.ServiceModel.Configuration.BindingsSection>   
- <xref:System.ServiceModel.Channels.CustomBinding>   
- [\<binding\>](../../../../../docs/framework/misc/binding.md)   
- [바인딩](../../../../../docs/framework/wcf/bindings.md)   
- [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)   
- [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)   
- [customBinding Element](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)   
- [바인딩](../../../../../docs/framework/wcf/bindings.md)   
- [시스템 제공 바인딩 구성](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)   
- [Using Bindings to Configure Windows Communication Foundation Services and Clients](http://msdn.microsoft.com/ko-kr/bd8b277b-932f-472f-a42a-b02bb5257dfb)
+1.  
+  
+## <a name="see-also"></a>참고 항목  
+ <xref:System.ServiceModel.Channels.Binding>  
+ <xref:System.ServiceModel.Channels.BindingElement>  
+ <xref:System.ServiceModel.Configuration.BindingsSection>  
+ <xref:System.ServiceModel.Channels.CustomBinding>  
+ [\<바인딩 >](../../../../../docs/framework/misc/binding.md)  
+ [바인딩](../../../../../docs/framework/wcf/bindings.md)  
+ [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [customBinding 요소](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+ [바인딩](../../../../../docs/framework/wcf/bindings.md)  
+ [시스템 제공 바인딩 구성](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [바인딩을 사용 하 여 Windows Communication Foundation 서비스 및 클라이언트 구성](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)

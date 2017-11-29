@@ -7,24 +7,17 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-- CSharp
-- C++
-- jsharp
-helpviewer_keywords:
-- Network
+helpviewer_keywords: Network
 ms.assetid: d4377115-4a76-4848-ab23-4898d65c771c
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 52c3bffb204c35d7741d7e4fb35b05a357f3811f
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 68d21502b9033b4102c22fb4e0ea10a031e2e7cb
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-detect-network-availability-and-address-changes"></a>방법: 네트워크 가용성 및 주소 변경 검색
 이 샘플은 인터페이스에서 네트워크 주소의 변경 내용을 검색하는 방법을 보여 줍니다.  
@@ -64,4 +57,3 @@ namespace Examples.Net.AddressChanges
  이 예제에는 다음 사항이 필요합니다.  
   
 -   **System.Net** 네임스페이스에 대한 참조.
-

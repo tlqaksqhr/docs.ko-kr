@@ -1,32 +1,28 @@
 ---
-title: "방법: 개체 그래프 (Visual Basic) 프로젝트 | Microsoft 문서"
+title: "방법: 프로젝트 개체 그래프 (Visual Basic)"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 9451eb47-6a31-49d7-84df-73368c618422
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: e634d2520e5b40d6ccb8ac11ce47f726980ef8cd
-ms.lasthandoff: 03/13/2017
-
-
+ms.openlocfilehash: 946c09035c2856203c544c6e5378624989b0e96b
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-project-an-object-graph-visual-basic"></a>방법: (Visual Basic) 개체 그래프 프로젝션
+# <a name="how-to-project-an-object-graph-visual-basic"></a>방법: 프로젝트 개체 그래프 (Visual Basic)
 이 항목에서는 XML에서 개체 그래프를 프로젝션하거나 채우는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드와 개체 그래프를 채우는 `Address`, `PurchaseOrder`, 및 `PurchaseOrderItem` 에서 클래스는 [샘플 XML 파일: 일반적인 구매 주문 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML 문서입니다.  
+ 다음 코드에서는 [샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML 문서의 `Address`, `PurchaseOrder` 및 `PurchaseOrderItem` 클래스를 사용하여 개체 그래프를 채웁니다.  
   
 ```vb  
 Class Address  
@@ -307,10 +303,9 @@ Sub Main()
     }  
     Console.WriteLine(purchOrder)  
 End Sub  
-  
 ```  
   
- 이 예제에서는 결과 [!INCLUDE[vbteclinq](../../../../csharp/includes/vbteclinq_md.md)] 쿼리로 반환 되는 <xref:System.Collections.Generic.IEnumerable%601>의 `PurchaseOrderItem`.</xref:System.Collections.Generic.IEnumerable%601> 항목에는 `PurchaseOrder` 클래스 유형의 일부인 <xref:System.Collections.Generic.IEnumerable%601>의 `PurchaseOrderItem`.</xref:System.Collections.Generic.IEnumerable%601> 코드를 사용은 <xref:System.Linq.Enumerable.ToList%2A>를 만드는 확장 메서드는 <xref:System.Collections.Generic.List%601>쿼리 결과에서 컬렉션.</xref:System.Collections.Generic.List%601> </xref:System.Linq.Enumerable.ToList%2A>  
+ 이 예제에서는 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리의 결과가 <xref:System.Collections.Generic.IEnumerable%601>의 `PurchaseOrderItem`로 반환됩니다. `PurchaseOrder` 클래스의 항목은 <xref:System.Collections.Generic.IEnumerable%601>의 `PurchaseOrderItem` 형식입니다. 이 코드에서는 <xref:System.Linq.Enumerable.ToList%2A> 확장 메서드를 사용하여 쿼리 결과에서 <xref:System.Collections.Generic.List%601> 컬렉션을 만듭니다.  
   
  예제의 결과는 다음과 같습니다.  
   
@@ -352,6 +347,6 @@ ShipDate: 5/21/1999
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Linq.Enumerable.Select%2A></xref:System.Linq.Enumerable.Select%2A>   
- <xref:System.Linq.Enumerable.ToList%2A></xref:System.Linq.Enumerable.ToList%2A>   
- [프로젝션 및 변환 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+ <xref:System.Linq.Enumerable.Select%2A>  
+ <xref:System.Linq.Enumerable.ToList%2A>  
+ [프로젝션 및 변형 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

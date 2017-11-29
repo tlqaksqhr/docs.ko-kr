@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
-ms.openlocfilehash: 39c1d68962ab1108f1a7c0aa976cb62558609d29
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 5a15ac314590b9b7e240e759b9482eafb7071cd3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="net-native-and-compilation"></a>.NET 네이티브 및 컴파일
 .NET Framework를 대상으로 지정하는 Windows 8.1 응용 프로그램과 Windows 데스크톱 응용 프로그램은 특정 프로그래밍 언어로 작성되고 IL(중간 언어)로 컴파일됩니다. 런타임에 JIT(Just-In-Time) 컴파일러는 메서드가 처음 실행되기 바로 전에 로컬 컴퓨터에 대한 네이티브 코드로 IL을 컴파일합니다. 반대로 .NET 네이티브 도구 체인은 컴파일 타임에 소스 코드를 네이티브 코드로 변환합니다. 이 항목에서는 .NET Framework 앱에 사용할 수 있는 다른 컴파일 기술과 .NET 네이티브를 비교하고 .NET 네이티브로 컴파일된 코드에서 발생하는 예외가 JIT로 컴파일된 코드에서 발생하지 않는 이유를 이해하는 데 도움이 될 수 있는 네이티브 코드를 .NET 네이티브에서 생성하는 방법에 대한 실제적인 개요를 제공합니다.  
@@ -51,7 +49,7 @@ ms.lasthandoff: 08/21/2017
   
  앱을 IL에서 네이티브 코드로 변환하는 과정에서 .NET 네이티브 도구 체인은 다음과 같은 작업을 수행합니다.  
   
--   특정 코드 경로에서 리플렉션 및 메타데이터에 의존하는 코드를 정적 네이티브 코드로 바꿉니다. 예를 들어 값 형식이 <xref:System.ValueType.Equals%2A?displayProperty=fullName> 메서드를 재정의하지 않으면 기본 같음 테스트에서는 리플렉션을 사용하여 값 형식 필드를 나타내는 <xref:System.Reflection.FieldInfo> 개체를 검색하고 나서 두 인스턴스의 필드 값을 비교합니다. 네이티브 코드를 컴파일할 때 .NET 네이티브 도구 체인은 리플렉션 코드 및 메타데이터를 필드 값의 정적 비교로 바꿉니다.  
+-   특정 코드 경로에서 리플렉션 및 메타데이터에 의존하는 코드를 정적 네이티브 코드로 바꿉니다. 예를 들어 값 형식이 <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> 메서드를 재정의하지 않으면 기본 같음 테스트에서는 리플렉션을 사용하여 값 형식 필드를 나타내는 <xref:System.Reflection.FieldInfo> 개체를 검색하고 나서 두 인스턴스의 필드 값을 비교합니다. 네이티브 코드를 컴파일할 때 .NET 네이티브 도구 체인은 리플렉션 코드 및 메타데이터를 필드 값의 정적 비교로 바꿉니다.  
   
 -   가능할 경우 네이티브 코드는 모든 메타데이터를 제거하려고 시도합니다.  
   
@@ -111,8 +109,7 @@ ms.lasthandoff: 08/21/2017
 -   NGEN 이미지는 손상되기 쉽습니다. 예를 들어 종속성에 패치나 변경을 적용하려면 일반적으로 패치나 변경을 사용하는 어셈블리도 다시 NGEN되어야 합니다. 이는 특히 .NET Framework 클래스 라이브러리의 시스템 라이브러리에 적용됩니다. 반대로 .NET 네이티브에서는 응용 프로그램을 서로 독립적으로 처리할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [메타데이터 및 자동 기술 구성 요소](../../../docs/standard/metadata-and-self-describing-components.md)   
- [.NET 네이티브 정보(채널 9 비디오)](http://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)   
- [리플렉션 및 .NET 네이티브](../../../docs/framework/net-native/reflection-and-net-native.md)   
+ [메타데이터 및 자동 기술 구성 요소](../../../docs/standard/metadata-and-self-describing-components.md)  
+ [내부.NET 네이티브 (Channel 9 비디오)](http://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)  
+ [리플렉션 및 .NET 네이티브](../../../docs/framework/net-native/reflection-and-net-native.md)  
  [.NET 네이티브 일반 문제 해결](../../../docs/framework/net-native/net-native-general-troubleshooting.md)
-

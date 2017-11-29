@@ -1,45 +1,46 @@
 ---
-title: "방법: PathGeometry를 사용하여 도형 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "클래스, PathGeometry"
-  - "그래픽[WPF], 도형"
-  - "PathGeometry 클래스"
-  - "도형, PathGeometry 클래스로 만들기"
+title: "방법: PathGeometry를 사용하여 도형 만들기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- shapes [WPF], creating with PathGeometry class
+- graphics [WPF], shapes
 ms.assetid: 49a4a8b7-e738-45be-8dac-b54a6d8f5b21
-caps.latest.revision: 11
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 31f77f0921bb018317834077f70e4623c47a4f7f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: PathGeometry를 사용하여 도형 만들기
-이 예제에서는 <xref:System.Windows.Media.PathGeometry> 클래스를 사용하여 도형을 만드는 방법을 보여 줍니다.  <xref:System.Windows.Media.PathGeometry> 개체는 하나 이상의 <xref:System.Windows.Media.PathFigure> 개체로 구성되며 각 <xref:System.Windows.Media.PathFigure>는 다른 "모양"이나 도형을 나타냅니다.  각각의 <xref:System.Windows.Media.PathFigure>는 모양 또는 도형의 연결된 각 부분을 나타내는 하나 이상의 <xref:System.Windows.Media.PathSegment> 개체로 구성됩니다.  세그먼트 형식에는 <xref:System.Windows.Media.LineSegment>, <xref:System.Windows.Media.ArcSegment> 및 <xref:System.Windows.Media.BezierSegment>가 포함됩니다.  
+# <a name="how-to-create-a-shape-by-using-a-pathgeometry"></a>방법: PathGeometry를 사용하여 도형 만들기
+사용 하 여 도형을 만드는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.PathGeometry> 클래스입니다. <xref:System.Windows.Media.PathGeometry>개체는 하나 이상의 구성 됩니다 <xref:System.Windows.Media.PathFigure> 객체; 각 <xref:System.Windows.Media.PathFigure> 다른 "그림" 또는 셰이프를 나타냅니다. 각 <xref:System.Windows.Media.PathFigure> 은 자체 구성 된 하나 이상의 <xref:System.Windows.Media.PathSegment> 각각 또는 도형의의 연결 된 부분을 나타내는 개체입니다. 세그먼트 종류 <xref:System.Windows.Media.LineSegment>, <xref:System.Windows.Media.ArcSegment>, 및 <xref:System.Windows.Media.BezierSegment>합니다.  
   
-## 예제  
- 다음 예제에서는 <xref:System.Windows.Media.PathGeometry>를 사용하여 삼각형을 만듭니다.  <xref:System.Windows.Shapes.Path> 요소를 사용하여 <xref:System.Windows.Media.PathGeometry>를 표시합니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 한 <xref:System.Windows.Media.PathGeometry> 삼각형이 생성 합니다. <xref:System.Windows.Media.PathGeometry> 를 사용 하 여 표시 되는 <xref:System.Windows.Shapes.Path> 요소입니다.  
   
- [!code-xml[GeometrySample#49](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/pathgeometryexample.xaml#49)]  
+ [!code-xaml[GeometrySample#49](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/pathgeometryexample.xaml#49)]  
   
- 다음 그림에서는 이전 예제에서 만든 도형을 보여 줍니다.  
+ 다음 그림은 이전 예제에서 만든 도형을 보여 줍니다.  
   
- ![PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-pathgeometry-triangle.png "wcpsdk\_graphicsmm\_pathgeometry\_triangle")  
-PathGeometry로 만든 삼각형  
+ ![PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-pathgeometry-triangle.gif "wcpsdk_graphicsmm_pathgeometry_triangle")  
+PathGeometry를 사용 하 여 만든 삼각형  
   
- 앞의 예제에서는 상대적으로 간단한 도형인 삼각형을 만드는 방법을 보여 주었습니다.  또한 <xref:System.Windows.Media.PathGeometry>를 사용하여 원호와 곡선을 비롯한 보다 복잡한 도형을 만들 수 있습니다.  자세한 내용은 [타원형 원호 만들기](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md), [입방형 3차원 곡선 만들기](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md) 및 [정방형 3차원 곡선 만들기](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)를 참조하십시오.  
+ 앞의 예제에는 상대적으로 간단한 도형을, 삼각형을 만드는 방법을 보여 주었습니다. A <xref:System.Windows.Media.PathGeometry> 곡선을 포함 하는 보다 복잡 한 셰이프를 만들려면 사용할 수도 있습니다. 예제를 보려면 [타원형 호를 만들](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md), [입방 형 3 차원 곡선을 만들](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md), 및 [정방형 3 차원 곡선을 만들](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)합니다.  
   
- 이 예제는 큰 샘플의 일부입니다. 전체 샘플을 보려면 [Geometries 샘플](http://go.microsoft.com/fwlink/?LinkID=159989)을 참조하십시오.  
+ 이 예제는 더 큰 샘플에 속합니다. 전체 샘플을 보려면 [기하 도형 샘플](http://go.microsoft.com/fwlink/?LinkID=159989)을 참조하세요.  
   
-## 참고 항목  
- <xref:System.Windows.Shapes.Path>   
- <xref:System.Windows.Media.GeometryDrawing>   
- [Geometry 개요](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)   
- [Geometries 샘플](http://go.microsoft.com/fwlink/?LinkID=159989)
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Windows.Shapes.Path>  
+ <xref:System.Windows.Media.GeometryDrawing>  
+ [Geometry 개요](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
+ [기 하 도형 샘플](http://go.microsoft.com/fwlink/?LinkID=159989)

@@ -1,54 +1,52 @@
 ---
-title: "알고리즘 이름을 암호화 클래스에 매핑 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-  - "CSharp"
-  - "C++"
-  - "jsharp"
-helpviewer_keywords: 
-  - "암호화 알고리즘"
-  - "암호화, 알고리즘 이름 매핑"
-  - "알고리즘 이름 매핑"
-  - "이름[.NET Framework], 알고리즘 매핑"
+title: "알고리즘 이름을 암호화 클래스에 매핑"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mapping algorithm names
+- cryptography, mapping algorithm names
+- cryptographic algorithms
+- names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-caps.latest.revision: 11
-author: "mcleblanc"
-ms.author: "markl"
-manager: "markl"
-caps.handback.revision: 10
+caps.latest.revision: "11"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: e59b2551545b8b70bcb54a5d43d041c44579b786
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 알고리즘 이름을 암호화 클래스에 매핑
-개발자가  [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]를 사용하여 암호화 개체를 만드는 방법에는 네 가지가 있습니다.  
+# <a name="mapping-algorithm-names-to-cryptography-classes"></a>알고리즘 이름을 암호화 클래스에 매핑
+다음과 같이 네 가지 개발자 사용 하 여 암호화 개체를 만들 수는 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:  
   
--   **new** 연산자를 사용하여 개체 만들기  
+-   사용 하 여 개체를 만들는 **새** 연산자입니다.  
   
--   해당 알고리즘의 추상 클래스에 대해 **Create** 메서드를 호출함으로써 특정 암호화 알고리즘을 구현하는 개체 만들기  
+-   호출 하 여 특정 암호화 알고리즘을 구현 하는 개체 만들기는 **만들기** 해당 알고리즘에 대 한 추상 클래스에 메서드.  
   
--   [System.Security.Cryptography.CryptoConfig.CreateFromName](frlrfSystemSecurityCryptographyCryptoConfigClassCreateFromNameTopic)메서드를 호출함으로써 특정 알고리즘을 구현하는 개체 만들기  
+-   호출 하 여 특정 암호화 알고리즘을 구현 하는 개체 만들기는 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 메서드.  
   
--   <xref:System.Security.Cryptography.SymmetricAlgorithm>과 같은 해당 유형 알고리즘의 추상 클래스에 대해 **Create** 메서드를 호출함으로써 대칭 블록 암호와 같은 암호화 알고리즘 클래스를 구현하는 개체 만들기  
+-   호출 하 여 암호화 알고리즘 (예: 블록 대칭 암호화)의 클래스를 구현 하는 개체를 만들기는 **만들기** 해당 유형의 알고리즘에 대 한 추상 클래스에 메서드 (같은 <xref:System.Security.Cryptography.SymmetricAlgorithm>).  
   
- 예를 들어, 개발자가 일련의 바이트에 대해 SHA1 해시를 계산한다고 가정합시다.  <xref:System.Security.Cryptography> 네임스페이스에는 두 가지 SHA1 알고리즘 구현이 포함되어 있는데, 그 중 하나는 순수하게 관리되는 구현이고 다른 하나는 CryptoAPI를 래핑합니다.  개발자는**new** 연산자를 호출하여 [SHA1Managed 클래스](frlrfSystemSecurityCryptographySHA1ManagedClassTopic)와 같은 특정  SHA1 구현을 인스턴스화할 수 있습니다.  그러나, 공용 언어 런타임에 어떤 클래스가 로드되는지에 관계없이 클래스가 SHA1 해시 알고리즘을 구현하기만 하면 되는 경우라면 개발자는 [System.Security.Cryptography.SHA1.Create](frlrfSystemSecurityCryptographySHA1ClassCreateTopic) 메서드를 호출하여 개체를 만들 수 있습니다.  이메서드는 **System.Security.Cryptography.CryptoConfig.CreateFromName\("System.Security.Cryptography.SHA1"\)**을 호출하는데, 이것은 SHA1 해시 알고리즘을 반환해야 합니다.  
+ 예를 들어 개발자가 바이트 집합의 SHA1 해시를 계산 하는 것으로 가정 합니다. <xref:System.Security.Cryptography> 네임 스페이스에는 SHA1 알고리즘, 관리 되는 순수 하 게 구현 하는 하나 및 CryptoAPI를 래핑하는 하나 두 구현 합니다. 개발자는 인스턴스화할 특정 SHA1 구현 하도록 선택할 수 (같은 <xref:System.Security.Cryptography.SHA1Managed>)를 호출 하 여는 **새** 연산자입니다. 그러나 공용 언어 런타임 클래스를 구현 하는 SHA1 해시 알고리즘을 로드 하는 클래스에 중요 하지 않으면 경우 개발자 개체를 만들 수를 호출 하 여는 <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> 메서드. 이 메서드를 호출 **System.Security.Cryptography.CryptoConfig.CreateFromName("System.Security.Cryptography.SHA1")**, SHA1 해시 알고리즘의 구현을 반환 반환 해야 합니다.  
   
- 기본적으로 암호화 구성에는 .NET Framework에서 제공하는 알고리즘의 약식 이름이 포함되어 있기 때문에 개발자는 **System.Security.Cryptography.CryptoConfig.CreateFromName\("SHA1"\)**을 호출할 수도 있습니다.  
+ 개발자를 호출할 수도 **System.Security.Cryptography.CryptoConfig.CreateFromName("SHA1")** 하므로 암호화 구성을 기본적으로.NET Framework에서 제공 하는 알고리즘에 대 한 짧은 이름이 포함 됩니다.  
   
- 어떠한 해시 알고리즘을 사용하든지 상관없다면 개발자는 해시 변환을 구현하는 개체를 반환하는 [System.Security.Cryptography.HashAlgorithm.Create](frlrfSystemSecurityCryptographyHashAlgorithmClassCreateTopic)메서드를 호출할 수 있습니다.  
+ 개발자를 호출할 수 있는 해시 알고리즘을 사용 하는 중요 하지 않습니다는 <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> 해싱 변환을 구현 하는 개체를 반환 하는 메서드.  
   
-## 구성 파일에서 알고리즘 이름 매핑  
- 네 가지 시나리오는 모두 런타임에 [System.Security.Cryptography.SHA1CryptoServiceProvider 클래스](frlrfSystemSecurityCryptographySHA1CryptoServiceProviderClassTopic) 개체를 반환하도록 기본 설정되어 있습니다.  그러나 컴퓨터 관리자는 마지막 두 시나리오가 반환하는 개체의 형식을 변경할 수 있습니다.  이렇게 하려면 컴퓨터 구성 파일인 Machine.config에서 알고리즘 이름을 사용할 클래스 이름에 매핑해야 합니다.  
+## <a name="mapping-algorithm-names-in-configuration-files"></a>구성 파일에 알고리즘 이름 매핑  
+ 기본적으로 런타임은 반환는 <xref:System.Security.Cryptography.SHA1CryptoServiceProvider> 모든 4 가지 시나리오에 대 한 개체입니다. 그러나 컴퓨터 관리자에는 마지막 두 시나리오에서 메서드를 반환 하는 개체의 유형을 변경할 수 있습니다. 이 위해 컴퓨터 구성 파일 (Machine.config)에서 사용 하려면 클래스에 알고리즘 이름을 매핑해야 합니다.  
   
- 다음 예제에서는 **System.Security.Cryptography.SHA1.Create**, **System.Security.CryptoConfig.CreateFromName\("SHA1"\)** 및 **System.Security.Cryptography.HashAlgorithm.Create**가 `MySHA1HashClass` 개체를 반환하도록 런타임을 구성하는 방법을 보여 줍니다.  
+ 고 런타임을 구성 하는 방법을 보여 주는 다음 예제를 **System.Security.Cryptography.SHA1.Create**, **System.Security.CryptoConfig.CreateFromName("SHA1")**, 및  **System.Security.Cryptography.HashAlgorithm.Create** 반환는 `MySHA1HashClass` 개체입니다.  
   
-```  
+```xml  
 <configuration>  
    <!-- Other configuration settings. -->  
    <mscorlib>  
@@ -70,15 +68,15 @@ caps.handback.revision: 10
 </configuration>  
 ```  
   
- 특성의 이름을 [\<cryptoClass\>요소](../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)로 지정합니다. \(앞의 예제에서는 특성을 `MySHA1Hash` 라고 명명했습니다.\)  **\<cryptoClass\>** 요소의 특성 값은 공용 언어 런타임에서 클래스를 찾기 위해 사용하는 문자열입니다.  [정규화된 형식 이름 지정](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)에 지정된 요구 사항을 만족시키는 모든 문자열을 사용할 수 있습니다.  
+ 특성의 이름을 지정할 수 있습니다는 [< cryptoClass\> 요소](../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) (이전 예제에서는 특성의 이름을 `MySHA1Hash`). 특성의 값은  **\<cryptoClass >** 요소는 공용 언어 런타임에서 클래스를 찾기 위해 사용 하는 문자열입니다. 에 지정 된 요구 사항을 충족 하는 모든 문자열을 사용할 수 있습니다 [정규화 된 형식 이름 지정](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)합니다.  
   
- 여러 알고리즘 이름을 동일한 클래스에 매핑할 수 있습니다.  [\<nameEntry\>](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) 요소는 클래스에 한 개의 알고리즘 이름을 매핑합니다.  **name** 특성은 **System.Security.Cryptography.CryptoConfig.CreateFromName** 메서드를 호출할 때 사용하는 문자열일 수도 있고 <xref:System.Security.Cryptography> 네임스페이스에 있는 추상 암호화 클래스 이름일 수도 있습니다.  **class** 특성의 값은 **\<cryptoClass\>** 요소의 특성 이름입니다.  
+ 동일한 클래스에 여러 알고리즘 이름을 매핑할 수 있습니다. [ \<r y > 요소](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) 는 클래스에 한 개의 알고리즘 이름을 매핑합니다. **이름** 특성은 호출할 때 사용 되는 문자열로 수는 **System.Security.Cryptography.CryptoConfig.CreateFromName** 메서드 또는 클래스는 추상 암호화는 의이름<xref:System.Security.Cryptography> 네임 스페이스입니다. 값은 **클래스** 특성은 특성의 이름에서  **\<cryptoClass >** 요소입니다.  
   
 > [!NOTE]
->  [System.Security.Cryptography.SHA1.Create](frlrfSystemSecurityCryptographySHA1ClassCreateTopic) 또는 **Security.CryptoConfig.CreateFromName\("SHA1"\)** 메서드를 호출함으로써 SHA1 알고리즘을 가져올 수 있습니다.  각 메서드는 SHA1 알고리즘을 구현하는 개체의 반환만을 보증합니다.  구성 파일에서 알고리즘의 모든 이름을 동일한 클래스에 매핑하지 않아도 됩니다.  
+>  SHA1 알고리즘을 호출 하 여 가져올 수 있습니다는 <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> 또는 **Security.CryptoConfig.CreateFromName("SHA1")** 메서드. 각 메서드는 SHA1 알고리즘을 구현 하는 개체를 반환 하는지만 보장 합니다. 각 알고리즘의 이름 구성 파일에서 같은 클래스에 매핑할 필요가 없습니다.  
   
- 기본 이름 및 이 이름이 매핑되는 클래스 목록을 보려면 [CryptoConfig 클래스](frlrfSystemSecurityCryptographyCryptoConfigClassTopic)를 참조하십시오.  
+ 기본 이름 및 매핑되는 클래스의 목록에 대 한 참조 <xref:System.Security.Cryptography.CryptoConfig>합니다.  
   
-## 참고 항목  
- [암호화 서비스](../../../docs/standard/security/cryptographic-services.md)   
+## <a name="see-also"></a>참고 항목  
+ [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)  
  [암호화 클래스 구성](../../../docs/framework/configure-apps/configure-cryptography-classes.md)

@@ -1,60 +1,58 @@
 ---
-title: "Take Clause (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.QueryTake"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Take statement"
-  - "queries [Visual Basic], Take"
-  - "Take clause"
+title: "Take 절(Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.QueryTake
+helpviewer_keywords:
+- Take statement [Visual Basic]
+- queries [Visual Basic], Take
+- Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
-caps.latest.revision: 15
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ee289a24c15226126a526af116ed53b4a9055b35
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Take Clause (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
+# <a name="take-clause-visual-basic"></a>Take 절(Visual Basic)
 컬렉션의 시작 위치에서 지정된 수의 연속 요소를 반환합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 Take count  
 ```  
   
-## 요소  
+## <a name="parts"></a>요소  
  `count`  
- 필수 요소.  반환할 시퀀스의 요소 수로 계산되는 값이나 식입니다.  
+ 필수 요소. 값 또는 반환 되는 시퀀스의 요소 수로 계산 되는 식입니다.  
   
-## 설명  
- `Take` 절은 결과 목록의 시작 부분에서 지정된 수의 연속 요소가 쿼리에 포함되게 합니다.  포함할 요소의 수는 `count` 매개 변수에 의해 지정됩니다.  
+## <a name="remarks"></a>설명  
+ `Take` 절로 인해 쿼리를 지정 된 수의 결과 목록에는의 시작 부분부터 연속 요소를 포함 합니다. 요소를 포함 하도록 수가 붙습니다는 `count` 매개 변수입니다.  
   
- `Skip` 절과 함께 `Take` 절을 사용하여 쿼리의 세그먼트에서 데이터 범위를 반환할 수 있습니다.  이렇게 하려면 범위의 첫 번째 요소에 대한 인덱스를 `Skip` 절에 전달하고 범위 크기를 `Take` 절에 전달합니다.  이 경우 `Take` 절은 `Skip` 절 뒤에 지정되어야 합니다.  
+ 사용할 수 있습니다는 `Take` 절과 함께 `Skip` 절 쿼리 세그먼트에서 데이터의 범위를 반환할 수 있습니다. 이 위해 전달 범위의 첫 번째 요소의 인덱스는 `Skip` 절과 범위의 크기는 `Take` 절. 이 경우에 `Take` 뒤에 절을 지정 해야 합니다는 `Skip` 절.  
   
- 쿼리에 `Take` 절을 사용하는 경우 `Take` 절에서 의도한 결과를 포함하게 될 순서로 결과도 반환되어야 합니다.  쿼리 결과 정렬에 대한 자세한 내용은 [Order By Clause](../../../visual-basic/language-reference/queries/order-by-clause.md)을 참조하십시오.  
+ 사용 하는 경우는 `Take` 쿼리에서 절을 할 수도 있습니다는 결과 수 있게 하는 순서로 반환 되도록 하는 `Take` 절에서 의도 한 결과 포함 하도록 합니다. 쿼리 결과 정렬 하는 방법에 대 한 자세한 내용은 참조 [Order By 절](../../../visual-basic/language-reference/queries/order-by-clause.md)합니다.  
   
- `TakeWhile` 절을 사용하여 제공된 조건에 따라 해당 특정 요소만 반환되도록 지정할 수 있습니다.  
+ 사용할 수는 `TakeWhile` 절 제공된 조건에 따라 특정 요소에만 반환 되도록 지정할 수 있습니다.  
   
-## 예제  
- 다음 코드 예제에서는 `Take` 절을 `Skip` 절과 함께 사용하여 페이지의 쿼리에서 데이터를 반환합니다.  GetCustomers 함수는 `Skip` 절을 사용하여 제공된 시작 인덱스 값까지 목록에서 고객을 건너뛰고 `Take` 절을 사용하여 해당 인덱스 값에서 시작하는 고객의 페이지를 반환합니다.  
+## <a name="example"></a>예제  
+ 다음 코드 예제에서는 `Take` 절과 함께 `Skip` 절을 페이지에 쿼리에서 데이터를에서 반환 합니다. GetCustomers 사용 하 여 함수는 `Skip` 절 값을 사용 하 여 인덱스를 지정 된 시작 될 때까지 목록에서 고객을 무시 하는 `Take` 절 해당 인덱스 값에서 시작 하는 고객의 페이지를 반환 합니다.  
   
  [!code-vb[VbSimpleQuerySamples#1](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/take-clause_1.vb)]  
   
-## 참고 항목  
- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)   
- [Queries](../../../visual-basic/language-reference/queries/queries.md)   
- [Select Clause](../../../visual-basic/language-reference/queries/select-clause.md)   
- [From Clause](../../../visual-basic/language-reference/queries/from-clause.md)   
- [Order By Clause](../../../visual-basic/language-reference/queries/order-by-clause.md)   
- [Take While Clause](../../../visual-basic/language-reference/queries/take-while-clause.md)   
- [Skip Clause](../../../visual-basic/language-reference/queries/skip-clause.md)
+## <a name="see-also"></a>참고 항목  
+ [Visual Basic의 LINQ 소개](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
+ [쿼리](../../../visual-basic/language-reference/queries/queries.md)  
+ [Select 절](../../../visual-basic/language-reference/queries/select-clause.md)  
+ [From 절](../../../visual-basic/language-reference/queries/from-clause.md)  
+ [Order By 절](../../../visual-basic/language-reference/queries/order-by-clause.md)  
+ [Take While 절](../../../visual-basic/language-reference/queries/take-while-clause.md)  
+ [Skip 절](../../../visual-basic/language-reference/queries/skip-clause.md)

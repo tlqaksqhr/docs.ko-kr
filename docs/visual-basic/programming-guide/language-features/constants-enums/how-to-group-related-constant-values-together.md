@@ -1,43 +1,42 @@
 ---
-title: "How to: Group Related Constant Values Together (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "enumerations [Visual Basic], constants"
-  - "constants, grouping together"
+title: "방법: 관련 상수 값 그룹화(Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- enumerations [Visual Basic], constants
+- constants [Visual Basic], grouping together
 ms.assetid: 09d61da5-c940-4126-a79f-ba93c36653dc
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: be57b56047654d6eb3536bb0b8f63eca27decdb7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# How to: Group Related Constant Values Together (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-열거형은 관련 상수를 함께 그룹화할 수 있는 가장 좋은 방법입니다.  클래스 또는 모듈의 선언 섹션에서 `Enum` 문을 사용하여 열거형을 만듭니다.  자세한 내용은 [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)을 참조하십시오.  
+# <a name="how-to-group-related-constant-values-together-visual-basic"></a>방법: 관련 상수 값 그룹화(Visual Basic)
+열거형은 서로 관련된 있는 상수를 함께 그룹화 하는 가장 좋은 방법은입니다. 구성 된 열거형을 만들면는 `Enum` 선언 섹션에는 클래스 또는 모듈의 문을 합니다. 자세한 내용은 참조 [하는 방법: 열거형 선언](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)합니다.  
   
-### 관련 상수 값을 그룹화하려면  
+### <a name="to-group-related-constant-values"></a>그룹에 관련 상수 값  
   
-1.  코드 액세스 수준, `Enum` 키워드 및 올바른 이름을 포함하는 선언을 작성합니다.  이 예제에서는 `Private` 열거형인 `temperatureValues`를 만듭니다.  
+1.  코드 액세스 수준을 포함 하는 선언을 작성는 `Enum` 키워드 및 유효한 이름이 있습니다. 이 예제에서는 만듭니다는 `Private` 열거형 `temperatureValues`합니다.  
   
      [!code-vb[VbEnumsTask#21](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-group-related-constant-values-together_1.vb)]  
   
-2.  열거형의 상수를 정의합니다.  이 예제에서는 `Public` 열거형인 `temperatureValues`를 만들고 값을 할당합니다.  
+2.  열거형에서 상수를 정의 합니다. 이 예제에서는 만듭니다는 `Public` 열거형 `temperatureValues` 값을 할당 합니다.  
   
      [!code-vb[VbEnumsTask#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/how-to-group-related-constant-values-together_2.vb)]  
   
-## 참고 항목  
- [Enumerations and Name Qualification](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)   
- [How to: Refer to an Enumeration Member](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)   
- [When to Use an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)   
- [Constants Overview](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)   
- [Constant and Literal Data Types](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)   
- [Constants and Enumerations](../../../../visual-basic/language-reference/constants-and-enumerations.md)
+## <a name="see-also"></a>참고 항목  
+ [열거형 및 이름 한정](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)  
+ [방법: 열거형 멤버 참조](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)  
+ [열거형을 사용하는 경우](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)  
+ [상수 개요](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
+ [상수 및 리터럴 데이터 형식](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)  
+ [상수 및 열거형](../../../../visual-basic/language-reference/constants-and-enumerations.md)
