@@ -1,62 +1,61 @@
 ---
-title: "MustOverride (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.MustOverride"
-  - "MustOverride"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "virtual elements, pure"
-  - "elements, pure virtual"
-  - "properties [Visual Basic], redefining"
-  - "procedures, overriding"
-  - "overriding, MustOverride keyword"
-  - "procedures, redefining"
-  - "pure virtual elements"
-  - "MustOverride keyword"
-  - "properties [Visual Basic], overriding"
+title: MustOverride(Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.MustOverride
+- MustOverride
+helpviewer_keywords:
+- virtual elements [Visual Basic], pure
+- elements [Visual Basic], pure virtual
+- properties [Visual Basic], redefining
+- procedures [Visual Basic], overriding
+- overriding, MustOverride keyword
+- procedures [Visual Basic], redefining
+- pure virtual elements [Visual Basic]
+- MustOverride keyword [Visual Basic]
+- properties [Visual Basic], overriding
 ms.assetid: 6e9d9ad6-bb64-433f-b32b-3ef84293bf96
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: a2f7bdba4b01bd307e0c52802509669f772b5eb5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# MustOverride (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-속성이나 프로시저를 이 클래스에서 구현하지 않고 파생 클래스에서 재정의해야 사용할 수 있도록 지정합니다.  
+# <a name="mustoverride-visual-basic"></a>MustOverride(Visual Basic)
+이 클래스에서 구현 되지 않은 속성 또는 프로시저 이며 사용 하려면 먼저 파생된 클래스에서 재정의 되어야를 지정 합니다.  
   
-## 설명  
- 속성이나 프로시저 선언 문에서만 `MustOverride`를 사용할 수 있습니다.  `MustOverride`를 지정하는 속성이나 프로시저는 클래스의 멤버여야 하며 해당 클래스는 [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)으로 표시되어야 합니다.  
+## <a name="remarks"></a>설명  
+ 속성 또는 프로시저 선언문에서만 `MustOverride`를 사용할 수 있습니다. 속성이 나 프로시저를 지정 하는 `MustOverride` 클래스의 멤버 여야 합니다 클래스를 표시 해야 하 고 [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)합니다.  
   
-## 규칙  
+## <a name="rules"></a>규칙  
   
--   **불완전한 선언.** `MustOverride`를 지정할 때는 속성이나 프로시저는 물론 `End Function`, `End Property` 또는 `End Sub` 문에 대해서도 코드 줄을 추가로 지정하지 않습니다.  
+-   **완료 되지 않은 선언입니다.** 지정 하는 경우 `MustOverride`, 하지 속성 또는 프로시저에 대 한 코드의 모든 줄을 지정 하지 않으면도 `End Function`, `End Property`, 또는 `End Sub` 문.  
   
--   **결합 한정자.** 하나의 선언에서 `MustOverride`를 `NotOverridable`, `Overridable` 또는 `Shared`와 함께 지정할 수 없습니다.  
+-   **결합 된 한정자입니다.** 지정할 수 없습니다 `MustOverride` 와 함께 `NotOverridable`, `Overridable`, 또는 `Shared` 같은 선언에 있습니다.  
   
--   **숨김 및 재정의.** 숨김과 재정의는 둘 다 상속된 요소를 다시 정의하지만 두 방식에는 큰 차이가 있습니다.  자세한 내용은 [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)를 참조하십시오.  
+-   **숨기기와 재정의 합니다.** 숨김과 재정의는 둘 다 상속된 요소를 다시 정의하지만 두 방법에는 중요한 차이점이 있습니다. 자세한 내용은 참조 [Visual Basic의 숨김 기능](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)합니다.  
   
--   **대체 조건.** 재정의에서만 사용할 수 있는 요소를 *순수 가상* 요소라고도 합니다.  
+-   **대체 조건입니다.** 재정의에서 제외 하 고 사용할 수 없는 요소 라고도 *순수 가상* 요소입니다.  
   
  `MustOverride` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.  
   
- [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Function 문](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Property 문](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## 참고 항목  
- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)   
- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)   
- [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)   
- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)   
- [키워드](../../../visual-basic/language-reference/keywords/index.md)   
- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+## <a name="see-also"></a>참고 항목  
+ [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
+ [재정의 가능](../../../visual-basic/language-reference/modifiers/overridable.md)  
+ [재정의](../../../visual-basic/language-reference/modifiers/overrides.md)  
+ [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
+ [키워드](../../../visual-basic/language-reference/keywords/index.md)  
+ [Visual Basic의 숨김 기능](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

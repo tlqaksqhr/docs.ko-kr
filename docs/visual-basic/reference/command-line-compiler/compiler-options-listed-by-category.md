@@ -1,42 +1,24 @@
 ---
-title: "Visual Basic 컴파일러 옵션 범주별 목록 | Microsoft 문서"
-ms.date: 2015-07-20
+title: "Visual Basic 컴파일러 옵션 범주별 목록"
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Visual Basic compiler, options
+helpviewer_keywords: Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 9c379a937f798a02badd7b7cd8470f2e1ce3b072
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: f554893858b9475b3d94a669a094206be6a5c3fa
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic 컴파일러 옵션 범주별 목록
-[!INCLUDE[vsprvs](../../../csharp/includes/vsprvs_md.md)] IDE(통합 개발 환경) 내에서 프로그램을 컴파일하는 대신 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 명령줄 컴파일러를 사용할 수 있습니다. 다음은 기능 범주별로 정렬된 [!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 명령줄 컴파일러 옵션 목록입니다.  
+[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] IDE(통합 개발 환경) 내에서 프로그램을 컴파일하는 대신 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 명령줄 컴파일러를 사용할 수 있습니다. 다음은 기능 범주별로 정렬된 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 명령줄 컴파일러 옵션 목록입니다.  
   
 ## <a name="compiler-output"></a>컴파일러 출력  
   
@@ -60,7 +42,7 @@ ms.lasthandoff: 03/13/2017
 |옵션|용도|  
 |---|---|  
 |[/doc](../../../visual-basic/reference/command-line-compiler/doc.md)|XML 파일에 대해 문서 주석을 처리합니다.|  
-|[/netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|[!INCLUDE[Compact](../../../visual-basic/reference/command-line-compiler/includes/compact_md.md)]를 대상으로 하도록 컴파일러를 설정합니다.|  
+|[/netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|[!INCLUDE[Compact](~/includes/compact-md.md)]를 대상으로 하도록 컴파일러를 설정합니다.|  
 |[/out](../../../visual-basic/reference/command-line-compiler/out.md)|출력 파일을 지정합니다.|  
 |[/target](../../../visual-basic/reference/command-line-compiler/target.md)|출력의 형식을 지정합니다.|  
   
@@ -73,7 +55,7 @@ ms.lasthandoff: 03/13/2017
 |[/imports](../../../visual-basic/reference/command-line-compiler/imports.md)|지정된 어셈블리에서 네임스페이스를 가져옵니다.|  
 |[/keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|어셈블리에 강력한 이름을 지정하는 키 쌍의 키 컨테이너 이름을 지정합니다.|  
 |[/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|어셈블리에 강력한 이름을 지정하는 키 또는 키 쌍이 포함된 파일을 지정합니다.|  
-|[/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|참조 어셈블리의 위치를 지정 된 [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) 옵션입니다.|  
+|[/libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|참조 어셈블리의 위치를 지정 된 [/참조](../../../visual-basic/reference/command-line-compiler/reference.md) 옵션입니다.|  
 |[/reference](../../../visual-basic/reference/command-line-compiler/reference.md)|어셈블리에서 메타데이터를 가져옵니다.|  
 |[/moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|모듈이 속할 어셈블리의 이름을 지정합니다.|  
 |`/analyzer`|이 어셈블리에서 분석기를 실행합니다(약식: /a).|  
@@ -102,7 +84,7 @@ ms.lasthandoff: 03/13/2017
   
 |옵션|용도|  
 |---|---|  
-|[/langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|언어 버전을 지정: 9 | 9.0 | 10 | 10.0 | 11 | 11.0입니다.|  
+|[/langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|언어 버전 지정: 9 &#124; 9.0 &#124; 10 &#124; 10.0 &#124; 11 &#124; 11.0입니다.|  
 |[/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)|명시적 변수 선언이 있어야 합니다.|  
 |[/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|형식 의미 체계를 엄격하게 확인합니다.|  
 |[/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)|문자열 비교가 이진인지 또는 로캘별 텍스트 의미 체계를 사용해야 하는지를 지정합니다.|  
@@ -130,9 +112,9 @@ ms.lasthandoff: 03/13/2017
 |[@(지시 파일 지정)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|지시 파일을 지정합니다.|  
 |[/baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|DLL의 기본 주소를 지정합니다.|  
 |[/codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|컴파일할 때 모든 소스 코드 파일에 사용할 코드 페이지를 지정합니다.|  
-|[/errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|[!INCLUDE[vbprvb](../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 컴파일러에서 내부 컴파일러 오류를 보고하는 방식을 지정합니다.|  
+|[/errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 컴파일러에서 내부 컴파일러 오류를 보고하는 방식을 지정합니다.|  
 |[/highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|특정 실행 파일이 높은 엔트로피 ASLR(Address Space Layout Randomization)을 지원하는지 여부를 Windows 커널에 알려줍니다.|  
-|[/main](../../../visual-basic/reference/command-line-compiler/main.md)|포함 하는 클래스를 지정 합니다.는 `Sub``Main` 프로시저를 시작할 때 사용 합니다.|  
+|[/main](../../../visual-basic/reference/command-line-compiler/main.md)|포함 된 클래스를 지정 하는 `Sub``Main` 프로시저를 시작할 때 사용 합니다.|  
 |[/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|Vbc.rsp로 컴파일하지 않습니다.|  
 |[/nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|컴파일러에서 표준 라이브러리를 참조하지 않도록 합니다.|  
 |[/nowin32manifest](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)|실행 파일에 응용 프로그램 매니페스트를 포함하지 않도록 컴파일러에 지시합니다.|  
@@ -146,7 +128,7 @@ ms.lasthandoff: 03/13/2017
 |`/checksumalgorithm:<alg>`|PDB에 저장된 소스 파일 체크섬을 계산하기 위한 알고리즘을 지정합니다.  지원되는 값은 SHA1(기본값) 또는 SHA256입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Visual Basic 컴파일러 옵션 사전순 목록](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)   
- [프로젝트 디자이너 소개](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)   
- [C# 컴파일러 옵션 사전순 목록](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)   
+ [Visual Basic 컴파일러 옵션 사전순 목록](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
+ [프로젝트 디자이너 소개](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
+ [사전순 C# 컴파일러 옵션 목록](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
  [범주별 C# 컴파일러 옵션 목록](../../../csharp/language-reference/compiler-options/listed-by-category.md)

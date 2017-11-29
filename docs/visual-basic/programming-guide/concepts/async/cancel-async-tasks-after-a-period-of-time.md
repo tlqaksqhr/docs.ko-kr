@@ -1,64 +1,56 @@
 ---
-title: "(Visual Basic) 기간 이후 비동기 작업 취소 | Microsoft 문서"
+title: "(Visual Basic) 기간 이후 비동기 작업 취소"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: a48045a3-6a99-42af-b824-af340f0b9a5d
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 6708bd92d8dc2455b9dcb8e02dcc0a4455e00cda
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: b8f479a0b8897ba86c4bd750c87afe15600e1df3
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>(Visual Basic) 기간 이후 비동기 작업 취소
-사용 하 여 일정 기간 후에 비동기 작업을 취소할 수는 <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=fullName>메서드 작업이 끝날 때까지 대기 하지 않으려는 경우.</xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=fullName> 가 지정 하는 기간 내에 완료 되지 않은 모든 연결 된 작업의 취소를 예약 하는이 메서드는 `CancelAfter` 식입니다.  
+작업이 완료될 때까지 대기하지 않으려는 경우 일정 기간 후에 <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> 메서드를 사용하여 비동기 작업을 취소할 수 있습니다. 이 메서드는 `CancelAfter` 식으로 지정된 일정 기간 내에 완료되지 않은 연결된 작업의 취소를 예약합니다.  
   
- 개발 하는 코드에 추가 하는이 예제 [는 목록의의 작업 (Visual Basic) 또는 비동기 작업 취소](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) 웹 사이트 목록을 다운로드 하 고 각각의 콘텐츠 길이 표시 합니다.  
+ 개발 하는 코드를 추가 하는이 예제 [는 목록의 작업 (Visual Basic) 또는 비동기 작업 취소](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) 웹 사이트의 목록을 다운로드 하 고 각각의 내용의 길이 표시할 수 있습니다.  
   
 > [!NOTE]
->  예제를 실행 하려면.NET Framework 4.5와 Visual Studio 2012 이상이 있어야 하거나 나중에 컴퓨터에 설치 합니다.  
+>  예제를 실행 하려면 Visual Studio 2012 이상 및.NET Framework 4.5가 있어야 하거나 나중에 컴퓨터에 설치 합니다.  
   
 ## <a name="downloading-the-example"></a>예제 다운로드  
- 전체 Windows Presentation Foundation (WPF) 프로젝트를 다운로드할 수 있습니다 [Async 샘플: 세밀 하 게 응용 프로그램 튜닝](http://go.microsoft.com/fwlink/?LinkId=255046) 다음이 단계를 수행 하 고 있습니다.  
+ [Async 샘플: 응용 프로그램 세부 조정](http://go.microsoft.com/fwlink/?LinkId=255046)에서 전체 WPF(Windows Presentation Foundation) 프로젝트를 다운로드한 후 다음 단계를 따를 수 있습니다.  
   
 1.  다운로드한 파일의 압축을 푼 다음 Visual Studio를 시작합니다.  
   
 2.  메뉴 모음에서 **파일**, **열기**, **프로젝트/솔루션**을 선택합니다.  
   
-3.  에 **프로젝트 열기** 대화 상자에서 압축을 해제 하는 샘플 코드를 보유 하는 폴더를 연 다음 AsyncFineTuningVB에 대 한 솔루션 (.sln) 파일을 엽니다.  
+3.  에 **프로젝트 열기** 대화 상자, 하면 압축을 푼 샘플 코드가 저장 된 폴더를 연 다음 AsyncFineTuningVB에 대 한 솔루션 (.sln) 파일을 엽니다.  
   
-4.  **솔루션 탐색기**, 바로 가기 메뉴를 열고는 **CancelAfterTime** 프로젝트를 선택한 다음 **시작 프로젝트로 설정**합니다.  
+4.  **솔루션 탐색기**에서 **CancelAfterTime** 프로젝트에 대한 바로 가기 메뉴를 열고 **시작 프로젝트로 설정**을 선택합니다.  
   
-5.  프로젝트를 실행 하려면 F5 키를 선택 합니다.  
+5.  F5 키를 선택하여 프로젝트를 실행합니다.  
   
-     디버깅 하지 않고 프로젝트를 실행 하려면 Ctrl + f&5;를 선택 합니다.  
+     디버그하지 않고 프로젝트를 실행하려면 Ctrl+F5를 선택합니다.  
   
-6.  프로그램을 여러 번 실행 확인 출력 모든 웹 사이트, 웹, 또는 일부 웹 사이트에 대 한 출력을 표시할 수 있습니다.  
+6.  프로그램을 여러 번 실행하여 모든 웹 사이트 또는 일부 웹 사이트에 대한 출력이 표시되는지, 또는 웹 사이트에 대한 출력이 표시되지 않는지 확인합니다.  
   
- 프로젝트를 다운로드 하지 않으려는 경우에이 항목의 끝에 MainWindow.xaml.vb 파일을 검토할 수 있습니다.  
+ 프로젝트를 다운로드 하지 않으려면 하는 경우이 항목의 끝에 MainWindow.xaml.vb 파일을 검토할 수 있습니다.  
   
 ## <a name="building-the-example"></a>예제 빌드  
- 개발 하는 프로젝트에 추가 하는이 항목의 예제 [는 목록의의 작업 (Visual Basic) 또는 비동기 작업 취소](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) 작업 목록 취소 합니다. 하지만 예제에서는 동일한 UI를 사용 여 **취소** 단추 명시적으로 사용 되지 않습니다.  
+ 개발 하는 프로젝트에 추가 하는이 항목의 예제 [는 목록의 작업 (Visual Basic) 또는 비동기 작업 취소](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) 작업 목록 취소 합니다. **취소** 단추는 명시적으로 사용되지 않지만 예제에서는 같은 UI를 사용합니다.  
   
- 예제를 빌드하려면 "예제 다운로드" 섹션의 지침에 따라 사용자가 직접 단계별로 하지만를 선택할 **CancelAListOfTasks** 으로 **시작 프로젝트**합니다. 이 항목의 변경 내용이 해당 프로젝트에 추가 합니다.  
+ 직접 예제를 빌드하려면 "예제 다운로드" 섹션의 지침을 단계별로 따르되, **CancelAListOfTasks**를 **시작 프로젝트**로 선택합니다. 이 항목의 변경 내용을 해당 프로젝트에 추가합니다.  
   
- 작업 취소 됨으로 표시 되는 최대 시간을 지정 하려면 호출을 추가 하면 `CancelAfter` 를 `startButton_Click`다음 예제와 같이 합니다. 추가 별표로 표시 됩니다.  
+ 작업이 취소됨으로 표시되기 전에 소요되는 최대 시간을 지정하려면 다음 예제와 같이 `CancelAfter` 호출을 `startButton_Click`에 추가합니다. 추가된 내용에는 별표가 표시됩니다.  
   
 ```vb  
 Private Async Sub startButton_Click(sender As Object, e As RoutedEventArgs)  
@@ -88,7 +80,7 @@ Private Async Sub startButton_Click(sender As Object, e As RoutedEventArgs)
 End Sub  
 ```  
   
- 프로그램을 여러 번 실행 확인 출력 모든 웹 사이트, 웹, 또는 일부 웹 사이트에 대 한 출력을 표시할 수 있습니다. 다음과 같은 출력 샘플입니다.  
+ 프로그램을 여러 번 실행하여 모든 웹 사이트 또는 일부 웹 사이트에 대한 출력이 표시되는지, 또는 웹 사이트에 대한 출력이 표시되지 않는지 확인합니다. 다음은 샘플 출력입니다.  
   
 ```  
 Length of the downloaded string: 35990.  
@@ -100,12 +92,12 @@ Length of the downloaded string: 226091.
 Downloads canceled.  
 ```  
   
-## <a name="complete-example"></a>전체 예제  
- 다음 코드는 예제에 대 한 MainWindow.xaml.vb 파일의 전체 텍스트입니다. 별표는이 예제에 대 한 추가 된 요소를 표시 합니다.  
+## <a name="complete-example"></a>완성된 예제  
+ 다음 코드는 예제에 대 한 MainWindow.xaml.vb 파일의 전체 텍스트입니다. 별표는 이 예제에 대해 추가된 요소를 표시합니다.  
   
- <xref:System.Net.Http>.</xref:System.Net.Http> 에 대 한 참조를 추가 해야 한다고 공지  
+ <xref:System.Net.Http>에 대한 참조를 추가해야 합니다.  
   
- 프로젝트를 다운로드할 수 있습니다 [Async 샘플: 세밀 하 게 응용 프로그램 튜닝](http://go.microsoft.com/fwlink/?LinkId=255046)합니다.  
+ [Async 샘플: 응용 프로그램 미세 조정](http://go.microsoft.com/fwlink/?LinkId=255046)에서 프로젝트를 다운로드할 수 있습니다.  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -207,8 +199,8 @@ End Class
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [비동기 프로그래밍 async 및 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)   
- [연습: Async를 사용 하 여 웹 서비스에 액세스 및 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
- [비동기 작업 또는 작업 (Visual Basic) 목록이 취소](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)   
- [Async (Visual Basic) 응용 프로그램을 미세 조정](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)   
+ [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
+ [연습: Async 및 Await를 사용하여 웹에 액세스(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+ [비동기 작업 또는 작업 (Visual Basic) 목록 취소](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)  
+ [Async 응용 프로그램 미세 조정(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
  [Async 샘플: 응용 프로그램 미세 조정](http://go.microsoft.com/fwlink/?LinkId=255046)

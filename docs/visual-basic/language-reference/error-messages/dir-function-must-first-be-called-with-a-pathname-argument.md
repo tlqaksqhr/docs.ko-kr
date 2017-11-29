@@ -1,30 +1,28 @@
 ---
-title: "&#39;Dir&#39; function must first be called with a &#39;PathName&#39; argument | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrDIR_IllegalCall"
-dev_langs: 
-  - "VB"
+title: "&#39; Dir &#39; 함수는 처음으로 호출는 &#39; 경로 이름 &#39; 인수"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrDIR_IllegalCall
 ms.assetid: 7b5d149f-be91-4ac3-8262-86a360894e7d
-caps.latest.revision: 7
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 843918fe9cb0b9dece076b5dc1373c3571588caa
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# &#39;Dir&#39; function must first be called with a &#39;PathName&#39; argument
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-`Dir` 함수를 처음 호출할 때 `PathName` 인수를 사용하지 않았습니다.  `Dir`를 처음 호출할 때에는 `PathName`이 필요하지만 다음 `Dir` 호출에서는 그 다음 항목을 검색하기 위해 매개 변수를 사용할 필요가 없습니다.  
+# <a name="39dir39-function-must-first-be-called-with-a-39pathname39-argument"></a>&#39; Dir &#39; 함수는 처음으로 호출는 &#39; 경로 이름 &#39; 인수
+에 대 한 초기 호출에서 `Dir` 함수 포함 되지 않습니다는 `PathName` 인수입니다. 첫 번째 호출 `Dir` 포함 되어야 합니다는 `PathName`, 하지만 후속 호출을 `Dir` 다음 항목을 검색 하는 매개 변수를 포함할 필요가 없습니다.  
   
-### 이 오류를 해결하려면  
+## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-1.  함수 호출에 `PathName` 인수를 사용합니다.  
+1.  제공 된 `PathName` 함수 호출의 인수입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.VisualBasic.FileSystem.Dir%2A>

@@ -1,9 +1,8 @@
 ---
-title: "죄송 하지만 되지 않았지만 비슷하므로이 Visual Basic 오류에 | Microsoft 문서"
-ms.date: 2015-07-20
+title: "죄송 합니다. 여기서 don &#39;이 Visual Basic 오류에 대 한 구체적인 정보가 t"
+ms.date: 07/20/2015
 ms.prod: .net
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -3048,54 +3047,37 @@ f1_keywords:
 - bc31432
 - bc30233
 - bc30829
-dev_langs:
-- VB
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 406a53192e8ce2cd56280dad01ebce3165d7e377
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 132bb3f93ae5084df73aed56b6d1483830984928
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>죄송 하지만 되지 않았지만 비슷하므로이 Visual Basic 오류에
+# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>죄송 합니다. 여기서 don &#39;이 Visual Basic 오류에 대 한 구체적인 정보가 t
 죄송합니다. 이 오류에 대한 구체적인 정보가 없습니다. 오류 번호와 메시지 텍스트를 검색하여 웹에서 정보를 찾을 수 있습니다. 또는 다음 포럼 중 하나에서 다른 개발자에게 질문을 할 수 있습니다.  
   
  [Visual Basic 언어](http://go.microsoft.com/fwlink/?LinkId=145963)  
- [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 언어 구문 및 컴파일러와 관련된 질문과 일반적인 토론을 위한 포럼을 제공합니다.  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 언어 구문 및 컴파일러와 관련된 질문과 일반적인 토론을 위한 포럼을 제공합니다.  
   
  [Visual Basic Interop 및 업그레이드](http://go.microsoft.com/fwlink/?LinkId=145966)  
- [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]으로의 업그레이드 및 상호 운용성 기능 사용과 관련한 질문과 문제를 위한 포럼을 제공합니다.  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]으로의 업그레이드 및 상호 운용성 기능 사용과 관련한 질문과 문제를 위한 포럼을 제공합니다.  
   
  [Visual Basic IDE](http://go.microsoft.com/fwlink/?LinkId=145971)  
- [!INCLUDE[vsprvs](../../csharp/includes/vsprvs_md.md)] 환경에서 작업하는 방법과 관련된 질문을 위한 포럼을 제공합니다.  
+ [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] 환경에서 작업하는 방법과 관련된 질문을 위한 포럼을 제공합니다.  
   
  [Visual Basic 일반](http://go.microsoft.com/fwlink/?LinkId=145973)  
- 다른 포럼에서 다루지 않는 [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 관련 질문과 문제를 위한 포럼을 제공합니다.  
+ 다른 포럼에서 다루지 않는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 관련 질문과 문제를 위한 포럼을 제공합니다.  
   
- [스택 오버플로](http://stackoverflow.com/questions/tagged/vb.net)  
- [!INCLUDE[vbprvb](../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)] 관련 질문과 문제를 위한 포럼을 제공합니다.  
+ [StackOverflow](http://stackoverflow.com/questions/tagged/vb.net)  
+ [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 관련 질문과 문제를 위한 포럼을 제공합니다.  
   
  다음 항목도 참조하세요.  
  [Visual Basic 프로그래머를 위한 추가 리소스](../../visual-basic/getting-started/additional-resources.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [Visual Basic 프로그래밍 가이드](../../visual-basic/programming-guide/index.md)   
+ [Visual Basic 프로그래밍 가이드](../../visual-basic/programming-guide/index.md)  
  [Visual Basic 참조](../../visual-basic/reference/index.md)

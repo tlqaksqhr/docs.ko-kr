@@ -1,39 +1,37 @@
 ---
-title: "Namespace or type specified in the Imports &#39;&lt;qualifiedelementname&gt;&#39; doesn&#39;t contain any public member or cannot be found | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "bc40056"
-  - "vbc40056"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "BC40056"
+title: "Namespace 또는 가져오기 &#39;에 지정 된 형식 &lt;qualifiedelementname&gt;&#39; 대상이 &#39; t public 멤버가 또는 형식을 찾을 수 없음"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- bc40056
+- vbc40056
+helpviewer_keywords: BC40056
 ms.assetid: b59f5754-444f-4378-9272-9678b437e84a
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 49cd9fa5d5182b2cf2d7fc4623bc8e9aa02bf85e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Namespace or type specified in the Imports &#39;&lt;qualifiedelementname&gt;&#39; doesn&#39;t contain any public member or cannot be found
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-Imports '\<qualifiedelementname\>'에 지정된 네임스페이스 또는 형식에 public 멤버가 없거나 해당 네임스페이스 또는 형식을 찾을 수 없습니다.네임스페이스 또는 형식이 정의되어 있으며 적어도 하나의 public 멤버가 포함되는지 확인합니다.별칭 이름에 다른 별칭이 포함되지 않는지 확인합니다.  
+# <a name="namespace-or-type-specified-in-the-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a>Namespace 또는 가져오기 &#39;에 지정 된 형식 &lt;qualifiedelementname&gt;&#39; 대상이 &#39; t public 멤버가 또는 형식을 찾을 수 없음
+Imports'에 지정 된 Namespace 또는 형식을\<qualifiedelementname >' public 멤버가 없거나 찾을 수 없습니다. 해당 네임 스페이스 또는 형식 정의 되어 있고 하나 이상의 public 멤버를 포함 합니다. 별칭 이름에는 다른 별칭 포함 되어 있지 않은지 확인 하십시오.  
   
- `Imports` 문은 찾을 수 없거나 `Public` 멤버를 정의하지 않는 포함하는 요소를 지정합니다.  
+ `Imports` 문을 지정 하거나 찾을 수 없거나 정의 하지 않는 포함 하는 요소 `Public` 멤버입니다.  
   
- *포함하는 요소*는 네임스페이스, 클래스, 구조체, 모듈, 인터페이스 또는 열거형일 수 있습니다.  포함하는 요소에는 변수와 같은 멤버, 프로시저 또는 다른 포함하는 요소가 포함됩니다.  
+ A *요소가 포함 된* 네임 스페이스, 클래스, 구조체, 모듈, 인터페이스 또는 열거형 일 수 있습니다. 포함 하는 요소, 변수, 프로시저 또는 다른 요소를 포함 하는 같은 멤버를 포함합니다.  
   
- 가져오기의 목적은 코드에서 네임스페이스 또는 형식 멤버를 한정하지 않고 해당 멤버에 액세스할 수 있도록 하기 위한 것입니다.  프로젝트가 네임스페이스 또는 형식에 대한 참조를 추가해야 할 수도 있습니다.  자세한 내용은 [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)의 "포함하는 요소 가져오기"를 참조하십시오.  
+ 가져오기의 목적은 한정 하지 않고 코드 네임 스페이스 또는 형식 멤버에 액세스를 허용 하도록 합니다. 프로젝트의 네임 스페이스 또는 형식에 대 한 참조를 추가 해야 할 수도 있습니다. 자세한 내용은 "포함 된 요소 가져오기"를 참조 [선언 된 요소에 대 한 참조](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)합니다.  
   
- 컴파일러에서 지정한 포함하는 요소를 찾을 수 없는 경우 해당 요소를 사용하는 참조를 확인할 수 없습니다.  요소를 찾았지만 해당 요소가 `Public` 멤버를 노출시키지 않는 경우 참조에 실패합니다.  두 가지 경우 모두 요소를 가져오는 의미가 없습니다.  
+ 컴파일러에서 지정 된 포함 하는 요소를 찾을 수 없는 경우을 사용 하는 참조를 확인할 수 없습니다. 요소를 찾습니다 있지만 요소는 노출 하지 않는 경우 `Public` 멤버 다음 참조가 없는 성공할 수 있습니다. 두 경우 모두에서 요소를 가져오는 의미가 없습니다.  
   
- 포함하는 요소를 가져와 가져오기 별칭을 지정하는 경우 해당 가져오기 별칭을 사용하여 다른 요소를 가져올 수 없습니다.  다음 코드에서는 컴파일러 오류가 생성됩니다.  
+ 포함 하는 요소를 가져오기 별칭을 할당 하는 경우 다음 사용할 수 없다는 해당 가져오기 별칭을 다른 요소를 가져오는 것을 명심 하십시오. 다음 코드는 컴파일러 오류를 생성 합니다.  
   
  `Imports`   `winfrm`   `= System.Windows.Forms`  
   
@@ -43,17 +41,17 @@ Imports '\<qualifiedelementname\>'에 지정된 네임스페이스 또는 형식
   
  **오류 ID:** BC40056  
   
-### 이 오류를 해결하려면  
+## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
-1.  프로젝트에서 포함하는 요소에 액세스할 수 있는지 확인합니다.  
+1.  포함 하는 요소는 프로젝트에서 액세스할 수 있는지 확인 합니다.  
   
-2.  포함하는 요소의 사양에 다른 가져오기로부터의 가져오기 별칭이 포함되지 않는지 확인합니다.  
+2.  포함 하는 요소 사양 다른 가져오기에서 모든 가져오기 별칭에 포함 되지 않습니다 확인 합니다.  
   
-3.  포함하는 요소가 적어도 하나의 `Public` 멤버를 노출시키는지 확인합니다.  
+3.  포함 하는 요소가 하나 이상를 통해 노출 된 확인 `Public` 멤버입니다.  
   
-## 참고 항목  
- [Imports Statement \(.NET Namespace and Type\)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)   
- [Namespace Statement](../../../visual-basic/language-reference/statements/namespace-statement.md)   
- [Public](../../../visual-basic/language-reference/modifiers/public.md)   
- [Visual Basic의 네임스페이스](../../../visual-basic/programming-guide/program-structure/namespaces.md)   
- [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+## <a name="see-also"></a>참고 항목  
+ [Imports 문(.NET 네임스페이스 및 형식)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
+ [Namespace 문](../../../visual-basic/language-reference/statements/namespace-statement.md)  
+ [공용](../../../visual-basic/language-reference/modifiers/public.md)  
+ [Visual Basic의 네임 스페이스](../../../visual-basic/programming-guide/program-structure/namespaces.md)  
+ [선언된 요소 참조](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

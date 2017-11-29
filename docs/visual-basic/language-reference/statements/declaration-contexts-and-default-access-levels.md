@@ -1,65 +1,64 @@
 ---
-title: "Declaration Contexts and Default Access Levels (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "module level, defined"
-  - "declaration contexts, Visual Basic"
-  - "procedure level, defined"
-  - "namespace level, defined"
-  - "access levels, Visual Basic"
-  - "access levels, default levels"
+title: "선언 컨텍스트 및 기본 액세스 수준(Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- module level, defined
+- declaration contexts, Visual Basic
+- procedure level, defined
+- namespace level, defined
+- access levels, Visual Basic
+- access levels, default levels
 ms.assetid: bf63b96e-e825-4745-88c8-5dae222728db
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: b89b74a6c0393f6a52a0b5c1ddf6f66c505564ba
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Declaration Contexts and Default Access Levels (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-이 항목에서는 다른 형식 안에 선언할 수 있는 Visual Basic 형식과 해당 형식의 액세스 수준을 지정하지 않을 경우의 기본값에 대해 설명합니다.  
+# <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>선언 컨텍스트 및 기본 액세스 수준(Visual Basic)
+이 항목에서는 있는 Visual Basic 형식과 다른 형식 내에서 선언 될 수 있으며 어떤 액세스 수준을 기본적으로 지정 하지 않은 경우를 설명 합니다.  
   
-## 선언 컨텍스트 수준  
- 프로그래밍 요소의 *선언 컨텍스트*는 해당 요소가 선언되는 코드의 영역입니다.  *포함 요소*라고도 하는 다른 프로그래밍 요소를 가리키는 경우도 많습니다.  
+## <a name="declaration-context-levels"></a>선언 컨텍스트 수준  
+ *선언 컨텍스트* 프로그래밍 요소의 선언 되는 코드의 영역입니다. 이 종종 라고도 하는 다른 프로그래밍 요소는 *요소를 포함 하*합니다.  
   
- 선언 컨텍스트의 수준은 다음과 같습니다.  
+ 수준을 선언 컨텍스트는 다음과 같습니다.  
   
--   *네임스페이스 수준* — 클래스, 구조체, 모듈 또는 인터페이스를 제외한 소스 파일 또는 네임스페이스 내  
+-   *Namespace 수준* -클래스, 구조체, 모듈 또는 인터페이스를 제외한 소스 파일이 나 네임 스페이스 내  
   
--   *모듈 수준* — 프로시저나 블록을 제외한 클래스, 구조체, 모듈 또는 인터페이스 내  
+-   *모듈 수준* — 블록 또는 프로시저일 내부가 아니라 클래스, 구조체, 모듈 또는 인터페이스 내에서  
   
--   *프로시저 수준* — 프로시저 또는 블록\(`If` 또는 `For`\) 내  
+-   *프로시저 수준* -프로시저 또는 블록 내에서 (예: `If` 또는 `For`)  
   
- 다음 표에서는 선언된 여러 가지 프로그래밍 요소에 대한 기본 액세스 수준을 해당 선언 컨텍스트에 따라 보여 줍니다.  
+ 다음 표에서 해당 선언 컨텍스트에 따라 다양 한 선언 된 프로그래밍 요소에 대 한 기본 액세스 수준을 보여 줍니다.  
   
-|선언 요소|네임스페이스 수준|모듈 수준|프로시저 수준|  
-|-----------|---------------|-----------|-------------|  
-|변수\([Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md)\)|허용되지 않음|`Private`\(`Structure`에서는 `Public`, `Interface`에서는 허용되지 않음\)|`Public`|  
-|상수\([Const Statement](../../../visual-basic/language-reference/statements/const-statement.md)\)|허용되지 않음|`Private`\(`Structure`에서는 `Public`, `Interface`에서는 허용되지 않음\)|`Public`|  
-|열거형\([Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md)\)|`Friend`|`Public`|허용되지 않음|  
-|클래스\([Class Statement](../../../visual-basic/language-reference/statements/class-statement.md)\)|`Friend`|`Public`|허용되지 않음|  
-|구조체\([Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md)\)|`Friend`|`Public`|허용되지 않음|  
-|모듈\([Module Statement](../../../visual-basic/language-reference/statements/module-statement.md)\)|`Friend`|허용되지 않음|허용되지 않음|  
-|인터페이스\([Interface Statement](../../../visual-basic/language-reference/statements/interface-statement.md)\)|`Friend`|`Public`|허용되지 않음|  
-|프로시저\([Function Statement](../../../visual-basic/language-reference/statements/function-statement.md), [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md)\)|허용되지 않음|`Public`|허용되지 않음|  
-|외부 참조\([Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)\)|허용되지 않음|`Public`\(`Interface`에서는 허용되지 않음\)|허용되지 않음|  
-|연산자\([Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)\)|허용되지 않음|`Public`\(`Interface` 또는 `Module`에서는 허용되지 않음\)|허용되지 않음|  
-|속성\([Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)\)|허용되지 않음|`Public`|허용되지 않음|  
-|기본 속성\([Default](../../../visual-basic/language-reference/modifiers/default.md)\)|허용되지 않음|`Public`\(`Module`에서는 허용되지 않음\)|허용되지 않음|  
-|이벤트\([Event Statement](../../../visual-basic/language-reference/statements/event-statement.md)\)|허용되지 않음|`Public`|허용되지 않음|  
-|대리자\([Delegate Statement](../../../visual-basic/language-reference/statements/delegate-statement.md)\)|`Friend`|`Public`|허용되지 않음|  
+|선언 요소|Namespace 수준|모듈 수준|프로시저 수준|  
+|----------------------|---------------------|------------------|---------------------|  
+|변수 ([Dim 문](../../../visual-basic/language-reference/statements/dim-statement.md))|허용 되지 않습니다.|`Private`(`Public` 에 `Structure`에서 허용 되지 않음, `Interface`)|`Public`|  
+|상수 ([Const 문](../../../visual-basic/language-reference/statements/const-statement.md))|허용 되지 않습니다.|`Private`(`Public` 에 `Structure`에서 허용 되지 않음, `Interface`)|`Public`|  
+|열거형 ([Enum 문](../../../visual-basic/language-reference/statements/enum-statement.md))|`Friend`|`Public`|허용 되지 않습니다.|  
+|클래스 ([Class 문](../../../visual-basic/language-reference/statements/class-statement.md))|`Friend`|`Public`|허용 되지 않습니다.|  
+|구조 ([문을 구조체](../../../visual-basic/language-reference/statements/structure-statement.md))|`Friend`|`Public`|허용 되지 않습니다.|  
+|모듈 ([Module 문](../../../visual-basic/language-reference/statements/module-statement.md))|`Friend`|허용 되지 않습니다.|허용 되지 않습니다.|  
+|인터페이스 ([Interface 문](../../../visual-basic/language-reference/statements/interface-statement.md))|`Friend`|`Public`|허용 되지 않습니다.|  
+|프로시저 ([문을 작동](../../../visual-basic/language-reference/statements/function-statement.md), [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md))|허용 되지 않습니다.|`Public`|허용 되지 않습니다.|  
+|외부 참조 ([선언 문의](../../../visual-basic/language-reference/statements/declare-statement.md))|허용 되지 않습니다.|`Public`(에 사용할 수 없습니다 `Interface`)|허용 되지 않습니다.|  
+|연산자 ([Operator 문](../../../visual-basic/language-reference/statements/operator-statement.md))|허용 되지 않습니다.|`Public`(에 사용할 수 없습니다 `Interface` 또는 `Module`)|허용 되지 않습니다.|  
+|속성 ([Property 문](../../../visual-basic/language-reference/statements/property-statement.md))|허용 되지 않습니다.|`Public`|허용 되지 않습니다.|  
+|기본 속성 ([기본](../../../visual-basic/language-reference/modifiers/default.md))|허용 되지 않습니다.|`Public`(에 사용할 수 없습니다 `Module`)|허용 되지 않습니다.|  
+|이벤트 ([Event 문](../../../visual-basic/language-reference/statements/event-statement.md))|허용 되지 않습니다.|`Public`|허용 되지 않습니다.|  
+|대리자 ([Delegate 문](../../../visual-basic/language-reference/statements/delegate-statement.md))|`Friend`|`Public`|허용 되지 않습니다.|  
   
- 자세한 내용은 [Access Levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)을 참조하십시오.  
+ 자세한 내용은 참조 [액세스 수준을 Visual Basic의](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)합니다.  
   
-## 참고 항목  
- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)   
- [Private](../../../visual-basic/language-reference/modifiers/private.md)   
- [Public](../../../visual-basic/language-reference/modifiers/public.md)
+## <a name="see-also"></a>참고 항목  
+ [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
+ [전용](../../../visual-basic/language-reference/modifiers/private.md)  
+ [공용](../../../visual-basic/language-reference/modifiers/public.md)

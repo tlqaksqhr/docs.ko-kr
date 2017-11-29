@@ -1,39 +1,43 @@
 ---
-title: "Windows Forms 컨트롤에서 속성 정의 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "사용자 지정 컨트롤[Windows Forms], 코드에서 속성 정의"
-  - "속성[Windows Forms], 코드에서 정의"
+title: "Windows Forms 컨트롤에서 속성 정의"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- properties [Windows Forms], defining in code
+- custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8c3c25b9c408e5b8f0b76cdf87375875cdb06a13
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Windows Forms 컨트롤에서 속성 정의
-속성에 대한 개요를 보려면 [속성 개요](../Topic/Properties%20Overview.md)를 참조하십시오.  속성을 정의할 경우 고려해야 할 몇 가지 중요한 사항은 다음과 같습니다.  
+# <a name="defining-a-property-in-windows-forms-controls"></a>Windows Forms 컨트롤에서 속성 정의
+속성의 개요는 [속성 개요](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52)를 참조하세요. 속성을 정의할 때 다음과 같은 몇 가지 주요 고려 사항이 있습니다.  
   
--   정의한 속성에 특성을 적용해야 합니다.  특성은 디자이너에서 속성을 표시하는 방법을 지정합니다.  자세한 내용은 [구성 요소의 디자인 타임 특성](../Topic/Design-Time%20Attributes%20for%20Components.md)을 참조하십시오.  
+-   정의한 속성에 특성을 적용해야 합니다. 특성은 디자이너가 속성을 표시하는 방법을 지정합니다. 자세한 내용은 [구성 요소의 디자인 타임 특성](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)을 참조하세요.  
   
--   속성 변경 시 컨트롤의 시각적 표시에 영향을 줄 경우 `set` 접근자에서 <xref:System.Windows.Forms.Control.Invalidate%2A> 메서드\(컨트롤이 <xref:System.Windows.Forms.Control>에서 상속하는 메서드\)를 호출하십시오.  그러면 <xref:System.Windows.Forms.Control.Invalidate%2A>는 컨트롤을 다시 그리는 <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드를 호출합니다.  <xref:System.Windows.Forms.Control.Invalidate%2A>를 여러 번 호출하면 <xref:System.Windows.Forms.Control.OnPaint%2A>는 효율성을 위해 한 번 호출됩니다.  
+-   컨트롤의 시각적 표시에 영향을 주는 속성을 변경 하는 경우 호출 된 <xref:System.Windows.Forms.Control.Invalidate%2A> 메서드 (컨트롤에서 상속 되는 <xref:System.Windows.Forms.Control>)에서 `set` 접근자입니다. <xref:System.Windows.Forms.Control.Invalidate%2A>호출 하 여는 <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드에 컨트롤을 다시 그립니다. 여러 번 호출 <xref:System.Windows.Forms.Control.Invalidate%2A> 를 한 번 호출 될 <xref:System.Windows.Forms.Control.OnPaint%2A> 효율성에 대 한 합니다.  
   
--   .NET Framework 클래스 라이브러리에서는 정수, 10진수, Boolean 값 등과 같은 공용 데이터 형식에 대한 형식 변환기를 제공합니다.  대개, 문자열에서 값으로\(문자열 데이터에서 다른 데이터 형식으로\) 변환하기 위해 형식 변환기가 제공됩니다.  공용 데이터 형식은 값을 문자열로, 문자열을 적절한 데이터 형식으로 변환하는 기본 형식 변환기와 연결되어 있습니다.  사용자 지정, 즉 비표준 데이터 형식의 속성을 정의하는 경우, 해당 속성과 연결될 형식 변환기를 지정하는 특성을 적용해야 합니다.  특성을 사용하여 사용자 지정 UI 형식 편집기를 속성과 연결할 수도 있습니다.  UI 형식 편집기에서는 속성이나 데이터 형식을 편집하기 위해 사용자 인터페이스를 제공합니다.  색 선택이 바로 UI 형식 편집기의 예입니다.  이 항목의 끝에는 특성의 예제가 나와 있습니다.  
+-   .NET Framework 클래스 라이브러리는 정수, 10진수 숫자, 부울 값 등과 같은 일반적인 데이터 형식에 대해 형식 변환기를 제공합니다. 형식 변환기의 목적은 일반적으로 문자열을 값으로 변환하도록 제공합니다(문자열 데이터에서 다른 데이터 형식으로). 일반적인 데이터 형식은 값을 문자열로 변환하고 문자열을 적절한 데이터 형식으로 변환하는 기본 형식 변환기와 연결됩니다. 사용자 지정(즉, 비표준) 데이터 형식인 속성을 정의하는 경우 형식 변환기를 지정하는 특성을 적용하여 해당 속성과 연결해야 합니다. 특성을 사용하여 사용자 지정 UI 형식 편집기를 속성과 연결할 수 있습니다. UI 형식 편집기는 속성이나 데이터 형식을 편집하는 사용자 인터페이스를 제공합니다. 색 선택은 UI 형식 편집기의 예입니다. 이 항목의 끝에 특성의 예가 제공됩니다.  
   
     > [!NOTE]
-    >  형식 변환기 또는 UI 형식 편집기를 사용자 지정 속성에 사용할 수 없는 경우에는 [Extending Design\-Time Support](../Topic/Extending%20Design-Time%20Support.md)에서 설명한 내용을 참조하여 새로 구현할 수 있습니다.  
+    >  사용자 지정 속성에 형식 변환기 또는 UI 형식 편집기를 사용할 수 없는 경우 [디자인 타임 지원 확장](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)에 설명된 대로 구현할 수 있습니다.  
   
- 다음 코드 부분에서는 사용자 지정 컨트롤 `FlashTrackBar`에 대해 `EndColor`라는 사용자 지정 속성을 정의합니다.  
+ 다음 코드 조각은 사용자 지정 컨트롤 `FlashTrackBar`에 대해 `EndColor`이라는 사용자 지정 속성을 정의합니다.  
   
 ```vb  
 Public Class FlashTrackBar  
@@ -66,7 +70,6 @@ Public Class FlashTrackBar
    End Property  
    ...  
 End Class  
-  
 ```  
   
 ```csharp  
@@ -102,7 +105,7 @@ public class FlashTrackBar : Control {
 }  
 ```  
   
- 다음 코드 부분에서는 형식 변환기와 UI 형식 편집기를 `Value` 속성과 연결합니다.  이런 경우 `Value`는 정수이고 기본 형식 변환기를 포함하지만 <xref:System.ComponentModel.TypeConverterAttribute> 특성은 디자이너가 이를 백분율로 표시할 수 있도록 사용자 지정 형식 변환기\(`FlashTrackBarValueConverter`\)를 적용합니다.  UI 형식 편집기 `FlashTrackBarValueEditor`를 사용하면 백분율을 시각적으로 표시할 수 있습니다.  또한 이 예제에서는 <xref:System.ComponentModel.TypeConverterAttribute> 특성이나 <xref:System.ComponentModel.EditorAttribute> 특성에서 지정한 형식 변환기 또는 편집기를 통해 기본 변환기를 재정의하는 것도 보여 줍니다.  
+ 다음 코드 조각은 형식 변환기 및 UI 형식 편집기를 속성 `Value`과 연결합니다. 이 경우 `Value` 는 정수 이며 기본 형식 변환기가 있지만 <xref:System.ComponentModel.TypeConverterAttribute> 특성을 적용 한 사용자 지정 형식 변환기 (`FlashTrackBarValueConverter`)를 백분율로 표시 하려면 디자이너 수 있게 해 주는 합니다. UI 형식 편집기인 `FlashTrackBarValueEditor`은 백분율을 시각적으로 표시할 수 있습니다. 또한 보여 주는이 예제는 형식 변환기 또는 편집기로 지정 된는 <xref:System.ComponentModel.TypeConverterAttribute> 또는 <xref:System.ComponentModel.EditorAttribute> 특성 기본 변환기를 재정의 합니다.  
   
 ```vb  
 <Category("Flash"), _  
@@ -113,7 +116,6 @@ Description("The current value of the track bar.  You can enter an actual value 
 Public ReadOnly Property Value() As Integer  
 ...  
 End Property  
-  
 ```  
   
 ```csharp  
@@ -128,8 +130,8 @@ public int Value {
 }  
 ```  
   
-## 참고 항목  
- [Windows Forms 컨트롤의 속성](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)   
- [ShouldSerialize 및 Reset 메서드를 사용하여 기본값 정의](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)   
- [속성 변경 이벤트](../../../../docs/framework/winforms/controls/property-changed-events.md)   
+## <a name="see-also"></a>참고 항목  
+ [Windows Forms 컨트롤의 속성](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
+ [ShouldSerialize 및 Reset 메서드를 사용하여 기본값 정의](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)  
+ [속성 변경 이벤트](../../../../docs/framework/winforms/controls/property-changed-events.md)  
  [Windows Forms 컨트롤의 특성](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)

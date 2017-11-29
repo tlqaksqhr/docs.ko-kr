@@ -1,25 +1,28 @@
 ---
-title: "워크플로 서비스 내에서 ID 정보 액세스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "워크플로 서비스 내에서 ID 정보 액세스"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0b832127-b35b-468e-a45f-321381170cbc
-caps.latest.revision: 9
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 3b1a54f1c1529879074d2d0e7172fd52c5386c8f
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 워크플로 서비스 내에서 ID 정보 액세스
-워크플로 서비스 내에서 ID 정보에 액세스하려면 사용자 지정 실행 속성에서 <xref:System.ServiceModel.Activities.IReceiveMessageCallback> 인터페이스를 구현해야 합니다.<xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage%2A> System.Activities.ExecutionProperties)?qualifyHint=False&autoUpgrade=True 메서드에서 <xref:System.ServiceModel.OperationContext.ServiceSecurityContext>를 액세스하여 ID 정보에 액세스할 수 있습니다.이 항목에서는 이 실행 속성을 구현하고 런타임에 이 속성을 <xref:System.ServiceModel.Activities.Receive> 작업에 노출할 사용자 지정 작업을 구현하는 과정을 안내합니다.사용자 지정 작업은 <xref:System.ServiceModel.Activities.Sequence> 작업과 동일한 동작을 구현합니다. 단, <xref:System.ServiceModel.Activities.Receive>를 내부에 배치할 경우 <xref:System.ServiceModel.Activities.IReceiveMessageCallback>이 호출되고 ID 정보가 검색된다는 점은 다릅니다.  
+# <a name="accessing-identity-information-inside-a-workflow-service"></a>워크플로 서비스 내에서 ID 정보 액세스
+워크플로 서비스 내에서 ID 정보에 액세스하려면 사용자 지정 실행 속성에서 <xref:System.ServiceModel.Activities.IReceiveMessageCallback> 인터페이스를 구현해야 합니다. 에 <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage%2A> System.Activities.ExecutionProperties)?qualifyHint=False & autoUpgrade = True 메서드에 액세스할 수는 <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> id 정보에 액세스 하려면. 이 항목에서는 이 실행 속성을 구현하고 런타임에 이 속성을 <xref:System.ServiceModel.Activities.Receive> 작업에 노출할 사용자 지정 작업을 구현하는 과정을 안내합니다.  사용자 지정 활동에는 동일한 동작을 구현 합니다는 <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` 때를 제외 하 고 활동은 <xref:System.ServiceModel.Activities.Receive> 내부에 배치 되는 <xref:System.ServiceModel.Activities.IReceiveMessageCallback> 호출 되 고 id 정보가 검색 됩니다.  
   
-### IReceiveMessageCallback 구현  
+### <a name="implement-ireceivemessagecallback"></a>IReceiveMessageCallback 구현  
   
 1.  빈 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] 솔루션을 만듭니다.  
   
@@ -53,14 +56,13 @@ caps.handback.revision: 9
           }  
         }  
     }  
-  
     ```  
   
      이 코드에서는 메서드에 전달된 <xref:System.ServiceModel.OperationContext>를 사용하여 ID 정보에 액세스합니다.  
   
-### 기본 작업을 구현하여 NativeActivityContext에 IReceiveMessageCallback 구현 추가  
+### <a name="implement-a-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a>기본 작업을 구현하여 NativeActivityContext에 IReceiveMessageCallback 구현 추가  
   
-1.  `AccessIdentityScope`라는 <xref:System.Activities.NativeActivity>에서 파생된 새 클래스를 추가합니다.  
+1.  <xref:System.Activities.NativeActivity>라는 `AccessIdentityScope`에서 파생된 새 클래스를 추가합니다.  
   
 2.  자식 작업, 변수, 현재 작업 인덱스 및 <xref:System.Activities.CompletionCallback> 콜백을 추적하기 위해 로컬 변수를 추가합니다.  
   
@@ -72,7 +74,6 @@ caps.handback.revision: 9
         Variable<int> currentIndex;  
         CompletionCallback onChildComplete;  
     }  
-  
     ```  
   
 3.  생성자를 구현합니다.  
@@ -84,7 +85,6 @@ caps.handback.revision: 9
         this.variables = new Collection<Variable>();  
         this.currentIndex = new Variable<int>();  
     }  
-  
     ```  
   
 4.  `Activities` 및 `Variables` 속성을 구현합니다.  
@@ -99,7 +99,6 @@ caps.handback.revision: 9
     {  
         get { return this.variables; }  
     }  
-  
     ```  
   
 5.  <xref:System.Activities.NativeActivity.CacheMetadata%2A>를 재정의합니다.  
@@ -112,7 +111,6 @@ caps.handback.revision: 9
         //add the private implementation variable: currentIndex   
         metadata.AddImplementationVariable(this.currentIndex);  
     }  
-  
     ```  
   
 6.  <xref:System.Activities.NativeActivity.Execute%2A>를 재정의합니다.  
@@ -149,12 +147,11 @@ caps.handback.revision: 9
        //increment the currentIndex  
        this.currentIndex.Set(context, ++currentActivityIndex);  
     }  
-  
     ```  
   
-### 워크플로 서비스 구현  
+### <a name="implement-the-workflow-service"></a>워크플로 서비스 구현  
   
-1.  기존 `Program` 클래스를 엽니다.  
+1.  기존 열 `Program` 클래스입니다.  
   
 2.  다음 상수를 정의합니다.  
   
@@ -164,7 +161,6 @@ caps.handback.revision: 9
        const string addr = "http://localhost:8080/Service";  
        static XName contract = XName.Get("IService", "http://tempuri.org");  
     }  
-  
     ```  
   
 3.  워크플로 서비스를 만드는 `GetWorkflowService`라는 정적 메서드를 추가합니다.  
@@ -204,7 +200,6 @@ caps.handback.revision: 9
           }  
        };  
      }  
-  
     ```  
   
 4.  기존 `Main` 메서드에서 워크플로 서비스를 호스트합니다.  
@@ -226,10 +221,9 @@ caps.handback.revision: 9
           host.Close();  
        }  
     }  
-  
     ```  
   
-### 워크플로 클라이언트 구현  
+### <a name="implement-a-workflow-client"></a>워크플로 클라이언트 구현  
   
 1.  `Client`라는 콘솔 응용 프로그램 프로젝트를 새로 만듭니다.  
   
@@ -293,7 +287,6 @@ caps.handback.revision: 9
           };  
        }  
     }  
-  
     ```  
   
 4.  다음 호스팅 코드를 `Main()` 메서드에 추가합니다.  
@@ -307,14 +300,12 @@ caps.handback.revision: 9
        Console.WriteLine("Press [ENTER] to exit");  
        Console.ReadLine();  
     }  
-  
     ```  
   
-## 예제  
+## <a name="example"></a>예제  
  다음은 이 항목에서 사용되는 전체 소스 코드 목록입니다.  
   
 ```  
-  
 // AccessIdentityCallback.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -352,11 +343,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-  
 ```  
   
 ```  
-  
 // AccessIdentityScope.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -439,11 +428,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-  
 ```  
   
 ```  
-  
 // Service.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -516,11 +503,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-  
 ```  
   
 ```  
-  
 // client.cs   
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -596,10 +581,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
         }  
     }  
 }  
-  
 ```  
   
-## 참고 항목  
- [워크플로 서비스](../../../../docs/framework/wcf/feature-details/workflow-services.md)   
- [OperationContext 액세스](../../../../docs/framework/windows-workflow-foundation/samples/accessing-operationcontext.md)   
- [명령 코드를 사용하여 워크플로, 활동 및 식 작성](../../../../docs/framework/windows-workflow-foundation//authoring-workflows-activities-and-expressions-using-imperative-code.md)
+## <a name="see-also"></a>참고 항목  
+ [워크플로 서비스](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [OperationContext 액세스](../../../../docs/framework/windows-workflow-foundation/samples/accessing-operationcontext.md)  
+ [명령형 코드를 사용하여 워크플로, 활동 및 식 작성](../../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)

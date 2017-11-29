@@ -1,42 +1,46 @@
 ---
-title: "방법: Windows Forms ListView 컨트롤에서 항목 선택 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "목록 보기, 항목 선택"
-  - "목록, 항목 선택"
-  - "ListView 컨트롤[Windows Forms], 항목 선택"
-  - "선택, 목록 보기"
+title: "방법: Windows Forms ListView 컨트롤에서 항목 선택"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- lists [Windows Forms], selecting items
+- ListView control [Windows Forms], selecting items
+- selection [Windows Forms], in list views
+- list views [Windows Forms], selecting items
 ms.assetid: ddea918e-1ddf-47f4-bd09-1e9b4c9d0c39
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e7acbda541000655ff96b70a2188169b7e8ccd9a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: Windows Forms ListView 컨트롤에서 항목 선택
-이 예제에서는 Windows Forms <xref:System.Windows.Forms.ListView> 컨트롤에서 프로그래밍 방식으로 항목을 선택하는 방법을 보여 줍니다.  프로그래밍 방식으로 항목을 선택하면 <xref:System.Windows.Forms.ListView> 컨트롤에 대한 포커스가 자동으로 바뀌지 않습니다.  따라서 항목을 선택할 때 해당 항목에 포커스가 오도록 설정하려는 것이 일반적입니다.  
+# <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>방법: Windows Forms ListView 컨트롤에서 항목 선택
+이 예제에서는 프로그래밍 방식으로 Windows Forms에서 항목을 선택 하는 방법을 보여 줍니다 <xref:System.Windows.Forms.ListView> 제어 합니다. 프로그래밍 방식으로 항목을 선택 하면 자동으로 바뀌지 않습니다에 포커스는 <xref:System.Windows.Forms.ListView> 제어 합니다. 이러한 이유로 일반적으로 하려는 항목을 선택할 때 중심으로 항목을 설정 합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  [!code-csharp[System.Windows.Forms.ListView.Misc#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Misc/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.ListView.Misc#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView.Misc/VB/form1.vb#1)]  
   
-## 코드 컴파일  
+## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
--   항목이 최소한 하나 이상 포함되어 있고 이름이 `listView1`인 <xref:System.Windows.Forms.ListView> 컨트롤  
+-   A <xref:System.Windows.Forms.ListView> 라는 컨트롤 `listView1` 항목을 하나 이상 들어 있는입니다.  
   
--   <xref:System?displayProperty=fullName> 및 <xref:System.Windows.Forms?displayProperty=fullName> 네임스페이스에 대한 참조  
+-   <xref:System?displayProperty=nameWithType> 및 <xref:System.Windows.Forms?displayProperty=nameWithType> 네임스페이스에 대한 참조  
   
-## 참고 항목  
- <xref:System.Windows.Forms.ListView>   
- <xref:System.Windows.Forms.ListViewItem.Selected%2A?displayProperty=fullName>
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Windows.Forms.ListView>  
+ <xref:System.Windows.Forms.ListViewItem.Selected%2A?displayProperty=nameWithType>

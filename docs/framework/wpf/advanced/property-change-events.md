@@ -1,73 +1,76 @@
 ---
-title: "속성 변경 이벤트 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "change 이벤트[WPF], 속성"
-  - "속성 트리거 만들기[WPF]"
-  - "종속성 속성[WPF], change 이벤트"
-  - "이벤트[WPF], 속성 값 변경"
-  - "변경된 속성 이벤트 식별[WPF]"
-  - "속성 변경 이벤트[WPF]"
-  - "속성 변경 이벤트[WPF], 형식"
-  - "속성 트리거[WPF]"
-  - "속성 트리거[WPF], 정의"
-  - "속성 값 변경 내용[WPF]"
+title: "속성 변경 이벤트"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dependency properties [WPF], change events
+- property value changes [WPF]
+- change events [WPF], property
+- events [WPF], change in property values
+- creating property triggers [WPF]
+- property change events [WPF], types of
+- property change events [WPF]
+- property triggers [WPF]
+- identifying changed property events [WPF]
+- property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-caps.latest.revision: 10
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 9
+caps.latest.revision: "10"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e415d5ab46bc354198135fc4e0902e3017923e20
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 속성 변경 이벤트
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에는 속성 값 변경에 대한 응답으로 발생하는 몇 가지 이벤트가 정의되어 있습니다.  대개 이러한 속성은 [종속성 속성](GTMT)입니다.  이벤트 자체는 [라우트된 이벤트](GTMT)인 경우도 있고 표준 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 이벤트인 경우도 있습니다.  속성 변경은 일반적으로 속성이 변경된 개체에만 적용되나 요소 트리 전체에서 더욱 적절하게 라우트되는 속성 변경도 있으므로 이벤트 정의는 시나리오에 따라 다릅니다.  
+# <a name="property-change-events"></a>속성 변경 이벤트
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]는 속성 값 변경에 대한 응답으로 발생하는 여러 이벤트를 정의합니다. 일반적으로 속성은 종속성 속성입니다. 이벤트 자체는 라우트된 이벤트인 경우도 있고 표준 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 이벤트인 경우도 있습니다. 이벤트 정의는 시나리오에 따라 달라집니다. 일부 속성 변경은 요소 트리를 통해 더 적절하게 라우트되지만 다른 속성 변경은 일반적으로 해당 속성이 변경한 개체에만 영향을 미치기 때문입니다.  
   
-## 속성 변경 이벤트 식별  
- 속성 변경 보고 이벤트 중 일부는 시그니처 패턴 또는 명명 패턴을 통해 명시적으로 속성 변경 이벤트로 식별되지 않습니다.  일반적으로 [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] 설명서의 이벤트 설명 부분에서는 이벤트가 속성 값 변경에 직접 연결되었는지 여부를 알려 주고 속성과 이벤트 사이의 상호 참조를 제공합니다.  
+## <a name="identifying-a-property-change-event"></a>속성 변경 이벤트 식별  
+ 속성 변경을 보고하는 일부 이벤트는 시그니처 패턴 또는 명명 패턴 덕분에 속성 변경 이벤트로 명시적으로 식별되지 않습니다. 일반적으로 [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] 문서의 이벤트 설명은 이벤트가 속성 값 변경에 직접 연결되고 속성과 이벤트 간의 상호 참조를 제공하는지 여부를 나타냅니다.  
   
-### RoutedPropertyChanged 이벤트  
- 일부 이벤트는 속성 변경 이벤트에 명시적으로 사용되는 이벤트 데이터 형식과 대리자를 사용합니다.  이 경우 이벤트 데이터 형식은 <xref:System.Windows.RoutedPropertyChangedEventArgs%601>이고 대리자는 <xref:System.Windows.RoutedPropertyChangedEventHandler%601>입니다.  이벤트 데이터 및 대리자 모두 제네릭 형식 매개 변수를 사용합니다. 제네릭 형식 매개 변수는 처리기를 정의할 때 변경 속성의 실제 형식을 지정하는 데 사용됩니다.  이벤트 데이터에는 <xref:System.Windows.RoutedPropertyChangedEventArgs%601.OldValue%2A> 및 <xref:System.Windows.RoutedPropertyChangedEventArgs%601.NewValue%2A>라는 두 가지 속성이 있으며, 이 두 속성은 모두 이벤트 데이터에 형식 인수로 전달됩니다.  
+### <a name="routedpropertychanged-events"></a>RoutedPropertyChanged 이벤트  
+ 특정 이벤트에서는 속성 변경 이벤트에 명시적으로 사용되는 이벤트 데이터 형식 및 대리자를 사용합니다. 이벤트 데이터 형식은 <xref:System.Windows.RoutedPropertyChangedEventArgs%601>, 고 대리자는 <xref:System.Windows.RoutedPropertyChangedEventHandler%601>합니다. 이벤트 데이터와 대리자는 둘 다 처리기를 정의할 때 변경 중인 속성의 실제 형식을 지정하는 데 사용되는 제네릭 형식 매개 변수를 포함합니다. 두 속성을 포함 하는 이벤트 데이터 <xref:System.Windows.RoutedPropertyChangedEventArgs%601.OldValue%2A> 및 <xref:System.Windows.RoutedPropertyChangedEventArgs%601.NewValue%2A>은 모두 다음 형식 인수로 전달 된 이벤트 데이터입니다.  
   
- 이름의 "Routed" 부분은 속성 변경 이벤트가 라우트된 이벤트로 등록되었음 나타냅니다.  속성 변경 이벤트를 라우트하면 컨트롤의 복합 파트인 자식 요소의 속성 값이 변경되었을 때 최상위 컨트롤에서 속성 변경 이벤트를 받을 수 있다는 장점이 있습니다.  예를 들어 <xref:System.Windows.Controls.Slider>와 같은 <xref:System.Windows.Controls.Primitives.RangeBase> 컨트롤을 통합하는 컨트롤을 만든 경우,  슬라이더 파트에서 <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> 속성 값이 변경되면 해당 파트 대신 부모 컨트롤에서 변경 내용을 처리하는 것이 좋습니다.  
+ 이름의 "Routed" 부분은 속성 변경 이벤트가 라우트된 이벤트로 등록되었음을 나타냅니다. 속성 변경 이벤트를 라우트하는 방법의 장점은 자식 요소의 속성(컨트롤의 복합 부분) 값이 변경될 경우 최상위 컨트롤이 속성 변경 이벤트를 수신할 수 있다는 점입니다. 예를 들어, 통합 하는 컨트롤을 만들 수 있습니다는 <xref:System.Windows.Controls.Primitives.RangeBase> 등의 컨트롤을 <xref:System.Windows.Controls.Slider>합니다. 하는 경우의 값은 <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A> 슬라이더 파트의 속성 변경 하려는 경우도 부분 아닌 부모 컨트롤에 해당 변경을 처리 합니다.  
   
- 이전 값과 새 값을 모두 알 수 있기 때문에 이 이벤트 처리기를 속성 값에 대한 유효성 검사기로 사용할 수 있다고 생각할 수 있습니다.  그러나 대부분의 속성 변경 이벤트는 이러한 용도로 디자인되지 않았습니다.  일반적으로 이러한 값은 코드의 다른 논리 영역에서 처리되도록 제공되지만 이벤트 처리기 내에서 실제로 값을 변경하지 않는 것이 좋습니다. 값을 변경할 경우 처리기의 구현 방법에 따라서 예기치 않은 재귀가 발생할 수 있습니다.  
+ 이전 값과 새 값이 있으므로 이 이벤트 처리기를 속성 값에 대한 유효성 검사기로 사용하려고 할 수 있습니다. 하지만 이 방법은 대부분 속성 변경 이벤트의 디자인 의도가 아닙니다. 일반적으로 코드의 다른 논리 영역에서 값에 대한 작업을 수행할 수 있도록 해당 값이 제공되지만, 실제로 이벤트 처리기 내의 값을 변경하는 것은 좋지 않고 이로 인해 처리기 구현 방식에 따라 의도치 않은 재귀가 발생할 수 있습니다.  
   
- 속성이 사용자 지정 종속성 속성이거나, 인스턴스화 코드가 정의된 파생 클래스로 작업하는 경우에는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성 시스템에 기본적으로 포함되어 있는 속성 시스템 콜백인 <xref:System.Windows.CoerceValueCallback>과 <xref:System.Windows.PropertyChangedCallback>을 통해 속성 변경을 보다 효과적으로 추적할 수 있습니다.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성 시스템을 사용하여 유효성 검사 및 강제 변환을 수행하는 방법에 대한 자세한 내용은 [종속성 속성 콜백 및 유효성 검사](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md) 및 [사용자 지정 종속성 속성](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)을 참조하십시오.  
+ 속성은 사용자 지정 종속성 속성 이거나 하에 기본 제공 속성 변경 내용을 추적 하기 위한 훨씬 더 나은 메커니즘 인스턴스화 코드 정의 된 파생된 클래스 작업 하는 경우는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성 시스템:는 속성 시스템 콜백 <xref:System.Windows.CoerceValueCallback> 및 <xref:System.Windows.PropertyChangedCallback>합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 속성 시스템을 유효성 검사 및 강제 변환에 사용하는 방법에 대한 자세한 내용은 [종속성 속성 콜백 및 유효성 검사](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md) 및 [사용자 지정 종속성 속성](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)을 참조하세요.  
   
-### DependencyPropertyChanged 이벤트  
- 속성 변경 이벤트 시나리오에는 <xref:System.Windows.DependencyPropertyChangedEventArgs> 및 <xref:System.Windows.DependencyPropertyChangedEventHandler> 형식도 사용됩니다.  이러한 속성 변경에 대한 이벤트는 표준 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 이벤트이기 때문에 라우트되지 않습니다.  <xref:System.Windows.DependencyPropertyChangedEventArgs>는 <xref:System.EventArgs>에서 파생되지 않는 예외적인 이벤트 데이터 보고 형식입니다. <xref:System.Windows.DependencyPropertyChangedEventArgs>는 클래스가 아니라 구조체입니다.  
+### <a name="dependencypropertychanged-events"></a>DependencyPropertyChanged 이벤트  
+ 속성 변경된 이벤트 시나리오의 일부인 형식의 다른 쌍이 <xref:System.Windows.DependencyPropertyChangedEventArgs> 및 <xref:System.Windows.DependencyPropertyChangedEventHandler>합니다. 이러한 속성 변경에 대한 이벤트는 라우트되지 않습니다. 이러한 이벤트는 표준 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 이벤트입니다. <xref:System.Windows.DependencyPropertyChangedEventArgs>보고 형식에서 파생 되지 않은 비정상 이벤트 데이터는 <xref:System.EventArgs>; <xref:System.Windows.DependencyPropertyChangedEventArgs> 클래스가 아닌는 구조입니다.  
   
- <xref:System.Windows.DependencyPropertyChangedEventArgs> 및 <xref:System.Windows.DependencyPropertyChangedEventHandler>를 사용하는 이벤트는 `RoutedPropertyChanged` 이벤트보다는 조금 더 보편적으로 사용됩니다.  이러한 형식을 사용하는 이벤트로는 <xref:System.Windows.UIElement.IsMouseCapturedChanged>를 예로 들 수 있습니다.  
+ 사용 하는 이벤트 <xref:System.Windows.DependencyPropertyChangedEventArgs> 및 <xref:System.Windows.DependencyPropertyChangedEventHandler> 보다 약간 더 공통적인 `RoutedPropertyChanged` 이벤트입니다. 이러한 형식을 사용 하는 이벤트의 예로 <xref:System.Windows.UIElement.IsMouseCapturedChanged>합니다.  
   
- <xref:System.Windows.DependencyPropertyChangedEventArgs>도 <xref:System.Windows.RoutedPropertyChangedEventArgs%601>와 마찬가지로 속성의 이전 값과 새 값을 보고합니다.  또한 값을 처리하는 방법에 대한 고려 사항이 이 경우에도 동일하게 적용되므로 이벤트에 대한 응답으로 값을 변경하지 않는 것이 좋습니다.  
+ 마찬가지로 <xref:System.Windows.RoutedPropertyChangedEventArgs%601>, <xref:System.Windows.DependencyPropertyChangedEventArgs> 또한 속성에는 이전 구문과 새 값을 보고 합니다. 또한 이러한 값으로 수행할 작업에 대해 같은 사항을 고려해야 합니다. 일반적으로 이벤트에 대한 응답으로 sender에서 값을 다시 변경하지 않는 것이 좋습니다.  
   
-## 속성 트리거  
- 속성 트리거는 속성 변경 이벤트와 매우 밀접하게 관련된 개념입니다.  속성 트리거는 스타일 또는 템플릿 내에서 생성되며, 속성 트리거를 사용하면 속성 트리거가 할당된 속성의 값을 기준으로 하는 조건부 동작을 만들 수 있습니다.  
+## <a name="property-triggers"></a>속성 트리거  
+ 속성 트리거는 속성 변경 이벤트와 밀접한 관계가 있습니다. 속성 트리거는 스타일 또는 템플릿 내에서 만들어지고 이를 통해 속성 트리거에 할당된 속성 값에 따라 조건부 동작을 만들 수 있습니다.  
   
- 속성 트리거의 속성은 종속성 속성이며  일반적으로 읽기 전용입니다.  컨트롤에서 노출되는 종속성 속성의 이름이 "Is"로 시작하는 경우에는 해당 속성이 부분적으로나마 속성 트리거로 디자인되었음을 알 수 있습니다.  대개 이와 같은 이름을 갖는 속성은 읽기 전용 부울 종속성 속성입니다. 이 속성은 실시간 UI에 영향을 줄 수 있는 컨트롤 상태를 보고하는 데 주로 사용되기 때문에 속성 트리거가 될 수 있습니다.  
+ 속성 트리거의 속성은 종속성 속성이어야 합니다. 읽기 전용 종속성 속성일 수 있고 대부분 이러한 속성입니다. 컨트롤이 표시하는 종속성 속성이 최소한 부분적으로 속성 트리거로 디자인된 경우를 나타내는 좋은 지표는 속성 이름이 "Is"로 시작되는 경우입니다. 일반적으로 이렇게 이름이 지정된 속성은 읽기 전용 부울 종속성 속성입니다. 이 종속성 속성에 대한 기본 시나리오는 실시간 UI에 대한 결과를 생성할 수 있는 컨트롤 상태를 보고하므로 속성 트리거의 후보가 됩니다.  
   
- 이러한 속성 중 일부는 전용 속성 변경 이벤트를 사용합니다.  예를 들어 <xref:System.Windows.UIElement.IsMouseCaptured%2A> 속성은 <xref:System.Windows.UIElement.IsMouseCapturedChanged>라는 속성 변경 이벤트를 사용합니다.  이 속성 자체는 읽기 전용이고 속성 값은 입력 시스템에 의해 조정됩니다. 입력 시스템에서는 실시간 변경 사항이 발생할 때마다 <xref:System.Windows.UIElement.IsMouseCapturedChanged>를 발생시킵니다.  
+ 이러한 속성 중 일부에는 전용 속성 변경 이벤트도 있습니다. 예를 들어, 속성 <xref:System.Windows.UIElement.IsMouseCaptured%2A> 속성 변경 이벤트에 <xref:System.Windows.UIElement.IsMouseCapturedChanged>합니다. 입력된 시스템에서 발생 하 고 속성 자체는 읽기 전용 값 입력된 시스템에 의해 조정 <xref:System.Windows.UIElement.IsMouseCapturedChanged> 에 있습니다.  
   
- 속성 트리거를 사용하여 속성 변경을 처리하면 실제 속성 변경 이벤트에 비해 작업이 제한됩니다.  
+ 실제 속성 변경 이벤트에 비해 속성 변경에 대한 작업을 수행하는 속성 트리거 사용에는 몇 가지 제한 사항이 있습니다.  
   
- 속성 트리거는 완벽하게 일치하는 논리를 기초로 동작하기 때문에  사용자는 속성 및 트리거가 동작할 구체적인 값을 나타내는 값을 지정해야 합니다.  예를 들면 `<Setter Property="IsMouseCaptured" Value="true"> ... </Setter>`와 같이 지정합니다.  이러한 제한 때문에 대부분의 속성 트리거는 부울 속성 또는 각 값에 대해 트리거를 정의할 수 있을 정도로 가능한 값 범위가 제한된 전용 열거형 값을 갖는 속성에 대해 사용됩니다.  항목 수가 0에 도달했다가 속성 값이 다시 0 이외의 값으로 변경되는 경우를 고려하는 트리거는 따로 없기 때문에 이와 같이 특별한 값에 대해 속성 트리거를 사용할 수도 있습니다. 이 경우에는 0 이외의 다른 모든 값에 대해 트리거를 사용하는 대신 이벤트 처리기 코드를 사용하거나, 값이 0이 아닐 때 트리거 상태에서 다시 전환하는 기본 동작을 사용할 수 있습니다.  
+ 속성 트리거는 정확한 일치 논리를 진행합니다. 속성과 함께 트리거가 작업을 수행할 특정 값을 지정합니다. 예: `<Setter Property="IsMouseCaptured" Value="true"> ... </Setter>`. 이 제한 사항 때문에 대부분의 속성 트리거는 부울 속성 또는 전용 열거형 값을 사용하는 속성에 사용됩니다. 여기서 가능한 값 범위는 각 경우에 대한 트리거를 정의할 만큼 충분히 관리하기 쉽습니다. 또는 속성 트리거는 항목 개수가 0에 도달하는데 속성 값이 다시 0이 아닌 수로 변경될 때 이를 처리할 트리거가 없는 경우와 같은 특수 값에 대해서만 존재할 수 있습니다. 모든 경우에 대한 트리거 대신에 여기에는 코드 이벤트 처리기가 필요하거나 값이 0이 아닐 때 다시 트리거 상태에서 전환되는 기본 동작이 필요할 수 있습니다.  
   
- 속성 트리거 구문은 프로그래밍 시 사용하는 "if" 문과 유사합니다.  트리거 조건이 true이면 속성 트리거의 "본문"이 "실행"됩니다.  속성 트리거의 "본문"은 코드가 아니라 태그이며  이 태그는 하나 이상의 <xref:System.Windows.Setter> 요소를 사용하여 스타일 또는 템플릿이 적용된 개체의 다른 속성을 설정하도록 제한됩니다.  
+ 속성 트리거 구문은 프로그래밍의 "if" 문과 비슷합니다. 트리거 조건이 true이면 속성 트리거의 “본문”이 “실행”됩니다. 속성 트리거의 “본문”은 코드가 아니라 태”그입니다. 해당 태그는 하나 이상의 방법으로 제한 <xref:System.Windows.Setter> 여기서 스타일이 나 템플릿을 적용 되는 개체의 다른 속성을 설정 하는 요소입니다.  
   
- 가능한 값 범위가 광범위한 속성 트리거의 "if" 조건을 오프셋하려면 일반적으로 <xref:System.Windows.Setter>를 사용하여 동일한 속성 값을 기본값으로 설정하는 것이 좋습니다.  이렇게 하면 트리거 조건이 true인 경우에만 <xref:System.Windows.Trigger>에 포함된 setter가 우선적으로 적용되고, 트리거 조건이 false인 경우에는 <xref:System.Windows.Trigger>에 포함되지 않은 <xref:System.Windows.Setter>가 우선적으로 적용됩니다.  
+ 가능한 값의 다양 한 속성 트리거의 "if" 조건 오프셋, 일반적으로 좋습니다 기본값을 사용 하 여 같은 속성 값을 설정 하는 <xref:System.Windows.Setter>합니다. 이러한 방식으로 <xref:System.Windows.Trigger> 트리거 조건이 true 인 경우 포함 된 setter 우선 순위를 가집니다 및 <xref:System.Windows.Setter> 포함 되지 않은 한 <xref:System.Windows.Trigger> 트리거 조건이 false가 될 때마다 우선 순위를 가집니다.  
   
- 일반적으로 속성 트리거는 같은 요소에 대한 특정 속성의 상태에 따라 하나 이상의 모양 속성이 변경되는 시나리오에 사용하기 적합합니다.  
+ 일반적으로 속성 트리거는 같은 요소에서 또 다른 속성 상태에 따라 하나 이상의 모양 속성을 변경해야 하는 시나리오에 적합합니다.  
   
- 속성 트리거에 대한 자세한 내용은 [스타일 지정 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md)을 참조하십시오.  
+ 속성 트리거에 대한 자세한 내용은 [스타일 지정 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md)을 참조하세요.  
   
-## 참고 항목  
- [라우트된 이벤트 개요](../../../../docs/framework/wpf/advanced/routed-events-overview.md)   
+## <a name="see-also"></a>참고 항목  
+ [라우트된 이벤트 개요](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
  [종속성 속성 개요](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)

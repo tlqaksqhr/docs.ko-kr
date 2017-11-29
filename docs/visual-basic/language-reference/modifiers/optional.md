@@ -1,34 +1,33 @@
 ---
-title: "Optional (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.Optional"
-  - "vb.optional"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Optional keyword, contexts"
-  - "Optional keyword"
+title: Optional(Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.Optional
+- vb.optional
+helpviewer_keywords:
+- Optional keyword [Visual Basic], contexts
+- Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
-caps.latest.revision: 14
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 3aa01c2c1ae731c8fe00fdee24521760db69e624
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Optional (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-프로시저를 호출할 때 프로시저 인수를 생략할 수 있도록 지정합니다.  
+# <a name="optional-visual-basic"></a>Optional(Visual Basic)
+프로시저가 호출 될 때 프로시저 인수를 생략할 수 있도록 지정 합니다.  
   
-## 설명  
- 각 선택적 매개 변수에 대해 해당 매개 변수의 기본값으로 상수 식을 지정 해야 합니다.  식에서 계산 하는 경우  [아무것도](../../../visual-basic/language-reference/nothing.md), 기본값 데이터 형식의 값 매개 변수의 기본 값으로 사용 됩니다.  
+## <a name="remarks"></a>설명  
+ 각 선택적 매개 변수를 상수 식의 매개 변수 값을 기본값으로 지정 해야 합니다. 식이 계산 되는 경우 [Nothing](../../../visual-basic/language-reference/nothing.md), 값 데이터 형식의 기본 값 매개 변수의 값을 기본값으로 사용 됩니다.  
   
- 선택적 매개 변수 매개 변수 목록을 포함 하는 경우에 오는 모든 매개 변수에 선택적 이어야 합니다.  
+ 선택적 매개 변수를 포함 하는 매개 변수 목록, 그 다음에 오는 모든 매개 변수에 선택적 수도 있어야 합니다.  
   
  `Optional` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.  
   
@@ -41,12 +40,12 @@ caps.handback.revision: 14
 -   [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 > [!NOTE]
->  함께 또는 선택적 매개 변수 없이 프로시저를 호출 하는 경우에 위치 또는 이름 인수를 전달할 수 있습니다.  자세한 내용은 [Passing Arguments by Position and by Name](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)를 참조하십시오.  
+>  또는 선택적 매개 변수 없이 프로시저를 호출할 때 위치 또는 이름으로 인수를 전달할 수 있습니다. 자세한 내용은 참조 [이름 및 위치도 인수 전달](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)합니다.  
   
 > [!NOTE]
->  선택적 매개 변수를 사용 하는 프로시저 오버 로드를 사용 하 여 정의할 수도 있습니다.  하나의 선택적 매개 변수가 있는 경우 프로시저 매개 변수를 받아들이는, 하나 하나 하지 않는 두 개의 오버 로드 된 버전을 정의할 수 있습니다.  자세한 내용은 [Procedure Overloading](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)를 참조하십시오.  
+>  오버 로드를 사용 하 여 선택적 매개 변수가 있는 프로시저를 정의할 수도 있습니다. 하나의 선택적 매개 변수를 설정한 경우에 프로시저, 매개 변수를 허용 하 고 다른 하나는 하지 않는 두 개의 오버 로드 된 버전을 정의할 수 있습니다. 자세한 내용은 참조 [프로시저 오버 로드](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 예제에서는 선택적 매개 변수가 있는 프로시저를 정의 합니다.  
   
 ```  
@@ -68,12 +67,12 @@ Public Function FindMatches(ByRef values As List(Of String),
 End Function  
 ```  
   
-## 예제  
- 다음 예제에서는 인수는 위치로 전달 인수를 이름으로 전달 하 고 프로시저를 호출 하는 방법을 보여 줍니다.  프로시저는 두 개의 선택적 매개 변수가 있습니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 위치로 전달 된 인수를 사용 하 고 이름으로 전달 된 인수와 함께 프로시저를 호출 하는 방법을 보여 줍니다. 프로시저에는 두 가지 선택적 매개 변수입니다.  
   
  [!code-vb[VbVbalrKeywords#21](../../../visual-basic/language-reference/codesnippet/VisualBasic/optional_1.vb)]  
   
-## 참고 항목  
- [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md)   
- [Optional Parameters](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)   
+## <a name="see-also"></a>참고 항목  
+ [매개 변수 목록](../../../visual-basic/language-reference/statements/parameter-list.md)  
+ [선택적 매개 변수](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
  [키워드](../../../visual-basic/language-reference/keywords/index.md)

@@ -1,31 +1,34 @@
 ---
-title: "방법: 관리되는 HTML 문서 개체 모델의 요소에 대한 스타일 변경 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "관리되는 HTML DOM, 요소에 대한 스타일 변경"
+title: "방법: 관리되는 HTML 문서 개체 모델의 요소에 대한 스타일 변경"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords: managed HTML DOM [Windows Forms], changing styles on elements
 ms.assetid: 154e8d9f-3e2d-4e8b-a6f3-c85a070e9cc1
-caps.latest.revision: 7
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 968dd4210e13e301ba2f0ca24617df23706cefc0
+ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/22/2017
 ---
-# 방법: 관리되는 HTML 문서 개체 모델의 요소에 대한 스타일 변경
-HTML에 스타일을 사용하여 문서의 모양과 요소를 제어할 수 있습니다.  <xref:System.Windows.Forms.HtmlDocument> 및 <xref:System.Windows.Forms.HtmlElement>는 다음과 같은 형식의 스타일 문자열을 사용하는 <xref:System.Windows.Forms.HtmlElement.Style%2A> 속성을 지원합니다.  
+# <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>방법: 관리되는 HTML 문서 개체 모델의 요소에 대한 스타일 변경
+모양을 제어 하는 문서 및 해당 요소의 html에서 스타일을 사용할 수 있습니다. <xref:System.Windows.Forms.HtmlDocument>및 <xref:System.Windows.Forms.HtmlElement> 지원 <xref:System.Windows.Forms.HtmlElement.Style%2A> 는 다음과 같은 형식의 스타일 문자열을 사용 하는 속성:  
   
  `name1:value1;...;nameN:valueN;`  
   
- 다음 `DIV`에는 글꼴을 굴림으로 설정하고 모든 텍스트를 굵게 설정하는 스타일 문자열이 포함되어 있습니다.  
+ 다음은 한 `DIV` 을 Arial 고 모든 텍스트를 굵게 글꼴을 설정 하는 스타일 문자열:  
   
  `<DIV style="font-face:arial;font-weight:bold;">`  
   
@@ -33,19 +36,19 @@ HTML에 스타일을 사용하여 문서의 모양과 요소를 제어할 수 �
   
  `</DIV>`  
   
- <xref:System.Windows.Forms.HtmlElement.Style%2A> 속성을 사용하여 스타일을 조작하면 문자열에서 개별 스타일 설정을 제거하거나 추가하는 작업이 번거로울 수 있다는 것이 문제점입니다.  예를 들어, 사용자가 `DIV`에 커서를 가져갈 때마다 앞의 텍스트를 기울임꼴로 렌더링하고 커서가 `DIV`에서 벗어나면 기울임꼴이 해제되도록 하는 절차는 복잡합니다.  이런 방법을 사용하면 많은 스타일을 조작해야 하는 경우 시간이 오래 걸리는 문제가 있습니다.  
+ 사용 하 여 스타일 조작 문제가 <xref:System.Windows.Forms.HtmlElement.Style%2A> 속성은 수 있다는 것에 추가 하 고 문자열에서 개별 스타일 설정을 제거 복잡 합니다. 예를 들어 위에 커서를 가져갈 때마다 기울임꼴로 이전 텍스트를 렌더링 하는 절차는 복잡 해질는 `DIV`, 기울임꼴이 커서를 벗어날 때 해제 되도록 하 고는 `DIV`합니다. 시간이 많이 스타일 이런이 방식으로 조작 하는 경우 문제가 될 것입니다.  
   
- 다음 절차에 포함되어 있는 코드를 사용하면 HTML 문서와 요소에 대해 스타일을 쉽게 조작할 수 있습니다.  Windows Forms에서 새 프로젝트를 만들거나 컨트롤을 폼에 추가하는 등의 기본 작업을 수행하는 방법을 알고 있어야 이 절차를 수행할 수 있습니다.  
+ 다음 절차에는 쉽게 HTML 문서와 요소에 대 한 스타일을 조작 하는 데 사용할 수 있는 코드가 포함 됩니다. 프로시저 새 프로젝트를 만들고 폼에 컨트롤 추가 같은 Windows Forms의 기본 작업을 수행 하는 방법을 알고 있어야 합니다.  
   
-### Windows Forms 응용 프로그램에서 스타일을 변경하려면  
+### <a name="to-process-style-changes-in-a-windows-forms-application"></a>Windows Forms 응용 프로그램에 대 한 스타일 변경 내용을 처리 하려면  
   
 1.  새 Windows Forms 프로젝트를 만듭니다.  
   
-2.  프로그래밍 언어에 적합한 확장명으로 끝나는 새 클래스 파일을 만듭니다.  
+2.  선택한 프로그래밍 언어에 대 한 적절 한 확장명으로 끝나는 새 클래스 파일을 만듭니다.  
   
-3.  이 항목의 예제 부분에 있는 `StyleGenerator` 클래스 코드를 클래스 파일에 복사하고 코드를 저장합니다.  
+3.  복사는 `StyleGenerator` 클래스 파일에이 항목의 예 섹션에는 코드를 클래스 및 코드를 저장 합니다.  
   
-4.  다음 HTML을 Test.htm 파일로 저장합니다.  
+4.  다음 HTML Test.htm 라는 파일에 저장 합니다.  
   
     ```  
     <HTML>  
@@ -63,23 +66,23 @@ HTML에 스타일을 사용하여 문서의 모양과 요소를 제어할 수 �
     </HTML>  
     ```  
   
-5.  프로젝트의 기본 폼에 <xref:System.Windows.Forms.WebBrowser> 컨트롤인 `webBrowser1`을 추가합니다.  
+5.  추가 <xref:System.Windows.Forms.WebBrowser> 라는 컨트롤 `webBrowser1` 프로젝트의 기본 폼에 있습니다.  
   
-6.  프로젝트의 코드 파일에 다음 코드를 추가합니다.  
+6.  프로젝트의 코드 파일에 다음 코드를 추가 합니다.  
   
     > [!IMPORTANT]
-    >  `webBrowser1_DocumentCompleted` 이벤트 처리기가 <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> 이벤트의 수신기로 구성되어 있는지 확인합니다.  [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]에서 <xref:System.Windows.Forms.WebBrowser> 컨트롤을 두 번 클릭하고 텍스트 편집기에서 수신기를 프로그래밍 방식으로 구성합니다.  
+    >  확인은 `webBrowser1_DocumentCompleted` 이벤트 처리기에 대 한 수신기로 구성 된는 <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> 이벤트입니다. [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]를 두 번 클릭 하는 <xref:System.Windows.Forms.WebBrowser> 제어할; 텍스트 편집기에서 수신기를 프로그래밍 방식으로 구성 합니다.  
   
      [!code-csharp[ManagedDOMStyles#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/Form1.cs#2)]
      [!code-vb[ManagedDOMStyles#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]  
   
-7.  프로젝트를 실행합니다.  첫 번째 `DIV`에서 커서를 실행하여 코드의 결과를 관찰합니다.  
+7.  프로젝트를 실행합니다. 커서를 첫 번째 실행 `DIV` 코드의 결과를 관찰 합니다.  
   
-## 예제  
- 다음 코드 예제에서는 `StyleGenerator` 클래스의 전체 코드를 보여 줍니다. 이 클래스는 기존 스타일 값을 구문 분석하고 스타일의 추가, 변경 및 제거를 지원하며 요청한 변경 내용을 적용하여 새 스타일 값을 반환합니다.  
+## <a name="example"></a>예제  
+ 다음 코드 예제에 대 한 전체 코드를 보여 줍니다.는 `StyleGenerator` 기존 스타일 값을 구문 분석 하는 클래스 지원 추가, 변경 및 스타일을 제거 하 고 요청된 된 변경 포함 된 새 스타일 값을 반환 합니다.  
   
  [!code-csharp[ManagedDOMStyles#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/StyleGenerator.cs#1)]
  [!code-vb[ManagedDOMStyles#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/StyleGenerator.vb#1)]  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  <xref:System.Windows.Forms.HtmlElement>

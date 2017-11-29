@@ -1,43 +1,47 @@
 ---
-title: "방법: 질감으로 채워진 선 그리기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "선 그리기, 질감"
-  - "그리기, 선"
-  - "선, 질감"
+title: "방법: 질감으로 채워진 선 그리기"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- drawing [Windows Forms], lines
+- lines [Windows Forms], texture
+- drawing lines [Windows Forms], texture
 ms.assetid: dc9118cc-f3c2-42e5-8173-f46d41d18fd5
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 33374a16e6fee80dd45227acd4c5860d5bfc4545
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 질감으로 채워진 선 그리기
-단색 선 대신 질감을 가진 선을 그릴 수도 있습니다.  질감이 있는 선과 곡선을 그리려면 <xref:System.Drawing.TextureBrush> 개체를 만든 다음 이 <xref:System.Drawing.TextureBrush> 개체를 <xref:System.Drawing.Pen.%23ctor%2A> 생성자에 전달합니다.  질감 브러시와 연결된 비트맵으로 평면을 바둑판식으로 채워 보이지 않게 하고, 펜을 사용하여 선이나 곡선을 그릴 때는 펜의 이동 경로에 따라 해당 픽셀에서 질감이 제거됩니다.  
+# <a name="how-to-draw-a-line-filled-with-a-texture"></a>방법: 질감으로 채워진 선 그리기
+단색으로 선 대신, 질감으로 줄을 그릴 수 있습니다. 선 및 곡선 질감으로을 그리려면 만듭니다는 <xref:System.Drawing.TextureBrush> 개체를 전달 하는 <xref:System.Drawing.TextureBrush> 개체를 한 <xref:System.Drawing.Pen.%23ctor%2A> 생성자입니다. 펜의 스트로크 바둑판식으로 배열 된 질감의 특정 픽셀에서 확인 되 면 펜 선 또는 곡선 그리면 및 질감 브러시와 연결 된 비트맵 평면 (눈에 보이지 않게) 타일에 사용 됩니다.  
   
-## 예제  
- 다음 예제에서는  `Texture1.jpg` 파일에서 <xref:System.Drawing.Bitmap> 개체를 만듭니다.  이 비트맵은 <xref:System.Drawing.TextureBrush> 개체를 만드는 데 사용되고 <xref:System.Drawing.TextureBrush> 개체는 <xref:System.Drawing.Pen> 개체를 만드는 데 다시 사용됩니다.  <xref:System.Drawing.Graphics.DrawImage%2A>를 호출하면 왼쪽 위 모퉁이가 \(0, 0\) 좌표인 비트맵이 그려지고  <xref:System.Drawing.Graphics.DrawEllipse%2A>를 호출하면 <xref:System.Drawing.Pen> 개체를 사용하여 질감이 있는 타원을 그릴 수 있습니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 한 <xref:System.Drawing.Bitmap> 개체 파일에서 `Texture1.jpg`합니다. 해당 비트맵 생성에 사용 되는 <xref:System.Drawing.TextureBrush> 개체 및 <xref:System.Drawing.TextureBrush> 개체를 생성 하는 데 사용 됩니다는 <xref:System.Drawing.Pen> 개체입니다. 에 대 한 호출 <xref:System.Drawing.Graphics.DrawImage%2A> 왼쪽 위 모퉁이가 인 비트맵을 그립니다 (0, 0). 에 대 한 호출 <xref:System.Drawing.Graphics.DrawEllipse%2A> 사용 하 여는 <xref:System.Drawing.Pen> 질감된 타원을 그릴 개체입니다.  
   
- 아래 그림에 비트맵 및 질감이 있는 타원이 나와 있습니다.  
+ 다음 그림에서는 비트맵 및 질감된 타원을 보여 줍니다.  
   
  ![펜](../../../../docs/framework/winforms/advanced/media/pens7.png "pens7")  
   
  [!code-csharp[System.Drawing.UsingAPen#61](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#61)]
  [!code-vb[System.Drawing.UsingAPen#61](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#61)]  
   
-## 코드 컴파일  
- Windows Form을 만들고 이 폼의 <xref:System.Windows.Forms.Control.Paint> 이벤트를 처리한 다음  위의 코드를 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기에 붙여넣고   `Texture.jpg`를 시스템에서 사용할 수 있는 이미지로 바꿉니다.  
+## <a name="compiling-the-code"></a>코드 컴파일  
+ Windows Form 만들기 및 폼의 처리 <xref:System.Windows.Forms.Control.Paint> 이벤트입니다. 앞의 코드에 붙여는 <xref:System.Windows.Forms.Control.Paint> 이벤트 처리기입니다. 대체 `Texture.jpg` 를 시스템에서 사용할 이미지입니다.  
   
-## 참고 항목  
- [펜을 사용하여 선과 도형 그리기](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)   
+## <a name="see-also"></a>참고 항목  
+ [펜을 사용하여 선과 도형 그리기](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
  [Windows Forms의 그래픽 및 그리기](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

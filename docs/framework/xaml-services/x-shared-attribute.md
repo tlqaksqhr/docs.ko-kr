@@ -1,62 +1,65 @@
 ---
-title: "x:Shared Attribute | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XAML [XAML Services], x:Shared attribute"
-  - "x:Shared attribute [XAML Services]"
-  - "Shared attribute in XAML [XAML Services]"
+title: "x:Shared 특성"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XAML [XAML Services], x:Shared attribute
+- x:Shared attribute [XAML Services]
+- Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
-caps.latest.revision: 16
-author: "wadepickett"
-ms.author: "wpickett"
-manager: "wpickett"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: wadepickett
+ms.author: wpickett
+manager: wpickett
+ms.openlocfilehash: d6a9333b2267e82fc25b2a0ec4bf5dd14f644078
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# x:Shared Attribute
-`false`로 설정된 경우 WPF 리소스 검색 동작을 수정하여 특성화된 리소스를 요청하는 경우 모든 리소스 요청에 대해 동일한 인스턴스를 공유하는 대신 각 요청에 대해 새 인스턴스를 만듭니다.  
+# <a name="xshared-attribute"></a>x:Shared 특성
+로 설정 하면 `false`, 요청 특성 사용된 하는 리소스에 대 한 모든 요청에 대해 동일한 인스턴스를 공유 하는 대신 각 요청에 대 한 새 인스턴스를 만들 수 있도록 WPF 리소스 검색 동작을 수정 합니다.  
   
-## XAML 특성 사용  
+## <a name="xaml-attribute-usage"></a>XAML 특성 사용  
   
-```  
+```xaml  
 <ResourceDictionary>  
-  <object x:Shared="false".../>  
+  <object x:Shared="false".../>  
 </ResourceDictionary>  
 ```  
   
-## 설명  
- `x:Shared`는 XAML 언어 XAML 네임스페이스로 매핑되고 .NET Framework XAML 서비스 및 XAML 판독기에 의해 유효한 XAML 언어 요소로 인식됩니다.  그러나 `x:Shared`의 설명한 기능이 WPF 응용 프로그램 및 WPF XAML 파서에만 관련이 있습니다.  WPF에서 `x:Shared`는 WPF <xref:System.Windows.ResourceDictionary> 내에 존재하는 개체에 적용될 때만 특성으로 유용합니다.  다른 사용은 구문 분석 예외나 기타 오류를 throw하지 않지만 효과는 없습니다.  
+## <a name="remarks"></a>설명  
+ `x:Shared`XAML 언어 XAML 네임 스페이스에 매핑되고 올바른 XAML 언어 요소도.NET Framework XAML 서비스 및 해당 XAML 판독기에서 인식 됩니다. 그러나의 설명한 기능이 `x:Shared` 만 WPF 응용 프로그램 및 WPF XAML 파서에 적용 됩니다. WPF에서 `x:Shared` 만 유용 특성으로 WPF 내에 존재 하는 개체에 적용 될 때 <xref:System.Windows.ResourceDictionary>합니다. 다른 사용 구문 분석 예외 또는 기타 오류로 반환 하지 않지만 영향을 주지 않습니다.  
   
- `x:Shared` 의 의미는 XAML 언어 사양에 지정되어 있지 않습니다.  .NET Framework XAML 서비스에 빌드하는 것처럼 다른 XAML 구현은 반드시 리소스 공유 지원을 제공하지는 않습니다.  이러한 XAML 구현은 `x:Shared` 값을 사용하는 지원 프레임워크에서 유사한 동작을 제공할 수 있습니다.  
+ 의미 `x:Shared` XAML 언어 사양에 지정 하지 않으면 합니다. .NET Framework XAML 서비스에 구축 하는 것과 같은 다른 XAML 구현 지원 리소스 공유를 반드시 제공 하지 않습니다. 이러한 XAML 구현 에서도 사용 하는 지원 프레임 워크에서 비슷한 동작을 제공할 수 `x:Shared` 값입니다.  
   
- WPF에서 리소스에 대한 기본 `x:Shared` 조건은 `true`입니다.  이는 모든 리소스 요청이 동일한 인스턴스를 반환함을 의미합니다.  
+ Wpf에서는 기본 `x:Shared` 리소스에 대 한 조건이 `true`합니다. 이 조건은 모든 리소스 요청이 항상 동일한 인스턴스를 반환을 의미 합니다.  
   
- <xref:System.Windows.FrameworkElement.FindResource%2A>와 같은 리소스 API를 통해 반환되는 개체를 수정하거나, <xref:System.Windows.ResourceDictionary> 내에서 개체를 직접 수정하면 원본 리소스가 변경됩니다.  해당 리소스에 대한 참조가 동적 리소스 참조인 경우 리소스 사용자는 변경된 리소스를 받습니다.  
+ 와 같은 리소스 API 통해 반환 되는 개체를 수정 <xref:System.Windows.FrameworkElement.FindResource%2A>, 내에서 직접 개체를 수정 하거나는 <xref:System.Windows.ResourceDictionary>을 원래 리소스를 변경 합니다. 해당 리소스에 대 한 참조는 동적 리소스 참조 인 경우 해당 리소스의 소비자가 변경 된 리소스를 가져옵니다.  
   
- 리소스에 대한 참조가 정적 리소스 참조인 경우 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 처리 시간 이후의 리소스 변경 내용은 적용되지 않습니다.  고정 및 동적 리소스 참조에 대한 자세한 내용은 [XAML 리소스](../../../ocs/framework/wpf/advanced/xaml-resources.md)를 참조하십시오.  
+ 리소스에 대 한 참조 정적 리소스 참조 인 경우 변경 후 리소스 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 처리 시간이 적용 되지 않습니다. 정적 및 동적 리소스 참조에 대 한 자세한 내용은 참조 [XAML 리소스](../../../docs/framework/wpf/advanced/xaml-resources.md)합니다.  
   
- `x:Shared="true"`를 명시적으로 지정하는 경우는 기본값이 이미 지정되었으므로 거의 없습니다.  WPF 개체 모델에서 `x:Shared`와 동일한 직접 코드가 없습니다. XAML 사용에서만 지정할 수 있으며 .NET Framework XAML 서비스 및 XAML 판독기를 사용하여 처리되는 경우 기본 WPF 동작 또는 로드 경로에 있는 임시 XAML 노드 스트림에서 처리되어야 합니다.  
+ 명시적으로 지정 `x:Shared="true"` 거의 완료 되 면이 이미 기본 합니다. 직접 코드에 대 한 해당가 `x:Shared` XAML 사용에만 지정할 수 있습니다 하 고 처리 해야 기본 WPF 동작 또는 중간 XAML 노드 스트림을 로드 경로에서.NET Framework XAML Se를 사용 하 여 처리 하는 경우을 WPF에서 개체 모델 서비스 및 해당 XAML 판독기입니다.  
   
- <xref:System.Windows.FrameworkElement> 또는 <xref:System.Windows.FrameworkContentElement>에서 파생된 클래스를 리소스로 정의하고 요소 리소스를 콘텐츠 모델에 추가하는 경우에는 `x:Shared="false"`로 지정해야 합니다.  `x:Shared="false"` 설정을 사용하면 같은 컬렉션\(예: <xref:System.Windows.Controls.UIElementCollection>\)에서 요소 리소스를 여러 번 사용할 수 있습니다.  컬렉션 내의 모든 콘텐츠는 고유해야 하기 때문에 `x:Shared="false"` 없이는 유효하지 않습니다.  그러나 `x:Shared="false"` 동작은 동일한 인스턴스를 반환하는 대신 리소스의 동일한 또 다른 인스턴스를 만듭니다.  
+ 에 대 한 시나리오 `x:Shared="false"` 정의 하는 경우는 <xref:System.Windows.FrameworkElement> 또는 <xref:System.Windows.FrameworkContentElement> 리소스로 클래스를 파생 하 고 다음 요소 리소스 콘텐츠 모델을 도입 합니다. `x:Shared="false"`요소 리소스를 동일한 컬렉션에 여러 번 사용할 수 있습니다 (예: 한 <xref:System.Windows.Controls.UIElementCollection>). 없이 `x:Shared="false"` 이 때문에 올바르지 않습니다 컬렉션은 해당 내용의 고유성을 적용 합니다. 그러나는 `x:Shared="false"` 동작은 동일한 인스턴스를 반환 하는 대신 리소스의 동일한 또 다른 인스턴스를 만듭니다.  
   
- <xref:System.Windows.Freezable> 리소스를 애니메이션 값으로 사용하면서 애니메이션별로 리소스를 수정하려는 경우에도 `x:Shared="false"` 설정을 사용합니다.  
+ 또 다른 시나리오로 `x:Shared="false"` 은 사용 하는 경우는 <xref:System.Windows.Freezable> 애니메이션 값 있지만 애니메이션 별로에 리소스를 수정 하는 리소스입니다.  
   
- `false` 문자열은 대\/소문자를 구분하지 않습니다.  
+ 문자열 처리 `false` 대/소문자를 무시 합니다.  
   
- WPF에서 `x:Shared`는 다음과 같은 경우에만 사용할 수 있습니다.  
+ WPF에서 `x:Shared` 다음과 같은 경우에만 유효 합니다.  
   
--   `x:Shared`가 설정된 항목이 포함된 <xref:System.Windows.ResourceDictionary>를 컴파일해야 하는 경우.  <xref:System.Windows.ResourceDictionary>는 느슨한 XAML에 포함되거나 테마에 사용될 수 없습니다.  
+-   <xref:System.Windows.ResourceDictionary> 된 항목이 포함 된 `x:Shared` 컴파일해야 합니다. <xref:System.Windows.ResourceDictionary> 테마에 사용 하거나 느슨한 XAML 안에 들어갈 수 없습니다.  
   
--   항목이 포함된 <xref:System.Windows.ResourceDictionary>가 다른 <xref:System.Windows.ResourceDictionary>에 중첩될 수 없는 경우.  예를 들어 이미 <xref:System.Windows.ResourceDictionary> 항목인 <xref:System.Windows.Style>에 포함된 <xref:System.Windows.ResourceDictionary> 항목에 대해서는 `x:Shared`를 사용할 수 없습니다.  
+-   <xref:System.Windows.ResourceDictionary> 항목이 포함 된 다른 내에서 중첩 될 수 없습니다 <xref:System.Windows.ResourceDictionary>합니다. 예를 들어 사용할 수 없습니다 `x:Shared` 항목에 대 한 한 <xref:System.Windows.ResourceDictionary> 내는 <xref:System.Windows.Style> 그 이름은 이미는 <xref:System.Windows.ResourceDictionary> 항목입니다.  
   
-## 참고 항목  
- <xref:System.Windows.ResourceDictionary>   
- [XAML 리소스](../../../ocs/framework/wpf/advanced/xaml-resources.md)   
- [기본 요소](../../../ocs/framework/wpf/advanced/base-elements.md)
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Windows.ResourceDictionary>  
+ [XAML 리소스](../../../docs/framework/wpf/advanced/xaml-resources.md)  
+ [기본 요소](../../../docs/framework/wpf/advanced/base-elements.md)

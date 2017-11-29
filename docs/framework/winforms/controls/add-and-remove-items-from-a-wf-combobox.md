@@ -1,73 +1,74 @@
 ---
-title: "방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤에서 항목 추가 및 제거 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "CheckedListBox 컨트롤[Windows Forms], 항목 추가 및 제거"
-  - "콤보 상자, 항목 추가"
-  - "콤보 상자, 항목 제거"
-  - "ComboBox 컨트롤[Windows Forms], 항목 추가 및 제거"
-  - "목록 상자, 항목 추가"
-  - "목록 상자, 항목 제거"
-  - "ListBox 컨트롤[Windows Forms], 항목 추가 및 제거"
+title: "방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤에서 항목 추가 및 제거"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- combo boxes [Windows Forms], adding items
+- list boxes [Windows Forms], removing items
+- ComboBox control [Windows Forms], adding and removing items
+- ListBox control [Windows Forms], adding and removing items
+- list boxes [Windows Forms], adding items
+- combo boxes [Windows Forms], removing items
+- CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-caps.latest.revision: 19
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 96f18f02f82b0e7f9f517890ec963b43fa8d8f60
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤에서 항목 추가 및 제거
-Windows Forms 콤보 상자, 목록 상자 또는 확인 목록 상자는 다양한 데이터 소스에 바인딩할 수 있기 때문에 이러한 컨트롤에 항목을 추가할 수 있는 방법은 여러 가지가 있습니다.  그러나 이 항목에서는 가장 간단한 방법을 설명하므로 데이터 바인딩이 필요 없습니다.  표시되는 항목은 일반적으로 문자열이지만 모든 개체를 사용할 수 있습니다.  컨트롤에 표시되는 텍스트는 개체의`ToString` 메서드가 반환하는 값입니다.  
+# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤에서 항목 추가 및 제거
+항목 목록 상자에서 Windows Forms 콤보 상자에 추가할 수 또는 이러한 컨트롤을 다양 한 데이터 원본에 바인딩될 수 때문에 다양 한 방식으로 목록 상자를 확인 합니다. 그러나이 항목은 가장 간단한 방법을 보여 줍니다 이루어지며 데이터 바인딩이 없습니다. 표시 되는 항목은 일반적으로 문자열입니다. 그러나 모든 개체를 사용할 수 있습니다. 컨트롤에 표시 되는 텍스트 개체의 반환 값은 `ToString` 메서드.  
   
-### 항목을 추가하려면  
+### <a name="to-add-items"></a>항목을 추가 하려면  
   
-1.  `ObjectCollection` 클래스의 `Add` 메서드를 사용하여 목록에 문자열이나 개체를 추가합니다.  컬렉션은`Items` 속성을 사용하여 참조합니다.  
+1.  목록에 문자열 또는 개체를 사용 하 여 추가 된 `Add` 의 메서드는 `ObjectCollection` 클래스입니다. 사용 하 여 컬렉션은 참조는 `Items` 속성:  
   
     ```vb  
     ComboBox1.Items.Add("Tokyo")  
-  
     ```  
   
     ```csharp  
     comboBox1.Items.Add("Tokyo");  
-  
     ```  
   
     ```cpp  
     comboBox1->Items->Add("Tokyo");  
     ```  
   
-     \-또는\-  
+     - 또는  
   
-2.  목록에서 원하는 지점에 문자열이 나 개체를 삽입은`Insert` 메서드:  
+2.  문자열 또는 개체를 사용 하 여 목록에서 원하는 지점에 삽입 된 `Insert` 메서드:  
   
     ```vb  
     CheckedListBox1.Items.Insert(0, "Copenhagen")  
-  
     ```  
   
     ```csharp  
     checkedListBox1.Items.Insert(0, "Copenhagen");  
-  
     ```  
   
     ```cpp  
     checkedListBox1->Items->Insert(0, "Copenhagen");  
     ```  
   
-     \-또는\-  
+     - 또는  
   
-3.  전체 배열을`Items` 컬렉션에 할당합니다.  
+3.  전체 배열을 할당는 `Items` 컬렉션:  
   
     ```vb  
     Dim ItemObject(9) As System.Object  
@@ -76,7 +77,6 @@ Windows Forms 콤보 상자, 목록 상자 또는 확인 목록 상자는 다양
        ItemObject(i) = "Item" & i  
     Next i  
     ListBox1.Items.AddRange(ItemObject)  
-  
     ```  
   
     ```csharp  
@@ -86,7 +86,6 @@ Windows Forms 콤보 상자, 목록 상자 또는 확인 목록 상자는 다양
        ItemObject[i] = "Item" + i;  
     }  
     listBox1.Items.AddRange(ItemObject);  
-  
     ```  
   
     ```cpp  
@@ -98,11 +97,11 @@ Windows Forms 콤보 상자, 목록 상자 또는 확인 목록 상자는 다양
     listBox1->Items->AddRange(ItemObject);  
     ```  
   
-### 항목을 제거하려면  
+### <a name="to-remove-an-item"></a>항목을 제거 하려면  
   
-1.  호출 하는`Remove` 또는`RemoveAt` 메서드 항목을 삭제 합니다.  
+1.  호출의 `Remove` 또는 `RemoveAt` 메서드 항목을 삭제 합니다.  
   
-     `Remove` 제거할 항목을 지정 하는 인수가 하나 있습니다.`RemoveAt` 는 지정 된 인덱스 번호를 가진 항목을 제거 합니다.  
+     `Remove`제거할 항목을 지정 하는 하나의 인수가 있습니다.`RemoveAt` 지정된 된 인덱스 번호를 가진 항목을 제거합니다.  
   
     ```vb  
     ' To remove item with index 0:  
@@ -111,7 +110,6 @@ Windows Forms 콤보 상자, 목록 상자 또는 확인 목록 상자는 다양
     ComboBox1.Items.Remove(ComboBox1.SelectedItem)  
     ' To remove "Tokyo" item:  
     ComboBox1.Items.Remove("Tokyo")  
-  
     ```  
   
     ```csharp  
@@ -121,7 +119,6 @@ Windows Forms 콤보 상자, 목록 상자 또는 확인 목록 상자는 다양
     comboBox1.Items.Remove(comboBox1.SelectedItem);  
     // To remove "Tokyo" item:  
     comboBox1.Items.Remove("Tokyo");  
-  
     ```  
   
     ```cpp  
@@ -133,28 +130,26 @@ Windows Forms 콤보 상자, 목록 상자 또는 확인 목록 상자는 다양
     comboBox1->Items->Remove("Tokyo");  
     ```  
   
-### 모든 항목을 제거하려면  
+### <a name="to-remove-all-items"></a>모든 항목을 제거 하려면  
   
-1.  `Clear` 메서드를 호출하여 컬렉션에서 모든 항목을 제거합니다.  
+1.  호출 된 `Clear` 메서드 컬렉션에서 모든 항목을 제거 하려면:  
   
     ```vb  
     ListBox1.Items.Clear()  
-  
     ```  
   
     ```csharp  
     listBox1.Items.Clear();  
-  
     ```  
   
     ```cpp  
     listBox1->Items->Clear();  
     ```  
   
-## 참고 항목  
- <xref:System.Windows.Forms.ComboBox>   
- <xref:System.Windows.Forms.ListBox>   
- <xref:System.Windows.Forms.CheckedListBox>   
- [방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤의 내용 정렬](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)   
- [ListBox 대신 Windows Forms ComboBox를 사용해야 하는 경우](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)   
- [옵션 목록 표시에 사용하는 Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Windows.Forms.ComboBox>  
+ <xref:System.Windows.Forms.ListBox>  
+ <xref:System.Windows.Forms.CheckedListBox>  
+ [방법: Windows Forms ComboBox, ListBox 또는 CheckedListBox 컨트롤의 내용 정렬](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
+ [ListBox 대신 Windows Forms ComboBox를 사용해야 하는 경우](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
+ [옵션 목록 표시에 사용된 Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

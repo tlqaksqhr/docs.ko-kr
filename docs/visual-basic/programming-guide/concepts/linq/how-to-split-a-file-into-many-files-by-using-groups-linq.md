@@ -1,37 +1,29 @@
 ---
-title: "방법: 그룹 (LINQ) (Visual Basic)를 사용 하 여 파일을 여러 파일로 분할 | Microsoft 문서"
+title: "방법: 한 파일 그룹 (LINQ) (Visual Basic)를 사용 하 여 여러 파일로 분할"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 00fbffa99ade302db536f7e56a4d004071efb2c6
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 76fb89136e05ee803c1bb2c91674e6b216e4ed2d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>방법: 그룹 (LINQ) (Visual Basic)를 사용 하 여 파일을 여러 파일로 분할
-이 예제에서는 두 파일의 내용을 병합 하 고 다음 새로운 방식으로 데이터를 구성 하는 새 파일의 집합을 만들 하는 방법을 보여 줍니다.  
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>방법: 한 파일 그룹 (LINQ) (Visual Basic)를 사용 하 여 여러 파일로 분할
+이 예제에서는 두 파일의 내용을 병합한 다음 새로운 방식으로 데이터를 구성하는 새 파일 집합을 만드는 한 가지 방법을 보여 줍니다.  
   
 ### <a name="to-create-the-data-files"></a>데이터 파일을 만들려면  
   
-1.  이러한 이름을 names1.txt 라는 텍스트 파일에 복사 하 고 프로젝트 폴더에 저장 합니다.  
+1.  이러한 이름을 names1.txt 텍스트 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다.  
   
     ```  
     Bankov, Peter  
@@ -46,7 +38,7 @@ ms.lasthandoff: 03/13/2017
     Garcia, Debra  
     ```  
   
-2.  프로젝트 폴더에 이러한 이름을 저장 하 고 names2.txt 라는 텍스트 파일에 복사 합니다: 두 파일은 사용할 일부 공통 이름을 지정 합니다.  
+2.  이러한 이름을 names2.txt 텍스트 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다. 두 파일에서 일부 이름은 공통됩니다.  
   
     ```  
     Liu, Jinghao  
@@ -130,11 +122,11 @@ End Class
 '    Toyoshima, Tim  
 ```  
   
- 프로그램은 데이터 파일과 같은 폴더에 각 그룹에 대 한 별도 파일을 씁니다.  
+ 프로그램에서 데이터 파일과 동일한 폴더에 각 그룹에 대한 별도 파일을 작성합니다.  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- .NET Framework 버전 3.5 이상 System.Core.dll에 대 한 참조를 대상으로 하는 프로젝트 만들기 및 `Imports` System.Linq 네임 스페이스에 대 한 정보입니다.  
+ System.Core.dll에 대한 참조와 System.Linq 네임스페이스에 대한 `Imports` 문을 사용하여 .NET Framework 버전 3.5 이상을 대상으로 하는 프로젝트를 만듭니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)   
- [LINQ 및 파일 디렉터리 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+ [LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+ [LINQ 및 파일 디렉터리(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

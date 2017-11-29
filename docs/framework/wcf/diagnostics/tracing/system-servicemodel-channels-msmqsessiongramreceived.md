@@ -1,28 +1,31 @@
 ---
-title: "System.ServiceModel.Channels.MsmqSessiongramReceived | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-clr"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: System.ServiceModel.Channels.MsmqSessiongramReceived
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 66cfc20b-3bf0-48f6-a715-d82d88f5e71e
-caps.latest.revision: 4
-author: "Erikre"
-ms.author: "erikre"
-manager: "erikre"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 91ca35c7255b3f6c16e92d7a13eb32e294b8a7c4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# System.ServiceModel.Channels.MsmqSessiongramReceived
+# <a name="systemservicemodelchannelsmsmqsessiongramreceived"></a>System.ServiceModel.Channels.MsmqSessiongramReceived
 System.ServiceModel.Channels.MsmqSessiongramReceived  
   
-## 설명  
+## <a name="description"></a>설명  
  MSMQ 전송 세션을 받았습니다.  
   
-## 참고 항목  
- [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)   
- [추적을 사용하여 응용 프로그램 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)   
+## <a name="see-also"></a>참고 항목  
+ [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [추적을 사용 하 여 응용 프로그램 문제를 해결 하려면](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
  [관리 및 진단](../../../../../docs/framework/wcf/diagnostics/index.md)

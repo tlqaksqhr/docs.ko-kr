@@ -1,43 +1,49 @@
 ---
-title: "방법: 캔버스 만들기 및 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Canvas 컨트롤, 만들기"
-  - "Canvas 컨트롤, using"
-  - "컨트롤, Canvas"
+title: "방법: 캔버스 만들기 및 사용"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- controls [WPF], Canvas
+- Canvas control [WPF], creating
+- Canvas control [WPF], using
 ms.assetid: 420b9487-9a15-477c-9489-a22a4dec7779
-caps.latest.revision: 12
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8925b9b6cd6cea1a29592f591f9c1c89d32d49e5
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 캔버스 만들기 및 사용
-이 예제에서는 <xref:System.Windows.Controls.Canvas> 인스턴스를 만들고 사용하는 방법을 보여 줍니다.  
+# <a name="how-to-create-and-use-a-canvas"></a>방법: 캔버스 만들기 및 사용
+만들고의 인스턴스를 사용 하는 방법을 보여 주는이 예제 <xref:System.Windows.Controls.Canvas>합니다.  
   
-## 예제  
- 다음 예제에서는 <xref:System.Windows.Controls.Canvas>의 <xref:System.Windows.Controls.Canvas.SetTop%2A> 및 <xref:System.Windows.Controls.Canvas.SetLeft%2A> 메서드를 사용하여 두 개의 <xref:System.Windows.Controls.TextBlock> 요소를 명시적으로 배치합니다.  이 예제에서는 <xref:System.Windows.Controls.Canvas>의 <xref:System.Windows.Controls.Control.Background%2A>에 `LightSteelBlue` 색도 할당합니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 명시적으로 두 개의 배치 <xref:System.Windows.Controls.TextBlock> 요소를 사용 하 여는 <xref:System.Windows.Controls.Canvas.SetTop%2A> 및 <xref:System.Windows.Controls.Canvas.SetLeft%2A> 방식의 <xref:System.Windows.Controls.Canvas>합니다. 이 예에서는 또한 할당 한 <xref:System.Windows.Controls.Control.Background%2A> 의 색 `LightSteelBlue` 에 <xref:System.Windows.Controls.Canvas>합니다.  
   
 > [!NOTE]
->  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]을 사용하여 <xref:System.Windows.Controls.TextBlock> 요소를 배치할 때는 <xref:System.Windows.Controls.Canvas.Top%2A> 및 <xref:System.Windows.Controls.Canvas.Left%2A> 속성을 사용합니다.  
+>  사용 하는 경우 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 위치로 <xref:System.Windows.Controls.TextBlock> 요소를 사용 하 여는 <xref:System.Windows.Controls.Canvas.Top%2A> 및 <xref:System.Windows.Controls.Canvas.Left%2A> 속성입니다.  
   
  [!code-csharp[CanvasCode#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CanvasCode/CSharp/Canvas_Code.cs#1)]
  [!code-vb[CanvasCode#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasCode/VisualBasic/canvas_vb.vb#1)]  
   
-## 참고 항목  
- <xref:System.Windows.Controls.Canvas>   
- <xref:System.Windows.Controls.TextBlock>   
- <xref:System.Windows.Controls.Canvas.SetTop%2A>   
- <xref:System.Windows.Controls.Canvas.SetLeft%2A>   
- <xref:System.Windows.Controls.Canvas.Top%2A>   
- <xref:System.Windows.Controls.Canvas.Left%2A>   
- [Panel 개요](../../../../docs/framework/wpf/controls/panels-overview.md)   
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Windows.Controls.Canvas>  
+ <xref:System.Windows.Controls.TextBlock>  
+ <xref:System.Windows.Controls.Canvas.SetTop%2A>  
+ <xref:System.Windows.Controls.Canvas.SetLeft%2A>  
+ <xref:System.Windows.Controls.Canvas.Top%2A>  
+ <xref:System.Windows.Controls.Canvas.Left%2A>  
+ [패널 개요](../../../../docs/framework/wpf/controls/panels-overview.md)  
  [방법 항목](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)

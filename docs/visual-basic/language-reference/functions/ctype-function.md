@@ -1,78 +1,76 @@
 ---
-title: "CType 함수(Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.CType"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "식 변환 결과"
-  - "명시적 데이터 형식 변환"
-  - "CType 함수"
-  - "변환, 식"
+title: "CType 함수(Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vb.CType
+helpviewer_keywords:
+- expression conversion results
+- explicit data type conversions [Visual Basic]
+- CType function
+- conversions [Visual Basic], expression
 ms.assetid: dd4b29e7-6fa1-428c-877e-69955420bb72
-caps.latest.revision: 22
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 6118ca5f73a0d446842c33859e0623032082bcd8
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# CType 함수(Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-식을 지정한 데이터 형식, 개체, 구조체, 클래스 또는 인터페이스로 명시적으로 변환한 결과를 반환합니다.  
+# <a name="ctype-function-visual-basic"></a>CType 함수(Visual Basic)
+명시적으로 지정 된 데이터 형식, 개체, 구조체, 클래스 또는 인터페이스에는 식을 변환한 결과를 반환 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
 CType(expression, typename)  
 ```  
   
-## 요소  
+## <a name="parts"></a>요소  
  `expression`  
- 임의의 유효한 식입니다.  `expression` 값이 `typename`에서 허용되는 범위를 벗어나면 Visual Basic에서 예외가 throw됩니다.  
+ 모든 유효한 식입니다. 하는 경우의 값 `expression` 에서 허용 되는 범위를 벗어납니다 `typename`, Visual Basic 예외를 throw 합니다.  
   
  `typename`  
- `Dim` 문의 `As` 절에서 유효한 임의의 식, 즉 임의의 데이터 형식, 개체, 구조체, 클래스 또는 인터페이스 이름입니다.  
+ 유효한 모든 식은 `As` 절에는 `Dim` 문, 즉, 데이터 형식, 개체, 구조체, 클래스 또는 인터페이스의 이름입니다.  
   
-## 설명  
+## <a name="remarks"></a>설명  
   
 > [!TIP]
->  다음 함수를 사용하여 형식 변환을 수행할 수도 있습니다.  
+>  또한 형식 변환을 수행 하려면 다음 함수를 사용할 수 있습니다.  
 >   
->  -   특정 데이터 형식으로의 변환을 수행하는 `CByte`, `CDbl` 및 `CInt`와 같은 변환 함수를 입력합니다.  자세한 내용은 [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)을\(를\) 참조하십시오.  
-> -   [DirectCast Operator](../../../visual-basic/language-reference/operators/directcast-operator.md) 또는 [TryCast Operator](../../../visual-basic/language-reference/operators/trycast-operator.md) 이러한 연산자에서는 다른 형식에서 상속된 형식 또는 다른 형식을 구현하는 형식을 사용해야 합니다.  `Object` 데이터 형식 사이에서 변환할 때 `CType`보다 약간 더 나은 성능을 제공할 수 있습니다.  
+>  -   변환 함수를 같은 입력 `CByte`, `CDbl`, 및 `CInt` 특정 데이터 형식으로의 변환을 수행 하는 합니다. 자세한 내용은 참조 [형식 변환 함수](../../../visual-basic/language-reference/functions/type-conversion-functions.md)합니다.  
+> -   [DirectCast 연산자](../../../visual-basic/language-reference/operators/directcast-operator.md) 또는 [TryCast 연산자](../../../visual-basic/language-reference/operators/trycast-operator.md)합니다. 이러한 연산자는 한 형식에서 상속 하거나 다른 형식을 구현에 필요 합니다. 보다 약간 더 나은 성능을 제공 하 `CType` 에서 변환 하는 경우는 `Object` 데이터 형식입니다.  
   
- `CType`은 인라인으로 컴파일됩니다. 즉, 변환 코드가 식을 계산하는 코드의 일부입니다.  변환을 수행하기 위해 프로시저를 호출하지 않으므로 코드가 더 빠르게 실행되는 경우도 있습니다.  
+ `CType`즉, 형식 변환 식을 계산 하는 코드의 일부 컴파일된 인라인으로가 됩니다. 경우에 따라 코드가 더 빠르게 실행에서 변환을 수행할 호출 되므로 프로시저가 없습니다.  
   
- `expression`에서 `typename`으로\(예: `Integer`에서 `Date`로\)의 변환이 정의되어 있지 않으면 Visual Basic에서 컴파일 타임 오류 메시지가 표시됩니다.  
+ 정의 된 변환이 없는 경우 `expression` 를 `typename` (예:에서 `Integer` 를 `Date`), Visual Basic 컴파일 타임 오류 메시지를 표시 합니다.  
   
- 런타임에 변환이 실패하면 해당 예외가 throw됩니다.  축소 변환이 실패할 경우에는 <xref:System.OverflowException>이 가장 많이 발생합니다.  변환이 정의되지 않으면 <xref:System.InvalidCastException>이 throw됩니다.  예를 들어, `expression`이 `Object` 형식이고 해당 런타임 형식이 `typename`으로 변환되지 않을 경우에 이러한 결과가 발생합니다.  
+ 런타임에 변환에 실패 하면 해당 예외가 throw 됩니다. 축소 변환에 실패 하면는 <xref:System.OverflowException> 은 가장 일반적인 결과입니다. 정의 되지 않으면 경우는 <xref:System.InvalidCastException> throw 합니다. 예를 들어 이러한 경우 `expression` 유형의 `Object` 해당 런타임 형식에는 변환 되지 않습니다 및 `typename`합니다.  
   
- `expression` 또는 `typename`의 데이터 형식이 사용자가 정의한 클래스나 구조체이면 해당 클래스나 구조체에 대해 `CType`을 변환 연산자로 정의할 수 있습니다.  이렇게 하면 `CType`은 *오버로드된 연산자* 기능을 합니다.  이때 throw될 수 있는 예외를 비롯하여 클래스나 구조체에 대한 변환 동작을 제어할 수 있습니다.  
+ 데이터 형식이 `expression` 또는 `typename` 클래스 또는 구조를 정의 했으면 정의할 수 있습니다 `CType` 해당 클래스 또는 변환 연산자와 구조에서. 이렇게 하면 `CType` 프록시로 *오버 로드 된 연산자*합니다. 이 작업을 수행 하는 경우에 클래스 또는 구조체를 throw 할 수 있는 예외를 포함 하 여에서 변환 하 고 동작을 제어할 수 있습니다.  
   
-## 오버로딩  
- `CType` 연산자는 코드 외부에서 정의된 클래스나 구조체에 대해서도 오버로드될 수 있습니다.  그러한 클래스나 구조체와 코드 간의 변환을 수행할 때는 해당 `CType` 연산자의 동작을 알고 있어야 합니다.  자세한 내용은 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)을\(를\) 참조하십시오.  
+## <a name="overloading"></a>오버로딩  
+ `CType` 연산자 클래스 또는 코드 외부에 정의 된 구조체에 오버 로드 될 수도 있습니다. 코드로 변환 되 면 해당 클래스 또는 구조에서 사용할의 동작을 알고 있어야 해당 `CType` 연산자입니다. 자세한 내용은 참조 [연산자 프로시저](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)합니다.  
   
-## 동적 개체 변환  
- 동적 개체의 형식 변환은 <xref:System.Dynamic.DynamicObject.TryConvert%2A> 또는 <xref:System.Dynamic.DynamicMetaObject.BindConvert%2A> 메서드를 사용하는 사용자 정의 동적 변환을 통해 수행됩니다.  동적 개체를 사용하여 작업하는 경우 <xref:Microsoft.VisualBasic.Conversion.CTypeDynamic%2A> 메서드를 사용하여 동적 개체를 변환합니다.  
+## <a name="converting-dynamic-objects"></a>동적 개체 변환  
+ 동적 개체의 형식 변환을 사용 하는 사용자 지정 동적 변환을 수행한는 <xref:System.Dynamic.DynamicObject.TryConvert%2A> 또는 <xref:System.Dynamic.DynamicMetaObject.BindConvert%2A> 메서드. 동적 개체를 사용 하는 경우 사용 된 <xref:Microsoft.VisualBasic.Conversion.CTypeDynamic%2A> 동적 개체를 변환 하는 메서드입니다.  
   
-## 예제  
- 다음 예제에서는 `CType` 함수를 사용하여 식을 `Single` 데이터 형식으로 변환합니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 `CType` 식으로 변환 하는 함수는 `Single` 데이터 형식입니다.  
   
  [!code-vb[VbVbalrFunctions#24](../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/ctype-function_1.vb)]  
   
- 다른 예제를 보려면 [Implicit and Explicit Conversions](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)를 참조하십시오.  
+ 추가 예제를 참조 하십시오. [암시적 변환과 명시적 변환](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)합니다.  
   
-## 참고 항목  
- <xref:System.OverflowException>   
- <xref:System.InvalidCastException>   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [Conversion Functions](../../../visual-basic/language-reference/functions/conversion-functions.md)   
- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)   
- [How to: Define a Conversion Operator](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)   
- [.NET Framework의 형식 변환](../Topic/Type%20Conversion%20in%20the%20.NET%20Framework.md)
+## <a name="see-also"></a>참고 항목  
+ <xref:System.OverflowException>  
+ <xref:System.InvalidCastException>  
+ [형식 변환 함수](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [변환 함수](../../../visual-basic/language-reference/functions/conversion-functions.md)  
+ [Operator 문](../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [방법: 변환 연산자 정의](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)  
+ [.NET Framework의 형식 변환](http://msdn.microsoft.com/library/ba36154f-064c-47d3-9f05-72f93a7ca96d)

@@ -1,30 +1,29 @@
 ---
-title: "Structure Variables (Visual Basic) | Microsoft Docs"
-ms.custom: ""
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "structures, variables"
-  - "structures, structure variables"
-  - "variables [Visual Basic], structure variables"
-  - "structure variables"
+title: "구조체 변수(Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+helpviewer_keywords:
+- structures [Visual Basic], variables
+- structures [Visual Basic], structure variables
+- variables [Visual Basic], structure variables
+- structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-caps.latest.revision: 11
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: ef42c44de84caffde909eb2b3e9361016a6abb97
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Structure Variables (Visual Basic)
-[!INCLUDE[vs2017banner](../../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-구조체를 만든 후 이 형식으로 프로시저 수준과 모듈 수준의 변수를 선언할 수 있습니다.  예를 들어, 컴퓨터 시스템에 대한 정보를 기록하는 구조체를 만들 수 있습니다.  다음 예제에서는 이 작업을 보여 줍니다.  
+# <a name="structure-variables-visual-basic"></a>구조체 변수(Visual Basic)
+구조를 만든 후에 해당 형식으로 프로시저 수준 및 모듈 수준 변수를 선언할 수 있습니다. 예를 들어 컴퓨터 시스템에 대 한 정보를 기록 하는 구조를 만들 수 있습니다. 다음은 이에 대한 예입니다.  
   
 ```  
 Public Structure systemInfo  
@@ -34,17 +33,17 @@ Public Structure systemInfo
 End Structure  
 ```  
   
- 그런 다음 해당 형식의 변수를 선언할 수 있습니다.  다음 선언에서는 이러한 예를 보여 줍니다.  
+ 해당 형식의 변수를 선언할 수 있습니다. 다음 선언은이입니다.  
   
 ```  
 Dim mySystem, yourSystem As systemInfo  
 ```  
   
 > [!NOTE]
->  클래스와 모듈에서 [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md)을 사용하여 선언된 구조체의 액세스 수준은 기본적으로 Public입니다.  구조체의 액세스 수준을 Private으로 설정하려면 [Private](../../../../visual-basic/language-reference/modifiers/private.md) 키워드를 사용하여 선언해야 합니다.  
+>  클래스와 모듈에서 선언 된 구조체를 사용 하 여 [Dim 문](../../../../visual-basic/language-reference/statements/dim-statement.md) 기본적으로 공용 액세스 합니다. 구조체를 전용으로 지정 하려는 경우 사용 하 여 선언 있는지 확인은 [개인](../../../../visual-basic/language-reference/modifiers/private.md) 키워드입니다.  
   
-## 구조체 값 액세스  
- 구조체 변수의 요소에서 값을 할당하거나 검색하려면 개체의 속성을 설정하고 가져오는 데 사용하는 것과 동일한 구문을 사용합니다.  구조 변수 이름과 요소 이름 사이에 멤버 액세스 연산자\(`.`\)를 삽입합니다.  다음 예제에서는 앞에서 `systemInfo` 형식으로 선언된 변수의 요소에 액세스합니다.  
+## <a name="access-to-structure-values"></a>구조 값에 대 한 액세스  
+ 지정 하 고 구조체 변수의 요소에서 값을 검색을 설정 하 고 개체에서 속성을 사용 하 여 동일한 구문을 사용 합니다. 멤버 액세스 연산자를 배치 (`.`) 구조 변수 이름 사이 요소 이름입니다. 다음 예제에서는 액세스 요소 형식으로 이전에 선언 된 변수의 `systemInfo`합니다.  
   
 ```  
 mySystem.cPU = "486"  
@@ -52,23 +51,23 @@ Dim tooOld As Boolean
 If yourSystem.purchaseDate < #1/1/1992# Then tooOld = True  
 ```  
   
-## 구조체 변수 할당  
- 또한 두 변수가 모두 동일한 구조체 형식인 경우 한 변수를 다른 변수에 할당할 수 있습니다.  이렇게 하면 한 구조체의 모든 요소가 다른 구조체의 해당 요소로 복사됩니다.  다음 선언에서는 이러한 예를 보여 줍니다.  
+## <a name="assigning-structure-variables"></a>구조체 변수 할당  
+ 둘 다 동일한 구조체 형식 경우 다른 하나의 변수를 할당할 수도 있습니다. 이 다른의 해당 요소를 한 구조체의 모든 요소를 복사합니다. 다음 선언은이입니다.  
   
 ```  
 yourSystem = mySystem  
 ```  
   
- 구조체 요소가 `String`, `Object` 또는 배열 등의 참조 형식일 경우 해당 데이터에 대한 포인터가 복사됩니다.  위 예제의 경우 `systemInfo`에 개체 변수가 포함되었으면 포인터는 `mySystem`에서 `yourSystem`으로 복사되며, 한 구조체를 통해 수행한 개체 데이터의 변경 내용은 다른 구조체를 통해 액세스할 때 적용됩니다.  
+ 구조 요소 인지 참조 형식이 같은 `String`, `Object`, 또는 데이터에 대 한 포인터 배열에 복사 됩니다. 이전 예제의 경우 `systemInfo` 앞의 예제에서 포인터 복사 하는 다음 개체 변수에 포함 된 `mySystem` 를 `yourSystem`, 및 액세스할 때 한 구조를 통해 개체의 데이터의 변경 내용이 적용 됩니다 통해 다른 구조입니다.  
   
-## 참고 항목  
- [데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/index.md)   
- [Elementary Data Types](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)   
- [Composite Data Types](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)   
- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)   
- [Structures](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)   
- [Troubleshooting Data Types](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
- [How to: Declare a Structure](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)   
- [Structures and Other Programming Elements](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)   
- [Structures and Classes](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)   
- [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md)
+## <a name="see-also"></a>참고 항목  
+ [데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ [기본 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
+ [복합 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
+ [값 형식과 참조 형식](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+ [구조체](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
+ [데이터 형식 문제 해결](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [방법: 구조체 선언](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)  
+ [구조체 및 기타 프로그래밍 요소](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)  
+ [구조체와 클래스](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)  
+ [Structure 문](../../../../visual-basic/language-reference/statements/structure-statement.md)

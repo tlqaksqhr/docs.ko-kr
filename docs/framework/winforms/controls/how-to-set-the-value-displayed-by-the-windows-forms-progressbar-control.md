@@ -1,54 +1,54 @@
 ---
-title: "방법: Windows Forms ProgressBar 컨트롤에서 표시하는 값 설정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "Increment 메서드"
-  - "PerformStep 메서드"
-  - "Progress 컨트롤, 표시되는 값 설정"
-  - "ProgressBar 컨트롤[Windows Forms], 표시되는 값 설정"
-  - "Step 속성"
-  - "Value 속성"
+title: "방법: Windows Forms ProgressBar 컨트롤에서 표시하는 값 설정"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- ProgressBar control [Windows Forms], setting value displayed
+- progress controls [Windows Forms], setting value displayed
 ms.assetid: 0e5010ad-1e9a-4271-895e-5a3d24d37a26
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d3fd66e10515e5135545f6fcfa64546141346519
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: Windows Forms ProgressBar 컨트롤에서 표시하는 값 설정
+# <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>방법: Windows Forms ProgressBar 컨트롤에서 표시하는 값 설정
 > [!IMPORTANT]
 >  <xref:System.Windows.Forms.ToolStripProgressBar> 컨트롤은 <xref:System.Windows.Forms.ProgressBar> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.ProgressBar> 컨트롤을 계속 유지하도록 선택할 수 있습니다.  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]에서는 지정한 값을 <xref:System.Windows.Forms.ProgressBar> 컨트롤에 표시하기 위한 다음과 같은 여러 가지 방법을 제공합니다.  진행 중인 작업이나 해결하려는 문제에 따라 적절한 방법을 선택할 수 있습니다.  다음 표에서는 선택할 수 있는 방법을 설명합니다.  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 제공 내에서 지정된 된 값을 표시 하려면 여러 가지 방법으로 <xref:System.Windows.Forms.ProgressBar> 제어 합니다. 어떤 방법을 선택 하는 작업에 나 해결 하려는 문제에 따라 달라 집니다. 다음 표에서 선택할 수 있습니다 하는 방법을 보여 줍니다.  
   
 |방법|설명|  
-|--------|--------|  
-|<xref:System.Windows.Forms.ProgressBar> 컨트롤의 값을 직접 설정합니다.|이 방법은 데이터 소스에서 레코드를 읽을 때와 같이 관련된 항목의 총 개수를 알고 있는 작업에 유용합니다.  뿐만 아니라 값을 한두 번만 설정하려는 경우에도 이 방법을 이용하면 쉽습니다.  그리고 진행률 표시줄에 표시되는 값을 감소시키려는 경우에도 이 방법을 사용합니다.|  
-|<xref:System.Windows.Forms.ProgressBar>에 표시되는 값을 고정된 값만큼 증가시킵니다.|이 방법은 경과 시간이나 알려진 총 파일 개수 중 처리된 파일 개수 등과 같이 최소값과 최대값 사이의 단순한 개수를 표시하려는 경우 유용합니다.|  
-|<xref:System.Windows.Forms.ProgressBar>에 표시되는 값을 일정하지 않은 값만큼 증가시킵니다.|이 방법은 표시되는 값을 일정하지 않은 값으로 여러 번 변경하려는 경우 유용합니다.  디스크에 일련의 파일을 쓰는 동안 사용되는 하드 디스크 공간을 표시하려는 경우를 예로 들 수 있습니다.|  
+|--------------|-----------------|  
+|값을 설정할는 <xref:System.Windows.Forms.ProgressBar> 직접 제어 합니다.|이 접근 방식은 포함 될, 데이터 원본에서 레코드를 읽기와 같은 항목의 총 개수를 알고 있는 작업에 유용 합니다. 또한 값을 한 번 또는 두 번 설정 해야 하는 경우 이것이 쉽게 작업을 수행할 수 있습니다. 진행률 표시줄에 표시 되는 값을 줄여야 할 경우 마지막으로,이 프로세스를 사용 합니다.|  
+|증가 <xref:System.Windows.Forms.ProgressBar> 고정 값을 표시 합니다.|이 방법은 사이의 최소 및 최대 경과 시간 또는 알려진된 총 중 처리 된 파일 수와 같은 단순한 개수를 표시 하는 경우에 유용 합니다.|  
+|증가 <xref:System.Windows.Forms.ProgressBar> 달라 지는 값으로 표시 합니다.|이 방법은 여러 번 다른 금액에 표시 된 값을 변경 해야 할 때 유용 합니다. 예는 일련의 파일을 디스크에 쓰는 동안 사용 되는 하드 디스크 공간의 크기를 닫아야 합니다.|  
   
- 진행률 표시줄에 표시되는 값을 설정하는 가장 직접적인 방법은 <xref:System.Windows.Forms.ProgressBar.Value%2A> 속성을 설정하는 것입니다.  이 작업은 디자인 타임 또는 런타임에 할 수 있습니다.  
+ 진행률 표시줄에 표시 되는 값을 설정 하는 가장 직접적인 방법은 설정 하 여는 <xref:System.Windows.Forms.ProgressBar.Value%2A> 속성입니다. 디자인 타임 또는 런타임 시 수행할 수 있습니다.  
   
-### ProgressBar 값을 직접 설정하려면  
+### <a name="to-set-the-progressbar-value-directly"></a>ProgressBar 값을 직접 설정 하려면  
   
-1.  <xref:System.Windows.Forms.ProgressBar> 컨트롤의 <xref:System.Windows.Forms.ProgressBar.Minimum%2A> 및 <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 값을 설정합니다.  
+1.  설정의 <xref:System.Windows.Forms.ProgressBar> 컨트롤의 <xref:System.Windows.Forms.ProgressBar.Minimum%2A> 및 <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 값입니다.  
   
-2.  코드에서 컨트롤의 <xref:System.Windows.Forms.ProgressBar.Value%2A> 속성을 앞에서 설정한 최소값과 최대값 사이의 정수 값으로 설정합니다.  
+2.  코드에서 컨트롤의 설정할 <xref:System.Windows.Forms.ProgressBar.Value%2A> 속성을 설정 하면 최소 및 최대 값 사이의 정수 값입니다.  
   
     > [!NOTE]
-    >  <xref:System.Windows.Forms.ProgressBar.Minimum%2A> 및 <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 속성으로 설정된 범위를 벗어난 값으로 <xref:System.Windows.Forms.ProgressBar.Value%2A> 속성을 설정하면 컨트롤에서 <xref:System.ArgumentException> 예외를 throw합니다.  
+    >  설정 하는 경우는 <xref:System.Windows.Forms.ProgressBar.Value%2A> 속성으로 설정 된 범위 외부의 <xref:System.Windows.Forms.ProgressBar.Minimum%2A> 및 <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 속성, 컨트롤 throw는 <xref:System.ArgumentException> 예외입니다.  
   
-     다음 코드 예제에서는 <xref:System.Windows.Forms.ProgressBar> 값을 직접 설정하는 방법을 보여 줍니다.  이 코드는 데이터 소스에서 레코드를 읽고, 데이터 레코드를 읽을 때마다 진행률 표시줄과 레이블을 업데이트합니다.  이 예제에서는 폼에 <xref:System.Windows.Forms.Label> 컨트롤과 <xref:System.Windows.Forms.ProgressBar> 컨트롤이 있고 `FirstName`  및 `Last Name`  필드가 포함된 `CustomerRow` 라는 행이 있는 데이터 테이블이 있어야 합니다.  
+     다음 코드 예제에서는 설정 하는 방법을 보여 줍니다.는 <xref:System.Windows.Forms.ProgressBar> 값을 직접 합니다. 코드는 데이터 소스에서 레코드를 읽고 데이터 레코드를 읽을 때마다 진행률 표시줄 및 레이블을 업데이트 합니다. 이 예제에서는 폼에는 <xref:System.Windows.Forms.Label> 컨트롤은 <xref:System.Windows.Forms.ProgressBar> 컨트롤과 라는 행이 있는 데이터 테이블 `CustomerRow` 와 `FirstName` 및 `LastName` 필드입니다.  
   
     ```vb  
     Public Sub CreateNewRecords()  
@@ -69,7 +69,6 @@ caps.handback.revision: 14
        ' Updates the label to show that a record was read.  
        Label1.Text = "Records Read = " & ProgressBar1.Value.ToString()  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -94,19 +93,19 @@ caps.handback.revision: 14
     }  
     ```  
   
-     고정된 간격으로 진행되는 진행률을 표시하려면 값을 설정한 다음 <xref:System.Windows.Forms.ProgressBar> 컨트롤의 값을 해당 간격으로 증가시키는 메서드를 호출합니다.  이 방법은 진행률을 전체에 대한 백분율로 측정하지 않는 타이머 및 기타 시나리오에 유용합니다.  
+     값을 설정할 수 있으며 다음 증가 하는 메서드를 호출 하면 고정된 간격으로 진행 되는 진행률을 표시 하는 경우는 <xref:System.Windows.Forms.ProgressBar> 해당 간격으로 컨트롤의 값입니다. 타이머 및 여기서 진행률 전체에 대 한 백분율로 측정 하지 않는 다른 시나리오에 유용 합니다.  
   
-### 진행률 표시줄을 고정된 값으로 증가시키려면  
+### <a name="to-increase-the-progress-bar-by-a-fixed-value"></a>고정된 값으로 진행률 표시줄을 증가 시키려면  
   
-1.  <xref:System.Windows.Forms.ProgressBar> 컨트롤의 <xref:System.Windows.Forms.ProgressBar.Minimum%2A> 및 <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 값을 설정합니다.  
+1.  설정의 <xref:System.Windows.Forms.ProgressBar> 컨트롤의 <xref:System.Windows.Forms.ProgressBar.Minimum%2A> 및 <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 값입니다.  
   
-2.  컨트롤의 <xref:System.Windows.Forms.ProgressBar.Step%2A> 속성을 진행률 표시줄에 표시되는 증가치를 나타내는 정수로 설정합니다.  
+2.  컨트롤의 <xref:System.Windows.Forms.ProgressBar.Step%2A> 진행률 표시줄의 증가 크기를 나타내는 정수를 속성 값을 표시 합니다.  
   
-3.  <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> 메서드를 호출하여 <xref:System.Windows.Forms.ProgressBar.Step%2A> 속성에 설정된 값으로 표시되도록 값을 변경합니다.  
+3.  호출 된 <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> 에 설정 된 값으로 표시 되는 값을 변경 하려면 메서드는 <xref:System.Windows.Forms.ProgressBar.Step%2A> 속성입니다.  
   
-     다음 코드 예제에서는 진행률 표시줄이 복사 작업에 관련된 파일 개수를 관리하는 방법을 보여 줍니다.  
+     다음 코드 예제는 진행률 표시줄 수 복사 작업에 있는 파일의 수를 유지 하는 방법을 보여 줍니다.  
   
-     다음 예제에서는 각 파일을 메모리로 읽어 들일 때마다 진행률 표시줄과 레이블이 업데이트되어 읽어 들인 총 파일 개수를 나타냅니다.  이 예제에서는 폼에 <xref:System.Windows.Forms.Label> 컨트롤과 <xref:System.Windows.Forms.ProgressBar> 컨트롤이 있어야 합니다.  
+     다음 예에서으로 각 파일은 메모리로 읽습니다 진행률 표시줄 및 레이블 읽기의 총 파일 수를 반영 하도록 업데이트 됩니다. 이 예제에서는 폼에는 <xref:System.Windows.Forms.Label> 제어 및 <xref:System.Windows.Forms.ProgressBar> 제어 합니다.  
   
     ```vb  
     Public Sub LoadFiles()  
@@ -132,7 +131,6 @@ caps.handback.revision: 14
           Label1.Text = "# of Files Read = " & ProgressBar1.Value.ToString  
        Next i  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -161,17 +159,17 @@ caps.handback.revision: 14
     }  
     ```  
   
-     진행률 표시줄에 표시되는 값이 각각 고유한 간격으로 증가하도록 만들 수 있습니다.  이 방법은 크기가 다른 여러 개의 파일을 하드 디스크에 쓸 때와 같이 일련의 고유한 작업을 추적하거나 진행률을 전체에 대한 백분율로 측정하려는 경우 유용합니다.  
+     마지막으로, 각 증가 고유한 간격 있도록 진행률 표시줄에 표시 되는 값을 늘릴 수 있습니다. 하면 되는 추적 일련의 하드 디스크에 다양 한 크기의 파일을 쓰는 또는 전체에 대 한 백분율로 진행률을 측정 같은 고유 작업 하는 경우에 유용 합니다.  
   
-### 진행률 표시줄을 동적 값으로 증가시키려면  
+### <a name="to-increase-the-progress-bar-by-a-dynamic-value"></a>동적 값으로 진행률 표시줄을 증가 시키려면  
   
-1.  <xref:System.Windows.Forms.ProgressBar> 컨트롤의 <xref:System.Windows.Forms.ProgressBar.Minimum%2A> 및 <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 값을 설정합니다.  
+1.  설정의 <xref:System.Windows.Forms.ProgressBar> 컨트롤의 <xref:System.Windows.Forms.ProgressBar.Minimum%2A> 및 <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 값입니다.  
   
-2.  <xref:System.Windows.Forms.ProgressBar.Increment%2A> 메서드를 호출하여 지정한 정수로 표시되도록 값을 변경합니다.  
+2.  호출 된 <xref:System.Windows.Forms.ProgressBar.Increment%2A> 메서드를 지정 하는 정수 하 여 표시 되는 값을 변경 합니다.  
   
-     다음 코드 예제에서는 진행률 표시줄이 복사 작업 동안 사용된 디스크 공간을 계산하는 방법을 보여 줍니다.  
+     다음 코드 예제에서는 어떻게 복사 작업 동안 디스크 공간 사용 된 진행률 표시줄을 계산할 수를 보여 줍니다.  
   
-     다음 예제에서는 각 파일이 하드 디스크에 쓰여질 때마다 진행률 표시줄과 레이블이 업데이트되어 사용할 수 있는 하드 디스크 공간을 나타냅니다.  이 예제에서는 폼에 <xref:System.Windows.Forms.Label> 컨트롤과 <xref:System.Windows.Forms.ProgressBar> 컨트롤이 있어야 합니다.  
+     다음 예제에서는 각 파일은 하드 디스크에 기록 될 때 진행률 표시줄 및 레이블을 사용할 수 있는 하드 디스크 공간의 크기를 반영 하도록 업데이트 됩니다. 이 예제에서는 폼에는 <xref:System.Windows.Forms.Label> 제어 및 <xref:System.Windows.Forms.ProgressBar> 제어 합니다.  
   
     ```vb  
     Public Sub ReadFiles()  
@@ -203,7 +201,6 @@ caps.handback.revision: 14
           ProgressBar1.Value.ToString()  
        Next i  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -237,8 +234,8 @@ caps.handback.revision: 14
     }  
     ```  
   
-## 참고 항목  
- <xref:System.Windows.Forms.ProgressBar>   
- <xref:System.Windows.Forms.ToolStripProgressBar>   
- [ProgressBar 컨트롤 개요](../../../../docs/framework/winforms/controls/progressbar-control-overview-windows-forms.md)   
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Windows.Forms.ProgressBar>  
+ <xref:System.Windows.Forms.ToolStripProgressBar>  
+ [ProgressBar 컨트롤 개요](../../../../docs/framework/winforms/controls/progressbar-control-overview-windows-forms.md)  
  [ProgressBar 컨트롤](../../../../docs/framework/winforms/controls/progressbar-control-windows-forms.md)

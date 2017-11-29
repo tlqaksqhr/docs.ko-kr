@@ -1,40 +1,32 @@
 ---
-title: "시각적 Basic2의 XML 리터럴 소개 | Microsoft 문서"
+title: "시각적 Basic2의 XML 리터럴 소개"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 391dd14f971f91d4d128841a7ebd24981266846a
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: 7ac96691b5b9274f67039f36bbdbfaf8abd03705
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Visual Basic의 XML 리터럴 소개
-이 단원에서는 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)]에서 XML 트리를 만드는 방법에 대해 설명합니다.  
+이 단원에서는 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]에서 XML 트리를 만드는 방법에 대해 설명합니다.  
   
- XML 트리에 대 한 내용으로 LINQ 쿼리 결과 사용 하는 방법에 대 한 정보를 참조 하십시오. [함수 생성 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)합니다.  
+ XML 트리에 대 한 내용으로 LINQ 쿼리의 결과 사용 하는 방법에 대 한 정보를 참조 하십시오. [함수 생성 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)합니다.  
   
- XML 리터럴에 대 한 자세한 내용은 [!INCLUDE[vbprvb](../../../../csharp/programming-guide/concepts/linq/includes/vbprvb_md.md)], 참조 [Visual Basic의 XML LINQ의 개요](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)합니다.  
+ XML 리터럴에 대 한 자세한 내용은 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], 참조 [개요의 LINQ to XML Visual Basic의](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)합니다.  
   
 ## <a name="creating-xml-trees"></a>XML 트리 만들기  
- 다음 예제에서는 만드는 방법을 보여 줍니다.는 <xref:System.Xml.Linq.XElement>,이 경우 `contacts`:</xref:System.Xml.Linq.XElement>  
+ 다음 예제에서는 <xref:System.Xml.Linq.XElement>(이 경우에는 `contacts`)를 만드는 방법을 보여 줍니다.  
   
 ```vb  
 Dim contacts As XElement = _  
@@ -53,7 +45,7 @@ Dim contacts As XElement = _
 ```  
   
 ### <a name="creating-an-xelement-with-simple-content"></a>단순 내용을 사용하여 XElement 만들기  
- 만들 수는 <xref:System.Xml.Linq.XElement>다음과 같이 단순 내용이 포함 된 있는:</xref:System.Xml.Linq.XElement>  
+ 다음과 같이 단순 내용이 포함된 <xref:System.Xml.Linq.XElement>를 만들 수 있습니다.  
   
 ```vb  
 Dim n as XElement = <Customer>Adventure Works</Customer>  
@@ -67,7 +59,7 @@ Console.WriteLine(n)
 ```  
   
 ### <a name="creating-an-empty-element"></a>빈 요소 만들기  
- 빈을 만들 수 있습니다 <xref:System.Xml.Linq.XElement>다음과 같이:</xref:System.Xml.Linq.XElement>  
+ 다음과 같이 빈 <xref:System.Xml.Linq.XElement>를 만들 수 있습니다.  
   
 ```vb  
 Dim n As XElement = <Customer/>  
@@ -81,7 +73,7 @@ Console.WriteLine(n)
 ```  
   
 ### <a name="using-embedded-expressions"></a>포함 식 사용  
- XML 리터럴의 중요한 특징은 포함 식을 허용한다는 점입니다. 포함 식을 통해 식을 계산하고 식의 결과를 XML 트리에 삽입할 수 있습니다. 식의 형식으로 계산 되는 경우 <xref:System.Xml.Linq.XElement>, 요소를 트리에 삽입 됩니다.</xref:System.Xml.Linq.XElement> 식의 형식으로 계산 되는 경우 <xref:System.Xml.Linq.XAttribute>, 특성을 트리에 삽입 됩니다.</xref:System.Xml.Linq.XAttribute> 유효한 경우에만 요소와 특성을 트리에 삽입할 수 있습니다.  
+ XML 리터럴의 중요한 특징은 포함 식을 허용한다는 점입니다. 포함 식을 통해 식을 계산하고 식의 결과를 XML 트리에 삽입할 수 있습니다. 식이 <xref:System.Xml.Linq.XElement> 형식으로 계산되면 요소가 트리에 삽입되고, 식이 <xref:System.Xml.Linq.XAttribute> 형식으로 계산되면 특성이 트리에 삽입됩니다. 유효한 경우에만 요소와 특성을 트리에 삽입할 수 있습니다.  
   
  단일 식만 포함 식에 들어갈 수 있는 점을 명심해야 합니다. 여러 문을 포함할 수는 없습니다. 식이 한 줄을 넘으면 줄 연속 문자를 사용해야 합니다.  
   
@@ -213,4 +205,4 @@ Child2 was attached
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [XML 트리 (Visual Basic) 만들기](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+ [XML 트리 만들기 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

@@ -1,54 +1,60 @@
 ---
-title: "방법: 브러시 변환 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-wpf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "브러시, 콘텐츠 회전"
-  - "브러시, Transform 속성"
-  - "브러시 콘텐츠 회전"
+title: "방법: 브러시 변환"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- brushes [WPF], rotating contents
+- brushes [WPF], Transform property
+- rotating contents of brushes [WPF]
 ms.assetid: ebada2f9-f01f-4863-9ea2-c2e4e51610f1
-caps.latest.revision: 13
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 12
+caps.latest.revision: "13"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a36ba5bce60b88d662f03fcff75a6fa04cad039d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: 브러시 변환
-이 예제에서는 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 및 <xref:System.Windows.Media.Brush.Transform%2A> 변환 속성을 사용하여 <xref:System.Windows.Media.Brush> 개체를 변환하는 방법을 보여 줍니다.  
+# <a name="how-to-transform-a-brush"></a>방법: 브러시 변환
+변환 하는 방법을 보여 주는이 예제 <xref:System.Windows.Media.Brush> 변환 속성을 사용 하 여 개체: <xref:System.Windows.Media.Brush.RelativeTransform%2A> 및 <xref:System.Windows.Media.Brush.Transform%2A>합니다.  
   
- 다음 예제에서는 <xref:System.Windows.Media.RotateTransform>을 사용하여 <xref:System.Windows.Media.ImageBrush>의 콘텐츠를 45도 회전합니다.  
+ 다음 예에서는 사용 된 <xref:System.Windows.Media.RotateTransform> 의 콘텐츠를 회전 하는 <xref:System.Windows.Media.ImageBrush> 으로 45도 합니다.  
   
- 다음 그림은 각각 <xref:System.Windows.Media.RotateTransform>이 없는 경우, <xref:System.Windows.Media.Brush.RelativeTransform%2A> 속성에 <xref:System.Windows.Media.RotateTransform>이 적용된 경우, <xref:System.Windows.Media.Brush.Transform%2A> 속성에 <xref:System.Windows.Media.RotateTransform>에 적용된 경우에 해당하는 <xref:System.Windows.Media.ImageBrush>를 보여 줍니다.  
+ 다음 그림에서는 <xref:System.Windows.Media.ImageBrush> 없이 <xref:System.Windows.Media.RotateTransform>와 <xref:System.Windows.Media.RotateTransform> 에 적용는 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 속성을 가진는 <xref:System.Windows.Media.RotateTransform> 에 적용는 <xref:System.Windows.Media.Brush.Transform%2A> 속성입니다.  
   
- ![Brush RelativeTransform 및 Transform 설정](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-transformandrelativetransform.png "wcpsdk\_graphicsmm\_transformandrelativetransform")  
+ ![Brush RelativeTransform 및 Transform 설정](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-transformandrelativetransform.png "wcpsdk_graphicsmm_transformandrelativetransform")  
   
-## 예제  
- 첫 번째 예제에서는 <xref:System.Windows.Media.RotateTransform>을 <xref:System.Windows.Media.ImageBrush>의 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 속성에 적용합니다.  <xref:System.Windows.Media.RotateTransform> 개체의 <xref:System.Windows.Media.RotateTransform.CenterX%2A> 및 <xref:System.Windows.Media.RotateTransform.CenterY%2A> 속성은 모두 이 콘텐츠 중심 점의 상대적 좌표인 0.5로 설정됩니다.  그 결과 <xref:System.Windows.Media.ImageBrush> 콘텐츠가 중심 점을 기준으로 회전합니다.  
+## <a name="example"></a>예제  
+ 적용 하는 첫 번째 예제는 <xref:System.Windows.Media.RotateTransform> 에 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 속성은 <xref:System.Windows.Media.ImageBrush>합니다. <xref:System.Windows.Media.RotateTransform.CenterX%2A> 및 <xref:System.Windows.Media.RotateTransform.CenterY%2A> 속성의는 <xref:System.Windows.Media.RotateTransform> 모두이 콘텐츠의 중심점의 상대 좌표 0.5로 설정 되어 있습니다. 결과적으로 <xref:System.Windows.Media.ImageBrush> 콘텐츠 가운데를 중심으로 회전 합니다.  
   
  [!code-csharp[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTransformExample.cs#imagebrushrelativetransformexample)]
  [!code-vb[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtransformexample.vb#imagebrushrelativetransformexample)]
- [!code-xml[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTransformExample.xaml#imagebrushrelativetransformexample)]  
+ [!code-xaml[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTransformExample.xaml#imagebrushrelativetransformexample)]  
   
- 두 번째 예제에서도 <xref:System.Windows.Media.RotateTransform>을 <xref:System.Windows.Media.ImageBrush>에 적용하지만 이 예제에서는 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 속성 대신 <xref:System.Windows.Media.Brush.Transform%2A> 속성을 사용합니다.  
+ 두 번째 예제도 적용 됩니다는 <xref:System.Windows.Media.RotateTransform> 에 <xref:System.Windows.Media.ImageBrush>이지만 사용 하 여이 예제는 <xref:System.Windows.Media.Brush.Transform%2A> 속성 대신는 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 속성입니다.  
   
- 브러시 중심을 기준으로 회전하기 위해 예제에서는 <xref:System.Windows.Media.RotateTransform> 개체의 <xref:System.Windows.Media.RotateTransform.CenterX%2A> 및 <xref:System.Windows.Media.RotateTransform.CenterY%2A> 속성을 절대 좌표로 설정합니다.  브러시는 175 x 90[픽셀](GTMT)의 사각형을 칠하기 때문에 사각형의 중심 점은 \(87.5, 45\)입니다.  
+ 중심을 관통 하는 방법에 대 한 브러시를 회전 하려면이 예제에서는 설정는 <xref:System.Windows.Media.RotateTransform.CenterX%2A> 및 <xref:System.Windows.Media.RotateTransform.CenterY%2A> 의 속성은 <xref:System.Windows.Media.RotateTransform> 개체 절대 좌표입니다. 브러시는 175 x 90 셀 사각형을 그리기 때문에 사각형의 중심점은 (87.5, 45)입니다.  
   
  [!code-csharp[BrushesIntroduction_snip#ImageBrushTransformExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTransformExample.cs#imagebrushtransformexample)]
  [!code-vb[BrushesIntroduction_snip#ImageBrushTransformExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtransformexample.vb#imagebrushtransformexample)]
- [!code-xml[BrushesIntroduction_snip#ImageBrushTransformExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTransformExample.xaml#imagebrushtransformexample)]  
+ [!code-xaml[BrushesIntroduction_snip#ImageBrushTransformExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTransformExample.xaml#imagebrushtransformexample)]  
   
- <xref:System.Windows.Media.Brush.RelativeTransform%2A> 및 <xref:System.Windows.Media.Brush.Transform%2A> 속성의 작동 방식에 대한 설명은 [브러시 변환 개요](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)를 참조하십시오.  
+ 에 대 한 설명은 방법을 <xref:System.Windows.Media.Brush.RelativeTransform%2A> 및 <xref:System.Windows.Media.Brush.Transform%2A> 속성 작업를 참조 하십시오.는 [브러시 변환 개요](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)합니다.  
   
- 전체 샘플을 보려면 [Brushes 샘플](http://go.microsoft.com/fwlink/?LinkID=159973)을 참조하십시오.  브러시에 대한 자세한 내용은 [단색 및 그라데이션을 사용한 그리기 개요](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)를 참조하십시오.  
+ 전체 샘플을 보려면 [브러시 샘플](http://go.microsoft.com/fwlink/?LinkID=159973)을 참조하세요. 브러시에 대한 자세한 내용은 [단색 및 그라데이션을 사용한 그리기 개요](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)를 참조하세요.  
   
-## 참고 항목  
- [브러시 변환 개요](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)   
- [단색 및 그라데이션을 사용한 그리기 개요](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)   
+## <a name="see-also"></a>참고 항목  
+ [브러시 변환 개요](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)  
+ [단색 및 그라데이션을 사용한 그리기 개요](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
  [Transform 개요](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)

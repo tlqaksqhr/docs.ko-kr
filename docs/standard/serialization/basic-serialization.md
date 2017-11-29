@@ -7,18 +7,16 @@ helpviewer_keywords:
 - binary serialization, basic serialization
 - serialization, basic serialization
 ms.assetid: d899d43c-335a-433e-a589-cd187192984f
-dev_langs:
-- CSharp
-caps.latest.revision: 7
+dev_langs: CSharp
+caps.latest.revision: "7"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 717bcb6f9f72a728d77e2847096ea558a9c50902
-ms.openlocfilehash: 334fe65c41e283f9ea6335183da1b2dab53e30af
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.openlocfilehash: 1e059fa92f88501853236c3e6632525646bc7a19
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="basic-serialization"></a>기본 serialization
 
@@ -101,6 +99,5 @@ public class MyStuff : MyObject
  [Serializable](xref:System.SerializableAttribute) 특성을 사용하면 편리하지만 앞에서 설명한 제한 사항이 있습니다. 클래스를 직렬화되도록 표시하는 시점에 대한 자세한 내용은 [Serialization 지침](serialization-guidelines.md)을 참조하세요. 컴파일된 뒤에는 serialization을 클래스에 추가할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [이진 serialization](binary-serialization.md)   
+ [이진 serialization](binary-serialization.md)  
  [XML 및 SOAP serialization](xml-and-soap-serialization.md)
-

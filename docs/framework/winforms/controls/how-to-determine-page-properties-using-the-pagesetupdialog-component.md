@@ -1,41 +1,46 @@
 ---
-title: "방법: PageSetupDialog 구성 요소를 사용하여 페이지 속성 설정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "페이지 속성"
-  - "페이지 설정"
-  - "PageSetupDialog 구성 요소"
+title: "방법: PageSetupDialog 구성 요소를 사용하여 페이지 속성 설정"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+- cpp
+helpviewer_keywords:
+- page properties
+- page setup
+- PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
-caps.latest.revision: 14
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e7dc3603d37106c122f3e92503b37dcfc02d7fef
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: PageSetupDialog 구성 요소를 사용하여 페이지 속성 설정
+# <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>방법: PageSetupDialog 구성 요소를 사용하여 페이지 속성 설정
 [PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md) 구성 요소는 문서의 사용자에게 레이아웃, 용지 크기 및 기타 페이지 레이아웃 옵션을 표시합니다.  
   
- <xref:System.Drawing.Printing.PrintDocument> 클래스의 인스턴스를 지정해야 합니다\(인쇄할 문서\). 또한 사용자 컴퓨터에 로컬로 또는 네트워크를 통해 프린터가 설치되어 있어야 합니다. 부분적으로 이것이 <xref:System.Windows.Forms.PageSetupDialog> 구성 요소가 사용자에게 표시되는 페이지 서식 지정 옵션을 결정하는 방법이기 때문입니다.  
+ <xref:System.Drawing.Printing.PrintDocument> 클래스의 인스턴스를 지정해야 합니다(인쇄할 문서). 또한 사용자 컴퓨터에 로컬로 또는 네트워크를 통해 프린터가 설치되어 있어야 합니다. 부분적으로 이것이 <xref:System.Windows.Forms.PageSetupDialog> 구성 요소가 사용자에게 표시되는 페이지 서식 지정 옵션을 결정하는 방법이기 때문입니다.  
   
- <xref:System.Windows.Forms.PageSetupDialog> 구성 요소 작업의 중요한 측면은 <xref:System.Drawing.Printing.PageSettings> 클래스와의 상호 작용 방법입니다.<xref:System.Drawing.Printing.PageSettings> 클래스는 용지 방향, 페이지의 크기, 여백 등 페이지가 인쇄되는 방법을 수정하는 설정을 지정하는 데 사용됩니다. 이러한 각 설정은 <xref:System.Drawing.Printing.PageSettings> 클래스의 속성으로 표시됩니다.<xref:System.Windows.Forms.PageSetupDialog> 클래스는 문서와 연결된\(그리고 <xref:System.Drawing.Printing.PrintDocument.DefaultPageSettings%2A> 속성으로 표시되는\) <xref:System.Drawing.Printing.PageSettings> 클래스의 지정된 인스턴스에 대해 이러한 속성 값을 수정합니다.  
+ <xref:System.Windows.Forms.PageSetupDialog> 구성 요소 작업의 중요한 측면은 <xref:System.Drawing.Printing.PageSettings> 클래스와의 상호 작용 방법입니다. <xref:System.Drawing.Printing.PageSettings> 클래스는 용지 방향, 페이지의 크기, 여백 등 페이지가 인쇄되는 방법을 수정하는 설정을 지정하는 데 사용됩니다. 이러한 각 설정은 <xref:System.Drawing.Printing.PageSettings> 클래스의 속성으로 표시됩니다. <xref:System.Windows.Forms.PageSetupDialog> 클래스는 문서와 연결된(그리고 <xref:System.Drawing.Printing.PageSettings> 속성으로 표시되는) <xref:System.Drawing.Printing.PrintDocument.DefaultPageSettings%2A> 클래스의 지정된 인스턴스에 대해 이러한 속성 값을 수정합니다.  
   
-### PageSetupDialog 구성 요소를 사용하여 페이지 속성을 설정하려면  
+### <a name="to-set-page-properties-using-the-pagesetupdialog-component"></a>PageSetupDialog 구성 요소를 사용하여 페이지 속성을 설정하려면  
   
-1.  <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 메서드를 사용하여 대화 상자를 표시하고, 사용할 <xref:System.Drawing.Printing.PrintDocument>를 지정합니다.  
+1.  <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 메서드를 사용하여 대화 상자를 표시하고, 사용할 <xref:System.Drawing.Printing.PrintDocument> 를 지정합니다.  
   
-     다음 예제에는 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기가 <xref:System.Windows.Forms.PageSetupDialog> 구성 요소의 인스턴스를 엽니다.<xref:System.Windows.Forms.PageSetupDialog.Document%2A> 속성에서 기존 문서가 지정되고, 해당 <xref:System.Drawing.Printing.PageSettings.Color%2A?displayProperty=fullName> 속성은 `false`로 설정됩니다.  
+     다음 예제에는 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기가 <xref:System.Windows.Forms.PageSetupDialog> 구성 요소의 인스턴스를 엽니다. <xref:System.Windows.Forms.PageSetupDialog.Document%2A> 속성에서 기존 문서가 지정되고, 해당 <xref:System.Drawing.Printing.PageSettings.Color%2A?displayProperty=nameWithType> 속성은 `false`로 설정됩니다.  
   
-     이 예제에서는 폼에 <xref:System.Windows.Forms.Button> 컨트롤, <xref:System.Drawing.Printing.PrintDocument> 구성 요소\(이름: `myDocument`\) 및 <xref:System.Windows.Forms.PageSetupDialog> 구성 요소가 있다고 가정합니다.  
+     이 예에서는 가정 폼에는 <xref:System.Windows.Forms.Button> 컨트롤은 <xref:System.Drawing.Printing.PrintDocument> 라는 구성 요소가 `myDocument`, 및 <xref:System.Windows.Forms.PageSetupDialog> 구성 요소입니다.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -49,7 +54,6 @@ caps.handback.revision: 14
        PageSetupDialog1.Document.DefaultPageSettings.Color = False  
        PageSetupDialog1.ShowDialog()  
     End Sub  
-  
     ```  
   
     ```csharp  
@@ -64,7 +68,6 @@ caps.handback.revision: 14
        pageSetupDialog1.Document.DefaultPageSettings.Color = false;  
        pageSetupDialog1.ShowDialog();  
     }  
-  
     ```  
   
     ```cpp  
@@ -83,11 +86,10 @@ caps.handback.revision: 14
        }  
     ```  
   
-     \([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 및 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]\) 폼 생성자에 다음 코드를 추가하여 이벤트 처리기를 등록합니다.  
+     ([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] 및 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 폼 생성자에 다음 코드를 추가하여 이벤트 처리기를 등록합니다.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
-  
     ```  
   
     ```cpp  
@@ -95,7 +97,7 @@ caps.handback.revision: 14
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## 참고 항목  
- <xref:System.Windows.Forms.PageSetupDialog>   
- [방법: 표준 Windows Forms 인쇄 작업 만들기](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)   
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Windows.Forms.PageSetupDialog>  
+ [방법: 표준 Windows Forms 인쇄 작업 만들기](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)  
  [PageSetupDialog 구성 요소](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)

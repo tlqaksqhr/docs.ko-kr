@@ -1,49 +1,41 @@
 ---
-title: "BackgroundWorker 구성 요소 (Visual Basic)를 사용한 다중 스레딩 | Microsoft 문서"
+title: "BackgroundWorker 구성 요소 (Visual Basic)를 사용한 다중 스레딩"
 ms.custom: 
-ms.date: 2015-07-20
+ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-visual-basic
+ms.technology: devlang-visual-basic
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
 ms.assetid: e4cd9b2a-f924-470e-a16e-50274709b40e
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: a06bd2a17f1d6c7308fa6337c866c1ca2e7281c0
-ms.openlocfilehash: 3686eb230349876f6cfffd2ad94ed1f547779ab1
-ms.lasthandoff: 03/13/2017
-
+ms.openlocfilehash: bb0734b4bbf3f8bf5b27305754829f1a9f29f42a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="walkthrough-multithreading-with-the-backgroundworker-component-visual-basic"></a>연습: BackgroundWorker 구성 요소 (Visual Basic)를 사용한 다중 스레딩
-이 연습에서는 텍스트 파일에서 특정 단어 검색 하는 다중 스레드 Windows Forms 응용 프로그램을 만드는 방법을 보여 줍니다. 내용은 다음과 같습니다.  
+이 연습에서는 텍스트 파일에서 단어를 검색하는 다중 스레드 Windows Forms 응용 프로그램을 만드는 방법을 보여 줍니다. 세부 항목은 다음과 같습니다.  
   
--   클래스에서 호출할 수 있는 메서드로 정의 <xref:System.ComponentModel.BackgroundWorker>구성 요소.</xref:System.ComponentModel.BackgroundWorker>  
+-   <xref:System.ComponentModel.BackgroundWorker> 구성 요소에서 호출할 수 있는 메서드를 사용하여 클래스 정의  
   
--   에 의해 발생 하는 이벤트를 처리는 <xref:System.ComponentModel.BackgroundWorker>구성 요소.</xref:System.ComponentModel.BackgroundWorker>  
+-   <xref:System.ComponentModel.BackgroundWorker> 구성 요소에서 발생하는 이벤트 처리  
   
--   시작 하는 <xref:System.ComponentModel.BackgroundWorker>구성 요소가 메서드를 실행 합니다.</xref:System.ComponentModel.BackgroundWorker>  
+-   메서드를 실행할 <xref:System.ComponentModel.BackgroundWorker> 구성 요소 시작  
   
--   구현 된 `Cancel` 중지 단추는 <xref:System.ComponentModel.BackgroundWorker>구성 요소.</xref:System.ComponentModel.BackgroundWorker>  
+-   <xref:System.ComponentModel.BackgroundWorker> 구성 요소를 중지하는 `Cancel` 단추 구현  
   
 ### <a name="to-create-the-user-interface"></a>사용자 인터페이스를 만들려면  
   
-1.  새 Visual Basic Windows Forms 응용 프로그램 프로젝트를 열고 라는 폼을 만들 `Form1`합니다.  
+1.  새 Visual Basic Windows Forms 응용 프로그램 프로젝트를 열고 라는 양식을 만드는 `Form1`합니다.  
   
-2.  두 개의 단추와 텍스트 상자에&4; 개의 추가 `Form1`합니다.  
+2.  두 개의 단추와 네 개의 텍스트 상자를 `Form1`에 추가합니다.  
   
-3.  다음 표에 나와 있는 것 처럼 개체 이름을 지정 합니다.  
+3.  다음 표에 나와 있는 것처럼 개체의 이름을 지정합니다.  
   
     |개체|속성|설정|  
     |------------|--------------|-------------|  
@@ -51,21 +43,21 @@ ms.lasthandoff: 03/13/2017
     |두 번째 단추|`Name`, `Text`|취소, 취소|  
     |첫 번째 텍스트 상자|`Name`, `Text`|SourceFile, ""|  
     |두 번째 텍스트 상자|`Name`, `Text`|CompareString, ""|  
-    |세 번째 텍스트 상자|`Name`, `Text`|"0" WordsCounted|  
-    |네 번째 텍스트 상자|`Name`, `Text`|"0" LinesCounted|  
+    |세 번째 텍스트 상자|`Name`, `Text`|WordsCounted, "0"|  
+    |네 번째 텍스트 상자|`Name`, `Text`|LinesCounted, "0"|  
   
-4.  각 텍스트 상자 옆에 레이블을 추가 합니다. 설정의 `Text` 다음 표와에서 같이 각 레이블에 대 한 속성입니다.  
+4.  각 텍스트 상자 옆에 레이블을 추가합니다. 다음 표와 같이 각 레이블에 대해 `Text` 속성을 설정합니다.  
   
     |개체|속성|설정|  
     |------------|--------------|-------------|  
     |첫 번째 레이블|`Text`|소스 파일|  
     |두 번째 레이블|`Text`|문자열 비교|  
-    |세 번째 레이블|`Text`|일치 하는 단어|  
-    |네 번째 레이블|`Text`|계산 된 줄|  
+    |세 번째 레이블|`Text`|일치하는 단어|  
+    |네 번째 레이블|`Text`|계산된 줄|  
   
-### <a name="to-create-a-backgroundworker-component-and-subscribe-to-its-events"></a>BackgroundWorker 구성 요소를 작성 하 고 해당 이벤트에 가입 하려면  
+### <a name="to-create-a-backgroundworker-component-and-subscribe-to-its-events"></a>BackgroundWorker 구성 요소를 작성하고 해당 이벤트에 가입하려면  
   
-1.  추가 <xref:System.ComponentModel.BackgroundWorker>구성 요소에서 **구성 요소** 의 섹션은 **도구 상자** 폼에.</xref:System.ComponentModel.BackgroundWorker> 폼의 구성 요소 트레이에 표시 됩니다.  
+1.  **도구 상자**의 **구성 요소** 섹션에 있는 <xref:System.ComponentModel.BackgroundWorker> 구성 요소를 양식에 추가합니다. 양식의 구성 요소 트레이에 나타납니다.  
   
 2.  BackgroundWorker1 개체에 대 한 다음 속성을 설정 합니다.  
   
@@ -74,13 +66,13 @@ ms.lasthandoff: 03/13/2017
     |`WorkerReportsProgress`|True|  
     |`WorkerSupportsCancellation`|True|  
   
-### <a name="to-define-the-method-that-will-run-on-a-separate-thread"></a>별도 스레드에서 실행 될 메서드를 정의 하려면  
+### <a name="to-define-the-method-that-will-run-on-a-separate-thread"></a>별도 스레드에서 실행될 메서드를 정의하려면  
   
-1.  **프로젝트** 메뉴에서 선택 **클래스 추가** 를 프로젝트에 클래스를 추가 합니다. **새 항목 추가** 대화 상자가 표시 됩니다.  
+1.  **프로젝트** 메뉴에서 **클래스 추가**를 선택하여 프로젝트에 클래스를 추가합니다. **새 항목 추가** 대화 상자가 표시됩니다.  
   
-2.  선택 **클래스** 템플릿 창에서 입력 하 고 `Words.vb` 이름 필드에 있습니다.  
+2.  템플릿 창에서 **클래스**를 선택하고 이름 필드에 `Words.vb`를 입력합니다.  
   
-3.  **추가**를 클릭합니다. `Words` 클래스가 표시 됩니다.  
+3.  **추가**를 클릭합니다. `Words` 클래스가 표시됩니다.  
   
 4.  `Words` 클래스에 다음 코드를 추가합니다.  
   
@@ -171,9 +163,9 @@ ms.lasthandoff: 03/13/2017
     End Class  
     ```  
   
-### <a name="to-handle-events-from-the-thread"></a>스레드에서 이벤트를 처리 하기  
+### <a name="to-handle-events-from-the-thread"></a>스레드에서 이벤트를 처리하려면  
   
--   기본 폼에 다음 이벤트 처리기를 추가 합니다.  
+-   다음 이벤트 처리기를 기본 양식에 추가합니다.  
   
     ```vb  
     Private Sub BackgroundWorker1_RunWorkerCompleted(   
@@ -205,9 +197,9 @@ ms.lasthandoff: 03/13/2017
     End Sub  
     ```  
   
-### <a name="to-start-and-call-a-new-thread-that-runs-the-wordcount-method"></a>시작 하 고 WordCount 메서드를 실행 하는 새 스레드를 호출 합니다.  
+### <a name="to-start-and-call-a-new-thread-that-runs-the-wordcount-method"></a>WordCount 메서드를 실행하는 새 스레드를 시작하고 호출하려면  
   
-1.  프로그램에 다음 프로시저를 추가 합니다.  
+1.  프로그램에 다음 프로시저를 추가합니다.  
   
     ```vb  
     Private Sub BackgroundWorker1_DoWork(   
@@ -241,7 +233,7 @@ ms.lasthandoff: 03/13/2017
     End Sub  
     ```  
   
-2.  호출 된 `StartThread` 메서드에서 `Start` 폼에 단추:  
+2.  양식의 `Start` 단추에서 `StartThread` 메서드를 호출합니다.  
   
     ```vb  
     Private Sub Start_Click() Handles Start.Click  
@@ -249,9 +241,9 @@ ms.lasthandoff: 03/13/2017
     End Sub  
     ```  
   
-### <a name="to-implement-a-cancel-button-that-stops-the-thread"></a>취소 단추를 구현 하 고 스레드를 중지 하는  
+### <a name="to-implement-a-cancel-button-that-stops-the-thread"></a>스레드를 중지하는 취소 단추를 구현하려면  
   
--   호출의 `StopThread` 에서 프로시저는 `Click` 에 대 한 이벤트 처리기는 `Cancel` 단추입니다.  
+-   `Cancel` 단추에 대한 `Click` 이벤트 처리기에서 `StopThread` 프로시저를 호출합니다.  
   
     ```vb  
     Private Sub Cancel_Click() Handles Cancel.Click  
@@ -261,30 +253,30 @@ ms.lasthandoff: 03/13/2017
     ```  
   
 ## <a name="testing"></a>테스트  
- 이제 올바르게 작동 하는지 확인 하도록 응용 프로그램을 테스트할 수 있습니다.  
+ 응용 프로그램을 테스트하여 올바르게 작동하는지 확인할 수 있습니다.  
   
 #### <a name="to-test-the-application"></a>응용 프로그램을 테스트하려면  
   
 1.  F5 키를 눌러 응용 프로그램을 실행합니다.  
   
-2.  테스트 하려는 파일에 대 한 파일 경로 입력 폼이 표시 하는 경우는 `sourceFile` 상자입니다. 예를 들어 테스트 파일 Test.txt 라는 가정 하 고, C:\Test.txt를 입력 합니다.  
+2.  양식이 표시되면 테스트할 파일의 경로를 `sourceFile` 상자에 입력합니다. 예를 들어 테스트 파일의 이름이 Test.txt라면 C:\Test.txt를 입력합니다.  
   
-3.  두 번째 텍스트 상자에 단어나 구를 검색할 텍스트 파일에서 응용 프로그램을 입력 합니다.  
+3.  두 번째 텍스트 상자에 응용 프로그램이 텍스트 파일에서 검색할 단어나 구를 입력합니다.  
   
-4.  `Start` 단추를 클릭합니다. `LinesCounted` 단추 증가 하는 즉시 시작 해야 합니다. 응용 프로그램이 완료 되 면 "완료 계산" 하는 메시지를 표시 합니다.  
+4.  `Start` 단추를 클릭합니다. `LinesCounted` 단추에서 숫자가 즉시 증가하기 시작해야 합니다. 응용 프로그램이 완료되면 "계산 완료" 메시지가 표시됩니다.  
   
-#### <a name="to-test-the-cancel-button"></a>취소 단추를 테스트 하려면  
+#### <a name="to-test-the-cancel-button"></a>취소 단추를 테스트하려면  
   
-1.  F5 키를 눌러 응용 프로그램을 시작 하 고 이전 절차에서 설명한 대로 파일 이름 및 검색 단어를 입력 합니다. 파일을 선택한 완료 되기 전에 절차를 취소 하는 시간을 할 수 있도록 충분히 큰 인지 확인 합니다.  
+1.  F5 키를 눌러 응용 프로그램을 시작하고 이전 절차에서 설명한 대로 파일 이름 및 검색 단어를 입력합니다. 완료되기 전에 프로시저를 취소할 시간이 있을 정도로 선택한 파일이 큰지 확인합니다.  
   
-2.  클릭 된 `Start` 단추는 응용 프로그램을 시작 합니다.  
+2.  `Start` 단추를 클릭하여 응용 프로그램을 시작합니다.  
   
-3.  `Cancel` 단추를 클릭합니다. 응용 프로그램은 즉시 계산 중지 해야 합니다.  
+3.  `Cancel` 단추를 클릭합니다. 응용 프로그램은 즉시 계산을 중지해야 합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 이 응용 프로그램에는 기본적인 오류 처리 기능이 포함 되어 있습니다. 빈 검색 문자열을 검색합니다. 단어 또는 계산 될 수 있는 줄의 최대 수를 초과 하는 등의 다른 오류를 처리 하 여이 프로그램을 더욱 강력한 만들 수 있습니다.  
+ 이 응용 프로그램에는 몇 가지 기본적인 오류 처리 기능이 포함되어 있습니다. 이 응용 프로그램은 빈 검색 문자열을 검색합니다. 계산할 수 있는 최대 단어 또는 줄 수 초과 등과 같은 기타 오류를 처리함으로써 이 프로그램을 더욱 강력하게 만들 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [스레딩 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)   
- [연습: Visual Basic로 간단한 다중 스레드 구성 요소 제작](http://msdn.microsoft.com/library/05693b70-3566-4d91-9f2c-c9bc4ccb3001)   
+ [스레딩(Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/index.md)  
+ [연습: Visual Basic로 간단한 다중 스레드 구성 요소 작성](http://msdn.microsoft.com/library/05693b70-3566-4d91-9f2c-c9bc4ccb3001)  
  [방법: 이벤트 구독 및 구독 취소](../../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)

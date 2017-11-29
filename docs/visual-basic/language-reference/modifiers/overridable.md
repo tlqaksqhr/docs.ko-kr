@@ -1,70 +1,69 @@
 ---
-title: "Overridable (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "Overridable"
-  - "vb.Overridable"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "elements, concrete"
-  - "properties [Visual Basic], redefining"
-  - "overriding, Overridable keyword"
-  - "elements, virtual"
-  - "virtual elements"
-  - "procedures, overriding"
-  - "concrete elements"
-  - "procedures, redefining"
-  - "Overridable keyword"
-  - "properties [Visual Basic], overriding"
+title: Overridable(Visual Basic)
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- Overridable
+- vb.Overridable
+helpviewer_keywords:
+- elements [Visual Basic], concrete
+- properties [Visual Basic], redefining
+- overriding, Overridable keyword
+- elements [Visual Basic], virtual
+- virtual [elements VB]
+- procedures [Visual Basic], overriding
+- concrete [elements VB]
+- procedures [Visual Basic], redefining
+- Overridable keyword [Visual Basic]
+- properties [Visual Basic], overriding
 ms.assetid: 612581e7-8a4c-4a5d-beff-3402fffa6f35
-caps.latest.revision: 17
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: f7d5dd33f8591be1b4305e954e55e035882626c6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Overridable (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-속성이나 프로시저가 파생 클래스에서 같은 이름의 속성 또는 프로시저에 의해 재정의될 수 있다는 것을 지정합니다.  
+# <a name="overridable-visual-basic"></a>Overridable(Visual Basic)
+속성 또는 프로시저에서는 동일 하 게 명명 된 속성 또는 프로시저가 파생된 클래스에서 재정의 될 수 있다는 것을 지정 합니다.  
   
-## 설명  
- `Overridable` 한정자 있습니다 속성 또는 메서드가 파생된 클래스에서 재정의 하는 클래스에 있습니다.  [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md) 한정자를 방지 속성 또는 메서드가 파생된 클래스에서 재정의 합니다.  자세한 내용은 [Inheritance Basics](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)를 참조하십시오.  
+## <a name="remarks"></a>설명  
+ `Overridable` 파생된 클래스에서 재정의 되도록 클래스에서 속성 또는 메서드를 허용 하는 한정자입니다. [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md) 파생된 클래스에서 재정의 되는 속성 또는 메서드를 방지 하는 한정자입니다.  자세한 내용은 [상속 기본 사항](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)을 참조하세요.  
   
- 경우는 `Overridable` 또는 `NotOverridable` 한정자가 지정 되지 않은,를 여부를 속성이 나 메서드에 기본 클래스 속성 또는 메서드 재정의에서 기본 설정에 따라 달라 집니다.  속성 또는 메서드는 기본 클래스 속성 또는 메서드를 재정의 하는 경우 기본 설정 된 `Overridable`. 그렇지 않으면입니다 `NotOverridable`.  
+ 경우는 `Overridable` 또는 `NotOverridable` 한정자를 지정 하지 않으면, 기본 설정 속성 또는 메서드의 기본 클래스 속성 또는 메서드의 재정의 하는 여부에 따라 달라 집니다. 속성 또는 메서드는 기본 클래스 속성 또는 메서드를 재정의 하는 경우 기본 설정은입니다 `Overridable`, 그렇지 않으면는 `NotOverridable`합니다.  
   
- 숨김 또는 재정의를 통해 상속된 요소를 다시 정의할 수 있지만 두 방식에는 큰 차이가 있습니다.  자세한 내용은 [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)를 참조하십시오.  
+ 숨김 또는 상속된 된 요소를 다시 정의 하기 위해 재정의할 수 있지만 두 방식 간에 중요 한 차이가 있습니다. 자세한 내용은 참조 [Visual Basic의 숨김 기능](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)합니다.  
   
- 재정의 가능한 요소를 *가상* 요소라고도 합니다.  재정의할 수 있지만 반드시 재정의하지 않아도 되는 요소를 *구체적인* 요소라고도 합니다.  
+ 재정의할 수 있는 요소는 라고도 *가상* 요소입니다. 재정의할 수 있습니다 하지만 있어서는 안 될,이 라고도 함는 *구체적인* 요소입니다.  
   
- 속성이나 프로시저 선언 문에서만 `Overridable`를 사용할 수 있습니다.  
+ 속성 또는 프로시저 선언문에서만 `Overridable`를 사용할 수 있습니다.  
   
-## 한정자 결합된  
- 지정할 수 없습니다. `Overridable` 또는 `NotOverridable` 에 있는 `Private` 메서드.  
+## <a name="combined-modifiers"></a>결합 된 한정자  
+ 지정할 수 없으며 `Overridable` 또는 `NotOverridable` 에 대 한 한 `Private` 메서드.  
   
- 하나의 선언에서 `Overridable`을 `MustOverride`, `NotOverridable` 또는 `Shared`와 함께 지정할 수 없습니다.  
+ 지정할 수 없습니다 `Overridable` 와 함께 `MustOverride`, `NotOverridable`, 또는 `Shared` 같은 선언에 있습니다.  
   
- 재정의 요소는 암시적으로 재정의할 수 있으므로 `Overridable`을 `Overrides`와 함께 사용할 수 없습니다.  
+ 재정의 요소는 암시적으로 재정의할 수 있으므로 `Overridable`과 `Overrides`를 결합할 수 없습니다.  
   
-## 용도  
+## <a name="usage"></a>용도  
  `Overridable` 한정자는 다음 컨텍스트에서 사용할 수 있습니다.  
   
- [Function Statement](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Function 문](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Property 문](../../../visual-basic/language-reference/statements/property-statement.md)  
   
- [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## 참고 항목  
- [Modifiers](../../../visual-basic/language-reference/modifiers/index.md)   
- [Inheritance Basics](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)   
- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)   
- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)   
- [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)   
- [키워드](../../../visual-basic/language-reference/keywords/index.md)   
- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+## <a name="see-also"></a>참고 항목  
+ [한정자](../../../visual-basic/language-reference/modifiers/index.md)  
+ [상속 기본 사항](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
+ [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
+ [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
+ [재정의](../../../visual-basic/language-reference/modifiers/overrides.md)  
+ [키워드](../../../visual-basic/language-reference/keywords/index.md)  
+ [Visual Basic의 숨김 기능](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

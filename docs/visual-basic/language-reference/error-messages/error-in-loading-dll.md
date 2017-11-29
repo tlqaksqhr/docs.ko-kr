@@ -1,44 +1,42 @@
 ---
-title: "Error in loading DLL (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vbrID48"
-dev_langs: 
-  - "VB"
+title: "DLL을 로드하는 동안 오류가 발생했습니다(Visual Basic)."
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords: vbrID48
 ms.assetid: 4226cd1f-028c-477d-88a5-cb57f7e0cdc8
-caps.latest.revision: 8
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: cc557dcc6709178b6519adb56f31debcbd1d1c39
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
-# Error in loading DLL (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-DLL\(동적 연결 라이브러리\)는 `Declare` 문의 `Lib` 절에 지정된 라이브러리입니다.  이 오류가 발생하는 원인은 다음과 같습니다.  
+# <a name="error-in-loading-dll-visual-basic"></a>DLL을 로드하는 동안 오류가 발생했습니다(Visual Basic).
+동적 연결 라이브러리 (DLL)는에 지정 된 라이브러리는 `Lib` 절은 `Declare` 문. 이 오류에 대 한 가능한 원인은 다음과 같습니다.  
   
--   DLL로 실행할 수 있는 파일이 아닙니다.  
+-   파일이 DLL로 실행할 아닙니다.  
   
--   Microsoft Windows DLL 파일이 아닙니다.  
+-   Microsoft Windows DLL 않습니다.  
   
--   DLL이 존재하지 않는 다른 DLL을 참조합니다.  
+-   DLL에는 존재 하지 않는 다른 DLL 참조 합니다.  
   
--   경로에 지정된 디렉터리에 DLL 또는 참조 DLL이 없습니다.  
+-   DLL 또는 참조 DLL 경로에 지정 하는 디렉터리에 있지 않습니다.  
   
-### 이 오류를 해결하려면  
+## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   파일이 소스 텍스트 파일이고 따라서 DLL로 실행할 수 없으면 DLL 실행 가능한 형식으로 컴파일하고 연결해야 합니다.  
+-   해당 파일을 소스 텍스트 파일 및 따라서 경우에 컴파일된을 DLL 실행 가능한 폼에 연결 될 해야 합니다.  
   
--   파일이 Microsoft Windows DLL이면 해당 Microsoft Windows를 사용합니다.  
+-   Microsoft Windows DLL 파일이 없는 경우 해당 하는 Microsoft Windows를 가져옵니다.  
   
--   DLL이 존재하지 않는 다른 DLL을 참조하면 참조 DLL을 가져와 사용 가능하게 만듭니다.  
+-   DLL 참조는 존재 하지 않는 다른 DLL, 참조 DLL 받으며 사용할 수 있도록 합니다.  
   
--   DLL 또는 참조 DLL이 경로에 지정된 디렉터리에 없으면 DLL을 참조 디렉터리로 이동합니다.  
+-   DLL 또는 참조 된 DLL의 경로 지정 된 디렉터리에 없으면 DLL 참조 디렉터리로 이동 합니다.  
   
-## 참고 항목  
- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)
+## <a name="see-also"></a>참고 항목  
+ [Declare 문](../../../visual-basic/language-reference/statements/declare-statement.md)

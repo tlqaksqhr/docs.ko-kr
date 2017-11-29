@@ -1,56 +1,55 @@
 ---
-title: "Boolean Data Type (Visual Basic) | Microsoft Docs"
-ms.date: "2015-07-20"
-ms.prod: ".net"
-ms.suite: ""
-ms.technology: 
-  - "devlang-visual-basic"
-ms.topic: "article"
-f1_keywords: 
-  - "vb.FALSE"
-  - "vb.TRUE"
-  - "vb.Boolean"
-dev_langs: 
-  - "VB"
-helpviewer_keywords: 
-  - "Boolean data type"
-  - "Boolean values, False keyword"
-  - "False keyword [Visual Basic]"
-  - "True keyword [Visual Basic]"
-  - "Boolean values, True keyword"
+title: "Boolean 데이터 형식(Visual Basic)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.topic: article
+f1_keywords:
+- vb.FALSE
+- vb.TRUE
+- vb.Boolean
+helpviewer_keywords:
+- Boolean data type
+- Boolean values [Visual Basic], False keyword
+- False keyword [Visual Basic]
+- True keyword [Visual Basic]
+- Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
-caps.latest.revision: 18
-author: "stevehoag"
-ms.author: "shoag"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: bdc106f1ec874c1a2165df069d5f3485fe5b2e43
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# Boolean Data Type (Visual Basic)
-[!INCLUDE[vs2017banner](../../../visual-basic/developing-apps/includes/vs2017banner.md)]
-
-`True`나 `False`만 될 수 있는 값입니다.  `True`와 `False` 키워드는 `Boolean` 변수의 두 가지 상태에 해당합니다.  
+# <a name="boolean-data-type-visual-basic"></a>Boolean 데이터 형식(Visual Basic)
+값만 될 수 있는 포함 `True` 또는 `False`합니다. 키워드 `True` 및 `False` 의 두 가지 상태에 해당 `Boolean` 변수입니다.  
   
-## 설명  
- true\/false, yes\/no 또는 on\/off 같은 두 가지 상태의 값을 포함하려면 [Boolean Data Type \(Visual Basic\)](../../../visual-basic/language-reference/data-types/boolean-data-type.md)을 사용합니다.  
+## <a name="remarks"></a>설명  
+ 사용 하 여는 [Boolean 데이터 형식 (Visual Basic)](../../../visual-basic/language-reference/data-types/boolean-data-type.md) 예/아니요 또는 켜기/끄기 true/false 같은 두 가지 상태 값을 포함 하도록 합니다.  
   
  `Boolean`의 기본값은 `False`입니다.  
   
- `Boolean` 값은 숫자로 저장되지 않고 저장된 값은 숫자가 아닙니다.  `True`와 `False`를 숫자 값으로 나타내도록 코드를 작성하지 마십시오.  `Boolean` 변수에는 가능하면 원래 용도에 맞는 논리 값이 사용되도록 제한해야 합니다.  
+ `Boolean`값이 숫자로 저장 되지 않습니다 및 저장 된 값은 숫자에 해당 되지 않아야 합니다. 해당 하는 숫자 값을 사용 하는 코드를 작성 하지 마십시오 `True` 및 `False`합니다. 용도 제한 해야 가능 하면 항상 `Boolean` 변수도 설계 된 논리 값입니다.  
   
-## 형식 변환  
- Visual Basic에서 숫자 데이터 형식 값을 `Boolean`으로 변환하는 경우 0은 `False`가 되고 다른 모든 값은 `True`가 됩니다.  Visual Basic에서 `Boolean` 값을 숫자 값으로 변환하는 경우 `False`는 0이 되고 `True`는 \-1이 됩니다.  
+## <a name="type-conversions"></a>형식 변환  
+ Visual Basic 숫자 데이터 형식 값을 변환 하는 경우 `Boolean`, 0은 `False` 고 다른 모든 값은 `True`합니다. Visual Basic로 변환 하는 경우 `Boolean` 값을 숫자 형식 `False` 0이 되 고 `True` 는-1입니다.  
   
- `Boolean` 값과 숫자 데이터 형식을 상호 변환할 때는 .NET Framework 변환 메서드 실행 결과가 Visual Basic 변환 키워드의 경우와 동일하지 않을 수도 있음을 염두에 두어야 합니다.  이렇게 결과가 다를 수 있는 이유는 Visual Basic에서 수행되는 변환 과정에 이전 버전과 호환되는 동작이 있기 때문입니다.  자세한 내용은 [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)의 "숫자 형식으로 정확하게 변환되지 않는 부울 형식"을 참조하십시오.  
+ 간에 변환할 때 `Boolean` 값 및 숫자 데이터 형식을 염두에.NET Framework의 변환 메서드는 항상 Visual Basic 변환 키워드와 동일한 결과 생성 하 고 하지 않습니다. 이 Visual Basic 변환 이전 버전과 호환 동작을 유지 합니다. 자세한 내용은 "부울 형식 않습니다 변환에 숫자 형식이 정확 하 게"의 참조 [데이터 형식 문제 해결](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)합니다.  
   
-## 프로그래밍 팁  
+## <a name="programming-tips"></a>프로그래밍 팁  
   
--   **음수.** `Boolean`은 숫자 형식이 아니므로 음의 값을 나타낼 수 없습니다.  어떤 경우이든 `Boolean`에 숫자 값을 지정할 수는 없습니다.  
+-   **음수입니다.** `Boolean`숫자 형식이 아닌 및 음수 값을 나타낼 수 없습니다. 사용 하지 않아야 어떤 경우 든, `Boolean` 숫자 값을 저장 합니다.  
   
--   **형식 문자.** `Boolean`에는 리터럴 형식 문자나 식별자 형식 문자가 없습니다.  
+-   **형식 문자입니다.** `Boolean`에 리터럴 형식 문자 또는 식별자 형식 문자가 없습니다.  
   
--   **Framework 형식.** .NET Framework에서 해당하는 형식은 <xref:System.Boolean?displayProperty=fullName> 구조체입니다.  
+-   **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.Boolean?displayProperty=nameWithType> 구조체입니다.  
   
-## 예제  
- 다음 예제에서 `runningVB`은 `Boolean` 변수이며 yes\/no 설정값만을 저장합니다.  
+## <a name="example"></a>예제  
+ 다음 예에서 `runningVB` 는 `Boolean` 예/아니요 설정 하는 간단한 저장 하는 변수입니다.  
   
 ```  
 Dim runningVB As Boolean  
@@ -60,11 +59,11 @@ If scriptEngine = "VB" Then
 End If  
 ```  
   
-## 참고 항목  
- <xref:System.Boolean?displayProperty=fullName>   
- [Data Types](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   
- [변환 요약](../../../visual-basic/language-reference/keywords/conversion-summary.md)   
- [Efficient Use of Data Types](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)   
- [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)   
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Boolean?displayProperty=nameWithType>  
+ [데이터 형식](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [형식 변환 함수](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
+ [변환 요약](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
+ [데이터 형식의 효율적 사용](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  
+ [데이터 형식 문제 해결](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
  [CType 함수](../../../visual-basic/language-reference/functions/ctype-function.md)

@@ -1,44 +1,48 @@
 ---
-title: "방법: ToolStripTextBox를 늘려 ToolStrip의 나머지 너비 채우기(Windows Forms) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: ".net-framework-4.6"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dotnet-winforms"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "jsharp"
-helpviewer_keywords: 
-  - "텍스트 상자, ToolStrip 컨트롤에서 늘이기[Windows Forms]"
-  - "ToolStrip 컨트롤[Windows Forms], 텍스트 상자 늘이기"
+title: "방법: ToolStripTextBox를 늘려 ToolStrip의 나머지 너비 채우기(Windows Forms)"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- text boxes [Windows Forms], stretching in ToolStrip control [Windows Forms]
+- ToolStrip control [Windows Forms], stretching a text box
 ms.assetid: 0e610fbf-85fe-414c-900c-9704a5dd5cc6
-caps.latest.revision: 6
-author: "dotnet-bot"
-ms.author: "dotnetcontent"
-manager: "wpickett"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 213929e52f08fff19eb7641092789501c31648e0
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 11/21/2017
 ---
-# 방법: ToolStripTextBox를 늘려 ToolStrip의 나머지 너비 채우기(Windows Forms)
-<xref:System.Windows.Forms.ToolStrip> 컨트롤의 <xref:System.Windows.Forms.ToolStrip.Stretch%2A> 속성을 `true`로 설정하면 이 컨트롤이 컨테이너의 한 쪽 끝에서 다른 쪽 끝까지 채워지고 컨테이너 크기가 조정될 때 이 컨트롤의 크기도 조정됩니다.  이 구성에서 컨트롤 크기가 조정되면 <xref:System.Windows.Forms.ToolStripTextBox>와 같은 컨트롤 안의 항목을 늘려 사용할 수 있는 공간을 채우고 크기를 조정하는 것이 유용할 수 있습니다.  예를 들어, Microsoft® Internet Explorer의 주소 표시줄과 비슷한 모양 및 동작을 구현하려는 경우에 이렇게 항목을 늘리면 유용합니다.  
+# <a name="how-to-stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-windows-forms"></a>방법: ToolStripTextBox를 늘려 ToolStrip의 나머지 너비 채우기(Windows Forms)
+설정 하는 경우는 <xref:System.Windows.Forms.ToolStrip.Stretch%2A> 속성의는 <xref:System.Windows.Forms.ToolStrip> 컨트롤을 `true`, 해당 컨테이너를 끝까지 채웁니다 컨트롤과 해당 컨테이너 크기를 조정할 때의 크기를 조정 합니다. 이 구성에서는 하면 유용할 수와 같은 컨트롤에서 항목을 스트레치 하는 <xref:System.Windows.Forms.ToolStripTextBox>, 사용 가능한 공간 및 컨트롤 크기를 조정할 때의 크기를 조정 합니다. 이러한 늘이기, 예를 들어 경우 유용 모양 및 동작 Microsoft® Internet Explorer의 주소 표시줄 유사 합니다.  
   
-## 예제  
- 다음 코드 예제에서는 <xref:System.Windows.Forms.ToolStripTextBox>에서 파생된 `ToolStripSpringTextBox`라는 클래스를 제공합니다.  이 클래스는 <xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A> 메서드를 재정의하여 다른 모든 항목의 총 너비를 뺀 후 부모 <xref:System.Windows.Forms.ToolStrip> 컨트롤의 사용 가능한 너비를 계산합니다.  이 코드 예제에서는 새로운 동작을 보여 주기 위해 <xref:System.Windows.Forms.Form> 클래스와 `Program` 클래스도 제공합니다.  
+## <a name="example"></a>예제  
+ 파생 된 클래스를 제공 하는 다음 코드 예제에서는 <xref:System.Windows.Forms.ToolStripTextBox> 호출 `ToolStripSpringTextBox`합니다. 이 클래스는 재정의 <xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A> 부모의 사용 가능한 너비를 계산 하는 메서드 <xref:System.Windows.Forms.ToolStrip> 후 다른 모든 항목의 결합 된 너비를 뺀 값을 제어 합니다. 이 코드 예제도 제공 합니다. 한 <xref:System.Windows.Forms.Form> 클래스 및 `Program` 클래스 새 동작을 보여 줍니다.  
   
  [!code-csharp[ToolStripSpringTextBox#00](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ToolStripSpringTextBox/cs/ToolStripSpringTextBox.cs#00)]
  [!code-vb[ToolStripSpringTextBox#00](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripSpringTextBox/vb/ToolStripSpringTextBox.vb#00)]  
   
-## 코드 컴파일  
+## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 사항이 필요합니다.  
   
 -   System, System.Drawing 및 System.Windows.Forms 어셈블리에 대한 참조  
   
-## 참고 항목  
- <xref:System.Windows.Forms.ToolStrip>   
- <xref:System.Windows.Forms.ToolStrip.Stretch%2A?displayProperty=fullName>   
- <xref:System.Windows.Forms.ToolStripTextBox>   
- <xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A?displayProperty=fullName>   
- [ToolStrip 컨트롤 아키텍처](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)   
+## <a name="see-also"></a>참고 항목  
+ <xref:System.Windows.Forms.ToolStrip>  
+ <xref:System.Windows.Forms.ToolStrip.Stretch%2A?displayProperty=nameWithType>  
+ <xref:System.Windows.Forms.ToolStripTextBox>  
+ <xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A?displayProperty=nameWithType>  
+ [ToolStrip 컨트롤 아키텍처](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
  [방법: StatusStrip에서 대화형으로 Spring 속성 사용](../../../../docs/framework/winforms/controls/how-to-use-the-spring-property-interactively-in-a-statusstrip.md)
