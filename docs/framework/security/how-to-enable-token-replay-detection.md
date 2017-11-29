@@ -5,21 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dotnet-clr
+ms.technology: dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5a9f5771-f5f6-4100-8501-406aa20d731a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.translationtype: HT
-ms.sourcegitcommit: 306c608dc7f97594ef6f72ae0f5aaba596c936e1
 ms.openlocfilehash: cde32407f072f3d29af4a8d1aae559e46057ae3a
-ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
-
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 10/18/2017
 ---
 # <a name="how-to-enable-token-replay-detection"></a>방법: 토큰 재생을 검색하도록 설정
 ## <a name="applies-to"></a>적용 대상  
@@ -93,4 +91,3 @@ ms.lasthandoff: 08/21/2017
 2.  브라우저의 **뒤로** 단추를 누릅니다. *ID1062: 토큰: ‘System.IdentityModel.Tokens.SamlSecurityToken’에 대해 재생이 검색되었습니다.*라는 설명에 이어 *AssertionId* 및 *Issuer*가 포함된 **‘/’ 응용 프로그램 서버 오류** 페이지가 표시되어야 합니다.  
   
      토큰 재생이 검색될 때 <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> 형식의 예외가 throw되었으므로 이 오류 페이지가 표시됩니다. 토큰이 먼저 제공된 경우 초기 POST 요청을 다시 보내려고 하므로 이 오류가 발생합니다. **뒤로** 단추를 선택해도 서버에 대한 후속 요청에서 이 동작이 수행되지 않습니다.
-
